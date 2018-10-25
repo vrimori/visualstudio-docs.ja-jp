@@ -1,5 +1,5 @@
 ---
-title: DEBUG_REFERENCE_INFO |Microsoft ドキュメント
+title: DEBUG_REFERENCE_INFO |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a528f73f0a13ab2702e35212a3ba00f8c8c13378
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b9c25c06f4fa92030bec5bd3b6f2566111dadad4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31103332"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829626"
 ---
 # <a name="debugreferenceinfo"></a>DEBUG_REFERENCE_INFO
 参照を記述します。  
@@ -53,30 +53,30 @@ public struct DEBUG_REFERENCE_INFO {
   
 ## <a name="members"></a>メンバー  
  dwFields  
- フラグの組み合わせ、 [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)のどのフィールドが埋められますを指定する列挙です。  
+ フラグの組み合わせ、 [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)フィールドが記入を指定する列挙体。  
   
  bstrName  
  ユーザーが指定した名前、 [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)オブジェクト。  
   
  bstrType  
- 書式設定された文字列として参照の種類。  
+ 書式設定された文字列として参照型。  
   
  bstrValue  
  書式設定された文字列として参照値  
   
  dwAttrib  
- フラグの組み合わせ、 [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)デバッグ プロパティの属性のフラグを指定する列挙です。  
+ フラグの組み合わせ、 [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)デバッグ プロパティの属性のフラグを指定する列挙体。  
   
  dwRefType  
- 値、 [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md)参照型が強いか弱いかどうかを指定する列挙です。  
+ 値、 [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md)参照型が強いか弱いかどうかを指定する列挙体。  
   
  m_pReference  
- [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)リファレンス情報を指定するオブジェクト。  
+ [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)参照情報を指定するオブジェクト。  
   
-## <a name="remarks"></a>コメント  
- この構造体がへの呼び出しに渡される、 [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md)格納するメソッド。 この構造体はからリストの一部としても返されます、 [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)インターフェイス、さらへの呼び出しから返される、 [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ この構造体がへの呼び出しに渡される、 [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md)情報を格納するメソッド。 リストの一部としてこの構造体が返されることも、 [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)インターフェイスをさらへの呼び出しから返される、 [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

@@ -1,7 +1,7 @@
 ---
 title: IDE によって実装されるコールバック関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 4a8833f0-6ac0-4ea7-9400-8275aa991468
 caps.latest.revision: 25
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a2293640ebb0cc788d104f02f790c32bb47ced6a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 84533d95eb6bc0f6433d0b021d429c13e504c13d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533647"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49212785"
 ---
 # <a name="callback-functions-implemented-by-the-ide"></a>IDE で実装されるコールバック関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コールバック関数は、IDE によって実装される](https://docs.microsoft.com/visualstudio/extensibility/callback-functions-implemented-by-the-ide)します。  
-  
 統合することとして可能な限りと統合されたエクスペリエンスを提供するシームレスな統合開発環境 (IDE) ソース管理プラグイン使用できます、IDE によって実装されるコールバック関数。 プラグインできるこれらの関数、IDE に情報を渡すのソース管理操作中に適切なタイミングでIDE は、ネイティブ UI に埋め込まれた要素としてこの情報を表示できます。 ユーザーは、場合、プラグインの使用、独自の UI よりもこのシナリオで断片化の経験を持ちます。  
   
  必須のヘッダー ファイルは、scc.h です。 既定の場所は \Program Files\VSIP 8.0\EnvSDK\common\inc\\します。 \Program Files\VSIP 8.0\MSSCCI にソース管理プラグインのサンプルを持っている VSIP フォルダーにも\\します。  

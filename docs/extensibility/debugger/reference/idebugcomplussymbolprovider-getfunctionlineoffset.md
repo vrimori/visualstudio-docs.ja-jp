@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetFunctionLineOffset |Microsoft ドキュメント
+title: IDebugComPlusSymbolProvider::GetFunctionLineOffset |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7fc5fa77a227e8324956a62380e6a42c76e5a47b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8923550b0aa7947a32296d60eb1badace36c30fa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31103735"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825895"
 ---
 # <a name="idebugcomplussymbolprovidergetfunctionlineoffset"></a>IDebugComPlusSymbolProvider::GetFunctionLineOffset
-指定された行のオフセットを表す関数内のアドレスを取得します。  
+指定した行オフセットを表す関数内でアドレスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,19 +44,19 @@ int GetFunctionLineOffset(
   
 #### <a name="parameters"></a>パラメーター  
  `pAddress`  
- [in]関数を表すアドレスです。  
+ [in]関数を表すアドレス。  
   
  `dwLine`  
- [in]関数の先頭からのオフセットの行。  
+ [in]行が関数の先頭からのオフセットします。  
   
  `ppNewAddress`  
- [out]関数の先頭からのオフセットの行を表す新しいアドレスです。  
+ [out]関数の先頭からのオフセットの行を表す新しいアドレス。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="example"></a>例  
- 次の例に対して、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスです。  
+ 次の例では、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイス。  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::GetFunctionLineOffset(  

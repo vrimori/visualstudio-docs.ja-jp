@@ -1,7 +1,7 @@
 ---
 title: Microsoft Fakes を使用したテストでのコードの分離 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,31 +13,29 @@ ms.assetid: a03c2e83-a41f-4854-bcf2-fcaa277a819d
 caps.latest.revision: 18
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b91678cf5fa4cd0620a5b8e860339baa8ee0d75a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c77243f69cedbd340ee91354ef49651e31605e04
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537276"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845369"
 ---
 # <a name="isolating-code-under-test-with-microsoft-fakes"></a>Microsoft Fakes を使用したテストでのコードの分離
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[テスト コードの分離 Microsoft Fakes で](https://docs.microsoft.com/visualstudio/test/isolating-code-under-test-with-microsoft-fakes)します。  
-  
 Microsoft Fakes では、アプリケーションの別の部分を*スタブ*または *shim* で置き換えることにより、テストするコードを分離できます。 これらは、テストの制御下にある小さいコードです。 テストのコードを分離することにより、テストが失敗した場合に、原因が別の場所ではなくそこにあることを確認できます。 また、アプリケーションの別の部分がまだ機能していない場合でも、スタブと shim を使用すると、コードをテストできます。  
   
  Fakes には 2 種類のフレーバーがあります。  
   
--   [スタブ](#stubs)は、クラスを同じインターフェイスを実装する小さな代用に置き換えます。  スタブを使用するには、各コンポーネントがインターフェイスのみに依存し、その他のコンポーネントには依存しないようにアプリケーションを設計する必要があります  ("コンポーネント" とは、1 つのクラス、または一緒に設計され更新される複数のクラスで、通常は 1 つのアセンブリに格納されるもののことです)。  
+- [スタブ](#stubs)は、クラスを同じインターフェイスを実装する小さな代用に置き換えます。  スタブを使用するには、各コンポーネントがインターフェイスのみに依存し、その他のコンポーネントには依存しないようにアプリケーションを設計する必要があります  ("コンポーネント" とは、1 つのクラス、または一緒に設計され更新される複数のクラスで、通常は 1 つのアセンブリに格納されるもののことです)。  
   
--   [shim](#shims) は、アプリケーションのコンパイル済みコードを実行時に変更します。これにより、指定されたメソッド呼び出しを実行する代わりに、テストで提供される shim コードが実行されるようになります。 Shim を使用すると、.NET アセンブリなど、変更できないアセンブリの呼び出しを置き換えることができます。  
+- [shim](#shims) は、アプリケーションのコンパイル済みコードを実行時に変更します。これにより、指定されたメソッド呼び出しを実行する代わりに、テストで提供される shim コードが実行されるようになります。 Shim を使用すると、.NET アセンブリなど、変更できないアセンブリの呼び出しを置き換えることができます。  
   
- ![他のコンポーネントに置き換わる Fakes](../test/media/fakes-2.png "Fakes-2")  
+  ![他のコンポーネントに置き換わる Fakes](../test/media/fakes-2.png "Fakes-2")  
   
- **必要条件**  
+  **必要条件**  
   
--   Visual Studio Enterprise  
+- Visual Studio Enterprise  
   
 ## <a name="choosing-between-stub-and-shim-types"></a>スタブ型と shim 型から選択する  
  通常、Visual Studio プロジェクトはコンポーネントと見なされますが、それは、これらのクラスを同時に開発および更新するためです。 プロジェクトがソリューション内の別のプロジェクトに対して実行する呼び出し、またはプロジェクトが参照する別のアセンブリに対して実行する呼び出しにスタブと shim を使用することを検討します。  
@@ -170,76 +168,76 @@ Microsoft Fakes では、アプリケーションの別の部分を*スタブ*�
   
  shim を使用するためにアプリケーション コードを変更したり、特定の方法を記述したりする必要はありません。  
   
-1.  **Fakes アセンブリの追加**  
+1. **Fakes アセンブリの追加**  
   
-     ソリューション エクスプローラーで、単体テスト プロジェクトの参照を開き、偽装の対象となるメソッドが格納されているアセンブリへの参照を選択します。 この例では、`DateTime` クラスが **System.dll** にあります。  Visual Basic プロジェクトの参照を確認するには、**[すべてのファイルを表示]** を選択します。  
+    ソリューション エクスプローラーで、単体テスト プロジェクトの参照を開き、偽装の対象となるメソッドが格納されているアセンブリへの参照を選択します。 この例では、`DateTime` クラスが **System.dll** にあります。  Visual Basic プロジェクトの参照を確認するには、**[すべてのファイルを表示]** を選択します。  
   
-     **[Fakes アセンブリに追加]** をクリックします。  
+    **[Fakes アセンブリに追加]** をクリックします。  
   
-2.  **ShimsContext に shim を挿入する**  
+2. **ShimsContext に shim を挿入する**  
   
-    ```csharp  
-    [TestClass]  
-    public class TestClass1  
-    {   
-            [TestMethod]  
-            public void TestCurrentYear()  
-            {  
-                int fixedYear = 2000;  
+   ```csharp  
+   [TestClass]  
+   public class TestClass1  
+   {   
+           [TestMethod]  
+           public void TestCurrentYear()  
+           {  
+               int fixedYear = 2000;  
   
-                // Shims can be used only in a ShimsContext:  
-                using (ShimsContext.Create())  
-                {  
-                  // Arrange:  
-                    // Shim DateTime.Now to return a fixed date:  
-                    System.Fakes.ShimDateTime.NowGet =   
-                    () =>  
-                    { return new DateTime(fixedYear, 1, 1); };  
+               // Shims can be used only in a ShimsContext:  
+               using (ShimsContext.Create())  
+               {  
+                 // Arrange:  
+                   // Shim DateTime.Now to return a fixed date:  
+                   System.Fakes.ShimDateTime.NowGet =   
+                   () =>  
+                   { return new DateTime(fixedYear, 1, 1); };  
   
-                    // Instantiate the component under test:  
-                    var componentUnderTest = new MyComponent();  
+                   // Instantiate the component under test:  
+                   var componentUnderTest = new MyComponent();  
   
-                  // Act:  
-                    int year = componentUnderTest.GetTheCurrentYear();  
+                 // Act:  
+                   int year = componentUnderTest.GetTheCurrentYear();  
   
-                  // Assert:   
-                    // This will always be true if the component is working:  
-                    Assert.AreEqual(fixedYear, year);  
-                }  
-            }  
-    }  
+                 // Assert:   
+                   // This will always be true if the component is working:  
+                   Assert.AreEqual(fixedYear, year);  
+               }  
+           }  
+   }  
   
-    ```  
+   ```  
   
-    ```vb  
-    <TestClass()> _  
-    Public Class TestClass1  
-        <TestMethod()> _  
-        Public Sub TestCurrentYear()  
-            Using s = Microsoft.QualityTools.Testing.Fakes.ShimsContext.Create()  
-                Dim fixedYear As Integer = 2000  
-                ' Arrange:  
-                ' Detour DateTime.Now to return a fixed date:  
-                System.Fakes.ShimDateTime.NowGet = _  
-                    Function() As DateTime  
-                        Return New DateTime(fixedYear, 1, 1)  
-                    End Function  
+   ```vb  
+   <TestClass()> _  
+   Public Class TestClass1  
+       <TestMethod()> _  
+       Public Sub TestCurrentYear()  
+           Using s = Microsoft.QualityTools.Testing.Fakes.ShimsContext.Create()  
+               Dim fixedYear As Integer = 2000  
+               ' Arrange:  
+               ' Detour DateTime.Now to return a fixed date:  
+               System.Fakes.ShimDateTime.NowGet = _  
+                   Function() As DateTime  
+                       Return New DateTime(fixedYear, 1, 1)  
+                   End Function  
   
-                ' Instantiate the component under test:  
-                Dim componentUnderTest = New MyComponent()  
-                ' Act:  
-                Dim year As Integer = componentUnderTest.GetTheCurrentYear  
-                ' Assert:   
-                ' This will always be true if the component is working:  
-                Assert.AreEqual(fixedYear, year)  
-            End Using  
-        End Sub  
-    End Class  
-    ```  
+               ' Instantiate the component under test:  
+               Dim componentUnderTest = New MyComponent()  
+               ' Act:  
+               Dim year As Integer = componentUnderTest.GetTheCurrentYear  
+               ' Assert:   
+               ' This will always be true if the component is working:  
+               Assert.AreEqual(fixedYear, year)  
+           End Using  
+       End Sub  
+   End Class  
+   ```  
   
-     Shim クラスの名前は、元の型名の先頭に `Fakes.Shim` を付けることで構成されます。 パラメーター名がメソッド名に追加されます。 (System.Fakes へのアセンブリ参照を追加する必要はありません)。  
+    Shim クラスの名前は、元の型名の先頭に `Fakes.Shim` を付けることで構成されます。 パラメーター名がメソッド名に追加されます。 (System.Fakes へのアセンブリ参照を追加する必要はありません)。  
   
- 前の例では、静的メソッドに shim を使用しています。 インスタンス メソッドに shim を使用する場合は、型名とメソッド名の間に `AllInstances` を記述します。  
+   前の例では、静的メソッドに shim を使用しています。 インスタンス メソッドに shim を使用する場合は、型名とメソッド名の間に `AllInstances` を記述します。  
   
 ```  
 System.IO.Fakes.ShimFile.AllInstances.ReadToEnd = ...  

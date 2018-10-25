@@ -12,26 +12,26 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 02f0e83f674378ca7f9297aedbeb580b4f2cad89
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: de41c8351c7767cbfe0882cffb48b145e341f923
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31973403"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49835866"
 ---
 # <a name="while-activity-designer"></a>While アクティビティ デザイナー
 
-<xref:System.Activities.Statements.While>に含まれているアクティビティを実行、<xref:System.Activities.Statements.While.Body%2A>中に、指定した<xref:System.Activities.Statements.While.Condition%2A>に評価される**true**です。 場合によっては、含まれているアクティビティが実行されない可能性があります。 含まれているアクティビティを少なくとも 1 回は実行する必要がある場合は、<xref:System.Activities.Statements.DoWhile> アクティビティを代わりに使用します。
+<xref:System.Activities.Statements.While>アクティビティに含まれるアクティビティを実行します。 その<xref:System.Activities.Statements.While.Body%2A>中、指定した<xref:System.Activities.Statements.While.Condition%2A>に評価される**true**。 場合によっては、含まれているアクティビティが実行されない可能性があります。 含まれているアクティビティを少なくとも 1 回は実行する必要がある場合は、<xref:System.Activities.Statements.DoWhile> アクティビティを代わりに使用します。
 
 ## <a name="while-properties-in-workflow-designer"></a>ワークフロー デザイナーでの While のプロパティ
 
 次の表に、最も役に立つ <xref:System.Activities.Statements.While> アクティビティのプロパティと、デザイナーでのその使用方法を示します。
 
 |プロパティ名|必須|使用方法|
-|-------------------|--------------|-----------|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|ヘッダーの <xref:System.Activities.Statements.While> アクティビティ デザイナーの表示名を指定します。 既定値は While です。 値を編集できます、**プロパティ**ウィンドウ アクティビティ デザイナーのヘッダーで直接またはします。<br /><br /> <xref:System.Activities.Activity.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|
-|<xref:System.Activities.Statements.While.Body%2A>|False|実行するアクティビティを含む中に、<xref:System.Activities.Statements.While.Condition%2A>に評価される**true**です。|
-|<xref:System.Activities.Statements.While.Condition%2A>|True|評価を判断する Visual Basic の式が含まれて かどうかで、アクティビティ、<xref:System.Activities.Statements.While.Body%2A>を実行します。|
+|-|--------------|-|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|ヘッダーの <xref:System.Activities.Statements.While> アクティビティ デザイナーの表示名を指定します。 既定値は While です。 値を編集できる、**プロパティ**ウィンドウまたは直接アクティビティ デザイナーのヘッダー。<br /><br /> <xref:System.Activities.Activity.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|
+|<xref:System.Activities.Statements.While.Body%2A>|False|実行するアクティビティが含まれています中に、<xref:System.Activities.Statements.While.Condition%2A>に評価される**true**します。|
+|<xref:System.Activities.Statements.While.Condition%2A>|True|判断するために評価は、Visual Basic の式が含まれて かどうかのアクティビティ、<xref:System.Activities.Statements.While.Body%2A>を実行します。|
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: SccHistory 関数 |Microsoft ドキュメント
+title: SccHistory 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 464c71d7caeca1b9b8c4c3455dad1737649f5ea4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6ed7cde8d02706e03f98b98251f919cb5e756247
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31138201"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832798"
 ---
 # <a name="scchistory-function"></a>SccHistory 関数
 この関数は、指定されたファイルの履歴を表示します。  
@@ -43,7 +43,7 @@ SCCRTN SccHistory(
  [in]ソース管理プラグイン コンテキスト構造体。  
   
  `hWnd`  
- [in]ソース管理プラグインで提供されるダイアログ ボックスをすべての親として使用できる IDE ウィンドウへのハンドル。  
+ [in]ソース管理プラグインが提供される任意のダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
   
  `nFiles`  
  [in]指定されたファイルの数、`lpFileName`配列。  
@@ -52,32 +52,32 @@ SCCRTN SccHistory(
  [in]ファイルの完全修飾名の配列。  
   
  `fOptions`  
- [in]コマンド フラグ (現在使用しません)。  
+ [in]コマンドのフラグ (現在使用しません)。  
   
  `pvOptions`  
- [in]ソース管理プラグインに固有のオプションです。  
+ [in]ソース管理プラグインに固有のオプション。  
   
 ## <a name="return-value"></a>戻り値  
- この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返すが必要です。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|SCC_OK|バージョン履歴が正常に取得されました。|  
-|SCC_I_RELOADFILE|ソース管理システムが実際にはディスク上のファイルを変更 (たとえば、取得することによって、古いバージョンの)、履歴をフェッチ中にため、IDE は、このファイルを再読み込みする必要があります。|  
+|SCC_OK|バージョン履歴が正常に取得します。|  
+|SCC_I_RELOADFILE|ソース管理システムが実際にディスク上のファイルを変更 (たとえば、その古いバージョンの取得)、によって、履歴をフェッチ中に、IDE は、このファイルを再読み込みする必要があります。|  
 |SCC_E_FILENOTCONTROLLED|ファイルはソース管理されません。|  
 |SCC_E_OPNOTSUPPORTED|ソース管理システムでは、この操作はサポートしません。|  
-|SCC_E_NOTAUTHORIZED|この操作を実行するユーザーが許可されていません。|  
-|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークや競合の問題の可能性があるためのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
+|SCC_E_NOTAUTHORIZED|この操作を実行できません。|  
+|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題の可能性へのアクセスに問題が発生しました。 再試行をお勧めします。|  
 |SCC_E_PROJNOTOPEN|プロジェクトが開かれました。|  
 |SCC_E_NONSPECIFICERROR|不特定のエラーです。 ファイル履歴を取得できませんでした。|  
   
-## <a name="remarks"></a>コメント  
- ソース管理プラグインは、各ファイルの履歴を表示する、独自のダイアログ ボックスを表示できますを使用して`hWnd`親ウィンドウとします。 または、省略可能なテキストがコールバックを出力に指定された関数、 [SccOpenProject](../extensibility/sccopenproject-function.md)使用できますが、サポートされている場合。  
+## <a name="remarks"></a>Remarks  
+ ソース管理プラグインは、各ファイルの履歴を表示する独自のダイアログ ボックスを表示できますを使用して`hWnd`として親ウィンドウ。 または、省略可能なテキストがコールバックを出力に指定された関数、 [SccOpenProject](../extensibility/sccopenproject-function.md)サポートされている場合は、使用できます。  
   
- 特定の状況ではこの呼び出しの実行中に検査するファイルが変更可能性がありますに注意してください。 たとえば、[!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)]履歴のコマンドは、ファイルの古いバージョンを取得する機会をユーザーに与えます。 このような場合は、ソース管理プラグインを返します`SCC_I_RELOAD`にファイルを再読み込みする必要があることを IDE に警告します。  
+ 特定の状況ではこの呼び出しの実行中に検査するファイルが変更可能性がありますに注意してください。 たとえば、[!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)]履歴コマンドは、ファイルの古いバージョンを取得する機会をユーザーに提供します。 このような場合は、ソース管理プラグインを返します。`SCC_I_RELOAD`にファイルを再読み込みする必要があることを IDE に警告します。  
   
 > [!NOTE]
->  ソース管理プラグインは、配列の場合、ファイルのこの関数をサポートしていない場合、は、最初のファイルのファイル履歴のみを表示できます。  
+>  ソース管理プラグインがファイルの配列をこの関数をサポートしない場合は、最初のファイルのファイル履歴のみを表示できます。  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   

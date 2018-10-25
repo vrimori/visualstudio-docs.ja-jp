@@ -1,7 +1,7 @@
 ---
 title: Visual Studio のスタート ページのカスタマイズ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 48
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7bc8c27c98127bbbdfd7a1dddbab7124b8dc1d32
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ece49968c4a887e89f91feb83fae3de23aa2c282
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534387"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49211485"
 ---
 # <a name="customizing-the-start-page-for-visual-studio"></a>Visual Studio のスタート ページのカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[for Visual Studio のスタート ページのカスタマイズ](https://docs.microsoft.com/visualstudio/ide/customizing-the-start-page-for-visual-studio)します。  
-  
 Visual Studio のスタート ページは、既定のさまざまな方法でカスタマイズできます。**[プロジェクトを開く]** ダイアログ ボックスを表示することも、最後に読み込まれたソリューションを開くこともできます。 また、カスタム スタート ページを表示することもできます。これは、ツール ウィンドウで実行される Windows Presentation Foundation (WPF) の XAML ページで、Visual Studio 内のコマンドを実行できます。  
   
 ## <a name="customizing-the-default-start-page"></a>既定のスタート ページのカスタマイズ  

@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2234: System.Uri オブジェクトを渡します文字列ではなく |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: cba04480cafc5aaed0ee31523d1a5f159cb6fe26
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 83490f93368da777f35544ba09e40bdb5a929f99
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47592278"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813974"
 ---
 # <a name="ca2234-pass-systemuri-objects-instead-of-strings"></a>CA2234: 文字列の代わりに System.Uri オブジェクトを渡します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2234: 文字列の代わりに渡す System.Uri オブジェクト](https://docs.microsoft.com/visualstudio/code-quality/ca2234-pass-system-uri-objects-instead-of-strings)します。
 
 |||
 |-|-|

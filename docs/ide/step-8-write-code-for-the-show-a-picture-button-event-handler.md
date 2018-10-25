@@ -11,12 +11,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dc9bc3e5b0c3a61e911f7e49395f940ac07e2548
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 7f1763f7688dcb74781688e31af856fe531e69c8
+ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34748605"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384137"
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>手順 8: [Show a Picture] ボタンのイベント ハンドラーのコードの記述
 この手順では、**[Show a picture]** ボタンの機能を次のように設定します。
@@ -27,7 +27,7 @@ ms.locfileid: "34748605"
 
  IDE には、コードの記述に役立つ IntelliSense と呼ばれる強力なツールが備わっています。 コードを入力する際に単語の一部を入力すると、入力に合わせてボックスが開き、入力候補が提示されます。 このツールは、ユーザーの次の操作を予測し、ユーザーが一覧から選択した最後の項目に自動的にジャンプします。 ユーザーは、上方向キーまたは下方向キーを使用して一覧内を移動したり、文字の入力を続けて選択肢を絞り込んだりすることができます。 目的の選択肢が見つかったら、**Tab** キーを押して選択します。 入力候補が不要な場合は無視してもかまいません。
 
- ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[Tutorial 1: Create a picture viewer in Visual Basic - Video 4](http://go.microsoft.com/fwlink/?LinkId=205215)」(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 4) または「[Tutorial 1: Create a picture viewer in C# - Video 4](http://go.microsoft.com/fwlink/?LinkId=205203)」(チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 4) をご覧ください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
+ ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[Tutorial 1: Create a picture viewer in Visual Basic - Video 4](https://msdn.microsoft.com/en-us/vstudio/gg315355.aspx)」(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 4) をご覧ください。 このビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
 
 ## <a name="to-write-code-for-the-show-a-picture-button-event-handler"></a>[Show a picture] ボタンのイベント ハンドラーのコードを記述するには
 

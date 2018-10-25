@@ -1,7 +1,7 @@
 ---
 title: IDebugStepCompleteEvent2 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: eba2b76e-f90d-486b-ae5c-c47f1b8ba2e5
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a12dafa55996b19ca859433176cc6fd7ab2bc509
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a082227fc89cb5670b29788ca12a887b7c07d233
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545671"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49221625"
 ---
 # <a name="idebugstepcompleteevent2"></a>IDebugStepCompleteEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugStepCompleteEvent2](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugstepcompleteevent2)します。  
-  
 このインターフェイスは、デバッグ中のプログラムでは、ステップ イン、ステップ オーバー、またはソース コードまたはステートメントまたは命令の行外の手順が完了すると、セッション デバッグ マネージャー (SDM) にデバッグ エンジン (DE) によって送信されます。  
   
 ## <a name="syntax"></a>構文  

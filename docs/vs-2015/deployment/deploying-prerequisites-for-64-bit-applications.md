@@ -1,7 +1,7 @@
 ---
 title: 64 ビット アプリケーションの前提条件の展開 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 25
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 0f98a611b382f3884ede2e1e239944b9e584ab77
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2ac12f6992e32566e95170410b33e626d0bcfa3a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538207"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49286443"
 ---
 # <a name="deploying-prerequisites-for-64-bit-applications"></a>64 ビット アプリケーションの配置のための必要条件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[64 ビット アプリケーションの展開の前提条件](https://docs.microsoft.com/visualstudio/deployment/deploying-prerequisites-for-64-bit-applications)します。  
-  
 ClickOnce の配置では、 64 ビット プラットフォームのアプリケーションのインストールをサポートします。 ターゲット プラットフォームは**x86** 32 ビット プラットフォームでは、 **x64** AMD64 および EM64T 命令セットをサポートするコンピューターと**Itanium** 64 ビット Itanium プロセッサ用。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  

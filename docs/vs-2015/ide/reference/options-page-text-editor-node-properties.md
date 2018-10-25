@@ -1,7 +1,7 @@
 ---
 title: '[テキスト エディター] ノード プロパティ ([オプション] ページ) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 945b1b41abf44c8525677bfb332afdf9f6f7788f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 88ba9765e292d4f07a7e1392a64270ddf27e8f60
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540011"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49241905"
 ---
 # <a name="options-page-text-editor-node-properties"></a>[テキスト エディター] ノード プロパティ ([オプション] ページ)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[オプション ページで、テキスト エディター ノード プロパティ](https://docs.microsoft.com/visualstudio/ide/reference/options-page-text-editor-node-properties)します。  
-  
   
 このドキュメントでは、**[オプション]** ダイアログ ボックスの **[テキスト エディター]** カテゴリ (`DTE.Properties("TextEditor", <Property Page>)`) に関連付けられている一部のページ (またはプロパティ コレクション) について説明します。 各サブセクションの見出しは、`Properties` コレクションにアクセスするための呼び出しです。その下の表では、コレクションのプロパティを示します。  
   

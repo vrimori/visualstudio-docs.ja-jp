@@ -1,7 +1,7 @@
 ---
 title: 適切に動作しないマルチスレッド アプリケーションの一般的なパターン | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 91a8ba5e4cecddd4acc047d891b491dac963044b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 846c756511bc10a3d019294a16ba2d2e98fb37a8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546368"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49244116"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>適切に動作しないマルチスレッド アプリケーションの一般的なパターン
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Poorly-Behaved マルチ スレッド アプリケーションの一般的なパターン](https://docs.microsoft.com/visualstudio/profiling/common-patterns-for-poorly-behaved-multithreaded-applications)します。  
-  
 開発時にコンカレンシー ビジュアライザーを使用すると、マルチスレッド アプリケーションの動作を可視化できます。 このツールには、動作が不適切なマルチスレッド アプリケーションの一般的なパターンのギャラリーが含まれています。 ギャラリーには、ツールで判明する一般的で認識可能な視覚パターンと、各パターンが示す動作、その動作から考えられる結果、その最も一般的な解決策の説明が含まれています。  
   
 ## <a name="lock-contention-and-serialized-execution"></a>ロック競合とシリアル化実行  

@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::PreloadModules |Microsoft ドキュメント
+title: IDebugExpressionEvaluator2::PreloadModules |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5d7861b19a553860b3973418131c607fb0e9a2de
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 298afc379736befab0365ccdad4cc3cfa857785a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31112299"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910033"
 ---
 # <a name="idebugexpressionevaluator2preloadmodules"></a>IDebugExpressionEvaluator2::PreloadModules
-指定されたシンボル プロバイダーによって指定されたモジュールを再度読み込みます。  
+指定されたシンボル プロバイダーが指定したモジュールをプリロードします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,16 +40,16 @@ int PreloadModules (
   
 #### <a name="parameters"></a>パラメーター  
  `pSym`  
- [in]シンボルのプロバイダーが対象のモジュールは、事前に読み込まれます。  
+ [in]対象のモジュールをプリロードするシンボル プロバイダー。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- ホスト プロセスのアタッチを行うと、この省略可能なメソッドが使用されます。 これにより、EE 'ウォーム アップする ' 接続には、一部として。  
+## <a name="remarks"></a>Remarks  
+ この省略可能なメソッドは、ホスト プロセスのアタッチを行うときに使用されます。 これにより、EE 'ウォーム アップする ' にアタッチの一部として。  
   
 ## <a name="example"></a>例  
- 次の例に対して、このメソッドを実装する方法を示しています、 **ExpressionEvaluatorPackage**を公開するオブジェクト、 [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)インターフェイスです。  
+ 次の例では、このメソッドを実装する方法を示しています、 **ExpressionEvaluatorPackage**を公開するオブジェクト、 [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)インターフェイス。  
   
 ```cpp  
 STDMETHODIMP ExpressionEvaluatorPackage::PreloadModules  

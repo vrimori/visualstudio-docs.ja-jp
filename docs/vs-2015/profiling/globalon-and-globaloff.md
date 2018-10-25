@@ -1,7 +1,7 @@
 ---
 title: GlobalOn と GlobalOff | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c9d80ff0f0e7177c95eb7d1c4607004bf7f70b7a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 38ed3c8396457f66fe40148216587b750c493190
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544973"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49827026"
 ---
 # <a name="globalon-and-globaloff"></a>GlobalOn と GlobalOff
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[GlobalOn と GlobalOff](https://docs.microsoft.com/visualstudio/profiling/globalon-and-globaloff)します。  
-  
 VSPerfCmd.exe の **GlobalOff** オプションと **GlobalOn** オプションは、コマンド ライン プロファイル セッションのすべてのプロセスとスレッドのプロファイリングを一時停止および再開するために使用されます。  
   
  **GlobalOn** および **GlobalOff** は、VSPerfCmd.exe コマンド ラインの唯一のオプションとして指定することも、**Start** オプション、**Launch** オプション、または **Attach** オプションを含んでいるコマンド ラインに含めることもできます。  
@@ -36,11 +34,11 @@ VSPerfCmd.exe の **GlobalOff** オプションと **GlobalOn** オプション�
   
  **GlobalOff** オプションと **GlobalOn** オプションは、プロファイラーの API 関数によって操作されるグローバルな開始/停止数にも影響します。  
   
--   **GlobalOff** は、グローバルな開始/停止数を直ちに 0 に設定して、プロファイリングを一時停止します。  
+- **GlobalOff** は、グローバルな開始/停止数を直ちに 0 に設定して、プロファイリングを一時停止します。  
   
--   **GlobalOn** は、グローバルな開始/停止数を直ちに 1 に設定して、プロファイリングを再開します。  
+- **GlobalOn** は、グローバルな開始/停止数を直ちに 1 に設定して、プロファイリングを再開します。  
   
- 詳細については、[「プロファイリング ツールの API」](../profiling/profiling-tools-apis.md) を参照してください。  
+  詳細については、[「プロファイリング ツールの API」](../profiling/profiling-tools-apis.md) を参照してください。  
   
 ## <a name="syntax"></a>構文  
   

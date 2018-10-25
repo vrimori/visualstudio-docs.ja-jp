@@ -1,7 +1,7 @@
 ---
 title: VSIXLanguagePack 要素 (VSIX 言語パックのスキーマ) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 767f5c22-8b87-49ca-92aa-a7a3f026469f
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cf8e55e38ecf16577482955c30ea95c5a5980087
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1a3ff92a52613910f481492c744116c8be04463d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539632"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908068"
 ---
 # <a name="vsixlanguagepack-element-vsix-language-pack-schema"></a>VSIXLanguagePack 要素 (VSIX 言語パックのスキーマ)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[VSIXLanguagePack 要素 (VSIX 言語パックのスキーマ)](https://docs.microsoft.com/visualstudio/extensibility/vsixlanguagepack-element-vsix-language-pack-schema)します。  
-  
 必須。 VSIX 言語パックのルート要素を提供します。 VSIX 言語パックは、VSIX パッケージのローカライズされたインストール情報を提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -70,12 +68,12 @@ ms.locfileid: "47539632"
   
 ## <a name="element-information"></a>要素情報  
   
-|||  
-|-|-|  
-|名前空間|http://schemas.microsoft.com/developer/vsx-schema-lp/2010|  
-|スキーマ名|VSIX 言語パックのスキーマ|  
-|検証ファイル|VSIXLanguagePackSchema.xsd|  
-|空にすることができます。|いいえ|  
+|                 |                                                           |
+|-----------------|-----------------------------------------------------------|
+|    名前空間    | http://schemas.microsoft.com/developer/vsx-schema-lp/2010 |
+|   スキーマ名   |                 VSIX 言語パックのスキーマ                 |
+| 検証ファイル |                VSIXLanguagePackSchema.xsd                 |
+|  空にすることができます。   |                            いいえ                             |
   
 ## <a name="see-also"></a>関連項目  
  [VSX 言語パックのスキーマ リファレンス](../extensibility/vsx-language-pack-schema-reference.md)   

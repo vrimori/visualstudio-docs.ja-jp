@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2100: 確認するセキュリティの脆弱性について、SQL クエリ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,17 +21,15 @@ caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 0c269fe38a50a6d36003bffd65a7884d48c3473a
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: c77e448a492a64e3bbdf0f86809cdf82d7fd72fa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589672"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877401"
 ---
 # <a name="ca2100-review-sql-queries-for-security-vulnerabilities"></a>CA2100: セキュリティの脆弱性について、SQL クエリを確認してください
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2100: セキュリティの脆弱性のレビューの SQL クエリ](https://docs.microsoft.com/visualstudio/code-quality/ca2100-review-sql-queries-for-security-vulnerabilities)します。
 
 |||
 |-|-|
@@ -46,25 +44,25 @@ ms.locfileid: "47589672"
 ## <a name="rule-description"></a>規則の説明
  この規則では、文字列引数にユーザー入力が含まれていることが想定されています。 ユーザー入力から構築された SQL コマンド文字列には、SQL 注入攻撃に対する脆弱性があります。 SQL インジェクション攻撃では、悪意のあるユーザーは、破損または基になるデータベースへの不正アクセスを確保するために、クエリのデザインを変更する入力を提供します。 標準的な方法は、単一引用符またはアポストロフィ、SQL リテラル文字列の区切り記号; の挿入2 つのダッシュは、SQL コメント; ことを示しますセミコロンでは、新しいコマンドが続くことを示します。 攻撃のリスクを軽減する効果の順序で表示されている場合、ユーザー入力は、次のいずれかを使用して、クエリの一部である必要があります。
 
--   ストアド プロシージャを使用します。
+- ストアド プロシージャを使用します。
 
--   パラメーター化されたコマンド文字列を使用します。
+- パラメーター化されたコマンド文字列を使用します。
 
--   コマンド文字列をビルドする前に、型とコンテンツの両方のユーザー入力を検証します。
+- コマンド文字列をビルドする前に、型とコンテンツの両方のユーザー入力を検証します。
 
- 次[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]型を実装、<xref:System.Data.IDbCommand.CommandText%2A>プロパティまたは文字列引数を使用して、プロパティを設定するコンス トラクターを提供します。
+  次[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]型を実装、<xref:System.Data.IDbCommand.CommandText%2A>プロパティまたは文字列引数を使用して、プロパティを設定するコンス トラクターを提供します。
 
--   <xref:System.Data.Odbc.OdbcCommand?displayProperty=fullName> および <xref:System.Data.Odbc.OdbcDataAdapter?displayProperty=fullName>
+- <xref:System.Data.Odbc.OdbcCommand?displayProperty=fullName> および <xref:System.Data.Odbc.OdbcDataAdapter?displayProperty=fullName>
 
--   <xref:System.Data.OleDb.OleDbCommand?displayProperty=fullName> および <xref:System.Data.OleDb.OleDbDataAdapter?displayProperty=fullName>
+- <xref:System.Data.OleDb.OleDbCommand?displayProperty=fullName> および <xref:System.Data.OleDb.OleDbDataAdapter?displayProperty=fullName>
 
--   <xref:System.Data.OracleClient.OracleCommand?displayProperty=fullName> および <xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=fullName>
+- <xref:System.Data.OracleClient.OracleCommand?displayProperty=fullName> および <xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=fullName>
 
--   [System.Data.SqlServerCe.SqlCeCommand](<!-- TODO: review code entity reference <xref:assetId:///System.Data.SqlServerCe.SqlCeCommand?qualifyHint=False&amp;autoUpgrade=True>  -->) と [System.Data.SqlServerCe.SqlCeDataAdapter] (<!-- TODO: review code entity reference <xref:assetId:///System.Data.SqlServerCe.SqlCeDataAdapter?qualifyHint=False&amp;autoUpgrade=True>  -->)
+- [System.Data.SqlServerCe.SqlCeCommand](<!-- TODO: review code entity reference <xref:assetId:///System.Data.SqlServerCe.SqlCeCommand?qualifyHint=False&amp;autoUpgrade=True>  -->) と [System.Data.SqlServerCe.SqlCeDataAdapter] (<!-- TODO: review code entity reference <xref:assetId:///System.Data.SqlServerCe.SqlCeDataAdapter?qualifyHint=False&amp;autoUpgrade=True>  -->)
 
--   <xref:System.Data.SqlClient.SqlCommand?displayProperty=fullName> および <xref:System.Data.SqlClient.SqlDataAdapter?displayProperty=fullName>
+- <xref:System.Data.SqlClient.SqlCommand?displayProperty=fullName> および <xref:System.Data.SqlClient.SqlDataAdapter?displayProperty=fullName>
 
- 明示的または暗黙的に型の ToString メソッドを使用する場合に、この規則が違反したことに注意してください。 クエリ文字列を作成します。 次に例を示します。
+  明示的または暗黙的に型の ToString メソッドを使用する場合に、この規則が違反したことに注意してください。 クエリ文字列を作成します。 次に例を示します。
 
 ```
 int x = 10;

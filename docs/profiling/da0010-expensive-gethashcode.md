@@ -15,14 +15,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a670eb3145f3fd2ab9478dc68e0490cdeda8ac56
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: c4bb60104fa865cffa3e06ac088b92081e444457
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34749961"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877232"
 ---
 # <a name="da0010-expensive-gethashcode"></a>DA0010: GetHashCode の負荷が高くなっています
+
 |||  
 |-|-|  
 |規則 ID|DA0010|  
@@ -30,12 +31,12 @@ ms.locfileid: "34749961"
 |プロファイル方法|サンプリング<br /><br /> .NET メモリ|  
 |メッセージ|GetHashCode 関数の負荷を抑える必要があります。メモリを割り当てることはできません。 可能な場合は、ハッシュ コード関数の複雑さを軽減してください。|  
 |メッセージの種類|警告|  
-  
+
 ## <a name="cause"></a>原因  
  型の GetHashCode メソッドの呼び出しがプロファイリング データの大きな割合を占めているか、またはそのメソッドがメモリを割り当てています。  
-  
+
 ## <a name="rule-description"></a>規則の説明  
  ハッシュは、大きなコレクションの中から特定の項目を簡単に見つけるための手法です。 ハッシュ テーブルは非常に大きくなることがあり、高いアクセス率に対応しなければなりません。そのため、ハッシュ テーブルは効率的にする必要があります。 この要件が意味するところは、.NET Framework の GetHashCode メソッドでメモリを割り当ててはいけないということです。 メモリを割り当てるとガベージ コレクターの負荷が増し、割り当て要求の結果としてガベージ コレクションを実行しなければならなくなると、メソッドに遅延が発生する可能性があります。  
-  
+
 ## <a name="how-to-fix-violations"></a>違反の修正方法  
  メソッドの複雑さを軽減してください。

@@ -1,7 +1,7 @@
 ---
 title: IDebugBinder3::GetEEService |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: eb07aa40-8cd9-4a52-a4c7-4affd2307a01
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 706fd4cee9757cf16820f05142ea7ae8529df09f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 41268916baa127f35756ffd10b446491f1ef4070
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537441"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844446"
 ---
 # <a name="idebugbinder3geteeservice"></a>IDebugBinder3::GetEEService
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugBinder3::GetEEService](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugbinder3-geteeservice)します。  
-  
 このメソッドは、要求されたサービスを返します。  
   
 ## <a name="syntax"></a>構文  

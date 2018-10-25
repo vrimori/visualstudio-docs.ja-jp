@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2201: 予約された例外の種類を上げないでください |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 1971ccb2012794467a4fbdf661d55df61c934c90
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 9cc22f6bc8f7e863f0808c05b0b5cba37ba79fbf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47591879"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49810594"
 ---
 # <a name="ca2201-do-not-raise-reserved-exception-types"></a>CA2201: 予約された例外の種類を発生させません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2201: 予約された例外の種類を発生させません](https://docs.microsoft.com/visualstudio/code-quality/ca2201-do-not-raise-reserved-exception-types)します。
 
 |||
 |-|-|
@@ -45,31 +43,31 @@ ms.locfileid: "47591879"
 ## <a name="rule-description"></a>規則の説明
  次の例外の種類は、ユーザーに十分な情報を提供する汎用的です。
 
--   <xref:System.Exception?displayProperty=fullName>
+- <xref:System.Exception?displayProperty=fullName>
 
--   <xref:System.ApplicationException?displayProperty=fullName>
+- <xref:System.ApplicationException?displayProperty=fullName>
 
--   <xref:System.SystemException?displayProperty=fullName>
+- <xref:System.SystemException?displayProperty=fullName>
 
- 次の例外の種類は予約されており、共通言語ランタイムによってのみスローする必要があります。
+  次の例外の種類は予約されており、共通言語ランタイムによってのみスローする必要があります。
 
--   <xref:System.ExecutionEngineException?displayProperty=fullName>
+- <xref:System.ExecutionEngineException?displayProperty=fullName>
 
--   <xref:System.IndexOutOfRangeException?displayProperty=fullName>
+- <xref:System.IndexOutOfRangeException?displayProperty=fullName>
 
--   <xref:System.NullReferenceException?displayProperty=fullName>
+- <xref:System.NullReferenceException?displayProperty=fullName>
 
--   <xref:System.OutOfMemoryException?displayProperty=fullName>
+- <xref:System.OutOfMemoryException?displayProperty=fullName>
 
- **一般的な例外をスローしないでください。**
+  **一般的な例外をスローしないでください。**
 
- など、一般的な例外型をスローするかどうかは<xref:System.Exception>または<xref:System.SystemException>が強制的にライブラリまたはフレームワークでは、すべてをキャッチするコンシューマーを処理する方法がわからない不明な例外を含む例外。
+  など、一般的な例外型をスローするかどうかは<xref:System.Exception>または<xref:System.SystemException>が強制的にライブラリまたはフレームワークでは、すべてをキャッチするコンシューマーを処理する方法がわからない不明な例外を含む例外。
 
- 代わりに、framework では、既に存在するより強い派生型をスローまたはのいずれかから派生した独自の型を作成する<xref:System.Exception>します。
+  代わりに、framework では、既に存在するより強い派生型をスローまたはのいずれかから派生した独自の型を作成する<xref:System.Exception>します。
 
- **特定の例外をスローします。**
+  **特定の例外をスローします。**
 
- 次の表に、パラメーターとプロパティの set アクセサーに値パラメーターを含め、パラメーターを検証する場合にスローされる例外。
+  次の表に、パラメーターとプロパティの set アクセサーに値パラメーターを含め、パラメーターを検証する場合にスローされる例外。
 
 |パラメーターの説明|例外|
 |---------------------------|---------------|

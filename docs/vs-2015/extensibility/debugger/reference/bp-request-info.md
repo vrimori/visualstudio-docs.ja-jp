@@ -1,7 +1,7 @@
 ---
 title: BP_REQUEST_INFO |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 42a31412-5b6b-47fe-a762-0c2bc769e1cc
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 41a134c70c94c6c7fa826cf952c2444b7128fbb6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 980bc344949cc3c3acd9bc0bd18170785c09529c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537396"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49940711"
 ---
 # <a name="bprequestinfo"></a>BP_REQUEST_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[BP_REQUEST_INFO](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/bp-request-info)します。  
-  
 ブレークポイントを実装するために必要な情報が含まれています。  
   
 ## <a name="syntax"></a>構文  
@@ -99,7 +97,7 @@ public struct BP_REQUEST_INFO {
   
  デバッグ エンジン ベンダーの GUID を取得する必要がある場合、ブレークポイント制約またはトレース ポイントを参照してください、 [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)構造体。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

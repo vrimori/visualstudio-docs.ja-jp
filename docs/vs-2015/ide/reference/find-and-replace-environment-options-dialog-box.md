@@ -1,7 +1,7 @@
 ---
 title: '[検索と置換] ([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 295891e6995ed30ab6fe9404c1ea14fd1bccbc58
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4c60e89624c1245415ee887e44ad8d7df24bf8d6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546456"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49250628"
 ---
 # <a name="find-and-replace-environment-options-dialog-box"></a>[検索と置換] ([オプション] ダイアログ ボックス - [環境])
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[検索し、置換]、[環境オプション] ダイアログ ボックス](https://docs.microsoft.com/visualstudio/ide/reference/find-and-replace-environment-options-dialog-box)します。  
-  
   
 **[オプション]** ダイアログ ボックスのこのページを使用して、メッセージ ボックスと、検索と置換操作の他の側面を制御できます。 **[ツール]** からこのダイアログ ボックスにアクセスするには、**[オプション]** をクリックし、**[環境]** を展開し、**[検索と置換]** をクリックします。 このページが一覧に表示されない場合は、**[オプション]** ダイアログ ボックスの **[すべての設定を表示]** を選択します。  
   

@@ -1,7 +1,7 @@
 ---
 title: レガシ言語サービスのコマンドをインターセプト |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: eea69f03-349c-44bb-bd4f-4925c0dc3e55
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3b1a5af3de224a27d6b0078327411891bb8d1327
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 45f0084d060e9727f30ba39233ec5b92818d9205
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544456"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829886"
 ---
 # <a name="intercepting-legacy-language-service-commands"></a>従来の言語サービスのコマンドの受信
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[レガシ言語サービス コマンドのインターセプト](https://docs.microsoft.com/visualstudio/extensibility/internals/intercepting-legacy-language-service-commands)します。  
-  
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、テキスト ビューの処理とそれ以外の場合、言語サービス インターセプト コマンドがあることができます。 これは、テキスト ビューが管理していない言語固有の動作に役立ちます。 テキスト ビューに、言語サービスから 1 つまたは複数のコマンドのフィルターを追加することで、これらのコマンドを傍受できます。  
   
 ## <a name="getting-and-routing-the-command"></a>取得して、コマンドのルーティング  
@@ -37,13 +35,13 @@ ms.locfileid: "47544456"
   
  コマンド処理のため、次のオプションがあります。  
   
--   コマンドを処理し、チェーンの次のコマンドのフィルターにコマンドを渡します。  
+- コマンドを処理し、チェーンの次のコマンドのフィルターにコマンドを渡します。  
   
--   コマンドを処理し、次のコマンドのフィルターにコマンドを渡さないでください。  
+- コマンドを処理し、次のコマンドのフィルターにコマンドを渡さないでください。  
   
--   コマンドを処理しませんが、次のコマンドのフィルターにコマンドを渡します。  
+- コマンドを処理しませんが、次のコマンドのフィルターにコマンドを渡します。  
   
--   コマンドを無視します。 現在のフィルター処理しないと、次のフィルターに渡されません。  
+- コマンドを無視します。 現在のフィルター処理しないと、次のフィルターに渡されません。  
   
- 言語サービスを処理するコマンドの詳細については、次を参照してください。[言語サービス フィルターの重要なコマンド](../../extensibility/internals/important-commands-for-language-service-filters.md)します。
+  言語サービスを処理するコマンドの詳細については、次を参照してください。[言語サービス フィルターの重要なコマンド](../../extensibility/internals/important-commands-for-language-service-filters.md)します。
 

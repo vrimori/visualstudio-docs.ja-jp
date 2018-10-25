@@ -1,5 +1,5 @@
 ---
-title: IPerPropertyBrowsing2::GetPredefinedStrings |Microsoft ドキュメント
+title: IPerPropertyBrowsing2::GetPredefinedStrings |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,15 +18,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e07d52eca9434acc7e54f3b35b111cf12af0a871
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: a60225e69a04399a3ff0160291b84e9f3fda513c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729252"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915965"
 ---
 # <a name="iperpropertybrowsing2getpredefinedstrings"></a>IPerPropertyBrowsing2::GetPredefinedStrings
-このプロパティの潜在的な値を表す文字列のポインターのカウント対象の配列とリスト ボックスに入力する、呼び出し元を使用できます。  
+このプロパティの潜在的な値を表す文字列のポインターの counted 配列とリスト ボックスに入力して、呼び出し元を使用できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,16 +40,16 @@ HRESULT GetPredefinedStrings(
   
 #### <a name="parameters"></a>パラメーター  
  `dispid`  
- [in]呼び出し元は、対象の文字列のリストを要求しているプロパティの識別子をディスパッチします。  
+ [in]呼び出し元の文字列リストを要求しているプロパティのディスパッチ識別子。  
   
  `pCaStrings`  
- [out]要素の数と、メソッドに割り当てられたポインターの配列の文字列のアドレスを含む呼び出し元が割り当てた、カウント対象の配列構造体へのポインター。 メソッドが失敗した場合、メモリを割り当てられません、構造体の内容は未定義です。  
+ [out]要素の数と文字列のポインターのメソッドによって割り当てられた配列のアドレスを格納する配列を呼び出し元が割り当てた、カウントされた構造体へのポインター。 メソッドが失敗した場合、メモリが割り当てられていないと構造体の内容が定義されていません。  
   
  `pCaCookies`  
- [out]要素の数と Dword のメソッドに割り当てられた配列のアドレスを含む呼び出し元が割り当てた、カウント対象の配列構造へのポインター。 メソッドが失敗した場合、メモリを割り当てられません、構造体の内容は未定義です。  
+ [out]呼び出し元割り当てへのポインターには、要素の数と Dword メソッドによって割り当てられた配列のアドレスを含む配列構造がカウントされます。 メソッドが失敗した場合、メモリが割り当てられていないと構造体の内容が定義されていません。  
   
 ## <a name="return-value"></a>戻り値  
- 有効な返します`HRESULT`通常`S_OK`です。  
+ 有効な返します`HRESULT`、通常`S_OK`します。  
   
 ## <a name="see-also"></a>関連項目  
  [IPerPropertyBrowsing2 インターフェイス 1](../../winscript/reference/iperpropertybrowsing2-interface-1.md)

@@ -1,7 +1,7 @@
 ---
 title: IDebugModule2::ReloadSymbols_Deprecated |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 0f9f0133-7d58-4cd9-a6ca-1141e095749d
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5a8c42ddcde84524819f2c8f828fa72c8617d423
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 41155ff7443924559153ffb95cdf6b896bbe5b3c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536088"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49885903"
 ---
 # <a name="idebugmodule2reloadsymbolsdeprecated"></a>IDebugModule2::ReloadSymbols_Deprecated
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugModule2::ReloadSymbols_Deprecated](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugmodule2-reloadsymbols-deprecated)します。  
-  
 互換性のために残されています。 使用しないでください。 このモジュールのシンボルを再読み込みします。  
   
 ## <a name="syntax"></a>構文  

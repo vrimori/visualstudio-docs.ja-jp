@@ -14,26 +14,26 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 658b024a57912bf96a7988363f2bf363e9cb1f0a
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: b537c28f34faff1eff0502642236413f2ade2da1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512617"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942167"
 ---
 # <a name="how-to-use-built-in-colorable-items"></a>方法: ビルトインの配色可能な項目を使用して、
 組み込みの配色可能な項目を使用する前にする必要があります最初に通知する、統合開発環境 (IDE) ここで可能性のあるカスタム独自配色可能な項目を提供していない<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems>オブジェクト。 言語サービスのレジストリ エントリを設定して行います。  
   
 ## <a name="to-use-built-in-colorable-items"></a>組み込みの配色可能な項目を使用するには  
   
-1.  **HKEY_LOCAL_MACHINE\VisualStudio\\< X.Y > \Languages\Language サービス\\< 言語名\>** ここで、 \<X.Y > のバージョンは、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]と\<言語名 > 名前を指定します、言語の作成という DWORD レジストリ エントリ値**RequestStockColors**します。  
+1. **HKEY_LOCAL_MACHINE\VisualStudio\\< X.Y > \Languages\Language サービス\\< 言語名\>**、 \<X.Y > のバージョンが[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]と\<言語名 > は、名前と呼ばれる、レジストリ エントリの DWORD 値を作成、使用する言語の**RequestStockColors**。  
   
-2.  設定、 **RequestStockColors**レジストリ エントリの値を*1*します。  
+2. 設定、 **RequestStockColors**レジストリ エントリの値を*1*します。  
   
-     レジストリ エントリを colorizer を作成した後<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A>メソッドのメンバーが使用できる、<xref:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS>エディターによって使用される色の属性の配列を埋めるために列挙します。  
+    レジストリ エントリを colorizer を作成した後<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A>メソッドのメンバーが使用できる、<xref:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS>エディターによって使用される色の属性の配列を埋めるために列挙します。  
   
-    > [!NOTE]
-    >  カスタムの配色可能な項目を指定する場合は、このレジストリ エントリを設定しないでください。 詳細については、次を参照してください。[カスタム装飾が可能なアイテム](../../extensibility/internals/custom-colorable-items.md)します。  
+   > [!NOTE]
+   >  カスタムの配色可能な項目を指定する場合は、このレジストリ エントリを設定しないでください。 詳細については、次を参照してください。[カスタム装飾が可能なアイテム](../../extensibility/internals/custom-colorable-items.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [構文のカスタム エディターで色分け表示](../../extensibility/syntax-coloring-in-custom-editors.md)   

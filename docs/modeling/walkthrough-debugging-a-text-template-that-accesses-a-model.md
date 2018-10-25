@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 403b85ba7c5fc45a2809f695ce038a4e1576c93a
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 2b330dfc360a4986f5e255fc6369b819eabd4ebf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382540"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836438"
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>チュートリアル: モデルにアクセスするテキスト テンプレートのデバッグ
 変更またはドメイン固有言語ソリューションでテキスト テンプレートを追加するときに、エンジンのソース コードに、または、生成されたコードをコンパイル時にテンプレートを変換するときにエラーが発生する可能性があります。 次のチュートリアルでは、テキスト テンプレートをデバッグすることの一部を示します。
@@ -25,15 +25,15 @@ ms.locfileid: "39382540"
 ## <a name="creating-a-domain-specific-language-solution"></a>ドメイン固有言語ソリューションを作成します。
  この手順では、次の特性を持つドメイン固有言語ソリューションを作成します。
 
--   名前: DebuggingTestLanguage
+- 名前: DebuggingTestLanguage
 
--   ソリューション テンプレート: 最小言語
+- ソリューション テンプレート: 最小言語
 
--   ファイル拡張子: .ddd
+- ファイル拡張子: .ddd
 
--   会社名: Fabrikam
+- 会社名: Fabrikam
 
- ドメイン固有言語ソリューションを作成する方法の詳細については、次を参照してください。[方法: ドメイン固有言語ソリューションを作成](../modeling/how-to-create-a-domain-specific-language-solution.md)です。
+  ドメイン固有言語ソリューションを作成する方法の詳細については、次を参照してください。[方法: ドメイン固有言語ソリューションを作成](../modeling/how-to-create-a-domain-specific-language-solution.md)です。
 
 ## <a name="creating-a-text-template"></a>テキスト テンプレートの作成
  テキスト テンプレートをソリューションに追加します。

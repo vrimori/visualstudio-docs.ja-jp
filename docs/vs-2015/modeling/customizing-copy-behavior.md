@@ -1,7 +1,7 @@
 ---
 title: コピー動作のカスタマイズ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 58d96fd67189db7f3984ff1f82537d11306bfb7f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c2478925ecf481aaf49dbfbe5818d8839b9ad54f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539319"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844090"
 ---
 # <a name="customizing-copy-behavior"></a>コピー動作のカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コピー動作のカスタマイズ](https://docs.microsoft.com/visualstudio/modeling/customizing-copy-behavior)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Visualization and Modeling SDK を使用して作成したドメイン固有言語 (DSL) で、ユーザーが要素のコピーと貼り付けを実行する際の動作を変更できます。  
   
 ## <a name="standard-copy-and-paste-behavior"></a>コピーと貼り付けの標準動作  
@@ -31,19 +29,19 @@ ms.locfileid: "47539319"
   
  既定では、ユーザーが要素をクリップボードにコピーすると、次の要素もコピーされます。  
   
--   選択した要素の埋め込まれた子。 (つまり、コピーした要素をソースとする埋め込みリレーションシップのターゲットである要素)。  
+- 選択した要素の埋め込まれた子。 (つまり、コピーした要素をソースとする埋め込みリレーションシップのターゲットである要素)。  
   
--   コピーした要素間のリレーションシップ リンク。  
+- コピーした要素間のリレーションシップ リンク。  
   
- この規則はコピーした要素およびリンクに再帰的に適用されます。  
+  この規則はコピーした要素およびリンクに再帰的に適用されます。  
   
- ![コピーして貼り付けた要素](../modeling/media/dslcopypastedefault.png "DslCopyPasteDefault")  
+  ![コピーして貼り付けた要素](../modeling/media/dslcopypastedefault.png "DslCopyPasteDefault")  
   
- コピーした要素およびリンクはシリアル化され、<xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> (EGP) に格納されて、クリップボードに配置されます。  
+  コピーした要素およびリンクはシリアル化され、<xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> (EGP) に格納されて、クリップボードに配置されます。  
   
- コピーした要素のイメージもクリップボードに配置されます。 これにより、ユーザーは Word など、他のアプリケーションに貼り付けることができます。  
+  コピーした要素のイメージもクリップボードに配置されます。 これにより、ユーザーは Word など、他のアプリケーションに貼り付けることができます。  
   
- ユーザーはコピーした要素を、DSL 定義に従って要素を受け入れることが可能なターゲットに貼り付けることができます。 たとえば、コンポーネント ソリューション テンプレートから生成された DSL で、ユーザーはポートをコンポーネントに貼り付けることができますが、図に貼り付けることはできません。また、コンポーネントを図に貼り付けることができますが、他のコンポーネントに貼り付けることはできません。  
+  ユーザーはコピーした要素を、DSL 定義に従って要素を受け入れることが可能なターゲットに貼り付けることができます。 たとえば、コンポーネント ソリューション テンプレートから生成された DSL で、ユーザーはポートをコンポーネントに貼り付けることができますが、図に貼り付けることはできません。また、コンポーネントを図に貼り付けることができますが、他のコンポーネントに貼り付けることはできません。  
   
 ## <a name="customizing-copy-and-paste-behavior"></a>コピーと貼り付け動作のカスタマイズ  
  プログラム コードを使用して、モデルをカスタマイズする方法の詳細については、次を参照してください。[を移動すると、プログラム コードでのモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)します。  
@@ -229,15 +227,15 @@ partial class MyDslClipboardCommandSet // EDIT NAME
   
  次の 3 つの値があります。  
   
--   コピーを伝達しない  
+- コピーを伝達しない  
   
--   コピーをリンクのみに伝達する - グループを貼り付けると、このリンクの新しいコピーは、リンクの他端の既存の要素を参照します。  
+- コピーをリンクのみに伝達する - グループを貼り付けると、このリンクの新しいコピーは、リンクの他端の既存の要素を参照します。  
   
--   コピーをリンクおよび反対のロール プレーヤーに伝達する - コピーしたグループにリンクの他端の要素のコピーが含まれます。  
+- コピーをリンクおよび反対のロール プレーヤーに伝達する - コピーしたグループにリンクの他端の要素のコピーが含まれます。  
   
- ![Propagatecopytolinkonly コピーの効果](../modeling/media/dslpropagatecopy.png "DslPropagateCopy")  
+  ![Propagatecopytolinkonly コピーの効果](../modeling/media/dslpropagatecopy.png "DslPropagateCopy")  
   
- 変更内容はコピーする要素とイメージの両方に影響します。  
+  変更内容はコピーする要素とイメージの両方に影響します。  
   
 ## <a name="programming-copy-and-paste-behavior"></a>コピーと貼り付け動作のプログラミング  
  オブジェクトのコピー、貼り付け、作成、および削除に関する DSL の動作の多くの側面は、図に結合されている <xref:Microsoft.VisualStudio.Modeling.ElementOperations> のインスタンスにより規定されます。 <xref:Microsoft.VisualStudio.Modeling.ElementOperations> から独自のクラスを導出し、図のクラスの <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> プロパティをオーバーライドすることにより、DSL の動作を変更できます。  
@@ -251,13 +249,13 @@ partial class MyDslClipboardCommandSet // EDIT NAME
   
 #### <a name="to-define-your-own-elementoperations"></a>独自の ElementOperations を定義するには  
   
-1.  DSL プロジェクト内の新しいファイルに、<xref:Microsoft.VisualStudio.Modeling.Diagrams.DesignSurfaceElementOperations> から派生するクラスを作成します。  
+1. DSL プロジェクト内の新しいファイルに、<xref:Microsoft.VisualStudio.Modeling.Diagrams.DesignSurfaceElementOperations> から派生するクラスを作成します。  
   
-2.  図のクラス用に部分クラス定義を追加します。 このクラスの名前が記載されて**Dsl\GeneratedCode\Diagrams.cs**します。  
+2. 図のクラス用に部分クラス定義を追加します。 このクラスの名前が記載されて**Dsl\GeneratedCode\Diagrams.cs**します。  
   
-     図のクラスで、<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> をオーバーライドし、ElementOperations サブクラスのインスタンスを返します。 呼び出しのたびに同じインスタンスを返す必要があります。  
+    図のクラスで、<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> をオーバーライドし、ElementOperations サブクラスのインスタンスを返します。 呼び出しのたびに同じインスタンスを返す必要があります。  
   
- DslPackage プロジェクト内のカスタム コード ファイルに次のコードを追加します。  
+   DslPackage プロジェクト内のカスタム コード ファイルに次のコードを追加します。  
   
 ```csharp  
   

@@ -8,12 +8,12 @@ author: gregvanl
 ms.author: gregvanl
 ms.workload:
 - vssdk
-ms.openlocfilehash: 68379a05e77e30e5717c06c336592a90d35973fa
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 75b181be5665d6416aee4f3f011d0d5d2a1d4237
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39081620"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866351"
 ---
 # <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>方法: Visual Studio 拡張機能のルール ベースの UI コンテキストを使用
 Visual Studio と特定の Vspackage の読み込みを許可するよく知られている<xref:Microsoft.VisualStudio.Shell.UIContext>s がアクティブ化されます。 ただし、これらの UI コンテキストは問題ありません、粒度を選択しない拡張機能の作成者に残っていますが、ポイントの前にアクティブにする使用可能な UI コンテキストを選択する本当に望んで、VSPackage を読み込みます。 よく知られている UI コンテキストの一覧は、次を参照してください。<xref:Microsoft.VisualStudio.Shell.KnownUIContexts>します。  
@@ -25,75 +25,75 @@ Visual Studio と特定の Vspackage の読み込みを許可するよく知ら�
   
  ルール ベースの UI コンテキストは、さまざまな方法で使用できます。  
   
-1.  コマンドとツール ウィンドウの可視性の制約を指定します。 UI コンテキスト ルールが満たされるまでは、コマンド/ツール ウィンドウを非表示にすることができます。  
+1. コマンドとツール ウィンドウの可視性の制約を指定します。 UI コンテキスト ルールが満たされるまでは、コマンド/ツール ウィンドウを非表示にすることができます。  
   
-2.  自動読み込みの制約: ルールが満たされたときにのみ、自動負荷がパッケージ化します。  
+2. 自動読み込みの制約: ルールが満たされたときにのみ、自動負荷がパッケージ化します。  
   
-3.  遅延したタスクとして: 指定した間隔が経過し、ルールがまだ満たされていればまでの読み込みを遅延します。  
+3. 遅延したタスクとして: 指定した間隔が経過し、ルールがまだ満たされていればまでの読み込みを遅延します。  
   
- Visual Studio 拡張機能によって、メカニズムを使用することがあります。  
+   Visual Studio 拡張機能によって、メカニズムを使用することがあります。  
   
 ## <a name="create-a-rule-based-ui-context"></a>ルール ベースの UI コンテキストを作成します。  
  TestPackage という拡張機能があるとは、ファイルにのみ適用されます メニューのコマンドを提供する *.config*拡張機能。 、VS2015 の前に、最適なオプションが TestPackage を読み込むときに<xref:Microsoft.VisualStudio.Shell.KnownUIContexts.SolutionExistsAndFullyLoadedContext%2A>UI コンテキストがアクティブ化します。 この方法で読み込まれる TestPackage 効率的ではありません、読み込まれているソリューションがあっても含まれないため、 *.config*ファイル。 次の手順は、ルール ベースの UI コンテキストを表示するファイルの場合にのみ、UI コンテキストをアクティブ化に使用できる *.config*拡張機能が選択されているし、その UI コンテキストがアクティブになる TestPackage をロードします。  
   
-1.  新しい UIContext GUID を定義し、VSPackage のクラスに追加<xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute>と<xref:Microsoft.VisualStudio.Shell.ProvideUIContextRuleAttribute>します。  
+1. 新しい UIContext GUID を定義し、VSPackage のクラスに追加<xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute>と<xref:Microsoft.VisualStudio.Shell.ProvideUIContextRuleAttribute>します。  
   
-     たとえば、新しい UIContext と仮定"UIContextGuid"が追加されます。 作成した GUID (をクリックして、GUID を作成することができます**ツール** > **GUID の作成**) は"8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B"。 パッケージ クラス内で、次の宣言を追加します。  
+    たとえば、新しい UIContext と仮定"UIContextGuid"が追加されます。 作成した GUID (をクリックして、GUID を作成することができます**ツール** > **GUID の作成**) は"8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B"。 パッケージ クラス内で、次の宣言を追加します。  
   
-    ```csharp  
-    public const string UIContextGuid = "8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B";  
-    ```  
+   ```csharp  
+   public const string UIContextGuid = "8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B";  
+   ```  
   
-     属性の場合、次の値を追加します (これらの属性の詳細は後述)。  
+    属性の場合、次の値を追加します (これらの属性の詳細は後述)。  
   
-    ```csharp  
-    [ProvideAutoLoad(TestPackage.UIContextGuid)]      
-    [ProvideUIContextRule(TestPackage.UIContextGuid,  
-        name: "Test auto load",   
-        expression: "DotConfig",  
-        termNames: new[] { "DotConfig" },  
-        termValues: new[] { "HierSingleSelectionName:.config$" })]  
-    ```  
+   ```csharp  
+   [ProvideAutoLoad(TestPackage.UIContextGuid)]      
+   [ProvideUIContextRule(TestPackage.UIContextGuid,  
+       name: "Test auto load",   
+       expression: "DotConfig",  
+       termNames: new[] { "DotConfig" },  
+       termValues: new[] { "HierSingleSelectionName:.config$" })]  
+   ```  
   
-     これらのメタデータは、新しい UIContext GUID (8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B) と 1 つの用語「DotConfig」を参照する式を定義します。 アクティブな階層の現在の選択が、正規表現パターンに一致する名前を持つときに、"DotConfig"という用語が true に評価された"\\.config$"(終わる *.config*)。 (既定値) の値は、オプションのデバッグに役立つルールの名前を定義します。  
+    これらのメタデータは、新しい UIContext GUID (8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B) と 1 つの用語「DotConfig」を参照する式を定義します。 アクティブな階層の現在の選択が、正規表現パターンに一致する名前を持つときに、"DotConfig"という用語が true に評価された"\\.config$"(終わる *.config*)。 (既定値) の値は、オプションのデバッグに役立つルールの名前を定義します。  
   
-     属性の値は、その後のビルド時に生成された pkgdef に追加されます。  
+    属性の値は、その後のビルド時に生成された pkgdef に追加されます。  
   
-2.  TestPackage のコマンドの VSCT ファイルでは、適切なコマンドに"DynamicVisibility"フラグを追加します。  
+2. TestPackage のコマンドの VSCT ファイルでは、適切なコマンドに"DynamicVisibility"フラグを追加します。  
   
-    ```xml  
-    <CommandFlag>DynamicVisibility</CommandFlag>  
-    ```  
+   ```xml  
+   <CommandFlag>DynamicVisibility</CommandFlag>  
+   ```  
   
-3.  VSCT の可視性のセクションでは、新しい UIContext 1 で定義されている GUID を適切なコマンドを関連付けます。  
+3. VSCT の可視性のセクションでは、新しい UIContext 1 で定義されている GUID を適切なコマンドを関連付けます。  
   
-    ```xml  
-    <VisibilityConstraints>   
-        <VisibilityItem guid="guidTestPackageCmdSet" id="TestId"  context="guidTestUIContext"/>   
-    </VisibilityConstraints>  
-    ```  
+   ```xml  
+   <VisibilityConstraints>   
+       <VisibilityItem guid="guidTestPackageCmdSet" id="TestId"  context="guidTestUIContext"/>   
+   </VisibilityConstraints>  
+   ```  
   
-4.  シンボルのセクションで、UIContext の定義を追加します。  
+4. シンボルのセクションで、UIContext の定義を追加します。  
   
-    ```xml  
-    <GuidSymbol name="guidTestUIContext" value="{8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B}" />  
-    ```  
+   ```xml  
+   <GuidSymbol name="guidTestUIContext" value="{8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B}" />  
+   ```  
   
-     ここで、コンテキスト メニューのコマンドを使用して *\*.config*ファイルを表示するのみと、ソリューション エクスプ ローラーで選択された項目を *.config*ファイルとパッケージはこれらの 1 つまで読み込まれませんコマンドが選択されます。  
+    ここで、コンテキスト メニューのコマンドを使用して *\*.config*ファイルを表示するのみと、ソリューション エクスプ ローラーで選択された項目を *.config*ファイルとパッケージはこれらの 1 つまで読み込まれませんコマンドが選択されます。  
   
- 次に、デバッガーを使用してのみ予期したタイミングをパッケージが読み込まれることを確認します。 TestPackage をデバッグします。  
+   次に、デバッガーを使用してのみ予期したタイミングをパッケージが読み込まれることを確認します。 TestPackage をデバッグします。  
   
-1.  ブレークポイントを設定、<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>メソッド。  
+5. ブレークポイントを設定、<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>メソッド。  
   
-2.  TestPackage をビルドしてデバッグを開始します。  
+6. TestPackage をビルドしてデバッグを開始します。  
   
-3.  プロジェクトを作成するか、いずれかを開きます。  
+7. プロジェクトを作成するか、いずれかを開きます。  
   
-4.  以外の拡張子を持つ任意のファイルを選択 *.config*します。ブレークポイントをヒットしない必要があります。  
+8. 以外の拡張子を持つ任意のファイルを選択 *.config*します。ブレークポイントをヒットしない必要があります。  
   
-5.  選択、 *App.Config*ファイル。  
+9. 選択、 *App.Config*ファイル。  
   
- TestPackage は読み込みをブレークポイントで停止します。  
+   TestPackage は読み込みをブレークポイントで停止します。  
   
 ## <a name="add-more-rules-for-ui-context"></a>UI コンテキストに対してルールを追加します。  
  UI コンテキスト ルールは、ブール式であるために、UI コンテキストのさらに制限された規則を追加できます。 たとえば、上記の UI コンテキストで、規則では、プロジェクトのソリューションが読み込まれるときにのみ適用されるを指定できます。 この方法で、コマンドは表示されませんを開くかどうか、 *.config*スタンドアロン ファイルとして、プロジェクトの一部としてではなくファイル。  

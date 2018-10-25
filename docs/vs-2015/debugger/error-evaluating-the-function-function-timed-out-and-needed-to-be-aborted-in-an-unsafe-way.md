@@ -1,7 +1,7 @@
 ---
 title: 'エラー: 関数の評価&#39;関数&#39;がタイムアウトし、安全でない方法で中止されるために必要な |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -13,18 +13,16 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b78d4b8f433c925521a978ab5c3a5076f329c407
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 70c2276ef49ebc90deb6530b781856d9e9b2d29d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540251"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904534"
 ---
 # <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>エラー: 関数の評価&#39;関数&#39;タイムアウトしたため、安全でない方法で中止する必要があります。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[エラー: 関数の評価&#39;関数&#39;がタイムアウトし、安全でない方法で中止されるために必要な](https://docs.microsoft.com/visualstudio/debugger/error-evaluating-the-function-function-timed-out-and-needed-to-be-aborted-in-an-unsafe-way)します。  
-  
 メッセージの全文: 関数 'function' の評価がタイムアウトし、安全でない方法で中止する必要があります。 これがターゲット プロセスを壊れている可能性があります。 
 
 .NET オブジェクトの状態を検査しやすいように、デバッガーは (通常はプロパティの getter メソッドと ToString 関数) の追加のコードを実行するデバッグ対象のプロセスを自動的に強制されます。 ほとんどすべてのシナリオでは、これらの関数は、すぐに完了し、非常に簡単にデバッグします。 ただし、デバッガーは、サンド ボックスで、アプリケーションを実行しません。 その結果、プロパティ get アクセス操作子またはハングするネイティブ関数を呼び出す ToString メソッドは回復可能なことができない可能性がある、タイムアウトが長につながります。 このエラー メッセージが発生した場合は、この問題が発生します。

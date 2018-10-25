@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: Azure モバイル サービスに接続された WPF デスクトップ アプリケーションの作成 | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cdefeb0589e926554d0bec2b33a954821ce5d979
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9ab2c5bbea358c226407ba83e2a367195ecfef06
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536431"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49270612"
 ---
 # <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>チュートリアル: Azure モバイル サービスに接続された WPF デスクトップ アプリケーションの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: Azure モバイル サービスに接続された WPF デスクトップ アプリケーションの作成](https://docs.microsoft.com/visualstudio/designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service)です。  
-  
 Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル サービスを利用してデータの格納および提供を行う、最新式のデスクトップ アプリケーションをすばやく作成することができます。  
   
 ##  <a name="Requirements"></a> 必要条件  

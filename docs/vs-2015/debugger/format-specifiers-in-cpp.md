@@ -1,14 +1,14 @@
 ---
 title: Format Specifiers in C++ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
 - vs-ide-debug
 ms.tgt_pltfrm: ''
-ms.topic: hero-article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug
 dev_langs:
@@ -33,27 +33,25 @@ caps.latest.revision: 45
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d495fff6848a8d62be5a4471ee6a036cf9054fff
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2f1a09cf7e4f6e15ee49ce62914b650c3622e6e5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548167"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894054"
 ---
 # <a name="format-specifiers-in-c"></a>C++ の書式指定子
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Format Specifiers in C++](https://docs.microsoft.com/visualstudio/debugger/format-specifiers-in-cpp)します。  
-  
 書式指定子を使用して、 **ウォッチ** ウィンドウに表示される値の書式設定を変更することができます。  
   
  また、 **[イミディエイト]** ウィンドウ、 **[コマンド]** ウィンドウ、およびソースのウィンドウでも、書式指定子を使用できます。 これらのウィンドウで式の上にカーソルを合わせると、結果が [データヒント] に表示されます。 [データヒント] の表示には、書式指定子が反映されます。  
   
 > [!NOTE]
 >  Visual Studio のネイティブ デバッガーが新しいデバッグ エンジンに変更されました。 この変更の一環として、新しい書式指定子がいくつか追加され、古いものが削除されています。 C++/CLI で相互運用 (ネイティブ コードとマネージド コードの混合) をデバッグする場合は、以前のデバッガーが引き続き使用されます。 このトピックの以降のセクションで、各デバッグ エンジンの書式指定子について説明します。  
->   
->  -   [書式指定子](#BKMK_Visual_Studio_2012_format_specifiers) 」では、新しいデバッグ エンジンの書式指定子について説明します。  
-> -   [C++/CLI での相互運用機能デバッグ用の書式指定子](#BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue) 」では、以前のデバッグ エンジンの書式指定子について説明します。  
+> 
+> - [書式指定子](#BKMK_Visual_Studio_2012_format_specifiers) 」では、新しいデバッグ エンジンの書式指定子について説明します。  
+>   -   [C++/CLI での相互運用機能デバッグ用の書式指定子](#BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue) 」では、以前のデバッグ エンジンの書式指定子について説明します。  
   
 ## <a name="using-format-specifiers"></a>書式指定子の使用  
  次のようなコードがあるとします。  

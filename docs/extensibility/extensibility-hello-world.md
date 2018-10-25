@@ -9,16 +9,16 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a0d5ab3c86c454a547ea80307c5440441424b1c
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 91d9c809d16a3763bed75d5de4c03bd7112c6e8a
+ms.sourcegitcommit: e680e8ac675f003ebcc8f8c86e27f54ff38da662
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499566"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356757"
 ---
 # <a name="create-your-first-extension-hello-world"></a>初めての拡張機能の作成: Hello World
 
-この Hello World の例には、Visual Studio の初めての拡張機能の作成手順について説明します。 このチュートリアルでは、Visual Studio に新しいコマンドを追加する方法を説明します。
+この Hello World の例には、Visual Studio の初めての拡張機能の作成手順について説明します。 このチュートリアルでは、Visual Studio に新しいコマンドを追加する方法を示します。
 
 プロセスでは、学習する方法。
 
@@ -35,11 +35,12 @@ ms.locfileid: "39499566"
 
 開始する前にインストールされている確認、 **Visual Studio 拡張機能の開発**VSIX のテンプレートが必要し、サンプル コードを含むワークロード。
 
-メモ: (Community、Professional、または Enterprise) Visual Studio 機能拡張プロジェクトを作成する Visual Studio の任意のバージョンを使用することができます。
+> [!NOTE]
+> (Community、Professional、または Enterprise) Visual Studio 機能拡張プロジェクトを作成する Visual Studio の任意のエディションを使用することができます。
 
 ## <a name="create-an-extensibility-project"></a>機能拡張プロジェクトを作成します。
 
-手順 1. **ファイル** メニューのをクリックして**新しいプロジェクト**します。 画面の下部には、プロジェクトの名前を入力できます。
+手順 1. **ファイル** メニューのをクリックして**新しいプロジェクト**します。 画面の下部には、プロジェクトの名前を入力します。
 
 手順 2. **テンプレート** メニューのをクリックして**Visual c#**、 をクリックして**拡張**、 をクリックし、 **VSIX プロジェクト**。
 
@@ -53,15 +54,15 @@ ms.locfileid: "39499566"
 
 手順 1. マニフェストを選択した場合、どのようなオプションは変更可能なインスタンス、メタデータ、説明、およびバージョンが確認できます。
 
-手順 2. (ソリューションではなく) プロジェクトを右クリックします。 コンテキスト メニューで、次のようにクリックします。**追加**、 をクリックし、**ユーザー コントロール**します。
+手順 2. (ソリューションではなく) プロジェクトを右クリックします。 コンテキスト メニューで、次のようにクリックします。**追加**、 をクリックし、**新しい項目の**します。
 
-手順 3. 戻り、**拡張**セクションで、クリックして**カスタム コマンド**。
+手順 3. 選択、**拡張**セクションをクリックして**カスタム コマンド**します。
 
 手順 4. **名前**下部にあるフィールドに、名前を付け、たとえば*Command.cs*します。
 
 ![カスタム コマンド](media/hello-world-custom-command.png)
 
-新しいコマンドが示されます、**ソリューション エクスプ ローラー**下、**リソース**分岐します。 これは、PNG および ICO ファイル、イメージを変更する場合など、コマンドに関連するその他のファイルを検索します。
+新しいコマンドが記載**ソリューション エクスプ ローラー**下、**リソース**分岐します。 これは、PNG および ICO ファイル、イメージを変更する場合など、コマンドに関連するその他のファイルを検索します。
 
 ## <a name="modify-the-source-code"></a>ソース コードを変更します。
 
@@ -116,7 +117,7 @@ ms.locfileid: "39499566"
 
 Visual Studio の実験用インスタンスでソース コードを実行できます。
 
-手順 1. クリックして**開始**ツールバー。 プロジェクトのビルドと呼ばれる Visual Studio の新しいインスタンスを起動するデバッガーを起動され、**実験用インスタンス**します。
+手順 1. クリックして**開始**ツールバー。 プロジェクトがビルドされと呼ばれる Visual Studio の新しいインスタンスを起動するデバッガーを起動、**実験用インスタンス**します。
 
 単語が表示されます**実験用インスタンス**Visual Studio タイトル バーにします。
 

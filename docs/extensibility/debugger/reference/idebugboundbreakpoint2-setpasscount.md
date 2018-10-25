@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::SetPassCount |Microsoft ドキュメント
+title: IDebugBoundBreakpoint2::SetPassCount |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 589792a9309565496b4d1ab73e1867055bcdf3bc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: abdb437abfe2ed9980ce94c7df20a840aeec5dda
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31101239"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831082"
 ---
 # <a name="idebugboundbreakpoint2setpasscount"></a>IDebugBoundBreakpoint2::SetPassCount
-設定またはこのバインドされたブレークポイントに関連付けられたパスの数を変更します。  
+設定またはバインドされたこのブレークポイントに関連付けられているパスの数を変更します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,15 +42,15 @@ int SetPassCount(
   
 #### <a name="parameters"></a>パラメーター  
  `bpPassCount`  
- [in][BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)をパスの数を指定します。  
+ [in][BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)パスの数を指定する構造体。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 返します`E_BP_DELETED`バインドされたブレークポイント オブジェクトの状態は に設定されているかどうかは`BPS_DELETED`(の一部、 [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)列挙型)。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 返します`E_BP_DELETED`にバインドされたブレークポイント オブジェクトの状態が設定されてかどうか`BPS_DELETED`(の一部、 [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)列挙型)。  
   
-## <a name="remarks"></a>コメント  
- パスの数は、ブレークポイントの発生タイミングを決定します。 現在のパスまたはヒット カウントを呼び出すことによって取得することができます、 [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ パスの数は、ブレークポイントの発生タイミングを決定します。 現在のパスまたはヒット カウントを呼び出すことによって取得できます、 [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md)メソッド。  
   
- 以前このブレークポイントに関連付けられていたパスの数が失われます。  
+ 以前、このブレークポイントに関連付けられていたパスの数が失われます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   

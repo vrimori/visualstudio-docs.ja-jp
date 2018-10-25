@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f569769613e4fac0b4773a755740274ec0933016
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1b5cfd9afaf0c37dcf267c63641b7917efe4c249
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42635233"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831816"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint-by-using-a-designer"></a>チュートリアル: SharePoint のデザイナーを使用して web パーツを作成します。
 
@@ -98,9 +98,9 @@ SharePoint サイトの Web パーツを作成すれば、ユーザーはブラ�
 
 1. 次のいずれかの操作を実行します。
 
-    - デザイナーで、ダブルクリック、 **Update**ボタンをクリックします。
+   - デザイナーで、ダブルクリック、 **Update**ボタンをクリックします。
 
-    - **プロパティ**のウィンドウ、 **Update**  ボタンを選択、**イベント**ボタンをクリックします。 **をクリックして**プロパティ、入力**Button1_Click**、し、Enter キーを押します。
+   - **プロパティ**のウィンドウ、 **Update**  ボタンを選択、**イベント**ボタンをクリックします。 **をクリックして**プロパティ、入力**Button1_Click**、し、Enter キーを押します。
 
      ユーザー コントロール コード ファイルがコード エディターで開き、`Button1_Click` イベント ハンドラーが表示されます。 後で、このイベント ハンドラーにコードを追加します。
 
@@ -116,11 +116,11 @@ SharePoint サイトの Web パーツを作成すれば、ユーザーはブラ�
 
 4. `Page_Load` クラスの `VisualWebPart1` メソッドを次のコードに置き換えます。 このコードは次のタスクを実行します。
 
-    - 月間カレンダー ビューをユーザー コントロールに追加します。
+   - 月間カレンダー ビューをユーザー コントロールに追加します。
 
-    - サイト上の各カレンダー リストにチェック ボックスを追加します。
+   - サイト上の各カレンダー リストにチェック ボックスを追加します。
 
-    - カレンダー ビューに表示される項目の種類ごとにテンプレートを指定します。
+   - カレンダー ビューに表示される項目の種類ごとにテンプレートを指定します。
 
      [!code-vb[SP_VisualWebPart#3](../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#3)]
      [!code-csharp[SP_VisualWebPart#3](../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#3)]

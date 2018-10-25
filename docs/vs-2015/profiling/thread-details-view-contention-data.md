@@ -1,7 +1,7 @@
 ---
 title: スレッドの詳細ビュー - 競合データ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 32dd4ed90a30146a75132fcf0954b7b50fba87a6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d5a46f5d63e817a38808b0c48be75f750a4e2bc9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540138"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49865142"
 ---
 # <a name="thread-details-view---contention-data"></a>スレッドの詳細ビュー - 競合データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[スレッド詳細ビュー - 競合データ](https://docs.microsoft.com/visualstudio/profiling/thread-details-view-contention-data)します。  
-  
 スレッドの詳細ビューには、リソースに対する競合によって発生した、選択したプロファイリング実行スレッド内のブロック イベントがタイムライン グラフで表示されます。 ブロック イベントは、あるリソースに対するアクセスを別のスレッドがロックしているために、スレッドが実行を中断されたときに発生します。  
   
  このビューには、スレッドの実行タイムラインが横軸で、スレッドの横軸のタイムライン上にブロック イベントが縦棒で示されます。 必要に応じて、タイムラインのあるセクションを拡大して、個別のイベントを表示することもできます。 イベント到達するまでの関数の実行パスを表示するには、そのイベントの棒をクリックします。 関数が [呼び出し履歴] ウィンドウに表示されます。 関数のソース コードが使用可能な場合は、関数名をクリックして、Visual Studio IDE でソース ファイルを編集できます。  
@@ -54,9 +52,9 @@ ms.locfileid: "47540138"
   
 #### <a name="to-view-or-edit-the-source-code-of-a-function-in-the-call-stack"></a>呼び出し履歴内の関数のソース コードを表示または編集するには  
   
--   [呼び出し履歴] ウィンドウで関数名をクリックします。  
+- [呼び出し履歴] ウィンドウで関数名をクリックします。  
   
- 関数のソース コードは、現在のプロジェクトに含まれている必要があります。  
+  関数のソース コードは、現在のプロジェクトに含まれている必要があります。  
   
 #### <a name="to-view-the-contention-events-of-a-resource-in-all-threads-in-the-profiling-run"></a>プロファイリング実行内のすべてのスレッドでのリソースの競合イベントを表示するには  
   

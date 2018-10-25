@@ -1,7 +1,7 @@
 ---
 title: テスト ソース管理プラグインのガイド |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ ms.assetid: 13b74765-0b7c-418e-8cd9-5f2e8db51ae5
 caps.latest.revision: 27
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 350e84da54ef554e625dcf1db6df52016e38fa27
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1893a30ff46470949fb5aa534f61f590e7ba2d95
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535380"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873553"
 ---
 # <a name="test-guide-for-source-control-plug-ins"></a>ソース管理プラグイン向けのテスト ガイド
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[テスト ガイドでソース管理プラグインは](https://docs.microsoft.com/visualstudio/extensibility/internals/test-guide-for-source-control-plug-ins)します。  
-  
 このセクションでは、ソース管理プラグインをテストするためのガイダンスを提供します。[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。 同様の問題となる可能性がより複雑な領域の一部、最も一般的なテスト領域の広範な概要が表示されます。 この概要はテスト_ケースを網羅するものではありません。  
   
 > [!NOTE]
@@ -48,19 +46,19 @@ ms.locfileid: "47535380"
  Web プロジェクト  
  Web プロジェクトの 4 つの種類があります。 ファイル システム、ローカル IIS、リモートのサイトおよび FTP です。  
   
--   ファイル システムのプロジェクトは、ローカル パスに作成されますが、インターネット インフォメーション サービス (IIS) には、UNC パスを使用して内部的にアクセスし、クライアント プロジェクトと同様に、IDE 内からソース管理下に置くことができますをインストールする必要はありません。  
+- ファイル システムのプロジェクトは、ローカル パスに作成されますが、インターネット インフォメーション サービス (IIS) には、UNC パスを使用して内部的にアクセスし、クライアント プロジェクトと同様に、IDE 内からソース管理下に置くことができますをインストールする必要はありません。  
   
--   ローカル IIS プロジェクト、ローカル コンピューターを指す URL を使用して IIS が同じマシンにインストールされ、アクセスを使用します。  
+- ローカル IIS プロジェクト、ローカル コンピューターを指す URL を使用して IIS が同じマシンにインストールされ、アクセスを使用します。  
   
--   リモート サイトのプロジェクトは、IIS サービスも作成されますとからではなく、IIS サーバー コンピューターで、ソース管理下にあるそれらの内部で、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE。  
+- リモート サイトのプロジェクトは、IIS サービスも作成されますとからではなく、IIS サーバー コンピューターで、ソース管理下にあるそれらの内部で、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE。  
   
--   FTP のプロジェクトは、リモートの FTP サーバーからアクセスしますが、ソース管理下に配置することはできません。  
+- FTP のプロジェクトは、リモートの FTP サーバーからアクセスしますが、ソース管理下に配置することはできません。  
   
- 参加リスト  
- ソリューションまたはプロジェクトをソース管理の別の用語です。  
+  参加リスト  
+  ソリューションまたはプロジェクトをソース管理の別の用語です。  
   
- バージョン ストア  
- ソース管理プラグイン API を通じてアクセスされているソース管理データベース。  
+  バージョン ストア  
+  ソース管理プラグイン API を通じてアクセスされているソース管理データベース。  
   
 ## <a name="test-areas-covered-in-this-section"></a>このセクションで説明するテスト区分  
   

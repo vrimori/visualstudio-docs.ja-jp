@@ -1,7 +1,7 @@
 ---
 title: ヘルプ ビューアーのトラブルシューティング |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 68946af27925347cee497c237de396d31f214e13
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a3497d46ed4c9c5a04d8f40cc3056ea282593884
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546992"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934237"
 ---
 # <a name="troubleshooting-the-help-viewer"></a>ヘルプ ビューアーのトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ヘルプ ビューアーのトラブルシューティング](https://docs.microsoft.com/visualstudio/ide/troubleshooting-the-help-viewer)します。  
-  
 このトピックでは、ヘルプ ビューアーで発生する可能性のある問題について説明します。  
   
 ## <a name="audio-doesnt-work"></a>オーディオが機能しない。  
@@ -52,9 +50,9 @@ ms.locfileid: "47546992"
 ## <a name="additional-resources"></a>その他のリソース  
  次のリソースを使用して、ヘルプ ビューアーで詳細情報を取得し、フィードバックを提供することができます。  
   
--   フィードバックを提供するには、Microsoft の Web サイト、[Microsoft Connect](http://go.microsoft.com/fwlink/?linkid=243983) をご覧になるか、[hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com) まで電子メールを送信してください。  
+- フィードバックを提供するには、Microsoft の Web サイト、[Microsoft Connect](http://go.microsoft.com/fwlink/?linkid=243983) をご覧になるか、[hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com) まで電子メールを送信してください。  
   
--   詳細については、次を参照してください。、[デベロッパー ドキュメントおよびヘルプ システム](http://go.microsoft.com/fwlink/?LinkId=232741)フォーラムと[The Help Guy](http://go.microsoft.com/fwlink/?LinkId=232743)ブログ。  
+- 詳細については、次を参照してください。、[デベロッパー ドキュメントおよびヘルプ システム](http://go.microsoft.com/fwlink/?LinkId=232741)フォーラムと[The Help Guy](http://go.microsoft.com/fwlink/?LinkId=232743)ブログ。  
   
 ## <a name="see-also"></a>関連項目  
  [ヘルプ ビューアー 2.1 の管理者ガイド](http://go.microsoft.com/fwlink/?LinkId=243985)

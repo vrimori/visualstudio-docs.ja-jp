@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1007: 適切な場所にジェネリックを使用します |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 198cd516819e9753c81449cb708514ac47c62c6e
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 31f15bfc62943bb71acfba24432560facce9d636
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47549269"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861723"
 ---
 # <a name="ca1007-use-generics-where-appropriate"></a>CA1007: 適切な場所にジェネリックを使用します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1007: 適切な場所にジェネリックを使用して](https://docs.microsoft.com/visualstudio/code-quality/ca1007-use-generics-where-appropriate)します。
 
 |||
 |-|-|

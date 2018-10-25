@@ -1,7 +1,7 @@
 ---
 title: IDebugBreakpointRequest3::GetRequestInfo2 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 33942e4a-0a0a-49e8-a693-004954f6d38a
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 62c04aef42571eebe96e2f03b3cc99eedd8e7b3e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 163ac803eb8fb721c7a00f10fa2a84fdb3a2c24c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549100"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923057"
 ---
 # <a name="idebugbreakpointrequest3getrequestinfo2"></a>IDebugBreakpointRequest3::GetRequestInfo2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugBreakpointRequest3::GetRequestInfo2](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2)します。  
-  
 このメソッドは、このブレークポイントの要求を記述するブレークポイント要求情報を取得します。  
   
 ## <a name="syntax"></a>構文  

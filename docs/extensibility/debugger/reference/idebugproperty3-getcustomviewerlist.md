@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::GetCustomViewerList |Microsoft ドキュメント
+title: IDebugProperty3::GetCustomViewerList |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a98a7ca4b2f1dcf25728bd0d2e3778be2d70ada
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d595666fc6099c8769c80f87d9089689c9075962
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31118399"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843939"
 ---
 # <a name="idebugproperty3getcustomviewerlist"></a>IDebugProperty3::GetCustomViewerList
 このプロパティに関連付けられているカスタム ビューアーの一覧を取得します。  
@@ -47,27 +47,27 @@ int GetCustomViewerList(
   
 #### <a name="parameters"></a>パラメーター  
  `celtSkip`  
- [in]スキップするビューアーの数。  
+ [in]閲覧者をスキップの数。  
   
  `celtRequested`  
- [in]取得する者数 (ものサイズを指定します、`rgViewers`配列)。  
+ [in]取得する視聴するユーザー数 (ものサイズを指定します、`rgViewers`配列)。  
   
  `rgViewers`  
- [入力、出力].配列[DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md)格納する構造体。  
+ [入力、出力]配列[DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md)情報を格納する構造体。  
   
  `pceltFetched`  
  [out]ビューアーの実際の数が返されます。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドがへの呼び出しを転送する種類のビジュアライザーをサポートするために、 [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md)メソッドです。 式エバリュエーターでは、このプロパティの型のカスタム ビューアーもサポートする場合、このメソッドは、一覧に適切なカスタム ビューアーを追加することができます。  
+## <a name="remarks"></a>Remarks  
+ このメソッドが呼び出しを転送する型のビジュアライザーをサポートするために、 [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md)メソッド。 式エバリュエーターでは、このプロパティの型のカスタム ビューアーもサポートする場合、このメソッドは、一覧に適切なカスタム ビューアーを追加することができます。  
   
- 参照してください[型ビジュアライザーとカスタム ビューアー](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)型ビジュアライザーとカスタム ビューアーの違いの詳細。  
+ 参照してください[型のビジュアライザーとカスタム ビューアー](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)型のビジュアライザーおよびカスタム ビューアーの違いの詳細について。  
   
 ## <a name="example"></a>例  
- 次の例に対して、このメソッドを実装する方法を示しています、 **CProperty**を公開するオブジェクト、 [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)インターフェイスです。  
+ 次の例では、このメソッドを実装する方法を示しています、 **CProperty**を公開するオブジェクト、 [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)インターフェイス。  
   
 ```cpp  
 STDMETHODIMP CProperty::GetCustomViewerList(ULONG celtSkip, ULONG celtRequested, DEBUG_CUSTOM_VIEWER* prgViewers, ULONG* pceltFetched)  

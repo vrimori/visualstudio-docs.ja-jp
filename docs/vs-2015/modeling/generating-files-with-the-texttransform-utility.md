@@ -1,7 +1,7 @@
 ---
 title: TextTransform ユーティリティを使用したファイルの生成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ caps.latest.revision: 43
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 069f7f5ef2c579c10c1ee7c19989c79ce3ad63bf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e7dbe189c9b46c10dc7bac5da4b87457d7c6ecbf
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549118"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49227449"
 ---
 # <a name="generating-files-with-the-texttransform-utility"></a>TextTransform ユーティリティを使用したファイルの生成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[TextTransform ユーティリティを使ってファイルを生成する](https://docs.microsoft.com/visualstudio/modeling/generating-files-with-the-texttransform-utility)します。  
-  
 TextTransform.exe は、テキスト テンプレートを変換するために使用できるコマンド ライン ツールです。 TextTransform.exe を呼び出すときに、引数として、テキスト テンプレート ファイルの名前を指定します。 TextTransform.exe では、テキスト変換エンジンを呼び出し、テキスト テンプレートを処理します。 TextTransform.exe は通常、スクリプトから呼び出されます。 ただし、必要でない、通常は、Visual Studio で、またはビルド プロセスでは、テキスト変換を実行するためです。  
   
 > [!NOTE]

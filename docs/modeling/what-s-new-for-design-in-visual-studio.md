@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 957add624e8efa7542991cc03ca48d6835e497f0
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 26ea23c6091910a83ddec41194aa43ae93c9b9eb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857574"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820775"
 ---
 # <a name="whats-new-for-design-in-visual-studio"></a>Visual Studio での設計向けの新機能
 
@@ -70,7 +70,7 @@ UML デザイナー向けの重要なユーザーの場合は、UML のニーズ
 Visual Studio 2017 は、いくつかのエディションで使用できます。 すべては、アーキテクチャとモデリング ツールのサポートを提供します。 各ツールの利用可能情報を次の表に示します。
 
 |**機能**|**Enterprise edition**|**Professional edition**|**Community エディション**|
-|-----------------|--------------------|----------------------|-------------------|
+|-|-|-|-|
 |**コード マップ**|はい|のみコード マップの読み取りをサポートするには、フィルタ リングのコード マップ、新しいジェネリック ノードを追加して、選択範囲から新しいの有向グラフを作成します。|-|
 |**依存関係図**|はい|のみ依存関係図の読み取りをサポートします。|のみ依存関係図の読み取りをサポートします。|
 |**グラフの directed** (DGML ダイアグラム)|はい|[はい]|はい|

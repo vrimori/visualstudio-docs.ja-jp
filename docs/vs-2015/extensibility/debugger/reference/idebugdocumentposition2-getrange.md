@@ -1,7 +1,7 @@
 ---
 title: IDebugDocumentPosition2::GetRange |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 91a06ee7-253a-4215-be22-04bf57305aa8
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 654767613b48bc0c885da3af6a494661beddc5c4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4e34f4397adf570c4e32aad240b2375614b3f91d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533731"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877895"
 ---
 # <a name="idebugdocumentposition2getrange"></a>IDebugDocumentPosition2::GetRange
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugDocumentPosition2::GetRange](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugdocumentposition2-getrange)します。  
-  
 このドキュメントの位置の範囲を取得します。  
   
 ## <a name="syntax"></a>構文  

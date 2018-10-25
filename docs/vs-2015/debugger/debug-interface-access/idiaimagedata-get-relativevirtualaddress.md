@@ -1,7 +1,7 @@
 ---
 title: Idiaimagedata::get_relativevirtualaddress |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 46b826513528b6e088ff7b9f7944506cd8276223
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: da16e0638a8cc4ece05b68d7262c75b6069d5e3b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539041"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49889322"
 ---
 # <a name="idiaimagedatagetrelativevirtualaddress"></a>IDiaImageData::get_relativeVirtualAddress
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiaimagedata::get_relativevirtualaddress](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiaimagedata-get-relativevirtualaddress)します。  
-  
 アプリケーションを基準モジュールの仮想メモリの場所を取得します。  
   
 ## <a name="syntax"></a>構文  

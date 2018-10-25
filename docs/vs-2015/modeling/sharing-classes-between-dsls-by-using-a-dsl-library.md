@@ -1,7 +1,7 @@
 ---
 title: DSL ライブラリによる Dsl 間でのクラスの共有 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: a4ec7820be2cc4f308582e71f3ba64ded5c296e7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ed469b4621205539e3f7a2ce59878bd318ba556f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539429"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860037"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>DSL ライブラリによる DSL 間でのクラスの共有
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[DSL ライブラリによる Dsl 間で共有クラス](https://docs.microsoft.com/visualstudio/modeling/sharing-classes-between-dsls-by-using-a-dsl-library)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Visualization and Modeling SDK では、別の DSL にインポートすることができます、不完全な DSL 定義を作成することができます。 これにより、類似したモデルの共通部分を考慮することができます。  
   
 ## <a name="creating-and-using-dsl-libraries"></a>DSL ライブラリの作成と  
@@ -54,21 +52,21 @@ ms.locfileid: "47539429"
   
 #### <a name="to-import-a-dsl-library"></a>DSL ライブラリをインポートするには  
   
-1.  別の DSL 定義内で**DSL エクスプ ローラー**、DSL のルート クラスを右クリックし、クリックして**新しい DslLibrary インポートの追加**します。  
+1. 別の DSL 定義内で**DSL エクスプ ローラー**、DSL のルート クラスを右クリックし、クリックして**新しい DslLibrary インポートの追加**します。  
   
-2.  [プロパティ] ウィンドウで次のように設定します。、**ファイル パス**ライブラリ。 相対パスまたは絶対パスを使用することができます。  
+2. [プロパティ] ウィンドウで次のように設定します。、**ファイル パス**ライブラリ。 相対パスまたは絶対パスを使用することができます。  
   
-     インポートされたライブラリは、読み取り専用モードには、DSL エクスプ ローラーで表示されます。  
+    インポートされたライブラリは、読み取り専用モードには、DSL エクスプ ローラーで表示されます。  
   
-3.  基底クラスとしてインポートされたクラスを使用することができます。 インポートの DSL のドメイン クラスを作成し、プロパティ ウィンドウで、設定**ベース クラス**をインポートするクラス。  
+3. 基底クラスとしてインポートされたクラスを使用することができます。 インポートの DSL のドメイン クラスを作成し、プロパティ ウィンドウで、設定**ベース クラス**をインポートするクラス。  
   
-4.  すべてのテンプレートの変換 をクリックします。  
+4. すべてのテンプレートの変換 をクリックします。  
   
-5.  DSL ライブラリのプロジェクトによってビルドされたアセンブリ (DLL) への参照を DSL プロジェクトに追加します。  
+5. DSL ライブラリのプロジェクトによってビルドされたアセンブリ (DLL) への参照を DSL プロジェクトに追加します。  
   
-6.  ソリューションをビルドします。  
+6. ソリューションをビルドします。  
   
- DSL ライブラリには、その他のライブラリをインポートできます。 ライブラリをインポートするときに、そのインポートは DSL エクスプ ローラーにも自動的に表示されます。  
+   DSL ライブラリには、その他のライブラリをインポートできます。 ライブラリをインポートするときに、そのインポートは DSL エクスプ ローラーにも自動的に表示されます。  
   
 ## <a name="see-also"></a>関連項目  
  [方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)

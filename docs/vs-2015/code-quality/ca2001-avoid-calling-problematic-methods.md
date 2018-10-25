@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2001: 問題のあるメソッドは呼び出しません |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 3a62259f0c0d4de701cba9619ba8a067926a99e6
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: ddc96857cf0c3c54472eded5545ca0f328eba213
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47549268"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49902790"
 ---
 # <a name="ca2001-avoid-calling-problematic-methods"></a>CA2001: 問題が発生する可能性のあるメソッドは呼び出しません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2001: 問題のあるメソッドは呼び出しません](https://docs.microsoft.com/visualstudio/code-quality/ca2001-avoid-calling-problematic-methods)します。
 
 |||
 |-|-|

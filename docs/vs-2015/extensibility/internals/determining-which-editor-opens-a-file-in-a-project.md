@@ -1,7 +1,7 @@
 ---
 title: エディターがプロジェクトでファイルを開きますの決定 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: acbcf4d8-a53a-4727-9043-696a47369479
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b144b9d380e652857b08733e48d43b5b7609ffd6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ba2241a8c8572b46dab0d4df1776f65ab8f10d67
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546077"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49241034"
 ---
 # <a name="determining-which-editor-opens-a-file-in-a-project"></a>プロジェクトでのファイルを開くエディターの決定
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロジェクトでファイルを開くエディターを決定する](https://docs.microsoft.com/visualstudio/extensibility/internals/determining-which-editor-opens-a-file-in-a-project)します。  
-  
 プロジェクトでユーザーがファイルを開くと、最終的に、適切なエディターまたはデザイナーがそのファイルを開いて、ポーリング処理によって、環境が移動します。 環境で採用されている最初の手順では、標準とカスタムの両方のエディターに同じです。 環境ではファイルを開くときに使用するエディターをポーリングするときに、さまざまな条件を使用し、VSPackage は、このプロセス中に、環境と調整する必要があります。  
   
  たとえば、ユーザーが選択すると、**オープン**コマンドを**ファイル**] メニューの [を選択し、 `filename`.rtf (またはその他のファイル拡張子が .rtf) 環境は、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A>最終的に、ソリューション内のすべてのプロジェクト インスタンスを繰り返し、各プロジェクトの実装です。 プロジェクトでは、優先順位によって、ドキュメントに対する要求を識別するフラグのセットを返します。 最高の優先順位を使用して、環境が呼び出す、適切な<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A>メソッド。 ポーリングのプロセスの詳細については[プロジェクトに追加してプロジェクト項目テンプレート](../../extensibility/internals/adding-project-and-project-item-templates.md)します。  

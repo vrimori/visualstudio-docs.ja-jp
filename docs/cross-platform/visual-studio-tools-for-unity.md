@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 14949313b0e44dd7e86480177c56819d3fdb22f8
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: a4e3dc416a406976403dceb0568cea5b8cbfd56e
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43775092"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880540"
 ---
 # <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
 
@@ -50,7 +50,7 @@ Visual Studio Tools for Unity は、Visual Studio に期待される堅牢な[�
 
 ### <a name="visual-studio-for-mac-tools-for-unity"></a>Visual Studio for Mac Tools for Unity
 
-Visual Studio for Mac も、Unity プロジェクトもサポートします。 詳しくは、[Visual Studio for Mac Tools for Unity のドキュメント](https://docs.microsoft.com/en-us/visualstudio/mac/unity-tools)をご覧ください。
+Visual Studio for Mac も、Unity プロジェクトもサポートします。 詳しくは、[Visual Studio for Mac Tools for Unity のドキュメント](/visualstudio/mac/unity-tools)をご覧ください。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78ffb4e98ce8589f20d4a0253ce675e546f15ae4
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 93bf6af51488b5609f24c5664dee040ea086c26c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078730"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867263"
 ---
 # <a name="add-a-menu-controller-to-a-toolbar"></a>ツールバーにメニュー コント ローラーを追加します。
 このチュートリアルの[ツール ウィンドウにツールバーを追加](../extensibility/adding-a-toolbar-to-a-tool-window.md)チュートリアルとツール ウィンドウのツールバーにメニュー コント ローラーを追加する方法について説明します。 以下に示す手順も適用できますで作成したツールバーに、[ツールバーを追加](../extensibility/adding-a-toolbar.md)チュートリアル。  
@@ -29,87 +29,87 @@ ms.locfileid: "39078730"
   
  メニューにメニュー コント ローラーを表示できますが、ツールバーに最もよく使われます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
   
 ## <a name="create-a-menu-controller"></a>メニュー コント ローラーを作成します。  
   
-1.  説明されている手順に従って[ツール ウィンドウにツールバーを追加](../extensibility/adding-a-toolbar-to-a-tool-window.md)ツールバーのあるツール ウィンドウを作成します。  
+1. 説明されている手順に従って[ツール ウィンドウにツールバーを追加](../extensibility/adding-a-toolbar-to-a-tool-window.md)ツールバーのあるツール ウィンドウを作成します。  
   
-2.  *TWTestCommandPackage.vsct*Symbols セクションに移動します。 という名前の GuidSymbol 要素で**guidTWTestCommandPackageCmdSet**、メニュー コント ローラー、メニュー コント ローラーのグループ、および 3 つのメニュー項目を宣言します。  
+2. *TWTestCommandPackage.vsct*Symbols セクションに移動します。 という名前の GuidSymbol 要素で**guidTWTestCommandPackageCmdSet**、メニュー コント ローラー、メニュー コント ローラーのグループ、および 3 つのメニュー項目を宣言します。  
   
-    ```xml  
-    <IDSymbol name="TestMenuController" value="0x1300" /><IDSymbol name="TestMenuControllerGroup" value="0x1060" /><IDSymbol name="cmdidMCItem1" value="0x0130" /><IDSymbol name="cmdidMCItem2" value="0x0131" /><IDSymbol name="cmdidMCItem3" value="0x0132" />  
-    ```  
+   ```xml  
+   <IDSymbol name="TestMenuController" value="0x1300" /><IDSymbol name="TestMenuControllerGroup" value="0x1060" /><IDSymbol name="cmdidMCItem1" value="0x0130" /><IDSymbol name="cmdidMCItem2" value="0x0131" /><IDSymbol name="cmdidMCItem3" value="0x0132" />  
+   ```  
   
-3.  メニューのセクションで、最後のメニュー エントリの後に、メニューとしてメニュー コント ローラーを定義します。  
+3. メニューのセクションで、最後のメニュー エントリの後に、メニューとしてメニュー コント ローラーを定義します。  
   
-    ```xml  
-    <Menu guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" priority="0x0100" type="MenuController">  
-        <Parent guid="guidTWTestCommandPackageCmdSet" id="TWToolbarGroup" />  
-        <CommandFlag>IconAndText</CommandFlag>  
-        <CommandFlag>TextChanges</CommandFlag>  
-        <CommandFlag>TextIsAnchorCommand</CommandFlag>  
-        <Strings>  
-            <ButtonText>Test Menu Controller</ButtonText>  
-            <CommandName>Test Menu Controller</CommandName>  
-        </Strings>  
-    </Menu>  
-    ```  
+   ```xml  
+   <Menu guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" priority="0x0100" type="MenuController">  
+       <Parent guid="guidTWTestCommandPackageCmdSet" id="TWToolbarGroup" />  
+       <CommandFlag>IconAndText</CommandFlag>  
+       <CommandFlag>TextChanges</CommandFlag>  
+       <CommandFlag>TextIsAnchorCommand</CommandFlag>  
+       <Strings>  
+           <ButtonText>Test Menu Controller</ButtonText>  
+           <CommandName>Test Menu Controller</CommandName>  
+       </Strings>  
+   </Menu>  
+   ```  
   
-     `TextChanges`と`TextIsAnchorCommand`フラグは、選択した最後のコマンドを反映するためにメニュー コント ローラーを含める必要があります。  
+    `TextChanges`と`TextIsAnchorCommand`フラグは、選択した最後のコマンドを反映するためにメニュー コント ローラーを含める必要があります。  
   
-4.  グループのセクションで、最後のグループのエントリの後にメニュー コント ローラーのグループを追加します。  
+4. グループのセクションで、最後のグループのエントリの後にメニュー コント ローラーのグループを追加します。  
   
-    ```xml  
-    <Group guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" priority="0x000">  
-        <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" />  
-    </Group>  
-    ```  
+   ```xml  
+   <Group guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" priority="0x000">  
+       <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" />  
+   </Group>  
+   ```  
   
-     メニュー コント ローラーを設定するには、親として、このグループに配置されたすべてのコマンドは、メニュー コント ローラーに表示されます。 `priority`属性を省略すると、0 の場合の既定値に設定する、メニュー コント ローラーのみのグループであります。  
+    メニュー コント ローラーを設定するには、親として、このグループに配置されたすべてのコマンドは、メニュー コント ローラーに表示されます。 `priority`属性を省略すると、0 の場合の既定値に設定する、メニュー コント ローラーのみのグループであります。  
   
-5.  ボタンのセクションで、最後のボタンのエントリ後、メニュー項目の各ボタン要素を追加します。  
+5. ボタンのセクションで、最後のボタンのエントリ後、メニュー項目の各ボタン要素を追加します。  
   
-    ```xml  
-    <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem1" priority="0x0000" type="Button">  
-        <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" />  
-        <Icon guid="guidImages" id="bmpPic1" />  
-        <CommandFlag>IconAndText</CommandFlag>  
-        <Strings>  
-            <ButtonText>MC Item 1</ButtonText>  
-            <CommandName>MC Item 1</CommandName>  
-        </Strings>  
-    </Button>  
-    <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem2" priority="0x0100" type="Button">  
-        <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" />  
-        <Icon guid="guidImages" id="bmpPic2" />  
-        <CommandFlag>IconAndText</CommandFlag>  
-        <Strings>  
-            <ButtonText>MC Item 2</ButtonText>  
-            <CommandName>MC Item 2</CommandName>  
-        </Strings>  
-    </Button>  
-    <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem3" priority="0x0200" type="Button">  
-        <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" />  
-        <Icon guid="guidImages" id="bmpPicSearch" />  
-        <CommandFlag>IconAndText</CommandFlag>  
-        <Strings>  
-            <ButtonText>MC Item 3</ButtonText>  
-            <CommandName>MC Item 3</CommandName>  
-        </Strings>  
-    </Button>  
-    ```  
+   ```xml  
+   <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem1" priority="0x0000" type="Button">  
+       <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" />  
+       <Icon guid="guidImages" id="bmpPic1" />  
+       <CommandFlag>IconAndText</CommandFlag>  
+       <Strings>  
+           <ButtonText>MC Item 1</ButtonText>  
+           <CommandName>MC Item 1</CommandName>  
+       </Strings>  
+   </Button>  
+   <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem2" priority="0x0100" type="Button">  
+       <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" />  
+       <Icon guid="guidImages" id="bmpPic2" />  
+       <CommandFlag>IconAndText</CommandFlag>  
+       <Strings>  
+           <ButtonText>MC Item 2</ButtonText>  
+           <CommandName>MC Item 2</CommandName>  
+       </Strings>  
+   </Button>  
+   <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem3" priority="0x0200" type="Button">  
+       <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" />  
+       <Icon guid="guidImages" id="bmpPicSearch" />  
+       <CommandFlag>IconAndText</CommandFlag>  
+       <Strings>  
+           <ButtonText>MC Item 3</ButtonText>  
+           <CommandName>MC Item 3</CommandName>  
+       </Strings>  
+   </Button>  
+   ```  
   
-6.  この時点では、メニュー コント ローラーで確認できます。 プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
+6. この時点では、メニュー コント ローラーで確認できます。 プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
   
-    1.  **ビュー/その他の Windows** ] メニューの [open**テスト ToolWindow**します。  
+   1. **ビュー/その他の Windows** ] メニューの [open**テスト ToolWindow**します。  
   
-    2.  ツール ウィンドウのツールバーにメニュー コント ローラーが表示されます。  
+   2. ツール ウィンドウのツールバーにメニュー コント ローラーが表示されます。  
   
-    3.  次の 3 つの可能なコマンドを表示するメニュー コント ローラーの右側にある矢印をクリックします。  
+   3. 次の 3 つの可能なコマンドを表示するメニュー コント ローラーの右側にある矢印をクリックします。  
   
-     コマンドをクリックしたときにそのコマンドを表示するメニュー コント ローラーのタイトルが変更に注意してください。 次のセクションでは、これらのコマンドをアクティブ化するコードを追加します。  
+      コマンドをクリックしたときにそのコマンドを表示するメニュー コント ローラーのタイトルが変更に注意してください。 次のセクションでは、これらのコマンドをアクティブ化するコードを追加します。  
   
 ## <a name="implement-the-menu-controller-commands"></a>コント ローラーのメニュー コマンドを実装します。  
   

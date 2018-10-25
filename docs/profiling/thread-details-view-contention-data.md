@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 712fcfa369c4a324554bda38df671dab1a95a1f5
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: e832088c49366cee3cb2a4f45df7a1250171e7df
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34477354"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849529"
 ---
 # <a name="thread-details-view---contention-data"></a>スレッドの詳細ビュー - 競合データ
 スレッドの詳細ビューには、リソースに対する競合によって発生した、選択したプロファイリング実行スレッド内のブロック イベントがタイムライン グラフで表示されます。 ブロック イベントは、あるリソースに対するアクセスを別のスレッドがロックしているために、スレッドが実行を中断されたときに発生します。  
@@ -46,9 +46,9 @@ ms.locfileid: "34477354"
   
 #### <a name="to-view-or-edit-the-source-code-of-a-function-in-the-call-stack"></a>呼び出し履歴内の関数のソース コードを表示または編集するには  
   
--   **[呼び出し履歴]** ウィンドウで関数名をクリックします。  
+- **[呼び出し履歴]** ウィンドウで関数名をクリックします。  
   
- 関数のソース コードは、現在のプロジェクトに含まれている必要があります。  
+  関数のソース コードは、現在のプロジェクトに含まれている必要があります。  
   
 #### <a name="to-view-the-contention-events-of-a-resource-in-all-threads-in-the-profiling-run"></a>プロファイリング実行内のすべてのスレッドでのリソースの競合イベントを表示するには  
   

@@ -1,7 +1,7 @@
 ---
 title: コードからレイヤー図の作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 64
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: bd2ab2d5041238a59526be5d5f54968d7b1fae90
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 27fb58e0219dd05c623a553c65e577834ee4a05f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548231"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833487"
 ---
 # <a name="create-layer-diagrams-from-your-code"></a>コードからのレイヤー図の作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -111,9 +111,9 @@ ms.locfileid: "47548231"
 > [!NOTE]
 >  成果物の種類によっては、依存関係をリバース エンジニアリングできないものもあります。 たとえば、テキスト ファイルにリンクされているレイヤーから、またはそのレイヤーに対して依存関係をリバース エンジニアリングすることはできません。 アイテムがあるリバース エンジニア リングできる依存関係を表示する 1 つまたは複数のレイヤーのショートカット メニューを開きし、**ビュー リンク**します。 **レイヤー エクスプ ローラー**、確認、**検証をサポート**列。 依存関係にこの列が表示対象の成果物のリバース エンジニア リングがされません**False**します。  
   
--   1 つまたは複数のレイヤーを選択で、選択したレイヤーのショートカット メニューを開きを**依存関係の生成**します。  
+- 1 つまたは複数のレイヤーを選択で、選択したレイヤーのショートカット メニューを開きを**依存関係の生成**します。  
   
- 通常は、不要な依存関係がいくつか見つかります。 これらの依存関係を編集して、目的の設計に準拠するようアラインできます。  
+  通常は、不要な依存関係がいくつか見つかります。 これらの依存関係を編集して、目的の設計に準拠するようアラインできます。  
   
 ##  <a name="EditDependencies"></a> レイヤーと意図した設計を表示する依存関係を編集します。  
  システムに追加予定の変更または目的のアーキテクチャを示すには、レイヤー図を編集します。  

@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::Terminate |Microsoft ドキュメント
+title: IDebugProcess2::Terminate |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d3bb6c47a95ff77d19ea8f6cb8803e416c35148c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c6ce0c0448a72d2511736ca221bafebfc3ecefe6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31116267"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875373"
 ---
 # <a name="idebugprocess2terminate"></a>IDebugProcess2::Terminate
 プロセスを終了します。  
@@ -38,10 +38,10 @@ int Terminate();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- プロセスが終了すると、プロセス内のすべてのプログラムは終了です。[なし] は、任意コードの実行を許可します。  
+## <a name="remarks"></a>Remarks  
+ プロセスが終了したときにプロセス内のすべてのプログラムが終了しました。none は、複数のコードを実行する許可します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

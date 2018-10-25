@@ -18,29 +18,29 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: e90e8080f8f5afb7bd670d04e0f004f433420d68
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 082fe68979ea7ae6a0c0655b7731aa8c7c9f3ac5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44281534"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49838765"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>チュートリアル: WPF と Entity Framework を使用する WCF Data Service の作成
 このチュートリアルは、単純なを作成する方法を示します[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]でホストされる、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] web アプリケーションと Windows フォーム アプリケーションからアクセスします。
 
 このチュートリアルでしました。
 
--   ホストする web アプリケーションを作成、[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]します。
+- ホストする web アプリケーションを作成、[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]します。
 
--   作成、[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]を表す、 `Customers` Northwind データベースのテーブル。
+- 作成、[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]を表す、 `Customers` Northwind データベースのテーブル。
 
--   [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] を作成します。
+- [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] を作成します。
 
--   クライアント アプリケーションを作成し、[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] への参照を追加します。
+- クライアント アプリケーションを作成し、[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] への参照を追加します。
 
--   サービスへのデータ バインディングを有効にし、ユーザー インターフェイスを生成します。
+- サービスへのデータ バインディングを有効にし、ユーザー インターフェイスを生成します。
 
--   必要に応じて、アプリケーションにフィルター処理機能を追加します。
+- 必要に応じて、アプリケーションにフィルター処理機能を追加します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 このチュートリアルでは、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。
@@ -66,7 +66,7 @@ ms.locfileid: "44281534"
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-#### <a name="to-create-the-web-project"></a>Web プロジェクトを作成するには
+### <a name="to-create-the-web-project"></a>Web プロジェクトを作成するには
 
 1.  メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。
 
@@ -78,7 +78,7 @@ ms.locfileid: "44281534"
 
 次の手順で作成、[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]を表す、 `Customers` Northwind データベースのテーブル。
 
-#### <a name="to-create-the-entity-data-model"></a>Entity Data Model を作成するには
+### <a name="to-create-the-entity-data-model"></a>Entity Data Model を作成するには
 
 1.  メニュー バーで **[プロジェクト]** > **[新しい項目の追加]** の順に選択します。
 
@@ -101,12 +101,12 @@ ms.locfileid: "44281534"
 6.  データベースは、パスワードを必要とする場合は、選択、**はい、機密データの接続文字列に含める**オプション ボタンをクリックして、**次**ボタン。
 
     > [!NOTE]
-    >  ダイアログ ボックスが表示される選択**はい**をプロジェクトにファイルを保存します。
+    > ダイアログ ボックスが表示される選択**はい**をプロジェクトにファイルを保存します。
 
 7.  **バージョンの選択**ページで、選択、 **Entity Framework 5.0**オプション ボタンをクリックして、 **[次へ]** ボタンをクリックします。
 
     > [!NOTE]
-    >  Entity Framework 6 の最新バージョンの WCF サービスを使用するのには、WCF Data Services Entity Framework プロバイダー NuGet パッケージをインストールする必要があります。 参照してください[Services 5.6.0 with Entity Framework 6 + の WCF Data を使用して](https://blogs.msdn.microsoft.com/odatateam/2013/10/02/using-wcf-data-services-5-6-0-with-entity-framework-6/)します。
+    > Entity Framework 6 の最新バージョンの WCF サービスを使用するのには、WCF Data Services Entity Framework プロバイダー NuGet パッケージをインストールする必要があります。 参照してください[Services 5.6.0 with Entity Framework 6 + の WCF Data を使用して](https://blogs.msdn.microsoft.com/odatateam/2013/10/02/using-wcf-data-services-5-6-0-with-entity-framework-6/)します。
 
 8.  **データベース オブジェクトの選択** ページで、展開、**テーブル**ノードを選択、**顧客**チェック ボックスをオンにして、**完了**ボタンをクリックします。
 
@@ -114,7 +114,7 @@ ms.locfileid: "44281534"
 
 次の手順では、作成し、データ サービスをテストします。
 
-#### <a name="to-create-the-data-service"></a>データ サービスを作成するには
+### <a name="to-create-the-data-service"></a>データ サービスを作成するには
 
 1.  メニュー バーで **[プロジェクト]** > **[新しい項目の追加]** の順に選択します。
 
@@ -141,7 +141,7 @@ ms.locfileid: "44281534"
      内のデータの XML 表現、`Customers`テーブルが表示されます。
 
     > [!NOTE]
-    >  Internet Explorer がデータを誤って RSS フィードとして解釈する場合があります。 RSS フィードを表示するオプションが無効になっていることを確認してください。 詳細については、次を参照してください。[サービス参照のトラブルシューティング](../data-tools/troubleshooting-service-references.md)します。
+    > Internet Explorer がデータを誤って RSS フィードとして解釈する場合があります。 RSS フィードを表示するオプションが無効になっていることを確認してください。 詳細については、次を参照してください。[サービス参照のトラブルシューティング](../data-tools/troubleshooting-service-references.md)します。
 
 8.  ブラウザー ウィンドウを閉じます。
 
@@ -152,7 +152,7 @@ ms.locfileid: "44281534"
 
  最初の手順では、Windows フォーム プロジェクトをソリューションに追加し、スタートアップ プロジェクトとして設定します。
 
-#### <a name="to-create-the-client-application"></a>クライアント アプリケーションを作成するには
+### <a name="to-create-the-client-application"></a>クライアント アプリケーションを作成するには
 
 1.  メニュー バーで、ファイルを選択**追加** > **新しいプロジェクト**します。
 
@@ -166,7 +166,7 @@ ms.locfileid: "44281534"
 
 次の手順でサービスへの参照を追加する、 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] web プロジェクトにします。
 
-#### <a name="to-add-a-service-reference"></a>サービス参照を追加するには
+### <a name="to-add-a-service-reference"></a>サービス参照を追加するには
 
 1.  メニュー バーで、**プロジェクト** > **サービス参照の追加**します。
 
@@ -178,7 +178,7 @@ ms.locfileid: "44281534"
 
 次の手順では、サービスへのデータ バインディングを有効にするデータ ソースを構成します。
 
-#### <a name="to-enable-data-binding-to-the-service"></a>サービスへのデータ バインディングを有効にするには
+### <a name="to-enable-data-binding-to-the-service"></a>サービスへのデータ バインディングを有効にするには
 
 1.  メニュー バーで、**ビュー** > **その他の Windows** > **データソース**します。
 
@@ -192,61 +192,60 @@ ms.locfileid: "44281534"
 
 次の手順では、サービスからデータを表示するユーザー インターフェイスを作成します。
 
-#### <a name="to-create-the-user-interface"></a>ユーザー インターフェイスを作成するには
+### <a name="to-create-the-user-interface"></a>ユーザー インターフェイスを作成するには
 
-1.  **データソース**ウィンドウで、ショートカット メニューを開き、**顧客**ノード選択**コピー**。
+1. **データソース**ウィンドウで、ショートカット メニューを開き、**顧客**ノード選択**コピー**。
 
-2.  **Form1.vb**または**Form1.cs**フォーム デザイナー、ショートカット メニューを開き、選択**貼り付け**します。
+2. **Form1.vb**または**Form1.cs**フォーム デザイナー、ショートカット メニューを開き、選択**貼り付け**します。
 
-     <xref:System.Windows.Forms.DataGridView> コントロール、<xref:System.Windows.Forms.BindingSource> コンポーネント、および <xref:System.Windows.Forms.BindingNavigator> コンポーネントがフォームに追加されます。
+    <xref:System.Windows.Forms.DataGridView> コントロール、<xref:System.Windows.Forms.BindingSource> コンポーネント、および <xref:System.Windows.Forms.BindingNavigator> コンポーネントがフォームに追加されます。
 
-3.  選択、 **CustomersDataGridView**コントロール、し、**プロパティ**ウィンドウのセット、**ドッキング**プロパティを**入力**します。
+3. 選択、 **CustomersDataGridView**コントロール、し、**プロパティ**ウィンドウのセット、**ドッキング**プロパティを**入力**します。
 
-4.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **Form1**ノード選択**コードの表示**、コード エディターを開き、次を追加する`Imports`または`Using`ファイルの上部にあるステートメント。
+4. **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **Form1**ノード選択**コードの表示**、コード エディターを開き、次を追加する`Imports`または`Using`ファイルの上部にあるステートメント。
 
-    ```vb
-    Imports NorthwindClient.ServiceReference1
-    ```
+   ```vb
+   Imports NorthwindClient.ServiceReference1
+   ```
 
-    ```csharp
-    using NorthwindClient.ServiceReference1;
-    ```
+   ```csharp
+   using NorthwindClient.ServiceReference1;
+   ```
 
-5.  `Form1_Load` イベント ハンドラーに次のコードを追加します。
+5. `Form1_Load` イベント ハンドラーに次のコードを追加します。
 
-    ```vb
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-            Dim proxy As New NorthwindEntities _
-    (New Uri("http://localhost:53161/NorthwindCustomers.svc/"))
-            Me.CustomersBindingSource.DataSource = proxy.Customers
-        End Sub
-    ```
+   ```vb
+   Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+           Dim proxy As New NorthwindEntities _
+   (New Uri("http://localhost:53161/NorthwindCustomers.svc/"))
+           Me.CustomersBindingSource.DataSource = proxy.Customers
+       End Sub
+   ```
 
-    ```csharp
-    private void Form1_Load(object sender, EventArgs e)
-    {
-    NorthwindEntities proxy = new NorthwindEntities(new Uri("http://localhost:53161/NorthwindCustomers.svc/"));
-    this.CustomersBindingSource.DataSource = proxy.Customers;
-    }
+   ```csharp
+   private void Form1_Load(object sender, EventArgs e)
+   {
+   NorthwindEntities proxy = new NorthwindEntities(new Uri("http://localhost:53161/NorthwindCustomers.svc/"));
+   this.CustomersBindingSource.DataSource = proxy.Customers;
+   }
+   ```
 
-    ```
+6. **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **NorthwindCustomers.svc**ファイル**ブラウザーで表示**します。 Internet Explorer 開き、サービスの XML スキーマが表示されます。
 
-6.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **NorthwindCustomers.svc**ファイル**ブラウザーで表示**します。 Internet Explorer 開き、サービスの XML スキーマが表示されます。
+7. Internet Explorer のアドレス バーから URL をコピーします。
 
-7.  Internet Explorer のアドレス バーから URL をコピーします。
-
-8.  手順 4. で追加したコードの「`http://localhost:53161/NorthwindCustomers.svc/`」を選択し、コピーした URL に置き換えます。
+8. 手順 4. で追加したコードの「`http://localhost:53161/NorthwindCustomers.svc/`」を選択し、コピーした URL に置き換えます。
 
 9. メニュー バーで、**デバッグ** > **デバッグの開始**アプリケーションを実行します。 顧客情報が表示されます。
 
- この時点で、NorthwindCustomers サービスから取得した顧客の一覧を表示するアプリケーションが作成されました。 このサービスを使用して他のデータも公開する場合は、[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]を変更して、Northwind データベースの他のテーブルを含めます。
+   この時点で、NorthwindCustomers サービスから取得した顧客の一覧を表示するアプリケーションが作成されました。 このサービスを使用して他のデータも公開する場合は、[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]を変更して、Northwind データベースの他のテーブルを含めます。
 
 次の省略可能な手順では、サービスによって返されるデータをフィルター処理する方法について説明します。
 
 ## <a name="adding-filtering-capabilities"></a>フィルター処理機能の追加
  この手順では、顧客の市区町村ごとのデータをフィルター処理するアプリケーションをカスタマイズします。
 
-#### <a name="to-add-filtering-by-city"></a>都市によるフィルター処理を追加するには
+### <a name="to-add-filtering-by-city"></a>都市によるフィルター処理を追加するには
 
 1.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **Form1.vb**または**Form1.cs**ノード選択**開く**します。
 

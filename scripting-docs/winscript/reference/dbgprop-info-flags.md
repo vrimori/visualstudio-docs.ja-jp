@@ -1,5 +1,5 @@
 ---
-title: DBGPROP_INFO_FLAGS |Microsoft ドキュメント
+title: DBGPROP_INFO_FLAGS |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -20,12 +20,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9821cde6c159712ff44438b74eea0f8e01247155
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 377815adc7751841e2a2a3bb2f4dc8b51beecdea
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24641052"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941283"
 ---
 # <a name="dbgpropinfoflags"></a>DBGPROP_INFO_FLAGS
 指定するために使用`DebugPropertyInfo`フィールド  
@@ -46,22 +46,22 @@ enum {
   
 ## <a name="members"></a>メンバー  
  DBGPROP_INFO_NAME  
- 初期化、`bstrName`フィールドです。  
+ 初期化します、`bstrName`フィールド。  
   
  DBGPROP_INFO_TYPE  
- 初期化、`bstrType`フィールドです。  
+ 初期化します、`bstrType`フィールド。  
   
  DBGPROP_INFO_VALUE  
- 初期化、`bstrValue`フィールドです。  
+ 初期化します、`bstrValue`フィールド。  
   
  DBGPROP_INFO_FULLNAME  
- 初期化、`bstrFullName`フィールドです。  
+ 初期化します、`bstrFullName`フィールド。  
   
  DBGPROP_INFO_ATTRIBUTES  
- 初期化、`dwAttrib`フィールドです。  
+ 初期化します、`dwAttrib`フィールド。  
   
  DBGPROP_INFO_DEBUGPROP  
- 初期化、`pDebugProp`を含むフィールドを`IDebugProperty`インターフェイスです。  
+ 初期化します、`pDebugProp`フィールドを含む、`IDebugProperty`インターフェイス。  
   
  DBGPROP_INFO_AUTOEXPAND  
  [値] フィールドは、この種類のオブジェクトの使用可能な場合は、自動拡張値を含める必要がありますを指定します。  

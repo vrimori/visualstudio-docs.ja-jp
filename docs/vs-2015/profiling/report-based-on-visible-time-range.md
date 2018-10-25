@@ -1,7 +1,7 @@
 ---
 title: 表示された時間範囲に基づいたレポート | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c07943ada629e79fc88be54da915fb9f464fd0cc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f13ab0b7d7ff1ea7ba264ed264b1ba70b79195b2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546996"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49176242"
 ---
 # <a name="report-based-on-visible-time-range"></a>表示された時間範囲に基づいたレポート
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visible 時間の範囲に基づいてレポート](https://docs.microsoft.com/visualstudio/profiling/report-based-on-visible-time-range)します。  
-  
 プロファイル ビューには、現在表示されている時間範囲およびチャンネルに基づいたレポートが表示されます。 データのさまざまなサブセットの詳細を表示するには、凡例内の項目をクリックします。  
   
  データに関するその他の情報については、次の表を参照してください。  

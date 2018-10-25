@@ -1,7 +1,7 @@
 ---
 title: '&lt;loc&gt; (JavaScript) |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7ae2e4459a0da2dbcd096869cf49687c84a68b6c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9314453b5e75e31f98d6989efa274278706bc5a4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544548"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49244011"
 ---
 # <a name="ltlocgt-javascript"></a>&lt;loc&gt; (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio 2017 ドキュメント](https://docs.microsoft.com/en-us/visualstudio/)します。  
-  
 ローカライズされた IntelliSense 情報を提供するサイドカー ファイルの場所と種類を指定します。  
   
 ## <a name="syntax"></a>構文  

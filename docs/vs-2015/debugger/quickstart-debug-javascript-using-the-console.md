@@ -1,7 +1,7 @@
 ---
 title: 'クイック スタート: コンソールを使用した JavaScript のデバッグ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,45 +25,43 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 58aee96aead76444ea2363c79db6e4d8060b1346
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7d8ece4edf9ee91446565f2790392bd6d478fd3e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536217"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818329"
 ---
 # <a name="quickstart-debug-javascript-using-the-console"></a>クイックスタート: コンソールを使用した JavaScript のデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[クイック スタート: コンソールを使用して JavaScript をデバッグ](https://docs.microsoft.com/visualstudio/debugger/quickstart-debug-javascript-using-the-console)します。  
-  
 Windows および Windows Phone に適用されます] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
   
- JavaScript コンソール ウィンドウを使用して、JavaScript を使用してビルドされたストア アプリと対話したりデバッグすることができます。 これらの機能はサポートされて[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]アプリ、Windows Phone ストア アプリ、および Apache Cordova の Visual Studio Tools を使用して作成されたアプリ。 コンソール コマンドのリファレンスの詳細については、「 [JavaScript Console commands](../debugger/javascript-console-commands.md)」を参照してください。  
+ JavaScript コンソール ウィンドウを使用して、JavaScript を使用してビルドされたストア アプリと対話したりデバッグすることができます。 これらの機能は、 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリ、Windows Phone ストア アプリ、Visual Studio Tools for Apache Cordova を使用して作成したアプリでサポートされています。 コンソール コマンドのリファレンスの詳細については、「 [JavaScript Console commands](../debugger/javascript-console-commands.md)」を参照してください。  
   
  JavaScript コンソール ウィンドウを使うと次の作業ができます。  
   
--   アプリから、オブジェクト、値、メッセージをコンソール ウィンドウへ送信します。  
+- アプリから、オブジェクト、値、メッセージをコンソール ウィンドウへ送信します。  
   
--   実行中のアプリのローカル変数とグローバル変数の値の表示と修正を行います。  
+- 実行中のアプリのローカル変数とグローバル変数の値の表示と修正を行います。  
   
--   オブジェクトのビジュアライザーを表示します。  
+- オブジェクトのビジュアライザーを表示します。  
   
--   現在のスクリプト コンテキスト内で実行される JavaScript コードを実行します。  
+- 現在のスクリプト コンテキスト内で実行される JavaScript コードを実行します。  
   
--   ドキュメント オブジェクト モデル (DOM) と Windows ランタイムの例外に加えて、JavaScript のエラーと例外も表示されます。  
+- ドキュメント オブジェクト モデル (DOM) と Windows ランタイムの例外に加えて、JavaScript のエラーと例外も表示されます。  
   
--   画面のクリアなどの他のタスクを実行します。 コマンドの詳細については、「 [JavaScript Console commands](../debugger/javascript-console-commands.md) 」を参照してください。  
+- 画面のクリアなどの他のタスクを実行します。 コマンドの詳細については、「 [JavaScript Console commands](../debugger/javascript-console-commands.md) 」を参照してください。  
   
- このトピックの内容:  
+  このトピックの内容:  
   
--   [JavaScript コンソール ウィンドウを使用したデバッグ](#InteractiveConsole)  
+- [JavaScript コンソール ウィンドウを使用したデバッグ](#InteractiveConsole)  
   
--   [対話形式のデバッグと中断モード](#InteractiveDebuggingBreakMode)  
+- [対話形式のデバッグと中断モード](#InteractiveDebuggingBreakMode)  
   
--   [JavaScript コンソール ウィンドウの単一行モードと複数行モード](#SinglelineMultilineMode)  
+- [JavaScript コンソール ウィンドウの単一行モードと複数行モード](#SinglelineMultilineMode)  
   
--   [スクリプトの実行コンテキストの切り替え](#Switching)  
+- [スクリプトの実行コンテキストの切り替え](#Switching)  
   
 > [!TIP]
 >  閉じた JavaScript コンソール ウィンドウを再び開くには、 **[デバッグ]**>**[ウィンドウ]** > **JavaScript コンソール** の順に選びます。 このウィンドウは、スクリプトのデバッグ セッション中にのみ表示されます。  
@@ -168,7 +166,7 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
   
      アプリが実行されますが、イメージがありません。 JavaScript コンソール ウィンドウの APPHOST のエラーは、イメージがないことを示します。  
   
-9. `FlipView`シミュレーターまたは Phone エミュレーター、型で実行されているアプリ`Data.items`コンソール ウィンドウの入力プロンプトで (横に、">>"シンボル) し、Enter キーを押します。  
+9. `FlipView` アプリがシミュレーターまたは Phone エミュレーターで実行されている状態で、コンソール ウィンドウの入力プロンプト ("&gt;&gt;" シンボルの横) に `Data.items` と入力して、Enter キーを押します。  
   
      `items` オブジェクトのビジュアライザーがコンソール ウィンドウに表示されます。 これは、 `items` オブジェクトがインスタンス化されて、現在のスクリプト コンテキストで使用できることを示します。 コンソール ウィンドウでは、オブジェクトのノードをクリックしてプロパティの値を表示できます (方向キーを使用します)。 `items._data` オブジェクトをクリックすると、次の図に示すように、イメージ ソースの参照が正しくないことがわかります。 既定のイメージ (logo.png) がまだオブジェクト内に存在し、不明のイメージと予期されるイメージが混在しています。  
   
@@ -176,7 +174,7 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
   
      `items._data` オブジェクトには、想像より多くの項目があることにも注意してください。  
   
-10. プロンプトで `Data.items.push` を入力し、Enter キーを押します。 コンソール ウィンドウは [!INCLUDE[winjs_long](../includes/winjs-long-md.md)] のプロジェクト ファイルで実装される `push` 関数のビジュアライザーを示します。 このアプリでは、正しい項目を追加するために `push` を使用しています。 IntelliSense を使用して少し調査すると、 `setAt` を使用して既定のイメージを置き換える必要があることがわかります。  
+10. プロンプトで `Data.items.push` を入力し、Enter キーを押します。 コンソール ウィンドウは `push` のプロジェクト ファイルで実装される [!INCLUDE[winjs_long](../includes/winjs-long-md.md)] 関数のビジュアライザーを示します。 このアプリでは、正しい項目を追加するために `push` を使用しています。 IntelliSense を使用して少し調査すると、 `setAt` を使用して既定のイメージを置き換える必要があることがわかります。  
   
 11. デバッグ セッションを停止せずにこの問題を対話形式で修正するには、default.js を開き、 `updateImages` 関数から次のコードを選択します。  
   
@@ -280,17 +278,17 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
   
 -   [!INCLUDE[win81](../includes/win81-md.md)] で実行されている Internet Explorer 11  
   
--   [!INCLUDE[win8](../includes/win8-md.md)] で実行されている Internet Explorer 10  
+-   [!INCLUDE[win8](../includes/win8-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
- [JavaScript コンソール コマンド](../debugger/javascript-console-commands.md)   
+ [JavaScript Console commands](../debugger/javascript-console-commands.md)   
  [アプリの更新 (JavaScript)](../debugger/refresh-an-app-javascript.md)   
  [キーボード ショートカット](../debugger/keyboard-shortcuts-html-and-javascript.md)   
  [HTML、CSS、および JavaScript サンプル コードをデバッグします。](../debugger/debug-html-css-and-javascript-sample-code.md)   
  [クイック スタート: HTML と CSS をデバッグします。](../debugger/quickstart-debug-html-and-css.md)   
  [WebView コントロールをデバッグします。](../debugger/debug-a-webview-control.md)   
- [製品のサポートとアクセシビリティ](http://msdn.microsoft.com/library/tzbxw1af\(VS.120\).aspx)
+ [製品のサポートとユーザー補助](http://msdn.microsoft.com/library/tzbxw1af\(VS.120\).aspx)
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: カスタムの配色可能な項目 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: b4d0ddee-c04b-48dc-ba82-f6068570cef0
 caps.latest.revision: 25
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a04d2f20d89bba477e85f802a66dbe287bb7ea1b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fffb77788a4ac88f2ee607dd989de8c7aab8aebf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546565"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49821930"
 ---
 # <a name="custom-colorable-items"></a>カスタムの配色可能な項目
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[カスタム装飾が可能なアイテム](https://docs.microsoft.com/visualstudio/extensibility/internals/custom-colorable-items)します。  
-  
 言語サービスの一部としてカスタムの配色可能な項目を実装することでの色分け、キーワードやコメントなどの種類の一覧をオーバーライドできます。  
   
 ## <a name="user-settings-of-colorable-items"></a>装飾が可能な項目のユーザー設定  
@@ -47,31 +45,31 @@ ms.locfileid: "47546565"
   
 ## <a name="implementing-custom-colorable-items"></a>カスタムの配色可能な項目を実装します。  
   
-1.  言語キーワード、演算子、および識別子の例でどのような色分け表示する必要がありますを定義します。  
+1. 言語キーワード、演算子、および識別子の例でどのような色分け表示する必要がありますを定義します。  
   
-2.  これらの装飾が可能な項目の列挙体を作成します。  
+2. これらの装飾が可能な項目の列挙体を作成します。  
   
-3.  パーサーまたは列挙の値を持つスキャナーから返されたトークンの種類を関連付けます。  
+3. パーサーまたは列挙の値を持つスキャナーから返されたトークンの種類を関連付けます。  
   
-     たとえば、トークンの種類を表す値には、カスタムの配色可能な項目の列挙型で同じ値可能性があります。  
+    たとえば、トークンの種類を表す値には、カスタムの配色可能な項目の列挙型で同じ値可能性があります。  
   
-4.  実装で、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A>メソッドで、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>オブジェクト、スキャナー、パーサーから返されたトークンの種類に対応する、カスタムの配色可能な項目の列挙体から値を持つ属性の一覧を入力します。  
+4. 実装で、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A>メソッドで、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>オブジェクト、スキャナー、パーサーから返されたトークンの種類に対応する、カスタムの配色可能な項目の列挙体から値を持つ属性の一覧を入力します。  
   
-5.  実装するクラスと同じで、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>インターフェイスを実装、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems>インターフェイスとその 2 つのメソッドでは、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetItemCount%2A>と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A>します。  
+5. 実装するクラスと同じで、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>インターフェイスを実装、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems>インターフェイスとその 2 つのメソッドでは、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetItemCount%2A>と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A>します。  
   
-6.  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> インターフェイスを実装します。  
+6. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> インターフェイスを実装します。  
   
-7.  24 ビットまたは高の色の値をサポートする場合は、実装することも、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem>インターフェイス。  
+7. 24 ビットまたは高の色の値をサポートする場合は、実装することも、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem>インターフェイス。  
   
-8.  言語サービス オブジェクトを含むリストを作成、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem>オブジェクト、スキャナー、パーサーが識別できる各装飾が可能な項目に 1 つ。  
+8. 言語サービス オブジェクトを含むリストを作成、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem>オブジェクト、スキャナー、パーサーが識別できる各装飾が可能な項目に 1 つ。  
   
-     リスト内の各項目は、カスタムの配色可能な項目の列挙体から対応する値を使用してアクセスできます。 リストに列挙値のインデックスとして使用します。 一覧の最初の項目にアクセスしない、既定のテキストに対応するため、スタイルを[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]自体は常に処理します。 この一覧の先頭にプレース ホルダーの装飾が可能な項目を挿入することにより補うことができます。  
+    リスト内の各項目は、カスタムの配色可能な項目の列挙体から対応する値を使用してアクセスできます。 リストに列挙値のインデックスとして使用します。 一覧の最初の項目にアクセスしない、既定のテキストに対応するため、スタイルを[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]自体は常に処理します。 この一覧の先頭にプレース ホルダーの装飾が可能な項目を挿入することにより補うことができます。  
   
 9. 実装で、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetItemCount%2A>メソッド、カスタムの配色可能な項目一覧に項目の数を返します。  
   
 10. 実装で、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A>メソッドでは、一覧から要求された装飾が可能な項目を返します。  
   
- 実装する方法の例については、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem>と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem>インターフェイスを参照してください<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem>します。  
+    実装する方法の例については、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem>と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem>インターフェイスを参照してください<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem>します。  
   
 ## <a name="see-also"></a>関連項目  
  [従来の言語サービスのモデル](../../extensibility/internals/model-of-a-legacy-language-service.md)   

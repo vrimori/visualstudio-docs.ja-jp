@@ -1,7 +1,7 @@
 ---
 title: 出力ウィンドウの診断メッセージ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -34,38 +34,36 @@ caps.latest.revision: 19
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f0a9e0bb4fa34133937e39b310cb05360e66a443
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fa2e01859190b4e22f076892b23595c4617a29f0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547296"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951302"
 ---
 # <a name="diagnostic-messages-in-the-output-window"></a>出力ウィンドウの診断メッセージ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[出力ウィンドウの診断メッセージ](https://docs.microsoft.com/visualstudio/debugger/diagnostic-messages-in-the-output-window)します。  
-  
 <xref:System.Diagnostics> クラス ライブラリに含まれている Debug クラスまたは Trace クラスを使用して、[出力] ウィンドウに出力されるランタイム メッセージを記述できます。 プログラムのデバッグ バージョンだけで出力する場合は Debug クラスを使用します。 プログラムのデバッグ バージョンとリリース バージョンの両方で出力する場合は Trace クラスを使用します。  
   
 ## <a name="output-methods"></a>出力メソッド  
  <xref:System.Diagnostics.Trace> クラスと <xref:System.Diagnostics.Debug> クラスが提供する出力方法は次のとおりです。  
   
--   各種の `Write` メソッド。実行を中断せずに情報を出力します。 これらのメソッドは、Visual Basic の以前のバージョンで使用されていた `Debug.Print` メソッドに代わるものです。  
+- 各種の `Write` メソッド。実行を中断せずに情報を出力します。 これらのメソッドは、Visual Basic の以前のバージョンで使用されていた `Debug.Print` メソッドに代わるものです。  
   
--   <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> メソッドと <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> メソッド。指定された条件を満たさない場合は、実行を中断して情報を出力します。 既定では、`Assert` メソッドはダイアログ ボックスに情報を出力します。 詳細については、次を参照してください。[マネージ コードでアサーション](../debugger/assertions-in-managed-code.md)します。  
+- <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> メソッドと <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> メソッド。指定された条件を満たさない場合は、実行を中断して情報を出力します。 既定では、`Assert` メソッドはダイアログ ボックスに情報を出力します。 詳細については、次を参照してください。[マネージ コードでアサーション](../debugger/assertions-in-managed-code.md)します。  
   
--   <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=fullName> メソッドと <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=fullName> メソッド。常に実行を中断して情報を出力します。 既定では、`Fail` メソッドはダイアログ ボックスに情報を出力します。  
+- <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=fullName> メソッドと <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=fullName> メソッド。常に実行を中断して情報を出力します。 既定では、`Fail` メソッドはダイアログ ボックスに情報を出力します。  
   
- アプリケーションから、out プログラムだけでなく、**出力**ウィンドウに関する情報も表示できます。  
+  アプリケーションから、out プログラムだけでなく、**出力**ウィンドウに関する情報も表示できます。  
   
--   デバッガーが読み込んだり、アンロードしたりしたモジュール  
+- デバッガーが読み込んだり、アンロードしたりしたモジュール  
   
--   スローされた例外  
+- スローされた例外  
   
--   終了したプロセス  
+- 終了したプロセス  
   
--   終了したスレッド  
+- 終了したスレッド  
   
 ## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   

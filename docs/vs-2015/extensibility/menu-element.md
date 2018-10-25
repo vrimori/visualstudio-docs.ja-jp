@@ -1,7 +1,7 @@
 ---
 title: Menu 要素 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,12 +16,12 @@ ms.assetid: ce0560f3-b4c9-4ab2-a99c-d4e10f37b9e0
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ef1757b0db741f8add8e8ac07a81ebec6178ffdf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a24eba8e0779bf77a93ec2ff742868bf8836d120
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536438"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844654"
 ---
 # <a name="menu-element"></a>Menu 要素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]

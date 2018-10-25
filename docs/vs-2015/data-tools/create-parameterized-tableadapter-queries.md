@@ -1,7 +1,7 @@
 ---
 title: パラメーター化された TableAdapter クエリの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 35a2f0c498d6f4239568d4719b2581fdc2f321ea
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 150105de459912716cd3cfccff9efb35927c7d49
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534808"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823503"
 ---
 # <a name="create-parameterized-tableadapter-queries"></a>パラメーター付きの TableAdapter クエリを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[パラメーター化された TableAdapter クエリを作成する](https://docs.microsoft.com/visualstudio/data-tools/create-parameterized-tableadapter-queries)します。  
-  
   
 パラメーター クエリは、クエリ内の WHERE 句の条件を満たすデータを返します。 たとえば、顧客リストをパラメーター化して、顧客のリストを戻す SQL ステートメントに `WHERE City = @City` を追加することで、特定の都市の顧客のみが表示されるようにできます。  
   
@@ -67,41 +65,41 @@ ms.locfileid: "47534808"
   
 ### <a name="to-add-a-query-to-an-existing-data-bound-form"></a>既存のデータ バインド フォームにクエリを追加するには  
   
-1.  **Windows フォーム デザイナー**でフォームを開きます。  
+1. **Windows フォーム デザイナー**でフォームを開きます。  
   
-2.  **データ**メニューの **クエリの追加**または**データ スマート タグ**します。  
+2. **データ**メニューの **クエリの追加**または**データ スマート タグ**します。  
   
-    > [!NOTE]
-    >  場合**クエリの追加**では使用できません、**データ**メニューで、パラメーターの追加設定の表示、データ ソースにするフォームにコントロールを選択します。 たとえば、フォームに <xref:System.Windows.Forms.DataGridView> コントロールのデータが表示される場合は、そのコントロールを選択します。 フォームに個々のコントロールのデータが表示される場合は、いずれかのデータ バインド コントロールを選択します。  
+   > [!NOTE]
+   >  場合**クエリの追加**では使用できません、**データ**メニューで、パラメーターの追加設定の表示、データ ソースにするフォームにコントロールを選択します。 たとえば、フォームに <xref:System.Windows.Forms.DataGridView> コントロールのデータが表示される場合は、そのコントロールを選択します。 フォームに個々のコントロールのデータが表示される場合は、いずれかのデータ バインド コントロールを選択します。  
   
-3.  **ソース テーブルのデータの選択**領域で、追加するパラメーター化を選択 tablethat します。  
+3. **ソース テーブルのデータの選択**領域で、追加するパラメーター化を選択 tablethat します。  
   
-4.  名前を入力、**新しいクエリ名**新しいクエリを作成する場合します。  
+4. 名前を入力、**新しいクエリ名**新しいクエリを作成する場合します。  
   
-     - または -  
+    - または -  
   
-     クエリを選択、**既存のクエリ名**ボックス。  
+    クエリを選択、**既存のクエリ名**ボックス。  
   
-5.  **クエリ テキスト**ボックスに、パラメーターを受け取るクエリを入力します。  
+5. **クエリ テキスト**ボックスに、パラメーターを受け取るクエリを入力します。  
   
-6.  選択**OK**します。  
+6. 選択**OK**します。  
   
-     パラメーターを入力するコントロールと**ロード**でフォームにボタンを追加、<xref:System.Windows.Forms.ToolStrip>コントロール。  
+    パラメーターを入力するコントロールと**ロード**でフォームにボタンを追加、<xref:System.Windows.Forms.ToolStrip>コントロール。  
   
- 現在の値を持たないレコードを照会するときに、TableAdapter のパラメーターが null 値を割り当てることできます。 たとえば、次のクエリを持つ、`ShippedDate`パラメーターでその`WHERE`句。  
+   現在の値を持たないレコードを照会するときに、TableAdapter のパラメーターが null 値を割り当てることできます。 たとえば、次のクエリを持つ、`ShippedDate`パラメーターでその`WHERE`句。  
   
- `SELECT CustomerID, OrderDate, ShippedDate`  
+   `SELECT CustomerID, OrderDate, ShippedDate`  
   
- `FROM Orders`  
+   `FROM Orders`  
   
- `WHERE (ShippedDate = @ShippedDate) OR`  
+   `WHERE (ShippedDate = @ShippedDate) OR`  
   
- `(ShippedDate IS NULL)`  
+   `(ShippedDate IS NULL)`  
   
- これは TableAdapter 上のクエリの場合、次のコードにまだ配送されていないすべての注文のクエリを実行でした。  
+   これは TableAdapter 上のクエリの場合、次のコードにまだ配送されていないすべての注文のクエリを実行でした。  
   
- [!code-csharp[VbRaddataTableAdapters#8](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataTableAdapters/CS/Form2.cs#8)]
- [!code-vb[VbRaddataTableAdapters#8](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataTableAdapters/VB/Form2.vb#8)]  
+   [!code-csharp[VbRaddataTableAdapters#8](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataTableAdapters/CS/Form2.cs#8)]
+   [!code-vb[VbRaddataTableAdapters#8](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataTableAdapters/VB/Form2.vb#8)]  
   
 #### <a name="to-enable-a-query-to-accept-null-values"></a>Null 値を使用するためのクエリを有効にするには  
   

@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_noinline |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 12a64732b22a97a04c86d75d10c914aedc8ba687
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7c6b24c5ce50a9233c0e50c1e671628b5d364022
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546112"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839779"
 ---
 # <a name="idiasymbolgetnoinline"></a>IDiaSymbol::get_noInline
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_noinline](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-noinline)します。  
-  
 関数がインラインのものとしてマークされているかどうかを指定するフラグを取得します (を使用して、 [noinline](http://msdn.microsoft.com/library/f259d55b-dec7-4bde-8cf9-14521e4fdc42)属性)。  
   
 ## <a name="syntax"></a>構文  
@@ -50,7 +48,7 @@ HRESULT get_noInline(
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

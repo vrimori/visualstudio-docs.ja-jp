@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f35779debdad5a43781b2fe7221085f3fe0e1010
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cea6e61a1afd734ca0ae52a704a2d881371f5817
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42636238"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882593"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-powerpoint"></a>チュートリアル: は powerpoint の場合、最初の VSTO アドイン作成します。
   このチュートリアルでは、Microsoft Office PowerPoint の VSTO アドインを作成する方法を示します。 この種のソリューションに作成した機能は、どのプレゼンテーションが開いているかにかかわらず、アプリケーション自体に対して使用できます。 詳細については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)します。  
@@ -32,15 +32,15 @@ ms.locfileid: "42636238"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   PowerPoint の PowerPoint VSTO アドイン プロジェクトを作成する。  
+- PowerPoint の PowerPoint VSTO アドイン プロジェクトを作成する。  
   
--   PowerPoint のオブジェクト モデルを使用して、新しい各スライドにテキスト ボックスを追加するコードを記述する。  
+- PowerPoint のオブジェクト モデルを使用して、新しい各スライドにテキスト ボックスを追加するコードを記述する。  
   
--   プロジェクトをビルドし、実行してテストする。  
+- プロジェクトをビルドし、実行してテストする。  
   
--   プロジェクトをクリーンアップして、開発用コンピューターで VSTO アドインが自動的に実行されないようにする。  
+- プロジェクトをクリーンアップして、開発用コンピューターで VSTO アドインが自動的に実行されないようにする。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
@@ -78,18 +78,18 @@ ms.locfileid: "42636238"
   
 ### <a name="to-add-a-text-box-to-each-new-slide"></a>新しい各スライドにテキスト ボックスを追加するには  
   
-1.  ThisAddIn コード ファイルで、次のコードを `ThisAddIn` クラスに追加します。 このコードのイベント ハンドラーを定義する、 [Microsoft.Office.Interop.PowerPoint.EApplication_Event.PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14))のイベント、<xref:Microsoft.Office.Interop.PowerPoint.Application>オブジェクト。  
+1. ThisAddIn コード ファイルで、次のコードを `ThisAddIn` クラスに追加します。 このコードのイベント ハンドラーを定義する、 [Microsoft.Office.Interop.PowerPoint.EApplication_Event.PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14))のイベント、<xref:Microsoft.Office.Interop.PowerPoint.Application>オブジェクト。  
   
-     ユーザーが、アクティブなプレゼンテーションに新しいスライドを追加するとき、このイベント ハンドラーは、新しいスライドの先頭にテキスト ボックスを追加し、テキスト ボックスにテキストを追加します。  
+    ユーザーが、アクティブなプレゼンテーションに新しいスライドを追加するとき、このイベント ハンドラーは、新しいスライドの先頭にテキスト ボックスを追加し、テキスト ボックスにテキストを追加します。  
   
-     [!code-vb[Trin_PowerPointAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_PowerPointAddInTutorial/ThisAddIn.vb#1)]
-     [!code-csharp[Trin_PowerPointAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs#1)]  
+    [!code-vb[Trin_PowerPointAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_PowerPointAddInTutorial/ThisAddIn.vb#1)]
+    [!code-csharp[Trin_PowerPointAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs#1)]  
   
-2.  C# を使用する場合は、次のコードを `ThisAddIn_Startup` イベント ハンドラーに追加します。 このコードは、接続に必要な`Application_PresentationNewSlide`イベント ハンドラーで、 [Microsoft.Office.Interop.PowerPoint.EApplication_Event.PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14))イベント。  
+2. C# を使用する場合は、次のコードを `ThisAddIn_Startup` イベント ハンドラーに追加します。 このコードは、接続に必要な`Application_PresentationNewSlide`イベント ハンドラーで、 [Microsoft.Office.Interop.PowerPoint.EApplication_Event.PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14))イベント。  
   
-     [!code-csharp[Trin_PowerPointAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs#2)]  
+    [!code-csharp[Trin_PowerPointAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs#2)]  
   
- 新しい各スライドを変更するために、前のコード例では次のオブジェクトを使用しています。  
+   新しい各スライドを変更するために、前のコード例では次のオブジェクトを使用しています。  
   
 -   `Application` クラスの `ThisAddIn` フィールド。 `Application` フィールドは PowerPoint の現在のインスタンスを表す <xref:Microsoft.Office.Interop.PowerPoint.Application> オブジェクトを返します。  
   

@@ -1,7 +1,7 @@
 ---
 title: '[フォルダーを指定して検索] | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -26,29 +26,27 @@ caps.latest.revision: 45
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2f6f51f53642f0eb17cbbae5498ce1c4c288a867
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4529b44014b209bdef1fc919ac413b61d77407c1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539942"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49902140"
 ---
 # <a name="find-in-files"></a>[フォルダーを指定して検索]
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ファイル内の検索](https://docs.microsoft.com/visualstudio/ide/find-in-files)します。  
-  
 * * ファイルの検索では、指定したファイル セットを検索できます。 見つかった一致項目と実行された処理は、**[結果オプション]** で選択した **[検索結果]** ウィンドウに表示されます。  
   
  **[検索と置換]** ウィンドウに **[フォルダーを指定して検索]** を表示する場合は、次の方法のいずれかを使用できます。  
   
 ### <a name="to-display-find-in-files"></a>[フォルダーを指定して検索] を表示するには  
   
-1.  メニュー バーで **[編集]**、**[検索と置換]** の順に選択します。  
+1. メニュー バーで **[編集]**、**[検索と置換]** の順に選択します。  
   
-2.  **[フォルダーを指定して検索]** を選択します。  
+2. **[フォルダーを指定して検索]** を選択します。  
   
- 検索操作を取り消すには、Ctrl キーを押しながら Break キーを押します。  
+   検索操作を取り消すには、Ctrl キーを押しながら Break キーを押します。  
   
 > [!NOTE]
 >  検索と置換ツールでは、`Hidden` 属性または `System` 属性が設定されているディレクトリは検索されません。  

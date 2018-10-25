@@ -1,7 +1,7 @@
 ---
 title: '方法: 挿入されたコードのデバッグ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -31,28 +31,26 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f283a8e526e343030636c62453e5eb03825a8f93
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 04c0430140d848c3c0b2386cc4156be1dbdd47c7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539878"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819785"
 ---
 # <a name="how-to-debug-injected-code"></a>方法 : 挿入されたコードをデバッグする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 挿入されたコードのデバッグ](https://docs.microsoft.com/visualstudio/debugger/how-to-debug-injected-code)します。  
-  
 注]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、[ツール] メニューの [設定のインポートとエクスポート] をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
  属性を使用すると、C++ でのプログラミングが簡単になります。 詳細については、次を参照してください。[概念](http://msdn.microsoft.com/library/563e7e7c-65e1-44f4-b0b2-da04a6c1bc9e)します。 一部の属性は、コンパイラによって直接解釈されます。 プログラム ソースにコードを挿入するタイプの属性もあります。この場合、コンパイラは、コードが挿入されてからプログラム ソースをコンパイルします。 このようにコードが挿入されることにより、実際に記述するコードの量が減り、プログラミングがいっそう簡単になります。 しかし、挿入されたコードの実行中に、バグが発生してアプリケーションが正しく動作しなくなる場合があります。 このような場合は、挿入されたコードを確認する必要があります。 Visual Studio では、次の 2 つの方法で、挿入されたコードを参照できます。  
   
--   挿入されたコードを表示することができます、**逆アセンブル**ウィンドウ。  
+- 挿入されたコードを表示することができます、**逆アセンブル**ウィンドウ。  
   
--   使用して[/Fx](http://msdn.microsoft.com/library/14f0e301-3bab-45a3-bbdf-e7ce66f20560)、元と挿入されたコードを含むマージされたソース ファイルを作成することができます。  
+- 使用して[/Fx](http://msdn.microsoft.com/library/14f0e301-3bab-45a3-bbdf-e7ce66f20560)、元と挿入されたコードを含むマージされたソース ファイルを作成することができます。  
   
- **逆アセンブル**ウィンドウには、ソース コードおよび属性によって挿入されたコードに対応するアセンブリ言語命令が表示されます。 さらに、**逆アセンブル**ウィンドウは、ソース コードの注釈を表示できます。  
+  **逆アセンブル**ウィンドウには、ソース コードおよび属性によって挿入されたコードに対応するアセンブリ言語命令が表示されます。 さらに、**逆アセンブル**ウィンドウは、ソース コードの注釈を表示できます。  
   
 ### <a name="to-turn-on-source-annotation"></a>ソースの注釈を表示するには  
   

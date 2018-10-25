@@ -1,7 +1,7 @@
 ---
 title: 'UML シーケンス図: リファレンス |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 43
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 94ae423e74e0d78389a196adf1185ebdfa062069
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7ebadcc72e346aac26b227ff069e20ffd81a601e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548411"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49195131"
 ---
 # <a name="uml-sequence-diagrams-reference"></a>UML シーケンス図: リファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML シーケンス図: リファレンス](https://docs.microsoft.com/visualstudio/modeling/uml-sequence-diagrams-reference)します。  
-  
 Visual Studio で、*シーケンス図*クラス、コンポーネント、サブシステム、またはアクターのインスタンス間でメッセージのシーケンスを表します相互作用を示しています。 この図は下へ行くほど時間が経過していることを示していて、1 つの参加要素から別の参加要素への制御フローを表しています。 シーケンス図を使用して、クラスとメソッドの代わりに、インスタンスとイベントを視覚化します。 この図では、同じ型の 1 つ以上のインスタンスを表示できます。 また、同じメッセージの 1 つ以上の出現も表示できます。  
   
  UML シーケンス図は UML モデルの一部で、UML モデリング プロジェクト内にのみ存在します。 UML シーケンス図を作成する、**アーキテクチャ** メニューのをクリックして**新しい UML またはレイヤー図**します。 作成および描画する方法について詳しく[UML シーケンス図](../modeling/uml-sequence-diagrams-guidelines.md)または[UML モデリング図](../modeling/edit-uml-models-and-diagrams.md)一般にします。  

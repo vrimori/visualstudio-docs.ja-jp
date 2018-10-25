@@ -14,16 +14,16 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 497aa6a85bd47813aa20bd5c2e89ca26ddffbe5a
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 0b50e5e1c0198f1a8c6e33254f0cdab17bc38535
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082132"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49883355"
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>チュートリアル: コマンドラインを使用して Visual Studio 拡張機能の発行
 
-このチュートリアルでは、Visual Studio 拡張機能を Visual Studio Marketplace に発行する方法、コマンドラインを使用します。 開発者が使用できる、拡張機能を Marketplace に追加すると、**拡張機能と更新**ダイアログを新規および更新された拡張機能の参照があります。
+このチュートリアルでは、Visual Studio 拡張機能を Visual Studio Marketplace に発行する方法、コマンドラインを使用します。 開発者が使用できる、拡張機能を Marketplace に追加すると、 [**拡張機能と更新**](../ide/finding-and-using-visual-studio-extensions.md)ダイアログを新規および更新された拡張機能の参照があります。
 
 VsixPublisher.exe は、Marketplace への発行の Visual Studio 拡張機能のコマンド ライン ツールです。 ${VSInstallDir}\VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe からアクセスできます。 このツールで使用できるコマンドが:**発行**、 **createPublisher**、 **deletePublisher**、 **deleteExtension**、 **ログイン**、**ログアウト**します。
 
@@ -33,12 +33,12 @@ VsixPublisher.exe は、Marketplace への発行の Visual Studio 拡張機能�
 
 拡張機能を Marketplace に発行します。 拡張機能は、vsix、exe/msi ファイル、またはリンクできます。 同じバージョンの拡張機能が既に存在する場合、拡張機能が上書きされます。 拡張機能が存在しない場合、新しい拡張機能が作成されます。
 
-|コマンド オプション                    |説明  |
+|コマンド オプション |説明 |
 |---------|---------|
-|ペイロード (必須)                 |  いずれかのパスを発行するペイロードまたは"詳細情報の URL"として使用するリンク。      |
-|publishManifest (必須)         |  発行へのパスはマニフェストを使用するファイルです。       |
-|ignoreWarnings                     |  拡張機能を発行するときに無視する警告の一覧。 これらの警告は、拡張機能を発行するときに、コマンド ライン メッセージとして表示されます。 (たとえば、"VSIXValidatorWarning01、VSIXValidatorWarning02")  
-|personalAccesToken                 |  個人用アクセス トークンを発行元を認証するために使用します。 指定しない場合、pat、ログインしているユーザーから取得されます。       |
+|ペイロード (必須) | いずれかのパスを発行するペイロードまたは"詳細情報の URL"として使用するリンク。 |
+|publishManifest (必須) | 発行へのパスはマニフェストを使用するファイルです。 |
+|ignoreWarnings | 拡張機能を発行するときに無視する警告の一覧。 これらの警告は、拡張機能を発行するときに、コマンド ライン メッセージとして表示されます。 (たとえば、"VSIXValidatorWarning01、VSIXValidatorWarning02")  
+|personalAccesToken | 個人用アクセス トークンを発行元を認証するために使用します。 指定しない場合、pat、ログインしているユーザーから取得されます。 |
 
 ```
 VsixPublisher.exe publish -payload "{path to vsix}" -publishManifest "{path to vs-publish.json}" -ignoreWarnings "VSIXValidatorWarning01,VSIXValidatorWarning02"
@@ -48,13 +48,13 @@ VsixPublisher.exe publish -payload "{path to vsix}" -publishManifest "{path to v
 
 Marketplace で発行元を作成します。 将来的なアクション (たとえば、拡張機能の削除/公開) のマシンにも、パブリッシャーを記録します。
 
-|コマンド オプション                    |説明  |
+|コマンド オプション |説明 |
 |---------|---------|
-|displayName (必須)             |  パブリッシャーの名前を表示します。      |
-|publisherName (必須)           |  パブリッシャー (たとえば、"識別子") の名前。      |
-|personalAccessToken (必須)     |  個人用アクセス トークンを発行元を認証するために使用します。      |
-|shortDescription                   |  パブリッシャー (ファイルではありません) の簡単な説明。       |
-|longDescription                    |  パブリッシャー (ファイルではありません) の詳しい説明。      |
+|displayName (必須) | パブリッシャーの名前を表示します。 |
+|publisherName (必須) | パブリッシャー (たとえば、"識別子") の名前。 |
+|personalAccessToken (必須) | 個人用アクセス トークンを発行元を認証するために使用します。 |
+|shortDescription | パブリッシャー (ファイルではありません) の簡単な説明。 |
+|longDescription | パブリッシャー (ファイルではありません) の詳しい説明。 |
 
 ```
 VsixPublisher.exe createPublisher -publisherName "{Publisher Name}" -displayName "{Publisher Display Name}" -personalAccessToken "{Personal Access Token}"
@@ -64,10 +64,10 @@ VsixPublisher.exe createPublisher -publisherName "{Publisher Name}" -displayName
 
 Marketplace でのパブリッシャーを削除します。
 
-|コマンド オプション                    |説明  |
+|コマンド オプション |説明 |
 |---------|---------|
-|publisherName (必須)           |  パブリッシャー (たとえば、"識別子") の名前。      |
-|personalAccessToken (必須)     |  個人用アクセス トークンを発行元を認証するために使用します。      |
+|publisherName (必須) | パブリッシャー (たとえば、"識別子") の名前。 |
+|personalAccessToken (必須) | 個人用アクセス トークンを発行元を認証するために使用します。 |
 
 ```
 VsixPublisher.exe deletePublisher -publisherName "{Publisher Name}" -personalAccessToken "{Personal Access Token}"
@@ -77,11 +77,11 @@ VsixPublisher.exe deletePublisher -publisherName "{Publisher Name}" -personalAcc
 
 Marketplace から拡張機能を削除します。
 
-|コマンド オプション                    |説明  |
+|コマンド オプション |説明 |
 |---------|---------|
-|extensionName (必須)           |  削除する拡張機能の名前。      |
-|publisherName (必須)           |  パブリッシャー (たとえば、"識別子") の名前。      |
-|personalAccessToken                |  個人用アクセス トークンを発行元を認証するために使用します。 指定しない場合、pat、ログインしているユーザーから取得されます。     |
+|extensionName (必須) | 削除する拡張機能の名前。 |
+|publisherName (必須) | パブリッシャー (たとえば、"識別子") の名前。 |
+|personalAccessToken | 個人用アクセス トークンを発行元を認証するために使用します。 指定しない場合、pat、ログインしているユーザーから取得されます。 |
 
 ```
 VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherName "{Publisher Name}"
@@ -91,11 +91,11 @@ VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherNa
 
 パブリッシャーをコンピューターにログインします。
 
-|コマンド オプション                    |説明  |
+|コマンド オプション |説明 |
 |---------|---------|
-|(必須 personalAccessToken      |  個人用アクセス トークンを発行元を認証するために使用します。      |
-|publisherName (必須)           |  パブリッシャー (たとえば、"識別子") の名前。      |
-|上書き                          |  新しい個人用アクセス トークンを使用して、既存のパブリッシャーが上書きされることを指定します。     |
+|(必須 personalAccessToken | 個人用アクセス トークンを発行元を認証するために使用します。 |
+|publisherName (必須) | パブリッシャー (たとえば、"識別子") の名前。 |
+|上書き | 新しい個人用アクセス トークンを使用して、既存のパブリッシャーが上書きされることを指定します。 |
 
 ```
 VsixPublisher.exe login -personalAccessToken "{Personal Access Token}" -publisherName "{Publisher Name}"
@@ -105,10 +105,10 @@ VsixPublisher.exe login -personalAccessToken "{Personal Access Token}" -publishe
 
 マシンからの発行元のログを記録します。
 
-|コマンド オプション                    |説明  |
+|コマンド オプション |説明 |
 |---------|---------|
-|publisherName (必須)           |  パブリッシャー (たとえば、"識別子") の名前。      |
-|ignoreMissingPublisher             |  指定されたパブリッシャーは、既にログに記録-にない場合、ツールがエラーではなく必要があるを指定します。     |
+|publisherName (必須) | パブリッシャー (たとえば、"識別子") の名前。 |
+|ignoreMissingPublisher | 指定されたパブリッシャーは、既にログに記録-にない場合、ツールがエラーではなく必要があるを指定します。 |
 
 ```
 VsixPublisher.exe logout -publisherName "{Publisher Name}"
@@ -195,7 +195,7 @@ This is test extension.
 
 ## <a name="publishing-walkthrough"></a>発行のチュートリアル
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。
 

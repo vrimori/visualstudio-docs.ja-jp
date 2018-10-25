@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 56727c338f0f11c9d79704644888448c04064466
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: f9e0251d41feb5bd9c61a719d932c6fd954be947
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178970"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49932430"
 ---
 # <a name="how-to-build-incrementally"></a>方法: インクリメンタル ビルドを実行する
 大規模なプロジェクトをビルドする場合、今でも最新の以前にビルドされたコンポーネントが再ビルドされないことが重要です。 すべてのターゲットが毎回ビルドされると、各ビルドが完了するのに長い時間がかかります。 インクリメンタル ビルド (ビルド内の以前にビルドされていないターゲット、または古くなっているターゲットだけが再ビルドされます) を有効にするため、[!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) は入力ファイルのタイムスタンプと出力ファイルのタイムスタンプを比較して、ターゲットをスキップ、ビルド、または部分的に再ビルドするかどうかを判断できます。 ただし、入力と出力の間に一対一のマッピングが必要です。 変換を使用して、ターゲットがこの直接マッピングを識別できるようにすることができます。 変換の詳細については、「[MSBuild 変換](../msbuild/msbuild-transforms.md)」を参照してください。  
@@ -29,15 +29,15 @@ ms.locfileid: "39178970"
   
 #### <a name="to-specify-inputs-and-outputs-for-a-target"></a>ターゲットに入力と出力を指定するには  
   
--   `Target` 要素の `Inputs` 属性と `Outputs` 属性を使用します。 例:  
+- `Target` 要素の `Inputs` 属性と `Outputs` 属性を使用します。 例:  
   
-    ```xml  
-    <Target Name="Build"  
-        Inputs="@(CSFile)"  
-        Outputs="hello.exe">  
-    ```  
+  ```xml  
+  <Target Name="Build"  
+      Inputs="@(CSFile)"  
+      Outputs="hello.exe">  
+  ```  
   
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は入力ファイルのタイムスタンプと出力ファイルのタイムスタンプを比較し、ターゲットをスキップ、ビルド、または部分的に再ビルドするかどうかを判断できます。 次の例では、`@(CSFile)` 項目リスト内の任意のファイルが *hello.exe* ファイルより新しい場合、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はターゲットを実行します。そうでない場合は、ターゲットがスキップされます。  
+  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は入力ファイルのタイムスタンプと出力ファイルのタイムスタンプを比較し、ターゲットをスキップ、ビルド、または部分的に再ビルドするかどうかを判断できます。 次の例では、`@(CSFile)` 項目リスト内の任意のファイルが *hello.exe* ファイルより新しい場合、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はターゲットを実行します。そうでない場合は、ターゲットがスキップされます。  
   
 ```xml  
 <Target Name="Build"   

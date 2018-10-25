@@ -1,7 +1,7 @@
 ---
 title: Visual Studio 静的コード分析によるストア アプリでの Visual Basic および c# のコード品質の分析 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 16
 author: erickson-doug
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: f0d8909e63cbff6824b0664fd36039258940dad9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c8bca7452b94aa8e65386c3d5ef77e9f36ab98df
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539341"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49828703"
 ---
 # <a name="analyze-visual-basic-and-c-code-quality-in-store-apps-using-visual-studio-static-code-analysis"></a>Visual Studio 静的コード分析によるストア アプリの Visual Basic および C# のコード品質の分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[分析 Visual Basic および c# コードの Visual Studio 静的コード分析を使用するストア アプリの品質の](https://docs.microsoft.com/visualstudio/test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis)します。  
-  
 Windows および Windows Phone に適用されます] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
   
  Visual Studio Express のコード分析ツールは、コードを調べてプログラミング上の一般的な問題や違反がないことを確認します。 コード分析の警告はコンパイラのエラーや警告とは異なります。コード分析ツールは、有効であってもコードの作成者やコードを利用する他のユーザーにとって問題になる可能性がある特定のコード パターンを検索します。 また、コード分析では、テストでは検出できないコードの欠陥を見つけることができます。 開発プロセス中に定期的にコード分析ツールを実行することで、高品質なアプリを完成させることができます。  
@@ -51,17 +49,17 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
 ##  <a name="BKMK_Run"></a> コード分析の実行  
  Visual Studio ソリューションでコード分析を実行するには:  
   
--   **[ビルド]** メニューの **[ソリューションでコード分析を実行]** をクリックします。  
+- **[ビルド]** メニューの **[ソリューションでコード分析を実行]** をクリックします。  
   
- プロジェクトをビルドするたびに自動的にコード分析を実行するには:  
+  プロジェクトをビルドするたびに自動的にコード分析を実行するには:  
   
-1.  ソリューション エクスプローラーでプロジェクト名を右クリックし、**[プロパティ]** を選択します。  
+1. ソリューション エクスプローラーでプロジェクト名を右クリックし、**[プロパティ]** を選択します。  
   
-2.  プロジェクトのプロパティ ページで、**[コード分析]** をクリックして、**[ビルドに対するコード分析の有効化 (定数 CODEANALYSIS を定義)]** を選択します。  
+2. プロジェクトのプロパティ ページで、**[コード分析]** をクリックして、**[ビルドに対するコード分析の有効化 (定数 CODEANALYSIS を定義)]** を選択します。  
   
- ソリューションがコンパイルされ、コード分析が実行されます。 結果は、[コード分析] ウィンドウに表示されます。  
+   ソリューションがコンパイルされ、コード分析が実行されます。 結果は、[コード分析] ウィンドウに表示されます。  
   
- ![[コード分析] ウィンドウ](../test/media/ca-managed-collapsed.png "CA_Managed_Collapsed")  
+   ![[コード分析] ウィンドウ](../test/media/ca-managed-collapsed.png "CA_Managed_Collapsed")  
   
 ##  <a name="BKMK_Analyze"></a> コード分析警告の分析と解決  
  特定の警告を分析するには、[コード分析] ウィンドウで警告のタイトルをクリックします。 警告が展開され、問題に関する詳細情報が表示されます。  
@@ -82,15 +80,15 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
   
  警告を抑制するには:  
   
-1.  詳細情報が表示されていない場合は、警告のタイトルをクリックして展開します。  
+1. 詳細情報が表示されていない場合は、警告のタイトルをクリックして展開します。  
   
-2.  警告の下部にある **[アクション]** リンクをクリックします。  
+2. 警告の下部にある **[アクション]** リンクをクリックします。  
   
-3.  **[メッセージの非表示]** をポイントし、**[ソース内]** または **[抑制ファイル内]** をクリックします。  
+3. **[メッセージの非表示]** をポイントし、**[ソース内]** または **[抑制ファイル内]** をクリックします。  
   
-    -   **[ソース内]** をクリックすると、警告を生成したメソッドの上のソース ファイルに `SuppressMessage` 属性が挿入されます。 これにより、抑制が検出されやすくなります。  
+   - **[ソース内]** をクリックすると、警告を生成したメソッドの上のソース ファイルに `SuppressMessage` 属性が挿入されます。 これにより、抑制が検出されやすくなります。  
   
-    -   **[抑制ファイル内]** では、プロジェクトの **GlobalSuppressions.cs** ファイルに `SuppressMessage` 属性を追加します。 これにより、抑制を簡単に管理できるようになります。 **GlobalSuppression.cs** に追加された `SuppressMessage` 属性は、警告を生成したメソッドもターゲットとすることに注意してください。 警告がグローバルに表示なしになることはありません。  
+   - **[抑制ファイル内]** では、プロジェクトの **GlobalSuppressions.cs** ファイルに `SuppressMessage` 属性を追加します。 これにより、抑制を簡単に管理できるようになります。 **GlobalSuppression.cs** に追加された `SuppressMessage` 属性は、警告を生成したメソッドもターゲットとすることに注意してください。 警告がグローバルに表示なしになることはありません。  
   
      ソース ファイルで警告を抑制するか、抑制ファイルで警告を抑制するかは、コーディング スタイルとニーズによって決まります。  
   

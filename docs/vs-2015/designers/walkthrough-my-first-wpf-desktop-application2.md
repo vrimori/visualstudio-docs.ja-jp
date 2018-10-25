@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: 初めての WPF デスクトップ アプリケーション 2 | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5994c17ff4e7e6071a22d235ab6888727b9ed026
-ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
+ms.openlocfilehash: 7d8af02051774b744f9229e15a6184603c4d9f6b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47593271"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899280"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル: 初めての WPF デスクトップ アプリケーション
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: 最初マイの WPF デスクトップ アプリケーション 2](https://docs.microsoft.com/visualstudio/designers/walkthrough-my-first-wpf-desktop-application2)します。  
-  
 name =「概要」></a>このチュートリアルは、Windows Presentation Foundation (WPF) 開発の概要を提供します。 ここでは、ほとんどの WPF デスクトップ アプリケーションに共通する要素 (XAML マークアップ、分離コード、アプリケーション定義、コントロール、レイアウト、データ バインディング、スタイル) を含む基本的なアプリケーションを作成します。  
   
 ##  <a name="Create_The_Application_Code_Files"></a> アプリケーション プロジェクトの作成  
@@ -960,27 +958,27 @@ name =「概要」></a>このチュートリアルは、Windows Presentation Fou
   
  WPF のアーキテクチャおよびプログラミング モデルの詳細については、次のトピックを参照してください。  
   
--   [WPF アーキテクチャ](https://msdn.microsoft.com/library/ms750441\(v=vs.100\).aspx)  
+- [WPF アーキテクチャ](https://msdn.microsoft.com/library/ms750441\(v=vs.100\).aspx)  
   
--   [XAML の概要](https://msdn.microsoft.com/library/ms752059\(v=vs.100\).aspx)  
+- [XAML の概要](https://msdn.microsoft.com/library/ms752059\(v=vs.100\).aspx)  
   
--   [依存関係プロパティの概要](https://msdn.microsoft.com/library/ms752914\(v=vs.100\).aspx)  
+- [依存関係プロパティの概要](https://msdn.microsoft.com/library/ms752914\(v=vs.100\).aspx)  
   
--   [レイアウト システム](https://msdn.microsoft.com/library/ms745058\(v=vs.100\).aspx)  
+- [レイアウト システム](https://msdn.microsoft.com/library/ms745058\(v=vs.100\).aspx)  
   
--   [スタイルおよびテンプレート](https://msdn.microsoft.com/library/bb613570\(v=vs.100\).aspx)  
+- [スタイルおよびテンプレート](https://msdn.microsoft.com/library/bb613570\(v=vs.100\).aspx)  
   
- アプリケーションの作成の詳細については、次のトピックを参照してください。  
+  アプリケーションの作成の詳細については、次のトピックを参照してください。  
   
--   [アプリケーション開発の概要](https://msdn.microsoft.com/library/bb613549\(v=vs.100\).aspx)  
+- [アプリケーション開発の概要](https://msdn.microsoft.com/library/bb613549\(v=vs.100\).aspx)  
   
--   [コントロールの概要](https://msdn.microsoft.com/library/bb613551\(v=vs.100\).aspx)  
+- [コントロールの概要](https://msdn.microsoft.com/library/bb613551\(v=vs.100\).aspx)  
   
--   [データ バインディングの概要](https://msdn.microsoft.com/library/ms752347\(v=vs.100\).aspx)  
+- [データ バインディングの概要](https://msdn.microsoft.com/library/ms752347\(v=vs.100\).aspx)  
   
--   [WPF のグラフィックス、アニメーション、およびメディアの概要](https://msdn.microsoft.com/library/ms742562\(v=vs.100\).aspx)  
+- [WPF のグラフィックス、アニメーション、およびメディアの概要](https://msdn.microsoft.com/library/ms742562\(v=vs.100\).aspx)  
   
--   [WPF のドキュメント](https://msdn.microsoft.com/library/ms748388\(v=vs.100\).aspx)  
+- [WPF のドキュメント](https://msdn.microsoft.com/library/ms748388\(v=vs.100\).aspx)  
   
 ## <a name="see-also"></a>関連項目  
  [チュートリアル: Azure モバイル サービスに接続された WPF デスクトップ アプリケーションの作成](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)   

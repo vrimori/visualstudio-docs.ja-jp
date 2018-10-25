@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b6cf3bf422c861d5a649e5cfa71cf2b4a4b5fea
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8a8987354af4a0b62438cea3aab3f18f4def7bfa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31951116"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907041"
 ---
 # <a name="devenv-command-line-switches"></a>Devenv コマンド ライン スイッチ
 
@@ -61,7 +61,7 @@ Devenv を使用すると、コマンド ラインから統合開発環境 (IDE:
 次の表のコマンド ライン スイッチを使用すると、IDE が表示され、説明されているタスクが実行されます。
 
 |コマンド ライン スイッチ|説明|
-|-------------------------|-----------------|
+| - |-----------------|
 |[/Command](../../ide/reference/command-devenv-exe.md)|IDE を起動し、指定したコマンドを実行します。|
 |[/DebugExe](../../ide/reference/debugexe-devenv-exe.md)|C++ の実行可能ファイルをデバッガーの制御下に読み込みます。 このスイッチは、Visual Basic または C# の実行可能ファイルには使用できません。 詳細については、「[デバッガーでプロセスを自動的に開始する](../../debugger/debug-multiple-processes.md#BKMK_Automatically_start_an_process_in_the_debugger)」を参照してください。|
 |[/LCID または /l](../../ide/reference/lcid-devenv-exe.md)|IDE の既定の言語を設定します。 指定した言語が Visual Studio インストールに含まれていない場合、この設定は無視されます。|
@@ -77,7 +77,7 @@ Devenv を使用すると、コマンド ラインから統合開発環境 (IDE:
 次のコマンド ライン スイッチでは、IDE が表示されません。
 
 |コマンド ライン スイッチ|説明|
-|-------------------------|-----------------|
+| - |-----------------|
 |[/?](../../ide/reference/q-devenv-exe.md)|Devenv のスイッチのヘルプを **[コマンド プロンプト]** ウィンドウ内に表示します。<br /><br /> **Devenv /?**|
 |[/Build](../../ide/reference/build-devenv-exe.md)|指定のソリューションの構成に従って、指定のソリューションまたはプロジェクトをビルドします。<br /><br /> **Devenv myproj.csproj /build**|
 |[/Clean](../../ide/reference/clean-devenv-exe.md)|ビルド コマンドによって作成されたすべてのファイルを、ソース ファイルに影響を与えずに削除します。<br /><br /> **Devenv myproj.csproj /clean**|

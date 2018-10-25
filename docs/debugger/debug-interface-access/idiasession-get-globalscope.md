@@ -1,5 +1,5 @@
 ---
-title: Idiasession::get_globalscope |Microsoft ドキュメント
+title: Idiasession::get_globalscope |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 69c8777ad9309f97c1339b03124bd4bb073df7b9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d5e52f966a129490907615f6c40f52c7710c09ba
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31461686"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49850374"
 ---
 # <a name="idiasessiongetglobalscope"></a>IDiaSession::get_globalScope
 グローバル スコープへの参照を取得します。  
@@ -34,12 +34,12 @@ HRESULT get_globalScope (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]返します、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)をグローバル スコープを表すオブジェクト。  
+ [out]返します、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)グローバル スコープを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
- [exe](../../debugger/debug-interface-access/exe.md)   
+ [実行可能ファイル](../../debugger/debug-interface-access/exe.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

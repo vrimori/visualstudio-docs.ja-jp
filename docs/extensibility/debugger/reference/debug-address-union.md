@@ -1,5 +1,5 @@
 ---
-title: DEBUG_ADDRESS_UNION |Microsoft ドキュメント
+title: DEBUG_ADDRESS_UNION |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0b0fcd662e3a4831b78ca55c139ce1511ea04b24
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 37b22b6a67df981920b2288e6f917d57a67dd762
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31107037"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872084"
 ---
 # <a name="debugaddressunion"></a>DEBUG_ADDRESS_UNION
 アドレスのさまざまな種類をについて説明します。  
@@ -86,16 +86,16 @@ public struct DEBUG_ADDRESS_UNION {
  addr.unused  
  [C++ のみ] のパディングです。  
   
- addr  
- [C++ のみ]共用体の名前です。  
+ Addr  
+ [C++ のみ]共用体の名前。  
   
  unionmember  
- [C# の場合のみ]この値は、基に適切な構造体の型にマーシャ リングする必要があります`dwKind`です。 間の関連付けの「解説」を参照してください`dwKind`と共用体の解釈します。  
+ [C# のみ]この値に基づいて、適切な構造体の型にマーシャ リングする必要がある`dwKind`します。 間の関連付けは、「解説」を参照してください`dwKind`と共用体の解釈します。  
   
-## <a name="remarks"></a>コメント  
- この構造体の一部である、 [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)構造体し、アドレスのさまざまな種類の数のいずれかを表します (、`DEBUG_ADDRESS`構造への呼び出しによって入力されます、 [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)メソッド)。  
+## <a name="remarks"></a>Remarks  
+ この構造体の一部は、 [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)構造体し、さまざまな種類のアドレスの数のいずれかを表します (、`DEBUG_ADDRESS`構造体への呼び出しによって入力されます、 [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)メソッド)。  
   
- [C# の場合のみ]次の表を解釈する方法を示しています、`unionmember`アドレスの種類ごとにメンバー。 この例では、1 つの種類のアドレスにこれを行う方法を示します。  
+ [C# のみ]次の表を解釈する方法を示しています、`unionmember`アドレスの種類ごとのメンバー。 この例では、1 つの種類のアドレスにこれを行う方法を示します。  
   
 |`dwKind`|`unionmember` として解釈されます。|  
 |--------------|----------------------------------|  
@@ -110,7 +110,7 @@ public struct DEBUG_ADDRESS_UNION {
 |`ADDRESS_KIND_RETVAL`|[METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md)|  
   
 ## <a name="example"></a>例  
- この例は、1 つの種類のアドレスを解釈する方法を示しています (`METADATA_ADDRESS_ARRAYELEM`) の`DEBUG_ADDRESS_UNION`c# の構造体。 残りの要素は、まったく同じように解釈できます。  
+ この例は、1 つの種類のアドレスを解釈する方法を示しています (`METADATA_ADDRESS_ARRAYELEM`) の`DEBUG_ADDRESS_UNION`構造 (C#)。 残りの要素は、まったく同じ方法で解釈できます。  
   
 ```csharp  
 using System;  
@@ -134,7 +134,7 @@ namespace MyPackage
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

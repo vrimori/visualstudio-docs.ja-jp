@@ -1,5 +1,5 @@
 ---
-title: はじめに (Debug Interface Access SDK) |Microsoft ドキュメント
+title: はじめに (Debug Interface Access SDK) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -15,37 +15,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fdfe560f22374c0b46305d096bea32a784babe6
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e5cfcad351f19f48678d575e11b074375c6aaadc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31457902"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887296"
 ---
 # <a name="getting-started-debug-interface-access-sdk"></a>はじめに (Debug Interface Access SDK)
-デバッグ インターフェイス アクセス (DIA) SDK では、説明のドキュメントと DIA API を使用する方法を示すサンプルを提供します。 .Pdb ファイルと .dbg ファイルを開き、そのコンテンツのシンボル、値、属性、アドレス、およびその他のデバッグ情報を検索するカスタム アプリケーションを開発するのに DIA SDK のインターフェイスとメソッドを使用します。 この SDK では、C++ アプリケーションで見られる記号に関連するプロパティの参照テーブルも提供します。  
+デバッグ インターフェイスへのアクセス (DIA) SDK では、説明のドキュメントと DIA API を使用する方法を示すサンプルを提供します。 DIA sdk インターフェイスとメソッドを使用して .pdb と .dbg ファイルを開き、シンボル、値、属性、アドレス、およびその他のデバッグ情報のコンテンツを検索するカスタム アプリケーションを開発します。 この SDK には、C++ アプリケーションで見られる記号に関連付けられているプロパティの参照テーブルも提供します。  
   
- DIA SDK を使用する最適なには、次のようにについて理解する必要があります。  
+ 最適な DIA SDK を使用するには、は、次のようにについて理解する必要があります。  
   
--   C++ プログラミング言語  
+- C++ プログラミング言語  
   
--   COM プログラミング  
+- COM プログラミング  
   
--   Visual Studio 統合開発環境 (IDE) のサンプルをコンパイルするため  
+- Visual Studio 統合開発環境 (IDE) のサンプルのコンパイル  
   
- DIA SDK は、通常、Visual Studio と共にインストールし、その既定の場所は *[ドライブ]* \Program Files\Microsoft Visual Studio 9.0\DIA SDK。 インストールの一環として、DIA SDK を実装すると、msdia90.dll は自動的に登録はこれを使用するために必要なすべてを含めるように`dia2.h`プログラムとへのリンクで`diaguids.lib`です。  
+  DIA SDK は、通常、Visual Studio をインストールし、その既定の場所は *[ドライブ]* \Program Files\Microsoft Visual Studio 9.0\DIA SDK。 インストールの一環として、DIA SDK を実装すると、msdia90.dll は自動的に登録を含めるので、これを使用するために必要な`dia2.h`プログラムへのリンクで`diaguids.lib`します。  
   
- ヘッダー: include\dia2.h  
+  ヘッダー: include\dia2.h  
   
- ライブラリ: lib\diaguids.lib  
+  ライブラリ: lib\diaguids.lib  
   
- DLL: bin\msdia80.dll  
+  DLL: bin\msdia80.dll  
   
- IDL: idl\dia2.idl  
+  IDL: idl\dia2.idl  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [概要](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)  
- DIA. の基本的なアーキテクチャをレビューします。  
+ 中の基本的なアーキテクチャをレビューします。  
   
  [.Pdb ファイルの照会](../../debugger/debug-interface-access/querying-the-dot-pdb-file.md)  
  DIA API を使用して、.pdb ファイルを照会する方法の手順を説明します。  

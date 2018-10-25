@@ -1,7 +1,7 @@
 ---
 title: Mark | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fb1b5d35e11cd3317db473330d908e0f7300d576
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4d1bd78f356ed8fc48db9b7712e46fe88e8d3a83
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548972"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49297571"
 ---
 # <a name="mark"></a>Mark
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[マーク](https://docs.microsoft.com/visualstudio/profiling/mark)します。  
-  
 VSPerfCmd.exe の **Mark** オプションは、プロファイル データ ファイルに指定した情報を挿入します。 マークは個別の VSPerfReport レポートまたはプロファイラー UI のマーク レポート ビューに一覧表示できます。 **Mark** を使用して、レポートおよびビュー フィルターの開始点と終了点を指定できます。  
   
  コマンド ラインで指定するオプションは **Mark** オプションのみにする必要があります。  

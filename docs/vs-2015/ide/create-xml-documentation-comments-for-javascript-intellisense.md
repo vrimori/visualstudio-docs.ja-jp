@@ -1,7 +1,7 @@
 ---
 title: JavaScript IntelliSense の XML ドキュメントのコメントを作成する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 74302bb9aea552bfc4e8fedc93fd7aebc69fb4b2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d15144a2cee70e5f6bdc496bf2c09eb8fb95c85d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548145"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49220559"
 ---
 # <a name="create-xml-documentation-comments-for-javascript-intellisense"></a>JavaScript IntelliSense の XML ドキュメントのコメントを作成します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio 2017 ドキュメント](https://docs.microsoft.com/en-us/visualstudio/)します。  
-  
 *XML ドキュメント コメント*JavaScript コメント関数、フィールド、および変数などのコード要素に関する情報を提供するスクリプトに追加することができます。 Visual Studio で、これらの説明テキストがスクリプト関数を参照するときに IntelliSense に表示されます。  
   
  このトピックでは、XML ドキュメント コメントの使用に関する基本的なチュートリアルを提供します。 については、他の要素を使用して[ \<var >](../ide/var-javascript.md)と[\<値 >](../ide/value-javascript.md)、および追加のコード例については、次を参照してください[XML ドキュメントのコメント。](../ide/xml-documentation-comments-javascript.md). など、非同期コールバックの IntelliSense の情報を提供する方法については、`Promise`を参照してください[\<返します >](../ide/returns-javascript.md)します。  

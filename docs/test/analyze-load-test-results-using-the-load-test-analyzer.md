@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 7890f5c1db26616ec1041b202a3863d1fbfae20e
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 72b5472b6a23729026d9e044b7190f031eaaf4bd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36234164"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845453"
 ---
 # <a name="analyze-load-test-results-using-the-load-test-analyzer"></a>ロード テスト アナライザーを使用したロード テスト結果の分析
 
@@ -44,7 +44,7 @@ ms.locfileid: "36234164"
 ## <a name="tasks"></a>[タスク]
 
 |[タスク]|関連するトピック|
-|-----------|-----------------------|
+|-|-|
 |**ロード テストの結果へのアクセス:** ロード テスト エディターからロード テストを実行すると、ロード テストの結果が自動的に開かれ、実行中のロード テストが**ロード テスト アナライザー**に表示されます。|-   [方法 : ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)|
 |**ロード テストへの分析メモの追加:** 分析を行っているときに、ロード テストにコメントを追加できます。 コメントは、ロード テスト結果と共に永続的に保存されます。 入力した説明は、ロード テスト エディターの **[ロード テストの結果を開いて管理]** ダイアログ ボックスのロード テストに関する **[説明]** 列にも表示されます。<br /><br /> 詳細については、「[方法 : ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)」を参照してください。<br /><br /> さらに、コメントは、ロード テスト結果に関する Excel レポートを作成するときにも表示されます。<br /><br /> 詳細については、「[テストの比較または傾向分析に備えたロード テストの結果レポートの作成](../test/compare-load-test-results.md)」を参照してください。|-   [方法: 完了したロード テストの分析中にコメントを追加する](../test/how-to-add-comments-on-a-completed-load-test.md)|
 |**ロード テストの結果の分析:** ロード テストの実行データにアクセスした後、その結果データを分析できます。 テスト結果を迅速に把握するには、ロード テストの概要を表示します。 ロード テストの概要には、主要な結果がわかりやすい形式で簡潔にまとめられています。<br /><br /> ロード テストの概要は印刷できます。 これによって利害関係者に結果を伝えるのが容易になります。<br /><br /> ロード テストの結果の詳細は、結果のグラフとテーブルを使用して分析できます。 これらには、**エラー**、**ページ**、**要求**、**SQL トレース**、**テスト**、**しきい値**、**トランザクション**が含まれます。|-   [ロード テスト結果の概要](../test/load-test-results-summary-overview.md)<br />-   [方法: Web ページ応答を表示する](../test/how-to-view-web-page-response-time-in-a-load-test.md)<br />-   [しきい値規則違反の分析](../test/analyze-threshold-rule-violations-in-load-tests.md)<br />-   [グラフ ビューでのロード テスト結果の分析](../test/analyze-load-test-results-in-the-graphs-view.md)<br />-   [テーブル ビューでのロード テスト結果とエラーの分析](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)|

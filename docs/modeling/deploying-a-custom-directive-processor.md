@@ -11,12 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 3f4af12b7c73aa2da7f580b11b1984aa2c8238b7
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 16ee7eae30d947e6a83444c8e744cbaca398bf94
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566828"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894819"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>カスタム ディレクティブ プロセッサの配置
 
@@ -154,7 +154,7 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
  .pkgdef ファイルがビルド フォルダー (通常は bin\Debug か bin\Release) に表示されることを確認します。 このフォルダーに表示されない場合は、テキスト エディターで .csproj ファイルを開き、`<GeneratePkgDefFile>false</GeneratePkgDefFile>` ノードを削除します。
 
- 詳細については、次を参照してください。 [Vspackage](../extensibility/internals/vspackages.md)します。
+ 詳細については、「 [VSPackages](../extensibility/internals/vspackages.md)」を参照してください。
 
 ## <a name="setting-a-registry-key"></a>レジストリ キーの設定
  これは、カスタム ディレクティブ プロセッサをインストールする方法としては、最も優先順位の低い方法です。 この方法では、ディレクティブ プロセッサを簡単に有効化および無効化できないうえに、ディレクティブ プロセッサを他のユーザーに配布することもできません。
@@ -164,38 +164,38 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
 #### <a name="to-register-a-directive-processor-by-setting-a-registry-key"></a>レジストリ キーを設定してディレクティブ プロセッサを登録するには
 
-1.  `regedit` を実行します。
+1. `regedit` を実行します。
 
-2.  レジストリ エディターで、次のキーに移動します。
+2. レジストリ エディターで、次のキーに移動します。
 
-     **Hkey_local_machine \software\microsoft\visualstudio\\\*.0\TextTemplating\DirectiveProcessors**
+    **Hkey_local_machine \software\microsoft\visualstudio\\\*.0\TextTemplating\DirectiveProcessors**
 
-     Visual Studio の実験的なバージョンでディレクティブ プロセッサをインストールする場合は、「11.0」後"Exp"を挿入します。
+    Visual Studio の実験的なバージョンでディレクティブ プロセッサをインストールする場合は、「11.0」後"Exp"を挿入します。
 
-3.  ディレクティブ プロセッサ クラスと同じ名前のレジストリ キーを追加します。
+3. ディレクティブ プロセッサ クラスと同じ名前のレジストリ キーを追加します。
 
-    -   レジストリ ツリー内を右クリックし、 **DirectiveProcessors**に**新規**、 をクリックし、**キー**します。
+   -   レジストリ ツリー内を右クリックし、 **DirectiveProcessors**に**新規**、 をクリックし、**キー**します。
 
-4.  新しいノードで、クラスとコードベース、またはクラスとアセンブリの文字列値を次の表に従って追加します。
+4. 新しいノードで、クラスとコードベース、またはクラスとアセンブリの文字列値を次の表に従って追加します。
 
-    1.  作成したノードを右クリックし、[**新規**、] をクリックし、**文字列値**します。
+   1.  作成したノードを右クリックし、[**新規**、] をクリックし、**文字列値**します。
 
-    2.  値の名前を編集します。
+   2.  値の名前を編集します。
 
-    3.  名前をダブルクリックし、データを編集します。
+   3.  名前をダブルクリックし、データを編集します。
 
- カスタム ディレクティブ プロセッサが GAC 内にない場合は、レジストリ サブキーを次の表に従って設定します。
+   カスタム ディレクティブ プロセッサが GAC 内にない場合は、レジストリ サブキーを次の表に従って設定します。
 
-|name|型|データ|
-|----------|----------|----------|
+|名前|型|データ|
+|-|-|-|
 |(既定)|REG_SZ|(値が設定されていません)|
 |クラス|REG_SZ|**\<Namespace 名 >。\<クラス名 >**|
 |CodeBase|REG_SZ|**\<パス >\\< アセンブリ名\>**|
 
  アセンブリが GAC に含まれている場合は、レジストリ サブキーを次の表に従って設定します。
 
-|name|型|データ|
-|----------|----------|----------|
+|名前|型|データ|
+|-|-|-|
 |(既定)|REG_SZ|(値が設定されていません)|
 |クラス|REG_SZ|\<**完全修飾クラス名**>|
 |Assembly|REG_SZ|\<**GAC にアセンブリ名**>|

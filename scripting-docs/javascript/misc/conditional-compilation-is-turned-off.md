@@ -1,5 +1,5 @@
 ---
-title: 条件付きコンパイルがになっています |Microsoft ドキュメント
+title: 条件付きコンパイルは無効になります |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,14 +21,14 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 8f2eabb900e24072c8f390061b5d6081de9bc889
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633112"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914243"
 ---
 # <a name="conditional-compilation-is-turned-off"></a>条件付きコンパイルは無効になっています。
-最初のオンにする条件付きコンパイルせず、条件付きコンパイル変数を使用しようとするとします。 条件付きコンパイルをオンに指示、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]コンパイラを条件付きコンパイル変数として @ で始まる識別子を解釈します。 条件付きステートメントを使用してコードを開始することで行います。  
+初めてオンにする条件付きコンパイルなしの条件付きコンパイル変数を使用しようとしました。 通知の条件付きコンパイルの有効化、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]コンパイラに条件付きコンパイル変数としてで始まる識別子。 条件付きステートメントを使用してコードを開始することで行います。  
   
 ```  
 /*@cc_on @*/  
@@ -45,6 +45,6 @@ ms.locfileid: "24633112"
 ## <a name="see-also"></a>関連項目  
  [条件付きコンパイル](../../javascript/advanced/conditional-compilation-javascript.md)   
  [条件付きコンパイル変数](../../javascript/advanced/conditional-compilation-variables-javascript.md)   
- [@cc_onステートメント](../../javascript/reference/at-cc-on-statement-javascript.md)   
- [@ifステートメント](../../javascript/reference/at-if-statement-javascript.md)   
+ [@cc_on ステートメント](../../javascript/reference/at-cc-on-statement-javascript.md)   
+ [@if ステートメント](../../javascript/reference/at-if-statement-javascript.md)   
  [@set ステートメント](../../javascript/reference/at-set-statement-javascript.md)

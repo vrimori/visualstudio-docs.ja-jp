@@ -1,7 +1,7 @@
 ---
 title: デザイナーを使用して SQL database の作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -28,18 +28,16 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: 7a641edfbe1b584d324bffca3404a1f7cd3a72ad
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0ef261ec4ea803dcfc42b6151a5c828d5b03811a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533368"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860332"
 ---
 # <a name="create-a-sql-database-by-using-a-designer"></a>デザイナーを使用して SQL database を作成します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デザイナーを使用して SQL database を作成する](https://docs.microsoft.com/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)します。  
-  
   
 テーブルを追加して、Visual Studio を使用して作成し、SQL Server Express LocalDB にローカル データベース ファイルを更新して、列を定義するなど、基本的なタスクを調べることができます。 このチュートリアルを終了すると、ローカル データベースを使用してさらに高度な機能を使用できるようになり、こうした機能を必要とする他のチュートリアルへの準備となります。  
   
@@ -60,23 +58,23 @@ ms.locfileid: "47533368"
   
 #### <a name="to-create-a-project-and-a-database-file"></a>プロジェクトとローカル データベース ファイルを作成するには  
   
-1.  という名前の Windows フォーム プロジェクトを作成する`SampleDatabaseWalkthrough`します。  
+1. という名前の Windows フォーム プロジェクトを作成する`SampleDatabaseWalkthrough`します。  
   
-2.  メニュー バーで選択**プロジェクト** > **新しい項目の追加**します。  
+2. メニュー バーで選択**プロジェクト** > **新しい項目の追加**します。  
   
-3.  項目テンプレートの一覧で、下にスクロールし、選択**サービス ベースのデータベース**します。  
+3. 項目テンプレートの一覧で、下にスクロールし、選択**サービス ベースのデータベース**します。  
   
-     ![項目テンプレート ダイアログ ボックス](../data-tools/media/raddata-vsitemtemplates.png "raddata VSItemTemplates")  
+    ![項目テンプレート ダイアログ ボックス](../data-tools/media/raddata-vsitemtemplates.png "raddata VSItemTemplates")  
   
-4.  データベースの名前**SampleDatabase**を選び、**追加**ボタンをクリックします。  
+4. データベースの名前**SampleDatabase**を選び、**追加**ボタンをクリックします。  
   
-5.  場合、**データソース**Shift + Alt + D キーを選択してか、メニュー バーで選択すると開くウィンドウが開いていないことが**ビュー** > **その他の Windows**  > **データソース**します。  
+5. 場合、**データソース**Shift + Alt + D キーを選択してか、メニュー バーで選択すると開くウィンドウが開いていないことが**ビュー** > **その他の Windows**  > **データソース**します。  
   
-6.  **データ ソース**ウィンドウで、**新しいデータ ソースの追加**リンク。  
+6. **データ ソース**ウィンドウで、**新しいデータ ソースの追加**リンク。  
   
-7.  **データ ソース構成ウィザード**を選択します、 **[次へ]** 4 回の既定の設定をそのまま使用し、ボタン、**完了**ボタンをクリックします。  
+7. **データ ソース構成ウィザード**を選択します、 **[次へ]** 4 回の既定の設定をそのまま使用し、ボタン、**完了**ボタンをクリックします。  
   
- データベースのプロパティ ウィンドウを開くと、その接続文字列と、プライマリ .mdf ファイルの位置を確認できます。 データベース ファイルが、プロジェクト フォルダーが表示されます。  
+   データベースのプロパティ ウィンドウを開くと、その接続文字列と、プライマリ .mdf ファイルの位置を確認できます。 データベース ファイルが、プロジェクト フォルダーが表示されます。  
   
 -   Visual Studio で、次のように選択します。**ビュー** > **SQL Server オブジェクト エクスプ ローラー**そのウィンドウが開いていない場合。 展開して [プロパティ] ウィンドウを開き、**データ接続**ノードは、SampleDatabase.mdf のショートカット メニューを開き、選択し、**プロパティ**します。  
   

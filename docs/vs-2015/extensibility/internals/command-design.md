@@ -1,7 +1,7 @@
 ---
 title: コマンドの設計 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,22 +16,20 @@ ms.assetid: 097108c3-f758-4b87-89d6-b32d12d9041a
 caps.latest.revision: 35
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6fe22e67d97af7dc7b8c900dd10c301d02d8c5a7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: eacde73ded992eb72396cdb5f84dc01b145cf874
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548420"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949267"
 ---
 # <a name="command-design"></a>コマンド デザイン
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コマンド デザイン](https://docs.microsoft.com/visualstudio/extensibility/internals/command-design)します。  
-  
 VSPackage にコマンドを追加するときに表示されるが、可能な場合とが処理されるようにする方法を指定する必要があります。  
   
 ## <a name="defining-commands"></a>コマンドを定義します。  
- 新しいコマンドを定義するには、VSPackage プロジェクトで Visual Studio Command Table (.vsct) ファイルが含まれます。 Visual Studio パッケージ テンプレートを使用して VSPackage を作成した場合、プロジェクトには、これらのファイルのいずれかが含まれます。 詳細については、次を参照してください。 [Visual Studio Command Table (します。Vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)します。  
+ 新しいコマンドを定義するには、VSPackage プロジェクトで Visual Studio Command Table (.vsct) ファイルが含まれます。 Visual Studio パッケージ テンプレートを使用して VSPackage を作成した場合、プロジェクトには、これらのファイルのいずれかが含まれます。 詳細については、「 [Visual Studio Command Table (.Vsct) Files](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)」を参照してください。  
   
  Visual Studio では、コマンドを表示できるように検出されたすべての .vsct ファイルをマージします。 これらのファイルはバイナリの VSPackage から個別であるために、Visual Studio は、コマンドを検索するパッケージを読み込むにはありません。 詳細については、次を参照してください。[方法 VSPackages に追加のユーザー インターフェイス要素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)します。  
   
@@ -50,15 +48,15 @@ VSPackage にコマンドを追加するときに表示されるが、可能な�
 ### <a name="command-organization"></a>コマンドの組織  
  環境では、グループ、優先度、メニューでコマンドを配置します。  
   
--   グループは、関連するコマンドの論理的なコレクション、たとえば、**切り取り**、**コピー**、および**貼り付け**コマンド グループ。 グループは、メニューに表示されるコマンドです。  
+- グループは、関連するコマンドの論理的なコレクション、たとえば、**切り取り**、**コピー**、および**貼り付け**コマンド グループ。 グループは、メニューに表示されるコマンドです。  
   
--   優先順位は、グループ内の個々 のコマンドがメニューに表示される順序を決定します。  
+- 優先順位は、グループ内の個々 のコマンドがメニューに表示される順序を決定します。  
   
--   メニューは、グループのコンテナーとして機能します。  
+- メニューは、グループのコンテナーとして機能します。  
   
- 環境はいくつかのコマンド、グループ、およびメニューが組み込まれています。 詳細については、次を参照してください。[コマンドの既定の、グループ、およびツールバーの配置](../../extensibility/internals/default-command-group-and-toolbar-placement.md)します。  
+  環境はいくつかのコマンド、グループ、およびメニューが組み込まれています。 詳細については、次を参照してください。[コマンドの既定の、グループ、およびツールバーの配置](../../extensibility/internals/default-command-group-and-toolbar-placement.md)します。  
   
- コマンドは、プライマリ グループに割り当てることができます。 プライマリ グループは、メインのメニュー構造とコマンドの位置を制御、**カスタマイズ** ダイアログ ボックス。 コマンドは、複数のグループに表示できます。たとえば、コマンドには、メイン メニューのショートカット メニューおよびツールバーができます。 詳細については、次を参照してください。[方法 VSPackages に追加のユーザー インターフェイス要素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)します。  
+  コマンドは、プライマリ グループに割り当てることができます。 プライマリ グループは、メインのメニュー構造とコマンドの位置を制御、**カスタマイズ** ダイアログ ボックス。 コマンドは、複数のグループに表示できます。たとえば、コマンドには、メイン メニューのショートカット メニューおよびツールバーができます。 詳細については、次を参照してください。[方法 VSPackages に追加のユーザー インターフェイス要素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)します。  
   
 ### <a name="command-routing"></a>コマンド ルーティング  
  呼び出すと、Vspackage 用コマンドのルーティングのプロセスは、オブジェクトのインスタンスに対してメソッドを呼び出してのプロセスによって異なります。  

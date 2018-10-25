@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: プロファイラー API の使用 | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b7eb2d4c3acfc8f2a98de1364b1f98aa451abaed
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d046015b1a88b3699fa8ef572e39e2ffefec2064
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534833"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898760"
 ---
 # <a name="walkthrough-using-profiler-apis"></a>チュートリアル : プロファイラー API の使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: Profiler Api を使用した](https://docs.microsoft.com/visualstudio/profiling/walkthrough-using-profiler-apis)します。  
-  
 このチュートリアルでは、C# アプリケーションを使用して、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツール API を使用する方法を説明します。 プロファイラー API を使用すると、インストルメンテーション プロファイル中に収集されるデータの量を制限することができます。  
   
  このチュートリアルの手順は、一般に C/C++ アプリケーションに該当します。 言語ごとに、適したビルド環境を構成する必要があります。  
@@ -41,7 +39,7 @@ ms.locfileid: "47534833"
   
  ネイティブ コード用の Visual Studio プロファイラー API は VSPerf.dll にあります。 ヘッダー ファイルの VSPerf.h とインポート ライブラリの VSPerf.lib は、Microsoft Visual Studio 9\Team Tools\Performance Tools ディレクトリにあります。  
   
- マネージド コード用のプロファイラー API は、Microsoft.VisualStudio.Profiler.dll にあります。 この DLL は、Microsoft Visual Studio 9\Team Tools\Performance Tools ディレクトリにあります。 詳細については、「<xref:Microsoft.VisualStudio.Profiler>」を参照してください。  
+ マネージド コード用のプロファイラー API は、Microsoft.VisualStudio.Profiler.dll にあります。 この DLL は、Microsoft Visual Studio 9\Team Tools\Performance Tools ディレクトリにあります。 詳細については、「 <xref:Microsoft.VisualStudio.Profiler> 」を参照してください。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルでは、ユーザーが選択した開発環境で、デバッグとサンプリングがサポートされていることを前提としています。 以下のトピックでは、これらの前提条件の概要について説明しています。  
@@ -126,19 +124,19 @@ DataCollection.CurrentId);
   
 #### <a name="to-collect-and-view-data-in-the-visual-studio-ide"></a>Visual Studio IDE でデータを収集して参照するには  
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE を開きます。 **[分析]** メニューの **[プロファイラー]** をポイントし、**[新しいパフォーマンス セッション]** を選択します。  
+1. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE を開きます。 **[分析]** メニューの **[プロファイラー]** をポイントし、**[新しいパフォーマンス セッション]** を選択します。  
   
-2.  **[パフォーマンス エクスプローラー]** ウィンドウで、コンパイルされたバイナリを、**[ターゲット]** 一覧に追加します。 **[ターゲット]** を右クリックして **[ターゲット バイナリの追加]** を選択します。 **[ターゲット バイナリの追加]** ダイアログ ボックスでバイナリを探し、**[開く]** をクリックします。  
+2. **[パフォーマンス エクスプローラー]** ウィンドウで、コンパイルされたバイナリを、**[ターゲット]** 一覧に追加します。 **[ターゲット]** を右クリックして **[ターゲット バイナリの追加]** を選択します。 **[ターゲット バイナリの追加]** ダイアログ ボックスでバイナリを探し、**[開く]** をクリックします。  
   
-3.  **[パフォーマンス エクスプローラー]** ツールバーで、**[メソッド]** 一覧の **[インストルメンテーション]** を選択します。  
+3. **[パフォーマンス エクスプローラー]** ツールバーで、**[メソッド]** 一覧の **[インストルメンテーション]** を選択します。  
   
-4.  **[プロファイルを使用して起動]** をクリックします。  
+4. **[プロファイルを使用して起動]** をクリックします。  
   
-     プロファイラーはバイナリをインストルメント化し、実行し、パフォーマンス レポート ファイルを作成します。 パフォーマンス レポート ファイルが、**[パフォーマンス エクスプローラー]** の **[レポート]** ノードに表示されます。  
+    プロファイラーはバイナリをインストルメント化し、実行し、パフォーマンス レポート ファイルを作成します。 パフォーマンス レポート ファイルが、**[パフォーマンス エクスプローラー]** の **[レポート]** ノードに表示されます。  
   
-5.  結果のパフォーマンス レポート ファイルを開きます。  
+5. 結果のパフォーマンス レポート ファイルを開きます。  
   
- 既定では、プロファイラーが開始されると、プロファイラーがグローバル レベルでデータを収集します。 次のコードは、プログラムの開始時に、グローバル プロファイルを無効にします。  
+   既定では、プロファイラーが開始されると、プロファイラーがグローバル レベルでデータを収集します。 次のコードは、プログラムの開始時に、グローバル プロファイルを無効にします。  
   
 ```  
 DataCollection.StopProfile(  

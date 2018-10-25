@@ -1,7 +1,7 @@
 ---
 title: Visual Studio での Xamarin Froms を使用したアプリ作成の基本事項 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -10,18 +10,16 @@ ms.assetid: d22b5186-9e03-4e85-afc9-7cbe28522a6d
 caps.latest.revision: 14
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 56e76bc74470ccc5efda4482435f73344f85224a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3c7bbd359bb44d30424b1095e14f00094265990f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544946"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921754"
 ---
 # <a name="learn-app-building-basics-with-xamarinforms-in-visual-studio"></a>Visual Studio での Xamarin Froms を使用したアプリ作成の基本事項
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio で xamarin.forms アプリ作成の基本事項](https://docs.microsoft.com/visualstudio/cross-platform/learn-app-building-basics-with-xamarin-forms-in-visual-studio)します。  
-  
   
 [Setup and install](../cross-platform/setup-and-install.md) と [Verify your Xamarin environment](../cross-platform/verify-your-xamarin-environment.md)の手順を完了すると、このチュートリアルでは、Xamarin.Forms を使用して基本アプリ (下図) を構築する方法を示します。 Xamarin.Forms を使用して、すべての UI コードをポータブル クラス ライブラリ (PCL) に一度記述します。 そうすると、Xamarin では、ネイティブ UI コントロールが iOS、Android、Windows プラットフォームに対して自動的にレンダリングされます。 PCL オプションはすべてのターゲット プラットフォームでサポートされる特定の .NET API のみの使用を最も適切にサポートし、Xamarin.Forms ではプラットフォーム間で UI コードを共有できるため、この方法をお勧めします。  
   
@@ -297,115 +295,115 @@ ms.locfileid: "47544946"
 ##  <a name="finish"></a>UI の外観をすべてのプラットフォームについてネイティブなものにする  
  Xamarin.Forms は各プラットフォームのネイティブ UI コントロールをレンダリングして、アプリが自動的にネイティブな外観を持つようにします。 これをさらに見やすくするには、郵便番号用の入力フィールドで UI を終了し、サービスから返された気象データを表示します。  
   
-1.  **WeatherPage.xaml** の内容を次のコードで置き換えます。 すべての要素は、前述のとおり **x:Name** 属性を使用して名前を付けられ、それらの要素がコードから参照できるようになっていることに注意してください。 Xamarin.Forms は、さまざまな [レイアウト オプション](http://developer.xamarin.com/guides/xamarin-forms/controls/layouts/) (xamarin.com) も提供します。ここで、WeatherPage は [StackLayout](http://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) (xamarin.com) を使用しています。  
+1. **WeatherPage.xaml** の内容を次のコードで置き換えます。 すべての要素は、前述のとおり **x:Name** 属性を使用して名前を付けられ、それらの要素がコードから参照できるようになっていることに注意してください。 Xamarin.Forms は、さまざまな [レイアウト オプション](http://developer.xamarin.com/guides/xamarin-forms/controls/layouts/) (xamarin.com) も提供します。ここで、WeatherPage は [StackLayout](http://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) (xamarin.com) を使用しています。  
   
-    ```xaml  
-    <?xml version="1.0" encoding="utf-8" ?>  
-    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
-           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
-           x:Class="WeatherApp.WeatherPage">  
+   ```xaml  
+   <?xml version="1.0" encoding="utf-8" ?>  
+   <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+          x:Class="WeatherApp.WeatherPage">  
   
-      <ContentPage.Resources>  
-        <ResourceDictionary>  
-          <Style x:Key="labelStyle" TargetType="Label">  
-            <Setter Property="TextColor" Value="#a8a8a8" />  
-            <Setter Property="FontSize" Value="Small" />  
-          </Style>  
-          <Style x:Key="fieldStyle" TargetType="Label">  
-            <Setter Property="TextColor">  
-              <OnPlatform x:TypeArguments="Color" iOS="Black" Android="White" WinPhone="White" />  
-            </Setter>  
-            <Setter Property="FontSize" Value="Medium" />  
-          </Style>  
-          <Style x:Key="fieldView" TargetType="ContentView">  
-            <Setter Property="Padding" Value="10,0,0,0" />  
-          </Style>  
-        </ResourceDictionary>  
-      </ContentPage.Resources>  
+     <ContentPage.Resources>  
+       <ResourceDictionary>  
+         <Style x:Key="labelStyle" TargetType="Label">  
+           <Setter Property="TextColor" Value="#a8a8a8" />  
+           <Setter Property="FontSize" Value="Small" />  
+         </Style>  
+         <Style x:Key="fieldStyle" TargetType="Label">  
+           <Setter Property="TextColor">  
+             <OnPlatform x:TypeArguments="Color" iOS="Black" Android="White" WinPhone="White" />  
+           </Setter>  
+           <Setter Property="FontSize" Value="Medium" />  
+         </Style>  
+         <Style x:Key="fieldView" TargetType="ContentView">  
+           <Setter Property="Padding" Value="10,0,0,0" />  
+         </Style>  
+       </ResourceDictionary>  
+     </ContentPage.Resources>  
   
-      <ContentPage.Content>  
-        <ScrollView>  
-          <StackLayout>  
-            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"  
-                  BackgroundColor="#545454">  
-              <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">  
-                <Label Text="Search by Zip Code" TextColor="White" FontAttributes="Bold"  
-                    FontSize="Medium" />  
-                <Label x:Name="zipCodeLabel" Text="Zip Code" Style="{StaticResource labelStyle}" />  
-                <Entry x:Name="zipCodeEntry" />  
-              </StackLayout>  
-              <StackLayout Padding="0,0,0,10" VerticalOptions="End">  
-                <Button x:Name="getWeatherBtn" Text="Get Weather" WidthRequest="185" BorderWidth="1" >  
-                  <!-- Set iOS colors; use defaults on other platforms -->  
-                  <Button.TextColor>  
-                    <OnPlatform x:TypeArguments="Color" iOS="White"/>  
-                  </Button.TextColor>  
-                  <Button.BorderColor>  
-                    <OnPlatform x:TypeArguments="Color" iOS="White"/>  
-                  </Button.BorderColor>  
-                </Button>  
-              </StackLayout>  
-            </StackLayout>  
-            <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">  
-              <Label Text="Location" Style="{StaticResource labelStyle}" />  
-              <ContentView Style="{StaticResource fieldView}">  
-                <Label Text="{Binding Title}" Style="{StaticResource fieldStyle}" />  
-              </ContentView>  
-              <Label Text="Temperature" Style="{StaticResource labelStyle}" />  
-              <ContentView Style="{StaticResource fieldView}">  
-                <Label x:Name="tempLabel" Text="{Binding Temperature}"  
-                    Style="{StaticResource fieldStyle}" />  
-              </ContentView>  
-              <Label Text="Wind Speed" Style="{StaticResource labelStyle}" />  
-              <ContentView Style="{StaticResource fieldView}">  
-                <Label x:Name="windLabel" Text="{Binding Wind}" Style="{StaticResource fieldStyle}" />  
-              </ContentView>  
-              <Label Text="Humidity" Style="{StaticResource labelStyle}" />  
-              <ContentView Style="{StaticResource fieldView}">  
-                <Label x:Name="humidityLabel" Text="{Binding Humidity}"  
-                    Style="{StaticResource fieldStyle}" />  
-              </ContentView>  
-              <Label Text="Visibility" Style="{StaticResource labelStyle}" />  
-              <ContentView Style="{StaticResource fieldView}">  
-                <Label x:Name="visibilitylabel" Text="{Binding Visibility}"  
-                    Style="{StaticResource fieldStyle}" />  
-              </ContentView>  
-              <Label Text="Time of Sunrise" Style="{StaticResource labelStyle}" />  
-              <ContentView Style="{StaticResource fieldView}">  
-                <Label x:Name="sunriseLabel" Text="{Binding Sunrise}"  
-                    Style="{StaticResource fieldStyle}" />  
-              </ContentView>  
-              <Label Text="Time of Sunset" Style="{StaticResource labelStyle}" />  
-              <ContentView Style="{StaticResource fieldView}">  
-                <Label x:Name="sunsetLabel" Text="{Binding Sunset}"  
-                    Style="{StaticResource fieldStyle}" />  
-              </ContentView>  
-            </StackLayout>  
-          </StackLayout>  
-        </ScrollView>  
-      </ContentPage.Content>  
-    </ContentPage>  
-    ```  
+     <ContentPage.Content>  
+       <ScrollView>  
+         <StackLayout>  
+           <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"  
+                 BackgroundColor="#545454">  
+             <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">  
+               <Label Text="Search by Zip Code" TextColor="White" FontAttributes="Bold"  
+                   FontSize="Medium" />  
+               <Label x:Name="zipCodeLabel" Text="Zip Code" Style="{StaticResource labelStyle}" />  
+               <Entry x:Name="zipCodeEntry" />  
+             </StackLayout>  
+             <StackLayout Padding="0,0,0,10" VerticalOptions="End">  
+               <Button x:Name="getWeatherBtn" Text="Get Weather" WidthRequest="185" BorderWidth="1" >  
+                 <!-- Set iOS colors; use defaults on other platforms -->  
+                 <Button.TextColor>  
+                   <OnPlatform x:TypeArguments="Color" iOS="White"/>  
+                 </Button.TextColor>  
+                 <Button.BorderColor>  
+                   <OnPlatform x:TypeArguments="Color" iOS="White"/>  
+                 </Button.BorderColor>  
+               </Button>  
+             </StackLayout>  
+           </StackLayout>  
+           <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">  
+             <Label Text="Location" Style="{StaticResource labelStyle}" />  
+             <ContentView Style="{StaticResource fieldView}">  
+               <Label Text="{Binding Title}" Style="{StaticResource fieldStyle}" />  
+             </ContentView>  
+             <Label Text="Temperature" Style="{StaticResource labelStyle}" />  
+             <ContentView Style="{StaticResource fieldView}">  
+               <Label x:Name="tempLabel" Text="{Binding Temperature}"  
+                   Style="{StaticResource fieldStyle}" />  
+             </ContentView>  
+             <Label Text="Wind Speed" Style="{StaticResource labelStyle}" />  
+             <ContentView Style="{StaticResource fieldView}">  
+               <Label x:Name="windLabel" Text="{Binding Wind}" Style="{StaticResource fieldStyle}" />  
+             </ContentView>  
+             <Label Text="Humidity" Style="{StaticResource labelStyle}" />  
+             <ContentView Style="{StaticResource fieldView}">  
+               <Label x:Name="humidityLabel" Text="{Binding Humidity}"  
+                   Style="{StaticResource fieldStyle}" />  
+             </ContentView>  
+             <Label Text="Visibility" Style="{StaticResource labelStyle}" />  
+             <ContentView Style="{StaticResource fieldView}">  
+               <Label x:Name="visibilitylabel" Text="{Binding Visibility}"  
+                   Style="{StaticResource fieldStyle}" />  
+             </ContentView>  
+             <Label Text="Time of Sunrise" Style="{StaticResource labelStyle}" />  
+             <ContentView Style="{StaticResource fieldView}">  
+               <Label x:Name="sunriseLabel" Text="{Binding Sunrise}"  
+                   Style="{StaticResource fieldStyle}" />  
+             </ContentView>  
+             <Label Text="Time of Sunset" Style="{StaticResource labelStyle}" />  
+             <ContentView Style="{StaticResource fieldView}">  
+               <Label x:Name="sunsetLabel" Text="{Binding Sunset}"  
+                   Style="{StaticResource fieldStyle}" />  
+             </ContentView>  
+           </StackLayout>  
+         </StackLayout>  
+       </ScrollView>  
+     </ContentPage.Content>  
+   </ContentPage>  
+   ```  
   
-     Xamarin.Forms の **OnPlatform** タグの使用に注意してください。 **OnPlatform** により、アプリが実行されている現在のプラットフォーム固有のプロパティ値が選択されます ( [外部 XAML 構文](http://developer.xamarin.com/guides/xamarin-forms/user-interface/xaml-basics/essential_xaml_syntax/) (xamarin.com) をご覧ください)。 このタグは、個々のデータ フィールドにテキストの色を設定するために使用します。Android と Windows Phone には白、iOS には黒を指定します。 **OnPlatform** を任意のプロパティおよび任意のデータ型に対して使用し、プラットフォーム固有の調整を XAML の任意の場所に行うことができます。 分離コード ファイルで、 [Device.OnPlatform API](http://developer.xamarin.com/guides/xamarin-forms/platform-features/device/) を同じ目的のために使用することができます。  
+    Xamarin.Forms の **OnPlatform** タグの使用に注意してください。 **OnPlatform** により、アプリが実行されている現在のプラットフォーム固有のプロパティ値が選択されます ( [外部 XAML 構文](http://developer.xamarin.com/guides/xamarin-forms/user-interface/xaml-basics/essential_xaml_syntax/) (xamarin.com) をご覧ください)。 このタグは、個々のデータ フィールドにテキストの色を設定するために使用します。Android と Windows Phone には白、iOS には黒を指定します。 **OnPlatform** を任意のプロパティおよび任意のデータ型に対して使用し、プラットフォーム固有の調整を XAML の任意の場所に行うことができます。 分離コード ファイルで、 [Device.OnPlatform API](http://developer.xamarin.com/guides/xamarin-forms/platform-features/device/) を同じ目的のために使用することができます。  
   
-2.  **WeatherPage.xaml.cs**で、 **GetWeatherBtn_Clicked** イベント ハンドラーを次のコードで置き換えます。 このコードは、入力フィールドに郵便番号があることを確認し、その郵便番号のデータを取得し、全画面のバインド コンテキストを結果の Weather インスタンスに設定してから、ボタン テキストを “再検索” に設定します。 UI の各ラベルが Weather クラスのプロパティにバインドされるため、画面のバインド コンテキストを **Weather** インスタンスに設定すると、それらのラベルが自動的に更新されることに注意してください。  
+2. **WeatherPage.xaml.cs**で、 **GetWeatherBtn_Clicked** イベント ハンドラーを次のコードで置き換えます。 このコードは、入力フィールドに郵便番号があることを確認し、その郵便番号のデータを取得し、全画面のバインド コンテキストを結果の Weather インスタンスに設定してから、ボタン テキストを “再検索” に設定します。 UI の各ラベルが Weather クラスのプロパティにバインドされるため、画面のバインド コンテキストを **Weather** インスタンスに設定すると、それらのラベルが自動的に更新されることに注意してください。  
   
-    ```csharp  
-    private async void GetWeatherBtn_Clicked(object sender, EventArgs e)  
-    {  
-        if (!String.IsNullOrEmpty(zipCodeEntry.Text))  
-        {  
-            Weather weather = await Core.GetWeather(zipCodeEntry.Text);  
-            this.BindingContext = weather;  
-            getWeatherBtn.Text = "Search Again";  
-        }  
-    }  
-    ```  
+   ```csharp  
+   private async void GetWeatherBtn_Clicked(object sender, EventArgs e)  
+   {  
+       if (!String.IsNullOrEmpty(zipCodeEntry.Text))  
+       {  
+           Weather weather = await Core.GetWeather(zipCodeEntry.Text);  
+           this.BindingContext = weather;  
+           getWeatherBtn.Text = "Search Again";  
+       }  
+   }  
+   ```  
   
-3.  適切なプロジェクトを右クリックし、[スタートアップ プロジェクトに設定] を選択し、デバイスまたはエミュレーターかシミュレーターのいずれかでアプリを開始して、3 つのすべてのプラットフォーム (Android、iOS、Windows Phone) 上でアプリを実行します。 有効な米国の郵便番号 (60601 など) を入力し、[Get Weather] ボタンを押してその地域の気象データを次のように表示します。 iOS プロジェクトのネットワーク上で Visual Studio が Mac OS X コンピューターに接続されている必要があります。  
+3. 適切なプロジェクトを右クリックし、[スタートアップ プロジェクトに設定] を選択し、デバイスまたはエミュレーターかシミュレーターのいずれかでアプリを開始して、3 つのすべてのプラットフォーム (Android、iOS、Windows Phone) 上でアプリを実行します。 有効な米国の郵便番号 (60601 など) を入力し、[Get Weather] ボタンを押してその地域の気象データを次のように表示します。 iOS プロジェクトのネットワーク上で Visual Studio が Mac OS X コンピューターに接続されている必要があります。  
   
-     ![Android、iOS、Windows Phone でのお天気アプリのサンプル](../cross-platform/media/crossplat-xamarin-formsguide-1.png "CrossPlat Xamarin FormsGuide 1")  
+    ![Android、iOS、Windows Phone でのお天気アプリのサンプル](../cross-platform/media/crossplat-xamarin-formsguide-1.png "CrossPlat Xamarin FormsGuide 1")  
   
- このプロジェクトの完全なソース コードは [GitHub の xamarin-forms-samples リポジトリ](https://github.com/xamarin/xamarin-forms-samples/tree/master/Weather)にあります。
+   このプロジェクトの完全なソース コードは [GitHub の xamarin-forms-samples リポジトリ](https://github.com/xamarin/xamarin-forms-samples/tree/master/Weather)にあります。
 

@@ -1,7 +1,7 @@
 ---
 title: チャネルの管理 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 48507f8133466c7ab48ba2992434c751a8e32014
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1a12c6f58b383f5aa0301f826238839d265cdec2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549026"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49269166"
 ---
 # <a name="manage-channels"></a>チャネルの管理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[管理チャネル](https://docs.microsoft.com/visualstudio/profiling/manage-channels)します。  
-  
 コンカレンシー ビジュアライザーの**スレッド ビュー**では、プロセスのチャネルを整理して、特定のパターンを調べることができます。 チャネルを並べ替えしたり、上下に移動したり、非表示/表示を切り替えることができます。  
   
 ## <a name="sort-by"></a>並べ替え  

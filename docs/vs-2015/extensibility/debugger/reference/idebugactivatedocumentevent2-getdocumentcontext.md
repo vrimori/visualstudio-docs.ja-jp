@@ -1,7 +1,7 @@
 ---
 title: IDebugActivateDocumentEvent2::GetDocumentContext |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: e7472069-7337-4ef4-8f8a-8c027a2e22f4
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ab70f0c94b0447d9a84875cfb8beb75b521aec7b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 117c80ba8dd27b706e4ee83bb42dcb37f898845a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535701"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863322"
 ---
 # <a name="idebugactivatedocumentevent2getdocumentcontext"></a>IDebugActivateDocumentEvent2::GetDocumentContext
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugActivateDocumentEvent2::GetDocumentContext](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugactivatedocumentevent2-getdocumentcontext)します。  
-  
 パッケージのデバッグを有効にするのには、ドキュメント内の位置を説明するドキュメント コンテキストを取得します。  
   
 ## <a name="syntax"></a>構文  

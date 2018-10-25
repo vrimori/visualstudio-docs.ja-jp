@@ -1,7 +1,7 @@
 ---
 title: 従来の言語サービスのモデル |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: d8ae1c0c-ee3d-4937-a581-ee78d0499793
 caps.latest.revision: 21
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1ccea832f1979601a764c0b979b0f7d4d72bd796
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9adeb87fe7830854ba2f7823ebb24605e072d10e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535694"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907704"
 ---
 # <a name="model-of-a-legacy-language-service"></a>従来の言語サービスのモデル
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[従来の言語サービスのモデル](https://docs.microsoft.com/visualstudio/extensibility/internals/model-of-a-legacy-language-service)します。  
-  
 言語サービスは、要素と、特定の言語の機能を定義し、その言語に固有の情報に、エディターを提供するために使用します。 たとえば、エディターでは、構文の色分けをサポートするために、要素と言語のキーワードを把握する必要があります。  
   
  言語サービスは、エディターと、エディターを含むビューによって管理されるテキスト バッファーと密接に連携します。 Microsoft IntelliSense**クイック ヒント**オプションは、言語サービスによって提供される機能の例を示します。  
@@ -34,20 +32,20 @@ ms.locfileid: "47535694"
 ## <a name="a-minimal-language-service"></a>最小言語サービス  
  最も基本的な言語サービスには、次の 2 つのオブジェクトが含まれています。  
   
--   *言語サービス*実装、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>インターフェイス。 言語サービスでは、名前、ファイル名拡張子、コード ウィンドウ マネージャー、および colorizer を含め、c# 言語に関する情報があります。  
+- *言語サービス*実装、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>インターフェイス。 言語サービスでは、名前、ファイル名拡張子、コード ウィンドウ マネージャー、および colorizer を含め、c# 言語に関する情報があります。  
   
--   *Colorizer*実装、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>インターフェイス。  
+- *Colorizer*実装、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>インターフェイス。  
   
- 次の概念図は、基本的な言語サービスのモデルを示しています。  
+  次の概念図は、基本的な言語サービスのモデルを示しています。  
   
- ![言語サービス モデル グラフィック](../../extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
-基本的な言語サービス モデル  
+  ![言語サービス モデル グラフィック](../../extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
+  基本的な言語サービス モデル  
   
- ドキュメント ウィンドウのホスト、*ドキュメント ビュー*ここでは、エディターの[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]のコア エディター。 ドキュメントの表示とテキスト バッファーは、エディターによって所有されます。 これらのオブジェクトが使用[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]と呼ばれる特殊なドキュメント ウィンドウで、*コード ウィンドウ*します。 コード ウィンドウに含まれている、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>が作成され、IDE によって制御されるオブジェクト。  
+  ドキュメント ウィンドウのホスト、*ドキュメント ビュー*ここでは、エディターの[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]のコア エディター。 ドキュメントの表示とテキスト バッファーは、エディターによって所有されます。 これらのオブジェクトが使用[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]と呼ばれる特殊なドキュメント ウィンドウで、*コード ウィンドウ*します。 コード ウィンドウに含まれている、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>が作成され、IDE によって制御されるオブジェクト。  
   
- エディターはその拡張機能に関連付けられた言語サービスを検索し、呼び出すことによって、コード ウィンドウに渡します特定の拡張子を持つファイルが読み込まれるときに、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A>メソッド。 言語サービスを返します、*コード ウィンドウ マネージャー*、実装、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>インターフェイス。  
+  エディターはその拡張機能に関連付けられた言語サービスを検索し、呼び出すことによって、コード ウィンドウに渡します特定の拡張子を持つファイルが読み込まれるときに、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A>メソッド。 言語サービスを返します、*コード ウィンドウ マネージャー*、実装、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>インターフェイス。  
   
- 次の表では、モデル内のオブジェクトの概要を示します。  
+  次の表では、モデル内のオブジェクトの概要を示します。  
   
 |コンポーネント|Object|関数|  
 |---------------|------------|--------------|  

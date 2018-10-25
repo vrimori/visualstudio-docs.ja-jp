@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_noreturn |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: edf90f5eaafcb2c76bdf7a33e3f70e71bd17e431
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d60e68e68c5016a78756a372e38481fbc5a88650
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548684"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951432"
 ---
 # <a name="idiasymbolgetnoreturn"></a>IDiaSymbol::get_noReturn
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_noreturn](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-noreturn)します。  
-  
 関数がで返すことはありませんとしてマークされているかどうかを指定するフラグを取得、 [noreturn](http://msdn.microsoft.com/library/9c6517e5-22d7-4051-9974-3d2200ae4d1d)属性。  
   
 ## <a name="syntax"></a>構文  
@@ -50,7 +48,7 @@ HRESULT get_noReturn(
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

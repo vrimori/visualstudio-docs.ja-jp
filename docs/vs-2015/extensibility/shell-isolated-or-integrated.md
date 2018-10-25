@@ -1,7 +1,7 @@
 ---
 title: シェル (分離または統合) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ ms.assetid: c64a9bf0-9bf8-45c3-8fa2-306fa6cab66a
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 364a45ea3ae66e3ba8962bfce1487cc04ba35397
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 01a16f7711b35d8c1062117d486fdf00ab998566
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547422"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49835996"
 ---
 # <a name="shell-isolated-or-integrated"></a>シェル (分離または統合)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[シェル (分離または統合)](https://docs.microsoft.com/visualstudio/extensibility/shell-isolated-or-integrated)します。  
-  
 統合または分離モードでは、独自の Visual Studio ベースのアプリケーションを作成できます。 統合モードでは、多くの Visual Studio の機能は、アプリケーションだけでなく使用できます。 分離モードでは、独自の拡張機能と共に配布する Visual Studio の機能のサブセットを選択します。  
   
 ## <a name="integrated-mode"></a>統合モード  
@@ -55,11 +53,11 @@ ms.locfileid: "47547422"
   
 > [!IMPORTANT]
 >  [使用許諾契約書 (EULA)](https://www.visualstudio.com/en-us/support/legal/mt171552)シェルには Visual Studio 統合シェルと分離のデータ収集のセクションが含まれています (**セクション 3。データ**)。  これには、Microsoft によって、アプリケーションを作成するか、統合または分離シェル ソフトウェアのユーザーから収集する顧客の使用状況データについて説明します。 詳細については、次を参照してください。 [Microsoft Visual Studio 製品ファミリ プライバシーに関する声明](https://www.visualstudio.com/en-us/dn948229)します。  
->   
+> 
 >  アプリケーションを使って、顧客から別の使用状況データを収集する場合は、収集するのアプリケーションのユーザーに適切な通知を提供する必要があります。  Visual Studio Software Development Kit のライセンス、に従って、アプリケーションの一部として分離または統合シェル ソフトウェアを配布するときに、次のいずれかを含める必要があります。  
->   
->  -   アプリケーション ライセンスの一部として、エンド ユーザー ライセンス契約  
-> -   Visual Studio を保護する条項に同意する顧客を必要とする独自の EULA 統合または分離シェルのソフトウェアの Microsoft のエンド ユーザー ライセンス条項と少なくとも同じのシェル  
+> 
+> - アプリケーション ライセンスの一部として、エンド ユーザー ライセンス契約  
+>   -   Visual Studio を保護する条項に同意する顧客を必要とする独自の EULA 統合または分離シェルのソフトウェアの Microsoft のエンド ユーザー ライセンス条項と少なくとも同じのシェル  
   
 ## <a name="additional-resources"></a>その他のリソース  
  再頒布可能パッケージの詳細については、次を参照してください。、 [Visual Studio 機能拡張ダウンロード](http://go.microsoft.com/fwlink/?LinkID=119298)Web サイト。  

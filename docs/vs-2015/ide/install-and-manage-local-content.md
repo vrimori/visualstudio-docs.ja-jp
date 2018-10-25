@@ -1,7 +1,7 @@
 ---
 title: ローカル コンテンツのインストールと管理 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -29,18 +29,16 @@ caps.latest.revision: 27
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 298448421430491cba3c367dc1976cf755f2b601
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7b8a67a9105314ad73076d3a8b12d51c23f83097
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548173"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832733"
 ---
 # <a name="install-and-manage-local-content"></a>ローカル コンテンツのインストールと管理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ローカル コンテンツの管理のインストールと](https://docs.microsoft.com/visualstudio/ide/install-and-manage-local-content)します。  
-  
 Microsoft ヘルプ ビューアーを使用すると、ソフトウェア開発のニーズに合わせてコンピューターにインストールされているヘルプ コンテンツを追加、削除、更新、移動できます。  
   
  ローカル コンピューターのコンテンツを管理するには、管理権限を持つアカウントでログオンする必要があります。 また、システム管理者が組織のローカル コンテンツ管理の意志決定を行うため、エンタープライズ環境で作業している場合、ローカル コンテンツを管理できない場合があります。 詳細については、「[ヘルプ ビューアーの管理者ガイド](../ide/help-viewer-administrator-guide.md)」を参照してください。  
@@ -111,9 +109,9 @@ Microsoft ヘルプ ビューアーを使用すると、ソフトウェア開発
   
 #### <a name="to-update-local-content"></a>ローカル コンテンツを更新するには  
   
--   ステータス バーの右下隅の **[今すぐダウンロードするにはここをクリックします]** リンクを選択します。  
+- ステータス バーの右下隅の **[今すぐダウンロードするにはここをクリックします]** リンクを選択します。  
   
- 更新時間は変化する可能性がありますが、ステータス バーで更新の進行状況を確認できます。  
+  更新時間は変化する可能性がありますが、ステータス バーで更新の進行状況を確認できます。  
   
 ## <a name="moving-local-content"></a>ローカル コンテンツの移動  
  ローカル コンピューターから、ローカル コンピューター上のネットワーク共有または別のパーティションに、インストールされたコンテンツを移動することによって、ディスク領域を節約できます。  

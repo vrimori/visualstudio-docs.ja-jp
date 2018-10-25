@@ -1,7 +1,7 @@
 ---
 title: BP_STATE |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 08aa6a3f-3e5f-4c83-8eca-7b7b5f8e208d
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f6fc9cdcdedb9b733da27489232558f394879cc1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: edc77eb589370df81c38027b7cb13a223aff1227
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547278"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863465"
 ---
 # <a name="bpstate"></a>BP_STATE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[BP_STATE](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/bp-state)します。  
-  
 バインドされたブレークポイントの存在を指定し、かどうかには有効に指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -68,7 +66,7 @@ public enum enum_BP_STATE {
 ## <a name="remarks"></a>Remarks  
  返される、 [GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

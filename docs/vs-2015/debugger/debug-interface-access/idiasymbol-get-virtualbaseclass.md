@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_virtualbaseclass |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bcac3b1e4637c1132a115efde70a4f8181d69789
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 24c7864ac5950bfca097bcfe0d41a8c8b23ae171
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539589"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49931624"
 ---
 # <a name="idiasymbolgetvirtualbaseclass"></a>IDiaSymbol::get_virtualBaseClass
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_virtualbaseclass](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-virtualbaseclass)します。  
-  
 ユーザー定義データ型が仮想基底クラスでかどうかを指定するフラグを取得します。  
   
 ## <a name="syntax"></a>構文  

@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1002: ジェネリックのリストを公開しません |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 03435b59381f5127aeb7662df16c11e1e085824d
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: ea5f41484873317a7d7059fa0b67547eb24754af
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47592159"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811338"
 ---
 # <a name="ca1002-do-not-expose-generic-lists"></a>CA1002: ジェネリック リストを公開しません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1002: ジェネリック リストを公開しません](https://docs.microsoft.com/visualstudio/code-quality/ca1002-do-not-expose-generic-lists)します。
 
 |||
 |-|-|

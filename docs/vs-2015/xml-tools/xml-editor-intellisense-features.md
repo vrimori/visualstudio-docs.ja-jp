@@ -1,7 +1,7 @@
 ---
 title: XML エディターの IntelliSense 機能 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 983410eec11799fb05ad66e13df1aea95be8e8f3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4dbb96ffcca47303a90b1ff4c71643a63f6b4aa5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535368"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49830746"
 ---
 # <a name="xml-editor-intellisense-features"></a>XML エディターの IntelliSense 機能
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[XML エディターの IntelliSense 機能](https://docs.microsoft.com/visualstudio/xml-tools/xml-editor-intellisense-features)します。  
-  
   
 XML エディターでは、Visual Studio で提供されている他の言語のエディターに相当する、フル機能の IntelliSense を利用できます。 このセクションでは、XML スキーマ定義言語 (XSD) ドキュメントと XSLT ドキュメントで IntelliSense を使用する方法について説明します。  
   
@@ -43,17 +41,17 @@ XML エディターでは、Visual Studio で提供されている他の言語�
 ## <a name="intellisense-in-an-xslt-document"></a>XSLT ドキュメントでの IntelliSense  
  XSLT ドキュメントに名前付きテンプレートまたは属性を追加した後は、IntelliSense を使用して次の項目を挿入できます。  
   
--   属性セット名。  
+- 属性セット名。  
   
--   テンプレート モード。  
+- テンプレート モード。  
   
--   テンプレート名。  
+- テンプレート名。  
   
--   特定のモードのパラメーター名。  
+- 特定のモードのパラメーター名。  
   
--   特定の名前付きテンプレートのパラメーター名。  
+- 特定の名前付きテンプレートのパラメーター名。  
   
- 詳細については、次を参照してください。[チュートリアル: XSLT IntelliSense の使用](../xml-tools/walkthrough-using-xslt-intellisense.md)トピック。  
+  詳細については、次を参照してください。[チュートリアル: XSLT IntelliSense の使用](../xml-tools/walkthrough-using-xslt-intellisense.md)トピック。  
   
 ## <a name="auto-completion"></a>オートコンプリート  
  XML エディターでは、必要な XML 構文が自動的に入力されるため、XML の編集も容易になっています。 たとえば、次の開始タグを入力します。  
@@ -74,19 +72,19 @@ XML エディターでは、Visual Studio で提供されている他の言語�
   
  同様に、XML エディターは次の XML 構文も自動的に挿入します。  
   
--   処理命令の終了 : `?>`  
+- 処理命令の終了 : `?>`  
   
--   CDATA ブロックの終了 : `]]>`  
+- CDATA ブロックの終了 : `]]>`  
   
--   コメントの終了 : `-->`  
+- コメントの終了 : `-->`  
   
--   DTD 宣言の終了 : `>`  
+- DTD 宣言の終了 : `>`  
   
- XML エディターは、名前空間で修飾された要素や属性を IntelliSense の一覧から選択し、その要素や属性の名前空間がまだスコープ内にない場合には、名前空間宣言を挿入するという機能も備えています。  
+  XML エディターは、名前空間で修飾された要素や属性を IntelliSense の一覧から選択し、その要素や属性の名前空間がまだスコープ内にない場合には、名前空間宣言を挿入するという機能も備えています。  
   
- たとえば、IntelliSense の一覧から `e:Book` 要素を選択したときに、プレフィックスが、ドキュメント内で宣言されていない `http://books` 名前空間に関連付けられている場合は、XML エディターによって必要な名前空間宣言が自動的に挿入されます。 結果の XML テキストを次に示します。  
+  たとえば、IntelliSense の一覧から `e:Book` 要素を選択したときに、プレフィックスが、ドキュメント内で宣言されていない `http://books` 名前空間に関連付けられている場合は、XML エディターによって必要な名前空間宣言が自動的に挿入されます。 結果の XML テキストを次に示します。  
   
- `<e:Book xmlns:e="http://books"`  
+  `<e:Book xmlns:e="http://books"`  
   
 ## <a name="brace-matching"></a>中かっこの一致  
  XML エディターでは、中かっこを強調表示することにより、閉じたばかりの要素について即座にフィードバックを返します。 ショートカット キー (Ctrl+]) を使用しても、1 つの中かっこから対応する中かっこにジャンプできます。  

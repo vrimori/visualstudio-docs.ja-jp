@@ -1,7 +1,7 @@
 ---
 title: IEEVisualizerDataProvider::CanSetObjectForVisualizer |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 70fd3c6f-2f82-43a3-993b-c1dc8aa080bf
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 78755870d1ca224b882ed944a5670d537b298602
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7be832b048040da87feaca0a6ea8709c4b1f1e6b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547935"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880722"
 ---
 # <a name="ieevisualizerdataprovidercansetobjectforvisualizer"></a>IEEVisualizerDataProvider::CanSetObjectForVisualizer
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IEEVisualizerDataProvider::CanSetObjectForVisualizer](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ieevisualizerdataprovider-cansetobjectforvisualizer)します。  
-  
 このメソッドは、ビジュアライザーのデータ オブジェクトを表す更新できるかどうかを判断します。  
   
 ## <a name="syntax"></a>構文  

@@ -1,7 +1,7 @@
 ---
 title: Idiaenumdebugstreams::get_count |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b3fa987d03dc99adee9680029866fbfb05b2ec8c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 10154046d8d549324e92653fb18b9b7e2ed4cb52
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546404"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852004"
 ---
 # <a name="idiaenumdebugstreamsgetcount"></a>IDiaEnumDebugStreams::get_Count
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiaenumdebugstreams::get_count](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiaenumdebugstreams-get-count)します。  
-  
 デバッグ ストリームの数を取得します。  
   
 ## <a name="syntax"></a>構文  

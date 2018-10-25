@@ -1,7 +1,7 @@
 ---
 title: IDebugExpressionContext2::ParseText |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: f58575db-f926-4ac8-83ff-7b3b86ab61e2
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9658d2962d99d6fbb72b0df813e1c3bd420c46cf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0f8f1c25e2384e39ff5b0f4b90f9c0de86d2c9e8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535137"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49851531"
 ---
 # <a name="idebugexpressioncontext2parsetext"></a>IDebugExpressionContext2::ParseText
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugExpressionContext2::ParseText](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugexpressioncontext2-parsetext)します。  
-  
 以降の評価のためのテキスト形式の式を解析します。  
   
 ## <a name="syntax"></a>構文  

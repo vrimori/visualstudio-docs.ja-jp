@@ -1,7 +1,7 @@
 ---
 title: IDebugReturnValueEvent2::GetReturnValue |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 86c50d5a-6df6-4798-818a-c587a8741f90
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e3961985440c3d187ef08ea4e13f5f184779fd18
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a175592b6b50fc18715905bf5ab206f1673849dc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534499"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903700"
 ---
 # <a name="idebugreturnvalueevent2getreturnvalue"></a>IDebugReturnValueEvent2::GetReturnValue
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugReturnValueEvent2::GetReturnValue](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugreturnvalueevent2-getreturnvalue)します。  
-  
 または、関数をステップ実行で返される値を取得します。  
   
 ## <a name="syntax"></a>構文  

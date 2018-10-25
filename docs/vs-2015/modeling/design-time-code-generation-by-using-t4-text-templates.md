@@ -1,7 +1,7 @@
 ---
 title: T4 テキスト テンプレートを使用したデザイン時コード生成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 40
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 12551e10640b522f1405cb6a4fa0476f4f7b48c9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a302f2d4f96f7f110780feae3f76e08b440d037f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537277"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49859279"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 テキスト テンプレートを使用したデザイン時コード生成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[T4 テキスト テンプレートを使用したデザイン時コード生成](https://docs.microsoft.com/visualstudio/modeling/design-time-code-generation-by-using-t4-text-templates)します。  
-  
 デザイン時 T4 テキスト テンプレートを使用して、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクトのプログラム コードや他のファイルを生成できます。 テンプレートを作成する通常、異なるデータに応じて生成されるコードを*モデル*します。 モデルとは、アプリケーションの要件に関する重要な情報が含まれたファイルまたはデータベースのことです。  
   
  たとえば、ワークフローをテーブルまたは図として定義したモデルがあるとします。 このモデルから、ワークフローを実行するソフトウェアを生成できます。 ユーザーの要件が変わったときに、新しいワークフローについてユーザーと共に検討しやすくなります。 ワークフローからコードを再生成すると、コードを手動で更新するよりも信頼性が高まります。  
@@ -84,66 +82,66 @@ ms.locfileid: "47537277"
 ### <a name="regenerating-the-code"></a>コードの再生成  
  次のいずれかの場合に、テンプレートが実行され、従属ファイルが生成されます。  
   
--   テンプレートを編集した後、フォーカスを別の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ウィンドウに切り替えたとき。  
+- テンプレートを編集した後、フォーカスを別の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ウィンドウに切り替えたとき。  
   
--   テンプレートを保存したとき。  
+- テンプレートを保存したとき。  
   
--   クリックして**すべてのテンプレートの変換**で、**ビルド**メニュー。 この場合、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ソリューション内のすべてのテンプレートが変換されます。  
+- クリックして**すべてのテンプレートの変換**で、**ビルド**メニュー。 この場合、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ソリューション内のすべてのテンプレートが変換されます。  
   
--   **ソリューション エクスプ ローラー**、いずれかのショートカット メニューを選択して、ファイル**カスタム ツールの実行**します。 この方法は、複数のテンプレートを選択して変換する場合に使用します。  
+- **ソリューション エクスプ ローラー**、いずれかのショートカット メニューを選択して、ファイル**カスタム ツールの実行**します。 この方法は、複数のテンプレートを選択して変換する場合に使用します。  
   
- 読み取り先のデータ ファイルが変更されたときにテンプレートが実行されるよう、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクトを設定することもできます。 詳細については、次を参照してください。[コードを自動的に再生成](#Regenerating)します。  
+  読み取り先のデータ ファイルが変更されたときにテンプレートが実行されるよう、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクトを設定することもできます。 詳細については、次を参照してください。[コードを自動的に再生成](#Regenerating)します。  
   
 ## <a name="generating-variable-text"></a>可変テキストを生成する  
  テキスト テンプレートから生成されるファイルのコンテンツは、プログラム コードを使用して変化させることができます。  
   
 #### <a name="to-generate-text-by-using-program-code"></a>プログラム コードを使用してテキストを生成するには  
   
-1.  `.tt` ファイルの内容を次のように変更します。  
+1. `.tt` ファイルの内容を次のように変更します。  
   
-    ```csharp  
-    <#@ template hostspecific="false" language="C#" #>  
-    <#@ output extension=".txt" #>  
-    <#int top = 10;  
+   ```csharp  
+   <#@ template hostspecific="false" language="C#" #>  
+   <#@ output extension=".txt" #>  
+   <#int top = 10;  
   
-    for (int i = 0; i<=top; i++)   
-    { #>  
+   for (int i = 0; i<=top; i++)   
+   { #>  
+      The square of <#= i #> is <#= i*i #>  
+   <# } #>  
+   ```  
+  
+   ```vb  
+   <#@ template hostspecific="false" language="VB" #>  
+   <#@ output extension=".txt" #>  
+   <#Dim top As Integer = 10  
+  
+   For i As Integer = 0 To top  
+   #>  
        The square of <#= i #> is <#= i*i #>  
-    <# } #>  
-    ```  
+   <#  
+   Next  
+   #>  
   
-    ```vb  
-    <#@ template hostspecific="false" language="VB" #>  
-    <#@ output extension=".txt" #>  
-    <#Dim top As Integer = 10  
+   ```  
   
-    For i As Integer = 0 To top  
-    #>  
-        The square of <#= i #> is <#= i*i #>  
-    <#  
-    Next  
-    #>  
+2. .tt ファイルを保存し、生成された .txt ファイルを再度確認します。 0 から 10 の数値を 2 乗した値が一覧表示されます。  
   
-    ```  
+   複数のステートメントは `<#...#>` で囲まれており、単一の式は `<#=...#>` で囲まれていることに注意してください。 詳細については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)です。  
   
-2.  .tt ファイルを保存し、生成された .txt ファイルを再度確認します。 0 から 10 の数値を 2 乗した値が一覧表示されます。  
-  
- 複数のステートメントは `<#...#>` で囲まれており、単一の式は `<#=...#>` で囲まれていることに注意してください。 詳細については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)です。  
-  
- [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] で生成コードを記述する場合は、`template` ディレクティブに `language="VB"` を含める必要があります。 `"C#"` が既定値です。  
+   [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] で生成コードを記述する場合は、`template` ディレクティブに `language="VB"` を含める必要があります。 `"C#"` が既定値です。  
   
 ## <a name="debugging-a-design-time-t4-text-template"></a>デザイン時 T4 テキスト テンプレートをデバッグする  
  テキスト テンプレートをデバッグするには、以下を実行します。  
   
--   `debug="true"` ディレクティブに `template` を挿入します。 次に例を示します。  
+- `debug="true"` ディレクティブに `template` を挿入します。 次に例を示します。  
   
-     `<#@ template debug="true" hostspecific="false" language="C#" #>`  
+   `<#@ template debug="true" hostspecific="false" language="C#" #>`  
   
--   通常のコードと同じように、テンプレートにブレークポイントを設定します。  
+- 通常のコードと同じように、テンプレートにブレークポイントを設定します。  
   
--   選択**T4 テンプレートのデバッグ**ソリューション エクスプ ローラーで、テキスト テンプレート ファイルのショートカット メニューから。  
+- 選択**T4 テンプレートのデバッグ**ソリューション エクスプ ローラーで、テキスト テンプレート ファイルのショートカット メニューから。  
   
- テンプレートが実行され、ブレークポイントで停止します。 通常の方法で、変数を調べコードのステップ実行ができます。  
+  テンプレートが実行され、ブレークポイントで停止します。 通常の方法で、変数を調べコードのステップ実行ができます。  
   
 > [!TIP]
 >  `debug="true"` は、生成されたコードに行番号ディレクティブを多数挿入して、生成されたコードをテキスト テンプレートに正確に対応付けます。 これを省いた場合、ブレークポイントが間違った状態で実行を停止する可能性があります。  
@@ -210,13 +208,13 @@ ms.locfileid: "47537277"
 ### <a name="structuring-text-templates"></a>テキスト テンプレートの構成  
  ここでは、テンプレート コードを次の 2 つの部分に分けています。  
   
--   構成またはデータ収集の部分。この部分では変数に値を設定しますが、テキスト ブロックは含まれません。 前の例では、`properties` の初期化の部分が該当します。  
+- 構成またはデータ収集の部分。この部分では変数に値を設定しますが、テキスト ブロックは含まれません。 前の例では、`properties` の初期化の部分が該当します。  
   
-     この部分はインストア モデルを構築し、通常はモデル ファイルを読み取るため、"モデル" セクションとも呼ばれます。  
+   この部分はインストア モデルを構築し、通常はモデル ファイルを読み取るため、"モデル" セクションとも呼ばれます。  
   
--   テキスト生成部分 (この例では、`foreach(...){...}`)。この部分では変数の値を使用します。  
+- テキスト生成部分 (この例では、`foreach(...){...}`)。この部分では変数の値を使用します。  
   
- 必ずしもこのように分ける必要はありませんが、このように記述すると、テキストを含む部分の複雑さが軽減され、テンプレートが読みやすくなります。  
+  必ずしもこのように分ける必要はありませんが、このように記述すると、テキストを含む部分の複雑さが軽減され、テンプレートが読みやすくなります。  
   
 ## <a name="reading-files-or-other-sources"></a>ファイルなど各種ソースを読み取る  
  モデル ファイルまたはモデル データベースにアクセスするために、テンプレート コードで System.XML などのアセンブリを使用できます。 これらのアセンブリにアクセスするためには、次のようなディレクティブを挿入する必要があります。  

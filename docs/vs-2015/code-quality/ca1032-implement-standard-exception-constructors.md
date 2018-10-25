@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1032: 標準例外コンス トラクターを実装する |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 4d8c2f4439cf63f0bab7294898c96b2acb742e7d
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: efef441e84c4f1d51c633e3fdcb2da8d1ba3e963
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589625"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868613"
 ---
 # <a name="ca1032-implement-standard-exception-constructors"></a>CA1032: 標準例外コンストラクターを実装します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1032: 標準例外コンス トラクターを実装](https://docs.microsoft.com/visualstudio/code-quality/ca1032-implement-standard-exception-constructors)します。
 
 |||
 |-|-|
@@ -45,15 +43,15 @@ ms.locfileid: "47589625"
 ## <a name="rule-description"></a>規則の説明
  例外の種類には、次のコンス トラクターを実装する必要があります。
 
--   パブリック NewException()
+- パブリック NewException()
 
--   パブリック NewException(string)
+- パブリック NewException(string)
 
--   パブリック NewException (文字列、例外)
+- パブリック NewException (文字列、例外)
 
--   保護されたまたはプライベート NewException (SerializationInfo, StreamingContext)
+- 保護されたまたはプライベート NewException (SerializationInfo, StreamingContext)
 
- コンストラクターを完全に宣言していないと、例外を正しく処理するのが困難になります。 シグネチャを持つコンス トラクターなど`NewException(string, Exception)`他の例外によって引き起こされる例外を作成するために使用します。 このコンス トラクターのない作成して、インスタンスの内部の (入れ子になった) 例外を含む独自の例外をスローすることはできません、どのようなマネージ コードは、このような状況で行う必要がありますです。 最初の 3 つの例外のコンス トラクターでは、規則でパブリックです。 4 番目のコンス トラクターが封印されていないクラスで保護されているシール クラスではプライベートです。 詳細については、次を参照してください[ca 2229: シリアル化コンス トラクターの実装。](../code-quality/ca2229-implement-serialization-constructors.md)
+  コンストラクターを完全に宣言していないと、例外を正しく処理するのが困難になります。 シグネチャを持つコンス トラクターなど`NewException(string, Exception)`他の例外によって引き起こされる例外を作成するために使用します。 このコンス トラクターのない作成して、インスタンスの内部の (入れ子になった) 例外を含む独自の例外をスローすることはできません、どのようなマネージ コードは、このような状況で行う必要がありますです。 最初の 3 つの例外のコンス トラクターでは、規則でパブリックです。 4 番目のコンス トラクターが封印されていないクラスで保護されているシール クラスではプライベートです。 詳細については、次を参照してください[ca 2229: シリアル化コンス トラクターの実装。](../code-quality/ca2229-implement-serialization-constructors.md)
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  このルールの違反を修正するには、例外に不足しているコンス トラクターを追加し、適切なアクセシビリティであるかどうかを確認します。

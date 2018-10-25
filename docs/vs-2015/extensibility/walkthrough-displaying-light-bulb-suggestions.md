@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: Displaying Light Bulb Suggestions |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,44 +13,42 @@ ms.assetid: 99e5566d-450e-4660-9bca-454e1c056a02
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c36dad27a4d4a5bff5381b99041f7221447645e2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: de18b0371baae2d48be9341b605f064875ef21de
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548982"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49869055"
 ---
 # <a name="walkthrough-displaying-light-bulb-suggestions"></a>チュートリアル: 電球アイコンによる提案の表示
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: を表示する Light Bulb Suggestions](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-displaying-light-bulb-suggestions)します。  
-  
 電球マークを展開すると、一連のアクションを表示、組み込みのコード アナライザーやコード リファクタリングで識別された問題の修正など、Visual Studio エディターで使用されるアイコン。  
   
  Visual c# および Visual Basic のエディターで記述して、自動的に電球を表示するアクションを含む独自のコード アナライザーをパッケージ化する .NET コンパイラ プラットフォーム ("Roslyn") を使用することもできます。 詳細については次を参照してください:  
   
--   [方法: c# 診断とコード修正を書き込む](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)  
+- [方法: c# 診断とコード修正を書き込む](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)  
   
--   [方法: Visual Basic の診断とコード修正を書き込む](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix)  
+- [方法: Visual Basic の診断とコード修正を書き込む](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix)  
   
- C++ などの他の言語では、その関数のスタブ実装を作成する提案など、いくつかのクイック アクションの電球も提供します。  
+  C++ などの他の言語では、その関数のスタブ実装を作成する提案など、いくつかのクイック アクションの電球も提供します。  
   
- Light bulb によっては次のようになります。 赤い波線は、Visual Basic または Visual c# プロジェクトで無効である場合に変数の名前で表示されます。 無効な識別子にマウスを置く、カーソルの近くに電球が表示されます。  
+  Light bulb によっては次のようになります。 赤い波線は、Visual Basic または Visual c# プロジェクトで無効である場合に変数の名前で表示されます。 無効な識別子にマウスを置く、カーソルの近くに電球が表示されます。  
   
- ![電球](../extensibility/media/lightbulb.png "電球")  
+  ![電球](../extensibility/media/lightbulb.png "電球")  
   
- 電球で下矢印をクリックすると、一連の推奨されるアクションが表示され、選択したアクションのプレビュー。 この場合、アクションを実行する場合に、コードになる変更を示しています。  
+  電球で下矢印をクリックすると、一連の推奨されるアクションが表示され、選択したアクションのプレビュー。 この場合、アクションを実行する場合に、コードになる変更を示しています。  
   
- ![電球のプレビュー](../extensibility/media/lightbulbpreview.png "LightBulbPreview")  
+  ![電球のプレビュー](../extensibility/media/lightbulbpreview.png "LightBulbPreview")  
   
- 電球を使用して、独自の推奨されるアクションを提供することができます。 たとえば、新しい行に中かっこを開くを移動または前の行の末尾に移動するアクションを提供できます。 次のチュートリアルでは、現在の単語の上に表示される電球を作成する方法と、2 つのアクションを提案が:**大文字に変換**と**小文字に変換**します。  
+  電球を使用して、独自の推奨されるアクションを提供することができます。 たとえば、新しい行に中かっこを開くを移動または前の行の末尾に移動するアクションを提供できます。 次のチュートリアルでは、現在の単語の上に表示される電球を作成する方法と、2 つのアクションを提案が:**大文字に変換**と**小文字に変換**します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="creating-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) プロジェクトの作成  
   
-1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を`LightBulbTest`します。  
+1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューション `LightBulbTest`の名前を指定します。  
   
 2.  追加、**エディター分類子**をプロジェクトに項目テンプレート。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)です。  
   
@@ -228,14 +226,14 @@ ms.locfileid: "47548982"
   
 1.  プロジェクトで、Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll セットへの参照を追加**ローカル コピー**に`False`します。  
   
-2.  2 つのクラスを作成するという名前の最初の`UpperCaseSuggestedAction`という名前の 2 つ目と`LowerCaseSuggestedAction`します。 これらのクラスは、どちらも <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> を実装しています。  
+2.  2 つのクラスを、1 つは `UpperCaseSuggestedAction` という名前で、もう 1 つは `LowerCaseSuggestedAction`という名前で作成します。 どちらのクラスも、<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> を実装します。  
   
     ```csharp  
     internal class UpperCaseSuggestedAction : ISuggestedAction   
     internal class LowerCaseSuggestedAction : ISuggestedAction  
     ```  
   
-     両方のクラスは似ていますが呼び出される<xref:System.String.ToUpper%2A>およびその他の呼び出し<xref:System.String.ToLower%2A>します。 次の手順では大文字操作クラスのみを対象にしていますが、両方のクラスを実装する必要があります。 小文字操作を実装するためのパターンとして、大文字操作を実装するための手順を使用します。  
+     両クラスは似ていますが、一方は <xref:System.String.ToUpper%2A> を呼び出し、他方は <xref:System.String.ToLower%2A> を呼び出します。 次の手順では大文字操作クラスのみを対象にしていますが、両方のクラスを実装する必要があります。 小文字操作を実装するためのパターンとして、大文字操作を実装するための手順を使用します。  
   
 3.  次の追加ステートメントを使用して、これらのクラス。  
   
@@ -325,7 +323,7 @@ ms.locfileid: "47548982"
     }  
     ```  
   
-9. 実装、<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.Invoke%2A>範囲内のテキストを等価な大文字に置き換えることによりメソッド。  
+9. 範囲内のテキストを等価な大文字に置き換えることで、メソッド <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.Invoke%2A> を実装します。  
   
     ```csharp  
     public void Invoke(CancellationToken cancellationToken)  

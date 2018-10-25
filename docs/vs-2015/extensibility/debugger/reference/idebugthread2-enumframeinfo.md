@@ -1,7 +1,7 @@
 ---
 title: IDebugThread2::EnumFrameInfo |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 17914a71-10ea-4b6f-8982-e364f87dca53
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f99b5f9d3fd76c3bc87340f92f6f26542a3ac76b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 25dc1b378c129fc50b5605f781991850050738e9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544514"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858577"
 ---
 # <a name="idebugthread2enumframeinfo"></a>IDebugThread2::EnumFrameInfo
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugThread2::EnumFrameInfo](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugthread2-enumframeinfo)します。  
-  
 このスレッドのスタック フレームの一覧を取得します。  
   
 ## <a name="syntax"></a>構文  

@@ -1,7 +1,7 @@
 ---
 title: Idiaenumsymbols::item |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 97a5fc4b267fbc62c201f5f23837d37b18bbf0d2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a21226f111b646e9197009ce6354095eda64108b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539462"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825656"
 ---
 # <a name="idiaenumsymbolsitem"></a>IDiaEnumSymbols::Item
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiaenumsymbols::item](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiaenumsymbols-item)します。  
-  
 インデックスを使用して、シンボルを取得します。  
   
 ## <a name="syntax"></a>構文  

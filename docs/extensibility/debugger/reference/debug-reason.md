@@ -1,5 +1,5 @@
 ---
-title: DEBUG_REASON |Microsoft ドキュメント
+title: DEBUG_REASON |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 47cfd171d23420396c6d7ab5416db32cc05511f0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3f3fccdd43b7d26a5bb2dcc5799d77afff6614d1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31101206"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868366"
 ---
 # <a name="debugreason"></a>DEBUG_REASON
 デバッグ プロセスを起動した理由を指定します。  
@@ -50,24 +50,24 @@ public enum enum_DEBUG_REASON {
   
 #### <a name="parameters"></a>パラメーター  
  DEBUG_REASON_ERROR  
- 特定できないエラーが発生しました (このとして使用される既定の条件合わせる上の理由によりの他の場合)。  
+ 特定できないエラーが発生しました (このとして提供される既定の条件を合わせる上の理由から、もう一方のいずれの場合)。  
   
  DEBUG_REASON_USER_LAUNCHED  
- プロセスがユーザーの要求で起動されました。  
+ ユーザーの要求プロセスが開始されました。  
   
  DEBUG_REASON_USER_ATTACHED  
- 既に実行中のプロセスにアタッチされているユーザーがします。  
+ 既に実行中のプロセスは、ユーザーに関連付けられました。  
   
  DEBUG_REASON_AUTO_ATTACHED  
  プロセスが起動したときに自動的にアタッチします。  
   
  DEBUG_REASON_CAUSALITY  
- 理由のため、プロセスを起動した、*ジャスト イン タイム*(JIT) デバッグ イベント。  
+ プロセスを起動したために、*ジャスト イン タイム*(JIT) デバッグ イベント。  
   
-## <a name="remarks"></a>コメント  
- 返される、 [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 返される、 [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

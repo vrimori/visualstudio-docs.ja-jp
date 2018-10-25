@@ -1,7 +1,7 @@
 ---
 title: '方法: 例外の後にシステム コードを調べる |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6c66e77a2e5cc7596bb8473678b84f962453df41
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 91b0f0ba806868420b56f59d1b3f6de99a87886b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533726"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49255776"
 ---
 # <a name="how-to-examine-system-code-after-an-exception"></a>方法 : 例外の後にシステム コードを調べる
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: システム コードの後を調べる例外](https://docs.microsoft.com/visualstudio/debugger/how-to-examine-system-code-after-an-exception)します。  
-  
 例外が発生した場合、システム コール内のコードを調べて、例外の原因を判断する必要がある場合があります。 システム コードのシンボルが読み込まれていない場合、または [マイ コードのみ] が有効な場合にこの操作を行う方法を次の手順に示します。  
   
 ### <a name="to-examine-system-code-following-an-exception"></a>例外の後にシステム コードを調べるには  

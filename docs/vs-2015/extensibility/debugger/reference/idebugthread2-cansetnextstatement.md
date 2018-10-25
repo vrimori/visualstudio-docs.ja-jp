@@ -1,7 +1,7 @@
 ---
 title: IDebugThread2::CanSetNextStatement |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 7014af80-ff4f-4790-a34b-0528918d1fa3
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 40cf5eba5cfb5a7e960ed8905141d4058d926d39
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9b867848805c18e4b903b179c04336acdeb0b349
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547454"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49859605"
 ---
 # <a name="idebugthread2cansetnextstatement"></a>IDebugThread2::CanSetNextStatement
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugThread2::CanSetNextStatement](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugthread2-cansetnextstatement)します。  
-  
 現在の命令ポインターが特定のスタック フレームに設定することができるかどうかを判断します。  
   
 ## <a name="syntax"></a>構文  

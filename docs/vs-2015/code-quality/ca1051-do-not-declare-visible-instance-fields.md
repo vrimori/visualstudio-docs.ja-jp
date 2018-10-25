@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1051: 参照できるインスタンス フィールドを宣言しません |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 43edecc9b5e5f4aa662f30dc1ac84a5e8c3b991e
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 691f5fe87d775d2bff2fc15ff15ca8022478b3a2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589969"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910551"
 ---
 # <a name="ca1051-do-not-declare-visible-instance-fields"></a>CA1051: 参照できるインスタンス フィールドを宣言しないでください
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1051: 参照できるインスタンス フィールドを宣言しない](https://docs.microsoft.com/visualstudio/code-quality/ca1051-do-not-declare-visible-instance-fields)します。
 
 |||
 |-|-|

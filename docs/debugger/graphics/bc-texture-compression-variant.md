@@ -1,5 +1,5 @@
 ---
-title: BC テクスチャ圧縮バリアント |Microsoft ドキュメント
+title: BC テクスチャ圧縮バリアント |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 49dfc92eeede177e843c9fd98b16b030f76079c0
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 919191ec29ad45a8385d32b82de99d44fcdaa2ea
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31474402"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49922446"
 ---
 # <a name="bc-texture-compression-variant"></a>BC テクスチャ圧縮バリアント
 B8G8R8X8、B8G8R8A8、または R8G8B8A8 のバリエーションであるピクセル形式を持つテクスチャで、ブロック圧縮を有効にします。  
@@ -25,22 +25,22 @@ B8G8R8X8、B8G8R8A8、または R8G8B8A8 のバリエーションであるピク
   
  対象のテクスチャがブロックベースの圧縮に適していて、完全な色の忠実性が必要ない場合は、ブロック圧縮形式を使用してメモリの使用量を減らし、帯域幅の使用を減らすことを検討します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ソース テクスチャを作成する `ID3DDevice::CreateTexture2D` への呼び出しのたびに、ブロックベースの圧縮形式を使用してテクスチャを圧縮します。 具体的には、以下の場合にテクスチャが圧縮されます。  
   
--   `D3D11_TEXTURE2D_DESC` で渡される`pDesc` オブジェクトが、不変のシェーダー リソースを記述する場合、つまり  
+- `D3D11_TEXTURE2D_DESC` で渡される`pDesc` オブジェクトが、不変のシェーダー リソースを記述する場合、つまり  
   
-    -   BindFlags メンバーは D3D11_BIND_SHADER_RESOURCE フラグを設定するだけです。  
+  -   BindFlags メンバーは D3D11_BIND_SHADER_RESOURCE フラグを設定するだけです。  
   
-    -   Usage メンバーは、D3D11_USAGE_DEFAULT または D3D11_USAGE_IMMUTABLE に設定されます。  
+  -   Usage メンバーは、D3D11_USAGE_DEFAULT または D3D11_USAGE_IMMUTABLE に設定されます。  
   
-    -   CPUAccessFlags メンバーは 0 に設定されます(CPU アクセスなし)。  
+  -   CPUAccessFlags メンバーは 0 に設定されます(CPU アクセスなし)。  
   
-    -   SamplerDesc メンバーは自身の Count メンバーを 1 に設定します (Multi-Sample Anti-Aliasing (MSAA) なし)。  
+  -   SamplerDesc メンバーは自身の Count メンバーを 1 に設定します (Multi-Sample Anti-Aliasing (MSAA) なし)。  
   
--   `CreateTexture2D` への呼び出しに対して初期データが提供される場合。  
+- `CreateTexture2D` への呼び出しに対して初期データが提供される場合。  
   
- サポートされているソース形式と、ブロック圧縮形式は以下のとおりです。  
+  サポートされているソース形式と、ブロック圧縮形式は以下のとおりです。  
   
 |元の形式 (from)|圧縮先の形式 (to)|  
 |------------------------------|------------------------------|  

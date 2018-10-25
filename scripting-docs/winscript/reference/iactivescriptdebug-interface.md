@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptDebug インターフェイス |Microsoft ドキュメント
+title: IActiveScriptDebug インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,28 +14,28 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a1e1d0c1cf51c63f1bb3fcd90ae72520da907e50
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0e21f4c99da886bc4907acf8b0934e1b46d57689
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24645822"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942089"
 ---
 # <a name="iactivescriptdebug-interface"></a>IActiveScriptDebug インターフェイス
-デバッグをサポートするスクリプト エンジンによって実装されます。 通常を実装するオブジェクト、`IActiveScriptDebug`インターフェイスも実装して、`IActiveScript`インターフェイスです。 大文字と小文字の場合は、呼び出し、`IActiveScript::QueryInterface`を取得するメソッド、`IActiveScriptDebug`インターフェイスです。  
+デバッグをサポートするスクリプト エンジンによって実装されます。 通常、実装するオブジェクト、`IActiveScriptDebug`インターフェイスの実装も、`IActiveScript`インターフェイス。 この場合は、呼び出し、`IActiveScript::QueryInterface`メソッドを取得する、`IActiveScriptDebug`インターフェイス。  
   
  `IActiveScriptDebug`インターフェイスにするための手段が用意されています。  
   
--   ドキュメントの管理を引き継ぐためのスマート ホストします。  
+- ドキュメント管理を引き継ぐためのスマート ホスト。  
   
--   複数のスクリプト エンジンのデバッグを同期するためにプロセスのデバッグ マネージャーです。  
+- 複数のスクリプト エンジンのデバッグを同期するプロセス デバッグ マネージャー。  
   
- 継承されたメソッドだけでなく`IUnknown`、`IActiveScriptDebug`インターフェイスは、次のメソッドを公開します。  
+  継承されたメソッドだけでなく`IUnknown`、`IActiveScriptDebug`インターフェイスは、次のメソッドを公開します。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
 |[IActiveScriptDebug::GetScriptTextAttributes](../../winscript/reference/iactivescriptdebug-getscripttextattributes.md)|スクリプトのテキストの任意のブロックのテキスト属性を返します。|  
-|[IActiveScriptDebug::GetScriptletTextAttributes](../../winscript/reference/iactivescriptdebug-getscriptlettextattributes.md)|任意のスクリプトレットのテキスト属性を返します。|  
-|[IActiveScriptDebug::EnumCodeContextsOfPosition](../../winscript/reference/iactivescriptdebug-enumcodecontextsofposition.md)|デリゲート`IDebugDocumentContext::EnumCodeContexts`です。|
+|[IActiveScriptDebug::GetScriptletTextAttributes](../../winscript/reference/iactivescriptdebug-getscriptlettextattributes.md)|任意のスクリプトレット テキスト属性を返します。|  
+|[IActiveScriptDebug::EnumCodeContextsOfPosition](../../winscript/reference/iactivescriptdebug-enumcodecontextsofposition.md)|デリゲート`IDebugDocumentContext::EnumCodeContexts`します。|

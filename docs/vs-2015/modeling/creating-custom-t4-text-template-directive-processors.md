@@ -1,7 +1,7 @@
 ---
 title: カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 31
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: d97b87289be6f6fb685fe9f1b4e5ee4309bd0431
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0defae5127b3443eb30f02558fd1acf545651e3e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533655"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852746"
 ---
 # <a name="creating-custom-t4-text-template-directive-processors"></a>カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](https://docs.microsoft.com/visualstudio/modeling/creating-custom-t4-text-template-directive-processors)です。  
-  
 *テキスト テンプレート変換プロセス*は、*テキスト テンプレート*ファイルとして入力し、テキスト ファイルを出力として生成します。 *テキスト テンプレート変換エンジン*コントロール、プロセスと、エンジンは、テキスト テンプレート変換ホストおよび 1 つまたは複数のテキスト テンプレートと対話する*ディレクティブ プロセッサ*を完了する、プロセスです。 詳細については、次を参照してください。 [、テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)します。  
   
  カスタム ディレクティブ プロセッサを作成するには、<xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> または <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> を継承するクラスを作成します。  
@@ -56,19 +54,19 @@ ms.locfileid: "47533655"
   
  最も重要な`DirectiveProcessor`を実装する必要があるメソッドは、次のとおりです。  
   
--   `bool IsDirectiveSupported(string directiveName)` -戻り`true`ディレクティブ プロセッサは、名前付きディレクティブを扱うことができる場合。  
+- `bool IsDirectiveSupported(string directiveName)` -戻り`true`ディレクティブ プロセッサは、名前付きディレクティブを扱うことができる場合。  
   
--   `void ProcessDirective (string directiveName, IDictionary<string, string> arguments)` -テンプレート エンジンでは、テンプレートのディレクティブの各インスタンスに対してこのメソッドを呼び出します。 プロセッサは、結果を保存する必要があります。  
+- `void ProcessDirective (string directiveName, IDictionary<string, string> arguments)` -テンプレート エンジンでは、テンプレートのディレクティブの各インスタンスに対してこのメソッドを呼び出します。 プロセッサは、結果を保存する必要があります。  
   
- ProcessDirective() に対するすべての呼び出し後に、テンプレート エンジンはこれらのメソッドを呼び出します。  
+  ProcessDirective() に対するすべての呼び出し後に、テンプレート エンジンはこれらのメソッドを呼び出します。  
   
--   `string[] GetReferencesForProcessingRun()` -テンプレート コードを必要とするアセンブリの名前を返します。  
+- `string[] GetReferencesForProcessingRun()` -テンプレート コードを必要とするアセンブリの名前を返します。  
   
--   `string[] GetImportsForProcessingRun()` -テンプレート コードで使用できる名前空間を返します。  
+- `string[] GetImportsForProcessingRun()` -テンプレート コードで使用できる名前空間を返します。  
   
--   `string GetClassCodeForProcessingRun()` -メソッド、プロパティ、およびテンプレート コードで使用できるその他の宣言のコードを返します。 これを行う最も簡単な方法では、c# または Visual Basic コードを含む文字列を作成します。 ディレクティブ プロセッサを任意の CLR 言語を使用するテンプレートから呼び出すことができるように、CodeDom ツリーとして、ステートメントを作成し、テンプレートで使用する言語でツリーをシリアル化の結果を返すできます。  
+- `string GetClassCodeForProcessingRun()` -メソッド、プロパティ、およびテンプレート コードで使用できるその他の宣言のコードを返します。 これを行う最も簡単な方法では、c# または Visual Basic コードを含む文字列を作成します。 ディレクティブ プロセッサを任意の CLR 言語を使用するテンプレートから呼び出すことができるように、CodeDom ツリーとして、ステートメントを作成し、テンプレートで使用する言語でツリーをシリアル化の結果を返すできます。  
   
--   詳細については、次を参照してください。[チュートリアル: カスタム ディレクティブ プロセッサの作成](../modeling/walkthrough-creating-a-custom-directive-processor.md)です。  
+- 詳細については、次を参照してください。[チュートリアル: カスタム ディレクティブ プロセッサの作成](../modeling/walkthrough-creating-a-custom-directive-processor.md)です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [カスタム ディレクティブ プロセッサの配置](../modeling/deploying-a-custom-directive-processor.md)  

@@ -1,7 +1,7 @@
 ---
 title: .NET Framework の拡張機能の登録 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2a2d3e281562be5234e0a70a877a6c169c346995
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1a1a1966bbe68bccd12261ca6a05002485cefe1d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536072"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49196925"
 ---
 # <a name="registering-extensions-of-the-net-framework"></a>.NET Framework の拡張機能の登録
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[.NET Framework の拡張機能を登録する](https://docs.microsoft.com/visualstudio/msbuild/registering-extensions-of-the-dotnet-framework)します。  
-  
   
 .NET Framework の特定のバージョンを拡張するアセンブリを開発できます。 アセンブリが Visual Studio の **[参照の追加]** ダイアログ ボックスに表示されるようにするには、そのアセンブリを格納するフォルダーをシステム レジストリに追加する必要があります。  
   

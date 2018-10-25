@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::GetPendingBreakpoint |Microsoft ドキュメント
+title: IDebugBoundBreakpoint2::GetPendingBreakpoint |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 899afbc801baee88dd941763b559845b90be8500
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ed136217f9f5c7cffc72ba03562d308723ef5029
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31109510"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867781"
 ---
 # <a name="idebugboundbreakpoint2getpendingbreakpoint"></a>IDebugBoundBreakpoint2::GetPendingBreakpoint
-指定したバインドされたブレークポイントの作成元の保留中のブレークポイントを取得します。  
+指定されたバインドされたブレークポイントの作成元となる保留中のブレークポイントを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,16 +42,16 @@ int GetPendingBreakpoint(
   
 #### <a name="parameters"></a>パラメーター  
  `ppPendingBreakpoint`  
- [out]返します、 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)バインド ブレークポイントの作成に使用された保留中のブレークポイントを表すオブジェクト。  
+ [out]返します、 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)ブレークポイントがバインドされるこの作成に使用された保留中のブレークポイントを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 保留中のブレークポイントは、1 つまたは複数のプログラムを適用できるコードにブレークポイントをバインドするために必要なすべての必要な情報のコレクションと考えることができます。  
+## <a name="remarks"></a>Remarks  
+ 保留中のブレークポイントは、1 つまたは複数のプログラムに適用できるコードにブレークポイントをバインドするために必要なすべての必要な情報のコレクションと考えることができます。  
   
 ## <a name="example"></a>例  
- 次の例は、単純なは、このメソッドを実装する方法を示します`CBoundBreakpoint`を公開するオブジェクト、 [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)インターフェイスです。  
+ 次の例は、単純なは、このメソッドを実装する方法を示しています。`CBoundBreakpoint`を公開するオブジェクト、 [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)インターフェイス。  
   
 ```  
 HRESULT CBoundBreakpoint::GetPendingBreakpoint(  

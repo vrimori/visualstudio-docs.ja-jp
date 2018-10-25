@@ -1,7 +1,7 @@
 ---
 title: IDebugGenericParamField::GetNameOfFormalParam |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 05032a83-49ce-4007-b5d6-7b56945b956c
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: add994228ebbb8288f8f013a7e9ab2e2142d6ad9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 85c526f1764152ba66d9754b1b334d3637de7cc3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539917"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49817575"
 ---
 # <a name="idebuggenericparamfieldgetnameofformalparam"></a>IDebugGenericParamField::GetNameOfFormalParam
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugGenericParamField::GetNameOfFormalParam](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebuggenericparamfield-getnameofformalparam)します。  
-  
 このジェネリック パラメーターの名前を取得します。  
   
 ## <a name="syntax"></a>構文  

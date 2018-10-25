@@ -1,7 +1,7 @@
 ---
 title: CV_CPU_TYPE_e |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 82102d262c42f1ed53a6530819e1f72e42f12733
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d79be580efdc7ed9ef84459ab17273fb3dfafb60
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537114"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867469"
 ---
 # <a name="cvcputypee"></a>CV_CPU_TYPE_e
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[CV_CPU_TYPE_e](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/cv-cpu-type-e)します。  
-  
 ターゲット プロセッサを指定します。  
   
 > [!NOTE]
@@ -107,7 +105,7 @@ typedef enum CV_CPU_TYPE_e {
 ## <a name="remarks"></a>Remarks  
  この列挙体の値が呼び出しによって返される、 [idiasymbol::get_platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: cvconst.h  
   
 ## <a name="see-also"></a>関連項目  

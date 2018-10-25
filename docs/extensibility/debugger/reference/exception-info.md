@@ -1,5 +1,5 @@
 ---
-title: EXCEPTION_INFO |Microsoft ドキュメント
+title: EXCEPTION_INFO |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c48772ed5835daeff9d47773e6e48526993fa425
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4bbefc02a05d03dc966c05941ca08c05cce0a5a5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31103420"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49947915"
 ---
 # <a name="exceptioninfo"></a>EXCEPTION_INFO
 例外またはデバッグ中のプログラムによってスローされた実行時エラーについて説明します。  
@@ -60,18 +60,18 @@ public struct EXCEPTION_INFO {
  例外の名前。  
   
  dwCode  
- 例外または実行時エラーの識別コードです。  
+ 例外または実行時エラーの識別コード。  
   
  dwState  
- 値、 [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md)例外の状態を定義する列挙値。  
+ 値、 [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md)例外の状態を定義する列挙です。  
   
  guidType  
- GUID の言語識別子か、`guidLang`または`guidEng`です。  
+ GUID の言語識別子か、`guidLang`または`guidEng`します。  
   
-## <a name="remarks"></a>コメント  
- この構造体がパラメーターとして渡される、 [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)と[RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md)メソッドです。 この構造体に渡されます、 [GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md)格納するメソッド。  
+## <a name="remarks"></a>Remarks  
+ この構造体がパラメーターとして渡される、 [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)と[RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md)メソッド。 この構造体に渡されることも、 [GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md)情報を格納するメソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
@@ -84,4 +84,4 @@ public struct EXCEPTION_INFO {
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)   
  [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md)   
- [getException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md)
+ [GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md)

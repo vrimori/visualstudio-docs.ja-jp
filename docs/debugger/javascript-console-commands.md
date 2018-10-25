@@ -14,16 +14,16 @@ manager: douge
 ms.workload:
 - uwp
 - cordova
-ms.openlocfilehash: 8642d59beb845bf2784d09133a590a4716897ed4
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: f10439e63b95fc2e78980ceb585e32dbbabd44d9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44282210"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823750"
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio での JavaScript コンソール コマンド
   
- Visual Studio では、JavaScript コンソール ウィンドウでコマンドを使用して、メッセージを送信したり他のタスクを実行したりすることができます。 そのウィンドウを使用する方法を示す例については、次を参照してください。[クイック スタート: JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)します。 このトピックの情報は、UWP アプリと Apache Cordova の Visual Studio Tools を使用して作成されたアプリに適用されます。 Cordova アプリでサポートされているコンソール コマンドについては、次を参照してください。[アプリのデバッグ](https://taco.visualstudio.com/en-us/docs/debug-using-visual-studio/)します。 Internet Explorer F12 ツールで、コンソールの使用方法の詳細については、次を参照してください。[このトピックの「](/previous-versions/windows/internet-explorer/ie-developer/samples/dn255006(v=vs.85))します。  
+ Visual Studio では、JavaScript コンソール ウィンドウでコマンドを使用して、メッセージを送信したり他のタスクを実行したりすることができます。 そのウィンドウを使用する方法を示す例については、次を参照してください。[クイック スタート: JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)します。 このトピックの情報は、UWP アプリと Apache Cordova の Visual Studio Tools を使用して作成されたアプリに適用されます。 Cordova アプリでサポートされているコンソール コマンドについては、「 [Debug Your App](https://taco.visualstudio.com/en-us/docs/debug-using-visual-studio/)」を参照してください。 Internet Explorer F12 ツールのコンソールの使用については、 [このトピック](/previous-versions/windows/internet-explorer/ie-developer/samples/dn255006(v=vs.85))を参照してください。  
   
  JavaScript コンソール ウィンドウが閉じられた場合開けることを選択して、Visual Studio でデバッグ中**デバッグ** > **Windows** > **JavaScriptコンソール**します。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "44282210"
 |`msIsIndependentlyComposed(element)`|Web アプリで使用されます。 JavaScript を使用して UWP アプリでサポートされていません。|サポートされていません。|  
 |`profile(reportName)`|Web アプリで使用されます。 JavaScript を使用して UWP アプリでサポートされていません。|サポートされていません。|  
 |`profileEnd()`|Web アプリで使用されます。 JavaScript を使用して UWP アプリでサポートされていません。|サポートされていません。|  
-|`select(element)`|指定された HTML を選択します。`element`で、 [DOM Explorer](../debugger/quickstart-debug-html-and-css.md)します。|console.select (要素);|  
+|`select(element)`|`element` DOM Explorer [で指定された HTML](../debugger/quickstart-debug-html-and-css.md)を選択します。|console.select (要素);|  
 |`time (name)`|`name` オプション パラメーターによって識別されるタイマーを開始します。 `console.timeEnd`と共に使用すると、 `time` から `timeEnd`までの経過時間を計算し、 `name` 文字列をプレフィックスとして使用して、結果 (ミリ秒単位) をコンソールに送信します。 アプリ コードのインストルメンテーションを有効にして、パフォーマンスを測定するために使用します。|`console.time("app start");  app.start();  console.timeEnd("app start");`|  
 |`timeEnd(name)`|`name` オプション パラメーターによって識別されるタイマーを停止します。 `time` コンソール コマンドを参照してください。|`console.time("app start"); app.start(); console.timeEnd("app start");`|  
 |`trace()`|スタック トレースをコンソール ウィンドウに送信します。 このトレースには、完全なコール スタックと、ファイル名、行番号、列番号などの情報が含まれます。|`console.trace();`|  
@@ -70,7 +70,7 @@ ms.locfileid: "44282210"
 |`$(id)`|要素を ID で返します。 これは `document.getElementById(id)`のショートカット コマンドであり、 `id` は要素の ID を表す文字列です。|`$("contenthost")`|  
 |`$$(selector)`|CSS セレクター構文を使用して、指定されたセレクターと一致する要素の配列を返します。 これは `document.querySelectorAll()`のショートカット コマンドです。|`$$(".itemlist")`|  
 |`cd()`<br /><br /> `cd(window)`|式の評価のコンテキストを、既定であるページのトップレベル ウィンドウから指定したフレームのウィンドウに変更できます。 `cd()` をパラメーターの指定なしで呼び出すと、コンテキストがトップレベル ウィンドウに戻ります。|`cd();`<br /><br /> `cd(myframe);`|  
-|`select(element)`|指定された要素を選択します。 [DOM Explorer](../debugger/quickstart-debug-html-and-css.md)します。|`select(document.getElementById("element"));`<br /><br /> `select($("element"));`<br /><br /> `select($1);`|  
+|`select(element)`|[DOM Explorer](../debugger/quickstart-debug-html-and-css.md)で指定された要素を選択します。|`select(document.getElementById("element"));`<br /><br /> `select($("element"));`<br /><br /> `select($1);`|  
 |`dir(object)`|指定されたオブジェクトのビジュアライザーを返します。 ビジュアライザーを使用して、コンソール ウィンドウのプロパティを検査できます。|`dir(obj);`|  
   
 ## <a name="checking-whether-a-console-command-exists"></a>コンソール コマンドが存在するかどうかを確認  
@@ -104,16 +104,16 @@ console.log(user.first, user.last);
   
  次の代替パターンがサポートされています。  
   
--   %s - 文字列  
-     %i - 整数  
-     %d - 整数  
-     %f - 浮動小数  
-     %o - オブジェクト  
-     %b - バイナリ  
-     %x - 16 進数  
-     %e - 指数  
+- %s - 文字列  
+   %i - 整数  
+   %d - 整数  
+   %f - 浮動小数  
+   %o - オブジェクト  
+   %b - バイナリ  
+   %x - 16 進数  
+   %e - 指数  
   
- ここでは、 `console.log`で代替パターンを使った例をいくつか示します。  
+  ここでは、 `console.log`で代替パターンを使った例をいくつか示します。  
   
 ```javascript  
 var user = new Object();  

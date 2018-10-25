@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_oemsymbolid |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 25ed930a193909ded707e1fccfe98ab45c5cf2bf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c3c1bfd9b8fbc6c8d745a8b9a8240eb788f7a838
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546954"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49828131"
 ---
 # <a name="idiasymbolgetoemsymbolid"></a>IDiaSymbol::get_oemSymbolId
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_oemsymbolid](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-oemsymbolid)します。  
-  
 供給元 (OEM) シンボルの ID 値を取得します。  
   
 ## <a name="syntax"></a>構文  

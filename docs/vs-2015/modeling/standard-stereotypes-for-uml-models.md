@@ -1,7 +1,7 @@
 ---
 title: UML モデルの標準ステレオタイプ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ caps.latest.revision: 22
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 3e5cabed5b2b75d9a97c74dd58d87ea387df8f8e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c38ad14fa44d2f537f9622d7746e534f8dd41ea0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538987"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49212161"
 ---
 # <a name="standard-stereotypes-for-uml-models"></a>UML モデルの標準ステレオタイプ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML モデルの標準ステレオタイプ](https://docs.microsoft.com/visualstudio/modeling/standard-stereotypes-for-uml-models)します。  
-  
 UML モデル要素にステレオタイプを追加して、リーダー、またはコンピューター処理のための追加情報を提供できます。 ステレオタイプはプロファイルで定義され、各プロファイルにはステレオタイプのセットが含まれます。 一部のプロファイルは、Visual Studio に装備されています。 ユーザー独自のプロファイルを定義して、固有のステレオタイプを含めることもできます。 詳細については、次を参照してください。 [UML を拡張するプロファイルを定義して](../modeling/define-a-profile-to-extend-uml.md)します。  
   
  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  

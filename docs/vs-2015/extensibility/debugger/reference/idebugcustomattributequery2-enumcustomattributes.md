@@ -1,7 +1,7 @@
 ---
 title: IDebugCustomAttributeQuery2::EnumCustomAttributes |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 94bfce74-aa3d-45f0-8e04-5715faf85217
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c516d85a11e6d4e85cf86cf56f740e2f2bf7cf84
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fa53677865a3c22765589e8bacbdcf24df0d511e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535339"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888818"
 ---
 # <a name="idebugcustomattributequery2enumcustomattributes"></a>IDebugCustomAttributeQuery2::EnumCustomAttributes
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugCustomAttributeQuery2::EnumCustomAttributes](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugcustomattributequery2-enumcustomattributes)します。  
-  
 このフィールドにアタッチされているすべてのカスタム属性の列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  

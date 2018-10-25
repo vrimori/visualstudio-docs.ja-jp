@@ -1,5 +1,5 @@
 ---
-title: IDebugErrorEvent2::GetErrorMessage |Microsoft ドキュメント
+title: IDebugErrorEvent2::GetErrorMessage |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4dffd06c7342b77f1e4293d50217a0c6a468bf18
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d7dfac01624d83518a749dd762837dfbea3d6e54
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31110225"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915296"
 ---
 # <a name="idebugerrorevent2geterrormessage"></a>IDebugErrorEvent2::GetErrorMessage
-人間が判読できるエラー メッセージの作成を許可する情報を返します。  
+人間が判読できるエラー メッセージの構築できるようにする情報を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,28 +51,28 @@ int GetErrorMessage(
   
 #### <a name="parameters"></a>パラメーター  
  `pMessageType`  
- [out]値を返します、 [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)メッセージの種類を説明する列挙です。  
+ [out]値を返します、 [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)メッセージの型を記述する列挙。  
   
  `pbstrErrorFormat`  
- [out]ユーザーに最後のメッセージの形式 (詳細については、「解説」を参照してください)。  
+ [out]ユーザーには、最後のメッセージの形式 (詳細については、「解説」を参照してください)。  
   
  `hrErrorReason`  
- [out]エラー コード、メッセージは、に関するです。  
+ [out]エラー コード、メッセージは、の詳細についてはします。  
   
  `pdwType`  
- [out]エラーの重大度レベル (の MB_XXX 定数を使用して`MessageBox`。 たとえば、`MB_EXCLAMATION`または`MB_WARNING`)。  
+ [out]エラーの重大度 (の MB_XXX 定数を使用して`MessageBox`。 たとえば、`MB_EXCLAMATION`または`MB_WARNING`)。  
   
  `pbstrHelpFileName`  
- [out]ヘルプ ファイル (ヘルプ ファイルがない場合は null 値に設定) へのパス。  
+ [out]ヘルプ ファイル (ヘルプ ファイルがない場合は、null 値に設定) へのパス。  
   
  `pdwHelpId`  
  [out]表示するヘルプトピックのIDです（ヘルプトピックがない場合は0に設定されます）。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- エラー メッセージの書式はの線に沿った`"What I was doing.  %1"`です。 `"%1"`とエラー コードから派生した、エラー メッセージ、呼び出し元によって置き換えられますし (で返される`hrErrorReason`)。 `pMessageType`パラメーターは、最終的なエラー メッセージの表示方法を呼び出し元に通知します。  
+## <a name="remarks"></a>Remarks  
+ エラー メッセージの書式設定する必要があります`"What I was doing.  %1"`します。 `"%1"`エラー コードに由来のエラー メッセージで、呼び出し元によって置き換えられますし (で返される`hrErrorReason`)。 `pMessageType`パラメーターは、最後のエラー メッセージの表示方法を呼び出し元に通知します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)   

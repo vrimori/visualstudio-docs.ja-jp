@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetName |Microsoft ドキュメント
+title: IDebugThread2::GetName |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 98ef4ff5a2e1896bccaab82b32c1244da9f1ca2a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 670ee7b9fe8262e981f3c0abeb57710c2da9b0e2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31120050"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898474"
 ---
 # <a name="idebugthread2getname"></a>IDebugThread2::GetName
 スレッドの名前を取得します。  
@@ -44,10 +44,10 @@ int GetName (
  [out]スレッドの名前を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 取得した名前が表示可能な名前で常にあり、この名前は、スレッドをについて説明します。 スレッド名は、実行時のアーキテクチャをサポートしていますが、スレッドをという名前またはデバッグ エンジンから派生した名前である可能性がありますから派生させることがあります。 呼び出しによってスレッドの名前を設定する代わりに、 [SetThreadName](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 取得した名前が表示可能な名前で常に、この名前は、スレッドをについて説明します。 スレッド名は、実行時のアーキテクチャをサポートしていますが、スレッドをという名前またはデバッグ エンジンから派生した名前がありますから派生させることがあります。 呼び出してスレッドの名前を設定する代わりに、 [SetThreadName](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md)メソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   

@@ -1,7 +1,7 @@
 ---
 title: プロパティ、タスク一覧、出力、およびオプションの Windows の拡張 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ ms.assetid: 06990510-5424-44b8-9fd9-6481acec5c76
 caps.latest.revision: 38
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: aff8da28ecdf91ffa2b21ddb03a62315e2943d6e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bf62ce18094b7580d0e4d2d2dd2cb2b6ab139287
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547622"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836477"
 ---
 # <a name="extending-the-properties-task-list-output-and-options-windows"></a>プロパティ、タスク一覧、出力、オプション ウィンドウの拡張
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロパティ、タスク一覧、出力、およびオプションの Windows の拡張](https://docs.microsoft.com/visualstudio/extensibility/extending-the-properties-task-list-output-and-options-windows)します。  
-  
 Visual Studio のいずれかのツール ウィンドウにアクセスできます。 このチュートリアルは、新しいツール ウィンドウに関する情報を統合する方法を示す**オプション**ページと、新しい設定で、**プロパティ** ページで、またに書き込む方法、**タスク一覧**と**出力**windows。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
@@ -104,33 +102,33 @@ Visual Studio のいずれかのツール ウィンドウにアクセスでき�
 ## <a name="create-an-options-page"></a>オプション ページを作成します。  
  内のページを行うことができます、**オプション** ダイアログ ボックスのユーザーがツール ウィンドウの設定を変更できるようにします。 オプション ページを作成するには、両方クラス オプションと TodoListPackage.cs または TodoListPackage.vb ファイル内のエントリを記述する必要があります。  
   
-1.  という名前のクラスを追加`ToolsOptions.cs`します。 制御クラスから継承するように<xref:Microsoft.VisualStudio.Shell.DialogPage>します。  
+1. という名前のクラスを追加`ToolsOptions.cs`します。 制御クラスから継承するように<xref:Microsoft.VisualStudio.Shell.DialogPage>します。  
   
-    ```csharp  
-    class ToolsOptions : DialogPage  
-    {  
-    }  
-    ```  
+   ```csharp  
+   class ToolsOptions : DialogPage  
+   {  
+   }  
+   ```  
   
-2.  次の追加ステートメントを使用します。  
+2. 次の追加ステートメントを使用します。  
   
-    ```csharp  
-    using Microsoft.VisualStudio.Shell;  
-    ```  
+   ```csharp  
+   using Microsoft.VisualStudio.Shell;  
+   ```  
   
-3.  このチュートリアルでは、[オプション] ページでは、DaysAhead という名前の 1 つだけのオプションを提供します。 というプライベート フィールドを追加**daysAhead**という名前のプロパティと**DaysAhead**制御クラスに。  
+3. このチュートリアルでは、[オプション] ページでは、DaysAhead という名前の 1 つだけのオプションを提供します。 というプライベート フィールドを追加**daysAhead**という名前のプロパティと**DaysAhead**制御クラスに。  
   
-    ```csharp  
-    private double daysAhead;  
+   ```csharp  
+   private double daysAhead;  
   
-    public double DaysAhead  
-    {  
-        get { return daysAhead; }  
-        set { daysAhead = value; }  
-    }  
-    ```  
+   public double DaysAhead  
+   {  
+       get { return daysAhead; }  
+       set { daysAhead = value; }  
+   }  
+   ```  
   
- これで、プロジェクトをこのオプション ページの対応する必要があります。  
+   これで、プロジェクトをこのオプション ページの対応する必要があります。  
   
 #### <a name="make-the-options-page-available-to-users"></a>[オプション] ページをユーザーが利用できるように  
   

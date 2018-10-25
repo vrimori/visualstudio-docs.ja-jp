@@ -1,7 +1,7 @@
 ---
 title: IDebugEngine2::RemoveSetException |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: bdd25097-0e9d-4218-b417-0497ea48d2e8
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e68d7420fa89e18b86ed7c2fda8633f2c2703b9b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9d51a59cf7ae3d1eee25996e88914d5d28bddcff
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544495"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887021"
 ---
 # <a name="idebugengine2removesetexception"></a>IDebugEngine2::RemoveSetException
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugEngine2::RemoveSetException](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugengine2-removesetexception)します。  
-  
 不要になったデバッグ エンジンによって処理されるように指定された例外を削除します。  
   
 ## <a name="syntax"></a>構文  

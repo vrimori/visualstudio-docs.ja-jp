@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,15 @@ caps.latest.revision: 55
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 73c87560e6ce238877088def248afe9d8ce42103
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c3323c2513b21ad5432b6784ea305bf1693990d2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546570"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49296453"
 ---
 # <a name="debugging-in-visual-studio"></a>Visual Studio でのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[Visual Studio でのデバッグ](https://docs.microsoft.com/visualstudio/debugger/debugger-feature-tour)します。
-
 Visual Studio デバッガーを使用すると、プログラムの実行時の動作を確認し、問題を見つけることができます。 デバッガーは、すべての Visual Studio のプログラミング言語と関連ライブラリと連携します。 デバッガーを使ってプログラムの実行を中断し、コードのチェック、変数のチェックと編集、レジスタの確認、ソース コードで作成された命令の表示、アプリケーションで使用するメモリ空間の確認などができます。  
   
  Visual Studio でのデバッグと診断の概要については、「 [デバッグ、プロファイル、および診断](https://www.visualstudio.com/features/debugging-and-diagnostics-vs)」を参照してください。  

@@ -1,7 +1,7 @@
 ---
 title: クラスおよび型のリファクタリング (クラス デザイナー) | Microsoft ドキュメント
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 30
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8704977447a7f7aa45b7991ae4451818dc4bfb58
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 215030b511ecbddbda23073df464035887f8ef95
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538697"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49207963"
 ---
 # <a name="refactoring-classes-and-types-class-designer"></a>クラスおよび型のリファクタリング (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[リファクタリング クラスと型 (クラス デザイナー)](https://docs.microsoft.com/visualstudio/ide/refactoring-classes-and-types-class-designer)します。  
-  
 コードをリファクタリングするときに、その外部動作ではなく、内部構造とオブジェクトの設計を変更することによって、コードが理解および保守しやすくなり、効率も向上します。 クラス デザイナーと [クラスの詳細] ウィンドウを使用すると、必要な作業の量を減らし、Visual Studio プロジェクト内の Visual C# .NET、Visual Basic .NET、または C++ コードをリファクタリングするときに、バグが発生する可能性を低下させることができます。  
   
 > [!NOTE]

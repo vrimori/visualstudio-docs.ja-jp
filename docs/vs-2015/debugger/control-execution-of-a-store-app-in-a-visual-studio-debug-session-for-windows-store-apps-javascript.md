@@ -1,7 +1,7 @@
 ---
 title: Windows ストア アプリ (JavaScript) 用の Visual Studio デバッグ セッションでのストア アプリの実行の制御 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 19
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e5725dc2be204ae3b657a857c5a358a29b8c3709
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5ce3ef7b1d5fe975fdc2edc21a3dbe94fa873e96
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535623"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813295"
 ---
 # <a name="control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript"></a>Windows ストア アプリ用の Visual Studio デバッグ セッションでの、ストア アプリの実行制御 (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Windows ストア アプリ (JavaScript) 用の Visual Studio デバッグ セッションで、ストア アプリの実行を制御](https://docs.microsoft.com/visualstudio/debugger/control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript)します。  
-  
 このクイック スタートでは、Visual Studio デバッガー内を移動する方法と、セッションでのプログラムの状態を表示する方法を示します。  
   
  Visual Studio でのデバッグに慣れていない開発者や、Visual Studio でのデバッグ セッション間の移動について詳しく学習したい開発者向けです。 デバッグ自体の手法については説明しません。 サンプル コードの関数は、このトピックで説明しているデバッグ手順を示すためだけに設計されています。 これらの関数は、アプリまたは関数の設計に関するベスト プラクティスに従ったものではありません。 実際、すぐにわかるように、関数もアプリ自体もほとんど何もしません。  
@@ -57,28 +55,28 @@ ms.locfileid: "47535623"
   
  [[ローカル] ウィンドウで変数のデータを表示する](#BKMK_View_variable_data_in_the_Locals_window)  
   
--   [オブジェクトの変数データとプロトタイプ チェーンを表示する](#BKMK_View_variable_data_and_the_prototype_chain_of_an_object)  
+- [オブジェクトの変数データとプロトタイプ チェーンを表示する](#BKMK_View_variable_data_and_the_prototype_chain_of_an_object)  
   
--   [スコープ チェーンのデータを調べる](#BKMK_Examine_scope_chain_data)  
+- [スコープ チェーンのデータを調べる](#BKMK_Examine_scope_chain_data)  
   
- [[呼び出し履歴] ウィンドウを使用してコードに移動する](#BKMK_Navigate_to_code_by_using_the_Call_Stack_window)  
+  [[呼び出し履歴] ウィンドウを使用してコードに移動する](#BKMK_Navigate_to_code_by_using_the_Call_Stack_window)  
   
 ##  <a name="BKMK_Create_the_sample_app"></a> サンプル アプリを作成する  
  デバッグの対象はコードなので、このサンプル アプリでは、デバッグ セッション内の移動方法とプログラムの状態を調べる方法がわかる程度のソース ファイルを作成するためだけに Windows ストア アプリのフレームワークを使用します。 呼び出すコードはすべて、default.js ファイルの `module` 関数から呼び出されます。 コントロールは追加されず、イベントは処理されません。  
   
-1.  **空の JavaScript Windows ストア アプリを作成します。** Visual Studio を開きます。 ホーム ページで、 **[新しいプロジェクト]** リンクを選択します。 **[新しいプロジェクト]** ダイアログ ボックスで、 **[インストール済み]** ボックスの一覧の **[JavaScript]** を選択し、 **[Windows ストア]** を選択します。 プロジェクト テンプレートの一覧で、 **[新しいアプリケーション]** を選択します。 新しいソリューションとプロジェクトが作成され、default.htm ファイルがコード エディターに表示されます。  
+1. **空の JavaScript Windows ストア アプリを作成します。** Visual Studio を開きます。 ホーム ページで、 **[新しいプロジェクト]** リンクを選択します。 **[新しいプロジェクト]** ダイアログ ボックスで、 **[インストール済み]** ボックスの一覧の **[JavaScript]** を選択し、 **[Windows ストア]** を選択します。 プロジェクト テンプレートの一覧で、 **[新しいアプリケーション]** を選択します。 新しいソリューションとプロジェクトが作成され、default.htm ファイルがコード エディターに表示されます。  
   
-     ページに読み込まれるスクリプト ファイルにご注意ください。  
+    ページに読み込まれるスクリプト ファイルにご注意ください。  
   
-    -   `base.js` および `ui.js` ファイルによって、 **JavaScript 用 Windows ライブラリ**が作成されます。 JavaScript 用 Windows ライブラリは一連の JavaScript および CSS ファイルであり、JavaScript を使用して Windows ストア アプリを簡単に作成できるようにします。 これを HTML、CSS、Windows ランタイムと共に使用して、アプリを作成します。  
+   -   `base.js` および `ui.js` ファイルによって、 **JavaScript 用 Windows ライブラリ**が作成されます。 JavaScript 用 Windows ライブラリは一連の JavaScript および CSS ファイルであり、JavaScript を使用して Windows ストア アプリを簡単に作成できるようにします。 これを HTML、CSS、Windows ランタイムと共に使用して、アプリを作成します。  
   
-    -   コードは `default.js`  ファイルで開始します。  
+   -   コードは `default.js`  ファイルで開始します。  
   
-2.  **default.js ソース ファイルを開きます。** ソリューション エクスプローラーで、 **[js]** ノードを開いて `default.js`と呼びます。  
+2. **default.js ソース ファイルを開きます。** ソリューション エクスプローラーで、 **[js]** ノードを開いて `default.js`と呼びます。  
   
-3.  **ページの内容をサンプル コードに置き換えます。** `default.js` ファイルの内容をすべて削除します。 「 [Debugger navigation sample code (JavaScript)](../debugger/debugger-navigation-sample-code-javascript.md)」を参照して、JavaScript セクションに記載されているコードをクリップボードにコピーします。 (選択**戻る**ブラウザーまたはヘルプ ビューアーは、このクイック スタート ページに戻る)。Visual Studio エディターで、空にした `default.js` にコードを貼り付けます。 **Ctrl+ S** を選んでファイルを保存します。  
+3. **ページの内容をサンプル コードに置き換えます。** `default.js` ファイルの内容をすべて削除します。 「 [Debugger navigation sample code (JavaScript)](../debugger/debugger-navigation-sample-code-javascript.md)」を参照して、JavaScript セクションに記載されているコードをクリップボードにコピーします。 (選択**戻る**ブラウザーまたはヘルプ ビューアーは、このクイック スタート ページに戻る)。Visual Studio エディターで、空にした `default.js` にコードを貼り付けます。 **Ctrl+ S** を選んでファイルを保存します。  
   
- これで、このトピックの例を実際に行うことができるようになりました。  
+   これで、このトピックの例を実際に行うことができるようになりました。  
   
 ##  <a name="BKMK_Set_and_run_to_a_breakpoint__step_into_a_function__and_examine_program_data"></a> ブレークポイントを設定してそこまで実行し、関数にステップ インして、プログラムのデータを調べる  
  デバッグ セッションを開始する最も一般的な方法は、 **[デバッグ]** メニューの **[デバッグ開始]** を選ぶことです (キーボード: F5)。 アプリが開始し、ブレークポイントに達するか、手動で実行が中断されるか、例外が発生するか、アプリが終了するまで実行が続きます。  
@@ -90,45 +88,45 @@ ms.locfileid: "47535623"
 ###  <a name="BKMK_Example_1"></a> 例 1  
  この例では、 `module` の `default.js` 関数の本体にブレークポイントを設定します。ここで、最初のユーザー ステートメントが呼び出されます。 次に、関数にステップ インし、デバッガーのデータのヒントで変数の値を表示して、デバッグを停止します。  
   
-1.  **ブレークポイントを設定します。** `app.start()` の呼び出しの直後にあるステートメント `callTrack = "module function";` にブレークポイントを設定します。 ソース コード エディターの網掛けされた余白で行を選びます (キーボード: 行にカーソルを置き、 **F9** キーを押します)。  
+1. **ブレークポイントを設定します。** `app.start()` の呼び出しの直後にあるステートメント `callTrack = "module function";` にブレークポイントを設定します。 ソース コード エディターの網掛けされた余白で行を選びます (キーボード: 行にカーソルを置き、 **F9** キーを押します)。  
   
-     ![例 1 にブレークポイントを設定](../debugger/media/dbg-jsnav-example1-breakpoint.png "DBG_JSNAV_example1_breakpoint")  
+    ![例 1 にブレークポイントを設定](../debugger/media/dbg-jsnav-example1-breakpoint.png "DBG_JSNAV_example1_breakpoint")  
   
-     ブレークポイント アイコンが余白に表示されます。  
+    ブレークポイント アイコンが余白に表示されます。  
   
-2.  **ブレークポイントまで実行します。** 選択して、デバッグ セッションを開始**デバッグの開始**上、**デバッグ**メニュー (キーボード: F5)。  
+2. **ブレークポイントまで実行します。** 選択して、デバッグ セッションを開始**デバッグの開始**上、**デバッグ**メニュー (キーボード: F5)。  
   
-     アプリの実行が開始され、ブレークポイントを設定したステートメントの直前で実行が中断します。 余白の現在行アイコンによって場所が示され、現在のステートメントが強調表示されます。  
+    アプリの実行が開始され、ブレークポイントを設定したステートメントの直前で実行が中断します。 余白の現在行アイコンによって場所が示され、現在のステートメントが強調表示されます。  
   
-     ![ブレークポイントまで実行](../debugger/media/dbg-jsnav-example1-run-to-breakpoint.png "DBG_JSNAV_example1_run_to_breakpoint")  
+    ![ブレークポイントまで実行](../debugger/media/dbg-jsnav-example1-run-to-breakpoint.png "DBG_JSNAV_example1_run_to_breakpoint")  
   
-     アプリの実行を制御できるようになり、プログラムのステートメントをステップ実行しながらプログラムの状態を確認できます。  
+    アプリの実行を制御できるようになり、プログラムのステートメントをステップ実行しながらプログラムの状態を確認できます。  
   
-3.  **関数にステップ インします。** **デバッグ**] メニューの [選択**ステップ イン**(キーボード: **F11**)。  
+3. **関数にステップ インします。** **デバッグ**] メニューの [選択**ステップ イン**(キーボード: **F11**)。  
   
-     ![コード行にステップ イン](../debugger/media/dbg-jsnav-example1-step-into.png "DBG_JSNAV_example1_step_into")  
+    ![コード行にステップ イン](../debugger/media/dbg-jsnav-example1-step-into.png "DBG_JSNAV_example1_step_into")  
   
-     デバッガーが次の行である `example1` 関数の呼び出しに移動します。 **[ステップ イン]** を再び選択します。 デバッガーが `example1` 関数の最初のコード行に移動します。 強調表示された行はまだ実行されていませんが、関数は呼び出し履歴に読み込まれ、ローカル変数のメモリが割り当てられています。  
+    デバッガーが次の行である `example1` 関数の呼び出しに移動します。 **[ステップ イン]** を再び選択します。 デバッガーが `example1` 関数の最初のコード行に移動します。 強調表示された行はまだ実行されていませんが、関数は呼び出し履歴に読み込まれ、ローカル変数のメモリが割り当てられています。  
   
-4.  コード行にステップ インするとき、デバッガーは次の操作のいずれかを実行します。  
+4. コード行にステップ インするとき、デバッガーは次の操作のいずれかを実行します。  
   
-    -   次のステートメントがソリューション内の関数の呼び出しではない場合、デバッガーはステートメントを実行し、次のステートメントに移動して、実行を中断します。  
+   - 次のステートメントがソリューション内の関数の呼び出しではない場合、デバッガーはステートメントを実行し、次のステートメントに移動して、実行を中断します。  
   
-    -   ステートメントがソリューション内の関数の呼び出しの場合、デバッガーは呼び出された関数の最初の行に移動して、実行を中断します。  
+   - ステートメントがソリューション内の関数の呼び出しの場合、デバッガーは呼び出された関数の最初の行に移動して、実行を中断します。  
   
-     終了ポイントに到達するまで、 `example1` のステートメントのステップ インを続けます。 デバッガーにより、関数の終了の中かっこが強調表示されます。  
+     終了ポイントに到達するまで、`example1` のステートメントのステップ インを続けます。 デバッガーにより、関数の終了の中かっこが強調表示されます。  
   
-5.  **データのヒントで変数の値を表示します。** 終了ポイントに到達するまで、 `example1` のステートメントのステップ インを続けます。 デバッガーにより、関数の終了の中かっこが強調表示されます。 変数名の上にマウス ポインターを置くと、変数の名前と値がデータのヒントに表示されます。  
+5. **データのヒントで変数の値を表示します。** 終了ポイントに到達するまで、 `example1` のステートメントのステップ インを続けます。 デバッガーにより、関数の終了の中かっこが強調表示されます。 変数名の上にマウス ポインターを置くと、変数の名前と値がデータのヒントに表示されます。  
   
-     ![データ ヒントで変数の値を表示](../debugger/media/dbg-jsnav-data-tip.png "DBG_JSNAV_data_tip")  
+    ![データ ヒントで変数の値を表示](../debugger/media/dbg-jsnav-data-tip.png "DBG_JSNAV_data_tip")  
   
-6.  **callTrack 変数のウォッチ式を追加します。** このクイック スタートでは、例の中で呼び出された関数の表示に `callTrack` 変数を使用しています。 変数の値を見やすくするため、ウォッチ ウィンドウに追加します。 エディターで変数名を選び、ショートカット メニューの **[ウォッチ式の追加]** を選びます。  
+6. **callTrack 変数のウォッチ式を追加します。** このクイック スタートでは、例の中で呼び出された関数の表示に `callTrack` 変数を使用しています。 変数の値を見やすくするため、ウォッチ ウィンドウに追加します。 エディターで変数名を選び、ショートカット メニューの **[ウォッチ式の追加]** を選びます。  
   
-     ![変数のウォッチ](../debugger/media/dbg-jsnav-watch-window.png "DBG_JSNAV_watch_window")  
+    ![変数のウォッチ](../debugger/media/dbg-jsnav-watch-window.png "DBG_JSNAV_watch_window")  
   
-     [ウォッチ] ウィンドウでは複数の変数を確認できます。 データ ヒント ウィンドウの値など、ウォッチ対象の変数の値は、実行が中断されるたびに更新されます。 ウォッチ対象の変数は、デバッグ セッション間で保存されます。  
+    [ウォッチ] ウィンドウでは複数の変数を確認できます。 データ ヒント ウィンドウの値など、ウォッチ対象の変数の値は、実行が中断されるたびに更新されます。 ウォッチ対象の変数は、デバッグ セッション間で保存されます。  
   
-7.  **デバッグを停止します。** **デバッグ** メニューの 選択**デバッグの停止** (キーボード: **Shift + F5**)。 これによりデバッグ セッションが終了します。  
+7. **デバッグを停止します。** **デバッグ** メニューの 選択**デバッグの停止** (キーボード: **Shift + F5**)。 これによりデバッグ セッションが終了します。  
   
 ##  <a name="BKMK_Step_into__over__and_out_of_functions"></a> 関数をステップイン、ステップオーバー、ステップアウトする  
  親関数によって呼び出される関数へのステップ インとは異なり、関数のステップ オーバーでは、子関数が実行された後、親が再開すると、呼び出し側の関数で実行が中断されます。 関数の動作がよくわかっていて、その実行が調査中の問題に影響を与えないことが明らかな場合などは、関数をステップ オーバーします。  
@@ -144,7 +142,7 @@ ms.locfileid: "47535623"
 ###  <a name="BKMK_Example_2"></a> 例 2  
  この例では、関数のステップイン、ステップ オーバー、およびステップ アウトを実行します。  
   
-1.  **モジュール関数内の example2 関数を呼び出します。** 編集、`module`関数し、後の行を置換`var callTrack = "module function"`で`example2();`します。  
+1.  **モジュール関数内の example2 関数を呼び出します。** `module` 関数を編集し、`var callTrack = "module function"` の後の行を `example2();` に置き換えます。  
   
      ![Example2 関数を呼び出す](../debugger/media/dbg-jsnav-example2.png "DBG_JSNAV_example2")  
   
@@ -172,7 +170,7 @@ ms.locfileid: "47535623"
 ###  <a name="BKMK_Example_3"></a> 例 3  
  この例では、ループの特定の繰り返しで中断するように条件付きブレークポイントを設定し、ループの後に配置したカーソルまで実行します。 また、テキスト ビジュアライザーで変数の値を表示します。  
   
-1.  **モジュール関数内の example3 関数を呼び出します。** 編集、`module`関数し、後の行を置換`var callTrack = "module function";`行`example3();`します。  
+1.  **モジュール関数内の example3 関数を呼び出します。** `module` 関数を編集し、`var callTrack = "module function";` の後の行を行 `example3();` に置き換えます。  
   
      ![Example3 メソッドを呼び出す](../debugger/media/dbg-jsnav-example3.png "DBG_JSNAV_example3")  
   
@@ -188,7 +186,7 @@ ms.locfileid: "47535623"
   
 5.  **ブレークポイントまで実行します。** **デバッグ**] メニューの [選択**続行**(キーボード: **F5**)。 `i` で一時停止し、 `i` の現在の値が 500 であることを確認します。 変数 `s` が 1 行に表示され、データ ヒント ウィンドウよりかなり長いことにもご注意ください。  
   
-6.  **文字列変数を視覚化します。** データ ヒントで虫眼鏡アイコンをクリックして、`s`します。  
+6.  **文字列変数を視覚化します。** `s` のデータのヒントで虫眼鏡アイコンをクリックします。  
   
      テキスト ビジュアライザー ウィンドウが表示され、文字列の値が複数行の文字列として示されます。  
   
@@ -201,7 +199,7 @@ ms.locfileid: "47535623"
 ###  <a name="BKMK_Use_Run_to_Cursor_to_return_to_your_code_and_delete_a_breakpoint"></a> [カーソル行の前まで実行] を使用してコードに戻り、ブレークポイントを削除する  
  Microsoft またはサードパーティから提供されているライブラリ コードにステップ インしている場合、カーソル行の前まで実行すると便利な場合があります。 ライブラリ コードのステップ実行は役に立ちますが、長い時間がかかることがあります。 また、自分のコードに対する興味の方がはるかに大きいのが普通です。 この演習では、その方法を説明します。  
   
-1.  **App.start の呼び出しにブレークポイントを設定します。** `module`関数を行にブレークポイントを設定 `app.start()`  
+1.  **App.start の呼び出しにブレークポイントを設定します。** `module` 関数で、`app.start()` の行にブレークポイントを設定します。  
   
 2.  **ブレークポイントまで実行し、ライブラリ関数にステップ インします。**  
   
@@ -216,7 +214,7 @@ ms.locfileid: "47535623"
   
 ###  <a name="BKMK_View_variable_data_and_the_prototype_chain_of_an_object"></a> オブジェクトの変数データとプロトタイプ チェーンを表示する  
   
-1.  **配列オブジェクトをモジュール関数を追加します。** 編集、`module`関数し、後の行を置換`var callTrack = "module function"`で `var myArray = new Array(1, 2, 3);`  
+1.  **配列オブジェクトをモジュール関数を追加します。** `module` 関数を編集し、`var callTrack = "module function"` の後の行を `var myArray = new Array(1, 2, 3);` に置き換えます。  
   
      ![myArray 定義](../debugger/media/dbg-jsnav-myarray.png "DBG_JSNAV_myArray")  
   
@@ -243,17 +241,17 @@ ms.locfileid: "47535623"
 ##  <a name="BKMK_Examine_scope_chain_data"></a> スコープ チェーンのデータを調べる  
  関数の *スコープ チェーン* には、アクティブであり、関数で到達可能なすべての変数が含まれます。 グローバル変数は、現在実行中の関数を定義している関数内で定義されているオブジェクト (関数を含みます) と同様に、スコープ チェーンの一部です。 たとえば、 `callTrack` の `module` 関数で定義されている `default.js` 変数は、 `module` 関数で定義されているすべての関数から到達可能です。 各スコープは [ローカル] ウィンドウで個別に一覧表示されます。  
   
--   現在実行中の関数の変数はウィンドウの最上部に表示されます。  
+- 現在実行中の関数の変数はウィンドウの最上部に表示されます。  
   
--   スコープ チェーン内の各関数スコープの変数は、その関数の **[Scope]** ノードに一覧表示されます。 スコープ関数は、現在の関数を定義している関数から、チェーンの最も外側の関数まで、チェーン内での順番で一覧表示されます。  
+- スコープ チェーン内の各関数スコープの変数は、その関数の **[Scope]** ノードに一覧表示されます。 スコープ関数は、現在の関数を定義している関数から、チェーンの最も外側の関数まで、チェーン内での順番で一覧表示されます。  
   
--   **[Globals]** ノードには、すべての関数の外側で定義されているグローバル オブジェクトが一覧表示されます。  
+- **[Globals]** ノードには、すべての関数の外側で定義されているグローバル オブジェクトが一覧表示されます。  
   
- スコープ チェーンはわかりにくいことがあり、例で示すとよくわかります。 次の例を見ると、 `module` 関数によってそれ自体のスコープが作成されている方法、およびクロージャを作成することで別のレベルのスコープを作成する方法がわかります。  
+  スコープ チェーンはわかりにくいことがあり、例で示すとよくわかります。 次の例を見ると、 `module` 関数によってそれ自体のスコープが作成されている方法、およびクロージャを作成することで別のレベルのスコープを作成する方法がわかります。  
   
 ###  <a name="BKMK_Example_4"></a> 例 4  
   
-1.  **モジュール関数内の example4 関数を呼び出します。** 編集、`module`関数し、後の行を置換`var callTrack = "module function"`で、 `example4()`:  
+1.  **モジュール関数内の example4 関数を呼び出します。** `module` 関数を編集し、`var callTrack = "module function"` の後の行を `example4()` に置き換えます。  
   
      ![Example4 メソッドを呼び出す](../debugger/media/dbg-jsnav-example4.png "DBG_JSNAV_example4")  
   
@@ -289,7 +287,7 @@ ms.locfileid: "47535623"
 ###  <a name="BKMK_Example_5"></a> 例 5  
  この例では、5 つのユーザー定義関数を含む呼び出しパスにステップ インします。  
   
-1.  **モジュール関数内の example5 関数を呼び出します。** 編集、`module`関数し、後の行を置換`var callTrack = "module function";`行`example5();`します。  
+1.  **モジュール関数内の example5 関数を呼び出します。** `module` 関数を編集し、`var callTrack = "module function";` の後の行を行 `example5();` に置き換えます。  
   
      ![Example5 の呼び出し](../debugger/media/dbg-jsnav-example5.png "DBG_JSNAV_example5")  
   

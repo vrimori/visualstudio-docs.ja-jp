@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82f96af18400aa6a9f659144fb874c32feaf08ed
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: 075f3391a155938082847c708f831d0587cf54fe
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46495922"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907483"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Roslyn アナライザーと ImmutableArrays 用コード認識ライブラリ
 
@@ -27,7 +27,7 @@ ms.locfileid: "46495922"
 この例をビルドするには、次が必要です。
 
 * Visual Studio 2015 (Express Edition されません) またはそれ以降のバージョン。  無料で使用できます[Visual Studio Community エディション](https://visualstudio.microsoft.com/vs/community/)
-* [Visual Studio SDK](../extensibility/visual-studio-sdk.md)します。  確認することも、Visual Studio をインストールするときに**Visual Studio Extensibility Tools** **一般的なツール**と同時に、SDK をインストールします。  既に Visual Studio をインストールする場合、メイン メニューに移動してこの SDK をインストールすることができますもする**ファイル** > **新規** > **プロジェクト**、選択**c#** で、左側のナビゲーション ウィンドウで、選択して、 **Extensibility**します。  選択した場合、"**Visual Studio 機能拡張ツールをインストール**"階層リンクのプロジェクト テンプレートを求められますをダウンロードして、SDK をインストールします。
+* [Visual Studio SDK](../extensibility/visual-studio-sdk.md)。  確認することも、Visual Studio をインストールするときに**Visual Studio Extensibility Tools** **一般的なツール**と同時に、SDK をインストールします。  既に Visual Studio をインストールする場合、メイン メニューに移動してこの SDK をインストールすることができますもする**ファイル** > **新規** > **プロジェクト**、選択**c#** で、左側のナビゲーション ウィンドウで、選択して、 **Extensibility**します。  選択した場合、"**Visual Studio 機能拡張ツールをインストール**"階層リンクのプロジェクト テンプレートを求められますをダウンロードして、SDK をインストールします。
 * [.NET コンパイラ プラットフォーム ("Roslyn") SDK](http://aka.ms/roslynsdktemplates)します。  メイン メニューに移動して、この SDK をインストールすることも**ファイル** > **新規** > **プロジェクト**選択、 **c#** 左側のナビゲーション ウィンドウで、選択して、 **Extensibility**します。  選択した場合"**.NET コンパイラ プラットフォーム SDK をダウンロードして**"階層リンクのプロジェクト テンプレートを求められますをダウンロードして、SDK をインストールします。  この SDK には、 [Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)します。  この非常に便利なツールでは、どのようなコード モデルの種類を把握する必要があります内で検索アナライザーです。  特定のコード モデルの種類のコードは、のみ必要な場合に実行し、関連するコードを分析のみに集中できますので、コードにアナライザーのインフラストラクチャは呼び出し。
 
 ## <a name="whats-the-problem"></a>何がそんなに問題ですか。
@@ -82,7 +82,6 @@ C# のコードを対象とする Visual Basic を使用して、アナライザ
 
 ```csharp
 public override void Initialize(AnalysisContext context) {}
-
 ```
 
 このメソッドと型「コンテキスト」で新しい行を開く IntelliSense の入力候補一覧を確認します。  多数あります入力候補一覧に表示できる`Register...`さまざまな種類のイベントを処理するメソッド。  たとえば、1 つ目、 `RegisterCodeBlockAction`、中かっこの間のコードでは、通常は、ブロックのコードにコールバックします。  ブロック用の登録もコールバックをコードに、フィールド、属性に渡された値やオプションのパラメーターの値の初期化子にします。
@@ -225,7 +224,6 @@ namespace ImmutableArrayAnalyzer
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     class BuildCodeFixProvider : CodeFixProvider
     {}
-
 ```
 
 **派生メンバーを消します。** ここで、id に、エディターのキャレットを置き`CodeFixProvider`キーを押します**Ctrl**+**します。** (ピリオド) をこの抽象基本クラスの実装をスタブします。  プロパティとメソッドが生成されます。

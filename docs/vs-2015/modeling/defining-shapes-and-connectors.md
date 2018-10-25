@@ -1,7 +1,7 @@
 ---
 title: シェイプとコネクタの定義 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,34 +12,32 @@ caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: ee16ff9dcca787fdf35101aff69348ccea42cfcf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 61cd27b307b4761e3f7773f91583965466892285
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536710"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812947"
 ---
 # <a name="defining-shapes-and-connectors"></a>シェイプとコネクタの定義
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[シェイプの定義とコネクタ](https://docs.microsoft.com/visualstudio/modeling/defining-shapes-and-connectors)します。  
-  
 いくつかの基本的な種類のシェイプを使用して、ドメイン固有言語 (DSL) で図に情報を表示できます。  
   
 ##  <a name="shapeTypes"></a> シェイプおよびコネクタの基本型  
  DSL 図は、のコレクションを示しています。*図形*線で連結されたまたは*コネクタ*します。  一般的な定義 (必ずしもこの通りではありません):  
   
--   シェイプは、モデル要素の可視的な表現です。  
+- シェイプは、モデル要素の可視的な表現です。  
   
--   コネクタは、参照リレーションシップを表します。  
+- コネクタは、参照リレーションシップを表します。  
   
--   図は、モデルのルート インスタンスを表します。  
+- 図は、モデルのルート インスタンスを表します。  
   
--   モデル要素間の埋め込みリレーションシップは、コンテインメントにより表示されます。 たとえば、コンポーネント ポートを表す要素はコンポーネントに埋め込まれています。  
+- モデル要素間の埋め込みリレーションシップは、コンテインメントにより表示されます。 たとえば、コンポーネント ポートを表す要素はコンポーネントに埋め込まれています。  
   
- これらのパターンは強制ではありませんが、より強力にサポートされています。 DSL を設計するときは、画面上でどのようにモデルを表現したいかが埋め込みリレーションシップの設計に反映されるように注意を払います。 一方、参照リレーションシップには、ビジネス ドメインの概念が反映される必要があります。  
+  これらのパターンは強制ではありませんが、より強力にサポートされています。 DSL を設計するときは、画面上でどのようにモデルを表現したいかが埋め込みリレーションシップの設計に反映されるように注意を払います。 一方、参照リレーションシップには、ビジネス ドメインの概念が反映される必要があります。  
   
- シェイプには次のような種類があります。  
+  シェイプには次のような種類があります。  
   
 |シェイプの種類|説明|  
 |----------------|-----------------|  

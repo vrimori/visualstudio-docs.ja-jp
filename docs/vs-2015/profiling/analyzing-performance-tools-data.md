@@ -1,7 +1,7 @@
 ---
 title: パフォーマンス データを分析する | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 46
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bb70fa86ac54c14d8105a0481b3a09b5aa777f39
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1ca00f13a6b15d934e6be9eb1a379de04ea5fc0e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537188"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49229139"
 ---
 # <a name="analyzing-performance-tools-data"></a>パフォーマンス データを分析する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[パフォーマンス ツール データの分析](https://docs.microsoft.com/visualstudio/profiling/analyzing-performance-tools-data)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツールのパフォーマンス レポートを使用すると、アプリケーション パフォーマンスの問題を表示して分析することができます。 このセクションでは、パフォーマンス レポートとパフォーマンス データを確認するために使用できるビューの概要を示します。  
   
 ## <a name="common-tasks"></a>一般的なタスク  

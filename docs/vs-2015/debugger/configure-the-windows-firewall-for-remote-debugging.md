@@ -1,7 +1,7 @@
 ---
 title: リモート デバッグ用の Windows ファイアウォールの構成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,39 +14,37 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9189cbc49d327a9106284dc6078eed3e21cc0f9f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 96b4e4cc929dc7941fac5e8a7f090e701fe2810f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533676"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935394"
 ---
 # <a name="configure-the-windows-firewall-for-remote-debugging"></a>Windows ファイアウォールをリモート デバッグ用に構成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[リモート デバッグ用の Windows ファイアウォールを構成する](https://docs.microsoft.com/visualstudio/debugger/configure-the-windows-firewall-for-remote-debugging)します。  
-  
 このトピックでは、次のオペレーティング システムが稼働するコンピューターでリモート デバッグを有効にするようにファイアウォールを構成する方法を説明します。  
   
--   Windows 7  
+- Windows 7  
   
--   Windows 8/8.1  
+- Windows 8/8.1  
   
--   Windows 10  
+- Windows 10  
   
--   Windows Server 2008 (R2)  
+- Windows Server 2008 (R2)  
   
--   Windows Server 2012  
+- Windows Server 2012  
   
--   Windows Server 2012 R2  
+- Windows Server 2012 R2  
   
- デバッグを実行するネットワークがファイアウォールで保護されていない場合は、この構成は不要です。 それ以外の場合は、Visual Studio をホストするコンピューターと、デバッグするリモート コンピューターの両方で、ファイアウォール構成を変更する必要があります。  
+  デバッグを実行するネットワークがファイアウォールで保護されていない場合は、この構成は不要です。 それ以外の場合は、Visual Studio をホストするコンピューターと、デバッグするリモート コンピューターの両方で、ファイアウォール構成を変更する必要があります。  
   
- **IPSec** ネットワークで IPSec を使用して通信を行う必要がある場合は、Visual Studio ホスト コンピューターとリモート コンピューターの両方で追加のポートを開く必要があります。  
+  **IPSec** ネットワークで IPSec を使用して通信を行う必要がある場合は、Visual Studio ホスト コンピューターとリモート コンピューターの両方で追加のポートを開く必要があります。  
   
- **Web サーバー** リモート Web サーバーをデバッグする場合は、リモート コンピューターで追加のポートを開く必要があります。  
+  **Web サーバー** リモート Web サーバーをデバッグする場合は、リモート コンピューターで追加のポートを開く必要があります。  
   
- 両方のコンピューターで同じオペレーティング システムを実行する必要がないことにご注意ください。 たとえば Visual Studio コンピューターで Windows 10 を実行し、リモート コンピューターで Windows Server 2012 R2 を実行することができます。  
+  両方のコンピューターで同じオペレーティング システムを実行する必要がないことにご注意ください。 たとえば Visual Studio コンピューターで Windows 10 を実行し、リモート コンピューターで Windows Server 2012 R2 を実行することができます。  
   
 ## <a name="to-configure-windows-firewall-on-the-visual-studio-computer"></a>Visual Studio コンピューターで Windows ファイアウォールを構成するには  
  オペレーティング システムによって、Windows ファイアウォールの構成手順は多少異なります。 Windows 7 または Windows Server 2008 では **プログラム** という用語が使用されますが、Windows 8/8.1、Windows 10、Windows Server 2012 では **アプリ** という用語が使用されます。  次の手順では **アプリ**という用語を使用します。  

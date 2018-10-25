@@ -1,7 +1,7 @@
 ---
 title: Spy++ リファレンス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0b59d82b95115c230d177ea322f5f4e376b3a40d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5ed0dc159521901827116fb23adc22980de84113
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535772"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49301523"
 ---
 # <a name="spy-reference"></a>Spy++ リファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[spy++ リファレンス](https://docs.microsoft.com/visualstudio/debugger/spy-increment-reference)します。  
-  
 各 spy++ メニューおよびダイアログ ボックスの説明については、以下のセクションを参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

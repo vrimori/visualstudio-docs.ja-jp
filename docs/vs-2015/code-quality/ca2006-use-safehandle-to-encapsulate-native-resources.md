@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2006: 使用 SafeHandle ネイティブ リソースをカプセル化する |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 08eed3577a8c225a69c5a3a8a9b4a1348656bd3f
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 88d53d90d00f58706e366b54dfa78b59e499bc24
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589705"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935381"
 ---
 # <a name="ca2006-use-safehandle-to-encapsulate-native-resources"></a>CA2006: SafeHandle を使用して、ネイティブ リソースを要約します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA2006: ネイティブ リソースをカプセル化する SafeHandle を使用して](https://docs.microsoft.com/visualstudio/code-quality/ca2006-use-safehandle-to-encapsulate-native-resources)します。
 
 |||
 |-|-|

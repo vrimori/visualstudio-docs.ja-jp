@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumNestedClasses |Microsoft ドキュメント
+title: IDebugClassField::EnumNestedClasses |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 382e822a03a7a4e4a9ae30b41b4b9a4a7ec1643f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a313e27c3dcbca0136b00bfb789e444174474369
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31101759"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937531"
 ---
 # <a name="idebugclassfieldenumnestedclasses"></a>IDebugClassField::EnumNestedClasses
-このクラスで入れ子にされたクラスの列挙子を作成します。  
+このクラスに入れ子になったクラスの列挙子を作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,12 +41,12 @@ int EnumNestedClasses(
   
 #### <a name="parameters"></a>パラメーター  
  `ppEnum`  
- [out]返します、 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)入れ子になったクラスの一覧を表すオブジェクト。 入れ子になったクラスが存在しない場合は、null 値を返します。  
+ [out]返します、 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)入れ子になったクラスの一覧を表すオブジェクト。 入れ子になったクラスがない場合は、null 値を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、S_OK を返します。 または、入れ子になったクラスが存在しない場合は S_FALSE を返します。 それ以外の場合はエラー コードを返します。  
+ 成功した場合は S_OK を返します。 または入れ子になったクラスがない場合は S_FALSE を返します。 それ以外の場合はエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  列挙体の各要素は、 [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)入れ子になったクラスを記述するオブジェクト。  
   
  入れ子になったクラスは、別のクラス内で定義されたクラスです。 例えば:  
@@ -57,7 +57,7 @@ class RootClass {
 };  
 ```  
   
- [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)列挙には 1 つのオブジェクトを表す、`NestedClass`クラスです。  
+ [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)列挙型を表すオブジェクトの 1 つが含まれます、`NestedClass`クラス。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   

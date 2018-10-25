@@ -1,7 +1,7 @@
 ---
 title: .NET 用の visual Studio データ ツール |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -11,12 +11,12 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 759aaa1f6860d6b8e95aeaae786532ff406acbb4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 841311af90ddf4bedfb9d055e5764068cdc71632
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536883"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49859708"
 ---
 # <a name="visual-studio-data-tools-for-net"></a>.NET 用の Visual Studio データ ツール
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,17 +31,17 @@ Visual Studio と .NET Framework は、さら広範な API とツールのデー
   
  一般的なワークフローは、  
   
-1.  開発またはテスト データベースをローカル コンピューターにインストールします。 参照してください[データベース システム、ツール、およびサンプルをインストールする](../data-tools/installing-database-systems-tools-and-samples.md)します。 Azure データ サービスを使用している場合、この手順は必要ではありません。  
+1. 開発またはテスト データベースをローカル コンピューターにインストールします。 参照してください[データベース システム、ツール、およびサンプルをインストールする](../data-tools/installing-database-systems-tools-and-samples.md)します。 Azure データ サービスを使用している場合、この手順は必要ではありません。  
   
-2.  Visual Studio でのデータベース (またはサービスまたはローカル ファイル) への接続をテストします。 参照してください[新しい接続を追加](../data-tools/add-new-connections.md)します。  
+2. Visual Studio でのデータベース (またはサービスまたはローカル ファイル) への接続をテストします。 参照してください[新しい接続を追加](../data-tools/add-new-connections.md)します。  
   
-3.  (省略可能)生成し、新しいモデルを構成するには、ツールを使用します。 Entity Framework に基づくモデルは、新しいアプリケーションの既定の推奨事項です。 どちらを使用すると、モデルは、アプリケーションと対話するデータ ソースです。 モデルは、データベースまたはサービスとアプリケーションの間に論理的にします。  参照してください[新しいデータ ソースの追加](../data-tools/add-new-data-sources.md)します。  
+3. (省略可能)生成し、新しいモデルを構成するには、ツールを使用します。 Entity Framework に基づくモデルは、新しいアプリケーションの既定の推奨事項です。 どちらを使用すると、モデルは、アプリケーションと対話するデータ ソースです。 モデルは、データベースまたはサービスとアプリケーションの間に論理的にします。  参照してください[新しいデータ ソースの追加](../data-tools/add-new-data-sources.md)します。  
   
-4.  ドラッグ元のデータ ソース、**データ ソース**ウィンドウを指定した方法でユーザーに、データを表示するデータ バインド コードを生成する Windows フォーム、ASP.NET、または Windows Presentation Foundation デザイン サーフェイスにします。 参照してください[Visual Studio でのデータ コントロールをバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)します。  
+4. ドラッグ元のデータ ソース、**データ ソース**ウィンドウを指定した方法でユーザーに、データを表示するデータ バインド コードを生成する Windows フォーム、ASP.NET、または Windows Presentation Foundation デザイン サーフェイスにします。 参照してください[Visual Studio でのデータ コントロールをバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)します。  
   
-5.  点など、ビジネス ルール、検索、およびデータの検証、または基になるデータベースを公開するカスタム機能を活用するためのカスタム コードを追加します。  
+5. 点など、ビジネス ルール、検索、およびデータの検証、または基になるデータベースを公開するカスタム機能を活用するためのカスタム コードを追加します。  
   
- 手順 3. を省略し、モデルを使用するのではなく、データベースに直接コマンドを発行する .NET アプリケーションをプログラミングできます。 この場合は、ここで、関連するドキュメントが表示されます: [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx\(v=vs.110\).aspx)します。 使用することもできる、データ ソース構成ウィザードとデザイナー メモリとし、それらのオブジェクトを UI コントロールをデータ バインドで、独自のオブジェクトの値を設定する際に、データ バインド コードを生成するに注意してください。  
+   手順 3. を省略し、モデルを使用するのではなく、データベースに直接コマンドを発行する .NET アプリケーションをプログラミングできます。 この場合は、ここで、関連するドキュメントが表示されます: [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx\(v=vs.110\).aspx)します。 使用することもできる、データ ソース構成ウィザードとデザイナー メモリとし、それらのオブジェクトを UI コントロールをデータ バインドで、独自のオブジェクトの値を設定する際に、データ バインド コードを生成するに注意してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

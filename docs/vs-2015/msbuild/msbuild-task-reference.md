@@ -1,7 +1,7 @@
 ---
 title: MSBuild タスク リファレンス | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 43b7b413d403f2b85cc5c8e792cbee19488f8f11
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b6f1767ce1c572e1e3d8eacae8ba3a60f3593476
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533296"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49193993"
 ---
 # <a name="msbuild-task-reference"></a>MSBuild タスク リファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MSBuild タスク リファレンス](https://docs.microsoft.com/visualstudio/msbuild/msbuild-task-reference)します。  
-  
   
 タスクでは、ビルド プロセスの間に実行するコードを指定します。 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] に含まれるタスクの一覧を次に示します。 [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] をインストールすると、[!INCLUDE[vcprvc](../includes/vcprvc-md.md)] プロジェクトを構築するために次の追加タスクを使用できるようになります。 詳細については、「[Visual C++ に固有の MSBuild タスク](../msbuild/msbuild-tasks-specific-to-visual-cpp.md)」を参照してください。  
   

@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 500426eb7fda2c35f74b899154d9153a91d5020b
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: aa82c7f12b3932c1e9f5aac7392d6ef2b8e8a773
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34746261"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49885855"
 ---
 # <a name="how-to-specify-build-events-c"></a>方法 : ビルド イベントを指定する (C#)
 
@@ -75,75 +75,75 @@ ms.locfileid: "34746261"
 
 ### <a name="to-create-an-exe-command-to-change-the-application-manifest"></a>アプリケーション マニフェストを変更する .exe コマンドを作成するには
 
-1.  コマンド用のコンソール アプリケーションを作成します。 **[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックします。
+1. コマンド用のコンソール アプリケーションを作成します。 **[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックします。
 
-2.  **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual C#]** を展開し、**[Windows]** をクリックして、**[コンソール アプリケーション]** テンプレートをクリックします。 プロジェクトに `ChangeOSVersionCS` という名前を付けます。
+2. **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual C#]** を展開し、**[Windows]** をクリックして、**[コンソール アプリケーション]** テンプレートをクリックします。 プロジェクトに `ChangeOSVersionCS` という名前を付けます。
 
-3.  *Program.cs* で、ファイルの先頭にある他の `using` ステートメントに次の行を追加します。
+3. *Program.cs* で、ファイルの先頭にある他の `using` ステートメントに次の行を追加します。
 
-    ```csharp
-    using System.Xml;
-    ```
+   ```csharp
+   using System.Xml;
+   ```
 
-4.  `ChangeOSVersionCS` 名前空間で、`Program` クラスの実装を次のコードに置き換えます。
+4. `ChangeOSVersionCS` 名前空間で、`Program` クラスの実装を次のコードに置き換えます。
 
-    ```csharp
-    class Program
-    {
-       /// <summary>
-       /// This function will set the minimum operating system version for a ClickOnce application.
-       /// </summary>
-       /// <param name="args">
-       /// Command Line Arguments:
-       /// 0 - Path to application manifest (.exe.manifest).
-       /// 1 - Version of OS
-       ///</param>
-       static void Main(string[] args)
-       {
-          string applicationManifestPath = args[0];
-          Console.WriteLine("Application Manifest Path: " + applicationManifestPath);
+   ```csharp
+   class Program
+   {
+      /// <summary>
+      /// This function will set the minimum operating system version for a ClickOnce application.
+      /// </summary>
+      /// <param name="args">
+      /// Command Line Arguments:
+      /// 0 - Path to application manifest (.exe.manifest).
+      /// 1 - Version of OS
+      ///</param>
+      static void Main(string[] args)
+      {
+         string applicationManifestPath = args[0];
+         Console.WriteLine("Application Manifest Path: " + applicationManifestPath);
 
-          // Get version name.
-          Version osVersion = null;
-          if (args.Length >=2 ){
-             osVersion = new Version(args[1]);
-          }else{
-             throw new ArgumentException("OS Version not specified.");
-          }
-          Console.WriteLine("Desired OS Version: " + osVersion.ToString());
+         // Get version name.
+         Version osVersion = null;
+         if (args.Length >=2 ){
+            osVersion = new Version(args[1]);
+         }else{
+            throw new ArgumentException("OS Version not specified.");
+         }
+         Console.WriteLine("Desired OS Version: " + osVersion.ToString());
 
-          XmlDocument document;
-          XmlNamespaceManager namespaceManager;
-          namespaceManager = new XmlNamespaceManager(new NameTable());
-          namespaceManager.AddNamespace("asmv1", "urn:schemas-microsoft-com:asm.v1");
-          namespaceManager.AddNamespace("asmv2", "urn:schemas-microsoft-com:asm.v2");
+         XmlDocument document;
+         XmlNamespaceManager namespaceManager;
+         namespaceManager = new XmlNamespaceManager(new NameTable());
+         namespaceManager.AddNamespace("asmv1", "urn:schemas-microsoft-com:asm.v1");
+         namespaceManager.AddNamespace("asmv2", "urn:schemas-microsoft-com:asm.v2");
 
-          document = new XmlDocument();
-          document.Load(applicationManifestPath);
+         document = new XmlDocument();
+         document.Load(applicationManifestPath);
 
-          string baseXPath;
-          baseXPath = "/asmv1:assembly/asmv2:dependency/asmv2:dependentOS/asmv2:osVersionInfo/asmv2:os";
+         string baseXPath;
+         baseXPath = "/asmv1:assembly/asmv2:dependency/asmv2:dependentOS/asmv2:osVersionInfo/asmv2:os";
 
-          // Change minimum required operating system version.
-          XmlNode node;
-          node = document.SelectSingleNode(baseXPath, namespaceManager);
-          node.Attributes["majorVersion"].Value = osVersion.Major.ToString();
-          node.Attributes["minorVersion"].Value = osVersion.Minor.ToString();
-          node.Attributes["buildNumber"].Value = osVersion.Build.ToString();
-          node.Attributes["servicePackMajor"].Value = osVersion.Revision.ToString();
+         // Change minimum required operating system version.
+         XmlNode node;
+         node = document.SelectSingleNode(baseXPath, namespaceManager);
+         node.Attributes["majorVersion"].Value = osVersion.Major.ToString();
+         node.Attributes["minorVersion"].Value = osVersion.Minor.ToString();
+         node.Attributes["buildNumber"].Value = osVersion.Build.ToString();
+         node.Attributes["servicePackMajor"].Value = osVersion.Revision.ToString();
 
-          document.Save(applicationManifestPath);
-       }
-    }
-    ```
+         document.Save(applicationManifestPath);
+      }
+   }
+   ```
 
-     このコマンドは、2 つの引数を受け取ります。1 つはアプリケーション マニフェストへのパス (つまり、ビルド処理でマニフェストが作成されるフォルダーであり、通常は *Projectname.publish*)、もう 1 つは新しいオペレーティング システムのバージョンです。
+    このコマンドは、2 つの引数を受け取ります。1 つはアプリケーション マニフェストへのパス (つまり、ビルド処理でマニフェストが作成されるフォルダーであり、通常は *Projectname.publish*)、もう 1 つは新しいオペレーティング システムのバージョンです。
 
-5.  プロジェクトをビルドします。 **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
+5. プロジェクトをビルドします。 **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
-6.  *.exe* ファイルを *C:\TEMP\ChangeOSVersionVB.exe* などのディレクトリにコピーします。
+6. *.exe* ファイルを *C:\TEMP\ChangeOSVersionVB.exe* などのディレクトリにコピーします。
 
- 次に、ビルド後のイベントでこのコマンドを呼び出して、アプリケーション マニフェストを変更します。
+   次に、ビルド後のイベントでこのコマンドを呼び出して、アプリケーション マニフェストを変更します。
 
 ### <a name="to-invoke-a-post-build-event-to-modify-the-application-manifest"></a>ビルド後のイベントを呼び出してアプリケーション マニフェストを変更するには
 

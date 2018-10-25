@@ -1,7 +1,7 @@
 ---
 title: ブートス トラップ パッケージを作成する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -26,18 +26,16 @@ caps.latest.revision: 47
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: ee6badf48d0d196001c948495f9b658114c66ff6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: dcc331defab98303a805f75f75afb3e309c7d2dd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539290"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910928"
 ---
 # <a name="creating-bootstrapper-packages"></a>ブートストラップ パッケージの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ブートス トラップ パッケージを作成する](https://docs.microsoft.com/visualstudio/deployment/creating-bootstrapper-packages)します。  
-  
 セットアップ プログラムは、Windows インストーラー (.msi) ファイルや実行可能プログラムなどの再頒布可能コンポーネントを検出およびインストールするように構成できる汎用的なインストーラーです。 インストーラーはブートストラップとも呼ばれます。 ブートストラップは、コンポーネントのインストールを管理するためのメタデータを指定する、一連の XML マニフェストによってプログラミングされます。  
   
  ブートストラップでは、まず、既にインストールされている必須コンポーネントがあるかどうかが検出されます。 必須コンポーネントがインストールされていない場合、ライセンス条項が表示されます。 次に、エンド ユーザーがライセンス条項に同意すると、必須コンポーネントのインストールが開始されます。 すべての必須コンポーネントが検出された場合は、そのままアプリケーション インストーラーが開始されます。  
@@ -47,37 +45,37 @@ ms.locfileid: "47539290"
   
  ブートストラップ パッケージを作成するには、Bootstrapper Manifest Generator に EXE 形式または MSI 形式の再頒布可能ファイルを指定する必要があります。 Bootstrapper Manifest Generator によって次のファイルが作成されます。  
   
--   パッケージの言語的に中立なメタデータをすべて含む製品マニフェスト (product.xml)。 再頒布可能コンポーネントのすべてのローカライズ バージョンに共通するメタデータが含まれます。  
+- パッケージの言語的に中立なメタデータをすべて含む製品マニフェスト (product.xml)。 再頒布可能コンポーネントのすべてのローカライズ バージョンに共通するメタデータが含まれます。  
   
--   言語固有のメタデータを含むパッケージ マニフェスト (package.xml)。通常、ローカライズされたエラー メッセージが含まれます。 コンポーネントの各ローカライズ バージョンに対して、少なくとも 1 つのパッケージ マニフェストが必要です。  
+- 言語固有のメタデータを含むパッケージ マニフェスト (package.xml)。通常、ローカライズされたエラー メッセージが含まれます。 コンポーネントの各ローカライズ バージョンに対して、少なくとも 1 つのパッケージ マニフェストが必要です。  
   
- これらのファイルが作成されたら、製品マニフェスト ファイルをカスタム ブートストラップ名のフォルダーに格納します。 パッケージ マニフェスト ファイルは、ロケール名のフォルダーに格納します。 たとえば、英語の再頒布用のパッケージ マニフェスト ファイルは、en というフォルダーに格納します。 日本語用は ja、ドイツ語用は de など、ロケールごとにこの手順を繰り返します。 最終的に、カスタム ブートストラップ パッケージは次のようなフォルダー構造になります。  
+  これらのファイルが作成されたら、製品マニフェスト ファイルをカスタム ブートストラップ名のフォルダーに格納します。 パッケージ マニフェスト ファイルは、ロケール名のフォルダーに格納します。 たとえば、英語の再頒布用のパッケージ マニフェスト ファイルは、en というフォルダーに格納します。 日本語用は ja、ドイツ語用は de など、ロケールごとにこの手順を繰り返します。 最終的に、カスタム ブートストラップ パッケージは次のようなフォルダー構造になります。  
   
- `CustomBootstrapperPackage`  
+  `CustomBootstrapperPackage`  
   
- `product.xml`  
+  `product.xml`  
   
- `CustomBootstrapper.msi`  
+  `CustomBootstrapper.msi`  
   
- `de`  
+  `de`  
   
- `eula.rtf`  
+  `eula.rtf`  
   
- `package.xml`  
+  `package.xml`  
   
- `en`  
+  `en`  
   
- `eula.rtf`  
+  `eula.rtf`  
   
- `package.xml`  
+  `package.xml`  
   
- `ja`  
+  `ja`  
   
- `eula.rtf`  
+  `eula.rtf`  
   
- `package.xml`  
+  `package.xml`  
   
- 最後に、再頒布可能ファイルをブートストラップ フォルダーにコピーします。 詳細については、「 [How to: Create a Localized Bootstrapper Package](../deployment/how-to-create-a-localized-bootstrapper-package.md)」を参照してください。  
+  最後に、再頒布可能ファイルをブートストラップ フォルダーにコピーします。 詳細については、「 [How to: Create a Localized Bootstrapper Package](../deployment/how-to-create-a-localized-bootstrapper-package.md)」を参照してください。  
   
 ```  
 \Program Files\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages  
@@ -133,9 +131,9 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
   
 ## <a name="see-also"></a>関連項目  
  [方法: ClickOnce アプリケーションと共に必須コンポーネントをインストールする](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
- [前提条件 ダイアログ ボックス](../ide/reference/prerequisites-dialog-box.md)   
+ [[必須コンポーネント] ダイアログ ボックス](../ide/reference/prerequisites-dialog-box.md)   
  [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)   
- [インストールを促進する Visual Studio 2005 ブートス トラップを使用します。](http://go.microsoft.com/fwlink/?LinkId=107537)
+ [Visual Studio 2005 ブートストラップを使用してインストールを促進する](http://go.microsoft.com/fwlink/?LinkId=107537)
 
 
 

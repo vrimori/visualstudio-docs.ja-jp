@@ -1,7 +1,7 @@
 ---
 title: IDebugPortSupplier2::GetPortSupplierId |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 741d0829-0943-49bf-b56e-61e836043006
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3ace2811a484a888a18b2b5b12ac301e20336cec
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8ba463bf35eb45d8884a01d05e25716ccedab1ab
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546295"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823724"
 ---
 # <a name="idebugportsupplier2getportsupplierid"></a>IDebugPortSupplier2::GetPortSupplierId
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugPortSupplier2::GetPortSupplierId](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugportsupplier2-getportsupplierid)します。  
-  
 ポート サプライヤーの識別子を取得します。  
   
 ## <a name="syntax"></a>構文  

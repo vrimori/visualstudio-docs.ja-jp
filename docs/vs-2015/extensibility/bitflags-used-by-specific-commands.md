@@ -1,7 +1,7 @@
 ---
 title: 特定のコマンドで使用されるビットフラグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 37969977-6f7d-45c9-ba03-1306ae71f5d1
 caps.latest.revision: 25
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7f9a633dd88e0018c6c9ccc82438ed99770885c1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 97569043b84cbfc18a62e3058f03e4f7f6c4b8f7
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540275"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49300366"
 ---
 # <a name="bitflags-used-by-specific-commands"></a>特定のコマンドで使用されるビットフラグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[特定のコマンドで使用されるビットフラグ](https://docs.microsoft.com/visualstudio/extensibility/bitflags-used-by-specific-commands)します。  
-  
 1 つの値で 1 つ以上のビットを設定して、さまざまなソース管理プラグイン API の関数の動作を変更できます。 これらの値は、ビットフラグと呼ばれます。 ソース管理プラグイン API によって使用されるビットフラグのさまざまな詳細についてはここでは、それらを使用する関数によってグループ化します。  
   
 ## <a name="checked-out-flag"></a>チェック アウト フラグ  

@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e847322b1bbbefec5c7013d7e90475e08f42694b
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 4ea90a97067e92d39772bd4257dc3abbae58d1d8
+ms.sourcegitcommit: 40b6438b5acd7e59337a382c39ec711b9e99cc8a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499544"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100966"
 ---
 # <a name="django-web-project-template"></a>Django Web プロジェクト テンプレート
 
@@ -56,7 +56,7 @@ Django 管理コンソールには、**[プロジェクト]** メニューのさ
 
     ![コンソール](media/template-django-console-sync-db.png)
 
-- **[静的ファイルの収集]**: `manage.py collectstatic --noinput` を実行して、*settings.py* の `STATIC_ROOT` で指定されたパスにすべての統計ファイルをコピーします。 [[Microsoft Azure に発行]](publishing-python-web-applications-to-azure-from-visual-studio.md) を選択すると、統計ファイルは発行操作の一部として収集されます。
+- **[静的ファイルの収集]**: `manage.py collectstatic --noinput` を実行して、*settings.py* の `STATIC_ROOT` で指定されたパスにすべての統計ファイルをコピーします。
 
     ![コンソール](media/template-django-console-collect-static.png)
 

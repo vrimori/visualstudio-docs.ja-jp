@@ -1,7 +1,7 @@
 ---
 title: IDebugProgramNode2::GetHostName |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 16aad1ff-ad34-4394-a2e4-5621374a7729
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f90e4d2db358cae62be74941b01afd49537cce26
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b84d51d92e12dfc5fdb744c10d5b6cc13a606d95
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546395"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836243"
 ---
 # <a name="idebugprogramnode2gethostname"></a>IDebugProgramNode2::GetHostName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugProgramNode2::GetHostName](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugprogramnode2-gethostname)します。  
-  
 プログラムをホストするプロセスの名前を取得します。  
   
 ## <a name="syntax"></a>構文  

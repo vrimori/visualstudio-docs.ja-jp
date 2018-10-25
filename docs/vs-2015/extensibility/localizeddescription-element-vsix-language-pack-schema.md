@@ -1,7 +1,7 @@
 ---
 title: LocalizedDescription 要素 (VSIX 言語パックのスキーマ) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 766a1732-bbaf-4875-b276-feb42169633a
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e509573518ebf779cb15bc2859bacc61c336f7f7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: dbcad72308e9b78a5fcc6865c6070cc887eed06e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545719"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49826480"
 ---
 # <a name="localizeddescription-element-vsix-language-pack-schema"></a>LocalizedDescription 要素 (VSIX 言語パックのスキーマ)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[LocalizedDescription 要素 (VSIX 言語パックのスキーマ)](https://docs.microsoft.com/visualstudio/extensibility/localizeddescription-element-vsix-language-pack-schema)します。  
-  
 必須。 拡張機能のローカライズされた説明を提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -59,12 +57,12 @@ ms.locfileid: "47545719"
   
 ## <a name="element-information"></a>要素情報  
   
-|||  
-|-|-|  
-|名前空間|http://schemas.microsoft.com/developer/vsx-schema-lp/2010|  
-|スキーマ名|VSIX 言語パックのスキーマ|  
-|検証ファイル|VSIXLanguagePackSchema.xsd|  
-|空にすることができます。|利用不可|  
+|                 |                                                           |
+|-----------------|-----------------------------------------------------------|
+|    名前空間    | http://schemas.microsoft.com/developer/vsx-schema-lp/2010 |
+|   スキーマ名   |                 VSIX 言語パックのスキーマ                 |
+| 検証ファイル |                VSIXLanguagePackSchema.xsd                 |
+|  空にすることができます。   |                      利用不可                       |
   
 ## <a name="see-also"></a>関連項目  
  [VSX 言語パックのスキーマ リファレンス](../extensibility/vsx-language-pack-schema-reference.md)   

@@ -1,7 +1,7 @@
 ---
 title: ClickOnce アプリケーションにおけるローカルおよびリモート データへのアクセス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 3659df70b6b253d0cf23bb8eb033709fc6916e5f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4fe0c0b1cd7659a5887f267181ffd6fa7bb5e8d4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548169"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49218844"
 ---
 # <a name="accessing-local-and-remote-data-in-clickonce-applications"></a>ClickOnce アプリケーションにおけるローカル データおよびリモート データへのアクセス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ローカルへのアクセスとリモート データには、ClickOnce アプリケーション](https://docs.microsoft.com/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)します。  
-  
 ほとんどのアプリケーションはデータを使用または作成します。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] には、データをローカルとリモートの両方で読み書きするための各種のオプションがあります。  
   
 ## <a name="local-data"></a>ローカル データ  
@@ -75,16 +73,16 @@ ms.locfileid: "47548169"
 #### <a name="data-directory-and-application-versions"></a>データ ディレクトリとアプリケーションのバージョン  
  アプリケーションの各バージョンのデータはそれぞれ別のデータ ディレクトリに格納され、バージョンごとに分離されます。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] では、配置にデータ ファイルが含まれていてもいなくても、アプリケーションが実行時にデータ ファイルを新規作成する場所として使用できるように、このデータ ディレクトリが作成されます。 アプリケーションの新しいバージョンをインストールすると、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] により、前のバージョンのデータ ディレクトリから新しいバージョンのデータ ディレクトリに、既存のデータ ファイルがすべてコピーされます。このとき、そのデータ ファイルが元の配置に含まれていたデータ ファイルであるか、アプリケーションによって作成されたデータ ファイルであるかは区別されません。  
   
- データ ファイルのハッシュ値がアプリケーションの古いバージョンと新しいバージョンとで異なる場合、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] は、古いバージョンのファイルをサーバーにある新しいバージョンのファイルで置き換えます。 また、以前のバージョンのアプリケーションで作成された新しいファイルの名前が、新しいバージョンの配置に含まれているファイルと同じ名前の場合、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] は、古いバージョンのファイルを新しいファイルで上書きします。 どちらの場合にも、古いファイルはデータ ディレクトリの `.pre`という名前のサブディレクトリに保存されるため、アプリケーションは移行時にそれらの古いデータにアクセスできます。  
+ データ ファイルのハッシュ値がアプリケーションの古いバージョンと新しいバージョンとで異なる場合、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] は、古いバージョンのファイルをサーバーにある新しいバージョンのファイルで置き換えます。 また、以前のバージョンのアプリケーションで作成された新しいファイルの名前が、新しいバージョンの配置に含まれているファイルと同じ名前の場合、 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] は、古いバージョンのファイルを新しいファイルで上書きします。 どちらの場合にも、古いファイルはデータ ディレクトリの `.pre`という名前のサブディレクトリに保存されるため、アプリケーションは移行時にそれらの古いデータにアクセスできます。  
   
- データをより細かく移行する必要がある場合は、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Deployment API を使用して、古いデータ ディレクトリから新しいデータ ディレクトリへのカスタム移行を実行できます。 利用可能なダウンロードを <xref:System.Deployment.Application.ApplicationDeployment.IsFirstRun%2A>を使用してテストし、 <xref:System.Deployment.Application.ApplicationDeployment.Update%2A> または <xref:System.Deployment.Application.ApplicationDeployment.UpdateAsync%2A>を使用して更新プログラムをダウンロードし、更新が完了した後に各自のカスタム データ移行タスクを実行する必要があります。  
+ データをより細かく移行する必要がある場合は、 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Deployment API を使用して、古いデータ ディレクトリから新しいデータ ディレクトリへのカスタム移行を実行できます。 利用可能なダウンロードを <xref:System.Deployment.Application.ApplicationDeployment.IsFirstRun%2A>を使用してテストし、 <xref:System.Deployment.Application.ApplicationDeployment.Update%2A> または <xref:System.Deployment.Application.ApplicationDeployment.UpdateAsync%2A>を使用して更新プログラムをダウンロードし、更新が完了した後に各自のカスタム データ移行タスクを実行する必要があります。  
   
 ### <a name="isolated-storage"></a>分離ストレージ  
  分離ストレージには、簡単な操作でファイルを作成したりアクセスしたりできる API が用意されています。 格納したファイルの実際の場所は、開発者からもユーザーからも隠されます。  
   
  分離ストレージは、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] のすべてのバージョンで動作します。 分離ストレージは、部分的に信頼されたアプリケーション内でも、アクセス許可を追加せずに動作します。 アプリケーションを部分的に信頼された状態で実行する必要がある場合に、アプリケーション固有のデータを保守する必要があるときは、分離ストレージを使用する必要があります。  
   
- 詳細については、次を参照してください。[分離ストレージ](http://msdn.microsoft.com/library/aff939d7-9e49-46f2-a8cd-938d3020e94e)します。  
+ 詳細については、「 [分離ストレージ](http://msdn.microsoft.com/library/aff939d7-9e49-46f2-a8cd-938d3020e94e)」を参照してください。  
   
 ### <a name="other-local-files"></a>その他のローカル ファイル  
  アプリケーションでレポート、画像、音楽などのエンド ユーザー データを処理し、保存する必要がある場合は、アプリケーションにおいて、 <xref:System.Security.Permissions.FileIOPermission> によりローカル ファイル システムに対するデータの読み込みと書き込みを実行することが必要になります。  
@@ -93,7 +91,7 @@ ms.locfileid: "47548169"
  アプリケーションでは、実行時に、顧客データや市場情報などの情報をリモートの Web サイトから取得する必要が生じることがあります。 このセクションでは、リモート データを取得するための最も一般的な手法について説明します。  
   
 ### <a name="accessing-files-by-using-http"></a>HTTP によるファイル アクセス  
- <xref:System.Net.WebClient> 名前空間にある <xref:System.Net.HttpWebRequest> クラスまたは <xref:System.Net> クラスを使用すると、Web サーバー上のデータにアクセスできます。 アクセスできるデータは、静的なファイルか、未加工のテキストまたは XML データを返す [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] アプリケーションのいずれかです。 データが XML 形式の場合には、 <xref:System.Xml.XmlDocument> クラスを使用してデータを取得すると、最も高速です。このクラスの <xref:System.Xml.XmlDocument.Load%2A> メソッドには引数として URL を渡します。 例については、次を参照してください。 [DOM に XML ドキュメントの読み取り](http://msdn.microsoft.com/library/a4fb291f-5630-49ba-a49a-5b66c3b71e49)します。  
+ <xref:System.Net.WebClient> 名前空間にある <xref:System.Net.HttpWebRequest> クラスまたは <xref:System.Net> クラスを使用すると、Web サーバー上のデータにアクセスできます。 アクセスできるデータは、静的なファイルか、未加工のテキストまたは XML データを返す [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] アプリケーションのいずれかです。 データが XML 形式の場合には、 <xref:System.Xml.XmlDocument> クラスを使用してデータを取得すると、最も高速です。このクラスの <xref:System.Xml.XmlDocument.Load%2A> メソッドには引数として URL を渡します。 例については、「 [Reading an XML Document into the DOM](http://msdn.microsoft.com/library/a4fb291f-5630-49ba-a49a-5b66c3b71e49)」を参照してください。  
   
  アプリケーションから HTTP 経由でリモート データにアクセスする場合は、セキュリティを考慮する必要があります。 既定では、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションによるネットワーク リソースへのアクセスは、アプリケーションが配置された方法に応じて制限される場合があります。 この制限は、悪意のあるプログラムが特権の必要なリモート データへのアクセスを取得したり、ユーザーのコンピューターを使用してネットワーク上の他のコンピューターを攻撃したりすることを防ぐ目的で適用されます。  
   

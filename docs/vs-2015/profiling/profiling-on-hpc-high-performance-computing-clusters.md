@@ -1,7 +1,7 @@
 ---
 title: 高性能コンピューティング (HPC) クラスターでのプロファイリング | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -26,28 +26,26 @@ caps.latest.revision: 27
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c67732552239f995b5edd6a328ae1de4fa379e3a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 67cc55d47e10093b440597ce464d7cc058689455
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539356"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920366"
 ---
 # <a name="profiling-on-hpc-high-performance-computing-clusters"></a>高性能コンピューティング (HPC) クラスターでのプロファイリング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[(ハイ パフォーマンス コンピューティング) HPC クラスターでプロファイリング](https://docs.microsoft.com/visualstudio/profiling/profiling-on-hpc-high-performance-computing-clusters)します。  
-  
 [!INCLUDE[vsPreExt](../includes/vspreext-md.md)] プロファイリング ツールまたは [!INCLUDE[vsUltExt](../includes/vsultext-md.md)] プロファイリング ツールのサンプリング メソッドを使用して、Microsoft Windows HPC クラスターの計算ノード上でプロファイリングを実行できます。 HPC の詳細については、Microsoft の Web サイトの [Windows HPC](http://go.microsoft.com/fwlink/?LinkId=165393) に関する記事を参照してください。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  HPC 計算ノード上でプロファイリングを実行する前に、次の操作を実行する必要があります。  
   
--   [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] と同じコンピューター上に Microsoft HPC Pack 2008 をインストールします。 HPC クラスターの一部を構成するコンピューターである必要はありません。 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=177414)で HPC Pack をインストールできます。  
+- [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] と同じコンピューター上に Microsoft HPC Pack 2008 をインストールします。 HPC クラスターの一部を構成するコンピューターである必要はありません。 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=177414)で HPC Pack をインストールできます。  
   
--   [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] とスタンドアロン バージョンのプロファイリング ツールを HPC 計算ノードにインストールします。 [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] のインストール メディアで、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] とスタンドアロン プロファイラーの両方のインストール プログラムを入手できます。 **メモ** [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] をインストールし終えたら、プロファイリング ツールをインストールする前に、計算ノードを再起動する必要があります。  
+- [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] とスタンドアロン バージョンのプロファイリング ツールを HPC 計算ノードにインストールします。 [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] のインストール メディアで、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] とスタンドアロン プロファイラーの両方のインストール プログラムを入手できます。 **メモ** [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] をインストールし終えたら、プロファイリング ツールをインストールする前に、計算ノードを再起動する必要があります。  
   
- アクティブな HPC 計算ノードに [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] とスタンドアロンのプロファイリング ツールをインストールし、クラスター コンピューター上でのプロファイリングを有効にするには、次の手順を実行します。  
+  アクティブな HPC 計算ノードに [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] とスタンドアロンのプロファイリング ツールをインストールし、クラスター コンピューター上でのプロファイリングを有効にするには、次の手順を実行します。  
   
 1.  HPC Pack と一緒にインストールされたコマンド プロンプト ウィンドウを開きます。  
   

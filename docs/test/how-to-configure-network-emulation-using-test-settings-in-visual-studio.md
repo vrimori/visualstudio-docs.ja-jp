@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: a4639e59b8c8847a4368a0f3841fa271a302e7ca
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: ce49eb2e6892528d95e40bc1c40e36f355495c65
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380845"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829288"
 ---
 # <a name="how-to-configure-network-emulation-using-test-settings-in-visual-studio"></a>方法: Visual Studio でテストの設定を使用してネットワーク エミュレーションを構成する
 
@@ -38,21 +38,21 @@ Visual Studio から、さまざまなネットワーク環境でアプリケー
 
  Visual Studio は、すべてのテストの種類にソフトウェア ベースのトゥルー ネットワーク エミュレーションを使用します。 これには、ロード テストも含まれます。 トゥルー ネットワーク エミュレーションは、ネットワーク パケットを直接操作することでネットワークの状態をシミュレートします。 トゥルー ネットワーク エミュレーターは、イーサネットなどの信頼できる物理リンクを使用して、ワイヤード ネットワークとワイヤレス ネットワークの両方の動作をエミュレートできます。 次のネットワーク属性がトゥルー ネットワーク エミュレーションに組み込まれます。
 
--   ネットワーク上のラウンド トリップ時間 (待機時間)
+- ネットワーク上のラウンド トリップ時間 (待機時間)
 
--   有効な帯域幅の量
+- 有効な帯域幅の量
 
--   キュー動作
+- キュー動作
 
--   パケット損失
+- パケット損失
 
--   パケットの並べ替え
+- パケットの並べ替え
 
--   エラー反映
+- エラー反映
 
- トゥルー ネットワーク エミュレーションでは、IP アドレスや TCP、UDP、ICMP などのプロトコルに基づいてネットワーク パケットを柔軟にフィルター処理することもできます。
+  トゥルー ネットワーク エミュレーションでは、IP アドレスや TCP、UDP、ICMP などのプロトコルに基づいてネットワーク パケットを柔軟にフィルター処理することもできます。
 
- ネットワーク ベースの開発者およびテスト担当者は、トゥルー ネットワーク エミュレーションを使用して、目的のテスト環境のエミュレート、パフォーマンスの評価、変更の影響の予測、またはテクノロジの最適化に関する決定を行うことができます。 ハードウェア テスト ベッドと比較して、トゥルー ネットワーク エミュレーションは、よりコストが少なく柔軟性に富んだソリューションです。
+  ネットワーク ベースの開発者およびテスト担当者は、トゥルー ネットワーク エミュレーションを使用して、目的のテスト環境のエミュレート、パフォーマンスの評価、変更の影響の予測、またはテクノロジの最適化に関する決定を行うことができます。 ハードウェア テスト ベッドと比較して、トゥルー ネットワーク エミュレーションは、よりコストが少なく柔軟性に富んだソリューションです。
 
 ## <a name="configure-network-emulation-for-your-test-settings"></a>テストの設定を使用したネットワーク エミュレーションの構成
  この手順を実行する前に、Visual Studio からテストの設定を開き、**[データと診断]** ページを選択する必要があります。
@@ -85,4 +85,4 @@ Visual Studio から、さまざまなネットワーク環境でアプリケー
 ## <a name="see-also"></a>関連項目
 
 - [テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)
-- [手動テストの実行 (VSTS)](/vsts/manual-test/getting-started/run-manual-tests)
+- [手動テストの実行 (Azure Test Plans)](/azure/devops/test/run-manual-tests?view=vsts)

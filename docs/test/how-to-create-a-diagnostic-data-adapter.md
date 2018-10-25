@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 0973e110d7f321caa88bef0a3672191298f8fe8e
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 25b332fb822524f5fcab5e06ab97bfe2d6af8529
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380893"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49851609"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>方法: 診断データ アダプターを作成する
 
@@ -33,7 +33,7 @@ ms.locfileid: "39380893"
  診断データ アダプターを作成するときに使用できる主なイベントを次に示します。 診断データ アダプターのイベントの完全な一覧については、<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents> 抽象クラスを参照してください。
 
 |event|説明|
-|-----------|-----------------|
+|-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionStart>|テストの実行を開始します。|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionEnd>|テストの実行を終了します。|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseStart>|テストの実行で各テストを開始します。|
@@ -42,7 +42,7 @@ ms.locfileid: "39380893"
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestStepEnd>|テストで各テスト ステップを終了します。|
 
 > [!NOTE]
-> 手動テストが完了すると、これ以降、データ コレクションイベントは診断データ アダプターに送信されません。 テストを再実行すると、テスト ケース識別子が新しくなります。 ユーザーがテスト中にテストをリセットするか (<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseReset> イベントが発生します)、またはテスト ステップを変更すると、これ以降、データ収集イベントは診断データ アダプターに送信されません。ただし、テスト ケース識別子は変更されません。 テスト ケースがリセットされているかどうかを確認するには、診断データ アダプターでテスト ケース識別子を追跡する必要があります。
+> 手動テストが完了すると、これ以降、データ コレクションイベントは診断データ アダプターに送信されません。 テストを再実行すると、テスト ケース識別子が新しくなります。 ユーザーがテスト中にテストをリセットするか (<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseReset> イベントが発生します)、またはテスト ステップを変更すると、これ以降、データ コレクションイベントは診断データ アダプターに送信されません。ただし、テスト ケース識別子は変更されません。 テスト ケースがリセットされているかどうかを確認するには、診断データ アダプターでテスト ケース識別子を追跡する必要があります。
 
  テストの設定を作成するときに構成した情報に基づいてデータ ファイルを収集する診断データ アダプターを作成するには、次の手順に従って操作します。
 
@@ -52,78 +52,78 @@ ms.locfileid: "39380893"
 
 ### <a name="to-create-and-install-a-diagnostic-data-adapter"></a>診断データ アダプターを作成してインストールするには
 
-1.  新しいクラス ライブラリを作成します。
+1. 新しいクラス ライブラリを作成します。
 
-    1.  **[ファイル]** メニューの **[新規作成]** をポイントし、**[新しいプロジェクト]** をクリックします。
+   1.  **[ファイル]** メニューの **[新規作成]** をポイントし、**[新しいプロジェクト]** をクリックします。
 
-    2.  **[プロジェクトの種類]** で使用する言語をクリックします。
+   2.  **[プロジェクトの種類]** で使用する言語をクリックします。
 
-    3.  **[Visual Studio にインストールされたテンプレート]** で **[クラス ライブラリ]** をクリックします。
+   3.  **[Visual Studio にインストールされたテンプレート]** で **[クラス ライブラリ]** をクリックします。
 
-    4.  診断データ アダプターの名前を入力します。
+   4.  診断データ アダプターの名前を入力します。
 
-    5.  **[OK]** をクリックします。
+   5.  **[OK]** をクリックします。
 
-2.  アセンブリ **Microsoft.VisualStudio.QualityTools.ExecutionCommon** を追加します。
+2. アセンブリ **Microsoft.VisualStudio.QualityTools.ExecutionCommon** を追加します。
 
-    1.  **ソリューション エクスプローラー**で、**[参照]** を右クリックし、**[参照の追加]** コマンドを選択します。
+   1.  **ソリューション エクスプローラー**で、**[参照]** を右クリックし、**[参照の追加]** コマンドを選択します。
 
-    2.  **[.NET]** を選択し、**Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll** を探します。
+   2.  **[.NET]** を選択し、**Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll** を探します。
 
-    3.  **[OK]** をクリックします。
+   3.  **[OK]** をクリックします。
 
-3.  アセンブリ **Microsoft.VisualStudio.QualityTools.Common** を追加します。
+3. アセンブリ **Microsoft.VisualStudio.QualityTools.Common** を追加します。
 
-    1.  **ソリューション エクスプローラー**で、**[参照]** を右クリックし、**[参照の追加]** コマンドを選択します。
+   1.  **ソリューション エクスプローラー**で、**[参照]** を右クリックし、**[参照の追加]** コマンドを選択します。
 
-    2.  **[/.NET]** を選択し、**Microsoft.VisualStudio.QualityTools.Common.dll** を探します。
+   2.  **[/.NET]** を選択し、**Microsoft.VisualStudio.QualityTools.Common.dll** を探します。
 
-    3.  **[OK]** をクリックします。
+   3.  **[OK]** をクリックします。
 
-4.  クラス ファイルに次の `using` ステートメントを追加します。
+4. クラス ファイルに次の `using` ステートメントを追加します。
 
-    ```csharp
-    using Microsoft.VisualStudio.TestTools.Common;
-    using Microsoft.VisualStudio.TestTools.Execution;
-    using System.Linq;
-    using System.Text;
-    using System.Xml;
-    using System;
-    ```
+   ```csharp
+   using Microsoft.VisualStudio.TestTools.Common;
+   using Microsoft.VisualStudio.TestTools.Execution;
+   using System.Linq;
+   using System.Text;
+   using System.Xml;
+   using System;
+   ```
 
-5.  診断データ アダプター用のクラスに <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorTypeUriAttribute> を追加して、診断データ アダプターとして識別します。このとき、**Company**、**Product**、および **Version** を診断データ アダプターに応じた情報に置き換えます。
+5. 診断データ アダプター用のクラスに <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorTypeUriAttribute> を追加して、診断データ アダプターとして識別します。このとき、**Company**、**Product**、および **Version** を診断データ アダプターに応じた情報に置き換えます。
 
-    ```csharp
-    [DataCollectorTypeUri("datacollector://Company/Product/Version")]
-    ```
+   ```csharp
+   [DataCollectorTypeUri("datacollector://Company/Product/Version")]
+   ```
 
-6.  クラスに <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorFriendlyNameAttribute> 属性を追加して、パラメーターを診断データ アダプターに応じた情報に置き換えます。
+6. クラスに <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorFriendlyNameAttribute> 属性を追加して、パラメーターを診断データ アダプターに応じた情報に置き換えます。
 
-    ```csharp
-    [DataCollectorFriendlyName("Collect Log Files", false)]
-    ```
+   ```csharp
+   [DataCollectorFriendlyName("Collect Log Files", false)]
+   ```
 
-     テストの設定アクティビティに表示名が表示されます。
+    テストの設定アクティビティに表示名が表示されます。
 
-    > [!NOTE]
-    > また、<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute> を追加して、このデータ アダプターのカスタム構成エディターの `Type` を指定し、必要に応じて、エディターに使用するヘルプ ファイルを指定できます。
-    >
-    > また、<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorEnabledByDefaultAttribute> を適用し、常に有効にすべきであることを指定できます。
+   > [!NOTE]
+   > また、<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute> を追加して、このデータ アダプターのカスタム構成エディターの `Type` を指定し、必要に応じて、エディターに使用するヘルプ ファイルを指定できます。
+   >
+   > また、<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorEnabledByDefaultAttribute> を適用し、常に有効にすべきであることを指定できます。
 
-7.  診断データ アダプターのクラスは、次のように、<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollector> クラスから継承する必要があります。
+7. 診断データ アダプターのクラスは、次のように、<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollector> クラスから継承する必要があります。
 
-    ```csharp
-    public class MyDiagnosticDataAdapter : DataCollector
-    ```
+   ```csharp
+   public class MyDiagnosticDataAdapter : DataCollector
+   ```
 
-8.  次のように、ローカル変数を追加します。
+8. 次のように、ローカル変数を追加します。
 
-    ```csharp
-    private DataCollectionEvents dataEvents;
-    private DataCollectionLogger dataLogger;
-    private DataCollectionSink dataSink;
-    private XmlElement configurationSettings;
-    ```
+   ```csharp
+   private DataCollectionEvents dataEvents;
+   private DataCollectionLogger dataLogger;
+   private DataCollectionSink dataSink;
+   private XmlElement configurationSettings;
+   ```
 
 9. <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollector.Initialize*> メソッドと **Dispose** メソッドを追加します。 `Initialize` メソッドでは、次のように、データ シンクおよびテストの設定の構成データを初期化し、使用するイベント ハンドラーを登録します。
 
@@ -257,7 +257,7 @@ ms.locfileid: "39380893"
     >
     > その他の構成ファイルの例については、インストール ディレクトリ内の *Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\DataCollectors* を参照してください。
 
-     テストの実行時に環境を使用するようにテストの設定を構成する方法の詳細については、[手動テストで診断データを収集する方法 (VSTS) ](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)に関するページを参照してください。
+     テストの実行時に環境を使用するようにテストの設定を構成する方法の詳細については、[手動テストで診断データを収集する方法 (Azure Test Plans) ](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)に関するページを参照してください。
 
      構成ファイルのインストールに関する詳細については、「[方法: カスタム診断データ アダプターをインストールする](../test/how-to-install-a-custom-diagnostic-data-adapter.md)」を参照してください。
 
@@ -265,7 +265,7 @@ ms.locfileid: "39380893"
 
 13. カスタム エディターをインストールする方法の詳細については、「[方法: カスタム診断データ アダプターをインストールする](../test/how-to-install-a-custom-diagnostic-data-adapter.md)」を参照してください。
 
-14. テストの実行時に環境を使用するようにテストの設定を構成する方法の詳細については、[手動テストで診断データを収集する方法 (VSTS) ](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)に関するページを参照してください。
+14. テストの実行時に環境を使用するようにテストの設定を構成する方法の詳細については、[手動テストで診断データを収集する方法 (Azure Test Plans) ](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)に関するページを参照してください。
 
 15. 診断データ アダプターを選択するには、まず既存のテスト設定を選択するか、Microsoft Test Manager または Visual Studio から新しく作成する必要があります。 アダプターは、テストの設定の **[データと診断]** タブに、クラスに割り当てた表示名と共に表示されます。
 
@@ -273,7 +273,7 @@ ms.locfileid: "39380893"
 
 17. この診断データ アダプターを選択したテストの設定を使用して、テストを実行します。
 
-   指定したデータ ファイルがテスト結果に関連付けられます。
+    指定したデータ ファイルがテスト結果に関連付けられます。
 
 ## <a name="see-also"></a>関連項目
 
@@ -285,6 +285,6 @@ ms.locfileid: "39380893"
 - <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorFriendlyNameAttribute>
 - <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorEnabledByDefaultAttribute>
 - [テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)
-- [手動テストでの診断データの収集 (VSTS)](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)
-- [テスト中の診断データの収集 (VSTS)](/vsts/manual-test/collect-diagnostic-data)
+- [手動テストでの診断データの収集 (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
+- [テスト中の診断データの収集 (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)
 - [方法: 診断データ アダプター用のデータのカスタム エディターを作成する](../test/how-to-create-a-custom-editor-for-data-for-your-diagnostic-data-adapter.md)

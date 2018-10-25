@@ -1,7 +1,7 @@
 ---
 title: '手順 4: 各ラベルへの Click イベント ハンドラーの追加 | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,27 +14,25 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 92b6e04ef903c1fa6cf7e94b04874e2d6048acd1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 93ce8f97f32ac41c4724db3c4cc08389f052f1ef
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548639"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923382"
 ---
 # <a name="step-4-add-a-click-event-handler-to-each-label"></a>手順 4: 各ラベルへの Click イベント ハンドラーの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[手順 4: 各ラベルへの Click イベント ハンドラーの追加](https://docs.microsoft.com/visualstudio/ide/step-4-add-a-click-event-handler-to-each-label)します。  
-  
 絵合わせゲームは、次のように動作します。  
   
-1.  プレーヤーが、アイコンが非表示になっているいずれかの四角をクリックすると、アイコンの色が黒に変更され、プレーヤーにアイコンが表示されます。  
+1. プレーヤーが、アイコンが非表示になっているいずれかの四角をクリックすると、アイコンの色が黒に変更され、プレーヤーにアイコンが表示されます。  
   
-2.  次に、プレーヤーが他の非表示のアイコンをクリックします。  
+2. 次に、プレーヤーが他の非表示のアイコンをクリックします。  
   
-3.  アイコンが一致した場合は、表示されたままになります。 一致しない場合は、両方のアイコンが再び非表示になります。  
+3. アイコンが一致した場合は、表示されたままになります。 一致しない場合は、両方のアイコンが再び非表示になります。  
   
- プログラムをこのように動作させるには、クリックされたラベルの色を変更させる Click イベント ハンドラーを追加します。  
+   プログラムをこのように動作させるには、クリックされたラベルの色を変更させる Click イベント ハンドラーを追加します。  
   
 ### <a name="to-add-a-click-event-handler-to-each-label"></a>各ラベルに Click イベント ハンドラーを追加するには  
   

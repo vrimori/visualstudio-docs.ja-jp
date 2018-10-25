@@ -1,7 +1,7 @@
 ---
 title: IEnumCodePaths2::GetCount |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 988c5092-fcc5-43a1-a94c-c261edd56ebf
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fd71a3c54ea070ee88374cce3fdfc80e3c7a57fd
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 25b8ae6cdb3d35d8f1348d9782030f2636158e27
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539365"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49881951"
 ---
 # <a name="ienumcodepaths2getcount"></a>IEnumCodePaths2::GetCount
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IEnumCodePaths2::GetCount](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ienumcodepaths2-getcount)します。  
-  
 列挙体の要素の数を返します。  
   
 ## <a name="syntax"></a>構文  

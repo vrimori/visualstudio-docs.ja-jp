@@ -1,7 +1,7 @@
 ---
 title: コード化された UI テストを使用した SharePoint 2010 アプリケーションのテスト | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 51b53778-469c-4cc9-854c-4e4992d6389b
 caps.latest.revision: 32
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 63e4a776ccd7f818502586cf6bcca5294e6b0e58
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e450cd333c01e4e2e557013ef106337fe5a80a71
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534751"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937279"
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>コード化された UI テストを使用した SharePoint 2010 アプリケーションのテスト
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コード化された UI テストでの SharePoint 2010 アプリケーションのテスト](https://docs.microsoft.com/visualstudio/test/testing-sharepoint-2010-applications-with-coded-ui-tests)します。  
-  
 コード化された UI テストを SharePoint アプリケーションに含めると、UI コントロールを含むアプリケーション全体が正しく機能していることを検証できます。 コード化された UI テストでは、ユーザー インターフェイスの値とロジックも検証できます。  
   
  **必要条件**  
@@ -109,15 +107,15 @@ uiGridKeyboardInputEdit.Text=value;
   
 #### <a name="setting-up-your-machine"></a>コンピューターを設定する  
   
-1.  Visual Studio 2012.1 以降がインストールされていることを確認します。  
+1. Visual Studio 2012.1 以降がインストールされていることを確認します。  
   
-2.  [Microsoft Visual Studio UI Test Plugin for Silverlight](http://visualstudiogallery.msdn.microsoft.com/28312a61-9451-451a-990c-c9929b751eb4)をインストールします。  
+2. [Microsoft Visual Studio UI Test Plugin for Silverlight](http://visualstudiogallery.msdn.microsoft.com/28312a61-9451-451a-990c-c9929b751eb4)をインストールします。  
   
-3.  [Fiddler](http://www.fiddler2.com/fiddler2/)をインストールします。 これは、HTTP トラフィックをキャプチャしてログ記録するだけのツールです。  
+3. [Fiddler](http://www.fiddler2.com/fiddler2/)をインストールします。 これは、HTTP トラフィックをキャプチャしてログ記録するだけのツールです。  
   
-4.  [fiddlerXap プロジェクト](http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-components-postattachments/00-10-36-48-70/FiddlerXapProxy.zip)をダウンロードします。 解凍、ビルド後、"CopySLHelper.bat" スクリプトを実行して、Fiddler ツールで Silverlight Web パーツをテストするときに必要なヘルパー DLL をインストールします。  
+4. [fiddlerXap プロジェクト](http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-components-postattachments/00-10-36-48-70/FiddlerXapProxy.zip)をダウンロードします。 解凍、ビルド後、"CopySLHelper.bat" スクリプトを実行して、Fiddler ツールで Silverlight Web パーツをテストするときに必要なヘルパー DLL をインストールします。  
   
- コンピューターのセットアップ後、Silverlight Web パーツを使用する SharePoint 2010 アプリのテストを開始するために、次の手順に従います。  
+   コンピューターのセットアップ後、Silverlight Web パーツを使用する SharePoint 2010 アプリのテストを開始するために、次の手順に従います。  
   
 #### <a name="testing-silverlight-web-parts"></a>Silverlight Web パーツをテストする  
   

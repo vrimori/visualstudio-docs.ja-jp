@@ -1,7 +1,7 @@
 ---
 title: IDebugProcess3::GetENCAvailableState |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 98a5d527-8a72-476c-8e92-0bff3d97c195
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: caee81d16d12e3d428b7b6ecc0ccab2663775610
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 51ac83db6e1491a40f1bf0321336657e535d9161
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537265"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49838986"
 ---
 # <a name="idebugprocess3getencavailablestate"></a>IDebugProcess3::GetENCAvailableState
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugProcess3::GetENCAvailableState](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugprocess3-getencavailablestate)します。  
-  
 このメソッドは、プロセスの現在のエディット コンティニュの状態を取得します。 カスタム ポート サプライヤーが常に返す必要があります`E_NOTIMPL`します。  
   
 ## <a name="syntax"></a>構文  

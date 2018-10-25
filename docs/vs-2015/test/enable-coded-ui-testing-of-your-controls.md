@@ -1,7 +1,7 @@
 ---
 title: コントロールのコード化された UI テストの有効化 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,31 +13,29 @@ ms.assetid: 5ef1188f-89dc-413d-801d-0efdaf9b0427
 caps.latest.revision: 24
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 316c8e80a1ccfd95ea83114092604e1542292a05
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e5ab2ca3e0f7d8f7006177f89c6850ce9882681a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545532"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49848541"
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>コントロールのコード化された UI テストの有効化
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コード化された UI テストのコントロールの有効化](https://docs.microsoft.com/visualstudio/test/enable-coded-ui-testing-of-your-controls)します。  
-  
 コード化された UI テスト フレームワークのサポートを実装している場合は、コントロールをより簡単にテストできます。 サポート レベルを徐々に上げることができます。 記録と再生およびプロパティの検証のサポートから始めることができます。 この最初のサポートに加えて、コード化された UI テスト ビルダーがコントロールのカスタム プロパティを認識し、生成されたコードからそれらのプロパティにアクセスするためのカスタム クラスを提供できるようにすることができます。 また、コード化された UI テスト ビルダーが、記録される操作の目的に近い方法で操作をキャプチャできるようにすることもできます。  
   
  **このトピックの内容**  
   
-1.  [アクセシビリティの実装によって記録と再生およびプロパティの検証をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#recordandplayback)  
+1. [アクセシビリティの実装によって記録と再生およびプロパティの検証をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#recordandplayback)  
   
-2.  [プロパティ プロバイダーの実装によってカスタム プロパティの検証をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#customproprties)  
+2. [プロパティ プロバイダーの実装によってカスタム プロパティの検証をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#customproprties)  
   
-3.  [カスタム プロパティにアクセスするためのクラスを実装してコード生成をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#codegeneration)  
+3. [カスタム プロパティにアクセスするためのクラスを実装してコード生成をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#codegeneration)  
   
-4.  [操作フィルターの実装によって目的に応じた操作をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#intentawareactions)  
+4. [操作フィルターの実装によって目的に応じた操作をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#intentawareactions)  
   
- ![CUIT&#95;Full](../test/media/cuit-full.png "CUIT_Full")  
+   ![CUIT&#95;Full](../test/media/cuit-full.png "CUIT_Full")  
   
 ##  <a name="recordandplayback"></a>アクセシビリティの実装によって記録と再生およびプロパティの検証をサポートする  
  コード化された UI テスト ビルダーは、記録時に出現したコントロールに関する情報をキャプチャし、そのセッションを再生するコードを生成します。 コントロールがユーザー補助をサポートしていない場合、コード化された UI テスト ビルダーは画面座標を使用して操作 (マウス クリックなど) をキャプチャします。 テストの再生時、生成されたコードは同じ画面座標にそれらのマウス クリックを表示します。 テストの再生時にコントロールが画面上の別の場所に表示される場合、生成されたコードはコントロールに対するその操作の実行に失敗します。 テストが異なる画面構成や異なる環境で再生される場合、または UI レイアウトが変更された後に再生される場合、これは失敗する可能性があります。  

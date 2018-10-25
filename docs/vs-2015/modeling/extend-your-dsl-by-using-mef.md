@@ -1,7 +1,7 @@
 ---
 title: MEF による DSL の拡張 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 378aab6aaac3c45dc0a912dc62f5ebf55fffd46c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fd5e4727c4352ca27d905bad608c4a1c17284f9b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536111"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930643"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF による DSL の拡張
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MEF による DSL の拡張](https://docs.microsoft.com/visualstudio/modeling/extend-your-dsl-by-using-mef)します。  
-  
 Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語 (DSL) を拡張できます。 または他の開発者は、DSL 定義とプログラム コードを変更することがなく、DSL の拡張機能を記述することがなります。 このような拡張機能には、メニュー コマンド、ドラッグ アンド ドロップ ハンドラー、および検証が含まれます。 ユーザーは、DSL をインストールし、その拡張機能を必要に応じてインストールすることになります。  
   
  さらに、DSL で MEF を有効にするとできます簡単に、DSL の機能の一部を記述する場合でも、すべて DSL と共に構築されます。  
@@ -32,141 +30,141 @@ Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語
   
 ### <a name="to-enable-your-dsl-to-be-extended-by-mef"></a>MEF で拡張する DSL を有効にするには  
   
-1.  という名前の新しいフォルダーを作成する**MefExtension**内で、 **DslPackage**プロジェクト。 次のファイルを追加します。  
+1. という名前の新しいフォルダーを作成する**MefExtension**内で、 **DslPackage**プロジェクト。 次のファイルを追加します。  
   
-     ファイル名: `CommandExtensionVSCT.tt`  
+    ファイル名: `CommandExtensionVSCT.tt`  
   
-    > [!IMPORTANT]
-    >  GUID を GUID CommandSetId DslPackage\GeneratedCode\Constants.tt で定義されているのと同じにするのには、このファイルの設定します。  
+   > [!IMPORTANT]
+   >  GUID を GUID CommandSetId DslPackage\GeneratedCode\Constants.tt で定義されているのと同じにするのには、このファイルの設定します。  
   
-    ```  
-    <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-    <#  
-    // CmdSet Guid must be defined before master template is included  
-    // This Guid must be kept synchronized with the CommandSetId Guid in Constants.tt  
-    Guid guidCmdSet = new Guid ("00000000-0000-0000-0000-000000000000");  
-    string menuidCommandsExtensionBaseId="0x4000";  
-    #>  
-    <#@ include file="DslPackage\CommandExtensionVSCT.tt" #>  
-    ```  
+   ```  
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
+   <#  
+   // CmdSet Guid must be defined before master template is included  
+   // This Guid must be kept synchronized with the CommandSetId Guid in Constants.tt  
+   Guid guidCmdSet = new Guid ("00000000-0000-0000-0000-000000000000");  
+   string menuidCommandsExtensionBaseId="0x4000";  
+   #>  
+   <#@ include file="DslPackage\CommandExtensionVSCT.tt" #>  
+   ```  
   
-     ファイル名: `CommandExtensionRegistrar.tt`  
+    ファイル名: `CommandExtensionRegistrar.tt`  
   
-    ```  
-    <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-    <#@ include file="DslPackage\CommandExtensionRegistrar.tt" #>  
-    ```  
+   ```  
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
+   <#@ include file="DslPackage\CommandExtensionRegistrar.tt" #>  
+   ```  
   
-     ファイル名: `ValidationExtensionEnablement.tt`  
+    ファイル名: `ValidationExtensionEnablement.tt`  
   
-    ```  
-    <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-    <#@ include file="DslPackage\ValidationExtensionEnablement.tt" #>  
-    ```  
+   ```  
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
+   <#@ include file="DslPackage\ValidationExtensionEnablement.tt" #>  
+   ```  
   
-     ファイル名: `ValidationExtensionRegistrar.tt`  
+    ファイル名: `ValidationExtensionRegistrar.tt`  
   
-     このファイルに追加する場合、必要がありますで有効にする検証 DSL を少なくとも 1 つのスイッチを使用して**EditorValidation** DSL エクスプ ローラーでします。  
+    このファイルに追加する場合、必要がありますで有効にする検証 DSL を少なくとも 1 つのスイッチを使用して**EditorValidation** DSL エクスプ ローラーでします。  
   
-    ```  
-    <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-    <#@ include file="DslPackage\ValidationExtensionRegistrar.tt" #>  
-    ```  
+   ```  
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
+   <#@ include file="DslPackage\ValidationExtensionRegistrar.tt" #>  
+   ```  
   
-     ファイル名: `PackageExtensionEnablement.tt`  
+    ファイル名: `PackageExtensionEnablement.tt`  
   
-    ```  
-    <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-    <#@ include file="DslPackage\PackageExtensionEnablement.tt" #>  
-    ```  
+   ```  
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
+   <#@ include file="DslPackage\PackageExtensionEnablement.tt" #>  
+   ```  
   
-2.  という名前の新しいフォルダーを作成する**MefExtension**内で、 **Dsl**プロジェクト。 次のファイルを追加します。  
+2. という名前の新しいフォルダーを作成する**MefExtension**内で、 **Dsl**プロジェクト。 次のファイルを追加します。  
   
-     ファイル名: `DesignerExtensionMetaDataAttribute.tt`  
+    ファイル名: `DesignerExtensionMetaDataAttribute.tt`  
   
-    ```  
-    <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-    <#@ include file="Dsl\DesignerExtensionMetadataAttribute.tt" #>  
-    ```  
+   ```  
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
+   <#@ include file="Dsl\DesignerExtensionMetadataAttribute.tt" #>  
+   ```  
   
-     ファイル名: `GestureExtensionEnablement.tt`  
+    ファイル名: `GestureExtensionEnablement.tt`  
   
-    ```  
-    <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-    <#@ include file="Dsl\GestureExtensionEnablement.tt" #>  
-    ```  
+   ```  
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
+   <#@ include file="Dsl\GestureExtensionEnablement.tt" #>  
+   ```  
   
-     ファイル名: `GestureExtensionController.tt`  
+    ファイル名: `GestureExtensionController.tt`  
   
-    ```  
-    <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-    <#@ include file="Dsl\GestureExtensionController.tt" #>  
-    ```  
+   ```  
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
+   <#@ include file="Dsl\GestureExtensionController.tt" #>  
+   ```  
   
-3.  という名前の既存のファイルに次の行を追加**dslpackage \commands.vsct**:  
+3. という名前の既存のファイルに次の行を追加**dslpackage \commands.vsct**:  
   
-    ```  
-    <Include href="MefExtension\CommandExtensionVSCT.vsct"/>  
-    ```  
+   ```  
+   <Include href="MefExtension\CommandExtensionVSCT.vsct"/>  
+   ```  
   
-     既存の後の行を挿入`<Include>`ディレクティブ。  
+    既存の後の行を挿入`<Include>`ディレクティブ。  
   
-4.  `Open DslDefinition.dsl.`  
+4. `Open DslDefinition.dsl.`  
   
-5.  DSL エクスプ ローラーで選択**発します**します。  
+5. DSL エクスプ ローラーで選択**発します**します。  
   
-6.  [プロパティ] ウィンドウでプロパティの少なくとも 1 つという名前を確認します**を使用しています.** は`true`します。  
+6. [プロパティ] ウィンドウでプロパティの少なくとも 1 つという名前を確認します**を使用しています.** は`true`します。  
   
-7.  ソリューション エクスプ ローラー ツールバー**すべてのテンプレートの変換**します。  
+7. ソリューション エクスプ ローラー ツールバー**すべてのテンプレートの変換**します。  
   
-     各追加したファイルの下にある関連会社のファイルが表示されます。  
+    各追加したファイルの下にある関連会社のファイルが表示されます。  
   
-8.  ビルドおよびがまだ動作していることを確認するソリューションを実行します。  
+8. ビルドおよびがまだ動作していることを確認するソリューションを実行します。  
   
- DSL は、MEF-有効になっているようになりました。 MEF 拡張機能としては、メニュー コマンド、ジェスチャ ハンドラー、および検証制約を作成できます。 その他のカスタム コードと共に、DSL ソリューションでは、これらの拡張機能を記述できます。 さらに、他の開発者またはする書き込める別[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]DSL を拡張する拡張機能。  
+   DSL は、MEF-有効になっているようになりました。 MEF 拡張機能としては、メニュー コマンド、ジェスチャ ハンドラー、および検証制約を作成できます。 その他のカスタム コードと共に、DSL ソリューションでは、これらの拡張機能を記述できます。 さらに、他の開発者またはする書き込める別[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]DSL を拡張する拡張機能。  
   
 ## <a name="creating-an-extension-for-a-mef-enabled-dsl"></a>MEF が有効な DSL の拡張機能の作成  
  自分または他のユーザーによって作成された MEF が有効な DSL へのアクセスがあれば、その拡張機能を記述できます。 メニュー コマンド、ジェスチャ ハンドラー、または検証制約を追加する拡張機能を使用できます。 これらの拡張機能を作成するを使用する、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Extension (VSIX) ソリューションです。 ソリューションに 2 つの部分: クラス ライブラリ プロジェクト、コード アセンブリをビルドして、アセンブリをパッケージ化した VSIX プロジェクト。  
   
 #### <a name="to-create-a-dsl-extension-vsix"></a>DSL 拡張 VSIX を作成するには  
   
-1.  新しいクラス ライブラリ プロジェクトを作成します。 これを実行する、**新しいプロジェクト**ダイアログ ボックスで、 **Visual Basic**または**Visual c#** 選び**クラス ライブラリ**します。  
+1. 新しいクラス ライブラリ プロジェクトを作成します。 これを実行する、**新しいプロジェクト**ダイアログ ボックスで、 **Visual Basic**または**Visual c#** 選び**クラス ライブラリ**します。  
   
-2.  新しいクラス ライブラリ プロジェクトでは、DSL のアセンブリへの参照を追加します。  
+2. 新しいクラス ライブラリ プロジェクトでは、DSL のアセンブリへの参照を追加します。  
   
-    -   このアセンブリは通常で終わる名前を持つ"。Dsl.dll"。  
+   - このアセンブリは通常で終わる名前を持つ"。Dsl.dll"。  
   
-    -   DSL プロジェクトへのアクセスがある場合は、ディレクトリの下のアセンブリ ファイルを検索できます**Dsl\bin\\\***  
+   - DSL プロジェクトへのアクセスがある場合は、ディレクトリの下のアセンブリ ファイルを検索できます**Dsl\bin\\\\***  
   
-    -   DSL の VSIX ファイルにアクセスする場合は、".zip"VSIX ファイルのファイル名拡張子を変更することでアセンブリを見つけることができます。 .Zip ファイルを圧縮解除します。  
+   - DSL の VSIX ファイルにアクセスする場合は、".zip"VSIX ファイルのファイル名拡張子を変更することでアセンブリを見つけることができます。 .Zip ファイルを圧縮解除します。  
   
-3.  次の .NET アセンブリへの参照を追加します。  
+3. 次の .NET アセンブリへの参照を追加します。  
   
-    -   Microsoft.VisualStudio.Modeling.Sdk.11.0.dll  
+   -   Microsoft.VisualStudio.Modeling.Sdk.11.0.dll  
   
-    -   Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0.dll  
+   -   Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0.dll  
   
-    -   Microsoft.VisualStudio.Modeling.Sdk.Shell.11.0.dll  
+   -   Microsoft.VisualStudio.Modeling.Sdk.Shell.11.0.dll  
   
-    -   System.ComponentModel.Composition.dll  
+   -   System.ComponentModel.Composition.dll  
   
-    -   System.Windows.Forms.dll  
+   -   System.Windows.Forms.dll  
   
-4.  同じソリューションで VSIX プロジェクトを作成します。 これを実行する、**新しいプロジェクト** ダイアログ ボックスで、展開**Visual Basic**または**Visual c#**、 をクリックして**Extensibility**、しを選択します。**VSIX プロジェクト**します。  
+4. 同じソリューションで VSIX プロジェクトを作成します。 これを実行する、**新しいプロジェクト** ダイアログ ボックスで、展開**Visual Basic**または**Visual c#**、 をクリックして**Extensibility**、しを選択します。**VSIX プロジェクト**します。  
   
-5.  ソリューション エクスプ ローラーで VSIX プロジェクトを右クリックし をクリックし、**スタートアップ プロジェクトとして設定**します。  
+5. ソリューション エクスプ ローラーで VSIX プロジェクトを右クリックし をクリックし、**スタートアップ プロジェクトとして設定**します。  
   
-6.  新しいプロジェクトで開く**source.extension.vsixmanifest**します。  
+6. 新しいプロジェクトで開く**source.extension.vsixmanifest**します。  
   
-7.  クリックして**コンテンツ追加**します。 ダイアログ ボックスで、次のように設定します。**コンテンツの種類**に**MEF コンポーネント**、および**ソース プロジェクト**クラス ライブラリ プロジェクトにします。  
+7. クリックして**コンテンツ追加**します。 ダイアログ ボックスで、次のように設定します。**コンテンツの種類**に**MEF コンポーネント**、および**ソース プロジェクト**クラス ライブラリ プロジェクトにします。  
   
-8.  DSL への参照を VSIX に追加します。  
+8. DSL への参照を VSIX に追加します。  
   
-    1.  **Source.extension.vsixmanifest**、 をクリックして**参照の追加**  
+   1. **Source.extension.vsixmanifest**、 をクリックして**参照の追加**  
   
-    2.  ダイアログ ボックスで、次のようにクリックします。**追加ペイロード**し、DSL の VSIX ファイルを見つけます。 VSIX ファイルは、DSL ソリューション内で構築された**DslPackage\bin\\\*** します。  
+   2. ダイアログ ボックスで、次のようにクリックします。**追加ペイロード**し、DSL の VSIX ファイルを見つけます。 VSIX ファイルは、DSL ソリューション内で構築された * * DslPackage\bin\\\\* * *。  
   
-         これにより、ユーザーが同時に、DSL と拡張機能をインストールできます。 ユーザーが DSL をインストールしてある場合は、拡張機能がインストールされます。  
+       これにより、ユーザーが同時に、DSL と拡張機能をインストールできます。 ユーザーが DSL をインストールしてある場合は、拡張機能がインストールされます。  
   
 9. 確認の他のフィールドを更新して**source.extension.vsixmanifest**します。 をクリックして**エディションの**ことを確認します、正しい[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]エディションを設定します。  
   

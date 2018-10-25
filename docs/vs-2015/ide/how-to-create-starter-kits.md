@@ -1,7 +1,7 @@
 ---
 title: '方法 : スタート キットを作成する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ab9bafe28889bf652b3c66f04e9489a3042a1621
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 163fcc07318ae02ff88fda13d4ea6300d513806e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547134"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49857407"
 ---
 # <a name="how-to-create-starter-kits"></a>方法 : スタート キットを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: スタート キットを作成](https://docs.microsoft.com/visualstudio/ide/how-to-create-starter-kits)です。  
-  
 スタート キットには、アプリケーションを変更または展開する方法を示す、完成したアプリケーションのコードとドキュメントが含まれています。 スタート キットの作成は、基本的には通常のプロジェクト テンプレートの作成と同じです。ただし、スタート キットにはドキュメント ファイルが含まれており、スタート キットを基にしてプロジェクトを作成するときに開くように設定されている点が異なります。  
   
 ## <a name="designing-and-developing-a-starter-kit"></a>スタート キットの設計と開発  
@@ -35,19 +33,19 @@ ms.locfileid: "47547134"
   
  サンプル アプリケーションまたはプラグインを作成する場合は、以下を実行します。  
   
--   ビルド エラーが発生しないプロジェクトを作成します。  
+- ビルド エラーが発生しないプロジェクトを作成します。  
   
--   テンプレート コードを追加して、追加タスクを実装します (省略可能)。  
+- テンプレート コードを追加して、追加タスクを実装します (省略可能)。  
   
--   ドキュメントを準備します。  
+- ドキュメントを準備します。  
   
- 学習ツールを作成する場合は、以下を実行します。  
+  学習ツールを作成する場合は、以下を実行します。  
   
--   ビルド エラーが発生しないプロジェクトを作成します。  
+- ビルド エラーが発生しないプロジェクトを作成します。  
   
--   コード スニペットや項目テンプレートなどのリソースを整理します。  
+- コード スニペットや項目テンプレートなどのリソースを整理します。  
   
--   ドキュメントを準備します。  
+- ドキュメントを準備します。  
   
 ## <a name="creating-a-template"></a>テンプレートの作成  
  プロジェクトとドキュメントが完成したら、スタート キット用のプロジェクト テンプレートを作成できます。 このプロセスは、プロジェクト テンプレートの作成とまったく同じです。  

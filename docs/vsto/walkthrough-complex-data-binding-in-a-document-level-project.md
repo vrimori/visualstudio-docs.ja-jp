@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b490eb1afbe8136932cfbe4caf0b1df33fbd3e4b
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 6886908f01ceaeb36ed83ba0970ef250873d69c2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38781671"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841885"
 ---
 # <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>チュートリアル: ドキュメント レベルのプロジェクトで複雑なデータ バインディング
   このチュートリアルでは、ドキュメント レベルのプロジェクトで複合データ バインディングの基本について説明します。 Microsoft Office Excel ワークシート内で複数のセルは、Northwind SQL Server データベース内のフィールドにバインドできます。  
@@ -32,15 +32,15 @@ ms.locfileid: "38781671"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   データ ソースのブック プロジェクトに追加します。  
+- データ ソースのブック プロジェクトに追加します。  
   
--   データ バインド コントロールをワークシートに追加します。  
+- データ バインド コントロールをワークシートに追加します。  
   
--   元のデータベースには、データの変更を保存しています。  
+- 元のデータベースには、データの変更を保存しています。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -67,25 +67,25 @@ ms.locfileid: "38781671"
   
 ### <a name="to-create-the-data-source"></a>データ ソースを作成するには  
   
-1.  場合、**データソース**ウィンドウが表示されない、メニュー バーで 表示することによって、**ビュー** > **その他の Windows**  >  **データ ソース**します。  
+1. 場合、**データソース**ウィンドウが表示されない、メニュー バーで 表示することによって、**ビュー** > **その他の Windows**  >  **データ ソース**します。  
   
-2.  **[新しいデータ ソースの追加]** をクリックして **データ ソース構成ウィザード**を開始します。  
+2. **[新しいデータ ソースの追加]** をクリックして **データ ソース構成ウィザード**を開始します。  
   
-3.  選択**データベース**順にクリックします**次**します。  
+3. 選択**データベース**順にクリックします**次**します。  
   
-4.  Northwind サンプル SQL Server データベースへのデータ接続を選択するかを使用して新しい接続を追加、**新しい接続**ボタンをクリックします。  
+4. Northwind サンプル SQL Server データベースへのデータ接続を選択するかを使用して新しい接続を追加、**新しい接続**ボタンをクリックします。  
   
-5.  接続を選択または作成後にをクリックして**次**します。  
+5. 接続を選択または作成後にをクリックして**次**します。  
   
-6.  クリックしてが選択されている場合、接続を保存するオプションをオフに**次**します。  
+6. クリックしてが選択されている場合、接続を保存するオプションをオフに**次**します。  
   
-7.  展開、**テーブル**内のノード、**データベース オブジェクト**ウィンドウ。  
+7. 展開、**テーブル**内のノード、**データベース オブジェクト**ウィンドウ。  
   
-8.  次のチェック ボックスをオン、**従業員**テーブル。  
+8. 次のチェック ボックスをオン、**従業員**テーブル。  
   
 9. **[完了]** をクリックします。  
   
- ウィザードでは追加、**従業員**テーブル、**データ ソース**ウィンドウ。 表示されているプロジェクトに型指定されたデータセットを追加**ソリューション エクスプ ローラー**します。  
+   ウィザードでは追加、**従業員**テーブル、**データ ソース**ウィンドウ。 表示されているプロジェクトに型指定されたデータセットを追加**ソリューション エクスプ ローラー**します。  
   
 ## <a name="add-controls-to-the-worksheet"></a>ワークシートにコントロールを追加します。  
  ワークシートが表示されます、**従業員**ブックを開いたときにテーブルです。 ユーザーは、データに変更を加えるし、データベースに戻すボタンをクリックしてそれらの変更を保存することになります。  
@@ -108,27 +108,27 @@ ms.locfileid: "38781671"
   
 ### <a name="to-add-a-button"></a>ボタンを追加するには  
   
-1.  **コモン コントロール**のタブ、**ツールボックス**、追加、<xref:System.Windows.Forms.Button>コントロールをセル**A4**ワークシートの。  
+1. **コモン コントロール**のタブ、**ツールボックス**、追加、<xref:System.Windows.Forms.Button>コントロールをセル**A4**ワークシートの。  
   
- 次の手順では、ワークシートが開いたら、ボタンにテキストを追加します。  
+   次の手順では、ワークシートが開いたら、ボタンにテキストを追加します。  
   
 ## <a name="initialize-the-control"></a>コントロールを初期化します。  
  テキスト、ボタンを追加、<xref:Microsoft.Office.Tools.Excel.Worksheet.Startup>イベント ハンドラー。  
   
 ### <a name="to-initialize-the-control"></a>コントロールを初期化するには  
   
-1.  **ソリューション エクスプ ローラー**を右クリックして**Sheet1.vb**または**Sheet1.cs**、] をクリックし、**コードの表示**ショートカット メニューの [します。  
+1. **ソリューション エクスプ ローラー**を右クリックして**Sheet1.vb**または**Sheet1.cs**、] をクリックし、**コードの表示**ショートカット メニューの [します。  
   
-2.  次のコードを追加、 `Sheet1_Startup` 、b のテキストを設定するメソッドを`utton`します。  
+2. 次のコードを追加、 `Sheet1_Startup` 、b のテキストを設定するメソッドを`utton`します。  
   
-     [!code-csharp[Trin_VstcoreDataExcel#8](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#8)]
-     [!code-vb[Trin_VstcoreDataExcel#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#8)]  
+    [!code-csharp[Trin_VstcoreDataExcel#8](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#8)]
+    [!code-vb[Trin_VstcoreDataExcel#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#8)]  
   
-3.  C# の場合のみ、追加のイベント ハンドラー、<xref:System.Windows.Forms.Control.Click>イベントを`Sheet1_Startup`メソッド。  
+3. C# の場合のみ、追加のイベント ハンドラー、<xref:System.Windows.Forms.Control.Click>イベントを`Sheet1_Startup`メソッド。  
   
-     [!code-csharp[Trin_VstcoreDataExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#9)]  
+    [!code-csharp[Trin_VstcoreDataExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#9)]  
   
- 今すぐ処理するコードを追加、<xref:System.Windows.Forms.Control.Click>ボタンのイベント。  
+   今すぐ処理するコードを追加、<xref:System.Windows.Forms.Control.Click>ボタンのイベント。  
   
 ## <a name="save-changes-to-the-database"></a>変更をデータベースに保存します。  
  すべての変更を加え、データベースに明示的に保存されるまでに、データがローカル データセットにのみ存在します。  
@@ -175,15 +175,15 @@ ms.locfileid: "38781671"
   
 ### <a name="to-add-new-rows"></a>新しい行を追加するには  
   
-1.  リスト オブジェクト内のセルを選択します。  
+1. リスト オブジェクト内のセルを選択します。  
   
-     アスタリスクが付いて、一覧の下部に新しい行が表示されます (**\***)、新しい行の最初のセルにします。  
+    アスタリスクが付いて、一覧の下部に新しい行が表示されます (* *\\* * *)、新しい行の最初のセルにします。  
   
-2.  空の行で、次の情報を追加します。  
+2. 空の行で、次の情報を追加します。  
   
-    |EmployeeID|LastName|FirstName|Title|  
-    |----------------|--------------|---------------|-----------|  
-    |10|Ito|Shu|営業マネージャー|  
+   |EmployeeID|LastName|FirstName|Title|  
+   |----------------|--------------|---------------|-----------|  
+   |10|Ito|Shu|営業マネージャー|  
   
 ### <a name="to-delete-rows"></a>行を削除するには  
   

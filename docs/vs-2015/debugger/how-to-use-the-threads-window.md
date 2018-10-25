@@ -1,7 +1,7 @@
 ---
 title: '方法: [スレッド] ウィンドウを使用して、|Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -29,18 +29,16 @@ caps.latest.revision: 48
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b5004f437b55709bf6db0a59fc17b42894cc17e8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1073383ef8964fd6c7d754918f7550179372f9f4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538163"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49306255"
 ---
 # <a name="how-to-use-the-threads-window"></a>方法 : [スレッド] ウィンドウを使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[スレッド ウィンドウを使用してマルチ スレッド アプリのデバッグ](https://docs.microsoft.com/visualstudio/debugger/how-to-use-the-threads-window)します。  
-  
 **スレッド**ウィンドウを確認してデバッグしているアプリケーションのスレッドを使用します。  
   
  **スレッド**ウィンドウには、各行が、アプリケーション内のスレッドを表すテーブルが含まれています。 既定では、このテーブルにはアプリケーション内のすべてのスレッドが表示されますが、目的のスレッドのみを表示するように一覧にフィルターをかけることができます。 各列には、さまざまな種類の情報が表示されます。 一部の列は非表示にすることもできます。 すべての列を表示する場合、次の情報が左から右へ表示されます。  

@@ -1,5 +1,5 @@
 ---
-title: Idiaenuminjectedsources::skip |Microsoft ドキュメント
+title: Idiaenuminjectedsources::skip |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 038510fbd89d58c0d122457828c2f130df39173e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 3ed94c7e70d3d4800f8662b35bd13bc351d5bc83
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31456530"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863803"
 ---
 # <a name="idiaenuminjectedsourcesskip"></a>IDiaEnumInjectedSources::Skip
-列挙のシーケンスで挿入されたソースの指定した数をスキップします。  
+列挙体シーケンスに挿入されたソースの指定した数をスキップします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,10 +34,10 @@ HRESULT Skip (
   
 #### <a name="parameters"></a>パラメーター  
  celt  
- [in]スキップする列挙のシーケンスで挿入されたソースの数。  
+ [in]スキップする列挙体シーケンスに挿入されたソースの数。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`をスキップする以上ない挿入されたソースがある場合。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`をスキップするなくなる挿入されたソースがある場合。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

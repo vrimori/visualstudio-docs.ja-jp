@@ -1,7 +1,7 @@
 ---
 title: 'デバッグの準備: ASP.NET Web アプリケーション |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,19 +24,17 @@ caps.latest.revision: 38
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 20731f5036a89c3c19fbea0d825d67fc02c13cf9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9268cca555486e0c432e60947350bd69202c4fb6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540084"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49292891"
 ---
 # <a name="debugging-preparation-aspnet-web-applications"></a>デバッグの準備 : ASP.NET Web アプリケーション
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッグの準備: ASP.NET Web アプリケーション](https://docs.microsoft.com/visualstudio/debugger/debugging-preparation-aspnet-web-applications)します。  
-  
-[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]Web サイト テンプレートは、Web フォーム アプリケーションを作成します。 このテンプレートを使用して Web サイトを作成する場合、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] はデバッグ用に既定の設定を作成します。 **プロジェクト プロパティ**ダイアログ ボックスで、Web ページをスタート ページにするかどうか指定できます。 デバッグを開始すると、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]これらの既定の設定を使用した Web サイト[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Internet Explorer を起動し、デバッガーをアタッチします、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]ワーカー プロセス (aspnet_wp.exe または w3wp.exe)。 詳細については、次を参照してください。[システム要件](../debugger/aspnet-debugging-system-requirements.md)します。  
+[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]Web サイト テンプレートは、Web フォーム アプリケーションを作成します。 このテンプレートを使用して Web サイトを作成する場合、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] はデバッグ用に既定の設定を作成します。 **プロジェクト プロパティ**ダイアログ ボックスで、Web ページをスタート ページにするかどうか指定できます。 デバッグを開始すると、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]これらの既定の設定を使用した Web サイト[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Internet Explorer を起動し、デバッガーをアタッチします、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]ワーカー プロセス (aspnet_wp.exe または w3wp.exe)。 詳細については、「 [System Requirements](../debugger/aspnet-debugging-system-requirements.md)」をご覧ください。  
   
 ### <a name="to-create-a-web-forms-application"></a>Web フォーム アプリケーションを作成するには  
   

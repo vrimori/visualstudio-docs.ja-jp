@@ -1,7 +1,7 @@
 ---
 title: ワークフロー プロジェクトの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -16,12 +16,12 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: faa63966d0f23aaf8d0392b968f9ec420e02d348
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4ba558e77aae5ae40d5b754c30b648f4ba2ea2af
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546439"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49236718"
 ---
 # <a name="creating-a-workflow-project"></a>ワークフロー プロジェクトの作成
 ワークフロー、[!INCLUDE[indigo1](../includes/indigo1-md.md)] ワークフロー サービス、カスタム アクティビティ、およびカスタム アクティビティ デザイナーは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクト テンプレートを利用して作成できます。 ここでは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で使用できるプロジェクト テンプレートで、ライブラリおよびアプリケーションを作成する方法について説明します。  

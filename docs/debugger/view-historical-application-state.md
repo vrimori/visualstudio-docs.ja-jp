@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 85b34fd85e8449949bb1e96efc1dd79aacbc1bd9
-ms.sourcegitcommit: 1c675dae7c348defb32d9f7ccf7079a1062a1c4b
+ms.openlocfilehash: 6d43e1a04570d68ce69f283cde264280fc24865a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48243953"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846864"
 ---
 # <a name="inspect-previous-app-states-using-intellitrace-step-back-in-visual-studio"></a>Visual Studio の IntelliTrace ステップ バックを使用して前のアプリ状態を調べる
 
@@ -106,17 +106,17 @@ IntelliTrace イベントのみのモードでは、デバッガーのステッ�
 * Windows 10 Fall Creators Update (RS3) よりも古い Windows のバージョンの IntelliTrace イベントとスナップショット モードを使用している場合、およびアプリケーションのデバッグ プラットフォーム ターゲットを x86 に設定されている場合は、IntelliTrace はスナップショットを取得しません。
 
     回避策:
-    * お客様が Windows 10 Anniversary Update (RS1) にあり、10.0.14393.2273、バージョンを下回る場合[インストール KB4103720](https://support.microsoft.com/help/4103720/windows-10-update-kb4103720)します。 
-    * お客様が Windows 10 Creators Update (RS2) にあり、10.0.15063.1112、バージョンを下回る場合[インストール KB4103722](https://support.microsoft.com/help/4103722/windows-10-update-4103722)します。
-    * インストールまたは Windows 10 Fall Creators Update (RS3) にアップグレードします。 
-    * 別の方法として。 
-        1. Visual Studio インストーラーからデスクトップ (x86、x64) コンポーネント用の VC++ 2015.3 v140 ツールセットをインストールします。
-        2. 対象アプリケーションをビルドします。
-        3. 、コマンドラインから editbin ツールを使用して設定を、`Largeaddressaware`実行可能ファイルのターゲットのフラグ。 たとえば、このコマンドを使用して (パスを更新するには) した後可能性があります:"C:\Program Files (x86) \Microsoft Visual Studio\Preview\Enterprise\VC\Tools\MSVC\14.12.25718\bin\Hostx86\x86\editbin.exe"/Largeaddressaware"C:\Path\To\Application\app.exe"。
-        4. デバッグを開始するには、**F5** キーを押します。 ここで、デバッガーのステップとブレークポイントでスナップショットが作成します。
+  * お客様が Windows 10 Anniversary Update (RS1) にあり、10.0.14393.2273、バージョンを下回る場合[インストール KB4103720](https://support.microsoft.com/help/4103720/windows-10-update-kb4103720)します。 
+  * お客様が Windows 10 Creators Update (RS2) にあり、10.0.15063.1112、バージョンを下回る場合[インストール KB4103722](https://support.microsoft.com/help/4103722/windows-10-update-4103722)します。
+  * インストールまたは Windows 10 Fall Creators Update (RS3) にアップグレードします。 
+  * 別の方法として。 
+    1. Visual Studio インストーラーからデスクトップ (x86、x64) コンポーネント用の VC++ 2015.3 v140 ツールセットをインストールします。
+    2. 対象アプリケーションをビルドします。
+    3. 、コマンドラインから editbin ツールを使用して設定を、`Largeaddressaware`実行可能ファイルのターゲットのフラグ。 たとえば、このコマンドを使用して (パスを更新するには) した後可能性があります:"C:\Program Files (x86) \Microsoft Visual Studio\Preview\Enterprise\VC\Tools\MSVC\14.12.25718\bin\Hostx86\x86\editbin.exe"/Largeaddressaware"C:\Path\To\Application\app.exe"。
+    4. デバッグを開始するには、**F5** キーを押します。 ここで、デバッガーのステップとブレークポイントでスナップショットが作成します。
 
-        > [!Note]
-        > `Largeaddressaware`実行可能ファイルが変更を再構築するたびにフラグを設定する必要があります。
+       > [!Note]
+       > `Largeaddressaware`実行可能ファイルが変更を再構築するたびにフラグを設定する必要があります。
 
 * アプリケーションのプロセスのスナップショットは、永続化メモリ マップト ファイルを使用するアプリケーションを実行した、ときに、スナップショットを使用して、プロセスは (親プロセスには、そのロックがリリースされました) の後も、メモリ マップト ファイルに排他的ロックを保持します。 他のプロセスは、まだただし、読み取るだけで、メモリ マップト ファイルに書き込まれません。
 

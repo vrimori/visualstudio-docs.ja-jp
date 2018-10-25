@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::EnumStaticLocals |Microsoft ドキュメント
+title: IDebugMethodField::EnumStaticLocals |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 761e696cd774e0414b58c9d2a9f1482d298489f6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 35474156ec43fb9e1e44117e44430b27a6e1b383
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31112078"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905091"
 ---
 # <a name="idebugmethodfieldenumstaticlocals"></a>IDebugMethodField::EnumStaticLocals
 メソッドの静的ローカル変数の列挙子を作成します。  
@@ -41,13 +41,13 @@ int EnumStaticLocals(
   
 #### <a name="parameters"></a>パラメーター  
  `ppLocals`  
- [out]返します、 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)静的ローカル変数の一覧を表すオブジェクト。 静的ローカル変数が存在しない場合は、null 値を返します。  
+ [out]返します、 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)静的ローカル変数の一覧を表すオブジェクト。 静的ローカル変数がない場合は、null 値を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、S_OK を返します。 または、静的ローカル変数が存在しない場合は S_FALSE を返します。 それ以外の場合はエラー コードを返します。  
+ 成功した場合は S_OK を返します。 または静的ローカル変数がない場合は S_FALSE を返します。 それ以外の場合はエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 各要素は、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)静的ローカル変数の別の型を表すオブジェクト。 呼び出す、 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)正確に静的なローカルのオブジェクトが表す種類を決定するには、各オブジェクトのメソッドです。  
+## <a name="remarks"></a>Remarks  
+ 各要素は、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)さまざまな種類の静的ローカル変数を表すオブジェクト。 呼び出す、 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)正確に静的なローカルのオブジェクトが表す種類を決定するには、各オブジェクトのメソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   

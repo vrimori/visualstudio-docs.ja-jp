@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: da09f01e602f2d30288bc9f872f761d0bee4fc42
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: c328925fd558e01138354427a80db7a692753710
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498407"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924916"
 ---
 # <a name="walkthrough-customize-the-text-view"></a>チュートリアル: テキスト ビューをカスタマイズします。
 テキスト ビューをカスタマイズするには、そのマップをエディターの書式設定では、次のプロパティのいずれかの変更します。  
@@ -40,7 +40,7 @@ ms.locfileid: "39498407"
   
 ## <a name="create-a-mef-project"></a>MEF プロジェクトを作成します。  
   
-1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を`ViewPropertyTest`します。  
+1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューション `ViewPropertyTest`の名前を指定します。  
   
 2.  エディター分類子の項目テンプレートをプロジェクトに追加します。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能を作成する](../extensibility/creating-an-extension-with-an-editor-item-template.md)します。  
   
@@ -48,26 +48,26 @@ ms.locfileid: "39498407"
   
 ## <a name="define-the-content-type"></a>コンテンツの種類を定義します。  
   
-1.  クラス ファイルを追加し、名前`ViewPropertyModifier`します。  
+1. クラス ファイルを追加し、その名前を `ViewPropertyModifier`にします。  
   
-2.  次の追加`using`ディレクティブ。  
+2. 次の追加`using`ディレクティブ。  
   
-     [!code-csharp[VSSDKViewPropertyTest#1](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_1.cs)]
-     [!code-vb[VSSDKViewPropertyTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_1.vb)]  
+    [!code-csharp[VSSDKViewPropertyTest#1](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_1.cs)]
+    [!code-vb[VSSDKViewPropertyTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_1.vb)]  
   
-3.  という名前のクラスを宣言`TestViewCreationListener`から継承する<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>します。 このクラスで次の属性をエクスポートします。  
+3. という名前のクラスを宣言`TestViewCreationListener`から継承する<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>します。 このクラスで次の属性をエクスポートします。  
   
-    -   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> このリスナーを適用するコンテンツの種類を指定します。  
+   - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> このリスナーを適用するコンテンツの種類を指定します。  
   
-    -   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> このリスナーのロールを指定します。  
+   - <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> このリスナーのロールを指定します。  
   
      [!code-csharp[VSSDKViewPropertyTest#2](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_2.cs)]
      [!code-vb[VSSDKViewPropertyTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_2.vb)]  
   
-4.  このクラスは、インポート、<xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>します。  
+4. このクラスは、インポート、<xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>します。  
   
-     [!code-csharp[VSSDKViewPropertyTest#3](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_3.cs)]
-     [!code-vb[VSSDKViewPropertyTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_3.vb)]  
+    [!code-csharp[VSSDKViewPropertyTest#3](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_3.cs)]
+    [!code-vb[VSSDKViewPropertyTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_3.vb)]  
   
 ## <a name="change-the-view-properties"></a>ビューのプロパティを変更します。  
   

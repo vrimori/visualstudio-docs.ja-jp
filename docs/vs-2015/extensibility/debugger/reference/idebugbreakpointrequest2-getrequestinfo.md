@@ -1,7 +1,7 @@
 ---
 title: IDebugBreakpointRequest2::GetRequestInfo |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 5defd8d7-6daa-479b-8909-fcc4ae0b357a
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f40da972ee90d4e857330e587f3c2ac37702c864
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1855da19868a372a84e35e8e9a263edeee3f2d36
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547279"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49895237"
 ---
 # <a name="idebugbreakpointrequest2getrequestinfo"></a>IDebugBreakpointRequest2::GetRequestInfo
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugBreakpointRequest2::GetRequestInfo](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo)します。  
-  
 このブレークポイントの要求を記述するブレークポイント要求情報を取得します。  
   
 ## <a name="syntax"></a>構文  

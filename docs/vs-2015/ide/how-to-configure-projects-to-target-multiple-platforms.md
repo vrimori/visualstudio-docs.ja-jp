@@ -1,7 +1,7 @@
 ---
 title: '方法 : プロジェクトを構成して複数の対象プラットフォームを設定する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 07c949e392ee2203804a8675a7659e71ced5c0fb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9a3010e6304124ee306c5ecad3593df98d555523
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547237"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921835"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>方法 : プロジェクトを構成して複数の対象プラットフォームを設定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 複数のプラットフォームをターゲットにプロジェクトを構成する](https://docs.microsoft.com/visualstudio/ide/how-to-configure-projects-to-target-multiple-platforms)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] では、ソリューションは同時に複数の異なる CPU アーキテクチャまたはプラットフォームを対象にすることができます。 これを設定するプロパティには、**[構成マネージャー]** ダイアログ ボックスからアクセスします。  
   
 ## <a name="targeting-a-platform"></a>プラットフォームを対象にする  
@@ -64,11 +62,11 @@ ms.locfileid: "47547237"
   
 #### <a name="to-build-multiple-solution-configurations-at-once"></a>一度に複数のソリューション構成をビルドするには  
   
-1.  **[構成マネージャー]** を使って、少なくとも 2 つの対象プラットフォームをソリューションに追加します。  
+1. **[構成マネージャー]** を使って、少なくとも 2 つの対象プラットフォームをソリューションに追加します。  
   
-2.  一度に複数のソリューション構成をビルドするには、**[バッチ ビルド]** ウィンドウを使います。  
+2. 一度に複数のソリューション構成をビルドするには、**[バッチ ビルド]** ウィンドウを使います。  
   
- ソリューション レベルのプラットフォームをたとえば [!INCLUDE[vcprx64](../includes/vcprx64-md.md)] に設定し、そのソリューション内のプロジェクトでは同じプラットフォームを対象としない、といったことができます。 また、ソリューション内の複数のプロジェクトで、それぞれ異なるプラットフォームを対象とすることもできます。 いずれかの状況の場合は、混乱を避けるためにわかりやすい名前で新しい構成を作成することをお勧めします。  
+   ソリューション レベルのプラットフォームをたとえば [!INCLUDE[vcprx64](../includes/vcprx64-md.md)] に設定し、そのソリューション内のプロジェクトでは同じプラットフォームを対象としない、といったことができます。 また、ソリューション内の複数のプロジェクトで、それぞれ異なるプラットフォームを対象とすることもできます。 いずれかの状況の場合は、混乱を避けるためにわかりやすい名前で新しい構成を作成することをお勧めします。  
   
 ## <a name="see-also"></a>関連項目  
  [方法 : 構成を作成および編集する](../ide/how-to-create-and-edit-configurations.md)   

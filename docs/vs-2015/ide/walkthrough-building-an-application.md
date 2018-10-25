@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: アプリケーションをビルドする | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 442472bcad12fe42382bc8e76a668eda1705e549
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5d18e7c2e4c57e867cac47d0c8927eadbc357286
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539068"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923096"
 ---
 # <a name="walkthrough-building-an-application"></a>チュートリアル: アプリケーションをビルドする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: アプリケーションをビルドする](https://docs.microsoft.com/visualstudio/ide/walkthrough-building-an-application)します。  
-  
 このチュートリアルを完了すると、Visual Studio を使用してアプリケーションをビルドする際に構成できるオプションの使用方法を習得できます。 サンプル アプリケーション用に、カスタムのビルド構成の作成、特定の警告メッセージの非表示設定、ビルド出力情報の拡張などを行います。  
   
  このトピックは、次のセクションで構成されています。  
@@ -47,19 +45,19 @@ ms.locfileid: "47539068"
   
 #### <a name="to-install-the-sample-application"></a>サンプル アプリケーションをインストールするには  
   
-1.  メニュー バーで、**[ツール]**、**[拡張機能と更新プログラム]** の順にクリックします。  
+1. メニュー バーで、**[ツール]**、**[拡張機能と更新プログラム]** の順にクリックします。  
   
-2.  **[オンライン]** カテゴリ、**[サンプル ギャラリー]** カテゴリの順にクリックします。  
+2. **[オンライン]** カテゴリ、**[サンプル ギャラリー]** カテゴリの順にクリックします。  
   
-3.  検索ボックスに「`Introduction`」と指定してサンプルを検索します。  
+3. 検索ボックスに「`Introduction`」と指定してサンプルを検索します。  
   
-     ![[拡張機能と更新プログラム] ダイアログ ボックス](../ide/media/buildwalk-extensionsdialogsampledownload.png "BuildWalk_ExtensionsDialogSampleDownload")  
+    ![[拡張機能と更新プログラム] ダイアログ ボックス](../ide/media/buildwalk-extensionsdialogsampledownload.png "BuildWalk_ExtensionsDialogSampleDownload")  
   
-4.  結果リストで、**Introduction to Building WPF Applications (Visual C#)** または **Introduction to Building WPF Applications (Visual Basic)** を選択します。  
+4. 結果リストで、**Introduction to Building WPF Applications (Visual C#)** または **Introduction to Building WPF Applications (Visual Basic)** を選択します。  
   
-5.  **[ダウンロード]**、**[閉じる]** の順にクリックします。  
+5. **[ダウンロード]**、**[閉じる]** の順にクリックします。  
   
- Introduction to Building WPF Applications サンプルが、**[新しいプロジェクト]** ダイアログ ボックスに表示されます。  
+   Introduction to Building WPF Applications サンプルが、**[新しいプロジェクト]** ダイアログ ボックスに表示されます。  
   
 #### <a name="to-create-a-solution-for-the-sample-application"></a>サンプル アプリケーションのソリューションを作成するには  
   
@@ -88,48 +86,48 @@ ms.locfileid: "47539068"
   
 #### <a name="to-create-a-build-configuration"></a>ビルド構成を作成するには  
   
-1.  **[構成マネージャー]** ダイアログ ボックスを開きます。  
+1. **[構成マネージャー]** ダイアログ ボックスを開きます。  
   
-     ![[ビルド] メニュー、[構成マネージャー] コマンド](../ide/media/buildwalk-configurationmanagerdialogbox.png "BuildWalk_ConfigurationManagerDialogBox")  
+    ![[ビルド] メニュー、[構成マネージャー] コマンド](../ide/media/buildwalk-configurationmanagerdialogbox.png "BuildWalk_ConfigurationManagerDialogBox")  
   
-2.  **[アクティブ ソリューション構成]** 一覧の **[新規作成]** をクリックします。  
+2. **[アクティブ ソリューション構成]** 一覧の **[新規作成]** をクリックします。  
   
-3.  **[新しいソリューション構成]** ダイアログ ボックスで、新しい構成の名前として「`Test`」と入力し、既存のデバッグ構成から設定をコピーして、**[OK]** をクリックします。  
+3. **[新しいソリューション構成]** ダイアログ ボックスで、新しい構成の名前として「`Test`」と入力し、既存のデバッグ構成から設定をコピーして、**[OK]** をクリックします。  
   
-     ![[新しいソリューション構成] ダイアログ ボックス](../ide/media/buildwalk-newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")  
+    ![[新しいソリューション構成] ダイアログ ボックス](../ide/media/buildwalk-newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")  
   
-4.  **[アクティブ ソリューション プラットフォーム]** 一覧の **[新規作成]** をクリックします。  
+4. **[アクティブ ソリューション プラットフォーム]** 一覧の **[新規作成]** をクリックします。  
   
-5.  **[新しいソリューション プラットフォーム]** ダイアログ ボックスで、**[x64]** を選択します。x86 プラットフォームの設定はコピーしません。  
+5. **[新しいソリューション プラットフォーム]** ダイアログ ボックスで、**[x64]** を選択します。x86 プラットフォームの設定はコピーしません。  
   
-     ![[新しいソリューション プラットフォーム] ダイアログ ボックス](../ide/media/buildwalk-newsolutionplatform.png "BuildWalk_NewSolutionPlatform")  
+    ![[新しいソリューション プラットフォーム] ダイアログ ボックス](../ide/media/buildwalk-newsolutionplatform.png "BuildWalk_NewSolutionPlatform")  
   
-6.  **[OK]** を選択します。  
+6. **[OK]** を選択します。  
   
- アクティブなソリューション構成が Test に変更され、アクティブなソリューション プラットフォームが x64 に設定されました。  
+   アクティブなソリューション構成が Test に変更され、アクティブなソリューション プラットフォームが x64 に設定されました。  
   
- ![テスト構成を使用した構成マネージャー](../ide/media/buildwalk-configmanagertestconfig.png "BuildWalk_ConfigManagerTestconfig")  
+   ![テスト構成を使用した構成マネージャー](../ide/media/buildwalk-configmanagertestconfig.png "BuildWalk_ConfigManagerTestconfig")  
   
- **[標準]** ツール バーの **[ソリューション構成]** ボックスの一覧を使用すると、アクティブなソリューション構成を簡単に確認または変更することができます。  
+   **[標準]** ツール バーの **[ソリューション構成]** ボックスの一覧を使用すると、アクティブなソリューション構成を簡単に確認または変更することができます。  
   
- ![[ソリューション構成] オプション (標準ツール バー)](../ide/media/buildwalk-standardtoolbarsolutioncongfig.png "BuildWalk_StandardToolbarSolutionCongfig")  
+   ![[ソリューション構成] オプション (標準ツール バー)](../ide/media/buildwalk-standardtoolbarsolutioncongfig.png "BuildWalk_StandardToolbarSolutionCongfig")  
   
 ##  <a name="BKMK_building"></a> アプリケーションのビルド  
  次に、カスタム ビルド構成を使用してソリューションをビルドします。  
   
 #### <a name="to-build-the-solution"></a>ソリューションをビルドするには  
   
--   メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順にクリックします。  
+- メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順にクリックします。  
   
- **[出力]** ウィンドウに、ビルドの結果が表示されます。 ビルドは成功していますが、複数の警告メッセージが生成されました。  
+  **[出力]** ウィンドウに、ビルドの結果が表示されます。 ビルドは成功していますが、複数の警告メッセージが生成されました。  
   
- 図 1: Visual Basic の警告  
+  図 1: Visual Basic の警告  
   
- ![出力ウィンドウ、Visual Basic](../ide/media/buildwalk-vbbuildoutputwnd.png "BuildWalk_VBBuildOutputWnd")  
+  ![出力ウィンドウ、Visual Basic](../ide/media/buildwalk-vbbuildoutputwnd.png "BuildWalk_VBBuildOutputWnd")  
   
- 図 2: Visual C# の警告  
+  図 2: Visual C# の警告  
   
- ![出力ウィンドウ、Visual C&#35;](../ide/media/buildwalk-csharpbuildoutputwnd.png "BuildWalk_CsharpBuildOutputWnd")  
+  ![出力ウィンドウ、Visual C&#35;](../ide/media/buildwalk-csharpbuildoutputwnd.png "BuildWalk_CsharpBuildOutputWnd")  
   
 ##  <a name="BKMK_hidewarning"></a> コンパイラの警告を非表示にする  
  ビルド出力が見やすくなるように、ビルド時に特定の警告メッセージを一時的に非表示にすることができます。  
@@ -156,25 +154,25 @@ ms.locfileid: "47539068"
   
 #### <a name="to-suppress-all-visual-basic-build-warnings"></a>Visual Basic のすべてのビルド警告を非表示にするには  
   
-1.  **ソリューション エクスプローラー**で、最上位のプロジェクト ノードを選択します。  
+1. **ソリューション エクスプローラー**で、最上位のプロジェクト ノードを選択します。  
   
-2.  メニュー バーの **[表示]**、 **[プロパティ ページ]** の順にクリックします。  
+2. メニュー バーの **[表示]**、 **[プロパティ ページ]** の順にクリックします。  
   
-     **プロジェクト デザイナー**が開きます。  
+    **プロジェクト デザイナー**が開きます。  
   
-3.  **[コンパイル]** ページで、**[すべての警告を表示しない]** チェック ボックスをオンにします。  
+3. **[コンパイル]** ページで、**[すべての警告を表示しない]** チェック ボックスをオンにします。  
   
-     ![[コンパイル] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk-vbsupresswarnings.png "BuildWalk_VBSupressWarnings")  
+    ![[コンパイル] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk-vbsupresswarnings.png "BuildWalk_VBSupressWarnings")  
   
-     詳しくは、「[Visual Basic での警告の構成](../ide/configuring-warnings-in-visual-basic.md)」をご覧ください。  
+    詳しくは、「[Visual Basic での警告の構成](../ide/configuring-warnings-in-visual-basic.md)」をご覧ください。  
   
-4.  ソリューションをビルドします。  
+4. ソリューションをビルドします。  
   
- **[出力]** ウィンドウには、ビルドの概要情報のみが表示されます。  
+   **[出力]** ウィンドウには、ビルドの概要情報のみが表示されます。  
   
- ![出力ウィンドウ、Visual Basic のビルド警告](../ide/media/buildwalk-visualbasicbuildwarnings.png "BuildWalk_VisualBasicBuildWarnings")  
+   ![出力ウィンドウ、Visual Basic のビルド警告](../ide/media/buildwalk-visualbasicbuildwarnings.png "BuildWalk_VisualBasicBuildWarnings")  
   
- 詳細については、「[How to: Suppress Compiler Warnings](../ide/how-to-suppress-compiler-warnings.md)」(方法: コンパイラ警告を非表示にする) を参照してください。  
+   詳細については、「[How to: Suppress Compiler Warnings](../ide/how-to-suppress-compiler-warnings.md)」(方法: コンパイラ警告を非表示にする) を参照してください。  
   
 ##  <a name="BKMK_outputdetails"></a> 出力ウィンドウに追加のビルド詳細を表示する  
  **[出力]** ウィンドウに表示されるビルド プロセスに関する情報量を変更できます。 ビルドの詳細度は、通常、最小に設定されています。これは、優先度の高い警告またはエラーと共にビルド プロセスの概要のみが **[出力]** ウィンドウに表示されることを意味します。 ビルドに関する詳細情報を表示するには、「[Options Dialog Box, Projects and Solutions, Build and Run](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)」([オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]、[ビルド/実行]) を参照してください。  
@@ -184,28 +182,28 @@ ms.locfileid: "47539068"
   
 #### <a name="to-change-the-amount-of-information-in-the-output-window"></a>[出力] ウィンドウの情報量を変更するには  
   
-1.  **[オプション]** ダイアログ ボックスを開きます。  
+1. **[オプション]** ダイアログ ボックスを開きます。  
   
-     ![[ツール] メニューの [オプション] コマンド](../ide/media/exploreide-toolsoptionsmenu.png "ExploreIDE-ToolsOptionsmenu")  
+    ![[ツール] メニューの [オプション] コマンド](../ide/media/exploreide-toolsoptionsmenu.png "ExploreIDE-ToolsOptionsmenu")  
   
-2.  **[プロジェクトおよびソリューション]** カテゴリを選択し、**[ビルド/実行]** ページを選択します。  
+2. **[プロジェクトおよびソリューション]** カテゴリを選択し、**[ビルド/実行]** ページを選択します。  
   
-3.  **[MSBuild プロジェクト ビルドの出力の詳細]** ボックスの一覧の **[標準]** を選択し、**[OK]** をクリックします。  
+3. **[MSBuild プロジェクト ビルドの出力の詳細]** ボックスの一覧の **[標準]** を選択し、**[OK]** をクリックします。  
   
-4.  メニュー バーで、**[ビルド]**、**[ソリューションのクリーン]** の順にクリックします。  
+4. メニュー バーで、**[ビルド]**、**[ソリューションのクリーン]** の順にクリックします。  
   
-5.  ソリューションをビルドし、**[出力]** のウィンドウの情報をレビューします。  
+5. ソリューションをビルドし、**[出力]** のウィンドウの情報をレビューします。  
   
-     ビルド情報には、ビルドの開始時刻 (出力の先頭にあります)、ファイルが処理された順序、プロセスの完了までにかかった時間 (出力の末尾にあります) が含まれています。 この情報には、ビルド時に Visual Studio で実行される実際のコンパイラ構文も含まれています。  
+    ビルド情報には、ビルドの開始時刻 (出力の先頭にあります)、ファイルが処理された順序、プロセスの完了までにかかった時間 (出力の末尾にあります) が含まれています。 この情報には、ビルド時に Visual Studio で実行される実際のコンパイラ構文も含まれています。  
   
-     たとえば、Visual C# のビルドの場合、[/nowarn](http://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83) オプションには、このトピックで指定した警告コード 1762 が、他の 3 つの警告と共に示されます。  
+    たとえば、Visual C# のビルドの場合、[/nowarn](http://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83) オプションには、このトピックで指定した警告コード 1762 が、他の 3 つの警告と共に示されます。  
   
-     Visual Basic のビルドの場合、[/nowarn](http://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83) には除外する特定の警告が含まれていないため、警告は表示されません。  
+    Visual Basic のビルドの場合、[/nowarn](http://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83) には除外する特定の警告が含まれていないため、警告は表示されません。  
   
-    > [!TIP]
-    >  Ctrl キーを押しながら F キーを押して **[検索]** ダイアログ ボックスを表示すると、**[出力]** ウィンドウの内容を検索できます。  
+   > [!TIP]
+   >  Ctrl キーを押しながら F キーを押して **[検索]** ダイアログ ボックスを表示すると、**[出力]** ウィンドウの内容を検索できます。  
   
- 詳細については、「[方法: ビルド ログ ファイルを表示、保存、および構成する](../ide/how-to-view-save-and-configure-build-log-files.md)」をご覧ください。  
+   詳細については、「[方法: ビルド ログ ファイルを表示、保存、および構成する](../ide/how-to-view-save-and-configure-build-log-files.md)」をご覧ください。  
   
 ##  <a name="BKMK_releasebuild"></a> リリース ビルドを作成する  
  出荷用に最適化されたバージョンとしてサンプル アプリケーションをビルドすることができます。 リリース ビルドでは、ビルドの開始前に実行可能ファイルをネットワーク共有にコピーすることを指定します。  
@@ -237,30 +235,30 @@ ms.locfileid: "47539068"
   
 #### <a name="to-specify-a-release-build-for-visual-c"></a>Visual C# 用にリリース ビルドを指定するには  
   
-1.  **プロジェクト デザイナー**を開きます。  
+1. **プロジェクト デザイナー**を開きます。  
   
-     ![[表示] メニュー、[プロパティ ページ] コマンド](../ide/media/buildwalk-viewpropertypages.png "BuildWalk_ViewPropertyPages")  
+    ![[表示] メニュー、[プロパティ ページ] コマンド](../ide/media/buildwalk-viewpropertypages.png "BuildWalk_ViewPropertyPages")  
   
-2.  **[ビルド]** ページを選びます。  
+2. **[ビルド]** ページを選びます。  
   
-3.  **[構成]** ボックスの一覧の **[リリース]** をクリックします。  
+3. **[構成]** ボックスの一覧の **[リリース]** をクリックします。  
   
-4.  **[プラットフォーム]** ボックスの一覧の **[x86]** をクリックします。  
+4. **[プラットフォーム]** ボックスの一覧の **[x86]** をクリックします。  
   
-5.  **[出力パス]** ボックスに、ネットワーク パスを指定します。  
+5. **[出力パス]** ボックスに、ネットワーク パスを指定します。  
   
-     たとえば、「\\\myserver\builds」のように指定できます。  
+    たとえば、「\\\myserver\builds」のように指定できます。  
   
-    > [!IMPORTANT]
-    >  メッセージ ボックスが表示され、指定したネットワーク共有が信頼できる場所ではない可能性があるという警告が示されることがあります。 指定した場所を信頼できる場合は、メッセージ ボックスの **[OK]** をクリックします。  
+   > [!IMPORTANT]
+   >  メッセージ ボックスが表示され、指定したネットワーク共有が信頼できる場所ではない可能性があるという警告が示されることがあります。 指定した場所を信頼できる場合は、メッセージ ボックスの **[OK]** をクリックします。  
   
-6.  アプリケーションをビルドします。  
+6. アプリケーションをビルドします。  
   
-     ![[ビルド] メニューの [ソリューションのビルド] コマンド](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
+    ![[ビルド] メニューの [ソリューションのビルド] コマンド](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
   
- 指定したネットワーク パスに、実行可能ファイルがコピーされます。 このパスは \\\myserver\builds\\*FileName*.exe になります。  
+   指定したネットワーク パスに、実行可能ファイルがコピーされます。 このパスは \\\myserver\builds\\*FileName*.exe になります。  
   
- これで、このチュートリアルを完了できました。  
+   これで、このチュートリアルを完了できました。  
   
 ## <a name="see-also"></a>関連項目  
  [チュートリアル: プロジェクトの構築 (C++)](http://msdn.microsoft.com/library/d459bc03-88ef-48d0-9f9a-82d17f0b6a4d)   

@@ -1,7 +1,7 @@
 ---
 title: テキストの検索と置換 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -42,18 +42,16 @@ caps.latest.revision: 35
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c43f98a53746e609f75118fa3a490ef99e6a4adc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e4bbe1456632b2707ca548582bb278f7646ec540
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548357"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49273443"
 ---
 # <a name="finding-and-replacing-text"></a>Finding and Replacing Text
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Finding and Replacing Text](https://docs.microsoft.com/visualstudio/ide/finding-and-replacing-text)します。  
-  
 Visual Studio Code エディターや、**[検索結果]** ウィンドウなど特定のテキストベースの出力ウィンドウでは、**[検索と置換]** コントロールまたは **[フォルダーを指定して検索]/[フォルダーを指定して置換]** を使用して、テキストの検索と置換を行うことができます。 検索と置換は、XAML デザイナー、Windows フォーム デザイナー、ツール ウィンドウなどのデザイナー ウィンドウでも実行することができます。  
   
  検索のスコープは、現在のドキュメント、現在のソリューション、またはカスタム フォルダー セットに設定できます。 複数ファイル検索用に、一連のファイル名拡張子を指定することもできます。 .NET 正規表現を使用すると、検索構文をカスタマイズできます。  

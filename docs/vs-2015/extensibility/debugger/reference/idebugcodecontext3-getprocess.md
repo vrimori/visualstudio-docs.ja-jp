@@ -1,7 +1,7 @@
 ---
 title: IDebugCodeContext3::GetProcess |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: e082e494-2255-4d9d-a5a9-6dadd904bea8
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a3a31ee8d9d527f00eab2ace0416ffc04ab8c0b0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cb795eb6af2718d72c61c8e20565d937de45c9b3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536943"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49828235"
 ---
 # <a name="idebugcodecontext3getprocess"></a>IDebugCodeContext3::GetProcess
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugCodeContext3::GetProcess](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugcodecontext3-getprocess)します。  
-  
 デバッグ プロセスのインターフェイスへの参照を取得します。  
   
 ## <a name="syntax"></a>構文  

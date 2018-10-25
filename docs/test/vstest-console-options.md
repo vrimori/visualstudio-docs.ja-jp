@@ -12,12 +12,12 @@ author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e2821e785d0caf504cd64eb90a6538b1a69e9a26
-ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
+ms.openlocfilehash: 7f090607f1ebae6a03c7f12536e0dd5d46199f6e
+ms.sourcegitcommit: 7bb0225e1fd45999ce09e0b49c2cfae515c27e11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38978654"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45612663"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe のコマンド ライン オプション
 
@@ -46,7 +46,7 @@ ms.locfileid: "38978654"
 |**/Framework: [*フレームワークのバージョン*]**|テストの実行に使用する対象の .NET Framework バージョンを指定します。<br />有効な値は、Framework35、Framework40、Framework45、FrameworkUap10 です。<br />ターゲット フレームワークが **Framework35** として指定されている場合、テストは CLR 4.0 の "互換モード" で実行されます。<br />例 : `/Framework:framework40`|
 |**/TestCaseFilter:[*式*]**|指定した式に一致するテストを実行します。<br /><Expression\> は <プロパティ\>=<値\>[&#124;<Expression\>] という形式です。<br />例 : `/TestCaseFilter:"Priority=1"`<br />例 : `/TestCaseFilter:"TestCategory=Nightly&#124;FullyQualifiedName=Namespace.ClassName.MethodName"`<br />**/TestCaseFilter** コマンドライン オプションを、**/Tests** コマンドライン オプションと一緒に使用することはできません。 <br />式の作成と使用については、「[TestCase filter](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)」(TestCase フィルター) を参照してください。|
 |**/?**|使用情報を表示します。|
-|**/Logger:[*uri/friendlyname*]**|テスト結果のロガーを指定します。<br />例: Visual Studio テスト結果ファイル (TRX) に結果のログを書き込むには、**/Logger:trx** を使用します。<br />例: Team Foundation Server にテスト結果を発行するには、次のように TfsPublisher を使用します。<br />**/logger:TfsPublisher;**<br />**Collection=<チーム プロジェクトの URL\>;**<br />**BuildName=<ビルド名\>;**<br />**TeamProject=<チーム プロジェクト名\>;**<br />**[;Platform=<既定値は "Any CPU">]**<br />**[;Flavor = <既定値は "Debug">]**<br />**[;RunTitle=<タイトル\>]**|
+|**/Logger:[*uri/friendlyname*]**|テスト結果のロガーを指定します。<br />例: Visual Studio テスト結果ファイル (TRX) に結果のログを書き込むには、**/Logger:trx** を使用します。<br />例: Team Foundation Server にテスト結果を発行するには、次のように TfsPublisher を使用します。<br />**/logger:TfsPublisher;**<br />**Collection=<プロジェクト URL\>;**<br />**BuildName=<ビルド名\>;**<br />**TeamProject=<プロジェクト名\>;**<br />**[;Platform=<既定値は "Any CPU">]**<br />**[;Flavor = <既定値は "Debug">]**<br />**[;RunTitle=<タイトル\>]**|
 |**/ListTests: [*ファイル名*]**|指定されたテスト コンテナーから探索されたテストを一覧表示します。|
 |**/ListDiscoverers**|インストール済みのテスト探索プログラムを一覧表示します。|
 |**/ListExecutors**|インストール済みのテスト実行プログラムを一覧表示します。|
@@ -54,6 +54,10 @@ ms.locfileid: "38978654"
 |**/ListSettingsProviders**|インストール済みのテスト設定プロバイダーを一覧表示します。|
 |**/Blame**|実行されているテストを追跡し、テスト ホスト プロセスがクラッシュした場合は、クラッシュ時に実行されていた特定のテストまで (特定のテストを含む) の実行の順序でテスト名を出力します。 この出力によって、より簡単に問題のあるテストを分離して、さらに診断することができます。 詳細については、[こちら](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/blame-datacollector.md)を参照してください。|
 |**/Diag:[*ファイル名*]**|指定されたファイルに診断トレース ログを書き込みます。|
+|**/ResultsDirectory:[*path*]**|テスト結果ディレクトリが存在しない場合、指定されたパスに作成されます。<br />例 : `/ResultsDirectory:<pathToResultsDirectory>`|
+|**/ParentProcessId:[*parentProcessId*]**|現在のプロセスを起動する親プロセスのプロセス ID です。|
+|**/Port:[*port*]**|ソケット接続およびイベント メッセージの受信用のポートです。|
+|**/Collect:[*dataCollector friendlyName*]**|テストの実行のためのデータ コレクターを有効にします。 詳細については、[こちら](https://aka.ms/vstest-collect)を参照してください。|
 
 > [!TIP]
 > オプションと値の大文字と小文字は区別されません。

@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 44cbabd41e40c0e157a75fa260985752e3d5e016
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 132a94b6e91148d943d998ab7e4aab96d0d74960
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35257912"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822565"
 ---
 # <a name="walkthrough-display-text-in-a-text-box-in-a-document-using-a-button"></a>チュートリアル: ボタンを使用して文書内のテキスト ボックスでテキストを表示します。
   このチュートリアルでは、Microsoft Office Word のドキュメント レベルのカスタマイズでボタンやテキスト ボックスを使用する方法を示します。  
@@ -29,13 +29,13 @@ ms.locfileid: "35257912"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   デザイン時にドキュメント レベルのプロジェクトで Word 文書にコントロールを追加する。  
+- デザイン時にドキュメント レベルのプロジェクトで Word 文書にコントロールを追加する。  
   
--   ボタンがクリックされたときにテキスト ボックスにデータを読み込む。  
+- ボタンがクリックされたときにテキスト ボックスにデータを読み込む。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -49,7 +49,7 @@ ms.locfileid: "35257912"
   
 1.  名前の Word 文書プロジェクトを作成**My Word Button**します。 ウィザードで、次のように選択します。**新しい文書を作成**です。  
   
-     詳細については、次を参照してください。[方法: Visual Studio でプロジェクトを作成する Office](../vsto/how-to-create-office-projects-in-visual-studio.md)します。  
+     詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
   
      デザイナーで新しい Word 文書を開き、 **My Word Button**プロジェクトを**ソリューション エクスプ ローラー**します。  
   
@@ -58,25 +58,25 @@ ms.locfileid: "35257912"
   
 ### <a name="to-add-a-button-and-a-text-box"></a>ボタンとテキスト ボックスを追加するには  
   
-1.  Visual Studio デザイナーで文書が開いていることを確認します。  
+1. Visual Studio デザイナーで文書が開いていることを確認します。  
   
-2.  **コモン コントロール**のタブ、**ツールボックス**、ドラッグ、<xref:Microsoft.Office.Tools.Word.Controls.TextBox>コントロールをドキュメント。  
+2. **コモン コントロール**のタブ、**ツールボックス**、ドラッグ、<xref:Microsoft.Office.Tools.Word.Controls.TextBox>コントロールをドキュメント。  
   
-    > [!NOTE]  
-    >  Word の既定では、コントロールはテキスト中にインラインでドロップされます。 制御する方法を変更して、図形オブジェクトの挿入の既定値を変更することで、**編集**のタブ、**オプション**Word のダイアログ ボックス。  
+   > [!NOTE]  
+   >  Word の既定では、コントロールはテキスト中にインラインでドロップされます。 制御する方法を変更して、図形オブジェクトの挿入の既定値を変更することで、**編集**のタブ、**オプション**Word のダイアログ ボックス。  
   
-3.  **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックします。  
+3. **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックします。  
   
-4.  検索**TextBox1**で、**プロパティ**ウィンドウのドロップダウン リスト ボックスと変更、**名前**にテキスト ボックスのプロパティ**displayText**します。  
+4. 検索**TextBox1**で、**プロパティ**ウィンドウのドロップダウン リスト ボックスと変更、**名前**にテキスト ボックスのプロパティ**displayText**します。  
   
-5.  ドラッグ、**ボタン**ドキュメントに制御し、次のプロパティを変更します。  
+5. ドラッグ、**ボタン**ドキュメントに制御し、次のプロパティを変更します。  
   
-    |プロパティ|[値]|  
-    |--------------|-----------|  
-    |**Name**|**insertText**|  
-    |**[テキスト]**|**テキストを挿入します。**|  
+   |プロパティ|[値]|  
+   |--------------|-----------|  
+   |**Name**|**insertText**|  
+   |**[テキスト]**|**テキストを挿入します。**|  
   
- これで、ボタンがクリックされたときに実行されるコードを記述できるようになりました。  
+   これで、ボタンがクリックされたときに実行されるコードを記述できるようになりました。  
   
 ## <a name="populate-the-text-box-when-the-button-is-clicked"></a>ボタンがクリックされたときに、テキスト ボックスを設定します。  
  ユーザーが、ボタンをクリックするたびに**Hello World!** テキスト ボックスに追加されます。  

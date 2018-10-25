@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2003: スレッドとファイバーを処理しません |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 6563537df74d9e392bad8c4f6ce28c85b8441546
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: f3d72e052decc5a26dd134aafcaac8aba6af699f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47592294"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49810919"
 ---
 # <a name="ca2003-do-not-treat-fibers-as-threads"></a>CA2003: ファイバーをスレッドとして扱いません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2003: ファイバーをスレッドとして扱いません](https://docs.microsoft.com/visualstudio/code-quality/ca2003-do-not-treat-fibers-as-threads)します。
 
 |||
 |-|-|

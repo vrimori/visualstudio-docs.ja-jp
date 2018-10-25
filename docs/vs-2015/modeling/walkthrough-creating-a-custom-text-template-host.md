@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: カスタム テキスト テンプレート ホストの作成 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,19 +15,17 @@ caps.latest.revision: 53
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 2edd9d355fb9372ea954e2ec25c92164319297c2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ee1a6ebfdcad2f9ec50c5a76d5c14cd44028eeb7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548155"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49817276"
 ---
 # <a name="walkthrough-creating-a-custom-text-template-host"></a>チュートリアル: カスタム テキスト テンプレート ホストの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: カスタム テキスト テンプレート ホストの作成](https://docs.microsoft.com/visualstudio/modeling/walkthrough-creating-a-custom-text-template-host)です。  
-  
-A *テキスト テンプレート**ホスト* を有効にする環境を提供、*テキスト テンプレート変換エンジン*を実行します。 ホストは、エンジンとファイル システムとの対話を管理します。 エンジンまたは*ディレクティブ プロセッサ*ファイルが必要なまたはアセンブリは、ホストからリソースを要求することができます。 ホストは、要求されたリソースをディレクトリとグローバル アセンブリ キャッシュ内で探すことができます。 詳細については、次を参照してください。 [、テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)します。  
+A*テキスト テンプレート*<em>ホスト</em>できる環境を提供します、*テキスト テンプレート変換エンジン*を実行します。 ホストは、エンジンとファイル システムとの対話を管理します。 エンジンまたは*ディレクティブ プロセッサ*ファイルが必要なまたはアセンブリは、ホストからリソースを要求することができます。 ホストは、要求されたリソースをディレクトリとグローバル アセンブリ キャッシュ内で探すことができます。 詳細については、次を参照してください。 [、テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)します。  
   
  使用するかどうか、カスタム ホストを書き込むことができます、*テキスト テンプレート変換*外から機能[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]またはカスタム ツールにその機能を統合する場合。 カスタム ホストを作成するには、<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> を継承するクラスを作成する必要があります。 個々のメソッドの説明については、「<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>」を参照してください。  
   

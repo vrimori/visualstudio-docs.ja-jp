@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_compilandid |Microsoft ドキュメント
+title: Idialinenumber::get_compilandid |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ca0df8a2955bcd2fa52728512896d7e1ac280f6e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 080e45965802a09c5cc3d3a452e96342aa5a20f9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31459524"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950889"
 ---
 # <a name="idialinenumbergetcompilandid"></a>IDiaLineNumber::get_compilandId
-この行を引き起こしているコンパイル単位の一意の識別子を取得します。  
+この行を提供するコンパイル単位の一意の識別子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,10 +34,10 @@ HRESULT get_compilandId (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]返します`DWORD`この行を引き起こしているコンパイル単位の一意の識別子を格納しています。  
+ [out]返します`DWORD`この行を提供するコンパイル単位の一意の識別子を格納しています。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

@@ -1,7 +1,7 @@
 ---
 title: '方法: Null 許容型を作成する (クラス デザイナー) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,35 +17,33 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f93d5a18b71a054a147b396afd293c6bdce36c64
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ab5bfe3068f79bceb02352b47de4beb08da75c85
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548520"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941946"
 ---
 # <a name="how-to-create-a-nullable-type-class-designer"></a>方法: Null 許容型を作成する (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: null 許容型 (クラス デザイナー) 作成](https://docs.microsoft.com/visualstudio/ide/how-to-create-a-nullable-type-class-designer)です。  
-  
 ある種の値の型は、常に値が定義されている (または必要である) とは限りません。 これはデータベースではよくあることであり、一部のフィールドに値が何も割り当てられない場合があります。 たとえば、データベースのフィールドに値がまだ割り当てられていないことを示すために、フィールドに null 値を割り当てることがあります。  
   
  *null 許容型*は、その型の一般的な値の範囲だけでなく null 値も受け付けるように拡張した値型です。 たとえば、`Int32` の null 許容型 (Nullable\<Int32> とも書きます) には、-2147483648 から 2147483647 の任意の値または null 値を代入できます。 Nullable\<bool> には、値 `True`、`False`、または null (値がまったくない) を割り当てることができます。  
   
  Null 許容型は、<xref:System.Nullable%601> 構造体のインスタンスです。 null 許容型の各インスタンスには、2 つのパブリック読み取り専用プロパティ `HasValue` と `Value` があります。  
   
--   `HasValue` は `bool` 型であり、変数に定義済みの値が含まれるかどうかを示します。 `True` は、変数に null 以外の値が含まれていることを意味します。 `if (x.HasValue)` や `if (y != null)` などのステートメントを使って、定義済みの値をテストできます。  
+- `HasValue` は `bool` 型であり、変数に定義済みの値が含まれるかどうかを示します。 `True` は、変数に null 以外の値が含まれていることを意味します。 `if (x.HasValue)` や `if (y != null)` などのステートメントを使って、定義済みの値をテストできます。  
   
--   `Value` は、基になっている型と同じ型です。 `HasValue` が `True` の場合、`Value` には意味のある値が含まれています。 `HasValue` が `False` の場合は、`Value` にアクセスすると無効操作例外がスローされます。  
+- `Value` は、基になっている型と同じ型です。 `HasValue` が `True` の場合、`Value` には意味のある値が含まれています。 `HasValue` が `False` の場合は、`Value` にアクセスすると無効操作例外がスローされます。  
   
- 既定では、変数を null 許容型として宣言すると、その変数は基になる値型の既定値ではなく定義されていない値になります (`HasValue` は `False`)。  
+  既定では、変数を null 許容型として宣言すると、その変数は基になる値型の既定値ではなく定義されていない値になります (`HasValue` は `False`)。  
   
- クラス デザイナーでは、null 許容型はその基になる型と同じように表示されます。  
+  クラス デザイナーでは、null 許容型はその基になる型と同じように表示されます。  
   
- Visual C# での null 許容型について詳しくは、「[null 許容型](http://msdn.microsoft.com/library/e473cb01-28ca-42be-9cea-f717055d72c6)」をご覧ください。 Visual Basic での null 許容型について詳しくは、「[null 許容値型](http://msdn.microsoft.com/library/9ac3b602-6f96-4e6d-96f7-cd4e81c468a6)」をご覧ください。  
+  Visual C# での null 許容型について詳しくは、「[null 許容型](http://msdn.microsoft.com/library/e473cb01-28ca-42be-9cea-f717055d72c6)」をご覧ください。 Visual Basic での null 許容型について詳しくは、「[null 許容値型](http://msdn.microsoft.com/library/9ac3b602-6f96-4e6d-96f7-cd4e81c468a6)」をご覧ください。  
   
- [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
   
 ### <a name="to-add-a-nullable-type-by-using-the-class-designer"></a>クラス デザイナーを使って null 許容型を追加するには  
   

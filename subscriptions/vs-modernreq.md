@@ -9,16 +9,16 @@ description: 一部の Visual Studio Enterprise サブスクリプションに�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 20ba0a34c54bc0b9a54282bbc50bd1e9bd61c16b
-ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
+ms.openlocfilehash: 5df418e14d3aa9a85ceaca341cdfeb4b203ee97c
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "43289383"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279025"
 ---
 # <a name="the-modernrequirements4tfs-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの MODERNRequirements4TFS 特典
 
-選択した Visual Studio サブスクリプションには、MODERNRequirements SmartOffice 4TFS と ModernRequirements4TFS の 6 か月間のサブスクリプションが含まれます。  MODERNRequirements の SmartOffice4TFS は、Microsoft Word ベースのレポート機能や、すばやく簡単なリッチ テキストのオーサリングによって、TFS や Visual Studio Team Services の機能を強化します。  ModernRequirements4TFS には、作業項目のベースライン化と HTML5 シミュレーションの機能が備わっています。
+選択した Visual Studio サブスクリプションには、MODERNRequirements SmartOffice 4TFS と ModernRequirements4TFS の 6 か月間のサブスクリプションが含まれます。  MODERNRequirements の SmartOffice4TFS は、Microsoft Word ベースのレポート機能や、すばやく簡単なリッチ テキストのオーサリングによって、TFS や Azure DevOps Services の機能を強化します。  ModernRequirements4TFS には、作業項目のベースライン化と HTML5 シミュレーションの機能が備わっています。
 
 
 ## <a name="activation-steps"></a>アクティブ化の手順
@@ -101,4 +101,4 @@ ms.locfileid: "43289383"
 ## <a name="support-resources"></a>サポート リソース
 -  ModernRequirements 製品のヘルプが必要ですか。  https://www.modernrequirements.com/support-2/ を参照してください。
 -  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://visualstudio.microsoft.com/subscriptions/support/)にお問い合わせください。
--  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。
+-  Visual Studio IDE、Azure DevOps Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。

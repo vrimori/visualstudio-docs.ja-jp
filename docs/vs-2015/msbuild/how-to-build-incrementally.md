@@ -1,7 +1,7 @@
 ---
 title: '方法: インクリメンタル ビルドを実行する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 24
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dca1950a2c9ef7ee69c3f26bca1d2fe4ddf010e2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 88ad4f984af2be6884005c5ec3c7dec4d7b5c6aa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538523"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844621"
 ---
 # <a name="how-to-build-incrementally"></a>方法 : インクリメンタル ビルドを実行する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: インクリメンタル ビルドを実行](https://docs.microsoft.com/visualstudio/msbuild/how-to-build-incrementally)します。  
-  
   
 大規模なプロジェクトをビルドする場合、今でも最新の以前にビルドされたコンポーネントが再ビルドされないことが重要です。 すべてのターゲットが毎回ビルドされると、各ビルドが完了するのに長い時間がかかります。 インクリメンタル ビルド (ビルド内の以前にビルドされていないターゲット、または古くなっているターゲットだけが再ビルドされます) を有効にするため、[!INCLUDE[vstecmsbuildengine](../includes/vstecmsbuildengine-md.md)] ([!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]) は入力ファイルのタイムスタンプと出力ファイルのタイムスタンプを比較して、ターゲットをスキップ、ビルド、または部分的に再ビルドするかどうかを判断できます。 ただし、入力と出力の間に一対一のマッピングが必要です。 変換を使用して、ターゲットがこの直接マッピングを識別できるようにすることができます。 変換の詳細については、「[MSBuild 変換](../msbuild/msbuild-transforms.md)」を参照してください。  
   
@@ -38,15 +36,15 @@ ms.locfileid: "47538523"
   
 #### <a name="to-specify-inputs-and-outputs-for-a-target"></a>ターゲットに入力と出力を指定するには  
   
--   `Target` 要素の `Inputs` 属性と `Outputs` 属性を使用します。 例えば:  
+- `Target` 要素の `Inputs` 属性と `Outputs` 属性を使用します。 例えば:  
   
-    ```  
-    <Target Name="Build"  
-        Inputs="@(CSFile)"  
-        Outputs="hello.exe">  
-    ```  
+  ```  
+  <Target Name="Build"  
+      Inputs="@(CSFile)"  
+      Outputs="hello.exe">  
+  ```  
   
- [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] は入力ファイルのタイムスタンプと出力ファイルのタイムスタンプを比較し、ターゲットをスキップ、ビルド、または部分的に再ビルドするかどうかを判断できます。 次の例では、`@(CSFile)` 項目リスト内の任意のファイルが hello.exe ファイルより新しい場合、[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] はターゲットを実行します。そうでない場合は、ターゲットがスキップされます。  
+  [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] は入力ファイルのタイムスタンプと出力ファイルのタイムスタンプを比較し、ターゲットをスキップ、ビルド、または部分的に再ビルドするかどうかを判断できます。 次の例では、`@(CSFile)` 項目リスト内の任意のファイルが hello.exe ファイルより新しい場合、[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] はターゲットを実行します。そうでない場合は、ターゲットがスキップされます。  
   
 ```  
 <Target Name="Build"   
@@ -69,13 +67,13 @@ ms.locfileid: "47538523"
 ## <a name="example"></a>例  
  次の例では、架空のヘルプ システムのヘルプ ファイルをビルドするプロジェクトを使用します。 プロジェクトは、ソースの .txt ファイルを、中間の .content ファイルに変換し、これを XML メタデータ ファイルと結合してヘルプ システムで使用される最終の .help ファイルを生成することによって機能します。 プロジェクトでは、次の仮想タスクを使用します。  
   
--   `GenerateContentFiles`: .txt ファイルを .content ファイルに変換します。  
+- `GenerateContentFiles`: .txt ファイルを .content ファイルに変換します。  
   
--   `BuildHelp`: .content ファイルと XML メタデータ ファイルを結合し、最終の .help ファイルをビルドします。  
+- `BuildHelp`: .content ファイルと XML メタデータ ファイルを結合し、最終の .help ファイルをビルドします。  
   
- プロジェクトは、変換を使用して、`GenerateContentFiles` タスクで入力と出力間の一対一のマッピングを作成します。 詳細については、「[MSBuild 変換](../msbuild/msbuild-transforms.md)」をご覧ください。 また、`Output` 要素が `GenerateContentFiles` タスクからの出力を `BuildHelp` タスクの入力として自動的に使用するように設定されます。  
+  プロジェクトは、変換を使用して、`GenerateContentFiles` タスクで入力と出力間の一対一のマッピングを作成します。 詳細については、「[MSBuild 変換](../msbuild/msbuild-transforms.md)」をご覧ください。 また、`Output` 要素が `GenerateContentFiles` タスクからの出力を `BuildHelp` タスクの入力として自動的に使用するように設定されます。  
   
- このプロジェクト ファイルには、`Convert` と `Build` の両方のターゲットが含まれます。 `GenerateContentFiles` タスクと `BuildHelp` タスクはそれぞれ `Convert` と `Build` のターゲットに配置され、各ターゲットがそれぞれインクリメンタル方式でビルドできるようにします。 `Output` 要素を使用することで、`GenerateContentFiles` タスクの出力が `ContentFile` 項目リストに配置され、`BuildHelp` タスクの入力として使用できます。 このように `Output` 要素を使用することで、1 つのタスクからの出力が別のタスクの入力として自動的に提供されるため、各タスクで個々の項目または項目リストから手動でリストする必要はありません。  
+  このプロジェクト ファイルには、`Convert` と `Build` の両方のターゲットが含まれます。 `GenerateContentFiles` タスクと `BuildHelp` タスクはそれぞれ `Convert` と `Build` のターゲットに配置され、各ターゲットがそれぞれインクリメンタル方式でビルドできるようにします。 `Output` 要素を使用することで、`GenerateContentFiles` タスクの出力が `ContentFile` 項目リストに配置され、`BuildHelp` タスクの入力として使用できます。 このように `Output` 要素を使用することで、1 つのタスクからの出力が別のタスクの入力として自動的に提供されるため、各タスクで個々の項目または項目リストから手動でリストする必要はありません。  
   
 > [!NOTE]
 >  `GenerateContentFiles` ターゲットはインクリメンタル ビルドできますが、そのターゲットからのすべての出力は `BuildHelp` ターゲットの入力とし常に要求されます。 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] は、`Output` 要素を使用する場合に、1 つのターゲットからのすべての出力を別のターゲットの入力として自動的に提供します。  

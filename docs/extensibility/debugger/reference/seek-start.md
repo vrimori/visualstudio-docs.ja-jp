@@ -1,5 +1,5 @@
 ---
-title: SEEK_START |Microsoft ドキュメント
+title: SEEK_START |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 55be60c35ea3af97cb9129670ef422d1a649fead
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a10d749022757860c6f7cc620091c2ac10623976
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31127106"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905223"
 ---
 # <a name="seekstart"></a>SEEK_START
-[逆アセンブル] ストリームでシークを開始する位置を指定します。  
+[逆アセンブル] ストリームのシークの開始元の位置を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,24 +50,24 @@ public enum enum_SEEK_START {
   
 ## <a name="members"></a>メンバー  
  SEEK_START_BEGIN  
- 現在のドキュメントの先頭にシークが起動します。  
+ 現在のドキュメントの先頭に検索を開始します。  
   
  SEEK_START_END  
- 現在のドキュメントの末尾にシークが起動します。  
+ 現在のドキュメントの最後にシークが開始されます。  
   
  SEEK_START_CURRENT  
- 現在のドキュメントの現在位置にシークが起動します。  
+ 現在のドキュメントの現在位置にある検索を開始します。  
   
  SEEK_START_CODECONTEXT  
- 現在のドキュメントの指定したコードのコンテキストでシークが起動します。  
+ 現在のドキュメントの指定したコードのコンテキストではシークを開始します。  
   
  SEEK_START_CODELOCID  
- 指定したコードの場所 id でシークが起動します。 コードの場所の識別子が呼び出すことによって取得した[GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md)です。  
+ 指定したコードの場所 id で検索を開始します。 コードの場所の識別子が呼び出すことによって取得した[GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md)します。  
   
-## <a name="remarks"></a>コメント  
- 引数として渡される、[シーク](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 引数として渡される、[シーク](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

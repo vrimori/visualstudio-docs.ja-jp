@@ -9,27 +9,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 069d5fa2f4f4b67e8095593a03d9a37d085195a0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8ad5cc6dc41fb3c9b481eef717ccc3ad07b5e2e9
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43780701"
 ---
-# <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール
+# <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 と Windows Server 2012 アプリケーションのパフォーマンス ツール
 
 Windows 8 および Windows Server 2012 から強化されたセキュリティ機能によって、Visual Studio パフォーマンス ツールがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 このトピックでは、Windows 8 および Windows Server 2012 プラットフォームからのパフォーマンス ツールの変更点について説明します。
 
 > [!NOTE]
 > その他のサポートされている Windows バージョン (Windows 7、Windows Server 2008 R2) でのパフォーマンス ツールに変更点はありません。
 
-## <a name="BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE"></a> Visual Studio IDE から UWP アプリ上のデータを収集する
+## <a name="collect-data-on-uwp-apps-from-the-visual-studio-ide"></a>Visual Studio IDE から UWP アプリ上のデータを収集する
 
-JavaScript および HTML 5 で記述された UWP アプリのプロファイリングを行う場合は、JavaScript コードのインストルメンテーション データを収集します。 Visual C++、Visual C#、または Visual Basic で記述された UWP アプリまたはコンポーネントのプロファイリングを行う場合は、ネイティブ コードおよびマネージ コードのサンプリング データを収集します。 ローカル コンピューターまたはリモート コンピューター上のアプリをプロファイリングすることもできます。
+JavaScript および HTML 5 で記述された UWP アプリのプロファイリングを行う場合は、JavaScript コードのインストルメンテーション データを収集します。 Visual C++、Visual C#、または Visual Basic で記述された UWP アプリまたはコンポーネントのプロファイリングを行う場合は、ネイティブ コードおよびマネージド コードのサンプリング データを収集します。 ローカル コンピューターまたはリモート コンピューター上のアプリをプロファイリングすることもできます。
 
 UWP アプリのプロファイリングを行う場合、次のプロファイル機能およびオプションはサポートされていません。
 
 - サンプリング メソッドを使用した JavaScript アプリのプロファイリング。
-- インストルメンテーション メソッドを使用したマネージ コードおよびネイティブ コードのプロファイリング。
+- インストルメンテーション メソッドを使用したマネージド コードおよびネイティブ コードのプロファイリング。
 - 同時実行プロファイル。
 - .NET メモリ プロファイル。
 - 階層相互作用プロファイリング (TIP)。
@@ -40,19 +41,19 @@ UWP アプリのプロファイリングの詳細については、次の記事�
 
 - [ローカル コンピューターで UWP アプリを実行する](../debugger/run-windows-store-apps-on-the-local-machine.md)
 - [リモート コンピューターで UWP アプリを実行する](../debugger/run-windows-store-apps-on-a-remote-machine.md)
-- [プロファイリング ツール](profiling-tools.md)
-- [[JavaScript メモリ]](../profiling/javascript-memory.md)
+- [プロファイル ツールの概要](profiling-feature-tour.md)
+- [JavaScript メモリ](../profiling/javascript-memory.md)
 - [ローカル コンピューターでの UWP アプリの Visual C++、Visual C#、および Visual Basic コードのプロファイリング](http://msdn.microsoft.com/en-us/2d0c939e-0bac-48c5-b727-46f6c6113060)
 - [リモート デバイスでの UWP アプリの Visual C++、Visual C#、および Visual Basic コードのプロファイリング](http://msdn.microsoft.com/en-us/b932a2be-11b0-40fd-b996-75c6b6a79d22)
 - [UWP アプリの Visual C++、Visual C#、および Visual Basic コードのパフォーマンス データの分析](http://msdn.microsoft.com/en-us/5de4a413-d924-425f-afc4-e1ecfb0fca18)
 
-## <a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE"></a> Windows 8 デスクトップまたは Windows Server 2012 で実行中のアプリ上のデータを Visual Studio IDE から収集する
+## <a name="collect-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-from-the-visual-studio-ide"></a>Windows 8 デスクトップまたは Windows Server 2012 で実行中のアプリ上のデータを Visual Studio IDE から収集する
 
 インストルメンテーション メソッドを使用したプロファイリングについては、Windows 8 での変更点はありません。
 
 サンプリング メソッドを使用した階層相互作用プロファイリング (TIP) は、サポートされていません。
 
-## <a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_by_using_sampling_from_the_Visual_Studio_IDE"></a> Windows 8 デスクトップまたは Windows Server 2012 で実行中のアプリ上のデータを Visual Studio IDE からサンプリングを使用して収集する
+## <a name="collect-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-by-using-sampling-from-the-visual-studio-ide"></a>Windows 8 デスクトップまたは Windows Server 2012 で実行中のアプリ上のデータを Visual Studio IDE からサンプリングを使用して収集する
 
 サンプリング メソッドを使用して Windows 8 デスクトップ アプリケーションまたは Windows Server 2012 アプリケーションのプロファイリングを行う場合、次のプロファイル機能およびオプションはサポートされていません。
 
@@ -60,7 +61,7 @@ UWP アプリのプロファイリングの詳細については、次の記事�
 
 - サンプリング イベントや時間間隔の設定、追加のパフォーマンス カウンター データの収集などのサンプリング オプション。
 
-## <a name="BKMK_Profiling_from_the_command_line"></a> コマンド ラインからのプロファイリング
+## <a name="profile-from-the-command-line"></a>コマンド ラインからのプロファイリング
 
 Visual Studio がインストールされていないデバイスを含めて、Windows 8 デバイスおよび Windows Server 2012 デバイスでプロファイル データを収集するには、次の 2 つのコマンド ライン ツールを使用します。
 
@@ -75,7 +76,7 @@ Visual Studio がインストールされていないデバイスでアプリケ
 
 - [MSDN Web サイト](http://go.microsoft.com/fwlink/?LinkID=219549)から、Visual Studio 用のリモート ツールの一部としてツールをダウンロードします。
 
-- 既存の Visual Studio コンピューターから、スタンドアロンのプロファイラー ツール インストール プログラムをコピーして実行します。 インストール プログラムは *%VSInstallDir%* **\Team Tools\Performance Tools\Setups** フォルダーにあります。 リモート コンピューターのオペレーティング システム (x86/x64) に対応するセットアップ プログラムを選択します。
+- 既存の Visual Studio コンピューターから、スタンドアロンのプロファイラー ツール インストール プログラムをコピーして実行します。 インストール プログラムは *%VSInstallDir%\Team Tools\Performance Tools\Setups* フォルダーにあります。 リモート コンピューターのオペレーティング システム (x86/x64) に対応するセットアップ プログラムを選択します。
 
 > [!NOTE]
 > TIP プロファイル データを収集するには、Visual Studio コンピューターにあるスタンドアロン プロファイラーをリモート コンピューターにインストールする必要があります。
@@ -88,7 +89,7 @@ Visual Studio がインストールされていないデバイスでアプリケ
 
 - サンプリング イベントや時間間隔の設定、追加のパフォーマンス カウンター データの収集などのサンプリング オプション。
 
-## <a name="BKMK_Collecting_tier_interaction__TIP__data"></a> 階層の相互作用 (TIP) データを収集する
+## <a name="collect-tier-interaction-tip-data"></a>階層の相互作用 (TIP) データを収集する
 
 階層相互作用プロファイリングにより、ADO.NET サービスを通じてデータベースと通信する多階層アプリケーションの関数の実行時間に関する追加情報が提供されます。 データは同期の関数呼び出しについてのみ収集されます。
 
@@ -106,11 +107,11 @@ Visual Studio がインストールされていないデバイスでアプリケ
 
 **パフォーマンス ウィザードとパフォーマンス エクスプローラー**
 
-パフォーマンス エクスプローラーから、階層相互作用データの収集オプションをプロファイリング実行に追加する必要があります。 また、パフォーマンス エクスプローラーのターゲット ノードに、プロジェクト、実行可能ファイル、または Web サイトを追加する必要があります。 「[Visual Studio IDE を使用した階層相互作用データの収集](../profiling/collecting-tier-interaction-data.md)」をご覧ください。
+パフォーマンス エクスプローラーから、階層相互作用データの収集オプションをプロファイリング実行に追加する必要があります。 また、パフォーマンス エクスプローラーのターゲット ノードに、プロジェクト、実行可能ファイル、または Web サイトを追加する必要があります。 [階層相互作用データを収集する](../profiling/collecting-tier-interaction-data.md)方法に関するページを参照してください。
 
 **リモート コンピューターでの TIP データの収集**
 
-リモート コンピューターで階層相互作用データを収集するには、Visual Studio コンピューターの *%VSInstallDir%***\Team Tools\Performance Tools\Setups** フォルダーから **vs_profiler_***\<プラットフォーム>***_***\<言語>***.exe** ファイルをリモート コンピューターにコピーしてインストールする必要があります。 [リモート デバッグ](../debugger/remote-debugging.md)のダウンロード パッケージにあるプロファイリング ツールを使用することはできません。
+リモート コンピューターで階層相互作用データを収集するには、Visual Studio コンピューターの *%VSInstallDir%\Team Tools\Performance Tools\Setups* フォルダーから **vs\_profiler\_**_\<プラットフォーム>_**\_**_\<言語>_**.exe** ファイルをリモート コンピューターにコピーしてインストールする必要があります。 [リモート デバッグ](../debugger/remote-debugging.md)のダウンロード パッケージにあるプロファイリング ツールを使用することはできません。
 
 プロファイル データを収集するには、[VSPerfCmd](../profiling/vsperfcmd.md) または [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) を使用できます。
 

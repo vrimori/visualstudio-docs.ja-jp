@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1bed49c87828463c16912da4d31073ba2ac32fdc
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 1a758c1e44f9f78f7dc2a225e641d91f97db72cc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39511993"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942830"
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Visual Studio のフォントと書式
 ##  <a name="BKMK_TheEnvironmentFont"></a> 環境フォント
@@ -83,7 +83,7 @@ window.ShowModal()
   
  `ShowModal` ブール値を返します。 (null 許容のブール値) で、 `DialogResult`、必要な場合に使用されます。 戻り値はで、ダイアログ ボックスが閉じられた場合は true。 **OK**します。  
   
- 独自のダイアログ ボックスではありませんし、ホストされている WPF の UI を表示する必要がある場合`HwndSource`、ポップアップ ウィンドウや Win32/WinForms の親ウィンドウの WPF の子ウィンドウなどを設定する必要があります、`FontFamily`と`FontSize`WPF e のルート要素lement します。 (シェルのメイン ウィンドウでプロパティを設定するが、過去の継承できません、 `HWND`)。 シェルでは、プロパティはバインドする、このようなリソースを提供します。  
+ 独自のダイアログ ボックスではありませんし、ホストされている WPF の UI を表示する必要がある場合`HwndSource`、ポップアップ ウィンドウや Win32/WinForms の親ウィンドウの WPF の子ウィンドウなどを設定する必要があります、`FontFamily`と`FontSize`WPF 要素のルート要素。 (シェルのメイン ウィンドウでプロパティを設定するが、過去の継承できません、 `HWND`)。 シェルでは、プロパティはバインドする、このようなリソースを提供します。  
   
 ```xaml
 <Setter Property="FontFamily" Value="{DynamicResource VsFont.EnvironmentFontFamily}" />  
@@ -325,13 +325,13 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 ##### <a name="title-case"></a>大文字  
  タイトルの場合は、ほとんどまたはすべての語句内の単語の最初の文字が大文字で入力スタイルです。 Visual Studio など、多くの項目の先頭文字が大文字を使用します。  
   
--   **ツールヒント。** 例:「プレビュー選択した項目」  
+- **ツールヒント。** 例:「プレビュー選択した項目」  
   
--   **列ヘッダー。** 例:「システム応答」  
+- **列ヘッダー。** 例:「システム応答」  
   
--   **メニュー項目。** 例:「すべてを保存」  
+- **メニュー項目。** 例:「すべてを保存」  
   
- 大文字を使用する場合は、単語を大文字に変換する場合と小文字のままにする場合のガイドライン。  
+  大文字を使用する場合は、単語を大文字に変換する場合と小文字のままにする場合のガイドライン。  
   
 |大文字|コメントと例|  
 |---------------|---------------------------|  
@@ -466,5 +466,5 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 -   環境フォントのテキストを太字で表示されるには、既定行の高さの間隔とパディングを従う必要があります。  
   
 ## <a name="see-also"></a>関連項目  
- [MSDN: フォント (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742483\(v=vs.85\).aspx)   
- [MSDN: ユーザー インターフェイスのテキスト (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742478\(v=vs.85\).aspx)
+ [MSDN: フォント (Windows)](/windows/desktop/uxguide/vis-fonts)   
+ [MSDN: ユーザー インターフェイスのテキスト (Windows)](/windows/desktop/uxguide/text-ui)

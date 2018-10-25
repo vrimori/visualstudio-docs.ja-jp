@@ -1,7 +1,7 @@
 ---
 title: ジャストイン タイムは、Visual Studio のデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 51
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b1256584c2d4517b566095b3b71c6d080c6327df
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a2fdbbd98833ff43e07b17f605b6c3a105eb3efe
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533658"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49940582"
 ---
 # <a name="just-in-time-debugging-in-visual-studio"></a>Just-In-Time Debugging in Visual Studio (Visual Studio での Just-In-Time デバッグ)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Just-In-Time Debugging in Visual Studio](https://docs.microsoft.com/visualstudio/debugger/just-in-time-debugging-in-visual-studio)します。  
-  
 ジャストイン タイム デバッグ Visual Studio が自動的に起動 Visual Studio の外部を実行しているアプリケーションで例外またはクラッシュが発生したとき。 これにより、Visual Studio が実行されていない場合に、アプリケーションをテストし、問題が発生したときに、Visual Studio でデバッグを開始することができます。
 
 ジャストイン タイムのデバッグは、Windows デスクトップ アプリに対して機能します。 Windows ユニバーサル アプリの場合は機能しません、ビジュアライザーなどのネイティブ アプリケーションでホストされているマネージ コードは機能しません。
@@ -64,19 +62,19 @@ ms.locfileid: "47533658"
   
 #### <a name="to-enable-or-disable-just-in-time-debugging"></a>Just-In-Time デバッグの有効/無効を切り替えるには  
   
-1.  Visual Studio を開きます。 **[ツール]** メニューの **[オプション]** をクリックします。  
+1. Visual Studio を開きます。 **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **オプション**ダイアログ ボックスで、**デバッグ**フォルダー。  
+2. **オプション**ダイアログ ボックスで、**デバッグ**フォルダー。  
   
-3.  **デバッグ**フォルダーを選択、**ジャスト イン タイム**ページ。  
+3. **デバッグ**フォルダーを選択、**ジャスト イン タイム**ページ。  
   
-4.  **Just-In-Time を有効にするは、これらの種類のコードのデバッグ**ボックスをオンまたは関連するプログラムの種類をオフ:**マネージ**、**ネイティブ**、または**スクリプト**.  
+4. **Just-In-Time を有効にするは、これらの種類のコードのデバッグ**ボックスをオンまたは関連するプログラムの種類をオフ:**マネージ**、**ネイティブ**、または**スクリプト**.  
   
-     Just-In-Time デバッグを有効にした後で無効に切り替えるには、管理者特権で実行する必要があります。 Just-In-Time デバッグを有効にするとレジストリ キーが設定され、そのキーを変更するには管理者特権が必要になります。  
+    Just-In-Time デバッグを有効にした後で無効に切り替えるには、管理者特権で実行する必要があります。 Just-In-Time デバッグを有効にするとレジストリ キーが設定され、そのキーを変更するには管理者特権が必要になります。  
   
-5.  **[OK]** をクリックします。  
+5. **[OK]** をクリックします。  
   
- Visual Studio がコンピューターからアンインストールされた後でも、Just-In-Time デバッグが有効になっている場合があります。 Visual Studio がインストールされていない場合、時にだけ、Visual Studio からデバッグを無効にすることはできません**オプション** ダイアログ ボックス。 その場合は、Windows レジストリを編集して Just-In-Time デバッグを無効にできます。  
+   Visual Studio がコンピューターからアンインストールされた後でも、Just-In-Time デバッグが有効になっている場合があります。 Visual Studio がインストールされていない場合、時にだけ、Visual Studio からデバッグを無効にすることはできません**オプション** ダイアログ ボックス。 その場合は、Windows レジストリを編集して Just-In-Time デバッグを無効にできます。  
   
 #### <a name="to-disable-just-in-time-debugging-by-editing-the-registry"></a>レジストリを編集して Just-In-Time デバッグを無効にするには  
   
@@ -123,7 +121,7 @@ ms.locfileid: "47533658"
     [assembly:System::Diagnostics::DebuggableAttribute(true, true)];   
     ```  
   
-     詳細については、「<xref:System.Diagnostics.DebuggableAttribute>」を参照してください。  
+     詳細については、「 <xref:System.Diagnostics.DebuggableAttribute> 」を参照してください。  
   
 ## <a name="a-namebkmkusingjituse-just-in-time-debugging"></a><a name="BKMK_Using_JIT">使用して、ジャストイン タイムのデバッグ  
  このセクションでは、実行可能ファイルは例外をスローするときの動作を示します。  

@@ -20,37 +20,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c99e0e1bf64a6a88778d4bfcf27a796916a0f044
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: f4f4577fc7e1a26481ff4ab5aa94888cf5668adf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38800920"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825353"
 ---
 # <a name="how-to-use-the-gpu-threads-window"></a>方法: GPU スレッド ウィンドウを使用する
 GPU スレッド ウィンドウでは、デバッグ中のアプリケーション内の GPU 上で実行されているスレッドを調べて操作できます。 GPU 上で実行されるアプリケーションの詳細については、次を参照してください。 [C++ AMP の概要](/cpp/parallel/amp/cpp-amp-overview)します。  
   
  GPU スレッド ウィンドウには、すべての列で同じ値を持つ一連の GPU スレッドを各行が表すテーブルが表示されます。 列内の項目を並べ替え、順序変更、削除、およびグループ化することができます。 GPU スレッド ウィンドウから、スレッドのフラグ設定、フラグ解除、凍結 (中断)、および凍結解除 (再開) を実行できます。 GPU スレッド ウィンドウには次の列が表示されます。  
   
--   フラグ列。特に注意する必要のあるスレッドをマークできます。  
+- フラグ列。特に注意する必要のあるスレッドをマークできます。  
   
--   現在のスレッドの列の黄色の矢印が、現在のスレッドを示します。  
+- 現在のスレッドの列の黄色の矢印が、現在のスレッドを示します。  
   
--   **Thread Count**列は、同じ場所にあるスレッドの数が表示されます。  
+- **Thread Count**列は、同じ場所にあるスレッドの数が表示されます。  
   
--   **行**列は、スレッドの各グループが配置されるコードの行が表示されます。  
+- **行**列は、スレッドの各グループが配置されるコードの行が表示されます。  
   
--   **アドレス**列は、スレッドの各グループのある命令アドレスが表示されます。 既定では、この列は非表示になっています。  
+- **アドレス**列は、スレッドの各グループのある命令アドレスが表示されます。 既定では、この列は非表示になっています。  
   
--   **場所**列は、ソース コード内の位置です。  
+- **場所**列は、ソース コード内の位置です。  
   
--   **状態**列は、スレッドがアクティブ、ブロック、未開始、または完全なかどうかを示します。  
+- **状態**列は、スレッドがアクティブ、ブロック、未開始、または完全なかどうかを示します。  
   
--   **タイル**列は、行のスレッドのタイル インデックスを示しています。  
+- **タイル**列は、行のスレッドのタイル インデックスを示しています。  
   
- テーブルのヘッダーは、表示されているタイルとスレッドを示します。  
+  テーブルのヘッダーは、表示されているタイルとスレッドを示します。  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
 ### <a name="to-display-the-gpu-threads-window"></a>GPU スレッド ウィンドウを表示するには  
   

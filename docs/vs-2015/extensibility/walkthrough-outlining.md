@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: アウトライン |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: d75a44aa-265a-44d4-9c28-457f59c4ff9f
 caps.latest.revision: 31
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6737d9fffa1f0f38fab57edd4031647d0cc1510e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0d86dd811339122415a4511b7b7cf28f239be752
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544712"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49181975"
 ---
 # <a name="walkthrough-outlining"></a>チュートリアル: アウトライン
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: アウトライン](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-outlining)します。  
-  
 アウトラインの展開または折りたたみをするテキスト領域の種類を定義することでなどの言語ベースの機能を実装できます。 リージョンを定義するには、言語サービスのコンテキストでまたは独自ファイル名拡張子とコンテンツ タイプを定義し、その型だけに領域の定義を適用できますか ("text") などの既存のコンテンツ タイプに領域の定義を適用することができます。 このチュートリアルでは、定義のアウトライン領域を表示する方法を示します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
@@ -36,7 +34,7 @@ ms.locfileid: "47544712"
   
 #### <a name="to-create-a-mef-project"></a>MEF プロジェクトを作成するには  
   
-1.  VSIX プロジェクトを作成します。 ソリューションの名前を`OutlineRegionTest`します。  
+1.  VSIX プロジェクトを作成します。 ソリューション `OutlineRegionTest`の名前を指定します。  
   
 2.  エディター分類子の項目テンプレートをプロジェクトに追加します。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)です。  
   
@@ -49,7 +47,7 @@ ms.locfileid: "47544712"
   
 #### <a name="to-implement-an-outlining-tagger"></a>アウトラインのタガーを実装するには  
   
-1.  クラス ファイルを追加し、名前`OutliningTagger`します。  
+1.  クラス ファイルを追加し、その名前を `OutliningTagger`にします。  
   
 2.  次の名前空間をインポートします。  
   

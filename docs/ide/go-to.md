@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 00ec7361304d76d33264b98b45cf373bc5fc9f51
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: 8d9ceeb7c4d24871bc0f2ddfc743c2c65e087205
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42626686"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907054"
 ---
 # <a name="find-code-using-go-to-commands"></a>移動コマンドを使用したコードの検索
 
@@ -27,10 +27,10 @@ Visual Studio の **[移動]** コマンドは、特定の項目をすばやく�
 
 ## <a name="how-to-use-it"></a>使用方法
 
-入力        | 関数
+入力 | 関数
 ------------ | ---
 **キーボード** | **Ctrl** + **T** キーまたは **Ctrl** + **,** キーを押します。
-**マウス**    | **[編集]**、**[移動]**、**[すべてに移動]** の順に選択します。
+**マウス** | **[編集]**、**[移動]**、**[すべてに移動]** の順に選択します。
 
 コード エディターの右上に小さいウィンドウが表示されます。
 
@@ -56,7 +56,7 @@ Visual Studio の **[移動]** コマンドは、特定の項目をすばやく�
 
 プレフィックス | アイコン | ショートカット | 説明
 :-: | - | - | -
-:| ![行アイコン](media/gotoall-line-icon.png) | **Ctrl** + **G**         | 指定した行番号に移動します。
+:| ![行アイコン](media/gotoall-line-icon.png) | **Ctrl** + **G** | 指定した行番号に移動します。
 f| ![ファイル アイコン](media/gotoall-files-icon.png) | **Ctrl** + **1**、**Ctrl** + **F** | 指定したファイルに移動します。
 r| ![最近使ったファイル アイコン](media/gotoall-recent-files-icon.png) | **Ctrl** + **1**、**Ctrl** + **R** | 指定した、最近アクセスしたファイルに移動します
 t| ![型アイコン](media/gotoall-types-icon.png) | **Ctrl** + **1**、**Ctrl** + **T** | 指定した型に移動します。
@@ -85,8 +85,8 @@ m| ![メンバー アイコン](media/gotoall-members-icon.png) | **Ctrl** + **1
 設定 | 説明
 ------- | ---
 プレビュー タブを使用する | 選んだ項目を IDE の [プレビュー] タブにすぐに表示します
-詳細の表示    | プロジェクト、ファイル、行、およびドキュメントのコメントから取得した概要情報をウィンドウに表示します。
-ウィンドウを中央に   | このウィンドウをコード エディターの右上ではなく、中央に移動します。
+詳細の表示 | プロジェクト、ファイル、行、およびドキュメントのコメントから取得した概要情報をウィンドウに表示します。
+ウィンドウを中央に | このウィンドウをコード エディターの右上ではなく、中央に移動します。
 
 ## <a name="see-also"></a>関連項目
 

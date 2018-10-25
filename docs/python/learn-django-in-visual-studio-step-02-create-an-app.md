@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f568af59a638024275bdab41b33ac4fbbaf24dd3
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: 7e9f5506efb74735975bdddc6f1f5c483c1e5dea
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42627270"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45547933"
 ---
 # <a name="step-2-create-a-django-app-with-views-and-page-templates"></a>手順 2: ビューおよびページ テンプレートを使用して Django アプリを作成する
 
@@ -53,7 +53,7 @@ Django アプリは、特定の目的のために関連ファイルのセット�
 | **\_\_init\_\_.py** | アプリをパッケージとして識別するファイル。 |
 | **migrations** | Django が、モデルに対する変更に沿ってデータベースを更新するスクリプトを格納するためのフォルダー。 Django の移行ツールは、現在のモデルに適合するように、データベースの任意の以前のバージョンに必要な変更を適用します。 移行を使用して、モデルにフォーカスを保持し、Django が基になるデータベース スキーマを処理できるようにします。 移行については手順 6 で説明します。ここでは、フォルダーには単に *\_\_init\_\_.py* ファイル (フォルダーが独自の Python パッケージを定義していることを示す) が含まれています。 |
 | **templates** | アプリ名に一致するフォルダー内に単純なファイル *index.html* を含む Django ページ テンプレートのフォルダー。 (Visual Studio 2017 15.7 以前の場合、ファイルは *[テンプレート]* のすぐ下に含まれます。手順 2-4 には、サブフォルダーを作成するための指示があります。)テンプレートは、ビューが動的にページを表示するための情報を追加できる HTML のブロックです。 *index.html* 内の `{{ content }}` のようなページ テンプレート "変数" は、この記事で後述する動的な値のプレースホルダーです (手順 2)。 通常、Django アプリは、アプリと名前が一致するサブフォルダーにテンプレートを配置することで、テンプレートの名前空間を作成します。 |
-| **admin.py** | アプリの管理インターフェイス (手順 6 を参照) を拡張する Python ファイル。データベース内のデータを確認して編集するために、使用されます。 最初は、このファイルにはステートメント `from django.contrib import admin` のみが含まれています。 既定では、Django には、Django プロジェクトの *settings.py* ファイルにあるエントリを介して標準の管理インターフェイスが含まれています。これらは、*urls.py* の既存のエントリのコメントを解除することで、有効にできます。 |
+| **admin.py** | アプリの管理インターフェイス (手順 6 を参照) を拡張する Python ファイル。データベース内のデータをシードして編集するために、使用されます。 最初は、このファイルにはステートメント `from django.contrib import admin` のみが含まれています。 既定では、Django には、Django プロジェクトの *settings.py* ファイルにあるエントリを介して標準の管理インターフェイスが含まれています。これらは、*urls.py* の既存のエントリのコメントを解除することで、有効にできます。 |
 | **apps.py** | アプリの構成クラスを定義する Python ファイル (この表の後に、以下を参照してください)。 |
 | **models.py** | モデルとは、関数によって識別され、ビューがアプリの基本のデータベースを操作するために利用するデータ オブジェクトです (手順 6 を参照)。 アプリがこれらの詳細との関連付けを行う必要がないように、Django はデータベース接続層を提供します。 *models.py* ファイルはモデルを作成するための既定の場所であり、最初はステートメント `from django.db import models` のみを含みます。 |
 | **tests.py** | 単体テストの基本構造を含む Python ファイル。 |
@@ -125,7 +125,7 @@ class HelloDjangoAppConfig(AppConfig):
 
 `^home` のように、正規表現で末尾の $ を使用しない場合、URL パターンは "home"、"homework"、"homestead"、および "home192837" など、"home" で始まる*任意*の URL と一致します。
 
-別の正規表現を使って実験するには、[pythex.org](http://www.pythex.org) で [regex101.com](https://regex101.com) のようなオンライン ツールを試行してください。
+別の正規表現を使って実験するには、[pythex.org](https://www.pythex.org) で [regex101.com](https://regex101.com) のようなオンライン ツールを試行してください。
 
 ## <a name="step-2-3-render-a-view-using-html"></a>手順 2-3: HTML を使用してビューを表示する
 

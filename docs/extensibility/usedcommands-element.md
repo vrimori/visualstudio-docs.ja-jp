@@ -1,5 +1,5 @@
 ---
-title: UsedCommands 要素 |Microsoft ドキュメント
+title: UsedCommands 要素 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa2dd8bbcfaaa84905f60e2f4ae984f3269c7095
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e707a8336fb5e324c667ae16eceac2c2e9f55654
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31137662"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934770"
 ---
 # <a name="usedcommands-element"></a>UsedCommands 要素
-UsedCommands 要素には、UsedCommand 要素およびその他の UsedCommands グループがグループ化します。  
+UsedCommands 要素には、UsedCommand 要素とその他の UsedCommands グループがグループ化します。  
   
- UsedCommands 要素は省略できます。 場合は、パッケージの外部で定義されているコマンドを呼び出すことはありませんには、.vsct ファイルでこのセクションの内容を含める必要はありません。  
+ UsedCommands 要素は省略可能です。 場合は、パッケージの外部で定義されているコマンドを呼び出すことはありません、.vsct ファイルにこのセクションを含めることはありません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,7 +43,7 @@ UsedCommands 要素には、UsedCommand 要素およびその他の UsedCommands
   
 |属性|説明|  
 |---------------|-----------------|  
-|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)します。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -55,7 +55,7 @@ UsedCommands 要素には、UsedCommand 要素およびその他の UsedCommands
   
 |要素|説明|  
 |-------------|-----------------|  
-|[CommandTable 要素](../extensibility/commandtable-element.md)|統合開発環境 (IDE) に VSPackage を提供するコマンド (たとえば、メニュー項目、メニューのツールバー、およびコンボ ボックスなど) を表すすべての要素を定義します。|  
+|[CommandTable 要素](../extensibility/commandtable-element.md)|統合開発環境 (IDE) には、VSPackage を提供するコマンド (たとえば、メニュー項目、メニューのツールバー、およびコンボ ボックスなど) を表すすべての要素を定義します。|  
   
 ## <a name="example"></a>例  
   

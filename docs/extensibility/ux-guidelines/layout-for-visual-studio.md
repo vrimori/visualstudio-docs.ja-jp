@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3cc30f572f48622776bb1014c2a5e3c17bf8f27b
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 638cfc29ed2aa05a8576a2244b81f0625453076d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512377"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816698"
 ---
 # <a name="layout-for-visual-studio"></a>Visual Studio のレイアウト
 Visual Studio のダイアログ ボックスの大半は[ユーティリティ ダイアログのレイアウト](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout)、そのに従って標準のダイアログ ボックスは、unthemed [Windows デスクトップ ダイアログのレイアウトの原則](/windows/desktop/uxguide/win-dialog-box)します。 Visual Studio の UI の更新を移動するとき、目立つのダイアログ ボックスの一部に製品を定義するとエクスペリエンスを確立する新しい設計になっています。 これら[テーマが適用されたダイアログのレイアウト](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout)テーマの外観を与えます。  
@@ -56,19 +56,19 @@ Visual Studio のダイアログ ボックスの大半は[ユーティリティ 
   
 #### <a name="command-buttons"></a>コマンド ボタン  
   
--   コマンド ボタンは、コンテンツではなく、ダイアログ枠に対して動作します。 右下に配置され、設定、ボタンが互いに分離する上記変数十分な領域があります。  
+- コマンド ボタンは、コンテンツではなく、ダイアログ枠に対して動作します。 右下に配置され、設定、ボタンが互いに分離する上記変数十分な領域があります。  
   
--   ダイアログ ボックス内で動作する、横並びのボタンがある場合は、代替のコマンド ボタンの構成は、右上にある垂直スタックです。 参照してください[内部コマンド ボタン](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_InteriorCommandButtons)以下。  
+- ダイアログ ボックス内で動作する、横並びのボタンがある場合は、代替のコマンド ボタンの構成は、右上にある垂直スタックです。 参照してください[内部コマンド ボタン](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_InteriorCommandButtons)以下。  
   
--   (低い左/センター ダイアログ ボックスの) コマンド ボタンの左側の領域は、ダイアログの操作のコントロールの「域外」の一部と見なされます。 唯一の領域を侵害する必要がありますは、タスク全体またはダイアログに関連するヘルプ リンクです。  
+- (低い左/センター ダイアログ ボックスの) コマンド ボタンの左側の領域は、ダイアログの操作のコントロールの「域外」の一部と見なされます。 唯一の領域を侵害する必要がありますは、タスク全体またはダイアログに関連するヘルプ リンクです。  
   
--   コマンド ボタンは、75 x 23 ピクセルである必要があります。  
+- コマンド ボタンは、75 x 23 ピクセルである必要があります。  
   
--   6 ピクセル離れたコマンド ボタンがあります。  
+- 6 ピクセル離れたコマンド ボタンがあります。  
   
- ![基本的なボタンの配置](../../extensibility/ux-guidelines/media/0801-c_buttonalign.png "0801 c_ButtonAlign")  
+  ![基本的なボタンの配置](../../extensibility/ux-guidelines/media/0801-c_buttonalign.png "0801 c_ButtonAlign")  
   
- **図 08.01-c: 基本的なボタンの配置**  
+  **図 08.01-c: 基本的なボタンの配置**  
   
 #### <a name="labels"></a>ラベル  
   
@@ -106,19 +106,19 @@ Visual Studio のダイアログ ボックスの大半は[ユーティリティ 
 ####  <a name="BKMK_InteriorCommandButtons"></a> 内部コマンド ボタン  
  複雑なダイアログは、内部のコントロールは独自関連なボタンは、ダイアログのコミット ボタンがある場所に影響する可能性があります。  
   
--   内部の垂直方向の配置 (列) ボタンを使用して **[ok]**/**キャンセル**は右下隅で水平方向に並びます。  
+- 内部の垂直方向の配置 (列) ボタンを使用して **[ok]**/**キャンセル**は右下隅で水平方向に並びます。  
   
--   内部の水平方向の配置 (行) ボタンを使用して **[ok]**/**キャンセル**は右上隅にある垂直方向に並びます。 このような状況はまれです。  
+- 内部の水平方向の配置 (行) ボタンを使用して **[ok]**/**キャンセル**は右上隅にある垂直方向に並びます。 このような状況はまれです。  
   
--   内部のボタンのサイズのサイズと一致する 75 x 23 ピクセルの標準ボタンのサイズをターゲットする必要があります**OK**/**キャンセル**ボタンの可能な場合。 ボタンのラベル、ボタンの標準ボタンのサイズを超える場合は、そのセット内の他のボタンはその幅のサイズと一致します。  
+- 内部のボタンのサイズのサイズと一致する 75 x 23 ピクセルの標準ボタンのサイズをターゲットする必要があります**OK**/**キャンセル**ボタンの可能な場合。 ボタンのラベル、ボタンの標準ボタンのサイズを超える場合は、そのセット内の他のボタンはその幅のサイズと一致します。  
   
- ![水平方向の [ok] と [キャンセル] ボタン](../../extensibility/ux-guidelines/media/0801-f_horizokcan.png "0801 f_HorizOKCan")  
+  ![水平方向の [ok] と [キャンセル] ボタン](../../extensibility/ux-guidelines/media/0801-f_horizokcan.png "0801 f_HorizOKCan")  
   
- **図 08.01-f: を持つ水平方向の [ok]/[キャンセル] ボタンの垂直方向の内部**  
+  **図 08.01-f: を持つ水平方向の [ok]/[キャンセル] ボタンの垂直方向の内部**  
   
- ![垂直方向の [ok] と [キャンセル] ボタン](../../extensibility/ux-guidelines/media/0801-g_vertokcan.png "0801 g_VertOKCan")  
+  ![垂直方向の [ok] と [キャンセル] ボタン](../../extensibility/ux-guidelines/media/0801-g_vertokcan.png "0801 g_VertOKCan")  
   
- **図の 08.01 g: 垂直方向の [ok]/[キャンセル] を水平方向の内部ボタン。**  
+  **図の 08.01 g: 垂直方向の [ok]/[キャンセル] を水平方向の内部ボタン。**  
   
 #### <a name="browse-button"></a>[参照...]ボタン  
  **[参照...]** ボタンのテキスト ボックスに続く必要があります「参照…」省略記号を含む、完全に現れます。 容量が厳しいかが複数ある **[参照...]** 画面で、ボタンのボタンは、省略記号を削減できます。  
@@ -159,5 +159,5 @@ Visual Studio のダイアログ ボックスの大半は[ユーティリティ 
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio のアプリケーション パターン](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md)   
- [コントロール (Windows)](https://msdn.microsoft.com/library/windows/desktop/dn742399.aspx)   
- [ダイアログ ボックス (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742499\(v=vs.85\).aspx)
+ [コントロール (Windows)](/windows/desktop/uxguide/controls)   
+ [ダイアログ ボックス (Windows)](/windows/desktop/uxguide/win-dialog-box)

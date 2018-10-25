@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsReadOnly |Microsoft ドキュメント
+title: IDebugObject::IsReadOnly |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84cac5c66dd20dc9641fee7f05b456b25cbe2ffc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4238895b236db6dd75cbf384adc78284f34d073f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31113664"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936018"
 ---
 # <a name="idebugobjectisreadonly"></a>IDebugObject::IsReadOnly
-このオブジェクトは読み取り専用のかどうかを判断します。  
+このオブジェクトは読み取り専用のかどうかを決定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +41,13 @@ int IsReadOnly(
   
 #### <a name="parameters"></a>パラメーター  
  `pfIsReadOnly`  
- [out]0 以外を返します (`TRUE`) 場合、このオブジェクトは、読み取り専用です。 それ以外の場合は、0 を返します (`FALSE`)。  
+ [out]0 以外を返します (`TRUE`) 場合、このオブジェクトは、読み取り専用である、それ以外の場合は、0 を返します (`FALSE`)。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 読み取り専用のオブジェクトの値を作成した後に変更されたことはできません。  
+## <a name="remarks"></a>Remarks  
+ 読み取り専用オブジェクトでは、その値は、作成後に変更を含めることはできません。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

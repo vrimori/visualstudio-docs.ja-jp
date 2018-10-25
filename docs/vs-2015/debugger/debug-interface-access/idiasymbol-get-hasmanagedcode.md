@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_hasmanagedcode |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f6a7d579b01f677bdefaf843f4ac6a965f916101
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 719c8b963ccc88a5671699813750d248a474659c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549153"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937046"
 ---
 # <a name="idiasymbolgethasmanagedcode"></a>IDiaSymbol::get_hasManagedCode
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_hasmanagedcode](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-hasmanagedcode)します。  
-  
 マネージ コードが、モジュールに含まれるかどうかを示すフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -53,7 +51,7 @@ HRESULT get_hasManagedCode(
 ## <a name="remarks"></a>Remarks  
  このプロパティは、`SymTagCompilandDetails`記号の型 (を参照してください[CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md))。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

@@ -1,7 +1,7 @@
 ---
 title: L2DBForm.xaml.cs ソース コード | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 741c91f290b7e509110c0320013965f8cf9bef0e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6ac13d8998972ddf60576537f8b0af55d832d820
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545650"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49817538"
 ---
 # <a name="l2dbformxamlcs-source-code"></a>L2DBForm.xaml.cs Source Code
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[L2DBForm.xaml.cs ソース コード](https://docs.microsoft.com/visualstudio/designers/l2dbform-xaml-cs-source-code)します。  
-  
 このトピックでは、L2DBForm.xaml.cs ファイルの C# ソース コードの内容と説明を示します。 このファイルに含まれている L2XDBForm 部分クラスは、3 つの論理的な部分、つまりデータ メンバー、`OnRemove`、`OnAddBook` ボタン クリック イベント ハンドラーに分けることができます。  
   
 ## <a name="data-members"></a>データ メンバー  
@@ -53,19 +51,19 @@ ms.locfileid: "47545650"
   
  ただし、選択された書籍項目を削除するための中心的な作業は、2 つのステートメントだけで完了します。  
   
--   まず、リスト ボックスで現在選択されている項目に関連する書籍要素が取得されます。  
+- まず、リスト ボックスで現在選択されている項目に関連する書籍要素が取得されます。  
   
-    ```  
-    XElement selBook = (XElement)lbBooks.SelectedItem;   
-    ```  
+  ```  
+  XElement selBook = (XElement)lbBooks.SelectedItem;   
+  ```  
   
--   次に、この要素がデータ プロバイダーから削除されます。  
+- 次に、この要素がデータ プロバイダーから削除されます。  
   
-    ```  
-    selBook.Remove();  
-    ```  
+  ```  
+  selBook.Remove();  
+  ```  
   
- この場合も、動的なデータ バインドによってプログラムの UI が自動的に更新されます。  
+  この場合も、動的なデータ バインドによってプログラムの UI が自動的に更新されます。  
   
 ## <a name="example"></a>例  
   

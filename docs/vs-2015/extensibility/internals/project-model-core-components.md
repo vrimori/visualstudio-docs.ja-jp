@@ -1,7 +1,7 @@
 ---
 title: プロジェクト モデルのコア コンポーネント |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: b2f572d3-b26d-4846-92d1-84055fac141a
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2e0fd5b5963686ac38975c62bab1d8ee93224cf5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2819f32993df6215e506ae6612d2716f95780bf8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534898"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49283336"
 ---
 # <a name="project-model-core-components"></a>プロジェクト モデルのコア コンポーネント
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロジェクト モデルのコア コンポーネント](https://docs.microsoft.com/visualstudio/extensibility/internals/project-model-core-components)します。  
-  
 次の表は、プロジェクト モデルを展開します。 テーブルは、インターフェイスと、モデルとインターフェイス、および特定のオブジェクトに関連付けられているサービスで識別されたサービスの簡単な説明を提示します。 さらに、テーブルには、プロジェクトの作成と、特定のプロジェクトの種類の要件に応じて保守で省略可能なその他のインターフェイスについて詳しく説明します。  
   
  詳細については、次を参照してください。[をサポートしているシンボル参照ツール](../../extensibility/internals/supporting-symbol-browsing-tools.md)します。  

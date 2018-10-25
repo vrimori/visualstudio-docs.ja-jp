@@ -20,15 +20,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 417d901504eb20894b3bd3e83d286dac4e66b072
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 371be943dc062c5c3b5aac7f59493aa5f4f53002
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34749373"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897150"
 ---
 # <a name="cvwriteflag-function"></a>CvWriteFlag 関数
-同時実行ビジュアライザーのトレース ファイルにフラグを書き込みます。  
+コンカレンシー ビジュアライザーのトレース ファイルにフラグを書き込みます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -88,7 +88,7 @@ HRESULT CvWriteFlagExVA(
   
  **Unicode:** CvWriteFlagExW、CvWriteFlagExVW  
   
- **ANSI:** CvWriteFlagExA、CvWriteFlagExVA  
+ <strong>ANSI:</strong>CvWriteFlagExA、CvWriteFlagExVA  
   
 ## <a name="see-also"></a>関連項目  
  [C++ ライブラリ リファレンス](../profiling/cpp-library-reference.md)

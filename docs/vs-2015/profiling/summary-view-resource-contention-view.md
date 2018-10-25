@@ -1,7 +1,7 @@
 ---
 title: 概要ビュー - リソース競合ビュー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bf83509cd56343001a94da619b9246464ed75bdf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7cf00fbb7237194b88edc9e748abfa06483a44a5
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533535"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49229750"
 ---
 # <a name="summary-view---resource-contention-view"></a>概要ビュー - リソース競合ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[概要ビュー - リソース競合ビュー](https://docs.microsoft.com/visualstudio/profiling/summary-view-resource-contention-view)します。  
-  
 概要ビューでは、リソースへのアクセス待機中に中断されたスレッドまたはプロセスが含まれるアプリケーションのイベントに関する情報を表示します。  
   
  通知リンクとレポート リストの説明など詳細については、「[Summary View](../profiling/summary-view.md) (概要ビュー)」をご覧ください。  

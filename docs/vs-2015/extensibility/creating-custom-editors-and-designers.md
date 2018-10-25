@@ -1,7 +1,7 @@
 ---
 title: カスタム エディターとデザイナーを作成する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,29 +16,27 @@ ms.assetid: b6a5e8b2-0ae1-4fc3-812d-09d40051b435
 caps.latest.revision: 32
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e9916d58a714580162b7295df02907eed8b65569
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3067f9d54a91c02df63d3c22afda19da3b5707ea
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540076"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818016"
 ---
 # <a name="creating-custom-editors-and-designers"></a>カスタム エディターとデザイナーの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を作成するカスタム エディターとデザイナー](https://docs.microsoft.com/visualstudio/extensibility/creating-custom-editors-and-designers)します。  
-  
 Visual Studio 統合開発環境 (IDE) では、さまざまな種類のエディターをホストできます。  
   
--   Visual Studio のコア エディター  
+- Visual Studio のコア エディター  
   
--   カスタム エディター  
+- カスタム エディター  
   
--   外部エディター  
+- 外部エディター  
   
--   デザイナー  
+- デザイナー  
   
- 次の情報を使用する必要があるエディターの種類を選択できます。  
+  次の情報を使用する必要があるエディターの種類を選択できます。  
   
 ## <a name="types-of-editor"></a>エディターの種類  
  Visual Studio のコア エディターについては、次を参照してください。[エディターと言語サービス拡張](../extensibility/extending-the-editor-and-language-services.md)します。  

@@ -1,7 +1,7 @@
 ---
 title: 注釈を適用するタイミングと場所を指定する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9ca11e9339534c1053a62442f4eb2e4a65ca2a62
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c4772dc980743db131002dbde80346836e9dc4c0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547261"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49303356"
 ---
 # <a name="specifying-when-and-where-an-annotation-applies"></a>注釈を適用するタイミングと場所の指定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を指定するときと場所の注釈が適用される](https://docs.microsoft.com/visualstudio/code-quality/specifying-when-and-where-an-annotation-applies)します。  
-  
 注釈が条件付きの場合、アナライザーを指定するには、その他の注釈が必要です。  たとえば、関数に同期または非同期にできる変数がある場合は、関数は、次のようにします。 同期の場合は、常に最終的に成功しますが、非同期の場合、エラーを報告場合、それがすぐに成功することはできません。 関数は同期的に呼び出されると、結果の値をチェックはない値をコード アナライザー返されませんが、これはからです。  ただし、関数を非同期的に呼び出すし、関数の結果はチェックされません、重大なエラーが発生する可能性があります。 この例で使用することが状況、`_When_`注釈: この記事の後半で説明されている、チェックを有効にします。  
   
 ## <a name="structural-annotations"></a>構造的な注釈  

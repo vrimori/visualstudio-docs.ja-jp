@@ -1,7 +1,7 @@
 ---
 title: '方法: サービスのトラブルシューティング |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,29 +15,27 @@ ms.assetid: 001551da-4847-4f59-a0b2-fcd327d7f5ca
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f0cbad73fe5be46c7371356a0a3746b7e58315ef
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fdce9cb5e6499066c7e96abe895db1505f952011
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535783"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49826625"
 ---
 # <a name="how-to-troubleshoot-services"></a>方法: サービスのトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: サービスのトラブルシューティングを行う](https://docs.microsoft.com/visualstudio/extensibility/how-to-troubleshoot-services)します。  
-  
 これには、サービスを取得するときに発生する可能性があるいくつかの一般的な問題があります。  
   
--   サービスが登録されていない[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。  
+- サービスが登録されていない[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。  
   
--   インターフェイスの種類によって、サービスの種類ではなく、サービスを要求します。  
+- インターフェイスの種類によって、サービスの種類ではなく、サービスを要求します。  
   
--   サービスを要求する VSPackage が配置されてされていません。  
+- サービスを要求する VSPackage が配置されてされていません。  
   
--   間違ったサービス プロバイダーが使用されます。  
+- 間違ったサービス プロバイダーが使用されます。  
   
- かどうか、要求されたサービスを取得できない呼び出し<xref:Microsoft.VisualStudio.Shell.Package.GetService%2A>は null を返します。 サービスを要求した後は、null の常にテストする必要があります。  
+  かどうか、要求されたサービスを取得できない呼び出し<xref:Microsoft.VisualStudio.Shell.Package.GetService%2A>は null を返します。 サービスを要求した後は、null の常にテストする必要があります。  
   
 ```csharp  
 IVsActivityLog log =   

@@ -1,7 +1,7 @@
 ---
 title: プロジェクトの永続化 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 42907bcf-4e27-46bd-a8cb-01c2ccd2bde5
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d5c44fde30720fe17f4b9f3a5d679750ccb78ee6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 068f919ae0717158220712bfe010c58cd401d5d1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547826"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49177110"
 ---
 # <a name="project-persistence"></a>プロジェクトの永続化
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロジェクトの永続化](https://docs.microsoft.com/visualstudio/extensibility/internals/project-persistence)します。  
-  
 永続化は、プロジェクトの主要な設計の考慮事項です。 ほとんどのプロジェクト ファイルを表すプロジェクト項目を使用します。[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]もデータが含まれるファイル ベースのプロジェクトをサポートします。 プロジェクトとプロジェクト ファイルによって所有されている、ファイルの両方を保持する必要があります。 IDE には、プロジェクト自体またはプロジェクト項目を保存するように指示します。  
   
  プロジェクトのテンプレートはプロジェクト ファクトリに渡されます。 テンプレートは、特定のプロジェクトの種類の要件に従ってすべてのプロジェクト項目の初期化をサポートする必要があります。 これらのテンプレートをプロジェクト ファイルとして保存後で、ソリューションで、IDE によって管理されています。 詳細については、次を参照してください。[を作成するプロジェクト インスタンスで使用してプロジェクト ファクトリ](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)と[ソリューション](../../extensibility/internals/solutions.md)します。  

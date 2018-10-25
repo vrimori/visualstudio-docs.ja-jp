@@ -1,7 +1,7 @@
 ---
 title: IDebugDefaultPort2::QueryIsLocal |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 1a42e774-c6ed-419a-a0e3-cab5778652ca
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3b70992a47c2e89884257ae96e5079ba3eec0f66
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1aac6a3d823c1697cf049ef76f89c00aa8d52f7e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539157"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915569"
 ---
 # <a name="idebugdefaultport2queryislocal"></a>IDebugDefaultPort2::QueryIsLocal
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugDefaultPort2::QueryIsLocal](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugdefaultport2-queryislocal)します。  
-  
 このメソッドでは、このポートは、ローカル コンピューター上にかどうかを判断します。  
   
 ## <a name="syntax"></a>構文  

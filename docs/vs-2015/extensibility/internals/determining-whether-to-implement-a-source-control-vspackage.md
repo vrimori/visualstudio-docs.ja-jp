@@ -1,7 +1,7 @@
 ---
 title: ソース管理 VSPackage を実装するかどうかを決定する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 60b3326e-e7e2-4729-95fc-b682e7ad5c99
 caps.latest.revision: 25
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2af76d97b9fcf725079593155f8c3c5f695ca50a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 123a0448f71befcbc2e258d2cf662eb8ecff131a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546050"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49203880"
 ---
 # <a name="determining-whether-to-implement-a-source-control-vspackage"></a>ソース管理 VSPackage を実装するかどうかの決定
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を決定するかどうかをソース管理 VSPackage を実装する](https://docs.microsoft.com/visualstudio/extensibility/internals/determining-whether-to-implement-a-source-control-vspackage)します。  
-  
 このセクションでは、適切な統合パスの選択について大まかなガイドラインをソリューションと、ソース管理を拡張するためソース管理プラグインとソース管理 Vspackage の選択を詳しく説明します。  
   
 ## <a name="small-source-control-solution-with-limited-resources"></a>限られたリソースで小さなソース制御ソリューション  

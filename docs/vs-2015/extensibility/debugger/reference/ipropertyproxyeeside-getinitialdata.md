@@ -1,7 +1,7 @@
 ---
 title: IPropertyProxyEESide::GetInitialData |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 36cceb19-2604-4ef9-b42b-5dd30cbe24b1
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 96a8973f1c0f3fb51e0c2b2fe99c5b2751edc2e0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7a806d3891c74de8f1de7c3fce1c7fa22847c677
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545107"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882250"
 ---
 # <a name="ipropertyproxyeesidegetinitialdata"></a>IPropertyProxyEESide::GetInitialData
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IPropertyProxyEESide::GetInitialData](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ipropertyproxyeeside-getinitialdata)します。  
-  
 このオブジェクトの初期データを返します。  
   
 ## <a name="syntax"></a>構文  

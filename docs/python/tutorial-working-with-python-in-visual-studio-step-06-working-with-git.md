@@ -11,18 +11,18 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e0eae43e894b521cc9633df3d6e0c84e8dbb0b20
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: b75b87af9df8487144aa0f4f7d7a96c31d2b38a1
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39511328"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549286"
 ---
 # <a name="step-6-work-with-git"></a>手順 6: Git の操作
 
 **前の手順: [パッケージのインストールと Python 環境の管理](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)**
 
-Visual Studio には、ローカルの Git リポジトリと、GitHub や Visual Studio Team Services などのサービス上のリモート リポジトリを直接統合できます。 この統合には、リポジトリの複製、変更のコミット、分岐の管理が含まれます。
+Visual Studio には、ローカルの Git リポジトリと、GitHub や Azure Repos などのサービス上のリモート リポジトリを直接統合できます。 この統合には、リポジトリの複製、変更のコミット、分岐の管理が含まれます。
 
 この記事では、既存のプロジェクト向けのローカルの Git リポジトリを作成することの概要について説明し、Visual Studio の Git に関連するいくつかの機能を理解できるようにします。
 
@@ -56,7 +56,7 @@ Visual Studio には、ローカルの Git リポジトリと、GitHub や Visua
 
 リモート Git リポジトリからプロジェクトを作成する方法のチュートリアルについては、「[クイック スタート: Visual Studio で Python コードのリポジトリを複製する](quickstart-03-python-in-visual-studio-project-from-repository.md)」をご覧ください。
 
-マージの競合、プル要求があるコードのレビュー、リベース、分岐間のチェリー ピック変更などの包括的なチュートリアルについては、[Git と VSTS の使用開始](/vsts/git/gitquickstart?toc=/visualstudio/version-control/toc.json&bc=/vsts/git/breadcrumb/vc/toc.json&view=vsts&tabs=visual-studio)に関する記事を参照してください。
+マージの競合、プル要求があるコードのレビュー、リベース、分岐間のチェリー ピック変更などの包括的なチュートリアルについては、[Git と Azure Repos の使用開始](/azure/devops/repos/git/gitquickstart?toc=/visualstudio/version-control/toc.json&bc=/azure/devops/repos/git/breadcrumb/vc/toc.json&view=vsts&tabs=visual-studio)に関する記事を参照してください。
 
 ## <a name="tutorial-review"></a>チュートリアルのレビュー
 

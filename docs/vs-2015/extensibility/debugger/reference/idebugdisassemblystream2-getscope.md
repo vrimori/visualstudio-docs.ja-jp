@@ -1,7 +1,7 @@
 ---
 title: IDebugDisassemblyStream2::GetScope |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 71c6e632-642a-42d8-a995-77e4ac190a5b
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e201bcc4e6de8b39ce8e72c7648045eeb7b9ec72
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1173368ac7fac6bddb13abf25f60181a129fcb87
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533527"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49814585"
 ---
 # <a name="idebugdisassemblystream2getscope"></a>IDebugDisassemblyStream2::GetScope
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugDisassemblyStream2::GetScope](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugdisassemblystream2-getscope)します。  
-  
 [逆アセンブル] ストリームのスコープを取得します。  
   
 ## <a name="syntax"></a>構文  

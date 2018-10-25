@@ -1,5 +1,5 @@
 ---
-title: Idiasession::getenumtables |Microsoft ドキュメント
+title: Idiasession::getenumtables |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7556999e1455dcfa0d79b131ee4661a77732990f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4f68da36fc527e0390789df22ed4550a6165adbb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31460942"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49885840"
 ---
 # <a name="idiasessiongetenumtables"></a>IDiaSession::getEnumTables
 シンボル ストアに含まれているすべてのテーブルの列挙子を取得します。  
@@ -34,13 +34,13 @@ HRESULT getEnumTables (
   
 #### <a name="parameters"></a>パラメーター  
  `ppEnumTables`  
- [out]返します、 [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)オブジェクト。 シンボル ストアにテーブルを列挙するのにには、このインターフェイスを使用します。  
+ [out]返します、 [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)オブジェクト。 シンボル ストア内のテーブルを列挙するのにには、このインターフェイスを使用します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="example"></a>例  
- この例を使用する一般的な関数の表示、`getEnumTables`特定の列挙子オブジェクトを取得するメソッド。 関数が、必要なインターフェイスにキャスト可能なポインターを返します、列挙子が見つかった場合、関数を返しますそれ以外の場合、`NULL`です。  
+ この例で使用する一般的な関数、`getEnumTables`特定の列挙子オブジェクトを取得するメソッド。 関数が、必要なインターフェイスにキャスト可能なポインターを返します、列挙子が見つかった場合関数を返しますそれ以外の場合、`NULL`します。  
   
 ```C++  
 IUnknown *GetTable(IDiaSession *pSession, REFIID iid)  

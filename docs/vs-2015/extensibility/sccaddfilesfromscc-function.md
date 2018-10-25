@@ -1,7 +1,7 @@
 ---
 title: SccAddFilesFromSCC 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: f21a3500-ade8-4dd8-8647-10e2179be9c1
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d5fbfdbfd926c3cd54f31f4b6b42d8baeacaff06
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7097e4123d491b843fe0dd317905a94af0ec758d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533258"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923187"
 ---
 # <a name="sccaddfilesfromscc-function"></a>SccAddFilesFromSCC 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[SccAddFilesFromSCC 関数](https://docs.microsoft.com/visualstudio/extensibility/sccaddfilesfromscc-function)します。  
-  
 この関数は、現在開いているプロジェクトをソース管理からファイルの一覧を追加します。  
   
 ## <a name="syntax"></a>構文  

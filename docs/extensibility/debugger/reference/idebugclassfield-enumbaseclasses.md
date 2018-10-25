@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumBaseClasses |Microsoft ドキュメント
+title: IDebugClassField::EnumBaseClasses |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b5210859115947115bce6525cd5b6cd15c4d59d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5938809aa7fcd2e913743fc778c66205e39988e8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31102396"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49901100"
 ---
 # <a name="idebugclassfieldenumbaseclasses"></a>IDebugClassField::EnumBaseClasses
-このクラスの基本クラスの列挙子を作成します。  
+このクラスの基底クラスの列挙子を作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +41,13 @@ int EnumBaseClasses(
   
 #### <a name="parameters"></a>パラメーター  
  `ppEnum`  
- [out]返します、 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)基底クラスのリストを表すオブジェクト。 基本クラスが存在しない場合は、null 値を返します。  
+ [out]返します、 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)基底クラスの一覧を表すオブジェクト。 基底クラスがない場合は、null 値を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、S_OK を返します、基底クラスがない場合は、S_SH_NO_BASE_CLASSES を返します (および`ppEnum`パラメーターが null 値に設定)、それ以外のエラー コードを返します。  
+ 成功した場合は S_OK を返します、基底クラスがない場合に、S_SH_NO_BASE_CLASSES を返します (および`ppEnum`パラメーターが null 値に設定されている)、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 列挙子オブジェクトの基底クラスは、ほとんどのリモートの基本クラスに最もイミディ エイト (または最も派生) の基本クラスの順序で指定されます。 たとえば、C++ クラスを指定します。  
+## <a name="remarks"></a>Remarks  
+ 列挙子オブジェクトの基底クラスは、ほとんどのリモートの基本クラスに最も直接的な (または最も派生) の基本クラスの順序で指定されます。 たとえば、C++ クラスを考えてみます。  
   
 ```  
 class Root { }  
@@ -56,7 +56,7 @@ class Level2 : Level1 { }
 class MyClass : Level2 { }  
 ```  
   
- 列挙は順に基本クラスを返します`Level2`、 `Level1`、`Root`です。  
+ 列挙は順で基底クラスを返す`Level2`、 `Level1`、`Root`します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   

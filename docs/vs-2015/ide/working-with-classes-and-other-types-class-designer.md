@@ -1,7 +1,7 @@
 ---
 title: クラスと他の型の使用 (クラス デザイナー) | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -30,18 +30,16 @@ caps.latest.revision: 36
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7690c24e8691858dbc0c027ea765b92f54144b85
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5282b37fca3e35e23e6ca343538aad12854b7bba
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546822"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49198305"
 ---
 # <a name="working-with-classes-and-other-types-class-designer"></a>クラスと他の型の使用 (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[クラスとその他の種類 (クラス デザイナー) の使用](https://docs.microsoft.com/visualstudio/ide/working-with-classes-and-other-types-class-designer)します。  
-  
 Visual Studio のクラス デザイナーを使用すると、クラスと型の作成および編集時に、より簡単に作業対象のクラスと型に集中できるようになります。 より視覚的に Visual C# .NET、Visual Basic .NET、または C++ コードを操作するには、クラス ダイアグラムを使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

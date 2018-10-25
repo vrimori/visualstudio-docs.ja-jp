@@ -1,7 +1,7 @@
 ---
 title: ClickOnce アプリケーションをデプロイする他のユーザーの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -30,18 +30,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: b8f4736066501324d5428fd2634dfacd8c6537a4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f2b7bb6c990567a483ab28d215019fe1b259d166
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545646"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862087"
 ---
 # <a name="creating-clickonce-applications-for-others-to-deploy"></a>開発者以外が配置する ClickOnce アプリケーションの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を作成する ClickOnce アプリケーションの他のユーザー デプロイ](https://docs.microsoft.com/visualstudio/deployment/creating-clickonce-applications-for-others-to-deploy)します。  
-  
 ClickOnce 配置を作成しているすべての開発者は、アプリケーション自体を展開する予定です。 それらの多くは、ClickOnce を使用してアプリケーションをパッケージし、し、ファイルを大企業など、お客様に渡します。 お客様は、そのネットワーク上のアプリケーションをホストする役割の 1 つになります。 このトピックでは、.NET Framework バージョン 3.5 より前のバージョンでは、このような展開に固有の問題について説明します。 .NET Framework 3.5 の新しい「信頼のマニフェストを使用して、」機能を使用して新しい解決し、について説明します。 最後に、まだ .NET Framework の以前のバージョンを使用しているお客様の場合、ClickOnce 配置を作成するための推奨される方法で終了します。  
   
 ## <a name="issues-involved-in-creating-deployments-for-customers"></a>お客様の展開の作成に関連する問題  
@@ -94,13 +92,13 @@ ClickOnce 配置を作成しているすべての開発者は、アプリケー�
   
  次の 3 つの方法が、顧客がこのような状況で配置マニフェストに署名できることがあります。  
   
-1.  お客様は、証明機関 (CA) によって発行された有効な証明書を使用できます。  
+1. お客様は、証明機関 (CA) によって発行された有効な証明書を使用できます。  
   
-2.  このアプローチのバリエーション、として、顧客は、自己署名証明書を使用して配置マニフェストに署名を選択できます。 この場合の欠点は、アプリケーションをインストールするかどうかをユーザーに確認するときに、「不明な発行元」という言葉を表示になります。 ただし、利点は、時間と、証明機関によって発行された証明書に必要なコストを費やすことの小規模な顧客は阻止することです。  
+2. このアプローチのバリエーション、として、顧客は、自己署名証明書を使用して配置マニフェストに署名を選択できます。 この場合の欠点は、アプリケーションをインストールするかどうかをユーザーに確認するときに、「不明な発行元」という言葉を表示になります。 ただし、利点は、時間と、証明機関によって発行された証明書に必要なコストを費やすことの小規模な顧客は阻止することです。  
   
-3.  最後に、開発者は、セットアップ パッケージに独自の自己署名証明書を含めることができます。 これには、このトピックで前述したアプリケーション id、潜在的な問題が導入されています。  
+3. 最後に、開発者は、セットアップ パッケージに独自の自己署名証明書を含めることができます。 これには、このトピックで前述したアプリケーション id、潜在的な問題が導入されています。  
   
- 展開プロジェクトのセットアップ メソッドに欠点は、時間とカスタム デプロイ アプリケーションを構築するために必要なコストです。  
+   展開プロジェクトのセットアップ メソッドに欠点は、時間とカスタム デプロイ アプリケーションを構築するために必要なコストです。  
   
 ### <a name="have-customer-generate-deployment-manifest"></a>顧客は、配置マニフェストを生成させる  
  3 番目の可能な展開戦略が渡すために、アプリケーション ファイルとアプリケーション マニフェスト オフ、顧客にです。 このシナリオでは、顧客は、.NET Framework SDK を使用して生成し、配置マニフェストに署名する責任を負います。  

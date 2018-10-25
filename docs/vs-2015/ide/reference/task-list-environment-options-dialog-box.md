@@ -1,7 +1,7 @@
 ---
 title: '[タスク一覧] ([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -29,18 +29,16 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d96543e5f8cc7d1513f335fc6a54f669dfa5f356
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 17404838fc567d37f23c683f6b8f83b7529a3dc8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547755"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49252539"
 ---
 # <a name="task-list-environment-options-dialog-box"></a>[タスク一覧] \([オプション] ダイアログ ボックス - [環境])
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[オプション ダイアログ ボックスのタスク List, Environment,](https://docs.microsoft.com/visualstudio/ide/reference/task-list-environment-options-dialog-box)します。  
-  
   
 この [オプション] ページでは、**タスク一覧**のアラームを生成するコメント トークンを追加、削除、変更できます。 これらの設定を表示するには、**[ツール]** メニューの **[オプション]** を選択し、**[環境]** フォルダーを展開して **[タスク一覧]** を選択します。  
   

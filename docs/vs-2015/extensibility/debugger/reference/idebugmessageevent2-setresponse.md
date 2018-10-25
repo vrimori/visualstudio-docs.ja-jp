@@ -1,7 +1,7 @@
 ---
 title: IDebugMessageEvent2::SetResponse |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 2a5e318d-3225-4abd-83f1-28323baff6c0
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c7c0ac3f2e06a69d397ec4880059d90bb3df01ce
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c78c84efe0c197337e63bd4f8c5f3ee3aae8a523
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538341"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933951"
 ---
 # <a name="idebugmessageevent2setresponse"></a>IDebugMessageEvent2::SetResponse
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugMessageEvent2::SetResponse](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugmessageevent2-setresponse)します。  
-  
 メッセージ ボックスから存在する場合、応答を設定します。  
   
 ## <a name="syntax"></a>構文  

@@ -1,5 +1,5 @@
 ---
-title: PROVIDER_FLAGS |Microsoft ドキュメント
+title: PROVIDER_FLAGS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 340531f9c943052c1abd51203f3937ccd111e314
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a44fa73a51f1f6da073c63be0873fbefc669b15d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31126436"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910512"
 ---
 # <a name="providerflags"></a>PROVIDER_FLAGS
-プログラム プロバイダーから取得するための必要なプロパティを指定します。  
+プログラムのプロバイダーから取得される必要なプロパティを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -57,13 +57,13 @@ public enum enum_PROVIDER_FLAGS {
  指定したフラグがありません。  
   
  PFLAG_REMOTE_PORT  
- 呼び出し元が、別のコンピューターにプログラムの一覧[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]です。  
+ 呼び出し元が異なるコンピューター上のプログラムの一覧[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]します。  
   
  PFLAG_DEBUGGEE  
- プロセスのこのインスタンスによって現在デバッグ中[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]です。  
+ プロセスのこのインスタンスによって現在デバッグ中[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]します。  
   
  PFLAG_ATTACH_TODEBUGGEE  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] デバッグ中のプログラムにアタッチされていますが、それを起動できませんでした。  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] デバッグ中のプログラムにアタッチされていますが、起動しませんでした。  
   
  PFLAG_REASON_WATCH  
  [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] イベントを監視します。  
@@ -74,18 +74,18 @@ public enum enum_PROVIDER_FLAGS {
  PFLAG_GET_IS_DEBUGGER_PRESENT  
  呼び出し元が、`fIsTheDebuggerPresent`のフィールド、`PROVIDER_PROCESS_DATA`構造体。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  これらのフラグは、次のメソッドに渡されます。  
   
--   [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)  
+- [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)  
   
--   [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)  
+- [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)  
   
--   [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)  
+- [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)  
   
- これらの値をビット単位と組み合わせて`OR`です。  
+  これらの値は、演算と組み合わせることができます`OR`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

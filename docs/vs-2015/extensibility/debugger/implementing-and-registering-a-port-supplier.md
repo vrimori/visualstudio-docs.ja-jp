@@ -1,7 +1,7 @@
 ---
 title: 実装して、ポートのサプライヤーの登録 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: fb057052-ee16-4272-8e16-a4da5dda0ad4
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fe8e5cac0b1737d7c3dbd7e9301e0ca25d778db4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 86490e3d7df07008f23b9a12f1167b2004972a1a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546422"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49205219"
 ---
 # <a name="implementing-and-registering-a-port-supplier"></a>ポート サプライヤーの実装および登録
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[の実装および登録ポート サプライヤー](https://docs.microsoft.com/visualstudio/extensibility/debugger/implementing-and-registering-a-port-supplier)します。  
-  
 ポート サプライヤーの役割は、追跡し、さらにプロセスの管理のポートを指定することです。 ポート サプライヤーは、ポートを作成する必要がある時に、(セッション デバッグ マネージャー [SDM] は、ユーザーが選択したポート サプライヤーまたはプロジェクト システムによって指定されたポート サプライヤーに使用されます) のポート サプライヤーの GUID を持つ CoCreate を使用してインスタンス化されます。 SDM を呼び出して[CanAddPort](../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md)を任意のポートを追加できるかどうかを参照してください。 呼び出すことによって、新しいポートが要求されたポートを追加できる場合[AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md)を渡す、 [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md)ポートをについて説明します。 `AddPort` によって表される新しいポートを返す、 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)インターフェイス。  
   
 ## <a name="discussion"></a>説明  

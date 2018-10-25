@@ -1,7 +1,7 @@
 ---
 title: '方法: フォントを変更する |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,29 +16,27 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 100e8935cbc1305e904e29cf202c2118b28f0f25
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 39d8638c3b0fba1c8753fd773a447863ee01be77
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539361"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49838622"
 ---
 # <a name="how-to-change-fonts"></a>方法: フォントを変更する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 変更フォント](https://docs.microsoft.com/visualstudio/debugger/how-to-change-fonts)します。  
-  
 フォント、フォント スタイル、および spy++ ウィンドウのフォント サイズを変更することができます。  
   
 ### <a name="to-change-font-options"></a>フォントのオプションを変更するには  
   
-1.  **ビュー** ] メニューの [選択**フォント**します。  
+1. **ビュー** ] メニューの [選択**フォント**します。  
   
-2.  フォント、フォント スタイル、およびフォント サイズを選択します。  
+2. フォント、フォント スタイル、およびフォント サイズを選択します。  
   
-3.  **[OK]** をクリックします。  
+3. **[OK]** をクリックします。  
   
- 選択**既定としてフォントを保存**このフォントを使用するすべての将来 spy++ ウィンドウになります。  
+   選択**既定としてフォントを保存**このフォントを使用するすべての将来 spy++ ウィンドウになります。  
   
 ## <a name="see-also"></a>関連項目  
  [Spy++ の使用](../debugger/using-spy-increment.md)   

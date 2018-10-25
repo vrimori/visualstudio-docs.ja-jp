@@ -1,7 +1,7 @@
 ---
 title: IDebugComPlusSymbolProvider::GetNameFromToken |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 6e8cf468-5fd1-4655-93ed-88828d6068b7
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e7a10208f5bbb7bd3803b0cd7e0a417c18b8ba3e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4928510369c11ff7e3fb530c9206dbd5239e63a1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537316"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852649"
 ---
 # <a name="idebugcomplussymbolprovidergetnamefromtoken"></a>IDebugComPlusSymbolProvider::GetNameFromToken
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugComPlusSymbolProvider::GetNameFromToken](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugcomplussymbolprovider-getnamefromtoken)します。  
-  
 特定のメタデータ オブジェクトの指定したトークンに関連付けられた名前を返します。  
   
 ## <a name="syntax"></a>構文  

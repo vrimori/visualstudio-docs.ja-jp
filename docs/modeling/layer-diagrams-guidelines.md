@@ -14,12 +14,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 262dfd7860c5bd16c210e7305599eeb1003372fe
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: b7e282ed6aa93189ab15e608a5b3abe0c56411b9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47860070"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863335"
 ---
 # <a name="dependency-diagrams-guidelines"></a>依存関係図: ガイドライン
 
@@ -105,7 +105,7 @@ ms.locfileid: "47860070"
 システムまたは必要とされるアーキテクチャをするのに予定の変更を記述するのにには、依存関係図を編集するのに、次の手順を使用します。 また、リファクタリングの変更を行い、コードを拡張する前に構造を改良することもできます。 参照してください[、コードの構造を改良](#Improving)します。
 
 |**目的**|**これらの手順に従います**|
-|------------|-----------------------------|
+|-|-|
 |不要な依存関係を削除する|依存関係をクリックし、キーを押します**削除**します。|
 |依存関係の方向を変更または制限する|設定の**方向**プロパティ。|
 |新しい依存関係を生成する|使用して、**依存関係**と**双方向の依存関係**ツール。<br /><br /> 複数の依存関係を描画するには、ツールをダブルクリックします。 完了したら、クリックして、**ポインター**ツールまたはキーを押して、 **ESC**キー。|

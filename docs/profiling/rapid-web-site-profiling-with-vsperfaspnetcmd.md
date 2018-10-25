@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2efa8cf966967b07e1dbbfe5e2e1f6b7f8f6aef7
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: f0ad2c1411a47acd0219223fe928e4150368c80a
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34572882"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43780693"
 ---
 # <a name="rapid-web-site-profiling-with-vsperfaspnetcmd"></a>VSPerfASPNETCmd を使用した迅速な Web サイト プロファイリング
 
@@ -31,12 +31,12 @@ ms.locfileid: "34572882"
 > [!NOTE]
 > プロファイリング ツールのコマンド ライン ツールは、Visual Studio インストール ディレクトリの *\Team Tools\Performance Tools* サブディレクトリにあります。 64 ビットのコンピューターでは、32 ビットの *\Team Tools\Performance Tools* ディレクトリにある VSPerfASPNETCmd ツールを使用します。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。
 
-## <a name="profiling-an-aspnet-application"></a>ASP.NET アプリケーションのプロファイリング
+## <a name="profile-an-aspnet-application"></a>ASP.NET アプリケーションのプロファイル
 
 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションをプロファイルするには、次の各セクションで説明するコマンドの 1 つを入力します。 Web サイトが起動し、プロファイラーがデータ収集を開始します。 アプリケーションを実行した後、ブラウザーを閉じます。 プロファイリングを停止するには、コマンド プロンプト ウィンドウで **Enter** キーを押します。
 
 > [!NOTE]
-> 既定では、**vsperfaspnetcmd** コマンドの後にコマンド プロンプトは戻りません。 **/nowait** オプションを使用すると、コマンド プロンプトを強制的に戻すことができます。 「[/NoWait オプションの使用](#UsingNoWait)」をご覧ください。
+> 既定では、**vsperfaspnetcmd** コマンドの後にコマンド プロンプトは戻りません。 **/nowait** オプションを使用すると、コマンド プロンプトを強制的に戻すことができます。 「[/NoWait オプションの使用](#use-the-nowait-option)」をご覧ください。
 
 ## <a name="to-collect-application-statistics-by-using-the-sampling-method"></a>サンプリング メソッドを使用してアプリケーションの統計情報を収集するには
  サンプリングは **VSPerfASPNETCmd** ツールの既定のプロファイル方法であるため、コマンド ラインで指定する必要はありません。 次のコマンド ラインは、指定した Web アプリケーションからアプリケーションの統計情報を収集します。
@@ -82,15 +82,15 @@ Web アプリケーション内の静的にコンパイルされた .*dll* フ�
 
 .NET メモリ データと共に階層相互作用データを収集するには、コマンド ラインに次のように入力します。
 
-**vsperfaspnetcmd /memory****[:lifetime]** **/tip***websiteUrl*
+**vsperfaspnetcmd /memory****[:lifetime]** **/tip**_websiteUrl_
 
-## <a name="UsingNoWait"></a> /NoWait オプションの使用
+## <a name="use-the-nowait-option"></a>/NoWait オプションの使用
 
 既定では、**vsperfaspnetcmd** コマンドの後にコマンド プロンプトは戻りません。 次の構文オプションを使用すると、コマンド プロンプトを強制的に戻すことができます。 その後、コマンド プロンプト ウィンドウで他の操作を実行できます。 プロファイリングを終了するには、別の **vsperfaspnetcmd** コマンドで **/shutdown** オプションを使用します。
 
 プロファイリングを開始するには、次のように入力します。
 
-**vsperfaspnetcmd** [*/Options*] **/nowait***websiteUrl*
+**vsperfaspnetcmd** [*/Options*] **/nowait**_websiteUrl_
 
 プロファイリングを終了するには、次のように入力します。
 

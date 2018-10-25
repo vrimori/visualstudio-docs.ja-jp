@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2::GetException |Microsoft ドキュメント
+title: IDebugExceptionEvent2::GetException |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc844885a7efa1784b985eb3901de80a47c5efe4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b4c62a12c54a716a02146190b91f1f95365333b9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31116452"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917129"
 ---
 # <a name="idebugexceptionevent2getexception"></a>IDebugExceptionEvent2::GetException
 このイベントを発生させた例外の詳細な説明を取得します。  
@@ -41,13 +41,13 @@ int GetException(
   
 #### <a name="parameters"></a>パラメーター  
  `pExceptionInfo`  
- [入力、出力].[EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)例外の説明が入力構造です。  
+ [入力、出力][EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)構造を例外の説明が入力されます。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- [C++ のみ]内の任意の文字列を解放するため、呼び出し元が、 [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)を解放するだけでなく構造体、 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)構造内のオブジェクト。  
+## <a name="remarks"></a>Remarks  
+ [C++ のみ]呼び出し元が内の任意の文字列を解放する、 [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)の解放と構造体、 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)構造内のオブジェクト。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)   

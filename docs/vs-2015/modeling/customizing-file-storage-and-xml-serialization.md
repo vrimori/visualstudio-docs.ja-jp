@@ -1,7 +1,7 @@
 ---
 title: ファイル格納処理および XML シリアル化のカスタマイズ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: ee8a3b5a5510ef5b8a104e3a55ace3af9ce7d318
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 574fad0cdccd0112d7d078e86486569d16919a75
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592902"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867448"
 ---
 # <a name="customizing-file-storage-and-xml-serialization"></a>ファイル格納処理および XML シリアル化処理のカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ファイル記憶域のカスタマイズと XML シリアル化](https://docs.microsoft.com/visualstudio/modeling/customizing-file-storage-and-xml-serialization)します。  
-  
 ユーザーは、インスタンスを保存するときにまたは*モデル*でドメイン固有言語 (DSL) の[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、XML ファイルを作成または更新します。 ファイルは、ストア内のモデルを再作成を再読み込みすることができます。  
   
  シリアル化方式をカスタマイズするには、の設定を調整する**Xml シリアル化動作**DSL エクスプ ローラーでします。 下のノードがある**Xml シリアル化動作**のすべてのドメイン クラス、プロパティ、および関係。 リレーションシップは、そのソース クラスの下に配置されます。 図形、コネクタ、およびダイアグラムのクラスに対応するノードもあります。  
@@ -107,26 +105,26 @@ ms.locfileid: "47592902"
 ## <a name="understanding-monikers"></a>モニカーを理解します。  
  モニカーが使用され、モデルと図のファイルの異なる部分間の相互参照を表します。 使用することも、`.diagram`ファイルをモデル ファイル内のノードを参照してください。 これには 2 つのモニカーの形式があります。  
   
--   *Id モニカー*ターゲット要素の GUID を引用します。 例えば:  
+- *Id モニカー*ターゲット要素の GUID を引用します。 例えば:  
   
-    ```  
-    <personShapeMoniker Id="f79734c0-3da1-4d72-9514-848fa9e75157" />  
+  ```  
+  <personShapeMoniker Id="f79734c0-3da1-4d72-9514-848fa9e75157" />  
   
-    ```  
+  ```  
   
--   *修飾キー モニカー*モニカー キーと呼ばれる指定されたドメイン プロパティの値によって、ターゲット要素を識別します。 ターゲット要素のモニカーのプレフィックスが付いたの埋め込みリレーションシップ ツリーで、親要素のモニカー。  
+- *修飾キー モニカー*モニカー キーと呼ばれる指定されたドメイン プロパティの値によって、ターゲット要素を識別します。 ターゲット要素のモニカーのプレフィックスが付いたの埋め込みリレーションシップ ツリーで、親要素のモニカー。  
   
-     次の例は、DSL がありますが、アルバムを持つクラスの名前付きの曲をドメインへの埋め込みリレーションシップをという名前のドメイン クラスから取得します。  
+   次の例は、DSL がありますが、アルバムを持つクラスの名前付きの曲をドメインへの埋め込みリレーションシップをという名前のドメイン クラスから取得します。  
   
-    ```  
-    <albumMoniker title="/My Favorites/Jazz after Teatime" />  
-    <songMoniker title="/My Favorites/Jazz after Teatime/Hot tea" />  
+  ```  
+  <albumMoniker title="/My Favorites/Jazz after Teatime" />  
+  <songMoniker title="/My Favorites/Jazz after Teatime/Hot tea" />  
   
-    ```  
+  ```  
   
-     ターゲット クラスにドメインのプロパティがある場合は、対象の修飾キー モニカーが使用されるオプション**モニカー キーである**に設定されている`true`で**Xml シリアル化動作**します。 例では、このオプションは、ドメイン クラスは、「アルバム」および「曲」で"Title"をという名前のドメイン プロパティに設定されます。  
+   ターゲット クラスにドメインのプロパティがある場合は、対象の修飾キー モニカーが使用されるオプション**モニカー キーである**に設定されている`true`で**Xml シリアル化動作**します。 例では、このオプションは、ドメイン クラスは、「アルバム」および「曲」で"Title"をという名前のドメイン プロパティに設定されます。  
   
- 修飾キー モニカーはモニカーを ID よりも読みやすくします。 ユーザーによって読み取られるモデル ファイルの XML にする場合は、修飾キー モニカーの使用を検討してください。 ただし、ユーザーはモニカー キーが同じである 1 つ以上の要素を設定するは。 重複するキーには、ファイルが正しく再読み込みしない可能性があります。 そのため、修飾キー モニカーを使用して参照されているドメイン クラスを定義する場合は、重複するモニカーを含むファイルを保存してから、ユーザーを回避する方法を検討してください。  
+  修飾キー モニカーはモニカーを ID よりも読みやすくします。 ユーザーによって読み取られるモデル ファイルの XML にする場合は、修飾キー モニカーの使用を検討してください。 ただし、ユーザーはモニカー キーが同じである 1 つ以上の要素を設定するは。 重複するキーには、ファイルが正しく再読み込みしない可能性があります。 そのため、修飾キー モニカーを使用して参照されているドメイン クラスを定義する場合は、重複するモニカーを含むファイルを保存してから、ユーザーを回避する方法を検討してください。  
   
 #### <a name="to-set-a-domain-class-to-be-referenced-by-id-monikers"></a>モニカーを ID で参照されるドメイン クラスを設定するには  
   

@@ -1,7 +1,7 @@
 ---
 title: レイヤー モデル拡張機能の展開 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ caps.latest.revision: 29
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b5d581ca67a2d3fde5b7acab5937d1aedf88cfa4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cb6644b45e2256aa3fdc24ccd8e6d14095f72e13
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535619"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907249"
 ---
 # <a name="deploy-a-layer-model-extension"></a>レイヤー モデル拡張機能の配置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[レイヤー モデル拡張機能をデプロイ](https://docs.microsoft.com/visualstudio/modeling/deploy-a-layer-model-extension)します。  
-  
 Visual Studio の他のユーザーは、Visual Studio を使って作成されたレイヤー モデリング拡張機能をインストールできます。  
   
 ## <a name="installing-your-extension"></a>拡張機能のインストール  
@@ -34,13 +32,13 @@ Visual Studio の他のユーザーは、Visual Studio を使って作成され�
   
 #### <a name="to-install-the-extension"></a>拡張機能をインストールするには  
   
-1.  含むプロジェクトで**source.vsix.manifest**オープン**bin\\ \*** ファイル エクスプ ローラーでします。  
+1. 含むプロジェクトで**source.vsix.manifest**オープン**bin\\\\*** ファイル エクスプ ローラーでします。  
   
-2.  コピー、  **\*.vsix**ファイルを拡張機能をインストールするコンピューターにします。  
+2. コピー、  **\*.vsix**ファイルを拡張機能をインストールするコンピューターにします。  
   
-3.  インストール先のコンピューターの Windows エクスプローラーで *.vsix をダブルクリックします。  
+3. インストール先のコンピューターの Windows エクスプローラーで *.vsix をダブルクリックします。  
   
-     VSIX インストーラーが起動します。  
+    VSIX インストーラーが起動します。  
   
 #### <a name="to-uninstall-the-extension"></a>拡張機能をアンインストールするには  
   

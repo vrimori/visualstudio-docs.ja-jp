@@ -1,7 +1,7 @@
 ---
 title: Visual Studio 拡張機能の開発を始める |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 8fe5e2ab-a424-4173-9d39-dd082c4d58d0
 caps.latest.revision: 30
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 441abc9254fac5b70270fc622740d03ecc43d512
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3a38410c1b64a455f12d91cd8460f5f04d369275
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535777"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847306"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Visual Studio 拡張機能の開発を開始しています
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio 拡張機能の開発を開始しています](https://docs.microsoft.com/visualstudio/extensibility/starting-to-develop-visual-studio-extensions)します。  
-  
 前に Visual Studio 拡張機能を初めて作成する場合、いくつか質問がある可能性があります。 ここで、最も一般的なものの一部を示しています。 探している情報が表示されない場合は、フィードバック ボタンを使用して (**このページに立ちましたか?** 画面の下部にある) する情報を確認します。  
   
 ## <a name="what-software-do-i-need-to-develop-visual-studio-extensions"></a>Visual Studio 拡張機能を開発するために必要なソフトウェアはなんですか。  
@@ -36,13 +34,13 @@ ms.locfileid: "47535777"
 ## <a name="what-kinds-of-things-can-i-do-with-visual-studio-extensions"></a>Visual Studio 拡張機能でどのような種類の項目を行えるはでしょうか。  
  無限の可能性に関してはさまざまな Visual Studio 拡張機能を考えたときに制限します。 もちろん、ほとんどの拡張機能がある問題、コードの記述であることが、大文字と小文字をする必要はありません。 拡張機能の作成の種類のいくつかの例を次に示します。  
   
--   構文の色分け、IntelliSense、コンパイラとデバッグのサポートと、Visual Studio に含まれていない言語のサポート  
+- 構文の色分け、IntelliSense、コンパイラとデバッグのサポートと、Visual Studio に含まれていない言語のサポート  
   
--   その他のテンプレート、コードのリファクタリング、新しいダイアログ ボックスまたはツール ウィンドウを使用した生産性向上ツールのコアを拡張が IDE のエクスペリエンスします。  
+- その他のテンプレート、コードのリファクタリング、新しいダイアログ ボックスまたはツール ウィンドウを使用した生産性向上ツールのコアを拡張が IDE のエクスペリエンスします。  
   
--   データのデザインまたはクラウドのサポートなどのシナリオのドメイン固有のデザイナー  
+- データのデザインまたはクラウドのサポートなどのシナリオのドメイン固有のデザイナー  
   
- 拡張機能の例については、チェック アウト、 [Visual Studio ギャラリー](https://visualstudiogallery.msdn.microsoft.com/)します。 見ても行う[Visual Studio のオープン ソース Extensions](https://github.com/Microsoft/extendvs/blob/master/CommunityExtensions.md)します。  
+  拡張機能の例については、チェック アウト、 [Visual Studio ギャラリー](https://visualstudiogallery.msdn.microsoft.com/)します。 見ても行う[Visual Studio のオープン ソース Extensions](https://github.com/Microsoft/extendvs/blob/master/CommunityExtensions.md)します。  
   
 ## <a name="which-visual-studio-features-can-i-extend"></a>Visual Studio 機能を拡張できますか。  
  理論上は、Visual Studio のあらゆる部分を拡張することができます: メニューのツールバー、コマンド、windows、ソリューション、プロジェクト、エディターなど。  

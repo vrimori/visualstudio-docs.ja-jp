@@ -1,7 +1,7 @@
 ---
 title: MESSAGETYPE |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 800cc77d-3c27-4763-a9df-552a9384bd49
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f4e6bb32aa3387d79ea233e8751c5805537947fe
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: dc81ac400ce2a94674a97d9b987bf1a3e7843105
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536203"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845439"
 ---
 # <a name="messagetype"></a>MESSAGETYPE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MESSAGETYPE](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/messagetype)します。  
-  
 メッセージの種類と理由を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -80,7 +78,7 @@ public enum enum_MESSAGETYPE {
   
  理由の値のいずれかの演算を使用して出力先の値のいずれかと組み合わせることができます`OR`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

@@ -1,7 +1,7 @@
 ---
 title: '方法: 型の間の継承を作成する (クラス デザイナー) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 34
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cd1b47ca4be4b68c1ddf3d4b75fcdfd25407705c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5bcc052589f090eaad8aace8c491f74d3bbfefe9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545547"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49257778"
 ---
 # <a name="how-to-create-inheritance-between-types-class-designer"></a>方法: 型の間の継承を作成する (クラス デザイナー) 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 作成の種類の間の継承 (クラス デザイナー)](https://docs.microsoft.com/visualstudio/ide/how-to-create-inheritance-between-types-class-designer)します。  
-  
 クラス デザイナーを使用してクラス ダイアグラム上の 2 つの型間の継承関係を作成するには、基本型をその派生型 (複数可) に接続します。 継承関係は、2 つのクラス間、クラスとインターフェイス間、または 2 つのインターフェイス間で作成できます。  
   
 ### <a name="to-create-an-inheritance-between-types"></a>型間で継承を作成するには  

@@ -1,7 +1,7 @@
 ---
 title: MSBuild の使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 9d38c388-1f64-430e-8f6c-e88bc99a4260
 caps.latest.revision: 21
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c8b776823c78835ad687a110c1fcc0ba1382bead
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2d382261615624fe099694af5b067de55090ad0e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535394"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49229334"
 ---
 # <a name="using-msbuild"></a>MSBuild の使用
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を使用して MSBuild](https://docs.microsoft.com/visualstudio/extensibility/internals/using-msbuild)します。  
-  
 MSBuild では、ビルド、ビルド タスク、および構成をビルドするプロジェクト アイテムを完全に記述するプロジェクト ファイルを作成するために適切に定義された、拡張性の高い XML 形式を提供します。  
   
  MSBuild に基づく言語プロジェクト システムのエンド ツー エンド サンプルで IronPython サンプルの詳細情報を参照してください、[VSSDK のサンプル](../../misc/vssdk-samples.md)します。  

@@ -1,7 +1,7 @@
 ---
 title: '方法: インポートした名前空間を追加または削除する (Visual Basic) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c70f5187300c3c7d661055f78911bdedb926fdc5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 730ebcf8029abf51e6cb04c74b826593139cfdc5
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535302"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49196405"
 ---
 # <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>方法 : インポートした名前空間を追加または削除する (Visual Basic)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 追加またはインポート済み名前空間 (Visual Basic) を削除する](https://docs.microsoft.com/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)します。  
-  
 名前空間をインポートすると、その名前空間の要素を、完全に修飾することなくコードで使うことができます。 たとえば、`System.Messaging.MessageQueue` クラスの `Create` メソッドにアクセスする場合、`System.Messaging` 名前空間をインポートすると、`MessageQueue.Create` とするだけで必要な要素をコードで参照できます。  
   
  インポートした名前空間は、**プロジェクト デザイナー**の **[参照]** ページで管理します。 このダイアログ ボックスで指定したインポートは、コンパイラに直接渡されて (`/imports`)、プロジェクト内のすべてのファイルに適用されます。 1 つのソース コード ファイルで名前空間を使うには、`Imports` ステートメントを使います。  

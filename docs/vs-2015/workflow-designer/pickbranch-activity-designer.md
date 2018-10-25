@@ -1,7 +1,7 @@
 ---
 title: PickBranch アクティビティ デザイナー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: 9c4e8156fffa975a511d0e6bc54ac139b2e10d81
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f39479c9421ab87caf7c918e05be89272f0fb4de
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546962"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887310"
 ---
 # <a name="pickbranch-activity-designer"></a>PickBranch アクティビティ デザイナー
 <xref:System.Activities.Statements.PickBranch> は、受信イベントによってトリガー可能な、<xref:System.Activities.Statements.Pick> アクティビティ内のイベント ベースの実行パスを提供します。  
@@ -34,21 +34,21 @@ ms.locfileid: "47546962"
   
  追加する 2 つの方法はあります<xref:System.Activities.Statements.PickBranch>オブジェクトのコレクションを<xref:System.Activities.Statements.Pick>オブジェクト: ドラッグ アンド ドロップ、 **PickBranch**からデザイナー、**ツールボックス**からコンテキスト メニューを使用内で、**選択**デザイン画面。  
   
-1.  **PickBranch**デザイナーを作成、<xref:System.Activities.Statements.PickBranch>からドラッグされるときに、**ツールボックス**の分岐の 1 つにドロップして、**選択**上のアクティビティデザイナー[!INCLUDE[wfd2](../includes/wfd2-md.md)]画面。 新しい <xref:System.Activities.Statements.PickBranch> オブジェクトは、<xref:System.Activities.Statements.Pick> デザイナー内で、コレクションに含まれている既存の <xref:System.Activities.Statements.PickBranch> 要素の左側または右側に配置できます。 ドラッグしたときに、 **PickBranch**デザイナー上に、**選択**マウス、デザイナー、**選択**デザイナーでは、青灰色の縦の帯を使用して、場所を示します、 <xref:System.Activities.Statements.PickBranch>位置に追加されます。  
+1. **PickBranch**デザイナーを作成、<xref:System.Activities.Statements.PickBranch>からドラッグされるときに、**ツールボックス**の分岐の 1 つにドロップして、**選択**上のアクティビティデザイナー[!INCLUDE[wfd2](../includes/wfd2-md.md)]画面。 新しい <xref:System.Activities.Statements.PickBranch> オブジェクトは、<xref:System.Activities.Statements.Pick> デザイナー内で、コレクションに含まれている既存の <xref:System.Activities.Statements.PickBranch> 要素の左側または右側に配置できます。 ドラッグしたときに、 **PickBranch**デザイナー上に、**選択**マウス、デザイナー、**選択**デザイナーでは、青灰色の縦の帯を使用して、場所を示します、 <xref:System.Activities.Statements.PickBranch>位置に追加されます。  
   
-2.  右クリックして**選択**アクティビティ デザイナー (内部ではない**PickBranch**デザイナー) を選択し、コンテキスト メニューを**分岐の作成**新しいを追加する<xref:System.Activities.Statements.PickBranch>します。 注意して、新しい<xref:System.Activities.Statements.PickBranch>が既存の右側に追加<xref:System.Activities.Statements.PickBranch>内のオブジェクト、**選択**デザイナー。  
+2. 右クリックして**選択**アクティビティ デザイナー (内部ではない**PickBranch**デザイナー) を選択し、コンテキスト メニューを**分岐の作成**新しいを追加する<xref:System.Activities.Statements.PickBranch>します。 注意して、新しい<xref:System.Activities.Statements.PickBranch>が既存の右側に追加<xref:System.Activities.Statements.PickBranch>内のオブジェクト、**選択**デザイナー。  
   
- **PickBranch**デザイナーを展開すると、**トリガー**と**アクション**ボックスまたはクリックすると、ヘッダーの右側にある二重のキャレットで折りたたまれています。 編集、<xref:System.Activities.Statements.PickBranch.Trigger%2A>と<xref:System.Activities.Statements.PickBranch.Action%2A>それぞれの<xref:System.Activities.Statements.PickBranch>にアクティビティをドロップすることによって、**トリガー**と**アクション**そのデザイナーのボックスです。  
+   **PickBranch**デザイナーを展開すると、**トリガー**と**アクション**ボックスまたはクリックすると、ヘッダーの右側にある二重のキャレットで折りたたまれています。 編集、<xref:System.Activities.Statements.PickBranch.Trigger%2A>と<xref:System.Activities.Statements.PickBranch.Action%2A>それぞれの<xref:System.Activities.Statements.PickBranch>にアクティビティをドロップすることによって、**トリガー**と**アクション**そのデザイナーのボックスです。  
   
- <xref:System.Activities.Statements.PickBranch>内のオブジェクト、<xref:System.Activities.Statements.Pick.Branches%2A>のコレクションを<xref:System.Activities.Statements.Pick>オブジェクトをドラッグ アンド ドロップし、内の新しい場所にして並べ替えることができる、**選択**デザイナー。 **選択**デザイナーは青灰色の縦の帯で示されます使用して、<xref:System.Activities.Statements.PickBranch>位置が追加されます。  
+   <xref:System.Activities.Statements.PickBranch>内のオブジェクト、<xref:System.Activities.Statements.Pick.Branches%2A>のコレクションを<xref:System.Activities.Statements.Pick>オブジェクトをドラッグ アンド ドロップし、内の新しい場所にして並べ替えることができる、**選択**デザイナー。 **選択**デザイナーは青灰色の縦の帯で示されます使用して、<xref:System.Activities.Statements.PickBranch>位置が追加されます。  
   
- <xref:System.Activities.Statements.PickBranch> は 2 とおりの方法で削除できます。  
+   <xref:System.Activities.Statements.PickBranch> は 2 とおりの方法で削除できます。  
   
-1.  選択、 **PickBranch**デザイナーして削除します。  
+3. 選択、 **PickBranch**デザイナーして削除します。  
   
-2.  選択、 **PickBranch**デザイナー、右クリックして選択し、コンテキスト メニューを**削除**します。  
+4. 選択、 **PickBranch**デザイナー、右クリックして選択し、コンテキスト メニューを**削除**します。  
   
- オンにしてください、 **PickBranch**デザイナー内のアクティビティのいずれかを選択すると、その**トリガー**または**アクション**ボックスが、誤ってこれらの活動の 1 つを削除および not<xref:System.Activities.Statements.PickBranch>オブジェクト。  
+   オンにしてください、 **PickBranch**デザイナー内のアクティビティのいずれかを選択すると、その**トリガー**または**アクション**ボックスが、誤ってこれらの活動の 1 つを削除および not<xref:System.Activities.Statements.PickBranch>オブジェクト。  
   
 ### <a name="pickbranch-properties-in-the-workflow-designer"></a>ワークフロー デザイナーでの PickBranch のプロパティ  
  次の表に、最も役に立つ <xref:System.Activities.Statements.PickBranch> のプロパティと、[!INCLUDE[wfd2](../includes/wfd2-md.md)]でのその使用方法を示します。  

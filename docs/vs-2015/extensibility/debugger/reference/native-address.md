@@ -1,7 +1,7 @@
 ---
 title: NATIVE_ADDRESS |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 7a0cd085-bfc8-45cc-a3d4-4459070e207a
 caps.latest.revision: 7
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 361bfb482f441dc464196adc28d041f986d9684f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d5035b84e6a669d217e0df82d49f26dbbd163449
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547184"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844669"
 ---
 # <a name="nativeaddress"></a>NATIVE_ADDRESS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[NATIVE_ADDRESS](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/native-address)します。  
-  
 この構造体は、ネイティブのアドレスを表します。  
   
 ## <a name="syntax"></a>構文  
@@ -52,7 +50,7 @@ public struct NATIVE_ADDRESS {
 ## <a name="remarks"></a>Remarks  
  この構造体の共用体の一部は、 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)ときに構造体、`dwKind`のフィールド、`DEBUG_ADDRESS_UNION`構造に設定されている`ADDRESS_KIND_NATIVE`(からの値、 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)列挙型)。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

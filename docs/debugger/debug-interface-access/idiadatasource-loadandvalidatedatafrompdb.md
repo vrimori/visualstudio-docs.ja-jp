@@ -1,5 +1,5 @@
 ---
-title: Idiadatasource::loadandvalidatedatafrompdb |Microsoft ドキュメント
+title: Idiadatasource::loadandvalidatedatafrompdb |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e298edac96b311e8e25e41698aaa3db539ec154
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 272b43f7e33ce495aabd53f33022bdeaf4b951fc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31460138"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948903"
 ---
 # <a name="idiadatasourceloadandvalidatedatafrompdb"></a>IDiaDataSource::loadAndValidateDataFromPdb
-開きますと、プログラム データベース (.pdb) ファイルと一致する、提供された署名情報を確認し、デバッグ データ ソースとしての .pdb ファイルを準備します。  
+開き、プログラム データベース (.pdb) ファイルに指定すると、署名情報と一致することを確認しますと、デバッグのデータ ソースとしての .pdb ファイルを準備します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,31 +43,31 @@ HRESULT loadAndValidateDataFromPdb (
  [in].Pdb ファイルの署名を検証する GUID の署名。 ファイルを .pdb のみ[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]GUID の署名を後であるとします。  
   
  `sig`  
- [in]32 ビット署名を検証します .pdb ファイルの署名を照合します。  
+ [in].Pdb ファイルの署名を検証する 32 ビットの署名。  
   
  `age`  
- [in]値を確認する期間を表します。 保存期間は必ずしも対応しません既知の時刻値には、.pdb ファイルが対応する .exe ファイルとの同期であるかを判断するために使用されます。  
+ [in]保存期間の値を確認します。 任意の既知の時刻値に、年齢が必ずしも対応していない、.pdb ファイルが対応する .exe ファイルと同期していないかを判断するために使用されます。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 次の表は、このメソッドの戻り値を示します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 次の表では、このメソッドの戻り値を示します。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|E_PDB_NOT_FOUND|開くには、ファイルが失敗したか、ファイルに形式が無効です。|  
+|E_PDB_NOT_FOUND|ファイルを開いて、できなかったか、ファイルがの形式が無効です。|  
 |E_PDB_FORMAT|旧形式のファイルにアクセスしようとしています。|  
 |E_PDB_INVALID_SIG|署名が一致しません。|  
-|E_PDB_INVALID_AGE|有効期間は一致しません。|  
+|E_PDB_INVALID_AGE|年齢が一致しません。|  
 |E_INVALIDARG|無効なパラメーター。|  
-|E_UNEXPECTED|データ ソースは、既に準備されています。|  
+|E_UNEXPECTED|データ ソースは既に準備されています。|  
   
-## <a name="remarks"></a>コメント  
- .Pdb ファイルには、署名と有効期間の両方の値が含まれています。 これらの値は、.pdb ファイルに対応する .exe または .dll ファイルでレプリケートされます。 データ ソースを準備する前に、このメソッドは、名前付きの .pdb ファイルの署名と経過日数が指定された値を一致を確認します。  
+## <a name="remarks"></a>Remarks  
+ .Pdb ファイルには、署名と経過時間の両方の値が含まれています。 これらの値は、.pdb ファイルに一致する .exe または .dll ファイルにレプリケートされます。 データ ソースを準備する前に、このメソッドは、名前付きの .pdb ファイルの署名と保存期間が指定された値と一致するを確認します。  
   
- 検証を伴わない .pdb ファイルを読み込むを使用して、 [idiadatasource::loaddatafrompdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)メソッドです。  
+ 検証を伴わない .pdb ファイルを読み込むには、使用、 [idiadatasource::loaddatafrompdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)メソッド。  
   
- アクセスするデータの読み込みプロセス (コールバック機構) を通じてを使用して、 [idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)メソッドです。  
+ (コールバック機構) を通じてデータの読み込みプロセスにアクセスを使用して、 [idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)メソッド。  
   
- メモリから直接読み込む .pdb ファイルを使用して、 [idiadatasource::loaddatafromistream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)メソッドです。  
+ .Pdb ファイルをメモリから直接読み込むには使用、 [idiadatasource::loaddatafromistream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)メソッド。  
   
 ## <a name="example"></a>例  
   

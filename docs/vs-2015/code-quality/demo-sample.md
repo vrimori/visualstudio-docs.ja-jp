@@ -1,7 +1,7 @@
 ---
 title: サンプルのデモ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,27 +17,25 @@ caps.latest.revision: 23
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8aca1c819ee413f1bcc2fe81c90233256a12317a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5bcdb1e026808071167b23b829597a4d28775c02
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533865"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880664"
 ---
 # <a name="demo-sample"></a>デモのサンプル
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デモ サンプル](https://docs.microsoft.com/visualstudio/code-quality/demo-sample)します。  
-  
 この次の手順のサンプルを作成する方法を示して[チュートリアル: C/C++ コード障害の検出に分析](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md)します。 プロシージャを作成します。  
   
--   A [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] CppDemo という名前のソリューションです。  
+- A [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] CppDemo という名前のソリューションです。  
   
--   スタティック ライブラリ プロジェクトでは、CodeDefects という名前です。  
+- スタティック ライブラリ プロジェクトでは、CodeDefects という名前です。  
   
--   スタティック ライブラリ プロジェクトの注釈の名前。  
+- スタティック ライブラリ プロジェクトの注釈の名前。  
   
- 手順では、静的ライブラリのヘッダーおよび .cpp ファイルのコードも提供します。  
+  手順では、静的ライブラリのヘッダーおよび .cpp ファイルのコードも提供します。  
   
 ### <a name="create-the-cppdemo-solution-and-the-codedefects-project"></a>CppDemo ソリューションと CodeDefects プロジェクトを作成します。  
   

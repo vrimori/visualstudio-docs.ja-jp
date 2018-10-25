@@ -1,7 +1,7 @@
 ---
 title: '1401: P/invoke はなりません表示 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 8c376c2ae8a1d09ff040d9929617c75037ac5d28
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 23142fcb226259378be56c59032d3b96d9b94087
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589226"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852508"
 ---
 # <a name="ca1401-pinvokes-should-not-be-visible"></a>CA1401: P/Invoke は参照可能になりません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA1401: P/invoke は参照できないように](https://docs.microsoft.com/visualstudio/code-quality/ca1401-p-invokes-should-not-be-visible)します。
 
 |||
 |-|-|

@@ -1,7 +1,7 @@
 ---
 title: 作成して、モーダル ダイアログ ボックスの管理 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 491bc0de-7dba-478c-a76b-923440e090f3
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b79ec93ae3783355d41d78a25dd5083dd5cd6361
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c49db22686481abd824b94178c854d681a1373db
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546689"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49177256"
 ---
 # <a name="creating-and-managing-modal-dialog-boxes"></a>モーダル ダイアログ ボックスの作成と管理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[モーダル ダイアログ ボックスの管理の作成と](https://docs.microsoft.com/visualstudio/extensibility/creating-and-managing-modal-dialog-boxes)します。  
-  
 Visual Studio 内でのモーダル ダイアログ ボックスを作成するときにダイアログ ボックスが表示されますが、ダイアログ ボックスの親ウィンドウが無効になっていることを確認し、ダイアログ ボックスが閉じられた後に、親ウィンドウを再度有効にする必要があります。 これを行わないと、エラーが表示される可能性があります:"Microsoft Visual Studio をシャット ダウンできないモーダル ダイアログがアクティブになっているためです。 アクティブなダイアログを閉じてもう一度やり直してください。"  
   
  これを行う 2 つの方法はあります。 推奨される方法、WPF ダイアログ ボックスがある場合から派生させます<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>を呼び出して<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow.ShowModal%2A>ダイアログ ボックスを表示します。 これを行う場合は、親ウィンドウのモーダル状態を管理する必要はありません。  

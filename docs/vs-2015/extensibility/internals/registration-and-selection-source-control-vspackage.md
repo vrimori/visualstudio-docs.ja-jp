@@ -1,7 +1,7 @@
 ---
 title: 登録と選択 (ソース管理 VSPackage) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 7d21fe48-489a-4f55-acb5-73da64c4e155
 caps.latest.revision: 35
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ef8cf369d2660523bdfe4ad6eaa83be5748eedf0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7bf98c263f3452e0383f5891116849e85140b763
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535184"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818764"
 ---
 # <a name="registration-and-selection-source-control-vspackage"></a>登録と選択 (ソース管理 VSPackage)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[登録と選択 (ソース管理 VSPackage)](https://docs.microsoft.com/visualstudio/extensibility/internals/registration-and-selection-source-control-vspackage)します。  
-  
 公開するために VSPackage を登録する必要があるソース管理、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。 1 つ以上のソース管理 VSPackage が登録されている場合、ユーザーは、どの VSPackage を読み込む適切なタイミングでを選択できます。 参照してください[Vspackage](../../extensibility/internals/vspackages.md) Vspackage とそれらを登録する方法の詳細についてはします。  
   
 ## <a name="registering-a-source-control-package"></a>ソース管理パッケージを登録します。  
@@ -40,13 +38,13 @@ ms.locfileid: "47535184"
 ### <a name="registry-entries"></a>レジストリ エントリ  
  ソース管理のパッケージには、次の 3 つのプライベート Guid が必要があります。  
   
--   パッケージ GUID: これは、メイン ソース コントロールの実装 (このセクションでは ID_Package と呼ばれます) を含むパッケージの GUID です。  
+- パッケージ GUID: これは、メイン ソース コントロールの実装 (このセクションでは ID_Package と呼ばれます) を含むパッケージの GUID です。  
   
--   ソース コントロールの GUID。 これにソース管理 VSPackage の使用、Visual Studio のソース コントロールのスタブを登録する guid し、コマンド UI コンテキスト GUID としても使用されます。 ソース管理サービスの GUID は GUID のソース管理下で登録されています。 例では、ソース コントロールの GUID は ID_SccProvider と呼ばれます。  
+- ソース コントロールの GUID。 これにソース管理 VSPackage の使用、Visual Studio のソース コントロールのスタブを登録する guid し、コマンド UI コンテキスト GUID としても使用されます。 ソース管理サービスの GUID は GUID のソース管理下で登録されています。 例では、ソース コントロールの GUID は ID_SccProvider と呼ばれます。  
   
--   ソース コントロール サービス GUID: これは、プライベート サービス (このセクションでは SID_SccPkgService と呼ばれます)、Visual Studio で使用される GUID。 さらに、ソース管理パッケージは、Vspackage、ツール ウィンドウの他の Guid を定義する必要があります。  
+- ソース コントロール サービス GUID: これは、プライベート サービス (このセクションでは SID_SccPkgService と呼ばれます)、Visual Studio で使用される GUID。 さらに、ソース管理パッケージは、Vspackage、ツール ウィンドウの他の Guid を定義する必要があります。  
   
- 次のレジストリ エントリは、ソース管理 VSPackage によって行う必要があります。  
+  次のレジストリ エントリは、ソース管理 VSPackage によって行う必要があります。  
   
 |キー名|エントリ|  
 |--------------|-------------|  
@@ -60,13 +58,13 @@ ms.locfileid: "47535184"
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 次の操作のいずれかが実行されると、ソース管理 VSPackage を読み込みます。  
   
--   ソリューションには、(ソリューションがソース管理下にある場合) が開かれます。  
+- ソリューションには、(ソリューションがソース管理下にある場合) が開かれます。  
   
-     ソリューションまたはソース管理下にあるプロジェクトが開かれる場合、IDE には、ソース管理 VSPackage を読み込むには、そのソリューションの指定されたが行われます。  
+   ソリューションまたはソース管理下にあるプロジェクトが開かれる場合、IDE には、ソース管理 VSPackage を読み込むには、そのソリューションの指定されたが行われます。  
   
--   ソース管理 VSPackage のメニュー コマンドのいずれかが実行されます。  
+- ソース管理 VSPackage のメニュー コマンドのいずれかが実行されます。  
   
- ソース管理 VSPackage にするのには実際の場合にのみ必要なすべてのコンポーネントを読み込む必要があります (それ以外の場合の遅延読み込みと呼ばれます) を使用します。  
+  ソース管理 VSPackage にするのには実際の場合にのみ必要なすべてのコンポーネントを読み込む必要があります (それ以外の場合の遅延読み込みと呼ばれます) を使用します。  
   
 ### <a name="automatic-solution-based-vspackage-swapping"></a>自動ソリューション ベースの VSPackage のスワップ  
  ソース管理 Vspackage を手動で切り替えることができますを通じて、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **オプション** ダイアログ ボックス、**ソース管理**カテゴリ。 ソリューションに基づいたパッケージの自動スワップには、そのソリューションを開いたときに特定のソリューションに対して指定されているソース管理パッケージが自動的にアクティブに設定されることを意味します。 すべてのソース管理パッケージを実装する必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetActive%2A>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetInactive%2A>します。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 両方の切り替えを処理するソース管理プラグイン (ソース管理プラグイン API を実装する)、およびソース管理 Vspackage です。  
@@ -78,15 +76,15 @@ ms.locfileid: "47535184"
 ### <a name="visual-studio-ui-for-package-selection-and-switching"></a>Visual Studio パッケージの選択と切り替え用の UI  
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ソース管理 VSPackage の UI とプラグインの選択の提供、**オプション** ダイアログ ボックス、**ソース管理**カテゴリ。 VSPackage、ユーザーは、アクティブなソース管理プラグインを選択することができます。 ドロップダウン リストは次のとおりです。  
   
--   すべてのソース管理パッケージがインストールされています。  
+- すべてのソース管理パッケージがインストールされています。  
   
--   ソース管理プラグインをすべてインストールされています。  
+- ソース管理プラグインをすべてインストールされています。  
   
--   [なし] オプション、ソース コード管理を無効にします  
+- [なし] オプション、ソース コード管理を無効にします  
   
- アクティブなソース コントロールの選択肢の UI のみが、表示されます。 VSPackage の選択は、前の VSPackage の UI を非表示にし、新しい UI を示しています。 アクティブな VSPackage は、ユーザーごとに選択されます。 複数のコピーを持つユーザー[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]同時に開き、別のアクティブな VSPackage を使用してそれぞれ、可能性のあることができます。 個別のインスタンスのことができる場合は、複数のユーザーが同じコンピューターにログオンして、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]それぞれ別のアクティブな VSPackage が開きます。 ときに複数のインスタンスの[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ユーザー、ソース管理 VSPackage、最後の開いているソリューションが既定のソース管理 VSPackage、再起動時にアクティブに設定するためにアクティブだったで閉じられています。  
+  アクティブなソース コントロールの選択肢の UI のみが、表示されます。 VSPackage の選択は、前の VSPackage の UI を非表示にし、新しい UI を示しています。 アクティブな VSPackage は、ユーザーごとに選択されます。 複数のコピーを持つユーザー[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]同時に開き、別のアクティブな VSPackage を使用してそれぞれ、可能性のあることができます。 個別のインスタンスのことができる場合は、複数のユーザーが同じコンピューターにログオンして、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]それぞれ別のアクティブな VSPackage が開きます。 ときに複数のインスタンスの[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ユーザー、ソース管理 VSPackage、最後の開いているソリューションが既定のソース管理 VSPackage、再起動時にアクティブに設定するためにアクティブだったで閉じられています。  
   
- 以前のバージョンのとは異なり[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の IDE の再起動は、ソース管理 Vspackage を切り替えるには、唯一の方法ではありません。 VSPackage の選択は自動です。 パッケージを切り替えるには、Windows ユーザーの特権 (管理者またはパワー ユーザーではない) 必要があります。  
+  以前のバージョンのとは異なり[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の IDE の再起動は、ソース管理 Vspackage を切り替えるには、唯一の方法ではありません。 VSPackage の選択は自動です。 パッケージを切り替えるには、Windows ユーザーの特権 (管理者またはパワー ユーザーではない) 必要があります。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>   

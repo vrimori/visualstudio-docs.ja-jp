@@ -1,7 +1,7 @@
 ---
 title: コードの視覚化 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,31 +18,29 @@ caps.latest.revision: 49
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b0913f88db43743abdc410f75cbfc0d56dc7b46b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 82ce653eda1ec074f050809845610fbc1ab1bc0c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539042"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833659"
 ---
 # <a name="visualize-code"></a>コードの視覚化
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コードの視覚化](https://docs.microsoft.com/visualstudio/modeling/visualize-code)します。  
-  
 Visual Studio の視覚化ツールとモデリング ツールを使って、既存のコードを理解し、アプリケーションを記述することができます。 これにより、自分が実行した変更がコードにどのような影響を与えるかを理解し、その変更に起因する作業とリスクを評価することができます。 例:  
   
--   コード内のリレーションシップを理解するには、そのリレーションシップをビジュアルにマッピングします。  
+- コード内のリレーションシップを理解するには、そのリレーションシップをビジュアルにマッピングします。  
   
--   システムのアーキテクチャを記述し、デザインとコードの一貫性を維持するには、レイヤー図を作成し、それらの図と照らし合わせてコードを検証します。  
+- システムのアーキテクチャを記述し、デザインとコードの一貫性を維持するには、レイヤー図を作成し、それらの図と照らし合わせてコードを検証します。  
   
--   クラス構造を記述するには、クラス ダイアグラムを作成します。  
+- クラス構造を記述するには、クラス ダイアグラムを作成します。  
   
--   システムのさまざまな面をモデル化して通信するには、Unified Modeling Language (UML) ダイアグラムを作成します。 たとえば、システムのコンポーネント、型、相互作用、およびプロセスをモデル化することができます。  
+- システムのさまざまな面をモデル化して通信するには、Unified Modeling Language (UML) ダイアグラムを作成します。 たとえば、システムのコンポーネント、型、相互作用、およびプロセスをモデル化することができます。  
   
- またこれらのツールを使用すると、プロジェクトの関係者と簡単にやり取りすることができます。 たとえば、UML クラス ダイアグラムを使って、プロジェクトの関係者、ユーザー、およびチーム メンバーとシステムについて検討するための共通の用語集を作成することができます。  
+  またこれらのツールを使用すると、プロジェクトの関係者と簡単にやり取りすることができます。 たとえば、UML クラス ダイアグラムを使って、プロジェクトの関係者、ユーザー、およびチーム メンバーとシステムについて検討するための共通の用語集を作成することができます。  
   
- 各機能をサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
+  各機能をサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
 ## <a name="what-do-you-want-to-do"></a>実行する操作  
   

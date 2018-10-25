@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_haseh |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: abb8abb4f87be0cb8d5447d8a944243284743725
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4c5e1a6f7fb8d9d704e9ed357069a9f9c9e95def
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538805"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49810659"
 ---
 # <a name="idiasymbolgethaseh"></a>IDiaSymbol::get_hasEH
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_haseh](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-haseh)します。  
-  
 関数が、アンマネージ C++ スタイル例外処理 (たとえば、try/catch ブロックなど) を含むかどうかを指定するフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -50,7 +48,7 @@ HRESULT get_hasEH(
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

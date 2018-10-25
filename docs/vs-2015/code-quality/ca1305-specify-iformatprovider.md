@@ -1,7 +1,7 @@
 ---
 title: '1305: IFormatProvider を指定 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 8d4d187383a139198cbdbcf1ebf8d69338450959
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 084fd28106a3ac5af9a40d46cf687d4982f53690
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589287"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834308"
 ---
 # <a name="ca1305-specify-iformatprovider"></a>CA1305: IFormatProvider を指定します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA1305: IFormatProvider を指定](https://docs.microsoft.com/visualstudio/code-quality/ca1305-specify-iformatprovider)します。
 
 |||
 |-|-|
@@ -51,15 +49,15 @@ ms.locfileid: "47589287"
 ## <a name="rule-description"></a>規則の説明
  ときに、<xref:System.Globalization.CultureInfo?displayProperty=fullName>または<xref:System.IFormatProvider>オブジェクトが指定されていない、オーバー ロードされたメンバーによって提供される既定値はすべてのロケールに効果がありません。 また、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]メンバーが既定のカルチャを選択し、コードの適切なことができない可能性がある前提条件に基づく書式設定します。 コードが、シナリオのために期待どおりに動作することを確認するには、次のガイドラインに従って、カルチャに固有の情報を指定する必要があります。
 
--   場合は、値は、ユーザーに表示されますが、現在のカルチャを使用します。 以下を参照してください。<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>
+- 場合は、値は、ユーザーに表示されますが、現在のカルチャを使用します。 以下を参照してください。<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>
 
--   値が格納され、ソフトウェア (ファイルまたはデータベースに保存される) からアクセスされる場合、は、インバリアント カルチャを使用します。 以下を参照してください。<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>
+- 値が格納され、ソフトウェア (ファイルまたはデータベースに保存される) からアクセスされる場合、は、インバリアント カルチャを使用します。 以下を参照してください。<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>
 
--   値の変換先がわからない場合は、データ コンシューマーがあるか、プロバイダーが、カルチャを指定します。
+- 値の変換先がわからない場合は、データ コンシューマーがあるか、プロバイダーが、カルチャを指定します。
 
- なお<xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>のインスタンスを使用して、ローカライズされたリソースを取得するためだけに使用、<xref:System.Resources.ResourceManager?displayProperty=fullName>クラス。
+  なお<xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>のインスタンスを使用して、ローカライズされたリソースを取得するためだけに使用、<xref:System.Resources.ResourceManager?displayProperty=fullName>クラス。
 
- オーバー ロードされたメンバーの既定の動作がニーズに適した場合でもを明示的にされるため、コードを自己文書化して保守が簡単なカルチャ固有のオーバー ロードを呼び出すことをお勧めします。
+  オーバー ロードされたメンバーの既定の動作がニーズに適した場合でもを明示的にされるため、コードを自己文書化して保守が簡単なカルチャ固有のオーバー ロードを呼び出すことをお勧めします。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  このルールの違反を修正するを受け取るオーバー ロードを使用して、<xref:System.Globalization.CultureInfo>または<xref:System.IFormatProvider>し上記で示したガイドラインに従って引数を指定します。

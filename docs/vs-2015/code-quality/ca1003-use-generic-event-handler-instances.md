@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1003: 汎用イベント ハンドラーのインスタンスを使用して、|Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 4e6a2a3f3d2684c4de49d02dfb19c4654a76eda9
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: f3c2cf2ad59f7ade337c84f13133bb5181afb615
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589632"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49929089"
 ---
 # <a name="ca1003-use-generic-event-handler-instances"></a>CA1003: 汎用イベント ハンドラーのインスタンスを使用します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1003: 汎用イベント ハンドラーのインスタンスを使用して、](https://docs.microsoft.com/visualstudio/code-quality/ca1003-use-generic-event-handler-instances)します。
 
 |||
 |-|-|

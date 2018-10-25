@@ -1,5 +1,5 @@
 ---
-title: ヒープ割り当て関数のデバッグ バージョン |Microsoft ドキュメント
+title: ヒープ割り当て関数のデバッグ バージョン |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -25,29 +25,29 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e426da9491c13e0d6f9377814673ca41512e5e09
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 12b997b2aeb2b34305eafc2dc478460d9f450677
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31470944"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941469"
 ---
 # <a name="debug-versions-of-heap-allocation-functions"></a>デバッグ バージョンのヒープ割り当て関数
 C ランタイム ライブラリには、デバッグ バージョンの特殊なヒープ割り当て関数があります。 これらの関数は、リリース バージョンの関数名の末尾に "_dbg" を追加した名前になっています。 ここでは、CRT 関数のリリース バージョンと _dbg バージョンとの相違点について、`malloc` と `_malloc_dbg` を例にして説明します。  
   
- ときに[_DEBUG](/cpp/c-runtime-library/debug)が定義されている場合、CRT すべてマップ[malloc](/cpp/c-runtime-library/reference/malloc)呼び出し[_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg)です。 したがって、`_malloc_dbg` の代わりに `malloc` を使用するようにコードを書き直さなくても、デバッグ中は利用できます。  
+ ときに[_DEBUG](/cpp/c-runtime-library/debug)が定義されている場合、CRT はすべて[malloc](/cpp/c-runtime-library/reference/malloc)呼び出し[_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg)します。 したがって、`_malloc_dbg` の代わりに `malloc` を使用するようにコードを書き直さなくても、デバッグ中は利用できます。  
   
  しかし、明示的に `_malloc_dbg` を呼び出すこともできます。 明示的に `_malloc_dbg` を呼び出すと、さらに次の利点があります。  
   
--   `_CLIENT_BLOCK` 型の割り当てを追跡できます。  
+- `_CLIENT_BLOCK` 型の割り当てを追跡できます。  
   
--   割り当て要求が発生したソース ファイルと行番号を格納できます。  
+- 割り当て要求が発生したソース ファイルと行番号を格納できます。  
   
- 変換したくない場合、`malloc`呼び出し`_malloc_dbg`、定義することで、ソース ファイル情報を取得することができます[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc)、プリプロセッサに直接マップを停止すると、すべての呼び出しを`malloc`に`_malloc_dbg`をラップするラッパーではなく`malloc`です。  
+  変換したくない場合、`malloc`呼び出し`_malloc_dbg`、定義することで、ソース ファイル情報を取得できます[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc)、プリプロセッサに直接マップを停止すると、すべての呼び出しを`malloc`に`_malloc_dbg`のラッパーではなく`malloc`します。  
   
- クライアント ブロック内の個々の割り当て型を追跡するには、`_malloc_dbg` パラメーターを `blockType` に設定して、直接 `_CLIENT_BLOCK` を呼び出す必要があります。  
+  クライアント ブロック内の個々の割り当て型を追跡するには、`_malloc_dbg` パラメーターを `blockType` に設定して、直接 `_CLIENT_BLOCK` を呼び出す必要があります。  
   
- _DEBUG が定義されていないと呼び出しを`malloc`に影響しませんが、呼び出し`_malloc_dbg`に解決される`malloc`の定義[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc)は無視され、ソース ファイルの情報に関連する、割り当て要求が指定されていません。 `malloc` にはブロック型を指定するパラメーターがないため、`_CLIENT_BLOCK` 型への割り当て要求は標準の割り当てとして扱われます。  
+  _DEBUG が定義されていないと呼び出しを`malloc`が影響を受けません、呼び出し`_malloc_dbg`に解決される`malloc`の定義[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc)は無視され、ソース ファイルの情報に関連する、割り当て要求が指定されていません。 `malloc` にはブロック型を指定するパラメーターがないため、`_CLIENT_BLOCK` 型への割り当て要求は標準の割り当てとして扱われます。  
   
 ## <a name="see-also"></a>関連項目  
  [CRT のデバッグ技術](../debugger/crt-debugging-techniques.md)

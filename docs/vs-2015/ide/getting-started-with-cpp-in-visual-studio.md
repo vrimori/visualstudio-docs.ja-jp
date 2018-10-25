@@ -1,31 +1,29 @@
 ---
 title: Visual Studio 内の C++ の概要 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
 - vs-ide-general
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 99c73344-86ba-4b08-9e15-f6111cc04185
 caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 30bed5ac15038a91c95b4383d9dbd8c519095569
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6f061382ab5df74b7a94d8578624fb5a0f2dc71f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535030"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816606"
 ---
 # <a name="getting-started-with-c-in-visual-studio"></a>Visual Studio 内の C++ の概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio で C++ の概要](https://docs.microsoft.com/visualstudio/ide/getting-started-with-cpp-in-visual-studio)します。  
-  
 このチュートリアルを完了すると、Visual Studio を使用してアプリケーションを開発する際に使用できるさまざまなツールおよびダイアログ ボックスの使用方法を習得できます。 簡単な "Hello, World" スタイルのアプリケーションを作成しながら、統合開発環境 (IDE) での作業方法について学習します。  
   
  このトピックは、次のセクションで構成されています。  
@@ -54,23 +52,23 @@ ms.locfileid: "47535030"
   
 #### <a name="to-create-a-console-app"></a>コンソール アプリを作成するには  
   
-1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
+1. メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
   
-     ![メニュー バーで、[ファイル]、[新規作成]、[プロジェクト] の順に選択します。](../ide/media/exploreide-filenewproject.png "ExploreIDE-FileNewProject")  
+    ![メニュー バーで、[ファイル]、[新規作成]、[プロジェクト] の順に選択します。](../ide/media/exploreide-filenewproject.png "ExploreIDE-FileNewProject")  
   
-2.  **[Visual C++]** カテゴリで、**[Win32 コンソール アプリケーション]** テンプレートを選択し、プロジェクトに `GreetingsConsoleApp` という名前を付けます。  
+2. **[Visual C++]** カテゴリで、**[Win32 コンソール アプリケーション]** テンプレートを選択し、プロジェクトに `GreetingsConsoleApp` という名前を付けます。  
   
-     ![Win32 コンソール アプリケーション テンプレート](../ide/media/c-ide-newprojectdlg.png "C++IDE_NewProjectDlg")  
+    ![Win32 コンソール アプリケーション テンプレート](../ide/media/c-ide-newprojectdlg.png "C++IDE_NewProjectDlg")  
   
-3.  Win32 アプリケーション ウィザードが表示されたら、 **[完了]** を選択します。  
+3. Win32 アプリケーション ウィザードが表示されたら、 **[完了]** を選択します。  
   
-     ![Win32 コンソール アプリケーション ウィザード](../ide/media/c-ide-win32consoleappwizard.png "C++IDE_Win32ConsoleAppWizard")  
+    ![Win32 コンソール アプリケーション ウィザード](../ide/media/c-ide-win32consoleappwizard.png "C++IDE_Win32ConsoleAppWizard")  
   
- Win32 コンソール アプリの基本的なファイルを含む GreetingsConsoleApp プロジェクトとソリューションが作成され、 **ソリューション エクスプローラー**に自動的に読み込まれます。 GreetingsConsoleApp.cpp ファイルがコード エディターで開きます。 次の項目が **ソリューション エクスプローラー**に表示されます。  
+   Win32 コンソール アプリの基本的なファイルを含む GreetingsConsoleApp プロジェクトとソリューションが作成され、 **ソリューション エクスプローラー**に自動的に読み込まれます。 GreetingsConsoleApp.cpp ファイルがコード エディターで開きます。 次の項目が **ソリューション エクスプローラー**に表示されます。  
   
- 図 4: プロジェクト項目  
+   図 4: プロジェクト項目  
   
- ![ソリューション エクスプローラーでのソリューションのファイル](../ide/media/c-ide-solutioncontents.png "C++IDE_SolutionContents")  
+   ![ソリューション エクスプローラーでのソリューションのファイル](../ide/media/c-ide-solutioncontents.png "C++IDE_SolutionContents")  
   
 ##  <a name="BKMK_AddCode"></a> アプリケーションへのコードの追加  
  次に、コンソール ウィンドウに "Hello" と表示するコードを追加します。  
@@ -119,40 +117,40 @@ ms.locfileid: "47535030"
   
 #### <a name="to-add-a-breakpoint"></a>ブレークポイントを追加するには  
   
-1.  メニュー バーからブレークポイントを `return 0;`の行に追加します。 左側の余白内でクリックするだけでも、ブレークポイントを設定できます。  
+1. メニュー バーからブレークポイントを `return 0;`の行に追加します。 左側の余白内でクリックするだけでも、ブレークポイントを設定できます。  
   
-     ![[デバッグ] メニューの [ブレークポイントの設定/解除] コマンド](../ide/media/exploreide-togglebreakpoint.png "ExploreIDE-ToggleBreakpoint")  
+    ![[デバッグ] メニューの [ブレークポイントの設定/解除] コマンド](../ide/media/exploreide-togglebreakpoint.png "ExploreIDE-ToggleBreakpoint")  
   
-     コード行の横の、エディター ウィンドウの左端の余白部分に、赤い円が表示されます。  
+    コード行の横の、エディター ウィンドウの左端の余白部分に、赤い円が表示されます。  
   
-2.  F5 キーを押してデバッグを開始します。  
+2. F5 キーを押してデバッグを開始します。  
   
-     デバッガーが起動し、コンソール ウィンドウが表示されて **Hello**という語が示されます。  
+    デバッガーが起動し、コンソール ウィンドウが表示されて **Hello**という語が示されます。  
   
-     ![Windows のコマンド プロンプト ウィンドウに表示された文字列 "Hello"](../ide/media/c-ide-hellocommandwindow.png "C++IDE_HelloCommandWindow")  
+    ![Windows のコマンド プロンプト ウィンドウに表示された文字列 "Hello"](../ide/media/c-ide-hellocommandwindow.png "C++IDE_HelloCommandWindow")  
   
-3.  SHIFT + F5 キーを押してデバッグを停止します。  
+3. SHIFT + F5 キーを押してデバッグを停止します。  
   
- 詳細については、[コンソール プロジェクト](../debugger/debugging-preparation-console-projects.md)に関する記事を参照してください。  
+   詳細については、[コンソール プロジェクト](../debugger/debugging-preparation-console-projects.md)に関する記事を参照してください。  
   
 ##  <a name="BKMK_BuildRelease"></a> アプリのリリース バージョンのビルド  
  すべてが機能することを確認したら、アプリケーションのリリース ビルドを準備できます。  
   
 #### <a name="to-clean-the-solution-files-and-build-a-release-version"></a>ソリューション ファイルをクリーンアップし、リリース バージョンをビルドするには  
   
-1.  メニュー バーで、前のビルドで作成された中間ファイルと出力ファイルを削除します。  
+1. メニュー バーで、前のビルドで作成された中間ファイルと出力ファイルを削除します。  
   
-     ![[ビルド] メニューの [ソリューションのクリーン] コマンド](../ide/media/exploreide-cleansolution.png "ExploreIDE-CleanSolution")  
+    ![[ビルド] メニューの [ソリューションのクリーン] コマンド](../ide/media/exploreide-cleansolution.png "ExploreIDE-CleanSolution")  
   
-2.  GreetingsConsoleApp のビルド構成を **[デバッグ]** から **[リリース]** に変更します。  
+2. GreetingsConsoleApp のビルド構成を **[デバッグ]** から **[リリース]** に変更します。  
   
-     ![アプリケーションのリリース バージョンのビルド](../ide/media/c-ide-changingbuildtorelease.png "C++IDE_ChangingBuildtoRelease")  
+    ![アプリケーションのリリース バージョンのビルド](../ide/media/c-ide-changingbuildtorelease.png "C++IDE_ChangingBuildtoRelease")  
   
-3.  ソリューションをビルドします。  
+3. ソリューションをビルドします。  
   
-     ![[ビルド] メニューの [ソリューションのビルド] コマンド](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
+    ![[ビルド] メニューの [ソリューションのビルド] コマンド](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
   
- このチュートリアルは完了しました。 その他の例については、「[Visual Studio Samples](../ide/visual-studio-samples.md)」を参照してください。  
+   このチュートリアルは完了しました。 その他の例については、「[Visual Studio Samples](../ide/visual-studio-samples.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [チュートリアル : 簡単なアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)   

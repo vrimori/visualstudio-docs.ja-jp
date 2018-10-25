@@ -1,7 +1,7 @@
 ---
 title: '方法: [定義をここに表示] を使用してコードを表示および編集する (Alt + F12) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8e10c19480004345d4a5df1d628972a788794e13
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cc99602fe1ca2003995594f75736d581fa37e0d0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539039"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49254476"
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>方法: [定義をここに表示] を使用してコードを表示および編集する (Alt + F12)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ビューと 定義を使用する (alt + f12) によってコードの編集](https://docs.microsoft.com/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12)します。  
-  
 **[定義をここに表示]** を使うと、記述中のコードから切り替えずにコードを表示および編集できます。 **[定義をここに表示]** と **[定義へ移動]** では同じ情報が表示されますが、**[定義をここに表示]** ではコードがポップアップ ウィンドウに表示され、**[定義へ移動]** では別のコード ウィンドウに表示されます。 **[定義へ移動]** を実行すると、コンテキスト (アクティブなコード ウィンドウ、現在の行、およびカーソルの位置) が定義コード ウィンドウに切り替わります。 **[定義をここに表示]** を使うと、元のコード ファイル内での位置を保ちながら、定義を表示および編集したり、定義ファイル内を移動したりできます。  
   
  **[定義をここに表示]** は、C#、Visual Basic、および C++ のコードで使うことができます。 Visual basic で**ピークの定義**へのリンクを示しています、**オブジェクト ブラウザー**シンボル定義のメタデータ (に組み込まれている .NET Framework 型など) がないです。  

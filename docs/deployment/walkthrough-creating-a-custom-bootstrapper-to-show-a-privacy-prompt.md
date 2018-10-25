@@ -21,19 +21,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fb0e6d011868f56375def1516bd0e41410da662
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 18ac2ad1125067109b0ca02d552e997f2c30482f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39152501"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873787"
 ---
 # <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>チュートリアル: プライバシー プロンプトを使用してカスタム ブートストラップを作成する
 新しいファイルのバージョンとアセンブリのバージョンのアセンブリが使用可能になると自動的に更新する ClickOnce アプリケーションを構成できます。 お客様がこの動作に同意することを確認するにプライバシー プロンプトを表示できます。 次に、アプリケーションが自動的に更新するアクセス許可を付与するかどうかを選択できます。 アプリケーションが自動的に更新する許可されていない場合はインストールされません。  
   
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   Visual Studio 2010。  
@@ -43,23 +43,23 @@ ms.locfileid: "39152501"
   
 #### <a name="to-create-a-consent-dialog-box"></a>同意ダイアログ ボックスを作成するには  
   
-1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
+1. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-2.  **新しいプロジェクト**ダイアログ ボックスで、をクリックして**Windows**、 をクリックし、 **WindowsFormsApplication**。  
+2. **新しいプロジェクト**ダイアログ ボックスで、をクリックして**Windows**、 をクリックし、 **WindowsFormsApplication**。  
   
-3.  **名前**、型**ConsentDialog**、順にクリックします**OK**します。  
+3. **名前**、型**ConsentDialog**、順にクリックします**OK**します。  
   
-4.  デザイナーでフォームをクリックします。  
+4. デザイナーでフォームをクリックします。  
   
-5.  **プロパティ**ウィンドウで、変更、**テキスト**プロパティを**更新同意ダイアログ**します。  
+5. **プロパティ**ウィンドウで、変更、**テキスト**プロパティを**更新同意ダイアログ**します。  
   
-6.  **ツールボックス**、展開**すべての Windows フォーム**、ドラッグ、**ラベル**コントロールをフォームにします。  
+6. **ツールボックス**、展開**すべての Windows フォーム**、ドラッグ、**ラベル**コントロールをフォームにします。  
   
-7.  デザイナーで、ラベル コントロールをクリックします。  
+7. デザイナーで、ラベル コントロールをクリックします。  
   
-8.  **プロパティ**ウィンドウで、変更、**テキスト**のプロパティの **外観**次。  
+8. **プロパティ**ウィンドウで、変更、**テキスト**のプロパティの **外観**次。  
   
-     Web 上の最新の更新プログラムをインストールしようとしているアプリケーションを確認します。 "I Agree"でクリックすると、確認し、インターネットから自動的に更新プログラムをインストールするアプリケーションを承認します。  
+    Web 上の最新の更新プログラムをインストールしようとしているアプリケーションを確認します。 "I Agree"でクリックすると、確認し、インターネットから自動的に更新プログラムをインストールするアプリケーションを承認します。  
   
 9. **ツールボックス**、ドラッグ、**チェック ボックスをオン**フォームの中央にコントロール。  
   
@@ -112,28 +112,28 @@ ms.locfileid: "39152501"
   
      Visual Basic 開発者の場合のみ。  
   
-    1.  **ソリューション エクスプ ローラー**、 をクリックして**ConsentDialog**します。  
+    1. **ソリューション エクスプ ローラー**、 をクリックして**ConsentDialog**します。  
   
-    2.  **プロジェクト** メニューのをクリックして**モジュールの追加**、 をクリックし、**追加**します。  
+    2. **プロジェクト** メニューのをクリックして**モジュールの追加**、 をクリックし、**追加**します。  
   
-    3.  *Module1.vb*コード ファイルで、次のコードを追加します。  
+    3. *Module1.vb*コード ファイルで、次のコードを追加します。  
   
-         [!code-vb[ConsentDialog#7](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_6.vb)]  
+        [!code-vb[ConsentDialog#7](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_6.vb)]  
   
-    4.  **プロジェクト** メニューのをクリックして**ConsentDialog プロパティ**、 をクリックし、**アプリケーション**タブ。  
+    4. **プロジェクト** メニューのをクリックして**ConsentDialog プロパティ**、 をクリックし、**アプリケーション**タブ。  
   
-    5.  オフに**有効にするアプリケーション フレームワーク**します。  
+    5. オフに**有効にするアプリケーション フレームワーク**します。  
   
-    6.  **スタートアップ オブジェクト**ドロップダウン メニューで、 **Module1**します。  
+    6. **スタートアップ オブジェクト**ドロップダウン メニューで、 **Module1**します。  
   
-        > [!NOTE]
-        >  アプリケーション フレームワークを無効にするには、Windows XP ビジュアル スタイルのアプリケーション イベント、スプラッシュ スクリーン、単一インスタンス アプリケーションなどの機能が無効にします。 詳細については、「[[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)」を参照してください。  
+       > [!NOTE]
+       >  アプリケーション フレームワークを無効にするには、Windows XP ビジュアル スタイルのアプリケーション イベント、スプラッシュ スクリーン、単一インスタンス アプリケーションなどの機能が無効にします。 詳細については、「[[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)」を参照してください。  
   
-     Visual c# 開発者の場合のみ。  
+       Visual c# 開発者の場合のみ。  
   
-     開く、 *Program.cs*コード ファイル、および次のコードを追加します。  
+       開く、 *Program.cs*コード ファイル、および次のコードを追加します。  
   
-     [!code-csharp[ConsentDialog#5](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_7.cs)]  
+       [!code-csharp[ConsentDialog#5](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_7.cs)]  
   
 26. **ビルド** メニューのをクリックして**BuildSolution**します。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "39152501"
   
 #### <a name="step-1-to-create-the-bootstrapper-directory"></a>手順 1: ブートス トラップ ディレクトリを作成するには  
   
-1.  という名前のディレクトリを作成する**UpdateConsentDialog**で、 *%PROGRAMFILES%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages*します。  
+1.  という名前のディレクトリを作成する**UpdateConsentDialog**で、 *%PROGRAMFILES%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages*。  
   
     > [!NOTE]
     >  このフォルダーを作成する管理者特権を必要があります。  

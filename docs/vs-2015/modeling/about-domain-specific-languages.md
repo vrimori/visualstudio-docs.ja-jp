@@ -1,7 +1,7 @@
 ---
 title: ドメイン固有言語について |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,39 +14,37 @@ caps.latest.revision: 28
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 971c63d25aee9c8676921b5ee7e112ae41a8a251
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6cddf51705758d046ab66319d6ac6295f3a4b057
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544392"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894522"
 ---
 # <a name="about-domain-specific-languages"></a>ドメイン固有言語について
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ドメイン固有言語について](https://docs.microsoft.com/visualstudio/modeling/about-domain-specific-languages)します。  
-  
 C# または UML などの汎用言語とは異なり、ドメイン固有言語 (DSL) は、特定の問題の領域またはドメイン内のステートメントを表現する設計されています。  
   
  既知の Dsl には、正規表現と SQL が含まれます。 各 DSL は、独自のスコープ外にある考え方を説明するテキスト文字列またはデータベースがより上の操作を記述するため、汎用言語よりも好転します。 個々 の業界では、独自の Dsl もあります。 たとえば、電気通信業界で呼び出す説明の言語を使用する電話の呼び出しでの状態のシーケンスと無線で旅行業界は広く DSL は、フライトの予約の記述に使用される標準。  
   
  ビジネスとプロジェクトは、DSL で記述される可能性がありますの概念の特別なセットを扱うもします。 たとえば、これらのアプリケーションのいずれかの DSL を定義できます。  
   
--   Web サイトでのナビゲーション パスのプランです。  
+- Web サイトでのナビゲーション パスのプランです。  
   
--   電子部品の配線図。  
+- 電子部品の配線図。  
   
--   コンベヤ ベルトの荷物取り扱い設備空港用ネットワーク。  
+- コンベヤ ベルトの荷物取り扱い設備空港用ネットワーク。  
   
- 定義する DSL を設計するとき、*ドメイン クラス*各 Web ページ、lamp、または空港では、チェックイン デスクなど、ドメインで重要な概念。 定義する*ドメイン リレーションシップ*ハイパーリンク、線、または概念を相互にリンクするコンベヤ ベルトなど。  
+  定義する DSL を設計するとき、*ドメイン クラス*各 Web ページ、lamp、または空港では、チェックイン デスクなど、ドメインで重要な概念。 定義する*ドメイン リレーションシップ*ハイパーリンク、線、または概念を相互にリンクするコンベヤ ベルトなど。  
   
- DSL のユーザー作成*モデル。* モデルは*インスタンス*DSL の。 たとえば、特定の Web サイト、または特定のデバイス、または処理システムで特定の空港の手荷物受取所の配線がについて説明します。  
+  DSL のユーザー作成*モデル。* モデルは*インスタンス*DSL の。 たとえば、特定の Web サイト、または特定のデバイス、または処理システムで特定の空港の手荷物受取所の配線がについて説明します。  
   
- ユーザーは、ダイアグラム、または Windows フォームとしてモデルを表示できます。 モデルも表示できます XML として格納されている方法であります。 DSL を定義するときにユーザーの画面上の各ドメイン クラスとリレーションシップのインスタンスの表示方法を定義します。 一般的な DSL は、一連のアイコンと矢印で接続されている四角形として表示されます。  
+  ユーザーは、ダイアグラム、または Windows フォームとしてモデルを表示できます。 モデルも表示できます XML として格納されている方法であります。 DSL を定義するときにユーザーの画面上の各ドメイン クラスとリレーションシップのインスタンスの表示方法を定義します。 一般的な DSL は、一連のアイコンと矢印で接続されている四角形として表示されます。  
   
- 次の図では、図表の DSL で小さなモデルを示しています。  
+  次の図では、図表の DSL で小さなモデルを示しています。  
   
- ![Tudor ファミリ ツリー モデル](../modeling/media/tudor-familytreemodel.png "Tudor_FamilyTreeModel")  
+  ![Tudor ファミリ ツリー モデル](../modeling/media/tudor-familytreemodel.png "Tudor_FamilyTreeModel")  
   
 ## <a name="what-you-can-do-with-dsls"></a>Dsl で行うことができます。  
  DSL の一般的なアプリケーションでは、プログラム コードまたは他の成果物を生成します。 DSL を定義するときに定義できます*テキスト テンプレート*する DSL のモデルを読み取るし、テキスト ファイルを生成します。  

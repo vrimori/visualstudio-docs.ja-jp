@@ -1,5 +1,5 @@
 ---
-title: NameSearchOptions |Microsoft ドキュメント
+title: NameSearchOptions |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f95d5ed2e91b847b99d063b6fcba485fb96c3290
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: c4b8771ad1bf2ee97ec1f22636a4684bc9aa7ee8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31469738"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950343"
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
 シンボルとファイル名の検索オプションを指定します。  
@@ -52,7 +52,7 @@ enum NameSearchOptions {
  大文字小文字を区別する名前の一致を適用します。  
   
  `nsfCaseInsensitive`  
- 大文字と小文字の名前の一致を適用します。  
+ 大文字の名前の一致を適用します。  
   
  `nsfFNameExt`  
  パスと名前を処理し、.ext という名前の一致を適用します。  
@@ -61,9 +61,9 @@ enum NameSearchOptions {
  ワイルドカードとしてアスタリスク (*) や疑問符 (?) を使用して区別する名前の一致を適用します。  
   
  `nsfUndecoratedName`  
- 記号が必要し、非装飾の両方、装飾名にのみ適用されます。  
+ 装飾されていないし、装飾名がシンボルにのみ適用されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この列挙の値は、次のメソッドに渡されます。  
   
 -   [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)  
@@ -72,7 +72,7 @@ enum NameSearchOptions {
   
 -   [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: dia2.h  
   
 ## <a name="see-also"></a>関連項目  

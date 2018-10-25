@@ -1,7 +1,7 @@
 ---
 title: DebuggerDisplay 属性の使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,19 +23,17 @@ caps.latest.revision: 50
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cb5e47cbaea7c7a39201f25adf6955a2e22c9b9b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 82f72dba6b40f5b09ccc71007eb577c19cf7358e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547007"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49827736"
 ---
 # <a name="using-the-debuggerdisplay-attribute"></a>DebuggerDisplay 属性を使用します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[DebuggerDisplay 属性を使用して](https://docs.microsoft.com/visualstudio/debugger/using-the-debuggerdisplay-attribute)します。  
-  
-<xref:System.Diagnostics.DebuggerDisplayAttribute>デバッガー変数ウィンドウで、オブジェクト、プロパティ、またはフィールドを表示する方法を制御します。 この属性は、型、デリゲート、プロパティ、フィールド、アセンブリに適用できます。  
+<xref:System.Diagnostics.DebuggerDisplayAttribute> は、デバッガー変数ウィンドウでのオブジェクト、プロパティ、フィールドの表示方法を制御します。 この属性は、型、デリゲート、プロパティ、フィールド、アセンブリに適用できます。  
   
  `DebuggerDisplay` 属性の引数は 1 つです。それは、型のインスタンスの値列に表示する文字列です。 この文字列には、中かっこ (`{` と `}`) を含めることができます。 かっこ内のテキストは、フィールド、プロパティ、メソッドとして評価されます。  
   
@@ -78,13 +76,13 @@ csc /t:library autoexp.cs
   
  DebuggerDisplay で式を使用すると、次のような問題が発生する可能性があります。  
   
--   式の評価はデバッガーで最も負荷のかかる操作であり、式は表示されるたびに評価されます。 これは、コードのステップ実行時にパフォーマンスを低下させる要因になります。 たとえば、コレクションまたは一覧内の値を表示するために使用される複合式は、要素数が多い場合に非常に低速になることがあります。  
+- 式の評価はデバッガーで最も負荷のかかる操作であり、式は表示されるたびに評価されます。 これは、コードのステップ実行時にパフォーマンスを低下させる要因になります。 たとえば、コレクションまたは一覧内の値を表示するために使用される複合式は、要素数が多い場合に非常に低速になることがあります。  
   
--   式は、その式が記述された言語の式エバリュエーターではなく、現在のスタック フレームの言語の式エバリュエーターによって評価されます。 これらの言語が異なる場合、予期しない結果が生じる可能性があります。  
+- 式は、その式が記述された言語の式エバリュエーターではなく、現在のスタック フレームの言語の式エバリュエーターによって評価されます。 これらの言語が異なる場合、予期しない結果が生じる可能性があります。  
   
--   式を評価することにより、アプリケーションの状態が変わる可能性があります。 たとえば、プロパティに値を設定する式は、実行するコード内のプロパティ値を変更します。  
+- 式を評価することにより、アプリケーションの状態が変わる可能性があります。 たとえば、プロパティに値を設定する式は、実行するコード内のプロパティ値を変更します。  
   
- 式の評価に関して考えられる問題を回避する方法の 1 つは、操作を実行して文字列を返すプライベート プロパティを作成することです。 これにより、DebuggerDisplay 属性は、そのプライベート プロパティの値を表示できます。 このパターンを実装する例を次に示します。  
+  式の評価に関して考えられる問題を回避する方法の 1 つは、操作を実行して文字列を返すプライベート プロパティを作成することです。 これにより、DebuggerDisplay 属性は、そのプライベート プロパティの値を表示できます。 このパターンを実装する例を次に示します。  
   
 ```csharp  
 [DebuggerDisplay("{DebuggerDisplay,nq}")]  

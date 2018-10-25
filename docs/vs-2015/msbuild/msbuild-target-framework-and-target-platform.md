@@ -1,7 +1,7 @@
 ---
 title: MSBuild ターゲット フレームワークおよびターゲット プラットフォーム | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e699096af425897e3bd3c724b483cc3fea2ffb29
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 74ca7eb25aac26eb66628ea76be502e4a244a2bd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548580"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923369"
 ---
 # <a name="msbuild-target-framework-and-target-platform"></a>MSBuild ターゲット フレームワークおよびターゲット プラットフォーム
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MSBuild ターゲット フレームワークおよびターゲット プラットフォーム](https://docs.microsoft.com/visualstudio/msbuild/msbuild-target-framework-and-target-platform)します。  
-  
   
 プロジェクトは*ターゲット フレームワーク*とターゲット プラットフォームで動作するようにビルドできます。ターゲット フレームワークとは .NET Framework の特定のバージョンを表し、*ターゲット プラットフォーム*とは特定のソフトウェア アーキテクチャを表します。  たとえば、802x86 プロセッサ ファミリ ("x86") と互換性のある 32 ビット プラットフォーム上の .NET Framework 2.0 で動作するアプリケーションを対象とすることができます。 ターゲット フレームワークとターゲット プラットフォームの組み合わせは*ターゲット コンテキスト*と呼ばれます。  
   
@@ -34,25 +32,25 @@ ms.locfileid: "47548580"
   
  現在、.NET Framework については次のバージョンを使用できます。  
   
--   [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 2.0 (Visual Studio 2005 に付属しています)  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 2.0 (Visual Studio 2005 に付属しています)  
   
--   [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 3.0 ([!INCLUDE[wiprlhext](../includes/wiprlhext-md.md)] に付属しています)  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 3.0 ([!INCLUDE[wiprlhext](../includes/wiprlhext-md.md)] に付属しています)  
   
--   [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 3.5 ([!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)] に付属しています)  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 3.5 ([!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)] に付属しています)  
   
--   [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 4 (Visual Studio 2005 に付属しています)  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 4 (Visual Studio 2005 に付属しています)  
   
--   [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 4.5 ([!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] に付属しています)  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 4.5 ([!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] に付属しています)  
   
--   [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 4.5.1 ([!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] に付属しています)  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 4.5.1 ([!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] に付属しています)  
   
--   [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]4.5.2  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]4.5.2  
   
--   [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 4.6 ([!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)] に付属しています)  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 4.6 ([!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)] に付属しています)  
   
- .NET Framework の各バージョンでは、参照できるアセンブリの一覧がそれぞれ異なっています。 たとえば、WPF (Windows Presentation Foundation) アプリケーションをビルドするには、プロジェクトが .NET Framework のバージョン 3.0 以上 を対象としている必要があります。  
+  .NET Framework の各バージョンでは、参照できるアセンブリの一覧がそれぞれ異なっています。 たとえば、WPF (Windows Presentation Foundation) アプリケーションをビルドするには、プロジェクトが .NET Framework のバージョン 3.0 以上 を対象としている必要があります。  
   
- ターゲット フレームワークは、プロジェクト ファイルの `TargetFrameworkVersion` プロパティで指定されます。 プロジェクトのターゲット フレームワークを変更するには、Visual Studio 統合開発環境 (IDE) でプロジェクトのプロパティ ページを使用します。 詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。 `TargetFrameworkVersion` に使用できる値は、`v2.0`、`v3.0`、`v3.5`、`v4.0`、`v4.5`、`v4.5.1`、`v4.5.2`、`v4.6` です。  
+  ターゲット フレームワークは、プロジェクト ファイルの `TargetFrameworkVersion` プロパティで指定されます。 プロジェクトのターゲット フレームワークを変更するには、Visual Studio 統合開発環境 (IDE) でプロジェクトのプロパティ ページを使用します。 詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。 `TargetFrameworkVersion` に使用できる値は、`v2.0`、`v3.0`、`v3.5`、`v4.0`、`v4.5`、`v4.5.1`、`v4.5.2`、`v4.6` です。  
   
 ```  
 <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>  
@@ -68,13 +66,13 @@ ms.locfileid: "47548580"
 ```  
   
 ## <a name="target-platform"></a>ターゲット プラットフォーム  
- *プラットフォーム*は、特定のランタイム環境を定義するハードウェアとソフトウェアの組み合わせです。 たとえば、オブジェクトに適用された  
+ *プラットフォーム*は、特定のランタイム環境を定義するハードウェアとソフトウェアの組み合わせです。 例えば以下のようにします。  
   
--   `x86` は、Intel 80x86 プロセッサまたはそれに相当するプロセッサで実行されている 32 ビット Windows オペレーティング システムを示しています。  
+- `x86` は、Intel 80x86 プロセッサまたはそれに相当するプロセッサで実行されている 32 ビット Windows オペレーティング システムを示しています。  
   
--   `Xbox` は、Microsoft Xbox 360 プラットフォームを示しています。  
+- `Xbox` は、Microsoft Xbox 360 プラットフォームを示しています。  
   
- *ターゲット プラットフォーム*は、ビルドするプロジェクトの実行対象となる特定のプラットフォームです。 ターゲット プラットフォームは、プロジェクト ファイルの `Platform` ビルド プロパティで指定されます。 ターゲット プラットフォームを変更するには、IDE でプロジェクトのプロパティ ページまたは **[構成マネージャー]** を使用します。  
+  *ターゲット プラットフォーム*は、ビルドするプロジェクトの実行対象となる特定のプラットフォームです。 ターゲット プラットフォームは、プロジェクト ファイルの `Platform` ビルド プロパティで指定されます。 ターゲット プラットフォームを変更するには、IDE でプロジェクトのプロパティ ページまたは **[構成マネージャー]** を使用します。  
   
 ```  
 <PropertyGroup>  

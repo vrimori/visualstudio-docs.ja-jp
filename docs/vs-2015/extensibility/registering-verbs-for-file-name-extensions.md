@@ -1,7 +1,7 @@
 ---
 title: ファイル名拡張子の動詞を登録する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 81a58e40-7cd0-4ef4-a475-c4e1e84d6e06
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b6c42b1682c7f599513b9894646b30dee029740e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9d81916910eb4769801ae330c10edde24cb52f52
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547837"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923408"
 ---
 # <a name="registering-verbs-for-file-name-extensions"></a>ファイル名拡張子の動詞を登録する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ファイル名拡張子の動詞を登録する](https://docs.microsoft.com/visualstudio/extensibility/registering-verbs-for-file-name-extensions)します。  
-  
 アプリケーションとファイル名拡張子の関連付けは、通常、ユーザーがファイルをダブルクリックしたときに発生する推奨アクションを持っています。 これは、アクションは、動詞、たとえばオープン操作に対応するにリンクさせます (推奨)。  
   
  HKEY_CLASSES_ROOT にあるシェルのキーを使用して、拡張機能のプログラム識別子 (ProgID) に関連付けられている動詞を登録する\\*progid*\shell します。 詳細については、次を参照してください。[ファイルの種類](http://msdn.microsoft.com/library/windows/desktop/cc144148\(v=vs.85\).aspx)します。  
@@ -34,17 +32,17 @@ ms.locfileid: "47547837"
 ## <a name="registering-standard-verbs"></a>標準的な動詞を登録します。  
  オペレーティング システムでは、次の標準的な動詞を認識します。  
   
--   開く  
+- 開く  
   
--   編集  
+- 編集  
   
--   再生  
+- 再生  
   
--   の  
+- の  
   
--   [プレビュー]  
+- [プレビュー]  
   
- 可能であれば、標準的な動詞を登録します。 最も一般的な選択肢では、Open 動詞です。 ファイルを開くと、ファイルの編集の間の明確な違いがある場合にのみ編集動詞を使用します。 たとえば、.htm のファイルを開くに表示されます、ブラウザーは HTML エディターが起動 .htm ファイルを編集します。 標準的な動詞は、オペレーティング システムのロケールでローカライズされます。  
+  可能であれば、標準的な動詞を登録します。 最も一般的な選択肢では、Open 動詞です。 ファイルを開くと、ファイルの編集の間の明確な違いがある場合にのみ編集動詞を使用します。 たとえば、.htm のファイルを開くに表示されます、ブラウザーは HTML エディターが起動 .htm ファイルを編集します。 標準的な動詞は、オペレーティング システムのロケールでローカライズされます。  
   
 > [!NOTE]
 >  標準的な動詞を登録するときに、開いているキーの既定値を設定しないでください。 既定値には、メニューの表示文字列が含まれています。 オペレーティング システムでは、標準的な動詞にこの文字列を提供します。  

@@ -1,7 +1,7 @@
 ---
 title: ビジュアライザーのアーキテクチャ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,27 +19,25 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 086877250d513d8f8b033c9085bd1ff80ce3fa87
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4ec6a27b8fcd35b4b74108f7bc608c975e120b02
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540043"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49828690"
 ---
 # <a name="visualizer-architecture"></a>ビジュアライザーのアーキテクチャ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ビジュアライザーのアーキテクチャ](https://docs.microsoft.com/visualstudio/debugger/visualizer-architecture)します。  
-  
 デバッガー ビジュアライザーのアーキテクチャには、次の 2 つの部分があります。  
   
--   *デバッガー側*Visual Studio デバッガー内で実行します。 デバッガー側のコードは、ビジュアライザーのユーザー インターフェイスを作成し、表示します。  
+- *デバッガー側*Visual Studio デバッガー内で実行します。 デバッガー側のコードは、ビジュアライザーのユーザー インターフェイスを作成し、表示します。  
   
--   *デバッグ対象側*Visual Studio がデバッグ プロセス内で実行 (、*デバッグ対象*)。  
+- *デバッグ対象側*Visual Studio がデバッグ プロセス内で実行 (、*デバッグ対象*)。  
   
- ビジュアライザーは、デバッガーを表示できるようにするデバッガー コンポーネント (*視覚化*)、意味のある理解しやすい形式でデータ オブジェクトの内容。 データ オブジェクトの編集をサポートするビジュアライザーもあります。 カスタム ビジュアライザーを作成すれば、独自のデータ型を処理できるようにデバッガーを拡張することも可能です。  
+  ビジュアライザーは、デバッガーを表示できるようにするデバッガー コンポーネント (*視覚化*)、意味のある理解しやすい形式でデータ オブジェクトの内容。 データ オブジェクトの編集をサポートするビジュアライザーもあります。 カスタム ビジュアライザーを作成すれば、独自のデータ型を処理できるようにデバッガーを拡張することも可能です。  
   
- デバッグ中のプロセス内にあります。 視覚化対象であるデータ オブジェクト (、*デバッグ対象*プロセス)。 データを表示するユーザー インターフェイスは、Visual Studio デバッガー プロセス内で作成されます。  
+  デバッグ中のプロセス内にあります。 視覚化対象であるデータ オブジェクト (、*デバッグ対象*プロセス)。 データを表示するユーザー インターフェイスは、Visual Studio デバッガー プロセス内で作成されます。  
   
 |デバッガー プロセス|デバッグ対象プロセス|  
 |----------------------|----------------------|  

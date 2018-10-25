@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1025: を params 配列で反復する引数を置き換える |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 2496876369e2b0449f33b098a8a646914a4d2f11
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: b649a5eaa26365fcf7b620ae10db037269716b08
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589640"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49912813"
 ---
 # <a name="ca1025-replace-repetitive-arguments-with-params-array"></a>CA1025: 反復する引数を params 配列で置き換えます
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1025: 反復する引数を params 配列で置き換えます](https://docs.microsoft.com/visualstudio/code-quality/ca1025-replace-repetitive-arguments-with-params-array)します。
 
 |||
 |-|-|

@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_upperboundid |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5b2c69e1f4275983f91ef4bd894c36b02acd3e5f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 281a46f52bb90e019c8ff58b32492074e495cf98
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540230"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49918676"
 ---
 # <a name="idiasymbolgetupperboundid"></a>IDiaSymbol::get_upperBoundId
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_upperboundid](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-upperboundid)します。  
-  
 FORTRAN 配列の次元の上限のシンボルの識別子を取得します。  
   
 ## <a name="syntax"></a>構文  

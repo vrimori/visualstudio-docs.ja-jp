@@ -1,7 +1,7 @@
 ---
 title: Visual Studio SDK |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,35 +19,33 @@ ms.assetid: 1f7c348a-114c-4243-b392-3531e9c9c6fd
 caps.latest.revision: 57
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7554bf39960a55a566b366abc328f54199bd4367
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9d716d9f715e307b3ebd3538df1622454cc4b547
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536660"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832876"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio SDK](https://docs.microsoft.com/visualstudio/extensibility/visual-studio-sdk)します。  
-  
 Visual Studio SDK を使用して、Visual Studio の機能を拡張するかを Visual Studio の新機能を統合するのに役立ちます。 他のユーザーのほか、Visual Studio ギャラリーには、拡張機能を配布することができます。 Visual Studio を拡張する方法の一部を次に示します。  
   
--   IDE にコマンド、ボタン、メニューのおよびその他の UI 要素を追加します。  
+- IDE にコマンド、ボタン、メニューのおよびその他の UI 要素を追加します。  
   
--   ツール ウィンドウの新しい機能を追加します。  
+- ツール ウィンドウの新しい機能を追加します。  
   
--   特定の言語の IntelliSense の拡張または新しいプログラミング言語に対して IntelliSense を提供  
+- 特定の言語の IntelliSense の拡張または新しいプログラミング言語に対して IntelliSense を提供  
   
--   電球を使用して、優れたコードを記述のヒントと開発者に役立つ提案を提供するには  
+- 電球を使用して、優れたコードを記述のヒントと開発者に役立つ提案を提供するには  
   
--   新しい言語のサポートを有効にします。  
+- 新しい言語のサポートを有効にします。  
   
--   カスタム プロジェクトの種類を追加します。  
+- カスタム プロジェクトの種類を追加します。  
   
--   Visual Studio ギャラリーを使用して開発者の何百万します。  
+- Visual Studio ギャラリーを使用して開発者の何百万します。  
   
- 前に Visual Studio 拡張機能を初めて作成する場合とでこれらの機能についての詳細についてを検索する必要があります[Visual Studio 拡張機能の開発を開始しています](../extensibility/starting-to-develop-visual-studio-extensions.md)します。  
+  前に Visual Studio 拡張機能を初めて作成する場合とでこれらの機能についての詳細についてを検索する必要があります[Visual Studio 拡張機能の開発を開始しています](../extensibility/starting-to-develop-visual-studio-extensions.md)します。  
   
 ## <a name="installing-the-visual-studio-sdk"></a>Visual Studio SDK をインストールします。  
  Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  

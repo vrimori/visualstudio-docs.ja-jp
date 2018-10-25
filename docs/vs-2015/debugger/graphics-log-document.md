@@ -1,7 +1,7 @@
 ---
 title: グラフィックス ログ ドキュメント |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 34
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 385744b280bbd8069acef4da0a36ae9bd9716fcb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b35cd0a0063ab02af0ed0831079439926b446794
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536902"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49261561"
 ---
 # <a name="graphics-log-document"></a>グラフィックス ログ ドキュメント
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[グラフィックス ログ ドキュメント](https://docs.microsoft.com/visualstudio/debugger/graphics/graphics-log-document)します。  
-  
 グラフィックス ログのドキュメントは、アプリがグラフィックス診断のセッションで実行されているときに発生したグラフィックス イベントのレコードです。 記録した後で、Visual Studio Graphics Analyzer でログを確認して、レンダリングとパフォーマンスの問題を診断することができます。  
   
  グラフィックス ログのドキュメントは Graphics Analyzer で次のように表示されます。  
@@ -86,7 +84,7 @@ ms.locfileid: "47536902"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|**Path**|.vsglog ファイルのパス。 **注:** レガシー キャプチャではこのプロパティは使用されません。|  
+|**パス**|.vsglog ファイルのパス。 **注:** レガシー キャプチャではこのプロパティは使用されません。|  
   
  **モジュール情報**  
  キャプチャ セッション中にアプリケーションによって読み込まれたダイナミック リンク ライブラリ (DLLs) の名前とバージョンを一覧表示します。  
@@ -108,7 +106,7 @@ ms.locfileid: "47536902"
 |プロパティ|説明|  
 |--------------|-----------------|  
 |**最終更新日付/時刻**|アプリケーションがビルドされた日時。|  
-|**Path**|アプリケーションのパス。|  
+|**パス**|アプリケーションのパス。|  
 |**プロセス ID**|アプリケーションに指定されたプロセス ID。|  
 |**Version**|アプリケーションのバージョン。|  
   

@@ -1,7 +1,7 @@
 ---
 title: VSPackage のインストール ディレクトリの選択 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 01fbbb5b-f747-446c-afe0-2a081626a945
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2ebe7ce3855b2d91687251176dc3dd5acd4c7ad2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d3ed255d5b8a876ff29e5230c4517ab0b5e04398
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536820"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843406"
 ---
 # <a name="choosing-the-installation-directory-for-a-vspackage"></a>VSPackage のインストール ディレクトリの選択
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[、VSPackage のインストール ディレクトリの選択](https://docs.microsoft.com/visualstudio/extensibility/internals/choosing-the-installation-directory-for-a-vspackage)します。  
-  
 VSPackage とそのサポート ファイルは、ユーザーのファイル システム上にある必要があります。 場所は、VSPackage の管理または非管理対象、サイド バイ サイド バージョン管理スキームとユーザーの選択かどうかによって異なります。  
   
 ## <a name="unmanaged-vspackages"></a>アンマネージ Vspackage  
@@ -56,17 +54,17 @@ VSPackage とそのサポート ファイルは、ユーザーのファイル �
   
  [Vspackage の管理](../../extensibility/managing-vspackages.md)レジストリ エントリが場所を制御することを示します[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]実際には、VSPackage の検索はサテライト DLL。 ただし、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] LCID 値を次の順序でのという名前のサブディレクトリでは、サテライト DLL を読み込もうとします。  
   
-1.  既定の LCID (VS LCID 英語 \1033 など)  
+1. 既定の LCID (VS LCID 英語 \1033 など)  
   
-2.  既定のサブ言語の LCID 既定値です。  
+2. 既定のサブ言語の LCID 既定値です。  
   
-3.  システム既定の LCID。  
+3. システム既定の LCID。  
   
-4.  既定のサブ言語とシステムの既定の LCID。  
+4. 既定のサブ言語とシステムの既定の LCID。  
   
-5.  米国英語 (. \1033 または。 \0x409)。  
+5. 米国英語 (. \1033 または。 \0x409)。  
   
- VSPackage DLL は、リソースとそれに SatelliteDll\DllName レジストリのエントリ ポイントが含まれる場合[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]上記の順序でそれらを読み込もうとします。  
+   VSPackage DLL は、リソースとそれに SatelliteDll\DllName レジストリのエントリ ポイントが含まれる場合[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]上記の順序でそれらを読み込もうとします。  
   
 ## <a name="see-also"></a>関連項目  
  [共有およびバージョン管理 Vspackage の使い分け](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)   

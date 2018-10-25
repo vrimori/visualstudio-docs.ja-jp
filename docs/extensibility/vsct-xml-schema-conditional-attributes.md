@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b31b99e38eeec2ff1e5e31bc6bdaeed3d3be3d83
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: 071f13420fe9482e99189ca29eeb09d319f182bf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586822"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936428"
 ---
 # <a name="vsct-xml-schema-conditional-attributes"></a>VSCT XML スキーマの条件付き属性
 条件付き属性は、すべてのリストとアイテムに適用できます。 論理演算子およびシンボルの拡張の式は、true または false に評価されます。 True の場合、結果の出力で、関連付けられているリストまたは項目が含まれます。  

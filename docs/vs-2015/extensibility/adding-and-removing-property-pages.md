@@ -1,7 +1,7 @@
 ---
 title: 追加とプロパティ ページの削除 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 34853412-ab8a-4caa-9601-7d0727b2985d
 caps.latest.revision: 30
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 02295041a660ff3e4e7b0565cffd260a4e64c78d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b3b78fd8c6d89e93e208d00cda069f93a4deb10e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544373"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49221989"
 ---
 # <a name="adding-and-removing-property-pages"></a>プロパティ ページの追加と削除
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[の追加および削除するプロパティ ページ](https://docs.microsoft.com/visualstudio/extensibility/adding-and-removing-property-pages)します。  
-  
 プロジェクト デザイナーは、プロジェクトのプロパティ、設定、および内のリソースを管理するための一元的な場所を提供します。[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 単一のウィンドウとして表示されます、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]統合開発環境 (IDE) と、左側のタブを使用してアクセスされる右側のウィンドウの数値が含まれています。 プロジェクト デザイナーのペイン (プロパティ ページとも呼ばれます) は、プロジェクトの種類と言語によって異なります。 プロジェクト デザイナーをアクセスするのには、**プロパティ**コマンドを**プロジェクト**メニュー。  
   
  多くの場合、プロジェクトのサブタイプは、プロジェクト デザイナーに追加のプロパティ ページを表示する必要があります。 同様に、いくつかのプロジェクト サブタイプは、組み込みのプロパティ ページを削除する必要があります。 いずれかには、プロジェクトのサブタイプを実装する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>インターフェイスし、オーバーライド、<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>メソッド。 このメソッドをオーバーライドしを使用して`propId`パラメーターの値のいずれかを含む、<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2>列挙型でフィルター処理、追加またはプロジェクトのプロパティを削除することができます。 たとえば、構成に依存するプロパティ ページにページを追加する必要があります。 これを行うには、構成に依存するプロパティ ページをフィルター処理し、既存のリストに新しいページを追加する必要があります。  

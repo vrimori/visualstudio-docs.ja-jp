@@ -1,7 +1,7 @@
 ---
 title: IDebugBinder3::GetTypeArguments |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,15 @@ ms.assetid: fa0c37a7-327f-463e-9a9d-bb3f534584cb
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b82c5befe302c88e9f687bd2e6be7195dc4757cf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9a99e7182db1ad074364fb6b87150ebd2d68e89d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546995"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890245"
 ---
 # <a name="idebugbinder3gettypearguments"></a>IDebugBinder3::GetTypeArguments
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[IDebugBinder3::GetTypeArguments](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugbinder3-gettypearguments)します。
-
 このメソッドは、このオブジェクトに関連付けられている引数の型の一覧を取得します。
 
 ## <a name="syntax"></a>構文

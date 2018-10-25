@@ -9,16 +9,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a60e340639a023adf50b739870035c0b81a82643
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 778d52d738af318dd21fa58a115dd053b44fa3a8
+ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36282526"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863651"
 ---
 # <a name="features-of-visual-studio-2017"></a>Visual Studio 2017 の機能
 
-Visual Studio の基礎についてはトピック「[Visual Studio IDE の概要](../ide/visual-studio-ide.md)」で説明しています。 この記事では、経験を積んだ開発者または Visual Studio を使い慣れている開発者に適した機能について説明します。
+Visual Studio の基礎については、「[Visual Studio IDE の概要](../ide/visual-studio-ide.md)」の記事で説明しています。 この記事では、経験を積んだ開発者または Visual Studio を使い慣れている開発者に適した機能について説明します。
 
 ## <a name="modular-installation"></a>モジュール式インストール
 
@@ -100,19 +100,19 @@ Visual Studio の **SQL Server オブジェクト エクスプローラー**で�
 
 ## <a name="manage-your-source-code-and-collaborate-with-others"></a>ソース コードの管理および他のユーザーとの共同作業
 
-GitHub などの任意のプロバイダーがホストしている Git リポジトリにあるソース コードを管理できます。 また、[Visual Studio Team Services (VSTS)](/vsts/index) を使用して、プロジェクト全体でコードをバグおよび作業項目と共に管理することもできます。 Visual Studio でチーム エクスプローラーを使用して Git リポジトリを管理する方法の詳細については、[Git および Team Services (VSTS) の概要](/vsts/git/gitquickstart?tabs=visual-studio)に関するページを参照してください。 Visual Studio には、その他の組み込みのソース管理機能もあります。 それらの機能の詳細については、ブログ「[New Git Features in Visual Studio 2017](https://blogs.msdn.microsoft.com/visualstudioalm/2017/03/06/new-git-features-in-visual-studio-2017/)」(Visual Studio 2017 の新しい Git 機能) をご覧ください。
+GitHub などの任意のプロバイダーがホストしている Git リポジトリにあるソース コードを管理できます。 また、[Azure DevOps Services](/azure/devops/index) を使用して、プロジェクト全体でコードをバグおよび作業項目と共に管理することもできます。 Visual Studio でチーム エクスプローラーを使用して Git リポジトリを管理する方法の詳細については、「[Get started with Git and Azure Repos](/azure/devops/repos/git/gitquickstart?tabs=visual-studio)」(Git および Azure Repos の使用を開始する) を参照してください。 Visual Studio には、その他の組み込みのソース管理機能もあります。 それらの機能の詳細については、ブログ「[New Git Features in Visual Studio 2017](https://blogs.msdn.microsoft.com/devops/2017/03/06/new-git-features-in-visual-studio-2017/)」(Visual Studio 2017 の新しい Git 機能) をご覧ください。
 
-Visual Studio Team Services は、ソフトウェア プロジェクトをホストし、チームでのコラボレーションを有効にするためのクラウド ベースのサービスです。 VSTS は、Git ソース管理システムと Team Foundation ソース管理システムの両方をサポートしています。また、Scrum、CMMI、アジャイル開発方法もサポートしています。 Team Foundation バージョン管理 (TFVC) は、単一の集中サーバー リポジトリを使用して、ファイルを追跡してバージョン管理します。 ローカルの変更は常に集中サーバーにチェックインされます。他の開発者はそこで、最新の変更を取得できます。
+Azure DevOps Services は、チームでのコラボレーションを可能にする、ソフトウェアのプランニング、ホスティング、自動化、およびデプロイのためのクラウド ベースのサービスです。 Azure DevOps Services では、Git リポジトリ (分散型バージョン管理) と Team Foundation バージョン管理 (集中型バージョン管理) の両方をサポートする他に、バージョン管理システムに格納されているコードの継続的なビルドとリリース (CI/CD) のパイプラインもサポートしています。 Azure DevOps Services では、スクラム、CMMI、アジャイル開発方法もサポートしています。
 
 Team Foundation Server (TFS) は、Visual Studio のアプリケーション ライフサイクル管理のハブです。 これにより、開発プロセスに関わるすべてのユーザーが 1 つのソリューションを使用して参加できるようになります。 TFS は、異種混合のチームやプロジェクトを管理するのにも役立ちます。
 
-Visual Studio Team Services のアカウントまたは Team Foundation Server がネットワーク上にある場合、Visual Studio の **[チーム エクスプローラー]** ウィンドウから接続することができます。 このウィンドウからソース管理にコードをチェックインしたりソース管理からコードをチェックアウトできます。また、作業項目を管理したり、ビルドを開始したり、チームのルームやワークスペースにアクセスできます。 **チーム エクスプローラー**は、**[クイック起動]** ボックスから、**[ビュー]** > **[チーム エクスプローラー]** の順に選択してメイン メニューから、または **[チーム]** > **[接続の管理]** の順に選択して開くことができます。
+Azure DevOps 組織または Team Foundation Server がネットワーク上にある場合、Visual Studio の **[チーム エクスプローラー]** ウィンドウから接続することができます。 このウィンドウからソース管理にコードをチェックインしたりソース管理からコードをチェックアウトできます。また、作業項目を管理したり、ビルドを開始したり、チームのルームやワークスペースにアクセスできます。 **チーム エクスプローラー**は、**[クイック起動]** ボックスから、**[ビュー]** > **[チーム エクスプローラー]** の順に選択してメイン メニューから、または **[チーム]** > **[接続の管理]** の順に選択して開くことができます。
 
-次の図は、VSTS でホストされているソリューションの **[チーム エクスプローラー]** ウィンドウを示しています。
+次の図は、Azure DevOps Services でホストされているソリューションの **[チーム エクスプローラー]** ウィンドウを示しています。
 
 ![Visual Studio Team Explorer](../ide/media/vs2017_teamexplorer.png)
 
-チームの開発者がバージョン管理にチェックインしたコードをビルドするように、ビルド プロセスを自動化することもできます。 たとえば、1 つまたは複数のプロジェクトを夜間にビルドすることも、コードのチェックインごとにビルドすることもできます。 詳細については、「[Build and Release (VSTS and TFS)](/vsts/build-release/index)」(ビルドとリリース (VSTS と TFS)) を参照してください。
+チームの開発者がバージョン管理にチェックインしたコードをビルドするように、ビルド プロセスを自動化することもできます。 たとえば、1 つまたは複数のプロジェクトを夜間にビルドすることも、コードのチェックインごとにビルドすることもできます。 詳細については、「[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)」を参照してください。
 
 ## <a name="extend-visual-studio"></a>Visual Studio を拡張する
 

@@ -29,12 +29,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 081a3dfd809cc936f11d436e593d2be258452f85
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 4d69322360a83a6d615efcaf8de077de80e64398
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35673246"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847579"
 ---
 # <a name="build-office-solutions"></a>Office ソリューションを構築します。
   一般に、Office プロジェクトのビルドとデバッグは、Visual Studio のその他の種類のプロジェクト (Windows フォームなど) のビルドおよびデバッグとほとんど同じです。 このセクションのトピックでは、いくつかある相違点について説明します。 アプリケーションを構築する方法については、次を参照してください。[コンパイルし、Visual Studio でビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)します。  
@@ -64,23 +64,23 @@ ms.locfileid: "35673246"
 ### <a name="application-level-projects"></a>アプリケーション レベルのプロジェクト  
  VSTO アドイン プロジェクトをビルドするときに、プロジェクト出力には、次のものが含まれています。  
   
--   プロジェクト アセンブリと、 **［ローカル コピー］** プロパティが **true**に設定されているすべての参照先アセンブリ。  
+- プロジェクト アセンブリと、 **［ローカル コピー］** プロパティが **true**に設定されているすべての参照先アセンブリ。  
   
--   アプリケーション マニフェストは、ファイル名拡張子を持つ *.manifest*します。 詳細については、次を参照してください。 [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)します。  
+- アプリケーション マニフェストは、ファイル名拡張子を持つ *.manifest*します。 詳細については、次を参照してください。 [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)します。  
   
--   配置マニフェストは、ファイル名拡張子を持つ *.vsto*します。 詳細については、次を参照してください。 [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)します。  
+- 配置マニフェストは、ファイル名拡張子を持つ *.vsto*します。 詳細については、次を参照してください。 [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)します。  
   
--   プログラム データベース (*PDB*) プロジェクトのアセンブリのファイル。  
+- プログラム データベース (*PDB*) プロジェクトのアセンブリのファイル。  
   
- VSTO アドイン プロジェクトのビルド処理により、開発用コンピューターには、VSTO アドインの読み込みに必要な一連のレジストリ エントリも作成されます。 詳細については、次を参照してください。 [VSTO アドインのレジストリ エントリ](../vsto/registry-entries-for-vsto-add-ins.md)します。  
+  VSTO アドイン プロジェクトのビルド処理により、開発用コンピューターには、VSTO アドインの読み込みに必要な一連のレジストリ エントリも作成されます。 詳細については、次を参照してください。 [VSTO アドインのレジストリ エントリ](../vsto/registry-entries-for-vsto-add-ins.md)します。  
   
- フォーム領域を含む Outlook VSTO アドイン プロジェクトをビルドすると、ビルド処理により、次に示す情報がレジストリに追加されます。  
+  フォーム領域を含む Outlook VSTO アドイン プロジェクトをビルドすると、ビルド処理により、次に示す情報がレジストリに追加されます。  
   
--   1 つ以上のフォーム領域に関連付けられている各メッセージ クラスのキー。  
+- 1 つ以上のフォーム領域に関連付けられている各メッセージ クラスのキー。  
   
--   各フォーム領域のエントリと、Outlook VSTO アドインの名前を表す関連値。  
+- 各フォーム領域のエントリと、Outlook VSTO アドインの名前を表す関連値。  
   
- この情報は、Outlook がフォーム領域を読み込むために必要になります。  
+  この情報は、Outlook がフォーム領域を読み込むために必要になります。  
   
 ## <a name="referenced-assemblies"></a>参照アセンブリ  
  Office ソリューションのビルド プロジェクトからアセンブリ (クラス ライブラリ プロジェクトを含む) を参照できます。 各参照先アセンブリには、 **［ローカル コピー］** というプロパティがあります。 **［ローカル コピー］** では、アセンブリを出力ディレクトリにコピーするかどうかを指定します。 既定では **true**に設定されています。 **［ローカル コピー］** が **true** に設定されている参照先アセンブリは、すべて出力ディレクトリにコピーされます。  

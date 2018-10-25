@@ -1,5 +1,5 @@
 ---
-title: Idiaenumdebugstreamdata::clone |Microsoft ドキュメント
+title: Idiaenumdebugstreamdata::clone |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1dc2fc77cd7a0c71f2b30febea9a1351dd807933
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e2bc77d425f71be791bac853b57073a6cb3cc48e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31458259"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862386"
 ---
 # <a name="idiaenumdebugstreamdataclone"></a>IDiaEnumDebugStreamData::Clone
-現在の列挙子として同じ列挙のシーケンスを含む列挙子を作成します。  
+現在の列挙子と同じ列挙型のシーケンスを格納する列挙子を作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,10 +34,10 @@ HRESULT Clone (
   
 #### <a name="parameters"></a>パラメーター  
  ppenum  
- [out]返します、 [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)デバッグ ストリーム レコードのデータの重複するシーケンスを含むオブジェクト。  
+ [out]返します、 [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)デバッグ ストリーム レコードのデータの重複のシーケンスを格納しているオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

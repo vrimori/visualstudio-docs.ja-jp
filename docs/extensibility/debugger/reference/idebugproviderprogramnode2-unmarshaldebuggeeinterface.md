@@ -1,5 +1,5 @@
 ---
-title: IDebugProviderProgramNode2::UnmarshalDebuggeeInterface |Microsoft ドキュメント
+title: IDebugProviderProgramNode2::UnmarshalDebuggeeInterface |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b9ebadbc35ee8752e9f3b985a99155444caff5f8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 464c840c9f3009c1ed763bdc8dbbf66b8491bfe8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31119751"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917051"
 ---
 # <a name="idebugproviderprogramnode2unmarshaldebuggeeinterface"></a>IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
-プロセスの境界を越えて、指定されたインターフェイスを取得します。  
+プロセスの境界を越えて、指定したインターフェイスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,13 +46,13 @@ int UnmarshalDebuggeeInterface(
  [in]インターフェイスの GUID を取得します。  
   
  `ppvObject`  
- [out]必要なインターフェイスを実装するオブジェクトを返します。 [C++] この目的のインターフェイス型に直接キャストできます。 [C#] を使用して、<xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A>目的のインターフェイスを取得します。  
+ [out]必要なインターフェイスを実装するオブジェクトを返します。 [C++] これは、必要なインターフェイスの型に直接キャストできます。 使用 [c#]、<xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A>必要なインターフェイスを取得します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- デバッグ エンジンを実行する場合、このメソッドを使用、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]プロセス空間とデバッグ中のプログラムが、独自のプロセス領域で実行されています。  
+## <a name="remarks"></a>Remarks  
+ デバッグ エンジンがで実行されているときに、このメソッドを使用、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]プロセス領域とデバッグ中のプログラムが、独自のプロセス空間内で実行されています。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProviderProgramNode2](../../../extensibility/debugger/reference/idebugproviderprogramnode2.md)

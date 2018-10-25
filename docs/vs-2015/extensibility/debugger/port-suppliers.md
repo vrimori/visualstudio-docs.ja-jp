@@ -1,7 +1,7 @@
 ---
 title: ポート サプライヤー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,29 +16,27 @@ ms.assetid: a8f3db96-1a13-4e93-9ef6-0861880369e0
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3be95dfdb84f373730d087e9d6da1096891770af
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 173ff6b7550731262e8f4e3293b6f7c35eac4062
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540113"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858811"
 ---
 # <a name="port-suppliers"></a>ポート サプライヤー
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ポート サプライヤー](https://docs.microsoft.com/visualstudio/extensibility/debugger/port-suppliers)します。  
-  
 デバッガーのアーキテクチャの観点から、**ポート サプライヤー**:  
   
--   サーバーに含まれていて、そのサーバーへの要求でポートを提供します。  
+- サーバーに含まれていて、そのサーバーへの要求でポートを提供します。  
   
--   追加し、ポートを含む、サーバーから削除できます。  
+- 追加し、ポートを含む、サーバーから削除できます。  
   
--   これがサーバーに提供されているすべてのポートを列挙できます。  
+- これがサーバーに提供されているすべてのポートを列挙できます。  
   
--   によって表される、 [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)インターフェイスをレジストリを使用して Visual Studio に登録します。 このインターフェイスを呼び出すことによって取得できる[GetPortSupplier](../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)します。  
+- によって表される、 [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)インターフェイスをレジストリを使用して Visual Studio に登録します。 このインターフェイスを呼び出すことによって取得できる[GetPortSupplier](../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)します。  
   
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 既定のポート サプライヤーと既定のポートを提供します。 カスタム ポートを実装する場合は、実装して、これらのカスタム ポートを指定することも、カスタム ポート サプライヤー必要があります。  
+  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 既定のポート サプライヤーと既定のポートを提供します。 カスタム ポートを実装する場合は、実装して、これらのカスタム ポートを指定することも、カスタム ポート サプライヤー必要があります。  
   
 ## <a name="see-also"></a>関連項目  
  [サーバー](../../extensibility/debugger/servers-visual-studio-sdk.md)   

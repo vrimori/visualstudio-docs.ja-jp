@@ -1,7 +1,7 @@
 ---
 title: IDebugCanStopEvent2::GetReason |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: f5de31ca-7b8d-4029-9cf9-ba860ac66af6
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fcc130a2b6dc1874c1ac536ae2e7d13aa3db4952
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b67c619e81eea903ddc7ceca8781517ab5641e55
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540136"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842561"
 ---
 # <a name="idebugcanstopevent2getreason"></a>IDebugCanStopEvent2::GetReason
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugCanStopEvent2::GetReason](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugcanstopevent2-getreason)します。  
-  
 なぜデバッグ エンジン (DE) を停止する必要がある理由を取得します。  
   
 ## <a name="syntax"></a>構文  

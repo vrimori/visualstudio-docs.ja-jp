@@ -1,7 +1,7 @@
 ---
 title: 添付ファイルの起動に基づく |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 362f00ac-1909-4a3a-bacb-c0ceb5549816
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e52e364e49bb38e6be812edec9f5fa5d8f26df0f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d3603f14d07eb8531480b89f24d73cbd5045da7c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537100"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49188308"
 ---
 # <a name="launch-based-attachment"></a>起動ベースのアタッチ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[添付ファイルの起動に基づく](https://docs.microsoft.com/visualstudio/extensibility/debugger/launch-based-attachment)します。  
-  
 プログラムを起動ベースの添付ファイルは自動です。 によって、SDM をプログラムをホストするプロセスを起動すると起動ベースの添付ファイルは手動の添付ファイルのメソッドのようなパスに従います。 詳しくは、次を参照してください。[プログラムへのアタッチ](../../extensibility/debugger/attaching-to-the-program.md)します。  
   
 ## <a name="the-attaching-process"></a>プロセスを接続します。  

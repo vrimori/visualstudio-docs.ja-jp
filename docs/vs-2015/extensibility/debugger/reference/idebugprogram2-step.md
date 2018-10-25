@@ -1,7 +1,7 @@
 ---
 title: IDebugProgram2::Step |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: e4c2ffce-9810-4088-8162-eac9ef04f2a9
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cb5ffb1328848aa862531ba1a0f2072e6b0546d0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4a8d3696399a888493b4b8f84928418eb2c562b9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545458"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49859357"
 ---
 # <a name="idebugprogram2step"></a>IDebugProgram2::Step
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugProgram2::Step](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugprogram2-step)します。  
-  
 ステップを実行します。  
   
 > [!NOTE]

@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::SetValueAsString |Microsoft ドキュメント
+title: IDebugReference2::SetValueAsString |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 21d4e3f23ae8a66ff4bfa26bdaf6d906a2b008a2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2b4c7af3a7cedd56b72032ad51ecc6ef4df04d8c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31120138"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837933"
 ---
 # <a name="idebugreference2setvalueasstring"></a>IDebugReference2::SetValueAsString
 文字列からの参照の値を設定します。 将来使用するために予約されています。  
@@ -51,7 +51,7 @@ int SetValueAsString (
  [in]任意の数値情報を書式設定で使用する基数。  
   
  `dwTimeout`  
- [in]このメソッドから戻る前に待機するミリ秒単位の最大時間。 使用して`INFINITE`無制限に待機します。  
+ [in]このメソッドから戻る前に待機するミリ秒単位で最大時間。 使用`INFINITE`を無期限に待機します。  
   
 ## <a name="return-value"></a>戻り値  
  常に `E_NOTIMPL` を返します。  

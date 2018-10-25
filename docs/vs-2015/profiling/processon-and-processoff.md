@@ -1,7 +1,7 @@
 ---
 title: ProcessOn と ProcessOff | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cd2d33a6d0e333600c31e540f03d6140853e796d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e7595d48d0f08fc16bed00385094167b1d65efc8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544487"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849404"
 ---
 # <a name="processon-and-processoff"></a>ProcessOn と ProcessOff
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ProcessOn と ProcessOff](https://docs.microsoft.com/visualstudio/profiling/processon-and-processoff)します。  
-  
 VSPerfCmd.exe の **ProcessOff** サブコマンドと **ProcessOn** サブコマンドでは、コマンド ライン プロファイル セッションの指定されたプロセスのプロファイリングを一時停止および再開します。 **ProcessOff** がプロセスのプロファイリングを停止し、**ProcessOn** がプロセスのプロファイリングを開始します。  
   
  多くの場合、**ProcessOn** または **ProcessOff** を VSPerfCmd.exe コマンド ラインの唯一のオプションとして指定しますが、これらを **GlobalOn**、**GlobalOff**、**ThreadOn**、および **ThreadOff** の各サブコマンドと組み合わせて使用することもできます。  
@@ -34,11 +32,11 @@ VSPerfCmd.exe の **ProcessOff** サブコマンドと **ProcessOn** サブコ�
   
  **ProcessOff** サブコマンドと **ProcessOn** サブコマンドは、プロファイラー API 関数によって操作されるプロセスの開始/停止数にも影響します。  
   
--   **ProcessOff** は、プロセスの開始/停止数を直ちに 0 に設定して、プロファイリングを一時停止します。  
+- **ProcessOff** は、プロセスの開始/停止数を直ちに 0 に設定して、プロファイリングを一時停止します。  
   
--   **ProcessOn** は、プロセスの開始/停止数を直ちに 1 に設定して、プロファイリングを再開します。  
+- **ProcessOn** は、プロセスの開始/停止数を直ちに 1 に設定して、プロファイリングを再開します。  
   
- 詳細については、[「プロファイリング ツールの API」](../profiling/profiling-tools-apis.md) を参照してください。  
+  詳細については、[「プロファイリング ツールの API」](../profiling/profiling-tools-apis.md) を参照してください。  
   
 ## <a name="syntax"></a>構文  
   

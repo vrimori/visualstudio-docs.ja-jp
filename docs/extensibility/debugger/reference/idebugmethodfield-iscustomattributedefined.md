@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::IsCustomAttributeDefined |Microsoft ドキュメント
+title: IDebugMethodField::IsCustomAttributeDefined |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f8515fd9fc9914daa7f28f876777dd5eb26ac14c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9d2481c014c149e51c4c9ee3ff837a65e040b7e8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31111161"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882276"
 ---
 # <a name="idebugmethodfieldiscustomattributedefined"></a>IDebugMethodField::IsCustomAttributeDefined
 特定のカスタム属性が定義されているかどうかを判断します。  

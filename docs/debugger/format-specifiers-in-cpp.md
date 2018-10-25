@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bd99ed0a4350dbaf8c2e158f8b86464f50393c4
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 714ca84a860f01ecc0df6536adb5ea9bb60989fa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37057757"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820500"
 ---
 # <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>Visual Studio デバッガーで C++ の書式指定子
 書式指定子を使用して、 **ウォッチ** ウィンドウに表示される値の書式設定を変更することができます。  
@@ -43,9 +43,9 @@ ms.locfileid: "37057757"
   
 > [!NOTE]
 >  Visual Studio のネイティブ デバッガーが新しいデバッグ エンジンに変更されると、いくつかの新しい書式指定子が追加され、一部の古い構成が削除されました。 C++/CLI で相互運用 (ネイティブ コードとマネージド コードの混合) をデバッグする場合は、以前のデバッガーが引き続き使用されます。 このトピックの以降のセクションで、各デバッグ エンジンの書式指定子について説明します。
->   
->  -   [書式指定子](#BKMK_Visual_Studio_2012_format_specifiers) 」では、新しいデバッグ エンジンの書式指定子について説明します。  
-> -   [C++/CLI での相互運用機能デバッグ用の書式指定子](#BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue) 」では、以前のデバッグ エンジンの書式指定子について説明します。  
+> 
+> - [書式指定子](#BKMK_Visual_Studio_2012_format_specifiers) 」では、新しいデバッグ エンジンの書式指定子について説明します。  
+>   -   [C++/CLI での相互運用機能デバッグ用の書式指定子](#BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue) 」では、以前のデバッグ エンジンの書式指定子について説明します。  
   
 ## <a name="using-format-specifiers"></a>書式指定子の使用  
  次のようなコードがあるとします。  

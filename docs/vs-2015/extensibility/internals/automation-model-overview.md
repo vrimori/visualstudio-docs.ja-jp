@@ -1,7 +1,7 @@
 ---
 title: オートメーション モデルの概要 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 12b6d6db-0d22-4aaa-aa7d-1365f759b7b0
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fdce23e892fe2fa14dc7f24f95d5744be2c67c39
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e85e0a56ac11baf93ad743569d57152601077599
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538167"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49815924"
 ---
 # <a name="automation-model-overview"></a>オートメーション モデルの概要
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[オートメーション モデルの概要](https://docs.microsoft.com/visualstudio/extensibility/internals/automation-model-overview)します。  
-  
 オートメーション モデルは、Visual Studio アドインまたは拡張機能を作成する対象となるオブジェクトのセットで構成されます。 アドインを Visual Studio 環境を操作および一般的なタスクを自動化できるアプリケーションは、します。 Visual Studio 拡張機能では、Visual Studio のカスタム コンポーネントを作成したり、テキスト エディターなどの標準的なコンポーネントの機能を追加することができます。  
   
 ## <a name="objects-in-the-automation-model"></a>オートメーション モデル内のオブジェクト  
@@ -42,15 +40,15 @@ Visual Studio オートメーション オブジェクト
   
  場所、環境のオートメーション モデルの拡張を検討することができます。  
   
--   プロジェクト  
+- プロジェクト  
   
--   ドキュメント  
+- ドキュメント  
   
--   コード  
+- コード  
   
--   ビルド  
+- ビルド  
   
- Automation の詳細については、次を参照してください。[オートメーションおよび for Visual Studio 機能拡張](http://msdn.microsoft.com/library/f71a2253-3e68-4e5e-9a18-edbba816caf6)します。 このドキュメントおよびドキュメントに、意思決定、VSPackage のオートメーションを提供する方法に関する役立つリンクを提供します。  
+  Automation の詳細については、次を参照してください。[オートメーションおよび for Visual Studio 機能拡張](http://msdn.microsoft.com/library/f71a2253-3e68-4e5e-9a18-edbba816caf6)します。 このドキュメントおよびドキュメントに、意思決定、VSPackage のオートメーションを提供する方法に関する役立つリンクを提供します。  
   
 ## <a name="see-also"></a>関連項目  
  [方法: アドインの作成](http://msdn.microsoft.com/library/50be56d2-e3a5-4cd2-8569-2a0666b268ce)

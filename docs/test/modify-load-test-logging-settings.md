@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 61b67cb950ee1d429f5f65ef745ff5ac75ca69d8
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 2adef763b46a00f380ef7fb0f9f2d0a3ecdcfb8b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39379658"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909700"
 ---
 # <a name="modify-load-test-logging-settings"></a>ロード テストのログ設定の変更
 
@@ -24,7 +24,7 @@ ms.locfileid: "39379658"
 *テスト コントローラー*は、テストの実行中に収集されたすべてのロード テスト サンプル データをデータベース ログにスプールします。 タイミング詳細やエラー詳細などの追加データは、テストの完了時にデータベースに読み込まれます。
 
 |タスク|関連するトピック|
-|----------|-----------------------|
+|-|-----------------------|
 |**ロード テスト実行中のログの保存間隔の指定:** ロード テストの実行時にテスト ログを保存する頻度を指定できます。|-   [方法: テスト ログの保存頻度を指定する](../test/how-to-specify-how-frequently-test-logs-are-saved.md)|
 |**ロード テスト失敗時のログの保存:** ロード テストが失敗するたびにテスト ログを保存するかどうかも指定できます。|-   [方法: テスト ログにテストの失敗を記録するかどうかを指定する](../test/how-to-specify-if-test-failures-are-saved-to-test-logs.md)|
 |**ログ ファイルの最大サイズの設定:** テスト コントローラー サービスと関連付けられている XML 構成ファイルを編集して、ログ ファイルの最大ファイル サイズを指定できます。|[方法: ログ ファイルの最大サイズを指定する](../test/how-to-specify-the-maximum-size-for-the-log-file.md)|

@@ -1,7 +1,7 @@
 ---
 title: IEnumDebugReferenceInfo2::Reset |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: cf8ce649-5ce1-44a6-9d5a-89760021bde4
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3b974ab5983b6675a827b92af251c8eb3f42752d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9a138010bd748d4225804c4051f457cbbc9d08ff
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546547"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863010"
 ---
 # <a name="ienumdebugreferenceinfo2reset"></a>IEnumDebugReferenceInfo2::Reset
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IEnumDebugReferenceInfo2::Reset](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ienumdebugreferenceinfo2-reset)します。  
-  
 最初の要素を列挙値をリセットします。  
   
 ## <a name="syntax"></a>構文  

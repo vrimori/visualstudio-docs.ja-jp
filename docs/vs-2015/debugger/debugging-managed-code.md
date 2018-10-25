@@ -1,7 +1,7 @@
 ---
 title: マネージ コードのデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -26,18 +26,16 @@ caps.latest.revision: 37
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: efa999fabc0d27900900c6d1512cca3fde76043d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8ba07591cf4682ef40579f58b290f6b26bb4c111
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548207"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49211589"
 ---
 # <a name="debugging-managed-code"></a>マネージド コードのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Debugging Managed Code](https://docs.microsoft.com/visualstudio/debugger/debugging-managed-code)します。  
-  
 ここでは、マネージド アプリケーションに共通するデバッグの問題と手法について説明します。マネージド アプリケーションは、Visual Basic、C#、C++ など、共通言語ランタイムをターゲットにした言語で記述されたアプリケーションです。 ここでは、高度な手法について説明します。 詳細については、次を参照してください。 [、デバッガーを使用して](../debugger/debugger-basics.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -56,7 +54,7 @@ ms.locfileid: "47548207"
  [OnStart メソッドのデバッグ](../debugger/how-to-debug-the-onstart-method.md)  
  マネージド Windows サービスの `OnStart` メソッドのデバッグに使用できるコード例を紹介します。 Windows サービスの `OnStart` メソッドをデバッグするには、サービスをシミュレートする数行のコードを追加する必要があります。  
   
- [混合モードのデバッグ](../debugger/debugging-mixed-mode-applications.md)  
+ [Mixed-Mode Debugging](../debugger/debugging-mixed-mode-applications.md)  
  混合モード アプリケーションのデバッグについて説明します。 これは、ネイティブ コードとマネージド コードを組み合わせたアプリケーションです。  
   
  [エラー: システム上でカーネル デバッガーが有効になっているため、デバッグできません](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)  

@@ -16,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e55a214d2b35e26dcc1a3b381f74a7ccd021c864
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 3608399613063a0fa572fe4de12b77187f8b4b41
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672763"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811504"
 ---
 # <a name="how-to-resize-listobject-controls"></a>方法: ListObject コントロールをサイズ変更
   <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールのサイズは Microsoft Office Excel ブックにコントロールを追加するときに設定しますが、後でサイズを変更することもできます。 たとえば、2 列のリストを 3 列のリストに変更できます。  
@@ -32,15 +32,15 @@ ms.locfileid: "35672763"
   
  このトピックでは、次のタスクについて説明します。  
   
--   [デザイン時に ListObject コントロールのサイズ変更します。](#designtime)  
+- [デザイン時に ListObject コントロールのサイズ変更します。](#designtime)  
   
--   [ドキュメント レベル プロジェクト内で実行時の ListObject コントロールをサイズ変更します。](#runtimedoclevel)  
+- [ドキュメント レベル プロジェクト内で実行時の ListObject コントロールをサイズ変更します。](#runtimedoclevel)  
   
--   [VSTO アドイン プロジェクト内で実行時の ListObject コントロールをサイズ変更します。](#runtimeaddin)  
+- [VSTO アドイン プロジェクト内で実行時の ListObject コントロールをサイズ変更します。](#runtimeaddin)  
   
- 詳細については<xref:Microsoft.Office.Tools.Excel.ListObject>コントロールを参照してください[ListObject コントロール](../vsto/listobject-control.md)します。  
+  詳細については<xref:Microsoft.Office.Tools.Excel.ListObject>コントロールを参照してください[ListObject コントロール](../vsto/listobject-control.md)します。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[実行時にデータ バインド リスト オブジェクトに列を操作の追加の操作方法?](http://go.microsoft.com/fwlink/?LinkID=130318)します。  
+  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[実行時にデータ バインド リスト オブジェクトに列を操作の追加の操作方法?](http://go.microsoft.com/fwlink/?LinkID=130318)します。  
   
 ##  <a name="designtime"></a> デザイン時に ListObject コントロールのサイズを変更します。  
  リストのサイズを変更するには、サイズ変更ハンドルのいずれかをクリックしてドラッグでき、また **[リストのサイズ変更]** ダイアログ ボックスでそのサイズを再定義することもできます。  

@@ -1,7 +1,7 @@
 ---
 title: チュートリアル - Visual Studio での Flask の詳細情報、手順 1
 description: Visual Studio プロジェクトのコンテキストでの Flask の基礎に関するチュートリアルです。
-ms.date: 06/04/2018
+ms.date: 09/04/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f64c603d9902343d83b57d56ab891c7b41d021ae
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: 9865e8e6faaac7b0c3af28532223ea2d5c9f7c01
+ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586405"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029067"
 ---
 # <a name="tutorial-get-started-with-the-flask-web-framework-in-visual-studio"></a>チュートリアル: Visual Studio での Flask Web フレームワークの概要
 
@@ -36,7 +36,7 @@ Flask は、フォームの検証、データベースの抽象化、認証な�
 一連の手順に従って、3 つの独立したプロジェクトを含む 1 つの Visual Studio ソリューションを作成します。 Visual Studio に含まれる異なる Flask プロジェクト テンプレートを使用して、プロジェクトを作成します。 同じソリューション内にプロジェクトを保持することで、異なるファイル間を簡単に切り替えて比較できます。
 
 > [!Note]
-> [Flask クイック スタート](../ide/quickstart-python.md?context=visualstudio/python/default)とは異なり、このチュートリアルでは、Flask の機能についていっそう詳しく説明すると共に、独自のプロジェクトの広範な起点となるさまざまな Flask プロジェクト テンプレートの使用方法を示します。 たとえば、プロジェクトを作成すると、プロジェクト テンプレートによって Flask パッケージが自動的にインストールされます。クイック スタートで示されているように手動でパッケージをインストールする必要はありません。
+> [Flask クイック スタート](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json)とは異なり、このチュートリアルでは、Flask の機能についていっそう詳しく説明すると共に、独自のプロジェクトの広範な起点となるさまざまな Flask プロジェクト テンプレートの使用方法を示します。 たとえば、プロジェクトを作成すると、プロジェクト テンプレートによって Flask パッケージが自動的にインストールされます。クイック スタートで示されているように手動でパッケージをインストールする必要はありません。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -95,7 +95,7 @@ Flask プロジェクト テンプレートは Python Tools for Visual Studio �
 
     ![既存のリモート リポジトリにプッシュする [チーム エクスプローラー] ウィンドウ](media/flask/step01-push-to-github.png)
 
-    既存のリポジトリがない場合は、**[Publish to GitHub]\(GitHub に発行\)** オプションと **[Push to Visual Studio Team Services]\(Visual Studio Team Services にプッシュ\)** オプションを使用して、Visual Studio から直接作成できます。
+    既存のリポジトリがない場合は、**[Publish to GitHub]\(GitHub に発行\)** オプションと **[Azure DevOps へプッシュ]** オプションを使用して、Visual Studio から直接作成できます。
 
 1. このチュートリアルを進めるときに、Visual Studio のコントロールを定期的に使用して変更をコミットおよびプッシュする習慣を付けてください。 このチュートリアルでは、適切な時点で通知します。
 

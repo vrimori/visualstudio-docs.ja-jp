@@ -1,7 +1,7 @@
 ---
 title: 移動し、プログラム コードでレイヤー モデルの更新 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ caps.latest.revision: 22
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 3b4be16e9778ffe39e03e55254f6e38e64f3ad21
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 69286377a302fabc900fe4cf9384bb65d094a378
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539981"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49214936"
 ---
 # <a name="navigate-and-update-layer-models-in-program-code"></a>プログラム コードでレイヤー モデル内を移動し、レイヤー モデルを更新する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[への移動と更新プログラムは、プログラム コードでモデルをレイヤー](https://docs.microsoft.com/visualstudio/modeling/navigate-and-update-layer-models-in-program-code)します。  
-  
 このトピックでは、プログラム コードを使ってナビゲートおよび更新できるレイヤー モデルの要素と関係について説明します。 ユーザーの観点から見たレイヤー図に関する詳細については、次を参照してください。[レイヤー図: リファレンス](../modeling/layer-diagrams-reference.md)と[レイヤー図: ガイドライン](../modeling/layer-diagrams-guidelines.md)します。  
   
  このトピックで説明される <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer> モデルは、より一般的な <xref:Microsoft.VisualStudio.GraphModel> モデルの入門となります。 作成する場合、[メニュー コマンドまたはジェスチャ拡張](../modeling/add-commands-and-gestures-to-layer-diagrams.md)を使用して、`Layer`モデル。 作成する場合、[レイヤー検証拡張機能](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)を使用する方が簡単、`GraphModel`します。  

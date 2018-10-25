@@ -1,7 +1,7 @@
 ---
 title: 設定ストアの使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,25 +15,23 @@ ms.assetid: 447ec08a-eca5-40b8-89b0-f98fdf3d39a4
 caps.latest.revision: 29
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0b106604455814e8d8ed13a6c6e1eb3a2d8196b8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1e7d103415869cc30f2c940b632c73f611986af2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547379"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811363"
 ---
 # <a name="using-the-settings-store"></a>設定ストアの使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[設定ストアを使用して](https://docs.microsoft.com/visualstudio/extensibility/using-the-settings-store)します。  
-  
 設定ストアの 2 つの種類があります。  
   
--   構成設定は読み取り専用の Visual Studio および VSPackage の設定を示します。 Visual Studio では、このストアにすべての既知の .pkgdef ファイルから設定をマージします。  
+- 構成設定は読み取り専用の Visual Studio および VSPackage の設定を示します。 Visual Studio では、このストアにすべての既知の .pkgdef ファイルから設定をマージします。  
   
--   ユーザーの設定は、書き込み可能な設定のページに表示されるものなど、**オプション** ダイアログ ボックス、プロパティ ページ、およびその他の特定のダイアログ ボックス。 Visual Studio 拡張機能は、これらの少量のデータのローカル記憶域を使用できます。  
+- ユーザーの設定は、書き込み可能な設定のページに表示されるものなど、**オプション** ダイアログ ボックス、プロパティ ページ、およびその他の特定のダイアログ ボックス。 Visual Studio 拡張機能は、これらの少量のデータのローカル記憶域を使用できます。  
   
- このチュートリアルでは、構成設定ストアからデータを読み取る方法を示します。 参照してください[ユーザー設定ストアへの書き込み](../extensibility/writing-to-the-user-settings-store.md)ユーザー設定ストアに書き込む方法の詳細について。  
+  このチュートリアルでは、構成設定ストアからデータを読み取る方法を示します。 参照してください[ユーザー設定ストアへの書き込み](../extensibility/writing-to-the-user-settings-store.md)ユーザー設定ストアに書き込む方法の詳細について。  
   
 ## <a name="creating-the-example-project"></a>サンプル プロジェクトを作成します。  
  このセクションでは、デモについては、メニュー コマンドを使用して単純な拡張機能プロジェクトを作成する方法を示します。  
@@ -45,44 +43,44 @@ ms.locfileid: "47547379"
 ## <a name="using-the-configuration-settings-store"></a>構成設定ストアの使用  
  このセクションでは、検出し、構成設定を表示する方法を示します。  
   
-1.  次の追加、SettingsStorageCommand.cs ファイルでステートメントを使用します。  
+1. 次の追加、SettingsStorageCommand.cs ファイルでステートメントを使用します。  
   
-    ```  
-    using System.Collections.Generic;  
-    using Microsoft.VisualStudio.Settings;  
-    using Microsoft.VisualStudio.Shell.Settings;  
-    using System.Windows.Forms;  
-    ```  
+   ```  
+   using System.Collections.Generic;  
+   using Microsoft.VisualStudio.Settings;  
+   using Microsoft.VisualStudio.Shell.Settings;  
+   using System.Windows.Forms;  
+   ```  
   
-2.  `MenuItemCallback`構成設定のストアを取得する次の行を追加、削除、メソッドの本体。  
+2. `MenuItemCallback`構成設定のストアを取得する次の行を追加、削除、メソッドの本体。  
   
-    ```  
-    SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider);  
-    SettingsStore configurationSettingsStore = settingsManager.GetReadOnlySettingsStore(SettingsScope.Configuration);  
-    ```  
+   ```  
+   SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider);  
+   SettingsStore configurationSettingsStore = settingsManager.GetReadOnlySettingsStore(SettingsScope.Configuration);  
+   ```  
   
-     <xref:Microsoft.VisualStudio.Shell.Settings.ShellSettingsManager>マネージ ヘルパー クラスを経由では、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager>サービス。  
+    <xref:Microsoft.VisualStudio.Shell.Settings.ShellSettingsManager>マネージ ヘルパー クラスを経由では、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager>サービス。  
   
-3.  Windows Phone ツールがインストールされているかどうかを調べるようになりました。 コードは、次のようになります。  
+3. Windows Phone ツールがインストールされているかどうかを調べるようになりました。 コードは、次のようになります。  
   
-    ```  
-    private void MenuItemCallback(object sender, EventArgs e)  
-    {  
-        SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider);  
-        SettingsStore configurationSettingsStore = settingsManager.GetReadOnlySettingsStore(SettingsScope.Configuration);  
-        bool arePhoneToolsInstalled = configurationSettingsStore.CollectionExists(@"InstalledProducts\Microsoft Windows Phone Developer Tools");  
-        string message = "Microsoft Windows Phone Developer Tools: " + arePhoneToolsInstalled;  
-        MessageBox.Show(message);  
-    }  
-    ```  
+   ```  
+   private void MenuItemCallback(object sender, EventArgs e)  
+   {  
+       SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider);  
+       SettingsStore configurationSettingsStore = settingsManager.GetReadOnlySettingsStore(SettingsScope.Configuration);  
+       bool arePhoneToolsInstalled = configurationSettingsStore.CollectionExists(@"InstalledProducts\Microsoft Windows Phone Developer Tools");  
+       string message = "Microsoft Windows Phone Developer Tools: " + arePhoneToolsInstalled;  
+       MessageBox.Show(message);  
+   }  
+   ```  
   
-4.  コードをテストします。 プロジェクトをビルドし、デバッグを開始します。  
+4. コードをテストします。 プロジェクトをビルドし、デバッグを開始します。  
   
-5.  実験用インスタンスでは、上、**ツール** メニューのをクリックして**呼び出す SettingsStoreCommand**します。  
+5. 実験用インスタンスでは、上、**ツール** メニューのをクリックして**呼び出す SettingsStoreCommand**します。  
   
-     メッセージ ボックスというを表示する必要があります**Microsoft Windows Phone Developer Tools:** 続けて**True**または**False**します。  
+    メッセージ ボックスというを表示する必要があります**Microsoft Windows Phone Developer Tools:** 続けて**True**または**False**します。  
   
- Visual Studio では、システム レジストリに設定ストアを保持します。  
+   Visual Studio では、システム レジストリに設定ストアを保持します。  
   
 #### <a name="to-use-a-registry-editor-to-verify-configuration-settings"></a>レジストリ エディターを使用して、構成設定を確認するには  
   

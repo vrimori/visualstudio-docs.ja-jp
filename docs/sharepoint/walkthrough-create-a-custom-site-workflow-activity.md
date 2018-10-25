@@ -21,29 +21,29 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b366db32a4caadf0f454f893d8f98e2d288f2390
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2adb6dd8788027d89a743518adee4425e424ce60
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42627358"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894171"
 ---
 # <a name="walkthrough-create-a-custom-site-workflow-activity"></a>チュートリアル: サイトのカスタム ワークフロー アクティビティを作成します。
   このチュートリアルを使用して、サイト レベルのワークフローのカスタム アクティビティを作成する方法について説明[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。 (サイト レベルのワークフローは、サイトの一覧だけでなく、サイト全体に適用)。カスタム アクティビティは、バックアップお知らせリストを作成し、そこにお知らせリストの内容をコピーします。  
   
  このチュートリアルでは、次のタスクについて説明します。  
   
--   サイト レベルのワークフローを作成します。  
+- サイト レベルのワークフローを作成します。  
   
--   カスタム ワークフロー アクティビティを作成します。  
+- カスタム ワークフロー アクティビティを作成します。  
   
--   作成して、SharePoint リストを削除しています。  
+- 作成して、SharePoint リストを削除しています。  
   
--   別の 1 つのリストから項目をコピーします。  
+- 別の 1 つのリストから項目をコピーします。  
   
--   クイック起動バーに一覧を表示しています。  
+- クイック起動バーに一覧を表示しています。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  

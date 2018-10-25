@@ -1,7 +1,7 @@
 ---
 title: '1041: ObsoleteAttribute メッセージを指定 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 298f6d3cbfc8b71443fe9e8e9733e5729963cea8
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: f67bbd93816da3bcae389493b74623f0cf4776c0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47592359"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914724"
 ---
 # <a name="ca1041-provide-obsoleteattribute-message"></a>CA1041: ObsoleteAttribute メッセージを指定します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA1041: 提供 ObsoleteAttribute メッセージ](https://docs.microsoft.com/visualstudio/code-quality/ca1041-provide-obsoleteattribute-message)します。
 
 |||
 |-|-|

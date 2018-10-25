@@ -1,7 +1,7 @@
 ---
 title: IDebugBoundBreakpoint2::GetState |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: a40a8382-295e-4916-aae6-ffe3a9cd3f2d
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1cf794faf53de74b27425bf7d81b59d3059ec279
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ab94819a9b9c72dd2e9b5350cd98f3a66f567c33
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536091"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49850237"
 ---
 # <a name="idebugboundbreakpoint2getstate"></a>IDebugBoundBreakpoint2::GetState
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugBoundBreakpoint2::GetState](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugboundbreakpoint2-getstate)します。  
-  
 このバインドされたブレークポイントの状態を取得します。  
   
 ## <a name="syntax"></a>構文  

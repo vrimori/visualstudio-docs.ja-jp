@@ -10,18 +10,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 35699d765a8d01e212fe02257da2aa83e245ecd4
-ms.sourcegitcommit: 522ba712c0d625e51352506146b0556414681964
+ms.openlocfilehash: 88d7dd7f6fe09acd77ee37ca473fbd5290be6ee1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37890189"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861112"
 ---
 # <a name="artboard-modifier-keys-in-blend"></a>Blend のアートボードの修飾キー
 キーボード ショートカットの中には、対応するメニュー項目がないものがあります。このようなショートカットは、[!INCLUDE[blend_subs](../debugger/includes/blend_subs_md.md)] のユーザー インターフェイスに表示されません。 次の表に、オブジェクトのサイズを変更する場合などに、行う操作を変更するショートカットを示します。
 
 |目的|方法|
-|-----------------------|-------------|
+| - |-------------|
 |別のツールが選択された状態のまま、一時的に **[選択内容]** ツールを選択する (**[ツール]** パネルで **[選択内容]** と別のツールを切り替えるためにクリックする回数が減ります)|**Ctrl** キーを押す|
 |**[選択内容]** ツールを選択した状態で、選択したオブジェクトを少しずつ移動する|矢印キーを押す|
 |アートボードの位置変更|**スペース バー**押しながらアートボードをドラッグする|

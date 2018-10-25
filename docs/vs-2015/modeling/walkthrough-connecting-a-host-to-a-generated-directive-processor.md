@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: 生成済みディレクティブ プロセッサをホストに接続する |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ caps.latest.revision: 49
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 451dcf21e8965de9ea350577c819daefb150a5d1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 329cb0a6008824b23d7188c0ea6c4cf5e524476d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535181"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49817874"
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>チュートリアル: 生成済みディレクティブ プロセッサへのホストの接続
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: 生成されたディレクティブ プロセッサにホストに接続する](https://docs.microsoft.com/visualstudio/modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor)します。  
-  
 テキスト テンプレートを処理する、独自のホストを記述することができます。 基本的なカスタム ホストの説明については、[チュートリアル: カスタム テキスト テンプレート ホストの作成](../modeling/walkthrough-creating-a-custom-text-template-host.md)です。 複数の出力ファイルを生成するなどの関数を追加するには、そのホストを拡張できます。  
   
  このチュートリアルでは、テキスト テンプレート ディレクティブ プロセッサの呼び出しをサポートするように、そのカスタム ホストを展開します。 ドメイン固有言語を定義するときに生成、*ディレクティブ プロセッサ*ドメイン モデルです。 ディレクティブ プロセッサによって、ユーザー アセンブリを記述し、テンプレートのディレクティブをインポートする必要が少なくなり、モデルにアクセスするためのテンプレートを作成するために簡単にできます。  
@@ -58,34 +56,34 @@ ms.locfileid: "47535181"
   
 #### <a name="to-use-domain-specific-language-tools-to-generate-a-directive-processor-that-is-based-on-a-domain-model"></a>ドメイン固有言語ツールを使用して、ドメイン モデルに基づいているディレクティブ プロセッサを生成するには  
   
-1.  次の特性を持つドメイン固有言語ソリューションを作成します。  
+1. 次の特性を持つドメイン固有言語ソリューションを作成します。  
   
-    -   名前: DSLMinimalTest  
+   - 名前: DSLMinimalTest  
   
-    -   ソリューション テンプレート: 最小言語  
+   - ソリューション テンプレート: 最小言語  
   
-    -   ファイル拡張子: min  
+   - ファイル拡張子: min  
   
-    -   会社名: Fabrikam  
+   - 会社名: Fabrikam  
   
      ドメイン固有言語ソリューションを作成する方法の詳細については、次を参照してください。[方法: ドメイン固有言語ソリューションを作成](../modeling/how-to-create-a-domain-specific-language-solution.md)です。  
   
-2.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
+2. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
-    > [!IMPORTANT]
-    >  この手順では、ディレクティブ プロセッサを生成し、レジストリでは、キーを追加します。  
+   > [!IMPORTANT]
+   >  この手順では、ディレクティブ プロセッサを生成し、レジストリでは、キーを追加します。  
   
-3.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
+3. **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
-     2 番目のインスタンスの[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]が開きます。  
+    2 番目のインスタンスの[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]が開きます。  
   
-4.  実験用のビルドで**ソリューション エクスプ ローラー**、ファイルをダブルクリックして**sample.min**します。  
+4. 実験用のビルドで**ソリューション エクスプ ローラー**、ファイルをダブルクリックして**sample.min**します。  
   
-     ファイルがデザイナーで開きます。 モデルが 2 つの要素、ExampleElement1 と ExampleElement2、およびそれらの間のリンクを持つことに注意してください。  
+    ファイルがデザイナーで開きます。 モデルが 2 つの要素、ExampleElement1 と ExampleElement2、およびそれらの間のリンクを持つことに注意してください。  
   
-5.  2 つ目のインスタンスを閉じて[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。  
+5. 2 つ目のインスタンスを閉じて[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。  
   
-6.  ソリューションを保存し、ドメイン固有言語デザイナーを閉じます。  
+6. ソリューションを保存し、ドメイン固有言語デザイナーを閉じます。  
   
 ## <a name="connecting-a-custom-text-template-host-to-a-directive-processor"></a>ディレクティブ プロセッサへのカスタム テキスト テンプレート ホストの接続  
  作成したカスタム テキスト テンプレート ホスト、ディレクティブ プロセッサを接続するディレクティブ プロセッサを生成した後[チュートリアル: カスタム テキスト テンプレート ホストの作成](../modeling/walkthrough-creating-a-custom-text-template-host.md)です。  

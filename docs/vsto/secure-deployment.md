@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f0ed351bf15ec257f79e226958b38e46ac769d0e
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 81d6aefcf98b43524e7ffa1e0965e6a5df9189fb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671861"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49865727"
 ---
 # <a name="secure-deployment"></a>デプロイのセキュリティ保護します。
   Office ソリューションを作成するときに実行するプロジェクトでコードを許可する、開発用コンピューターが自動的に更新されます。 ただし、ソリューションを配置するときに、ソリューションに証明書で署名するかを使用して、信頼の決定の基になる証拠を提供する必要があります、[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]信頼プロンプト キー。 詳細については、次を参照してください。 [Office ソリューションに信頼を付与](../vsto/granting-trust-to-office-solutions.md)します。  
@@ -35,17 +35,17 @@ ms.locfileid: "35671861"
 ## <a name="prevent-office-solutions-from-running-code"></a>Office ソリューションがコードを実行するを防ぐ  
  管理者は、すべての Office ソリューションがコンピューターで実行されていることを防ぐために、レジストリを使用できます。 マネージ コード拡張機能を Office ソリューションが開かれた場合、Visual Studio Tools for Office ランタイム チェック エントリかどうか、名前の`Disabled`が存在するコンピューターで次のレジストリ キーのいずれかの。  
   
--   **HKEY_CURRENT_USER\Software\Microsoft\VSTO**  
+- **HKEY_CURRENT_USER\Software\Microsoft\VSTO**  
   
--   **この**  
+- **この**  
   
- Office ソリューションのコードの実行を防ぐために作成、`Disabled`一方または両方のこれらのレジストリ キーの下のエントリの値を次のデータ型のいずれかを指定して`Disabled`:  
+  Office ソリューションのコードの実行を防ぐために作成、`Disabled`一方または両方のこれらのレジストリ キーの下のエントリの値を次のデータ型のいずれかを指定して`Disabled`:  
   
--   REG_SZ または REG_EXPAND_SZ「0」(ゼロ) 以外の任意の文字列に設定されています。  
+- REG_SZ または REG_EXPAND_SZ「0」(ゼロ) 以外の任意の文字列に設定されています。  
   
--   0 (ゼロ) 以外の値に設定されている REG_DWORD です。  
+- 0 (ゼロ) 以外の値に設定されている REG_DWORD です。  
   
- コードを実行する Office ソリューションを有効にするには、両方を設定、 `Disabled` 0 (ゼロ) へのエントリまたはレジストリ エントリを削除します。  
+  コードを実行する Office ソリューションを有効にするには、両方を設定、 `Disabled` 0 (ゼロ) へのエントリまたはレジストリ エントリを削除します。  
   
 ## <a name="see-also"></a>関連項目  
  [Office ソリューションをデプロイします。](../vsto/deploying-an-office-solution.md)   

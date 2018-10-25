@@ -1,7 +1,7 @@
 ---
 title: '方法: XSD スキーマに基づいて XML ドキュメントの作成 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,40 +14,38 @@ caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7ce870506097c820d5a6a8e981ffd63d64257780
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bbecacc0729c936489c05d3bb59260341a08d314
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534769"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49884226"
 ---
 # <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>方法: XSD スキーマに基づいて XML ドキュメントを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: XSD スキーマで、XML ドキュメントのベースを作成](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema)です。  
-  
   
 **サンプル XML の生成**機能には、XML スキーマ (XSD) ファイルに基づくサンプル XML ファイルが生成されます。  
   
  このオプションは、次のようなシナリオで使用できます。  
   
--   スキーマのさまざまな構造の使用法を理解する。  
+- スキーマのさまざまな構造の使用法を理解する。  
   
--   スキーマが意図したとおりに機能しているかどうかを確認する。  
+- スキーマが意図したとおりに機能しているかどうかを確認する。  
   
- **サンプル XML の生成**機能は、グローバル要素でのみ使用し、有効な XML スキーマ セットが必要です。  
+  **サンプル XML の生成**機能は、グローバル要素でのみ使用し、有効な XML スキーマ セットが必要です。  
   
- この機能では、通常は有効な XML ドキュメントが生成されます。 ただし、スキーマに次のものが 1 つ以上含まれていると、有効なサンプルが生成されない可能性があります。  
+  この機能では、通常は有効な XML ドキュメントが生成されます。 ただし、スキーマに次のものが 1 つ以上含まれていると、有効なサンプルが生成されない可能性があります。  
   
--   `xs:key`、`xs:keyref`、および `xs:unique` の ID 制約  
+- `xs:key`、`xs:keyref`、および `xs:unique` の ID 制約  
   
--   `xs:pattern` ファセット  
+- `xs:pattern` ファセット  
   
--   `xs:QName` 型の列挙  
+- `xs:QName` 型の列挙  
   
--   `xs:ENTITY` 型、`xs:ENTITIES` 型、および `xs:NOTATION` 型  
+- `xs:ENTITY` 型、`xs:ENTITIES` 型、および `xs:NOTATION` 型  
   
- また、`xs:base64Binary` の内容は、その型のスキーマで列挙が発生する場合にのみ生成されることに注意してください。  
+  また、`xs:base64Binary` の内容は、その型のスキーマで列挙が発生する場合にのみ生成されることに注意してください。  
   
 ### <a name="to-generate-an-xml-instance-document-based-on-the-xsd-file"></a>XSD ファイルに基づいて XML インスタンス ドキュメントを生成するには  
   

@@ -1,7 +1,7 @@
 ---
 title: ポートの取得 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 745c2337-cfff-4d02-b49c-3ca7c4945c5e
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 719da05cf3d408322480ed5a7edb1f20dd12fa89
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 32c893e3bbf0e25d67285940fd232f8ff5bda7b2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536781"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855470"
 ---
 # <a name="getting-a-port"></a>ポートの取得
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ポートの取得](https://docs.microsoft.com/visualstudio/extensibility/debugger/getting-a-port)します。  
-  
 ポートは、プロセスが実行されているマシンへの接続を表します。 そのマシンは、ローカル コンピューターまたはリモート コンピューターの可能性があります (これ場合によって実行される可能性が非 Windows ベースのオペレーティング システムは、参照してください[ポート](../../extensibility/debugger/ports.md)詳細については)。  
   
  ポートがによって表される、 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)インターフェイス。 ポートが接続されているコンピューターで実行されているプロセスに関する情報の取得に使用されます。  

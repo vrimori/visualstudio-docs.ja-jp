@@ -1,7 +1,7 @@
 ---
 title: チュートリアル - Visual Studio での Flask の詳細情報、手順 5
 description: Visual Studio プロジェクトのコンテキストにおける Flask の基本のチュートリアルです。具体的には、Polls Flask Web プロジェクトと Polls Flask/Jade Web プロジェクト テンプレートの機能について取り上げます。
-ms.date: 05/25/2018
+ms.date: 09/04/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 016305c47da13c879e2895660915121cd93f33e3
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 418ea3661f236866bbadcf278f288632c5e49435
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637618"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280095"
 ---
 # <a name="step-5-use-the-polls-flask-web-project-template"></a>手順 5: ポーリング Flask Web プロジェクト テンプレートを使用する
 
@@ -356,7 +356,7 @@ Visual Studio で "Blank Flask Web プロジェクト"、"Flask[/Jade] Web プ�
 
 - PostgreSQL、MySQL、SQL Server など (これらはいずれも Azure でホストできます) など、別の運用レベルのデータ ストアを使用するリポジトリの実装を追加します。 テーブルや BLOB のような Azure ストレージ サービスと Cosmos DB を使用する場合は、[Azure SDK for Python](azure-sdk-for-python.md) も使用できます。
 
-- Visual Studio Team Services (VSTS) などのサービスに対して、継続的インテグレーション/継続的配置パイプラインを設定します。 (VSTS、GitHub、または他の場所で) ソース コード管理を使用するだけでなく、リリースの前提条件として VSTS で単体テストを自動的に実行することができます。また、運用環境に展開する前に、追加テストのためにステージング サーバーに展開するパイプラインを構成することもできます。 さらに、VSTS は App Insights などの監視ソリューションと統合されているので、アジャイル計画ツールを使用してサイクル全体に対応することができます。 詳細については次を参照してください:
+- Azure Pipelines などのサービスに対して、継続的インテグレーション/継続的配置パイプラインを設定します。 (Azure Repos、GitHub、または他の場所で) ソース コード管理を使用するだけでなく、リリースの前提条件として Azure Test Plans で単体テストを自動的に実行することができます。また、運用環境に展開する前に、追加テストのためにステージング サーバーに展開するパイプラインを構成することもできます。 さらに、Azure DevOps Services は App Insights などの監視ソリューションと統合されているので、アジャイル計画ツールを使用してサイクル全体を閉じることができます。 詳細については次を参照してください:
 
-  - [Azure DevOps プロジェクトを使用して Python 用の CI/CD パイプラインを作成する](/azure/devops-project/azure-devops-project-python?view=vsts)
+  - [Azure DevOps Projects を使用して Python 用の CI/CD パイプラインを作成する](/azure/devops-project/azure-devops-project-python?view=vsts)
   - [Visual Studio Team Services を使用した Azure での Python 開発 (ビデオ、11 分 21 秒)](https://azure.microsoft.com/resources/videos/connect-2017-python-development-in-azure-with-visual-studio-team-services/)

@@ -18,14 +18,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c218dd9a7ee3266de2cf9e07933ed69aa23e73e7
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 722277e65a30d8c40cc245123120650108ebc560
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34749883"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831459"
 ---
 # <a name="da0013-high-usage-of-stringsplit-or-stringsubstring"></a>DA0013: String.Split/String.Substring が頻繁に使用されています
+
 |||  
 |-|-|  
 |規則 ID|DA0013|  
@@ -33,14 +34,14 @@ ms.locfileid: "34749883"
 |プロファイル方法|サンプリング|  
 |メッセージ|String.Split 関数と String.Substring 関数の使用回数を少なくすることを検討してください。|  
 |規則の種類|警告|  
-  
+
 ## <a name="cause"></a>原因  
  System.String.Split メソッドまたは System.String.Substring メソッドの呼び出しがプロファイル データの大きな割合を占めています。 文字列内にサブ文字列が存在することをテストする場合は、System.String.IndexOf または System.String.IndexOfAny を使用することを検討してください。  
-  
+
 ## <a name="rule-description"></a>規則の説明  
  Split メソッドは、String オブジェクトを操作し、元の文字列のサブ文字列を保持する文字列の新しい配列を返します。 関数は、返された配列オブジェクトにメモリを割り当て、検出された配列要素ごとに新しい String オブジェクトを割り当てます。 同様に、Substr メソッドは String オブジェクトを操作し、要求されたサブ文字列と等しい新しい文字列を返します。  
-  
+
  メモリの割り当ての管理がアプリケーションで重要な場合、String.Split メソッドと String.Substr メソッドとは別のものを使用することを検討してください。 たとえば、IndexOf メソッドまたは IndexOfAny メソッドを使用すると、String クラスの新しいインスタンスを作成することなく、文字列内の特定のサブ文字列を見つけることができます。  
-  
+
 ## <a name="how-to-investigate-a-warning"></a>警告の調査方法  
  **[エラー一覧]** ウィンドウに表示されたメッセージをダブルクリックして、サンプリング プロファイル データの[関数の詳細ビュー](../profiling/function-details-view.md)に移動します。 呼び出し関数を調べ、System.String.Split メソッドまたは System.String.Substr メソッドを最も頻繁に使用するプログラムのセクションを見つけます。 可能な場合は、IndexOf メソッドまたは IndexOfAny メソッドを使用して、String クラスの新しいインスタンスを作成することなく、文字列内の特定のサブ文字列を見つけます。

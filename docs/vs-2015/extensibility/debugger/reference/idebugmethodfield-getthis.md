@@ -1,7 +1,7 @@
 ---
 title: IDebugMethodField::GetThis |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: cc235bea-e909-4d8c-ab54-936736c803fc
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3f037798eb29763aea54afc86555171e009d589d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7d942fab313e54497919de03081e7a47aff69ac7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537770"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888804"
 ---
 # <a name="idebugmethodfieldgetthis"></a>IDebugMethodField::GetThis
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugMethodField::GetThis](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugmethodfield-getthis)します。  
-  
 取得、 `this` (`Me`で[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) メソッドを含むオブジェクトのポインター。  
   
 ## <a name="syntax"></a>構文  

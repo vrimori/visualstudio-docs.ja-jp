@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: JavaScript を使用して、SDK の作成 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,25 +13,23 @@ ms.assetid: a8c89d5d-5b78-4435-817f-c5f25ca6d715
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 091bd46c2fb753350fe24837ce2078ed26761b65
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c9b495ed1bc5ada2adaa26e8382e23d9071eeab3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535687"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49931273"
 ---
 # <a name="walkthrough-creating-an-sdk-using-javascript"></a>チュートリアル: JavaScript を使用して SDK を作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: JavaScript を使用して SDK を作成する](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-creating-an-sdk-using-javascript)します。  
-  
 このチュートリアルでは、JavaScript を使用して単純な算術 SDK と Visual Studio Extension (VSIX) を作成する方法について説明します。  このチュートリアルは、これらの部分に分かれています。  
   
--   [SimpleMathVSIX 拡張機能 SDK のプロジェクトを作成するには](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSimpleMathVSIX)  
+- [SimpleMathVSIX 拡張機能 SDK のプロジェクトを作成するには](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSimpleMathVSIX)  
   
--   [SDK を使用するサンプル アプリを作成するには](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSampleApp)  
+- [SDK を使用するサンプル アプリを作成するには](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSampleApp)  
   
- の JavaScript 用クラス ライブラリ プロジェクトの種類はありません。 このチュートリアルでは、VSIX プロジェクトに直接サンプル arithmetic.js ファイルが作成されます。 実際を最初にビルドしてテストする JavaScript と CSS ファイルを Windows ストア アプリとしてお勧め — などを使用して、**空のアプリ**テンプレート、VSIX プロジェクトに配置する前にします。  
+  の JavaScript 用クラス ライブラリ プロジェクトの種類はありません。 このチュートリアルでは、VSIX プロジェクトに直接サンプル arithmetic.js ファイルが作成されます。 実際を最初にビルドしてテストする JavaScript と CSS ファイルを Windows ストア アプリとしてお勧め — などを使用して、**空のアプリ**テンプレート、VSIX プロジェクトに配置する前にします。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)します。  

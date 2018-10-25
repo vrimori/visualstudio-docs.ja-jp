@@ -1,7 +1,7 @@
 ---
 title: ': Ca 2235 すべてのシリアル化できないフィールド |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 025ee336052bdad010b55e1ba804b2bd37c7e0d7
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: dcd0c1ddedd57208101df05c0525a35e11b67822
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589801"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49828924"
 ---
 # <a name="ca2235-mark-all-non-serializable-fields"></a>CA2235: すべてのシリアル化不可能なフィールドを設定します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA2235: すべてのシリアル化不可能なフィールドをマーク](https://docs.microsoft.com/visualstudio/code-quality/ca2235-mark-all-non-serializable-fields)します。
 
 |||
 |-|-|

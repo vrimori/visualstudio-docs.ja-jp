@@ -1,7 +1,7 @@
 ---
 title: サービスの登録 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: c4ebac40-0374-4dda-948e-06fdda0e9c81
 caps.latest.revision: 8
 manager: douge
-ms.openlocfilehash: f56c73bbb09c659a76083e511d79d487402477ac
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e5d8aa9e6652aa41e59d160c5cf25aacd3390572
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539996"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49219688"
 ---
 # <a name="registering-services"></a>サービスの登録
-オンデマンド読み込みをサポートするサービス プロバイダーのグローバル サービスを登録する必要があります[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。  
+オンデマンド読み込みをサポートするには、サービス プロバイダーはグローバル サービスを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] に登録する必要があります。  
   
- 開発中は、マネージ サービス プロバイダーの登録サービスとサービスのオーバーライド、パッケージのソース コードに属性を追加しでパッケージを構築し、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE。 これにより、生成されたアセンブリで RegPkg.exe ユーティリティが実行され、パッケージの登録と配置の準備が行われます。 詳細については、次を参照してください。[方法: サービス登録](../misc/how-to-register-a-service.md)します。  
+ 開発時にマネージド サービス プロバイダーはパッケージのソース コードに属性を追加し、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE でパッケージを構築して、サービスとサービスのオーバーライドを登録します。 これにより、生成されたアセンブリで RegPkg.exe ユーティリティが実行され、パッケージの登録と配置の準備が行われます。 詳細については、次を参照してください。[方法: サービス登録](../misc/how-to-register-a-service.md)します。  
   
- 非管理対象サービス プロバイダーに提供するサービスを登録する必要があります[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]サービスでセクションまたはサービスは、システム レジストリのセクションをオーバーライドします。 次の .reg ファイル フラグメントは、SVsTextManager サービスを登録する方法を示しています。  
+ アンマネージ サービス プロバイダーは、提供するサービスをシステム レジストリのサービス セクションまたはサービス オーバーライド セクションで [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] に登録する必要があります。 次の .reg ファイル フラグメントは、SVsTextManager サービスを登録する方法を示しています。  
   
 ```  
 [HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\<version number>\Services\{F5E7E71D-1401-11d1-883B-0000F87579D2}]  
@@ -34,7 +34,7 @@ ms.locfileid: "47539996"
 "Name"="SVsTextManager"  
 ```  
   
- 上記の例では、バージョン番号は、バージョンの[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]7.1 や 8.0 では、キー {f5e7e71d-1401-11d1-883b-0000f87579d2} は、サービス、SVsTextManager および既定値の {のサービス識別子 (SID) など、F5E7E720-1401-11d1-883B-0000F87579D2} は、テキスト マネージャー サービスを提供する VSPackage のパッケージ GUID です。  
+ 上記の例で、バージョン番号は [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]のバージョン (7.1 や 8.0 など)、キー {F5E7E71D-1401-11d1-883B-0000F87579D2} は SVsTextManager サービスのサービス識別子 (SID)、既定値 {F5E7E720-1401-11d1-883B-0000F87579D2} はサービスを提供するテキスト マネージャー VSPackage のパッケージ GUID です。  
   
 ## <a name="remote-services-and-background-threads"></a>リモート サービスとバックグラウンド スレッド  
  提供するサービスは、リモートで、またはバックグラウンド スレッドに対して自動的に利用可能にはなりません。 使用できるようにするには、タイプ ライブラリを構築し、登録する必要があります。  

@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: af31d6bce4f1c44fbe759423ddaeec9537054688
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 455c05ae0d8645040d3f9eac68d20f57138df5cb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35255994"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49830770"
 ---
 # <a name="performance-report-overview"></a>パフォーマンス レポートの概要
 Visual Studio Team System Development Edition の統合開発環境 (IDE) の **[パフォーマンス レポート]** ウィンドウでパフォーマンス セッションのプロファイリング データを表示できます。 プロファイリング データは .vsp ファイルと .vsps ファイルに保存されます。 レポート ビュー ウィンドウでは、アプリケーションのパフォーマンス上の問題を表示して分析できます。  
@@ -42,13 +42,13 @@ Visual Studio Team System Development Edition の統合開発環境 (IDE) の **
 ### <a name="callercallee-view"></a>[呼び出し元/呼び出し先] ビュー  
  [呼び出し元/呼び出し先] ビューには個々の関数のコール ツリーが表示されます。 このビューは 3 つの部分に分かれています。  
   
--   対象の関数がビューの中央部に表示されます。  
+- 対象の関数がビューの中央部に表示されます。  
   
--   関数を呼び出した関数 (呼び出し元) が、対象の関数の上に表示されます。  
+- 関数を呼び出した関数 (呼び出し元) が、対象の関数の上に表示されます。  
   
--   対象の関数によって呼び出された関数 (呼び出し先) が、対象の関数の下に表示されます。  
+- 対象の関数によって呼び出された関数 (呼び出し先) が、対象の関数の下に表示されます。  
   
- 呼び出し元の一覧や呼び出し先の一覧にある関数をダブルクリックし、別の関数を選択できます。 詳細については、「[[呼び出し元/呼び出し先] ビュー](../profiling/caller-callee-view.md)」を参照してください。  
+  呼び出し元の一覧や呼び出し先の一覧にある関数をダブルクリックし、別の関数を選択できます。 詳細については、「[[呼び出し元/呼び出し先] ビュー](../profiling/caller-callee-view.md)」を参照してください。  
   
 ### <a name="call-tree-view"></a>コール ツリー ビュー  
  [コール ツリー] ビューには、プロファイリングされるアプリケーションで走査された関数の実行パスが表示されます。 ツリーのルートは、アプリケーションまたはコンポーネントへのエントリ ポイントです。 各関数ノードは、呼び出したすべての関数と、その関数呼び出しに関するパフォーマンス データを表示します。  

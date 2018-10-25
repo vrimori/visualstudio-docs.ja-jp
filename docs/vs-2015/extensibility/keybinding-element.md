@@ -1,7 +1,7 @@
 ---
 title: KeyBinding 要素 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: e55a1098-15df-42a9-9f87-e3a99cf437dd
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7dd7f56a91661850a3154ad09376340696513646
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 144d9afa3b29cd5ecebd2e3c1d604b88ba0a7029
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549110"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829159"
 ---
 # <a name="keybinding-element"></a>KeyBinding 要素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[KeyBinding 要素](https://docs.microsoft.com/visualstudio/extensibility/keybinding-element)します。  
-  
 KeyBinding 要素には、コマンドのキーボード ショートカットを指定します。  
   
  コマンドには、1 台または 2 の両方のキー バインドを使用して、それらに関連付けられていることができます。 1 つのキー バインドの例は、CTRL + S を**保存**コマンド。 2 つのキー バインドでは、コマンドをトリガーする 2 つの連続するキーの組み合わせが必要です。 2 つのキー バインドの例は、CTRL + K、ブックマークを設定するには、CTRL + K です。  

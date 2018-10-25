@@ -1,7 +1,7 @@
 ---
 title: プロパティ関数 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6cde6aaaef0f5db8c346194eb0b757b15726edef
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0194de0a9f14186dc02b17564c77b1b2bc7441be
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540329"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920186"
 ---
 # <a name="property-functions"></a>プロパティ関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロパティ関数](https://docs.microsoft.com/visualstudio/msbuild/property-functions)します。  
-  
   
 .NET Framework のバージョン 4 と 4.5 では、プロパティ関数を使用して MSBuild スクリプトを評価できます。 プロパティ関数は、プロパティが表示される場所ならどこでも使用できます。 タスクとは異なり、プロパティ関数はターゲットの外側でも使用でき、ターゲットが実行される前に評価されます。  
   
@@ -92,87 +90,87 @@ ms.locfileid: "47540329"
   
  静的プロパティ関数では、次のシステム クラスの任意の静的メソッドやプロパティを使用できます。  
   
--   System.Byte  
+- System.Byte  
   
--   System.Char  
+- System.Char  
   
--   System.Convert  
+- System.Convert  
   
--   System.DateTime  
+- System.DateTime  
   
--   System.Decimal  
+- System.Decimal  
   
--   System.Double  
+- System.Double  
   
--   System.Enum  
+- System.Enum  
   
--   System.Guid  
+- System.Guid  
   
--   System.Int16  
+- System.Int16  
   
--   System.Int32  
+- System.Int32  
   
--   System.Int64  
+- System.Int64  
   
--   System.IO.Path  
+- System.IO.Path  
   
--   System.Math  
+- System.Math  
   
--   System.UInt16  
+- System.UInt16  
   
--   System.UInt32  
+- System.UInt32  
   
--   System.UInt64  
+- System.UInt64  
   
--   System.SByte  
+- System.SByte  
   
--   System.Single  
+- System.Single  
   
--   System.String  
+- System.String  
   
--   System.StringComparer  
+- System.StringComparer  
   
--   System.TimeSpan  
+- System.TimeSpan  
   
--   System.Text.RegularExpressions.Regex  
+- System.Text.RegularExpressions.Regex  
   
--   Microsoft.Build.Utilities.ToolLocationHelper  
+- Microsoft.Build.Utilities.ToolLocationHelper  
   
- さらに、次の静的メソッドおよびプロパティを使用できます。  
+  さらに、次の静的メソッドおよびプロパティを使用できます。  
   
--   System.Environment::CommandLine  
+- System.Environment::CommandLine  
   
--   System.Environment::ExpandEnvironmentVariables  
+- System.Environment::ExpandEnvironmentVariables  
   
--   System.Environment::GetEnvironmentVariable  
+- System.Environment::GetEnvironmentVariable  
   
--   System.Environment::GetEnvironmentVariables  
+- System.Environment::GetEnvironmentVariables  
   
--   System.Environment::GetFolderPath  
+- System.Environment::GetFolderPath  
   
--   System.Environment::GetLogicalDrives  
+- System.Environment::GetLogicalDrives  
   
--   System.IO.Directory::GetDirectories  
+- System.IO.Directory::GetDirectories  
   
--   System.IO.Directory::GetFiles  
+- System.IO.Directory::GetFiles  
   
--   System.IO.Directory::GetLastAccessTime  
+- System.IO.Directory::GetLastAccessTime  
   
--   System.IO.Directory::GetLastWriteTime  
+- System.IO.Directory::GetLastWriteTime  
   
--   System.IO.Directory::GetParent  
+- System.IO.Directory::GetParent  
   
--   System.IO.File::Exists  
+- System.IO.File::Exists  
   
--   System.IO.File::GetCreationTime  
+- System.IO.File::GetCreationTime  
   
--   System.IO.File::GetAttributes  
+- System.IO.File::GetAttributes  
   
--   System.IO.File::GetLastAccessTime  
+- System.IO.File::GetLastAccessTime  
   
--   System.IO.File::GetLastWriteTime  
+- System.IO.File::GetLastWriteTime  
   
--   System.IO.File::ReadAllText  
+- System.IO.File::ReadAllText  
   
 ###  <a name="BKMK_InstanceMethods"></a> 静的プロパティ上でインスタンス メソッドを呼び出す  
  オブジェクト インスタンスを返す静的プロパティにアクセスすると、そのオブジェクトのインスタンス メソッドを呼び出すことができます。 インスタンス メソッドを呼び出すには、次の構文を使用します。ここで、*Class* はシステム クラスの名前、*Property* はプロパティの名前、*Method* はメソッドの名前、*(Parameters)* はメソッドのパラメーター リストです。  

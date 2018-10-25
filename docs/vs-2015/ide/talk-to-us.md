@@ -1,7 +1,7 @@
 ---
 title: ご意見 | Microsoft ドキュメント
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 34
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5c85bdfd08fb3d2ad06c9dfd17b46a31fe4ed74d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d046603919c0639427b29cb23cdfa6f8ea74337c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545464"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49289836"
 ---
 # <a name="talk-to-us"></a>Talk to Us
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,7 +38,7 @@ Visual Studio 2017 の最新ドキュメントについては、次を参照し�
  クラッシュ、パフォーマンスの低下、予期しない動作や Visual Studio を使用して問題を実行している場合、問題をご報告くださいを横にあるフィードバック アイコンを右クリックして**クイック起動**を選択して**ヘルプ&#124;フィードバックの送信&#124;問題を報告する**メイン メニューから。 詳細については、次を参照してください。 [Visual Studio で問題を報告する方法](../ide/how-to-report-a-problem-with-visual-studio-2015.md)します。  
   
 ## <a name="i-want-to-make-a-suggestion-about-visual-studio-features"></a>Visual Studio の機能に関するご提案  
- 改善できる点がありましたら、ぜひご連絡ください! **[提案事項の送信]** を選択して、Visual Studio チームに機能または変更を提案します。 提案事項は自動的に [UserVoice](https://visualstudio.uservoice.com) に投稿され、他のユーザーが投票できるようになります。  
+ 改善できる点がありましたら、ぜひご連絡ください! **[提案事項の送信]** を選択して、Visual Studio チームに機能または変更を提案します。 提案事項は自動的に [UserVoice](https://visualstudio.uservoice.com) に投稿され、それに対して他のユーザーが投票できるようになります。  
   
 ## <a name="rate-this-product"></a>この製品を評価する  
  Visual Studio のプレリリース版には、 **[この製品を評価する]** メニュー項目があり、実行しているビルドの品質に関するフィードバックを送信できます。 これは製品のリリース版には表示されません。  

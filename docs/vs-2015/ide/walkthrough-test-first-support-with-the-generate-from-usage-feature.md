@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: 使用法から生成機能のテスト ファーストのサポート | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 68
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8a290eebec2c3847d41f36568196ec35935e332a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b2b45b75b689279a19dc1423a0cbf2b62d14a5c1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545190"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49232844"
 ---
 # <a name="walkthrough-test-first-support-with-the-generate-from-usage-feature"></a>チュートリアル: 使用法から生成機能のテスト ファーストのサポート
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: 生成から使用状況機能のテスト ファーストのサポート](https://docs.microsoft.com/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)します。  
-  
 このトピックでは、テスト ファースト開発をサポートする[使用法から生成](../misc/generate-from-usage.md)機能の使用方法について説明します。  
   
  *テスト ファースト開発* は、最初に製品仕様に基づいて単体テストを記述してから、テストが成功するために必要なソース コードを記述するソフトウェア設計の方法です。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] は、新しい型とメンバーを定義する前に、テスト ケースで最初にこれらを参照するときにソース コードに生成することで、テスト ファースト開発をサポートします。  

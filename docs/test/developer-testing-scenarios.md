@@ -1,22 +1,22 @@
 ---
-title: Visual Studio の開発者用テスト ツール
+title: 開発者用テスト ツール
 ms.date: 05/02/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit tests
+author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 5cb0899296aa24aa41c0caa2b808b02f27dc80be
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: a731f7a481280d5755d72a83a4532eb8e6998f97
+ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36302934"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46370641"
 ---
 # <a name="developer-testing-tools-scenarios-and-capabilities"></a>開発者用テスト ツール、シナリオ、および機能
 
@@ -38,9 +38,7 @@ IntelliTest でカバレッジを改善し、回帰を回避します。 Intelli
 
 ## <a name="user-interface-testing-with-coded-ui-and-selenium"></a>コード化された UI と Selenium によるユーザー インターフェイスのテスト
 
-最適に組み合わされた、またはコミュニティで承認された UI テストを使用して、ユーザー インターフェイス (UI) をテストします。
-コード化された UI テストでは、アプリケーションのユーザー インターフェイスの機能と動作を検証するために完全に自動化されたテストを作成できます。
-XAML ベースの UWP アプリ、ブラウザー アプリ、および SharePoint アプリなど、さまざまなテクノロジをカバーする UI テストを自動化できます。
+最適に組み合わされた、またはコミュニティで承認された UI テストを使用して、ユーザー インターフェイス (UI) をテストします。 コード化された UI テストでは、アプリケーションのユーザー インターフェイスの機能と動作を検証するために完全に自動化されたテストを作成できます。 XAML ベースの UWP アプリ、ブラウザー アプリ、および SharePoint アプリなど、さまざまなテクノロジをカバーする UI テストを自動化できます。
 
 コード化された UI テストまたは汎用ブラウザー ベースの UI テストと Selenium の最適な組み合わせを選択したかどうかに関係なく、Visual Studio では必要なツールがすべて提供されます。
 
@@ -60,21 +58,19 @@ XAML ベースの UWP アプリ、ブラウザー アプリ、および SharePoi
 
 コード カバレッジは、テスト エクスプローラーを使用してテスト メソッドを実行する場合のオプションです。 結果テーブルには、各アセンブリ、クラス、およびメソッドで実行されたコードの割合が表示されます。 また、ソース エディターには、どのコードがテストされたかが表示されます。
 
-![Visual Studio Team Services と Team Foundation Server でテストする](media/devtest-codecoverage.png)
-
 * [コード カバレッジを使用した、テストされるコード割合の確認](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
 * [Visual Studio での単体テスト、コード カバレッジおよびコード クローン分析 (ラボ)](http://download.microsoft.com/download/6/2/B/62B60ECE-B9DC-4E8A-A97C-EA261BFB935E/Docs/Unit%20Testing,%20Code%20Coverage%20and%20Code%20Clone%20Analysis%20with%20Visual%20Studio%202015.docx)
 * [コード カバレッジ分析のカスタマイズ](customizing-code-coverage-analysis.md)
 
-## <a name="unit-testing-with-any-framework-using-the-high-performance-test-explorer"></a>高パフォーマンス テスト エクスプローラーを使用する任意のフレームワークでの単体テスト
+## <a name="test-explorer"></a>Test Explorer
 
-テスト エクスプローラーは、開発者が単体テストを作成し、管理して、最大限に活用できるようにします。
+**テスト エクスプローラー**は、開発者が単体テストを作成、管理、実行する場合に役立ちます。
 
 ![Visual Studio テスト エクスプローラー](media/devtest-testexplorer.png)
 
 * [単体テストの概要](unit-test-your-code.md)
 * [テスト エクスプローラーを使用して単体テストを実行する](run-unit-tests-with-test-explorer.md)
-* [C/C++ 用の単体テストの記述](writing-unit-tests-for-c-cpp.md)
+* [テスト エクスプローラーに関する FAQ](test-explorer-faq.md)
 * [サードパーティ製の単体テスト フレームワークをインストールする](install-third-party-unit-test-frameworks.md)
 
 Visual Studio は拡張可能であり、NUnit や xUnit.net などのサード パーティの単体テスト アダプターにも対応します。 さらに、コード クローン機能では、一般的なバグの修正またはリファクタリングの対象になる可能性がある意味的に似たコードのブロックを特定できるようにして、高品質なソフトウェアを提供することもできます。
@@ -87,3 +83,4 @@ Visual Studio は拡張可能であり、NUnit や xUnit.net などのサード 
 * [Team Foundation Server での単体テストの実行の高速化](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/30/speeding-up-test-execution-in-tfs.aspx)
 * [並列および状況依存の単体テストの実行](https://blogs.msdn.microsoft.com/visualstudioalm/2016/02/08/parallel-and-context-sensitive-test-execution-with-visual-studio-2015-update-1/)
 * [Visual Studio での単体テスト、コード カバレッジおよびコード クローン分析 (ラボ)](http://download.microsoft.com/download/6/2/B/62B60ECE-B9DC-4E8A-A97C-EA261BFB935E/Docs/Unit%20Testing,%20Code%20Coverage%20and%20Code%20Clone%20Analysis%20with%20Visual%20Studio%202015.docx)
+* [C/C++ 用の単体テストの記述](writing-unit-tests-for-c-cpp.md)

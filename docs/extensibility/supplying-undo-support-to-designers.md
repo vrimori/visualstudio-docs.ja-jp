@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: df387259ed7a8623ba176ba09d0ceb1bba66bc0b
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: ba86f77219329c0e34edecf10aca69e8bedf2226
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46496078"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843237"
 ---
 # <a name="supplying-undo-support-to-designers"></a>デザイナー向けの元に戻す操作のサポート提供
 通常、デザイナー、エディターなどは、コード要素を変更するときに、ユーザーは、最近の変更を取り消すことができるように、元に戻す操作をサポートする必要があります。  
@@ -27,17 +27,17 @@ ms.locfileid: "46496078"
   
  元に戻す機能のサポートを提供する必要があるデザイナーの実装:  
   
--   抽象基本クラスを実装して元に戻す管理を提供します。 <xref:System.ComponentModel.Design.UndoEngine>  
+- 抽象基本クラスを実装して元に戻す管理を提供します。 <xref:System.ComponentModel.Design.UndoEngine>  
   
--   実装によって永続化を指定し、CodeDOM のサポート、<xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>と<xref:System.ComponentModel.Design.IComponentChangeService>クラス。  
+- 実装によって永続化を指定し、CodeDOM のサポート、<xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>と<xref:System.ComponentModel.Design.IComponentChangeService>クラス。  
   
- デザイナーを使用して記述の詳細については[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]を参照してください[デザイン時サポートの拡張](https://msdn.microsoft.com/Library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)します。  
+  デザイナーを使用して記述の詳細については[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]を参照してください[デザイン時サポートの拡張](https://msdn.microsoft.com/Library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)します。  
   
- [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]によって既定の元に戻すインフラストラクチャを提供します。  
+  [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]によって既定の元に戻すインフラストラクチャを提供します。  
   
--   管理の実装を提供する元に戻す、<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>と<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit>クラス。  
+- 管理の実装を提供する元に戻す、<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>と<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit>クラス。  
   
--   永続性と既定のを通じて CodeDOM のサポートを提供する<xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService>と<xref:System.ComponentModel.Design.IComponentChangeService>実装します。  
+- 永続性と既定のを通じて CodeDOM のサポートを提供する<xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService>と<xref:System.ComponentModel.Design.IComponentChangeService>実装します。  
   
 ## <a name="obtaining-undo-support-automatically"></a>取り消しのサポートを自動的に取得します。  
  デザイナーで作成した[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]自動および完全な取り消しのサポートを持つ場合、デザイナー。  
@@ -64,44 +64,44 @@ ms.locfileid: "46496078"
   
  Visual Studio には、デザイナーの元に戻すには、次の機能が用意されています。  
   
--   リンク元に戻す機能を複数のデザイナー。  
+- リンク元に戻す機能を複数のデザイナー。  
   
--   デザイナー内で子ユニットが実装することで親と対話できます<xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit>と<xref:Microsoft.VisualStudio.OLE.Interop.IOleParentUndoUnit>で<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit>します。  
+- デザイナー内で子ユニットが実装することで親と対話できます<xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit>と<xref:Microsoft.VisualStudio.OLE.Interop.IOleParentUndoUnit>で<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit>します。  
   
- 環境の SDK では、CodeDOM と永続化を指定してサポートを提供します。  
+  環境の SDK では、CodeDOM と永続化を指定してサポートを提供します。  
   
--   <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService> 実装として、 <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>  
+- <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService> 実装として、 <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>  
   
- A<xref:System.ComponentModel.Design.IComponentChangeService>によって提供される、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]' のデザイン ホスト。  
+  A<xref:System.ComponentModel.Design.IComponentChangeService>によって提供される、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]' のデザイン ホスト。  
   
 ## <a name="using-the-environment-sdk-features-to-supply-undo-support"></a>取り消しのサポートを提供する環境の SDK の機能を使用します。  
  取り消しのサポートを取得するには、と、デザイナーを実装するオブジェクトが必要です。  
   
--   インスタンス化しのインスタンスを初期化、<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>有効なクラス<xref:System.IServiceProvider>実装します。  
+- インスタンス化しのインスタンスを初期化、<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>有効なクラス<xref:System.IServiceProvider>実装します。  
   
--   これは、<xref:System.IServiceProvider>クラスは、次のサービスを提供する必要があります。  
+- これは、<xref:System.IServiceProvider>クラスは、次のサービスを提供する必要があります。  
   
-    -   <xref:System.ComponentModel.Design.IDesignerHost>。  
+  - <xref:System.ComponentModel.Design.IDesignerHost>。  
   
-    -   <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>  
+  - <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>  
   
-         デザイナーを使用して[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]CodeDOM シリアル化を使用することもできます<xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService>で提供される、[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]の実装として、<xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>します。  
+     デザイナーを使用して[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]CodeDOM シリアル化を使用することもできます<xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService>で提供される、[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]の実装として、<xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>します。  
   
-         ここで、<xref:System.IServiceProvider>クラスに提供される、<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>コンス トラクターの実装としてこのオブジェクトを返す必要があります、<xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>クラス。  
+     ここで、<xref:System.IServiceProvider>クラスに提供される、<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>コンス トラクターの実装としてこのオブジェクトを返す必要があります、<xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>クラス。  
   
-    -   <xref:System.ComponentModel.Design.IComponentChangeService>  
+  - <xref:System.ComponentModel.Design.IComponentChangeService>  
   
-         既定値を使用するデザイナー<xref:System.ComponentModel.Design.DesignSurface>によって提供される、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]デザイン ホストの既定の実装をさせることが保証されます、<xref:System.ComponentModel.Design.IComponentChangeService>クラス。  
+     既定値を使用するデザイナー<xref:System.ComponentModel.Design.DesignSurface>によって提供される、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]デザイン ホストの既定の実装をさせることが保証されます、<xref:System.ComponentModel.Design.IComponentChangeService>クラス。  
   
- デザイナーを実装する、<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>に基づいて元に戻すメカニズムは、場合に自動的に変更を追跡します。  
+  デザイナーを実装する、<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>に基づいて元に戻すメカニズムは、場合に自動的に変更を追跡します。  
   
--   プロパティの変更がによる、<xref:System.ComponentModel.TypeDescriptor>オブジェクト。  
+- プロパティの変更がによる、<xref:System.ComponentModel.TypeDescriptor>オブジェクト。  
   
--   <xref:System.ComponentModel.Design.IComponentChangeService> イベントは、取り消し可能な変更がコミットされたときに手動で生成されます。  
+- <xref:System.ComponentModel.Design.IComponentChangeService> イベントは、取り消し可能な変更がコミットされたときに手動で生成されます。  
   
--   コンテキスト内で作成された、デザイナーでの変更、<xref:System.ComponentModel.Design.DesignerTransaction>します。  
+- コンテキスト内で作成された、デザイナーでの変更、<xref:System.ComponentModel.Design.DesignerTransaction>します。  
   
--   いずれかを使用して元に戻す単位の実装によって提供される標準的な取り消し単位を明示的に作成する、デザイナーで選択されます<xref:System.ComponentModel.Design.UndoEngine.UndoUnit>または Visual Studio に固有の実装<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit>から派生した<xref:System.ComponentModel.Design.UndoEngine.UndoUnit>も用意されていて、両方の実装<xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit>と<xref:Microsoft.VisualStudio.OLE.Interop.IOleParentUndoUnit>します。  
+- いずれかを使用して元に戻す単位の実装によって提供される標準的な取り消し単位を明示的に作成する、デザイナーで選択されます<xref:System.ComponentModel.Design.UndoEngine.UndoUnit>または Visual Studio に固有の実装<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit>から派生した<xref:System.ComponentModel.Design.UndoEngine.UndoUnit>も用意されていて、両方の実装<xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit>と<xref:Microsoft.VisualStudio.OLE.Interop.IOleParentUndoUnit>します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.ComponentModel.Design.UndoEngine>   

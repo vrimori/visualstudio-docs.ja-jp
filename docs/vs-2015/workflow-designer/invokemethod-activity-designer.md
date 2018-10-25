@@ -1,7 +1,7 @@
 ---
 title: InvokeMethod アクティビティ デザイナー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: 871e684c3503567411f49b419fcf8c47866a35d9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a3fa1c07bbb32bc1da963a0d2f0a91ae6c193a30
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538698"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863686"
 ---
 # <a name="invokemethod-activity-designer"></a>InvokeMethod アクティビティ デザイナー
 **InvokeMethod**を作成および構成デザイナーを使用する<xref:System.Activities.Statements.InvokeMethod>アクティビティ。  
@@ -51,15 +51,15 @@ ms.locfileid: "47538698"
   
  <xref:System.Activities.Activity.CacheMetadata%2A> にパラメーターを登録するアルゴリズムは次のとおりです。  
   
-1.  <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> 引数を登録します。  
+1. <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> 引数を登録します。  
   
-2.  <xref:System.Activities.Statements.InvokeMethod.Result%2A> 引数を登録します。  
+2. <xref:System.Activities.Statements.InvokeMethod.Result%2A> 引数を登録します。  
   
-3.  <xref:System.Activities.Statements.InvokeMethod.Parameters%2A> コレクションを繰り返し処理し、各引数を登録します。  
+3. <xref:System.Activities.Statements.InvokeMethod.Parameters%2A> コレクションを繰り返し処理し、各引数を登録します。  
   
- 結果の例外の種類は <xref:System.Activities.InvalidWorkflowException> となり、メッセージの内容は、"'InvokeMethod': 名前が 'TargetObject' の変数 RuntimeArgument または DelegateArgument は既に存在します" となります。 名前は、環境スコープ内で一意であることが必要です。  
+   結果の例外の種類は <xref:System.Activities.InvalidWorkflowException> となり、メッセージの内容は、"'InvokeMethod': 名前が 'TargetObject' の変数 RuntimeArgument または DelegateArgument は既に存在します" となります。 名前は、環境スコープ内で一意であることが必要です。  
   
- この制限は、<xref:System.Activities.Statements.InvokeMethod.TargetType%2A> および <xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A> には適用されません。これらはワークフロー引数ではなく、したがって、<xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A> メソッド内の <xref:System.Activities.Statements.InvokeMethod> アクティビティの<xref:System.Activities.Activity.CacheMetadata%2A> コレクションに登録されないためです。  
+   この制限は、<xref:System.Activities.Statements.InvokeMethod.TargetType%2A> および <xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A> には適用されません。これらはワークフロー引数ではなく、したがって、<xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A> メソッド内の <xref:System.Activities.Statements.InvokeMethod> アクティビティの<xref:System.Activities.Activity.CacheMetadata%2A> コレクションに登録されないためです。  
   
 ## <a name="see-also"></a>関連項目  
  [プリミティブ](../workflow-designer/primitives-activity-designers.md)   

@@ -16,22 +16,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f12e1e95daed3a4e9c6228808123f87174f2202a
-ms.sourcegitcommit: 7bb0225e1fd45999ce09e0b49c2cfae515c27e11
+ms.openlocfilehash: d9cb4e6b69f88f0c3e61d17211ffe5ff464f1b17
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45612689"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49827560"
 ---
 # <a name="tutorial-learn-to-debug-using-visual-studio"></a>チュートリアル: Visual Studio を使用してデバッグする方法を学習します。
 
 この記事では、ステップ バイ ステップ チュートリアルでは、Visual Studio デバッガーの機能について説明します。 デバッガー機能の上位レベルのビューにする場合は、「[デバッガー機能ツアー](../debugger/debugger-feature-tour.md)します。 ときにする*アプリのデバッグ*、アタッチされたデバッガーでアプリケーションを実行していることを通常意味します。 デバッガーにはさまざまな方法でコードが何を参照してください。 これを行うときに実行中にします。 ウォッチを設定するコードをステップ実行し、変数に格納されている値を確認することができます、値を変更する場合に、変数に、コードの実行パスを調べて、コードの分岐が実行されているのかどうかを確認します。 コードをデバッグしようとした初めての場合は、読み取りをする可能性があります[超初心者向けのデバッグ](../debugger/debugging-absolute-beginners.md)にこの記事に進む前にします。
 
-|         |         |
+| | |
 |---------|---------|
-|  ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る")  |    [ビデオを見る](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171)のデバッグに関する同様の手順を示すです。 |
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | [ビデオを見る](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171)のデバッグに関する同様の手順を示すです。 |
 
-デモ アプリは、c# および C++ にはの機能は、Visual Basic、JavaScript、および (場合を除き)、Visual Studio でサポートされている他の言語に適用されます。 スクリーン ショットは、c# では。 C# と C++ のサンプル コードでは、この記事を切り替えるには、このページの右上にある言語のフィルターを使用します。
+デモ アプリは、c# および C++ にはの機能は、Visual Basic、JavaScript、および (場合を除き)、Visual Studio でサポートされている他の言語に適用されます。 スクリーン ショットは、c# では。
 
 このチュートリアルでは、次の作業を行います。
 
@@ -60,6 +60,9 @@ ms.locfileid: "45612689"
 3. ような名前を入力**get の開始-デバッグ** をクリック**OK**します。
 
     Visual Studio によってプロジェクトが作成されます。
+
+    > [!NOTE]
+    > C# と C++ のサンプル コードでは、この記事を切り替えるには、このページの右上にある言語のフィルターを使用します。
 
 4. *Program.cs* (c#) または*get 開始 debugging.cpp* (C++)、次のコードに置き換えます
 
@@ -326,8 +329,8 @@ ms.locfileid: "45612689"
 
      ![クリックで実行を使用して機能](../debugger/media/get-started-run-to-click.png "クリックで実行")
 
-    >  [!NOTE]
-    > **クリックで実行**ボタンは新[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]します。 緑色の矢印ボタンが表示されない場合は、使用**F11**この例では代わりに、デバッガーを適切な場所に進みます。
+   > [!NOTE]
+   > **クリックで実行**ボタンは新[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]します。 緑色の矢印ボタンが表示されない場合は、使用**F11**この例では代わりに、デバッガーを適切な場所に進みます。
 
 6. をクリックして、**クリックで実行**ボタン![クリックで実行](../debugger/media/dbg-tour-run-to-click.png "RunToClick")します。
 
@@ -405,14 +408,14 @@ ms.locfileid: "45612689"
 
 1. 一時停止中に、`foreach`ループ (`for` C++ でのループ)、をクリックして、**呼び出し履歴**ウィンドウで、既定の右下のウィンドウで開くことです。
 
-1. をクリックして**F11**何回か、デバッガーで一時停止が表示されるまで、`Circle.Draw`コード エディターでのメソッド。 見て、**呼び出し履歴**ウィンドウ。
+2. をクリックして**F11**何回か、デバッガーで一時停止が表示されるまで、`Circle.Draw`コード エディターでのメソッド。 見て、**呼び出し履歴**ウィンドウ。
 
     ![呼び出し履歴を調べ](../debugger/media/get-started-call-stack.png "ExamineCallStack")
 
     **呼び出し履歴**ウィンドウ メソッドと関数を呼び出す作業はこれで順序が表示されます。 先頭行は、現在の関数を示しています (、`Circle.Draw`または`Circle::Draw`このアプリでメソッド)。 2 行目はことを示しています`Circle.Draw`から呼び出されていた、`Main`メソッド (`main` C++ で) など。
 
-    >  [!NOTE]
-    > **呼び出し履歴**Eclipse などの一部の Ide ウィンドウはデバッグ パースペクティブに似ています。
+   > [!NOTE]
+   > **呼び出し履歴**Eclipse などの一部の Ide ウィンドウはデバッグ パースペクティブに似ています。
 
     呼び出し履歴は、調査およびアプリの実行フローを理解することをお勧めします。
 

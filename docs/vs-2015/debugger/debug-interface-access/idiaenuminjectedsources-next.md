@@ -1,7 +1,7 @@
 ---
 title: Idiaenuminjectedsources::next |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 836191aacb587cc391d36e2ac052cd6f1efc3860
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ebb4e03a775a3aae3179be6a1712ac25b28a98e7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546023"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49922901"
 ---
 # <a name="idiaenuminjectedsourcesnext"></a>IDiaEnumInjectedSources::Next
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiaenuminjectedsources::next](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiaenuminjectedsources-next)します。  
-  
 列挙体シーケンスに挿入されたソースの指定した数を取得します。  
   
 ## <a name="syntax"></a>構文  

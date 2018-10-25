@@ -1,7 +1,7 @@
 ---
 title: Visual Studio の visual Language Dictionary |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: d20a30c0-0dcc-4e2c-a809-31c8ea28c7df
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9eee2e412024cdb9eae7669d65e2283fc24488d6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 250e7c80e47b9ea53306697d57b305fdcc9c645c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537862"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49267632"
 ---
 # <a name="visual-language-dictionary-for-visual-studio"></a>Visual Studio の visual Language Dictionary
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[for Visual Studio の Visual 言語辞書](https://docs.microsoft.com/visualstudio/extensibility/ux-guidelines/visual-language-dictionary-for-visual-studio)します。  
-  
 Visual Studio では、そのことは考えません、およびその他の画像のビルディング ブロックの概念を説明するために一般的な visual 言語を使用します。 新しいアイコンを設計するときは、独自のイメージで伝達する概念を識別するためにこの辞書を使用します。  
   
  **一般的なガイドライン**  
@@ -62,7 +60,7 @@ Visual Studio では、そのことは考えません、およびその他の画
 |**アドレス**|![アドレス アイコン](../../extensibility/ux-guidelines/media/vld-c-address.png "VLD_C_Address")||  
 |**アラートを生成します。**|![警告アイコン](../../extensibility/ux-guidelines/media/vld-c-alert.png "VLD_C_Alert")||  
 |**アルファ チャネル**|![アルファ チャネル アイコン](../../extensibility/ux-guidelines/media/vld-c-alphachannel.png "VLD_C_AlphaChannel")||  
-|**アニメーション**|![アニメーション アイコン](../../extensibility/ux-guidelines/media/vld-c-animation.png "VLD_C_Animation")|![アニメーション エラー アイコン](../../extensibility/ux-guidelines/media/vld-c-animation-animationerror.png "VLD_C_Animation_AnimationError")アニメーション エラー![[次へ] のアニメーション] アイコン](../../extensibility/ux-guidelines/media/vld-c-animation-nextanimation.png "VLD_C_Animation_NextAnimation")次のアニメーション|  
+|**アニメーション**|![アニメーション アイコン](../../extensibility/ux-guidelines/media/vld-c-animation.png "VLD_C_Animation")|![アニメーション エラー アイコン](../../extensibility/ux-guidelines/media/vld-c-animation-animationerror.png "VLD_C_Animation_AnimationError")アニメーション エラー![[次へ] のアニメーション アイコン](../../extensibility/ux-guidelines/media/vld-c-animation-nextanimation.png "VLD_C_Animation_NextAnimation")次のアニメーション|  
 |**アプリケーション**プロジェクト|![アプリケーション アイコン](../../extensibility/ux-guidelines/media/vld-c-application.png "VLD_C_Application")|![アプリケーション ロール エラー アイコン](../../extensibility/ux-guidelines/media/vld-c-application-applicationroleerror.png "VLD_C_Application_ApplicationRoleError")アプリケーション ロール エラー![C&#43; &#43; MFC プロジェクト アイコン](../../extensibility/ux-guidelines/media/vld-c-application-cppmfcproject.png "VLD_C_Application_CPPMFCProject") C++ MFC プロジェクト|  
 |**区分**|![領域のアイコン](../../extensibility/ux-guidelines/media/vld-c-area.png "VLD_C_Area")|![スプライン面グラフ アイコン](../../extensibility/ux-guidelines/media/vld-c-area-splineareachart.png "VLD_C_Area_SplineAreaChart")スプライン面グラフ![積み上げ領域の系列 アイコン](../../extensibility/ux-guidelines/media/vld-c-area-stackedareaseries.png "VLD_C_Area_StackedAreaSeries")積み上げ面シリーズ|  
 |**配置します。**|![[整列] アイコン](../../extensibility/ux-guidelines/media/vld-c-arrange.png "VLD_C_Arrange")|![図形アイコンの整列](../../extensibility/ux-guidelines/media/vld-c-arrange-arrangeshapes.png "VLD_C_Arrange_ArrangeShapes")図形の整列![自動&#45;図形アイコンの整列](../../extensibility/ux-guidelines/media/vld-c-arrange-autoarrangeshapes.png "VLD_C_Arrange_AutoArrangeShapes")図形の自動配置|  
@@ -288,7 +286,7 @@ Visual Studio では、そのことは考えません、およびその他の画
 |**パッケージ**|![パッケージのアイコン](../../extensibility/ux-guidelines/media/vld-c-package.png "VLD_C_Package")|![クラウド パッケージ アイコン](../../extensibility/ux-guidelines/media/vld-c-package-cloudpackage.png "VLD_C_Package_CloudPackage")クラウド パッケージ![パッケージの作成 アイコン](../../extensibility/ux-guidelines/media/vld-c-package-createpackage.png "VLD_C_Package_CreatePackage") パッケージを作成![ドライバー パッケージのテンプレート アイコン](../../extensibility/ux-guidelines/media/vld-c-package-driverpackagetemplate.png "VLD_C_Package_DriverPackageTemplate")ドライバー パッケージのテンプレート|  
 |**Parallel**|![[並列] アイコン](../../extensibility/ux-guidelines/media/vld-c-parallel.png "VLD_C_Parallel")|![各アイコンの並列](../../extensibility/ux-guidelines/media/vld-c-parallel-parallelforeach.png "VLD_C_Parallel_ParallelForEach")ごとに並列|  
 |**パーティション**|![[パーティション] アイコン](../../extensibility/ux-guidelines/media/vld-c-partition.png "VLD_C_Partition")|![パーティション構成 アイコン](../../extensibility/ux-guidelines/media/vld-c-partition-partitionscheme.png "VLD_C_Partition_PartitionScheme") Partition scheme![新しいパーティション アイコン](../../extensibility/ux-guidelines/media/vld-c-partition-newpartition.png "VLD_C_Partition_NewPartition")新しいパーティション![パーティション関数 アイコン](../../extensibility/ux-guidelines/media/vld-c-partition-partitionfunction.png "VLD_C_Partition_PartitionFunction")パーティション関数|  
-|**パーツ**|![部品アイコン](../../extensibility/ux-guidelines/media/vld-c-parts.png "VLD_C_Parts")|![割り当てられたパーツ アイコン](../../extensibility/ux-guidelines/media/vld-c-parts-assignedpart.png "VLD_C_Parts_AssignedPart")パーツが割り当てられている![Misassigned パーツ アイコン](../../extensibility/ux-guidelines/media/vld-c-parts-misassignedpart.png "VLD_C_Parts_MisassignedPart") [間違って割り当てられたパーツ|  
+|**パーツ**|![部品アイコン](../../extensibility/ux-guidelines/media/vld-c-parts.png "VLD_C_Parts")|![割り当てられたパーツ アイコン](../../extensibility/ux-guidelines/media/vld-c-parts-assignedpart.png "VLD_C_Parts_AssignedPart")パーツが割り当てられている![Misassigned パーツ アイコン](../../extensibility/ux-guidelines/media/vld-c-parts-misassignedpart.png "VLD_C_Parts_MisassignedPart") 間違って割り当てられたパーツ|  
 |**パフォーマンス**|![パフォーマンス アイコン](../../extensibility/ux-guidelines/media/vld-c-performance.png "VLD_C_Performance")||  
 |**ピン留めします。**|![ピン アイコン](../../extensibility/ux-guidelines/media/vld-c-pin.png "VLD_C_Pin")|![ピン解除アイコン](../../extensibility/ux-guidelines/media/vld-c-pin-unpin.png "VLD_C_Pin_Unpin")ピン解除|  
 |**計画**|![計画アイコン](../../extensibility/ux-guidelines/media/vld-c-planning.png "VLD_C_Planning")||  
@@ -444,7 +442,7 @@ Visual Studio では、そのことは考えません、およびその他の画
 |**依存関係**|![依存関係 アイコン](../../extensibility/ux-guidelines/media/vld-a-dependency.png "VLD_A_Dependency")||  
 |**個別選択**|![個別選択 アイコン](../../extensibility/ux-guidelines/media/vld-a-directselection.png "VLD_A_DirectSelection")||  
 |**ダウン**ダウンロード|![アイコンを](../../extensibility/ux-guidelines/media/vld-a-down.png "VLD_A_Down")|![Web 設定アイコンをダウンロード](../../extensibility/ux-guidelines/media/vld-a-down-downloadwebsettings.png "VLD_A_Down_DownloadWebSettings") web 設定をダウンロード![ダウンロード フォルダー アイコン](../../extensibility/ux-guidelines/media/vld-a-down-downloadfolder.png "VLD_A_Down_DownloadFolder")ダウンロード フォルダー![アイコンの昇順に並べ替える](../../extensibility/ux-guidelines/media/vld-a-down-sortascending.png "VLD_A_Down_SortAscending")昇順で並べ替え|  
-|**動的**|![動的アイコン](../../extensibility/ux-guidelines/media/vld-a-dynamic.png "VLD_A_Dynamic")|![ASP.NET ダイナミック コントロール アイコン](../../extensibility/ux-guidelines/media/vld-a-dynamic-aspnetdynamiccontrol.png "VLD_A_Dynamic_ASPNETDynamicControl") ASP.NET ダイナミック コントロール![動的検証ツール アイコン](../../extensibility/ux-guidelines/media/vld-a-dynamic-dynamicvalidator.png "VLD_A_Dynamic_DynamicValidator")[動的検証コントロール![C&#35;動的データ web サイト アイコン](../../extensibility/ux-guidelines/media/vld-a-dynamic-csdynamicdatawebsite.png "VLD_A_Dynamic_CSDynamicDataWebsite") c# 動的データ web サイト|  
+|**動的**|![動的アイコン](../../extensibility/ux-guidelines/media/vld-a-dynamic.png "VLD_A_Dynamic")|![ASP.NET ダイナミック コントロール アイコン](../../extensibility/ux-guidelines/media/vld-a-dynamic-aspnetdynamiccontrol.png "VLD_A_Dynamic_ASPNETDynamicControl") ASP.NET ダイナミック コントロール![動的検証ツール アイコン](../../extensibility/ux-guidelines/media/vld-a-dynamic-dynamicvalidator.png "VLD_A_Dynamic_DynamicValidator")動的検証コントロール![C&#35;動的データ web サイト アイコン](../../extensibility/ux-guidelines/media/vld-a-dynamic-csdynamicdatawebsite.png "VLD_A_Dynamic_CSDynamicDataWebsite") c# 動的データ web サイト|  
 |**展開**|![展開アイコン](../../extensibility/ux-guidelines/media/vld-a-expand.png "VLD_A_Expand")||  
 |**エクスポート**|![[エクスポート] アイコン](../../extensibility/ux-guidelines/media/vld-a-export.png "VLD_A_Export")|![フィルター アイコンをエクスポート](../../extensibility/ux-guidelines/media/vld-a-export-exportfilter.png "VLD_A_Export_ExportFilter")エクスポート フィルター![レポート フィルターのエクスポート&#40;データ&#41;](../../extensibility/ux-guidelines/media/vld-a-export-exportreportfilter-data.png "VLD_A_Export_ExportReportFilter_data")レポートのフィルター (データ) のエクスポート![レポート フィルターのエクスポート](../../extensibility/ux-guidelines/media/vld-a-export-exportreportfilter.png "VLD_A_Export_ExportReportFilter")レポート フィルターのエクスポート|  
 |**(グリフ) を**|![&#40;グリフ&#41;アイコンを](../../extensibility/ux-guidelines/media/vld-a-glyphup.png "VLD_A_GlyphUp")||  

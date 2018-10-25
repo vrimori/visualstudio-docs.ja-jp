@@ -1,7 +1,7 @@
 ---
 title: IDebugPortSupplierEx2::SetServer |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 0e8ef194-3a4f-4abf-8382-4607ab3005d1
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4c9e5d89ad645cb5604efa94d2e2e6c2fb439a7d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4d369693bee373e05e2274f35b43007e66b00399
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535131"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49918585"
 ---
 # <a name="idebugportsupplierex2setserver"></a>IDebugPortSupplierEx2::SetServer
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugPortSupplierEx2::SetServer](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugportsupplierex2-setserver)します。  
-  
 ポート サプライヤーのコア サーバーを設定します。  
   
 ## <a name="syntax"></a>構文  

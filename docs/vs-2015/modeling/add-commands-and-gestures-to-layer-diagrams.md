@@ -1,7 +1,7 @@
 ---
 title: レイヤー図へのコマンドおよびジェスチャの追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ caps.latest.revision: 40
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 9434c93caf9cfe614a01cf9a10912f1d0562b9bb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f70bcea2599ac318d59255a274629b5c53cea730
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539492"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49889790"
 ---
 # <a name="add-commands-and-gestures-to-layer-diagrams"></a>レイヤー図にコマンドおよびジェスチャを追加する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[依存関係図にコマンドおよびジェスチャを追加](https://docs.microsoft.com/visualstudio/modeling/add-commands-and-gestures-to-layer-diagrams)します。  
-  
 Visual Studio でレイヤー図のコンテキスト メニュー コマンドやジェスチャ ハンドラーを定義できます。 これらの拡張機能を Visual Studio Integration Extension (VSIX) にパッケージ化し、他の Visual Studio ユーザーに配布できます。  
   
  必要に応じて、複数のコマンドおよびジェスチャ ハンドラーを同じ Visual Studio プロジェクトで定義できます。 また、複数のプロジェクトを組み合わせて 1 つの VSIX に含めることもできます。 たとえば、レイヤー コマンド、特定領域言語、および UML 図用のコマンドを含む単一の VSIX を定義できます。  
@@ -34,7 +32,7 @@ Visual Studio でレイヤー図のコンテキスト メニュー コマンド�
 > [!NOTE]
 >  ユーザーのソース コードをレイヤー図と比較する、アーキテクチャの検証をカスタマイズすることもできます。 アーキテクチャの検証は、別の Visual Studio プロジェクトで定義する必要があります。 それを他の拡張機能と同じ VSIX に追加できます。 詳細については、次を参照してください。[レイヤー図へのカスタム アーキテクチャ検証の追加](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  「 [要件](../modeling/extend-layer-diagrams.md#prereqs)」を参照してください。  
   
 ## <a name="defining-a-command-or-gesture-in-a-new-vsix"></a>新しい VSIX でコマンドまたはジェスチャを定義する  
@@ -42,25 +40,25 @@ Visual Studio でレイヤー図のコンテキスト メニュー コマンド�
   
 #### <a name="to-define-an-extension-by-using-a-project-template"></a>プロジェクト テンプレートを使用して拡張機能を定義するには  
   
-1.  **[ファイル]** メニューの **[新しいプロジェクト]** を使用して、新しいソリューションにプロジェクトを作成します。  
+1. **[ファイル]** メニューの **[新しいプロジェクト]** を使用して、新しいソリューションにプロジェクトを作成します。  
   
-2.  **[新しいプロジェクト]** ダイアログ ボックスの **[モデリング プロジェクト]** で、 **[Layer Designer Command Extension]** (レイヤー デザイナー コマンド拡張機能) または **[Layer Designer Gesture Extension]**(レイヤー デザイナー ジェスチャ拡張機能) を選択します。  
+2. **[新しいプロジェクト]** ダイアログ ボックスの **[モデリング プロジェクト]** で、 **[Layer Designer Command Extension]** (レイヤー デザイナー コマンド拡張機能) または **[Layer Designer Gesture Extension]**(レイヤー デザイナー ジェスチャ拡張機能) を選択します。  
   
-     このテンプレートでは、動作する小さい例を含むプロジェクトが作成されます。  
+    このテンプレートでは、動作する小さい例を含むプロジェクトが作成されます。  
   
-3.  拡張機能をテストするには、 **Ctrl キーを押しながら F5** キーを押すか、 **F5**キーを押します。  
+3. 拡張機能をテストするには、 **Ctrl キーを押しながら F5** キーを押すか、 **F5**キーを押します。  
   
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の実験用のインスタンスが開始します。 このインスタンスで、レイヤー図を作成します。 独自のコマンドまたはジェスチャ拡張機能が、この図で動作します。  
+    [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の実験用のインスタンスが開始します。 このインスタンスで、レイヤー図を作成します。 独自のコマンドまたはジェスチャ拡張機能が、この図で動作します。  
   
-4.  実験用のインスタンスを閉じて、サンプル コードを変更します。 詳細については、次を参照してください。[への移動と更新プログラムは、プログラム コードでモデルをレイヤー](../modeling/navigate-and-update-layer-models-in-program-code.md)します。  
+4. 実験用のインスタンスを閉じて、サンプル コードを変更します。 詳細については、次を参照してください。[への移動と更新プログラムは、プログラム コードでモデルをレイヤー](../modeling/navigate-and-update-layer-models-in-program-code.md)します。  
   
-5.  同じプロジェクトに、さらにコマンドまたはジェスチャ ハンドラーを追加できます。 詳細については、以下のセクションを参照してください。  
+5. 同じプロジェクトに、さらにコマンドまたはジェスチャ ハンドラーを追加できます。 詳細については、以下のセクションを参照してください。  
   
-     [メニュー コマンドを定義する](#command)  
+    [メニュー コマンドを定義する](#command)  
   
-     [ジェスチャ ハンドラーを定義する](#gesture)  
+    [ジェスチャ ハンドラーを定義する](#gesture)  
   
-6.  メイン インスタンスで、拡張機能をインストールする[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、または別のコンピューターでは、検索、 **.vsix**ファイル**bin\\\*** します。 このファイルをインストール先のコンピューターにコピーして、ダブルクリックします。 拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
+6. メイン インスタンスで、拡張機能をインストールする[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、または別のコンピューターでは、検索、 **.vsix**ファイル*bin\\*します。 このファイルをインストール先のコンピューターにコピーして、ダブルクリックします。 拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
   
 ## <a name="adding-a-command-or-gesture-to-a-separate-vsix"></a>別の VSIX にコマンドまたはジェスチャを追加する  
  コマンド、レイヤー検証コントロール、および他の拡張機能を含む 1 つの VSIX を作成する場合は、VSIX を定義するプロジェクトとハンドラー用のプロジェクトを分けることをお勧めします。 モデリング拡張機能の他の種類については、次を参照してください。 [UML を拡張モデルと図](../modeling/extend-uml-models-and-diagrams.md)します。  
@@ -111,44 +109,44 @@ Visual Studio でレイヤー図のコンテキスト メニュー コマンド�
   
 2.  機能をテストするには、Ctrl キーを押しながら F5 キーを押すか、または F5 キーを押します。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の実験用のインスタンスが開きます。 このインスタンスで、レイヤー図を作成または開きます。  
   
-3.  メイン インスタンスで、VSIX をインストールする[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、または別のコンピューターでは、検索、 **.vsix**ファイル、 **bin** VSIX プロジェクトのディレクトリ。 このファイルを、VSIX をインストールするコンピューターにコピーします。 Windows エクスプローラー (Windows 8 のエクスプローラー) で VSIX ファイルをダブルクリックします。  
+3.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]のメイン インスタンスまたは別のコンピューターに拡張機能をインストールするには、 **bin\*** ディレクトリで **bin** ファイルを探します。 このファイルを、VSIX をインストールするコンピューターにコピーします。 Windows エクスプローラー (Windows 8 のエクスプローラー) で VSIX ファイルをダブルクリックします。  
   
      拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
   
 ##  <a name="command"></a> メニュー コマンドを定義する  
  ジェスチャまたはコマンドの既存のプロジェクトに、さらにメニュー コマンド定義を追加できます。 各コマンドは、次のような特徴を持つクラスによって定義されます。  
   
--   クラスは次のように宣言されます。  
+- クラスは次のように宣言されます。  
   
-     `[LayerDesignerExtension]`  
+   `[LayerDesignerExtension]`  
   
-     `[Export(typeof(ICommandExtension))]`  
+   `[Export(typeof(ICommandExtension))]`  
   
-     `public class`  *MyLayerCommand*  `: ICommandExtension { ... }`  
+   `public class`  *MyLayerCommand*  `: ICommandExtension { ... }`  
   
--   クラスの名前空間と名前は重要ではありません。  
+- クラスの名前空間と名前は重要ではありません。  
   
--   `ICommandExtension` を実装するメソッドは次のとおりです。  
+- `ICommandExtension` を実装するメソッドは次のとおりです。  
   
-    -   `string Text {get;}` : メニューに表示されるラベルです。  
+  -   `string Text {get;}` : メニューに表示されるラベルです。  
   
-    -   `void QueryStatus(IMenuCommand command)` : ユーザーが図を右クリックすると呼び出され、ユーザーの現在の選択に対してコマンドを表示して有効にする必要があるかどうかを判定します。  
+  -   `void QueryStatus(IMenuCommand command)` : ユーザーが図を右クリックすると呼び出され、ユーザーの現在の選択に対してコマンドを表示して有効にする必要があるかどうかを判定します。  
   
-    -   `void Execute(IMenuCommand command)` : ユーザーがコマンドを選択すると呼び出されます。  
+  -   `void Execute(IMenuCommand command)` : ユーザーがコマンドを選択すると呼び出されます。  
   
--   現在の選択項目を特定するには、 `IDiagramContext`をインポートします。  
+- 現在の選択項目を特定するには、 `IDiagramContext`をインポートします。  
   
-     `[Import]`  
+   `[Import]`  
   
-     `public IDiagramContext DiagramContext { get; set; }`  
+   `public IDiagramContext DiagramContext { get; set; }`  
   
-     `...`  
+   `...`  
   
-     `DiagramContext.CurrentDiagram.SelectedShapes.Count()...`  
+   `DiagramContext.CurrentDiagram.SelectedShapes.Count()...`  
   
- 詳細については、次を参照してください。[への移動と更新プログラムは、プログラム コードでモデルをレイヤー](../modeling/navigate-and-update-layer-models-in-program-code.md)します。  
+  詳細については、次を参照してください。[への移動と更新プログラムは、プログラム コードでモデルをレイヤー](../modeling/navigate-and-update-layer-models-in-program-code.md)します。  
   
- 新しいコマンドを追加するには、以下のサンプルを含む新しいコード ファイルを作成します。 その後、テストして編集します。  
+  新しいコマンドを追加するには、以下のサンプルを含む新しいコード ファイルを作成します。 その後、テストして編集します。  
   
 ```  
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;  
@@ -244,30 +242,30 @@ namespace MyLayerExtensions // change to your preference
   
  ジェスチャ ハンドラーについては次の点に注意してください。  
   
--   `IGestureExtension` のメンバーは次のとおりです。  
+- `IGestureExtension` のメンバーは次のとおりです。  
   
-     **OnDoubleClick** : ユーザーが図のどこかをダブルクリックすると呼び出されます。  
+   **OnDoubleClick** : ユーザーが図のどこかをダブルクリックすると呼び出されます。  
   
-     **CanDragDrop** : ユーザーがアイテムを図にドラッグするときにマウスを移動すると繰り返し呼び出されます。 すばやく動作する必要があります。  
+   **CanDragDrop** : ユーザーがアイテムを図にドラッグするときにマウスを移動すると繰り返し呼び出されます。 すばやく動作する必要があります。  
   
-     **OnDragDrop** : ユーザーが図にアイテムをドロップすると呼び出されます。  
+   **OnDragDrop** : ユーザーが図にアイテムをドロップすると呼び出されます。  
   
--   各メソッドの最初の引数は、レイヤー要素を取得できる `IShape`です。 例:  
+- 各メソッドの最初の引数は、レイヤー要素を取得できる `IShape`です。 例:  
   
-    ```  
-    public void OnDragDrop(IShape target, IDataObject data)  
-    {  
-        ILayerElement element = target.GetLayerElement();  
-        if (element is ILayer)  
-        {  
-            // ...  
-        }  
-    }  
-    ```  
+  ```  
+  public void OnDragDrop(IShape target, IDataObject data)  
+  {  
+      ILayerElement element = target.GetLayerElement();  
+      if (element is ILayer)  
+      {  
+          // ...  
+      }  
+  }  
+  ```  
   
--   ドラッグされるアイテムの種類によっては、ハンドラーが既に定義されています。 たとえば、ユーザーはソリューション エクスプローラーからレイヤー図にアイテムをドラッグできます。 このような種類のアイテムに対しては、ドラッグ ハンドラーを定義できません。 その場合、 `DragDrop` メソッドは呼び出されません。  
+- ドラッグされるアイテムの種類によっては、ハンドラーが既に定義されています。 たとえば、ユーザーはソリューション エクスプローラーからレイヤー図にアイテムをドラッグできます。 このような種類のアイテムに対しては、ドラッグ ハンドラーを定義できません。 その場合、 `DragDrop` メソッドは呼び出されません。  
   
- ダイアグラムにドラッグされるときに、その他のアイテムをデコードする方法の詳細については、次を参照してください。[モデリング図にジェスチャ ハンドラーを定義](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)します。  
+  ダイアグラムにドラッグされるときに、その他のアイテムをデコードする方法の詳細については、次を参照してください。[モデリング図にジェスチャ ハンドラーを定義](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [移動し、プログラム コードでレイヤー モデルの更新](../modeling/navigate-and-update-layer-models-in-program-code.md)   

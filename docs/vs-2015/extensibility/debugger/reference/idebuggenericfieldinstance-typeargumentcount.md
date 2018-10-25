@@ -1,7 +1,7 @@
 ---
 title: IDebugGenericFieldInstance::TypeArgumentCount |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: e662c5ea-a5c1-478e-a268-5980dadffcd1
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7d4c0cc6da74be350a97114c6cc71a44446c49f5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4b430d0aeae37c9fd4a07ae8be82aba668773303
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536942"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49940594"
 ---
 # <a name="idebuggenericfieldinstancetypeargumentcount"></a>IDebugGenericFieldInstance::TypeArgumentCount
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugGenericFieldInstance::TypeArgumentCount](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebuggenericfieldinstance-typeargumentcount)します。  
-  
 このインスタンスのパラメーターの引数の型の数を返します。  
   
 ## <a name="syntax"></a>構文  

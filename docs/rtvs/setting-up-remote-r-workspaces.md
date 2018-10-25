@@ -10,12 +10,12 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 6ef92d907b34705e0a0461d06827f5504b0e61c3
-ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
+ms.openlocfilehash: 207e4c2d6e7db9dd40288306b3a87086c4568f76
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38978311"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49827715"
 ---
 # <a name="set-up-remote-workspaces"></a>リモート ワークスペースの設定
 
@@ -97,15 +97,15 @@ SSL 証明書は、Windows に手動でインストールする必要があり�
 自己署名証明書を発行するには、次の手順を実行します。
 
 1. SSH または Linux コンピューターにログインします。
-1. `ssl-cert` パッケージをインストールします。
+2. `ssl-cert` パッケージをインストールします。
     ```sh
     sudo apt-get install ssl-cert
     ```
-1. `make-ssl-cert` を実行して既定の自己署名 SSL 証明書を生成します。
+3. `make-ssl-cert` を実行して既定の自己署名 SSL 証明書を生成します。
     ```sh
     sudo make-ssl-cert generate-default-snakeoil --force-overwrite
     ```
-1. 生成されたキーと PEM ファイルを PFX に変換します。 生成された PFX はホーム フォルダーにあります。
+4. 生成されたキーと PEM ファイルを PFX に変換します。 生成された PFX はホーム フォルダーにあります。
     ```sh
     openssl pkcs12 -export -out ~/ssl-cert-snakeoil.pfx -inkey /etc/ssl/private/ssl-cert-snakeoil.key -in /etc/ssl/certs/ssl-cert-snakeoil.pem -password pass:SnakeOil
     ```
@@ -135,12 +135,12 @@ R コードを実行するには、次のようにリモート コンピュー�
 
 1. 次のいずれかをダウンロードしてインストールします。
 
-    - [Microsoft R Open](https://mran.microsoft.com/open/)
-    - [CRAN R for Windows](https://cran.r-project.org/bin/windows/base/)
+   - [Microsoft R Open](https://mran.microsoft.com/open/)
+   - [CRAN R for Windows](https://cran.r-project.org/bin/windows/base/)
 
-    いずれも機能は同じですが、Microsoft R Open の場合、さらにハードウェア アクセラレータによる [Intel Math Kernel Library](https://software.intel.com/intel-mkl) の線形代数ライブラリの提供を利用できます。
+     いずれも機能は同じですが、Microsoft R Open の場合、さらにハードウェア アクセラレータによる [Intel Math Kernel Library](https://software.intel.com/intel-mkl) の線形代数ライブラリの提供を利用できます。
 
-1. [R Services インストーラー](https://aka.ms/rtvs-services)を実行し、プロンプトが表示された場合は再起動します。 インストーラーは次の処理を行います。
+2. [R Services インストーラー](https://aka.ms/rtvs-services)を実行し、プロンプトが表示された場合は再起動します。 インストーラーは次の処理を行います。
 
     - *%PROGRAMFILES%\R Tools for Visual Studio\1.0\\* でフォルダーを作成し、すべての必要なバイナリをコピーします。
     - `RHostBrokerService` と `RUserProfileService` をインストールし、自動起動するように構成します。
@@ -160,12 +160,12 @@ R コードを実行するには、次のようにリモート コンピュー�
 
 1. 次のいずれかをダウンロードしてインストールします。
 
-    - [Microsoft R Open](https://mran.microsoft.com/open/)
-    - [CRAN R for Windows](https://cran.r-project.org/bin/linux/ubuntu/)
+   - [Microsoft R Open](https://mran.microsoft.com/open/)
+   - [CRAN R for Windows](https://cran.r-project.org/bin/linux/ubuntu/)
 
-    いずれも機能は同じですが、Microsoft R Open の場合、さらにハードウェア アクセラレータによる [Intel Math Kernel Library](https://software.intel.com/intel-mkl) の線形代数ライブラリの提供を利用できます。
+     いずれも機能は同じですが、Microsoft R Open の場合、さらにハードウェア アクセラレータによる [Intel Math Kernel Library](https://software.intel.com/intel-mkl) の線形代数ライブラリの提供を利用できます。
 
-1. Ubuntu の物理コンピューター、Azure Ubuntu VM、Windows Subsystem for Linux (WSL)、Docker コンテナー (Azure Container Repository で実行されているものを含む) に関する、「[Remote R Service for Linux](setting-up-remote-r-service-on-linux.md)」 (Linux 用のリモート R サービス) の手順に従います。
+2. Ubuntu の物理コンピューター、Azure Ubuntu VM、Windows Subsystem for Linux (WSL)、Docker コンテナー (Azure Container Repository で実行されているものを含む) に関する、「[Remote R Service for Linux](setting-up-remote-r-service-on-linux.md)」 (Linux 用のリモート R サービス) の手順に従います。
 
 ## <a name="configure-r-services"></a>R Services の構成
 

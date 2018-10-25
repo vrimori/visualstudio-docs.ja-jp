@@ -1,7 +1,7 @@
 ---
 title: ジェネリック メソッドの単体テスト | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: ffc89814-a7df-44fc-aef5-dd3dfeb28a9b
 caps.latest.revision: 49
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 19e17718cdee01b4fec4b126072126d4ff9ee281
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3657c3ea41af2aa85177ff47a28797ef7f55cc41
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538659"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914399"
 ---
 # <a name="unit-tests-for-generic-methods"></a>ジェネリック メソッドの単体テスト
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ジェネリック メソッドの単体テスト](https://docs.microsoft.com/visualstudio/test/unit-tests-for-generic-methods)します。  
-  
 ジェネリック メソッドには、他のメソッドと同様に、単体テストを生成できます。詳細については、「[方法: 単体テストを作成して実行する](http://msdn.microsoft.com/en-us/5e0f43cf-5e51-48e2-9c98-0eb9324bdc48)」を参照してください。 次のセクションでは、ジェネリック メソッドの単体テストの作成に関する情報と例を示します。  
   
 ## <a name="type-arguments-and-type-constraints"></a>型引数と型制約  

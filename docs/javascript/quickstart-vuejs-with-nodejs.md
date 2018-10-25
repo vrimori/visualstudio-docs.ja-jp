@@ -1,7 +1,7 @@
 ---
 title: 'クイック スタート: Visual Studio を使用して初めての Vue.js アプリを作成する'
 description: このクイック スタートでは、Node.js Tools for Visual Studio を利用し、Visual Studio で Vue.js アプリを作成します
-ms.date: 11/15/2017
+ms.date: 09/24/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-nodejs
 ms.topic: quickstart
@@ -14,19 +14,19 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: cced69988b6f863380ac88ee27a8a963229f966a
-ms.sourcegitcommit: 7a11a094a353f2e2a2077ad863ca4c0fb97f7ec5
+ms.openlocfilehash: 3862f62439bd9b919d3c0534a8c2fe2d3c16fea9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39131909"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926619"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-vuejs-app"></a>クイック スタート: Visual Studio を使用して初めての Vue.js アプリを作成する
 
 ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、シンプルな Vue.js Web アプリケーションを作成して実行ます。 Visual Studio 2017 をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。
 
 > [!IMPORTANT]
-> この記事では Vue.js テンプレートを必要としますが、これは Visual Studio 2017 バージョン 15.8 Preview 3 以降でのみ使用できます。
+> この記事には、Visual Studio 2017 バージョン 15.8 以降で使用できる Vue.js テンプレートが必要です。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
@@ -64,13 +64,13 @@ ms.locfileid: "39131909"
 
      ![Vue.js ソリューション](../javascript/media/vuejs-solution.png)
 
-  - **[新しいプロジェクト]** ダイアログ ボックスに指定した名前が使用され、太字で強調表示されているのがあなたのプロジェクトです。 ディスク上では、このプロジェクトは、プロジェクト フォルダーの *.njsproj* ファイルに該当します。
+   - **[新しいプロジェクト]** ダイアログ ボックスに指定した名前が使用され、太字で強調表示されているのがあなたのプロジェクトです。 ディスク上では、このプロジェクトは、プロジェクト フォルダーの *.njsproj* ファイルに該当します。
 
-  - 最上位レベルにあるのは、ソリューションです。既定では、名前はプロジェクトと同じです。 ディスク上の *.sln* ファイルで表されるソリューションは、1 つ以上の関連プロジェクトのコンテナーです。
+   - 最上位レベルにあるのは、ソリューションです。既定では、名前はプロジェクトと同じです。 ディスク上の *.sln* ファイルで表されるソリューションは、1 つ以上の関連プロジェクトのコンテナーです。
 
-  - **npm** ノードには、インストールされているすべての npm パッケージが表示されます。 npm ノードを右クリックし、ダイアログ ボックスを使用して npm パッケージを検索し、インストールすることができます。
+   - **npm** ノードには、インストールされているすべての npm パッケージが表示されます。 npm ノードを右クリックし、ダイアログ ボックスを使用して npm パッケージを検索し、インストールすることができます。
 
-1. コマンド プロンプトから npm パッケージをインストールするか、Node.js コマンドを実行する場合は、プロジェクト ノードを右クリックし、**[ここでコマンド プロンプトを開く]** を選択します。
+2. コマンド プロンプトから npm パッケージをインストールするか、Node.js コマンドを実行する場合は、プロジェクト ノードを右クリックし、**[ここでコマンド プロンプトを開く]** を選択します。
 
 ## <a name="add-a-vue-file-to-the-project"></a>.vue ファイルをプロジェクトに追加する
 

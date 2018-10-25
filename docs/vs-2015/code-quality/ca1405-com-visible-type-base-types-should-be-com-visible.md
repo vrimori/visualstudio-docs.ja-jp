@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1405: COM から参照できる型の基本データ型は COM 参照可能である必要があります |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 1d912466c4823357f8614f22083ab2e1d93109fe
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: ee4c7a501a7c48118285ff37844af856cf7b4395
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589113"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49840510"
 ---
 # <a name="ca1405-com-visible-type-base-types-should-be-com-visible"></a>CA1405: COM 参照可能な型の基本型は COM 参照可能でなければなりません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1405: COM から参照できる型の基本型が COM 参照可能にする必要があります](https://docs.microsoft.com/visualstudio/code-quality/ca1405-com-visible-type-base-types-should-be-com-visible)します。
 
 |||
 |-|-|

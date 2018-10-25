@@ -1,7 +1,7 @@
 ---
 title: '方法: 標準のコード分析チェックイン ポリシーを作成または |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 31
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 9f4e834eb02c30bee0fedfa90ddb17d3fa766fb1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6821d218c22f2d83108205d8753fc2d5beac4f28
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544314"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939437"
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>方法: 標準のコード分析チェックイン ポリシーを作成または更新する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: を作成または更新プログラムの標準的なコード分析チェックイン ポリシー](https://docs.microsoft.com/visualstudio/code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies)します。  
-  
 コード分析チェックイン ポリシーを使用してチーム プロジェクト内のすべてのコード プロジェクトでコード分析を実行することを要求することができます。 コード分析を必要とすると、コード ベースにチェックインされているコードの品質を向上させることができます。  
   
 > [!NOTE]
@@ -37,11 +35,11 @@ ms.locfileid: "47544314"
   
  コード分析チェックイン ポリシーは、チーム プロジェクトの設定で設定され、チーム プロジェクト内の各コード プロジェクトに適用されます。 コード分析の実行は、コード プロジェクトのプロジェクト (.xxproj) ファイル内のコード プロジェクトに対して構成されます。 コード分析の実行は、ローカル コンピューターで実行されます。 ルールは、チーム プロジェクトの設定をコンピューターで実行する必要がありますコード分析チェックイン ポリシーを有効にするし、最後に編集した後にチェックインされるコード プロジェクト内のファイルをコンパイルする必要がありますには、少なくとも、コード分析の実行を含む、c変更が加えられました。  
   
--   マネージ コードを指定してチェックイン ポリシーを設定する、*ルール セット*コード分析規則のサブセットを格納しています。  
+- マネージ コードを指定してチェックイン ポリシーを設定する、*ルール セット*コード分析規則のサブセットを格納しています。  
   
--   C/C++ のコードでは、チェックイン ポリシーでは、すべてのコード分析規則を実行することが必要です。 チーム プロジェクト内の個々 のコード プロジェクトの特定のルールを無効にするプリプロセッサ ディレクティブを追加できます。  
+- C/C++ のコードでは、チェックイン ポリシーでは、すべてのコード分析規則を実行することが必要です。 チーム プロジェクト内の個々 のコード プロジェクトの特定のルールを無効にするプリプロセッサ ディレクティブを追加できます。  
   
- マネージ コードのチェックイン ポリシーを指定すると後、チーム メンバーは、チーム プロジェクトのポリシー設定をコード プロジェクト、コード分析設定を同期できます。  
+  マネージ コードのチェックイン ポリシーを指定すると後、チーム メンバーは、チーム プロジェクトのポリシー設定をコード プロジェクト、コード分析設定を同期できます。  
   
 ### <a name="to-open-the-check-in-policy-editor"></a>チェックイン ポリシー エディターを開く  
   

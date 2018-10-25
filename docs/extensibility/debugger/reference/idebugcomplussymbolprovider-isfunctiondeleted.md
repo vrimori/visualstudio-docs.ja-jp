@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::IsFunctionDeleted |Microsoft ドキュメント
+title: IDebugComPlusSymbolProvider::IsFunctionDeleted |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8e52c074b7243162aa80bae67923b0d61daae564
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 504fa6855ad8b1fb38428e6e7ec7b3ac9721f644
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31103891"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864258"
 ---
 # <a name="idebugcomplussymbolproviderisfunctiondeleted"></a>IDebugComPlusSymbolProvider::IsFunctionDeleted
 指定されたデバッグ アドレスで関数が削除されたことを決定します。  
@@ -39,13 +39,13 @@ int IsFunctionDeleted(
   
 #### <a name="parameters"></a>パラメーター  
  `pAddress`  
- [in]によって表されるデバッグ アドレス、 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)インターフェイスです。 このアドレスは、METHOD_ADDRESS を指定する必要があります。  
+ [in]によって表されるデバッグ アドレス、 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)インターフェイス。 このアドレスは、METHOD_ADDRESS を指定する必要があります。  
   
 ## <a name="return-value"></a>戻り値  
- 関数が削除された場合を返します`S_OK`です。 関数が存在する場合を返します`S_FALSE`です。  
+ 関数が削除された場合を返します`S_OK`します。 関数が存在する場合、返します`S_FALSE`します。  
   
 ## <a name="example"></a>例  
- 次の例に対して、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスです。  
+ 次の例では、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイス。  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::IsFunctionDeleted(  

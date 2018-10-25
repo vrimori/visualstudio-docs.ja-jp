@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: スマート タグの表示 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 10bb4f69-b259-41f0-b91a-69b04385d9a5
 caps.latest.revision: 31
 manager: douge
-ms.openlocfilehash: 15e02986012f186ce4bcb2fdcd6914396b2b597e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 459530726628819587a3c228910baa3b902ae865
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544951"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939099"
 ---
 # <a name="walkthrough-displaying-smarttags"></a>チュートリアル: スマート タグの表示
-スマート タグは非推奨とされており、代わって電球が使用されるようになりました。 参照してください[チュートリアル: Displaying Light Bulb Suggestions](../extensibility/walkthrough-displaying-light-bulb-suggestions.md)します。  
+スマート タグは非推奨とされており、代わって電球が使用されるようになりました。 「 [Walkthrough: Displaying Light Bulb Suggestions](../extensibility/walkthrough-displaying-light-bulb-suggestions.md)」を参照してください。  
   
  スマート タグは、一連の操作を表示するために展開されるテキスト上のタグです。 たとえば、Visual Basic や Visual C# のプロジェクトでは、変数名などの識別子の名前を変更すると、赤い線が単語の下に表示されます。 下線の上にポインターを移動すると、ポインターの近くにボタンが表示されます。 ボタンをクリックすると、 **"IsRead の名前を IsReady に変更する"** などの、提案されるアクションが表示されます。 操作をクリックすると、プロジェクトでの **IsRead** へのすべての参照が **IsReady**という名前に変更されます。  
   
- サブクラス化してスマート タグを実装するにはスマート タグには、エディターの IntelliSense 実装の一部が、<xref:Microsoft.VisualStudio.Language.Intellisense.SmartTag>を実装して、<xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601>インターフェイスと<xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider>インターフェイス。  
+ スマート タグはエディターの IntelliSense 実装の一部ですが、<xref:Microsoft.VisualStudio.Language.Intellisense.SmartTag> をサブクラス化してから <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> インターフェイスおよび <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider> インターフェイスを実装することで、スマート タグを実装できます。  
   
 > [!NOTE]
 >  その他のタグも、同様の方法で実装できます。  
@@ -65,17 +65,17 @@ ms.locfileid: "47544951"
      [!code-csharp[VSSDKSmartTagTest#1](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#1)]
      [!code-vb[VSSDKSmartTagTest#1](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#1)]  
   
-3.  という名前のクラスを追加`TestSmartTag`から継承する<xref:Microsoft.VisualStudio.Language.Intellisense.SmartTag>します。  
+3.  <xref:Microsoft.VisualStudio.Language.Intellisense.SmartTag> から継承するクラスを `TestSmartTag` という名前で追加します。  
   
      [!code-csharp[VSSDKSmartTagTest#2](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#2)]
      [!code-vb[VSSDKSmartTagTest#2](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#2)]  
   
-4.  このクラスで基底コンス トラクターを呼び出すコンス トラクターを追加、<xref:Microsoft.VisualStudio.Language.Intellisense.SmartTagType>の<xref:Microsoft.VisualStudio.Language.Intellisense.SmartTagType>単語の最初の文字の下に表示される青い線が発生します。 (を使用する場合<xref:Microsoft.VisualStudio.Language.Intellisense.SmartTagType>、赤い線は、最後の文字の単語の下に表示されます)。  
+4.  <xref:Microsoft.VisualStudio.Language.Intellisense.SmartTagType> の <xref:Microsoft.VisualStudio.Language.Intellisense.SmartTagType> で基底コンストラクターを呼び出す、このクラスのコンストラクターを追加します。これにより、単語の最初の文字の下に青い線が表示されます (<xref:Microsoft.VisualStudio.Language.Intellisense.SmartTagType> を使用すると、単語の最後の文字の下に赤い線が表示されます)。  
   
      [!code-csharp[VSSDKSmartTagTest#3](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#3)]
      [!code-vb[VSSDKSmartTagTest#3](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#3)]  
   
-5.  という名前のクラスを追加`TestSmartTagger`から継承する<xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601>型の`TestSmartTag`、実装と<xref:System.IDisposable>します。  
+5.  型 `TestSmartTag` の <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> から継承し、<xref:System.IDisposable> を実装するクラスを `TestSmartTagger` という名前で追加します。  
   
      [!code-csharp[VSSDKSmartTagTest#4](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#4)]
      [!code-vb[VSSDKSmartTagTest#4](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#4)]  
@@ -85,12 +85,12 @@ ms.locfileid: "47544951"
      [!code-csharp[VSSDKSmartTagTest#5](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#5)]
      [!code-vb[VSSDKSmartTagTest#5](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#5)]  
   
-7.  プライベート フィールドを設定し、サブスクライブするコンス トラクターを追加、<xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged>イベント。  
+7.  プライベート フィールドを設定し、<xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> イベントを購読するコンストラクターを追加します。  
   
      [!code-csharp[VSSDKSmartTagTest#6](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#6)]
      [!code-vb[VSSDKSmartTagTest#6](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#6)]  
   
-8.  実装<xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A>現在の単語のタグが作成されるようにします。 (このメソッドは、後述するプライベート メソッド `GetSmartTagActions` も呼び出します)。  
+8.  現在の単語に対してタグが作成されるように <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> を実装します (このメソッドは、後述するプライベート メソッド `GetSmartTagActions` も呼び出します)。  
   
      [!code-csharp[VSSDKSmartTagTest#7](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#7)]
      [!code-vb[VSSDKSmartTagTest#7](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#7)]  
@@ -105,12 +105,12 @@ ms.locfileid: "47544951"
      [!code-csharp[VSSDKSmartTagTest#9](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#9)]
      [!code-vb[VSSDKSmartTagTest#9](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#9)]  
   
-11. 実装、`OnLayoutChanged`発生するイベント ハンドラー、`TagsChanged`イベント、<xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A>呼び出されます。  
+11. `TagsChanged` イベントが発生して <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> が呼び出されるように、`OnLayoutChanged` イベント ハンドラーを実装します。  
   
      [!code-csharp[VSSDKSmartTagTest#10](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#10)]
      [!code-vb[VSSDKSmartTagTest#10](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#10)]  
   
-12. 実装、<xref:System.IDisposable.Dispose%2A>購読を中止するためのメソッド、<xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged>イベント。  
+12. <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> イベントの購読を中止するようにメソッド <xref:System.IDisposable.Dispose%2A> を実装します。  
   
      [!code-csharp[VSSDKSmartTagTest#11](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#11)]
      [!code-vb[VSSDKSmartTagTest#11](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#11)]  
@@ -119,12 +119,12 @@ ms.locfileid: "47544951"
   
 #### <a name="to-implement-the-smart-tag-tagger-provider"></a>スマート タグ タガー プロバイダーを実装するには  
   
-1.  という名前のクラスを追加`TestSmartTagTaggerProvider`から継承する<xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider>します。 エクスポートすると、 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text"の<xref:Microsoft.VisualStudio.Utilities.OrderAttribute>の Before ="default"と<xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute>の<xref:Microsoft.VisualStudio.Language.Intellisense.SmartTag>。  
+1.  <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider> から継承するクラスを `TestSmartTagTaggerProvider` という名前で追加します。 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> を "text"、<xref:Microsoft.VisualStudio.Utilities.OrderAttribute> を Before="default"、および <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute> を <xref:Microsoft.VisualStudio.Language.Intellisense.SmartTag> にして、そのクラスをエクスポートします。  
   
      [!code-csharp[VSSDKSmartTagTest#12](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#12)]
      [!code-vb[VSSDKSmartTagTest#12](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#12)]  
   
-2.  インポート、<xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>プロパティとして。  
+2.  <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> をプロパティとしてインポートします。  
   
      [!code-csharp[VSSDKSmartTagTest#13](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#13)]
      [!code-vb[VSSDKSmartTagTest#13](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#13)]  
@@ -138,35 +138,35 @@ ms.locfileid: "47544951"
   
 #### <a name="to-implement-smart-tag-actions"></a>スマート タグ操作を実装するには  
   
-1.  2 つのクラスを、1 つは `UpperCaseSmartTagAction` という名前で、もう 1 つは `LowerCaseSmartTagAction`という名前で作成します。 これらのクラスは、どちらも <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagAction> を実装しています。  
+1. 2 つのクラスを、1 つは `UpperCaseSmartTagAction` という名前で、もう 1 つは `LowerCaseSmartTagAction` という名前で作成します。 どちらのクラスも、<xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagAction> を実装します。  
   
-     [!code-csharp[VSSDKSmartTagTest#15](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#15)]
-     [!code-vb[VSSDKSmartTagTest#15](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#15)]  
+    [!code-csharp[VSSDKSmartTagTest#15](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#15)]
+    [!code-vb[VSSDKSmartTagTest#15](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#15)]  
   
-     [!code-csharp[VSSDKSmartTagTest#16](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#16)]
-     [!code-vb[VSSDKSmartTagTest#16](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#16)]  
+    [!code-csharp[VSSDKSmartTagTest#16](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#16)]
+    [!code-vb[VSSDKSmartTagTest#16](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#16)]  
   
- 両方のクラスは似ていますが呼び出される<xref:System.String.ToUpper%2A>およびその他の呼び出し<xref:System.String.ToLower%2A>します。 次の手順では大文字操作クラスのみを対象にしていますが、両方のクラスを実装する必要があります。 小文字操作を実装するためのパターンとして、大文字操作を実装するための手順を使用します。  
+   両クラスは似ていますが、一方は <xref:System.String.ToUpper%2A> を呼び出し、他方は <xref:System.String.ToLower%2A> を呼び出します。 次の手順では大文字操作クラスのみを対象にしていますが、両方のクラスを実装する必要があります。 小文字操作を実装するためのパターンとして、大文字操作を実装するための手順を使用します。  
   
-1.  一連のプライベート フィールドを宣言します。  
+2. 一連のプライベート フィールドを宣言します。  
   
-     [!code-csharp[VSSDKSmartTagTest#17](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#17)]
-     [!code-vb[VSSDKSmartTagTest#17](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#17)]  
+    [!code-csharp[VSSDKSmartTagTest#17](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#17)]
+    [!code-vb[VSSDKSmartTagTest#17](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#17)]  
   
-2.  フィールドを設定するコンストラクターを追加します。  
+3. フィールドを設定するコンストラクターを追加します。  
   
-     [!code-csharp[VSSDKSmartTagTest#18](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#18)]
-     [!code-vb[VSSDKSmartTagTest#18](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#18)]  
+    [!code-csharp[VSSDKSmartTagTest#18](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#18)]
+    [!code-vb[VSSDKSmartTagTest#18](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#18)]  
   
-3.  次のようにプロパティを設定します。  
+4. 次のようにプロパティを設定します。  
   
-     [!code-csharp[VSSDKSmartTagTest#19](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#19)]
-     [!code-vb[VSSDKSmartTagTest#19](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#19)]  
+    [!code-csharp[VSSDKSmartTagTest#19](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#19)]
+    [!code-vb[VSSDKSmartTagTest#19](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#19)]  
   
-4.  実装、<xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagAction.Invoke%2A>範囲内のテキストを等価な大文字に置き換えることによりメソッド。  
+5. 範囲内のテキストを等価な大文字に置き換えることで、メソッド <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagAction.Invoke%2A> を実装します。  
   
-     [!code-csharp[VSSDKSmartTagTest#20](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#20)]
-     [!code-vb[VSSDKSmartTagTest#20](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#20)]  
+    [!code-csharp[VSSDKSmartTagTest#20](../snippets/csharp/VS_Snippets_VSSDK/vssdksmarttagtest/cs/testsmarttag.cs#20)]
+    [!code-vb[VSSDKSmartTagTest#20](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksmarttagtest/vb/testsmarttag.vb#20)]  
   
 ## <a name="building-and-testing-the-code"></a>コードのビルドとテスト  
  このコードをテストするには、SmartTagTest ソリューションをビルドし、実験用インスタンスで実行します。  

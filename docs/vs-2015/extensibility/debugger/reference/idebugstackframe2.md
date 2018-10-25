@@ -1,7 +1,7 @@
 ---
 title: IDebugStackFrame2 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: bd212a6a-dcc6-4756-a77a-e8dfda38b104
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 57544c6ec8d329886d12bdcf2e8c622f7da53e4e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4adb58bc715b4cf3d287ac31550e01448d074304
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537831"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49252565"
 ---
 # <a name="idebugstackframe2"></a>IDebugStackFrame2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugStackFrame2](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugstackframe2)します。  
-  
 このインターフェイスは、特定のスレッドのコール スタックの 1 つのスタック フレームを表します。  
   
 ## <a name="syntax"></a>構文  

@@ -1,7 +1,7 @@
 ---
 title: 'チェックリスト: 新しいプロジェクトの種類を作成する |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 29eb9c3b-1933-4741-aa85-65a33f0825ba
 caps.latest.revision: 24
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f73462d32e0b047e0b2427646cfc5a3709c5e78a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8047ea1aeb6a163a627f9198ca3f6731419949ae
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534100"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49285988"
 ---
 # <a name="checklist-creating-new-project-types"></a>チェック リスト: 新しいプロジェクト タイプの作成
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チェックリスト: 新しいプロジェクトの種類を作成する](https://docs.microsoft.com/visualstudio/extensibility/internals/checklist-creating-new-project-types)します。  
-  
 新しいプロジェクトの種類を作成するいくつかのタスクを完了する必要があります。 次のチェックリストでは、これらのタスクのガイドを提供します。  
   
 1.  新しいプロジェクトの種類の機能を設計します。 詳細については、次を参照してください。[プロジェクトの種類の設計に関する決定事項](../../extensibility/internals/project-type-design-decisions.md)します。  
@@ -58,11 +56,11 @@ ms.locfileid: "47534100"
   
     -   派生したクラスのオブジェクト、または`IDispatch`自動化のために使用できます。  
   
-    -   XML コマンド テーブル (.vsct) ファイル。 詳細については、次を参照してください。 [Visual Studio Command Table (します。Vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)します。  
+    -   XML コマンド テーブル (.vsct) ファイル。 詳細については、「 [Visual Studio Command Table (.Vsct) Files](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)」を参照してください。  
   
 6.  テスト、デバッグ、およびプロジェクトの種類を開始します。  
   
-7.  プロジェクトを表示、**プロジェクト**のタブ、**参照の追加** ダイアログ ボックスを設定して`VARIANT_TRUE`の値として`VSHPROPID_ShowProjInSolutionPage`します。 詳細については、<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> および <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> を参照してください。  
+7.  プロジェクトを表示、**プロジェクト**のタブ、**参照の追加** ダイアログ ボックスを設定して`VARIANT_TRUE`の値として`VSHPROPID_ShowProjInSolutionPage`します。 詳細については、次のトピックを参照してください。 <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> および <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>.  
   
 8.  Vspackage をインストールするための Microsoft インストーラー (.msi) ファイルを作成します。 詳細については、次を参照してください。 [Windows インストーラーで Vspackage をインストールする](../../extensibility/internals/installing-vspackages-with-windows-installer.md)、[プロジェクトの種類を登録する](../../extensibility/internals/registering-a-project-type.md)、および[Vspackage](../../extensibility/internals/vspackages.md)します。  
   

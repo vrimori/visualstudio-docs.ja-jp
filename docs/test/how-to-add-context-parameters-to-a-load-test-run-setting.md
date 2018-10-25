@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: d6152d75d28e5c6468ccc0a484e2eae3a25214d9
-ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
+ms.openlocfilehash: 63cf3e71ded582b3406957ccb423c8dbf47768ba
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203755"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905902"
 ---
 # <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>方法: ロード テストの実行設定にコンテキスト パラメーターを追加する
 
@@ -36,19 +36,19 @@ Webserver1 コンテキスト パラメーターの値を `http://CorporateStagi
 
 また、別々のロード テストの実行設定に同じ名前を使用して、コンテキスト パラメーターにさまざまな値を割り当てることにより、さまざまな環境を使用してロード テストを実行できます。
 
--   Corporate Staging Web Server の実行設定: `WebServer1=http://CorporateStagingWebServer` という名前のコンテキスト パラメーター
+- Corporate Staging Web Server の実行設定: `WebServer1=http://CorporateStagingWebServer` という名前のコンテキスト パラメーター
 
--   Corporate Production Web Server の実行設定: `WebServer1=http://CorporateProductionWebServer` という名前のコンテキスト パラメーター
+- Corporate Production Web Server の実行設定: `WebServer1=http://CorporateProductionWebServer` という名前のコンテキスト パラメーター
 
- **コマンド ラインからの実行設定の変更**
+  **コマンド ラインからの実行設定の変更**
 
- コンテキスト パラメーターの手法を活用するためにコマンド ラインから別の実行設定を使用する場合は、次のコマンドを使用します。
+  コンテキスト パラメーターの手法を活用するためにコマンド ラインから別の実行設定を使用する場合は、次のコマンドを使用します。
 
- **Set Test.UseRunSetting= CorporateStagingWebServer**
+  **Set Test.UseRunSetting= CorporateStagingWebServer**
 
- および
+  および
 
- **mstest /testcontainer:loadtest1.loadtest**
+  **mstest /testcontainer:loadtest1.loadtest**
 
 ## <a name="to-add-a-context-parameter-to-a-run-setting"></a>コンテキスト パラメーターを実行設定に追加するには
 

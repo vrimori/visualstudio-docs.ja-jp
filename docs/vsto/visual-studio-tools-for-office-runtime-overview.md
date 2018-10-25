@@ -29,21 +29,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 219ffa4a7a9c7d32348a262ea49c6f66d20e1c7f
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: b169242b9828f47f1ecfb87ebf02a9f86234699f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672806"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836997"
 ---
 # <a name="visual-studio-tools-for-office-runtime-overview"></a>Visual Studio のツール for Office runtime の概要
   Visual Studio で Microsoft Office developer tools を使用して作成されたソリューションを実行するには、するには、エンドユーザーのコンピューターに、Visual Studio 2010 Tools for Office ランタイムをインストールする必要があります。 詳細については、次を参照してください。[方法: Visual Studio Tools for Office ランタイム再頒布可能パッケージをインストール](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)します。 Visual Studio 2010 Tools for Office ランタイムは、2 つの主要なコンポーネントで構成されます。  
   
--   .NET Framework 用の Office 拡張機能。 これらのコンポーネントは、ソリューションと Microsoft Office アプリケーションの間の通信レイヤーとなるマネージド アセンブリです。 詳細については、次を参照してください。 [.NET Framework 用の Office 拡張機能を理解する](#officeextensions)します。  
+- .NET Framework 用の Office 拡張機能。 これらのコンポーネントは、ソリューションと Microsoft Office アプリケーションの間の通信レイヤーとなるマネージド アセンブリです。 詳細については、次を参照してください。 [.NET Framework 用の Office 拡張機能を理解する](#officeextensions)します。  
   
--   Office ソリューション ローダー。 このコンポーネントは、Office アプリケーションがランタイムおよびソリューションの読み込みに使用する一連のアンマネージ DLL です。 詳細については、次を参照してください。 [Office ソリューション ローダーについて理解](#UnmanagedLoader)します。  
+- Office ソリューション ローダー。 このコンポーネントは、Office アプリケーションがランタイムおよびソリューションの読み込みに使用する一連のアンマネージ DLL です。 詳細については、次を参照してください。 [Office ソリューション ローダーについて理解](#UnmanagedLoader)します。  
   
- ランタイムをインストールする方法はいくつかあります。 ランタイムをインストールするときには、コンピューターの構成に応じて異なるランタイム コンポーネントがインストールされます。 詳細については、次を参照してください。 [Visual Studio Tools for Office runtime のインストール シナリオ](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md)します。  
+  ランタイムをインストールする方法はいくつかあります。 ランタイムをインストールするときには、コンピューターの構成に応じて異なるランタイム コンポーネントがインストールされます。 詳細については、次を参照してください。 [Visual Studio Tools for Office runtime のインストール シナリオ](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md)します。  
   
 ##  <a name="officeextensions"></a> .NET Framework 用の Office 拡張機能を理解します。  
  Visual Studio 2010 Tools for Office ランタイムには、.NET Framework 3.5 用の Office 拡張機能が含まれています、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]以降。 .NET Framework の各バージョンを対象とするソリューションでは、そのバージョンに適した拡張機能が使用されます。  
@@ -65,17 +65,17 @@ ms.locfileid: "35672806"
   
  既定では、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とする Office プロジェクトを作成するときに、型の等価性の機能は有効になりません。 この機能を有効にするには、プロジェクト内の次のアセンブリ参照の **相互運用型の埋め込み** プロパティを **True**に設定します。  
   
--   Microsoft.Office.Tools.dll  
+- Microsoft.Office.Tools.dll  
   
--   Microsoft.Office.Tools.Common.dll  
+- Microsoft.Office.Tools.Common.dll  
   
--   Microsoft.Office.Tools.Excel.dll  
+- Microsoft.Office.Tools.Excel.dll  
   
--   Microsoft.Office.Tools.Outlook.dll  
+- Microsoft.Office.Tools.Outlook.dll  
   
--   Microsoft.Office.Tools.Word.dll  
+- Microsoft.Office.Tools.Word.dll  
   
- この変更を加えると、プロジェクトをビルドするときに、プロジェクトが使用するすべてのランタイム型の型情報が、ソリューション アセンブリに埋め込まれます。 参照先のアセンブリで型情報ではなく、この埋め込み型情報は、実行時に、ソリューションによって使用されます。  
+  この変更を加えると、プロジェクトをビルドするときに、プロジェクトが使用するすべてのランタイム型の型情報が、ソリューション アセンブリに埋め込まれます。 参照先のアセンブリで型情報ではなく、この埋め込み型情報は、実行時に、ソリューションによって使用されます。  
   
 ##  <a name="UnmanagedLoader"></a> Office ソリューション ローダーを理解します。  
  Visual Studio Tools for Office Runtime には、Office アプリケーションがランタイムおよび Office ソリューションの読み込みに使用する複数のアンマネージ DLL が含まれています。 これらの DLL を直接操作する必要が生じることはありませんが、その目的を把握しておくと、Office ソリューションのアーキテクチャについて理解を深めるうえで役に立ちます。  
@@ -90,17 +90,17 @@ ms.locfileid: "35672806"
 ### <a name="vstoloaderdll"></a>VSTOLoader.dll  
  後*VSTOEE.dll*の適切なバージョンを読み込、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]、 *VSTOLoader.dll*ソリューション アセンブリの読み込みに必要な作業のほとんどを実行します。 *VSTOLoader.dll*いくつかの操作します。  
   
--   ソリューション アセンブリごとにアプリケーション ドメインを作成します。  
+- ソリューション アセンブリごとにアプリケーション ドメインを作成します。  
   
--   一連のセキュリティ チェックによって、ソリューション アセンブリに実行のアクセス許可があることを確認します。  
+- 一連のセキュリティ チェックによって、ソリューション アセンブリに実行のアクセス許可があることを確認します。  
   
--   ソリューションに必要な .NET Framework 用のバージョンの Office 拡張機能を読み込みます。  
+- ソリューションに必要な .NET Framework 用のバージョンの Office 拡張機能を読み込みます。  
   
- *VSTOLoader.dll*も VSTO アドインに固有のいくつかの処理を行います。  
+  *VSTOLoader.dll*も VSTO アドインに固有のいくつかの処理を行います。  
   
--   <xref:Extensibility.IDTExtensibility2> インターフェイスを実装します。 <xref:Extensibility.IDTExtensibility2> は、Microsoft Office アプリケーションのすべての VSTO アドインが実装する必要のある COM インターフェイスです。 このインターフェイスには、アプリケーションが VSTO アドインと通信するために呼び出すメソッドが定義されています。  
+- <xref:Extensibility.IDTExtensibility2> インターフェイスを実装します。 <xref:Extensibility.IDTExtensibility2> は、Microsoft Office アプリケーションのすべての VSTO アドインが実装する必要のある COM インターフェイスです。 このインターフェイスには、アプリケーションが VSTO アドインと通信するために呼び出すメソッドが定義されています。  
   
--   IManagedAddin インターフェイスを実装します。 このインターフェイスは、Office アプリケーションで VSTO アドインの読み込みに使用されます。詳細については、次を参照してください。 [IManagedAddin インターフェイス](../vsto/imanagedaddin-interface.md)します。  
+- IManagedAddin インターフェイスを実装します。 このインターフェイスは、Office アプリケーションで VSTO アドインの読み込みに使用されます。詳細については、次を参照してください。 [IManagedAddin インターフェイス](../vsto/imanagedaddin-interface.md)します。  
   
 ## <a name="understand-the-32-bit-and-64-bit-versions-of-the-runtime"></a>32 ビットおよび 64 ビット バージョンのランタイムを理解します。  
  Visual Studio 2010 Tools for Office ランタイムの別の 64 ビットおよび 32 ビット バージョンがあります。 ランタイムのこれらのバージョンは、64 ビット エディションおよび 32 ビット エディションの Office でソリューションを実行するのに使用されます。 次の表は、Windows と Office のそれぞれの組み合わせで必要とされる、ランタイムのバージョンを示しています。  
@@ -123,7 +123,7 @@ ms.locfileid: "35672806"
  [Visual Studio Tools for Office ランタイムのアセンブリ](../vsto/assemblies-in-the-visual-studio-tools-for-office-runtime.md)   
  [Visual Studio での Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)   
  [ドキュメント レベルのカスタマイズのアーキテクチャ](../vsto/architecture-of-document-level-customizations.md)   
- [VSTO アドインのアーキテクチャ](../vsto/architecture-of-vsto-add-ins.md)   
+ [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)   
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [アップグレードし、Office ソリューションの移行](../vsto/upgrading-and-migrating-office-solutions.md)  
   

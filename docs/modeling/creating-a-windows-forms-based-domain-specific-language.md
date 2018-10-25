@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: f8034ae225707ec6030daba39ed09bab3bd161c4
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 01b2b906d514d8fd9042c1046ea2481faee39499
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859524"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926684"
 ---
 # <a name="creating-a-windows-forms-based-domain-specific-language"></a>Windows フォームに基づくドメイン固有言語の作成
 DSL 図を使用する代わりに、ドメイン固有言語 (DSL) モデルの状態を表示するのに Windows フォームを使用することができます。 ここでは、Visual Studio Visualization and Modeling SDK を使用して、DSL への Windows フォームのバインドを示します。
@@ -26,30 +26,32 @@ DSL 図を使用する代わりに、ドメイン固有言語 (DSL) モデルの
 
 #### <a name="to-create-a-minimal-winforms-dsl"></a>最小限の WinForms DSL を作成するには
 
-1.  DSL を作成、**最小 WinForm デザイナー**テンプレート。
+1. DSL を作成、**最小 WinForm デザイナー**テンプレート。
 
-     このチュートリアルでは、次の名前が想定しています。
+    このチュートリアルでは、次の名前が想定しています。
 
-    |||
-    |-|-|
-    |ソリューションと DSL 名|FarmApp|
-    |名前空間|Company.FarmApp|
 
-2.  テンプレートに用意された最初の例を試してみる。
+   | | |
+   |-|-|
+   | ソリューションと DSL 名 | FarmApp |
+   | 名前空間 | Company.FarmApp |
 
-    1.  すべてのテンプレートを変換します。
 
-    2.  サンプルのビルドおよび実行 (**CTRL + F5**)。
+2. テンプレートに用意された最初の例を試してみる。
 
-    3.  Visual Studio の実験用インスタンスを開き、`Sample`デバッグ プロジェクト ファイル。
+   1.  すべてのテンプレートを変換します。
 
-         Windows フォーム コントロールに表示されることに注意してください。
+   2.  サンプルのビルドおよび実行 (**CTRL + F5**)。
 
-         エクスプ ローラーで表示されるモデルの要素を確認することもできます。
+   3.  Visual Studio の実験用インスタンスを開き、`Sample`デバッグ プロジェクト ファイル。
 
-         フォームまたはエクスプ ローラーで、いくつかの要素を追加し、その他のディスプレイに表示されることに注意してください。
+        Windows フォーム コントロールに表示されることに注意してください。
 
- Visual Studio のメイン インスタンスでは、DSL ソリューションについては、次の点に注意してください。
+        エクスプ ローラーで表示されるモデルの要素を確認することもできます。
+
+        フォームまたはエクスプ ローラーで、いくつかの要素を追加し、その他のディスプレイに表示されることに注意してください。
+
+   Visual Studio のメイン インスタンスでは、DSL ソリューションについては、次の点に注意してください。
 
 -   `DslDefinition.dsl` ダイアグラムの要素が含まれない。 この DSL のインスタンス モデルを表示する DSL ダイアグラム使用しないためにです。 代わりに、Windows フォーム、モデルにバインドして、フォームでの要素、モデルが表示されます。
 
@@ -132,30 +134,30 @@ DSL 図を使用する代わりに、ドメイン固有言語 (DSL) モデルの
 
 #### <a name="to-connect-your-model-to-a-form"></a>フォームに、モデルを接続するには
 
-1.  **UI**プロジェクトで、既存のすべての .cs ファイルを削除します。
+1. **UI**プロジェクトで、既存のすべての .cs ファイルを削除します。
 
-2.  新しい追加**ユーザー コントロール**という名前のファイル`FarmControl`を**UI**プロジェクト。
+2. 新しい追加**ユーザー コントロール**という名前のファイル`FarmControl`を**UI**プロジェクト。
 
-3.  **データソース**ウィンドウで、ドロップダウン メニューで **ファーム**、選択**詳細**。
+3. **データソース**ウィンドウで、ドロップダウン メニューで **ファーム**、選択**詳細**。
 
-     その他のプロパティの既定の設定のままにします。
+    その他のプロパティの既定の設定のままにします。
 
-4.  FarmControl.cs をデザイン ビューで開きます。
+4. FarmControl.cs をデザイン ビューで開きます。
 
-     ドラッグ**ファーム**FarmControl 上にデータ ソース ウィンドウから。
+    ドラッグ**ファーム**FarmControl 上にデータ ソース ウィンドウから。
 
-     コントロールのセットが表示されたら、各プロパティのいずれか。 リレーションシップのプロパティでは、コントロールは生成されません。
+    コントロールのセットが表示されたら、各プロパティのいずれか。 リレーションシップのプロパティでは、コントロールは生成されません。
 
-5.  削除**farmBindingNavigator**します。 これはでも自動的に生成されます、`FarmControl`は、デザイナーにこのアプリケーションに適していません。
+5. 削除**farmBindingNavigator**します。 これはでも自動的に生成されます、`FarmControl`は、デザイナーにこのアプリケーションに適していません。
 
-6.  2 つのインスタンスを作成して、ツールボックスを使用して**DataGridView**、という名前を付けます`AnimalGridView`と`FieldGridView`します。
+6. 2 つのインスタンスを作成して、ツールボックスを使用して**DataGridView**、という名前を付けます`AnimalGridView`と`FieldGridView`します。
 
-    > [!NOTE]
-    >  代替の手順は、コントロールにデータ ソース ウィンドウから動物とフィールドの項目をドラッグすることです。 このアクションは、データ グリッドとグリッド ビューとデータ ソース間のバインドに自動的に作成します。 ただし、このバインディングは、Dsl は正しく機能しません。 データ グリッドとバインドを作成することをお勧めそのため手動でします。
+   > [!NOTE]
+   >  代替の手順は、コントロールにデータ ソース ウィンドウから動物とフィールドの項目をドラッグすることです。 このアクションは、データ グリッドとグリッド ビューとデータ ソース間のバインドに自動的に作成します。 ただし、このバインディングは、Dsl は正しく機能しません。 データ グリッドとバインドを作成することをお勧めそのため手動でします。
 
-7.  ツールボックスが含まれていない場合、 **ModelingBindingSource**ツールで追加します。 ショートカット メニューで、**データ** タブで、選択**アイテムの選択**します。 **ツールボックス アイテムの選択**ダイアログ ボックスで、 **ModelingBindingSource**から、 **.NET Framework タブ**します。
+7. ツールボックスが含まれていない場合、 **ModelingBindingSource**ツールで追加します。 ショートカット メニューで、**データ** タブで、選択**アイテムの選択**します。 **ツールボックス アイテムの選択**ダイアログ ボックスで、 **ModelingBindingSource**から、 **.NET Framework タブ**します。
 
-8.  2 つのインスタンスを作成して、ツールボックスを使用して**ModelingBindingSource**、という名前を付けます`AnimalBinding`と`FieldBinding`します。
+8. 2 つのインスタンスを作成して、ツールボックスを使用して**ModelingBindingSource**、という名前を付けます`AnimalBinding`と`FieldBinding`します。
 
 9. 設定、 **DataSource**の各プロパティ**ModelingBindingSource**に**farmBindingSource**します。
 
@@ -165,15 +167,15 @@ DSL 図を使用する代わりに、ドメイン固有言語 (DSL) モデルの
 
 11. 任意で、ファームのコントロールのレイアウトを調整します。
 
- **ModelingBindingSource** Dsl に固有のいくつかの機能を実行するアダプターします。
+    **ModelingBindingSource** Dsl に固有のいくつかの機能を実行するアダプターします。
 
--   VMSDK ストアのトランザクションで更新プログラムをラップします。
+- VMSDK ストアのトランザクションで更新プログラムをラップします。
 
-     たとえば、ユーザーは、データ ビューのグリッドから行を削除、ときに標準バインディングになりますトランザクション例外。
+   たとえば、ユーザーは、データ ビューのグリッドから行を削除、ときに標準バインディングになりますトランザクション例外。
 
--   ユーザーは、行を選択するときにデータ グリッドの行ではなく、対応するモデル要素のプロパティが [プロパティ] ウィンドウに表示されますになります。
+- ユーザーは、行を選択するときにデータ グリッドの行ではなく、対応するモデル要素のプロパティが [プロパティ] ウィンドウに表示されますになります。
 
- ![DslWpf4](../modeling/media/dslwpf4.png)データ ソースとビュー間のリンクのスキーマ。
+  ![DslWpf4](../modeling/media/dslwpf4.png)データ ソースとビュー間のリンクのスキーマ。
 
 #### <a name="to-complete-the-bindings-to-the-dsl"></a>DSL へのバインドを完了するには
 
@@ -247,62 +249,60 @@ DSL 図を使用する代わりに、ドメイン固有言語 (DSL) モデルの
 
 #### <a name="to-provide-add-buttons"></a>追加ボタンを提供するには
 
-1.  FarmControl.cs のデザイン ビューで、ツールボックスを使用して、フォームにボタンを作成します。
+1. FarmControl.cs のデザイン ビューで、ツールボックスを使用して、フォームにボタンを作成します。
 
-     たとえば、名前と、ボタンのテキストを編集`New Sheep`します。
+    たとえば、名前と、ボタンのテキストを編集`New Sheep`します。
 
-2.  (たとえばをダブルクリックして)、ボタンの背後にあるコードを開きます。
+2. (たとえばをダブルクリックして)、ボタンの背後にあるコードを開きます。
 
-     次のように編集します。
+    次のように編集します。
 
-    ```csharp
-    private void NewSheepButton_Click(object sender, EventArgs e)
-    {
-      using (Transaction t = farm.Store.TransactionManager.BeginTransaction("Add sheep"))
-      {
-        elementOperations.MergeElementGroup(farm,
-          new ElementGroup(new Sheep(farm.Partition)));
-        t.Commit();
-      }
-    }
+   ```csharp
+   private void NewSheepButton_Click(object sender, EventArgs e)
+   {
+     using (Transaction t = farm.Store.TransactionManager.BeginTransaction("Add sheep"))
+     {
+       elementOperations.MergeElementGroup(farm,
+         new ElementGroup(new Sheep(farm.Partition)));
+       t.Commit();
+     }
+   }
 
-    // The following code is shared with other add buttons:
-    private ElementOperations operationsCache = null;
-    private ElementOperations elementOperations
-    {
-      get
-      {
-        if (operationsCache == null)
-        {
-          operationsCache = new ElementOperations(farm.Store, farm.Partition);
-        }
-        return operationsCache;
-      }
-    }
-    private Farm farm
-    {
-      get { return this.farmBindingSource.DataSource as Farm; }
-    }
+   // The following code is shared with other add buttons:
+   private ElementOperations operationsCache = null;
+   private ElementOperations elementOperations
+   {
+     get
+     {
+       if (operationsCache == null)
+       {
+         operationsCache = new ElementOperations(farm.Store, farm.Partition);
+       }
+       return operationsCache;
+     }
+   }
+   private Farm farm
+   {
+     get { return this.farmBindingSource.DataSource as Farm; }
+   }
+   ```
 
-    ```
+    また、次のディレクティブを挿入する必要があります。
 
-     また、次のディレクティブを挿入する必要があります。
+   ```csharp
 
-    ```csharp
+   using Microsoft.VisualStudio.Modeling;
+   ```
 
-    using Microsoft.VisualStudio.Modeling;
+3. したとフィールドの場合と同様のボタンを追加します。
 
-    ```
+4. ソリューションをビルドして実行します。
 
-3.  したとフィールドの場合と同様のボタンを追加します。
+5. 新しいボタンが項目を追加することを確認します。 FarmApp エクスプ ローラーで、適切なデータ グリッド ビューでは、新しい項目が表示されます。
 
-4.  ソリューションをビルドして実行します。
+    データ グリッド ビューで要素の名前を編集する必要があります。 そこから削除することもできます。
 
-5.  新しいボタンが項目を追加することを確認します。 FarmApp エクスプ ローラーで、適切なデータ グリッド ビューでは、新しい項目が表示されます。
-
-     データ グリッド ビューで要素の名前を編集する必要があります。 そこから削除することもできます。
-
- ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png)
+   ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png)
 
 ### <a name="about-the-code-to-add-an-element"></a>要素を追加するコードについて
  新しい要素のボタンは、次の代替コードが少し簡単です。
@@ -316,7 +316,6 @@ private void NewSheepButton_Click(object sender, EventArgs e)
     t.Commit();
   }
 }
-
 ```
 
  ただし、このコードは、新しい項目の既定の名前を設定できません。 定義した任意のカスタマイズされたマージは実行されません、**要素マージ ディレクティブ**DSL の定義されているコードのカスタムのマージは実行されません。

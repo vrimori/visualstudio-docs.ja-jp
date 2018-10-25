@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::SetLocale |Microsoft ドキュメント
+title: IDebugExpressionEvaluator::SetLocale |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5836069aacb80a3d917a8e272150a477589c3ef
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f9c5e1fc300a150b15acc48f12dc3b8c6c01e277
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31111126"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882647"
 ---
 # <a name="idebugexpressionevaluatorsetlocale"></a>IDebugExpressionEvaluator::SetLocale
 このメソッドは、印刷可能な結果の作成に使用する言語を設定します。  
@@ -44,10 +44,10 @@ int SetLocale(
  [in]言語識別子です。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- EE は、実行時に言語を変更できる必要がありますので、式エバリュエーター (EE) が読み込まれるときににより、このメソッドに何度もを呼び出すことがあります。 EE は、このロケールを使用して適切な言語でエラー メッセージ、および文字列を返します。  
+## <a name="remarks"></a>Remarks  
+ EE は、実行時に言語を変更することである必要がありますので、式エバリュエーター (EE) が読み込まれる間により、このメソッドに何度もを呼び出すことがあります。 EE では、このロケールを使用して、適切な言語でエラー メッセージ、および文字列を返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

@@ -1,7 +1,7 @@
 ---
 title: '方法: 使用する XML スキーマの選択 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 25e972b7c9850018aeda01401a8893805d3d18d6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 93f573412524619292b1966e87abeda11cc0813a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533618"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863725"
 ---
 # <a name="how-to-select-the-xml-schemas-to-use"></a>方法: 使用する XML スキーマを選択する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 使用する XML スキーマを選択](https://docs.microsoft.com/visualstudio/xml-tools/how-to-select-the-xml-schemas-to-use)します。  
-  
   
 XML エディターはスキーマ キャッシュを提供します。このキャッシュは %InstallDir%\Xml\Schemas ディレクトリに配置されています。 スキーマ キャッシュには、IntelliSense と XML ドキュメントの検証に使用される既知の XML スキーマが格納されています。  
   
@@ -38,23 +36,23 @@ XML エディターはスキーマ キャッシュを提供します。このキ
   
 ### <a name="to-select-an-xml-schema-from-the-schema-cache"></a>スキーマ キャッシュにある XML スキーマを選択するには  
   
-1.  XML エディターでファイルを開きます。  
+1. XML エディターでファイルを開きます。  
   
-2.  ドキュメントのプロパティ ウィンドウでのボタンをクリックします。、**スキーマ**フィールド。  
+2. ドキュメントのプロパティ ウィンドウでのボタンをクリックします。、**スキーマ**フィールド。  
   
-     **XML スキーマ** ダイアログ ボックスが表示されます。 ダイアログ ボックスの一覧 (catalog.xml ファイルで参照されるスキーマを含む)、スキーマ キャッシュに .xsd 拡張子を持つすべてのスキーマと、現在のソリューション内にある任意のスキーマで参照されている Visual Studio で開くことも、`xsd:schemaLocation`属性、またはで参照されています。**スキーマ**プロパティ。  
+    **XML スキーマ** ダイアログ ボックスが表示されます。 ダイアログ ボックスの一覧 (catalog.xml ファイルで参照されるスキーマを含む)、スキーマ キャッシュに .xsd 拡張子を持つすべてのスキーマと、現在のソリューション内にある任意のスキーマで参照されている Visual Studio で開くことも、`xsd:schemaLocation`属性、またはで参照されています。**スキーマ**プロパティ。  
   
-3.  次のいずれかを実行し、検証に使用するスキーマを選択します。  
+3. 次のいずれかを実行し、検証に使用するスキーマを選択します。  
   
-    -   表示されているスキーマを選択、 **XML スキーマ**ダイアログ ボックスで、をクリックして、**使用**列、および選択し**このスキーマを使用して、** します。  
+   - 表示されているスキーマを選択、 **XML スキーマ**ダイアログ ボックスで、をクリックして、**使用**列、および選択し**このスキーマを使用して、** します。  
   
      - または -  
   
-    -   一覧表示される複数のスキーマを選択、 **XML スキーマ**ダイアログ、右クリックして選択**このスキーマを使用して、** します。  
+   - 一覧表示される複数のスキーマを選択、 **XML スキーマ**ダイアログ、右クリックして選択**このスキーマを使用して、** します。  
   
-4.  **[OK]** をクリックします。  
+4. **[OK]** をクリックします。  
   
-     選択したスキーマの一覧は、元にコピーされる、**スキーマ**ドキュメントのプロパティ。  
+    選択したスキーマの一覧は、元にコピーされる、**スキーマ**ドキュメントのプロパティ。  
   
 ### <a name="to-add-an-xml-schema-to-the-schema-cache"></a>XML スキーマをスキーマ キャッシュに追加するには  
   

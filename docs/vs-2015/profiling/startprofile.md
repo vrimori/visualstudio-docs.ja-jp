@@ -1,7 +1,7 @@
 ---
 title: StartProfile | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8755dcf0b392d17234a3f1224a04de4603840fc2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5b1cc426e4c69629ed16217da3ef7fb8de76c2f2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536096"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846968"
 ---
 # <a name="startprofile"></a>StartProfile
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[StartProfile](https://docs.microsoft.com/visualstudio/profiling/startprofile)します。  
-  
 `StartProfile` 関数は、指定されたプロファイル レベルのカウンターを 1 (オン) に設定します。  
   
 ## <a name="syntax"></a>構文  

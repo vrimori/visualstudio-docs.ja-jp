@@ -1,7 +1,7 @@
 ---
 title: オブジェクトの有効期間ビュー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 29
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3aaff07ecc6732403ef1d611cb23129207a27351
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a503a0de6a8b9935fbfb6b7e415d79cb0520f67d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535274"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49202853"
 ---
 # <a name="object-lifetime-view"></a>オブジェクトの有効期間ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[オブジェクトの有効期間ビュー](https://docs.microsoft.com/visualstudio/profiling/object-lifetime-view)します。  
-  
 オブジェクトの有効期間ビューは、[パフォーマンス セッション] プロパティ ページで **[Also collect .NET object lifetime data]\(.NET オブジェクトの有効期間情報も収集\)** チェック ボックスがオンになっている場合に使用できます。  
   
  [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] のガベージ コレクターは、アプリケーションのメモリの割り当ておよび解放を管理します。 ガベージ コレクターのパフォーマンスを最適化するために、マネージド ヒープは 0、1、および 2 の 3 つのジェネレーションに分割されます。 ランタイムのガベージ コレクターは、新しいオブジェクトをジェネレーション 0 に格納します。 ガベージ コレクションでごみではないと判断されたオブジェクトは昇格してジェネレーション 1 とジェネレーション 2 に格納されます。  

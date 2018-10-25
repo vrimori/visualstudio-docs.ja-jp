@@ -26,12 +26,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e4c32f3a9b0f0c09b7e7b58aa4c424630326d122
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: b31ce44c458f7f376d98fac83670595b8a163d65
+ms.sourcegitcommit: 48bc8492973e93612e5afaba3b47d0f98aecf97c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671867"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49325004"
 ---
 # <a name="custom-xml-parts-overview"></a>カスタム XML 部分の概要
   一部の Microsoft Office アプリケーションのドキュメントに XML データを埋め込むことができます。 データがという名前をドキュメントに XML データを埋め込むときに、*カスタム XML 部分*します。  
@@ -76,7 +76,7 @@ ms.locfileid: "35671867"
 ### <a name="modify-xml-parts-without-starting-the-office-application"></a>Office アプリケーションを起動せずに XML 部分を変更します。  
  Excel、PowerPoint、または Word を起動しないでカスタム XML 部分を変更できます。 これは、Microsoft Office アプリケーションがインストールされていないサーバーなどのコンピューターで、ドキュメント内の XML データを使用する場合に便利です。  
   
- Microsoft Office を起動せずにカスタム XML 部分を追加するには Open XML SDK のクラスを使用します。 これらのクラスは、Office ドキュメントに固有の Open XML コンテンツにアクセスするために設計されています。 使用する Excel ブックにカスタム XML 部分を追加するなど、 [AddNewPart\<T >](http://msdn.microsoft.com/47c348c0-77ab-a504-5097-bcd6a213921a)のメソッド、 [WorkbookPart](http://msdn.microsoft.com/d011e6f4-77dd-d02d-66ef-dc4a9e7b26f2)オブジェクト。 詳細については、次を参照してください。 [Open XML SDK 2.0](http://msdn.microsoft.com/f6a9ae68-7989-4208-97f5-3c945137a0ab)します。  
+ Microsoft Office を起動せずにカスタム XML 部分を追加するには Open XML SDK のクラスを使用します。 これらのクラスは、Office ドキュメントに固有の Open XML コンテンツにアクセスするために設計されています。 使用する Excel ブックにカスタム XML 部分を追加するなど、 [AddNewPart\<T >](https://msdn.microsoft.com/library/office/cc562657.aspx)のメソッド、 [WorkbookPart](https://msdn.microsoft.com/library/office/documentformat.openxml.packaging.workbookpart.aspx)オブジェクト。 詳細については、次を参照してください。 [Open XML 用 SDK](/office/open-xml/open-xml-sdk)します。  
   
 ## <a name="bind-custom-xml-parts-to-word-content-controls"></a>カスタム XML 部分を Word コンテンツ コントロールにバインドします。  
  Word ソリューションのコンテンツ コントロールをカスタム XML 部分の要素にバインドできます。 カスタム XML 部分にコンテンツ コントロールがバインドされると、カスタム XML 部分のデータがコンテンツ コントロールのユーザー インターフェイス (UI) に表示されます。 ユーザーがコントロール内のテキストを編集すると、対応する XML 要素が自動的に更新されます。 同様に、カスタム XML 部分の要素の値が変更されると、その XML 要素にバインドされているコンテンツ コントロールに新しいデータが表示されます。 詳細については、次を参照してください。[コンテンツ コントロール](../vsto/content-controls.md)します。  

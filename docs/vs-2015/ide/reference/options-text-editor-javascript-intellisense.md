@@ -1,7 +1,7 @@
 ---
 title: '[オプション]、[テキスト エディター]、[JavaScript]、[IntelliSense] | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c681acc80b0646f3cb6f51435bf8358d12bf44b7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6aa1f4027746ebf1304362217c16fffa7e68a75d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537386"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822412"
 ---
 # <a name="options-text-editor-javascript-intellisense"></a>[オプション]、[テキスト エディター]、[JavaScript]、[IntelliSense]
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[、オプション、テキスト エディター、JavaScript IntelliSense](https://docs.microsoft.com/visualstudio/ide/reference/options-text-editor-javascript-intellisense)します。  
-  
   
 JavaScript での IntelliSense の動作設定を変更するには、 **[オプション]** ダイアログ ボックスの **[IntelliSense]** ページを使用します。 **[IntelliSense]** ページにアクセスするには、メニュー バーの **[ツール]**, **[オプション]** をクリックし、 **[テキスト エディター]**, **[JavaScript]**, **[IntelliSense].** と展開します。  
   
@@ -70,16 +68,16 @@ JavaScript での IntelliSense の動作設定を変更するには、 **[オプ
   
  定義済みの参照グループを使用して、特定の IntelliSense (.js) ファイルがさまざまな JavaScript プロジェクトのスコープ内にあることを指定できます。 4 つの参照グループを使用できます。  
   
--   暗黙 (Windows*バージョン*) の[!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)]JavaScript を使ったアプリ。 このグループに含まれるファイルは、JavaScript を使用する [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] アプリケーションのコード エディターで開かれる、すべての .js ファイルのスコープ内にあります。  
+- 暗黙 (Windows *バージョン*)、JavaScript を使用する [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] アプリケーション用。 このグループに含まれるファイルは、JavaScript を使用する [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] アプリケーションのコード エディターで開かれる、すべての .js ファイルのスコープ内にあります。  
   
--   暗黙 (Web)、HTML5 プロジェクト用。 このグループに含まれるファイルは、これらのプロジェクト タイプのコード エディターで開かれる、すべての .js ファイルのスコープ内にあります。  
+- 暗黙 (Web)、HTML5 プロジェクト用。 このグループに含まれるファイルは、これらのプロジェクト タイプのコード エディターで開かれる、すべての .js ファイルのスコープ内にあります。  
   
--   専用のワーカーの参照グループ、HTML5 Web ワーカー用。 このグループで指定されたファイルは、専用のワーカーの参照グループへの明示的な参照がある .js ファイルのスコープ内にあります。  
+- 専用のワーカーの参照グループ、HTML5 Web ワーカー用。 このグループで指定されたファイルは、専用のワーカーの参照グループへの明示的な参照がある .js ファイルのスコープ内にあります。  
   
--   ジェネリック、他の JavaScript プロジェクト タイプ用。  
+- ジェネリック、他の JavaScript プロジェクト タイプ用。  
   
- **[インクルード ファイル]**  
- このオプションで、ファイルが言語サービスのコンテキストに読み込まれる順序を指定します。 **[削除]**、 **[上へ移動]**、および **[下へ移動]** ボタンを使用して順序を構成できます。 IntelliSense が正しく動作するためには、別のファイルに依存しているファイルはその別のファイルの後に読み込む必要があります。  
+  **[インクルード ファイル]**  
+  このオプションで、ファイルが言語サービスのコンテキストに読み込まれる順序を指定します。 **[削除]**、 **[上へ移動]**、および **[下へ移動]** ボタンを使用して順序を構成できます。 IntelliSense が正しく動作するためには、別のファイルに依存しているファイルはその別のファイルの後に読み込む必要があります。  
   
 > [!CAUTION]
 >  オブジェクトが複数の暗黙的な参照で無条件で定義されている場合、その一覧内の最後の参照を使用してオブジェクトが定義されます。  

@@ -1,5 +1,5 @@
 ---
-title: FIELD_INFO |Microsoft ドキュメント
+title: FIELD_INFO |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 180a968f642b8a4bf26e2e69d1d3ddff45dc1f25
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0687209b1e4144064c6e6e934cd7443f1aa2c496
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31104216"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834553"
 ---
 # <a name="fieldinfo"></a>FIELD_INFO
-この構造体は、ローカル変数、パラメーター、またはその他のフィールドについて説明します。  
+この構造体には、ローカル変数、パラメーター、またはその他のフィールドについて説明します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ public struct FIELD_INFO {
   
 ## <a name="members"></a>メンバー  
  dwFields  
- フラグの組み合わせ、 [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md)のどのメンバーは、入力を指定する列挙です。  
+ フラグの組み合わせ、 [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md)のどのメンバーが入力を指定する列挙体。  
   
  bstrFullName  
  フィールドの完全名。  
@@ -61,12 +61,12 @@ public struct FIELD_INFO {
  フィールドの型。  
   
  dwModifiers  
- フラグの組み合わせ、 [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)フィールドを説明する列挙です。  
+ フラグの組み合わせ、 [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)フィールドを表す列挙体。  
   
-## <a name="remarks"></a>コメント  
- この構造体に渡される、 [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)で塗り分けはメソッドです。  
+## <a name="remarks"></a>Remarks  
+ この構造体に渡される、 [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)メソッドでいっぱいになった場所。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

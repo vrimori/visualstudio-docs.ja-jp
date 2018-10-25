@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 990879ca953a2d43a6dee66424fdff2e2dd3c274
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: fae4a6cc21264e62c5a12db79c8a937f0a366314
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38778371"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843536"
 ---
 # <a name="walkthrough-change-worksheet-formatting-using-checkbox-controls"></a>チュートリアル: CheckBox コントロールを使用してワークシートの書式設定を変更します。
   このチュートリアルでは、Microsoft Office Excel ワークシートの書式を変更するチェック ボックスの使用の基本を説明します。 Visual Studio での Office 開発ツールを使用して作成し、プロジェクトにコードを追加するは。 完成したサンプルとして結果を参照してくださいにある Excel コントロールのサンプルを参照してください。 [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)します。  
@@ -40,7 +40,7 @@ ms.locfileid: "38778371"
 > [!NOTE]  
 >  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -52,7 +52,7 @@ ms.locfileid: "38778371"
   
 ### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1.  名前の Excel ブック プロジェクトを作成する**マイ Excel の書式**します。 必ず**新しい文書を作成**が選択されています。 詳細については、次を参照してください。[方法: Visual Studio でプロジェクトを作成する Office](../vsto/how-to-create-office-projects-in-visual-studio.md)します。  
+1.  名前の Excel ブック プロジェクトを作成する**マイ Excel の書式**します。 必ず**新しい文書を作成**が選択されています。 詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
   
      デザイナーで新しい Excel ブックを開き、**マイ Excel の書式**プロジェクトを**ソリューション エクスプ ローラー**します。  
   
@@ -101,24 +101,24 @@ ms.locfileid: "38778371"
   
 #### <a name="to-add-text-to-a-namedrange-control"></a>NamedRange コントロールにテキストを追加するには  
   
-1.  **Excel コントロール**、ツールボックスのタブ、<xref:Microsoft.Office.Tools.Excel.NamedRange>コントロールをセル**B9**します。  
+1. **Excel コントロール**、ツールボックスのタブ、<xref:Microsoft.Office.Tools.Excel.NamedRange>コントロールをセル**B9**します。  
   
-2.  いることを確認 **$B 9 ドル**編集可能なテキスト ボックスに、そのセルに表示される**B9**が選択されています。 そうでない場合は、セルをクリックします。 **B9**をオンにします。  
+2. いることを確認 **$B 9 ドル**編集可能なテキスト ボックスに、そのセルに表示される**B9**が選択されています。 そうでない場合は、セルをクリックします。 **B9**をオンにします。  
   
-3.  **[OK]** をクリックします。  
+3. **[OK]** をクリックします。  
   
-4.  セル**B9**という名前の範囲になります`NamedRange1`します。  
+4. セル**B9**という名前の範囲になります`NamedRange1`します。  
   
-     ワークシートの表示を示す値はありませんが、`NamedRange1`に表示されます、**名 ボックスに**(ワークシートの真上左側にある) セル**B9**が選択されています。  
+    ワークシートの表示を示す値はありませんが、`NamedRange1`に表示されます、**名 ボックスに**(ワークシートの真上左側にある) セル**B9**が選択されています。  
   
-5.  確認します**NamedRange1**のオブジェクト名のリスト ボックスに表示されて、**プロパティ**ウィンドウで、次のプロパティを変更。  
+5. 確認します**NamedRange1**のオブジェクト名のリスト ボックスに表示されて、**プロパティ**ウィンドウで、次のプロパティを変更。  
   
-    |プロパティ|[値]|  
-    |--------------|-----------|  
-    |**Name**|**ボックス**|  
-    |**Value2**|**このテキストの書式を変更する チェック ボックスをクリックします。**|  
+   |プロパティ|[値]|  
+   |--------------|-----------|  
+   |**Name**|**ボックス**|  
+   |**Value2**|**このテキストの書式を変更する チェック ボックスをクリックします。**|  
   
- 次に、オプションを選択すると、テキストの書式設定コードを記述します。  
+   次に、オプションを選択すると、テキストの書式設定コードを記述します。  
   
 ## <a name="format-the-text-when-an-option-is-selected"></a>オプションを選択すると、テキストの書式設定します。  
  このセクションでは、ユーザーは、書式設定オプションを選択すると、ワークシート内のテキストの形式が変更できるようにコードを記述します。  

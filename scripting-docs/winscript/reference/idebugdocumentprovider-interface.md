@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentProvider インターフェイス |Microsoft ドキュメント
+title: IDebugDocumentProvider インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,29 +14,29 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 262794718e238068cfd9a8e3fae5161b9fe8cc54
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: d775deb153205d0e9a452775272285c67e74a210
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24726252"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949865"
 ---
 # <a name="idebugdocumentprovider-interface"></a>IDebugDocumentProvider インターフェイス
-要求時にドキュメントをインスタンス化するための手段を提供します。  
+必要に応じてドキュメントをインスタンス化するための手段を提供します。  
   
-## <a name="remarks"></a>コメント  
- ドキュメントをインスタンス化するため間接ことを意味します。  
+## <a name="remarks"></a>Remarks  
+ ドキュメントをインスタンス化するためのこの間接的な手段:  
   
--   必要なときに読み込まれるドキュメントを許可します。  
+- により、ドキュメントを読み込む必要がある場合。  
   
--   デバッガー IDE 内に含まれるドキュメント オブジェクトがします。  
+- デバッガー IDE 内に含まれるドキュメント オブジェクトを使用します。  
   
--   同じドキュメント オブジェクトにアクセスする複数の方法を使用できます。  
+- 同じドキュメント オブジェクトにアクセスする複数の方法を使用できます。  
   
- これは実質的に、プロバイダーからドキュメントを分離し、プロバイダーの追加の実行時に、コンテキスト情報を持ちます。  
+  これは効果的に、そのプロバイダーからドキュメントを分離し、プロバイダーは、追加の実行時に、コンテキスト情報を含めることができます。  
   
- 継承されたメソッドだけでなく`IDebugDocumentInfo`、`IDebugDocumentProvider`インターフェイスは、次のメソッドを公開します。  
+  継承されたメソッドだけでなく`IDebugDocumentInfo`、`IDebugDocumentProvider`インターフェイスは、次のメソッドを公開します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IDebugDocumentProvider::GetDocument](../../winscript/reference/idebugdocumentprovider-getdocument.md)|既に存在しない場合にインスタンス化するドキュメントが発生します。|
+|[IDebugDocumentProvider::GetDocument](../../winscript/reference/idebugdocumentprovider-getdocument.md)|既に存在しない場合はインスタンス化するためにドキュメントをによりします。|

@@ -1,7 +1,7 @@
 ---
 title: '方法: エディターのコンテキストを提供 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,27 +15,25 @@ ms.assetid: 12df4d06-df6b-4eaf-a7bf-c83655a0c683
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9509dfeef5af4866531af96fce6f4c1717100a94
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 21140a070c59eead834dbb4c03443dd5157d2018
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546409"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845337"
 ---
 # <a name="how-to-provide-context-for-editors"></a>方法: エディターのコンテキストを提供
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: エディターのコンテキストを提供](https://docs.microsoft.com/visualstudio/extensibility/how-to-provide-context-for-editors)します。  
-  
 エディターのコンテキストは、エディターにフォーカスがあるか、ツール ウィンドウにフォーカスが移動された直前にフォーカスがあった場合にのみアクティブです。 次の手順に従って、エディターのコンテキストを行うことができます。  
   
-1.  コンテキスト バッグを作成します。  
+1. コンテキスト バッグを作成します。  
   
-2.  選択範囲の要素の識別子 (SEID) コンテキスト バッグに発行します。  
+2. 選択範囲の要素の識別子 (SEID) コンテキスト バッグに発行します。  
   
-3.  バッグ内のコンテキストを維持します。  
+3. バッグ内のコンテキストを維持します。  
   
- これらのタスクは、次の手順で説明します。 コンテキストを提供する詳細については、次を参照してください。**堅牢なプログラミング**このトピックで後述します。  
+   これらのタスクは、次の手順で説明します。 コンテキストを提供する詳細については、次を参照してください。**堅牢なプログラミング**このトピックで後述します。  
   
 ### <a name="to-create-a-context-bag-for-an-editor-or-a-designer"></a>エディターまたはデザイナーのコンテキスト バッグを作成するには  
   

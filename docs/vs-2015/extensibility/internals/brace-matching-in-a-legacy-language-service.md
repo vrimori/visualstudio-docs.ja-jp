@@ -1,7 +1,7 @@
 ---
 title: 従来の言語サービスにおけるかっこの一致 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 4e3d0a70-f22f-49dd-92d8-edf48ab62b52
 caps.latest.revision: 28
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b3a2267805681b092c7a48537e72e5f0ca0b3ecb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7742b54b69cea8d1f814a4ac4fd8cc190dfe2b99
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534767"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49265058"
 ---
 # <a name="brace-matching-in-a-legacy-language-service"></a>従来の言語サービスでのかっこの一致
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[従来の言語サービスでかっこの照合](https://docs.microsoft.com/visualstudio/extensibility/internals/brace-matching-in-a-legacy-language-service)します。  
-  
 かっこの一致には、かっこと中かっこなどに同時発生する必要がある言語要素を追跡する開発者は、役立ちます。 右中かっこを入力すると、開発者は、左中かっこが強調表示されます。  
   
  2 つまたは 3 つに同時発生と呼ばれる要素のペアと 3 要素を照合することができます。 3 要素は、次の 3 つの同時発生要素のセットです。 C# の場合は、たとえばで、`foreach`ステートメントは、3 つの要素をフォーム:"`foreach()`「,」`{`"、および"`}`"。 右中かっこを入力すると、次の 3 つのすべての要素が強調表示されます。  

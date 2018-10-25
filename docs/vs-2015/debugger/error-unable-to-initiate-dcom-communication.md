@@ -1,7 +1,7 @@
 ---
 title: 'エラー: DCOM 通信を開始できません |。Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1c8ee1e5a9a9f799a4e9d5d8a4cc3b6f5e03b504
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 83b9bee3e67876ea941e3640c9f77906d8f53d96
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538229"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49277278"
 ---
 # <a name="error-unable-to-initiate-dcom-communication"></a>エラー : DCOM 通信を初期化できません。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[エラー: DCOM 通信を開始できません。](https://docs.microsoft.com/visualstudio/debugger/error-unable-to-initiate-dcom-communication)します。  
-  
 ローカル コンピューターがリモート コンピューターと通信しようとしたときに DCOM エラーが発生しました。 このエラーは、リモート サーバーのファイアウォール、またはリモート コンピューターで Windows 認証が破損していることに原因があります。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  

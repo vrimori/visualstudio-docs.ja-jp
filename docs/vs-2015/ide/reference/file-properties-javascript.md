@@ -1,7 +1,7 @@
 ---
 title: ファイルのプロパティ、JavaScript | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -31,18 +31,16 @@ caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fb3f9dcef138bdb9e0452eb1b739dca652d0844d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8db05d62bd1a8b1e1bf5fee6642810c654265c97
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535109"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909734"
 ---
 # <a name="file-properties-javascript"></a>ファイルのプロパティ、JavaScript
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ファイルのプロパティ、JavaScript](https://docs.microsoft.com/visualstudio/ide/reference/file-properties-javascript)します。  
-  
   
 ファイルのプロパティを使用して、プロジェクト システムがファイルに対して実行するアクションを指定できます。 たとえば、ファイルがリソース ファイルとしてパッケージに追加するかどうかを示すには、ファイル プロパティを設定できます。  
   
@@ -57,15 +55,15 @@ ms.locfileid: "47535109"
 ### <a name="package-action"></a>パッケージ アクション  
  **[パッケージ アクション]** のプロパティは、ビルドが実行されたときに Visual Studio がファイルの処理方法を示します。 **[パッケージ アクション]** には次のいずれかの値が使用されます。  
   
--   **なし** - ファイルはパッケージ マニフェストに含まれません。 たとえば、Readme ファイルなどのドキュメントを含むテキスト ファイルです。  
+- **なし** - ファイルはパッケージ マニフェストに含まれません。 たとえば、Readme ファイルなどのドキュメントを含むテキスト ファイルです。  
   
--   **コンテンツ** - ファイルはパッケージ マニフェストに含まれます。 たとえば、.htm、.js、.css、image、audio、または video ファイルでは、この設定が既定値です。  
+- **コンテンツ** - ファイルはパッケージ マニフェストに含まれます。 たとえば、.htm、.js、.css、image、audio、または video ファイルでは、この設定が既定値です。  
   
--   **マニフェスト**– ファイルはパッケージ マニフェストに含まれません。 このファイルは、パッケージ マニフェストの生成時に入力に使用されます。 package.appxmanifest ファイルでは、この設定が既定値です。  
+- **マニフェスト**– ファイルはパッケージ マニフェストに含まれません。 このファイルは、パッケージ マニフェストの生成時に入力に使用されます。 package.appxmanifest ファイルでは、この設定が既定値です。  
   
--   **リソース** - ファイルはパッケージ マニフェストに含まれません。 ファイルの内容のインデックスはパッケージ リソース インデックス (PRI) に保存され、パッケージ マニフェストに含まれます。 通常、リソース ファイルに使用されます。  
+- **リソース** - ファイルはパッケージ マニフェストに含まれません。 ファイルの内容のインデックスはパッケージ リソース インデックス (PRI) に保存され、パッケージ マニフェストに含まれます。 通常、リソース ファイルに使用されます。  
   
- **[パッケージ アクション]** の既定値は、ソリューションに追加するファイルの拡張子によって変わります。  
+  **[パッケージ アクション]** の既定値は、ソリューションに追加するファイルの拡張子によって変わります。  
   
 ### <a name="file-name-property"></a>[ファイル名] プロパティ  
  読み取り専用の値としてファイル名が表示されます。 ファイルの名前を変更するには、ソリューション エクスプローラーで右クリックし、**[名前の変更]** を選択します。  

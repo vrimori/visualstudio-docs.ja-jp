@@ -1,7 +1,7 @@
 ---
 title: DSL コードについて |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 7d92a14466b7ca915b70bd0cad096266160e5994
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: afe6a273716ab5e531781634be959c80d30a9e26
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537322"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834022"
 ---
 # <a name="understanding-the-dsl-code"></a>DSL コードについて
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[DSL コードについて](https://docs.microsoft.com/visualstudio/modeling/understanding-the-dsl-code)します。  
-  
 ドメイン固有言語 (DSL) ソリューションは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 内で DSL のインスタンスの読み取りと更新に使用可能な API を生成します。 この API は、DSL 定義から生成されるコード中に定義されます。 このトピックでは生成される API を説明します。  
   
 ## <a name="the-example-solution-component-diagrams"></a>ソリューション例: コンポーネント図  
@@ -117,25 +115,25 @@ ms.locfileid: "47537322"
   
  各ドメイン クラスは以下のものを含みます。  
   
--   各ドメイン プロパティのプロパティ定義と入れ子になったハンドラー クラス。 OnValueChanging() および OnValueChanged() をオーバーライドできます。 詳細については、次を参照してください。[ドメイン プロパティ値変更ハンドラー](../modeling/domain-property-value-change-handlers.md)します。  
+- 各ドメイン プロパティのプロパティ定義と入れ子になったハンドラー クラス。 OnValueChanging() および OnValueChanged() をオーバーライドできます。 詳細については、次を参照してください。[ドメイン プロパティ値変更ハンドラー](../modeling/domain-property-value-change-handlers.md)します。  
   
-     DSL の例で、`Comment` クラスはプロパティ `Text` とハンドラー クラス `TextPropertyHandler` を含みます。  
+   DSL の例で、`Comment` クラスはプロパティ `Text` とハンドラー クラス `TextPropertyHandler` を含みます。  
   
--   このドメイン クラスが参加するリレーションシップのアクセサー プロパティ。 (ロール プロパティに対して入れ子になったクラスはありません)  
+- このドメイン クラスが参加するリレーションシップのアクセサー プロパティ。 (ロール プロパティに対して入れ子になったクラスはありません)  
   
-     DSL の例で、`Comment` クラスは、埋め込みリレーションシップ `ComponentModelHasComments` を通じて親モデルにアクセスするアクセサーを含みます。  
+   DSL の例で、`Comment` クラスは、埋め込みリレーションシップ `ComponentModelHasComments` を通じて親モデルにアクセスするアクセサーを含みます。  
   
--   コンストラクター。 これらをオーバーライドする場合は、設定**カスタム コンス トラクターを持つ**ドメイン クラス。  
+- コンストラクター。 これらをオーバーライドする場合は、設定**カスタム コンス トラクターを持つ**ドメイン クラス。  
   
--   要素グループ プロトタイプ (EGP) ハンドラー メソッド。 これらは、ユーザーができる場合は、必要*マージ*(追加) をこのクラスのインスタンスに別の要素。 通常、ユーザーは、要素ツールや別の図形からのドラッグまたは貼り付けにより、この操作を実行します。  
+- 要素グループ プロトタイプ (EGP) ハンドラー メソッド。 これらは、ユーザーができる場合は、必要*マージ*(追加) をこのクラスのインスタンスに別の要素。 通常、ユーザーは、要素ツールや別の図形からのドラッグまたは貼り付けにより、この操作を実行します。  
   
-     DSL の例で、入力ポートまたは出力ポートはコンポーネントにマージできます。 また、コンポーネントとコメントはモデルにマージできます。 次に、  
+   DSL の例で、入力ポートまたは出力ポートはコンポーネントにマージできます。 また、コンポーネントとコメントはモデルにマージできます。 次に、  
   
-     コンポーネント クラス内の EGP ハンドラー メソッドにより、コンポーネントはポートを受け入れることができますが、コメントを受け入れることはできません。 ルート モデル クラス内の EGP ハンドラーはコメントとコンポーネントを受け入れますが、ポートは受け入れません。  
+   コンポーネント クラス内の EGP ハンドラー メソッドにより、コンポーネントはポートを受け入れることができますが、コメントを受け入れることはできません。 ルート モデル クラス内の EGP ハンドラーはコメントとコンポーネントを受け入れますが、ポートは受け入れません。  
   
- `DomainModel.cs`  
+  `DomainModel.cs`  
   
- ドメイン モデルを表すクラス。 <xref:Microsoft.VisualStudio.Modeling.DomainModel> から派生します。  
+  ドメイン モデルを表すクラス。 <xref:Microsoft.VisualStudio.Modeling.DomainModel> から派生します。  
   
 > [!NOTE]
 >  これはモデルのルート クラスと同じではありません。  
@@ -168,31 +166,31 @@ ms.locfileid: "47537322"
   
  `SerializationHelper.cs`  
   
--   同じモニカーにより参照される要素は 2 つないことを確認するための検証メソッド。 詳細については、次を参照してください。[ファイル記憶域のカスタマイズと XML シリアル化](../modeling/customizing-file-storage-and-xml-serialization.md)します。  
+- 同じモニカーにより参照される要素は 2 つないことを確認するための検証メソッド。 詳細については、次を参照してください。[ファイル記憶域のカスタマイズと XML シリアル化](../modeling/customizing-file-storage-and-xml-serialization.md)します。  
   
--   SerializationHelper class。シリアル化クラスにより共通で使用される関数を提供します。  
+- SerializationHelper class。シリアル化クラスにより共通で使用される関数を提供します。  
   
- `Serializer.cs`  
+  `Serializer.cs`  
   
- ドメイン クラス、リレーションシップ、図形、コネクタ、図、およびモデルのそれぞれに対するシリアライザー クラス。  
+  ドメイン クラス、リレーションシップ、図形、コネクタ、図、およびモデルのそれぞれに対するシリアライザー クラス。  
   
- これらのクラスの機能の多くは、DSL エクスプ ローラーの下の設定で制御できます**Xml シリアル化動作**します。  
+  これらのクラスの機能の多くは、DSL エクスプ ローラーの下の設定で制御できます**Xml シリアル化動作**します。  
   
- `Shapes.cs`  
+  `Shapes.cs`  
   
- DSL 定義内のすべての図形クラスに対するクラス。 図形は <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape> から派生します。 詳細については、次を参照してください。[ファイル記憶域のカスタマイズと XML シリアル化](../modeling/customizing-file-storage-and-xml-serialization.md)します。  
+  DSL 定義内のすべての図形クラスに対するクラス。 図形は <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape> から派生します。 詳細については、次を参照してください。[ファイル記憶域のカスタマイズと XML シリアル化](../modeling/customizing-file-storage-and-xml-serialization.md)します。  
   
- 部分クラスで、独自のメソッドで生成されたメソッドをオーバーライドするには、次のように設定します。 **Double Derived の生成**DSL 定義でコネクタ。 コンス トラクターを独自のコードに置き換えて、次のように設定します。**カスタム コンス トラクターを持つ**します。  
+  部分クラスで、独自のメソッドで生成されたメソッドをオーバーライドするには、次のように設定します。 **Double Derived の生成**DSL 定義でコネクタ。 コンス トラクターを独自のコードに置き換えて、次のように設定します。**カスタム コンス トラクターを持つ**します。  
   
- 色とその他のスタイル機能変数を実行時に、DSL 定義図でクラスを右クリックしをポイント**公開追加**します。  
+  色とその他のスタイル機能変数を実行時に、DSL 定義図でクラスを右クリックしをポイント**公開追加**します。  
   
- 実行時に追加のスタイル機能変数を作成するには、例として <xref:Microsoft.VisualStudio.Modeling.Diagrams.TextField> および <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement> を参照してください。  
+  実行時に追加のスタイル機能変数を作成するには、例として <xref:Microsoft.VisualStudio.Modeling.Diagrams.TextField> および <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement> を参照してください。  
   
- `ToolboxHelper.cs`  
+  `ToolboxHelper.cs`  
   
- 要素ツールに要素グループ プロトタイプをインストールすることにより、ツールボックスをセットアップします。 ユーザーがツールを実行すると、これらのプロトタイプのコピーがターゲット要素とマージされます。  
+  要素ツールに要素グループ プロトタイプをインストールすることにより、ツールボックスをセットアップします。 ユーザーがツールを実行すると、これらのプロトタイプのコピーがターゲット要素とマージされます。  
   
- `CreateElementPrototype()` をオーバーライドして、いくつかのオブジェクトのグループを作成するツールボックス項目を定義できます。 たとえば、項目を定義して、サブコンポーネントを持つオブジェクトを表すことができます。 コードを変更した後で、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の実験用インスタンスをリセットし、ツールボックスのキャッシュを消去します。  
+  `CreateElementPrototype()` をオーバーライドして、いくつかのオブジェクトのグループを作成するツールボックス項目を定義できます。 たとえば、項目を定義して、サブコンポーネントを持つオブジェクトを表すことができます。 コードを変更した後で、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の実験用インスタンスをリセットし、ツールボックスのキャッシュを消去します。  
   
 ## <a name="generated-files-in-the-dslpackage-project"></a>DslPackage プロジェクト内に生成されるファイル  
  DslPackage DSL モデルを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] シェルに結合し、ウィンドウ、ツールボックス、およびメニュー コマンドを管理します。 クラスのほとんどは二重に派生するので、それらの任意のメソッドをオーバーライドできます。  

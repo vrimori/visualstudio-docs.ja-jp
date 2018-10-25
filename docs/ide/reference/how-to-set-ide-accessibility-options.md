@@ -13,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f977c30f1f4d6db7ce165de8483c8fd1977922d8
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c5d0149be4996f762373aae77d7535dbf8e02809
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31952104"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909797"
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>方法: IDE アクセシビリティ オプションを設定する
 
@@ -46,7 +46,7 @@ ms.locfileid: "31952104"
 
  テキスト ベースのツール ウィンドウ、たとえば **[コマンド]** ウィンドウ、**[イミディエイト]** ウィンドウ、**[出力]** ウィンドウなどでは、**[ツール]** ダイアログ ボックスの **[環境]** オプションの **[フォントおよび色]** ウィンドウで設定を変更できます。 **[設定の表示]** ボックスの一覧で **[すべてのテキスト ツール ウィンドウ]** が選択されている場合、**[前景色]** および **[背景色]** ボックスの一覧に既定の設定として **[既定値]** が表示されます。 エディターでのテキスト表示方法に関する設定も変更できます。
 
-##### <a name="to-change-the-size-of-text-in-text-based-tool-windows-and-editors"></a>テキスト ベースのツール ウィンドウおよびエディターでのテキスト サイズを変更するには
+#### <a name="to-change-the-size-of-text-in-text-based-tool-windows-and-editors"></a>テキスト ベースのツール ウィンドウおよびエディターでのテキスト サイズを変更するには
 
 1.  **[ツール]** メニューの **[オプション]** をクリックします。
 
@@ -69,7 +69,7 @@ ms.locfileid: "31952104"
 6.  **[サイズ]** で新しいフォントのサイズを選択します。
 
     > [!NOTE]
-    >  テキスト ベースのツール ウィンドウおよびエディターのテキスト サイズをリセットするには **[既定値を使用]** を選択します。
+    > テキスト ベースのツール ウィンドウおよびエディターのテキスト サイズをリセットするには **[既定値を使用]** を選択します。
 
 7.  **[OK]** をクリックします。
 
@@ -78,10 +78,9 @@ ms.locfileid: "31952104"
  また、エディター内のテキスト、マージン インジケーター、空白文字、およびコード要素の既定の色を変更することもできます。
 
 > [!NOTE]
-> オペレーティング システム上の全アプリケーション ウィンドウでハイコントラスト色を使用する場合は、左 **Alt +** 左 **Shift + PrintScreen** キーを押します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] が起動されている場合は、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を終了してから再起動すると、ハイコントラスト色の機能を完全に利用できます。
+> オペレーティング システム上の全アプリケーション ウィンドウでハイコントラスト色を使用する場合は、左 <strong>Alt +</strong> 左 **Shift + PrintScreen** キーを押します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] が起動されている場合は、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を終了してから再起動すると、ハイコントラスト色の機能を完全に利用できます。
 
-
-##### <a name="to-change-the-color-of-items-in-the-editor"></a>エディター内の項目の色を変更するには
+#### <a name="to-change-the-color-of-items-in-the-editor"></a>エディター内の項目の色を変更するには
 
 1.  **[ツール]** メニューの **[オプション]** をクリックします。
 
@@ -99,7 +98,7 @@ ms.locfileid: "31952104"
 
  ツール バーの操作性を向上させるために、ツール バー ボタンにテキストを追加できます。
 
-#### <a name="to-assign-text-to-toolbar-buttons"></a>ツール バー ボタンにテキストを割り当てるには
+### <a name="to-assign-text-to-toolbar-buttons"></a>ツール バー ボタンにテキストを割り当てるには
 
 1.  **[ツール]** メニューの **[ユーザー設定]** を選択します。
 
@@ -113,7 +112,7 @@ ms.locfileid: "31952104"
 
 6.  **[イメージとテキストを表示]** を選択します。
 
-#### <a name="to-modify-the-displayed-text-in-a-button"></a>ボタンに表示されるテキストを変更するには
+### <a name="to-modify-the-displayed-text-in-a-button"></a>ボタンに表示されるテキストを変更するには
 
 1.  **[選択したボタンの編集]** を再度選択します。
 

@@ -1,7 +1,7 @@
 ---
 title: フィルター ノード | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2789676505588c2041abfd876a228fc456ee3607
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ec8046fcbeebe2af0c6c7ebb725ffe4ed6cfa263
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536327"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49178582"
 ---
 # <a name="filter-nodes"></a>フィルター ノード
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[フィルター ノード](https://docs.microsoft.com/visualstudio/designers/filter-nodes)します。  
-  
 Shader Designer では、フィルター ノードは入力 (色やテクスチャのサンプルなど) を比喩色値に変換します。 この比喩色値は、一般的に非写実的なレンダリングや、他の視覚効果のコンポーネントとして使用されます。  
   
 ## <a name="filter-node-reference"></a>フィルター ノードの参照  

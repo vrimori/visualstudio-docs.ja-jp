@@ -1,7 +1,7 @@
 ---
 title: IDebugField::GetType |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: b3cdec9f-ef7b-44d0-a775-d17ef7eae968
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: af38649a08bc58ae23360110f9b28e23507aa877
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0733d635f38160c3b2d9414bc9953c5fb81f636f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539656"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49856719"
 ---
 # <a name="idebugfieldgettype"></a>IDebugField::GetType
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugField::GetType](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugfield-gettype)します。  
-  
 このメソッドは、フィールドの型を取得します。  
   
 ## <a name="syntax"></a>構文  

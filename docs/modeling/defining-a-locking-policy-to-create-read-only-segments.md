@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 6567be5a82d4b344b3850a1a66e0b5b23f1b8f9d
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 7f2a22a39b30d6a1910a95d5c30992bbd14dbc9a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859095"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49828678"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>ロック ポリシーの定義と読み取り専用セグメントの作成
 Visual Studio Visualization and Modeling SDK の不変性 API は、読み取りが変更されていないことができるように、ドメイン固有言語 (DSL) モデルの一部またはすべてをロックするプログラムを使用できます。 この読み取り専用オプションされる可能性があります、たとえば、ユーザーが仕事仲間の注釈を付け、DSL モデルを確認するように依頼できますが、元の変更を禁止することができますようにします。
@@ -71,14 +71,14 @@ partition.SetLocks(Locks.Delete);
 ## <a name="lock-values"></a>ロックの値
  ロックは、ストア、パーティション、または個々 のモデル要素を設定できます。 ロックは、`Flags`列挙: を使用してその値を組み合わせることができます '&#124;'。
 
--   倉庫管理ロックには、常にそのパーティションのロックが含まれています。
+- 倉庫管理ロックには、常にそのパーティションのロックが含まれています。
 
--   パーティションのロックには、常に、ストアのロックが含まれています。
+- パーティションのロックには、常に、ストアのロックが含まれています。
 
- パーティションにロックを設定または保存し、同時に、個々 の要素のロックを無効にすることはできません。
+  パーティションにロックを設定または保存し、同時に、個々 の要素のロックを無効にすることはできません。
 
 |[値]|つまり場合`IsLocked(Value)`が true|
-|-----------|------------------------------------------|
+|-|-|
 |なし|制限はありません。|
 |プロパティ|要素のドメインのプロパティを変更できません。 これは、リレーションシップ内のドメイン クラスの役割によって生成されるプロパティには適用されません。|
 |追加|パーティションに新しい要素およびリンクを作成できませんまたは保存します。<br /><br /> 該当しません`ModelElement`します。|
@@ -142,7 +142,6 @@ namespace Company.YourDsl.DslPackage // Change
       return Environment.UserName == "aUser"
            ? proposedLocks : Locks.All;
     }
-
 ```
 
  その他の場合でも、要素をユーザーがいつでも削除できるかどうかを確認するには、コードの呼び出し `SetLocks(Lock.Delete):`

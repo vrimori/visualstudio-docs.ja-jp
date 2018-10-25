@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ee77d340eec13c42588511575c6047b5c8f28d16
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 8d5bb2d554ee67a4a2c83decba017e9a1f0fe1e9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34765100"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813910"
 ---
 # <a name="how-to-collect-cpu-counter-data"></a>方法: CPU カウンター データを収集する
 
@@ -31,9 +31,9 @@ CPU イベント カウンターはハードウェア固有のパフォーマン
 
 - プラットフォーム イベント - 特定の CPU に関連付けられた CPU イベントです。
 
- ポータブル イベントには、Instructions Retired や Non Halted Cycles などの一般的なイベント、CPU バッファー イベント、分岐イベント、L2 キャッシュ イベントなどがあります。 使用できるプラットフォーム イベント カウンターはプロセッサの製造元によって決まります。
+  ポータブル イベントには、Instructions Retired や Non Halted Cycles などの一般的なイベント、CPU バッファー イベント、分岐イベント、L2 キャッシュ イベントなどがあります。 使用できるプラットフォーム イベント カウンターはプロセッサの製造元によって決まります。
 
- イベントのカテゴリは、ポータブル カウンターとプラットフォーム カウンターの間で共有できます。 たとえば、次のデータのカテゴリは、両方のタイプで一般的に共通するものです。
+  イベントのカテゴリは、ポータブル カウンターとプラットフォーム カウンターの間で共有できます。 たとえば、次のデータのカテゴリは、両方のタイプで一般的に共通するものです。
 
 - メモリ イベント。
 
@@ -41,7 +41,7 @@ CPU イベント カウンターはハードウェア固有のパフォーマン
 
 - 分岐イベント。
 
- プロファイラーでは、次の 2 つの方法でパフォーマンス カウンター データを収集できます。
+  プロファイラーでは、次の 2 つの方法でパフォーマンス カウンター データを収集できます。
 
 - インストルメンテーションによってプロファイリングする場合は、1 つ以上のカウンターからデータを収集します。
 

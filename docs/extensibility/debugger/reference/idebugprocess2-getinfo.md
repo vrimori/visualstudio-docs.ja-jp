@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::GetInfo |Microsoft ドキュメント
+title: IDebugProcess2::GetInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fbed7c0ed53bed792baf4eefa9d1337127df88f3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 214bf72d6310206b5fe85de40ef65b4e2442c46b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115692"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935725"
 ---
 # <a name="idebugprocess2getinfo"></a>IDebugProcess2::GetInfo
 プロセスの説明を取得します。  
@@ -43,13 +43,13 @@ int GetInfo(
   
 #### <a name="parameters"></a>パラメーター  
  `Fields`  
- [in]値の組み合わせ、 [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md)のどのフィールドを指定する列挙体、`pProcessInfo`パラメーターは、入力します。  
+ [in]値の組み合わせ、 [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md)のどのフィールドを指定する列挙体、`pProcessInfo`パラメーター入力します。  
   
  `pProcessInfo`  
- [out]A [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)プロセスの説明が入力構造です。  
+ [out]A [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)構造体のプロセスの説明が入力されます。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   

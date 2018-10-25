@@ -1,7 +1,7 @@
 ---
 title: T4 テキスト テンプレートを使用した実行時テキスト生成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 9c56b0b91301defaf08fb81c87e9eb070a9e5458
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 75da17b32d3997121777f398a6663932c7d7143d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548690"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920132"
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>T4 テキスト テンプレートを使用した実行時テキスト生成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[T4 テキスト テンプレートを使用した実行時テキスト生成](https://docs.microsoft.com/visualstudio/modeling/run-time-text-generation-with-t4-text-templates)します。  
-  
 使用して、実行時に、アプリケーションでのテキスト文字列を生成できます[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ランタイム テキスト テンプレート。 アプリケーションが実行されるコンピューターを持っていなくて[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 実行時テンプレートとも呼ばれます「前処理されたテキスト テンプレート」ため、コンパイル時に、テンプレートには、実行時に実行されるコードが生成されます。  
   
  各テンプレートは、テキストの組み合わせ、生成された文字列は、およびプログラム コードのフラグメントに表示されます。 プログラムのフラグメントは、文字列の変数部分の値を指定しも条件と繰り返される部分を制御します。  
@@ -297,17 +295,17 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 #### <a name="inheritance-pattern-fragments-in-base-methods"></a>継承パターン: ベースのメソッドでフラグメント  
  次の例で使用されるパターンでは、次の点に注意してください。  
   
--   基本クラス`SharedFragments`クラス機能ブロック内のメソッドを定義します。`<#+ ... #>`します。  
+- 基本クラス`SharedFragments`クラス機能ブロック内のメソッドを定義します。`<#+ ... #>`します。  
   
--   基底クラスには、フリー テキストが含まれていません。 代わりに、すべてのテキスト ブロックは、クラスの機能のメソッド内で発生します。  
+- 基底クラスには、フリー テキストが含まれていません。 代わりに、すべてのテキスト ブロックは、クラスの機能のメソッド内で発生します。  
   
--   派生クラスで定義されているメソッドを呼び出す`SharedFragments`します。  
+- 派生クラスで定義されているメソッドを呼び出す`SharedFragments`します。  
   
--   アプリケーションの呼び出し、 `TextTransform()` 、派生クラスのメソッドが基底クラスを変換しない`SharedFragments`します。  
+- アプリケーションの呼び出し、 `TextTransform()` 、派生クラスのメソッドが基底クラスを変換しない`SharedFragments`します。  
   
--   基本と派生クラスの両方が実行時テキスト テンプレート: これは、**カスタム ツール**プロパティに設定されて**TextTemplatingFilePreprocessor**します。  
+- 基本と派生クラスの両方が実行時テキスト テンプレート: これは、**カスタム ツール**プロパティに設定されて**TextTemplatingFilePreprocessor**します。  
   
- **SharedFragments.tt:**  
+  **SharedFragments.tt:**  
   
 ```csharp  
 <#@ template language="C#" #>  

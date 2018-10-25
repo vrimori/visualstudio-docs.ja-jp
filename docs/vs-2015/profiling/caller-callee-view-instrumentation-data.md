@@ -1,7 +1,7 @@
 ---
 title: 呼び出し元/呼び出し先ビュー - インストルメンテーション データ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c9f00ecf2bf9e99fe2dc40c9a849fa6bbf576bc4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cc820808db428ec1b4919c5d65ca9e12091a987e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539219"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49250550"
 ---
 # <a name="callercallee-view---instrumentation-data"></a>呼び出し元/呼び出し先ビュー - インストルメンテーション データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[呼び出し元/呼び出し先ビュー - インストルメンテーション データ](https://docs.microsoft.com/visualstudio/profiling/caller-callee-view-instrumentation-data)します。  
-  
 呼び出し元/呼び出し先ビューには、コール ツリーで選択した関数およびその親関数と子関数のプロファイル データが表示されます。 [呼び出し元/呼び出し先] ビューは、3 つのグリッドで構成されます。  
   
  **[現在の関数]** は中央のグリッドに表示されます。このグリッドには、選択した関数に関するプロファイル情報が表示されます。 値には、この関数に対するすべての呼び出しが含まれます。  

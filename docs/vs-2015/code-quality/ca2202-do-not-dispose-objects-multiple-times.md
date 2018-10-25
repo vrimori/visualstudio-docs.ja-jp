@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2202: オブジェクトを破棄しません複数回 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 0c71f7338ee8dc7a5c7dbdeb6c560cd59abc4197
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: de3bc29e6d843532e4c15db1e33673d4f63c5179
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589082"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49830718"
 ---
 # <a name="ca2202-do-not-dispose-objects-multiple-times"></a>CA2202: オブジェクトを複数回破棄しません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2202: オブジェクトを複数回破棄しません](https://docs.microsoft.com/visualstudio/code-quality/ca2202-do-not-dispose-objects-multiple-times)します。
 
 |||
 |-|-|
@@ -67,7 +65,6 @@ using (Stream stream = new FileStream("file.txt", FileMode.OpenOrCreate))
         // Use the writer object...
     }
 }
-
 ```
 
 ## <a name="example"></a>例
@@ -89,7 +86,6 @@ finally
     if(stream != null)
         stream.Dispose();
 }
-
 ```
 
 ## <a name="see-also"></a>関連項目

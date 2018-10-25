@@ -1,7 +1,7 @@
 ---
 title: 行ビュー - 競合データ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,37 +16,35 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 09149f44e80155a13986d42d2b3279e5c39c8884
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b91c12807482f411783ed6ef5f50e29716612ffd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539469"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921935"
 ---
 # <a name="lines-view---contention-data"></a>行ビュー - 競合データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[行ビュー - 競合データ](https://docs.microsoft.com/visualstudio/profiling/lines-view-contention-data)します。  
-  
 競合データの行ビューには、プロファイルを実行してサンプルを収集するときに実行したステートメントのパフォーマンス データが表示されます。 ソース ファイルでは、1 つのステートメントを複数の行にわたって記述することも、複数のステートメントを 1 つの行に含めることもできます。  
   
  ステートメントは、次のデータによって識別されます。  
   
--   関数のステートメントを含むソース ファイル。  
+- 関数のステートメントを含むソース ファイル。  
   
--   ステートメントを含む関数。  
+- ステートメントを含む関数。  
   
--   ステートメントが開始されるソース行。  
+- ステートメントが開始されるソース行。  
   
--   ステートメントが開始されるソース行の文字。  
+- ステートメントが開始されるソース行の文字。  
   
--   ステートメントが終了するソース行。  
+- ステートメントが終了するソース行。  
   
--   ステートメントが終了するソース行の文字。  
+- ステートメントが終了するソース行の文字。  
   
- [ソース/行番号] 列は、識別子データを連結したもので、この列による並べ替えが可能です。  
+  [ソース/行番号] 列は、識別子データを連結したもので、この列による並べ替えが可能です。  
   
- 次の表では、行ビュー レポートの列について説明します。  
+  次の表では、行ビュー レポートの列について説明します。  
   
 |Column|説明|  
 |------------|-----------------|  

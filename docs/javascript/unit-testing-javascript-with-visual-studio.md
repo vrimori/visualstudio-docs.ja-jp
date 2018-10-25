@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: bc2a839583f62f3efab18fdb55274ec559d5e6cf
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: 7d89292bd3f0c3835d6d2ed809310bc2a395553f
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924792"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776094"
 ---
 # <a name="unit-testing-in-nodejs"></a>Node.js での単体テスト
 
@@ -147,3 +147,24 @@ JavaScript を使って検出と実行のロジックを実装することで、
 `<VisualStudioFolder>\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter\TestFrameworks\mocha\mocha.js`
 
 使用可能なテスト フレームワークの検出は、Visual Studio の開始時に行われます。 Visual Studio の実行中にフレームワークを追加する場合は、Visual Studio を再起動してフレームワークが検出されるようにします。 ただし、実装を変更するときは再起動する必要はありません。
+
+## <a name="unit-tests-in-other-project-types"></a>他のプロジェクト タイプでの単体テスト
+単体テストは、Node.js プロジェクトで記述することだけに限定されません。 TestFramework プロパティと TestRoot プロパティを任意の C# プロジェクトまたは VB プロジェクトに追加すると、これらのテストが列挙され、[テスト エクスプローラー] ウィンドウを使用してこれらを実行することができます。
+
+これを有効にするには、ソリューション エクスプローラーでプロジェクト ノードを右クリックし、**[プロジェクトのアンロード]**、**[プロジェクトの編集]** の順に選択します。 次に、プロジェクト ファイルで、次の 2 つの要素をプロパティ グループに追加します。
+
+> [!NOTE]
+> 要素を追加するプロパティ グループに、指定された条件がないことを確認します。
+> これにより、予期しない動作が発生する可能性があります。
+
+```xml
+<PropertyGroup>
+    <JavaScriptTestRoot>tests\</JavaScriptTestRoot>
+    <JavaScriptTestFramework>Tape</JavaScriptTestFramework>
+</PropertyGroup>
+```
+
+次に、指定したテスト ルート フォルダーにテストを追加すると、これらのテストがテスト エクスプローラー ウィンドウで実行できるようになります。 これらが最初に表示されない場合は、プロジェクトをリビルドする必要があります。
+
+> [!NOTE]
+> これは現在、.NET Standard および .NET Core のプロジェクトでは機能しません。

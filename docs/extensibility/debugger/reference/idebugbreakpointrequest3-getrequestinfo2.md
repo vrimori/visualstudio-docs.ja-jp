@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointRequest3::GetRequestInfo2 |Microsoft ドキュメント
+title: IDebugBreakpointRequest3::GetRequestInfo2 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 76a8db9c0b8bd64d41524b7fc3a419d8f6ec4d27
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0349ecb12d60018b09271efe5b988cc44585dc4d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31104398"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939671"
 ---
 # <a name="idebugbreakpointrequest3getrequestinfo2"></a>IDebugBreakpointRequest3::GetRequestInfo2
-このメソッドは、このブレークポイントの要求を表すブレークポイント要求情報を取得します。  
+このメソッドは、このブレークポイントの要求を記述するブレークポイント要求情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,16 +43,16 @@ int GetRequestInfo2(
   
 #### <a name="parameters"></a>パラメーター  
  `dwFields`  
- [in]フラグの組み合わせ、 [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)のフィールドを決定する列挙体`pBPRequestInfo`を入力するのには、します。  
+ [in]フラグの組み合わせ、 [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)のフィールドを決定する列挙体`pBPRequestInfo`入力します。  
   
  `bBPRequestInfo`  
- [out][BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)格納する構造体。  
+ [out][BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)情報を格納する構造体。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 返されるよりも、この要求の詳細については、 [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 返されるよりも、この要求の詳細については、 [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)メソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugBreakpointRequest3](../../../extensibility/debugger/reference/idebugbreakpointrequest3.md)   

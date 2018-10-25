@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6f4234ac20f9c583d944ba6fdf8e52a6eb0db156
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 828c72224655f404e88ac0913908ef293119ccb3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39639683"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855158"
 ---
 # <a name="sccgetparentprojectpath-function"></a>SccGetParentProjectPath 関数
 この関数は、指定されたプロジェクトの親プロジェクトのパスを決定します。 この関数は、ユーザーがソース管理に Visual Studio プロジェクトを追加するときに呼び出されます。  
@@ -46,13 +46,13 @@ SCCRTN SccGetParentProjectPath(
  [in]ソース管理プラグインが提供される任意のダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
   
  lpUser  
- [入力、出力](最大 SCC_USER_SIZE、NULL 終端文字も含めて) ユーザー名。  
+ [入力、出力] (最大 SCC_USER_SIZE、NULL 終端文字も含めて) ユーザー名。  
   
  lpProjPath  
  [in]プロジェクトパスを識別する文字列（NULL終端文字を含むSCC_PRJPATH_SIZEまで）。  
   
  lpAuxProjPath  
- [入力、出力](最大 SCC_PRJPATH_SIZE、NULL 終端文字も含めて) プロジェクトを識別する文字列を補助します。  
+ [入力、出力] (最大 SCC_PRJPATH_SIZE、NULL 終端文字も含めて) プロジェクトを識別する文字列を補助します。  
   
  lpParentProjPath  
  [入力、出力]親プロジェクトのパス (最大 SCC_PRJPATH_SIZE、NULL 終端文字を含む) を識別する文字列を出力します。  

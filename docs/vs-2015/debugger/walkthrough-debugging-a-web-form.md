@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: Web フォームのデバッグ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -28,22 +28,20 @@ caps.latest.revision: 34
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: aff54238649947f578535dee2b813aa4daa90681
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f8cbda461c4472ed020087e7e606b1ab86ddb6b9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535006"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49275133"
 ---
 # <a name="walkthrough-debugging-a-web-form"></a>チュートリアル : Web フォームのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: Web フォームのデバッグ](https://docs.microsoft.com/visualstudio/debugger/walkthrough-debugging-a-web-form)します。  
-  
 このチュートリアルでは、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーション (Web フォーム) をデバッグする方法について説明します。 開始し実行を停止、ブレークポイントを設定およびで変数を確認する方法を示します、**ウォッチ**ウィンドウ。  
   
 > [!NOTE]
->  このチュートリアルを完了するには、サーバー コンピューターに対する管理者特権が必要です。 既定では、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] プロセス (aspnet_wp.exe または w3wp.exe) は、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] プロセスとして実行されます。 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] をデバッグするには、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] が実行されているコンピューターに対する管理者特権が必要です。 詳細については、次を参照してください。[システム要件](../debugger/aspnet-debugging-system-requirements.md)します。  
+>  このチュートリアルを完了するには、サーバー コンピューターに対する管理者特権が必要です。 既定では、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] プロセス (aspnet_wp.exe または w3wp.exe) は、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] プロセスとして実行されます。 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] をデバッグするには、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] が実行されているコンピューターに対する管理者特権が必要です。 詳細については、「 [System Requirements](../debugger/aspnet-debugging-system-requirements.md)」をご覧ください。  
   
  使用している設定またはエディションによっては、ヘルプの記載と異なるダイアログ ボックスやメニュー コマンドが表示される場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   

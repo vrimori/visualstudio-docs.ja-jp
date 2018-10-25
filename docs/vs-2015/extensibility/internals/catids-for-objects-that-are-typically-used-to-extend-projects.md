@@ -1,7 +1,7 @@
 ---
 title: プロジェクトの拡張に通常使用されるオブジェクトの Catid |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 0c7fdb66-ed96-4b36-89f6-021bca573572
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e2ad075ac384dc8bc4f83d16034715515fde5b04
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0f9daee3e188aeb098961aa6631f7901efad2aa8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536461"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49224056"
 ---
 # <a name="catids-for-objects-that-are-typically-used-to-extend-projects"></a>プロジェクトの拡張に通常使用されるオブジェクトの CATID
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[オブジェクト一般的に使用する拡張プロジェクトの Catid](https://docs.microsoft.com/visualstudio/extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects)します。  
-  
 次の表に、拡張に使用される Catid`Project`と`ProjectItem`オートメーション オブジェクトに対する[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]、 [!INCLUDE[csprcs](../../includes/csprcs-md.md)]、および[!INCLUDE[vcprvc](../../includes/vcprvc-md.md)]プロジェクト。 これらの Catid は VSLangProj.olb で定義されます。  
   
 ## <a name="listing-of-catids"></a>Catid を一覧表示します。  

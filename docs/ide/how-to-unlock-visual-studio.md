@@ -10,12 +10,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a85e2d8f057a84b56553e8592b3f6a5e390690a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d0f77fb6bb22c82fb8f3bb0b3bf2a7a32a9be559
+ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31943119"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46542378"
 ---
 # <a name="how-to-unlock-visual-studio"></a>方法: Visual Studio のロックを解除する
 
@@ -27,14 +27,14 @@ Visual Studio は最大で 30 日間無料で評価できます。 IDE にサイ
 
 ## <a name="to-unlock-visual-studio-using-an-online-subscription"></a>オンライン サブスクリプションを使用して Visual Studio のロックを解除するには
 
-Microsoft アカウントか、職場または学校のアカウントに関連付けられた MSDN または Visual Studio Team Service サブスクリプションを使用して Visual Studio のロックを解除するには、次の手順を実行します。
+Microsoft アカウントか、職場または学校アカウントに関連付けられた Visual Studio サブスクリプションまたは Azure DevOps 組織を使用して Visual Studio のロックを解除するには、次の手順を行います。
 
 1. IDE の右上隅にある **[サインイン]** ボタンをクリックします (または、**[ファイル]** > **[アカウントの設定]** の順に移動して **[アカウントの設定]** ダイアログを開き、**[サインイン]** ボタンをクリックします)。
 
-1. Microsoft アカウントか、職場または学校のアカウントの資格情報を入力します。 Visual Studio は、アカウントに関連付けられている Visual Studio サブスクリプションまたは Visual Studio Team Services サブスクリプションを検索します。
+1. Microsoft アカウントか、職場または学校のアカウントの資格情報を入力します。 Visual Studio は、アカウントに関連付けられている Visual Studio サブスクリプションまたは Azure DevOps 組織を検索します。
 
 > [!IMPORTANT]
-> **チーム エクスプローラー**のツール ウィンドウから Visual Studio Team Services アカウントに接続すると、Visual Studio は関連付けられているオンライン サブスクリプションを自動的に検索します。 Visual Studio Team Services アカウントに接続した場合は、Microsoft アカウントか、職場または学校アカウントの両方を使用してサインインできます。 そのユーザー アカウントのオンライン サブスクリプションが存在する場合は、Visual Studio は自動的に IDE のロックを解除します。
+> **チーム エクスプローラー**のツール ウィンドウから Azure DevOps 組織に接続すると、Visual Studio は関連付けられているオンライン サブスクリプションを自動的に検索します。 Azure DevOps 組織に接続した場合は、Microsoft アカウントと、職場または学校アカウントの両方を使用してサインインできます。 そのユーザー アカウントのオンライン サブスクリプションが存在する場合は、Visual Studio は自動的に IDE のロックを解除します。
 
 ## <a name="to-unlock-visual-studio-with-a-product-key"></a>プロダクト キーを使って Visual Studio のロックを解除するには
 

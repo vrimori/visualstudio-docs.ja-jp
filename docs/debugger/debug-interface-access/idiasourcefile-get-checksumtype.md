@@ -1,5 +1,5 @@
 ---
-title: Idiasourcefile::get_checksumtype |Microsoft ドキュメント
+title: Idiasourcefile::get_checksumtype |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 83d1aa687ec7f19df61031d4ff334751ccabaebd
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 39fa53d00d17446e63170d5b729d2e669ecb987b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31461932"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948422"
 ---
 # <a name="idiasourcefilegetchecksumtype"></a>IDiaSourceFile::get_checksumType
 チェックサム タイプを取得します。  
@@ -34,23 +34,23 @@ HRESULT get_checksumType (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]チェックサム タイプを返します。  
+ [out]チェックサムの型を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- チェックサム タイプは、チェックサム アルゴリズムに割り当てられる値です。 たとえば、標準の PDB ファイル形式では、次の値のいずれかを持つ通常ことができます。  
+## <a name="remarks"></a>Remarks  
+ チェックサム タイプは、チェックサム アルゴリズムに割り当てられる値です。 たとえば、標準の PDB ファイル形式では、次の値のいずれかができます通常。  
   
-|チェックサム タイプ|CryptoAPI ラベル|説明|  
+|チェックサムの種類|CryptoAPI ラベル|説明|  
 |-------------------|---------------------|-----------------|  
-|0|\<なし >|チェックサムを表示します。|  
-|1|`CALG_MD5`|チェックサム MD5 ハッシュ アルゴリズムを使用して生成します。|  
-|2|`CALG_SHA1`|チェックサムは、SHA1 ハッシュ アルゴリズムを使用して生成します。|  
+|0|\<なし >|存在するチェックサムがありません。|  
+|1|`CALG_MD5`|MD5 ハッシュ アルゴリズムで生成されたチェックサム。|  
+|2|`CALG_SHA1`|SHA1 ハッシュ アルゴリズムで生成されたチェックサム。|  
   
- `CryptoAPI`ラベルはからでは、`ALG_ID`列挙します。 ハッシュ アルゴリズムの詳細についてを参照してください、 `CryptoAPI` 、マイクロソフトの「[!INCLUDE[winsdkshort](../../debugger/debug-interface-access/includes/winsdkshort_md.md)]です。  
+ `CryptoAPI`ラベルは、`ALG_ID`列挙体。 ハッシュ アルゴリズムの詳細についてを参照してください、 `CryptoAPI` 、Microsoft の「[!INCLUDE[winsdkshort](../../debugger/debug-interface-access/includes/winsdkshort_md.md)]します。  
   
- ソース ファイルの実際のチェックサム バイトを取得するを呼び出して、 [idiasourcefile::get_checksum](../../debugger/debug-interface-access/idiasourcefile-get-checksum.md)メソッドです。  
+ ソース ファイルの実際のチェックサムのバイト数を取得する呼び出し、 [idiasourcefile::get_checksum](../../debugger/debug-interface-access/idiasourcefile-get-checksum.md)メソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)   

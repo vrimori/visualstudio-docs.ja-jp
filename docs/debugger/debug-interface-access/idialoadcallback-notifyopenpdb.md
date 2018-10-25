@@ -1,5 +1,5 @@
 ---
-title: Idialoadcallback::notifyopenpdb |Microsoft ドキュメント
+title: Idialoadcallback::notifyopenpdb |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 02069369e92862fffd90fcf4fe49c2d7e064f64e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 1367d444a498c1c066cbdfb38ee4f2cec12c9a2b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31461361"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915322"
 ---
 # <a name="idialoadcallbacknotifyopenpdb"></a>IDiaLoadCallback::NotifyOpenPDB
 候補の .pdb ファイルが開かれたときに呼び出されます。  
@@ -38,10 +38,10 @@ HRESULT NotifyOpenPDB (
  [in].Pdb ファイルの完全パス。  
   
  `resultCode`  
- [in]成功を示すコード (`S_OK`) またはこのファイルに適用されると、負荷の失敗します。  
+ [in]成功を示すコード (`S_OK`) またはこのファイルに適用されると、負荷の失敗。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 通常、リターン コードは無視されます。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 リターン コードは通常は無視されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

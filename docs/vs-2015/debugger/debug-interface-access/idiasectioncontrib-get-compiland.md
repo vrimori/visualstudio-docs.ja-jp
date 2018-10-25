@@ -1,7 +1,7 @@
 ---
 title: Idiasectioncontrib::get_compiland |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e76fea45f5f18e4ab7b93daa40ab73bec431ea88
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9960232884ed0c41de75a2c643ebc19f24b95e83
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538867"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866871"
 ---
 # <a name="idiasectioncontribgetcompiland"></a>IDiaSectionContrib::get_compiland
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasectioncontrib::get_compiland](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasectioncontrib-get-compiland)します。  
-  
 このセクションの原因であるコンパイル単位シンボルへの参照を取得します。  
   
 ## <a name="syntax"></a>構文  

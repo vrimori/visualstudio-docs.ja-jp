@@ -1,5 +1,5 @@
 ---
-title: 識別子、文字列または数値が必要です |Microsoft ドキュメント
+title: 識別子、文字列または数値が必要です |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,14 +21,14 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 0ea67835a0c60d45d9e79f552183e0a4d6b677ac
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24632882"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855132"
 ---
 # <a name="expected-identifier-string-or-number"></a>識別子、文字列、または数値が必要です
-オブジェクト リテラルの宣言には、リテラルに不適切な構文を使用します。 オブジェクト リテラルのプロパティは、識別子、文字列、または数字にする必要があります。 オブジェクト リテラル (「オブジェクトの初期化子」とも呼ばれます) は、プロパティ値のペア、角かっこで囲まれるすべてのコンマ区切りの一覧で構成されます。 例:  
+リテラル オブジェクトを宣言するのにには、リテラルの構文が正しくありませんを使用します。 オブジェクト リテラルのプロパティは、識別子、文字列、または数値である必要があります。 オブジェクト リテラル (「オブジェクトの初期化子」とも呼ばれます) は、すべて、角かっこで囲まれるプロパティ。 値のペアのコンマ区切りの一覧で構成されます。 例えば:  
   
 ```JavaScript  
 var point = {x:1.2, y:-3.4};  

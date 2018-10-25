@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8bdf4f290c3312be234f491debe95f532c85802b
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 6c5bf8b782d34cb1375f4357cd33f6e47cc22988
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39232508"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908458"
 ---
 # <a name="implement-an-expression-evaluator"></a>式エバリュエーターを実装します。
 > [!IMPORTANT]
@@ -29,37 +29,37 @@ ms.locfileid: "39232508"
   
  EE は、文字列の形式で DE から式を取得および解析または評価します。 EE には、次のインターフェイスは、DE によって使用されますが実行されます。  
   
--   [IDebugExpressionEvaluator](../../extensibility/debugger/reference/idebugexpressionevaluator.md)  
+- [IDebugExpressionEvaluator](../../extensibility/debugger/reference/idebugexpressionevaluator.md)  
   
--   [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)  
+- [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)  
   
- EE は、シンボルとオブジェクトの値を取得する、DE、によって提供されるバインダー オブジェクトを呼び出します。 EE、DE によって実装される次のインターフェイスを使用します。  
+  EE は、シンボルとオブジェクトの値を取得する、DE、によって提供されるバインダー オブジェクトを呼び出します。 EE、DE によって実装される次のインターフェイスを使用します。  
   
--   [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)  
+- [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)  
   
--   [IDebugArrayObject](../../extensibility/debugger/reference/idebugarrayobject.md)  
+- [IDebugArrayObject](../../extensibility/debugger/reference/idebugarrayobject.md)  
   
--   [IDebugFunctionObject](../../extensibility/debugger/reference/idebugfunctionobject.md)  
+- [IDebugFunctionObject](../../extensibility/debugger/reference/idebugfunctionobject.md)  
   
--   [IDebugPointerObject](../../extensibility/debugger/reference/idebugpointerobject.md)  
+- [IDebugPointerObject](../../extensibility/debugger/reference/idebugpointerobject.md)  
   
--   [IDebugManagedObject](../../extensibility/debugger/reference/idebugmanagedobject.md)  
+- [IDebugManagedObject](../../extensibility/debugger/reference/idebugmanagedobject.md)  
   
--   [IEnumDebugObjects](../../extensibility/debugger/reference/ienumdebugobjects.md)  
+- [IEnumDebugObjects](../../extensibility/debugger/reference/ienumdebugobjects.md)  
   
--   [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)  
+- [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)  
   
- EE 実行[IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)します。 `IDebugProperty2` ローカル変数、プリミティブ型、型の適切な情報が表示されますが、Visual Studio のオブジェクトなど、式の評価の結果を記述するためのメカニズムを提供、**ローカル**、**ウォッチ**、または**イミディ エイト**ウィンドウ。  
+  EE 実行[IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)します。 `IDebugProperty2` ローカル変数、プリミティブ型、型の適切な情報が表示されますが、Visual Studio のオブジェクトなど、式の評価の結果を記述するためのメカニズムを提供、**ローカル**、**ウォッチ**、または**イミディ エイト**ウィンドウ。  
   
- SP は、情報の入力を求められたらときに、DE、EE に付与されます。 SP は、アドレスと、次のインターフェイスおよびその派生物などのフィールドを記述するインターフェイスを実行します。  
+  SP は、情報の入力を求められたらときに、DE、EE に付与されます。 SP は、アドレスと、次のインターフェイスおよびその派生物などのフィールドを記述するインターフェイスを実行します。  
   
--   [IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md)  
+- [IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md)  
   
--   [IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md)  
+- [IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md)  
   
--   [IDebugField](../../extensibility/debugger/reference/idebugfield.md)  
+- [IDebugField](../../extensibility/debugger/reference/idebugfield.md)  
   
- EE は、これらのインターフェイスのすべてを使用します。  
+  EE は、これらのインターフェイスのすべてを使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [式エバリュエーターの実装方法](../../extensibility/debugger/expression-evaluator-implementation-strategy.md)  

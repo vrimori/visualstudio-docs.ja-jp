@@ -1,7 +1,7 @@
 ---
 title: ソース管理構成の詳細 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: adbee9fc-7a2e-4abe-a3b8-e6615bcd797f
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: aed814ee319f9713a7b4a4c5925abcda63a04e49
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7bc4d7caefe0d0db2cdadf684702ec7e0d800c9c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548418"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49884161"
 ---
 # <a name="source-control-configuration-details"></a>ソース管理構成の詳細
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ソース管理の構成詳細](https://docs.microsoft.com/visualstudio/extensibility/internals/source-control-configuration-details)します。  
-  
 ソース管理を実装するために、プロジェクト システムやには、次のエディターを適切に構成する必要があります。  
   
 -   変更された状態に遷移するアクセス許可を要求します。  
@@ -40,11 +38,11 @@ ms.locfileid: "47548418"
   
  応答、`IVsQueryEditQuerySave2::QueryEditFiles`を呼び出すには、環境は、次を実行できます。  
   
--   ケース エディターまたはプロジェクトがいなければ、unchanged (クリーン) 状態を変更する呼び出しを拒否します。  
+- ケース エディターまたはプロジェクトがいなければ、unchanged (クリーン) 状態を変更する呼び出しを拒否します。  
   
--   ドキュメント データを再読み込みするかを示します。 プロジェクトの場合、環境はプロジェクトのデータを再読み込みは。 エディターは、使用したディスクからデータを再読み込みする必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.ReloadDocData%2A>実装します。 どちらの場合、データの再読み込み時、プロジェクトまたはエディターのコンテキストは変更できます。  
+- ドキュメント データを再読み込みするかを示します。 プロジェクトの場合、環境はプロジェクトのデータを再読み込みは。 エディターは、使用したディスクからデータを再読み込みする必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.ReloadDocData%2A>実装します。 どちらの場合、データの再読み込み時、プロジェクトまたはエディターのコンテキストは変更できます。  
   
- 複雑で困難なタスクに組み込む適切な`IVsQueryEditQuerySave2::QueryEditFiles`呼び出し、既存のコード ベースにします。 その結果、これらの呼び出しは、プロジェクトまたはエディターの作成時に統合する必要があります。  
+  複雑で困難なタスクに組み込む適切な`IVsQueryEditQuerySave2::QueryEditFiles`呼び出し、既存のコード ベースにします。 その結果、これらの呼び出しは、プロジェクトまたはエディターの作成時に統合する必要があります。  
   
 ## <a name="request-permission-to-save-a-file"></a>ファイルを保存するアクセス許可を要求します。  
  プロジェクトまたはエディターは、ファイルを保存して、前に呼び出す必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFile%2A>または<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A>します。 プロジェクト ファイルのこれらの呼び出しは、プロジェクト ファイルを保存するタイミングを認識しているソリューションによって自動的に完了します。 しない限り、これらの呼び出しを行うためのエディターは、エディターの実装の`IVsPersistDocData2`ヘルパー関数を使用して<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SaveDocDataToFile%2A>します。 エディターを実装する場合`IVsPersistDocData2`への呼び出し、この方法で`IVsQueryEditQuerySave2::QuerySaveFile`または`IVsQueryEditQuerySave2::QuerySaveFiles`が行われます。  

@@ -18,29 +18,29 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: dee03e2cd7b1c22faf5f1b06ec5efe763bad1387
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 8a9a879db7c1d24dbfd8312dbc75d9b0bbaa8803
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119826"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844418"
 ---
 # <a name="walkthrough-create-a-basic-site-definition-project"></a>チュートリアル: 基本的なサイト定義プロジェクトを作成します。
   このチュートリアルでは、一部のコントロールに視覚的 Web パーツを含む基本的なサイト定義を作成する方法を示します。 わかりやすくする、作成した視覚的 Web パーツにはいくつかのコントロールがあります。 ただし、多くの機能を含むより高度な SharePoint サイト定義を作成できます。  
   
  このチュートリアルでは、次のタスクについて説明します。  
   
--   使用してサイト定義を作成する、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]プロジェクト テンプレート。  
+- 使用してサイト定義を作成する、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]プロジェクト テンプレート。  
   
--   SharePoint のサイト定義を使用して SharePoint サイトを作成します。  
+- SharePoint のサイト定義を使用して SharePoint サイトを作成します。  
   
--   ソリューションに視覚的 Web パーツを追加します。  
+- ソリューションに視覚的 Web パーツを追加します。  
   
--   新しいビジュアル Web パーツを追加して、サイトの default.aspx ページをカスタマイズします。  
+- 新しいビジュアル Web パーツを追加して、サイトの default.aspx ページをカスタマイズします。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   サポート対象エディションの Microsoft Windows および SharePoint。 詳細については、SharePoint ソリューションを開発するための要件を参照してください。  
@@ -52,29 +52,29 @@ ms.locfileid: "37119826"
   
 #### <a name="to-create-a-site-definition-project"></a>サイト定義プロジェクトを作成するには  
   
-1.  メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。 お使いの IDE が Visual Basic 開発設定を使用して、メニュー バーに設定されている場合は、選択**ファイル** > **新しいプロジェクト**します。  
+1. メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。 お使いの IDE が Visual Basic 開発設定を使用して、メニュー バーに設定されている場合は、選択**ファイル** > **新しいプロジェクト**します。  
   
-     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
+    **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  展開、 **Visual c#** ノードまたは**Visual Basic**ノード、展開、 **SharePoint**ノードを選択し、 **2010**ノード。  
+2. 展開、 **Visual c#** ノードまたは**Visual Basic**ノード、展開、 **SharePoint**ノードを選択し、 **2010**ノード。  
   
-3.  **テンプレート**一覧で、選択、 **SharePoint 2010 プロジェクト**テンプレート。  
+3. **テンプレート**一覧で、選択、 **SharePoint 2010 プロジェクト**テンプレート。  
   
-4.  **名前**ボックスに、入力**TestSiteDef**、選択し、 **OK**ボタン。  
+4. **名前**ボックスに、入力**TestSiteDef**、選択し、 **OK**ボタン。  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  
+    **SharePoint カスタマイズ ウィザード**が表示されます。  
   
-5.  **デバッグのサイトとセキュリティのレベルを指定**ページで、サイト定義をデバッグする SharePoint サイトの URL を入力するか、既定の場所を使用して (http://*システム名*/)。  
+5. **デバッグのサイトとセキュリティのレベルを指定**ページで、サイト定義をデバッグする SharePoint サイトの URL を入力するか、既定の場所を使用して (http://<em>システム名</em>/)。  
   
-6.  **この SharePoint ソリューションの信頼レベルとは何ですか?** セクションで、選択、**ファーム ソリューションとして配置**オプション ボタンをクリックします。  
+6. **この SharePoint ソリューションの信頼レベルとは何ですか?** セクションで、選択、**ファーム ソリューションとして配置**オプション ボタンをクリックします。  
   
-     すべてのサイト定義プロジェクトはファーム ソリューションとして配置する必要があります。 サンド ボックス ソリューションとファーム ソリューションの詳細については、次を参照してください。[サンド ボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)します。  
+    すべてのサイト定義プロジェクトはファーム ソリューションとして配置する必要があります。 サンド ボックス ソリューションとファーム ソリューションの詳細については、次を参照してください。[サンド ボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)します。  
   
-7.  選択、**完了**ボタンをクリックします。  
+7. 選択、**完了**ボタンをクリックします。  
   
-     プロジェクトが表示されます**ソリューション エクスプ ローラー**します。  
+    プロジェクトが表示されます**ソリューション エクスプ ローラー**します。  
   
-8.  **ソリューション エクスプ ローラー**をプロジェクト ノードを選択し、メニュー バーで、次のように選択します。**プロジェクト** > **新しい項目の追加**します。  
+8. **ソリューション エクスプ ローラー**をプロジェクト ノードを選択し、メニュー バーで、次のように選択します。**プロジェクト** > **新しい項目の追加**します。  
   
 9. いずれかで**Visual c#** または**Visual Basic**、展開、 **SharePoint**ノードを選択し、 **2010**ノード。  
   
@@ -188,5 +188,5 @@ ms.locfileid: "37119826"
   
 ## <a name="see-also"></a>関連項目
  [方法: イベント レシーバーを作成](../sharepoint/how-to-create-an-event-receiver.md)   
- [SharePoint ソリューションを開発します。](../sharepoint/developing-sharepoint-solutions.md)  
+ [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   

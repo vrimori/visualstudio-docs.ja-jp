@@ -1,7 +1,7 @@
 ---
 title: 組み込み関数の |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a391bc1f5208b47ffb1aca51dbbd40b5b15fb04d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1b50742c0176b8c880d3ed0b58b7b8ef76355777
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547088"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49174487"
 ---
 # <a name="intrinsic-functions"></a>組み込み関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[組み込み関数](https://docs.microsoft.com/visualstudio/code-quality/intrinsic-functions)します。  
-  
 SAL の式は副作用がない式については、C と C++ の式を指定できます: たとえば、+ +、- と関数の呼び出しがこのコンテキストで副作用があるすべて。  ただし、SAL では、いくつかの関数に似たオブジェクトと SAL 式で使用できるいくつかの予約済みの記号を提供しています。 呼ばれる、*組み込み関数*します。  
   
 ## <a name="general-purpose"></a>汎用  
@@ -44,7 +42,7 @@ SAL の式は副作用がない式については、C と C++ の式を指定で
 |`_Inexpressible_(expr)`|バッファーのサイズが注釈式を使用して表すには複雑すぎる状況を表す — など、入力データセットをスキャンしてカウントし、計算されるメンバーを選択します。|  
 |`_Nullterm_length_(param)`|`param` 最大バッファーが null 終端文字を含まない内の要素の数です。 非集計、void 以外の型のすべてのバッファーに適用できます。|  
 |`_Old_(expr)`|での前提条件が評価されるときに`_Old_`入力値を返します`expr`します。  事後条件で評価されるときに値を返す`expr`と前提条件で評価された場合します。|  
-|`_Param_(n)`|`n`番目のパラメーターを 1 からカウント関数`n`、および`n`リテラル整数の定数します。 場合は、パラメーターの名前は、この注釈は名前で、パラメーターへのアクセスと同じです。 **注:** `n`可能性があります、省略記号によって定義されますか、名前が使用されていない関数プロトタイプで使用できる位置指定パラメーターを参照してください。  |  
+|`_Param_(n)`|`n`番目のパラメーターを 1 からカウント関数`n`、および`n`リテラル整数の定数します。 場合は、パラメーターの名前は、この注釈は名前で、パラメーターへのアクセスと同じです。 **注:** `n`可能性があります、省略記号によって定義されますか、名前が使用されていない関数プロトタイプで使用できる位置指定パラメーターを参照してください。|  
 |`return`|C と C++ の予約済みキーワード`return`関数の戻り値を示す SAL 式で使用できます。  値は、後の状態でのみ使用前の状態で使用すると、構文エラーになります。|  
   
 ## <a name="string-specific"></a>文字列固有  

@@ -11,12 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5bb0b27e57490f49dc677cffa553bc10201e5a47
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 930d7ededf4a54aaf75516c59001eaccf38c210c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39511341"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896769"
 ---
 # <a name="navigate-and-update-a-model-in-program-code"></a>プログラム コードのモデル内を移動し、モデルを更新する
 
@@ -131,7 +131,7 @@ ms.locfileid: "39511341"
 -   ElementLink - すべてのリレーションシップは ElementLinks
 
 ##  <a name="transaction"></a> トランザクション内で変更を実行します。
- プログラム コードが、ストアでは何も変更されるたびに、行う必要があります、トランザクション内で。 これは、すべてのモデル要素、リレーションシップ、図形、図、およびそのプロパティに適用されます。 詳細については、「<xref:Microsoft.VisualStudio.Modeling.Transaction>」を参照してください。
+ プログラム コードが、ストアでは何も変更されるたびに、行う必要があります、トランザクション内で。 これは、すべてのモデル要素、リレーションシップ、図形、図、およびそのプロパティに適用されます。 詳細については、「 <xref:Microsoft.VisualStudio.Modeling.Transaction> 」を参照してください。
 
  トランザクションの管理の最も便利な方法は、`using`ステートメントで囲む、`try...catch`ステートメント。
 
@@ -186,46 +186,46 @@ using (Transaction t =
 
  この例では、これらの重要なポイント要素を作成する方法を示します。
 
--   ストアの特定のパーティションでは、新しい要素を作成します。 モデル要素と関係がない図形、これは通常、既定のパーティションです。
+- ストアの特定のパーティションでは、新しい要素を作成します。 モデル要素と関係がない図形、これは通常、既定のパーティションです。
 
--   埋め込みリレーションシップのターゲットになります。 この例の DslDefinition、各ユーザーは埋め込みリレーションシップ FamilyTreeHasPeople のターゲットにする必要があります。 これを実現するには、Person オブジェクトの FamilyTreeModel ロール プロパティを設定しますか、FamilyTreeModel オブジェクトのユーザー ロールのプロパティにユーザーを追加します。
+- 埋め込みリレーションシップのターゲットになります。 この例の DslDefinition、各ユーザーは埋め込みリレーションシップ FamilyTreeHasPeople のターゲットにする必要があります。 これを実現するには、Person オブジェクトの FamilyTreeModel ロール プロパティを設定しますか、FamilyTreeModel オブジェクトのユーザー ロールのプロパティにユーザーを追加します。
 
--   対象のプロパティでは特に、新しい要素のプロパティを設定`IsName`DslDefinition に当てはまります。 このフラグは、その所有者内で一意に要素を識別するプロパティをマークします。 この場合、名前プロパティには、そのフラグがあります。
+- 対象のプロパティでは特に、新しい要素のプロパティを設定`IsName`DslDefinition に当てはまります。 このフラグは、その所有者内で一意に要素を識別するプロパティをマークします。 この場合、名前プロパティには、そのフラグがあります。
 
--   この DSL の DSL 定義は、ストアに読み込まれている必要があります。 メニュー コマンドなどの拡張機能を記述する場合は、通常これは既に true です。 その他の場合は、明示的に、ストアに、モデルを読み込むまたはを使用することができます<xref:Microsoft.VisualStudio.Modeling.Integration.ModelBus>を読み込みます。 詳細については、次を参照してください。[方法: プログラム コード内のファイルからモデルを開く](../modeling/how-to-open-a-model-from-file-in-program-code.md)します。
+- この DSL の DSL 定義は、ストアに読み込まれている必要があります。 メニュー コマンドなどの拡張機能を記述する場合は、通常これは既に true です。 その他の場合は、明示的に、ストアに、モデルを読み込むまたはを使用することができます<xref:Microsoft.VisualStudio.Modeling.Integration.ModelBus>を読み込みます。 詳細については、次を参照してください。[方法: プログラム コード内のファイルからモデルを開く](../modeling/how-to-open-a-model-from-file-in-program-code.md)します。
 
- この方法で要素を作成するときに (DSL に図がある場合)、図形が自動的に作成します。 既定の図形、色、およびその他の機能と、自動的に割り当てられている場所に表示されます。 参照してください、関連付けられた図形が表示される場所と方法を制御する場合[要素とその図形を作成する](#merge)します。
+  この方法で要素を作成するときに (DSL に図がある場合)、図形が自動的に作成します。 既定の図形、色、およびその他の機能と、自動的に割り当てられている場所に表示されます。 参照してください、関連付けられた図形が表示される場所と方法を制御する場合[要素とその図形を作成する](#merge)します。
 
 ##  <a name="links"></a> リレーションシップ リンクを作成します。
  DSL 定義の例で定義されている 2 つのリレーションシップがあります。 各リレーションシップを定義、*ロール プロパティ*リレーションシップの両端にあるクラス。
 
  リレーションシップのインスタンスを作成できる 3 つの方法はあります。 これら 3 つのメソッドのそれぞれは、同じ効果があります。
 
--   ソース ロール プレーヤーのプロパティを設定します。 例えば:
+- ソース ロール プレーヤーのプロパティを設定します。 例えば:
 
-    -   `familyTree.People.Add(edward);`
+  -   `familyTree.People.Add(edward);`
 
-    -   `edward.Parents.Add(henry);`
+  -   `edward.Parents.Add(henry);`
 
--   ターゲット ロール プレーヤーのプロパティを設定します。 例えば:
+- ターゲット ロール プレーヤーのプロパティを設定します。 例えば:
 
-    -   `edward.familyTreeModel = familyTree;`
+  -   `edward.familyTreeModel = familyTree;`
 
-         このロールの多重度が`1..1`ので、値を割り当てます。
+       このロールの多重度が`1..1`ので、値を割り当てます。
 
-    -   `henry.Children.Add(edward);`
+  -   `henry.Children.Add(edward);`
 
-         このロールの多重度が`0..*`ので、コレクションに追加します。
+       このロールの多重度が`0..*`ので、コレクションに追加します。
 
--   リレーションシップのインスタンスを明示的に作成します。 例えば:
+- リレーションシップのインスタンスを明示的に作成します。 例えば:
 
-    -   `FamilyTreeHasPeople edwardLink = new FamilyTreeHasPeople(familyTreeModel, edward);`
+  -   `FamilyTreeHasPeople edwardLink = new FamilyTreeHasPeople(familyTreeModel, edward);`
 
-    -   `ParentsHaveChildren edwardHenryLink = new ParentsHaveChildren(henry, edward);`
+  -   `ParentsHaveChildren edwardHenryLink = new ParentsHaveChildren(henry, edward);`
 
- 最後のメソッドは、リレーションシップ自体のプロパティを設定する場合に便利です。
+  最後のメソッドは、リレーションシップ自体のプロパティを設定する場合に便利です。
 
- この方法で要素を作成するときに、図上のコネクタが自動的に作成するが既定の図形、色、およびその他の機能があります。 関連するコネクタを作成する方法を制御するを参照してください。[要素とその図形を作成する](#merge)します。
+  この方法で要素を作成するときに、図上のコネクタが自動的に作成するが既定の図形、色、およびその他の機能があります。 関連するコネクタを作成する方法を制御するを参照してください。[要素とその図形を作成する](#merge)します。
 
 ##  <a name="deleteelements"></a> 要素の削除
  呼び出すことによって要素を削除する`Delete()`:
@@ -234,21 +234,21 @@ using (Transaction t =
 
  この操作も削除されます。
 
--   要素との間のリレーションシップ リンク。 たとえば、`edward.Parents`は含まれなく`henry`します。
+- 要素との間のリレーションシップ リンク。 たとえば、`edward.Parents`は含まれなく`henry`します。
 
--   対象のロールにある要素、`PropagatesDelete`フラグが true です。 たとえば、要素を表示する図形も削除されます。
+- 対象のロールにある要素、`PropagatesDelete`フラグが true です。 たとえば、要素を表示する図形も削除されます。
 
- 既定では、すべての埋め込みリレーションシップを持つ`PropagatesDelete`で true でターゲット ロール。 削除する`henry`は削除されません、`familyTree`が`familyTree.Delete()`すべてを削除、`Persons`します。 詳細については、次を参照してください。[削除の動作のカスタマイズ](../modeling/customizing-deletion-behavior.md)します。
+  既定では、すべての埋め込みリレーションシップを持つ`PropagatesDelete`で true でターゲット ロール。 削除する`henry`は削除されません、`familyTree`が`familyTree.Delete()`すべてを削除、`Persons`します。 詳細については、次を参照してください。[削除の動作のカスタマイズ](../modeling/customizing-deletion-behavior.md)します。
 
- 既定では、`PropagatesDelete`参照リレーションシップのロールには当てはまりません。
+  既定では、`PropagatesDelete`参照リレーションシップのロールには当てはまりません。
 
- オブジェクトを削除するときに、特定の伝達を省略する削除ルールが発生することができます。 これは、別の 1 つの要素を置換する場合に便利です。 1 つ以上のロールを削除する必要があります反映されませんの GUID を指定します。 GUID は、リレーションシップ クラスから取得できます。
+  オブジェクトを削除するときに、特定の伝達を省略する削除ルールが発生することができます。 これは、別の 1 つの要素を置換する場合に便利です。 1 つ以上のロールを削除する必要があります反映されませんの GUID を指定します。 GUID は、リレーションシップ クラスから取得できます。
 
- `henry.Delete(ParentsHaveChildren.SourceDomainRoleId);`
+  `henry.Delete(ParentsHaveChildren.SourceDomainRoleId);`
 
- (この例の場合は効果がありません、ため`PropagatesDelete`は`false`の役割、`ParentsHaveChildren`リレーションシップです)。
+  (この例の場合は効果がありません、ため`PropagatesDelete`は`false`の役割、`ParentsHaveChildren`リレーションシップです)。
 
- 場合によっては、ロック、要素または伝達によって削除される要素のいずれかの存在によって削除ができません。 使用することができます`element.CanDelete()`要素を削除できるかどうかを確認します。
+  場合によっては、ロック、要素または伝達によって削除される要素のいずれかの存在によって削除ができません。 使用することができます`element.CanDelete()`要素を削除できるかどうかを確認します。
 
 ##  <a name="deletelinks"></a> リレーションシップ リンクを削除します。
  リレーションシップ リンクを削除するには、ロールのプロパティから要素を削除します。
@@ -325,7 +325,7 @@ using (Transaction t = targetDiagram.Store.
  DSL 定義では、指定した各要素は、標準的なクラスを次のいずれかから派生したクラスを作成します。
 
 |要素の種類|基底クラス|
-|---------------------|----------------|
+|-|-|
 |ドメイン クラス|<xref:Microsoft.VisualStudio.Modeling.ModelElement>|
 |ドメイン リレーションシップ|<xref:Microsoft.VisualStudio.Modeling.ElementLink>|
 |形式|<xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape>|
@@ -468,7 +468,6 @@ partial class MyDiagram
     }
   }
 }
-
 ```
 
  複数の図形を指定した場合を使用してそれらの相対的位置を設定、`AbsoluteBounds`します。

@@ -1,7 +1,7 @@
 ---
 title: VSCT XML スキーマ リファレンス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 49e7efae-e713-4762-a824-96fdaf92cdc9
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 84490c5bbaba926cb76927b5e545b88c4c1d4757
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2129dcb4f8be717ab37c5e220b2d4b65f3b16698
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537924"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49840832"
 ---
 # <a name="vsct-xml-schema-reference"></a>VSCT XML スキーマ リファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[VSCT XML Schema Reference](https://docs.microsoft.com/visualstudio/extensibility/vsct-xml-schema-reference)します。  
-  
 コマンド テーブル コンパイラ スキーマの要素のテーブルの各要素と属性に、許可されている子を提供します。  
   
  XML ベースのコマンド テーブル (.vsct) の構成ファイルでは、統合開発環境 (IDE) に VSPackage を提供するコマンド要素を定義します。 これらの要素には、メニュー項目、メニューのツールバー、およびコンボ ボックスが含まれます。  
@@ -42,11 +40,11 @@ ms.locfileid: "47537924"
   
  すべての GUID と ID の値は、シンボリック名を使用して定義する必要があります。 VSCT でまたはヘッダー ファイルでは、これらの名前を定義することがあります\<シンボル > セクション。 シンボル名は、する必要があります、ローカルに格納\<Include > 要素、またはによって参照される\<Extern > 要素。 シンボリック名がで指定されたヘッダー ファイルからインポートされた、 \<Extern > 要素の単純なパターンに従っている場合は #define シンボル値です。 値は、そのシンボルが以前に定義されていれば、別のシンボルにすることがあります。 GUID の定義は、OLE または C++ のいずれかの形式に従う必要があります。 ID 値がありますの 10 進または 16 進数値 0 x は、前に、次の行で示すように。  
   
--   {6D484634-E53D-4a2c-ADCB-55145C9362C8}  
+- {6D484634-E53D-4a2c-ADCB-55145C9362C8}  
   
--   {0x6d484634、0xe53d、0x4a2c、{0xad、0xcb、0x55、0x14、0x5c、0x93、数 0x62、0xc8}}  
+- {0x6d484634、0xe53d、0x4a2c、{0xad、0xcb、0x55、0x14、0x5c、0x93、数 0x62、0xc8}}  
   
- XML コメントを使用する可能性がありますが、ラウンド トリップのグラフィカル ユーザー インターフェイス (GUI) ツールが破棄可能性があります。 内容\<注釈 > 要素の形式に関係なく保持することが保証されます。  
+  XML コメントを使用する可能性がありますが、ラウンド トリップのグラフィカル ユーザー インターフェイス (GUI) ツールが破棄可能性があります。 内容\<注釈 > 要素の形式に関係なく保持することが保証されます。  
   
 ## <a name="schema-hierarchy"></a>スキーマの階層  
  .Vsct ファイルでは、次の主要な要素があります。  

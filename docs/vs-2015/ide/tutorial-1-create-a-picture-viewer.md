@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル 1: ピクチャ ビューアーの作成 | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,42 +14,40 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1472d682ea6c00807318873a3f738f792875d1bc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0cdc926121212a8082fac126e4ab91b753df7dee
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534351"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49884967"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>チュートリアル 1: ピクチャ ビューアーの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル 1: ピクチャ ビューアーの作成](https://docs.microsoft.com/visualstudio/ide/tutorial-1-create-a-picture-viewer)です。  
-  
 このチュートリアルでは、ピクチャをファイルから読み込んでウィンドウに表示するプログラムを作成します。 ボタンやピクチャ ボックスなどのコントロールをフォームにドラッグする方法、それらのプロパティを設定する方法、およびコンテナーを使用してフォームのサイズを滑らかに変更する方法を習得できます。 また、コードの記述の基本事項についても学習します。 以下の方法について説明します。  
   
--   新しいプロジェクトを作成します。  
+- 新しいプロジェクトを作成します。  
   
--   アプリケーションをテスト (デバッグ) します。  
+- アプリケーションをテスト (デバッグ) します。  
   
--   チェック ボックスやボタンなどの基本的なコントロールをフォームに追加します。  
+- チェック ボックスやボタンなどの基本的なコントロールをフォームに追加します。  
   
--   レイアウトを使用してフォーム上のコントロールの位置を設定します。  
+- レイアウトを使用してフォーム上のコントロールの位置を設定します。  
   
--   **[ファイルを開く]** ダイアログ ボックスと **[色]** ダイアログ ボックスをフォームに追加します。  
+- **[ファイルを開く]** ダイアログ ボックスと **[色]** ダイアログ ボックスをフォームに追加します。  
   
--   IntelliSense とコード スニペットを使用してコードを記述します。  
+- IntelliSense とコード スニペットを使用してコードを記述します。  
   
--   イベント ハンドラー メソッドを記述します。  
+- イベント ハンドラー メソッドを記述します。  
   
- 完成すると、プログラムは次の図のようになります。  
+  完成すると、プログラムは次の図のようになります。  
   
- ![このチュートリアルで作成する画像](../ide/media/express-pictureviewerdone.png "Express_PictureViewerDone")  
-このチュートリアルで作成する画像  
+  ![このチュートリアルで作成する画像](../ide/media/express-pictureviewerdone.png "Express_PictureViewerDone")  
+  このチュートリアルで作成する画像  
   
- サンプルの完全バージョンをダウンロードするには、「[Complete Picture Viewer tutorial sample](http://code.msdn.microsoft.com/Complete-Picture-Viewer-7d91d3a8)」 (画像ビューアーのチュートリアルの完全なサンプル) を参照してください。  
+  サンプルの完全バージョンをダウンロードするには、「[Complete Picture Viewer tutorial sample](http://code.msdn.microsoft.com/Complete-Picture-Viewer-7d91d3a8)」 (画像ビューアーのチュートリアルの完全なサンプル) を参照してください。  
   
- ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[How Do I: Create a Picture Viewer in Visual Basic?](http://go.microsoft.com/fwlink/?LinkId=205207)」(操作方法: Visual Basic によるピクチャ ビューアーの作成) または「[How Do I: Create a Picture Viewer in C#?](http://go.microsoft.com/fwlink/?LinkId=205198)」(操作方法: C# によるピクチャ ビューアーの作成) を参照してください。  
+  ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[How Do I: Create a Picture Viewer in Visual Basic?](http://go.microsoft.com/fwlink/?LinkId=205207)」(操作方法: Visual Basic によるピクチャ ビューアーの作成) または「[How Do I: Create a Picture Viewer in C#?](http://go.microsoft.com/fwlink/?LinkId=205198)」(操作方法: C# によるピクチャ ビューアーの作成) を参照してください。  
   
 > [!NOTE]
 >  これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。 このチュートリアルでは、Visual C# と Visual Basic の両方が取り上げられているため、使用しているプログラミング言語固有の情報に注意してください。  

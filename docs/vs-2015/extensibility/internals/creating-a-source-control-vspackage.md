@@ -1,7 +1,7 @@
 ---
 title: ソース管理 VSPackage を作成する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: cca0a9ed-48ff-409f-8036-ed8db0f7533e
 caps.latest.revision: 24
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e67d21fe906dd6bc2a1da0a7a483ee78aa0fe2db
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d7d897e8aeaf140048695a14d552ae5c5ab200a1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537793"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49220026"
 ---
 # <a name="creating-a-source-control-vspackage"></a>ソース管理 VSPackage の作成
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ソース管理 VSPackage を作成する](https://docs.microsoft.com/visualstudio/extensibility/internals/creating-a-source-control-vspackage)します。  
-  
 このドキュメントには、統合ソース管理パッケージのアーキテクチャの概要へのリンクが含まれています[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、実装するインターフェイスおよび消費するサービスで定義されている API と簡単なソースを示すサンプル。パッケージの実装を制御します。  
   
  ソース管理 VSPackage によるソース管理と統合する密接な統合パスを作成することができます[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。 これにより、既定のソース コントロールによってホストされている UI をバイパスするパッケージ[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、プロジェクト システムからのソース制御要求に応答し、対話、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]などのコンポーネント**ソリューション エクスプ ローラー**します。 [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]を支援[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]VSPackage を作成するメカニズムと統合可能なパートナー[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]サービス モデルを使用します。  

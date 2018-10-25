@@ -11,19 +11,20 @@ ms.reviewer: karthiknadig
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: d7034476e3346e4f3d4e24713a62920487845440
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: aeb6026bf7f90d07147ef559bdad9feb03e2c005
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35667133"
 ---
-# <a name="using-docker-containers-with-r-tools-for-visual-studio"></a>R Tools for Visual Studio での Docker コンテナーの使用
+# <a name="use-docker-containers-with-r-tools-for-visual-studio"></a>R Tools for Visual Studio での Docker コンテナーの使用
 
 R Tools for Visual Studio (RTVS) バージョン 1.3 以降は、[Docker for Windows](https://www.docker.com/docker-windows) と共に、Docker コンテナーの操作をサポートしています。
 
-## <a name="creating-a-container"></a>コンテナーの作成
+## <a name="create-a-container"></a>コンテナーの作成
 
-1. **[ワークスペース]** ウィンドウ (**[R Tools] > [ウィンドウ] > [ワークスペース]**) の右上隅にある **[コンテナー]** ボタンを選択します。 Docker for Windows がインストールされていない場合は、ウィンドウにその旨が通知されると共に、ダウンロード用のリンクが提供されます。 Docker をインストールするときに、コンピューターの再起動が必要な場合があります。
+1. **[ワークスペース]** ウィンドウ (**[R Tools]** > **[ウィンドウ]** > **[ワークスペース]**) の右上隅にある **[コンテナー]** ボタンを選択します。 Docker for Windows がインストールされていない場合は、ウィンドウにその旨が通知されると共に、ダウンロード用のリンクが提供されます。 Docker をインストールするときに、コンピューターの再起動が必要な場合があります。
 
     ![R Tools for Visual Studio の [ワークスペース] ウィンドウ (VS2017) と [コンテナー] コマンド](media/container-workspaces-window.png)
 
@@ -39,7 +40,7 @@ R Tools for Visual Studio (RTVS) バージョン 1.3 以降は、[Docker for Win
 
     ![完了したコンテナーを表示する [コンテナー] ウィンドウ](media/containers-window-created.png)
 
-## <a name="connecting-to-a-container"></a>コンテナーへの接続
+## <a name="connect-to-a-container"></a>コンテナーへの接続
 
 1. **[ワークスペース]** ウィンドウの **[ローカルで実行中のコンテナー]** セクションには、ポート 5444 で RTVS デーモンを実行しているコンテナーが表示されます  (デーモンの構成方法の詳細については、[リモート R Server for Linux](setting-up-remote-r-service-on-linux.md) に関するページを参照してください)。
 
@@ -49,7 +50,7 @@ R Tools for Visual Studio (RTVS) バージョン 1.3 以降は、[Docker for Win
 
     ![コンテナーに対して開いている [ワークスペース] ウィンドウと [REPL] ウィンドウ](media/workspaces-window-container-connected.png)
 
-## <a name="using-custom-built-images"></a>カスタム作成イメージの使用
+## <a name="use-custom-built-images"></a>カスタム作成イメージの使用
 
 RTVS は、以下の docker ファイルで説明する microsoft/rtvs イメージなどのカスタム作成イメージを使用して作成されたコンテナーを検出して管理します。 ここで使用する基本イメージには、rtvs デーモン、R 3.4.2、および一般的な R パッケージが事前にインストールされています。 **注**: ここに表示されたユーザー名とパスワードは必要に応じて変更します。
 

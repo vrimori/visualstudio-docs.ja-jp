@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::SetCondition |Microsoft ドキュメント
+title: IDebugPendingBreakpoint2::SetCondition |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2bc50ad1d763f196944e6246f891c5b4ed3893da
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ebf6e77292543fe9eebd8f08cf2fd25ef48c7e77
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115669"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49886618"
 ---
 # <a name="idebugpendingbreakpoint2setcondition"></a>IDebugPendingBreakpoint2::SetCondition
 設定または保留中のブレークポイントに関連付けられている条件を変更します。  
@@ -42,13 +42,13 @@ int SetCondition(
   
 #### <a name="parameters"></a>パラメーター  
  `bpCondition`  
- [in]A [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)構造を設定する条件を指定します。  
+ [in]A [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)を設定する条件を指定する構造体。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 保留中のブレークポイントに以前関連付けられているいずれかの条件は失われます。 保留中のブレークポイントからこのバインドのすべてのブレークポイントがで指定された値にその条件を設定すると呼ばれる、`bpCondition`パラメーター。  
+## <a name="remarks"></a>Remarks  
+ 以前、保留中のブレークポイントに関連付けられている任意の条件は失われます。 保留中のブレークポイントからこれにバインドされているすべてのブレークポイントがで指定された値にその条件を設定すると呼ばれる、`bpCondition`パラメーター。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   

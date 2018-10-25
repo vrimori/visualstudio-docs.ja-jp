@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: abecc0968862fd5547e8a2bdff113f1c21abb8d9
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 935c1ebfb2efd888de5b336eafab4059fa6cd443
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901486"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903557"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*.runsettings ファイルを使用して単体テストを構成する*
 
@@ -24,7 +24,7 @@ Visual Studio の単体テストは、*.runsettings* ファイルを使用して
 
 ## <a name="specify-a-run-settings-file"></a>実行設定ファイルを指定する
 
-実行設定ファイルを使用して、[コマンド ライン](vstest-console-options.md)、IDE、あるいは Visual Studio Team Services (VSTS) または Team Foundation Server (TFS) を使用する[ビルド ワークフロー](/vsts/pipelines/test/getting-started-with-continuous-testing?view=vsts)で実行されるテストを構成することができます。
+実行設定ファイルを使用して、[コマンド ライン](vstest-console-options.md)、IDE、あるいは Azure Test Plans または Team Foundation Server (TFS) を使用する[ビルド ワークフロー](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)で実行されるテストを構成することができます。
 
 ### <a name="specify-a-run-settings-file-in-the-ide"></a>IDE で実行設定ファイルを指定する
 
@@ -114,8 +114,8 @@ Visual Studio の単体テストは、*.runsettings* ファイルを使用して
         </Configuration>
       </DataCollector>
 
-      <!--Video data collector is only available with Visual Studio 2017 version 15.5 and higher -->
       <DataCollector uri="datacollector://microsoft/VideoRecorder/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder.VideoRecorderDataCollector, Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="Screen and Voice Recorder">
+        <!--Video data collector is only available with Visual Studio 2017 version 15.5 and higher -->
       </DataCollector>
 
     </DataCollectors>
@@ -137,7 +137,7 @@ Visual Studio の単体テストは、*.runsettings* ファイルを使用して
     <DeleteDeploymentDirectoryAfterTestRunIsComplete>False</DeleteDeploymentDirectoryAfterTestRunIsComplete>
     <DeploymentEnabled>False</DeploymentEnabled>
     <AssemblyResolution>
-      <Directory Path="D:\myfolder\bin\" includeSubDirectories="false"/>
+      <Directory path="D:\myfolder\bin\" includeSubDirectories="false"/>
     </AssemblyResolution>
   </MSTest>
 
@@ -164,7 +164,7 @@ Visual Studio の単体テストは、*.runsettings* ファイルを使用して
 **RunConfiguration** 要素には、次の要素を含めることができます。
 
 |ノード|既定値|値|
-|----------|-------------|------------|
+|-|-|-|
 |**ResultsDirectory**||テスト結果が配置されるディレクトリ。|
 |**TargetFrameworkVersion**|Framework40|Framework35、Framework40、Framework45<br /><br />この設定では、テストを検出して実行するために使用される単体テスト フレームワークのバージョンを指定します。 これは、単体テスト プロジェクトのビルド プロパティで指定した .NET プラットフォームのバージョンと異なっていてもかまいません。|
 |**TargetPlatform**|x86|x86、x64|
@@ -241,7 +241,7 @@ public void HomePageTest()
 これらは、 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 属性を持つテスト メソッドを実行するテスト アダプターに固有の設定です。
 
 |構成|既定値|値|
-|-------------------|-------------|------------|
+|-|-|-|
 |**ForcedLegacyMode**|False|Visual Studio 2012 で、MSTest アダプターは処理速度を向上させ、よりスケーラブルになるように最適化されました。 テストが実行される順序などの一部の動作は、Visual Studio の以前のエディションでの動作と完全に同じではない場合もあります。 以前のテスト アダプターを使用するには、この値を **true** に設定します。<br /><br />たとえば、単体テスト用に指定された *app.config* ファイルがある場合は、この設定を使用することがあります。<br /><br />より新しいアダプターを使用できるように、テストのリファクタリングを検討することをお勧めします。|
 |**IgnoreTestImpact**|False|テストの影響機能は、MSTest で実行したとき、または Microsoft Test Manager から実行したときに最近の変更の影響を受けるテストの優先順位を付けます。 この設定は機能を非アクティブ化します。 詳細については、「[前回のビルド以降に実行する必要があるテストの検索](https://msdn.microsoft.com/library/dd286589)」を参照してください。|
 |**SettingsFile**||ここで、MSTest アダプターで使用するテスト設定ファイルを指定できます。 **[テスト]** > **[テストの設定]** > **[テスト設定ファイルの選択]** の順に選んで、テスト設定ファイルを指定することもできます。<br /><br />この値を指定する場合は、 **ForcedlegacyMode** も **true**に設定する必要があります。<br /><br />`<ForcedLegacyMode>true</ForcedLegacyMode>`|
@@ -256,4 +256,4 @@ public void HomePageTest()
 ## <a name="see-also"></a>関連項目
 
 - [コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)
-- [Visual Studio テスト タスク (VSTS)](/vsts/pipelines/tasks/test/vstest?view=vsts)
+- [Visual Studio テスト タスク (Azure Test Plans)](/azure/devops/pipelines/tasks/test/vstest?view=vsts)

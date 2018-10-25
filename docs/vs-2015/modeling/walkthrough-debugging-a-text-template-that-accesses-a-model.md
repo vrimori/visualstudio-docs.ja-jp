@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: モデルにアクセスするテキスト テンプレートのデバッグ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: beb0a9becf45a74dd34c1c282a2fb8f860f5145d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ca80111415c869543297ed24707ae27f0490f07b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536452"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924890"
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>チュートリアル: モデルにアクセスするテキスト テンプレートのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: モデルにアクセスするテキスト テンプレートのデバッグ](https://docs.microsoft.com/visualstudio/modeling/walkthrough-debugging-a-text-template-that-accesses-a-model)します。  
-  
 変更またはドメイン固有言語ソリューションでテキスト テンプレートを追加するときに、エンジンのソース コードに、または、生成されたコードをコンパイル時にテンプレートを変換するときにエラーが発生する可能性があります。 次のチュートリアルでは、テキスト テンプレートをデバッグすることの一部を示します。  
   
 > [!NOTE]
@@ -32,15 +30,15 @@ ms.locfileid: "47536452"
 ## <a name="creating-a-domain-specific-language-solution"></a>ドメイン固有言語ソリューションを作成します。  
  この手順では、次の特性を持つドメイン固有言語ソリューションを作成します。  
   
--   名前: DebuggingTestLanguage  
+- 名前: DebuggingTestLanguage  
   
--   ソリューション テンプレート: 最小言語  
+- ソリューション テンプレート: 最小言語  
   
--   ファイル拡張子: .ddd  
+- ファイル拡張子: .ddd  
   
--   会社名: Fabrikam  
+- 会社名: Fabrikam  
   
- ドメイン固有言語ソリューションを作成する方法の詳細については、次を参照してください。[方法: ドメイン固有言語ソリューションを作成](../modeling/how-to-create-a-domain-specific-language-solution.md)です。  
+  ドメイン固有言語ソリューションを作成する方法の詳細については、次を参照してください。[方法: ドメイン固有言語ソリューションを作成](../modeling/how-to-create-a-domain-specific-language-solution.md)です。  
   
 ## <a name="creating-a-text-template"></a>テキスト テンプレートの作成  
  テキスト テンプレートをソリューションに追加します。  

@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: d028d89f149a2fe444508d09086f6bec2408889e
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 220a7b7ca4fe9c6167f05ba78877994d9abe57e6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39511002"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854909"
 ---
 # <a name="introduce-a-local-variable-in-visual-studio"></a>Visual Studio でローカル変数を導入する
 
@@ -36,23 +36,23 @@ ms.locfileid: "39511002"
 
    - C#: 
 
-    ![強調表示された C# のコード](media/local-highlight-cs.png)
+       ![強調表示された C# のコード](media/local-highlight-cs.png)
 
    - Visual Basic: 
 
-    ![強調表示された VB のコード](media/local-highlight-vb.png)
+       ![強調表示された VB のコード](media/local-highlight-vb.png)
 
-1. 次に、以下のいずれかを実行します。
+2. 次に、以下のいずれかを実行します。
 
    - **キーボード**
-     - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
+      - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
    - **マウス**
-     - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
-     - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
+      - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
+      - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
 
    ![ローカル導入のプレビュー](media/local-preview-cs.png)
 
-1. ドロップダウン メニューから **['<*式*>' のすべての発生に対してローカルを導入します]** を選択します。
+3. ドロップダウン メニューから **['<*式*>' のすべての発生に対してローカルを導入します]** を選択します。
 
    > [!TIP]
    > プレビュー ウィンドウの下部にある **[変更のプレビュー]** リンクを使うと、選択する前に、行われる[すべての変更を確認する](../../ide/preview-changes.md)ことができます。
@@ -61,11 +61,11 @@ ms.locfileid: "39511002"
 
    - C#: 
 
-      ![インターフェイスの実装の結果 (C#)](media/local-result-cs.png)
+       ![インターフェイスの実装の結果 (C#)](media/local-result-cs.png)
 
    - Visual Basic: 
 
-      ![インターフェイスの実装の結果 (VB)](media/local-result-vb.png)
+       ![インターフェイスの実装の結果 (VB)](media/local-result-vb.png)
 
    > [!NOTE]
    > **[...のすべての発生に対して]** メニュー オプションを使うと、明示的に強調表示したインスタンスだけでなく、選択した式のすべてのインスタンスを置換できます。

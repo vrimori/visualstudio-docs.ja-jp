@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: UI の応答性の向上 (HTML) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9409a8af25d2283e3b808c7e779aa86361d2e454
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b085bf032611eafcb822a4e083d00d4ae72fd1ac
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537779"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893378"
 ---
 # <a name="walkthrough-improving-ui-responsiveness-html"></a>チュートリアル: UI の応答性の向上 (HTML)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: UI の向上 (HTML) の応答性](https://docs.microsoft.com/visualstudio/profiling/walkthrough-improving-ui-responsiveness-html)します。  
-  
 このチュートリアルでは、[HTML UI の応答性プロファイラー](../profiling/html-ui-responsiveness.md)を使って、パフォーマンスの問題を特定し修復するプロセスについて説明します。 このプロファイラーは、Visual Studio で、JavaScript を使用した Windows ユニバーサルおよび Windows ストアのアプリに対して使用できます。 このシナリオでは、DOM 要素の更新の頻度が高すぎるパフォーマンス テスト アプリを作成し、この問題をプロファイラーを使用して特定および修正します。  
   
 ### <a name="creating-and-running-the-performance-test-app"></a>パフォーマンス テスト アプリを作成して実行する  
@@ -165,45 +163,45 @@ ms.locfileid: "47537779"
   
 ### <a name="analyzing-performance-data"></a>パフォーマンス データを分析する  
   
-1.  **[デバッグ]** ツール バーの **[デバッグの開始]** の一覧で、いずれかの Windows Phone エミュレーターまたは **[シミュレーター]** を選択します。  
+1. **[デバッグ]** ツール バーの **[デバッグの開始]** の一覧で、いずれかの Windows Phone エミュレーターまたは **[シミュレーター]** を選択します。  
   
-2.  **[デバッグ]** メニューの **[パフォーマンスと診断]** をクリックします。  
+2. **[デバッグ]** メニューの **[パフォーマンスと診断]** をクリックします。  
   
-3.  **[使用可能なツール]** で **[HTML UI の応答性]** を選択し、**[開始]** をクリックします。  
+3. **[使用可能なツール]** で **[HTML UI の応答性]** を選択し、**[開始]** をクリックします。  
   
-     このチュートリアルでは、プロファイラーをスタートアップ プロジェクトにアタッチします。 インストールしたアプリへのプロファイラーのアタッチなど、その他のオプションについては、「[HTML UI responsiveness](../profiling/html-ui-responsiveness.md) (HTML UI の応答性)」をご覧ください。  
+    このチュートリアルでは、プロファイラーをスタートアップ プロジェクトにアタッチします。 インストールしたアプリへのプロファイラーのアタッチなど、その他のオプションについては、「[HTML UI responsiveness](../profiling/html-ui-responsiveness.md) (HTML UI の応答性)」をご覧ください。  
   
-     プロファイラーを起動したとき、VsEtwCollector.exe を実行するアクセス許可を要求するユーザー アカウント制御が表示される場合があります。 **[はい]** をクリックします。  
+    プロファイラーを起動したとき、VsEtwCollector.exe を実行するアクセス許可を要求するユーザー アカウント制御が表示される場合があります。 **[はい]** をクリックします。  
   
-4.  アプリの実行中に、**[Waiting for values]\(値の待機)** を選択して約 10 秒待ちます。 ボタンのテキストと色が 1 秒間に約 1 回更新されることを確認します。  
+4. アプリの実行中に、**[Waiting for values]\(値の待機)** を選択して約 10 秒待ちます。 ボタンのテキストと色が 1 秒間に約 1 回更新されることを確認します。  
   
-5.  実行中のアプリから Visual Studio に切り替えます (Alt + Tab キーを押します)。  
+5. 実行中のアプリから Visual Studio に切り替えます (Alt + Tab キーを押します)。  
   
-6.  **[コレクションの停止]** をクリックします。  
+6. **[コレクションの停止]** をクリックします。  
   
-     プロファイラーの情報が Visual Studio の新しいタブに表示されます。 CPU 使用状況とビジュアル スループット (FPS) のデータを見ると、次のような傾向があることがすぐにわかります。  
+    プロファイラーの情報が Visual Studio の新しいタブに表示されます。 CPU 使用状況とビジュアル スループット (FPS) のデータを見ると、次のような傾向があることがすぐにわかります。  
   
-    -   CPU 使用状況は約 3 秒後 (**[Waiting for values]\(値の待機)** ボタンをクリックしたとき) に大幅に増加し、それ以降は明確なイベント パターン (スクリプト イベント、スタイリング イベント、レンダリング イベントの一貫した組み合わせ) を示します。  
+   - CPU 使用状況は約 3 秒後 (**[Waiting for values]\(値の待機)** ボタンをクリックしたとき) に大幅に増加し、それ以降は明確なイベント パターン (スクリプト イベント、スタイリング イベント、レンダリング イベントの一貫した組み合わせ) を示します。  
   
-    -   ビジュアル スループットは影響を受けておらず、FPS は全体を通じて 60 のままです (つまり、フレームのドロップはありません)。  
+   - ビジュアル スループットは影響を受けておらず、FPS は全体を通じて 60 のままです (つまり、フレームのドロップはありません)。  
   
      CPU 使用状況グラフの一般的なセクションを調べて、このアクティビティが多い期間にアプリが何をしているのか見てみましょう。  
   
-7.  CPU 使用状況グラフの中程の部分を 1 ～ 2 秒選択します (クリックしてドラッグするか、Tab キーと方向キーを使用します)。 次の図は、選択を行った後の CPU 使用状況グラフを示しています。 共有されていない領域は選択範囲です。  
+7. CPU 使用状況グラフの中程の部分を 1 ～ 2 秒選択します (クリックしてドラッグするか、Tab キーと方向キーを使用します)。 次の図は、選択を行った後の CPU 使用状況グラフを示しています。 共有されていない領域は選択範囲です。  
   
-     ![CPU 使用状況グラフ](../profiling/media/js-htmlviz-app-cpu.png "JS_HTMLViz_App_CPU")  
+    ![CPU 使用状況グラフ](../profiling/media/js-htmlviz-app-cpu.png "JS_HTMLViz_App_CPU")  
   
-8.  **[拡大]** を選択します。  
+8. **[拡大]** を選択します。  
   
-     グラフが変更されて、選択した期間の詳細が表示されます。 次の図は、拡大した後の CPU 使用状況グラフを示しています。 (特定のデータは変化することがありますが、一般的なパターンは明らかです。)  
+    グラフが変更されて、選択した期間の詳細が表示されます。 次の図は、拡大した後の CPU 使用状況グラフを示しています。 (特定のデータは変化することがありますが、一般的なパターンは明らかです。)  
   
-     ![拡大表示したビュー](../profiling/media/js-htmlviz-app-zoom.png "JS_HTMLViz_App_Zoom")  
+    ![拡大表示したビュー](../profiling/media/js-htmlviz-app-zoom.png "JS_HTMLViz_App_Zoom")  
   
-     下部のペインの [タイムラインの詳細] に、選択した期間の詳細の例が表示されます。  
+    下部のペインの [タイムラインの詳細] に、選択した期間の詳細の例が表示されます。  
   
-     ![タイムラインの詳細](../profiling/media/js-htmlviz-app-details.png "JS_HTMLViz_App_Details")  
+    ![タイムラインの詳細](../profiling/media/js-htmlviz-app-details.png "JS_HTMLViz_App_Details")  
   
-     [タイムラインの詳細] では、CPU 使用状況グラフで見られた傾向を裏付けるように、短い期間に多数のイベントが発生しています。 それらのイベントが、`Timer`、`Layout`、`Paint` であることもわかります。  
+    [タイムラインの詳細] では、CPU 使用状況グラフで見られた傾向を裏付けるように、短い期間に多数のイベントが発生しています。 それらのイベントが、`Timer`、`Layout`、`Paint` であることもわかります。  
   
 9. コンテキスト メニュー (右クリック) を使用して、下部のペインの `Timer` イベントの 1 つを選択し、**[イベントのフィルター]** を選択します。 次の図に、このテスト アプリの `Timer` イベントの 1 つに一般的な詳細な例を示します。  
   

@@ -1,7 +1,7 @@
 ---
 title: プロジェクトのプロパティのリファレンス | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c31817310f1626c95ac4380e6cb1e922e72defc4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 497afd9c7fb6f1449d8d9c2227c7ae1ee7af44b8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545133"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49297532"
 ---
 # <a name="project-properties-reference"></a>プロジェクトのプロパティのリファレンス
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロジェクト プロパティ リファレンス](https://docs.microsoft.com/visualstudio/ide/reference/project-properties-reference)します。  
-  
   
 プロジェクトのプロパティを構成およびカスタマイズする方法について詳しく学習します。  
   

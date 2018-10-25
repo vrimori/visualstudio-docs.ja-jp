@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e849e851bdb2cfed27ff58e90c4e7248b83ed09
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 24a20abd4971f785261db4437a6e2f839717ab0d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31949920"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818264"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>方法: キーボード主体で操作する
 
@@ -42,15 +42,15 @@ ms.locfileid: "31949920"
 
 #### <a name="to-add-controls-from-the-toolbox-to-a-designer-from-the-keyboard"></a>キーボードを使ってツールボックスからデザイナーにコントロールを追加するには
 
-1.  メニュー バーで **[表示]**、**[ツールボックス]** の順に選択します。
+1. メニュー バーで **[表示]**、**[ツールボックス]** の順に選択します。
 
-2.  現在の [ツールボックス] タブでセクション間を移動するには、Ctrl キーを押しながら上方向キーを押すか、Ctrl キーを押しながら下方向キーを押します。
+2. 現在の [ツールボックス] タブでセクション間を移動するには、Ctrl キーを押しながら上方向キーを押すか、Ctrl キーを押しながら下方向キーを押します。
 
-3.  コントロール間を移動するには、上方向キーまたは**下方向**キーを使用します。
+3. コントロール間を移動するには、上方向キーまたは**下方向**キーを使用します。
 
-4.  コントロールを選択した後、Enter キーを押します。
+4. コントロールを選択した後、Enter キーを押します。
 
- コントロールがフォームまたはデザイナーに追加されます。
+   コントロールがフォームまたはデザイナーに追加されます。
 
 ## <a name="dialog-box-options"></a>ダイアログ ボックス オプション
 

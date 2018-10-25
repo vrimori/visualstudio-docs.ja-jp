@@ -21,12 +21,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ee534ca3c8b2a1cef441005586bc58601fb15ed7
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 0d5683f28150089335f04e9cf2e5274ad3ff413c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957434"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49922524"
 ---
 # <a name="refactor-classes-and-types-in-class-designer"></a>クラス デザイナーでのクラスと型のリファクタリング
 
@@ -38,10 +38,10 @@ ms.locfileid: "33957434"
 ## <a name="common-tasks"></a>一般的なタスク
 
 |タスク|関連する参照先|
-|----------|------------------------|
+|----------| - |
 |**クラスのリファクタリング:** リファクタリング操作を使用すると、クラスを部分クラスに分割したり、抽象基本クラスを実装したりできます。|-   [方法: 1 つのクラスを複数の部分クラスに分割する](how-to-split-a-class-into-partial-classes.md)|
 |**インターフェイスの操作:** クラス デザイナーのクラス ダイアグラム上で、インターフェイス メソッド用のコードを提供するクラスに接続して、インターフェイスを実装できます。|-   [方法: インターフェイスを実装する](how-to-implement-an-interface.md)|
-|**型、型のメンバー、およびパラメーターのリファクタリング:** クラス デザイナーを使用して、型の名前変更、型のメンバーの上書き、またはメンバーを 1 つの型から別の型に移動することができます。 Null 許容型を作成することもできます。|-   [型および型のメンバーの名前変更](#rename-types-and-type-members)<br />-   [1 つの型から別の型への型のメンバーの移動](#move-type-members-from-one-type-to-another)<br />-   [方法: Null 許容型を作成する](how-to-create-a-nullable-type.md)|
+|**型、型のメンバー、およびパラメーターのリファクタリング:** クラス デザイナーを使用して、型の名前変更、型のメンバーのオーバーライド、またはメンバーを 1 つの型から別の型に移動することができます。 Null 許容型を作成することもできます。|-   [型および型のメンバーの名前変更](#rename-types-and-type-members)<br />-   [1 つの型から別の型への型のメンバーの移動](#move-type-members-from-one-type-to-another)<br />-   [方法: Null 許容型を作成する](how-to-create-a-nullable-type.md)|
 
 ## <a name="rename-types-and-type-members"></a>型および型のメンバーの名前変更
 

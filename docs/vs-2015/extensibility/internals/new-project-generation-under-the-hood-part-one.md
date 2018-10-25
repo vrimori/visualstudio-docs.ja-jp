@@ -1,7 +1,7 @@
 ---
 title: '新しいプロジェクトの生成: 内部、パート 1 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 66778698-0258-467d-8b8b-c351744510eb
 caps.latest.revision: 30
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 07532630263c4f7ff8fe0d9281abbbbd47772b3c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c69df0e8c1aace595a1c79d52b7ca4cd08b7a004
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533624"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941227"
 ---
 # <a name="new-project-generation-under-the-hood-part-one"></a>新しいプロジェクトの生成: 内部、パート 1
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[新しいプロジェクトの生成: 内部、パート 1](https://docs.microsoft.com/visualstudio/extensibility/internals/new-project-generation-under-the-hood-part-one)します。  
-  
 独自のプロジェクトの種類を作成する方法と考えるでしょうか。 新しいプロジェクトを作成すると実際にはどうなりますか不思議に思うでしょうか。 内部的には時間をかけてを実際に起こっているを確認しましょう。  
   
  Visual Studio を調整するいくつかのタスクがあります。  
@@ -97,7 +95,7 @@ devenv /installvstemplates
  、優先度の数が低いツリー内の位置を高くなります。  
   
 ##### <a name="developeractivity"></a>DeveloperActivity  
- このサブキーが存在する場合、ルート ノードの位置は、開発者の設定 ダイアログ ボックスによって制御されます。 たとえば、オブジェクトに適用された  
+ このサブキーが存在する場合、ルート ノードの位置は、開発者の設定 ダイアログ ボックスによって制御されます。 例えば以下のようにします。  
   
  DeveloperActivity REG_SZ VC #  
   
@@ -177,35 +175,35 @@ devenv /installvstemplates
 #### <a name="a-quick-review"></a>簡単な概要について  
  変更してみましょう、**新しいプロジェクト** ダイアログ ボックスし、新しいユーザー プロジェクト テンプレートを作成します。  
   
-1.  Visual Studio の \Program Files\Microsoft 14.0\Common7\IDE\ProjectTemplates\CSharp フォルダーに MyProjectNode サブフォルダーを追加します。  
+1. Visual Studio の \Program Files\Microsoft 14.0\Common7\IDE\ProjectTemplates\CSharp フォルダーに MyProjectNode サブフォルダーを追加します。  
   
-2.  任意のテキスト エディターを使用して MyProjectNode フォルダー内には、MyProject.vstdir ファイルを作成します。  
+2. 任意のテキスト エディターを使用して MyProjectNode フォルダー内には、MyProject.vstdir ファイルを作成します。  
   
-3.  .Vstdir ファイルには、次の行を追加します。  
+3. .Vstdir ファイルには、次の行を追加します。  
   
-    ```  
-    <TemplateDir Version="1.0.0">  
-        <SortOrder>6</SortOrder>  
-    </TemplateDir>  
-    ```  
+   ```  
+   <TemplateDir Version="1.0.0">  
+       <SortOrder>6</SortOrder>  
+   </TemplateDir>  
+   ```  
   
-4.  保存して .vstdir ファイルを閉じます。  
+4. 保存して .vstdir ファイルを閉じます。  
   
-5.  任意のテキスト エディターを使用して MyProjectNode フォルダー内には、MyProject.vstemplate ファイルを作成します。  
+5. 任意のテキスト エディターを使用して MyProjectNode フォルダー内には、MyProject.vstemplate ファイルを作成します。  
   
-6.  .Vstemplate ファイルには、次の行を追加します。  
+6. .Vstemplate ファイルには、次の行を追加します。  
   
-    ```  
-    <VSTemplate Version="2.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  
-        <TemplateData>  
-            <ProjectType>CSharp</ProjectType>  
-        </TemplateData>  
-    </VSTemplate>  
-    ```  
+   ```  
+   <VSTemplate Version="2.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  
+       <TemplateData>  
+           <ProjectType>CSharp</ProjectType>  
+       </TemplateData>  
+   </VSTemplate>  
+   ```  
   
-7.  The.vstemplate ファイルを保存してエディターを閉じます。  
+7. The.vstemplate ファイルを保存してエディターを閉じます。  
   
-8.  .Vstemplate ファイルを新しい圧縮 MyProjectNode\MyProject.zip フォルダーに送信します。  
+8. .Vstemplate ファイルを新しい圧縮 MyProjectNode\MyProject.zip フォルダーに送信します。  
   
 9. Visual Studio のコマンド ウィンドウから次のように入力します。  
   
@@ -213,13 +211,13 @@ devenv /installvstemplates
     devenv /installvstemplates  
     ```  
   
- Visual Studio を開きます。  
+   Visual Studio を開きます。  
   
-1.  開く、**新しいプロジェクト** ダイアログ ボックスし、展開、 **Visual c#** プロジェクト ノード。  
+10. 開く、**新しいプロジェクト** ダイアログ ボックスし、展開、 **Visual c#** プロジェクト ノード。  
   
- ![MyProjectNode](../../extensibility/internals/media/myprojectnode.png "MyProjectNode")  
+    ![MyProjectNode](../../extensibility/internals/media/myprojectnode.png "MyProjectNode")  
   
- **MyProjectNode** Visual c# の Windows ノードのすぐ下に子ノードとして表示されます。  
+    **MyProjectNode** Visual c# の Windows ノードのすぐ下に子ノードとして表示されます。  
   
 ## <a name="see-also"></a>関連項目  
  [新しいプロジェクトの生成: 内部、パート 2](../../extensibility/internals/new-project-generation-under-the-hood-part-two.md)

@@ -1,7 +1,7 @@
 ---
 title: SccInitialize 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 5bc0d28b-2c68-4d43-9e51-541506a8f76e
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 51a908fa9ae644294567436120e8765025aba889
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1a04e03775e9f2a642b5cda5d01aae77afab7368
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537242"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891220"
 ---
 # <a name="sccinitialize-function"></a>SccInitialize 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[SccInitialize 関数](https://docs.microsoft.com/visualstudio/extensibility/sccinitialize-function)します。  
-  
 この関数は、ソース管理プラグインを初期化し、機能と統合開発環境 (IDE) に制限を提供します。  
   
 ## <a name="syntax"></a>構文  

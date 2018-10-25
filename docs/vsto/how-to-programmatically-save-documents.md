@@ -16,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 00ad8f91e738cb98aeba93b69cb47c6ab644aa3f
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: e794a995d1e978cf5aae8d1b6ec9c1711436af73
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671886"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49883478"
 ---
 # <a name="how-to-programmatically-save-documents"></a>方法: プログラムによってドキュメントを保存
   Microsoft Office Word 文書を保存するいくつかの方法はあります。 ドキュメントを保存するには、ドキュメントの名前を変更することがなく、または新しい名前を持つ文書を保存することができます。  
@@ -32,19 +32,19 @@ ms.locfileid: "35671886"
   
 ### <a name="to-save-the-document-associated-with-a-document-level-customization"></a>ドキュメント レベルのカスタマイズに関連付けられているドキュメントを保存するには  
   
-1.  <xref:Microsoft.Office.Tools.Word.Document> クラスの <xref:Microsoft.Office.Tools.Word.Document.Save%2A> メソッドを呼び出します。 このコード例を使用するには、プロジェクトの `ThisDocument` クラスからコードを実行します。  
+1.  <xref:Microsoft.Office.Tools.Word.Document.Save%2A> クラスの <xref:Microsoft.Office.Tools.Word.Document> メソッドを呼び出します。 このコード例を使用するには、プロジェクトの `ThisDocument` クラスからコードを実行します。  
   
      [!code-vb[Trin_VstcoreWordAutomation#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#7)]
      [!code-csharp[Trin_VstcoreWordAutomation#7](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#7)]  
   
 ### <a name="to-save-the-active-document"></a>アクティブ文書を保存するには  
   
-1.  呼び出す、<xref:Microsoft.Office.Interop.Word._Document.Save%2A>アクティブなドキュメントのメソッド。 このコード例を使用するには、プロジェクトの `ThisDocument` クラスまたは `ThisAddIn` クラスからコードを実行します。  
+1. 呼び出す、<xref:Microsoft.Office.Interop.Word._Document.Save%2A>アクティブなドキュメントのメソッド。 このコード例を使用するには、プロジェクトの `ThisDocument` クラスまたは `ThisAddIn` クラスからコードを実行します。  
   
-     [!code-vb[Trin_VstcoreWordAutomation#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#8)]
-     [!code-csharp[Trin_VstcoreWordAutomation#8](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#8)]  
+    [!code-vb[Trin_VstcoreWordAutomation#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#8)]
+    [!code-csharp[Trin_VstcoreWordAutomation#8](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#8)]  
   
- かどうかを保存するドキュメントは、アクティブなドキュメントがわからない場合、その名前でを参照できます。  
+   かどうかを保存するドキュメントは、アクティブなドキュメントがわからない場合、その名前でを参照できます。  
   
 ### <a name="to-save-a-document-specified-by-name"></a>名前で指定されたドキュメントを保存するには  
   

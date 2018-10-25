@@ -19,19 +19,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 11cb05ea81f086cf8c26e3058850968a909b84e3
-ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
+ms.openlocfilehash: 66239362e454d5ab333214c444aeee3fa54b1b8a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39468684"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936861"
 ---
 # <a name="get-started-debugging-multithreaded-applications-in-visual-studio"></a>Visual Studio でマルチ スレッド アプリケーションのデバッグの開始します。
 Visual Studio には、いくつかのツールとマルチ スレッド アプリケーションをデバッグする方法をユーザー インターフェイス要素が用意されています。 このチュートリアルでは、スレッド マーカーを使用する方法、**並列スタック**ウィンドウで、**並列ウォッチ**ウィンドウ、条件付きブレークポイントは、および [フィルター] ブレークポイント。 このチュートリアルでは、わずか数分ですが、完了に慣れることがするマルチ スレッド アプリケーションのデバッグ機能を使用します。
 
-|         |         |
+| | |
 |---------|---------|
-|  ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る")  |    [ビデオを見る](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugging-Multi-threaded-Apps-in-Visual-Studio-2017-MoZPKMD6D_111787171)同様の手順を示しています。 マルチ スレッド デバッグします。 |
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | [ビデオを見る](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugging-Multi-threaded-Apps-in-Visual-Studio-2017-MoZPKMD6D_111787171)同様の手順を示しています。 マルチ スレッド デバッグします。 |
 
 その他のトピックでは、その他のマルチ スレッド デバッグ ツールを使用して追加についてを説明します。
 
@@ -217,30 +217,30 @@ Visual Studio には、いくつかのツールとマルチ スレッド アプ�
   
 #### <a name="to-start-debugging"></a>デバッグを開始するには  
   
-1.  左側の余白内をクリックして、`Thread.Sleep`または`this_thread::sleep_for`新しいブレークポイントを挿入するステートメント。  
+1. 左側の余白内をクリックして、`Thread.Sleep`または`this_thread::sleep_for`新しいブレークポイントを挿入するステートメント。  
   
-     ソース コード エディターの左側にある余白、赤い円が表示されます。 これは、ブレークポイントがその場所に設定されていることを示します。 
+    ソース コード エディターの左側にある余白、赤い円が表示されます。 これは、ブレークポイントがその場所に設定されていることを示します。 
   
-2.  **デバッグ** メニューのをクリックして**デバッグの開始** (**F5**)。  
+2. **デバッグ** メニューのをクリックして**デバッグの開始** (**F5**)。  
   
-     Visual Studio ソリューションをビルド、アタッチされたデバッガーを開始してから、アプリ、アプリがブレークポイントで停止します。  
+    Visual Studio ソリューションをビルド、アタッチされたデバッガーを開始してから、アプリ、アプリがブレークポイントで停止します。  
   
-    > [!NOTE]
-    > コンソール ウィンドウにフォーカスを移動する場合のクリックして、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ウィンドウにフォーカスが戻って[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。  
+   > [!NOTE]
+   > コンソール ウィンドウにフォーカスを移動する場合のクリックして、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ウィンドウにフォーカスが戻って[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。  
   
-4.  ソース コード エディターでは、ブレークポイントを含む行を見つけます。  
+3. ソース コード エディターでは、ブレークポイントを含む行を見つけます。  
   
-    ```csharp  
-    Thread.Sleep(3000);  
-    ```  
+   ```csharp  
+   Thread.Sleep(3000);  
+   ```  
   
-    ```C++  
-    this_thread::sleep_for(chrono::seconds(3)); 
-    ```
+   ```C++  
+   this_thread::sleep_for(chrono::seconds(3)); 
+   ```
 
-    ```VB
-    Thread.Sleep(3000)
-    ```    
+   ```VB
+   Thread.Sleep(3000)
+   ```    
   
 #### <a name="ShowThreadsInSource"></a>スレッド マーカーを検出するには  
 

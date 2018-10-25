@@ -1,7 +1,7 @@
 ---
 title: BasicType |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6a518c3cb800493fdf6c2677a0f09957e2768b0e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 907f577f4489b4597a8feb0bc5ea6792e443a45f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545262"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49810621"
 ---
 # <a name="basictype"></a>BasicType
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[BasicType](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/basictype)します。  
-  
 シンボルの基本的な型を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -115,7 +113,7 @@ enum BasicType {
 ## <a name="remarks"></a>Remarks  
  この列挙体の値がによって返される、 [idiasymbol::get_basetype](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: cvconst.h  
   
 ## <a name="see-also"></a>関連項目  

@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b2a4d642bc551127f34fe7a64ec01665b7ace70
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 1cc4e6b3ad623497f50f60b5eb3c0d7c8b00b1cd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078629"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49869588"
 ---
 # <a name="how-to-specify-where-visual-studio-copies-the-files"></a>方法: Visual Studio がファイルをコピーする場所を指定します。
 ClickOnce を使用してアプリケーションを発行する場合、`Publish Location` プロパティによってアプリケーション ファイルとマニフェストが配置される場所が指定されます。 これには、ファイル パスまたは FTP サーバーへのパスを指定できます。  
@@ -34,15 +34,15 @@ ClickOnce を使用してアプリケーションを発行する場合、`Publis
   
 ### <a name="to-specify-a-publishing-location"></a>発行場所を指定するには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1. **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-2.  **発行**タブをクリックします。  
+2. **発行**タブをクリックします。  
   
-3.  **発行場所**フィールドに、次の形式のいずれかを使用して、発行場所を入力します。  
+3. **発行場所**フィールドに、次の形式のいずれかを使用して、発行場所を入力します。  
   
-    -   にファイル共有またはディスク パスを発行するには、UNC パスを使用してパスを入力 (*\\\Server\ApplicationName*) またはファイル パス (*C:\Deploy\ApplicationName*)。  
+   - にファイル共有またはディスク パスを発行するには、UNC パスを使用してパスを入力 (*\\\Server\ApplicationName*) またはファイル パス (*C:\Deploy\ApplicationName*)。  
   
-    -   FTP サーバーに発行するには、形式を使用してパスを入力します。 *ftp://ftp.microsoft.com/\<ApplicationName >* します。  
+   - FTP サーバーに発行するには、形式を使用してパスを入力します。 <em>ftp://ftp.microsoft.com/\<ApplicationName ></em>します。  
   
      テキスト内に存在する必要があります、**発行場所**ボックスに、参照ボタン (**.**) ボタンが機能します。  
   

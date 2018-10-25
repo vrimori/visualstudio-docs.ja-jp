@@ -1,7 +1,7 @@
 ---
 title: Idiasectioncontrib::get_notcached |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 08a9058f60b2a6bc30e4e10fdbc63e443ae84a24
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e75c08c6824169302ff6636d0c029f15dc529271
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538638"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897512"
 ---
 # <a name="idiasectioncontribgetnotcached"></a>IDiaSectionContrib::get_notCached
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasectioncontrib::get_notcached](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasectioncontrib-get-notcached)します。  
-  
 セクションをキャッシュすることはできないかどうかを示すフラグを取得します。  
   
 ## <a name="syntax"></a>構文  

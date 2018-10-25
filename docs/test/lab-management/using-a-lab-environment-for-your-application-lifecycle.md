@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 7313c12558da4ddda6cd38c8a1dff135a6f55cb8
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: dc7351c9449993b624569cc13ac5ced7d169b129
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34844304"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837114"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>DevOps でラボ環境を使用する
 
@@ -36,13 +36,13 @@ ms.locfileid: "34844304"
 |![クラウドのラボ環境](../media/topology_cloud.png)| このラボ環境は、_サーバー トポロジ_と同様に機能します。ローカルで物理または仮想マシンを実行する必要がないため、設定に費やす時間を減らせ、メンテナンスが簡単になり、コストを抑えことができます。 Microsoft Azure などのクラウド環境には、複数の Web サイトや仮想マシンをカスタム ネットワークで早く簡単に構成できます。|
 |![クライアント サーバーのラボ環境](../media/topology_clientserver.png)| このラボ環境は、*クライアント/サーバー トポロジ*を備えています。これはサーバーとクライアントのコンポーネントを備えたアプリケーションをテストするために、よく使用されます。 クライアント/サーバー トポロジでは、アプリケーションのテストに使用されるクライアントとサーバーのすべてのコンピューターはラボ環境内にあります。 このトポロジを使用すると、テストに影響を与える各コンピューターからテスト データを収集することができます。|
 
-|   |   |
+| | |
 |---|---|
-|  ![ビデオのムービー カメラ アイコン](../../install/media/video-icon.png)  |    テスト用のラボ環境の管理に関する[ビデオを視聴します](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Managing-lab-environments-for-testing)。 |
+| ![ビデオのムービー カメラ アイコン](../../install/media/video-icon.png) | テスト用のラボ環境の管理に関する[ビデオを視聴します](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Managing-lab-environments-for-testing)。 |
 
-## <a name="use-the-cloud-with-team-services-or-team-foundation-server-build-and-release"></a>Team Services や Team Foundation Server ビルドとリリースをクラウドと共に使用する
+## <a name="use-the-cloud-with-azure-pipelines-or-team-foundation-server-build-and-release"></a>Azure Pipelines や Team Foundation Server ビルドとリリースをクラウドと共に使用する
 
-Team Foundation Server (TFS) と Visual Studio Team Services の[ビルドとリリース](/vsts/build-release/)機能を使用して、自動テストと、ビルド、配置、テストの自動化を実行できます。 いくつかの利点を次に示します。
+Team Foundation Server (TFS) と Azure Test Plans の[ビルドとリリース](/azure/devops/pipelines/index?view=vsts)機能を使用して、自動テストと、ビルド、配置、テストの自動化を実行できます。 いくつかの利点を次に示します。
 
 * ビルド コントローラーまたはテスト コントローラーが不要です。
 * テスト エージェントはビルドまたはリリースの一部としてタスクでインストールされます。
@@ -75,8 +75,7 @@ Visual Studio Lab Management で作成できるラボ環境には、**標準環�
 
 **標準環境:** 標準環境には、仮想マシンと物理マシンを混在させることができます。 また、サードパーティの仮想フレームワークで管理されている標準環境に、仮想マシンを追加することもできます。 標準環境では、SCVMM サーバーなどの追加のサーバー リソースは必要ありません。
 
-
-  **SCVMM 環境:** SCVMM 環境には、SCVMM (System Center Virtual Machine Manager) で管理されている仮想マシンのみ含めることができるため、SCVMM 環境内の仮想マシンは、Hyper-V の仮想フレームワークでのみ実行できます。 ただし SCVMM 環境には、標準環境では使用できない、次の自動機能および管理機能が用意されています。
+**SCVMM 環境:** SCVMM 環境には、SCVMM (System Center Virtual Machine Manager) で管理されている仮想マシンのみ含めることができるため、SCVMM 環境内の仮想マシンは、Hyper-V の仮想フレームワークでのみ実行できます。 ただし SCVMM 環境には、標準環境では使用できない、次の自動機能および管理機能が用意されています。
 
 - **環境スナップショット:** 環境スナップショットには、ラボ環境の状態が含まれているため、クリーンな環境へすぐに復元したり、変更した環境の状態を保存したりできます。 また、ビルド、配置、テストのワークフローを使用して、環境スナップショットの保存および復元のプロセスを自動化することもできます。
 
@@ -86,17 +85,17 @@ Visual Studio Lab Management で作成できるラボ環境には、**標準環�
 
 - **仮想マシンのテンプレート:** 仮想マシンのテンプレートは、名前とその他の識別子を削除した仮想マシン テンプレートです。 VM テンプレートが SCVMM 環境に配置されると、Microsoft Test Manager は新しい識別子を生成します。 これにより、同じ環境、または複数の環境内に仮想マシンの複数のコピーを配置し、それらの仮想マシンを同時に実行することができます。
 
-- **格納された仮想マシン:** Team Project ライブラリに格納され、一意の識別子を持っている仮想マシン。
+- **格納された仮想マシン:** プロジェクト ライブラリに格納され、一意の識別子を持っている仮想マシン。
 
 > [!NOTE]
 > Lab Management では、SCVMM 2016 はサポートしていません。
 
-SCVMM の詳細については、「[Virtual Machine Manager](/vsts/build-release/apps/cd/scvmm/configure-scvmm)」を参照してください。
+SCVMM の詳細については、「[Virtual Machine Manager](/azure/devops/pipelines/?view=vsts)」を参照してください。
 
 標準環境および SCVMM 環境は、多数の同じ機能をサポートしています。 ただし、考慮すべき重要な違いがいくつかあります。 以下の表では、標準環境と SCVMM 環境で使用できる機能について比較しています。
 
 |機能|SCVMM 環境|標準環境|
-|----------------|------------------------|---------------------------|
+|-|------------------------|-|
 |**テスト**|||
 |手動テストの実行|サポート状況|サポート状況|
 |コード化された UI およびその他の自動テストの実行|サポート状況|サポート状況|
@@ -118,11 +117,11 @@ SCVMM の詳細については、「[Virtual Machine Manager](/vsts/build-releas
 ここから先へ進む前に、次の概念についても理解しておく必要があります。
 
 |用語|説明|
-|----------|-----------------|
+|-|-----------------|
 |ラボ センター|ラボ環境を作成および管理する Microsoft Test Manager の領域。|
-|チーム プロジェクト ラボ|セットアップされたラボ環境のコレクションで、これらの環境に対して仮想マシンを接続して実行することができます。|
-|チーム プロジェクト ライブラリ|格納された仮想マシン、テンプレート、および格納されたラボ環境のアーカイブで、チーム プロジェクトのホスト グループにインポートされています。 SCVMM 環境でライブラリ内のアイテムを使用できますが、これらのアイテムを標準環境へ直接追加することはできません。 ライブラリ内のアイテムは実行できません。代わりに、新しい環境へアイテムを配置して使用します。|
-|配置されている環境|チーム プロジェクト ラボに配置されているラボ環境。この環境に接続してコンピューターを実行することができます。|
+|Azure DevOps プロジェクト ラボ|セットアップされたラボ環境のコレクションで、これらの環境に対して仮想マシンを接続して実行することができます。|
+|Azure DevOps プロジェクト ライブラリ|格納された仮想マシン、テンプレート、および格納されたラボ環境のアーカイブで、プロジェクトのホスト グループにインポートされています。 SCVMM 環境でライブラリ内のアイテムを使用できますが、これらのアイテムを標準環境へ直接追加することはできません。 ライブラリ内のアイテムは実行できません。代わりに、新しい環境へアイテムを配置して使用します。|
+|配置されている環境|プロジェクト ラボに配置されているラボ環境。この環境に接続してコンピューターを実行することができます。|
 
 Lab Management の詳細については、以下を参照してください。
 

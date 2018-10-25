@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_targetoffset |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: da224df7239bb58ea1e211b1453ff849e1a7f788
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b3985973317f73d37f697e5c75fb341861c888ad
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544445"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894899"
 ---
 # <a name="idiasymbolgettargetoffset"></a>IDiaSymbol::get_targetOffset
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_targetoffset](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-targetoffset)します。  
-  
 サンク ターゲットのオフセット セクションを取得します。  
   
 ## <a name="syntax"></a>構文  

@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryContext2::Add |Microsoft ドキュメント
+title: IDebugMemoryContext2::Add |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ad55b81c1c4126efd69779e929521cfb94235ccc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 56a0b65b7bfb541c476f26785d484ed7935880f1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31111935"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904506"
 ---
 # <a name="idebugmemorycontext2add"></a>IDebugMemoryContext2::Add
-現在のコンテキストに指定された値を追加し、新しいコンテキストを返します。  
+現在のコンテキストに指定した値を追加し、新しいコンテキストを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,12 +50,12 @@ int Add(
  [out]新しいを返します[IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- メモリ コンテキストは、新しいコンテキスト インターフェイスを必要とする新しいアドレスを生成するアドレス値を追加するために、アドレスです。  
+## <a name="remarks"></a>Remarks  
+ メモリのコンテキストは、コンテキストの新しいインターフェイスを必要とする新しいアドレスを生成するアドレスに値を追加するために、アドレスです。  
   
- 結果として得られるアドレスがこのコンテキストに関連付けられているメモリ空間の外にある場合でも、このメソッドは新しいコンテキストを生成常にする必要があります。 唯一の例外は、新しいコンテキストのメモリを割り当てることはできませんか`ppMemCxt`は、null 値 (エラー)。  
+ 結果として得られるアドレスがこのコンテキストに関連付けられたメモリ空間の外にある場合でも、新しいコンテキストをこのメソッドを生成することが常にする必要があります。 唯一の例外は、新しいコンテキストのメモリを割り当てることはできませんか場合`ppMemCxt`は (つまり、エラー)、null 値です。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

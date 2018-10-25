@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO |Microsoft ドキュメント
+title: MODULE_INFO |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6e28756873339d504efba417d9e2fe2cc00000b4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b28770482357b7e006793f15438e7880f7efb1ec
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31126717"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897005"
 ---
 # <a name="moduleinfo"></a>MODULE_INFO
 特定のモジュール (DLL、exe ファイルまたはアセンブリ) について説明します。  
@@ -63,25 +63,25 @@ public struct MODULE_INFO {
   
 ## <a name="members"></a>メンバー  
  dwValidFields  
- フラグの組み合わせ、 [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)のどのフィールドが埋められますを指定する列挙です。  
+ フラグの組み合わせ、 [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)フィールドが記入を指定する列挙体。  
   
  m_bstrName  
  モジュール名。  
   
  m_bstrUrl  
- モジュールの URL です。  
+ モジュールの URL。  
   
  m_bstrVersion  
  モジュールのバージョン。  
   
  m_bstrDebugMessage  
- オプションのメッセージ、モジュールに関するたとえば、「シンボルを読み込めません」  
+ オプションのメッセージ、モジュールに関するなど「シンボルを読み込めません」  
   
  m_addrLoadAddress  
  モジュールの読み込みアドレス。  
   
  m_addrPreferredLoadAddress  
- モジュールの優先読み込みアドレス。  
+ モジュールの標準読み込みアドレス。  
   
  m_dwSize  
  モジュールのサイズ。  
@@ -90,20 +90,20 @@ public struct MODULE_INFO {
  モジュールの読み込み順序。  
   
  m_TimeStamp  
- シンボル ファイルが最後に変更された時刻。  
+ シンボル ファイルの最終変更時刻。  
   
  m_bstrUrlSymbolLocation  
- シンボル ファイルの場所 (たとえば、".\\")、モジュールで指定します。 モジュールのシンボルを検索する開始位置として使用します。  
+ シンボル ファイルの場所 (たとえば、".\\")、モジュールで指定します。 開始位置として、モジュールのシンボルを検索するために使用します。  
   
  m_dwModuleFlags  
- フラグの組み合わせ、 [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md)モジュールを表す列挙体です。  
+ フラグの組み合わせ、 [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md)モジュールを表す列挙体。  
   
-## <a name="remarks"></a>コメント  
- この構造体に渡される、 [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)で塗り分けはメソッドです。  
+## <a name="remarks"></a>Remarks  
+ この構造体に渡される、 [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)メソッドでいっぱいになった場所。  
   
- この構造は、各モジュールの記載に対応しています、**モジュール**ウィンドウです。  
+ この構造で表示されている各モジュールに対応する、**モジュール**ウィンドウ。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

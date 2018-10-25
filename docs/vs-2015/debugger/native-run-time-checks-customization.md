@@ -1,7 +1,7 @@
 ---
 title: ネイティブ ランタイム チェックのカスタマイズ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -31,33 +31,31 @@ caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 65aaef84c96605eb0ac5a4836c637c2990a15477
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 396778e87732d73462a7ecc2a420ea22a00936b1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547579"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49856602"
 ---
 # <a name="native-run-time-checks-customization"></a>ネイティブ ランタイム チェックのカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ネイティブ ランタイム チェックのカスタマイズ](https://docs.microsoft.com/visualstudio/debugger/native-run-time-checks-customization)します。  
-  
 コンパイルするとき **/RTC** (実行時チェック) を使用して、または、`runtime_checks`プラグマ、C ランタイム ライブラリはネイティブ ランタイム チェックを提供します。 ランタイム チェックのカスタマイズが必要になる場合があります。次に例を示します。  
   
--   ランタイム チェック メッセージを既定とは異なるファイルや出力先に転送する。  
+- ランタイム チェック メッセージを既定とは異なるファイルや出力先に転送する。  
   
--   サードパーティ デバッガーでのランタイム チェック メッセージの出力先を指定する。  
+- サードパーティ デバッガーでのランタイム チェック メッセージの出力先を指定する。  
   
--   C ランタイム ライブラリのリリース バージョンでコンパイルされたプログラムからのランタイム チェック メッセージを報告する。 ライブラリのリリース バージョンでは、ランタイム エラーの報告に `_CrtDbgReportW` は使用されません。 代わりに、表示、 **Assert**  ダイアログ ボックスの各実行時エラーが発生します。  
+- C ランタイム ライブラリのリリース バージョンでコンパイルされたプログラムからのランタイム チェック メッセージを報告する。 ライブラリのリリース バージョンでは、ランタイム エラーの報告に `_CrtDbgReportW` は使用されません。 代わりに、表示、 **Assert**  ダイアログ ボックスの各実行時エラーが発生します。  
   
- ランタイム エラー チェックをカスタマイズするには、次の方法があります。  
+  ランタイム エラー チェックをカスタマイズするには、次の方法があります。  
   
--   ランタイム エラー レポート関数の記述 詳細については、次を参照してください。[方法: 実行時エラー レポート関数を記述](../debugger/how-to-write-a-run-time-error-reporting-function.md)します。  
+- ランタイム エラー レポート関数の記述 詳細については、次を参照してください。[方法: 実行時エラー レポート関数を記述](../debugger/how-to-write-a-run-time-error-reporting-function.md)します。  
   
--   エラー メッセージ出力先のカスタマイズ  
+- エラー メッセージ出力先のカスタマイズ  
   
--   ランタイム チェック エラーに関する情報のクエリ  
+- ランタイム チェック エラーに関する情報のクエリ  
   
 ## <a name="customize-the-error-message-destination"></a>エラー メッセージ出力先のカスタマイズ  
  エラー レポートに `_CrtDbgReportW` を使用する場合は、`_CrtSetReportMode` を使用してエラー メッセージの出力先を指定できます。  

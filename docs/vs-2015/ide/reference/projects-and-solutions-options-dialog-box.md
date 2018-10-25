@@ -1,7 +1,7 @@
 ---
 title: '[プロジェクトおよびソリューション] の [オプション] ダイアログ ボックス | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6999a8af211fec07e50eac006e7de7bb11f49418
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4230f99b78809594d65da991c65c11d7dc30efd4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538397"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49246195"
 ---
 # <a name="projects-and-solutions-options-dialog-box"></a>[プロジェクトおよびソリューション] の [オプション] ダイアログ ボックス
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロジェクトおよびソリューション のオプション ダイアログ ボックス](https://docs.microsoft.com/visualstudio/ide/reference/projects-and-solutions-options-dialog-box)します。  
-  
   
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクト フォルダーの既定パスを設定し、プロジェクトの開発と構築に伴って、**[出力]** ウィンドウ、**[タスク一覧]**、および **[ソリューション エクスプローラー]** の既定動作を決定します。 このダイアログ ボックスにアクセスするには、**[ツール] メニューの [オプション]** をクリックして、**[プロジェクトおよびソリューション]** を展開し、**[全般]** をクリックします。  
   

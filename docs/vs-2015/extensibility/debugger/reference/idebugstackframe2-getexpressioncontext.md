@@ -1,7 +1,7 @@
 ---
 title: IDebugStackFrame2::GetExpressionContext |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: a2604e6a-502d-473b-868f-b11ac64c7a35
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1343118b86325225a499b7caf6d19c31cc84532d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: be81a74f9ce13511e463c4244fc1e817f5c94d1d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538509"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49940633"
 ---
 # <a name="idebugstackframe2getexpressioncontext"></a>IDebugStackFrame2::GetExpressionContext
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugStackFrame2::GetExpressionContext](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugstackframe2-getexpressioncontext)します。  
-  
 スタック フレームとスレッドの現在のコンテキストで式の評価の評価コンテキストを取得します。  
   
 ## <a name="syntax"></a>構文  

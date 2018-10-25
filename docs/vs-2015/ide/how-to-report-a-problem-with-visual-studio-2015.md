@@ -1,7 +1,7 @@
 ---
 title: Visual Studio 2015 で問題を報告する方法 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,17 +12,17 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: dbbd84fb72c2d25c30b3012d3dfcb381dcc35050
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9e0f2e81d82db81859ff5833903d00b8bf149436
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533630"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941244"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-2015"></a>Visual Studio 2015 で問題を報告する方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 2017 の最新ドキュメントについては、次を参照してください。 [Visual Studio 2017 で問題を報告する方法](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)します。
+Visual Studio 2017 の最新ドキュメントについては、次を参照してください。 [Visual Studio 2017 で問題を報告する方法](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)します。
 
 Visual Studio 2015 で問題が発生した場合について知りたいが診断して修正できるようにします。  **[問題の報告]** ツールを使うと、問題に関する詳しい情報を収集し、数回のクリックで問題を Microsoft に送信できます。  
   
@@ -37,13 +37,13 @@ Visual Studio 2015 で問題が発生した場合について知りたいが診�
   
 ###  <a name="describe_the_problem"></a>  
   
-1.  問題がわかりやすいタイトルを指定していただくと、適切な Visual Studio チームに転送するのに役立ちます。  
+1. 問題がわかりやすいタイトルを指定していただくと、適切な Visual Studio チームに転送するのに役立ちます。  
   
-2.  可能であれば、問題を再現する手順など、さらに詳しい情報を記載します。  
+2. 可能であれば、問題を再現する手順など、さらに詳しい情報を記載します。  
   
-3.  ドロップダウンから、問題のある領域を選択します。 不明な場合は、問題があると思われる妥当な場所を記載します。  
+3. ドロップダウンから、問題のある領域を選択します。 不明な場合は、問題があると思われる妥当な場所を記載します。  
   
- ![[問題の報告] ダイアログ](../ide/media/report-a-problem-dialog.png "[問題の報告] ダイアログ")  
+   ![[問題の報告] ダイアログ](../ide/media/report-a-problem-dialog.png "[問題の報告] ダイアログ")  
   
 ## <a name="provide-a-screenshot-optional"></a>スクリーンショットを提供します (オプション)  
  **[スクリーンショットを含める]** を選び、Microsoft に現在の画面を送信します。 ツールでは、画面中のこの問題が表示された部分のみにイメージをトリミングできます。 **[追加のファイルの添付]** ボタンをクリックして、その他のスクリーン ショットやファイルをさらに添付できます。  

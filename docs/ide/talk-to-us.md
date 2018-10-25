@@ -14,14 +14,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ddc0fcb1983d6cfa7a3fe9e1fffff7070c3caf3e
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: faa0e17537f8f5b5e10b4d133615e3d82471c629
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "36302859"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495883"
 ---
-# <a name="talk-to-us"></a>ご意見
+# <a name="visual-studio-product-feedback"></a>Visual Studio 製品フィードバック
 
 製品およびドキュメントをより良いものにするために、皆様のご意見をお寄せください。 いつも個別に回答できるとは限りませんが、お寄せいただいたフィードバックは、適切な担当者または担当チームに届けられます。
 

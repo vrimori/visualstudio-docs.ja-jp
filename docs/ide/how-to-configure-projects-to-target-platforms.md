@@ -19,16 +19,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f5f5552cb87f1c8b4501930f23765143a9e9399
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 2152f90d244ed283250bf8ea6a42a39b545f9c09
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31946690"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847982"
 ---
 # <a name="how-to-configure-projects-to-target-platforms"></a>方法 : プロジェクトを構成して対象プラットフォームを設定する
 
-Visual Studio では、64 ビット プラットフォームを含む、さまざまなプラットフォーム向けにアプリケーションを設定できます。 Visual Studio での 64 ビット プラットフォームのサポートについて詳しくは、「[64 ビット アプリケーション](http://msdn.microsoft.com/Library/fd4026bc-2c3d-4b27-86dc-ec5e96018181)」を参照してください。
+Visual Studio では、64 ビット プラットフォームを含む、さまざまなプラットフォーム向けにアプリケーションを設定できます。 Visual Studio での 64 ビット プラットフォームのサポートについて詳しくは、「[64 ビット アプリケーション](/dotnet/framework/64-bit-apps)」を参照してください。
 
 ## <a name="target-platforms-with-the-configuration-manager"></a>構成マネージャーを使用して対象プラットフォームを指定する
 
@@ -59,15 +59,15 @@ Visual Studio では、64 ビット プラットフォームを含む、さま�
 
 このタスクの実行方法は、使用するプログラミング言語によって異なります。 詳細については、次のリンクを参照してください。
 
--   [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロジェクトについては、「[/platform (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/platform)」をご覧ください。
+- [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロジェクトについては、「[/platform (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/platform)」をご覧ください。
 
--   [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] プロジェクトについては、「[[ビルド] ページ (プロジェクト デザイナー) (C#)](../ide/reference/build-page-project-designer-csharp.md)」を参照してください。
+- [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] プロジェクトについては、「[[ビルド] ページ (プロジェクト デザイナー) (C#)](../ide/reference/build-page-project-designer-csharp.md)」を参照してください。
 
--   [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] プロジェクトについては、「[/clr (Common Language Runtime compilation)](/cpp/build/reference/clr-common-language-runtime-compilation)」(/clr (共通言語ランタイムのコンパイル)) を参照してください。
+- [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] プロジェクトについては、「[/clr (Common Language Runtime compilation)](/cpp/build/reference/clr-common-language-runtime-compilation)」(/clr (共通言語ランタイムのコンパイル)) を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [ビルド プラットフォームについて](../ide/understanding-build-platforms.md)
 - [/platform (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option)
-- [64 ビット アプリケーション](http://msdn.microsoft.com/Library/fd4026bc-2c3d-4b27-86dc-ec5e96018181)
+- [64 ビット アプリケーション](/dotnet/framework/64-bit-apps)
 - [Visual Studio IDE の 64 ビット サポート](../ide/visual-studio-ide-64-bit-support.md)

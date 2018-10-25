@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_addresssection |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c1b0b71f904757684772895b9f0dd5a9cffc277a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9fd81818de0a09d0f4c95d18e45c48d6aad86948
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533395"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899566"
 ---
 # <a name="idiasymbolgetaddresssection"></a>IDiaSymbol::get_addressSection
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_addresssection](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-addresssection)します。  
-  
 アドレス場所のセクションの一部を取得します。 使用する場合、 [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)に設定されている`LocIsStatic`します。  
   
 ## <a name="syntax"></a>構文  
@@ -55,7 +53,7 @@ HRESULT get_addressSection (
   
  アドレスのオフセットの部分を取得する、 [idiasymbol::get_addressoffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

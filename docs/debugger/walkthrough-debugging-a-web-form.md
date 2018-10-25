@@ -24,44 +24,44 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b9be1d03c8635b1d6b01556c8b4c3963db1d7a2
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: daf11b3aa8be6e692db40fa0c0d0daca48547cb0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44279350"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891805"
 ---
 # <a name="walkthrough-debugging-a-web-form"></a>チュートリアル : Web フォームのデバッグ
 このチュートリアルでは、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーション (Web フォーム) をデバッグする方法について説明します。 開始し実行を停止、ブレークポイントを設定およびで変数を確認する方法を示します、**ウォッチ**ウィンドウ。  
   
 > [!NOTE]
->  このチュートリアルを完了するには、サーバー コンピューターに対する管理者特権が必要です。 既定では、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] プロセス (aspnet_wp.exe または w3wp.exe) は、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] プロセスとして実行されます。 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] をデバッグするには、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] が実行されているコンピューターに対する管理者特権が必要です。 詳細については、次を参照してください。[システム要件](../debugger/aspnet-debugging-system-requirements.md)します。  
+>  このチュートリアルを完了するには、サーバー コンピューターに対する管理者特権が必要です。 既定では、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] プロセス (aspnet_wp.exe または w3wp.exe) は、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] プロセスとして実行されます。 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] をデバッグするには、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] が実行されているコンピューターに対する管理者特権が必要です。 詳細については、「 [System Requirements](../debugger/aspnet-debugging-system-requirements.md)」をご覧ください。  
   
  使用している設定またはエディションによっては、ヘルプの記載と異なるダイアログ ボックスやメニュー コマンドが表示される場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
 ### <a name="to-create-the-web-form"></a>Web フォームを作成するには  
   
-1.  既に開いているソリューションがある場合は、そのソリューションを閉じます。  
+1. 既に開いているソリューションがある場合は、そのソリューションを閉じます。  
   
-2.  **ファイル** メニューのをクリックして**新規**、 をクリックし、 **Web サイト**します。  
+2. **ファイル** メニューのをクリックして**新規**、 をクリックし、 **Web サイト**します。  
   
-     **新しい Web サイト** ダイアログ ボックスが表示されます。  
+    **新しい Web サイト** ダイアログ ボックスが表示されます。  
   
-3.  **テンプレート**ウィンドウで、をクリックして**ASP.NET Web サイト**します。  
+3. **テンプレート**ウィンドウで、をクリックして**ASP.NET Web サイト**します。  
   
-4.  **場所**行、 をクリックして**HTTP** 、一覧から、テキスト ボックスには、入力 **http://localhost/WebSite**します。  
+4. **場所**行、 をクリックして**HTTP** 、一覧から、テキスト ボックスには、入力 **http://localhost/WebSite**します。  
   
-5.  **言語**一覧で、 **Visual c#** または**Visual Basic**します。  
+5. **言語**一覧で、 **Visual c#** または**Visual Basic**します。  
   
-6.  **[OK]** をクリックします。  
+6. **[OK]** をクリックします。  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で新しいプロジェクトが作成され、既定の HTML ソース コードが表示されます。 という名前の新しい仮想ディレクトリも作成**web サイト****既定の Web サイト**IIS でします。  
+    [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で新しいプロジェクトが作成され、既定の HTML ソース コードが表示されます。 という名前の新しい仮想ディレクトリも作成**web サイト****既定の Web サイト**IIS でします。  
   
-7.  をクリックして、**デザイン**下余白のタブ。  
+7. をクリックして、**デザイン**下余白のタブ。  
   
-8.  をクリックして、**ツールボックス**左の余白のタブまたはで選択し、**ビュー**メニュー。  
+8. をクリックして、**ツールボックス**左の余白のタブまたはで選択し、**ビュー**メニュー。  
   
-     **ツールボックス** が表示されます。  
+    **ツールボックス** が表示されます。  
   
 9. **ツールボックス**、クリックして、**ボタン**を制御し、Default.aspx、メインのデザイン サーフェイスに追加します。  
   
@@ -89,43 +89,43 @@ ms.locfileid: "44279350"
   
 ### <a name="to-debug-the-web-form"></a>Web フォームをデバッグするには  
   
-1.  Default.aspx.cs または Default.aspx.vb ウィンドウで、テキストを追加した行の左の余白をクリックします。  
+1. Default.aspx.cs または Default.aspx.vb ウィンドウで、テキストを追加した行の左の余白をクリックします。  
   
-    ```vb  
-    TextBox1.Text = "Button was clicked!"
-    ```  
+   ```vb  
+   TextBox1.Text = "Button was clicked!"
+   ```  
 
-    ```csharp  
-    textBox1.Text = "Button was clicked!";  
-    ```  
+   ```csharp  
+   textBox1.Text = "Button was clicked!";  
+   ```  
   
-     赤い点が表示され、その行のテキストが赤く強調表示されます。 赤い点はブレークポイントを表します。 デバッガーを起動した状態でアプリケーションを実行すると、そのコードに達したときにデバッガーが実行を中断します。 アプリケーションの状態を表示し、デバッグできます。 詳細については、次を参照してください。[ブレークポイント](https://msdn.microsoft.com/library/fe4eedc1-71aa-4928-962f-0912c334d583)します。  
+    赤い点が表示され、その行のテキストが赤く強調表示されます。 赤い点はブレークポイントを表します。 デバッガーを起動した状態でアプリケーションを実行すると、そのコードに達したときにデバッガーが実行を中断します。 アプリケーションの状態を表示し、デバッグできます。 詳細については、次を参照してください。[ブレークポイント](https://msdn.microsoft.com/library/fe4eedc1-71aa-4928-962f-0912c334d583)します。  
   
-2.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
+2. **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
-3.  **デバッグが無効** ダイアログ ボックスが表示されます。 選択**デバッグを有効にする Web.config ファイルを変更** をクリックし、 **OK**します。  
+3. **デバッグが無効** ダイアログ ボックスが表示されます。 選択**デバッグを有効にする Web.config ファイルを変更** をクリックし、 **OK**します。  
   
-     Internet Explorer が起動し、デザインしたページが表示されます。  
+    Internet Explorer が起動し、デザインしたページが表示されます。  
   
-4.  Internet Explorer で、作成したボタンをクリックします。  
+4. Internet Explorer で、作成したボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、コード ページ Default.aspx.cs または Default.aspx.vb のブレークポイントを設定した行に移動します。 行は黄色で強調表示されます。 ここで、アプリケーションの変数を確認し、実行を制御できます。 アプリケーションの実行が中断され、コマンドの入力を待っている状態です。  
+    [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、コード ページ Default.aspx.cs または Default.aspx.vb のブレークポイントを設定した行に移動します。 行は黄色で強調表示されます。 ここで、アプリケーションの変数を確認し、実行を制御できます。 アプリケーションの実行が中断され、コマンドの入力を待っている状態です。  
   
-5.  **デバッグ** メニューのをクリックして**Windows**、 をクリックし、**ウォッチ**、順にクリックします**ウォッチ 1**します。  
+5. **デバッグ** メニューのをクリックして**Windows**、 をクリックし、**ウォッチ**、順にクリックします**ウォッチ 1**します。  
   
-6.  **ウォッチ**ウィンドウで、「 **TextBox1.Text**します。  
+6. **ウォッチ**ウィンドウで、「 **TextBox1.Text**します。  
   
-     **ウォッチ**ウィンドウには、変数の値が表示されます`TextBox1.Text`:。  
+    **ウォッチ**ウィンドウには、変数の値が表示されます`TextBox1.Text`:。  
   
-    '""' 
+   '""' 
   
-7.  **デバッグ** メニューのをクリックして**ステップ オーバー**します。  
+7. **デバッグ** メニューのをクリックして**ステップ オーバー**します。  
   
-     値`TextBox1.Text`の変更、**ウォッチ**ウィンドウ。  
+    値`TextBox1.Text`の変更、**ウォッチ**ウィンドウ。  
   
-    `"Button was clicked!"`  
+   `"Button was clicked!"`  
   
-8.  **デバッグ** メニューのをクリックして**続行**します。  
+8. **デバッグ** メニューのをクリックして**続行**します。  
   
 9. Internet Explorer で、作成したボタンを再度クリックします。  
   
@@ -139,29 +139,29 @@ ms.locfileid: "44279350"
   
 ### <a name="to-attach-to-the-web-form-for-debugging"></a>デバッグする Web フォームにアタッチするには  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、デバッガーを実行中のプロセスにアタッチできます。 デバッグの効率を最も高くするには、シンボル (PDB) ファイルを持つデバッグ バージョンとして実行可能ファイルをコンパイルします。  
+1. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、デバッガーを実行中のプロセスにアタッチできます。 デバッグの効率を最も高くするには、シンボル (PDB) ファイルを持つデバッグ バージョンとして実行可能ファイルをコンパイルします。  
   
-2.  Default.aspx.cs ウィンドウまたは Default.aspx.vb ウィンドウの左のマージンをクリックして、追加した行に再度ブレークポイントを設定します。  
+2. Default.aspx.cs ウィンドウまたは Default.aspx.vb ウィンドウの左のマージンをクリックして、追加した行に再度ブレークポイントを設定します。  
   
-    ```vb  
-    TextBox1.Text = "Button was clicked!"
-    ```
+   ```vb  
+   TextBox1.Text = "Button was clicked!"
+   ```
   
-    ```csharp  
-    textBox1.Text = "Button was clicked!";  
-    ```  
+   ```csharp  
+   textBox1.Text = "Button was clicked!";  
+   ```  
   
-3.  **デバッグ** メニューのをクリックして**デバッグなしで開始**します。  
+3. **デバッグ** メニューのをクリックして**デバッグなしで開始**します。  
   
-     Internet Explorer で Web フォームが起動しますが、デバッガーはアタッチされません。  
+    Internet Explorer で Web フォームが起動しますが、デバッガーはアタッチされません。  
   
-4.  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] プロセスにアタッチします。 詳細については、次を参照してください。[デプロイされた Web アプリケーションのデバッグ](../debugger/debugging-deployed-web-applications.md)します。  
+4. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] プロセスにアタッチします。 詳細については、次を参照してください。[デプロイされた Web アプリケーションのデバッグ](../debugger/debugging-deployed-web-applications.md)します。  
   
-5.  Internet Explorer で、フォームのボタンをクリックします。  
+5. Internet Explorer で、フォームのボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で、Default.aspx.cs、Default.aspx.vb、または Default.aspx のブレークポイントにヒットします。  
+    [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で、Default.aspx.cs、Default.aspx.vb、または Default.aspx のブレークポイントにヒットします。  
   
-6.  終了するときに、デバッグ、**デバッグ** メニューのをクリックして**デバッグの停止**。  
+6. 終了するときに、デバッグ、**デバッグ** メニューのをクリックして**デバッグの停止**。  
   
 ## <a name="see-also"></a>関連項目  
  [ASP.NET アプリケーションをデバッグします。](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

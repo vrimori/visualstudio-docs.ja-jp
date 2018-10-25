@@ -1,12 +1,12 @@
 ---
 title: コード マップを使用してアプリケーションをデバッグする |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio Ultimate, visualizing code
 - Visual Studio Ultimate, navigating code visually
@@ -21,18 +21,16 @@ caps.latest.revision: 51
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: f3dd19804a8e7749a976b5334ea691918eeae906
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 354c99a9e11f7dbf86f93dab48f669c206323ce5
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539371"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49264004"
 ---
 # <a name="use-code-maps-to-debug-your-applications"></a>コード マップを使用してアプリケーションをデバッグする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コード マップをアプリケーションのデバッグ](https://docs.microsoft.com/visualstudio/modeling/use-code-maps-to-debug-your-applications)します。  
-  
 コード マップを使用すると、大規模なコード ベース、よく知らないコード、またはレガシ コードでの見失いを回避できます。 たとえば、デバッグの際は、多数のファイルとプロジェクトにわたってコードに注意を払うことが必要になる場合があります。 コード マップを使用すると、これらのコード内を移動して、コード間の関係を確認できます。 これにより、このコードを頭の中で追跡したり、別の図を描画したりする必要はありません。 コード マップがあれば、作業を中断しても作業中のコードを思い出すのに役立ちます。  
   
  ![コード マップ&#45;コード内の関係をマップ](../modeling/media/codemapstoryboardpaint.png "CodeMapStoryboardPaint")  

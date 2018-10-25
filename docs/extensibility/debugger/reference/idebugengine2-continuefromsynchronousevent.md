@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::ContinueFromSynchronousEvent |Microsoft ドキュメント
+title: IDebugEngine2::ContinueFromSynchronousEvent |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 305179184df1241b6d944ea78e164c09af37923f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 43589e4fd5a75c5c1cd7681dde4a3957f3fe4243
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31107843"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837517"
 ---
 # <a name="idebugengine2continuefromsynchronousevent"></a>IDebugEngine2::ContinueFromSynchronousEvent
-セッションのデバッグ マネージャーを以前に送信したデバッグ エンジン (DE) によって、SDM を同期のデバッグ イベントが受信され、処理を示します (SDM) によって呼び出されます。  
+セッション デバッグ マネージャー (SDM) をこれまで、SDM をデバッグ エンジン (DE) によって送信同期デバッグ イベントが受信され、処理を示すために呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,16 +41,16 @@ HRESULT ContinueFromSynchronousEvent(
   
 #### <a name="parameters"></a>パラメーター  
  `pEvent`  
- [in][IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)元となる、デバッガーを引き続き、以前に送信された同期イベントを表すオブジェクト。  
+ [in][IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)元となるデバッガーを引き続き、以前に送信された同期イベントを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- デがによって表されるイベントのソースであったことを確認する必要があります、`pEvent`パラメーター。  
+## <a name="remarks"></a>Remarks  
+ によって表されるイベントのソースが、DE を確認する必要があります、`pEvent`パラメーター。  
   
 ## <a name="example"></a>例  
- 次の例は、単純なは、このメソッドを実装する方法を示します`CEngine`を実装するオブジェクト、 [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)インターフェイスです。  
+ 次の例は、単純なは、このメソッドを実装する方法を示しています。`CEngine`を実装するオブジェクト、 [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)インターフェイス。  
   
 ```cpp  
 HRESULT CEngine::ContinueFromSynchronousEvent(IDebugEvent2* pEvent)  

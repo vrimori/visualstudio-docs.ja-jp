@@ -1,7 +1,7 @@
 ---
 title: ドメイン プロパティの |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 3c1bd47ce583c790fdc90a4135184b21a932f449
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 977594493279d52154de3cb5ef7bce56d4d8f985
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537623"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836841"
 ---
 # <a name="properties-of-domain-properties"></a>ドメイン プロパティのプロパティ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロパティのドメイン プロパティ](https://docs.microsoft.com/visualstudio/modeling/properties-of-domain-properties)します。  
-  
 A*ドメイン プロパティ*値を保持できるモデル要素の機能です。 たとえば、`Person` ドメイン クラスに `Name` プロパティと `BirthDate` プロパティを指定することができます。 DSL 定義で、ドメイン プロパティは図のドメイン クラス ボックスと DSL エクスプローラーのドメイン クラスの下に一覧表示されます。 詳細については、次を参照してください。[ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)します。  
   
 > [!NOTE]
@@ -35,11 +33,11 @@ A*ドメイン プロパティ*値を保持できるモデル要素の機能で�
   
  ほとんどのドメイン プロパティは通常の CLR プロパティとして実装されます。 ただし、プログラミングの観点から、ドメイン プロパティには以下のように、通常プログラム プロパティより豊富な機能が含まれています。  
   
--   プロパティの状態を監視する規則とイベントを定義できます。 詳細については、次を参照してください。[への対応および変更の反映](../modeling/responding-to-and-propagating-changes.md)します。  
+- プロパティの状態を監視する規則とイベントを定義できます。 詳細については、次を参照してください。[への対応および変更の反映](../modeling/responding-to-and-propagating-changes.md)します。  
   
--   トランザクションは一貫性のない状態を防ぐのに役立ちます。 詳細については、次を参照してください。[を移動すると、プログラム コードでのモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)します。  
+- トランザクションは一貫性のない状態を防ぐのに役立ちます。 詳細については、次を参照してください。[を移動すると、プログラム コードでのモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)します。  
   
- 図中または DSL エクスプローラー内のドメイン プロパティを選択すると、[プロパティ] ウィンドウに以下の項目が表示されます。 これらの項目を使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語を拡張する](../modeling/customizing-and-extending-a-domain-specific-language.md)します。  
+  図中または DSL エクスプローラー内のドメイン プロパティを選択すると、[プロパティ] ウィンドウに以下の項目が表示されます。 これらの項目を使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語を拡張する](../modeling/customizing-and-extending-a-domain-specific-language.md)します。  
   
 |プロパティ|説明|既定値|  
 |--------------|-----------------|-------------------|  

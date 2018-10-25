@@ -1,37 +1,37 @@
 ---
-title: TF バージョン管理
-description: Team Foundation バージョン管理で Team Foundation Server または Visual Studio Team Services に接続します。
+title: Team Foundation バージョン管理 (TFVC)
+description: Team Foundation バージョン管理 (TFVC) で Team Foundation Server または Azure DevOps Services に接続します。
 author: conceptdev
 ms.author: crdun
-ms.date: 05/03/2018
+ms.date: 09/05/2018
 ms.topic: article
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
-ms.openlocfilehash: 101f002f6c311fe5aaefa78c246602fd45514603
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 5a1d7fb7519e9402e2fa780e978fc1176702b26d
+ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224240"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46542439"
 ---
-# <a name="connecting-to-team-foundation-version-control"></a>Team Foundation バージョン管理に接続する 
+# <a name="connecting-to-team-foundation-version-control"></a>Team Foundation バージョン管理に接続する
 
 > [!NOTE]
 > **注**: 現在、Team Foundation バージョン管理サポートはプレビューとして提供されており、一部の機能は完全に動作していません。 [開発者コミュニティ](https://developercommunity.visualstudio.com/spaces/41/index.html)で問題についてフィードバックしてください。 今後、さらに変更される予定です。
 
-Visual Studio Team Services (VSTS) と Team Foundation Server (TFS) には、バージョン管理のモデルが 2 つあります。Git は分散型バージョン管理であり、Team Foundation バージョン管理 (TFVC) は集中型バージョン管理です。 この入門編は、Visual Studio for Mac で Team Foundation バージョン管理を使用する際の出発点としてご利用いただけます。
+Azure Repos には、バージョン管理のモデルが 2 つあります。分散型バージョン管理の Git と、集中型バージョン管理の Team Foundation バージョン管理 (TFVC) です。 この入門編は、Visual Studio for Mac で TFVC を使用する際の出発点としてご利用いただけます。
 
 ## <a name="requirements"></a>必要条件
 
 * Visual Studio Community、Visual Studio Professional、Enterprise for Mac バージョン 7.5 以降。
-* Visual Studio Team Services、または Team Foundation Server 2013 以降。
-* Team Foundation バージョン管理を使用するように設定された、Visual Studio Team Services または Team Foundation Server のプロジェクト。
+* Azure DevOps Services、または Team Foundation Server 2013 以降。
+* Team Foundation バージョン管理を使用するように設定された、Azure DevOps Services または Team Foundation Server のプロジェクト。
 
 ## <a name="installation"></a>インストール
 
 Visual Studio for Mac でメニューから **[Visual Studio] > [拡張機能]** の順に選びます。 **[ギャラリー]** タブで **[バージョン管理] > [Team Foundation Version Control for TFS and VSTS]\(TFS と VSTS の Team Foundation バージョン管理\)** を選択し、**[インストール]** をクリックします。
 
-  ![拡張機能マネージャー](media/tfvc-install.png) 
+  ![拡張機能マネージャー](media/tfvc-install.png)
 
 画面の指示に従って、拡張機能をインストールします。 インストールした後、IDE を再起動します。
 
@@ -39,7 +39,7 @@ Visual Studio for Mac でメニューから **[Visual Studio] > [拡張機能]**
 
 TFVC 拡張機能への更新プログラムは、定期的に作成されます。 更新プログラムにアクセスするには、メニューから **[Visual Studio]、[拡張機能]** の順に選び、**[更新]** タブを選択します。リスト内の拡張機能を選択して、**[更新]** ボタンを押します。
 
-  ![更新プログラムが表示されている拡張機能マネージャー](media/tfvc-update.png) 
+  ![更新プログラムが表示されている拡張機能マネージャー](media/tfvc-update.png)
 
 次のダイアログで **[インストール]** を押して古いパッケージをアンインストールし、新しいパッケージをインストールします。
 
@@ -47,21 +47,23 @@ TFVC 拡張機能への更新プログラムは、定期的に作成されます
 
 ## <a name="using-the-add-in"></a>アドインの使用
 
-拡張機能をインストールしたら、**[バージョン管理]、[TFS/VSTS]、[Open from Remote Repository]\(リモート リポジトリから開く\)** メニュー項目の順に選択します。 
+拡張機能をインストールしたら、**[バージョン管理]、[TFS/Azure DevOps]、[Open from Remote Repository]\(リモート リポジトリから開く\)** メニュー項目の順に選択します。
 
-最初に Visual Studio Team Services または Team Foundation Server のいずれかを選択して、**[続行]** を押します。
+  ![拡張機能を開くメニュー項目](media/tfvc-source-control-explorer-devops.png)
 
-  ![サーバーで接続する](media/tfvc-choose-server-type.png)
+最初に VSTS または Team Foundation Server のいずれかを選択して、**[続行]** を押します。
 
-### <a name="vsts-authentication"></a>VSTS 認証
+  ![サーバーで接続する](media/tfvc-choose-server-type-devops.png)
 
-VSTS でホストされているプロジェクトを選択すると、Microsoft アカウントの情報を入力する画面が表示されます。
+### <a name="azure-repos-authentication"></a>Azure Repos の認証
 
-  ![VSTS Server で接続する](media/tfvc-vsts-login.png)
+Azure Repos でホストされているプロジェクトを選択すると、Microsoft アカウントの情報を入力する画面が表示されます。
+
+  ![Azure Repos に接続する](media/tfvc-vsts-login.png)
 
 ### <a name="tfs-authentication"></a>TFS 認証
 
-TFS に接続するには、サーバーの詳細とアカウントの資格情報を入力します。 NTLM 認証するドメインを入力します。それ以外の場合は、空白のままにして基本認証を使用します。 **[サーバーの追加]** を選択します。 
+TFS に接続するには、サーバーの詳細とアカウントの資格情報を入力します。 NTLM 認証するドメインを入力します。それ以外の場合は、空白のままにして基本認証を使用します。 **[サーバーの追加]** を選択します。
 
 ![TFS Server にサインインする](media/tfvc-login.png)
 
@@ -73,10 +75,10 @@ TFS に接続するには、サーバーの詳細とアカウントの資格情�
 
 このダイアログは、次のノードで構成されています。
 
-- VSTS アカウントまたはコレクション – ここには、ログインに使用した Microsoft アカウントに接続されているアカウントがすべて表示されます。
-- チーム プロジェクト – 各 VSTS 内にいくつかのチーム プロジェクトを持つことができます。 チーム プロジェクトは、ソース コード、作業項目、自動化されたビルドがホストされている場所です。
+- Azure DevOps の組織またはコレクション: ログインに使用した Microsoft アカウントに接続されているすべての組織を表示します。
+- プロジェクト: 各組織またはコレクションには、多くのプロジェクトを持つことができます。 プロジェクトは、ソース コード、作業項目、自動化されたビルドがホストされている場所です。
 
-この時点で、プロジェクトまたはアカウントの名前で検索およびフィルター処理を行うことができます。
+この時点で、プロジェクトまたは組織の名前で検索およびフィルター処理を行うことができます。
 
 ### <a name="adding-a-new-server"></a>新しいサーバーの追加
 
@@ -86,7 +88,7 @@ TFS に接続するには、サーバーの詳細とアカウントの資格情�
 
 リストからプロバイダーを選択して、資格情報を入力します。
 
-![ソース管理プロバイダー用のオプションを示すダイアログ](media/tfvc-add-new-creds.png)
+![ソース管理プロバイダー用のオプションを示すダイアログ](media/tfvc-add-new-creds-devops.png)
 
 ## <a name="creating-a-new-workspace"></a>新しいワークスペースの作成。
 
@@ -102,9 +104,7 @@ TFS に接続するには、サーバーの詳細とアカウントの資格情�
 
 ワークスペースを作成してプロジェクトをマップしたら、_ソース コード エクスプローラー_の操作を開始できます。
 
-ソース コード エクスプローラーを開くには、**[バージョン コントロール]、[TFS/VSTS]、[ソース管理エクスプローラー]** の順に選択します。
-
-![ソース コード エクスプローラーを開くメニュー項目](media/tfvc-source-control-explorer.png)
+ソース コード エクスプローラーを開くには、**[バージョン コントロール] > [TFS/Azure DevOps] > [ソース管理エクスプローラー]** の順にメニュー項目を選択します。
 
 ソース コード エクスプローラーを使用すると、すべてのマップされているプロジェクト、そのファイルやフォルダー内を移動できます。 また、次のような基本のソース コントロール アクションをすべて実行することもできます。
 
@@ -124,24 +124,24 @@ TFS に接続するには、サーバーの詳細とアカウントの資格情�
 
 「[新しいワークスペースの作成](#creating-a-new-workspace)」セクションで説明されたように、まだワークスペースを作成していない場合は、ソース コード エクスプローラーが空であることが表示されます。
 
-![空のソース コード エクスプローラー](media/tfvc-setup-empty-sce.png) 
+![空のソース コード エクスプローラー](media/tfvc-setup-empty-sce.png)
 
 ローカル ワークスペースを使ってリモート プロジェクトを設定するには、次の手順を使用します。
 
 1. コンボ ボックスから**サーバー**を選択します。
 1. "ワークスペースがありません" とローカル パスが "対応付けされていません" が示されていることに注意してください。 **[対応付けされていません]** リンクを選択して、**[新しいワークスペースの作成]** ダイアログを表示します。
 1. ワークスペースの名前を入力し、**[Add Working Folder]\(作業フォルダーの追加\)** をクリックし、コンピューター上のローカル フォルダーにプロジェクトをマッピングします。
-    
-    ![既定のオプションを示している [新しいワークスペースの作成] ダイアログ](media/tfvc-workspace1.png) 
 
-1. "$" フォルダーを選択してサーバー上のすべてのチーム プロジェクトを同じワークスペースにマッピングするか、個別のプロジェクトを選択して、**[OK]** をクリックします。
-    
-    ![すべてのプロジェクトを示している [フォルダーの参照] ダイアログ](media/tfvc-workspace2.png) 
+    ![既定のオプションを示している [新しいワークスペースの作成] ダイアログ](media/tfvc-workspace1.png)
+
+1. "$" フォルダーを選択してサーバー上のすべてのプロジェクトを同じワークスペースにマッピングするか、個別のプロジェクトを選択して、**[OK]** をクリックします。
+
+    ![すべてのプロジェクトを示している [フォルダーの参照] ダイアログ](media/tfvc-workspace2.png)
 
 1. プロジェクトをマッピングするローカル コンピューター上の場所を選択して、**[フォルダーの選択]** をクリックします。
 1. **[OK]** を押して、新しいワークスペースの詳細を確認します。
-    
-    ![追加された作業フォルダーを含む [新しいワークフローの追加] ダイアログ](media/tfvc-workspace3.png) 
+
+    ![追加された作業フォルダーを含む [新しいワークフローの追加] ダイアログ](media/tfvc-workspace3.png)
 
 ワークスペースを設定したら、ソース コード エクスプローラーの **[ワークスペースの管理]** をクリックすることによって、変更または削除することができます。
 
@@ -157,22 +157,23 @@ TFS に接続するには、サーバーの詳細とアカウントの資格情�
 - Basic
 - Ntlm
 
-基本認証を使用するには、以下の手順に従って、VSTS で**代替認証資格情報**を有効にする必要があります。
+基本認証を使用するには、以下の手順に従って、Azure DevOps Services で**代替認証資格情報**を有効にする必要があります。
 
-1. VSTS アカウントにアカウント所有者としてサインインします (https://{youraccount}.visualstudio.com)。
-2. アカウント ツール バーの歯車アイコンを選択し、**[ポリシー]** を選択します。
-    
-    ![選択されたポリシー設定オプション](media/tfvc-auth2.png) 
+1. 所有者として、Azure DevOps 組織にサインインします (https://dev.azure.com/{organization}/{project})。
+
+2. 組織のツール バーの歯車アイコンを選択し、**[ポリシー]** を選択します。
+
+    ![選択されたポリシー設定オプション](media/tfvc-auth2.png)
 
 3. アプリケーションの接続設定を確認します。 セキュリティ ポリシーに基づいてこれらの設定を変更します。
-    
-    ![選択されたポリシー設定オプション](media/tfvc-auth.png)  
+
+    ![選択されたポリシー設定オプション](media/tfvc-auth.png)
 
 ### <a name="i-do-not-see-anything-in-tfvc"></a>TFVC に何も表示されない
 
 開発用コンピューターに Team Foundation バージョン管理 (TFVC) を設定するには、「[ワークスペースの管理](#managing-workspaces)」セクションの説明に従って、ワークスペースを作成する**必要があります**。
 
-ソース管理エクスプローラーで、**[ワークスペースの管理]** ボタンをクリックします。 手順に従って、開発用コンピューター上にあるフォルダーに、チーム プロジェクトをマップします。
+ソース管理エクスプローラーで、**[ワークスペースの管理]** ボタンをクリックします。 手順に従って、開発用コンピューター上にあるフォルダーに、プロジェクトをマップします。
 
 ### <a name="i-do-not-see-any--all-of-my-projects"></a>一部/すべてのプロジェクトが表示されない
 

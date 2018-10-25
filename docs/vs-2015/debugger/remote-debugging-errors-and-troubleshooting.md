@@ -1,7 +1,7 @@
 ---
 title: リモート デバッグ エラーとトラブルシューティング |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -30,18 +30,16 @@ caps.latest.revision: 25
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8d7c4d6e559b60844b7d6661beb29e9d6483d107
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d8f85c0a45c30b6fd80305aa1bb4d76d67e0e6cc
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546415"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49270973"
 ---
 # <a name="remote-debugging-errors-and-troubleshooting"></a>リモート デバッグ エラーとトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[リモート デバッグ エラーとトラブルシューティング](https://docs.microsoft.com/visualstudio/debugger/remote-debugging-errors-and-troubleshooting)します。  
-  
 デバッグをリモートで試行した場合に、次のエラーが発生することがあります。  
   
 -   [Error: Unable to Automatically Step Into the Server](../debugger/error-unable-to-automatically-step-into-the-server.md)  

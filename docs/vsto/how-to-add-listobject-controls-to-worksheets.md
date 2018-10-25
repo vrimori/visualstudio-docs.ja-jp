@@ -16,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ce398f18913063d770aa180a06ff8e2017aebd86
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 402e7f80ea208d714b31bd61e25b352494310487
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672670"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949254"
 ---
 # <a name="how-to-add-listobject-controls-to-worksheets"></a>方法: ワークシートに ListObject コントロールを追加
   追加することができます<xref:Microsoft.Office.Tools.Excel.ListObject>およびドキュメント レベルのプロジェクトでの実行時のデザイン時に、Microsoft Office Excel ワークシートにコントロール。  
@@ -32,13 +32,13 @@ ms.locfileid: "35672670"
   
  このトピックでは、次のタスクについて説明します。  
   
--   [デザイン時に ListObject コントロールを追加します。](#designtime)  
+- [デザイン時に ListObject コントロールを追加します。](#designtime)  
   
--   [ドキュメント レベル プロジェクト内で実行時の ListObject コントロールを追加します。](#runtimedoclevel)  
+- [ドキュメント レベル プロジェクト内で実行時の ListObject コントロールを追加します。](#runtimedoclevel)  
   
--   [VSTO アドイン プロジェクトでの実行時に ListObject コントロールを追加します。](#runtimeaddin)  
+- [VSTO アドイン プロジェクトでの実行時に ListObject コントロールを追加します。](#runtimeaddin)  
   
- 詳細については<xref:Microsoft.Office.Tools.Excel.ListObject>コントロールを参照してください[ListObject コントロール](../vsto/listobject-control.md)します。  
+  詳細については<xref:Microsoft.Office.Tools.Excel.ListObject>コントロールを参照してください[ListObject コントロール](../vsto/listobject-control.md)します。  
   
 ##  <a name="designtime"></a> デザイン時に ListObject コントロールを追加します。  
  デザイン時にドキュメント レベルのプロジェクトのワークシートに <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールを追加する方法として、Excel から行う方法、Visual Studio の **ツールボックス**から行う方法、および **[データ ソース]** ウィンドウから行う方法があります。  

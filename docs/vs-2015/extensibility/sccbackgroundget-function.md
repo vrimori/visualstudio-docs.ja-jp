@@ -1,7 +1,7 @@
 ---
 title: SccBackgroundGet 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 69817e52-b9ac-4f4d-820b-2cc9c384f0dc
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 162bbc427b48ee10ea3a0b88837cf012f1c3fd07
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d2e6adbfbf5132fef6d53debe6731a2c1509eaab
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533629"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49865090"
 ---
 # <a name="sccbackgroundget-function"></a>SccBackgroundGet 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[SccBackgroundGet 関数](https://docs.microsoft.com/visualstudio/extensibility/sccbackgroundget-function)します。  
-  
 この関数は、ソース管理から各指定されたファイルのユーザーの操作なしで取得します。  
   
 ## <a name="syntax"></a>構文  

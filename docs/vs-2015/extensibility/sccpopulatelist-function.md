@@ -1,7 +1,7 @@
 ---
 title: SccPopulateList 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 7416e781-c571-4a7f-8af3-a089ce8be662
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0e37b011da322639c2393d8fea1fb7eeaefac729
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: efdb79b765dc515fd1239a633a50684b2bfe9cd0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535064"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816145"
 ---
 # <a name="sccpopulatelist-function"></a>SccPopulateList 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[SccPopulateList 関数](https://docs.microsoft.com/visualstudio/extensibility/sccpopulatelist-function)します。  
-  
 この関数は、特定のソース制御コマンドのファイルの一覧を更新し、指定されたすべてのファイルをソース管理の状態を提供します。  
   
 ## <a name="syntax"></a>構文  

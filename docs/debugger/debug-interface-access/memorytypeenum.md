@@ -1,5 +1,5 @@
 ---
-title: MemoryTypeEnum |Microsoft ドキュメント
+title: MemoryTypeEnum |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 616bae99a4cb3ffafa4cdf773bce63576ed04e7a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4a8dcf657933cf62f3f2173bb89dadd1366b0cec
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31469595"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822944"
 ---
 # <a name="memorytypeenum"></a>MemoryTypeEnum
 アクセスするメモリの種類を指定します。  
@@ -43,15 +43,15 @@ enum MemoryTypeEnum {
  アクセスのデータまたはスタックのメモリ。  
   
  `MemTypeStack`  
- アクセスは、メモリのみをスタックします。  
+ アクセスにはスタック メモリのみ。  
   
  `MemTypeAny`  
  任意の種類のメモリにアクセスします。  
   
-## <a name="remarks"></a>コメント  
- この列挙体の値に渡され、 [IDiaStackWalkHelper::readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md)にさまざまな種類のメモリへのアクセスを制限する方法です。  
+## <a name="remarks"></a>Remarks  
+ この列挙体の値を渡す、 [IDiaStackWalkHelper::readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md)にさまざまな種類のメモリへのアクセスを制限する方法。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: cvconst.h  
   
 ## <a name="see-also"></a>関連項目  

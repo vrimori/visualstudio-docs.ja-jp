@@ -1,7 +1,7 @@
 ---
 title: XElement クラスの動的プロパティ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5d2ed1352aeeeba4573fbe7b8ac7490aed7d7e8b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 15e3ad45f9588c7e43a58e40e6f75419ad505e04
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540163"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49205444"
 ---
 # <a name="xelement-class-dynamic-properties"></a>XElement クラスの動的プロパティ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[XElement クラスの動的プロパティ](https://docs.microsoft.com/visualstudio/designers/xelement-class-dynamic-properties)します。  
-  
 このセクションの動的プロパティの説明、 <xref:System.Xml.Linq.XElement?displayProperty=fullName>[t] (<!-- TODO: review code entity reference <xref:assetId:///t?qualifyHint=False&amp;autoUpgrade=True>  -->) クラス。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -36,7 +34,7 @@ ms.locfileid: "47540163"
 |[要素](../designers/element-xelement-dynamic-property.md)|指定された拡張名に対応する子要素を取得するためのインデクサーを取得します。|  
 |[要素](../designers/elements-xelement-dynamic-property.md)|現在の要素の子要素のうち指定された拡張名に一致する子要素を取得するためのインデクサーを取得します。|  
 |[子孫](../designers/descendants-xelement-dynamic-property.md)|現在の要素の子孫要素のうち指定された拡張名に一致するすべての子孫要素を取得するためのインデクサーを取得します。|  
-|[値](../designers/value-xelement-dynamic-property.md)|要素のコンテンツを取得または設定します。|  
+|[[値]](../designers/value-xelement-dynamic-property.md)|要素のコンテンツを取得または設定します。|  
 |[Xml](../designers/xml-xelement-dynamic-property.md)|要素について、書式設定されていない XML 表現を取得します。|  
   
 ## <a name="see-also"></a>関連項目  

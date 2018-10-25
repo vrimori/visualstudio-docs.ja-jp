@@ -1,7 +1,7 @@
 ---
 title: 行ビュー - サンプリング データ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 07ad23e1b7b466965efe16c23f92adc6b9f676dc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 73a50b3daf77fdd1a1e0a058bd64ddd068467c2a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535886"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49932989"
 ---
 # <a name="lines-view---sampling-data"></a>行ビュー - サンプリング データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[行ビュー - サンプリング データ](https://docs.microsoft.com/visualstudio/profiling/lines-view-sampling-data)します。  
-  
 サンプリング データの [行] ビューには、プロファイリングを実行してサンプルを収集するときに実行したステートメントのパフォーマンス データが表示されます。  
   
 > [!NOTE]
@@ -35,21 +33,21 @@ ms.locfileid: "47535886"
   
  ソース ファイルでは、1 つのステートメントを複数の行にわたって記述することも、複数のステートメントを 1 つの行に含めることもできます。 ステートメントは、次の項目によって識別されます。  
   
--   function ステートメントを含むソース ファイル。  
+- function ステートメントを含むソース ファイル。  
   
--   ステートメントを含む関数。  
+- ステートメントを含む関数。  
   
--   ステートメントが開始されるソース行。  
+- ステートメントが開始されるソース行。  
   
--   ステートメントが開始されるソース行の文字。  
+- ステートメントが開始されるソース行の文字。  
   
--   ステートメントが終了するソース行。  
+- ステートメントが終了するソース行。  
   
--   ステートメントが終了するソース行の文字。  
+- ステートメントが終了するソース行の文字。  
   
- [ソース/行番号] 列は、識別子データを連結したもので、この列による並べ替えが可能です。  
+  [ソース/行番号] 列は、識別子データを連結したもので、この列による並べ替えが可能です。  
   
- 定義上、ステートメントは他の関数を呼び出しません。 そのため、排他的な値のみが一覧表示されます。  
+  定義上、ステートメントは他の関数を呼び出しません。 そのため、排他的な値のみが一覧表示されます。  
   
 |Column|説明|  
 |------------|-----------------|  

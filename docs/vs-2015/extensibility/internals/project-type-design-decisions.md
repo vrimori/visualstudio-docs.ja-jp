@@ -1,7 +1,7 @@
 ---
 title: プロジェクトの種類の設計上の決定 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: f68671fe-fd7a-4e56-a0b5-330b0f1fedb1
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 49f4b198da38a53360efffcdff82daa6fcdb350c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6c7e3c0804fb354bc1f17fa4769ce118e13b3352
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547458"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939554"
 ---
 # <a name="project-type-design-decisions"></a>プロジェクト タイプのデザインの方針
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロジェクトの種類の設計に関する決定事項](https://docs.microsoft.com/visualstudio/extensibility/internals/project-type-design-decisions)します。  
-  
 新しいプロジェクトの種類を作成する前に、プロジェクトの種類に関するいくつかの設計上の決定を行う必要があります。 使用して、プロジェクトに含まれる項目、プロジェクト ファイルの保存方法、およびどのようなコミットメント モデルの種類を決定する必要があります。  
   
 ## <a name="project-items"></a>プロジェクト項目  
@@ -50,13 +48,13 @@ ms.locfileid: "47547458"
   
  プロジェクト内の項目の永続性に関して考慮すべきいくつかのオプションがあります。 次のオプションのいずれかを実行できます。  
   
--   変更されると、各ファイルを個別に保存します。  
+- 変更されると、各ファイルを個別に保存します。  
   
--   1 つの多くのトランザクションをキャプチャ**保存**操作。  
+- 1 つの多くのトランザクションをキャプチャ**保存**操作。  
   
--   ファイルをローカルに保存をサーバーにパブリッシュしたり、アイテムは、リモート オブジェクトへのデータ接続を表す場合に、プロジェクト項目を保存するための別のアプローチを使用してキーを押します。  
+- ファイルをローカルに保存をサーバーにパブリッシュしたり、アイテムは、リモート オブジェクトへのデータ接続を表す場合に、プロジェクト項目を保存するための別のアプローチを使用してキーを押します。  
   
- 永続化の詳細については、次を参照してください。[プロジェクトの永続化](../../extensibility/internals/project-persistence.md)と[とプロジェクト項目の保存](../../extensibility/internals/opening-and-saving-project-items.md)します。  
+  永続化の詳細については、次を参照してください。[プロジェクトの永続化](../../extensibility/internals/project-persistence.md)と[とプロジェクト項目の保存](../../extensibility/internals/opening-and-saving-project-items.md)します。  
   
 ## <a name="project-commitment-model"></a>コミットメントのプロジェクト モデル  
  永続化されたデータ オブジェクトが開かれるダイレクト モードまたはトランザクション モードにしますか?  

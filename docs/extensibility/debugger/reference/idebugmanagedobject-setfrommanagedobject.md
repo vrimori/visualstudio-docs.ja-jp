@@ -1,5 +1,5 @@
 ---
-title: IDebugManagedObject::SetFromManagedObject |Microsoft ドキュメント
+title: IDebugManagedObject::SetFromManagedObject |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3d240c931db24cc353d7bb461645771eb4520921
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: afe3431e282a8cd48ea33851cef00fba116e389a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31110895"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833942"
 ---
 # <a name="idebugmanagedobjectsetfrommanagedobject"></a>IDebugManagedObject::SetFromManagedObject
-パラメーターとして指定する値クラスのインスタンスから値クラスのオブジェクトのインスタンスの値を設定します。  
+パラメーターとして指定された値クラスのインスタンスから値クラスのオブジェクトのインスタンスの値を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +41,13 @@ int SetFromManagedObject(
   
 #### <a name="parameters"></a>パラメーター  
  `pManagedObject`  
- [in]新しい値を含むマネージ オブジェクトを表すインターフェイスです。  
+ [in]新しい値を格納しているマネージ オブジェクトを表すインターフェイス。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドで表される管理対象オブジェクトを変更するのには使用、 [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)オブジェクト。  
+## <a name="remarks"></a>Remarks  
+ このメソッドの使用によって表されるマネージ オブジェクトの変更を[IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)オブジェクト。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::SetReferenceType |Microsoft ドキュメント
+title: IDebugReference2::SetReferenceType |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c57ab701ead4a9e60a163c50f4f241fbe60a012b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f36192a194e1ced3815813f87925496d2ce07979
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115932"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843029"
 ---
 # <a name="idebugreference2setreferencetype"></a>IDebugReference2::SetReferenceType
 参照型を設定します。 将来使用するために予約されています。  
@@ -41,7 +41,7 @@ int SetReferenceType (
   
 #### <a name="parameters"></a>パラメーター  
  `dwRefType`  
- [in]値、 [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md)参照型を指定する列挙です。  
+ [in]値、 [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md)参照型を指定する列挙体。  
   
 ## <a name="return-value"></a>戻り値  
  常に `E_NOTIMPL` を返します。  

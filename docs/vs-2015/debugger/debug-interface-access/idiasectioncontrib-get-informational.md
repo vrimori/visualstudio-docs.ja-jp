@@ -1,7 +1,7 @@
 ---
 title: Idiasectioncontrib::get_informational |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7db3a2091e2a6b62a5393da5b87ffcd4a9ab55a4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 51ff0d775e06a870eb47f6c5df8a7d0cf54d3e1e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539250"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49922212"
 ---
 # <a name="idiasectioncontribgetinformational"></a>IDiaSectionContrib::get_informational
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasectioncontrib::get_informational](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasectioncontrib-get-informational)します。  
-  
 セクションには、コメント、または同様の情報が含まれるかどうかを示すフラグを取得します。  
   
 ## <a name="syntax"></a>構文  

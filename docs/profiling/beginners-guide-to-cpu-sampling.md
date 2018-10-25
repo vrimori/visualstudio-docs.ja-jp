@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 85d45255b3d92ad57fa57d347b7544a700fa22ae
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 42131bc1a596cf14a219f674227dbbadeb26c370
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34573181"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669411"
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>CPU サンプリングの初心者向けガイド
 Visual Studio プロファイリング ツールを使用して、アプリケーションでパフォーマンスの問題を分析することができます。 以下の手順では、**サンプリング データ**の使用方法を示します。
@@ -41,7 +41,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 ## <a name="create-and-run-a-performance-session"></a>パフォーマンス セッションの作成と実行  
  分析対象のデータを取得するには、まずパフォーマンス セッションを作成して、そのセッションを実行する必要があります。 **パフォーマンス ウィザード**を使用すると、その両方を実行できます。  
   
- Windows デスクトップ アプリまたは ASP.NET アプリをプロファイルしていない場合、他のプロファイリング ツールの 1 つを使用する必要があります。 [プロファイリング ツールの概要](../profiling/profiling-tools.md)に関するページをご覧ください。  
+ Windows デスクトップ アプリまたは ASP.NET アプリをプロファイルしていない場合、他のプロファイリング ツールの 1 つを使用する必要があります。 [プロファイリング ツールの概要](../profiling/profiling-feature-tour.md)に関するページをご覧ください。  
   
 #### <a name="to-create-and-run-a-performance-session"></a>パフォーマンス セッションを作成して実行するには  
   
@@ -129,4 +129,4 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
  [作業の開始](../profiling/getting-started-with-performance-tools.md)   
  [概要](../profiling/overviews-performance-tools.md)  
  [Visual Studio のプロファイル](../profiling/index.md)  
- [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)
+ [プロファイル ツールの概要](../profiling/profiling-feature-tour.md)

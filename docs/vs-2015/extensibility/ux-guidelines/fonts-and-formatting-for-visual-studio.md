@@ -1,7 +1,7 @@
 ---
 title: Visual Studio のフォントと書式 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: c3c3df69-83b4-4fd0-b5b1-e18c33f39376
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8f563bf607c0951d1ecaaeb8cc08ccdd64f5f0ad
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ca4fd95664d45c480557b8a00d503550327c60ed
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548977"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833032"
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Visual Studio のフォントと書式
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[フォントと Visual Studio の書式](https://docs.microsoft.com/visualstudio/extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio)します。  
-  
 ##  <a name="BKMK_TheEnvironmentFont"></a> 環境フォント  
  Visual Studio 内のすべてのフォントは、カスタマイズのユーザーに公開する必要があります。 これは、主に、**フォントおよび色**ページで、**ツール > オプション**ダイアログ。 フォントの設定の 3 つの主なカテゴリは次のとおりです。  
   
@@ -358,13 +356,13 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 ##### <a name="title-case"></a>大文字  
  タイトルの場合は、ほとんどまたはすべての語句内の単語の最初の文字が大文字で入力スタイルです。 Visual Studio など、多くの項目の先頭文字が大文字を使用します。  
   
--   **ツールヒント。** 例:「プレビュー選択した項目」  
+- **ツールヒント。** 例:「プレビュー選択した項目」  
   
--   **列ヘッダー。** 例:「システム応答」  
+- **列ヘッダー。** 例:「システム応答」  
   
--   **メニュー項目。** 例:「すべてを保存」  
+- **メニュー項目。** 例:「すべてを保存」  
   
- 大文字を使用する場合は、単語を大文字に変換する場合と小文字のままにする場合のガイドライン。  
+  大文字を使用する場合は、単語を大文字に変換する場合と小文字のままにする場合のガイドライン。  
   
 |大文字|コメントと例|  
 |---------------|---------------------------|  

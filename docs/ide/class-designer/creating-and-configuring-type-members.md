@@ -31,19 +31,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b5e60da7ea3058f192ad59dcc57a493115a751b
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 0b93fa4720a6f0de9e2d7a64eb2c820811610297
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957698"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49938800"
 ---
 # <a name="create-and-configure-type-members-in-class-designer"></a>クラス デザイナーでの型メンバーの作成および構成
 
 これらのメンバーをクラス ダイアグラムの型に追加して、メンバーを **[クラスの詳細]** ウィンドウで構成することができます。
 
 |**Type**|**含めることのできるメンバー**|
-|--------------|--------------------------------|
+|--------------| - |
 |クラス|メソッド、プロパティ (C# と Visual Basic の場合)、フィールド、イベント (C# と Visual Basic の場合)、コンストラクター (メソッド)、デストラクター (メソッド)、定数|
 |Enum|member|
 |Interface|メソッド、プロパティ、イベント (C# と Visual Basic の場合)|
@@ -58,7 +58,7 @@ ms.locfileid: "33957698"
 ## <a name="common-tasks"></a>一般的なタスク
 
 |タスク|関連する参照先|
-|----------|------------------------|
+|----------| - |
 |**作業の開始:** 型のメンバーを作成および構成する前に、**[クラスの詳細]** ウィンドウを開く必要があります。|- [[クラスの詳細] ウィンドウを開く](creating-and-configuring-type-members.md#open-the-class-details-window)<br />- [クラスの詳細の使用上の注意](creating-and-configuring-type-members.md#class-details-usage-notes)<br />- [読み取り専用の情報の表示](creating-and-configuring-type-members.md#display-of-read-only-information)<br />- [クラス ダイアグラムおよびクラスの詳細情報のウィンドウでのキーボードとマウスのショートカット](keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window.md)|
 |**型のメンバーの作成および変更:** **[クラスの詳細]** ウィンドウを使用して、新しいメンバーの作成、メンバーの変更、およびメソッドへのパラメーターの追加を行えます。|- [メンバーの作成](creating-and-configuring-type-members.md#create-members)<br />- [型のメンバーの変更](creating-and-configuring-type-members.md#modify-type-members)<br />- [メソッドへのパラメーターの追加](creating-and-configuring-type-members.md#add-parameters-to-methods)|
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::CanStop |Microsoft ドキュメント
+title: IDebugCanStopEvent2::CanStop |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a3e2507ba86e00434c12a67ba70cad51fa5850ce
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 545d1ea57c207429b7aeb999384b6d5ffbb6c723
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31108298"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861671"
 ---
 # <a name="idebugcanstopevent2canstop"></a>IDebugCanStopEvent2::CanStop
-現在のコードの場所で停止または同様の実行を続行するかどうか (DE) のデバッグ エンジンに通知します。  
+現在のコードの場所で停止またはだけ実行を続行するかどうか (DE) デバッグ エンジンに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,15 +41,15 @@ int CanStop (
   
 #### <a name="parameters"></a>パラメーター  
  `fCanStop`  
- [in]0 以外の値 (`TRUE`)、DE を中断するコードの現在の場所で; にある場合は 0 それ以外の場合 (`FALSE`)。  
+ [in]0 以外の値 (`TRUE`) 現在のコードの場所に、DE を停止する場合は、0 (`FALSE`)。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 通常、このイベントの受信側を呼び出します、 [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md)デが停止する理由を判断するメソッドを呼び出し、続いて、`IDebugCanStopEvent2::CanStop`適切な応答を持つメソッドです。  
+## <a name="remarks"></a>Remarks  
+ 通常、このイベントの受信側を呼び出します、 [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md)を停止する必要がある、DE、理由を特定のメソッドに呼び出し、`IDebugCanStopEvent2::CanStop`適切な応答を持つメソッド。  
   
- デを停止する場合は、停止の理由を説明するイベントを送信します。 送信、によって表されるユーザーか、信号が中断される 2 つのイベントには通常、 [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md)インターフェイス、およびによって表されるブレークポイント イベント、 [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)インターフェイスです。  
+ を、DE が停止した場合は、停止の理由を説明するイベントを送信します。 通常は、2 つのイベントによって表されるユーザーまたは信号区切り、送信される、 [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md)インターフェイス、およびブレークポイント イベントによって表される、 [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)インターフェイス。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)   

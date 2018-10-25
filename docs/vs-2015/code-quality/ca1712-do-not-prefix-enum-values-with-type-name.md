@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1712: enum 値を型名のプレフィックスにしません |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 9283c35dacc0d3f3779a167eeb095f90431d7a4c
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: eba81742eefd4e5a89e98417c8530f3146133916
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589752"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49916726"
 ---
 # <a name="ca1712-do-not-prefix-enum-values-with-type-name"></a>CA1712: enum 値を型名のプレフィックスにしません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1712: enum 値を型名のプレフィックスにしません](https://docs.microsoft.com/visualstudio/code-quality/ca1712-do-not-prefix-enum-values-with-type-name)します。
 
 |||
 |-|-|

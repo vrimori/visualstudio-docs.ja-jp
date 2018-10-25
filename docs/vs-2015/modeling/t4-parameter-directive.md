@@ -1,7 +1,7 @@
 ---
 title: T4 パラメーター ディレクティブ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 00403f562771498a86c24e8433769ab7a44ec890
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 87e493667af1626cd97e575ddb614e7fd12c21d3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548136"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49294555"
 ---
 # <a name="t4-parameter-directive"></a>T4 パラメーター ディレクティブ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[T4 パラメーター ディレクティブ](https://docs.microsoft.com/visualstudio/modeling/t4-parameter-directive)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]テキスト テンプレートで、`parameter`ディレクティブがテンプレート コードの外部のコンテキストから渡された値から初期化されるプロパティを宣言します。 テキスト変換を呼び出すコードを記述する場合は、これらの値を設定できます。  
   
 ## <a name="using-the-parameter-directive"></a>パラメーター ディレクティブの使用  

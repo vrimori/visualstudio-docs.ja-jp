@@ -1,7 +1,7 @@
 ---
 title: Entity Data Model ツールでは、Visual Studio |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 487b3ecd6f9b7fbdc7065e8d69e9e64e939f565e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8a3fffb36d7070701b99382c320e3a2d23b9a2b8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547950"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893404"
 ---
 # <a name="entity-data-model-tools-in-visual-studio"></a>Visual Studio での entity Data Model ツール
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio での Entity Data Model ツール](https://docs.microsoft.com/visualstudio/data-tools/entity-data-model-tools-in-visual-studio)します。  
-  
   
 Entity Framework とは、.NET 開発者は、ドメイン固有オブジェクトを使用してリレーショナル データを操作できるオブジェクト リレーショナル マッピング テクノロジです。 開発者が通常記述しなければならないデータアクセス コードの多くが不要になります。 Entity Framework は、.NET アプリケーションの新しいテクノロジをモデリング推奨オブジェクト リレーショナル マッピング (ORM です)。  
   
@@ -40,20 +38,20 @@ Entity Framework とは、.NET 開発者は、ドメイン固有オブジェク�
   
  Visual Studio 2015 での Entity Data Model ツールを構成する特定のツールを次に示します。  
   
--   使用することができます、 [!INCLUDE[vstecado](../includes/vstecado-md.md)]  **[!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]デザイナー** (**エンティティ デザイナー**) を視覚的に作成し、エンティティ、アソシエーション、マッピング、および継承関係を変更します。 **エンティティ デザイナー**も生成[!INCLUDE[TLA#tla_cshrp](../includes/tlasharptla-cshrp-md.md)]または[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]オブジェクト レイヤー コード。  
+- 使用することができます、 [!INCLUDE[vstecado](../includes/vstecado-md.md)]  **[!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]デザイナー** (**エンティティ デザイナー**) を視覚的に作成し、エンティティ、アソシエーション、マッピング、および継承関係を変更します。 **エンティティ デザイナー**も生成[!INCLUDE[TLA#tla_cshrp](../includes/tlasharptla-cshrp-md.md)]または[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]オブジェクト レイヤー コード。  
   
--   使用することができます、  **[!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]ウィザード**を既存のデータベースから概念モデルを生成し、データベース接続情報をアプリケーションに追加します。  
+- 使用することができます、  **[!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]ウィザード**を既存のデータベースから概念モデルを生成し、データベース接続情報をアプリケーションに追加します。  
   
--   使用することができます、**データベース生成ウィザード**最初に概念モデルを作成し、モデルをサポートするデータベースを作成します。  
+- 使用することができます、**データベース生成ウィザード**最初に概念モデルを作成し、モデルをサポートするデータベースを作成します。  
   
--   使用することができます、**モデルの更新ウィザード**を基になるデータベースの変更を行ったときに、概念モデル、ストレージ モデル、およびマッピングを更新します。  
+- 使用することができます、**モデルの更新ウィザード**を基になるデータベースの変更を行ったときに、概念モデル、ストレージ モデル、およびマッピングを更新します。  
   
-    > [!NOTE]
-    >  Visual Studio 2010 以降で[!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]ツールがサポートされていない[!INCLUDE[ss2k](../includes/ss2k-md.md)]します。  
+  > [!NOTE]
+  >  Visual Studio 2010 以降で[!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]ツールがサポートされていない[!INCLUDE[ss2k](../includes/ss2k-md.md)]します。  
   
- ツールでは、生成または .edmx ファイルを変更します。 このファイルには、概念モデル、ストレージ モデル、およびそれらの間のマッピングについて説明する情報が含まれています。 詳細については、次を参照してください。 [EDMX](https://msdn.microsoft.com/data/jj650889.aspx)します。  
+  ツールでは、生成または .edmx ファイルを変更します。 このファイルには、概念モデル、ストレージ モデル、およびそれらの間のマッピングについて説明する情報が含まれています。 詳細については、次を参照してください。 [EDMX](https://msdn.microsoft.com/data/jj650889.aspx)します。  
   
- Entity Framework Power Tools では、エンティティ データ モデルを使用するアプリケーションを構築するのに役立ちます。 ツールは、概念モデルを生成、既存のモデルの検証、概念モデルに基づくオブジェクト クラスが含まれているソース コード ファイルの生成、およびモデルを生成するビューを含むソース コード ファイルを生成することができます。 詳細については、次を参照してください。 [Pre-Generated マッピング ビュー](https://msdn.microsoft.com/data/dn469601.aspx)します。  
+  Entity Framework Power Tools では、エンティティ データ モデルを使用するアプリケーションを構築するのに役立ちます。 ツールは、概念モデルを生成、既存のモデルの検証、概念モデルに基づくオブジェクト クラスが含まれているソース コード ファイルの生成、およびモデルを生成するビューを含むソース コード ファイルを生成することができます。 詳細については、次を参照してください。 [Pre-Generated マッピング ビュー](https://msdn.microsoft.com/data/dn469601.aspx)します。  
   
 ## <a name="related-topics"></a>関連トピック  
   

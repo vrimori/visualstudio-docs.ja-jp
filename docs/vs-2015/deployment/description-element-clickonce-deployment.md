@@ -1,7 +1,7 @@
 ---
 title: '&lt;説明&gt;要素 (ClickOnce 配置) |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 473ebf814ab65c34ee99cab0cf2cc239e0d013eb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8ddba6356ab051dbad27e55eefd53a517b47a21a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533511"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49224771"
 ---
 # <a name="ltdescriptiongt-element-clickonce-deployment"></a>&lt;説明&gt;要素 (ClickOnce 配置)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[&lt;説明&gt;要素 (ClickOnce 配置)](https://docs.microsoft.com/visualstudio/deployment/description-element-clickonce-deployment)します。  
-  
 シェル プレゼンスの作成とコントロール パネルの**プログラム追加と削除**の項目に使用されるアプリケーション情報を識別します。  
   
 ## <a name="syntax"></a>構文  

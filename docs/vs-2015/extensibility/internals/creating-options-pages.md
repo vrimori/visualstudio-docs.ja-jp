@@ -1,7 +1,7 @@
 ---
 title: オプション ページの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 1bf11fec-dece-4943-8053-6de1483c43eb
 caps.latest.revision: 30
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ff543e0b75b4bd1ca09068f6de7b62248c515158
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 555234ae1c35c496b1fb5b1361efec0100479a35
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545789"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893692"
 ---
 # <a name="creating-options-pages"></a>オプション ページの作成
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[オプション ページの作成](https://docs.microsoft.com/visualstudio/extensibility/internals/creating-options-pages)です。  
-  
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Managed package framework から派生したクラス<xref:Microsoft.VisualStudio.Shell.DialogPage>拡張、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]を追加して IDE**オプション**ページの下で、**ツール**メニュー。  
   
  実装するオブジェクトを指定した**ツール オプション**ページは、特定の Vspackage に関連付け、<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>オブジェクト。  
@@ -53,17 +51,17 @@ ms.locfileid: "47545789"
 ## <a name="implementing-dialogpage-class"></a>DialogPage クラスを実装します。  
  VSPackage の実装を提供するオブジェクト、 <xref:Microsoft.VisualStudio.Shell.DialogPage>-派生型は次の継承された機能を利用できます。  
   
--   既定のユーザー インターフェイス ウィンドウです。  
+- 既定のユーザー インターフェイス ウィンドウです。  
   
--   既定の永続化メカニズムの使用可能な場合<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>、クラスに適用される場合は、<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute.SupportsProfiles%2A>プロパティに設定されて`true`の<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>クラスに適用されています。  
+- 既定の永続化メカニズムの使用可能な場合<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>、クラスに適用される場合は、<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute.SupportsProfiles%2A>プロパティに設定されて`true`の<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>クラスに適用されています。  
   
--   オートメーションをサポートします。  
+- オートメーションをサポートします。  
   
- 実装するオブジェクトの最小要件を**ツール オプション**ページを使用して<xref:Microsoft.VisualStudio.Shell.DialogPage>パブリック プロパティを追加します。  
+  実装するオブジェクトの最小要件を**ツール オプション**ページを使用して<xref:Microsoft.VisualStudio.Shell.DialogPage>パブリック プロパティを追加します。  
   
- クラスとして正しく登録されている場合、**ツール オプション**プロバイダーは、そのパブリック プロパティが 利用可能なページ、**オプション**のセクション、**ツール**のフォームのメニューで、プロパティ グリッドです。  
+  クラスとして正しく登録されている場合、**ツール オプション**プロバイダーは、そのパブリック プロパティが 利用可能なページ、**オプション**のセクション、**ツール**のフォームのメニューで、プロパティ グリッドです。  
   
- これらすべての既定の機能を無効にできます。 たとえばより高度なユーザーを作成するインターフェイス必要がありますのみの既定の実装をオーバーライドする<xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A>します。  
+  これらすべての既定の機能を無効にできます。 たとえばより高度なユーザーを作成するインターフェイス必要がありますのみの既定の実装をオーバーライドする<xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A>します。  
   
 ## <a name="example"></a>例  
  オプション ページの単純な"hello world"実装は、次に示します。 Visual Studio パッケージ テンプレートによって作成された既定のプロジェクトに次のコードを追加、**メニュー コマンド**オプションを選択したはオプション ページの機能に適切に紹介します。  

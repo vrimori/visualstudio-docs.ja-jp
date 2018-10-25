@@ -1,7 +1,7 @@
 ---
 title: IDebugEngine2::CreatePendingBreakpoint |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 92e85b90-a931-48d9-89a7-a6edcb83ae5a
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a29d317ac28084cce3ebe34d85ad56e671f1b2fd
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 13a134ce13724aa3f72c79d2d02ae3ae47cc845c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548039"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49931977"
 ---
 # <a name="idebugengine2creatependingbreakpoint"></a>IDebugEngine2::CreatePendingBreakpoint
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugEngine2::CreatePendingBreakpoint](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugengine2-creatependingbreakpoint)します。  
-  
 デバッグ エンジン (DE) には、保留中のブレークポイントを作成します。  
   
 ## <a name="syntax"></a>構文  

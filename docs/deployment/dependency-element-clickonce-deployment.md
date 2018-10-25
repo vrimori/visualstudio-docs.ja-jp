@@ -27,20 +27,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ee76dbe8579ca37c538985bbabf953917b5fd9c8
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 33e210b0787c3325a009bc54505812f22c44da84
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078681"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49916895"
 ---
 # <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;依存関係&gt;要素 (ClickOnce 配置)
 をインストールするアプリケーションのバージョンとアプリケーション マニフェストの場所を識別します。  
-  
+
 ## <a name="syntax"></a>構文  
-  
+
 ```xml  
-  
+
       <dependency>   
    <dependentAssembly  
       preRequisite  
@@ -67,30 +67,31 @@ ms.locfileid: "39078681"
          <dsig:DigestValue>  
          </dsig:DigestValue>  
       </hash>  
-  
+
    </dependentAssembly>   
 </dependency>  
 ```  
-  
+
 ## <a name="elements-and-attributes"></a>要素と属性  
  `dependency`要素が必要です。 属性ではありません。 配置マニフェストでは複数`dependency`要素。  
-  
+
  `dependency`要素は通常内に含まれるアセンブリでメイン アプリケーションの依存関係を表現する[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション。 Main.exe アプリケーションでは、DotNetAssembly.dll という名前のアセンブリを消費する場合、依存関係セクションではそのアセンブリを表示する必要があります。 依存関係、ただし、表すことも他の種類など、共通言語ランタイムの特定のバージョンに依存関係の依存関係のグローバル アセンブリ キャッシュ (GAC) 内のアセンブリまたは COM オブジェクト。 ノータッチ デプロイメントのテクノロジである[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]防ぐことはできません、依存関係が、この種の開始のダウンロードとインストールは、アプリケーションの実行、指定した依存関係の 1 つ以上が存在しない場合。  
-  
+
 ## <a name="dependentassembly"></a>dependentAssembly  
  必須。 この要素が含まれています、`assemblyIdentity`要素。 次の表は、属性、`dependentAssembly`をサポートしています。  
-  
-|属性|説明|  
-|---------------|-----------------|  
-|`preRequisite`|任意。 このアセンブリが GAC に既に存在する必要があるを指定します。 有効値は `true` または `false` です。 場合`true`を実行するアプリケーションが失敗した、指定したアセンブリが GAC に存在しません。|  
-|`visible`|任意。 依存関係を含む、最上位のアプリケーション id を識別します。 によって内部的に使用される[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション記憶域とアクティブ化を管理します。|  
-|`dependencyType`|必須。 この依存関係とアプリケーション間のリレーションシップ。 次の値を指定できます。<br /><br /> -   `install`. コンポーネントは、現在のアプリケーションから別のインストールを表します。<br />-   `preRequisite`. コンポーネントは、現在のアプリケーションで必要です。|  
-|`codebase`|任意。 アプリケーション マニフェストの完全パスです。|  
-|`size`|任意。 (バイト単位)、アプリケーション マニフェストのサイズ。|  
-  
+
+
+| 属性 | 説明 |
+|------------------| - |
+| `preRequisite` | 任意。 このアセンブリが GAC に既に存在する必要があるを指定します。 有効値は `true` または `false` です。 場合`true`を実行するアプリケーションが失敗した、指定したアセンブリが GAC に存在しません。 |
+| `visible` | 任意。 依存関係を含む、最上位のアプリケーション id を識別します。 によって内部的に使用される[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション記憶域とアクティブ化を管理します。 |
+| `dependencyType` | 必須。 この依存関係とアプリケーション間のリレーションシップ。 次の値を指定できます。<br /><br /> -   `install`。 コンポーネントは、現在のアプリケーションから別のインストールを表します。<br />-   `preRequisite`。 コンポーネントは、現在のアプリケーションで必要です。 |
+| `codebase` | 任意。 アプリケーション マニフェストの完全パスです。 |
+| `size` | 任意。 (バイト単位)、アプリケーション マニフェストのサイズ。 |
+
 ## <a name="assemblyidentity"></a>assemblyIdentity  
  必須。 この要素は `dependentAssembly` 要素の子です。 コンテンツ`assemblyIdentity`で説明されているものと同じである必要があります、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 次の表の属性を示します、`assemblyIdentity`要素。  
-  
+
 |属性|説明|  
 |---------------|-----------------|  
 |`Name`|必須。 アプリケーションの名前を識別します。|  
@@ -99,38 +100,40 @@ ms.locfileid: "39078681"
 |`processorArchitecture`|必須。 マイクロプロセッサを指定します。 有効な値は`x86`32 ビット Windows 用と`IA64`の 64 ビット Windows です。|  
 |`Language`|任意。 アセンブリの 2 部構成の言語コードを識別します。 たとえば、EN-US、英語 (米国) を意味します。 既定値は `neutral` です。 この要素は、`asmv2`名前空間。|  
 |`type`|任意。 Windows によって並列との互換性が旧バージョンとテクノロジをインストールします。 唯一の許容値は`win32`します。|  
-  
+
 ## <a name="hash"></a>hash  
  `hash`要素のオプションの子では、`file`要素。 `hash`要素に属性がありません。  
-  
+
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] デプロイ後に変更されたファイルがないことを確認するのにセキュリティ チェックとして、アプリケーションでのすべてのファイルのアルゴリズム、ハッシュを使用します。 場合、`hash`要素が含まれていない、このチェックは実行されません。 そのため、省略すると、`hash`要素はお勧めしません。  
-  
+
 ## <a name="dsigtransforms"></a>dsig:Transforms  
  `dsig:Transforms`要素の必須の子では、`hash`要素。 `dsig:Transforms`要素に属性がありません。  
-  
+
 ## <a name="dsigtransform"></a>dsig:Transform  
  `dsig:Transform`要素の必須の子では、`dsig:Transforms`要素。 次の表の属性を示します、`dsig:Transform`要素。  
-  
-|属性|説明|  
-|---------------|-----------------|  
-|`Algorithm`|このファイルのダイジェストを計算するために使用するアルゴリズム。 現在、唯一の値で使用される[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]は`urn:schemas-microsoft-com:HashTransforms.Identity`します。|  
-  
+
+
+| 属性 | 説明 |
+|-------------| - |
+| `Algorithm` | このファイルのダイジェストを計算するために使用するアルゴリズム。 現在、唯一の値で使用される[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]は`urn:schemas-microsoft-com:HashTransforms.Identity`します。 |
+
 ## <a name="dsigdigestmethod"></a>dsig:DigestMethod  
  `dsig:DigestMethod`要素の必須の子では、`hash`要素。 次の表の属性を示します、`dsig:DigestMethod`要素。  
-  
-|属性|説明|  
-|---------------|-----------------|  
-|`Algorithm`|このファイルのダイジェストを計算するために使用するアルゴリズム。 現在、唯一の値で使用される[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]は`http://www.w3.org/2000/09/xmldsig#sha1`します。|  
-  
+
+
+| 属性 | 説明 |
+|-------------| - |
+| `Algorithm` | このファイルのダイジェストを計算するために使用するアルゴリズム。 現在、唯一の値で使用される[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]は`http://www.w3.org/2000/09/xmldsig#sha1`します。 |
+
 ## <a name="dsigdigestvalue"></a>目的  
  `dsig:DigestValue`要素の必須の子では、`hash`要素。 `dsig:DigestValue`要素に属性がありません。 テキスト値は、指定したファイルの計算されたハッシュです。  
-  
+
 ## <a name="remarks"></a>Remarks  
  配置マニフェストは通常、1 つをある`assemblyIdentity`名前と、アプリケーション マニフェストのバージョンを識別する要素。  
-  
+
 ## <a name="example"></a>例  
  次のコード例は、`dependency`内の要素を[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置マニフェスト。  
-  
+
 ```xml  
 <!-- Identify the assembly dependencies -->  
 <dependency>  
@@ -146,10 +149,10 @@ ms.locfileid: "39078681"
   </dependentAssembly>  
 </dependency>  
 ```  
-  
+
 ## <a name="example"></a>例  
  次のコード例では、GAC に既にインストールされているアセンブリの依存関係を指定します。  
-  
+
 ```xml  
 <dependency>  
   <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">  
@@ -157,10 +160,10 @@ ms.locfileid: "39078681"
   </dependentAssembly>  
 </dependency>  
 ```  
-  
+
 ## <a name="example"></a>例  
  次のコード例では、共通言語ランタイムの特定のバージョンに依存関係を指定します。  
-  
+
 ```xml  
 <dependency>  
   <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">  
@@ -168,10 +171,10 @@ ms.locfileid: "39078681"
   </dependentAssembly>  
 </dependency>  
 ```  
-  
+
 ## <a name="example"></a>例  
  次のコード例では、オペレーティング システムの依存関係を指定します。  
-  
+
 ```xml  
 <dependency>  
    <dependentOS supportUrl="http://www.microsoft.com" description="Microsoft Windows Operating System">  
@@ -181,7 +184,7 @@ ms.locfileid: "39078681"
    </dependentOS>  
 </dependency>  
 ```  
-  
+
 ## <a name="see-also"></a>関連項目  
  [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)   
  [\<依存関係 > 要素](../deployment/dependency-element-clickonce-application.md)

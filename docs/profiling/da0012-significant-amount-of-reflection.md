@@ -15,14 +15,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c5a5982fd194f86d2cfe2b63a564c0ce1ce90f8a
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 191edf9cc6a3dc9ff177b075e2967cb328afc9c5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34749828"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893924"
 ---
 # <a name="da0012-significant-amount-of-reflection"></a>DA0012: リフレクションが頻繁に実行されています
+
 |||  
 |-|-|  
 |規則 ID|DA0012|  
@@ -30,14 +31,14 @@ ms.locfileid: "34749828"
 |プロファイル方法|サンプリング|  
 |メッセージ|リフレクションを使いすぎている可能性があります。 これは負荷が高い操作です。|  
 |規則の種類|警告|  
-  
+
 ## <a name="cause"></a>原因  
  InvokeMember および GetMember などの System.Reflection メソッドまたは MemberInvoke などの Type メソッドへの呼び出しが、プロファイリング データの大きな割合を占めています。 可能な場合は、事前バインディングを使用するこれらのメソッドを、依存アセンブリのメソッドに置き換えることを検討してください。  
-  
+
 ## <a name="rule-description"></a>規則の説明  
  リフレクションは、.NET Framework の柔軟な機能です。この機能は、依存ランタイム アセンブリに対してアプリケーションの遅延バインディングを実行したり、実行時に新しい型を作成して動的に実行する場合に使用できます。 ただし、この手法は頻繁に使用したり短いループで呼び出したりすると、パフォーマンスが低下する可能性があります。  
-  
- 詳細については、MSDN の Microsoft Patterns and Practices (マイクロソフトのパターンと手法) ライブラリの「.NET アプリケーションのパフォーマンスとスケーラビリティの向上」の第 5 章「マネージ コード パフォーマンスの向上」の「[リフレクションと遅延バインディング](http://go.microsoft.com/fwlink/?LinkId=177826)」を参照してください。  
-  
+
+ 詳細については、MSDN の Microsoft Patterns and Practices (マイクロソフトのパターンと手法) ライブラリの「.NET アプリケーションのパフォーマンスとスケーラビリティの向上」の第 5 章「マネージド コード パフォーマンスの向上」の「[リフレクションと遅延バインディング](http://go.microsoft.com/fwlink/?LinkId=177826)」を参照してください。  
+
 ## <a name="how-to-investigate-a-warning"></a>警告の調査方法  
  [エラー一覧] ウィンドウに表示されたメッセージをダブルクリックして、プロファイル データの[関数の詳細ビュー](../profiling/function-details-view.md)に移動します。 System.Type メソッドまたは System.Reflection メソッドの呼び出し関数を調べ、.NET リフレクション API を最も頻繁に使用するプログラムのセクションを見つけます。 メタデータを返すメソッドは使用しないでください。 アプリケーションのパフォーマンスが重大である場合、状況によっては遅延バインディングの使用と、実行時の動的な型の作成を行わないようにする必要があります。

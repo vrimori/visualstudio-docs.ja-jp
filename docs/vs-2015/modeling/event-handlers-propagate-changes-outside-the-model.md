@@ -1,7 +1,7 @@
 ---
 title: イベント ハンドラーには、モデルの外部で変更が反映されるまで |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,41 +15,39 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 93b971c80cdf0c13567364d507f72027d62faae9
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 7bfddc0903c520469833a0f160444202edf07c32
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592886"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823698"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>イベント ハンドラーによって変更内容がモデル外に反映される
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[イベント ハンドラー反映されるまで変更 Outside the モデル](https://docs.microsoft.com/visualstudio/modeling/event-handlers-propagate-changes-outside-the-model)します。  
-  
 Visualization and Modeling SDK では、ストア以外の変数、ファイル、その他のストア、またはその他のモデルなど、ストアの外部リソースへの変更を反映するストア イベント ハンドラーを定義できます[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]拡張機能。 ストア イベント ハンドラーは、トリガーを起動するイベントが発生したトランザクションの終了後に実行されます。 元に戻す/やり直し操作でも実行されます。 そのため、ストアの規則とは異なりストア イベントは、ストア外の値を更新するため、最も役に立つします。 クラスにリッスンするように .NET のイベントとは異なりストア イベント ハンドラーが登録されている: インスタンスごとに個別のハンドラーを登録する必要はありません。 変更を処理するさまざまな方法を選択する方法の詳細については、次を参照してください。[への対応および変更の反映](../modeling/responding-to-and-propagating-changes.md)します。  
   
  グラフィカル サーフェイスおよびその他のユーザー インターフェイス コントロールは、ストア イベントで処理できる外部のリソースの例を示します。  
   
 ### <a name="to-define-a-store-event"></a>ストア イベントを定義するには  
   
-1.  監視するイベントの種類を選択します。 完全な一覧については、プロパティを確認<xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>します。 各プロパティは、イベントの種類に対応します。 最もイベントの種類は頻繁に使用します。  
+1. 監視するイベントの種類を選択します。 完全な一覧については、プロパティを確認<xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>します。 各プロパティは、イベントの種類に対応します。 最もイベントの種類は頻繁に使用します。  
   
-    -   `ElementAdded` – モデル要素のときにトリガーされると、リンクのリレーションシップ、図形またはコネクタが作成されます。  
+   -   `ElementAdded` – モデル要素のときにトリガーされると、リンクのリレーションシップ、図形またはコネクタが作成されます。  
   
-    -   ElementPropertyChanged – がトリガーされたときの値を`Normal`ドメイン プロパティを変更します。 イベントは、新旧の値が等しくない場合にのみトリガーされます。 イベントは、計算およびカスタム格納プロパティに適用できません。  
+   -   ElementPropertyChanged – がトリガーされたときの値を`Normal`ドメイン プロパティを変更します。 イベントは、新旧の値が等しくない場合にのみトリガーされます。 イベントは、計算およびカスタム格納プロパティに適用できません。  
   
-         これは、リレーションシップ リンクに対応するロールのプロパティに適用できません。 代わりに、`ElementAdded`ドメインの関係を監視します。  
+        これは、リレーションシップ リンクに対応するロールのプロパティに適用できません。 代わりに、`ElementAdded`ドメインの関係を監視します。  
   
-    -   `ElementDeleted` – モデル要素の後にトリガーされると、リレーションシップ、図形またはコネクタが削除されました。 要素のプロパティ値に引き続きアクセスできますが、その他の要素へのリレーションシップはありません。  
+   -   `ElementDeleted` – モデル要素の後にトリガーされると、リレーションシップ、図形またはコネクタが削除されました。 要素のプロパティ値に引き続きアクセスできますが、その他の要素へのリレーションシップはありません。  
   
-2.  部分クラス定義を追加_YourDsl_**DocData**で別のコード ファイルで、 **DslPackage**プロジェクト。  
+2. 部分クラス定義を追加_YourDsl_**DocData**で別のコード ファイルで、 **DslPackage**プロジェクト。  
   
-3.  次の例のように、メソッドとして、イベントのコードを記述します。 できます`static`にアクセスする場合を除き、`DocData`します。  
+3. 次の例のように、メソッドとして、イベントのコードを記述します。 できます`static`にアクセスする場合を除き、`DocData`します。  
   
-4.  オーバーライド`OnDocumentLoaded()`ハンドラーを登録します。 1 つ以上のハンドラーがある場合は、すべて同じ場所に登録できます。  
+4. オーバーライド`OnDocumentLoaded()`ハンドラーを登録します。 1 つ以上のハンドラーがある場合は、すべて同じ場所に登録できます。  
   
- 登録コードの場所は重要ではありません。 `DocView.LoadView()` 代替の場所です。  
+   登録コードの場所は重要ではありません。 `DocView.LoadView()` 代替の場所です。  
   
 ```  
 using System;  

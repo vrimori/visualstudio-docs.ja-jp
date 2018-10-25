@@ -13,25 +13,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 87087a2087591b01170b82c0335e4bbffc579cc2
-ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
+ms.openlocfilehash: 369a2aa92c47c4db7b1036097ffb49f6d8de8a14
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39252454"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49895419"
 ---
 # <a name="send-events"></a>イベントを送信します。
 デバッガーとデバッグ エンジン (DE) 間の通信メカニズムは、DCOM に基づいてイベント モデル。 イベントは、COM オブジェクトとして送信され、各イベントを指定するパラメーターには。  
   
--   この DE イベントと呼ばれます。  
+- この DE イベントと呼ばれます。  
   
--   変更点の説明。  
+- 変更点の説明。  
   
--   プロセス、プログラム、およびイベントの発生場所のコンテキストを識別するスレッドの情報。 プロセスは、ドイツから送信されたイベントは送信されません。  
+- プロセス、プログラム、およびイベントの発生場所のコンテキストを識別するスレッドの情報。 プロセスは、ドイツから送信されたイベントは送信されません。  
   
--   イベントが同期または非同期であるかどうかを示すイベントの種類。  
+- イベントが同期または非同期であるかどうかを示すイベントの種類。  
   
- メソッドを使用してすべてのデバッグ イベントが送信される[IDebugEventCallback2::Event](../../extensibility/debugger/reference/idebugeventcallback2-event.md)します。  
+  メソッドを使用してすべてのデバッグ イベントが送信される[IDebugEventCallback2::Event](../../extensibility/debugger/reference/idebugeventcallback2-event.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [イベント ソース](../../extensibility/debugger/event-sources-visual-studio-sdk.md)  

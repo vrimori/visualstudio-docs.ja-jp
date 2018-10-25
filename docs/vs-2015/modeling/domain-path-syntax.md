@@ -1,7 +1,7 @@
 ---
 title: ドメイン パス構文 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 27
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 6df1f73614a8df59ee0bff8fb76610382d58b4e4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d4e98715bae8869619e8d9f2852c810153984777
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537808"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49254775"
 ---
 # <a name="domain-path-syntax"></a>ドメイン パス構文
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ドメイン パス構文](https://docs.microsoft.com/visualstudio/modeling/domain-path-syntax)します。  
-  
 DSL 定義は XPath に似た構文を使用して、モデル内の特定の要素を見つけます。  
   
  通常、この構文を直接扱う必要はありません。 DSL 詳細またはプロパティ ウィンドウで、下向き矢印をクリックし、パス エディターを使用できます。 ただし、パスがこの形式でフィールドに表示されるのは、エディターを使用した後です。  

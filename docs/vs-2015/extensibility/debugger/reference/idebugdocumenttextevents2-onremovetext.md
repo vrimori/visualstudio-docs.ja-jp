@@ -1,7 +1,7 @@
 ---
 title: IDebugDocumentTextEvents2::onRemoveText |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 1ebeabb2-52a1-4ccc-83cd-9ae7c3541783
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7d99abdbe9eaa3ebd303eee9ade0387a479b5c7e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b7a00ccf948d7e0359b93a81e4196da129b0315f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536158"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49879806"
 ---
 # <a name="idebugdocumenttextevents2onremovetext"></a>IDebugDocumentTextEvents2::onRemoveText
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugDocumentTextEvents2::onRemoveText](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugdocumenttextevents2-onremovetext)します。  
-  
 テキストがドキュメントから削除されているパッケージのデバッグに通知します。  
   
 ## <a name="syntax"></a>構文  

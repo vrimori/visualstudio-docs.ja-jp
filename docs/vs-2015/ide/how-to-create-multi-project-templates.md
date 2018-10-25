@@ -1,7 +1,7 @@
 ---
 title: '方法 : 複数プロジェクトのテンプレートを作成する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,71 +18,69 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ce7147df5b15dd6aaa639c27b2d2ffbc0b3d3152
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: eee52a4f77c7d3a07b237f01877c5cba30e53900
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535003"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950850"
 ---
 # <a name="how-to-create-multi-project-templates"></a>方法 : 複数プロジェクトのテンプレートを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 複数プロジェクトのテンプレートの作成](https://docs.microsoft.com/visualstudio/ide/how-to-create-multi-project-templates)です。  
-  
 複数プロジェクトのテンプレートは、2 つ以上のプロジェクトのコンテナーとして機能します。 複数プロジェクトのテンプレートに基づくプロジェクトが **[新しいプロジェクト]** ダイアログ ボックスで作成されると、テンプレート内のすべてのプロジェクトがソリューションに追加されます。  
   
  複数プロジェクトのテンプレートは、次の項目を含み、.zip ファイルに圧縮する必要があります。  
   
--   複数プロジェクトのテンプレート全体のルート .vstemplate ファイル。 このルート .vstemplate ファイルは、**[新しいプロジェクト]** ダイアログ ボックスに表示されるメタデータを含み、このテンプレート内のプロジェクトの .vstemplate ファイルの場所を指定します。 このファイルは、.zip ファイルのルートに配置する必要があります。  
+- 複数プロジェクトのテンプレート全体のルート .vstemplate ファイル。 このルート .vstemplate ファイルは、**[新しいプロジェクト]** ダイアログ ボックスに表示されるメタデータを含み、このテンプレート内のプロジェクトの .vstemplate ファイルの場所を指定します。 このファイルは、.zip ファイルのルートに配置する必要があります。  
   
--   完全なプロジェクト テンプレートに必要なファイルを含む 1 つ以上のフォルダー。 これにはプロジェクトのすべてのコード ファイルが含まれ、プロジェクトの .vstemplate ファイルも含まれます。  
+- 完全なプロジェクト テンプレートに必要なファイルを含む 1 つ以上のフォルダー。 これにはプロジェクトのすべてのコード ファイルが含まれ、プロジェクトの .vstemplate ファイルも含まれます。  
   
- たとえば、2 つのプロジェクトを含む複数プロジェクトのテンプレート .zip ファイルは、次のファイルとディレクトリを持つことが考えられます。  
+  たとえば、2 つのプロジェクトを含む複数プロジェクトのテンプレート .zip ファイルは、次のファイルとディレクトリを持つことが考えられます。  
   
- MultiProjectTemplate.vstemplate  
+  MultiProjectTemplate.vstemplate  
   
- \Project1\Project1.vstemplate  
+  \Project1\Project1.vstemplate  
   
- \Project1\Project1.vbproj  
+  \Project1\Project1.vbproj  
   
- \Project1\Class.vb  
+  \Project1\Class.vb  
   
- \Project2\Project2.vstemplate  
+  \Project2\Project2.vstemplate  
   
- \Project2\Project2.vbproj  
+  \Project2\Project2.vbproj  
   
- \Project2\Class.vb  
+  \Project2\Class.vb  
   
- 複数プロジェクトのテンプレートのルート .vstemplate ファイルは、単一プロジェクトのテンプレートとは次の点が異なります。  
+  複数プロジェクトのテンプレートのルート .vstemplate ファイルは、単一プロジェクトのテンプレートとは次の点が異なります。  
   
--   `VSTemplate` 要素の `Type` 属性には値 `ProjectGroup` が含まれます。 例えば:  
+- `VSTemplate` 要素の `Type` 属性には値 `ProjectGroup` が含まれます。 例えば:  
   
-    ```  
-    <VSTemplate Version="2.0.0" Type="ProjectGroup"  
-        xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  
-    ```  
+  ```  
+  <VSTemplate Version="2.0.0" Type="ProjectGroup"  
+      xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  
+  ```  
   
--   `TemplateContent` 要素には、含まれるプロジェクトの .vstemplate ファイルへのパスを定義する 1 つ以上の `ProjectTemplateLink` 要素を持つ `ProjectCollection` 要素が含まれます。 例えば:  
+- `TemplateContent` 要素には、含まれるプロジェクトの .vstemplate ファイルへのパスを定義する 1 つ以上の `ProjectTemplateLink` 要素を持つ `ProjectCollection` 要素が含まれます。 例えば:  
   
-    ```  
-    <TemplateContent>  
-        <ProjectCollection>  
-            <ProjectTemplateLink>  
-                Project1\Project1.vstemplate  
-            </ProjectTemplateLink>  
-            <ProjectTemplateLink>  
-                Project2\Project2.vstemplate  
-            </ProjectTemplateLink>  
-        </ProjectCollection>  
-    </TemplateContent>  
-    ```  
+  ```  
+  <TemplateContent>  
+      <ProjectCollection>  
+          <ProjectTemplateLink>  
+              Project1\Project1.vstemplate  
+          </ProjectTemplateLink>  
+          <ProjectTemplateLink>  
+              Project2\Project2.vstemplate  
+          </ProjectTemplateLink>  
+      </ProjectCollection>  
+  </TemplateContent>  
+  ```  
   
- 複数プロジェクトのテンプレートは、標準テンプレートとは動作も異なります。 複数プロジェクトのテンプレートには、次の固有の特性があります。  
+  複数プロジェクトのテンプレートは、標準テンプレートとは動作も異なります。 複数プロジェクトのテンプレートには、次の固有の特性があります。  
   
--   複数プロジェクトのテンプレートの個別のプロジェクトには、**[新しいプロジェクト]** ダイアログ ボックスで名前を割り当てることができません。 代わりに、`ProjectTemplateLink` 要素の `ProjectName` 属性を使用して、各プロジェクトの名前を指定します。 詳細については、次のセクションの最初の例を参照してください。  
+- 複数プロジェクトのテンプレートの個別のプロジェクトには、**[新しいプロジェクト]** ダイアログ ボックスで名前を割り当てることができません。 代わりに、`ProjectTemplateLink` 要素の `ProjectName` 属性を使用して、各プロジェクトの名前を指定します。 詳細については、次のセクションの最初の例を参照してください。  
   
--   複数プロジェクトのテンプレートには別の言語で記述したプロジェクトを含めることができますが、テンプレート自体の全体は `ProjectType` 要素を使用して 1 つのカテゴリにのみ配置できます。  
+- 複数プロジェクトのテンプレートには別の言語で記述したプロジェクトを含めることができますが、テンプレート自体の全体は `ProjectType` 要素を使用して 1 つのカテゴリにのみ配置できます。  
   
 ### <a name="to-create-a-multi-project-template"></a>複数プロジェクトのテンプレートを作成するには  
   

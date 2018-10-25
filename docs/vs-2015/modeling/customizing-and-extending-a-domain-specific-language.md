@@ -1,7 +1,7 @@
 ---
 title: カスタマイズとドメイン固有言語を拡張 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 50
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 158bebd18e62ac23560a09fcfacb2125e1988477
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3d5b55a9b9a55d00cbfb7928295699c254f72639
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548403"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49180688"
 ---
 # <a name="customizing-and-extending-a-domain-specific-language"></a>ドメイン固有言語のカスタマイズおよび拡張
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[をカスタマイズして、ドメイン固有言語を拡張する](https://docs.microsoft.com/visualstudio/modeling/customizing-and-extending-a-domain-specific-language)します。  
-  
 Visual Studio のモデリングと視覚エフェクト SDK (VMSDK) は、いくつかのレベルをモデリング ツールを定義することができますを提供します。  
   
 1.  DSL 定義図を使用して、ドメイン固有言語 (DSL) を定義します。 図の表記法、読み取り可能な XML 形式では、コードとその他の成果物を生成するために必要な基本的なツールと DSL をすばやく作成できます。  

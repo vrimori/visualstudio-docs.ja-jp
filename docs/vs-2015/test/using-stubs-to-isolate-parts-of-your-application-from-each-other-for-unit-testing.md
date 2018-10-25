@@ -1,7 +1,7 @@
 ---
 title: スタブを使用して単体テストでアプリケーションの各部分を相互に分離する | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 73519dd9-f3d5-49b6-a634-38881b459ea4
 caps.latest.revision: 19
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b83a9e73661e6b8c525a800376453cf8cff6a53c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cc12f77a8f1c3443606537dd6f818e9ee6625327
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548997"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853185"
 ---
 # <a name="using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>スタブを使用して単体テストでアプリケーションの各部分を相互に分離する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[スタブを使用して単体テストでアプリケーションの他の部分を分離する](https://docs.microsoft.com/visualstudio/test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing)します。  
-  
 スタブ型 * は、呼び出されるその他のコンポーネントからテストするコンポーネントを簡単に区別できるようにする Microsoft Fakes フレームワークを提供する 2 つのテクノロジの 1 つ。 スタブは、テスト中に別のコンポーネントの代わりをする短いコードです。 スタブを使用することの利点は、スタブによって一貫した結果が返され、テストを簡単に記述できることです。 また、他のコンポーネントがまだ動作しなくてもテストを実行できます。  
   
  Fakes の概要とクイック スタート ガイドについては、「[Microsoft Fakes を使用したテストでのコードの分離](../test/isolating-code-under-test-with-microsoft-fakes.md)」を参照してください。  
@@ -57,7 +55,7 @@ ms.locfileid: "47548997"
   
     -   [メソッド](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Methods)  
   
-    -   [プロパティ](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Properties)  
+    -   [Properties](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Properties)  
   
     -   [イベント](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Events)  
   
@@ -127,13 +125,13 @@ End Function
   
  インターフェイス挿入では、次の規則が適用されます。  
   
--   アプリケーションのすべてのコンポーネントのコードは、宣言内でも、`new` ステートメント内でも、他のコンポーネントのクラスを明示的に参照してはいけません。 代わりに、変数とパラメーターは、インターフェイス付きで宣言する必要があります。 コンポーネントのインスタンスは、コンポーネントのコンテナーのみで作成されます。  
+- アプリケーションのすべてのコンポーネントのコードは、宣言内でも、`new` ステートメント内でも、他のコンポーネントのクラスを明示的に参照してはいけません。 代わりに、変数とパラメーターは、インターフェイス付きで宣言する必要があります。 コンポーネントのインスタンスは、コンポーネントのコンテナーのみで作成されます。  
   
-     ここでは、"コンポーネント" はクラス、または一緒に開発および更新するクラスのグループを意味します。 通常、コンポーネントは 1 つの Visual Studio プロジェクト内のコードです。 1 つのコンポーネント内の各クラスは同時に更新されるため、それらを分離することは、あまり重要ではありません。  
+   ここでは、"コンポーネント" はクラス、または一緒に開発および更新するクラスのグループを意味します。 通常、コンポーネントは 1 つの Visual Studio プロジェクト内のコードです。 1 つのコンポーネント内の各クラスは同時に更新されるため、それらを分離することは、あまり重要ではありません。  
   
-     System.dll などの比較的安定したプラットフォームのクラスからコンポーネントを分離することも、あまり重要ではありません。 これらのすべてのクラスのインターフェイスを記述したのでは、コードが煩雑になってしまいます。  
+   System.dll などの比較的安定したプラットフォームのクラスからコンポーネントを分離することも、あまり重要ではありません。 これらのすべてのクラスのインターフェイスを記述したのでは、コードが煩雑になってしまいます。  
   
- StockAnalyzer のコードは、次のようにインターフェイスを使用して StockFeed から分離することによって、より良いコードにすることができます。  
+  StockAnalyzer のコードは、次のようにインターフェイスを使用して StockFeed から分離することによって、より良いコードにすることができます。  
   
 ```csharp  
 public interface IStockFeed  

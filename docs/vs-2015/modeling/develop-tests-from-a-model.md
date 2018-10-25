@@ -1,7 +1,7 @@
 ---
 title: モデルからテストを開発する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 22
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: d64356c9b5fe4e70c928303633a35d6cb4cc045b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 230cd5ae3bd4ae0d46baf4fe48f00eca9ffe879d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537426"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825118"
 ---
 # <a name="develop-tests-from-a-model"></a>モデルからテストを開発する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[モデルからテストを開発する](https://docs.microsoft.com/visualstudio/modeling/develop-tests-from-a-model)します。  
-  
 システムとそのコンポーネントのテストを編成する際に、要件モデルとアーキテクチャ モデルを使用できます。 こうすることで、ユーザーやその他の利害関係者にとって重要な要求をテストしやすくなり、要求が変更された場合にすばやくテストを更新することができます。 [!INCLUDE[TCMext](../includes/tcmext-md.md)] を使用した場合、モデルとテストの間のリンクを維持することもできます。  
   
  これらの機能をサポートする Visual Studio のバージョンを確認するを参照してください。[アーキテクチャとモデリング ツールのバージョンのサポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)します。  
@@ -68,19 +66,19 @@ ms.locfileid: "47537426"
   
 ###### <a name="to-link-tests-to-a-use-case"></a>テストをユース ケースにリンクするには  
   
-1.  [!INCLUDE[TCMlong](../includes/tcmlong-md.md)] で要求を作成し、その要求に対してテスト スイートを作成します。 参照してください、する方法について[アプリケーションのテスト](http://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)します。  
+1. [!INCLUDE[TCMlong](../includes/tcmlong-md.md)] で要求を作成し、その要求に対してテスト スイートを作成します。 参照してください、する方法について[アプリケーションのテスト](http://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)します。  
   
-     作成した要求は、[!INCLUDE[vstsTfsShort](../includes/vststfsshort-md.md)] の作業項目になります。 これは、[!INCLUDE[esprfound](../includes/esprfound-md.md)] でプロジェクトが使用するプロセス テンプレートに応じて、ユーザー ストーリー、要求、ユース ケースの作業項目などになります。 詳細については、次を参照してください。 [Visual Studio Team Services または Team Foundation Server を使用して作業の追跡](http://msdn.microsoft.com/library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)します。  
+    作成した要求は、[!INCLUDE[vstsTfsShort](../includes/vststfsshort-md.md)] の作業項目になります。 これは、[!INCLUDE[esprfound](../includes/esprfound-md.md)] でプロジェクトが使用するプロセス テンプレートに応じて、ユーザー ストーリー、要求、ユース ケースの作業項目などになります。 詳細については、次を参照してください。 [Visual Studio Team Services または Team Foundation Server を使用して作業の追跡](http://msdn.microsoft.com/library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)します。  
   
-2.  モデル内の 1 つまたは複数のユース ケースに対して、要求の作業項目をリンクします。  
+2. モデル内の 1 つまたは複数のユース ケースに対して、要求の作業項目をリンクします。  
   
-     ユース ケース図でユース ケースを右クリックし、順にクリックします**作業項目へリンク**します。 詳細については、次を参照してください。[モデル要素をリンクし、作業項目](../modeling/link-model-elements-and-work-items.md)します。  
+    ユース ケース図でユース ケースを右クリックし、順にクリックします**作業項目へリンク**します。 詳細については、次を参照してください。[モデル要素をリンクし、作業項目](../modeling/link-model-elements-and-work-items.md)します。  
   
-3.  テスト スイートに追加して、ユース ケースを確認するケースをテストします。  
+3. テスト スイートに追加して、ユース ケースを確認するケースをテストします。  
   
- 通常、各ユーザー ストーリーまたは要求の作業項目は、モデル内の複数のユース ケースにリンクされます。また、各ユース ケースは複数のユーザー ストーリーや要求にリンクされます。 これは、各ユーザー ストーリーや要求が複数のユース ケースを開発する、一連のタスクを対象としているためです。 たとえば、プロジェクトの初期のイテレーションで、お客様がカタログから商品を選択し、配送を依頼することができる基本的なユーザー ストーリーを開発することができます。 後期のイテレーションでは、注文の終了時にお客様が支払いをして、商品が出荷された後、業者がお金を受け取るというストーリーになっていることがあります。  ストーリーごとに、Order Goods ユース ケースの事後条件に句が追加されます。  
+   通常、各ユーザー ストーリーまたは要求の作業項目は、モデル内の複数のユース ケースにリンクされます。また、各ユース ケースは複数のユーザー ストーリーや要求にリンクされます。 これは、各ユーザー ストーリーや要求が複数のユース ケースを開発する、一連のタスクを対象としているためです。 たとえば、プロジェクトの初期のイテレーションで、お客様がカタログから商品を選択し、配送を依頼することができる基本的なユーザー ストーリーを開発することができます。 後期のイテレーションでは、注文の終了時にお客様が支払いをして、商品が出荷された後、業者がお金を受け取るというストーリーになっていることがあります。  ストーリーごとに、Order Goods ユース ケースの事後条件に句が追加されます。  
   
- ユース ケース図で個別のコメントに句を書き込むことで、事後条件の句に要件から個別のリンクを作成することができます。 要求の作業項目に対して各コメントをリンクしたり、図のユース ケースに対してコメントをリンクしたりすることができます。  
+   ユース ケース図で個別のコメントに句を書き込むことで、事後条件の句に要件から個別のリンクを作成することができます。 要求の作業項目に対して各コメントをリンクしたり、図のユース ケースに対してコメントをリンクしたりすることができます。  
   
 ### <a name="base-tests-on-the-requirements-types"></a>要求型に関する基本テスト  
  型 (要求モデルの句、インターフェイス、列挙) では、ユーザーがビジネスについてどのように考え、やり取りするかという点について、概念と関係を記述します。 この場合、システムの内部設計にのみ関連する型は除外されます。  

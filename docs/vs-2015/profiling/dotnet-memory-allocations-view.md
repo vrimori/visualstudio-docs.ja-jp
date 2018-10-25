@@ -1,7 +1,7 @@
 ---
 title: .NET メモリの割り当てビュー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,27 +21,25 @@ caps.latest.revision: 32
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2e53fe27148901bc4af78f9b607c0e3a70ba4b91
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6a171613c4bd6f34b826869214d11d247c9c59a9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544840"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924006"
 ---
 # <a name="net-memory-allocations-view"></a>.NET メモリの割り当てビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[.NET メモリの割り当てビュー](https://docs.microsoft.com/visualstudio/profiling/dotnet-memory-allocations-view)します。  
-  
 割り当てビューには、プロファイリング実行中に作成された型が一覧表示されます。 それぞれの型が、型の割り当てが発生する原因となった関数の実行パスを表示するコール ツリーのルート ノードに該当します。  
   
  型行のデータには、プロファイリング実行で作成された型のオブジェクトの総数とその型のオブジェクトに割り当てられた総バイト数が表示されます。 型の包括値と排他値は常に同じです。  
   
--   包括値は、コール ツリーの親関数によって呼び出された関数とその子関数のインスタンスで作成されたオブジェクトの値です。  
+- 包括値は、コール ツリーの親関数によって呼び出された関数とその子関数のインスタンスで作成されたオブジェクトの値です。  
   
--   排他値は、親関数によって呼び出された関数によって直接作成されたオブジェクトの値です。 子関数で作成されたオブジェクトは含まれません。  
+- 排他値は、親関数によって呼び出された関数によって直接作成されたオブジェクトの値です。 子関数で作成されたオブジェクトは含まれません。  
   
- 関数のデータは、親型のオブジェクトに対して作成されたオブジェクト数と割り当てられたバイト数を示します。  
+  関数のデータは、親型のオブジェクトに対して作成されたオブジェクト数と割り当てられたバイト数を示します。  
   
 ## <a name="highlighting-the-execution-hot-path"></a>実行ホット パスの強調表示  
  親型のほとんどのオブジェクトを作成したコール ツリーの実行パスを見つけることができます。  

@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: c01bf88cc86f0b63c7dc63deb257f077f61541a0
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 8b43cc3acbbff70124685229e33362cfd9b30561
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176685"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908803"
 ---
 # <a name="how-to-add-and-delete-counters-on-graphs-in-load-test-results"></a>方法: ロード テスト結果のグラフにカウンターを追加および削除する
 
@@ -33,7 +33,7 @@ ms.locfileid: "39176685"
  以下は、サンプル速度のガイドラインです。
 
 |ロード テストの継続時間|推奨サンプル速度|
-|------------------------|-----------------------------|
+|-|-----------------------------|
 |\< 1 時間|5 秒|
 |1 ～ 8 時間|15 秒|
 |8 ～ 24 時間|30 秒|

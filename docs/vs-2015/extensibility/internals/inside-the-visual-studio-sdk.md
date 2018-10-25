@@ -1,7 +1,7 @@
 ---
 title: Visual Studio SDK の内部 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 9118eaa4-0453-4dc5-9e16-c7062d254869
 caps.latest.revision: 31
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bf54468618e12abdd29921677687201f9840a70c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5d22e5c1384e4b24bd3b05cb868a40cede19ba1f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535849"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49214709"
 ---
 # <a name="inside-the-visual-studio-sdk"></a>Visual Studio SDK の内部
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[内で Visual Studio SDK](https://docs.microsoft.com/visualstudio/extensibility/internals/inside-the-visual-studio-sdk)します。  
-  
 ここでは、Visual Studio のアーキテクチャ、コンポーネント、サービス、スキーマ、ユーティリティ、およびなどを含む、Visual Studio 拡張機能に関する詳細な情報を示します。  
   
 ## <a name="extensibility-architecture"></a>機能拡張アーキテクチャ  
@@ -38,7 +36,7 @@ ms.locfileid: "47535849"
 Visual Studio のアーキテクチャの汎用化されたビュー  
   
 ## <a name="vspackages"></a>VSPackages  
- VSPackage は、UI 要素、サービス、プロジェクト、エディター、およびデザイナーで Visual Studio を構成および拡張するソフトウェア モジュールです。 Vspackage は、Visual Studio のサーバーの全体アーキテクチャ単位です。 詳細については、次を参照してください。 [Vspackage](../../extensibility/internals/vspackages.md)します。  
+ VSPackage は、UI 要素、サービス、プロジェクト、エディター、およびデザイナーで Visual Studio を構成および拡張するソフトウェア モジュールです。 Vspackage は、Visual Studio のサーバーの全体アーキテクチャ単位です。 詳細については、「 [VSPackages](../../extensibility/internals/vspackages.md)」を参照してください。  
   
 ## <a name="visual-studio-shell"></a>Visual Studio Shell  
  Visual Studio shell は、基本的な機能を提供し、そのコンポーネント Vspackage および MEF 拡張機能間の相互通信をサポートします。 詳細については、次を参照してください。 [Visual Studio Shell](../../extensibility/internals/visual-studio-shell.md)します。  

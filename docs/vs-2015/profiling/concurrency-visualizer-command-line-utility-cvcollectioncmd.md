@@ -1,7 +1,7 @@
 ---
 title: コンカレンシー ビジュアライザー コマンドライン ユーティリティ (CVCollectionCmd) | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,25 +16,23 @@ caps.latest.revision: 26
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1925a240c011e4a9e7ede1a0aeb673b5d33c23bf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8b872cf09a4b8ead730f13335fa8e2b7db43186a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533907"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49262328"
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>コンカレンシー ビジュアライザー コマンドライン ユーティリティ (CVCollectionCmd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[同時実行ビジュアライザー コマンド ライン ユーティリティ (CVCollectionCmd)](https://docs.microsoft.com/visualstudio/profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd)します。  
-  
 コンカレンシー ビジュアライザーのコマンド ライン ユーティリティ (CVCollectionCmd.exe) を使用して、コマンド ラインからトレースを収集することで、Visual Studio 用のコンカレンシー ビジュアライザーでトレースを表示できます。 これらのツールは、Visual Studio がインストールされていないコンピューターで使用できます。  
   
 > [!NOTE]
->  Visual Studio 2013 以降、コンカレンシー ビジュアライザーは任意の拡張機能となっています。 (以前は、Visual Studio に含まれていました。)ダウンロード センターから [Concurrency Visualizer Collection Tools for Visual Studio 2015](http://www.microsoft.com/en-in/download/details.aspx?id=49103) をダウンロードできます。  
+>  Visual Studio 2013 以降、コンカレンシー ビジュアライザーは任意の拡張機能となっています。 (以前は、Visual Studio に含まれていました。)ダウンロード センターから [Concurrency Visualizer Collection Tools for Visual Studio 2015](http://www.microsoft.com/download/details.aspx?id=49103) をダウンロードできます。  
   
 ## <a name="download-the-concurrency-visualizer-command-line-utility"></a>コンカレンシー ビジュアライザーのコマンド ライン ユーティリティのダウンロード  
- コマンド ライン ユーティリティをダウンロードしてインストールするには、[Concurrency Visualizer Collection Tools for Visual Studio 2015](http://www.microsoft.com/en-in/download/details.aspx?id=49103) に移動して指示に従います。 既定では、CVCollectionCmd.exe のインストール先は %ProgramFiles%\Microsoft Concurrency Visualizer Collection Tools\ (%ProgramFiles(x86)%\Microsoft Concurrency Visualizer Collection Tools\ on x64 computers) となっています。  
+ コマンド ライン ユーティリティをダウンロードしてインストールするには、[Concurrency Visualizer Collection Tools for Visual Studio 2015](http://www.microsoft.com/download/details.aspx?id=49103) に移動して指示に従います。 既定では、CVCollectionCmd.exe のインストール先は %ProgramFiles%\Microsoft Concurrency Visualizer Collection Tools\ (%ProgramFiles(x86)%\Microsoft Concurrency Visualizer Collection Tools\ on x64 computers) となっています。  
   
 ## <a name="collect-a-trace-with-cvcollectioncmd"></a>CVCollectionCmd を使用したトレースの収集  
  トレースを収集するには、CVCollectionCmd でアプリを起動するか、CVCollectionCmd にアタッチします。 オプションについては、以下のコマンド リファレンスを参照してください。 次に例を示します。  

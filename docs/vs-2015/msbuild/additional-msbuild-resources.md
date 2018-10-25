@@ -1,7 +1,7 @@
 ---
 title: 追加の MSBuild リソース | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -604,18 +604,16 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b6bb77f0d43b129b84bb63cc96ef59988dc13ac6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 935d73f8dd1a5c1dedb3fb4d1e7a727d19e5d10b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535059"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49222743"
 ---
 # <a name="additional-msbuild-resources"></a>追加の MSBuild リソース
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[追加の MSBuild リソース](https://docs.microsoft.com/visualstudio/msbuild/additional-msbuild-resources)します。  
-  
   
 問題を解決しようとした場合にドキュメントで必要な情報が見つからないときは、サポート技術情報の文書、開発者コミュニティ、製品サポートなど、他のリソースを参照してください。  
   

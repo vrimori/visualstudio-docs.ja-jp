@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1036: 比較可能な型のメソッドのオーバーライド |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 906ee4c3e5300f04b5627c7b3aa19ba7950f3239
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 67fa52a674b9e3d77d7e3eed7493bf28c1b2514d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589209"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948784"
 ---
 # <a name="ca1036-override-methods-on-comparable-types"></a>CA1036: 比較可能な型でメソッドをオーバーライドします
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1036: 比較可能な型でメソッドをオーバーライド](https://docs.microsoft.com/visualstudio/code-quality/ca1036-override-methods-on-comparable-types)します。
 
 |||
 |-|-|
@@ -48,15 +46,15 @@ ms.locfileid: "47589209"
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  このルールの違反を修正するには、オーバーライド<xref:System.Object.Equals%2A>します。 使用するプログラミング言語では、演算子のオーバー ロードをサポートする場合は、次の演算子を指定します。
 
--   op_Equality
+- op_Equality
 
--   op_Inequality
+- op_Inequality
 
--   op_LessThan
+- op_LessThan
 
--   op_GreaterThan
+- op_GreaterThan
 
- これらの演算子を表すために使用されるトークンは次のように、c# で: = =、! =、 \<、および >。
+  これらの演算子を表すために使用されるトークンは次のように、c# で: = =、! =、 \<、および >。
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
  演算子がないために違反が発生し、プログラミング言語が演算子のオーバー ロードをサポートしていない Visual Basic .NET を使用した場合と同様、この規則による警告を抑制しても安全になります。 Op_Equality 演算子を実装するいると判断した場合は、アプリケーションのコンテキストで意味を成しません以外の等値演算子を発生させるときにこの規則からの警告を抑制しても安全です。 ただしは常に op_Equality 経由で、Object.Equals をオーバーライドする場合は、演算子を = =。

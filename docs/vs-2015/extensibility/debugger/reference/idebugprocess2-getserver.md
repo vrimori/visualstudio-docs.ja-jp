@@ -1,7 +1,7 @@
 ---
 title: IDebugProcess2::GetServer |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 8f73c530-cceb-4f1f-8c63-1cc0ccd4a310
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ef0b41929b5b1ee89771c65cedd6550deba6f4ca
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7b02525c62a5842c3db1cf38de091a5100d971d2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545847"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852896"
 ---
 # <a name="idebugprocess2getserver"></a>IDebugProcess2::GetServer
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugProcess2::GetServer](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugprocess2-getserver)します。  
-  
 このプロセスで実行されているサーバーを取得します。  
   
 ## <a name="syntax"></a>構文  

@@ -18,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5625d79221416a8799d120530d3c463041412417
-ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
+ms.openlocfilehash: 51b03ce504b2fe8f588cf3e360882f97d61664f8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341226"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896942"
 ---
 # <a name="map-dependencies-with-code-maps"></a>コード マップで依存関係をマッピングします。
 
@@ -138,15 +138,15 @@ Visual Studio 2017 では、コード マップを作成するに最初にイン
 
 10. 複雑なソリューション マップで必要な項目に注目するもう 1 つの方法は、既存のマップから、選択した項目を含む新しいマップを生成することです。 保持**Ctrl**に集中し項目を選択するときに、ショートカット メニューを開くし、選択**選択範囲から新しいグラフを**します。
 
-   ![選択された項目を新しいコード マップに表示する](../modeling/media/codemapsshowonnewmap.png)
+    ![選択された項目を新しいコード マップに表示する](../modeling/media/codemapsshowonnewmap.png)
 
 11. 含んでいるコンテキストは、新しいマップに引き継がれます。 ソリューション フォルダーとその他の任意のコンテナーを使用して確認する非表示にする、**フィルター**ウィンドウ。
 
-   ![コンテナーをフィルター処理してビューを簡略化する](../modeling/media/codemapsexpandnewgroups.png)
+    ![コンテナーをフィルター処理してビューを簡略化する](../modeling/media/codemapsexpandnewgroups.png)
 
 12. グループを展開し、リレーションシップを表示するマップ内の項目を選択します。
 
-   ![リレーションシップを表示する項目を選択する](../modeling/media/codemapsviewnewrelationships.png)
+    ![リレーションシップを表示する項目を選択する](../modeling/media/codemapsviewnewrelationships.png)
 
 関連項目:
 
@@ -242,7 +242,7 @@ Visual Studio 2017 では、コード マップを作成するに最初にイン
 
 - [ビデオ: Visual Studio 2015 コード マップを使用したコードの設計を理解する](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)]
 - [コード マップを使用してアプリケーションをデバッグする](../modeling/use-code-maps-to-debug-your-applications.md)
-- [デバッグ中に呼び出し履歴に対するメソッドをマップします。](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)
+- [デバッグ中の、呼び出し履歴に関するメソッドのマッピング](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)
 - [コード マップ アナライザーを使用して潜在的な問題を検索する](../modeling/find-potential-problems-using-code-map-analyzers.md)
 - [コード マップの参照および再配置](../modeling/browse-and-rearrange-code-maps.md)
 - [DGML ファイルを編集してコード マップをカスタマイズする](../modeling/customize-code-maps-by-editing-the-dgml-files.md)

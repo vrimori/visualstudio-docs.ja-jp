@@ -1,7 +1,7 @@
 ---
 title: 項目を追加、新しい項目の追加 ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 2f70863b-425b-4e65-86b4-d6a898e29dc7
 caps.latest.revision: 19
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 641c593a0c8f957982801824bd4f81bd62b904d1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7a421ba2278c177eeb0fdba8571497e50ba71b39
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548249"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894236"
 ---
 # <a name="adding-items-to-the-add-new-item-dialog-boxes"></a>[新しい項目の追加] ダイアログ ボックスへの項目の追加
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[に新しい項目の追加 ダイアログ ボックスの項目の追加](https://docs.microsoft.com/visualstudio/extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes)します。  
-  
 項目を追加するプロセス、**新しい項目の追加**レジストリ キー ダイアログ ボックスを起動します。 使用できる項目のディレクトリの名前とパスには、次のレジストリ エントリのように、AddItemTemplates セクションに含まれています、**新しい項目の追加** ダイアログ ボックスが配置されます。  
   
 > [!NOTE]
@@ -74,15 +72,15 @@ ms.locfileid: "47548249"
 ## <a name="filtering-project-items"></a>プロジェクト項目をフィルター処理  
  `IVsFilterAddProjectItemDlg2` ツリー (左側) とプロジェクト ファイル (右側のウィンドウ) で要素の次の方法でフィルター処理を提供します。  
   
--   によって提供されるローカライズされた名前 (.vsdir ファイルに含まれるダイアログ ボックスに表示されるキャプション) によって`IVsFilterAddProjectItemDlg`します。  
+- によって提供されるローカライズされた名前 (.vsdir ファイルに含まれるダイアログ ボックスに表示されるキャプション) によって`IVsFilterAddProjectItemDlg`します。  
   
--   ディスク上のファイルおよびフォルダーの実際の名前で (ローカライズされていない-.vsdir ファイルがありません) によって提供される`IVsFilterAddProjectItemDlg`します。  
+- ディスク上のファイルおよびフォルダーの実際の名前で (ローカライズされていない-.vsdir ファイルがありません) によって提供される`IVsFilterAddProjectItemDlg`します。  
   
--   カテゴリ別にによって提供される`IVsFilterAddProjectItemDlg2`します。  
+- カテゴリ別にによって提供される`IVsFilterAddProjectItemDlg2`します。  
   
- カテゴリでフィルター処理するには、Visual Basic では"クライアント item"または「Web フォーム」など、.vsdir ファイル内の項目にカテゴリ文字列を指定します。 ダイアログ ボックスのコードは、.vsdir ファイルからのカテゴリ分類を取得しに渡します。 実装にその情報を渡すことができますし、`IVsFilterAddProjectItemDlg2`をフィルター処理、**新しい項目の追加**カテゴリ別のダイアログ ボックス。 クライアントの Win32 アプリケーションの場合、Web ページの項目をフィルターすることもできます。 また、どの[!INCLUDE[vcprvc](../../includes/vcprvc-md.md)]Microsoft Foundation Classes (MFC) またはアクティブ テンプレート ライブラリ (ATL) の項目として項目をタグ付けします。 これらの項目を識別するときに、プロジェクト システムは、システムにカテゴリと分類に基づくフィルターを選択できるように、独自の分類を定義できます。  
+  カテゴリでフィルター処理するには、Visual Basic では"クライアント item"または「Web フォーム」など、.vsdir ファイル内の項目にカテゴリ文字列を指定します。 ダイアログ ボックスのコードは、.vsdir ファイルからのカテゴリ分類を取得しに渡します。 実装にその情報を渡すことができますし、`IVsFilterAddProjectItemDlg2`をフィルター処理、**新しい項目の追加**カテゴリ別のダイアログ ボックス。 クライアントの Win32 アプリケーションの場合、Web ページの項目をフィルターすることもできます。 また、どの[!INCLUDE[vcprvc](../../includes/vcprvc-md.md)]Microsoft Foundation Classes (MFC) またはアクティブ テンプレート ライブラリ (ATL) の項目として項目をタグ付けします。 これらの項目を識別するときに、プロジェクト システムは、システムにカテゴリと分類に基づくフィルターを選択できるように、独自の分類を定義できます。  
   
- このフィルターの機能を実装する場合は、非表示にするすべての項目のテーブルにマップするはありません。 単に、項目の種類に分類し、.vsdir ファイルまたはファイルに分類できます。 インターフェイスを実装することによって、特定の分類している項目のいずれかが非表示できます。 これにより、内の項目を行うことができます、**新しい項目の追加**プロジェクト内の状態に基づいて、ダイアログ ボックス動的です。  
+  このフィルターの機能を実装する場合は、非表示にするすべての項目のテーブルにマップするはありません。 単に、項目の種類に分類し、.vsdir ファイルまたはファイルに分類できます。 インターフェイスを実装することによって、特定の分類している項目のいずれかが非表示できます。 これにより、内の項目を行うことができます、**新しい項目の追加**プロジェクト内の状態に基づいて、ダイアログ ボックス動的です。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>   

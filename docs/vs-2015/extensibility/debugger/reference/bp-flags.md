@@ -1,7 +1,7 @@
 ---
 title: BP_FLAGS |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: c45dfc74-5e7f-4f1e-a147-ab2a55dccbd0
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b6feb965c564e74dbb026a66a964d233b3ed75fb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a819c822a813cd75ec72ff0883d36f19306d3d72
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533632"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829951"
 ---
 # <a name="bpflags"></a>BP_FLAGS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[BP_FLAGS](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/bp-flags)します。  
-  
 ブレークポイントを設定するときに、追加情報を指定するために使用するオプションのフラグを提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -65,7 +63,7 @@ public enum enum_BP_FLAGS {
   
  これらの値は、演算と組み合わせることがあります`OR`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

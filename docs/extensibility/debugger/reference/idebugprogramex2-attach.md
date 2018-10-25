@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEx2::Attach |Microsoft ドキュメント
+title: IDebugProgramEx2::Attach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c58f576a0126472ad60ceeb5fc5289b668bd54dd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7ac2e86c25f9f74b7be4b9606e6e1ec721743878
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31116049"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906911"
 ---
 # <a name="idebugprogramex2attach"></a>IDebugProgramEx2::Attach
-プログラムにセッションをアタッチします。  
+セッションは、プログラムにアタッチします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,22 +46,22 @@ int Attach(
   
 #### <a name="parameters"></a>パラメーター  
  `pCallback`  
- [in][IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)にイベントをアタッチされたデバッグ エンジンに送信するコールバック関数を表すオブジェクト。  
+ [in][IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)アタッチされたデバッグ エンジンにイベントを送信するコールバック関数を表すオブジェクト。  
   
  `dwReason`  
- [in]値、 [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md)アタッチ操作の理由を説明する列挙体です。  
+ [in]値、 [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md)アタッチ操作の理由を説明する列挙体。  
   
  `pSession`  
- [in]プログラムにアタッチされているセッションを一意に識別する値。  
+ [in]プログラムにアタッチするセッションを一意に識別する値。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 それ以外の場合はエラー コードを返します。 このメソッドが返す`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`プログラムが既にアタッチされている場合。  
+ 成功した場合、返します`S_OK`。 それ以外の場合はエラー コードを返します。 このメソッドが返す必要があります`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`プログラムが既にアタッチされている場合。  
   
-## <a name="remarks"></a>コメント  
- プログラムが含まれているポートの値を使用できます`pSession`をプログラムにアタッチしようとしてセッションを確認します。 たとえば、ポートは、プロセスにアタッチする、一度に 1 つのみのデバッグ セッションを許可している場合、ポートを判断できます、同じセッションが既にプロセス内の他のプログラムにアタッチされているかどうか。  
+## <a name="remarks"></a>Remarks  
+ プログラムを含むポート値を使用できる`pSession`をプログラムにアタッチしようとしているセッションを確認します。 たとえば、ポートは、一度にプロセスにアタッチする 1 つだけのデバッグ セッションを許可している場合、ポートによってできます同じのセッションが既にプロセス内の他のプログラムにアタッチするかどうかを決定します。  
   
 > [!NOTE]
->  インターフェイスが渡される`pSession`のみ、クッキー、セッション デバッグ マネージャーです。 このプログラムへのアタッチを一意に識別する値として扱われますが、指定されたインターフェイスのメソッドのいずれも機能します。  
+>  インターフェイスが渡された`pSession`がクッキー、セッション デバッグ マネージャー; このプログラムへのアタッチを一意に識別する値としてのみ扱われる、指定されたインターフェイスのメソッドのいずれも機能します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)

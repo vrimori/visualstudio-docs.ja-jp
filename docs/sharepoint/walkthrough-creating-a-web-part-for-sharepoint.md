@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 055e1da96ae3078c0b77597816868be5994d1223
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 09b9299c6428ef63ccf71220fc3cb599e9e3b5a9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44281274"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872409"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint"></a>チュートリアル: SharePoint の web パーツを作成します。
 
@@ -96,13 +96,13 @@ Web パーツに表示するコントロールを指定するには、Web パー
 
 3. `WebPart1` クラスに次のコードを追加します。 このコードは、次のフィールドを宣言します。
 
-    - Web パーツに従業員を表示するデータ グリッド。
+   - Web パーツに従業員を表示するデータ グリッド。
 
-    - データ グリッドのフィルターに使用するコントロール上に表示するテキスト。
+   - データ グリッドのフィルターに使用するコントロール上に表示するテキスト。
 
-    - データ グリッドでデータを表示できない場合、エラーを表示するラベル。
+   - データ グリッドでデータを表示できない場合、エラーを表示するラベル。
 
-    - 従業員データ ファイルのパスを含む文字列。
+   - 従業員データ ファイルのパスを含む文字列。
 
      [!code-csharp[SP_WebPart#2](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#2)]
      [!code-vb[SP_WebPart#2](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#2)]
@@ -114,18 +114,18 @@ Web パーツに表示するコントロールを指定するには、Web パー
 
 5. `CreateChildControls` メソッドを次のコードに置き換えます。 このコードは次のタスクを実行します。
 
-    - 前の手順で宣言したデータ グリッドとラベルを追加します。
+   - 前の手順で宣言したデータ グリッドとラベルを追加します。
 
-    - 従業員データを格納する XML ファイルにデータ グリッドをバインドします。
+   - 従業員データを格納する XML ファイルにデータ グリッドをバインドします。
 
      [!code-csharp[SP_WebPart#4](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#4)]
      [!code-vb[SP_WebPart#4](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#4)]
 
 6. `WebPart1` クラスに次のメソッドを追加します。 このコードは次のタスクを実行します。
 
-    - レンダリングされた Web パーツの Web パーツ動詞メニューに表示する動詞を作成します。
+   - レンダリングされた Web パーツの Web パーツ動詞メニューに表示する動詞を作成します。
 
-    - 動詞メニューの動詞を選択すると発生するイベントを処理します。 このコードでは、データ グリッドに表示される従業員一覧にフィルターをかけます。
+   - 動詞メニューの動詞を選択すると発生するイベントを処理します。 このコードでは、データ グリッドに表示される従業員一覧にフィルターをかけます。
 
      [!code-csharp[SP_WebPart#5](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#5)]
      [!code-vb[SP_WebPart#5](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#5)]

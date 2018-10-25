@@ -1,7 +1,7 @@
 ---
 title: コード生成、ビルド プロセスで |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,15 @@ caps.latest.revision: 30
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: ce072f85873530d419589f0d1830dc76688afa5c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: abb37b7bdfbc01affea63aa90d35b3702dcb4719
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539950"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907925"
 ---
 # <a name="code-generation-in-a-build-process"></a>ビルド処理でのコード生成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ビルド プロセスでのコード生成](https://docs.microsoft.com/visualstudio/modeling/code-generation-in-a-build-process)します。
-
 Visual Studio ソリューションのビルド プロセスの一環として、テキスト変換を起動できます。 テキスト変換に特化したビルド タスクがあります。 T4 ビルド タスクはデザイン時テキスト テンプレートを実行し、また、実行時 (前処理済み) テキスト テンプレートをコンパイルします。
 
 使用するビルド エンジンに応じて、ビルド タスクができることには違いが生じます。 テキスト テンプレートに、Visual Studio API (EnvDTE) をアクセスできる場合、Visual Studio でソリューションをビルドすると、 [hostspecific ="true"](../modeling/t4-template-directive.md)属性を設定します。 しかし、コマンド ラインからソリューションをビルドするとき、または、Visual Studio 経由でサーバー ビルドを開始するときは、これは当てはまりません。 このような場合、ビルドは MSBuild によって実行され、別の T4 ホストが使用されます。
@@ -163,11 +160,11 @@ TransformFile ではワイルドカードを使用できます。
 
 `AfterTransform` では、ファイルのリストを参照できます。
 
--   GeneratedFiles: 処理中に出力されたファイルのリスト。 既存の読み取り専用ファイルを上書きしたファイルについては、%(GeneratedFiles.ReadOnlyFileOverwritten) が true になります。 これらのファイルは、ソース管理からチェックアウトできます。
+- GeneratedFiles: 処理中に出力されたファイルのリスト。 既存の読み取り専用ファイルを上書きしたファイルについては、%(GeneratedFiles.ReadOnlyFileOverwritten) が true になります。 これらのファイルは、ソース管理からチェックアウトできます。
 
--   NonGeneratedFiles: 上書きされなかった読み取り専用ファイルのリスト。
+- NonGeneratedFiles: 上書きされなかった読み取り専用ファイルのリスト。
 
- たとえば、GeneratedFiles をチェックアウトするタスクを定義します。
+  たとえば、GeneratedFiles をチェックアウトするタスクを定義します。
 
 ## <a name="outputfilepath-and-outputfilename"></a>OutputFilePath と OutputFileName
 
@@ -258,7 +255,6 @@ $(SolutionDir) などの Visual Studio のマクロは、MSBuild では動作し
       <Value>$(myLibFolder)</Value>
     </T4ParameterValues>
   </ItemGroup>
-
 ```
 
 これで、assembly ディレクティブおよび include ディレクティブでプロジェクト プロパティを使用できます。

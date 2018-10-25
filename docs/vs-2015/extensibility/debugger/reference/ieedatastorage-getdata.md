@@ -1,7 +1,7 @@
 ---
 title: IEEDataStorage::GetData |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 4d384039-73d4-40b4-ace6-a2474c546397
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f3461ec27c00148bf70617856ea900094bd3c78b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 33ca85529b67b78096f7d9a0fa5fc5e89cd674f7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536223"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874099"
 ---
 # <a name="ieedatastoragegetdata"></a>IEEDataStorage::GetData
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IEEDataStorage::GetData](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ieedatastorage-getdata)します。  
-  
 オブジェクトから指定したバイト数を取得します。  
   
 ## <a name="syntax"></a>構文  

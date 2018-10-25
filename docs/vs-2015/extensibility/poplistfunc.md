@@ -1,7 +1,7 @@
 ---
 title: POPLISTFUNC |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: b2199fd5-d707-4628-92dd-e2a01e2f507a
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a8b193eae0e41f48c0f947bbf8af596084a1544f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bfa528edb20851456926ee939cef86730eeedfe3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547022"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941972"
 ---
 # <a name="poplistfunc"></a>POPLISTFUNC
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[POPLISTFUNC](https://docs.microsoft.com/visualstudio/extensibility/poplistfunc)します。  
-  
 このコールバックが渡される、 [SccPopulateList](../extensibility/sccpopulatelist-function.md) IDE でファイルまたはディレクトリの一覧を更新するソース管理プラグインが使用されます (に渡されることも、`SccPopulateList`関数)。  
   
  ユーザーが選択したときに、**取得**IDE では、コマンドと、ユーザーが得られるすべてのファイルの一覧ボックスが表示されます。 残念ながら、IDE には、ユーザーが取得可能性があります。 すべてのファイルの正確な一覧がわからないこのリストのみプラグインがあります。 その他のユーザーには、ソース コード コントロール プロジェクトにファイルが追加、一覧で、これらのファイルが表示されますが、IDE で認識されていないこと。 IDE は、ユーザーが取得できると思われるファイルの一覧を作成します。 呼び出しをユーザーには、この一覧が表示されます、前に、 [SccPopulateList](../extensibility/sccpopulatelist-function.md) `,`ソース管理プラグインを提供を追加し、ファイルを一覧から削除します。  

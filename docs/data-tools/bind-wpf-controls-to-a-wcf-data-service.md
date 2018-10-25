@@ -17,12 +17,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: b3cd83a16ff3d497bd9e6a46f3a66a3d99506a1f
-ms.sourcegitcommit: 3a11feebad45a0dd4ac45efcbfdf172fce46e1de
+ms.openlocfilehash: 0f18aaff185e6591d43f10c979c00b654d5608a6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39582396"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949384"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>WCF Data Service への WPF コントロールのバインド
 
@@ -52,13 +52,13 @@ ms.locfileid: "39582396"
 
 次の概念に関する知識があると役立ちますが、チュートリアルを実行するうえで必須というわけではありません。
 
--   WCF Data Services。 詳細については、次を参照してください。[概要](/dotnet/framework/data/wcf/wcf-data-services-overview)します。
+- WCF Data Services。 詳細については、次を参照してください。[概要](/dotnet/framework/data/wcf/wcf-data-services-overview)します。
 
--   [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] のデータ モデル。
+- [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] のデータ モデル。
 
--   Entity Data Model および ADO.NET Entity Framework。 詳細については、次を参照してください。 [Entity Framework の概要](/dotnet/framework/data/adonet/ef/overview)します。
+- Entity Data Model および ADO.NET Entity Framework。 詳細については、次を参照してください。 [Entity Framework の概要](/dotnet/framework/data/adonet/ef/overview)します。
 
--   WPF データ バインディング。 詳細については、次を参照してください。[データ バインディングの概要](/dotnet/framework/wpf/data/data-binding-overview)します。
+- WPF データ バインディング。 詳細については、次を参照してください。[データ バインディングの概要](/dotnet/framework/wpf/data/data-binding-overview)します。
 
 ## <a name="create-the-service-project"></a>サービス プロジェクトを作成します。
 
@@ -171,23 +171,23 @@ WCF データ サービスからデータを表示するには、サービスに
 
 WPF デザイナーで XAML を変更して、いくつかのボタンをウィンドウに追加します。 これらのボタンを使用して販売レコードを表示および更新できるようにするコードは、このチュートリアルで後で追加します。
 
-1.  **ソリューション エクスプ ローラー**、ダブルクリックして**MainWindow.xaml**します。
+1. **ソリューション エクスプ ローラー**、ダブルクリックして**MainWindow.xaml**します。
 
-     WPF デザイナーでウィンドウが開きます。
+    WPF デザイナーでウィンドウが開きます。
 
-2.  デザイナーの [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] ビューで、`<Grid>` タグの間に次のコードを追加します。
+2. デザイナーの [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] ビューで、`<Grid>` タグの間に次のコードを追加します。
 
-    ```xaml
-    <Grid.RowDefinitions>
-        <RowDefinition Height="75" />
-        <RowDefinition Height="525" />
-    </Grid.RowDefinitions>
-    <Button HorizontalAlignment="Left" Margin="22,20,0,24" Name="backButton" Width="75"><</Button>
-    <Button HorizontalAlignment="Left" Margin="116,20,0,24" Name="nextButton" Width="75">></Button>
-    <Button HorizontalAlignment="Right" Margin="0,21,46,24" Name="saveButton" Width="110">Save changes</Button>
-    ```
+   ```xaml
+   <Grid.RowDefinitions>
+       <RowDefinition Height="75" />
+       <RowDefinition Height="525" />
+   </Grid.RowDefinitions>
+   <Button HorizontalAlignment="Left" Margin="22,20,0,24" Name="backButton" Width="75"><</Button>
+   <Button HorizontalAlignment="Left" Margin="116,20,0,24" Name="nextButton" Width="75">></Button>
+   <Button HorizontalAlignment="Right" Margin="0,21,46,24" Name="saveButton" Width="110">Save changes</Button>
+   ```
 
-3.  プロジェクトをビルドします。
+3. プロジェクトをビルドします。
 
 ## <a name="create-the-data-bound-controls"></a>データ バインド コントロールを作成します。
 

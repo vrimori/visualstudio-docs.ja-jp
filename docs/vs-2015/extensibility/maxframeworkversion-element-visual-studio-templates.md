@@ -1,7 +1,7 @@
 ---
 title: MaxFrameworkVersion 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: f732a9d3-fc29-405b-9298-01ea83fc58b8
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7be6bf858130310f3b7a13078482746edf74a65a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 94b12af3d2b0c455ae321b3329b1f90d2ab35fb2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545630"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49276823"
 ---
 # <a name="maxframeworkversion-element-visual-studio-templates"></a>MaxFrameworkVersion 要素 (Visual Studio テンプレート)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MaxFrameworkVersion 要素 (Visual Studio テンプレート)](https://docs.microsoft.com/visualstudio/extensibility/maxframeworkversion-element-visual-studio-templates)します。  
-  
 テンプレートで必要とされる .NET Framework の最大バージョンを指定します。 テンプレートが表示されるかどうかを判断します、**テンプレート**のセクション、**新しいプロジェクトの追加** ダイアログ ボックスで選択されている値に基づいて、 **ターゲットフレームワークのバージョン**のボックス、**新しいプロジェクトの追加** ダイアログ ボックス。  
   
  \<VSTemplate>  

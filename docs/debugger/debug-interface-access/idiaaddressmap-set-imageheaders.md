@@ -1,5 +1,5 @@
 ---
-title: Idiaaddressmap::set_imageheaders |Microsoft ドキュメント
+title: Idiaaddressmap::set_imageheaders |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 51b68475b9ef0374f95febabc2997524bfd61259
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4b72b8b7d1531a75568e97ac4d18c85f80508f9d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31458480"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49869003"
 ---
 # <a name="idiaaddressmapsetimageheaders"></a>IDiaAddressMap::set_imageHeaders
-セットのイメージの相対仮想アドレス変換を有効にするヘッダー。  
+イメージの相対仮想アドレス変換を有効にするヘッダーのセット。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,21 +36,21 @@ HRESULT set_imageHeaders (
   
 #### <a name="parameters"></a>パラメーター  
  cbData  
- [in]ヘッダーのデータのバイト数。 必要があります`n*sizeof(IMAGE_SECTION_HEADER)`場所`n`実行可能ファイルでセクション ヘッダーの数です。  
+ [in]ヘッダーのデータのバイト数。 必要があります`n*sizeof(IMAGE_SECTION_HEADER)`場所`n`実行可能ファイル内のセクション ヘッダーの数です。  
   
  データ  
- [in]配列`IMAGE_SECTION_HEADER`イメージ ヘッダーとして使用する構造体。  
+ [in]配列の`IMAGE_SECTION_HEADER`イメージ ヘッダーとして使用する構造体。  
   
  originalHeaders  
- [in]設定`FALSE`イメージ ヘッダーから返される場合、新しいイメージ`TRUE`アップグレードする前に、元のイメージが反映される場合。 通常、これに設定する`TRUE`への呼び出しとの組み合わせでのみ、 [idiaaddressmap::set_addressmap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)メソッドです。  
+ [in]設定`FALSE`イメージ ヘッダーが、新しいイメージである場合`TRUE`アップグレードの前に、元のイメージが反映される場合。 通常、この設定`TRUE`への呼び出しとの組み合わせでのみ、 [idiaaddressmap::set_addressmap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)メソッド。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `IMAGE_SECTION_HEADER`構造は、Winnt.h で宣言されているし、実行可能ファイルのイメージ セクション ヘッダーの形式を表します。  
   
- 相対仮想アドレスの計算によって異なります、`IMAGE_SECTION_HEADER`値。 通常、DIA では、これらのプログラム データベース (.pdb) ファイルから取得します。 これらの値が存在しない、DIA ができない場合は相対仮想アドレスを計算して、 [idiaaddressmap::get_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)メソッドを返します。`FALSE`です。 クライアントが呼び出す必要がありますし、 [idiaaddressmap::put_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md)メソッドを提供すると、不足しているイメージからヘッダー イメージ自体の相対仮想アドレス計算を有効にします。  
+ 相対仮想アドレスの計算によって異なります、`IMAGE_SECTION_HEADER`値。 通常、DIA では、これらのプログラム データベース (.pdb) ファイルから取得します。 これらの値が存在しない場合、DIA を相対仮想アドレスを計算することは、 [idiaaddressmap::get_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)メソッドを返します。`FALSE`します。 クライアントが呼び出す必要がありますし、 [idiaaddressmap::put_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md)イメージ自体から不足しているイメージ ヘッダーを指定したら、相対仮想アドレスの計算を有効にするメソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   

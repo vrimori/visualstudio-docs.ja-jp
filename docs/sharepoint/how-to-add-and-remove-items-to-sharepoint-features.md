@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ffc5d7e9c2ed492357dea01151e32b301b4d177e
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 2ead6b7ba57afa2adeabbbe04bc27583b2ad1593
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36756247"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854833"
 ---
 # <a name="how-to-add-and-remove-items-to-sharepoint-features"></a>方法: 項目を SharePoint の機能を追加および削除
   SharePoint ソリューションを作成するときに、Visual Studio は、機能に既定の SharePoint プロジェクト項目を追加します。 、展開前に追加し、SharePoint の機能を変更する SharePoint プロジェクト項目を削除することができます。  
@@ -33,17 +33,17 @@ ms.locfileid: "36756247"
   
 #### <a name="to-add-sharepoint-project-items-with-the-feature-designer"></a>フィーチャーのデザイナーでの SharePoint プロジェクト アイテムを追加するには  
   
-1.  フィーチャー デザイナーを開きます。  
+1. フィーチャー デザイナーを開きます。  
   
-     詳細については、次を参照してください。[方法: SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)します。  
+    詳細については、次を参照してください。[方法: SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)します。  
   
-2.  1 つまたは複数の項目を追加、**ソリューション内の項目**の一覧を表示、**フィーチャー内の項目**次の手順の 1 つ以上を実行することによってリスト。  
+2. 1 つまたは複数の項目を追加、**ソリューション内の項目**の一覧を表示、**フィーチャー内の項目**次の手順の 1 つ以上を実行することによってリスト。  
   
-    -   追加する各項目をダブルクリックします。  
+   - 追加する各項目をダブルクリックします。  
   
-    -   追加、および選択する項目を選択して、**追加**(>) ボタンをクリックします。  
+   - 追加、および選択する項目を選択して、**追加**(>) ボタンをクリックします。  
   
-    -   選択、**すべて追加**ボタン (>>)。  
+   - 選択、**すべて追加**ボタン (>>)。  
   
      SharePoint プロジェクトの項目に表示される、**フィーチャー内の項目**一覧。  
   

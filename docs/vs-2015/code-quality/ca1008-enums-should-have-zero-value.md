@@ -1,7 +1,7 @@
 ---
 title: 'CA1008: 列挙がゼロの値 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 4fd875310e8dcbaf055f48c4fc1178beb9897edc
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 69e60b0f2ee8106b04507722f1b3094e1bbdbbc8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589617"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874827"
 ---
 # <a name="ca1008-enums-should-have-zero-value"></a>CA1008: Enums は 0 値を含んでいなければなりません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA1008: 列挙値 0 が](https://docs.microsoft.com/visualstudio/code-quality/ca1008-enums-should-have-zero-value)します。
 
 |||
 |-|-|

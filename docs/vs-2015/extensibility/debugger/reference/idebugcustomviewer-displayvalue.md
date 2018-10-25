@@ -1,7 +1,7 @@
 ---
 title: IDebugCustomViewer::DisplayValue |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 7a538248-5ced-450e-97cd-13fabe35fb1c
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d75ff31ef9ba0ba1badad5cd298b0f8f7220541e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a96184b993a9ff2350e6424149ee3f585fbd2330
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535041"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49865025"
 ---
 # <a name="idebugcustomviewerdisplayvalue"></a>IDebugCustomViewer::DisplayValue
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugCustomViewer::DisplayValue](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugcustomviewer-displayvalue)します。  
-  
 このメソッドは、指定した値を表示します。  
   
 ## <a name="syntax"></a>構文  
@@ -59,7 +57,7 @@ int DisplayValue(
  [in]1 つ以上の種類をサポートしているカスタム ビューアーの ID。  
   
  `pHostServices`  
- [in]予約されています。 常に設定を null にします。  
+ [in] 予約されています。 常に設定を null にします。  
   
  `pDebugProperty`  
  [in]表示される値を取得するために使用するインターフェイスです。  

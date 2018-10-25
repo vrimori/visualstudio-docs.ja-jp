@@ -1,7 +1,7 @@
 ---
 title: 'クイック スタート: テスト エクスプローラーによるテスト駆動開発 | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 5161b533-2127-4172-b473-d4ffc76ff05b
 caps.latest.revision: 17
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: c2d55dde85bd5a1b18d4424515ef58e7c4c3273f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a67f4f79688cb4cdbe482c90cd93b784349d748a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537902"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831693"
 ---
 # <a name="quick-start-test-driven-development-with-test-explorer"></a>クイック スタート: テスト エクスプローラーによるテスト駆動開発
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[クイック スタート: テスト エクスプ ローラーによるテスト駆動開発](https://docs.microsoft.com/visualstudio/test/quick-start-test-driven-development-with-test-explorer)します。  
-  
 変更を繰り返して段階的に開発を行ううえで、コードの正しい動作を維持するには、単体テストを作成することをお勧めします。 サード パーティ製を含めていくつかのフレームワークを単体テストの記述に使用できます。 一部のテスト フレームワークは、別々の言語またはプラットフォームでのテストに特化されています。 テスト エクスプローラーは、1 つのインターフェイスで、どのフレームワークでの単体テストにも対応します。 最も一般的に使用されるフレームワーク用にアダプターが用意されており、他のフレームワーク用に独自のアダプターを作成することもできます。  
   
  テスト エクスプローラーは、Visual Studio の以前のエディションにあった単体テスト ウィンドウに代わる機能です。 これには次のような利点があります。  
@@ -40,33 +38,33 @@ ms.locfileid: "47537902"
   
 #### <a name="to-run-unit-tests-by-using-test-explorer"></a>テスト エクスプローラーを使用して単体テストを実行するには  
   
-1.  任意のテスト フレームワークを使用して単体テストを作成します。  
+1. 任意のテスト フレームワークを使用して単体テストを作成します。  
   
-     たとえば、MSTest フレームワークを使用するテストを作成するには:  
+    たとえば、MSTest フレームワークを使用するテストを作成するには:  
   
-    1.  テスト プロジェクトを作成します。  
+   1.  テスト プロジェクトを作成します。  
   
-         **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual Basic]**、 **[Visual C#]**、または **[Visual C++]** を展開し、 **[テスト]** をクリックします。  
+        **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual Basic]**、 **[Visual C#]**、または **[Visual C++]** を展開し、 **[テスト]** をクリックします。  
   
-         **[単体テスト プロジェクト]** を選択します。  
+        **[単体テスト プロジェクト]** を選択します。  
   
-    2.  各単体テストをメソッドとして記述します。 各テスト メソッドにプレフィックスとして `[TestMethod]` 属性を付けます。  
+   2.  各単体テストをメソッドとして記述します。 各テスト メソッドにプレフィックスとして `[TestMethod]` 属性を付けます。  
   
-2.  個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute-parallelicon-small.png "UTE_parallelicon-small") トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。  
+2. 個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute-parallelicon-small.png "UTE_parallelicon-small") トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。  
   
-3.  メニュー バーで、 **[テスト]**、 **[単体テストの実行]**、 **[すべてのテスト]** の順にクリックします。  
+3. メニュー バーで、 **[テスト]**、 **[単体テストの実行]**、 **[すべてのテスト]** の順にクリックします。  
   
-     ソリューションがビルドされ、テストが実行されます。  
+    ソリューションがビルドされ、テストが実行されます。  
   
-     テスト エクスプローラーが開き、結果の概要が表示されます。  
+    テスト エクスプローラーが開き、結果の概要が表示されます。  
   
- **テストの一覧を表示するには:** 任意のカテゴリで、 **[すべて表示]** をクリックします。  
+   **テストの一覧を表示するには:** 任意のカテゴリで、 **[すべて表示]** をクリックします。  
   
- **テスト結果の詳細を表示するには:** 例外メッセージなどの詳細を詳細ペインに表示するには、テスト エクスプローラーでテストを選択します。  
+   **テスト結果の詳細を表示するには:** 例外メッセージなどの詳細を詳細ペインに表示するには、テスト エクスプローラーでテストを選択します。  
   
- **テストのコードに移動するには:** テスト エクスプローラーでテストをダブルクリックするか、ショートカット メニューの **[テストを開く]** をクリックします。  
+   **テストのコードに移動するには:** テスト エクスプローラーでテストをダブルクリックするか、ショートカット メニューの **[テストを開く]** をクリックします。  
   
- **テストをデバッグするには:** 1 つ以上のテストを選択し、ショートカット メニューの **[選択したテストのデバッグ]** をクリックします。  
+   **テストをデバッグするには:** 1 つ以上のテストを選択し、ショートカット メニューの **[選択したテストのデバッグ]** をクリックします。  
   
 > [!IMPORTANT]
 >  最新のテスト実行の結果が表示されます。 色分けされた結果バーに表示されるのは、実行されたテストの結果のみです。 たとえば、複数のテストを実行してそのいくつかに失敗し、次に成功したテストのみを実行した場合は、結果バーには緑色のみが表示されます。  
@@ -79,61 +77,61 @@ ms.locfileid: "47537902"
   
 #### <a name="creating-the-test-and-method"></a>テストとメソッドを作成する  
   
-1.  Visual C# クラス ライブラリ プロジェクトを作成します。 このプロジェクトには、提供するコードを含めます。 この例では、 `MyMath`という名前が付いています。  
+1. Visual C# クラス ライブラリ プロジェクトを作成します。 このプロジェクトには、提供するコードを含めます。 この例では、 `MyMath`という名前が付いています。  
   
-2.  テスト プロジェクトを作成します。  
+2. テスト プロジェクトを作成します。  
   
-    -   **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual C#]**、 **[テスト]** 、 **[単体テスト プロジェクト]** の順にクリックします。  
+   -   **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual C#]**、 **[テスト]** 、 **[単体テスト プロジェクト]** の順にクリックします。  
   
-         ![新しいコードとテスト プロジェクト](../test/media/unittestexplorerwalk1.png "UnitTestExplorerWalk1")  
+        ![新しいコードとテスト プロジェクト](../test/media/unittestexplorerwalk1.png "UnitTestExplorerWalk1")  
   
-3.  基本的なテスト メソッドを記述します。 特定の入力に対して生じた結果を確認します。  
+3. 基本的なテスト メソッドを記述します。 特定の入力に対して生じた結果を確認します。  
   
-    ```csharp  
+   ```csharp  
   
-    [TestMethod]  
-    public void BasicRooterTest()  
-    {  
-      // Create an instance to test:  
-      Rooter rooter = new Rooter();  
-      // Define a test input and output value:  
-      double expectedResult = 2.0;  
-      double input = expectedResult * expectedResult;  
-      // Run the method under test:  
-      double actualResult = rooter.SquareRoot(input);  
-      // Verify the result:  
-      Assert.AreEqual(expectedResult, actualResult,  
-          delta: expectedResult / 100);  
-    }  
-    ```  
+   [TestMethod]  
+   public void BasicRooterTest()  
+   {  
+     // Create an instance to test:  
+     Rooter rooter = new Rooter();  
+     // Define a test input and output value:  
+     double expectedResult = 2.0;  
+     double input = expectedResult * expectedResult;  
+     // Run the method under test:  
+     double actualResult = rooter.SquareRoot(input);  
+     // Verify the result:  
+     Assert.AreEqual(expectedResult, actualResult,  
+         delta: expectedResult / 100);  
+   }  
+   ```  
   
-4.  テストからメソッドを生成します。  
+4. テストからメソッドを生成します。  
   
-    1.  `Rooter`にカーソルを置き、ショートカット メニューで **[生成]**、 **[新しい型]** の順にクリックします。  
+   1.  `Rooter`にカーソルを置き、ショートカット メニューで **[生成]**、 **[新しい型]** の順にクリックします。  
   
-    2.  **[新しい型の生成]** ダイアログ ボックスで、 **[プロジェクト]** をクラス ライブラリ プロジェクトに設定します。 この例では、 `MyMath`です。  
+   2.  **[新しい型の生成]** ダイアログ ボックスで、 **[プロジェクト]** をクラス ライブラリ プロジェクトに設定します。 この例では、 `MyMath`です。  
   
-    3.  `SquareRoot`にカーソルを置き、ショートカット メニューで **[生成]**、 **[メソッド スタブ]** の順にクリックします。  
+   3.  `SquareRoot`にカーソルを置き、ショートカット メニューで **[生成]**、 **[メソッド スタブ]** の順にクリックします。  
   
-5.  単体テストを実行します。  
+5. 単体テストを実行します。  
   
-    1.  **[テスト]** メニューで、 **[単体テストの実行]**、 **[すべてのテスト]** の順にクリックします。  
+   1.  **[テスト]** メニューで、 **[単体テストの実行]**、 **[すべてのテスト]** の順にクリックします。  
   
-         ソリューションがビルドされ、実行されます。  
+        ソリューションがビルドされ、実行されます。  
   
-         テスト エクスプローラーが開き、結果が表示されます。  
+        テスト エクスプローラーが開き、結果が表示されます。  
   
-         **[失敗したテスト]** の下にテストが表示されます。  
+        **[失敗したテスト]** の下にテストが表示されます。  
   
-6.  テストの名前を選択します。  
+6. テストの名前を選択します。  
   
-     テストの詳細は、テスト エクスプローラーの下部に表示されます。  
+    テストの詳細は、テスト エクスプローラーの下部に表示されます。  
   
-7.  テストに失敗した箇所を確認するには、 **[スタック トレース]** の下に表示されている項目を選択します。  
+7. テストに失敗した箇所を確認するには、 **[スタック トレース]** の下に表示されている項目を選択します。  
   
- ![テストの失敗を示す単体テスト エクスプローラー。](../test/media/unittestexplorerwalkthrough2.png "UnitTestExplorerWalkthrough2")  
+   ![テストの失敗を示す単体テスト エクスプローラー。](../test/media/unittestexplorerwalkthrough2.png "UnitTestExplorerWalkthrough2")  
   
- この時点で、テストとスタブが作成されています。テストに合格するには、これらを修正する必要があります。  
+   この時点で、テストとスタブが作成されています。テストに合格するには、これらを修正する必要があります。  
   
 #### <a name="after-every-change-make-all-the-tests-pass"></a>各変更後にすべてのテストに合格する  
   

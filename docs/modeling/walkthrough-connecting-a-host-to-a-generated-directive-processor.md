@@ -15,12 +15,12 @@ ms.technology: vs-ide-modeling
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: b6a89c76cf1f292ca99664e0e75c4070bdddaa54
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 5b5346f47d3dcb836a0e8eeef7d9b21bd55ccd07
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859940"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896238"
 ---
 # <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>チュートリアル: 生成済みディレクティブ プロセッサにホストを接続する
 
@@ -33,21 +33,22 @@ ms.locfileid: "47859940"
 
 このチュートリアルでは、次のタスクについて説明します。
 
--   使用して[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]ドメイン モデルに基づいているディレクティブ プロセッサを生成します。
+- 使用して[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]ドメイン モデルに基づいているディレクティブ プロセッサを生成します。
 
--   生成されたディレクティブ プロセッサへのカスタム テキスト テンプレート ホストを接続します。
+- 生成されたディレクティブ プロセッサへのカスタム テキスト テンプレート ホストを接続します。
 
--   生成されたディレクティブ プロセッサを搭載したカスタム ホストをテストします。
+- 生成されたディレクティブ プロセッサを搭載したカスタム ホストをテストします。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 DSL を定義するには、以下のコンポーネントをインストールしておく必要があります。
 
-|||
+
+| | |
 |-|-|
-|Visual Studio|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580)|
-|Visual Studio Visualization and Modeling SDK||
+| Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579) |
+| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580) |
+| Visual Studio Visualization and Modeling SDK | |
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
@@ -57,34 +58,34 @@ DSL を定義するには、以下のコンポーネントをインストール�
 
 このチュートリアルでは、ドメイン固有言語デザイナー ウィザードを使用してソリューション DSLMinimalTest のドメイン固有言語を作成します。
 
-1.  次の特性を持つドメイン固有言語ソリューションを作成します。
+1. 次の特性を持つドメイン固有言語ソリューションを作成します。
 
-    -   名前: DSLMinimalTest
+   -   名前: DSLMinimalTest
 
-    -   ソリューション テンプレート: 最小言語
+   -   ソリューション テンプレート: 最小言語
 
-    -   ファイル拡張子: min
+   -   ファイル拡張子: min
 
-    -   会社名: Fabrikam
+   -   会社名: Fabrikam
 
    ドメイン固有言語ソリューションを作成する方法の詳細については、次を参照してください。[方法: ドメイン固有言語ソリューションを作成](../modeling/how-to-create-a-domain-specific-language-solution.md)です。
 
-2.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
+2. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
-    > [!IMPORTANT]
-    > この手順では、ディレクティブ プロセッサを生成し、レジストリでは、キーを追加します。
+   > [!IMPORTANT]
+   > この手順では、ディレクティブ プロセッサを生成し、レジストリでは、キーを追加します。
 
-3.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。
+3. **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。
 
-     Visual Studio の 2 番目のインスタンスを開きます。
+    Visual Studio の 2 番目のインスタンスを開きます。
 
-4.  実験用のビルドで**ソリューション エクスプ ローラー**、ファイルをダブルクリックして**sample.min**します。
+4. 実験用のビルドで**ソリューション エクスプ ローラー**、ファイルをダブルクリックして**sample.min**します。
 
-     ファイルがデザイナーで開きます。 モデルが 2 つの要素、ExampleElement1 と ExampleElement2、およびそれらの間のリンクを持つことに注意してください。
+    ファイルがデザイナーで開きます。 モデルが 2 つの要素、ExampleElement1 と ExampleElement2、およびそれらの間のリンクを持つことに注意してください。
 
-5.  Visual Studio の 2 番目のインスタンスを閉じます。
+5. Visual Studio の 2 番目のインスタンスを閉じます。
 
-6.  ソリューションを保存し、ドメイン固有言語デザイナーを閉じます。
+6. ソリューションを保存し、ドメイン固有言語デザイナーを閉じます。
 
 ## <a name="connect-a-custom-text-template-host-to-a-directive-processor"></a>ディレクティブ プロセッサへのカスタム テキスト テンプレート ホストを接続します。
 

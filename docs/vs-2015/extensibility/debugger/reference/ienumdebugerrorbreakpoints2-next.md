@@ -1,7 +1,7 @@
 ---
 title: IEnumDebugErrorBreakpoints2::Next |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 6a3dee11-5267-4d77-9e28-6a38413ba70b
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 593416b1cbf16f3c2bd4fc4ca3fbe4f7e4ad9f3d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 398f4255eae823a12b8ac8f0fb5f4ed084cbb1e3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539267"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907756"
 ---
 # <a name="ienumdebugerrorbreakpoints2next"></a>IEnumDebugErrorBreakpoints2::Next
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IEnumDebugErrorBreakpoints2::Next](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ienumdebugerrorbreakpoints2-next)します。  
-  
 列挙体から次の要素のセットを返します。  
   
 ## <a name="syntax"></a>構文  

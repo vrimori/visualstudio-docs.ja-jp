@@ -1,7 +1,7 @@
 ---
 title: IDebugProcess3::GetEngineFilter |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: ccb7ecb0-f189-4e80-b5b2-221a095e01f5
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9e7e2a2d8bcd6280483ef13009f8fcf0db1fdcc3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d1cd55f39d54bdbd7b01889672eaf86b6be063e1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544993"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49848463"
 ---
 # <a name="idebugprocess3getenginefilter"></a>IDebugProcess3::GetEngineFilter
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugProcess3::GetEngineFilter](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugprocess3-getenginefilter)します。  
-  
 使用可能なデバッグ エンジンの一意の識別子の配列を取得します。  
   
 ## <a name="syntax"></a>構文  

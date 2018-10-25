@@ -1,7 +1,7 @@
 ---
 title: SccProperties 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 1bed38c9-73d2-4474-9717-f9dc26a89cbe
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7bb8fd8172468dc1fc4d60d0f5e36ee7b4f9a588
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 020d30c9c81a188e3104928a52e58d7319523338
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535338"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914206"
 ---
 # <a name="sccproperties-function"></a>SccProperties 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[SccProperties 関数](https://docs.microsoft.com/visualstudio/extensibility/sccproperties-function)します。  
-  
 この関数は、ファイルまたはプロジェクトのソース管理のプロパティを表示します。  
   
 ## <a name="syntax"></a>構文  

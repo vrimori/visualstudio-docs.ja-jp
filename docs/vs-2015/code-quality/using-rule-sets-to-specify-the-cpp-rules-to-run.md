@@ -1,7 +1,7 @@
 ---
 title: 実行対象の C++ 規則を指定する設定ルールを使用して |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9466bf421ca5844d3d7083528fb1a27e3c488937
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d2b3aed9e2504011a61fe13acdf4a836cb41f8df
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534834"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49859669"
 ---
 # <a name="using-rule-sets-to-specify-the-c-rules-to-run"></a>規則セットを使用した実行対象の C++ 規則の指定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ルール セットを実行するように C++ 規則の指定を使用して](https://docs.microsoft.com/visualstudio/code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run)します。  
-  
 [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)]と[!INCLUDE[vsUltShort](../includes/vsultshort-md.md)]、作成して、カスタムの変更*ルール セット*コード分析に関連付けられている特定のプロジェクトのニーズを満たします。 カスタムの C++ 規則を作成するのには、C と C++ プロジェクトが Visual Studio IDE で開く必要があります。 規則セット エディターで、標準の規則セットを開くと、追加または特定の規則を削除し、必要に応じて変更コード分析ルールに違反したことを決定するときに発生するアクション。  
   
  新規のカスタム規則セットを作成する場合は、新しいファイル名を使用して保存します。 作成したカスタム規則セットは、自動的にプロジェクトに割り当てられます。  
@@ -34,19 +32,19 @@ ms.locfileid: "47534834"
   
 #### <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>既存の 1 つの規則セットからカスタム規則を作成するには  
   
-1.  ソリューション エクスプ ローラーで プロジェクトのショートカット メニューを開き、**プロパティ**します。  
+1. ソリューション エクスプ ローラーで プロジェクトのショートカット メニューを開き、**プロパティ**します。  
   
-2.  **プロパティ** タブで、選択**コード分析**します。  
+2. **プロパティ** タブで、選択**コード分析**します。  
   
-3.  **ルール セットの**ドロップダウン リストで、次のいずれかの操作を行います。  
+3. **ルール セットの**ドロップダウン リストで、次のいずれかの操作を行います。  
   
-    -   規則セットをカスタマイズするを選択します。  
+   - 規則セットをカスタマイズするを選択します。  
   
      \- または -  
   
-    -   選択 **\<[参照...] >** を既存の規則セットを指定されていないリスト。  
+   - 選択 **\<[参照...] >** を既存の規則セットを指定されていないリスト。  
   
-4.  選択**オープン**ルール セット エディターで、ルールを表示します。  
+4. 選択**オープン**ルール セット エディターで、ルールを表示します。  
   
 #### <a name="to-modify-a-rule-set-in-the-rule-set-editor"></a>規則セット エディターで規則セットを変更するには  
   

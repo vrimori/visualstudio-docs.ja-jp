@@ -1,7 +1,7 @@
 ---
 title: コンテンツ モデル ビュー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0f2e73749e76d4449acc2a3debbec6ba8de416dc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a535a97835491f4a109ed0893d20a4330b218801
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546701"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860306"
 ---
 # <a name="content-model-view"></a>コンテンツ モデル ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コンテンツ モデル ビュー](https://docs.microsoft.com/visualstudio/xml-tools/content-model-view)します。  
-  
   
 コンテンツ モデル ビューには、単純型、複合型、要素、モデル グループ、属性、属性グループなど、ローカル スキーマ ノードとグローバル スキーマ ノード、およびそのコンポーネントがグラフィック表示されます。 XML のコメントおよび処理命令は、コンテンツ モデル ビューには表示できません。 コンテンツ モデル ビューには、2 つのパネルが含まれています。**ワークスペース**パネル内のノードのリストを含む、 [XML スキーマ デザイナーのワークスペース](../xml-tools/xml-schema-designer-workspace.md)、およびスキーマのコンテンツ モデルを表示するデザイン サーフェイス選択したノード、**ワークスペース**パネル。 さらにコンテンツ モデル ビューには、XML スキーマ デザイナーのツール バーおよび階層リンク バーがあります。  
   
@@ -112,11 +110,11 @@ ms.locfileid: "47546701"
   
  ズームは、次の方法で制御できます。  
   
--   マウス カーソルをコンテンツ モデル ビューのサーフェイスに合わせた状態で、Ctrl キーを押しながらマウスのホイールを回転させる。  
+- マウス カーソルをコンテンツ モデル ビューのサーフェイスに合わせた状態で、Ctrl キーを押しながらマウスのホイールを回転させる。  
   
--   スライダー コントロールを使用する。 スライダーは現在のズーム レベルを示します。  
+- スライダー コントロールを使用する。 スライダーは現在のズーム レベルを示します。  
   
- ズームのスライダーは、スライダーを選択したり、その上にカーソルを合わせたり、Ctrl キーを押しながらマウスのホイールを回転させてズームさせるときは不透明になります。それ以外の場合は透明です。  
+  ズームのスライダーは、スライダーを選択したり、その上にカーソルを合わせたり、Ctrl キーを押しながらマウスのホイールを回転させてズームさせるときは不透明になります。それ以外の場合は透明です。  
   
 ## <a name="xml-editor-integration"></a>XML エディターとの統合  
  コンテキスト メニューを使用することで、XSD デザイナーと XML エディターを切り替えることができます。  

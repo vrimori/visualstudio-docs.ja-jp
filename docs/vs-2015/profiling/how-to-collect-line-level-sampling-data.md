@@ -1,7 +1,7 @@
 ---
 title: '方法: 行レベルのサンプリング データを収集する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 27
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5bd57893476ba7654a37fc44d1681adc3264f92b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cca327ffe8dbf260915b5eaa143bef6bb631e690
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539351"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893417"
 ---
 # <a name="how-to-collect-line-level-sampling-data"></a>方法 : 行レベルのサンプリング データを収集する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 行レベルのサンプリング データの収集](https://docs.microsoft.com/visualstudio/profiling/how-to-collect-line-level-sampling-data)します。  
-  
 行レベルのサンプリングとは、排他サンプル数が高い関数など、プロセッサ集中型の関数のコードで、プロセッサが大部分の時間を費やす必要のある場所を特定するためのプロファイラーの機能です。  
   
 ## <a name="overview"></a>概要  
@@ -40,21 +38,21 @@ ms.locfileid: "47539351"
 ### <a name="available-data"></a>使用できるデータ  
  使用できる行レベルのサンプリング データには次の情報が含まれます。  
   
--   関数名。  
+- 関数名。  
   
--   関数アドレス。  
+- 関数アドレス。  
   
--   行の開始情報 - サンプリングされるコードの行番号。  
+- 行の開始情報 - サンプリングされるコードの行番号。  
   
--   行の終了情報 - ソースの終了行番号。 これは "行の開始情報" のデータと同じです (1 つのプログラム文が複数のソース コード行にまたがっている場合を除く)。  
+- 行の終了情報 - ソースの終了行番号。 これは "行の開始情報" のデータと同じです (1 つのプログラム文が複数のソース コード行にまたがっている場合を除く)。  
   
--   文字の開始情報 - 集約サンプルの開始列。 通常、これは 0 です (1 つの行に複数のプログラム文が含まれる場合を除く)。  
+- 文字の開始情報 - 集約サンプルの開始列。 通常、これは 0 です (1 つの行に複数のプログラム文が含まれる場合を除く)。  
   
--   文字の終了情報 - 集約サンプルの終了列。  
+- 文字の終了情報 - 集約サンプルの終了列。  
   
--   IP - 集約サンプルが取得されたアドレス (IP ビューのみ)。  
+- IP - 集約サンプルが取得されたアドレス (IP ビューのみ)。  
   
- **[モジュール]** ビューでは、関数に行レベルの統計が含まれている場合、統計は各関数の下に入れ子になっています。 さらに、各行で入れ子になっている IP レベルの統計が表示されます。  
+  **[モジュール]** ビューでは、関数に行レベルの統計が含まれている場合、統計は各関数の下に入れ子になっています。 さらに、各行で入れ子になっている IP レベルの統計が表示されます。  
   
 ### <a name="turn-off-line-level-sampling-for-managed-code"></a>マネージド コードの行レベルのサンプリングの無効化  
  既定では、行レベルのサンプリングは有効になっています。 マネージド コードの行レベルのデータ収集を無効にするには、次のいずれかを実行します。  

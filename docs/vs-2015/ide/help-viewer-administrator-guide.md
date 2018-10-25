@@ -1,7 +1,7 @@
 ---
 title: ヘルプ ビューアーの管理者ガイド | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 97d28d0651be2fd04e283b05e5a9a0e81997c338
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f470c55b08cc559e481ed75e962fda4f0e625a5c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533278"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49871291"
 ---
 # <a name="help-viewer-administrator-guide"></a>ヘルプ ビューアー の管理者ガイド
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ヘルプ ビューアーの管理者ガイド](https://docs.microsoft.com/visualstudio/ide/help-viewer-administrator-guide)します。  
-  
 ヘルプ ビューアーを使用すると、インターネット アクセスの有無に関係なく、ネットワーク環境のローカル ヘルプのインストールを管理できます。 ローカル ヘルプ コンテンツは、コンピューターごとに構成されます。 既定では、ユーザーがローカル ヘルプのインストールを更新するには、そのユーザーに管理者権限が必要です。  
   
  クライアントがインターネットにアクセスできるネットワーク環境では、ヘルプ ビューアーによって、コマンド ライン スクリプトを使用してインターネットからローカル ヘルプ コンテンツを配置できるようになります。  
@@ -49,18 +47,18 @@ ms.locfileid: "47533278"
   
  要件:  
   
--   クライアント コンピューターは、インターネットにアクセスできる必要があります。  
+- クライアント コンピューターは、インターネットにアクセスできる必要があります。  
   
--   インストール後にユーザーがローカル ヘルプ コンテンツを更新、追加、または削除するには、そのユーザーに管理者権限が必要です。  
+- インストール後にユーザーがローカル ヘルプ コンテンツを更新、追加、または削除するには、そのユーザーに管理者権限が必要です。  
   
- 注意事項:  
+  注意事項:  
   
--   ヘルプの既定のソースはオンラインのままです。  
+- ヘルプの既定のソースはオンラインのままです。  
   
-    > [!TIP]
-    >  レジストリ キー HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\14.0\help\UseOnlineHelp を変更することで、ヘルプの既定のソースを変更できます。 詳細については、「[ヘルプ コンテンツ マネージャーのオーバーライド](../ide/help-content-manager-overrides.md)」を参照してください。  
+  > [!TIP]
+  >  レジストリ キー HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\14.0\help\UseOnlineHelp を変更することで、ヘルプの既定のソースを変更できます。 詳細については、「[ヘルプ コンテンツ マネージャーのオーバーライド](../ide/help-content-manager-overrides.md)」を参照してください。  
   
--   Visual Studio の最初の起動時には、基本ヘルプ コンテンツをインストールするよう求めるメッセージが表示されます。 レジストリ キー HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0\Help\DisableFirstRunHelpSelection を変更することで、このメッセージを無効にできます。  
+- Visual Studio の最初の起動時には、基本ヘルプ コンテンツをインストールするよう求めるメッセージが表示されます。 レジストリ キー HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0\Help\DisableFirstRunHelpSelection を変更することで、このメッセージを無効にできます。  
   
 ### <a name="example"></a>例  
  次の例では、クライアント コンピューターに Visual Studio の英語のコンテンツをインストールします。  
@@ -80,47 +78,47 @@ ms.locfileid: "47533278"
   
  要件:  
   
--   最初にコンテンツをインストールするコンピューターでは、インターネットにアクセスできる必要があります。  
+- 最初にコンテンツをインストールするコンピューターでは、インターネットにアクセスできる必要があります。  
   
--   インストール後にユーザーがローカル ヘルプ コンテンツを更新、追加、または削除するには、そのユーザーに管理者権限が必要です。  
+- インストール後にユーザーがローカル ヘルプ コンテンツを更新、追加、または削除するには、そのユーザーに管理者権限が必要です。  
   
-    > [!TIP]
-    >  ユーザーに管理者権限がない場合は、ヘルプ ビューアーで [コンテンツの管理] タブを無効にすることをお勧めします。 詳細については、「[ヘルプ コンテンツ マネージャーのオーバーライド](../ide/help-content-manager-overrides.md)」を参照してください。  
+  > [!TIP]
+  >  ユーザーに管理者権限がない場合は、ヘルプ ビューアーで [コンテンツの管理] タブを無効にすることをお勧めします。 詳細については、「[ヘルプ コンテンツ マネージャーのオーバーライド](../ide/help-content-manager-overrides.md)」を参照してください。  
   
- 注意事項:  
+  注意事項:  
   
--   ユーザーに管理者権限がない場合は、ヘルプ ビューアーで [コンテンツの管理] タブを無効にすることをお勧めします。 詳細については、「[ヘルプ コンテンツ マネージャーのオーバーライド](../ide/help-content-manager-overrides.md)」を参照してください。  
+- ユーザーに管理者権限がない場合は、ヘルプ ビューアーで [コンテンツの管理] タブを無効にすることをお勧めします。 詳細については、「[ヘルプ コンテンツ マネージャーのオーバーライド](../ide/help-content-manager-overrides.md)」を参照してください。  
   
--   ヘルプの既定のソースはオンラインのままです。  
+- ヘルプの既定のソースはオンラインのままです。  
   
--   Visual Studio の最初の起動時には、基本ヘルプ コンテンツをインストールするよう求めるメッセージが表示されます。 詳細については、「[ヘルプ コンテンツ マネージャーのオーバーライド](../ide/help-content-manager-overrides.md)」を参照してください。  
+- Visual Studio の最初の起動時には、基本ヘルプ コンテンツをインストールするよう求めるメッセージが表示されます。 詳細については、「[ヘルプ コンテンツ マネージャーのオーバーライド](../ide/help-content-manager-overrides.md)」を参照してください。  
   
 ### <a name="create-the-content-set"></a>コンテンツ セットを作成する  
  基本コンテンツ セットを作成する前に、ターゲット コンピューターで Visual Studio のすべてのローカル コンテンツをアンインストールする必要があります。  
   
 ##### <a name="to-uninstall-local-help"></a>ローカル ヘルプをアンインストールするには  
   
-1.  ヘルプ ビューアーで、**[コンテンツの管理]** タブを選択します。  
+1. ヘルプ ビューアーで、**[コンテンツの管理]** タブを選択します。  
   
-2.  **利用可能なドキュメント**、Visual Studio のドキュメント セットに移動します。  
+2. **利用可能なドキュメント**、Visual Studio のドキュメント セットに移動します。  
   
-3.  各サブ項目の横の **[削除]** を選択します。  
+3. 各サブ項目の横の **[削除]** を選択します。  
   
-4.  選択**開始**をアンインストールするには  
+4. 選択**開始**をアンインストールするには  
   
-5.  参照する*n*: \ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio12 フォルダーにファイル catalogType.xml にはのみが含まれていることを確認します。  
+5. 参照する*n*: \ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio12 フォルダーにファイル catalogType.xml にはのみが含まれていることを確認します。  
   
- 前にインストールされた Visual Studio のローカル ヘルプ コンテンツをすべて削除したら、基本コンテンツ セットをダウンロードする準備が整いました。  
+   前にインストールされた Visual Studio のローカル ヘルプ コンテンツをすべて削除したら、基本コンテンツ セットをダウンロードする準備が整いました。  
   
 ##### <a name="to-download-the-content"></a>コンテンツをダウンロードするには  
   
-1.  ヘルプ ビューアーで、**[コンテンツの管理]** タブを選択します。  
+1. ヘルプ ビューアーで、**[コンテンツの管理]** タブを選択します。  
   
-2.  **利用可能なドキュメント**、クリックしてダウンロードするドキュメント セットに移動**追加**します。  
+2. **利用可能なドキュメント**、クリックしてダウンロードするドキュメント セットに移動**追加**します。  
   
-3.  **[開始]** を選択します。  
+3. **[開始]** を選択します。  
   
- 次に、クライアント コンピューターに配置できるように、コンテンツをパッケージ化する必要があります。  
+   次に、クライアント コンピューターに配置できるように、コンテンツをパッケージ化する必要があります。  
   
 ##### <a name="to-package-the-content"></a>コンテンツをパッケージ化するには  
   

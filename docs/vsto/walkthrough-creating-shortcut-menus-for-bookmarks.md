@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8153f0120259eec8ad284b0717e58be750e3b99d
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: ff261fd6032f3c666dfa3d745508586ffede6504
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38783843"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49884083"
 ---
 # <a name="walkthrough-create-shortcut-menus-for-bookmarks"></a>チュートリアル: ブックマークのショートカット メニューを作成します。
   このチュートリアルでは、Word のドキュメント レベルのカスタマイズを使用して <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールのショートカット メニューを作成する方法を示します。 ユーザーがブックマーク内のテキストを右クリックすると、ショートカット メニューにテキストの書式設定オプションが表示されます。  
@@ -32,17 +32,17 @@ ms.locfileid: "38783843"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   [プロジェクトを作成する](#BKMK_CreateProject)します。  
+- [プロジェクトを作成する](#BKMK_CreateProject)します。  
   
--   [文書にテキストとブックマークを追加](#BKMK_addtextandbookmarks)します。  
+- [文書にテキストとブックマークを追加](#BKMK_addtextandbookmarks)します。  
   
--   [ショートカット メニューにコマンドを追加](#BKMK_AddCmndsShortMenu)します。  
+- [ショートカット メニューにコマンドを追加](#BKMK_AddCmndsShortMenu)します。  
   
--   [ブックマークにテキストの書式設定](#BKMK_formattextbkmk)します。  
+- [ブックマークにテキストの書式設定](#BKMK_formattextbkmk)します。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -54,7 +54,7 @@ ms.locfileid: "38783843"
   
 ### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
--   名前を持つ Word 文書プロジェクトを作成**My Bookmark Shortcut Menu**します。 ウィザードで、次のように選択します。**新しい文書を作成**です。 詳細については、次を参照してください。[方法: Visual Studio でプロジェクトを作成する Office](../vsto/how-to-create-office-projects-in-visual-studio.md)します。  
+-   名前を持つ Word 文書プロジェクトを作成**My Bookmark Shortcut Menu**します。 ウィザードで、次のように選択します。**新しい文書を作成**です。 詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
   
      デザイナーで新しい Word 文書を開き、 **My Bookmark Shortcut Menu**プロジェクトを**ソリューション エクスプ ローラー**します。  
   
@@ -69,22 +69,22 @@ ms.locfileid: "38783843"
   
 ### <a name="to-add-a-bookmark-control-to-your-document"></a>ドキュメントにブックマーク コントロールを追加するには  
   
-1.  **ツールボックス**から、 **Word コントロール** タブで、ドラッグ、<xref:Microsoft.Office.Tools.Word.Bookmark>コントロールをドキュメント。  
+1. **ツールボックス**から、 **Word コントロール** タブで、ドラッグ、<xref:Microsoft.Office.Tools.Word.Bookmark>コントロールをドキュメント。  
   
-     **ブックマーク コントロールの追加** ダイアログ ボックスが表示されます。  
+    **ブックマーク コントロールの追加** ダイアログ ボックスが表示されます。  
   
-2.  「テキストを右クリックするとショートカット メニューを作成する」単語を選択する、 をクリックし、 **OK**。  
+2. 「テキストを右クリックするとショートカット メニューを作成する」単語を選択する、 をクリックし、 **OK**。  
   
-     `bookmark1` がドキュメントに追加されます。  
+    `bookmark1` がドキュメントに追加されます。  
   
-3.  もう 1 つ追加<xref:Microsoft.Office.Tools.Word.Bookmark>「ブックマーク内のテキストを右クリックして」単語を制御します。  
+3. もう 1 つ追加<xref:Microsoft.Office.Tools.Word.Bookmark>「ブックマーク内のテキストを右クリックして」単語を制御します。  
   
-     `bookmark2` がドキュメントに追加されます。  
+    `bookmark2` がドキュメントに追加されます。  
   
-    > [!NOTE]  
-    >  両方に表示されます「テキストを右クリックして」単語`bookmark1`と`bookmark2`します。  
+   > [!NOTE]  
+   >  両方に表示されます「テキストを右クリックして」単語`bookmark1`と`bookmark2`します。  
   
- デザイン時に文書にブックマークを追加すると、<xref:Microsoft.Office.Tools.Word.Bookmark> コントロールが作成されます。 ブックマークの複数のイベントに対してプログラミングを行うことができます。 ブックマークの <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick> イベントにコードを作成することで、ユーザーがブックマーク内のテキストを右クリックしたときにショートカット メニューを表示できます。  
+   デザイン時に文書にブックマークを追加すると、<xref:Microsoft.Office.Tools.Word.Bookmark> コントロールが作成されます。 ブックマークの複数のイベントに対してプログラミングを行うことができます。 ブックマークの <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick> イベントにコードを作成することで、ユーザーがブックマーク内のテキストを右クリックしたときにショートカット メニューを表示できます。  
   
 ##  <a name="BKMK_AddCmndsShortMenu"></a> ショートカット メニューにコマンドを追加します。  
  ドキュメントを右クリックすると表示されるショートカット メニューにボタンを追加します。  

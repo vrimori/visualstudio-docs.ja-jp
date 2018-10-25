@@ -1,7 +1,7 @@
 ---
 title: ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 50
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 1c8bfd3cc23bd8c0eef09796c37f322e9e9f319f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 682ae7d410f80d3ba5e960d485c144b2f7495141
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536659"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909056"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ユニバーサル Windows プラットフォーム (UWP) アプリの開発](https://docs.microsoft.com/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)します。  
-  
   
 ユニバーサル Windows プラットフォームと 1 つの Windows コアを使用することで、電話やデスクトップなどの Windows 10 デバイスで同じアプリを実行できます。 これらのユニバーサル Windows アプリは、Visual Studio 2015 とユニバーサル Windows アプリ開発ツールを使用して作成します。  
   
@@ -41,26 +39,26 @@ ms.locfileid: "47536659"
   
  これはコントラクトとバージョンの単純なコレクションです。 これらにより、アプリを実行する対象となる場所を指定できます。 オペレーティング システムを対象とすることは、もはやありません。 今後は、1 つ以上のデバイス ファミリがアプリの対象になります。 詳しくは、この [プラットフォーム ガイド](http://msdn.microsoft.com/library/windows/apps/dn894631.aspx)をご覧ください。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ユニバーサル Windows アプリの開発ツールには、別のデバイス上のアプリの外観を確認する際に使用できるエミュレーターが付属しています。 これらのエミュレーターを使用する場合は、このソフトウェアを物理マシンにインストールする必要があります。 その物理マシンでは、Windows 8.1 (x64) Professional エディション以上が実行され、クライアント Hyper-V および第 2 レベルのアドレス変換 (SLAT) をサポートするプロセッサが搭載されている必要があります。 Visual Studio が仮想マシンにインストールされている場合は、エミュレーターを使用できません。  
   
  必要なソフトウェアの一覧を次に示します。  
   
--   [Windows 10](http://windows.microsoft.com/windows/downloads)  
+- [Windows 10](http://windows.microsoft.com/windows/downloads)  
   
--   [Visual Studio 2015](http://go.microsoft.com/fwlink/p/?LinkId=526725)。 オプション機能の一覧からユニバーサル Windows アプリ開発ツールが選択されていることを確認します。 これらのツールがないと、ユニバーサル アプリを作成することができません。  
+- [Visual Studio 2015](http://go.microsoft.com/fwlink/p/?LinkId=526725)。 オプション機能の一覧からユニバーサル Windows アプリ開発ツールが選択されていることを確認します。 これらのツールがないと、ユニバーサル アプリを作成することができません。  
   
- このソフトウェアをインストールしたら、開発用に [Windows 10 デバイスを有効にする](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx) 必要があります。 (Windows 10 デバイスごとに開発者ライセンスは必要ありません。)  
+  このソフトウェアをインストールしたら、開発用に [Windows 10 デバイスを有効にする](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx) 必要があります。 (Windows 10 デバイスごとに開発者ライセンスは必要ありません。)  
   
- **Windows 8.1 および Windows 7 のサポート**  
+  **Windows 8.1 および Windows 7 のサポート**  
   
- Windows 10 以外のプラットフォームで Visual Studio 2015 を使用してユニバーサル Windows アプリを開発する場合は、以下の制限事項があります。  
+  Windows 10 以外のプラットフォームで Visual Studio 2015 を使用してユニバーサル Windows アプリを開発する場合は、以下の制限事項があります。  
   
--   Windows 8.1: アプリをローカルで実行することはできません (リモート Windows 10 デバイスの場合のみ)。 Visual Studio でエミュレーターを使用できますが、シミュレーターを使用することはできません。  
+- Windows 8.1: アプリをローカルで実行することはできません (リモート Windows 10 デバイスの場合のみ)。 Visual Studio でエミュレーターを使用できますが、シミュレーターを使用することはできません。  
   
--   Windows 7: アプリをローカルで実行することはできません (リモート Windows 10 デバイスの場合のみ)。 Visual Studio では、エミュレーターとシミュレーターのいずれも使用することはできません。  
+- Windows 7: アプリをローカルで実行することはできません (リモート Windows 10 デバイスの場合のみ)。 Visual Studio では、エミュレーターとシミュレーターのいずれも使用することはできません。  
   
- 開発プラットフォームが Windows 10 の場合に使用できるのは、XAML デザイナーのみです。  
+  開発プラットフォームが Windows 10 の場合に使用できるのは、XAML デザイナーのみです。  
   
 ## <a name="universal-windows-apps"></a>ユニバーサル Windows アプリ  
  希望する開発言語を C#、Visual Basic、C++ または JavaScript の中から選び、 [Windows 10 デバイスを対象とするユニバーサル Windows アプリを作成します](http://msdn.microsoft.com/library/windows/apps/xaml/dn609832.aspx#target_win10)。 あるいは [この入門用ビデオ](http://channel9.msdn.com/Series/ConnectOn-Demand/229)を再生します。  

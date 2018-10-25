@@ -1,5 +1,5 @@
 ---
-title: THUNK_ORDINAL |Microsoft ドキュメント
+title: THUNK_ORDINAL |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b0701706deee68cf2dde522d48f9aa62b9a00142
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: a92e0fa81bdfc7c33e790c5022c2fbe341d632be
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31481503"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847711"
 ---
 # <a name="thunkordinal"></a>THUNK_ORDINAL
 サンクの種類を指定します。  
@@ -42,30 +42,30 @@ typedef enum THUNK_ORDINAL {
   
 ## <a name="elements"></a>Elements  
  THUNK_ORDINAL_NOTYPE  
- 標準サンクはします。  
+ 標準のサンクします。  
   
  THUNK_ORDINAL_ADJUSTOR  
- A`this`サンクを調整権限を保持します。  
+ A`this`サンクの調整権限を保持します。  
   
  THUNK_ORDINAL_VCALL  
- 仮想呼び出しサンクです。  
+ 仮想呼び出しサンクします。  
   
  THUNK_ORDINAL_PCODE  
- P コード サンクです。  
+ P コード サンクします。  
   
  THUNK_ORDINAL_LOAD  
- 遅延読み込みサンクです。  
+ 遅延読み込みのサンクします。  
   
  THUNK_ORDINAL_TRAMP_INCREMENTAL  
- 増分トランポリン サンクを (別の呼び出しを 1 つのメモリ領域から跳ね返りますトランポリン サンクを使用します)。  
+ 増分トランポリン サンクが (1 つのメモリ領域からの呼び出しを間跳ねるトランポリン サンクが使用されます)。  
   
  THUNK_ORDINAL_TRAMP_BRANCHISLAND  
- ブランチ トランポリン サンクをポイントします。  
+ 分岐ポイント トランポリン サンクします。  
   
-## <a name="remarks"></a>コメント  
- この列挙体の値への呼び出しから返される、 [idiasymbol::get_thunkordinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ この列挙体の値が呼び出しから返される、 [idiasymbol::get_thunkordinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: cvconst.h  
   
 ## <a name="see-also"></a>関連項目  

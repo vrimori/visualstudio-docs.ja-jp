@@ -1,7 +1,7 @@
 ---
 title: DEBUG_ADDRESS_UNION |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: e3d11aab-de0d-4109-b5dc-11e07e64382d
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3d33c7b81f077fe95294ead2a89a607a4b9e1a11
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5a7bc7edf46533c377857a3aae85e8dc97da8012
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534836"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49827526"
 ---
 # <a name="debugaddressunion"></a>DEBUG_ADDRESS_UNION
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[DEBUG_ADDRESS_UNION](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/debug-address-union)します。  
-  
 アドレスのさまざまな種類をについて説明します。  
   
 ## <a name="syntax"></a>構文  
@@ -140,7 +138,7 @@ namespace MyPackage
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

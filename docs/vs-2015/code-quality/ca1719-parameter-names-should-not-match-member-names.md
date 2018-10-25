@@ -1,7 +1,7 @@
 ---
 title: '1719: ca パラメーター名とメンバー名 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 7a80b173cb17f5ce8f946ad2adb32cde43159141
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 74897625a8d8fced4a87a6e5d722d9edf04769b4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589089"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49828221"
 ---
 # <a name="ca1719-parameter-names-should-not-match-member-names"></a>CA1719: パラメーター名はメンバー名と同一にすることはできません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA1719: パラメーター名は、メンバー名と一致する必要があります](https://docs.microsoft.com/visualstudio/code-quality/ca1719-parameter-names-should-not-match-member-names)します。
 
 |||
 |-|-|

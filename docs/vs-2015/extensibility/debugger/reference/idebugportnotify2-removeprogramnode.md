@@ -1,7 +1,7 @@
 ---
 title: IDebugPortNotify2::RemoveProgramNode |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 3668157b-66d2-416e-a359-fc04dcd18a48
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 960eb998bf4aef5f64f1112e9bd0ca493bdcffe5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9f5e041a35a45a00f825d4b93feb1b62b0ad89dd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537078"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924708"
 ---
 # <a name="idebugportnotify2removeprogramnode"></a>IDebugPortNotify2::RemoveProgramNode
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugPortNotify2::RemoveProgramNode](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugportnotify2-removeprogramnode)します。  
-  
 実行されているポートからデバッグできるプログラムを登録解除します。  
   
 ## <a name="syntax"></a>構文  

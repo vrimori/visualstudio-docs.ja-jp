@@ -1,7 +1,7 @@
 ---
 title: AssignCulture タスク | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8ee44937f48101454a00128405fb03ce4260de4a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c35d949f2d3cf3924a63ce6db0e596af1fccddbd
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535174"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49235652"
 ---
 # <a name="assignculture-task"></a>AssignCulture タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[AssignCulture タスク](https://docs.microsoft.com/visualstudio/msbuild/assignculture-task)します。  
-  
   
 このタスクは、有効な .NET カルチャ ID 文字列をファイル名の一部として含む可能性がある項目の一覧を受け取り、対応するカルチャ ID を含む `Culture` という名前のメタデータを持つ項目を生成します。 たとえば、ファイル名 Form1.fr-fr.resx には、"fr-fr" というカルチャ ID が埋め込まれています。したがって、このタスクでは、`fr-fr` と等しい値の `Culture` メタデータを持つ同じファイル名の項目が生成されます。 また、このタスクでは、ファイル名からカルチャを削除したファイル名の一覧も生成されます。  
   

@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b4f23cae01c9356da26c42ca299a6ac6bb7c190f
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 34c263479be170b9f108c4cbc095be737f0b2b22
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498712"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936050"
 ---
 # <a name="create-a-windows-forms-toolbox-control"></a>Windows フォーム ツールボックス コントロールを作成します。
 Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フォーム ツールボックス コントロールの項目テンプレートが自動的に追加するコントロールを作成できます。、**ツールボックス**、拡張機能がインストールされている場合。 このトピックでは、他のユーザーに配布できる単純なカウンター コントロールを作成するテンプレートを使用する方法を示します。  
@@ -61,7 +61,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
     |`Button1`|**[テキスト]**|リセット|  
   
 ### <a name="code-the-user-control"></a>ユーザー コントロールのコード  
- `Counter`コントロールは、カウンターがインクリメントされるたびに発生するイベント、カウンターをインクリメントするメソッドを公開、**リセット**ボタン、および現在のカウント、表示テキスト、および表示するかどうかを格納する 3 つのプロパティ非表示にするか、**リセット**ボタンをクリックします。 `ProvideToolboxControl`属性のどの場所を指定します、**ツールボックス**、`Counter`コントロールが表示されます。  
+ `Counter`コントロールは、カウンターがインクリメントされるたびに発生するイベント、カウンターをインクリメントするメソッドを公開、**リセット**ボタン、および現在のカウント、表示テキスト、および表示するかどうかを格納する 3 つのプロパティ非表示にするか、**リセット**ボタンをクリックします。 `ProvideToolboxControl` 属性は、 **[ツールボックス]** のどの場所に `Counter` コントロールが表示されるかを判断します。  
   
 #### <a name="to-code-the-user-control"></a>ユーザー コントロールをコーディングするには  
   
@@ -139,7 +139,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
     ```  
   
-8.  クラスの定義のすぐ上で、`ProvideToolboxControl`属性宣言から最初のパラメーターの値を変更`"MyWinFormsControl.Counter"`に`"General"`します。 これにより、 **[ツールボックス]** のコントロールをホストする項目グループの名前が設定されます。  
+8.  すぐに、クラス定義の上、 `ProvideToolboxControl` 属性の宣言内で、最初のパラメーターの値を `"MyWinFormsControl.Counter"` から `"General"`に変更します。 これにより、 **[ツールボックス]** のコントロールをホストする項目グループの名前が設定されます。  
   
      次の例では、 `ProvideToolboxControl` の属性と、調整されたクラス定義を示しています。  
   
@@ -165,7 +165,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
 5.  ドラッグ、`Counter`をフォームに制御し、それを選択します。 `Value`、 `Message`、および`ShowReset`でプロパティが表示されます、**プロパティ**ウィンドウから継承されるプロパティと共に<xref:System.Windows.Forms.UserControl>します。  
   
-6.  `Message` プロパティを `Count:` に設定します。  
+6.  `Message` プロパティを `Count:`に設定します。  
   
 7.  ドラッグ、<xref:System.Windows.Forms.Button>をフォームに制御し、ボタンの名前とテキストのプロパティを設定し、`Test`します。  
   
@@ -209,7 +209,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
      カウンターをリセットする**0**します。  
   
 ## <a name="next-steps"></a>次の手順  
- ビルドする場合は、**ツールボックス**コントロール、Visual Studio がという名前のファイルを作成する*ProjectName.vsix*で、* \bin\debug\*プロジェクトのフォルダー。 アップロードすることで、制御を展開することができます、 *.vsix*ファイルは、ネットワークまたは Web サイトにします。 ユーザーが開いたとき、 *.vsix*ファイル、コントロールがインストールされ、Visual Studio に追加**ツールボックス**ユーザーのコンピューターにします。 または、アップロード、 *.vsix*ファイルを[Visual Studio ギャラリー](http://go.microsoft.com/fwlink/?LinkID=123847) Web サイトのユーザーがで参照して検索できるように、**ツール** >  **拡張機能と更新**ダイアログ。  
+ ビルドする場合は、**ツールボックス**コントロール、Visual Studio がという名前のファイルを作成する*ProjectName.vsix*で、 <em>\bin\debug\*プロジェクトのフォルダー。コントロールを配置するには、*.vsix をアップロードして</em>ファイルは、ネットワークまたは Web サイトにします。 ユーザーが開いたとき、 *.vsix*ファイル、コントロールがインストールされ、Visual Studio に追加**ツールボックス**ユーザーのコンピューターにします。 または、アップロード、 *.vsix*ファイルを[Visual Studio ギャラリー](http://go.microsoft.com/fwlink/?LinkID=123847) Web サイトのユーザーがで参照して検索できるように、**ツール** >  **拡張機能と更新**ダイアログ。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio の他の部分を拡張します。](../extensibility/extending-other-parts-of-visual-studio.md)   

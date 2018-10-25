@@ -1,7 +1,7 @@
 ---
 title: コマンド ルーティング アルゴリズム |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 998b616b-bd08-45cb-845f-808efb8c33bc
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2136bbff40a24b1b376d5d737367630256230c35
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 23975d0ae73edd3bb411334e034672a6b5f0e477
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549000"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49209314"
 ---
 # <a name="command-routing-algorithm"></a>コマンド ルーティング アルゴリズム
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コマンド ルーティング アルゴリズム](https://docs.microsoft.com/visualstudio/extensibility/internals/command-routing-algorithm)します。  
-  
 Visual Studio でのコマンドは、さまざまなコンポーネントによって処理されます。 コマンドは、現在の選択に基づいて、最も内側のコンテキストから最も外側の (グローバルとも呼ばれます) のコンテキストにルーティングされます。 詳細については、次を参照してください。[可用性](../../extensibility/internals/command-availability.md)します。  
   
 ## <a name="order-of-command-resolution"></a>コマンドの解像度の順序  

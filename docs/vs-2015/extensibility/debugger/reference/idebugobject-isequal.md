@@ -1,7 +1,7 @@
 ---
 title: IDebugObject::IsEqual |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 4b76e663-ef2e-41ff-9be1-bf26d666a34a
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3ed6ef6736c110864c9ec6e8762475e35e3321cc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b76aca2c1bf5fa820f9bdf8278c93bf45dfdc9bc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533796"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49814533"
 ---
 # <a name="idebugobjectisequal"></a>IDebugObject::IsEqual
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugObject::IsEqual](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugobject-isequal)します。  
-  
 このオブジェクトを持つオブジェクトを比較します。  
   
 ## <a name="syntax"></a>構文  

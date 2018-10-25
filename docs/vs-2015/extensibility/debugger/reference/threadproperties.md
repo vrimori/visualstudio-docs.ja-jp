@@ -1,7 +1,7 @@
 ---
 title: THREADPROPERTIES |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 7d397207-db03-4ec0-9f79-3794056ed89f
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8d95c31818931c7d1bc303318998504ee6f1a43d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2061682280ab110ee7c951ed41cf6ccd42f5c080
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534511"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49814806"
 ---
 # <a name="threadproperties"></a>THREADPROPERTIES
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[THREADPROPERTIES](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/threadproperties)します。  
-  
 スレッドのプロパティについて説明します。  
   
 ## <a name="syntax"></a>構文  
@@ -82,7 +80,7 @@ public struct THREADPROPERTIES {
 ## <a name="remarks"></a>Remarks  
  この構造体への呼び出しによって入力されます、 [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)メソッド。 そのために返される情報は通常設定で使用、**スレッド**ウィンドウ。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

@@ -1,7 +1,7 @@
 ---
 title: IDebugMessageEvent2::GetMessage |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 9fca7285-f7f1-422d-8565-92bf0e0db60a
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b836c6b441e260e550e677e002fff393b981af17
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 36b3068c696e08ddc3563f138c6495a77f6ab350
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547427"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846021"
 ---
 # <a name="idebugmessageevent2getmessage"></a>IDebugMessageEvent2::GetMessage
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugMessageEvent2::GetMessage](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugmessageevent2-getmessage)します。  
-  
 表示するメッセージを取得します。  
   
 ## <a name="syntax"></a>構文  

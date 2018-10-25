@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 64400b8844481f8b34d82c430322d240c8930cd0
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: aa38b1f0039f65ad7ce1e5476e5f28032c92812e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859953"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894665"
 ---
 # <a name="integrating-models-by-using-visual-studio-modelbus"></a>Visual Studio Modelbus によるモデルの統合
 Visual Studio ModelBus はモデルにモデル間、およびその他のツールからリンクを作成するためのメソッドを提供します。 たとえば、ドメイン固有言語 (DSL) モデルと UML モデルをリンクする可能性があります。 DSL の統合セットを作成できます。
@@ -37,48 +37,48 @@ Visual Studio ModelBus はモデルにモデル間、およびその他のツー
 
 ### <a name="expose"></a> DSL 定義をモデル バスを公開するには
 
-1.  Visual Studio モデル バス拡張機能をまだインストールしていない場合はダウンロードしてインストールします。 詳細については、次を参照してください。 [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579)します。
+1. Visual Studio モデル バス拡張機能をまだインストールしていない場合はダウンロードしてインストールします。 詳細については、次を参照してください。 [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579)します。
 
-2.  DSL 定義ファイルを開きます。 デザイン サーフェイスを右クリックし、をクリックし、 **Modelbus の有効化**します。
+2. DSL 定義ファイルを開きます。 デザイン サーフェイスを右クリックし、をクリックし、 **Modelbus の有効化**します。
 
-3.  ダイアログ ボックスで、次のように選択します。**この DSL を ModelBus に公開する**します。 この DSL のモデルを公開すると同時に他の DSL への参照を利用する場合は、両方のオプションを選択できます。
+3. ダイアログ ボックスで、次のように選択します。**この DSL を ModelBus に公開する**します。 この DSL のモデルを公開すると同時に他の DSL への参照を利用する場合は、両方のオプションを選択できます。
 
-4.  **[OK]** をクリックします。 新しいプロジェクト "ModelBusAdapter" が DSL ソリューションに追加されます。
+4. **[OK]** をクリックします。 新しいプロジェクト "ModelBusAdapter" が DSL ソリューションに追加されます。
 
-5.  テキスト テンプレートから DSL にアクセスする場合、新しいプロジェクトで AdapterManager.tt を変更する必要があります。 コマンドやイベント ハンドラーなどの他のコードから DSL にアクセスする場合はこの手順を省略します。 詳細については、次を参照してください。[テキスト テンプレートで Visual Studio ModelBus を使用して](../modeling/using-visual-studio-modelbus-in-a-text-template.md)します。
+5. テキスト テンプレートから DSL にアクセスする場合、新しいプロジェクトで AdapterManager.tt を変更する必要があります。 コマンドやイベント ハンドラーなどの他のコードから DSL にアクセスする場合はこの手順を省略します。 詳細については、次を参照してください。[テキスト テンプレートで Visual Studio ModelBus を使用して](../modeling/using-visual-studio-modelbus-in-a-text-template.md)します。
 
-    1.  AdapterManagerBase の基底クラスを <xref:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager> に変更します。
+   1. AdapterManagerBase の基底クラスを <xref:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager> に変更します。
 
-    2.  ファイルの終わり近くで、クラス AdapterManager の前に次の追加属性を挿入します。
+   2. ファイルの終わり近くで、クラス AdapterManager の前に次の追加属性を挿入します。
 
-         `[Microsoft.VisualStudio.Modeling.Integration.HostSpecific(HostName)]`
+       `[Microsoft.VisualStudio.Modeling.Integration.HostSpecific(HostName)]`
 
-    3.  参照の ModelBusAdapter プロジェクトで追加**Microsoft.VisualStudio.TextTemplating.Modeling.11.0**します。
+   3. 参照の ModelBusAdapter プロジェクトで追加**Microsoft.VisualStudio.TextTemplating.Modeling.11.0**します。
 
-     テキスト テンプレートと他のコードの両方から DSL にアクセスするには、変更したアダプターと変更していないアダプターの 2 つが必要です。
+      テキスト テンプレートと他のコードの両方から DSL にアクセスするには、変更したアダプターと変更していないアダプターの 2 つが必要です。
 
-6.  クリックして**すべてのテンプレートの変換**します。
+6. クリックして**すべてのテンプレートの変換**します。
 
-7.  ソリューションをリビルドします。
+7. ソリューションをリビルドします。
 
- これで ModelBus がこの DSL のインスタンスを開くことができるようになります。
+   これで ModelBus がこの DSL のインスタンスを開くことができるようになります。
 
- フォルダー `ModelBusAdapters\bin\*` には、`Dsl` プロジェクトと `ModelBusAdapters` プロジェクトによりビルドされるアセンブリが含まれます。 この DSL を別の DSL から参照するには、これらのアセンブリをインポートする必要があります。
+   フォルダー `ModelBusAdapters\bin\*` には、`Dsl` プロジェクトと `ModelBusAdapters` プロジェクトによりビルドされるアセンブリが含まれます。 この DSL を別の DSL から参照するには、これらのアセンブリをインポートする必要があります。
 
 ### <a name="making-sure-that-elements-can-be-referenced"></a>要素が参照可能であることの確認
  Visual Studio ModelBus アダプターは、既定を識別するために、要素の guid を使用します。 したがって、これらの ID はモデル ファイル内に保持される必要があります。
 
 ##### <a name="to-ensure-that-element-ids-are-persisted"></a>要素 ID が保持されることを確認するには
 
-1.  DslDefinition.dsl を開きます。
+1. DslDefinition.dsl を開きます。
 
-2.  DSL エクスプ ローラーで、 **Xml シリアル化動作**、し**クラス データ**します。
+2. DSL エクスプ ローラーで、 **Xml シリアル化動作**、し**クラス データ**します。
 
-3.  モデル バス参照を作成する各クラスについて、次の操作を実行します。
+3. モデル バス参照を作成する各クラスについて、次の操作を実行します。
 
-     クラス ノードをクリックし、[プロパティ] ウィンドウで**Id のシリアル化**に設定されている`true`します。
+    クラス ノードをクリックし、[プロパティ] ウィンドウで**Id のシリアル化**に設定されている`true`します。
 
- または、GUID ではなく要素名を使用して要素を特定する場合、生成されたアダプターの各部をオーバーライドできます。 アダプター クラス内の次のメソッドをオーバーライドします。
+   または、GUID ではなく要素名を使用して要素を特定する場合、生成されたアダプターの各部をオーバーライドできます。 アダプター クラス内の次のメソッドをオーバーライドします。
 
 -   `GetElementId` をオーバーライドし、使用する ID を返します。 このメソッドは参照を作成するときに呼び出されます。
 
@@ -109,13 +109,13 @@ Visual Studio ModelBus はモデルにモデル間、およびその他のツー
 
 #### <a name="to-store-a-model-bus-reference-in-a-domain-property"></a>モデル バス参照をドメイン プロパティに保存するには
 
-1.  利用する DSL の DSL 定義で、ドメイン クラスにドメイン プロパティを追加し、その名前を設定します。
+1. 利用する DSL の DSL 定義で、ドメイン クラスにドメイン プロパティを追加し、その名前を設定します。
 
-2.  プロパティ ウィンドウで、選択すると、ドメイン プロパティを使用して設定**型**に`ModelBusReference`します。
+2. プロパティ ウィンドウで、選択すると、ドメイン プロパティを使用して設定**型**に`ModelBusReference`します。
 
- この段階で、プログラム コードはプロパティ値を設定できますが、[プロパティ] ウィンドウでは読み取り専用です。
+   この段階で、プログラム コードはプロパティ値を設定できますが、[プロパティ] ウィンドウでは読み取り専用です。
 
- ユーザーが特殊な ModelBus 参照エディターを使用してプロパティを設定可能にすることができます。 このエディターの 2 つのバージョンまたは*ピッカー:* いずれかにより、ユーザーがモデル ファイルを選択して、その他により、ユーザーがモデル ファイルと、モデル内の要素を選択します。
+   ユーザーが特殊な ModelBus 参照エディターを使用してプロパティを設定可能にすることができます。 このエディターの 2 つのバージョンまたは*ピッカー:* いずれかにより、ユーザーがモデル ファイルを選択して、その他により、ユーザーがモデル ファイルと、モデル内の要素を選択します。
 
 #### <a name="to-allow-the-user-to-set-a-model-bus-reference-in-a-domain-property"></a>ユーザーがモデル バス参照をドメイン プロパティに設定可能にするには
 
@@ -170,17 +170,17 @@ Visual Studio ModelBus はモデルにモデル間、およびその他のツー
 
  たとえば、ModelBus References を MusicLibrary DSL の要素に保存するとします。 ModelBus References は FamilyTree DSL の要素を参照します。 MusicLibrary ソリューションの `Dsl` プロジェクトで、References ノードに次のアセンブリへの参照を追加します。
 
--   Fabrikam.FamilyTree.Dsl.dll - 公開されている DSL。
+- Fabrikam.FamilyTree.Dsl.dll - 公開されている DSL。
 
--   Fabrikam.FamilyTree.ModelBusAdapters.dll - 公開されている DSL の ModelBus アダプター。
+- Fabrikam.FamilyTree.ModelBusAdapters.dll - 公開されている DSL の ModelBus アダプター。
 
--   Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0
+- Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0
 
--   Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.11.0
+- Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.11.0
 
- これらのアセンブリは、公開されている DSL の `ModelBusAdapters` プロジェクトの `bin\*` の下にあります。
+  これらのアセンブリは、公開されている DSL の `ModelBusAdapters` プロジェクトの `bin\*` の下にあります。
 
- 参照を作成するコード ファイルで、通常、次の名前空間をインポートする必要があります。
+  参照を作成するコード ファイルで、通常、次の名前空間をインポートする必要があります。
 
 ```csharp
 // The namespace of the DSL you want to reference:
@@ -230,7 +230,6 @@ using (FamilyTreeAdapter adapter =
      adapter.GetElementReference(person);
   ...
 } // Dispose adapter
-
 ```
 
  後で `modelReference` を使用可能にする場合、外部型 `ModelBusReference` を持つドメイン プロパティに保存できます。
@@ -298,46 +297,45 @@ using (FamilyTreeAdapter adapter =
 
 ##### <a name="to-resolve-modelbus-references-in-a-text-template"></a>テキスト テンプレート内の ModelBus References を解決するには
 
-1.  アクセスする DSL には、テキスト テンプレートによるアクセスのために構成された ModelBus Adapter が含まれている必要があります。 詳細については、次を参照してください。 [DSL へのアクセスを提供する](#provide)します。
+1. アクセスする DSL には、テキスト テンプレートによるアクセスのために構成された ModelBus Adapter が含まれている必要があります。 詳細については、次を参照してください。 [DSL へのアクセスを提供する](#provide)します。
 
-2.  通常、ソース DSL 内に保存されたモデル バス参照 (MBR) を使用してターゲット DSL にアクセスします。 したがって、テンプレートにはソース DSL のディレクティブに加えて、MBR を解決するためのコードが含まれています。 テキスト テンプレートの詳細については、次を参照してください。[ドメイン固有言語からコードを生成する](../modeling/generating-code-from-a-domain-specific-language.md)します。
+2. 通常、ソース DSL 内に保存されたモデル バス参照 (MBR) を使用してターゲット DSL にアクセスします。 したがって、テンプレートにはソース DSL のディレクティブに加えて、MBR を解決するためのコードが含まれています。 テキスト テンプレートの詳細については、次を参照してください。[ドメイン固有言語からコードを生成する](../modeling/generating-code-from-a-domain-specific-language.md)します。
 
-    ```
-    <#@ template debug="true" hostspecific="true"
-    inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTransformation" #>
-    <#@ SourceDsl processor="SourceDslDirectiveProcessor" requires="fileName='Sample.source'" #>
-    <#@ output extension=".txt" #>
-    <#@ assembly name = "Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0" #>
-    <#@ assembly name = "System.Core" #>
-    <#@ assembly name = "Company.CompartmentDragDrop.Dsl.dll" #>
-    <#@ assembly name = "Company.CompartmentDragDrop.ModelBusAdapter.dll" #>
-    <#@ import namespace="Microsoft.VisualStudio.Modeling.Integration" #>
-    <#@ import namespace="System.Linq" #>
-    <#@ import namespace="Company.CompartmentDragDrop" #>
-    <#@ import namespace="Company.CompartmentDragDrop.ModelBusAdapters" #>
-    <# // Get source root from directive processor:
-      ExampleModel source = this.ExampleModel;
-      // This DSL has a MBR in its root:
-    using (ModelBusAdapter adapter = this.ModelBus.CreateAdapter(source.ModelReference) as ModelBusAdapter)
-      {
-      ModelBusAdapterManager manager = this.ModelBus.FindAdapterManagers(this.Host.ResolvePath("Sample.compDD1")).FirstOrDefault();
-      ModelBusReference modelReference =
-        manager.CreateReference(this.Host.ResolvePath("Sample.compDD1"));
+   ```
+   <#@ template debug="true" hostspecific="true"
+   inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTransformation" #>
+   <#@ SourceDsl processor="SourceDslDirectiveProcessor" requires="fileName='Sample.source'" #>
+   <#@ output extension=".txt" #>
+   <#@ assembly name = "Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0" #>
+   <#@ assembly name = "System.Core" #>
+   <#@ assembly name = "Company.CompartmentDragDrop.Dsl.dll" #>
+   <#@ assembly name = "Company.CompartmentDragDrop.ModelBusAdapter.dll" #>
+   <#@ import namespace="Microsoft.VisualStudio.Modeling.Integration" #>
+   <#@ import namespace="System.Linq" #>
+   <#@ import namespace="Company.CompartmentDragDrop" #>
+   <#@ import namespace="Company.CompartmentDragDrop.ModelBusAdapters" #>
+   <# // Get source root from directive processor:
+     ExampleModel source = this.ExampleModel;
+     // This DSL has a MBR in its root:
+   using (ModelBusAdapter adapter = this.ModelBus.CreateAdapter(source.ModelReference) as ModelBusAdapter)
+     {
+     ModelBusAdapterManager manager = this.ModelBus.FindAdapterManagers(this.Host.ResolvePath("Sample.compDD1")).FirstOrDefault();
+     ModelBusReference modelReference =
+       manager.CreateReference(this.Host.ResolvePath("Sample.compDD1"));
 
-      // Get the root element of this model:
-      using (CompartmentDragDropAdapter adapter =
-         this.ModelBus.CreateAdapter(modelReference) as CompartmentDragDropAdapter)
-      {
-        ModelRoot root = adapter.ModelRoot;
-    #>
-    [[<#= root.Name #>]]
-    <#
-      }
-    #>
+     // Get the root element of this model:
+     using (CompartmentDragDropAdapter adapter =
+        this.ModelBus.CreateAdapter(modelReference) as CompartmentDragDropAdapter)
+     {
+       ModelRoot root = adapter.ModelRoot;
+   #>
+   [[<#= root.Name #>]]
+   <#
+     }
+   #>
+   ```
 
-    ```
-
- 詳細とチュートリアルは、次を参照してください[テキスト テンプレートでの Visual Studio ModelBus の使用。](../modeling/using-visual-studio-modelbus-in-a-text-template.md)
+   詳細とチュートリアルは、次を参照してください[テキスト テンプレートでの Visual Studio ModelBus の使用。](../modeling/using-visual-studio-modelbus-in-a-text-template.md)
 
 ## <a name="serializing-a-modelbusreference"></a>ModelBusReference のシリアル化
  `ModelBusReference` (MBR) を文字列形式で保存する場合、次のようにシリアル化することができます。
@@ -477,37 +475,37 @@ private const string INVALID_REF_FORMAT =
 
  DSL 定義図を右クリックするとクリックして**Modelbus の有効化**、し、 **、ModelBus を使用するには、この DSL を有効にする**:
 
--   参照が追加、DSL プロジェクトで**Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0.dll**
+- 参照が追加、DSL プロジェクトで**Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0.dll**
 
--   DSL 定義に、外部型参照 `Microsoft.VisualStudio.Modeling.Integration.ModelBusReference` が追加されます。
+- DSL 定義に、外部型参照 `Microsoft.VisualStudio.Modeling.Integration.ModelBusReference` が追加されます。
 
-     内の参照を確認できます**DSL エクスプ ローラー****ドメイン型**します。 外部型参照を手動で追加するには、ルート ノードを右クリックします。
+   内の参照を確認できます**DSL エクスプ ローラー****ドメイン型**します。 外部型参照を手動で追加するには、ルート ノードを右クリックします。
 
--   新しいテンプレート ファイルを追加すると、 **Dsl\GeneratedCode\ModelBusReferencesSerialization.tt**します。
+- 新しいテンプレート ファイルを追加すると、 **Dsl\GeneratedCode\ModelBusReferencesSerialization.tt**します。
 
- Modelbusreference ドメイン プロパティの型を設定し、しプロパティを右クリックしてをクリックして**を有効にする ModelBusReference 固有プロパティ**:
+  Modelbusreference ドメイン プロパティの型を設定し、しプロパティを右クリックしてをクリックして**を有効にする ModelBusReference 固有プロパティ**:
 
--   ドメイン プロパティにいくつかの CLR 属性が追加されます。 それらはプロパティ ウィンドウの Custom Attributes フィールドで確認できます。 **Dsl\GeneratedCode\DomainClasses.cs**、プロパティ宣言で属性を確認できます。
+- ドメイン プロパティにいくつかの CLR 属性が追加されます。 それらはプロパティ ウィンドウの Custom Attributes フィールドで確認できます。 **Dsl\GeneratedCode\DomainClasses.cs**、プロパティ宣言で属性を確認できます。
 
-    ```csharp
-    [System.ComponentModel.TypeConverter(typeof(
-    Microsoft.VisualStudio.Modeling.Integration.ModelBusReferenceTypeConverter))]
-    [System.ComponentModel.Editor(typeof(
-      Microsoft.VisualStudio.Modeling.Integration.Picker
-      .ModelReferenceEditor // or ModelElementReferenceEditor
-      ), typeof(System.Drawing.Design.UITypeEditor))]
-    [Microsoft.VisualStudio.Modeling.Integration.Picker
-      .SupplyFileBasedBrowserConfiguration
-      ("Choose a model file", "Target model|*.target")]
-    ```
+  ```csharp
+  [System.ComponentModel.TypeConverter(typeof(
+  Microsoft.VisualStudio.Modeling.Integration.ModelBusReferenceTypeConverter))]
+  [System.ComponentModel.Editor(typeof(
+    Microsoft.VisualStudio.Modeling.Integration.Picker
+    .ModelReferenceEditor // or ModelElementReferenceEditor
+    ), typeof(System.Drawing.Design.UITypeEditor))]
+  [Microsoft.VisualStudio.Modeling.Integration.Picker
+    .SupplyFileBasedBrowserConfiguration
+    ("Choose a model file", "Target model|*.target")]
+  ```
 
- DSL 定義図では、右クリックしたときにをクリックして**ModelBus の有効化**、選び**この DSL を ModelBus に公開**:
+  DSL 定義図では、右クリックしたときにをクリックして**ModelBus の有効化**、選び**この DSL を ModelBus に公開**:
 
--   ソリューションに新しいプロジェクト `ModelBusAdapter` が追加されます。
+- ソリューションに新しいプロジェクト `ModelBusAdapter` が追加されます。
 
--   `ModelBusAdapter` プロジェクトに `DslPackage` への参照が追加されます。 `ModelBusAdapter` は `Dsl` プロジェクトへの参照を持ちます。
+- `ModelBusAdapter` プロジェクトに `DslPackage` への参照が追加されます。 `ModelBusAdapter` は `Dsl` プロジェクトへの参照を持ちます。
 
--   **DslPackage\source.extention.tt**、 `|ModelBusAdapter|` MEF コンポーネントとして追加されます。
+- **DslPackage\source.extention.tt**、 `|ModelBusAdapter|` MEF コンポーネントとして追加されます。
 
 ## <a name="see-also"></a>関連項目
 

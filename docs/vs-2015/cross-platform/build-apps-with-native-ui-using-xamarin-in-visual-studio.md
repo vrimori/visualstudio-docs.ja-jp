@@ -1,7 +1,7 @@
 ---
 title: Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 30f137e6-595d-4ce7-b8f5-415b07c1caa2
 caps.latest.revision: 33
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 1eb7a359b7888c50caa78f67c029a16263ef2727
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d2f1971f2c9ed3cb7742c7144cf35708789f4a92
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548941"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49879312"
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio で Xamarin を使用してネイティブ UI とアプリを構築](https://docs.microsoft.com/visualstudio/cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio)します。  
-  
   
 「[セットアップとインストール](../cross-platform/setup-and-install.md)」と「[Xamarin 環境を検証する](../cross-platform/verify-your-xamarin-environment.md)」の手順を完了しましたが、このチュートリアルでは、ネイティブ UI レイヤーを備えた基本的な Xamarin アプリ (下図) を作成する方法を示します。 ネイティブ UI を使用すると、共有コードはポータブル クラス ライブラリ (PCL) に存在し、個別のプラットフォーム プロジェクトに UI 定義が含まれます。  
   
@@ -44,62 +42,62 @@ ms.locfileid: "47548941"
   
 > [!TIP]
 >  このプロジェクトの完全なソース コードは [GitHub の mobile-samples リポジトリ](https://github.com/xamarin/mobile-samples/tree/master/Weather)にあります。
->
+> 
 >   問題やエラーが発生した場合は、[forums.xamarin.com](http://forums.xamarin.com) に質問を投稿してください。 Xamarin に必要な最新の SDK に更新することで多くのエラーを解決できます。エラーについては、[Xamarin リリース ノート](https://developer.xamarin.com/releases/)でプラットフォームごとの説明を参照してください。    
-  
+> 
 > [!NOTE]
 >  Xamarin の開発者向けドキュメントには、以下の一覧に示すクイック スタートと詳細情報の両方のセクションで、いくつかのチュートリアルも用意されています。 これらのすべてのページで Visual Studio 固有のチュートリアルを表示するには、必ずページの右上で "Visual Studio" を選びます。  
->   
->  -   ネイティブ UI を使用した Xamarin アプリ:  
->   
->      -   [Hello, Android](https://developer.xamarin.com/guides/android/getting_started/hello,android/) (1 つの画面を使用した簡単なアプリ)  
->     -   [Hello, Android マルチスクリーン](https://developer.xamarin.com/guides/android/getting_started/hello,android_multiscreen/) (画面間でナビゲーションを使用したアプリ)  
->     -   [Android フラグメント チュートリアル](http://developer.xamarin.com/guides/android/platform_features/fragments/fragments_walkthrough/) (特に、マスター/詳細画面で使用)  
->     -   [Hello, iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)  
->     -   [Hello, iOS マルチスクリーン](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS_multiscreen/)  
-> -   Xamarin.Forms (共有 UI) を使用した Xamarin アプリ  
->   
->      -   [Hello, Xamarin.Forms](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms/quickstart/)  
->     -   [Hello, Xamarin.Forms マルチスクリーン](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms-multiscreen/)  
+> 
+> - ネイティブ UI を使用した Xamarin アプリ:  
+> 
+>   -   [Hello, Android](https://developer.xamarin.com/guides/android/getting_started/hello,android/) (1 つの画面を使用した簡単なアプリ)  
+>   -   [Hello, Android マルチスクリーン](https://developer.xamarin.com/guides/android/getting_started/hello,android_multiscreen/) (画面間でナビゲーションを使用したアプリ)  
+>   -   [Android フラグメント チュートリアル](http://developer.xamarin.com/guides/android/platform_features/fragments/fragments_walkthrough/) (特に、マスター/詳細画面で使用)  
+>   -   [Hello, iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)  
+>   -   [Hello, iOS マルチスクリーン](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS_multiscreen/)  
+>   -   Xamarin.Forms (共有 UI) を使用した Xamarin アプリ  
+> 
+>   -   [Hello, Xamarin.Forms](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms/quickstart/)  
+>   -   [Hello, Xamarin.Forms マルチスクリーン](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms-multiscreen/)  
   
 ##  <a name="solution"></a>ソリューションの設定  
  次の手順では、ネイティブ UI を使用した、共有コードの PCL と 2 つの追加された NuGet パッケージを含む Xamarin ソリューションを作成します。  
   
-1.  Visual Studio では、新しい **[空のアプリ (ネイティブ ポータブル)]** ソリューションを作成し、名前を **WeatherApp** とします。 このテンプレートは、検索フィールドに「**ネイティブ ポータブル**」と入力することによって、最も簡単に見つけることができます。  
+1. Visual Studio では、新しい **[空のアプリ (ネイティブ ポータブル)]** ソリューションを作成し、名前を **WeatherApp** とします。 このテンプレートは、検索フィールドに「**ネイティブ ポータブル**」と入力することによって、最も簡単に見つけることができます。  
   
-     これがない場合は、Xamarin をインストールするか、Visual Studio 2015 の機能を有効にする必要があります。「 [Setup and install](../cross-platform/setup-and-install.md)」をご覧ください。  
+    これがない場合は、Xamarin をインストールするか、Visual Studio 2015 の機能を有効にする必要があります。「 [Setup and install](../cross-platform/setup-and-install.md)」をご覧ください。  
   
-2.  ソリューションを作成するために [OK] をクリックすると、いくつかの個別のプロジェクトが表示されます。  
+2. ソリューションを作成するために [OK] をクリックすると、いくつかの個別のプロジェクトが表示されます。  
   
-    -   **WeatherApp (ポータブル)**: Xamarin.Forms を使用している共通のビジネス ロジックと UI コードを含む、プラットフォームで共有されるコードの記述先である PCL。  
+   - **WeatherApp (ポータブル)**: Xamarin.Forms を使用している共通のビジネス ロジックと UI コードを含む、プラットフォームで共有されるコードの記述先である PCL。  
   
-    -   **WeatherApp.Droid**: ネイティブの Android コードを含むプロジェクト。 これは、既定のスタートアップ プロジェクトとして設定されます。  
+   - **WeatherApp.Droid**: ネイティブの Android コードを含むプロジェクト。 これは、既定のスタートアップ プロジェクトとして設定されます。  
   
-    -   **WeatherApp.iOS**: ネイティブの iOS コードを含むプロジェクト。  
+   - **WeatherApp.iOS**: ネイティブの iOS コードを含むプロジェクト。  
   
-    -   **WeatherApp.WinPhone (Windows Phone 8.1)**: ネイティブの Windows Phone コードを含むプロジェクト。  
+   - **WeatherApp.WinPhone (Windows Phone 8.1)**: ネイティブの Windows Phone コードを含むプロジェクト。  
   
      各ネイティブ プロジェクト内では、対応するプラットフォームのネイティブ デザイナーにアクセスでき、プラットフォーム固有の画面を実装できます。  
   
-3.  気象データ サービスから取得した情報を処理するのに使用する **Newtonsoft.Json** と NuGet パッケージを PCL プロジェクトに追加します:  
+3. 気象データ サービスから取得した情報を処理するのに使用する **Newtonsoft.Json** と NuGet パッケージを PCL プロジェクトに追加します:  
   
-    -   ソリューション エクスプローラーで **[ソリューション 'WeatherApp']** を右クリックし、**[ソリューションの NuGet パッケージの管理]** を選択します。  
+   -   ソリューション エクスプローラーで **[ソリューション 'WeatherApp']** を右クリックし、**[ソリューションの NuGet パッケージの管理]** を選択します。  
   
-         NuGet のウィンドウで **[参照]** タブを選択し、**Newtonsoft** を検索します。  
+        NuGet のウィンドウで **[参照]** タブを選択し、**Newtonsoft** を検索します。  
   
-    -   **Newtonsoft.Json**を選択します。  
+   -   **Newtonsoft.Json**を選択します。  
   
-    -   ウィンドウの右側で、**WeatherApp** プロジェクトをチェックします (パッケージをインストールする必要があるプロジェクトは、このプロジェクトだけです)。  
+   -   ウィンドウの右側で、**WeatherApp** プロジェクトをチェックします (パッケージをインストールする必要があるプロジェクトは、このプロジェクトだけです)。  
   
-    -   **[バージョン]** フィールドが **最新の安定した** バージョンに設定されていることを確認してください。  
+   -   **[バージョン]** フィールドが **最新の安定した** バージョンに設定されていることを確認してください。  
   
-    -   **[インストール]** をクリックします。  
+   -   **[インストール]** をクリックします。  
   
-    -   ![Newtonsoft.Json NuGet パッケージの検索とインストール](../cross-platform/media/crossplat-xamarin-formsguide-5.png "CrossPlat Xamarin FormsGuide 5")  
+   -   ![Newtonsoft.Json NuGet パッケージの検索とインストール](../cross-platform/media/crossplat-xamarin-formsguide-5.png "CrossPlat Xamarin FormsGuide 5")  
   
-4.  手順 3 を繰り返して、**Microsoft.Net.Http** パッケージを検索し、インストールします。  
+4. 手順 3 を繰り返して、**Microsoft.Net.Http** パッケージを検索し、インストールします。  
   
-5.  ソリューションをビルドし、ビルド エラーがないことを確認します。  
+5. ソリューションをビルドし、ビルド エラーがないことを確認します。  
   
 ##  <a name="dataservice"></a> 共有データ サービス コードの記述  
  **WeatherApp (ポータブル)** プロジェクトは、すべてのプラットフォームで共有されているポータブル クラス ライブラリ (PCL) 用のコードを記述する場所です。 PCL は、iOS、Android、Windows Phone 用のプロジェクトでビルドされたアプリ パッケージに自動的に含まれます。  

@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_isCTypes |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 17c85624e29db48fea170a77077eeba79b2a6735
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 025600306c244f3325d4ac5a8dd6affeac85bc18
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547961"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49940477"
 ---
 # <a name="idiasymbolgetisctypes"></a>IDiaSymbol::get_isCTypes
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDiaSymbol::get_isCTypes](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-isctypes)します。  
-  
 シンボル ファイルが C の型を含むかどうかを示すフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -53,7 +51,7 @@ HRESULT get_isCTypes(
 ## <a name="remarks"></a>Remarks  
  このプロパティは、`SymTagExe`記号の型 (を参照してください[Exe](../../debugger/debug-interface-access/exe.md))。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

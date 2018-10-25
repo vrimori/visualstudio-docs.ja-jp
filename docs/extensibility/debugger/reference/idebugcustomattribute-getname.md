@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute::GetName |Microsoft ドキュメント
+title: IDebugCustomAttribute::GetName |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a33b4507cb54095a38671eaf310d87dae180be6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 11a4b986799cf03221b4af077fc3e1e5809c4137
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31103966"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866481"
 ---
 # <a name="idebugcustomattributegetname"></a>IDebugCustomAttribute::GetName
 カスタム属性の名前を取得します。  
@@ -41,13 +41,13 @@ int GetName(
   
 #### <a name="parameters"></a>パラメーター  
  `bstrName`  
- [out]カスタム属性の名前を表す文字列を返します。  
+ [out]カスタム属性の名前を含む文字列を返します。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドによって返される名前付き属性の宣言に使用するクラスの名前に対応します。 これは、可能性があります正確に一致しない名に対応するカスタム属性クラス自体の c# では"Attribute"サフィックスとして、宣言で使用されているときに、カスタム属性名から削除するとします。  
+## <a name="remarks"></a>Remarks  
+ このメソッドによって返される名前付き属性を宣言するために使用するクラスの名前に対応します。 カスタム属性クラス自体の名前に対応して c# では、宣言で使用されるときにカスタム属性名から削除する"Attribute"というサフィックスとしてこの可能性がありますも一致しません。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

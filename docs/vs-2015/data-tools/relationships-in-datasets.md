@@ -1,7 +1,7 @@
 ---
 title: データセットのリレーションシップ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,50 +24,48 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 08667684b50639c810ef8bb06832bcd609ddc15b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0b138b9ad49a0fd1a406e698aafd121478e95f4a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545457"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935407"
 ---
 # <a name="relationships-in-datasets"></a>データセットのリレーションシップ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[データセットのリレーションシップ](https://docs.microsoft.com/visualstudio/data-tools/relationships-in-datasets)します。  
-  
   
 関連データを含むデータセット テーブルを使用して<xref:System.Data.DataRelation>を 1 つ別の関連レコードを返すと、テーブル間の親/子リレーションシップを表すオブジェクト。 使用してデータセットの関連テーブルの追加、**データ ソース構成ウィザード**、または**データセット デザイナー**を作成し、構成、<xref:System.Data.DataRelation>オブジェクト。  
   
  <xref:System.Data.DataRelation>オブジェクトが 2 つの関数を実行します。  
   
--   利用できるように使用しているレコードに関連するレコード。 親レコードの場合は、子レコードを提供します (<xref:System.Data.DataRow.GetChildRows%2A>) と子レコードを使用している場合は、親レコード (<xref:System.Data.DataRow.GetParentRow%2A>)。  
+- 利用できるように使用しているレコードに関連するレコード。 親レコードの場合は、子レコードを提供します (<xref:System.Data.DataRow.GetChildRows%2A>) と子レコードを使用している場合は、親レコード (<xref:System.Data.DataRow.GetParentRow%2A>)。  
   
--   親レコードを削除すると、関連する子レコードの削除などの参照整合性制約を適用します。  
+- 親レコードを削除すると、関連する子レコードの削除などの参照整合性制約を適用します。  
   
- True の結合との関数の違いを理解することが重要な<xref:System.Data.DataRelation>オブジェクト。 真の結合レコードが親と子テーブルから取得され、フラットで 1 つのレコード セットに配置。 使用すると、<xref:System.Data.DataRelation>オブジェクトの新しいレコード セットは作成されません。 代わりに、datarelation を使用では、テーブル間の関係を追跡し、親と子レコードの同期を保ちます。  
+  True の結合との関数の違いを理解することが重要な<xref:System.Data.DataRelation>オブジェクト。 真の結合レコードが親と子テーブルから取得され、フラットで 1 つのレコード セットに配置。 使用すると、<xref:System.Data.DataRelation>オブジェクトの新しいレコード セットは作成されません。 代わりに、datarelation を使用では、テーブル間の関係を追跡し、親と子レコードの同期を保ちます。  
   
 ## <a name="datarelation-objects-and-constraints"></a>DataRelation オブジェクトと制約  
  A<xref:System.Data.DataRelation>オブジェクトは作成して、次の制約の適用にも使用されます。  
   
--   Unique 制約をテーブルの列に重複が含まれないことが保証されます。  
+- Unique 制約をテーブルの列に重複が含まれないことが保証されます。  
   
--   データセット内の親と子テーブル間に参照整合性を維持するために使用できる foreign key 制約。  
+- データセット内の親と子テーブル間に参照整合性を維持するために使用できる foreign key 制約。  
   
- 指定した制約を<xref:System.Data.DataRelation>オブジェクトが自動的に適切なオブジェクトを作成するか、プロパティを設定して実装されます。 使用して foreign key 制約を作成するかどうか、<xref:System.Data.DataRelation>オブジェクト、インスタンスの<xref:System.Data.ForeignKeyConstraint>クラスに追加されて、<xref:System.Data.DataRelation>オブジェクトの<xref:System.Data.DataRelation.ChildKeyConstraint%2A>プロパティ。  
+  指定した制約を<xref:System.Data.DataRelation>オブジェクトが自動的に適切なオブジェクトを作成するか、プロパティを設定して実装されます。 使用して foreign key 制約を作成するかどうか、<xref:System.Data.DataRelation>オブジェクト、インスタンスの<xref:System.Data.ForeignKeyConstraint>クラスに追加されて、<xref:System.Data.DataRelation>オブジェクトの<xref:System.Data.DataRelation.ChildKeyConstraint%2A>プロパティ。  
   
- Unique 制約が実装されているいずれかを設定するだけで、<xref:System.Data.DataColumn.Unique%2A>するデータ列のプロパティ`true`またはのインスタンスを追加することで、<xref:System.Data.UniqueConstraint>クラスを<xref:System.Data.DataRelation>オブジェクトの<xref:System.Data.DataRelation.ParentKeyConstraint%2A>プロパティ。 データセット内の制約を中断する方法の詳細については、次を参照してください。[データセットの読み込み中に制約を無効に](../data-tools/turn-off-constraints-while-filling-a-dataset.md)します。  
+  Unique 制約が実装されているいずれかを設定するだけで、<xref:System.Data.DataColumn.Unique%2A>するデータ列のプロパティ`true`またはのインスタンスを追加することで、<xref:System.Data.UniqueConstraint>クラスを<xref:System.Data.DataRelation>オブジェクトの<xref:System.Data.DataRelation.ParentKeyConstraint%2A>プロパティ。 データセット内の制約を中断する方法の詳細については、次を参照してください。[データセットの読み込み中に制約を無効に](../data-tools/turn-off-constraints-while-filling-a-dataset.md)します。  
   
 ### <a name="referential-integrity-rules"></a>参照整合性の規則  
  Foreign key 制約の一部として、次の 3 つの時点で適用される参照整合性規則を指定できます。  
   
--   親レコードが更新されたとき  
+- 親レコードが更新されたとき  
   
--   親レコードが削除されたとき  
+- 親レコードが削除されたとき  
   
--   変更が受け入れられるか拒否されます。  
+- 変更が受け入れられるか拒否されます。  
   
- 行うことができる規則が指定されて、<xref:System.Data.Rule>列挙およびは次の表に記載します。  
+  行うことができる規則が指定されて、<xref:System.Data.Rule>列挙およびは次の表に記載します。  
   
 |外部キー制約の規則|アクション|  
 |----------------------------------|------------|  
@@ -108,7 +106,7 @@ ms.locfileid: "47545457"
   
 8.  オンまたはオフ、**入れ子になったリレーションシップ**ボックス。 このオプションの設定を選択すると、<xref:System.Data.DataRelation.Nested%2A>プロパティを`true`と、行が親列内で入れ子になったこれらの行の XML データとして書き込まれるまたはとの同期とのリレーションシップの子をその<xref:System.Xml.XmlDataDocument>します。 詳細については、次を参照してください。 [Datarelation の入れ子](http://msdn.microsoft.com/library/9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab)します。  
   
-9. これらのテーブル内のレコードに変更を加えていない場合に適用する規則を設定します。 詳細については、「<xref:System.Data.Rule>」を参照してください。  
+9. これらのテーブル内のレコードに変更を加えていない場合に適用する規則を設定します。 詳細については、「 <xref:System.Data.Rule> 」を参照してください。  
   
 10. クリックして**OK**リレーションシップを作成します。 リレーションシップの線は、2 つのテーブル デザイナーに表示されます。  
   

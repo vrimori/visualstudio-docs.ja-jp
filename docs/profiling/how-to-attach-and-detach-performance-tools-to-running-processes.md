@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ea9b35192eb2584f92856e5ab9c50eac22da85f7
-ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
+ms.openlocfilehash: fbacad455f6663eae13aea42d0424091a0e3ec6a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35237228"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920936"
 ---
 # <a name="how-to-attach-and-detach-performance-tools-to-running-processes"></a>方法: 実行中のプロセスに対するパフォーマンス ツールのアタッチとデタッチ
 実行中のプロセスに対してプロファイラーのアタッチまたはデタッチを行うことで、パフォーマンス データのサンプリングや収集を容易にすることができます。 この方法は、アプリケーションの読み込み時間に関するデータの収集を行わない場合や、プロセスが特定の状態に達した後にそのパフォーマンスを監視する場合に、プロセスのプロファイリングを行うために使用します。  
@@ -33,13 +33,13 @@ ms.locfileid: "35237228"
   
  プロファイルに使用できるプロセスは、コンピューターの管理者によって設定されたユーザーのアクセス許可によって異なります。 たとえば、ユーザー アカウントには、次のようなアクセス許可が設定されていることがあります。  
   
--   高度なプロファイリング機能 (管理者が起動用のドライバーとサービスを設定している場合)。  
+- 高度なプロファイリング機能 (管理者が起動用のドライバーとサービスを設定している場合)。  
   
--   サンプル プロファイルのみ (ドメイン ユーザーの場合)。  
+- サンプル プロファイルのみ (ドメイン ユーザーの場合)。  
   
--   ユーザーに対してプロファイルへのアクセスを拒否。  
+- ユーザーに対してプロファイルへのアクセスを拒否。  
   
- 詳細については、「[プロファイルと Windows Vista のセキュリティ](../profiling/profiling-and-windows-vista-security.md)」および「[VSPerfCmd](../profiling/vsperfcmd.md)」の ADMIN オプションを参照してください。  
+  詳細については、「[プロファイルと Windows Vista のセキュリティ](../profiling/profiling-and-windows-vista-security.md)」および「[VSPerfCmd](../profiling/vsperfcmd.md)」の ADMIN オプションを参照してください。  
   
 ### <a name="to-attach-to-a-running-process"></a>実行中のプロセスにアタッチするには  
   

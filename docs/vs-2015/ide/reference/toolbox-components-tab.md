@@ -1,7 +1,7 @@
 ---
 title: ツールボックス、[コンポーネント] タブ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b253e170adc8510aebd9c96a468169058d2a87fc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 405c7db0ca437aa5462068e2be3cfcc2d76c1cae
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545782"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49203126"
 ---
 # <a name="toolbox-components-tab"></a>ツールボックス、[コンポーネント] タブ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ツールボックス、[コンポーネント] タブ](https://docs.microsoft.com/visualstudio/ide/reference/toolbox-components-tab)します。  
-  
   
 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] および [!INCLUDE[csprcs](../../includes/csprcs-md.md)] のデザイナーに追加できるコンポーネントを表示します。 <xref:System.Messaging.MessageQueue> コンポーネントや <xref:System.Diagnostics.EventLog> コンポーネントなど、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] に含まれている [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] コンポーネントに加え、独自のコンポーネントまたはサード パーティ製のコンポーネントをこのタブに追加できます。詳細については、「[How to: Manipulate Toolbox Tabs](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db)」 (方法: [ツールボックス] タブの操作) を参照してください。  
   

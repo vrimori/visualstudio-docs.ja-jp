@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2102: 汎用ハンドラーで非 CLSCompliant の例外をキャッチする |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,17 +19,15 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 1e798f7c8377d0bde569c9c0e1c10cc299b28af6
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 5c2797b32bbcabd1c63fbfd510aec05c8bf54d21
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47592343"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877422"
 ---
 # <a name="ca2102-catch-non-clscompliant-exceptions-in-general-handlers"></a>CA2102: 汎用ハンドラーの CLSCompliant でない例外をキャッチします
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2102: 汎用ハンドラーで、非 CLSCompliant の例外をキャッチ](https://docs.microsoft.com/visualstudio/code-quality/ca2102-catch-non-clscompliant-exceptions-in-general-handlers)します。
 
 |||
 |-|-|
@@ -44,11 +42,11 @@ ms.locfileid: "47592343"
 ## <a name="rule-description"></a>規則の説明
  処理する catch ブロック<xref:System.Exception>共通言語仕様 (CLS) 準拠のすべての例外をキャッチします。 ただし、CLS 非準拠の例外はキャッチしません。 非 CLS 準拠でネイティブ コードまたは Microsoft によって生成されたマネージ コードから、準拠しない例外をスローできます intermediate language (MSIL) アセンブラー。 注意して、c# と[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]コンパイラできないようにする CLS 非準拠の例外をスローし、 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] CLS 非準拠の例外をキャッチしません。 すべての例外を処理する catch ブロックの目的がある場合は、次の汎用の catch ブロックの構文を使用します。
 
--   C#: `catch {}`
+- C#: `catch {}`
 
--   C++:`catch(...) {}`または `catch(Object^) {}`
+- C++:`catch(...) {}`または `catch(Object^) {}`
 
- Catch ブロックで以前に許可されたアクセス許可が削除されたときのセキュリティの問題を処理できない CLS 準拠の例外になります。 CLS 非準拠の例外はキャッチされないため、CLS に準拠している例外をスローする悪意のあるメソッドは、管理者特権を持つ実行でした。
+  Catch ブロックで以前に許可されたアクセス許可が削除されたときのセキュリティの問題を処理できない CLS 準拠の例外になります。 CLS 非準拠の例外はキャッチされないため、CLS に準拠している例外をスローする悪意のあるメソッドは、管理者特権を持つ実行でした。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  目的は、すべてをキャッチするときに、この規則の違反を修正する例外を置き換える汎用 catch ブロックを追加またはアセンブリをマーク`RuntimeCompatibility(WrapNonExceptionThrows = true)`します。 場合は、catch ブロックでのアクセス許可が削除されると、重複する機能は、一般的な catch ブロック。 すべての例外を処理するために意図されていない場合を処理する catch ブロックを置き換える<xref:System.Exception>で特定の例外の種類に対応する catch ブロック。

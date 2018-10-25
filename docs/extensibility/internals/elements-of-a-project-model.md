@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f0df69c18641faa2fe45326eb65ac408dcfd081f
-ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
+ms.openlocfilehash: 9eab0627184ac887aacfdfb2f275f0e8d9d30df7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46370795"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49912657"
 ---
 # <a name="elements-of-a-project-model"></a>プロジェクト モデルの要素
 インターフェイスと実装のすべてのプロジェクトの[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]基本的な構造を共有: プロジェクトの種類のプロジェクト モデル。 VSPackage を開発するには、プロジェクト モデルを取得するでは、設計上の決定に従っているし、IDE によって提供されるグローバルの機能と連携するオブジェクトを作成します。 プロジェクト項目を保存する方法を制御する、たとえば、制御できない通知ファイルを維持する必要があります。 ユーザーが開いているプロジェクト項目にフォーカスが移るし、選択**保存**上、**ファイル**メニューで、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]メニュー バーで、プロジェクトの種類コードする必要があります、IDE からコマンドをインターセプト、ファイルを保持してとファイルが不要になった変更されたことを IDE に戻るには、通知を送信します。  
@@ -29,20 +29,20 @@ ms.locfileid: "46370795"
   
  その他の実装の考慮事項:  
   
--   1 つのプロジェクト モデルは、1 つ以上のプロジェクトの種類を含めることができます。  
+- 1 つのプロジェクト モデルは、1 つ以上のプロジェクトの種類を含めることができます。  
   
--   プロジェクトの種類とアテンダント プロジェクト ファクトリに登録されていない個別に Guid。  
+- プロジェクトの種類とアテンダント プロジェクト ファクトリに登録されていない個別に Guid。  
   
--   各プロジェクト テンプレート ファイルまたはユーザーが経由で、新しいプロジェクトを作成するときに、新しいプロジェクト ファイルを初期化するためにウィザードが適用される場合があります、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] UI。 たとえば、[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]テンプレートは、最終的になるものの .vcproj ファイルを初期化します。  
+- 各プロジェクト テンプレート ファイルまたはユーザーが経由で、新しいプロジェクトを作成するときに、新しいプロジェクト ファイルを初期化するためにウィザードが適用される場合があります、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] UI。 たとえば、[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]テンプレートは、最終的になるものの .vcproj ファイルを初期化します。  
   
- 次の図は、プライマリ インターフェイス、サービス、および一般的なプロジェクトの実装を構成するオブジェクトを示します。 アプリケーションのヘルパーを使用する`HierUtil7`、基になるオブジェクトとその他のプログラミングの定型コードを作成します。 詳細については、`HierUtil7`アプリケーションのヘルパーを参照してください[プロジェクトの種類 (C++) を実装するために使用 HierUtil7 プロジェクト クラス](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346)します。  
+  次の図は、プライマリ インターフェイス、サービス、および一般的なプロジェクトの実装を構成するオブジェクトを示します。 アプリケーションのヘルパーを使用する`HierUtil7`、基になるオブジェクトとその他のプログラミングの定型コードを作成します。 詳細については、`HierUtil7`アプリケーションのヘルパーを参照してください[プロジェクトの種類 (C++) を実装するために使用 HierUtil7 プロジェクト クラス](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346)します。  
   
- ![Visual Studio プロジェクト モデル グラフィック](../../extensibility/internals/media/vsprojectmodel.gif "vsProjectModel")  
-Project モデル  
+  ![Visual Studio プロジェクト モデル グラフィック](../../extensibility/internals/media/vsprojectmodel.gif "vsProjectModel")  
+  Project モデル  
   
- インターフェイスと、前の図に表示されるサービスと、ダイアグラムに含まれていないその他の省略可能なインターフェイスの詳細については、次を参照してください。[プロジェクト モデルのコア コンポーネント](../../extensibility/internals/project-model-core-components.md)します。  
+  インターフェイスと、前の図に表示されるサービスと、ダイアグラムに含まれていないその他の省略可能なインターフェイスの詳細については、次を参照してください。[プロジェクト モデルのコア コンポーネント](../../extensibility/internals/project-model-core-components.md)します。  
   
- プロジェクトのコマンドをサポートし、したがってを実装する必要があります、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>コマンド コンテキスト Guid によるコマンドのルーティングに参加するインターフェイス。  
+  プロジェクトのコマンドをサポートし、したがってを実装する必要があります、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>コマンド コンテキスト Guid によるコマンドのルーティングに参加するインターフェイス。  
   
 ## <a name="see-also"></a>関連項目  
  [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   

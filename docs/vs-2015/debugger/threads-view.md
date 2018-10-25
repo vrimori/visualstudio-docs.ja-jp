@@ -1,7 +1,7 @@
 ---
 title: スレッド ビュー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,30 +18,28 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 79c0443d17ed18573cdbe990474ee328f2d3678f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1adef2aeda5385fae1e3603127e3eea3f5ad109b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548550"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49943038"
 ---
 # <a name="threads-view"></a>スレッド ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[スレッド ビュー](https://docs.microsoft.com/visualstudio/debugger/threads-view)します。  
-  
 スレッド ビューでは、システム上のウィンドウに関連付けられているすべてのスレッドのフラットな一覧を示します。 スレッドの ID とスレッドごとのモジュール名が表示されます。 プロセスは含まれていませんが、選択したスレッドを所有するプロセスを簡単に見つけることができます。  
   
 ## <a name="procedures"></a>手順  
   
 #### <a name="to-open-the-threads-view"></a>スレッド ビューを開く  
   
-1.  **スパイ**] メニューの [選択**スレッド**します。  
+1. **スパイ**] メニューの [選択**スレッド**します。  
   
- ![Spy&#43; &#43;スレッド ビュー](../debugger/media/spy-threads.png "スパイ + _Threads")  
-Spy++ スレッド ビュー  
+   ![Spy&#43; &#43;スレッド ビュー](../debugger/media/spy-threads.png "スパイ + _Threads")  
+   Spy++ スレッド ビュー  
   
- 上記の図は、スレッド ビューを示しています。  
+   上記の図は、スレッド ビューを示しています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [スレッド ビューでスレッドを検索](../debugger/how-to-search-for-a-thread-in-threads-view.md)  

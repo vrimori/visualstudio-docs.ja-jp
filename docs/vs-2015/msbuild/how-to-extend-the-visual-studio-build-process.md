@@ -1,7 +1,7 @@
 ---
 title: '方法: Visual Studio ビルド処理を拡張する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: aa46b55745fcd07ddbc8e66804f5df4125c244e3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6140ecf03802e283d8880a9c198e3a26667723f2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540095"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899696"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>方法 : Visual Studio ビルド処理を拡張する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: Visual Studio ビルド処理を拡張](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process)します。  
-  
   
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ビルド処理は、プロジェクト ファイルにインポートされる一連の [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .targets ファイルによって定義されます。 このインポートされるファイルの 1 つである Microsoft.Common.targets を拡張することで、ビルド処理の複数のポイントでカスタム タスクを実行できます。 このトピックでは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ビルド処理を拡張するための 2 つの方法について説明します。  
   
@@ -43,25 +41,25 @@ ms.locfileid: "47540095"
   
 #### <a name="to-override-a-predefined-target"></a>事前定義されているターゲットをオーバーライドするには  
   
-1.  オーバーライドする Microsoft.Common.targets で事前定義済みターゲットを見つけます。 下の表をご覧ください。これは安全にオーバーライドできるターゲットの完全一覧です。  
+1. オーバーライドする Microsoft.Common.targets で事前定義済みターゲットを見つけます。 下の表をご覧ください。これは安全にオーバーライドできるターゲットの完全一覧です。  
   
-2.  プロジェクト ファイルの最後で、`</Project>` タグの直前で、ターゲットを定義します。 例えば:  
+2. プロジェクト ファイルの最後で、`</Project>` タグの直前で、ターゲットを定義します。 例えば:  
   
-    ```  
-    <Project>  
-        ...  
-        <Target Name="BeforeBuild">  
-            <!-- Insert tasks to run before build here -->  
-        </Target>  
-        <Target Name="AfterBuild">  
-            <!-- Insert tasks to run after build here -->  
-        </Target>  
-    </Project>  
-    ```  
+   ```  
+   <Project>  
+       ...  
+       <Target Name="BeforeBuild">  
+           <!-- Insert tasks to run before build here -->  
+       </Target>  
+       <Target Name="AfterBuild">  
+           <!-- Insert tasks to run after build here -->  
+       </Target>  
+   </Project>  
+   ```  
   
-3.  プロジェクト ファイルをビルドします。  
+3. プロジェクト ファイルをビルドします。  
   
- 次の表は、Microsoft.Common.targets で安全にオーバーライドできるすべてのターゲットをまとめたものです。  
+   次の表は、Microsoft.Common.targets で安全にオーバーライドできるすべてのターゲットをまとめたものです。  
   
 |ターゲット名|説明|  
 |-----------------|-----------------|  

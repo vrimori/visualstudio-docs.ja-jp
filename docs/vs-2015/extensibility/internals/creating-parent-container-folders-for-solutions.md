@@ -1,7 +1,7 @@
 ---
 title: ソリューションの親コンテナーのフォルダーを作成する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 961e68ed-2603-4479-a306-330eda2b2efa
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a172598ebe54007c6b0a7b2c6843d04b49a2b72a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8bf3de0c558dbda1d1b43e7b5887780f1a1e2b90
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545867"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832065"
 ---
 # <a name="creating-parent-container-folders-for-solutions"></a>ソリューションの親コンテナー フォルダーの作成
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ソリューションの親コンテナー フォルダーを作成する](https://docs.microsoft.com/visualstudio/extensibility/internals/creating-parent-container-folders-for-solutions)します。  
-  
 ソース管理プラグイン API バージョン 1.2 では、ユーザーは、ソリューション内のすべての Web プロジェクトの 1 つのルートのソース コントロール変換先を指定できます。 この単一のルートには、スーパー Unified ルート (サー) が呼び出されます。  
   
  ソース管理プラグイン API バージョン 1.1 では、ユーザーは、ソース管理にマルチ プロジェクト ソリューションを追加すると、ユーザーを求め Web プロジェクトごとに 1 つのソース コントロールの先を指定されました。  
@@ -44,15 +42,15 @@ ms.locfileid: "47545867"
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE は、ソース管理にソリューションを追加するときに常にほぼサー フォルダーを作成します。 具体的には、これは、次の場合。  
   
--   プロジェクトは、Web プロジェクトのファイル共有です。  
+- プロジェクトは、Web プロジェクトのファイル共有です。  
   
--   別のドライブは、プロジェクトとソリューション ファイルがあります。  
+- 別のドライブは、プロジェクトとソリューション ファイルがあります。  
   
--   別の共有は、プロジェクトとソリューション ファイルがあります。  
+- 別の共有は、プロジェクトとソリューション ファイルがあります。  
   
--   プロジェクトは、個別に (ソース管理の対象のソリューション) に追加されました。  
+- プロジェクトは、個別に (ソース管理の対象のソリューション) に追加されました。  
   
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]サー フォルダーの名前が、拡張子を除いたソリューション名と同じであることをお勧めします。 次の表では、2 つのバージョンで動作をまとめたものです。  
+  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]サー フォルダーの名前が、拡張子を除いたソリューション名と同じであることをお勧めします。 次の表では、2 つのバージョンで動作をまとめたものです。  
   
 |機能|tSource コントロール プラグイン API バージョン 1.1|ソース管理プラグイン API バージョン 1.2|  
 |-------------|----------------------------------------------|---------------------------------------------|  

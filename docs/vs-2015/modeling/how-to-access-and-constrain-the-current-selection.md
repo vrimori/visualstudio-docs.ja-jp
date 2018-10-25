@@ -1,7 +1,7 @@
 ---
 title: '方法: を表示および現在の選択範囲の制限 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 308187842eeaed8e216336ab84c6e9036c1ced70
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ec8ff7ae0b0e006528b11604f54dc74170857cf7
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547072"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49187578"
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>方法: 現在の選択項目を表示および制限する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: を表示および現在の選択範囲を制限](https://docs.microsoft.com/visualstudio/modeling/how-to-access-and-constrain-the-current-selection)します。  
-  
 ドメイン固有言語のコマンドまたはジェスチャ ハンドラーを記述するときに、どのような要素をユーザーが右クリックを確認できます。 一部のシェイプまたはフィールドも選択できないようにできます。 たとえば、ユーザーは、アイコン、デコレーターをクリックすると、それを含んでいる図形が選択されている代わりに配置できます。 この方法で選択範囲の制約は、ハンドラーを記述する必要があるの数を減らします。 簡単に、ユーザー、デコレーターを回避することがなく、図形内をクリックできます。  
   
 ## <a name="accessing-the-current-selection-from-a-command-handler"></a>現在の選択コマンド ハンドラーからへのアクセス  

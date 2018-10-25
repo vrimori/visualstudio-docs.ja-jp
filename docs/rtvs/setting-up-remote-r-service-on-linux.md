@@ -11,11 +11,12 @@ ms.reviewer: karthiknadig
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: ec988b9739dfbec60fe19b41145ae0de1b3d3f77
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fa985b88e5857d12324f25a5bd1581ca3f9e211e
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35667926"
 ---
 # <a name="remote-r-service-for-linux"></a>Linux 用のリモート R サービス
 
@@ -23,14 +24,14 @@ Linux 用のリモート R サービスは現在、rtvs デーモンとしてパ
 
 リモート マシンの構成が完了したら、次の手順を実行して、R Tools for Visual Studio (RTVS) をそのサービスに接続します。
 
-1. **[R Tools]、[ウィンドウ]、[ワークスペース]** の順に選択して、**[ワークスペース]** ウィンドウを開きます。
+1. **[R Tools]** > **[ウィンドウ]** > **[ワークスペース]** の順に選択して、**[ワークスペース]** ウィンドウを開きます。
 1. **[接続の追加]** を選択します。
 1. 接続に名前を付けて、その URL を入力します。たとえば、`https://localhost:5444` (Linux 用 Windows サブシステム) または `https://public-ip:5444` (Azure コンテナー) とします。 完了したら、**[保存]** を選択します。
 1. 接続アイコンを選択するか、接続項目をダブルクリックします。
 1. ログイン資格情報を入力します。 ユーザー名には、`<<unix>>\ruser1` のように、プレフィックスとして `<<unix>>\` を付けます (必要な場合は、Linux リモート マシンへのすべての接続に対して)。
 1. 自己署名証明書を使用している場合は、警告が表示される可能性があります。 メッセージには、警告を解決するための手順が示されています。
 
-## <a name="setting-up-remote-r-service"></a>リモート R サービスの設定
+## <a name="set-up-remote-r-service"></a>リモート R サービスの設定
 
 このセクションでは、次のオプションについて説明します。
 
@@ -68,7 +69,7 @@ Linux 用のリモート R サービスは現在、rtvs デーモンとしてパ
     sudo systemctl start rtvsd
     ```
 
-1. SSL 証明書を構成します (運用環境で必要)。 既定では、rtvs デーモンは、`ssl-cert` パッケージによって生成された `ssl-cert-snakeoil.pem` と `ssl-cert-snakeoil.pem` を使用します。 インストール中に、それらは `ssl-cert-snakeoil.pfx` に結合されます。 運用環境では、管理者によって提供される SSL 証明書を使用します。 SSL 証明書を構成するには、`/etc/rtvs/rtvsd.config.json` 内に `.pfx` ファイルと省略可能なインポート パスワードを指定します。
+1. SSL 証明書を構成します (運用環境で必要)。 既定では、rtvs デーモンは、`ssl-cert` パッケージによって生成された `ssl-cert-snakeoil.pem` と `ssl-cert-snakeoil.pem` を使用します。 インストール中に、それらは `ssl-cert-snakeoil.pfx` に結合されます。 運用環境では、管理者によって提供される SSL 証明書を使用します。 SSL 証明書を構成するには、*/etc/rtvs/rtvsd.config.json* 内に *.pfx* ファイルと省略可能なインポート パスワードを指定します。
 
 1. (省略可能) サービスが実行されていることを確認します。
 
@@ -100,7 +101,7 @@ Linux 用のリモート R サービスは現在、rtvs デーモンとしてパ
 
 #### <a name="configure-the-vm"></a>VM を構成する
 
-1. VM の **[ネットワーク]** セクションで、許可された受信ポートとして 5444 を追加します。 別のポートを使用するには、RTVS デーモン構成ファイル (`/etc/rtvs/rtvsd.config.json`) 内の設定を変更します。
+1. VM の **[ネットワーク]** セクションで、許可された受信ポートとして 5444 を追加します。 別のポートを使用するには、RTVS デーモン構成ファイル (*/etc/rtvs/rtvsd.config.json*) 内の設定を変更します。
 1. (省略可能) DNS の名前を設定します。IP アドレスを使用することもできます。
 1. PuTTY for WIndows などの SSH クライアントを使用して VM に接続します。
 1. 前述の[物理的な Ubuntu コンピューター](#physical-ubuntu-computer)に対する手順に従います。
@@ -155,7 +156,7 @@ Linux 用のリモート R サービスは現在、rtvs デーモンとしてパ
     docker run -p 5444:5444 myrimage rtvsd
     ```
 
-1. RTVS からコンテナーに接続するには、パス、ユーザー名 `<<unix>>\ruser1`、パスワード `foobar` として `https://localhost:5444` を使用します。 コンテナーがリモート マシンで実行されている場合は、代わりにパスとして `https://remote-host-name:5444` を使用します。 ポートを変更するには、`/etc/rtvs/rtvsd.config.json` を更新します。
+1. RTVS からコンテナーに接続するには、パス、ユーザー名 `<<unix>>\ruser1`、パスワード `foobar` として `https://localhost:5444` を使用します。 コンテナーがリモート マシンで実行されている場合は、代わりにパスとして `https://remote-host-name:5444` を使用します。 ポートを変更するには、*/etc/rtvs/rtvsd.config.json* を更新します。
 
 ### <a name="container-running-on-azure-container-instances"></a>Azure Container Instances で実行されているコンテナー
 

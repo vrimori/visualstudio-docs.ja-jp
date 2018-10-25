@@ -1,7 +1,7 @@
 ---
 title: ClickOnce のセキュリティと展開 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,29 +23,27 @@ caps.latest.revision: 34
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: be076232ee9214ad0039421c7c5610fad3f4c3b1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 50654574dea18df98f8f4ecef8d606cccec93f14
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539025"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898175"
 ---
 # <a name="clickonce-security-and-deployment"></a>ClickOnce のセキュリティと配置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ClickOnce Security and Deployment](https://docs.microsoft.com/visualstudio/deployment/clickonce-security-and-deployment)します。  
-  
 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 展開テクノロジをインストールして最小限のユーザーとのやり取りを実行できる自己更新型の Windows ベースのアプリケーションを作成することができます。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 発行および Visual Basic および Visual c# でプロジェクトを開発する場合は、ClickOnce テクノロジで配置されたアプリケーションを更新するためには、完全にサポートを提供します。 Visual C アプリケーションを展開する方法の詳細については、次を参照してください。 [Visual c アプリケーションの ClickOnce 配置](http://msdn.microsoft.com/library/9988c546-0936-452c-932f-9c76daa42157)します。  
   
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 展開は、展開における 3 つの主な問題を克服します。  
   
--   **アプリケーションの更新中における問題。** Microsoft Windows インストーラーの展開でアプリケーションが更新されるたびにユーザーが msp ファイルでは、更新プログラムをインストールしてインストールされた製品に適用します。[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開、更新プログラムを自動的に提供することができます。 アプリケーションの変更された部分のみがダウンロードされ、更新されたアプリケーションの全体はサイド バイ サイドの新しいフォルダーから再インストールされます。  
+- **アプリケーションの更新中における問題。** Microsoft Windows インストーラーの展開でアプリケーションが更新されるたびにユーザーが msp ファイルでは、更新プログラムをインストールしてインストールされた製品に適用します。[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開、更新プログラムを自動的に提供することができます。 アプリケーションの変更された部分のみがダウンロードされ、更新されたアプリケーションの全体はサイド バイ サイドの新しいフォルダーから再インストールされます。  
   
--   **ユーザーのコンピューターに及ぼす影響。** Windows インストーラーの展開、多くの場合、アプリケーションはバージョン管理の競合が発生する可能性を伴うの共有コンポーネントに依存しています。[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開、各アプリケーションは自己完結型、およびその他のアプリケーションに干渉することはできません。  
+- **ユーザーのコンピューターに及ぼす影響。** Windows インストーラーの展開、多くの場合、アプリケーションはバージョン管理の競合が発生する可能性を伴うの共有コンポーネントに依存しています。[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開、各アプリケーションは自己完結型、およびその他のアプリケーションに干渉することはできません。  
   
--   **セキュリティ アクセス許可。** Windows インストーラーの展開は、管理者権限を必要とし、限られたユーザーにのみインストールが制限されます。[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開は管理者権限をもたないユーザーにもインストールを可能とさせ、アプリケーションに必要なコード アクセス セキュリティのアクセス許可のみを付与します。  
+- **セキュリティ アクセス許可。** Windows インストーラーの展開は、管理者権限を必要とし、限られたユーザーにのみインストールが制限されます。[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開は管理者権限をもたないユーザーにもインストールを可能とさせ、アプリケーションに必要なコード アクセス セキュリティのアクセス許可のみを付与します。  
   
- 以前は、これらの問題が原因で、開発者のインストールの容易にするための豊富なユーザー インターフェイスを犠牲にして、Windows ベースのアプリケーションでの代わりに Web アプリケーションを作成することもありました。 使用してデプロイされたアプリケーションを使用して[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]、両方のテクノロジの長所があることができます。  
+  以前は、これらの問題が原因で、開発者のインストールの容易にするための豊富なユーザー インターフェイスを犠牲にして、Windows ベースのアプリケーションでの代わりに Web アプリケーションを作成することもありました。 使用してデプロイされたアプリケーションを使用して[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]、両方のテクノロジの長所があることができます。  
   
 ## <a name="what-is-a-clickonce-application"></a>ClickOnce アプリケーションとは何ですか。  
  A[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションには、Windows Presentation Foundation (.xbap)、Windows フォーム (.exe)、コンソール アプリケーション (.exe)、または Office ソリューション (.dll) を使用してパブリッシュ[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]テクノロジ。 発行することができます、 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 3 つの異なる方法でアプリケーション: Web ページから、ネットワーク ファイル共有の場合、または CD-ROM などのメディアから。 A[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションをエンドユーザーのコンピューターにインストールされているし、コンピューターがオフライン、またはエンドユーザーのコンピューターにインストールせず、オンライン専用モードで実行できる場合でもローカルで実行できます。 詳細については、「[ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)」を参照してください。  
@@ -107,9 +105,9 @@ ms.locfileid: "47539025"
 |[[発行] ページ (プロジェクト デザイナー)](../ide/reference/publish-page-project-designer.md)|生成し、Visual Basic および Visual c# アプリケーションのアプリケーションと配置マニフェストを編集します。|  
 |[Mage.exe (マニフェストの生成および編集ツール)](http://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)|Visual Basic、Visual c#、および Visual C アプリケーションのアプリケーションと配置マニフェストを生成します。<br /><br /> 署名し、アプリケーション マニフェストと配置マニフェストに再署名します。<br /><br /> バッチ スクリプトとコマンド プロンプトから実行できます。|  
 |[MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](http://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)|生成し、アプリケーション マニフェストと配置マニフェストを編集します。<br /><br /> 署名し、アプリケーション マニフェストと配置マニフェストに再署名します。|  
-|[GenerateApplicationManifest タスク](../msbuild/generateapplicationmanifest-task.md)|アプリケーション マニフェストを生成します。<br /><br /> MSBuild から実行できます。 詳細については、次を参照してください。 [MSBuild リファレンス](../msbuild/msbuild-reference.md)します。|  
-|[GenerateDeploymentManifest タスク](../msbuild/generatedeploymentmanifest-task.md)|配置マニフェストを生成します。<br /><br /> MSBuild から実行できます。 詳細については、次を参照してください。 [MSBuild リファレンス](../msbuild/msbuild-reference.md)します。|  
-|[SignFile タスク](../msbuild/signfile-task.md)|アプリケーションと配置マニフェストを登録します。<br /><br /> MSBuild から実行できます。 詳細については、次を参照してください。 [MSBuild リファレンス](../msbuild/msbuild-reference.md)します。|  
+|[GenerateApplicationManifest タスク](../msbuild/generateapplicationmanifest-task.md)|アプリケーション マニフェストを生成します。<br /><br /> MSBuild から実行できます。 詳細については、「[MSBuild リファレンス](../msbuild/msbuild-reference.md)」を参照してください。|  
+|[GenerateDeploymentManifest タスク](../msbuild/generatedeploymentmanifest-task.md)|配置マニフェストを生成します。<br /><br /> MSBuild から実行できます。 詳細については、「[MSBuild リファレンス](../msbuild/msbuild-reference.md)」を参照してください。|  
+|[SignFile タスク](../msbuild/signfile-task.md)|アプリケーションと配置マニフェストを登録します。<br /><br /> MSBuild から実行できます。 詳細については、「[MSBuild リファレンス](../msbuild/msbuild-reference.md)」を参照してください。|  
 |<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities>|アプリケーションと配置マニフェストを生成するアプリケーションを開発します。|  
   
  次の表では、これらのブラウザーで ClickOnce アプリケーションをサポートするために必要な .NET Framework バージョンを示します。  

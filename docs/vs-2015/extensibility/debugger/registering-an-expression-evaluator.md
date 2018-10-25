@@ -1,7 +1,7 @@
 ---
 title: 式エバリュエーターの登録 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 236be234-e05f-4ad8-9200-24ce51768ecf
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 34cf96f38d169994d85f758c9453b6ad15ad6390
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cdcdc100ff3bb46e9877a82848db5a8e842ab816
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536419"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896030"
 ---
 # <a name="registering-an-expression-evaluator"></a>式エバリュエーターの登録
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[式エバリュエーターの登録](https://docs.microsoft.com/visualstudio/extensibility/debugger/registering-an-expression-evaluator)します。  
-  
 > [!IMPORTANT]
 >  Visual Studio 2015 での式エバリュエーターの実装には、この方法は非推奨とされます。 CLR 式エバリュエーターの実装方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
   
@@ -36,7 +34,7 @@ ms.locfileid: "47536419"
 ## <a name="managed-code-expression-evaluator"></a>マネージ コードの式エバリュエーター  
  EE が自ら COM 環境は、通常、VSIP プログラムへの呼び出しにより起動を登録する DLL は、クラス ライブラリとして実装されているマネージ コード**regpkg.exe**します。 COM 環境のレジストリ キーの書き込みの実際のプロセスが自動的に処理されます。  
   
- メイン クラスのメソッドが付いて、 <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute>、そのメソッドが、DLL が COM に登録されているときに呼び出されることを示す この登録メソッドは、多くの場合と呼ばれる`RegisterClass`、Visual Studio で DLL を登録するためのタスクを実行します。 対応する`UnregisterClass`(でマークされた、 <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>) の効果を元に戻します`RegisterClass`DLL がアンインストールされます。  
+ メイン クラスのメソッドが付いて、<xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute>メソッドが、DLL が COM に登録されているときに呼び出されることを示す この登録メソッドは、多くの場合と呼ばれる`RegisterClass`、Visual Studio で DLL を登録するためのタスクを実行します。 対応する`UnregisterClass`(でマークされた、 <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>) の効果を元に戻します`RegisterClass`DLL がアンインストールされます。  
   
  アンマネージ コードで記述された、EE の場合と同じのレジストリ エントリが作成されます。唯一の違いがあるないヘルパー関数など`SetEEMetric`に仕事ができます。 この登録または登録解除プロセスの例のようになります。  
   

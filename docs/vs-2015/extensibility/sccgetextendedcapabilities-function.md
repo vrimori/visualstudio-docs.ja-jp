@@ -1,7 +1,7 @@
 ---
 title: SccGetExtendedCapabilities 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 588c6a92-2147-4d8b-a357-96ca7da0a092
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 016b44e8dcd8218b8c3fbd569ba6a27b77d9d204
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c2336a14c6d0030c0243ab7de0f5694dc159ed84
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544344"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926307"
 ---
 # <a name="sccgetextendedcapabilities-function"></a>SccGetExtendedCapabilities 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[SccGetExtendedCapabilities 関数](https://docs.microsoft.com/visualstudio/extensibility/sccgetextendedcapabilities-function)します。  
-  
 この関数は、ソース管理プラグインでサポートされているその他の機能を返します。  
   
 ## <a name="syntax"></a>構文  

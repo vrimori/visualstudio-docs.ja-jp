@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findfile |Microsoft ドキュメント
+title: Idiasession::findfile |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b91d23cdd92943a40dfa649e82964b101f68739d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 32c8fa5c6f3cd8ec3cf1cead397eadadb99e050d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31462189"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909942"
 ---
 # <a name="idiasessionfindfile"></a>IDiaSession::findFile
-コンパイル単位と名前によってソース ファイルを取得します。  
+コンパイル単位と名前のソース ファイルを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,10 +37,10 @@ HRESULT findFile (
   
 #### <a name="parameters"></a>パラメーター  
  `pCompiland`  
- [in][IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)検索のコンテキストとして使用するコンパイル単位を表すオブジェクト。 このパラメーターに設定`NULL`すべてのコンパイル単位にソース ファイルが見つかりません。  
+ [in][IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)検索のコンテキストとして使用するコンパイル単位を表すオブジェクト。 このパラメーターに設定`NULL`すべてのコンパイル単位内でソース ファイルを検索します。  
   
  `name`  
- [in]取得するソース ファイルの名前を指定します。 このパラメーターに設定`NULL`すべてのソース ファイルを取得するためです。  
+ [in]取得するソース ファイルの名前を指定します。 このパラメーターに設定`NULL`のすべてのソース ファイルを取得します。  
   
  `option`  
  [in]名前の検索に適用される比較オプションを指定します。 値から、 [NameSearchOptions 列挙型](../../debugger/debug-interface-access/namesearchoptions.md)列挙体は、単独または組み合わせて使用できます。  
@@ -49,7 +49,7 @@ HRESULT findFile (
  [out]返します、 [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)ソース ファイルの一覧を含むオブジェクトを取得します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="example"></a>例  
   

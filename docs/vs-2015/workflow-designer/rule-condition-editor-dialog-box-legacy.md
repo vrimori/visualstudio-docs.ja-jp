@@ -1,7 +1,7 @@
 ---
 title: ルール条件エディター ダイアログ ボックス (レガシ) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -16,33 +16,33 @@ caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: 7c78f17c74063e68c1ab5be6e79c61ccf6f39610
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0503f6ca9a209c62f842c9428cf1af9fe2a07ccc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535370"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49838544"
 ---
 # <a name="rule-condition-editor-dialog-box-legacy"></a>[ルール条件エディター] ダイアログ ボックス (レガシ)
 このトピックで説明する方法を使用して、**ルール条件エディター**  ダイアログ ボックスで、従来の[!INCLUDE[wfd1](../includes/wfd1-md.md)]します。 [!INCLUDE[wfd2](../includes/wfd2-md.md)] または [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]を使用します。  
   
  作成および使用して宣言的ルール条件を変更する、**ルール条件エディター**  ダイアログ ボックス。 これらのルール条件は、Windows Workflow Foundation の事前定義アクティビティにプロパティとして公開されています。  
   
--   [ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)  
+- [ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)  
   
--   [IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65034)  
+- [IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65034)  
   
--   [ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65039)  
+- [ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65039)  
   
--   [WhileActivity](http://go.microsoft.com/fwlink?LinkID=65049)  
+- [WhileActivity](http://go.microsoft.com/fwlink?LinkID=65049)  
   
--   [SequentialWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65040)  
+- [SequentialWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65040)  
   
--   [StateMachineWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65045)  
+- [StateMachineWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65045)  
   
- アクセスする、**ルール条件エディター**  ダイアログ ボックスを使用して、[選択条件 ダイアログ ボックス (レガシ)](../workflow-designer/select-condition-dialog-box-legacy.md)します。  
+  アクセスする、**ルール条件エディター**  ダイアログ ボックスを使用して、[選択条件 ダイアログ ボックス (レガシ)](../workflow-designer/select-condition-dialog-box-legacy.md)します。  
   
- 次の表に、ユーザー インターフェイス (UI) 要素の**ルール条件エディター**  ダイアログ ボックス。  
+  次の表に、ユーザー インターフェイス (UI) 要素の**ルール条件エディター**  ダイアログ ボックス。  
   
 |UI 要素|説明|  
 |----------------|-----------------|  
@@ -56,33 +56,33 @@ ms.locfileid: "47535370"
   
  ルール条件エディタは、次の演算子をサポートします。  
   
--   関係演算子 : ==、=、!=  
+- 関係演算子 : ==、=、!=  
   
--   比較演算子: <、 \<=、>、> =  
+- 比較演算子: <、 \<=、>、> =  
   
--   算術演算子 : +、-、*、/、MOD  
+- 算術演算子 : +、-、*、/、MOD  
   
--   論理演算子:、& &、OR、 &#124; &#124;、NOT、!  
+- 論理演算子:、& &、OR、 &#124; &#124;、NOT、!  
   
--   ビットごとの演算子: &、&#124;  
+- ビットごとの演算子: &、&#124;  
   
- 式演算子の優先順位は、C# 演算子の優先順位規則に従います。  
+  式演算子の優先順位は、C# 演算子の優先順位規則に従います。  
   
- ルール条件エディタは、次の数式をサポートします。  
+  ルール条件エディタは、次の数式をサポートします。  
   
- this.i == 1D (1.0 に解決)  
+  this.i == 1D (1.0 に解決)  
   
- this.i == 1E1 (10.0 に解決)  
+  this.i == 1E1 (10.0 に解決)  
   
- this.i == 1L (long として解決)  
+  this.i == 1L (long として解決)  
   
- this.i == 1M (decimal として解決)  
+  this.i == 1M (decimal として解決)  
   
- this.i == 1F (single として解決)  
+  this.i == 1F (single として解決)  
   
- this.i == 1U (unsigned int として解決)  
+  this.i == 1U (unsigned int として解決)  
   
- 条件の詳細については、次を参照してください。[ワークフロー内の条件を使用して](http://go.microsoft.com/fwlink?LinkID=65009)します。  
+  条件の詳細については、次を参照してください。[ワークフロー内の条件を使用して](http://go.microsoft.com/fwlink?LinkID=65009)します。  
   
 ## <a name="see-also"></a>関連項目  
  [IfElseActivity](http://go.microsoft.com/fwlink?LinkID=65033)   

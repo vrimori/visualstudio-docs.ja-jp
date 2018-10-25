@@ -1,7 +1,7 @@
 ---
 title: テキスト テンプレートからモデルへのアクセス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 35
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 5f23a080f33b668d185f4e7b1409da5b4ac97deb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f311018197040c0c908964a49f63ab130121c8c2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540078"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49919859"
 ---
 # <a name="accessing-models-from-text-templates"></a>テキスト テンプレートからモデルへのアクセス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[テキスト テンプレートからへのアクセス モデル](https://docs.microsoft.com/visualstudio/modeling/accessing-models-from-text-templates)します。  
-  
 テキスト テンプレートを使用すると、レポート ファイル、ソース コード ファイル、およびその他のドメイン固有言語モデルを基にテキスト ファイルを作成できます。 テキスト テンプレートの基本については、次を参照してください。[コードの生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)します。 テキスト テンプレートは、DSL をデバッグするときは、実験モードで動作し、DSL が配置されているコンピューターにも機能します。  
   
 > [!NOTE]
@@ -33,11 +31,11 @@ ms.locfileid: "47540078"
   
  テキスト テンプレートからモデルにアクセスします。  
   
--   Template ディレクティブの継承プロパティを設定<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation>します。 これは、ストアにアクセスを提供します。  
+- Template ディレクティブの継承プロパティを設定<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation>します。 これは、ストアにアクセスを提供します。  
   
--   アクセスする DSL のディレクティブ プロセッサを指定します。 テキスト テンプレートのコードでは、ドメイン クラス、プロパティ、およびリレーションシップを使用できるように、DSL のアセンブリを読み込みます。 また、指定したモデル ファイルを読み込みます。  
+- アクセスする DSL のディレクティブ プロセッサを指定します。 テキスト テンプレートのコードでは、ドメイン クラス、プロパティ、およびリレーションシップを使用できるように、DSL のアセンブリを読み込みます。 また、指定したモデル ファイルを読み込みます。  
   
- A`.tt`新規に作成すると、デバッグ プロジェクトに次の例のようなファイルが作成[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]最小言語の DSL テンプレートからのソリューションです。  
+  A`.tt`新規に作成すると、デバッグ プロジェクトに次の例のようなファイルが作成[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]最小言語の DSL テンプレートからのソリューションです。  
   
 ```  
 <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>  
@@ -99,11 +97,11 @@ Here is a list of elements in the model:
   
  以下の点に注意してください。  
   
-1.  `filename`と`validation`パラメーターで区切られます「;」必要があるその他の区切り記号またはスペースがあるとします。  
+1. `filename`と`validation`パラメーターで区切られます「;」必要があるその他の区切り記号またはスペースがあるとします。  
   
-2.  どの検証メソッドが実行される検証カテゴリの一覧を決定します。 複数のカテゴリを区切る必要があります"&#124;"必要があるその他の区切り記号またはスペースがあるとします。  
+2. どの検証メソッドが実行される検証カテゴリの一覧を決定します。 複数のカテゴリを区切る必要があります"&#124;"必要があるその他の区切り記号またはスペースがあるとします。  
   
- エラーが見つかった場合は、[エラー] ウィンドウで報告し、結果ファイルは、エラー メッセージが格納されます。  
+   エラーが見つかった場合は、[エラー] ウィンドウで報告し、結果ファイルは、エラー メッセージが格納されます。  
   
 ##  <a name="Multiple"></a> テキスト テンプレートから複数のモデルへのアクセス  
   

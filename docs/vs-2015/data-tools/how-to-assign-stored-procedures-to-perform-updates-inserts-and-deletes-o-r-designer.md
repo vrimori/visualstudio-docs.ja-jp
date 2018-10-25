@@ -1,7 +1,7 @@
 ---
 title: '方法: 更新、挿入、および削除 (O/R デザイナー) を実行するストアド プロシージャを割り当てる |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a211048e287bd3ef3e45625022f7389e06358e32
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4f65af06a275dc50afafc70fd95c9b93d9bba458
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544788"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49232715"
 ---
 # <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>方法: 更新、挿入、および削除 (O/R デザイナー) を実行するストアド プロシージャを割り当てる
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 更新、挿入、および削除 (O/R デザイナー) を実行するストアド プロシージャを割り当てる](https://docs.microsoft.com/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)します。  
-  
   
 ストアド プロシージャは O/R デザイナーに追加でき、通常の <xref:System.Data.Linq.DataContext> メソッドとして実行できます。 既定値も使用[!INCLUDE[vbtecdlinq](../includes/vbtecdlinq-md.md)]実行時の動作を挿入、更新を実行し、データベースに、エンティティ クラスから変更が保存されたときに削除します (などを呼び出すときに、<xref:System.Data.Linq.DataContext.SubmitChanges%2A>メソッド)。  
   
@@ -34,7 +32,7 @@ ms.locfileid: "47544788"
 >  [!INCLUDE[vbtecdlinq](../includes/vbtecdlinq-md.md)] は、ID 列 (自動インクリメント)、rowguidcol 列 (データベースが生成した GUID)、およびタイムスタンプ列であれば、データベースによって生成された値を自動的に処理します。 その他の列型のデータベースが生成した値は、予想に反して null 値になります。 データベースが生成した値を返すには、手動で <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> を `true` に設定し、<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> を <xref:System.Data.Linq.Mapping.AutoSync>、<xref:System.Data.Linq.Mapping.AutoSync>、または <xref:System.Data.Linq.Mapping.AutoSync> のいずれかに設定する必要があります。  
   
 ## <a name="configuring-the-update-behavior-of-an-entity-class"></a>エンティティ クラスの更新動作の構成  
- 既定では、[!INCLUDE[vbtecdlinq](../includes/vbtecdlinq-md.md)] エンティティ クラスのデータに対して行われた変更でデータベースを更新 (挿入、更新、および削除) するロジックは、[!INCLUDE[vbtecdlinq](../includes/vbtecdlinq-md.md)] ランタイムによって提供されます。 ランタイムは、テーブルのスキーマ (列および主キー情報) に基づいて、既定の Insert、Update、および Delete の各コマンドを作成します。 既定の動作が望ましくないと、更新動作を構成するには、必要な挿入、更新を実行するための特定のストアド プロシージャを割り当てることで、テーブルのデータを操作するために必要な削除。 この方法は、既定の動作が生成されていない場合、たとえばエンティティ クラスがビューにマップされている場合にも実行できます。 最後に、データベースのテーブルへのアクセスには常にストアド プロシージャを通すようにすると、既定の更新動作をオーバーライドできます。  
+ 既定では、[!INCLUDE[vbtecdlinq](../includes/vbtecdlinq-md.md)] エンティティ クラスのデータに対して行われた変更でデータベースを更新 (挿入、更新、および削除) するロジックは、[!INCLUDE[vbtecdlinq](../includes/vbtecdlinq-md.md)] ランタイムによって提供されます。 ランタイムは、既定値 (列と主キー情報) のテーブルのスキーマに基づく Insert、Update、および Delete コマンドを作成します。 既定の動作が望ましくないと、更新動作を構成するには、必要な挿入、更新を実行するための特定のストアド プロシージャを割り当てることで、テーブルのデータを操作するために必要な削除。 この方法は、既定の動作が生成されていない場合、たとえばエンティティ クラスがビューにマップされている場合にも実行できます。 最後に、データベースのテーブルへのアクセスには常にストアド プロシージャを通すようにすると、既定の更新動作をオーバーライドできます。  
   
  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
   
@@ -46,7 +44,7 @@ ms.locfileid: "47544788"
   
 3.  ストアド プロシージャを O/R デザイナーにドラッグします。  
   
-     ストアド プロシージャが <xref:System.Data.Linq.DataContext> メソッドとしてメソッド ペインに追加されます。 詳細については、次を参照してください。 [DataContext メソッド (O/r デザイナー)](../data-tools/datacontext-methods-o-r-designer.md)します。  
+     ストアド プロシージャが <xref:System.Data.Linq.DataContext> メソッドとしてメソッド ペインに追加されます。 詳細については [DataContext メソッド (O/R デザイナー)](../data-tools/datacontext-methods-o-r-designer.md) を参照してください。  
   
 4.  更新の実行にストアド プロシージャを使用するエンティティ クラスを選択します。  
   

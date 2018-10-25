@@ -1,7 +1,7 @@
 ---
 title: プロジェクトの種類を作成する場合 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 26adc860-ee4a-4f5c-95e1-e41b207dd7e6
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8c99aed424094d21fa1cd84163d5ee36f206fa19
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 98dd3f0058e2dacd1a6ab8ed3fc048dfd2e6397e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546044"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49245402"
 ---
 # <a name="when-to-create-project-types"></a>プロジェクト タイプを作成する状況
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロジェクトの種類を作成するときに](https://docs.microsoft.com/visualstudio/extensibility/internals/when-to-create-project-types)します。  
-  
 カスタマイズするため、単位を提供する新しいプロジェクトの種類を作成する[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ユーザー向けです。 ただし、新しいプロジェクトの種類を作成する必要はありませんすべての[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]カスタマイズします。 次のガイドラインを使用するとは新しいプロジェクトの種類が、シナリオに必要かどうかを判断できます。  
   
 ## <a name="create-a-new-project-type"></a>新しいプロジェクトの種類を作成します。  

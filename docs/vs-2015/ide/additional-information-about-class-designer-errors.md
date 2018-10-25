@@ -1,7 +1,7 @@
 ---
 title: クラス デザイナーのエラーに関する追加情報 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -34,18 +34,16 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4e343ed5453a5751bcbd491bc7e94a8491c1f88c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1a957630de193d805b1a516d45c72bd1483f0278
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535722"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49188527"
 ---
 # <a name="additional-information-about-class-designer-errors"></a>クラス デザイナーのエラーに関する追加情報
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[追加情報についてクラス デザイナーのエラー](https://docs.microsoft.com/visualstudio/ide/additional-information-about-class-designer-errors)します。  
-  
 クラス デザイナーはソース ファイルの場所を追跡しないため、プロジェクト構造を変更するか、プロジェクト内でソース ファイルを移動すると、クラス デザイナーが型を見失うことがあります (特にソースの型が typedef 型、基本クラス型、またはアソシエーション型の場合)。 **クラス デザイナーはこの型を表示できません**などのエラーが発生することがあります。 エラーが発生した場合は、変更または再配置したソース コードをもう一度クラス ダイアグラムにドラッグして再表示します。  
   
  以下のリソースで、その他のエラーや警告に関して役立つ情報を参照できます。  

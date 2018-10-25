@@ -1,7 +1,7 @@
 ---
 title: コード スニペット スキーマ リファレンス | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9dfcb6e7bc29fe29f33b919545a6781a731b7734
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 19a14972d36bcb7070e0604b47caab55f41d0126
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546106"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49188125"
 ---
 # <a name="code-snippets-schema-reference"></a>コード スニペット スキーマ リファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コード スニペット スキーマ リファレンス](https://docs.microsoft.com/visualstudio/ide/code-snippets-schema-reference)します。  
-  
 IntelliSense コード スニペットとは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] でのアプリケーション開発時に、簡単に挿入できるようにあらかじめ作成されたコードです。 同じようなコードを繰り返し入力したり、サンプルを検索したりする時間を短縮するコード スニペットを用意しておくことで、生産性を高めることができます。 IntelliSense コード スニペット XML スキーマを使用すると、独自のコード スニペットを作成し、それらを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] に標準で付属しているコード スニペットに追加できます。  
   
 ## <a name="intellisense-code-snippets-schema-elements"></a>IntelliSense コード スニペット スキーマ要素  

@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a5adc68df8b56d69389807e2e1502b2891c73a0
-ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
+ms.openlocfilehash: 8a39040bb76181a7a36e9d8f7b19aa0b4390c400
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44384306"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49932443"
 ---
 # <a name="code-snippets-schema-reference"></a>コード スニペット スキーマ リファレンス
 
@@ -39,7 +39,7 @@ IntelliSense コード スニペットとは、Visual Studio でのアプリケ�
 ```
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Reference 要素](../ide/code-snippets-schema-reference.md#reference-element)|コード スニペットで参照する必要のあるアセンブリについての情報が格納されます。|
 
  テキスト値が必要です。 このテキストで、コード スニペットが参照するアセンブリを指定します。
@@ -55,7 +55,7 @@ IntelliSense コード スニペットとは、Visual Studio でのアプリケ�
 ```
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Header 要素](../ide/code-snippets-schema-reference.md#header-element)|コード スニペットに関する全般的な情報が格納されます。|
 
  テキスト値が必要です。 このテキストでコード スニペットの作成者を指定します。
@@ -137,7 +137,7 @@ Code 要素に使用できる属性には次の 3 つがあります。
 ### <a name="parent-element"></a>親要素
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Snippet 要素](../ide/code-snippets-schema-reference.md#snippet-element)|コード スニペットの参照、インポート、宣言、およびコードが格納されます。|
 
 ## <a name="codesnippet-element"></a>CodeSnippet 要素
@@ -161,7 +161,7 @@ Visual Studio Code ファイルに挿入できる見出しと複数の IntelliSe
 |[Snippet 要素](../ide/code-snippets-schema-reference.md#snippet-element)|必須の要素です。 Visual Studio によって挿入されるコードが格納されます。 コード スニペットで使用できる `Snippet` 要素は 1 つだけです。|
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[CodeSnippets 要素](../ide/code-snippets-schema-reference.md#codesnippets-element)|コード スニペットの XML スキーマのルート要素です。|
 
 ## <a name="codesnippets-element"></a>CodeSnippets 要素
@@ -195,7 +195,7 @@ Visual Studio Code ファイルに挿入できる見出しと複数の IntelliSe
 |[Object 要素](../ide/code-snippets-schema-reference.md#object-element)|省略可能な要素です。 編集できるコード スニペットのオブジェクトを定義します。 `Object` 要素に 0 個以上の `Declarations` 要素があります。|
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Snippet 要素](../ide/code-snippets-schema-reference.md#snippet-element)|コード スニペットの参照、インポート、宣言、およびコードが格納されます。|
 
 ## <a name="default-element"></a>Default 要素
@@ -209,7 +209,7 @@ IntelliSense コード スニペットのリテラルまたはオブジェクト
 ```
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Literal 要素](../ide/code-snippets-schema-reference.md#literal-element)|編集が可能なコード スニペットのリテラル フィールドを定義します。|
 |[Object 要素](../ide/code-snippets-schema-reference.md#object-element)|編集が可能なコード スニペットのオブジェクト フィールドを定義します。|
 
@@ -226,7 +226,7 @@ IntelliSense コード スニペットの内容に関する説明文を指定し
 ```
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Header 要素](../ide/code-snippets-schema-reference.md#header-element)|コード スニペットに関する全般的な情報が格納されます。|
 
  テキスト値が必要です。 このテキストで、コード スニペットについて説明します。
@@ -245,7 +245,7 @@ Visual Studio でリテラルまたはオブジェクトがフォーカスを取
 ```
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Literal 要素](../ide/code-snippets-schema-reference.md#literal-element)|編集が可能なコード スニペットのリテラル フィールドを定義します。|
 |[Object 要素](../ide/code-snippets-schema-reference.md#object-element)|編集が可能なコード スニペットのオブジェクト フィールドを定義します。|
 
@@ -278,7 +278,7 @@ IntelliSense コード スニペットの一般情報を指定します。
 |[Title 要素](../ide/code-snippets-schema-reference.md#title-element)|必須の要素です。 コード スニペットの表示名です。 `Title` 要素で使用できる `Header` 要素は 1 つだけです。|
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[CodeSnippet 要素](../ide/code-snippets-schema-reference.md#codesnippet-element)|すべてのコード スニペット データを下位に持つ親要素です。|
 
 ## <a name="helpurl-element"></a>HelpUrl 要素
@@ -295,7 +295,7 @@ IntelliSense コード スニペットの一般情報を指定します。
 ```
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Header 要素](../ide/code-snippets-schema-reference.md#header-element)|コード スニペットに関する全般的な情報が格納されます。|
 
 テキスト値は省略可能です。 このテキストで、コード スニペットに関する詳細情報の入手先 URL を指定します。
@@ -311,7 +311,7 @@ IntelliSense コード スニペットの一般情報を指定します。
 ```
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Literal 要素](../ide/code-snippets-schema-reference.md#literal-element)|編集が可能なコード スニペットのリテラル フィールドを定義します。|
 |[Object 要素](../ide/code-snippets-schema-reference.md#object-element)|編集が可能なコード スニペットのオブジェクト フィールドを定義します。|
 
@@ -335,7 +335,7 @@ IntelliSense コード スニペットによって使用されるインポート
 |[名前空間要素](../ide/code-snippets-schema-reference.md#namespace-element)|必須の要素です。 コード スニペットで使用される名前空間を指定します。 `Namespace` 要素で使用できる `Import` 要素は 1 つだけです。|
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Imports 要素](../ide/code-snippets-schema-reference.md#imports-element)|**Import** 要素のグループ化要素です。|
 
 ## <a name="imports-element"></a>Imports 要素
@@ -356,7 +356,7 @@ IntelliSense コード スニペットによって使用されるインポート
 |[Import 要素](../ide/code-snippets-schema-reference.md#import-element)|省略可能な要素です。 コード スニペットでインポートする必要のある名前空間が格納されます。 `Imports` 要素には 0 個以上の **Import** 要素があります。|
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Snippet 要素](../ide/code-snippets-schema-reference.md#snippet-element)|コード スニペットの参照、インポート、宣言、およびコードが格納されます。|
 
 ## <a name="keyword-element"></a>Keyword 要素
@@ -370,7 +370,7 @@ IntelliSense コード スニペットによって使用されるインポート
 ```
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Keywords 要素](../ide/code-snippets-schema-reference.md#keywords-element)|複数の `Keyword` 要素をグループ化します。|
 
 テキスト値が必要です。 コード スニペットのキーワードを指定します。
@@ -391,7 +391,7 @@ IntelliSense コード スニペットによって使用されるインポート
 |[Keyword 要素](../ide/code-snippets-schema-reference.md#keyword-element)|省略可能な要素です。 コード スニペットの複数のキーワードが格納されます。 `Keyword` 要素に 0 個以上の `Keywords` 要素があります。|
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Header 要素](../ide/code-snippets-schema-reference.md#header-element)|コード スニペットに関する全般的な情報が格納されます。|
 
 ## <a name="literal-element"></a>Literal 要素
@@ -421,7 +421,7 @@ IntelliSense コード スニペットによって使用されるインポート
 |[ToolTip 要素](../ide/code-snippets-schema-reference.md#tooltip-element)|省略可能な要素です。 リテラルに予想される値と使用法に関する説明文です。 `Literal` 要素には 0 個または 1 個の **Tooltip** 要素があります。|
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Declarations 要素](../ide/code-snippets-schema-reference.md#declarations-element)|編集が可能なコード スニペットのリテラルおよびオブジェクトを保持します。|
 
 ## <a name="namespace-element"></a>Namespace 要素
@@ -438,7 +438,7 @@ IntelliSense コード スニペットによって使用されるインポート
 ```
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Import 要素](../ide/code-snippets-schema-reference.md#import-element)|指定された名前空間をインポートします。|
 
 テキスト値が必要です。 このテキストで、コード スニペットを使用するためにインポートする必要のある名前空間を指定します。
@@ -470,7 +470,7 @@ IntelliSense コード スニペットによって使用されるインポート
 |[Type 要素](../ide/code-snippets-schema-reference.md#type-element)|必須の要素です。 オブジェクトの種類を指定します。 `Type` 要素で使用できる `Object` 要素は 1 つだけです。|
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Declarations 要素](../ide/code-snippets-schema-reference.md#declarations-element)|編集が可能なコード スニペットのリテラルおよびオブジェクトを保持します。|
 
 ## <a name="reference-element"></a>Reference 要素
@@ -490,7 +490,7 @@ IntelliSense コード スニペットによって使用されるインポート
 |[Url 要素](../ide/code-snippets-schema-reference.md#url-element)|省略可能な要素です。 参照アセンブリに関する詳細な情報の入手先 URL が格納されます。 `Url` 要素には 0 個または 1 個の `Reference` 要素があります。|
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[References 要素](../ide/code-snippets-schema-reference.md#references-element)|`Reference` 要素のグループ化要素です。|
 
 ## <a name="references-element"></a>References 要素
@@ -508,7 +508,7 @@ IntelliSense コード スニペットによって使用されるインポート
 |[Reference 要素](../ide/code-snippets-schema-reference.md#reference-element)|省略可能な要素です。 コード スニペットで参照する必要のあるアセンブリについての情報が格納されます。 `Reference` 要素に 0 個以上の `References` 要素があります。|
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Snippet 要素](../ide/code-snippets-schema-reference.md#snippet-element)|コード スニペットの参照、インポート、宣言、およびコードが格納されます。|
 
 ## <a name="shortcut-element"></a>Shortcut 要素
@@ -525,7 +525,7 @@ IntelliSense コード スニペットによって使用されるインポート
 ```
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Header 要素](../ide/code-snippets-schema-reference.md#header-element)|コード スニペットに関する全般的な情報が格納されます。|
 
  テキスト値は省略可能です。 このテキストは、コード スニペットを挿入するためのショートカットとして使用されます。
@@ -551,7 +551,7 @@ IntelliSense コード スニペットによって使用されるインポート
 ||省略可能な要素です。 複数の `Reference` 要素をグループ化します。 `References` 要素には 0 個または 1 個の `Snippet` 要素があります。|
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[CodeSnippet 要素](../ide/code-snippets-schema-reference.md#codesnippet-element)|Visual Studio Code ファイルに挿入できる見出しと複数の IntelliSense コード スニペットを指定します。|
 
 ## <a name="snippettype-element"></a>SnippetType 要素
@@ -565,7 +565,7 @@ Visual Studio がコード スニペットをどのように挿入するかを�
 ```
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[SnippetTypes 要素](../ide/code-snippets-schema-reference.md#snippettypes-element)|複数の `SnippetType` 要素をグループ化します。|
 
 テキスト値は、次のいずれかの値である必要があります。
@@ -592,7 +592,7 @@ Visual Studio がコード スニペットをどのように挿入するかを�
 |[SnippetType 要素](../ide/code-snippets-schema-reference.md#snippettype-element)|省略可能な要素です。 Visual Studio がコード スニペットをコードに挿入するときの動作を指定します。 `SnippetType` 要素に 0 個以上の `SnippetTypes` 要素があります。|
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Header 要素](../ide/code-snippets-schema-reference.md#header-element)|コード スニペットに関する全般的な情報を指定します。|
 
 ## <a name="title-element"></a>Title 要素
@@ -606,7 +606,7 @@ Visual Studio がコード スニペットをどのように挿入するかを�
 ```
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Header 要素](../ide/code-snippets-schema-reference.md#header-element)|コード スニペットに関する全般的な情報を指定します。|
 
  テキスト値が必要です。 このテキストでコード スニペットのタイトルを指定します。
@@ -622,7 +622,7 @@ Visual Studio がコード スニペットをどのように挿入するかを�
 ```
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Literal 要素](../ide/code-snippets-schema-reference.md#literal-element)|編集が可能なコード スニペットのリテラル フィールドを定義します。|
 |[Object 要素](../ide/code-snippets-schema-reference.md#object-element)|編集が可能なコード スニペットのオブジェクト フィールドを定義します。|
 
@@ -639,7 +639,7 @@ Visual Studio がコード スニペットをどのように挿入するかを�
 ```
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Object 要素](../ide/code-snippets-schema-reference.md#object-element)|編集が可能なコード スニペットのオブジェクト フィールドを定義します。|
 
  テキスト値が必要です。 このテキストでオブジェクトの型を指定します。
@@ -658,7 +658,7 @@ Visual Studio がコード スニペットをどのように挿入するかを�
 ```
 
 |親要素|説明|
-|--------------------|-----------------|
+| - |-----------------|
 |[Reference 要素](../ide/code-snippets-schema-reference.md#reference-element)|コード スニペットで参照する必要のあるアセンブリを指定します。|
 
 テキスト値が必要です。 このテキストで、参照アセンブリに関する詳細な情報の入手先 URL を指定します。 プロジェクトに参照を追加できない場合、この URL が表示されます。

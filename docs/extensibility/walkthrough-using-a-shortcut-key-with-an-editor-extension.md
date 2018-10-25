@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb4788e872e18d5db9c6d7c4452defc415290188
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: d009351efdd36e0d415d0e2e457f7974608ab665
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566565"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49886501"
 ---
 # <a name="walkthrough-use-a-shortcut-key-with-an-editor-extension"></a>チュートリアル: エディター拡張機能とショートカット キーを使用します。
 エディター拡張機能で、ショートカット キーに応答することができます。 次のチュートリアルでは、テキスト ビューにショートカット キーを使用してビューの表示要素を追加する方法を示します。 このチュートリアルは、ビューポート adornment エディター テンプレートに基づいており、使用して、表示要素を追加することができます、+ 文字。  
@@ -28,21 +28,21 @@ ms.locfileid: "39566565"
   
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) プロジェクトを作成します。  
   
-1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を`KeyBindingTest`します。  
+1. C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューション `KeyBindingTest`の名前を指定します。  
   
-2.  エディターのテキストの表示要素の項目テンプレートをプロジェクトに追加し、名前`KeyBindingTest`します。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能を作成する](../extensibility/creating-an-extension-with-an-editor-item-template.md)します。  
+2. エディターのテキストの表示要素の項目テンプレートをプロジェクトに追加し、名前`KeyBindingTest`します。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能を作成する](../extensibility/creating-an-extension-with-an-editor-item-template.md)します。  
   
-3.  次の参照を追加し、設定**CopyLocal**に`false`:  
+3. 次の参照を追加し、設定**CopyLocal**に`false`:  
   
-     Microsoft.VisualStudio.Editor  
+    Microsoft.VisualStudio.Editor  
   
-     Microsoft.VisualStudio.OLE.Interop  
+    Microsoft.VisualStudio.OLE.Interop  
   
-     Microsoft.VisualStudio.Shell.14.0  
+    Microsoft.VisualStudio.Shell.14.0  
   
-     Microsoft.VisualStudio.TextManager.Interop  
+    Microsoft.VisualStudio.TextManager.Interop  
   
- KeyBindingTest クラス ファイルでは、PurpleCornerBox にクラス名を変更します。 左余白に表示される電球を使用して、他の適切な変更を行います。 コンス トラクター内から装飾層の名前を変更する**KeyBindingTest**に**PurpleCornerBox**:  
+   KeyBindingTest クラス ファイルでは、PurpleCornerBox にクラス名を変更します。 左余白に表示される電球を使用して、他の適切な変更を行います。 コンス トラクター内から装飾層の名前を変更する**KeyBindingTest**に**PurpleCornerBox**:  
   
 ```csharp  
 this.layer = view.GetAdornmentLayer("PurpleCornerBox");  
@@ -64,7 +64,7 @@ Visual Studio 2017 バージョン 15.6 のエディターの拡張機能での�
 
  コマンドのフィルターの実装は、 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>、表示要素をインスタンス化して、コマンドを処理します。  
   
-1.  クラス ファイルを追加し、名前`KeyBindingCommandFilter`します。  
+1.  クラス ファイルを追加し、その名前を `KeyBindingCommandFilter`にします。  
   
 2.  次の using ステートメントを追加します。  
   
@@ -204,73 +204,73 @@ Visual Studio 2017 バージョン 15.6 のエディターの拡張機能での�
 
 コマンド ハンドラーの実装は、 <xref:Microsoft.VisualStudio.Commanding.ICommandHandler%601>、表示要素をインスタンス化して、コマンドを処理します。  
   
-1.  クラス ファイルを追加し、名前`KeyBindingCommandHandler`します。  
+1. クラス ファイルを追加し、その名前を `KeyBindingCommandHandler`にします。  
   
-2.  次の using ステートメントを追加します。  
+2. 次の using ステートメントを追加します。  
   
-    ```csharp  
-    using Microsoft.VisualStudio.Commanding;
-    using Microsoft.VisualStudio.Text.Editor;
-    using Microsoft.VisualStudio.Text.Editor.Commanding.Commands;
-    using Microsoft.VisualStudio.Utilities;
-    using System.ComponentModel.Composition;   
-    ```  
+   ```csharp  
+   using Microsoft.VisualStudio.Commanding;
+   using Microsoft.VisualStudio.Text.Editor;
+   using Microsoft.VisualStudio.Text.Editor.Commanding.Commands;
+   using Microsoft.VisualStudio.Utilities;
+   using System.ComponentModel.Composition;   
+   ```  
   
-3.  KeyBindingCommandHandler という名前のクラスを継承する必要があります`ICommandHandler<TypeCharCommandArgs>`、としてエクスポート<xref:Microsoft.VisualStudio.Commanding.ICommandHandler>:
+3. KeyBindingCommandHandler という名前のクラスを継承する必要があります`ICommandHandler<TypeCharCommandArgs>`、としてエクスポート<xref:Microsoft.VisualStudio.Commanding.ICommandHandler>:
   
-    ```csharp  
-    [Export(typeof(ICommandHandler))]
-    [ContentType("text")]
-    [Name("KeyBindingTest")]
-    internal class KeyBindingCommandHandler : ICommandHandler<TypeCharCommandArgs>  
-    ```  
+   ```csharp  
+   [Export(typeof(ICommandHandler))]
+   [ContentType("text")]
+   [Name("KeyBindingTest")]
+   internal class KeyBindingCommandHandler : ICommandHandler<TypeCharCommandArgs>  
+   ```  
   
-4.  コマンド ハンドラーの表示名を追加します。  
+4. コマンド ハンドラーの表示名を追加します。  
   
-    ```csharp  
-    public string DisplayName => "KeyBindingTest";
-    ```  
+   ```csharp  
+   public string DisplayName => "KeyBindingTest";
+   ```  
     
-5.  実装、`GetCommandState()`メソッドとして、次のとおりです。 このコマンド ハンドラーは、コア エディター TYPECHAR コマンドを処理するため、コア エディターにコマンドを有効にするを委任することができます。
+5. 実装、`GetCommandState()`メソッドとして、次のとおりです。 このコマンド ハンドラーは、コア エディター TYPECHAR コマンドを処理するため、コア エディターにコマンドを有効にするを委任することができます。
   
-    ```csharp  
-    public CommandState GetCommandState(TypeCharCommandArgs args)
-    {
-        return CommandState.Unspecified;
-    } 
-    ```  
+   ```csharp  
+   public CommandState GetCommandState(TypeCharCommandArgs args)
+   {
+       return CommandState.Unspecified;
+   } 
+   ```  
   
-6.  実装、`ExecuteCommand()`ためプラス記号の場合、ビューに追加します紫色のボックスをその it メソッド (**+**) 文字を入力します。 
+6. 実装、`ExecuteCommand()`ためプラス記号の場合、ビューに追加します紫色のボックスをその it メソッド (**+**) 文字を入力します。 
   
-    ```csharp  
-    public bool ExecuteCommand(TypeCharCommandArgs args, CommandExecutionContext executionContext)
-    {
-        if (args.TypedChar == '+')
-        {
-            bool alreadyAdorned = args.TextView.Properties.TryGetProperty(
-                "KeyBindingTextAdorned", out bool adorned) && adorned;
-            if (!alreadyAdorned)
-            {
-                new PurpleCornerBox((IWpfTextView)args.TextView);
-                args.TextView.Properties.AddProperty("KeyBindingTextAdorned", true);
-            }
-        }
+   ```csharp  
+   public bool ExecuteCommand(TypeCharCommandArgs args, CommandExecutionContext executionContext)
+   {
+       if (args.TypedChar == '+')
+       {
+           bool alreadyAdorned = args.TextView.Properties.TryGetProperty(
+               "KeyBindingTextAdorned", out bool adorned) && adorned;
+           if (!alreadyAdorned)
+           {
+               new PurpleCornerBox((IWpfTextView)args.TextView);
+               args.TextView.Properties.AddProperty("KeyBindingTextAdorned", true);
+           }
+       }
 
-        return false;
-    }
-    ```  
- 7. 装飾層の定義をコピー *KeyBindingTestTextViewCreationListener.cs*ファイルを*KeyBindingCommandHandler.cs*し削除*KeyBindingTestTextViewCreationListener.cs*ファイル。
+       return false;
+   }
+   ```  
+   7. 装飾層の定義をコピー *KeyBindingTestTextViewCreationListener.cs*ファイルを*KeyBindingCommandHandler.cs*し削除*KeyBindingTestTextViewCreationListener.cs*ファイル。
  
-    ```csharp  
-    /// <summary>
-    /// Defines the adornment layer for the adornment. This layer is ordered
-    /// after the selection layer in the Z-order.
-    /// </summary>
-    [Export(typeof(AdornmentLayerDefinition))]
-    [Name("PurpleCornerBox")]
-    [Order(After = PredefinedAdornmentLayers.Selection, Before = PredefinedAdornmentLayers.Text)]
-    private AdornmentLayerDefinition editorAdornmentLayer;    
-    ```  
+   ```csharp  
+   /// <summary>
+   /// Defines the adornment layer for the adornment. This layer is ordered
+   /// after the selection layer in the Z-order.
+   /// </summary>
+   [Export(typeof(AdornmentLayerDefinition))]
+   [Name("PurpleCornerBox")]
+   [Order(After = PredefinedAdornmentLayers.Selection, Before = PredefinedAdornmentLayers.Text)]
+   private AdornmentLayerDefinition editorAdornmentLayer;    
+   ```  
 
 ## <a name="make-the-adornment-appear-on-every-line"></a>すべての行に表示される表示要素を作成します。  
 

@@ -1,5 +1,5 @@
 ---
-title: 予想 &#39; @&#39; |Microsoft ドキュメント
+title: 予想&#39;@&#39; |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,24 +21,24 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: f007129aa8da3ac49112fbc83b7abd31e4356c4f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633072"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49856848"
 ---
-# <a name="expected-3939"></a>予想 &#39; @&#39;
-使用して条件付きコンパイル ステートメントで使用する変数を作成しようとしています。、`@set`ステートメントでは、挿入されていないが、アット マーク"**@**"変数名の前にします。  
+# <a name="expected-3939"></a>予想&#39;@&#39;
+使用して条件付きコンパイル ステートメントで使用する変数を作成しようとしています。、`@set`ステートメントでは、配置しませんでしたが、アット マーク"**@**"変数名の前にします。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   追加、アット マーク"**@**"変数名の直前にします。 例:  
+-   追加するアット"**@**"変数名の直前。 例えば:  
   
     ```JavaScript  
     @set @myvar = 1  
     ```  
   
 ## <a name="see-also"></a>関連項目  
- [@setステートメント](../../javascript/reference/at-set-statement-javascript.md)   
+ [@set ステートメント](../../javascript/reference/at-set-statement-javascript.md)   
  [条件付きコンパイル](../../javascript/advanced/conditional-compilation-javascript.md)   
  [条件付きコンパイル変数](../../javascript/advanced/conditional-compilation-variables-javascript.md)

@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findInlineFramesByRVA |Microsoft ドキュメント
+title: IDiaSession::findInlineFramesByRVA |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0669d99cfc7ea1aa345a651692641a4bd2ac8d2a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0ebb32b9b22de8d4092c53f56accf1d953bbc94a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31468295"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876881"
 ---
 # <a name="idiasessionfindinlineframesbyrva"></a>IDiaSession::findInlineFramesByRVA
-すべての指定された相対仮想アドレス (RVA) でのインライン フレームを反復処理するクライアントを許可する列挙体を取得します。  
+により、クライアントは、すべての指定された相対仮想アドレス (RVA) でのインライン フレームを反復処理する列挙体を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +42,7 @@ HRESULT findInlineFramesByRVA (
  [out]保持する`IDiaEnumSymbols`取得されるフレームの一覧を含むオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   

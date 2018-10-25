@@ -1,7 +1,7 @@
 ---
 title: 転送 logger の作成 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 411c05a3a9d9f115120b09d231ce747990806bc4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 46cff57e8238e00f914f8437fbc81d1887e7d629
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537389"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49281243"
 ---
 # <a name="creating-forwarding-loggers"></a>転送 logger の作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[転送 Logger の作成](https://docs.microsoft.com/visualstudio/msbuild/creating-forwarding-loggers)です。  
-  
   
 転送 logger では、マルチプロセッサ システムでプロジェクトをビルドするときに監視の対象とするイベントを選択できるため、ログの効率を高めることができます。 転送 logger を有効にすることで、不要なイベントによる中心 logger の過負荷、ビルドの低速化、およびログの煩雑化を回避できます。  
   

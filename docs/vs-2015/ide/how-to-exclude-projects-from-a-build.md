@@ -1,7 +1,7 @@
 ---
 title: '方法: ビルドからプロジェクトを除外する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,27 +14,25 @@ caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 569f0db1294bd7df2451c4ec496dc5064b122b73
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6419d2aa216f625aaf82087f0dc8f453e0d0d475
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545123"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941842"
 ---
 # <a name="how-to-exclude-projects-from-a-build"></a>方法: ビルドからプロジェクトを除外する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ビルドからプロジェクトを除外する](https://docs.microsoft.com/visualstudio/ide/how-to-exclude-projects-from-a-build)します。  
-  
 ソリューションをビルドするために、含まれるすべてのプロジェクトをビルドする必要はありません。 たとえば、ビルドを中断するプロジェクトを除外できます。 その後、問題の調査と対処を行ってからプロジェクトをビルドすることができます。  
   
  次の方法を実行することでプロジェクトを除外できます。  
   
--   アクティブなソリューション構成からプロジェクトを一時的に削除する。  
+- アクティブなソリューション構成からプロジェクトを一時的に削除する。  
   
--   対象プロジェクトを含まないソリューション構成を作成する。  
+- 対象プロジェクトを含まないソリューション構成を作成する。  
   
- 詳しくは、「[ビルド構成について](../ide/understanding-build-configurations.md)」をご覧ください。  
+  詳しくは、「[ビルド構成について](../ide/understanding-build-configurations.md)」をご覧ください。  
   
 ### <a name="to-temporarily-remove-a-project-from-the-active-solution-configuration"></a>アクティブなソリューション構成からプロジェクトを一時的に削除するには  
   

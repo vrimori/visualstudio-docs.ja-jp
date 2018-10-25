@@ -1,7 +1,7 @@
 ---
 title: IEnumDebugBoundBreakpoints2::Clone |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: c6ce01a2-7da3-46ec-9837-855042fa7244
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 959e86563ff77907cecde265ce8e9a5bc1c110df
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1e5615384ff62a484c0b46980c9fc604ce7152d3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538342"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49815984"
 ---
 # <a name="ienumdebugboundbreakpoints2clone"></a>IEnumDebugBoundBreakpoints2::Clone
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IEnumDebugBoundBreakpoints2::Clone](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ienumdebugboundbreakpoints2-clone)します。  
-  
 個別のオブジェクトとして現在の列挙体のコピーを返します。  
   
 ## <a name="syntax"></a>構文  

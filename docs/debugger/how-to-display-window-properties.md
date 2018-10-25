@@ -1,5 +1,5 @@
 ---
-title: '方法: ウィンドウのプロパティの表示 |Microsoft ドキュメント'
+title: '方法: ウィンドウのプロパティの表示 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,18 +12,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a345f5ac8fc6a77b10ef549a6c2be859106ee00
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 204121f40fa1cfc32040185286e7c566bbb59214
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31473187"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872422"
 ---
 # <a name="how-to-display-window-properties"></a>方法: ウィンドウのプロパティを表示する
-表示されるウィンドウに関する詳細を確認する[ウィンドウ ビュー](../debugger/windows-view.md)を使用して、[ウィンドウのプロパティ ダイアログ ボックス](../debugger/window-properties-dialog-box.md)です。  
+表示ウィンドウの詳細を確認する[Windows ビュー](../debugger/windows-view.md)を使用して、[ウィンドウ プロパティ ダイアログ ボックス](../debugger/window-properties-dialog-box.md)します。  
   
-### <a name="to-open-the-window-properties-dialog-box"></a>ウィンドウのプロパティ ダイアログ ボックスを開く  
+### <a name="to-open-the-window-properties-dialog-box"></a>[ウィンドウ プロパティ] ダイアログ ボックスを開く  
   
-1.  アイテムを選択し、**プロパティ**から、**ビュー**メニュー。  
+1. 項目を選択し、**プロパティ**から、**ビュー**メニュー。  
   
- プロパティ ダイアログ ボックスがモーダルではありません。 表示ウィンドウの項目から項目をクリックすると、ダイアログ ボックスは自動的に選択された各項目に関する情報を含む更新されます。
+   プロパティ ダイアログ ボックスがモーダルではありません。 ビュー ウィンドウの項目から項目をクリックすると、ダイアログ ボックスは選択された各項目に関する情報を自動的に更新します。

@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomViewer::DisplayValue |Microsoft ドキュメント
+title: IDebugCustomViewer::DisplayValue |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 017e1e7a27839dae91559468c62be353bbd43b4e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 44295cb6cc3635d099a93ef62c7d4ae4e2bdd4cd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31107060"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833844"
 ---
 # <a name="idebugcustomviewerdisplayvalue"></a>IDebugCustomViewer::DisplayValue
-このメソッドは、指定された値を表示します。  
+このメソッドは、指定した値を表示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,21 +50,21 @@ int DisplayValue(
  [in]親ウィンドウ  
   
  `dwID`  
- [in]複数の種類をサポートしているカスタム ビューアーの ID。  
+ [in]1 つ以上の種類をサポートしているカスタム ビューアーの ID。  
   
  `pHostServices`  
- [in]予約されています。 常に設定を null にします。  
+ [in] 予約されています。 常に設定を null にします。  
   
  `pDebugProperty`  
  [in]表示される値を取得するために使用するインターフェイスです。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`; エラー コードを返しますそれ以外の場合。  
+ 成功した場合、返します`S_OK`; エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 表示は、このメソッドは、必要なウィンドウを作成、値を表示、入力には、待機し、ウィンドウを閉じて、呼び出し元に戻す前にすべて「モーダル」です。 つまり、メソッドは、ウィンドウを破棄するためのユーザー入力を待機しているため、出力のウィンドウの作成から、プロパティの値を表示するすべての側面を処理する必要があります。  
+## <a name="remarks"></a>Remarks  
+ 表示です。"modal"でこのメソッドは、必要な期間を作成、値を表示、入力を待機すべて呼び出し元に返す前に、ウィンドウを閉じます。 つまり、メソッドの出力では、ウィンドウを破棄するためのユーザー入力を待機するウィンドウの作成からのプロパティの値を表示するすべての側面を処理する必要があります。  
   
- 値の変更をサポートするために、指定された[IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)オブジェクトを使用する、 [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)メソッド — 場合は、値を文字列として表現できます。 以外の場合は、カスタム インターフェイスを作成するために必要な — これを実装する、式エバリュエーターに限定`DisplayValue`メソッド — を実装する、同じオブジェクトに対して、`IDebugProperty3`インターフェイスです。 このカスタム インターフェイスを任意のサイズや複雑さのデータを変更する方法を指定します。  
+ 値の変更をサポートするために、指定された[IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)オブジェクトを使用することができます、 [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)メソッド: 場合は、値を文字列として表現できます。 それ以外の場合、カスタム インターフェイスを作成する必要が、これを実装する、式エバリュエーターに限定`DisplayValue`メソッド-を実装するオブジェクトと同じで、`IDebugProperty3`インターフェイス。 このカスタム インターフェイスが、任意のサイズおよび複雑さのデータを変更するためのメソッドを提供します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugCustomViewer](../../../extensibility/debugger/reference/idebugcustomviewer.md)   

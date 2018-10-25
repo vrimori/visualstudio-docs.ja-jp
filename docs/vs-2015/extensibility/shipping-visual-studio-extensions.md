@@ -1,7 +1,7 @@
 ---
 title: Visual Studio 拡張機能を出荷 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,19 +17,18 @@ ms.assetid: 13cd263d-25f7-488e-9c1a-cff908caedb6
 caps.latest.revision: 29
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9c419de36379b277a661442e2d863696db02c105
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ac367f2482a6b8bc5b5b25fca72e8ca05e1f58b7
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536441"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49260189"
 ---
 # <a name="shipping-visual-studio-extensions"></a>Visual Studio 拡張機能の配布
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 **注**: Visual Studio ギャラリー、Visual Studio Marketplace で置き換えています。 詳細については、このトピックの最新バージョンを参照してください。
 
-このトピックの最新バージョンをご覧[Visual Studio 拡張機能の配布](https://docs.microsoft.com/visualstudio/extensibility/shipping-visual-studio-extensions)します。  
   
 拡張機能の開発が完了したらは、他のコンピューターにインストールして、友人や同僚と共有または Visual Studio ギャラリーに発行できます。 このセクションで発行し、拡張機能を維持するために行う必要があるすべての事項を説明します。 .vsix ファイル、公開、ローカライズ、および更新を使用します。  
   

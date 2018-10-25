@@ -5,12 +5,12 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: FB253757-DB00-4889-A6BF-E44722E25BD1
-ms.openlocfilehash: 8e742706117b318a5614484c97b9ecda0b2c3f51
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: a66cc250b0d019b3efa4873b89eef252af44b8a6
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224062"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283705"
 ---
 # <a name="compiling-and-building-in-visual-studio-for-mac"></a>Visual Studio for Mac のコンパイルとビルド
 
@@ -44,7 +44,7 @@ MSBuild Build Engine を使用し、コマンド ラインからアプリケー�
 
 MSBuild の使用方法については、[MSBuild](/visualstudio/msbuild/msbuild) コンテンツをご覧ください。
 
-## <a name="building-from-visual-studio-team-services"></a>Visual Studio Team Services からのビルド
+## <a name="building-from-azure-pipelines"></a>Azure Pipelines からビルドする
 
 * [Xamarin アプリをビルドする](/vsts/pipelines/apps/mobile/xamarin?view=vsts&tabs=vsts)
 * [Xamarin との継続的な統合](https://developer.xamarin.com/guides/cross-platform/ci/)

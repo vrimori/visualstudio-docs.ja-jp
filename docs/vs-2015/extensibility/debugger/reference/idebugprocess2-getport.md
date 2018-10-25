@@ -1,7 +1,7 @@
 ---
 title: IDebugProcess2::GetPort |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: e39b6e5a-64eb-48cf-a53d-da4fdb968e2d
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5aa2f90f13a452ba611b7bf66e809f6fef4b3239
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fad51ae86e47f6fd774dc2973eecd44d2a58cd9f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538529"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890219"
 ---
 # <a name="idebugprocess2getport"></a>IDebugProcess2::GetPort
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugProcess2::GetPort](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugprocess2-getport)します。  
-  
 プロセスが実行されているポートを取得します。  
   
 ## <a name="syntax"></a>構文  

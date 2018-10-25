@@ -1,7 +1,7 @@
 ---
 title: カスタム コード分析規則セットの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 67df017724f31a14504bbd7e2b66657b1db918b5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c0dabe89c47e42eee57803475abf5274a74ec651
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537508"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49273586"
 ---
 # <a name="creating-custom-code-analysis-rule-sets"></a>カスタム コード分析規則セットの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[カスタム コード分析規則のセットを作成する](https://docs.microsoft.com/visualstudio/code-quality/creating-custom-code-analysis-rule-sets)します。  
-  
 マネージ コード プロジェクトにコード分析規則を適用するには、1 つまたは複数のルールが含まれる規則セットを指定します。 Microsoft の標準規則セットは、関数および深さで分類された規則のグループを提供します。 たとえば、Microsoft 基本デザイン ガイドライン規則と Microsoft 拡張デザイン ガイドライン規則には、拡張規則セットの名前付け規則に追加の重点を置いて、使いやすさと保守性の問題に集中する規則が含まれます。  
   
  2 つを結合するカスタム規則セットを作成することもできます。 または、標準的なルール セットまたはは、1 つまたは複数の標準の規則セットでルールを指定します。 .Ruleset ファイル、設定を保存するカスタム ルールと、複数のコード プロジェクトで指定することができます。  

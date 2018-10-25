@@ -1,7 +1,7 @@
 ---
 title: Spy++ ビュー用の検索ツール |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b19a12397d42d44e3d7fb7cf1a5dd87700a07465
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e85abd53bd7f9c133115c562f9d3d291c60ae27e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537274"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49285195"
 ---
 # <a name="search-tools-for-spy-views"></a>Spy++ ビュー用の検索ツール
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[spy++ ビュー用の検索ツール](https://docs.microsoft.com/visualstudio/debugger/search-tools-for-spy-increment-views)します。  
-  
 Spy++ ビュー ウィンドウに表示されます、どのようなデータを指定するのにには、これらのダイアログ ボックスを使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

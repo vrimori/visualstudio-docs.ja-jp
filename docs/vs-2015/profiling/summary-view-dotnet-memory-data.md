@@ -1,7 +1,7 @@
 ---
 title: 概要ビュー - .NET メモリ データ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2fec21552486290dbea05c07490fabbcf38feb02
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f114deff56e39aa10f96ae741dc33eb3fc955a1b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544969"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49251863"
 ---
 # <a name="summary-view---net-memory-data"></a>概要ビュー - .NET メモリ データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[概要ビュー - .NET メモリ データ](https://docs.microsoft.com/visualstudio/profiling/summary-view-dotnet-memory-data)します。  
-  
 概要ビューには、最も多くのメモリを割り当てた .NET 関数と型、およびプロファイリング実行で作成回数が最も多い型に関する情報が一覧表示されます。 通知リンクやレポートの一覧の説明など、詳細については、「[概要ビュー](../profiling/summary-view.md)」をご覧ください。  
   
 ## <a name="timeline-graph"></a>タイムライン グラフ  
@@ -59,7 +57,7 @@ ms.locfileid: "47544969"
   
 ## <a name="see-also"></a>関連項目  
  [概要ビュー](../profiling/summary-view-sampling-data.md)   
- [概要ビュー](../profiling/summary-view-instrumentation-data.md)
+ [概要 ビュー](../profiling/summary-view-instrumentation-data.md)
 
 
 

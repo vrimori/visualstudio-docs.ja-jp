@@ -11,12 +11,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c39546d48cd8b8bf71594685f944751c1f023750
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 8909ef785bd721e5b07046329e4841cebc5ec24e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117811"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822073"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>WPF と Entity Framework 6 で単純なデータ アプリケーションを作成します。
 
@@ -60,35 +60,35 @@ ms.locfileid: "37117811"
 
 ## <a name="create-the-model"></a>モデルを作成する
 
-1.  ソリューション エクスプ ローラーでプロジェクト ノードを右クリックし **追加** > **新しい項目の**します。 [C#] ノードで、左側のウィンドウで次のように選択します。**データ**中央のペインで選択**ADO.NET Entity Data Model**します。
+1. プロジェクト ノードを右クリックして**ソリューション エクスプ ローラー**選択**追加** > **新しい項目の**します。 [C#] ノードで、左側のウィンドウで次のように選択します。**データ**中央のペインで選択**ADO.NET Entity Data Model**します。
 
-     ![Entity Framework モデル新しいプロジェクト項目](../data-tools/media/raddata-ef-new-project-item.png)
+   ![Entity Framework モデル新しいプロジェクト項目](../data-tools/media/raddata-ef-new-project-item.png)
 
-  2.  モデルを呼び出す`Northwind_model`選択**OK**します。 **Entity Data Model ウィザード**が開きます。 選択**データベースの EF デザイナー**順にクリックします**次**します。
+2. モデルを呼び出す`Northwind_model`選択**OK**します。 **Entity Data Model ウィザード**が開きます。 選択**データベースの EF デザイナー**順にクリックします**次**します。
 
-     ![データベースから EF モデル](../data-tools/media/raddata-ef-model-from-database.png)
+   ![データベースから EF モデル](../data-tools/media/raddata-ef-model-from-database.png)
 
-3.  次の画面で、LocalDB Northwind が選択に接続をクリックします**次**します。
+3. 次の画面で、LocalDB Northwind が選択に接続をクリックします**次**します。
 
-4.  ウィザードの次のページで、テーブル、ストアド プロシージャ、および Entity Framework モデルに含めるには、他のデータベース オブジェクトを選択します。 ツリー ビューの dbo ノードを展開し、選択**顧客**、**注文**、および**Order Details**します。 既定値をオンのままにし、をクリックして**完了**します。
+4. ウィザードの次のページで、テーブル、ストアド プロシージャ、および Entity Framework モデルに含めるには、他のデータベース オブジェクトを選択します。 ツリー ビューの dbo ノードを展開し、選択**顧客**、**注文**、および**Order Details**します。 既定値をオンのままにし、をクリックして**完了**します。
 
-     ![モデルのデータベース オブジェクトを選択します。](../data-tools/media/raddata-choose-ef-objects.png)
+    ![モデルのデータベース オブジェクトを選択します。](../data-tools/media/raddata-choose-ef-objects.png)
 
-5.  ウィザードでは、Entity Framework モデルを表す c# クラスが生成されます。 クラスは、プレーンな古い c# クラスと、私たちは、WPF ユーザー インターフェイスにデータをバインドします。 *.Edmx*ファイルは、リレーションシップおよびその他のクラスをデータベース内のオブジェクトに関連付けられるメタデータについて説明します。 *.Tt*ファイルは対象モデルとし、データベースの変更を保存するコードを生成する T4 テンプレート。 これらすべてのファイルを確認できます**ソリューション エクスプ ローラー** Northwind_model ノードの下。
+5. ウィザードでは、Entity Framework モデルを表す c# クラスが生成されます。 クラスは、プレーンな古い c# クラスと、私たちは、WPF ユーザー インターフェイスにデータをバインドします。 *.Edmx*ファイルは、リレーションシップおよびその他のクラスをデータベース内のオブジェクトに関連付けられるメタデータについて説明します。 *.Tt*ファイルは対象モデルとし、データベースの変更を保存するコードを生成する T4 テンプレート。 これらすべてのファイルを確認できます**ソリューション エクスプ ローラー** Northwind_model ノードの下。
 
-       ![ソリューション エクスプ ローラーの EF モデル ファイル](../data-tools/media/raddata-solution-explorer-ef-model-files.png)
+      ![ソリューション エクスプ ローラーの EF モデル ファイル](../data-tools/media/raddata-solution-explorer-ef-model-files.png)
 
-     デザイナー画面、 *.edmx*ファイルでは、いくつかのプロパティと、モデル内のリレーションシップを変更することができます。 このチュートリアルでは、デザイナーを使用することはできません。
+    デザイナー画面、 *.edmx*ファイルでは、いくつかのプロパティと、モデル内のリレーションシップを変更することができます。 このチュートリアルでは、デザイナーを使用することはできません。
 
-6.  *.Tt*ファイルは、汎用と ObservableCollections を必要とする WPF データ バインドで作業することのいずれかを調整する必要があります。 **ソリューション エクスプ ローラー**、Northwind_model ノードを展開し、見つけます*Northwind_model.tt*します。 (になっていないことを確認、*します。Context.tt*すぐ下に表示されるファイルで、 *.edmx*ファイルです)。
+6. *.Tt*ファイルは、汎用と ObservableCollections を必要とする WPF データ バインドで作業することのいずれかを調整する必要があります。 **ソリューション エクスプ ローラー**、Northwind_model ノードを展開し、見つけます*Northwind_model.tt*します。 (になっていないことを確認、*します。Context.tt*すぐ下に表示されるファイルで、 *.edmx*ファイルです)。
 
-    -   2 つの箇所を置き換えます<xref:System.Collections.ICollection>で<xref:System.Collections.ObjectModel.ObservableCollection%601>します。
+   -   2 つの箇所を置き換えます<xref:System.Collections.ICollection>で<xref:System.Collections.ObjectModel.ObservableCollection%601>します。
 
-    -   最初に見つかった位置の交換<xref:System.Collections.Generic.HashSet%601>で<xref:System.Collections.ObjectModel.ObservableCollection%601>51 の行の付近です。 2 番目に出現する HashSet 置き換えないでください。
+   -   最初に見つかった位置の交換<xref:System.Collections.Generic.HashSet%601>で<xref:System.Collections.ObjectModel.ObservableCollection%601>51 の行の付近です。 2 番目に出現する HashSet 置き換えないでください。
 
-    -   唯一の一致を置き換える<xref:System.Collections.Generic>(行 431) の付近で<xref:System.Collections.ObjectModel>します。
+   -   唯一の一致を置き換える<xref:System.Collections.Generic>(行 431) の付近で<xref:System.Collections.ObjectModel>します。
 
-7.  キーを押して**Ctrl**+**Shift**+**B**プロジェクトをビルドします。 ビルドが完了したら、モデル クラスは、データ ソース ウィザードに表示されます。
+7. キーを押して**Ctrl**+**Shift**+**B**プロジェクトをビルドします。 ビルドが完了したら、モデル クラスは、データ ソース ウィザードに表示されます。
 
 表示、移動、およびデータを変更できるように、XAML ページには、このモデルをフックする準備が整いました。
 

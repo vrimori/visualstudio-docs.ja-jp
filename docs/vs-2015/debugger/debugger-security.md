@@ -1,7 +1,7 @@
 ---
 title: デバッガーのセキュリティ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3f40dfc655148530045b6566ac56d77553951b93
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ed03ae8ace6fe96c579d324422403d69e2248687
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546951"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49881964"
 ---
 # <a name="debugger-security"></a>デバッガーのセキュリティ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッガーのセキュリティ](https://docs.microsoft.com/visualstudio/debugger/debugger-security)します。  
-  
 別プロセスでデバッグする機能によって、リモート環境からのデバッグをはじめとした、さまざまな操作を行うことができます。 ただし、デバッガーに悪意があると、デバッグ対象のコンピューターに広範囲の損害を与える可能性があります。  
   
  一方で、セキュリティ上の脅威は逆方向にも当てはまることを認識している開発者は多くありません。 デバッグ対象のプロセスに悪意のあるコードがあると、デバッグを実行しているコンピューターのセキュリティにも悪影響が及ぶことがあります。対処が必要なセキュリティの攻略行為は数多くあります。  
@@ -47,11 +45,11 @@ ms.locfileid: "47546951"
 ### <a name="managed-debugging-security"></a>マネージド デバッグのセキュリティ  
  すべてのマネージド デバッグに適用される全般的な推奨事項を次に示します。  
   
--   信頼関係のないユーザーのプロセスにアタッチするときは注意します。アタッチを実行するときに、信頼できるかどうかを判断します。 信頼関係のないユーザーのプロセスにアタッチするときに、セキュリティの警告ダイアログ ボックスが表示され、プロセスにアタッチするかどうかが確認されます。 "信頼関係のあるユーザー" には、自分と、.NET Framework をインストールしたコンピューターで一般的に定義されている標準のユーザーが含まれます。たとえば、 **aspnet**、 **localsystem**、 **networkservice**、および **localservice**です。 詳細については、次を参照してください。[セキュリティ警告: 信頼されていないユーザーによって所有されているプロセスにアタッチするのは危険です。次の情報に関して疑わしい、または不明ながこのプロセスにアタッチしない](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process.md)します。  
+- 信頼関係のないユーザーのプロセスにアタッチするときは注意します。アタッチを実行するときに、信頼できるかどうかを判断します。 信頼関係のないユーザーのプロセスにアタッチするときに、セキュリティの警告ダイアログ ボックスが表示され、プロセスにアタッチするかどうかが確認されます。 "信頼関係のあるユーザー" には、自分と、.NET Framework をインストールしたコンピューターで一般的に定義されている標準のユーザーが含まれます。たとえば、 **aspnet**、 **localsystem**、 **networkservice**、および **localservice**です。 詳細については、次を参照してください。[セキュリティ警告: 信頼されていないユーザーによって所有されているプロセスにアタッチするのは危険です。次の情報に関して疑わしい、または不明ながこのプロセスにアタッチしない](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process.md)します。  
   
--   プロジェクトをインターネットからダウンロードするとき、およびそのプロジェクトを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] に読み込むときは注意します。 デバッグを実行しない場合でも、これはリスクの高い方法です。 この場合、含まれるプロジェクトとコードが信頼できるかどうかを判断します。  
+- プロジェクトをインターネットからダウンロードするとき、およびそのプロジェクトを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]に読み込むときは注意します。 デバッグを実行しない場合でも、これはリスクの高い方法です。 この場合、含まれるプロジェクトとコードが信頼できるかどうかを判断します。  
   
- 詳細については、「 [Debugging Managed Code](../debugger/debugging-managed-code.md)」を参照してください。  
+  詳細については、「 [Debugging Managed Code](../debugger/debugging-managed-code.md)」を参照してください。  
   
 ### <a name="remote-debugging-security"></a>リモート デバッグのセキュリティ  
  ローカル デバッグは、リモート デバッグよりも一般に安全です。 リモート デバッグの場合、調査対象の領域は広範囲です。  
@@ -81,17 +79,17 @@ ms.locfileid: "47546951"
 ### <a name="symbols-and-source-code"></a>シンボルとソース コード  
  次の 2 つの [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ツールでは、セキュリティについて考慮する必要があります。  
   
--   ソース サーバー。ソース コードのレポジトリからソース コードのバージョンを表示します。 最新バージョンのプログラム ソース コードを持っていないときに便利です。 [Security Warning: Debugger Must Execute Untrusted Command](../debugger/security-warning-debugger-must-execute-untrusted-command.md)。  
+- ソース サーバー。ソース コードのレポジトリからソース コードのバージョンを表示します。 最新バージョンのプログラム ソース コードを持っていないときに便利です。 [Security Warning: Debugger Must Execute Untrusted Command](../debugger/security-warning-debugger-must-execute-untrusted-command.md)。  
   
--   シンボル サーバー。システム コール時のクラッシュをデバッグするときに必要な、シンボルを提供するときに使用されます。  
+- シンボル サーバー。システム コール時のクラッシュをデバッグするときに必要な、シンボルを提供するときに使用されます。  
   
- 参照してください[シンボル (.pdb) を指定し、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
+  参照してください[シンボル (.pdb) を指定し、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
   
 ## <a name="see-also"></a>関連項目  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   
  [デバッガーの基本事項](../debugger/debugger-basics.md)   
  [セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするには危険が伴います。次の情報に関して疑わしい、または不明ながこのプロセスにアタッチできません。](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process.md)   
- [セキュリティ警告: デバッガーは信頼されないコマンドを実行する必要があります](../debugger/security-warning-debugger-must-execute-untrusted-command.md)
+ [Security Warning: Debugger Must Execute Untrusted Command](../debugger/security-warning-debugger-must-execute-untrusted-command.md)
 
 
 

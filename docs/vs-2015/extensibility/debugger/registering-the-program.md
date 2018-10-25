@@ -1,7 +1,7 @@
 ---
 title: プログラムの登録 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: d726a161-7db3-4ef4-b258-9f6a5be68418
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d522a4c422994d174d358450f9eb210762d262a7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 07420cce0c39c29d721b83ec504370c0f4bc04eb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538655"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49912527"
 ---
 # <a name="registering-the-program"></a>プログラムの登録
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プログラムの登録](https://docs.microsoft.com/visualstudio/extensibility/debugger/registering-the-program)します。  
-  
 によって表されるデバッグ エンジンでは、ポート、取得された後、 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)インターフェイス、デバッグするプログラムを有効にするのには、次の手順は、ポートを使用して登録します。 登録されると、プログラムがでは、次のいずれかのデバッグに使用します。  
   
 -   使用する実行中のアプリケーションの制御をデバッグするデバッガーのアタッチ、プロセス。  

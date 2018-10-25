@@ -1,7 +1,7 @@
 ---
 title: IDebugSettingsCallback2::GetEELocalObject |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: e69a3469-a049-420c-b918-c48a1e7b9baf
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 751c92ef92c0a01c7696db3d0d5ad2f3be53e61b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6390b67550bf27aa0eeb77b3d40a59c6bb58664b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535276"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951133"
 ---
 # <a name="idebugsettingscallback2geteelocalobject"></a>IDebugSettingsCallback2::GetEELocalObject
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugSettingsCallback2::GetEELocalObject](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugsettingscallback2-geteelocalobject)します。  
-  
 メトリックの名前を指定、式エバリュエーターのローカル オブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  

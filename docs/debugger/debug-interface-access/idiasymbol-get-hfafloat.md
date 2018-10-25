@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_hfafloat |Microsoft ドキュメント
+title: Idiasymbol::get_hfafloat |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ede9f02aa7fa4498e12382f22c43f4421342b669
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: ae61d8c4c82eb8e0493574fc8469355f07f6a796
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31462535"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900242"
 ---
 # <a name="idiasymbolgethfafloat"></a>IDiaSymbol::get_hfaFloat
 ユーザー定義型 (UDT) が同種浮動小数点 (HFA) の集計データは float 型を含むかどうかを指定するフラグを取得します。  
@@ -34,17 +34,17 @@ HRESULT get_hfaFloat(
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]返します`TRUE`UDT には、float 型; HFA データが含まれている場合を返しますそれ以外の場合、`FALSE`です。  
+ [out]返します`TRUE`UDT には、float 型; の HFA データが含まれている場合を返しますそれ以外の場合、`FALSE`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

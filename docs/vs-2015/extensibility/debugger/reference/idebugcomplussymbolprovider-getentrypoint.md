@@ -1,7 +1,7 @@
 ---
 title: IDebugComPlusSymbolProvider::GetEntryPoint |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 9640e121-1da1-41f9-8e66-76efca36baf2
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4594d4a4770d5540e4bf4f91fc147de02283aac2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 02fa7dbd849d0f8af3f9547c7ff455e9b6c0673f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539060"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832826"
 ---
 # <a name="idebugcomplussymbolprovidergetentrypoint"></a>IDebugComPlusSymbolProvider::GetEntryPoint
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugComPlusSymbolProvider::GetEntryPoint](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugcomplussymbolprovider-getentrypoint)します。  
-  
 アプリケーションのエントリ ポイントを取得します。  
   
 ## <a name="syntax"></a>構文  

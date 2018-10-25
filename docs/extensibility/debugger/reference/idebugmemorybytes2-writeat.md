@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryBytes2::WriteAt |Microsoft ドキュメント
+title: IDebugMemoryBytes2::WriteAt |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4d1d79d88baf9688fe68ff44d59dcd4d19baf9f8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a2d164f0ef816285e2df4a9e49b09d55feb90d25
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31112123"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864272"
 ---
 # <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
-指定された数の指定したアドレスで始まるメモリのバイトを書き込みます。  
+指定した数の指定したアドレスで始まるメモリのバイトを書き込みます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,13 +52,13 @@ int WriteAt(
  [in]書き込むバイト数。  
   
  `rgbMemory`  
- [in]書き込むバイト。 この配列は以上であると見なされます`dwCount`バイトの列にします。  
+ [in]書き込むバイト数。 この配列は以上であると見なされます`dwCount`サイズ (バイト)。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`か、すべてのバイトが書き込まれるエラー コードを返します (通常`E_FAIL`)。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`しないすべてのバイトが書き込まれるまたはエラー コードを返します (通常`E_FAIL`)。  
   
-## <a name="remarks"></a>コメント  
- 開始アドレスがこれによって表されるメモリ ウィンドウ内でないかどうかは[IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)オブジェクトの書き込みは行われませんと、エラー コードは`E_FAIL`が返されます: 書き込み量のメモリ領域に重なっている場合でもです。  
+## <a name="remarks"></a>Remarks  
+ 開始アドレスこれによって表されるメモリ ウィンドウ内でないかどうかは[IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)オブジェクトの書き込みは行われませんとエラー コードの`E_FAIL`が返されます: メモリ領域に書き込み量が重なっている場合でもです。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   

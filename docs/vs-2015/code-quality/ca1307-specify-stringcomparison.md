@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1307: StringComparison の指定 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 2c96b8c895106337a8578b6662c0e61830b38f55
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 90da21195e5bc2f50708bedc869e945da2d291dd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47591902"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853130"
 ---
 # <a name="ca1307-specify-stringcomparison"></a>CA1307: StringComparison の指定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1307: StringComparison の指定](https://docs.microsoft.com/visualstudio/code-quality/ca1307-specify-stringcomparison)します。
 
 |||
 |-|-|

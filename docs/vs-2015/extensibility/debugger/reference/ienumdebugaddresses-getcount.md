@@ -1,7 +1,7 @@
 ---
 title: IEnumDebugAddresses::GetCount |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: f2ca8ff8-539f-457c-83f8-9bbf97618065
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 020a547b5557dd97c3482cf2ea596e3edd913b27
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: efe49a0eb58975ebc9b6c6e8bfcce310cff774a9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534642"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49902491"
 ---
 # <a name="ienumdebugaddressesgetcount"></a>IEnumDebugAddresses::GetCount
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IEnumDebugAddresses::GetCount](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ienumdebugaddresses-getcount)します。  
-  
 このメソッドは、列挙体の要素の数を返します。  
   
 ## <a name="syntax"></a>構文  

@@ -1,7 +1,7 @@
 ---
 title: コード化された UI テストでのさまざまな Web ブラウザーの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,51 +13,49 @@ ms.assetid: a859595f-6517-43f2-9d61-c706cb55a388
 caps.latest.revision: 25
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 73fea4d5d3cccf90070e2e2a013684e2344205f5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e9e540e35bdfd68d8c371c2bad0ace3fc4b420e0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544846"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893235"
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>コード化された UI テストでのさまざまな Web ブラウザーの使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[さまざまな Web ブラウザーでコード化された UI テストを使用して](https://docs.microsoft.com/visualstudio/test/using-different-web-browsers-with-coded-ui-tests)します。  
-  
 コード化された UI テストでは、Internet Explorer を使用してテストを記録することによって、Web アプリケーションのテストを自動化できます。 その後、テストをカスタマイズし、Internet Explorer や Web アプリケーションに対応している他の種類のブラウザーを使用して再生できます。  
   
  **必要条件**  
   
--   Visual Studio Enterprise  
+- Visual Studio Enterprise  
   
--   オペレーティング システム:  
+- オペレーティング システム:  
   
-    -   Microsoft Windows 7  
+  -   Microsoft Windows 7  
   
-    -   Microsoft Windows 8  
+  -   Microsoft Windows 8  
   
-    -   Microsoft Windows Server 2008 R2 SP1  
+  -   Microsoft Windows Server 2008 R2 SP1  
   
--   Web ブラウザーのバージョン:  
+- Web ブラウザーのバージョン:  
   
-    -   Windows Internet Explorer 9  
+  -   Windows Internet Explorer 9  
   
-    -   Windows Internet Explorer 10  
+  -   Windows Internet Explorer 10  
   
-    -   Mozilla Firefox と Google Chrome のサポートされているバージョンについては、[こちら](http://visualstudiogallery.msdn.microsoft.com/11cfc881-f8c9-4f96-b303-a2780156628d/)を参照してください。  
+  -   Mozilla Firefox と Google Chrome のサポートされているバージョンについては、[こちら](http://visualstudiogallery.msdn.microsoft.com/11cfc881-f8c9-4f96-b303-a2780156628d/)を参照してください。  
   
--   [コード化された UI のクロス ブラウザー テスト用に Selenium コンポーネント](http://visualstudiogallery.msdn.microsoft.com/11cfc881-f8c9-4f96-b303-a2780156628d/)をインストールします。  
+- [コード化された UI のクロス ブラウザー テスト用に Selenium コンポーネント](http://visualstudiogallery.msdn.microsoft.com/11cfc881-f8c9-4f96-b303-a2780156628d/)をインストールします。  
   
- **すべての Web ブラウザーでサポートされている機能**  
+  **すべての Web ブラウザーでサポートされている機能**  
   
--   プロパティ、検索、再生待機処理などの[機能を制御するためのカスタム コードを追加](http://blogs.msdn.com/b/visualstudioalm/archive/2012/12/10/coded-ui-test-configuring-search-properties-while-recording-on-internet-explorer.aspx)します。  
+- プロパティ、検索、再生待機処理などの[機能を制御するためのカスタム コードを追加](http://blogs.msdn.com/b/visualstudioalm/archive/2012/12/10/coded-ui-test-configuring-search-properties-while-recording-on-internet-explorer.aspx)します。  
   
--   ポップアップとダイアログ ボックス  
+- ポップアップとダイアログ ボックス  
   
--   [戻り値の型を持たない基本 JavaScript を実行します](http://blogs.msdn.com/b/visualstudioalm/archive/2013/01/18/introducing-jscript-execution-on-internetexplorer-and-crossbrowser-in-coded-ui-test.aspx)  
+- [戻り値の型を持たない基本 JavaScript を実行します](http://blogs.msdn.com/b/visualstudioalm/archive/2013/01/18/introducing-jscript-execution-on-internetexplorer-and-crossbrowser-in-coded-ui-test.aspx)  
   
--   検索の回復機能 (スマート一致を使用) と[パフォーマンスの向上](http://blogs.msdn.com/b/visualstudioalm/archive/2012/02/01/guidelines-on-improving-performance-of-coded-ui-test-playback.aspx)  
+- 検索の回復機能 (スマート一致を使用) と[パフォーマンスの向上](http://blogs.msdn.com/b/visualstudioalm/archive/2012/02/01/guidelines-on-improving-performance-of-coded-ui-test-playback.aspx)  
   
 ## <a name="why-should-i-use-coded-ui-tests-across-multiple-web-browser-types"></a>コード化された UI テストを複数の Web ブラウザーの種類で使用する理由  
  さまざまな種類の Web ブラウザーを使用して Web アプリケーションをテストすることにより、さまざまなブラウザーを実行するユーザーの UI 操作をより適切にエミュレートできます。 たとえば、他の Web ブラウザーとの互換性がない、Internet Explorer のコントロールまたはコードが、アプリケーションに含まれていることがあります。 コード化された UI テストを他のブラウザーでも実行することにより、ユーザーへの影響が生じる前に問題を検出して修正できます。  
@@ -76,16 +74,16 @@ ms.locfileid: "47544846"
   
 #### <a name="installing-selenium-components"></a>Selenium コンポーネントをインストールする  
   
-1.  **[ツール]** メニューの **[拡張機能と更新プログラム]** をクリックします。  
+1. **[ツール]** メニューの **[拡張機能と更新プログラム]** をクリックします。  
   
-2.  [拡張機能と更新プログラム] ダイアログ ボックスで、`Selenium components for Cross Browser Testing` を検索します。  
+2. [拡張機能と更新プログラム] ダイアログ ボックスで、`Selenium components for Cross Browser Testing` を検索します。  
   
-3.  拡張機能を強調表示し、**[ダウンロード]** を選択します。  
+3. 拡張機能を強調表示し、**[ダウンロード]** を選択します。  
   
-    > [!TIP]
-    >  コード化された UI のクロス ブラウザー テスト用 Selenium コンポーネントは、[こちら](http://visualstudiogallery.msdn.microsoft.com/11cfc881-f8c9-4f96-b303-a2780156628d/)からもダウンロードできます。  
+   > [!TIP]
+   >  コード化された UI のクロス ブラウザー テスト用 Selenium コンポーネントは、[こちら](http://visualstudiogallery.msdn.microsoft.com/11cfc881-f8c9-4f96-b303-a2780156628d/)からもダウンロードできます。  
   
- コード化された UI テストの作成方法と使用方法の詳細については、「[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)」を参照してください。  
+   コード化された UI テストの作成方法と使用方法の詳細については、「[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)」を参照してください。  
   
 ### <a name="enable-debugging"></a>デバッグの有効化  
  Web アプリケーションのデバッグを有効にするには、以下の構成オプションを設定する必要があります。  
@@ -108,29 +106,29 @@ ms.locfileid: "47544846"
  *その他に知っておく必要があること*  
  **ノート**  
   
--   ![前提条件](../test/media/prereq.png "Prereq") Apple Safari Web ブラウザーはサポートされていません。  
+- ![前提条件](../test/media/prereq.png "Prereq") Apple Safari Web ブラウザーはサポートされていません。  
   
--   ![前提条件](../test/media/prereq.png "Prereq") Web ブラウザーを起動する操作は、コード化された UI テストの一部である必要があります。  
+- ![前提条件](../test/media/prereq.png "Prereq") Web ブラウザーを起動する操作は、コード化された UI テストの一部である必要があります。  
   
-     既に Web ブラウザーが開かれていて、そこで手順を実行すると、Internet Explorer を使用していない場合は再生が失敗します。 そのため、コード化された UI テストの一部として Web ブラウザーの起動を含めることをお勧めします。  
+   既に Web ブラウザーが開かれていて、そこで手順を実行すると、Internet Explorer を使用していない場合は再生が失敗します。 そのため、コード化された UI テストの一部として Web ブラウザーの起動を含めることをお勧めします。  
   
--   ![前提条件](../test/media/prereq.png "Prereq") 最大化、最小化、復元など、ブラウザー固有の UI 操作の自動化はサポートされていません。  
+- ![前提条件](../test/media/prereq.png "Prereq") 最大化、最小化、復元など、ブラウザー固有の UI 操作の自動化はサポートされていません。  
   
- **ヒント**  
+  **ヒント**  
   
--   ![ヒント](../test/media/tip.png "Tip") コード化された UI のログにスクリーン ショットを含めるように、出力を構成できます。 そのためには、QTAgent32.exe.config ファイルの一部の構成設定を設定する必要があります。 既定では、このファイルは次の場所にインストールされます。  
+- ![ヒント](../test/media/tip.png "Tip") コード化された UI のログにスクリーン ショットを含めるように、出力を構成できます。 そのためには、QTAgent32.exe.config ファイルの一部の構成設定を設定する必要があります。 既定では、このファイルは次の場所にインストールされます。  
   
-     **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**  
+   **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**  
   
-     次の値を設定します。  
+   次の値を設定します。  
   
-    -   `EqtTraceLevel` セクションの `system.diagnostics`。  
+  - `EqtTraceLevel` セクションの `system.diagnostics`。  
   
-    -   `<add name="EqtTraceLevel" value="4" />`  
+  - `<add name="EqtTraceLevel" value="4" />`  
   
-         値を 3 以上に設定すると、操作ごとにスクリーン ショットが取得されます。 値を 1 または 2 に設定すると、エラー操作のみでスクリーンショットが取得されます。  
+     値を 3 以上に設定すると、操作ごとにスクリーン ショットが取得されます。 値を 1 または 2 に設定すると、エラー操作のみでスクリーンショットが取得されます。  
   
-     詳細については、「[コード化された UI テスト ログを使用したコード化された UI テストの分析](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)」をご覧ください。  
+    詳細については、「[コード化された UI テスト ログを使用したコード化された UI テストの分析](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)」をご覧ください。  
   
 ## <a name="external-resources"></a>外部リソース  
   

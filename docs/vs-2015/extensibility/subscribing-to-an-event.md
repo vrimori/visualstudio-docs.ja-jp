@@ -1,7 +1,7 @@
 ---
 title: イベントのサブスクライブ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: e94a4fea-94df-488e-8560-9538413422bc
 caps.latest.revision: 36
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 77f277a63d08752ddbcb7e25bae4aa82867d280e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e4d3a1ab2122c71c0058f993543860754b727473
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536458"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49247859"
 ---
 # <a name="subscribing-to-an-event"></a>イベントのサブスクライブ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[イベントのサブスクライブ](https://docs.microsoft.com/visualstudio/extensibility/subscribing-to-an-event)します。  
-  
 このチュートリアルでは、実行中のドキュメント テーブル (RDT) 内のイベントに応答するツール ウィンドウを作成する方法について説明します。 ツール ウィンドウを実装するユーザー コントロールをホストする<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>します。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>メソッドは、イベントに、インターフェイスを接続します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
@@ -69,7 +67,7 @@ ms.locfileid: "47536458"
     {. . .}  
     ```  
   
-4.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> を実装します。  
+4.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>を実装します。  
   
     -   インターフェイスを実装します。 IVsRunningDocTableEvents 名にカーソルを置きます。 左の余白に電球が表示されます。 電球の右側の下矢印をクリックして選択します**インターフェイスの実装**します。  
   

@@ -1,7 +1,7 @@
 ---
 title: m_stateFlags フィールド |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,21 +15,19 @@ ms.assetid: 82b20efc-08f2-4cd2-91f6-4e01e3da906b
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1e95457198232493518db2ff44feb53e1b4a28ba
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0852425b4062b286f95406d01bc1649056967e49
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540317"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49171127"
 ---
 # <a name="mstateflags-field"></a>m_stateFlags フィールド
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[m_stateFlags フィールド](https://docs.microsoft.com/visualstudio/extensibility/debugger/m-stateflags-field)します。  
-  
 現在の状態に関する情報を格納、<xref:System.Threading.Tasks.Task>オブジェクト。  
   
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **名前空間:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
  **アセンブリ:** mscorlib (mscorlib.dll 内)  
   

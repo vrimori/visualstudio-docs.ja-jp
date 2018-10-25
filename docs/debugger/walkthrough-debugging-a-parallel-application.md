@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c8e82986d890f4d453190e1da6511c42dfe8866
-ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
+ms.openlocfilehash: b675b74ef843a9a6b186149d16086df2528eab57
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39468791"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872643"
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio"></a>チュートリアル: Visual Studio での並列アプリケーションのデバッグ
 このチュートリアルで使用する方法、**並列タスク**と**並列スタック**windows 並列アプリケーションをデバッグします。 これらのウィンドウでは、把握し、使用するコードの実行時の動作を検証できます。、[タスク並列ライブラリ (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)または[同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime)します。 このチュートリアルには、ブレークポイントが組み込まれたサンプル コードが用意されています。 このチュートリアルで使用する方法を示します、コードでは後、**並列タスク**と**並列スタック**ことを確認する windows。  
@@ -63,25 +63,25 @@ ms.locfileid: "39468791"
   
 #### <a name="to-create-the-sample-project"></a>サンプル プロジェクトを作成するには  
   
-1.  Visual Studio で、**[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックします。  
+1. Visual Studio で、**[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックします。  
   
-2.  いずれかを選択**Visual c#**、 **Visual Basic**、または**Visual C**します。 マネージド言語については、フレームワークのボックスに [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] が表示されていることを確認します。  
+2. いずれかを選択**Visual c#**、 **Visual Basic**、または**Visual C**します。 マネージド言語については、フレームワークのボックスに [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] が表示されていることを確認します。  
   
-3.  **Windows デスクトップ**、選択**コンソール アプリケーション**順にクリックします**OK**します。 既定のデバッグ構成をそのまま使用します。  
+3. **Windows デスクトップ**、選択**コンソール アプリケーション**順にクリックします**OK**します。 既定のデバッグ構成をそのまま使用します。  
   
-4.  プロジェクトで .cpp、.cs、または .vb コード ファイルを開きます。 その内容を削除して、空のコード ファイルを作成します。  
+4. プロジェクトで .cpp、.cs、または .vb コード ファイルを開きます。 その内容を削除して、空のコード ファイルを作成します。  
   
-5.  空のコード ファイルに、選択した言語の次のコードを貼り付けます。  
+5. 空のコード ファイルに、選択した言語の次のコードを貼り付けます。  
   
- [!code-csharp[Debugger#1](../debugger/codesnippet/CSharp/walkthrough-debugging-a-parallel-application_1.cs)]
- [!code-cpp[Debugger#1](../debugger/codesnippet/CPP/walkthrough-debugging-a-parallel-application_1.cpp)]
- [!code-vb[Debugger#1](../debugger/codesnippet/VisualBasic/walkthrough-debugging-a-parallel-application_1.vb)]  
+   [!code-csharp[Debugger#1](../debugger/codesnippet/CSharp/walkthrough-debugging-a-parallel-application_1.cs)]
+   [!code-cpp[Debugger#1](../debugger/codesnippet/CPP/walkthrough-debugging-a-parallel-application_1.cpp)]
+   [!code-vb[Debugger#1](../debugger/codesnippet/VisualBasic/walkthrough-debugging-a-parallel-application_1.vb)]  
   
-1.  **ファイル** メニューのをクリックして**すべて保存**します。  
+6. **ファイル** メニューのをクリックして**すべて保存**します。  
   
-2.  **ビルド** メニューのをクリックして**ソリューションのリビルド**します。  
+7. **ビルド** メニューのをクリックして**ソリューションのリビルド**します。  
   
-     このコードには、`Debugger.Break` の呼び出しが 4 つあります (C++ サンプルの場合は `DebugBreak`)。したがって、ブレークポイントを挿入する必要はありません。そのまま実行するだけで、デバッガーでアプリケーションの実行が 4 回中断されます。  
+    このコードには、`Debugger.Break` の呼び出しが 4 つあります (C++ サンプルの場合は `DebugBreak`)。したがって、ブレークポイントを挿入する必要はありません。そのまま実行するだけで、デバッガーでアプリケーションの実行が 4 回中断されます。  
   
 ## <a name="using-the-parallel-stacks-window-threads-view"></a>[並列スタック] ウィンドウの使用: スレッド ビュー  
  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。 1 つ目のブレークポイントにヒットするまで待ちます。  
@@ -299,9 +299,8 @@ ms.locfileid: "39468791"
 ## <a name="see-also"></a>関連項目  
  [マルチ スレッド アプリケーションのデバッグ](../debugger/walkthrough-debugging-a-parallel-application.md)   
  [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)   
- 
-  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
+ [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
  [並列プログラミング](/dotnet/standard/parallel-programming/index)   
- [同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime)   
+ [コンカレンシー ランタイム](/cpp/parallel/concrt/concurrency-runtime)   
  [並列スタック ウィンドウの使用](../debugger/using-the-parallel-stacks-window.md)   
  [[タスク] ウィンドウの使用](../debugger/using-the-tasks-window.md)

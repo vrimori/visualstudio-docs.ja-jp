@@ -1,7 +1,7 @@
 ---
 title: 参照およびコード マップを再配置 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -27,12 +27,12 @@ caps.latest.revision: 91
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 68609861ed864dcd42dedcb7615720f76131932e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: dba1be310260a2b1ae6ad28efe4b3d98ac14c4a4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533571"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896838"
 ---
 # <a name="browse-and-rearrange-code-maps"></a>コード マップの参照および再配置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -178,25 +178,25 @@ ms.locfileid: "47533571"
 ###  <a name="AddNodes"></a>   
 ##### <a name="add-a-link-between-existing-code-elements"></a>既存のコード要素間にリンクを追加する  
   
-1.  ソース コード要素を選択します。 コード要素の上にツールバーが表示されます。  
+1. ソース コード要素を選択します。 コード要素の上にツールバーが表示されます。  
   
-     ![依存関係グラフ ツールバー](../modeling/media/depedencygraph-toolbar.png "DepedencyGraph_Toolbar")  
+    ![依存関係グラフ ツールバー](../modeling/media/depedencygraph-toolbar.png "DepedencyGraph_Toolbar")  
   
-2.  ツールバーの最初のアイコンを選択して**作成の新しいリンクをこのノードから [次へ] をクリックするノード**します。  
+2. ツールバーの最初のアイコンを選択して**作成の新しいリンクをこのノードから [次へ] をクリックするノード**します。  
   
-3.  対象のコード要素をクリックします。 2 つのコード要素間にリンクが表示されます。  
+3. 対象のコード要素をクリックします。 2 つのコード要素間にリンクが表示されます。  
   
- \- または -  
+   \- または -  
   
-1.  マップ上でソース コード要素を選択します。  
+4. マップ上でソース コード要素を選択します。  
   
-2.  マウスがインストールされている場合、マップの範囲外に、マウス ポインターを移動します。  
+5. マウスがインストールされている場合、マップの範囲外に、マウス ポインターを移動します。  
   
-3.  コード要素のショートカット メニューを開いて**編集**、**追加**、**一般的なリンク**します。  
+6. コード要素のショートカット メニューを開いて**編集**、**追加**、**一般的なリンク**します。  
   
-4.  Tab キーを押して、リンクのターゲット コード要素を選択します。  
+7. Tab キーを押して、リンクのターゲット コード要素を選択します。  
   
-5.  **RETURN**キーを押します。  
+8. **RETURN**キーを押します。  
   
 ###  <a name="AddComments"></a>   
 ##### <a name="add-a-comment-to-an-existing-node-on-the-map"></a>マップ上の既存のノードにコメントを追加する  

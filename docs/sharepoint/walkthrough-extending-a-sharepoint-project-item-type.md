@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c333d38dde1d440d5bac10770d0b3386f82ad4ad
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e1210d95a73038ea21c0455e944eb46b1791b426
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42626147"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844517"
 ---
 # <a name="walkthrough-extend-a-sharepoint-project-item-type"></a>チュートリアル: SharePoint プロジェクト項目の種類を拡張します。
   使用することができます、 **Business Data Connectivity モデル**sharepoint ビジネス データ接続 (BDC) サービスのモデルを作成するプロジェクト アイテム。 既定では、このプロジェクト項目を使用してモデルを作成しただけでは、モデル内のデータがユーザーに表示されません。 ユーザーがデータを閲覧できるようにするには、それに加えて、SharePoint に外部リストを作成する必要があります。  
@@ -42,24 +42,24 @@ ms.locfileid: "42626147"
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
   
--   サポート対象エディションの Microsoft Windows、SharePoint、および Visual Studio。  
+- サポート対象エディションの Microsoft Windows、SharePoint、および Visual Studio。  
   
--   [!include[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]。 このチュートリアルでは、 **VSIX プロジェクト**sdk プロジェクト アイテムを配置するための VSIX パッケージを作成するテンプレート。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)します。  
+- [!include[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]。 このチュートリアルでは、 **VSIX プロジェクト**sdk プロジェクト アイテムを配置するための VSIX パッケージを作成するテンプレート。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)します。  
   
- 次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
+  次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
   
--   [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] の BDC サービス。 詳細については、次を参照してください。 [BDC アーキテクチャ](http://go.microsoft.com/fwlink/?LinkId=177798)します。  
+- [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] の BDC サービス。 詳細については、次を参照してください。 [BDC アーキテクチャ](http://go.microsoft.com/fwlink/?LinkId=177798)します。  
   
--   BDC モデルの XML スキーマ。 詳細については、次を参照してください。 [BDC モデル インフラストラクチャ](http://go.microsoft.com/fwlink/?LinkId=177799)します。  
+- BDC モデルの XML スキーマ。 詳細については、次を参照してください。 [BDC モデル インフラストラクチャ](http://go.microsoft.com/fwlink/?LinkId=177799)します。  
   
 ## <a name="create-the-projects"></a>プロジェクトを作成します。
  このチュートリアルを完了するには、2 つのプロジェクトを作成する必要があります。  
   
--   プロジェクト項目の拡張機能を配置するために VSIX パッケージを作成する VSIX プロジェクト。  
+- プロジェクト項目の拡張機能を配置するために VSIX パッケージを作成する VSIX プロジェクト。  
   
--   プロジェクト項目の拡張機能を実装するクラス ライブラリ プロジェクト。  
+- プロジェクト項目の拡張機能を実装するクラス ライブラリ プロジェクト。  
   
- この 2 つのプロジェクトを作成することから始めます。  
+  この 2 つのプロジェクトを作成することから始めます。  
   
 #### <a name="to-create-the-vsix-project"></a>VSIX プロジェクトを作成するには  
   

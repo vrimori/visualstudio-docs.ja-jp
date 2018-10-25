@@ -1,7 +1,7 @@
 ---
 title: クラス ダイアグラムおよびクラスの詳細情報のウィンドウでのキーボードとマウスのショートカット (クラス デザイナー) | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 144c2d70cf734f8d1c9602fad96bf4e1c6d8a0c4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f607046609208804f349eb06e927ab8e72e28992
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546548"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49247911"
 ---
 # <a name="keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer"></a>クラス ダイアグラムおよびクラスの詳細情報のウィンドウでのキーボードとマウスのショートカット (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[キーボードとマウスのショートカットをクラス ダイアグラムおよびクラスの詳細 ウィンドウ (クラス デザイナー) で](https://docs.microsoft.com/visualstudio/ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer)します。  
-  
 クラス デザイナーおよび **[クラスの詳細]** ウィンドウでのナビゲーション操作は、マウスで実行するだけでなく、キーボードを使用することもできます。  
   
  **このトピックの内容**  

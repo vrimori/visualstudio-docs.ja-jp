@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1abd1dff1cb63f2e80e3c4b242699fbede2c3201
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 47ede5eebc4d7caf4fe1565c5d8b93b2524ed6ef
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39379339"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849360"
 ---
 # <a name="interop-activity-designer"></a>Interop アクティビティ デザイナー
 
@@ -46,7 +46,7 @@ VB プロジェクトの場合は、プロジェクトでプロジェクトを�
 次の表は、<xref:System.Activities.Statements.Interop>プロパティと、デザイナーでの使用方法について説明します。 プロパティ グリッドで、またはワークフロー デザイナー画面で、これらのプロパティを編集できます。
 
 |プロパティ名|必須|使用方法|
-|-------------------|--------------|-----------|
+|-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.Interop> アクティビティの表示名。 既定値は**相互運用機能**します。 表示名は必要ありませんが、提供するようにはお勧めします。|
 |<xref:System.Activities.Statements.Interop.ActivityType%2A>|True|<xref:System.Activities.Statements.Interop> アクティビティに含まれているアクティビティの型を指定します。 指定されたこの型は、<xref:System.Workflow.ComponentModel.Activity> から派生していることが必要です。|
 

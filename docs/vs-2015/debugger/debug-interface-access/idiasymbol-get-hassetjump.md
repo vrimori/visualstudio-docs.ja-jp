@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_hassetjump |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8a87713d5e0a1fcbdfb7fbfc267696525eff1f2b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ff7e899255d4cafc20bd488fa4595f386a6dafdd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539289"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49886605"
 ---
 # <a name="idiasymbolgethassetjump"></a>IDiaSymbol::get_hasSetJump
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_hassetjump](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-hassetjump)します。  
-  
 関数の使用が含まれるかどうかを指定するフラグを取得、 [setjmp](http://msdn.microsoft.com/library/684a8b27-e8eb-455b-b4a8-733ca1cbd7d2)コマンド (ペアになって、 [longjmp](http://msdn.microsoft.com/library/0e13670a-5130-45c1-ad69-6862505b7a2f)コマンド、例外処理の C スタイルのメソッドをフォームこれら)。  
   
 ## <a name="syntax"></a>構文  
@@ -50,7 +48,7 @@ HRESULT get_hasSetJump(
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

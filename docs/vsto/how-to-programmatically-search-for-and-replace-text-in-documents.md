@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c4a2e1dd1cb1a9e10ddaa442318094ac258a6dc4
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 6de96133a810898fe847cce71bb2711dd7c31dd9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671904"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822398"
 ---
 # <a name="how-to-programmatically-search-for-and-replace-text-in-documents"></a>方法: プログラムによって検索し、文書内のテキストを置換
   <xref:Microsoft.Office.Interop.Word.Find> オブジェクトは <xref:Microsoft.Office.Interop.Word.Selection> および <xref:Microsoft.Office.Interop.Word.Range> オブジェクトの両方のメンバーであり、どちらを使用しても Microsoft Office Word ドキュメント内のテキストを検索できます。 Replace コマンドは、Find コマンドの拡張機能です。  
@@ -40,64 +40,64 @@ ms.locfileid: "35671904"
   
 ### <a name="to-find-text-using-a-selection-object"></a>Selection オブジェクトを使用してテキストを検索するには  
   
-1.  検索文字列を変数に代入します。  
+1. 検索文字列を変数に代入します。  
   
-     [!code-vb[Trin_VstcoreWordAutomation#68](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#68)]
-     [!code-csharp[Trin_VstcoreWordAutomation#68](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#68)]  
+    [!code-vb[Trin_VstcoreWordAutomation#68](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#68)]
+    [!code-csharp[Trin_VstcoreWordAutomation#68](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#68)]  
   
-2.  前の検索の書式をクリアします。  
+2. 前の検索の書式をクリアします。  
   
-     [!code-vb[Trin_VstcoreWordAutomation#69](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#69)]
-     [!code-csharp[Trin_VstcoreWordAutomation#69](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#69)]  
+    [!code-vb[Trin_VstcoreWordAutomation#69](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#69)]
+    [!code-csharp[Trin_VstcoreWordAutomation#69](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#69)]  
   
-3.  検索を実行し、結果を含むメッセージ ボックスを表示します。  
+3. 検索を実行し、結果を含むメッセージ ボックスを表示します。  
   
-     [!code-vb[Trin_VstcoreWordAutomation#70](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#70)]
-     [!code-csharp[Trin_VstcoreWordAutomation#70](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#70)]  
+    [!code-vb[Trin_VstcoreWordAutomation#70](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#70)]
+    [!code-csharp[Trin_VstcoreWordAutomation#70](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#70)]  
   
- このメソッドを使ったサンプル コード全体を次に示します。  
+   このメソッドを使ったサンプル コード全体を次に示します。  
   
- [!code-vb[Trin_VstcoreWordAutomation#67](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#67)]
- [!code-csharp[Trin_VstcoreWordAutomation#67](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#67)]  
+   [!code-vb[Trin_VstcoreWordAutomation#67](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#67)]
+   [!code-csharp[Trin_VstcoreWordAutomation#67](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#67)]  
   
 ## <a name="use-a-range-object"></a>Range オブジェクトを使用して、  
  <xref:Microsoft.Office.Interop.Word.Range> オブジェクトを使用すると、ユーザー インターフェイスに何も表示せずにテキストを検索することができます。 <xref:Microsoft.Office.Interop.Word.Find>オブジェクトを返します。 **True** 、検索条件に一致するテキストが見つかった場合、 **False**そうでない場合。 また、テキストが検出された場合は、検索条件を突き合わせる <xref:Microsoft.Office.Interop.Word.Range> オブジェクトを再定義します。  
   
 ### <a name="to-find-text-using-a-range-object"></a>Range オブジェクトを使用してテキストを検索するには  
   
-1.  ドキュメントの 2 番目の段落で構成される <xref:Microsoft.Office.Interop.Word.Range> オブジェクトを定義します。  
+1. ドキュメントの 2 番目の段落で構成される <xref:Microsoft.Office.Interop.Word.Range> オブジェクトを定義します。  
   
-     次のコード例はドキュメント レベルのカスタマイズで使用できます。  
+    次のコード例はドキュメント レベルのカスタマイズで使用できます。  
   
-     [!code-vb[Trin_VstcoreWordAutomation#72](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#72)]
-     [!code-csharp[Trin_VstcoreWordAutomation#72](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#72)]  
+    [!code-vb[Trin_VstcoreWordAutomation#72](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#72)]
+    [!code-csharp[Trin_VstcoreWordAutomation#72](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#72)]  
   
-     次のコード例は VSTO アドインで使用できます。 この例ではアクティブ ドキュメントを使用します。  
+    次のコード例は VSTO アドインで使用できます。 この例ではアクティブ ドキュメントを使用します。  
   
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#72)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#72)]  
+    [!code-vb[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#72)]
+    [!code-csharp[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#72)]  
   
-2.  使用して、<xref:Microsoft.Office.Interop.Word.Range.Find%2A>のプロパティ、<xref:Microsoft.Office.Interop.Word.Range>オブジェクト、既存の書式設定オプションをオフにして文字列を検索し、**検索 me**します。  
+2. 使用して、<xref:Microsoft.Office.Interop.Word.Range.Find%2A>のプロパティ、<xref:Microsoft.Office.Interop.Word.Range>オブジェクト、既存の書式設定オプションをオフにして文字列を検索し、**検索 me**します。  
   
-     [!code-vb[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#73)]
-     [!code-csharp[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#73)]  
+    [!code-vb[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#73)]
+    [!code-csharp[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#73)]  
   
-3.  メッセージ ボックスに検索結果を表示し、<xref:Microsoft.Office.Interop.Word.Range> を選択してそれが見えるようにします。  
+3. メッセージ ボックスに検索結果を表示し、<xref:Microsoft.Office.Interop.Word.Range> を選択してそれが見えるようにします。  
   
-     [!code-vb[Trin_VstcoreWordAutomation#74](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#74)]
-     [!code-csharp[Trin_VstcoreWordAutomation#74](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#74)]  
+    [!code-vb[Trin_VstcoreWordAutomation#74](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#74)]
+    [!code-csharp[Trin_VstcoreWordAutomation#74](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#74)]  
   
-     検索が失敗すると 2 番目の段落が選択されます。検索が成功すれば、検索結果が表示されます。  
+    検索が失敗すると 2 番目の段落が選択されます。検索が成功すれば、検索結果が表示されます。  
   
- 次の例は、ドキュメント レベルのカスタマイズのコード全体を示しています。 この例を使用するには、プロジェクトの `ThisDocument` クラスからコードを実行します。  
+   次の例は、ドキュメント レベルのカスタマイズのコード全体を示しています。 この例を使用するには、プロジェクトの `ThisDocument` クラスからコードを実行します。  
   
- [!code-vb[Trin_VstcoreWordAutomation#71](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#71)]
- [!code-csharp[Trin_VstcoreWordAutomation#71](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#71)]  
+   [!code-vb[Trin_VstcoreWordAutomation#71](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#71)]
+   [!code-csharp[Trin_VstcoreWordAutomation#71](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#71)]  
   
- 次の例は、VSTO アドインのコード全体を示しています。 この例を使用するには、プロジェクトの `ThisAddIn` クラスからコードを実行します。  
+   次の例は、VSTO アドインのコード全体を示しています。 この例を使用するには、プロジェクトの `ThisAddIn` クラスからコードを実行します。  
   
- [!code-vb[Trin_VstcoreWordAutomationAddIn#71](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#71)]
- [!code-csharp[Trin_VstcoreWordAutomationAddIn#71](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#71)]  
+   [!code-vb[Trin_VstcoreWordAutomationAddIn#71](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#71)]
+   [!code-csharp[Trin_VstcoreWordAutomationAddIn#71](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#71)]  
   
 ## <a name="search-for-and-replace-text-in-documents"></a>検索し、文書内のテキストを置換  
  次のコードは、現在の選択範囲を検索し、すべての文字列の出現回数を置き換えます**find me」** 文字列**Found**。  

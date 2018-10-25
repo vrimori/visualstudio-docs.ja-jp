@@ -1,7 +1,7 @@
 ---
 title: IPropertyProxyEESide::CreateReplacementObject |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 0cfe79b8-c3f1-48b0-a225-e39dee2c92fe
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 048fe0e60422d5d787424256009ef585a133c914
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 93e77e86c868d785fef89bc1ebbe0fcc96afbfe8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535874"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49824413"
 ---
 # <a name="ipropertyproxyeesidecreatereplacementobject"></a>IPropertyProxyEESide::CreateReplacementObject
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IPropertyProxyEESide::CreateReplacementObject](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject)します。  
-  
 式エバリュエーター (EE) に固有のデータ オブジェクトのコピーを作成します。  
   
 ## <a name="syntax"></a>構文  

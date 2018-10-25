@@ -1,7 +1,7 @@
 ---
 title: Visual Studio の JavaScript | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,36 +14,34 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 677a022d314204cf5a49c64380aa5301aa170a47
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e937f08ba73c8014bc7917fa0149b110ef349678
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537627"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897590"
 ---
 # <a name="javascript-in-visual-studio"></a>Visual Studio の JavaScript
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio の JavaScript](https://docs.microsoft.com/visualstudio/javascript/javascript-in-visual-studio)します。  
-  
 JavaScript は Visual Studio の第一級の言語です。 Visual Studio IDE で JavaScript コードを記述する場合に、ほとんどの標準的な編集補助機能 (コード スニペット、IntelliSense など) を使用できます。 多くの種類のアプリケーションやサービスの JavaScript コードを記述できます。  
   
  JavaScript 言語のリファレンス ドキュメントについては、「[JavaScript 言語リファレンス](http://msdn.microsoft.com/library/d1et7k7c\(v=vs.94\).aspx)」を参照してください。  
   
  特定のバージョンの Visual Studio、または特定の Visual Studio 拡張機能では、HTML および JavaScript を使用して特定の種類のアプリケーションとサービスを開発する必要があります。 次の一覧には詳細情報へのリンクがあります。  
   
--   Apache Cordova を使用してクロスプラットフォーム アプリを作成するには、[Apache Cordova 用の Visual Studio Tools を取得](http://go.microsoft.com/fwlink/p/?LinkId=397606)します。  
+- Apache Cordova を使用してクロスプラットフォーム アプリを作成するには、[Apache Cordova 用の Visual Studio Tools を取得](http://go.microsoft.com/fwlink/p/?LinkId=397606)します。  
   
--   [Windows ストア](http://dev.windows.com/develop)、[Windows Phone](http://dev.windows.com/develop)、ユニバーサル アプリ (両方のプラットフォームをサポートするアプリ) を作成するには、[ツールを入手](http://dev.windows.com/en-us/develop/downloads)します。  
+- [Windows ストア](http://dev.windows.com/develop)、[Windows Phone](http://dev.windows.com/develop)、ユニバーサル アプリ (両方のプラットフォームをサポートするアプリ) を作成するには、[ツールを入手](http://dev.windows.com/en-us/develop/downloads)します。  
   
--   クラウドベースのサービスを作成するには、[Microsoft Azure サイト](http://azure.microsoft.com/documentation/)を参照してください。  
+- クラウドベースのサービスを作成するには、[Microsoft Azure サイト](http://azure.microsoft.com/documentation/)を参照してください。  
   
--   Web サイトと Web アプリを作成するには、[ASP.NET サイト](http://www.asp.net/get-started/websites)を参照してください。  
+- Web サイトと Web アプリを作成するには、[ASP.NET サイト](http://www.asp.net/get-started/websites)を参照してください。  
   
-    > [!NOTE]
-    >  空の ASP.Net Web サイトを作成して、HTML、CSS、および JavaScript のプログラミング用に使用できます。 ASP.NET によって提供される Webconfig ファイルは、Visual Studio でのデバッグを使用可能にします (またはアプリの実行時に F12 ツールを使用できます)。  
+  > [!NOTE]
+  >  空の ASP.Net Web サイトを作成して、HTML、CSS、および JavaScript のプログラミング用に使用できます。 ASP.NET によって提供される Webconfig ファイルは、Visual Studio でのデバッグを使用可能にします (またはアプリの実行時に F12 ツールを使用できます)。  
   
- Visual Studio の JavaScript エディターでは IntelliSense をサポートしています。 詳細については、「[JavaScript IntelliSense](../ide/javascript-intellisense.md)」を参照してください。  
+  Visual Studio の JavaScript エディターでは IntelliSense をサポートしています。 詳細については、「[JavaScript IntelliSense](../ide/javascript-intellisense.md)」を参照してください。  
   
 ## <a name="whats-new-in-javascript"></a>JavaScript の新機能  
  JavaScript の新機能は、以下の表にリストされています。  

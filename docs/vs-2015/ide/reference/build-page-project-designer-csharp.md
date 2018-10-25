@@ -1,7 +1,7 @@
 ---
 title: '[ビルド] ページ (プロジェクト デザイナー) (C#) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 47
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e0e1a858c2d26105a4376bcea594096054942590
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a377db0ac82b672d053e59c621714945fa9b515c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546046"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837185"
 ---
 # <a name="build-page-project-designer-c"></a>[ビルド] ページ (プロジェクト デザイナー) (C#)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ビルド ページは、プロジェクト デザイナー (c#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)します。  
-  
   
 **プロジェクト デザイナー**の **[ビルド]** ページでは、プロジェクトのビルド構成プロパティを指定します。 このページは、[!INCLUDE[csprcs](../../includes/csprcs-md.md)] プロジェクトにのみ適用されます。  
   
@@ -74,17 +72,17 @@ ms.locfileid: "47546046"
   
  このチェック ボックスは、次の条件がすべて満たされた場合にのみ利用できます。  
   
--   **[ビルド]** ページの **[プラットフォーム ターゲット]** ボックスの一覧で、**[Any CPU]** が設定されている。  
+- **[ビルド]** ページの **[プラットフォーム ターゲット]** ボックスの一覧で、**[Any CPU]** が設定されている。  
   
--   **[アプリケーション]** ページの **[出力の種類]** ボックスの一覧で、プロジェクトがアプリケーションであることが指定されている。  
+- **[アプリケーション]** ページの **[出力の種類]** ボックスの一覧で、プロジェクトがアプリケーションであることが指定されている。  
   
--   **[アプリケーション]** ページの **[ターゲット フレームワーク]** ボックスの一覧で、.NET Framework 4.5 が指定されている。  
+- **[アプリケーション]** ページの **[ターゲット フレームワーク]** ボックスの一覧で、.NET Framework 4.5 が指定されている。  
   
- **アンセーフ コードの許可**  
- [unsafe](http://msdn.microsoft.com/library/7e818009-1c6e-4b9e-b769-3728a01586a0) キーワードを使用するコードをコンパイルできるようにします。 詳しくは、「[/unsafe (C# コンパイラ オプション)](http://msdn.microsoft.com/library/fdb77ed9-da03-45bd-bb7f-250704da1bcc)」をご覧ください。  
+  **アンセーフ コードの許可**  
+  [unsafe](http://msdn.microsoft.com/library/7e818009-1c6e-4b9e-b769-3728a01586a0) キーワードを使用するコードをコンパイルできるようにします。 詳しくは、「[/unsafe (C# コンパイラ オプション)](http://msdn.microsoft.com/library/fdb77ed9-da03-45bd-bb7f-250704da1bcc)」をご覧ください。  
   
- **コードの最適化**  
- コンパイラで実行する最適化を有効または無効にします。最適化を実行すると、出力ファイルのサイズが小さくなり、速度と効率が向上します。 詳しくは、「[/optimize (C# コンパイラ オプション)](http://msdn.microsoft.com/library/6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0)」をご覧ください。  
+  **コードの最適化**  
+  コンパイラで実行する最適化を有効または無効にします。最適化を実行すると、出力ファイルのサイズが小さくなり、速度と効率が向上します。 詳しくは、「[/optimize (C# コンパイラ オプション)](http://msdn.microsoft.com/library/6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0)」をご覧ください。  
   
 ## <a name="errors-and-warnings"></a>エラーと警告  
  ビルド処理におけるエラーおよび警告のオプションの構成には、次の設定が使用されます。  

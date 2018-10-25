@@ -1,7 +1,7 @@
 ---
 title: CvReleaseProvider 関数 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8e62e897b56407ab985125361700da60d4e0fdcd
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f5b644dfdb469d84b90a1a0d7d59651fbad2460b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537181"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49300782"
 ---
 # <a name="cvreleaseprovider-function"></a>CvReleaseProvider 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[CvReleaseProvider 関数](https://docs.microsoft.com/visualstudio/profiling/cvreleaseprovider-function)します。  
-  
 マーカー プロバイダーをリリースします。 マーカー プロバイダーをリリースしても、このプロバイダーの以前に作成したマーカー系列には影響がありません。 マーカー系列は、CvReleaseMarkerSeries を呼び出すことで個別にリリースする必要があります。 プロバイダーのリリースに失敗すると、メモリ漏れが発生します。  
   
 ## <a name="syntax"></a>構文  

@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 6ca9fd11e56631061d86c35f9e6bd686b8750b50
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 61c71b67c02493ac77a2fd1c21bb47e78122a1d7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859381"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928660"
 ---
 # <a name="generate-files-with-the-texttransform-utility"></a>TextTransform ユーティリティを使用したファイルを生成します。
 
@@ -51,11 +51,11 @@ TextTransform [<options>] <templateName>
 ### <a name="parameters"></a>パラメーター
 
 |**引数**|**説明**|
-|------------------|---------------------|
+|-|-|
 |`templateName`|変換するテンプレート ファイルの名前を示します。|
 
 |**オプション**|**説明**|
-|----------------|---------------------|
+|-|-|
 |**-out** \<filename>|変換の出力を書き込むファイル。|
 |**-r** \<assembly>|アセンブリをコンパイルすると、テキスト テンプレートを実行するために使用します。|
 |**-u** \<namespace>|テンプレートのコンパイルに使用される名前空間。|
@@ -68,7 +68,7 @@ TextTransform [<options>] <templateName>
 ## <a name="related-topics"></a>関連トピック
 
 |タスク|トピック|
-|----------|-----------|
+|-|-|
 |Visual Studio ソリューションでは、ファイルを生成します。|[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
 |独自のデータ ソースを変換するためのディレクティブ プロセッサを作成する。|[T4 テキスト変換のカスタマイズ](../modeling/customizing-t4-text-transformation.md)|
 |独自のアプリケーションからのテキスト テンプレートを呼び出すことができるテキスト テンプレート ホストを記述します。|[カスタム ホストを使用したテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)|

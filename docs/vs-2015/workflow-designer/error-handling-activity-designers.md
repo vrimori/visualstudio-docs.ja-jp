@@ -1,7 +1,7 @@
 ---
 title: エラー処理アクティビティ デザイナー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -12,12 +12,12 @@ caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: 1b7f3de3fe542f40e28694c2ac207673df321c80
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 870525e8d11a164c3fbbcc247918dd2d23e2f055
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536370"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49269257"
 ---
 # <a name="error-handling-activity-designers"></a>エラー処理アクティビティ デザイナー
 Error Handling アクティビティ デザイナーは、[!INCLUDE[wfd1](../includes/wfd1-md.md)]でエラー処理を管理するために使用します。 このセクションに含まれているトピックでは、[!INCLUDE[wfd2](../includes/wfd2-md.md)]のアクティビティ デザイナーおよびテンプレート デザイナーの使用方法についてのガイドラインを示します。  

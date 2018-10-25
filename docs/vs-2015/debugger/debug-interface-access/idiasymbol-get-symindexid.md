@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_symindexid |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 07e6af65348b5bf1601d164d995e1f1b68ed0b6f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3914a180b77f1bb27e72ead59804543b39855695
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545484"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911240"
 ---
 # <a name="idiasymbolgetsymindexid"></a>IDiaSymbol::get_symIndexId
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_symindexid](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-symindexid)します。  
-  
 シンボルの一意の識別子を取得します。  
   
 ## <a name="syntax"></a>構文  

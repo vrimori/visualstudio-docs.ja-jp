@@ -1,7 +1,7 @@
 ---
 title: 'レイヤー図: ガイドライン |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 57
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: bd0115021ba00d8e727f67260f5bcdb00464dd2b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: faa6c3a39b7aa8a0ca7b2788cd9946421cfe6b7b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534397"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844160"
 ---
 # <a name="layer-diagrams-guidelines"></a>レイヤー図: ガイドライン
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[依存関係図: ガイドライン](https://docs.microsoft.com/visualstudio/modeling/layer-diagrams-guidelines)します。  
-  
 作成、高レベルのアプリのアーキテクチャを記述*レイヤー図*Visual Studio でします。 コードをレイヤー図に照らして検証することで、作成したコードがこの図と一貫性があるかどうかを確認します。 レイヤーの検証をビルド プロセスに含めることもできます。 参照してください[Channel 9 ビデオ: デザインとレイヤー図の使用によるアーキテクチャの検証](http://go.microsoft.com/fwlink/?LinkID=252073)です。  
   
  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
@@ -94,9 +92,9 @@ ms.locfileid: "47534397"
   
 #### <a name="to-reverse-engineer-existing-dependencies-between-layers"></a>レイヤー間の既存の依存関係をリバース エンジニアリングするには  
   
--   レイヤーが 1 つまたは複数のレイヤーを選択で、選択したレイヤーを右クリックし、順にクリックします**依存関係の生成**します。  
+- レイヤーが 1 つまたは複数のレイヤーを選択で、選択したレイヤーを右クリックし、順にクリックします**依存関係の生成**します。  
   
- 通常は、不要な依存関係がいくつか見つかります。 これらの依存関係を編集して、目的の設計に準拠するようアラインできます。  
+  通常は、不要な依存関係がいくつか見つかります。 これらの依存関係を編集して、目的の設計に準拠するようアラインできます。  
   
 ##  <a name="EditArchitecture"></a> レイヤーと意図した設計を表示する依存関係を編集します。  
  システムに追加予定の変更または目的のアーキテクチャを示すには、次の手順を実行してレイヤー図を編集します。 また、リファクタリングの変更を行い、コードを拡張する前に構造を改良することもできます。 参照してください[、コードの構造を改良](#Improving)します。  
@@ -153,11 +151,11 @@ ms.locfileid: "47534397"
 ##  <a name="UpdateCode"></a> 新しいアーキテクチャに準拠するようにコードを更新します。  
  通常、エラーは、更新されたレイヤー図に照らし合わせてコードを最初に検証したときに表示されます。 これらのエラーには、いくつかの原因が考えられます。  
   
--   成果物が不適切なレイヤーに割り当てられている。 この場合、成果物を移動します。  
+- 成果物が不適切なレイヤーに割り当てられている。 この場合、成果物を移動します。  
   
--   クラスなどの成果物が、アーキテクチャに違反する形で別のクラスを使用している。 この場合、コードをリファクタリングして依存関係を削除します。  
+- クラスなどの成果物が、アーキテクチャに違反する形で別のクラスを使用している。 この場合、コードをリファクタリングして依存関係を削除します。  
   
- これらのエラーを解決するには、コードを更新して、検証時にエラーが表示されなくなるようにします。 通常、これは反復的な作業になります。 これらのエラーの詳細については、次を参照してください。[レイヤー図を使用したコードの検証](../modeling/validate-code-with-layer-diagrams.md)です。  
+  これらのエラーを解決するには、コードを更新して、検証時にエラーが表示されなくなるようにします。 通常、これは反復的な作業になります。 これらのエラーの詳細については、次を参照してください。[レイヤー図を使用したコードの検証](../modeling/validate-code-with-layer-diagrams.md)です。  
   
 > [!NOTE]
 >  コードを開発またはリファクタリングする際には、新しい成果物をレイヤー図にリンクしなければならないことがあります。 これは必ずしも必要な作業ではありません。たとえば、レイヤーが既存の名前空間を表しており、新しいコードでこれらの名前空間に要素を追加するだけの場合は不要です。  

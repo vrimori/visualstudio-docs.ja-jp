@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b737fc8b589d746a5fa733c835d64c4af30a221b
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 819a1f4e07397720d806d887408b9e45aeda9ea5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35673686"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867183"
 ---
 # <a name="how-to-programmatically-protect-worksheets"></a>方法: プログラムによってワークシートを保護します。
   Microsoft Office Excel の保護機能を使用すると、ユーザーやコードがワークシート内のオブジェクトを編集できないようにすることができます。 既定では、保護を有効にすると、すべてのセルがロックされます。  
@@ -39,11 +39,11 @@ ms.locfileid: "35673686"
   
 ### <a name="to-protect-a-worksheet-in-the-designer"></a>デザイナーでワークシートを保護するには  
   
-1.  **変更**のグループ、**レビュー** ] タブで [**シートの保護**します。  
+1. **変更**のグループ、**レビュー** ] タブで [**シートの保護**します。  
   
-     **シートの保護** ダイアログ ボックスが表示されます。 パスワードを設定し、必要に応じて、セルの書式設定や行の挿入など、ワークシートでユーザーに実行を許可する特定のアクションを指定できます。  
+    **シートの保護** ダイアログ ボックスが表示されます。 パスワードを設定し、必要に応じて、セルの書式設定や行の挿入など、ワークシートでユーザーに実行を許可する特定のアクションを指定できます。  
   
- 保護されたワークシート内の特定の範囲の編集を、ユーザーに許可することもできます。  
+   保護されたワークシート内の特定の範囲の編集を、ユーザーに許可することもできます。  
   
 ### <a name="to-allow-editing-in-specific-ranges"></a>特定の範囲の編集を許可するには  
   

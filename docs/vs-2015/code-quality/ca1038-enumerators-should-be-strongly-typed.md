@@ -1,7 +1,7 @@
 ---
 title: '1038: 列挙子は厳密に型指定 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: d0bc23e78580329443c06cd419febd50e3d3db27
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: aafd89a068a57ef1eb89584441195e1ece8b8f52
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589263"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899072"
 ---
 # <a name="ca1038-enumerators-should-be-strongly-typed"></a>CA1038: 列挙子は厳密に型指定されていなければなりません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA1038: 列挙子を厳密に型指定する必要があります](https://docs.microsoft.com/visualstudio/code-quality/ca1038-enumerators-should-be-strongly-typed)します。
 
 |||
 |-|-|

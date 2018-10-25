@@ -11,12 +11,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ff5d9646d6715b546179058074f2279810b9ca48
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 67207d653d7300ecc5d0a7ae7a85ddea1bc0d7e9
+ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36282231"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46542495"
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio にサインイン
 
@@ -28,8 +28,7 @@ Visual Studio の開発環境をカスタマイズし、最適化するには、
 
 期待できる内容とサイン後に行うことができる内容の完全なリストを以下に示します。
 
-- 
-  **Visual Studio Dev Essentials プログラムにアクセスする** - このプログラムには、無料のソフトウェア提供サービス、トレーニング、サポートなどが含まれます。 詳細については、「 [Visual Studio Dev Essentials](http://aka.ms/vsdevhelp) 」をご覧ください。
+- **Visual Studio Dev Essentials プログラムにアクセスする** - このプログラムには、無料のソフトウェア提供サービス、トレーニング、サポートなどが含まれます。 詳細については、「 [Visual Studio Dev Essentials](http://aka.ms/vsdevhelp) 」をご覧ください。
 
 - **Visual Studio の設定を同期する** - どのデバイス上の Visual Studio にサインインしても、ユーザーがカスタマイズした設定 (キー バインド、ウィンドウのレイアウト、配色テーマなど) がすぐに適用されます。 「[Visual Studio での同期された設定](../ide/synchronized-settings-in-visual-studio.md)」をご覧ください。
 
@@ -37,9 +36,9 @@ Visual Studio の開発環境をカスタマイズし、最適化するには、
 
 - **Visual Studio の評価期間を拡張する** - 30 日の評価期間にとらわれることなく、Visual Studio Professional または Visual Studio Enterprise を 90 日間延長して使用できます。
 
-- **MSDN または Visual Studio Team Services サブスクリプションに関連付けられたアカウントを使用すると、Visual Studio のロックが解除されます**。 「[Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)」を参照してください。
+- **Visual Studio サブスクリプションまたは Azure DevOps 組織に関連付けられているアカウントを使用している場合は、Visual Studio をロック解除します**。 「[Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)」を参照してください。
 
-- IDE で、**Azure や Visual Studio Team Services などのサービスに自動的に接続**され、同じアカウントの資格情報を再度要求されることはなくなります。
+- IDE で、**Azure や Azure DevOps Services などのサービスに自動的に接続**され、同じアカウントの資格情報を再度要求されることはなくなります。
 
 ## <a name="how-to-sign-in-to-visual-studio"></a>Visual Studio にサインインする方法
 

@@ -1,5 +1,5 @@
 ---
-title: SccProperties 関数 |Microsoft ドキュメント
+title: SccProperties 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d126a4691332f1121ebfc99a84b180d1e99f3d6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8f8067464802899ce8966d63d702679d216b6377
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31136667"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875977"
 ---
 # <a name="sccproperties-function"></a>SccProperties 関数
-この関数は、ファイルまたはプロジェクトのソース コントロールのプロパティを表示します。  
+この関数は、ファイルまたはプロジェクトのソース管理のプロパティを表示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,27 +40,27 @@ SCCRTN SccProperties (
  [in]ソース管理プラグイン コンテキスト構造体。  
   
  hWnd  
- [in]ソース管理プラグインで提供されるダイアログ ボックスをすべての親として使用できる IDE ウィンドウへのハンドル。  
+ [in]ソース管理プラグインが提供される任意のダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
   
  lpFileName  
  [in]ファイルまたはプロジェクトの完全修飾パス名。  
   
 ## <a name="return-value"></a>戻り値  
- この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返すが必要です。  
   
 |[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|プロパティが正常に表示されます。|  
-|SCC_I_RELOADFILE|バージョン コントロール システムが、IDE は、このファイルを再読み込みする必要がありますので、ファイルのプロパティを変更します。|  
+|SCC_I_RELOADFILE|IDE は、このファイルを再読み込みする必要がありますので、バージョン管理システムがファイルのプロパティを変更します。|  
 |SCC_E_PROJNOTOPEN|ソース管理で、指定されたプロジェクトが開かれていません。|  
 |SCC_E_NOTAUTHORIZED|ユーザーは、このファイルまたはプロジェクトのプロパティを表示する権限がありません。|  
-|SCC_E_FILENOTCONTROLLED|指定したファイルまたはプロジェクトはソース管理されません。|  
+|SCC_E_FILENOTCONTROLLED|指定したファイルまたはプロジェクト ソース管理下にない。|  
 |SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|不明または一般的なエラーが発生しました。|  
   
-## <a name="remarks"></a>コメント  
- ソース管理プラグインでは、独自のダイアログ ボックスで、プロパティが表示されます。  
+## <a name="remarks"></a>Remarks  
+ ソース管理プラグインは、独自のダイアログ ボックスのプロパティを表示します。  
   
- プロパティは、ソース管理プラグインで定義されており、プラグインをプラグインと異なる可能性があります。 かどうかにより、プラグイン ファイルのソース コントロールのプロパティを変更するユーザーを返します`SCC_I_RELOAD`をこのファイルまたはプロジェクトが再読み込みする必要がある IDE に通知します。  
+ プロパティはソース管理プラグインによって定義され、プラグインのプラグインに異なる場合があります。 かどうかにより、プラグイン ファイルのソース コントロールのプロパティを変更するユーザーが返されます`SCC_I_RELOAD`をこのファイルまたはプロジェクトが再読み込みする必要がある IDE の通知。  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

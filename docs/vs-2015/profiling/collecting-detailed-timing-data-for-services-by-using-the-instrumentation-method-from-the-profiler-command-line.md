@@ -1,7 +1,7 @@
 ---
 title: プロファイラーのコマンド ラインからインストルメンテーション メソッドを使用した、サービスの詳細なタイミング データの収集 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a522872e5f422638635550b816ef20050e800ef9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 27856554630bcdedc162023a9a1fa3e80a5f1e8a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536931"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49180454"
 ---
 # <a name="collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method-from-the-profiler-command-line"></a>プロファイラーのコマンド ラインからインストルメンテーション メソッドを使用した、サービスの詳細なタイミング データの収集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Profiler コマンドラインからインストルメンテーション メソッドを使用してサービスの詳細なタイミング データを収集する](https://docs.microsoft.com/visualstudio/profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method-from-the-profiler-command-line)します。  
-  
 このセクションでは、コマンド ラインからインストルメンテーション メソッドを使用して、Windows サービスの詳細なパフォーマンス データを収集する手順とオプションについて説明します。  
   
 ## <a name="common-tasks"></a>一般的なタスク  

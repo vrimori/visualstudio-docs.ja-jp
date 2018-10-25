@@ -1,7 +1,7 @@
 ---
 title: IDebugExpressionEvaluator2::PreloadModules |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: bcf9b968-ee14-4a92-88ad-926268a44e03
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 65e9096c11c54c0ae8d7b4bd63b2cf3d26b284cc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fbee2cdb6258afa8d45d6fd2e561bc90eca46dc0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540316"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905771"
 ---
 # <a name="idebugexpressionevaluator2preloadmodules"></a>IDebugExpressionEvaluator2::PreloadModules
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugExpressionEvaluator2::PreloadModules](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugexpressionevaluator2-preloadmodules)します。  
-  
 指定されたシンボル プロバイダーが指定したモジュールをプリロードします。  
   
 ## <a name="syntax"></a>構文  

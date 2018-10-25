@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d57aa718216b796cf5e7f008186abedc709d108
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 90dfae7e891c805a785db8bba00d3c75d2a84bf3
+ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39177007"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384163"
 ---
 # <a name="toolbox-html-tab"></a>ツールボックス、[HTML] タブ
 
@@ -117,7 +117,7 @@ ms.locfileid: "39177007"
 ```
 
 > [!IMPORTANT]
-> アプリケーションでユーザー名とパスワードを送信する場合、転送を暗号化するため、Secure Sockets Layer (SSL) を使用するように Web サイトを構成する必要があります。 詳細については、「[IIS Operations Guide](http://go.microsoft.com/fwlink/?linkid=47856)」 (IIS 操作ガイド) の「Securing Connections with SSL」 (SSL で接続を保護する) を参照してください。 また、すべてのユーザー入力を検証することをお勧めします。 詳細については、「[Validating User Input in ASP.NET Web Pages (Razor) Sites](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)」(ASP.NET Web ページ (Razor) サイトにおけるユーザー入力の検証) を参照してください。
+> アプリケーションでユーザー名とパスワードを送信する場合、転送を暗号化するため、Secure Sockets Layer (SSL) を使用するように Web サイトを構成する必要があります。 詳細については、「[Securing Connections](/previous-versions/tn-archive/bb418917(v=technet.10))」 (接続をセキュリティで保護する) を参照してください。 また、すべてのユーザー入力を検証することをお勧めします。 詳細については、「[Validating User Input in ASP.NET Web Pages (Razor) Sites](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)」(ASP.NET Web ページ (Razor) サイトにおけるユーザー入力の検証) を参照してください。
 
 **入力 (チェック ボックス)**
 

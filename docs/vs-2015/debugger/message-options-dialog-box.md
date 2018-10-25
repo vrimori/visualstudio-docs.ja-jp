@@ -1,7 +1,7 @@
 ---
 title: メッセージ オプション ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b0960c9fe2454affc38766da42a5035b3d95896d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7824ce5a0e65b762d992392b0d9b0e267d85e236
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534416"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49286521"
 ---
 # <a name="message-options-dialog-box"></a>[メッセージ オプション] ダイアログ ボックス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[メッセージ オプション ダイアログ ボックス](https://docs.microsoft.com/visualstudio/debugger/message-options-dialog-box)します。  
-  
 このダイアログ ボックスを使用して、メッセージは、「[メッセージ ビュー](../debugger/messages-view.md)します。 このダイアログ ボックスを表示するには、次のように選択します。**ログ メッセージ**から、**スパイ**メニュー。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

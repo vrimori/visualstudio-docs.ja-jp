@@ -1,7 +1,7 @@
 ---
 title: XML エディターのコンポーネント |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 112fe5eb0beb332cae460eb3779ac7bb04e91767
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 83437ff6e715eaaa8d9f75ac00d2d6c6932b43bf
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533489"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49235834"
 ---
 # <a name="xml-editor-components"></a>XML エディターのコンポーネント
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[XML エディターのコンポーネント](https://docs.microsoft.com/visualstudio/xml-tools/xml-editor-components)します。  
-  
   
 このセクションでは、XML エディターのウィンドウおよびダイアログ ボックスについて説明します。 XML エディターはテキスト エディターに基づいているため、統合開発環境 (IDE) の一部は、一般的なテキスト エディターの設定を使用して構成されています。  
   

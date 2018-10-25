@@ -1,7 +1,7 @@
 ---
 title: ソース管理プラグイン |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 964980ca-21c5-4706-8535-6ea23e1c9cc9
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2e633a504d0f7efd42db61723d7902fbd6c38dec
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 636d36ba34f1c02061671d286725cdd80f6463ca
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537676"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49291539"
 ---
 # <a name="source-control-plug-ins"></a>ソース管理プラグイン
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ソース管理プラグイン](https://docs.microsoft.com/visualstudio/extensibility/source-control-plug-ins)します。  
-  
 ソース管理プラグインの SDK のリファレンス セクションには、ソース管理のシステムと統合できるようにする完全なインターフェイスの仕様が含まれています。[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 構文とセマンティクスを持つインターフェイスを実装しなければならないソース管理プラグインのさまざまな関数とデータ型を指定します、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]統合開発環境 (IDE) です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

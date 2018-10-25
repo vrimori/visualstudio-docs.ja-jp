@@ -1,7 +1,7 @@
 ---
 title: Groups 要素 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 740ca4ec-79fa-4b98-8f9a-2a137f9f7f98
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6780c8827b1ac7df021cb556f58cd6705d9b7061
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cd4a6b39f31ba726f71dd7a88dfd2f6cc0e7cac3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549113"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880614"
 ---
 # <a name="groups-element"></a>Groups 要素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[グループ要素](https://docs.microsoft.com/visualstudio/extensibility/groups-element)します。  
-  
 VSPackage のコマンド グループを定義するエントリが含まれています。  
   
 ## <a name="syntax"></a>構文  

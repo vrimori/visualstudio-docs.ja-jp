@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c2f5afe7f58e85b1ddfc5671b635d4df7fad3bd3
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: d57709b2e1ff4f3721644f2f61e030ea8ccccf82
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078242"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49828368"
 ---
 # <a name="how-to-use-environment-variables-in-a-build"></a>方法: ビルドで環境変数を使用する
 プロジェクトをビルドするとき、プロジェクト ファイルまたはプロジェクトを構成するファイルに含まれていない情報を使用してビルド オプションを設定する必要がある場合があります。 通常、この情報は環境変数に格納されます。  
@@ -32,11 +32,11 @@ ms.locfileid: "39078242"
   
 #### <a name="to-use-an-environment-variable-in-an-msbuild-project"></a>MSBuild プロジェクトで環境変数を使用するには  
   
--   プロジェクト ファイルで宣言された変数と同様に、環境変数を参照します。 たとえば、次のコードは、BIN_PATH 環境変数を参照します。  
+- プロジェクト ファイルで宣言された変数と同様に、環境変数を参照します。 たとえば、次のコードは、BIN_PATH 環境変数を参照します。  
   
-     `<FinalOutput>$(BIN_PATH)\MyAssembly.dll</FinalOutput>`  
+   `<FinalOutput>$(BIN_PATH)\MyAssembly.dll</FinalOutput>`  
   
- 環境変数が設定されていない場合は、`Condition` 属性を使用して、プロパティの既定値を指定することができます。  
+  環境変数が設定されていない場合は、`Condition` 属性を使用して、プロパティの既定値を指定することができます。  
   
 #### <a name="to-provide-a-default-value-for-a-property"></a>プロパティの既定値を指定するには  
   

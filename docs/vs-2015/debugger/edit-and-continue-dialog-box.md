@@ -1,7 +1,7 @@
 ---
 title: '[エディット コンティニュ] ダイアログ ボックス |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f3e2dc09bdd40902f934e6f29067f4cb88cbbe48
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5dcb10d5703926fd862060b716e9f2203bfadd45
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538789"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49250472"
 ---
 # <a name="edit-and-continue-dialog-box"></a>[エディット コンティニュ] ダイアログ ボックス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[編集と続行 ダイアログ ボックス](https://docs.microsoft.com/visualstudio/debugger/edit-and-continue-dialog-box)します。  
-  
 ネイティブのみ) のデバッグ中にコードを編集したときに、このダイアログ ボックスが表示されますおよび**エディット コンティニュ**コードの変更を適用できることを認識します。 詳細については、次を参照してください。[エディット コンティニュ](../debugger/edit-and-continue.md)します。  
   
  **決してこの今後ダイアログを表示します。**  

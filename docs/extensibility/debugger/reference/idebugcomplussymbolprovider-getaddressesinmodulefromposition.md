@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition |Microsoft ドキュメント
+title: IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 64d34c7bfbfdac039692c7edbce83f69f8085800
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 08afe6dd2e9546b8d066f347d96105342cd268d0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31105959"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905117"
 ---
 # <a name="idebugcomplussymbolprovidergetaddressesinmodulefromposition"></a>IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition
-デバッグのアドレスの配列に指定したモジュール内のドキュメントの位置をマップします。  
+デバッグ アドレスの配列を指定したモジュールのドキュメントの位置をマップします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,7 +52,7 @@ int GetAddressesInModuleFromPosition(
   
 #### <a name="parameters"></a>パラメーター  
  `ulAppDomainID`  
- [in]アプリケーション ドメイン識別子です。  
+ [in]アプリケーション ドメインの識別子です。  
   
  `guidModule`  
  [in]モジュールの一意の識別子。  
@@ -67,13 +67,13 @@ int GetAddressesInModuleFromPosition(
  [out]このステートメントまたは行に関連付けられているデバッグの開始アドレスの列挙子を返します。  
   
  `ppEnumEndAddresses`  
- [out]このステートメントまたは行に関連付けられている終了デバッグ アドレスの列挙子を返します。  
+ [out]このステートメントまたは行に関連付けられている終了のデバッグ アドレスの列挙子を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="example"></a>例  
- 次の例に対して、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスです。  
+ 次の例では、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイス。  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::GetAddressesInModuleFromPosition(  

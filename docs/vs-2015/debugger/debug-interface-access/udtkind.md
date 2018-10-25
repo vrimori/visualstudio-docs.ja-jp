@@ -1,7 +1,7 @@
 ---
 title: UdtKind |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7576d0c04008da11a1795e041e03269d4d93f3c4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4c4df2109c2758cdbe21d05375be1e50045cbf4e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537904"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49886659"
 ---
 # <a name="udtkind"></a>UdtKind
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UdtKind](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/udtkind)します。  
-  
 さまざまなユーザー定義型 (UDT) をについて説明します。  
   
 ## <a name="syntax"></a>構文  
@@ -59,7 +57,7 @@ enum UdtKind {
 ## <a name="remarks"></a>Remarks  
  この列挙体の値がによって返される、 [idiasymbol::get_udtkind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: cvconst.h  
   
 ## <a name="see-also"></a>関連項目  

@@ -22,89 +22,89 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f01b4cb17dd51c9da3e74620f9c25b7a3764566
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: e9f25c0e0b60a3b0f52df534db8f3593a26a435a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39155491"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49902886"
 ---
 # <a name="walkthrough-manually-deploy-a-clickonce-application"></a>チュートリアル: ClickOnce アプリケーションを手動で展開します。
 Visual Studio を使用してデプロイすることはできません場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション、または高度な展開の機能を使用する必要があります使用する必要があります信頼されたアプリケーションの配置など、 *Mage.exe* 、を作成するコマンドラインツール。[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]マニフェストします。 このチュートリアルを作成する方法について説明、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]コマンドラインのいずれかのバージョンを使用した展開 (*Mage.exe*) またはグラフィカル バージョン (*MageUI.exe*) のマニフェストの生成とツールを編集します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルでは、いくつかの前提条件とデプロイを構築する前に選択する必要があるオプションはされています。  
   
--   インストール*Mage.exe*と*MageUI.exe*します。  
+- インストール*Mage.exe*と*MageUI.exe*します。  
   
-     *Mage.exe*と*MageUI.exe*の一部である、[!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]します。 必要か、[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)]インストールされているかのバージョン、 [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] Visual Studio に含まれています。 詳細については、次を参照してください。 [Windows SDK](http://go.microsoft.com/fwlink/?LinkId=158044) msdn です。  
+   *Mage.exe*と*MageUI.exe*の一部である、[!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]します。 必要か、[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)]インストールされているかのバージョン、 [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] Visual Studio に含まれています。 詳細については、次を参照してください。 [Windows SDK](http://go.microsoft.com/fwlink/?LinkId=158044) msdn です。  
   
--   展開するアプリケーションを提供します。  
+- 展開するアプリケーションを提供します。  
   
-     このチュートリアルでは、Windows アプリケーションをデプロイする準備が整いましたがあることを前提としています。 このアプリケーションは、AppToDeploy として参照されます。  
+   このチュートリアルでは、Windows アプリケーションをデプロイする準備が整いましたがあることを前提としています。 このアプリケーションは、AppToDeploy として参照されます。  
   
--   展開の分散方法を決定します。  
+- 展開の分散方法を決定します。  
   
-     分布オプションを含める: Web、ファイル共有、または CD。 詳細については、「 [ClickOnce Security and Deployment](../deployment/clickonce-security-and-deployment.md)」を参照してください。  
+   分布オプションを含める: Web、ファイル共有、または CD。 詳細については、「 [ClickOnce Security and Deployment](../deployment/clickonce-security-and-deployment.md)」を参照してください。  
   
--   アプリケーションに管理者特権でのレベルの信頼が必要かどうかを決定します。  
+- アプリケーションに管理者特権でのレベルの信頼が必要かどうかを決定します。  
   
-     アプリケーションでは、完全信頼が必要な場合: たとえば、ユーザーのシステムへのアクセスを完全: を使用することができます、`-TrustLevel`のオプション*Mage.exe*これを設定します。 カスタム アクセス許可は、アプリケーションの設定を定義する場合は、コピー、インターネットまたはイントラネット アクセス許可のセクション別のマニフェストからに、ニーズに合わせて変更してテキスト エディターを使用してアプリケーション マニフェストに追加または*MageUI.exe*します。 詳細については、次を参照してください。[信頼されたアプリケーションの配置の概要](../deployment/trusted-application-deployment-overview.md)します。  
+   アプリケーションでは、完全信頼が必要な場合: たとえば、ユーザーのシステムへのアクセスを完全: を使用することができます、`-TrustLevel`のオプション*Mage.exe*これを設定します。 カスタム アクセス許可は、アプリケーションの設定を定義する場合は、コピー、インターネットまたはイントラネット アクセス許可のセクション別のマニフェストからに、ニーズに合わせて変更してテキスト エディターを使用してアプリケーション マニフェストに追加または*MageUI.exe*します。 詳細については、次を参照してください。[信頼されたアプリケーションの配置の概要](../deployment/trusted-application-deployment-overview.md)します。  
   
--   Authenticode 証明書を取得します。  
+- Authenticode 証明書を取得します。  
   
-     Authenticode 証明書を使用してデプロイを署名する必要があります。 テスト証明書を生成するには、Visual Studio を使用して*MageUI.exe*、または*MakeCert.exe*と*Pvk2Pfx.exe*ツール、または、証明書から証明書を取得できます証明機関 (CA)。 信頼されたアプリケーションの配置を使用するように選択した場合はすべてのクライアント コンピューターに証明書のインストールを 1 回も行う必要があります。 詳細については、「 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)」を参照してください。  
+   Authenticode 証明書を使用してデプロイを署名する必要があります。 テスト証明書を生成するには、Visual Studio を使用して*MageUI.exe*、または*MakeCert.exe*と*Pvk2Pfx.exe*ツール、または、証明書から証明書を取得できます証明機関 (CA)。 信頼されたアプリケーションの配置を使用するように選択した場合はすべてのクライアント コンピューターに証明書のインストールを 1 回も行う必要があります。 詳細については、「 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)」を参照してください。  
   
-    > [!NOTE]
-    >  CNG 証明書が証明機関から入手できます。 使用してデプロイを登録することもできます。  
+  > [!NOTE]
+  >  CNG 証明書が証明機関から入手できます。 使用してデプロイを登録することもできます。  
   
--   アプリケーションに UAC 情報を含むマニフェストがないことを確認します。  
+- アプリケーションに UAC 情報を含むマニフェストがないことを確認します。  
   
-     アプリケーションがユーザー アカウント制御 (UAC) の情報を含むマニフェストをなど、含まれるかどうかを確認する必要がある、`<dependentAssembly>`要素。 アプリケーション マニフェストを確認するには、Windows Sysinternals を使用できる[Sigcheck](http://go.microsoft.com/fwlink/?LinkId=158035)ユーティリティ。  
+   アプリケーションがユーザー アカウント制御 (UAC) の情報を含むマニフェストをなど、含まれるかどうかを確認する必要がある、`<dependentAssembly>`要素。 アプリケーション マニフェストを確認するには、Windows Sysinternals を使用できる[Sigcheck](http://go.microsoft.com/fwlink/?LinkId=158035)ユーティリティ。  
   
-     アプリケーションに UAC の詳細を含むマニフェストが含まれている場合は、UAC 情報を使用しないで再構築する必要があります。 Visual Studio で c# プロジェクトのプロジェクトのプロパティを開き、[アプリケーション] タブを選択します。**マニフェスト**ドロップダウン リストで、**マニフェストを含まないアプリケーションを作成する**します。 Visual Studio で Visual Basic プロジェクトの場合、プロジェクトのプロパティを開き、アプリケーション タブを選択および をクリックして**UAC 設定の表示**します。 マニフェスト ファイルを開いたときに、1 つ内のすべての要素を削除`<asmv1:assembly>`要素。  
+   アプリケーションに UAC の詳細を含むマニフェストが含まれている場合は、UAC 情報を使用しないで再構築する必要があります。 Visual Studio で c# プロジェクトのプロジェクトのプロパティを開き、[アプリケーション] タブを選択します。**マニフェスト**ドロップダウン リストで、**マニフェストを含まないアプリケーションを作成する**します。 Visual Studio で Visual Basic プロジェクトの場合、プロジェクトのプロパティを開き、アプリケーション タブを選択および をクリックして**UAC 設定の表示**します。 マニフェスト ファイルを開いたときに、1 つ内のすべての要素を削除`<asmv1:assembly>`要素。  
   
--   アプリケーションがクライアント コンピューターの前提条件が必要かどうかを決定します。  
+- アプリケーションがクライアント コンピューターの前提条件が必要かどうかを決定します。  
   
-     [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Visual Studio からデプロイされたアプリケーションは、前提条件のインストールのブートス トラップを含めることができます (*setup.exe*)、展開します。 このチュートリアルで作成に必要な 2 つのマニフェストを[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開します。 前提条件のブートス トラップを使用して作成することができます、 [GenerateBootstrapper タスク](../msbuild/generatebootstrapper-task.md)します。  
+   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Visual Studio からデプロイされたアプリケーションは、前提条件のインストールのブートス トラップを含めることができます (*setup.exe*)、展開します。 このチュートリアルで作成に必要な 2 つのマニフェストを[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開します。 前提条件のブートス トラップを使用して作成することができます、 [GenerateBootstrapper タスク](../msbuild/generatebootstrapper-task.md)します。  
   
 ### <a name="to-deploy-an-application-with-the-mageexe-command-line-tool"></a>Mage.exe コマンド ライン ツールを使用してアプリケーションをデプロイするには  
   
-1.  格納するディレクトリを作成、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開ファイル。  
+1. 格納するディレクトリを作成、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開ファイル。  
   
-2.  作成した展開ディレクトリでは、バージョン サブディレクトリを作成します。 初めてアプリケーションを展開する場合は、名前、バージョン サブディレクトリ**1.0.0.0**します。  
+2. 作成した展開ディレクトリでは、バージョン サブディレクトリを作成します。 初めてアプリケーションを展開する場合は、名前、バージョン サブディレクトリ**1.0.0.0**します。  
   
-    > [!NOTE]
-    >  配置のバージョンをアプリケーションのバージョンとは異なることはできます。  
+   > [!NOTE]
+   >  配置のバージョンをアプリケーションのバージョンとは異なることはできます。  
   
-3.  実行可能ファイル、アセンブリ、リソース、およびデータ ファイルを含む、バージョン サブディレクトリには、すべてのアプリケーション ファイルをコピーします。 必要に応じて、追加のファイルが含まれている追加のサブディレクトリを作成できます。  
+3. 実行可能ファイル、アセンブリ、リソース、およびデータ ファイルを含む、バージョン サブディレクトリには、すべてのアプリケーション ファイルをコピーします。 必要に応じて、追加のファイルが含まれている追加のサブディレクトリを作成できます。  
   
-4.  開く、[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)]または Visual Studio コマンド プロンプトし、バージョンのサブディレクトリに変更します。  
+4. 開く、[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)]または Visual Studio コマンド プロンプトし、バージョンのサブディレクトリに変更します。  
   
-5.  アプリケーション マニフェストへの呼び出しを作成*Mage.exe*します。 次のステートメントは、Intel x86 プロセッサで実行するコンパイルされたコードに対するアプリケーション マニフェストを作成します。  
+5. アプリケーション マニフェストへの呼び出しを作成*Mage.exe*します。 次のステートメントは、Intel x86 プロセッサで実行するコンパイルされたコードに対するアプリケーション マニフェストを作成します。  
   
-    ```cmd
-    mage -New Application -Processor x86 -ToFile AppToDeploy.exe.manifest -name "My App" -Version 1.0.0.0 -FromDirectory .   
-    ```  
+   ```cmd
+   mage -New Application -Processor x86 -ToFile AppToDeploy.exe.manifest -name "My App" -Version 1.0.0.0 -FromDirectory .   
+   ```  
   
-    > [!NOTE]
-    >  後にドット (.) を含めるようにしてください、`-FromDirectory`オプションは、現在のディレクトリを示します。 ドットを含めない場合、アプリケーション ファイル パスを指定する必要があります。  
+   > [!NOTE]
+   >  後にドット (.) を含めるようにしてください、`-FromDirectory`オプションは、現在のディレクトリを示します。 ドットを含めない場合、アプリケーション ファイル パスを指定する必要があります。  
   
-6.  Authenticode 証明書をアプリケーション マニフェストに署名します。 置換*mycert.pfx*証明書ファイルへのパス。 置換*passwd*証明書ファイルのパスワードに置き換えます。  
+6. Authenticode 証明書をアプリケーション マニフェストに署名します。 置換*mycert.pfx*証明書ファイルへのパス。 置換*passwd*証明書ファイルのパスワードに置き換えます。  
   
-    ```cmd
-    mage -Sign AppToDeploy.exe.manifest -CertFile mycert.pfx -Password passwd  
-    ```  
+   ```cmd
+   mage -Sign AppToDeploy.exe.manifest -CertFile mycert.pfx -Password passwd  
+   ```  
   
-    Visual Studio と Windows SDK に配布される .NET Framework 4.6.2 SDK 以降*mage.exe* CNG を使用すると、Authenticode 証明書でマニフェストに署名します。 Authenticode 証明書と同じコマンド ライン パラメーターを使用します。
+   Visual Studio と Windows SDK に配布される .NET Framework 4.6.2 SDK 以降*mage.exe* CNG を使用すると、Authenticode 証明書でマニフェストに署名します。 Authenticode 証明書と同じコマンド ライン パラメーターを使用します。
     
-7.  配置ディレクトリのルートに変更します。  
+7. 配置ディレクトリのルートに変更します。  
   
-8.  呼び出しで配置マニフェストを生成*Mage.exe*します。 既定では、 *Mage.exe*マークは、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]その it を両方オンラインで実行できるように、オフライン インストールされているアプリケーションとして展開します。 アプリケーションで使用できるように、ユーザーがオンラインの場合にのみ使用して、`-Install`の値を持つオプション`false`します。 場合は、既定値を使用し、ユーザーがアプリケーションを Web サイトまたはファイル共有からインストールを以下のことを確認の値、 `-ProviderUrl` Web サーバーまたは共有でマニフェストのオプションのアプリケーションの場所を指しています。  
+8. 呼び出しで配置マニフェストを生成*Mage.exe*します。 既定では、 *Mage.exe*マークは、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]その it を両方オンラインで実行できるように、オフライン インストールされているアプリケーションとして展開します。 アプリケーションで使用できるように、ユーザーがオンラインの場合にのみ使用して、`-Install`の値を持つオプション`false`します。 場合は、既定値を使用し、ユーザーがアプリケーションを Web サイトまたはファイル共有からインストールを以下のことを確認の値、 `-ProviderUrl` Web サーバーまたは共有でマニフェストのオプションのアプリケーションの場所を指しています。  
   
-    ```cmd  
-    mage -New Deployment -Processor x86 -Install true -Publisher "My Co." -ProviderUrl "\\myServer\myShare\AppToDeploy.application" -AppManifest 1.0.0.0\AppToDeploy.exe.manifest -ToFile AppToDeploy.application  
-    ```  
+   ```cmd  
+   mage -New Deployment -Processor x86 -Install true -Publisher "My Co." -ProviderUrl "\\myServer\myShare\AppToDeploy.application" -AppManifest 1.0.0.0\AppToDeploy.exe.manifest -ToFile AppToDeploy.application  
+   ```  
   
 9. Authenticode または CNG 証明書で配置マニフェストに署名します。  
   
@@ -118,28 +118,28 @@ Visual Studio を使用してデプロイすることはできません場合、
   
 ### <a name="to-deploy-an-application-with-the-mageuiexe-graphical-tool"></a>MageUI.exe のグラフィカル ツールを使用してアプリケーションをデプロイするには  
   
-1.  格納するディレクトリを作成、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開ファイル。  
+1. 格納するディレクトリを作成、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開ファイル。  
   
-2.  作成した展開ディレクトリでは、バージョン サブディレクトリを作成します。 初めてアプリケーションを展開する場合は、名前、バージョン サブディレクトリ**1.0.0.0**します。  
+2. 作成した展開ディレクトリでは、バージョン サブディレクトリを作成します。 初めてアプリケーションを展開する場合は、名前、バージョン サブディレクトリ**1.0.0.0**します。  
   
-    > [!NOTE]
-    >  配置のバージョンは、アプリケーションのバージョンとは異なる可能性があります。  
+   > [!NOTE]
+   >  配置のバージョンは、アプリケーションのバージョンとは異なる可能性があります。  
   
-3.  実行可能ファイル、アセンブリ、リソース、およびデータ ファイルを含む、バージョン サブディレクトリには、すべてのアプリケーション ファイルをコピーします。 必要に応じて、追加のファイルが含まれている追加のサブディレクトリを作成できます。  
+3. 実行可能ファイル、アセンブリ、リソース、およびデータ ファイルを含む、バージョン サブディレクトリには、すべてのアプリケーション ファイルをコピーします。 必要に応じて、追加のファイルが含まれている追加のサブディレクトリを作成できます。  
   
-4.  開始、 *MageUI.exe*のグラフィカル ツール。  
+4. 開始、 *MageUI.exe*のグラフィカル ツール。  
   
-    ```cmd  
-    MageUI.exe  
-    ```  
+   ```cmd  
+   MageUI.exe  
+   ```  
   
-5.  選択して新しいアプリケーション マニフェストを作成する**ファイル**、**新規**、 **Application Manifest**  メニューから。  
+5. 選択して新しいアプリケーション マニフェストを作成する**ファイル**、**新規**、 **Application Manifest**  メニューから。  
   
-6.  既定の**名前** タブで、このデプロイの名前とバージョン番号を入力します。 指定することも、**プロセッサ**x86 など、アプリケーションが組み込まれています。  
+6. 既定の**名前** タブで、このデプロイの名前とバージョン番号を入力します。 指定することも、**プロセッサ**x86 など、アプリケーションが組み込まれています。  
   
-7.  選択、**ファイル** タブで、省略記号をクリックし、(**.**) ボタンの横に、**アプリケーション ディレクトリ**テキスト ボックス。 A**フォルダーの参照** ダイアログ ボックスが表示されます。  
+7. 選択、**ファイル** タブで、省略記号をクリックし、(**.**) ボタンの横に、**アプリケーション ディレクトリ**テキスト ボックス。 A**フォルダーの参照** ダイアログ ボックスが表示されます。  
   
-8.  アプリケーション ファイルを格納しているバージョンのサブディレクトリを選択し、クリックして**OK**します。  
+8. アプリケーション ファイルを格納しているバージョンのサブディレクトリを選択し、クリックして**OK**します。  
   
 9. インターネット インフォメーション サービス (IIS) を展開する場合は、選択、**を持たない任意のファイルを .deploy 拡張子に追加の設定と**チェック ボックスをオンします。  
   

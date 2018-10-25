@@ -1,7 +1,7 @@
 ---
 title: Visual Studio の色とスタイル |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 0e384ea1-4d9e-4307-8884-6e183900732c
 caps.latest.revision: 7
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 355df1e0b0697470637f4bf79ad0eea15c4cd7c6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b57b50672fb476cfeac3a8748202d9e7dcb47a13
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533484"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49267411"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Visual Studio の色とスタイル
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio の色とスタイル](https://docs.microsoft.com/visualstudio/extensibility/ux-guidelines/colors-and-styling-for-visual-studio)します。  
-  
 ## <a name="using-color-in-visual-studio"></a>Visual Studio での色の使用  
  Visual Studio で、色は、主に装飾としてだけでなく、通信ツールとして使用されます。 必要がある場合の予約し、最小限の色を使用します。  
   
@@ -353,7 +351,7 @@ protected override void Dispose(bool disposing)
 -   **フォントと色の変更を処理します。**  
   
 #### <a name="to-create-or-identify-categories"></a>作成またはカテゴリを識別するには  
- [カテゴリのレジストリ エントリの特殊な型の構築 [hklm \software\microsoft \Visual Studio\\< Visual Studio バージョン\>\FontAndColors\\< カテゴリ\>]。 \<カテゴリ > はローカライズされていないカテゴリの名前です。  
+ カテゴリのレジストリ エントリの特殊な型の構築 [hklm \software\microsoft \Visual Studio\\< Visual Studio バージョン\>\FontAndColors\\< カテゴリ\>]。 \<カテゴリ > はローカライズされていないカテゴリの名前です。  
   
  2 つの値を使用してレジストリを設定します。  
   
@@ -365,7 +363,7 @@ protected override void Dispose(bool disposing)
  レジストリで指定されたサービスの実装を提供する必要があります[IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)の対応するカテゴリ。  
   
 #### <a name="to-create-or-identify-groups"></a>グループを作成または識別するのには  
- [カテゴリのレジストリ エントリの特殊な型の構築 [hklm \software\microsoft \Visual Studio\\< Visual Studio バージョン\>\FontAndColors\\< グループ\>]。 \<グループ > はローカライズされていないグループの名前です。  
+ カテゴリのレジストリ エントリの特殊な型の構築 [hklm \software\microsoft \Visual Studio\\< Visual Studio バージョン\>\FontAndColors\\< グループ\>]。 \<グループ > はローカライズされていないグループの名前です。  
   
  2 つの値を使用してレジストリを設定します。  
   

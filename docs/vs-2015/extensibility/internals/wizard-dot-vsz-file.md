@@ -1,7 +1,7 @@
 ---
 title: ウィザード (します。Vsz) ファイル |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 72e1d0f3-eef1-455e-b803-96827f030f50
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 24296384ec66386cdcb735547a1b6ce9c64a0618
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b1d8d36ba617f5d5828354e32b5b0f45ed9ec1ec
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544667"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49197170"
 ---
 # <a name="wizard-vsz-file"></a>ウィザード (.Vsz) ファイル
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ウィザード (します。Vsz) ファイル](https://docs.microsoft.com/visualstudio/extensibility/internals/wizard-dot-vsz-file)します。  
-  
 統合開発環境 (IDE) では、ウィザードを起動するのに .vsz ファイルを使用します。 これらの .vsz ファイルには、IDE を使用してを呼び出すには、どのウィザードを決定する情報と、ウィザードに渡す場合は、どのような情報が含まれます。  
   
  .Vsz ファイルは、セクションがない .ini 形式のテキスト ファイルのバージョンです。 IDE に既知の情報は、ファイルの先頭に格納されます。 これは、ウィザード、IDE を呼び出すと、IDE に渡される .vsz ファイル内にあるパラメーター間のリンクを提供します。 ファイルの残りの部分では、ウィザードに固有と、し、IDE によって収集されるように、特定のウィザードに渡されるパラメーターを提供します。  

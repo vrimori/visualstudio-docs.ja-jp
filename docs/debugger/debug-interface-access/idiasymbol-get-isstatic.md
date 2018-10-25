@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_isstatic |Microsoft ドキュメント
+title: Idiasymbol::get_isstatic |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f2ac087fbd967319d6b853a916c708a6f6a9a776
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: a0cd30a8a1bcdab93f59c439cf27fce5049ebc09
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31463999"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899150"
 ---
 # <a name="idiasymbolgetisstatic"></a>IDiaSymbol::get_isStatic
 関数またはサンクのレイヤーを静的とマークされているかどうかを指定するフラグを取得します。  
@@ -34,19 +34,19 @@ HRESULT get_isStatic(
   
 #### <a name="parameters"></a>パラメーター  
  `pFlag`  
- [out]返します`TRUE`、それ以外の静的関数またはサンクのレイヤーがマークされている場合を返します`FALSE`です。  
+ [out]返します`TRUE`とそれ以外の静的関数またはサンクのレイヤーがマークされている場合を返します`FALSE`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|dia2.h|  
+|ヘッダー:|Dia2.h|  
 |バージョン:|DIA SDK バージョン 8.0|  
   
 ## <a name="see-also"></a>関連項目  

@@ -1,7 +1,7 @@
 ---
 title: レイヤー図を拡張 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 41
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: af5058ba0d88c91ea89a33523002294339dd32f3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d3c149558f53effff29d15bfce0d05f0dada0f7b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539391"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847072"
 ---
 # <a name="extend-layer-diagrams"></a>Extend layer diagrams
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[依存関係図の拡張](https://docs.microsoft.com/visualstudio/modeling/extend-layer-diagrams)します。  
-  
 Visual Studio では、コードを記述してレイヤー図を生成および更新したり、プログラム コードの構造をレイヤー図に照らして検証したりできます。 図のショートカット (コンテキスト) メニューに表示するコマンドを追加し、ドラッグ アンド ドロップ ジェスチャをカスタマイズし、テキスト テンプレートからレイヤー モデルにアクセスすることができます。 これらの拡張機能を VSIX (Visual Studio Integration Extension) にパッケージ化し、他の Visual Studio ユーザーに配布することができます。  
   
  レイヤー図の詳細については、次の項目を参照してください。  
@@ -41,18 +39,18 @@ Visual Studio では、コードを記述してレイヤー図を生成および
   
 -   [レイヤー図を使用したコードの検証](../modeling/validate-code-with-layer-diagrams.md)  
   
-##  <a name="prereqs"></a> 必要条件  
+##  <a name="prereqs"></a> 要件  
  レイヤー拡張機能を開発するコンピューターに以下の項目がインストールされている必要があります。  
   
--   Visual Studio  
+- Visual Studio  
   
--   [Visual Studio SDK](../extensibility/visual-studio-sdk.md)  
+- [Visual Studio SDK](../extensibility/visual-studio-sdk.md)  
   
--   [Modeling SDK for Visual Studio 2015](http://www.microsoft.com/download/details.aspx?id=48148)  
+- [Modeling SDK for Visual Studio 2015](http://www.microsoft.com/download/details.aspx?id=48148)  
   
- 適切なバージョンの Visual Studio をレイヤー拡張機能を実行するコンピューターにインストールしておく必要があります。 詳細については、次を参照してください。[レイヤー モデル拡張機能をデプロイ](../modeling/deploy-a-layer-model-extension.md)します。  
+  適切なバージョンの Visual Studio をレイヤー拡張機能を実行するコンピューターにインストールしておく必要があります。 詳細については、次を参照してください。[レイヤー モデル拡張機能をデプロイ](../modeling/deploy-a-layer-model-extension.md)します。  
   
- レイヤー図をサポートする Visual Studio のバージョンを確認するを参照してください。[アーキテクチャとモデリング ツールのバージョンのサポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)します。  
+  レイヤー図をサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [レイヤー図にコマンドおよびジェスチャを追加する](../modeling/add-commands-and-gestures-to-layer-diagrams.md)  

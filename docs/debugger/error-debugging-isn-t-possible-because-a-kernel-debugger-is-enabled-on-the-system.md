@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 75e1628f461c813e07634838f57c0335bdf6a1b5
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 4aa8aa820330264357341948a468d58d98c86056
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37058725"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853981"
 ---
 # <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>エラー: デバッグではありません&#39;t Possible Because カーネル デバッガーがシステムで有効になっています。
 マネージド コードのデバッグ時に、次のエラー メッセージが表示されることがあります。  
@@ -34,27 +34,27 @@ Debugging isn't possible because a kernel debugger is enabled on the system
   
  このメッセージは次の場合にマネージド コードをデバッグしようとすると表示されます。  
   
--   [!INCLUDE[win7](../debugger/includes/win7_md.md)] または [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)] システムがデバッグ モードで起動している。  
+- [!INCLUDE[win7](../debugger/includes/win7_md.md)] または [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)] システムがデバッグ モードで起動している。  
   
--   アプリケーションが CLR バージョン CLR 2.0、3.0、または 3.5 を使用している。  
+- アプリケーションが CLR バージョン CLR 2.0、3.0、または 3.5 を使用している。  
   
 ## <a name="solution"></a>ソリューション  
   
 #### <a name="to-fix-this-problem"></a>この問題を解決するには  
   
--   CLR バージョン 4.0 または 4.5 を使用するようにアプリケーションをアップグレードします。  
+- CLR バージョン 4.0 または 4.5 を使用するようにアプリケーションをアップグレードします。  
   
-     または  
+   または  
   
--   カーネル デバッグを無効にし、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でデバッグを実行します。  
+- カーネル デバッグを無効にし、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でデバッグを実行します。  
   
-     または  
+   または  
   
--   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の代わりにカーネル デバッガーを使用してデバッグを実行します。  
+- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の代わりにカーネル デバッガーを使用してデバッグを実行します。  
   
-     または  
+   または  
   
--   カーネル デバッガーで、ユーザー モード例外を無効にします。  
+- カーネル デバッガーで、ユーザー モード例外を無効にします。  
   
 #### <a name="to-disable-kernel-debugging-in-the-current-session"></a>現在のセッションでカーネル デバッグを無効にするには  
   
@@ -102,5 +102,4 @@ Debugging isn't possible because a kernel debugger is enabled on the system
   
 ## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
- 
-  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)
+ [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)

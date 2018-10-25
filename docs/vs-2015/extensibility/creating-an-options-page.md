@@ -1,7 +1,7 @@
 ---
 title: オプション ページの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 9f4e210c-4b47-4daa-91fa-1c301c4587f9
 caps.latest.revision: 63
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7204f3c44eacf9b27e455502c636fe6d64f570b2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bd04ea51fb73f6f095c9f5bcddce735deb06066e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545756"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49219701"
 ---
 # <a name="creating-an-options-page"></a>オプション ページの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[オプション ページの作成](https://docs.microsoft.com/visualstudio/extensibility/creating-an-options-page)です。  
-  
 このチュートリアルでは、プロパティ グリッドを使用して確認し、プロパティを設定する単純なツール/オプション ページを作成します。  
   
  これらのプロパティを保存して、設定ファイルからの復元、次の手順に従ってし、しを参照してください[Creating a Settings Category](../extensibility/creating-a-settings-category.md)します。  
@@ -116,7 +114,7 @@ ms.locfileid: "47545756"
   
 2.  次の追加ステートメントを使用します。  
   
-    ```vb  
+    ```csharp  
     using System.Windows.Forms;  
     ```  
   

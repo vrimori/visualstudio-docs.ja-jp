@@ -1,7 +1,7 @@
 ---
 title: IDebugArrayField::GetNumberOfElements |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: a1961ef3-d69d-4022-b8c9-b9cfb9811345
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a950580417b168796708b0924d756a580bc2b3c6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e83fa791bf3da9e816b28f709be8aa7156f4a8b6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537457"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911513"
 ---
 # <a name="idebugarrayfieldgetnumberofelements"></a>IDebugArrayField::GetNumberOfElements
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugArrayField::GetNumberOfElements](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugarrayfield-getnumberofelements)します。  
-  
 配列内の要素の数を取得します。  
   
 ## <a name="syntax"></a>構文  

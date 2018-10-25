@@ -11,19 +11,19 @@ helpviewer_keywords:
 - language conventions [EditorConfig]
 - formatting conventions [EditorConfig]
 author: kuhlenh
-ms.author: kaseyu
+ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 04d8cd6f27f90d398d22b90f9c9bd432466fb3cd
-ms.sourcegitcommit: 58a0b227f29b95e3ed55101ef66c68913682862b
+ms.openlocfilehash: a9b1b03050081659cac08c1b2c92c49f2c72273d
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2018
-ms.locfileid: "42626828"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46496052"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig の .NET コーディング規則の設定
 
@@ -92,6 +92,8 @@ Visual Studio 2017 [EditorConfig](../ide/create-portable-custom-editor-options.m
         - dotnet\_style\_prefer\_inferred\_anonymous\_type\_member_names
         - dotnet\_style\_prefer\_auto\_properties
         - dotnet\_style\_prefer\_is\_null\_check\_over\_reference\_equality\_method
+        - dotnet\_style\_prefer\_conditional\_expression\_over\_assignment
+        - dotnet\_style\_prefer\_conditional\_expression\_over\_return
     - ["null" チェック設定](#null_checking)
         - dotnet\_style\_coalesce_expression
         - dotnet\_style\_null_propagation
@@ -1084,7 +1086,7 @@ public int Age { get { return _age; }}
 
 ```csharp
 // csharp_style_expression_bodied_indexers = true
-public T this[int i] => _value[i];
+public T this[int i] => _values[i];
 
 // csharp_style_expression_bodied_indexers = false
 public T this[int i] { get { return _values[i]; } }

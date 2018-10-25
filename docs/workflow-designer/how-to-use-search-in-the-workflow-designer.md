@@ -10,12 +10,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 3e8e44586f6b0f2f8aea5ab13eb27886d7b3a6e8
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: ecf4839cec08e9ffb0419aebcff9da145214b117
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757969"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49943064"
 ---
 # <a name="how-to-use-search-in-the-workflow-designer"></a>ワークフロー デザイナーで検索を使用する方法
 
@@ -35,11 +35,11 @@ ms.locfileid: "36757969"
 
 ### <a name="use-quick-find"></a>クイック検索を使用します。
 
-1.  ワークフロー デザイナーを開いた状態で、キーを押します**Ctrl + F**、または選択**編集** > **検索し、置換** > **クイック検索**.
+1. ワークフロー デザイナーを開いた状態で、キーを押します**Ctrl + F**、または選択**編集** > **検索し、置換** > **クイック検索**.
 
-2.  検索用語を入力してください、**検索**テキスト ボックス をクリック**次を検索**します。
+2. 検索用語を入力してください、**検索**テキスト ボックス をクリック**次を検索**します。
 
-3.  検索用語は、現在のワークフローにあります。 次の図は、デザイナー内に配置されているアクティビティの表示名を示しています。
+3. 検索用語は、現在のワークフローにあります。 次の図は、デザイナー内に配置されているアクティビティの表示名を示しています。
 
    ![ワークフロー デザイナーでの検索結果](../workflow-designer/media/designersearch.png)
 

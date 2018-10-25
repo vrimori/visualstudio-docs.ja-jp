@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 80618257e61356285d9b8c9c2bcf2a7a2e11e831
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 1d238f1c6be12753fe87cece03139185e1c24ad6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44279547"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854775"
 ---
 # <a name="debug-multithreaded-applications-in-visual-studio"></a>マルチスレッド アプリケーションのデバッグ
 スレッドは、オペレーティング システムでプロセッサ時間を割り当てる命令のシーケンスです。 オペレーティング システムで実行されているプロセスは、いずれも 1 つ以上のスレッドで構成されます。 複数のスレッドで構成されるプロセスをマルチスレッド プロセスといいます。  
@@ -88,18 +88,18 @@ Visual Studio には、強力なブレークポイントとトレースポイン
 ## <a name="related-sections"></a>関連項目  
  [ブレークポイントの使用](../debugger/using-breakpoints.md)
 
- - 個別のスレッドをデバッグする場合は、ブレークポイント条件またはフィルターを使用します。  
+- 個別のスレッドをデバッグする場合は、ブレークポイント条件またはフィルターを使用します。  
   
- - トレースポイントを使用すると、プログラムの実行を中断なしでトレースできます。 この方法はデッドロックなどの問題を調べる場合に役立ちます。  
+- トレースポイントを使用すると、プログラムの実行を中断なしでトレースできます。 この方法はデッドロックなどの問題を調べる場合に役立ちます。  
   
- [スレッド化](/dotnet/standard/threading/index)  
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] プログラミングでのスレッドの概念についてコード例を示しながら説明します。  
+  [スレッド化](/dotnet/standard/threading/index)  
+  [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] プログラミングでのスレッドの概念についてコード例を示しながら説明します。  
   
- [コンポーネントのマルチスレッド](https://msdn.microsoft.com/Library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] コンポーネントでのマルチスレッドの使用方法について説明します。  
+  [コンポーネントのマルチスレッド](https://msdn.microsoft.com/Library/2fc31e68-fb71-4544-b654-0ce720478779)  
+  [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] コンポーネントでのマルチスレッドの使用方法について説明します。  
   
- [旧形式のコードのためのマルチスレッド サポート (Visual C++)](/cpp/parallel/multithreading-support-for-older-code-visual-cpp)  
- MFC を使用する C# プログラマを対象とし、スレッドの概念についてコード例を示しながら説明します。  
+  [旧形式のコードのためのマルチスレッド サポート (Visual C++)](/cpp/parallel/multithreading-support-for-older-code-visual-cpp)  
+  MFC を使用する C# プログラマを対象とし、スレッドの概念についてコード例を示しながら説明します。  
   
 ## <a name="see-also"></a>関連項目  
  [スレッドとプロセス](../debugger/debug-threads-and-processes.md)   

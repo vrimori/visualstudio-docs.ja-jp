@@ -1,7 +1,7 @@
 ---
 title: METADATA_TYPE |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 2d8b78f6-0aef-4d79-809a-cff9b2c24659
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8d7b6f6e38a92be62c676e69197d990cb53989db
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3481d5940d204e00a253f098ffbb66c7c6e5dc7a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544375"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831212"
 ---
 # <a name="metadatatype"></a>METADATA_TYPE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[METADATA_TYPE](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/metadata-type)します。  
-  
 この構造体には、メタデータから取得したフィールドの種類に関する情報を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -66,7 +64,7 @@ public struct METADATA_TYPE {
   
  `tokClass`値が型を一意に識別するメタデータ トークン。 メタデータ トークン ID の上位ビットを解釈する方法の詳細については、次を参照してください。、`CorTokenType`で corhdr.h ファイルで列挙、 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

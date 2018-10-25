@@ -1,7 +1,7 @@
 ---
 title: アプリの更新 (JavaScript) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ca647572eac68dcf70d21b7ed687212a0229568f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6c38083a1a8e0255891b29ae23e5cf36d066e27a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537232"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49180571"
 ---
 # <a name="refresh-an-app-javascript"></a>アプリの更新 (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[アプリの更新 (JavaScript)](https://docs.microsoft.com/visualstudio/debugger/refresh-an-app-javascript)します。  
-  
 Windows および Windows Phone に適用されます] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
   
  デバッグ中から選択して、JavaScript を使用するストア アプリを更新中に、コードに変更を行うことができます、**更新の Windows アプリ**のボタンでは、**デバッグ**ツールバー。 このボタンを選択すると、デバッガーを停止したり再起動したりせずにアプリが再度読み込まれます。 更新機能によって、HTML、CSS、および JavaScript コードを変更し、その結果をすばやく確認できます。 この機能は、Windows ストア アプリと Windows Phone ストア アプリの両方でサポートされています。  

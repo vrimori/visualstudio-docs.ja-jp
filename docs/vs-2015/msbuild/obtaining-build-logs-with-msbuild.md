@@ -1,7 +1,7 @@
 ---
 title: MSBuild でのビルド ログの取得 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 30
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dc6d3981b2c671eda2a121f698835dd7932894bf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6eb4a1822d0be86d19f25bfaa46e296abc7a73a0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548583"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811751"
 ---
 # <a name="obtaining-build-logs-with-msbuild"></a>MSBuild でのビルド ログの取得
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MSBuild でビルド ログの取得](https://docs.microsoft.com/visualstudio/msbuild/obtaining-build-logs-with-msbuild)します。  
-  
   
 MSBuild でスイッチを使用することで、確認するビルド データの量とビルド データを 1 つ以上のファイルに保存するかどうかを指定できます。 カスタム ロガーを指定して、ビルド データを収集することもできます。 このトピックで説明されていない MSBuild コマンド ライン スイッチの詳細については、「[Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)」を参照してください。  
   
@@ -38,15 +36,15 @@ MSBuild でスイッチを使用することで、確認するビルド デー�
 ## <a name="setting-the-level-of-detail"></a>詳細レベルを設定する  
  詳細レベルを指定せずに MSBuild を使用して、プロジェクトをビルドすると、出力ログに次の情報が表示されます。  
   
--   重要度 - 高として分類されたエラー、警告、メッセージ。  
+- 重要度 - 高として分類されたエラー、警告、メッセージ。  
   
--   一部の状態イベント。  
+- 一部の状態イベント。  
   
--   ビルドの概要。  
+- ビルドの概要。  
   
- **/verbosity** (**/v**) スイッチを使用して、出力ログに表示するデータ量を制御できます。 トラブルシューティングを行う場合は、`detailed` (`d`) または `diagnostic` (`diag`) のいずれかの詳細レベルを使用します。後者は情報が最も多くなります。  
+  **/verbosity** (**/v**) スイッチを使用して、出力ログに表示するデータ量を制御できます。 トラブルシューティングを行う場合は、`detailed` (`d`) または `diagnostic` (`diag`) のいずれかの詳細レベルを使用します。後者は情報が最も多くなります。  
   
- **/verbosity** を `detailed` に設定すると、ビルド処理は遅くなることがあります。また、**/verbosity** を `diagnostic` に設定するとさらに遅くなる可能性があります。  
+  **/verbosity** を `detailed` に設定すると、ビルド処理は遅くなることがあります。また、**/verbosity** を `diagnostic` に設定するとさらに遅くなる可能性があります。  
   
 ```  
 msbuild MyProject.proj /t:go /v:diag  

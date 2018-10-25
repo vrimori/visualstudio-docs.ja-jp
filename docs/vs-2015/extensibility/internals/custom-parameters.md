@@ -1,7 +1,7 @@
 ---
 title: カスタム パラメーター |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: ba5c364b-66e6-47ea-9760-a0b70de8f0a0
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 21d85eb55e20eb27a67856cec1fea7f6fa539b41
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e8831517b7b679762e12356927b39e244a2a5dd1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544311"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49305404"
 ---
 # <a name="custom-parameters"></a>カスタム パラメーター
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[カスタム パラメーター](https://docs.microsoft.com/visualstudio/extensibility/internals/custom-parameters)します。  
-  
 カスタム パラメーターは、ウィザードが開始した後に、ウィザードの操作を制御します。 関連の .vsz ファイルは、統合開発環境 (IDE) によってパッケージ化され、ウィザードが開始されると、文字列の配列として、ウィザードに渡されますユーザー定義のパラメーターの配列を提供します。 ウィザードは、文字列の配列を解析し、情報を使用して、ウィザードの実際の操作を制御します。 この方法で、ウィザードは、.vsz ファイルの内容に応じて機能をカスタマイズできます。  
   
  コンテキストのパラメーターは、ウィザードの開始時にその一方で、プロジェクトの状態を定義します。 詳細については、次を参照してください。[コンテキスト パラメーター](../../extensibility/internals/context-parameters.md)します。  

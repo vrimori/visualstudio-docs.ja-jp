@@ -1,7 +1,7 @@
 ---
 title: Visual C# の IntelliSense | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,34 +18,32 @@ caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c967bde43358c856ab4cbd16e36391cb02760391
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0d094a0272e5c90afa1a83a42543dd464f219a17
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533707"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862204"
 ---
 # <a name="visual-c-intellisense"></a>Visual C# の IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual c# IntelliSense](https://docs.microsoft.com/visualstudio/ide/visual-csharp-intellisense)します。  
-  
 Visual C# の IntelliSense は、エディターでコーディングする際、および[イミディエイト モード](../ide/reference/immediate-window.md) コマンド ウィンドウでデバッグしている間に使用可能です。  
   
 ## <a name="completion-lists"></a>入力候補一覧  
  Visual C# での IntelliSense コンプリート リストには、メンバーの一覧や入力候補などからのトークンが含まれています。 コンプリート リストでは、以下にすばやくアクセスできます。  
   
--   型または名前空間のメンバー  
+- 型または名前空間のメンバー  
   
--   変数、コマンド、および関数の名前  
+- 変数、コマンド、および関数の名前  
   
--   [コード スニペット](#CodeSnippets)  
+- [コード スニペット](#CodeSnippets)  
   
--   [言語キーワード](#Keywords)  
+- [言語キーワード](#Keywords)  
   
--   [拡張メソッド](#ExtensionMethods)  
+- [拡張メソッド](#ExtensionMethods)  
   
- C# でのコンプリート リストは非常に高機能でもあるため、コンテキストに基づいて、無関係なトークンを除外したり、トークンを事前に選択したりします。 詳細については、「[C# でフィルター処理されたコンプリート リスト](../misc/filtered-completion-lists-in-csharp.md)」および「[C# で事前に選択されたコンプリート リスト項目](../misc/pre-selected-completion-list-items-in-csharp.md)」を参照してください。  
+  C# でのコンプリート リストは非常に高機能でもあるため、コンテキストに基づいて、無関係なトークンを除外したり、トークンを事前に選択したりします。 詳細については、「[C# でフィルター処理されたコンプリート リスト](../misc/filtered-completion-lists-in-csharp.md)」および「[C# で事前に選択されたコンプリート リスト項目](../misc/pre-selected-completion-list-items-in-csharp.md)」を参照してください。  
   
 ###  <a name="CodeSnippets"></a> コンプリート リストのコード スニペット  
  Visual C# のコンプリート リストには、コード スニペットが含まれており、事前に定義されたコードの本体をプログラムに簡単に挿入できます。 コード スニペットは、スニペットの [Shortcut 要素 (IntelliSense コード スニペット)](http://msdn.microsoft.com/en-us/052cc97a-5c70-42f8-b398-4c3adf670cfa) としてコンプリート リストに表示されます。  既定で Visual C# で利用できるコード スニペットの詳細については、「[Visual C# のコード スニペット](../ide/visual-csharp-code-snippets.md)」を参照してください。  
@@ -125,23 +123,23 @@ Visual C# の IntelliSense は、エディターでコーディングする際�
   
  適切なオプションを表示するには、次の手順のいずれかを使用することができます。  
   
--   未定義の識別子をクリックします。 左端の文字の下に短い下線が表示されます。 短い下線の上にマウス ポインターを置くと、スマート タグ (アイコン) が表示されます。 スマート タグをクリックします。  
+- 未定義の識別子をクリックします。 左端の文字の下に短い下線が表示されます。 短い下線の上にマウス ポインターを置くと、スマート タグ (アイコン) が表示されます。 スマート タグをクリックします。  
   
--   未定義の識別子をクリックして、Ctrl + .  (ピリオド) を押します。  
+- 未定義の識別子をクリックして、Ctrl + .  (ピリオド) を押します。  
   
--   未定義の識別子を右クリックして、**[生成]** をクリックします。  
+- 未定義の識別子を右クリックして、**[生成]** をクリックします。  
   
- 表示されるオプションは、次のとおりです。  
+  表示されるオプションは、次のとおりです。  
   
--   **プロパティ スタブの生成**  
+- **プロパティ スタブの生成**  
   
--   **フィールド スタブの生成**  
+- **フィールド スタブの生成**  
   
--   **メソッド スタブの生成**  
+- **メソッド スタブの生成**  
   
--   **クラスの生成**  
+- **クラスの生成**  
   
--   **新しい型の生成** (クラス、構造体、インターフェイス、または列挙型)  
+- **新しい型の生成** (クラス、構造体、インターフェイス、または列挙型)  
   
 ## <a name="generate-event-handlers"></a>イベント ハンドラーの生成  
  コード エディターで、IntelliSense はイベント フィールドにメソッド (イベント ハンドラー) をフックするのに役立ちます。  

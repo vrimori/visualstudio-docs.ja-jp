@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ac06fa18ee9459d8dc43bd0c536b68f9d027c97d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 024241870bb4a0a2ef696130cbe5ddc94319493a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31584400"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837205"
 ---
 # <a name="resource-details-view---contention-data"></a>リソースの詳細ビュー - 競合データ
 リソースの詳細ビューには、選択したリソースに対する競合によって発生したブロック イベントが、タイムライン グラフで表示されます。 ブロック イベントは、リソースに対するアクセスを別のスレッドがロックしているためにスレッドが実行を中断されたときに発生します。  
@@ -48,9 +48,9 @@ ms.locfileid: "31584400"
   
 #### <a name="to-view-or-edit-the-source-code-of-a-function-in-the-call-stack"></a>呼び出し履歴内の関数のソース コードを表示または編集するには  
   
--   **[呼び出し履歴]** ウィンドウで関数名をクリックします。  
+- **[呼び出し履歴]** ウィンドウで関数名をクリックします。  
   
- 関数のソース コードは、現在のプロジェクトに含まれている必要があります。  
+  関数のソース コードは、現在のプロジェクトに含まれている必要があります。  
   
 #### <a name="to-view-the-call-tree-of-contention-events-for-the-resource"></a>リソースの競合イベントの呼び出しツリーを表示するには  
   

@@ -1,7 +1,7 @@
 ---
 title: '方法 : ビルド イベントを指定する (Visual Basic) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 28
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fc4c0efad510c511cde5d6803807a1fb1f8efd67
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f80067224be1cc5dfa72b23dbfb7414b023f793a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548261"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897642"
 ---
 # <a name="how-to-specify-build-events-visual-basic"></a>方法 : ビルド イベントを指定する (Visual Basic)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ビルド イベントを指定 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/how-to-specify-build-events-visual-basic)します。  
-  
 Visual Basic のビルド イベントを使用して、コンパイル処理の一部として、スクリプト、マクロ、またはその他のアクションを実行することができます。 コンパイル前のイベントはコンパイル前に発生し、ビルド後のイベントはコンパイル後に発生します。  
   
  ビルド イベントは、**プロジェクト デザイナー**の **[コンパイル]** ページから使用可能な **[ビルド イベント]** ダイアログ ボックスで指定されます。  
@@ -70,66 +68,66 @@ Visual Basic のビルド イベントを使用して、コンパイル処理の
   
 #### <a name="to-create-an-exe-command-to-change-the-application-manifest"></a>アプリケーション マニフェストを変更する .exe コマンドを作成するには  
   
-1.  コマンド用のコンソール アプリケーションを作成します。 **[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。  
+1. コマンド用のコンソール アプリケーションを作成します。 **[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。  
   
-2.  **[新しいプロジェクト]** ダイアログ ボックスの **[Visual Basic]** ノードで、**[Windows]**、**[コンソール アプリケーション]** テンプレートの順に選択します。 プロジェクトに `ChangeOSVersionVB` という名前を付けます。  
+2. **[新しいプロジェクト]** ダイアログ ボックスの **[Visual Basic]** ノードで、**[Windows]**、**[コンソール アプリケーション]** テンプレートの順に選択します。 プロジェクトに `ChangeOSVersionVB` という名前を付けます。  
   
-3.  Module1.vb で、ファイルの先頭にある他の `Imports` ステートメントに次の行を追加します。  
+3. Module1.vb で、ファイルの先頭にある他の `Imports` ステートメントに次の行を追加します。  
   
-    ```  
-    Imports System.Xml  
-    ```  
+   ```  
+   Imports System.Xml  
+   ```  
   
-4.  `Sub Main` に次のコードを追加します。  
+4. `Sub Main` に次のコードを追加します。  
   
-    ```  
-    Sub Main()  
-       Dim applicationManifestPath As String  
-       applicationManifestPath = My.Application.CommandLineArgs(0)  
-       Console.WriteLine("Application Manifest Path: " & applicationManifestPath.ToString)  
+   ```  
+   Sub Main()  
+      Dim applicationManifestPath As String  
+      applicationManifestPath = My.Application.CommandLineArgs(0)  
+      Console.WriteLine("Application Manifest Path: " & applicationManifestPath.ToString)  
   
-       'Get version name  
-       Dim osVersion As Version  
-       If My.Application.CommandLineArgs.Count >= 2 Then  
-          osVersion = New Version(My.Application.CommandLineArgs(1).ToString)  
-       Else  
-          Throw New ArgumentException("OS Version not specified.")  
-       End If  
-       Console.WriteLine("Desired OS Version: " & osVersion.ToString())  
+      'Get version name  
+      Dim osVersion As Version  
+      If My.Application.CommandLineArgs.Count >= 2 Then  
+         osVersion = New Version(My.Application.CommandLineArgs(1).ToString)  
+      Else  
+         Throw New ArgumentException("OS Version not specified.")  
+      End If  
+      Console.WriteLine("Desired OS Version: " & osVersion.ToString())  
   
-       Dim document As XmlDocument  
-       Dim namespaceManager As XmlNamespaceManager  
-       namespaceManager = New XmlNamespaceManager(New NameTable())  
-       With namespaceManager  
-          .AddNamespace("asmv1", "urn:schemas-microsoft-com:asm.v1")  
-          .AddNamespace("asmv2", "urn:schemas-microsoft-com:asm.v2")  
-       End With  
+      Dim document As XmlDocument  
+      Dim namespaceManager As XmlNamespaceManager  
+      namespaceManager = New XmlNamespaceManager(New NameTable())  
+      With namespaceManager  
+         .AddNamespace("asmv1", "urn:schemas-microsoft-com:asm.v1")  
+         .AddNamespace("asmv2", "urn:schemas-microsoft-com:asm.v2")  
+      End With  
   
-       document = New XmlDocument()  
-       document.Load(applicationManifestPath)  
+      document = New XmlDocument()  
+      document.Load(applicationManifestPath)  
   
-       Dim baseXPath As String  
-       baseXPath = "/asmv1:assembly/asmv2:dependency/asmv2:dependentOS/asmv2:osVersionInfo/asmv2:os"  
+      Dim baseXPath As String  
+      baseXPath = "/asmv1:assembly/asmv2:dependency/asmv2:dependentOS/asmv2:osVersionInfo/asmv2:os"  
   
-       'Change minimum required OS Version.  
-       Dim node As XmlNode  
-       node = document.SelectSingleNode(baseXPath, namespaceManager)  
-       node.Attributes("majorVersion").Value = osVersion.Major.ToString()  
-       node.Attributes("minorVersion").Value = osVersion.Minor.ToString()  
-       node.Attributes("buildNumber").Value = osVersion.Build.ToString()  
-       node.Attributes("servicePackMajor").Value = osVersion.Revision.ToString()  
+      'Change minimum required OS Version.  
+      Dim node As XmlNode  
+      node = document.SelectSingleNode(baseXPath, namespaceManager)  
+      node.Attributes("majorVersion").Value = osVersion.Major.ToString()  
+      node.Attributes("minorVersion").Value = osVersion.Minor.ToString()  
+      node.Attributes("buildNumber").Value = osVersion.Build.ToString()  
+      node.Attributes("servicePackMajor").Value = osVersion.Revision.ToString()  
   
-       document.Save(applicationManifestPath)  
-    End Sub  
-    ```  
+      document.Save(applicationManifestPath)  
+   End Sub  
+   ```  
   
-     このコマンドは 2 つの引数を受け取ります。 最初の引数はアプリケーション マニフェストへのパス (つまり、ビルド処理でマニフェストが作成されるフォルダー。通常は Projectname.publish) です。 2 番目の引数は新しいオペレーティング システムのバージョンです。  
+    このコマンドは 2 つの引数を受け取ります。 最初の引数はアプリケーション マニフェストへのパス (つまり、ビルド処理でマニフェストが作成されるフォルダー。通常は Projectname.publish) です。 2 番目の引数は新しいオペレーティング システムのバージョンです。  
   
-5.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
+5. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
-6.  `C:\TEMP\ChangeOSVersionVB.exe` などのディレクトリに .exe ファイルをコピーします。  
+6. `C:\TEMP\ChangeOSVersionVB.exe` などのディレクトリに .exe ファイルをコピーします。  
   
- 次に、ビルド後のイベントでこのコマンドを呼び出して、アプリケーション マニフェストを変更します。  
+   次に、ビルド後のイベントでこのコマンドを呼び出して、アプリケーション マニフェストを変更します。  
   
 #### <a name="to-invoke-a-post-build-event-to-change-the-application-manifest"></a>ビルド後のイベントを呼び出してアプリケーション マニフェストを変更するには  
   

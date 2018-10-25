@@ -1,7 +1,7 @@
 ---
 title: 'CA1060: 移動 P/invoke を NativeMethods クラスに |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: c2a198a7ff34900d97bca509690bb4e2d8e85f08
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 026f568d71c80af95d2d4bee640dc11d1042713f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589681"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49913866"
 ---
 # <a name="ca1060-move-pinvokes-to-nativemethods-class"></a>CA1060: P/Invoke を NativeMethods クラスに移動します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA1060: 移動 P/invoke を NativeMethods クラスに](https://docs.microsoft.com/visualstudio/code-quality/ca1060-move-p-invokes-to-nativemethods-class)します。
 
 |||
 |-|-|
@@ -45,13 +43,13 @@ ms.locfileid: "47589681"
 ## <a name="rule-description"></a>規則の説明
  使用してマークされているなどのプラットフォーム呼び出しメソッド、<xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>属性、またはを使用して定義されているメソッド、`Declare`キーワード[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]、アンマネージ コードにアクセスします。 次のクラスのいずれかでこれらのメソッドがあります。
 
--   **NativeMethods** -このクラスがアンマネージ コード アクセス許可のスタック ウォークを抑制できません。 (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName>このクラスに適用する必要がありません)。このクラスでは、メソッドのスタック ウォークを実行するため、どこでも使用できます。
+- **NativeMethods** -このクラスがアンマネージ コード アクセス許可のスタック ウォークを抑制できません。 (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName>このクラスに適用する必要がありません)。このクラスでは、メソッドのスタック ウォークを実行するため、どこでも使用できます。
 
--   **SafeNativeMethods** -このクラスがアンマネージ コード アクセス許可のスタック ウォークを抑制します。 (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName>このクラスに適用されます)。このクラスは、メソッドを呼び出すすべてのユーザーに対して安全なは。 これらのメソッドの呼び出し元は、呼び出し元の害のない方法であるため、使用量が安全であるかどうかを確認する完全なセキュリティ レビューを実行する必要はありません。
+- **SafeNativeMethods** -このクラスがアンマネージ コード アクセス許可のスタック ウォークを抑制します。 (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName>このクラスに適用されます)。このクラスは、メソッドを呼び出すすべてのユーザーに対して安全なは。 これらのメソッドの呼び出し元は、呼び出し元の害のない方法であるため、使用量が安全であるかどうかを確認する完全なセキュリティ レビューを実行する必要はありません。
 
--   **UnsafeNativeMethods** -このクラスがアンマネージ コード アクセス許可のスタック ウォークを抑制します。 (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName>このクラスに適用されます)。このクラスは、危険なメソッドです。 これらのメソッドの呼び出し元は、スタック ウォークは実行しないため、使用量が安全であるかどうかを確認する完全なセキュリティ レビューを実行する必要があります。
+- **UnsafeNativeMethods** -このクラスがアンマネージ コード アクセス許可のスタック ウォークを抑制します。 (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName>このクラスに適用されます)。このクラスは、危険なメソッドです。 これらのメソッドの呼び出し元は、スタック ウォークは実行しないため、使用量が安全であるかどうかを確認する完全なセキュリティ レビューを実行する必要があります。
 
- としてこれらのクラスが宣言されている`internal`(`Friend`、Visual Basic で) し、新しいインスタンスが作成されないようにする、プライベート コンス トラクターを宣言します。 これらのクラスのメソッドにする必要があります`static`と`internal`(`Shared`と`Friend`Visual Basic で)。
+  としてこれらのクラスが宣言されている`internal`(`Friend`、Visual Basic で) し、新しいインスタンスが作成されないようにする、プライベート コンス トラクターを宣言します。 これらのクラスのメソッドにする必要があります`static`と`internal`(`Shared`と`Friend`Visual Basic で)。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  このルールの違反を修正するには、適切なメソッドを移動**NativeMethods**クラス。 ほとんどのアプリケーションで P/invoke を移動という新しいクラスに**NativeMethods**十分です。

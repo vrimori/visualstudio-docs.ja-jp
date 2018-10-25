@@ -1,7 +1,7 @@
 ---
 title: エディター内で |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,58 +15,56 @@ ms.assetid: 822cbb8d-7ab4-40ee-bd12-44016ebcce81
 caps.latest.revision: 32
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0333c6e25aca7650fbdc3c09709e282bfd97b868
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6c8589afcd64e62e2869283cb4d2a25835b672e7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546156"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49870589"
 ---
 # <a name="inside-the-editor"></a>エディターの内部
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[、エディター内で](https://docs.microsoft.com/visualstudio/extensibility/inside-the-editor)します。  
-  
 エディターはさまざまなテキスト ビューとユーザー インターフェイスからモデルの個別のテキスト エディターを維持するために設計は、さまざまなサブシステムで構成されます。  
   
  これらのセクションでは、エディターのさまざまな側面について説明します。  
   
--   [サブシステムの概要](../extensibility/inside-the-editor.md#overview)  
+- [サブシステムの概要](../extensibility/inside-the-editor.md#overview)  
   
--   [テキスト モデル](../extensibility/inside-the-editor.md#textmodel)  
+- [テキスト モデル](../extensibility/inside-the-editor.md#textmodel)  
   
--   [テキスト ビュー](../extensibility/inside-the-editor.md#textview)  
+- [テキスト ビュー](../extensibility/inside-the-editor.md#textview)  
   
- これらのセクションでは、エディターの機能について説明します。  
+  これらのセクションでは、エディターの機能について説明します。  
   
--   [タグおよび分類子](../extensibility/inside-the-editor.md#tagsandclassifiers)  
+- [タグおよび分類子](../extensibility/inside-the-editor.md#tagsandclassifiers)  
   
--   [修飾](../extensibility/inside-the-editor.md#adornments)  
+- [修飾](../extensibility/inside-the-editor.md#adornments)  
   
--   [射影](../extensibility/inside-the-editor.md#projection)  
+- [射影](../extensibility/inside-the-editor.md#projection)  
   
--   [アウトライン](../extensibility/inside-the-editor.md#outlining)  
+- [アウトライン](../extensibility/inside-the-editor.md#outlining)  
   
--   [マウスのバインド](../extensibility/inside-the-editor.md#mousebindings)  
+- [マウスのバインド](../extensibility/inside-the-editor.md#mousebindings)  
   
--   [エディターの操作](../extensibility/inside-the-editor.md#editoroperations)  
+- [エディターの操作](../extensibility/inside-the-editor.md#editoroperations)  
   
--   [IntelliSense](../extensibility/inside-the-editor.md#intellisense)  
+- [IntelliSense](../extensibility/inside-the-editor.md#intellisense)  
   
 ##  <a name="overview"></a> サブシステムの概要  
   
 ### <a name="text-model-subsystem"></a>テキスト モデル サブシステム  
  テキスト モデルのサブシステムはテキストを表すと、その操作を有効化します。 テキスト モデルのサブシステムを含む、<xref:Microsoft.VisualStudio.Text.ITextBuffer>インターフェイスで、エディターによって表示される文字のシーケンスについて説明します。 このテキストは、変更、追跡、およびそれ以外の場合さまざまな方法で操作できることができます。 テキスト モデルには、次の側面の型も用意されています。  
   
--   ファイルでは、テキストを関連付け、読み取りとファイル システムで手書き入力を管理するサービス。  
+- ファイルでは、テキストを関連付け、読み取りとファイル システムで手書き入力を管理するサービス。  
   
--   2 つのシーケンス オブジェクトの間のわずかな差異を検出する差分サービス。  
+- 2 つのシーケンス オブジェクトの間のわずかな差異を検出する差分サービス。  
   
--   その他のバッファー内のテキストのサブセットの観点からのバッファー内のテキストを記述するためのシステム。  
+- その他のバッファー内のテキストのサブセットの観点からのバッファー内のテキストを記述するためのシステム。  
   
- テキスト モデルのサブシステムでは、無料ユーザー インターフェイス (UI) の概念です。 たとえばはテキスト形式またはテキストのレイアウトを担当して visual 修飾テキストと関連付けることができるは、サポート技術情報を持ちません。  
+  テキスト モデルのサブシステムでは、無料ユーザー インターフェイス (UI) の概念です。 たとえばはテキスト形式またはテキストのレイアウトを担当して visual 修飾テキストと関連付けることができるは、サポート技術情報を持ちません。  
   
- テキスト モデル サブシステムのパブリック型は、.NET Framework の基本クラス ライブラリと Managed Extensibility Framework (MEF) にのみ依存 Microsoft.VisualStudio.Text.Data.dll と Microsoft.VisualStudio.CoreUtilitiy.dll に含まれます。  
+  テキスト モデル サブシステムのパブリック型は、.NET Framework の基本クラス ライブラリと Managed Extensibility Framework (MEF) にのみ依存 Microsoft.VisualStudio.Text.Data.dll と Microsoft.VisualStudio.CoreUtilitiy.dll に含まれます。  
   
 ### <a name="text-view-subsystem"></a>テキスト ビュー サブシステム  
  テキスト ビューのサブシステムは書式設定およびテキストを表示します。 このサブシステム内の型は、種類が Windows Presentation Foundation (WPF) を利用するかどうかに応じて、2 つのレイヤーに分割されます。 最も重要なは<xref:Microsoft.VisualStudio.Text.Editor.ITextView>と<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView>を表示するテキスト行のセットともキャレット、選択、および WPF UI 要素を使用して、テキストを装飾するための機能を制御します。 このサブシステムでは、領域を表示するテキストを囲む余白も提供します。 これらの余白は、拡張して、さまざまな種類のコンテンツや視覚エフェクトを含めることができます。 余白の例については、行番号の表示とスクロール バーです。  

@@ -1,7 +1,7 @@
 ---
 title: IDebugComPlusSymbolProvider::AreSymbolsLoaded |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: bbf8707d-f89c-4177-b019-d519f1ec6f4a
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e0a45fe635ccfebb6895048d6e29d81b393171e9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7bafeca833edd2e823138c80734100bf3d246323
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546367"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941959"
 ---
 # <a name="idebugcomplussymbolprovideraresymbolsloaded"></a>IDebugComPlusSymbolProvider::AreSymbolsLoaded
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugComPlusSymbolProvider::AreSymbolsLoaded](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugcomplussymbolprovider-aresymbolsloaded)します。  
-  
 アプリケーション ドメイン id が指定された指定したモジュールのデバッグ シンボルが読み込まれるかどうかを決定します。  
   
 ## <a name="syntax"></a>構文  

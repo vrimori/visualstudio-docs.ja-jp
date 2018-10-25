@@ -1,5 +1,5 @@
 ---
-title: IDiaPropertyStorage::ReadBOOL |Microsoft ドキュメント
+title: IDiaPropertyStorage::ReadBOOL |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a7ec4afc044af9d63fc65826e473d9036bf9ca3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 3df4ce44c0cf0b3b09442dc695f73c415035e84a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31468386"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904181"
 ---
 # <a name="idiapropertystoragereadbool"></a>IDiaPropertyStorage::ReadBOOL
 読み取り`BOOL`プロパティ セット内の値。  
@@ -35,16 +35,16 @@ HRESULT ReadBOOL (
   
 #### <a name="parameters"></a>パラメーター  
  `id`  
- [in]読み込まれるプロパティの識別子 (`PROPID`として WTypes.h で定義された、 `ULONG`)。  
+ [in]読み取るプロパティの識別子 (`PROPID`として WTypes.h で定義されている、 `ULONG`)。  
   
  `pValue`  
  [out]プロパティ値を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 それ以外の場合はエラー コードを返します。 返します`E_INVALIDARG`場合は、プロパティの型ではありません`BOOL`です。  
+ 成功した場合、返します`S_OK`。 それ以外の場合はエラー コードを返します。 返します`E_INVALIDARG`型のプロパティがない場合`BOOL`します。  
   
-## <a name="remarks"></a>コメント  
- 一貫性のある結果を得るには、次のように解釈します。、`BOOL`値の 0 以外の値が実行されるように`TRUE`0 で、`FALSE`です。  
+## <a name="remarks"></a>Remarks  
+ 一貫性のある結果は、解釈、`BOOL`値の 0 以外の値が実行されるように`TRUE`0 は`FALSE`します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

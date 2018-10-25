@@ -1,7 +1,7 @@
 ---
 title: Unity のログ コールバックを VSTU と共有する | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 5
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 8e1e0f2062195830443a169c67d9b75d2b1915ec
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9e309f7d7340eb73de587c7a5f569377354dbab9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546328"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49186863"
 ---
 # <a name="share-the-unity-log-callback-with-vstu"></a>Unity のログ コールバックを VSTU と共有する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を VSTU と Unity ログ コールバックを共有](https://docs.microsoft.com/visualstudio/cross-platform/share-the-unity-log-callback-with-vstu)します。  
-  
   
 Visual Studio Tools for Unity では、Unity コンソールを Visual Studio にストリーミングできるよう、Unity にログ コールバックを登録します。 エディターのスクリプトもログ コールバックを Unity に登録すると、そのコールバックが VSTU コールバックから影響を受けることがあります。 この可能性を回避するには、`VisualStudioIntegration.LogCallback` イベントを使用して VSTU と連携します。  
   

@@ -1,7 +1,7 @@
 ---
 title: SccDiff 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: d49bc8c5-f631-4153-9d3c-feb3564da305
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bacfa40d04a897d73213c833e41c199f88981c64
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2b0c789e0d709add0423d5d6fad9ecf7110f2abb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545640"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890817"
 ---
 # <a name="sccdiff-function"></a>SccDiff 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[SccDiff 関数](https://docs.microsoft.com/visualstudio/extensibility/sccdiff-function)します。  
-  
 この関数が表示されます (または必要に応じてだけをチェック) (ローカル ディスク) 上の現在のファイルとその最後のチェックイン バージョンの違い、ソース管理システム。  
   
 ## <a name="syntax"></a>構文  

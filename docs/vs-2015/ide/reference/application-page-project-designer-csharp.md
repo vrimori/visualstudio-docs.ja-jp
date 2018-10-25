@@ -1,7 +1,7 @@
 ---
 title: '[アプリケーション] ページ (プロジェクト デザイナー) (C#) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 61
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 22970716ed5bb13c3a9539f91288e8addf469f11
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4a130a04be7a0645fef44ff6c8ae9dcc31b55dcf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549004"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867235"
 ---
 # <a name="application-page-project-designer-c"></a>[アプリケーション] ページ (プロジェクト デザイナー) (C#)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[アプリケーション ページで、プロジェクト デザイナー (c#)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-csharp)します。  
-  
   
 **プロジェクト デザイナー**の **[アプリケーション]** ページを使用して、プロジェクトのアプリケーション設定とプロパティを指定します。  
   
@@ -96,20 +94,20 @@ ms.locfileid: "47549004"
  **Manifest**  
  Windows Vista 上で、ユーザー アカウント制御 (UAC) 下でアプリケーションを実行する場合に、マニフェスト生成オプションを選択します。 このオプションには、次の値を指定できます。  
   
--   **マニフェストを既定の設定で埋め込みます**。 Windows Vista での Visual Studio の標準的な操作方法がサポートされます。つまり、アプリケーションの実行可能ファイルにセキュリティ情報を埋め込む場合は、`requestedExecutionLevel` を `AsInvoker` に指定します。 これは、既定の設定です。  
+- **マニフェストを既定の設定で埋め込みます**。 Windows Vista での Visual Studio の標準的な操作方法がサポートされます。つまり、アプリケーションの実行可能ファイルにセキュリティ情報を埋め込む場合は、`requestedExecutionLevel` を `AsInvoker` に指定します。 これは、既定の設定です。  
   
--   **マニフェストなしでアプリケーションを作成します**。 このメソッドは*仮想化*といいます。 以前のアプリケーションとの互換性を保つために、このオプションを使用します。  
+- **マニフェストなしでアプリケーションを作成します**。 このメソッドは*仮想化*といいます。 以前のアプリケーションとの互換性を保つために、このオプションを使用します。  
   
--   **Properties\app.manifest**。 このオプションは、ClickOnce または Registration-Free COM で配置されるアプリケーションで必要になります。 ClickOnce 配置を使用してアプリケーションを発行する場合、このオプションに自動的に**マニフェスト**が設定されます。  
+- **Properties\app.manifest**。 このオプションは、ClickOnce または Registration-Free COM で配置されるアプリケーションで必要になります。 ClickOnce 配置を使用してアプリケーションを発行する場合、このオプションに自動的に**マニフェスト**が設定されます。  
   
- **リソース ファイル**  
- プロジェクトのリソース ファイルをプロビジョニングする場合は、このオプション ボタンを選択します。 このオプションを選択すると、**[アイコン]** と **[マニフェスト]** オプションが無効になります。  
+  **リソース ファイル**  
+  プロジェクトのリソース ファイルをプロビジョニングする場合は、このオプション ボタンを選択します。 このオプションを選択すると、**[アイコン]** と **[マニフェスト]** オプションが無効になります。  
   
- パス名を入力するか、参照ボタン (**...**) を使用して、Win32 リソース ファイルをプロジェクトに追加します。  
+  パス名を入力するか、参照ボタン (**...**) を使用して、Win32 リソース ファイルをプロジェクトに追加します。  
   
 ## <a name="see-also"></a>関連項目  
 [アプリケーション プロパティの管理](../../ide/application-properties.md)  
- [Office ソリューションのコードの記述](http://msdn.microsoft.com/library/2d4d8fd0-e881-4829-976f-0d1a9221dec0)
+ [Writing Code in Office Solutions](http://msdn.microsoft.com/library/2d4d8fd0-e881-4829-976f-0d1a9221dec0)
 
 
 

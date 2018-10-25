@@ -1,7 +1,7 @@
 ---
 title: SccOpenProject 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: d609510b-660a-46d7-b93d-2406df20434d
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 988d869d0cca977705efa8c5363f70317c063e69
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 32f9b085caf0bf49a7be8b6a567b62027653f130
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544347"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49885565"
 ---
 # <a name="sccopenproject-function"></a>SccOpenProject 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[SccOpenProject 関数](https://docs.microsoft.com/visualstudio/extensibility/sccopenproject-function)します。  
-  
 この関数は、既存のソース管理プロジェクトを開きますか、新しいを作成します。  
   
 ## <a name="syntax"></a>構文  

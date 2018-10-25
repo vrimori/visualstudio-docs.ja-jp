@@ -1,7 +1,7 @@
 ---
 title: '方法: XML スニペットを作成する |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5ed45a3cf0be913158ffa3cd82c243fc37aca8ce
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 38bec6de97a0b9d38891046a1a6b57f4d31541bf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548688"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818160"
 ---
 # <a name="how-to-create-xml-snippets"></a>方法 : XML スニペットを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: XML スニペットの作成](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-xml-snippets)です。  
-  
   
 XML エディターを使用して、新しい XML スニペットを作成することができます。 エディターには、新しい XML スニペットを作成する際の定型スニペットである、"Snippet" という名前の XML スニペットが含まれています。  
   
@@ -83,13 +81,13 @@ XML エディターを使用して、新しい XML スニペットを作成す�
   
  この `Code` 要素には 3 つの変数が含まれています。  
   
--   $name$ はユーザー定義変数です。 この変数によって、編集可能な値を持つ `name` 要素が作成されます。既定値は "name" です。 ユーザー定義変数は、`Literal` 要素を使用して定義されます。  
+- $name$ はユーザー定義変数です。 この変数によって、編集可能な値を持つ `name` 要素が作成されます。既定値は "name" です。 ユーザー定義変数は、`Literal` 要素を使用して定義されます。  
   
--   $selected$ は定義済みの変数です。 この変数は、スニペットを呼び出す前に XML エディターで選択されたテキストを表します。 この変数の配置によって、選択されたテキストが、選択範囲を囲むコード スニペット内のどこに出現するかが決まります。  
+- $selected$ は定義済みの変数です。 この変数は、スニペットを呼び出す前に XML エディターで選択されたテキストを表します。 この変数の配置によって、選択されたテキストが、選択範囲を囲むコード スニペット内のどこに出現するかが決まります。  
   
--   $end$ は定義済みの変数です。 Enter キーを押してコード スニペット フィールドの編集を終了すると、この変数によってキャレット (^) の移動先が決まります。  
+- $end$ は定義済みの変数です。 Enter キーを押してコード スニペット フィールドの編集を終了すると、この変数によってキャレット (^) の移動先が決まります。  
   
- 上記の `Code` 要素によって、次の XML テキストが挿入されます。  
+  上記の `Code` 要素によって、次の XML テキストが挿入されます。  
   
 ```  
 <test>  

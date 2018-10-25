@@ -1,7 +1,7 @@
 ---
 title: トランザクションでのデータの保存 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e4b6d6befe4bbe29147a59b9700b8f148154e6c5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7bade19778c64b6338c29db1eef8eb09a0d95fa3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538126"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874645"
 ---
 # <a name="save-data-in-a-transaction"></a>トランザクションでデータを保存します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[トランザクションでデータを保存](https://docs.microsoft.com/visualstudio/data-tools/save-data-in-a-transaction)します。  
-  
   
 このチュートリアルを使用して、トランザクションでデータを保存する方法について説明、<xref:System.Transactions>名前空間。 この例では、Northwind サンプル データベースの `Customers` テーブルと `Orders` テーブルを使用します。  
   
@@ -114,14 +112,14 @@ ms.locfileid: "47538126"
   
 #### <a name="to-modify-the-auto-generated-save-code"></a>自動生成された保存コードを変更するには  
   
-1.  選択、**保存**のボタンでは、 **CustomersBindingNavigator** (フロッピー ディスクのアイコンのボタン)。  
+1. 選択、**保存**のボタンでは、 **CustomersBindingNavigator** (フロッピー ディスクのアイコンのボタン)。  
   
-2.  `CustomersBindingNavigatorSaveItem_Click` メソッドを次のコードで置き換えます。  
+2. `CustomersBindingNavigatorSaveItem_Click` メソッドを次のコードで置き換えます。  
   
-     [!code-csharp[VbRaddataSaving#4](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form2.cs#4)]
-     [!code-vb[VbRaddataSaving#4](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form2.vb#4)]  
+    [!code-csharp[VbRaddataSaving#4](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form2.cs#4)]
+    [!code-vb[VbRaddataSaving#4](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form2.vb#4)]  
   
- 関連するデータへの変更を解決する順序は次のとおりです。  
+   関連するデータへの変更を解決する順序は次のとおりです。  
   
 -   子レコードを削除します。 (この場合、レコードを削除、`Orders`テーブルです)。  
   

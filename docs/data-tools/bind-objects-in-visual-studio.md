@@ -18,12 +18,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6d69167189c24d2a78a5ba02a34f6d95268d72e5
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: b7790f5205aa24a68505a1b34e97283aff05e13c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39510976"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950141"
 ---
 # <a name="bind-objects-as-data-sources-in-visual-studio"></a>Visual Studio でのデータ ソースとしてのオブジェクトのバインド
 
@@ -137,7 +137,7 @@ TableAdapter の DBDirect メソッドをオブジェクトから値を渡すこ
 Visual Studio では、データベースに対して直接実行できる DBDirect メソッドを作成します。 これらのメソッドは、DataSet または DataTable オブジェクトには必要ありません。
 
 |TableAdapter DBDirect メソッド|説明|
-|----------------------------------|-----------------|
+| - |-----------------|
 |`TableAdapter.Insert`|個々 の列の値をメソッド パラメーターとして渡すことができるように、データベースに新しいレコードを追加します。|
 |`TableAdapter.Update`|既存のデータベース内のレコードを更新します。 元と新しい列の値は、Update メソッドは、メソッドのパラメーターとして受け取ります。 元のレコードを検索するため、元の値と新しい値は、そのレコードの更新に使用されます。<br /><br /> `TableAdapter.Update`ことで、データベースにデータセットの変更を調整するメソッドを使用しても、 <xref:System.Data.DataSet>、 <xref:System.Data.DataTable>、 <xref:System.Data.DataRow>、または配列の<xref:System.Data.DataRow>メソッドのパラメーターとして。|
 |`TableAdapter.Delete`|メソッドのパラメーターとして渡された元の列の値に基づいて、データベースから既存のレコードを削除します。|

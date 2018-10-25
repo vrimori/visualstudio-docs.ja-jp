@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ed7c1ec10b6cc6b2eac450ea33beceaaf58bc06
-ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
+ms.openlocfilehash: 2149410782587d8472faff678cbc20bf1ea577c1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029122"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49878377"
 ---
 # <a name="image-editor"></a>イメージ エディター
 
@@ -30,7 +30,7 @@ ms.locfileid: "47029122"
 **イメージ エディター**は次のイメージ形式をサポートします。
 
 |形式名|ファイル名の拡張子|
-|-----------------|-------------------------|
+|-----------------| - |
 |ポータブル ネットワーク グラフィックス (PNG)|*.png*|
 |JPEG|*.jpg*、*.jpeg*、*.jpe*、*.jfif*|
 |DirectDraw Surface|*.dds*|
@@ -245,7 +245,7 @@ DirectDraw Surface (*.dds*) などの一部のイメージ形式では透明度�
 ## <a name="keyboard-shortcuts"></a>キーボード ショートカット
 
 |コマンド|キーボード ショートカット|
-|-------------|------------------------|
+|-------------| - |
 |**[選択]** モードに切り替え|**S**|
 |**[ズーム]** モードに切り替え|**Z**|
 |**[パン]** モードに切り替え|**K**|

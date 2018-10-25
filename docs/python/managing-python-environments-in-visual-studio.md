@@ -1,7 +1,7 @@
 ---
 title: Python 環境とインタープリターを管理する
 description: '[Python 環境] ウィンドウを使用して、グローバル環境、仮想環境、および conda 環境を管理し、Python インタープリターとパッケージをインストールし、環境を Visual Studio プロジェクトに割り当てます。'
-ms.date: 07/23/2018
+ms.date: 09/10/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: bb2a93ae9c05bef49551e3dd3fa6d68d998e09ec
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: 2c7706e635cc159b7ae85274d46c2be762926ccc
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586581"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551264"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio で Python 環境を作成および管理する方法
 
@@ -38,7 +38,7 @@ Windows の Visual Studio では、この記事で説明する [**[Python 環境
 
 ### <a name="global-environments"></a>グローバル環境
 
-各 Python インストール (Python 2.7、Python 3.6、Anaconda 4.4.0 など。「[Python インタープリターのインストール](installing-python-interpreters.md)」を参照) で、独自のグローバル環境が保持されます。 各環境は、特定の Python インタープリター、その標準ライブラリ、および事前インストールされたパッケージのセットで構成されます。 グローバル環境にパッケージをインストールすると、グローバル環境を使用するすべてのプロジェクトでパッケージが使用できるようになります。 環境がファイル システムの保護領域にある場合 (*c:\program files* 内など)、パッケージをインストールするには管理者特権が必要です。
+各 Python インストール (Python 2.7、Python 3.6、Python 3.7、Anaconda 4.4.0 など。「[Python インタープリターのインストール](installing-python-interpreters.md)」を参照) で、独自のグローバル環境が保持されます。 各環境は、特定の Python インタープリター、その標準ライブラリ、および事前インストールされたパッケージのセットで構成されます。 グローバル環境にパッケージをインストールすると、グローバル環境を使用するすべてのプロジェクトでパッケージが使用できるようになります。 環境がファイル システムの保護領域にある場合 (*c:\program files* 内など)、パッケージをインストールするには管理者特権が必要です。
 
 グローバル環境は、コンピューター上のすべてのプロジェクトで使用できます。 Visual Studio では、1 つのグローバル環境を既定の環境として選択します。プロジェクトに対して別の環境を特に選ばない限り、すべてのプロジェクトでこれが使用されます。 詳細については、[プロジェクト用の環境の選択](selecting-a-python-environment-for-a-project.md)に関するページを参照してください。
 
@@ -46,7 +46,7 @@ Windows の Visual Studio では、この記事で説明する [**[Python 環境
 
 グローバル環境にインストールされたパッケージは、グローバル環境を使うすべてのプロジェクトで使用できるため、2 つのプロジェクトで、互換性のないパッケージや同じパッケージの異なるバージョンが必要な場合、競合が発生する可能性があります。 仮想環境では、このような競合を避けるために、グローバル環境のインタープリターと標準ライブラリを使用しながら、分離フォルダーで独自のパッケージ ストアを保持します。
 
-Visual Studio では、特定のプロジェクト用の仮想環境を作成可能で、これはプロジェクトのサブフォルダーに格納されます。 Visual Studio には、仮想環境から *requirements.txt* ファイルを生成し、他のコンピューターで環境を簡単に再作成するためのコマンドが用意されています。 詳細については、「[仮想環境を使用する](selecting-a-python-environment-for-a-project.md#use-virtual-environments)」を参照してください。
+Visual Studio では、特定のプロジェクト用の仮想環境を作成可能で、これはプロジェクトのサブフォルダーに格納されます。 Visual Studio には、仮想環境から *requirements.txt* ファイルを生成し、他のコンピューターで環境を簡単に再作成するためのコマンドが用意されています。 詳しくは、「[仮想環境を使用する](selecting-a-python-environment-for-a-project.md#use-virtual-environments)」をご覧ください。
 
 ### <a name="conda-environments"></a>conda 環境
 
@@ -76,6 +76,9 @@ Visual Studio 2017 バージョン 15.6 以前の場合、conda 環境は、「[
 Visual Studio 2017 バージョン 15.7 以降では、次のセクションに説明するように、conda 環境が自動的に検出され、**[Python 環境]** ウィンドウに表示されます。
 
 ## <a name="the-python-environments-window"></a>[Python 環境] ウィンドウ
+
+> [!Note]
+> このセクションで示されているスクリーンショットは、Visual Studio 15.8 を表しています。 ご使用の Visual Studio のバージョンによっては、UI が異なる場合があります。
 
 Visual Studio が認識した環境が **[Python 環境]** ウィンドウに表示されます。 ウィンドウを開くには、次のいずれかの方法を使用します。
 

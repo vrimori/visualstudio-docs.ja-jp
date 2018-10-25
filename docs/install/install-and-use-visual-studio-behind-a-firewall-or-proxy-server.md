@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d7e96da4ad8f55db251f816516c00502991053f7
-ms.sourcegitcommit: 6b092e7d466377f06913d49d183dbbdca16730f0
+ms.openlocfilehash: b3a3b798b704111c8afdbaaaa3b219b876ebf6ff
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43138423"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280585"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>ファイアウォールまたはプロキシ サーバーの内側に Visual Studio および Azure Services をインストールして使用する
 
@@ -119,7 +119,7 @@ Visual Studio インストーラーによって、さまざまなドメインや
 |Azure Stream Analytics <br><br>HDInsight | Management.azure.com |https|443 |ASA ジョブの表示、送信、実行、管理で使用されます <br><br> HDI クラスターを参照し、HDI ジョブを送信、診断、およびデバッグするために使用されます |
 | Azure Data Lake | &#42;.azuredatalakestore.net <br>&#42;.azuredatalakeanalytics.net | https | 443 | ジョブのコンパイル、送信、表示、診断、およびデバッグのために使用されます。ADLS ファイルを参照するために使用されます。ファイルをアップロードおよびダウンロードするために使用されます。 |
 | パッケージ サービス | [アカウント].visualstudio.com <br/> [アカウント].*.visualstudio.com <br/> *.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https | 443 | 特定のビルド タスク (NuGet Tool インストーラー、Node Tool インストーラーなど) にのみ、またはフィードで公共のアップストリームを使用する場合にのみ、*.npmjs.org、*.nuget.org、*.nodejs.org が必要です。 パッケージ サービスの中心的機能には、他の 3 つのドメインが必要です。 |
-| VSTS | *.vsassets.io <br/> static2.sharepointonline.com  |  |  | VSTS との接続に使用されます |
+| Azure DevOps Services | *.vsassets.io <br/> static2.sharepointonline.com  |  |  | Azure DevOps Services と接続するために使用 |
 |||||||
 
 ## <a name="troubleshoot-network-related-errors"></a>ネットワーク関連のエラーをトラブルシューティングする

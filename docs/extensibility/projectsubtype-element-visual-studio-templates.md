@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 46b110acd20659dcd1660e4ce92897b1c78171bb
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 6d1ca080ea61fbaaba7992fd8f4f1f4fbeac843d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39636143"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49824337"
 ---
 # <a name="projectsubtype-element-visual-studio-templates"></a>ProjectSubType 要素 (Visual Studio テンプレート)
 テンプレートで指定された値のサブカテゴリには、分類、`ProjectType`要素。  
@@ -61,15 +61,15 @@ ms.locfileid: "39636143"
   
  `ProjectSubType`要素は、サブカテゴリを[ProjectType](../extensibility/projecttype-element-visual-studio-templates.md)要素。 この値を含めることができます。  
   
--   `SmartDevice-NETCFv1`: を指定するテンプレートの対象と、[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]バージョン 1.0。  
+- `SmartDevice-NETCFv1`: を指定するテンプレートの対象と、[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]バージョン 1.0。  
   
--   `SmartDevice-NETCFv2`: を指定するテンプレートの対象と、[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]バージョン 2.0。  
+- `SmartDevice-NETCFv2`: を指定するテンプレートの対象と、[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]バージョン 2.0。  
   
- テンプレートが含まれている場合、`ProjectType`要素の値を持つ`Web`、`ProjectSubType`要素がテンプレートのプログラミング言語を指定します。 この要素は、次の値を持つことができます。  
+  テンプレートが含まれている場合、`ProjectType`要素の値を持つ`Web`、`ProjectSubType`要素がテンプレートのプログラミング言語を指定します。 この要素は、次の値を持つことができます。  
   
--   `CSharp`: このテンプレートが作成を指定します、 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Web プロジェクトまたは項目。  
+- `CSharp`: このテンプレートが作成を指定します、 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Web プロジェクトまたは項目。  
   
--   `VisualBasic`: このテンプレートが作成を指定します、 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] Web プロジェクトまたは項目。  
+- `VisualBasic`: このテンプレートが作成を指定します、 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] Web プロジェクトまたは項目。  
   
 ## <a name="example"></a>例  
  次の例のためのプロジェクト テンプレート メタデータを[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]デバイス アプリケーションを対象とする、[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]バージョン 2.0。  

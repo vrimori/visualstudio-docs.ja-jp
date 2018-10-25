@@ -1,5 +1,5 @@
 ---
-title: CV_access_e |Microsoft ドキュメント
+title: CV_access_e |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 35b10f8a98284fdec9e94043a4b827fab226d3aa
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b6de95d74b8d7edc3bde08437c3d018270758112
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31457928"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49878987"
 ---
 # <a name="cvaccesse"></a>CV_access_e
-メンバー関数および変数の表示 (アクセス レベル) のスコープを指定します。  
+メンバー関数と変数の可視性 (アクセス レベル) のスコープを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,15 +39,15 @@ typedef enum CV_access_e {
  メンバーは、プライベート アクセスを持ちます。  
   
  CV_protected  
- メンバーがアクセスを保護しました。  
+ メンバーがアクセスを保護してきました。  
   
  CV_public  
  メンバーは、パブリック アクセスを持ちます。  
   
-## <a name="remarks"></a>コメント  
- `friend`アクセス指定子は含まれませんここでは、通常、クラスのプライベートおよびプロテクトの両方の要素にアクセスできる非メンバー関数によって使用ためです。 使用して、 [idiasymbol::get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)でシンボルを検索するメソッド`SymTagFriend`アクセスします。  
+## <a name="remarks"></a>Remarks  
+ `friend`アクセス指定子は含まれませんので、通常は、クラスの private と protected の両方の要素にアクセスできる非メンバー関数によって使用されます。 使用して、 [idiasymbol::get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)でシンボルを検索するメソッド`SymTagFriend`アクセスします。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: cvconst.h  
   
 ## <a name="see-also"></a>関連項目  

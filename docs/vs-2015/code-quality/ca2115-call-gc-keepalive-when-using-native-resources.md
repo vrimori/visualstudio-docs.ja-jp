@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2115: では、Gc が発生します。ネイティブ リソースを使用する場合、KeepAlive |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 461b0dfe0448636b33e4e2e09a5c15e3aa1e0773
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: e8f45b188945febcd3c81fc4be6a9427d8fe94ba
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589071"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948747"
 ---
 # <a name="ca2115-call-gckeepalive-when-using-native-resources"></a>CA2115: ネイティブ リソースを使用しているときには GC.KeepAlive を呼び出します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2115: GC を呼び出します。ネイティブ リソースを使用する場合、KeepAlive](https://docs.microsoft.com/visualstudio/code-quality/ca2115-call-gc-keepalive-when-using-native-resources)します。
 
 |||
 |-|-|
@@ -53,11 +51,11 @@ ms.locfileid: "47589071"
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
  このルールは、偽陽性につながる可能性があるいくつかの想定です。 場合は、安全にこの規則による警告を抑制することができます。
 
--   ファイナライザーの内容を解放しません、<xref:System.IntPtr>または<xref:System.UIntPtr>メソッドによって参照されるフィールド。
+- ファイナライザーの内容を解放しません、<xref:System.IntPtr>または<xref:System.UIntPtr>メソッドによって参照されるフィールド。
 
--   メソッドは渡さない、<xref:System.IntPtr>または<xref:System.UIntPtr>フィールドをアンマネージ コードにします。
+- メソッドは渡さない、<xref:System.IntPtr>または<xref:System.UIntPtr>フィールドをアンマネージ コードにします。
 
- 慎重に除外する前に他のメッセージを確認します。 このルールは、再生やデバッグが困難なエラーを検出します。
+  慎重に除外する前に他のメッセージを確認します。 このルールは、再生やデバッグが困難なエラーを検出します。
 
 ## <a name="example"></a>例
  次の例では、`BadMethod`への呼び出しを含まない`GC.KeepAlive`そのため、ルールに違反するとします。 `GoodMethod` 修正後のコードが含まれています。

@@ -1,7 +1,7 @@
 ---
 title: ユース ケース図の UML 要素のプロパティ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 13
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: dd23baadfca51bf669336ab96bf00ee5d4594a08
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a498b31b6b0585285868d4a6668825db6543aced
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540156"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49251135"
 ---
 # <a name="properties-of-elements-on-uml-use-case-diagrams"></a>UML ユース ケース図の要素のプロパティ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML 要素のプロパティのユース ケース図](https://docs.microsoft.com/visualstudio/modeling/properties-of-elements-on-uml-use-case-diagrams)します。  
-  
 UML ユース ケース図では、図の各要素にプロパティが存在します。 要素のプロパティを表示するには、図、または要素を右クリックして**UML モデル エクスプ ローラー**し**プロパティ**します。 プロパティが表示されます、**プロパティ**ウィンドウ。  
   
 > [!NOTE]

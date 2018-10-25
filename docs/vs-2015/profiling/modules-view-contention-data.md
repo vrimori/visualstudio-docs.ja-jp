@@ -1,7 +1,7 @@
 ---
 title: モジュール ビュー - 競合データ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ccd57d1bbc81c44ce1b6130613e9752f2fc55b35
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4461795294df4824d2af2c8ada02e2f5929e0c47
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533918"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49305999"
 ---
 # <a name="modules-view---contention-data"></a>モジュール ビュー - 競合データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[モジュール ビュー - 競合データ](https://docs.microsoft.com/visualstudio/profiling/modules-view-contention-data)します。  
-  
 競合データのモジュール ビューは、プロファイル データでサンプリングされたコンカレンシー データを、モジュールごとにグループ化して表示します。 各モジュールが、階層ツリーのルートです。 競合イベントが発生したモジュールの関数が、モジュール ノードの下に一覧表示されます。  
   
  競合イベントの発生時に関数が独自のコードを実行していた場合、つまり、関数が呼び出し履歴の最上位にあった場合は、実行されていたソース行および命令アドレスが関数ノードの下に一覧表示されます。 データは行や命令の実行時にソース行または命令ポインターについて収集されるため、行データと命令データの両方の包括値と排他値は常に同じです。  

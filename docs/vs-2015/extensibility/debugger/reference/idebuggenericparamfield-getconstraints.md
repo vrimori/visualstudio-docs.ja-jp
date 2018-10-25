@@ -1,7 +1,7 @@
 ---
 title: IDebugGenericParamField::GetConstraints |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 86a78b5a-ee0f-4999-a0ba-919d3dc7d969
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 944771d8039c278de80bdd3bb8d317da7674487e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c78db574240a6ecd667266206f505b24efa3b00f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544510"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858915"
 ---
 # <a name="idebuggenericparamfieldgetconstraints"></a>IDebugGenericParamField::GetConstraints
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugGenericParamField::GetConstraints](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebuggenericparamfield-getconstraints)します。  
-  
 このジェネリック パラメーターに関連付けられている制約を取得します。  
   
 ## <a name="syntax"></a>構文  

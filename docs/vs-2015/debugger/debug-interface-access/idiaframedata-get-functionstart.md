@@ -1,7 +1,7 @@
 ---
 title: Idiaframedata::get_functionstart |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ce2a2e6cc6107f74d09ace0c154577d10944814c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e0a39212fd93138444c6aa412071cec4894b0667
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534990"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812687"
 ---
 # <a name="idiaframedatagetfunctionstart"></a>IDiaFrameData::get_functionStart
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiaframedata::get_functionstart](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiaframedata-get-functionstart)します。  
-  
 ブロックが関数のエントリ ポイントを含むかどうかを示すフラグを取得します。  
   
 ## <a name="syntax"></a>構文  

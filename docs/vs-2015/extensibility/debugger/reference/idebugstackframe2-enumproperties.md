@@ -1,7 +1,7 @@
 ---
 title: IDebugStackFrame2::EnumProperties |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 334bb95e-c7e0-4008-9f06-8c3999e47ee8
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5cbbdfe2585ec7fa90b2e98bbd76baa5093f296e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 27e19c6d9c73176c1b83b4ed0d1e188f270cc19f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533536"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49901815"
 ---
 # <a name="idebugstackframe2enumproperties"></a>IDebugStackFrame2::EnumProperties
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugStackFrame2::EnumProperties](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugstackframe2-enumproperties)します。  
-  
 ローカル変数など、スタック フレームに関連付けられているプロパティの列挙子を作成します。  
   
 ## <a name="syntax"></a>構文  

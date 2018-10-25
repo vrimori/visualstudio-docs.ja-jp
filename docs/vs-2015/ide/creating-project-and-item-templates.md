@@ -1,7 +1,7 @@
 ---
 title: プロジェクトと項目テンプレートの作成 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e288329637c6a6f421a5b32f19084897a31e5f22
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 32c1c66484d5bdaff6ba37b8b37f7f86cb513e44
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548050"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49851661"
 ---
 # <a name="creating-project-and-item-templates"></a>プロジェクトと項目テンプレートの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を作成するプロジェクトと項目テンプレート](https://docs.microsoft.com/visualstudio/ide/creating-project-and-item-templates)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のプロジェクト テンプレートおよび項目テンプレートには、再使用可能なスタブが用意されています。これらによりユーザーは、提供される基本的なコードや構造をそれぞれの用途に使用できます。  
   
 ## <a name="visual-studio-templates"></a>Visual Studio テンプレート  
@@ -47,11 +45,11 @@ ms.locfileid: "47548050"
 ## <a name="contents-of-a-template"></a>テンプレートの内容  
  すべてのプロジェクト テンプレートと項目テンプレートは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] でインストールされたものも、自分で作成したものも、同じ原則で機能し、似た内容から構成されます。 すべてのテンプレートには次の項目が含まれます。  
   
--   テンプレートを使用すると作成されるファイル。 これには、ソース コード ファイル、埋め込みリソース、プロジェクト ファイルなどが含まれます。  
+- テンプレートを使用すると作成されるファイル。 これには、ソース コード ファイル、埋め込みリソース、プロジェクト ファイルなどが含まれます。  
   
--   1 つの .vstemplate ファイル。 このファイルにはメタデータが含まれます。このメタデータが [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] に提供する情報に基づいて、**[新しいプロジェクト]** ダイアログ ボックスおよび **[新しい項目の追加]** ダイアログ ボックスにテンプレートが表示され、そのテンプレートからプロジェクトや項目が作成されます。 .vstemplate ファイルについて詳しくは、「[テンプレート パラメーター](../ide/template-parameters.md)」をご覧ください。  
+- 1 つの .vstemplate ファイル。 このファイルにはメタデータが含まれます。このメタデータが [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] に提供する情報に基づいて、**[新しいプロジェクト]** ダイアログ ボックスおよび **[新しい項目の追加]** ダイアログ ボックスにテンプレートが表示され、そのテンプレートからプロジェクトや項目が作成されます。 .vstemplate ファイルについて詳しくは、「[テンプレート パラメーター](../ide/template-parameters.md)」をご覧ください。  
   
- これらのファイルは、.zip ファイルに圧縮されて適切なフォルダーに配置されると、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で自動的に表示されます。 プロジェクト テンプレートは、**[新しいプロジェクト]** ダイアログ ボックスの **[マイ テンプレート]** セクションに表示され、項目テンプレートは **[新しい項目の追加]** ダイアログ ボックスに表示されます。 テンプレート フォルダーについて詳しくは、「[方法: テンプレートを配置して整理する](../ide/how-to-locate-and-organize-project-and-item-templates.md)」をご覧ください。  
+  これらのファイルは、.zip ファイルに圧縮されて適切なフォルダーに配置されると、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で自動的に表示されます。 プロジェクト テンプレートは、**[新しいプロジェクト]** ダイアログ ボックスの **[マイ テンプレート]** セクションに表示され、項目テンプレートは **[新しい項目の追加]** ダイアログ ボックスに表示されます。 テンプレート フォルダーについて詳しくは、「[方法: テンプレートを配置して整理する](../ide/how-to-locate-and-organize-project-and-item-templates.md)」をご覧ください。  
   
 ## <a name="starter-kits"></a>スタート キット  
  スタート キットは拡張されたテンプレートであり、コミュニティの他のメンバーと共有できます。 スタート キットには、コンパイルされるコード サンプル、ドキュメント、および有用で実際的なアプリケーションをビルドする際の新しいツールやプログラミング技法を習得するうえで役立つ他のリソースが含まれています。 スタート キットの基本的な内容と手順は、テンプレートの場合と同じです。 詳しくは、「[方法: スタート キットを作成する](../ide/how-to-create-starter-kits.md)」をご覧ください。  

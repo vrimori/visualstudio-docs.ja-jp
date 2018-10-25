@@ -1,7 +1,7 @@
 ---
 title: モデルと図のバージョン管理の管理 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,24 +14,22 @@ caps.latest.revision: 32
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 1c2cc85b5ae94e95ef5f1e07a6d3ca13663fbb44
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4aa1da880195e3566460d8169c6eed4e81bb0fb1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547443"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49187568"
 ---
 # <a name="manage-models-and-diagrams-under-version-control"></a>モデルおよび図のバージョン管理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[モデルおよびバージョン管理下にある図](https://docs.microsoft.com/visualstudio/modeling/manage-models-and-diagrams-under-version-control)します。  
-  
-使用して、モデリング プロジェクトと図、コード マップ (.dgml ファイル) などの異なるバージョンを管理[Team Foundation バージョン管理または Git を使用して、](http://msdn.microsoft.com/library/33267cee-fe5f-4aa3-b2cd-6d22ceace314)いずれかをオンプレミスの Team Foundation Server または Visual を使用してクラウドでStudio Team Services。  
+オンプレミスの Team Foundation Server やクラウド内の Visual Studio Team Services のいずれかで、 [Team Foundation バージョン管理や Git を使用](http://msdn.microsoft.com/library/33267cee-fe5f-4aa3-b2cd-6d22ceace314)して、コード マップ (.dgml ファイル) などのモデリング プロジェクトとダイアグラムの異なるバージョンを管理します。  
   
  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
 > [!IMPORTANT]
->  同一のモデリング プロジェクトで複数のユーザーが作業している場合は注意してください。 方法を調べる[中規模または大規模プロジェクトでモデルを整理](../modeling/structure-your-modeling-solution.md)します。  
+>  同一のモデリング プロジェクトで複数のユーザーが作業している場合は注意してください。 [中規模や大規模のプロジェクトでモデルを整理](../modeling/structure-your-modeling-solution.md)する方法をご確認ください。  
   
 ##  <a name="ModelingProjects"></a> モデリング プロジェクト内のファイル  
  作業対象のファイルが異なっている限り、複数のユーザーが同時にモデリング プロジェクトに対して作業できます。  
@@ -66,7 +64,7 @@ ms.locfileid: "47547443"
   
 -   パッケージを追跡しやすくするために、実際のパッケージ名に合わせてパッケージ ファイルの名前を変更します。  
   
--   [!INCLUDE[esprscc](../includes/esprscc-md.md)]、常に実行**チェックイン**と**最新バージョンの取得**個々 のファイルではなく、完全なモデリング プロジェクトを操作します。  
+-   [!INCLUDE[esprscc](../includes/esprscc-md.md)]で、個々のファイルではなく、完全なモデリング プロジェクトに対して、 **[チェックイン]** と **[最新バージョンの取得]** の操作を実行します。  
   
 -   **[取得]** 操作は、必ずモデリング プロジェクトをチェックインする直前に実行します。  
   
@@ -82,7 +80,7 @@ ms.locfileid: "47547443"
   
 -   パッケージ境界をまたぐ関係のプロパティの変更。  
   
--   チェック アウト ロックの詳細については、次を参照してください。[チェック アウトとファイルを編集](http://msdn.microsoft.com/library/eb404d63-c448-4994-9416-3e6d50ec554a)します。  
+-   チェックアウト ロックについて詳しくは、「 [ファイルのチェックアウトと編集](http://msdn.microsoft.com/library/eb404d63-c448-4994-9416-3e6d50ec554a)」をご覧ください。  
   
 ##### <a name="to-move-a-diagram-file-in-or-out-of-a-project-folder"></a>プロジェクト フォルダーの図ファイルの移動  
   
@@ -102,7 +100,7 @@ ms.locfileid: "47547443"
     >  ファイルを別のプロジェクトに移動することはできません。  
   
 ##  <a name="Merging"></a> モデル ファイルおよび図の変更のマージ  
- 1 つのモデルが複数のユーザーによって同時に操作された場合、モデル ファイルに加えられた変更をマージするよう [!INCLUDE[esprscc](../includes/esprscc-md.md)]から求められます。 前のセクションに説明したように別個のプロジェクトで作業することで、マージ操作のほとんどを回避できます。 通常、残りの競合は、自動的に安全にマージできます。 次の種類の変更の場合は、問題は発生しません。  
+ 1 つのモデルが複数のユーザーによって同時に操作された場合、モデル ファイルに加えられた変更をマージするよう [!INCLUDE[esprscc](../includes/esprscc-md.md)] から求められます。 前のセクションに説明したように別個のプロジェクトで作業することで、マージ操作のほとんどを回避できます。 通常、残りの競合は、自動的に安全にマージできます。 次の種類の変更の場合は、問題は発生しません。  
   
 -   生存線の種類。 生存線を相互作用 (シーケンス図) に追加する場合、既存の型から生存線を生成した場合を除き、その種類はルート モデルに保存されます。  
   

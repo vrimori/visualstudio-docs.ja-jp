@@ -1,7 +1,7 @@
 ---
 title: データのカスタム ビジュアライザーを作成する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -28,18 +28,16 @@ caps.latest.revision: 31
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a025068d1657d9feb569a77731aa8bab517bae2f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1fccaad8cb22bdd5193f2a674c5a9c6bafb49a7a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544694"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49217634"
 ---
 # <a name="create-custom-visualizers-of-data"></a>データのカスタム ビジュアライザーを作成します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[データのカスタム ビジュアライザーの作成](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)です。  
-  
 ビジュアライザーのコンポーネントである、[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]デバッガー ユーザー インターフェイス。 A*ビジュアライザー*  ダイアログ ボックスまたはそのデータ型に適した方法で変数またはオブジェクトを表示する別のインターフェイスを作成します。 たとえば、HTML ビジュアライザーは、HTML 文字列を解釈し、ブラウザー ウィンドウに表示されるとおりに結果を表示します。また、ビットマップ ビジュアライザーは、ビットマップ構造体を解釈し、ビットマップが表すグラフィックを表示します。 一部のビジュアライザーでは、データを表示するだけでなく、変更することもできます。  
   
  [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] デバッガーには、6 つの標準的なビジュアライザーが用意されています。 これらは、テキスト、HTML、XML、および JSON ビジュアライザー、文字列オブジェクトのすべての作業WPF オブジェクトのビジュアル ツリー; のプロパティを表示するため、WPF ツリー ビジュアライザーで、データセット、データ ビュー、および DataTable オブジェクトの動作であるデータセット visualizer です。 その他のビジュアライザーは、今後 Microsoft Corporation からダウンロード可能になる場合があり、サード パーティやコミュニティからも入手できます。 また、独自のビジュアライザーを記述して、[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] デバッガーにインストールすることもできます。  

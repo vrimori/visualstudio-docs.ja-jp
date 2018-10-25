@@ -1,7 +1,7 @@
 ---
 title: Idiaenumlinenumbers::skip |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 17f76693908bf6fae7ef53c7315d8e706335890b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: dbdef7bcc34bacee22f95f0b59ab7bf0a5e45436
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537667"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936063"
 ---
 # <a name="idiaenumlinenumbersskip"></a>IDiaEnumLineNumbers::Skip
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiaenumlinenumbers::skip](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiaenumlinenumbers-skip)します。  
-  
 指定された数の列挙体シーケンス内の行番号をスキップします。  
   
 ## <a name="syntax"></a>構文  

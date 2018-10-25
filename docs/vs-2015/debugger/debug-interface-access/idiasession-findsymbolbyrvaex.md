@@ -1,7 +1,7 @@
 ---
 title: Idiasession::findsymbolbyrvaex |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3f9c938439fde85104b5206430c8d7b4f991a067
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bd938b334edc3ed62ab82ddd7dcb31eb8c91c95f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534995"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904402"
 ---
 # <a name="idiasessionfindsymbolbyrvaex"></a>IDiaSession::findSymbolByRVAEx
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasession::findsymbolbyrvaex](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasession-findsymbolbyrvaex)します。  
-  
 が含まれているか、指定された相対仮想アドレス (RVA) およびオフセットに最も近い指定の記号の型を取得します。  
   
 ## <a name="syntax"></a>構文  

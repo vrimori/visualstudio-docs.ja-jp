@@ -1,7 +1,7 @@
 ---
 title: プロパティ ウィンドウのカスタマイズ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: a5ae14866780be08633f5a7cf07f70c5b94bcca7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ab8f1e85bec4c8a12a122030d2b9487a13e826a6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545076"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845746"
 ---
 # <a name="customizing-the-properties-window"></a>プロパティ ウィンドウのカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロパティ ウィンドウのカスタマイズ](https://docs.microsoft.com/visualstudio/modeling/customizing-the-properties-window)します。  
-  
 カスタマイズできますプロパティ ウィンドウの動作と外観をドメイン固有言語 (DSL) で[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 DSL 定義では、各ドメイン クラスのドメインのプロパティを定義します。 既定では、図またはモデル エクスプ ローラーで、クラスのインスタンスを選択するとすべてのドメイン プロパティが [プロパティ] ウィンドウに表示されます。 これにより、ドメイン プロパティの値を編集するダイアグラムで図形のフィールドにマップするがいない場合でもできます。  
   
 ## <a name="names-descriptions-and-categories"></a>名前、説明、およびカテゴリ  
@@ -35,11 +33,11 @@ ms.locfileid: "47545076"
   
  **説明**です。 ドメイン プロパティの説明は、2 つの場所が表示されます。  
   
--   ユーザーのプロパティを選択するときに、[プロパティ] ウィンドウの下部にあります。 プロパティの意味をユーザーに説明を使用できます。  
+- ユーザーのプロパティを選択するときに、[プロパティ] ウィンドウの下部にあります。 プロパティの意味をユーザーに説明を使用できます。  
   
--   生成するプログラム コード。 API のドキュメントを抽出するドキュメントの機能を使用する場合は、API では、このプロパティの説明として表示されます。  
+- 生成するプログラム コード。 API のドキュメントを抽出するドキュメントの機能を使用する場合は、API では、このプロパティの説明として表示されます。  
   
- **カテゴリ**。 カテゴリは、[プロパティ] ウィンドウの見出しです。  
+  **カテゴリ**。 カテゴリは、[プロパティ] ウィンドウの見出しです。  
   
 ## <a name="exposing-style-features"></a>スタイルの機能を公開します。  
  表現できるいくつかのグラフィカル要素の動的機能または*公開*ドメインのプロパティとして。 ユーザーがこの方法で公開されている機能を更新してより簡単に更新できるプログラム コード。  
@@ -103,38 +101,38 @@ ms.locfileid: "47545076"
   
  ただし、次のエディターと型を指定できます。  
   
-1.  標準の型で使用される別のエディター。 たとえば、文字列プロパティのファイル パス エディターを指定できます。  
+1. 標準の型で使用される別のエディター。 たとえば、文字列プロパティのファイル パス エディターを指定できます。  
   
-2.  ドメイン プロパティとそのエディターの外部の型。  
+2. ドメイン プロパティとそのエディターの外部の型。  
   
-3.  または、ファイル パスのエディターなどの .NET エディターは、独自のカスタム プロパティ エディターを作成できます。  
+3. または、ファイル パスのエディターなどの .NET エディターは、独自のカスタム プロパティ エディターを作成できます。  
   
-     外部型と文字列が既定のエディターなど、型の間の変換。  
+    外部型と文字列が既定のエディターなど、型の間の変換。  
   
- DSL で、*外部型*は単純型 (Boolean、Int32 など) または文字列のいずれかではない任意の型。  
+   DSL で、*外部型*は単純型 (Boolean、Int32 など) または文字列のいずれかではない任意の型。  
   
 #### <a name="to-define-a-domain-property-that-has-an-external-type"></a>外部の型を持つドメイン プロパティを定義するには  
   
-1.  **ソリューション エクスプ ローラー**での外部の型を含むアセンブリ (DLL) への参照を追加、 **Dsl**プロジェクト。  
+1. **ソリューション エクスプ ローラー**での外部の型を含むアセンブリ (DLL) への参照を追加、 **Dsl**プロジェクト。  
   
-     アセンブリには、.NET アセンブリ、または自分で指定されたアセンブリを指定できます。  
+    アセンブリには、.NET アセンブリ、または自分で指定されたアセンブリを指定できます。  
   
-2.  型を追加、**ドメイン型**既に同意している場合を除き、一覧表示します。  
+2. 型を追加、**ドメイン型**既に同意している場合を除き、一覧表示します。  
   
-    1.  DslDefinition.dsl を開き、 **DSL エクスプ ローラー**ルート ノードを右クリックし、クリックして**外部型の新しい追加**します。  
+   1.  DslDefinition.dsl を開き、 **DSL エクスプ ローラー**ルート ノードを右クリックし、クリックして**外部型の新しい追加**します。  
   
-         下に新しいエントリが表示されます、**ドメイン型**ノード。  
+        下に新しいエントリが表示されます、**ドメイン型**ノード。  
   
-        > [!WARNING]
-        >  メニュー項目がない、DSL のルート ノードで、**ドメイン型**ノード。  
+       > [!WARNING]
+       >  メニュー項目がない、DSL のルート ノードで、**ドメイン型**ノード。  
   
-    2.  [プロパティ] ウィンドウで、名前と、新しい種類の名前空間を設定します。  
+   2.  [プロパティ] ウィンドウで、名前と、新しい種類の名前空間を設定します。  
   
-3.  通常の方法で、ドメイン クラスにドメイン プロパティを追加します。  
+3. 通常の方法で、ドメイン クラスにドメイン プロパティを追加します。  
   
-     [プロパティ] ウィンドウで、ドロップダウン リストから外部の種類を選択します。、**型**フィールド。  
+    [プロパティ] ウィンドウで、ドロップダウン リストから外部の種類を選択します。、**型**フィールド。  
   
- この段階では、ユーザーは、プロパティの値を表示できますが、編集はできません。 表示されている値がから取得した、`ToString()`関数。 コマンドまたはルールで、たとえば、プロパティの値を設定するプログラム コードを記述できます。  
+   この段階では、ユーザーは、プロパティの値を表示できますが、編集はできません。 表示されている値がから取得した、`ToString()`関数。 コマンドまたはルールで、たとえば、プロパティの値を設定するプログラム コードを記述できます。  
   
 ### <a name="setting-a-property-editor"></a>プロパティ エディターの設定  
  次の形式でドメイン プロパティの CLR 属性を追加します。  
@@ -148,7 +146,7 @@ ms.locfileid: "47545076"
   
  使用してプロパティに属性を設定することができます、**カスタム属性**プロパティ ウィンドウ内のエントリ。  
   
- 型`AnEditor`2 番目のパラメーターで指定された型から派生する必要があります。 2 番目のパラメーターはいずれかになります<xref:System.Drawing.Design.UITypeEditor>または<xref:System.ComponentModel.ComponentEditor>します。 詳細については、「<xref:System.ComponentModel.EditorAttribute>」を参照してください。  
+ 型`AnEditor`2 番目のパラメーターで指定された型から派生する必要があります。 2 番目のパラメーターはいずれかになります<xref:System.Drawing.Design.UITypeEditor>または<xref:System.ComponentModel.ComponentEditor>します。 詳細については、「 <xref:System.ComponentModel.EditorAttribute> 」を参照してください。  
   
  独自のエディターまたはで指定されたエディターのいずれかを指定することができます、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]など<xref:System.Windows.Forms.Design.FileNameEditor>または<xref:System.Drawing.Design.ImageEditor>します。 たとえば、ユーザーがファイル名を入力できるプロパティを持つ、次の手順を使用します。  
   
@@ -180,11 +178,11 @@ ms.locfileid: "47545076"
   
  派生したクラスを記述することで、エディターを定義する<xref:System.Drawing.Design.UITypeEditor>します。 クラスをオーバーライドする必要があります。  
   
--   <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>、ユーザーと対話し、プロパティの値を更新します。  
+- <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>、ユーザーと対話し、プロパティの値を更新します。  
   
--   <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>、、エディターはダイアログを開くか、ドロップダウン メニューを提供するかどうかを指定します。  
+- <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>、、エディターはダイアログを開くか、ドロップダウン メニューを提供するかどうかを指定します。  
   
- プロパティ グリッドで表示されるプロパティの値をグラフィカルに表したを指定することもできます。 これを行うには、オーバーライド`GetPaintValueSupported`、および`PaintValue`します。  詳細については、「<xref:System.Drawing.Design.UITypeEditor>」を参照してください。  
+  プロパティ グリッドで表示されるプロパティの値をグラフィカルに表したを指定することもできます。 これを行うには、オーバーライド`GetPaintValueSupported`、および`PaintValue`します。  詳細については、「 <xref:System.Drawing.Design.UITypeEditor> 」を参照してください。  
   
 > [!NOTE]
 >  内の別のコード ファイルにコードを追加、 **Dsl**プロジェクト。  
@@ -213,7 +211,7 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
   
 ```  
   
- 詳細については、「<xref:System.Drawing.Design.UITypeEditor>」を参照してください。  
+ 詳細については、「 <xref:System.Drawing.Design.UITypeEditor> 」を参照してください。  
   
 ## <a name="providing-a-drop-down-list-of-values"></a>値のドロップダウン リストを指定します。  
  選択するユーザーの値の一覧を指定することができます。  

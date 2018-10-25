@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: dd638a539b8956716aa60b5361bd003c18d35f9b
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: a203d471d5947df9919ed8c9afe7d1c2d41296f9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36283326"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908926"
 ---
 # <a name="quickstart-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>クイック スタート: Visual Studio で XAML と C# を使用して最初のユニバーサル Windows プラットフォーム アプリを作成する
 
@@ -46,9 +46,9 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
    ![[新しいユニバーサル Windows プラットフォーム プロジェクト] の既定のターゲット バージョンと最小バージョンの設定をそのまま使用します。](../ide/media/new-uwp-project-target-minver-dialog.png)
 
-  > [!NOTE]
-  > UWP アプリを作成するために Visual Studio を初めて使用する場合、**[設定]** ダイアログ ボックスが表示されます。 **[開発者モード]**、**[はい]** の順に選択します。<br><br>
- ![UWP 設定ダイアログ ボックスで開発者モードを有効にする](../ide/media/enable-developer-mode.png)<br><br>Visual Studio では、開発者モード パッケージが追加でインストールされます。 パッケージのインストールが完了したら、**[設定]** ダイアログ ボックスを閉じます。
+   > [!NOTE]
+   > UWP アプリを作成するために Visual Studio を初めて使用する場合、**[設定]** ダイアログ ボックスが表示されます。 **[開発者モード]**、**[はい]** の順に選択します。<br><br>
+   ![UWP 設定ダイアログ ボックスで開発者モードを有効にする](../ide/media/enable-developer-mode.png)<br><br>Visual Studio では、開発者モード パッケージが追加でインストールされます。 パッケージのインストールが完了したら、**[設定]** ダイアログ ボックスを閉じます。
 
 ## <a name="create-the-application"></a>アプリケーションを作成する
 
@@ -58,29 +58,29 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 1. **ソリューション エクスプローラー**で、*MainPage.xaml* をダブルクリックして分割ビューを開きます。
 
-  ![ソリューション エクスプローラーで MainPage.xaml を開く ](../ide/media/uwp-solution-explorer-MainPage-xaml.png)
+   ![ソリューション エクスプローラーで MainPage.xaml を開く ](../ide/media/uwp-solution-explorer-MainPage-xaml.png)
 
-  デザイン キャンバスを含む **XAML デザイナー**と、コードを追加または変更できる **XAML エディター**の 2 つのウィンドウがあります。
+   デザイン キャンバスを含む **XAML デザイナー**と、コードを追加または変更できる **XAML エディター**の 2 つのウィンドウがあります。
 
-  ![XAML エディターの XAML デザイナー ウィンドウ](../ide/media/uwp-xaml-editor.png)
+   ![XAML エディターの XAML デザイナー ウィンドウ](../ide/media/uwp-xaml-editor.png)
 
 2. **[ツールボックス]** を選択して、ツールボックスのスライド アウト ウィンドウを開きます。
 
-  ![[ツールボックス] をクリックしてツールボックスのスライド アウト ウィンドウを開く](../ide/media/uwp-toolbox.png)
+   ![[ツールボックス] をクリックしてツールボックスのスライド アウト ウィンドウを開く](../ide/media/uwp-toolbox.png)
 
-  (**ツールボックス**のオプションが表示されない場合は、メニュー バーから開くことができます。 これを行うには、**[ビュー]** > **[ツールバー]** の順に選択します。 または、**Ctrl**+**Alt**+**X** キーを押します)。
+   (**ツールボックス**のオプションが表示されない場合は、メニュー バーから開くことができます。 これを行うには、**[ビュー]** > **[ツールバー]** の順に選択します。 または、**Ctrl**+**Alt**+**X** キーを押します)。
 
 3. **[ピン設定]** アイコンをクリックして、[ツールボックス] ウィンドウをドッキングします。
 
-  ![[ピン設定] アイコンをクリックして [ツールボックス] ウィンドウをドッキングする](../ide/media/uwp-toolbox-autohide.png)
+   ![[ピン設定] アイコンをクリックして [ツールボックス] ウィンドウをドッキングする](../ide/media/uwp-toolbox-autohide.png)
 
 4. **[ボタン]** コントロールをクリックし、デザイン キャンバスまでドラッグします。
 
    ![[ボタン] コントロールをクリックしデザイン キャンバスまでドラッグする](../ide/media/uwp-toolbox-add-button-control.png)
 
-  **XAML エディター**でコードを参照すると、そこにもボタンが追加されていることを確認できます。
+   **XAML エディター**でコードを参照すると、そこにもボタンが追加されていることを確認できます。
 
-  ![[ボタン] コントロールをクリックしデザイン キャンバスまでドラッグする](../ide/media/uwp-xaml-control-code-window.png)
+   ![[ボタン] コントロールをクリックしデザイン キャンバスまでドラッグする](../ide/media/uwp-xaml-control-code-window.png)
 
 ### <a name="add-a-label-to-the-button"></a>ボタンにラベルを追加する
 
@@ -100,18 +100,18 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 2. 分離コード ページの *MainPage.xaml.cs* でイベント ハンドラー コードを編集します。
 
- ポイントはここからです。 既定のイベント ハンドラーは次のようになります。
+   ポイントはここからです。 既定のイベント ハンドラーは次のようになります。
 
    ![既定の Button_Click イベント ハンドラー ](../ide/media/uwp-button-click-code.png)
 
- これを次のように変更してみます。
+   これを次のように変更してみます。
 
     ![新しい非同期の Button_Click イベント ハンドラー ](../ide/media/uwp-add-hello-world-async-code.png)
 
-  コピーして貼り付けるコードは次のとおりです。
+   コピーして貼り付けるコードは次のとおりです。
 
-  ```C#
-  private async void Button_Click(object sender, RoutedEventArgs e)
+   ```C#
+   private async void Button_Click(object sender, RoutedEventArgs e)
          {
              MediaElement mediaElement = new MediaElement();
              var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
@@ -119,7 +119,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
              mediaElement.SetSource(stream, stream.ContentType);
              mediaElement.Play();
          }
-  ```
+   ```
 
 #### <a name="what-did-we-just-do"></a>行った処理
 
@@ -141,7 +141,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 3. **[Hello World]** ボタンをクリックします。
 
- Windows 10 デバイスにより、"Hello, World!" と文字通り読み上げられます。
+   Windows 10 デバイスにより、"Hello, World!" と文字通り読み上げられます。
 
 4. アプリを閉じるには、ツール バーで **[デバッグの停止]** ボタンをクリックします。 (または、メニュー バーから **[デバッグ]**+**[デバッグの停止]** を選択するか、**Shift** > **F5** キーを押します)。
 

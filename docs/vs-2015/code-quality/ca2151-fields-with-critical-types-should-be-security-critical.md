@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2151: クリティカル型のフィールドはセキュリティ クリティカルなをする必要があります |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,17 +14,15 @@ caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: c2ce99a404dacdbcc82c628f8f682c53883948ff
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: bbd3e62d58717b5c7d617960afe1d6f490dd2b44
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "47593222"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951367"
 ---
 # <a name="ca2151-fields-with-critical-types-should-be-security-critical"></a>CA2151: クリティカル型のフィールドはセキュリティ クリティカルである必要があります
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2151: クリティカル型のフィールドはセキュリティ クリティカルには](https://docs.microsoft.com/visualstudio/code-quality/ca2151-fields-with-critical-types-should-be-security-critical)します。
 
 |||
 |-|-|
@@ -46,7 +44,6 @@ ms.locfileid: "47593222"
    {
       Type1 m_field; // CA2151, transparent field of critical type
    }
-
 ```
 
  この例では、`m_field` はセキュリティ クリティカルな型の透過的セキュリティ フィールドです。
@@ -80,7 +77,6 @@ ms.locfileid: "47593222"
       [SecurityCritical]
       Type1 m_field; // Fixed: critical type, critical field
    }
-
 ```
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況

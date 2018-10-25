@@ -1,7 +1,7 @@
 ---
 title: Visual Studio バージョン サイド バイ サイドのインストール |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,12 +18,12 @@ caps.latest.revision: 48
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: ae67e83b2f1444c09129ed5242afac2c3939c954
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d6cc66b828b07c0facb8fae19b562dc6566df420
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547475"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49199902"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>Visual Studio バージョン サイド バイ サイドのインストールします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,15 +31,15 @@ ms.locfileid: "47547475"
 Visual Studio のこのバージョンは、旧バージョンの Visual Studio が既にインストールされたコンピューターにもインストールできます。 インストールに失敗した場合は、 [ログ収集ツール](http://go.microsoft.com/fwlink/?LinkId=262077) を使用して失敗に関する情報を収集し、自分で問題をデバッグできます。  
   
 > [!NOTE]
->  インストールすることをお勧めします。[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]バージョンをリリースされた順にします。 たとえば、Visual Studio 2015 をインストールする前に Visual Studio 2013 をインストールします。  
+>  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のバージョンをリリースされた順にインストールすることをお勧めします。 たとえば、Visual Studio 2015 をインストールする前に Visual Studio 2013 をインストールします。  
   
  複数のバージョンを並行してインストールする前に、次の条件を確認してください。  
   
--   作成されたソリューションを開くには、Visual Studio 2015 を使用するかどうかは[!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]、後で開くし、Visual Studio 2015 に固有の機能を実装していない限り、以前のバージョンでもう一度ソリューションを変更できます。  
+-   Visual Studio 2015 を使用して [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]で作成されたソリューションを開くと、Visual Studio 2015 に固有の機能を実装しない限り、後で以前のバージョンのソリューションを開き、再度変更できます。  
   
--   作成されたソリューションを開くときに Visual Studio 2015 を使用しようとすると[!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]以前のバージョンは、プロジェクトおよび Visual Studio 2015 と互換性があるファイルを変更する必要があります。 詳細については、次を参照してください。、[ポート、移行、および Visual Studio プロジェクトのアップグレード](../misc/port-migrate-and-upgrade-visual-studio-projects-in-visual-studio-15-rc.md)ページ。  
+-   Visual Studio 2015 を使用して [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] 以前のバージョンで作成されたソリューションを開こうとすると、Visual Studio 2015 と互換性のあるプロジェクトとファイルの変更が必要になる場合があります。 詳細については、次を参照してください。、[ポート、移行、および Visual Studio プロジェクトのアップグレード](../misc/port-migrate-and-upgrade-visual-studio-projects-in-visual-studio-15-rc.md)ページ。  
   
--   複数のバージョンの [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] がコンピューターにインストールされている場合、そのうちの 1 つのバージョンをアンインストールすると、すべてのバージョンの [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のファイルの関連付けが削除されます。 使用してファイルの関連付けを再度割り当てることができます、**復元ファイルの関連付け**のボタンでは、**環境**、**全般**のページ、 [のオプション](../ide/reference/general-environment-options-dialog-box.md)  ダイアログ ボックス。  
+-   複数のバージョンの [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] がコンピューターにインストールされている場合、そのうちの 1 つのバージョンをアンインストールすると、すべてのバージョンの [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のファイルの関連付けが削除されます。 ファイルの関連付けを再度割り当てるには、 **[オプション]** ダイアログ ボックスの **[環境]**、 **[全般]** ページにある [[ファイルの関連付けを復元]](../ide/reference/general-environment-options-dialog-box.md) を使用します。  
   
 -   すべての拡張機能に互換性があるわけではないので、Visual Studio は拡張機能を自動的にアップグレードしません。 [Visual Studio ギャラリー](http://go.microsoft.com/fwlink/?LinkId=178891) またはソフトウェア発行者から入手した拡張機能を再インストールする必要があります。  
   

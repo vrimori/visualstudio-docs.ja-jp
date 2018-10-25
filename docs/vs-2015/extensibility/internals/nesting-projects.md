@@ -1,7 +1,7 @@
 ---
 title: 入れ子になったプロジェクト |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 12cce037-9840-4761-845e-5abd5fb317b0
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 70a454877a5cb7638edaff8263b6505de16ee9c9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3ec874d68b7a94811f0733f7045414cb48ddc880
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538347"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49294256"
 ---
 # <a name="nesting-projects"></a>入れ子になったプロジェクト
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[入れ子プロジェクト](https://docs.microsoft.com/visualstudio/extensibility/internals/nesting-projects)します。  
-  
 VS パッケージを使用するエンタープライズ アプリケーション開発者が類似した種類のプロジェクトでまとめてを便利にグループ[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]を使用して*プロジェクトの入れ子*します。 たとえば、エンタープライズ テンプレート プロジェクトは、カテゴリにプロジェクトをグループ化の入れ子になったプロジェクトを使用します。 ビジネス ファサード プロジェクトや Web UI プロジェクトの場合は、1 つのカテゴリにグループ化。  
   
  このシナリオでは、開発者は、各親プロジェクトの下で入れ子にできますプロジェクトの数に制限、開発者が制限をプログラムで提供できます。 この種類のグループ化もできる再帰的で、下に子は、親のサブプロジェクトのサブプロジェクト子場合に子プロジェクトと同じ型のプロジェクトを入れ子にすることができます。  

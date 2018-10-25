@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_token |Microsoft ドキュメント
+title: Idiasymbol::get_token |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cd07ada1fba5e6b3ac113d96d1c7ab3979753700
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: de9996e9bbe482060af8f10ed232230c4068358c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31471208"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887541"
 ---
 # <a name="idiasymbolgettoken"></a>IDiaSymbol::get_token
 マネージ関数または変数のメタデータ トークンを取得します。  
@@ -37,10 +37,10 @@ HRESULT get_token (
  [out]マネージ関数または変数のメタデータ トークンを返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティが、シンボルを使用できないことを意味します。  
+>  戻り値`S_FALSE`プロパティがシンボルを使用できないことを意味します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

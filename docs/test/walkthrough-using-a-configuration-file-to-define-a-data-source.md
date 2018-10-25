@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2552dec4e564b42d2044ce0d9da51ebfb8913901
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 64d01fd3551ee94cef178cb840742721db58a360
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382679"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49821618"
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>チュートリアル: データ ソースを定義するための構成ファイルの使用
 
@@ -88,7 +88,7 @@ ms.locfileid: "39382679"
 3. 1 つ目の **add** 要素には、Microsoft Access データベースに接続するための次の属性と値を作成します。
 
 |属性|値|
-|---------------|------------|
+|-|------------|
 |`name`|`"MyJetConn"`|
 |`connectionString`|`"Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\testdatasource.accdb; Persist Security Info=False;"`|
 |`providerName`|`"System.Data.OleDb"`|
@@ -135,7 +135,7 @@ ms.locfileid: "39382679"
 4. 1 つ目の **add** 要素には、Microsoft Access データ ソース用の次の属性と値を作成します。
 
 |属性|値|
-|---------------|------------|
+|-|------------|
 |`name`|`"MyJetDataSource"`|
 |`connectionString`|`"MyJetConn"`|
 |`dataTableName`|`"MyDataTable"`|

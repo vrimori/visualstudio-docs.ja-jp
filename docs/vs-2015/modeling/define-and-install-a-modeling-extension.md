@@ -1,7 +1,7 @@
 ---
 title: 定義およびモデリング拡張機能のインストール |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,35 +15,33 @@ caps.latest.revision: 39
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: c3d6ea563d7b7d4e2cac0e4f69ea5fddcd192418
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: c6ed7f72a8125d2307b91cd829bd6f474145fa78
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592686"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49827481"
 ---
 # <a name="define-and-install-a-modeling-extension"></a>モデリング拡張機能を定義およびインストールする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[モデリング拡張機能の定義と](https://docs.microsoft.com/visualstudio/modeling/define-and-install-a-modeling-extension)します。  
-  
 Visual Studio では、モデリング図に対して拡張機能を定義することができます。 これにより、図とモデルを各自のニーズに適応させることができます。 たとえば、メニュー コマンド、UML プロファイル、検証制約、およびツールボックスの項目を定義できます。 単一の拡張機能で複数のコンポーネントを定義できます。 また、これらの拡張機能を [VSIX (Visual Studio Integration Extension)](http://go.microsoft.com/fwlink/?LinkId=160780)の形式で他の Visual Studio ユーザーに配布することもできます。 Visual Studio で VSIX プロジェクトを使用して VSIX を作成できます。  
   
 ## <a name="requirements"></a>必要条件  
- 参照してください[要件](../modeling/extend-uml-models-and-diagrams.md#Requirements)します。  
+ 「 [要件](../modeling/extend-uml-models-and-diagrams.md#Requirements)」を参照してください。  
   
- この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
+ この機能をサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
 ## <a name="creating-a-modeling-extension-solution"></a>モデリング拡張機能ソリューションの生成  
  モデリング拡張機能を定義するには、次のプロジェクトを含むソリューションを生成する必要があります。  
   
--   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Integration Extension (VSIX) プロジェクト。 このプロジェクトでは、拡張機能のコンポーネントのインストーラーとして機能するファイルを生成します。  
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Integration Extension (VSIX) プロジェクト。 このプロジェクトでは、拡張機能のコンポーネントのインストーラーとして機能するファイルを生成します。  
   
--   プログラム コードを含むコンポーネントに必要なクラス ライブラリ プロジェクト。  
+- プログラム コードを含むコンポーネントに必要なクラス ライブラリ プロジェクト。  
   
- 1 つの拡張機能を複数のコンポーネントで構成する場合は、単一のソリューションにそれらのコンポーネントを組み込むことができます。 必要な VSIX プロジェクトは 1 つだけです。  
+  1 つの拡張機能を複数のコンポーネントで構成する場合は、単一のソリューションにそれらのコンポーネントを組み込むことができます。 必要な VSIX プロジェクトは 1 つだけです。  
   
- カスタム ツールボックス項目やカスタム UML プロファイルなど、コードを必要としないコンポーネントは、別個のクラス ライブラリ プロジェクトを使用せずに直接 VSIX プロジェクトに追加できます。 プログラム コードが必要なコンポーネントは、別個のクラス ライブラリ プロジェクトを使用してさらに簡単に定義できます。 コードが必要なコンポーネントとしては、ジェスチャ ハンドラー、メニュー コマンド、検証コードなどがあります。  
+  カスタム ツールボックス項目やカスタム UML プロファイルなど、コードを必要としないコンポーネントは、別個のクラス ライブラリ プロジェクトを使用せずに直接 VSIX プロジェクトに追加できます。 プログラム コードが必要なコンポーネントは、別個のクラス ライブラリ プロジェクトを使用してさらに簡単に定義できます。 コードが必要なコンポーネントとしては、ジェスチャ ハンドラー、メニュー コマンド、検証コードなどがあります。  
   
 #### <a name="to-create-a-class-library-project-for-menu-commands-gesture-handlers-or-validation"></a>メニュー コマンド、ジェスチャ ハンドラー、または検証のクラス ライブラリ プロジェクトを作成するには  
   
@@ -104,7 +102,7 @@ Visual Studio では、モデリング図に対して拡張機能を定義する
   
 1.  [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] **デバッグ**] メニューの [選択**デバッグの開始**します。  
   
-     プロジェクトがビルドされ、[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] の新しいインスタンスが実験モードで起動されます。  
+     プロジェクトがビルドされ、 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] の新しいインスタンスが実験モードで起動されます。  
   
     -   または、 **[デバッグなしで開始]** を選択することもできます。 これにより、プログラムの起動時間が短縮されます。  
   
@@ -135,15 +133,15 @@ Visual Studio では、モデリング図に対して拡張機能を定義する
   
 #### <a name="to-uninstall-an-extension"></a>拡張機能をアンインストールするには  
   
-1.  **[ツール]** メニューの **[拡張機能と更新プログラム]** をクリックします。  
+1. **[ツール]** メニューの **[拡張機能と更新プログラム]** をクリックします。  
   
-2.  **[インストール済みの拡張機能]** を展開します。  
+2. **[インストール済みの拡張機能]** を展開します。  
   
-3.  拡張機能を選択し、 **[アンインストール]** をクリックします。  
+3. 拡張機能を選択し、 **[アンインストール]** をクリックします。  
   
- 拡張機能の障害が原因で読み込みが失敗し、エラー ウィンドウにレポートが生成されることがまれにありますが、それは拡張機能マネージャーには表示されません。 次の場所からファイルを削除することによって、拡張機能を削除する場合、場所 *%localappdata%* は通常*DriveName*: \Users\\*ユーザー名*\AppData\Local:  
+   拡張機能の障害が原因で読み込みが失敗し、エラー ウィンドウにレポートが生成されることがまれにありますが、それは拡張機能マネージャーには表示されません。 次の場所からファイルを削除することによって、拡張機能を削除する場合、場所 *%localappdata%* は通常*DriveName*: \Users\\*ユーザー名*\AppData\Local:  
   
- *%Localappdata%* **\Microsoft\VisualStudio\\[バージョン] \Extensions**  
+   *%Localappdata%* **\Microsoft\VisualStudio\\[バージョン] \Extensions**  
   
 ## <a name="see-also"></a>関連項目  
  [プロファイルを定義すると、UML を拡張](../modeling/define-a-profile-to-extend-uml.md)   

@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: マネージド コードに対する単体テストの作成と実行 | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ ms.assetid: 2b018b18-b412-4e0e-b0ee-b580a2f3ba9c
 caps.latest.revision: 85
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: a134510d67ff66b5508233bda9034e51bbdb050a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 50d8190f386a4923fd05cbfaec137791bd9f2b5a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536104"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874502"
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-managed-code"></a>チュートリアル: マネージド コードに対する単体テストの作成と実行
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: マネージ コードに対する単体テストの作成と実行中](https://docs.microsoft.com/visualstudio/test/walkthrough-creating-and-running-unit-tests-for-managed-code)します。  
-  
 このチュートリアルでは、マネージド コード用の Microsoft 単体テスト フレームワークと Visual Studio テスト エクスプローラーを使用して一連の単体テストを作成、実行、およびカスタマイズする手順について説明します。 開発中の C# プロジェクトで作業を開始し、そのコードを実行するテストを作成し、テストを実行し、結果を調べます。 次に、プロジェクト コードを変更し、テストを再実行します。  
   
  このトピックは、次のセクションで構成されています。  
@@ -41,17 +39,17 @@ ms.locfileid: "47536104"
   
  [テスト クラスを作成する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Create_the_test_class)  
   
--   [テスト クラスの要件](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Test_class_requirements)  
+- [テスト クラスの要件](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Test_class_requirements)  
   
- [最初のテスト メソッドを作成する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Create_the_first_test_method)  
+  [最初のテスト メソッドを作成する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Create_the_first_test_method)  
   
--   [テスト メソッドの要件](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Test_method_requirements)  
+- [テスト メソッドの要件](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Test_method_requirements)  
   
- [テストをビルドして実行する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Build_and_run_the_test)  
+  [テストをビルドして実行する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Build_and_run_the_test)  
   
- [コードを修正してテストを再実行する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Fix_your_code_and_rerun_your_tests)  
+  [コードを修正してテストを再実行する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Fix_your_code_and_rerun_your_tests)  
   
- [単体テストを使用してコードを改良する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Use_unit_tests_to_improve_your_code)  
+  [単体テストを使用してコードを改良する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Use_unit_tests_to_improve_your_code)  
   
 > [!NOTE]
 >  このチュートリアルでは、マネージド コード用の Microsoft 単体テスト フレームワークを使用します。 また、テスト エクスプローラー用のアダプターを備えたサード パーティの単体テスト フレームワークからテスト エクスプローラーを実行することもできます。 詳細については、「[サードパーティ製の単体テスト フレームワークをインストールする](../test/install-third-party-unit-test-frameworks.md)」をご覧ください。  
@@ -65,37 +63,37 @@ ms.locfileid: "47536104"
   
 ##  <a name="BKMK_Prepare_the_walkthrough"></a> チュートリアルを準備する  
   
-1.  Visual Studio を開きます。  
+1. Visual Studio を開きます。  
   
-2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
+2. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
+    **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-3.  **[インストールされているテンプレート]** の **[Visual C#]** をクリックします。  
+3. **[インストールされているテンプレート]** の **[Visual C#]** をクリックします。  
   
-4.  アプリケーションの種類の一覧の **[クラス ライブラリ]** をクリックします。  
+4. アプリケーションの種類の一覧の **[クラス ライブラリ]** をクリックします。  
   
-5.  In the **[名前]** ボックスに「 `Bank` をポイントし、 **[OK]**」をご覧ください。  
+5. In the **[名前]** ボックスに「 `Bank` をポイントし、 **[OK]**」をご覧ください。  
   
-    > [!NOTE]
-    >  "Bank" という名前が既に使用されている場合は、別のプロジェクト名を選択します。  
+   > [!NOTE]
+   >  "Bank" という名前が既に使用されている場合は、別のプロジェクト名を選択します。  
   
-     新しい Bank プロジェクトが作成され、コード エディターに Class1.cs ファイルが開いた状態でソリューション エクスプローラーが表示されます。  
+    新しい Bank プロジェクトが作成され、コード エディターに Class1.cs ファイルが開いた状態でソリューション エクスプローラーが表示されます。  
   
-    > [!NOTE]
-    >  コード エディターに Class1.cs ファイルが表示されない場合、ソリューション エクスプローラーのファイル Class1.cs をダブルクリックして開きます。  
+   > [!NOTE]
+   >  コード エディターに Class1.cs ファイルが表示されない場合、ソリューション エクスプローラーのファイル Class1.cs をダブルクリックして開きます。  
   
-6.  「[単体テストを作成するためのサンプル プロジェクト](../test/sample-project-for-creating-unit-tests.md)」からソース コードをコピーします。  
+6. 「[単体テストを作成するためのサンプル プロジェクト](../test/sample-project-for-creating-unit-tests.md)」からソース コードをコピーします。  
   
-7.  Class1.cs の元の内容を、「[単体テスト作成用のサンプル プロジェクト](../test/sample-project-for-creating-unit-tests.md)」のコードで置き換えます。  
+7. Class1.cs の元の内容を、「[単体テスト作成用のサンプル プロジェクト](../test/sample-project-for-creating-unit-tests.md)」のコードで置き換えます。  
   
-8.  ファイルを BankAccount.cs として保存します。  
+8. ファイルを BankAccount.cs として保存します。  
   
 9. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
- Bank という名前のプロジェクトができます。 これには、テストするソース コードとテストに使用するツールが含まれています。 Bank の **BankAccountNS**名前空間には、パブリック クラス **BankAccount**が含まれます。そのメソッドを次の手順でテストします。  
+   Bank という名前のプロジェクトができます。 これには、テストするソース コードとテストに使用するツールが含まれています。 Bank の **BankAccountNS**名前空間には、パブリック クラス **BankAccount**が含まれます。そのメソッドを次の手順でテストします。  
   
- このクイック スタートでは、 `Debit` メソッドについて説明します。Debit メソッドは、現金が口座から引き出され、次のコードが含まれているときに呼び出されます。  
+   このクイック スタートでは、 `Debit` メソッドについて説明します。Debit メソッドは、現金が口座から引き出され、次のコードが含まれているときに呼び出されます。  
   
 ```csharp  
 // method under test  
@@ -173,52 +171,52 @@ using BankAccountNS;
 ###  <a name="BKMK_Test_class_requirements"></a> テスト クラスの要件  
  テスト クラスの最小要件は次のとおりです。  
   
--   マネージド コード用の Microsoft 単体テスト フレームワークでは、テスト エクスプローラーで実行する単体テスト メソッドを含むすべてのクラスについて、 `[TestClass]` 属性が必要です。  
+- マネージド コード用の Microsoft 単体テスト フレームワークでは、テスト エクスプローラーで実行する単体テスト メソッドを含むすべてのクラスについて、 `[TestClass]` 属性が必要です。  
   
--   テスト エクスプローラーで実行する各テスト メソッドには `[TestMethod]`属性が必要です。  
+- テスト エクスプローラーで実行する各テスト メソッドには `[TestMethod]`属性が必要です。  
   
- 単体テスト プロジェクトで `[TestClass]` 属性がない別のクラスを使用することができます。また、テスト クラスで `[TestMethod]` 属性がない別のメソッドを使用することもできます。 こうした別のクラスやメソッドをテスト メソッドで使用できます。  
+  単体テスト プロジェクトで `[TestClass]` 属性がない別のクラスを使用することができます。また、テスト クラスで `[TestMethod]` 属性がない別のメソッドを使用することもできます。 こうした別のクラスやメソッドをテスト メソッドで使用できます。  
   
 ##  <a name="BKMK_Create_the_first_test_method"></a> 最初のテスト メソッドを作成する  
  この手順では、 `Debit` クラスの `BankAccount` メソッドの動作を検証する単体テスト メソッドを記述します。 メソッドは上に一覧表示されています。  
   
  テスト対象のメソッドを分析したところ、チェックする必要のある動作が 3 つ以上あると判断されます。  
   
-1.  [ArgumentOutOfRangeException] がスローされます (<!-- TODO: review code entity reference <xref:assetId:///ArgumentOutOfRangeException?qualifyHint=False&amp;autoUpgrade=True>  -->) 引き落とし金額が残高を上回る場合。  
+1. [ArgumentOutOfRangeException] がスローされます (<!-- TODO: review code entity reference <xref:assetId:///ArgumentOutOfRangeException?qualifyHint=False&amp;autoUpgrade=True>  -->) 引き落とし金額が残高を上回る場合。  
   
-2.  また、引き落とし金額が 0 未満の場合も、このメソッドは `ArgumentOutOfRangeException` をスローします。  
+2. また、引き落とし金額が 0 未満の場合も、このメソッドは `ArgumentOutOfRangeException` をスローします。  
   
-3.  1. と 2. のチェックで金額が有効な範囲内であることが確認された場合、このメソッドは口座残高から当該金額を減算します。  
+3. 1. と 2. のチェックで金額が有効な範囲内であることが確認された場合、このメソッドは口座残高から当該金額を減算します。  
   
- 最初のテストでは、正しい金額 (口座残高未満かつ 0 を上回る金額) によって口座から正しい金額が引き出されることが確認されます。  
+   最初のテストでは、正しい金額 (口座残高未満かつ 0 を上回る金額) によって口座から正しい金額が引き出されることが確認されます。  
   
 #### <a name="to-create-a-test-method"></a>テスト メソッドを作成するには  
   
-1.  使用する `BankAccountNS;` ステートメントを BankAccountTests.cs ファイルに追加します。  
+1. 使用する `BankAccountNS;` ステートメントを BankAccountTests.cs ファイルに追加します。  
   
-2.  次のメソッドを `BankAccountTests` クラスに追加します。  
+2. 次のメソッドを `BankAccountTests` クラスに追加します。  
   
-    ```csharp  
-    // unit test code  
-    [TestMethod]  
-    public void Debit_WithValidAmount_UpdatesBalance()  
-    {  
-        // arrange  
-        double beginningBalance = 11.99;  
-        double debitAmount = 4.55;  
-        double expected = 7.44;  
-        BankAccount account = new BankAccount("Mr. Bryan Walton", beginningBalance);  
+   ```csharp  
+   // unit test code  
+   [TestMethod]  
+   public void Debit_WithValidAmount_UpdatesBalance()  
+   {  
+       // arrange  
+       double beginningBalance = 11.99;  
+       double debitAmount = 4.55;  
+       double expected = 7.44;  
+       BankAccount account = new BankAccount("Mr. Bryan Walton", beginningBalance);  
   
-        // act  
-        account.Debit(debitAmount);  
+       // act  
+       account.Debit(debitAmount);  
   
-        // assert  
-        double actual = account.Balance;  
-        Assert.AreEqual(expected, actual, 0.001, "Account not debited correctly");  
-    }  
-    ```  
+       // assert  
+       double actual = account.Balance;  
+       Assert.AreEqual(expected, actual, 0.001, "Account not debited correctly");  
+   }  
+   ```  
   
- このメソッドはやや単純です。 期首残高を含む新しい `BankAccount` オブジェクトを設定し、有効な金額を引き出します。 マネージド コード用の Microsoft 単体テスト フレームワークの <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A> メソッドを使用して、期末残高が想定どおりであることを確認します。  
+   このメソッドはやや単純です。 期首残高を含む新しい `BankAccount` オブジェクトを設定し、有効な金額を引き出します。 マネージド コード用の Microsoft 単体テスト フレームワークの <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A> メソッドを使用して、期末残高が想定どおりであることを確認します。  
   
 ###  <a name="BKMK_Test_method_requirements"></a> テスト メソッドの要件  
  テスト メソッドは次の条件を満たしている必要があります。  
@@ -244,7 +242,7 @@ using BankAccountNS;
 ##  <a name="BKMK_Fix_your_code_and_rerun_your_tests"></a> コードを修正してテストを再実行する  
  **テスト結果を分析する**  
   
- テスト結果には失敗を示すメッセージが含まれています。 `AreEquals` メソッドについて、メッセージには、想定された事項 (**Expected\<*XXX*>** パラメーター) および実際に受け取られた事項 (**Actual\<*YYY*>** パラメーター) が示されます。 ここでは、残高が期首残高よりも減少していることを想定していましたが、逆に、引き出し額の分が増加していました。  
+ テスト結果には失敗を示すメッセージが含まれています。 `AreEquals` メソッドについて、メッセージには、想定された事項 (<strong>Expected\<*XXX*></strong> パラメーター) および実際に受け取られた事項 (**Actual\<*YYY*>** パラメーター) が示されます。 ここでは、残高が期首残高よりも減少していることを想定していましたが、逆に、引き出し額の分が増加していました。  
   
  Debit コードの再検査では、単体テストでバグを検出できたことが示されます。 引き出し額は、減算する必要があるときに口座残高に追加されます。  
   
@@ -273,13 +271,13 @@ m_balance -= amount;
   
  `Debit` メソッドで有効な金額が正しく差し引かれることを確認するテスト メソッドを作成したら、元の分析における残りのケースに移ることができます。  
   
-1.  引き落とし金額が残高を上回る場合、このメソッドは `ArgumentOutOfRangeException` をスローします。  
+1. 引き落とし金額が残高を上回る場合、このメソッドは `ArgumentOutOfRangeException` をスローします。  
   
-2.  また、引き落とし金額が 0 未満の場合も、このメソッドは `ArgumentOutOfRangeException` をスローします。  
+2. また、引き落とし金額が 0 未満の場合も、このメソッドは `ArgumentOutOfRangeException` をスローします。  
   
- **テスト メソッドを作成する**  
+   **テスト メソッドを作成する**  
   
- これらの問題に対処するためのテスト メソッド作成への最初の試みは、期待の持てるものです。  
+   これらの問題に対処するためのテスト メソッド作成への最初の試みは、期待の持てるものです。  
   
 ```csharp  
 //unit test method  
@@ -302,21 +300,21 @@ public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
   
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> 属性を使用して、正しい例外がスローされたことをアサートします。 この属性により、 `ArgumentOutOfRangeException` がスローされない限り、テストは失敗します。 正と負の両方の `debitAmount` 値を使用してテストを実行し、金額が 0 未満のときに汎用的な <xref:System.ApplicationException> をスローするようにメソッドを一時的に変更すると、テストが正しく動作することが示されます。 引き出し金額が残高を上回るケースをテストするために必要なことは次のとおりです。  
   
-1.  `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange`という新しいテスト メソッドを作成します。  
+1. `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange`という新しいテスト メソッドを作成します。  
   
-2.  メソッド本体を `Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange` から新しいメソッドにコピーします。  
+2. メソッド本体を `Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange` から新しいメソッドにコピーします。  
   
-3.  `debitAmount` を、残高を上回る数値に設定します。  
+3. `debitAmount` を、残高を上回る数値に設定します。  
   
- **テストを実行**  
+   **テストを実行**  
   
- `debitAmount` を異なる値にして 2 つのメソッドを実行すると、テストで残りのケースが適切に処理されることが示されます。 3 つのすべてのテストを実行すると、元の分析のすべてのケースが正しく処理されることを確認できます。  
+   `debitAmount` を異なる値にして 2 つのメソッドを実行すると、テストで残りのケースが適切に処理されることが示されます。 3 つのすべてのテストを実行すると、元の分析のすべてのケースが正しく処理されることを確認できます。  
   
- **分析を継続する**  
+   **分析を継続する**  
   
- 一方で、最後の 2 つのテスト メソッドには多少の問題もあります。 一方のテストの実行時に、テスト対象のコードのいずれの条件がスローされたかがはっきりしません。 そこで、2 つの条件を区別するのに役立つ方法があります。 この問題についてさらに考えてみると、いずれの条件に違反したかを把握することでテストの信頼性が高まることが明らかになります。 また、この情報は、テスト対象のメソッドで例外がスローされたときに例外を処理する実稼働のメカニズムにも役立つ可能性があります。 メソッドでのスロー時により多くの情報が生成されると、すべての懸念事項に役立ちますが、 `ExpectedException` 属性ではこの情報を提供できません。  
+   一方で、最後の 2 つのテスト メソッドには多少の問題もあります。 一方のテストの実行時に、テスト対象のコードのいずれの条件がスローされたかがはっきりしません。 そこで、2 つの条件を区別するのに役立つ方法があります。 この問題についてさらに考えてみると、いずれの条件に違反したかを把握することでテストの信頼性が高まることが明らかになります。 また、この情報は、テスト対象のメソッドで例外がスローされたときに例外を処理する実稼働のメカニズムにも役立つ可能性があります。 メソッドでのスロー時により多くの情報が生成されると、すべての懸念事項に役立ちますが、 `ExpectedException` 属性ではこの情報を提供できません。  
   
- テスト対象のメソッドをもう一度確認すると、引数の名前をパラメーターとして使用する `ArgumentOutOfRangeException` コンストラクターが両方の条件ステートメントで使用されていることがわかります。  
+   テスト対象のメソッドをもう一度確認すると、引数の名前をパラメーターとして使用する `ArgumentOutOfRangeException` コンストラクターが両方の条件ステートメントで使用されていることがわかります。  
   
 ```csharp  
 throw new ArgumentOutOfRangeException("amount");  
@@ -355,13 +353,13 @@ public const string DebitAmountLessThanZeroMessage = "Debit amount less than zer
   
  このテスト メソッドでは、最初に `ExpectedException` 属性を削除します。 その代わりに、スローされた例外をキャッチし、その例外が正しい条件ステートメントでスローされたことを確認します。 また一方、2 つのオプションのどちらを使用して残りの条件を検証するかをここで決める必要があります。 たとえば `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` メソッドでは、次のアクションのいずれかを使用できます。  
   
--   例外 ( `ActualValue` コンストラクターの 2 番目のパラメーター) の `ArgumentOutOfRangeException` プロパティが期首残高を上回っていることをアサートします。 このオプションでは、テスト メソッドの `ActualValue` 変数に対して例外の `beginningBalance` プロパティをテストし、 `ActualValue` が 0 を上回ることを確認する必要があります。  
+- 例外 ( `ActualValue` コンストラクターの 2 番目のパラメーター) の `ArgumentOutOfRangeException` プロパティが期首残高を上回っていることをアサートします。 このオプションでは、テスト メソッドの `ActualValue` 変数に対して例外の `beginningBalance` プロパティをテストし、 `ActualValue` が 0 を上回ることを確認する必要があります。  
   
--   `DebitAmountExceedsBalanceMessage` クラスに定義された `BankAccount` がメッセージ (コンストラクターの 3 番目のパラメーター) に含まれていることをアサートします。  
+- `DebitAmountExceedsBalanceMessage` クラスに定義された `BankAccount` がメッセージ (コンストラクターの 3 番目のパラメーター) に含まれていることをアサートします。  
   
- Microsoft 単体テスト フレームワークの <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=fullName> メソッドでは、1 番目のオプションで必要とされる計算を行わなくても、2 番目のオプションを確認できます。  
+  Microsoft 単体テスト フレームワークの <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=fullName> メソッドでは、1 番目のオプションで必要とされる計算を行わなくても、2 番目のオプションを確認できます。  
   
- `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` の変更の 2 回目の試行は次のようになります。  
+  `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` の変更の 2 回目の試行は次のようになります。  
   
 ```csharp  
 [TestMethod]  
@@ -389,15 +387,15 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
   
  テスト メソッドを別の値で再テストする場合、次の事項が発生します。  
   
-1.  `debitAmount` が残高を上回るアサートを使用することで適切なエラーをキャッチした場合、 `Contains` アサートは成功し、例外は無視されます。したがって、テスト メソッドは成功することになります。 これは想定どおりの動作です。  
+1. `debitAmount` が残高を上回るアサートを使用することで適切なエラーをキャッチした場合、 `Contains` アサートは成功し、例外は無視されます。したがって、テスト メソッドは成功することになります。 これは想定どおりの動作です。  
   
-2.  0 未満の `debitAmount` を使用した場合、不適切なエラー メッセージが返されるため、アサートは失敗します。 テスト対象メソッドのコード パス上の別のポイントで一時的な `ArgumentOutOfRange` 例外を導入した場合も、アサートは失敗します。 これも適切です。  
+2. 0 未満の `debitAmount` を使用した場合、不適切なエラー メッセージが返されるため、アサートは失敗します。 テスト対象メソッドのコード パス上の別のポイントで一時的な `ArgumentOutOfRange` 例外を導入した場合も、アサートは失敗します。 これも適切です。  
   
-3.  `debitAmount` 値が有効な場合 (残高未満だが 0 よりは大きい場合)、例外はキャッチされないので、アサートはキャッチされません。 テスト メソッドは成功します。 これは適切ではありません。例外がスローされない場合はテスト メソッドが失敗することを想定しているためです。  
+3. `debitAmount` 値が有効な場合 (残高未満だが 0 よりは大きい場合)、例外はキャッチされないので、アサートはキャッチされません。 テスト メソッドは成功します。 これは適切ではありません。例外がスローされない場合はテスト メソッドが失敗することを想定しているためです。  
   
- 3 番目の事項はテスト メソッドのバグです。 この問題を解決しようとする場合は、テスト メソッドの最後に <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> アサートを追加して、例外がスローされないケースを処理するようにします。  
+   3 番目の事項はテスト メソッドのバグです。 この問題を解決しようとする場合は、テスト メソッドの最後に <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> アサートを追加して、例外がスローされないケースを処理するようにします。  
   
- ただし、再テストでは、正しい例外がキャッチされた場合にテストが失敗したことが示されます。 catch ステートメントで例外がリセットされ、メソッドは継続して実行されますが、新しいアサートで失敗します。 この新しい問題を解決するために、 `return` の後に `StringAssert`ステートメントを追加します。 再テストにより、問題を修正したことを確認します。 `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` の最終バージョンは、次のようになります。  
+   ただし、再テストでは、正しい例外がキャッチされた場合にテストが失敗したことが示されます。 catch ステートメントで例外がリセットされ、メソッドは継続して実行されますが、新しいアサートで失敗します。 この新しい問題を解決するために、 `return` の後に `StringAssert`ステートメントを追加します。 再テストにより、問題を修正したことを確認します。 `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` の最終バージョンは、次のようになります。  
   
 ```csharp  
 [TestMethod]  

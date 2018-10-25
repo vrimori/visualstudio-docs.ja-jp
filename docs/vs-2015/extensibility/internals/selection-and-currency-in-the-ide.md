@@ -1,7 +1,7 @@
 ---
 title: 選択と、IDE で通貨 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 2f6f18d1-acd8-454d-a856-9a4d81155052
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 87796930b8b1f76e7601bfd2dbffdddcf8d32da6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bfd8b3d6a74d4be6edce66e6d921a6c608f861ae
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537819"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49902872"
 ---
 # <a name="selection-and-currency-in-the-ide"></a>IDE での選択と通貨
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[の選択と、IDE で通貨](https://docs.microsoft.com/visualstudio/extensibility/internals/selection-and-currency-in-the-ide)します。  
-  
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]選択を使用してユーザーの情報がオブジェクトに現在選択されている統合開発環境 (IDE) の保持*コンテキスト*します。 選択範囲のコンテキストで Vspackage を活用する通貨の 2 つの方法で追跡。  
   
 -   によって、通貨については、IDE に Vspackage を伝達します。  
@@ -54,15 +52,15 @@ ms.locfileid: "47537819"
 ### <a name="window-types-and-selection"></a>ウィンドウの種類と選択  
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE では、2 つの一般的な種類に windows が整理されます。  
   
--   階層型の windows  
+- 階層型の windows  
   
--   ツールとドキュメント ウィンドウなどのフレーム ウィンドウ  
+- ツールとドキュメント ウィンドウなどのフレーム ウィンドウ  
   
- IDE は、これらのウィンドウの種類ごとに異なる方法で通貨を追跡します。  
+  IDE は、これらのウィンドウの種類ごとに異なる方法で通貨を追跡します。  
   
- 最も一般的なプロジェクトの種類 ウィンドウは、IDE を制御するソリューション エクスプ ローラーです。 プロジェクトの種類 ウィンドウは、グローバルな階層と、グローバルの選択コンテキストの ItemID を追跡し、ウィンドウが現在の階層を決定する、ユーザーの選択に依存しています。 プロジェクトの種類の windows の場合、環境には、グローバル サービスが備わっています<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>を使用して、どの Vspackage が開いている要素の現在の値を監視できます。 プロパティの参照、環境では、このグローバル サービスによって駆動されます。  
+  最も一般的なプロジェクトの種類 ウィンドウは、IDE を制御するソリューション エクスプ ローラーです。 プロジェクトの種類 ウィンドウは、グローバルな階層と、グローバルの選択コンテキストの ItemID を追跡し、ウィンドウが現在の階層を決定する、ユーザーの選択に依存しています。 プロジェクトの種類の windows の場合、環境には、グローバル サービスが備わっています<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>を使用して、どの Vspackage が開いている要素の現在の値を監視できます。 プロパティの参照、環境では、このグローバル サービスによって駆動されます。  
   
- フレーム ウィンドウ、その一方で、使用して、DocObject フレーム ウィンドウ内でプッシュ SelectionContext 値 (階層/ItemID/SelectionContainer 忍耐)。 . フレーム ウィンドウは、サービスを使用して<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>この目的のためです。 DocObject は選択コンテナーでは、値のみをプッシュできる階層構造のローカル値のままと通常 MDI 子ドキュメントの ItemID が変更されません。  
+  フレーム ウィンドウ、その一方で、使用して、DocObject フレーム ウィンドウ内でプッシュ SelectionContext 値 (階層/ItemID/SelectionContainer 忍耐)。 . フレーム ウィンドウは、サービスを使用して<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>この目的のためです。 DocObject は選択コンテナーでは、値のみをプッシュできる階層構造のローカル値のままと通常 MDI 子ドキュメントの ItemID が変更されません。  
   
 ### <a name="events-and-currency"></a>イベントと通貨  
  通貨の環境の概念に影響する 2 種類のイベントが発生する可能性があります。  

@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: e46b8af413f7f86592ed6c9362ca9f11e61c436f
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 41008d1c2808a5a6e6428670a3e7dbbf1041caee
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380379"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819340"
 ---
 # <a name="how-to-create-a-custom-editor-for-data-for-your-diagnostic-data-adapter"></a>方法: 診断データ アダプター用のデータのカスタム エディターを作成する
 
@@ -38,128 +38,128 @@ ms.locfileid: "39380379"
 
 ## <a name="to-create-a-custom-editor-for-your-diagnostic-data-adapter"></a>診断データ アダプター用のカスタム エディターを作成するには
 
-1.  プロジェクトにデータ診断アダプター用のユーザー コントロールを作成します。
+1. プロジェクトにデータ診断アダプター用のユーザー コントロールを作成します。
 
-    1.  診断データ アダプターのクラスを含むコード プロジェクトを右クリックし、**[追加]** をポイントし、**[ユーザー コントロール]** をポイントします。
+   1.  診断データ アダプターのクラスを含むコード プロジェクトを右クリックし、**[追加]** をポイントし、**[ユーザー コントロール]** をポイントします。
 
-    2.  この例では、"**Data File Name:**" というテキストが表示されたラベルおよび "**FileTextBox**" という名前のテキスト ボックスをフォームに追加して、ユーザーが必要なデータを入力できるようにします。
+   2.  この例では、"**Data File Name:**" というテキストが表示されたラベルおよび "**FileTextBox**" という名前のテキスト ボックスをフォームに追加して、ユーザーが必要なデータを入力できるようにします。
 
-    > [!NOTE]
-    > 現在、Windows フォームのユーザー コントロールだけがサポートされています。
+   > [!NOTE]
+   > 現在、Windows フォームのユーザー コントロールだけがサポートされています。
 
-2.  次の行を宣言セクションに追加します。
+2. 次の行を宣言セクションに追加します。
 
-    ```csharp
-    using System.Xml;
-    using Microsoft.VisualStudio.TestTools.Common;
-    using Microsoft.VisualStudio.TestTools.Execution;
-    ```
+   ```csharp
+   using System.Xml;
+   using Microsoft.VisualStudio.TestTools.Common;
+   using Microsoft.VisualStudio.TestTools.Execution;
+   ```
 
-3.  このユーザー コントロールをカスタム エディターにします。
+3. このユーザー コントロールをカスタム エディターにします。
 
-    1.  コード プロジェクト内でユーザー コントロールを右クリックし、**[コードの表示]** をポイントします。
+   1.  コード プロジェクト内でユーザー コントロールを右クリックし、**[コードの表示]** をポイントします。
 
-    2.  次のようにして、エディターのインターフェイス <xref:Microsoft.VisualStudio.TestTools.Execution.IDataCollectorConfigurationEditor> を実装するようにクラスを設定します。
+   2.  次のようにして、エディターのインターフェイス <xref:Microsoft.VisualStudio.TestTools.Execution.IDataCollectorConfigurationEditor> を実装するようにクラスを設定します。
 
-    ```csharp
-    public partial class MyDataConfigEditor :
-         UserControl, IDataCollectorConfigurationEditor
-    ```
+   ```csharp
+   public partial class MyDataConfigEditor :
+        UserControl, IDataCollectorConfigurationEditor
+   ```
 
-    1.  コードで <xref:Microsoft.VisualStudio.TestTools.Execution.IDataCollectorConfigurationEditor> を右クリックして、**[インターフェイスの実装]** をクリックします。 このインターフェイスに実装する必要があるメソッドがクラスに追加されます。
+   1.  コードで <xref:Microsoft.VisualStudio.TestTools.Execution.IDataCollectorConfigurationEditor> を右クリックして、**[インターフェイスの実装]** をクリックします。 このインターフェイスに実装する必要があるメソッドがクラスに追加されます。
 
-    2.  エディター用のユーザー コントロールに <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute> を追加して、診断データ アダプター用エディターとして識別します。このとき、**Company**、**Product**、および **Version** を診断データ アダプターに応じた情報に置き換えます。
+   2.  エディター用のユーザー コントロールに <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute> を追加して、診断データ アダプター用エディターとして識別します。このとき、**Company**、**Product**、および **Version** を診断データ アダプターに応じた情報に置き換えます。
 
-        ```csharp
-        [DataCollectorConfigurationEditorTypeUri(
-            "configurationeditor://MyCompany/MyConfigEditor/1.0")]
-        ```
+       ```csharp
+       [DataCollectorConfigurationEditorTypeUri(
+           "configurationeditor://MyCompany/MyConfigEditor/1.0")]
+       ```
 
-4.  次のように 2 つのプライベート変数を追加します。
+4. 次のように 2 つのプライベート変数を追加します。
 
-    ```csharp
-    private DataCollectorSettings collectorSettings;
-    private IServiceProvider ServiceProvider { get; set; }
-    ```
+   ```csharp
+   private DataCollectorSettings collectorSettings;
+   private IServiceProvider ServiceProvider { get; set; }
+   ```
 
-5.  診断データ アダプター用エディターを初期化するためのコードを追加します。 settings 変数のデータを使用して、ユーザー コントロールのフィールドに既定値を追加できます。 これは、アダプターの XML 構成ファイルの `<DefaultConfiguration>` 要素に含まれるデータです。
+5. 診断データ アダプター用エディターを初期化するためのコードを追加します。 settings 変数のデータを使用して、ユーザー コントロールのフィールドに既定値を追加できます。 これは、アダプターの XML 構成ファイルの `<DefaultConfiguration>` 要素に含まれるデータです。
 
-    ```csharp
-    public void Initialize(
-        IServiceProvider svcProvider,
-        DataCollectorSettings settings)
-    {
-        ServiceProvider = svcProvider;
-        collectorSettings = settings;
+   ```csharp
+   public void Initialize(
+       IServiceProvider svcProvider,
+       DataCollectorSettings settings)
+   {
+       ServiceProvider = svcProvider;
+       collectorSettings = settings;
 
-        // Display the default file name as listed in the settings file.
-        this.SuspendLayout();
-        this.FileTextBox.Text = getText(collectorSettings.Configuration);
-        this.ResumeLayout();
-    }
-    ```
+       // Display the default file name as listed in the settings file.
+       this.SuspendLayout();
+       this.FileTextBox.Text = getText(collectorSettings.Configuration);
+       this.ResumeLayout();
+   }
+   ```
 
-6.  次のように、エディターのコントロールのデータを診断データ アダプターの API に必要な XML 形式で保存するためのコードを追加します。
+6. 次のように、エディターのコントロールのデータを診断データ アダプターの API に必要な XML 形式で保存するためのコードを追加します。
 
-    ```csharp
-    public DataCollectorSettings SaveData()
-    {
-        collectorSettings.Configuration.InnerXml =
-            String.Format(
-    @"<MyCollectorName
-        xmlns=""http://MyCompany/schemas/MyDiagnosticDataCollector/1.0"">
-      <File FullPath=""{0}"" />
-    </MyCollectorName>",
-        FileTextBox.Text);
-        return collectorSettings;
-    }
-    ```
+   ```csharp
+   public DataCollectorSettings SaveData()
+   {
+       collectorSettings.Configuration.InnerXml =
+           String.Format(
+   @"<MyCollectorName
+       xmlns=""http://MyCompany/schemas/MyDiagnosticDataCollector/1.0"">
+     <File FullPath=""{0}"" />
+   </MyCollectorName>",
+       FileTextBox.Text);
+       return collectorSettings;
+   }
+   ```
 
-7.  必要に応じて、`VerifyData` メソッドにデータが正しいことを検証するためのコードを追加するか、`true` が返されるようにします。
+7. 必要に応じて、`VerifyData` メソッドにデータが正しいことを検証するためのコードを追加するか、`true` が返されるようにします。
 
-    ```csharp
-    public bool VerifyData()
-    {
-        // Not currently verifying data
-        return true;
-    }
-    ```
+   ```csharp
+   public bool VerifyData()
+   {
+       // Not currently verifying data
+       return true;
+   }
+   ```
 
-8.  (省略可能) データを XML 構成ファイルで指定されている初期設定にリセットするためのコードを、`ResetToAgentDefaults()` プライベート メソッドを使用する `getText()` メソッドに追加できます。
+8. (省略可能) データを XML 構成ファイルで指定されている初期設定にリセットするためのコードを、`ResetToAgentDefaults()` プライベート メソッドを使用する `getText()` メソッドに追加できます。
 
-    ```csharp
-    // Reset to default value from XML configuration
-    // using a custom getText() method
-    public void ResetToAgentDefaults()
-    {
-        this.FileTextBox.Text = getText(collectorSettings.DefaultConfiguration);
-    }
+   ```csharp
+   // Reset to default value from XML configuration
+   // using a custom getText() method
+   public void ResetToAgentDefaults()
+   {
+       this.FileTextBox.Text = getText(collectorSettings.DefaultConfiguration);
+   }
 
-    // Local method to read the configuration settings
-    private string getText(XmlElement element)
-    {
-        // Setup namespace manager with our namespace
-        XmlNamespaceManager nsmgr =
-            new XmlNamespaceManager(
-                element.OwnerDocument.NameTable);
+   // Local method to read the configuration settings
+   private string getText(XmlElement element)
+   {
+       // Setup namespace manager with our namespace
+       XmlNamespaceManager nsmgr =
+           new XmlNamespaceManager(
+               element.OwnerDocument.NameTable);
 
-        // Find all the "File" elements under our configuration
-        XmlNodeList files = element.SelectNodes("//ns:MyCollectorName/ns:File", nsmgr);
+       // Find all the "File" elements under our configuration
+       XmlNodeList files = element.SelectNodes("//ns:MyCollectorName/ns:File", nsmgr);
 
-        string result = String.Empty;
-        if (files.Count > 0)
-        {
-            XmlAttribute pathAttribute = files[0].Attributes["FullPath"];
-            if (pathAttribute != null &&
-                !String.IsNullOrEmpty(pathAttribute.Value))
-            {
-                result = pathAttribute.Value;
-            }
-        }
+       string result = String.Empty;
+       if (files.Count > 0)
+       {
+           XmlAttribute pathAttribute = files[0].Attributes["FullPath"];
+           if (pathAttribute != null &&
+               !String.IsNullOrEmpty(pathAttribute.Value))
+           {
+               result = pathAttribute.Value;
+           }
+       }
 
-        return result;
-    }
-    ```
+       return result;
+   }
+   ```
 
 9. ソリューションをビルドします。 診断データ アダプターのアセンブリおよび XML 構成ファイル (`<diagnostic data adapter name>.dll.config`) を、*%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\DataCollectors* にコピーします (この場所はインストール ディレクトリによって変わります)。
 
@@ -184,7 +184,7 @@ ms.locfileid: "39380379"
 
      エディターで指定したデータ ファイルがテスト結果に関連付けられます。
 
- テストの実行時に環境を使用するようにテストの設定を構成する方法の詳細については、[テスト中の診断データの収集 (VSTS)](/vsts/manual-test/collect-diagnostic-data) に関するページまたは[手動テストでの診断データの収集 (VSTS)](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)に関するページを参照してください。
+    テストの実行時に環境を使用するようにテストの設定を構成する方法の詳細については、[テスト中の診断データの収集 (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts) に関するページまたは[手動テストでの診断データの収集 (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)に関するページを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c45f439a8bb1ae559e915769f8ea89ef7f4bf863
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 29273ff1580d7fcb757a979309d38f599a9ff499
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31945923"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908743"
 ---
 # <a name="specify-custom-build-events-in-visual-studio"></a>Visual Studio でのカスタム ビルド イベントの指定
 
@@ -37,24 +37,24 @@ ms.locfileid: "31945923"
 
  最適な結果を得るには、次のような書式のヒントに従います。
 
--   *.bat* ファイルを実行するすべてのビルド イベントの前に `call` ステートメントを追加します。
+- *.bat* ファイルを実行するすべてのビルド イベントの前に `call` ステートメントを追加します。
 
-     例 : `call C:\MyFile.bat`
+   例 : `call C:\MyFile.bat`
 
-     例 : `call C:\MyFile.bat call C:\MyFile2.bat`
+   例 : `call C:\MyFile.bat call C:\MyFile2.bat`
 
--   ファイルのパスを引用符で囲みます。
+- ファイルのパスを引用符で囲みます。
 
-     例 ([!INCLUDE[win8](../debugger/includes/win8_md.md)] の場合): "%ProgramFiles(x86)%\Microsoft SDKs\Windows\v8.0A\Bin\NETFX 4.0 Tools\gacutil.exe" -if "$(TargetPath)"
+   例 ([!INCLUDE[win8](../debugger/includes/win8_md.md)] の場合): "%ProgramFiles(x86)%\Microsoft SDKs\Windows\v8.0A\Bin\NETFX 4.0 Tools\gacutil.exe" -if "$(TargetPath)"
 
--   改行を使用して、複数のコマンドを区切ります。
+- 改行を使用して、複数のコマンドを区切ります。
 
--   必要に応じて、ワイルドカードを挿入します。
+- 必要に応じて、ワイルドカードを挿入します。
 
-     例: `for %I in (*.txt *.doc *.html) do copy %I c:\`*mydirectory*`\`
+   例: `for %I in (*.txt *.doc *.html) do copy %I c:\`*mydirectory*`\`
 
-    > [!NOTE]
-    >  上記のコードの `%I` は、バッチ スクリプトでは `%%I` になります。
+  > [!NOTE]
+  >  上記のコードの `%I` は、バッチ スクリプトでは `%%I` になります。
 
 ## <a name="see-also"></a>関連項目
 

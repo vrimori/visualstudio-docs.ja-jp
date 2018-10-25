@@ -1,13 +1,13 @@
 ---
 title: Azure 仮想マシンでの Visual Studio の使用
 description: Azure 仮想マシンで Visual Studio を使用する方法を説明します
-ms.date: 07/10/2018
+ms.date: 09/12/2018
 ms.technology: vs-acquisition
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - azure services
-- virtual machine; VM
+- virtual machine
 - installation
 - visual studio
 author: PhilLee-MSFT
@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fa13718a27b2840ee027a20238702fccd2bc8f4
-ms.sourcegitcommit: a6734c4d76dae3d21b55b10f3bc618dfa6b62dea
+ms.openlocfilehash: 0aef833e6257b288283644ffdc9ea4458f332b27
+ms.sourcegitcommit: 551f13774e8bb0eb47cbd973745628a956e866aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42627221"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459817"
 ---
 # <a id="top"> </a> Azure 上の Visual Studio イメージ
 
@@ -34,9 +34,9 @@ ms.locfileid: "42627221"
 
 | リリース バージョン                                              | エディション                     |     製品バージョン     |
 |:------------------------------------------------------------:|:----------------------------:|:-----------------------:|
-| Visual Studio 2017: 最新 (バージョン 15.8)                    |    Enterprise、Community     |      バージョン 15.8.0     |
-| Visual Studio 2017: 最新のプレビュー (バージョン 15.8、プレビュー 5) |    Enterprise、Community     |      バージョン 15.8.5     |
-|         Visual Studio 2017: RTW                              |    Enterprise、Community     |      バージョン 15.0.17    |
+| Visual Studio 2017: 最新 (バージョン 15.8)                    |    Enterprise、Community     |      バージョン 15.8.4     |
+| Visual Studio 2017: 最新のプレビュー (バージョン 15.9、プレビュー 2) |    Enterprise、Community     |      バージョン 15.9       |
+|         Visual Studio 2017: RTW                              |    Enterprise、Community     |      バージョン 15.0.18    |
 |   Visual Studio 2015: 最新 (Update 3)                      |    Enterprise、Community     |  バージョン 14.0.25431.01  |
 |         Visual Studio 2015: RTW                              |             なし             | (サービス有効期限切れ) |
 

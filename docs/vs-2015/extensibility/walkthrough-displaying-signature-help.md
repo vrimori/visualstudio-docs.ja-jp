@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: シグネチャ ヘルプの表示 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 4a6a884b-5730-4b54-9264-99684f5b523c
 caps.latest.revision: 29
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 24c3eea821209485b5d57335c0c948cae92b4a20
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0642b798668e24e7ba1e6595ab3c8ea6dba6885e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537091"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49247924"
 ---
 # <a name="walkthrough-displaying-signature-help"></a>チュートリアル: シグネチャ ヘルプの表示
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: シグネチャ ヘルプを表示する](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-displaying-signature-help)します。  
-  
 シグネチャ ヘルプ (とも呼ばれます*パラメーター ヒント*)、ユーザーがパラメーター リストの開始文字 (通常、開きかっこを入力) を入力すると、ツールヒントに、メソッドのシグネチャを表示します。 パラメーターとパラメーターの区切り記号 (コンマ) を入力すると、次のパラメーターを太字で表示するツールヒントが更新されます。 シグネチャ ヘルプを定義の言語サービスのコンテキストでまたは独自ファイル名拡張子とコンテンツ タイプを定義し、その型だけのシグネチャ ヘルプを表示できますかシグネチャ ヘルプを表示の既存のコンテンツ タイプ (たとえば、"text")。 このチュートリアルでは、「テキスト」コンテンツ タイプのシグネチャ ヘルプを表示する方法を示します。  
   
  たとえば、特定の文字を入力してシグネチャ ヘルプがトリガーされる通常"("(かっこ) し、もう 1 つの文字を入力して")"(閉じかっこ)。 キーストロークのコマンド ハンドラーを使用して文字を入力することによってトリガーされる IntelliSense 機能を実装することができます (、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>インターフェイス)、および実装するハンドラー プロバイダー、<xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener>インターフェイス。 署名のために使用される署名の一覧には、シグネチャ ヘルプ ソースを作成するには、実装、<xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource>インターフェイスおよび実装するソース プロバイダー、<xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider>インターフェイス。 プロバイダーは、Managed Extensibility Framework (MEF) コンポーネントの部分とはサービスとブローカー、たとえば、ソースとコント ローラー クラスをエクスポートおよびインポートを担当、 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>、テキスト バッファーに移動することができます、<xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker>、シグネチャ ヘルプのセッションが開始します。  
@@ -40,7 +38,7 @@ ms.locfileid: "47537091"
   
 #### <a name="to-create-a-mef-project"></a>MEF プロジェクトを作成するには  
   
-1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を`SignatureHelpTest`します。  
+1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューション `SignatureHelpTest`の名前を指定します。  
   
 2.  エディター分類子の項目テンプレートをプロジェクトに追加します。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)です。  
   
@@ -63,7 +61,7 @@ ms.locfileid: "47537091"
   
 #### <a name="to-implement-the-signature-help-signatures-and-parameters"></a>シグネチャ ヘルプの署名とパラメーターを実装するには  
   
-1.  クラス ファイルを追加し、名前`SignatureHelpSource`します。  
+1.  クラス ファイルを追加し、その名前を `SignatureHelpSource`にします。  
   
 2.  次の imports を追加します。  
   

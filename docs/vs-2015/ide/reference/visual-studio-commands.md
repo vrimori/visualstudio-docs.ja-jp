@@ -1,7 +1,7 @@
 ---
 title: Visual Studio コマンド | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 28d7bcbb9f25667ba3e03cbad8935e8eef203036
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2b1c3756075bb4a5892b9d57c0e6ba497eea3d06
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539477"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49228138"
 ---
 # <a name="visual-studio-commands"></a>Visual Studio コマンド
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio のコマンド](https://docs.microsoft.com/visualstudio/ide/reference/visual-studio-commands)します。  
-  
   
 Visual Studio のコマンドを使用すると、 **[コマンド]** ウィンドウ、 **[イミディエイト]** ウィンドウ、または **[検索]** ボックスからコマンドを呼び出すことができます。 どちらに入力する場合でも、後続の操作が検索またはデバッグではなく、コマンドであることを示す不等号 (`>`) を使用します。  
   
@@ -78,7 +76,7 @@ Visual Studio のコマンドを使用すると、 **[コマンド]** ウィン�
 |[[現在のスタック フレームを設定する]](../../ide/reference/set-current-stack-frame-command.md)|特定のスタック フレームを表示できます。|  
 |[[現在のスレッドを設定する]](../../ide/reference/set-current-thread-command.md)|特定のスレッドを表示できます。|  
 |[[基数の設定]](../../ide/reference/set-radix-command.md)|表示するバイト数を指定します。|  
-|[Shell](../../ide/reference/shell-command.md)|コマンド プロンプトからコマンドを実行した場合と同様に、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 内からプログラムを起動します。|  
+|[Shell](../../ide/reference/shell-command.md)|コマンド プロンプトからコマンドを実行した場合と同様に、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 内からプログラムを起動します。|  
 |[ShowWebBrowser コマンド](../../ide/reference/showwebbrowser-command.md)|指定した URL を統合開発環境 (IDE: Integrated Development Environment) の内部または外部の Web ブラウザーのウィンドウに表示します。|  
 |[[開始]](../../ide/reference/start-command.md)|デバッグ プロセスが開始され、エラーの処理方法を指定できるようになります。|  
 |[パス](../../ide/reference/symbol-path-command.md)|デバッガーによってシンボルが検索されるディレクトリの一覧を設定します。|  
@@ -88,7 +86,7 @@ Visual Studio のコマンドを使用すると、 **[コマンド]** ウィン�
 ## <a name="see-also"></a>関連項目  
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   
- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+ [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: グラフィックス パイプライン ステージ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: eda25bb46a9920b8662e8af8b2e4c08da04c3781
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 140dea9d65260a4ea5140e09df5876a59e64b2de
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534383"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49938605"
 ---
 # <a name="graphics-pipeline-stages"></a>グラフィックス パイプライン ステージ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[グラフィックス パイプライン ステージ](https://docs.microsoft.com/visualstudio/debugger/graphics/graphics-pipeline-stages)します。  
-  
 [グラフィックス パイプライン ステージ] ウィンドウでは、個々の描画の呼び出しが Direct3D グラフィックス パイプラインの各ステージでどのように変換されるのか理解できます。  
   
  [パイプライン ステージ] ウィンドウを次に示します。  
@@ -42,11 +40,11 @@ ms.locfileid: "47534383"
 ### <a name="links-to-related-graphics-objects"></a>関連するグラフィックス オブジェクトへのリンク  
  場合によっては、描画呼び出しが特定の方法でグラフィックス パイプラインと対話する理由を判断するために、追加のコンテキストが必要になります。 この追加のコンテキストを容易に見つけられるようにするために、[グラフィックス パイプライン ステージ] ウィンドウは、グラフィックス パイプラインで起こっていることに関連する追加のコンテキストを提供する、1 つ以上のオブジェクトにリンクします。  
   
--   Direct3D 12 では、このオブジェクトは通常、コマンドの一覧です。  
+- Direct3D 12 では、このオブジェクトは通常、コマンドの一覧です。  
   
--   Direct3D 11 では、このオブジェクトは通常、グラフィックス デバイス コンテキストです。  
+- Direct3D 11 では、このオブジェクトは通常、グラフィックス デバイス コンテキストです。  
   
- これらのリンクは、[グラフィックス パイプライン ステージ] ウィンドウの左上隅にある現在のグラフィックス イベントのシグネチャの一部です。 オブジェクトに関する追加の詳細について調べるには、これらのリンク先を表示します。  
+  これらのリンクは、[グラフィックス パイプライン ステージ] ウィンドウの左上隅にある現在のグラフィックス イベントのシグネチャの一部です。 オブジェクトに関する追加の詳細について調べるには、これらのリンク先を表示します。  
   
 ### <a name="viewing-and-debugging-shader-code"></a>シェーダー コードの表示およびデバッグ  
  [パイプライン ステージ] ウィンドウのそれぞれのステージの下部にあるコントロールを使用して、頂点シェーダー、ハル シェーダー、ドメイン シェーダー、ジオメトリ シェーダー、およびピクセル シェーダーのコードを検証してデバッグできます。  

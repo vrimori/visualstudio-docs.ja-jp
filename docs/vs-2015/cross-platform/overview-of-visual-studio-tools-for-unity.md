@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Tools for Unity の概要 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: b4231bb9-45c4-4c77-ac3c-d05033b26393
 caps.latest.revision: 6
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: bea1ce00cfae19954153fa994c10b2211be19806
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 657f54b258d759d0d966f65ff40649e0fb2a0669
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547762"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823529"
 ---
 # <a name="overview-of-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity の概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[概要の Visual Studio Tools for Unity](https://docs.microsoft.com/visualstudio/cross-platform/overview-of-visual-studio-tools-for-unity)します。  
-  
   
 このセクションでは、Visual Studio Tools for Unity から提供される機能の概要と、Unity を使用する開発の生産性を向上させる方法について説明します。  
   
@@ -44,15 +42,15 @@ ms.locfileid: "47547762"
 ## <a name="superior-debugging"></a>優れたデバッグ機能  
  スタンドアロンで実行されているか Unity エディターで実行されているかに関係なく、Visual Studio の強力なデバッガーを Unity ゲームに接続して、C# スクリプトと DLL をデバッグできます。 Visual Studio によって提供されるすべてのデバッグ機能を使用できます。  
   
--   ブレークポイント (条件付きブレークポイントを含む)。  
+- ブレークポイント (条件付きブレークポイントを含む)。  
   
--   [ウォッチ] ウィンドウでの複雑な式の評価。  
+- [ウォッチ] ウィンドウでの複雑な式の評価。  
   
--   変数および引数の値の検査と変更。  
+- 変数および引数の値の検査と変更。  
   
--   複雑なオブジェクトやデータ構造体へのドリルダウン。  
+- 複雑なオブジェクトやデータ構造体へのドリルダウン。  
   
- さらに、ネットワーク上の別のコンピューターで実行されている Unity ゲームであっても、デバッグできます。  
+  さらに、ネットワーク上の別のコンピューターで実行されている Unity ゲームであっても、デバッグできます。  
   
 ## <a name="productivity"></a>生産性  
  C# コードの記述とリファクタリングについての Visual Studio の確立された生産性に加えて、Visual Studio Tools for Unity は Unity 開発者のために追加の生産性機能を提供します。  

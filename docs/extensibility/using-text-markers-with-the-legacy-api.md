@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bcfae4cc786fb7a3e0c2ccd48f867bb6c32530d6
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: 62b77180858b40bf2620eaed284fa35b9a48288a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46496130"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49835931"
 ---
 # <a name="using-text-markers-with-the-legacy-api"></a>レガシ API を使用したテキスト マーカーの使用
 テキスト マーカーは、さまざまな浮動表示に影響を与えるバッファー内のテキストとテキストの範囲の動作です。 マーカーには、ブレークポイント、ブックマーク、波線の下線、および読み取り専用のリージョンが含まれます。 テキスト マーカーは、構文の色分け表示と基本的に異なります。 構文の色分けは、テキストの範囲に関連付けられている言語の構文を通信する簡単な方法を示します。 構文の色分け表示が要求されるの Windows の速度が重要な場合に、画面を再描画と一般にします。 構文の色分けは、テキストの色のみを変更します。 テキスト マーカーには、その他の多くのテキスト プロパティを変更できます。 テキスト マーカー「フローティング」して特別な動作を適用し、色分け表示します。  
@@ -30,14 +30,14 @@ ms.locfileid: "46496130"
   
 ## <a name="related-topics"></a>関連トピック  
   
-|タイトル|説明|  
-|-----------|-----------------|  
-|[方法: 標準のテキスト マーカーを追加する](../extensibility/how-to-add-standard-text-markers.md)|によって提供される標準のテキスト マーカーの種類を追加する方法について説明します、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]テキスト ビューにコア エディター。|  
-|[方法: エラー マーカーを実装する](../extensibility/how-to-implement-error-markers.md)|インスタンスを実装する方法について説明します、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]赤い波線を使用してエラーを示すために使用されるマーカー。|  
-|[方法: カスタム テキスト マーカーを作成する](../extensibility/how-to-create-custom-text-markers.md)|作成し、テキスト ビューに、カスタム テキスト マーカーの種類を追加する方法について説明します。|  
-|[方法: テキスト マーカーを使用する](../extensibility/how-to-use-text-markers.md)|テキスト マーカーを追加する方法について説明します。|  
-|[コア エディターの内部](../extensibility/inside-the-core-editor.md)|コア エディターの機能について説明し、コア エディターをカスタマイズする方法について詳しく説明します。|  
-|[エディターの機能](https://msdn.microsoft.com/library/bdac940d-1f14-4019-a01f-fd0bb3dc7198)|使用できる機能について説明します、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]のコア エディター。|  
+| Title | 説明 |
+| - | - |
+| [方法: 標準のテキスト マーカーを追加する](../extensibility/how-to-add-standard-text-markers.md) | によって提供される標準のテキスト マーカーの種類を追加する方法について説明します、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]テキスト ビューにコア エディター。 |
+| [方法: エラー マーカーを実装する](../extensibility/how-to-implement-error-markers.md) | インスタンスを実装する方法について説明します、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]赤い波線を使用してエラーを示すために使用されるマーカー。 |
+| [方法: カスタム テキスト マーカーを作成する](../extensibility/how-to-create-custom-text-markers.md) | 作成し、テキスト ビューに、カスタム テキスト マーカーの種類を追加する方法について説明します。 |
+| [方法: テキスト マーカーを使用する](../extensibility/how-to-use-text-markers.md) | テキスト マーカーを追加する方法について説明します。 |
+| [コア エディターの内部](../extensibility/inside-the-core-editor.md) | コア エディターの機能について説明し、コア エディターをカスタマイズする方法について詳しく説明します。 |
+| [エディターの機能](https://msdn.microsoft.com/library/bdac940d-1f14-4019-a01f-fd0bb3dc7198) | 使用できる機能について説明します、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]のコア エディター。 |
   
 ## <a name="reference"></a>参照  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsPackageDefinedTextMarkerType>  

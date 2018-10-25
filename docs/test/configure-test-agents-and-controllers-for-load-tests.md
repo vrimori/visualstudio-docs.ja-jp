@@ -9,19 +9,19 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: a64558f442b6d3ad77a34bb8ae4acb2860273c05
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: abc993d13752cdae00ea75c1eba8e39901f562c0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176470"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942986"
 ---
 # <a name="configure-test-agents-and-test-controllers-for-running-load-tests"></a>ロード テストを実行するためのテスト エージェントおよびテスト コントローラーの構成
 
 Visual Studio では、物理または仮想マシンを使用して、アプリ用にシミュレートされた負荷を生成することができます。 これらのコンピューターは、単一のテスト コントローラーと 1 つ以上のテスト エージェントとしてセットアップする必要があります。 テスト コントローラーとテスト エージェントを使用すると、単一のコンピューターで生成する場合よりも、高い負荷を生成できます。
 
 > [!NOTE]
-> また、クラウド ベースのロード テストを使用すると、多数のユーザーが同時に Web サイトにアクセスした場合と同等の負荷を生成する仮想マシンを用意できます。 クラウド ベースのロード テストの詳細については、[VSTS を使用するロード テストの実行](/vsts/load-test/get-started-simple-cloud-load-test)に関するページを参照してください。
+> また、クラウド ベースのロード テストを使用すると、多数のユーザーが同時に Web サイトにアクセスした場合と同等の負荷を生成する仮想マシンを用意できます。 クラウド ベースのロード テストの詳細については、[Azure Test Plans を使用したロード テストの実行](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts)に関するページを参照してください。
 
 ## <a name="load-simulation-architecture"></a>ロード シミュレーション アーキテクチャ
 
@@ -35,25 +35,25 @@ Visual Studio では、物理または仮想マシンを使用して、アプリ
 
 このアーキテクチャには次のような利点があります。
 
--   追加テスト エージェントをテスト コントローラーに追加することで、負荷生成の規模を拡大できます。
+- 追加テスト エージェントをテスト コントローラーに追加することで、負荷生成の規模を拡大できます。
 
--   クライアント、テスト コントローラー、およびテスト エージェント ソフトウェアを、同じコンピューターにも異なるコンピューターにもインストールできる柔軟性があります。 例:
+- クライアント、テスト コントローラー、およびテスト エージェント ソフトウェアを、同じコンピューターにも異なるコンピューターにもインストールできる柔軟性があります。 例:
 
-     **ローカル構成:**
+   **ローカル構成:**
 
-    -   Machine1: Visual Studio、コントローラー エージェント
+  - Machine1: Visual Studio、コントローラー エージェント
 
-     ![コントローラーおよびエージェントを使用したローカル コンピューター](./media/load-test-configa.png)
+    ![コントローラーおよびエージェントを使用したローカル コンピューター](./media/load-test-configa.png)
 
-     **一般的なリモート構成:**
+    **一般的なリモート構成:**
 
-    -   Machine1 および Machine2: Visual Studio (複数のテスト担当者が同じコントローラーを使用可能)
+  - Machine1 および Machine2: Visual Studio (複数のテスト担当者が同じコントローラーを使用可能)
 
-    -   Machine3: コントローラー (エージェントもインストールされている場合あり)
+  - Machine3: コントローラー (エージェントもインストールされている場合あり)
 
-    -   Machine4-n: Machine3 のコントローラーに関連付けられているエージェント
+  - Machine4-n: Machine3 のコントローラーに関連付けられているエージェント
 
-     ![コントローラーおよびエージェントを使用したリモート コンピューター](./media/load-test-configb.png)
+    ![コントローラーおよびエージェントを使用したリモート コンピューター](./media/load-test-configb.png)
 
 通常、1 つのテスト コントローラーは複数のテスト エージェントを管理しますが、1 つのエージェントは 1 つのコントローラーだけに関連付けることができます。 各テスト エージェントは、開発者チームで共有できます。 このアーキテクチャにより、テスト エージェントの数を簡単に増やすことができるため、より高い負荷の生成が可能になります。
 

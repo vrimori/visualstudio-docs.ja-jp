@@ -1,7 +1,7 @@
 ---
 title: Visual Studio1 でデータに WPF コントロールをバインドする |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 39
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f07087ce1f7637e63bd2d99aeb2cb125265a2d22
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3852a02015ba175b49a8e94adf8991003707a497
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546748"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914685"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Visual Studio でのデータに WPF コントロールをバインドします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio - 第 1 部でのデータにコントロールを WPF のバインド |Microsoft Docs](https://docs.microsoft.com/visualstudio/data-tools/bind-wpf-controls-to-data-in-visual-studio)します。  
-  
   
 データを [!INCLUDE[TLA#tla_titlewinclient](../includes/tlasharptla-titlewinclient-md.md)] コントロールにバインドすることで、アプリケーションのユーザーに対してデータを表示できます。 これらのデータ バインド コントロールを作成するから項目をドラッグすることができます、**データソース**ウィンドウ、[!INCLUDE[wpfdesigner_current_short](../includes/wpfdesigner-current-short-md.md)]で[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 このトピックでは、データ バインド [!INCLUDE[TLA#tla_titlewinclient](../includes/tlasharptla-titlewinclient-md.md)] アプリケーションの作成に使用できる最も一般的なタスク、ツール、およびクラスについて説明します。  
   
@@ -70,26 +68,26 @@ ms.locfileid: "47546748"
 ### <a name="datasets"></a>データセット  
  テーブルまたは列をドラッグすると、**データ ソース**、デザイナーにウィンドウ[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]生成[!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)]次を行うこと。  
   
--   項目をドラッグした先のコンテナーのリソースに、データセットと新しい <xref:System.Windows.Data.CollectionViewSource> を追加する。 <xref:System.Windows.Data.CollectionViewSource> は、データセットのデータの移動と表示に使用できるオブジェクトです。  
+- 項目をドラッグした先のコンテナーのリソースに、データセットと新しい <xref:System.Windows.Data.CollectionViewSource> を追加する。 <xref:System.Windows.Data.CollectionViewSource> は、データセットのデータの移動と表示に使用できるオブジェクトです。  
   
--   コントロールのデータ バインディングを作成する。 デザイナーの既存のコントロールに項目をドラッグすると、XAML により、その項目にコントロールがバインドされます。 コンテナーに項目をドラッグする場合は、XAML がドラッグした項目に対して選択されたコントロールを作成し、項目にバインドするコントロール。 コントロールは、新しい <xref:System.Windows.Controls.Grid> 内に作成されます。  
+- コントロールのデータ バインディングを作成する。 デザイナーの既存のコントロールに項目をドラッグすると、XAML により、その項目にコントロールがバインドされます。 コンテナーに項目をドラッグする場合は、XAML がドラッグした項目に対して選択されたコントロールを作成し、項目にバインドするコントロール。 コントロールは、新しい <xref:System.Windows.Controls.Grid> 内に作成されます。  
   
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] は、分離コード ファイルに次の変更も加えます。  
+  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] は、分離コード ファイルに次の変更も加えます。  
   
--   コントロールを格納する <xref:System.Windows.FrameworkElement.Loaded> 要素の [!INCLUDE[TLA2#tla_ui](../includes/tla2sharptla-ui-md.md)] イベント ハンドラーを作成する。 イベント ハンドラーは、テーブルにデータを読み込み、コンテナーのリソースから <xref:System.Windows.Data.CollectionViewSource> を取得して、最初のデータ項目を現在の項目にします。 場合、<xref:System.Windows.FrameworkElement.Loaded>イベント ハンドラーが既に存在する[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]既存のイベント ハンドラーに次のコードを追加します。  
+- コントロールを格納する <xref:System.Windows.FrameworkElement.Loaded> 要素の [!INCLUDE[TLA2#tla_ui](../includes/tla2sharptla-ui-md.md)] イベント ハンドラーを作成する。 イベント ハンドラーは、テーブルにデータを読み込み、コンテナーのリソースから <xref:System.Windows.Data.CollectionViewSource> を取得して、最初のデータ項目を現在の項目にします。 場合、<xref:System.Windows.FrameworkElement.Loaded>イベント ハンドラーが既に存在する[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]既存のイベント ハンドラーに次のコードを追加します。  
   
 ### <a name="entity-data-models"></a>エンティティ データ モデル  
  エンティティまたはエンティティ プロパティからドラッグすると、**データ ソース**、デザイナーにウィンドウ[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]生成[!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)]次を行うこと。  
   
--   項目をドラッグした先のコンテナーのリソースに、新しい <xref:System.Windows.Data.CollectionViewSource> を追加する。 <xref:System.Windows.Data.CollectionViewSource> は、エンティティのデータの移動と表示に使用できるオブジェクトです。  
+- 項目をドラッグした先のコンテナーのリソースに、新しい <xref:System.Windows.Data.CollectionViewSource> を追加する。 <xref:System.Windows.Data.CollectionViewSource> は、エンティティのデータの移動と表示に使用できるオブジェクトです。  
   
--   コントロールのデータ バインディングを作成する。 デザイナーの既存のコントロールに項目をドラッグすると、[!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] により、その項目にコントロールがバインドされます。 コンテナーに項目をドラッグする場合、[!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)]コントロールを作成します。 ドラッグした項目の選択されていたとコントロールの項目にバインドします。 コントロールは、新しい <xref:System.Windows.Controls.Grid> 内に作成されます。  
+- コントロールのデータ バインディングを作成する。 デザイナーの既存のコントロールに項目をドラッグすると、[!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] により、その項目にコントロールがバインドされます。 コンテナーに項目をドラッグする場合、[!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)]コントロールを作成します。 ドラッグした項目の選択されていたとコントロールの項目にバインドします。 コントロールは、新しい <xref:System.Windows.Controls.Grid> 内に作成されます。  
   
- Visual Studio は、分離コード ファイルに次の変更も加えます。  
+  Visual Studio は、分離コード ファイルに次の変更も加えます。  
   
--   デザイナーにドラッグされたエンティティ (または、デザイナーにドラッグされたプロパティを含むエンティティ) のクエリを返す新しいメソッドを追加する。 新しいメソッドの名前は Get*EntityName*、クエリ、 *EntityName*エンティティの名前を指定します。  
+- デザイナーにドラッグされたエンティティ (または、デザイナーにドラッグされたプロパティを含むエンティティ) のクエリを返す新しいメソッドを追加する。 新しいメソッドの名前は Get*EntityName*、クエリ、 *EntityName*エンティティの名前を指定します。  
   
--   コントロールを格納する <xref:System.Windows.FrameworkElement.Loaded> 要素の [!INCLUDE[TLA2#tla_ui](../includes/tla2sharptla-ui-md.md)] イベント ハンドラーを作成する。 イベント ハンドラーは、Get を呼び出して*EntityName*Query メソッドを取得、データ エンティティを読み込み、<xref:System.Windows.Data.CollectionViewSource>からコンテナーのリソース、し、最初のデータ項目の現在の項目。 場合、<xref:System.Windows.FrameworkElement.Loaded>イベント ハンドラーが既に存在する[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]既存のイベント ハンドラーに次のコードを追加します。  
+- コントロールを格納する <xref:System.Windows.FrameworkElement.Loaded> 要素の [!INCLUDE[TLA2#tla_ui](../includes/tla2sharptla-ui-md.md)] イベント ハンドラーを作成する。 イベント ハンドラーは、Get を呼び出して*EntityName*Query メソッドを取得、データ エンティティを読み込み、<xref:System.Windows.Data.CollectionViewSource>からコンテナーのリソース、し、最初のデータ項目の現在の項目。 場合、<xref:System.Windows.FrameworkElement.Loaded>イベント ハンドラーが既に存在する[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]既存のイベント ハンドラーに次のコードを追加します。  
   
 ### <a name="services"></a>Services  
  サービス オブジェクトまたはプロパティからドラッグすると、**データ ソース**、デザイナーにウィンドウ[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]生成[!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)]をデータ バインド コントロールを作成します (または、オブジェクトまたはプロパティに既存のコントロールをバインドします)。 ただし、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] はプロキシ サービス オブジェクトにデータを読み込むコードを生成しません。 このコードは、ユーザーが手動で記述する必要があります。 これを行う方法については、例では、次を参照してください。 [WCF data service にコントロールをバインドする WPF](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)します。  

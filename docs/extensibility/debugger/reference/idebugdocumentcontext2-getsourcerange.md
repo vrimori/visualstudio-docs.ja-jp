@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::GetSourceRange |Microsoft ドキュメント
+title: IDebugDocumentContext2::GetSourceRange |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f003ba3f97f053c4617408bfc9334da057bb98ef
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6d2fb0128aef16d236db10918eec215c8e198ae4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31107226"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951120"
 ---
 # <a name="idebugdocumentcontext2getsourcerange"></a>IDebugDocumentContext2::GetSourceRange
 このドキュメントのコンテキストのソース コードの範囲を取得します。  
@@ -43,18 +43,18 @@ int GetSourceRange(
   
 #### <a name="parameters"></a>パラメーター  
  `pBegPosition`  
- [入力、出力].A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)開始位置が入力構造です。 この情報は必要ない場合は、この引数を null 値を設定します。  
+ [入力、出力]A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)構造体の開始位置が入力されます。 この情報が必要でない場合は、この引数を null 値を設定します。  
   
  `pEndPosition`  
- [入力、出力].A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)終了位置が入力構造です。 この情報は必要ない場合は、この引数を null 値を設定します。  
+ [入力、出力]A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)構造体の終了位置が入力されます。 この情報が必要でない場合は、この引数を null 値を設定します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- ソース範囲は、コードを引き起こしている前のステートメントの直後に現在のステートメントからのソース コードの全体範囲です。 ソース範囲は、通常、逆アセンブル ウィンドウでコードのコメントを含むソース ステートメントの混在の使用です。  
+## <a name="remarks"></a>Remarks  
+ ソース範囲は、コードの原因である前のステートメントの直後に現在のステートメントのバックアップからのソース コードの全体の範囲です。 ソース範囲は、逆アセンブル ウィンドウでコードのコメントを含むソース ステートメントを混在させる場合の通常使用されます。  
   
- このドキュメントのコンテキスト内に含まれるコード ステートメントだけの範囲を取得する、 [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)メソッドです。  
+ このドキュメントのコンテキスト内に含まれるコード ステートメントだけの範囲を取得する、 [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)メソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)   

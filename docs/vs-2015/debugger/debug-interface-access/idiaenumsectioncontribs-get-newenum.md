@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSectionContribs::get__NewEnum |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5c192a3b91c76d38bc381a6b6ae5da5010eefc64
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 97c737399b789693e8b69366c1972a6039ac8474
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545260"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904467"
 ---
 # <a name="idiaenumsectioncontribsgetnewenum"></a>IDiaEnumSectionContribs::get__NewEnum
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDiaEnumSectionContribs::get__NewEnum](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiaenumsectioncontribs-get-newenum)します。  
-  
 取得、<xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT>この列挙子のバージョン。  
   
 ## <a name="syntax"></a>構文  

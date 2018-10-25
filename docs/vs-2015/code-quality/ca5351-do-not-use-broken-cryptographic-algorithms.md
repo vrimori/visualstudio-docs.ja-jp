@@ -1,7 +1,7 @@
 ---
 title: CA5351 破られた暗号アルゴリズムを使用しないでください |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -13,12 +13,12 @@ caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 03c900b86e4eed31426cd888b10606dd2429c93e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7067d1d08be6de121986c60ead67086a11548ea8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540249"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49889816"
 ---
 # <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351 破られた暗号アルゴリズムを使用しないでください
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,11 +43,11 @@ ms.locfileid: "47540249"
   
  暗号アルゴリズムの場合:  
   
--   <xref:System.Security.Cryptography.DES> 暗号のキー サイズは小さく、1 日未満でブルートフォースが実行される可能性があります。  
+- <xref:System.Security.Cryptography.DES> 暗号のキー サイズは小さく、1 日未満でブルートフォースが実行される可能性があります。  
   
--   <xref:System.Security.Cryptography.RC2> 暗号は、攻撃者がすべてのキー値の間の数学的な関係を検出する関連鍵攻撃の影響を受けやすくなっています。  
+- <xref:System.Security.Cryptography.RC2> 暗号は、攻撃者がすべてのキー値の間の数学的な関係を検出する関連鍵攻撃の影響を受けやすくなっています。  
   
- この規則は、ソース コードに上記の暗号化関数のいずれかが見つかり、ユーザーに警告をスローする場合にトリガーされます。  
+  この規則は、ソース コードに上記の暗号化関数のいずれかが見つかり、ユーザーに警告をスローする場合にトリガーされます。  
   
 ## <a name="how-to-fix-violations"></a>違反の修正方法  
  暗号強度の高いオプションを使用します。  

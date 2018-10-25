@@ -1,7 +1,7 @@
 ---
 title: WCF データ サービスへの WPF コントロールのバインド |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,53 +21,51 @@ caps.latest.revision: 44
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a32ed0567c6bf352502cd4d375a0c2bdafbb5a65
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 341ada0250c03776ab51ba62efcb98fb987088bd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536654"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812427"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>WCF Data Service への WPF コントロールのバインド
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[WCF data service にコントロールをバインドする WPF](https://docs.microsoft.com/visualstudio/data-tools/bind-wpf-controls-to-a-wcf-data-service)します。  
-  
   
 このチュートリアルでは、データ バインド コントロールが含まれた WPF アプリケーションを作成します。 コントロールは、[!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] でカプセル化された顧客レコードにバインドされます。 また、顧客がレコードを表示および更新するために使用できるボタンも追加します。  
   
  このチュートリアルでは、次の作業について説明します。  
   
--   AdventureWorksLT サンプル データベースのデータから生成される Entity Data Model を作成する。  
+- AdventureWorksLT サンプル データベースのデータから生成される Entity Data Model を作成する。  
   
--   作成、[!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]を WPF アプリケーションに Entity Data Model でデータを公開します。  
+- 作成、[!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]を WPF アプリケーションに Entity Data Model でデータを公開します。  
   
--   項目をドラッグしてデータ バインド コントロールのセットを作成する、**データソース**WPF デザイナーにウィンドウ。  
+- 項目をドラッグしてデータ バインド コントロールのセットを作成する、**データソース**WPF デザイナーにウィンドウ。  
   
--   顧客レコード間を前後に移動するためのボタンを作成する。  
+- 顧客レコード間を前後に移動するためのボタンを作成する。  
   
--   コントロール内のデータに変更を保存するボタンを作成、[!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]と基になるデータ ソース。  
+- コントロール内のデータに変更を保存するボタンを作成、[!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]と基になるデータ ソース。  
   
-     [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
+   [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]  
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]  
   
--   AdventureWorksLT サンプル データベースが添付された、SQL Server または SQL Server Express の実行中のインスタンスへのアクセス権。 AdventureWorksLT データベースをダウンロードすることができます、 [CodePlex Web サイト](http://go.microsoft.com/fwlink/?linkid=87843)します。  
+- AdventureWorksLT サンプル データベースが添付された、SQL Server または SQL Server Express の実行中のインスタンスへのアクセス権。 AdventureWorksLT データベースをダウンロードすることができます、 [CodePlex Web サイト](http://go.microsoft.com/fwlink/?linkid=87843)します。  
   
- 次の概念に関する知識があると役立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
+  次の概念に関する知識があると役立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
   
--   WCF Data Services。 詳細については、次を参照してください。[概要](http://msdn.microsoft.com/library/7924cf94-c9a6-4015-afc9-f5d22b1743bb)します。  
+- WCF Data Services。 詳細については、次を参照してください。[概要](http://msdn.microsoft.com/library/7924cf94-c9a6-4015-afc9-f5d22b1743bb)します。  
   
--   [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] のデータ モデル。  
+- [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] のデータ モデル。  
   
--   Entity Data Model および ADO.NET Entity Framework。 詳細については、次を参照してください。 [Entity Framework の概要](http://msdn.microsoft.com/library/a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0)します。  
+- Entity Data Model および ADO.NET Entity Framework。 詳細については、次を参照してください。 [Entity Framework の概要](http://msdn.microsoft.com/library/a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0)します。  
   
--   WPF デザイナーの操作。 詳細については、次を参照してください。 [WPF および Silverlight デザイナーの概要](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62)します。  
+- WPF デザイナーの操作。 詳細については、次を参照してください。 [WPF および Silverlight デザイナーの概要](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62)します。  
   
--   WPF データ バインディング。 詳しくは、「 [データ バインディングの概要](http://msdn.microsoft.com/library/c707c95f-7811-401d-956e-2fffd019a211)」をご覧ください。  
+- WPF データ バインディング。 詳しくは、「 [データ バインディングの概要](http://msdn.microsoft.com/library/c707c95f-7811-401d-956e-2fffd019a211)」をご覧ください。  
   
 ## <a name="create-the-service-project"></a>サービス プロジェクトを作成します。  
  このチュートリアルでは、まず [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] のプロジェクトを作成します。  
@@ -209,39 +207,39 @@ ms.locfileid: "47536654"
   
 #### <a name="to-create-the-data-bound-controls"></a>データ バインディング コントロールを作成するには  
   
-1.  **データ ソース**ウィンドウで、ドロップダウン メニューをクリックして、 **[salesorderheaders]** ノード、および選択**詳細**します。  
+1. **データ ソース**ウィンドウで、ドロップダウン メニューをクリックして、 **[salesorderheaders]** ノード、および選択**詳細**します。  
   
-2.  展開、 **[salesorderheaders]** ノード。  
+2. 展開、 **[salesorderheaders]** ノード。  
   
-3.  この例では、いくつかのフィールドは表示されませんので、次のノードの横にあるドロップダウン メニューをクリックして、選択**None**:  
+3. この例では、いくつかのフィールドは表示されませんので、次のノードの横にあるドロップダウン メニューをクリックして、選択**None**:  
   
-    -   **CreditCardApprovalCode**  
+   - **CreditCardApprovalCode**  
   
-    -   **ModifiedDate**  
+   - **ModifiedDate**  
   
-    -   **OnlineOrderFlag**  
+   - **OnlineOrderFlag**  
   
-    -   **RevisionNumber**  
+   - **RevisionNumber**  
   
-    -   **rowguid**  
+   - **rowguid**  
   
      この操作は、次の手順において、これらのノードに対応するデータ バインド コントロールが Visual Studio で作成されるのを防ぎます。 このチュートリアルでは、エンドユーザーがこのデータを表示する必要がないことを想定しています。  
   
-4.  **データ ソース**ウィンドウで、ドラッグ、 **[salesorderheaders]** ノード下のボタンを含む行のグリッド行にします。  
+4. **データ ソース**ウィンドウで、ドラッグ、 **[salesorderheaders]** ノード下のボタンを含む行のグリッド行にします。  
   
-     Visual Studio には、XAML とのデータにバインドされるコントロールのセットを作成するコードが生成される、**製品**テーブル。 生成された XAML とコードの詳細については、次を参照してください。 [Visual Studio でのデータにコントロールをバインドする WPF](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)します。  
+    Visual Studio には、XAML とのデータにバインドされるコントロールのセットを作成するコードが生成される、**製品**テーブル。 生成された XAML とコードの詳細については、次を参照してください。 [Visual Studio でのデータにコントロールをバインドする WPF](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)します。  
   
-5.  横に、デザイナーでは、クリックして、テキスト ボックス、**顧客 ID**ラベル。  
+5. 横に、デザイナーでは、クリックして、テキスト ボックス、**顧客 ID**ラベル。  
   
-6.  **プロパティ**ウィンドウで、横にあるチェック ボックスを選択、 **IsReadOnly**プロパティ。  
+6. **プロパティ**ウィンドウで、横にあるチェック ボックスを選択、 **IsReadOnly**プロパティ。  
   
-7.  設定、 **IsReadOnly**以下のテキスト ボックスのそれぞれのプロパティ。  
+7. 設定、 **IsReadOnly**以下のテキスト ボックスのそれぞれのプロパティ。  
   
-    -   **発注書番号**  
+   -   **発注書番号**  
   
-    -   **販売注文 ID**  
+   -   **販売注文 ID**  
   
-    -   **販売注文番号**  
+   -   **販売注文番号**  
   
 ## <a name="load-the-data-from-the-service"></a>サービスからデータを読み込む  
  サービスのプロキシ オブジェクトを使用して、サービスからの売上データを読み込みます。 データ ソースに返されるデータを割り当てる、 <xref:System.Windows.Data.CollectionViewSource> WPF ウィンドウ。  

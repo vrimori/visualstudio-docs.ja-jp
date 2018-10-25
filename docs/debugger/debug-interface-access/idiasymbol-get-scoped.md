@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_scoped |Microsoft ドキュメント
+title: Idiasymbol::get_scoped |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 26c545c0d7f8a72ca4dc4f1fcc31aafe65c2bc5d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d0018bfdbf52f92a35dff3a21fb5baf71aab6639
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31469283"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860008"
 ---
 # <a name="idiasymbolgetscoped"></a>IDiaSymbol::get_scoped
-グローバルではないの構文のスコープで、ユーザー定義データ型を表示するかどうかを指定するフラグを取得します。  
+構文のスコープを非グローバルで、ユーザー定義データ型が表示されるかどうかを指定するフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,13 +34,13 @@ HRESULT get_scoped (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]返します`TRUE`非グローバルの構文のスコープ以外に、ユーザー定義データ型が表示される場合を返しますそれ以外の場合、`FALSE`です。  
+ [out]返します`TRUE`; 非グローバル構文のスコープで、ユーザー定義データ型が表示された場合を返しますそれ以外の場合、`FALSE`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティが、シンボルを使用できないことを意味します。  
+>  戻り値`S_FALSE`プロパティがシンボルを使用できないことを意味します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

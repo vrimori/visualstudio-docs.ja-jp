@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ef9d4416cdb3e1ea0d7f50b1c8baeca37ac8b15e
-ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
+ms.openlocfilehash: 1731c47d3de9068affd4c7561e1dae94960b2b44
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238005"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49835918"
 ---
 # <a name="globalon-and-globaloff"></a>GlobalOn と GlobalOff
 *VSPerfCmd.exe* の **GlobalOff** オプションと **GlobalOn** オプションは、コマンド ライン プロファイル セッションのすべてのプロセスとスレッドのプロファイリングを一時停止および再開するために使用されます。  
@@ -28,11 +28,11 @@ ms.locfileid: "35238005"
   
  **GlobalOff** オプションと **GlobalOn** オプションは、プロファイラーの API 関数によって操作されるグローバルな開始/停止数にも影響します。  
   
--   **GlobalOff** は、グローバルな開始/停止数を直ちに 0 に設定して、プロファイリングを一時停止します。  
+- **GlobalOff** は、グローバルな開始/停止数を直ちに 0 に設定して、プロファイリングを一時停止します。  
   
--   **GlobalOn** は、グローバルな開始/停止数を直ちに 1 に設定して、プロファイリングを再開します。  
+- **GlobalOn** は、グローバルな開始/停止数を直ちに 1 に設定して、プロファイリングを再開します。  
   
- 詳細については、「[プロファイル ツールの API](../profiling/profiling-tools-apis.md)」 を参照してください。  
+  詳細については、「[プロファイル ツールの API](../profiling/profiling-tools-apis.md)」 を参照してください。  
   
 ## <a name="syntax"></a>構文  
   

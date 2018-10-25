@@ -1,7 +1,7 @@
 ---
 title: Visual Studio のコマンドの Guid および Id |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ ms.assetid: 2ea4bee2-0259-4675-8e65-2023b312b516
 caps.latest.revision: 7
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bc949b400cc5c6a6efe231dff8f0ae17155ef6e1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8dc2222dd613cad4d5dad7dc70dccdbe0abfe128
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545558"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868581"
 ---
 # <a name="guids-and-ids-of-visual-studio-commands"></a>Visual Studio コマンドの GUID および ID
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Guid と Visual Studio コマンドの Id の](https://docs.microsoft.com/visualstudio/extensibility/internals/guids-and-ids-of-visual-studio-commands)します。  
-  
 Visual Studio 統合開発環境 (IDE) で含まれているコマンドの GUID と ID の値は、Visual Studio SDK の一部としてインストールされている .vsct ファイルで定義されます。 詳細については、次を参照してください。 [IDE-Defined コマンド、メニュー、およびグループ](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)します。  
   
  .Vsct ファイルで定義されている IDE オブジェクトを操作する方法の詳細については、次を参照してください。[拡張メニューとコマンド](../../extensibility/extending-menus-and-commands.md)します。  
@@ -40,23 +38,23 @@ Visual Studio 統合開発環境 (IDE) で含まれているコマンドの GUID
   
 #### <a name="to-locate-a-command-definition"></a>コマンド定義を検索するには  
   
-1.  Visual Studio で、次のファイルを開く、 *Visual Studio SDK インストール パス*\VisualStudioIntegration\Common\Inc\ フォルダー: SharedCmdDef.vsct、ShellCmdDef.vsct、VsDbgCmdUsed.vsct、Venusmenu.vsct します。  
+1. Visual Studio で、次のファイルを開く、 *Visual Studio SDK インストール パス*\VisualStudioIntegration\Common\Inc\ フォルダー: SharedCmdDef.vsct、ShellCmdDef.vsct、VsDbgCmdUsed.vsct、Venusmenu.vsct します。  
   
-     ほとんどの Visual Studio のコマンドは、SharedCmdDef.vsct と ShellCmdDef.vsct で定義されます。 VsDbgCmdUsed.vsct がデバッガーに関連するコマンドを定義し、Venusmenu.vsct Web 開発に固有のコマンドを定義します。  
+    ほとんどの Visual Studio のコマンドは、SharedCmdDef.vsct と ShellCmdDef.vsct で定義されます。 VsDbgCmdUsed.vsct がデバッガーに関連するコマンドを定義し、Venusmenu.vsct Web 開発に固有のコマンドを定義します。  
   
-2.  コマンドがメニュー項目の場合は、メニュー項目の内容を正確に注意してください。 コマンドがツールバーのボタンの場合は、それを一時停止するときに表示されるツールヒント テキストを注意してください。  
+2. コマンドがメニュー項目の場合は、メニュー項目の内容を正確に注意してください。 コマンドがツールバーのボタンの場合は、それを一時停止するときに表示されるツールヒント テキストを注意してください。  
   
-3.  開くには、CTRL + F キーを押して、**検索** ダイアログ ボックス。  
+3. 開くには、CTRL + F キーを押して、**検索** ダイアログ ボックス。  
   
-4.  **検索**ボックスに、手順 2. でメモしたテキストを入力します。  
+4. **検索**ボックスに、手順 2. でメモしたテキストを入力します。  
   
-5.  いることを確認**すべての開いているドキュメント**に表示される、**ファイルの場所**ボックス。  
+5. いることを確認**すべての開いているドキュメント**に表示される、**ファイルの場所**ボックス。  
   
-6.  をクリックして、**次を検索**で、テキストが選択されるまで、`<Strings>`のセクションを[ボタン要素](../../extensibility/button-element.md)します。  
+6. をクリックして、**次を検索**で、テキストが選択されるまで、`<Strings>`のセクションを[ボタン要素](../../extensibility/button-element.md)します。  
   
-     `<Button>`コマンドが含まれている要素がコマンド定義。  
+    `<Button>`コマンドが含まれている要素がコマンド定義。  
   
- コマンドの定義が見つかったら、別のメニューまたはツールバーのコマンドのコピーを配置を作成して、 [CommandPlacement 要素](../../extensibility/commandplacement-element.md)を持つ同じ`guid`と`id`コマンドと値。 詳細については、次を参照してください。[ボタンの再利用可能なグループの作成](../../extensibility/creating-reusable-groups-of-buttons.md)です。  
+   コマンドの定義が見つかったら、別のメニューまたはツールバーのコマンドのコピーを配置を作成して、 [CommandPlacement 要素](../../extensibility/commandplacement-element.md)を持つ同じ`guid`と`id`コマンドと値。 詳細については、次を参照してください。[ボタンの再利用可能なグループの作成](../../extensibility/creating-reusable-groups-of-buttons.md)です。  
   
 ### <a name="special-cases"></a>特殊なケース  
  次の場合、メニュー テキストまたはツールヒントのテキストが一致しない一致コマンド定義でです。  

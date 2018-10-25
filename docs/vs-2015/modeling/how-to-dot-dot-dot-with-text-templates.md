@@ -1,7 +1,7 @@
 ---
 title: テキスト テンプレートを使用する方法 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 04cba7688e358f3267bd4f3fb45b2ac10e83b286
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8e6a580a906ea228f04f8ec81b15eee6c143c6a1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533263"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903817"
 ---
 # <a name="how-to--with-text-templates"></a>方法: テキスト テンプレートを使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[テキスト テンプレートを使用する方法](https://docs.microsoft.com/visualstudio/modeling/how-to-dot-dot-dot-with-text-templates)します。  
-  
 テキスト テンプレートで[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]の任意の種類のテキストを生成する便利な方法を提供します。 テキスト テンプレートを使用すると、実行時に、アプリケーションの一部として、デザイン時、プロジェクト コードの一部を生成するのにテキストを生成します。 このトピックでは、最も頻繁にまとめたものです"How do I..."よく寄せられる 質問します。  
   
  このトピックでは、行頭文字が付いている複数の回答は別の提案です。  
@@ -42,7 +40,7 @@ ms.locfileid: "47533263"
   
 -   ランタイム テキスト テンプレートをプロジェクトに追加します。 このテンプレートでは、インスタンス化し、使用してテキストを生成することができるコードでクラスを作成します。 データは、コンス トラクターのパラメーターを渡すことができます。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)します。  
   
--   実行時にのみ使用可能なテンプレートから生成する場合は、標準のテキスト テンプレートを使用できます。 作成する場合、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]拡張機能で、テキスト テンプレート サービスを呼び出すことができます。 詳細については、次を参照してください。 [VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)します。 他のコンテキストで、テキスト テンプレート エンジンを使用することができます。 詳細については、「<xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>」を参照してください。  
+-   実行時にのみ使用可能なテンプレートから生成する場合は、標準のテキスト テンプレートを使用できます。 作成する場合、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]拡張機能で、テキスト テンプレート サービスを呼び出すことができます。 詳細については、次を参照してください。 [VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)します。 他のコンテキストで、テキスト テンプレート エンジンを使用することができます。 詳細については、「 <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> 」を参照してください。  
   
      使用して、 \<#@parameter#> ディレクティブには、これらのテンプレート パラメーターを渡します。 詳細については、次を参照してください。 [T4 パラメーター ディレクティブ](../modeling/t4-parameter-directive.md)します。  
   
@@ -56,21 +54,21 @@ ms.locfileid: "47533263"
 ### <a name="invoke-methods-from-a-template"></a>テンプレートからメソッドを呼び出し  
  メソッド、既に存在する場合など、標準で[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]クラス。  
   
--   使用して、 \<#@assembly#> ディレクティブは、アセンブリをロードして使用する\<#@import#> 名前空間のコンテキストを設定します。 詳細については、次を参照してください。 [T4 インポート ディレクティブ](../modeling/t4-import-directive.md)します。  
+- 使用して、 \<#@assembly#> ディレクティブは、アセンブリをロードして使用する\<#@import#> 名前空間のコンテキストを設定します。 詳細については、次を参照してください。 [T4 インポート ディレクティブ](../modeling/t4-import-directive.md)します。  
   
-     頻繁に同じアセンブリのセットを使用して、ディレクティブをインポートすると、ディレクティブ プロセッサの作成を検討してください。 各テンプレートでは、アセンブリとモデル ファイルを読み込むし、名前空間のコンテキストを設定できますが、ディレクティブ プロセッサを呼び出すことができます。 詳細については、次を参照してください。[カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)です。  
+   頻繁に同じアセンブリのセットを使用して、ディレクティブをインポートすると、ディレクティブ プロセッサの作成を検討してください。 各テンプレートでは、アセンブリとモデル ファイルを読み込むし、名前空間のコンテキストを設定できますが、ディレクティブ プロセッサを呼び出すことができます。 詳細については、次を参照してください。[カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)です。  
   
- 場合は、メソッドは、自分で作成しています。  
+  場合は、メソッドは、自分で作成しています。  
   
--   ランタイム テキスト テンプレートを作成する場合、ランタイム テキスト テンプレートと同じ名前を持つ部分クラス定義を記述します。 このクラスに、追加のメソッドを追加します。  
+- ランタイム テキスト テンプレートを作成する場合、ランタイム テキスト テンプレートと同じ名前を持つ部分クラス定義を記述します。 このクラスに、追加のメソッドを追加します。  
   
--   クラス機能コントロール ブロックを書き込む`<#+ ... #>`でメソッド、プロパティ、およびプライベートのクラス宣言できますが。 テキスト テンプレートのコンパイル時に、クラスに変換されます。 標準コントロール ブロック`<#...#>`テキストが 1 つのメソッドに変換され、別のメンバーとしてクラス機能ブロックが挿入されます。 詳細については、次を参照してください。[テキスト テンプレートのコントロール ブロック](../modeling/text-template-control-blocks.md)します。  
+- クラス機能コントロール ブロックを書き込む`<#+ ... #>`でメソッド、プロパティ、およびプライベートのクラス宣言できますが。 テキスト テンプレートのコンパイル時に、クラスに変換されます。 標準コントロール ブロック`<#...#>`テキストが 1 つのメソッドに変換され、別のメンバーとしてクラス機能ブロックが挿入されます。 詳細については、次を参照してください。[テキスト テンプレートのコントロール ブロック](../modeling/text-template-control-blocks.md)します。  
   
-     メソッドはクラスの機能は、埋め込みのテキスト ブロックを含めることができますもとして定義します。  
+   メソッドはクラスの機能は、埋め込みのテキスト ブロックを含めることができますもとして定義します。  
   
-     可能な別のファイルにクラスの機能を配置すること検討`<#@include#>`を 1 つまたは複数のテンプレート ファイルにします。  
+   可能な別のファイルにクラスの機能を配置すること検討`<#@include#>`を 1 つまたは複数のテンプレート ファイルにします。  
   
--   別のアセンブリ (クラス ライブラリ) で、メソッドを記述し、テンプレートから呼び出すことです。 使用して、`<#@assembly#>`ディレクティブは、アセンブリの読み込みと`<#@import#>`名前空間のコンテキストを設定します。 注、それをデバッグするときに、アセンブリを再構築するためにする必要がありますを停止して再起動[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 詳細については、次を参照してください。 [T4 テキスト テンプレート ディレクティブ](../modeling/t4-text-template-directives.md)します。  
+- 別のアセンブリ (クラス ライブラリ) で、メソッドを記述し、テンプレートから呼び出すことです。 使用して、`<#@assembly#>`ディレクティブは、アセンブリの読み込みと`<#@import#>`名前空間のコンテキストを設定します。 注、それをデバッグするときに、アセンブリを再構築するためにする必要がありますを停止して再起動[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 詳細については、次を参照してください。 [T4 テキスト テンプレート ディレクティブ](../modeling/t4-text-template-directives.md)します。  
   
 ### <a name="generate-many-files-from-one-model-schema"></a>1 つのモデル スキーマから多数のファイルを生成します。  
  多くの場合、ファイルを生成するには、同じ XML またはデータベース スキーマを持つモデルから: 場合  

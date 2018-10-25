@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 347cd6cfa1e773d3900e7294d691f061d91a762d
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 002759a1a5fd8a16ee3e7842df7439d6e6b9755f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35673211"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862932"
 ---
 # <a name="troubleshoot-office-solution-security"></a>Office ソリューションのセキュリティをトラブルシューティングします。
   このトピックでには、Office ソリューションのセキュリティを使用する場合に発生する可能性がある一般的な問題を解決するためのヒントが含まれています。  
@@ -32,17 +32,17 @@ ms.locfileid: "35673211"
   
  配置マニフェストの URL は、5 つのゾーンのいずれかに分類できます。  
   
--   マイ コンピューター  
+- マイ コンピューター  
   
--   インターネット  
+- インターネット  
   
--   ローカル イントラネット  
+- ローカル イントラネット  
   
--   信頼済みサイト  
+- 信頼済みサイト  
   
--   制限付きサイト  
+- 制限付きサイト  
   
- 配置マニフェストの場所は、制限付きサイト ゾーンに割り当てられている場合[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]ソリューションではインストールされません。 場所を選択して言いますできる場合、信頼されたユーザーの場所を制限付きサイト ゾーンから削除してインストールできますソリューション。 ゾーンを管理する方法については、次を参照してください。 [ClickOnce 信頼された発行元の構成](http://go.microsoft.com/fwlink/?LinkId=94774)します。  
+  配置マニフェストの場所は、制限付きサイト ゾーンに割り当てられている場合[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]ソリューションではインストールされません。 場所を選択して言いますできる場合、信頼されたユーザーの場所を制限付きサイト ゾーンから削除してインストールできますソリューション。 ゾーンを管理する方法については、次を参照してください。 [ClickOnce 信頼された発行元の構成](http://go.microsoft.com/fwlink/?LinkId=94774)します。  
   
 ## <a name="solutions-cannot-be-installed-from-network-file-shares-or-web-locations-when-internet-explorer-enhanced-security-configuration-or-internet-explorer-7-is-installed"></a>Internet Explorer セキュリティ強化の構成または Internet Explorer 7 がインストールされている場合、ネットワーク ファイル共有または web の場所からソリューションをインストールすることはできません。  
  Internet Explorer 拡張セキュリティ構成 (IEESC) Windows Server 2003 以降では、および Internet Explorer 7 以降、インターネットを閲覧するユーザーの機能を大幅に制限します。 ユーザーがネットワーク ファイル共有または web の場所から Office ソリューションをインストールしようとすると、次のエラー メッセージが訪れた可能性があります:"の配置マニフェストに署名する証明書が使用されるため、このアプリケーションのカスタマイズされた機能は機能しません*SolutionName*は信頼されていません。 管理者に問い合わせてください。"  

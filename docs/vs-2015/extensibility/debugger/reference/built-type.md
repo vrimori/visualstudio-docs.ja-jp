@@ -1,7 +1,7 @@
 ---
 title: BUILT_TYPE |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: cc02c32c-0f65-4210-ad25-a9b1899066e8
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 849e358140d438478a16629a1e420d3c96393b62
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 51f826bf7490b33ee8f243fa48b9f9f60748da60
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548644"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930532"
 ---
 # <a name="builttype"></a>BUILT_TYPE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[BUILT_TYPE](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/built-type)します。  
-  
 この構造体には、メタデータから取得したフィールドの種類に関する情報を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -62,7 +60,7 @@ public struct BUILT_TYPE {
 ## <a name="remarks"></a>Remarks  
  共用体の一部としてこの構造体が表示されます、 [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)ときに構造体、`dwKind`のフィールド、`TYPE_INFO`構造に設定されている`TYPE_KIND_BUILT`(からの値、 [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)列挙型)。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

@@ -28,12 +28,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cd92e4e4b5f4a0ae77cfae393d2d51446e17bcfe
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 0cbc26a198cace58a957f3d3aaf25457cf457256
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36327217"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906046"
 ---
 # <a name="create-web-parts-for-sharepoint"></a>For SharePoint の web パーツを作成します。
   Web パーツを作成すると、SharePoint サイト ページのコンテンツ、外観、および動作をユーザーがブラウザーから変更できます。 Web パーツは、Web パーツ ページ内で実行されるサーバー側コントロールです。SharePoint サイトに表示されるページはこれらの Web パーツで構成されます。 参照してください[構成要素: Web パーツ](http://go.microsoft.com/fwlink/?LinkID=182097)します。  
@@ -84,25 +84,25 @@ ms.locfileid: "36327217"
 ## <a name="visual-web-part-limitations"></a>視覚的 web パーツの制限
  Visual Studio では、SharePoint のサンドボックス ソリューションおよびファーム ソリューションに視覚的 Web パーツを追加できます。 ただし、視覚的 Web パーツには次のような制限があります。  
   
--   視覚的 web パーツには、置き換え可能パラメーターをサポートされていません。 詳細については、次を参照してください。[置き換え可能パラメーター](../sharepoint/replaceable-parameters.md)します。  
+- 視覚的 web パーツには、置き換え可能パラメーターをサポートされていません。 詳細については、次を参照してください。[置き換え可能パラメーター](../sharepoint/replaceable-parameters.md)します。  
   
--   ユーザー コントロールと視覚的 Web パーツは、視覚的 Web パーツ上にドラッグ アンド ドロップしたり、コピーしたりできません。 これらの操作を実行するとビルド エラーが発生します。  
+- ユーザー コントロールと視覚的 Web パーツは、視覚的 Web パーツ上にドラッグ アンド ドロップしたり、コピーしたりできません。 これらの操作を実行するとビルド エラーが発生します。  
   
--   視覚的 Web パーツは、$SPUrl などの SharePoint サーバー トークンを直接サポートしません。 詳細については、トピックの"トークン制限のサンド ボックス視覚的 Web パーツ」を参照してください。[のトラブルシューティングを行う SharePoint ソリューション](../sharepoint/troubleshooting-sharepoint-solutions.md)します。  
+- 視覚的 Web パーツは、$SPUrl などの SharePoint サーバー トークンを直接サポートしません。 詳細については、トピックの"トークン制限のサンド ボックス視覚的 Web パーツ」を参照してください。[のトラブルシューティングを行う SharePoint ソリューション](../sharepoint/troubleshooting-sharepoint-solutions.md)します。  
   
--   サンドボックス ソリューションの視覚的 Web パーツは、"Sandboxed Code Host Service がビジー状態で要求を処理できなかったので、セキュリティで保護されたコード実行要求が拒否されました" というエラーが発生する場合があります。 このエラーの詳細については、こちらの投稿を参照してください、 [SharePoint 開発者チームのブログ](http://go.microsoft.com/fwlink/?LinkId=225932)します。  
+- サンドボックス ソリューションの視覚的 Web パーツは、"Sandboxed Code Host Service がビジー状態で要求を処理できなかったので、セキュリティで保護されたコード実行要求が拒否されました" というエラーが発生する場合があります。 このエラーの詳細については、こちらの投稿を参照してください、 [SharePoint 開発者チームのブログ](http://go.microsoft.com/fwlink/?LinkId=225932)します。  
   
--   Visual Studio では、サーバー側 JavaScript のデバッグがサポートされていません。ただし、クライアント側 JavaScript のデバッグはサポートされています。  
+- Visual Studio では、サーバー側 JavaScript のデバッグがサポートされていません。ただし、クライアント側 JavaScript のデバッグはサポートされています。  
   
-     サーバー側のマークアップ ファイルにインライン JavaScript を追加できますが、マークアップに追加したブレークポイントはデバッグできません。 JavaScript をデバッグするには、マークアップ ファイルで外部の JavaScript ファイルを参照し、JavaScript ファイルにブレークポイントを設定します。  
+   サーバー側のマークアップ ファイルにインライン JavaScript を追加できますが、マークアップに追加したブレークポイントはデバッグできません。 JavaScript をデバッグするには、マークアップ ファイルで外部の JavaScript ファイルを参照し、JavaScript ファイルにブレークポイントを設定します。  
   
--   インライン [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] コードのデバッグは、マークアップ ファイルではなく、生成されたコード ファイルで実行する必要があります。  
+- インライン [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] コードのデバッグは、マークアップ ファイルではなく、生成されたコード ファイルで実行する必要があります。  
   
--   視覚的 Web パーツでは、`<@ Assembly Src=` ディレクティブを使用できません。  
+- 視覚的 Web パーツでは、`<@ Assembly Src=` ディレクティブを使用できません。  
   
--   SharePoint の Web コントロールと一部の [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] コントロールは、SharePoint サンドボックス環境でサポートされていません。 サンドボックス ソリューションの視覚的 web パーツでサポート対象外のコントロールを使用すると、"型または名前空間の名前 'Theme' は名前空間 'Microsoft.SharePoint.WebControls' に存在しません" というエラーが表示されます。  
+- SharePoint の Web コントロールと一部の [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] コントロールは、SharePoint サンドボックス環境でサポートされていません。 サンドボックス ソリューションの視覚的 web パーツでサポート対象外のコントロールを使用すると、"型または名前空間の名前 'Theme' は名前空間 'Microsoft.SharePoint.WebControls' に存在しません" というエラーが表示されます。  
   
- サンド ボックス ソリューションの詳細については、次を参照してください。[サンド ボックスの相違点とファーム ソリューション](../sharepoint/differences-between-sandboxed-and-farm-solutions.md)します。  
+  サンド ボックス ソリューションの詳細については、次を参照してください。[サンド ボックスの相違点とファーム ソリューション](../sharepoint/differences-between-sandboxed-and-farm-solutions.md)します。  
   
 ## <a name="create-older-style-sharepoint-based-web-parts"></a>古いスタイルの SharePoint ベースの web パーツを作成します。
  Visual Studio のテンプレートを使用すると、SharePoint 用の独自の [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] Web パーツを作成できます。 [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] Web パーツは [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] Web パーツのインフラストラクチャ上にビルドされるので、新しいプロジェクトに適しています。  

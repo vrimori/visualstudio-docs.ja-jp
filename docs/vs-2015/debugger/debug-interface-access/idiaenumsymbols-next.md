@@ -1,7 +1,7 @@
 ---
 title: Idiaenumsymbols::next |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: df6b66e2a9ad82e7be5ca330fb1e6c0c09a88027
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 98da32046662b4c856e29dce28865a67592204a6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549124"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928387"
 ---
 # <a name="idiaenumsymbolsnext"></a>IDiaEnumSymbols::Next
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiaenumsymbols::next](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiaenumsymbols-next)します。  
-  
 指定された数の列挙体シーケンス内のシンボルを取得します。  
   
 ## <a name="syntax"></a>構文  

@@ -13,25 +13,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e8470f2a1c3fec9fa54eec402e46dd2708510493
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 3a45882b1410391843b9e98dcce6e963774c15dd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39230917"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868301"
 ---
 # <a name="notify-the-port"></a>ポートへの通知します。
 プログラムを起動した後、ポートに通知する、次のように。  
   
-1.  ポートは、プログラムの新しいノードを受信すると、デバッグ セッションに戻るプログラムの作成イベントを送信します。 イベントを伴って、プログラムを表すインターフェイスです。  
+1. ポートは、プログラムの新しいノードを受信すると、デバッグ セッションに戻るプログラムの作成イベントを送信します。 イベントを伴って、プログラムを表すインターフェイスです。  
   
-2.  デバッグ セッションにアタッチできるデバッグ エンジン (DE) の識別子のプログラムを照会します。  
+2. デバッグ セッションにアタッチできるデバッグ エンジン (DE) の識別子のプログラムを照会します。  
   
-3.  デバッグ セッションは、そのプログラムの許容 DEs の一覧に、DE があるかを確認します。 デバッグ セッションは、ソリューションのアクティブなプログラムの設定、デバッグ パッケージによってを最初に渡されたからこの一覧を取得します。  
+3. デバッグ セッションは、そのプログラムの許容 DEs の一覧に、DE があるかを確認します。 デバッグ セッションは、ソリューションのアクティブなプログラムの設定、デバッグ パッケージによってを最初に渡されたからこの一覧を取得します。  
   
-     許可の一覧で、DE 必要があります。 そう、DE、プログラムにアタッチされません。  
+    許可の一覧で、DE 必要があります。 そう、DE、プログラムにアタッチされません。  
   
- プログラムでは、ポートは、プログラムの新しいノードを最初に受信すると、作成、 [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)をプログラムを表すインターフェイス。  
+   プログラムでは、ポートは、プログラムの新しいノードを最初に受信すると、作成、 [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)をプログラムを表すインターフェイス。  
   
 > [!NOTE]
 >  これと混同しないで、`IDebugProgram2`デバッグ エンジン (DE) によって後で作成されたインターフェイスです。  

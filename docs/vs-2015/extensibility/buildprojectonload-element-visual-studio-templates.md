@@ -1,7 +1,7 @@
 ---
 title: BuildProjectOnload 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: b07d3074-0fc9-45e1-baf5-da6bd4f3f1c0
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1c194f4236f04eea7d8d1a156c8ee308ff58a143
-ms.sourcegitcommit: aea5cdb76fbc7eb31d1e5cc3c8d6adb0c743220f
+ms.openlocfilehash: 96a58ca3baeb03f01cd2df1a5c4267d444da1728
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "47593135"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49253267"
 ---
 # <a name="buildprojectonload-element-visual-studio-templates"></a>BuildProjectOnload 要素 (Visual Studio テンプレート)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[BuildProjectOnload 要素 (Visual Studio テンプレート)](https://docs.microsoft.com/visualstudio/extensibility/buildprojectonload-element-visual-studio-templates)します。  
-  
 作成して、ソリューションに追加するときは、新しいプロジェクトのみをビルドします。 ソリューション全体はビルドされません。  
   
  \<VSTemplate>  

@@ -15,12 +15,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: b44d57fbd36e82a84aaa0b2e837d24d429073f79
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: ca43b4daea5c5bb95a0752eeae93814d234e9a62
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34845319"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923018"
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>Visual Studio でのデータ コントロールをバインドします。
 データをコントロールにバインドすることで、アプリケーションのユーザーに対してデータを表示できます。 項目をドラッグして、これらのデータ バインド コントロールを作成することができます、**データソース**をデザイン画面または Visual Studio での画面のコントロールにウィンドウ。
@@ -30,14 +30,15 @@ ms.locfileid: "34845319"
 ## <a name="data-sources"></a>データ ソース
  データ バインディングのコンテキストでは、データ ソースは、ユーザー インターフェイスにバインドできるメモリ内のデータを表します。 実際には、データ ソースは、Entity Framework のクラス、データセット、.NET プロキシ オブジェクト、LINQ to SQL クラス、または任意の .NET オブジェクトまたはコレクションでカプセル化されたサービス エンドポイントをすることができます。 一部のデータ ソースから項目をドラッグしてデータ バインド コントロールを作成することを有効にする、**データソース**ウィンドウで、他のデータ ソースがないです。 サポートされるデータ ソースを次の表に示します。
 
-|データ ソース|ドラッグ アンド ドロップのサポート**Windows フォーム デザイナー**|ドラッグ アンド ドロップのサポート**WPF デザイナー**|ドラッグ アンド ドロップのサポート**Silverlight デザイナー**|
-|-----------------|---------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------------|
-|データセット|[はい]|[はい]|いいえ|
-|エンティティ データ モデル|[はい]<sup>1</sup>|[はい]|[はい]|
-|LINQ to SQL クラス|×<sup>2</sup>|×<sup>2</sup>|×<sup>2</sup>|
-|サービス (を含む[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、WCF サービス、および web サービス)|[はい]|[はい]|[はい]|
-|Object|[はい]|[はい]|[はい]|
-|SharePoint|[はい]|[はい]|[はい]|
+
+| データ ソース | ドラッグ アンド ドロップのサポート**Windows フォーム デザイナー** | ドラッグ アンド ドロップのサポート**WPF デザイナー** | ドラッグ アンド ドロップのサポート**Silverlight デザイナー** |
+| - | - | - | - |
+| データセット | はい | [はい] | いいえ |
+| エンティティ データ モデル | [はい]<sup>1</sup> | はい | はい |
+| LINQ to SQL クラス | ×<sup>2</sup> | ×<sup>2</sup> | ×<sup>2</sup> |
+| サービス (を含む[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、WCF サービス、および web サービス) | はい | [はい] | はい |
+| Object | はい | [はい] | はい |
+| SharePoint | はい | [はい] | はい |
 
  1. 使用して、モデルの生成、 **Entity Data Model**ウィザード、デザイナーにそれらのオブジェクトをドラッグします。
 
@@ -54,7 +55,7 @@ ms.locfileid: "34845319"
  次の表に、いくつかの一覧にコントロールをデータにバインドする最も一般的なタスクを実行します。
 
 |タスク|詳細情報|
-|----------|----------------------|
+|----------| - |
 |開く、**データソース**ウィンドウ。|デザイン画面を開き、エディター内**ビュー** > **データソース**します。|
 |データ ソースをプロジェクトに追加します。|[新しいデータ ソースの追加](../data-tools/add-new-data-sources.md)|
 |項目をドラッグしたときに作成されるコントロールの設定、**データソース**をデザイナーにウィンドウ。|[[データ ソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)|

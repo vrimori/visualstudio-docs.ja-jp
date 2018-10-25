@@ -1,7 +1,7 @@
 ---
 title: IDebugReference2::EnumChildren |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 35b3c2f3-69f4-4013-b555-f847221f62e8
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 760bad3e67d4ac2100dc0bfa68d319aae18a617d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 408303e5a67c7ef700504d594540ceb04dd2299c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534081"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844173"
 ---
 # <a name="idebugreference2enumchildren"></a>IDebugReference2::EnumChildren
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugReference2::EnumChildren](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugreference2-enumchildren)します。  
-  
 参照の選択された子の一覧を取得します。 将来使用するために予約されています。  
   
 ## <a name="syntax"></a>構文  

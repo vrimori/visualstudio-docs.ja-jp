@@ -1,7 +1,7 @@
 ---
 title: iOS を使用してビルドするためのツールのインストールおよび構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 13
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-ms.openlocfilehash: 84ff5fbd829fa47452ba258d431dcc0d0148ebf5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 41ad445190624ba70305d0e96ac55fc964702763
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537283"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911279"
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>Install and Configure Tools to Build using iOS
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[インストール And Configure Tools to Build using iOS](https://docs.microsoft.com/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios)します。  
-  
   
 Visual C++ for Cross-Platform Mobile Development を使用して、iOS コードを編集およびデバッグし、iOS シミュレーターまたは iOS デバイスに配置することができます。ただし、ライセンスの制限により、コードのビルドと実行は、リモートの Mac 上で行わなければなりません。 Visual Studio を使用して iOS アプリをビルドおよび実行するには、Mac 上にリモート エージェント [vcremote](http://go.microsoft.com/fwlink/p/?LinkId=534988)をセットアップして構成する必要があります。 このリモート エージェントが、Visual Studio からのビルド要求を処理し、Mac に接続された iOS デバイスまたは Mac 上の iOS シミュレーターでアプリを実行します。  
   
@@ -92,39 +90,39 @@ Visual C++ for Cross-Platform Mobile Development を使用して、iOS コード
   
 ###  <a name="DownloadInstall"></a> リモート エージェントをダウンロードしてインストールするには  
   
--   Mac 上のターミナル アプリから、次のように入力します。  
+- Mac 上のターミナル アプリから、次のように入力します。  
   
-     `sudo npm install -g --unsafe-perm vcremote`  
+   `sudo npm install -g --unsafe-perm vcremote`  
   
-     グローバル インストール (**-g**) スイッチが推奨されますが、必須ではありません。  
+   グローバル インストール (**-g**) スイッチが推奨されますが、必須ではありません。  
   
-     インストール中、Mac に vcremote がインストールされて、開発者モードがアクティブ化されます。 [Homebrew](http://brew.sh/) と 2 つのパッケージ (vcremote-lib および vcremote-utils) もインストールされます。  
+   インストール中、Mac に vcremote がインストールされて、開発者モードがアクティブ化されます。 [Homebrew](http://brew.sh/) と 2 つのパッケージ (vcremote-lib および vcremote-utils) もインストールされます。  
   
-    > [!NOTE]
-    >  Homebrew をインストールするには、sudo (管理者) のアクセス許可が必要です。 sudo 以外で vcremote をインストールする必要がある場合には、Homebrew を手動で usr/local の場所にインストールして、その bin フォルダーをパスに追加します。 詳細については、 [Homebrew のドキュメント](https://github.com/Homebrew/homebrew/wiki/Installation)を参照してください。 開発者モードを手動で有効にするには、ターミナル アプリでコマンド `DevToolsSecurity –enable` を入力します。  
+  > [!NOTE]
+  >  Homebrew をインストールするには、sudo (管理者) のアクセス許可が必要です。 sudo 以外で vcremote をインストールする必要がある場合には、Homebrew を手動で usr/local の場所にインストールして、その bin フォルダーをパスに追加します。 詳細については、 [Homebrew のドキュメント](https://github.com/Homebrew/homebrew/wiki/Installation)を参照してください。 開発者モードを手動で有効にするには、ターミナル アプリでコマンド `DevToolsSecurity –enable` を入力します。  
   
- Visual Studio を新しいバージョンに更新した場合は、リモート エージェントも現在のバージョンに更新する必要があります。 リモート エージェントを更新するには、リモート エージェントをダウンロードしてインストールする手順を繰り返します。  
+  Visual Studio を新しいバージョンに更新した場合は、リモート エージェントも現在のバージョンに更新する必要があります。 リモート エージェントを更新するには、リモート エージェントをダウンロードしてインストールする手順を繰り返します。  
   
 ##  <a name="Start"></a> リモート エージェントを起動する  
  Visual Studio で iOS コードをビルドして実行するには、リモート エージェントが実行されている必要があります。 Visual Studio がリモート エージェントとペアリングされていないと、Visual Studio はリモート エージェントと通信できません。 既定では、リモート エージェントはセキュリティで保護された接続モードで実行されます。この場合、PIN を使用して Visual Studio とペアリングする必要があります。  
   
 ###  <a name="RemoteAgentStartServer"></a> リモート エージェントを起動するには  
   
--   Mac 上のターミナル アプリから、次のように入力します。  
+- Mac 上のターミナル アプリから、次のように入力します。  
   
-     `vcremote`  
+   `vcremote`  
   
-     これにより、既定のビルド ディレクトリである ~/vcremote でエージェントが起動します。 追加の構成オプションについては、「 [Configure the remote agent on the Mac](#ConfigureMac)」を参照してください。  
+   これにより、既定のビルド ディレクトリである ~/vcremote でエージェントが起動します。 追加の構成オプションについては、「 [Configure the remote agent on the Mac](#ConfigureMac)」を参照してください。  
   
- エージェントを初めて起動するとき、また、新しいクライアント証明書を作成するときは必ず、そのエージェントを Visual Studio に構成するために必要な情報 (ホスト名、ポート、PIN など) が提供されます。  
+  エージェントを初めて起動するとき、また、新しいクライアント証明書を作成するときは必ず、そのエージェントを Visual Studio に構成するために必要な情報 (ホスト名、ポート、PIN など) が提供されます。  
   
- ![vcremote を使用してセキュリティで保護された PIN を生成します](../cross-platform/media/cppmdd-vcremote-generateclientcert.png "CPPMDD_vcremote_generateClientCert")  
+  ![vcremote を使用してセキュリティで保護された PIN を生成します](../cross-platform/media/cppmdd-vcremote-generateclientcert.png "CPPMDD_vcremote_generateClientCert")  
   
- ホスト名を使用して Visual Studio にリモート エージェントを構成する場合は、Windows からホスト名を使用して Mac を ping し、到達可能であることを確認してください。 そうでない場合は、代わりに IP アドレスを使用する必要があります。  
+  ホスト名を使用して Visual Studio にリモート エージェントを構成する場合は、Windows からホスト名を使用して Mac を ping し、到達可能であることを確認してください。 そうでない場合は、代わりに IP アドレスを使用する必要があります。  
   
- 生成される PIN は 1 回限りの使い捨て PIN であり、有効期間は限られています。 Visual Studio とリモート エージェントをペアリングする前に期限が切れた場合は、新しい PIN を生成する必要があります。 詳細については、「 [Generate a new security PIN](#GeneratePIN)」を参照してください。  
+  生成される PIN は 1 回限りの使い捨て PIN であり、有効期間は限られています。 Visual Studio とリモート エージェントをペアリングする前に期限が切れた場合は、新しい PIN を生成する必要があります。 詳細については、「 [Generate a new security PIN](#GeneratePIN)」を参照してください。  
   
- リモート エージェントは、セキュリティで保護されていないモードでも使用できます。 セキュリティで保護されていないモードでは、PIN なしでリモート エージェントと Visual Studio をペアリングすることができます。  
+  リモート エージェントは、セキュリティで保護されていないモードでも使用できます。 セキュリティで保護されていないモードでは、PIN なしでリモート エージェントと Visual Studio をペアリングすることができます。  
   
 #### <a name="to-disable-secured-connection-mode"></a>セキュリティで保護された接続モードを無効にするには  
   
@@ -134,11 +132,11 @@ Visual C++ for Cross-Platform Mobile Development を使用して、iOS コード
   
 #### <a name="to-enable-secured-connection-mode"></a>セキュリティで保護された接続モードを有効にするには  
   
--   セキュリティで保護された接続モードを有効にするには、次のコマンドを入力します。  
+- セキュリティで保護された接続モードを有効にするには、次のコマンドを入力します。  
   
-     `vcremote --secure true`  
+   `vcremote --secure true`  
   
- リモート エージェントを起動した後は停止するまで、Visual Studio からリモート エージェントを使用できます。  
+  リモート エージェントを起動した後は停止するまで、Visual Studio からリモート エージェントを使用できます。  
   
 #### <a name="to-stop-the-remote-agent"></a>リモート エージェントを停止するには  
   
@@ -149,36 +147,36 @@ Visual C++ for Cross-Platform Mobile Development を使用して、iOS コード
   
 #### <a name="to-configure-the-remote-agent-from-visual-studio"></a>Visual Studio でリモート エージェントを構成するには  
   
-1.  エージェントが Mac 上でまだ実行されていない場合は、「 [リモート エージェントを起動する](#Start)」の手順に従います。 Visual Studio をリモート エージェントと正常にペアリングして接続し、プロジェクトをビルドするためには、Mac が vcremote を実行している必要があります。  
+1. エージェントが Mac 上でまだ実行されていない場合は、「 [リモート エージェントを起動する](#Start)」の手順に従います。 Visual Studio をリモート エージェントと正常にペアリングして接続し、プロジェクトをビルドするためには、Mac が vcremote を実行している必要があります。  
   
-2.  Mac 上で、Mac のホスト名または IP アドレスを取得します。  
+2. Mac 上で、Mac のホスト名または IP アドレスを取得します。  
   
-     IP アドレスを取得するには、ターミナル ウィンドウで **ifconfig** コマンドを使用します。 アクティブなネットワーク インターフェイスの下に表示される inet アドレスを使用します。  
+    IP アドレスを取得するには、ターミナル ウィンドウで **ifconfig** コマンドを使用します。 アクティブなネットワーク インターフェイスの下に表示される inet アドレスを使用します。  
   
-3.  Visual Studio のメニュー バーで、 **[ツール]**、 **[オプション]** の順に選択します。  
+3. Visual Studio のメニュー バーで、 **[ツール]**、 **[オプション]** の順に選択します。  
   
-4.  **[オプション]** ダイアログ ボックスで、 **[クロス プラットフォーム]**、 **[C++]**、 **[iOS]** の順に展開します。  
+4. **[オプション]** ダイアログ ボックスで、 **[クロス プラットフォーム]**、 **[C++]**、 **[iOS]** の順に展開します。  
   
-5.  **[ホスト名]** フィールドと **[ポート]** フィールドに、リモート エージェントの起動時に示された値を入力します。 ホスト名には、Mac の DNS 名または IP アドレスを使用できます。 既定のポートは 3030 です。  
+5. **[ホスト名]** フィールドと **[ポート]** フィールドに、リモート エージェントの起動時に示された値を入力します。 ホスト名には、Mac の DNS 名または IP アドレスを使用できます。 既定のポートは 3030 です。  
   
-    > [!NOTE]
-    >  ホスト名で Mac を ping できない場合は、IP アドレスを使用する必要があります。  
+   > [!NOTE]
+   >  ホスト名で Mac を ping できない場合は、IP アドレスを使用する必要があります。  
   
-6.  既定のセキュリティで保護された接続モードでリモート エージェントを使用する場合は、 **[セキュア]** チェック ボックスをオンにしてから、リモート エージェントから示された PIN の値を **[PIN]** フィールドに入力します。 セキュリティで保護されていない接続モードでリモート エージェントを使用する場合は、 **[セキュア]** チェック ボックスをオフにして、 **[PIN]** フィールドを空白のままにします。  
+6. 既定のセキュリティで保護された接続モードでリモート エージェントを使用する場合は、 **[セキュア]** チェック ボックスをオンにしてから、リモート エージェントから示された PIN の値を **[PIN]** フィールドに入力します。 セキュリティで保護されていない接続モードでリモート エージェントを使用する場合は、 **[セキュア]** チェック ボックスをオフにして、 **[PIN]** フィールドを空白のままにします。  
   
-7.  **[ペアリングする]** を選択してペアリングを有効にします。  
+7. **[ペアリングする]** を選択してペアリングを有効にします。  
   
-     ![iOS のビルドにおける vcremote 接続を構成します](../cross-platform/media/cppmdd-options-ios.PNG "CPPMDD_Options_iOS")  
+    ![iOS のビルドにおける vcremote 接続を構成します](../cross-platform/media/cppmdd-options-ios.PNG "CPPMDD_Options_iOS")  
   
-     ペアリングは、ホスト名またはポートを変更するまで維持されます。 **[オプション]** ダイアログ ボックスでホスト名またはポートを変更した場合にその変更を元に戻すには、 **[元に戻す]** ボタンを選択して前のペアリングに戻します。  
+    ペアリングは、ホスト名またはポートを変更するまで維持されます。 **[オプション]** ダイアログ ボックスでホスト名またはポートを変更した場合にその変更を元に戻すには、 **[元に戻す]** ボタンを選択して前のペアリングに戻します。  
   
-     ペアリングが成功しなかった場合は、「 [Start the remote agent](#Start)」の手順に従って、リモート エージェントが実行されていることを確認します。 リモート エージェントの PIN が生成されてから経過した時間が長すぎる場合は、Mac 上で「 [Generate a new security PIN](#GeneratePIN) 」の手順に従ってからもう一度実行します。 Mac のホスト名を使用している場合は、代わりに IP アドレスを **[ホスト名]** に使用してみてください。  
+    ペアリングが成功しなかった場合は、「 [Start the remote agent](#Start)」の手順に従って、リモート エージェントが実行されていることを確認します。 リモート エージェントの PIN が生成されてから経過した時間が長すぎる場合は、Mac 上で「 [Generate a new security PIN](#GeneratePIN) 」の手順に従ってからもう一度実行します。 Mac のホスト名を使用している場合は、代わりに IP アドレスを **[ホスト名]** に使用してみてください。  
   
-8.  **[リモート ルート]** フィールドのフォルダー名を更新して、Mac のホーム (~) ディレクトリ内の リモート エージェントで使用されるフォルダーを指定します。 既定では、リモート エージェントはリモート ルートとして /Users/`username`/vcremote を使用します。  
+8. **[リモート ルート]** フィールドのフォルダー名を更新して、Mac のホーム (~) ディレクトリ内の リモート エージェントで使用されるフォルダーを指定します。 既定では、リモート エージェントはリモート ルートとして /Users/`username`/vcremote を使用します。  
   
 9. **[OK]** を選択して、リモート ペアリング接続設定を保存します。  
   
- リモート エージェントを使用するたびに、Visual Studio は、この同じ情報を使用して Mac 上のリモート エージェントに接続します。 Visual Studio を再度リモート エージェントにペアリングさせる必要はありません。それが必要になるのは、Mac 上で新しいセキュリティ証明書を生成した場合、あるいは Mac のホスト名または IP アドレスが変更された場合のみです。  
+   リモート エージェントを使用するたびに、Visual Studio は、この同じ情報を使用して Mac 上のリモート エージェントに接続します。 Visual Studio を再度リモート エージェントにペアリングさせる必要はありません。それが必要になるのは、Mac 上で新しいセキュリティ証明書を生成した場合、あるいは Mac のホスト名または IP アドレスが変更された場合のみです。  
   
 ##  <a name="GeneratePIN"></a> Generate a new security PIN  
  初めてリモート エージェントを起動すると、生成された PIN が期間限定で有効になります (既定では 10 分)。 Visual Studio とリモート エージェントをペアリングする前に期限切れになった場合は、新しい PIN を生成する必要があります。  

@@ -1,7 +1,7 @@
 ---
 title: データベース オブジェクトでサポートされていないデータベース プロバイダーを選択した |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2c225e00a6d303bff16e30fabd2f3e8e0e9d40ca
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1027be99525081ad4df959908b856727e9ebe399
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547271"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49211706"
 ---
 # <a name="you-have-selected-a-database-object-from-an-unsupported-database-provider"></a>サポートされていないデータベース プロバイダーのデータベース オブジェクトが選択されています
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio 2017 ドキュメント](https://docs.microsoft.com/en-us/visualstudio/)します。  
-  
 [!INCLUDE[vs_ordesigner_long](../includes/vs-ordesigner-long-md.md)] ([!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)]) For SQL Server、.NET Framework Data Provider のみをサポートしています (<xref:System.Data.SqlClient>)。 クリックすることができますが**OK**とサポートされていないデータベース プロバイダーからオブジェクトを使用して、実行時に予期しない動作が発生する可能性があります。  
   
 > [!NOTE]

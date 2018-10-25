@@ -1,7 +1,7 @@
 ---
 title: ツールバーにコマンドの追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 4f8cfba8-0653-4ccc-a2da-acf064c83aa7
 caps.latest.revision: 4
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3067d080b12e2ce57be2506e6c2d3c334f4171ca
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 266dbade7554b8884a81d59b553fd67836dc528a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533267"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49209405"
 ---
 # <a name="adding-commands-to-toolbars"></a>ツールバーへのコマンドの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ツールバーを追加するコマンド](https://docs.microsoft.com/visualstudio/extensibility/adding-commands-to-toolbars)します。  
-  
 ツールバーは、水平方向または垂直方向のストリップで、コマンドにバインドされているボタンが含まれています。 Visual Studio での多くの異なるウィンドウのツールバーに独自のコマンドを追加することができます。 Visual Studio のメイン ウィンドウ、ソリューション エクスプ ローラーで、および独自のカスタム ツール ウィンドウです。  
   
  ここでは、多くのツールバーのコマンドで実行できることを示します。  

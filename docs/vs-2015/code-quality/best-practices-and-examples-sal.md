@@ -1,7 +1,7 @@
 ---
 title: ベスト プラクティスと例 (SAL) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,21 +14,19 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9391be90516dcd7549124d7992777fd52d3134d2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5abb716bd562b6bd82b430f6b94251153a9abbe3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548358"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934705"
 ---
 # <a name="best-practices-and-examples-sal"></a>ベスト プラクティスと例 (SAL)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ベスト プラクティスと例 (SAL)](https://docs.microsoft.com/visualstudio/code-quality/best-practices-and-examples-sal)します。  
-  
 最もからソース コード注釈言語 (SAL) を取得し、一般的な問題を回避する方法を示します。  
   
-## <a name="in"></a>_In\_  
+## <a name="in"></a>\_In\_
  関数は、要素を記述することになって場合を使用して、`_Inout_`の代わりに`_In_`します。 これは、古いマクロから SAL への自動変換の場合に特に関連します。 SAL、前に多くのプログラマがコメントとしてマクロを使用: 名前を付けられたマクロ`IN`、 `OUT`、 `IN_OUT`、またはこれらの名前のバリアント。 これらのマクロは、SAL を変換することをお勧めも強くお勧めすると、元のプロトタイプが作成されており、古いマクロが、コードが何を反映していないために、コードが変更されている可能性がありますので変換する際は注意してください。 詳細については、特に注意してください、`OPTIONAL`マクロを頻繁に正しく配置されていないため、コメント: コンマの反対側になど。  
   
 ```cpp  
@@ -52,8 +50,8 @@ void Func2(_Inout_ PCHAR p1)
 }  
 ```  
   
-## <a name="opt"></a>_opt\_  
- 呼び出し元が null ポインターを渡すことを許可されていない場合は、使用`_In_`または`_Out_`の代わりに`_In_opt_`または`_Out_opt_`します。 これをそのパラメーターをチェックし、エラーが返されますが NULL であることがない場合に関数にも当てはまります。 適切な防御的なコーディング方法では、関数は、予期しない NULL のパラメーターをチェックおよび適切に返すことが必ずしも省略可能な型のパラメーターの注釈ができること (_*Xxx*_opt\_)。  
+## <a name="opt"></a>\_opt\_  
+ 呼び出し元が null ポインターを渡すことを許可されていない場合は、使用`_In_`または`_Out_`の代わりに`_In_opt_`または`_Out_opt_`します。 これをそのパラメーターをチェックし、エラーが返されますが NULL であることがない場合に関数にも当てはまります。 適切な防御的なコーディング方法では、関数は、予期しない NULL のパラメーターをチェックおよび適切に返すことが必ずしも省略可能な型のパラメーターの注釈ができること (\_*Xxx*_opt\_).  
   
 ```cpp  
   
@@ -71,10 +69,10 @@ void Func2(_Out_ int *p1)
   
 ```  
   
-## <a name="predefensive-and-postdefensive"></a>_Pre_defensive\_と _Post_defensive\_  
+## <a name="predefensive-and-postdefensive"></a>\_Pre_defensive\_と\_Post_defensive\_  
  使用することをお勧め関数は、信頼境界に表示されている場合、`_Pre_defensive_`注釈。  「防御的な」修飾子が呼び出しの時点で、いることを示す特定のコメントを変更します、インターフェイスを厳密には、チェックする必要がありますが実装ボディ内にする必要があります前提として不正確なパラメーターを渡すことができます。 その場合は、`_In_ _Pre_defensive_`を呼び出し元には、NULL を渡すしようとすると、エラーが発生、が関数本体分析パラメーターが NULL の場合、最初にポインターを逆参照しようする可能性がありますかのように提供することを示すために信頼境界をお勧めNULL の確認にはフラグが付けられます。  A`_Post_defensive_`注釈は、コールバックの場所、信頼されたパーティは、呼び出し元と見なされ、信頼できないコードが呼び出されたコードで使用できることもできます。  
   
-## <a name="outwrites"></a>_Out_writes\_  
+## <a name="outwrites"></a>\_Out_writes\_  
  次の例での一般的な誤用`_Out_writes_`します。  
   
 ```cpp  
@@ -108,7 +106,7 @@ void Func3(_Out_writes_(size) PSTR pb,
   
 ```  
   
-## <a name="out-pstr"></a>_Out\_ PSTR  
+## <a name="out-pstr"></a>\_Out\_ PSTR  
  使用`_Out_ PSTR`がほぼ常に間違っています。 これは、文字バッファーを指す出力パラメーターを持つものとして解釈され、NULL で終わることをお勧めします。  
   
 ```cpp  
@@ -123,7 +121,7 @@ void Func2(_Out_writes_(n) PSTR wszFileName, size_t n);
   
  注釈のような`_In_ PCSTR`は一般的で便利です。 NULL で終わるを持つため、入力文字列の指すの precondition`_In_`により、NULL で終わる文字列を認識します。  
   
-## <a name="in-wchar-p"></a>_In\_ WCHAR * p  
+## <a name="in-wchar-p"></a>\_\_ WCHAR * p  
  `_In_ WCHAR* p` 入力のポインターがあることを示す`p`1 つの文字を指します。 ただし、ほとんどの場合、これはない可能性がありますが想定されている仕様です。 代わりは NULL で終わる配列の指定は、おそらく対象としていますそのために使用`_In_ PWSTR`します。  
   
 ```cpp  
@@ -154,7 +152,7 @@ BOOL StrEquals2(_In_ PSTR p1, _In_ PSTR p2)
   
 ```  
   
-## <a name="outrange"></a>_Out_range\_  
+## <a name="outrange"></a>\_Out_range\_  
  パラメーターがポインターであり使用して、ポインターが指している要素の値の範囲を表現したい場合`_Deref_out_range_`の代わりに`_Out_range_`します。 次の例の範囲で * pcbFilled を表現すると、pcbFilled ではありません。  
   
 ```cpp  
@@ -177,7 +175,7 @@ void Func2(
   
  `_Deref_out_range_(0, cbSize)` 推測するためにはいくつかのツールには必須ではありません`_Out_writes_to_(cbSize,*pcbFilled)`が完全を期すのためここで表示されます。  
   
-## <a name="wrong-context-in-when"></a>正しくないコンテキストで (_w)\_  
+## <a name="wrong-context-in-when"></a>コンテキストが正しくない\_とき\_  
  もう 1 つのよくある間違いでは、前提条件の後の状態の評価を使用します。 次の例では、`_Requires_lock_held_`の前提条件です。  
   
 ```cpp  
@@ -194,7 +192,7 @@ int Func2(_In_ MyData *p, int flag);
   
  式`result`前の状態では利用できません後の状態の値を参照します。  
   
-## <a name="true-in-success"></a>_Success の場合は TRUE。\_  
+## <a name="true-in-success"></a>場合は TRUE\_成功。\_  
  戻り値が 0 以外の場合、関数が成功した場合は、使用`return != 0`の代わりに、成功条件として`return == TRUE`します。 0 以外は必ずしものコンパイラを提供する実際の値の等価性`TRUE`します。 パラメーターを`_Success_`式であるし、対応すると、次の式が評価されます: `return != 0`、 `return != false`、 `return != FALSE`、および`return`パラメーターや比較は不要です。  
   
 ```cpp  

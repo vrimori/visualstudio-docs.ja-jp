@@ -1,7 +1,7 @@
 ---
 title: アクセシビリティ製品およびサービス (Blend) | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3e90c3f5ec522190cf08027bdffbc9a9558cee90
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 394940ae59ceb87cf2bc71d71584fe0bf39eb0b0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536652"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49197822"
 ---
 # <a name="accessibility-products-and-services-blend"></a>アクセシビリティ製品およびサービス (Blend)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[アクセシビリティ製品およびサービス (Blend)](https://docs.microsoft.com/visualstudio/designers/accessibility-products-and-services-blend)します。  
-  
 Microsoft は、すべてのユーザーが簡単に使用できる製品とサービスの開発に取り組んでいます。 以下のセクションでは、Microsoft Windows を障碍のある方にとって使いやすくするための機能、製品、およびサービスについて説明します。  
   
 -   "Windows のアクセシビリティ機能"  
@@ -73,7 +71,7 @@ Microsoft は、すべてのユーザーが簡単に使用できる製品とサ�
   
  Web アドレスは変更される場合があるので、ここに示したサイトに接続できないこともあります。  
   
-## <a name="customer-service-for-people-people-with-hearing-impairments"></a>聴覚障碍者のためのカスタマー サービス  
+## <a name="customer-service-for-people-with-hearing-impairments"></a>聴覚障碍者のためのカスタマー サービス  
  聴覚に障碍がある方は、文字電話 (TTY/TDD) サービスをとおして Microsoft 製品サポート サービスおよびカスタマー サービスのすべての情報を利用できます。  
   
  カスタマー サービスをご利用の場合は、Microsoft セールス インフォメーション センターに連絡してください。休日を除く月曜から金曜の午前 6 時 30 分から午後 5 時 30 分まで (太平洋標準時間)、電話番号 (800) 892-5234 で受け付けています。  

@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2200: スタックの詳細を保持するために Rethrow |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 5a79dd4f12a2d97cb707a38f4a46e5a20a8436b1
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: eb0550a6850f79c7098817d19222c8034e1127ed
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589960"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874801"
 ---
 # <a name="ca2200-rethrow-to-preserve-stack-details"></a>CA2200: スタック詳細を保持するために再度スローします
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2200: スタック詳細を保持するために再スロー](https://docs.microsoft.com/visualstudio/code-quality/ca2200-rethrow-to-preserve-stack-details)します。
 
 |||
 |-|-|

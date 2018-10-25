@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_notreached |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 75dc87dce2a33321c6e874bc9d8184fc8edf74f9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c53ae8e65861b657fa2d908ae57cbf569e51479f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536023"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933756"
 ---
 # <a name="idiasymbolgetnotreached"></a>IDiaSymbol::get_notReached
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_notreached](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-notreached)します。  
-  
 関数またはラベルに達することはないかどうかを指定するフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -50,7 +48,7 @@ HRESULT get_notReached(
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

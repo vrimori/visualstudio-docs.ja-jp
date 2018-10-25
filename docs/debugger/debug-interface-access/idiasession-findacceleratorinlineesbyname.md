@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findAcceleratorInlineesByName |Microsoft ドキュメント
+title: IDiaSession::findAcceleratorInlineesByName |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d9e95193b361dcfe0935d209bf1fc3687914e1c4
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 240315fed330c72a8fe180056642c9aff0fb96aa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31468763"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864050"
 ---
 # <a name="idiasessionfindacceleratorinlineesbyname"></a>IDiaSession::findAcceleratorInlineesByName
-指定されたインライン関数名に対応するインライン フレームにシンボルの列挙を返します。  
+指定されたインライン関数の名前に対応するインライン フレームのシンボルの列挙を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,19 +34,19 @@ HRESULT findAcceleratorInlineeLinesByName (
   
 #### <a name="parameters"></a>パラメーター  
  `name`  
- [in]検索するインライン関数の名前です。  
+ [in]検索するインライン関数の名前。  
   
  `option`  
- [in]対応しているフレームのインラインの検索に使用される名前の検索オプション`name`です。 詳細については、次を参照してください。 [NameSearchOptions 列挙型](../../debugger/debug-interface-access/namesearchoptions.md)です。  
+ [in]対応しているフレームのインラインの検索時に使用される名前の検索オプション`name`します。 詳細については、次を参照してください。 [NameSearchOptions 列挙型](../../debugger/debug-interface-access/namesearchoptions.md)します。  
   
  `ppResult`  
- [out]ポインター、`IDiaEnumSymbols`結果で初期化されたインターフェイス ポインター。  
+ [out]ポインター、`IDiaEnumSymbols`インターフェイス ポインターでは、結果を使用して初期化します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- この関数は、インライン アクセラレータ スタブ関数内でのみを検索します。 ネイティブの C++ プロシージャ レコードは無視されます。  
+## <a name="remarks"></a>Remarks  
+ この関数はインラインに起因アクセラレータ スタブ関数内でのみを検索します。 ネイティブ C++ プロシージャ レコードは無視されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   

@@ -1,7 +1,7 @@
 ---
 title: ClickOnce アプリケーションのコード アクセス セキュリティ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -29,18 +29,16 @@ caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 71b9344e552cb03d65b0093b1d5e0707689ec6af
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ea1f91a50180dce6edec17afead5649ecd3e1f50
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534677"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816067"
 ---
 # <a name="code-access-security-for-clickonce-applications"></a>ClickOnce アプリケーションのコード アクセス セキュリティ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ClickOnce アプリケーションのコード アクセス セキュリティ](https://docs.microsoft.com/visualstudio/deployment/code-access-security-for-clickonce-applications)します。  
-  
 ClickOnce アプリケーションは、.NET Framework に基づいており、コード アクセス セキュリティ制約の対象です。 このため、コード アクセス セキュリティの影響を理解し、それに応じて ClickOnce アプリケーションを作成することが重要です。  
   
  コード アクセス セキュリティとは、保護されているリソースや操作に対して、コードが持つアクセス権を制限できるようにするための .NET Framework の機構です。 アプリケーションのインストーラーの場所に適切なゾーンを使用するには、ClickOnce アプリケーションのコード アクセス セキュリティのアクセス許可を構成する必要があります。 ほとんどの場合、一連のアクセス許可を制限する **インターネット** ゾーンまたは一連のより多くのアクセス許可を与える **ローカル イントラネット** ゾーンを選択できます。  
@@ -48,14 +46,14 @@ ClickOnce アプリケーションは、.NET Framework に基づいており、�
 ## <a name="default-clickonce-code-access-security"></a>既定の ClickOnce コード アクセス セキュリティ  
  既定では、ClickOnce アプリケーションは、クライアント コンピュータへインストールされる際、またはクライアント コンピュータで実行される際に、完全な信頼アクセス許可を受けます。  
   
--   完全信頼アクセス許可のあるアプリケーションは、ファイル システムやレジストリなどのリソースに無制限にアクセスします。 このためご使用のアプリケーション (およびエンド ユーザーのシステム) が悪意のあるコードによって不当に利用される可能性があります。  
+- 完全信頼アクセス許可のあるアプリケーションは、ファイル システムやレジストリなどのリソースに無制限にアクセスします。 このためご使用のアプリケーション (およびエンド ユーザーのシステム) が悪意のあるコードによって不当に利用される可能性があります。  
   
--   アプリケーションに完全な信頼アクセス許可が必要な場合、エンド ユーザーにアプリケーションにアクセス許可を付与するよう求めるプロンプトが表示されることがあります。 これはアプリケーションが実際には ClickOnce エクスペリエンスを提供していないことを示しており、このプロンプトによって経験の少ないユーザーが混乱してしまう可能性があります。  
+- アプリケーションに完全な信頼アクセス許可が必要な場合、エンド ユーザーにアプリケーションにアクセス許可を付与するよう求めるプロンプトが表示されることがあります。 これはアプリケーションが実際には ClickOnce エクスペリエンスを提供していないことを示しており、このプロンプトによって経験の少ないユーザーが混乱してしまう可能性があります。  
   
-    > [!NOTE]
-    >  CD-ROM などのリムーバブル メディアからアプリケーションをインストールする場合、これらのプロンプトが表示されることはありません。 さらに、ユーザーが信頼できるソースからアプリケーションをインストールする場合、ネットワーク管理者はこれらのプロンプトが表示がされないようにネットワーク ポリシーを構成できます。 詳細については、「 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)」を参照してください。  
+  > [!NOTE]
+  >  CD-ROM などのリムーバブル メディアからアプリケーションをインストールする場合、これらのプロンプトが表示されることはありません。 さらに、ユーザーが信頼できるソースからアプリケーションをインストールする場合、ネットワーク管理者はこれらのプロンプトが表示がされないようにネットワーク ポリシーを構成できます。 詳細については、「 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)」を参照してください。  
   
- ClickOnce アプリケーションのアクセス許可を制限するためには、アプリケーションのコード アクセス セキュリティのアクセス許可を変更して、アプリケーションに必要な最適なアクセス許可ゾーンを要求できます。 ほとんどの場合、アプリケーションの配置元のゾーンを選択できます。 たとえば、アプリケーションが企業アプリケーションである場合、 **ローカル イントラネット** が使用できます。 アプリケーションがインターネット アプリケーションである場合は、 **インターネット** ゾーンが使用できます。  
+  ClickOnce アプリケーションのアクセス許可を制限するためには、アプリケーションのコード アクセス セキュリティのアクセス許可を変更して、アプリケーションに必要な最適なアクセス許可ゾーンを要求できます。 ほとんどの場合、アプリケーションの配置元のゾーンを選択できます。 たとえば、アプリケーションが企業アプリケーションである場合、 **ローカル イントラネット** が使用できます。 アプリケーションがインターネット アプリケーションである場合は、 **インターネット** ゾーンが使用できます。  
   
 ## <a name="configuring-security-permissions"></a>セキュリティ アクセス許可を構成する  
  必ずコード アクセス セキュリティのアクセス許可を制限する適切なゾーンを要求するよう ClickOnce アプリケーションを構成する必要があります。 セキュリティのアクセス許可は、 **プロジェクト デザイナー** の **セキュリティ**ページで構成できます。  
@@ -82,30 +80,30 @@ ClickOnce アプリケーションは、.NET Framework に基づいており、�
 ## <a name="security-permissions-for-browser-hosted-applications"></a>ブラウザーでホストされるアプリケーションのセキュリティ アクセス許可  
  Visual Studio は、Windows Presentation Foundation (WPF) アプリケーションの以下のプロジェクト タイプを提供します。  
   
--   WPF Windows アプリケーション  
+- WPF Windows アプリケーション  
   
--   WPF Web ブラウザー アプリケーション  
+- WPF Web ブラウザー アプリケーション  
   
--   WPF カスタム コントロール ライブラリ  
+- WPF カスタム コントロール ライブラリ  
   
--   WPF サービス ライブラリ  
+- WPF サービス ライブラリ  
   
- これらのプロジェクト タイプのうち、WPF Web ブラウザー アプリケーションのみ Web ブラウザーでホストされており、そのため特別な配置とセキュリティ設定が必要です。 これらのアプリケーションの既定のセキュリティ設定は、次のとおりです。  
+  これらのプロジェクト タイプのうち、WPF Web ブラウザー アプリケーションのみ Web ブラウザーでホストされており、そのため特別な配置とセキュリティ設定が必要です。 これらのアプリケーションの既定のセキュリティ設定は、次のとおりです。  
   
--   **[ClickOnce セキュリティ設定を有効にする]**  
+- **[ClickOnce セキュリティ設定を有効にする]**  
   
--   **部分的に信頼するアプリケーション**  
+- **部分的に信頼するアプリケーション**  
   
--   **インターネット ゾーン** (選択された WPF Web ブラウザー アプリケーションに対し既定のアクセス許可が設定されているゾーン)  
+- **インターネット ゾーン** (選択された WPF Web ブラウザー アプリケーションに対し既定のアクセス許可が設定されているゾーン)  
   
- **[セキュリティの詳細設定]** ダイアログ ボックスでは、 **[選択したアクセス許可でこのアプリケーションをデバッグする]** チェック ボックスが選択され、無効になっています。 これはブラウザーによってホストされるアプリケーションでは、[ゾーン内でデバッグする] をオフにできないためです。  
+  **[セキュリティの詳細設定]** ダイアログ ボックスでは、 **[選択したアクセス許可でこのアプリケーションをデバッグする]** チェック ボックスが選択され、無効になっています。 これはブラウザーによってホストされるアプリケーションでは、[ゾーン内でデバッグする] をオフにできないためです。  
   
 ## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)   
  [方法 : ClickOnce のセキュリティ設定を有効にする](../deployment/how-to-enable-clickonce-security-settings.md)   
  [方法 : ClickOnce アプリケーションのセキュリティ ゾーンを設定する](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
  [方法 : ClickOnce アプリケーションのカスタム アクセス許可を設定する](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
- [方法 : アクセス許可が制限された ClickOnce アプリケーションをデバッグする](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
+ [How to: Debug a ClickOnce Application with Restricted Permissions](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
  [信頼されたアプリケーションの配置の概要](../deployment/trusted-application-deployment-overview.md)   
  [[セキュリティ] ページ (プロジェクト デザイナー)](../ide/reference/security-page-project-designer.md)
 

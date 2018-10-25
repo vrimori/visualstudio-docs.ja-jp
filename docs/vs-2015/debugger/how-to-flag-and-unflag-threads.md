@@ -1,7 +1,7 @@
 ---
 title: '方法: スレッドのフラグの設定とフラグ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 36
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f81de0353311d11cf744487d581296500d62ecb5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bb6c6c3f9c333ef1613f2733a476e7843f7249b4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537534"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49289134"
 ---
 # <a name="how-to-flag-and-unflag-threads"></a>方法 : スレッドに対するフラグの設定と設定解除を行う
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: フラグとスレッドのフラグを解除](https://docs.microsoft.com/visualstudio/debugger/how-to-flag-and-unflag-threads)します。  
-  
 アイコンでマークすることによって、特に注目するスレッドのフラグを設定することができます、**スレッド**、**並列スタック**、**並列ウォッチ**、および**GPUスレッド**windows。 このアイコンにより、フラグが設定されているスレッドをそれ以外のスレッドと簡単に区別できるようになります。  
   
  フラグが設定されたスレッドは、特別な扱いも受信、**スレッド**ボックスの一覧、**デバッグの場所**ツールバー。 この一覧では、すべてのスレッドを表示することも、フラグが設定されたスレッドのみを表示することもできます。 スレッドのフラグを設定するときに、**スレッド**フラグが設定されたスレッドのみを表示するリストが自動的に切り替わりますが、切り替えることができます必要に応じてすべてのスレッドを表示します。  

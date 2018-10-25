@@ -1,7 +1,7 @@
 ---
 title: NameProfile | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 966a3557c4436a625c7b8cd07ce850216085f194
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: dfe1b5fb517ed7b886e681081ac7910cfe717cc6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534349"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867170"
 ---
 # <a name="nameprofile"></a>NameProfile
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[NameProfile](https://docs.microsoft.com/visualstudio/profiling/nameprofile)します。  
-  
 `NameProfile` 関数は、指定したプロセスまたはスレッドに文字列を割り当てます。  
   
  NameProfile API は、インストルメンテーション プロファイリングでのみ使用できます。 NameProfile API は、サンプリング プロファイリングではサポートされません。  
@@ -47,17 +45,17 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
   
  プロファイル要素の名前。 次の場合、名前は無効です (NameProfileA は NAME_ERROR_INVALID_NAME を返します)。  
   
--   NameProfileA に渡されたポインターが NULL 値である。  
+- NameProfileA に渡されたポインターが NULL 値である。  
   
--   pszName の文字列データの先頭が数値である。  
+- pszName の文字列データの先頭が数値である。  
   
--   pszName の文字列データに空白が含まれる。  
+- pszName の文字列データに空白が含まれる。  
   
--   pszName の文字列データに、,;.`~!@#$%^&*()=[]{}&#124;\\?/<> 文字のいずれかが含まれる。  
+- pszName の文字列データに、,;.`~!@#$%^&*()=[]{}&#124;\\?/<> 文字のいずれかが含まれる。  
   
- `Level`  
+  `Level`  
   
- パフォーマンス データ収集を適用できるプロファイル レベルを示します。 次の **PROFILE_CONTROL_LEVEL** 値を使用して、パフォーマンス データ収集を適用できる 3 つのレベルのいずれかを指定できます。  
+  パフォーマンス データ収集を適用できるプロファイル レベルを示します。 次の **PROFILE_CONTROL_LEVEL** 値を使用して、パフォーマンス データ収集を適用できる 3 つのレベルのいずれかを指定できます。  
   
 |列挙子|説明|  
 |----------------|-----------------|  

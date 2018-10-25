@@ -1,7 +1,7 @@
 ---
 title: シェーダー デザイナー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 34
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6a8a6e0bb39ee501f72c96b55575859af0ce1e26
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ac752d0b85a45193fe4aafb55e33ec23e26aed6a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548419"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942011"
 ---
 # <a name="shader-designer"></a>シェーダー デザイナー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[シェーダー デザイナー](https://docs.microsoft.com/visualstudio/designers/shader-designer)します。  
-  
 このドキュメントでは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] シェーダー デザイナーを使用して、*シェーダー*というカスタム視覚効果を作成、変更、およびエクスポートする方法について説明します。  
   
  シェーダー デザイナーを使用すると、HLSL プログラミングを知らなくても、ゲームまたはアプリのカスタム視覚効果を作成できます。 シェーダー デザイナーでシェーダーを作成するには、それをグラフとしてレイアウトします。つまり、データおよび操作を表す複数の*ノード*をデザイン サーフェイスに追加し、それらのノードを接続することで、それらの操作によってデータを処理する方法を定義します。 各操作ノードでは、その時点までの効果のプレビューを表示して、結果を視覚化することができます。 データは、ノード間を移動して最終ノードに到達します。この最終ノードはシェーダーの出力を表しています。  
@@ -127,11 +125,11 @@ ms.locfileid: "47548419"
   
 ###### <a name="to-bind-a-different-texture-to-a-texture-register-or-to-modify-other-material-parameters"></a>別のテクスチャをテクスチャ レジスタにバインドするか、他の素材パラメーターを変更する方法  
   
-1.  **[選択]** モードで、デザイン サーフェイスの空の領域を選択します。 すると、**[プロパティ]** ウィンドウにグローバル シェーダー プロパティが表示されます。  
+1. **[選択]** モードで、デザイン サーフェイスの空の領域を選択します。 すると、**[プロパティ]** ウィンドウにグローバル シェーダー プロパティが表示されます。  
   
-2.  **[プロパティ]** ウィンドウで、変更するテクスチャおよびパラメーターのプロパティに新しい値を指定します。  
+2. **[プロパティ]** ウィンドウで、変更するテクスチャおよびパラメーターのプロパティに新しい値を指定します。  
   
- 変更可能なシェーダー パラメーターを以下に示します。  
+   変更可能なシェーダー パラメーターを以下に示します。  
   
 |パラメーター|プロパティ|  
 |---------------|----------------|  

@@ -1,7 +1,7 @@
 ---
 title: IEnumDebugFields::Next |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 22c177a2-af81-4234-812b-f9b47be245a2
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 10406175a7254be0548678827afd41a4625e70c3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c9edcf0c2c388c82aa8d7463eee2a4ae01f082d8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544370"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866858"
 ---
 # <a name="ienumdebugfieldsnext"></a>IEnumDebugFields::Next
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IEnumDebugFields::Next](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ienumdebugfields-next)します。  
-  
 このメソッドは、列挙体から次の要素のセットを返します。  
   
 ## <a name="syntax"></a>構文  

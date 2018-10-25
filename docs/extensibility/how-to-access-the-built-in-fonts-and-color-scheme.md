@@ -15,25 +15,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 180dc474b2458ec38a8a76ed8f931a592cf29225
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 295f6d26d086914bf75d5744ca47594dfefb6591
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39500096"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911253"
 ---
 # <a name="how-to-access-the-built-in-fonts-and-color-ccheme"></a>方法: 組み込みのフォントをアクセスし、ccheme の色
 Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウに関連付けられているフォントおよび色のスキームがあります。 このスキームを通じてアクセスできる、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インターフェイス。
 
  組み込みのフォントとカラー スキームを使用して、VSPackage 必要があります。
 
--   既定のフォントおよび色のサービスを使用するカテゴリを定義します。
+- 既定のフォントおよび色のサービスを使用するカテゴリを定義します。
 
--   既定のフォントおよび色のサーバーで、カテゴリを登録します。
+- 既定のフォントおよび色のサーバーで、カテゴリを登録します。
 
--   特定のウィンドウが使用して、組み込みの表示項目とカテゴリを使用することを IDE に案内、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer>と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer>インターフェイス。
+- 特定のウィンドウが使用して、組み込みの表示項目とカテゴリを使用することを IDE に案内、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer>と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer>インターフェイス。
 
- IDE では、ウィンドウのハンドルとして、結果として得られるカテゴリを使用します。 カテゴリの名前が表示されます、**設定の表示:** ドロップダウン ボックスで、**フォントおよび色**プロパティ ページ。
+  IDE では、ウィンドウのハンドルとして、結果として得られるカテゴリを使用します。 カテゴリの名前が表示されます、**設定の表示:** ドロップダウン ボックスで、**フォントおよび色**プロパティ ページ。
 
 ## <a name="to-define-a-category-using-built-in-fonts-and-colors"></a>組み込みのフォントと色を使用してカテゴリを定義するには
 
@@ -58,7 +58,7 @@ Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウ�
 
 2.  4 つの値をストックのフォントとカラー スキームを使用するレジストリを作成します。
 
-    |name|型|データ|説明|
+    |名前|型|データ|説明|
     |----------|----------|----------|-----------------|
     |カテゴリ|REG_SZ|GUID|ストック フォントおよびカラー スキームを格納しているカテゴリを識別する任意の GUID。|
     |Package|REG_SZ|GUID|{F5E7E71D-1401-11D1-883B-0000F87579D2}<br /><br /> この GUID は、既定のフォントと色の構成を使用して、すべての Vspackage によって使用されます。|
@@ -67,15 +67,15 @@ Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウ�
 
 ### <a name="to-initiate-the-use-of-system-provided-fonts-and-colors"></a>システム指定のフォントと色の使用を開始します
 
-1.  インスタンスを作成、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer>ウィンドウの実装と初期化の一部としてインターフェイス。
+1. インスタンスを作成、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer>ウィンドウの実装と初期化の一部としてインターフェイス。
 
-2.  呼び出す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A>のインスタンスを取得するメソッド、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer>現在に対応するインターフェイス<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インスタンス。
+2. 呼び出す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A>のインスタンスを取得するメソッド、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer>現在に対応するインターフェイス<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インスタンス。
 
-3.  呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A>2 回クリックします。
+3. 呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A>2 回クリックします。
 
-    -   1 回呼び出す`VSEDITPROPID_ViewGeneral_ColorCategory`を引数として。
+   - 1 回呼び出す`VSEDITPROPID_ViewGeneral_ColorCategory`を引数として。
 
-    -   1 回呼び出す`VSEDITPROPID_ViewGeneral_FontCategory`を引数として。
+   - 1 回呼び出す`VSEDITPROPID_ViewGeneral_FontCategory`を引数として。
 
      これにより、設定し、ウィンドウのプロパティとして既定のフォントおよび色のサービスを公開します。
 

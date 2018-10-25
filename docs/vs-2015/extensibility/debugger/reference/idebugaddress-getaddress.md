@@ -1,7 +1,7 @@
 ---
 title: IDebugAddress::GetAddress |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 2590387b-5d36-4116-9a75-737957b8898e
 caps.latest.revision: 7
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e4a469ba1e6f85a1ac83ba06efa45ba2b6c4fcbc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 323c3e8ea13b7809090d239acfaf5772b9e5b2d1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545273"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839480"
 ---
 # <a name="idebugaddressgetaddress"></a>IDebugAddress::GetAddress
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugAddress::GetAddress](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugaddress-getaddress)します。  
-  
 オブジェクトとそのスコープまたはコンテナー内の場所を記述する構造体を返します。  
   
 ## <a name="syntax"></a>構文  

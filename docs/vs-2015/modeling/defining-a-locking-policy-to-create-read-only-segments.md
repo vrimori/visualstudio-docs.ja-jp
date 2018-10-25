@@ -1,7 +1,7 @@
 ---
 title: 読み取り専用セグメントを作成するロック ポリシーの定義 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 8af4722d76b9d68f4e880175bccdb1730b6e163b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 298e649704731157164db363dfa198ff6f2cdc41
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545043"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893829"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>ロック ポリシーの定義と読み取り専用セグメントの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[読み取り専用セグメントを作成するロックのポリシーを定義する](https://docs.microsoft.com/visualstudio/modeling/defining-a-locking-policy-to-create-read-only-segments)します。  
-  
 不変性 API、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Visualization and Modeling SDK のロックの一部またはすべてのドメイン固有言語 (DSL) モデルをプログラムを保存できるため、読み取りが変更されていないことができます。 この読み取り専用オプションされる可能性があります、たとえば、ユーザーが仕事仲間の注釈を付け、DSL モデルを確認するように依頼できますが、元の変更を禁止することができますようにします。  
   
  さらに、作成者は、DSL の定義、*ロック ポリシー。* ロックのポリシーは、どのロックが許可されている、許可されない、または必須を定義します。 たとえば、DSL を発行するときに、サード パーティの開発者に新しいコマンドでは拡張をお勧めすることができます。 モデルの指定した部分の読み取り専用の状態を変更することを防ぐためにロック ポリシーを使用することもできます。  
@@ -76,11 +74,11 @@ partition.SetLocks(Locks.Delete);
 ## <a name="lock-values"></a>ロックの値  
  ロックは、ストア、パーティション、または個々 のモデル要素を設定できます。 ロックは、`Flags`列挙: を使用してその値を組み合わせることができます '&#124;'。  
   
--   倉庫管理ロックには、常にそのパーティションのロックが含まれています。  
+- 倉庫管理ロックには、常にそのパーティションのロックが含まれています。  
   
--   パーティションのロックには、常に、ストアのロックが含まれています。  
+- パーティションのロックには、常に、ストアのロックが含まれています。  
   
- パーティションにロックを設定または保存し、同時に、個々 の要素のロックを無効にすることはできません。  
+  パーティションにロックを設定または保存し、同時に、個々 の要素のロックを無効にすることはできません。  
   
 |[値]|つまり場合`IsLocked(Value)`が true|  
 |-----------|------------------------------------------|  

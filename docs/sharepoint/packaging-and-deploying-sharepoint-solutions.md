@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2421a1f39f2969563bc10a43367936ae499fac30
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 6c5993f09581faf6e3cedb4c71598ea26b16b699
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119543"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863270"
 ---
 # <a name="package-and-deploy-sharepoint-solutions"></a>パッケージ化し、SharePoint ソリューションのデプロイ
   通常、ソリューション パッケージ (.wsp) ファイルを使用して、SharePoint サーバーに SharePoint ソリューションをデプロイします。 Visual Studio を使用して機能に、SharePoint プロジェクト アイテムを整理して、SharePoint の機能を展開するパッケージを作成することができます。  
@@ -67,23 +67,23 @@ ms.locfileid: "37119543"
 ### <a name="packaging-explorer"></a>パッケージング エクスプ ローラー  
  フィーチャー デザイナーとパッケージ デザイナーを補完するには、SharePoint ファイルをグループ化機能とパッケージをパッケージング エクスプ ローラーを使用できます。 さらに、パッケージ、フィーチャー、SharePoint プロジェクトの階層ビューを表示できる項目、およびファイルです。 パッケージング エクスプ ローラーは、次のタスクを完了するために使用できるツール ウィンドウです。  
   
--   SharePoint プロジェクト項目とファイルを開きます。  
+- SharePoint プロジェクト項目とファイルを開きます。  
   
--   ドラッグし、機能の 1 つから別の SharePoint プロジェクト アイテムを削除します。  
+- ドラッグし、機能の 1 つから別の SharePoint プロジェクト アイテムを削除します。  
   
--   ドラッグし、1 つのパッケージから SharePoint プロジェクト項目およびフィーチャーをドロップします。  
+- ドラッグし、1 つのパッケージから SharePoint プロジェクト項目およびフィーチャーをドロップします。  
   
--   パッケージに新しい機能を追加します。  
+- パッケージに新しい機能を追加します。  
   
--   フィーチャーまたはパッケージ デザイナーを開きます。  
+- フィーチャーまたはパッケージ デザイナーを開きます。  
   
--   フィーチャーとパッケージを検証します。  
+- フィーチャーとパッケージを検証します。  
   
- Visual Studio での SharePoint 開発ツールでは、ソリューション パッケージの形式が正しく確保しやすく、検証規則があります。 さらに、ルールを確認する、 *.wsp*ソリューション ファイルを正常にデプロイおよび SharePoint サーバーでアクティブ化します。 機能の詳細については、XML スキーマは、次を参照してください。[機能スキーマ](http://go.microsoft.com/fwlink/?LinkID=169192)します。  
+  Visual Studio での SharePoint 開発ツールでは、ソリューション パッケージの形式が正しく確保しやすく、検証規則があります。 さらに、ルールを確認する、 *.wsp*ソリューション ファイルを正常にデプロイおよび SharePoint サーバーでアクティブ化します。 機能の詳細については、XML スキーマは、次を参照してください。[機能スキーマ](http://go.microsoft.com/fwlink/?LinkID=169192)します。  
   
- SharePoint プロジェクト システムには、カスタムのフィーチャーとパッケージ検証規則を追加できます。 詳細については、次を参照してください。[方法: SharePoint ソリューションの検証規則を使用したカスタムのフィーチャーとパッケージの作成](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)です。  
+  SharePoint プロジェクト システムには、カスタムのフィーチャーとパッケージ検証規則を追加できます。 詳細については、次を参照してください。[方法: SharePoint ソリューションの検証規則を使用したカスタムのフィーチャーとパッケージの作成](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)です。  
   
- パッケージング エクスプ ローラーの詳細については、次を参照してください。[方法: 追加およびパッケージング エクスプ ローラーを使用して、フィーチャーおよびパッケージに項目を削除](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md)します。  
+  パッケージング エクスプ ローラーの詳細については、次を参照してください。[方法: 追加およびパッケージング エクスプ ローラーを使用して、フィーチャーおよびパッケージに項目を削除](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md)します。  
   
 ### <a name="solution-explorer"></a>ソリューション エクスプローラー
  ソリューション エクスプ ローラーを使用して、移動し、SharePoint プロジェクトのファイルを開くことができます。 ソリューション エクスプ ローラーで、コンテキスト メニューを使用して、機能、フィーチャー イベント レシーバーを追加して、フィーチャーのリソース。 さらに、機能と展開のパッケージを構成するには、フィーチャー デザイナーとパッケージ デザイナーを開くことができます。  
@@ -100,13 +100,13 @@ ms.locfileid: "37119543"
   
  たとえば、追加するため、 *.xml*ファイルを SharePoint プロジェクトに、これらのアクションのいずれかを実行します。  
   
--   SharePoint「レイアウト」マップされたフォルダーをプロジェクトに追加します。 これに作成**ソリューション エクスプ ローラー**という名前のフォルダー**レイアウト**プロジェクトのサブフォルダーを持ちます。 追加、 *.xml*新しいサブフォルダーにファイル。 既定では、ファイルは SharePoint のファイル システムの下に配置 *.\TEMPLATE\LAYOUTS\\\<フォルダー名 >* します。 マップされたフォルダーを追加する方法については、次を参照してください。[方法: 追加すると、マップされたフォルダーを削除する](../sharepoint/how-to-add-and-remove-mapped-folders.md)します。  
+- SharePoint「レイアウト」マップされたフォルダーをプロジェクトに追加します。 これに作成**ソリューション エクスプ ローラー**という名前のフォルダー**レイアウト**プロジェクトのサブフォルダーを持ちます。 追加、 *.xml*新しいサブフォルダーにファイル。 既定では、ファイルは SharePoint のファイル システムの下に配置 *.\TEMPLATE\LAYOUTS\\\<フォルダー名 >* します。 マップされたフォルダーを追加する方法については、次を参照してください。[方法: 追加すると、マップされたフォルダーを削除する](../sharepoint/how-to-add-and-remove-mapped-folders.md)します。  
   
--   追加、 *.xml* 、SharePoint プロジェクト アイテムのフォルダーにファイルを開き、変更、**展開の種類**のプロパティ、 *.xml*ファイルから**NoDeployment**別設定などを**RootFile**または**ElementFile**します。 適切な**展開の種類**の設定、ファイルとプロジェクトに依存します。 詳細については、**展開の種類**プロパティの設定を参照してください[SharePoint の開発ソリューション](../sharepoint/developing-sharepoint-solutions.md)します。  
+- 追加、 *.xml* 、SharePoint プロジェクト アイテムのフォルダーにファイルを開き、変更、**展開の種類**のプロパティ、 *.xml*ファイルから**NoDeployment**別設定などを**RootFile**または**ElementFile**します。 適切な**展開の種類**の設定、ファイルとプロジェクトに依存します。 詳細については、**展開の種類**プロパティの設定を参照してください[SharePoint の開発ソリューション](../sharepoint/developing-sharepoint-solutions.md)します。  
   
- ソリューションで特定のプロジェクトに追加したファイルが適用されない場合は、空の SharePoint プロジェクトをソリューションに追加し、し、その他のファイルを追加します。 コンテンツのデータベースに特に、sharepoint のファイルを展開するための別の方法として、プロジェクトにモジュールを追加し、モジュールにファイルを追加することです。 詳細については、次を参照してください。[モジュールを使用してファイルをソリューションに含める](../sharepoint/using-modules-to-include-files-in-the-solution.md)します。  
+  ソリューションで特定のプロジェクトに追加したファイルが適用されない場合は、空の SharePoint プロジェクトをソリューションに追加し、し、その他のファイルを追加します。 コンテンツのデータベースに特に、sharepoint のファイルを展開するための別の方法として、プロジェクトにモジュールを追加し、モジュールにファイルを追加することです。 詳細については、次を参照してください。[モジュールを使用してファイルをソリューションに含める](../sharepoint/using-modules-to-include-files-in-the-solution.md)します。  
   
 ## <a name="see-also"></a>関連項目
  [SharePoint ソリューションを開発します。](../sharepoint/developing-sharepoint-solutions.md)   
- [ビルドし、SharePoint ソリューションのデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
+ [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
   

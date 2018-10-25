@@ -1,7 +1,7 @@
 ---
 title: '方法: Visual Studio IDE 内で移動する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 52d5025b4758463c708d80784db71835e2807abd
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7b8ef4cf0c416a72b61b1e02f97cf28798ecb340
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534845"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812857"
 ---
 # <a name="how-to-move-around-in-the-visual-studio-ide"></a>方法: Visual Studio IDE 内で移動する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: Visual Studio IDE での移動周囲](https://docs.microsoft.com/visualstudio/ide/how-to-move-around-in-the-visual-studio-ide)。  
-  
 統合開発環境 (IDE) は、ユーザー設定やプロジェクトの要件に応じて、いくつかの異なる方法で、ウィンドウからウィンドウへ、またはファイルからファイルへ移動できるように設計されています。 エディターで開いているファイルを順番に表示することも、IDE 内でアクティブなすべてのツール ウィンドウを順番に表示することもできます。 また、最後にアクセスした順序に関係なく、エディターで開いている任意のファイルに直接切り替えることもできます。 これらの機能は、IDE で作業するときの生産性を向上するのに役立ちます。  
   
 > [!NOTE]
@@ -50,20 +48,20 @@ ms.locfileid: "47534845"
   
 #### <a name="to-move-through-open-files-in-order-of-use"></a>使用順に開いているファイル内を移動するには  
   
--   最も最近使用した順序で開いているドキュメントを表示するには、Ctrl キーを押しながらマイナス記号キーを押します。  
+- 最も最近使用した順序で開いているドキュメントを表示するには、Ctrl キーを押しながらマイナス記号キーを押します。  
   
--   逆の順序で開いているドキュメントを表示するには、Ctrl キーと Shift キーを押しながらマイナス記号キーを押します。  
+- 逆の順序で開いているドキュメントを表示するには、Ctrl キーと Shift キーを押しながらマイナス記号キーを押します。  
   
-    > [!NOTE]
-    >  **[戻る]** と **[次に進む]** は **[表示]** メニューにもあります。  
+  > [!NOTE]
+  >  **[戻る]** と **[次に進む]** は **[表示]** メニューにもあります。  
   
- また、ファイルを最後にアクセスしたときに関係なく、**IDE Navigator**、エディターの **[アクティブなファイル]** リスト、または **[Windows]** ダイアログ ボックスを使って、エディターで開いている特定のファイルを切り替えることができます。  
+  また、ファイルを最後にアクセスしたときに関係なく、**IDE Navigator**、エディターの **[アクティブなファイル]** リスト、または **[Windows]** ダイアログ ボックスを使って、エディターで開いている特定のファイルを切り替えることができます。  
   
- **IDE Navigator** は、Windows アプリケーションのスイッチャーのように動作します。 メニューからは利用できず、ショートカット キーを使用してのみアクセスできます。 2 つのコマンドのいずれかを使って **IDE Navigator** にアクセスし (下記参照)、表示したい順番でファイルを切り替えることができます。  
+  **IDE Navigator** は、Windows アプリケーションのスイッチャーのように動作します。 メニューからは利用できず、ショートカット キーを使用してのみアクセスできます。 2 つのコマンドのいずれかを使って **IDE Navigator** にアクセスし (下記参照)、表示したい順番でファイルを切り替えることができます。  
   
- ![Visual Studio IDE Navigator](../ide/media/vs2015-ide-navigator.png "VS2015_IDE_Navigator")  
+  ![Visual Studio IDE Navigator](../ide/media/vs2015-ide-navigator.png "VS2015_IDE_Navigator")  
   
- `Window.PreviousDocumentWindowNav` では最後にアクセスしたファイルに移動することができ、`Window.NextDocumentWindowNav` では逆の順序で移動することができます。 [全般的な開発設定] では、Ctrl + Shift + Tab キーが `Window.PreviousDocumentWindowNav` に、Ctrl + Tab キーが `Window.NextDocumentWindowNav` に割り当てられてています。  
+  `Window.PreviousDocumentWindowNav` では最後にアクセスしたファイルに移動することができ、`Window.NextDocumentWindowNav` では逆の順序で移動することができます。 [全般的な開発設定] では、Ctrl + Shift + Tab キーが `Window.PreviousDocumentWindowNav` に、Ctrl + Tab キーが `Window.NextDocumentWindowNav` に割り当てられてています。  
   
 > [!NOTE]
 >  使っている設定の組み合わせの中に、このコマンドに割り当てられているショートカット キーの組み合わせがない場合は、**[オプション]** ダイアログ ボックスの **[キーボード]** ページを使って、独自のカスタム コマンドを割り当てることができます。 詳細については、「[Visual Studio でのキーボード ショートカットの識別とカスタマイズ](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)」をご覧ください。  

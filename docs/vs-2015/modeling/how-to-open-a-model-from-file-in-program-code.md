@@ -1,7 +1,7 @@
 ---
 title: '方法: プログラム コード内のファイルからモデルを開く |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: d0884148a6e3f390654842b5e35a9e53643ea17d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5c084e756492a03abc86f7281728222632e12ec1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534578"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49940867"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>方法: プログラム コード内のファイルからモデルを開く
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: プログラム コード内のファイルからモデルを開く](https://docs.microsoft.com/visualstudio/modeling/how-to-open-a-model-from-file-in-program-code)します。  
-  
 任意のアプリケーションで DSL モデルを開くことができます。  
   
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]拡張機能では、この目的のため、ModelBus を使用することができます。 ModelBus はモデルまたはモデルでは、要素を参照して、移動された場合、モデルを検索するための標準的なメカニズムを提供します。 詳細については、次を参照してください。 [Visual Studio modelbus によるモデルの統合](../modeling/integrating-models-by-using-visual-studio-modelbus.md)します。  
@@ -65,13 +63,13 @@ ms.locfileid: "47534578"
 ## <a name="reading-from-a-file"></a>ファイルからの読み取り  
  次の例は、重要なクラスの次のように DSL を読み取るために設計されました。  
   
--   FamilyTreeModel  
+- FamilyTreeModel  
   
--   FamilyTreeSerializationHelper  
+- FamilyTreeSerializationHelper  
   
--   FamilyTreeDomainModel  
+- FamilyTreeDomainModel  
   
- この DSL で他のドメイン クラスには、ユーザーです。  
+  この DSL で他のドメイン クラスには、ユーザーです。  
   
 ```  
 using System;  

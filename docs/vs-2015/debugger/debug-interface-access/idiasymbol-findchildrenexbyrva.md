@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::findChildrenExByRVA |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ae091a82542b9ed3f32b93a95995cdb0fc2cfadd
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2fe90812c9fc655669fa6c7b93a5f7b5a9cdebb7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539048"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937082"
 ---
 # <a name="idiasymbolfindchildrenexbyrva"></a>IDiaSymbol::findChildrenExByRVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDiaSymbol::findChildrenExByRVA](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-findchildrenexbyrva)します。  
-  
 指定された相対仮想アドレス (RVA) で有効なシンボルの子を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -66,7 +64,7 @@ HRESULT findChildrenExByRVA (
 ## <a name="remarks"></a>Remarks  
  返されるローカル シンボルには、ライブの範囲の情報が含まれます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

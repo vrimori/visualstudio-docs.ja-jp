@@ -1,5 +1,5 @@
 ---
-title: Idiaaddressmap::put_imagealign |Microsoft ドキュメント
+title: Idiaaddressmap::put_imagealign |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e1c87592dc04c244e394f1df06cfa46d77f595a1
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 06110568e0854692b19c3c118e948024bd346295
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31457726"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903999"
 ---
 # <a name="idiaaddressmapputimagealign"></a>IDiaAddressMap::put_imageAlign
 イメージの配置を設定します。  
@@ -37,15 +37,15 @@ HRESULT put_imageAlign (
  [in]実行可能ファイルの新しいイメージの配置の値。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- イメージ (読み込まれて実行可能ファイル) は、指定されたメモリ境界に配置されます。 この配置は、コンパイル、リンク時のオプションと現在のシステム アーキテクチャによって、影響を受けることができます。 イメージの配置は、バイト境界には常にします。 次のイメージの配置の値は有効では: 1、2、4、8、16、32、および 64 バイトの境界。  
+## <a name="remarks"></a>Remarks  
+ イメージ (読み込まれて実行可能ファイル) は、指定されたメモリ境界に揃えて配置されます。 この配置は、コンパイルとリンク時のオプションと現在のシステム アーキテクチャによって、影響を受けることができます。 イメージの配置は、バイト境界には常にします。 次のイメージの配置の値が無効です: 1、2、4、8、16、32、および 64 バイトの境界。  
   
- 現在のイメージの配置への呼び出しで取得できる、 [idiaaddressmap::get_imagealign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md)メソッドです。  
+ 現在のイメージの配置への呼び出しで取得できる、 [idiaaddressmap::get_imagealign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md)メソッド。  
   
 > [!NOTE]
->  イメージは、このメソッドを呼び出すことができる時間によって既に読み込まれています。 `put_imageAlign`メソッドは、新しい配置が必要と画像が移動または変更されたときに通常使用されます。  
+>  このメソッドを呼び出すことが時間によっては、イメージが既に読み込まれて。 `put_imageAlign`メソッドは通常新しい配置が必要ですし、イメージを移動または変更されている場合に使用します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   

@@ -1,7 +1,7 @@
 ---
 title: 要素ツールのカスタマイズ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 91866f93f5a5a10f3a4295c21ee5e2046853ff4c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cf2d48ee0ec4c8f2f9986f4655eb98b44583beef
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547953"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49220507"
 ---
 # <a name="customizing-element-tools"></a>要素ツールのカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[要素ツールのカスタマイズ](https://docs.microsoft.com/visualstudio/modeling/customizing-element-tools)します。  
-  
 いくつかの DSL 定義では、要素のグループとして 1 つの概念を表します。 たとえば、コンポーネントが固定ポートのセットを含むでモデルを作成する場合常にする、親コンポーネントと同時に作成するポート。 そのため、1 つだけではなく要素のグループを作成する、要素の作成ツールをカスタマイズする必要があります。 これを実現するには、要素の作成ツールを初期化する方法をカスタマイズできます。  
   
  ツールが、図または要素の上にドラッグされるときの動作をオーバーライドすることもできます。  

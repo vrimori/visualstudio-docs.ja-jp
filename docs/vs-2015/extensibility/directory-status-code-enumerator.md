@@ -1,7 +1,7 @@
 ---
 title: ディレクトリの状態コードの列挙子 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 616026b5-f529-40ef-90c1-1836e116d797
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 24f6dde65def4569eb8163d281f872011be0275c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: aaa983b6365e5d8b1c0969b03ebacd5f6b0f8f94
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547191"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858514"
 ---
 # <a name="directory-status-code-enumerator"></a>ディレクトリの状態コードの列挙子
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ディレクトリの状態コードの列挙子](https://docs.microsoft.com/visualstudio/extensibility/directory-status-code-enumerator)します。  
-  
 `SccDirStatus`列挙子には、ソース管理システムでディレクトリの状態を指定する名前付き定数の値が含まれています。 この列挙体を使って、 [SccDirQueryInfo](../extensibility/sccdirqueryinfo-function.md)します。 これは、ソース管理プラグイン API のバージョン 1.2 で導入されました。  
   
 ## <a name="syntax"></a>構文  

@@ -1,7 +1,7 @@
 ---
 title: '方法: ビルトインの配色可能な項目を使用して、|Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 5e5f3436-6bad-4fd2-8823-6a30353ba648
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 20ed9b5424363eceec8cf4c3c5275a3a937a7003
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9cd6cc62e54fa35a8b146c93e2931b2cf35145b5
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534489"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49209778"
 ---
 # <a name="how-to-use-built-in-colorable-items"></a>方法: ビルトインの配色可能な項目を使用して、
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ビルトインの配色可能な項目を使用して](https://docs.microsoft.com/visualstudio/extensibility/internals/how-to-use-built-in-colorable-items)します。  
-  
 組み込みの配色可能な項目を使用する前にする必要があります最初に通知する、統合開発環境 (IDE) ここで可能性のあるカスタム独自配色可能な項目を提供していない<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems>オブジェクト。 言語サービスのレジストリ エントリを設定して行います。  
   
 ### <a name="to-use-built-in-colorable-items"></a>組み込みの配色可能な項目を使用するには  

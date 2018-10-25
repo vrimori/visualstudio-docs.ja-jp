@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetSize |Microsoft ドキュメント
+title: IDebugDisassemblyStream2::GetSize |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f43a0fe3d7d2ad7c54ee9203037595dade7c6486
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 434a53803dcc08a5d4b07b531b56e913d5311d1a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31106677"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934796"
 ---
 # <a name="idebugdisassemblystream2getsize"></a>IDebugDisassemblyStream2::GetSize
-[逆アセンブル] のこのストリームの手順で、サイズを取得します。  
+この混合モードのストリームの手順では、サイズを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,12 +44,12 @@ int GetSize(
  [out]手順で、サイズを返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 配列を割り当てるには、このメソッドから返される値を使用できます[DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)構造体に渡され、[読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ このメソッドから返される値がの配列を割り当てることができます[DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)構造に渡されますが、[読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)メソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)   
- [読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)
+ [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)

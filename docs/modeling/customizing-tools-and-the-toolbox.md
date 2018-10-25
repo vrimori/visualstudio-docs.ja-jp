@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: c7c526c9e5f850ea71a1e31ea0364fcb19a2bcb5
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: c840ed268e8e5aaa70dcc83eb9a0eeff3a2eb33f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47860447"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49815574"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>ツールおよびツールボックスのカスタマイズ
 
@@ -139,7 +139,6 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
         {
             return base.CreateElementToolPrototype(store, domainClassId);
 }  }    }
-
 ```
 
 ## <a name="connections"></a> 接続ツールのカスタマイズ
@@ -167,15 +166,15 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 ### <a name="custom-code-for-connection-builders"></a>接続ビルダーのカスタム コード
  ユーザー インターフェイスには接続ビルダーの異なる種類のカスタマイズを定義する 4 つのチェック ボックスがあります。
 
--   **カスタム受け入れ**ソースまたはターゲット ロール ディレクティブ上のチェック ボックス
+- **カスタム受け入れ**ソースまたはターゲット ロール ディレクティブ上のチェック ボックス
 
--   **カスタム接続**ソースまたはターゲット ロール ディレクティブ上のチェック ボックス
+- **カスタム接続**ソースまたはターゲット ロール ディレクティブ上のチェック ボックス
 
--   **カスタム接続を使用**接続ディレクティブ上のチェック ボックス
+- **カスタム接続を使用**接続ディレクティブ上のチェック ボックス
 
--   **カスタム**接続ビルダーのプロパティ
+- **カスタム**接続ビルダーのプロパティ
 
- これらのカスタマイズを実施するためにプログラム コードを準備する必要があります。 どのようなコードを準備する必要があるのかを知るためには、これらのボックスのいずれかをチェックし、[すべてのテンプレートの変換] をクリックして、ソリューションをビルドします。 エラー レポートが生成されます。 エラー レポートをダブルクリックし、追加する必要があるコードを説明しているコメントを確認します。
+  これらのカスタマイズを実施するためにプログラム コードを準備する必要があります。 どのようなコードを準備する必要があるのかを知るためには、これらのボックスのいずれかをチェックし、[すべてのテンプレートの変換] をクリックして、ソリューションをビルドします。 エラー レポートが生成されます。 エラー レポートをダブルクリックし、追加する必要があるコードを説明しているコメントを確認します。
 
 > [!NOTE]
 >  カスタム コードを追加するには、GeneratedCode フォルダー内のコード ファイルとは別のコード ファイルに部分クラス定義を作成します。 作業内容を失わないために、生成されたコード ファイルを編集しないでください。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)します。

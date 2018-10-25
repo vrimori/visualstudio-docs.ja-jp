@@ -16,27 +16,27 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 250e3ed3fb548dad26bc29f83fae35b8e6727c9f
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: f0a6a50ca1e84d9b1f5508cccbad24607f36b3f7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672252"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942063"
 ---
 # <a name="customize-a-ribbon-for-infopath"></a>InfoPath のリボンをカスタマイズします。
   Microsoft Office InfoPath でリボンをカスタマイズする場合、アプリケーションのどこにカスタム リボンを表示するかを検討する必要があります。 [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] では、次の 3 種類の InfoPath アプリケーション ウィンドウにリボンを表示できます。  
   
--   デザイン モードで開くフォーム テンプレートを表示するウィンドウ。  
+- デザイン モードで開くフォーム テンプレートを表示するウィンドウ。  
   
--   フォーム テンプレートを基にしたフォームを表示するウィンドウ。  
+- フォーム テンプレートを基にしたフォームを表示するウィンドウ。  
   
--   [印刷プレビュー] ウィンドウ。  
+- [印刷プレビュー] ウィンドウ。  
   
- **対象:** このトピックの情報は、InfoPath 2010 の VSTO アドインのプロジェクトに適用されます。 詳細については、次を参照してください。 [Office アプリケーションおよびプロジェクトの種類で使用できる機能](../vsto/features-available-by-office-application-and-project-type.md)します。  
+  **対象:** このトピックの情報は、InfoPath 2010 の VSTO アドインのプロジェクトに適用されます。 詳細については、次を参照してください。 [Office アプリケーションおよびプロジェクトの種類で使用できる機能](../vsto/features-available-by-office-application-and-project-type.md)します。  
   
- ユーザーとデザイナーは、フォーム テンプレートをデザイン モードで開き、テンプレートの外観とレイアウトを変更します。 ユーザーは、フォーム テンプレートを基にしたフォームを開き、コンテンツを追加します。  
+  ユーザーとデザイナーは、フォーム テンプレートをデザイン モードで開き、テンプレートの外観とレイアウトを変更します。 ユーザーは、フォーム テンプレートを基にしたフォームを開き、コンテンツを追加します。  
   
- [印刷プレビュー] ウィンドウでは、デザイナーとユーザーがフォームまたはフォーム テンプレートを印刷前にプレビューできます。  
+  [印刷プレビュー] ウィンドウでは、デザイナーとユーザーがフォームまたはフォーム テンプレートを印刷前にプレビューできます。  
   
 > [!NOTE]  
 >  [印刷プレビュー] ウィンドウには **[アドイン]** タブは表示されません。 [印刷プレビュー] ウィンドウにカスタム タブを表示する場合は、タブの **OfficeId** プロパティが **TabAddIns**に設定されていないことを確認してください。  
@@ -68,6 +68,6 @@ ms.locfileid: "35672252"
  [実行時にリボンへのアクセスします。](../vsto/accessing-the-ribbon-at-run-time.md)   
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン デザイナー](../vsto/ribbon-designer.md)   
- [リボン XML](../vsto/ribbon-xml.md)  
+ [Ribbon XML](../vsto/ribbon-xml.md)  
   
   

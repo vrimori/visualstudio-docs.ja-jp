@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0809c7acde2959fb91aa964fec137f63a7a995dc
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 47fee24292ee92b34cea6add21bc220a1a17f135
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39500697"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867664"
 ---
 # <a name="createpkgdef-utility"></a>CreatePkgDef ユーティリティ
 パラメーターとして Visual Studio 拡張機能の .dll ファイルを受け取り、作成、 *.pkgdef*付随するファイル、 *.dll*ファイル。 *.Pkgdef*ファイルには、拡張機能がインストールされている場合、システム レジストリに書き込まそれ以外の場合は、すべての情報が含まれています。  
@@ -53,13 +53,13 @@ CreatePkgDef /out=<FileName> [/codebase] [/assembly] <AssemblyPath>
   
  *.Pkgdef*ファイルは、次の場所のいずれかでインストールする必要があります。 
 
- - *%localappdata%\Microsoft\Visual Studio\14.0\Extensions\\* 
+- *%localappdata%\Microsoft\Visual Studio\14.0\Extensions\\* 
  
- - *%vsinstalldir%\Common7\IDE\Extensions\\*
+- *%vsinstalldir%\Common7\IDE\Extensions\\*
     
- インストール フォルダーがある場合 *%localappdata%\Microsoft\Visual Studio\14.0\Extensions\\*、拡張機能は、Visual Studio によって認識されますは既定で無効になります。 ユーザーを使用して、拡張機能を有効にできます**拡張機能と更新**します。 
+  インストール フォルダーがある場合 *%localappdata%\Microsoft\Visual Studio\14.0\Extensions\\*、拡張機能は、Visual Studio によって認識されますは既定で無効になります。 ユーザーを使用して、拡張機能を有効にできます**拡張機能と更新**します。 
    
- インストール フォルダーがある場合 *%vsinstalldir%\Common7\IDE\Extensions\\*、拡張機能が既定で有効にします。  
+  インストール フォルダーがある場合 *%vsinstalldir%\Common7\IDE\Extensions\\*、拡張機能が既定で有効にします。  
   
 > [!NOTE]
 >  **拡張機能と更新**ツールは VSIX パッケージの一部としてインストールされていない場合、拡張機能へのアクセスに使用できません。  

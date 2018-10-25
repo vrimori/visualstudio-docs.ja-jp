@@ -1,7 +1,7 @@
 ---
 title: リソースの競合ビュー - 競合データ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b3f18cf1131e61ba88832d59e0e77f462c088bec
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c6db867b582c4d1f5b0722d085e8a2eac48d182f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547473"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49253020"
 ---
 # <a name="resource-contentions-view---contention-data"></a>リソースの競合ビュー - 競合データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[リソース競合ビュー - 競合データ](https://docs.microsoft.com/visualstudio/profiling/resource-contentions-view-contention-data)します。  
-  
 リソースの競合ビューには、競合イベントが発生する原因となったリソースの競合データが表示されます。 競合イベントは、あるスレッドの関数にリソースへの排他アクセスが割り当てられているため、そのリソースに対する別のスレッドの関数からのアクセスが待機状態になると発生します。 それぞれのリソースが、競合イベントが発生する原因となった関数の実行パスを表示するコール ツリーのルート ノードに該当します。  
   
 ## <a name="data-values"></a>データの値  

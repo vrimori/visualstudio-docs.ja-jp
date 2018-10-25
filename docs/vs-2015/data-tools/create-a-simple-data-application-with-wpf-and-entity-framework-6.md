@@ -1,7 +1,7 @@
 ---
 title: WPF と Entity Framework 6 で単純なデータ アプリケーションを作成する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d0014df0770bb7fdb697ee05d61b1543044988ff
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ac3db033b9e8055c28f29d54027df5fadf156742
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547636"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49922199"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>WPF と Entity Framework 6 で単純なデータ アプリケーションを作成します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[WPF と Entity Framework 6 を使用する単純なデータ アプリケーションを作成](https://docs.microsoft.com/visualstudio/data-tools/create-a-simple-data-application-with-wpf-and-entity-framework-6)です。  
-  
   
 このチュートリアルでは、SQL Server LocalDB、Northwind データベース、Entity Framework 6、および Windows Presentation Foundation と Visual Studio で基本的な「フォーム オーバー データ」のアプリケーションを作成する方法を示します。 マスター/詳細ビューでは、基本的なデータ バインドを行う方法を示していて、カスタム「バインド ナビゲーター」を「次に移動」ボタンを含む"Move Previous、"「を先頭へ移動」""への移動、終了があります「更新」および「削除します」。  
   
@@ -54,37 +52,37 @@ ms.locfileid: "47547636"
   
 ## <a name="create-the-model"></a>モデルを作成する  
   
-1.  ソリューション エクスプ ローラーでプロジェクト ノードを右クリックし、選択**追加&#124;新しい項目の**します。 [C#] ノードで、左側のウィンドウで次のように選択します。**データ**中央のペインで選択**ADO.NET Entity Data Model**します。  
+1. ソリューション エクスプ ローラーでプロジェクト ノードを右クリックし、選択**追加&#124;新しい項目の**します。 [C#] ノードで、左側のウィンドウで次のように選択します。**データ**中央のペインで選択**ADO.NET Entity Data Model**します。  
   
-     ![Entity Framework モデル新しいプロジェクト項目](../data-tools/media/raddata-ef-new-project-item.png "raddata EF の新しいプロジェクト項目")  
+    ![Entity Framework モデル新しいプロジェクト項目](../data-tools/media/raddata-ef-new-project-item.png "raddata EF の新しいプロジェクト項目")  
   
-2.  モデルを呼び出す`Northwind_model`し、[ok] を選択します。 すると、 **Entity Data Model ウィザード**します。 選択**データベースの EF デザイナー**順にクリックします**次**します。  
+2. モデルを呼び出す`Northwind_model`し、[ok] を選択します。 すると、 **Entity Data Model ウィザード**します。 選択**データベースの EF デザイナー**順にクリックします**次**します。  
   
-     ![データベースから EF モデル](../data-tools/media/raddata-ef-model-from-database.png "raddata データベースから EF モデル")  
+    ![データベースから EF モデル](../data-tools/media/raddata-ef-model-from-database.png "raddata データベースから EF モデル")  
   
-3.  次の画面で、LocalDB Northwind が選択に接続をクリックします**次**します。  
+3. 次の画面で、LocalDB Northwind が選択に接続をクリックします**次**します。  
   
-4.  ウィザードの次のページで、テーブル、ストアド プロシージャ、および Entity Framework モデルに含めるには、他のデータベース オブジェクトを選択します。 ツリー ビューで [dbo] ノードを展開し、顧客、注文および注文の詳細を選択します。 既定値をオンのままにし、をクリックして**完了**します。  
+4. ウィザードの次のページで、テーブル、ストアド プロシージャ、および Entity Framework モデルに含めるには、他のデータベース オブジェクトを選択します。 ツリー ビューで [dbo] ノードを展開し、顧客、注文および注文の詳細を選択します。 既定値をオンのままにし、をクリックして**完了**します。  
   
-     ![モデルのデータベース オブジェクトの選択](../data-tools/media/raddata-choose-ef-objects.png "raddata EF オブジェクトの選択")  
+    ![モデルのデータベース オブジェクトの選択](../data-tools/media/raddata-choose-ef-objects.png "raddata EF オブジェクトの選択")  
   
-5.  ウィザードでは、Entity Framework モデルを表す c# クラスが生成されます。 これらは、プレーンな古い c# クラスとは知りませんが、WPF ユーザー インターフェイスにデータをバインドします。 .Edmx ファイルには、リレーションシップおよびその他のクラスをデータベース内のオブジェクトに関連付けられるメタデータについて説明します。  .Tt ファイルは、モデルに対して機能し、変更、データベースに保存するコードを生成する T4 テンプレートです。 これらすべてのファイルでは、ソリューション エクスプ ローラー Northwind_model ノードの下を確認できます。  
+5. ウィザードでは、Entity Framework モデルを表す c# クラスが生成されます。 これらは、プレーンな古い c# クラスとは知りませんが、WPF ユーザー インターフェイスにデータをバインドします。 .Edmx ファイルには、リレーションシップおよびその他のクラスをデータベース内のオブジェクトに関連付けられるメタデータについて説明します。  .Tt ファイルは、モデルに対して機能し、変更、データベースに保存するコードを生成する T4 テンプレートです。 これらすべてのファイルでは、ソリューション エクスプ ローラー Northwind_model ノードの下を確認できます。  
   
-     ![ソリューション エクスプ ローラーの EF モデル ファイル](../data-tools/media/raddata-solution-explorer-ef-model-files.png "raddata ソリューション エクスプ ローラーの EF モデル ファイル")  
+    ![ソリューション エクスプ ローラーの EF モデル ファイル](../data-tools/media/raddata-solution-explorer-ef-model-files.png "raddata ソリューション エクスプ ローラーの EF モデル ファイル")  
   
-     .Edmx ファイルのデザイナー画面では、いくつかのプロパティと、モデル内のリレーションシップを変更することができます。 このチュートリアルでは、デザイナーを使用することはできません。  
+    .Edmx ファイルのデザイナー画面では、いくつかのプロパティと、モデル内のリレーションシップを変更することができます。 このチュートリアルでは、デザイナーを使用することはできません。  
   
-6.  .Tt ファイルでは、汎用と ObservableCollections を必要とする WPF データ バインドで作業することのいずれかを調整する必要があります。  ソリューション エクスプ ローラーでは、Northwind_model.tt が見つかるまで Northwind_model ノードを展開します。 (必ず、**されません**で、*。コンテキスト .tt ファイルは、.edmx ファイルのすぐ下)。  
+6. .Tt ファイルでは、汎用と ObservableCollections を必要とする WPF データ バインドで作業することのいずれかを調整する必要があります。  ソリューション エクスプ ローラーでは、Northwind_model.tt が見つかるまで Northwind_model ノードを展開します。 (必ず、**されません**で、*。コンテキスト .tt ファイルは、.edmx ファイルのすぐ下)。  
   
-    -   2 つの箇所を置き換えます<xref:System.Collections.ICollection>で<xref:System.Collections.ObjectModel.ObservableCollection%601>します。  
+   -   2 つの箇所を置き換えます<xref:System.Collections.ICollection>で<xref:System.Collections.ObjectModel.ObservableCollection%601>します。  
   
-    -   最初に見つかった位置の交換<xref:System.Collections.Generic.HashSet%601>で<xref:System.Collections.ObjectModel.ObservableCollection%601>51 の行の付近です。 2 番目に出現する HashSet は置き換えられません  
+   -   最初に見つかった位置の交換<xref:System.Collections.Generic.HashSet%601>で<xref:System.Collections.ObjectModel.ObservableCollection%601>51 の行の付近です。 2 番目に出現する HashSet は置き換えられません  
   
-    -   唯一の一致を置き換える<xref:System.Collections.Generic>(約 334 行目) と<xref:System.Collections.ObjectModel>します。  
+   -   唯一の一致を置き換える<xref:System.Collections.Generic>(約 334 行目) と<xref:System.Collections.ObjectModel>します。  
   
-7.  キーを押して**Ctrl + Shift + B**プロジェクトをビルドします。 ビルドが完了したら、モデル クラスは、データ ソース ウィザードに表示されます。  
+7. キーを押して**Ctrl + Shift + B**プロジェクトをビルドします。 ビルドが完了したら、モデル クラスは、データ ソース ウィザードに表示されます。  
   
- これで表示、移動してデータを変更できる XAML ページには、このモデルをフックする準備が整いました。  
+   これで表示、移動してデータを変更できる XAML ページには、このモデルをフックする準備が整いました。  
   
 ## <a name="databind-the-model-to-the-xaml-page"></a>XAML ページにモデルをデータ バインド  
  データ バインド コードを記述することが、その Visual Studio を使用する方が簡単です。  

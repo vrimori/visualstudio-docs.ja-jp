@@ -9,16 +9,18 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - azure
-ms.openlocfilehash: 778ad9112d4133871bd15292847d21af73c3ad86
-ms.sourcegitcommit: 12e2f963dac76d53f87569c01198f6d0396d64cf
+ms.openlocfilehash: 8cf4192ce0f925624dbbe890381d3557f2a27223
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44701710"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942934"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Visual Studio の Kubernetes ツールを概要します。
 
 Visual Studio の Kubernetes ツールは、Kubernetes を対象とするコンテナー化されたアプリケーションの開発を合理化に役立ちます。 Visual Studio では、Dockerfile と Helm グラフなど、Kubernetes のデプロイをサポートするために必要なコードとしての構成ファイルを自動的に作成できます。 Azure 開発用のスペースを使用してライブ Azure Kubernetes Service (AKS) クラスターでコードをデバッグまたはから AKS クラスターに直接発行することが Visual Studio 内で。
+
+このチュートリアルでは、Visual Studio を使用して、Kubernetes のサポートをプロジェクトに追加し、AKS を公開するについて説明します。 使用して、主に関心がある場合[Azure Dev スペース](http://aka.ms/get-azds)にジャンプできるでデバッグして AKS で実行されているプロジェクトをテストする、 [Azure Dev スペース チュートリアル](https://docs.microsoft.com/azure/dev-spaces/get-started-netcore-visualstudio)代わりにします。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -28,9 +30,9 @@ Visual Studio の Kubernetes ツールは、Kubernetes を対象とするコン�
 
 - [For Visual Studio の Kubernetes ツール](https://aka.ms/get-vsk8stools)、個別のダウンロードとして入手できます。
 
-- [Windows の docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)開発用ワークステーションにインストールされている (つまり、Visual Studio を実行)、Docker イメージを作成する場合は、ローカルで実行されている Docker コンテナーをデバッグまたは AKS に発行します。
+- [Windows の docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)開発用ワークステーションにインストールされている (つまり、Visual Studio を実行)、Docker イメージを作成する場合は、ローカルで実行されている Docker コンテナーをデバッグまたは AKS に発行します。 (Docker は*いない*のビルドと Azure 開発用のスペースを使用して AKS での Docker コンテナーのデバッグに必要な)。
 
-- Visual Studio から AKS に発行する場合。
+- Visual Studio から AKS に発行するかどうか (*いない*Azure 開発用のスペースを使用して AKS でのデバッグに必要な)。
 
     1.  [発行ツール AKS](https://aka.ms/get-vsk8spublish)、個別のダウンロードとして入手できます。
 
@@ -78,31 +80,31 @@ ASP.NET Core の種類は、web アプリケーションを作成し、選択で
 
 ## <a name="publish-to-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS) への公開します。
 
-これらすべてのファイルの場所で使用するがいつもと同じようを作成して、アプリケーション コードをデバッグ、Visual Studio IDE を使用できます。
+これらすべてのファイルの場所で使用するがいつもと同じようを作成して、アプリケーション コードをデバッグ、Visual Studio IDE を使用できます。 使用することも[Azure Dev スペース](http://aka.ms/get-azds)をすばやく実行し、AKS クラスターでライブ実行するコードをデバッグします。 詳細についてを参照してください、 [Azure 開発用のスペースのチュートリアル](https://docs.microsoft.com/azure/dev-spaces/get-started-netcore-visualstudio)
 
 作成したら、希望どおりに実行されているコードを AKS クラスターに Visual Studio から直接発行することができます。
 
-これを行うには、まずに再確認をインストールしているすべてのもの」の説明に従って、[の前提条件](#prerequisities)AKS に発行するための項目の下のセクションし、リンクで指定されたすべてのコマンドライン手順を実行します。 次に、コンテナー イメージを Azure Container Registry (ACR) を発行する発行プロファイルを設定します。 AKS は ACR からコンテナー イメージをプルし、クラスターに配置できます。
+これを行うには、まずに再確認をインストールしているすべてのもの」の説明に従って、[の前提条件](#prerequisites)AKS に発行するための項目の下のセクションし、リンクで指定されたすべてのコマンドライン手順を実行します。 次に、コンテナー イメージを Azure Container Registry (ACR) を発行する発行プロファイルを設定します。 AKS は ACR からコンテナー イメージをプルし、クラスターに配置できます。
 
 1. **ソリューション エクスプ ローラー**を右クリックし、*プロジェクト*選択**発行**します。
 
    ![メニュー項目の発行のスクリーン ショット](media/k8s-tools-publish-project.png)
 
-1. **発行**画面で、選択**Container Registry**発行を対象とし、指示に従って、コンテナー レジストリを選択します。 コンテナー レジストリがまだしていない場合は、選択**新しい Azure コンテナー レジストリの作成**Visual Studio から作成します。 詳細については、次を参照してください。 [Azure Container Registry にコンテナーを発行](#publish-your-container-to-azure-container-registry)します。
+2. **発行**画面で、選択**Container Registry**発行を対象とし、指示に従って、コンテナー レジストリを選択します。 コンテナー レジストリがまだしていない場合は、選択**新しい Azure コンテナー レジストリの作成**Visual Studio から作成します。 詳細については、次を参照してください。 [Azure Container Registry にコンテナーを発行](#publish-your-container-to-azure-container-registry)します。
 
    ![Pick 発行ターゲットの画面のスクリーン ショット](media/k8s-tools-publish-to-acr.png)
 
-1. ソリューション エクスプ ローラーでバックアップを右クリックして、*ソリューション* をクリック**Publish to Azure AKS**します。
+3. ソリューション エクスプ ローラーでバックアップを右クリックして、*ソリューション* をクリック**Publish to Azure AKS**します。
 
    ![Azure AKS のメニュー項目のスクリーン ショットの発行](media/k8s-tools-publish-solution.png)
 
-1. 自分のサブスクリプションと、AKS クラスターを選択して、ACR と共に作成したプロファイルを発行します。 次に、 **[OK]** をクリックします。
+4. 自分のサブスクリプションと、AKS クラスターを選択して、ACR と共に作成したプロファイルを発行します。 次に、 **[OK]** をクリックします。
 
    ![AKS の画面をスクリーン ショットの発行](media/k8s-tools-publish-to-aks.png)
 
    これにより、 **Publish to Azure AKS**画面。
 
-1.  選択、**構成 Helm**サーバー上の Helm チャートをインストールするために使用するコマンド行の更新へのリンク。
+5. 選択、**構成 Helm**サーバー上の Helm チャートをインストールするために使用するコマンド行の更新へのリンク。
 
    ![Helm の構成のスクリーン ショットのリンク](media/k8s-tools-configure-helm.png)
 
@@ -110,7 +112,7 @@ ASP.NET Core の種類は、web アプリケーションを作成し、選択で
 
    ![スクリーン ショットの Helm の構成画面](media/k8s-tools-helm-configure-screen.png)
 
-1. 展開する準備ができたら、クリックして、**発行**AKS にアプリケーションを発行するボタンをクリックします。
+6. 展開する準備ができたら、クリックして、**発行**AKS にアプリケーションを発行するボタンをクリックします。
 
    ![Azure AKS 画面のスクリーン ショットに発行します。](media/k8s-tools-publish-screen.png)
 
@@ -119,3 +121,5 @@ ASP.NET Core の種類は、web アプリケーションを作成し、選択で
 ## <a name="next-steps"></a>次の手順
 
 読み取ることによって Azure で Kubernetes 開発に関する詳細、 [AKS のドキュメント](/azure/aks)します。
+
+詳細については、Azure 開発用のスペースを読み取るして、 [Azure 開発用のスペースのドキュメント](http://aka.ms/get-azds)

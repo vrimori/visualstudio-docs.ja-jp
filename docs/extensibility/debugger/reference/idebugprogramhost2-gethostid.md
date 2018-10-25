@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramHost2::GetHostId |Microsoft ドキュメント
+title: IDebugProgramHost2::GetHostId |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84225cf6d8f89bcf25f657b3f3b7dda74339272e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 74e4575eca8a9f67446a60737c051a574109b97e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115711"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831108"
 ---
 # <a name="idebugprogramhost2gethostid"></a>IDebugProgramHost2::GetHostId
-このプログラムをホストしているプロセスのプロセス id を取得します。  
+このプログラムをホストするプロセスのプロセス識別子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,10 +41,10 @@ int GetHostId(
   
 #### <a name="parameters"></a>パラメーター  
  `pdwId`  
- [入力、出力].[AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)プロセス id 情報が入力構造です。  
+ [入力、出力][AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)プロセスの識別子情報が格納される構造体。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)   

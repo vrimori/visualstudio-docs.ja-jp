@@ -1,7 +1,7 @@
 ---
 title: ウィザード |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 59d9a77f-ee80-474b-a14f-90f477ab717b
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1396837a0d9eee3b31a5e938a2305052d5cc2761
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2331c75b5e0d708d6a2d0fa1ab987cc869879cd2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547154"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49224303"
 ---
 # <a name="wizards"></a>ウィザード
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ウィザード](https://docs.microsoft.com/visualstudio/extensibility/internals/wizards)します。  
-  
 通常、ウィザードを作成した後に追加する、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]他のユーザーが使用できるように開発環境 (IDE) を統合します。 追加のウィザードは、表示されます、**新しいプロジェクトの追加**または**新しい項目の追加** ダイアログ ボックス。 表示する、**新しいプロジェクトの追加**または**新しい項目の追加** ダイアログ ボックスで開いているソリューションを右クリックして**ソリューション エクスプ ローラー**、 をポイント**追加**とクリックして**新しいプロジェクト**または**新しい項目の**します。  
   
  ウィザードを実装することができます[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]してもらうために開いたときに使用可能な値のツリー ビューから選択、**新しいプロジェクトの追加** ダイアログ ボックスまたは**新しい項目の追加**ダイアログ ボックスで、または、右クリック内の項目**ソリューション エクスプ ローラー**します。  
@@ -61,5 +59,5 @@ ms.locfileid: "47547154"
  ウィザードを作成する方法を示します。  
   
  [プロジェクトの拡張](../../extensibility/extending-projects.md)  
- 使用する方法について説明します[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]プロジェクトおよびソリューションのコード ファイルとリソース ファイルとソース管理を実装する方法を整理します。
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクトおよびソリューションを使用してコード ファイルとリソース ファイルを編成する方法、またソース管理を実装する方法について説明します。
 

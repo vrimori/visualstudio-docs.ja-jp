@@ -23,12 +23,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 796e1266e93fca845f9ac40d1fef0c1ca5a5b919
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 2f9a5d0c439d619864cc6e9559608e3c3891fc7e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119782"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890037"
 ---
 # <a name="sandboxed-solution-considerations"></a>サンド ボックス ソリューションの考慮事項
   *サンド ボックス ソリューション*は Microsoft SharePoint 2010 サイト コレクションのユーザーが独自のカスタム コード ソリューションをアップロードできるようにする機能です。 一般的なサンド ボックス ソリューションは、ユーザーが自分の Web パーツをアップロードします。  
@@ -81,66 +81,66 @@ ms.locfileid: "37119782"
 ## <a name="sandboxed-solution-limitations"></a>サンド ボックス ソリューションの制限事項
  サンド ボックス ソリューションの配置に使用可能な SharePoint 機能の配列があること、セキュリティの脆弱性を減らすために制限されます。 これらの制限の一部を以下に示します。  
   
--   サンド ボックス ソリューションのデプロイ可能なソリューションの要素が使用できるようにする制限されたサブセットがあります。 サイト定義、ワークフローなどの脆弱性のある可能性がある SharePoint プロジェクト テンプレートは使用できません。  
+- サンド ボックス ソリューションのデプロイ可能なソリューションの要素が使用できるようにする制限されたサブセットがあります。 サイト定義、ワークフローなどの脆弱性のある可能性がある SharePoint プロジェクト テンプレートは使用できません。  
   
--   SharePoint のプロセスでサンド ボックス ソリューションのコードを実行する (*SPUCWorkerProcess.exe*)、main から独立した[!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)]アプリケーション プール (*w3wp.exe*) プロセス。  
+- SharePoint のプロセスでサンド ボックス ソリューションのコードを実行する (*SPUCWorkerProcess.exe*)、main から独立した[!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)]アプリケーション プール (*w3wp.exe*) プロセス。  
   
--   マップされたフォルダーは、プロジェクトに追加することはできません。  
+- マップされたフォルダーは、プロジェクトに追加することはできません。  
   
--   型、[!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]アセンブリ Microsoft.Office.Server はサンド ボックス ソリューションでは使用できません。 また、のみの型、[!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)]アセンブリ Microsoft.SharePoint をサンド ボックス ソリューションで使用できます。  
+- 型、[!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]アセンブリ Microsoft.Office.Server はサンド ボックス ソリューションでは使用できません。 また、のみの型、[!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)]アセンブリ Microsoft.SharePoint をサンド ボックス ソリューションで使用できます。  
   
- 指定する SharePoint ソリューション、サンド ボックス ソリューション SharePoint サーバー上に影響があるないとすることが重要SharePoint を SharePoint プロジェクトを展開する方法を示すのみ[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]とどのようなアセンブリをバインドします。 影響しません、生成された *.wsp*ファイル、および *.wsp*ファイルに直接関連するデータがない、*サンド ボックス ソリューション*プロパティ。  
+  指定する SharePoint ソリューション、サンド ボックス ソリューション SharePoint サーバー上に影響があるないとすることが重要SharePoint を SharePoint プロジェクトを展開する方法を示すのみ[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]とどのようなアセンブリをバインドします。 影響しません、生成された *.wsp*ファイル、および *.wsp*ファイルに直接関連するデータがない、*サンド ボックス ソリューション*プロパティ。  
   
 ## <a name="capabilities-and-elements-in-sandboxed-solutions"></a>サンド ボックス ソリューションの機能と要素
  サンド ボックス ソリューションは、次の機能や要素をサポートします。  
   
--   コンテンツの種類/フィールド  
+- コンテンツの種類/フィールド  
   
--   カスタム アクション  
+- カスタム アクション  
   
--   宣言型ワークフロー  
+- 宣言型ワークフロー  
   
--   イベント レシーバー  
+- イベント レシーバー  
   
--   機能の吹き出し  
+- 機能の吹き出し  
   
--   リストの定義  
+- リストの定義  
   
--   リスト インスタンス  
+- リスト インスタンス  
   
--   モジュール/ファイル  
+- モジュール/ファイル  
   
--   ナビゲーション  
+- ナビゲーション  
   
--   *Onet.xml*  
+- *Onet.xml*  
   
--   SPItemEventReceiver  
+- SPItemEventReceiver  
   
--   SPListEventReceiver  
+- SPListEventReceiver  
   
--   SPWebEventReceiver  
+- SPWebEventReceiver  
   
--   派生したすべての Web パーツのサポート `System.Web.UI.WebControls.WebParts.WebPart`  
+- 派生したすべての Web パーツのサポート `System.Web.UI.WebControls.WebParts.WebPart`  
   
--   Web パーツ  
+- Web パーツ  
   
--   Web テンプレート機能の要素 (の代わりに*Webtemp.xml*)  
+- Web テンプレート機能の要素 (の代わりに*Webtemp.xml*)  
   
--   視覚的 Web パーツ  
+- 視覚的 Web パーツ  
   
- サンド ボックス ソリューションは、次の機能と要素はサポートされません。  
+  サンド ボックス ソリューションは、次の機能と要素はサポートされません。  
   
--   アプリケーション ページ  
+- アプリケーション ページ  
   
--   カスタム アクション グループ  
+- カスタム アクション グループ  
   
--   ファーム スコープの機能  
+- ファーム スコープの機能  
   
--   `HideCustomAction` 要素  
+- `HideCustomAction` 要素  
   
--   Web アプリケーション スコープの機能  
+- Web アプリケーション スコープの機能  
   
--   コードでのワークフロー  
+- コードでのワークフロー  
   
 ## <a name="see-also"></a>関連項目
  [サンド ボックスの相違点とファーム ソリューション](../sharepoint/differences-between-sandboxed-and-farm-solutions.md)   

@@ -1,7 +1,7 @@
 ---
 title: BP_LOCATION_TYPE |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 0248430a-3b61-4809-87a9-e9b6bb7d1130
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 57da25f02b8771188c5372966709222c765b26a9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d84cb1f79a86de5ad9c9865fcea6a0f46171d7b4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548993"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909719"
 ---
 # <a name="bplocationtype"></a>BP_LOCATION_TYPE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[BP_LOCATION_TYPE](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/bp-location-type)します。  
-  
 ブレークポイント要求のブレークポイントの場所の種類を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -127,7 +125,7 @@ public enum enum_BP_LOCATION_TYPE {
   
  `BPT_CODE` `BPT_DATA`のメンバーである、 [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)列挙体。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

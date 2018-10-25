@@ -1,7 +1,7 @@
 ---
 title: IDebugCustomAttributeQuery::IsCustomAttributeDefined |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: c7425db6-4347-4f69-8f88-337ddaa34fa6
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: dfe9cd460628a437121bb4ec651905d31752d3a3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ac85bb50da04eeb53f63ec2561caf8fed55c52f3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544842"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839467"
 ---
 # <a name="idebugcustomattributequeryiscustomattributedefined"></a>IDebugCustomAttributeQuery::IsCustomAttributeDefined
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugCustomAttributeQuery::IsCustomAttributeDefined](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugcustomattributequery-iscustomattributedefined)します。  
-  
 指定されたカスタム属性が定義されているかどうかを決定します。  
   
 ## <a name="syntax"></a>構文  

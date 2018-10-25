@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: b9d494b1fb6465c1cf246f6becb9b812115e6076
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: feec485f752ac13b43310e4afd97bdfaac93ee51
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32425515"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849165"
 ---
 # <a name="c-code-snippets"></a>C# コード スニペット
 
@@ -34,7 +34,7 @@ ms.locfileid: "32425515"
 既定では、Visual Studio の C# には次のコード スニペットが含まれます。
 
 |名前 (またはショートカット)|説明|スニペットを挿入できる場所|
-|--------------------------|-----------------|---------------------------------------|
+| - |-----------------| - |
 |#if|[#if](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-if) ディレクティブと [#endif](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-endif) ディレクティブを作成します。|任意の場所。|
 |#region|[#region](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-region) ディレクティブと [#endregion](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-endregion) ディレクティブを作成します。|任意の場所。|
 |~|外側のクラスの[ファイナライザー](/dotnet/csharp/programming-guide/classes-and-structs/destructors) (デストラクター) を作成します。|クラスの内部。|

@@ -1,7 +1,7 @@
 ---
 title: 階層相互作用のビュー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,31 +18,29 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0a0d6753fd852faafcabe291cc9b63ece0fd7752
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 012d79a99ee8df2acf26106be922fac8c335fae3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544648"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49878027"
 ---
-# <a name="tier-interactions-view"></a>階層の相互作用ビュー
+# <a name="tier-interactions-view"></a>階層相互作用のビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[階層の相互作用ビュー](https://docs.microsoft.com/visualstudio/profiling/tier-interactions-view)します。  
-  
 階層相互作用プロファイリングにより、[!INCLUDE[vstecado](../includes/vstecado-md.md)] を通じてデータベースと通信する多階層アプリケーションでの関数の実行時間に関する追加情報が提供されます。 データは同期の関数呼び出しについてのみ収集されます。  
   
  **必要条件**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]  
+- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]  
   
- 相互作用ビューでは、2 つのウィンドウに階層相互作用データが表示されます。  
+  相互作用ビューでは、2 つのウィンドウに階層相互作用データが表示されます。  
   
--   マスター ウィンドウは階層ツリーです。 最上位の行には、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ページまたはプロセスのデータベース接続の集計データが含まれています。 子ノードには、親のデータベース接続の集計データが含まれています。  
+- マスター ウィンドウは階層ツリーです。 最上位の行には、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ページまたはプロセスのデータベース接続の集計データが含まれています。 子ノードには、親のデータベース接続の集計データが含まれています。  
   
--   マスター ウィンドウでデータベース呼び出しノードをクリックすると、データベース呼び出しのインスタンスのデータが詳細ウィンドウに表示されます。  
+- マスター ウィンドウでデータベース呼び出しノードをクリックすると、データベース呼び出しのインスタンスのデータが詳細ウィンドウに表示されます。  
   
- 時間は、ミリ秒数または CPU クロック ティック数として表示されます。 表示される時間単位を変更するには、**[ツール]** メニュー、**[オプション]** の順にクリックして、**[時間の値を次の単位で表示]** オプションのいずれかを選択します。  
+  時間は、ミリ秒数または CPU クロック ティック数として表示されます。 表示される時間単位を変更するには、**[ツール]** メニュー、**[オプション]** の順にクリックして、**[時間の値を次の単位で表示]** オプションのいずれかを選択します。  
   
 ## <a name="master-pane"></a>マスター ウィンドウ  
   

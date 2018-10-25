@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c6e4420b0466857177cad356de7bb4a737968f3
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 5d6afa4cfdf3891089461eec97e1af764329362e
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669082"
 ---
 # <a name="vsperfaspnetcmd"></a>VSPerfASPNetCmd
 **VSPerfASPNetCmd.exe** コマンド ライン ツールを使用すれば、環境変数を設定したり、コンピューターを再起動したりしなくても、ASP.Net Web サイトをプロファイルすることができます。 ASP.NET Web サイトをプロファイルするときに、**VSPerfCmd** で提供される追加機能が不要な場合は、[VSPerfCmd](../profiling/vsperfcmd.md) ではなく **VSPerfASPNetCmd.exe** を使用します。 **VSPerfASPNetCmd** の詳細については、「[VSPerfASPNETCmd を使用した迅速な Web サイト プロファイリング](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md)」を参照してください。 **VSPerfASPNetCmd** は、スタンドアロン プロファイラーを使用して ASP.NET Web サイトをプロファイルするときに推奨されるコマンド ライン ツールです。  
@@ -33,9 +34,9 @@ ms.lasthandoff: 05/22/2018
 |**/Trace** または **/t**|インストルメンテーション メソッドを使用して Web サイトをプロファイルします。 /Trace を **/Sample** と一緒に使用することはできません。|  
 |**/Memory**[**:**`Type`] または **/m**[**:**{**a**&#124;**l**}]|メモリ割り当て、および必要に応じてオブジェクトの有効期間 (ガベージ コレクション) をプロファイルします。 **/Memory** は、サンプリングまたはインストルメンテーション メソッドで使用できます。<br /><br /> *Type* は次のいずれかになります。<br /><br /> -   **allocation** (または **a**): メモリの割り当てデータのみを収集します。<br />-   **lifetime** (または **l**): メモリの割り当ておよびオブジェクトの有効期間データを収集します。<br /><br /> 既定の `Type` は **allocation** です。|  
 |**/Tip** または **/i**|プロファイル データに詳細な ASP.NET 要求と ADO.NET 呼び出し情報を追加します。 **/Tip** はサンプリングまたはインストルメンテーション メソッドで使用でき、**/Memory** オプションと共に使用できます。|  
-|**/Output:** `File` または **/o:**`File`|プロファイル データ (.vsp) ファイルのパスとファイル名を指定します。|  
+|**/Output:** `File` または **/o:**`File`|プロファイル データ (.*vsp*) ファイルのパスとファイル名を指定します。|  
 |**/NoWait** または **/n**|コマンド プロンプトを直ちに返し、コマンド プロンプト ウィンドウで追加のコマンドを使用できるようにします。 別のコマンド ラインで **VSPerfASPNETCmd /Shutdown** を入力して、プロファイルをオフにする必要があります。|  
-|**/PackSymbols**[:{**on**&#124;**off**} または **/p**[:{**on**&#124;**off**}|プロファイル データ (.vsp) ファイルにシンボル (関数やパラメーター名など) を埋め込みます。|  
+|**/PackSymbols**[:{**on**&#124;**off**} または **/p**[:{**on**&#124;**off**}|プロファイル データ (.*vsp*) ファイルにシンボル (関数やパラメーター名など) を埋め込みます。|  
 |**/Shutdown:** `Website`または **/d:**`Website`|プロファイルをオフにします。 **/NoWait** オプションを使用してプロファイルを開始した後、またはプロファイラーが予期せず終了した場合に、コマンド ラインで唯一のオプションとして使用します。 元の **VSPerfASPNETCmd** コマンドで使用していたのと同じ URL を指定します。|  
 |`Website`|プロファイル対象の Web サイトの URL です。|  
   

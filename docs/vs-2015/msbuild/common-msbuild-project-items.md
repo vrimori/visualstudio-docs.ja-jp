@@ -1,7 +1,7 @@
 ---
 title: MSBuild プロジェクトの共通項目 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b119cae4013bd1be5657224ad54de54c10321848
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0d4975390802c8a04459750be5e5405bd17c3a68
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538232"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49238408"
 ---
 # <a name="common-msbuild-project-items"></a>MSBuild プロジェクトの共通項目
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MSBuild プロジェクトの共通項目](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items)します。  
-  
   
 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] では、項目は 1 つ以上のファイルに対応する名前付きの参照です。 項目には、ファイル名、パス、バージョン番号などのメタデータが含まれます。 項目には、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のすべてのプロジェクトの種類に共通のものがあります。 これらの項目は、microsoft.build.commontypes.xsd ファイルに定義されています。  
   

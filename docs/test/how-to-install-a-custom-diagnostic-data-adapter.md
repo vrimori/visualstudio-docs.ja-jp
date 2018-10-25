@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 0755f77b2eea2860a3514480504c7aed041711d4
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 9d2d6c30696636bc8fd2ca571940ac0165eabbcf
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39379290"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44321048"
 ---
 # <a name="how-to-install-a-custom-diagnostic-data-adapter"></a>方法: カスタム診断データ アダプターをインストールする
 
@@ -46,7 +46,7 @@ ms.locfileid: "39379290"
     > [!NOTE]
     > 診断データ アダプターと構成エディターを同じプロジェクトで作成し、同じアセンブリに組み込むこともできますが、個別のプロジェクトを使用して、個別のアセンブリを作成することもできます。
 
-     テストの実行時に環境を使用するようにテストの設定を構成する方法の詳細については、[手動テストで診断データを収集する方法 (VSTS) ](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)に関するページを参照してください。
+     テストの実行時に環境を使用するようにテストの設定を構成する方法の詳細については、[手動テストで診断データを収集する方法 (Azure Test Plans) ](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)に関するページを参照してください。
 
 2.  テストの診断データ アダプターを選択するには、まず、既存のテスト設定を選択するか、Microsoft Test Manager または Visual Studio で新しいテスト設定を作成してから、選択したテスト設定の **[データと診断]** タブで診断データ アダプターを選択する必要があります。
 

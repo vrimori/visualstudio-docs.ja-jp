@@ -1,5 +1,5 @@
 ---
-title: ネイティブ ランタイム チェックのカスタマイズ |Microsoft ドキュメント
+title: ネイティブ ランタイム チェックのカスタマイズ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -24,29 +24,29 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f07e2e2258190196ee001a19d79989ee58239ff
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b6df61b1e0fde088fca87fa7a99f5590768889b8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31480903"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853929"
 ---
 # <a name="native-run-time-checks-customization"></a>ネイティブ ランタイム チェックのカスタマイズ
-コンパイルするときに **/RTC** (実行時チェック) を使用して、または、`runtime_checks`プラグマ、C ランタイム ライブラリはネイティブ ランタイム チェックを提供します。 ランタイム チェックのカスタマイズが必要になる場合があります。次に例を示します。  
+コンパイルするとき **/RTC** (実行時チェック) を使用して、または、`runtime_checks`プラグマ、C ランタイム ライブラリはネイティブ ランタイム チェックを提供します。 ランタイム チェックのカスタマイズが必要になる場合があります。次に例を示します。  
   
--   ランタイム チェック メッセージを既定とは異なるファイルや出力先に転送する。  
+- ランタイム チェック メッセージを既定とは異なるファイルや出力先に転送する。  
   
--   サードパーティ デバッガーでのランタイム チェック メッセージの出力先を指定する。  
+- サードパーティ デバッガーでのランタイム チェック メッセージの出力先を指定する。  
   
--   C ランタイム ライブラリのリリース バージョンでコンパイルされたプログラムからのランタイム チェック メッセージを報告する。 ライブラリのリリース バージョンでは、ランタイム エラーの報告に `_CrtDbgReportW` は使用されません。 代わりに、表示、 **Assert**ごとに実行時エラー ダイアログ ボックス。  
+- C ランタイム ライブラリのリリース バージョンでコンパイルされたプログラムからのランタイム チェック メッセージを報告する。 ライブラリのリリース バージョンでは、ランタイム エラーの報告に `_CrtDbgReportW` は使用されません。 代わりに、表示、 **Assert**  ダイアログ ボックスの各実行時エラーが発生します。  
   
- ランタイム エラー チェックをカスタマイズするには、次の方法があります。  
+  ランタイム エラー チェックをカスタマイズするには、次の方法があります。  
   
--   ランタイム エラー レポート関数の記述 詳細については、次を参照してください。[する方法: 実行時エラー レポート関数を記述](../debugger/how-to-write-a-run-time-error-reporting-function.md)です。  
+- ランタイム エラー レポート関数の記述 詳細については、次を参照してください。[方法: 実行時エラー レポート関数を記述](../debugger/how-to-write-a-run-time-error-reporting-function.md)します。  
   
--   エラー メッセージ出力先のカスタマイズ  
+- エラー メッセージ出力先のカスタマイズ  
   
--   ランタイム チェック エラーに関する情報のクエリ  
+- ランタイム チェック エラーに関する情報のクエリ  
   
 ## <a name="customize-the-error-message-destination"></a>エラー メッセージ出力先のカスタマイズ  
  エラー レポートに `_CrtDbgReportW` を使用する場合は、`_CrtSetReportMode` を使用してエラー メッセージの出力先を指定できます。  
@@ -54,9 +54,9 @@ ms.locfileid: "31480903"
  カスタムのレポート関数を使用している場合、エラーとレポートの種類を関連付けるには、`_RTC_SetErrorType` を使用します。  
   
 ## <a name="query-for-information-about-run-time-checks"></a>ランタイム チェック情報のクエリ  
- `_RTC_NumErrors` は、ランタイム エラー チェックで検出されたエラーの種類の数を返します。 各エラーの簡単な説明を取得するには、0 ～ `_RTC_NumErrors` の戻り値をループし、各ループで `_RTC_GetErrDesc` に反復値を渡すことができます。 詳細については、次を参照してください。 [_RTC_NumErrors](/cpp/c-runtime-library/reference/rtc-numerrors)と[_RTC_GetErrDesc](/cpp/c-runtime-library/reference/rtc-geterrdesc)です。  
+ `_RTC_NumErrors` は、ランタイム エラー チェックで検出されたエラーの種類の数を返します。 各エラーの簡単な説明を取得するには、0 ～ `_RTC_NumErrors` の戻り値をループし、各ループで `_RTC_GetErrDesc` に反復値を渡すことができます。 詳細については、次を参照してください。 [_RTC_NumErrors](/cpp/c-runtime-library/reference/rtc-numerrors)と[_RTC_GetErrDesc](/cpp/c-runtime-library/reference/rtc-geterrdesc)します。  
   
 ## <a name="see-also"></a>関連項目  
- [方法: ネイティブ ランタイム チェックの使用](../debugger/how-to-use-native-run-time-checks.md)   
+ [方法: ネイティブ ランタイム チェックを使用](../debugger/how-to-use-native-run-time-checks.md)   
  [runtime_checks](/cpp/preprocessor/runtime-checks)   
  [_CrtDbgReport、_CrtDbgReportW](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw)

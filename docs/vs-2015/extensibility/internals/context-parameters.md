@@ -1,7 +1,7 @@
 ---
 title: コンテキスト パラメーター |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 1a062dcb-8a8f-40dd-bea9-3d10f9448966
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c890a1ffa91d4e6017411e99b4845304a2399279
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 663583129453fc8bd9b71c2be2337a5528f9f7d9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533911"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49238084"
 ---
 # <a name="context-parameters"></a>コンテキスト パラメーター
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コンテキスト パラメーター](https://docs.microsoft.com/visualstudio/extensibility/internals/context-parameters)します。  
-  
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]統合開発環境 (IDE) では、ウィザードを使用を追加することができます、**新しいプロジェクト**、**新しい項目の追加**、または**サブ プロジェクトの追加** ダイアログ ボックス。 追加のウィザードで使用できる、**ファイル**メニューでプロジェクトを右クリックして、または**ソリューション エクスプ ローラー**。 IDE では、ウィザードの実装にコンテキスト パラメーターを渡します。 コンテキスト パラメーターは、IDE は、ウィザードを呼び出すときに、プロジェクトの状態を定義します。  
   
  IDE 設定ウィザードの起動時に、<xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION>フラグを IDE の呼び出しで、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A>プロジェクトのメソッド。 設定すると、プロジェクトが発生する必要があります、`IVsExtensibility::RunWizardFile`登録ウィザードの名前または GUID およびその他の IDE が渡されるコンテキスト パラメーターを使用して実行するメソッド。  

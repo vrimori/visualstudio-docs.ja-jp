@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ce17a44a6680288a31d80993a11d59eaa95f1a31
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 1d48f2a104505e6b6ea9942847d8cd4dd2f3e669
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672294"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900476"
 ---
 # <a name="walkthrough-collect-data-by-using-a-windows-form"></a>チュートリアル: Windows フォームを使用してデータを収集します。
   このチュートリアルでは、Microsoft Office Excel のドキュメント レベルのカスタマイズから Windows フォームを開き、ユーザーから情報を収集し、その情報をワークシートのセルに書き込む方法について説明します。  
@@ -70,41 +70,41 @@ ms.locfileid: "35672294"
   
 ### <a name="to-add-a-windows-form"></a>Windows フォームを追加するには  
   
-1.  **ソリューション エクスプローラー** でプロジェクト **WinFormInput**を選択します。  
+1. **ソリューション エクスプローラー** でプロジェクト **WinFormInput**を選択します。  
   
-2.  **[プロジェクト]** メニューの **[Windows フォームの追加]** をクリックします。  
+2. **[プロジェクト]** メニューの **[Windows フォームの追加]** をクリックします。  
   
-3.  フォームに **GetInputString.vb** または **GetInputString.cs**という名前を付けてから、 **[追加]** をクリックします。  
+3. フォームに **GetInputString.vb** または **GetInputString.cs**という名前を付けてから、 **[追加]** をクリックします。  
   
-     デザイナーで新しいフォームが開きます。  
+    デザイナーで新しいフォームが開きます。  
   
-4.  フォームに <xref:System.Windows.Forms.TextBox> および <xref:System.Windows.Forms.Button> を追加します。  
+4. フォームに <xref:System.Windows.Forms.TextBox> および <xref:System.Windows.Forms.Button> を追加します。  
   
-5.  ボタンを選択し、 **[プロパティ]** ウィンドウでプロパティ **[テキスト]** を見つけ出し、テキストを **OK**に変更します。  
+5. ボタンを選択し、 **[プロパティ]** ウィンドウでプロパティ **[テキスト]** を見つけ出し、テキストを **OK**に変更します。  
   
- 次に、ユーザーの情報を収集するためのコードを `ThisWorkbook.vb` または `ThisWorkbook.cs` に追加します。  
+   次に、ユーザーの情報を収集するためのコードを `ThisWorkbook.vb` または `ThisWorkbook.cs` に追加します。  
   
 ## <a name="display-the-windows-form-and-collecting-information"></a>Windows フォームと収集情報を表示します。  
  `GetInputString` Windows フォームのインスタンスを作成しそれを表示してから、ワークシート内のセルにユーザーの情報を書き込みます。  
   
 #### <a name="to-display-the-form-and-collect-information"></a>フォームを表示し、情報を収集するには  
   
-1.  **ソリューション エクスプローラー** で **ThisWorkbook.vb** または **ThisWorkbook.cs**を右クリックしてから、 **[コードの表示]** をクリックします。  
+1. **ソリューション エクスプローラー** で **ThisWorkbook.vb** または **ThisWorkbook.cs**を右クリックしてから、 **[コードの表示]** をクリックします。  
   
-2.  <xref:Microsoft.Office.Tools.Excel.Workbook.Open> の `ThisWorkbook`イベント ハンドラーで、次のコードを追加して、フォーム `GetInputString` の変数を宣言してから、フォームを表示します。  
+2. <xref:Microsoft.Office.Tools.Excel.Workbook.Open> の `ThisWorkbook`イベント ハンドラーで、次のコードを追加して、フォーム `GetInputString` の変数を宣言してから、フォームを表示します。  
   
-    > [!NOTE]  
-    >  C# では、次のようにイベント ハンドラーを <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> イベントに追加する必要があります。 イベント ハンドラーの作成方法の詳細については、次を参照してください。[方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)します。  
+   > [!NOTE]  
+   >  C# では、次のようにイベント ハンドラーを <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> イベントに追加する必要があります。 イベント ハンドラーの作成方法の詳細については、次を参照してください。[方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)します。  
   
-     [!code-csharp[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#1)]
-     [!code-vb[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#1)]  
+    [!code-csharp[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#1)]
+    [!code-vb[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#1)]  
   
-3.  テキストを名前付き範囲に書き込む `WriteStringToCell` という名前のメソッドを作成します。 このメソッドはフォームから呼び出され、ユーザーの入力は <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールである `formInput`のセル **A1**に渡されます。  
+3. テキストを名前付き範囲に書き込む `WriteStringToCell` という名前のメソッドを作成します。 このメソッドはフォームから呼び出され、ユーザーの入力は <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールである `formInput`のセル **A1**に渡されます。  
   
-     [!code-csharp[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#2)]
-     [!code-vb[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#2)]  
+    [!code-csharp[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#2)]
+    [!code-vb[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#2)]  
   
- 次に、ボタンのクリック イベントを処理するためのコードをフォームに追加します。  
+   次に、ボタンのクリック イベントを処理するためのコードをフォームに追加します。  
   
 ## <a name="send-information-to-the-worksheet"></a>ワークシートに情報を送信します。  
   

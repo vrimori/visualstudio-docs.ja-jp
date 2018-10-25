@@ -1,7 +1,7 @@
 ---
 title: 構造、Content_types] .xml ファイル |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 9c399598-b9fa-4da7-84b5-defbf82e9335
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 89c5e1bab9f8cbe8cd6e2b980013c6bfdf4bc039
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1a33a1d8b82c03b2c8a45c63f5479011ab7249aa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548556"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903141"
 ---
 # <a name="the-structure-of-the-contenttypesxml-file"></a>構造、Content_types] .xml ファイル
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[[Content_types] .xml ファイルの構造](https://docs.microsoft.com/visualstudio/extensibility/the-structure-of-the-content-types-dot-xml-file)します。  
-  
 VSIX パッケージ内のコンテンツの種類についてを説明します。 Visual Studio は、パッケージをインストールする [Content_Types] .xml ファイルを使用しますが、ファイル自体はインストールされません。  
   
 > [!NOTE]
@@ -52,9 +50,9 @@ VSIX パッケージ内のコンテンツの種類についてを説明します
   
 ### <a name="attribute-name-attribute"></a>{Name} 属性属性  
   
-|[値]|説明|  
-|-----------|-----------------|  
-|http://schemas.openformats.org/package/2006/content-types|コンテンツ タイプのスキーマの場所。|  
+|                           [値]                           |                説明                |
+|-----------------------------------------------------------|-------------------------------------------|
+| http://schemas.openformats.org/package/2006/content-types | コンテンツ タイプのスキーマの場所。 |
   
 ### <a name="child-elements"></a>子要素  
  `Types`要素は、任意の数を含めることができます`Default`要素。  

@@ -1,7 +1,7 @@
 ---
 title: IEnumDebugObjects::GetCount |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 9cbc5db4-03ae-479f-a664-13cad66ad210
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9a69211e333371bd3b4672cbd34374552e4966d0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0949266dde27252bf132764540b2e4a3a481fd35
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539196"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880690"
 ---
 # <a name="ienumdebugobjectsgetcount"></a>IEnumDebugObjects::GetCount
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IEnumDebugObjects::GetCount](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ienumdebugobjects-getcount)します。  
-  
 このメソッドは、列挙体の要素の数を返します。  
   
 ## <a name="syntax"></a>構文  

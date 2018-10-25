@@ -1,14 +1,14 @@
 ---
 title: モデルを使用して、開発プロセス内 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
 - vs-devops-techdebt
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 helpviewer_keywords:
 - UML, using models
 ms.assetid: a33ac8fc-4ba0-4850-b71b-014dc8674e54
@@ -16,18 +16,16 @@ caps.latest.revision: 31
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 5ff2526d6ff7bb19448674aed043848e760b85e3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e731803e58ac641034699719a9fb0cbfe3cb6f13
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539377"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872285"
 ---
 # <a name="use-models-in-your-development-process"></a>開発プロセス内でのモデルの使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[モデルを使用して、開発プロセスで](https://docs.microsoft.com/visualstudio/modeling/use-models-in-your-development-process)します。  
-  
 Visual Studio では、システム、アプリケーション、またはコンポーネントについて理解し、変更するためのモデルを使用することができます。 モデルは、システムが動作する世界を視覚化できるようにして、ユーザーのニーズを明確化し、システムのアーキテクチャを定義し、コードを分析し、コードが要件を満たしていることを確認できるようにします。 参照してください[Channel 9 ビデオ: モデリングによるアーキテクチャの改善](http://go.microsoft.com/fwlink/?LinkID=252078)します。  
   
  どのバージョンの Visual Studio が各モデルの種類をサポートしているかについては、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
@@ -35,15 +33,15 @@ Visual Studio では、システム、アプリケーション、またはコン
 ## <a name="how-to-use-models"></a>モデルの使用方法  
  モデルは、いくつかの方法で役立ちます。  
   
--   モデリング図を描画すると、要件、アーキテクチャ、および概要設計に関連する概念を明確にすることができます。 詳細については、次を参照してください。[ユーザー要件をモデル化](../modeling/model-user-requirements.md)します。  
+- モデリング図を描画すると、要件、アーキテクチャ、および概要設計に関連する概念を明確にすることができます。 詳細については、次を参照してください。[ユーザー要件をモデル化](../modeling/model-user-requirements.md)します。  
   
--   モデルの操作は、要件の不整合を明らかにするのに役立ちます。  
+- モデルの操作は、要件の不整合を明らかにするのに役立ちます。  
   
--   モデルとの通信では、自然言語でのやり取りよりも曖昧さを残さずに、重要な概念をやり取りできます。 詳細については、次を参照してください。 [、アプリケーションのアーキテクチャをモデル化](../modeling/model-your-app-s-architecture.md)します。  
+- モデルとの通信では、自然言語でのやり取りよりも曖昧さを残さずに、重要な概念をやり取りできます。 詳細については、次を参照してください。 [、アプリケーションのアーキテクチャをモデル化](../modeling/model-your-app-s-architecture.md)します。  
   
--   場合によっては、モデルを使用して、コードまたはデータベース スキーマやドキュメントなどのその他の成果物を生成できます。 たとえば、[!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] のモデリング コンポーネントはモデルから生成されます。  詳細については、次を参照してください。[生成モデルからアプリを構成および](../modeling/generate-and-configure-your-app-from-models.md)します。  
+- 場合によっては、モデルを使用して、コードまたはデータベース スキーマやドキュメントなどのその他の成果物を生成できます。 たとえば、[!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] のモデリング コンポーネントはモデルから生成されます。  詳細については、次を参照してください。[生成モデルからアプリを構成および](../modeling/generate-and-configure-your-app-from-models.md)します。  
   
- モデルは、手軽なアジャイルから高度なセレモニーまで、広範囲のプロセスで使用することができます。  
+  モデルは、手軽なアジャイルから高度なセレモニーまで、広範囲のプロセスで使用することができます。  
   
 ### <a name="use-models-to-reduce-ambiguity"></a>モデルを使用したあいまいさの低減  
  モデリング言語は、自然言語よりもあいまいさが少なく、一般的にソフトウェアの開発時に必要なアイデアを表すように設計されています。  
@@ -145,7 +143,7 @@ Visual Studio では、システム、アプリケーション、またはコン
 |**技術記事とジャーナル**|[MSDN アーキテクチャ センター](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Visual Studio アーキテクチャ ツーリング ガイダンス](../modeling/visual-studio-architecture-tooling-guidance.md)|  
   
 ## <a name="see-also"></a>関連項目  
- [アジャイル開発でのモデルを使用します。](http://msdn.microsoft.com/en-us/592ac27c-3d3e-454a-9c38-b76658ed137f)   
+ [アジャイル開発でのモデルの使用](http://msdn.microsoft.com/en-us/592ac27c-3d3e-454a-9c38-b76658ed137f)   
  [アプリのモデルを作成します。](../modeling/create-models-for-your-app.md)   
  [ユーザー要件のモデリング](../modeling/model-user-requirements.md)   
  [アプリのアーキテクチャをモデル化します。](../modeling/model-your-app-s-architecture.md)   

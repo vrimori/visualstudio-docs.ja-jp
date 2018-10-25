@@ -1,7 +1,7 @@
 ---
 title: 同時実行例外の処理 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 27
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d174aeb48170f1232aa0830bd2532897e7cb6f5f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 616b837613e0e2c76330a68133929e6b85a94f98
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536116"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812934"
 ---
 # <a name="handle-a-concurrency-exception"></a>コンカレンシー例外を処理する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[同時実行例外を処理](https://docs.microsoft.com/visualstudio/data-tools/handle-a-concurrency-exception)します。  
-  
   
 2 人のユーザーが同じデータベースの同じデータを同時に変更しようとすると、コンカレンシー例外 (<xref:System.Data.DBConcurrencyException>) が発生します。 このチュートリアルをキャッチする方法を説明する Windows アプリケーションを作成、<xref:System.Data.DBConcurrencyException>エラーの原因となった行を見つけて、それを処理する方法の戦略について説明します。  
   
@@ -131,13 +129,13 @@ ms.locfileid: "47536116"
   
  次の 3 つのバージョンのレコードを持つユーザーの applicationpresents:  
   
--   データベースの現在のレコード  
+- データベースの現在のレコード  
   
--   データセットに読み込まれた元のレコード  
+- データセットに読み込まれた元のレコード  
   
--   データセットの変更の提案  
+- データセットの変更の提案  
   
- ユーザーに提案されたバージョンでは、データベースを上書きするか、または更新をキャンセルし、データベースから新しい値でデータセットを更新できます。  
+  ユーザーに提案されたバージョンでは、データベースを上書きするか、または更新をキャンセルし、データベースから新しい値でデータセットを更新できます。  
   
 #### <a name="to-enable-the-handling-of-concurrency-errors"></a>コンカレンシー エラーを処理できるようにするには  
   

@@ -1,7 +1,7 @@
 ---
 title: 通知と進行状況 for Visual Studio |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: f0ef65e9-0f1f-45f4-9f25-6e2398691168
 caps.latest.revision: 7
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9c7e83a666ed1a7620d80bbfb42422fdb9e4d81e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8494878dfc1760717e8e01b408822ea5dd1ea6cc
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535407"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49248002"
 ---
 # <a name="notifications-and-progress-for-visual-studio"></a>通知と Visual Studio の進行状況
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[通知と Visual Studio の進行状況](https://docs.microsoft.com/visualstudio/extensibility/ux-guidelines/notifications-and-progress-for-visual-studio)します。  
-  
 ##  <a name="BKMK_NotificationSystems"></a> 通知システム  
   
 ### <a name="overview"></a>概要  
@@ -493,7 +491,7 @@ public interface IVsInfoBarUIEvents
   
  ![フィールドのラベルが"Required"検証](../../extensibility/ux-guidelines/media/0905-02-fieldvalidationrequired.png "0905 02_FieldValidationRequired")  
   
- コントロールの状態が判断できる*に入力された無効なコンテンツ*別のコントロールにフォーカスを移動するときか、または、ユーザーが [OK] のコミット] ボタンをクリックしたときまたはユーザーがドキュメントまたはフォームを保存するときにします。  
+ コントロールの状態が判断できる*に入力された無効なコンテンツ*別のコントロールにフォーカスを移動するときか、または、ユーザーが [OK] のコミット ボタンをクリックしたときまたはユーザーがドキュメントまたはフォームを保存するときにします。  
   
  無効なコンテンツの状態が確認された場合、コントロールの内部または同様の横にアイコンが表示されます。 アイコンまたはコントロールのいずれかのポインターを合わせると、エラーを説明するツールヒントが表示されます。 さらに、1 ピクセルの枠線が無効な状態を作成しているコントロールの周囲に表示されます。  
   

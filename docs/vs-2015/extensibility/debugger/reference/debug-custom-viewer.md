@@ -1,7 +1,7 @@
 ---
 title: DEBUG_CUSTOM_VIEWER |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 8e0ef3f0-0107-48e8-a037-6e52b4c4ed9d
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8e706a787f679bb4ada85631626719e55e949b94
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8b3fa0f76dfbf455578eab3708aa6aed4ac2d6a5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533711"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49859864"
 ---
 # <a name="debugcustomviewer"></a>DEBUG_CUSTOM_VIEWER
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[DEBUG_CUSTOM_VIEWER](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/debug-custom-viewer)します。  
-  
 カスタム ビューアーを識別する構造またはビジュアライザーを入力します。  
   
 ## <a name="syntax"></a>構文  
@@ -77,7 +75,7 @@ public struct DEBUG_CUSTOM_VIEWER {
 ## <a name="remarks"></a>Remarks  
  この構造体のリストがへの呼び出しによって返される、 [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)メソッド (と拡張機能によって、 [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md)メソッド)。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

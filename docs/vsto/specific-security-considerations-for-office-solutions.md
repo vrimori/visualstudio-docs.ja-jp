@@ -21,12 +21,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7c3bf48cf5f8acd24661adf2d9ae36324fadfd72
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: dcb2e0a3c381b1dd07c7724c3a64c53307856014
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672383"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951393"
 ---
 # <a name="specific-security-considerations-for-office-solutions"></a>Office ソリューションの特定のセキュリティに関する考慮事項
   Microsoft .NET Framework および Microsoft Office には、Office ソリューションをセキュリティ上の脅威から保護するためのセキュリティ機能が備わっています。 このトピックでは、このような脅威のいくつかについて説明し、脅威対策に関する推奨事項を示します。 また、Microsoft Office のセキュリティ設定が Office ソリューションに及ぼす影響についても説明します。  
@@ -55,23 +55,23 @@ ms.locfileid: "35672383"
   
  オブジェクト モデルの保護の対象にできる VSTO アドインは、Outlook を Microsoft Exchange Server と併用しているかどうかに応じて、次のように異なります。  
   
--   Outlook を Exchange と併用していない場合、管理者は、コンピューター上のすべての VSTO アドインを対象として、オブジェクト モデルの保護を有効または無効にできます。  
+- Outlook を Exchange と併用していない場合、管理者は、コンピューター上のすべての VSTO アドインを対象として、オブジェクト モデルの保護を有効または無効にできます。  
   
--   Outlook を Exchange と併用している場合、管理者は、コンピューター上のすべての VSTO アドインを対象としてオブジェクト モデルの保護を有効または無効にできるのに加え、オブジェクト モデルの保護の対象外として動作させる特定の VSTO アドインを指定できます。 また、管理者は、オブジェクト モデルの特定の領域でのオブジェクト モデルの保護の動作を変更することもできます。 たとえば、オブジェクト モデルの保護が有効になっている場合でも、管理者は、プログラムで電子メールを送信する VSTO アドインを許可に自動的にできます。  
+- Outlook を Exchange と併用している場合、管理者は、コンピューター上のすべての VSTO アドインを対象としてオブジェクト モデルの保護を有効または無効にできるのに加え、オブジェクト モデルの保護の対象外として動作させる特定の VSTO アドインを指定できます。 また、管理者は、オブジェクト モデルの特定の領域でのオブジェクト モデルの保護の動作を変更することもできます。 たとえば、オブジェクト モデルの保護が有効になっている場合でも、管理者は、プログラムで電子メールを送信する VSTO アドインを許可に自動的にできます。  
   
- Outlook 2007 以降、オブジェクト モデルの保護の動作は、Outlook のセキュリティを維持しながらも、開発者やユーザー エクスペリエンスを向上させるように変更されています。 詳細については、次を参照してください。 [Outlook 2007 におけるセキュリティの変更をコード](http://go.microsoft.com/fwlink/?LinkId=73429)します。  
+  Outlook 2007 以降、オブジェクト モデルの保護の動作は、Outlook のセキュリティを維持しながらも、開発者やユーザー エクスペリエンスを向上させるように変更されています。 詳細については、次を参照してください。 [Outlook 2007 におけるセキュリティの変更をコード](http://go.microsoft.com/fwlink/?LinkId=73429)します。  
   
 ### <a name="minimize-object-model-guard-warnings"></a>オブジェクト モデルの保護の警告を最小限に抑える  
  制限されたプロパティおよびメソッドを使用したときのセキュリティ警告を回避するには、VSTO アドインで、Outlook オブジェクトをプロジェクト内の `Application` クラスの `ThisAddIn` フィールドから取得するようにします。 このフィールドの詳細については、次を参照してください。[プログラム VSTO アドイン](../vsto/programming-vsto-add-ins.md)します。  
   
- オブジェクト モデルの保護が信頼するのは、このオブジェクトから取得された Outlook オブジェクトのみです。 これに対し、オブジェクトの新しいから取得される`Microsoft.Office.Interop.Outlook.Application`オブジェクトは、信頼されていないと、制限されたプロパティとメソッド セキュリティ警告が発生、オブジェクト モデルの保護が有効になっている場合。  
+ オブジェクト モデルの保護が信頼するのは、このオブジェクトから取得された Outlook オブジェクトのみです。 一方、新しい `Microsoft.Office.Interop.Outlook.Application` オブジェクトから取得したオブジェクトは信頼されないため、オブジェクト モデルの保護が有効になっている場合には、制限されたプロパティおよびメソッドでセキュリティ警告が発生します。  
   
- 次のコード例は、オブジェクト モデルの保護が有効になっている場合に、セキュリティの警告を表示します。 `To`のプロパティ、`Microsoft.Office.Interop.Outlook.MailItem`クラスは、オブジェクト モデルの保護によって制限されます。 `Microsoft.Office.Interop.Outlook.MailItem`オブジェクトが信頼されていないため、コードの取得から、`Microsoft.Office.Interop.Outlook.Application`を使用して作成され、**新しい**から取得するのではなく、演算子、`Application`フィールド。  
+ 次のコード例は、オブジェクト モデルの保護が有効になっている場合に、セキュリティの警告を表示します。 `Microsoft.Office.Interop.Outlook.MailItem` クラスの `To` プロパティは、オブジェクト モデルの保護によって制限されています。 `Microsoft.Office.Interop.Outlook.MailItem`オブジェクトが信頼されていないため、コードの取得から、`Microsoft.Office.Interop.Outlook.Application`を使用して作成され、**新しい**から取得するのではなく、演算子、`Application`フィールド。  
   
  [!code-csharp[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs#1)]
  [!code-vb[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb#1)]  
   
- 次のコード例は、制限付きのプロパティを使用する方法を示します、`Microsoft.Office.Interop.Outlook.MailItem`オブジェクト モデルの保護によって信頼されているオブジェクト。 コードを使用して、信頼されている`Application`を取得するフィールド、`Microsoft.Office.Interop.Outlook.MailItem`します。  
+ 次のコード例は、制限付きのプロパティを使用する方法を示します、`Microsoft.Office.Interop.Outlook.MailItem`オブジェクト モデルの保護によって信頼されているオブジェクト。 コードは、信頼される `Application` フィールドを使用して `Microsoft.Office.Interop.Outlook.MailItem` を取得します。  
   
  [!code-csharp[Trin_VstcoreOutlookSecurity#2](../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs#2)]
  [!code-vb[Trin_VstcoreOutlookSecurity#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb#2)]  
@@ -94,15 +94,15 @@ ms.locfileid: "35672383"
   
  **セキュリティ センター**を使用して VSTO アドインの読み込みを禁止した場合、次のタイプのアドインは読み込まれません。  
   
--   マネージド COM VSTO アドインおよびアンマネージド COM VSTO アドイン。  
+- マネージド COM VSTO アドインおよびアンマネージド COM VSTO アドイン。  
   
--   マネージド スマート ドキュメントおよびアンマネージド スマート ドキュメント。  
+- マネージド スマート ドキュメントおよびアンマネージド スマート ドキュメント。  
   
--   マネージド オートメーション VSTO アドインおよびアンマネージド オートメーション VSTO アドイン。  
+- マネージド オートメーション VSTO アドインおよびアンマネージド オートメーション VSTO アドイン。  
   
--   マネージド リアルタイム データ コンポーネントおよびアンマネージド リアルタイム データ コンポーネント。  
+- マネージド リアルタイム データ コンポーネントおよびアンマネージド リアルタイム データ コンポーネント。  
   
- 次の手順では、ユーザーが **[セキュリティ センター]** を使用して、Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] および Microsoft Office 2010 で VSTO アドインの読み込みを制限する方法について説明します。 これらの手順は、Visual Studio で Office 開発ツールを使用して作成された VSTO アドインまたはカスタマイズには影響しません。  
+  次の手順では、ユーザーが **[セキュリティ センター]** を使用して、Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] および Microsoft Office 2010 で VSTO アドインの読み込みを制限する方法について説明します。 これらの手順は、Visual Studio で Office 開発ツールを使用して作成された VSTO アドインまたはカスタマイズには影響しません。  
   
 #### <a name="to-disable-vsto-add-ins-in-microsoft-office-2010-and-microsoft-includeoffice15shortvstoincludesoffice-15-short-mdmd-applications"></a>Microsoft Office 2010 および Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] アプリケーションの VSTO アドインを無効にするには  
   

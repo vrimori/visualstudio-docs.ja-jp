@@ -1,7 +1,7 @@
 ---
 title: マネージ コードの基本デザイン ガイドライン規則のルールの設定 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: aad4bb755889ca4d2aa9766836f156495d281bca
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ed0728eb0daa5c1ff0f322db42f66373181f3e23
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536220"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49184718"
 ---
 # <a name="basic-design-guideline-rules-rule-set-for-managed-code"></a>マネージド コードの "基本デザイン ガイドライン規則" 規則セット
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[基本デザイン ガイドライン規則ルールセットのマネージ コードの](https://docs.microsoft.com/visualstudio/code-quality/basic-design-guideline-rules-rule-set-for-managed-code)します。  
-  
 Microsoft 基本デザイン ガイドライン規則ルールのセット、コードを簡単に理解して使用することを目的に使用できます。 この規則セットは、プロジェクトにライブラリ コードが含まれている場合、またはコードが簡単に維持するためのベスト プラクティスを適用する場合を含める必要があります。  
   
  基本のデザイン ガイドライン規則には、Microsoft 最小推奨規則のルール セット内のすべての規則が含まれます。 最小の規則の一覧は、次を参照してください。[マネージ推奨規則ルールセットのマネージ コードの](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)します。  

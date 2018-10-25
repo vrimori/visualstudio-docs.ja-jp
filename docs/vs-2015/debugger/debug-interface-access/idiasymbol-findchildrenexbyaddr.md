@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::findChildrenExByAddr |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9240828da9f276b1ef440f95e48d1b34432c7f2a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9cd72b80feb1c8e2ecca603b929737bf05dd829e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545474"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924357"
 ---
 # <a name="idiasymbolfindchildrenexbyaddr"></a>IDiaSymbol::findChildrenExByAddr
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDiaSymbol::findChildrenExByAddr](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-findchildrenexbyaddr)します。  
-  
 指定したアドレスに有効なシンボルの子を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -66,7 +64,7 @@ HRESULT findChildrenExByAddr (
 ## <a name="remarks"></a>Remarks  
  返されるローカル シンボルには、ライブの範囲の情報が含まれます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

@@ -1,7 +1,7 @@
 ---
 title: CV_access_e |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5096c90727a1c8ffcf871853d1f59610a2baff37
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: dceccecc480976351a32d8ac6aa9494392a58092
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536414"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49815170"
 ---
 # <a name="cvaccesse"></a>CV_access_e
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[CV_access_e](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/cv-access-e)します。  
-  
 メンバー関数と変数の可視性 (アクセス レベル) のスコープを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -55,7 +53,7 @@ typedef enum CV_access_e {
 ## <a name="remarks"></a>Remarks  
  `friend`アクセス指定子は含まれませんので、通常は、クラスの private と protected の両方の要素にアクセスできる非メンバー関数によって使用されます。 使用して、 [idiasymbol::get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)でシンボルを検索するメソッド`SymTagFriend`アクセスします。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: cvconst.h  
   
 ## <a name="see-also"></a>関連項目  

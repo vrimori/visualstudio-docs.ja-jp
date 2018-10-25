@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_virtualbasetabletype |Microsoft ドキュメント
+title: Idiasymbol::get_virtualbasetabletype |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a299b589a1104dc18559278c777e47500169a57
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 864748c478b03a26affaa622e3b25cb8c7dfd78e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31480938"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49895077"
 ---
 # <a name="idiasymbolgetvirtualbasetabletype"></a>IDiaSymbol::get_virtualBaseTableType
-仮想ベース テーブルへのポインターの種類を取得します。  
+仮想ベース テーブルのポインターの型を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,21 +39,21 @@ HRESULT get_virtualBaseTableType(
 |`pRetVal`|[out]返します、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)ベース テーブルの種類を指定するオブジェクト。|  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>コメント  
- 仮想ベース テーブルへのポインター (`vbtptr`) 非表示を指すポインター、 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] vtable が仮想基底クラスからの継承を処理します。 A`vbtptr`継承されたクラスに応じて異なるサイズを持つことができます。  
+## <a name="remarks"></a>Remarks  
+ 仮想ベース テーブルのポインター (`vbtptr`) 非表示を指すポインター、 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] vtable 仮想基底クラスからの継承を処理します。 A`vbtptr`継承されたクラスによって異なるサイズであることができます。  
   
  このメソッドが戻る、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) vbtptr のサイズを決定するために使用できるオブジェクト。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|dia2.h|  
+|ヘッダー:|Dia2.h|  
 |バージョン:|DIA SDK バージョン 8.0|  
   
 ## <a name="see-also"></a>関連項目  

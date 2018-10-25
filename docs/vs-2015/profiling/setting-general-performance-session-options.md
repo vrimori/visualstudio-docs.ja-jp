@@ -1,7 +1,7 @@
 ---
 title: パフォーマンス セッションの全般オプションの設定 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,23 +16,21 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: abf40be314191096447e389ef145385d2e0f616b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b33848b2985cdc4303b75bdc493bfaf33af36b1e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537912"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49256777"
 ---
 # <a name="setting-general-performance-session-options"></a>パフォーマンス セッションの全般オプションの設定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[パフォーマンス セッションのオプションの [全般] 設定](https://docs.microsoft.com/visualstudio/profiling/setting-general-performance-session-options)します。  
-  
 パフォーマンス セッションのプロパティ ダイアログ ボックスの **[全般]** ページで、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイル ツールのパフォーマンス セッションに収集方法およびプロファイル データの名前付け規則を設定することができます。 **パフォーマンス エクスプローラー**からこのダイアログ ボックスを開くには、パフォーマンス セッションを右クリックし、**[プロパティ]** をクリックします。  
   
  **必要条件**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、[!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、[!INCLUDE[vsPro](../includes/vspro-md.md)]  
+-   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
 ## <a name="choosing-data-collection-methods"></a>データ コレクション方法の選択  
  基本的な収集方法を設定するには、**[プロファイル コレクション]** でオプションのいずれかを選択します。 オプションは次の表のとおりです。  

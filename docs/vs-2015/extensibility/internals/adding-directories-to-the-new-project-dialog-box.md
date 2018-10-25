@@ -1,7 +1,7 @@
 ---
 title: 新しいプロジェクト ダイアログ ボックスへのディレクトリの追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 53b328f5-20bb-49a3-bf9e-1818f4fbdf50
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e22f0566ddde7bfd795bb01141deabbecd532a19
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fd99b6a58bb5203e7e0dfd7df95494cb258c9228
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547289"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49190490"
 ---
 # <a name="adding-directories-to-the-new-project-dialog-box"></a>[新しいプロジェクト] ダイアログ ボックスへの新しいディレクトリの追加
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[新しいプロジェクト ダイアログ ボックスを追加するディレクトリ](https://docs.microsoft.com/visualstudio/extensibility/internals/adding-directories-to-the-new-project-dialog-box)します。  
-  
 新しいプロジェクトの種類を作成するときに登録することもできますで新しいディレクトリを**新しいプロジェクト**ダイアログ ボックスを使用するためのテンプレートとして表示します。 次のコード例では、ノードとも呼ばれる、新しいディレクトリを登録する方法について説明します。 例では、VSPackage CLSID_Package によって公開されているテンプレートが登録されます。 その結果の左側にある、**新しいプロジェクト** ダイアログ ボックスでは、Folder_Label_ResID リソースによって決定された名と追加のノードが提供しています。 このリソースは、VSPackage のサテライト DLL から読み込まれます。  
   
  **フォルダー** Folder_Label_ResID ノードが表示されるフォルダーの GUID を表す値。 例では、GUID を表す、**その他のプロジェクト**フォルダーに、**プロジェクトの種類**のウィンドウ、**新しいプロジェクト** ダイアログ ボックス。 場合、**その他のプロジェクト**値が存在しない場合、最上位レベルにラベルを配置します。  

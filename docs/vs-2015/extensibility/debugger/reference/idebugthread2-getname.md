@@ -1,7 +1,7 @@
 ---
 title: IDebugThread2::GetName |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: eec54b8f-4a0e-4919-b0f9-81d4bd1e0b6f
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c8bd570c2610a20c3647e530af2bc7b9f916adbe
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b0f670d1d636f89aac2fb5ba4546f70a0aedfa40
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535868"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853208"
 ---
 # <a name="idebugthread2getname"></a>IDebugThread2::GetName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugThread2::GetName](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugthread2-getname)します。  
-  
 スレッドの名前を取得します。  
   
 ## <a name="syntax"></a>構文  

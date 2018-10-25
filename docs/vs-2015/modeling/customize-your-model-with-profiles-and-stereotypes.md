@@ -1,7 +1,7 @@
 ---
 title: プロファイルとステレオタイプを使用したモデルのカスタマイズ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 20
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 2dd494b475b5d9068597857a2f4df12e5fed8e2f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7a64fa754d2693f6ea469eb2ec211935c896ebb9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537414"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49254946"
 ---
 # <a name="customize-your-model-with-profiles-and-stereotypes"></a>プロファイルとステレオタイプを使用したモデルのカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロファイルとステレオタイプを使用してモデルをカスタマイズ](https://docs.microsoft.com/visualstudio/modeling/customize-your-model-with-profiles-and-stereotypes)します。  
-  
 Visual Studio では、クラスやコンポーネントなどの標準の UML モデル要素を特定の目的に合わせてカスタマイズできます。 適用することができます、*ステレオタイプ*要素のプロパティの一覧を変更できるモデル要素にします。 ステレオタイプと呼ばれるコレクション内で定義された*プロファイル*します。  
   
  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  

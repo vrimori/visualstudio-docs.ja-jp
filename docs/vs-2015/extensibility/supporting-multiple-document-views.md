@@ -1,7 +1,7 @@
 ---
 title: 複数のドキュメント ビューのサポート |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,25 +15,23 @@ ms.assetid: c7ec2366-91c4-477f-908d-e89068bdb3e3
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8c1dc6614e90b0f4830991116440e94048145bae
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 91becc7afb7c236ebe9d6e08c1b8a221cb9f90fe
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535518"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49826546"
 ---
 # <a name="supporting-multiple-document-views"></a>複数のドキュメント ビューのサポート
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Supporting Multiple Document Views](https://docs.microsoft.com/visualstudio/extensibility/supporting-multiple-document-views)します。  
-  
 エディター用の個別のドキュメント データとドキュメント ビュー オブジェクトを作成して、ドキュメントの 1 つ以上のビューを行うことができます。 場合によっては便利ですが、追加のドキュメント ビューは次のとおりです。  
   
--   新しいウィンドウのサポート: エディターで開いているウィンドウを既に持っているユーザーが選択して、新しいウィンドウを開けるように、同じ型の 2 つ以上のビューを提供する、エディターが必要な**新しいウィンドウ**コマンドから、 **ウィンドウ**メニュー。  
+- 新しいウィンドウのサポート: エディターで開いているウィンドウを既に持っているユーザーが選択して、新しいウィンドウを開けるように、同じ型の 2 つ以上のビューを提供する、エディターが必要な**新しいウィンドウ**コマンドから、 **ウィンドウ**メニュー。  
   
--   フォームおよびコードの表示のサポート: さまざまな種類のビューを提供するエディターとして使用します。 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]、たとえば、フォーム ビューとコード ビューの両方を提供します。  
+- フォームおよびコードの表示のサポート: さまざまな種類のビューを提供するエディターとして使用します。 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]、たとえば、フォーム ビューとコード ビューの両方を提供します。  
   
- 詳細については、Visual Studio パッケージ テンプレートによって作成されたカスタム エディターのプロジェクトで EditorFactory.cs ファイル CreateEditorInstance プロシージャを参照してください。 このプロジェクトの詳細については、次を参照してください。[チュートリアル: カスタム エディターを作成する](../extensibility/walkthrough-creating-a-custom-editor.md)します。  
+  詳細については、Visual Studio パッケージ テンプレートによって作成されたカスタム エディターのプロジェクトで EditorFactory.cs ファイル CreateEditorInstance プロシージャを参照してください。 このプロジェクトの詳細については、次を参照してください。[チュートリアル: カスタム エディターを作成する](../extensibility/walkthrough-creating-a-custom-editor.md)します。  
   
 ## <a name="synchronizing-views"></a>ビューの同期  
  複数のビューを実装するときに、ドキュメント データ オブジェクトは、すべてのビューと、データの同期を維持する責任を負います。 インターフェイスを処理するイベントを使用する<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>データと複数のビューを同期します。  

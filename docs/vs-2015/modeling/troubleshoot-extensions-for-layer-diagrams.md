@@ -1,7 +1,7 @@
 ---
 title: レイヤー図の拡張機能のトラブルシューティング |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,38 +15,36 @@ caps.latest.revision: 27
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 44d06774d5eec41885bf9efbcf74a76373d22b2d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8b4d7dbe7fc11a41d44063aab558389555a4b7af
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546574"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49879104"
 ---
 # <a name="troubleshoot-extensions-for-layer-diagrams"></a>レイヤー図の拡張機能のトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[依存関係図の拡張機能のトラブルシューティングを行う](https://docs.microsoft.com/visualstudio/modeling/troubleshoot-extensions-for-layer-diagrams)します。  
-  
 このトピックでは、レイヤー モデル拡張機能を作成するときに発生する可能性のある問題について説明します。  
   
 #### <a name="when-i-press-f5-to-debug-my-extension-my-commands-gesture-handlers-validation-extensions-or-custom-properties-do-not-appear-on-layer-diagrams-in-the-experimental-instance-of-includevsprvsincludesvsprvs-mdmd"></a>F5 キーを押して拡張機能をデバッグするとき、コマンド、ジェスチャ ハンドラー、検証拡張機能、またはカスタム プロパティが、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の実験用インスタンスのレイヤー図に表示されない  
   
-1.  実験用インスタンスで拡張機能ソリューションを開きます[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、し、**ビルド** メニューのをクリックして**ソリューションのリビルド**します。  
+1. 実験用インスタンスで拡張機能ソリューションを開きます[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、し、**ビルド** メニューのをクリックして**ソリューションのリビルド**します。  
   
-2.  キーを押して**F5**または**CTRL + F5**の実験用インスタンスを起動する[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 レイヤー図を開き、拡張機能をテストします。  
+2. キーを押して**F5**または**CTRL + F5**の実験用インスタンスを起動する[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 レイヤー図を開き、拡張機能をテストします。  
   
- 必要に応じて、次の手順に進みます。  
+   必要に応じて、次の手順に進みます。  
   
 #### <a name="an-old-version-of-my-extension-runs"></a>拡張機能の古いバージョンが実行る  
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の実験用インスタンスが実行していないことを確認します。  
+1. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の実験用インスタンスが実行していないことを確認します。  
   
-2.  次のフォルダーの削除: %LocalAppData%\Microsoft\VisualStudio\\[バージョン] \ComponentModelCache  
+2. 次のフォルダーの削除: %LocalAppData%\Microsoft\VisualStudio\\[バージョン] \ComponentModelCache  
   
-    > [!NOTE]
-    >  %Localappdata% は通常*DriveName*: \Users\\*UserName*\AppData\Local です。  
+   > [!NOTE]
+   >  %Localappdata% は通常*DriveName*: \Users\\*UserName*\AppData\Local です。  
   
- 必要に応じて、次の手順に進みます。  
+   必要に応じて、次の手順に進みます。  
   
 #### <a name="an-old-version-of-my-validation-results-appears-or-my-validation-method-is-not-called"></a>古いバージョンの検証結果が表示される、または検証メソッドが呼び出されない  
   

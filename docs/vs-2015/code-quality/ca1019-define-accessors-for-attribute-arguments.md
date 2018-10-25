@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1019: 属性引数にアクセサーを定義する |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: f2cda474d9f8b75ef228585ccec2759c998699f6
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: ff0329c5c9d565685d4e5c0ff950b31dea3299f6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47549272"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854889"
 ---
 # <a name="ca1019-define-accessors-for-attribute-arguments"></a>CA1019: 属性引数にアクセサーを定義します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1019: 属性引数にアクセサーを定義する](https://docs.microsoft.com/visualstudio/code-quality/ca1019-define-accessors-for-attribute-arguments)します。
 
 |||
 |-|-|

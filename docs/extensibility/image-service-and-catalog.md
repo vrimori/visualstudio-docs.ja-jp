@@ -9,12 +9,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 64a22cb00a90d9d5475fe89ff8c7fc800f23d86a
-ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
+ms.openlocfilehash: c37da890842711b941e61aadc23ed85d60672f3c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46371148"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823763"
 ---
 # <a name="image-service-and-catalog"></a>イメージ サービスとカタログ
 このクックブックには、ガイダンスと、Visual Studio イメージ サービスと Visual Studio 2015 で導入されたイメージのカタログを採用するためのベスト プラクティスが含まれています。  
@@ -32,46 +32,46 @@ ms.locfileid: "46371148"
   
  イメージのサービスを採用する理由  
   
--   Visual Studio から常に最新の「ピクセル単位で正確」イメージを取得します。  
+- Visual Studio から常に最新の「ピクセル単位で正確」イメージを取得します。  
   
--   送信して、独自のイメージを使用することができます。  
+- 送信して、独自のイメージを使用することができます。  
   
--   Windows が新しい DPI スケールを追加するときに、イメージをテストする必要はありません。  
+- Windows が新しい DPI スケールを追加するときに、イメージをテストする必要はありません。  
   
--   実装では古いアーキテクチャ上の問題を対処します。  
+- 実装では古いアーキテクチャ上の問題を対処します。  
   
- Visual Studio shell ツールバー前に、と後イメージのサービスを使用します。  
+  Visual Studio shell ツールバー前に、と後イメージのサービスを使用します。  
   
- ![前に、と後イメージのサービス](../extensibility/media/image-service-before-and-after.png "前に、と後イメージのサービス")  
+  ![前に、と後イメージのサービス](../extensibility/media/image-service-before-and-after.png "前に、と後イメージのサービス")  
   
 ## <a name="how-it-works"></a>しくみ
  イメージ サービスは、任意のサポートされている UI フレームワークの適切なビットマップ イメージを指定できます。  
   
--   WPF: BitmapSource  
+- WPF: BitmapSource  
   
--   WinForms: System.Drawing.Bitmap  
+- WinForms: System.Drawing.Bitmap  
   
--   Win32: HBITMAP  
+- Win32: HBITMAP  
   
- イメージ サービスのフロー ダイアグラム  
+  イメージ サービスのフロー ダイアグラム  
   
- ![サービスのフロー ダイアグラムをイメージ](../extensibility/media/image-service-flow-diagram.png "イメージのサービスのフロー ダイアグラム")  
+  ![サービスのフロー ダイアグラムをイメージ](../extensibility/media/image-service-flow-diagram.png "イメージのサービスのフロー ダイアグラム")  
   
- **イメージのモニカー**  
+  **イメージのモニカー**  
   
- イメージのモニカー (または略してモニカー) はのイメージ アセットまたはイメージ ライブラリにあるイメージの一覧の資産を一意に識別する GUID と ID のペアです。  
+  イメージのモニカー (または略してモニカー) はのイメージ アセットまたはイメージ ライブラリにあるイメージの一覧の資産を一意に識別する GUID と ID のペアです。  
   
- **既知のモニカー**  
+  **既知のモニカー**  
   
- 任意の Visual Studio のコンポーネントまたは拡張機能を Visual Studio のイメージのカタログおよびパブリックに使用できるに含まれるイメージ モニカーのセット。  
+  任意の Visual Studio のコンポーネントまたは拡張機能を Visual Studio のイメージのカタログおよびパブリックに使用できるに含まれるイメージ モニカーのセット。  
   
- **イメージ マニフェスト ファイル**  
+  **イメージ マニフェスト ファイル**  
   
- イメージ マニフェスト (*.imagemanifest*) ファイルは、これらの資産と実際のイメージまたは各資産を表すイメージを表すモニカーのイメージ アセットのセットを定義する XML ファイルです。 従来の UI サポートのイメージを一覧表示またはイメージ マニフェストは、スタンドアロン画像を定義できます。 さらに、ときに、これらの資産を表示する方法を変更する、資産または各資産の背後にある個別のイメージのいずれかに設定できる属性があります。  
+  イメージ マニフェスト (*.imagemanifest*) ファイルは、これらの資産と実際のイメージまたは各資産を表すイメージを表すモニカーのイメージ アセットのセットを定義する XML ファイルです。 従来の UI サポートのイメージを一覧表示またはイメージ マニフェストは、スタンドアロン画像を定義できます。 さらに、ときに、これらの資産を表示する方法を変更する、資産または各資産の背後にある個別のイメージのいずれかに設定できる属性があります。  
   
- **イメージ マニフェスト スキーマ**  
+  **イメージ マニフェスト スキーマ**  
   
- イメージの完了のマニフェストのようになります。  
+  イメージの完了のマニフェストのようになります。  
   
 ```xml  
 <ImageManifest>  
@@ -405,52 +405,52 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
   
  これらは、ツール ウィンドウでモニカーを使用するキーの場所です。 各手順に従います。  
   
-1.  タブ十分に小さい場合、ツール ウィンドウ タブ (でも使用、 **Ctrl**+**タブ**ウィンドウの切り替え)。  
+1. タブ十分に小さい場合、ツール ウィンドウ タブ (でも使用、 **Ctrl**+**タブ**ウィンドウの切り替え)。  
   
-     派生したクラスのコンス トラクターにこの行を追加、 **ToolWindowPane**型。  
+    派生したクラスのコンス トラクターにこの行を追加、 **ToolWindowPane**型。  
   
-    ```csharp  
-    // Replace this KnownMoniker with your desired ImageMoniker  
-    this.BitmapImageMoniker = KnownMonikers.Blank;  
-    ```  
+   ```csharp  
+   // Replace this KnownMoniker with your desired ImageMoniker  
+   this.BitmapImageMoniker = KnownMonikers.Blank;  
+   ```  
   
-2.  ツール ウィンドウを開くコマンド。  
+2. ツール ウィンドウを開くコマンド。  
   
-     *.Vsct*パッケージのファイル、ツール ウィンドウのコマンド ボタンの編集します。  
+    *.Vsct*パッケージのファイル、ツール ウィンドウのコマンド ボタンの編集します。  
   
-    ```xml  
-    <Button guid="guidPackageCmdSet" id="CommandId" priority="0x0100" type="Button">  
-      <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>  
-      <!-- Replace this KnownMoniker with your desired ImageMoniker -->  
-      <Icon guid="ImageCatalogGuid" id="Blank" />  
-      <!-- Add this -->  
-      <CommandFlag>IconIsMoniker</CommandFlag>  
-      <Strings>  
-        <ButtonText>MyToolWindow</ButtonText>  
-      </Strings>  
-    </Button>  
-    ```  
+   ```xml  
+   <Button guid="guidPackageCmdSet" id="CommandId" priority="0x0100" type="Button">  
+     <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>  
+     <!-- Replace this KnownMoniker with your desired ImageMoniker -->  
+     <Icon guid="ImageCatalogGuid" id="Blank" />  
+     <!-- Add this -->  
+     <CommandFlag>IconIsMoniker</CommandFlag>  
+     <Strings>  
+       <ButtonText>MyToolWindow</ButtonText>  
+     </Strings>  
+   </Button>  
+   ```  
   
- **既存のツール ウィンドウのイメージ モニカーを使用する方法**  
+   **既存のツール ウィンドウのイメージ モニカーを使用する方法**  
   
- イメージ モニカーを使用する既存のツール ウィンドウを更新することは、新しいツール ウィンドウを作成するための手順に似ています。  
+   イメージ モニカーを使用する既存のツール ウィンドウを更新することは、新しいツール ウィンドウを作成するための手順に似ています。  
   
- これらは、ツール ウィンドウでモニカーを使用するキーの場所です。 各手順に従います。  
+   これらは、ツール ウィンドウでモニカーを使用するキーの場所です。 各手順に従います。  
   
-1.  タブ十分に小さい場合、ツール ウィンドウ タブ (でも使用、 **Ctrl**+**タブ**ウィンドウの切り替え)。  
+3. タブ十分に小さい場合、ツール ウィンドウ タブ (でも使用、 **Ctrl**+**タブ**ウィンドウの切り替え)。  
   
-    1.  派生したクラスのコンス トラクターでこれらの行を削除 (存在する場合)、 **ToolWindowPane**型。  
+   1.  派生したクラスのコンス トラクターでこれらの行を削除 (存在する場合)、 **ToolWindowPane**型。  
   
-        ```csharp  
-        this.BitmapResourceID = <Value>;  
-        this.BitmapIndex = <Value>;  
-        ```  
+       ```csharp  
+       this.BitmapResourceID = <Value>;  
+       this.BitmapIndex = <Value>;  
+       ```  
   
-    2.  手順 1. を参照してください、「を使用する方法のイメージ モニカー新しいツール ウィンドウのでしょうか」。 前のセクション。  
+   2.  手順 1. を参照してください、「を使用する方法のイメージ モニカー新しいツール ウィンドウのでしょうか」。 前のセクション。  
   
-2.  ツール ウィンドウを開くコマンド。  
+4. ツール ウィンドウを開くコマンド。  
   
-    -   手順 2 の参照、「を使用する方法のイメージ モニカー新しいツール ウィンドウのでしょうか」。 前のセクション。  
+   -   手順 2 の参照、「を使用する方法のイメージ モニカー新しいツール ウィンドウのでしょうか」。 前のセクション。  
   
 ## <a name="how-do-i-use-image-monikers-in-a-vsct-file"></a>.Vsct ファイルのイメージ モニカーを使用する方法  
  更新プログラム、 *.vsct*ファイルの次のコメント行で示されます。  
@@ -511,88 +511,88 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 [ProvideMenuResource("MyPackage.ctmenu", 1, IconMappingFilename="IconMappings.csv")]  
 ```  
   
- **IconMappingFilename**がいずれかの相対パスに暗黙的にルート (例のように、上記)、$PackageFolder$ または絶対パスなど、環境変数で定義されているディレクトリを明示的にルートと *@"%UserProfile%\dir1\dir2\MyMappingFile.csv"* します。  
+ **IconMappingFilename**が相対パスか、暗黙的にルート (上記の例) のように $PackageFolder$ または絶対パスは、次のように、環境変数が定義されているディレクトリを明示的にルートと *@"%UserProfile%\dir1\dir2\MyMappingFile.csv」*。  
   
 ## <a name="how-do-i-port-a-project-system"></a>プロジェクト システムを移植する方法は?  
  **プロジェクトの ImageMonikers を指定する方法**  
   
-1.  実装**VSHPROPID_SupportsIconMonikers**プロジェクトの**IVsHierarchy**、true を返すとします。  
+1. 実装**VSHPROPID_SupportsIconMonikers**プロジェクトの**IVsHierarchy**、true を返すとします。  
   
-2.  いずれも実装して**VSHPROPID_IconMonikerImageList** (元のプロジェクトが使用されている場合**VSHPROPID_IconImgList**) または**VSHPROPID_IconMonikerGuid**、 **VSHPROPID_IconMonikerId**、 **VSHPROPID_OpenFolderIconMonikerGuid**、 **VSHPROPID_OpenFolderIconMonikerId** (元のプロジェクトが使用されている場合**VSHPROPID_IconHandle**と**VSHPROPID_OpenFolderIconHandle**)。  
+2. いずれも実装して**VSHPROPID_IconMonikerImageList** (元のプロジェクトが使用されている場合**VSHPROPID_IconImgList**) または**VSHPROPID_IconMonikerGuid**、 **VSHPROPID_IconMonikerId**、 **VSHPROPID_OpenFolderIconMonikerGuid**、 **VSHPROPID_OpenFolderIconMonikerId** (元のプロジェクトが使用されている場合**VSHPROPID_IconHandle**と**VSHPROPID_OpenFolderIconHandle**)。  
   
-3.  拡張ポイントを要求している場合は、「レガシ」のバージョンのアイコンを作成するアイコンの元の VSHPROPIDs の実装を変更します。 **IVsImageService2**これらのアイコンを取得するために必要な機能を提供します  
+3. 拡張ポイントを要求している場合は、「レガシ」のバージョンのアイコンを作成するアイコンの元の VSHPROPIDs の実装を変更します。 **IVsImageService2**これらのアイコンを取得するために必要な機能を提供します  
   
- **追加の要件の VB/c# プロジェクトの種類**  
+   **追加の要件の VB/c# プロジェクトの種類**  
   
- 実装するだけ**VSHPROPID_SupportsIconMonikers** 、プロジェクトがあることを検出した場合、**最も外側のフレーバー**します。 それ以外の場合、実際の最も外側のフレーバーでは実際には、イメージ モニカーをサポートしていませんが、基本のフレーバーが効果的に「隠す」カスタマイズされたイメージ。  
+   実装するだけ**VSHPROPID_SupportsIconMonikers** 、プロジェクトがあることを検出した場合、**最も外側のフレーバー**します。 それ以外の場合、実際の最も外側のフレーバーでは実際には、イメージ モニカーをサポートしていませんが、基本のフレーバーが効果的に「隠す」カスタマイズされたイメージ。  
   
- **CPS 内のイメージ モニカーを使用する方法**  
+   **CPS 内のイメージ モニカーを使用する方法**  
   
- 手動でまたはプロジェクト システムの機能拡張 SDK に付属している項目テンプレートを使用して、CPS (共通プロジェクト システム) でのカスタム イメージの設定を行うことができます。  
+   手動でまたはプロジェクト システムの機能拡張 SDK に付属している項目テンプレートを使用して、CPS (共通プロジェクト システム) でのカスタム イメージの設定を行うことができます。  
   
- **プロジェクト システムの拡張機能 SDK を使用します。**  
+   **プロジェクト システムの拡張機能 SDK を使用します。**  
   
- 手順に従って[プロジェクトの種類/項目の種類のカスタム アイコンを提供](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/scenario/provide_custom_icons_for_the_project_or_item_type.md)CPS イメージをカスタマイズします。 CPS の詳細についてで見つかります[Visual Studio プロジェクト システムの機能拡張ドキュメント](https://github.com/Microsoft/VSProjectSystem)  
+   手順に従って[プロジェクトの種類/項目の種類のカスタム アイコンを提供](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/scenario/provide_custom_icons_for_the_project_or_item_type.md)CPS イメージをカスタマイズします。 CPS の詳細についてで見つかります[Visual Studio プロジェクト システムの機能拡張ドキュメント](https://github.com/Microsoft/VSProjectSystem)  
   
- **ImageMonikers を使用して手動で**  
+   **ImageMonikers を使用して手動で**  
   
-1.  実装およびエクスポート、 **IProjectTreeModifier**プロジェクト システムでのインターフェイス。  
+4. 実装およびエクスポート、 **IProjectTreeModifier**プロジェクト システムでのインターフェイス。  
   
-2.  決定**KnownMoniker**または使用するカスタム イメージのモニカー。  
+5. 決定**KnownMoniker**または使用するカスタム イメージのモニカー。  
   
-3.  **ApplyModifications**メソッドを次の操作を新しいツリーを返す前に、メソッドのどこかに、次の例。  
+6. **ApplyModifications**メソッドを次の操作を新しいツリーを返す前に、メソッドのどこかに、次の例。  
   
-    ```csharp  
-    // Replace this KnownMoniker with your desired ImageMoniker  
-    tree = tree.SetIcon(KnownMonikers.Blank.ToProjectSystemType());  
-    ```  
+   ```csharp  
+   // Replace this KnownMoniker with your desired ImageMoniker  
+   tree = tree.SetIcon(KnownMonikers.Blank.ToProjectSystemType());  
+   ```  
   
-4.  目的のモニカーのような NewTree メソッドに渡すことで、カスタム イメージを設定するには、新しいツリーを作成する場合、次の例。  
+7. 目的のモニカーのような NewTree メソッドに渡すことで、カスタム イメージを設定するには、新しいツリーを作成する場合、次の例。  
   
-    ```csharp  
-    // Replace this KnownMoniker with your desired ImageMoniker  
-    ProjectImageMoniker icon         = KnownMonikers.FolderClosed.ToProjectSystemType();  
-    ProjectImageMoniker expandedIcon = KnownMonikers.FolderOpened.ToProjectSystemType();  
+   ```csharp  
+   // Replace this KnownMoniker with your desired ImageMoniker  
+   ProjectImageMoniker icon         = KnownMonikers.FolderClosed.ToProjectSystemType();  
+   ProjectImageMoniker expandedIcon = KnownMonikers.FolderOpened.ToProjectSystemType();  
   
-    return this.ProjectTreeFactory.Value.NewTree(/*caption*/<value>,  
-                                                 /*filePath*/<value>,  
-                                                 /*browseObjectProperties*/<value>,  
-                                                 icon,  
-                                                 expandedIcon);  
-    ```  
+   return this.ProjectTreeFactory.Value.NewTree(/*caption*/<value>,  
+                                                /*filePath*/<value>,  
+                                                /*browseObjectProperties*/<value>,  
+                                                icon,  
+                                                expandedIcon);  
+   ```  
   
 ## <a name="how-do-i-convert-from-a-real-image-strip-to-a-moniker-based-image-strip"></a>モニカ ベースのイメージ ストリップに実際のイメージ ストリップから変換する方法  
  **HIMAGELISTs をサポートする必要があります。**  
   
  イメージ サービスの使用を更新したいが、イメージ リストの周囲の受け渡しを必要とする Api によって制限されるコードの既存のイメージ ストリップがある場合、イメージのサービスの利点を取得することができます。 モニカ ベースのイメージ ストリップを作成するには、既存のモニカーからマニフェストを作成する次の手順に従います。  
   
-1.  実行、 **ManifestFromResources**ツール、イメージ ストリップを渡します。 これにより、ストリップのマニフェストが生成されます。  
+1. 実行、 **ManifestFromResources**ツール、イメージ ストリップを渡します。 これにより、ストリップのマニフェストが生成されます。  
   
-    -   お勧めします。 その使用法に合わせてマニフェストの既定以外の名前を提供します。  
+   -   お勧めします。 その使用法に合わせてマニフェストの既定以外の名前を提供します。  
   
-2.  のみを使用する場合**KnownMonikers**、次の操作を行います。  
+2. のみを使用する場合**KnownMonikers**、次の操作を行います。  
   
-    -   置換、\<イメージ > セクションを使用したマニフェストの\<イメージ/>。  
+   -   置換、\<イメージ > セクションを使用したマニフェストの\<イメージ/>。  
   
-    -   すべてのサブイメージ Id の削除 (を含むもの\<imagestrip 名 > _ ##)。  
+   -   すべてのサブイメージ Id の削除 (を含むもの\<imagestrip 名 > _ ##)。  
   
-    -   AssetsGuid シンボルとその使用法に合わせてイメージ ストリップ シンボルお勧めします。 名前を変更します。  
+   -   AssetsGuid シンボルとその使用法に合わせてイメージ ストリップ シンボルお勧めします。 名前を変更します。  
   
-    -   各を置き換える**ContainedImage**の各 GUID $(ImageCatalogGuid) で置き換える**ContainedImage**の ID では、$(\<モニカー >)、各に外部="true"属性を追加および**ContainedImage**  
+   -   各を置き換える**ContainedImage**の各 GUID $(ImageCatalogGuid) で置き換える**ContainedImage**の ID では、$(\<モニカー >)、各に外部="true"属性を追加および**ContainedImage**  
   
-        -   \<モニカー > 置き換える必要があります、 **KnownMoniker**イメージと一致するが、"KnownMonikers"。 名前から削除されます。  
+       -   \<モニカー > 置き換える必要があります、 **KnownMoniker**イメージと一致するが、"KnownMonikers"。 名前から削除されます。  
   
-    -   追加 < インポート Manifest="$(ManifestFolder)\\< 相対インストールへのパスを dir *\>\Microsoft.VisualStudio.ImageCatalog.imagemanifest"/\*> の先頭に、\<シンボル > セクション。  
+   -   追加 < インポート Manifest="$(ManifestFolder)\\< 相対インストールへのパスを dir *\>\Microsoft.VisualStudio.ImageCatalog.imagemanifest"/\*> の先頭に、\<シンボル > セクション。  
   
-        -   相対パスは、マニフェストの作成の設定で定義されている配置場所によって決まります。  
+       -   相対パスは、マニフェストの作成の設定で定義されている配置場所によって決まります。  
   
-3.  実行、 **ManifestToCode**既存のコードがあるイメージ ストリップに対してイメージのサービスのクエリに使用できるモニカーを持つように、ラッパーを生成するためのツール。  
+3. 実行、 **ManifestToCode**既存のコードがあるイメージ ストリップに対してイメージのサービスのクエリに使用できるモニカーを持つように、ラッパーを生成するためのツール。  
   
-    -   推奨: ラッパーとその使用状況に合わせて名前空間の既定以外の名前を指定します。  
+   -   推奨: ラッパーとその使用状況に合わせて名前空間の既定以外の名前を指定します。  
   
-4.  すべては、追加すると、セットアップの作成/デプロイ、およびイメージのサービスと新しいファイルを操作するには、その他のコード変更します。  
+4. すべては、追加すると、セットアップの作成/デプロイ、およびイメージのサービスと新しいファイルを操作するには、その他のコード変更します。  
   
- それがどのようにして、内部および外部の両方のイメージを含むサンプル マニフェスト:  
+   それがどのようにして、内部および外部の両方のイメージを含むサンプル マニフェスト:  
   
 ```xml  
 <?xml version="1.0"?>  

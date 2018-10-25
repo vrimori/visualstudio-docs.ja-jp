@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2343218da765ad8bb9a10d585001c5f3321a0137
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 9d7d48a7aae98da574747da2df32c9368ab930aa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42902400"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887554"
 ---
 # <a name="create-a-basic-project-system-part-1"></a>基本的なプロジェクト システム、第 1 部を作成します。
 Visual Studio では、プロジェクトは、開発者は、ソース コード ファイルおよびその他の資産の分類に使用するコンテナーです。 プロジェクトがソリューション内の子として表示されます、**ソリューション エクスプ ローラー**します。 プロジェクトでは、整理、ビルド、デバッグ、およびソース コードをデプロイおよび Web サービス、データベース、およびその他のリソースへの参照を作成できます。  
@@ -29,11 +29,11 @@ Visual Studio では、プロジェクトは、開発者は、ソース コー�
   
 > [!NOTE]
 >  カスタムのプロジェクトの種類の Visual Studio を拡張する必要がある場合強くお勧めしますを活用すること、 [Visual Studio プロジェクト システム](https://github.com/Microsoft/VSProjectSystem)(VSP) を持つさまざまなプロジェクト システムを一から構築に比べて利点があります。  
->   
->  -  簡単にオンボードします。  基本的なプロジェクト システムではさらには、数万行のコードの必要があります。  前に、お客様のニーズに合わせてカスタマイズする準備が整ったら、ほんの数回のクリックにオンボード コストを削減する VSP を活用すること。  
->  -  メンテナンスを容易にします。  VSP を活用することによってのみ、独自のシナリオを維持する必要があります。  すべてのプロジェクト システム インフラストラクチャの保守管理を処理します。  
->   
->  Visual Studio の Visual Studio 2013 より前のバージョンをターゲットする必要がある場合、Visual Studio 拡張機能で VSP を活用することができなきます。  場合は、このチュートリアルでは開始することをお勧めします。  
+> 
+> - 簡単にオンボードします。  基本的なプロジェクト システムではさらには、数万行のコードの必要があります。  前に、お客様のニーズに合わせてカスタマイズする準備が整ったら、ほんの数回のクリックにオンボード コストを削減する VSP を活用すること。  
+> - メンテナンスを容易にします。  VSP を活用することによってのみ、独自のシナリオを維持する必要があります。  すべてのプロジェクト システム インフラストラクチャの保守管理を処理します。  
+> 
+>   Visual Studio の Visual Studio 2013 より前のバージョンをターゲットする必要がある場合、Visual Studio 拡張機能で VSP を活用することができなきます。  場合は、このチュートリアルでは開始することをお勧めします。  
   
  このチュートリアルは、プロジェクトのファイル名拡張子を持つプロジェクトの種類を作成する方法を示します *.myproj*します。 このチュートリアルでは既存の Visual c# プロジェクト システムを利用します。  
   
@@ -71,51 +71,51 @@ Visual Studio では、プロジェクトは、開発者は、ソース コー�
   
 ### <a name="to-create-a-basic-project-template"></a>基本的なプロジェクト テンプレートを作成するには  
   
-1.  3 つのフォルダーを他のいずれかと、プロジェクトに追加: *Templates\Projects\SimpleProject*します。 (で**ソリューション エクスプ ローラー**を右クリックし、 **SimpleProject**プロジェクト ノードをポイントして、**追加**、 をクリックし、**新しいフォルダー**します。 フォルダーの名前*テンプレート*します。 *テンプレート*フォルダー、という名前のフォルダーを追加*プロジェクト*します。 *プロジェクト*フォルダー、という名前のフォルダーを追加*SimpleProject*)。  
+1. 3 つのフォルダーを他のいずれかと、プロジェクトに追加: *Templates\Projects\SimpleProject*します。 (で**ソリューション エクスプ ローラー**を右クリックし、 **SimpleProject**プロジェクト ノードをポイントして、**追加**、 をクリックし、**新しいフォルダー**します。 フォルダーの名前*テンプレート*します。 *テンプレート*フォルダー、という名前のフォルダーを追加*プロジェクト*します。 *プロジェクト*フォルダー、という名前のフォルダーを追加*SimpleProject*)。  
   
-2.  *Templates\Projects\SimpleProject*フォルダー、という名前のアイコンとして使用するビットマップ イメージ ファイルを追加*SimpleProject.ico*します。 クリックすると**追加**、アイコン エディターが開きます。  
+2. *Templates\Projects\SimpleProject*フォルダー、という名前のアイコンとして使用するビットマップ イメージ ファイルを追加*SimpleProject.ico*します。 クリックすると**追加**、アイコン エディターが開きます。  
   
-3.  特徴的なアイコンを確認します。 このアイコンが表示、**新しいプロジェクト**チュートリアルの後半でダイアログ ボックス。  
+3. 特徴的なアイコンを確認します。 このアイコンが表示、**新しいプロジェクト**チュートリアルの後半でダイアログ ボックス。  
   
-     ![単純なプロジェクト アイコン](../extensibility/media/simpleprojicon.png "SimpleProjIcon")  
+    ![単純なプロジェクト アイコン](../extensibility/media/simpleprojicon.png "SimpleProjIcon")  
   
-4.  アイコンを保存してアイコン エディターを閉じます。  
+4. アイコンを保存してアイコン エディターを閉じます。  
   
-5.  *Templates\Projects\SimpleProject*フォルダーを追加、**クラス**という名前の項目*Program.cs*します。  
+5. *Templates\Projects\SimpleProject*フォルダーを追加、**クラス**という名前の項目*Program.cs*します。  
   
-6.  既存のコードを次の行に置き換えます。  
+6. 既存のコードを次の行に置き換えます。  
   
-    ```csharp
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
+   ```csharp
+   using System;
+   using System.Collections.Generic;
+   using System.Text;
   
-    namespace $nameSpace$
-    {  
-        public class $className$
-        {
-            static void Main(string[] args)
-            {
-                Console.WriteLine("Hello VSX!!!");
-                Console.ReadKey();
-            }
-        }
-    }
-    ```
+   namespace $nameSpace$
+   {  
+       public class $className$
+       {
+           static void Main(string[] args)
+           {
+               Console.WriteLine("Hello VSX!!!");
+               Console.ReadKey();
+           }
+       }
+   }
+   ```
   
-    > [!IMPORTANT]
-    >  これはの最終形式ではありません、 *Program.cs*コード、パラメーターの処理後の手順で置換します。 表示されるコンパイル エラーしますが、いる限り、ファイルの **"ビルド アクション"** は**コンテンツ**をビルドして、プロジェクトを通常どおり実行できる必要があります。  
+   > [!IMPORTANT]
+   >  これはの最終形式ではありません、 *Program.cs*コード、パラメーターの処理後の手順で置換します。 表示されるコンパイル エラーしますが、いる限り、ファイルの **"ビルド アクション"** は**コンテンツ**をビルドして、プロジェクトを通常どおり実行できる必要があります。  
   
-1.  ファイルを保存します。  
+7. ファイルを保存します。  
   
-2.  コピー、 *AssemblyInfo.cs*ファイルから、*プロパティ*フォルダーを*Projects\SimpleProject*フォルダー。  
+8. コピー、 *AssemblyInfo.cs*ファイルから、*プロパティ*フォルダーを*Projects\SimpleProject*フォルダー。  
   
-3.  *Projects\SimpleProject*フォルダーという XML ファイルを追加する*SimpleProject.myproj*します。  
+9. *Projects\SimpleProject*フォルダーという XML ファイルを追加する*SimpleProject.myproj*します。  
   
-    > [!NOTE]
-    >  この種類のすべてのプロジェクトのファイル名拡張子は *.myproj*します。 これを変更する場合をチュートリアルで説明したようにすべての場所に変更する必要があります。  
+   > [!NOTE]
+   >  この種類のすべてのプロジェクトのファイル名拡張子は *.myproj*します。 これを変更する場合をチュートリアルで説明したようにすべての場所に変更する必要があります。  
   
-4.  既存のコンテンツを次の行に置き換えます。  
+10. 既存のコンテンツを次の行に置き換えます。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -155,13 +155,13 @@ Visual Studio では、プロジェクトは、開発者は、ソース コー�
     </Project>  
     ```  
   
-5.  ファイルを保存します。  
+11. ファイルを保存します。  
   
-6.  **プロパティ**ウィンドウで、設定、**ビルド アクション**の*AssemblyInfo.cs*、 *Program.cs*、 *SimpleProject.ico*と*SimpleProject.myproj*に**コンテンツ**、設定とその**VSIX に含める**プロパティを**True**.  
+12. **プロパティ**ウィンドウで、設定、**ビルド アクション**の*AssemblyInfo.cs*、 *Program.cs*、 *SimpleProject.ico*と*SimpleProject.myproj*に**コンテンツ**、設定とその**VSIX に含める**プロパティを**True**.  
   
- このプロジェクト テンプレートには、基本的な Visual c# プロジェクトをデバッグ構成とリリース構成の両方を持つがについて説明します。 プロジェクトには、2 つのソース ファイルが含まれています。 *AssemblyInfo.cs*と*Program.cs*、およびいくつかのアセンブリ参照。 テンプレートからプロジェクトが作成されると、ProjectGuid 値が自動的に新しい GUID によって置き換えられます。  
+    このプロジェクト テンプレートには、基本的な Visual c# プロジェクトをデバッグ構成とリリース構成の両方を持つがについて説明します。 プロジェクトには、2 つのソース ファイルが含まれています。 *AssemblyInfo.cs*と*Program.cs*、およびいくつかのアセンブリ参照。 テンプレートからプロジェクトが作成されると、ProjectGuid 値が自動的に新しい GUID によって置き換えられます。  
   
- **ソリューション エクスプ ローラー**、展開された**テンプレート**フォルダーが次のように表示されます。
+    **ソリューション エクスプ ローラー**、展開された**テンプレート**フォルダーが次のように表示されます。
 
 ```
 Templates  
@@ -178,67 +178,67 @@ Templates
   
 ### <a name="to-create-a-basic-project-factory"></a>基本的なプロジェクト ファクトリを作成するには  
   
-1.  プロジェクト ファクトリの Guid を作成する (上、**ツール** メニューのをクリックして**GUID の作成**)、か、次の例を使用します。 追加する Guid、`SimpleProjectPackage`セクションには、既に定義されているお近くのクラス`PackageGuidString`します。 Guid は、GUID 形式と文字列形式の両方である必要があります。 結果として得られるコードは次の例のようになります。  
+1. プロジェクト ファクトリの Guid を作成する (上、**ツール** メニューのをクリックして**GUID の作成**)、か、次の例を使用します。 追加する Guid、`SimpleProjectPackage`セクションには、既に定義されているお近くのクラス`PackageGuidString`します。 Guid は、GUID 形式と文字列形式の両方である必要があります。 結果として得られるコードは次の例のようになります。  
   
-    ```csharp  
-        public sealed class SimpleProjectPackage : Package
-        {  
-            ...
-            public const string SimpleProjectPkgString = "96bf4c26-d94e-43bf-a56a-f8500b52bfad";  
-            public const string SimpleProjectFactoryString = "471EC4BB-E47E-4229-A789-D1F5F83B52D4";  
+   ```csharp  
+       public sealed class SimpleProjectPackage : Package
+       {  
+           ...
+           public const string SimpleProjectPkgString = "96bf4c26-d94e-43bf-a56a-f8500b52bfad";  
+           public const string SimpleProjectFactoryString = "471EC4BB-E47E-4229-A789-D1F5F83B52D4";  
     
-            public static readonly Guid guidSimpleProjectFactory = new Guid(SimpleProjectFactoryString);  
-        }  
-    ```  
+           public static readonly Guid guidSimpleProjectFactory = new Guid(SimpleProjectFactoryString);  
+       }  
+   ```  
   
-3.  クラスを追加、ページのトップへ*SimpleProject*という名前のフォルダー *SimpleProjectFactory.cs*します。  
+2. クラスを追加、ページのトップへ*SimpleProject*という名前のフォルダー *SimpleProjectFactory.cs*します。  
   
-4.  次の追加ステートメントを使用します。  
+3. 次の追加ステートメントを使用します。  
   
-    ```csharp  
-    using System.Runtime.InteropServices;  
-    using Microsoft.VisualStudio.Shell;  
-    ```  
+   ```csharp  
+   using System.Runtime.InteropServices;  
+   using Microsoft.VisualStudio.Shell;  
+   ```  
   
-5.  GUID 属性を追加、`SimpleProjectFactory`クラス。 属性の値は、新しいプロジェクト ファクトリの GUID です。  
+4. GUID 属性を追加、`SimpleProjectFactory`クラス。 属性の値は、新しいプロジェクト ファクトリの GUID です。  
   
-    ```csharp  
-    [Guid(SimpleProjectPackage.SimpleProjectFactoryString)]  
-    class SimpleProjectFactory  
-    {  
-    }  
-    ```  
+   ```csharp  
+   [Guid(SimpleProjectPackage.SimpleProjectFactoryString)]  
+   class SimpleProjectFactory  
+   {  
+   }  
+   ```  
   
- これで、プロジェクト テンプレートを登録できます。  
+   これで、プロジェクト テンプレートを登録できます。  
   
 ### <a name="to-register-the-project-template"></a>プロジェクト テンプレートを登録するには  
   
-1.  *SimpleProjectPackage.cs*、追加、<xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute>属性を`SimpleProjectPackage`クラスに、次のようにします。  
+1. *SimpleProjectPackage.cs*、追加、<xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute>属性を`SimpleProjectPackage`クラスに、次のようにします。  
   
-    ```csharp  
-    [ProvideProjectFactory(    typeof(SimpleProjectFactory),     "Simple Project",   
-        "Simple Project Files (*.myproj);*.myproj", "myproj", "myproj",   
-        @"Templates\Projects\SimpleProject",     LanguageVsTemplate = "SimpleProject")]  
-    [Guid(SimpleProjectPackage.PackageGuidString)]  
-    public sealed class SimpleProjectPackage : Package  
-    ```  
+   ```csharp  
+   [ProvideProjectFactory(    typeof(SimpleProjectFactory),     "Simple Project",   
+       "Simple Project Files (*.myproj);*.myproj", "myproj", "myproj",   
+       @"Templates\Projects\SimpleProject",     LanguageVsTemplate = "SimpleProject")]  
+   [Guid(SimpleProjectPackage.PackageGuidString)]  
+   public sealed class SimpleProjectPackage : Package  
+   ```  
   
-2.  ソリューションをリビルドし、エラーなしでビルドされることを確認します。  
+2. ソリューションをリビルドし、エラーなしでビルドされることを確認します。  
   
-     再構築するには、プロジェクト テンプレートが登録します。  
+    再構築するには、プロジェクト テンプレートが登録します。  
   
- パラメーター`defaultProjectExtension`と`possibleProjectExtensions`プロジェクトのファイル名拡張子に設定されます (*.myproj*)。 `projectTemplatesDirectory`パラメーターの相対パスに設定されて、*テンプレート*フォルダー。 ビルド中には、このパスをフル ビルドに変換され、プロジェクト システムに登録するレジストリに追加するされます。  
+   パラメーター`defaultProjectExtension`と`possibleProjectExtensions`プロジェクトのファイル名拡張子に設定されます (*.myproj*)。 `projectTemplatesDirectory`パラメーターの相対パスに設定されて、*テンプレート*フォルダー。 ビルド中には、このパスをフル ビルドに変換され、プロジェクト システムに登録するレジストリに追加するされます。  
   
 ## <a name="test-the-template-registration"></a>テンプレート登録をテストします。  
  テンプレート登録は Visual Studio プロジェクト テンプレート フォルダーの場所 Visual Studio は、テンプレートの名前とアイコンを表示できるように、**新しいプロジェクト** ダイアログ ボックス。  
   
 ### <a name="to-test-the-template-registration"></a>テンプレート登録をテストするには  
   
-1.  キーを押して**F5** Visual Studio の実験用インスタンスのデバッグを開始します。  
+1. キーを押して**F5** Visual Studio の実験用インスタンスのデバッグを開始します。  
   
-2.  実験用インスタンスで、新しく作成されたプロジェクトの種類の新しいプロジェクトを作成します。 **新しいプロジェクト**] ダイアログ ボックスに、表示する必要があります**SimpleProject** [**にインストールされたテンプレート**します。  
+2. 実験用インスタンスで、新しく作成されたプロジェクトの種類の新しいプロジェクトを作成します。 **新しいプロジェクト**] ダイアログ ボックスに、表示する必要があります**SimpleProject** [**にインストールされたテンプレート**します。  
   
- 登録されているプロジェクト ファクトリがあるようになりました。 ただし、プロジェクトをまだ作成できません。 プロジェクトのパッケージとプロジェクト ファクトリを作成し、プロジェクトの初期化に連携します。  
+   登録されているプロジェクト ファクトリがあるようになりました。 ただし、プロジェクトをまだ作成できません。 プロジェクトのパッケージとプロジェクト ファクトリを作成し、プロジェクトの初期化に連携します。  
   
 ## <a name="add-the-managed-package-framework-code"></a>Managed Package Framework のコードを追加します。  
  プロジェクト パッケージとプロジェクト ファクトリ間の接続を実装します。  
@@ -355,67 +355,67 @@ Templates
 ## <a name="extend-the-projectnode-class"></a>ProjectNode クラスを拡張します。  
  実装することができますので、`SimpleProjectNode`から派生したクラス、`ProjectNode`クラス。 `ProjectNode`基底クラスは、プロジェクトの作成の次のタスクを処理します。  
   
--   プロジェクト テンプレート ファイルのコピー *SimpleProject.myproj*、新しいプロジェクト フォルダーにします。 入力された名前に基づいてコピーの名前が変更された、**新しいプロジェクト** ダイアログ ボックス。 `ProjectGuid`プロパティの値は、新しい GUID によって置き換えられます。  
+- プロジェクト テンプレート ファイルのコピー *SimpleProject.myproj*、新しいプロジェクト フォルダーにします。 入力された名前に基づいてコピーの名前が変更された、**新しいプロジェクト** ダイアログ ボックス。 `ProjectGuid`プロパティの値は、新しい GUID によって置き換えられます。  
   
--   プロジェクト テンプレート ファイルの MSBuild 要素を走査*SimpleProject.myproj*、検索と`Compile`要素。 各`Compile`ターゲット ファイルでは、新しいプロジェクト フォルダーにファイルをコピーします。  
+- プロジェクト テンプレート ファイルの MSBuild 要素を走査*SimpleProject.myproj*、検索と`Compile`要素。 各`Compile`ターゲット ファイルでは、新しいプロジェクト フォルダーにファイルをコピーします。  
   
- 派生した`SimpleProjectNode`クラスは、これらのタスクを処理します。  
+  派生した`SimpleProjectNode`クラスは、これらのタスクを処理します。  
   
--   内のプロジェクトとファイルのノードのアイコンにより、**ソリューション エクスプ ローラー**作成または選択します。  
+- 内のプロジェクトとファイルのノードのアイコンにより、**ソリューション エクスプ ローラー**作成または選択します。  
   
--   指定するその他のプロジェクト テンプレートのパラメーター置換を有効にします。  
+- 指定するその他のプロジェクト テンプレートのパラメーター置換を有効にします。  
   
 ### <a name="to-extend-the-projectnode-class"></a>ProjectNode クラスを拡張するには  
   
-1.  という名前のクラスを追加`SimpleProjectNode.cs`します。  
+1. という名前のクラスを追加`SimpleProjectNode.cs`します。  
   
-2.  既存のコードを次のコードに置き換えます。  
+2. 既存のコードを次のコードに置き換えます。  
   
-    ```csharp  
-    using System;  
-    using System.Collections.Generic;  
-    using Microsoft.VisualStudio.Project;  
+   ```csharp  
+   using System;  
+   using System.Collections.Generic;  
+   using Microsoft.VisualStudio.Project;  
   
-    namespace SimpleProject  
-    {  
-        public class SimpleProjectNode : ProjectNode  
-        {  
-            private SimpleProjectPackage package;  
+   namespace SimpleProject  
+   {  
+       public class SimpleProjectNode : ProjectNode  
+       {  
+           private SimpleProjectPackage package;  
   
-            public SimpleProjectNode(SimpleProjectPackage package)  
-            {  
-                this.package = package;  
-            }  
-            public override Guid ProjectGuid  
-            {  
-                get { return SimpleProjectPackage.guidSimpleProjectFactory; }  
-            }  
-            public override string ProjectType  
-            {  
-                get { return "SimpleProjectType"; }  
-            }  
+           public SimpleProjectNode(SimpleProjectPackage package)  
+           {  
+               this.package = package;  
+           }  
+           public override Guid ProjectGuid  
+           {  
+               get { return SimpleProjectPackage.guidSimpleProjectFactory; }  
+           }  
+           public override string ProjectType  
+           {  
+               get { return "SimpleProjectType"; }  
+           }  
   
-            public override void AddFileFromTemplate(  
-                string source, string target)  
-            {  
-                this.FileTemplateProcessor.UntokenFile(source, target);  
-                this.FileTemplateProcessor.Reset();  
-            }  
-        }  
-    }  
-    ```  
+           public override void AddFileFromTemplate(  
+               string source, string target)  
+           {  
+               this.FileTemplateProcessor.UntokenFile(source, target);  
+               this.FileTemplateProcessor.Reset();  
+           }  
+       }  
+   }  
+   ```  
   
- これは、`SimpleProjectNode`クラスの実装がこれらのオーバーライドされたメソッド。  
+   これは、`SimpleProjectNode`クラスの実装がこれらのオーバーライドされたメソッド。  
   
--   `ProjectGuid`をプロジェクト ファクトリ GUID が返されます。  
+- `ProjectGuid`をプロジェクト ファクトリ GUID が返されます。  
   
--   `ProjectType`、プロジェクトの種類のローカライズされた名前が返されます。  
+- `ProjectType`、プロジェクトの種類のローカライズされた名前が返されます。  
   
--   `AddFileFromTemplate`、対象のプロジェクトにテンプレート フォルダーから選択したファイルをコピーします。 このメソッドは、後のセクションでさらに実装されます。  
+- `AddFileFromTemplate`、対象のプロジェクトにテンプレート フォルダーから選択したファイルをコピーします。 このメソッドは、後のセクションでさらに実装されます。  
   
- `SimpleProjectNode`コンス トラクターと同様に、`SimpleProjectFactory`コンス トラクターは、キャッシュ、`SimpleProjectPackage`後で使用できるプライベート フィールドで参照します。  
+  `SimpleProjectNode`コンス トラクターと同様に、`SimpleProjectFactory`コンス トラクターは、キャッシュ、`SimpleProjectPackage`後で使用できるプライベート フィールドで参照します。  
   
- 接続する、`SimpleProjectFactory`クラスを`SimpleProjectNode`クラスをインスタンス化して、新しい`SimpleProjectNode`で、`SimpleProjectFactory.CreateProject`メソッドと後で使用できるプライベート フィールドにキャッシュします。  
+  接続する、`SimpleProjectFactory`クラスを`SimpleProjectNode`クラスをインスタンス化して、新しい`SimpleProjectNode`で、`SimpleProjectFactory.CreateProject`メソッドと後で使用できるプライベート フィールドにキャッシュします。  
   
 ### <a name="to-connect-the-project-factory-class-and-the-node-class"></a>プロジェクトのファクトリ クラスと、ノード クラスに接続するには  
   
@@ -455,75 +455,75 @@ Templates
   
 ### <a name="to-add-a-custom-project-node-icon"></a>カスタム プロジェクト ノードのアイコンを追加するには  
   
-1.  **リソース**フォルダー、という名前のビットマップ ファイルを追加*SimpleProjectNode.bmp*します。  
+1. **リソース**フォルダー、という名前のビットマップ ファイルを追加*SimpleProjectNode.bmp*します。  
   
-2.  **プロパティ**windows では 16 x 16 ピクセルにビットマップを削減します。 特徴的なビットマップを作成します。  
+2. **プロパティ**windows では 16 x 16 ピクセルにビットマップを削減します。 特徴的なビットマップを作成します。  
   
-     ![単純なプロジェクト Comm](../extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
+    ![単純なプロジェクト Comm](../extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
   
-3.  **プロパティ**ウィンドウで、変更、**ビルド アクション**するビットマップの**埋め込まれたリソース**します。  
+3. **プロパティ**ウィンドウで、変更、**ビルド アクション**するビットマップの**埋め込まれたリソース**します。  
   
-4.  *SimpleProjectNode.cs*、次の追加`using`ステートメント。  
+4. *SimpleProjectNode.cs*、次の追加`using`ステートメント。  
   
-    ```csharp  
-    using System.Drawing;  
-    using System.Windows.Forms;  
-    ```  
+   ```csharp  
+   using System.Drawing;  
+   using System.Windows.Forms;  
+   ```  
   
-5.  次の静的フィールドとコンス トラクターを追加、`SimpleProjectNode`クラス。  
+5. 次の静的フィールドとコンス トラクターを追加、`SimpleProjectNode`クラス。  
   
-    ```csharp  
-    private static ImageList imageList;  
+   ```csharp  
+   private static ImageList imageList;  
   
-    static SimpleProjectNode()  
-    {  
-        imageList =        Utilities.GetImageList(            typeof(SimpleProjectNode).Assembly.GetManifestResourceStream(                "SimpleProject.Resources.SimpleProjectNode.bmp"));  
-    }  
-    ```  
+   static SimpleProjectNode()  
+   {  
+       imageList =        Utilities.GetImageList(            typeof(SimpleProjectNode).Assembly.GetManifestResourceStream(                "SimpleProject.Resources.SimpleProjectNode.bmp"));  
+   }  
+   ```  
   
-6.  先頭に次のプロパティを追加、`SimpleProjectNode`クラス。  
+6. 先頭に次のプロパティを追加、`SimpleProjectNode`クラス。  
   
-    ```csharp  
-    internal static int imageIndex;  
-       public override int ImageIndex  
+   ```csharp  
+   internal static int imageIndex;  
+      public override int ImageIndex  
+      {  
+          get { return imageIndex; }  
+      }  
+   ```  
+  
+7. インスタンス コンス トラクターを次のコードに置き換えます。  
+  
+   ```csharp  
+   public SimpleProjectNode(SimpleProjectPackage package)  
+   {  
+       this.package = package;  
+  
+       imageIndex = this.ImageHandler.ImageList.Images.Count;  
+  
+       foreach (Image img in imageList.Images)  
        {  
-           get { return imageIndex; }  
+           this.ImageHandler.AddImage(img);  
        }  
-    ```  
+   }  
+   ```  
   
-7.  インスタンス コンス トラクターを次のコードに置き換えます。  
+   静的の構築時に`SimpleProjectNode`アセンブリのマニフェスト リソースから、プロジェクト ノードのビットマップを取得し、後で使用できるプライベート フィールドにそれをキャッシュします。 構文に注意してください、<xref:System.Reflection.Assembly.GetManifestResourceStream%2A>イメージのパス。 アセンブリに埋め込まれたマニフェスト リソースの名前を表示するには、使用、<xref:System.Reflection.Assembly.GetManifestResourceNames%2A>メソッド。 このメソッドを適用すると、`SimpleProject`アセンブリ、結果は、次のようにする必要があります。  
   
-    ```csharp  
-    public SimpleProjectNode(SimpleProjectPackage package)  
-    {  
-        this.package = package;  
+- *SimpleProject.Resources.resources*  
   
-        imageIndex = this.ImageHandler.ImageList.Images.Count;  
+- *VisualStudio.Project.resources*  
   
-        foreach (Image img in imageList.Images)  
-        {  
-            this.ImageHandler.AddImage(img);  
-        }  
-    }  
-    ```  
+- *SimpleProject.VSPackage.resources*  
   
- 静的の構築時に`SimpleProjectNode`アセンブリのマニフェスト リソースから、プロジェクト ノードのビットマップを取得し、後で使用できるプライベート フィールドにそれをキャッシュします。 構文に注意してください、<xref:System.Reflection.Assembly.GetManifestResourceStream%2A>イメージのパス。 アセンブリに埋め込まれたマニフェスト リソースの名前を表示するには、使用、<xref:System.Reflection.Assembly.GetManifestResourceNames%2A>メソッド。 このメソッドを適用すると、`SimpleProject`アセンブリ、結果は、次のようにする必要があります。  
+- *Resources.imagelis.bmp*  
   
--   *SimpleProject.Resources.resources*  
+- *Microsoft.VisualStudio.Project.DontShowAgainDialog.resources*  
   
--   *VisualStudio.Project.resources*  
+- *Microsoft.VisualStudio.Project.SecurityWarningDialog.resources*  
   
--   *SimpleProject.VSPackage.resources*  
+- *SimpleProject.Resources.SimpleProjectNode.bmp*  
   
--   *Resources.imagelis.bmp*  
-  
--   *Microsoft.VisualStudio.Project.DontShowAgainDialog.resources*  
-  
--   *Microsoft.VisualStudio.Project.SecurityWarningDialog.resources*  
-  
--   *SimpleProject.Resources.SimpleProjectNode.bmp*  
-  
- インスタンスの構築時に、`ProjectNode`クラスの読み込みの基本*Resources.imagelis.bmp*から 16 x 16 ビットマップを使用してよくが埋め込まれている*Resources\imagelis.bmp*します。 このビットマップの一覧が利用可能になります`SimpleProjectNode`として`ImageHandler.ImageList`します。 `SimpleProjectNode` 一覧には、プロジェクト ノードのビットマップを追加します。 イメージ リストでプロジェクト ノードのビットマップのオフセットは、パブリックの値として後で使用できるキャッシュ`ImageIndex`プロパティ。 Visual Studio では、このプロパティを使用して、プロジェクト ノードのアイコンとして表示するには、どのビットマップを調べます。  
+  インスタンスの構築時に、`ProjectNode`クラスの読み込みの基本*Resources.imagelis.bmp*から 16 x 16 ビットマップを使用してよくが埋め込まれている*Resources\imagelis.bmp*します。 このビットマップの一覧が利用可能になります`SimpleProjectNode`として`ImageHandler.ImageList`します。 `SimpleProjectNode` 一覧には、プロジェクト ノードのビットマップを追加します。 イメージ リストでプロジェクト ノードのビットマップのオフセットは、パブリックの値として後で使用できるキャッシュ`ImageIndex`プロパティ。 Visual Studio では、このプロパティを使用して、プロジェクト ノードのアイコンとして表示するには、どのビットマップを調べます。  
   
 ## <a name="test-the-custom-project-node-icon"></a>カスタム プロジェクト ノードのアイコンをテストします。  
  カスタムのプロジェクト ノードのアイコンを含むプロジェクト階層を作成するかどうかを確認する、プロジェクト ファクトリをテストします。  
@@ -565,78 +565,78 @@ Templates
   
 ### <a name="to-substitute-template-parameters"></a>テンプレート パラメーター値  
   
-1.  *SimpleProjectNode.cs*ファイルで、次の追加`using`ステートメント。  
+1. *SimpleProjectNode.cs*ファイルで、次の追加`using`ステートメント。  
   
-    ```csharp  
-    using System.IO;  
-    ```  
+   ```csharp  
+   using System.IO;  
+   ```  
   
-2.  置換、`AddFileFromTemplate`メソッドを次のコードを使用します。  
+2. 置換、`AddFileFromTemplate`メソッドを次のコードを使用します。  
   
-    ```csharp  
-    public override void AddFileFromTemplate(  
-        string source, string target)  
-    {  
-        string nameSpace =   
-            this.FileTemplateProcessor.GetFileNamespace(target, this);  
-        string className = Path.GetFileNameWithoutExtension(target);  
+   ```csharp  
+   public override void AddFileFromTemplate(  
+       string source, string target)  
+   {  
+       string nameSpace =   
+           this.FileTemplateProcessor.GetFileNamespace(target, this);  
+       string className = Path.GetFileNameWithoutExtension(target);  
   
-        this.FileTemplateProcessor.AddReplace("$nameSpace$", nameSpace);  
-        this.FileTemplateProcessor.AddReplace("$className$", className);  
+       this.FileTemplateProcessor.AddReplace("$nameSpace$", nameSpace);  
+       this.FileTemplateProcessor.AddReplace("$className$", className);  
   
-        this.FileTemplateProcessor.UntokenFile(source, target);  
-        this.FileTemplateProcessor.Reset();  
-    }  
-    ```  
+       this.FileTemplateProcessor.UntokenFile(source, target);  
+       this.FileTemplateProcessor.Reset();  
+   }  
+   ```  
   
-3.  直後に、メソッドにブレークポイントを設定、`className`代入ステートメント。  
+3. 直後に、メソッドにブレークポイントを設定、`className`代入ステートメント。  
   
- 代入ステートメントは、名前空間と新しいクラス名の妥当な値を決定します。 2 つ`ProjectNode.FileTemplateProcessor.AddReplace`メソッドの呼び出しは、これらの新しい値を使用して、対応するテンプレート パラメーターの値を置き換えます。  
+   代入ステートメントは、名前空間と新しいクラス名の妥当な値を決定します。 2 つ`ProjectNode.FileTemplateProcessor.AddReplace`メソッドの呼び出しは、これらの新しい値を使用して、対応するテンプレート パラメーターの値を置き換えます。  
   
 ## <a name="test-the-template-parameter-substitution"></a>テンプレート パラメーターの置換をテストします。  
  テンプレート パラメーターの置換をテストできます。  
   
 ### <a name="to-test-the-template-parameter-substitution"></a>テンプレート パラメーターの置換をテストするには  
   
-1.  デバッグを開始し、実験用インスタンスで新しい SimpleProject を作成します。  
+1. デバッグを開始し、実験用インスタンスで新しい SimpleProject を作成します。  
   
-2.  内のブレークポイントで実行が停止、`AddFileFromTemplate`メソッド。  
+2. 内のブレークポイントで実行が停止、`AddFileFromTemplate`メソッド。  
   
-3.  値を調べ、`nameSpace`と`className`パラメーター。  
+3. 値を調べ、`nameSpace`と`className`パラメーター。  
   
-    -   `nameSpace` 値が指定されて、 \<RootNamespace > 内の要素、 *\Templates\Projects\SimpleProject\SimpleProject.myproj*プロジェクト テンプレート ファイル。 この場合、値は `MyRootNamespace` です。  
+   -   `nameSpace` 値が指定されて、 \<RootNamespace > 内の要素、 *\Templates\Projects\SimpleProject\SimpleProject.myproj*プロジェクト テンプレート ファイル。 この場合、値は `MyRootNamespace` です。  
   
-    -   `className` ファイル名拡張子を除いた、クラスのソース ファイル名の値が指定されています。 最初のファイル変換先のフォルダーにコピーするのには、この場合、 *AssemblyInfo.cs*。 したがって、クラス名の値が`AssemblyInfo`します。  
+   -   `className` ファイル名拡張子を除いた、クラスのソース ファイル名の値が指定されています。 最初のファイル変換先のフォルダーにコピーするのには、この場合、 *AssemblyInfo.cs*。 したがって、クラス名の値が`AssemblyInfo`します。  
   
-4.  ブレークポイントとキーを押して削除**F5**の実行を続行します。  
+4. ブレークポイントとキーを押して削除**F5**の実行を続行します。  
   
-     Visual Studio では、プロジェクトの作成を完了する必要があります。  
+    Visual Studio では、プロジェクトの作成を完了する必要があります。  
   
-5.  開いている*Program.cs*コード エディターにします。 次のコードのようなソース コードが表示されます。  
+5. 開いている*Program.cs*コード エディターにします。 次のコードのようなソース コードが表示されます。  
   
-    ```csharp  
-    using System;  
-    using System.Collections.Generic;  
-    using System.Linq;  
-    using System.Text;  
+   ```csharp  
+   using System;  
+   using System.Collections.Generic;  
+   using System.Linq;  
+   using System.Text;  
   
-    namespace MyRootNamespace  
-    {  
-        public class Program  
-        {  
-            static void Main(string[] args)  
-            {  
-                Console.WriteLine("Hello VSX!!!");  
-                Console.ReadKey();  
-            }  
-        }  
-    }  
-    ```  
+   namespace MyRootNamespace  
+   {  
+       public class Program  
+       {  
+           static void Main(string[] args)  
+           {  
+               Console.WriteLine("Hello VSX!!!");  
+               Console.ReadKey();  
+           }  
+       }  
+   }  
+   ```  
   
-     名前空間は、今すぐ通知`MyRootNamespace`クラス名が、現在は`Program`します。  
+    名前空間は、今すぐ通知`MyRootNamespace`クラス名が、現在は`Program`します。  
   
-6.  プロジェクトのデバッグを開始します。 新しいプロジェクトがコンパイル、実行、および「VSX こんにちは!!!」と表示 コンソール ウィンドウに表示します。  
+6. プロジェクトのデバッグを開始します。 新しいプロジェクトがコンパイル、実行、および「VSX こんにちは!!!」と表示 コンソール ウィンドウに表示します。  
   
-     ![単純なプロジェクト コマンド](../extensibility/media/simpleprojcommand.png "SimpleProjCommand")  
+    ![単純なプロジェクト コマンド](../extensibility/media/simpleprojcommand.png "SimpleProjCommand")  
   
- おめでとうございます! マネージ プロジェクトは、基本的なシステムを実装しました。
+   おめでとうございます! マネージ プロジェクトは、基本的なシステムを実装しました。

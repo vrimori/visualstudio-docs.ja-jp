@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b210b5e0d3d0f3638e78331d9db093f7e86079e
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 7f72cb538018588ab11335be5a99fe86b5c474c3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117174"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49879884"
 ---
 # <a name="initializecorrelation-activity-designer"></a>InitializeCorrelation アクティビティ デザイナー
 
@@ -42,7 +42,7 @@ ms.locfileid: "37117174"
 次の表は、<xref:System.ServiceModel.Activities.InitializeCorrelation>プロパティと、デザイナーでの使用方法について説明します。 これらのプロパティを編集できます**プロパティ**ウィンドウまたはワークフロー デザイナー画面。
 
 |プロパティ名|必須|使用方法|
-|-------------------|--------------|-----------|
+|-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.ServiceModel.Activities.InitializeCorrelation> アクティビティの表示名。 既定値は InitializeCorrelation です。<br /><br /> ですが、わかりやすい既定以外の値の使用<xref:System.Activities.Activity.DisplayName%2A>は厳密に必要ありませんをお勧めします。|
 |<xref:System.ServiceModel.Activities.InitializeCorrelation.Correlation%2A>|False|関連付け内のワークフロー アクティビティを関連付けるために使用される <xref:System.ServiceModel.Activities.CorrelationHandle>。|
 |<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>|False|メッセージをワークフロー インスタンスに関連付ける、関連付けデータのディクショナリ。<br /><br /> 使用して、**関連付けの初期化**を構成するダイアログ ボックス、<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>します。 使用の詳細についてはこのダイアログ ボックスを参照してください、[型コレクション エディター ダイアログ ボックス](../workflow-designer/type-collection-editor-dialog-box.md)記事。|
@@ -50,8 +50,8 @@ ms.locfileid: "37117174"
 ## <a name="see-also"></a>関連項目
 
 - [CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)
-- [受信](../workflow-designer/receive-activity-designer.md)
+- [Receive](../workflow-designer/receive-activity-designer.md)
 - [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)
-- [送信](../workflow-designer/send-activity-designer.md)
+- [Send](../workflow-designer/send-activity-designer.md)
 - [SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md)
 - [TransactedReceiveScope](../workflow-designer/transactedreceivescope-activity-designer.md)

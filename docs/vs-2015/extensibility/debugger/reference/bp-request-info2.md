@@ -1,7 +1,7 @@
 ---
 title: BP_REQUEST_INFO2 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 008c87f7-a76e-43d3-8904-11b225d6a9a5
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5568e696f8463e2a8e5c64467bc82f192d790b5e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 57ac5bf8a95be80e7c3c35f15dcb681be13fe06e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534082"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877752"
 ---
 # <a name="bprequestinfo2"></a>BP_REQUEST_INFO2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[BP_REQUEST_INFO2](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/bp-request-info2)します。  
-  
 ベンダーの GUID、制約、およびトレース ポイントを含む、ブレークポイントを実装するために必要な情報が含まれています。  
   
 ## <a name="syntax"></a>構文  
@@ -112,7 +110,7 @@ public struct BP_REQUEST_INFO2 {
 ## <a name="remarks"></a>Remarks  
  この構造体がによって返される、 [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

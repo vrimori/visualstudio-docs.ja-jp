@@ -1,7 +1,7 @@
 ---
 title: レイヤー図へのカスタム プロパティの追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 23
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 1fc9c3e67cbb10484c814acb0eedbfbae2729eb4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 517d9f40dc0c98ca8572c31ae256e81de864171e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535865"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844415"
 ---
 # <a name="add-custom-properties-to-layer-diagrams"></a>レイヤー図へのカスタム プロパティの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[依存関係図へのカスタム プロパティの追加](https://docs.microsoft.com/visualstudio/modeling/add-custom-properties-to-layer-diagrams)します。  
-  
 レイヤー図の拡張コードを記述する際、レイヤー図の任意の要素と共に値を格納できます。 値は、図が保存され、再び開かれたときに保持されます。 これらのプロパティに表示することもできます、**プロパティ**ウィンドウ ユーザーが表示して編集できるようにします。 たとえば、ユーザーが各レイヤーに正規表現を指定できるようにすることや、各レイヤーのクラスの名前がユーザーが指定したパターンに準拠していることを確認するための検証コードをユーザーが記述できるようにすることができます。  
   
 ## <a name="properties-not-visible-to-the-user"></a>ユーザーに表示されないプロパティ  
@@ -36,21 +34,21 @@ ms.locfileid: "47535865"
   
 > [!IMPORTANT]
 >  プロパティが表示されるようにするには、レイヤーのプロパティが表示されるようにする必要のある各コンピューターで、次の変更を行う必要があります。  
->   
->  1.  メモ帳を使用して実行**管理者として実行**します。 `%ProgramFiles%\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest` を開きます  
-> 2.  `Content` 要素内で、次を追加します。  
->   
->     ```xml  
->     <MefComponent>Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.Provider.dll</MefComponent>  
->     ```  
-> 3.  で、 **Visual Studio Tools**開いている Visual Studio アプリケーション スタート メニューのセクション**開発者コマンド プロンプト**します。  
->   
->      次のように入力します。  
->   
->      `devenv /rootSuffix /updateConfiguration`  
->   
->      `devenv /rootSuffix Exp /updateConfiguration`  
-> 4.  Visual Studio を再起動します。  
+> 
+> 1. メモ帳を使用して実行**管理者として実行**します。 `%ProgramFiles%\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest` を開きます  
+>    2.  `Content` 要素内で、次を追加します。  
+> 
+>    ```xml  
+>    <MefComponent>Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.Provider.dll</MefComponent>  
+>    ```  
+>    3.  で、 **Visual Studio Tools**開いている Visual Studio アプリケーション スタート メニューのセクション**開発者コマンド プロンプト**します。  
+> 
+>    次のように入力します。  
+> 
+>    `devenv /rootSuffix /updateConfiguration`  
+> 
+>    `devenv /rootSuffix Exp /updateConfiguration`  
+>    4.  Visual Studio を再起動します。  
   
  **コードが VSIX プロジェクトで確認します。**  
   

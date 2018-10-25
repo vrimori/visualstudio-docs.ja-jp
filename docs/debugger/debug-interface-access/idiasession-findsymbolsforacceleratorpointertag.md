@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findSymbolsForAcceleratorPointerTag |Microsoft ドキュメント
+title: IDiaSession::findSymbolsForAcceleratorPointerTag |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7df83017e60a9d3600c7e49bcf888c771a748cee
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 3f53031bd29af50b90f88868a36f340ee460201a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31461494"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915309"
 ---
 # <a name="idiasessionfindsymbolsforacceleratorpointertag"></a>IDiaSession::findSymbolsForAcceleratorPointerTag
-アクセラレータのスタブ関数の親に指定したタグの値に対応する変数のシンボルの列挙を返します。  
+親のアクセラレータのスタブ関数で指定したタグ値に対応する変数のシンボルの列挙を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,16 +34,16 @@ HRESULT findSymbolsForAcceleratorPointerTag (
   
 #### <a name="parameters"></a>パラメーター  
  `parent`  
- [in]検索するアクセラレータのスタブ関数に対応する IDiaSymbol です。  
+ [in]検索するアクセラレータのスタブ関数に対応する IDiaSymbol します。  
   
  `tagValue`  
  [in]ポインターのタグ値。  
   
  `ppResult`  
- [out]ポインター、`IDiaEnumSymbols`結果で初期化されたインターフェイス ポインター。  
+ [out]ポインター、`IDiaEnumSymbols`インターフェイス ポインターでは、結果を使用して初期化します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   

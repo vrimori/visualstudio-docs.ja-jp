@@ -1,5 +1,5 @@
 ---
-title: EX_DBGPROP_INFO_FLAGS |Microsoft ドキュメント
+title: EX_DBGPROP_INFO_FLAGS |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,15 +18,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0af0de81c0253b72fe432cb3cefe11c362bc2ec4
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: e66ff43cd51977bf0c23ca0e024a2e05b53f5022
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24640902"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49878090"
 ---
 # <a name="exdbgpropinfoflags"></a>EX_DBGPROP_INFO_FLAGS
-指定するために使用`ExtendedDebugPropertyInfo`フィールドです。  
+指定するために使用`ExtendedDebugPropertyInfo`フィールド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,10 +51,10 @@ enum {
  プロパティの値を初期化します。  
   
  EX_DBGPROP_INFO_LOCKBYTES  
- 初期化、`plb`フィールドです。  
+ 初期化します、`plb`フィールド。  
   
  EX_DBGPROP_INFO_DEBUGEXTPROP  
- 初期化、`pDebugExtProp`を含むフィールドを`IDebugExtendedProperty`インターフェイスです。  
+ 初期化します、`pDebugExtProp`フィールドを含む、`IDebugExtendedProperty`インターフェイス。  
   
 ## <a name="see-also"></a>関連項目  
  [ExtendedDebugPropertyInfo 構造体](../../winscript/reference/extendeddebugpropertyinfo-structure.md)   

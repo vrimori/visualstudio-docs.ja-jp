@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 32fc3ef0684c89c422fac76550ba1fa123eb2f6b
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: ee123e474ad4b52b3debe6ad65bf6424388fe191
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39180442"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816017"
 ---
 # <a name="edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test"></a>テスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定する
 
@@ -37,7 +37,7 @@ ms.locfileid: "39180442"
 ## <a name="tasks"></a>[タスク]
 
 |[タスク]|関連するトピック|
-|-----------|-----------------------|
+|-|-----------------------|
 |**ロード テストのテスト ミックスの指定:** ロード テストを作成するときに、**新しいロード テスト ウィザード**でロード テストの設定を指定します。 **新しいロード テスト ウィザード**で、初期シナリオに追加する既存の Web テストおよび単体テストを選択します。 テストをシナリオに追加したら、シナリオのテスト ミックスを指定します。<br /><br /> さまざまなロード モデリング オプションを使用して、ロード テストの対象となる Web サイトまたはアプリケーションの実際の使用状況をより正確に予測します。 正確なロード モデルに基づかないロード テストでは、誤解を招く結果が生じる可能性があるので、これを行うことが重要です。|-   [Web サイトまたはアプリケーションの実際の使用状況のエミュレーション](../test/emulate-real-world-usage-of-a-web-site-in-a-load-test-using-test-mix-models.md)|
 |**テスト ミックス モデルの編集:** **ロード テスト エディター**を使用すると、いずれかのテスト ミックス モデルを使用するようにロード テスト シナリオを変更できます。||
 |**ユーザーのペースに基づくテスト ミックス モデルの遅延ペースの構成:** ロード テスト シナリオが**ユーザーのペースに基づくテスト ミックス モデル**を使用するように構成されている場合は、遅延のペースの分布の構成方法を指定できます。|-   [方法: 配分を適用してユーザー ペースのテスト ミックス モデルを使用するときの遅延をペース配分する](../test/how-to-apply-distribution-to-pacing-delay-when-using-a-user-pace-test-mix-model.md)|

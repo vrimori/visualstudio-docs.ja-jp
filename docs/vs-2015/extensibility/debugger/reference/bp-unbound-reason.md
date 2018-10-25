@@ -1,7 +1,7 @@
 ---
 title: BP_UNBOUND_REASON |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 939b6f9c-113b-471d-9f30-b03871af6285
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 554bdd9def52cfbde5b4fe535f017f762f1c8edc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5f98c13b2f87492d9aea1ea6d3cc03fd7bf4a1d3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533987"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834531"
 ---
 # <a name="bpunboundreason"></a>BP_UNBOUND_REASON
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[BP_UNBOUND_REASON](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/bp-unbound-reason)します。  
-  
 ブレークポイントがバインドされた理由を説明します。  
   
 ## <a name="syntax"></a>構文  
@@ -68,7 +66,7 @@ public enum enum_BP_UNBOUND_REASON {
 ## <a name="remarks"></a>Remarks  
  によって返される、 [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

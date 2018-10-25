@@ -1,7 +1,7 @@
 ---
 title: プロジェクトの移植、移行、およびアップグレード
 description: 以前のバージョンの Visual Studio で作成されたプロジェクトに対する Visual Studio 2017 でのサポートと、Visual Studio がプロジェクトを移行する必要があるタイミングを決定する方法のリファレンス。
-ms.date: 06/19/2018
+ms.date: 10/09/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: 4bad722034657e3b58faaf665bfb0bc6ffcbe960
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 84c023342bb3c54e1d967f869962a204fbf1289d
+ms.sourcegitcommit: 48bc8492973e93612e5afaba3b47d0f98aecf97c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513547"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49325030"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio-2017"></a>Visual Studio 2017 のプロジェクトの移行とアップグレードのリファレンス
 
@@ -41,7 +41,7 @@ ms.locfileid: "39513547"
 
 次の一覧は、Visual Studio 2017 より前のバージョンで作成されたプロジェクトに対する Visual Studio 2017 でのサポートをまとめたものです。
 
-一覧表示されるべきプロジェクトやファイルの種類が見つからない場合は、[この記事の Visual Studio 2015 バージョン](port-migrate-and-upgrade-visual-studio-projects.md)をご覧になり、このページの下の "ドキュメントのフィードバックを送る" オプションを使用して、プロジェクトの詳細をお知らせください。 (応答する場合は、匿名の [このページは役に立ちましたか] コントロールではなく、ドキュメントに関するフィードバックを使ってください )
+一覧表示されるべきプロジェクトやファイルの種類が見つからない場合は、[この記事の Visual Studio 2015 バージョン](https://docs.microsoft.com/visualstudio/porting/porting-migrating-and-upgrading-visual-studio-projects?view=vs-2015)をご覧になり、このページの下の "ドキュメントのフィードバックを送る" オプションを使用して、プロジェクトの詳細をお知らせください。 (応答する場合は、匿名の [このページは役に立ちましたか] コントロールではなく、ドキュメントに関するフィードバックを使ってください )
 
 | プロジェクトの種類 | サポート |
 | --- | --- |

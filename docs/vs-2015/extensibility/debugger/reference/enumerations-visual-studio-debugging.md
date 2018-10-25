@@ -1,7 +1,7 @@
 ---
 title: 列挙型 (Visual Studio のデバッグ) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 557065bf-081f-4d57-8744-bae02b8a5a6e
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4d5433d6b5930304ae7df3a71aadc7f51d231b0d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9340030c9dd2a1a69b50162dd4c5b29f9eb6a50d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548971"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49247261"
 ---
 # <a name="enumerations-visual-studio-debugging"></a>列挙 (Visual Studio のデバッグ)
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[列挙型 (Visual Studio のデバッグ)](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/enumerations-visual-studio-debugging)します。  
-  
 列挙体を次に、 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] SDK のデバッグします。  
   
  [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md)  
@@ -121,7 +119,7 @@ ms.locfileid: "47548971"
  [逆アセンブル] ストリームのスコープを指定します。  
   
  [DisplayKind](../../../extensibility/debugger/reference/displaykind.md)  
- 列挙から取得する情報の種類を表す有効な値を[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクトし、ユーザーに表示します。  
+ 列挙から取得する情報の種類を表す有効な値、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクトし、ユーザーに表示します。  
   
  [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md)  
  2 つのドキュメント コンテキストを比較するための条件を指定します。  

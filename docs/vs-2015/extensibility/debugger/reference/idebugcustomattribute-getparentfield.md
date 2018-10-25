@@ -1,7 +1,7 @@
 ---
 title: IDebugCustomAttribute::GetParentField |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: bcdfdf37-bfcf-4988-a7b8-4c731d0af1b0
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e93c9ec42b8383fee79b59262b387592c1602015
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 20496b0f929f6fa0694e1651fdf2f201e6ea8844
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536639"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923135"
 ---
 # <a name="idebugcustomattributegetparentfield"></a>IDebugCustomAttribute::GetParentField
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugCustomAttribute::GetParentField](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugcustomattribute-getparentfield)します。  
-  
 カスタム属性がアタッチされているフィールドを取得します。  
   
 ## <a name="syntax"></a>構文  

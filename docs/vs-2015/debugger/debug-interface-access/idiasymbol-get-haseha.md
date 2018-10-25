@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_haseha |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d5c7e0c68b796f84c8e93d6a7f0e9a85387d4105
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bacedc8f92d0cdec87fd6789025958768fa4cb51
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547423"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907652"
 ---
 # <a name="idiasymbolgethaseha"></a>IDiaSymbol::get_hasEHa
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_haseha](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-haseha)します。  
-  
 関数が非同期 (構造化) 例外処理を含むかどうかを指定するフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -53,7 +51,7 @@ HRESULT get_hasEHa(
 ## <a name="remarks"></a>Remarks  
  非同期または構造化例外が C++ スタイルの例外処理、処理を混在させることは、特定のコンパイラ スイッチを/EHa、有効にする必要しますが、あります。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

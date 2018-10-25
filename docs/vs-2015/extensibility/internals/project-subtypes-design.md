@@ -1,7 +1,7 @@
 ---
 title: プロジェクト サブタイプの設計 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 405488bb-1362-40ed-b0f1-04a57fc98c56
 caps.latest.revision: 33
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6b4d9f77f4ea1a302efb38bb75ebecd2ee54c1f9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d167559a442e351c6256d07943092825deef288a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536224"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839428"
 ---
 # <a name="project-subtypes-design"></a>プロジェクト サブタイプのデザイン
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロジェクト サブタイプのデザイン](https://docs.microsoft.com/visualstudio/extensibility/internals/project-subtypes-design)します。  
-  
 プロジェクト サブタイプは、Microsoft Build Engine (MSBuild) に基づくプロジェクトを拡張する Vspackage を使用できます。 集計の使用では、実装で管理されているコア プロジェクト システムの大部分を再利用できます。[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]まだ特定のシナリオの動作をカスタマイズします。  
   
  次のトピックでは、基本的な設計とプロジェクト サブタイプの実装について詳しく説明します。  
@@ -40,17 +38,17 @@ ms.locfileid: "47536224"
 ## <a name="project-subtype-design"></a>プロジェクト サブタイプのデザイン  
  プロジェクト サブタイプの初期化はメイン集約することによって実現<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>オブジェクト。 この集計は、プロジェクトのサブタイプをオーバーライドしたり、基本プロジェクトの機能の大半を強化したりできます。 プロジェクト サブタイプの取得を使用してプロパティを処理するためにファースト チャンス<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>、コマンドを使用して<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>、使用してプロジェクト項目の管理と<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>します。 プロジェクト サブタイプを拡張することがもできます。  
   
--   プロジェクト構成オブジェクト。  
+- プロジェクト構成オブジェクト。  
   
--   構成に依存するオブジェクト。  
+- 構成に依存するオブジェクト。  
   
--   構成に依存しない参照オブジェクト。  
+- 構成に依存しない参照オブジェクト。  
   
--   プロジェクト オートメーション オブジェクト。  
+- プロジェクト オートメーション オブジェクト。  
   
--   プロジェクトのオートメーション プロパティのコレクション。  
+- プロジェクトのオートメーション プロパティのコレクション。  
   
- プロジェクト サブタイプによって拡張機能の詳細については、次を参照してください。[プロパティとメソッドは、プロジェクト サブタイプによって拡張](../../extensibility/internals/properties-and-methods-extended-by-project-subtypes.md)します。  
+  プロジェクト サブタイプによって拡張機能の詳細については、次を参照してください。[プロパティとメソッドは、プロジェクト サブタイプによって拡張](../../extensibility/internals/properties-and-methods-extended-by-project-subtypes.md)します。  
   
 ##### <a name="policy-files"></a>ポリシー ファイル  
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]環境は、ポリシー ファイルの実装でのプロジェクト サブタイプに基本プロジェクト システムの拡張の例を示します。 ポリシー ファイルは、の構造化、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]のソリューション エクスプ ローラーで、機能を管理することで環境**プロジェクトの追加**ダイアログ ボックスで、**新しい項目の追加** ダイアログ ボックスおよび**プロパティ** ダイアログ ボックス。 ポリシーのサブタイプをオーバーライドし、これらの機能を強化<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg>、`IOleCommandTarget`と<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>実装します。  

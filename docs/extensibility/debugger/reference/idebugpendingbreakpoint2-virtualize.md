@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Virtualize |Microsoft ドキュメント
+title: IDebugPendingBreakpoint2::Virtualize |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b9145cff487ebb97894d9b93ad5e1ec54d5b4b2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eb2e66378b2a7b906b6bf9e0efe4e718316ade54
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31122432"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948292"
 ---
 # <a name="idebugpendingbreakpoint2virtualize"></a>IDebugPendingBreakpoint2::Virtualize
-ブレークポイントの保留中の仮想化された状態を切り替えます。 保留中のブレークポイントを仮想化すると、デバッグ エンジンは、プログラムに新しいコードを読み込むたびにバインドしようとします。  
+この保留中のブレークポイントの仮想化の状態を切り替えます。 保留中のブレークポイントが仮想化されたデバッグ エンジンは、プログラムに新しいコードを読み込むたびにバインドしようとします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,16 +42,16 @@ int Virtualize(
   
 #### <a name="parameters"></a>パラメーター  
  `fVirtualize`  
- [in]0 以外に設定 (`TRUE`) 保留中のブレークポイントを仮想化する、または 0 (`FALSE`) 仮想化をオフにします。  
+ [in]0 以外に設定 (`TRUE`) またはゼロに保留中のブレークポイントを仮想化 (`FALSE`) 仮想化をオフにします。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 返します`E_BP_DELETED`場合は、ブレークポイントが削除されました。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 返します`E_BP_DELETED`ブレークポイントが削除されている場合。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  コードが読み込まれるたびに、仮想化されたブレークポイントがバインドされています。  
   
 ## <a name="example"></a>例  
- 次の例は、単純なは、このメソッドを実装する方法を示します`CPendingBreakpoint`を公開するオブジェクト、 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)インターフェイスです。  
+ 次の例は、単純なは、このメソッドを実装する方法を示しています。`CPendingBreakpoint`を公開するオブジェクト、 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)インターフェイス。  
   
 ```cpp  
 HRESULT CPendingBreakpoint::Virtualize(BOOL fVirtualize)    

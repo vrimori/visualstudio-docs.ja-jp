@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 938beef8676901c385ef7cc7c07b9ce0d52067c3
-ms.sourcegitcommit: c87b0d9f65dc7ebe95071f66ea8da4d4bc52d360
+ms.openlocfilehash: 4512a6ad5efe519c203a764b18cdfc352ed6e81a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38993903"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921432"
 ---
 # <a name="develop-with-visual-f-in-visual-studio"></a>Visual Studio で Visual F# を使用して開発する
 
@@ -61,7 +61,7 @@ Visual Studio の F# では、さまざまなプロジェクトと項目テン�
 **プロジェクト デザイナー**は、関連機能でグループ化された複数のプロジェクト プロパティ ページで構成されます。 F# プロジェクトで使用できるページは、ほとんどの場合、他の言語で使用できるページのサブセットです。これについては、以下の表で説明します。 対応する C# **プロジェクト デザイナー** ページへのリンクが提供されています。
 
 |プロジェクト デザイナー ページ|関連リンク|説明|
-|---------------------|-------------|-----------|
+| - |-------------|-----------|
 |アプリケーション|[[アプリケーション] ページ (プロジェクト デザイナー)](reference/application-page-project-designer-csharp.md)|アプリケーション レベルの設定とプロパティを指定することができます。たとえば、ライブラリと実行可能ファイルのどちらを作成するのか、アプリケーションのターゲットとなるのはどのバージョンの .NET Framework か、アプリケーションで使用されるリソース ファイルはどこに格納されるのかなどです。|
 |ビルド|[プロジェクト デザイナーの [ビルド] ページ](reference/build-page-project-designer-csharp.md)|コードのコンパイル方法を制御できます。|
 |ビルド イベント|[[ビルド イベント] ページ (プロジェクト デザイナー)](reference/build-events-page-project-designer-csharp.md)|コンパイルの前または後に実行するコマンドを指定できます。|
@@ -75,7 +75,7 @@ Visual Studio の F# では、さまざまなプロジェクトと項目テン�
 次の表は、F# に固有の設定を要約したものです。
 
 |プロジェクト デザイナー ページ|設定|説明|
-|---------------------|-------|-----------|
+| - |-------|-----------|
 |ビルド|末尾呼び出しの生成|選択した場合、末尾の Microsoft Intermediate Language (MSIL) 命令の使用が有効になります。 これにより、スタック フレームが末尾再帰関数で再利用されます。 `--tailcalls` コンパイラ オプションと同等のものです。|
 |ビルド|その他のフラグ|追加のコンパイラ コマンドライン オプションを指定することができます。|
 

@@ -1,14 +1,14 @@
 ---
 title: デバッガー内の式 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
 - vs-ide-debug
 ms.tgt_pltfrm: ''
-ms.topic: hero-article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.expressions
 dev_langs:
@@ -32,18 +32,16 @@ caps.latest.revision: 30
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4b8350356b82b6d2cefc3fda725d90dccea75e55
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3254ea0197ee0b241735df9c1f437490a09da969
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534176"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914317"
 ---
 # <a name="expressions-in-the-debugger"></a>デバッガー内の式
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッガーで式](https://docs.microsoft.com/visualstudio/debugger/expressions-in-the-debugger)します。  
-  
 Visual Studio デバッガーには式エバリュエーターという機能があり、 **[クイック ウォッチ]** ダイアログ ボックス、 **[ウォッチ]** ウィンドウ、または **[イミディエイト]** ウィンドウで式を入力するときに役立ちます。 式エバリュエーターは **[ブレークポイント]** ウィンドウなど、他のデバッガー機能でも使用できます。  
   
  以下の各セクションでは、各種言語での式について詳しく説明します。  
@@ -106,13 +104,13 @@ int main()
   
  デバッガーの組み込み関数には次の特徴があります。  
   
--   安全なことが保証されています。デバッガーの組み込み関数を実行しても、デバッグ対象のプロセスは破損しません。  
+- 安全なことが保証されています。デバッガーの組み込み関数を実行しても、デバッグ対象のプロセスは破損しません。  
   
--   すべての式で使用できます。副作用と関数評価が許可されていないシナリオでも使用できます。  
+- すべての式で使用できます。副作用と関数評価が許可されていないシナリオでも使用できます。  
   
--   ミニダンプのデバッグ中など、通常の関数呼び出しができないシナリオでも機能します。  
+- ミニダンプのデバッグ中など、通常の関数呼び出しができないシナリオでも機能します。  
   
- デバッガーの組み込み関数は、式の評価をより便利にすることもできます。 たとえば、ブレークポイント条件に記述する際、 `strncmp(str, “asd”)` は `str[0] == ‘a’ && str[1] == ‘s’ && str[2] == ‘d’`よりもはるかに簡単です。 )  
+  デバッガーの組み込み関数は、式の評価をより便利にすることもできます。 たとえば、ブレークポイント条件に記述する際、 `strncmp(str, “asd”)` は `str[0] == ‘a’ && str[1] == ‘s’ && str[2] == ‘d’`よりもはるかに簡単です。 )  
   
 |区分|組み込み関数|  
 |----------|-------------------------|  
@@ -138,7 +136,7 @@ int main()
 ## <a name="c---unsupported-expressions"></a>C# - サポートされていない式  
   
 ### <a name="dynamic-objects"></a>動的オブジェクト  
- デバッガー式では、静的に型指定された変数を動的として使用できます。 実装するオブジェクトが、<xref:System.Dynamic.IDynamicMetaObjectProvider>動的ビュー ノードの追加 ウォッチ ウィンドウで評価されます。 [動的ビュー] ノードにはオブジェクトのメンバーが表示されますが、そのメンバーの値を編集することはできません。  
+ デバッガー式では、静的に型指定された変数を動的として使用できます。 <xref:System.Dynamic.IDynamicMetaObjectProvider> を実装するオブジェクトがウォッチ ウィンドウで評価されると、[動的ビュー] ノードが追加されます。 [動的ビュー] ノードにはオブジェクトのメンバーが表示されますが、そのメンバーの値を編集することはできません。  
   
  動的オブジェクトでは、以下の機能はサポートされていません。  
   
@@ -162,7 +160,7 @@ int main()
 ## <a name="visual-basic---unsupported-expressions"></a>Visual Basic - サポートされていない式  
   
 ### <a name="dynamic-objects"></a>動的オブジェクト  
- デバッガー式では、静的に型指定された変数を動的として使用できます。 実装するオブジェクトが、<xref:System.Dynamic.IDynamicMetaObjectProvider>動的ビュー ノードの追加 ウォッチ ウィンドウで評価されます。 [動的ビュー] ノードにはオブジェクトのメンバーが表示されますが、そのメンバーの値を編集することはできません。  
+ デバッガー式では、静的に型指定された変数を動的として使用できます。 <xref:System.Dynamic.IDynamicMetaObjectProvider> を実装するオブジェクトがウォッチ ウィンドウで評価されると、[動的ビュー] ノードが追加されます。 [動的ビュー] ノードにはオブジェクトのメンバーが表示されますが、そのメンバーの値を編集することはできません。  
   
  動的オブジェクトでは、以下の機能はサポートされていません。  
   
@@ -223,7 +221,7 @@ int main()
   
 ## <a name="see-also"></a>関連項目  
  [C++ の書式指定子](../debugger/format-specifiers-in-cpp.md)   
- [コンテキスト演算子 (C++)](../debugger/context-operator-cpp.md)   
+ [Context Operator (C++)](../debugger/context-operator-cpp.md)   
  [C# の書式指定子](../debugger/format-specifiers-in-csharp.md)   
  [擬似変数](../debugger/pseudovariables.md)
 

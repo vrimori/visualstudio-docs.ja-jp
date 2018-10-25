@@ -1,7 +1,7 @@
 ---
 title: 構文の色分けを実装する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 96e762ca-efd0-41e7-8958-fda4897c8c7a
 caps.latest.revision: 21
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c86a782b3b100811d29b1f81bf2beb6c8cfae1a0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a4315b9e6b6fdb12a0fcb3e97f6b208d6b84acd9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546277"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49259255"
 ---
 # <a name="implementing-syntax-coloring"></a>構文の色分け表示の実装
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[構文の色分けを実装する](https://docs.microsoft.com/visualstudio/extensibility/internals/implementing-syntax-coloring)します。  
-  
 言語サービスでは、構文の色表示機能を提供して、パーサー配色可能な項目の配列に 1 行のテキストを変換します。 これらの装飾が可能な項目に対応するトークンの種類を返します。 パーサーは、装飾が可能な項目の一覧に属するトークンの型を返す必要があります。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] colorizer オブジェクトによって適切なトークンの種類に割り当てられた属性に基づいて、コード ウィンドウ内の各装飾が可能な項目を表示します。  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] パーサーのインターフェイスを指定しないおよびパーサーの実装が完全にユーザーが決定できます。 ただし、既定のパーサーの実装は、Visual Studio 言語パッケージ プロジェクトで提供されます。 マネージ コード用 managed package framework (MPF) のテキストを色分け、完全なサポートが提供します。  

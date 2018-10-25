@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_FLAGS |Microsoft ドキュメント
+title: DISASSEMBLY_FLAGS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd1aa9c73fad40d07be371ad7f9b3108464aeb34
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f6d42a7c5e9247359abfcdb4d65db5a4e0de247e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31101363"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49916401"
 ---
 # <a name="disassemblyflags"></a>DISASSEMBLY_FLAGS
-混合モードのフラグを指定します。  
+逆アセンブリのフラグを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,7 +52,7 @@ public enum enum_DISASSEMBLY_FLAGS {
   
 ## <a name="members"></a>メンバー  
  DF_DOCUMENTCHANGE  
- この命令が以前よりも別のドキュメントであることを示します。  
+ この命令が別のドキュメントは、前のことを示します。  
   
  DF_DISABLED  
  この命令は実行されないことを示します。  
@@ -64,17 +64,17 @@ public enum enum_DISASSEMBLY_FLAGS {
  この命令は、データ (コードではなく) で、実際にあることを示します。  
   
  DF_HASSOURCE  
- この命令がソースを持つことを示します。 対応するソースを保持しているプロファイルやガベージ コレクションのコードなどのいくつかの手順はありません。  
+ この命令にソースがあることを示します。 プロファイルまたはガベージ コレクションのコードなどのいくつかの手順では、対応するソースがあるありません。  
   
  DF_DOCUMENT_CHECKSUM  
- 示します`bstrDocumentUrl`フィールドには、ドキュメントの URL の後のチェックサム データが含まれています。 については、「解説」セクションを参照してください、 [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)チェックサム データが格納されているの構造体。  
+ 示します`bstrDocumentUrl`フィールドには、ドキュメントの URL の後のチェックサム データが含まれています。 「解説」を参照してください、 [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)チェックサム データを格納する方法の構造体。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  として使用される、`dwFlags`のメンバー、 [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)構造体。  
   
- これらのフラグは、ビットごとと組み合わせること`OR`です。  
+ これらのフラグは、演算と組み合わせることがあります`OR`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

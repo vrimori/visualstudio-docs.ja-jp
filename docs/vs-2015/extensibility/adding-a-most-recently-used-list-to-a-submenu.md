@@ -1,7 +1,7 @@
 ---
 title: 最近使用した一覧のサブメニューへの追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 27d4bbcf-99b1-498f-8b66-40002e3db0f8
 caps.latest.revision: 47
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: aa2a5f0177243c178890673986b0c04b4627505e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 327d312ec13e449f0e116a11f920f17a439f569c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537661"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818106"
 ---
 # <a name="adding-a-most-recently-used-list-to-a-submenu"></a>最近使用した一覧のサブメニューへの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[サブメニューへの最も最近使用した一覧の追加](https://docs.microsoft.com/visualstudio/extensibility/adding-a-most-recently-used-list-to-a-submenu)します。  
-  
 このチュートリアルのデモ」に基づいて[サブメニューのメニューに追加](../extensibility/adding-a-submenu-to-a-menu.md)、し、サブメニューに動的な一覧を追加する方法を示しています。 動的な一覧は、最近使用 (MRU) の一覧を作成するための基礎を形成します。  
   
  動的メニュー リストは、メニュー上のプレース ホルダーで始まります。 たびに、メニューを表示すると、Visual Studio 統合開発環境 (IDE) が、プレース ホルダーに表示されるすべてのコマンド、VSPackage を要求します。 動的な一覧は、メニューの任意の場所に発生します。 ただし、動的なリストは通常格納されているし、またはメニューの下部にあるサブメニューには、単独で表示されます。 これらの設計パターンを使用すると、展開し、その他のコマンド メニューの位置に影響を与えずに縮小するためのコマンドの動的リストを有効にします。 このチュートリアルでは、サブメニューの残りの部分から 1 行で区切られた、既存のサブメニューの下部にある動的 MRU 一覧が表示されます。  
@@ -44,9 +42,9 @@ ms.locfileid: "47537661"
   
 ## <a name="creating-an-extension"></a>拡張機能の作成  
   
--   次の手順では、[サブメニューのメニューに追加](../extensibility/adding-a-submenu-to-a-menu.md)で、次の手順が変更されるサブメニューを作成します。  
+- 次の手順では、[サブメニューのメニューに追加](../extensibility/adding-a-submenu-to-a-menu.md)で、次の手順が変更されるサブメニューを作成します。  
   
- このチュートリアルの手順では、VSPackage の名前があると仮定`TopLevelMenu`で使用される名前である[Visual Studio のメニュー バーにメニューを追加する](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)します。  
+  このチュートリアルの手順では、VSPackage の名前があると仮定`TopLevelMenu`で使用される名前である[Visual Studio のメニュー バーにメニューを追加する](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)します。  
   
 ## <a name="creating-a-dynamic-item-list-command"></a>項目の動的リスト コマンドの作成  
   

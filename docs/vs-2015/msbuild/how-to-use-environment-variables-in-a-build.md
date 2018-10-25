@@ -1,7 +1,7 @@
 ---
 title: '方法: ビルドで環境変数を使用する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6b29dd38af85c1ad1e7bc4bb89976574024e4394
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 463acc185a73b9a483bf74c98d4bde1cf0f42494
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534187"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877505"
 ---
 # <a name="how-to-use-environment-variables-in-a-build"></a>方法 : ビルドで環境変数を使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ビルドで環境変数を使って](https://docs.microsoft.com/visualstudio/msbuild/how-to-use-environment-variables-in-a-build)します。  
-  
   
 プロジェクトをビルドするとき、プロジェクト ファイルまたはプロジェクトを構成するファイルに含まれていない情報を使用してビルド オプションを設定する必要がある場合があります。 通常、この情報は環境変数に格納されます。  
   
@@ -41,11 +39,11 @@ ms.locfileid: "47534187"
   
 #### <a name="to-use-an-environment-variable-in-an-msbuild-project"></a>MSBuild プロジェクトで環境変数を使用するには  
   
--   プロジェクト ファイルで宣言された変数と同様に、環境変数を参照します。 たとえば、次のコードは、BIN_PATH 環境変数を参照します。  
+- プロジェクト ファイルで宣言された変数と同様に、環境変数を参照します。 たとえば、次のコードは、BIN_PATH 環境変数を参照します。  
   
-     `<FinalOutput>$(BIN_PATH)\MyAssembly.dll</FinalOutput>`  
+   `<FinalOutput>$(BIN_PATH)\MyAssembly.dll</FinalOutput>`  
   
- 環境変数が設定されていない場合は、`Condition` 属性を使用して、プロパティの既定値を指定することができます。  
+  環境変数が設定されていない場合は、`Condition` 属性を使用して、プロパティの既定値を指定することができます。  
   
 #### <a name="to-provide-a-default-value-for-a-property"></a>プロパティの既定値を指定するには  
   

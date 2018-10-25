@@ -1,7 +1,7 @@
 ---
 title: SAL の理解 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 20
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ae6b16cc7f69aaf365188c488416d35402de9ca4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: be3d54921f7bc3a74c858340f28b68b03497939a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533880"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874281"
 ---
 # <a name="understanding-sal"></a>SAL について
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[理解 SAL](https://docs.microsoft.com/visualstudio/code-quality/understanding-sal)します。  
-  
 Microsoft ソース コード注釈言語 (SAL) では、関数がそのパラメーターや、それらについて行う想定を終了するときに行う保証を使用する方法について説明するために使用できる注釈のセットを提供します。 注釈はヘッダー ファイルで定義されている`<sal.h>`します。 C++ 用の visual Studio コード分析では、SAL 注釈を使用して、関数の分析を変更します。 Windows ドライバー開発の SAL 2.0 の詳細については、次を参照してください。 [Windows ドライバーの SAL 2.0 注釈](http://go.microsoft.com/fwlink/?LinkId=250979)します。  
   
  ネイティブ、C および C++ 開発者の意図と不変性が一貫して express の制限がありますのみを提供します。 SAL 注釈を使用すると、それらを使用する開発者は、その使用方法を理解できるようにより詳細で関数を記述できます。  
@@ -53,11 +51,11 @@ void * memcpy(
   
  ドキュメントには、いくつかプログラムの正確性を確実に特定のプロパティを維持するために、コードが提案する情報のビットにはが含まれています。  
   
--   `memcpy` コピー、`count`の元のバッファーからコピー先のバッファーのバイト。  
+- `memcpy` コピー、`count`の元のバッファーからコピー先のバッファーのバイト。  
   
--   コピー先のバッファーは少なくともソース バッファーと同じ大きさである必要があります。  
+- コピー先のバッファーは少なくともソース バッファーと同じ大きさである必要があります。  
   
- ただし、コンパイラでは、ドキュメントまたは非公式のコメントを読み取ることができません。 2 つのバッファーの間のリレーションシップがあることを認識していないと`count`、それも効果的に推測できないリレーションシップに関するとします。 次に示すよう、SAL はプロパティと、関数の実装についてわかりやすくするために提供できます。  
+  ただし、コンパイラでは、ドキュメントまたは非公式のコメントを読み取ることができません。 2 つのバッファーの間のリレーションシップがあることを認識していないと`count`、それも効果的に推測できないリレーションシップに関するとします。 次に示すよう、SAL はプロパティと、関数の実装についてわかりやすくするために提供できます。  
   
 ```cpp  
   
@@ -119,16 +117,16 @@ wchar_t * wmemcpy(
   
 ##### <a name="to-use-visual-studio-code-analysis-tools-and-sal"></a>Visual Studio のコード分析ツールと SAL を使用するには  
   
-1.  Visual Studio での SAL 注釈を含む C++ プロジェクトを開きます。  
+1. Visual Studio での SAL 注釈を含む C++ プロジェクトを開きます。  
   
-2.  メニュー バーで、**ビルド**、**ソリューションでコード分析を実行**します。  
+2. メニュー バーで、**ビルド**、**ソリューションでコード分析を実行**します。  
   
-     検討、_In\_のこのセクションの例です。 これでコード分析を実行する場合は、この警告が表示されます。  
+    検討してください、\_で\_のこのセクションの例です。 これでコード分析を実行する場合は、この警告が表示されます。  
   
-    > **C6387 無効なパラメーター値**   
-    > 'pInt' の '0' 可能性があります。 これは、'InCallee' 関数の仕様に準拠していません。  
+   > **C6387 無効なパラメーター値**   
+   > 'pInt' の '0' 可能性があります。 これは、'InCallee' 関数の仕様に準拠していません。  
   
-### <a name="example-the-in-annotation"></a>例: _In\_注釈  
+### <a name="example-the-in-annotation"></a>例:\_で\_注釈  
  `_In_`注釈には、ことを示します。  
   
 -   パラメーターが有効にする必要がありは変更されません。  
@@ -166,7 +164,7 @@ void BadInCaller()
   
  呼び出し元が初期化されたバッファーに Null 以外のポインターを渡すことを検証でこの例を Visual Studio コード分析を使用する場合`pInt`します。 この場合、`pInt`ポインターが NULL にすることはできません。  
   
-### <a name="example-the-inopt-annotation"></a>例: _In_opt\_注釈  
+### <a name="example-the-inopt-annotation"></a>例: \_In_opt\_注釈  
  `_In_opt_` 同じ`_In_`, 点が、入力パラメーターが NULL にできるし、この関数がそのため、確認する必要があります。  
   
 ```cpp  
@@ -194,7 +192,7 @@ void InOptCaller()
   
  Visual Studio コード分析は、関数は、バッファーにアクセスする前に null チェックを検証します。  
   
-### <a name="example-the-out-annotation"></a>例: _Out\_注釈  
+### <a name="example-the-out-annotation"></a>例:\_アウト\_注釈  
  `_Out_` 要素のバッファーを指す NULL ポインターが渡され、関数が要素を初期化します、一般的なシナリオをサポートしています。 呼び出し元は呼び出しの前にバッファーを初期化する必要はありません。呼び出された関数を返す前に初期化する約束します。  
   
 ```cpp  
@@ -221,7 +219,7 @@ void OutCaller()
   
  Visual Studio コード分析ツールの検証呼び出し元がのバッファーに NULL 以外のポインターを渡し`pInt`を返す前に、関数によってバッファーが初期化されているとします。  
   
-### <a name="example-the-outopt-annotation"></a>例: _Out_opt\_注釈  
+### <a name="example-the-outopt-annotation"></a>例: \_Out_opt\_注釈  
  `_Out_opt_` 同じ`_Out_`, 点が、パラメーターが NULL にできるし、この関数がそのため、確認する必要があります。  
   
 ```cpp  
@@ -249,7 +247,7 @@ void OutOptCaller()
   
  Visual Studio コード分析は、この関数をチェックする前に null を検証します`pInt`が逆参照される場合に`pInt`を返す前に、関数によってバッファーが初期化されている NULL でないです。  
   
-### <a name="example-the-inout-annotation"></a>例: _Inout\_注釈  
+### <a name="example-the-inout-annotation"></a>例: \_Inout\_注釈  
  `_Inout_` 関数によって変更されるポインター パラメーターの注釈に使用されます。 ポインターは、呼び出しの前に有効な初期化データを指す必要がありますされ、変わる場合でもが必要も有効な値を返された場合。 注釈は、関数の読み取りし、書き込みを 1 つの要素のバッファーに自由に可能性があることを指定します。 呼び出し元は、バッファーを提供し、初期化する必要があります。  
   
 > [!NOTE]
@@ -281,7 +279,7 @@ void BadInOutCaller()
   
  Visual Studio コード分析は、呼び出し元が初期化されたバッファーに NULL 以外のポインターを渡すことを検証します。 `pInt`、する前に返された場合に、`pInt`も null でないバッファーが初期化されます。  
   
-### <a name="example-the-inoutopt-annotation"></a>例: _Inout_opt\_注釈  
+### <a name="example-the-inoutopt-annotation"></a>例: \_Inout_opt\_注釈  
  `_Inout_opt_` 同じ`_Inout_`, 点が、入力パラメーターが NULL にできるし、この関数がそのため、確認する必要があります。  
   
 ```cpp  
@@ -311,7 +309,7 @@ void InOutOptCaller()
   
  Visual Studio コード分析は、この関数は、バッファーにアクセスする前に、null チェックを検証します。`pInt`がを返す前に、関数によってバッファーが初期化されている NULL でないです。  
   
-### <a name="example-the-outptr-annotation"></a>例: _Outptr\_注釈  
+### <a name="example-the-outptr-annotation"></a>例: \_Outptr\_注釈  
  `_Outptr_` ポインターを返すためのものがパラメーターの注釈に使用されます。  パラメーター自体が null の場合、することはできず、呼び出された関数では、NULL 以外のポインターを返しますが初期化されたデータを指すポインター。  
   
 ```cpp  
@@ -342,7 +340,7 @@ void OutPtrCaller()
   
  Visual Studio コード分析は、呼び出し元が NULL 以外のポインターを渡すことを検証します`*pInt`を返す前に、関数によってバッファーが初期化されているとします。  
   
-### <a name="example-the-outptropt-annotation"></a>例: _Outptr_opt\_注釈  
+### <a name="example-the-outptropt-annotation"></a>例: \_Outptr_opt\_注釈  
  `_Outptr_opt_` 同じ`_Outptr_`パラメーターが省略可能なことを除いて、-、呼び出し元が NULL ポインターでパラメーターに渡すことができます。  
   
 ```cpp  
@@ -375,7 +373,7 @@ void OutPtrOptCaller()
   
  Visual Studio コード分析は、この関数をチェックする前に null を検証します`*pInt`が逆参照を返す前に、関数によってバッファーが初期化されているとします。  
   
-### <a name="example-the-success-annotation-in-combination-with-out"></a>例: _Success\_組み合わせて _Out 注釈\_  
+### <a name="example-the-success-annotation-in-combination-with-out"></a>例:\_成功\_注釈と組み合わせて\_アウト\_  
  注釈は、ほとんどのオブジェクトに適用できます。  具体的には、全体の関数の注釈を付けることができます。  関数の最も明確な特性の 1 つは、成功または失敗にすることができます。 バッファーとそのサイズ間の関連付けのように、[C/C++] を関数の成功または失敗 express ことはできません。 使用して、`_Success_`注釈、関数の成功を言うことができます。  パラメーターを`_Success_`注釈はこれが true の場合に、関数が成功したことが示されている式だけです。 注釈パーサーが処理できる任意の式を指定できます。 関数から制御が戻た後の注釈の効果を適用できるは、関数が成功した場合だけです。 この例ではどのように`_Success_`対話`_Out_`は正常に実行します。 キーワードを使用する`return`を戻り値を表します。  
   
 ```cpp  
@@ -405,15 +403,15 @@ bool GetValue(_Out_ int *pInt, bool flag)
 ### <a name="when-do-i-annotate"></a>注釈を付けるタイミング  
  いくつかのガイドラインを次に示します。  
   
--   すべてのポインター パラメーターの注釈を設定します。  
+- すべてのポインター パラメーターの注釈を設定します。  
   
--   注釈の値の範囲の注釈を設定して、コード分析は、バッファーとポインターの安全を確保できるようにします。  
+- 注釈の値の範囲の注釈を設定して、コード分析は、バッファーとポインターの安全を確保できるようにします。  
   
--   ルールのロックおよびロックの副作用の注釈を設定します。 詳細については、次を参照してください。[ロック動作の注釈を付ける](../code-quality/annotating-locking-behavior.md)します。  
+- ルールのロックおよびロックの副作用の注釈を設定します。 詳細については、次を参照してください。[ロック動作の注釈を付ける](../code-quality/annotating-locking-behavior.md)します。  
   
--   ドライバーのプロパティとその他のドメイン固有のプロパティの注釈を設定します。  
+- ドライバーのプロパティとその他のドメイン固有のプロパティの注釈を設定します。  
   
- または、全体にわたって、インテントをオフにして、注釈が実行されていることを確認するが簡単にすべてのパラメーターの注釈を付けることができます。  
+  または、全体にわたって、インテントをオフにして、注釈が実行されていることを確認するが簡単にすべてのパラメーターの注釈を付けることができます。  
   
 ## <a name="related-resources"></a>関連資料  
  [コード分析チームのブログ](http://go.microsoft.com/fwlink/p/?LinkId=251197)  

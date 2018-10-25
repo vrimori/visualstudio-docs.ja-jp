@@ -1,7 +1,7 @@
 ---
 title: Visual Studio API を使用して UML モデルを開く |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 17
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b492f7c7bcb1c6b33ee7f07b1f054027057835aa
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 14fa94779fc8d849bbfdb9176fdc94049078c674
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539443"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920216"
 ---
 # <a name="open-a-uml-model-by-using-the-visual-studio-api"></a>Visual Studio API を使用して UML モデルを開く
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio API を使用して UML モデルを開く](https://docs.microsoft.com/visualstudio/modeling/open-a-uml-model-by-using-the-visual-studio-api)します。  
-  
 API を使って、Visual Studio のユーザー インターフェイスでモデルと図を開くこともできます。  
   
  モデルをユーザーに表示せずに、プログラム コードでモデルの読み込みのみを行う場合は、次の方法を使用できます。  
@@ -37,27 +35,27 @@ API を使って、Visual Studio のユーザー インターフェイスでモ�
 ##  <a name="Showing"></a> Visual Studio でモデルおよびダイアグラムを開く  
  ユーザー インターフェイスでモデルを開くには、標準の Visual Studio API `EnvDTE.DTE` を使用します。 モデリング プロジェクト項目に対して実行できる便利なキャストが 2 つあります。  
   
--   プロジェクトがモデリング プロジェクトの場合で、そのプロジェクトが現在の AppDomain に読み込まれている場合、`EnvDTE.Project` と `IModelingProject` との間でキャストを行うことができます。  
+- プロジェクトがモデリング プロジェクトの場合で、そのプロジェクトが現在の AppDomain に読み込まれている場合、`EnvDTE.Project` と `IModelingProject` との間でキャストを行うことができます。  
   
--   項目が UML 図の場合、`EnvDTE.ProjectItem` と `IDiagramContext` との間でキャストを行うことができます。  
+- 項目が UML 図の場合、`EnvDTE.ProjectItem` と `IDiagramContext` との間でキャストを行うことができます。  
   
- 以降の例の場合、プロジェクトは次の参照をインポートする必要があります。  
+  以降の例の場合、プロジェクトは次の参照をインポートする必要があります。  
   
--   EnvDTE  
+- EnvDTE  
   
--   Microsoft.VisualStudio.ArchitectureTools.Extensibility  
+- Microsoft.VisualStudio.ArchitectureTools.Extensibility  
   
--   Microsoft.VisualStudio.Modeling.Sdk.[バージョン]  
+- Microsoft.VisualStudio.Modeling.Sdk.[バージョン]  
   
--   Microsoft.VisualStudio.Modeling.Sdk.Diagrams.[バージョン]  
+- Microsoft.VisualStudio.Modeling.Sdk.Diagrams.[バージョン]  
   
--   Microsoft.VisualStudio.Shell.Immutable.[バージョン]  
+- Microsoft.VisualStudio.Shell.Immutable.[バージョン]  
   
--   Microsoft.VisualStudio.Uml.Interfaces  
+- Microsoft.VisualStudio.Uml.Interfaces  
   
--   System.ComponentModel.Composition  
+- System.ComponentModel.Composition  
   
- この例では、Visual Studio で UML モデルを開きます。  
+  この例では、Visual Studio で UML モデルを開きます。  
   
 ```  
 using EnvDTE; // Visual Studio API for loading diagrams  

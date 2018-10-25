@@ -1,7 +1,7 @@
 ---
 title: IDebugCustomAttribute::GetName |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: ba509cc5-5816-4925-a094-4c72d88c360c
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5b2ffd2c4159962369fb2883321015065421bce1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 15e02cdd0f1f3e601a37d144c9476877646674c4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538675"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872955"
 ---
 # <a name="idebugcustomattributegetname"></a>IDebugCustomAttribute::GetName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugCustomAttribute::GetName](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugcustomattribute-getname)します。  
-  
 カスタム属性の名前を取得します。  
   
 ## <a name="syntax"></a>構文  

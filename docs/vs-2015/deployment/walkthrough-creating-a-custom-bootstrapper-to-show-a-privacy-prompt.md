@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: プライバシー プロンプトを表示するカスタム ブートス トラップの作成 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 790aa1c67ef8c76e404876bd61a42d4b286892da
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e8bd1101647973a7a8f206159f8910a4e633e5da
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533902"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893393"
 ---
 # <a name="walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt"></a>チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートストラップの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: プライバシー プロンプトを表示するカスタム ブートス トラップの作成](https://docs.microsoft.com/visualstudio/deployment/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt)です。  
-  
 新しいファイルのバージョンとアセンブリのバージョンのアセンブリが使用可能になると自動的に更新する ClickOnce アプリケーションを構成できます。 お客様がこの動作に同意することを確認するにプライバシー プロンプトを表示できます。 次に、アプリケーションが自動的に更新するアクセス許可を付与するかどうかを選択できます。 アプリケーションが自動的に更新する許可されていない場合はインストールされません。  
   
  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
@@ -51,23 +49,23 @@ ms.locfileid: "47533902"
   
 #### <a name="to-create-a-consent-dialog-box"></a>同意ダイアログ ボックスを作成するには  
   
-1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
+1. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-2.  **新しいプロジェクト**ダイアログ ボックスで、をクリックして**Windows**、 をクリックし、 **WindowsFormsApplication**。  
+2. **新しいプロジェクト**ダイアログ ボックスで、をクリックして**Windows**、 をクリックし、 **WindowsFormsApplication**。  
   
-3.  **名前**、型**ConsentDialog**、順にクリックします**OK**します。  
+3. **名前**、型**ConsentDialog**、順にクリックします**OK**します。  
   
-4.  デザイナーでフォームをクリックします。  
+4. デザイナーでフォームをクリックします。  
   
-5.  **プロパティ**ウィンドウで、変更、**テキスト**プロパティを**更新同意ダイアログ**します。  
+5. **プロパティ**ウィンドウで、変更、**テキスト**プロパティを**更新同意ダイアログ**します。  
   
-6.  **ツールボックス**、展開**すべての Windows フォーム**、ドラッグ、**ラベル**コントロールをフォームにします。  
+6. **ツールボックス**、展開**すべての Windows フォーム**、ドラッグ、**ラベル**コントロールをフォームにします。  
   
-7.  デザイナーで、ラベル コントロールをクリックします。  
+7. デザイナーで、ラベル コントロールをクリックします。  
   
-8.  **プロパティ**ウィンドウで、変更、**テキスト**のプロパティの **外観**次。  
+8. **プロパティ**ウィンドウで、変更、**テキスト**のプロパティの **外観**次。  
   
-     Web 上の最新の更新プログラムをインストールしようとしているアプリケーションを確認します。 "I Agree"でクリックすると、確認し、インターネットから自動的に更新プログラムをインストールするアプリケーションを承認します。  
+    Web 上の最新の更新プログラムをインストールしようとしているアプリケーションを確認します。 "I Agree"でクリックすると、確認し、インターネットから自動的に更新プログラムをインストールするアプリケーションを承認します。  
   
 9. **ツールボックス**、ドラッグ、**チェック ボックスをオン**フォームの中央にコントロール。  
   
@@ -120,28 +118,28 @@ ms.locfileid: "47533902"
   
      Visual Basic 開発者の場合のみ。  
   
-    1.  **ソリューション エクスプ ローラー**、 をクリックして**ConsentDialog**します。  
+    1. **ソリューション エクスプ ローラー**、 をクリックして**ConsentDialog**します。  
   
-    2.  **プロジェクト** メニューのをクリックして**モジュールの追加**、 をクリックし、**追加**します。  
+    2. **プロジェクト** メニューのをクリックして**モジュールの追加**、 をクリックし、**追加**します。  
   
-    3.  Module1.vb コード ファイルでは、次のコードを追加します。  
+    3. Module1.vb コード ファイルでは、次のコードを追加します。  
   
-         [!code-vb[ConsentDialog#7](../snippets/visualbasic/VS_Snippets_ProTools/consentdialog/vb/module1.vb#7)]  
+        [!code-vb[ConsentDialog#7](../snippets/visualbasic/VS_Snippets_ProTools/consentdialog/vb/module1.vb#7)]  
   
-    4.  **プロジェクト** メニューのをクリックして**ConsentDialog プロパティ**、 をクリックし、**アプリケーション**タブ。  
+    4. **プロジェクト** メニューのをクリックして**ConsentDialog プロパティ**、 をクリックし、**アプリケーション**タブ。  
   
-    5.  オフに**有効にするアプリケーション フレームワーク**します。  
+    5. オフに**有効にするアプリケーション フレームワーク**します。  
   
-    6.  **スタートアップ オブジェクト**ドロップダウン メニューで、 **Module1**します。  
+    6. **スタートアップ オブジェクト**ドロップダウン メニューで、 **Module1**します。  
   
-        > [!NOTE]
-        >  アプリケーション フレームワークを無効にするには、Windows XP ビジュアル スタイルのアプリケーション イベント、スプラッシュ スクリーン、単一インスタンス アプリケーションなどの機能が無効にします。 詳細については、「[[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)」を参照してください。  
+       > [!NOTE]
+       >  アプリケーション フレームワークを無効にするには、Windows XP ビジュアル スタイルのアプリケーション イベント、スプラッシュ スクリーン、単一インスタンス アプリケーションなどの機能が無効にします。 詳細については、「[[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)」を参照してください。  
   
-     Visual c# 開発者の場合のみ。  
+       Visual c# 開発者の場合のみ。  
   
-     Program.cs コード ファイルを開き、次のコードを追加します。  
+       Program.cs コード ファイルを開き、次のコードを追加します。  
   
-     [!code-csharp[ConsentDialog#5](../snippets/csharp/VS_Snippets_ProTools/consentdialog/cs/program.cs#5)]  
+       [!code-csharp[ConsentDialog#5](../snippets/csharp/VS_Snippets_ProTools/consentdialog/cs/program.cs#5)]  
   
 26. **ビルド** メニューのをクリックして**BuildSolution**します。  
   

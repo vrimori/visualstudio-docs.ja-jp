@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0fa0e7899e2f6e52536e2296519a1697e27a3643
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: ae7b54e6311a58d93c5cc11cfc073c4032df32dd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637069"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855990"
 ---
 # <a name="projectitem-element-visual-studio-item-templates"></a>ProjectItem 要素 (Visual Studio 項目テンプレート)
 項目テンプレートに含まれているファイルを指定します。  
@@ -51,13 +51,13 @@ ms.locfileid: "39637069"
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
-|---------------|-----------------|  
-|`SubType`|省略可能な属性です。<br /><br /> 複数ファイルの項目テンプレートでは、アイテムのサブタイプを指定します。 この値は、エディターを使用する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]項目を開くには使用します。|  
-|`CustomTool`|省略可能な属性です。<br /><br /> プロジェクト ファイル内の項目の CustomTool を設定します。|  
-|`ItemType`|省略可能な属性です。<br /><br /> プロジェクト ファイル内の項目の ItemType を設定します。|  
-|`ReplaceParameters`|省略可能な属性です。<br /><br /> アイテムが、テンプレートからプロジェクトが作成されるときに置き換える必要があるパラメーターの値があるかどうかを指定するブール値。 既定値は `false`にする必要があります。|  
-|`TargetFileName`|省略可能な属性です。<br /><br /> テンプレートから作成される項目の名前を指定します。 この属性は、パラメーター置換を使用して、アイテムの名前を作成する場合に便利です。|  
+| 属性 | 説明 |
+|---------------------| - |
+| `SubType` | 省略可能な属性です。<br /><br /> 複数ファイルの項目テンプレートでは、アイテムのサブタイプを指定します。 この値は、エディターを使用する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]項目を開くには使用します。 |
+| `CustomTool` | 省略可能な属性です。<br /><br /> プロジェクト ファイル内の項目の CustomTool を設定します。 |
+| `ItemType` | 省略可能な属性です。<br /><br /> プロジェクト ファイル内の項目の ItemType を設定します。 |
+| `ReplaceParameters` | 省略可能な属性です。<br /><br /> アイテムが、テンプレートからプロジェクトが作成されるときに置き換える必要があるパラメーターの値があるかどうかを指定するブール値。 既定値は `false`にする必要があります。 |
+| `TargetFileName` | 省略可能な属性です。<br /><br /> テンプレートから作成される項目の名前を指定します。 この属性は、パラメーター置換を使用して、アイテムの名前を作成する場合に便利です。 |
   
 ### <a name="child-elements"></a>子要素  
  なし。  

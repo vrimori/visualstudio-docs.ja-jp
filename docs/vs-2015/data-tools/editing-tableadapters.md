@@ -1,7 +1,7 @@
 ---
 title: TableAdapters の編集 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -26,12 +26,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: 995c1cfb5b125437847f364a01b66f3e551b8b4e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b242f8154f31391d168f2a41bfd00c01f037d87e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547091"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877648"
 ---
 # <a name="editing-tableadapters"></a>TableAdapters の編集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -127,21 +127,21 @@ ms.locfileid: "47547091"
 ## <a name="create-new-stored-procedures"></a>[新しいストアド プロシージャの作成]  
  このセクションを完了する方法を説明します、 **TableAdapter クエリ構成ウィザード**を選択するとき、**新しいストアド プロシージャの作成**オプション。  
   
-1.  **ストアド プロシージャの生成** ページで、ストアド プロシージャを呼び出すときに実行する SQL ステートメントを入力します。  
+1. **ストアド プロシージャの生成** ページで、ストアド プロシージャを呼び出すときに実行する SQL ステートメントを入力します。  
   
-    > [!NOTE]
-    >  ウィザードへのアクセスを提供する、**クエリ ビルダー**、SQL クエリを作成するためのビジュアル ツールです。 開くには、クリックして、**クエリ ビルダー**ボタンをクリックします。  
+   > [!NOTE]
+   >  ウィザードへのアクセスを提供する、**クエリ ビルダー**、SQL クエリを作成するためのビジュアル ツールです。 開くには、クリックして、**クエリ ビルダー**ボタンをクリックします。  
   
-2.  **ストアド プロシージャの作成**ページで、次の操作を行います。  
+2. **ストアド プロシージャの作成**ページで、次の操作を行います。  
   
-    1.  新しいストアド プロシージャの名前を入力します。  
+   1. 新しいストアド プロシージャの名前を入力します。  
   
-    2.  基になるデータベースにストアド プロシージャを作成するかどうかを指定します。  
+   2. 基になるデータベースにストアド プロシージャを作成するかどうかを指定します。  
   
-        > [!NOTE]
-        >  データベースにストアド プロシージャを作成できるかどうかは、そのデータベースのセキュリティ設定に応じて決まります。  
+      > [!NOTE]
+      >  データベースにストアド プロシージャを作成できるかどうかは、そのデータベースのセキュリティ設定に応じて決まります。  
   
-     **ウィザードの結果を表示する**ページには、TableAdapter クエリを作成した結果が表示されます。 ウィザードで問題が発生すると、このページにエラー情報が表示されます。  
+      **ウィザードの結果を表示する**ページには、TableAdapter クエリを作成した結果が表示されます。 ウィザードで問題が発生すると、このページにエラー情報が表示されます。  
   
 ## <a name="use-existing-stored-procedures"></a>[既存のストアド プロシージャを使用]  
  このセクションを完了する方法を説明します、 **TableAdapter クエリ構成ウィザード**を選択するとき、**既存のストアド プロシージャを使用して、** オプション。  

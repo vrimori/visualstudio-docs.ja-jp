@@ -1,7 +1,7 @@
 ---
 title: UML API を使用して UML シーケンス図を編集する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 27
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: ba6f1cb12d8ffb93721e266e80127e574ca36e76
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0711a16206ae1f6fc1efba0b3422c650c993396d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544497"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941998"
 ---
 # <a name="edit-uml-sequence-diagrams-by-using-the-uml-api"></a>UML API を使用して UML シーケンス図を編集する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML API を使用して編集 UML シーケンス図](https://docs.microsoft.com/visualstudio/modeling/edit-uml-sequence-diagrams-by-using-the-uml-api)します。  
-  
 相互作用とは、一連の生存線の間におけるメッセージのシーケンスです。 相互作用は、UML シーケンス図に表示されます。  
   
  API の詳細については、「<xref:Microsoft.VisualStudio.Uml.Interactions?displayProperty=fullName>」を参照してください。  
@@ -123,13 +121,13 @@ public void Execute (IMenuCommand command)
 ## <a name="updating-an-interaction-and-its-layout"></a>相互作用とそのレイアウトの更新  
  相互作用を更新する場合、必ず次のいずれかのメソッドを使用してレイアウトを更新することによって操作を終了する必要があります。  
   
--   `ISequenceDiagram.UpdateShapePositions()` 最近挿入または移動すると、図形とその周辺の図形の位置を調整します。  
+- `ISequenceDiagram.UpdateShapePositions()` 最近挿入または移動すると、図形とその周辺の図形の位置を調整します。  
   
--   `ISequenceDiagram.Layout([SequenceDiagramLayoutKinds])` は、図全体を再描画します。 パラメーターを使用して、生存線、メッセージ、またはその両方の再配置を指定できます。  
+- `ISequenceDiagram.Layout([SequenceDiagramLayoutKinds])` は、図全体を再描画します。 パラメーターを使用して、生存線、メッセージ、またはその両方の再配置を指定できます。  
   
- これは特に、新規の要素を挿入する場合、または既存の要素を移動する場合に重要です。 これらのいずれかの操作を実行しなければ、図上で正しく配置されません。 必要な処理は、一連の変更の最後に、これらの操作のいずれかを 1 回呼び出すことだけです。  
+  これは特に、新規の要素を挿入する場合、または既存の要素を移動する場合に重要です。 これらのいずれかの操作を実行しなければ、図上で正しく配置されません。 必要な処理は、一連の変更の最後に、これらの操作のいずれかを 1 回呼び出すことだけです。  
   
- コマンドを実行した後に、元に戻す操作を実行したユーザーが混乱しないよう、`ILinkedUndoTransaction` を使用し、変更と最終的な `Layout()` または `UpdateShapePositions()` 操作を囲みます。 例:  
+  コマンドを実行した後に、元に戻す操作を実行したユーザーが混乱しないよう、`ILinkedUndoTransaction` を使用し、変更と最終的な `Layout()` または `UpdateShapePositions()` 操作を囲みます。 例:  
   
 ```  
 using (ILinkedUndoTransaction transaction = LinkedUndoContext.BeginTransaction("create loop"))  

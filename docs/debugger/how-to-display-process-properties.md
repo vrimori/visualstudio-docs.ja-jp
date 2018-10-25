@@ -1,5 +1,5 @@
 ---
-title: '方法: プロセスのプロパティの表示 |Microsoft ドキュメント'
+title: '方法: プロセスのプロパティの表示 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,20 +12,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9925f874f2d9dfc06b56d58a20ce9248624dbc31
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 25138eb6c9f7616f68841a45fcd1001ccd3dc84f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31481711"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49826324"
 ---
 # <a name="how-to-display-process-properties"></a>方法: プロセスのプロパティを表示する
-表示されているプロセスに関する詳細を確認する[プロセス ビュー](../debugger/processes-view.md)を使用して、[プロセス プロパティ ダイアログ ボックス](../debugger/process-properties-dialog-box.md)です。  
+表示されているプロセスに関する詳細は[プロセス ビュー](../debugger/processes-view.md)を使用して、[プロセス プロパティ ダイアログ ボックス](../debugger/process-properties-dialog-box.md)します。  
   
-### <a name="to-open-a-process-properties-dialog-box"></a>プロセスのプロパティ ダイアログ ボックスを開く  
+### <a name="to-open-a-process-properties-dialog-box"></a>プロセスのプロパティのダイアログ ボックスを開く  
   
-1.  表示されるツリーからプロセスを選択**プロセス ビュー**です。  
+1. 表示されるツリーからプロセスを選択**プロセス ビュー**します。  
   
-2.  **ビュー** ] メニューの [選択**プロパティ**です。  
+2. **ビュー** ] メニューの [選択**プロパティ**します。  
   
- プロパティのダイアログ ボックスはモーダルではないため、表示ウィンドウで別のアイテムをクリックして、ダイアログ ボックスの選択項目に関する情報が表示されます。
+   プロパティのダイアログ ボックスはモーダルではないため、表示ウィンドウで他のアイテムをクリックして、ダイアログ ボックスの選択項目に関する情報が表示されます。

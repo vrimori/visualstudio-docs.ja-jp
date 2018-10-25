@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのデータセット ツール |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -56,18 +56,16 @@ caps.latest.revision: 53
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2d01dd2de60285d669f5a36a2f6ddf7a08449dad
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b5881542c78c5c055d1cbc26d54eb5e478a13124
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533680"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49254346"
 ---
 # <a name="dataset-tools-in-visual-studio"></a>Visual Studio でのデータセット ツール
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio でのデータセット ツール](https://docs.microsoft.com/visualstudio/data-tools/dataset-tools-in-visual-studio)します。  
-  
   
 注]
 >  データセットと関連するクラスは、アプリケーションがデータベースから切断されていても、メモリ内のデータを使用するアプリケーションを実現する 2000 年の初めから従来の .NET テクノロジが。 データを変更し、変更を元のデータベースに保持するユーザーを有効にするアプリケーションに特に便利です。 データセットの非常に効果的なテクノロジとなることがわかっていますが、新しい .NET アプリケーションが Entity Framework を使用することをお勧めします。 Entity Framework はオブジェクト モデルと表形式のデータを操作する方法がより自然を示しより単純なプログラミング インターフェイスがあります。  

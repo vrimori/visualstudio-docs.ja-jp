@@ -2,7 +2,7 @@
 title: Visual Studio 2017 の新機能
 description: Visual Studio 2017 の新機能について説明します。
 ms.custom: ''
-ms.date: 08/21/2018
+ms.date: 09/04/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
 ms.topic: conceptual
@@ -17,32 +17,32 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3154264938753cf9be41cdd5ef8964f49664d730
-ms.sourcegitcommit: bd6f04aff96201d514157de16ed6ddb8593d02b6
+ms.openlocfilehash: d2762843141d1383c1fb4f7d4925b1fbe37a9298
+ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755510"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029109"
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
 
-**[15.8 リリース](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default)の更新**
+**[15.8 リリース](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017)の更新**
 
 以前のバージョンの Visual Studio からのアップグレードを検討していますか。 Visual Studio 2017 にはすべての開発、すべてのアプリ、すべてのプラットフォームにおいて、他に類を見ない生産性があります。 Visual Studio 2017 を利用し、Android、iOS、Windows、Linux、Web、クラウド向けのアプリを開発します。 短期間でプログラミングできて、デバッグや診断も簡単に行えます。テストを頻繁に行うことで、自信をもってリリースできます。 独自の拡張機能を開発することで Visual Studio を拡張し、カスタマイズすることもできます。 今回のリリースでは、バージョン管理を使用した、迅速で、効率的な共同作業が可能になりました。
 
 以前のバージョンである Visual Studio 2015 以降に行われた主な変更点の要約を示します。
 
-* **[基本の再定義](#redefined-fundamentals)**。 新しいセットアップ エクスペリエンスにより、必要なものを必要なタイミングでより短い時間でインストールできるようになりました。 大規模なソリューションやプロジェクトを読み込む場合でも、コードのフォルダーや単一のコード ファイルを操作する場合でも、Visual Studio の起動がより高速になりました。 さらに Visual Studio は、特に DevOps を大事にするチームにとって、全体像を把握するのに役立ちます。
-* **[パフォーマンスと生産性](#performance-and-productivity)**。 Microsoft は、新しく、現代的なモバイル、クラウド、デスクトップの開発機能を導入することを中心に取り組んできました。 全体的な取得機能、パフォーマンス、全般的な開発者生産性も改善されています。 Visual Studio の起動が以前と比較してより高速になり、より応答性が向上し、メモリーの消費量が少なくなりました。
+* **[基本の再定義](#redefined-fundamentals)**。 新しいセットアップ エクスペリエンスにより、必要なものを必要なタイミングでより短い時間でインストールできるようになりました。
+* **[パフォーマンスと生産性](#performance-and-productivity)**。 Microsoft は、新しく、現代的なモバイル、クラウド、デスクトップの開発機能を導入することを中心に取り組んできました。 また、Visual Studio の起動が以前と比較してより高速になり、より応答性が向上し、メモリの消費量が少なくなりました。
 * **[Azure によるクラウド アプリの開発](#cloud-app-development-with-azure)**。 Microsoft Azure を使用するクラウド ファーストのアプリを簡単に作成できる Azure ツールのビルトイン スイート。 Visual Studio を使用すれば、Azure でアプリとサービスを構成、ビルド、デバッグ、パッケージ化、デプロイするのが容易になります。
-* **[Windows アプリ開発](#windows-app-development)**。 Visual Studio 2017 で UWP テンプレートを使用して、すべての Windows 10 デバイス (PC、タブレット、電話、Xbox、HoloLens、Surface Hub など) を対象とした単一のプロジェクトを作成します。 次に、アプリ パッケージを作成し、Visual Studio 内から Microsoft Store に提出してアプリをユーザーに公開します。
-* **[モバイル アプリの開発](#mobile-app-development)**。 Visual Studio 2017 では Xamarin が導入されています。これにより、1 つのコア コードベースとスキル セットを使用することでマルチプラットフォームのモバイル要件が統合され、短期間で成果を出すことができます。 既存のチーム、テクノロジへの投資、C# コードをモバイル対応にして、コンシューマー グレードのエクスペリエンスを予定より早くかつ予算以内で提供します。 モバイル ライフサイクルのすべてのステップを加速させ、ワールドクラスのコンシューマー エクスペリエンスまたは従業員の生産性向上を支援するアプリのポートフォリオを提供します。 (**15.8 の新機能**: Hyper-V を使用するモバイル アプリ開発者は、最新の Android API に常に対応し、面倒な設定なしで Google Play 開発者サービスと連動し、カメラ、位置情報、クイック起動など、Android エミュレーターのあらゆる機能に対応する高速の Android エミュレーターにアクセスできます。)
-* **[クロスプラットフォーム開発](#cross-platform-development)**。 対象となるプラットフォームにソフトウェアをシームレスに届けます。 Redgate Data Tools により DevOps プロセスを SQL Server に拡張し、Visual Studio からのデータベース配置を安全に自動化します。 あるいは、.NET Core を利用し、変更しなくても Windows、Linux、macOS オペレーティング システムをまたいで実行できるアプリやライブラリを作成します。 (**15.3 の新機能**: .NET Core 2.0 SDK の side-by-side サポート)
-* **[ゲーム開発](#games-development)**。 Visual Studio tools Unity (VSTU) を利用すると、Visual Studio を使用して C# でゲームとエディター スクリプトを記述した後、強力なデバッガーを使用してエラーを検出して修正できます。 VSTU の最新リリースでは、Unity の ShaderLab シェーダー言語の構文の色分け、デバッガーの視覚化機能の向上、および、MonoBehavior ウィザードによるコード生成の機能強化などが行われました。 また、VSTU により、Unity のプロジェクト ファイル、コンソール メッセージ、およびゲームを開始する機能が Visual Studio に統合されるため、コードの記述中に Unity エディターとの間で切り替える手間を少なくできます。
-* **[AI の開発](#ai-development)**。 Visual Studio Tools for AI (**15.5 の新機能**) では、Visual Studio の生産性機能を使用して、AI 革新を高速化することができます。 堅牢な実験機能 (たとえば、データ準備とモデル トレーニング ジョブの別の計算ターゲットへの透過的な送信など) のために、Azure Machine Learning とシームレスに統合するディープ ラーニング / AI ソリューションをビルド、テスト、展開します。 また、Visual Studio Tools for AI はカスタム メトリックと実行履歴追跡のサポートを提供し、データ サイエンスの再現性と監査を可能にします。
+* **[Windows アプリ開発](#windows-app-development)**。 Visual Studio 2017 で UWP テンプレートを使用して、すべての Windows 10 デバイス (PC、タブレット、電話、Xbox、HoloLens、Surface Hub など) を対象とした単一のプロジェクトを作成します。
+* **[モバイル アプリの開発](#mobile-app-development)**。 マルチプラットフォームのモバイル要件を 1 つのコア コードベースとスキル セットに統合する Xamarin により、短期間で革新的な成果を出すことができます。
+* **[クロスプラットフォーム開発](#cross-platform-development)**。 対象となるプラットフォームにソフトウェアをシームレスに届けます。 Redgate Data Tools により DevOps プロセスを SQL Server に拡張し、Visual Studio からのデータベース配置を安全に自動化します。 あるいは、.NET Core を利用し、変更しなくても Windows、Linux、macOS オペレーティング システムをまたいで実行できるアプリやライブラリを作成します。
+* **[ゲーム開発](#games-development)**。 Visual Studio tools Unity (VSTU) を利用すると、Visual Studio を使用して C# でゲームとエディター スクリプトを記述した後、強力なデバッガーを使用してエラーを検出して修正できます。
+* **[AI の開発](#ai-development)**。 Visual Studio Tools for AI では、Visual Studio の生産性機能を使用して、AI 革新を高速化することができます。 堅牢な実験機能のために、Azure Machine Learning とシームレスに統合するディープ ラーニング / AI ソリューションをビルド、テスト、展開します。
 
 > [!NOTE]
-> Visual Studio 2017 の新機能の一覧については、「[最新のリリース ノート](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default)」を参照してください。 また、将来的な機能の内容については、「[リリース ノートのプレビュー](/visualstudio/releasenotes/vs2017-preview-relnotes?context=visualstudio/default)」を参照してください。
+> Visual Studio 2017 の新機能の一覧については、「[最新のリリース ノート](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017)」を参照してください。 また、将来的な機能の内容については、「[リリース ノートのプレビュー](/visualstudio/releasenotes/vs2017-preview-relnotes?context=visualstudio/default&contextView=vs-2017)」を参照してください。
 
 Visual Studio 2017 の最も重要な改善点と新機能について、そのいくつかの詳細を確認できます。
 
@@ -50,7 +50,7 @@ Visual Studio 2017 の最も重要な改善点と新機能について、その�
 
 ### <a name="a-new-setup-experience"></a>新しいセットアップ エクスペリエンス
 
-[Visual Studio 2017 をダウンロードする](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)または [Visual Studio のシステム要件を確認する](/visualstudio/productinfo/vs2017-system-requirements-vs?context=visualstudio/default)
+[Visual Studio 2017 をダウンロードする](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)または [Visual Studio のシステム要件を確認する](/visualstudio/productinfo/vs2017-system-requirements-vs?context=visualstudio/default&contextView=vs-2017)
 
  Visual Studio により、必要な機能だけを必要なタイミングでより簡単により短い時間でインストールできます。 また、アンインストールも正常に行われます。
 
@@ -106,11 +106,11 @@ Visual Studio の拡張機能の一覧を表示するには、**[ツール]**、
 
 [拡張機能マネージャーのローミング] を使用する場合、リストに次の 3 つの種類のアイコンが表示されます。
 
-* ![ローミング済みアイコン](../ide/media/vs2017ide-roamedicon.png) ***ローミング済み***: ローミング リストにあり、このコンピューターにはインストールされていない拡張機能を示します。
+* ![ローミング済みアイコン](../ide/media/vs2017ide-roamedicon.png) **_ローミング済み_**: ローミング リストにあり、このコンピューターにはインストールされていない拡張機能を示します。
   (これらの拡張機能は、**[ダウンロード]** ボタンでインストールできます。)
-* ![ローミングおよびインストール済みアイコン](../ide/media/vs2017ide-roamedinstalledicon.png) ***ローミングおよびインストール済み***: ローミング リストにあり、お使いの開発環境にインストールされているすべての拡張機能を示します。
+* ![ローミングおよびインストール済みアイコン](../ide/media/vs2017ide-roamedinstalledicon.png) **_ローミングおよびインストール済み_**: ローミング リストにあり、お使いの開発環境にインストールされているすべての拡張機能を示します。
   (ローミングしない場合は、**[ローミングの停止]** ボタンで削除することができます。)
-* ![インストール済みアイコン](../ide/media/vs2017ide-installedicon.png) ***インストール済み***: この環境にインストールされ、ローミング リストにはないすべての拡張機能を示します。
+* ![インストール済みアイコン](../ide/media/vs2017ide-installedicon.png) **_インストール済み_**: この環境にインストールされ、ローミング リストにはないすべての拡張機能を示します。
   (**[ローミングの開始]** ボタンを使用して、拡張機能をローミング リストに追加できます。)
 
 サインイン中にダウンロードするすべての拡張機能が **[ローミングおよびインストール済み]** としてリストに追加されます。 拡張機能はローミング リストの一部となり、任意のコンピューターからアクセスできるようになります。
@@ -303,7 +303,7 @@ UWP の詳細については、「[ユニバーサル Windows プラットフォ
 
 ![Xamarin.Android Designer 分割ビュー エディター](../ide/media/android-designer-split-view.png)
 
-詳細については、「[エミュレーター パフォーマンスのためのハードウェア高速化](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin#hyper-v-overview)」を参照してください。
+詳細については、「[エミュレーター パフォーマンスのためのハードウェア高速化](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin)」を参照してください。
 
 ### <a name="visual-studio-app-center"></a>Visual Studio アプリ センター
 
@@ -381,7 +381,7 @@ Visual Studio を向上させることができるご提案がある場合、ま
 
 ## <a name="see-also"></a>関連項目
 
-* [Visual Studio 2017 リリース ノート](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default)
+* [Visual Studio 2017 リリース ノート](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017)
 * [Visual C++ の新機能](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
 * [C# の新機能](/dotnet/csharp/whats-new)
 * [Team Foundation Server の新機能](/tfs/server/whats-new?view=vsts)

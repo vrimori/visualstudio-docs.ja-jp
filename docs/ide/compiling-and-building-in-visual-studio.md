@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 472fcda584db4bf6cd16c386fec4b3e668f44a9f
-ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
+ms.openlocfilehash: 5ce6a85ff80d8da081b0d69763ed477174de7ed4
+ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341677"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863622"
 ---
 # <a name="compile-and-build-in-visual-studio"></a>Visual Studio でのコンパイルとビルド
 
@@ -28,15 +28,15 @@ ms.locfileid: "39341677"
 
 ビルドに成功することは、実質的には検証です。つまり、アプリケーションのソース コードの構文が正しいことと、ライブラリやアセンブリなどのコンポーネントへの静的参照がすべて解決済みであることが確認されます。 この結果としてアプリケーション実行可能ファイルが生成されるので、次にこれをテストします。[デバッグ環境](../debugger/index.md)で正しく機能することを確認するとともに、手動と自動のさまざまなテストを通して[コードの品質を検証](../test/improve-code-quality.md)します。 アプリケーションのテストが完了したら、リリース バージョンをコンパイルしてユーザーにリリースします。 このプロセスの入門資料については、「[チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)」を参照してください。
 
-Visual Studio 製品ファミリの中では、アプリケーションのビルドに使用できる方法として Visual Studio IDE、MSBuild コマンドライン ツール、Visual Studio Team Services 上の Team Foundation ビルドの 3 つがあります。
+Visual Studio IDE、MSBuild コマンド ライン ツール、Azure Pipelines のいずれかの方法を使用して、アプリケーションをビルドすることができます。
 
 | ビルド方法 | 利点 |
 | --- |--- | --- |
 | IDE |- ビルドを即座に作成してデバッガーでテストできます。<br />- マルチプロセッサ ビルドを実行します (C++ や C# のプロジェクトの場合)。<br />- ビルド システムのさまざまな面をカスタマイズできます。 |
 | MSBuild コマンドライン| - Visual Studio をインストールせずにプロジェクトをビルドできます。<br />- すべてのプロジェクト タイプでマルチ プロセッサ ビルドを実行できます。<br />- ビルド システムのほとんどの部分をカスタマイズできます。|
-| Team Foundation ビルド | - ビルド プロセスを継続的インテグレーション/継続的デリバリー パイプラインの一部として自動化できます。<br />- 自動テストをすべてのビルドに適用します。<br />- クラウド ベースのリソースをほぼ無制限にビルド プロセスに使用できます。<br />- ビルド ワークフローの変更やビルド アクティビティの作成が可能です。実行するタスクを大幅にカスタマイズできます。|
+| Azure Pipelines | - ビルド プロセスを継続的インテグレーション/継続的デリバリー パイプラインの一部として自動化できます。<br />- 自動テストをすべてのビルドに適用します。<br />- クラウド ベースのリソースをほぼ無制限にビルド プロセスに使用できます。<br />- ビルド ワークフローの変更やビルド アクティビティの作成が可能です。実行するタスクを大幅にカスタマイズできます。|
 
-このセクションでは、IDE ベースのビルド プロセスを詳しく解説します。 他の方法の詳細については、「[MSBuild](../msbuild/msbuild.md)」と「[Continuous integration and deployment](/vsts/pipelines/index?view=vsts)」 (継続的なインテグレーションと配置) を参照してください。
+このセクションでは、IDE ベースのビルド プロセスを詳しく解説します。 他の方法の詳細については、「[MSBuild](../msbuild/msbuild.md)」と「[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)」をそれぞれ参照してください。
 
 ## <a name="overview-of-building-from-the-ide"></a>IDE でのビルドの概要
 
@@ -56,4 +56,4 @@ IDE の中でのビルド方法の入門資料については、「[チュート
 
 ## <a name="see-also"></a>関連項目
 
-- [Web サイト プロジェクトのビルド (コンパイル)](http://msdn.microsoft.com/Library/a9cbb88c-8fff-4c67-848b-98fbfd823193)
+- [Web サイト プロジェクトのビルド (コンパイル)](https://msdn.microsoft.com/Library/a9cbb88c-8fff-4c67-848b-98fbfd823193)

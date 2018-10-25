@@ -16,23 +16,23 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f67419240b8632c3032bd3877894d871245e55e
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 2212d9eb38487bf824fd8df3c497d9f256379c10
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513443"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907808"
 ---
 # <a name="commands-and-menus-that-use-interop-assemblies"></a>相互運用機能アセンブリを使用するコマンドとメニュー
 相互運用機能アセンブリを使用してメニューやツールバーを実装する VSPackage にする必要があります。  
   
--   通知、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) についてサポートしているコマンドやかどうかが現在有効にします。  
+- 通知、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) についてサポートしているコマンドやかどうかが現在有効にします。  
   
--   (コントラクト) コマンドを処理するための規則に従います。  
+- (コントラクト) コマンドを処理するための規則に従います。  
   
--   いずれかを使用してコマンド処理を明示的に実装、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>または<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>インターフェイス。  
+- いずれかを使用してコマンド処理を明示的に実装、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>または<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>インターフェイス。  
   
- 次のセクションでは、これらのタスクを実行する方法について説明します。  
+  次のセクションでは、これらのタスクを実行する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [相互運用機能アセンブリを使用してコマンドのステータスを確認します。](../../extensibility/internals/determining-command-status-by-using-interop-assemblies.md)  

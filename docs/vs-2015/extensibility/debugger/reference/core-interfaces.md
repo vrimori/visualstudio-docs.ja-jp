@@ -1,7 +1,7 @@
 ---
 title: インターフェイスのコア |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,64 +15,62 @@ ms.assetid: 666b9116-8550-4bdd-bc15-55fc57de87df
 caps.latest.revision: 25
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2223059344c8f3d15eb94edc0dc2d2d1dc6fa336
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c2ef86b1985f71b1f6ea53106c4818e09a7f43b0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544374"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831823"
 ---
 # <a name="core-interfaces"></a>コア インターフェイス
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Core インターフェイス](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/core-interfaces)します。  
-  
 次のインターフェイスは、コア インターフェイスを使用してデバッガーを拡張するため、[!INCLUDE[vsipsdk](../../../includes/vsipsdk-md.md)]します。  
   
 ## <a name="discussion"></a>説明  
  これらのインターフェイスは主に、デバッグ エンジン (DE) の作成に使用します。 カテゴリがここで分類されます。  
   
--   [ブレークポイント](#Breakpoints)  
+- [ブレークポイント](#Breakpoints)  
   
--   [コンテキスト](#Contexts)  
+- [コンテキスト](#Contexts)  
   
--   [Server core](#CoreServer)  
+- [Server core](#CoreServer)  
   
--   [デバッグ エンジン](#DebugEngines)  
+- [デバッグ エンジン](#DebugEngines)  
   
--   [ドキュメント](#Documents)  
+- [ドキュメント](#Documents)  
   
--   [イベント](#Events)  
+- [イベント](#Events)  
   
--   [式](#Expressions)  
+- [式](#Expressions)  
   
--   [メモリ](#Memory)  
+- [メモリ](#Memory)  
   
--   [モジュール](#Modules)  
+- [モジュール](#Modules)  
   
--   [ポート](#Ports)  
+- [ポート](#Ports)  
   
--   [プロセス](#Processes)  
+- [プロセス](#Processes)  
   
--   [プログラム](#Programs)  
+- [プログラム](#Programs)  
   
--   [プロパティ](#Properties)  
+- [Properties](#Properties)  
   
--   [スタック フレーム](#StackFrames)  
+- [スタック フレーム](#StackFrames)  
   
--   [スレッド](#Threads)  
+- [スレッド](#Threads)  
   
--   [型のビジュアライザー](#TypeVisualizers)  
+- [型のビジュアライザー](#TypeVisualizers)  
   
- インターフェイスを実装できるエンティティは次のとおりです。  
+  インターフェイスを実装できるエンティティは次のとおりです。  
   
--   デバッグ エンジン (DE)  
+- デバッグ エンジン (DE)  
   
--   ポート サプライヤー (PS)  
+- ポート サプライヤー (PS)  
   
--   式エバリュエーター (EE)  
+- 式エバリュエーター (EE)  
   
--   Visual Studio (VS)  
+- Visual Studio (VS)  
   
 ##  <a name="Breakpoints"></a> ブレークポイント  
  これらのインターフェイスが関連する実装およびブレークポイントの追跡。  

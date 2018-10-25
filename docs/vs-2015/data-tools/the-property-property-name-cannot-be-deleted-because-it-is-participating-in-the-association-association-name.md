@@ -1,7 +1,7 @@
 ---
 title: プロパティ&lt;プロパティ名&gt;関連付けに関与しているために削除できません&lt;アソシエーション名&gt;|Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6983d52615219c386b049eea33f9f911956c6d59
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cdd2c2ab26709a017801e8ae34e4ee6f2223c2c3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537176"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49177737"
 ---
 # <a name="the-property-ltproperty-namegt-cannot-be-deleted-because-it-is-participating-in-the-association-ltassociation-namegt"></a>プロパティ&lt;プロパティ名&gt;関連付けに関与しているために削除できません&lt;関連付けの名前&gt;
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロパティ&lt;プロパティ名&gt;関連付けに関与しているために削除できません&lt;アソシエーション名&gt;](https://docs.microsoft.com/visualstudio/data-tools/the-property-property-name-cannot-be-deleted-because-it-is-participating-in-the-association-association-name)します。  
-  
   
 選択したプロパティとして設定されて、**関連付けプロパティ**クラス間の関連付けには、エラー メッセージに示されています。 プロパティがデータ クラス間の関連付けに関与している場合、そのプロパティを削除することはできません。  
   

@@ -1,7 +1,7 @@
 ---
 title: トランザクションを使用して UML モデルの更新をリンク |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,19 +14,17 @@ caps.latest.revision: 18
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b05f0f1d178099337122cba2213b4bba22d2eead
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 99cbbb2a2c67ec077fec8554694cba58fc37bd59
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539431"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844498"
 ---
 # <a name="link-uml-model-updates-by-using-transactions"></a>トランザクションを使用して UML モデルの更新をリンクする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[トランザクションを使用してモデルの更新をリンク UML](https://docs.microsoft.com/visualstudio/modeling/link-uml-model-updates-by-using-transactions)します。  
-  
-Visual Studio で UML デザイナー向けに拡張機能を定義するときと呼ばれる単一のトランザクションにいくつかの変更をグループ化することができます、*リンクされた undo コンテキスト*します。 UML モデルをサポートする Visual Studio のバージョンを確認するを参照してください。[アーキテクチャとモデリング ツールのバージョンのサポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)します。  
+Visual Studio で UML デザイナー向けに拡張機能を定義するときと呼ばれる単一のトランザクションにいくつかの変更をグループ化することができます、*リンクされた undo コンテキスト*します。 UML モデルをサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
  既定では、ユーザーは、コードによってモデルに加えられた変更を個別に元に戻すことができます。 たとえば、2 つの UML クラスの名前を入れ替えるメニュー コマンドを定義した場合に、ユーザーがそのコマンドを起動して、元に戻す操作を 1 回実行するとします。 この場合、1 つの名前に対する変更は元に戻されますが、もう 1 つの名前の変更は元に戻されず、モデルは意図されていない状態になります。  
   

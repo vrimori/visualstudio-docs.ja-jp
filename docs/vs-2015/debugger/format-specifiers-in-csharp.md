@@ -1,7 +1,7 @@
 ---
 title: 書式指定子 (C#) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -32,18 +32,16 @@ caps.latest.revision: 34
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 27c3dcf59068ca511f52850e328ef186c22b3dfa
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f6abc97117af62732f659ca469ab757d1ff1cdcd
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546124"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49281192"
 ---
 # <a name="format-specifiers-in-c"></a>C# の書式指定子 #
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[c# の書式指定子](https://docs.microsoft.com/visualstudio/debugger/format-specifiers-in-csharp)します。  
-  
 書式指定子を使用して、 **ウォッチ** ウィンドウに表示される値の書式設定を変更することができます。 また、 **[イミディエイト]** ウィンドウ、 **[コマンド]** ウィンドウ、およびソースのウィンドウでも、書式指定子を使用できます。 これらのウィンドウで式の上にカーソルを合わせると、結果が [データヒント] に表示されます。 [データヒント] には、[データヒント] 表示の書式指定子が反映されます。  
   
  書式指定子を使用するには、式に続いてコンマを入力します。 コンマの後に、適切な指定子を追加します。  
@@ -68,7 +66,7 @@ ms.locfileid: "47546124"
   
 |指定子|形式|元の [ウォッチ] の値|表示|  
 |---------------|------------|--------------------------|--------------|  
-|ac|式を強制的に評価します。 これは、プロパティの暗黙の評価および暗黙の関数呼び出しがオフの場合に便利です。 参照してください[Side Effects and Expressions](http://msdn.microsoft.com/library/e1f8a6ea-9e19-481d-b6bd-df120ad3bf4e)します。|メッセージ "暗黙的な関数の評価はユーザーによってオフにされました"|\<value>|  
+|ac|式を強制的に評価します。 これは、プロパティの暗黙の評価および暗黙の関数呼び出しがオフの場合に便利です。 「 [Side Effects and Expressions](http://msdn.microsoft.com/library/e1f8a6ea-9e19-481d-b6bd-df120ad3bf4e)」を参照してください。|メッセージ "暗黙的な関数の評価はユーザーによってオフにされました"|\<value>|  
 |d|10 進整数|0x0065|101|  
 |dynamic|動的ビューを使用して、指定されたオブジェクトを表示します。|動的ビューを含む、オブジェクトのすべてのメンバーを表示します。|動的ビューのみが表示されます。|  
 |h|16 進整数|61541|0x0000F065|  

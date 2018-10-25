@@ -1,7 +1,7 @@
 ---
 title: WPF アプリケーションで関連するデータの表示 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c4068bcbf3ead7114013b93f02a784d682e5b4d5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f6c939ee1a64834bd305d0ae744d9ac02e3b4410
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545430"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49174149"
 ---
 # <a name="display-related-data-in-wpf-applications"></a>WPF アプリケーションで関連するデータを表示します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[WPF アプリケーションで関連するデータを表示する](https://docs.microsoft.com/visualstudio/data-tools/display-related-data-in-wpf-applications)します。  
-  
   
 一部のアプリケーションでは、複数のテーブルまたは親と子のリレーションシップで相互に関連するエンティティから取得したデータを操作する可能性があります。 顧客を表示するグリッドを表示するなど、`Customers`テーブル。 別のグリッドがから、関連する顧客の注文を表示、ユーザーは、特定の顧客を選択するときに`Orders`テーブル。  
   

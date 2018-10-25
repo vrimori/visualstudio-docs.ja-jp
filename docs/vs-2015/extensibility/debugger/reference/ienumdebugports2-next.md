@@ -1,7 +1,7 @@
 ---
 title: IEnumDebugPorts2::Next |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 3f43d18c-6bd1-4ddd-95ef-9550abd2ad09
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 11d9830666621cd8c3280fbf64cc8379c13b8de9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 71ccf86cd7137e5ad55e3a89fcec1e91a8515f16
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533523"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49869069"
 ---
 # <a name="ienumdebugports2next"></a>IEnumDebugPorts2::Next
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IEnumDebugPorts2::Next](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ienumdebugports2-next)します。  
-  
 列挙体から次の要素のセットを返します。  
   
 ## <a name="syntax"></a>構文  

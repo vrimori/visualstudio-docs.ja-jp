@@ -1,7 +1,7 @@
 ---
 title: 排除 ~ SAK ファイル |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,28 +17,26 @@ ms.assetid: 5277b5fa-073b-4bd1-8ba1-9dc913aa3c50
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a11ed0972c403c4c3ea2a8b3f607135f12e9e315
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c7422b0dae02b12d731713f6da416361798d3276
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539189"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49824311"
 ---
 # <a name="elimination-of-sak-files"></a>~SAK ファイルの削除
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[の排除 ~ SAK ファイル](https://docs.microsoft.com/visualstudio/extensibility/internals/elimination-of-tilde-sak-files)します。  
-  
 ソース管理プラグイン API 1.2 では、~ SAK ファイルは、機能フラグと、ソース管理プラグインが MSSCCPRJ ファイルと共有チェック アウトをサポートしているかどうかを検出する新しい関数で置き換えられています。  
   
 ## <a name="sak-files"></a>~ SAK ファイル  
  Visual Studio .NET 2003 の付いた一時ファイルを作成する ~ SAK します。 これらのファイルは、ソース管理プラグインをサポートしているかどうかに使用されます。  
   
--   MSSCCPRJ します。SCC ファイルです。  
+- MSSCCPRJ します。SCC ファイルです。  
   
--   複数の (共有) チェック アウトします。  
+- 複数の (共有) チェック アウトします。  
   
- プラグインのソース管理プラグイン API 1.2 で提供される高度な機能をサポートする、IDE は、新機能、フラグ、および、次のセクションに記載された関数を使用して一時ファイルを作成することがなくこれらの機能を検出できます。  
+  プラグインのソース管理プラグイン API 1.2 で提供される高度な機能をサポートする、IDE は、新機能、フラグ、および、次のセクションに記載された関数を使用して一時ファイルを作成することがなくこれらの機能を検出できます。  
   
 ## <a name="new-capability-flags"></a>新しい機能フラグ  
  `SCC_CAP_SCCFILE`  

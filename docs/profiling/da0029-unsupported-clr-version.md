@@ -17,27 +17,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f6ab40efbba692cfa85f14b750d3c853d1112704
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 5067c9f93a489c09962a9402f4fe7672cbd61108
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34765740"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818446"
 ---
 # <a name="da0029-unsupported-clr-version"></a>DA0029: サポートされていない CLR バージョンです
+
 |||  
 |-|-|  
 |規則 ID|DA0029|  
 |カテゴリ|プロファイリング ツールの使用|  
 |プロファイル方法|コマンド ラインからのプロファイリング|  
-|メッセージ|収集時に、サポートされていない CLR バージョンが検出されました。 マネージ シンボルが正しく解決されない可能性があります。|  
+|メッセージ|収集時に、サポートされていない CLR バージョンが検出されました。 マネージド シンボルが正しく解決されない可能性があります。|  
 |規則の種類|情報。|  
-  
+
 ## <a name="cause"></a>原因  
  プロファイリング ツールでサポートされていない [!INCLUDE[net_v11_long](../profiling/includes/net_v11_long_md.md)] を使用するアプリケーションをプロファイリングしようとしています。  
-  
+
 ## <a name="rule-description"></a>規則の説明  
- アプリケーションで実行されているマネージ コードのシンボルをプロファイリング ツールが解決できないため、この警告が発生します。 プロファイリング ツールは、[!INCLUDE[net_v11_long](../profiling/includes/net_v11_long_md.md)] を実行しているアプリケーションのマネージ コード シンボルを解決できません。  
-  
+ アプリケーションで実行されているマネージド コードのシンボルをプロファイリング ツールが解決できないため、この警告が発生します。 プロファイリング ツールは、[!INCLUDE[net_v11_long](../profiling/includes/net_v11_long_md.md)] を実行しているアプリケーションのマネージド コード シンボルを解決できません。  
+
 ## <a name="how-to-fix-violations"></a>違反の修正方法  
  なし。

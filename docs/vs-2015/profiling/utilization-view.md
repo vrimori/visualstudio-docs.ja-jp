@@ -1,7 +1,7 @@
 ---
 title: 使用状況ビュー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 26
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 22aa839347a6f9ba99926ad90939f3b93d5c40be
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d97037974c4a416a7d558f7eee85c3b835db8698
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539916"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49198732"
 ---
 # <a name="utilization-view"></a>使用状況ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[使用率ビュー](https://docs.microsoft.com/visualstudio/profiling/utilization-view)します。  
-  
 **使用状況ビュー**には、現在のプロセスによって使用されている CPU、GPU、その他のシステム リソースに関する情報が表示されます。 このビューには、分析対象のプロセス、アイドル プロセス、システム プロセス、一定期間システム上で実行中のその他のプロセスによる平均コア使用状況が表示されます。 任意の時点でどのコアがアクティブなのかは表示されません。 たとえば、特定の期間、2 つのコアがそれぞれキャパシティの 50% で動作している場合、このビューには 1 つの論理コアが使用されているものとして表示されます。 このビューは、プロファイル時間を短い時間セグメントに分割して生成されます。 セグメントごとに、その期間中、論理コアで実行されているプロセス スレッドの平均数がグラフに示されます。  
   
  ![CPU 使用率ビュー](../profiling/media/vsts-ppacpuutil.png "VSTS_PPAcpuUtil")  

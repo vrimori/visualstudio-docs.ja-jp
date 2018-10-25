@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1011: 基本型をパラメーターとして渡すことを検討してください |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: a2ddf1e4f1edc319fdc5744878d4f962ce5b46bb
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: a9afb073ef3e722a2a07a05e1ee8629b31b4cfab
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47592263"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898643"
 ---
 # <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: 基本型をパラメーターとして渡すことを考慮します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1011: 基本型をパラメーターとして渡すことを検討してください](https://docs.microsoft.com/visualstudio/code-quality/ca1011-consider-passing-base-types-as-parameters)します。
 
 |||
 |-|-|
@@ -51,13 +49,13 @@ ms.locfileid: "47592263"
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
  このルールから警告を抑制しても安全です。
 
--   メソッドが派生型によって提供される特定の機能が必要な場合
+- メソッドが派生型によって提供される特定の機能が必要な場合
 
-     \- または -
+   \- または -
 
--   派生型のみ、またはより強い派生型では、適用するのには、メソッドに渡されます。
+- 派生型のみ、またはより強い派生型では、適用するのには、メソッドに渡されます。
 
- このような場合は、コードは、堅牢になります、コンパイラとランタイムによって提供される厳密な型チェックのためです。
+  このような場合は、コードは、堅牢になります、コンパイラとランタイムによって提供される厳密な型チェックのためです。
 
 ## <a name="example"></a>例
  次の例では、メソッド、`ManipulateFileStream`でのみ使用できる、<xref:System.IO.FileStream>オブジェクトで、この規則に違反します。 2 番目のメソッド`ManipulateAnyStream`、置き換えることで、ルールを満たす、<xref:System.IO.FileStream>パラメーターを使用して、<xref:System.IO.Stream>します。

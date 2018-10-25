@@ -1,7 +1,7 @@
 ---
 title: ソース管理のサポート |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 567acde3-354e-4f39-8d99-0ef86c103396
 caps.latest.revision: 19
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 01941fdd4899142ae8abb96f57f93e3ebd0b6256
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 12a7cb2de6f3710f7b9e608f008d72d3b0b0e777
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548661"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49279579"
 ---
 # <a name="supporting-source-control"></a>ソース管理のサポート
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ソース管理をサポートしている](https://docs.microsoft.com/visualstudio/extensibility/internals/supporting-source-control)します。  
-  
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ファイルのチェック アウト、チェックイン、およびプロジェクトまたはエディターの他のソース管理操作をサポートしています。 ソース管理クライアントでは、として[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]はソース管理パッケージでは、対話するように設計[!INCLUDE[vsvss](../../includes/vsvss-md.md)]、アーカイブ、バージョン管理、および、動的に定義された一連のファイルの制御機能を提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

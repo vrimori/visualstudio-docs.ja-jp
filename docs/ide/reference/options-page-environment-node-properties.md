@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ba201b4518b350a96c4c4057f6945d24ea603f0
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 07031432218f2d4e0eb037582f2b1f5a76193cdb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31953924"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49879759"
 ---
 # <a name="options-page-environment-node-properties"></a>[環境] ノード プロパティ ([オプション] ページ)
 このドキュメントでは、**[オプション]** ダイアログ ボックスの **[環境]** カテゴリ (`DTE.Properties("Environment", <Property Page>)`) に関連付けられているページ (またはプロパティ コレクション) について説明します。 各サブセクションの見出しは、Properties コレクションにアクセスするための呼び出しです。その下の表では、コレクションのプロパティを示します。
@@ -27,7 +27,7 @@ ms.locfileid: "31953924"
  `DTE.Properties("Environment", "General")`
 
 |プロパティ項目名|[値]|説明|
-|------------------------|-----------|-----------------|
+| - |-----------|-----------------|
 |ShowStatusBar|Get/Set (Boolean)|ステータス バーを表示するかどうかを指定します。|
 |WindowMenuContainsNItems|Get/Set (Short)|Windows メニューの 1 番下にドキュメント ウィンドウを含める方法を指定します。|
 |MRUListContainsNItems|Get/Set (Short)|"最近使用した" サブメニューに表示するファイルの数を指定します。|
@@ -42,7 +42,7 @@ ms.locfileid: "31953924"
  `DTE.Properties("Environment", "AddinMacrosSecurity")`
 
 |プロパティ項目名|[値]|説明|
-|------------------------|-----------|-----------------|
+| - |-----------|-----------------|
 |MacrosEnabled|Get/Set (Boolean)|マクロの実行を許可します。|
 |AddinsEnabled|Get/Set (Boolean)|アドインの読み込みを許可します。|
 |LoadAddinsFromTheWeb|Get/Set (Boolean)|Web 上の URL からのアドインの読み込みを許可します。|
@@ -51,7 +51,7 @@ ms.locfileid: "31953924"
  `DTE.Properties("Environment", "Documents")`
 
 |プロパティ項目名|[値]|説明|
-|------------------------|-----------|-----------------|
+| - |-----------|-----------------|
 |ReuseSavedActiveDocWindow|Get/Set (Boolean)|現在のドキュメントが保存されている場合、新しいファイルを開くときに現在のドキュメント ウィンドウを再利用するかどうかを指定します。 `false` の場合は、ドキュメントを開くたびに、新しいドキュメント ウィンドウが開きます。|
 |DetectFileChangesOutsideIDE|Get/Set (Boolean)|ファイルがディスク上で変更されていることをオペレーティング システムから通知された場合に、IDE で開かれているファイルを自動的に再読み込みするかどうかを指定します。|
 |AutoloadExternalChanges|Get/Set (Boolean)|開いているドキュメントが外部で変更されていることが検出されたとき、そのドキュメントが変更されていない場合は自動的に再読み込みするかどうかを指定します。 開いているドキュメントが変更され、このプロパティが `true` の場合は、`false` に設定されている場合と同様にメッセージが表示されます。|
@@ -68,7 +68,7 @@ ms.locfileid: "31953924"
  `DTE.Properties("Environment", "ExtensionManager")`
 
 |プロパティ項目名|[値]|説明|
-|------------------------|-----------|-----------------|
+| - |-----------|-----------------|
 |EnableAdminExtensions|Get/Set (Boolean)|Visual Studio が管理者の資格情報で実行されている場合、ユーザー単位の拡張機能を読み込みます。 この値を変更したら、Visual Studio を再起動する必要があります。|
 |EnableOnline|Get/Set (Boolean)|Visual Studio Marketplace の拡張機能にアクセスできるようにします。|
 |AutomaticallyCheckForUpdates|Get/Set (Boolean)|インストール済みの拡張機能に対する更新プログラムがあるかどうかを自動的に確認します。|
@@ -77,7 +77,7 @@ ms.locfileid: "31953924"
  `DTE.Properties("Environment", "FindAndReplace")`
 
 |プロパティ項目名|[値]|説明|
-|------------------------|-----------|-----------------|
+| - |-----------|-----------------|
 |ShowWarningMessages|Get/Set (Boolean)|警告メッセージを表示します。|
 |InitializeFromEditor|Get/Set (Boolean)|**[検索する文字列]** ボックスのテキストをエディターから自動的に作成します。|
 |ShowMessageBoxes|Get/Set (Boolean)|情報メッセージを表示します。|
@@ -87,7 +87,7 @@ ms.locfileid: "31953924"
  `DTE.Properties("Environment", "Import and Export Settings")`
 
 |プロパティ項目名|[値]|説明|
-|------------------------|-----------|-----------------|
+| - |-----------|-----------------|
 |TrackTeamSettings|Get/Set (Boolean)|TeamSettingsFile で指定されたファイルの設定を使用します。|
 |TeamSettingsFile|Get/Set (String)|チーム設定を含むファイルの名前です。|
 |AutoSaveFile|Get/Set (String)|ユーザー設定が自動的に保存されるファイルの名前です。|
@@ -96,21 +96,21 @@ ms.locfileid: "31953924"
  `DTE.Properties("Environment", "International")`
 
 |プロパティ項目名|[値]|説明|
-|------------------------|-----------|-----------------|
+| - |-----------|-----------------|
 |言語|Get/Set (String)|Visual Studio の現在の言語の LCID 値です。|
 
 ## <a name="keyboard"></a>キーボード
  `DTE.Properties("Environment", "Keyboard")`
 
 |プロパティ項目名|[値]|説明|
-|------------------------|-----------|-----------------|
+| - |-----------|-----------------|
 |Scheme|Get/Set (String)|組み込みスキームを含む文字列、または読み込まれた .vsk ファイルの完全パスを含む文字列を返します。 .vsk ファイルが読み込まれていない場合は "(既定)" を返します。|
 
 ## <a name="projects-and-solution"></a>プロジェクトおよびソリューション
  `DTE.Properties("Environment", "ProjectsAndSolution")`
 
 |プロパティ項目名|[値]|説明|
-|------------------------|-----------|-----------------|
+| - |-----------|-----------------|
 |OnRunOrPreview|Get/Set (String)|ビルドしたプロジェクトをプレビューまたは実行する前に IDE ですべての内容を保存するかどうかを指定します。|
 |ProjectsLocation|Get/Set (String)|**[プロジェクトの追加]** ダイアログ ボックスで新しいプロジェクトを保存する既定のディレクトリを指定します。|
 |ShowOutputWindowBeforeBuild|Get/Set (Boolean)|ビルドの開始時に **[出力]** ウィンドウを表示するかどうかを指定します。|
@@ -133,7 +133,7 @@ ms.locfileid: "31953924"
  `DTE.Properties("Environment", "Startup")`
 
 |プロパティ項目名|[値]|説明|
-|------------------------|-----------|-----------------|
+| - |-----------|-----------------|
 |OnStartUp|Get/Set (Enum)|起動時に実行するアクションです。<xref:EnvDTE.vsStartUp> から取得され、0 ～ 5 の値で示されます。<br /><br /> -   0: ホーム ページを開く<br />-   1: 最後に読み込んだソリューション<br />-   2: **[プロジェクトを開く]** ダイアログ ボックスの表示<br />-   3: **[新しいプロジェクト]** ダイアログ ボックスの表示<br />-   4: 空の環境の表示<br />-   5: スタート ページの表示|
 |StartPageRSSUrl|Get/Set (String)|起動時に使用する RSS フィードの URL です。|
 |StartPageRefreshDownloadedContent|Get/Set (Boolean)|StartPageRefreshInterval で指定された間隔が経過するたびにスタート ページを更新します。|
@@ -143,7 +143,7 @@ ms.locfileid: "31953924"
  `DTE.Properties("Environment", "TaskList")`
 
 |プロパティ項目名|[値]|説明|
-|------------------------|-----------|-----------------|
+| - |-----------|-----------------|
 |ConfirmTaskDeletion|Get/Set (Boolean)|**[タスク一覧]** からタスクを削除する際に確認のダイアログ ボックスを表示するかどうかを指定します。|
 |WarnOnAddingHiddenItem|Get/Set (Boolean)|表示されないユーザー タスクを追加したときに警告されるようにするかどうかを指定します。|
 |DontShowFilePaths|Get/Set (Boolean)|[タスク一覧] に完全ファイル パスを表示するかどうかを指定します。|
@@ -153,7 +153,7 @@ ms.locfileid: "31953924"
  `DTE.Properties("Environment", "WebBrowser")`
 
 |プロパティ項目名|[値]|説明|
-|------------------------|-----------|-----------------|
+| - |-----------|-----------------|
 |HomePage|Get/Set (String)|ホーム ページの URL を表します。|
 |SearchPage|Get/Set (String)|検索ページの URL を表します。|
 |ViewSourceIn|Get/Set (Enum)|<xref:EnvDTE.vsBrowserViewSource> (Source、Design、External) です。|

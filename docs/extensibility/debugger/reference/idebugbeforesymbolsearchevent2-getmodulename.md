@@ -1,5 +1,5 @@
 ---
-title: IDebugBeforeSymbolSearchEvent2::GetModuleName |Microsoft ドキュメント
+title: IDebugBeforeSymbolSearchEvent2::GetModuleName |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 767a79433db614aa71aab96ca9ff538b089eefd3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 467ba82e53eae2b7aa1f4694fd99f1c2efea8cbb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31098834"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49869250"
 ---
 # <a name="idebugbeforesymbolsearchevent2getmodulename"></a>IDebugBeforeSymbolSearchEvent2::GetModuleName
-現在デバッグ中のモジュールの名前を取得します。  
+現在デバッグ中、モジュールの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,13 +40,13 @@ public int GetModuleName (
   
 #### <a name="parameters"></a>パラメーター  
  `pbstrModuleName`  
- [out]モジュールの名前です。  
+ [out]モジュールの名前。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="example"></a>例  
- 次の例に対して、このメソッドを実装する方法を示しています、 **CDebugBeforeSymbolSearchEventBase**を公開するオブジェクト、 [IDebugBeforeSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md)インターフェイスです。  
+ 次の例では、このメソッドを実装する方法を示しています、 **CDebugBeforeSymbolSearchEventBase**を公開するオブジェクト、 [IDebugBeforeSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md)インターフェイス。  
   
 ```cpp  
 STDMETHODIMP CDebugBeforeSymbolSearchEventBase::GetModuleName(BSTR *pbstrModuleName)  

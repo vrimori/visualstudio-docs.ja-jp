@@ -1,22 +1,22 @@
 ---
-title: Visual Studio での単体テストの概要
+title: 単体テストの概要
 ms.date: 05/02/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit test plans
+author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 6fb81ce1891a1e37670c81d1e7d0bf4b13fa2796
-ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
+ms.openlocfilehash: 171d329ed852bf6a27f20f12ae0f5421103820ff
+ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39469068"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46370808"
 ---
 # <a name="get-started-with-unit-testing"></a>単体テストの概要
 
@@ -103,9 +103,7 @@ IntelliTest を実行すると、どのテストが失敗しているかを簡�
 
 ## <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>コード カバレッジを使用した、テストされるコード割合の確認
 
-単体テストなどのコード化されたテストによって実際にテストされるプロジェクトのコードの割合を調べるには、Visual Studio のコード カバレッジ機能を使用できます。 バグから効果的に保護するには、コードの大部分を "カバー" するようにテストを実行する必要があります。 その方法については、「[コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)」を参照してください。
-
-![コード カバレッジを使用した、テストされるコード割合の確認](media/codecoverage.png)
+単体テストなどのコード化されたテストによって実際にテストされるプロジェクトのコードの割合を調べるには、Visual Studio のコード カバレッジ機能を使用できます。 バグを効果的に回避するには、コードの大部分を対象としたテストが必要です。 その方法については、「[コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)」を参照してください。
 
 ## <a name="use-a-different-unit-test-framework"></a>別の単体テスト フレームワークを使用する
 

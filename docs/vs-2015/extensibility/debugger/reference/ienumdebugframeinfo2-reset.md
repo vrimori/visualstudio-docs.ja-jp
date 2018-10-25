@@ -1,7 +1,7 @@
 ---
 title: IEnumDebugFrameInfo2::Reset |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: e149b559-f072-480b-9552-a452b147f3a8
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e32a672c20a500b1bc9a040ef9d81cca6179b736
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b15c27de5a9460503c5aa4476e917563b67f10e8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535401"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811569"
 ---
 # <a name="ienumdebugframeinfo2reset"></a>IEnumDebugFrameInfo2::Reset
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IEnumDebugFrameInfo2::Reset](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ienumdebugframeinfo2-reset)します。  
-  
 最初の要素を列挙値をリセットします。  
   
 ## <a name="syntax"></a>構文  

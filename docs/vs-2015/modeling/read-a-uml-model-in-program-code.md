@@ -1,7 +1,7 @@
 ---
 title: プログラム コードで UML モデルを読み取る |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 25
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: f55126366fc80830edd92b16d64c51991c13e731
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c9bb652ee6b7ea9500d2ac153ca06d8b11430c9e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535755"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942550"
 ---
 # <a name="read-a-uml-model-in-program-code"></a>プログラム コードで UML モデルを読み取る
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プログラム コードで UML モデルを読み取る](https://docs.microsoft.com/visualstudio/modeling/read-a-uml-model-in-program-code)します。  
-  
 UML API を使用して、UML モデルおよび UML 図を読み込むことができます。  
   
 ##  <a name="Reading"></a> プログラム コードでのモデルの読み込み  
@@ -83,31 +81,31 @@ foreach (string diagramFile in projectReader. DiagramFileNames)
   
 #### <a name="to-add-references-to-read-a-model-in-a-stand-alone-application"></a>スタンドアロン アプリケーションのモデルを読み込むための参照を追加するには  
   
-1.  ソリューション エクスプ ローラーでプロジェクトをアプリケーションを構築し、 をクリックしを右クリックして**プロパティ**します。 プロパティ エディターでの**アプリケーション**タブで、設定**ターゲット フレームワーク**に必要な .NET Framework のバージョン。  
+1. ソリューション エクスプ ローラーでプロジェクトをアプリケーションを構築し、 をクリックしを右クリックして**プロパティ**します。 プロパティ エディターでの**アプリケーション**タブで、設定**ターゲット フレームワーク**に必要な .NET Framework のバージョン。  
   
-2.  UML モデルにアクセスするために必要な [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)] 参照を追加します。  
+2. UML モデルにアクセスするために必要な [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)] 参照を追加します。  
   
-    -   Microsoft.VisualStudio.Uml.Interfaces.dll  
+   -   Microsoft.VisualStudio.Uml.Interfaces.dll  
   
-    -   Microsoft.VisualStudio.ArchitectureTools.Extensibility.dll  
+   -   Microsoft.VisualStudio.ArchitectureTools.Extensibility.dll  
   
-3.  次のプロジェクト参照を追加すると、前のセクションで示した参照に加えて**\Program Files\Microsoft Visual Studio [バージョン] \Common7\IDE\PrivateAssemblies**:  
+3. 次のプロジェクト参照を追加すると、前のセクションで示した参照に加えて**\Program Files\Microsoft Visual Studio [バージョン] \Common7\IDE\PrivateAssemblies**:  
   
-    -   Microsoft.VisualStudio.Uml.dll  
+   - Microsoft.VisualStudio.Uml.dll  
   
-    -   Microsoft.VisualStudio.TeamArchitect.ModelStore.Dsl.dll  
+   - Microsoft.VisualStudio.TeamArchitect.ModelStore.Dsl.dll  
   
      アプリケーションで図を読み込む場合は、次の参照が必要になることもあります。  
   
-    -   Microsoft.VisualStudio.TeamArchitect.ActivityDesigner.Dsl.dll  
+   - Microsoft.VisualStudio.TeamArchitect.ActivityDesigner.Dsl.dll  
   
-    -   Microsoft.VisualStudio.TeamArchitect.ComponentDesigner.Dsl.dll  
+   - Microsoft.VisualStudio.TeamArchitect.ComponentDesigner.Dsl.dll  
   
-    -   Microsoft.VisualStudio.TeamArchitect.LogicalClassDesigner.Dsl.dll  
+   - Microsoft.VisualStudio.TeamArchitect.LogicalClassDesigner.Dsl.dll  
   
-    -   Microsoft.VisualStudio.TeamArchitect.SequenceDesigner.Dsl.dll  
+   - Microsoft.VisualStudio.TeamArchitect.SequenceDesigner.Dsl.dll  
   
-    -   Microsoft.VisualStudio.TeamArchitect.UseCase.Dsl.dll  
+   - Microsoft.VisualStudio.TeamArchitect.UseCase.Dsl.dll  
   
 ## <a name="see-also"></a>関連項目  
  [UML API を使用したプログラミング](../modeling/programming-with-the-uml-api.md)   

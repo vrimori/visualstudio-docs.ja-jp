@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findInlineFramesByAddr |Microsoft ドキュメント
+title: IDiaSymbol::findInlineFramesByAddr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cbf330238d213854ba26d8345d0daaee7b3f9b1d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b0ddc8e2ea4c4ba8e2f142a3f30ec1206a8abc4c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31464470"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862373"
 ---
 # <a name="idiasymbolfindinlineframesbyaddr"></a>IDiaSymbol::findInlineFramesByAddr
-すべての指定したアドレスのインライン フレームを反復処理するクライアントを許可する列挙体を取得します。  
+により、クライアントは、すべての指定したアドレスにインライン フレームを反復処理する列挙体を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,7 +43,7 @@ HRESULT findInlineFramesByAddr (
  [out]保持する`IDiaEnumSymbols`取得されるフレームの一覧を含むオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   

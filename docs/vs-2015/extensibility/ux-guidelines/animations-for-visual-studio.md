@@ -1,7 +1,7 @@
 ---
 title: Visual Studio のアニメーション |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 446773a9-e6f7-4c0c-8dbc-9e303bf32eb1
 caps.latest.revision: 3
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b79ed46a6b81969658e5413d8a2d8f392893fb7b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3ba2f13ff484f73a7455089ccf2689037eabebdc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548212"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49824400"
 ---
 # <a name="animations-for-visual-studio"></a>Visual Studio のアニメーション
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio のアニメーション](https://docs.microsoft.com/visualstudio/extensibility/ux-guidelines/animations-for-visual-studio)します。  
-  
 ## <a name="animation-fundamentals"></a>アニメーションの基礎  
   
 ### <a name="animation-best-practices-in-visual-studio"></a>Visual Studio でのアニメーションのベスト プラクティス  
@@ -66,15 +64,15 @@ ms.locfileid: "47548212"
   
 #### <a name="do-not"></a>できません：  
   
--   小さな動き (小さなフット プリントに移動) を使用して、フェードインしオブジェクトの移動の経過と共に変化よりも優先されます。  
+- 小さな動き (小さなフット プリントに移動) を使用して、フェードインしオブジェクトの移動の経過と共に変化よりも優先されます。  
   
--   実際の画面の広い領域に発生するアニメーションを使用します。 サイズに関係なくこのスタイルのアニメーションは、ユーザーの邪魔になります。  
+- 実際の画面の広い領域に発生するアニメーションを使用します。 サイズに関係なくこのスタイルのアニメーションは、ユーザーの邪魔になります。  
   
--   ユーザーが現在にフォーカスがあるオブジェクトまたはとの対話に関係なくアニメーションを使用します。  
+- ユーザーが現在にフォーカスがあるオブジェクトまたはとの対話に関係なくアニメーションを使用します。  
   
--   強制的に点滅の停止にするために点滅通知に応答するユーザーなど、状態をリセットするユーザーの介入を必要とするアニメーションを使用します。 任意の方法で操作するには、それらを無視するための十分な必要があります。  
+- 強制的に点滅の停止にするために点滅通知に応答するユーザーなど、状態をリセットするユーザーの介入を必要とするアニメーションを使用します。 任意の方法で操作するには、それらを無視するための十分な必要があります。  
   
- これらのベスト プラクティスのアプリケーションの詳細については、次を参照してください。[アニメーション パターン](../../extensibility/ux-guidelines/animations-for-visual-studio.md#BKMK_AnimationPatterns)します。  
+  これらのベスト プラクティスのアプリケーションの詳細については、次を参照してください。[アニメーション パターン](../../extensibility/ux-guidelines/animations-for-visual-studio.md#BKMK_AnimationPatterns)します。  
   
 ### <a name="animation-metrics"></a>アニメーションのメトリック  
   
@@ -207,21 +205,21 @@ ms.locfileid: "47548212"
 ### <a name="overview"></a>概要  
  Visual Studio でのアニメーションでは、特定の機能を提供し、ユーザーの生産性を妨げる可能性がものです。 準拠する一般的なアニメーションの特徴:  
   
--   小規模および控えめです  
+- 小規模および控えめです  
   
--   自然でリアルです  
+- 自然でリアルです  
   
--   わかりにくいと末  
+- わかりにくいと末  
   
--   高速で効率的です  
+- 高速で効率的です  
   
--   緩やかであり、内部で接続されていません  
+- 緩やかであり、内部で接続されていません  
   
- 次の図は、Visual Studio で使用するために推奨されるアニメーションのスタイルを示します。 アニメーションと繊細なアニメーションなどありませんのフェードイン/フェードアウトが最も頻繁に使用します。 拡大/縮小などのアニメーションの動きの制限のあるアプリケーションは、X と Y 位置の変更、および回転。  
+  次の図は、Visual Studio で使用するために推奨されるアニメーションのスタイルを示します。 アニメーションと繊細なアニメーションなどありませんのフェードイン/フェードアウトが最も頻繁に使用します。 拡大/縮小などのアニメーションの動きの制限のあるアプリケーションは、X と Y 位置の変更、および回転。  
   
- ![Visual Studio のアニメーションのスタイルをお勧めします](../../extensibility/ux-guidelines/media/1202-a-vsanimstyles.png "1202 a_VSAnimStyles")  
+  ![Visual Studio のアニメーションのスタイルをお勧めします](../../extensibility/ux-guidelines/media/1202-a-vsanimstyles.png "1202 a_VSAnimStyles")  
   
- **Visual Studio の推奨されるアニメーションのスタイル**  
+  **Visual Studio の推奨されるアニメーションのスタイル**  
   
 #### <a name="appear-and-disappear"></a>表示/非表示  
  このパターンでは、要素はからビューの外へと遷移のアニメーションすることがなく表示からスイッチします。  
@@ -365,65 +363,65 @@ ms.locfileid: "47548212"
   
 #### <a name="tab-open"></a>開いているタブします。  
   
--   スタイル: 表示  
+- スタイル: 表示  
   
--   継続時間: 秒  
+- 継続時間: 秒  
   
- ![Visual Studio で開くアニメーションをタブ](../../extensibility/ux-guidelines/media/1202-h-tabopen.png "1202 h_TabOpen")  
+  ![Visual Studio で開くアニメーションをタブ](../../extensibility/ux-guidelines/media/1202-h-tabopen.png "1202 h_TabOpen")  
   
 #### <a name="tab-close"></a>タブを閉じる  
   
--   X 位置を変更するスタイル。  
+- X 位置を変更するスタイル。  
   
--   200 ミリ秒の継続時間:  
+- 200 ミリ秒の継続時間:  
   
- ![Visual studio を閉じるアニメーションをタブ](../../extensibility/ux-guidelines/media/1202-i-tabclose.png "1202 i_TabClose")  
+  ![Visual studio を閉じるアニメーションをタブ](../../extensibility/ux-guidelines/media/1202-i-tabclose.png "1202 i_TabClose")  
   
 #### <a name="tab-reorder"></a>タブの順序変更  
   
--   X 位置を変更するスタイル。  
+- X 位置を変更するスタイル。  
   
--   200 ミリ秒の継続時間:  
+- 200 ミリ秒の継続時間:  
   
- ![Visual Studio での並べ替えアニメーションをタブ](../../extensibility/ux-guidelines/media/1202-j-tabreorder.png "1202 j_TabReorder")  
+  ![Visual Studio での並べ替えアニメーションをタブ](../../extensibility/ux-guidelines/media/1202-j-tabreorder.png "1202 j_TabReorder")  
   
 #### <a name="close-floating-document"></a>フローティング ドキュメントを閉じる  
   
--   スタイル: 表示  
+- スタイル: 表示  
   
--   200 ミリ秒の継続時間:  
+- 200 ミリ秒の継続時間:  
   
- ![Visual Studio でドキュメントのアニメーションを浮動閉じる](../../extensibility/ux-guidelines/media/1202-k-closefloatingdocument.png "1202 k_CloseFloatingDocument")  
+  ![Visual Studio でドキュメントのアニメーションを浮動閉じる](../../extensibility/ux-guidelines/media/1202-k-closefloatingdocument.png "1202 k_CloseFloatingDocument")  
   
 #### <a name="window-state-transition"></a>ウィンドウの状態遷移  
   
--   スタイル: に一貫性のあるその他の windows では、現在のオペレーティング システムのドキュメントを閉じるアニメーションを定義できるようにします。  
+- スタイル: に一貫性のあるその他の windows では、現在のオペレーティング システムのドキュメントを閉じるアニメーションを定義できるようにします。  
   
--   200 ミリ秒の継続時間:  
+- 200 ミリ秒の継続時間:  
   
- ![Visual Studio でのウィンドウ状態遷移のアニメーション](../../extensibility/ux-guidelines/media/1202-l-windowstatetransition.png "1202 l_WindowStateTransition")  
+  ![Visual Studio でのウィンドウ状態遷移のアニメーション](../../extensibility/ux-guidelines/media/1202-l-windowstatetransition.png "1202 l_WindowStateTransition")  
   
 #### <a name="menu-open"></a>メニューが開きます  
   
--   スタイル: フェード イン  
+- スタイル: フェード イン  
   
--   200 ミリ秒の継続時間:  
+- 200 ミリ秒の継続時間:  
   
- ![Visual Studio でメニューを開くアニメーション](../../extensibility/ux-guidelines/media/1202-m-menuopen.png "1202 m_MenuOpen")  
+  ![Visual Studio でメニューを開くアニメーション](../../extensibility/ux-guidelines/media/1202-m-menuopen.png "1202 m_MenuOpen")  
   
 #### <a name="menu-close"></a>メニューを閉じる  
   
--   スタイル: フェードアウト  
+- スタイル: フェードアウト  
   
--   200 ミリ秒の継続時間:  
+- 200 ミリ秒の継続時間:  
   
- ![Visual Studio でメニューを閉じるアニメーション](../../extensibility/ux-guidelines/media/1202-n-menuclose.png "1202 n_MenuClose")  
+  ![Visual Studio でメニューを閉じるアニメーション](../../extensibility/ux-guidelines/media/1202-n-menuclose.png "1202 n_MenuClose")  
   
 #### <a name="auto-hide-tool-window-reveal"></a>自動非表示ツール ウィンドウの表示  
   
--   スタイル: 表示  
+- スタイル: 表示  
   
--   継続時間: 秒  
+- 継続時間: 秒  
   
- ![自動&#45;Visual Studio でツール ウィンドウのアニメーションを非表示に](../../extensibility/ux-guidelines/media/1202-o-autohidetoolwindowreveal.png "1202 o_AutoHideToolWindowReveal")
+  ![自動&#45;Visual Studio でツール ウィンドウのアニメーションを非表示に](../../extensibility/ux-guidelines/media/1202-o-autohidetoolwindowreveal.png "1202 o_AutoHideToolWindowReveal")
 

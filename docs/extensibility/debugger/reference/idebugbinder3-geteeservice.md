@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetEEService |Microsoft ドキュメント
+title: IDebugBinder3::GetEEService |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56c97e9fc7e5505578533c9e7b958a73dc8d2380
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5b283ecf3a21f5a5b9246a628a959b4a271c884b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31102588"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866663"
 ---
 # <a name="idebugbinder3geteeservice"></a>IDebugBinder3::GetEEService
 このメソッドは、要求されたサービスを返します。  
@@ -50,19 +50,19 @@ Int GetEEService(
  [in]`GUID` (null 値が許容される) のベンダー。  
   
  `language`  
- [in]`GUID` (null 値を許容) 言語のです。  
+ [in]`GUID` (null 値が許容可能な) 言語の。  
   
  `iid`  
- [in]`IID`のサービスから取得します。  
+ [in]`IID`のサービスを取得します。  
   
  `ppService`  
  [out]要求されたサービスへのインターフェイス。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 渡す、`IID`の[IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)インターフェイス (`IID_IEEVisualizerServiceProvider`) 型のビジュアライザー サービスが利用可能な。 式エバリュエーターを取得できるため場合、 [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)種類のビジュアライザーをサポートするインターフェイスです。 参照してください[Visualizing とデータの表示](../../../extensibility/debugger/visualizing-and-viewing-data.md)詳細についてはします。  
+## <a name="remarks"></a>Remarks  
+ 渡す、`IID`の[IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)インターフェイス (`IID_IEEVisualizerServiceProvider`) 型のビジュアライザー サービスが使用できるかどうかをします。 そのため、式エバリュエーターを取得できます場合、 [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)型のビジュアライザーをサポートするインターフェイス。 参照してください[視覚化してデータの表示](../../../extensibility/debugger/visualizing-and-viewing-data.md)詳細についてはします。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   

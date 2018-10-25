@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fa41165041c4be1b4d527f2df20dacfcf0600af
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0de2f17933977d13fb524d34887a9e9af9c88114
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31923840"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951107"
 ---
 # <a name="customize-the-help-viewer"></a>ヘルプ ビューアーのカスタマイズ
 フォント サイズ、結果の最大数、英語のコンテンツを含めるかどうかなどの他のオプションと同様に、[ヘルプ ビューアー] ウィンドウのレイアウトをカスタマイズすることができます。
@@ -41,7 +41,7 @@ ms.locfileid: "31923840"
 ツール バーの **[ビューアーのオプション]** ボタンをクリックして、**[ビューアーのオプション]** ダイアログ ボックスを開きます。
 
 |次のタスクを実行するには:|次の手順を実行します。|
-|---------------------------|---------------------|
+| - | - |
 |テキストが表示されるフォントのサイズを変更する|**[文字のサイズ]** 一覧でサイズを選択します。|
 |**[検索]** タブに表示される検索結果の最大数を変更する|**[検索結果の最大数]** 一覧で値を選択します。|
 |**[お気に入り]** ウィンドウに表示される履歴エントリの最大数を変更する|**[保存する履歴エントリの最大数]** 一覧で値を選択します。|

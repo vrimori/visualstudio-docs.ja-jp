@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2238: シリアル化メソッドを正しく実装する |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,12 +20,12 @@ caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 772127c7472d9b1204953493188ba405c252dbb5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3222deaeac97df8b954853f21eaff40a8244d8ca
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544448"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864284"
 ---
 # <a name="ca2238-implement-serialization-methods-correctly"></a>CA2238: シリアル化メソッドを正しく実装します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,15 +45,15 @@ Visual Studio 2017 の最新ドキュメントについては、次を参照し�
 ## <a name="rule-description"></a>規則の説明  
  メソッドは、シリアル化イベントのハンドラーをシリアル化イベントの次の属性のいずれかの操作を適用することによって指定されます。  
   
--   <xref:System.Runtime.Serialization.OnSerializingAttribute?displayProperty=fullName>  
+- <xref:System.Runtime.Serialization.OnSerializingAttribute?displayProperty=fullName>  
   
--   <xref:System.Runtime.Serialization.OnSerializedAttribute?displayProperty=fullName>  
+- <xref:System.Runtime.Serialization.OnSerializedAttribute?displayProperty=fullName>  
   
--   <xref:System.Runtime.Serialization.OnDeserializingAttribute?displayProperty=fullName>  
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute?displayProperty=fullName>  
   
--   <xref:System.Runtime.Serialization.OnDeserializedAttribute?displayProperty=fullName>  
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute?displayProperty=fullName>  
   
- シリアル化イベントのハンドラーが型の 1 つのパラメーターを受け取る<xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>、return `void`、いて`private`可視性。  
+  シリアル化イベントのハンドラーが型の 1 つのパラメーターを受け取る<xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>、return `void`、いて`private`可視性。  
   
 ## <a name="how-to-fix-violations"></a>違反の修正方法  
  この規則違反を修正するには、シグネチャ、戻り値の型、またはシリアル化のイベント ハンドラーの可視性を修正します。  

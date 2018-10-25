@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b113d0d62156d77d08fa2fcdbb415d0518eba3a8
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: ddede8542cda7499a9781c19a6baf1c58acfd125
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671898"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839545"
 ---
 # <a name="imanagedaddin-interface"></a>IManagedAddin インターフェイス
   読み込むコンポーネントを作成するには、その IManagedAddin インターフェイスを実装では、VSTO アドインを管理します。このインターフェイスは、2007 Microsoft Office system に追加された機能です。  
@@ -57,25 +57,25 @@ interface IManagedAddin : IUnknown
 ## <a name="how-managed-add-ins-are-loaded"></a>マネージ アドインを読み込む方法  
  アプリケーションが起動すると、次の処理が行われます。  
   
-1.  アプリケーションによって、次のレジストリ キーにあるエントリが検索され、VSTO アドインが検出されます。  
+1. アプリケーションによって、次のレジストリ キーにあるエントリが検索され、VSTO アドインが検出されます。  
   
-     **HKEY_CURRENT_USER\Software\Microsoft\Office\\_\<アプリケーション名 >_ \Addins\**  
+    **HKEY_CURRENT_USER\Software\Microsoft\Office\\*\<アプリケーション名 >* \Addins\\**  
   
-     このレジストリ キーにある各エントリは、VSTO アドインの一意な ID です。 通常、これは VSTO アドイン アセンブリの名前です。  
+    このレジストリ キーにある各エントリは、VSTO アドインの一意な ID です。 通常、これは VSTO アドイン アセンブリの名前です。  
   
-2.  アプリケーションによって、各 VSTO アドイン エントリにある `Manifest` エントリが検索されます。  
+2. アプリケーションによって、各 VSTO アドイン エントリにある `Manifest` エントリが検索されます。  
   
-     マネージ VSTO アドインのマニフェストの完全なパスを格納できる、`Manifest`エントリ**HKEY_CURRENT_USER\Software\Microsoft\Office\\_\<アプリケーション名 >_ \Addins\\_\<アドイン ID >_** します。 マニフェストは、VSTO アドインの読み込みに使用される情報を提供するファイル (通常は XML ファイル) です。  
+    マネージ VSTO アドインのマニフェストの完全なパスを格納できる、`Manifest`エントリ**HKEY_CURRENT_USER\Software\Microsoft\Office\\_\<アプリケーション名 >_ \Addins\\_\<アドイン ID >_** します。 マニフェストは、VSTO アドインの読み込みに使用される情報を提供するファイル (通常は XML ファイル) です。  
   
-3.  アプリケーションによって `Manifest` エントリが検出されると、そのアプリケーションはマネージド VSTO アドイン ローダー コンポーネントの読み込みを試みます。 アプリケーションは、IManagedAddin インターフェイスを実装する COM オブジェクトを作成しようとしています。  
+3. アプリケーションによって `Manifest` エントリが検出されると、そのアプリケーションはマネージド VSTO アドイン ローダー コンポーネントの読み込みを試みます。 アプリケーションは、IManagedAddin インターフェイスを実装する COM オブジェクトを作成しようとしています。  
   
-     [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] VSTO アドイン ローダー コンポーネントが含まれています (*VSTOLoader.dll*)、または IManagedAddin インターフェイスを実装して、独自に作成することができます。  
+    [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] VSTO アドイン ローダー コンポーネントが含まれています (*VSTOLoader.dll*)、または IManagedAddin インターフェイスを実装して、独自に作成することができます。  
   
-4.  アプリケーションによって [IManagedAddin::Load](../vsto/imanagedaddin-load.md) メソッドが呼び出され、 `Manifest` エントリの値に渡されます。  
+4. アプリケーションによって [IManagedAddin::Load](../vsto/imanagedaddin-load.md) メソッドが呼び出され、 `Manifest` エントリの値に渡されます。  
   
-5.  [IManagedAddin::Load](../vsto/imanagedaddin-load.md) メソッドによって、読み込む VSTO アドイン用のアプリケーション ドメインやセキュリティ ポリシーの構成など、VSTO アドイン読み込みに必要なタスクが実行されます。  
+5. [IManagedAddin::Load](../vsto/imanagedaddin-load.md) メソッドによって、読み込む VSTO アドイン用のアプリケーション ドメインやセキュリティ ポリシーの構成など、VSTO アドイン読み込みに必要なタスクが実行されます。  
   
- Microsoft Office アプリケーションを検出して読み込むに使用するキーが VSTO アドインを管理対象レジストリの詳細についてを参照してください[VSTO アドインのレジストリ エントリ](../vsto/registry-entries-for-vsto-add-ins.md)します。  
+   Microsoft Office アプリケーションを検出して読み込むに使用するキーが VSTO アドインを管理対象レジストリの詳細についてを参照してください[VSTO アドインのレジストリ エントリ](../vsto/registry-entries-for-vsto-add-ins.md)します。  
   
 ## <a name="guidance-to-implement-imanagedaddin"></a>IManagedAddin を実装するためのガイダンス  
  IManagedAddin を実装する場合は、次の CLSID を使用して実装を含んでいる DLL を登録する必要があります。  

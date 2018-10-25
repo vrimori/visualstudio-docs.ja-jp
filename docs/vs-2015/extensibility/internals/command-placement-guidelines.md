@@ -1,7 +1,7 @@
 ---
 title: コマンド配置のガイドライン |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 63b3478e-e08a-420b-a0ec-76767e0cb289
 caps.latest.revision: 29
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 81c40e2ee18f828ad379cdaabc40854fb87ccfb8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bf6c047e649f1615cbb15704621d3c0a8eafaf2e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538807"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49284883"
 ---
 # <a name="command-placement-guidelines"></a>コマンド配置のガイドライン
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コマンド配置のガイドライン](https://docs.microsoft.com/visualstudio/extensibility/internals/command-placement-guidelines)します。  
-  
 Visual Studio 統合開発環境 (IDE) でのコマンドを配置するためのベスト プラクティスは、コマンド セットのサイズによって異なります。 コマンドが定義されているし、.vsct ファイルの情報に従って配置します。  
   
 ## <a name="best-practices-for-all-command-sets"></a>すべてのコマンド セットのベスト プラクティス  

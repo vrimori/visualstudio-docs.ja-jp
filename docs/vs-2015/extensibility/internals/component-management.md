@@ -1,7 +1,7 @@
 ---
 title: コンポーネントの管理 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 029bffa2-6841-4caa-a41a-442467e1aedc
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: be8a771c0f5de92664914f4f158db9054e321e19
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 45a2c4fb0f3fa54a2d2b89c8473961143ec3185c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538518"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49280333"
 ---
 # <a name="component-management"></a>コンポーネント管理
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コンポーネント管理](https://docs.microsoft.com/visualstudio/extensibility/internals/component-management)します。  
-  
 Windows インストーラーのタスクの単位は、Windows インストーラーのコンポーネント (WICs または単なるコンポーネントとも呼ばれます) と呼ばれます。 各 WIC では、インストールと Windows インストーラーの使用設定に対する参照カウントの基本的な単位を識別する GUID。  
   
  VSPackage、インストーラーを作成するいくつかの製品を使用できますが、この説明は Windows インストーラー (.msi) ファイルの使用を想定しています。 インストーラーを作成するときに、正しい参照カウントが常に発生するため、ファイルの配置正しく管理する必要があります。 その結果、製品の異なるバージョンに影響またはインストールの組み合わせで互いを中断してシナリオをアンインストールします。  

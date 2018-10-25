@@ -1,5 +1,5 @@
 ---
-title: CV_call_e |Microsoft ドキュメント
+title: CV_call_e |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ccdc9df86180883a5a3891563b22625fab4a2ad2
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: ca4be9d62ee9e0261e5c08a50b53df013ad6ffcf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31466384"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49851120"
 ---
 # <a name="cvcalle"></a>CV_call_e
 関数の呼び出し規約を指定します。  
   
 > [!NOTE]
->  最も一般的な列挙値のみを次に示します。 完全な列挙体は cvconst.h ヘッダー ファイルで使用できます。  
+>  最も一般的な列挙値のみがここに記載されています。 完全な列挙型は cvconst.h ヘッダー ファイルで使用できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,27 +42,27 @@ typedef enum CV_call_e {
   
 ## <a name="elements"></a>Elements  
  CV_CALL_NEAR_C  
- Near の右から左へプッシュを使用して関数呼び出し規約を指定します。 呼び出し元の関数では、スタックをクリアします。  
+ ほぼ右から左へプッシュを使用して関数呼び出し規約を指定します。 呼び出し元の関数は、スタックをクリアします。  
   
  CV_CALL_NEAR_FAST  
- レジスタに近い左から右へプッシュを使用して関数呼び出し規約を指定します。 呼び出された関数では、パラメーターのバイト数の合計を使用して、スタックをクリアします。  
+ ほぼ左から右プッシュを使用してレジスタと共に関数呼び出し規約を指定します。 呼び出された関数では、パラメーターのバイト数の合計を使用して、スタックをクリアします。  
   
  CV_CALL_NEAR_STD  
  Near の標準的な呼び出し (右から左へプッシュ) を使用して関数呼び出し規約を指定します。  
   
  CV_CALL_NEAR_SYS  
- Near のシステム コールを使用して関数呼び出し規約を指定します。  
+ ほぼシステム コールを使用して関数呼び出し規約を指定します。  
   
  CV_CALL_THISCALL  
- 関数呼び出し規約を使用して、指定`this`呼び出し (`this`レジスタに渡されるポインター)。  
+ 使用して関数呼び出し規約を指定します。`this`呼び出し (`this`ポインターがレジスタに渡されます)。  
   
  CV_CALL_CLRCALL  
- 共通言語ランタイム (CLR) (とも呼ばれる、マネージ コード呼び出し規約) によって使用される関数呼び出し規約を指定します。  
+ 共通言語ランタイム (CLR) (とも呼ばれる呼び出し規約マネージ コード) で使用される関数呼び出し規約を指定します。  
   
-## <a name="remarks"></a>コメント  
- この列挙体の値がへの呼び出しによって返される、 [idiasymbol::get_callingconvention](../../debugger/debug-interface-access/idiasymbol-get-callingconvention.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ この列挙体の値が呼び出しによって返される、 [idiasymbol::get_callingconvention](../../debugger/debug-interface-access/idiasymbol-get-callingconvention.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: cvconst.h  
   
 ## <a name="see-also"></a>関連項目  

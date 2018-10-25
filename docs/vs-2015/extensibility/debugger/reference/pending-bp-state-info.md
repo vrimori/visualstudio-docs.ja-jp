@@ -1,7 +1,7 @@
 ---
 title: PENDING_BP_STATE_INFO |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 4d73ceff-43f9-4e95-8dba-88e1fab2def3
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 77151825f1e241110a0af1fece80f34ea39fd331
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d9fa6016b5aa0c130c7bb9ab4af71a17242955da
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545568"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891107"
 ---
 # <a name="pendingbpstateinfo"></a>PENDING_BP_STATE_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[PENDING_BP_STATE_INFO](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/pending-bp-state-info)します。  
-  
 コードの場所にバインドする準備が整っているブレークポイントの状態に関する情報が含まれています。  
   
 ## <a name="syntax"></a>構文  
@@ -57,7 +55,7 @@ public struct PENDING_BP_STATE_INFO {
 ## <a name="remarks"></a>Remarks  
  この構造体に渡される、 [GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)メソッドでいっぱいになった場所。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

@@ -1,5 +1,5 @@
 ---
-title: 定数 (Debug Interface Access SDK) |Microsoft ドキュメント
+title: 定数 (Debug Interface Access SDK) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -15,15 +15,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c77febb7ad9f41880fef604849af75aa065ff593
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: dd6908a8a0b49f5078e4c0d448ba2dedbe8f720a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31458919"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872045"
 ---
 # <a name="constants-debug-interface-access-sdk"></a>定数 (Debug Interface Access SDK)
-DIA SDK によってプログラム デバッグ データベース (PDB) ファイルのさまざまなセクションを識別する文字列定数を使用できます。  
+これらの文字列定数、DIA SDK を通じてプログラム デバッグ データベース (PDB) ファイルのさまざまなセクションを識別するために使用できます。  
   
 ## <a name="constants"></a>定数  
  次は、C と C++ マクロとして宣言されます。  
@@ -31,8 +31,8 @@ DIA SDK によってプログラム デバッグ データベース (PDB) ファ
 |マクロ|[値]|  
 |-----------|-----------|  
 |`DiaTable_Symbols`|L「シンボル」|  
-|`DiaTable_Sections`|L「のセクションでは」|  
-|`DiaTable_SrcFiles`|L「ソースファイル」|  
+|`DiaTable_Sections`|L「セクション」|  
+|`DiaTable_SrcFiles`|L"SourceFiles"|  
 |`DiaTable_LineNums`|L"LineNumbers"|  
 |`DiaTable_SegMap`|L"SegmentMap"|  
 |`DiaTable_Dbg`|L"Dbg"|  
@@ -40,7 +40,7 @@ DIA SDK によってプログラム デバッグ データベース (PDB) ファ
 |`DiaTable_FrameData`|L"FrameData"|  
   
 ## <a name="example"></a>例  
- これらのシンボルのいずれかの使用例を次に示します。  
+ これらの記号のいずれかの使用例を次に示します。  
   
 ```C++  
 HRESULT GetSymbolTable(IDiaEnumTables *pEnumTables, IDiaTable **pTable)  
@@ -54,7 +54,7 @@ HRESULT GetSymbolTable(IDiaEnumTables *pEnumTables, IDiaTable **pTable)
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: dia2.h  
   
 ## <a name="see-also"></a>関連項目  

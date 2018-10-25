@@ -1,7 +1,7 @@
 ---
 title: 型指定されていないデータセットと型指定された |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -11,18 +11,16 @@ caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 287a0ceae792a91e676982f5ec47d3905966956b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 71761826611c490a3fb43413acaa29eb6520138f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538314"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49283791"
 ---
 # <a name="typed-vs-untyped-datasets"></a>型指定されたデータセットと型指定されていないデータセットの比較
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[型指定されていないデータセットと型指定された](https://docs.microsoft.com/visualstudio/data-tools/typed-vs-untyped-datasets)します。  
-  
   
 型指定されたデータセットはまず、ベースから派生したデータセット<xref:System.Data.DataSet>クラスし、からの情報を使用して、**データセット デザイナー**、厳密に型指定された dataset クラスを新しいを生成する、.xsd ファイルに格納されています。 (テーブル、列、およびなど) のスキーマから情報が生成され、最上位のオブジェクトとプロパティのセットとして、この新しい dataset クラスにコンパイルします。 型指定されたデータセットは、ベースから継承するため<xref:System.Data.DataSet>クラス、型指定されたクラスはすべての機能の<xref:System.Data.DataSet>クラスし、のインスタンスを取るメソッドで使用できる、<xref:System.Data.DataSet>クラスをパラメーターとして。  
   

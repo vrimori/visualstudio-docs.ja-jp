@@ -1,7 +1,7 @@
 ---
 title: '2224: オーバー ロードする演算子 equals で equals をオーバーライド |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,17 +21,15 @@ caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: cd7acd4b99d3278d75aa3721137511857e04fe7c
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 66f4b4bcc7c2c1d359f5d8fa91227fb51a27adc4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589281"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49815235"
 ---
 # <a name="ca2224-override-equals-on-overloading-operator-equals"></a>CA2224: オーバーロードする演算子 equals で Equals をオーバーライドします
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA2224: オーバー ロードする演算子 equals で equals をオーバーライド](https://docs.microsoft.com/visualstudio/code-quality/ca2224-override-equals-on-overloading-operator-equals)します。
 
 |||
 |-|-|

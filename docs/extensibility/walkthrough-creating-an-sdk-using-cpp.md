@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c320400ee7337ec3f4ac3b6a77f1863b732c99c5
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 6311526df299da860c829520a2087ecc8d786600
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499966"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930645"
 ---
 # <a name="walkthrough-create-an-sdk-using-c"></a>チュートリアル: C++ を使用して SDK を作成します。
 このチュートリアルでは、ネイティブ C++ 数値演算ライブラリを SDK パッケージとして、Visual Studio Extension (VSIX)、SDK を作成し、それを使用して、アプリを作成する方法を示します。 このチュートリアルは、次の手順に分かれています。  
@@ -142,25 +142,25 @@ ms.locfileid: "39499966"
   
 ##  <a name="createSample"></a> クラス ライブラリを使用するサンプル アプリを作成するには  
   
-1.  メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。  
+1. メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。  
   
-2.  テンプレートの一覧で  **Visual C** > **Windows ユニバーサル**選び**空のアプリ**。 **名前**ボックスで、指定**NativeMathSDKSample**、選択し、 **OK**ボタン。  
+2. テンプレートの一覧で  **Visual C** > **Windows ユニバーサル**選び**空のアプリ**。 **名前**ボックスで、指定**NativeMathSDKSample**、選択し、 **OK**ボタン。  
   
-3.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **NativeMathSDKSample**プロジェクトを選び、**追加** > **の参照**.  
+3. **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **NativeMathSDKSample**プロジェクトを選び、**追加** > **の参照**.  
   
-4.  **参照の追加**ダイアログ ボックスで、参照型の一覧で、展開**ユニバーサル Windows**、し、**拡張**します。 最後に、選択、**ネイティブ Math SDK**チェック ボックスをオンにして、 **OK**ボタンをクリックします。
+4. **参照の追加**ダイアログ ボックスで、参照型の一覧で、展開**ユニバーサル Windows**、し、**拡張**します。 最後に、選択、**ネイティブ Math SDK**チェック ボックスをオンにして、 **OK**ボタンをクリックします。
   
-5.  NativeMathSDKSample のプロジェクトのプロパティを表示します。  
+5. NativeMathSDKSample のプロジェクトのプロパティを表示します。  
   
-     プロパティで定義されている*NativeMathSDK.props*参照を追加したときに適用しました。 プロパティを調べることによって適用されたことを確認できる、 **vc++ ディレクトリ**、プロジェクトのプロパティ**構成プロパティ**します。  
+    プロパティで定義されている*NativeMathSDK.props*参照を追加したときに適用しました。 プロパティを調べることによって適用されたことを確認できる、 **vc++ ディレクトリ**、プロジェクトのプロパティ**構成プロパティ**します。  
   
-6.  **ソリューション エクスプ ローラー**オープン**MainPage.xaml**、し、次の XAML を使用して、そのコンテンツを置き換えます。  
+6. **ソリューション エクスプ ローラー**オープン**MainPage.xaml**、し、次の XAML を使用して、そのコンテンツを置き換えます。  
   
-     [!code-xml[CreatingAnSDKUsingCppDemoApp#1](../extensibility/codesnippet/Xaml/walkthrough-creating-an-sdk-using-cpp_8.xaml)]  
+    [!code-xml[CreatingAnSDKUsingCppDemoApp#1](../extensibility/codesnippet/Xaml/walkthrough-creating-an-sdk-using-cpp_8.xaml)]  
   
-7.  Update *Mainpage.xaml.h*このコードのようにします。  
+7. Update *Mainpage.xaml.h*このコードのようにします。  
   
-     [!code-cpp[CreatingAnSDKUsingCppDemoApp#2](../extensibility/codesnippet/CPP/walkthrough-creating-an-sdk-using-cpp_9.h)]  
+    [!code-cpp[CreatingAnSDKUsingCppDemoApp#2](../extensibility/codesnippet/CPP/walkthrough-creating-an-sdk-using-cpp_9.h)]  
   
 8. Update *MainPage.xaml.cpp*このコードのようにします。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "39499966"
   
      正しい結果が表示されます。  
   
- このチュートリアルで作成して呼び出すために、拡張機能 SDK を使用、する方法を示しました、[!INCLUDE[wrt](../extensibility/includes/wrt_md.md)]ライブラリと以外[!INCLUDE[wrt](../extensibility/includes/wrt_md.md)]ライブラリ。  
+    このチュートリアルで作成して呼び出すために、拡張機能 SDK を使用、する方法を示しました、[!INCLUDE[wrt](../extensibility/includes/wrt_md.md)]ライブラリと以外[!INCLUDE[wrt](../extensibility/includes/wrt_md.md)]ライブラリ。  
   
 ## <a name="next-steps"></a>次の手順  
   

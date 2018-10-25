@@ -1,7 +1,7 @@
 ---
 title: デプロイされた Web アプリケーションのデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -26,18 +26,16 @@ caps.latest.revision: 34
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 896cec857b38dd5fb0d7119aed06ca08d2df1e35
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bc9aefdb6fca70eae0343a5f7fffde661b5a7be1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548158"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49276316"
 ---
 # <a name="debugging-deployed-web-applications"></a>配置した Web アプリケーションのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デプロイされた Web アプリケーションのデバッグ](https://docs.microsoft.com/visualstudio/debugger/debugging-deployed-web-applications)します。  
-  
 運用サーバーで実行されている Web アプリケーションをデバッグする場合は、慎重に行う必要があります。 たとえば、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ワーカー プロセスにアタッチしてデバッグを行い、ブレークポイントにヒットした場合、そのワーカー プロセス内のすべてのマネージド コードが停止します。 ワーカー プロセス内のすべてのマネージド コードが停止すると、サーバーのすべてのユーザーの業務が停止する可能性があります。 運用サーバーでデバッグする場合は、事前に、実際の業務への影響について検討する必要があります。  
   
  配置されたアプリケーションを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] を使用してデバッグするには、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ワーカー プロセスにアタッチし、デバッガーからアプリケーションのシンボルにアクセスできるようにする必要があります。 また、アプリケーションのソース ファイルを見つけて開く必要があります。 詳細については、次を参照してください。[指定シンボル (.pdb) とソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)、[方法: ASP.NET プロセスの名前を見つける](../debugger/how-to-find-the-name-of-the-aspnet-process.md)、および[システム要件](../debugger/aspnet-debugging-system-requirements.md)します。  

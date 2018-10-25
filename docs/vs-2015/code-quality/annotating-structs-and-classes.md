@@ -1,7 +1,7 @@
 ---
 title: 構造体とクラスに注釈を付ける |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -29,18 +29,16 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 24ed559321bb63d5f9871193f312356466756429
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f3d20769215058cca6e30955ae37ad2a78b6bc7c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538203"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49287457"
 ---
 # <a name="annotating-structs-and-classes"></a>構造体とクラスに注釈を付ける
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[に注釈を付ける構造体とクラス](https://docs.microsoft.com/visualstudio/code-quality/annotating-structs-and-classes)します。  
-  
 インバリアントのように動作する注釈を使用して構造体とクラスのメンバーに注釈を付けることができます: これらは true に、関数呼び出し、または関数の開始/終了パラメーターまたは結果の値として外側の構造体を含むと見なされます。  
   
 ## <a name="struct-and-class-annotations"></a>構造体とクラスの注釈  

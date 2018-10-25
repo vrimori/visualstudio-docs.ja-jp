@@ -1,7 +1,7 @@
 ---
 title: IDebugEngine2::ContinueFromSynchronousEvent |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 9a57dfcd-df8e-4be5-b1fe-bd853e3c6bb2
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 30fa937393935765992e87c1c93a579a47f6cc7b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2269644a4de6aeb69f70ac18995f1b0d32ac46d6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534055"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949514"
 ---
 # <a name="idebugengine2continuefromsynchronousevent"></a>IDebugEngine2::ContinueFromSynchronousEvent
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugEngine2::ContinueFromSynchronousEvent](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent)します。  
-  
 セッション デバッグ マネージャー (SDM) をこれまで、SDM をデバッグ エンジン (DE) によって送信同期デバッグ イベントが受信され、処理を示すために呼び出されます。  
   
 ## <a name="syntax"></a>構文  

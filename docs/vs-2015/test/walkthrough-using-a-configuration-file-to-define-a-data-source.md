@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: データ ソースを定義するための構成ファイルの使用 | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 95fa5214-b12e-4e1f-84e5-cc4c2d86b0d7
 caps.latest.revision: 34
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 48bd09cdd068adba49147222cc7458afe77c61e0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f3dca876e777e8f40773ca42b05fece1c22fe33e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539592"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843042"
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>チュートリアル : データ ソースを定義するための構成ファイルの使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: データ ソースを定義する構成ファイルを使用して](https://docs.microsoft.com/visualstudio/test/walkthrough-using-a-configuration-file-to-define-a-data-source)します。  
-  
 このチュートリアルでは、単体テスト用に app.config ファイルで定義されたデータ ソースを使用する方法について説明します。 ここでは、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> クラスで使用できるデータ ソースを定義する app.config ファイルの作成方法を学習します。 このチュートリアルでは、次のタスクについて説明します。  
   
 -   app.Config ファイルを作成する。  
@@ -67,13 +65,13 @@ ms.locfileid: "47539592"
   
 #### <a name="to-add-the-custom-configuration-section-to-the-appconfig-file"></a>app.config ファイルにカスタム構成セクションを追加するには  
   
-1.  app.config のルート要素は `configuration` 要素である必要があります。 `configuration` 要素内に `configSections` 要素を作成します。 `configSections` は、app.config ファイル内で最初の要素である必要があります。  
+1. app.config のルート要素は `configuration` 要素である必要があります。 `configuration` 要素内に `configSections` 要素を作成します。 `configSections` は、app.config ファイル内で最初の要素である必要があります。  
   
-2.  `configSections` 要素内に、`section` 要素を作成します。  
+2. `configSections` 要素内に、`section` 要素を作成します。  
   
-3.  `section` 要素に、`name` という属性を追加し、その属性に `microsoft.visualstudio.testtools` という値を割り当てます。 `type` という別の属性を追加し、その属性に `Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a` という値を割り当てます。  
+3. `section` 要素に、`name` という属性を追加し、その属性に `microsoft.visualstudio.testtools` という値を割り当てます。 `type` という別の属性を追加し、その属性に `Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a` という値を割り当てます。  
   
- `section` 要素は次のようになります。  
+   `section` 要素は次のようになります。  
   
 ```  
 <section name="microsoft.visualstudio.testtools" type="Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>  
@@ -119,15 +117,15 @@ ms.locfileid: "47539592"
 ## <a name="define-data-sources"></a>データ ソースを定義する  
  データ ソース セクションには、テスト エンジンがデータ ソースからデータを取得するために使用する 4 つの属性が含まれます。  
   
--   `name` は、使用するデータ ソースを指定するために <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> で使用される ID を定義します。  
+- `name` は、使用するデータ ソースを指定するために <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> で使用される ID を定義します。  
   
--   `connectionString` は、前の「接続文字列を定義する」セクションで作成した接続文字列を識別します。  
+- `connectionString` は、前の「接続文字列を定義する」セクションで作成した接続文字列を識別します。  
   
--   `dataTableName` は、テストで使用するデータを保持するテーブルまたはシートを定義します。  
+- `dataTableName` は、テストで使用するデータを保持するテーブルまたはシートを定義します。  
   
--   `dataAccessMethod` は、データ ソース内のデータ値にアクセスする方法を定義します。  
+- `dataAccessMethod` は、データ ソース内のデータ値にアクセスする方法を定義します。  
   
- ここでは、単体テストで使用する 2 つのデータ ソースを定義します。  
+  ここでは、単体テストで使用する 2 つのデータ ソースを定義します。  
   
 #### <a name="to-define-data-sources"></a>データ ソースを定義するには  
   

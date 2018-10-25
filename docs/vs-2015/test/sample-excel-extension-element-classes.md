@@ -1,7 +1,7 @@
 ---
 title: 'Excel 拡張機能のサンプル: Element クラス | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 7c251098-00aa-49cf-9e37-5717c0c6b3f1
 caps.latest.revision: 11
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 0babaf7e387f9255dc8a60958483ba9db66cc879
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fb5085bdd9a79330f7c4f73fb39993af63eb0a78
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545675"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811947"
 ---
 # <a name="sample-excel-extension-element-classes"></a>Excel 拡張子のサンプル: 要素クラス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Excel 拡張子のサンプル: 要素クラス](https://docs.microsoft.com/visualstudio/test/sample-excel-extension-element-classes)します。  
-  
 この拡張機能は、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> から派生し、[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 内の Worksheet コントロールと Cell コントロールを表すクラスを使用します。  
   
  この拡張機能の基本要素は `ExcelElement` です。 `ExcelWorksheetElement` クラスおよび `ExcelCellElement` クラスは、この要素を継承します。  
@@ -54,7 +52,7 @@ ms.locfileid: "47545675"
 ## <a name="utilities-and-excelutilities-classes"></a>Utilities クラスと ExcelUtilities クラス  
  内部 `ExcelUtilities` クラスには、テクノロジ名などの定数値や、指定されたウィンドウ ハンドルが Excel ワークシートを表すかどうかを判断するメソッドなどが用意されています。  
   
- `Utilities` クラスには、UI に関するさまざまな情報を返すヘルパー メソッドがあります。 一部のメソッドは、**USER32.DLL** や **OLEACC.DLL** などの外部システム DLL への直接呼び出しを使用して、UI のウィンドウ ハンドルを取得します **。**  
+ `Utilities` クラスには、UI に関するさまざまな情報を返すヘルパー メソッドがあります。 一部のメソッドは、**USER32.DLL** や **OLEACC.DLL** などの外部システム DLL への直接呼び出しを使用して、UI のウィンドウ ハンドルを取得します<strong>。</strong>  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>   

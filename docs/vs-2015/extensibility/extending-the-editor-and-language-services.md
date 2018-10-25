@@ -1,7 +1,7 @@
 ---
 title: エディターと言語サービスの拡張 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 8d04f8db-eda7-4b3e-b6eb-c06df104502a
 caps.latest.revision: 23
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b8102b8fb4afc02ca0540d75b3c0d08ef75b964d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8a7233a89dbda0ebd333979de752296df45bf712
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545291"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49259196"
 ---
 # <a name="extending-the-editor-and-language-services"></a>エディターと言語サービスの拡張
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[エディターと言語サービス拡張](https://docs.microsoft.com/visualstudio/extensibility/extending-the-editor-and-language-services)します。  
-  
 独自のエディターに (IntelliSense) などの言語サービスの機能を追加し、Visual Studio コード エディターのほとんどの機能を拡張できます。  拡張することができますの完全な一覧を参照してください。[言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)します。  
   
  ほとんどのエディター機能を拡張するには、Managed Extensibility Framework (MEF) を使用します。 たとえば、エディター機能を拡張するが構文の色分け表示の場合は、MEF を記述できます*コンポーネント パーツ*分類する別の色分け表示と処理にする方法を定義します。 エディターには、同じ機能の複数の拡張機能もサポートしています。  

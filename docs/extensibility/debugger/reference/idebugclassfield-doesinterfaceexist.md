@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::DoesInterfaceExist |Microsoft ドキュメント
+title: IDebugClassField::DoesInterfaceExist |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a7c4a09af356951e7e26b6c9b6b0af5922b9f53b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8a4fc4ca6c95d6e4b1b8367f9820ef742b52bdeb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31104177"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833553"
 ---
 # <a name="idebugclassfielddoesinterfaceexist"></a>IDebugClassField::DoesInterfaceExist
-特定のインターフェイスが、クラスで定義されているかどうかを判断します。  
+特定のインターフェイスは、クラスで定義されているかどうかを決定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,10 +44,10 @@ int DoesInterfaceExist(
  [in]検索するインターフェイス名を含む文字列。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、S_OK を返します、S_FALSE を返す場合は、インターフェイスが存在しません。それ以外の場合、エラー コードを返します。  
+ 成功した場合は S_OK を返します、S_FALSE を返す場合は、インターフェイスは存在しません。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 有効で、このメソッドは、すべてのインターフェイスの列挙体を取得し、一致するインターフェイスのリストを検索します。  
+## <a name="remarks"></a>Remarks  
+ 有効で、このメソッドは、すべてのインターフェイスの列挙体を取得し、一致するインターフェイスの一覧を検索します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

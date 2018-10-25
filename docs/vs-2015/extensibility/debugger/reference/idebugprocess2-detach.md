@@ -1,7 +1,7 @@
 ---
 title: IDebugProcess2::Detach |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: ee2b9084-2db1-4e49-a1d9-387284b7c3f8
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1895c146f557e0c3ba79bd84970b99fc663cc891
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e34fa470b419a8bf63bfdfb8e2dce78e7a81fa24
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539754"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906293"
 ---
 # <a name="idebugprocess2detach"></a>IDebugProcess2::Detach
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugProcess2::Detach](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugprocess2-detach)します。  
-  
 すべてのプロセスでアプリケーションをデタッチすることにより、このプロセスからデバッガーをデタッチします。  
   
 ## <a name="syntax"></a>構文  

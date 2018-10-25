@@ -1,7 +1,7 @@
 ---
 title: メモリの割り当ておよびオブジェクトの有効期間のデータ値について | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,25 +17,23 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1470e8c279ac47191a8bc91182c67df19a083339
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 23b4330c3eb020080f593c564cf47f4e91c4bc83
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537070"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49824491"
 ---
 # <a name="understanding-memory-allocation-and-object-lifetime-data-values"></a>メモリの割り当ておよびオブジェクトの有効期間のデータ値について
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[についてメモリの割り当てとオブジェクト有効期間のデータ値](https://docs.microsoft.com/visualstudio/profiling/understanding-memory-allocation-and-object-lifetime-data-values)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツールの  *.NET メモリ割り当て*のプロファイル方法は、イベントが発生したときの割り当てで作成されたオブジェクトやガベージ コレクションで破棄されたオブジェクトのサイズと数に関する情報と、関数の*呼び出し履歴*に関する追加情報を収集します。 *呼び出し履歴*は、プロセッサ上で実行されている関数に関する情報を格納する動的な構造です。  
   
  **必要条件**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、[!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、[!INCLUDE[vsPro](../includes/vspro-md.md)]  
+- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
- メモリ プロファイラーは、プロファイリングされたアプリケーションで .NET Framework オブジェクトの割り当てが行われるたびに、コンピューター プロセッサに対して割り込みを行います。 オブジェクトの有効期間データも収集する場合は、.NET Framework のガベージ コレクションの実行後に、毎回プロファイラーがコンピューター プロセッサに対して割り込みを行います。 データは、プロファイル対象の関数、およびオブジェクトの種類ごとに集計されます。  
+  メモリ プロファイラーは、プロファイリングされたアプリケーションで .NET Framework オブジェクトの割り当てが行われるたびに、コンピューター プロセッサに対して割り込みを行います。 オブジェクトの有効期間データも収集する場合は、.NET Framework のガベージ コレクションの実行後に、毎回プロファイラーがコンピューター プロセッサに対して割り込みを行います。 データは、プロファイル対象の関数、およびオブジェクトの種類ごとに集計されます。  
   
 ## <a name="allocation-data"></a>割り当てデータ  
  メモリ イベントが発生すると、割り当てられたメモリ オブジェクト、または破棄されたメモリ オブジェクトの合計カウントとサイズがインクリメントされます。  

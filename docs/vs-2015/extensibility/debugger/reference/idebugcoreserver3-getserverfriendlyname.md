@@ -1,7 +1,7 @@
 ---
 title: IDebugCoreServer3::GetServerFriendlyName |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 7035b904-b3d7-4d9b-98d9-65714b8a8b9f
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 59f30cae879b1769e120fcdc2852a75f88f2f2bd
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: aaecf1be2896630055eb988de28a52c5ce39ca3c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535291"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49859446"
 ---
 # <a name="idebugcoreserver3getserverfriendlyname"></a>IDebugCoreServer3::GetServerFriendlyName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugCoreServer3::GetServerFriendlyName](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname)します。  
-  
 サーバーのフレンドリ名を取得します。  
   
 ## <a name="syntax"></a>構文  

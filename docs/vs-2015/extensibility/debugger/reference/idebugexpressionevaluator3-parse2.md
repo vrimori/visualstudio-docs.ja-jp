@@ -1,7 +1,7 @@
 ---
 title: IDebugExpressionEvaluator3::Parse2 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 78099628-d600-4f76-b7c8-ee07c864af1e
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 79dc8f28d101a2c7bdd9749dcd9b3dadb4204273
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ad2a4f55ea718938505b884e27a34dcffd50a0d0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545074"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861788"
 ---
 # <a name="idebugexpressionevaluator3parse2"></a>IDebugExpressionEvaluator3::Parse2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugExpressionEvaluator3::Parse2](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugexpressionevaluator3-parse2)します。  
-  
 シンボル プロバイダーと、評価のフレームのアドレスを指定された解析された式を式の文字列に変換します。  
   
 ## <a name="syntax"></a>構文  

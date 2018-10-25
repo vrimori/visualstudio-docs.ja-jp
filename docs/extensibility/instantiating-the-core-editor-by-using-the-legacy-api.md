@@ -13,46 +13,46 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 602adf27a0a165a8919d4be928a330dc3a212cf3
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 59642b934f82990ce50f6dabaa38a97f34575997
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39500476"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941569"
 ---
 # <a name="instantiate-the-core-editor-by-using-the-legacy-api"></a>従来の API を使用して、コア エディターをインスタンス化します。
 エディターはテキストの挿入、削除、コピー、および貼り付けなどの関数を編集します。 これらの関数のテキストの色分け表示、インデント、および IntelliSense ステートメント入力候補などの言語サービスによって提供される関数が集約されます。  
   
  3 つの方法の 1 つのコア エディターのインスタンスをインスタンス化することができます。  
   
--   明示的にインスタンスを作成、core のエディター ウィンドウにします。  
+- 明示的にインスタンスを作成、core のエディター ウィンドウにします。  
   
--   コア エディターのインスタンスを返すエディター ファクトリを提供します。  
+- コア エディターのインスタンスを返すエディター ファクトリを提供します。  
   
--   プロジェクトの階層からファイルを開きます。  
+- プロジェクトの階層からファイルを開きます。  
   
- 次のセクションでは、従来の API を使用して、エディターのインスタンスを作成する方法について説明します。  
+  次のセクションでは、従来の API を使用して、エディターのインスタンスを作成する方法について説明します。  
   
 ## <a name="explicitly-open-a-core-editor-instance"></a>コア エディターのインスタンスを明示的に開く  
  ときに、コア エディターのインスタンスを明示的に取得するには。  
   
--   取得、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>編集対象のドキュメント データ オブジェクトを保持するためにします。  
+- 取得、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>編集対象のドキュメント データ オブジェクトを保持するためにします。  
   
--   作成して、ドキュメント データ オブジェクトの行指向の表現を作成、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines>からインターフェイス、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>インターフェイス。  
+- 作成して、ドキュメント データ オブジェクトの行指向の表現を作成、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines>からインターフェイス、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>インターフェイス。  
   
--   設定<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines>の既定の実装のインスタンスのドキュメント データ オブジェクトとして、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>インターフェイスを使用して、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow.SetBuffer%2A>メソッド。  
+- 設定<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines>の既定の実装のインスタンスのドキュメント データ オブジェクトとして、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>インターフェイスを使用して、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow.SetBuffer%2A>メソッド。  
   
-     ホスト、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>インスタンス、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>インターフェイスを使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateToolWindow%2A>メソッド。  
+   ホスト、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>インスタンス、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>インターフェイスを使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateToolWindow%2A>メソッド。  
   
- この時点では、表示、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>インターフェイスには、コア エディターのインスタンスを含むウィンドウが用意されています。  
+  この時点では、表示、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>インターフェイスには、コア エディターのインスタンスを含むウィンドウが用意されています。  
   
- ただし、これはできません、非常に便利なインスタンスがショートカット キー、または高度な機能にアクセスしません。 ショートカット キーと高度な機能へのアクセスを取得します。  
+  ただし、これはできません、非常に便利なインスタンスがショートカット キー、または高度な機能にアクセスしません。 ショートカット キーと高度な機能へのアクセスを取得します。  
   
--   使用して、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer.SetLanguageServiceID%2A>言語サービスと、エディターを使用するドキュメント データ オブジェクトに関連付けるメソッド。  
+- 使用して、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer.SetLanguageServiceID%2A>言語サービスと、エディターを使用するドキュメント データ オブジェクトに関連付けるメソッド。  
   
--   ショートカット キーを作成するかを設定して、システムの既定値を使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>オブジェクトのプロパティを表示します。 これを行うには、呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.SetGuidProperty%2A>メソッドを<xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>プロパティ。  
+- ショートカット キーを作成するかを設定して、システムの既定値を使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>オブジェクトのプロパティを表示します。 これを行うには、呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.SetGuidProperty%2A>メソッドを<xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>プロパティ。  
   
-     取得し、非標準のショートカット キーを使用して、それらの生成を使用して、 *.vsct*ファイル。 詳細については、次を参照してください。 [Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)します。  
+   取得し、非標準のショートカット キーを使用して、それらの生成を使用して、 *.vsct*ファイル。 詳細については、次を参照してください。 [Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)します。  
   
 ## <a name="how-to-use-an-editor-factory-to-obtain-the-core-editor"></a>エディター ファクトリを使用して、コア エディターを取得する方法  
  使用してエディター ファクトリのコア エディターを実装するときに、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>メソッドを明示的にホストする、前のセクションに記載されているすべての手順に従います、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>を使用して、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>ドキュメント データ オブジェクトで、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>オブジェクト。  

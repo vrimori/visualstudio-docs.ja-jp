@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject2::CreateObject |Microsoft ドキュメント
+title: IDebugFunctionObject2::CreateObject |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5283d72972e1ba579cafa82648cbf0ec0fcf80c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 35dac5f88a755ac0622fcf752f3bcc409341441c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31113472"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948981"
 ---
 # <a name="idebugfunctionobject2createobject"></a>IDebugFunctionObject2::CreateObject
 評価のフラグ設定、およびタイムアウト値を指定されたコンス トラクターを使用するオブジェクトを作成します。  
@@ -56,22 +56,22 @@ int CreateObject (
  [in]パラメーターの数、`pArg`配列。 コンス トラクターに渡されるパラメーターの数を表します。  
   
  `pArgs`  
- [in]配列[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)コンス トラクターに渡されるパラメーターを表すオブジェクト。  
+ [in]配列の[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)コンス トラクターに渡されるパラメーターを表すオブジェクト。  
   
  `dwEvalFlags`  
- [in]フラグの組み合わせ、 [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)評価を実行する方法を指定する列挙体です。  
+ [in]フラグの組み合わせ、 [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)評価を実行する方法を指定する列挙体。  
   
  `dwTimeout`  
- [in]このメソッドから戻る前に待機するミリ秒単位の最大時間。 使用して**無限**無制限に待機します。  
+ [in]このメソッドから戻る前に待機するミリ秒単位で最大時間。 使用**無限**を無期限に待機します。  
   
  `ppObject`  
- [out]返します、 **IDebugObject**新しく作成されたオブジェクトを表すです。  
+ [out]返します、 **IDebugObject**新しく作成されたオブジェクトを表します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- クラス、またはその他の複合型のパラメーターであるコンス トラクターを必要とするインスタンスを表すオブジェクトを作成するには、このメソッドを呼び出します。  
+## <a name="remarks"></a>Remarks  
+ クラス、またはパラメーターであるコンス トラクターを必要とするその他の複合型のインスタンスを表すオブジェクトを作成するには、このメソッドを呼び出します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

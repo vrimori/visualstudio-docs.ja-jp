@@ -1,7 +1,7 @@
 ---
 title: F# のデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a5790b81eedb1a1bb9dc65b7ce053089c3bc1470
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: dd722e40a0579181e3c361706f0775aaf350c341
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533371"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49209574"
 ---
 # <a name="debugging-f"></a>F# のデバッグ #
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[f# をデバッグ](https://docs.microsoft.com/visualstudio/debugger/debugging-f-hash)します。  
-  
 F# のデバッグは、他のマネージド言語のデバッグとほとんど同じですが、次の例外があります。  
   
 -   **[自動変数]** ウィンドウに f# 変数が表示されません。  

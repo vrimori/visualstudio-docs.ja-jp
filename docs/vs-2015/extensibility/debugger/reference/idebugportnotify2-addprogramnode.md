@@ -1,7 +1,7 @@
 ---
 title: IDebugPortNotify2::AddProgramNode |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 34c0e949-1eb9-4108-9cb8-a3eb87fcf190
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: be2dd2f035212bfee1a017fcb21c08c5cdc75ff2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 143169231c7a52a91ba77dafcc0b0ce7f1a0ccf1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536038"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49815872"
 ---
 # <a name="idebugportnotify2addprogramnode"></a>IDebugPortNotify2::AddProgramNode
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugPortNotify2::AddProgramNode](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugportnotify2-addprogramnode)します。  
-  
 実行されているポートをデバッグできるプログラムを登録します。  
   
 ## <a name="syntax"></a>構文  

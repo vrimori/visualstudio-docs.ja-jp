@@ -1,7 +1,7 @@
 ---
 title: ターゲットのビルド順序 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/06/2018
+ms.date: 09/04/2018
 ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 90118003afcb8227ec3598110c38f3f0951e9adb
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 9bab71bce4ccec17f485f6aafad7389e3b981b6e
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178957"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43774946"
 ---
 # <a name="target-build-order"></a>ターゲットのビルド順序
 あるターゲットへの入力が別のターゲットの出力に依存する場合、ターゲットの順序を指定する必要があります。 以下の属性を使用して、ターゲットを実行する順序を指定できます。  
@@ -114,7 +114,7 @@ ms.locfileid: "39178957"
 
     `BeforeTargets` または `AfterTargets` の条件付きターゲットをリスとしているターゲットは、やはり決められた順序で実行します
   
-4.  あるターゲットが実行される前には、その `DependsOnTargets` ターゲットが実行されます。  
+4.  ターゲットが実行またはスキップされる前に、その `Condition` 属性が存在していなかった場合または `false` に評価されなかった場合、その `DependsOnTargets` ターゲットが実行されます。  
   
 5.  あるターゲットが実行またはスキップされる前に、そのターゲットを `BeforeTargets` 属性に一覧表示しているターゲットが実行されます。  
   

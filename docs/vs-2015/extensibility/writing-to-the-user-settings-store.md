@@ -1,7 +1,7 @@
 ---
 title: ユーザー設定ストアへの書き込み |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: efd27f00-7fe5-45f8-9b97-371af732be97
 caps.latest.revision: 4
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7fc5f38f8831dec53b907d83571574742f3d491d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 90d34ebf751ee62fd7779a92214f42779cf84b59
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536785"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49202047"
 ---
 # <a name="writing-to-the-user-settings-store"></a>ユーザー設定ストアへの書き込み
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ユーザー設定ストアへの書き込み](https://docs.microsoft.com/visualstudio/extensibility/writing-to-the-user-settings-store)します。  
-  
 ユーザーの設定は、書き込み可能の設定で使用されているように、**ツール/オプション**ダイアログ、[プロパティ] ウィンドウ、およびその他の特定のダイアログ ボックス。 Visual Studio 拡張機能は、これらを使用少量のデータを格納するのにことがあります。 このチュートリアルでは、ユーザー設定ストアへの書き込みから読み取りによって、外部ツールとして Visual Studio をメモ帳を追加する方法を示します。  
   
 ### <a name="backing-up-your-user-settings"></a>お客様のユーザー設定のバックアップ  

@@ -12,17 +12,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2cd52c97d78c4b2b08244e7f4a8f626a536c8d04
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8136369a09145c46c7989bebe12796642851a7b0
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669266"
 ---
-# <a name="saving-and-exporting-performance-tools-data"></a>パフォーマンス ツール データの保存とエクスポート
-このトピックでは、パフォーマンス データ ファイルを保存およびエクスポートする方法について説明します。  
+# <a name="save-and-export-performance-tools-data"></a>パフォーマンス ツール データの保存とエクスポート
+この記事では、パフォーマンス データ ファイルを保存およびエクスポートする方法について説明します。  
   
-##  <a name="BKMK_Save_Profiler_Data_Files_As_Analyzed_Report_Files"></a> 方法: 分析されたレポート ファイルとしてパフォーマンス データ ファイルを保存する  
- プロファイル データ (.vsp) ファイルのフィルター処理済みビューまたはフィルター処理なしビューは、分析されたレポート (.vsps) ファイルとして保存することができます。 分析されたレポート ファイルは、[レポート ビュー] ウィンドウで表示することができ、ファイルのサイズは、元の .vsp ファイルよりもかなり小さくなります。 ただし、.vsps ファイルのデータにフィルターを適用することはできません。 統合開発環境 (IDE) でファイルを開かなくても、パフォーマンス エクスプ ローラーで、分析されたレポート ファイルを作成することができます。あるいは、.vsp ファイルを開き、フィルター処理してから、その結果を保存することもできます。  
+## <a name="how-to-save-performance-data-files-as-analyzed-report-files"></a>方法: 分析されたレポート ファイルとしてパフォーマンス データ ファイルを保存する  
+ プロファイル データ (.*vsp*) ファイルのフィルター処理済みビューまたはフィルター処理なしビューは、分析されたレポート (.*vsps*) ファイルとして保存することができます。 分析されたレポート ファイルは、[レポート ビュー] ウィンドウで表示することができ、ファイルのサイズは、元の .*vsp* ファイルよりもかなり小さくなります。 ただし、.*vsps* ファイルのデータにフィルターを適用することはできません。 統合開発環境 (IDE) でファイルを開かなくても、パフォーマンス エクスプローラーで、分析されたレポート ファイルを作成することができます。あるいは、.*vsp* ファイルを開き、フィルター処理してから、その結果を保存することもできます。  
   
 #### <a name="to-save-an-analyzed-performance-report-from-the-performance-explorer"></a>分析されたパフォーマンス レポートをパフォーマンス エクスプ ローラーで保存するには  
   
@@ -34,9 +35,9 @@ ms.lasthandoff: 04/19/2018
   
 #### <a name="to-save-an-analyzed-performance-report-from-the-report-view-window"></a>[レポート ビュー] ウィンドウで、パフォーマンス レポートを保存して分析するには  
   
-1.  [レポート ビュー] ウィンドウで、プロファイル データ (.vsp) ファイルを開きます。  
+1.  [レポート ビュー] ウィンドウで、プロファイル データ (.*vsp*) ファイルを開きます。  
   
-2.  (省略可能) データにフィルターを適用します。 詳しくは、「[パフォーマンス レポート ビュー フィルター](../profiling/performance-report-view-filter.md)」をご覧ください。  
+2.  (省略可能) データにフィルターを適用します。 詳細については、「[パフォーマンス レポート ビュー フィルター](../profiling/performance-report-view-filter.md)」を参照してください。  
   
 3.  [レポート ビュー] ウィンドウのツールバーで、**[分析されたものを保存]** をクリックします。  
   
@@ -44,8 +45,8 @@ ms.lasthandoff: 04/19/2018
   
 5.  **[保存]** をクリックします。  
   
-## <a name="how-to-export-profiling-tools-reports-to-an-xml-or-csv-file"></a>方法: プロファイリング ツールのレポートを .Xml または .Csv ファイルにエクスポートする  
- 1 つまたは複数のレポート ビューを、.vsp ファイルまたは .vsps プロファイル データ ファイルから、コンマ区切りファイルまたは XML ファイルとしてエクスポートすることができます。 [レポート ビュー] ウィンドウでエクスポートする前にデータをフィルター処理することも、**[パフォーマンス エクスプ ローラー]** ウィンドウからデータ ファイル全体のレポート ビューをエクスポートすることもできます。  
+## <a name="how-to-export-profiling-tools-reports-to-an-xml-or-csv-file"></a>方法: プロファイリング ツールのレポートを .xml または .csv ファイルにエクスポートする  
+ 1 つまたは複数のレポート ビューを、.*vsp* ファイルまたは .*vsps* プロファイル データ ファイルから、コンマ区切りファイルまたは XML ファイルとしてエクスポートすることができます。 [レポート ビュー] ウィンドウでエクスポートする前にデータをフィルター処理することも、**[パフォーマンス エクスプ ローラー]** ウィンドウからデータ ファイル全体のレポート ビューをエクスポートすることもできます。  
   
 > [!NOTE]
 >  さらに、[レポート ビュー] ウィンドウで選択した行をタブ区切り値としてコピーして貼り付けることもできます。  
@@ -70,9 +71,9 @@ ms.lasthandoff: 04/19/2018
   
 #### <a name="to-export-performance-reports-from-the-report-view-window"></a>[レポート ビュー] ウィンドウからパフォーマンス レポートをエクスポートするには  
   
-1.  [レポート ビュー] ウィンドウで .vsp ファイルを開きます。  
+1.  [レポート ビュー] ウィンドウで .*vsp* ファイルを開きます。  
   
-2.  (省略可能) データにフィルターを適用します。 詳しくは、「[パフォーマンス レポート ビュー フィルター](../profiling/performance-report-view-filter.md)」をご覧ください。  
+2.  (省略可能) データにフィルターを適用します。 詳細については、「[パフォーマンス レポート ビュー フィルター](../profiling/performance-report-view-filter.md)」を参照してください。  
   
 3.  [レポート ビュー] ウィンドウのツールバーで **[レポートのエクスポート]** をクリックします。  
   
@@ -88,8 +89,8 @@ ms.lasthandoff: 04/19/2018
   
      各レポート ビューは、\<プレフィックス>_\<レポート ビュー名>.\<csv&#124;xml> という名前の別のファイルに保存されます  
   
-## <a name="see-also"></a>参照  
- [パフォーマンス エクスプ ローラー](../profiling/performance-explorer.md)   
+## <a name="see-also"></a>関連項目  
+ [パフォーマンス エクスプローラー](../profiling/performance-explorer.md)   
  [パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)   
- [パフォーマンス データ ファイルの比較](../profiling/comparing-performance-data-files.md)   
+ [パフォーマンス データ ファイルを比較する](../profiling/comparing-performance-data-files.md)   
  [VSPerfReport](../profiling/vsperfreport.md)

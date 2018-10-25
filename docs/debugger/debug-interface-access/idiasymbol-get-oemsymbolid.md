@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_oemsymbolid |Microsoft ドキュメント
+title: Idiasymbol::get_oemsymbolid |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bc15bd3a20d37fa8624593820215df1583498a03
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d3b15cbfc289a88059960603159db3a7d57fd011
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31468412"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917168"
 ---
 # <a name="idiasymbolgetoemsymbolid"></a>IDiaSymbol::get_oemSymbolId
-相手先ブランド供給業者 (OEM) シンボルの ID 値を取得します。  
+供給元 (OEM) シンボルの ID 値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,18 +34,18 @@ HRESULT get_oemSymbolId (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]返しますの OEM は内部的に割り当てられているシンボル id。  
+ [out]返しますが、OEM は内部的に割り当てられているシンボル id。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  識別子は、一意としてすべてのシンボルをマークする DIA SDK によって作成された一意の値です。  
   
- このプロパティのシンボルにのみ適用されます、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の入力`SymTagCustomType`です。  
+ このプロパティを使用したシンボルにのみ適用されます、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の入力`SymTagCustomType`します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

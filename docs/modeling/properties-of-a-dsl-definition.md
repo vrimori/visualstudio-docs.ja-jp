@@ -11,12 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a2f919e1dce6864fa25348acd9c9858f9e4022f8
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 990b55f4ba78f32acba40c325ade596f5628c54f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857704"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893937"
 ---
 # <a name="properties-of-a-dsl-definition"></a>DSL 定義のプロパティ
 DslDefinition プロパティ定義*ドメイン固有言語*バージョン番号などのプロパティを定義します。 DslDefinition プロパティに表示されます、**プロパティ**ウィンドウでは、図の空いている領域をクリックすると、*ドメイン固有言語デザイナー*します。
@@ -26,7 +26,7 @@ DslDefinition プロパティ定義*ドメイン固有言語*バージョン番�
  DslDefinition は次の表にプロパティを持ちます。
 
 |プロパティ|説明|既定値|
-|--------------|-----------------|-------------|
+|-|-|-|
 |アクセス修飾子|ドメイン クラスのアクセス修飾子が public か internal かを判断します。|public|
 |カスタム属性|カスタムでは、ドメイン クラスに属性を定義します。<br /><br /> **注**属性を追加する参照ボタンを使用します。|\<なし >|
 |会社名|現在の会社名、システム レジストリの名前。|現在の会社名|

@@ -1,7 +1,7 @@
 ---
 title: '方法: Web.config ファイルを変更して、動的にコンパイルされた ASP.NET Web アプリケーションをインストルメント化およびプロファイルする | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a2b9f0220d2b25b9bf7f3e319ef8a63ae5ea3a62
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5be66c8a762d7d690ec30a7658c59bcff75c3d53
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545981"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877492"
 ---
 # <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>方法: Web.config ファイルを変更して、動的にコンパイルされた ASP.NET Web アプリケーションをインストルメント化およびプロファイルする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: インストルメント化し、動的にコンパイルされた ASP.NET Web アプリケーションのプロファイリングを Web.Config ファイルを変更](https://docs.microsoft.com/visualstudio/profiling/how-to-modify-web-config-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツールのインストルメンテーション方式を使用すると、動的にコンパイルされた [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーションから、詳しいタイミング データ、.NET のメモリの割り当てデータ、.NET オブジェクトの有効期間に関するデータを収集できます。  
   
  このトピックでは、web.config 構成ファイルを変更して [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーションのインストルメント化とプロファイルを有効にする方法について説明します。  
@@ -35,13 +33,13 @@ ms.locfileid: "47545981"
   
  web.config ファイルのルートは、**configuration** 要素です。 動的にコンパイルされた [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーションをインストルメント化およびプロファイルするには、次の要素を追加するか変更する必要があります。  
   
--   プロファイリングを制御する Microsoft.VisualStudio.Enterprise.ASPNetHelper アセンブリを識別する **configuration/runtime/assemblyBinding/dependentAssembly** 要素。 **dependentAssembly** 要素には、2 つの子要素、**assemblyIdentity** と **codeBase** が含まれます。  
+- プロファイリングを制御する Microsoft.VisualStudio.Enterprise.ASPNetHelper アセンブリを識別する **configuration/runtime/assemblyBinding/dependentAssembly** 要素。 **dependentAssembly** 要素には、2 つの子要素、**assemblyIdentity** と **codeBase** が含まれます。  
   
--   ターゲット アセンブリに対するプロファイラーの処理後のコンパイル手順を指定する **configuration/system.web/compilation** 要素。  
+- ターゲット アセンブリに対するプロファイラーの処理後のコンパイル手順を指定する **configuration/system.web/compilation** 要素。  
   
--   プロファイリング ツールの場所を識別する 2 つの **add** 要素が **configuration/appSettings** セクションに追加されます。  
+- プロファイリング ツールの場所を識別する 2 つの **add** 要素が **configuration/appSettings** セクションに追加されます。  
   
- アプリケーションの構成を復元するために使用できるように、変更前の web.config ファイルのコピーを作成することをお勧めします。  
+  アプリケーションの構成を復元するために使用できるように、変更前の web.config ファイルのコピーを作成することをお勧めします。  
   
 ### <a name="to-add-the-aspnethelper-assembly-as-a-configurationruntimeassemblybindingdependentassembly-element"></a>ASPNetHelper アセンブリを configuration/runtime/assemblyBinding/dependentAssembly 要素として追加するには  
   
@@ -148,7 +146,7 @@ ms.locfileid: "47545981"
     |属性名|属性の値|  
     |--------------------|---------------------|  
     |**key**|**Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrLocation**|  
-    |**value**|`PerformanceToolsFolder` **\VSInstr.Exe**|  
+    |**値**|`PerformanceToolsFolder` **\VSInstr.Exe**|  
   
 4.  別の **add** 要素を **appSettings** 要素の子として追加します。  
   
@@ -157,7 +155,7 @@ ms.locfileid: "47545981"
     |属性名|属性の値|  
     |--------------------|---------------------|  
     |**key**|**Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrTools**|  
-    |**value**|`PerformanceToolsFolder`|  
+    |**値**|`PerformanceToolsFolder`|  
   
      `PerformanceToolsFolder` は、プロファイラーの実行可能ファイルへのパスです。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] が既定の場所にインストールされている場合、値は **C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools** になります。  
   

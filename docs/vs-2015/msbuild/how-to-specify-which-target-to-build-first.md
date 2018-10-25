@@ -1,7 +1,7 @@
 ---
 title: '方法: 最初にビルドするターゲットを指定する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 28fa9137166c19a81aad2c75204400639916e472
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f4ea97ed3650e74a10bfc5e49657f0ed3dce60ba
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545570"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49840702"
 ---
 # <a name="how-to-specify-which-target-to-build-first"></a>方法 : 最初にビルドするターゲットを指定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 最初のビルドするターゲットを指定](https://docs.microsoft.com/visualstudio/msbuild/how-to-specify-which-target-to-build-first)します。  
-  
   
 プロジェクト ファイルには、プロジェクトのビルド方法を定義する 1 つ以上の `Target` 要素を含めることができます。 [!INCLUDE[vstecmsbuildengine](../includes/vstecmsbuildengine-md.md)] ([!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]) エンジンは、見つけた最初のプロジェクトと依存関係をビルドします。ただし、プロジェクト ファイルに `DefaultTargets` 属性または `InitialTargets` 属性が含まれている場合や、コマンド ラインで **/target** スイッチを使ってターゲットが指定されている場合は例外です。  
   
@@ -38,11 +36,11 @@ ms.locfileid: "47545570"
   
 #### <a name="to-specify-one-initial-target"></a>1 つの初期ターゲットを指定するには  
   
--   `Project` 要素の `InitialTargets` 属性の既定のターゲットを指定します。 例えば:  
+- `Project` 要素の `InitialTargets` 属性の既定のターゲットを指定します。 例えば:  
   
-     `<Project InitialTargets="Clean">`  
+   `<Project InitialTargets="Clean">`  
   
- ターゲットを順番に一覧表示し、セミコロンを使って各ターゲットを区切ることにより、`InitialTargets` 属性で複数の初期ターゲットを指定できます。 リスト内のターゲットは、順番に実行されます。  
+  ターゲットを順番に一覧表示し、セミコロンを使って各ターゲットを区切ることにより、`InitialTargets` 属性で複数の初期ターゲットを指定できます。 リスト内のターゲットは、順番に実行されます。  
   
 #### <a name="to-specify-more-than-one-initial-target"></a>2 つ以上の初期ターゲットを指定するには  
   
@@ -55,11 +53,11 @@ ms.locfileid: "47545570"
   
 #### <a name="to-specify-one-default-target"></a>1 つの既定のターゲットを指定するには  
   
--   `Project` 要素の `DefaultTargets` 属性の既定のターゲットを指定します。 例えば:  
+- `Project` 要素の `DefaultTargets` 属性の既定のターゲットを指定します。 例えば:  
   
-     `<Project DefaultTargets="Compile">`  
+   `<Project DefaultTargets="Compile">`  
   
- ターゲットを順番に一覧表示し、セミコロンを使って各ターゲットを区切ることにより、`DefaultTargets` 属性で複数の既定のターゲットを指定できます。 リスト内のターゲットは、順番に実行されます。  
+  ターゲットを順番に一覧表示し、セミコロンを使って各ターゲットを区切ることにより、`DefaultTargets` 属性で複数の既定のターゲットを指定できます。 リスト内のターゲットは、順番に実行されます。  
   
 #### <a name="to-specify-more-than-one-default-target"></a>2 つ以上の既定のターゲットを指定するには  
   

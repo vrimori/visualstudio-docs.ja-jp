@@ -1,7 +1,7 @@
 ---
 title: Bitmaps 要素 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 74652e1b-fcfa-421b-aa9f-fbc081d3b476
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fb0e241b3767e8c730438ca29b6874d1a385ef2b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6d0993c31bdda17fd271ef73f10a3d3c0a8bd0a6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548668"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49856481"
 ---
 # <a name="bitmaps-element"></a>Bitmaps 要素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Bitmaps 要素](https://docs.microsoft.com/visualstudio/extensibility/bitmaps-element)します。  
-  
 グループ[ビットマップ要素](../extensibility/bitmap-element.md)要素。  
   
 ## <a name="syntax"></a>構文  

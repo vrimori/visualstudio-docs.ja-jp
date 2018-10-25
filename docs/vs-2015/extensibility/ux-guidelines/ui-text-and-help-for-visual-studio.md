@@ -1,7 +1,7 @@
 ---
 title: UI テキストと Visual Studio のヘルプ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: e8747d07-6c90-46cc-b425-55b589f7e9e4
 caps.latest.revision: 3
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4f3e8f7541c83372c0d822c3db4bc0e20b3af1a9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bb802aa9dd797004b61ab856dda7b7670f204c79
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533221"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908243"
 ---
 # <a name="ui-text-and-help-for-visual-studio"></a>UI テキストと Visual Studio のヘルプ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UI テキストと Visual Studio のヘルプ](https://docs.microsoft.com/visualstudio/extensibility/ux-guidelines/ui-text-and-help-for-visual-studio)します。  
-  
 ##  <a name="BKMK_UITextAndTerminology"></a> UI テキストと用語  
  わかりやすくテキストは、効果的な UI に非常に重要です。 ソフトウェアのユーザーが読み取る傾向があるラベルを最初に、つまり、手元のタスクの完了に最も関連します。 静的テキストは、少ない頻度で読み取られます。 この概算の順序では、UI の読み取り後に、ウィンドウ全体のクイック スキャンでの作業セッションを開始するユーザーを計画します。  
   
@@ -321,15 +319,15 @@ ms.locfileid: "47533221"
   
  このソリューションは、バグを引き起こす可能性のある 4 つの前提条件です。  
   
--   ダイアログ ボックスの [ヘルプ] ボタンを**IDHELP** (9)。  
+- ダイアログ ボックスの [ヘルプ] ボタンを**IDHELP** (9)。  
   
--   ダイアログ ボックスが正しいよう、[ヘルプ] ボタンを非表示にします。  
+- ダイアログ ボックスが正しいよう、[ヘルプ] ボタンを非表示にします。  
   
--   ダイアログ ボックスでは、winproc は置換しません。  
+- ダイアログ ボックスでは、winproc は置換しません。  
   
--   ダイアログ ボックスは、別のダイアログ内では埋め込まれません。  
+- ダイアログ ボックスは、別のダイアログ内では埋め込まれません。  
   
- ダイアログ msenv 内に存在して使用しない場合**VBDialogBoxParam**、活用することを調査**VBDialogBoxParam**独自のハンドラーを実装する前にします。  
+  ダイアログ msenv 内に存在して使用しない場合**VBDialogBoxParam**、活用することを調査**VBDialogBoxParam**独自のハンドラーを実装する前にします。  
   
 ##### <a name="dialogs-created-through-other-packages"></a>その他のパッケージを使って作成されたダイアログ ボックス  
  ダイアログの msenv の外部にある場合、独自のソリューションを実装することができます。 VSPackage で、共有ダイアログ クラスは、タイトル バーに、ボタンを移動または各ダイアログ ボックスで、ハンドラーの実装を検討してください。 次のコードでは、実装を開始するためのスケルトンは。  

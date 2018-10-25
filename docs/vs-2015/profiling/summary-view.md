@@ -1,7 +1,7 @@
 ---
 title: 概要ビュー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 42
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b253767977a59ba782dbaae9eb3384bba5f313d8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 242250476a55ce33344863003a90d9c829eaea1a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539399"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49301536"
 ---
 # <a name="summary-view"></a>概要 ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[概要ビュー](https://docs.microsoft.com/visualstudio/profiling/summary-view)します。  
-  
 概要ビューには、プロファイル実行で最もパフォーマンスに負荷のかかる関数またはオブジェクトに関する情報が表示されます。 このビューには、タイムライン グラフと、プロファイル方法のパフォーマンス メトリックスに基づいて最も負荷のかかる関数またはオブジェクトの 2 つ以上の一覧が表示されます。 このビュー内のデータは、使用されたプロファイル方法 (サンプリング、インストルメンテーション、またはコンカレンシー) および .NET メモリ割り当てを収集対象としたかどうかによって異なります。  
   
  コンカレンシー データの概要ビューを除くすべての概要ビューでは、概要ビューのタイムライン グラフに、プロファイリングが行われた期間のプロファイリングされたアプリケーションのプロセッサ (CPU) 使用率が表示されます。  
@@ -66,8 +64,8 @@ ms.locfileid: "47539399"
   
 ## <a name="see-also"></a>関連項目  
  [概要 ビュー](../profiling/summary-view-sampling-data.md)   
- [概要ビュー](../profiling/summary-view-instrumentation-data.md)   
- [概要ビュー](../profiling/summary-view-dotnet-memory-data.md)
+ [概要 ビュー](../profiling/summary-view-instrumentation-data.md)   
+ [概要 ビュー](../profiling/summary-view-dotnet-memory-data.md)
 
 
 

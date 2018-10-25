@@ -1,7 +1,7 @@
 ---
 title: SccCheckin 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: e3f26ac2-6163-42e1-a764-22cfea5a3bc6
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 27d2f5fc2bec3f7e082593e3adcd65a0407f0bc2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 36d1ada65038e219fc56c2f0e473a615c18dac3b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536251"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858798"
 ---
 # <a name="scccheckin-function"></a>SccCheckin 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[SccCheckin 関数](https://docs.microsoft.com/visualstudio/extensibility/scccheckin-function)します。  
-  
 この関数は、変更を保存して、新しいバージョンを作成、ソース管理システムに以前のチェック アウトしたファイルをチェックインします。 この関数は、カウントにチェックインするファイルの名前の配列と呼びます。  
   
 ## <a name="syntax"></a>構文  

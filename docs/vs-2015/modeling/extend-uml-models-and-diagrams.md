@@ -1,7 +1,7 @@
 ---
 title: UML モデルと図の拡張 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,19 +17,17 @@ caps.latest.revision: 39
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: d15da471e077e737bb7ba82d19d68f24f15db687
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0fa0196000e2349f5f323d28138186b59ae07cfd
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533537"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49179128"
 ---
 # <a name="extend-uml-models-and-diagrams"></a>UML モデルと図の拡張
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML を拡張モデルと図](https://docs.microsoft.com/visualstudio/modeling/extend-uml-models-and-diagrams)します。  
-  
-ここでは、Visual Studio に含まれている UML モデリング ツールを拡張するためのいくつかの方法について説明します。 モデルの型とツールをサポートする Visual Studio のバージョンを確認するを参照してください。[アーキテクチャとモデリング ツールのバージョンのサポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)します。  
+ここでは、Visual Studio に含まれている UML モデリング ツールを拡張するためのいくつかの方法について説明します。 どの Visual Studio のバージョンがどのモデルの型とツールをサポートしているかを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
  次の例のシナリオでは、Fabrikam 社は空港の荷物取り扱いシステムを設計し、インストールします。 ある空港のプロジェクトと別の空港のプロジェクトの間には、基本的な設備とそれを制御するソフトウェアに関して多くの類似点があります。 ただし、コンベヤ ベルト、チェックイン デスク、保管庫、その他の荷物取り扱い装置の構成など、大きく異なる点もいくつかあります。  
   
@@ -41,7 +39,7 @@ ms.locfileid: "47533537"
   
 ##  <a name="Requirements"></a> 要件  
   
--   [Visual Studio SDK](../extensibility/visual-studio-sdk.md)します。  
+-   [Visual Studio SDK](../extensibility/visual-studio-sdk.md)。  
   
 -   [Modeling SDK for Visual Studio 2015](http://www.microsoft.com/download/details.aspx?id=48148)。  
   

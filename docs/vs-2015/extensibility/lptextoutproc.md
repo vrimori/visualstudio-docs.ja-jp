@@ -1,7 +1,7 @@
 ---
 title: LPTEXTOUTPROC |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ ms.assetid: 2025c969-e3c7-4cf4-a5c5-099d342895ea
 caps.latest.revision: 22
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6e8fc709353e4a2e39059cade96aa49c30fedac4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 37fe822a60e2f4b9628c66d9e4d292e5bc814668
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545676"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925566"
 ---
 # <a name="lptextoutproc"></a>LPTEXTOUTPROC
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[LPTEXTOUTPROC](https://docs.microsoft.com/visualstudio/extensibility/lptextoutproc)します。  
-  
 ユーザーは、統合開発環境 (IDE) 内からソース管理操作を実行するとき、ソース管理プラグインは、操作に関連するエラーまたは状態のメッセージを伝達するためにする可能性があります。 プラグインはできますこの目的の表示の独自のメッセージ ボックス。 ただし、詳細のシームレスな統合をプラグインできる文字列に渡す、IDE では、状態情報を表示することをネイティブで表示されます。 このメカニズムは、`LPTEXTOUTPROC`関数ポインター。 IDE では、エラーと状態を表示するため (詳細については、以下で説明) この関数を実装します。  
   
  IDE をソース管理プラグインをこの関数に関数ポインターとして渡す、`lpTextOutProc`を呼び出すときに、パラメーター、 [SccOpenProject](../extensibility/sccopenproject-function.md)します。 呼び出しの途中での例については、SCC 操作中に、 [SccGet](../extensibility/sccget-function.md)多数のファイルを含む、プラグイン、呼び出すことができます、`LPTEXTOUTPROC`関数を定期的に表示する文字列を渡します。 IDE は、または個別のメッセージ ボックスで、必要に応じて、出力ウィンドウにステータス バーの これらの文字列を表示する場合があります。 必要に応じて、IDE が持つ特定のメッセージを表示することができます、**キャンセル**ボタンをクリックします。 これにより、ユーザー、操作をキャンセルして、IDE をプラグインにこの情報を渡す機能を提供します。  

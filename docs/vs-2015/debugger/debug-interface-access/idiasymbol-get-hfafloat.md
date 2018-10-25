@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_hfafloat |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1ba98f77edbe60b0e74acc6edc4beb1bd386b040
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 55528567bd1b048658d7b531d35fbeb6f9b1ed22
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538999"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853391"
 ---
 # <a name="idiasymbolgethfafloat"></a>IDiaSymbol::get_hfaFloat
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_hfafloat](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-hfafloat)します。  
-  
 ユーザー定義型 (UDT) が同種浮動小数点 (HFA) の集計データは float 型を含むかどうかを指定するフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -52,7 +50,7 @@ HRESULT get_hfaFloat(
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

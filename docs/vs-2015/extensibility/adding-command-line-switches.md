@@ -1,7 +1,7 @@
 ---
 title: コマンド ライン スイッチを追加する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 8bbbd87e-76fe-4fb5-8ef9-65f5e31967cf
 caps.latest.revision: 22
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d4a9b9041183b22612c36e98f502d01ee3b62e36
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 278d7b723bde187fc765c610bd8bc470bb2b2059
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544825"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823583"
 ---
 # <a name="adding-command-line-switches"></a>コマンド ライン スイッチを追加する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コマンド ライン スイッチを追加する](https://docs.microsoft.com/visualstudio/extensibility/adding-command-line-switches)します。  
-  
 Devenv.exe を実行すると、VSPackage に適用されるコマンド ライン スイッチを追加することができます。 使用<xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute>スイッチとそのプロパティの名前を宣言します。 この例では、MySwitch スイッチがという名前の VSPackage のサブクラスの追加**AddCommandSwitchPackage**引数なしで、自動的に読み込まれる VSPackage とします。  
   
 ```csharp  
@@ -66,11 +64,11 @@ Devenv.exe を実行すると、VSPackage に適用されるコマンド ライ�
 ## <a name="retrieving-command-line-switches"></a>コマンド ライン スイッチを取得します。  
  パッケージが読み込まれるときに、次の手順を実行して、コマンド ライン スイッチを取得できます。  
   
-1.  VSPackage の<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>実装、呼び出し`QueryService`で<xref:Microsoft.VisualStudio.Shell.Interop.SVsAppCommandLine>を取得する、<xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine>インターフェイス。  
+1. VSPackage の<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>実装、呼び出し`QueryService`で<xref:Microsoft.VisualStudio.Shell.Interop.SVsAppCommandLine>を取得する、<xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine>インターフェイス。  
   
-2.  呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine.GetOption%2A>をユーザーが入力したコマンド ライン スイッチを取得します。  
+2. 呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine.GetOption%2A>をユーザーが入力したコマンド ライン スイッチを取得します。  
   
- 次のコードでは、MySwitch コマンド ライン スイッチがユーザーによって入力されたかどうかを確認する方法を示します。  
+   次のコードでは、MySwitch コマンド ライン スイッチがユーザーによって入力されたかどうかを確認する方法を示します。  
   
 ```csharp  
 IVsAppCommandLine cmdline = (IVsAppCommandLine)GetService(typeof(SVsAppCommandLine));  

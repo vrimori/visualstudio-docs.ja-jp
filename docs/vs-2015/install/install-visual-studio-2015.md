@@ -1,14 +1,14 @@
 ---
 title: Visual Studio 2015 のインストール |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
 - vs-ide-install
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - vs.about
 helpviewer_keywords:
@@ -23,12 +23,12 @@ caps.latest.revision: 183
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: db32eaaefd89bce9b3972853b7bb02a307b8df4d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: df09e647908b264ade467b8fafd4487641d3be6c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535741"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841105"
 ---
 # <a name="install-visual-studio-2015"></a>Visual Studio 2015 をインストールします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -75,7 +75,7 @@ Visual Studio 2017 の最新のインストール ドキュメントを参照し
  インストール メディア (Dvd) を使用してから、Visual Studio サブスクリプションのサービスを使用して、Visual Studio をインストールすることができます、 [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015)から web インストーラーをダウンロードすることによって、web サイト、 [Visual Studioダウンロード](http://go.microsoft.com/fwlink/?LinkId=517106)web サイト、またはオフライン インストール レイアウトを作成して (を参照してください、[の作成、オフライン インストールの Visual Studio](../install/create-an-offline-installation-of-visual-studio.md)の詳細 ページ)。  
   
 > [!IMPORTANT]
->  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] をインストールするには、管理者の資格情報が必要です。 ただしインストール後、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の使用には不要です。  
+>  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]をインストールするには、管理者の資格情報が必要です。 ただしインストール後、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の使用には不要です。  
   
  Visual Studio のすべてをインストールするには、ローカル管理者アカウントの次の特権が有効になっている必要があります。  
   
@@ -88,7 +88,7 @@ Visual Studio 2017 の最新のインストール ドキュメントを参照し
  ローカル管理者アカウントの要件の詳細については、サポート技術情報「 [セットアップ アカウントに特定のユーザー権限がない場合、SQL Server のインストールが失敗する](https://support.microsoft.com/en-us/kb/2000257)」を参照してください。  
   
 ###  <a name="BKMK_Media"></a> インストール メディアを使用します。  
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] をインストールするには、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] インストール メディアのルート ディレクトリで、必要なエディションのインストール ファイルを実行します。  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]をインストールするには、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] インストール メディアのルート ディレクトリで、必要なエディションのインストール ファイルを実行します。  
   
 |エディション|インストール ファイル|  
 |-------------|-----------------------|  
@@ -131,21 +131,21 @@ Visual Studio 2017 の最新のインストール ドキュメントを参照し
 3.  **[次へ]** を選択し、残りの指示に従います。  
   
 ##  <a name="helpContent"></a> オフラインのヘルプ コンテンツのインストール  
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] をインストールした後、オフラインで使用できるように、追加のヘルプ コンテンツをダウンロードすることができます。  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]をインストールした後、オフラインで使用できるように、追加のヘルプ コンテンツをダウンロードすることができます。  
   
 #### <a name="to-install-or-uninstall-help-content"></a>ヘルプ コンテンツをインストールまたはアンインストールするには  
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]メニュー バーで、選択**ヘルプ**、**ヘルプ コンテンツの削除と追加**します。  
+1. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] メニュー バーで、 **[ヘルプ]**、 **[ヘルプ コンテンツの追加と削除]** の順にクリックします。  
   
-2.  **[Microsoft ヘルプ ビューア―]** の **[コンテンツの管理]** タブで、ヘルプ コンテンツのインストール ソースを選択します。  
+2. **[Microsoft ヘルプ ビューア―]** の **[コンテンツの管理]** タブで、ヘルプ コンテンツのインストール ソースを選択します。  
   
-3.  特定のヘルプ コレクションを探している場合は、名前やキーワードを入力、**検索**テキスト ボックス、およびキーを押します**Enter**します。  
+3. 特定のヘルプ コレクションを探している場合は、名前やキーワードを入力、**検索**テキスト ボックス、およびキーを押します**Enter**します。  
   
-4.  必要なヘルプ コレクションの横で、 **[追加]** または **[削除]** リンクをクリックします。  
+4. 必要なヘルプ コレクションの横で、 **[追加]** または **[削除]** リンクをクリックします。  
   
-5.  をクリックして、 **Update**ボタンをクリックします。  
+5. をクリックして、 **Update**ボタンをクリックします。  
   
- インストールまたはオフラインのヘルプをデプロイする方法の詳細については、次を参照してください。、[ヘルプ ビューアーの管理者ガイド](../ide/help-viewer-administrator-guide.md)します。  
+   インストールまたはオフラインのヘルプをデプロイする方法の詳細については、次を参照してください。、[ヘルプ ビューアーの管理者ガイド](../ide/help-viewer-administrator-guide.md)します。  
   
 ##  <a name="serviceReleases"></a> サービス リリースと製品の更新プログラムの確認  
  すべての拡張機能に互換性があるためには、以前のバージョンからアップグレードすると、Visual Studio は自動的に拡張機能をアップグレードしません。 拡張機能を再インストールする必要があります、 [Visual Studio ギャラリー](http://go.microsoft.com/fwlink/?LinkId=178891)またはソフトウェア発行者から。  
@@ -203,7 +203,7 @@ Visual Studio 2017 の最新のインストール ドキュメントを参照し
 |-----------|-----------------|  
 |[Visual Studio のオフライン インストールを作成する](../install/create-an-offline-installation-of-visual-studio.md)|インターネットに接続されていないときに、Visual Studio をインストールする方法について説明します。
 |[複数バージョンの Visual Studio をインストールする](../install/install-visual-studio-versions-side-by-side.md)|同じコンピューターに複数バージョンの Visual Studio をインストールする方法について説明します。|  
-|[コマンド ライン パラメーターを使用して Visual Studio をインストールする](https://docs.microsoft.com/en-us/visualstudio/install/use-command-line-parameters-to-install-visual-studio)|コマンド プロンプトから Visual Studio をインストールするときに使用できるコマンド ライン パラメーターを一覧表示します。|  
+|[コマンド ライン パラメーターを使用して Visual Studio をインストールする](/visualstudio/install/use-command-line-parameters-to-install-visual-studio)|コマンド プロンプトから Visual Studio をインストールするときに使用できるコマンド ライン パラメーターを一覧表示します。|  
 |[Visual Studio のアンインストール](../install/uninstall-visual-studio.md)|Visual Studio をアンインストールする方法について説明します。|  
 |[Visual Studio 管理者ガイド](../install/visual-studio-administrator-guide.md)|Visual Studio の配置オプションについて説明します。|  
 |[Visual Studio Image Library](../designers/the-visual-studio-image-library.md)|Visual Studio アプリケーションで使用できるグラフィックスをインストールする方法について説明します。|  

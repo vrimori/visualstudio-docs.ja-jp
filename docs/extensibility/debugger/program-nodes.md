@@ -16,25 +16,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 27007773cfe8d8a8b595ee9b1921f35376bf2231
-ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
+ms.openlocfilehash: ecc87a24b35993f200c709ee033fffe6a4ecb120
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39251063"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903622"
 ---
 # <a name="program-nodes"></a>プログラム ノード
 デバッガーのアーキテクチャで、*プログラム ノード*:  
   
--   プログラムの軽量の説明です。  
+- プログラムの軽量の説明です。  
   
--   それ自体とで実行されているプロセスを識別できます。 プログラム ノードから、デタッチ、および、存在する場合は、作成、デバッグ エンジン (DE) を記述にアタッチすることができます。  
+- それ自体とで実行されているプロセスを識別できます。 プログラム ノードから、デタッチ、および、存在する場合は、作成、デバッグ エンジン (DE) を記述にアタッチすることができます。  
   
--   によって表される、 [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)インターフェイス、通常、DE またはポートを作成します。 プログラム ノードを呼び出すことによって、ポートに追加[AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)します。 ポートに、[プログラム] ノードを追加するときに、このプログラムのノードが表すプログラムを格納しているプロセスに追加されます。  
+- によって表される、 [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)インターフェイス、通常、DE またはポートを作成します。 プログラム ノードを呼び出すことによって、ポートに追加[AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)します。 ポートに、[プログラム] ノードを追加するときに、このプログラムのノードが表すプログラムを格納しているプロセスに追加されます。  
   
- Debug パッケージの実装によって、デバッグ セッションを開始した後しばらくは、プログラムのノードが対応するプログラムを作成に使用されます。 プロセスは、そのプログラムの照会されたとき、プログラムが列挙されますが、プログラムの各ノードのいずれか。  
+  Debug パッケージの実装によって、デバッグ セッションを開始した後しばらくは、プログラムのノードが対応するプログラムを作成に使用されます。 プロセスは、そのプログラムの照会されたとき、プログラムが列挙されますが、プログラムの各ノードのいずれか。  
   
- プログラムにアタッチされて、前に、IDE には、プログラムの軽量の説明のみ必要があります。 この情報は、[プログラム] ノードから取得できます。 プログラムにアタッチされると、プログラムで実行されているすべてのスレッドの一覧などのより詳細な情報が表示されます。 この情報は、プログラム自体から取得されます。  
+  プログラムにアタッチされて、前に、IDE には、プログラムの軽量の説明のみ必要があります。 この情報は、[プログラム] ノードから取得できます。 プログラムにアタッチされると、プログラムで実行されているすべてのスレッドの一覧などのより詳細な情報が表示されます。 この情報は、プログラム自体から取得されます。  
   
 ## <a name="see-also"></a>関連項目  
  [プログラム](../../extensibility/debugger/programs.md)   

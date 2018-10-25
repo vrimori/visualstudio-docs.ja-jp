@@ -1,5 +1,5 @@
 ---
-title: PARSEFLAGS |Microsoft ドキュメント
+title: PARSEFLAGS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 70766aef19c199a191f141947f1b5a458450c322
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7192483b4f2ce88235fc5e8d48f1d51ef71b442f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31126192"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49913008"
 ---
 # <a name="parseflags"></a>PARSEFLAGS
 式を解析する方法を指定します。  
@@ -46,18 +46,18 @@ public enum enum_PARSEFLAGS {
   
 ## <a name="members"></a>メンバー  
  PARSE_EXPRESSION  
- 式がステートメントでないことを示します。  
+ 式がステートメントではないことを示します。  
   
  PARSE_FUNCTION_AS_ADDRESS  
- 式が解析 (および後で評価) アドレスとしてのことを示します。  
+ 解析 (および後で評価) アドレスとして、式があることを示します。  
   
  PARSE_DESIGN_TIME_EXPR_EVAL  
- デザイン時に式が解析されていることを示します (つまり、デザイナーが開いているとき)。  
+ 式はデザイン時に解析されていることを示します (つまり、デザイナーが開いているとき)。  
   
-## <a name="remarks"></a>コメント  
- パラメーターとして渡される、 [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)と[解析](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ パラメーターとして渡される、 [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)と[解析](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
@@ -67,4 +67,4 @@ public enum enum_PARSEFLAGS {
 ## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)   
- [解析](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)
+ [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)

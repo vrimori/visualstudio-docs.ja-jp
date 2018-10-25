@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a6312a674cc3e9764971f2add59c8e1f0441790
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: d278f8ca6019dd8a29d5e4c57e1e191137a32972
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34477484"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669354"
 ---
 # <a name="understand-performance-collection-methods"></a>パフォーマンス収集方法について
 
@@ -32,8 +32,8 @@ Visual Studio プロファイリング ツールには、パフォーマンス �
 |[サンプリング](#sampling)|アプリケーションが実行する作業についての統計データを収集します。|
 |[インストルメンテーション](#instrumentation)|各関数呼び出しのタイミングに関する詳細情報を取得します。|
 |[同時実行](#concurrency)|マルチスレッド アプリケーションに関する詳細情報を収集します。|
-|[.NET メモリ](#net_memory)|.NET メモリの割り当ておよびガベージ コレクションに関する詳細情報を収集します。|
-|[階層の相互作用](#tier_interaction)|SQL Server データベースに対する ADO.NET の同期の関数呼び出しに関する情報を収集します。<br /><br /> 階層相互作用プロファイル データは、Visual Studio の任意のエディションを使用して収集できます。 ただし、階層相互作用プロファイル データを表示できるのは、Visual Studio Enterprise のみです。|
+|[.NET メモリ](#net-memory)|.NET メモリの割り当ておよびガベージ コレクションに関する詳細情報を収集します。|
+|[階層の相互作用](#tier-interaction)|SQL Server データベースに対する ADO.NET の同期の関数呼び出しに関する情報を収集します。<br /><br /> 階層相互作用プロファイル データは、Visual Studio の任意のエディションを使用して収集できます。 ただし、階層相互作用プロファイル データを表示できるのは、Visual Studio Enterprise のみです。|
 
 一部のプロファイル方法では、ソフトウェアおよびハードウェアのパフォーマンス カウンターなど、ここで示した以外の情報も収集できます。 詳細については、「[追加のパフォーマンス データの収集](../profiling/collecting-additional-performance-data.md)」を参照してください。
 

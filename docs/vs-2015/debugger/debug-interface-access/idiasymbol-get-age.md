@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_age |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8c9a19af7ffce28cabb3d3f9ab7ae659c465f4c7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 360bd975ce21c91d9fa6a414cde9272a50effd84
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547309"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853793"
 ---
 # <a name="idiasymbolgetage"></a>IDiaSymbol::get_age
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_age](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-age)します。  
-  
 .Pdb ファイルの経過時間の値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -53,7 +51,7 @@ HRESULT get_age (
 ## <a name="remarks"></a>Remarks  
  経過時間がある既知の時刻の値に必ずしも対応していませんこれは通常、.pdb ファイルが対応する .exe ファイルと同期していない場合を決定に使用します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

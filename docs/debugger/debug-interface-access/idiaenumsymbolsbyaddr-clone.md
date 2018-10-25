@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbolsbyaddr::clone |Microsoft ドキュメント
+title: Idiaenumsymbolsbyaddr::clone |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d60ad08c6ace9b0f130b0430e351689539480d97
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f41e3d5c933e331deb8d7e4fb9486cf91018dcf2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31468737"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868990"
 ---
 # <a name="idiaenumsymbolsbyaddrclone"></a>IDiaEnumSymbolsByAddr::Clone
 オブジェクトのコピーを作成します。  
@@ -34,10 +34,10 @@ HRESULT Clone (
   
 #### <a name="parameters"></a>パラメーター  
  ppenum  
- [out]返します、 [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)列挙子の重複を含むオブジェクトです。 シンボルが重複していない、列挙子。  
+ [out]返します、 [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)列挙子の重複を含むオブジェクト。 シンボルが重複していない、列挙子。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)

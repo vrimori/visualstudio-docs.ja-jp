@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: e39a7d770308cae7e022d419b21695f9d478aad7
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 16ec8cdb2402546f2059053495a8e656427783e3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39381694"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937331"
 ---
 # <a name="design-xaml-in-visual-studio"></a>Visual Studio で XAML をデザインする
 
@@ -61,7 +61,7 @@ Visual Studio と Blend for Visual Studio は自在に切り替えることが�
 生産性を高めるため、次のようなタスクには Blend for Visual Studio の使用をご検討ください。 Blend for Visual Studio が Visual Studio デザイナーまたはコード単独より短い時間でより多くの機能を提供する領域は以下のとおりです。
 
 |終了|Visual Studio|Blend for Visual Studio|詳細情報|
-|--------|-------------------|-----------------------------|----------------------|
+|--------|-------------------| - | - |
 |**アニメーションを作成する**|アニメーション用のデザイン ツールはないため、プログラムで作成する必要があります。 これを行うには、WPF におけるアニメーションおよびタイミング システムを理解し、広範なコーディングの専門知識を持っている必要があります。|アニメーションを視覚的に作成し、Blend for Visual Studio でプレビューできます。 これは、コーディングでアニメーションを構築するよりもすばやく正確です。 ユーザーとの対話を処理するトリガーを追加できるほか、コードに切り替えてイベント ハンドラーとその他の機能を追加することができます。|[オブジェクトのアニメーション化](../designers/animate-objects-in-xaml-designer.md)|
 |**簡単に操作できるよう、図形やテキストをパスに変換する**|サポートされていません。|図形 (四角形、楕円など) をパスに変換することで、図形に対して軽微な変更や劇的な変更を行えます。そうすることで、より良い編集コントロールができます。 形状を変更したり、パスを結合するとともに、複数の図形から複合パスを作成することができます。<br /><br /> さらに、テキスト ブロックをパスに変換して、ベクター イメージとして操作することもできます。|[図形とパスの描画](../designers/draw-shapes-and-paths.md)|
 |**UI の設計に対話機能を追加する**|C#、Visual Basic、または C++ コードが必要です。|静的な設計に対話機能を追加するため、コントロールにビヘイビアーをドラッグ アンド ドロップします。 ビヘイビアーは、ドラッグ アンド ドロップ、ズーム、表示状態の変更などの機能をカプセル化する、すぐに使用できるコード スニペットです。 選択したり、独自に作成したりできるビヘイビアーのセットが増えています。<br /><br /> 次に、Blend for Visual Studio でビヘイビアーのプロパティを変更するか、コードでイベント ハンドラーを追加することにより、各ビヘイビアーをカスタマイズできます。|[コントロールの挿入およびそのビヘイビアーの変更](../designers/insert-controls-and-modify-their-behavior-in-xaml-designer.md)|

@@ -30,61 +30,61 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ee297628e64d61e108483565613951d0b490a8b0
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: d9c7fa658c24caa65b3c955002ffeeaff6573c55
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672843"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812232"
 ---
 # <a name="program-document-level-customizations"></a>プログラムのドキュメント レベルのカスタマイズ
   ドキュメント レベルのカスタマイズを使用して、Microsoft Office Word または Microsoft Office Excel を拡張する場合に、次のタスクを実行できます。  
   
--   オブジェクト モデルを使用してアプリケーションを自動化します。  
+- オブジェクト モデルを使用してアプリケーションを自動化します。  
   
--   ドキュメントの画面にコントロールを追加します。  
+- ドキュメントの画面にコントロールを追加します。  
   
--   カスタマイズ アセンブリから、ドキュメント内に Visual Basic for Applications (VBA) コードを呼び出します。  
+- カスタマイズ アセンブリから、ドキュメント内に Visual Basic for Applications (VBA) コードを呼び出します。  
   
--   VBA からカスタマイズ アセンブリ内のコードを呼び出します。  
+- VBA からカスタマイズ アセンブリ内のコードを呼び出します。  
   
--   Microsoft Office がインストールされていないサーバー上にドキュメントがあるときに、そのドキュメントの特定の要素を管理します。  
+- Microsoft Office がインストールされていないサーバー上にドキュメントがあるときに、そのドキュメントの特定の要素を管理します。  
   
--   アプリケーションのユーザー インターフェイス (UI) をカスタマイズします。  
+- アプリケーションのユーザー インターフェイス (UI) をカスタマイズします。  
   
- [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
+  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- ドキュメント レベルのプロジェクトのコードの記述には、Visual Studio の他のプロジェクトの種類とは異なる点があります。 相違点の多くは、Office オブジェクト モデルがマネージド コードに公開される方法に起因しています。 詳細については、次を参照してください。 [Office ソリューションでコードを記述](../vsto/writing-code-in-office-solutions.md)します。  
+  ドキュメント レベルのプロジェクトのコードの記述には、Visual Studio の他のプロジェクトの種類とは異なる点があります。 相違点の多くは、Office オブジェクト モデルがマネージド コードに公開される方法に起因しています。 詳細については、次を参照してください。 [Office ソリューションでコードを記述](../vsto/writing-code-in-office-solutions.md)します。  
   
- Visual Studio の Office 開発ツールを使用して作成できますドキュメント レベルのカスタマイズとその他の種類のソリューションに関する一般的な情報は、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)します。  
+  Visual Studio の Office 開発ツールを使用して作成できますドキュメント レベルのカスタマイズとその他の種類のソリューションに関する一般的な情報は、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)します。  
   
 ## <a name="use-the-generated-classes-in-document-level-projects"></a>ドキュメント レベルのプロジェクトで生成されたクラスを使用します。  
  ドキュメント レベルのプロジェクトを作成するときに、Visual Studio は、コードの記述を開始できるプロジェクト クラスを自動的に生成します。 Visual Studio は、Word と Excel 用のさまざまなクラスを生成します。  
   
--   Word 用のドキュメント レベルのプロジェクトでは、クラスは既定で `ThisDocument` と呼ばれます。  
+- Word 用のドキュメント レベルのプロジェクトでは、クラスは既定で `ThisDocument` と呼ばれます。  
   
--   Excel 用のドキュメント レベルのプロジェクトには、生成されたクラスが複数あり、ワークブック自体のために 1 つ、各ワークシート用に 1 つずつです。 既定では、それらのクラスの名前は次のようになります。  
+- Excel 用のドキュメント レベルのプロジェクトには、生成されたクラスが複数あり、ワークブック自体のために 1 つ、各ワークシート用に 1 つずつです。 既定では、それらのクラスの名前は次のようになります。  
   
-    -   `ThisWorkbook`  
+  -   `ThisWorkbook`  
   
-    -   `Sheet1`  
+  -   `Sheet1`  
   
-    -   `Sheet2`  
+  -   `Sheet2`  
   
-    -   `Sheet3`  
+  -   `Sheet3`  
   
- 生成されたクラスには、ドキュメントを開いたり閉じたりしたときに呼び出されるイベント ハンドラーが含まれています。 ドキュメントを開いたときにコードを実行するには、 `Startup` イベント ハンドラーにコードを追加します。 ドキュメントを閉じたときにコードを実行するには、 `Shutdown` イベント ハンドラーにコードを追加します。 詳細については、次を参照してください。 [Office プロジェクト内のイベント](../vsto/events-in-office-projects.md)します。  
+  生成されたクラスには、ドキュメントを開いたり閉じたりしたときに呼び出されるイベント ハンドラーが含まれています。 ドキュメントを開いたときにコードを実行するには、 `Startup` イベント ハンドラーにコードを追加します。 ドキュメントを閉じたときにコードを実行するには、 `Shutdown` イベント ハンドラーにコードを追加します。 詳細については、次を参照してください。 [Office プロジェクト内のイベント](../vsto/events-in-office-projects.md)します。  
   
 ### <a name="understand-the-design-of-the-generated-classes"></a>生成されたクラスの設計を理解します。  
  [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] または [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]を対象とするプロジェクトでは、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] のホスト項目の種類はインターフェイスなので、生成されたクラスがそこから実装を派生させることはできません。 代わりに、生成されたクラスでは、次の基本クラスからそのほとんどのメンバーが派生します。  
   
--   `ThisDocument`: <xref:Microsoft.Office.Tools.Word.DocumentBase>から派生します。  
+- `ThisDocument`: <xref:Microsoft.Office.Tools.Word.DocumentBase>から派生します。  
   
--   `ThisWorkbook`: <xref:Microsoft.Office.Tools.Excel.WorkbookBase>から派生します。  
+- `ThisWorkbook`: <xref:Microsoft.Office.Tools.Excel.WorkbookBase>から派生します。  
   
--   `Sheet` *n*: から派生した<xref:Microsoft.Office.Tools.Excel.WorksheetBase>します。  
+- `Sheet` *n*: から派生した<xref:Microsoft.Office.Tools.Excel.WorksheetBase>します。  
   
- これらの基本クラスは、そのメンバーのすべての呼び出しを [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]の対応するホスト項目インターフェイスの内部実装にリダイレクトします。 たとえば、 <xref:Microsoft.Office.Tools.Word.DocumentBase.Protect%2A> クラスの `ThisDocument` メソッドを呼び出す場合、 <xref:Microsoft.Office.Tools.Word.DocumentBase> クラスはこの呼び出しを <xref:Microsoft.Office.Tools.Word.Document> の [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]インターフェイスの内部実装にリダイレクトします。  
+  これらの基本クラスは、そのメンバーのすべての呼び出しを [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]の対応するホスト項目インターフェイスの内部実装にリダイレクトします。 たとえば、 <xref:Microsoft.Office.Tools.Word.DocumentBase.Protect%2A> クラスの `ThisDocument` メソッドを呼び出す場合、 <xref:Microsoft.Office.Tools.Word.DocumentBase> クラスはこの呼び出しを <xref:Microsoft.Office.Tools.Word.Document> の [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]インターフェイスの内部実装にリダイレクトします。  
   
 ## <a name="access-the-object-model-of-the-host-application"></a>ホスト アプリケーションのオブジェクト モデルへのアクセスします。  
  ホスト アプリケーションのオブジェクト モデルにアクセスするには、プロジェクト内で生成されたクラスのメンバーを使用します。 これらの各クラスは Excel または Word のオブジェクト モデル内のオブジェクトに対応しており、同じプロパティ、メソッド、およびイベントのほとんどが含まれています。 たとえば、Word のドキュメント レベルのプロジェクトの `ThisDocument` クラスは、Word オブジェクト モデルの <xref:Microsoft.Office.Interop.Word.Document> オブジェクトとほとんど同じメンバーを提供します。  
@@ -135,23 +135,23 @@ Globals.ThisDocument.Save();
 ## <a name="customize-the-user-interface-of-microsoft-office-applications"></a>Microsoft Office アプリケーションのユーザー インターフェイスをカスタマイズします。  
  ドキュメント レベルのカスタマイズを使用して、次の方法で、Excel や Word の UI をカスタマイズできます。  
   
--   ホスト コントロールまたは Windows フォーム コントロールをドキュメントの画面に追加します。  
+- ホスト コントロールまたは Windows フォーム コントロールをドキュメントの画面に追加します。  
   
-     詳細については、次を参照してください[拡張オブジェクトを使用して Word の自動化](../vsto/automating-word-by-using-extended-objects.md)、[拡張オブジェクトを使用して Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)、および[Windows フォーム コントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md).  
+   詳細については、次を参照してください[拡張オブジェクトを使用して Word の自動化](../vsto/automating-word-by-using-extended-objects.md)、[拡張オブジェクトを使用して Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)、および[Windows フォーム コントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md).  
   
--   文書に操作ウィンドウを追加する。  
+- 文書に操作ウィンドウを追加する。  
   
-     詳細については、次を参照してください。[操作ウィンドウの概要](../vsto/actions-pane-overview.md)します。  
+   詳細については、次を参照してください。[操作ウィンドウの概要](../vsto/actions-pane-overview.md)します。  
   
--   リボンにカスタム タブを追加します。  
+- リボンにカスタム タブを追加します。  
   
-     詳細については、次を参照してください。[リボンの概要](../vsto/ribbon-overview.md)します。  
+   詳細については、次を参照してください。[リボンの概要](../vsto/ribbon-overview.md)します。  
   
--   リボン上の組み込みタブにカスタム グループを追加します。  
+- リボン上の組み込みタブにカスタム グループを追加します。  
   
-     詳細については、次を参照してください。[方法: 組み込みタブをカスタマイズする](../vsto/how-to-customize-a-built-in-tab.md)します。  
+   詳細については、次を参照してください。[方法: 組み込みタブをカスタマイズする](../vsto/how-to-customize-a-built-in-tab.md)します。  
   
- UI の Microsoft Office アプリケーションのカスタマイズに関する詳細については、次を参照してください。 [Office UI のカスタマイズ](../vsto/office-ui-customization.md)します。  
+  UI の Microsoft Office アプリケーションのカスタマイズに関する詳細については、次を参照してください。 [Office UI のカスタマイズ](../vsto/office-ui-customization.md)します。  
   
 ## <a name="get-extended-objects-from-native-office-objects-in-document-level-customizations"></a>ドキュメント レベルのカスタマイズでネイティブな Office オブジェクトから拡張オブジェクトを取得します。  
  Office イベントの多くのイベント ハンドラーでは、イベントが発生するワークブック、ワークシート、またはドキュメントを表すネイティブの Office オブジェクトを受け取ります。 場合によっては、いくつかのコードはドキュメント レベルのカスタマイズでワークブックやドキュメントによってイベントが発生した場合のみ実行します。 たとえば、Excel のドキュメント レベルのカスタマイズでは、カスタマイズされたワークブック内でワークシートを 1 つアクティブ化したときに一部のコードを実行し、同時に開いている他のワークブックでワークシートをアクティブ化したときには実行しないようにします。  
@@ -159,13 +159,13 @@ Globals.ThisDocument.Save();
  ネイティブの Office オブジェクトがある場合は、そのオブジェクトがドキュメント レベルのカスタマイズで *ホスト項目* または *ホスト コントロール* に拡張されているかどうかをテストできます。 ホスト項目とホスト コントロールは、Word または Excel オブジェクト モデルにネイティブで存在するオブジェクト ( [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] ネイティブの Office オブジェクト *) に機能を追加する*が提供する種類のインスタンスです。 総称して、ホスト項目とホスト コントロールは *拡張オブジェクト*とも呼ばれます。 ホスト項目とホスト コントロールの詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)します。  
   
 ## <a name="understand-the-getvstoobject-and-hasvstoobject-methods"></a>Getvstoobject メソッドと HasVstoObject メソッドを理解します。  
- ネイティブ Office オブジェクトをテストするには、使用、`HasVstoObject`と`GetVstoObject`プロジェクト内のメソッド。  
+ ネイティブの Office オブジェクトをテストするには、プロジェクト内で `HasVstoObject` メソッドと `GetVstoObject` メソッドを使用します。  
   
--   使用して、`HasVstoObject`メソッドのカスタマイズでネイティブ Office オブジェクトの拡張オブジェクトがあるかどうかを判断する場合。 このメソッドは、ネイティブの Office オブジェクトに拡張オブジェクトがある場合は **true** を返し、ない場合は **false** を返します。  
+- カスタマイズでネイティブの Office オブジェクトに拡張オブジェクトがあるかどうかを判断するには、`HasVstoObject` メソッドを使用します。 このメソッドは、ネイティブの Office オブジェクトに拡張オブジェクトがある場合は **true** を返し、ない場合は **false** を返します。  
   
--   使用して、`GetVstoObject`メソッドの場合は、ネイティブな Office オブジェクトの拡張オブジェクトを取得します。 このメソッドは、指定したネイティブの Office オブジェクトに拡張オブジェクトがあれば、 <xref:Microsoft.Office.Tools.Excel.ListObject>、 <xref:Microsoft.Office.Tools.Excel.Workbook>、 <xref:Microsoft.Office.Tools.Excel.Worksheet>、または <xref:Microsoft.Office.Tools.Word.Document> オブジェクトを返します。 それ以外の場合、`GetVstoObject`返します**null**します。 たとえば、`GetVstoObject`メソッドを返します。 を<xref:Microsoft.Office.Tools.Word.Document>場合、指定した<xref:Microsoft.Office.Interop.Word.Document>Word ドキュメント プロジェクト内のドキュメントの基になるオブジェクトです。  
+- ネイティブの Office オブジェクトに対する拡張オブジェクトを取得する場合は、`GetVstoObject` メソッドを使用します。 このメソッドは、指定したネイティブの Office オブジェクトに拡張オブジェクトがあれば、 <xref:Microsoft.Office.Tools.Excel.ListObject>、 <xref:Microsoft.Office.Tools.Excel.Workbook>、 <xref:Microsoft.Office.Tools.Excel.Worksheet>、または <xref:Microsoft.Office.Tools.Word.Document> オブジェクトを返します。 それ以外の場合、`GetVstoObject`返します**null**します。 たとえば、`GetVstoObject` メソッドは、指定した <xref:Microsoft.Office.Interop.Word.Document> が Word ドキュメント プロジェクトのドキュメントで基礎となるオブジェクトの場合、<xref:Microsoft.Office.Tools.Word.Document> を返します。  
   
- ドキュメント レベルのプロジェクトで使用することはできません、`GetVstoObject`新たに作成するメソッド<xref:Microsoft.Office.Tools.Excel.Workbook>、 <xref:Microsoft.Office.Tools.Excel.Worksheet>、または<xref:Microsoft.Office.Tools.Word.Document>実行時にホスト項目。 このメソッドは、デザイン時にプロジェクトで生成される既存のホスト項目へのアクセスにのみ使用できます。 実行時に新しいホスト項目を作成する場合は、VSTO アドイン プロジェクトを開発する必要があります。 詳細については、次を参照してください。[ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)と[拡張 Word 文書や Excel ブックを実行時に VSTO アドインで](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)します。  
+  ドキュメント レベルのプロジェクトで使用することはできません、`GetVstoObject`新たに作成するメソッド<xref:Microsoft.Office.Tools.Excel.Workbook>、 <xref:Microsoft.Office.Tools.Excel.Worksheet>、または<xref:Microsoft.Office.Tools.Word.Document>実行時にホスト項目。 このメソッドは、デザイン時にプロジェクトで生成される既存のホスト項目へのアクセスにのみ使用できます。 実行時に新しいホスト項目を作成する場合は、VSTO アドイン プロジェクトを開発する必要があります。 詳細については、次を参照してください。[ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)と[拡張 Word 文書や Excel ブックを実行時に VSTO アドインで](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)します。  
   
 ## <a name="use-the-getvstoobject-and-hasvstoobject-methods"></a>Getvstoobject メソッドと HasVstoObject メソッドを使用します。  
  呼び出す、`HasVstoObject`と`GetVstoObject`メソッドを使用して、`Globals.Factory.GetVstoObject`または`Globals.Factory.HasVstoObject`メソッド、およびネイティブの Word または Excel オブジェクトを渡します (など、<xref:Microsoft.Office.Interop.Word.Document>または<xref:Microsoft.Office.Interop.Excel.Worksheet>) をテストします。  

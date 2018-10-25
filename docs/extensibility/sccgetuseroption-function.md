@@ -1,5 +1,5 @@
 ---
-title: SccGetUserOption 関数 |Microsoft ドキュメント
+title: SccGetUserOption 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b735b8ae53ef484417ae007c6ec74ec03fe4b849
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b906dc9585ed51640ca36f366fe6a1b0d3a03aa2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31136511"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928205"
 ---
 # <a name="sccgetuseroption-function"></a>SccGetUserOption 関数
 この関数は、さまざまなユーザー固有のオプションを取得します。  
@@ -37,7 +37,7 @@ SCCRTN SccGetUserOption(
   
 #### <a name="parameters"></a>パラメーター  
  pContext  
- [in]ソース管理プラグイン コンテキスト ポインターです。  
+ [in]ソース管理プラグインのコンテキストのポインター。  
   
  nOption  
  [in]検索するオプション（可能なオプションについては備考を参照）。  
@@ -46,20 +46,20 @@ SCCRTN SccGetUserOption(
  [out]オプションに関連付けられている値。  
   
 ## <a name="return-value"></a>戻り値  
- この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返すが必要です。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|SCC_OK|オプションを正しく取得しました。|  
+|SCC_OK|オプションが正常に取得されました。|  
 |SCC_E_OPNOTSUPPORTED|オプションはサポートされていません。|  
 |SCC_E_NONSPECIFICERROR|未指定のエラーが発生しました。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このコマンドでは、次のオプションがサポートされています。  
   
 |ユーザー オプション|説明|  
 |-----------------|-----------------|  
-|`SCC_USEROPT_CHECKOUT_LOCALVER`|ユーザーがファイルのローカル バージョンをチェック アウトするかどうかを判断します。 `lpVal` 割り当てられている`SCC_USEROPT_COLV_YES`(ユーザーがローカル ファイルをチェック アウトする) または`SCC_USEROPT_COLV_NO`です。|  
+|`SCC_USEROPT_CHECKOUT_LOCALVER`|ユーザーがファイルのローカル バージョンをチェック アウトするかどうかを判断します。 `lpVal` 割り当てられている`SCC_USEROPT_COLV_YES`(ユーザーがローカル ファイルをチェック アウトする) または`SCC_USEROPT_COLV_NO`します。|  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   

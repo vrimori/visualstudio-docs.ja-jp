@@ -1,7 +1,7 @@
 ---
 title: ツール ウィンドウの表示の構成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 502a4926-bb83-473e-94e2-8e833c5f8b53
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2ff1e5b95b684c347ee1885d5dfddeb5eebb5a82
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8a76f446721ee640de306aabb36ecea71a702fb5
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547005"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49271961"
 ---
 # <a name="tool-window-display-configuration"></a>ツール ウィンドウの表示構成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ツール ウィンドウの表示構成](https://docs.microsoft.com/visualstudio/extensibility/tool-window-display-configuration)します。  
-  
 VSPackage でツール ウィンドウ、既定の位置、サイズ、ドッキング スタイル、およびその他の可視性の情報を登録する場合は、省略可能な値で指定されます。 ツール ウィンドウの登録の詳細については、次を参照してください[ツールの Windows レジストリで。](../extensibility/tool-windows-in-the-registry.md)  
   
 ## <a name="window-display-information"></a>ウィンドウの表示情報  

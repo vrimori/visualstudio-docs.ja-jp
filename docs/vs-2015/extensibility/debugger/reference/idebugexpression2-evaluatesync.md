@@ -1,7 +1,7 @@
 ---
 title: IDebugExpression2::EvaluateSync |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 88964915-dce3-4005-b4f3-9f37415e41e4
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e831979c68e74909ab3805a37743b44e782b415d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5a234622738603e6e2116976bd4c904b76ceef90
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534992"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926827"
 ---
 # <a name="idebugexpression2evaluatesync"></a>IDebugExpression2::EvaluateSync
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugExpression2::EvaluateSync](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugexpression2-evaluatesync)します。  
-  
 このメソッドは、同期的に、式を評価します。  
   
 ## <a name="syntax"></a>構文  

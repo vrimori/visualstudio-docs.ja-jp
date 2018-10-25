@@ -1,7 +1,7 @@
 ---
 title: 分離シェル アプリケーションをインストールする |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,36 +16,34 @@ ms.assetid: 33416226-9083-41b5-b153-10d2bf35c012
 caps.latest.revision: 41
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f7b1ba12f39accf863b051ec7096ee835a03ff64
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7722132a81c63902450edd85ef90bde94ad94744
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539024"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880512"
 ---
 # <a name="installing-an-isolated-shell-application"></a>分離シェル アプリケーションをインストールします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[分離シェル アプリケーションをインストールする](https://docs.microsoft.com/visualstudio/extensibility/installing-an-isolated-shell-application)します。  
-  
 シェルのアプリをインストールするには、次の手順を実行する必要があります。  
   
--   ソリューションを準備します。  
+- ソリューションを準備します。  
   
--   アプリケーションの Windows インストーラー (MSI) パッケージを作成します。  
+- アプリケーションの Windows インストーラー (MSI) パッケージを作成します。  
   
--   セットアップ ブートス トラップを作成します。  
+- セットアップ ブートス トラップを作成します。  
   
- すべてのコード例では、このドキュメントは、[シェルの展開サンプル](http://go.microsoft.com/fwlink/?LinkId=262245)、MSDN web サイトのコード ギャラリーからダウンロードできます。 サンプルでは、これらの各手順の実行の結果を示します。  
+  すべてのコード例では、このドキュメントは、[シェルの展開サンプル](http://go.microsoft.com/fwlink/?LinkId=262245)、MSDN web サイトのコード ギャラリーからダウンロードできます。 サンプルでは、これらの各手順の実行の結果を示します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このトピックで説明する手順を実行するには、コンピューターに、次のツールをインストールする必要があります。  
   
--   Visual Studio SDK  
+- Visual Studio SDK  
   
--   [Windows Installer XML Toolset](http://go.microsoft.com/fwlink/?LinkId=82720)バージョン 3.6  
+- [Windows Installer XML Toolset](http://go.microsoft.com/fwlink/?LinkId=82720)バージョン 3.6  
   
- このサンプルは、Microsoft Visualization and Modeling SDK いないすべてのシェルが必要にも必要です。  
+  このサンプルは、Microsoft Visualization and Modeling SDK いないすべてのシェルが必要にも必要です。  
   
 ## <a name="preparing-your-solution"></a>ソリューションを準備します。  
  既定では、シェル テンプレートは、VSIX パッケージにビルドしますが、この動作は、デバッグ目的で主にします。 シェル アプリケーションを展開するときに、インストール中にレジストリのアクセスと再起動を許可する MSI パッケージを使用する必要があります。 アプリケーションの MSI の展開を準備するには、次の手順を実行します。  

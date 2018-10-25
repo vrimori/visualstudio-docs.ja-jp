@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2221: ファイナライザーは保護する必要があります |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: d4b90f49ff895d6f39914a5a2b3e07a515103f44
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: d801329f0c19d180e90b127eb59324e0a629abad
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589688"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49919443"
 ---
 # <a name="ca2221-finalizers-should-be-protected"></a>CA2221: ファイナライザーは保護されなければなりません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2221: ファイナライザーは保護する必要があります](https://docs.microsoft.com/visualstudio/code-quality/ca2221-finalizers-should-be-protected)します。
 
 |||
 |-|-|

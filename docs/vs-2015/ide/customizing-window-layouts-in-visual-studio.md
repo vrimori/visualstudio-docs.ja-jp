@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのウィンドウ レイアウトをカスタマイズする |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -29,18 +29,16 @@ caps.latest.revision: 30
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c7f581c920a0f42105c1409e320b941a12dbc5f8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f1702a2b25bd0489814473f3ae2fc0073dab8497
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547280"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911643"
 ---
 # <a name="customizing-window-layouts-in-visual-studio"></a>Visual Studio のウィンドウ レイアウトをカスタマイズする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio でのウィンドウ レイアウトをカスタマイズ](https://docs.microsoft.com/visualstudio/ide/customizing-window-layouts-in-visual-studio)します。  
-  
 Visual Studio では、さまざまな開発ワークフローに最も適したウィンドウのレイアウトを作成するために、ウィンドウの位置、サイズ、および動作をカスタマイズできます。 レイアウトをカスタマイズすると、IDE はそれを記憶します。 たとえば、 **ソリューション エクスプローラー** のドッキング位置を変更した後で Visual Studio を閉じた場合、次回起動時には、別のコンピューターで作業していても、 **ソリューション エクスプローラー** が同じ位置にドッキングされます。 また、カスタム レイアウトに名前を付けて保存した後、1 つのコマンドでレイアウト間を切り替えることもできます。 たとえば、編集用のレイアウトとデバッグ用のレイアウトを作成し、**[ウィンドウ &#124; ウィンドウ レイアウトを適用]** メニュー コマンドを使用してそれらを切り替えることができます。  
   
 ## <a name="kinds-of-windows"></a>ウィンドウの種類  
@@ -67,21 +65,21 @@ Visual Studio では、さまざまな開発ワークフローに最も適した
   
  次の方法でウィンドウを配置できます。  
   
--   タブ ウェルの左側にドキュメント ウィンドウを固定する。  
+- タブ ウェルの左側にドキュメント ウィンドウを固定する。  
   
--   タブによりウィンドウを編集フレームにドッキングする。  
+- タブによりウィンドウを編集フレームにドッキングする。  
   
--   IDE の枠の端にツール ウィンドウをドッキングする。  
+- IDE の枠の端にツール ウィンドウをドッキングする。  
   
--   ドキュメントまたはツール ウィンドウを IDE 上または IDE の外部にフローティングする。  
+- ドキュメントまたはツール ウィンドウを IDE 上または IDE の外部にフローティングする。  
   
--   ツール ウィンドウを IDE の端で非表示にする。  
+- ツール ウィンドウを IDE の端で非表示にする。  
   
--   ウィンドウを別々のモニターに表示する。  
+- ウィンドウを別々のモニターに表示する。  
   
--   ウィンドウの場所を既定のレイアウト、または保存済みのカスタム レイアウトにリセットする。  
+- ウィンドウの場所を既定のレイアウト、または保存済みのカスタム レイアウトにリセットする。  
   
- ツール ウィンドウとドキュメント ウィンドウは、ドラッグ、 **[ウィンドウ]** メニューのコマンドの使用、および配置するウィンドウのタイトル バーの右クリックによって配置できます。  
+  ツール ウィンドウとドキュメント ウィンドウは、ドラッグ、 **[ウィンドウ]** メニューのコマンドの使用、および配置するウィンドウのタイトル バーの右クリックによって配置できます。  
   
 > [!NOTE]
 >  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  

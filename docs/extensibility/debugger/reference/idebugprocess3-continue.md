@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::Continue |Microsoft ドキュメント
+title: IDebugProcess3::Continue |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 38bb11237d5016e3747c5a615e61144511c17fad
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1e7ec7c63c06cace9f25e19cb552b144e4dc03dc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31117479"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49931429"
 ---
 # <a name="idebugprocess3continue"></a>IDebugProcess3::Continue
-このプロセスを停止状態から実行が続行されます。 (ステップ) など、以前の実行状態が保持されます、しを再度実行して、プロセスを開始します。  
+このプロセスを停止状態から実行が続行されます。 (ステップ) など、以前の実行状態の保持、し、もう一度実行して、プロセスを開始します。  
   
 > [!NOTE]
->  このメソッドは、の代わりに使用する必要があります[続行](../../../extensibility/debugger/reference/idebugprogram2-continue.md)です。  
+>  このメソッドは、の代わりに使用する必要があります[続行](../../../extensibility/debugger/reference/idebugprogram2-continue.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,15 +44,15 @@ int Continue(
   
 #### <a name="parameters"></a>パラメーター  
  `pThread`  
- [in][IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)を継続するスレッドを表すオブジェクト。  
+ [in][IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)に続くスレッドを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、デバッグ中のプロセスの数、またはどのプロセスが停止イベントを生成に関係なく、このプロセスで呼び出されます。 実装では、(ステップ) などの以前の実行状態を維持することはありませんが、以前の実行を完了する前に停止したかのように実行を続行します。 場合内のスレッドでこのプロセスが、ステップ オーバー操作を行っていた動作と他のプロセスが停止しているために停止しましたし、`Continue`呼び出されましたが、指定されたスレッドは、元のステップ オーバー操作を完了する必要があります。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、デバッグ中のプロセスの数、または停止イベントを生成するプロセスに関係なく、このプロセスで呼び出されます。 実装する必要があります (ステップ) などの以前の実行状態を保持し、ことはありませんが、前の実行を完了する前に停止したように実行を続行します。 、内のスレッドの場合このプロセスをステップ オーバー操作を行っていたれ、他のプロセスが停止したために停止されましたし、`Continue`が呼び出されると、指定したスレッドは、元のステップ オーバー操作を完了する必要があります。  
   
- **警告**停止イベントまたは直接 (同期) イベントを送信しない[イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)です。 この呼び出しを処理中にそれ以外の場合、デバッガーがハングアップします。  
+ **警告**stopping イベントまたは直接 (同期) イベントを送信しない[イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md); この呼び出しを処理中にそれ以外の場合、デバッガーがハングします。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   

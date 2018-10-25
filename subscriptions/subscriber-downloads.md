@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれている Micr
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 4ac1f74f9f60526c8b1f884cd63907329d2f91a2
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: ec2dd900e0cfae3b150bba52e31834efb53628e6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637738"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831433"
 ---
 # <a name="using-subscriber-downloads-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションでサブスクライバー ダウンロードを使用します。
 サブスクライバー特典の一環として、広い範囲のソフトウェアのダウンロードにアクセスできます。
@@ -42,11 +42,11 @@ ms.locfileid: "39637738"
 
 [[ダウンロード]](https://my.visualstudio.com/downloads/featured?wt.mc_id=o~msft~docs) ページにアクセスすると、製品の種類でグループ化された一般的なダウンロードが表示されます。  表示されている一般的なダウンロードのいずれかを選択するか、ページの上部にある検索バーを使用して任意の製品を検索できます。
 > [!div class="mx-imgBorder"]
-> ![サブスクライバー ダウンロード ページ](_img\subscriber-downloads\subscriber-downloads-resized.png)
+> ![サブスクライバー ダウンロード ページ](_img/subscriber-downloads/subscriber-downloads-resized.png)
 
 たとえば、開発者ツールの一覧から **Visual Studio 2017** を選択した場合、利用可能な Visual Studio 2017 ダウンロードの一覧が表示されます。
 > [!div class="mx-imgBorder"]
-> ![Visual Studio 2017 のダウンロード](_img\subscriber-downloads\vs2017-new-UI.png)
+> ![Visual Studio 2017 のダウンロード](_img/subscriber-downloads/vs2017-new-UI.png)
 
 利用可能なドロップダウン メニューを使用して、アーキテクチャ、言語、ファイルの種類を簡単に選択できます。 該当するオプションを選択し、**[ダウンロード]** をクリックして製品のダウンロードを開始します。
 
@@ -54,13 +54,13 @@ ms.locfileid: "39637738"
 
 製品名または **[情報]** リンクをクリックすると、そのダウンロードの詳細が表示され、製品のリリース ノートにアクセスできます。
 > [!div class="mx-imgBorder"]
-> ![Visual Studio 2017 Pro のダウンロードの詳細](_img\subscriber-downloads\vs2017-pro-details.png)
+> ![Visual Studio 2017 Pro のダウンロードの詳細](_img/subscriber-downloads/vs2017-pro-details.png)
 
 詳細ウィンドウで、**[キー]** タブをクリックして、プロダクト キーの状態を確認することもできます。
 > [!div class="mx-imgBorder"]
-> ![Visual Studio 2017 Pro のプロダクト キー](_img\subscriber-downloads\vs2017-pro-keys.png)
+> ![Visual Studio 2017 Pro のプロダクト キー](_img/subscriber-downloads/vs2017-pro-keys.png)
 
 ### <a name="obtaining-product-keys"></a>プロダクト キーの取得
 ダウンロード用プロダクト キーを取得する場合は、**[キーを入手]** というラベルの付いた青いキーをクリックするか、詳細ウィンドウが既に表示されている場合は、**[キー]** タブの **[キーの要求]** をクリックします。
 > [!div class="mx-imgBorder"]
-> ![Visual Studio 2017 Pro のプロダクト キーの要求](_img\subscriber-downloads\vs2017-pro-claim-keys.png)
+> ![Visual Studio 2017 Pro のプロダクト キーの要求](_img/subscriber-downloads/vs2017-pro-claim-keys.png)

@@ -1,7 +1,7 @@
 ---
 title: レガシ言語 service2 などのパラメーター ヒント |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: a117365d-320d-4bb5-b61d-3e6457b8f6bc
 caps.latest.revision: 24
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bee48d3688a43a3dbfb32848818c318f1cf7b2d7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fabc1f5e199b9b1456db704552a288a6c9beb76f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547937"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887567"
 ---
 # <a name="parameter-info-in-a-legacy-language-service"></a>従来の言語サービスでのパラメーター ヒント
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[レガシ言語 service2 などのパラメーター ヒント](https://docs.microsoft.com/visualstudio/extensibility/internals/parameter-info-in-a-legacy-language-service2)します。  
-  
 パラメーターの IntelliSense のヒントは、ユーザーがパラメーター リストを入力すると、メソッドのシグネチャを表示するツールヒントに start メソッドのパラメーター リストの文字 (通常、開きかっこを入力)。 各パラメーターを入力し、パラメーター区切り記号 (コンマ) が型指定された、次のパラメーターを太字で表示するツールヒントが更新されます。  
   
  マネージ パッケージ フレームワーク (MPF) クラスは、パラメーター ヒントを管理するためのサポートを提供します。 パーサーには、パラメーターの開始、パラメーター次に、およびパラメーター最後の文字であり、メソッド シグネチャとその関連付けられているパラメーターの一覧を指定する必要がありますを検出する必要があります。  
@@ -103,11 +101,11 @@ namespace TestLanguagePackage
 ## <a name="supporting-the-parameter-info-tooltip-in-the-parser"></a>パーサーでパラメーターのヒントをサポートしています。  
  <xref:Microsoft.VisualStudio.Package.Source>クラスは、いくつかの前提条件の内容について、<xref:Microsoft.VisualStudio.Package.AuthoringScope>と<xref:Microsoft.VisualStudio.Package.AuthoringSink>パラメーター ヒントのツールヒントが表示され、更新されたときにします。  
   
--   パーサーが指定された<xref:Microsoft.VisualStudio.Package.ParseReason>パラメーター リストの開始文字が入力されます。  
+- パーサーが指定された<xref:Microsoft.VisualStudio.Package.ParseReason>パラメーター リストの開始文字が入力されます。  
   
--   指定された場所、<xref:Microsoft.VisualStudio.Package.ParseRequest>オブジェクトがパラメーター リストの先頭文字の直後にします。 パーサーは、配置、バージョンの一覧に保管するで使用可能なすべてのメソッド宣言の署名を収集する必要があります、<xref:Microsoft.VisualStudio.Package.AuthoringScope>オブジェクト。 この一覧には、メソッド名が含まれています。 メソッド型 (または戻り値の型)、および可能なパラメーターの一覧。 この一覧は、メソッド シグネチャのパラメーター ヒントのツールヒントに表示する署名後で検索されます。  
+- 指定された場所、<xref:Microsoft.VisualStudio.Package.ParseRequest>オブジェクトがパラメーター リストの先頭文字の直後にします。 パーサーは、配置、バージョンの一覧に保管するで使用可能なすべてのメソッド宣言の署名を収集する必要があります、<xref:Microsoft.VisualStudio.Package.AuthoringScope>オブジェクト。 この一覧には、メソッド名が含まれています。 メソッド型 (または戻り値の型)、および可能なパラメーターの一覧。 この一覧は、メソッド シグネチャのパラメーター ヒントのツールヒントに表示する署名後で検索されます。  
   
- パーサーによって指定された行を解析する必要があります、<xref:Microsoft.VisualStudio.Package.ParseRequest>入力されているメソッドのほか、ユーザーの名前を収集するためにオブジェクトがパラメーターを入力します。 これは、メソッドの名前を渡すことによって実現されます、<xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A>メソッドを<xref:Microsoft.VisualStudio.Package.AuthoringSink>オブジェクトと、呼び出し、<xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A>メソッド パラメーター リストの先頭文字が解析を呼び出す、<xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A>メソッドとパラメーター リスト次の文字が最後に呼び出すと、解析された、<xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A>メソッド パラメーター リストの最後の文字の解析時にします。 これらのメソッド呼び出しの結果を使用して、<xref:Microsoft.VisualStudio.Package.Source>パラメーター ヒントを適切に更新するクラス。  
+  パーサーによって指定された行を解析する必要があります、<xref:Microsoft.VisualStudio.Package.ParseRequest>入力されているメソッドのほか、ユーザーの名前を収集するためにオブジェクトがパラメーターを入力します。 これは、メソッドの名前を渡すことによって実現されます、<xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A>メソッドを<xref:Microsoft.VisualStudio.Package.AuthoringSink>オブジェクトと、呼び出し、<xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A>メソッド パラメーター リストの先頭文字が解析を呼び出す、<xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A>メソッドとパラメーター リスト次の文字が最後に呼び出すと、解析された、<xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A>メソッド パラメーター リストの最後の文字の解析時にします。 これらのメソッド呼び出しの結果を使用して、<xref:Microsoft.VisualStudio.Package.Source>パラメーター ヒントを適切に更新するクラス。  
   
 ### <a name="example"></a>例  
  ここでは、ユーザーが入力テキストの行です。 線の下の数値は、(解析移動左から右へと仮定) の行では、その位置にあるパーサーによってどの手順が実行されるを示しています。 前提をここでは、ある行の前にすべてのものが既に解析されて"testfunc"メソッドのシグネチャのメソッド シグネチャのです。  

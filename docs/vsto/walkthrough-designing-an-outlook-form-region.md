@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5969d47ff6ecb7af60a8d008c4a7a82405be8c8e
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 693261bb6894681b613ad0db2f0b3c116109a782
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672715"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813688"
 ---
 # <a name="walkthrough-design-an-outlook-form-region"></a>チュートリアル: Outlook フォーム領域をデザインします。
   カスタム フォーム領域は、標準またはカスタムの Microsoft Office Outlook フォームを拡張します。 このチュートリアルでは、連絡先アイテムのインスペクター ウィンドウに新しいページとして表示するカスタム フォーム領域をデザインします。 このフォーム領域では、アドレス情報を Windows Live Local Search の Web サイトに送信することによって、連絡先に設定された個々の住所の地図を表示します。 フォーム領域については、次を参照してください。[作成の Outlook フォーム領域](../vsto/creating-outlook-form-regions.md)します。  
@@ -45,11 +45,11 @@ ms.locfileid: "35672715"
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
+- [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)] または [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)]。  
+- [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)] または [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)]。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")このトピックのビデオ版について、次を参照してください。[ビデオ方法: Outlook フォーム領域をデザイン](http://go.microsoft.com/fwlink/?LinkID=140824)します。  
+  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")このトピックのビデオ版について、次を参照してください。[ビデオ方法: Outlook フォーム領域をデザイン](http://go.microsoft.com/fwlink/?LinkID=140824)します。  
   
 ## <a name="create-a-new-outlook-vsto-add-in-project"></a>新しい Outlook VSTO アドイン プロジェクトを作成します。  
  まず、基本的な VSTO アドイン プロジェクトを作成します。  
@@ -117,24 +117,24 @@ ms.locfileid: "35672715"
   
 ### <a name="to-customize-the-behavior-of-the-form-region"></a>フォーム領域の動作をカスタマイズするには  
   
-1.  **ソリューション エクスプ ローラー**を右クリックして*MapIt.cs*または*MapIt.vb*、 をクリックし、**コードの表示**します。  
+1. **ソリューション エクスプ ローラー**を右クリックして*MapIt.cs*または*MapIt.vb*、 をクリックし、**コードの表示**します。  
   
-     *MapIt.cs*または*MapIt.vb*がコード エディターで開きます。  
+    *MapIt.cs*または*MapIt.vb*がコード エディターで開きます。  
   
-2.  展開、**フォーム領域ファクトリ**コード領域。  
+2. 展開、**フォーム領域ファクトリ**コード領域。  
   
-     `MapItFactory` という名前のフォーム領域ファクトリ クラスが公開されます。  
+    `MapItFactory` という名前のフォーム領域ファクトリ クラスが公開されます。  
   
-3.  `MapItFactory_FormRegionInitializing` イベント ハンドラーに次のコードを追加します。 このイベント ハンドラーは、ユーザーが連絡先アイテムを開いたときに呼び出されます。 次のコードは、連絡先アイテムに住所が含まれているかどうかを判定します。 このコードを設定、連絡先アイテムに、アドレスが含まれていない場合、<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>のプロパティ、<xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs>クラスを**true**フォーム領域は表示されません。 それ以外の場合は、VSTO アドインで <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> イベントが発生し、フォーム領域が表示されます。  
+3. `MapItFactory_FormRegionInitializing` イベント ハンドラーに次のコードを追加します。 このイベント ハンドラーは、ユーザーが連絡先アイテムを開いたときに呼び出されます。 次のコードは、連絡先アイテムに住所が含まれているかどうかを判定します。 このコードを設定、連絡先アイテムに、アドレスが含まれていない場合、<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>のプロパティ、<xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs>クラスを**true**フォーム領域は表示されません。 それ以外の場合は、VSTO アドインで <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> イベントが発生し、フォーム領域が表示されます。  
   
-     [!code-csharp[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#1)]
-     [!code-vb[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#1)]  
+    [!code-csharp[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#1)]
+    [!code-vb[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#1)]  
   
-4.  <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> イベント ハンドラーに次のコードを追加します。 このコードは次のタスクを実行します。  
+4. <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> イベント ハンドラーに次のコードを追加します。 このコードは次のタスクを実行します。  
   
-    -   連絡先アイテムの各住所を連結し、URL 文字列を作成します。  
+   - 連絡先アイテムの各住所を連結し、URL 文字列を作成します。  
   
-    -   <xref:System.Windows.Forms.WebBrowser> オブジェクトの <xref:System.Windows.Forms.WebBrowser.Navigate%2A> メソッドを呼び出し、パラメーターとして URL 文字列を渡します。  
+   - <xref:System.Windows.Forms.WebBrowser> オブジェクトの <xref:System.Windows.Forms.WebBrowser.Navigate%2A> メソッドを呼び出し、パラメーターとして URL 文字列を渡します。  
   
      Map It フォーム領域に Local Search の Web サイトが表示され、スクラッチ パッドに各住所が表示されます。  
   

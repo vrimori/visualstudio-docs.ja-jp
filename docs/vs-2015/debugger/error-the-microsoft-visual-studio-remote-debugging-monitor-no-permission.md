@@ -1,7 +1,7 @@
 ---
 title: 'エラー: Microsoft Visual Studio リモート デバッグ モニター、リモート コンピューター上にこのコンピューターに接続する権限がありません |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -27,33 +27,31 @@ caps.latest.revision: 24
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1a62f20afc5ba57da64205491a3c5dfeabd75daf
-ms.sourcegitcommit: d705e015cb525bfa87a0b93e93376c3956ec2707
+ms.openlocfilehash: 20accedd9591c777cad26aed30c05954dfabbdfc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "47592503"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811090"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-does-not-have-permission-to-connect-to-this-computer"></a>エラー : リモート コンピューター上の Microsoft Visual Studio リモート デバッグ モニターには、このコンピューターに接続するアクセス許可がありません。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[エラー: Microsoft Visual Studio リモート デバッグ モニター、リモート コンピューター上には、このコンピューターに接続する権限はありません。](https://docs.microsoft.com/visualstudio/debugger/error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-does-not-have-permission-to-connect-to-this-computer)します。  
-  
 このエラーは、Visual Studio リモート デバッグ モニター (msvsmon) を実行しようとしたユーザーのアカウントがローカル コンピューターにない場合に発生します。  
   
 ### <a name="to-fix-this-problem"></a>この問題を解決するには  
   
--   リモート コンピューターで msvsmon を実行しているユーザー アカウントと同じ名前およびパスワードを使用して、Visual Studio デバッガー ホスト コンピューターにユーザー アカウントを追加します。  
+- リモート コンピューターで msvsmon を実行しているユーザー アカウントと同じ名前およびパスワードを使用して、Visual Studio デバッガー ホスト コンピューターにユーザー アカウントを追加します。  
   
-     \- または -  
+   \- または -  
   
--   ローカル コンピューターを呼び出すアクセス許可を持つユーザーとして msvsmon を実行します。 つまり、ユーザーは msvsmon コンピューターのドメイン ユーザーおよび管理者である必要があります。 msvsmon を実行するユーザー アカウントは次の 2 とおりの方法で指定できます。  
+- ローカル コンピューターを呼び出すアクセス許可を持つユーザーとして msvsmon を実行します。 つまり、ユーザーは msvsmon コンピューターのドメイン ユーザーおよび管理者である必要があります。 msvsmon を実行するユーザー アカウントは次の 2 とおりの方法で指定できます。  
   
-    -   Msvsmon アイコンを右クリックし **実行**ショートカット メニューの   
+  - Msvsmon アイコンを右クリックし **実行**ショートカット メニューの   
   
-     \- または -  
+    \- または -  
   
-    -   コマンド プロンプトで `runas.exe` を実行します。  
+  - コマンド プロンプトで `runas.exe` を実行します。  
   
 ## <a name="see-also"></a>関連項目  
  [リモート ドメイン間でのデバッグ](http://msdn.microsoft.com/library/8e697ce1-55e8-4ab0-a05f-f87225e2f29b)   

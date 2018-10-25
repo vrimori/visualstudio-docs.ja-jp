@@ -1,7 +1,7 @@
 ---
 title: '&lt;entryPoint&gt;要素 (ClickOnce アプリケーション) |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 05e8e08718d9a0a87a1a3903e512c690ab0ebff8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: da308de644dfc73d9364b65e21e820d6fc6c2a8a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547954"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49255317"
 ---
 # <a name="ltentrypointgt-element-clickonce-application"></a>&lt;entryPoint&gt;要素 (ClickOnce アプリケーション)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ &lt;entryPoint&gt;要素 (ClickOnce アプリケーション)](https://docs.microsoft.com/visualstudio/deployment/entrypoint-element-clickonce-application)します。  
-  
 必要のあるアセンブリを識別するときに実行この[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]クライアント コンピューターでアプリケーションを実行します。  
   
 ## <a name="syntax"></a>構文  
@@ -63,13 +61,13 @@ ms.locfileid: "47547954"
 ## <a name="elements-and-attributes"></a>要素と属性  
  `entryPoint` 要素は必須です。この要素は `urn:schemas-microsoft-com:asm.v2` 名前空間に属します。 ある可能性がありますのみ 1 つ`entryPoint`アプリケーション マニフェストで定義された要素。  
   
- `entryPoint`要素には、次の属性。  
+ `entryPoint` 要素には、次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
 |`name`|任意。 この値は、.NET Framework では使用されません。|  
   
- `entryPoint` 次の要素があります。  
+ `entryPoint` には、次の要素があります。  
   
 ## <a name="assemblyidentity"></a>assemblyIdentity  
  必須。 ロール`assemblyIdentity`でその属性が定義されていると[ \<assemblyIdentity > 要素](../deployment/assemblyidentity-element-clickonce-application.md)します。  
@@ -122,7 +120,7 @@ ms.locfileid: "47547954"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)
+ [ClickOnce Application Manifest](../deployment/clickonce-application-manifest.md)
 
 
 

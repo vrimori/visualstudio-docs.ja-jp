@@ -1,5 +1,5 @@
 ---
-title: ソリューションの構成 |Microsoft ドキュメント
+title: ソリューションの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,52 +13,52 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f7b2a453d4ea4e8b92b40ee126f9441e6f353606
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: caf55b341cc34bb4101f27d2468f0da8e5cf6c96
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31132722"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875321"
 ---
 # <a name="solution-configuration"></a>ソリューション構成
-ソリューション構成では、ソリューション レベルのプロパティを格納します。 動作を指示する、**開始**(F5) キーと**ビルド**コマンド。 既定では、これらのコマンドは、ビルドし、デバッグ構成を開始します。 どちらのコマンドは、ソリューション構成のコンテキストで実行します。 これは、ユーザーがどのようなアクティブなソリューションが、設定で構成されているビルドの開始、f5 キーを予測できることを意味します。 環境が構築および実行する際に、プロジェクトではなく、ソリューションを最適化するために設計されています。  
+ソリューション構成では、ソリューション レベルのプロパティを格納します。 動作を指示する、**開始**(F5) キーと**ビルド**コマンド。 既定では、これらのコマンドは、ビルドし、デバッグ構成を開始します。 どちらのコマンドは、ソリューション構成のコンテキストで実行します。 これは、ユーザーがどのようなアクティブなソリューションが、設定を使用して構成されているビルドの開始、f5 キーを予測できることを意味します。 環境は、ビルドおよび実行する際にプロジェクトではなく、ソリューションを最適化するために設計されています。  
   
- 標準の Visual Studio ツールバーには、[スタート] ボタンとドロップダウンを [スタート] ボタンの右側に使用するソリューション構成が含まれています。 この一覧では、f5 キーが押されたときに起動する構成を選択して、独自のソリューション構成を作成または既存の構成を編集することができます。  
+ 標準の Visual Studio ツールバーには、[スタート] ボタンとソリューション構成ドロップダウンを [スタート] ボタンの右側が含まれています。 この一覧では、f5 キーが押されたときに開始する構成を選択して、独自のソリューション構成を作成または既存の構成を編集することができます。  
   
 > [!NOTE]
->  機能拡張インターフェイスを作成またはソリューション構成を編集することはありません。 使用する必要があります`DTE.SolutionBuilder`です。 ただし、ソリューションのビルドを管理するためが機能拡張 Api があります。 詳細については、「<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2>」を参照してください。  
+>  機能拡張インターフェイスを作成またはソリューション構成を編集することはありません。 使用する必要があります`DTE.SolutionBuilder`します。 ただし、ソリューションのビルドを管理するの拡張性 Api があります。 詳細については、「 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2> 」を参照してください。  
   
- 次に、プロジェクトの種類でサポートされているソリューションの構成を実装する方法を示します。  
+ 次に、プロジェクトの種類でサポートされるソリューション構成を実装する方法を示します。  
   
--   プロジェクト  
+- プロジェクト  
   
-     現在のソリューションに存在するプロジェクトの名前を表示します。  
+   現在のソリューションに存在するプロジェクトの名前が表示されます。  
   
--   構成  
+- 構成  
   
-     プロジェクトの種類でサポートされている構成の一覧を指定して、実装プロパティ ページに表示する<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>です。  
+   プロジェクトの種類でサポートされる構成の一覧を提供し、実装、プロパティ ページに表示される<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>します。  
   
-     構成 列では、このソリューション構成でビルドするプロジェクト構成の名前を表示し、矢印ボタンをクリックするとすべてのプロジェクト構成の一覧を表示します。 環境の呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgNames%2A>メソッドがこの一覧を入力します。 場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A>メソッドか、サポートするプロジェクト構成の編集、新しい、またはかも、構成という見出しの下のオプションの編集が表示されます。 これらの各選択のメソッドを呼び出す ダイアログ ボックスを起動して、`IVsCfgProvider2`プロジェクトの構成を編集するインターフェイスです。  
+   構成 列では、このソリューション構成でビルドするプロジェクト構成の名前を表示し、矢印ボタンをクリックすると、すべてのプロジェクト構成ファイルを一覧表示されます。 環境は、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgNames%2A>メソッドがこの一覧に入力します。 場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A>メソッドを示すことをサポートするプロジェクト構成の編集、新規または編集の選択は構成という見出しの下も表示されます。 これらの各選択のメソッドを呼び出すためのダイアログ ボックスを起動、`IVsCfgProvider2`プロジェクトの構成を編集するインターフェイス。  
   
-     プロジェクトが構成をサポートしていない場合、構成 列は なし が表示されは無効になります。  
+   プロジェクトが構成をサポートしていない場合、構成 列は None が表示されは無効です。  
   
--   プラットフォーム  
+- プラットフォーム  
   
-     選択したプロジェクト構成は、ビルドされ、矢印ボタンをクリックするとすべてのプロジェクトで使用可能なプラットフォームの一覧を表示、プラットフォームが表示されます。 環境の呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetPlatformNames%2A>メソッドがこの一覧を入力します。 場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A>メソッドか、プロジェクトをサポートしているプラットフォームの編集、新しい、またはかも、プラットフォームという見出しの下のオプションの編集が表示されます。 呼び出すためのダイアログ ボックスを起動してこれらの各選択`IVsCfgProvider2`プロジェクトの使用可能なプラットフォームを編集する方法です。  
+   選択したプロジェクトの構成、ビルドで、矢印ボタンをクリックするとすべてのプロジェクトで使用可能なプラットフォームの一覧表示されます。 プラットフォームが表示されます。 環境は、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetPlatformNames%2A>メソッドがこの一覧に入力します。 場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A>メソッドを示します、プロジェクトをサポートするプラットフォームの編集、新規にも、プラットフォームという見出しの下の編集の選択内容が表示されます。 これらの各選択の起動 ダイアログ ボックスを呼び出す`IVsCfgProvider2`プロジェクトの使用可能なプラットフォームを編集する方法。  
   
-     プロジェクトがプラットフォームをサポートしていない場合、そのプロジェクトのプラットフォームの列は None が表示されは無効になります。  
+   プロジェクトがプラットフォームをサポートしていない場合、そのプロジェクトのプラットフォームの列は None が表示されは無効です。  
   
--   ビルド  
+- ビルド  
   
-     現在のソリューション構成でプロジェクトをビルドするかどうかを指定します。 ソリューション レベルのビルド コマンドが含まれているプロジェクトの依存関係にかかわらず呼び出されたときに選択されていないプロジェクトが構築されていません。 プロジェクトをビルドするのには選択されていないはまだデバッグ、実行、パッケージ、およびソリューションの展開に含まれます。  
+   現在のソリューション構成でプロジェクトをビルドするかどうかを指定します。 プロジェクトの依存関係が含まれているにもかかわらず、ソリューション レベルのビルド コマンドを呼び出すときに、選択されていないプロジェクトはビルドされません。 プロジェクトをビルドするのには選択されていないはまだデバッグ、実行、パッケージ化、およびソリューションの展開に含まれます。  
   
--   配置  
+- 配置  
   
-     選択したソリューションのビルド構成で起動または配置コマンドを使用する場合に、プロジェクトを配置するかどうかを指定します。 このフィールドのチェック ボックス、プロジェクトは、実装することで展開をサポートしている場合は利用できなくなります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>インターフェイスをその<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2>オブジェクト。  
+   選択したソリューションのビルド構成とスタートまたは Deploy コマンドを使う場合にプロジェクトを配置するかどうかを指定します。 このフィールドのチェック ボックスを使用できるは、プロジェクトは、実装することによって展開をサポートしている場合になります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>インターフェイスをその<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2>オブジェクト。  
   
- 新しいソリューション構成が追加されると、ユーザーを選択できますが、ソリューション構成がドロップダウン リスト ボックスから [標準] ツールバーを構築したり、その構成を開始したりします。  
+  新しいソリューション構成を追加すると、ユーザーから選択できますソリューション構成のドロップダウン リスト ボックス、標準ツールバーをビルドしたり、その構成を開始します。  
   
 ## <a name="see-also"></a>関連項目  
  [構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)   
- [構築するためのプロジェクトの構成](../../extensibility/internals/project-configuration-for-building.md)   
+ [ビルドするためのプロジェクト構成](../../extensibility/internals/project-configuration-for-building.md)   
  [プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)

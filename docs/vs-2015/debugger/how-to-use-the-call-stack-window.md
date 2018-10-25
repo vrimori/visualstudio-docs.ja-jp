@@ -1,7 +1,7 @@
 ---
 title: '方法: [呼び出し履歴] ウィンドウを使用して、|Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -34,18 +34,16 @@ caps.latest.revision: 45
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 75b617e9de62c20cc1e8a32cf993f5f03201f4fc
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 0e79c491eeec373bd3753a5ea55777a079cc51ab
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592727"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49271662"
 ---
 # <a name="how-to-use-the-call-stack-window"></a>方法 : [呼び出し履歴] ウィンドウを使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio のデバッガーで呼び出し履歴を表示](https://docs.microsoft.com/visualstudio/debugger/how-to-use-the-call-stack-window)します。  
-  
 使用して、**呼び出し履歴**ウィンドウで、現在、スタック上にある関数またはプロシージャの呼び出しを表示できます。  
   
  **呼び出し履歴**ウィンドウには、各関数とで記述されているプログラミング言語の名前が表示されます。 関数またはプロシージャ名に、モジュール名、行番号、パラメーター名、型、値などのオプション情報が追加される場合があります。 このオプション情報の表示は、オンとオフを切り替えることができます。  

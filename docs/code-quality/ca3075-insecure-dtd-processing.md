@@ -10,14 +10,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a0305c15e4230313cbe51d64a3a798d03eb3937e
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: b83fbf98143511bac19bef1fb2b528c71517a55f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45546787"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823010"
 ---
 # <a name="ca3075-insecure-dtd-processing"></a>CA3075: 安全ではない DTD の処理
+
 |||
 |-|-|
 |TypeName|InsecureDTDProcessing|
@@ -26,10 +27,12 @@ ms.locfileid: "45546787"
 |互換性に影響する変更点|中断なし|
 
 ## <a name="cause"></a>原因
- 安全ではない <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> インスタンスを使用する場合、または外部エンティティ ソースを参照する場合、パーサーは信頼されていない入力を受け入れ、攻撃者に機密情報を漏えいしてしまう可能性があります。
+
+安全ではない <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> インスタンスを使用する場合、または外部エンティティ ソースを参照する場合、パーサーは信頼されていない入力を受け入れ、攻撃者に機密情報を漏えいしてしまう可能性があります。
 
 ## <a name="rule-description"></a>規則の説明
- A*ドキュメント型定義 (DTD)* 、XML パーサーは、ドキュメントの有効性を判別できます 2 つの方法のいずれかで定義されている、 [World Wide Web Consortium (W3C) Extensible Markup Language (XML) 1.0](http://www.w3.org/TR/2008/REC-xml-20081126/)します。 このルールは、信頼されていないデータを受け入れてしまうプロパティとインスタンスを検索し、 [サービス拒否 (DoS)](/dotnet/framework/wcf/feature-details/information-disclosure) 攻撃につながる可能性がある潜在的な [Information Disclosure](/dotnet/framework/wcf/feature-details/denial-of-service) の脅威について開発者に警告します。 このルールは、次の場合にトリガーされます。
+
+*文書型定義 (DTD)* は、  [World Wide Web コンソーシアム (W3C) Extensible Markup Language (XML) 1.0](http://www.w3.org/TR/2008/REC-xml-20081126/)で定義されているように、XML パーサーが文書の妥当性を判別する 2 つの方法のうちの 1 つです。 このルールは、信頼されていないデータを受け入れてしまうプロパティとインスタンスを検索し、 [サービス拒否 (DoS)](/dotnet/framework/wcf/feature-details/information-disclosure) 攻撃につながる可能性がある潜在的な [Information Disclosure](/dotnet/framework/wcf/feature-details/denial-of-service) の脅威について開発者に警告します。 このルールは、次の場合にトリガーされます。
 
 - <xref:System.Xml.XmlReader> を使用して外部 XML エンティティを解決する <xref:System.Xml.XmlUrlResolver>インスタンスで、DtdProcessing が有効になっている。
 
@@ -43,7 +46,7 @@ ms.locfileid: "45546787"
 
 - <xref:System.Xml.XmlReader> 安全でない既定の設定または値で作成されます。
 
- これらはどのケースでも、結果は同じになります。XML を処理するマシンが共有するファイル システム、またはネットワークからのコンテンツが攻撃者にさらされ、DoS の媒介として使用される可能性があります。
+これらはどのケースでも、結果は同じになります。XML を処理するマシンが共有するファイル システム、またはネットワークからのコンテンツが攻撃者にさらされ、DoS の媒介として使用される可能性があります。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
 
@@ -55,23 +58,24 @@ ms.locfileid: "45546787"
 
 - <xref:System.Data.DataViewManager.DataViewSettingCollectionString%2A> の <xref:System.Data.DataViewManager> プロパティが信頼できるソースから割り当てられていることを確認します。
 
- .NET 3.5 以前
+**.NET 3.5 以前**
 
 - 信頼されていないソースを扱う場合には、 <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> プロパティを **true** に設定して、DTD 処理を無効にします。
 
 - XmlTextReader クラスには、完全信頼の継承確認要求があります。
 
- .NET 4 以降
+**.NET 4 以降**
 
 - 設定によって信頼されていないソースを扱う場合は、DtdProcessing を有効にしないように、<xref:System.Xml.XmlReaderSettings.DtdProcessing%2A?displayProperty=nameWithType>プロパティを**禁止**または**無視**します。
 
 - すべての InnerXml ケースで、Load() メソッドが XmlReader インスタンスを取ることを確認します。
 
 > [!NOTE]
->  このルールは、有効な XmlSecureResolver インスタンスについて誤検知を報告することがあります。 2016 年半ばまでにこの問題を解決できるよう取り組んでいます。
+> このルールは、有効な XmlSecureResolver インスタンスについて誤検知を報告することがあります。
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制します。
- 入力が信頼できるソースからのものとわかっているのでない限り、この警告からのルールを抑制しないでください。
+
+入力が信頼できるソースからのものとわかっているのでない限り、この警告からのルールを抑制しないでください。
 
 ## <a name="pseudo-code-examples"></a>疑似コードの例
 

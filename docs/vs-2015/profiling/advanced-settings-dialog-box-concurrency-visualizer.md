@@ -1,7 +1,7 @@
 ---
 title: '[詳細設定] ダイアログ ボックス (コンカレンシー ビジュアライザー) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 28098cceb3225162b283c81ee5fd42d49f09fead
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 052c4c59b72d5d7f5c4722fc32efc9ecedb0556b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537797"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921965"
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>[詳細設定] ダイアログ ボックス (コンカレンシー ビジュアライザー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[詳細設定 ダイアログ ボックス (同時実行ビジュアライザー)](https://docs.microsoft.com/visualstudio/profiling/advanced-settings-dialog-box-concurrency-visualizer)します。  
-  
 コンカレンシー ビジュアライザーの **[詳細設定]** ダイアログ ボックスを使うと、トレースを収集する方法を制御できます。  このダイアログ ボックスには、シンボル、マイ コードのみ、バッファリング、フィルター処理、CLR イベント、マーカー、プロバイダー、およびファイルに関するタブがあります。  
   
 ## <a name="symbols"></a>シンボル  
@@ -83,15 +81,15 @@ ms.locfileid: "47537797"
 ## <a name="files"></a>ファイル  
  **[ファイル]** タブでは、トレースが収集されるたびにトレース ファイルが格納されるディレクトリを指定できます。  コンカレンシー ビジュアライザーは、収集するトレースごとに 4 つのファイルを生成します。  
   
--   カーネル モード イベント トレース ログ (ETL) ファイル (*.kernel.etl)  
+- カーネル モード イベント トレース ログ (ETL) ファイル (*.kernel.etl)  
   
--   ユーザー モード イベント トレース ログ ファイル (*.user.etl)  
+- ユーザー モード イベント トレース ログ ファイル (*.user.etl)  
   
--   コンカレンシー ビジュアライザー データ ファイル (*.CVData)  
+- コンカレンシー ビジュアライザー データ ファイル (*.CVData)  
   
--   コンカレンシー ビジュアライザー トレース ファイル (*.CVTrace)  
+- コンカレンシー ビジュアライザー トレース ファイル (*.CVTrace)  
   
- 2 つの ETL ファイルには生のトレース データが保存され、2 つのコンカレンシー ビジュアライザー ファイルには処理されたデータが保存されます。  生の ETL ファイルは通常、トレースが処理された後は使われません。  **[分析後にイベント トレース ログ (ETL) ファイルを削除]** チェック ボックスをオンにすると、ディスクに保存されるトレース データの量が減ります。  
+  2 つの ETL ファイルには生のトレース データが保存され、2 つのコンカレンシー ビジュアライザー ファイルには処理されたデータが保存されます。  生の ETL ファイルは通常、トレースが処理された後は使われません。  **[分析後にイベント トレース ログ (ETL) ファイルを削除]** チェック ボックスをオンにすると、ディスクに保存されるトレース データの量が減ります。  
   
 ## <a name="see-also"></a>関連項目  
  [マイ コードのみ](../profiling/just-my-code-threads-view.md)   

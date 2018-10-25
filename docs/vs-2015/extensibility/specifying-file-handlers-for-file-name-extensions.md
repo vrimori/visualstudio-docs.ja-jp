@@ -1,7 +1,7 @@
 ---
 title: ファイル名拡張子のファイル ハンドラーを指定する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: e3de4730-a95c-465a-b3b2-92ca85364ad7
 caps.latest.revision: 19
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 83bbc57098a68239a1ef26548e9cf05fd31322bb
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 7805cd0f146289e6993971805107faca5cf42920
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592695"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49198433"
 ---
 # <a name="specifying-file-handlers-for-file-name-extensions"></a>ファイル名拡張子のファイル ハンドラーを指定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ファイル名拡張子のファイル ハンドラーを指定する](https://docs.microsoft.com/visualstudio/extensibility/specifying-file-handlers-for-file-name-extensions)します。  
-  
 特定のファイル拡張子を持つファイルを処理するアプリケーションを判断する方法を数多くあります。 OpenWithList と OpenWithProgids 動詞は、ファイル拡張子のレジストリ エントリのファイル ハンドラーを指定する 2 つの方法です。  
   
 ## <a name="openwithlist-verb"></a>OpenWithList 動詞  

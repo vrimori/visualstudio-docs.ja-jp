@@ -1,7 +1,7 @@
 ---
 title: ドメイン固有言語ツールの概要 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 56
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 694ebbc73b531f4fab1c8b2f9621e14f4145bd70
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c01116ee4a4b0edc43a6277db7725e8d962bd607
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533885"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839324"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>ドメイン固有言語ツールの概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ドメイン固有言語ツールの概要](https://docs.microsoft.com/visualstudio/modeling/overview-of-domain-specific-language-tools)します。  
-  
 ドメイン固有言語ツール (DSL ツール) でホストされている[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、ドメイン固有言語を設計および言語に基づくモデルを作成するユーザーが必要なすべてのものを生成します。  
   
  DSL ツールでは、次のツールが含まれています。  
@@ -41,31 +39,31 @@ ms.locfileid: "47533885"
 ## <a name="the-dsl-tools-solution"></a>DSL ツール ソリューション  
  ドメイン固有のデザイナーのウィザードには、次のソリューション テンプレートが用意されています。  
   
--   タスク フロー  
+- タスク フロー  
   
--   クラス ダイアグラム  
+- クラス ダイアグラム  
   
--   最小言語  
+- 最小言語  
   
--   コンポーネント モデル  
+- コンポーネント モデル  
   
--   最小限の WPF  
+- 最小限の WPF  
   
--   最小 Windows.Forms  
+- 最小 Windows.Forms  
   
--   DSL ライブラリ  
+- DSL ライブラリ  
   
- 詳細については、次を参照してください。[ドメイン固有言語ソリューション テンプレートの選択](../modeling/choosing-a-domain-specific-language-solution-template.md)します。  
+  詳細については、次を参照してください。[ドメイン固有言語ソリューション テンプレートの選択](../modeling/choosing-a-domain-specific-language-solution-template.md)します。  
   
- ウィザードを作成、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]次のプロジェクトを含むソリューション。  
+  ウィザードを作成、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]次のプロジェクトを含むソリューション。  
   
--   Dsl  
+- Dsl  
   
-     Dsl プロジェクトでは、ドメイン固有言語と、編集、および処理ツールを定義します。  
+   Dsl プロジェクトでは、ドメイン固有言語と、編集、および処理ツールを定義します。  
   
--   **DslPackage**  
+- **DslPackage**  
   
-     DslPackage プロジェクトは、言語ツール統合する方法を決定します。[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。  
+   DslPackage プロジェクトは、言語ツール統合する方法を決定します。[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。  
   
 ## <a name="the-dsl-tools-graphical-interface"></a>DSL ツールのグラフィカル インターフェイス  
  DSL ツールのグラフィカル インターフェイスを使用して、ドメイン固有言語に要素および関係を追加することができます。 要素を追加した後は、図形にマップの色のカスタマイズ、デコレータを追加してその外観を定義できます。 ツールボックスに要素を追加することもできます。  

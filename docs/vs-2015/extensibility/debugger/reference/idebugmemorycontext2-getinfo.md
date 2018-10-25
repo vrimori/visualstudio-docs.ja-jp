@@ -1,7 +1,7 @@
 ---
 title: IDebugMemoryContext2::GetInfo |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 08c7f091-1816-4d64-8834-f9ecaac5c58d
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 94f6d64bdb11fcd930c04a4d50f8cd3b7037bc58
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e63ac8238b3b13bb8e331c19c58e41fa3cf9dadb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546495"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49879715"
 ---
 # <a name="idebugmemorycontext2getinfo"></a>IDebugMemoryContext2::GetInfo
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugMemoryContext2::GetInfo](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugmemorycontext2-getinfo)します。  
-  
 取得、 [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)コンテキストを記述する構造体。  
   
 ## <a name="syntax"></a>構文  

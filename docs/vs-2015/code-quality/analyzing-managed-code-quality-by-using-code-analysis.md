@@ -1,7 +1,7 @@
 ---
 title: コード分析を使用してマネージ コードの品質の分析 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 3e0538c47dec2dd11b9488a80dd4f71baddc487f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e034db6fc7383ea5f944900713dffe1cc3e78473
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534064"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49263902"
 ---
 # <a name="analyzing-managed-code-quality-by-using-code-analysis"></a>コード分析を使用したマネージド コードの品質の分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[マネージ コードの品質を使用してコード分析によって分析](https://docs.microsoft.com/visualstudio/code-quality/analyzing-managed-code-quality-by-using-code-analysis)します。  
-  
 Visual Studio のコード分析ツールを使用すると、安全ではないデータ アクセス、使用法違反、デザイン上の問題など、コード内の潜在的な問題を検出できます。 コード分析の動作環境は、.NET Framework、ネイティブ (C と C++)、およびデータベース アプリケーションです。 マネージ コードのコード分析で規則を整理する*ルール セット*を対象とするコーディングの問題を特定します。  
   
 ## <a name="common-tasks"></a>一般的なタスク  

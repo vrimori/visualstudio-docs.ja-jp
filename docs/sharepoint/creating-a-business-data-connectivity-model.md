@@ -20,12 +20,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b8d76c6f7d28b990d133780c25577cab4e8c3cad
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 68940d6e48f1f3a3e51017e1cc838976735de104
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36326035"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930207"
 ---
 # <a name="create-a-business-data-connectivity-model"></a>ビジネス データ接続モデルを作成します。
   ビジネス データ接続 (BDC) モデルを作成したり、Visual Studio を使用して、既存の BDC モデルをカスタマイズすることができます。 各 SharePoint プロジェクトには、モデルの 1 つだけ含めることができます。 詳細については、次を参照してください。 [SharePoint ビジネス データを統合](../sharepoint/integrating-business-data-into-sharepoint.md)します。  
@@ -57,13 +57,13 @@ ms.locfileid: "36326035"
 ## <a name="add-an-existing-model"></a>既存のモデルを追加します。
  SharePoint Designer などの他のツールを使用して作成されたモデルをインポートすることができます。 次の状況で、プロジェクトに既存のモデルをインポートすることができます。  
   
--   既に SharePoint サーバー ファームに配置されているモデルをカスタマイズします。  
+- 既に SharePoint サーバー ファームに配置されているモデルをカスタマイズします。  
   
--   パッケージ化し、既存のモデルを複数の SharePoint サーバー ファームに展開します。  
+- パッケージ化し、既存のモデルを複数の SharePoint サーバー ファームに展開します。  
   
- どちらの場合は、インポートするモデルで定義されている LOB システムには影響せず、期待どおりに機能し続けます。 既存のモデルを SharePoint プロジェクトを追加する Visual Studio を使用して、**既存項目の追加** ダイアログ ボックス。 詳細については、次を参照してください。[方法: SharePoint プロジェクトに既存の BDC モデル ファイルを追加](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)します。  
+  どちらの場合は、インポートするモデルで定義されている LOB システムには影響せず、期待どおりに機能し続けます。 既存のモデルを SharePoint プロジェクトを追加する Visual Studio を使用して、**既存項目の追加** ダイアログ ボックス。 詳細については、次を参照してください。[方法: SharePoint プロジェクトに既存の BDC モデル ファイルを追加](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)します。  
   
- .NET Framework アセンブリの型の LOB システムをインポートしたモデルに追加するにはでオプションを選択して、**追加の .NET アセンブリの LobSystem**します。 これにより、カスタム コードを記述し、デザイナーを使用して、インポートしたモデルのメタデータを定義することができます。  
+  .NET Framework アセンブリの型の LOB システムをインポートしたモデルに追加するにはでオプションを選択して、**追加の .NET アセンブリの LobSystem**します。 これにより、カスタム コードを記述し、デザイナーを使用して、インポートしたモデルのメタデータを定義することができます。  
   
 ## <a name="related-topics"></a>関連トピック
   

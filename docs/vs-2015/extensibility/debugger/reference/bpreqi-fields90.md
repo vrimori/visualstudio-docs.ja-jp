@@ -1,7 +1,7 @@
 ---
 title: BPREQI_FIELDS90 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: bf6f7efc-39f2-46a2-906d-c3647bf89995
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5ddba39cc7a540c1c88997c09fd864dd8c22464f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1ce9ca3251faf79ea87863e78d039dde722f5961
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548913"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908847"
 ---
 # <a name="bpreqifields90"></a>BPREQI_FIELDS90
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[BPREQI_FIELDS90](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/bpreqi-fields90)します。  
-  
 取得するブレークポイントの要求についての情報を指定する有効な値を列挙します。 この列挙体を拡張、 [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)列挙体。  
   
 ## <a name="syntax"></a>構文  
@@ -128,7 +126,7 @@ public enum enum_BPREQI_FIELDS90
  BPREQI90_ALLFIELDS  
  すべてのフィールドを指定します、`BP_REQUEST_INFO2`構造体。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Msdbg90.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

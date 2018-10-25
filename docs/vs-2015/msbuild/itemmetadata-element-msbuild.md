@@ -1,7 +1,7 @@
 ---
 title: ItemMetadata 要素 (MSBuild) | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0032b1798fea215169f801dd23beb8aa856effc5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a505d97e59070062de6cb9027258ef9a7127e588
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537813"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49226448"
 ---
 # <a name="itemmetadata-element-msbuild"></a>ItemMetadata 要素 (MSBuild)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ItemMetadata 要素 (MSBuild)](https://docs.microsoft.com/visualstudio/msbuild/itemmetadata-element-msbuild)します。  
-  
   
 ユーザー定義の項目メタデータのキーを格納します。項目メタデータの値が含まれます。 1 つの項目が、任意の数のメタデータ キー/値ペアを含むことができます。  
   

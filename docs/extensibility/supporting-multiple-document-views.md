@@ -1,5 +1,5 @@
 ---
-title: 複数のドキュメント ビューをサポートする |Microsoft ドキュメント
+title: 複数のドキュメント ビューのサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,33 +13,33 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78ddc7ed811086622454e31d12ca5f1324d00da5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5a2fafdaaa2d54cd445017ebd9120d8648bf7067
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31141721"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942349"
 ---
-# <a name="supporting-multiple-document-views"></a>複数のドキュメント ビューをサポートします。
-エディターの別のドキュメントのデータおよびドキュメント ビュー オブジェクトを作成することで、ドキュメントの 1 つ以上のビューを提供できます。 場合によっては便利ですが、追加のドキュメント ビューは次のとおりです。  
+# <a name="supporting-multiple-document-views"></a>複数のドキュメント ビューのサポート
+エディター用の個別のドキュメント データとドキュメント ビュー オブジェクトを作成して、ドキュメントの 1 つ以上のビューを行うことができます。 場合によっては便利ですが、追加のドキュメント ビューは次のとおりです。  
   
--   新しいウィンドウのサポート: 必要な同じ型での 2 つ以上のビューを提供するエディターを選択すると、エディターで開いているウィンドウを既に持っているユーザーが新しいウィンドウを開くことができます、**新しいウィンドウ**コマンドを**ウィンドウ**メニュー。  
+- 新しいウィンドウのサポート: エディターで開いているウィンドウを既に持っているユーザーが選択して、新しいウィンドウを開けるように、同じ型の 2 つ以上のビューを提供する、エディターが必要な**新しいウィンドウ**コマンドから、 **ウィンドウ**メニュー。  
   
--   フォームとコードの表示のサポート: さまざまな種類のビューを提供するエディターとして使用します。 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]、たとえば、フォーム ビューとコード ビューの両方を提供します。  
+- フォームおよびコードの表示のサポート: さまざまな種類のビューを提供するエディターとして使用します。 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]、たとえば、フォーム ビューとコード ビューの両方を提供します。  
   
- 詳細については、EditorFactory.cs プロジェクト ファイルで、カスタム エディター、Visual Studio パッケージ テンプレートによって作成された CreateEditorInstance プロシージャを参照してください。 このプロジェクトの詳細については、次を参照してください。[チュートリアル: カスタム エディターを作成する](../extensibility/walkthrough-creating-a-custom-editor.md)です。  
+  詳細については、Visual Studio パッケージ テンプレートによって作成されたカスタム エディターのプロジェクトで EditorFactory.cs ファイル CreateEditorInstance プロシージャを参照してください。 このプロジェクトの詳細については、次を参照してください。[チュートリアル: カスタム エディターを作成する](../extensibility/walkthrough-creating-a-custom-editor.md)します。  
   
 ## <a name="synchronizing-views"></a>ビューの同期  
- 複数のビューを実装するときに、ドキュメント データ オブジェクトは、データと同期されているすべてのビューを維持します。 イベントのインターフェイスを処理を行うこともできます<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>データで複数のビューを同期するためにします。  
+ 複数のビューを実装するときに、ドキュメント データ オブジェクトは、すべてのビューと、データの同期を維持する責任を負います。 インターフェイスを処理するイベントを使用する<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>データと複数のビューを同期します。  
   
- 使用しない場合、<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>ドキュメント データ オブジェクトに加えられた変更を処理する、独自のイベント システムを実装する必要がありますし、複数のビューを同期するオブジェクト。 さまざまな詳細レベルを使用して、複数のビューを最新に保つことができます。 最大の粒度の設定、1 つのビューに入力すると、その他のビューは直ちに更新されます。 最小の粒度でアクティブになるまで、他のビューは更新されません。  
+ 使用しない場合、<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>ドキュメント データ オブジェクトに加えられた変更を処理するために、独自のイベント システムを実装する必要があり、複数のビューを同期するオブジェクト。 さまざまなレベルの粒度は、複数のビューを最新に保つために使用できます。 最大細分度の設定は、1 つのビューに入力すると、他のビューはすぐに更新します。 最小の細分性でアクティブになるまで、他のビューは更新されません。  
   
-## <a name="determining-whether-document-data-is-already-open"></a>ドキュメント データをするかどうかを決めることが既に開かれています。  
- 統合開発環境 (IDE) で実行中のドキュメント テーブル (RDT) は、ドキュメントのデータが次の図に示すように開いているかどうかを追跡することができます。  
+## <a name="determining-whether-document-data-is-already-open"></a>ドキュメント データをかどうかを判断するは既に開かれています。  
+ 統合開発環境 (IDE) で実行中のドキュメント テーブル (RDT) は、ドキュメントのデータが次の図に示すように開いているかどうかを追跡するのに役立ちます。  
   
  ![DocDataView グラフィック](../extensibility/media/docdataview.gif "Docdataview")  
 複数のビュー  
   
- 独自のウィンドウ フレームに既定では、それぞれのビュー (ドキュメント ビュー オブジェクト) が含まれている (<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>)。 既に説明したように、ただし、ドキュメント データを表示できます複数のビュー。 これを有効にするのには、Visual Studio は、問題のドキュメントがエディターで開いて既にかどうかを判断する RDT をチェックします。 IDE を呼び出すと<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>でエディターを作成するには、NULL 以外の値が返される、`punkDocDataExisting`パラメーターは、ドキュメントが既に別のエディターで開いていることを示します。 方法の詳細について、RDT 関数を参照してください[を実行しているドキュメント テーブル](../extensibility/internals/running-document-table.md)です。  
+ 独自のウィンドウ フレームに既定では、それぞれのビュー (ドキュメント ビュー オブジェクト) が含まれている (<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>)。 既に説明したように、ただし、ドキュメント データを表示できますで複数のビュー。 これを有効にするのには、Visual Studio は、対象のドキュメントがエディターで開いて既にかどうかを判断する RDT を確認します。 IDE を呼び出すと<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>でエディターを作成するには、NULL 以外の値が返される、`punkDocDataExisting`パラメーターは、ドキュメントが別のエディターで開いて既にことを示します。 詳細については、RDT 関数を参照してください[を実行しているドキュメント テーブル](../extensibility/internals/running-document-table.md)します。  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>実装で返されるドキュメント データ オブジェクトを調べる`punkDocDataExisting`ドキュメントのデータが、エディターの適切なかどうかを判断します。 (たとえば、HTML のデータのみが表示されます、HTML エディターによって。)適切な場合は、エディター ファクトリは、データの 2 つ目のビューを指定する必要があります。 場合、`punkDocDataExisting`パラメーターではありません`NULL`、可能であれば、ドキュメント データ オブジェクトが別のエディターで開いているか、可能性の高い、ドキュメント データが既に別のビューと同じ、エディターで開きます。 ドキュメントのデータが、エディター ファクトリをサポートしない別のエディターで開いている場合は、Visual Studio は失敗を開くには、エディター ファクトリです。 詳細については、次を参照してください。[する方法: ドキュメント データへのアタッチ ビュー](../extensibility/how-to-attach-views-to-document-data.md)です。
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>の実装で返されるドキュメント データ オブジェクトを調べます`punkDocDataExisting`ドキュメント データが、エディターの適切なかどうかを判断します。 (たとえば、HTML のデータのみが表示されます、HTML エディターによって。)適切な場合は、エディター ファクトリは、データの 2 番目のビューを提供する必要があります。 場合、`punkDocDataExisting`パラメーターが`NULL`、ことは、ドキュメント データ オブジェクトが別のエディターで開いているか、可能性の高い、ドキュメント データが既に別のビューと同じ、エディターで開かれています。 ドキュメントのデータが、エディター ファクトリがサポートされていない別のエディターで開いている場合は、エディター ファクトリを開く Visual Studio が失敗します。 詳細については、次を参照してください。[方法: ドキュメント データへのアタッチ ビュー](../extensibility/how-to-attach-views-to-document-data.md)します。

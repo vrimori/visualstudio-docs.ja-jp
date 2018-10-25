@@ -1,7 +1,7 @@
 ---
 title: LINQ のデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 28
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 29e5a598c1c9d0d605267ed0894715eb18589136
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cac093ffbec9c96e215de4c8c5d3cdc956f94c49
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537805"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49266618"
 ---
 # <a name="debugging-linq"></a>LINQ のデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[LINQ のデバッグ](https://docs.microsoft.com/visualstudio/debugger/debugging-linq)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] は、統合言語クエリ (LINQ) コードのデバッグをサポートしていますが、いくつかの制約事項があります。 ステップ実行、ブレークポイントの設定、デバッガー ウィンドウでの結果の表示など、ほとんどのデバッグ機能を、LINQ ステートメントと組み合わせて使用することができます。 このトピックでは、LINQ のデバッグの主な制限について説明します。  
   
 ##  <a name="BKMK_ViewingLINQResults"></a> LINQ の結果を表示します。  

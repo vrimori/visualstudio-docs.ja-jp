@@ -10,11 +10,12 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 6153a59e1875bf7b1dd81e794e0d15a37d47c2f4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6576a701abe699bfe47666acfc21c848dde1f53a
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35666684"
 ---
 # <a name="help-in-r-tools-for-visual-studio"></a>R Tools for Visual Studio のヘルプ
 
@@ -25,7 +26,7 @@ R のヘルプは、Visual Studio の対話型ウィンドウに直接統合さ�
 > [!Tip]
 > ヘルプ ウィンドウは、Visual Studio のその他すべてのウィンドウと同様に、好みに応じて配置およびドッキングすることができます。 「[Visual Studio のウィンドウ レイアウトをカスタマイズする](../ide/customizing-window-layouts-in-visual-studio.md)」を参照してください。
 >
-> また、**[R Tools] > [オプション]** メニューを選択して、**[R ヘルプ ブラウザー]** プロパティに `External` を設定し、ブラウザーでヘルプの結果を開くことができます。 [オプション](options-for-r-tools-in-visual-studio.md)に関するページを参照してください。
+> また、**[R Tools]** > **[オプション]** メニューを選択して、**[R ヘルプ ブラウザー]** プロパティに `External` を設定し、ブラウザーでヘルプの結果を開くことができます。 [オプション](options-for-r-tools-in-visual-studio.md)に関するページを参照してください。
 
 ヘルプを検索するには、`??` に続けて検索用語を指定します。 検索用語にスペースが含まれる場合は、用語を引用符で囲みます。
 
@@ -43,21 +44,21 @@ R のヘルプは、Visual Studio の対話型ウィンドウに直接統合さ�
 
 開発者は、関数名、データセットなどの要素についてわからないことがあると、多くの場合は R ドキュメントを検索します。 R Tools for Visual Studio (RTVS) では、ヘルプの検索をエディターと対話型ウィンドウに直接統合することで、このプロセスを簡略化しています。
 
-- オート コンプリート操作中に F1 キーを押すと、サブ文字列に一致するヘルプの結果一覧が生成されます。
+- オート コンプリート操作中に **F1** キーを押すと、サブ文字列に一致するヘルプの結果一覧が生成されます。
 - 検索用語 (関数など) を右クリックして **[<用語> のヘルプ]** コマンドを選択すると、その関数のヘルプを開きます。 また、任意の選択に対して **[Help on]\(ヘルプの表示\)** を呼び出すこともできます。
 
     ![コンテキスト メニューを右クリックしてヘルプを呼び出す](media/help-right-click.png)
 
 > [!Tip]
-> ブラウザーで統合ヘルプを開くには、**[R Tools] > [オプション]** を選択して、**[F1 Web ブラウザー]** に `External` を設定します。 [オプション](options-for-r-tools-in-visual-studio.md)に関するページを参照してください。
+> ブラウザーで統合ヘルプを開くには、**[R Tools]** > **[オプション]** を選択して、**[F1 Web ブラウザー]** に `External` を設定します。 [オプション](options-for-r-tools-in-visual-studio.md)に関するページを参照してください。
 
 ## <a name="integrated-stackoverflow-search"></a>StackOverflow 検索の統合
 
-R ドキュメントでの検索に加えて、開発者はコードを記述するときに StackOverflow を検索することが多いです。 RTVS では、このプロセスも効率化されます。 用語または選択範囲を右クリックし、**[Web で <用語> を検索します]** コマンド (Ctrl + F1 キー) を選択すると、Visual Studio からウィンドウが開き、StackOverflow を対象に検索結果が表示されます。
+R ドキュメントでの検索に加えて、開発者はコードを記述するときに StackOverflow を検索することが多いです。 RTVS では、このプロセスも効率化されます。 用語または選択範囲を右クリックし、**[Web で <用語> を検索します]** コマンド (**Ctrl** + **F1** キー) を選択すると、Visual Studio からウィンドウが開き、StackOverflow を対象に検索結果が表示されます。
 
 ![Visual Studio の Web 検索結果](media/help-web-search-results.png)
 
-**[R Tools] > [オプション] > [F1 Web 検索文字列]** オプションを使用して、追加されたスコープ文字列 `R site:stackoverflow` を変更できます。
+**[R Tools]** > **[オプション]** > **[F1 Web 検索文字列]** オプションを使用して、追加されたスコープ文字列 `R site:stackoverflow` を変更できます。
 
 ![[F1 Web 検索文字列] オプションを変更する](media/options-dialog.png)
 

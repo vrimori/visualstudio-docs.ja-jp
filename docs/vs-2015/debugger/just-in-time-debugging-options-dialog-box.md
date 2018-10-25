@@ -1,7 +1,7 @@
 ---
 title: Just-in-time で、デバッグ オプション ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -29,29 +29,27 @@ caps.latest.revision: 22
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8675bc383a492f4d7ca762fa052a0e6174fe01bb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fbe323d5c8939ee5a4088436c906b99b4696254e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537903"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872929"
 ---
 # <a name="just-in-time-debugging-options-dialog-box"></a>[Just-In-Time] ([オプション] ダイアログ ボックス - [デバッグ])
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Just ポイントイン タイムをデバッグするには、オプション ダイアログ ボックス](https://docs.microsoft.com/visualstudio/debugger/just-in-time-debugging-options-dialog-box)します。  
-  
 アクセスする、**ジャスト イン タイム** ページに移動して、**ツール**メニューをクリックします**オプション**します。 **オプション** ダイアログ ボックスで、展開、**デバッグ**ノード**ジャスト イン タイム**します。 このページでは、マネージド コード、ネイティブ コード、およびスクリプトでの Just-In-Time デバッグを有効にできます。 詳細については、次を参照してください。 [Just-In-Time デバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)します。  
   
  Just-In-Time デバッグは次のプログラムの種類で有効です。  
   
--   マネージド  
+- マネージド  
   
--   ネイティブ  
+- ネイティブ  
   
--   スクリプト  
+- スクリプト  
   
- Just-In-Time デバッグは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の外部で起動されたプログラムをデバッグするための手法です。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で作成されたプログラムを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 環境の外部で実行できます。 Just-In-Time デバッグを有効にすると、クラッシュの発生時に、デバッグを実行するかどうかを確認するダイアログ ボックスが表示されます。  
+  Just-In-Time デバッグは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の外部で起動されたプログラムをデバッグするための手法です。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で作成されたプログラムを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 環境の外部で実行できます。 Just-In-Time デバッグを有効にすると、クラッシュの発生時に、デバッグを実行するかどうかを確認するダイアログ ボックスが表示されます。  
   
 ## <a name="associated-warnings"></a>関連する警告  
  このページにアクセスした場合、**オプション**ダイアログ ボックスで、このような警告メッセージが表示する場合があります。  

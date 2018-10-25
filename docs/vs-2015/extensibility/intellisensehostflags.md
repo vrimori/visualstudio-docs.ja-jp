@@ -1,7 +1,7 @@
 ---
 title: IntelliSenseHostFlags |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 0930640b-eb84-48ef-a8f7-d4268f55c99c
 caps.latest.revision: 7
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ef0e800cbe2d101fa9ce44367ef54fb1834a7fd4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 28e78a76c0288cece3c42212a036ff326840b5bd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535729"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829210"
 ---
 # <a name="intellisensehostflags"></a>IntelliSenseHostFlags
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IntelliSenseHostFlags](https://docs.microsoft.com/visualstudio/extensibility/intellisensehostflags)します。  
-  
 IntelliSense のホストのフラグを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -55,7 +53,7 @@ enum IntellisenseHostFlags
 |`IHF_FORCECOMMITTOCONTEXT`|`CanCommitIntoReadOnlyBuffer` と同じ。|  
 |`IHF_OVERTYPE`|編集 (サブジェクトまたはコンテキスト) では、上書きモードで行う必要があります。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  SingleFileeditor.idl  
   
 ## <a name="see-also"></a>関連項目  

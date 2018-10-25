@@ -1,7 +1,7 @@
 ---
 title: '方法: ショートカット メニューにコマンドを追加 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,29 +15,27 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 6ae32e59dafa12e0c9f8695c0010012918f0b89d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e7d15c1991ee70a0b1a163c8968e42fe450b7919
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536067"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833521"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>方法: ショートカット メニューにコマンドを追加する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ショートカット メニューにコマンドを追加](https://docs.microsoft.com/visualstudio/modeling/how-to-add-a-command-to-the-shortcut-menu)します。  
-  
 ドメイン固有言語 (DSL) にメニュー コマンドを追加すると、ユーザーが DSL に固有のタスクを実行できるようになります。 ユーザーが図を右クリックすると、コンテキスト (ショートカット) メニューにコマンドが表示されます。 特定の状況でのみメニューにコマンドが表示されるように、コマンドを定義できます。 たとえば、ユーザーが特定の型の要素または特定の状態の要素をクリックした場合にだけコマンドを表示するようにできます。  
   
  DslPackage プロジェクトで実行する手順の概要を以下に示します。  
   
-1.  [Commands.vsct でコマンドを宣言します。](#VSCT)  
+1. [Commands.vsct でコマンドを宣言します。](#VSCT)  
   
-2.  [Package.tt でパッケージのバージョン番号を更新](#version)します。 Commands.vsct を変更するときには必ずこの操作を実行してください。  
+2. [Package.tt でパッケージのバージョン番号を更新](#version)します。 Commands.vsct を変更するときには必ずこの操作を実行してください。  
   
-3.  [CommandSet クラスにメソッドを記述](#CommandSet)コマンドを表示して、定義を実行するコマンドにします。  
+3. [CommandSet クラスにメソッドを記述](#CommandSet)コマンドを表示して、定義を実行するコマンドにします。  
   
- サンプルについては、次を参照してください。、 [Visualization and Modeling SDK の web サイト](http://go.microsoft.com/fwlink/?LinkID=185579)します。  
+   サンプルについては、次を参照してください。、 [Visualization and Modeling SDK の web サイト](http://go.microsoft.com/fwlink/?LinkID=185579)します。  
   
 > [!NOTE]
 >  [切り取り]、[貼り付け]、[すべて選択]、[印刷] など、既存の一部のコマンドの動作を変更することもできます。このためには、CommandSet.cs でメソッドをオーバーライドします。 詳細については、次を参照してください。[方法: 標準メニュー コマンドを変更](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)します。  
@@ -47,15 +45,15 @@ ms.locfileid: "47536067"
   
  このトピックで説明する手法は、次の場合に使用してください。  
   
-1.  右クリックで表示されるショートカット メニュー以外のメニューにメニュー コマンドを定義する。  
+1. 右クリックで表示されるショートカット メニュー以外のメニューにメニュー コマンドを定義する。  
   
-2.  メニューに特定のコマンド グループを定義する。  
+2. メニューに特定のコマンド グループを定義する。  
   
-3.  他のユーザーが各自のコマンドを使用して DSL を拡張できないようにする。  
+3. 他のユーザーが各自のコマンドを使用して DSL を拡張できないようにする。  
   
-4.  コマンドを 1 つだけ定義する。  
+4. コマンドを 1 つだけ定義する。  
   
- 上記に該当しない場合は、MEF 手法を使用してコマンドを定義することを検討してください。 詳細については、次を参照してください。 [MEF による DSL の拡張](../modeling/extend-your-dsl-by-using-mef.md)します。  
+   上記に該当しない場合は、MEF 手法を使用してコマンドを定義することを検討してください。 詳細については、次を参照してください。 [MEF による DSL の拡張](../modeling/extend-your-dsl-by-using-mef.md)します。  
   
 ##  <a name="VSCT"></a> Commands.Vsct でコマンドを宣言します。  
  メニュー コマンドは、DslPackage\Commands.vsct で宣言されます。 これらの定義では、メニュー項目のラベルと、メニューでのメニュー項目の表示位置が指定されます。  
@@ -228,21 +226,21 @@ private void OnStatusMyContextMenuCommand(object sender, EventArgs e)
   
  次のフラグメントは、多くの場合 OnStatus メソッドで有効です。  
   
--   `this.CurrentSelection`。 ユーザーが右クリックした図形は常にこのリストに追加されます。 ユーザーが図の空白部分をクリックした場合、このリストのメンバーは図のみになります。  
+- `this.CurrentSelection`。 ユーザーが右クリックした図形は常にこのリストに追加されます。 ユーザーが図の空白部分をクリックした場合、このリストのメンバーは図のみになります。  
   
--   `this.IsDiagramSelected()` - `true` 場合は、ユーザーは、図の空白部分をクリックしました。  
+- `this.IsDiagramSelected()` - `true` 場合は、ユーザーは、図の空白部分をクリックしました。  
   
--   `this.IsCurrentDiagramEmpty()`  
+- `this.IsCurrentDiagramEmpty()`  
   
--   `this.IsSingleSelection()` - ユーザーは複数のオブジェクトを選択しませんでした。  
+- `this.IsSingleSelection()` - ユーザーは複数のオブジェクトを選択しませんでした。  
   
--   `this.SingleSelection` - ユーザーが右クリックした図形または図  
+- `this.SingleSelection` - ユーザーが右クリックした図形または図  
   
--   `shape.ModelElement as MyLanguageElement` - 図形により表されるモデル要素。  
+- `shape.ModelElement as MyLanguageElement` - 図形により表されるモデル要素。  
   
- 一般的なガイドラインとして、`Visible` プロパティは選択した内容に基づくようにし、`Enabled` プロパティは選択した要素の状態に基づくようにします。  
+  一般的なガイドラインとして、`Visible` プロパティは選択した内容に基づくようにし、`Enabled` プロパティは選択した要素の状態に基づくようにします。  
   
- OnStatus メソッドは Store の状態を変更してはなりません。  
+  OnStatus メソッドは Store の状態を変更してはなりません。  
   
 ### <a name="define-what-the-command-does"></a>コマンドが実行する処理を定義する  
  コマンドごとに、ユーザーがメニュー コマンドをクリックしたときに必要な操作を実行する `OnMenu...` メソッドを定義します。  
@@ -340,29 +338,29 @@ protected override IList<MenuCommand> GetMenuCommands()
 ## <a name="troubleshooting"></a>トラブルシューティング  
  **コマンドは、メニューは表示されません。**  
   
--   DSL パッケージをインストールするまでは、コマンドは Visual Studio のデバッグ インスタンスでのみ表示されます。 詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)します。  
+- DSL パッケージをインストールするまでは、コマンドは Visual Studio のデバッグ インスタンスでのみ表示されます。 詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)します。  
   
--   実験用サンプルに、この DSL の正しいファイル名拡張子が含まれていることを確認します。 ファイル名拡張子を確認するには、Visual Studio のメイン インスタンスで DslDefinition.dsl を開きます。 DSL エクスプローラーで [エディター] プロジェクト ノードを右クリックし、[プロパティ] をクリックします。 [プロパティ] ウィンドウで、FileExtension プロパティを調べます。  
+- 実験用サンプルに、この DSL の正しいファイル名拡張子が含まれていることを確認します。 ファイル名拡張子を確認するには、Visual Studio のメイン インスタンスで DslDefinition.dsl を開きます。 DSL エクスプローラーで [エディター] プロジェクト ノードを右クリックし、[プロパティ] をクリックします。 [プロパティ] ウィンドウで、FileExtension プロパティを調べます。  
   
--   作成した[パッケージのバージョン番号をインクリメント](#version)でしょうか。  
+- 作成した[パッケージのバージョン番号をインクリメント](#version)でしょうか。  
   
--   OnStatus メソッドの開始時にブレークポイントを設定します。 このブレークポイントは、図の任意の部分を右クリックしたときにブレークする必要があります。  
+- OnStatus メソッドの開始時にブレークポイントを設定します。 このブレークポイントは、図の任意の部分を右クリックしたときにブレークする必要があります。  
   
-     **OnStatus メソッドは呼び出されません**:  
+   **OnStatus メソッドは呼び出されません**:  
   
-    -   CommandSet コードの GUID と ID が Commands.vsct の Symbols セクションの GUID と ID に一致することを確認します。  
+  -   CommandSet コードの GUID と ID が Commands.vsct の Symbols セクションの GUID と ID に一致することを確認します。  
   
-    -   Commands.vsct ですべての親ノードの GUID と ID が正しい親グループを識別していることを確認します。  
+  -   Commands.vsct ですべての親ノードの GUID と ID が正しい親グループを識別していることを確認します。  
   
-    -   Visual Studio コマンド プロンプトで devenv /rootsuffix exp /setup と入力します。 Visual Studio のデバッグ インスタンスを再起動します。  
+  -   Visual Studio コマンド プロンプトで devenv /rootsuffix exp /setup と入力します。 Visual Studio のデバッグ インスタンスを再起動します。  
   
--   OnStatus メソッドをステップ実行し、command.Visible と command.Enabled が true に設定されていることを確認します。  
+- OnStatus メソッドをステップ実行し、command.Visible と command.Enabled が true に設定されていることを確認します。  
   
- **誤ったメニュー テキストが表示されたら、または間違った場所にコマンドが表示される**:  
+  **誤ったメニュー テキストが表示されたら、または間違った場所にコマンドが表示される**:  
   
--   GUID と ID の組み合わせがこのコマンドに固有であることを確認します。  
+- GUID と ID の組み合わせがこのコマンドに固有であることを確認します。  
   
--   パッケージの古いバージョンがアンインストールされていることを確認します。  
+- パッケージの古いバージョンがアンインストールされていることを確認します。  
   
 ## <a name="see-also"></a>関連項目  
  [ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)   

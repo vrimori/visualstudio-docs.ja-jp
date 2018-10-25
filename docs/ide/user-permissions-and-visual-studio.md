@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a415d49770b003c15d4394e4635a138a795cb55
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2df7031baffcdcfcac07f4b2054ff2aeb9ab81ab
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42627316"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49885760"
 ---
 # <a name="user-permissions-and-visual-studio"></a>ユーザー アクセス許可と Visual Studio
 
@@ -31,7 +31,7 @@ ms.locfileid: "42627316"
 Visual Studio IDE のほぼすべての機能は、通常のユーザーとして実行できます。 次のタスクを完了するには、管理者アクセス許可が必要です。
 
 |区分|タスク|詳細情報|
-|----------|----------|--------------------------|
+|----------|----------| - |
 |インストール|Visual Studio をインストールする。|[Visual Studio のインストール](../install/install-visual-studio.md)|
 ||ローカル ヘルプ コンテンツをインストール、更新、または削除する。|[ローカル ヘルプ コンテンツのインストールと管理](../ide/install-and-manage-local-content.md)|
 |ツールボックス|**ツールボックス**にクラシック COM コントロールを追加する。|[ツールボックス](../ide/reference/toolbox.md)|

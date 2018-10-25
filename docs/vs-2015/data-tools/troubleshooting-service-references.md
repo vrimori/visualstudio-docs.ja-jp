@@ -1,7 +1,7 @@
 ---
 title: サービス参照のトラブルシューティング |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,15 @@ caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f6d9510bf667b95dde4619f469b51041c07c0b4e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 90ec170182d0b54e6185de68f5ca03a5e114f0ef
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548958"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49223965"
 ---
 # <a name="troubleshooting-service-references"></a>サービス参照のトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[サービス参照のトラブルシューティング](https://docs.microsoft.com/visualstudio/data-tools/troubleshooting-service-references)します。
-
 このトピックで使用している場合に発生する一般的な問題[!INCLUDE[vsindigo](../includes/vsindigo-md.md)]または[!INCLUDE[ssAstoria](../includes/ssastoria-md.md)]参照[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。
 
 ## <a name="error-returning-data-from-a-service"></a>サービスからデータを返すときのエラー
@@ -70,9 +67,9 @@ ms.locfileid: "47548958"
 ## <a name="error-debugging-service-code"></a>サービス コードのデバッグ エラー
  クライアント コードから、WCF サービスのコードにステップ インすると、シンボルが見つからないことに関するエラーが表示される可能性があります。 これは、ソリューションの一部であったサービスが移動または、ソリューションから削除されるときに発生します。
 
- 最初に現在のソリューションの一部となっている WCF サービスへの参照を追加すると、サービス プロジェクトとサービスのクライアント プロジェクトの明示的なビルドの依存関係が追加されます。 これは、クライアント常にアクセスする最新の状態のサービスのバイナリ、クライアント コードからサービスのコードにステップ インなどのシナリオのデバッグにとって特に重要なことを保証します。
+ 最初に現在のソリューションの一部となっている WCF サービスへの参照を追加すると、サービス プロジェクトとサービスのクライアント プロジェクトの明示的なビルドの依存関係が追加されます。 これにより、クライアント常にアクセスする最新のサービスのバイナリはクライアント コードからサービスのコードにステップ インなどのシナリオのデバッグに特に重要です。
 
- サービス プロジェクトをソリューションから削除する場合、この明示的なビルド依存関係は無効になります。 Visual Studio を保証できなくサービス プロジェクトが再構築を必要に応じて。
+ サービス プロジェクトをソリューションから削除する場合、この明示的なビルド依存関係は無効になります。 Visual Studio を保証できなくサービス プロジェクトがリビルドされるに応じて。
 
  このエラーを解決するには、手動でサービス プロジェクトを再構築が必要。
 

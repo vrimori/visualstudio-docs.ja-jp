@@ -1,5 +1,5 @@
 ---
-title: BP_REQUEST_INFO2 |Microsoft ドキュメント
+title: BP_REQUEST_INFO2 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11402c5ad188b72600debb5cb64b7f2811e75ee9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 68bdf873cdd108428ec05bda6429de70a80e71a8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31104684"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888789"
 ---
 # <a name="bprequestinfo2"></a>BP_REQUEST_INFO2
-仕入先 GUID、制約、およびトレース ポイントを含む、ブレークポイントを実装するために必要な情報が含まれています。  
+ベンダーの GUID、制約、およびトレース ポイントを含む、ブレークポイントを実装するために必要な情報が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -65,13 +65,13 @@ public struct BP_REQUEST_INFO2 {
   
 ## <a name="members"></a>メンバー  
  `dwFields`  
- フラグの組み合わせ、 [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)のどのフィールドが埋められますを指定する列挙です。  
+ フラグの組み合わせ、 [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)フィールドが記入を指定する列挙体。  
   
  `guidLanguage`  
  言語の GUID。  
   
  `bpLocation`  
- [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)をブレークポイントの場所の種類を指定します。  
+ [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)ブレークポイントの場所の種類を指定する構造体。  
   
  `pProgram`  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)ブレークポイントが発生したアプリケーションを表すオブジェクト。  
@@ -89,24 +89,24 @@ public struct BP_REQUEST_INFO2 {
  [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)ブレークポイントが発生する条件を記述する構造体。  
   
  `bpPassCount`  
- [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)ブレークポイントのパスの行数の情報を格納する構造体。  
+ [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)ブレークポイントのパスの行数の情報を含む構造体。  
   
  `dwFlags`  
- フラグの組み合わせ、 [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md)要求されたブレークポイントのフラグを指定する列挙です。  
+ フラグの組み合わせ、 [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md)要求されたブレークポイントのフラグを指定する列挙体。  
   
  `guidVendor`  
- 仕入先の GUID です。 Null 値である可能性があります。  
+ ベンダーの GUID です。 Null 値があります。  
   
  `bstrConstraint`  
- ブレークポイント制約の名前です。 Null 値である可能性があります。  
+ ブレークポイント制約の名前。 Null 値があります。  
   
  `bstrTracepoint`  
- トレース ポイントの名前。 Null 値である可能性があります。  
+ トレース ポイントの名前。 Null 値があります。  
   
-## <a name="remarks"></a>コメント  
- この構造体は、によって返される、 [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ この構造体がによって返される、 [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

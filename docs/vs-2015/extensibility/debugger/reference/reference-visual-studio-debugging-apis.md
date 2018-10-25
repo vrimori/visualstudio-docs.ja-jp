@@ -1,7 +1,7 @@
 ---
 title: 参照 (Visual Studio のデバッグ Api) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 9810fc50-43c7-4916-9916-1cf333037b51
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d3af0907f1a3b5c59cd857b118ec47ab2cae983b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8c3e45670976d0f7ba26312b39ce448b6736f8ea
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548928"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49191842"
 ---
 # <a name="reference-visual-studio-debugging-apis"></a>参照 (Visual Studio のデバッグ API)
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[参照 (Visual Studio のデバッグ Api)](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/reference-visual-studio-debugging-apis)します。  
-  
 Visual Studio Debugging SDK の参照は、実行時のアーキテクチャと、デバッガーとそのコンポーネントの機能の基本的なモデルを説明します。 ドキュメントでは、インターフェイスによって定義の動作とは別に、説明、コンポーネントとインターフェイスについてできるだけ少ない想定。  
   
  参照セクションの目的は、可能な言語、実行時間、およびオペレーティング システムのセットをさまざまなサポートを提供します。  

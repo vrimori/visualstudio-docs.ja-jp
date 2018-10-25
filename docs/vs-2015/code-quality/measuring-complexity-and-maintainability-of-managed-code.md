@@ -1,7 +1,7 @@
 ---
 title: 複雑さとマネージ コードの保守性を測定する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 16
 author: erickson-doug
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 062ac6f8c9610c8b8e877c3d975fb1f4b6eef4e1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5b83ab0627685d599d0866d789c18bee8d08659a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535747"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49214228"
 ---
 # <a name="measuring-complexity-and-maintainability-of-managed-code"></a>マネージド コードの複雑さと保守性の測定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を測定する複雑さとマネージ コードの保守容易性](https://docs.microsoft.com/visualstudio/code-quality/measuring-complexity-and-maintainability-of-managed-code)します。  
-  
 最新のソフトウェア アプリケーションの複雑さが増すには、信頼性が高く、保守しやすいコードを行う苦労も増加します。 近年、多くのソフトウェアのメジャー、コード メトリックスと呼ばれる開発され開発者の作業のやり直しや増加テスト、コードが必要なを理解することができます。  
   
  開発者が使用できる[!INCLUDE[vsprvsts](../includes/vsprvsts-md.md)]複雑さと、マネージ コードの保守容易性を測定するコード メトリックス データを生成します。 ソリューション全体または 1 つのプロジェクトのコード メトリックス データを生成できます。  

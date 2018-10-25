@@ -21,12 +21,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b11757990a17a867776376454142e5b84ee82510
-ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
+ms.openlocfilehash: b6885968385725f4aa7d991309902ca712849c8a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008269"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941192"
 ---
 # <a name="outlook-object-model-overview"></a>Outlook オブジェクト モデルの概要
   Microsoft Office Outlook 用の VSTO アドインを開発するには、Outlook オブジェクト モデルによって提供されるオブジェクトとのやり取りが可能です。 Outlook オブジェクト モデルは、ユーザー インターフェイスで項目を表すクラスとインターフェイスを提供します。 たとえば、<xref:Microsoft.Office.Interop.Outlook.Application> オブジェクトは、アプリケーション全体を表し、<xref:Microsoft.Office.Interop.Outlook.Folder> オブジェクトは、電子メール メッセージや他のアイテムを含むフォルダーを表します。<xref:Microsoft.Office.Interop.Outlook.MailItem> オブジェクトは、電子メール メッセージを表します。  
@@ -59,13 +59,13 @@ ms.locfileid: "40008269"
 ### <a name="application-object"></a>Application オブジェクト  
  <xref:Microsoft.Office.Interop.Outlook.Application> オブジェクトは Outlook のアプリケーションを表し、Outlook オブジェクト モデルで最上位レベルのオブジェクトです。 このオブジェクトの最も重要なメンバーには、次のようなものがあります。  
   
--   [CreateItem](/previous-versions/office/developer/office-2003/aa220082(v=office.11))メソッド、電子メール メッセージ、タスク、または予定などの新しい項目の作成に使用できます。  
+- [CreateItem](/previous-versions/office/developer/office-2003/aa220082(v=office.11)) メソッド。これを使用して、電子メール メッセージ、タスク、予定などの新しい項目を作成できます。  
   
--   <xref:Microsoft.Office.Interop.Outlook._Application.Explorers%2A> プロパティ。これを使用して、Outlook のユーザー インターフェイス (UI) で、フォルダーの内容を表示するウィンドウにアクセスできます。  
+- <xref:Microsoft.Office.Interop.Outlook._Application.Explorers%2A> プロパティ。これを使用して、Outlook のユーザー インターフェイス (UI) で、フォルダーの内容を表示するウィンドウにアクセスできます。  
   
--   <xref:Microsoft.Office.Interop.Outlook._Application.Inspectors%2A> プロパティ。これを使用して、電子メール メッセージや会議出席依頼などの単一の項目の内容を表示するウィンドウにアクセスできます。  
+- <xref:Microsoft.Office.Interop.Outlook._Application.Inspectors%2A> プロパティ。これを使用して、電子メール メッセージや会議出席依頼などの単一の項目の内容を表示するウィンドウにアクセスできます。  
   
- インスタンスを取得する、<xref:Microsoft.Office.Interop.Outlook.Application>オブジェクトでのアプリケーションのフィールドを使用して、`ThisAddIn`プロジェクト内のクラス。 詳細については、次を参照してください。[プログラム VSTO アドイン](../vsto/programming-vsto-add-ins.md)します。  
+  インスタンスを取得する、<xref:Microsoft.Office.Interop.Outlook.Application>オブジェクトでのアプリケーションのフィールドを使用して、`ThisAddIn`プロジェクト内のクラス。 詳細については、次を参照してください。[プログラム VSTO アドイン](../vsto/programming-vsto-add-ins.md)します。  
   
 > [!NOTE]  
 >  プロパティと Outlook オブジェクト モデルの保護によってブロックされているメソッドを使用する場合は、セキュリティの警告を回避するためには、[アプリケーション] フィールドから Outlook オブジェクトを取得、`ThisAddIn`クラス。 詳細については、次を参照してください。 [Office ソリューションの特定のセキュリティに関する考慮事項](../vsto/specific-security-considerations-for-office-solutions.md)します。  
@@ -88,14 +88,14 @@ ms.locfileid: "40008269"
   
 -   <xref:Microsoft.Office.Interop.Outlook._Application.Inspectors%2A> オブジェクトの <xref:Microsoft.Office.Interop.Outlook.Application> プロパティを使用して、Outlook 内のすべての <xref:Microsoft.Office.Interop.Outlook.Inspector> オブジェクトにアクセスします。  
   
--   <xref:Microsoft.Office.Interop.Outlook._Application.ActiveInspector%2A> オブジェクトの <xref:Microsoft.Office.Interop.Outlook.Application> メソッドを使用して、現在フォーカスしている <xref:Microsoft.Office.Interop.Outlook.Inspector> を取得します。  
+-   <xref:Microsoft.Office.Interop.Outlook.Application> オブジェクトの <xref:Microsoft.Office.Interop.Outlook._Application.ActiveInspector%2A> メソッドを使用して、現在フォーカスしている <xref:Microsoft.Office.Interop.Outlook.Inspector> を取得します。  
   
 -   特定の項目 (<xref:Microsoft.Office.Interop.Outlook.MailItem> や <xref:Microsoft.Office.Interop.Outlook.AppointmentItem> など) の `GetInspector` メソッドを使用して、それらの項目に関連付けられているインスペクタを取得します。  
   
 ### <a name="folder-object"></a>フォルダーのオブジェクト  
  <xref:Microsoft.Office.Interop.Outlook.Folder> オブジェクトは、電子メール メッセージ、連絡先、タスク、およびその他の項目が含まれているフォルダーを表します。 Outlook には 16 の既定の <xref:Microsoft.Office.Interop.Outlook.Folder> オブジェクトが用意されています。  
   
- 既定の <xref:Microsoft.Office.Interop.Outlook.Folder> オブジェクトは <xref:Microsoft.Office.Interop.Outlook.OlDefaultFolders> 列挙値により、定義されます。 たとえば、オブジェクトに適用された  
+ 既定の <xref:Microsoft.Office.Interop.Outlook.Folder> オブジェクトは <xref:Microsoft.Office.Interop.Outlook.OlDefaultFolders> 列挙値により、定義されます。 例えば以下のようにします。  
   
  Microsoft.Office.Interop.Outlook.OlDefaultFolders.olFolderInbox に対応する、**受信トレイ**Outlook のフォルダー。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "40008269"
 ### <a name="taskitem-object"></a>TaskItem オブジェクト  
  <xref:Microsoft.Office.Interop.Outlook.TaskItem> オブジェクトは、指定した期間内で実行するタスクを表します。 <xref:Microsoft.Office.Interop.Outlook.TaskItem> オブジェクトは **[タスク]** フォルダーにあります。  
   
- タスクを作成するには使用、 [CreateItem](/previous-versions/office/developer/office-2003/aa220082(v=office.11))のメソッド、<xref:Microsoft.Office.Interop.Outlook.Application>オブジェクトし、値を渡す<xref:Microsoft.Office.Interop.Outlook.OlItemType.olTaskItem>パラメーター。  
+ タスクを作成するには、 [オブジェクトの](/previous-versions/office/developer/office-2003/aa220082(v=office.11)) CreateItem <xref:Microsoft.Office.Interop.Outlook.Application> メソッドを使用して、パラメーターの値 <xref:Microsoft.Office.Interop.Outlook.OlItemType.olTaskItem> を渡します。  
   
 ### <a name="contactitem-object"></a>ContactItem オブジェクト  
  <xref:Microsoft.Office.Interop.Outlook.ContactItem>オブジェクト内の連絡先を表します、**連絡先**フォルダー。 <xref:Microsoft.Office.Interop.Outlook.ContactItem> オブジェクトには、住所、電子メール アドレス、電話番号など、そのオブジェクトが表す人のさまざまな連絡先情報が含まれます。  

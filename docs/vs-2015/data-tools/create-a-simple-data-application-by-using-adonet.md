@@ -1,7 +1,7 @@
 ---
 title: ADO.NET を使用して単純なデータ アプリケーションの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 46
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8e9ba21aa4cf5d2f11ba7aa24f095acaaea13924
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4754cad05858ed48fd421301b4b0f1d2c569a926
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539481"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49824283"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET を使用して単純なデータ アプリケーションを作成します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ADO.NET を使用して単純なデータ アプリケーションを作成する](https://docs.microsoft.com/visualstudio/data-tools/create-a-simple-data-application-by-using-adonet)します。  
-  
   
 データベースのデータを処理するアプリケーションの作成では、接続文字列の定義、データの挿入、ストアド プロシージャの実行などの基本的なタスクを実行します。 このトピックでは、Visual c# または Visual Basic および ADO.NET を使用して単純な Windows フォームの「フォーム オーバー データ」アプリケーションからデータベースと対話する方法を検出できます。  すべての .NET データ テクノロジ: LINQ to SQL、および Entity Framework のデータセットを含む-最終的にこの記事で示したものとよく似ている手順を実行します。  
   
@@ -54,41 +52,41 @@ ms.locfileid: "47539481"
 ## <a name="prerequisites"></a>必須コンポーネント  
  アプリケーションの作成には、次が必要です:  
   
--   Visual Studio Community エディション。  
+- Visual Studio Community エディション。  
   
--   SQL Server Express LocalDB です。  
+- SQL Server Express LocalDB です。  
   
--   次の手順で作成したサンプルの小さなデータベース[スクリプトを使用して SQL database を作成する](../data-tools/create-a-sql-database-by-using-a-script.md)します。  
+- 次の手順で作成したサンプルの小さなデータベース[スクリプトを使用して SQL database を作成する](../data-tools/create-a-sql-database-by-using-a-script.md)します。  
   
--   設定が完了したデータベースへの接続文字列。 開いてこの値を調べる**SQL Server オブジェクト エクスプ ローラー**、データベースのショートカット メニューを開き、選択**プロパティ**にスクロールし、 **ConnectionString**プロパティ。  
+- 設定が完了したデータベースへの接続文字列。 開いてこの値を調べる**SQL Server オブジェクト エクスプ ローラー**、データベースのショートカット メニューを開き、選択**プロパティ**にスクロールし、 **ConnectionString**プロパティ。  
   
- このトピックは、Visual Studio IDE の基本的な機能を理解していて、Windows フォーム アプリケーションの作成、そのプロジェクトへのフォームの追加、フォームにボタンなどのコントロールの追加、コントロールのプロパティの設定、およびシンプルなイベントのコード記述ができることを前提としています。 完了することをお勧め、これらのタスクを慣れていない場合、 [Visual c# および Visual Basic の概要](../ide/getting-started-with-visual-csharp-and-visual-basic.md)このトピックを開始する前にします。  
+  このトピックは、Visual Studio IDE の基本的な機能を理解していて、Windows フォーム アプリケーションの作成、そのプロジェクトへのフォームの追加、フォームにボタンなどのコントロールの追加、コントロールのプロパティの設定、およびシンプルなイベントのコード記述ができることを前提としています。 完了することをお勧め、これらのタスクを慣れていない場合、 [Visual c# および Visual Basic の概要](../ide/getting-started-with-visual-csharp-and-visual-basic.md)このトピックを開始する前にします。  
   
 ##  <a name="BKMK_setupthesampledatabase"></a> サンプル データベースを設定します。  
  このチュートリアルで扱うサンプル データベースには、「Customer (顧客)」と「Order (注文)」のテーブルがあります。 最初はテーブルにデータはありませんが、作成したアプリケーションを実行するとデータが追加されます。 データベースには、5 種類のシンプルなストアド プロシージャもあります。 [スクリプトを使用して SQL database を作成する](../data-tools/create-a-sql-database-by-using-a-script.md)テーブル、主キーと外部キー、制約、およびストアド プロシージャを作成する TRANSACT-SQL スクリプトが含まれています。  
   
 ##  <a name="BKMK_createtheformsandaddcontrols"></a> フォームを作成して、コントロールを追加します。  
   
-1.  Windows フォーム アプリケーションでは、プロジェクトを作成し、SimpleDataApp と名前をつけます。  
+1. Windows フォーム アプリケーションでは、プロジェクトを作成し、SimpleDataApp と名前をつけます。  
   
-     Visual Studio は、Form1 という名前の空の Windows フォームを含めた、いくつかのファイルとプロジェクトを作成します。  
+    Visual Studio は、Form1 という名前の空の Windows フォームを含めた、いくつかのファイルとプロジェクトを作成します。  
   
-2.  3 つの形式を持つように、2 つの Windows フォームをプロジェクトに追加し、次の名前を付けるし。  
+2. 3 つの形式を持つように、2 つの Windows フォームをプロジェクトに追加し、次の名前を付けるし。  
   
-    -   ナビゲーション  
+   -   ナビゲーション  
   
-    -   NewCustomer  
+   -   NewCustomer  
   
-    -   FillOrCancel  
+   -   FillOrCancel  
   
-3.  各フォームに、次の図に示されるように、テキスト ボックス、ボタン、および他のコントロールを追加します。 各コントロールに、テーブルを示すプロパティを設定します。  
+3. 各フォームに、次の図に示されるように、テキスト ボックス、ボタン、および他のコントロールを追加します。 各コントロールに、テーブルを示すプロパティを設定します。  
   
-    > [!NOTE]
-    >  グループ ボックス、およびラベル コントロールは明確性を追加しますが、コードでは使用されません。  
+   > [!NOTE]
+   >  グループ ボックス、およびラベル コントロールは明確性を追加しますが、コードでは使用されません。  
   
- **Navigation フォーム**  
+   **Navigation フォーム**  
   
- ![ダイアログ ボックスのナビゲーション](../data-tools/media/simpleappnav.png "SimpleAppNav")  
+   ![ダイアログ ボックスのナビゲーション](../data-tools/media/simpleappnav.png "SimpleAppNav")  
   
 |Navigation フォームのコントロール|プロパティ|  
 |--------------------------------------|----------------|  

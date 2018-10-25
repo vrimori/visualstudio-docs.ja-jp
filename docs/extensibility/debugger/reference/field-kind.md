@@ -1,5 +1,5 @@
 ---
-title: FIELD_KIND |Microsoft ドキュメント
+title: FIELD_KIND |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 35a603310986f42141a04f38c7ce26db0d7326fe
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: df29c9bd876a437dbcf8d797f1dcc51fb05a296f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31109663"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868197"
 ---
 # <a name="fieldkind"></a>FIELD_KIND
-含まれるフィールドの種類を指定します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
+内のフィールドの種類を指定します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -126,13 +126,13 @@ public enum enum_FIELD_KIND {
   
 ## <a name="members"></a>メンバー  
  FIELD_KIND_TYPE  
- フィールドが、型のみであることを示します。  
+ フィールドが、種類のみであることを示します。  
   
  FIELD_KIND_SYMBOL  
- フィールドは、型、名、およびその他の情報を持つ、シンボルであることを示します。  
+ フィールドが、型、名、およびその他の情報を持つシンボルであることを示します。  
   
  FIELD_TYPE_PRIMITIVE  
- フィールドは、プリミティブ データ型であることを示します。  
+ フィールドがプリミティブ データ型であることを示します。  
   
  FIELD_TYPE_STRUCT  
  フィールドは構造体であることを示します。  
@@ -165,7 +165,7 @@ public enum enum_FIELD_KIND {
  フィールドがラベルであることを示します。  
   
  FIELD_TYPE_TYPEDEF  
- フィールドが typedef であることを示します。  
+ フィールドが、typedef であることを示します。  
   
  FIELD_TYPE_BITFIELD  
  フィールドがビット フィールドであることを示します。  
@@ -174,16 +174,16 @@ public enum enum_FIELD_KIND {
  フィールドが、名前空間であることを示します。  
   
  FIELD_TYPE_MODULE  
- フィールドがモジュールであることを示します。  
+ フィールドが、モジュールであることを示します。  
   
  FIELD_TYPE_DYNAMIC  
  フィールドが動的であることを示します。  
   
  FIELD_TYPE_PROP  
- フィールド、プロパティであることを示します。  
+ フィールドがプロパティであることを示します。  
   
  FIELD_TYPE_INNERCLASS  
- フィールドは、内部クラスであることを示します。  
+ フィールドが内部クラスであることを示します。  
   
  FIELD_TYPE_REFERENCE  
  フィールドが参照であることを示します。  
@@ -207,7 +207,7 @@ public enum enum_FIELD_KIND {
  フィールドがグローバルであることを示します。  
   
  FIELD_SYM_PROP_GETTER  
- フィールドがプロパティを取得することを示します。  
+ フィールドをプロパティを取得することを示します。  
   
  FIELD_SYM_PROP_SETTER  
  フィールドがプロパティを設定することを示します。  
@@ -222,14 +222,14 @@ public enum enum_FIELD_KIND {
  フィールドの種類のマスクを示します。  
   
  FIELD_SYM_MASK  
- シンボル情報のマスクを示します。  
+ シンボル情報をマスクを示します。  
   
-## <a name="remarks"></a>コメント  
- 呼び出しから返される、 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 呼び出しから返される、 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)メソッド。  
   
- フィールドの種類に応じて[QueryInterface](/cpp/atl/queryinterface)で呼び出すことができます、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイスの複数の特定のフォームのインターフェイスです。 たとえば場合、 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)を返します`FIELD_TYPE_METHOD`、し、呼び出すことができます`QueryInterface`i`DebugField`を取得する、 [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)インターフェイスです。  
+ フィールドの種類に応じて[QueryInterface](/cpp/atl/queryinterface)で呼び出すことができます、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイスの具体的なフォームのインターフェイス。 たとえば場合、 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)を返します`FIELD_TYPE_METHOD`を呼び出して`QueryInterface`では`DebugField`を取得する、 [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)インターフェイス。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

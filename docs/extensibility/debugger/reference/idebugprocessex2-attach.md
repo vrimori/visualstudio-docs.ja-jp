@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessEx2::Attach |Microsoft ドキュメント
+title: IDebugProcessEx2::Attach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c19f5f3c8beedf4a7de5dc5631ed1d795a125d56
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0432fe2861b10b4dedd2151033bf61665465f3b0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31114253"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937214"
 ---
 # <a name="idebugprocessex2attach"></a>IDebugProcessEx2::Attach
-このメソッドは、セッションが今すぐ、プロセスをデバッグしているプロセスに通知します。  
+このメソッドは、セッションがプロセスをデバッグして今すぐ、プロセスに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,10 +44,10 @@ int Attach(
  [in]このプロセスにアタッチするセッションを一意に識別する値。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- インターフェイスが渡される`pSession`cookie です。 このプロセスにアタッチするセッションのデバッグ マネージャーを一意に識別する値としてのみ処理されますが、指定されたインターフェイスのメソッドのいずれも機能します。  
+## <a name="remarks"></a>Remarks  
+ インターフェイスが渡された`pSession`がクッキー、セッション デバッグ マネージャー; このプロセスにアタッチするを一意に識別する値としてのみ扱われる、指定されたインターフェイスのメソッドのいずれも機能します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProcessEx2](../../../extensibility/debugger/reference/idebugprocessex2.md)

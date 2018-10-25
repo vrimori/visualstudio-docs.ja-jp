@@ -1,7 +1,7 @@
 ---
 title: 作業項目リンク ハンドラーの定義 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 21
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 73a0a71e50360f7c70b7f4e466d6000333c3b89e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 25143390085ec0b4d7ab56e0fef9920d7d5eceb8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547810"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914548"
 ---
 # <a name="define-a-work-item-link-handler"></a>作業項目リンク ハンドラーを定義する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[作業項目リンク ハンドラーを定義](https://docs.microsoft.com/visualstudio/modeling/define-a-work-item-link-handler)します。  
-  
 ユーザーが UML モデル要素と作業項目の間のリンクを作成または削除したときに応答する Visual Studio Integration Extension を作成できます。 たとえば、ユーザーが新しい作業項目をモデル要素にリンクしたときに、コードによって、その作業項目のフィールドをモデル内の値で初期化することもできます。  
   
 ## <a name="set-up-a-uml-extension-solution"></a>UML 拡張機能ソリューションの設定  
@@ -94,11 +92,11 @@ ms.locfileid: "47547810"
 ### <a name="import-the-work-item-namespace"></a>作業項目の名前空間をインポートする  
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]プロジェクト**参照**、次のアセンブリへの参照を追加します。  
   
--   Microsoft.TeamFoundation.WorkItemTracking.Client.dll  
+- Microsoft.TeamFoundation.WorkItemTracking.Client.dll  
   
--   Microsoft.VisualStudio.TeamFoundation.WorkItemTracking.dll  
+- Microsoft.VisualStudio.TeamFoundation.WorkItemTracking.dll  
   
- プログラム コードで、次の名前空間をインポートします。  
+  プログラム コードで、次の名前空間をインポートします。  
   
 ```  
 using System.ComponentModel.Composition;  
@@ -167,7 +165,7 @@ namespace WorkItems
   
      **トラブルシューティング**: 場合は、新しい[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]しない開始、VSIX プロジェクトがソリューションのスタートアップ プロジェクトとして設定されるようにします。  
   
-2.  実験用の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で、モデリング プロジェクトを開くか、または生成し、モデリング図を開くか、または生成します。  
+2.  実験用の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で、モデリング プロジェクトを開くか、または生成し、モデリング図を開くか、または生成します。  
   
 3.  モデル要素 (UML クラスなど) を生成し、その名前を設定します。  
   
@@ -284,21 +282,21 @@ element.AddReference(ReferenceConstants.WorkItem, linkString, true);
   
  それぞれの文字について以下に説明します。  
   
--   サーバーの URI は次のとおりです。  
+- サーバーの URI は次のとおりです。  
   
-     `http://tfServer:8080/tfs/projectCollection`  
+   `http://tfServer:8080/tfs/projectCollection`  
   
-     `projectCollection` では、大文字と小文字の区別が重要です。  
+   `projectCollection` では、大文字と小文字の区別が重要です。  
   
--   `RepositoryGuid` は、TFS 接続から取得できます。  
+- `RepositoryGuid` は、TFS 接続から取得できます。  
   
-    ```csharp  
-    TfsTeamProjectCollection tpc = TfsTeamProjectCollectionFactory...;  
-    RepositoryGuid= tpc.InstanceId;  
+  ```csharp  
+  TfsTeamProjectCollection tpc = TfsTeamProjectCollectionFactory...;  
+  RepositoryGuid= tpc.InstanceId;  
   
-    ```  
+  ```  
   
- 参照の詳細については、次を参照してください。[モデル要素を UML に参照文字列をアタッチ](../modeling/attach-reference-strings-to-uml-model-elements.md)します。  
+  参照の詳細については、次を参照してください。[モデル要素を UML に参照文字列をアタッチ](../modeling/attach-reference-strings-to-uml-model-elements.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItemStore?displayProperty=fullName>   

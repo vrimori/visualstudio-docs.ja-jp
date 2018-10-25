@@ -1,7 +1,7 @@
 ---
 title: オーバーライドして、生成されたクラスを拡張 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 31db7980738c8976fdcd318e87d8350a833f6252
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a5aef90403babfd7a30812cac59b8c0c5acff79f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538237"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933431"
 ---
 # <a name="overriding-and-extending-the-generated-classes"></a>生成済みクラスのオーバーライドおよび拡張
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[をオーバーライドして、生成されたクラスを拡張する](https://docs.microsoft.com/visualstudio/modeling/overriding-and-extending-the-generated-classes)します。  
-  
 DSL 定義は、ドメイン固有言語に基づくツールの強力なセットを構築するためのプラットフォームです。 多くの拡張機能と適応をオーバーライドし、DSL 定義から生成されるクラスを拡張することによって作成できます。 これらのクラスには DSL 定義図で明示的に定義されているドメイン クラスだけでなくもツールボックス、エクスプ ローラー、シリアル化、およびなどを定義するその他のクラスが含まれます。  
   
 ## <a name="extensibility-mechanisms"></a>拡張メカニズム  
@@ -62,13 +60,13 @@ DSL 定義は、ドメイン固有言語に基づくツールの強力なセッ�
   
  Library.dsl、サンプルなどで、`CirculationBook`ドメイン クラスには、`Generates``Double Derived`プロパティに設定`true`します。 そのドメイン クラスに対して生成されたコードには、2 つのクラスが含まれています。  
   
--   `CirculationBookBase`、抽象であるし、すべてのメソッドとプロパティが含まれています。  
+- `CirculationBookBase`、抽象であるし、すべてのメソッドとプロパティが含まれています。  
   
--   `CirculationBook`、から派生`CirculationBookBase`します。 そのコンス トラクターを除く、空になります。  
+- `CirculationBook`、から派生`CirculationBookBase`します。 そのコンス トラクターを除く、空になります。  
   
- 任意のメソッドをオーバーライドするには、作成する派生クラスの部分定義など`CirculationBook`します。 生成されたメソッドとモデリング framework から継承されたメソッドの両方をオーバーライドすることができます。  
+  任意のメソッドをオーバーライドするには、作成する派生クラスの部分定義など`CirculationBook`します。 生成されたメソッドとモデリング framework から継承されたメソッドの両方をオーバーライドすることができます。  
   
- このメソッドは、モデル要素、リレーションシップ、図形、図、およびコネクタを含む要素のすべての種類で使用できます。 生成された他のクラスのメソッドをオーバーライドすることもできます。 クラスは、ToolboxHelper は double 型の派生では常になどいくつか生成されます。  
+  このメソッドは、モデル要素、リレーションシップ、図形、図、およびコネクタを含む要素のすべての種類で使用できます。 生成された他のクラスのメソッドをオーバーライドすることもできます。 クラスは、ToolboxHelper は double 型の派生では常になどいくつか生成されます。  
   
 ### <a name="custom-constructors"></a>カスタム コンス トラクター  
  コンス トラクターをオーバーライドすることはできません。 Double 型から派生したクラスであっても、コンス トラクターは、派生クラスでなければなりません。  

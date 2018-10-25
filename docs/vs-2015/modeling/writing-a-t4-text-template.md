@@ -1,7 +1,7 @@
 ---
 title: T4 テキスト テンプレートの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,31 +16,29 @@ caps.latest.revision: 45
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: c3cfa97bb4b46ddf84916d92ce8437eb80556b80
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7aa5a216b9be48eae7f2905084f0c39109688d6c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536463"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897798"
 ---
 # <a name="writing-a-t4-text-template"></a>T4 テキスト テンプレートの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[T4 テキスト テンプレートの作成](https://docs.microsoft.com/visualstudio/modeling/writing-a-t4-text-template)です。  
-  
 テキスト テンプレートには、そのテンプレートから生成されるテキストが含まれます。 たとえば、web ページを作成するテンプレートが含まれて"\<html >..."と HTML ページの他のすべての標準的な部分です。 テンプレートに挿入が*コントロール ブロック*、プログラム コードのフラグメントであります。 コントロール ブロックはさまざまな値を提供すると共に、テキストの一部を条件付きにしたり、繰り返したりできるようにします。  
   
  この構造によって、テンプレートの作成が簡単になります。生成されるファイルのプロトタイプを最初に作成しておき、結果を変化させるコントロール ブロックは徐々に挿入するという手法を利用できるためです。  
   
  テキスト テンプレートは次の要素から構成されます。  
   
--   **ディレクティブ**-テンプレートの処理方法を制御する要素。  
+- **ディレクティブ**-テンプレートの処理方法を制御する要素。  
   
--   **テキスト ブロック**- 出力に直接コピーされるコンテンツ。  
+- **テキスト ブロック**- 出力に直接コピーされるコンテンツ。  
   
--   **コントロール ブロック**-プログラム コードをテキストに変数の値を挿入し、テキストの条件付きまたは繰り返し部分を制御します。  
+- **コントロール ブロック**-プログラム コードをテキストに変数の値を挿入し、テキストの条件付きまたは繰り返し部分を制御します。  
   
- このトピックの例には、コピーしてテンプレート ファイル」の説明に従って[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)します。 テンプレート ファイルを編集した後、保存し、出力を調べます **.txt**ファイル。  
+  このトピックの例には、コピーしてテンプレート ファイル」の説明に従って[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)します。 テンプレート ファイルを編集した後、保存し、出力を調べます **.txt**ファイル。  
   
 ## <a name="directives"></a>ディレクティブ  
  テキスト テンプレート ディレクティブは、変換コードと出力ファイルの生成方法に関する一般的な指示をテキスト テンプレート エンジンに与えます。  

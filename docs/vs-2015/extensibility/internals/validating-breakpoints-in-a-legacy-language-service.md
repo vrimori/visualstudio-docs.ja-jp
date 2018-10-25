@@ -1,7 +1,7 @@
 ---
 title: 従来の言語サービスでのブレークポイントの検証 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: a7e873cd-dfe1-474f-bda5-fd7532774b15
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f3fbfd2ca8ec3377d8c7d97e38fb4669a2d2042b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2739bfd8807552653e7bb302e5e5efad2835529b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547398"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49216841"
 ---
 # <a name="validating-breakpoints-in-a-legacy-language-service"></a>従来の言語サービスでのブレークポイントの検証
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[従来の言語サービスでのブレークポイントの検証](https://docs.microsoft.com/visualstudio/extensibility/internals/validating-breakpoints-in-a-legacy-language-service)です。  
-  
 ブレークポイントは、デバッガーで実行されている間に特定の時点でプログラムの実行を停止することを示します。 ユーザーは、エディターには、ブレークポイントの有効な場所の構成要素の知識があるないため、ソース ファイルの任意の行にブレークポイントを配置できます。 デバッガーが起動されのすべてのマークされたブレークポイント (保留中のブレークポイントと呼ばれます) は実行中のプログラムで適切な場所にバインドされます。 ブレークポイントが検証されていることを確認すると同時に有効なコードの場所をマークします。 などのソース コード内の場所にコードがないため、コメントのブレークポイントが有効でありません。 デバッガーは、無効なブレークポイントを無効にします。  
   
  言語サービスが表示されているソース コードを認識しているために、デバッガーが起動される前に、ブレークポイントを検証できます。 オーバーライドすることができます、<xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>ブレークポイントの有効な場所を指定する範囲を返します。 デバッガーが起動されが、デバッガーを読み込むを待たず、ユーザーに通知が無効なブレークポイントとブレークポイントの位置はまだ検証されます。  

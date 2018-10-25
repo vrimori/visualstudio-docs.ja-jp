@@ -1,7 +1,7 @@
 ---
 title: プロセス ビュー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9c83b57ade3a78a4dcc926e34547ee566326e129
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d2053083ed5e39422deeeb87f34aaf9e13aff6e3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538360"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891070"
 ---
 # <a name="processes-view"></a>プロセス ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロセス ビュー](https://docs.microsoft.com/visualstudio/debugger/processes-view)します。  
-  
 プロセス ビューには、システム上のすべてのアクティブなプロセスのツリーが表示されます。 プロセス ID とモジュール名が表示されます。 通常、実行中のプログラムに対応する特定のシステム プロセスを確認する場合は、プロセス ビューを使用します。 プロセスは、モジュール名で識別されますまたは「システム プロセスです」を指定します。  
   
  Microsoft Windows では、複数のプロセスをサポートします。 各プロセスは、1 つまたは複数のスレッドを持つことができ、各スレッドは、いずれかを指定できます。 または関連付けられている複数の最上位レベルのウィンドウ。 各最上位ウィンドウには、一連のウィンドウを所有できます。 A + 記号は、レベルが折りたたまれていることを示します。 折りたたまれたビューは、プロセスごとに 1 行で構成されます。 をクリックして、+ 記号レベルを展開します。  
@@ -40,12 +38,12 @@ ms.locfileid: "47538360"
   
 #### <a name="to-open-the-processes-view"></a>プロセス ビューを開く  
   
-1.  **スパイ**] メニューの [選択**プロセス**します。  
+1. **スパイ**] メニューの [選択**プロセス**します。  
   
- ![Spy&#43; &#43;プロセス ビュー](../debugger/media/spy-processes.png "スパイ + _Processes")  
-Spy++ プロセス ビュー  
+   ![Spy&#43; &#43;プロセス ビュー](../debugger/media/spy-processes.png "スパイ + _Processes")  
+   Spy++ プロセス ビュー  
   
- 上記の図は、展開プロセスとスレッドのノードを持つプロセス ビューを示しています。  
+   上記の図は、展開プロセスとスレッドのノードを持つプロセス ビューを示しています。  
   
 ### <a name="in-this-section"></a>このセクションの内容  
  [プロセス ビューでプロセスの検索](../debugger/how-to-search-for-a-process-in-processes-view.md)  

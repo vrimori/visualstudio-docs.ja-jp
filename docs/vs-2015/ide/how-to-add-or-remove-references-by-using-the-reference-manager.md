@@ -1,7 +1,7 @@
 ---
 title: '方法: 参照マネージャーを使用して参照を追加または削除する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -28,29 +28,27 @@ caps.latest.revision: 48
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c243fc2a95e547a2b978f50be18e13c6295fa83a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 82e09b1d27c8ac7905fd0e6511381b97fcae2cd7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534960"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917558"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>方法: 参照マネージャーを使用して参照を追加または削除する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 参照マネージャーを使用して参照を削除するを追加または](https://docs.microsoft.com/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)します。  
-  
 **[参照マネージャー]** ダイアログ ボックスを使って、Microsoft または別の企業が開発したコンポーネントへの参照を追加し、管理することができます。 ユニバーサル Windows アプリを開発している場合、プロジェクトはすべての正しい Windows SDK DLL を自動的に参照します。 .NET アプリケーションを開発している場合、プロジェクトは mscorlib.dll を自動的に参照します。 一部の .NET API は、手動で追加する必要があるコンポーネントで公開されます。 COM コンポーネントまたはカスタム コンポーネントへの参照は、手動で追加する必要があります。  
   
 ## <a name="adding-and-removing-a-reference"></a>参照の追加と削除  
   
 #### <a name="to-add-a-reference"></a>参照を追加するには  
   
-1.  **ソリューション エクスプローラー**で、[参照] ノードを右クリックし、**[参照の追加]** を選びます。  
+1. **ソリューション エクスプローラー**で、[参照] ノードを右クリックし、**[参照の追加]** を選びます。  
   
-2.  追加する参照を指定した後、**[OK]** ボタンを選びます。  
+2. 追加する参照を指定した後、**[OK]** ボタンを選びます。  
   
- **[参照マネージャー]** は、使用可能な参照を開いてグループごとに表示します。 プロジェクトの種類に基づいて、次のグループのうちどれが表示されるかが決まります。  
+   **[参照マネージャー]** は、使用可能な参照を開いてグループごとに表示します。 プロジェクトの種類に基づいて、次のグループのうちどれが表示されるかが決まります。  
   
 -   アセンブリ - Framework と拡張機能の各サブグループが含まれます。  
   
@@ -71,29 +69,29 @@ ms.locfileid: "47534960"
   
  [アセンブリ] タブの中には、次の 2 つのサブタブがあります。  
   
-1.  [Framework] には、対象の Framework を形成するすべてのアセンブリが一覧表示されます。  
+1. [Framework] には、対象の Framework を形成するすべてのアセンブリが一覧表示されます。  
   
-    -   アドバタイズされたアセンブリは [Full Framework] の中にあり、対象とする Framework のプロファイルをプロジェクトが対象にしている場合は、それらのアセンブリは [Framework] 一覧で列挙されます。 アドバタイズされたアセンブリは淡色表示され、プロジェクトの対象である Framework プロファイルの中に存在するアセンブリとは区別されます。 たとえば、プロジェクトが .NET Framework 4 Client を対象としている場合は、[Framework] 一覧には .NET Framework 4 からアドバタイズされたアセンブリが表示されます。 アドバタイズされたアセンブリをユーザーが追加した場合は、**[参照マネージャー]** ダイアログ ボックスを閉じた後、プロジェクトが .NET Framework 4 を対象として再指定し、アドバタイズされたアセンブリが追加されることがユーザーに対して通知されます。  
+   -   アドバタイズされたアセンブリは [Full Framework] の中にあり、対象とする Framework のプロファイルをプロジェクトが対象にしている場合は、それらのアセンブリは [Framework] 一覧で列挙されます。 アドバタイズされたアセンブリは淡色表示され、プロジェクトの対象である Framework プロファイルの中に存在するアセンブリとは区別されます。 たとえば、プロジェクトが .NET Framework 4 Client を対象としている場合は、[Framework] 一覧には .NET Framework 4 からアドバタイズされたアセンブリが表示されます。 アドバタイズされたアセンブリをユーザーが追加した場合は、**[参照マネージャー]** ダイアログ ボックスを閉じた後、プロジェクトが .NET Framework 4 を対象として再指定し、アドバタイズされたアセンブリが追加されることがユーザーに対して通知されます。  
   
-    -   [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリケーションを対象とするプロジェクトには、プロジェクトを作成した時点の既定として、対象の [!INCLUDE[net_win8_profile](../includes/net-win8-profile-md.md)] 内にあるすべてのアセンブリへの参照が含まれています。 マネージド プロジェクトでは、**ソリューション エクスプローラー**内の [参照設定] フォルダーの下にある 1 つの読み取り専用ノードが、Framework 全体に対する参照を示します。 したがって、[Framework] タブでは、Framework からのどのアセンブリも列挙されず、代わりに次のメッセージが表示されます。"すべての Framework アセンブリが既に参照されています。 オブジェクト ブラウザーを使用して Framework 内の参照を調べてください。" デスクトップ プロジェクトの場合は、対象とする Framework からのアセンブリが [Framework] タブで列挙され、アプリケーションが必要とする参照をユーザーが追加する必要があります。  
+   -   [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリケーションを対象とするプロジェクトには、プロジェクトを作成した時点の既定として、対象の [!INCLUDE[net_win8_profile](../includes/net-win8-profile-md.md)] 内にあるすべてのアセンブリへの参照が含まれています。 マネージド プロジェクトでは、**ソリューション エクスプローラー**内の [参照設定] フォルダーの下にある 1 つの読み取り専用ノードが、Framework 全体に対する参照を示します。 したがって、[Framework] タブでは、Framework からのどのアセンブリも列挙されず、代わりに次のメッセージが表示されます。"すべての Framework アセンブリが既に参照されています。 オブジェクト ブラウザーを使用して Framework 内の参照を調べてください。" デスクトップ プロジェクトの場合は、対象とする Framework からのアセンブリが [Framework] タブで列挙され、アプリケーションが必要とする参照をユーザーが追加する必要があります。  
   
-2.  [拡張機能] には、対象の Framework を拡張するためにコンポーネントおよびコントロールを扱う外部販売元が開発したすべてのアセンブリの一覧が表示されます。 ユーザー アプリケーションの目的によっては、これらのアセンブリが必要になることがあります。  
+2. [拡張機能] には、対象の Framework を拡張するためにコンポーネントおよびコントロールを扱う外部販売元が開発したすべてのアセンブリの一覧が表示されます。 ユーザー アプリケーションの目的によっては、これらのアセンブリが必要になることがあります。  
   
-    -   次の場所に登録されているアセンブリを列挙することによって、拡張機能が設定されます。  
+   -   次の場所に登録されているアセンブリを列挙することによって、拡張機能が設定されます。  
   
-        ```  
-        32-bit machine:  
-        HKEY_CURRENT_USER\SOFTWARE\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]  
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]  
-        64-bit machine:  
-        HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]  
-        HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]  
-        And older versions of the [Target Framework Identifier]  
-        ```  
+       ```  
+       32-bit machine:  
+       HKEY_CURRENT_USER\SOFTWARE\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]  
+       HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]  
+       64-bit machine:  
+       HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]  
+       HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]  
+       And older versions of the [Target Framework Identifier]  
+       ```  
   
-         たとえば、プロジェクトが 32 ビット コンピューター上の .NET Framework 4 を対象とする場合は、拡張機能は \Microsoft\\.NETFramework\v4.0\AssemblyFoldersEx\\、\Microsoft\\.NETFramework\v3.5\AssemblyFoldersEx\\、\Microsoft\\.NETFramework\v3.0\AssemblyFoldersEx\\、および \Microsoft\\.NETFramework\v2.0\AssemblyFoldersEx\\ の下に登録されているアセンブリを列挙します。  
+        たとえば、プロジェクトが 32 ビット コンピューター上の .NET Framework 4 を対象とする場合は、拡張機能は \Microsoft\\.NETFramework\v4.0\AssemblyFoldersEx\\、\Microsoft\\.NETFramework\v3.5\AssemblyFoldersEx\\、\Microsoft\\.NETFramework\v3.0\AssemblyFoldersEx\\、および \Microsoft\\.NETFramework\v2.0\AssemblyFoldersEx\\ の下に登録されているアセンブリを列挙します。  
   
- プロジェクトの [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] バージョンによっては、一部のコンポーネントが一覧に表示されないことがあります。 これは、次のような条件で発生します。  
+   プロジェクトの [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] バージョンによっては、一部のコンポーネントが一覧に表示されないことがあります。 これは、次のような条件で発生します。  
   
 -   最新バージョンの .NET Framework を使用するコンポーネントは、旧バージョンの .NET Framework を対象とするプロジェクトとは互換性がありません。  
   
@@ -110,35 +108,35 @@ ms.locfileid: "47534960"
   
 #### <a name="to-display-an-assembly-in-the-add-reference-dialog-box"></a>[参照の追加] ダイアログ ボックスにアセンブリを表示するには  
   
--   アセンブリを次の場所のいずれかに移動またはコピーします。  
+- アセンブリを次の場所のいずれかに移動またはコピーします。  
   
-    -   現在のプロジェクト ディレクトリ。 ここにあるアセンブリは、 **[参照]** タブに表示されます。  
+  - 現在のプロジェクト ディレクトリ。 ここにあるアセンブリは、 **[参照]** タブに表示されます。  
   
-    -   同じソリューション内のその他のプロジェクト ディレクトリ。 ここにあるアセンブリは、**[プロジェクト]** タブに表示されます。  
+  - 同じソリューション内のその他のプロジェクト ディレクトリ。 ここにあるアセンブリは、**[プロジェクト]** タブに表示されます。  
   
-     \- または -  
+    \- または -  
   
--   表示するアセンブリの場所を指定するレジストリ キーを設定します。  
+- 表示するアセンブリの場所を指定するレジストリ キーを設定します。  
   
-     32 ビット オペレーティング システムでは、次のいずれかのレジストリ キーを追加します。  
+   32 ビット オペレーティング システムでは、次のいずれかのレジストリ キーを追加します。  
   
-    -   [HKEY_CURRENT_USER\SOFTWARE\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"  
+  - [HKEY_CURRENT_USER\SOFTWARE\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"  
   
-    -   [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"  
+  - [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"  
   
-     64 ビット オペレーティング システムでは、32 ビットのレジストリ ハイブで次のいずれかのレジストリ キーを追加します。  
+    64 ビット オペレーティング システムでは、32 ビットのレジストリ ハイブで次のいずれかのレジストリ キーを追加します。  
   
-    -   [HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"  
+  - [HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"  
   
-    -   [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"  
+  - [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"  
   
-     *VersionMinimum* は、適用される .NET Framework の最小バージョンです。 *VersionMinimum* が v3.0 の場合、AssemblyFoldersEx で指定したフォルダーは、.NET Framework 3.0 以降を対象にしたプロジェクトに適用されます。  
+    *VersionMinimum* は、適用される .NET Framework の最小バージョンです。 *VersionMinimum* が v3.0 の場合、AssemblyFoldersEx で指定したフォルダーは、.NET Framework 3.0 以降を対象にしたプロジェクトに適用されます。  
   
-     *AssemblyLocation* は、C:\MyAssemblies\\ など、**[参照の追加]** ダイアログ ボックスに表示されるアセンブリのディレクトリです。  
+    *AssemblyLocation* は、C:\MyAssemblies\\ など、**[参照の追加]** ダイアログ ボックスに表示されるアセンブリのディレクトリです。  
   
-     HKEY_LOCAL_MACHINE ノードにレジストリ キーを作成すると、すべてのユーザーが特定の場所にあるアセンブリを **[参照の追加]** ダイアログ ボックスに表示できるようになります。 HKEY_CURRENT_USER ノードにレジストリ キーを作成すると、現在のユーザーの設定にのみ影響します。  
+    HKEY_LOCAL_MACHINE ノードにレジストリ キーを作成すると、すべてのユーザーが特定の場所にあるアセンブリを **[参照の追加]** ダイアログ ボックスに表示できるようになります。 HKEY_CURRENT_USER ノードにレジストリ キーを作成すると、現在のユーザーの設定にのみ影響します。  
   
-     **[参照の追加]** ダイアログ ボックスを再度開きます。 アセンブリが **[.NET]** タブに表示されます。表示されない場合は、指定した *AssemblyLocation* ディレクトリにアセンブリが配置されていることを確認し、Visual Studio を再起動して、もう一度実行してみてください。  
+    **[参照の追加]** ダイアログ ボックスを再度開きます。 アセンブリが **[.NET]** タブに表示されます。表示されない場合は、指定した *AssemblyLocation* ディレクトリにアセンブリが配置されていることを確認し、Visual Studio を再起動して、もう一度実行してみてください。  
   
 ## <a name="com-tab"></a>[COM] タブ  
  [COM] タブには、参照できるすべての COM コンポーネントの一覧が表示されます。 内部マニフェストを含む登録済みの COM DLL に参照を追加する場合は、その DLL の登録をまず解除してください。 そうしない場合は、Visual Studio は、アセンブリ参照をネイティブ DLL ではなく、ActiveX コントロールとして追加します。  
@@ -161,11 +159,11 @@ ms.locfileid: "47534960"
   
  Visual Studio 内で、次のような 2 とおりの方法で WinMD ファイルを生成できます。  
   
--   **[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリケーションのマネージド プロジェクト**: [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリ プロジェクトは、[プロジェクトのプロパティ &amp;amp;#124; 出力の種類 = WinMD ファイル] に設定することにより、WinMD バイナリを出力できます。 WinMD のファイル名はその中に存在するすべての名前空間に対するスーパーセットの名前空間である必要があります。 たとえば、1 つのプロジェクトが名前空間 A.B と A.B.C で形成されている場合は、出力される WinMD で使用可能な名前は A.winmd と A.B.winmd です。 ユーザーが、[プロジェクトのプロパティ &#124; アセンブリ名] または [プロジェクトのプロパティ &#124; 名前空間] に、プロジェクト内の一連の名前空間から分離されている値を入力した場合や、プロジェクト内に存在する名前空間に対するスーパーセットの名前空間が存在しない場合は、次のようなビルドの警告が生成されます。'A.winmd' は、このアセンブリに有効な winmd ファイル名ではありません。 Windows メタデータ ファイル内のすべての型は、ファイル名で指定される名前空間のサブ名前空間に存在する必要があります。 このようなサブ名前空間に存在しない型は、ランタイムに見つかりません。 このアセンブリでは、ファイル名として使用できる最も小さい共通の名前空間は 'CSWSClassLibrary1' です。 デスクトップの Visual Basic プロジェクトまたは Visual C# プロジェクトでは、[!INCLUDE[win8](../includes/win8-md.md)] SDK を使用して生成される WinMD のみを使用できます。このような WinMD を、ファースト パーティ WinMD と呼びます。また、これらのプロジェクトでは WinMD を生成できません。  
+- **[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリケーションのマネージド プロジェクト**: [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリ プロジェクトは、[プロジェクトのプロパティ &amp;amp;#124; 出力の種類 = WinMD ファイル] に設定することにより、WinMD バイナリを出力できます。 WinMD のファイル名はその中に存在するすべての名前空間に対するスーパーセットの名前空間である必要があります。 たとえば、1 つのプロジェクトが名前空間 A.B と A.B.C で形成されている場合は、出力される WinMD で使用可能な名前は A.winmd と A.B.winmd です。 ユーザーが、[プロジェクトのプロパティ &#124; アセンブリ名] または [プロジェクトのプロパティ &#124; 名前空間] に、プロジェクト内の一連の名前空間から分離されている値を入力した場合や、プロジェクト内に存在する名前空間に対するスーパーセットの名前空間が存在しない場合は、次のようなビルドの警告が生成されます。'A.winmd' は、このアセンブリに有効な winmd ファイル名ではありません。 Windows メタデータ ファイル内のすべての型は、ファイル名で指定される名前空間のサブ名前空間に存在する必要があります。 このようなサブ名前空間に存在しない型は、ランタイムに見つかりません。 このアセンブリでは、ファイル名として使用できる最も小さい共通の名前空間は 'CSWSClassLibrary1' です。 デスクトップの Visual Basic プロジェクトまたは Visual C# プロジェクトでは、[!INCLUDE[win8](../includes/win8-md.md)] SDK を使用して生成される WinMD のみを使用できます。このような WinMD を、ファースト パーティ WinMD と呼びます。また、これらのプロジェクトでは WinMD を生成できません。  
   
--   **[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリケーションのネイティブ プロジェクト**: ネイティブ WinMD ファイルは、メタデータのみで構成されます。 その実装は、別の DLL ファイル内に存在します。 **[新しいプロジェクト]** ダイアログ ボックス内で Windows ランタイム構成プロジェクト テンプレートを選ぶか、空のプロジェクトから作業を開始し、WinMD ファイルを生成するようにプロジェクトのプロパティを変更することによって、ネイティブ バイナリを生成できます。 プロジェクトが、分離された複数の名前空間で形成されている場合は、ユーザーがそれらの名前空間を結合するか、MSMerge ツールを実行することを求めるビルド エラーが表示されます。  
+- **[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリケーションのネイティブ プロジェクト**: ネイティブ WinMD ファイルは、メタデータのみで構成されます。 その実装は、別の DLL ファイル内に存在します。 **[新しいプロジェクト]** ダイアログ ボックス内で Windows ランタイム構成プロジェクト テンプレートを選ぶか、空のプロジェクトから作業を開始し、WinMD ファイルを生成するようにプロジェクトのプロパティを変更することによって、ネイティブ バイナリを生成できます。 プロジェクトが、分離された複数の名前空間で形成されている場合は、ユーザーがそれらの名前空間を結合するか、MSMerge ツールを実行することを求めるビルド エラーが表示されます。  
   
- [Windows] タブの中には、次の 2 つのサブグループがあります。  
+  [Windows] タブの中には、次の 2 つのサブグループがあります。  
   
 ### <a name="core-subgroup"></a>[コア] サブグループ  
  [コア] サブグループには、対象となる Windows のバージョンに対応する SDK の中にある (Windows ランタイム要素に対応する) すべての WinMD が一覧表示されます。  

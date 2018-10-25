@@ -1,5 +1,5 @@
 ---
-title: DiaAddressMapEntry |Microsoft ドキュメント
+title: DiaAddressMapEntry |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a29de8f18a9d3123d73210d0e362c2ae2d32641
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 501defcd2274ab32624a97b9a1463e8f4a515c1e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31459806"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819057"
 ---
 # <a name="diaaddressmapentry"></a>DiaAddressMapEntry
 アドレス マップ内のエントリについて説明します。  
@@ -35,25 +35,25 @@ struct DiaAddressMapEntry {
   
 ## <a name="elements"></a>Elements  
  `rva`  
- A. のイメージの相対仮想アドレス (RVA)  
+ A. イメージの相対仮想アドレス (RVA)  
   
  `rvaTo`  
- 相対仮想アドレス`rva`B. の図にマップ  
+ 相対仮想アドレス`rva`B. イメージ内にマップされます  
   
-## <a name="remarks"></a>コメント  
- アドレス マップは、1 つのイメージのレイアウトから (A) へ別 (B) の翻訳を提供します。 配列`DiaAddressMapEntry`構造体の順に並べ替えて`rva`アドレス マップを定義します。  
+## <a name="remarks"></a>Remarks  
+ アドレス マップは、(A) をもう 1 つ (B) 1 つのイメージのレイアウトからの翻訳を提供します。 配列の`DiaAddressMapEntry`構造体の順に並べ替えて`rva`アドレス マップを定義します。  
   
- アドレスを変換する`addrA`、イメージ、アドレスで`addrB`、図 B で次の手順を実行します。  
+ アドレスに変換する`addrA`、イメージ アドレス内`addrB`B の図で、次の手順に従います。  
   
-1.  エントリのマップを検索`e`が大きいもの`rva`以下に`addrA`です。  
+1. マップのエントリを検索`e`が大きいもの`rva`に等しいまたはそれよりも小さい`addrA`します。  
   
-2.  Set `delta = addrA - e.rva`.  
+2. 設定`delta = addrA - e.rva`します。  
   
-3.  Set `addrB = e.rvaTo + delta`.  
+3. 設定`addrB = e.rvaTo + delta`します。  
   
- 配列`DiaAddressMapEntry`に構造体が渡される、 [idiaaddressmap::set_addressmap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)メソッドです。  
+   配列の`DiaAddressMapEntry`に構造体が渡される、 [idiaaddressmap::set_addressmap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: dia2.h  
   
 ## <a name="see-also"></a>関連項目  

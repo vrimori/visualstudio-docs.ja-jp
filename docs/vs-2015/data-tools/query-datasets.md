@@ -1,7 +1,7 @@
 ---
 title: データセットのクエリ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -11,18 +11,16 @@ caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 52ccf91d349bc298c5be3fb020ad42ed78699e9a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a6e1ff0cd6f77d2155ff4982ca02657a741c02d7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539177"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890570"
 ---
 # <a name="query-datasets"></a>データセットのクエリ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[データセットを照会](https://docs.microsoft.com/visualstudio/data-tools/query-datasets)します。  
-  
   
 データセット内の特定のレコードを検索するに、DataTable の FindBy メソッドを使用して、テーブルの行のコレクションに対する独自の foreach ループを記述または使用[LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17)します。 LINQ to DataSet。  
   
@@ -77,13 +75,13 @@ ms.locfileid: "47539177"
   
  次のコード例では、型指定されたデータセットのリレーションシップを上下に移動する方法を示します。 型指定されたコードの例として使用<xref:System.Data.DataRow>s (`NorthwindDataSet.OrdersRow`) され、生成された`FindBy` *PrimaryKey* (`FindByCustomerID`) を目的の行を見つけて、関連レコードを返すメソッド。 例では、正しくコンパイルして実行した場合にのみ。  
   
--   という名前のデータセットのインスタンス`NorthwindDataSet`で、`Customers`テーブル。  
+- という名前のデータセットのインスタンス`NorthwindDataSet`で、`Customers`テーブル。  
   
--   `Orders`テーブル。  
+- `Orders`テーブル。  
   
--   という名前のリレーションシップ`FK_Orders_Customers`使用可能な 2 つのテーブルに関連する、コードのスコープ  
+- という名前のリレーションシップ`FK_Orders_Customers`使用可能な 2 つのテーブルに関連する、コードのスコープ  
   
- さらに、両方のテーブルは、返されるレコードにデータを格納する必要があります。  
+  さらに、両方のテーブルは、返されるレコードにデータを格納する必要があります。  
   
 #### <a name="to-return-the-child-records-of-a-selected-parent-record"></a>選択した親レコードのレコードの子を取得するには  
   

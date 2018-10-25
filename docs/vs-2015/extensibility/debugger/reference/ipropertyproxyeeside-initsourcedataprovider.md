@@ -1,7 +1,7 @@
 ---
 title: IPropertyProxyEESide::InitSourceDataProvider |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 5156f593-5052-4e3a-9d02-081916fb342d
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9dde77e3468374d0e82aaaf3135407992171c837
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 50dc95ce6cb2e50d613b27a9fdae0e060643339f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545165"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948617"
 ---
 # <a name="ipropertyproxyeesideinitsourcedataprovider"></a>IPropertyProxyEESide::InitSourceDataProvider
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IPropertyProxyEESide::InitSourceDataProvider](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ipropertyproxyeeside-initsourcedataprovider)します。  
-  
 このオブジェクトのソース データを初期化し、初期のデータを格納するオブジェクトを返します。  
   
 ## <a name="syntax"></a>構文  

@@ -1,7 +1,7 @@
 ---
 title: BP_RESOLUTION_INFO |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: ba0c162a-61e8-4a0b-811f-4c1d8a5d82f0
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b8cac0582fa311be48d0b6b9c417749faecc597a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c56a50489a863239b9830e930d669a821eb2c68d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538824"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811479"
 ---
 # <a name="bpresolutioninfo"></a>BP_RESOLUTION_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[BP_RESOLUTION_INFO](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/bp-resolution-info)します。  
-  
 コードのブレークポイントまたは データ ブレークポイントのバインドされたブレークポイント情報について説明します。  
   
 ## <a name="syntax"></a>構文  
@@ -67,7 +65,7 @@ public struct BP_RESOLUTION_INFO {
 ## <a name="remarks"></a>Remarks  
  この構造体がによって返される[GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

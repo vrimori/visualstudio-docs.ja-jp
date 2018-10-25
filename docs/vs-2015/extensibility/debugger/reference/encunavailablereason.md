@@ -1,7 +1,7 @@
 ---
 title: EncUnavailableReason |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: c10aa4c0-d7e0-4de1-b8ff-7e050985eb12
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 531d6587593db01ac1536b3111633721f4ee84f9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b804ce1d7ada1de0c457662c93542b1e0fef996a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533671"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925696"
 ---
 # <a name="encunavailablereason"></a>EncUnavailableReason
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[EncUnavailableReason](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/encunavailablereason)します。  
-  
 `This is for internal use only!` 理由を表すを**エディット コンティニュ**は使用できません。  
   
 ## <a name="syntax"></a>構文  
@@ -83,7 +81,7 @@ public enum EncUnavailableReason {
 ## <a name="remarks"></a>Remarks  
  この列挙体は内部使用のみで[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]します。 [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md)と[DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)カスタム ポートのサプライヤーによって実装されるメソッドは常に返す必要があります`E_NOTIMPL`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.idl  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

@@ -1,7 +1,7 @@
 ---
 title: N 層アプリケーションでデータセットの操作 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -28,18 +28,16 @@ caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 61f3686488a460ef4c7091521c2165f575e76fa6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d05204edfd7c3cd5daecad3a1cb21ba5ba7e60d8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544800"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49205973"
 ---
 # <a name="work-with-datasets-in-n-tier-applications"></a>n 層アプリケーションでのデータセットの操作
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[n 層アプリケーションでデータセットを操作](https://docs.microsoft.com/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)します。  
-  
   
 N 層データ アプリケーション * は複数の論理レイヤーに分離されるデータ中心のアプリケーション (または*層*)。 言い換えれば、n 層データ アプリケーションは、複数のプロジェクトに分離されたアプリケーションであり、データ アクセス層、ビジネス ロジック層、およびプレゼンテーション層がそれぞれ独自のプロジェクトに含まれています。 詳細については、次を参照してください。 [N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)します。  
   

@@ -1,7 +1,7 @@
 ---
 title: Xamarin 環境を検証する | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -10,20 +10,18 @@ ms.assetid: fd39882e-06d1-4b39-80d2-4d07b6e4f8f5
 caps.latest.revision: 15
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 6c3d629f4b5a634c1dbc2c55f44db1db144e9a81
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 66428a7f06aee5449191a13e2712ae119daffb0e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538306"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49243493"
 ---
 # <a name="verify-your-xamarin-environment"></a>Xamarin 環境を検証する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Xamarin 環境を検証](https://docs.microsoft.com/visualstudio/cross-platform/verify-your-xamarin-environment)です。  
   
-  
-インストーラーが完了したら ( [Setup and install](../cross-platform/setup-and-install.md)を参照)、数分をかけて、Xamarin 開発を実行するための準備ができているかどうかを確認します。  
+インストーラーが完了したら (「[セットアップとインストール](../cross-platform/setup-and-install.md)」を参照)、数分をかけて、Xamarin 開発を実行するための準備ができているかどうかを確認します。  
   
  これらの確認が終わったら、次のチュートリアルの一方または両方を実行できます。  
   

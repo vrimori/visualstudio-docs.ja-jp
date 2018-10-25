@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - uwp
 author: mikeblome
-ms.openlocfilehash: cf79b0d478ec68391991fc1fb13bc228a678e2ed
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 2e389bec552212da36fba5f35da89cc85efe9a52
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380513"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923044"
 ---
 # <a name="how-to-test-a-visual-c-dll"></a>Visual C++ DLL をテストする方法
 
@@ -129,56 +129,55 @@ ms.locfileid: "39380513"
 
 ##  <a name="make_the_dll_functions_visible_to_the_test_code"></a> DLL 関数をテスト コードに表示させる
 
-1.  RooterLibTests プロジェクトに RooterLib を追加します。
+1. RooterLibTests プロジェクトに RooterLib を追加します。
 
-    1.  **ソリューション エクスプローラー**で **RooterLibTests** プロジェクトを選択し、ショートカット メニューの **[参照]** を選択します。
+   1.  **ソリューション エクスプローラー**で **RooterLibTests** プロジェクトを選択し、ショートカット メニューの **[参照]** を選択します。
 
-    2.  **RooterLib の [プロジェクトのプロパティ]** ダイアログ ボックスで **[共通プロパティ]** を展開し、**[Framework と参照]** を選択します。
+   2.  **RooterLib の [プロジェクトのプロパティ]** ダイアログ ボックスで **[共通プロパティ]** を展開し、**[Framework と参照]** を選択します。
 
-    3.  **[新しい参照の追加]** を選択します。
+   3.  **[新しい参照の追加]** を選択します。
 
-    4.  **[参照の追加]** ダイアログ ボックスで **[ソリューション]** を展開し、**[プロジェクト]** を選択します。 次に **[RouterLib]** 項目を選択します。
+   4.  **[参照の追加]** ダイアログ ボックスで **[ソリューション]** を展開し、**[プロジェクト]** を選択します。 次に **[RouterLib]** 項目を選択します。
 
-2.  *unittest1.cpp* に RooterLib のヘッダー ファイルをインクルードします。
+2. *unittest1.cpp* に RooterLib のヘッダー ファイルをインクルードします。
 
-    1.  *unittest1.cpp* を開きます。
+   1.  *unittest1.cpp* を開きます。
 
-    2.  `#include "CppUnitTest.h"` 行の下に次のコードを追加します。
+   2.  `#include "CppUnitTest.h"` 行の下に次のコードを追加します。
 
-        ```cpp
-        #include "..\RooterLib\RooterLib.h"
-        ```
+       ```cpp
+       #include "..\RooterLib\RooterLib.h"
+       ```
 
-3.  インポートした関数を使用するテストを追加します。 *unittest1.cpp* に次のコードを追加します。
+3. インポートした関数を使用するテストを追加します。 *unittest1.cpp* に次のコードを追加します。
 
-    ```cpp
-    TEST_METHOD(BasicTest)
-    {
-        CRooterLib rooter;
-        Assert::AreEqual(
-            // Expected value:
-            0.0,
-            // Actual value:
-            rooter.SquareRoot(0.0),
-            // Tolerance:
-            0.01,
-            // Message:
-            L"Basic test failed",
-            // Line number - used if there is no PDB file:
-            LINE_INFO());
-    }
+   ```cpp
+   TEST_METHOD(BasicTest)
+   {
+       CRooterLib rooter;
+       Assert::AreEqual(
+           // Expected value:
+           0.0,
+           // Actual value:
+           rooter.SquareRoot(0.0),
+           // Tolerance:
+           0.01,
+           // Message:
+           L"Basic test failed",
+           // Line number - used if there is no PDB file:
+           LINE_INFO());
+   }
+   ```
 
-    ```
+4. ソリューションをビルドします。
 
-4.  ソリューションをビルドします。
+    新しいテストが**テスト エクスプローラー**の **[テストを実行しない]** ノードに表示されます。
 
-     新しいテストが**テスト エクスプローラー**の **[テストを実行しない]** ノードに表示されます。
+5. **テスト エクスプローラー**で **[すべて実行]** をクリックします。
 
-5.  **テスト エクスプローラー**で **[すべて実行]** をクリックします。
+    ![基本テスト成功](../test/media/ute_cpp_testexplorer_basictest.png)
 
-     ![基本テスト成功](../test/media/ute_cpp_testexplorer_basictest.png)
-
- テストとコード プロジェクトをセット アップして、コード プロジェクトで関数を実行するテストを実行できることを確認しました。 ここで、実際のテストおよびコードの記述を開始できます。
+   テストとコード プロジェクトをセット アップして、コード プロジェクトで関数を実行するテストを実行できることを確認しました。 ここで、実際のテストおよびコードの記述を開始できます。
 
 ##  <a name="Iteratively_augment_the_tests_and_make_them_pass"></a> テストを繰り返し増やして成功させる
 
@@ -243,73 +242,72 @@ ms.locfileid: "39380513"
 
 ##  <a name="Debug_a_failing_test"></a> 失敗したテストをデバッグする
 
-1.  *unittest1.cpp* に別のテストを追加します。
+1. *unittest1.cpp* に別のテストを追加します。
 
-    ```cpp
-    // Verify that negative inputs throw an exception.
-     TEST_METHOD(NegativeRangeTest)
-     {
-       wchar_t message[200];
-       CRooterLib rooter;
-       for (double v = -0.1; v > -3.0; v = v - 0.5)
-       {
-         try
-         {
-           // Should raise an exception:
-           double result = rooter.SquareRoot(v);
-
-           swprintf_s(message, L"No exception for input %g", v);
-           Assert::Fail(message, LINE_INFO());
-         }
-         catch (std::out_of_range ex)
-         {
-           continue; // Correct exception.
-         }
-         catch (...)
-         {
-           swprintf_s(message, L"Incorrect exception for %g", v);
-           Assert::Fail(message, LINE_INFO());
-         }
-       }
-    };
-
-    ```
-
-2.  **テスト エクスプローラー**で **[すべて実行]** をクリックします。
-
-     テストが失敗します。 **テスト エクスプローラー**でテスト名を選択します。 失敗したアサーションが強調表示されます。 エラー メッセージは、**テスト エクスプローラー**の [詳細] ウィンドウに表示されます。
-
-     ![NegativeRangeTest 失敗](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
-
-3.  テストが失敗した理由を表示するには、関数をステップ実行します。
-
-    1.  `SquareRoot` 関数の先頭にブレークポイントを設定します。
-
-    2.  失敗したテストのショートカット メニューで **[選択したテストのデバッグ]** をクリックします。
-
-         実行がブレークポイントで停止したら、コードをステップ実行します。
-
-    3.  例外をキャッチするには、*RooterLib.cpp* にコードを追加します。
-
-        ```cpp
-        #include <stdexcept>
-        ...
-        double CRooterLib::SquareRoot(double v)
+   ```cpp
+   // Verify that negative inputs throw an exception.
+    TEST_METHOD(NegativeRangeTest)
+    {
+      wchar_t message[200];
+      CRooterLib rooter;
+      for (double v = -0.1; v > -3.0; v = v - 0.5)
+      {
+        try
         {
-            //Validate the input parameter:
-            if (v < 0.0)
-            {
-              throw std::out_of_range("Can't do square roots of negatives");
-            }
-        ...
+          // Should raise an exception:
+          double result = rooter.SquareRoot(v);
 
-        ```
+          swprintf_s(message, L"No exception for input %g", v);
+          Assert::Fail(message, LINE_INFO());
+        }
+        catch (std::out_of_range ex)
+        {
+          continue; // Correct exception.
+        }
+        catch (...)
+        {
+          swprintf_s(message, L"Incorrect exception for %g", v);
+          Assert::Fail(message, LINE_INFO());
+        }
+      }
+   };
+   ```
 
-    1.  **テスト エクスプローラー**で **[すべて実行]** をクリックして、修正されたメソッドをテストし、回帰が生じていないことを確認します。
+2. **テスト エクスプローラー**で **[すべて実行]** をクリックします。
 
- 今回は、すべてのテストに合格します。
+    テストが失敗します。 **テスト エクスプローラー**でテスト名を選択します。 失敗したアサーションが強調表示されます。 エラー メッセージは、**テスト エクスプローラー**の [詳細] ウィンドウに表示されます。
 
- ![すべてのテストの成功](../test/media/ute_ult_alltestspass.png)
+    ![NegativeRangeTest 失敗](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
+
+3. テストが失敗した理由を表示するには、関数をステップ実行します。
+
+   1.  `SquareRoot` 関数の先頭にブレークポイントを設定します。
+
+   2.  失敗したテストのショートカット メニューで **[選択したテストのデバッグ]** をクリックします。
+
+        実行がブレークポイントで停止したら、コードをステップ実行します。
+
+   3.  例外をキャッチするには、*RooterLib.cpp* にコードを追加します。
+
+       ```cpp
+       #include <stdexcept>
+       ...
+       double CRooterLib::SquareRoot(double v)
+       {
+           //Validate the input parameter:
+           if (v < 0.0)
+           {
+             throw std::out_of_range("Can't do square roots of negatives");
+           }
+       ...
+
+       ```
+
+   1.  **テスト エクスプローラー**で **[すべて実行]** をクリックして、修正されたメソッドをテストし、回帰が生じていないことを確認します。
+
+   今回は、すべてのテストに合格します。
+
+   ![すべてのテストの成功](../test/media/ute_ult_alltestspass.png)
 
 ##  <a name="Refactor_the_code_without_changing_tests"></a> テストを変更せずにコードをリファクタリングする
 

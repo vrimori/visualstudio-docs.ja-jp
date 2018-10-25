@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1720: 識別子が型名含めることはできません |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 60b7bbb0852544f7e2c5267daf0d9fdf1e1214cb
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: ec0980d312d4a65a770e63f0a23203a7e95c546f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47549262"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862340"
 ---
 # <a name="ca1720-identifiers-should-not-contain-type-names"></a>CA1720: 識別子には型名を含めないでください
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1720: 識別子は型名を含めることはできません](https://docs.microsoft.com/visualstudio/code-quality/ca1720-identifiers-should-not-contain-type-names)します。
 
 |||
 |-|-|
@@ -51,89 +49,89 @@ ms.locfileid: "47549262"
 
  各トークンのパラメーターまたはメンバーの名前は、大文字と小文字で、次の言語に固有のデータ型名に対してチェックされます。
 
--   Bool
+- Bool
 
--   WChar
+- WChar
 
--   Int8
+- Int8
 
--   UInt8
+- UInt8
 
--   Short
+- Short
 
--   UShort
+- UShort
 
--   Int
+- Int
 
--   UInt
+- UInt
 
--   整数型
+- 整数型
 
--   UInteger
+- UInteger
 
--   Long
+- Long
 
--   ULong
+- ULong
 
--   符号なし
+- 符号なし
 
--   符号付き
+- 符号付き
 
--   Float
+- Float
 
--   float32
+- float32
 
--   float64
+- float64
 
- さらに、パラメーターの名前もチェックされます、次の言語に依存しないデータ型名に対して大文字と小文字。
+  さらに、パラメーターの名前もチェックされます、次の言語に依存しないデータ型名に対して大文字と小文字。
 
--   Object
+- Object
 
--   obj
+- obj
 
--   ブール型
+- ブール型
 
--   Char
+- Char
 
--   String
+- String
 
--   SByte
+- SByte
 
--   Byte
+- Byte
 
--   UByte
+- UByte
 
--   Int16
+- Int16
 
--   UInt16
+- UInt16
 
--   Int32
+- Int32
 
--   UInt32
+- UInt32
 
--   Int64
+- Int64
 
--   UInt64
+- UInt64
 
--   IntPtr
+- IntPtr
 
--   ptr
+- ptr
 
--   ポインター
+- ポインター
 
--   UInptr
+- UInptr
 
--   UPtr
+- UPtr
 
--   UPointer
+- UPointer
 
--   Single
+- Single
 
--   倍精度浮動小数点型
+- 倍精度浮動小数点型
 
--   Decimal (10 進数型)
+- Decimal (10 進数型)
 
--   GUID
+- GUID
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  **場合は、パラメーターに対して起動します。**

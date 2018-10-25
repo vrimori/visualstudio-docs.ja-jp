@@ -13,54 +13,54 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f85e7c6e4ba62842986db8e6090415d2e33f1c1
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 18587516298fa58e8a5e783ffb1f7c37d5a6b497
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498955"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49859682"
 ---
 # <a name="inside-the-editor"></a>エディター内で
 エディターはさまざまなテキスト ビューとユーザー インターフェイスからモデルの個別のテキスト エディターを維持するために設計は、さまざまなサブシステムで構成されます。  
   
  これらのセクションでは、エディターのさまざまな側面について説明します。  
   
--   [サブシステムの概要](../extensibility/inside-the-editor.md#overview-of-the-subsystems)  
+- [サブシステムの概要](../extensibility/inside-the-editor.md#overview-of-the-subsystems)  
   
--   [テキスト モデル](../extensibility/inside-the-editor.md#the-text-model)  
+- [テキスト モデル](../extensibility/inside-the-editor.md#the-text-model)  
   
--   [テキスト ビュー](../extensibility/inside-the-editor.md#the-text-view)  
+- [テキスト ビュー](../extensibility/inside-the-editor.md#the-text-view)  
   
- これらのセクションでは、エディターの機能について説明します。  
+  これらのセクションでは、エディターの機能について説明します。  
   
--   [タグおよび分類子](../extensibility/inside-the-editor.md#tags-and-classifiers)  
+- [タグおよび分類子](../extensibility/inside-the-editor.md#tags-and-classifiers)  
   
--   [修飾](../extensibility/inside-the-editor.md#adornments)  
+- [修飾](../extensibility/inside-the-editor.md#adornments)  
   
--   [射影](../extensibility/inside-the-editor.md#projection)  
+- [射影](../extensibility/inside-the-editor.md#projection)  
   
--   [アウトライン](../extensibility/inside-the-editor.md#outlining)  
+- [アウトライン](../extensibility/inside-the-editor.md#outlining)  
   
--   [マウスのバインド](../extensibility/inside-the-editor.md#mousebindings)  
+- [マウスのバインド](../extensibility/inside-the-editor.md#mousebindings)  
   
--   [エディターの操作](../extensibility/inside-the-editor.md#editoroperations)  
+- [エディターの操作](../extensibility/inside-the-editor.md#editoroperations)  
   
--   [IntelliSense](../extensibility/inside-the-editor.md#intellisense)  
+- [IntelliSense](../extensibility/inside-the-editor.md#intellisense)  
   
 ## <a name="overview-of-the-subsystems"></a>サブシステムの概要  
   
 ### <a name="text-model-subsystem"></a>テキスト モデル サブシステム  
  テキスト モデルのサブシステムはテキストを表すと、その操作を有効化します。 テキスト モデルのサブシステムを含む、<xref:Microsoft.VisualStudio.Text.ITextBuffer>インターフェイスで、エディターによって表示される文字のシーケンスについて説明します。 このテキストは、変更、追跡、およびそれ以外の場合さまざまな方法で操作できることができます。 テキスト モデルには、次の側面の型も用意されています。  
   
--   ファイルでは、テキストを関連付け、読み取りとファイル システムで手書き入力を管理するサービス。  
+- ファイルでは、テキストを関連付け、読み取りとファイル システムで手書き入力を管理するサービス。  
   
--   2 つのシーケンス オブジェクトの間のわずかな差異を検出する差分サービス。  
+- 2 つのシーケンス オブジェクトの間のわずかな差異を検出する差分サービス。  
   
--   その他のバッファー内のテキストのサブセットの観点からのバッファー内のテキストを記述するためのシステム。  
+- その他のバッファー内のテキストのサブセットの観点からのバッファー内のテキストを記述するためのシステム。  
   
- テキスト モデルのサブシステムでは、無料ユーザー インターフェイス (UI) の概念です。 たとえばはテキスト形式またはテキストのレイアウトを担当して visual 修飾テキストと関連付けることができるは、サポート技術情報を持ちません。  
+  テキスト モデルのサブシステムでは、無料ユーザー インターフェイス (UI) の概念です。 たとえばはテキスト形式またはテキストのレイアウトを担当して visual 修飾テキストと関連付けることができるは、サポート技術情報を持ちません。  
   
- テキスト モデル サブシステムのパブリック型が含まれている*Microsoft.VisualStudio.Text.Data.dll*と*Microsoft.VisualStudio.CoreUtility.dll*、.NET Framework ベースののみに依存します。クラス ライブラリと Managed Extensibility Framework (MEF)。  
+  テキスト モデル サブシステムのパブリック型が含まれている*Microsoft.VisualStudio.Text.Data.dll*と*Microsoft.VisualStudio.CoreUtility.dll*、.NET Framework ベースののみに依存します。クラス ライブラリと Managed Extensibility Framework (MEF)。  
   
 ### <a name="text-view-subsystem"></a>テキスト ビュー サブシステム  
  テキスト ビューのサブシステムは書式設定およびテキストを表示します。 このサブシステム内の型は、種類が Windows Presentation Foundation (WPF) を利用するかどうかに応じて、2 つのレイヤーに分割されます。 最も重要なは<xref:Microsoft.VisualStudio.Text.Editor.ITextView>と<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView>を表示するテキスト行のセットともキャレット、選択、および WPF UI 要素を使用して、テキストを装飾するための機能を制御します。 このサブシステムでは、領域を表示するテキストを囲む余白も提供します。 これらの余白は、拡張して、さまざまな種類のコンテンツや視覚エフェクトを含めることができます。 余白の例については、行番号の表示とスクロール バーです。  

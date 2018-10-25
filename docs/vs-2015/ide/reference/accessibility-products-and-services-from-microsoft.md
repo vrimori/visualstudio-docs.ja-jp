@@ -1,7 +1,7 @@
 ---
 title: Microsoft からのユーザー補助製品およびサービス | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7336a1e4a12b0db326b536f59f9562d772bc94df
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 96ad41ff6cec9a03c8d57905427dbdf45b5b4ed9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546793"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49826987"
 ---
 # <a name="accessibility-products-and-services-from-microsoft"></a>Microsoft からのユーザー補助製品およびサービス
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[アクセシビリティ製品および Microsoft からサービス](https://docs.microsoft.com/visualstudio/ide/reference/accessibility-products-and-services-from-microsoft)します。  
-  
   
 Microsoft は、すべてのユーザーが簡単に使用できる製品とサービスの開発に取り組んでいます。 以下のトピックでは、障碍があるユーザーが Microsoft Windows をさらに使いやすくするためのユーザー補助機能、製品、およびサービスについて説明しています。  
   
@@ -77,11 +75,11 @@ Microsoft は、すべてのユーザーが簡単に使用できる製品とサ�
 ##  <a name="hearing"></a> 聴覚障碍者のためのカスタマー サービス  
  聴覚に障碍がある方は、文字電話 (TTY/TDD) サービスをとおしてマイクロソフト プロダクト サポート サービスおよびカスタマー サービスのすべての情報を利用できます。  
   
--   カスタマー サービスをご利用の場合は、Microsoft セールス インフォメーション センターに連絡してください。休日を除く月曜から金曜の午前 6 時 30 分から午後 5 時 30 分まで (太平洋標準時間)、電話番号 (800) 892-5234 で受け付けています。  
+- カスタマー サービスをご利用の場合は、Microsoft セールス インフォメーション センターに連絡してください。休日を除く月曜から金曜の午前 6 時 30 分から午後 5 時 30 分まで (太平洋標準時間)、電話番号 (800) 892-5234 で受け付けています。  
   
--   米国内における技術的支援に関しては、休日を除く月曜日から金曜日、太平洋標準時の午前 6:00 時から午後 6 時までの間に、マイクロソフト プロダクト サポート サービス、(800) 892-5234 までご連絡ください。 カナダでは、休日を除く月曜日から金曜日に、東部時間の午前 8:00 時から午後 8 時までの間に、(905) 568-9641 までご連絡ください。  
+- 米国内における技術的支援に関しては、休日を除く月曜日から金曜日、太平洋標準時の午前 6:00 時から午後 6 時までの間に、マイクロソフト プロダクト サポート サービス、(800) 892-5234 までご連絡ください。 カナダでは、休日を除く月曜日から金曜日に、東部時間の午前 8:00 時から午後 8 時までの間に、(905) 568-9641 までご連絡ください。  
   
- Microsoft Support Services は、サービスを利用された時点における Microsoft 規定の料金および条件に従って提供されます。  
+  Microsoft Support Services は、サービスを利用された時点における Microsoft 規定の料金および条件に従って提供されます。  
   
 ##  <a name="moreinfo"></a> 参照項目  
  コンピューターのユーザー補助技術によって、障碍のある方の生活がどれほど向上するかに関する詳細については、 [マイクロソフト アクセシビリティ ホーム](http://go.microsoft.com/fwlink/?LinkId=8431)を参照してください。  

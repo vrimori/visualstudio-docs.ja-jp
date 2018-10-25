@@ -1,5 +1,5 @@
 ---
-title: BSTR_ARRAY |Microsoft ドキュメント
+title: BSTR_ARRAY |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9a555a18021a1a48ffa11780161f88ea3ff8f578
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d122afe0aca50b50133146edb26e13fd31d2c45b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31098642"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906950"
 ---
 # <a name="bstrarray"></a>BSTR_ARRAY
-文字列の配列を記述する構造。  
+文字列の配列を記述する構造体。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,17 +43,17 @@ struct BSTR_ARRAY {
   
 ## <a name="terms"></a>用語  
  dwCount  
- 数値の文字列の`Members`配列。  
+ 内の文字列の数`Members`配列。  
   
  メンバー  
  文字列の配列。  
   
-## <a name="remarks"></a>コメント  
- この構造体から返される、 [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ この構造体から返される、 [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md)メソッド。  
   
- [C++ のみ]使用して各個々 の文字列を解放する必要があります`SysFreeString`、および`Members`配列を使用して解放する必要があります`CoTaskMemFree`です。  
+ [C++ のみ]使用して個々 の各文字列を解放する必要があります`SysFreeString`、および`Members`配列を使用して解放する必要があります`CoTaskMemFree`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3868838c72b2d9a50f2a1b3dc8eedaa3d36ac67c
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 4447ab5e5c0ced7852d0cb7dae3a4c0c7e3b3e68
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498855"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928179"
 ---
 # <a name="create-reusable-groups-of-buttons"></a>ボタンの再利用可能なグループを作成します。
 コマンド グループは、常に、メニューまたはツールバーにまとめて表示されるコマンドのコレクションです。 CommandPlacements セクションでは、別の親メニューに割り当てることで、任意のコマンド グループを再利用できる、 *.vsct*ファイル。  
@@ -88,37 +88,37 @@ ms.locfileid: "39498855"
   
 ## <a name="to-put-a-reusable-group-of-buttons-on-a-menu"></a>メニューのボタンの再利用可能なグループを配置するには  
   
-1.  内のエントリを作成、`CommandPlacements`セクション。 GUID と ID の設定、`CommandPlacement`グループの要素とターゲットの場所の親の GUID と ID を設定します。  
+1. 内のエントリを作成、`CommandPlacements`セクション。 GUID と ID の設定、`CommandPlacement`グループの要素とターゲットの場所の親の GUID と ID を設定します。  
   
-     CommandPlacements セクションは、「コマンド」セクションの直後後に配置する必要があります。  
+    CommandPlacements セクションは、「コマンド」セクションの直後後に配置する必要があります。  
   
-    ```xml  
-    <CommandTable>  
-    ...  
-      <Commands>... </Commands>  
-      <CommandPlacements>... </CommandPlacements>  
-    ...   
-    </CommandTable>  
-    ```  
+   ```xml  
+   <CommandTable>  
+   ...  
+     <Commands>... </Commands>  
+     <CommandPlacements>... </CommandPlacements>  
+   ...   
+   </CommandTable>  
+   ```  
   
-     1 つ以上のメニューで、コマンド グループを含めることできます。 親メニュー使用できるいずれか、作成したによって指定された 1 つ[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)](」の説明に従って*ShellCmdDef.vsct*または*SharedCmdDef.vsct*)、または別の VSPackage で定義されている 1 つ。 親レイヤーの数は、親メニューが最終的に接続されている限り、制限[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]または VSPackage によって表示されるショートカット メニューにします。  
+    1 つ以上のメニューで、コマンド グループを含めることできます。 親メニュー使用できるいずれか、作成したによって指定された 1 つ[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)](」の説明に従って*ShellCmdDef.vsct*または*SharedCmdDef.vsct*)、または別の VSPackage で定義されている 1 つ。 親レイヤーの数は、親メニューが最終的に接続されている限り、制限[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]または VSPackage によって表示されるショートカット メニューにします。  
   
-     次の例では、配置グループ、**ソリューション エクスプ ローラー**ツールバーで、他のボタンの右側にします。  
+    次の例では、配置グループ、**ソリューション エクスプ ローラー**ツールバーで、他のボタンの右側にします。  
   
-    ```xml  
-    <CommandPlacements>  
-        <CommandPlacement guid="guidReusableCommandPackageCmdSet" id="MyMenuGroup" priority="0xF00">  
-          <Parent guid="guidSHLMainMenu" id="IDM_VS_TOOL_PROJWIN"/>  
-        </CommandPlacement>  
-    </CommandPlacements>  
-    ```  
+   ```xml  
+   <CommandPlacements>  
+       <CommandPlacement guid="guidReusableCommandPackageCmdSet" id="MyMenuGroup" priority="0xF00">  
+         <Parent guid="guidSHLMainMenu" id="IDM_VS_TOOL_PROJWIN"/>  
+       </CommandPlacement>  
+   </CommandPlacements>  
+   ```  
   
-    ```xml  
-    <CommandPlacements>  
-      <CommandPlacement guid="guidButtonGroupCmdSet" id="MyMenuGroup"   
-          priority="0x605">  
-        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" />  
-      </CommandPlacement>  
-    </CommandPlacements>  
+   ```xml  
+   <CommandPlacements>  
+     <CommandPlacement guid="guidButtonGroupCmdSet" id="MyMenuGroup"   
+         priority="0x605">  
+       <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" />  
+     </CommandPlacement>  
+   </CommandPlacements>  
   
-    ```
+   ```

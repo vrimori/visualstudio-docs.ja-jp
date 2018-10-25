@@ -1,7 +1,7 @@
 ---
 title: 'CA1701: リソース文字列の複合語を正しく使い分ける |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 525f08cfd69b8ebac30b4b3455b71b0ebb16c90e
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: a7212b5b629ef6cd15901c76c755d01c0efe17e1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589649"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921933"
 ---
 # <a name="ca1701-resource-string-compound-words-should-be-cased-correctly"></a>CA1701: リソース文字列の複合語は、大文字と小文字を正しく区別しなければなりません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA1701: リソース文字列の複合語では、大文字と小文字が正しく区別する必要があります](https://docs.microsoft.com/visualstudio/code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly)します。
 
 |||
 |-|-|

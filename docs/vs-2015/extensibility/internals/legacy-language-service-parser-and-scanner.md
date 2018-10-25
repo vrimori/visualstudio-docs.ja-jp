@@ -1,7 +1,7 @@
 ---
 title: 従来の言語サービス パーサーとスキャナー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 1ac3de27-a23b-438d-9593-389e45839cfa
 caps.latest.revision: 21
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8aaf608c4a03816fb109e65c2b8d71d06a279799
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 07eeee3fa69407c17c20f55b7b8c0974bd4751b7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544520"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829509"
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>従来の言語サービスのパーサーとスキャナー
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[レガシ言語サービス パーサーとスキャナー](https://docs.microsoft.com/visualstudio/extensibility/internals/legacy-language-service-parser-and-scanner)します。  
-  
 パーサーは、言語サービスの中核です。 マネージ パッケージ フレームワーク (MPF) 言語のクラスには、表示されているコードに関する情報を選択する言語のパーサーが必要です。 パーサーは、テキストを構文トークンに分割し、し、それらのトークンの種類と機能を識別します。  
   
 ## <a name="discussion"></a>説明  
@@ -65,11 +63,11 @@ namespace MyNamespace
 ## <a name="types-of-parsers"></a>パーサーの種類  
  言語サービス パーサーは、コンパイラの一部として使用されるパーサーと同じではありません。 ただし、この種のパーサーは、コンパイラのパーサーと同様に、スキャナーとパーサーの両方を使用する必要があります。  
   
--   スキャナーを使用して、トークンの種類を識別します。 この情報は、構文の強調表示し、トークンの種類など、他の操作をトリガーできるかっこの一致をすばやく識別するために使用されます。 このスキャナーがによって表される、<xref:Microsoft.VisualStudio.Package.IScanner>インターフェイス。  
+- スキャナーを使用して、トークンの種類を識別します。 この情報は、構文の強調表示し、トークンの種類など、他の操作をトリガーできるかっこの一致をすばやく識別するために使用されます。 このスキャナーがによって表される、<xref:Microsoft.VisualStudio.Package.IScanner>インターフェイス。  
   
--   パーサーを使用して、機能と、トークンのスコープを記述します。 この情報は、メソッド、変数、パラメーター、および宣言などの言語要素を識別するために、メンバーおよびメソッド シグネチャのコンテキストに基づいての一覧を指定して、IntelliSense の操作で使用されます。 このパーサーは、中かっこおよびかっこなどの一致する言語要素ペアを検索するも使用されます。 このパーサーは、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッドで、<xref:Microsoft.VisualStudio.Package.LanguageService>クラス。  
+- パーサーを使用して、機能と、トークンのスコープを記述します。 この情報は、メソッド、変数、パラメーター、および宣言などの言語要素を識別するために、メンバーおよびメソッド シグネチャのコンテキストに基づいての一覧を指定して、IntelliSense の操作で使用されます。 このパーサーは、中かっこおよびかっこなどの一致する言語要素ペアを検索するも使用されます。 このパーサーは、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッドで、<xref:Microsoft.VisualStudio.Package.LanguageService>クラス。  
   
- 言語サービス スキャナーとパーサーを実装する方法は自由です。 利用できるいくつかのリソースは、パーサーのしくみと、独自のパーサーを作成する方法について説明します。 また、いくつかの無償および商用製品は使用可能なパーサーを作成するのに役立ちます。  
+  言語サービス スキャナーとパーサーを実装する方法は自由です。 利用できるいくつかのリソースは、パーサーのしくみと、独自のパーサーを作成する方法について説明します。 また、いくつかの無償および商用製品は使用可能なパーサーを作成するのに役立ちます。  
   
 ### <a name="the-parsesource-parser"></a>ParseSource パーサー  
  (場所、トークンから実行可能コードのいくつかの形式に変換されます) コンパイラの一部として使用されるパーサーとは異なりさまざまな理由と、多数の異なるコンテキストで、言語サービス パーサーを呼び出すことができます。 このアプローチを実装する方法、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッドで、<xref:Microsoft.VisualStudio.Package.LanguageService>クラスは自由です。 留意することが重要です、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>バック グラウンド スレッドでメソッドを呼び出すことがあります。  
@@ -85,7 +83,7 @@ namespace MyNamespace
 ## <a name="parsing-for-matching-braces"></a>対応するかっこの解析  
  この例では、ユーザーが入力する終わりかっこの一致の制御のフローを示します。 このプロセスで色付けに使用するスキャナーもトークンとトークンが中かっこの一致操作をトリガーするかどうかの種類を決定する使用されます。 トリガーが見つかった場合、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッドが呼び出され、対応するかっこを検索します。 最後に、2 つの中かっこが強調表示されます。  
   
- 場合でも、中かっこは、トリガーの名前で使用され、解析上の理由から、このプロセスは実際の中かっこに限定されません。 ペアになったマッチングに指定されている文字のペアがサポートされています。 例としては、(と)、 \< >、および [と]。  
+ 場合でも、中かっこは、トリガーの名前で使用され、解析上の理由から、このプロセスは実際の中かっこに限定されません。 一致するペアに指定されている文字のペアがサポートされています。 例としては、(と)、 \< >、および [と]。  
   
  言語サービスに対応する中かっこがサポートするいると仮定します。  
   

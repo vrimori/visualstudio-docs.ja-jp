@@ -9,12 +9,12 @@ description: クラウド サブスクリプションの請求に関する質問
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 185b4ebcb374973fdbcc56c81a3474797161736f
-ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
+ms.openlocfilehash: c0b66b7a10c344d7d534e5618ca560bdae31f30e
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "43289561"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283304"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Visual Studio クラウド サブスクリプションの請求に関してよくあるご質問
 
@@ -92,7 +92,7 @@ A: いいえ、Visual Studio サブスクライバーとしての[毎月の Azur
 
 ### <a name="q-whats-the-difference-between-annual-and-monthly-cloud-subscriptions"></a>Q: クラウド サブスクリプションの年間プランと月間プランは何が違うのですか?
 
-A: クラウド サブスクリプション月間プランには、Visual Studio に加えて VSTS と TFS の使用が含まれます。 クラウド サブスクリプション年間プランにもこれらは含まれますが、それだけでなく、開発のテストを目的とするインストールと実行のための Windows および他の Microsoft ソフトウェアの使用、Azure サービスでの実験およびクラウドでの開発とテストのために使用できる毎月の Azure クレジット、トレーニング、サポート、その他のサブスクライバー特典が含まれます。
+A: クラウド サブスクリプション月間プランには、Visual Studio に加えて Azure DevOps Services と TFS の使用が含まれます。 クラウド サブスクリプション年間プランにもこれらは含まれますが、それだけでなく、開発のテストを目的とするインストールと実行のための Windows および他の Microsoft ソフトウェアの使用、Azure サービスでの実験およびクラウドでの開発とテストのために使用できる毎月の Azure クレジット、トレーニング、サポート、その他のサブスクライバー特典が含まれます。
 [クラウド サブスクリプションの特典と価格を比較する](https://visualstudio.microsoft.com/vs/pricing/)
 
 ### <a name="q-do-i-get-new-versions-of-visual-studio-if-i-buy-a-visual-studio-cloud-subscription"></a>Q: Visual Studio クラウド サブスクリプションを購入した場合、新しいバージョンの Visual Studio を入手できますか?

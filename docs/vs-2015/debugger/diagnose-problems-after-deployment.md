@@ -1,7 +1,7 @@
 ---
 title: 配置後の問題の診断 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 66
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a7979cdde9ec6411db83753b0006a2f55c4afb4b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 839bfcd761ac090924b0964e99ea3d1f360cc7f9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535343"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852364"
 ---
 # <a name="diagnose-problems-after-deployment"></a>配置後の問題の診断
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[配置後の問題の診断](https://docs.microsoft.com/visualstudio/debugger/diagnose-problems-after-deployment)します。  
-  
 IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診断するには、リリースについてのビルド情報を含めます。こうすることで、Visual Studio が、IntelliTrace ログをデバッグするために必要な正しいソース ファイルとシンボル ファイルを自動的に検索できるようになります。  
   
  また、Microsoft Monitoring Agent を使用して IntelliTrace を制御している場合は、Web サーバー上でアプリケーション パフォーマンスの監視をセットアップする必要もあります。 これにより、アプリがイベントを実行して IntelliTrace ログ ファイルに保存する間に、診断イベントが記録されます。 次に Visual Studio Enterprise (ただし、Professional および Community Edition を除く) でイベントを確認し、イベントが発生したコードに移動できます。さらに、その時点で記録された値を確認し、実行されたコード内を前後に移動できます。 問題を見つけて解決したら、リリースをビルド、リリース、および監視するサイクルを繰り返して、将来発生する可能性がある問題をさらに早い段階で速やかに解決できます。  
@@ -49,97 +47,97 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
 ####  <a name="TFS2013"></a> Team Foundation Server 2013  
  ビルド定義を設定して、ソース、ビルド、およびシンボルの場所をビルド マニフェスト (BuildInfo.config ファイル) に追加します。 Team Foundation ビルドは自動的にこのファイルを作成し、そのファイルをプロジェクトの出力フォルダーに配置します。  
   
-1.  [ビルド定義を編集するか、新しいビルド定義を作成します。](http://msdn.microsoft.com/library/1c2eca2d-9a65-477e-9b23-0678ff7882ee)  
+1. [ビルド定義を編集するか、新しいビルド定義を作成します。](http://msdn.microsoft.com/library/1c2eca2d-9a65-477e-9b23-0678ff7882ee)  
   
-     ![ビルド定義を TFS 2013 での表示](../debugger/media/ffr-tfs2013viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")  
+    ![ビルド定義を TFS 2013 での表示](../debugger/media/ffr-tfs2013viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")  
   
-2.  既定のテンプレート (TfvcTemplate.12.xaml) または独自のカスタム テンプレートを選択します。  
+2. 既定のテンプレート (TfvcTemplate.12.xaml) または独自のカスタム テンプレートを選択します。  
   
-     ![ビルド プロセス テンプレートの選択&#45;TFS 2013](../debugger/media/ffr-tfs2013buildprocesstemplate.png "FFR_TFS2013BuildProcessTemplate")  
+    ![ビルド プロセス テンプレートの選択&#45;TFS 2013](../debugger/media/ffr-tfs2013buildprocesstemplate.png "FFR_TFS2013BuildProcessTemplate")  
   
-3.  ソースのインデックスが自動的に作成されるように、シンボル (PDB) ファイルの保存場所を指定します。  
+3. ソースのインデックスが自動的に作成されるように、シンボル (PDB) ファイルの保存場所を指定します。  
   
-     カスタム テンプレートを使用する場合は、ソースにインデックスを付けるアクティビティがカスタム テンプレートに含まれていることを確認します。 後の手順で、MSBuild 引数を追加して、シンボル ファイルの保存場所を指定できます。  
+    カスタム テンプレートを使用する場合は、ソースにインデックスを付けるアクティビティがカスタム テンプレートに含まれていることを確認します。 後の手順で、MSBuild 引数を追加して、シンボル ファイルの保存場所を指定できます。  
   
-     ![ビルド定義の TFS 2013 でのシンボル パスを設定](../debugger/media/ffr-tfs2013builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")  
+    ![ビルド定義の TFS 2013 でのシンボル パスを設定](../debugger/media/ffr-tfs2013builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")  
   
-     詳細については、シンボルは、次を参照してください。[シンボル データを発行](http://msdn.microsoft.com/library/bd6977ca-e30a-491a-a153-671d81222ce6)します。  
+    シンボルの詳細については、「 [シンボル データを発行する](http://msdn.microsoft.com/library/bd6977ca-e30a-491a-a153-671d81222ce6)」を参照してください。  
   
-4.  この MSBuild 引数を追加して、TFS とシンボルの場所をビルド マニフェスト ファイルに含めます。  
+4. この MSBuild 引数を追加して、TFS とシンボルの場所をビルド マニフェスト ファイルに含めます。  
   
-     **/p:IncludeServerNameInBuildInfo = true**  
+    **/p:IncludeServerNameInBuildInfo = true**  
   
-     Web サーバーにアクセスできるすべてのユーザーが、ビルド マニフェスト内のこれらの場所を確認できます。 ソース サーバーがセキュリティで保護されていることを確認してください。  
+    Web サーバーにアクセスできるすべてのユーザーが、ビルド マニフェスト内のこれらの場所を確認できます。 ソース サーバーがセキュリティで保護されていることを確認してください。  
   
-5.  カスタム テンプレートを使用する場合は、この MSBuild 引数を追加して、シンボル ファイルを保存する場所を指定します。  
+5. カスタム テンプレートを使用する場合は、この MSBuild 引数を追加して、シンボル ファイルを保存する場所を指定します。  
   
-     **/p:BuildSymbolStorePath =**\<*シンボルへのパス*>  
+    **/p:BuildSymbolStorePath =**\<*シンボルへのパス*>  
   
-     ![ビルド定義の TFS 2013 ビルド サーバーの情報を含める](../debugger/media/ffr-tfs2013builddefincludeserverinfo.png "FFR_TFS2013BuildDefIncludeServerInfo")  
+    ![ビルド定義の TFS 2013 ビルド サーバーの情報を含める](../debugger/media/ffr-tfs2013builddefincludeserverinfo.png "FFR_TFS2013BuildDefIncludeServerInfo")  
   
-     以下の行を Web プロジェクト ファイル (.csproj または .vbproj) に追加します。  
+    以下の行を Web プロジェクト ファイル (.csproj または .vbproj) に追加します。  
   
-    ```  
-    <!-- Import the targets file. Change the folder location as necessary. -->  
-       <Import Project=""$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\BuildInfo\Microsoft.VisualStudio.ReleaseManagement.BuildInfo.targets" />  
+   ```  
+   <!-- Import the targets file. Change the folder location as necessary. -->  
+      <Import Project=""$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\BuildInfo\Microsoft.VisualStudio.ReleaseManagement.BuildInfo.targets" />  
   
-    ```  
+   ```  
   
-6.  新しいビルドを実行します。  
+6. 新しいビルドを実行します。  
   
- **手順 2:** [手順 2: Release your app](#DeployRelease)  
+   **手順 2:** [手順 2: Release your app](#DeployRelease)  
   
 ####  <a name="TFS2012_2010"></a> Team Foundation Server 2012 または 2010  
  プロジェクトのビルド マニフェスト (BuildInfo.config ファイル) を自動的に作成し、プロジェクトの出力フォルダーに配置するには、次の手順を実行します。 このファイルは出力フォルダーで "*ProjectName*.BuildInfo.config" と表示されますが、アプリの発行後に配置フォルダーで "BuildInfo.config" という名前に変更されます。  
   
-1.  Team Foundation ビルド サーバーに、Visual Studio 2013 (任意のエディション) をインストールします。  
+1. Team Foundation ビルド サーバーに、Visual Studio 2013 (任意のエディション) をインストールします。  
   
-2.  ビルド定義で、シンボル保存場所を指定します。その結果、ソースのインデックスが自動的に作成されます。  
+2. ビルド定義で、シンボル保存場所を指定します。その結果、ソースのインデックスが自動的に作成されます。  
   
-     カスタム テンプレートを使用する場合は、ソースにインデックスを付けるアクティビティがカスタム テンプレートに含まれていることを確認します。  
+    カスタム テンプレートを使用する場合は、ソースにインデックスを付けるアクティビティがカスタム テンプレートに含まれていることを確認します。  
   
-3.  次の MSBuild 引数を、ビルド定義に追加します。  
+3. 次の MSBuild 引数を、ビルド定義に追加します。  
   
-    -   **/p:VisualStudioVersion 12.0 を =**  
+   -   **/p:VisualStudioVersion 12.0 を =**  
   
-    -   **/p:MSBuildAssemblyVersion 12.0 を =**  
+   -   **/p:MSBuildAssemblyVersion 12.0 を =**  
   
-    -   **/tv:12.0**  
+   -   **/tv:12.0**  
   
-    -   **/p:IncludeServerNameInBuildInfo = true**  
+   -   **/p:IncludeServerNameInBuildInfo = true**  
   
-    -   **/p:BuildSymbolStorePath =**\<*シンボルへのパス*>  
+   -   **/p:BuildSymbolStorePath =**\<*シンボルへのパス*>  
   
-4.  新しいビルドを実行します。  
+4. 新しいビルドを実行します。  
   
- **手順 2:** [手順 2: Release your app](#DeployRelease)  
+   **手順 2:** [手順 2: Release your app](#DeployRelease)  
   
 ###  <a name="ManualBuild"></a> Visual Studio を使用して手動ビルドのビルド マニフェストを作成します。  
  プロジェクトのビルド マニフェスト (BuildInfo.config ファイル) を自動的に作成し、プロジェクトの出力フォルダーに配置するには、次の手順を実行します。 このファイルは出力フォルダーで "*ProjectName*.BuildInfo.config" と表示されますが、アプリの発行後に配置フォルダーで "BuildInfo.config" という名前に変更されます。  
   
-1.  **[ソリューション エクスプローラー]** で、Web プロジェクトをアンロードします。  
+1. **[ソリューション エクスプローラー]** で、Web プロジェクトをアンロードします。  
   
-2.  プロジェクト ファイル (.csproj、.vbproj) を開きます。 次の行を追加します。  
+2. プロジェクト ファイル (.csproj、.vbproj) を開きます。 次の行を追加します。  
   
-    ```xml  
-    <!-- **************************************************** -->  
-    <!-- Build info -->  
-    <PropertyGroup>  
-       <!-- Generate the BuildInfo.config file -->  
-       <GenerateBuildInfoConfigFile>True</GenerateBuildInfoConfigFile>  
-       <!-- Include server name in build info -->   
-       <IncludeServerNameInBuildInfo>True</IncludeServerNameInBuildInfo>   
-       <!-- Include the symbols path so Visual Studio can find the matching deployed code when you start debugging. -->  
-       <BuildSymbolStorePath><path to symbols></BuildSymbolStorePath>  
-    </PropertyGroup>  
-    <!-- **************************************************** -->  
-    ```  
+   ```xml  
+   <!-- **************************************************** -->  
+   <!-- Build info -->  
+   <PropertyGroup>  
+      <!-- Generate the BuildInfo.config file -->  
+      <GenerateBuildInfoConfigFile>True</GenerateBuildInfoConfigFile>  
+      <!-- Include server name in build info -->   
+      <IncludeServerNameInBuildInfo>True</IncludeServerNameInBuildInfo>   
+      <!-- Include the symbols path so Visual Studio can find the matching deployed code when you start debugging. -->  
+      <BuildSymbolStorePath><path to symbols></BuildSymbolStorePath>  
+   </PropertyGroup>  
+   <!-- **************************************************** -->  
+   ```  
   
-3.  更新されたプロジェクト ファイルをチェックインします。  
+3. 更新されたプロジェクト ファイルをチェックインします。  
   
-4.  新しいビルドを実行します。  
+4. 新しいビルドを実行します。  
   
- **手順 2:** [手順 2: Release your app](#DeployRelease)  
+   **手順 2:** [手順 2: Release your app](#DeployRelease)  
   
 ###  <a name="MSBuild"></a> MSBuild.exe を使用して手動ビルドのビルド マニフェストを作成します。  
  ビルドの実行時に次のビルド引数を追加します。  
@@ -156,7 +154,7 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
  他の方法を使用してアプリを配置する場合は、ビルド マニフェストの名前が "*ProjectName*.BuildInfo.config" から "BuildInfo.config" へ変更され、Web サーバー上にあるアプリの Web.config ファイルと同じフォルダーに配置されていることを確認します。  
   
 ## <a name="step-3-monitor-your-app"></a>手順 3: アプリを監視する  
- Web サーバー上でアプリケーション パフォーマンスの監視を設定して、アプリの問題の監視、診断イベントの記録、および IntelliTrace ログ ファイルへのイベントの保存ができるようにします。 参照してください[リリース展開の問題の監視](../debugger/using-the-intellitrace-stand-alone-collector.md)します。  
+ Web サーバー上でアプリケーション パフォーマンスの監視を設定して、アプリの問題の監視、診断イベントの記録、および IntelliTrace ログ ファイルへのイベントの保存ができるようにします。 「 [Monitor your release for deployment problems (配置の問題に関するリリースの監視)](../debugger/using-the-intellitrace-stand-alone-collector.md)」を参照してください。  
   
 ##  <a name="InvestigateEvents"></a> 手順 4: 問題を見つける  
  記録されたイベントを確認し、IntelliTrace を使用してコードをデバッグするには、開発用コンピューターまたは別のコンピューターに Visual Studio Enterprise がインストールされている必要があります。 問題の診断に役立つ CodeLens、デバッガー マップ、コード マップなどのツールを使用することもできます。  
@@ -209,7 +207,7 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
   
      ![パフォーマンス イベントからアプリケーション コードに移動して](../debugger/media/ffr-itsummarypageperformancegotocode.png "FFR_ITSummaryPagePerformanceGoToCode")  
   
-     これで、他の記録された値、つまり呼び出し履歴を確認したり、コードをステップ実行したりできます。また、 **IntelliTrace** ウィンドウを使用して、パフォーマンス イベントの発生時に呼び出された [その他のメソッド間を "時間内に" 前後に移動することもできます](../debugger/intellitrace.md) 。 [他すべてのイベントと、IntelliTrace ログ内の情報とは](../debugger/using-saved-intellitrace-data.md)[その他の情報はここから行うことができますか?](#WhatElse)[パフォーマンス イベントに関する詳細についての情報が必要ですか?](http://blogs.msdn.com/b/visualstudioalm/archive/2013/09/20/performance-details-in-intellitrace.aspx)  
+     これで、他の記録された値、つまり呼び出し履歴を確認したり、コードをステップ実行したりできます。また、 **IntelliTrace** ウィンドウを使用して、パフォーマンス イベントの発生時に呼び出された [その他のメソッド間を "時間内に" 前後に移動することもできます](../debugger/intellitrace.md) 。 [IntelliTrace ログ内の他のイベントと情報について](../debugger/using-saved-intellitrace-data.md)[What else can I do from here?](#WhatElse)[パフォーマンス イベントに関する詳細を確認しましょう。](http://blogs.msdn.com/b/visualstudioalm/archive/2013/09/20/performance-details-in-intellitrace.aspx)  
   
 ### <a name="diagnose-an-exception"></a>例外の診断  
   
@@ -227,7 +225,7 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
   
 ###  <a name="WhatElse"></a> ここからすれば他に何をしますか。  
   
--   [このコードに関する詳細情報を取得](../ide/find-code-changes-and-other-history-with-codelens.md)します。 エディターから離れずに、このコードの参照、変更履歴、関連するバグ、作業項目、コード レビュー、または単体テストを検索するには、エディターの CodeLens インジケーターを使用します。  
+-   [このコードのさらに詳細な情報を入手します](../ide/find-code-changes-and-other-history-with-codelens.md)。 エディターから離れずに、このコードの参照、変更履歴、関連するバグ、作業項目、コード レビュー、または単体テストを検索するには、エディターの CodeLens インジケーターを使用します。  
   
      ![CodeLens&#45;このコードへの参照を表示](../debugger/media/ffr-itsummarypageperformancecodelensreferences.png "FFR_ITSummaryPagePerformanceCodeLensReferences")  
   
@@ -253,100 +251,100 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
   
 3.  ファイル内に以下の必要な情報があることを確認します。  
   
--   **ProjectName**  
+- **ProjectName**  
   
-     Visual Studio 内のプロジェクトの名前。 例えば:  
+   Visual Studio 内のプロジェクトの名前。 例えば:  
+  
+  ```  
+  <ProjectName>FabrikamFiber.Extranet.Web</ProjectName>  
+  ```  
+  
+- **発生しました。 SourceControl**  
+  
+- ソース管理システムに関する情報と以下の必須プロパティ:  
+  
+  - **TFS**  
+  
+    - **ProjectCollectionUri**: Team Foundation Server およびプロジェクト コレクションの URI  
+  
+    - **ProjectItemSpec**: アプリのプロジェクト ファイル (.csproj または .vbproj) へのパス  
+  
+    - **ProjectVersionSpec**: プロジェクトのバージョン  
+  
+      例えば:  
   
     ```  
-    <ProjectName>FabrikamFiber.Extranet.Web</ProjectName>  
+    <SourceControl type="TFS">  
+       <TfsSourceControl>  
+          <ProjectCollectionUri>http://fabrikamfiber:8080/tfs/FabrikamFiber</ProjectCollectionUri>  
+          <ProjectItemSpec>$/WorkInProgress/FabrikamFiber/FabrikamFiber.CallCenter/FabrikamFiber.Web/FabrikamFiber.Web.csproj</ProjectItemSpec>  
+          <ProjectVersionSpec>LFabrikamFiber_BuildAndPublish_20130813@$/WorkInProgress</ProjectVersionSpec>  
+       </TfsSourceControl>  
+    </SourceControl>  
     ```  
   
--   **発生しました。 SourceControl**  
+  - **Git**  
   
--   ソース管理システムに関する情報と以下の必須プロパティ:  
+    - **GitSourceControl**: **GitSourceControl** スキーマの場所  
   
-    -   **TFS**  
+    - **RepositoryUrl**: Team Foundation Server、プロジェクト コレクション、および Git リポジトリの URI  
   
-        -   **ProjectCollectionUri**: Team Foundation Server およびプロジェクト コレクションの URI  
+    - **ProjectPath**: アプリのプロジェクト ファイル (.csproj or .vbproj) へのパス  
   
-        -   **ProjectItemSpec**: アプリのプロジェクト ファイル (.csproj または .vbproj) へのパス  
+    - **CommitId**: コミットの ID  
   
-        -   **ProjectVersionSpec**: プロジェクトのバージョン  
+      例えば:  
   
-         例えば:  
+    ```  
+    <SourceControl type="Git">   
+       <GitSourceControl xmlns="http://schemas.microsoft.com/visualstudio/deploymentevent_git/2013/09">  
+          <RepositoryUrl>http://gittf:8080/tfs/defaultcollection/_git/FabrikamFiber</RepositoryUrl>  
+          <ProjectPath>/FabrikamFiber.CallCenter/FabrikamFiber.Web/FabrikamFiber.Web.csproj</ProjectPath>  
+          <CommitId>50662c96502dddaae5cd5ced962d9f14ec5bc64d</CommitId>  
+       </GitSourceControl>  
+    </SourceControl>  
+    ```  
   
-        ```  
-        <SourceControl type="TFS">  
-           <TfsSourceControl>  
-              <ProjectCollectionUri>http://fabrikamfiber:8080/tfs/FabrikamFiber</ProjectCollectionUri>  
-              <ProjectItemSpec>$/WorkInProgress/FabrikamFiber/FabrikamFiber.CallCenter/FabrikamFiber.Web/FabrikamFiber.Web.csproj</ProjectItemSpec>  
-              <ProjectVersionSpec>LFabrikamFiber_BuildAndPublish_20130813@$/WorkInProgress</ProjectVersionSpec>  
-           </TfsSourceControl>  
-        </SourceControl>  
-        ```  
+- **ビルド**  
   
-    -   **Git**  
+   ビルド システムに関する情報 ( `"TeamBuild"` または `"MSBuild"`) と以下の必須プロパティ:  
   
-        -   **GitSourceControl**: **GitSourceControl** スキーマの場所  
+  - **BuildLabel** (TeamBuild の場合): ビルドの名前と番号。 このラベルは配置イベントの名前としても使用されます。 ビルド番号について詳しくは、「 [完了したビルドにわかりやすい名前を付けるためにビルド番号を使用](http://msdn.microsoft.com/library/1f302e9d-4b0a-40b5-8009-b69ca6f988c3)」をご覧ください。  
   
-        -   **RepositoryUrl**: Team Foundation Server、プロジェクト コレクション、および Git リポジトリの URI  
+  - **SymbolPath** (推奨): セミコロンで区切ったシンボル (PDB ファイル) の場所に関する URI の一覧。 これらの URI は、URL または UNC のいずれかです。 これにより、Visual Studio は対応するシンボルを容易に検索でき、デバッグに役立ちます。  
   
-        -   **ProjectPath**: アプリのプロジェクト ファイル (.csproj or .vbproj) へのパス  
+  - **BuildReportUrl** (TeamBuild の場合): TFS でのビルド レポートの場所  
   
-        -   **CommitId**: コミットの ID  
+  - **BuildId** (TeamBuild の場合): TFS でのビルドの詳細の URI。 この URI は配置イベントの ID としても使用されます。 TeamBuild を使用していない場合は、この ID は一意である必要があります。  
   
-         例えば:  
+  - **BuiltSolution**: 対応するソリューションを検索して開くために Visual Studio が使用するソリューション ファイルへのパス。 これは、 **SolutionPath** MsBuild プロパティの内容です。  
   
-        ```  
-        <SourceControl type="Git">   
-           <GitSourceControl xmlns="http://schemas.microsoft.com/visualstudio/deploymentevent_git/2013/09">  
-              <RepositoryUrl>http://gittf:8080/tfs/defaultcollection/_git/FabrikamFiber</RepositoryUrl>  
-              <ProjectPath>/FabrikamFiber.CallCenter/FabrikamFiber.Web/FabrikamFiber.Web.csproj</ProjectPath>  
-              <CommitId>50662c96502dddaae5cd5ced962d9f14ec5bc64d</CommitId>  
-           </GitSourceControl>  
-        </SourceControl>  
-        ```  
+    例えば:  
   
--   **ビルド**  
+  - **TFS**  
   
-     ビルド システムに関する情報 ( `"TeamBuild"` または `"MSBuild"`) と以下の必須プロパティ:  
+    ```  
+    <Build type="TeamBuild">  
+       <MsBuild>  
+          <BuildLabel kind="label">FabrikamFiber_BuildAndPublish_20130813.1</BuildLabel>  
+          <SymbolPath>\\fabrikamfiber\FabrikamFiber.CallCenter\Symbols</SymbolPath>  
+          <BuildReportUrl kind="informative, url" url="http://fabrikamfiber:8080/tfs/FabrikamFiber/_releasePipeline/FindRelease?buildUri=fabrikamfiber%3a%2f%2f%2fBuild%2fBuild%2f448">Build Report Url</BuildReportUrl>  
+          <BuildId kind="id">1c4444d2-518d-4673-a590-dce2773c7744,fabrikamfiber:///Build/Build/448</BuildId>  
+          <BuiltSolution>$/WorkInProgress/FabrikamFiber/FabrikamFiber.CallCenter/FabrikamFiber.CallCenter.sln</BuiltSolution>  
+       </MsBuild>  
+    </Build>  
+    ```  
   
-    -   **BuildLabel** (TeamBuild の場合): ビルドの名前と番号。 このラベルは配置イベントの名前としても使用されます。 ビルド番号について詳しくは、次を参照してください。[ビルド完了したビルドにわかりやすい名前を付けるに番号を使用](http://msdn.microsoft.com/library/1f302e9d-4b0a-40b5-8009-b69ca6f988c3)します。  
+  - **Git**  
   
-    -   **SymbolPath** (推奨): セミコロンで区切ったシンボル (PDB ファイル) の場所に関する URI の一覧。 これらの URI は、URL または UNC のいずれかです。 これにより、Visual Studio は対応するシンボルを容易に検索でき、デバッグに役立ちます。  
-  
-    -   **BuildReportUrl** (TeamBuild の場合): TFS でのビルド レポートの場所  
-  
-    -   **BuildId** (TeamBuild の場合): TFS でのビルドの詳細の URI。 この URI は配置イベントの ID としても使用されます。 TeamBuild を使用していない場合は、この ID は一意である必要があります。  
-  
-    -   **BuiltSolution**: 対応するソリューションを検索して開くために Visual Studio が使用するソリューション ファイルへのパス。 これは、 **SolutionPath** MsBuild プロパティの内容です。  
-  
-     例えば:  
-  
-    -   **TFS**  
-  
-        ```  
-        <Build type="TeamBuild">  
-           <MsBuild>  
-              <BuildLabel kind="label">FabrikamFiber_BuildAndPublish_20130813.1</BuildLabel>  
-              <SymbolPath>\\fabrikamfiber\FabrikamFiber.CallCenter\Symbols</SymbolPath>  
-              <BuildReportUrl kind="informative, url" url="http://fabrikamfiber:8080/tfs/FabrikamFiber/_releasePipeline/FindRelease?buildUri=fabrikamfiber%3a%2f%2f%2fBuild%2fBuild%2f448">Build Report Url</BuildReportUrl>  
-              <BuildId kind="id">1c4444d2-518d-4673-a590-dce2773c7744,fabrikamfiber:///Build/Build/448</BuildId>  
-              <BuiltSolution>$/WorkInProgress/FabrikamFiber/FabrikamFiber.CallCenter/FabrikamFiber.CallCenter.sln</BuiltSolution>  
-           </MsBuild>  
-        </Build>  
-        ```  
-  
-    -   **Git**  
-  
-        ```  
-        <Build type="MSBuild">   
-           <MSBuild>  
-              <SymbolPath>\\gittf\FabrikamFiber.CallCenter\Symbols</SymbolPath>  
-              <BuiltSolution>/FabrikamFiber.CallCenter/FabrikamFiber.CallCenter.sln</BuiltSolution>  
-           </MSBuild>  
-        </Build>  
-        ```  
+    ```  
+    <Build type="MSBuild">   
+       <MSBuild>  
+          <SymbolPath>\\gittf\FabrikamFiber.CallCenter\Symbols</SymbolPath>  
+          <BuiltSolution>/FabrikamFiber.CallCenter/FabrikamFiber.CallCenter.sln</BuiltSolution>  
+       </MSBuild>  
+    </Build>  
+    ```  
   
 ####  <a name="IneligibleWorkspace"></a> Q: Visual Studio は選択したワークスペースが対象となるをなぜように言ってするのでしょうか。  
  **A:** 選択したワークスペースのソース コントロール フォルダーとローカル フォルダーの間にマッピングがありません。 このワークスペースのマッピングを作成するには、 **[管理]** を選択します。 それ以外の場合は、既に割り当てられているワークスペースを選択するか、新しいワークスペースを作成します。  
@@ -371,7 +369,7 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
      ![ソース管理から開く&#45;移行](../debugger/media/ffr-openprojectfromsourcecontrol-migrated.png "FFR_OpenProjectFromSourceControl_Migrated")  
   
 ####  <a name="WhatWorkspace"></a> Q: ワークスペースとは?  
- **A:** 、[ワークスペースは、ソースのコピーを格納](http://msdn.microsoft.com/library/1d7f6ed8-ec7c-48f8-86da-9aea55a90d5a)を開発し、個別にテストする前にチェック、作業できるようにします。 検出されたソリューションまたはプロジェクトに特別に割り当てられたワークスペースがまだない場合、Visual Studio では、使用可能なワークスペースを選択するか、既定のワークスペースと同じコンピューター名で新しいワークスペースを作成するように求めるメッセージが表示されます。  
+ **A:** [ワークスペースにはソースのコピーが格納](http://msdn.microsoft.com/library/1d7f6ed8-ec7c-48f8-86da-9aea55a90d5a) されるので、作業をチェックインする前に、そのコピーを別に開発およびテストできます。 検出されたソリューションまたはプロジェクトに特別に割り当てられたワークスペースがまだない場合、Visual Studio では、使用可能なワークスペースを選択するか、既定のワークスペースと同じコンピューター名で新しいワークスペースを作成するように求めるメッセージが表示されます。  
   
 ####  <a name="UntrustedSymbols"></a> 信頼されていないシンボルに関するメッセージを取得する q はありますか  
  ![信頼されていないシンボル パスでデバッグしますか。](../debugger/media/ffr-ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")  

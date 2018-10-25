@@ -1,7 +1,7 @@
 ---
 title: '方法: シェイプまたはデコレーターに対するクリックして |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 306e61307a6d9a5ff41a3a4492365bef39ab8449
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6a3e0d12aa7d5537b9dd11f1b7d4c3daedc68a84
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545529"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926749"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>方法: シェイプまたはデコレーターに対するクリック操作を受け取る
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: シェイプまたはデコレーターに対するクリック](https://docs.microsoft.com/visualstudio/modeling/how-to-intercept-a-click-on-a-shape-or-decorator)します。  
-  
 次の手順では、図形または、アイコン デコレーターに対するクリックする方法を説明します。 数回のクリックをインターセプトできるをダブルクリックしたにドラッグ、およびその他のジェスチャをし応答要素。  
   
 ## <a name="to-intercept-clicks-on-shapes"></a>図形のクリックをインターセプトするには  
@@ -128,17 +126,17 @@ public partial class MyShape // change
 ## <a name="intercepting-clicks-and-drags-on-compartmentshape-lists"></a>インターセプトをクリックしておよびドラッグ CompartmentShape リスト  
  次の例では、順序にドラッグしてコンパートメント シェイプで項目を変更することができます。 このコードを実行します。  
   
-1.  使用して、新しい DSL ソリューションを作成、**クラス ダイアグラム**ソリューション テンプレート。  
+1. 使用して、新しい DSL ソリューションを作成、**クラス ダイアグラム**ソリューション テンプレート。  
   
-     コンパートメント シェイプを含む独自のソリューションを操作することもできます。 このコードでは、シェイプによって表されるモデル要素と、コンパートメント リスト項目で表される要素間に埋め込みリレーションシップがあることを前提としています。  
+    コンパートメント シェイプを含む独自のソリューションを操作することもできます。 このコードでは、シェイプによって表されるモデル要素と、コンパートメント リスト項目で表される要素間に埋め込みリレーションシップがあることを前提としています。  
   
-2.  設定、 **Double Derived の生成**コンパートメント シェイプのプロパティ。  
+2. 設定、 **Double Derived の生成**コンパートメント シェイプのプロパティ。  
   
-3.  内のファイルに次のコードを追加、 **Dsl**プロジェクト。  
+3. 内のファイルに次のコードを追加、 **Dsl**プロジェクト。  
   
-4.  独自の DSL を一致するようにこのコードではドメイン クラスとシェイプの名前を調整します。  
+4. 独自の DSL を一致するようにこのコードではドメイン クラスとシェイプの名前を調整します。  
   
- 要約すると、コードの次のように動作します。 この例で`ClassShape`コンパートメント シェイプの名前を指定します。  
+   要約すると、コードの次のように動作します。 この例で`ClassShape`コンパートメント シェイプの名前を指定します。  
   
 -   マウス イベント ハンドラーのセットは、作成時に、各コンパートメント インスタンスにアタッチされます。  
   

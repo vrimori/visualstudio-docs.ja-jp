@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2214: コンス トラクターのオーバーライド可能なメソッドを呼び出さない |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 8e813488e5e935c54a50238c3c993c6efcbf232c
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: b43400dbd516328e133ed6e103d4a4f2a7ccf8a3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47591910"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921471"
 ---
 # <a name="ca2214-do-not-call-overridable-methods-in-constructors"></a>CA2214: コンストラクターのオーバーライド可能なメソッドを呼び出しません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2214: コンス トラクターのオーバーライド可能なメソッドを呼び出しません](https://docs.microsoft.com/visualstudio/code-quality/ca2214-do-not-call-overridable-methods-in-constructors)します。
 
 |||
 |-|-|

@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2e561e7e5ba060258f88593cdfee0bcfb3ece5c7
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: 882a355742a100f7a105abab541832f86740afe7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42626630"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942761"
 ---
 # <a name="tutorial-get-started-with-the-django-web-framework-in-visual-studio"></a>チュートリアル: Visual Studio での Django Web フレームワークの概要
 
@@ -100,7 +100,7 @@ Visual Studio プロジェクトには、Django プロジェクトと複数の�
 
     ![既存のリモート リポジトリにプッシュする [チーム エクスプローラー] ウィンドウ](media/django/step01-push-to-github.png)
 
-    既存のリポジトリがない場合は、**[Publish to GitHub]\(GitHub に発行\)** オプションと **[Push to Visual Studio Team Services]\(Visual Studio Team Services にプッシュ\)** オプションを使用して、Visual Studio から直接作成できます。
+    既存のリポジトリがない場合は、**[Publish to GitHub]\(GitHub に発行\)** オプションと **[Azure DevOps へプッシュ]** オプションを使用して、Visual Studio から直接作成できます。
 
 1. このチュートリアルを進めるときに、Visual Studio のコントロールを定期的に使用して変更をコミットおよびプッシュする習慣を付けてください。 このチュートリアルでは、適切な時点で通知します。
 
@@ -163,16 +163,16 @@ Visual Studio プロジェクトには、Django プロジェクトと複数の�
 
     ![Python プロジェクトのコンテキスト メニューの Django コマンド](media/django/step01-django-commands-menu.png)
 
-1. プロジェクトでは、フォルダーの名前はプロジェクトと同じです。 これには基本的な Django プロジェクト ファイルが含まれています。
+2. プロジェクトでは、フォルダーの名前はプロジェクトと同じです。 これには基本的な Django プロジェクト ファイルが含まれています。
 
-    - *__init.py*: このフォルダーが Python パッケージであることを Python に通知する空のファイルです。
-    - *wsgi.py*: プロジェクトを処理する WSGI 互換 Web サーバーのエントリ ポイントです。 通常、このファイルは実稼働 Web サーバーのフックを提供するため、現状のままにします。
-    - *settings.py*: Web アプリの開発の過程で変更する Django プロジェクトの設定が含まれています。
-    - *urls.py*: 同様に開発の過程で変更する Django プロジェクトの目次が含まれています。
+   - *__init.py*: このフォルダーが Python パッケージであることを Python に通知する空のファイルです。
+   - *wsgi.py*: プロジェクトを処理する WSGI 互換 Web サーバーのエントリ ポイントです。 通常、このファイルは実稼働 Web サーバーのフックを提供するため、現状のままにします。
+   - *settings.py*: Web アプリの開発の過程で変更する Django プロジェクトの設定が含まれています。
+   - *urls.py*: 同様に開発の過程で変更する Django プロジェクトの目次が含まれています。
 
-    ![ソリューション エクスプローラーでの Django プロジェクト ファイル](media/django/step01-django-project-in-solution-explorer.png)
+     ![ソリューション エクスプローラーでの Django プロジェクト ファイル](media/django/step01-django-project-in-solution-explorer.png)
 
-1. 前に示したように、Visual Studio テンプレートは Django パッケージの依存関係を指定する *requirements.txt* ファイルもプロジェクトに追加します。 このファイルの存在は、プロジェクトを最初に作成するときに仮想環境の作成を求めるものです。
+3. 前に示したように、Visual Studio テンプレートは Django パッケージの依存関係を指定する *requirements.txt* ファイルもプロジェクトに追加します。 このファイルの存在は、プロジェクトを最初に作成するときに仮想環境の作成を求めるものです。
 
 ### <a name="question-can-visual-studio-generate-a-requirementstxt-file-from-a-virtual-environment-after-i-install-other-packages"></a>質問: Visual Studio では、他のパッケージをインストールした後に仮想環境から requirements.txt ファイルを生成できますか?
 

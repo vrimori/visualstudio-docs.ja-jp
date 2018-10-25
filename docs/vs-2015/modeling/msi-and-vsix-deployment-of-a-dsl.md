@@ -1,7 +1,7 @@
 ---
 title: MSI および VSIX 配置 DSL の |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 9842dd41b01d10405c3e3cae0d0dde2a704ecdf3
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 81b027e9834fccadcc572cad8fae4d721be9dd56
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592982"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49922043"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL の MSI および VSIX 配置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MSI および VSIX 配置 DSL の](https://docs.microsoft.com/visualstudio/modeling/msi-and-vsix-deployment-of-a-dsl)します。  
-  
 自分のコンピューターまたは他のコンピューターでは、ドメイン固有言語をインストールできます。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ターゲット コンピューターに既にインストールする必要があります。  
   
 ##  <a name="which"></a> VSIX および MSI の展開の使い分け  
@@ -55,21 +53,21 @@ ms.locfileid: "47592982"
   
      **Visual Studio 拡張機能インストーラー** が起動され、拡張機能がインストールされます。  
   
-4.  [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] を起動または再起動します。  
+4.  [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]を起動または再起動します。  
   
 5.  DSL をテストする[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]DSL 用に定義した拡張子を持つ新しいファイルを作成します。  
   
 #### <a name="to-uninstall-a-dsl-that-was-installed-by-using-vsx"></a>VSX を使用して、インストールされている DSL をアンインストールするには  
   
-1.  **ツール** メニューのをクリックして**拡張機能マネージャー**します。  
+1. **ツール** メニューのをクリックして**拡張機能マネージャー**します。  
   
-2.  **[インストール済みの拡張機能]** を展開します。  
+2. **[インストール済みの拡張機能]** を展開します。  
   
-3.  クリックして、DSL が定義されている拡張機能の選択**アンインストール**します。  
+3. クリックして、DSL が定義されている拡張機能の選択**アンインストール**します。  
   
- 拡張機能の障害が原因で読み込みが失敗し、エラー ウィンドウにレポートが生成されることがまれにありますが、それは拡張機能マネージャーには表示されません。 その場合は、以下の場所からファイルを削除して、拡張機能を削除します。  
+   拡張機能の障害が原因で読み込みが失敗し、エラー ウィンドウにレポートが生成されることがまれにありますが、それは拡張機能マネージャーには表示されません。 その場合は、以下の場所からファイルを削除して、拡張機能を削除します。  
   
- *LocalAppData* **\Microsoft\VisualStudio\10.0\Extensions**  
+   *LocalAppData* **\Microsoft\VisualStudio\10.0\Extensions**  
   
 ##  <a name="msi"></a> DSL の MSI を展開します。  
  DSL の MSI (Windows インストーラー) ファイルを定義すると、ユーザーが Windows エクスプ ローラーから DSL のファイルを開くことができます。 アイコンと簡単な説明も、ファイル名拡張子を関連付けることができます。 さらに、MSI は、DSL のファイルの検証に使用できる XSD をインストールできます。 する場合は、同時にインストールされる MSI にその他のコンポーネントを追加できます。  
@@ -80,47 +78,47 @@ ms.locfileid: "47592982"
   
 #### <a name="to-deploy-a-dsl-in-an-msi"></a>DSL の MSI を展開するには  
   
-1.  設定`InstalledByMsi`拡張機能マニフェスト。 これにより、VSX 防止インストールされ、を除き、MSI をアンインストールできます。 これは、場合は、MSI にその他のコンポーネントを含めるが重要です。  
+1. 設定`InstalledByMsi`拡張機能マニフェスト。 これにより、VSX 防止インストールされ、を除き、MSI をアンインストールできます。 これは、場合は、MSI にその他のコンポーネントを含めるが重要です。  
   
-    1.  DslPackage\source.extension.tt を開く  
+   1.  DslPackage\source.extension.tt を開く  
   
-    2.  前に、次の行を挿入`<SupportedProducts>`:  
+   2.  前に、次の行を挿入`<SupportedProducts>`:  
   
-        ```  
-        <InstalledByMsi>true</InstalledByMsi>  
-        ```  
+       ```  
+       <InstalledByMsi>true</InstalledByMsi>  
+       ```  
   
-2.  作成するか、Windows エクスプ ローラーで DSL を表すアイコンを編集します。 たとえば、編集**DslPackage\Resources\File.ico**  
+2. 作成するか、Windows エクスプ ローラーで DSL を表すアイコンを編集します。 たとえば、編集**DslPackage\Resources\File.ico**  
   
-3.  DSL の次の属性が正しいことを確認します。  
+3. DSL の次の属性が正しいことを確認します。  
   
-    -   DSL エクスプ ローラーでルート ノードをクリックし、[プロパティ] ウィンドウで確認します。  
+   -   DSL エクスプ ローラーでルート ノードをクリックし、[プロパティ] ウィンドウで確認します。  
   
-        -   説明  
+       -   説明  
   
-        -   Version  
+       -   Version  
   
-    -   をクリックして、**エディター**ノード プロパティ ウィンドウで次のようにクリックします。**アイコン**します。 アイコン ファイルを参照する値を設定**DslPackage\Resources**など**File.ico**  
+   -   をクリックして、**エディター**ノード プロパティ ウィンドウで次のようにクリックします。**アイコン**します。 アイコン ファイルを参照する値を設定**DslPackage\Resources**など**File.ico**  
   
-    -   **ビルド**] メニューの [open **Configuration Manager**などのビルドする構成を選択します**リリース**または**デバッグ**.  
+   -   **ビルド**] メニューの [open **Configuration Manager**などのビルドする構成を選択します**リリース**または**デバッグ**.  
   
-4.  移動して[Visualization and Modeling SDK のホーム ページ](http://go.microsoft.com/fwlink/?LinkID=186128)との間、**ダウンロード** タブで、ダウンロード**CreateMsiSetupProject.tt**します。  
+4. 移動して[Visualization and Modeling SDK のホーム ページ](http://go.microsoft.com/fwlink/?LinkID=186128)との間、**ダウンロード** タブで、ダウンロード**CreateMsiSetupProject.tt**します。  
   
-5.  追加**CreateMsiSetupProject.tt**を Dsl プロジェクトにします。  
+5. 追加**CreateMsiSetupProject.tt**を Dsl プロジェクトにします。  
   
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] という名前のファイルが作成されます**CreateMsiSetupProject.vdproj**します。  
+    [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] という名前のファイルが作成されます**CreateMsiSetupProject.vdproj**します。  
   
-6.  Windows エクスプローラで、コピー Dsl\\\*.vdproj を新しいフォルダーにセットアップをという名前です。  
+6. Windows エクスプローラで、コピー Dsl\\\*.vdproj を新しいフォルダーにセットアップをという名前です。  
   
-     (する場合は、今すぐから除外できます CreateMsiSetupProject.tt Dsl プロジェクト。)  
+    (する場合は、今すぐから除外できます CreateMsiSetupProject.tt Dsl プロジェクト。)  
   
-7.  **ソリューション エクスプ ローラー**、追加**セットアップ\\\*.vdproj**として既存のプロジェクト。  
+7. **ソリューション エクスプ ローラー**、追加**セットアップ\\\*.vdproj**として既存のプロジェクト。  
   
-8.  **プロジェクト** メニューのをクリックして**プロジェクトの依存関係**します。  
+8. **プロジェクト** メニューのをクリックして**プロジェクトの依存関係**します。  
   
-     **プロジェクトの依存関係** ダイアログ ボックスで、セットアップ プロジェクトを選択します。  
+    **プロジェクトの依存関係** ダイアログ ボックスで、セットアップ プロジェクトを選択します。  
   
-     次に、ボックスをオン**DslPackage**します。  
+    次に、ボックスをオン**DslPackage**します。  
   
 9. ソリューションをリビルドします。  
   
@@ -134,7 +132,7 @@ ms.locfileid: "47592982"
   
     -   ファイルをダブルクリックすると、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]が開始され、DSL エディターで、DSL のファイルを開きます。  
   
- 場合は、テキスト テンプレートを使用する代わりに、手動でセットアップ プロジェクトを作成できます。 この手順を含むチュートリアルの第 5 章を参照してください、 [Visualization and Modeling SDK ラボ](http://go.microsoft.com/fwlink/?LinkId=208878)します。  
+    場合は、テキスト テンプレートを使用する代わりに、手動でセットアップ プロジェクトを作成できます。 この手順を含むチュートリアルの第 5 章を参照してください、 [Visualization and Modeling SDK ラボ](http://go.microsoft.com/fwlink/?LinkId=208878)します。  
   
 #### <a name="to-uninstall-a-dsl-that-was-installed-from-an-msi"></a>MSI からインストールされている DSL をアンインストールするには  
   

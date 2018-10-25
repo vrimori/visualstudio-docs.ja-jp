@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 24c13b629047b73b3f3ee15f2fc25a0120a2c177
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 2b1d1832a7c0c44abb1e8c97ec4c8265262d117e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36755256"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49857550"
 ---
 # <a name="rethrow-activity-designer"></a>Rethrow アクティビティ デザイナー
 
@@ -36,7 +36,7 @@ ms.locfileid: "36755256"
 次の表は、<xref:System.Activities.Statements.Rethrow>プロパティ、デザイナーでの使用方法について説明します。
 
 |プロパティ名|必須|使用方法|
-|-------------------|--------------|-----------|
+|-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.Rethrow> アクティビティの表示名を指定します (省略可能)。 既定値は Rethrow です。|
 
 ## <a name="see-also"></a>関連項目

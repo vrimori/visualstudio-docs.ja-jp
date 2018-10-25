@@ -1,7 +1,7 @@
 ---
 title: Windows 上の Visual Studio での Python サポートの概要
 description: Windows 上で最高の Python IDE である Visual Studio の Python 機能 (Python Tools for Visual Studio (PTVS) とも呼ばれます) の概要について説明します
-ms.date: 05/07/2018
+ms.date: 09/04/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: overview
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0176b596ecf432ab74a29c29d4af6848ee1d4820
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: fe19c1239c2f08417b1b7ee76cb07ae150c891d1
+ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42626911"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029148"
 ---
 # <a name="work-with-python-in-visual-studio-on-windows"></a>Windows 上の Visual Studio での Python の使用
 
@@ -30,7 +30,7 @@ Visual Studio は、Windows 上の強力な Python IDE です。 Visual Studio �
 
 - [インストール手順](installing-python-support-in-visual-studio.md)に従って、Python ワークロードを設定します。
 - この記事の各セクションを読んで、Visual Studio の Python 機能に関する知識を深めてください。 Visual Studio での Python の概要については、[ビデオ シリーズ (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121) もご覧ください (合計 22 分)。
-- 1 つ以上のクイックスタートを使用して、プロジェクトを作成します。 わからない場合は、[Flask を使用して Web アプリを作成する](../ide/quickstart-python.md?context=visualstudio/python/default)方法から始めます。
+- 1 つ以上のクイックスタートを使用して、プロジェクトを作成します。 わからない場合は、[Flask を使用して Web アプリを作成する](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json)方法から始めます。
 - 完全なエンド ツー エンドのエクスペリエンスの場合は、[Visual Studio での Python の使用](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)のチュートリアルに従います。
 
 ## <a name="support-for-multiple-interpreters"></a>複数のインタープリターのサポート
@@ -39,11 +39,13 @@ Visual Studio の **[Python 環境]** ウィンドウ (以下の図では横幅�
 
 ![[Python 環境] ウィンドウを広げた表示](media/environments-expanded-view.png)
 
+**[対話型ウィンドウを開く]** コマンドを使用して、Visual Studio のコンテキスト内で Python を対話的に実行します。 **[PowerShell で開く]** コマンドを使用して、選択した環境のフォルダー内に独立したコマンド ウィンドウを開きます。 そのコマンド ウィンドウから、任意の Python スクリプトを実行できます。 
+
 詳細情報
 
 - ビデオ (2 分 35 秒): [Python 環境の管理](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=qrDmN4LWE_8305918567)
 - ドキュメント: [Python 環境を管理する](managing-python-environments-in-visual-studio.md)
-- ドキュメント: [[Python 環境] ウィンドウ リファレンス](python-environments-window-tab-reference.md)
+- ドキュメント: [Python 環境のリファレンス](python-environments-window-tab-reference.md)
 
 ## <a name="rich-editing-intellisense-and-code-comprehension"></a>豊富な編集、IntelliSense、コード読解
 
@@ -62,7 +64,7 @@ Visual Studio には、構文の色分け、すべてのコードとライブラ
 
 ## <a name="interactive-window"></a>対話型ウィンドウ
 
-Visual Studio で認識されるすべての Python 環境で、別のコマンド プロンプトを使用するのではなく、Visual Studio 内で直接、Python インタープリター用の同じ対話型 (REPL) 環境を簡単に開くことができます。 また、環境間を簡単に切り替えることもできます。
+Visual Studio で認識されるすべての Python 環境で、別のコマンド プロンプトを使用するのではなく、Visual Studio 内で直接、Python インタープリター用の同じ対話型 (REPL) 環境を簡単に開くことができます。 また、環境間を簡単に切り替えることもできます。 (別のコマンド プロンプトを開くには、**[Python 環境]** ウィンドウで目的の環境を選択してから、前述の「[複数のインタープリターのサポート](#support-for-multipleiinterpreters)」で説明したように、**[PowerShell で開く]** コマンドを選択します)。
 
 ![Visual Studio の Python 対話型ウィンドウ](media/interactive-window.png)
 
@@ -159,11 +161,11 @@ A:  まだ実装されていませんが、[UserVoice](https://visualstudio.user
 
 **Q.Python で UI を構築するには何を使用できますか?**
 
-A:  この分野の主なツールとして [Qt Project](https://www.qt.io/qt-for-application-development/) があり、[PySide (公式バインディング)](http://wiki.qt.io/PySide) ([PySide のダウンロード ページ](https://download.qt.io/official_releases/pyside/.)もご覧ください) や [PyQt](https://wiki.python.org/moin/PyQt) という Python のバインディングもあります。 現在のところ、Visual Studio の Python のサポートには、UI 開発用のツールは含まれていません。
+A:  この分野の主なツールとして [Qt Project](https://www.qt.io/qt-for-application-development/) があり、[PySide (公式バインディング)](https://wiki.qt.io/PySide) ([PySide のダウンロード ページ](https://download.qt.io/official_releases/pyside/.)もご覧ください) や [PyQt](https://wiki.python.org/moin/PyQt) という Python のバインディングもあります。 現在のところ、Visual Studio の Python のサポートには、UI 開発用のツールは含まれていません。
 
 **Q.Python プロジェクトでスタンドアロンの実行可能ファイルを作成できますか?**
 
-A:  一般的に、Python はインタープリター言語であり、Visual Studio や Web サーバーなど、適切な Python 対応環境で、オンデマンドでコードが実行されます。 現在のところ、Python のスタンドアロンの実行可能ファイル (実質的には Python インタープリターが埋め込まれたプログラム) を作成する機能は Visual Studio にありません。 ただし、[StackOverflow](http://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency)で説明されているように、Python コミュニティでは、実行可能ファイルを作成するさまざまな方法が紹介されています。 また、CPython はネイティブ アプリケーション内への埋め込みをサポートしています。詳細については、ブログの投稿「[Using CPython's Embeddable Zip File](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/26/cpython-embeddable-zip-file/)」(CPython の埋め込み可能な Zip ファイルの使用方法) をご覧ください。
+A:  一般的に、Python はインタープリター言語であり、Visual Studio や Web サーバーなど、適切な Python 対応環境で、オンデマンドでコードが実行されます。 現在のところ、Python のスタンドアロンの実行可能ファイル (実質的には Python インタープリターが埋め込まれたプログラム) を作成する機能は Visual Studio にありません。 ただし、[StackOverflow](https://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency)で説明されているように、Python コミュニティでは、実行可能ファイルを作成するさまざまな方法が提供されています。 また、CPython はネイティブ アプリケーション内への埋め込みをサポートしています。詳細については、ブログの投稿「[Using CPython's Embeddable Zip File](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/26/cpython-embeddable-zip-file/)」(CPython の埋め込み可能な Zip ファイルの使用方法) をご覧ください。
 
 ## <a name="features-matrix"></a>機能一覧
 
@@ -281,19 +283,19 @@ Visual Studio 2015 およびそれ以前のバージョンは、[visualstudio.mi
 | テストのデバッグ | &#10004; | &#10004; | &#10004; | &#10004; | &#10004; | &#10004; | &#10004; | &#10007; |
 <br/>
 
-1. Visual Studio 2012 の Git サポートは、[Visual Studio ギャラリー](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c)で入手できる Visual Studio Tools for Git 拡張機能で利用可能です。
+1. Visual Studio 2012 の Git サポートは、[Visual Studio ギャラリー](https://marketplace.visualstudio.com/items?itemName=TFSPowerToolsTeam.VisualStudioToolsforGit)で入手できる Visual Studio Tools for Git 拡張機能で利用可能です。
 
-1. Azure Web サイトに配置するには、[Azure SDK for .NET 2.1 - Visual Studio 2010 SP1](http://go.microsoft.com/fwlink/?LinkId=313855) が必要です。 以降のバージョンは Visual Studio 2010 をサポートしません。
+1. Azure Web サイトに配置するには、[Azure SDK for .NET 2.1 - Visual Studio 2010 SP1](https://go.microsoft.com/fwlink/?LinkId=313855) が必要です。 以降のバージョンは Visual Studio 2010 をサポートしません。
 
-1. Azure Web ロールおよびワーカー ロールのサポートには、[Azure SDK for .NET 2.3 - VS 2012](http://go.microsoft.com/fwlink/?LinkId=323511) 以降が必要です。
+1. Azure Web ロールおよびワーカー ロールのサポートには、[Azure SDK for .NET 2.3 - VS 2012](https://go.microsoft.com/fwlink/?LinkId=323511) 以降が必要です。
 
-1. Azure Web ロールおよびワーカー ロールのサポートには、[Azure SDK for .NET 2.3 - VS 2013](http://go.microsoft.com/fwlink/?LinkId=323510) 以降が必要です。
+1. Azure Web ロールおよびワーカー ロールのサポートには、[Azure SDK for .NET 2.3 - VS 2013](https://go.microsoft.com/fwlink/?LinkId=323510) 以降が必要です。
 
 1. Visual Studio 2013 の Django テンプレート エディターには、Update 2 をインストールすることで解決される既知の問題がいくつかあります。
 
-1. Windows 8 以降が必要です。 Visual Studio 2013 Express for Web には **[プロセスにアタッチ]** ダイアログがありませんが、Azure Web サイトのリモート デバッグは、**サーバー エクスプローラー**の **[デバッガーのアタッチ(Python)]** コマンドを使って実行可能です。 リモート デバッグには、[Azure SDK for .NET 2.3 - Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkId=323510) 以降が必要です。
+1. Windows 8 以降が必要です。 Visual Studio 2013 Express for Web には **[プロセスにアタッチ]** ダイアログがありませんが、Azure Web サイトのリモート デバッグは、**サーバー エクスプローラー**の **[デバッガーのアタッチ(Python)]** コマンドを使って実行可能です。 リモート デバッグには、[Azure SDK for .NET 2.3 - Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=323510) 以降が必要です。
 
-1. Windows 8 以降が必要です。 **サーバー エクスプローラー**の **[デバッガーのアタッチ(Python)]** コマンドには、[Azure SDK for .NET 2.3 - Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkId=323510) 以降が必要です。
+1. Windows 8 以降が必要です。 **サーバー エクスプローラー**の **[デバッガーのアタッチ(Python)]** コマンドには、[Azure SDK for .NET 2.3 - Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=323510) 以降が必要です。
 
 1. Windows 8 以降が必要です。
 

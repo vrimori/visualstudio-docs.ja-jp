@@ -1,7 +1,7 @@
 ---
 title: 従来のアクティビティ デザイナーの使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: a3970a4453c23a47b609886c24d0b8fe62efd3e4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a6c8aafe9eac26080bfbf57d06c7d512d1e1e62d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546968"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843432"
 ---
 # <a name="using-the-legacy-activity-designer"></a>従来のアクティビティ デザイナーの使用
 このトピックでは、従来の [!INCLUDE[wfd1](../includes/wfd1-md.md)]でアクティビティ デザイナーを使用する方法について説明します。 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] または [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] を対象とする場合は、従来のデザイナーを使用します。  
@@ -34,17 +34,17 @@ ms.locfileid: "47546968"
 ## <a name="creating-a-custom-activity"></a>カスタム アクティビティの作成  
  アクティビティ デザイナを使ってカスタム アクティビティを作成するには、次の手順に従います。  
   
-1.  **プロジェクト** メニューのをクリックして**アクティビティの追加**します。  
+1. **プロジェクト** メニューのをクリックして**アクティビティの追加**します。  
   
-2.  選択、**アクティビティ**または**アクティビティ (コード分離付き)** テンプレート。  
+2. 選択、**アクティビティ**または**アクティビティ (コード分離付き)** テンプレート。  
   
-    1.  使用して、**アクティビティ**アクティビティ定義と同じコード ファイル内のユーザー コード アクティビティを作成するテンプレート。  
+   1.  使用して、**アクティビティ**アクティビティ定義と同じコード ファイル内のユーザー コード アクティビティを作成するテンプレート。  
   
-    2.  使用して、**アクティビティ (コード分離付き)** アクティビティ定義がワークフロー マークアップや別のコード ファイル内のユーザー コードとして表現されるアクティビティを作成するテンプレート。  
+   2.  使用して、**アクティビティ (コード分離付き)** アクティビティ定義がワークフロー マークアップや別のコード ファイル内のユーザー コードとして表現されるアクティビティを作成するテンプレート。  
   
-3.  アクティビティ名を入力または既定の名前をクリックして**追加**します。  
+3. アクティビティ名を入力または既定の名前をクリックして**追加**します。  
   
- 型の新しいプロジェクトを作成して、カスタム アクティビティのセットを作成することも**Workflow Activity Library**します。 このプロジェクトの種類の詳細については、次を参照してください。[方法: ワークフロー アクティビティ ライブラリ (レガシ) 作成](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md)です。  
+   型の新しいプロジェクトを作成して、カスタム アクティビティのセットを作成することも**Workflow Activity Library**します。 このプロジェクトの種類の詳細については、次を参照してください。[方法: ワークフロー アクティビティ ライブラリ (レガシ) 作成](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md)です。  
   
 ## <a name="configuring-an-activity"></a>アクティビティの構成  
  アクティビティ デザイナがアクティブであるときに、プロパティ ブラウザを使用すると、次の表にリストされているプロパティを構成できます。  

@@ -2,7 +2,7 @@
 title: ソリューションまたはプロジェクトなしで Visual Studio で JavaScript コードを記述する
 description: Visual Studio では、プロジェクト ファイルやソリューション ファイルに依存せずコードを作成できます
 ms.custom: ''
-ms.date: 06/06/2018
+ms.date: 09/24/2018
 ms.technology: vs-nodejs
 ms.topic: conceptual
 ms.devlang: javascript
@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 7d56030b78abe57c80d816881991b9819ed6456b
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: db0685851113a5b85c506e250f6335e7ae83dcf4
+ms.sourcegitcommit: 000cdd1e95dd02e99a7c7c1a34c2f8fba6a632af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924742"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168332"
 ---
 # <a name="develop-javascript-and-typescript-code-in-visual-studio-without-solutions-or-projects"></a>Visual Studio で JavaScript と TypeScript のコードをソリューションまたはプロジェクトなしで開発します
 
@@ -28,7 +28,7 @@ Visual Studio 2017 では、[プロジェクトまたはソリューションな
 まず、Visual Studio を開いたときに表示されるスタート ページで **[フォルダーを開く]** を選択するか、ツール バーで **[ファイル]**、**[開く]**、**[フォルダー]** の順に選択します。 ソリューション エクスプローラーには、フォルダーのすべてのファイルが表示されます。いずれかのファイルを開いて編集を開始できます。 バックグラウンドでは、Visual Studio によってファイルにインデックスが作成され、npm、ビルド、デバッグ機能が有効になります。
 
 > [!IMPORTANT]
-> npm 統合を含め、この記事で説明する機能の多くは、Visual Studio 2017 バージョン 15.8 プレビュー 3 を必要とします。
+> npm 統合を含め、この記事で説明する機能の多くは、Visual Studio 2017 バージョン 15.8 を必要とします。
 
 ## <a name="npm-integration"></a>npm 統合
 
@@ -58,3 +58,27 @@ Visual Studio 2017 では、[プロジェクトまたはソリューションな
 
 > [!NOTE]
 > *tsconfig.json* に関する詳細は、[tsconfig.json TypeScript ハンドブック ページ](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)にあります。
+
+## <a name="unit-tests"></a>単体テスト
+*package.json* でテスト ルートを指定することで、Visual Studio で単体テストの統合を有効にすることができます。
+
+```json
+{
+    // ...
+    "vsTest":{
+        "testRoot": "./tests"
+    }
+    // ...
+}
+```
+
+テスト ランナーは、どのテスト フレームワークを使用するかを判断するため、ローカルにインストールされたパッケージを列挙します。
+サポートされているフレームワークのいずれも認識されない場合は、テスト ランナーは *ExportRunner* を既定にします。 その他のサポートされているフレームワークは次のとおりです。
+* Mocha ([mochajs.org](http://mochajs.org/))
+* Jasmine ([Jasmine.github.io](https://jasmine.github.io/))
+* Tape ([github.com/substack/tape](https://github.com/substack/tape))
+
+テスト エクスプローラーを開くと (**[テスト]** > **[ウィンドウ]** > **[テスト エクスプローラー]** を選択)、Visual Studio によってテストが検出されて表示されます。
+
+> [!NOTE]
+> テスト ランナーが列挙するのは、テスト ルート内の JavaScript ファイルのみです。アプリケーションが TypeScript で記述されている場合は、JavaScript ファイルを最初にビルドする必要があります。

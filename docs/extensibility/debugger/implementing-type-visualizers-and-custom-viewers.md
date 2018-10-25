@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c248c62ad35fbe36fab3e7a7d01209832b9996eb
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: fab6cba691a835c2213e5303c1be2419a79c18e9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39232997"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49927243"
 ---
 # <a name="implement-type-visualizers-and-custom-viewers"></a>型のビジュアライザーおよびカスタム ビューアーを実装します。
 > [!IMPORTANT]
@@ -38,25 +38,25 @@ ms.locfileid: "39232997"
 ## <a name="interfaces"></a>インターフェイス  
  EE は、Visual Studio で使用される、型のビジュアライザーをサポートするために、次のインターフェイスを実装します。  
   
--   [IEEVisualizerDataProvider](../../extensibility/debugger/reference/ieevisualizerdataprovider.md)  
+- [IEEVisualizerDataProvider](../../extensibility/debugger/reference/ieevisualizerdataprovider.md)  
   
--   [IPropertyProxyEESide](../../extensibility/debugger/reference/ipropertyproxyeeside.md)  
+- [IPropertyProxyEESide](../../extensibility/debugger/reference/ipropertyproxyeeside.md)  
   
--   [IPropertyProxyProvider](../../extensibility/debugger/reference/ipropertyproxyprovider.md)  
+- [IPropertyProxyProvider](../../extensibility/debugger/reference/ipropertyproxyprovider.md)  
   
--   [IEEDataStorage](../../extensibility/debugger/reference/ieedatastorage.md)  
+- [IEEDataStorage](../../extensibility/debugger/reference/ieedatastorage.md)  
   
--   [IDebugProperty3](../../extensibility/debugger/reference/idebugproperty3.md)  
+- [IDebugProperty3](../../extensibility/debugger/reference/idebugproperty3.md)  
   
--   [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)  
+- [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)  
   
- EE では、型のビジュアライザーをサポートするために、次のインターフェイスは使用します。  
+  EE では、型のビジュアライザーをサポートするために、次のインターフェイスは使用します。  
   
--   [IEEVisualizerService](../../extensibility/debugger/reference/ieevisualizerservice.md)  
+- [IEEVisualizerService](../../extensibility/debugger/reference/ieevisualizerservice.md)  
   
--   [IEEVisualizerServiceProvider](../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)  
+- [IEEVisualizerServiceProvider](../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)  
   
--   [IDebugBinder3](../../extensibility/debugger/reference/idebugbinder3.md)  
+- [IDebugBinder3](../../extensibility/debugger/reference/idebugbinder3.md)  
   
 ## <a name="see-also"></a>関連項目  
  [CLR の式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   

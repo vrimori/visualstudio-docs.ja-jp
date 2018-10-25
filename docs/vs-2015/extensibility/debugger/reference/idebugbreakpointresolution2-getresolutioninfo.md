@@ -1,7 +1,7 @@
 ---
 title: IDebugBreakpointResolution2::GetResolutionInfo |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 828cbdf6-b87d-4c45-be87-d87087b04a60
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0ece39f8fcd042fa5b20b3094759ba515ada56d0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 91382aa3dca2950a689d7cdecdf2735ed6d5f2cb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546643"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948526"
 ---
 # <a name="idebugbreakpointresolution2getresolutioninfo"></a>IDebugBreakpointResolution2::GetResolutionInfo
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugBreakpointResolution2::GetResolutionInfo](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo)します。  
-  
 このブレークポイントを表すブレークポイント解像度の情報を取得します。  
   
 ## <a name="syntax"></a>構文  

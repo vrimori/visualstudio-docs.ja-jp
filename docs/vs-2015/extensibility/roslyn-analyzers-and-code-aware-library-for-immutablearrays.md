@@ -1,7 +1,7 @@
 ---
 title: Roslyn アナライザーと ImmutableArrays 用コード認識ライブラリ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3353596474525a381a495288f5f5b951b7e5efac
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 94dbfbc39260e0cfcab374c2db12ab103f310b28
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539224"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49173356"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Roslyn アナライザーと ImmutableArrays 用コード認識ライブラリ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Roslyn アナライザーと ImmutableArrays 用コード認識ライブラリ](https://docs.microsoft.com/visualstudio/extensibility/roslyn-analyzers-and-code-aware-library-for-immutablearrays)します。  
-  
 [.NET コンパイラ プラットフォーム](https://github.com/dotnet/roslyn)("Roslyn") を使用して、コードに対応したライブラリを作成できます。  コードに対応したライブラリでは、またはエラーを回避する最善の方法で使用できる機能とライブラリを使用するためのツール (Roslyn アナライザー) を提供します。  このトピックでは、現実の世界を使用する場合は、一般的なエラーをキャッチする Roslyn アナライザーを構築する方法、 [NIB: 変更できないコレクション](http://msdn.microsoft.com/library/33f4449d-7078-450a-8d60-d9229f66bbca)NuGet パッケージ。  この例では、アナライザーが見つけたコードの問題のコード修正を提供する方法も示します。  ユーザーは、Visual Studio 電球 UI でのコード修正を参照してくださいし、コードの修正プログラムを自動的に適用できます。  
   
 ## <a name="getting-started"></a>作業の開始  
@@ -32,7 +30,7 @@ ms.locfileid: "47539224"
   
 -   Visual Studio 2015 (Express Edition されません) またはそれ以降のバージョン。  無料で使用できます[Visual Studio Community エディション](https://www.visualstudio.com/products/visual-studio-community-vs)  
   
--   [Visual Studio SDK](../extensibility/visual-studio-sdk.md)します。  確認することも、Visual Studio をインストールするときに同時に、SDK をインストールする一般的なツールでの Visual Studio 機能拡張ツール。  既に Visual Studio をインストールする場合、メイン メニューに移動してこの SDK をインストールすることができますもする**ファイル&#124;新規&#124;プロジェクト.**、左側のナビゲーション ウィンドウで c# を選択し、機能拡張を選択します。  選択した場合、"**Visual Studio 機能拡張ツールをインストール**"階層リンクのプロジェクト テンプレートを求められますをダウンロードして、SDK をインストールします。  
+-   [Visual Studio SDK](../extensibility/visual-studio-sdk.md)。  確認することも、Visual Studio をインストールするときに同時に、SDK をインストールする一般的なツールでの Visual Studio 機能拡張ツール。  既に Visual Studio をインストールする場合、メイン メニューに移動してこの SDK をインストールすることができますもする**ファイル&#124;新規&#124;プロジェクト.**、左側のナビゲーション ウィンドウで c# を選択し、機能拡張を選択します。  選択した場合、"**Visual Studio 機能拡張ツールをインストール**"階層リンクのプロジェクト テンプレートを求められますをダウンロードして、SDK をインストールします。  
   
 -   [.NET コンパイラ プラットフォーム ("Roslyn") SDK](http://aka.ms/roslynsdktemplates)します。  メイン メニューに移動して、この SDK をインストールすることも**ファイル&#124;新規&#124;プロジェクト.** 選択、 **c#** で、左側のナビゲーション ウィンドウで、選択して、 **Extensibility**します。  選択した場合"**.NET コンパイラ プラットフォーム SDK をダウンロードして**"階層リンクのプロジェクト テンプレートを求められますをダウンロードして、SDK をインストールします。  この SDK には、 [Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)します。  この非常に便利なツールでは、どのようなコード モデルの種類を把握する必要があります内で検索アナライザーです。  特定のコード モデルの種類のコードは、のみ必要な場合に実行し、関連するコードを分析のみに集中できますので、コードにアナライザーのインフラストラクチャは呼び出し。  
   

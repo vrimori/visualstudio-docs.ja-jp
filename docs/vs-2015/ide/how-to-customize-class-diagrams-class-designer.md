@@ -1,7 +1,7 @@
 ---
 title: '方法: クラス ダイアグラムをカスタマイズする (クラス デザイナー) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d55744331cfa0aa78649a3654d7863ecc2287835
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6a4b163aef25972968933d3352486aab9ebbf962
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539194"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950977"
 ---
 # <a name="how-to-customize-class-diagrams-class-designer"></a>方法: クラス ダイアグラムをカスタマイズする (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: クラス ダイアグラムをカスタマイズ (クラス デザイナー)](https://docs.microsoft.com/visualstudio/ide/how-to-customize-class-diagrams-class-designer)します。  
-  
 クラス ダイアグラムで情報を表示する方法を変更できます。 ダイアグラム全体をカスタマイズすることも、デザイン サーフェイス上の個々の型をカスタマイズすることもできます。  
   
  たとえば、クラス ダイアグラム全体のズーム レベルの調整、個々の型のメンバーのグループ化および並べ替え方法の変更、リレーションシップの表示または非表示、ダイアグラム上での個々の型または型のセットの移動などを実行できます。  
@@ -131,11 +129,11 @@ ms.locfileid: "47539194"
   
 ##  <a name="DisplayAssociationAndInheritance"></a> 非表示のリレーションシップを表示する  
   
-1.  クラス デザイナーでクラス ダイアグラム ファイルを開いて選択します。  
+1. クラス デザイナーでクラス ダイアグラム ファイルを開いて選択します。  
   
-2.  非表示になっている関連行または継承線を持つ型を右クリックします。  
+2. 非表示になっている関連行または継承線を持つ型を右クリックします。  
   
- 関連行の場合は **[すべてのメンバーの表示]**、継承線の場合は **[基本クラスの表示]** または **[派生クラスの表示]** をクリックします。  
+   関連行の場合は **[すべてのメンバーの表示]**、継承線の場合は **[基本クラスの表示]** または **[派生クラスの表示]** をクリックします。  
   
 ##  <a name="RemoveCodeAndShape"></a> クラス ダイアグラムから図形を削除する  
  型の基になるコードに影響を与えずに型シェイプをクラス ダイアグラムから削除できます。 クラス ダイアグラムからの型シェイプの削除は、そのダイアグラムだけに影響します。型を定義する基礎のコードと、型を表示する他のダイアグラムには影響しません。  

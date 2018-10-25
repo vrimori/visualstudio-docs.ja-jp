@@ -1,7 +1,7 @@
 ---
 title: Visual Studio で開発を始める | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 67
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: deeb0b377c863bdfb742e4d483e8b5e5f160dd1e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2575e3e9ffa5f1b67709bc1fd342dbcf95417aad
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540202"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49261509"
 ---
 # <a name="get-started-developing-with-visual-studio"></a>Visual Studio を使用した開発の開始
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Get Started Developing with Visual Studio](https://docs.microsoft.com/visualstudio/ide/get-started-developing-with-visual-studio)します。  
-  
 Visual Studio へようこそ。 製品を [ダウンロード](http://www.visualstudio.com/community) すると、コーディングを開始するのにこれらのページが役立ちます。  
   
 -   **[Web アプリを作成する](https://www.visualstudio.com/features/modern-web-tooling-vs):** 最新の Web アプリケーションを作成して配置するツール。  
@@ -40,7 +38,7 @@ Visual Studio へようこそ。 製品を [ダウンロード](http://www.visua
   
 -   **[C# または Visual Basic (Xamarin) でクロスプラットフォームのモバイル アプリを作成する](../cross-platform/visual-studio-and-xamarin.md)** : Visual Studio と Xamarin 用ツールを使用して、Android、iOS、およびユニバーサル Windows プラットフォーム上で共有コード ベースから実行されるモバイル アプリの作成を開始します。  
   
-     サンプルの読み込み:[Tasky Portable](http://developer.xamarin.com/samples/mobile/TaskyPortable/) (ネイティブ UI) または[Xamarin Forms の Todo サンプル](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo)(Xamarin.Forms 共有 UI) &#124;[チュートリアルの実施](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) &#124;[参照ドキュメント](https://msdn.microsoft.com/library/mt299001.aspx) &#124;[ビデオを見る                                                                  ](https://channel9.msdn.com/Series/Cross-Platform-Development-with-Xamarin--Visual-Studio/01)  
+     サンプルの読み込み:[Tasky Portable](http://developer.xamarin.com/samples/mobile/TaskyPortable/) (ネイティブ UI) または[Xamarin Forms の Todo サンプル](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo)(Xamarin.Forms 共有 UI) &#124;[チュートリアルの実施](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) &#124;[参照ドキュメント](https://msdn.microsoft.com/library/mt299001.aspx) &#124;[ビデオを見る](https://channel9.msdn.com/Series/Cross-Platform-Development-with-Xamarin--Visual-Studio/01)  
   
 -   **[C++ でネイティブのクロスプラットフォームのアプリとライブラリを作成する](https://www.visualstudio.com/explore/cplusplus-mdd-vs.aspx)** ここに移動して、Android、iOS、ユニバーサル Windows プラットフォーム上で実行される C++ アプリとライブラリの作成を開始します。  
   

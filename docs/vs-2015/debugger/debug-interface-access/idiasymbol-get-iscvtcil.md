@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_iscvtcil |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 41db1bb8488165cb25d84b92bb940bbe152804d0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: dd0fee9c5b993daf227dc997ec8eaadc1e362cb8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537791"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49922290"
 ---
 # <a name="idiasymbolgetiscvtcil"></a>IDiaSymbol::get_isCVTCIL
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_iscvtcil](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-iscvtcil)します。  
-  
 共通中間言語 (CIL) モジュールからネイティブのモジュールにモジュールが変換されたかどうかを示すフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -53,7 +51,7 @@ HRESULT get_isCVTCIL(
 ## <a name="remarks"></a>Remarks  
  このプロパティは、`SymTagCompilandDetails`記号の型 (を参照してください[CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

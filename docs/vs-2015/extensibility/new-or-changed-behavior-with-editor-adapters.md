@@ -1,7 +1,7 @@
 ---
 title: アダプターのエディターで新しいまたは変更された動作 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 5555b116-cfdb-4773-ba62-af80fda64abd
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ce1cc8c95fcd2c6a34342b71c1c94bf5930e0e51
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 740fc83a9ded8ad35b93120d6fdec5767ceeea82
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545673"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49178959"
 ---
 # <a name="new-or-changed-behavior-with-editor-adapters"></a>エディターのアダプターを搭載した新規または変更された動作
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[新規またはエディターのアダプターでの動作の変更](https://docs.microsoft.com/visualstudio/extensibility/new-or-changed-behavior-with-editor-adapters)します。  
-  
 以前のバージョンの Visual Studio コア エディターと照らして記述されたコードを更新する、新しい API を使用するのではなく、エディターのアダプター (または shim) を使用する場合は、エディターのアダプターの動作に次の相違点の注意する必要があります。に関しては、前のコア エディター。  
   
 ## <a name="features"></a>フィーチャー  

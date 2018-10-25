@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2237: ISerializable 型を SerializableAttribute |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: d2bcbca460c404a977b2172f17dfe98164dd52bf
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: d9f83a92ff7b8ff8570327b1876f73251c95d1ee
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47592262"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937064"
 ---
 # <a name="ca2237-mark-iserializable-types-with-serializableattribute"></a>CA2237: ISerializable 型を SerializableAttribute に設定します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2237: ISerializable 型を SerializableAttribute](https://docs.microsoft.com/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)します。
 
 |||
 |-|-|

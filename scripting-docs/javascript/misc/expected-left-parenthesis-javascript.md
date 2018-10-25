@@ -1,5 +1,5 @@
 ---
-title: 予想 &#39; (&#39;(JavaScript) |Microsoft ドキュメント
+title: 予想&#39;(&#39; (JavaScript) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,14 +21,14 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 31f611c2dc387a4aec574a3d5f8525b7b298d39d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633282"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942284"
 ---
-# <a name="expected-3939-javascript"></a>予想 &#39; (&#39;(JavaScript)
-かっこのセット内で式を囲むしようとしていますが、始めかっこが含まれていません。 一部の式は、かっこと右かっこのセット内で囲む必要があります。 次の例では、かっこの使用に注意してください。  
+# <a name="expected-3939-javascript"></a>予想&#39;(&#39; (JavaScript)
+かっこのセット内の式を囲みますしようとしましたが、始めかっこが含まれていません。 一部の式は、かっこと右かっこのセット内で囲む必要があります。 次の例では、かっこの使用に注意してください。  
   
 ```JavaScript  
 for (initialize; test; increment) {  

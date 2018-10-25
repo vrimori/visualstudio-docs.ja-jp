@@ -1,7 +1,7 @@
 ---
 title: その他のファイル | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -26,18 +26,16 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ae827a5dfcc017370061e40aca4e7a03be798f97
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cb9c7fb46517ff2d6dffdeb0cedfc4982c1f3366
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538582"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49258488"
 ---
 # <a name="miscellaneous-files"></a>その他のファイル
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[その他のファイル](https://docs.microsoft.com/visualstudio/ide/reference/miscellaneous-files)します。  
-  
   
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のエディターでは、プロジェクトともソリューションとも関係のないファイルを操作できます。 ソリューションを開いているときに、ファイルをソリューションやプロジェクトに追加せずに開いて編集できます。 コンテナーとは関係なく操作されるファイルを "その他のファイル" と呼びます。 "その他のファイル" は、ソリューションやプロジェクトの外部にあり、ビルドには含まれません。また、ソース管理の対象になっているソリューションに含めることはできません。  
   

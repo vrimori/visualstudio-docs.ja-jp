@@ -1,7 +1,7 @@
 ---
 title: データセットのデータの編集 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a4a581608c0be728b3f6686cbfb7ad5f7abe750e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5a983b671b5c6b43009ad3cc32c2cb287977f05c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547540"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949293"
 ---
 # <a name="edit-data-in-datasets"></a>データセットのデータの編集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[データセット内のデータを編集](https://docs.microsoft.com/visualstudio/data-tools/edit-data-in-datasets)します。  
-  
   
 任意のデータベースのテーブルにデータを編集するのと同様に、データ テーブル内のデータを編集します。 プロセスには、挿入、更新、およびテーブル内のレコードの削除を含めることができます。 データ バインド フォームでは、どのフィールドがユーザーが編集可能なを指定できます。 その場合は、データ バインド インフラストラクチャは、すべての変更の追跡、変更を後で元のデータベースに送信できるようにを処理します。 データにプログラムで編集を行ってそれらの変更をデータベースに送信する場合は、オブジェクトや変更の追跡を行うメソッドを使用する必要があります。  
   
@@ -81,11 +79,11 @@ ms.locfileid: "47547540"
   
  変更は、各データ行に 2 つの方法を追跡します。  
   
--   各データ行にはそれに関連する情報が含まれています<xref:System.Data.DataRow.RowState%2A>(たとえば、 <xref:System.Data.DataRowState>、 <xref:System.Data.DataRowState>、 <xref:System.Data.DataRowState>、または<xref:System.Data.DataRowState>)。  
+- 各データ行にはそれに関連する情報が含まれています<xref:System.Data.DataRow.RowState%2A>(たとえば、 <xref:System.Data.DataRowState>、 <xref:System.Data.DataRowState>、 <xref:System.Data.DataRowState>、または<xref:System.Data.DataRowState>)。  
   
--   変更されたデータの各行には、その行の複数のバージョンが含まれています (<xref:System.Data.DataRowVersion>)、(前の変更) に、元のバージョンと現在のバージョン (変更後)。 変更が保留中の期間中に (に応答するときに、<xref:System.Data.DataTable.RowChanging>イベント)、3 つ目のバージョン: 提案されたバージョン: も利用できます。 詳細については、次を参照してください。[方法: 特定のバージョンの DataRow を取得](../data-tools/how-to-get-specific-versions-of-a-datarow.md)します。  
+- 変更されたデータの各行には、その行の複数のバージョンが含まれています (<xref:System.Data.DataRowVersion>)、(前の変更) に、元のバージョンと現在のバージョン (変更後)。 変更が保留中の期間中に (に応答するときに、<xref:System.Data.DataTable.RowChanging>イベント)、3 つ目のバージョン: 提案されたバージョン: も利用できます。 詳細については、次を参照してください。[方法: 特定のバージョンの DataRow を取得](../data-tools/how-to-get-specific-versions-of-a-datarow.md)します。  
   
- データセットが変更された場合、データセットの <xref:System.Data.DataSet.HasChanges%2A> メソッドでは、`true` が返されます。 変更された行が存在することを確認した後は、`GetChanges` または <xref:System.Data.DataSet> の <xref:System.Data.DataTable> メソッドを呼び出して、変更された一連の行を取得できます。 詳細については、次を参照してください。[方法: 変更された行の取得](http://msdn.microsoft.com/library/6ff0cbd0-5253-48e7-888a-144d56c2e0a9)します。  
+  データセットが変更された場合、データセットの <xref:System.Data.DataSet.HasChanges%2A> メソッドでは、`true` が返されます。 変更された行が存在することを確認した後は、`GetChanges` または <xref:System.Data.DataSet> の <xref:System.Data.DataTable> メソッドを呼び出して、変更された一連の行を取得できます。 詳細については、次を参照してください。[方法: 変更された行の取得](http://msdn.microsoft.com/library/6ff0cbd0-5253-48e7-888a-144d56c2e0a9)します。  
   
 #### <a name="to-determine-if-changes-have-been-made-to-any-rows"></a>行に変更が加えられましたかどうかを判断するには  
   

@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 92f14710646925778cb55f7e6e6d16f456ef496b
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: ee8ca017cd16b6d56c2e71b474d3f4283aeeb9b6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078413"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849568"
 ---
 # <a name="add-a-command-to-the-solution-explorer-toolbar"></a>ソリューション エクスプ ローラーのツールバーにコマンドを追加します。
 このチュートリアルでは、ボタンを追加する方法、**ソリューション エクスプ ローラー**ツールバー。  
@@ -32,7 +32,7 @@ ms.locfileid: "39078413"
 > [!NOTE]
 >  XML コマンド テーブルの使用 (*.vsct*) コマンド テーブル構成ではなくファイル (*.ctc*) ファイルを Vspackage でのメニューとコマンドの表示方法を定義します。 詳細については、次を参照してください。 [Visual Studio Command Table (します。Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="create-an-extension-with-a-menu-command"></a>メニュー コマンドを使用して拡張機能を作成します。  
@@ -83,41 +83,41 @@ ms.locfileid: "39078413"
   
 ### <a name="to-display-a-button-when-one-or-more-projects-are-open"></a>1 つまたは複数のプロジェクトが開いているときにボタンを表示するには  
   
-1.  `<Buttons>`のセクション*ToolbarButtonPackage.vsct*、2 つのコマンド フラグを追加、既存`<Button>`要素間に、`<Strings>`と`<Icons>`タグ。  
+1. `<Buttons>`のセクション*ToolbarButtonPackage.vsct*、2 つのコマンド フラグを追加、既存`<Button>`要素間に、`<Strings>`と`<Icons>`タグ。  
   
-    ```xml  
-    <CommandFlag>DefaultInvisible</CommandFlag>  
-    <CommandFlag>DynamicVisibility</CommandFlag>  
-    ```  
+   ```xml  
+   <CommandFlag>DefaultInvisible</CommandFlag>  
+   <CommandFlag>DynamicVisibility</CommandFlag>  
+   ```  
   
-     `DefaultInvisible`と`DynamicVisibility`ためフラグを設定する必要がありますでそのエントリ、`<VisibilityConstraints>`セクションが有効になります。  
+    `DefaultInvisible`と`DynamicVisibility`ためフラグを設定する必要がありますでそのエントリ、`<VisibilityConstraints>`セクションが有効になります。  
   
-2.  作成、 `<VisibilityConstraints>` 2 つ含まれるセクション`<VisibilityItem>`エントリ。 終了した直後の新しいセクションの配置`</Commands>`タグ。  
+2. 作成、 `<VisibilityConstraints>` 2 つ含まれるセクション`<VisibilityItem>`エントリ。 終了した直後の新しいセクションの配置`</Commands>`タグ。  
   
-    ```xml  
-    <VisibilityConstraints>  
-        <VisibilityItem guid="guidToolbarButtonPackageCmdSet"  
-              id="ToolbarButtonId"  
-              context="UICONTEXT_SolutionHasSingleProject" />  
-        <VisibilityItem guid="guidToolbarButtonPackageCmdSet"  
-              id="ToolbarButtonId"  
-              context="UICONTEXT_SolutionHasMultipleProjects" />  
-    </VisibilityConstraints>  
-    ```  
+   ```xml  
+   <VisibilityConstraints>  
+       <VisibilityItem guid="guidToolbarButtonPackageCmdSet"  
+             id="ToolbarButtonId"  
+             context="UICONTEXT_SolutionHasSingleProject" />  
+       <VisibilityItem guid="guidToolbarButtonPackageCmdSet"  
+             id="ToolbarButtonId"  
+             context="UICONTEXT_SolutionHasMultipleProjects" />  
+   </VisibilityConstraints>  
+   ```  
   
-     可視性の各項目は、指定したボタンを表示する条件を表します。 複数の条件を適用するには、同じボタンの複数のエントリを作成する必要があります。  
+    可視性の各項目は、指定したボタンを表示する条件を表します。 複数の条件を適用するには、同じボタンの複数のエントリを作成する必要があります。  
   
-3.  プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
+3. プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
   
-     **ソリューション エクスプ ローラー**ツールバーに取り消し線 ボタンが含まれていません。  
+    **ソリューション エクスプ ローラー**ツールバーに取り消し線 ボタンが含まれていません。  
   
-4.  プロジェクトを含む任意のソリューションを開きます。  
+4. プロジェクトを含む任意のソリューションを開きます。  
   
-     取り消し線 ボタンは、既存のボタンの右側にツールバーが表示されます。  
+    取り消し線 ボタンは、既存のボタンの右側にツールバーが表示されます。  
   
-5.  **ファイル** メニューのをクリックして**ソリューションを閉じる**します。 ツールバーのボタンが表示されなくなります。  
+5. **ファイル** メニューのをクリックして**ソリューションを閉じる**します。 ツールバーのボタンが表示されなくなります。  
   
- ボタンの可視性がによって制御される[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]VSPackage が読み込まれるまでです。 VSPackage が読み込まれた後、ボタンの可視性は、VSPackage によって制御されます。  詳細については、次を参照してください。 [Menucommand とします。OleMenuCommands](../extensibility/menucommands-vs-olemenucommands.md)します。  
+   ボタンの可視性がによって制御される[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]VSPackage が読み込まれるまでです。 VSPackage が読み込まれた後、ボタンの可視性は、VSPackage によって制御されます。  詳細については、次を参照してください。 [Menucommand とします。OleMenuCommands](../extensibility/menucommands-vs-olemenucommands.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [コマンド、メニューのおよびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)

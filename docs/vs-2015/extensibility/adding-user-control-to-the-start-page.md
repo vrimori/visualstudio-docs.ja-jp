@@ -1,7 +1,7 @@
 ---
 title: スタート ページにユーザー コントロールの追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 5b7997db-af6f-4fa9-a128-bceb42bddaf1
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e3c2ccd76343cd340725751bf1ce2c332fe96c37
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 40d508a11807fe90981104e0cc7e6557577da103
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592687"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855600"
 ---
 # <a name="adding-user-control-to-the-start-page"></a>スタート ページへのユーザー コントロールの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[スタート ページにユーザー コントロールの追加](https://docs.microsoft.com/visualstudio/extensibility/adding-user-control-to-the-start-page)します。  
-  
 このチュートリアルでは、カスタム スタート ページへの DLL の参照を追加する方法を示します。 例では、ソリューションにユーザー コントロール、ユーザー コントロールをビルドし、スタート ページの .xaml ファイルからビルドされたアセンブリを参照を追加します。 新しいタブでは、基本的な Web ブラウザーとして機能するユーザー コントロールをホストします。  
   
  同じプロセスを使用して、.xaml ファイルから呼び出すことができる任意のアセンブリを追加することができます。  
@@ -143,41 +141,41 @@ ms.locfileid: "47592687"
 ## <a name="adding-the-user-control-to-the-start-page"></a>スタート ページにユーザー コントロールの追加  
  このコントロールで使用できるように、スタート ページ プロジェクトにスタート ページ プロジェクト ファイルでは、新しいコントロール ライブラリへの参照を追加します。 スタート ページの XAML マークアップをコントロールを追加できます。  
   
-1.  **ソリューション エクスプ ローラー**、スタート ページ プロジェクトを右クリックして**参照**順にクリックします**参照の追加**します。  
+1. **ソリューション エクスプ ローラー**、スタート ページ プロジェクトを右クリックして**参照**順にクリックします**参照の追加**します。  
   
-2.  **プロジェクト**] タブで [ **WebUserControl**順にクリックします**OK**します。  
+2. **プロジェクト**] タブで [ **WebUserControl**順にクリックします**OK**します。  
   
-3.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
+3. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
-     ソリューションを構築可能ユーザー コントロールに IntelliSense ソリューションで他のファイル。  
+    ソリューションを構築可能ユーザー コントロールに IntelliSense ソリューションで他のファイル。  
   
- スタート ページの XAML マークアップには、コントロールを追加するには、アセンブリへの参照を名前空間を追加し、ページにコントロールを配置します。  
+   スタート ページの XAML マークアップには、コントロールを追加するには、アセンブリへの参照を名前空間を追加し、ページにコントロールを配置します。  
   
 #### <a name="to-add-the-control-to-the-markup"></a>コントロールのマークアップを追加するには  
   
-1.  **ソリューション エクスプ ローラー**、スタート ページの .xaml ファイルを開きます。  
+1. **ソリューション エクスプ ローラー**、スタート ページの .xaml ファイルを開きます。  
   
-2.  **XAML**ウィンドウで、最上位レベルに次の名前空間宣言を追加<xref:System.Windows.Controls.Grid>要素。  
+2. **XAML**ウィンドウで、最上位レベルに次の名前空間宣言を追加<xref:System.Windows.Controls.Grid>要素。  
   
-    ```xml  
-    xmlns:vsc="clr-namespace:WebUserControl;assembly=WebUserControl"  
-    ```  
+   ```xml  
+   xmlns:vsc="clr-namespace:WebUserControl;assembly=WebUserControl"  
+   ```  
   
-3.  **XAML**ウィンドウまでスクロールすると、\<グリッド > セクション。  
+3. **XAML**ウィンドウまでスクロールすると、\<グリッド > セクション。  
   
-     セクションが含まれて、<xref:System.Windows.Controls.TabControl>内の要素を<xref:System.Windows.Controls.Grid>要素。  
+    セクションが含まれて、<xref:System.Windows.Controls.TabControl>内の要素を<xref:System.Windows.Controls.Grid>要素。  
   
-4.  追加、 \<TabControl > 要素を含む、 \<TabItem > ユーザー コントロールへの参照を格納しています。  
+4. 追加、 \<TabControl > 要素を含む、 \<TabItem > ユーザー コントロールへの参照を格納しています。  
   
-    ```xml  
+   ```xml  
   
-    <TabItem Header="Web" Height="Auto">  
-        <vsc:UserControl1 />  
-    </TabItem>  
+   <TabItem Header="Web" Height="Auto">  
+       <vsc:UserControl1 />  
+   </TabItem>  
   
-    ```  
+   ```  
   
- これで、コントロールをテストできます。  
+   これで、コントロールをテストできます。  
   
 ## <a name="testing-a-manually-created-custom-start-page"></a>手動で作成したカスタム スタート ページのテスト  
   

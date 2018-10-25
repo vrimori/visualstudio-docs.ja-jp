@@ -1,7 +1,7 @@
 ---
 title: IDebugCoreServer3::GetConnectionProtocol |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 368ced5b-c5d9-4090-a5b4-26ff400d1a55
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 66079842c7f307ed0098e311cc2e33b6c27639f0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1277e951d2f5bebebad9c8b545d4eed72439b015
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548196"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49878909"
 ---
 # <a name="idebugcoreserver3getconnectionprotocol"></a>IDebugCoreServer3::GetConnectionProtocol
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugCoreServer3::GetConnectionProtocol](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol)します。  
-  
 サーバーとパッケージのデバッグの間の通信に使用されているプロトコルを示す値を返します。  
   
 ## <a name="syntax"></a>構文  

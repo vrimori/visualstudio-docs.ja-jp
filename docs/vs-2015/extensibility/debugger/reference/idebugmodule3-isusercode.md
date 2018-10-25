@@ -1,7 +1,7 @@
 ---
 title: IDebugModule3::IsUserCode |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 77022946-bb8b-4114-aa81-614df6e54b13
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f6e633006cd41cfd88c85d8213498786c13fad9b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 06876664ea0bcc3ead15496905067e0c0aadf6ed
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539235"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833981"
 ---
 # <a name="idebugmodule3isusercode"></a>IDebugModule3::IsUserCode
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugModule3::IsUserCode](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugmodule3-isusercode)します。  
-  
 については、モジュールがかどうかにユーザー コードをどのように表すかどうかを取得します。  
   
 ## <a name="syntax"></a>構文  

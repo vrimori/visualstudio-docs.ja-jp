@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_types |Microsoft ドキュメント
+title: Idiasymbol::get_types |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6521d2a7ffdf5bb285f571e0d3975626f34d84d1
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 773144f81e51167016df3dca1b6ea7beedb3661c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31470037"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951315"
 ---
 # <a name="idiasymbolgettypes"></a>IDiaSymbol::get_types
-このシンボルにコンパイラに固有の型の配列を取得します。  
+このシンボルをコンパイラに固有の型の配列を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,16 +39,16 @@ HRESULT get_types (
  [in]データを保持するバッファーのサイズ。  
   
  `pcTypes`  
- [out]記述された、型の数を返しますまたはの場合、`types`パラメーターは`NULL`、使用可能な型の合計数、します。  
+ [out]記述された、型の数を返しますまたは、`types`パラメーターが`NULL`、利用可能なタイプの合計数、します。  
   
  `types[]`  
- [out]格納するのには配列を[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)このシンボルのすべての型を表すオブジェクト。  
+ [out]格納する配列、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)このシンボルのすべての型を表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

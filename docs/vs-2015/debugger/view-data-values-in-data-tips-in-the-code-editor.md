@@ -1,7 +1,7 @@
 ---
 title: データ ヒントでコード エディターでのデータ値の表示 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -26,34 +26,32 @@ caps.latest.revision: 41
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f1a7e755fd81bb66d822f7232e903fea9c53087c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: acae33e015b158c36b5e8c27b5b88131c863fc9a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533896"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949891"
 ---
 # <a name="view-data-values-in-data-tips--in-the-code-editor"></a>コード エディターでのデータ ヒントのデータ値の表示
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[データ ヒントでコード エディターでのデータ値の表示](https://docs.microsoft.com/visualstudio/debugger/view-data-values-in-data-tips-in-the-code-editor)します。  
-  
 DataTips は、デバッグ中にプログラムの変数に関する情報を確認するときに便利です。 データヒントは、中断モードのときにのみ機能します。また、実行の現在のスコープ内にある変数に対してだけ使用できます。  
   
  [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]、データヒントがソース ファイルで特定の場所にピン留めできますまたはすべてに加えて、変動する[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]windows。  
   
 ### <a name="to-display-a-datatip-in-break-mode-only"></a>データヒントを表示するには (中断モードのみ)  
   
-1.  ソース ウィンドウで、現在のスコープにある任意の変数にマウス ポインターを移動します。  
+1. ソース ウィンドウで、現在のスコープにある任意の変数にマウス ポインターを移動します。  
   
-     DataTip が表示されます。  
+    DataTip が表示されます。  
   
-    > [!NOTE]
-    >  データヒントは、プログラムの実行が中断され、カーソルがホバーしていないコンテキストで常に評価されます。 現在のコンテキスト内の変数と同じ名前の別の関数内の変数にポインターを合わせると、その別の関数内の変数の値が、現在のコンテキストの変数の値として表示されます。  
+   > [!NOTE]
+   >  データヒントは、プログラムの実行が中断され、カーソルがホバーしていないコンテキストで常に評価されます。 現在のコンテキスト内の変数と同じ名前の別の関数内の変数にポインターを合わせると、その別の関数内の変数の値が、現在のコンテキストの変数の値として表示されます。  
   
-2.  マウス ポインターを離すとデータヒントが表示されなくなります。 未処理のままにするために、データヒントをピン留めする をクリックして、**ソースにピン留めする**アイコン、または  
+2. マウス ポインターを離すとデータヒントが表示されなくなります。 未処理のままにするために、データヒントをピン留めする をクリックして、**ソースにピン留めする**アイコン、または  
   
-    -   変数を右クリックし、をクリックして**ソースにピン留めする**します。  
+   - 変数を右クリックし、をクリックして**ソースにピン留めする**します。  
   
      固定したデータヒントは、デバッグ セッションを終了すると閉じます。  
   

@@ -1,7 +1,7 @@
 ---
 title: CODE_PATH |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 2d4b2890-4c9d-47e1-83c0-df9c6436427f
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1f77ddf898732938f5a63c32ff26dd60e5a948e4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cf8326fe1434b65293dc19de9da64a9a39327e39
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537653"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844606"
 ---
 # <a name="codepath"></a>CODE_PATH
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[CODE_PATH](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/code-path)します。  
-  
 メソッドまたは関数呼び出しをについて説明します。  
   
 ## <a name="syntax"></a>構文  
@@ -57,7 +55,7 @@ public struct CODE_PATH {
 ## <a name="remarks"></a>Remarks  
  この構造体は、関数にステップ インを実装するために使用されます。 [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md)デバッグ中のプログラムの現在の場所から、すべての呼び出しを返します。 この構造体は、このような 1 回の呼び出しを表します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

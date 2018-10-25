@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findChildrenExByAddr |Microsoft ドキュメント
+title: IDiaSymbol::findChildrenExByAddr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ed0ec0f91cc8a16ab7078715872057c9cbe3fd3d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 7398f3afdf8a6895d0feaec35ca33b95e9054060
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31466625"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834865"
 ---
 # <a name="idiasymbolfindchildrenexbyaddr"></a>IDiaSymbol::findChildrenExByAddr
 指定したアドレスに有効なシンボルの子を取得します。  
@@ -38,27 +38,27 @@ HRESULT findChildrenExByAddr (
   
 #### <a name="parameters"></a>パラメーター  
  `symtag`  
- [in]タグを指定します、シンボルの子を取得するので定義されている、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)です。 設定`SymTagNull`すべての子を取得します。  
+ [in]定義されているを取得するには、子のシンボル タグを指定します、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)します。 設定`SymTagNull`のすべての子を取得します。  
   
  `name`  
- [in]取得する子の名前を指定します。 設定`NULL`すべての子を取得します。  
+ [in]取得する子の名前を指定します。 設定`NULL`のすべての子を取得します。  
   
  `compareFlags`  
- [in]名前の一致に適用する比較オプションを指定します。 値から、 [NameSearchOptions 列挙型](../../debugger/debug-interface-access/namesearchoptions.md)列挙体は、単独または組み合わせて使用できます。  
+ [in]名前の一致に適用される比較オプションを指定します。 値から、 [NameSearchOptions 列挙型](../../debugger/debug-interface-access/namesearchoptions.md)列挙体は、単独または組み合わせて使用できます。  
   
  `address`  
- [in]記号のアドレス。  
+ [in]シンボルのアドレス。  
   
  `ppResult`  
- [out]返します、 [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)子の記号の一覧を含むオブジェクトを取得します。  
+ [out]返します、 [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)子シンボルの一覧を含むオブジェクトを取得します。  
   
 ## <a name="return-value"></a>戻り値  
- 返します`S_OK`シンボルの少なくとも 1 つの子が見つかりましたが、または返す`S_FALSE`場合は子が見つかりませんでした。 エラー コードを返しますそれ以外の場合。  
+ 返します`S_OK`シンボルの少なくとも 1 つの子が検出されましたが、またはを返す`S_FALSE`場合は子が見つかりませんでした。 それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  返されるローカル シンボルには、ライブの範囲の情報が含まれます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

@@ -1,5 +1,5 @@
 ---
-title: '[クイック起動] \([オプション] ダイアログ ボックス - [環境])'
+title: '[クイック起動] ([オプション] ダイアログ ボックス - [環境])'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -16,14 +16,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ad37856e8692d5182ddba4f80ec1c07aa095f674
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 4149a6cc7974f1c38c146620c0f3a6e95f760ad3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31946781"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936655"
 ---
-# <a name="quick-launch-environment-options-dialog-box"></a>[クイック起動] \([オプション] ダイアログ ボックス - [環境])
+# <a name="quick-launch-environment-options-dialog-box"></a>[クイック起動] ([オプション] ダイアログ ボックス - [環境])
 **クイック起動**を使用すると、オプション、テンプレート、メニューなどの IDE アセットのアクションをすばやく検索して実行できます。 **クイック起動**を使用してコードおよびシンボルを検索できません。 **クイック起動**の検索ボックスは、メニュー バーの右上隅にあり、Ctrl キーを押しながら Q キーを押すとアクセスできます。 ボックスに検索文字列を入力します。 @ を含む文字列を検索するには、'@@' を使用します。
 
  Visual Studio をインストールすると、**クイック起動**は既定で有効になります。 メニュー バーで、**[ツール]**、**[オプション]** の順にクリックし、**クイック起動**を表示または非表示にできます。 **[環境]** ノードを展開し、**[クイック起動]** をクリックします。 **[クイック起動を有効にする]** チェック ボックスをオンまたはオフにします。 また、このページの検索カテゴリを有効または無効にできます。
@@ -34,7 +34,7 @@ ms.locfileid: "31946781"
  次のショートカットを使用して、検索を特定のカテゴリに限定できます。
 
 |カテゴリ|ショートカット|ショートカットの説明|
-|--------------|--------------|--------------------------|
+|--------------|--------------| - |
 |直前に使用|@mru<br /><br /> たとえば、`@mru font`|**直前に使用**した項目が最大 5 つ表示されます。|
 |メニュー|@menu<br /><br /> たとえば、`@menu font`|検索をメニュー項目に制限します。|
 |オプション|@opt<br /><br /> たとえば、`@opt font`|検索を **[オプション]** ダイアログ ボックスの設定に制限します。|

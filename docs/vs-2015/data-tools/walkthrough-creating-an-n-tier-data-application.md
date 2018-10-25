@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: N 層データ アプリケーションの作成 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 51
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cac58d29870cd1ec7e4a6477c5ac3dba4e48cc1c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 37876502a464e263ebd6803216b29bd62b65af5c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540242"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890180"
 ---
 # <a name="walkthrough-creating-an-n-tier-data-application"></a>チュートリアル : n 層データ アプリケーションの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: N 層データ アプリケーションの作成](https://docs.microsoft.com/visualstudio/data-tools/walkthrough-creating-an-n-tier-data-application)です。  
-  
   
 N-レベル * データ アプリケーションは、データにアクセスし、複数の論理レイヤーに分割されているアプリケーションまたは*層*します。 アプリケーション コンポーネントをこのように別個の層に分離すると、アプリケーションの保守容易性とスケーラビリティが向上します。 これは、ソリューション全体を再設計しなくても 1 つの層に適用できる、新しい技術を簡単に導入できるようにすることで実現されます。 n 層アーキテクチャには、プレゼンテーション層、中間層、およびデータ層が存在します。 通常、中間層には、データ アクセス層、ビジネス ロジック層、および認証や検証などの共有コンポーネントが含まれます。 データ層には、リレーショナル データベースが含まれます。 通常、n 層アプリケーションでは、機密情報が中間層のデータ アクセス層に格納され、プレゼンテーション層にアクセスするエンド ユーザーから分離されます。 詳細については、次を参照してください。 [N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)します。  
   
@@ -41,25 +39,25 @@ N-レベル * データ アプリケーションは、データにアクセス�
   
  このチュートリアルでは、次の手順を実行します。  
   
--   複数のプロジェクトを含む新しい n 層ソリューションを作成する。  
+- 複数のプロジェクトを含む新しい n 層ソリューションを作成する。  
   
--   この n 層ソリューションに 2 つのクラス ライブラリ プロジェクトを追加する。  
+- この n 層ソリューションに 2 つのクラス ライブラリ プロジェクトを追加する。  
   
--   使用して型指定されたデータセットを作成、**データ ソース構成ウィザード**します。  
+- 使用して型指定されたデータセットを作成、**データ ソース構成ウィザード**します。  
   
--   生成された分離[Tableadapter](http://msdn.microsoft.com/library/09416de9-134c-4dc7-8262-6c8d81e3f364)と別々 のプロジェクトにデータセット コード。  
+- 生成された分離[Tableadapter](http://msdn.microsoft.com/library/09416de9-134c-4dc7-8262-6c8d81e3f364)と別々 のプロジェクトにデータセット コード。  
   
--   データ アクセス層を呼び出す Windows Communication Foundation (WCF) サービスを作成する。  
+- データ アクセス層を呼び出す Windows Communication Foundation (WCF) サービスを作成する。  
   
--   このサービスに、データ アクセス層からデータを取得する関数を作成する。  
+- このサービスに、データ アクセス層からデータを取得する関数を作成する。  
   
--   プレゼンテーション層として機能する Windows フォーム アプリケーションを作成する。  
+- プレゼンテーション層として機能する Windows フォーム アプリケーションを作成する。  
   
--   Windows フォーム コントロールを作成し、データ ソースにバインドする。  
+- Windows フォーム コントロールを作成し、データ ソースにバインドする。  
   
--   データ テーブルにデータを読み込むコードを記述する。  
+- データ テーブルにデータを読み込むコードを記述する。  
   
- ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版について、次を参照してください。 [Video How to: N 層データ アプリケーションの作成](http://go.microsoft.com/fwlink/?LinkId=115188)です。  
+  ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版について、次を参照してください。 [Video How to: N 層データ アプリケーションの作成](http://go.microsoft.com/fwlink/?LinkId=115188)です。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを完了するには、次の条件が必要です。  
@@ -146,17 +144,17 @@ N-レベル * データ アプリケーションは、データにアクセス�
   
 #### <a name="to-separate-the-tableadapters-from-the-dataset"></a>データセットと TableAdapter を分離するには  
   
-1.  ダブルクリック**NorthwindDataSet.xsd**で**ソリューション エクスプ ローラー**でデータセットを開きます、**データセット デザイナー**します。  
+1. ダブルクリック**NorthwindDataSet.xsd**で**ソリューション エクスプ ローラー**でデータセットを開きます、**データセット デザイナー**します。  
   
-2.  デザイナーの空の領域をクリックします。  
+2. デザイナーの空の領域をクリックします。  
   
-3.  検索、 **DataSet プロジェクト**内のノード、**プロパティ**ウィンドウ。  
+3. 検索、 **DataSet プロジェクト**内のノード、**プロパティ**ウィンドウ。  
   
-4.  **DataSet プロジェクト**一覧で、 **DataEntityTier**します。  
+4. **DataSet プロジェクト**一覧で、 **DataEntityTier**します。  
   
-5.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
+5. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
- データセットと TableAdapter が、2 つのクラス ライブラリ プロジェクトに分離されます。 最初にデータセット全体 (DataAccessTier) を含んでいたプロジェクトには、現在は TableAdapter しか含まれません。 指定したプロジェクト、 **DataSet プロジェクト**プロパティ (DataEntityTier) に型指定されたデータセットが含まれています。 (NorthwindDataSet.Dataset.Designer.vb または NorthwindDataSet.Dataset.Designer.cs)。  
+   データセットと TableAdapter が、2 つのクラス ライブラリ プロジェクトに分離されます。 最初にデータセット全体 (DataAccessTier) を含んでいたプロジェクトには、現在は TableAdapter しか含まれません。 指定したプロジェクト、 **DataSet プロジェクト**プロパティ (DataEntityTier) に型指定されたデータセットが含まれています。 (NorthwindDataSet.Dataset.Designer.vb または NorthwindDataSet.Dataset.Designer.cs)。  
   
 > [!NOTE]
 >  データセットと Tableadapter を分離する場合 (設定して、 **DataSet プロジェクト**プロパティ)、プロジェクト内の既存のデータセット部分クラスが自動的に移動されません。 既存のデータセット部分クラスは、手動でデータセット プロジェクトに移動する必要があります。  

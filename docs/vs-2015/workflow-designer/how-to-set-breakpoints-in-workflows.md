@@ -1,7 +1,7 @@
 ---
 title: '方法: ワークフロー内のブレークポイントの設定 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -12,12 +12,12 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: deeacfede4ace0c06d0c35418fe55bd74e57b19e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b3dedba320ce8a783b7d54df54a30b0759a6bd00
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533842"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896225"
 ---
 # <a name="how-to-set-breakpoints-in-workflows"></a>方法 : ワークフロー内のブレークポイントを設定する
 [!INCLUDE[wfd1](../includes/wfd1-md.md)]を使用すると、Visual Basic コードまたは C# コードを使用する場合と同じように、グラフィカル ワークフローにブレークポイントを設定できます。 設定したそれぞれのブレークポイントで、ワークフローの実行が停止します。  
@@ -26,10 +26,10 @@ ms.locfileid: "47533842"
   
 > [!NOTE]
 >  呼び出されるワークフローに対してブレークポイントを設定することはできません。  
-  
+> 
 > [!WARNING]
->  オプションを選択するようにして**を有効にする [マイ コードのみ (マネージのみ)** から、**ツール**、**オプション**、**デバッグ**する前に] メニューデバッグします。 別のシーケンス内で入れ子になった 2 つのシーケンスがあり、最初の内部シーケンスにブレークポイントを設定する場合、以下のキーを押して**F11**場合に、2 つ目の内部シーケンスにデバッグは、**を有効にする マイ コードのみ (マネージのみ)** オプションが選択されていません。  
-  
+>  オプションを選択するようにして**を有効にする [マイ コードのみ (マネージのみ)** から、**ツール**、**オプション**、**デバッグ**する前に] メニューデバッグします。 別のシーケンス内で入れ子になった 2 つのシーケンスがあり、最初の内部シーケンスにブレークポイントを設定する場合、以下のキーを押して**F11**場合に、2 つ目の内部シーケンスにデバッグは、<strong>を有効にする マイ コードのみ (マネージのみ)</strong>オプションが選択されていません。  
+> 
 > [!WARNING]
 >  XAML ファイルのプロパティへの完全パスが正確でない場合、ワークフロー内のブレークポイントにヒットしません。XAML ファイルへの完全パスは、プロジェクトやソリューションを別のフォルダーや別のコンピューターへ移動すると正確ではなくなります。Ctrl キーを押しながら S キーを押すと、完全パスのプロパティが保存および更新されます。  
   

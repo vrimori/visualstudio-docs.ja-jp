@@ -5,12 +5,12 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2017
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
-ms.openlocfilehash: 231994db8192f5c44919efcf5823e4e57342f2b1
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 694f6f10a482318f6c6a1c40e6796e09daac0913
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224072"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942947"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core の概要
 
@@ -64,12 +64,12 @@ public static void Main(string[] args)
 ```
 ASP.NET Core アプリにより、その main メソッドで Web サーバーが作成されます。[`WebHostBuilder`](https://docs.microsoft.com/aspnet/core/fundamentals/hosting) のインスタンスを介してホストが構成され、起動されます。 このビルダーは、ホストの構成を可能にするメソッドを提供します。 テンプレート アプリで、次の構成が使用されます。
 
- * `UseKestrel`: Kestrel サーバーがアプリにより使用されることを指定します
- * `UseContentRoot(Directory.GetCurrentDirectory())`: アプリがこのフォルダーから起動されるとき、Web プロジェクトのルート フォルダーをアプリのコンテンツ ルートとして使用します
- * `.UseIISIntegration()`: アプリが IIS と連動しなければならないことを指定します。 IIS と ASP.NET Core を一緒に使用するには、`UseKestrel` と `UseIISIntegration` を指定する必要があります。
- * `.UseStartup<Startup>()`: スタートアップ クラスを指定します。
+* `UseKestrel`: Kestrel サーバーがアプリにより使用されることを指定します
+* `UseContentRoot(Directory.GetCurrentDirectory())`: アプリがこのフォルダーから起動されるとき、Web プロジェクトのルート フォルダーをアプリのコンテンツ ルートとして使用します
+* `.UseIISIntegration()`: アプリが IIS と連動しなければならないことを指定します。 IIS と ASP.NET Core を一緒に使用するには、`UseKestrel` と `UseIISIntegration` を指定する必要があります。
+* `.UseStartup<Startup>()`: スタートアップ クラスを指定します。
 
- ビルド/実行メソッドにより、IWebHost がビルドされます。これはアプリをホストし、入ってくる HTTP 要求の待ち受けをアプリに開始させます。
+  ビルド/実行メソッドにより、IWebHost がビルドされます。これはアプリをホストし、入ってくる HTTP 要求の待ち受けをアプリに開始させます。
 
 ### <a name="startupcs"></a>Startup.cs
 

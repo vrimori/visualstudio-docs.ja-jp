@@ -1,7 +1,7 @@
 ---
 title: パフォーマンス レポートの概要 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 50
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d80fa4902ac598440f03630cb8b0906bc13808ce
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f62018eb3e58f69758bd07faebc7bd77fb26b33b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538363"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845850"
 ---
 # <a name="performance-report-overview"></a>パフォーマンス レポートの概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[パフォーマンス レポートの概要](https://docs.microsoft.com/visualstudio/profiling/performance-report-overview)します。  
-  
 Visual Studio Team System Development Edition の統合開発環境 (IDE) の **[パフォーマンス レポート]** ウィンドウでパフォーマンス セッションのプロファイリング データを表示できます。 プロファイリング データは .vsp ファイルと .vsps ファイルに保存されます。 レポート ビュー ウィンドウでは、アプリケーションのパフォーマンス上の問題を表示して分析できます。  
   
 > [!CAUTION]
@@ -50,13 +48,13 @@ Visual Studio Team System Development Edition の統合開発環境 (IDE) の **
 ### <a name="callercallee-view"></a>[呼び出し元/呼び出し先] ビュー  
  [呼び出し元/呼び出し先] ビューには個々の関数のコール ツリーが表示されます。 このビューは 3 つの部分に分かれています。  
   
--   対象の関数がビューの中央部に表示されます。  
+- 対象の関数がビューの中央部に表示されます。  
   
--   関数を呼び出した関数 (呼び出し元) が、対象の関数の上に表示されます。  
+- 関数を呼び出した関数 (呼び出し元) が、対象の関数の上に表示されます。  
   
--   対象の関数によって呼び出された関数 (呼び出し先) が、対象の関数の下に表示されます。  
+- 対象の関数によって呼び出された関数 (呼び出し先) が、対象の関数の下に表示されます。  
   
- 呼び出し元の一覧や呼び出し先の一覧にある関数をダブルクリックし、別の関数を選択できます。 詳細については、「[[呼び出し元/呼び出し先] ビュー](../profiling/caller-callee-view.md)」を参照してください。  
+  呼び出し元の一覧や呼び出し先の一覧にある関数をダブルクリックし、別の関数を選択できます。 詳細については、「[[呼び出し元/呼び出し先] ビュー](../profiling/caller-callee-view.md)」を参照してください。  
   
 ### <a name="call-tree-view"></a>コール ツリー ビュー  
  [コール ツリー] ビューには、プロファイリングされるアプリケーションで走査された関数の実行パスが表示されます。 ツリーのルートは、アプリケーションまたはコンポーネントへのエントリ ポイントです。 各関数ノードは、呼び出したすべての関数と、その関数呼び出しに関するパフォーマンス データを表示します。  

@@ -14,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 3ca011f519c53924681d2c1a7042f25dcfaad208
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 19792a9804072e7c6ade836b408951e2cfadd070
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42635201"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910967"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-2"></a>チュートリアル: 項目テンプレート、第 2 部でのカスタム動作プロジェクト項目を作成します。
   カスタム SharePoint プロジェクト項目の種類を定義し、Visual Studio で項目テンプレートに関連付ける、テンプレートのウィザードを提供する可能性がありますもします。 ウィザードを使用すると、プロジェクトにプロジェクト項目の新しいインスタンスを追加するのにテンプレートを使用するときに、ユーザーから情報を収集します。 収集した情報を使用して、プロジェクト項目を初期化できます。  
@@ -44,15 +44,15 @@ ms.locfileid: "42635201"
   
  また、このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
   
--   サポート対象エディションの Windows、SharePoint、Visual Studio。
+- サポート対象エディションの Windows、SharePoint、Visual Studio。
   
--   Visual Studio SDK。 このチュートリアルでは、 **VSIX プロジェクト**sdk プロジェクト アイテムを配置するための VSIX パッケージを作成するテンプレート。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)します。  
+- Visual Studio SDK。 このチュートリアルでは、 **VSIX プロジェクト**sdk プロジェクト アイテムを配置するための VSIX パッケージを作成するテンプレート。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)します。  
   
- 次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
+  次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
   
--   Visual Studio のプロジェクトおよび項目テンプレート用のウィザード。 詳細については、次を参照してください。[方法: プロジェクト テンプレートにウィザードの使用](../extensibility/how-to-use-wizards-with-project-templates.md)と<xref:Microsoft.VisualStudio.TemplateWizard.IWizard>インターフェイス。  
+- Visual Studio のプロジェクトおよび項目テンプレート用のウィザード。 詳細については、次を参照してください。[方法: プロジェクト テンプレートにウィザードの使用](../extensibility/how-to-use-wizards-with-project-templates.md)と<xref:Microsoft.VisualStudio.TemplateWizard.IWizard>インターフェイス。  
   
--   SharePoint のカスタム動作。 詳細については、次を参照してください。[カスタム アクション](http://go.microsoft.com/fwlink/?LinkId=177800)します。  
+- SharePoint のカスタム動作。 詳細については、次を参照してください。[カスタム アクション](http://go.microsoft.com/fwlink/?LinkId=177800)します。  
   
 ## <a name="create-the-wizard-project"></a>ウィザード プロジェクトを作成します。
  このチュートリアルを完了する、CustomActionProjectItem ソリューションで作成したプロジェクトを追加する必要があります[チュートリアル: 項目テンプレート、第 1 部でのカスタム動作プロジェクト項目の作成](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)です。 このプロジェクトで、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを実装し、ウィザードの UI を定義します。  

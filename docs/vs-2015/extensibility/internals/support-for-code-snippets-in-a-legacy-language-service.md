@@ -1,7 +1,7 @@
 ---
 title: 従来の言語サービスでのコード スニペットのサポート |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 7490325b-acee-4c2d-ac56-1cd5db1a1083
 caps.latest.revision: 29
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 83fcde82b2b4b509745c8a81045f01b822620fce
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0d1769b4064b92283e75c242a5abb897296c5156
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534880"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847797"
 ---
 # <a name="support-for-code-snippets-in-a-legacy-language-service"></a>従来の言語サービスでのコード スニペットのサポート
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[従来の言語サービスでのコード スニペットのサポート](https://docs.microsoft.com/visualstudio/extensibility/internals/support-for-code-snippets-in-a-legacy-language-service)します。  
-  
 コード スニペットは、ソース ファイルに挿入するコードの一部です。 スニペット自体とは、一連のフィールドの XML ベースのテンプレートです。 これらのフィールドには、スニペットが挿入され、スニペットを挿入するコンテキストに応じて異なる値を持つことができますが強調表示されます。 スニペットの挿入後にすぐに、言語サービスは、スニペットを書式設定できます。  
   
  TAB キーを使用してナビゲートするスニペットのフィールドを許可する特別な編集モードでは、スニペットが挿入されます。 フィールドには、IntelliSense スタイルのドロップダウン メニューをサポートできます。 ユーザーを入力してください、または ESC キーを入力して、ソース ファイルにスニペットをコミットします。 スニペットの詳細については、次を参照してください[コード スニペット](../../ide/code-snippets.md)します。  
@@ -337,15 +335,15 @@ namespace TestLanguagePackage
   
  言語サービスでは、ショートカットの名前を取得、ときに呼び出す、<xref:Microsoft.VisualStudio.Package.ExpansionProvider.FindExpansionByShortcut%2A>ファイル名とコード スニペットのタイトルを取得します。 言語サービスを呼び出して、<xref:Microsoft.VisualStudio.Package.ExpansionProvider.InsertNamedExpansion%2A>メソッドで、<xref:Microsoft.VisualStudio.Package.ExpansionProvider>コード スニペットを挿入するクラス。 特定の順序で、次のメソッドが Visual Studio によってと呼ばれる、<xref:Microsoft.VisualStudio.Package.ExpansionProvider>スニペットの挿入の処理中にクラス。  
   
-1.  <xref:Microsoft.VisualStudio.Package.ExpansionProvider.IsValidKind%2A>  
+1. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.IsValidKind%2A>  
   
-2.  <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnBeforeInsertion%2A>  
+2. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnBeforeInsertion%2A>  
   
-3.  <xref:Microsoft.VisualStudio.Package.ExpansionProvider.FormatSpan%2A>  
+3. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.FormatSpan%2A>  
   
-4.  <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnAfterInsertion%2A>  
+4. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnAfterInsertion%2A>  
   
- 言語サービスのインストールされているコード スニペットの一覧の取得の詳細については、次を参照してください。[チュートリアル:、のインストールされているコード スニペットの一覧 (従来の実装) を取得する](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)します。  
+   言語サービスのインストールされているコード スニペットの一覧の取得の詳細については、次を参照してください。[チュートリアル:、のインストールされているコード スニペットの一覧 (従来の実装) を取得する](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)します。  
   
 ## <a name="implementing-the-expansionfunction-class"></a>ExpansionFunction クラスを実装します。  
  拡張する機能は、スニペット テンプレートに埋め込まれているし、フィールドに配置することの 1 つまたは複数の値を返す名前付きの機能です。 で、言語サービスの拡張機能をサポートするためには、からクラスを派生する必要があります、<xref:Microsoft.VisualStudio.Package.ExpansionFunction>クラスし、実装、<xref:Microsoft.VisualStudio.Package.ExpansionFunction.GetCurrentValue%2A>メソッド。 オーバーライドする必要がありますし、<xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionFunction%2A>メソッド、<xref:Microsoft.VisualStudio.Package.LanguageService>のバージョンの新しいインスタンスを返すために、<xref:Microsoft.VisualStudio.Package.ExpansionFunction>各拡張機能をサポートするためのクラス。 オーバーライドする必要がある拡張機能を使用できる値のリストをサポートする場合、<xref:Microsoft.VisualStudio.Package.ExpansionFunction.GetIntellisenseList%2A>メソッドで、<xref:Microsoft.VisualStudio.Package.ExpansionFunction>クラスをそれらの値の一覧を返します。  

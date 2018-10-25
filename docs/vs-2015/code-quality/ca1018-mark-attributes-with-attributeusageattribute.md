@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1018: 属性を AttributeUsageAttribute |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: bfb9e7d954697fab554749dbd42155f92030ce88
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 277a9ff1db0001613bbd8c389b286c130ab17748
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589286"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906144"
 ---
 # <a name="ca1018-mark-attributes-with-attributeusageattribute"></a>CA1018: 属性を AttributeUsageAttribute に設定します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1018: 属性を AttributeUsageAttribute](https://docs.microsoft.com/visualstudio/code-quality/ca1018-mark-attributes-with-attributeusageattribute)します。
 
 |||
 |-|-|

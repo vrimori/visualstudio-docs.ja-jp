@@ -1,7 +1,7 @@
 ---
 title: ClickOnce とアプリケーションの設定 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 2aa565721bc934fb78a7b183b0e4b4b637bafaf8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 29f51960ad953318c8d9de749f28f684128e52ef
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539155"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49176987"
 ---
 # <a name="clickonce-and-application-settings"></a>ClickOnce とアプリケーション設定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ClickOnce とアプリケーション設定](https://docs.microsoft.com/visualstudio/deployment/clickonce-and-application-settings)します。  
-  
 Windows フォームのアプリケーション設定を簡単に作成、保存、およびカスタム アプリケーションとクライアント上のユーザー設定を管理します。 次のドキュメントでは、ClickOnce アプリケーションでのアプリケーション設定ファイルのしくみし、ユーザーが次のバージョンにアップグレードしたときに、ClickOnce が設定を移行する方法について説明します。  
   
  以下の情報は、既定のアプリケーション設定プロバイダーにのみ適用されます、<xref:System.Configuration.LocalFileSettingsProvider>クラス。 カスタム プロバイダーを指定すると、そのデータを格納する方法と、バージョン間で設定をアップグレードする方法、そのプロバイダーが判断されます。 アプリケーション設定プロバイダーの詳細については、次を参照してください。[アプリケーション設定アーキテクチャ](http://msdn.microsoft.com/library/c8eb2ad0-fac6-4ea2-9140-675a4a44d562)します。  

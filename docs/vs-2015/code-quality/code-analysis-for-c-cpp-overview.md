@@ -1,7 +1,7 @@
 ---
 title: コード分析を使用した C++ の概要について |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -27,18 +27,16 @@ caps.latest.revision: 27
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c6764e39d55ebe2ce11776035f25d6fdf69be081
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 42de573efcc44437eddf0e7d098681d05c094131
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545635"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49222041"
 ---
 # <a name="code-analysis-for-cc-overview"></a>C/C++ のコード分析の概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Code Analysis for C と C++ の概要](https://docs.microsoft.com/visualstudio/code-quality/code-analysis-for-c-cpp-overview)します。  
-  
 C/C++ コード分析ツールは、C/C++ ソース コードの障害に関する情報を開発者に提供します。 このツールによってレポートされる一般的なコーディング エラーとしては、バッファー オーバーラン、初期化されていないメモリ、null ポインターの逆参照、メモリ リーク、リソース リークなどがあります。  
   
 ## <a name="ide-integrated-development-environment-integration"></a>IDE (統合開発環境) の統合  

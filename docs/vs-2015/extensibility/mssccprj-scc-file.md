@@ -1,7 +1,7 @@
 ---
 title: MSSCCPRJ します。SCC ファイル |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 6f2e39d6-b79d-407e-976f-b62a3cedd378
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9a3387d5563cee60149c8d59a0d7f7179c211a10
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a220dbbf80320603b997f03ca16db58dd2865be0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544492"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49246026"
 ---
 # <a name="mssccprjscc-file"></a>MSSCCPRJ.SCC File
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MSSCCPRJ します。SCC ファイル](https://docs.microsoft.com/visualstudio/extensibility/mssccprj-scc-file)します。  
-  
 IDE を使用してソース管理下にある Visual Studio ソリューションまたはプロジェクトが配置されると、IDE は、文字列の形式でプラグインのソース管理から 2 つの重要な情報を受信します。 これらの文字列では、"AuxPath"と"ProjName"は、IDE に不透明ながプラグインによってバージョン管理でソリューションまたはプロジェクトを検索に使用されます。 IDE 通常取得これらの文字列を初めて呼び出すことによって、 [SccGetProjPath](../extensibility/sccgetprojpath-function.md)、し、それらを以降の呼び出しをソリューションまたはプロジェクト ファイルに保存し、 [SccOpenProject](../extensibility/sccopenproject-function.md)します。 ソリューションおよびプロジェクト ファイルに埋め込まれているときに、"AuxPath"および"ProjName"の文字列が自動的に更新されません、ユーザーは、分岐、フォーク、またはバージョン管理されているソリューションとプロジェクトのファイルをコピーします。 ソリューションおよびプロジェクト ファイルをバージョン管理での正しい場所を指していることを確認するに、ユーザーは、文字列を手動で更新する必要があります。 文字列は不透明になっているためにが必ずしもクリア更新方法です。  
   
  ソース管理プラグインは、MSSCCPRJ と呼ばれる特殊なファイルに、"AuxPath"および"ProjName"の文字列を格納することによってこの問題を回避できます。SCC ファイルです。 これはローカルのクライアント側のファイルが所有し、プラグインによって管理されます。 このファイルは、ソース管理下には格納されませんが、ソース管理ファイルを含むすべてのディレクトリのプラグインによって生成されます。 どのファイルは、Visual Studio のソリューションとプロジェクト ファイルを確認するには、ソース管理プラグインは、標準またはユーザーが指定したリストに対してファイルの拡張機能を比較できます。 IDE では、プラグインがサポートされている、MSSCCPRJ が検出されます。"AuxPath"を埋め込むなったら SCC ファイル、およびソリューションとプロジェクト ファイルへの文字列の"ProjName"が、MSSCCPRJ からこれらの文字列を読み取ります。SCC ファイルを代わりにします。  

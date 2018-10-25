@@ -1,7 +1,7 @@
 ---
 title: IEnumDebugFrameInfo2::Skip |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 68cd3948-022a-41ad-bd9f-9ab776cf6248
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 35959c7d59f2522f5b8920596c59b70521b0d252
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 76a5316b25439db0db95282c671ca96ea59d532f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533627"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845175"
 ---
 # <a name="ienumdebugframeinfo2skip"></a>IEnumDebugFrameInfo2::Skip
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IEnumDebugFrameInfo2::Skip](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ienumdebugframeinfo2-skip)します。  
-  
 指定した要素数をスキップします。  
   
 ## <a name="syntax"></a>構文  

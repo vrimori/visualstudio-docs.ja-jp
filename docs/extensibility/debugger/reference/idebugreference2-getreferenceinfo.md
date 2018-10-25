@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::GetReferenceInfo |Microsoft ドキュメント
+title: IDebugReference2::GetReferenceInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a40211c49f5255dba608d38529f7c56ac990e671
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8833b27d70a92091f809605edc81cd82a8a65f06
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31120450"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49870004"
 ---
 # <a name="idebugreference2getreferenceinfo"></a>IDebugReference2::GetReferenceInfo
 取得、 [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)の参照を記述する構造体。 将来使用するために予約されています。  
@@ -51,22 +51,22 @@ int GetReferenceInfo (
   
 #### <a name="parameters"></a>パラメーター  
  `dwFields`  
- [in]フラグの組み合わせ、 [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)記入するフィールドが決定する列挙体、 [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)構造体。  
+ [in]フラグの組み合わせ、 [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)入力するフィールドを決定する列挙体、 [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)構造体。  
   
  `nRadix`  
  [in]任意の数値情報を書式設定で使用する基数。  
   
  `dwTimeout`  
- [in]このメソッドから戻る前に待機するミリ秒単位の最大時間。 使用して`INFINITE`無制限に待機します。  
+ [in]このメソッドから戻る前に待機するミリ秒単位で最大時間。 使用`INFINITE`を無期限に待機します。  
   
  `rgpArgs`  
- [in]配列[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)オブジェクト。 将来使用するために予約されていますnull 値に設定されます。  
+ [in]配列の[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)オブジェクト。 今後使用するために予約されていますnull 値に設定します。  
   
  `dwArgCount`  
- [in]参照引数の数、`rgpArgs`配列。 将来使用するために予約されています0 に設定します。  
+ [in]参照引数の数、`rgpArgs`配列。 今後使用するために予約されています0 に設定します。  
   
  `pReferenceInfo`  
- [out]A [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)プロパティの説明が入力構造です。  
+ [out]A [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)構造、プロパティの説明が入力されます。  
   
 ## <a name="return-value"></a>戻り値  
  常に `E_NOTIMPL` を返します。  

@@ -1,7 +1,7 @@
 ---
 title: '方法: コード変更を停止 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 35d368d5489c08df2f267870d7f0221789fb7b6d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6d869e3e6be26db871deb3afc7bc398025cc15d0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535969"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862360"
 ---
 # <a name="how-to-stop-code-changes"></a>方法 : コード変更を中断する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: コード変更を中止](https://docs.microsoft.com/visualstudio/debugger/how-to-stop-code-changes)します。  
-  
 エディット コンティニュがコード変更を適用するプロセスを実行している間、その操作は中断できます。  
   
 > [!CAUTION]
@@ -44,11 +42,11 @@ ms.locfileid: "47535969"
   
 ### <a name="to-stop-applying-code-changes"></a>コードの変更内容の適用を停止するには  
   
--   選択**コードの変更の適用を停止**から、**デバッグ**メニュー。  
+- 選択**コードの変更の適用を停止**から、**デバッグ**メニュー。  
   
- このメニュー項目は、コード変更の適用中にのみ表示されます。  
+  このメニュー項目は、コード変更の適用中にのみ表示されます。  
   
- このオプションを選択すると、コードの変更内容は一切コミットされません。  
+  このオプションを選択すると、コードの変更内容は一切コミットされません。  
   
 ## <a name="see-also"></a>関連項目  
  [エディット コンティニュ](../debugger/edit-and-continue.md)   

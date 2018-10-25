@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 36bdcd7360099818ac8510d9eab87d6d3dc0f0fc
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: f00f668c3eac9a39251d0a4e19f98ed597c373db
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35257252"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873488"
 ---
 # <a name="how-to-expose-code-to-vba-in-a-visual-c-project"></a>方法: Visual c# プロジェクトでのコードを VBA に公開
   相互作用するコードの 2 つの種類の場合は、Visual c# プロジェクトを Visual Basic for Applications (VBA) コード内のコードを公開できます。  
@@ -39,56 +39,56 @@ ms.locfileid: "35257252"
   
 ### <a name="to-expose-code-in-a-visual-c-project-to-vba"></a>VBA に Visual c# プロジェクト内のコードを公開するには  
   
-1.  開くか、Word 文書、Excel ブックまたは Excel テンプレート、マクロをサポートして、VBA コードを既に含むに基づくドキュメント レベルのプロジェクトを作成します。  
+1. 開くか、Word 文書、Excel ブックまたは Excel テンプレート、マクロをサポートして、VBA コードを既に含むに基づくドキュメント レベルのプロジェクトを作成します。  
   
-     マクロをサポートするドキュメントのファイル形式の詳細については、次を参照してください。[結合 VBA とドキュメント レベルのカスタマイズ](../vsto/combining-vba-and-document-level-customizations.md)します。  
+    マクロをサポートするドキュメントのファイル形式の詳細については、次を参照してください。[結合 VBA とドキュメント レベルのカスタマイズ](../vsto/combining-vba-and-document-level-customizations.md)します。  
   
-    > [!NOTE]  
-    >  この機能は、Word テンプレート プロジェクトでは使用できません。  
+   > [!NOTE]  
+   >  この機能は、Word テンプレート プロジェクトでは使用できません。  
   
-2.  ドキュメント内の VBA コードがマクロを有効にするユーザーを確認なしで実行を許可されていることを確認します。 Word または Excel のセキュリティ センター設定の信頼できる場所の一覧に Office プロジェクトの場所を追加することによって、VBA コードの実行を信頼することができます。  
+2. ドキュメント内の VBA コードがマクロを有効にするユーザーを確認なしで実行を許可されていることを確認します。 Word または Excel のセキュリティ センター設定の信頼できる場所の一覧に Office プロジェクトの場所を追加することによって、VBA コードの実行を信頼することができます。  
   
-3.  プロジェクトで、パブリック クラスを VBA に公開するメンバーを追加し、新しいメンバーとして宣言**パブリック**します。  
+3. プロジェクトで、パブリック クラスを VBA に公開するメンバーを追加し、新しいメンバーとして宣言**パブリック**します。  
   
-4.  次の適用<xref:System.Runtime.InteropServices.ComVisibleAttribute>と<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>属性を VBA に公開するクラス。 これらの属性によってクラスが COM で表示されるようになりますが、クラスのインターフェイスは生成されません。  
+4. 次の適用<xref:System.Runtime.InteropServices.ComVisibleAttribute>と<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>属性を VBA に公開するクラス。 これらの属性によってクラスが COM で表示されるようになりますが、クラスのインターフェイスは生成されません。  
   
-    ```csharp  
-    [System.Runtime.InteropServices.ComVisible(true)]  
-    [System.Runtime.InteropServices.ClassInterface(  
-        System.Runtime.InteropServices.ClassInterfaceType.None)]  
-    ```  
+   ```csharp  
+   [System.Runtime.InteropServices.ComVisible(true)]  
+   [System.Runtime.InteropServices.ClassInterface(  
+       System.Runtime.InteropServices.ClassInterfaceType.None)]  
+   ```  
   
-5.  上書き、 **GetAutomationObject**を VBA に公開するクラスのインスタンスを返すプロジェクトでホスト項目クラスのメソッド。  
+5. 上書き、 **GetAutomationObject**を VBA に公開するクラスのインスタンスを返すプロジェクトでホスト項目クラスのメソッド。  
   
-    -   VBA にホスト項目クラスを公開する場合は、オーバーライド、 **GetAutomationObject** 、このクラスに属しているクラスの現在のインスタンスを返すメソッド。  
+   - VBA にホスト項目クラスを公開する場合は、オーバーライド、 **GetAutomationObject** 、このクラスに属しているクラスの現在のインスタンスを返すメソッド。  
   
-        ```csharp  
-        protected override object GetAutomationObject()  
-        {  
-            return this;  
-        }  
-        ```  
+     ```csharp  
+     protected override object GetAutomationObject()  
+     {  
+         return this;  
+     }  
+     ```  
   
-    -   VBA のホスト項目ではないクラスを公開する場合は、オーバーライド、 **GetAutomationObject**プロジェクト内の項目し、非ホスト項目クラスのインスタンスを返す任意のホストのメソッド。 たとえば、次のコードはという名前のクラスを公開することを仮定`DocumentUtilities`VBA にします。  
+   - VBA のホスト項目ではないクラスを公開する場合は、オーバーライド、 **GetAutomationObject**プロジェクト内の項目し、非ホスト項目クラスのインスタンスを返す任意のホストのメソッド。 たとえば、次のコードはという名前のクラスを公開することを仮定`DocumentUtilities`VBA にします。  
   
-        ```csharp  
-        protected override object GetAutomationObject()  
-        {  
-            return new DocumentUtilities();  
-        }  
-        ```  
+     ```csharp  
+     protected override object GetAutomationObject()  
+     {  
+         return new DocumentUtilities();  
+     }  
+     ```  
   
      ホスト項目の詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)します。  
   
-6.  VBA に公開するクラスからインターフェイスを抽出します。 **インターフェイスの抽出** ダイアログ ボックスで、インターフェイス宣言で追加するパブリック メンバーを選択します。 詳細については、次を参照してください。[抽出インターフェイス リファクタリング](../ide/reference/extract-interface.md)します。
+6. VBA に公開するクラスからインターフェイスを抽出します。 **インターフェイスの抽出** ダイアログ ボックスで、インターフェイス宣言で追加するパブリック メンバーを選択します。 詳細については、次を参照してください。[抽出インターフェイス リファクタリング](../ide/reference/extract-interface.md)します。
   
-7.  追加、**パブリック**キーワードをインターフェイスの宣言にします。  
+7. 追加、**パブリック**キーワードをインターフェイスの宣言にします。  
   
-8.  次を追加することで、インターフェイスを COM に表示されるように<xref:System.Runtime.InteropServices.ComVisibleAttribute>属性をインターフェイス。  
+8. 次を追加することで、インターフェイスを COM に表示されるように<xref:System.Runtime.InteropServices.ComVisibleAttribute>属性をインターフェイス。  
   
-    ```csharp  
-    [System.Runtime.InteropServices.ComVisible(true)]  
-    ```  
+   ```csharp  
+   [System.Runtime.InteropServices.ComVisible(true)]  
+   ```  
   
 9. (Word) のドキュメントまたはワークシート (for Excel) をデザイナーで開く[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。  
   

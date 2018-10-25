@@ -1,7 +1,7 @@
 ---
 title: '1716: ca 識別子とキーワード |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: c1a3affbecf7a39ee323fd64bc8a56d92e8a4d5e
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 000e28642a10c565e525b2714eed0d7abaca9340
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589161"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858876"
 ---
 # <a name="ca1716-identifiers-should-not-match-keywords"></a>CA1716: 識別子はキーワードと同一にすることはできません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA1716: 識別子はキーワードと](https://docs.microsoft.com/visualstudio/code-quality/ca1716-identifiers-should-not-match-keywords)します。
 
 |||
 |-|-|
@@ -47,13 +45,13 @@ ms.locfileid: "47589161"
 
  このルールは、次の言語のキーワードを確認します。
 
--   Visual Basic
+- Visual Basic
 
--   C#
+- C#
 
--   C++/CLI
+- C++/CLI
 
- 大文字と小文字が使用される[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]他の言語キーワード、および大文字小文字の比較を使用します。
+  大文字と小文字が使用される[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]他の言語キーワード、および大文字小文字の比較を使用します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  キーワードの一覧に表示されていない名前を選択します。

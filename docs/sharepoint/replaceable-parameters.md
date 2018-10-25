@@ -18,12 +18,12 @@ author: TerryGLee
 ms.author: tglee
 manager: douge
 ms.workload: office
-ms.openlocfilehash: f6e311f7c0268cecb94498fffda702438ea921b0
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: e79442ea42583f326f9cb59360777269c399b7a0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119937"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49879299"
 ---
 # <a name="replaceable-parameters"></a>置き換え可能パラメーター
   置き換え可能パラメーター、または*トークン*、実際の値は、デザイン時にわかっていない SharePoint のソリューション項目の値を指定するプロジェクト ファイル内で使用できます。 標準の関数と似ています[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]テンプレート トークンです。 詳細については、次を参照してください。[テンプレート パラメーター](/visualstudio/ide/template-parameters)します。  
@@ -34,17 +34,17 @@ ms.locfileid: "37119937"
 ## <a name="token-rules"></a>トークンの規則
  トークンに、次の規則が適用されます。  
   
--   トークンは、行の任意の場所に指定できます。  
+- トークンは、行の任意の場所に指定できます。  
   
--   トークンは、複数行にまたがることはできません。  
+- トークンは、複数行にまたがることはできません。  
   
--   同じファイルで同じ行に 2 回以上同じトークンを指定する可能性があります。  
+- 同じファイルで同じ行に 2 回以上同じトークンを指定する可能性があります。  
   
--   同じ行にさまざまなトークンを指定することがあります。  
+- 同じ行にさまざまなトークンを指定することがあります。  
   
- これらの規則に従っていないトークンは無視され、警告またはエラーにはなりません。  
+  これらの規則に従っていないトークンは無視され、警告またはエラーにはなりません。  
   
- 文字列値を使用してトークンの置換は、マニフェストの変換の直後に実行されます。 この置換は、トークンを使用したマニフェスト テンプレートを編集できます。  
+  文字列値を使用してトークンの置換は、マニフェストの変換の直後に実行されます。 この置換は、トークンを使用したマニフェスト テンプレートを編集できます。  
   
 ### <a name="token-name-resolution"></a>トークン名の解決
  ほとんどの場合は、トークンが含まれる場所に関係なく、特定の値に解決されます。 ただし、パッケージまたは機能には、トークンが関連付けられている場合、トークンの値は、含まれているに依存します。 たとえば、機能が場合は、トークンをパッケージ`$SharePoint.Package.Name$`「パッケージ A.」の値を解決します。 同じ機能がパッケージ b、かどうか`$SharePoint.Package.Name$`「パッケージ b.」に解決されます  
@@ -52,7 +52,7 @@ ms.locfileid: "37119937"
 ## <a name="tokens-list"></a>トークンの一覧
  次の表は、使用可能なトークンを一覧表示します。  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |$SharePoint.Project.FileName$|格納先の名前のプロジェクト ファイルなど、 *NewProj.csproj*します。|  
 |$SharePoint.Project.FileNameWithoutExtension$|ファイル名拡張子を除いた含むプロジェクト ファイルの名前。 たとえば、"NewProj"です。|  
@@ -75,19 +75,19 @@ ms.locfileid: "37119937"
 ## <a name="add-extensions-to-the-token-replacement-file-extensions-list"></a>トークンの置換後のファイル拡張子の一覧に拡張機能を追加します。
  理論的には既定では、パッケージ内に、項目に含まれる SharePoint プロジェクトに属しているすべてのファイルでのトークンを使用できますが[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]パッケージ ファイル、マニフェスト ファイルは、次の拡張子を持つファイルでのみトークンを検索します。  
   
--   [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]  
+- [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]  
   
--   ASCX  
+- ASCX  
   
--   ASPX  
+- ASPX  
   
--   Web パーツ  
+- Web パーツ  
   
--   DWP  
+- DWP  
   
- これらの拡張機能がによって定義されている、`<TokenReplacementFileExtensions>`内にある、Microsoft.VisualStudio.SharePoint.targets ファイル内の要素、.\\< プログラム ファイル\>\MSBuild\Microsoft\VisualStudio\v11.0\SharePointTools フォルダー。  
+  これらの拡張機能がによって定義されている、`<TokenReplacementFileExtensions>`内にある、Microsoft.VisualStudio.SharePoint.targets ファイル内の要素、.\\< プログラム ファイル\>\MSBuild\Microsoft\VisualStudio\v11.0\SharePointTools フォルダー。  
   
- ただし、一覧に追加のファイル拡張子を追加することができます。 追加、`<TokenReplacementFileExtensions>`する前に定義されている SharePoint プロジェクト ファイル内の任意の PropertyGroup 要素、\<インポート > のターゲットの SharePoint ファイル。  
+  ただし、一覧に追加のファイル拡張子を追加することができます。 追加、`<TokenReplacementFileExtensions>`する前に定義されている SharePoint プロジェクト ファイル内の任意の PropertyGroup 要素、\<インポート > のターゲットの SharePoint ファイル。  
   
 > [!NOTE]  
 >  など、コンパイルされるファイルの種類のファイル拡張子を追加しないでくださいトークンの置換は、プロジェクトをコンパイルした後に発生するため、 *.cs*、 *.vb*または *.resx*します。 コンパイルされないファイルだけには、トークンが置き換えられます。  
@@ -110,5 +110,5 @@ ms.locfileid: "37119937"
  ターゲットに直接、拡張機能を追加することができます (*.targets*) ファイル。 ただし、拡張機能は、ローカル システムにパッケージ化されたすべての SharePoint プロジェクトの拡張機能の一覧を変更します。 追加すると、だけでなく、独自です。 この拡張機能は、システムの唯一の開発者の場合、または、プロジェクトの大半が必要な場合に便利な可能性があります。 ただし、システムに固有では、この方法は、ポータブルではありません、およびそのため、ことが推奨されますので、追加するすべての拡張機能プロジェクト ファイルに代わりにします。  
   
 ## <a name="see-also"></a>関連項目
- [SharePoint ソリューションを開発します。](../sharepoint/developing-sharepoint-solutions.md)  
+ [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   

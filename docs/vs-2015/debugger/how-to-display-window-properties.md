@@ -1,7 +1,7 @@
 ---
 title: '方法: ウィンドウのプロパティの表示 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,25 +16,23 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f936b5b8507b374cc3b49db460c81c0a54fd964e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6a83374015fcdada482099982f0294660412a0cc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546289"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823711"
 ---
 # <a name="how-to-display-window-properties"></a>方法: ウィンドウのプロパティを表示する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ウィンドウの表示プロパティ](https://docs.microsoft.com/visualstudio/debugger/how-to-display-window-properties)します。  
-  
 表示ウィンドウの詳細を確認する[Windows ビュー](../debugger/windows-view.md)を使用して、[ウィンドウ プロパティ ダイアログ ボックス](../debugger/window-properties-dialog-box.md)します。  
   
 ### <a name="to-open-the-window-properties-dialog-box"></a>[ウィンドウ プロパティ] ダイアログ ボックスを開く  
   
-1.  項目を選択し、**プロパティ**から、**ビュー**メニュー。  
+1. 項目を選択し、**プロパティ**から、**ビュー**メニュー。  
   
- プロパティ ダイアログ ボックスがモーダルではありません。 ビュー ウィンドウの項目から項目をクリックすると、ダイアログ ボックスは選択された各項目に関する情報を自動的に更新します。
+   プロパティ ダイアログ ボックスがモーダルではありません。 ビュー ウィンドウの項目から項目をクリックすると、ダイアログ ボックスは選択された各項目に関する情報を自動的に更新します。
 
 
 

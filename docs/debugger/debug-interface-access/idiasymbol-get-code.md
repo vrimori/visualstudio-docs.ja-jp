@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_code |Microsoft ドキュメント
+title: Idiasymbol::get_code |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: abe363ca4b5dff450c8324f49e8408681d64d6c4
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d157e33581054e3aa8f79f60cb1d3609dc16b6ba
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31463664"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841664"
 ---
 # <a name="idiasymbolgetcode"></a>IDiaSymbol::get_code
-シンボルはコードのアドレスを参照するかどうかを指定するフラグを取得します。  
+シンボルがコード アドレスを参照するかどうかを指定するフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,19 +34,19 @@ HRESULT get_code (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]返します`TRUE`シンボルは、コードのアドレスを参照している場合を返しますそれ以外の場合、`FALSE`です。  
+ [out]返します`TRUE`シンボルは、コードのアドレスを参照している場合を返しますそれ以外の場合、`FALSE`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|dia2.h|  
+|ヘッダー:|Dia2.h|  
 |バージョン:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>関連項目  

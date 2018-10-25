@@ -1,7 +1,7 @@
 ---
 title: アプリケーション プロパティ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,47 +18,45 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9f56ede85ffe643b995e3c7b51327693c8ef8847
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a89832fe70e2e19085e8006646de5370b6019cbc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533610"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49848619"
 ---
 # <a name="application-properties"></a>Application Properties
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[アプリケーション プロパティ](https://docs.microsoft.com/visualstudio/ide/application-properties)します。  
-  
 Visual Basic、C#、および F# アプリケーションの全般的なアプリケーション プロパティとして、アプリケーションの種類、スタートアップ オブジェクト、アセンブリ情報などを、**[プロジェクト デザイナー]** の **[アプリケーション]** ウィンドウで設定できます。  
   
  **[アプリケーション]** ウィンドウでは、次のタスクを実行できます。  
   
--   アセンブリ情報の指定  
+- アセンブリ情報の指定  
   
--   アプリケーションのスプラッシュ スクリーンの指定  
+- アプリケーションのスプラッシュ スクリーンの指定  
   
--   アプリケーション レベルのイベントの指定  
+- アプリケーション レベルのイベントの指定  
   
--   アセンブリ名の変更  
+- アセンブリ名の変更  
   
--   アプリケーションの名前空間の変更  
+- アプリケーションの名前空間の変更  
   
--   アプリケーションの種類の変更  
+- アプリケーションの種類の変更  
   
--   アプリケーションのスタートアップ オブジェクトの変更  
+- アプリケーションのスタートアップ オブジェクトの変更  
   
--   アプリケーション アイコンの指定  
+- アプリケーション アイコンの指定  
   
--   Windows XP の視覚スタイルの有効化  
+- Windows XP の視覚スタイルの有効化  
   
--   アプリケーションのインスタンス化動作の指定  
+- アプリケーションのインスタンス化動作の指定  
   
--   カスタムのユーザー認証の有効化  
+- カスタムのユーザー認証の有効化  
   
--   アプリケーションのシャットダウン時の動作の指定  
+- アプリケーションのシャットダウン時の動作の指定  
   
- アプリケーションで使用できるタスクは、使用する開発言語に応じて異なります。  
+  アプリケーションで使用できるタスクは、使用する開発言語に応じて異なります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法 : アプリケーション アイコンを指定する (Visual Basic、C#)](../ide/how-to-specify-an-application-icon-visual-basic-csharp.md)  

@@ -1,7 +1,7 @@
 ---
 title: '方法: ドメイン固有言語における標準のメニュー コマンドの変更 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,29 +15,27 @@ caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 740e26434190857907af61170222922180abc9b8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3d29a501ef6f55c835efd68e474bc39a847f745d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537392"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837567"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>方法: ドメイン固有言語における標準のメニュー コマンドを修正する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ドメイン固有言語における標準のメニュー コマンドを修正](https://docs.microsoft.com/visualstudio/modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language)します。  
-  
 DSL で自動的に定義される標準コマンドのいくつかの動作を変更できます。 たとえば、変更する可能性があります**切り取り**機密情報を除外することです。 そのためには、コマンド セット クラス内でメソッドをオーバーライドします。 これらのクラスは DslPackage プロジェクト内の CommandSet.cs ファイルで定義され、<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> から派生します。  
   
  要約すると、コマンドを変更するには以下の操作を実行します。  
   
-1.  [コマンドを変更することを検出](#what)します。  
+1. [コマンドを変更することを検出](#what)します。  
   
-2.  [適切なコマンド セット クラスの部分宣言を作成](#extend)です。  
+2. [適切なコマンド セット クラスの部分宣言を作成](#extend)です。  
   
-3.  [ProcessOnStatus および ProcessOnMenu メソッドをオーバーライド](#override)コマンド。  
+3. [ProcessOnStatus および ProcessOnMenu メソッドをオーバーライド](#override)コマンド。  
   
- このトピックではこの手順を説明します。  
+   このトピックではこの手順を説明します。  
   
 > [!NOTE]
 >  独自のメニュー コマンドを作成する場合を参照してください。[方法: ショートカット メニューにコマンドを追加](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)します。  
@@ -141,19 +139,19 @@ protected override void ProcessOnMenuDeleteCommand()
 ### <a name="writing-the-code-of-the-methods"></a>メソッドのコードの記述  
  次のコード片はこれらのメソッド内で頻繁に役立ちます。  
   
--   `this.CurrentSelection`。 ユーザーが右クリックした図形は常にこの図形およびコネクタの一覧に含まれます。 ユーザーが図の空白部分をクリックした場合、このリストのメンバーは図のみになります。  
+- `this.CurrentSelection`。 ユーザーが右クリックした図形は常にこの図形およびコネクタの一覧に含まれます。 ユーザーが図の空白部分をクリックした場合、このリストのメンバーは図のみになります。  
   
--   `this.IsDiagramSelected()` - `true` 場合は、ユーザーは、図の空白部分をクリックしました。  
+- `this.IsDiagramSelected()` - `true` 場合は、ユーザーは、図の空白部分をクリックしました。  
   
--   `this.IsCurrentDiagramEmpty()`  
+- `this.IsCurrentDiagramEmpty()`  
   
--   `this.IsSingleSelection()` - ユーザーは複数の図形を選択しませんでした  
+- `this.IsSingleSelection()` - ユーザーは複数の図形を選択しませんでした  
   
--   `this.SingleSelection` - ユーザーが右クリックした図形または図  
+- `this.SingleSelection` - ユーザーが右クリックした図形または図  
   
--   `shape.ModelElement as MyLanguageElement` - 図形により表されるモデル要素。  
+- `shape.ModelElement as MyLanguageElement` - 図形により表されるモデル要素。  
   
- 要素間を移動する方法およびオブジェクトとリンクを作成する方法についての詳細については、次を参照してください。[を移動すると、プログラム コードでのモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)します。  
+  要素間を移動する方法およびオブジェクトとリンクを作成する方法についての詳細については、次を参照してください。[を移動すると、プログラム コードでのモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.ComponentModel.Design.MenuCommand>   

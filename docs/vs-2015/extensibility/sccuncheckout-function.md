@@ -1,7 +1,7 @@
 ---
 title: SccUncheckout 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 6d498b70-29c7-44b7-ae1c-7e99e488bb09
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9b74e4c2ebc672af11133c0afd1237cc27169ca6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 42bfef987644b3afa2b4aa2b6048ba8f17f526e5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544455"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948578"
 ---
 # <a name="sccuncheckout-function"></a>SccUncheckout 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[SccUncheckout 関数](https://docs.microsoft.com/visualstudio/extensibility/sccuncheckout-function)します。  
-  
 この関数は、選択したファイルまたはファイルの内容をチェック アウトする前の状態に復元できるため、以前のチェック アウト操作を元に戻します。 チェック アウト後、ファイルに加えた変更は失われます。  
   
 ## <a name="syntax"></a>構文  

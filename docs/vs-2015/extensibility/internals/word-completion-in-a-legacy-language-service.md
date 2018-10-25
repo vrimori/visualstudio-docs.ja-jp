@@ -1,7 +1,7 @@
 ---
 title: 従来の言語サービスで word の完了 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 0ace5ac3-f9e1-4e6d-add4-42967b1f96a6
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cd176c232bafd0d5a7a2b6735ba71b2bb490781d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b1cf22cd0bc717e9e9e3d0b06b76bed8420d1778
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547744"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910798"
 ---
 # <a name="word-completion-in-a-legacy-language-service"></a>従来の言語サービスでの単語補完
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[従来の言語サービスでの単語補完](https://docs.microsoft.com/visualstudio/extensibility/internals/word-completion-in-a-legacy-language-service)します。  
-  
 単語補完は、部分的に型指定された単語の文字がない場合に格納します。 補完候補の 1 つだけがあると、入力候補の文字が入力されると、word は完了します。 単語の一部には、1 つ以上の可能性が一致すると、候補の一覧が表示されます。 終了文字には、識別子が使用されない任意の文字を指定できます。  
   
  従来の言語サービスは、VSPackage の一部として実装されますが、言語サービスの機能を実装する新しい方法は MEF 拡張機能を使用します。 詳細については、次を参照してください。[エディターと言語サービス拡張](../../extensibility/extending-the-editor-and-language-services.md)します。  
@@ -38,15 +36,15 @@ ms.locfileid: "47547744"
   
 ## <a name="implementation-steps"></a>実装手順  
   
-1.  ユーザーが選択すると**入力候補**から、 **IntelliSense** ] メニューの [、<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>コマンド言語サービスに送信されます。  
+1. ユーザーが選択すると**入力候補**から、 **IntelliSense** ] メニューの [、<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>コマンド言語サービスに送信されます。  
   
-2.  <xref:Microsoft.VisualStudio.Package.ViewFilter>クラスは、コマンド ウィンドウと呼び出しをキャッチ、<xref:Microsoft.VisualStudio.Package.Source.Completion%2A>メソッドの解析の理由で<xref:Microsoft.VisualStudio.Package.ParseReason>します。  
+2. <xref:Microsoft.VisualStudio.Package.ViewFilter>クラスは、コマンド ウィンドウと呼び出しをキャッチ、<xref:Microsoft.VisualStudio.Package.Source.Completion%2A>メソッドの解析の理由で<xref:Microsoft.VisualStudio.Package.ParseReason>します。  
   
-3.  <xref:Microsoft.VisualStudio.Package.Source>呼び出し、クラス、その、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>可能性がある単語の入力候補とツール ヒント内の単語の一覧を使用して、表示の一覧を取得するメソッド、<xref:Microsoft.VisualStudio.Package.CompletionSet>クラス。  
+3. <xref:Microsoft.VisualStudio.Package.Source>呼び出し、クラス、その、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>可能性がある単語の入力候補とツール ヒント内の単語の一覧を使用して、表示の一覧を取得するメソッド、<xref:Microsoft.VisualStudio.Package.CompletionSet>クラス。  
   
-     1 つだけに一致する単語がある場合、<xref:Microsoft.VisualStudio.Package.Source>クラスがという単語を完了します。  
+    1 つだけに一致する単語がある場合、<xref:Microsoft.VisualStudio.Package.Source>クラスがという単語を完了します。  
   
- または、スキャナーは、トリガーの値を返す場合<xref:Microsoft.VisualStudio.Package.TokenTriggers>識別子の最初の文字を入力すると、<xref:Microsoft.VisualStudio.Package.Source>クラスは、これを検出し、呼び出し、<xref:Microsoft.VisualStudio.Package.Source.Completion%2A>メソッドの解析の理由で<xref:Microsoft.VisualStudio.Package.ParseReason>。 この場合、パーサーはメンバーの選択範囲の文字の存在を検出し、メンバーの一覧を指定する必要があります。  
+   または、スキャナーは、トリガーの値を返す場合<xref:Microsoft.VisualStudio.Package.TokenTriggers>識別子の最初の文字を入力すると、<xref:Microsoft.VisualStudio.Package.Source>クラスは、これを検出し、呼び出し、<xref:Microsoft.VisualStudio.Package.Source.Completion%2A>メソッドの解析の理由で<xref:Microsoft.VisualStudio.Package.ParseReason>。 この場合、パーサーはメンバーの選択範囲の文字の存在を検出し、メンバーの一覧を指定する必要があります。  
   
 ## <a name="enabling-support-for-the-complete-word"></a>入力候補のサポートを有効にします。  
  単語の入力候補のセットのサポートを有効にする、`CodeSense`名前付きパラメーターに渡される、<xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>言語パッケージに関連付けられているユーザーの属性。 これにより設定、<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A>プロパティを<xref:Microsoft.VisualStudio.Package.LanguagePreferences>クラス。  

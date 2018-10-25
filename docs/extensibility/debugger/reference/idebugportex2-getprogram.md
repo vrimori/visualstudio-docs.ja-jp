@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2::GetProgram |Microsoft ドキュメント
+title: IDebugPortEx2::GetProgram |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 750c0923db67a2e8c67dc2dc9e8793606653d691
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9b20caf57b5b669126323fff63fb401627ffbb62
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31113696"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842359"
 ---
 # <a name="idebugportex2getprogram"></a>IDebugPortEx2::GetProgram
-プログラムのノードに関連付けられているプログラムを取得します。  
+プログラム ノードに関連付けられているプログラムを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ int GetProgram(
  [out]返します、 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)プログラム ノードに関連付けられているプログラムを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)   

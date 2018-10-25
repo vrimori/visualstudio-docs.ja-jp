@@ -1,7 +1,7 @@
 ---
 title: 起動後のアタッチ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 5a3600a1-dc20-4e55-b2a4-809736a6ae65
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 874d9034abed93ab504730c628833d4d60f02452
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ddc66b7037c05458062a87eb8ddd757e32c91590
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535122"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49193857"
 ---
 # <a name="attaching-after-a-launch"></a>起動後のアタッチ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[、起動後にアタッチ](https://docs.microsoft.com/visualstudio/extensibility/debugger/attaching-after-a-launch)します。  
-  
 プログラムが起動された後に、デバッグ セッションはそのプログラムをデバッグ エンジン (DE) をアタッチする準備が。  
   
 ## <a name="design-decisions"></a>設計上の決定  

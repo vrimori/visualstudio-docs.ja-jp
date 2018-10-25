@@ -1,7 +1,7 @@
 ---
 title: 従来の言語サービスでのメンバー補完 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 500f718d-9028-49a4-8615-ba95cf47fc52
 caps.latest.revision: 22
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6c17404b115c7e8b3f8036c52e493f6932411731
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 321cbd6482be088bd57c94224c41d4626a86a0f1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533946"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892689"
 ---
 # <a name="member-completion-in-a-legacy-language-service"></a>従来の言語サービスでのメンバー補完
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[従来の言語サービスでのメンバー補完](https://docs.microsoft.com/visualstudio/extensibility/internals/member-completion-in-a-legacy-language-service)します。  
-  
 IntelliSense メンバー入力候補は、クラス、構造体、列挙型、または名前空間などの特定のスコープの可能なメンバーの一覧を表示するツールヒント。 たとえば、c# の場合は、ユーザーが"this"に続けて、ピリオドを入力クラスまたは現在のスコープでの構造体のすべてのメンバーの一覧が含まれる場合ユーザーが選択できる一覧。  
   
  Managed package framework (MPF) ツール ヒントおよび; ツール ヒントの一覧を管理するためのサポートを提供しますために必要なすべてが、一覧に表示されるデータを提供するためにパーサーからの協力します。  
@@ -41,11 +39,11 @@ IntelliSense メンバー入力候補は、クラス、構造体、列挙型、�
 ## <a name="how-it-works"></a>しくみ  
  MPF クラスを使用してメンバーの一覧が表示される 2 つの方法は、次のように。  
   
--   識別子の上またはメンバー入力候補の文字の後にキャレットを配置し、選択**メンバーの一覧**から、 **IntelliSense**メニュー。  
+- 識別子の上またはメンバー入力候補の文字の後にキャレットを配置し、選択**メンバーの一覧**から、 **IntelliSense**メニュー。  
   
--   <xref:Microsoft.VisualStudio.Package.IScanner>スキャナーは、メンバー入力候補の文字を検出し、トークンのトリガーを設定<xref:Microsoft.VisualStudio.Package.TokenTriggers>その文字。  
+- <xref:Microsoft.VisualStudio.Package.IScanner>スキャナーは、メンバー入力候補の文字を検出し、トークンのトリガーを設定<xref:Microsoft.VisualStudio.Package.TokenTriggers>その文字。  
   
- メンバー入力候補の文字は、クラス、構造体、列挙体のメンバーが次のことを示します。 たとえば、c# または Visual Basic でメンバー入力候補の文字は、 `.`、C++ では、文字ではいずれかを`.`または`->`します。 メンバー選択文字がスキャンされたときに、トリガーの値が設定されます。  
+  メンバー入力候補の文字は、クラス、構造体、列挙体のメンバーが次のことを示します。 たとえば、c# または Visual Basic でメンバー入力候補の文字は、 `.`、C++ では、文字ではいずれかを`.`または`->`します。 メンバー選択文字がスキャンされたときに、トリガーの値が設定されます。  
   
 ### <a name="the-intellisense-member-list-command"></a>IntelliSense のメンバーの一覧表示コマンド  
  <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>コマンドへの呼び出しを開始する、<xref:Microsoft.VisualStudio.Package.Source.Completion%2A>メソッドを<xref:Microsoft.VisualStudio.Package.Source>クラスと<xref:Microsoft.VisualStudio.Package.Source.Completion%2A>メソッドを呼び出す、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッド パーサーの解析の理由で<xref:Microsoft.VisualStudio.Package.ParseReason>。  

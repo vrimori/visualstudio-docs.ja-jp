@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbols::next |Microsoft ドキュメント
+title: Idiaenumsymbols::next |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f419716901d35ea667f5e99a0c452d6e1b4d186c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: eaa9f5f1a822660d38f954f4f6bd2ee383cd9a2a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31459624"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867482"
 ---
 # <a name="idiaenumsymbolsnext"></a>IDiaEnumSymbols::Next
-列挙のシーケンス内のシンボルの指定した数を取得します。  
+指定された数の列挙体シーケンス内のシンボルを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,16 +36,16 @@ HRESULT Next (
   
 #### <a name="parameters"></a>パラメーター  
  celt  
- [in]取得する列挙子内のシンボルの数。  
+ [in]シンボルを取得する列挙子の数。  
   
  rgelt  
- [out]格納するのには配列を[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)必要なシンボルを表すオブジェクト。  
+ [out]格納する配列、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)必要なシンボルを表すオブジェクト。  
   
  pceltFetched  
  [out]フェッチされた列挙子の記号の数を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 返します`S_FALSE`シンボルがある場合。 それ以外の場合はエラー コードを返します。  
+ 成功した場合、返します`S_OK`します。 返します`S_FALSE`シンボルがある場合。 それ以外の場合はエラー コードを返します。  
   
 ## <a name="example"></a>例  
   

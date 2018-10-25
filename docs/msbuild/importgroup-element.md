@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 184c7ee5fc5155b532243c51f85d8b5420892925
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 2410314cf6f32024b711e1d2b6eeeab8d920efae
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079243"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49885631"
 ---
 # <a name="importgroup-element"></a>ImportGroup 要素
 オプションの条件下でグループ化された `Import` 要素のコレクションが格納されます。 詳しくは、「[Import 要素 (MSBuild)](../msbuild/import-element-msbuild.md)」をご覧ください。  
@@ -57,9 +57,9 @@ ms.locfileid: "39079243"
 
 ### <a name="parent-elements"></a>親要素  
 
-|要素|説明|  
-|-------------|-----------------|  
-|[プロジェクト](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。|  
+| 要素 | 説明 |
+| - | - |
+| [プロジェクト](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。 |
 
 ## <a name="example"></a>例  
  次に示すのは、`ImportGroup` 要素のコード例です。  

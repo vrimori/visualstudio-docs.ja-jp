@@ -1,7 +1,7 @@
 ---
 title: ウィンドウのプロパティ ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,22 +16,20 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ab4606972db64fe0e89cd0585b85353bfe0e2d37
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: eee934eb2a0b1fa04a85dc77735e3d92dcbff80e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536108"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49288016"
 ---
 # <a name="window-properties-dialog-box"></a>[ウィンドウ プロパティ] ダイアログ ボックス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ウィンドウ プロパティ ダイアログ ボックス](https://docs.microsoft.com/visualstudio/debugger/window-properties-dialog-box)します。  
-  
 特定のウィンドウの詳細を確認するには、このダイアログ ボックスを使用します。 このダイアログ ボックスを表示するには、フォーカスを移動、 [Windows ビュー](../debugger/windows-view.md)ウィンドウ。 ツリーで、ウィンドウの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [[全般] タブ。ウィンドウのプロパティ] ダイアログ ボックス](../debugger/general-tab-window-properties-dialog-box.md)  
+ [[全般] タブ。ウィンドウのプロパティ ダイアログ ボックス](../debugger/general-tab-window-properties-dialog-box.md)  
  選択したウィンドウに関する情報が表示されます。  
   
  [スタイルタブウィンドウのプロパティ ダイアログ ボックス](../debugger/styles-tab-window-properties-dialog-box.md)  
@@ -40,10 +38,10 @@ ms.locfileid: "47536108"
  [Windows タブ。ウィンドウのプロパティ ダイアログ ボックス](../debugger/windows-tab-window-properties-dialog-box.md)  
  選択したウィンドウに関連する windows 上の情報を表示します。  
   
- [[クラス] タブウィンドウのプロパティ] ダイアログ ボックス](../debugger/class-tab-window-properties-dialog-box.md)  
+ [[クラス] タブウィンドウのプロパティ ダイアログ ボックス](../debugger/class-tab-window-properties-dialog-box.md)  
  選択したウィンドウのクラスに情報が表示されます。  
   
- [[プロセス] タブ。ウィンドウのプロパティ] ダイアログ ボックス](../debugger/process-tab-window-properties-dialog-box.md)  
+ [[プロセス] タブ。ウィンドウのプロパティ ダイアログ ボックス](../debugger/process-tab-window-properties-dialog-box.md)  
  選択したウィンドウのプロセスを識別します。  
   
 ## <a name="related-sections"></a>関連項目  

@@ -1,7 +1,7 @@
 ---
 title: レガシ言語の Service2 の実装 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,33 +15,31 @@ ms.assetid: 5bcafdc5-f922-48f6-a12e-6c8507a79a05
 caps.latest.revision: 27
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e0b812fd0cc54f117e89d09f151293eec1cf6fe8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1fb00e995e1a684438e99428437b4bca1069b970
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534648"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831381"
 ---
 # <a name="implementing-a-legacy-language-service"></a>従来の言語サービスを実装します。
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[レガシ言語 service2 などを実装する](https://docs.microsoft.com/visualstudio/extensibility/internals/implementing-a-legacy-language-service2)します。  
-  
 Managed package framework (MPF) を使用して、言語サービスを実装するからクラスを派生する必要があります、<xref:Microsoft.VisualStudio.Package.LanguageService>クラスし、次の抽象メソッドとプロパティを実装します。  
   
--   <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A> メソッド  
+- <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A> メソッド  
   
--   <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> メソッド  
+- <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> メソッド  
   
--   <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> メソッド  
+- <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> メソッド  
   
--   <xref:Microsoft.VisualStudio.Package.LanguageService.Name%2A> プロパティ  
+- <xref:Microsoft.VisualStudio.Package.LanguageService.Name%2A> プロパティ  
   
- これらのメソッドとプロパティを実装する方法の詳細については、以下の適切なセクションを参照してください。  
+  これらのメソッドとプロパティを実装する方法の詳細については、以下の適切なセクションを参照してください。  
   
- その他の機能をサポートするために、言語サービスは、MPF 言語サービス クラスの 1 つからクラスを派生する必要があります。たとえば、追加のメニュー コマンドをサポートするためにする必要がありますからクラスを派生、<xref:Microsoft.VisualStudio.Package.ViewFilter>クラスし、メソッドを処理するコマンドのいくつかのオーバーライド (を参照してください<xref:Microsoft.VisualStudio.Package.ViewFilter>詳細については)。 <xref:Microsoft.VisualStudio.Package.LanguageService>クラスは、多数のさまざまなクラスの新しいインスタンスを作成すると呼び出されるメソッドを提供し、クラスのインスタンスを提供する適切な作成メソッドをオーバーライドします。 たとえば、オーバーライドする必要があります、<xref:Microsoft.VisualStudio.Package.LanguageService.CreateViewFilter%2A>メソッドで、<xref:Microsoft.VisualStudio.Package.LanguageService>クラス独自のインスタンスを返す<xref:Microsoft.VisualStudio.Package.ViewFilter>クラス。 詳細については、「カスタム クラスをインスタンス化する」セクションを参照してください。  
+  その他の機能をサポートするために、言語サービスは、MPF 言語サービス クラスの 1 つからクラスを派生する必要があります。たとえば、追加のメニュー コマンドをサポートするためにする必要がありますからクラスを派生、<xref:Microsoft.VisualStudio.Package.ViewFilter>クラスし、メソッドを処理するコマンドのいくつかのオーバーライド (を参照してください<xref:Microsoft.VisualStudio.Package.ViewFilter>詳細については)。 <xref:Microsoft.VisualStudio.Package.LanguageService>クラスは、多数のさまざまなクラスの新しいインスタンスを作成すると呼び出されるメソッドを提供し、クラスのインスタンスを提供する適切な作成メソッドをオーバーライドします。 たとえば、オーバーライドする必要があります、<xref:Microsoft.VisualStudio.Package.LanguageService.CreateViewFilter%2A>メソッドで、<xref:Microsoft.VisualStudio.Package.LanguageService>クラス独自のインスタンスを返す<xref:Microsoft.VisualStudio.Package.ViewFilter>クラス。 詳細については、「カスタム クラスをインスタンス化する」セクションを参照してください。  
   
- 言語サービスでは、多くの場所で使用される独自のアイコンも指定できます。 リスト内の各項目は、項目をマークするメソッド、クラス、名前空間、プロパティ、それに関連付けられているアイコンを持つことができます、IntelliSense 入力候補一覧が表示されるときや、言語の必要なことすべてなど。 これらのアイコンが使用されるすべての IntelliSense の一覧で、**ナビゲーション バー**、し、**エラー一覧**タスク ウィンドウ。 詳細については、以下の「言語サービス イメージ」セクションを参照してください。  
+  言語サービスでは、多くの場所で使用される独自のアイコンも指定できます。 リスト内の各項目は、項目をマークするメソッド、クラス、名前空間、プロパティ、それに関連付けられているアイコンを持つことができます、IntelliSense 入力候補一覧が表示されるときや、言語の必要なことすべてなど。 これらのアイコンが使用されるすべての IntelliSense の一覧で、**ナビゲーション バー**、し、**エラー一覧**タスク ウィンドウ。 詳細については、以下の「言語サービス イメージ」セクションを参照してください。  
   
 ## <a name="getlanguagepreferences-method"></a>GetLanguagePreferences メソッド  
  <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A>メソッドは常の同じインスタンスを返します、<xref:Microsoft.VisualStudio.Package.LanguagePreferences>クラス。 ベースを使用する<xref:Microsoft.VisualStudio.Package.LanguagePreferences>クラスの場合は、追加の設定、言語サービスの必要はありません。 MPF 言語サービスのクラスは、少なくともの存在を想定していますベース<xref:Microsoft.VisualStudio.Package.LanguagePreferences>クラス。  

@@ -1,7 +1,7 @@
 ---
 title: IDebugObject::IsReadOnly |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: c460f772-d08a-4b36-81f3-dff6a51a93fd
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 310b5609b999cd21fae73f31085c258c762e2917
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a2a111a27771738076b6118a43fc77cf7ea4b711
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539417"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853377"
 ---
 # <a name="idebugobjectisreadonly"></a>IDebugObject::IsReadOnly
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugObject::IsReadOnly](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugobject-isreadonly)します。  
-  
 このオブジェクトは読み取り専用のかどうかを決定します。  
   
 ## <a name="syntax"></a>構文  

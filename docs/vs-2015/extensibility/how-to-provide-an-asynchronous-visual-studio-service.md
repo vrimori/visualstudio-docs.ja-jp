@@ -1,7 +1,7 @@
 ---
 title: '方法: Visual Studio の非同期のサービス提供 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -10,18 +10,16 @@ ms.assetid: 0448274c-d3d2-4e12-9d11-8aca78a1f3f5
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4a58d249c68a0b28158edb92428d1470973cc094
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1938a3a8b5b0eb3c0cc7b062d6d43c4e869397eb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534763"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49851977"
 ---
 # <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>方法: Visual Studio の非同期のサービス提供
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 非同期の Visual Studio サービスを提供](https://docs.microsoft.com/visualstudio/extensibility/how-to-provide-an-asynchronous-visual-studio-service)します。  
-  
 UI スレッドをブロックすることがなくサービスを取得する場合は、非同期のサービスを作成し、バック グラウンド スレッドでパッケージを読み込みます。 この目的に使用することができます、<xref:Microsoft.VisualStudio.Shell.AsyncPackage>なく<xref:Microsoft.VisualStudio.Shell.Package>と非同期のパッケージの特殊な非同期メソッドでサービスの追加  
   
  Visual Studio の同期サービスを提供する方法の詳細については、次を参照してください。[方法: サービスを提供](../extensibility/how-to-provide-a-service.md)します。  
@@ -91,11 +89,11 @@ UI スレッドをブロックすることがなくサービスを取得する�
 ## <a name="registering-a-service"></a>サービスを登録します。  
  サービスを登録するには、追加、<xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute>サービスを提供するパッケージにします。 同期サービスの登録から 2 つの違いがあります。  
   
--   自動読み込みする場合は、パッケージを追加する必要がある、 <xref:Microsoft.VisualStudio.Shell.PackageAutoLoadFlags> BackgroundLoad 属性の値。 自動読み込みの Vspackage の詳細については、次を参照してください。 [Vspackage の読み込み](../extensibility/loading-vspackages.md)します。  
+- 自動読み込みする場合は、パッケージを追加する必要がある、 <xref:Microsoft.VisualStudio.Shell.PackageAutoLoadFlags> BackgroundLoad 属性の値。 自動読み込みの Vspackage の詳細については、次を参照してください。 [Vspackage の読み込み](../extensibility/loading-vspackages.md)します。  
   
--   追加する必要があります、 **AllowsBackgroundLoading = true**フィールドを<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>します。 PackageRegistrationAttribute の詳細については、次を参照してください。[の登録および登録を解除する Vspackage](../extensibility/registering-and-unregistering-vspackages.md)します。  
+- 追加する必要があります、 **AllowsBackgroundLoading = true**フィールドを<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>します。 PackageRegistrationAttribute の詳細については、次を参照してください。[の登録および登録を解除する Vspackage](../extensibility/registering-and-unregistering-vspackages.md)します。  
   
- 非同期のサービスの登録、asyncpackage からの例を次に示します。  
+  非同期のサービスの登録、asyncpackage からの例を次に示します。  
   
 ```csharp  
 [ProvideService((typeof(STextWriterService)), IsAsyncQueryable = true)]  

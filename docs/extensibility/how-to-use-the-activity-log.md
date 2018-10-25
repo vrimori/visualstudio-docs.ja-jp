@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3b5647a62064857bca6a6352a14fe56eff4386f9
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: fa564919abcfb4c8bd94fbaf139b69f2375deebd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39497997"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825817"
 ---
 # <a name="how-to-use-the-activity-log"></a>方法: アクティビティ ログの使用
 Vspackage は、メッセージをアクティビティ ログに書き込むことができます。 この機能は、小売環境で Vspackage をデバッグするために特に便利です。  
@@ -47,15 +47,15 @@ Vspackage は、メッセージをアクティビティ ログに書き込むこ
   
 ## <a name="to-examine-the-activity-log"></a>アクティビティ ログを確認するには  
   
-1.  Visual Studio での実行、 [/log](../ide/reference/log-devenv-exe.md) ActivityLog.xml をディスクに書き込むセッション中にコマンド ライン スイッチ。
+1. Visual Studio での実行、 [/log](../ide/reference/log-devenv-exe.md) ActivityLog.xml をディスクに書き込むセッション中にコマンド ライン スイッチ。
 
-2.  Visual Studio を閉じた後、アクティビティ ログ サブフォルダーの検索 Visual Studio データ: **%appdata%* \Microsoft\VisualStudio\15.0\ActivityLog.xml* します。  
+2. Visual Studio を閉じた後、アクティビティ ログ サブフォルダーの検索 Visual Studio データ:  <em>*%appdata%</em>\Microsoft\VisualStudio\15.0\ActivityLog.xml*します。  
   
-3.  任意のテキスト エディターでは、アクティビティ ログを開きます。 一般的なエントリを次に示します。  
+3. 任意のテキスト エディターでは、アクティビティ ログを開きます。 一般的なエントリを次に示します。  
   
-    ```  
-    Called for: Company.MyApp.MyAppPackage ...  
-    ```  
+   ```  
+   Called for: Company.MyApp.MyAppPackage ...  
+   ```  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  アクティビティ ログは、サービスであるためには、アクティビティ ログは、VSPackage のコンス トラクターで使用できません。  

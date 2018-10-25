@@ -1,7 +1,7 @@
 ---
 title: コードの単体テスト | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,33 +17,31 @@ ms.assetid: c191de3e-3f3b-471e-b828-29ec24e80e2c
 caps.latest.revision: 64
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: a1c6c521e09795619af503e0a121e51f6edc33b9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f79fb0ac4945253f1a10ce98a7e1ed17eaa6de63
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544306"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950421"
 ---
 # <a name="unit-test-your-code"></a>コードの単体テスト
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コードの単体テスト](https://docs.microsoft.com/visualstudio/test/unit-test-your-code)します。  
-  
 単体テストを実行することにより、開発者およびテスト担当者は、[!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)]、[!INCLUDE[vb_current_short](../includes/vb-current-short-md.md)]、および [!INCLUDE[cpp_current_short](../includes/cpp-current-short-md.md)] のプロジェクトでクラスのメソッドに論理エラーがないかどうかをすばやく確認できます。  
   
  単体テスト ツールには次の要素が含まれます。  
   
-1.  **テスト エクスプローラー。** テスト エクスプローラーを使用すると、単体テストを実行して結果を表示することができます。 テスト エクスプローラーは、サードパーティ製のフレームワークを含めて、エクスプローラーのアダプターがあるすべての単体テスト フレームワークを使用できます。  
+1. **テスト エクスプローラー。** テスト エクスプローラーを使用すると、単体テストを実行して結果を表示することができます。 テスト エクスプローラーは、サードパーティ製のフレームワークを含めて、エクスプローラーのアダプターがあるすべての単体テスト フレームワークを使用できます。  
   
-2.  **マネージド コード用の Microsoft 単体テスト フレームワーク。** マネージド コード用の Microsoft 単体テスト フレームワークは、Visual Studio と共にインストールされ、.NET コードをテストするためのフレームワークを提供します。  
+2. **マネージド コード用の Microsoft 単体テスト フレームワーク。** マネージド コード用の Microsoft 単体テスト フレームワークは、Visual Studio と共にインストールされ、.NET コードをテストするためのフレームワークを提供します。  
   
-3.  **C++ 用の Microsoft 単体テスト フレームワーク。** C++ 用の Microsoft 単体テスト フレームワークは、Visual Studio と共にインストールされ、ネイティブ コードをテストするためのフレームワークを提供します。  
+3. **C++ 用の Microsoft 単体テスト フレームワーク。** C++ 用の Microsoft 単体テスト フレームワークは、Visual Studio と共にインストールされ、ネイティブ コードをテストするためのフレームワークを提供します。  
   
-4.  **コード カバレッジ ツール。** テスト エクスプローラーで、単体テストが 1 つのコマンドから実行する製品コードの量を確認できます。  
+4. **コード カバレッジ ツール。** テスト エクスプローラーで、単体テストが 1 つのコマンドから実行する製品コードの量を確認できます。  
   
-5.  **Microsoft Fakes 分離フレームワーク。** Microsoft Fakes 分離フレームワークによって、テスト対象コード内の依存関係を作成する実稼働コードおよびシステム コード向けの代替クラスおよび代替メソッドを作成できます。 関数の Fake デリゲートを実装して、依存関係オブジェクトの動作と出力を制御します。  
+5. **Microsoft Fakes 分離フレームワーク。** Microsoft Fakes 分離フレームワークによって、テスト対象コード内の依存関係を作成する実稼働コードおよびシステム コード向けの代替クラスおよび代替メソッドを作成できます。 関数の Fake デリゲートを実装して、依存関係オブジェクトの動作と出力を制御します。  
   
- また、[IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md) を使用して .NET コードを確認し、テスト データと単体テストのスイートを生成することもできます。 コードにある各ステートメントについて、そのステートメントを実行するテスト入力が生成されます。 コード内の各条件付き分岐について、ケース分析が実行されます。  
+   また、[IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md) を使用して .NET コードを確認し、テスト データと単体テストのスイートを生成することもできます。 コードにある各ステートメントについて、そのステートメントを実行するテスト入力が生成されます。 コード内の各条件付き分岐について、ケース分析が実行されます。  
   
 ## <a name="key-tasks"></a>主なタスク  
  単体テストを理解および作成するには、次のトピックを参照してください。  

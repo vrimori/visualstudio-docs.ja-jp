@@ -1,7 +1,7 @@
 ---
 title: ソリューション内のプロジェクトの読み込みを管理する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 097c89d0-f76a-4aaf-ada9-9a778bd179a0
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: dab040cc22375244d0a091eeb63d8ad011c3b12f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9f7df8c667753c13a5b69935a31755a72d232a96
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535342"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914257"
 ---
 # <a name="managing-project-loading-in-a-solution"></a>ソリューションでのプロジェクトの読み込みの管理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ソリューションでプロジェクトの読み込みを管理する](https://docs.microsoft.com/visualstudio/extensibility/managing-project-loading-in-a-solution)します。  
-  
 Visual Studio ソリューションには、多数のプロジェクトを含めることができます。 Visual Studio の既定の動作は、ソリューションが開かれたときに、ソリューション内のすべてのプロジェクトを読み込むと、ユーザーにそれらのすべての読み込みが終了するまで、プロジェクトのいずれかのアクセスを許可しません。 プロジェクトの読み込みのプロセスが最後に 2 分以内、読み込まれているプロジェクトの数とプロジェクトの合計数を示す進行状況バーが表示されます。 ユーザーは、複数のプロジェクトをソリューションで作業中にプロジェクトをアンロードできますが、この手順ではいくつかのデメリット: アンロードされたプロジェクトは、ソリューションのリビルド コマンドの一部として組み込まれていないと、型の説明については IntelliSense およびメンバーの終了プロジェクトは表示されません。  
   
  開発者は、ソリューションの読み込み時間を短縮し、プロジェクト マネージャー ソリューション ロードを作成して読み込み動作を管理できます。 ソリューション ロード マネージャーできます特定のプロジェクトまたはプロジェクトの種類の優先順位を読み込む別のプロジェクトの設定、バック グラウンドのビルドを開始する前に、プロジェクトが読み込まれているかどうかを確認、バック グラウンド読み込みの他のバック グラウンド タスクが完了するまでの遅延および実行その他のプロジェクトは管理タスクをロードします。  
@@ -102,23 +100,23 @@ pSLMgrSupport.SetProjectLoadPriority(guidProjectID, (uint)_VSProjectLoadPriority
 ## <a name="detecting-and-managing-solution-and-project-loading"></a>検出および管理ソリューションとプロジェクトの読み込み  
  プロジェクトとソリューションの読み込み状態を検出するために呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProperty%2A>次の値。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>:`var`返します`true`ソリューションとそのすべてのプロジェクトが読み込まれている場合、それ以外の場合`false`します。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>:`var`返します`true`ソリューションとそのすべてのプロジェクトが読み込まれている場合、それ以外の場合`false`します。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>:`var`返します`true`かどうかのプロジェクトのバッチが現在読み込まれる、バック グラウンドでそれ以外の場合`false`します。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>:`var`返します`true`かどうかのプロジェクトのバッチが現在読み込まれる、バック グラウンドでそれ以外の場合`false`します。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>:`var`返します`true`かどうかのプロジェクトのバッチが現在読み込み中に同期的にユーザー コマンドまたはその他の明示的な読み込み、結果としてそれ以外の場合`false`します。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>:`var`返します`true`かどうかのプロジェクトのバッチが現在読み込み中に同期的にユーザー コマンドまたはその他の明示的な読み込み、結果としてそれ以外の場合`false`します。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID2>:`var`返します`true`ソリューションが現在されて閉じられた場合、それ以外の場合`false`します。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID2>:`var`返します`true`ソリューションが現在されて閉じられた場合、それ以外の場合`false`します。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID>:`var`返します`true`ソリューションが現在いる開かれた場合、それ以外の場合`false`します。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID>:`var`返します`true`ソリューションが現在いる開かれた場合、それ以外の場合`false`します。  
   
- (プロジェクトの読み込みの優先度とは) 場合でも、プロジェクトとソリューションが読み込まれているを確認、次のメソッドのいずれかを呼び出すことができますも。  
+  (プロジェクトの読み込みの優先度とは) 場合でも、プロジェクトとソリューションが読み込まれているを確認、次のメソッドのいずれかを呼び出すことができますも。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureSolutionIsLoaded%2A>: このメソッドが強制的に読み込むメソッドが戻る前に、ソリューション内のプロジェクト。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureSolutionIsLoaded%2A>: このメソッドが強制的に読み込むメソッドが戻る前に、ソリューション内のプロジェクト。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectIsLoaded%2A>: このメソッドを呼び出すことでプロジェクトを強制的`guidProject`メソッドが戻る前に読み込めません。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectIsLoaded%2A>: このメソッドを呼び出すことでプロジェクトを強制的`guidProject`メソッドが戻る前に読み込めません。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectsAreLoaded%2A>: このメソッドを呼び出すことで、プロジェクトを強制的`guidProjectID`メソッドが戻る前に読み込めません。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectsAreLoaded%2A>: このメソッドを呼び出すことで、プロジェクトを強制的`guidProjectID`メソッドが戻る前に読み込めません。  
   
 > [!NOTE]
 >  . 既定では、必要に応じて、プロジェクトのみを読み込むし、場合は、バック グラウンド読み込みの優先順位が読み込まれて、<xref:Microsoft.VisualStudio.Shell.Interop.__VSBSLFLAGS>フラグ メソッドに渡されるを明示的に読み込むとマークされているもの以外のすべてのプロジェクトが読み込まれます。

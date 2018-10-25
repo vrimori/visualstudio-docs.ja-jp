@@ -1,7 +1,7 @@
 ---
 title: UML 拡張機能の単体テストの実行 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,46 +12,44 @@ caps.latest.revision: 9
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: ac030a4e0b93d189a8b69db5f1df52b65bdf11df
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1e3a8cdd6d8551a4ea399a2ef387d383acca136c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539036"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873670"
 ---
 # <a name="run-unit-tests-on-uml-extensions"></a>単体テストを UML 拡張機能で実行する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML 拡張機能の単体テストの実行](https://docs.microsoft.com/visualstudio/modeling/run-unit-tests-on-uml-extensions)します。  
-  
 変更が続いてもコードを安定した状態に保つため、単体テストを記述し、定期的なビルド処理の一部として実行することをお勧めします。 詳しくは、「[コードの単体テストUnit Test Your Code](../test/unit-test-your-code.md)」をご覧ください。 Visual Studio のモデル拡張でテストを設定するには、いくつかの重要な情報が必要です。 概要:  
   
--   [VSIX 拡張機能の単体テストの設定](#Host)  
+- [VSIX 拡張機能の単体テストの設定](#Host)  
   
-     VS IDE ホスト アダプターでテストを実行します。 各テスト メソッドにプレフィックス `[HostType("VS IDE")]`を付けます。 テストが実行されると、このホスト アダプターにより [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] が起動します。  
+   VS IDE ホスト アダプターでテストを実行します。 各テスト メソッドにプレフィックス `[HostType("VS IDE")]`を付けます。 テストが実行されると、このホスト アダプターにより [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] が起動します。  
   
--   [DTE および ModelStore へのアクセス](#DTE)  
+- [DTE および ModelStore へのアクセス](#DTE)  
   
-     通常は、テストの初期化時にモデルとその図を開いて、 `IModelStore` にアクセスする必要があります。  
+   通常は、テストの初期化時にモデルとその図を開いて、 `IModelStore` にアクセスする必要があります。  
   
--   [モデル図を開く](#Opening)  
+- [モデル図を開く](#Opening)  
   
-     `EnvDTE.ProjectItem` を `IDiagramContext`との間でキャストできます。  
+   `EnvDTE.ProjectItem` を `IDiagramContext`との間でキャストできます。  
   
--   [UI スレッドでの変更を実行します。](#UiThread)  
+- [UI スレッドでの変更を実行します。](#UiThread)  
   
-     モデル ストアに変更を加えるテストは UI スレッドで実行する必要があります。 これには `Microsoft.VSSDK.Tools.VsIdeTesting.UIThreadInvoker` を使用できます。  
+   モデル ストアに変更を加えるテストは UI スレッドで実行する必要があります。 これには `Microsoft.VSSDK.Tools.VsIdeTesting.UIThreadInvoker` を使用できます。  
   
--   [コマンド、ジェスチャ、およびその他の MEF コンポーネントのテスト](#MEF)  
+- [コマンド、ジェスチャ、およびその他の MEF コンポーネントのテスト](#MEF)  
   
-     MEF コンポーネントをテストするには、インポートされたプロパティを値に明示的に接続する必要があります。  
+   MEF コンポーネントをテストするには、インポートされたプロパティを値に明示的に接続する必要があります。  
   
- これらの点については、以降のセクションで詳しく説明します。  
+  これらの点については、以降のセクションで詳しく説明します。  
   
- 単体テストが設定された UML 拡張機能のサンプルは、コード サンプル ギャラリー「 [UML – テキストを使った迅速な入力](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)」で参照できます。  
+  単体テストが設定された UML 拡張機能のサンプルは、コード サンプル ギャラリー「 [UML – テキストを使った迅速な入力](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)」で参照できます。  
   
-## <a name="requirements"></a>要件  
- 参照してください[要件](../modeling/extend-uml-models-and-diagrams.md#Requirements)します。  
+## <a name="requirements"></a>必要条件  
+ 「 [要件](../modeling/extend-uml-models-and-diagrams.md#Requirements)」を参照してください。  
   
  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
@@ -104,7 +102,7 @@ ms.locfileid: "47539036"
      これにより、テストが Visual Studio の実験的なインスタンスで実行されることが保証されます。  
   
 ##  <a name="DTE"></a> DTE および ModelStore へのアクセス  
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] でモデリング プロジェクトを開くメソッドを記述します。 通常は、各テストの実行で 1 度だけソリューションを開きます。 メソッドを 1 度だけ実行するには、メソッドに `[AssemblyInitialize]` 属性をプレフィックスとして付けます。 また、各テスト メソッドで [HostType("VS IDE")] 属性も必要です。  例えば:  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]でモデリング プロジェクトを開くメソッドを記述します。 通常は、各テストの実行で 1 度だけソリューションを開きます。 メソッドを 1 度だけ実行するには、メソッドに `[AssemblyInitialize]` 属性をプレフィックスとして付けます。 また、各テスト メソッドで [HostType("VS IDE")] 属性も必要です。  例えば:  
   
 ```csharp  
 using EnvDTE;  

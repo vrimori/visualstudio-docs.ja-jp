@@ -1,7 +1,7 @@
 ---
 title: OBJECT_TYPE |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: c4d246f9-8a98-44ec-b2bb-ff5c684f668e
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1cd02a49a92eefae129e53322b005760733e0417
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c49036d66310be7774f3f8d36215aca4bedd7582
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535776"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49922836"
 ---
 # <a name="objecttype"></a>OBJECT_TYPE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[OBJECT_TYPE](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/object-type)します。  
-  
 式エバリュエーターからオブジェクトの種類を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -123,7 +121,7 @@ public enum enum_OBJECT_TYPE {
 ## <a name="remarks"></a>Remarks  
  引数として渡される、 [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md)と[CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: ee.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

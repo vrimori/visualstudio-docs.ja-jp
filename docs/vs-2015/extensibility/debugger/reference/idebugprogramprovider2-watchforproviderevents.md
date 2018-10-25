@@ -1,7 +1,7 @@
 ---
 title: IDebugProgramProvider2::WatchForProviderEvents |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 2eb93653-b5fb-45b6-b136-56008c5d25ef
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 781bd8c5b810b0542bbf9e250e05097591e803d5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3f0f0d23b7d06e77ba5a83d0a812747d0b5ea41b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538704"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934380"
 ---
 # <a name="idebugprogramprovider2watchforproviderevents"></a>IDebugProgramProvider2::WatchForProviderEvents
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugProgramProvider2::WatchForProviderEvents](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents)します。  
-  
 ポートのイベントの通知プロセスを許可します。  
   
 ## <a name="syntax"></a>構文  

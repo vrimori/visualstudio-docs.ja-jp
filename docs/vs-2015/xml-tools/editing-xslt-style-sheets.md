@@ -1,7 +1,7 @@
 ---
 title: XSLT スタイル シートの編集 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bc7cb28171711de757708b80f6a2745c1187151b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7dd25a531682c74284a74f065dc729f37ac7fb1a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537406"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49287003"
 ---
 # <a name="editing-xslt-style-sheets"></a>XSLT スタイル シートの編集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[XSLT スタイル シートの編集](https://docs.microsoft.com/visualstudio/xml-tools/editing-xslt-style-sheets)します。  
-  
   
 XML エディターは、XSLT スタイル シートの編集にも使用することができます。 IntelliSense、アウトライン、XML スニペットなどの、エディターが備える既定の機能を活用できます。 さらに、XSLT での開発を容易にする新機能もあります。  
   

@@ -1,7 +1,7 @@
 ---
 title: IEnumDebugModules2::GetCount |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: f4def3d2-7cc9-4cd2-9649-3b7e00a76220
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 855893d156d5fd443bf7f2067e1623d1ed501754
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 79669e3359f44a6c8eee96fc188561653e9dd5a0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548075"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877921"
 ---
 # <a name="ienumdebugmodules2getcount"></a>IEnumDebugModules2::GetCount
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IEnumDebugModules2::GetCount](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/ienumdebugmodules2-getcount)します。  
-  
 列挙体の要素の数を返します。  
   
 ## <a name="syntax"></a>構文  

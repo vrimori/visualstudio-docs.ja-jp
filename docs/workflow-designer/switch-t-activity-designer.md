@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: afa5932ebfaea1e0a7f61997c26e95226ed51b1d
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 40e5e735fb80e6071ad9e9423eecb0284a9823cd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36758017"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49878194"
 ---
 # <a name="switcht-activity-designer"></a>スイッチ\<T > アクティビティ デザイナー
 
@@ -39,7 +39,7 @@ ms.locfileid: "36758017"
 次の表に、最も役に立つ <xref:System.Activities.Statements.Switch%601> プロパティと、デザイナーでのその使用方法を示します。
 
 |プロパティ名|必須|使用方法|
-|-------------------|--------------|-----------|
+|-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.Switch%601> アクティビティ デザイナーの表示名を指定します。 既定値は Switch < Int32\>します。 値を編集できる、**プロパティ**ウィンドウまたはデザイナーのヘッダーで直接します。<br /><br /> <xref:System.Activities.Activity.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|
 |<xref:System.Activities.Statements.Switch%601.Expression%2A>|True|cases コレクション内のキーを比較して、実行する case を決定するために使用される式を指定します。|
 |<xref:System.Activities.Statements.Switch%601.Default%2A>||一致が検出されなかった場合に実行するアクティビティを指定します。 をクリックして、**アクティビティを追加** ボタンをデザイナーを開く、**既定**ボックスに、アクティビティを削除できます。|

@@ -1,7 +1,7 @@
 ---
 title: CPU カウンターと Windows カウンター | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,23 +19,21 @@ caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a50dc0669b649a68a34402ed93ddc858e179cb57
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: af0ce2e4ff9b8df28ebc0c6dd57ad5b4ebee895f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533903"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914568"
 ---
 # <a name="cpu-and-windows-counters"></a>CPU カウンターと Windows カウンター
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[CPU カウンターと Windows カウンター](https://docs.microsoft.com/visualstudio/profiling/cpu-and-windows-counters)します。  
-  
 Visual Studio プロファイラーでは、オペレーティング システムによって生成されたパフォーマンス データ (Windows カウンター) とプロセッサ ユニットによって生成されたパフォーマンス データ (CPU カウンター) を収集することができます。  
   
  **必要条件**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、[!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、[!INCLUDE[vsPro](../includes/vspro-md.md)]  
+-   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
 > [!NOTE]
 >  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 Windows ストア アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
@@ -95,19 +93,19 @@ Visual Studio プロファイラーでは、オペレーティング システ�
   
 ##### <a name="to-view-a-list-of-a-list-of-all-cpu-counters-that-are-supported-on-the-current-platform"></a>現在のプラットフォームでサポートされているすべての CPU カウンターの一覧を表示するには  
   
-1.  パフォーマンス エクスプローラーで、パフォーマンス セッションを右クリックして、**[プロパティ]** をクリックします。  
+1. パフォーマンス エクスプローラーで、パフォーマンス セッションを右クリックして、**[プロパティ]** をクリックします。  
   
-2.  次のいずれかの操作を行います。  
+2. 次のいずれかの操作を行います。  
   
-    -   **[サンプリング]** をクリックし、**[サンプル]** イベントの一覧から **[パフォーマンス カウンター]** を選びます。 **[使用可能なパフォーマンス カウンター]** に CPU カウンターが一覧表示されます。  
+   - **[サンプリング]** をクリックし、**[サンプル]** イベントの一覧から **[パフォーマンス カウンター]** を選びます。 **[使用可能なパフォーマンス カウンター]** に CPU カウンターが一覧表示されます。  
   
-         **注** 前のサンプリング構成に戻るには、**[キャンセル]** をクリックします。  
+      **注** 前のサンプリング構成に戻るには、**[キャンセル]** をクリックします。  
   
      - または -  
   
-    -   **[CPU カウンター]** を選び、**[CPU カウンターの収集]** を選びます。 **[使用可能なカウンター]** に CPU カウンターが一覧表示されます。  
+   - **[CPU カウンター]** を選び、**[CPU カウンターの収集]** を選びます。 **[使用可能なカウンター]** に CPU カウンターが一覧表示されます。  
   
-         **注** 前のカウンター収集構成に戻るには、**[キャンセル]** をクリックします。  
+      **注** 前のカウンター収集構成に戻るには、**[キャンセル]** をクリックします。  
   
 ##### <a name="to-view-a-list-of-a-list-of-window-counters-that-are-supported-on-the-current-platform"></a>現在のプラットフォームでサポートされている Windows カウンターの一覧を表示するには  
   

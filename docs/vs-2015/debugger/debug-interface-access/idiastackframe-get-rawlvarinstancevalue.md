@@ -1,7 +1,7 @@
 ---
 title: Idiastackframe::get_rawlvarinstancevalue |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2aca4ea4468409937cd0b90b7c2201898a9f93a0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3ee04a345d95ee521c13f2023ab4a5a525003dac
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546317"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887177"
 ---
 # <a name="idiastackframegetrawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiastackframe::get_rawlvarinstancevalue](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiastackframe-get-rawlvarinstancevalue)します。  
-  
 このメソッドは、実際のバイト数として指定されたローカル変数の値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -54,7 +52,7 @@ HRESULT get_rawLVarInstanceValue(
  [out]実際、バッファーに格納されるバイト数を返します。  
   
  `pbData`  
- [out]データと共に格納するバッファー。 これは、ことはできません`NULL`します。  
+ [out]データと共に格納するバッファー。 これは `NULL` にすることはできません。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  

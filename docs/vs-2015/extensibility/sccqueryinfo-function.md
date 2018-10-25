@@ -1,7 +1,7 @@
 ---
 title: SccQueryInfo 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 3973d336-a9b7-41a2-a4e6-bb8184a96aaf
 caps.latest.revision: 19
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0b134310ecadd569a35d10c0f064ff785ad01f90
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 68f96c61d80470cd9c2973cb25aa5302cedc2c35
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533979"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49851557"
 ---
 # <a name="sccqueryinfo-function"></a>SccQueryInfo 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[SccQueryInfo 関数](https://docs.microsoft.com/visualstudio/extensibility/sccqueryinfo-function)します。  
-  
 この関数は、一連のソース管理下で選択したファイルの状態情報を取得します。  
   
 ## <a name="syntax"></a>構文  

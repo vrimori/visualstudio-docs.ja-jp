@@ -1,5 +1,5 @@
 ---
-title: 複数 |Microsoft ドキュメント
+title: 複数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 87d6a2176dcd3c4cf748549f94d071b181d0d14f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7df726716e464ccc4bf8382b38fbb0b8d277df86
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31103930"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893826"
 ---
-# <a name="eventattributes"></a>複数
-イベント属性を指定します。  
+# <a name="eventattributes"></a>EVENTATTRIBUTES
+イベントの属性を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,32 +54,32 @@ public enum enum_EVENTATTRIBUTES {
   
 ## <a name="members"></a>メンバー  
  EVENT_ASYNCHRONOUS  
- イベントは、非同期イベントに応答が必要ないことを示します。  
+ イベントは非同期イベントに応答が必要ないことを示します。  
   
  EVENT_SYNCHRONOUS  
- イベントが同期的です。により返信[ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md)です。  
+ イベントが同期的です。返信して[ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md)します。  
   
  EVENT_STOPPING  
- 停止イベントであることを示します。 いずれかと組み合わせることは`EVENT_ASYNCHRONOUS`または`EVENT_SYNCHRONOUS`です。  
+ 停止イベントであることを示します。 いずれかと組み合わせることは`EVENT_ASYNCHRONOUS`または`EVENT_SYNCHRONOUS`します。  
   
  EVENT_ASYNC_STOP  
- 非同期の停止イベントを示します。 現在、このようなイベントはありません。 このフラグは、プレース ホルダーにすぎません。  
+ 非同期の停止イベントを示します。 現在、このようなイベントはありません。 このフラグは、単なるプレース ホルダーです。  
   
  EVENT_SYNC_STOP  
- 同期の停止イベントを示します (の組み合わせ`EVENT_SYNCHRONOUS`と`EVENT_STOPPING`)。 この値は、停止イベントを送信するときにデバッグ エンジン (DE) によって使用されます。 呼び出しを使用して、返信があった[Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md)、[ステップ](../../../extensibility/debugger/reference/idebugprogram2-step.md)、または[続行](../../../extensibility/debugger/reference/idebugprogram2-continue.md)です。  
+ 同期の停止イベントを示します (の組み合わせ`EVENT_SYNCHRONOUS`と`EVENT_STOPPING`)。 この値は、停止イベントを送信するときにデバッグ エンジン (DE) によって使用されます。 呼び出しを使用して、返信があった[Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md)、[手順](../../../extensibility/debugger/reference/idebugprogram2-step.md)、または[続行](../../../extensibility/debugger/reference/idebugprogram2-continue.md)します。  
   
  EVENT_IMMEDIATE  
- IDE に即座に同期的に送信されるイベントを示します。 このフラグはその他のフラグと同様に`EVENT_ASYNCHRONOUS`、 `EVENT_SYNCHRONOUS`、または`EVENT_SYNC_STOP`イベントとその返信メカニズム (存在する場合) が呼びますファクトの種類を指定します。  
+ IDE に即座に同期的に送信されるイベントを示します。 このフラグはその他のフラグのような`EVENT_ASYNCHRONOUS`、 `EVENT_SYNCHRONOUS`、または`EVENT_SYNC_STOP`イベントと応答のメカニズム (あれば) が既知であるファクトの種類を示します。  
   
  EVENT_EXPRESSION_EVALUATION  
  イベントは、式の評価の結果です。  
   
-## <a name="remarks"></a>コメント  
- これらの値が渡された、`dwAttrib`のパラメーター、[イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ これらの値が渡された、`dwAttrib`のパラメーター、[イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)メソッド。  
   
- これらの値は、ビットごとと組み合わせること`OR`です。  
+ これらの値は、演算と組み合わせることがあります`OR`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

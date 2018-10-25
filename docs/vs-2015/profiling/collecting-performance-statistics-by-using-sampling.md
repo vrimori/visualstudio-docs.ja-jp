@@ -1,7 +1,7 @@
 ---
 title: サンプリングを使用したパフォーマンス統計情報の収集 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,23 +17,21 @@ caps.latest.revision: 26
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3a6ed7ba926869359db9c9602f316cb0fc3934d7
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: c656a9e83e3ec50c24e6bb7006bbdc4d102e9f6e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592791"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49919118"
 ---
 # <a name="collecting-performance-statistics-by-using-sampling"></a>サンプリングを使用したパフォーマンス統計情報の収集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[サンプリングを使用したパフォーマンス統計情報の収集](https://docs.microsoft.com/visualstudio/profiling/collecting-performance-statistics-by-using-sampling)します。  
-  
 [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] プロファイリング ツールの既定では、10,000,000 プロセッサ サイクルごと (1 GHz コンピューターで約 100 分の 1 秒ごと) にプロファイリング情報を収集します。 このサンプリング メソッドはプロセッサ使用率の問題を検出するのに役立ち、ほとんどのパフォーマンス調査を開始するときに推奨される方法です。  
   
  **必要条件**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、[!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、[!INCLUDE[vsPro](../includes/vspro-md.md)]  
+-   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
 > [!NOTE]
 >  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 Windows ストア アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのプロファイリング](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
@@ -49,9 +47,9 @@ ms.locfileid: "47592791"
 ## <a name="common-tasks"></a>一般的なタスク  
  追加のオプションを、パフォーマンス セッションの [ _パフォーマンス セッション]_**[プロパティ ページ]** ダイアログ ボックスで指定できます。 このダイアログ ボックスを開くには:  
   
--   **パフォーマンス エクスプローラー**で、パフォーマンス セッション名を右クリックして **[プロパティ]** をクリックします。  
+- **パフォーマンス エクスプローラー**で、パフォーマンス セッション名を右クリックして **[プロパティ]** をクリックします。  
   
- 次の表の各タスクでは、サンプリング メソッドを使用してプロファイリングを実行する際に、_[パフォーマンス セッション]_**[プロパティ ページ]** ダイアログ ボックスで指定できるオプションについて説明しています。  
+  次の表の各タスクでは、サンプリング メソッドを使用してプロファイリングを実行する際に、_[パフォーマンス セッション]_**[プロパティ ページ]** ダイアログ ボックスで指定できるオプションについて説明しています。  
   
 |タスク|関連するコンテンツ|  
 |----------|---------------------|  

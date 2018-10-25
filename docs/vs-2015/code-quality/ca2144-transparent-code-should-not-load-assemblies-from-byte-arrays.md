@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2144: 透過的なコードを読み込んではならないアセンブリ バイト配列から |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,17 +16,15 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: a3ecbf57bf8b4af2bf8edd66a406d27f96809b39
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 395a21b7926f9b47a001eb3021026e27b3e4eb39
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47549267"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49922797"
 ---
 # <a name="ca2144-transparent-code-should-not-load-assemblies-from-byte-arrays"></a>CA2144: 透過的コードは、バイト配列からアセンブリを読み込んではならない
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2144: 透過的コード バイト配列からアセンブリを読み込んでいない](https://docs.microsoft.com/visualstudio/code-quality/ca2144-transparent-code-should-not-load-assemblies-from-byte-arrays)します。
 
 |||
 |-|-|

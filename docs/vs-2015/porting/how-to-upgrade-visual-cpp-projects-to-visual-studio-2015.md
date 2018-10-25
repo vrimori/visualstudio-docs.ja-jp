@@ -1,7 +1,7 @@
 ---
 title: '方法: Visual C プロジェクトを Visual Studio 2015 にアップグレード |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,12 +16,12 @@ caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8fcc3e835e2a8cb6613dc78e67383f534f97f7c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a8673d2d1648acad973ebfa339e0334a5c1fd769
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547078"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49188572"
 ---
 # <a name="how-to-upgrade-visual-c-projects-to-visual-studio-2015"></a>方法: Visual C++ プロジェクトを Visual Studio 2015 にアップグレードする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,11 +36,11 @@ Visual Studio 2017 の最新ドキュメントについては、次を参照し�
   
  プロジェクトを更新するように求めるメッセージが表示されない場合は、プロジェクトのアップグレードのために何もする必要がない可能性があります。  
   
--   プロジェクト (.vcproj) が [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] より前のバージョンの [!INCLUDE[vs2010](../includes/vs2010-md.md)] で作成されている場合は、プロジェクトを更新する必要があります。  
+-   プロジェクト (.vcproj) が [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] よりも前のバージョンの [!INCLUDE[vs2010](../includes/vs2010-md.md)]で作成されていた場合は、プロジェクトを更新する必要があります。  
   
 -   プロジェクト (.vcxproj) が [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]、[!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]、または [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] で作成されている場合、次の 2 つのオプションがあります。  
   
-    -   更新をスキップできます。 [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)] が [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] SP1、[!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]、または [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] の Visual C++ ツールにアクセスできる場合、プロジェクトは変更を加えずに読み込まれます。 そのアクセスを可能にするには、プロジェクトの作成に使用したバージョンの Visual Studio を、[!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)] と同じマシンにインストールします。 詳細については、次を参照してください。 [Visual Studio のバージョンをインストールして並列](../install/install-visual-studio-versions-side-by-side.md)します。  
+    -   更新をスキップできます。 [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)] が [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] SP1、[!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]、または [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] の Visual C++ ツールにアクセスできる場合、プロジェクトは変更を加えずに読み込まれます。 そのアクセスを可能にするには、プロジェクトの作成に使用したバージョンの Visual Studio を、 [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)]と同じマシンにインストールします。 詳細については、「 [Installing Visual Studio Versions Side-by-Side](../install/install-visual-studio-versions-side-by-side.md)」を参照してください。  
   
     -   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] が後で説明するような変更を加えられるようにすることで、プロジェクトを更新できます。 ソリューションに複数の Visual C++ プロジェクトが含まれる場合は、すべてのプロジェクトを更新する必要があります。  
   
@@ -52,10 +52,10 @@ Visual Studio 2017 の最新ドキュメントについては、次を参照し�
   
 -   [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)] のコンパイラおよびライブラリを使用するように、プロジェクトを変更します (PlatformToolset = VisualStudio v140)。  
   
--   [!INCLUDE[cppcli](../includes/cppcli-md.md)]プロジェクトの場合は、TargetFrameworkVersion を .NET Framework 4.5.2 に変更します。  
+-   [!INCLUDE[cppcli](../includes/cppcli-md.md)] プロジェクトの場合は、TargetFrameworkVersion を .NET Framework 4.5.2 に変更します。  
   
 ## <a name="continuing-to-work-with-a-custom-platformtoolset"></a>カスタム PlatformToolset の使用の継続  
- [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)] でカスタム PlatformToolset を引き続き使用する場合、ツールセットは、x86 コンピューターでは %ProgramFiles%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ の下、x64 コンピューターでは %ProgramFiles (x86)%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ の下に格納されている必要があります。 カスタム PlatformToolset を作成する方法については、Visual C++ チーム ブログの「 [C++ ネイティブ マルチ ターゲット](http://go.microsoft.com/fwlink/?LinkId=248587) 」を参照してください。  
+ [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)]でカスタム PlatformToolset を引き続き使用する場合、ツールセットは、x86 コンピューターでは %ProgramFiles%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ の下、x64 コンピューターでは %ProgramFiles (x86)%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ の下に格納されている必要があります。 カスタム PlatformToolset を作成する方法については、Visual C++ チーム ブログの「 [C++ ネイティブ マルチ ターゲット](http://go.microsoft.com/fwlink/?LinkId=248587) 」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual C++ 移植とアップグレードのガイド](http://msdn.microsoft.com/library/f5fbcc3d-aa72-41a6-ad9a-a706af2166fb)   

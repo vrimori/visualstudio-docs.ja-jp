@@ -1,7 +1,7 @@
 ---
 title: 'CA1063: 実装 IDisposable 正しく |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: ed6b7832f17a39c145452d0bbfecfbda9be98547
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 94d13514800bac80723031c6bba7920d28ac83e6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589130"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877297"
 ---
 # <a name="ca1063-implement-idisposable-correctly"></a>CA1063: IDisposable を正しく実装します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA1063: IDisposable の実装正しく](https://docs.microsoft.com/visualstudio/code-quality/ca1063-implement-idisposable-correctly)します。
 
 |||
 |-|-|
@@ -42,23 +40,23 @@ ms.locfileid: "47589130"
 ## <a name="cause"></a>原因
  `IDisposable` 正しく実装されていません。 この問題のいくつかの理由を以下に示します。
 
--   IDisposable は、クラスで再実装します。
+- IDisposable は、クラスで再実装します。
 
--   最終処理が再オーバーライドします。
+- 最終処理が再オーバーライドします。
 
--   Dispose をオーバーライドします。
+- Dispose をオーバーライドします。
 
--   Dispose() がパブリックではないがシールされているか、Dispose をという名前です。
+- Dispose() がパブリックではないがシールされているか、Dispose をという名前です。
 
--   Dispose (bool) は、保護された、仮想、または封印されていないではありません。
+- Dispose (bool) は、保護された、仮想、または封印されていないではありません。
 
--   封印されていない種類は、Dispose() が dispose (true) を呼び出す必要があります。
+- 封印されていない種類は、Dispose() が dispose (true) を呼び出す必要があります。
 
--   封印されていない型の場合、Finalize 実装は呼び出しませんいずれかまたは両方の dispose (bool) またはケースのクラスのファイナライザー。
+- 封印されていない型の場合、Finalize 実装は呼び出しませんいずれかまたは両方の dispose (bool) またはケースのクラスのファイナライザー。
 
- この警告は、これらのパターンのいずれかの違反がトリガーされます。
+  この警告は、これらのパターンのいずれかの違反がトリガーされます。
 
- すべて封印されていないルート IDisposable 型は、独自プロテクト仮想 void dispose (bool) メソッドを提供する必要があります。 Dispose() Dipose(true) を呼び出す必要があり、Finalize が dispose (false) を呼び出す必要があります。 封印されていないルートの IDisposable 型を作成する場合は、dispose (bool) の定義し、それを呼び出す必要があります。 詳細については、次を参照してください。[アンマネージ リソースのクリーンアップ](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)で、 [Framework デザイン ガイドライン](http://msdn.microsoft.com/library/5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b)、.NET Framework のドキュメントのセクション。
+  すべて封印されていないルート IDisposable 型は、独自プロテクト仮想 void dispose (bool) メソッドを提供する必要があります。 Dispose() Dipose(true) を呼び出す必要があり、Finalize が dispose (false) を呼び出す必要があります。 封印されていないルートの IDisposable 型を作成する場合は、dispose (bool) の定義し、それを呼び出す必要があります。 詳細については、次を参照してください。[アンマネージ リソースのクリーンアップ](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)で、 [Framework デザイン ガイドライン](http://msdn.microsoft.com/library/5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b)、.NET Framework のドキュメントのセクション。
 
 ## <a name="rule-description"></a>規則の説明
  すべての IDisposable 型は、Dispose パターンを適切に実装する必要があります。

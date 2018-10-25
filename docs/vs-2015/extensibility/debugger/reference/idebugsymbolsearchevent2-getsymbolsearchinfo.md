@@ -1,7 +1,7 @@
 ---
 title: IDebugSymbolSearchEvent2::GetSymbolSearchInfo |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: ae9eb72b-f2aa-43b8-87ca-da19d2e78d17
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: daed5db818bb4e29da1ffd70f5e78509debcde92
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ec8c09a2bbb618f5d758ca00dfc43e9a573b5ca0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545477"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906963"
 ---
 # <a name="idebugsymbolsearchevent2getsymbolsearchinfo"></a>IDebugSymbolSearchEvent2::GetSymbolSearchInfo
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugSymbolSearchEvent2::GetSymbolSearchInfo](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo)します。  
-  
 シンボルの読み込みプロセスの結果を取得するためのイベント ハンドラーによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  

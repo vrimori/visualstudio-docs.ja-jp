@@ -1,7 +1,7 @@
 ---
 title: '方法: ClickOnce アプリケーションのカスタム アクセス許可の設定 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 19
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 6cf4b1c91650bf505daececfdf46ba42cfee68fb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 27302c3b2b925e66ca4b30f858fc8a54362451a9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544247"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49219259"
 ---
 # <a name="how-to-set-custom-permissions-for-a-clickonce-application"></a>方法 : ClickOnce アプリケーションのカスタム アクセス許可を設定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: Set Custom Permissions for a ClickOnce Application](https://docs.microsoft.com/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)します。  
-  
 インターネット ゾーンまたはローカル イントラネット ゾーンの既定のアクセス許可を使用する [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションを配置できます。 または、アプリケーションに必要な特定のアクセス許可用にカスタム ゾーンを作成することもできます。 そのためには、 **プロジェクト デザイナー** の **[セキュリティ]** ページでセキュリティのアクセス許可をカスタマイズします。  
   
 ### <a name="to-customize-a-permission"></a>アクセス許可をカスタマイズするには  

@@ -1,7 +1,7 @@
 ---
 title: '方法: 同じソース ファイルを異なるオプションでビルドする | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 55133fcd8126a5f77a670742b84ff83d9662520c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c46d0577d19a3b3ad0fcd150f33d400e76d550d3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535365"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831004"
 ---
 # <a name="how-to-build-the-same-source-files-with-different-options"></a>方法 : 同じソース ファイルを異なるオプションでビルドする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 同じソース ファイルを異なるオプションでビルド](https://docs.microsoft.com/visualstudio/msbuild/how-to-build-the-same-source-files-with-different-options)します。  
-  
   
 プロジェクトをビルドする場合、同じコンポーネントを異なるビルド オプションでコンパイルすることがよくあります。 たとえば、シンボル情報を付ければデバッグ ビルドを作成でき、シンボル情報なしで最適化を有効にすればリリース ビルドを作成できます。 あるいは、x86 や [!INCLUDE[vcprx64](../includes/vcprx64-md.md)] などのように、特定のプラットフォーム上で実行するようにプロジェクトをビルドできます。 これらのいずれの場合も、ほとんどのビルド オプションは同じままで、ビルド構成を制御するためにいくつかのオプションが変更されるだけです。 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] では、異なるビルド構成を作成するためにプロパティと条件を使用します。  
   
@@ -77,23 +75,23 @@ ms.locfileid: "47535365"
   
 #### <a name="to-specify-more-than-one-project-property-at-the-command-line"></a>コマンド ライン上で 2 つ以上のプロジェクト プロパティを指定するには  
   
--   **/property** または **/p** スイッチをプロパティおよびプロパティ値と共に複数回使用するか、**/property** または **/p** スイッチを 1 回使用し、複数のプロパティをセミコロン (;) で分けます。 例えば:  
+- **/property** または **/p** スイッチをプロパティおよびプロパティ値と共に複数回使用するか、**/property** または **/p** スイッチを 1 回使用し、複数のプロパティをセミコロン (;) で分けます。 例えば:  
   
-    ```  
-    msbuild file.proj /p:Flavor=Debug;Platform=x86  
-    ```  
+  ```  
+  msbuild file.proj /p:Flavor=Debug;Platform=x86  
+  ```  
   
-     - または  
+   - または  
   
-    ```  
-    msbuild file.proj /p:Flavor=Debug /p:Platform=x86  
-    ```  
+  ```  
+  msbuild file.proj /p:Flavor=Debug /p:Platform=x86  
+  ```  
   
- 環境変数はプロパティとしても扱われ、[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] によって自動的に組み込まれます。 環境変数の使用に関する詳細については、「[方法: ビルドで環境変数を使用する](../msbuild/how-to-use-environment-variables-in-a-build.md)」を参照してください。  
+  環境変数はプロパティとしても扱われ、[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] によって自動的に組み込まれます。 環境変数の使用に関する詳細については、「[方法: ビルドで環境変数を使用する](../msbuild/how-to-use-environment-variables-in-a-build.md)」を参照してください。  
   
- コマンド ラインで指定されたプロパティ値は、同じプロパティに対してプロジェクト ファイル内で設定されているどの値よりも優先され、プロジェクト ファイル内の値は環境変数の値よりも優先されます。  
+  コマンド ラインで指定されたプロパティ値は、同じプロパティに対してプロジェクト ファイル内で設定されているどの値よりも優先され、プロジェクト ファイル内の値は環境変数の値よりも優先されます。  
   
- この動作は、プロジェクト タグの `TreatAsLocalProperty` 属性を使用して変更できます。 その属性と共に記載されたプロパティ名については、コマンド ラインで指定されたプロパティ値がプロジェクト ファイル内の値よりも優先されることはありません。 このトピックの後の部分でその例を示します。  
+  この動作は、プロジェクト タグの `TreatAsLocalProperty` 属性を使用して変更できます。 その属性と共に記載されたプロパティ名については、コマンド ラインで指定されたプロパティ値がプロジェクト ファイル内の値よりも優先されることはありません。 このトピックの後の部分でその例を示します。  
   
 ## <a name="example"></a>例  
  以下の "Hello World" プロジェクトのコード例には、デバッグ ビルドとリリース ビルドを作成するために使用できる 2 つの新しいプロパティ グループが含まれています。  

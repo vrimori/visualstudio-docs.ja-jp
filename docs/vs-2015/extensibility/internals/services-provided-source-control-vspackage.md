@@ -1,7 +1,7 @@
 ---
 title: 提供されるサービス (ソース管理 VSPackage) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 9db07d70-87d2-4401-bc88-e3a49d81e9a2
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: aff288f68f32d3850cfa92d5999febd1c65572e1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ee980b74415d906a5c48cfd5ad1e20e7b5544320
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544297"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49273378"
 ---
 # <a name="services-provided-source-control-vspackage"></a>提供されるサービス (ソース管理 VSPackage)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[サービスの提供 (ソース管理 VSPackage)](https://docs.microsoft.com/visualstudio/extensibility/internals/services-provided-source-control-vspackage)します。  
-  
 サービスは、Vspackage 間および Visual Studio 統合開発環境 (IDE) と、インストールされている Vspackage 間に共有する機能により、主要なメカニズムです。 サービスと、Visual Studio IDE で、重要度の詳細については、次を参照してください。[を使用すると、サービスを提供する](../../extensibility/using-and-providing-services.md)します。  
   
 ## <a name="the-source-control-service"></a>ソース管理サービス  

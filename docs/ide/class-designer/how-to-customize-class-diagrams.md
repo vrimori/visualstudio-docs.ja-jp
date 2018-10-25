@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ed2a6112d59e5d433201a417d8d85fd6683b36d
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 4546324a5789c408c22ac610d7a878ad990af2a1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956758"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49913216"
 ---
 # <a name="how-to-customize-class-diagrams"></a>方法: クラス ダイアグラムをカスタマイズする
 
@@ -108,7 +108,7 @@ ms.locfileid: "33956758"
 
 2. 非表示になっている関連行または継承線を持つ型を右クリックします。
 
- 関連行の場合は **[すべてのメンバーの表示]**、継承線の場合は **[基本クラスの表示]** または **[派生クラスの表示]** をクリックします。
+   関連行の場合は **[すべてのメンバーの表示]**、継承線の場合は **[基本クラスの表示]** または **[派生クラスの表示]** をクリックします。
 
 ## <a name="remove-a-shape-from-a-class-diagram"></a>クラス ダイアグラムから図形を削除する
 型の基になるコードに影響を与えずに型シェイプをクラス ダイアグラムから削除できます。 クラス ダイアグラムからの型シェイプの削除は、そのダイアグラムだけに影響します。型を定義する基礎のコードと、型を表示する他のダイアグラムには影響しません。

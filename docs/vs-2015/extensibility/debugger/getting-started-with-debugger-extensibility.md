@@ -1,7 +1,7 @@
 ---
 title: デバッガーの拡張性の概要 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: d6ce6f43-1409-4bf7-93cd-f3464ca23504
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f8f056ed8fff53eb166b37f2adba9daa17f12916
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 321c4790decb81d91ef57afe6bedffcd89a179e6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540037"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49304974"
 ---
 # <a name="getting-started-with-debugger-extensibility"></a>デバッガーの機能拡張の開始
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッガーの拡張性の概要](https://docs.microsoft.com/visualstudio/extensibility/debugger/getting-started-with-debugger-extensibility)します。  
-  
 [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]を作成およびカスタマイズ内からプログラムをデバッグするために使用するデバッガー コンポーネントに必要な情報を提供します、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]環境。  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] デバッグと広範な使いやすさの前に行われるテストから派生した機能強化が追加[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]デバッガー。 使用することができます[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]をステップ実行するか、多言語アプリケーションでは、デバッグ、稼働中のアプリケーションと多言語ソリューションのデバッグ中に変数の編集を実装できます。  

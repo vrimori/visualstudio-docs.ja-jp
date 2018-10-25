@@ -1,7 +1,7 @@
 ---
 title: '2116: APTCA メソッドのみを呼び出す APTCA メソッド |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,17 +20,15 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 78e3136ed2671de2962ae4de994bae178fcbceca
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 766de62f4781dc7ce164155a2090ffabac913a22
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589697"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819551"
 ---
 # <a name="ca2116-aptca-methods-should-only-call-aptca-methods"></a>CA2116: APTCA メソッドは APTCA メソッドのみを呼び出すことができます
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA2116: APTCA メソッドは APTCA メソッドのみを呼び出す必要があります](https://docs.microsoft.com/visualstudio/code-quality/ca2116-aptca-methods-should-only-call-aptca-methods)します。
 
 |||
 |-|-|
@@ -47,13 +45,13 @@ ms.locfileid: "47589697"
 
  APTCA 属性が完全に信頼されたアセンブリに存在すると、アセンブリが部分的に信頼された呼び出し元が許可されない別のアセンブリ内のコードの実行、セキュリティ上の弱点は可能性があります。 場合は 2 つのメソッド`M1`と`M2`次の条件を満たしている、悪意のある呼び出し元は、メソッドを使用できる`M1`を保護する暗黙の型の完全な信頼リンク確認要求をバイパスする`M2`:
 
--   `M1` パブリック メソッドは APTCA 属性を持つ完全に信頼されたアセンブリで宣言されます。
+- `M1` パブリック メソッドは APTCA 属性を持つ完全に信頼されたアセンブリで宣言されます。
 
--   `M1` メソッドを呼び出す`M2`外`M1`のアセンブリ。
+- `M1` メソッドを呼び出す`M2`外`M1`のアセンブリ。
 
--   `M2`アセンブリは、APTCA 属性がないと、そのため、実行してはならない、または部分的に信頼されている呼び出し元の代わりです。
+- `M2`アセンブリは、APTCA 属性がないと、そのため、実行してはならない、または部分的に信頼されている呼び出し元の代わりです。
 
- 部分的に信頼された呼び出し元`X`メソッドを呼び出すことができます`M1`原因となる、`M1`を呼び出す`M2`します。 `M2` APTCA 属性、その直前の呼び出し元がありません (`M1`) は完全な信頼のリンク確認要求を満たす必要があります`M1`完全な信頼があり、したがってこのチェックに適合します。 セキュリティ リスクは`X`を保護するリンク確認要求を満たすに関与しません`M2`呼び出し元が信頼されていないからです。 そのため、APTCA 属性を持つメソッド属性を持たないメソッドを呼び出していません。
+  部分的に信頼された呼び出し元`X`メソッドを呼び出すことができます`M1`原因となる、`M1`を呼び出す`M2`します。 `M2` APTCA 属性、その直前の呼び出し元がありません (`M1`) は完全な信頼のリンク確認要求を満たす必要があります`M1`完全な信頼があり、したがってこのチェックに適合します。 セキュリティ リスクは`X`を保護するリンク確認要求を満たすに関与しません`M2`呼び出し元が信頼されていないからです。 そのため、APTCA 属性を持つメソッド属性を持たないメソッドを呼び出していません。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  APCTA 属性が必要な場合は、完全信頼アセンブリを呼び出すメソッドを保護する要求を使用します。 正確なアクセス許可要求するには、メソッドによって公開される機能は異なります。 可能な場合は、完全な信頼の基盤となる機能は部分的に信頼された呼び出し元に公開されないことを確認する要求を持つメソッドを保護します。 それができない場合は、公開されている機能を効果的に保護するアクセス許可のセットを選択します。 要求の詳細については、次を参照してください。[要求](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48)します。

@@ -1,7 +1,7 @@
 ---
 title: Idiaenumlinenumbers::next |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fd97750490220ecc83ab1581a19aa6f49ea1f0a8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a0763cf85a256c24f83f126a980ef713c25a2177
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544350"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829223"
 ---
 # <a name="idiaenumlinenumbersnext"></a>IDiaEnumLineNumbers::Next
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiaenumlinenumbers::next](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiaenumlinenumbers-next)します。  
-  
 指定された数の列挙体シーケンス内の行番号を取得します。  
   
 ## <a name="syntax"></a>構文  

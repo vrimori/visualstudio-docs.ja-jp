@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c07d2f374890d6a87b5fe45304d098acfb05065b
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 8b5fa8d0dbe011ef6b960c03d7d95aa776de6933
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498381"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49901321"
 ---
 # <a name="get-started-with-language-service-and-editor-extensions"></a>言語サービスとエディターの拡張機能を概要します。
 エディター拡張機能を使用して、独自のプログラミング言語または任意のコンテンツ タイプをアウトライン表示、かっこの照合、IntelliSense、および電球などの言語サービスの機能を追加することができます。 テキストの色指定、余白、表示要素、および他のビジュアル要素など、Visual Studio エディターの動作と外観をカスタマイズすることもできます。 また、独自の種類のコンテンツを定義して、コンテンツが表示されるテキスト ビューの動作と外観を指定できます。  
@@ -44,17 +44,17 @@ ms.locfileid: "39498381"
   
  基本的な種類のエディター拡張機能の一部を次に示します。  
   
--   余白とスクロール バー  
+- 余白とスクロール バー  
   
--   Tags  
+- Tags  
   
--   修飾  
+- 修飾  
   
--   オプション  
+- オプション  
   
--   IntelliSense  
+- IntelliSense  
   
- エディターの拡張ポイントの詳細については、次を参照してください。[言語サービスとエディターの拡張機能ポイント](../extensibility/language-service-and-editor-extension-points.md)します。  
+  エディターの拡張ポイントの詳細については、次を参照してください。[言語サービスとエディターの拡張機能ポイント](../extensibility/language-service-and-editor-extension-points.md)します。  
   
 ## <a name="deploying-editor-extensions"></a>エディターの拡張機能の配置  
  Visual Studio で、という名前のメタデータ ファイルを追加することでエディター拡張機能を展開する*source.extension.vsixmanifest*をソリューションに、ソリューションのビルドと呼ばれるフォルダーにバイナリ ファイルとマニフェストのコピーを追加Visual studio。 マニフェスト ファイルは、拡張機能 (たとえば、名前、作成者、バージョン、およびコンテンツの種類など) に関する基本的な情報を定義します。 VSIX のマニフェスト ファイルと拡張機能をデプロイする方法の詳細については、次を参照してください。[出荷 Visual Studio 拡張機能](../extensibility/shipping-visual-studio-extensions.md)します。  

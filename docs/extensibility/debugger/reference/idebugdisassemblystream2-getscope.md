@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetScope |Microsoft ドキュメント
+title: IDebugDisassemblyStream2::GetScope |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a155c521370670ecf141177a29f70e67d812d68
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 739c2515d402d4132b2fd5eb10c7ba2cbd5e04b2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31105972"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49814845"
 ---
 # <a name="idebugdisassemblystream2getscope"></a>IDebugDisassemblyStream2::GetScope
 [逆アセンブル] ストリームのスコープを取得します。  
@@ -41,13 +41,13 @@ int GetScope(
   
 #### <a name="parameters"></a>パラメーター  
  `pdwScope`  
- [out]値を返します、 [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md)逆アセンブルのこのストリームのスコープを表す列挙体です。  
+ [out]値を返します、 [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md)この逆アセンブリのストリームのスコープを表す列挙体。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 逆アセンブリのスコープは、たとえば関数または全体のモジュールで可能性があります。  
+## <a name="remarks"></a>Remarks  
+ 逆アセンブリの範囲は、たとえば関数またはモジュール全体に可能性があります。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   

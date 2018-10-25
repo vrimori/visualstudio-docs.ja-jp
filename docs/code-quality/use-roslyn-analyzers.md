@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 971cbe690cc53b0e4035b951570ba8c7aba19313
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 47dc7d38a2ae9b842891d2e36aebd9b009297cbb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512172"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49817042"
 ---
 # <a name="configure-and-use-roslyn-analyzer-rules"></a>構成し、Roslyn アナライザーの規則を使用
 
@@ -121,15 +121,15 @@ A[ルール セット](../code-quality/using-rule-sets-to-group-code-analysis-ru
 
 1 つまたは複数の診断を抑制することができます、**エラー一覧**を抑制するたいものを選択し、右クリックし、選択して**抑制** > **でソース**または**抑制** > **抑制ファイル内**します。
 
-   - 選択した場合**でソース**、**変更のプレビュー**ダイアログが開き、c# のプレビューを示します[#pragma warning](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning)または Visual Basic [#Disable warning](/dotnet/visual-basic/language-reference/directives/directives)ソース コードに追加されるディレクティブ。
+- 選択した場合**でソース**、**変更のプレビュー**ダイアログが開き、c# のプレビューを示します[#pragma warning](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning)または Visual Basic [#Disable warning](/dotnet/visual-basic/language-reference/directives/directives)ソース コードに追加されるディレクティブ。
 
-      ![#Pragma 警告を追加するコード ファイルのプレビュー](media/pragma-warning-preview.png)
+   ![#Pragma 警告を追加するコード ファイルのプレビュー](media/pragma-warning-preview.png)
 
-   - 選択した場合**抑制ファイル内**、**変更のプレビュー**ダイアログが開きのプレビューを表示、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>グローバル抑制ファイルに追加される属性。
+- 選択した場合**抑制ファイル内**、**変更のプレビュー**ダイアログが開きのプレビューを表示、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>グローバル抑制ファイルに追加される属性。
 
-      ![SuppressMessage 属性を抑制ファイルに追加のプレビュー](media/preview-changes-in-suppression-file.png)
+   ![SuppressMessage 属性を抑制ファイルに追加のプレビュー](media/preview-changes-in-suppression-file.png)
 
-   **変更のプレビュー**ダイアログ ボックスで、**適用**します。
+**変更のプレビュー**ダイアログ ボックスで、**適用**します。
 
 **エラー一覧**診断、または両方からの違反、ライブ コード分析およびビルド規則が表示されます。 ビルドの診断は、古くなっていることができます、ためなど、違反を修正するコードを編集しましたが、再構築していない場合は抑制できませんからこれらの診断、**エラー一覧**します。 ただし、ライブ分析、または IntelliSense からの診断の現在のソースの最新の状態は常から抑制することができます、**エラー一覧**します。 抑制のオプションは、右クリックして、または、コンテキスト メニューで無効になっている、いずれかが必要以上のビルド、選択した診断があること可能性があります。 選択項目から、ビルドの診断を除外するには、スイッチ、**エラー一覧**からソース フィルター**ビルド + IntelliSense**に**Intellisense のみ**します。 次に、抑制して、前述のように続行する診断を選択します。
 

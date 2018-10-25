@@ -1,7 +1,7 @@
 ---
 title: '[参照設定] ページ (プロジェクト デザイナー) (Visual Basic) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 40
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a5e89b77749b331665869393b2b3cf7e520d3371
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0dabf5b84eb1adde1d6e579b7ec5ad6a6c443723
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539868"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49859058"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>[参照設定] ページ (プロジェクト デザイナー) (Visual Basic)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[参照設定 ページ、プロジェクト デザイナー (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/references-page-project-designer-visual-basic)します。  
-  
   
 **[プロジェクト デザイナー]** の **[参照]** ページを利用し、プロジェクトの参照、Web 参照、インポートした名前空間を管理します。 プロジェクトには、COM コンポーネント、XML Web サービス、.NET Framework クラス ライブラリまたはアセンブリ、その他のクラス ライブラリの参照を含めることができます。 参照の使用方法については、「[プロジェクト内の参照の管理](../../ide/managing-references-in-a-project.md)」を参照してください。  
   
@@ -52,11 +50,11 @@ ms.locfileid: "47539868"
   
 > [!NOTE]
 >  プロジェクト システムでは、検出されたアセンブリ参照が解決されます。解決するとき、次の場所で次の順序で検索されます。  
->   
->  1.  プロジェクト フォルダー。 **[すべてのファイルを表示]** が有効になっていないとき、**ソリューション エクスプローラー**にプロジェクト フォルダー ファイルが表示されます。  
-> 2.  **[参照パス]** ダイアログ ボックスに指定されているフォルダー。  
-> 3.  **[参照の追加]** ダイアログ ボックスでファイルを表示するフォルダー。  
-> 4.  プロジェクトの obj フォルダー。 (プロジェクトに COM 参照を追加するとき、1 つまたは複数のアセンブリをプロジェクトの obj フォルダーに追加できることがあります。)  
+> 
+> 1. プロジェクト フォルダー。 **[すべてのファイルを表示]** が有効になっていないとき、**ソリューション エクスプローラー**にプロジェクト フォルダー ファイルが表示されます。  
+>    2.  **[参照パス]** ダイアログ ボックスに指定されているフォルダー。  
+>    3.  **[参照の追加]** ダイアログ ボックスでファイルを表示するフォルダー。  
+>    4.  プロジェクトの obj フォルダー。 (プロジェクトに COM 参照を追加するとき、1 つまたは複数のアセンブリをプロジェクトの obj フォルダーに追加できることがあります。)  
   
  **参照**  
  この一覧には、使用か未使用かを問わず、プロジェクトのすべての参照が表示されます。  

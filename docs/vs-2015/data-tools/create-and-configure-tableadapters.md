@@ -1,7 +1,7 @@
 ---
 title: 作成し、Tableadapter の構成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,32 +23,30 @@ caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: df2a5313ace294c536dc1e8cdaab6ce0adcaeabb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 03cb6c67b4887762885a0cb920eb928359b4708b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538220"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917649"
 ---
 # <a name="create-and-configure-tableadapters"></a>Tableadapter の作成および構成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[作成し、Tableadapter を構成](https://docs.microsoft.com/visualstudio/data-tools/create-and-configure-tableadapters)します。  
-  
   
 TableAdapter を使用すると、アプリケーションとデータベース間で通信できます。 データベース、クエリの実行またはストアド プロシージャに接続して、新しいデータを返すか、テーブルまたは既存の fill<xref:System.Data.DataTable>返されたデータ。 Tableadapter は、元のデータベースに、アプリケーションから更新されたデータを送信することもできます。  
   
  次の操作のいずれかを実行するときの Tableadapter が作成されます。  
   
--   実行、[データ ソース構成ウィザード](http://msdn.microsoft.com/library/c4df7de5-5da0-4064-940c-761dd6d9e28f)いずれかを選択し、**データベース**または**Web サービス**データ ソースの種類。  
+- 実行、[データ ソース構成ウィザード](http://msdn.microsoft.com/library/c4df7de5-5da0-4064-940c-761dd6d9e28f)いずれかを選択し、**データベース**または**Web サービス**データ ソースの種類。  
   
--   データベース オブジェクトをドラッグ[サーバー エクスプ ローラー](http://msdn.microsoft.com/library/4ea29b3b-bbb2-45e4-9082-eaf635c41c4d)に、**データセット デザイナー**します。  
+- データベース オブジェクトをドラッグ[サーバー エクスプ ローラー](http://msdn.microsoft.com/library/4ea29b3b-bbb2-45e4-9082-eaf635c41c4d)に、**データセット デザイナー**します。  
   
- 新しい TableAdapter を作成してで空の領域に TableAdapter をツールボックスからドラッグしてデータ ソースと構成、**データセット デザイナー**画面。  
+  新しい TableAdapter を作成してで空の領域に TableAdapter をツールボックスからドラッグしてデータ ソースと構成、**データセット デザイナー**画面。  
   
- Tableadapter の概要については、次を参照してください。 [Tableadapter を使用してデータセットを入力](../data-tools/fill-datasets-by-using-tableadapters.md)します。  
+  Tableadapter の概要については、次を参照してください。 [Tableadapter を使用してデータセットを入力](../data-tools/fill-datasets-by-using-tableadapters.md)します。  
   
- [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
   
 ## <a name="use-the-tableadapter-configuration-wizard"></a>TableAdapter 構成ウィザードを使用  
  実行、 **TableAdapter 構成ウィザード**Tableadapter および関連する Datatable の作成または編集します。 既存の TableAdapter を構成するには、上で右クリックし、**データセット デザイナー**します。  

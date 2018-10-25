@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でデバッグ ストア アプリ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3afe6e31062b8f55add97455f0e1836128b7d0e2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f2e9780672abbff1cec9c74298579e575e59a665
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546069"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49219142"
 ---
 # <a name="debug-store-apps-in-visual-studio"></a>Visual Studio でのストア アプリのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio でアプリをデバッグ ストア](https://docs.microsoft.com/visualstudio/debugger/debug-store-apps-in-visual-studio)します。  
-  
 Visual Studio デバッガーを使用すると、プログラムの実行を制御し、その状態を確認できます。 Windows ストア アプリの障害の原因を検出し、アプリの動作のしくみを十分に理解するためにデバッガーを使用します。 デバッガーで実行を中断すると、実行中のコードが含まれるソース ファイルが Visual Studio に表示され、実行中のステートメントが強調表示されます。 変数の値、実行関数の呼び出し履歴、およびプログラムの状態の他の側面を確認できます。 1 つのステートメントごとにプログラムを実行 (ステップ スルー) し続けると、ステートメントがプログラムの値を変化させるしくみを確認できます。 JavaScript で記述されたアプリでは、ページの DOM を調べて操作できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

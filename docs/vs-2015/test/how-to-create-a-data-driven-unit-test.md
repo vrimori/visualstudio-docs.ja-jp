@@ -1,7 +1,7 @@
 ---
 title: '方法: データ ドリブン単体テストを作成する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,37 +20,35 @@ ms.assetid: a0322bc5-02c8-4f9f-af43-100a60b1bd28
 caps.latest.revision: 35
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 1b5f0fea9712d1ba62aa8965b4d4a2e7d7d0e230
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: eeb7efb0c7faa9a2493cfd3f91f6cc4e72408f4c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537687"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49889361"
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>方法: データ ドリブン単体テストを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[How To: データ ドリブン単体テストを作成](https://docs.microsoft.com/visualstudio/test/how-to-create-a-data-driven-unit-test)です。  
-  
 マネージド コード用の Microsoft の単体テスト フレームワークを使用して、データ ソースからテスト メソッドで使用される値を取得するための単体テスト メソッドを設定できます。 メソッドはデータ ソース内の各行に対して連続して実行されるため、単一のメソッドを使用してさまざまな入力を簡単にテストできます。  
   
  このトピックは、次のセクションで構成されています。  
   
--   [テスト対象のメソッド](../test/how-to-create-a-data-driven-unit-test.md#BKMK_The_method_under_test)  
+- [テスト対象のメソッド](../test/how-to-create-a-data-driven-unit-test.md#BKMK_The_method_under_test)  
   
--   [データ ソースの作成](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Creating_a_data_source)  
+- [データ ソースの作成](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Creating_a_data_source)  
   
--   [テスト クラスへの TestContext の追加](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Adding_a_TestContext_to_the_test_class)  
+- [テスト クラスへの TestContext の追加](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Adding_a_TestContext_to_the_test_class)  
   
--   [テスト メソッドの記述](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Writing_the_test_method)  
+- [テスト メソッドの記述](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Writing_the_test_method)  
   
-    -   [DataSourceAttribute の指定](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Specifying_the_DataSourceAttribute)  
+  -   [DataSourceAttribute の指定](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Specifying_the_DataSourceAttribute)  
   
-    -   [データにアクセスするための TestContext.DataRow の使用](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Using_TestContext_DataRow_to_access_the_data)  
+  -   [データにアクセスするための TestContext.DataRow の使用](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Using_TestContext_DataRow_to_access_the_data)  
   
--   [テストの実行と結果の表示](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Running_the_test_and_viewing_results)  
+- [テストの実行と結果の表示](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Running_the_test_and_viewing_results)  
   
- データ ドリブン単体テストの作成には、次の手順が含まれます。  
+  データ ドリブン単体テストの作成には、次の手順が含まれます。  
   
 1.  テスト メソッドで使用する値を含むデータ ソースを作成します。 データ ソースは、テストを実行するコンピューターに登録されている任意の型にすることができます。  
   
@@ -63,17 +61,17 @@ ms.locfileid: "47537687"
 ##  <a name="BKMK_The_method_under_test"></a>テスト対象のメソッド  
  たとえば、次を作成したとします。  
   
-1.  さまざまな種類の勘定のトランザクションを受け入れて処理する `MyBank` というソリューション。  
+1. さまざまな種類の勘定のトランザクションを受け入れて処理する `MyBank` というソリューション。  
   
-2.  勘定のトランザクションを管理する `BankDb` という `MyBank` 内のプロジェクト。  
+2. 勘定のトランザクションを管理する `BankDb` という `MyBank` 内のプロジェクト。  
   
-3.  トランザクションが必ず銀行にとって有利になるように数値演算関数を実行する `DbBank` プロジェクト内の `Maths` というクラス。  
+3. トランザクションが必ず銀行にとって有利になるように数値演算関数を実行する `DbBank` プロジェクト内の `Maths` というクラス。  
   
-4.  `BankDb` コンポーネントの動作をテストする `BankDbTests` という単体テスト プロジェクト。  
+4. `BankDb` コンポーネントの動作をテストする `BankDbTests` という単体テスト プロジェクト。  
   
-5.  `Maths` クラスの動作を確認する `MathsTests` という単体テスト クラス。  
+5. `Maths` クラスの動作を確認する `MathsTests` という単体テスト クラス。  
   
- ループを使用して 2 つの整数を追加する `Maths` のメソッドをテストします。  
+   ループを使用して 2 つの整数を追加する `Maths` のメソッドをテストします。  
   
 ```  
 public int AddIntegers(int first, int second)  

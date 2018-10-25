@@ -1,7 +1,7 @@
 ---
 title: 構成オプションの概要 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: f4ad4dd3-b39e-42df-ad89-d403cdf24a2b
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 85fa1b9d19beca6bd879d98bc7a24af0fd5756c5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e502f78698d830c916b09968e8fa2cfbcd74fbf7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534765"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915777"
 ---
 # <a name="configuration-options-overview"></a>構成オプションの概要
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[構成オプションの概要](https://docs.microsoft.com/visualstudio/extensibility/internals/configuration-options-overview)します。  
-  
 プロジェクトで[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]構築できますが、デバッグ、実行、および配置された複数の構成をサポートすることができます。 構成とは、ビルドの種類のコンパイラ スイッチおよびファイルの場所では通常、プロパティの名前付きセットを使用して記述します。 既定では、新しいソリューションには、2 つの構成、デバッグとリリースが含まれます。 既定の設定を使用するか、特定のソリューションやプロジェクトの要件を満たすように変更は、これらの構成を適用できます。 一部のパッケージは、2 つの方法でビルドできます。 またはインプレース コンポーネントとして ActiveX エディターとして。 ただし、複数の構成をサポートするためには、プロジェクトは必要はありません。 1 つのみの構成が使用可能な場合、その構成は、すべてのソリューション構成にマップされます。  
   
  通常の構成は 2 つの部分で構成されている、プラットフォームの設定と構成の名前 (デバッグやリリースなど)。 プラットフォーム名の構成の設定の構成対象の API など、環境またはオペレーティング システム プラットフォームを識別します。 ユーザーの[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]プラットフォーム; を作成することはできませんにより、VSPackage プロジェクト選択項目が選択する必要があります。 ユーザー インストール、VSPackage のパッケージ開発中に作成された配信プラットフォームが必要な任意のプラットフォーム名を表示する場合は、パッケージ作成者によって設定のいずれかの条件に基づいています。 ユーザーは、プロパティ ページがインスタンス化されるときに VSPackage を使用できるプラットフォームの一覧から選択できます。  
@@ -62,21 +60,21 @@ ms.locfileid: "47534765"
   
  前の図に関連するいくつかの注意:  
   
--   `IDispatch` 構成オブジェクトでは省略可能としてマークされます。 具体的には、参照オブジェクトの構成インターフェイスを実装する省略可能です。  
+- `IDispatch` 構成オブジェクトでは省略可能としてマークされます。 具体的には、参照オブジェクトの構成インターフェイスを実装する省略可能です。  
   
--   `IVsDebuggableProjectCfg` 省略可能で、構成オブジェクトに設定されていますのデバッグのサポートが必要です。  
+- `IVsDebuggableProjectCfg` 省略可能で、構成オブジェクトに設定されていますのデバッグのサポートが必要です。  
   
--   `IVsProjectCfg2` 省略可能で、構成オブジェクトに設定されていますが、出力のサポートをグループ化が必要です。  
+- `IVsProjectCfg2` 省略可能で、構成オブジェクトに設定されていますが、出力のサポートをグループ化が必要です。  
   
--   `Config Provider`オブジェクトが、省略可能なオブジェクトとしてマークされていますが、オプションは、それを実装する場所。 プロジェクト オブジェクトまたは別のオブジェクトは、オブジェクトを実装することができます。  
+- `Config Provider`オブジェクトが、省略可能なオブジェクトとしてマークされていますが、オプションは、それを実装する場所。 プロジェクト オブジェクトまたは別のオブジェクトは、オブジェクトを実装することができます。  
   
--   `IVsCfgProvider2` プラットフォームのサポートと構成の編集が必要です。 `IVsCfgProvider` その機能を実装していない場合は十分です。  
+- `IVsCfgProvider2` プラットフォームのサポートと構成の編集が必要です。 `IVsCfgProvider` その機能を実装していない場合は十分です。  
   
--   いくつかのように個別のオブジェクトは、可能であれば、同じクラスに結合できます、図に示したこれらのオブジェクトの特定の設計要件に基づいています。 このセクションの他のトピックでは、ただし、オブジェクトとそれらのオブジェクトに関連付けられているインターフェイスについては説明に従って、ダイアグラムのシナリオでします。  
+- いくつかのように個別のオブジェクトは、可能であれば、同じクラスに結合できます、図に示したこれらのオブジェクトの特定の設計要件に基づいています。 このセクションの他のトピックでは、ただし、オブジェクトとそれらのオブジェクトに関連付けられているインターフェイスについては説明に従って、ダイアグラムのシナリオでします。  
   
--   特定のオブジェクトは、個別に実装されます。 たとえば、プロジェクトとソリューションの構築とビルドの構成を記述するオブジェクトからビルド生活がどれほどを個別に管理するオブジェクトの個別のスレッドの発生します。  
+- 特定のオブジェクトは、個別に実装されます。 たとえば、プロジェクトとソリューションの構築とビルドの構成を記述するオブジェクトからビルド生活がどれほどを個別に管理するオブジェクトの個別のスレッドの発生します。  
   
- 構成オブジェクトのインターフェイスと、前の図での構成プロバイダー オブジェクトのインターフェイスについては、次を参照してください。[プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)します。 さらに、[構築するためのプロジェクト構成](../../extensibility/internals/project-configuration-for-building.md)構成ビルダーとビルドの依存関係オブジェクトのインターフェイスについて詳しく説明しますと[展開を管理するためのプロジェクト構成](../../extensibility/internals/project-configuration-for-managing-deployment.md)さらに、構成を配置するユーザーと展開の依存関係オブジェクトにアタッチされているインターフェイスについて説明します。 最後に、[出力用のプロジェクト構成](../../extensibility/internals/project-configuration-for-output.md)出力グループと出力オブジェクトのインターフェイスと、表示し、構成に依存するプロパティを設定するプロパティ ページの使用について説明します。  
+  構成オブジェクトのインターフェイスと、前の図での構成プロバイダー オブジェクトのインターフェイスについては、次を参照してください。[プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)します。 さらに、[構築するためのプロジェクト構成](../../extensibility/internals/project-configuration-for-building.md)構成ビルダーとビルドの依存関係オブジェクトのインターフェイスについて詳しく説明しますと[展開を管理するためのプロジェクト構成](../../extensibility/internals/project-configuration-for-managing-deployment.md)さらに、構成を配置するユーザーと展開の依存関係オブジェクトにアタッチされているインターフェイスについて説明します。 最後に、[出力用のプロジェクト構成](../../extensibility/internals/project-configuration-for-output.md)出力グループと出力オブジェクトのインターフェイスと、表示し、構成に依存するプロパティを設定するプロパティ ページの使用について説明します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>   

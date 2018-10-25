@@ -1,7 +1,7 @@
 ---
 title: 分離シェルの要素 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: f8d68c3d-9134-4a8f-b566-485956cd321e
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f9edba9d02b0c02321cd468cdc75630be92d53fe
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ca63b6a8c973b33a9dffc98966fd0622c0a5407a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546428"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868431"
 ---
 # <a name="elements-of-the-isolated-shell"></a>分離シェルの要素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[分離シェルの要素](https://docs.microsoft.com/visualstudio/extensibility/elements-of-the-isolated-shell)します。  
-  
 レジストリ設定、実行時の設定と、分離シェル アプリケーションとその .vsct、.pkgdef、and.pkgundef ファイルのアプリケーションのエントリ ポイントを変更することができます。  
   
 ## <a name="registry-settings"></a>レジストリ設定  
@@ -47,11 +45,11 @@ ms.locfileid: "47546428"
 ## <a name="run-time-settings"></a>実行時の設定  
  ユーザーは、分離シェル アプリケーションを起動するときに、Visual Studio シェルの開始のエントリ ポイントを呼び出します。 アプリケーションの設定は、次のように、アプリケーションの起動時に定義されます。  
   
-1.  Visual Studio shell は、特定のキーのアプリケーションのレジストリを確認します。 開始のエントリ ポイントへの呼び出しでキーの設定が指定されている場合、その値は、レジストリの値をオーバーライドします。  
+1. Visual Studio shell は、特定のキーのアプリケーションのレジストリを確認します。 開始のエントリ ポイントへの呼び出しでキーの設定が指定されている場合、その値は、レジストリの値をオーバーライドします。  
   
-2.  レジストリにも、エントリ ポイントと、パラメーターは、設定の値を指定し、設定の既定値を使用します。  
+2. レジストリにも、エントリ ポイントと、パラメーターは、設定の値を指定し、設定の既定値を使用します。  
   
- ユーザーは、コマンドラインからアプリケーションを起動するときに、すべてのコマンド ライン スイッチは、Visual Studio shell は、Devenv は同じ方法で扱うに渡されます。 Devenv のスイッチの詳細については、次を参照してください。 [Devenv コマンド ライン スイッチ](../ide/reference/devenv-command-line-switches.md)と[VSPackage 開発の Devenv コマンド ライン スイッチ](../extensibility/devenv-command-line-switches-for-vspackage-development.md)します。 コマンド ライン スイッチ用のパッケージを登録する方法の詳細については、次を参照してください。[コマンド ライン スイッチを追加する](../extensibility/adding-command-line-switches.md)します。  
+   ユーザーは、コマンドラインからアプリケーションを起動するときに、すべてのコマンド ライン スイッチは、Visual Studio shell は、Devenv は同じ方法で扱うに渡されます。 Devenv のスイッチの詳細については、次を参照してください。 [Devenv コマンド ライン スイッチ](../ide/reference/devenv-command-line-switches.md)と[VSPackage 開発の Devenv コマンド ライン スイッチ](../extensibility/devenv-command-line-switches-for-vspackage-development.md)します。 コマンド ライン スイッチ用のパッケージを登録する方法の詳細については、次を参照してください。[コマンド ライン スイッチを追加する](../extensibility/adding-command-line-switches.md)します。  
   
 ## <a name="the-start-entry-point"></a>開始のエントリ ポイント  
  Appenvstub.dll ファイルには、分離シェルにアクセスするためのエントリ ポイントが含まれています。 アプリケーションの起動時に Appenvstub.dll の開始エントリ ポイントを呼び出します。  
