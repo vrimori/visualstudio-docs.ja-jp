@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_age |Microsoft ドキュメント
+title: Idiasymbol::get_age |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a81c41902b5e6a8421f15b69ebc77fe5ae6eebf
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0ba915762a5eacffc32122a1dac4b7b046691e63
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31464782"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868470"
 ---
 # <a name="idiasymbolgetage"></a>IDiaSymbol::get_age
 .Pdb ファイルの経過時間の値を取得します。  
@@ -37,19 +37,19 @@ HRESULT get_age (
  [out].Pdb ファイルの経過時間の値を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>コメント  
- 保存期間は必ずしも対応しません。 既知の時刻値に.pdb ファイルが対応する .exe ファイルとの同期のあるかどうかに通常使用されます。  
+## <a name="remarks"></a>Remarks  
+ 経過時間がある既知の時刻の値に必ずしも対応していませんこれは通常、.pdb ファイルが対応する .exe ファイルと同期していない場合を決定に使用します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|dia2.h|  
+|ヘッダー:|Dia2.h|  
 |バージョン:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>関連項目  

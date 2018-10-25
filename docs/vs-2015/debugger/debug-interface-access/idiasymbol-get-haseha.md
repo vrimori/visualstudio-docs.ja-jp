@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6a0e9bdc820483a1c4af7389c0af5bce4750163a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: bacedc8f92d0cdec87fd6789025958768fa4cb51
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49220494"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907652"
 ---
 # <a name="idiasymbolgethaseha"></a>IDiaSymbol::get_hasEHa
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -51,7 +51,7 @@ HRESULT get_hasEHa(
 ## <a name="remarks"></a>Remarks  
  非同期または構造化例外が C++ スタイルの例外処理、処理を混在させることは、特定のコンパイラ スイッチを/EHa、有効にする必要しますが、あります。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

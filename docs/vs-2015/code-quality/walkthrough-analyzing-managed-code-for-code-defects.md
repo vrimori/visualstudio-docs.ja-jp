@@ -18,12 +18,12 @@ caps.latest.revision: 47
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 0c8bf9d1f293895c762348752b64c7be8cf6d510
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 0b9d6aba5997182578b43ac9edd3c889bcfc365e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49217486"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49912891"
 ---
 # <a name="walkthrough-analyzing-managed-code-for-code-defects"></a>チュートリアル : マネージド コードの分析によるコード障害の検出
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -98,81 +98,81 @@ ms.locfileid: "49217486"
   
 4.  警告を修正するのにには、次を使用します。  
   
--   [Ca 1014: アセンブリに CLSCompliantAttribute をマークする](../code-quality/ca1014-mark-assemblies-with-clscompliantattribute.md): Microsoft.Design: 'demo' は、CLSCompliantAttribute でマークする必要があり、その値を true にする必要があります。  
+- [Ca 1014: アセンブリに CLSCompliantAttribute をマークする](../code-quality/ca1014-mark-assemblies-with-clscompliantattribute.md): Microsoft.Design: 'demo' は、CLSCompliantAttribute でマークする必要があり、その値を true にする必要があります。  
   
-    -   コードを追加`using``System;`AssemblyInfo.cs ファイルにします。  
+  -   コードを追加`using``System;`AssemblyInfo.cs ファイルにします。  
   
-         次に、コードを追加`[assembly: CLSCompliant(true)]`AssemblyInfo.cs ファイルの末尾にします。  
+       次に、コードを追加`[assembly: CLSCompliant(true)]`AssemblyInfo.cs ファイルの末尾にします。  
   
-         プロジェクトをリビルドします。  
+       プロジェクトをリビルドします。  
   
--   [Ca 1032: 標準例外コンス トラクターを実装する](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft.Design: このクラスに次のコンス トラクターを追加しますパブリック demo(String)。  
+- [Ca 1032: 標準例外コンス トラクターを実装する](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft.Design: このクラスに次のコンス トラクターを追加しますパブリック demo(String)。  
   
-    -   コンス トラクターを追加`public demo (String s) : base(s) { }`クラスに`demo`します。  
+  -   コンス トラクターを追加`public demo (String s) : base(s) { }`クラスに`demo`します。  
   
--   [Ca 1032: 標準例外コンス トラクターを実装する](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft.Design: このクラスに次のコンス トラクターを追加しますパブリックのデモ (String, 例外)。  
+- [Ca 1032: 標準例外コンス トラクターを実装する](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft.Design: このクラスに次のコンス トラクターを追加しますパブリックのデモ (String, 例外)。  
   
-    -   コンス トラクターを追加`public demo (String s, Exception e) : base(s, e) { }`クラスに`demo`します。  
+  -   コンス トラクターを追加`public demo (String s, Exception e) : base(s, e) { }`クラスに`demo`します。  
   
--   [Ca 1032: 標準例外コンス トラクターを実装する](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft.Design: このクラスに次のコンス トラクターを追加しますデモ (SerializationInfo, StreamingContext) を保護。  
+- [Ca 1032: 標準例外コンス トラクターを実装する](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft.Design: このクラスに次のコンス トラクターを追加しますデモ (SerializationInfo, StreamingContext) を保護。  
   
-    -   コードを追加`using System.Runtime.Serialization;`Class1.cs ファイルの先頭にします。  
+  -   コードを追加`using System.Runtime.Serialization;`Class1.cs ファイルの先頭にします。  
   
-         次に、コンス トラクターを追加します。 `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { } to the class demo.`  
+       次に、コンス トラクターを追加します。 `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { } to the class demo.`  
   
-         プロジェクトをリビルドします。  
+       プロジェクトをリビルドします。  
   
--   [Ca 1032: 標準例外コンス トラクターを実装する](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft.Design: このクラスに次のコンス トラクターを追加しますパブリック demo()。  
+- [Ca 1032: 標準例外コンス トラクターを実装する](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft.Design: このクラスに次のコンス トラクターを追加しますパブリック demo()。  
   
-    -   コンス トラクターを追加`public demo () : base() { }`クラスに`demo`**します。**  
+  -   コンス トラクターを追加`public demo () : base() { }`クラスに`demo`**します。**  
   
-         プロジェクトをリビルドします。  
+       プロジェクトをリビルドします。  
   
--   [Ca 1709: 識別子を正しく使い分ける](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Microsoft.Naming: 'TestCode' に変更することによって空間' プログラム名' の大文字と小文字を修正します。  
+- [Ca 1709: 識別子を正しく使い分ける](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Microsoft.Naming: 'TestCode' に変更することによって空間' プログラム名' の大文字と小文字を修正します。  
   
-    -   名前空間の大文字と小文字を変更する`testCode`に`TestCode`します。  
+  -   名前空間の大文字と小文字を変更する`testCode`に`TestCode`します。  
   
--   [Ca 1709: 識別子を正しく使い分ける](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Microsoft.Naming:"Demo"に変更することによって、型名 'demo' の大文字と小文字を修正します。  
+- [Ca 1709: 識別子を正しく使い分ける](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Microsoft.Naming:"Demo"に変更することによって、型名 'demo' の大文字と小文字を修正します。  
   
-    -   メンバーの名前を変更`Demo`します。  
+  -   メンバーの名前を変更`Demo`します。  
   
--   [Ca 1709: 識別子を正しく使い分ける](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Microsoft.Naming: 'Item' に変更することによって、メンバー名 'item' の大文字と小文字を修正します。  
+- [Ca 1709: 識別子を正しく使い分ける](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Microsoft.Naming: 'Item' に変更することによって、メンバー名 'item' の大文字と小文字を修正します。  
   
-    -   メンバーの名前を変更`Item`します。  
+  -   メンバーの名前を変更`Item`します。  
   
--   [1710: 識別子は正しいサフィックスをいなければなりません](../code-quality/ca1710-identifiers-should-have-correct-suffix.md): Microsoft.Naming: 名前の変更 'testCode.demo' を 'Exception' で終了します。  
+- [1710: 識別子は正しいサフィックスをいなければなりません](../code-quality/ca1710-identifiers-should-have-correct-suffix.md): Microsoft.Naming: 名前の変更 'testCode.demo' を 'Exception' で終了します。  
   
-    -   クラスとそのコンス トラクターの名前を変更`DemoException`します。  
+  -   クラスとそのコンス トラクターの名前を変更`DemoException`します。  
   
--   [Ca 2210: アセンブリが有効な厳密な名前](../code-quality/ca2210-assemblies-should-have-valid-strong-names.md): 'ManagedDemo' を厳密な名前のキーで署名します。  
+- [Ca 2210: アセンブリが有効な厳密な名前](../code-quality/ca2210-assemblies-should-have-valid-strong-names.md): 'ManagedDemo' を厳密な名前のキーで署名します。  
   
-    -   **プロジェクト** メニューのをクリックして**ManagedDemo プロパティ**します。  
+  -   **プロジェクト** メニューのをクリックして**ManagedDemo プロパティ**します。  
   
-         プロジェクトのプロパティが表示されます。  
+       プロジェクトのプロパティが表示されます。  
   
-         クリックして**署名**します。  
+       クリックして**署名**します。  
   
-         選択、**アセンブリに署名**チェック ボックスをオンします。  
+       選択、**アセンブリに署名**チェック ボックスをオンします。  
   
-         **厳密な名前キー ファイルを選択**一覧で、[ **\<新規作成] >** します。  
+       **厳密な名前キー ファイルを選択**一覧で、[ **\<新規作成] >** します。  
   
-         **厳密な名前キーの作成** ダイアログ ボックスが表示されます。  
+       **厳密な名前キーの作成** ダイアログ ボックスが表示されます。  
   
-         **キー ファイル名**TestKey を入力します。  
+       **キー ファイル名**TestKey を入力します。  
   
-         パスワードを入力し、クリックして**OK**します。  
+       パスワードを入力し、クリックして**OK**します。  
   
-         **ファイル** メニューのをクリックして**選択した項目の保存**、プロパティ ページを閉じます。  
+       **ファイル** メニューのをクリックして**選択した項目の保存**、プロパティ ページを閉じます。  
   
-         プロジェクトをリビルドします。  
+       プロジェクトをリビルドします。  
   
--   [Ca 2237: ISerializable 型を SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md): Microsoft.Usage: この型が ISerializable を実装している 'デモ' を入力する [Serializable] 属性を追加します。  
+- [Ca 2237: ISerializable 型を SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md): Microsoft.Usage: この型が ISerializable を実装している 'デモ' を入力する [Serializable] 属性を追加します。  
   
-    -   追加、`[Serializable ()]`属性をクラス`demo`します。  
+  -   追加、`[Serializable ()]`属性をクラス`demo`します。  
   
-         プロジェクトをリビルドします。  
+       プロジェクトをリビルドします。  
   
- 変更を完了した後、次のよう Class1.cs ファイルになります。  
+  変更を完了した後、次のよう Class1.cs ファイルになります。  
   
 ```  
 //CodeAnalysisManagedDemo  
@@ -202,17 +202,17 @@ namespace TestCode
   
 #### <a name="to-exclude-code-defect-warnings"></a>コード障害の警告を除外するには  
   
-1.  残りの警告のそれぞれについて、次の操作を行います。  
+1. 残りの警告のそれぞれについて、次の操作を行います。  
   
-    1.  コード分析 ウィンドウで、警告を選択します。  
+   1. コード分析 ウィンドウで、警告を選択します。  
   
-    2.  選択**アクション**を選択し、**メッセージの非表示**を選び、**プロジェクト抑制ファイル内**。  
+   2. 選択**アクション**を選択し、**メッセージの非表示**を選び、**プロジェクト抑制ファイル内**。  
   
-     詳細については、次を参照してください[方法: メニュー項目を使用して警告を抑制する。](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md)  
+      詳細については、次を参照してください[方法: メニュー項目を使用して警告を抑制する。](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md)  
   
-2.  プロジェクトをリビルドします。  
+2. プロジェクトをリビルドします。  
   
-     プロジェクトは、警告やエラーなしでビルドします。
+    プロジェクトは、警告やエラーなしでビルドします。
 
 
 

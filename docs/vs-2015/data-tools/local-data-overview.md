@@ -30,12 +30,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: 312dbee46f13bf1f8f5d0666dcba18adc1116cdf
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 94b3f066a66a380875609b4f6485d56a19ebde3e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49210484"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49885578"
 ---
 # <a name="local-data-overview"></a>ローカル データの概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,19 +48,19 @@ ms.locfileid: "49210484"
   
 2.  
   
--  
+- 
   
--  
+- 
   
--   ソリューション エクスプ ローラーでソリューション ノードをクリックしを選択する SQL Server データベース プロジェクトを作成**追加&#124;新しいプロジェクト**します。  左側のウィンドウで次のように選択します。 **SQL Server&#124;データベース**プロジェクトと、[ok] をクリックします。 ソリューション エクスプ ローラーで、ローカル データベース ファイルをインポートするデータベース プロジェクト ノードを右クリックし、プロジェクトによって生成されたデータベースに接続するアプリケーションを開発します。 開発し、アプリケーションを開発するいると同時に、データベース スキーマを変更する場合に適しています。  
+- ソリューション エクスプ ローラーでソリューション ノードをクリックしを選択する SQL Server データベース プロジェクトを作成**追加&#124;新しいプロジェクト**します。  左側のウィンドウで次のように選択します。 **SQL Server&#124;データベース**プロジェクトと、[ok] をクリックします。 ソリューション エクスプ ローラーで、ローカル データベース ファイルをインポートするデータベース プロジェクト ノードを右クリックし、プロジェクトによって生成されたデータベースに接続するアプリケーションを開発します。 開発し、アプリケーションを開発するいると同時に、データベース スキーマを変更する場合に適しています。  
   
-     ![データベースをデータベース プロジェクトにインポート](../data-tools/media/raddata-import-database-into-database-project.png "raddata インポート データベースにデータベース プロジェクト")  
+   ![データベースをデータベース プロジェクトにインポート](../data-tools/media/raddata-import-database-into-database-project.png "raddata インポート データベースにデータベース プロジェクト")  
   
--   新しいデータベースを作成する場合は、まず追加、**サービス ベースのデータベース ファイル**をプロジェクトに (**プロジェクト&#124;新しい項目の追加)** します。 (Localdb) \MSSQLocalDB は、既定では、ローカル コンピューターの既定の SQL Server インスタンスに接続されている新しい .mdf ファイルが作成されます。 データベースは、サーバー エクスプ ローラーに表示されます。 ノードを展開し、テーブル、ビュー、関数などの新しいデータベース オブジェクトを追加するノードを右クリックします。  
+- 新しいデータベースを作成する場合は、まず追加、**サービス ベースのデータベース ファイル**をプロジェクトに (**プロジェクト&#124;新しい項目の追加)** します。 (Localdb) \MSSQLocalDB は、既定では、ローカル コンピューターの既定の SQL Server インスタンスに接続されている新しい .mdf ファイルが作成されます。 データベースは、サーバー エクスプ ローラーに表示されます。 ノードを展開し、テーブル、ビュー、関数などの新しいデータベース オブジェクトを追加するノードを右クリックします。  
   
- SQL Server Express LocalDB の詳細については、次を参照してください。 [Introducing LocalDB,、改善 SQL Express](http://go.microsoft.com/fwlink/?LinkId=234375)と[LocalDB: My Database があるでしょうか。](http://go.microsoft.com/fwlink/?LinkId=234376) 、Microsoft web サイト。  
+  SQL Server Express LocalDB の詳細については、次を参照してください。 [Introducing LocalDB,、改善 SQL Express](http://go.microsoft.com/fwlink/?LinkId=234375)と[LocalDB: My Database があるでしょうか。](http://go.microsoft.com/fwlink/?LinkId=234376) 、Microsoft web サイト。  
   
- 次の表に、アプリケーションをローカル データに接続する方法を説明するトピックへのリンクを示します。  
+  次の表に、アプリケーションをローカル データに接続する方法を説明するトピックへのリンクを示します。  
   
 |トピック|説明|  
 |-----------|-----------------|  

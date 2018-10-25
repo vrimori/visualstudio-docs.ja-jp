@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3898f61987f1767dba57a63bfb3b5b753e8d37aa
-ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
+ms.openlocfilehash: 55c9e7c6ec4a34d59c45b2a56abedaa6d3fd2974
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34815614"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942447"
 ---
 # <a name="how-to-install-the-stand-alone-profiler"></a>方法: スタンドアロンのプロファイラーをインストールする
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE をインストールしなくても実行できるコマンドライン ベースのスタンドアロン プロファイラーを利用できます。 このような状況は、コンピューターに開発環境がインストールされていないときに発生します。 たとえば、本稼働中の Web サーバーには開発環境をインストールするべきではありません。  
@@ -28,28 +28,28 @@ ms.locfileid: "34815614"
   
 ### <a name="to-install-the-stand-alone-profiler"></a>スタンドアロンのプロファイラーをインストールするには  
   
-1.  *\Standalone Profiler* パスが含まれるディレクトリの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] インストール メディアでスタンドアロン プロファイル インストーラー (*vs_profiler.exe*) を検索して実行します。  
+1. *\Standalone Profiler* パスが含まれるディレクトリの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] インストール メディアでスタンドアロン プロファイル インストーラー (*vs_profiler.exe*) を検索して実行します。  
   
-2.  *vsintr.exe* と *msdis150.dll* のパスをシステム パスに追加します。  
+2. *vsintr.exe* と *msdis150.dll* のパスをシステム パスに追加します。  
   
-    > [!NOTE]
-    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の既定のインストールでは、*vsinstr.exe* と *msdis150.dll*は *\Program Files\Visual Studio 10\Team Tools\Performance Tools* にあります。  
+   > [!NOTE]
+   >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の既定のインストールでは、*vsinstr.exe* と *msdis150.dll*は *\Program Files\Visual Studio 10\Team Tools\Performance Tools* にあります。  
   
-3.  コマンド プロンプトで、「**VSInstr**」と入力します。  
+3. コマンド プロンプトで、「**VSInstr**」と入力します。  
   
-    > [!NOTE]
-    >  vsinstr.exe の利用状況情報が表示された場合、すべてが正しく設定されています。 vsinstr.exe またはその依存関係の 1 つが見つからないというエラーが表示された場合、手順 2 のとおりにパスが正しく設定されていることを確認してください。  
+   > [!NOTE]
+   >  vsinstr.exe の利用状況情報が表示された場合、すべてが正しく設定されています。 vsinstr.exe またはその依存関係の 1 つが見つからないというエラーが表示された場合、手順 2 のとおりにパスが正しく設定されていることを確認してください。  
   
-4.  シンボル サーバーを設定します。**_NT_SYMBOL_PATH** 変数を **symsrv\*symsrv.dll\*c:\localcache\*http://msdl.microsoft.com/download/symbols** に設定してください。  
+4. シンボル サーバーを設定します。**_NT_SYMBOL_PATH** 変数を **symsrv\*symsrv.dll\*c:\localcache\*http://msdl.microsoft.com/download/symbols** に設定してください。  
   
-5.  システム環境変数を利用してシンボル サーバーを設定したら、新しいコマンド プロンプトでコマンドライン プロファイラー ツールを実行します。 実行後、新しい環境変数が適用されます。 [コマンド プロンプト] ウィンドウで、次のコマンド ラインを入力します。  
+5. システム環境変数を利用してシンボル サーバーを設定したら、新しいコマンド プロンプトでコマンドライン プロファイラー ツールを実行します。 実行後、新しい環境変数が適用されます。 [コマンド プロンプト] ウィンドウで、次のコマンド ラインを入力します。  
   
-     **start %COMSPEC%**  
+    **start %COMSPEC%**  
   
-    > [!NOTE]
-    >  シンボル サーバー パッケージの設定方法については、「[方法: Windows シンボル情報を参照する](../profiling/how-to-reference-windows-symbol-information.md)」を参照してください。  
+   > [!NOTE]
+   >  シンボル サーバー パッケージの設定方法については、「[方法: Windows シンボル情報を参照する](../profiling/how-to-reference-windows-symbol-information.md)」を参照してください。  
   
-6.  [VSPerfReport](../profiling/vsperfreport.md) ツールを利用し、シンボルをシリアル化してプロファイリング データ ファイル (.vsp) を生成します。 **VSPerfReport /summary:all /packsymbols** スイッチを使用します。 データ ファイルにシンボルが挿入されていない場合、_NT_SYMBOL_PATH 環境変数が設定されていることを確認します。  
+6. [VSPerfReport](../profiling/vsperfreport.md) ツールを利用し、シンボルをシリアル化してプロファイリング データ ファイル (.vsp) を生成します。 **VSPerfReport /summary:all /packsymbols** スイッチを使用します。 データ ファイルにシンボルが挿入されていない場合、_NT_SYMBOL_PATH 環境変数が設定されていることを確認します。  
   
 ## <a name="see-also"></a>関連項目  
  [コマンド ラインからのプロファイリング](../profiling/using-the-profiling-tools-from-the-command-line.md)   

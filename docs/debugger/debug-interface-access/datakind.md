@@ -1,5 +1,5 @@
 ---
-title: DataKind |Microsoft ドキュメント
+title: DataKind |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c3de9ef6128c3cd5ca6eae80a257b3dc2982cd0f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 8f2b46e420db8addf19ef8694112058bdb8b2f91
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31458191"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867625"
 ---
 # <a name="datakind"></a>DataKind
 データ値の特定のスコープを示します。  
@@ -72,10 +72,10 @@ enum DataKind {
  DataIsConstant  
  データ項目は、定数値です。  
   
-## <a name="remarks"></a>コメント  
- この列挙体の値が返された、 [idiasymbol::get_datakind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ この列挙体の値がによって返される、 [idiasymbol::get_datakind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: cvconst.h  
   
 ## <a name="see-also"></a>関連項目  

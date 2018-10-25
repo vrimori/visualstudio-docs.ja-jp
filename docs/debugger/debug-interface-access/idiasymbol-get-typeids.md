@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_typeids |Microsoft ドキュメント
+title: Idiasymbol::get_typeids |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f1ad4aae54096ea2fdcbcac1a68d32fc3b386ad
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: bacd3547c1aadfc99b66437acbd73599ec2191f6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31470671"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942596"
 ---
 # <a name="idiasymbolgettypeids"></a>IDiaSymbol::get_typeIds
-このシンボルにコンパイラ固有の型識別子の値の配列を取得します。  
+このシンボルのコンパイラ固有の型識別子の値の配列を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,16 +39,16 @@ HRESULT get_typeIds (
  [in]データを保持するバッファーのサイズ。  
   
  `pcTypeIds`  
- [out]数を返します`typeIds`書き込まれると、または、`typeIds`は`NULL`、し、型識別子が利用可能な数の合計。  
+ [out]数を返します`typeIds`書き込まれると、または、`typeIds`は`NULL`、使用可能な型識別子の総数、します。  
   
  `typeIds[]`  
- [out]型識別子を使用する入力となる配列。  
+ [out]型識別子を使用して格納する配列。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

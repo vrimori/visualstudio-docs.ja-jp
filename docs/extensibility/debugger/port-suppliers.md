@@ -14,25 +14,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5385e006bcd2f79ab7b1c2e723e696b833991f36
-ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
+ms.openlocfilehash: 680f57878b3dd06e2f5935874f4a3f3bb06a2a1c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39252350"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948227"
 ---
 # <a name="port-suppliers"></a>ポート サプライヤー
 デバッガーのアーキテクチャで、*ポート サプライヤー*:  
   
--   サーバーに含まれていて、そのサーバーへの要求でポートを提供します。  
+- サーバーに含まれていて、そのサーバーへの要求でポートを提供します。  
   
--   追加し、ポートを含む、サーバーから削除できます。  
+- 追加し、ポートを含む、サーバーから削除できます。  
   
--   これがサーバーに提供されているすべてのポートを列挙できます。  
+- これがサーバーに提供されているすべてのポートを列挙できます。  
   
--   によって表される、 [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)インターフェイスをレジストリを使用して Visual Studio に登録します。 このインターフェイスを呼び出すことによって取得できる[GetPortSupplier](../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)します。  
+- によって表される、 [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)インターフェイスをレジストリを使用して Visual Studio に登録します。 このインターフェイスを呼び出すことによって取得できる[GetPortSupplier](../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)します。  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 既定のポート サプライヤーと既定のポートを提供します。 カスタム ポートを実装する場合は、実装して、これらのカスタム ポートを指定することも、カスタム ポート サプライヤー必要があります。  
+  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 既定のポート サプライヤーと既定のポートを提供します。 カスタム ポートを実装する場合は、実装して、これらのカスタム ポートを指定することも、カスタム ポート サプライヤー必要があります。  
   
 ## <a name="see-also"></a>関連項目  
  [サーバー](../../extensibility/debugger/servers-visual-studio-sdk.md)   

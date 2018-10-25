@@ -1,5 +1,5 @@
 ---
-title: REFERENCE_COMPARE |Microsoft ドキュメント
+title: REFERENCE_COMPARE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5b65ec3e0cc4a5b52aa909dea9f3dafa735050c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b7765255583b7160c1cdd19b11889f5de1b35594
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31133569"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926658"
 ---
 # <a name="referencecompare"></a>REFERENCE_COMPARE
 参照の比較の種類を指定します。  
@@ -46,18 +46,18 @@ public enum enum_REFERENCE_COMPARE {
   
 ## <a name="members"></a>メンバー  
  REF_COMPARE_EQUAL  
- 等しいかどうかに基づく比較を指定します。  
+ 等しくない比較を指定します。  
   
  REF_COMPARE_LESS_THAN  
- 小の指定-比較よりもします。  
+ 小なりを指定の比較よりもします。  
   
  REF_COMPARE_GREATER_THAN  
- 指定、大-比較よりもします。  
+ 大なりを指定します-比較よりもします。  
   
-## <a name="remarks"></a>コメント  
- 引数として渡される、[比較](../../../extensibility/debugger/reference/idebugreference2-compare.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 引数として渡される、[比較](../../../extensibility/debugger/reference/idebugreference2-compare.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

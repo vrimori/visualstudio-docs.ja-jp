@@ -18,12 +18,12 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2ebd1c4c968ce66b8c4c0e56c00c157e475c8db5
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 8152b22b229e654b17a2f424694283189c95431b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49243400"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834319"
 ---
 # <a name="thunkordinal"></a>THUNK_ORDINAL
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -71,7 +71,7 @@ typedef enum THUNK_ORDINAL {
 ## <a name="remarks"></a>Remarks  
  この列挙体の値が呼び出しから返される、 [idiasymbol::get_thunkordinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: cvconst.h  
   
 ## <a name="see-also"></a>関連項目  

@@ -32,12 +32,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 59b161c1f2dedd0b9c14f9949cfcc164f39b26ea
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 272fb5368b73e483bb7d2f44c475d5e4e7bfdfcc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31950034"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933574"
 ---
 # <a name="options-text-editor-xaml-formatting"></a>[オプション]、[テキスト エディター]、[XAML]、[書式設定]
 **[書式設定]** プロパティ ページを使用して、XAML ドキュメントで要素と属性をどのように書式設定するかを指定します。 **[オプション]** ダイアログ ボックスを開くには、**[ツール]** メニューをクリックし、**[オプション]** をクリックします。 **[書式設定]** プロパティ ページにアクセスするには、**[テキスト エディター]**、**[XAML]**、**[書式設定]** ノードを展開します。
@@ -96,11 +96,12 @@ ms.locfileid: "31950034"
 ## <a name="element-spacing"></a>要素間のスペース
  XAML ドキュメント内で要素を配置する方法を制御するには、この設定を使用します。
 
-|||
-|-|-|
-|**コンテンツ内の改行を保持する**|要素のコンテンツ内の空白行は削除されません。<br /><br /> `<Grid>`<br /><br /> ``<br /><br /> ``<br /><br /> `<Button Name="button1">Hello</Button>`<br /><br /> ``<br /><br /> `</Grid>`|
-|**コンテンツ内の複数の空白行を単一行に折りたたむ**|要素のコンテンツ内の空白行は、1 行に折りたたまれます。<br /><br /> `<Grid>`<br /><br /> ``<br /><br /> `<Button Name="button1">Hello</Button>`<br /><br /> ``<br /><br /> `</Grid>`|
-|**コンテンツ内の空の行を削除する**|要素のコンテンツ内のすべての空白行が削除されます。<br /><br /> `<Grid>`<br /><br /> `<Button Name="button1">Hello</Button>`<br /><br /> `</Grid>`|
+
+| | |
+| - | - |
+| **コンテンツ内の改行を保持する** | 要素のコンテンツ内の空白行は削除されません。<br /><br /> `<Grid>`<br /><br /> ``<br /><br /> ``<br /><br /> `<Button Name="button1">Hello</Button>`<br /><br /> ``<br /><br /> `</Grid>\` |
+| **コンテンツ内の複数の空白行を単一行に折りたたむ** | 要素のコンテンツ内の空白行は、1 行に折りたたまれます。<br /><br /> `<Grid>`<br /><br /> ``<br /><br /> `<Button Name="button1">Hello</Button>`<br /><br /> ``<br /><br /> `</Grid>` |
+| **コンテンツ内の空の行を削除する** | 要素のコンテンツ内のすべての空白行が削除されます。<br /><br /> `<Grid>`<br /><br /> `<Button Name="button1">Hello</Button>`<br /><br /> `</Grid>` |
 
 ## <a name="miscellaneous-section-auto-insert"></a>その他のセクション、自動挿入
  タグと引用符が自動的に生成されるタイミングを制御するには、この設定を使用します。

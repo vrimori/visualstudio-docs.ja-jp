@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::IsFunctionStale |Microsoft ドキュメント
+title: IDebugComPlusSymbolProvider::IsFunctionStale |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,15 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5076c57ecc1a9e550f9daf869e5fe5b52a48eb8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bbd68a17e940a7f0f183b49c8194439fd6c21d92
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31110108"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893458"
 ---
 # <a name="idebugcomplussymbolproviderisfunctionstale"></a>IDebugComPlusSymbolProvider::IsFunctionStale
-かどうか、指定されたデバッグ アドレスでの関数は古いと見なされますを決定します。  
+かどうか、指定されたデバッグ アドレスに、この関数は古いと見なさを決定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,13 +39,13 @@ int IsFunctionStale(
   
 #### <a name="parameters"></a>パラメーター  
  `pAddress`  
- [in]によって表されるデバッグ アドレス、 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)インターフェイスです。 このアドレスは、METHOD_ADDRESS を指定する必要があります。  
+ [in]デバッグ アドレスで表される、 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)インターフェイス。 このアドレスは、METHOD_ADDRESS を指定する必要があります。  
   
 ## <a name="return-value"></a>戻り値  
- 関数は、古いと見なされますが場合を返します`S_OK`です。 関数が古くなったでない場合を返します`S_FALSE`です。  
+ 場合は、関数は、古いと見なされますが、返す`S_OK`します。 関数では、古い、返します`S_FALSE`します。  
   
 ## <a name="example"></a>例  
- 次の例に対して、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスです。  
+ 次の例では、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイス。  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::IsFunctionStale(  

@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider::GetNewObjectForVisualizer |Microsoft ドキュメント
+title: IEEVisualizerDataProvider::GetNewObjectForVisualizer |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7025acd33aad7dddf947f5a151d4980fbe64a823
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4e0f9ad21b14ef3999c115966ff387f0e4dcbf58
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31120092"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935342"
 ---
 # <a name="ieevisualizerdataprovidergetnewobjectforvisualizer"></a>IEEVisualizerDataProvider::GetNewObjectForVisualizer
-このメソッドは、ビジュアライザーの新しいオブジェクトを取得します。 このメソッドは、既存のオブジェクトから新しいオブジェクトを作成するは常にします。  
+このメソッドは、ビジュアライザーの新しいオブジェクトを取得します。 このメソッドは、既存のオブジェクトから新しいオブジェクトを作成して常にします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,10 +44,10 @@ int GetNewObjectForVisualizer(
  [out]新しいオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- `This method` 表し、新しいオブジェクトとして結果を返しますが、現在のオブジェクトを再評価します。 既存のオブジェクトは、評価の結果として更新されます。  
+## <a name="remarks"></a>Remarks  
+ `This method` 表し、新しいオブジェクトとして結果を返しますが、現在のオブジェクトを再評価します。 評価の結果として、既存のオブジェクトが更新されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)   

@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::EnumCodeContexts |Microsoft ドキュメント
+title: IDebugDocumentContext2::EnumCodeContexts |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 188a91f29cbdc37a138a3cfe13084b83cdc28a6d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7a56f4b33c8a07437d255ab0d29b6f6b2cb81267
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31106485"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948006"
 ---
 # <a name="idebugdocumentcontext2enumcodecontexts"></a>IDebugDocumentContext2::EnumCodeContexts
 このドキュメントのコンテキストに関連付けられているすべてのコード コンテキストの一覧を取得します。  
@@ -41,16 +41,16 @@ int EnumCodeContexts(
   
 #### <a name="parameters"></a>パラメーター  
  `ppEnumCodeCxts`  
- [out]返します、 [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)コード コンテキストの一覧を含むオブジェクトです。  
+ [out]返します、 [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)コード コンテキストの一覧を格納しているオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 1 つのドキュメントのコンテキストでは、テンプレートを使用しているとき、ドキュメントに複数のコードのコンテキストを生成したり、ファイルを含めることができます。  
+## <a name="remarks"></a>Remarks  
+ 1 つのドキュメントのコンテキストでは、ドキュメントがテンプレートを使用する場合は、複数のコード コンテキストを生成したり、ファイルを含めることができます。  
   
 ## <a name="example"></a>例  
- 次の例は、単純なは、このメソッドを実装する方法を示します`CDebugContext`を公開するオブジェクト、 [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)インターフェイスです。  
+ 次の例は、単純なは、このメソッドを実装する方法を示しています。`CDebugContext`を公開するオブジェクト、 [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)インターフェイス。  
   
 ```cpp  
 HRESULT CDebugContext::EnumCodeContexts(IEnumDebugCodeContexts2 **ppEnumCodeCxts)    

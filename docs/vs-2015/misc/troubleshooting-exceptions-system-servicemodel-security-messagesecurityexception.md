@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: douge
-ms.openlocfilehash: 304847259f9955706f345ef0f27800dfb77eddfb
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 676f51b34bfc83d0a2af195da85a2c46cae08ac5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49241231"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853169"
 ---
 # <a name="troubleshooting-exceptions-systemservicemodelsecuritymessagesecurityexception"></a>例外のトラブルシューティング : System.ServiceModel.Security.MessageSecurityException
 A<xref:System.ServiceModel.Security.MessageSecurityException>ときに例外がスローされる[!INCLUDE[vsindigo](../includes/vsindigo-md.md)]メッセージが適切に保護されていないまたは改ざんされたことを決定します。 このエラーが最も発生しやすいのは、次の条件がすべて該当する場合です。  
@@ -48,35 +48,35 @@ A<xref:System.ServiceModel.Security.MessageSecurityException>ときに例外が�
   
 #### <a name="to-create-a-custom-service-binding-for-the-wcf-service-hosted-inside-the-aspnet-development-server"></a>ASP.NET 開発サーバー内でホストされている WCF サービスのカスタム サービス バインディングを作成するには  
   
-1.  例外が発生した WCF サービスの Web.config ファイルを開きます。  
+1. 例外が発生した WCF サービスの Web.config ファイルを開きます。  
   
-2.  Web.config ファイルに次の情報を入力します。  
+2. Web.config ファイルに次の情報を入力します。  
   
-    ```  
-    <bindings>  
-      <customBinding>  
-        <binding name="Service1Binding">  
-          <transactionFlow />  
-          <textMessageEncoding />  
-          <httpTransport authenticationScheme="Ntlm" />  
-        </binding>  
-      </customBinding>  
-    </bindings>  
-    ```  
+   ```  
+   <bindings>  
+     <customBinding>  
+       <binding name="Service1Binding">  
+         <transactionFlow />  
+         <textMessageEncoding />  
+         <httpTransport authenticationScheme="Ntlm" />  
+       </binding>  
+     </customBinding>  
+   </bindings>  
+   ```  
   
-3.  Web.config ファイルを保存して閉じます。  
+3. Web.config ファイルを保存して閉じます。  
   
-4.  WCF サービスまたは Web サービスのコードで、エンドポイント値を次のように変更します。  
+4. WCF サービスまたは Web サービスのコードで、エンドポイント値を次のように変更します。  
   
-    ```  
-    <endpoint address="" binding="customBinding" bindingConfiguration="Service1Binding" contract="IService1" />  
-    ```  
+   ```  
+   <endpoint address="" binding="customBinding" bindingConfiguration="Service1Binding" contract="IService1" />  
+   ```  
   
-     これにより、サービスがカスタム バインディングを使用するようになります。  
+    これにより、サービスがカスタム バインディングを使用するようになります。  
   
-5.  サービスにアクセスする Web アプリケーションにサービスへの参照を追加します ( **[サービス参照の追加]** ダイアログ ボックスで、例外が発生した元のサービスで行ったようにサービスへの参照を追加します)。  
+5. サービスにアクセスする Web アプリケーションにサービスへの参照を追加します ( **[サービス参照の追加]** ダイアログ ボックスで、例外が発生した元のサービスで行ったようにサービスへの参照を追加します)。  
   
- WCF サービス参照を使用する場合に NTLM セキュリティをオフにするには、次の手順を実行します。  
+   WCF サービス参照を使用する場合に NTLM セキュリティをオフにするには、次の手順を実行します。  
   
 > [!IMPORTANT]
 >  セキュリティが脆弱になる可能性があるため、NTLM セキュリティをオフにすることはお勧めしません。  

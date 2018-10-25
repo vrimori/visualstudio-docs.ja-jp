@@ -17,12 +17,12 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 47b50ece6d4fff79618890cb388c997503d95ad0
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 75da17b32d3997121777f398a6663932c7d7143d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49214748"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920132"
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>T4 テキスト テンプレートを使用した実行時テキスト生成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -295,17 +295,17 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 #### <a name="inheritance-pattern-fragments-in-base-methods"></a>継承パターン: ベースのメソッドでフラグメント  
  次の例で使用されるパターンでは、次の点に注意してください。  
   
--   基本クラス`SharedFragments`クラス機能ブロック内のメソッドを定義します。`<#+ ... #>`します。  
+- 基本クラス`SharedFragments`クラス機能ブロック内のメソッドを定義します。`<#+ ... #>`します。  
   
--   基底クラスには、フリー テキストが含まれていません。 代わりに、すべてのテキスト ブロックは、クラスの機能のメソッド内で発生します。  
+- 基底クラスには、フリー テキストが含まれていません。 代わりに、すべてのテキスト ブロックは、クラスの機能のメソッド内で発生します。  
   
--   派生クラスで定義されているメソッドを呼び出す`SharedFragments`します。  
+- 派生クラスで定義されているメソッドを呼び出す`SharedFragments`します。  
   
--   アプリケーションの呼び出し、 `TextTransform()` 、派生クラスのメソッドが基底クラスを変換しない`SharedFragments`します。  
+- アプリケーションの呼び出し、 `TextTransform()` 、派生クラスのメソッドが基底クラスを変換しない`SharedFragments`します。  
   
--   基本と派生クラスの両方が実行時テキスト テンプレート: これは、**カスタム ツール**プロパティに設定されて**TextTemplatingFilePreprocessor**します。  
+- 基本と派生クラスの両方が実行時テキスト テンプレート: これは、**カスタム ツール**プロパティに設定されて**TextTemplatingFilePreprocessor**します。  
   
- **SharedFragments.tt:**  
+  **SharedFragments.tt:**  
   
 ```csharp  
 <#@ template language="C#" #>  

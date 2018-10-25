@@ -16,12 +16,12 @@ caps.latest.revision: 20
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 25939a2ab8c98830c00c19b3e7c76c686a2a28ea
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 50075d46edcf6ffc73ccdcdedb0daf42c8ff6e2d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49289924"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49827598"
 ---
 # <a name="how-to-install-a-specific-release-of-visual-studio"></a>方法: Visual Studio の特定のリリースをインストールする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,20 +49,20 @@ ms.locfileid: "49289924"
   
 > [!IMPORTANT]
 >  使用する言語によって、"enu" (英語) を次の値のいずれかに置き換えてください。  
->   
->  -   chs (簡体字中国語)  
-> -   cht (繁体字中国語)  
-> -   csy (チェコ語)  
-> -   deu (ドイツ語)  
-> -   esn (スペイン語)  
-> -   fra (フランス語)  
-> -   ita (イタリア語)  
-> -   jpa (日本語)  
-> -   kor (韓国語)  
-> -   plk (ポーランド語)  
-> -   ptb (ポルトガル語)  
-> -   rus (ロシア語)  
-> -   trk (トルコ語)  
+> 
+> - chs (簡体字中国語)  
+>   -   cht (繁体字中国語)  
+>   -   csy (チェコ語)  
+>   -   deu (ドイツ語)  
+>   -   esn (スペイン語)  
+>   -   fra (フランス語)  
+>   -   ita (イタリア語)  
+>   -   jpa (日本語)  
+>   -   kor (韓国語)  
+>   -   plk (ポーランド語)  
+>   -   ptb (ポルトガル語)  
+>   -   rus (ロシア語)  
+>   -   trk (トルコ語)  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio 管理者ガイド](../install/visual-studio-administrator-guide.md)

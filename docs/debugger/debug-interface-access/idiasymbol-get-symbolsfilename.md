@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_symbolsfilename |Microsoft ドキュメント
+title: Idiasymbol::get_symbolsfilename |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 93f04d4ffee712a87dc784b5b83496b86d70ae25
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 46b468144e0d8275b121d9fe29e59d4789f06042
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31470398"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49840442"
 ---
 # <a name="idiasymbolgetsymbolsfilename"></a>IDiaSymbol::get_symbolsFileName
-シンボルの読み込み元ファイルの名前を取得します。  
+シンボルが読み込まれた元のファイルの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,16 +34,16 @@ HRESULT get_symbolsFileName (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]シンボルの読み込み元ファイルの名前を返します。  
+ [out]シンボルが読み込まれた元のファイルの名前を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>コメント  
- このプロパティはシンボルに対してのみ有効な[SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の値`SymTagExe`もグローバル スコープを設定します。  
+## <a name="remarks"></a>Remarks  
+ このプロパティを使用したシンボルに対してのみ有効ですが、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の値`SymTagExe`もグローバル スコープを設定します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 28dbf874ab5f7f80d7f67f789e8122bcff1a2fa6
-ms.sourcegitcommit: 56f3c31f1a06f6a6d2a8793b1abfa60cdf482497
+ms.openlocfilehash: 41da2eb360bac4c50f85bd908f980f5ee3c1d141
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48817335"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813428"
 ---
 # <a name="debug-aspnet-or-aspnet-core-apps-in-visual-studio"></a>Visual Studio での ASP.NET または ASP.NET Core アプリをデバッグします。
 
@@ -121,29 +121,29 @@ ASP.NET プロジェクトが*web.config*両方アプリの構成と起動につ
   
 3. 確認、`debug`属性、`compilation`要素に設定されて`true`します。 (場合、`compilation`要素が含まれていない、`debug`属性、追加しに設定`true`)。 
   
-  既定の IIS Express サーバーではなくローカルの IIS を使用する場合、以下のことを確認、`targetFramework`属性の値、`compilation`要素が、IIS サーバー上のフレームワークに一致します。
+   既定の IIS Express サーバーではなくローカルの IIS を使用する場合、以下のことを確認、`targetFramework`属性の値、`compilation`要素が、IIS サーバー上のフレームワークに一致します。
   
-  `compilation`の要素、 *web.config*ファイルは、次の例のようになります。
+   `compilation`の要素、 *web.config*ファイルは、次の例のようになります。
 
-  > [!NOTE]
-  > この例は、部分的な*web.config*ファイル。 通常は追加の XML セクションがある、`configuration`と`system.web`要素、および`compilation`他の属性と要素が、要素に含めることも可能性があります。
+   > [!NOTE]
+   > この例は、部分的な*web.config*ファイル。 通常は追加の XML セクションがある、`configuration`と`system.web`要素、および`compilation`他の属性と要素が、要素に含めることも可能性があります。
   
-  ```xml
-  <configuration>  
+   ```xml
+   <configuration>  
       ...  
       <system.web>  
           <compilation  debug="true"  targetFramework="4.6.1" ... > 
              ...  
           </compilation>  
       </system.web>  
-  </configuration>  
-  ```
+   </configuration>  
+   ```
 
 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 変更を自動的に検出*web.config*ファイルし、新しい構成設定が適用されます。 コンピューターや変更を有効にする IIS サーバーを再起動する必要はありません。  
   
 Web サイトで複数の仮想ディレクトリとサブディレクトリを含めることができます*web.config*それぞれファイル。 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリから構成設定を継承する*web.config*上位レベルの URL パスにあるファイル。 階層*web.config*ファイルの設定すべてに適用[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]かや、階層内のアプリ。 別の構成を設定、 *web.config*ファイル階層内の下位に高いファイル設定が上書きされます。  
   
-例では、指定した場合の`debug="true"`で*www.microsoft.com/aaa/web.config*、任意のアプリ、 *aaa*フォルダーまたはサブフォルダーの*aaa* 、その設定を継承これらのアプリのいずれか、独自の設定をオーバーライドする場合を除く*web.config*ファイル。  
+例では、指定した場合の`debug="true"`で<em>www.microsoft.com/aaa/web.config</em>、任意のアプリ、 *aaa*フォルダーまたはサブフォルダーの*aaa* 、その設定を継承これらのアプリのいずれか、独自の設定をオーバーライドする場合を除く*web.config*ファイル。  
   
 ## <a name="publish-in-debug-mode-using-the-file-system"></a>ファイル システムを使用してデバッグ モードでの発行します。
 

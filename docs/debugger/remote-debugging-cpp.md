@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 334a0b964033282458c211d69af30aad20dbd6bc
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 4677380081aaa0ac79f589ea7594f19f78750613
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38781946"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844108"
 ---
 # <a name="remote-debugging-a-visual-c-project-in-visual-studio"></a>リモート Visual Studio での Visual C プロジェクトのデバッグ
 別のコンピューター上の Visual Studio アプリケーションをデバッグ、インストールして、アプリを展開するコンピューターでリモート ツールを実行、Visual Studio からリモート コンピューターに接続して、デプロイして、アプリを実行するプロジェクトを構成します。
@@ -56,50 +56,50 @@ ms.locfileid: "38781946"
 ## <a name="remote_cplusplus"></a> Visual C プロジェクトのリモート デバッグ  
  次の手順で名前と、プロジェクトのパスは C:\remotetemp\MyMfc、およびリモート コンピューターの名前は**MJO DL**します。  
   
-1.  という名前の MFC アプリケーションの作成**mymfc します。**  
+1. という名前の MFC アプリケーションの作成**mymfc します。**  
   
-2.  例では、簡単に到達したアプリケーションのどこかにブレークポイントを設定**MainFrm.cpp**、先頭の`CMainFrame::OnCreate`します。  
+2. 例では、簡単に到達したアプリケーションのどこかにブレークポイントを設定**MainFrm.cpp**、先頭の`CMainFrame::OnCreate`します。  
   
-3.  ソリューション エクスプ ローラーでクリックし、プロジェクトを右クリックして**プロパティ**します。 開く、**デバッグ**タブ。  
+3. ソリューション エクスプ ローラーでクリックし、プロジェクトを右クリックして**プロパティ**します。 開く、**デバッグ**タブ。  
   
-4.  設定、**起動するデバッガー**に**リモート Windows デバッガー**します。  
+4. 設定、**起動するデバッガー**に**リモート Windows デバッガー**します。  
   
-     ![RemoteDebuggingCPlus](../debugger/media/remotedebuggingcplus.png "RemoteDebuggingCPlus")  
+    ![RemoteDebuggingCPlus](../debugger/media/remotedebuggingcplus.png "RemoteDebuggingCPlus")  
   
-5.  プロパティに次の変更を適用します。  
+5. プロパティに次の変更を適用します。  
   
-    |設定|[値]|
-    |-|-|  
-    |リモート コマンド|C:\remotetemp\mymfc.exe|  
-    |作業ディレクトリ|C:\remotetemp|  
-    |リモート サーバー名|MJO DL:*portnumber*|  
-    |接続|Windows 認証でリモート接続する|  
-    |デバッガーの種類|ネイティブのみ|  
-    |配置ディレクトリ|C:\remotetemp|  
-    |追加の配置ファイル|C:\data\mymfcdata.txt|  
+   |設定|[値]|
+   |-|-|  
+   |リモート コマンド|C:\remotetemp\mymfc.exe|  
+   |作業ディレクトリ|C:\remotetemp|  
+   |リモート サーバー名|MJO DL:*portnumber*|  
+   |接続|Windows 認証でリモート接続する|  
+   |デバッガーの種類|ネイティブのみ|  
+   |配置ディレクトリ|C:\remotetemp|  
+   |追加の配置ファイル|C:\data\mymfcdata.txt|  
   
-     (省略可能) 追加のファイルを展開する場合、両方のコンピューターでフォルダーが存在する必要があります。  
+    (省略可能) 追加のファイルを展開する場合、両方のコンピューターでフォルダーが存在する必要があります。  
   
-6.  ソリューション エクスプ ローラーでソリューションを右クリックし、選択**Configuration Manager**します。  
+6. ソリューション エクスプ ローラーでソリューションを右クリックし、選択**Configuration Manager**します。  
   
-7.  **デバッグ**構成では、選択、**デプロイ**チェック ボックスをオンします。  
+7. **デバッグ**構成では、選択、**デプロイ**チェック ボックスをオンします。  
   
-     ![RemoteDebugCplusDeploy](../debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")  
+    ![RemoteDebugCplusDeploy](../debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")  
   
-8.  デバッグを開始 (**デバッグ > [デバッグ開始]**、または**F5**)。  
+8. デバッグを開始 (**デバッグ > [デバッグ開始]**、または**F5**)。  
   
 9. 実行可能ファイルが、リモート コンピューターに自動的に配置されます。  
   
 10. メッセージが表示されたら、リモート マシンに接続するネットワーク資格情報を入力します。  
   
-     必要な資格情報は、ネットワークのセキュリティの構成に固有です。 たとえば、ドメインのコンピューターでセキュリティ証明書を選択または、ドメイン名とパスワードを入力します。 非ドメイン コンピューターで、可能性がありますを入力する、マシン名と有効なユーザー アカウント名では、このような**MJO-DL\name@something.com**、正しいパスワードと共にします。  
+     必要な資格情報は、ネットワークのセキュリティの構成に固有です。 たとえば、ドメインのコンピューターでセキュリティ証明書を選択または、ドメイン名とパスワードを入力します。 非ドメイン コンピューターで、可能性がありますを入力する、マシン名と有効なユーザー アカウント名では、このような<strong>MJO-DL\name@something.com</strong>、正しいパスワードと共にします。  
   
 11. Visual Studio コンピューターで、実行がブレークポイントで停止したことを確認できるはずです。  
   
     > [!TIP]
     >  また、これらのファイルは別の手順でも配置できます。 **ソリューション エクスプ ローラー**を右クリックし、 **mymfc**ノード選び、**デプロイ**します。  
   
- アプリケーションで使用する必要がある、コード以外のファイルがある場合は、Visual Studio プロジェクトに含める必要があります。 追加ファイル用のプロジェクト フォルダーの作成 (で、**ソリューション エクスプ ローラー**、 をクリックして**追加 > 新しいフォルダー**)。フォルダーにファイルを追加して (で、**ソリューション エクスプ ローラー**、 をクリックして**追加 > 既存項目の**のファイルを選択します)。 **プロパティ**ファイルごとに ページで、設定**出力ディレクトリにコピー**に**常にコピー**します。
+    アプリケーションで使用する必要がある、コード以外のファイルがある場合は、Visual Studio プロジェクトに含める必要があります。 追加ファイル用のプロジェクト フォルダーの作成 (で、**ソリューション エクスプ ローラー**、 をクリックして**追加 > 新しいフォルダー**)。フォルダーにファイルを追加して (で、**ソリューション エクスプ ローラー**、 をクリックして**追加 > 既存項目の**のファイルを選択します)。 **プロパティ**ファイルごとに ページで、設定**出力ディレクトリにコピー**に**常にコピー**します。
   
 ## <a name="set-up-debugging-with-remote-symbols"></a>リモート シンボルを使用したデバッグのセットアップ 
 
@@ -109,6 +109,6 @@ ms.locfileid: "38781946"
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
  [リモート デバッグ用の Windows ファイアウォールを構成します。](../debugger/configure-the-windows-firewall-for-remote-debugging.md)   
- [リモート デバッガーのポートの割り当て](../debugger/remote-debugger-port-assignments.md)   
+ [Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md)   
  [リモートの IIS コンピューター上の ASP.NET のリモート デバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)

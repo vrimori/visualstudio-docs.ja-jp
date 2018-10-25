@@ -7,12 +7,12 @@ ms.date: 05/06/2018
 ms.topic: article
 ms.technology: vs-ide-install
 ms.assetid: 38FD2070-5151-482E-B0A9-993715128736
-ms.openlocfilehash: 446ec0dbc13e3f1d0907933388830c6f7d02f091
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 80e6f3291f0f0fdc26883d8f98e90e296ee0c7c3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224290"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49919742"
 ---
 # <a name="tutorial-getting-started-with-azure-functions"></a>チュートリアル: Azure Functions の概要
 
@@ -34,17 +34,17 @@ ms.locfileid: "43224290"
 
 1. **Visual Studio for Mac** を起動します。
 
-1. **[ファイル]、[新しいソリューション]** の順に選択します。
+2. **[ファイル]、[新しいソリューション]** の順に選択します。
 
-1. **[クラウド]、[全般]** カテゴリから、**[Azure Functions]** テンプレートを選択します。 Azure Functions をホストする .NET クラス ライブラリを作成する場合は、C# を使用します。 **[次へ]** をクリックします。
+3. **[クラウド]、[全般]** カテゴリから、**[Azure Functions]** テンプレートを選択します。 Azure Functions をホストする .NET クラス ライブラリを作成する場合は、C# を使用します。 **[次へ]** をクリックします。
 
     ![Azure Functions テンプレートの選択](media/azure-functions-lab-image1.png)
 
-1. **[プロジェクト名]** を **"AzureFunctionsLab"** に設定して、**[作成]** をクリックします。
+4. **[プロジェクト名]** を **"AzureFunctionsLab"** に設定して、**[作成]** をクリックします。
 
     ![Azure Functions プロジェクトの名前付けと作成](media/azure-functions-lab-image2.png)
 
-1. **Solution Pad** でノードを展開します。 既定のプロジェクト テンプレートには、さまざまな Azure WebJobs パッケージと、Newtonsoft.Json パッケージへの NuGet 参照が含まれています。 
+5. **Solution Pad** でノードを展開します。 既定のプロジェクト テンプレートには、さまざまな Azure WebJobs パッケージと、Newtonsoft.Json パッケージへの NuGet 参照が含まれています。 
 
      次の 3 つのファイルもあります。  
         - ホストのグローバル構成オプションを記述するための **host.json**  

@@ -14,23 +14,23 @@ caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7e34be1203ba97c23302bd28dcf7578ba6cffd2e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: aa16c4c02f92f71d3288896d56b94a6d570c7dd4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49205583"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930415"
 ---
 # <a name="how-to-build-multiple-configurations-simultaneously"></a>方法: 複数の構成を同時にビルドする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 **[バッチ ビルド]** ダイアログ ボックスを使用すると、複数、またはすべてのプロジェクト ビルド構成で、ほとんどの種類のプロジェクトを同時にビルドできます。 ただし、次の種類のプロジェクトは、複数のビルド構成で同時にビルドすることはできません。  
   
-1.  JavaScript を使用して Windows 用にビルドされた [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリ。  
+1. JavaScript を使用して Windows 用にビルドされた [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリ。  
   
-2.  すべての Visual Basic プロジェクト。  
+2. すべての Visual Basic プロジェクト。  
   
- ビルド構成の詳細については、「[ビルド構成について](../ide/understanding-build-configurations.md)」を参照してください。  
+   ビルド構成の詳細については、「[ビルド構成について](../ide/understanding-build-configurations.md)」を参照してください。  
   
 ### <a name="to-build-a-project-in-multiple-build-configurations"></a>複数のビルド構成でプロジェクトをビルドするには  
   

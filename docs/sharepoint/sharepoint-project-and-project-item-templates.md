@@ -25,12 +25,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ccff01afcb2556469453d4227b14ebe3b897de50
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 6e38a3e709a8d49d29d598e7eabd55e7be154836
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119519"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896446"
 ---
 # <a name="sharepoint-project-and-project-item-templates"></a>SharePoint プロジェクトとプロジェクト項目テンプレート
   以下のセクションでは、SharePoint プロジェクトとプロジェクト項目の使用可能なテンプレート、およびそれらの使用方法について説明します。 
@@ -95,17 +95,17 @@ ms.locfileid: "37119519"
 ### <a name="event-receiver"></a>イベント レシーバー
  *イベント レシーバー*リストに項目を追加するときに、web 項目が削除されたとき、またはワークフローの開始など、SharePoint サイト内の項目のイベントを処理します。 イベント レシーバー プロジェクト項目テンプレートで処理できるイベントは次のとおりです。  
   
--   リスト イベント  
+- リスト イベント  
   
--   リスト アイテム イベント  
+- リスト アイテム イベント  
   
--   リスト電子メール イベント  
+- リスト電子メール イベント  
   
--   Web イベント  
+- Web イベント  
   
--   リスト ワークフロー イベント  
+- リスト ワークフロー イベント  
   
- イベント レシーバー プロジェクト項目を作成、**イベント レシーバー**フォルダーで、プロジェクトの作成時に指定するすべてのイベントのイベント ハンドラーを含む 1 つのクラス ファイルを使用して、 **SharePoint のカスタマイズウィザード**します。 イベント レシーバー クラスには、ファイル、フィールド、アイテム、リスト、添付ファイル、web パーツ、およびワークフローなどの項目が追加、更新、削除、または削除するときに、SharePoint サイトで発生するイベントを処理できます。 詳細については、次を参照してください。[方法: イベント レシーバーを作成](../sharepoint/how-to-create-an-event-receiver.md)と[ビルディング ブロック: イベント処理](http://go.microsoft.com/fwlink/?LinkId=179416)します。  
+  イベント レシーバー プロジェクト項目を作成、**イベント レシーバー**フォルダーで、プロジェクトの作成時に指定するすべてのイベントのイベント ハンドラーを含む 1 つのクラス ファイルを使用して、 **SharePoint のカスタマイズウィザード**します。 イベント レシーバー クラスには、ファイル、フィールド、アイテム、リスト、添付ファイル、web パーツ、およびワークフローなどの項目が追加、更新、削除、または削除するときに、SharePoint サイトで発生するイベントを処理できます。 詳細については、次を参照してください。[方法: イベント レシーバーを作成](../sharepoint/how-to-create-an-event-receiver.md)と[ビルディング ブロック: イベント処理](http://go.microsoft.com/fwlink/?LinkId=179416)します。  
   
 ### <a name="list"></a>リスト  
  リストは、再利用可能な基本の SharePoint リスト定義のインスタンスです (予定表、タスク リストなど)。 ソリューションにリストを追加した後、リスト デザイナーで、リストにサイト列を追加したり、リストのカスタム列を作成したりできます。 これにはコンテンツ タイプのサイト列が含まれます。 指定することができます、*ビュー*一覧については、一覧に表示される列が決まります。 詳細については、次を参照してください。[チュートリアル: SharePoint のサイト列、コンテンツの種類、および一覧を作成する](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)と[ビルディング ブロック: リストとドキュメント ライブラリ](http://go.microsoft.com/fwlink/?LinkId=179421)します。  
@@ -125,13 +125,13 @@ ms.locfileid: "37119519"
 ### <a name="site-definition-farm-solution-only"></a>サイト定義 (ファーム ソリューションのみ)
  *サイト定義*プロジェクト項目には、次のファイルを含むサイト定義フォルダーが含まれています。  
   
--   既定の .aspx ページ。サイトの既定の Web ページとして使用されます。  
+- 既定の .aspx ページ。サイトの既定の Web ページとして使用されます。  
   
--   *Onet.xml*サイトの構成要素を定義するファイル。  
+- *Onet.xml*サイトの構成要素を定義するファイル。  
   
--   Webtemp xml ファイルに表示されるサイト定義構成を指定する、**テンプレートの選択**のセクション、**新しい SharePoint サイト**ページ。  
+- Webtemp xml ファイルに表示されるサイト定義構成を指定する、**テンプレートの選択**のセクション、**新しい SharePoint サイト**ページ。  
   
- サイト定義の追加後は、コードおよびファイルを追加して機能を導入できます。 このプロジェクト項目は、ファーム ソリューションでのみ使用できます。 このプロジェクト項目はファーム ソリューションにしか追加できません。 詳細については、次を参照してください。 [for SharePoint のサイト定義を作成](../sharepoint/creating-site-definitions-for-sharepoint.md)と[サイト定義と構成](http://go.microsoft.com/fwlink/?LinkId=260554)します。  
+  サイト定義の追加後は、コードおよびファイルを追加して機能を導入できます。 このプロジェクト項目は、ファーム ソリューションでのみ使用できます。 このプロジェクト項目はファーム ソリューションにしか追加できません。 詳細については、次を参照してください。 [for SharePoint のサイト定義を作成](../sharepoint/creating-site-definitions-for-sharepoint.md)と[サイト定義と構成](http://go.microsoft.com/fwlink/?LinkId=260554)します。  
   
 ### <a name="state-machine-workflow-farm-solution-only"></a>ステート マシン ワークフロー (ファーム ソリューションのみ)
  A*ステート マシン ワークフロー*ビジネス ロジックの状態、遷移、およびアクションのセットです。 ステート マシン ワークフローに含まれる各ステップは、順番に実行されるのではなく、アクションおよび状態によってトリガーされます。 シーケンシャル ワークフローと同様に、ステート マシン ワークフローは、リストやドキュメントなどの SharePoint アイテムに関連付けられます。 サイト レベル (グローバル) のワークフローまたはリスト レベル (ローカル) のワークフローを作成できることも、シーケンシャル ワークフローと同じです。 ワークフローを自動的に開始するか手動で開始するかを選択することもできます。 このプロジェクト項目は、ファーム ソリューションでのみ使用できます。 このプロジェクト項目はファーム ソリューションにしか追加できません。 詳細については、次を参照してください。[作成 SharePoint ワークフロー ソリューション](../sharepoint/creating-sharepoint-workflow-solutions.md)、 [SharePoint Server 2010 のワークフロー](http://go.microsoft.com/fwlink/?LinkId=260555)、および[新: ワークフローの改善](http://go.microsoft.com/fwlink/?LinkId=179418)します。  

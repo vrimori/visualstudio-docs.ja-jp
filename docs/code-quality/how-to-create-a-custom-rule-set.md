@@ -13,18 +13,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 727c11e24eb3409de89fe211c6a37691dfec298c
-ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
+ms.openlocfilehash: dce43c02f4976b51bab61a48f615fb0307102fc7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39204116"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49884187"
 ---
 # <a name="customize-a-rule-set"></a>ルール セットをカスタマイズします。
 
 コード分析のための特定のプロジェクトのニーズに合わせて設定、カスタム規則を作成することができます。
 
-## <a name="create-a-custom-rule-set"></a>カスタム規則セットを作成します。
+## <a name="create-a-custom-rule-set"></a>カスタム規則セットの作成
 
 カスタム ルールを作成するには設定、組み込みの規則セットを開くことができます、**ルール セット エディター**します。 ルールに違反したときに発生するアクションを変更して、そこから追加または特定の規則を削除&mdash;など、警告またはエラーを表示します。
 
@@ -34,11 +34,11 @@ ms.locfileid: "39204116"
 
 3. **この規則セットを実行**ドロップダウン リストで、次のいずれかの操作を行います。
 
-    - カスタマイズする規則セットを選択します。
+   - カスタマイズする規則セットを選択します。
 
      \- または -
 
-    - 選択 **\<[参照...] >** を既存の規則セットを指定されていないリスト。
+   - 選択 **\<[参照...] >** を既存の規則セットを指定されていないリスト。
 
 4. 選択**オープン**ルール セット エディターで、ルールを表示します。
 
@@ -83,6 +83,5 @@ ms.locfileid: "39204116"
 
 ## <a name="see-also"></a>関連項目
 
-- 
-  [方法: マネージド コード プロジェクトのコード分析を構成する](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)
+- [方法: マネージド コード プロジェクトのコード分析を構成する](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)
 - [コード分析規則セットの参照](../code-quality/rule-set-reference.md)

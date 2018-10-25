@@ -17,38 +17,38 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 430a4b3a1c4f0d66acfd2486c44bd8eff7df1fcb
-ms.sourcegitcommit: 50b19010b2e2b4736835350710e2edf93b980b56
+ms.openlocfilehash: 13b0680e9222302feab8a7cbe1ad375a1f7255be
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49074066"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846201"
 ---
 # <a name="secure-office-solutions"></a>セキュリティで保護された Office ソリューション
   Office ソリューションのセキュリティ モデルでは、いくつかのテクノロジ: [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]、 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]、Microsoft Office、および Internet Explorer の制限付きサイト ゾーンのセキュリティ センター。 次のセクションでは、さまざまなセキュリティ機能のしくみについて説明します:  
   
--   [Office ソリューションに信頼を付与](#GrantingTrustToSolutions)  
+- [Office ソリューションに信頼を付与](#GrantingTrustToSolutions)  
   
--   [ドキュメントに信頼を付与](#GrantingTrustToDocuments)  
+- [ドキュメントに信頼を付与](#GrantingTrustToDocuments)  
   
--   [Windows インストーラーを使用する場合は、信頼を付与します。](#GrantingTrustWindowsInstaller)  
+- [Windows インストーラーを使用する場合は、信頼を付与します。](#GrantingTrustWindowsInstaller)  
   
--   [Office ソリューションの特定のセキュリティに関する考慮事項](#Security)  
+- [Office ソリューションの特定のセキュリティに関する考慮事項](#Security)  
   
--   [開発中のセキュリティ](#SecurityDuringDeployment)  
+- [開発中のセキュリティ](#SecurityDuringDeployment)  
   
--   [Visual Studio Tools for Office ランタイム](#VisualStudioToolsForOfficeRuntime)  
+- [Visual Studio Tools for Office ランタイム](#VisualStudioToolsForOfficeRuntime)  
   
- [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
+  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
 ##  <a name="GrantingTrustToSolutions"></a> Office ソリューションに信頼を付与  
  Office ソリューションへの信頼の付与とは、以下の証拠に基づいて Office ソリューションを信頼するように各エンド ユーザーのセキュリティ ポリシーを変更することを意味します。  
   
--   配置マニフェストへの署名に使用する証明書  
+- 配置マニフェストへの署名に使用する証明書  
   
--   配置マニフェストの URL  
+- 配置マニフェストの URL  
   
- 詳細については、次を参照してください。 [Office ソリューションに信頼を付与](../vsto/granting-trust-to-office-solutions.md)します。  
+  詳細については、次を参照してください。 [Office ソリューションに信頼を付与](../vsto/granting-trust-to-office-solutions.md)します。  
   
 ##  <a name="GrantingTrustToDocuments"></a> ドキュメントに信頼を付与  
  ドキュメント レベルのカスタマイズでは、ドキュメントを信頼できる場所として指定されたディレクトリに置く必要があります。  詳細については、次を参照してください。[ドキュメントに信頼を付与](../vsto/granting-trust-to-documents.md)します。  
@@ -65,11 +65,11 @@ ms.locfileid: "49074066"
 ### <a name="document-level-solutions"></a>ドキュメント レベルのソリューション  
  次の種類のプロジェクトを開発する場合は、Microsoft Office アプリケーションの信頼できる場所の一覧にドキュメントの完全修飾パスを追加する必要があります。  
   
--   ドキュメント レベル ソリューションなど、ネットワーク ファイル共有上にある *\\\servername\sharename*します。  
+- ドキュメント レベル ソリューションなど、ネットワーク ファイル共有上にある *\\\servername\sharename*します。  
   
--   ドキュメント レベルのソリューションを使用して、Word の *.doc*または *.docm*ファイル。  
+- ドキュメント レベルのソリューションを使用して、Word の *.doc*または *.docm*ファイル。  
   
- ドキュメントの場所を信頼できる場所の一覧に追加するときにサブディレクトリを含めるか、デバッグ用のフォルダーとビルド用のフォルダーそれ自体を含めます。 詳細については、Microsoft Office オンライン ヘルプの記事を参照してください。[作成、削除、または変更、ファイルに対して信頼できる場所](https://support.office.com/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62)します。  
+  ドキュメントの場所を信頼できる場所の一覧に追加するときにサブディレクトリを含めるか、デバッグ用のフォルダーとビルド用のフォルダーそれ自体を含めます。 詳細については、Microsoft Office オンライン ヘルプの記事を参照してください。[作成、削除、または変更、ファイルに対して信頼できる場所](https://support.office.com/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62)します。  
   
 ### <a name="temporary-certificates"></a>一時的な証明書  
  Visual Studio では、既存の署名証明書がない場合、一時的な証明書が作成されます。  一時的な証明書は開発時のみ使用し、配置には正式な証明書を購入する必要があります。  

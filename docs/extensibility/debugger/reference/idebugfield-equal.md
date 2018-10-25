@@ -1,5 +1,5 @@
 ---
-title: IDebugField::Equal |Microsoft ドキュメント
+title: IDebugField::Equal |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b2d195c28123cc786c9a5a97add98b7f67d499b7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1ae30cd36d2a3f51b697afa3cb5f4615a5f322da
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31121877"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49830783"
 ---
 # <a name="idebugfieldequal"></a>IDebugField::Equal
-このメソッドは、このフィールドと等しいかどうかを指定したフィールドを比較します。  
+このメソッドは、このフィールドに等しいかどうかを指定したフィールドを比較します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,10 +41,10 @@ int Equal(
   
 #### <a name="parameters"></a>パラメーター  
  `pField`  
- [in]この 1 と比較するためのフィールドです。  
+ [in]この 1 と比較するフィールドです。  
   
 ## <a name="return-value"></a>戻り値  
- フィールドが同じ場合を返します`S_OK`です。 フィールドが異なる場合を返します`S_FALSE.`それ以外の場合、エラー コードを返します。  
+ フィールドが同じ場合は、返す`S_OK`します。 フィールドが異なる場合は、返す`S_FALSE.`それ以外の場合、エラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

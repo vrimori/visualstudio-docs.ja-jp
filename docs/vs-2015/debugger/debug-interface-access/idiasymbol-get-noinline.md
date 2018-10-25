@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a63ca4e5a9e510a081ff9f147d29dfed8f90f56f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7c6b24c5ce50a9233c0e50c1e671628b5d364022
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49229061"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839779"
 ---
 # <a name="idiasymbolgetnoinline"></a>IDiaSymbol::get_noInline
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -48,7 +48,7 @@ HRESULT get_noInline(
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

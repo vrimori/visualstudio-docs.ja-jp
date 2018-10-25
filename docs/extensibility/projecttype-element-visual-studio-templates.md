@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0452f6bbee3232c757c2a5483d9c08fca220ad01
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 14726d5338830eb4044d22778d886241cfd0cd83
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39636757"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921133"
 ---
 # <a name="projecttype-element-visual-studio-templates"></a>ProjectType 要素 (Visual Studio テンプレート)
 指定されたグループの下に表示されるように、プロジェクト テンプレートの分類、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  
@@ -58,11 +58,11 @@ ms.locfileid: "39636757"
   
  この値で、テンプレートから作成されるプロジェクトの種類を指定します。値には、次のいずれかの値を含める必要があります。  
   
--   `CSharp` : テンプレートが [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] のプロジェクトまたはアイテムを作成するよう指定します。  
+- `CSharp` : テンプレートが [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] のプロジェクトまたはアイテムを作成するよう指定します。  
   
--   `VisualBasic` : テンプレートが [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] のプロジェクトまたはアイテムを作成するよう指定します。  
+- `VisualBasic` : テンプレートが [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] のプロジェクトまたはアイテムを作成するよう指定します。  
   
--   `Web` : テンプレートが Web プロジェクトまたは Web アイテムを作成するよう指定します。 場合、`ProjectType`要素には、この値が含まれていますでプロジェクトまたはアイテムの言語が定義されている、 [ProjectSubType 要素 (Visual Studio テンプレート)](../extensibility/projectsubtype-element-visual-studio-templates.md)します。  
+- `Web` : テンプレートが Web プロジェクトまたは Web アイテムを作成するよう指定します。 場合、`ProjectType`要素には、この値が含まれていますでプロジェクトまたはアイテムの言語が定義されている、 [ProjectSubType 要素 (Visual Studio テンプレート)](../extensibility/projectsubtype-element-visual-studio-templates.md)します。  
   
 ## <a name="remarks"></a>Remarks  
  `ProjectType` は `TemplateData` に必須の子要素です。  

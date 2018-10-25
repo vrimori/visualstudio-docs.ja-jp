@@ -16,44 +16,44 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4171f0237b7735748da567bd9482856c013759bc
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: c3d763209d60440066df758b6c1eca087dea9b03
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35673195"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906677"
 ---
 # <a name="how-to-programmatically-save-visio-documents"></a>方法: プログラムによって Visio 図面を保存
   Microsoft Office Visio 図面を保存するには、次のようないくつかの方法があります。  
   
--   既存の図面に変更を保存する。  
+- 既存の図面に変更を保存する。  
   
--   新しい図面を保存するか、または新しい名前を付けて図面を保存する。  
+- 新しい図面を保存するか、または新しい名前を付けて図面を保存する。  
   
--   引数を指定して図面を保存する。  
+- 引数を指定して図面を保存する。  
   
- 詳細については、 [Microsoft.Office.Interop.Visio.Document.Save](https://msdn.microsoft.com/library/office/ff766478.aspx) メソッド、 [Microsoft.Office.Interop.Visio.Document.SaveAs](https://msdn.microsoft.com/library/office/ff765824.aspx) メソッド、および [Microsoft.Office.Interop.Visio.Document.SaveAsEx](https://msdn.microsoft.com/library/office/ff768149.aspx) メソッドの VBA リファレンス ドキュメントを参照してください。  
+  詳細については、 [Microsoft.Office.Interop.Visio.Document.Save](https://msdn.microsoft.com/library/office/ff766478.aspx) メソッド、 [Microsoft.Office.Interop.Visio.Document.SaveAs](https://msdn.microsoft.com/library/office/ff765824.aspx) メソッド、および [Microsoft.Office.Interop.Visio.Document.SaveAsEx](https://msdn.microsoft.com/library/office/ff768149.aspx) メソッドの VBA リファレンス ドキュメントを参照してください。  
   
 ## <a name="save-an-existing-document"></a>既存のドキュメントを保存します。  
   
 ### <a name="to-save-a-document"></a>図面を保存するには  
   
--   呼び出す、`Microsoft.Office.Interop.Visio.Document.Save`のメソッド、`Microsoft.Office.Tools.Visio.Document`以前に保存されたドキュメントのクラス。  
+-   前に保存した図面の `Microsoft.Office.Tools.Visio.Document` クラスの `Microsoft.Office.Interop.Visio.Document.Save` メソッドを呼び出します。  
   
      このコード例を使用するには、プロジェクトの `ThisAddIn` クラスからコードを実行します。  
   
     > [!NOTE]  
-    >  `Microsoft.Office.Interop.Visio.Document.Save`新しい Visio ドキュメントが保存されていない場合、メソッドが例外をスローします。  
+    >  新しい Visio 図面がまだ保存されていない場合、`Microsoft.Office.Interop.Visio.Document.Save` メソッドは例外をスローします。  
   
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#11)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#11)]  
   
 ## <a name="save-a-document-with-a-new-name"></a>新しい名前を持つドキュメントを保存します。  
- 使用して、`Microsoft.Office.Interop.Visio.Document.SaveAs`メソッドを新しいドキュメント、または新しい名前を持つドキュメントを保存します。 このメソッドでは、新しいファイル名を指定する必要があります。  
+ 新しい図面を保存するか、または新しい名前を付けて図面を保存するには、`Microsoft.Office.Interop.Visio.Document.SaveAs` メソッドを使用します。 このメソッドでは、新しいファイル名を指定する必要があります。  
   
 ### <a name="to-save-the-active-visio-document-with-a-new-name"></a>作業中の Visio 図面に新しい名前を付けて保存するには  
   
--   呼び出す、`Microsoft.Office.Interop.Visio.Document.SaveAs`のメソッド、`Microsoft.Office.Tools.Visio.Document`ファイル名を含む完全修飾パスを使用して、保存することです。 指定した名前のファイルが既に対象のフォルダー内に存在する場合、そのファイルは警告なしで上書きされます。  
+-   ファイル名を含む完全修飾パスを使用して、保存する `Microsoft.Office.Tools.Visio.Document` の `Microsoft.Office.Interop.Visio.Document.SaveAs` メソッドを呼び出します。 指定した名前のファイルが既に対象のフォルダー内に存在する場合、そのファイルは警告なしで上書きされます。  
   
      このコード例を使用するには、プロジェクトの `ThisAddIn` クラスからコードを実行します。  
   
@@ -61,11 +61,11 @@ ms.locfileid: "35673195"
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#10)]  
   
 ## <a name="save-a-document-with-a-new-name-and-specified-arguments"></a>新しい名前および指定した引数で文書を保存します。  
- 使用して、`Microsoft.Office.Interop.Visio.Document.SaveAsEx`メソッドを新しい名前を持つドキュメントを保存し、ドキュメントに適用する適用可能な引数を指定します。  
+ 新しい名前を付けて図面を保存し、適用可能な引数を指定して図面に適用するには、`Microsoft.Office.Interop.Visio.Document.SaveAsEx` メソッドを使用します。  
   
 ### <a name="to-save-document-with-a-new-name-and-specified-arguments"></a>新しい名前および指定した引数を使用して図面を保存するには  
   
--   呼び出す、`Microsoft.Office.Interop.Visio.Document.SaveAsEx`のメソッド、`Microsoft.Office.Tools.Visio.Document`ファイル名を含む完全修飾パスを使用して、保存することです。 指定した名前のファイルが既に対象のフォルダー内に存在する場合、例外がスローされます。  
+-   ファイル名を含む完全修飾パスを使用して、保存する `Microsoft.Office.Tools.Visio.Document` の `Microsoft.Office.Interop.Visio.Document.SaveAsEx` メソッドを呼び出します。 指定した名前のファイルが既に対象のフォルダー内に存在する場合、例外がスローされます。  
   
      次のコード例では、作業中の図面を新しい名前で保存し、その図面を読み取り専用としてマークし、[直前に使用] の図面一覧にその図面を表示しています。 このコード例を使用するには、プロジェクトの `ThisAddIn` クラスからコードを実行します。  
   

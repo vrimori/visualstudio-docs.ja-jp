@@ -14,12 +14,12 @@ caps.latest.revision: 44
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 2012ff0729853d365ed9bb32a9420f5b41bf47fb
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 26be7c766127c1da5d7aa4f26b2fb49cf510b850
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49231102"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897915"
 ---
 # <a name="add-custom-architecture-validation-to-layer-diagrams"></a>カスタム アーキテクチャ検証をレイヤー図に追加する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ Visual Studio では、ユーザーはプロジェクトのソース コード�
 > [!WARNING]
 >  検証プロジェクトを作成したら、このトピックの最後にある [コード例](#example) をコピーし、各自のニーズに合わせて編集してください。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  「 [要件](../modeling/extend-layer-diagrams.md#prereqs)」を参照してください。  
   
 ## <a name="defining-a-layer-validator-in-a-new-vsix"></a>新しい VSIX でレイヤー検証コントロールを定義する  
@@ -44,26 +44,26 @@ Visual Studio では、ユーザーはプロジェクトのソース コード�
   
 #### <a name="to-define-an-extension-by-using-a-project-template"></a>プロジェクト テンプレートを使用して拡張機能を定義するには  
   
-1.  **[ファイル]** メニューの **[新しいプロジェクト]** を使用して、新しいソリューションにプロジェクトを作成します。  
+1. **[ファイル]** メニューの **[新しいプロジェクト]** を使用して、新しいソリューションにプロジェクトを作成します。  
   
-2.  **[新しいプロジェクト]** ダイアログ ボックスの **[モデリング プロジェクト]** で、 **[Layer Designer Validation Extension]**(レイヤー デザイナー検証拡張機能) をクリックします。  
+2. **[新しいプロジェクト]** ダイアログ ボックスの **[モデリング プロジェクト]** で、 **[Layer Designer Validation Extension]**(レイヤー デザイナー検証拡張機能) をクリックします。  
   
-     このテンプレートでは、小さい例を含むプロジェクトが作成されます。  
+    このテンプレートでは、小さい例を含むプロジェクトが作成されます。  
   
-    > [!WARNING]
-    >  正しく動作するためのテンプレート。  
-    >   
-    >  -   `LogValidationError` の呼び出しを編集し、省略可能な引数 `errorSourceNodes` と `errorTargetNodes`を削除します。  
-    > -   カスタム プロパティを使用する場合に記載されている更新プログラムを適用[レイヤー図へのカスタム プロパティの追加](../modeling/add-custom-properties-to-layer-diagrams.md)します。  
+   > [!WARNING]
+   >  正しく動作するためのテンプレート。  
+   > 
+   > - `LogValidationError` の呼び出しを編集し、省略可能な引数 `errorSourceNodes` と `errorTargetNodes`を削除します。  
+   >   -   カスタム プロパティを使用する場合に記載されている更新プログラムを適用[レイヤー図へのカスタム プロパティの追加](../modeling/add-custom-properties-to-layer-diagrams.md)します。  
   
-3.  コードを編集して検証を定義します。 詳細については、「 [検証のプログラミング](#programming)」を参照してください。  
+3. コードを編集して検証を定義します。 詳細については、「 [検証のプログラミング](#programming)」を参照してください。  
   
-4.  拡張機能をテストするには、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。  
+4. 拡張機能をテストするには、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。  
   
-    > [!NOTE]
-    >  メソッドは特定の状況においてのみ呼び出され、ブレークポイントは自動的には動作しません。 詳細については、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。  
+   > [!NOTE]
+   >  メソッドは特定の状況においてのみ呼び出され、ブレークポイントは自動的には動作しません。 詳細については、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。  
   
-5.  メイン インスタンスで、拡張機能をインストールする[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、または別のコンピューターでは、検索、 **.vsix**ファイル**bin\\\*** します。 このファイルをインストール先のコンピューターにコピーして、ダブルクリックします。 拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
+5. メイン インスタンスで、拡張機能をインストールする[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、または別のコンピューターでは、検索、 **.vsix**ファイル*bin\\*します。 このファイルをインストール先のコンピューターにコピーして、ダブルクリックします。 拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
   
 ## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>レイヤー検証コントロールを別の VSIX に追加する  
  レイヤー検証コントロール、コマンド、および他の拡張機能を含む 1 つの VSIX を作成する場合は、VSIX を定義するプロジェクトとハンドラー用のプロジェクトを別にすることをお勧めします。 モデリング拡張機能の他の種類については、次を参照してください。 [UML を拡張モデルと図](../modeling/extend-uml-models-and-diagrams.md)します。  
@@ -127,42 +127,42 @@ Visual Studio では、ユーザーはプロジェクトのソース コード�
 ##  <a name="programming"></a> 検証のプログラミング  
  レイヤー検証拡張機能を定義するには、以下の特性を備えたクラスを定義します。  
   
--   宣言の全体的な形式を次に示します。  
+- 宣言の全体的な形式を次に示します。  
   
-    ```  
+  ```  
   
-    using System.ComponentModel.Composition;  
-    using Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema;  
-    using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;  
-    using Microsoft.VisualStudio.GraphModel;  
-    ...  
-     [Export(typeof(IValidateArchitectureExtension))]  
-      public partial class Validator1Extension :  
-                      IValidateArchitectureExtension  
+  using System.ComponentModel.Composition;  
+  using Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema;  
+  using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;  
+  using Microsoft.VisualStudio.GraphModel;  
+  ...  
+   [Export(typeof(IValidateArchitectureExtension))]  
+    public partial class Validator1Extension :  
+                    IValidateArchitectureExtension  
+    {  
+      public void ValidateArchitecture(Graph graph)  
       {  
-        public void ValidateArchitecture(Graph graph)  
-        {  
-           GraphSchema schema = graph.DocumentSchema;  
-          ...  
-      } }  
-    ```  
+         GraphSchema schema = graph.DocumentSchema;  
+        ...  
+    } }  
+  ```  
   
--   エラーを検出したときは、 `LogValidationError()`を使用して報告できます。  
+- エラーを検出したときは、 `LogValidationError()`を使用して報告できます。  
   
-    > [!WARNING]
-    >  `LogValidationError`の省略可能なパラメーターを使用しないでください。  
+  > [!WARNING]
+  >  `LogValidationError`の省略可能なパラメーターを使用しないでください。  
   
- ユーザーが **[アーキテクチャの検証]** を実行すると、レイヤーのランタイム システムがレイヤーとその成果物を分析して、グラフを生成します。 グラフは 4 つの部分で構成されます。  
+  ユーザーが **[アーキテクチャの検証]** を実行すると、レイヤーのランタイム システムがレイヤーとその成果物を分析して、グラフを生成します。 グラフは 4 つの部分で構成されます。  
   
--   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ソリューションのレイヤー モデルは、グラフではノードとリンクとして表されます。  
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ソリューションのレイヤー モデルは、グラフではノードとリンクとして表されます。  
   
--   ソリューションで定義されているコード、プロジェクト アイテム、および他の成果物は、ノードおよび分析システムによって検出された依存関係を示すリンクとして表されます。  
+- ソリューションで定義されているコード、プロジェクト アイテム、および他の成果物は、ノードおよび分析システムによって検出された依存関係を示すリンクとして表されます。  
   
--   レイヤー ノードからコード成果物ノードへのリンク。  
+- レイヤー ノードからコード成果物ノードへのリンク。  
   
--   検証コントロールによって検出されたエラーを表すノード。  
+- 検証コントロールによって検出されたエラーを表すノード。  
   
- グラフが作成されると、標準の検証メソッドが呼び出されます。 これが完了すると、インストールされているすべての拡張検証メソッドが、不定の順序で呼び出されます。 グラフを渡された各 `ValidateArchitecture` メソッドは、グラフをスキャンし、検出したエラーを報告します。  
+  グラフが作成されると、標準の検証メソッドが呼び出されます。 これが完了すると、インストールされているすべての拡張検証メソッドが、不定の順序で呼び出されます。 グラフを渡された各 `ValidateArchitecture` メソッドは、グラフをスキャンし、検出したエラーを報告します。  
   
 > [!NOTE]
 >  これは、UML 図に適用される検証プロセスと同じではなく、特定領域言語で使用できる検証プロセスとも同じではありません。  
@@ -173,25 +173,25 @@ Visual Studio では、ユーザーはプロジェクトのソース コード�
   
  各ノードおよび各リンクには 1 つ以上のカテゴリがあり、それぞれが表す要素または関係の種類が指定されています。 標準的なグラフのノードには以下のカテゴリがあります。  
   
--   Dsl.LayerModel  
+- Dsl.LayerModel  
   
--   Dsl.Layer  
+- Dsl.Layer  
   
--   Dsl.Reference  
+- Dsl.Reference  
   
--   CodeSchema_Type  
+- CodeSchema_Type  
   
--   CodeSchema_Namespace  
+- CodeSchema_Namespace  
   
--   CodeSchema_Type  
+- CodeSchema_Type  
   
--   CodeSchema_Method  
+- CodeSchema_Method  
   
--   CodeSchema_Field  
+- CodeSchema_Field  
   
--   CodeSchema_Property  
+- CodeSchema_Property  
   
- レイヤーからコード内の要素へのリンクのカテゴリは "Represents" です。  
+  レイヤーからコード内の要素へのリンクのカテゴリは "Represents" です。  
   
 ##  <a name="debugging"></a> 検証のデバッグ  
  レイヤー検証拡張機能をデバッグするには、Ctrl キーを押しながら F5 キーを押します。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の実験用のインスタンスが開きます。 このインスタンスで、レイヤー モデルを開くか作成します。 このモデルは、コードと関連付けられている必要があり、少なくとも 1 つの依存関係を含む必要があります。  
@@ -199,11 +199,11 @@ Visual Studio では、ユーザーはプロジェクトのソース コード�
 ### <a name="test-with-a-solution-that-contains-dependencies"></a>依存関係を含むソリューションでのテスト  
  以下の特性が存在していない限り、検証は実行されません。  
   
--   レイヤー図に、少なくとも 1 つの依存関係リンクが存在する。  
+- レイヤー図に、少なくとも 1 つの依存関係リンクが存在する。  
   
--   コード要素と関連付けられたレイヤーがモデルに存在する。  
+- コード要素と関連付けられたレイヤーがモデルに存在する。  
   
- 初めて [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の実験用インスタンスを起動して検証拡張機能をテストするときは、これらの特性を備えたソリューションを開くか作成します。  
+  初めて [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の実験用インスタンスを起動して検証拡張機能をテストするときは、これらの特性を備えたソリューションを開くか作成します。  
   
 ### <a name="run-clean-solution-before-validate-architecture"></a>アーキテクチャを検証する前に [ソリューションのクリーン] を実行する  
  検証コードを更新したときは常に、検証コマンドをテストする前に、実験用ソリューションで **[ビルド]** メニューの **[ソリューションのクリーン]** を使用します。 これは、検証の結果がキャッシュされているために必要です。 テスト レイヤー図またはそのコードが更新されていない場合は、検証メソッドは実行されません。  

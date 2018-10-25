@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetMemoryContext |Microsoft ドキュメント
+title: IDebugObject::GetMemoryContext |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3befdcb9991f3623e78398faef7647a873d7a702
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 657b3b214cd099cf6359b7466c58a1311a8b1677
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31112312"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49869887"
 ---
 # <a name="idebugobjectgetmemorycontext"></a>IDebugObject::GetMemoryContext
 オブジェクトの値のアドレスを表すメモリ コンテキストを取得します。  
@@ -46,8 +46,8 @@ int GetMemoryContext(
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- これによって表されるように、返されたメモリ コンテキストが、値のアドレスを指定[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)オブジェクト。  
+## <a name="remarks"></a>Remarks  
+ これによって表される、返されたメモリ コンテキストは、値のアドレスを指定します[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)オブジェクト。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

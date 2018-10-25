@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a5e2bb260f8ef44936485203689bf7cf3e34e6c1
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: b5a05629773334648239a8656577fbe0ae347625
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857829"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49830705"
 ---
 # <a name="t4-include-directive"></a>T4 インクルード ディレクティブ
 
@@ -26,31 +26,31 @@ Visual Studio でのテキスト テンプレートを使用して別のファ�
 <#@ include file="filePath" [once="true"] #>
 ```
 
--   `filePath` には、絶対パスを指定することも、現在のテンプレート ファイルを基準とした相対パスを指定することもできます。
+- `filePath` には、絶対パスを指定することも、現在のテンプレート ファイルを基準とした相対パスを指定することもできます。
 
-     さらに、特定の Visual Studio 拡張機能では、インクルード ファイルを検索する独自のディレクトリを指定できます。 たとえば、Visualization and Modeling SDK (DSL) ツールをインストールしたら、次のフォルダーがインクルード一覧に追加されます:`Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates`します。
+   さらに、特定の Visual Studio 拡張機能では、インクルード ファイルを検索する独自のディレクトリを指定できます。 たとえば、Visualization and Modeling SDK (DSL) ツールをインストールしたら、次のフォルダーがインクルード一覧に追加されます:`Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates`します。
 
-     追加されるこれらのインクルード フォルダーは、インクルード ファイルの拡張子によって異なります。 たとえば、DSL ツールのインクルード フォルダーは、インクルード ファイルの拡張子が `.tt` の場合にのみ追加されます。
+   追加されるこれらのインクルード フォルダーは、インクルード ファイルの拡張子によって異なります。 たとえば、DSL ツールのインクルード フォルダーは、インクルード ファイルの拡張子が `.tt` の場合にのみ追加されます。
 
--   `filePath` には、"%" で区切られた環境変数を含めることもできます。 例えば:
+- `filePath` には、"%" で区切られた環境変数を含めることもできます。 例えば:
 
-    ```
-    <#@ include file="%HOMEPATH%\MyIncludeFile.t4" #>
-    ```
+  ```
+  <#@ include file="%HOMEPATH%\MyIncludeFile.t4" #>
+  ```
 
--   インクルード ファイルの名前に、拡張子 `".tt"` を使用する必要はありません。
+- インクルード ファイルの名前に、拡張子 `".tt"` を使用する必要はありません。
 
-     必要に応じて、インクルード ファイルには、`".t4"` など別の拡張子を使用できます。 これは、ため、追加すると、`.tt`ファイルをプロジェクト、Visual Studio が自動的に設定、**カスタム ツール**プロパティを`TextTemplatingFileGenerator`。 通常、インクルード ファイルを個別に変換することは望ましくありません。
+   必要に応じて、インクルード ファイルには、`".t4"` など別の拡張子を使用できます。 これは、ため、追加すると、`.tt`ファイルをプロジェクト、Visual Studio が自動的に設定、**カスタム ツール**プロパティを`TextTemplatingFileGenerator`。 通常、インクルード ファイルを個別に変換することは望ましくありません。
 
-     一方、ファイルの拡張子によって、インクルード ファイルの検索先となる追加フォルダーが決まる場合があることに注意してください。 これは、インクルード ファイルに他のファイルが含まれている場合に重要となります。
+   一方、ファイルの拡張子によって、インクルード ファイルの検索先となる追加フォルダーが決まる場合があることに注意してください。 これは、インクルード ファイルに他のファイルが含まれている場合に重要となります。
 
--   インクルードされたコンテンツは、インクルード先のテキスト テンプレートに元から含まれていた場合とほとんど同じように処理されます。 ただし、`<#+...#>` ディレクティブの後に通常のテキスト ブロックと標準コントロール ブロックが続く場合でも、クラス機能ブロック (`include`) を含むファイルをインクルードすることができます。
+- インクルードされたコンテンツは、インクルード先のテキスト テンプレートに元から含まれていた場合とほとんど同じように処理されます。 ただし、`<#+...#>` ディレクティブの後に通常のテキスト ブロックと標準コントロール ブロックが続く場合でも、クラス機能ブロック (`include`) を含むファイルをインクルードすることができます。
 
--   使用`once="true"`の 1 つ以上のインクルード ファイルから呼び出された場合でも、テンプレートが 1 回だけ含まれていますを確認します。
+- 使用`once="true"`の 1 つ以上のインクルード ファイルから呼び出された場合でも、テンプレートが 1 回だけ含まれていますを確認します。
 
-     気にせずに含めることができる再利用可能な T4 スニペットのライブラリを構築することが容易には、この機能によりその他のいくつかのスニペットが既に含まれていること。  たとえば、テンプレート処理と c# 生成を処理する非常に詳細なスニペットのライブラリがあるとします。  さらに、これら複数のアプリケーション固有のすべてのテンプレートからを使用することができますし、例外を生成するなどのいくつかのタスク固有ではよりユーティリティによって使用されます。 依存関係グラフを描画すると、何回もインクルードされるスニペットがあることがわかります。 ただし、`once` パラメーターが指定されると、以降はインクルードが無効になります。
+   気にせずに含めることができる再利用可能な T4 スニペットのライブラリを構築することが容易には、この機能によりその他のいくつかのスニペットが既に含まれていること。  たとえば、テンプレート処理と c# 生成を処理する非常に詳細なスニペットのライブラリがあるとします。  さらに、これら複数のアプリケーション固有のすべてのテンプレートからを使用することができますし、例外を生成するなどのいくつかのタスク固有ではよりユーティリティによって使用されます。 依存関係グラフを描画すると、何回もインクルードされるスニペットがあることがわかります。 ただし、`once` パラメーターが指定されると、以降はインクルードが無効になります。
 
- **MyTextTemplate.tt:**
+  **MyTextTemplate.tt:**
 
 ```
 <#@ output extension=".txt" #>
@@ -61,7 +61,6 @@ Output message 5 (from top template).
    GenerateMessage(6); // defined in TextFile1.t4
    AnotherGenerateMessage(7); // defined in TextFile2.t4
 #>
-
 ```
 
  **TextFile1.t4:**
@@ -78,7 +77,6 @@ void GenerateMessage(int n)
 <#+
 }
 #>
-
 ```
 
  **TextFile2.t4:**
@@ -93,7 +91,6 @@ void AnotherGenerateMessage(int n)
 <#+
 }
 #>
-
 ```
 
  **結果には、ファイル、MyTextTemplate.txt が生成されます。**
@@ -108,7 +105,6 @@ Output message 1 (from top template).
 Output message 5 (from top template).
    Output Message 6 (from GenerateMessage method).
        Output Message 7 (from AnotherGenerateMessage method).
-
 ```
 
 ## <a name="msbuild"></a> MSBuild および Visual Studio でプロジェクト プロパティの使用
@@ -128,7 +124,6 @@ Output message 5 (from top template).
       <Value>$(myIncludeFolder)</Value>
     </T4ParameterValues>
   </ItemGroup>
-
 ```
 
  これで、Visual Studio および MSBuild の両方で正しく変換できるテキスト テンプレートでプロジェクトのプロパティを使用できます。

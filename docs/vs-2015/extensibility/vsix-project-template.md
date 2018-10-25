@@ -16,12 +16,12 @@ ms.assetid: b6c82167-e2a5-4cff-8c8b-2d72e2a9092c
 caps.latest.revision: 22
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fea3271ed628455d53a927fd5993e887564d27ea
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7260ba1dd2f5485c42c25dd3319f0aeb00ff9f05
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49236185"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49927204"
 ---
 # <a name="vsix-project-template"></a>VSIX プロジェクト テンプレート
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,11 +42,11 @@ VSIX プロジェクトでは、1 つまたは複数の Visual Studio 拡張機�
 ## <a name="uses-of-the-vsix-project-template"></a>VSIX プロジェクト テンプレートの使用  
  VSIX プロジェクト テンプレートでは、2 つの主な用途があります。  
   
--   プロジェクト テンプレートや項目テンプレート、VSIX のサポートがまだない他の拡張機能を展開できます。  
+- プロジェクト テンプレートや項目テンプレート、VSIX のサポートがまだない他の拡張機能を展開できます。  
   
--   1 つの展開パッケージに複数の拡張機能の出力をラップします。  
+- 1 つの展開パッケージに複数の拡張機能の出力をラップします。  
   
- VSIX プロジェクト テンプレートを使用して、Vspackage またはその他の拡張機能をサポートする VSIX が既に存在するデプロイする必要はありません。  
+  VSIX プロジェクト テンプレートを使用して、Vspackage またはその他の拡張機能をサポートする VSIX が既に存在するデプロイする必要はありません。  
   
 ## <a name="packaging-an-extension-in-an-empty-vsix-project"></a>空の VSIX プロジェクトで拡張機能をパッケージ化  
  既存の拡張機能、または拡張機能を VSIX に空の VSIX プロジェクトにラップすることによって、サポートがないパッケージ化することができます。 サポートされている型の拡張機能をラップする必要があります、 [VSIX スキーマ](../extensibility/vsix-extension-schema-2-0-reference.md)します。  

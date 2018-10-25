@@ -1,5 +1,5 @@
 ---
-title: SccIsMultiCheckoutEnabled 関数 |Microsoft ドキュメント
+title: SccIsMultiCheckoutEnabled 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: af7102a049cd3db072506cbf492799908196df32
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e4a71f839c2129bcfb699188dec09b02b18d4cd1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31136777"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920119"
 ---
 # <a name="sccismulticheckoutenabled-function"></a>SccIsMultiCheckoutEnabled 関数
-この関数は、ソース管理プラグインがファイルに複数のチェック アウトを許可するかどうかを確認します。  
+この関数は、ソース管理プラグインのファイルに複数のチェック アウトできるかどうかを確認します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,18 +39,18 @@ SCCRTN SccIsMultiCheckoutEnabled(
  [in]ソース管理プラグイン コンテキスト構造体。  
   
  pbMultiCheckout  
- [out]このプロジェクト (複数のチェック アウトがサポートされている 0 以外の場合) の複数のチェック アウトが有効にするかどうかを指定します。  
+ [out]このプロジェクト (0 以外の場合は複数のチェック アウトがサポートされている) 複数のチェック アウトが有効になっているかどうかを指定します。  
   
 ## <a name="return-value"></a>戻り値  
- この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返すが必要です。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|SCC_OK|チェックが正常に完了しました。|  
+|SCC_OK|チェックは成功しました。|  
 |SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|不特定のエラーです。|  
   
-## <a name="remarks"></a>コメント  
- 2 つのチェックかどうかファイルがチェック アウトに同時に 1 つ以上のユーザーを決定するようになります。 最初に、ソース管理システムでは、複数のチェック アウトをサポートする必要があります。 ソース管理プラグインは、初期化中にこの機能を指定して指定できます、`SCC_CAP_MULTICHECKOUT`です。 その後、2 番目のチェック、IDE では、現在のプロジェクトが複数のチェック アウトをサポートしているかどうかを判断するには、この関数を呼び出します。 複数のチェック アウトは、選択したプロジェクトのサポートは、プラグインが返されます成功コード、その設定`pbMultiCheckout`に 0 以外 (`TRUE`) または`FALSE`です。  
+## <a name="remarks"></a>Remarks  
+ 2 つのチェックかどうかファイル チェック アウトできる同時に 1 つ以上のユーザーを決定するようになります。 最初に、ソース管理システムでは、複数のチェック アウトをサポートする必要があります。 ソース管理プラグインは、初期化中にこの機能を指定することによって指定できます、`SCC_CAP_MULTICHECKOUT`します。 その後、2 番目のチェック、IDE は、現在のプロジェクトが複数のチェック アウトをサポートしているかどうかを判断するには、この関数を呼び出します。 成功した場合、プラグインを返しますがコードし、設定の選択されたプロジェクトは、複数のチェック アウトがサポートされている場合、`pbMultiCheckout`に 0 以外の場合 (`TRUE`) または`FALSE`します。  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

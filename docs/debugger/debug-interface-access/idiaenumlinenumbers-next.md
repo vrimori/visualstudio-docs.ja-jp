@@ -1,5 +1,5 @@
 ---
-title: Idiaenumlinenumbers::next |Microsoft ドキュメント
+title: Idiaenumlinenumbers::next |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6015658a72c264f1421c782a1e6e6c28038748a1
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 9a8c00aa5b3d6e6a9b9251075cc5cc065119cc95
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31466839"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910057"
 ---
 # <a name="idiaenumlinenumbersnext"></a>IDiaEnumLineNumbers::Next
-列挙のシーケンス内の行番号の指定した数を取得します。  
+指定された数の列挙体シーケンス内の行番号を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +36,7 @@ HRESULT Next (
   
 #### <a name="parameters"></a>パラメーター  
  celt  
- [in]取得する列挙子の行番号の数。  
+ [in]行番号を取得する列挙子の数。  
   
  rgelt  
  [out]配列を返します[IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)目的の行番号を表すオブジェクト。  
@@ -45,7 +45,7 @@ HRESULT Next (
  [out]フェッチされた列挙子の行番号の数を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 返します`S_FALSE`ない複数の行番号がある場合。 それ以外の場合はエラー コードを返します。  
+ 成功した場合、返します`S_OK`します。 返します`S_FALSE`ない複数の行番号がある場合。 それ以外の場合はエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   

@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cb194836f40ce599ee3509b11fc9849b6a7780ab
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 308858941d03f6341cf3d22af074be45d790e16b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31942098"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930220"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>方法 : プロジェクトを構成して複数の対象プラットフォームを設定する
 
@@ -56,11 +56,11 @@ Visual Studio では、ソリューションは同時に複数の異なる CPU �
 
 ### <a name="to-build-multiple-solution-configurations-at-once"></a>一度に複数のソリューション構成をビルドするには
 
-1.  **[構成マネージャー]** を使って、少なくとも 2 つの対象プラットフォームをソリューションに追加します。
+1. **[構成マネージャー]** を使って、少なくとも 2 つの対象プラットフォームをソリューションに追加します。
 
-2.  一度に複数のソリューション構成をビルドするには、**[バッチ ビルド]** ウィンドウを使います。
+2. 一度に複数のソリューション構成をビルドするには、**[バッチ ビルド]** ウィンドウを使います。
 
- ソリューション レベルのプラットフォームをたとえば [!INCLUDE[vcprx64](../extensibility/internals/includes/vcprx64_md.md)] に設定し、そのソリューション内のプロジェクトでは同じプラットフォームを対象としない、といったことができます。 また、ソリューション内の複数のプロジェクトで、それぞれ異なるプラットフォームを対象とすることもできます。 いずれかの状況の場合は、混乱を避けるためにわかりやすい名前で新しい構成を作成することをお勧めします。
+   ソリューション レベルのプラットフォームをたとえば [!INCLUDE[vcprx64](../extensibility/internals/includes/vcprx64_md.md)] に設定し、そのソリューション内のプロジェクトでは同じプラットフォームを対象としない、といったことができます。 また、ソリューション内の複数のプロジェクトで、それぞれ異なるプラットフォームを対象とすることもできます。 いずれかの状況の場合は、混乱を避けるためにわかりやすい名前で新しい構成を作成することをお勧めします。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: '方法: 自己ホスト型 WCF サービスをデバッグ |Microsoft ドキュメント'
+title: '方法: 自己ホスト型 WCF サービスのデバッグ |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -19,43 +19,43 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 19ce90effca21f6079cc7b569fa6e58f94553627
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 255ca0f7d472060d110135536d76de99dc46a18e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31479943"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872123"
 ---
 # <a name="how-to-debug-a-self-hosted-wcf-service"></a>方法 : セルフホストされている WCF サービスをデバッグする
-A*セルフホストされているサービス*する WCF サービスを IIS で WCF サービス ホスト内で実行されないのは、または[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]開発サーバーです。 自己ホスト型 WCF をデバッグする最も簡単な方法を構成するのには、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を選択すると、クライアントとサーバーの両方を起動する**デバッグの開始**上、**デバッグ**メニュー。  
+A*自己ホスト型サービス*WCF サービス、WCF サービス ホストを IIS 内で実行していない、または[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]開発サーバーです。 自己ホスト型 WCF をデバッグする最も簡単な方法は、構成することです。[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を選択すると、クライアントとサーバーの両方を起動する**デバッグの開始**上、**デバッグ**メニュー。  
   
  NT サービスなど、この方法で起動できないプロセス内部で WCF サービスがセルフホストされている場合、この手法は使用できません。 代わりに、次の方法のいずれかを使用できます。  
   
--   ホスト プロセスにデバッガーを手動でアタッチします。 詳細については、次を参照してください。[実行中のプロセスにアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)です。  
+-   ホスト プロセスにデバッガーを手動でアタッチします。 詳細については、次を参照してください。[実行中のプロセスにアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)します。  
   
      または  
   
--   クライアントでデバッグを開始し、次にサービスへの呼び出しにステップ インします。 これを行うには、app.config ファイルでデバッグを有効にする必要があります。 詳細については、 [WCF デバッグの制約](../debugger/limitations-on-wcf-debugging.md)です。  
+-   クライアントでデバッグを開始し、次にサービスへの呼び出しにステップ インします。 これを行うには、app.config ファイルでデバッグを有効にする必要があります。 詳細については、 [WCF デバッグの制約](../debugger/limitations-on-wcf-debugging.md)します。  
   
 ### <a name="to-start-both-client-and-host-from-visual-studio"></a>Visual Studio からクライアントとホストの両方を起動するには  
   
-1.  クライアント プロジェクトとサーバー プロジェクトの両方を含む [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションを作成します。  
+1. クライアント プロジェクトとサーバー プロジェクトの両方を含む [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションを作成します。  
   
-2.  選択すると、クライアントとサーバーの両方のプロセスを開始するようにソリューションを構成する**開始**上、**デバッグ**メニュー。  
+2. 選択したときに、クライアントとサーバーの両方のプロセスを開始するソリューションの構成**開始**上、**デバッグ**メニュー。  
   
-    1.  **ソリューション エクスプ ローラー**ソリューション名を右クリックします。  
+   1.  **ソリューション エクスプ ローラー**ソリューション名を右クリックします。  
   
-    2.  をクリックして**スタートアップ プロジェクトの設定**です。  
+   2.  クリックして**スタートアップ プロジェクトを設定**します。  
   
-    3.  **ソリューション\<名 > プロパティ**ダイアログ ボックスで、**マルチ スタートアップ プロジェクト**です。  
+   3.  **ソリューション\<名 > プロパティ**ダイアログ ボックスで、**マルチ スタートアップ プロジェクト**します。  
   
-    4.  **マルチ スタートアップ プロジェクト**グリッドで、サーバー プロジェクトに対応する行で、をクリックして**アクション**選択**開始**です。  
+   4.  **マルチ スタートアップ プロジェクト**、サーバー プロジェクトに対応する行で、グリッドのクリックして**アクション**選択**開始**。  
   
-    5.  クライアント プロジェクトに対応する行をクリックして**アクション**選択**開始**です。  
+   5.  クライアント プロジェクトに対応する行をクリックして**アクション**選択**開始**します。  
   
-    6.  **[OK]** をクリックします。  
+   6.  **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>関連項目  
  [WCF サービスのデバッグ](../debugger/debugging-wcf-services.md)   
- [WCF のデバッグに関する制限事項](../debugger/limitations-on-wcf-debugging.md)   
+ [WCF デバッグの制約](../debugger/limitations-on-wcf-debugging.md)   
  [方法 : WCF サービスにステップ インする](../debugger/how-to-step-into-wcf-services.md)

@@ -16,12 +16,12 @@ caps.latest.revision: 45
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: c0f7a3da89f98d469dde60b98ad68de0574d10db
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7aa5a216b9be48eae7f2905084f0c39109688d6c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49231635"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897798"
 ---
 # <a name="writing-a-t4-text-template"></a>T4 テキスト テンプレートの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "49231635"
   
  テキスト テンプレートは次の要素から構成されます。  
   
--   **ディレクティブ**-テンプレートの処理方法を制御する要素。  
+- **ディレクティブ**-テンプレートの処理方法を制御する要素。  
   
--   **テキスト ブロック**- 出力に直接コピーされるコンテンツ。  
+- **テキスト ブロック**- 出力に直接コピーされるコンテンツ。  
   
--   **コントロール ブロック**-プログラム コードをテキストに変数の値を挿入し、テキストの条件付きまたは繰り返し部分を制御します。  
+- **コントロール ブロック**-プログラム コードをテキストに変数の値を挿入し、テキストの条件付きまたは繰り返し部分を制御します。  
   
- このトピックの例には、コピーしてテンプレート ファイル」の説明に従って[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)します。 テンプレート ファイルを編集した後、保存し、出力を調べます **.txt**ファイル。  
+  このトピックの例には、コピーしてテンプレート ファイル」の説明に従って[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)します。 テンプレート ファイルを編集した後、保存し、出力を調べます **.txt**ファイル。  
   
 ## <a name="directives"></a>ディレクティブ  
  テキスト テンプレート ディレクティブは、変換コードと出力ファイルの生成方法に関する一般的な指示をテキスト テンプレート エンジンに与えます。  

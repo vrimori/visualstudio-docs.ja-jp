@@ -16,12 +16,12 @@ caps.latest.revision: 6
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-ms.openlocfilehash: 10ea620f357c40e3e549d58f1d9df4fd0809cac9
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 69ba9f13b9fc651fc68c4ed36f704abc17c5ad76
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49174006"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899930"
 ---
 # <a name="create-an-android-native-activity-app"></a>Android Native Activity アプリの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,19 +41,19 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
 #### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1.  Visual Studio を開きます。 メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
+1. Visual Studio を開きます。 メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
   
-2.  **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** で **[Visual C++]**、 **[Cross Platform]** の順に選択し、 **[Native-Activity Application (Android)]** テンプレートを選択します。  
+2. **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** で **[Visual C++]**、 **[Cross Platform]** の順に選択し、 **[Native-Activity Application (Android)]** テンプレートを選択します。  
   
-3.  アプリケーションに `MyAndroidApp` のような名前を付けてから、**[OK]** をクリックします。  
+3. アプリケーションに `MyAndroidApp` のような名前を付けてから、**[OK]** をクリックします。  
   
-     ![Native Activity プロジェクトの作成](../cross-platform/media/cppmdd-newproject.PNG "CppMDD_NewProject")  
+    ![Native Activity プロジェクトの作成](../cross-platform/media/cppmdd-newproject.PNG "CppMDD_NewProject")  
   
-     Visual Studio は新しいソリューションを作成し、ソリューション エクスプローラーを開きます。  
+    Visual Studio は新しいソリューションを作成し、ソリューション エクスプローラーを開きます。  
   
-     ![ソリューション エクスプローラーでの Native Activity プロジェクト](../cross-platform/media/cppmdd-rc-na-solutionexp.PNG "CPPMDD_RC_NA_SolutionExp")  
+    ![ソリューション エクスプローラーでの Native Activity プロジェクト](../cross-platform/media/cppmdd-rc-na-solutionexp.PNG "CPPMDD_RC_NA_SolutionExp")  
   
- 新しい Android Native Activity アプリのソリューションには、次の 2 つのプロジェクトが含まれています。  
+   新しい Android Native Activity アプリのソリューションには、次の 2 つのプロジェクトが含まれています。  
   
 -   **MyAndroidApp.NativeActivity** には、アプリが Android 上でネイティブ アクティビティとして動作するための参照とグルー コードが含まれています。 グルー コードからのエントリ ポイントの実装は main.cpp にあります。 プリコンパイル済みヘッダーは pch.h にあります。 この Native Activity アプリ プロジェクトは、共有ライブラリ (.so) ファイルにコンパイルされ、Packaging プロジェクトで使用されます。  
   

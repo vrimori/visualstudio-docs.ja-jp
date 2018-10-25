@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 26985893ae5a6431743564e28793957ecf0f9e01
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: de5329d05ebc8dcfe9d9970c353d573835fc5d00
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36756815"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866390"
 ---
 # <a name="trycatch-activity-designer"></a>TryCatch アクティビティ デザイナー
 
@@ -42,7 +42,7 @@ ms.locfileid: "36756815"
 次の表は、<xref:System.Activities.Statements.TryCatch>プロパティと、デザイナーでの使用方法について説明します。
 
 |プロパティ名|必須|使用方法|
-|-------------------|--------------|-----------|
+|-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.TryCatch> アクティビティの表示名を指定します (省略可能)。 既定値は TryCatch です。|
 |<xref:System.Activities.Statements.TryCatch.Try%2A>|False|<xref:System.Activities.Statements.TryCatch> を実行すると、このアクティビティが最初に実行されます。|
 |<xref:System.Activities.Statements.TryCatch.Catches%2A>|False|コレクション**キャッチ**された場合にチェックする要素、<xref:System.Activities.Statements.TryCatch.Try%2A>アクティビティが例外をスローします。<br /><br /> <xref:System.Activities.Statements.TryCatch.Catches%2A> にアクティビティを少なくとも 1 つ追加するか、または、<xref:System.Activities.Statements.TryCatch.Finally%2A> ブロックにアクティビティを追加する必要があります。|
@@ -51,5 +51,5 @@ ms.locfileid: "36756815"
 ## <a name="see-also"></a>関連項目
 
 - [コレクション](../workflow-designer/collection-activity-designers.md)
-- [再スローします。](../workflow-designer/rethrow-activity-designer.md)
+- [Rethrow](../workflow-designer/rethrow-activity-designer.md)
 - [Throw](../workflow-designer/throw-activity-designer.md)

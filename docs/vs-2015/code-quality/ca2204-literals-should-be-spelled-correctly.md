@@ -20,15 +20,16 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 4bbf07e4b8475c45f5f9ea1818a51b5670e23454
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 9fb00f8a0986d5ead81e36888a9b714244d1230c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49200357"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928445"
 ---
 # <a name="ca2204-literals-should-be-spelled-correctly"></a>CA2204: リテラルは正しく入力されていなければなりません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
+
 |||
 |-|-|
 |TypeName|LiteralsShouldBeSpelledCorrectly|
@@ -42,15 +43,15 @@ ms.locfileid: "49200357"
 ## <a name="rule-description"></a>規則の説明
  このルールは、パラメーターまたは 1 つのプロパティに値として渡されたリテラル文字列を確認します。 または、true は、次の場合の詳細。
 
--   <xref:System.ComponentModel.LocalizableAttribute>パラメーターまたはプロパティの属性が設定を true にします。
+- <xref:System.ComponentModel.LocalizableAttribute>パラメーターまたはプロパティの属性が設定を true にします。
 
--   パラメーターまたはプロパティ名には、"Text"、"Message"または「キャプション」が含まれています。
+- パラメーターまたはプロパティ名には、"Text"、"Message"または「キャプション」が含まれています。
 
--   Console.Write"または"Console.WriteLine メソッドに渡される文字列パラメーターの名前は、"value"または「形式」のいずれかです。
+- Console.Write"または"Console.WriteLine メソッドに渡される文字列パラメーターの名前は、"value"または「形式」のいずれかです。
 
- このルールは、複合語をトークン化の単語にリテラル文字列を解析し、各単語/トークンのスペルを確認します。 解析のアルゴリズムについては、次を参照してください。 [ca 1704: 識別子は正しく入力されなければなりません](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)します。
+  このルールは、複合語をトークン化の単語にリテラル文字列を解析し、各単語/トークンのスペルを確認します。 解析のアルゴリズムについては、次を参照してください。 [ca 1704: 識別子は正しく入力されなければなりません](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)します。
 
- 既定では、スペル チェックの英語 (en) バージョンが使用されます。
+  既定では、スペル チェックの英語 (en) バージョンが使用されます。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  このルールの違反を修正するには、単語のスペルを訂正またはカスタム辞書に単語を追加します。 ユーザー辞書を使用する方法については、次を参照してください。[方法: コード分析辞書をカスタマイズ](../code-quality/how-to-customize-the-code-analysis-dictionary.md)します。

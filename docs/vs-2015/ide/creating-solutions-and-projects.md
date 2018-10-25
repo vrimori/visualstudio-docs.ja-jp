@@ -23,12 +23,12 @@ caps.latest.revision: 49
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c3ffd5a4d341b8a194dee9f6d8600a75999df38d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 336fb41ee6a4c90e7065187b2805aefe9e6e6df7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49248535"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893703"
 ---
 # <a name="creating-solutions-and-projects"></a>Creating Solutions and Projects
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -74,15 +74,15 @@ ms.locfileid: "49248535"
   
 #### <a name="to-create-an-empty-solution"></a>空のソリューションを作成するには  
   
-1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[新しいプロジェクト]** をクリックします。  
+1. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[新しいプロジェクト]** をクリックします。  
   
-2.  左ペインで **[インストール済み]** をクリックし、 **[その他のプロジェクトの種類]** をクリックしてから、展開された一覧から **[Visual Studio ソリューション]** をクリックします。  
+2. 左ペインで **[インストール済み]** をクリックし、 **[その他のプロジェクトの種類]** をクリックしてから、展開された一覧から **[Visual Studio ソリューション]** をクリックします。  
   
-3.  中央のペインで、 **[空のソリューション]** を選択します。  
+3. 中央のペインで、 **[空のソリューション]** を選択します。  
   
-4.  ソリューションの **[名前]** および **[場所]** の値を設定し、 **[OK]** をクリックします。  
+4. ソリューションの **[名前]** および **[場所]** の値を設定し、 **[OK]** をクリックします。  
   
- 空のソリューションの作成後、 **[プロジェクト]** メニューの **[新しい項目の追加]** または **[既存項目の追加]** をクリックして、新規または既存のプロジェクトまたは項目を追加できます。  
+   空のソリューションの作成後、 **[プロジェクト]** メニューの **[新しい項目の追加]** または **[既存項目の追加]** をクリックして、新規または既存のプロジェクトまたは項目を追加できます。  
   
 ### <a name="deleting-solutions"></a>ソリューションの削除  
  ソリューションを完全に削除することもできますが、その場合は、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] は使用しません。 ソリューションを削除する前に、別のソリューションで再利用するプロジェクトはすべて移動しておいてください。 次に、ファイル エクスプローラーを使用して、.sln および .suo ソリューション ファイルのあるディレクトリを削除します。  

@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 07c94dda2a04ca1b69c2dbfd59b0df575f1b6c73
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 9f4dc0eca2c74161abb9cc4afe3917a160a18422
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39638060"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933132"
 ---
 # <a name="editor-factories"></a>エディター ファクトリ
 エディター ファクトリは、エディターのオブジェクトを作成し、物理ビューと呼ばれる、ウィンドウ フレームに配置されます。 ドキュメント データとエディターとデザイナーを作成するために必要なドキュメント ビュー オブジェクトを作成します。 Visual Studio のコア エディターと任意の標準エディターを作成する、エディター ファクトリが必要です。 エディター ファクトリのカスタム エディターを作成もできます。  
@@ -46,13 +46,13 @@ ms.locfileid: "39638060"
 ## <a name="the-editor-factory-registration-process"></a>エディター ファクトリの登録プロセス  
  次のプロセスでは、Visual Studio には、エディター ファクトリを使用して、エディターが読み込まれるときに発生します。  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト システム コール<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>します。  
+1. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト システム コール<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>します。  
   
-2.  このメソッドは、エディター ファクトリを返します。 Visual Studio の遅延がプロジェクト システムは、エディターを実際に必要になるまで、ただし、エディターのパッケージを読み込みます。  
+2. このメソッドは、エディター ファクトリを返します。 Visual Studio の遅延がプロジェクト システムは、エディターを実際に必要になるまで、ただし、エディターのパッケージを読み込みます。  
   
-3.  Visual Studio プロジェクト システムに、エディターが必要がある場合は呼び出して<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>、特殊なメソッドをドキュメントの表示と、ドキュメントの両方のデータ オブジェクトを返します。  
+3. Visual Studio プロジェクト システムに、エディターが必要がある場合は呼び出して<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>、特殊なメソッドをドキュメントの表示と、ドキュメントの両方のデータ オブジェクトを返します。  
   
-4.  場合、エディター ファクトリを使用して Visual Studio によって呼び出し<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>ドキュメント データ オブジェクトとドキュメント ビュー オブジェクトの両方を返すと、Visual Studio ドキュメント ウィンドウを作成、ドキュメント ビュー オブジェクトを配置し、実行中のドキュメントに入力ドキュメント データ オブジェクトのテーブル (RDT)。  
+4. 場合、エディター ファクトリを使用して Visual Studio によって呼び出し<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>ドキュメント データ オブジェクトとドキュメント ビュー オブジェクトの両方を返すと、Visual Studio ドキュメント ウィンドウを作成、ドキュメント ビュー オブジェクトを配置し、実行中のドキュメントに入力ドキュメント データ オブジェクトのテーブル (RDT)。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>   

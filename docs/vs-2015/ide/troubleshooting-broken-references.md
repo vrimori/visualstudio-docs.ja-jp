@@ -20,29 +20,29 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 08cf57bb90ba85df8a818da92cfd5615c62c3468
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ae619be498fcb1c48bbea8b706f0b0b5fa4db54c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49292943"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950668"
 ---
 # <a name="troubleshooting-broken-references"></a>Troubleshooting Broken References
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 アプリケーションが、壊れている参照を使用しようとすると例外エラーが生成されます。 エラーの主なトリガーは参照先のコンポーネントを見つけられないことですが、参照が壊れていると考えられるいくつかの状況があります。 これらの例を次のリストに示します。  
   
--   プロジェクトの参照パスが不正確または不完全な場合。  
+- プロジェクトの参照パスが不正確または不完全な場合。  
   
--   参照されているファイルが削除されている場合。  
+- 参照されているファイルが削除されている場合。  
   
--   参照されているファイルの名前が変更されている場合。  
+- 参照されているファイルの名前が変更されている場合。  
   
--   ネットワーク接続または認証に失敗した場合。  
+- ネットワーク接続または認証に失敗した場合。  
   
--   参照先が、コンピューターにインストールされていない COM コンポーネントになっている場合。  
+- 参照先が、コンピューターにインストールされていない COM コンポーネントになっている場合。  
   
- これらの問題に対する解決策を次に示します。  
+  これらの問題に対する解決策を次に示します。  
   
 > [!NOTE]
 >  アセンブリ内のファイルは、プロジェクト ファイルの絶対パスで参照されます。 したがって、複数の開発者がいる環境で作業しているユーザーには、ローカル環境で参照されるアセンブリがなくなる可能性があります。 これらのエラーを避けるためには、このような場合にプロジェクト間参照を追加することをお勧めします。 詳細については、「[方法: [参照の追加] ダイアログ ボックスを使用して参照を追加または削除する](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)」および「[アセンブリを使用したプログラミング](http://msdn.microsoft.com/library/25918b15-701d-42c7-95fc-c290d08648d6)」を参照してください。  

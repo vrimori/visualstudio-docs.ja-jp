@@ -14,12 +14,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9b56c4830c61ea0484d19195ab230fcd297a8588
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: e983022764bc8a790987e3e0dc6045eea098a2ae
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49176788"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49913840"
 ---
 # <a name="mip-map-generation-variant"></a>ミップマップ生成バリアント
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,19 +36,19 @@ ms.locfileid: "49176788"
 ## <a name="remarks"></a>Remarks  
  MIP マップの生成は、ソース テクスチャを作成する `ID3D11Device::CreateTexture2D` への呼び出しがあるたびに強制的に行われます。 具体的には、MIP マップの生成は、`pDesc` に渡された D3D11_TEXTUR2D_DESC オブジェクトが、不変のシェーダー リソースを記述する場合に強制的に行われます。つまり、  
   
--   BindFlags メンバーは D3D11_BIND_SHADER_RESOURCE フラグを設定するだけです。  
+- BindFlags メンバーは D3D11_BIND_SHADER_RESOURCE フラグを設定するだけです。  
   
--   Usage メンバーは、D3D11_USAGE_DEFUALT または D3D11_USAGE_IMMUTABLE に設定されます。  
+- Usage メンバーは、D3D11_USAGE_DEFUALT または D3D11_USAGE_IMMUTABLE に設定されます。  
   
--   CPUAccessFlags メンバーは 0 に設定されます(CPU アクセスなし)。  
+- CPUAccessFlags メンバーは 0 に設定されます(CPU アクセスなし)。  
   
--   SampleDesc メンバーは自身の Count メンバーを 1 に設定します (Multi-Sample Anti-Aliasing (MSAA) なし)。  
+- SampleDesc メンバーは自身の Count メンバーを 1 に設定します (Multi-Sample Anti-Aliasing (MSAA) なし)。  
   
--   MipLevels メンバーは 1 に設定されます (既存の MIP マップなし)。  
+- MipLevels メンバーは 1 に設定されます (既存の MIP マップなし)。  
   
- アプリケーションによって初期データが提供されたときに、テクスチャ形式は、D3D11_FORMAT_SUPPORT_MIP_AUTOGEN で定義されているように自動の MIP マップ生成をサポートしている必要があります (ただし、形式が BC1、BC2、または BC3 の場合は除きます)。サポートしていない場合はテクスチャは修正できず、初期データが提供されたときに MIP マップは生成されません。  
+  アプリケーションによって初期データが提供されたときに、テクスチャ形式は、D3D11_FORMAT_SUPPORT_MIP_AUTOGEN で定義されているように自動の MIP マップ生成をサポートしている必要があります (ただし、形式が BC1、BC2、または BC3 の場合は除きます)。サポートしていない場合はテクスチャは修正できず、初期データが提供されたときに MIP マップは生成されません。  
   
- テクスチャに対して MIP マップが自動的に生成された場合は、再生中に `ID3D11Device::CreateShaderResourceView` に対する呼び出しが修正され、テクスチャのサンプリング中に MIP チェーンを使用できるようになります。  
+  テクスチャに対して MIP マップが自動的に生成された場合は、再生中に `ID3D11Device::CreateShaderResourceView` に対する呼び出しが修正され、テクスチャのサンプリング中に MIP チェーンを使用できるようになります。  
   
 ## <a name="example"></a>例  
  **Mip-map Generation**このようなコードを使用してバリアントを再現することができます。  

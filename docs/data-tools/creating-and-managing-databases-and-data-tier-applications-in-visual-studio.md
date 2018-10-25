@@ -15,12 +15,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6ca08103614989ddbfd096a08a1531e756c9f67c
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 7f3d3f8dc34cf354fd6cb6b6689701dab791132d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176104"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942531"
 ---
 # <a name="database-projects-and-data-tier-applications-in-visual-studio"></a>データベース プロジェクトと Visual Studio でのデータ層アプリケーション
 
@@ -30,11 +30,11 @@ ms.locfileid: "39176104"
 
 ## <a name="common-high-level-tasks"></a>一般的な高度なタスク
 
-|高レベルのタスク|関連する参照先|
-|----------------------|------------------------|
-|**データ層アプリケーションの開発の開始:** A DAC がで導入された新しい概念[!INCLUDE[sskatmai_r2](../data-tools/includes/sskatmai_r2_md.md)]の定義を格納している、[!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)]データベースとサポートしているクライアントとサーバー間または 3 層で使用されるオブジェクトをインスタンス化アプリケーション。 DAC には、テーブルやビュー、ログインなどのエンティティのインスタンスと共になどのデータベース オブジェクトが含まれます。 Visual Studio を使用して DAC プロジェクトを作成、DAC パッケージ ファイルを作成およびデータベース管理者のインスタンスに展開するためにその DAC パッケージ ファイルを送信することができます、[!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)]データベース エンジン。|-   [作成とデータ層アプリケーションの管理](http://go.microsoft.com/fwlink/?LinkId=160741)<br />-   [SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=227328)|
-|**反復的なデータベース開発を実行する:** チェック アウト、プロジェクトの部分を分離開発環境で更新するようにする場合は、開発者やテスト担当者は、します。 この種の環境を使用すると、チームの他のメンバーの影響を与えずに変更をテストすることができます。 変更が完了した後は、バージョン管理、他のチーム メンバーと、変更を取得できますとビルド、テスト サーバーに配置をどこにファイルを確認します。|-   [クエリおよびテキスト エディター (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=227327)<br />-   [TRANSACT-SQL デバッガー](http://go.microsoft.com/fwlink/?LinkId=227324)|
-|**結果、および変更のデータベースのスクリプトとオブジェクトのプロトタイプ作成、検証テスト:** を使用することができます、[!INCLUDE[tsql](../data-tools/includes/tsql_md.md)]エディターのいずれかの一般的なタスクを実行します。|-   [クエリおよびテキスト エディター (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=227327)|
+| 高レベルのタスク | 関連する参照先 |
+| - | - |
+| **データ層アプリケーションの開発の開始:** A DAC がで導入された新しい概念[!INCLUDE[sskatmai_r2](../data-tools/includes/sskatmai_r2_md.md)]の定義を格納している、[!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)]データベースとサポートしているクライアントとサーバー間または 3 層で使用されるオブジェクトをインスタンス化アプリケーション。 DAC には、テーブルやビュー、ログインなどのエンティティのインスタンスと共になどのデータベース オブジェクトが含まれます。 Visual Studio を使用して DAC プロジェクトを作成、DAC パッケージ ファイルを作成およびデータベース管理者のインスタンスに展開するためにその DAC パッケージ ファイルを送信することができます、[!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)]データベース エンジン。 | -   [作成とデータ層アプリケーションの管理](http://go.microsoft.com/fwlink/?LinkId=160741)<br />-   [SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=227328) |
+| **反復的なデータベース開発を実行する:** チェック アウト、プロジェクトの部分を分離開発環境で更新するようにする場合は、開発者やテスト担当者は、します。 この種の環境を使用すると、チームの他のメンバーの影響を与えずに変更をテストすることができます。 変更が完了した後は、バージョン管理、他のチーム メンバーと、変更を取得できますとビルド、テスト サーバーに配置をどこにファイルを確認します。 | -   [クエリおよびテキスト エディター (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=227327)<br />-   [TRANSACT-SQL デバッガー](http://go.microsoft.com/fwlink/?LinkId=227324) |
+| **結果、および変更のデータベースのスクリプトとオブジェクトのプロトタイプ作成、検証テスト:** を使用することができます、[!INCLUDE[tsql](../data-tools/includes/tsql_md.md)]エディターのいずれかの一般的なタスクを実行します。 | -   [クエリおよびテキスト エディター (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=227327) |
 
 ## <a name="see-also"></a>関連項目
 

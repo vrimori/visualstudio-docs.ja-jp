@@ -17,12 +17,12 @@ ms.assetid: 39631545-2b0e-45b4-978b-d63656484b02
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a91c8543b853b4c2a643efe152fe015a4cd5fc48
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5d8e332974859693cab75c5345f7ec6b03548d8b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49220937"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843965"
 ---
 # <a name="providerfields"></a>PROVIDER_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -58,7 +58,7 @@ public enum enum_PROVIDER_FIELDS {
   
  これらの値は、演算と組み合わせることができます`OR`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

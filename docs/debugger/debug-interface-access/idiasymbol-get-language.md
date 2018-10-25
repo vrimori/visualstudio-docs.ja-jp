@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_language |Microsoft ドキュメント
+title: Idiasymbol::get_language |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b7797e4b6eb2aa35f13350580b110c757d7a5db
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 1b214e16538ba6447ce97ed6569bfbb580cf222e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31465097"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935875"
 ---
 # <a name="idiasymbolgetlanguage"></a>IDiaSymbol::get_language
 ソースの言語を取得します。  
@@ -34,13 +34,13 @@ HRESULT get_language (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]値を返します、 [CV_CFL_LANG 列挙型](../../debugger/debug-interface-access/cv-cfl-lang.md)ソースの言語を指定する列挙です。  
+ [out]値を返します、 [CV_CFL_LANG 列挙型](../../debugger/debug-interface-access/cv-cfl-lang.md)ソースの言語を指定する列挙体。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

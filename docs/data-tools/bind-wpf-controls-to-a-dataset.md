@@ -17,12 +17,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: aef6236b896495f81e91cbdd7befd2923c013a33
-ms.sourcegitcommit: 7a11a094a353f2e2a2077ad863ca4c0fb97f7ec5
+ms.openlocfilehash: 3450671c32cb7cfa03ade49bffcbecea728ddacf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39131961"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917525"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>データセットへの WPF コントロールのバインド
 
@@ -40,7 +40,7 @@ ms.locfileid: "39131961"
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルを実行するには、次のコンポーネントが必要です。
 
@@ -58,15 +58,15 @@ ms.locfileid: "39131961"
 
 製品レコードを表示する新しい WPF プロジェクトを作成します。
 
-1.  Visual Studio を起動します。
+1. Visual Studio を起動します。
 
-2.  **[ファイル]** メニューで、**[新規作成]** > **[プロジェクト]** の順に選択します。
+2. **[ファイル]** メニューで、**[新規作成]** > **[プロジェクト]** の順に選択します。
 
-3.  展開**Visual Basic**または**Visual c#**、し、 **Windows**します。
+3. 展開**Visual Basic**または**Visual c#**、し、 **Windows**します。
 
-4.  選択、 **WPF アプリケーション**プロジェクト テンプレート。
+4. 選択、 **WPF アプリケーション**プロジェクト テンプレート。
 
-5.  **名前**ボックスに、入力**AdventureWorksProductsEditor**し、 **OK**します。
+5. **名前**ボックスに、入力**AdventureWorksProductsEditor**し、 **OK**します。
 
    Visual Studio では、AdventureWorksProductsEditor プロジェクトを作成します。
 
@@ -126,23 +126,23 @@ ms.locfileid: "39131961"
 
 WPF デザイナーで XAML を変更して、いくつかのボタンをウィンドウに追加します。 これらのボタンを使用して製品レコード間をスクロールしたり、製品レコードへの変更を保存したりできるようにするコードは、このチュートリアルで後で追加します。
 
-1.  **ソリューション エクスプ ローラー**、ダブルクリックして*MainWindow.xaml*します。
+1. **ソリューション エクスプ ローラー**、ダブルクリックして*MainWindow.xaml*します。
 
-     ウィンドウが開きます、 **WPF デザイナー**します。
+    ウィンドウが開きます、 **WPF デザイナー**します。
 
-2.  デザイナーの [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] ビューで、`<Grid>` タグの間に次のコードを追加します。
+2. デザイナーの [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] ビューで、`<Grid>` タグの間に次のコードを追加します。
 
-    ```xaml
-    <Grid.RowDefinitions>
-        <RowDefinition Height="75" />
-        <RowDefinition Height="625" />
-    </Grid.RowDefinitions>
-    <Button HorizontalAlignment="Left" Margin="22,20,0,24" Name="backButton" Width="75"><</Button>
-    <Button HorizontalAlignment="Left" Margin="116,20,0,24" Name="nextButton" Width="75">></Button>
-    <Button HorizontalAlignment="Right" Margin="0,21,46,24" Name="saveButton" Width="110">Save changes</Button>
-    ```
+   ```xaml
+   <Grid.RowDefinitions>
+       <RowDefinition Height="75" />
+       <RowDefinition Height="625" />
+   </Grid.RowDefinitions>
+   <Button HorizontalAlignment="Left" Margin="22,20,0,24" Name="backButton" Width="75"><</Button>
+   <Button HorizontalAlignment="Left" Margin="116,20,0,24" Name="nextButton" Width="75">></Button>
+   <Button HorizontalAlignment="Right" Margin="0,21,46,24" Name="saveButton" Width="110">Save changes</Button>
+   ```
 
-3.  プロジェクトをビルドします。
+3. プロジェクトをビルドします。
 
 ## <a name="create-data-bound-controls"></a>データ バインド コントロールを作成します。
 

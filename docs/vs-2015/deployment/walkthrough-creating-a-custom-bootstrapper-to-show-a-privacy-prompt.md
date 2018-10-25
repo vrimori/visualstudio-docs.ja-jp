@@ -25,12 +25,12 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 4184e8400c50c518b461a0877f06c54db5f84927
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: e8bd1101647973a7a8f206159f8910a4e633e5da
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49217965"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893393"
 ---
 # <a name="walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt"></a>チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートストラップの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,23 +49,23 @@ ms.locfileid: "49217965"
   
 #### <a name="to-create-a-consent-dialog-box"></a>同意ダイアログ ボックスを作成するには  
   
-1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
+1. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-2.  **新しいプロジェクト**ダイアログ ボックスで、をクリックして**Windows**、 をクリックし、 **WindowsFormsApplication**。  
+2. **新しいプロジェクト**ダイアログ ボックスで、をクリックして**Windows**、 をクリックし、 **WindowsFormsApplication**。  
   
-3.  **名前**、型**ConsentDialog**、順にクリックします**OK**します。  
+3. **名前**、型**ConsentDialog**、順にクリックします**OK**します。  
   
-4.  デザイナーでフォームをクリックします。  
+4. デザイナーでフォームをクリックします。  
   
-5.  **プロパティ**ウィンドウで、変更、**テキスト**プロパティを**更新同意ダイアログ**します。  
+5. **プロパティ**ウィンドウで、変更、**テキスト**プロパティを**更新同意ダイアログ**します。  
   
-6.  **ツールボックス**、展開**すべての Windows フォーム**、ドラッグ、**ラベル**コントロールをフォームにします。  
+6. **ツールボックス**、展開**すべての Windows フォーム**、ドラッグ、**ラベル**コントロールをフォームにします。  
   
-7.  デザイナーで、ラベル コントロールをクリックします。  
+7. デザイナーで、ラベル コントロールをクリックします。  
   
-8.  **プロパティ**ウィンドウで、変更、**テキスト**のプロパティの **外観**次。  
+8. **プロパティ**ウィンドウで、変更、**テキスト**のプロパティの **外観**次。  
   
-     Web 上の最新の更新プログラムをインストールしようとしているアプリケーションを確認します。 "I Agree"でクリックすると、確認し、インターネットから自動的に更新プログラムをインストールするアプリケーションを承認します。  
+    Web 上の最新の更新プログラムをインストールしようとしているアプリケーションを確認します。 "I Agree"でクリックすると、確認し、インターネットから自動的に更新プログラムをインストールするアプリケーションを承認します。  
   
 9. **ツールボックス**、ドラッグ、**チェック ボックスをオン**フォームの中央にコントロール。  
   
@@ -118,28 +118,28 @@ ms.locfileid: "49217965"
   
      Visual Basic 開発者の場合のみ。  
   
-    1.  **ソリューション エクスプ ローラー**、 をクリックして**ConsentDialog**します。  
+    1. **ソリューション エクスプ ローラー**、 をクリックして**ConsentDialog**します。  
   
-    2.  **プロジェクト** メニューのをクリックして**モジュールの追加**、 をクリックし、**追加**します。  
+    2. **プロジェクト** メニューのをクリックして**モジュールの追加**、 をクリックし、**追加**します。  
   
-    3.  Module1.vb コード ファイルでは、次のコードを追加します。  
+    3. Module1.vb コード ファイルでは、次のコードを追加します。  
   
-         [!code-vb[ConsentDialog#7](../snippets/visualbasic/VS_Snippets_ProTools/consentdialog/vb/module1.vb#7)]  
+        [!code-vb[ConsentDialog#7](../snippets/visualbasic/VS_Snippets_ProTools/consentdialog/vb/module1.vb#7)]  
   
-    4.  **プロジェクト** メニューのをクリックして**ConsentDialog プロパティ**、 をクリックし、**アプリケーション**タブ。  
+    4. **プロジェクト** メニューのをクリックして**ConsentDialog プロパティ**、 をクリックし、**アプリケーション**タブ。  
   
-    5.  オフに**有効にするアプリケーション フレームワーク**します。  
+    5. オフに**有効にするアプリケーション フレームワーク**します。  
   
-    6.  **スタートアップ オブジェクト**ドロップダウン メニューで、 **Module1**します。  
+    6. **スタートアップ オブジェクト**ドロップダウン メニューで、 **Module1**します。  
   
-        > [!NOTE]
-        >  アプリケーション フレームワークを無効にするには、Windows XP ビジュアル スタイルのアプリケーション イベント、スプラッシュ スクリーン、単一インスタンス アプリケーションなどの機能が無効にします。 詳細については、「[[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)」を参照してください。  
+       > [!NOTE]
+       >  アプリケーション フレームワークを無効にするには、Windows XP ビジュアル スタイルのアプリケーション イベント、スプラッシュ スクリーン、単一インスタンス アプリケーションなどの機能が無効にします。 詳細については、「[[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)」を参照してください。  
   
-     Visual c# 開発者の場合のみ。  
+       Visual c# 開発者の場合のみ。  
   
-     Program.cs コード ファイルを開き、次のコードを追加します。  
+       Program.cs コード ファイルを開き、次のコードを追加します。  
   
-     [!code-csharp[ConsentDialog#5](../snippets/csharp/VS_Snippets_ProTools/consentdialog/cs/program.cs#5)]  
+       [!code-csharp[ConsentDialog#5](../snippets/csharp/VS_Snippets_ProTools/consentdialog/cs/program.cs#5)]  
   
 26. **ビルド** メニューのをクリックして**BuildSolution**します。  
   

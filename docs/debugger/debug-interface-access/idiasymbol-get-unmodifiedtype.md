@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_unmodifiedtype |Microsoft ドキュメント
+title: Idiasymbol::get_unmodifiedtype |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 13a07c85bf53d330874eca9e8e0eec37bed8dde9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 32e636a35d1cfed085ddf1bc44d60249a71d0b69
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31470788"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935754"
 ---
 # <a name="idiasymbolgetunmodifiedtype"></a>IDiaSymbol::get_unmodifiedType
-このシンボルに元の型を取得します。 使用する場合、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)型に設定します。  
+このシンボルには、元の型を取得します。 使用する場合、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)型に設定されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,15 +37,15 @@ HRESULT get_unmodifiedType(
  [out]返します、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)このシンボルの元の型を表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>コメント  
- 現在の型では、返された元の型の変更です。 シンボルの元の型は、最初の記号の型を取得し、し、その元の型の型が返されますの問い合わせで決定できます。 一部のシンボルは、元の型の変更後の型を持てませんに注意してください。  
+## <a name="remarks"></a>Remarks  
+ 現在の型が、返された元の型を変更します。 シンボルの元の型は、まず、記号の種類を取得し、元の型の型を返すを問い合わせるで決定できます。 いくつかの記号は、元の型の変更後の型を持てませんに注意してください。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

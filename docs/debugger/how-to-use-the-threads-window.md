@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 65626bc483d7794c2adae141903783238a97eddd
-ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
+ms.openlocfilehash: bcd3a3f47af8251f6f4bfa1b5b5f08da7a1f3e3e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39468466"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933561"
 ---
 # <a name="walkthrough-debug-a-multithreaded-application-in-visual-studio-using-the-threads-window"></a>チュートリアル: [スレッド] ウィンドウを使用して Visual Studio でマルチ スレッド アプリケーションをデバッグします。
 Visual Studio では、**スレッド**ウィンドウとその他のユーザー インターフェイスのマルチ スレッド アプリケーションのデバッグに役立つ要素です。 このチュートリアルで使用する方法、**スレッド**ウィンドウと**デバッグの場所**ツールバー。 その他のツールについては、次を参照してください。[マルチ スレッド アプリケーションのデバッグの開始](../debugger/get-started-debugging-multithreaded-apps.md)します。 このチュートリアルでは、わずか数分ですが、完了に慣れることがするマルチ スレッド アプリケーションのデバッグ機能を使用します。   
@@ -72,29 +72,29 @@ Visual Studio では、**スレッド**ウィンドウとその他のユーザ�
   
 #### <a name="to-start-debugging"></a>デバッグを開始するには  
   
-1.  左側の余白内をクリックして、`Console.WriteLine`新しいブレークポイントを挿入するステートメント。  
+1. 左側の余白内をクリックして、`Console.WriteLine`新しいブレークポイントを挿入するステートメント。  
   
-     ソース コード エディターの左側にある余白、赤い円が表示されます。 これは、ブレークポイントがその場所に設定されていることを示します。  
+    ソース コード エディターの左側にある余白、赤い円が表示されます。 これは、ブレークポイントがその場所に設定されていることを示します。  
   
-2.  **デバッグ** メニューのをクリックして**デバッグの開始** (**F5**)。  
+2. **デバッグ** メニューのをクリックして**デバッグの開始** (**F5**)。  
   
-     デバッグが開始され、コンソール アプリケーションの実行が始まり、ブレークポイントで停止します。  
+    デバッグが開始され、コンソール アプリケーションの実行が始まり、ブレークポイントで停止します。  
   
-3.  このとき、フォーカスがコンソール アプリケーション ウィンドウにある場合は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ウィンドウの内側をクリックして、フォーカスを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] に戻します。  
+3. このとき、フォーカスがコンソール アプリケーション ウィンドウにある場合は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ウィンドウの内側をクリックして、フォーカスを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] に戻します。  
   
-4.  ソース コード エディターでは、次のコードを含む行を見つけます。  
+4. ソース コード エディターでは、次のコードを含む行を見つけます。  
   
-    ```VB  
-    Thread.Sleep(5000)   
-    ```  
+   ```VB  
+   Thread.Sleep(5000)   
+   ```  
   
-    ```csharp  
-    Thread.Sleep(3000);  
-    ```  
+   ```csharp  
+   Thread.Sleep(3000);  
+   ```  
   
-    ```C++  
-    Thread::Sleep(3000);  
-    ```
+   ```C++  
+   Thread::Sleep(3000);  
+   ```
   
 #### <a name="to-discover-the-thread-marker"></a>スレッド マーカーを見つけるには  
 

@@ -1,5 +1,5 @@
 ---
-title: '&#39; が t &#39; 中断 &#39;ループの外 |Microsoft ドキュメント'
+title: できます&#39;t が&#39;break&#39;ループの外 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,24 +21,24 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: bb23f1bc3de087515cad9ba4910cf2ebaf640353
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633152"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928556"
 ---
-# <a name="can39t-have-39break39-outside-of-loop"></a>&#39; が t &#39; 中断 &#39;ループの外
-使用しようとする、 **break**ループの外側のキーワードです。 **Break**ループを終了するキーワードを使用または`switch`ステートメントです。 ループの本体に埋め込まれている必要がありますまたは`switch`ステートメントです。 ただし、**ラベル**break キーワードに従うことができます。  
+# <a name="can39t-have-39break39-outside-of-loop"></a>できます&#39;t が&#39;break&#39;ループの外
+使用しようとする、 **break**ループ外にあるキーワード。 **Break**キーワードを使用して、ループの終了をまたは`switch`ステートメント。 ループの本体に埋め込む必要があります、または`switch`ステートメント。 ただし、**ラベル**break キーワードをフォローできます。  
   
 ```  
 break labelname;  
 ```  
   
- ラベル付きののみが必要、 **break**キーワードを使用しているときにループが入れ子になったまたは`switch`ステートメントと最も内側のものではないループから抜ける必要があります。  
+ ラベル付きののみ必要があります、 **break**入れ子になったループを使用しているときに、キーワードまたは`switch`ステートメントと最も内側のものではないループから抜け出す必要。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   確認、 **break**キーワードが外側のループまたは switch ステートメントの内側に表示されます。  
+-   確認、 **break**外側のループまたは switch ステートメント内でキーワードが表示されます。  
   
 ## <a name="see-also"></a>関連項目  
  [break ステートメント](../../javascript/reference/break-statement-javascript.md)   

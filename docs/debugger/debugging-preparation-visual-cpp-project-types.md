@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1ff82ec2b86eeaf078576a437481ec2b7c39aa4
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: d3d1c183ab4816803f9c1c2ce8ee60373d1e50bf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44279487"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864102"
 ---
 # <a name="debugging-preparation-visual-c-project-types"></a>デバッグの準備 : Visual C++ のプロジェクト
 ここでは、[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] プロジェクト テンプレートで作成された基本的なプロジェクトの種類をデバッグする方法について説明します。  
@@ -37,11 +37,11 @@ ms.locfileid: "44279487"
   
  [Win32 プロジェクト](#BKMK_Win32_Projects)  
   
--   [C または C++ の Win32 アプリケーションをデバッグするには](#BKMK_To_debug_a_C_or_C___Win32_application)  
+- [C または C++ の Win32 アプリケーションをデバッグするには](#BKMK_To_debug_a_C_or_C___Win32_application)  
   
--   [デバッグ構成を手動で設定するには](#BKMK_To_manually_set_a_Debug_configuration)  
+- [デバッグ構成を手動で設定するには](#BKMK_To_manually_set_a_Debug_configuration)  
   
- [Windows フォーム アプリケーション (.NET)](#BKMK_Windows_Forms_Applications___NET_)  
+  [Windows フォーム アプリケーション (.NET)](#BKMK_Windows_Forms_Applications___NET_)  
   
 ##  <a name="BKMK_Recommended_Property_Settings"></a> プロパティの推奨設定  
  プロパティによっては、すべてのアンマネージ デバッグ シナリオで同じように設定する必要があります。 プロパティの推奨設定を以下に示します。 ここに記載されていない設定は、アンマネージ プロジェクトの種類によって異なる場合があります。 詳細については、次を参照してください[C++ デバッグ構成のプロジェクトの設定。](../debugger/project-settings-for-a-cpp-debug-configuration.md)  
@@ -77,28 +77,28 @@ ms.locfileid: "44279487"
   
 ###  <a name="BKMK_To_manually_set_a_Debug_configuration"></a> デバッグ構成を手動で設定するには  
   
-1.  **ビュー**  メニューのをクリックして**プロパティ ページ**します。  
+1. **ビュー**  メニューのをクリックして**プロパティ ページ**します。  
   
-2.  をクリックして、**構成プロパティ**開くことになっていないノード  
+2. をクリックして、**構成プロパティ**開くことになっていないノード  
   
-3.  選択**全般**の値を設定し、**出力**行**デバッグ**。  
+3. 選択**全般**の値を設定し、**出力**行**デバッグ**。  
   
-4.  開く、 **C/C++** ノード、および選択**全般**します。  
+4. 開く、 **C/C++** ノード、および選択**全般**します。  
   
-     **デバッグ**すると、コンパイラによって生成されるデバッグ情報の種類を指定する行。 選択した可能性があります値を含める**プログラム データベース (/Zi)** または**編集と続行 (/ZI) 用のプログラム データベース**します。  
+    **デバッグ**すると、コンパイラによって生成されるデバッグ情報の種類を指定する行。 選択した可能性があります値を含める**プログラム データベース (/Zi)** または**編集と続行 (/ZI) 用のプログラム データベース**します。  
   
-5.  選択**最適化**、し、**最適化**行で、**無効 (/0 d)** ドロップダウン リストから。  
+5. 選択**最適化**、し、**最適化**行で、**無効 (/0 d)** ドロップダウン リストから。  
   
-     最適化されたコードは、生成された命令がソース コードと直接対応していないため、デバッグが困難です。 プログラムで、最適化されたコード内だけに現れるバグが見つかった場合は、この設定を有効にできます。[逆アセンブル] ウィンドウに表示されるコードは最適化されたソースから生成されているため、ソース ウィンドウに表示されるコードとは一致しない可能性があります。 ステップ実行などの機能で、ブレークポイントや実行ポイントが正しく表示されない場合があります。  
+    最適化されたコードは、生成された命令がソース コードと直接対応していないため、デバッグが困難です。 プログラムで、最適化されたコード内だけに現れるバグが見つかった場合は、この設定を有効にできます。[逆アセンブル] ウィンドウに表示されるコードは最適化されたソースから生成されているため、ソース ウィンドウに表示されるコードとは一致しない可能性があります。 ステップ実行などの機能で、ブレークポイントや実行ポイントが正しく表示されない場合があります。  
   
-6.  開く、**リンカー**ノード、および選択**デバッグ**します。 最初の**生成**行で、**はい (/debug)** ドロップダウン リストから。 デバッグ時には、必ずこのオプションを設定する必要があります。  
+6. 開く、**リンカー**ノード、および選択**デバッグ**します。 最初の**生成**行で、**はい (/debug)** ドロップダウン リストから。 デバッグ時には、必ずこのオプションを設定する必要があります。  
   
- 詳細については、次を参照してください。[C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)します。  
+   詳細については、次を参照してください。[C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)します。  
   
- [このトピックの内容](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)  
+   [このトピックの内容](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Windows_Forms_Applications___NET_"></a> Windows フォーム アプリケーション (.NET)  
- **Windows フォーム アプリケーション (.NET)** テンプレートを作成、 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] Windows フォーム アプリケーションです。 詳細については、「[方法 : Windows アプリケーション プロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))」を参照してください。  
+ **Windows フォーム アプリケーション (.NET)** テンプレートを作成、 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] Windows フォーム アプリケーションです。 詳細については、「 [How to: Create a Windows Application Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))」を参照してください。  
   
  この種のアプリケーションを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でデバッグする作業は、マネージド Windows フォーム アプリケーションのデバッグ作業に似ています。  
   

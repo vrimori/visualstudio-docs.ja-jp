@@ -15,12 +15,12 @@ ms.assetid: 3b21e3a1-170a-4485-941e-6b04b7b27886
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8204dcfc7a0d8937551914ebedbc035767127507
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7255ed981bd65e364d1028c365aab66a73a76dcb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49292663"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816002"
 ---
 # <a name="solutions-overview"></a>ソリューションの概要
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "49292663"
   
  ソリューションが開かれたときに、次のプロセスが行われます。  
   
-1.  環境では、ソリューションを読み取ります。  
+1. 環境では、ソリューションを読み取ります。  
   
-2.  環境が検出されると、 `CLSID`、対応する VSPackage が読み込まれます。  
+2. 環境が検出されると、 `CLSID`、対応する VSPackage が読み込まれます。  
   
-3.  かどうか、VSPackage が読み込まれる、環境は`QueryInterface`の<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>VSPackage を必要とするインターフェイスのインターフェイス。  
+3. かどうか、VSPackage が読み込まれる、環境は`QueryInterface`の<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>VSPackage を必要とするインターフェイスのインターフェイス。  
   
-    1.  .Sln ファイルから読み取る場合、環境を呼び出す`QueryInterface`の`IVsPersistSolutionProps`します。  
+   1.  .Sln ファイルから読み取る場合、環境を呼び出す`QueryInterface`の`IVsPersistSolutionProps`します。  
   
-    2.  環境が呼び出す、.suo ファイルから読み取る場合、`QueryInterface`の`IVsPersistSolutionOpts`します。  
+   2.  環境が呼び出す、.suo ファイルから読み取る場合、`QueryInterface`の`IVsPersistSolutionOpts`します。  
   
- これらのファイルの使用に関連する特定の情報が記載されて[ソリューション (します。Sln) ファイル](../../extensibility/internals/solution-dot-sln-file.md)と[ソリューション ユーザー オプション (します。Suo) ファイル](../../extensibility/internals/solution-user-options-dot-suo-file.md)します。  
+   これらのファイルの使用に関連する特定の情報が記載されて[ソリューション (します。Sln) ファイル](../../extensibility/internals/solution-dot-sln-file.md)と[ソリューション ユーザー オプション (します。Suo) ファイル](../../extensibility/internals/solution-user-options-dot-suo-file.md)します。  
   
 > [!NOTE]
 >  新しいソリューション構成の 2 つのプロジェクト構成で構成されると、ビルドからの 3 つ目の除外を作成する場合は、プロパティ ページの UI またはオートメーションを使用する必要があります。 ソリューションのビルド マネージャーの構成とそのプロパティを直接変更することはできませんを使用して、ソリューションのビルド マネージャーを操作することができます、 `SolutionBuild` DTE からオートメーション モデルのクラス。 ソリューションを構成する方法の詳細については、次を参照してください。[ソリューション構成](../../extensibility/internals/solution-configuration.md)します。  

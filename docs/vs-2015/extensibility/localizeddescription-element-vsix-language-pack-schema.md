@@ -13,12 +13,12 @@ ms.assetid: 766a1732-bbaf-4875-b276-feb42169633a
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d136ed60417d51a3fd1cf536ad63e5602b44a26c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: dbcad72308e9b78a5fcc6865c6070cc887eed06e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49255724"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49826480"
 ---
 # <a name="localizeddescription-element-vsix-language-pack-schema"></a>LocalizedDescription 要素 (VSIX 言語パックのスキーマ)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -57,12 +57,12 @@ ms.locfileid: "49255724"
   
 ## <a name="element-information"></a>要素情報  
   
-|||  
-|-|-|  
-|名前空間|http://schemas.microsoft.com/developer/vsx-schema-lp/2010|  
-|スキーマ名|VSIX 言語パックのスキーマ|  
-|検証ファイル|VSIXLanguagePackSchema.xsd|  
-|空にすることができます。|利用不可|  
+|                 |                                                           |
+|-----------------|-----------------------------------------------------------|
+|    名前空間    | http://schemas.microsoft.com/developer/vsx-schema-lp/2010 |
+|   スキーマ名   |                 VSIX 言語パックのスキーマ                 |
+| 検証ファイル |                VSIXLanguagePackSchema.xsd                 |
+|  空にすることができます。   |                      利用不可                       |
   
 ## <a name="see-also"></a>関連項目  
  [VSX 言語パックのスキーマ リファレンス](../extensibility/vsx-language-pack-schema-reference.md)   

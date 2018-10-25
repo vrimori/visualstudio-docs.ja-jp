@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb6b739d91bfe5931d1af853ec01e145a0cb2c85
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 9ebfc937ee5cf6025761bb9da5d5f6589caf77d1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39153299"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49901048"
 ---
 # <a name="add-command-line-switches"></a>コマンド ライン スイッチを追加します。
 VSPackage に適用されるコマンド ライン スイッチを追加するときに*devenv.exe*を実行します。 使用<xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute>スイッチとそのプロパティの名前を宣言します。 この例では、MySwitch スイッチがという名前の VSPackage のサブクラスの追加**AddCommandSwitchPackage**引数なしで、自動的に読み込まれる VSPackage とします。  
@@ -36,9 +36,9 @@ VSPackage に適用されるコマンド ライン スイッチを追加する�
 |-|-|-|-|
 | パラメーター | 説明|
 | 引数 | スイッチの引数の数。 "*"、または引数のリスト。 |
-| DemandLoad |  この設定で 1、それ以外の場合は 0 に設定されている場合は、VSPackage を自動的に読み込みます。 |  
+| DemandLoad | この設定で 1、それ以外の場合は 0 に設定されている場合は、VSPackage を自動的に読み込みます。 |  
 | HelpString | ヘルプ文字列またはリソースの ID 文字列と共に表示する**devenv/でしょうか。** します。 |
-| name | スイッチ。 |
+| 名前 | スイッチ。 |
 | PackageGuid | パッケージの GUID。 |  
   
  引数の最初の値が 0 または 1 では、通常は。 特殊な値を ' *'、コマンドラインの残りの部分全体が、引数であることを示すために使用できます。 これは、ユーザーが、デバッガー コマンド文字列で渡す必要がありますのシナリオのデバッグに役立つことができます。  
@@ -54,11 +54,11 @@ VSPackage に適用されるコマンド ライン スイッチを追加する�
 ## <a name="retrieve-command-line-switches"></a>コマンド ライン スイッチを取得します。  
  パッケージが読み込まれるときに、次の手順を実行して、コマンド ライン スイッチを取得できます。  
   
-1.  VSPackage の<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>実装、呼び出し`QueryService`で<xref:Microsoft.VisualStudio.Shell.Interop.SVsAppCommandLine>を取得する、<xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine>インターフェイス。  
+1. VSPackage の<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>実装、呼び出し`QueryService`で<xref:Microsoft.VisualStudio.Shell.Interop.SVsAppCommandLine>を取得する、<xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine>インターフェイス。  
   
-2.  呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine.GetOption%2A>をユーザーが入力したコマンド ライン スイッチを取得します。  
+2. 呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine.GetOption%2A>をユーザーが入力したコマンド ライン スイッチを取得します。  
   
- 次のコードでは、MySwitch コマンド ライン スイッチがユーザーによって入力されたかどうかを確認する方法を示します。  
+   次のコードでは、MySwitch コマンド ライン スイッチがユーザーによって入力されたかどうかを確認する方法を示します。  
   
 ```csharp  
 IVsAppCommandLine cmdline = (IVsAppCommandLine)GetService(typeof(SVsAppCommandLine));  

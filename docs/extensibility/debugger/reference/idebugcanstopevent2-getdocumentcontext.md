@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::GetDocumentContext |Microsoft ドキュメント
+title: IDebugCanStopEvent2::GetDocumentContext |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e5b9bbd5127ac3cf7aef70744fc80ebc8372dfb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c8a8b26ceca3390466f3300d3692a7ee887ebd91
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31106245"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861034"
 ---
 # <a name="idebugcanstopevent2getdocumentcontext"></a>IDebugCanStopEvent2::GetDocumentContext
-このイベントの場所を記述したドキュメントのコンテキストを取得します。  
+このイベントの場所を説明するドキュメント コンテキストを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,15 +41,15 @@ int GetDocumentContext (
   
 #### <a name="parameters"></a>パラメーター  
  `ppDocCxt`  
- [out]返します、 [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)を現在のコードの場所に対応するソース ファイルのドキュメント内の位置を表すインターフェイス。  
+ [out]返します、 [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)コードの現在の場所に対応するソース ファイルのドキュメント内の位置を表すインターフェイスです。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 一般に、ドキュメントのコンテキストはようなもののソース ファイル内の位置。  
+## <a name="remarks"></a>Remarks  
+ 一般に、ドキュメントのコンテキストは、ソース ファイル内の位置として考えることができます。  
   
- コード命令指向は、コードのコンテキストを取得する、 [GetCodeContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getcodecontext.md)メソッドです。  
+ 手順についてはコード指向は、コードのコンテキストを取得する、 [GetCodeContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getcodecontext.md)メソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)   

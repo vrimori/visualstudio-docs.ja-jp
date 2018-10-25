@@ -20,12 +20,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 3b02afb7008233c720feae179b4726f9958a44af
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 831be19e4be8c746e668b946fd170fc4c86def49
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35255287"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855850"
 ---
 # <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>方法: コードの制限されたアクセス許可を持つドキュメントの背後で実行を許可
   Microsoft Office の Information Rights Management (IRM) 機能を使用して、文書またはブックへのアクセス許可を制限することができます。 既定では、制限された Microsoft Office Word ドキュメントまたは Microsoft Office Excel ブックの背後にあるコードは実行できません。 既定値を変更するには、オブジェクト モデルにアクセスできる、マネージ コード拡張機能と、ソリューションが動作できるようにします。  
@@ -36,18 +36,18 @@ ms.locfileid: "35255287"
   
 ## <a name="to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>制限されたアクセス許可を持つドキュメントの背後で実行するためのコードを許可するには  
   
-1.  Word または Excel でドキュメントまたはブックを開きます。  
+1. Word または Excel でドキュメントまたはブックを開きます。  
   
-2.  をクリックして、**ファイル** タブをポイントして、**準備**、 をポイント**アクセスの制限**、順にクリックします**制限されたアクセス**します。  
+2. をクリックして、**ファイル** タブをポイントして、**準備**、 をポイント**アクセスの制限**、順にクリックします**制限されたアクセス**します。  
   
-    > [!NOTE]  
-    >  初めて使用する、Windows Rights Management クライアントのインストールを求められます。 クライアントをインストールした後は、手順を繰り返す必要があります。  
+   > [!NOTE]  
+   >  初めて使用する、Windows Rights Management クライアントのインストールを求められます。 クライアントをインストールした後は、手順を繰り返す必要があります。  
   
-3.  **権限**ダイアログ ボックスで、**このドキュメントへのアクセスを制限する**、順にクリックします**オプションより**します。  
+3. **権限**ダイアログ ボックスで、**このドキュメントへのアクセスを制限する**、順にクリックします**オプションより**します。  
   
-4.  **ユーザーの追加権限**を選択します**コンテンツをプログラムでアクセス**します。  
+4. **ユーザーの追加権限**を選択します**コンテンツをプログラムでアクセス**します。  
   
- Word または Excel オブジェクト モデルにプログラムでアクセスが許可されます。  
+   Word または Excel オブジェクト モデルにプログラムでアクセスが許可されます。  
   
 ## <a name="see-also"></a>関連項目  
  [Information rights management とマネージ コード拡張機能の概要](../vsto/information-rights-management-and-managed-code-extensions-overview.md)   

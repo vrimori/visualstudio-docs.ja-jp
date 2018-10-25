@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetMemoryContext64 |Microsoft ドキュメント
+title: IDebugBinder3::GetMemoryContext64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9ec9be314597f2f4fd7fa067db17028c1d8aee72
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ccfb34e03259e67eaca17e2cee7c824e62ce0393
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31108972"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925910"
 ---
 # <a name="idebugbinder3getmemorycontext64"></a>IDebugBinder3::GetMemoryContext64
-メモリ コンテキスト オブジェクトの場所または 64 ビット メモリ アドレスのいずれかに変換します。  
+メモリ コンテキスト オブジェクトの場所または 64 ビットのメモリ アドレスのいずれかに変換します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,7 +44,7 @@ int GetMemoryContext64 (
   
 #### <a name="parameters"></a>パラメーター  
  `pField`  
- [in][IDebugField](../../../extensibility/debugger/reference/idebugfield.md)検索するオブジェクトを説明します。 場合`NULL`を使用して`dwConstant`代わりにします。  
+ [in][IDebugField](../../../extensibility/debugger/reference/idebugfield.md)検索するオブジェクトを記述します。 場合`NULL`を使用して`dwConstant`代わりにします。  
   
  `uConstant`  
  [in]0x50000000 などの 64 ビット メモリ アドレス。  
@@ -53,10 +53,10 @@ int GetMemoryContext64 (
  [out]返します、 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)オブジェクトのアドレス、またはメモリ内のアドレスを表すインターフェイスです。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="example"></a>例  
- 次の例を実装するオブジェクトを作成、 [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)インターフェイスのメソッドを使用してこのメモリ コンテキストを取得します。  
+ 次の例では、実装するオブジェクトを作成する、 [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)インターフェイスし、このメソッドを使用して、メモリのコンテキストを取得します。  
   
 ```cpp  
 HRESULT CValueProperty::GetMemoryContext ( IDebugMemoryContext2** out_ppMemoryContext )  

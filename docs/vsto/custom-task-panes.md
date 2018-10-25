@@ -28,12 +28,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2958001bfd2f9c00689e1c44bd64a5fa3c5b4d00
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e4e8384bc86bf59216c353b0f4610d3863445781
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42635558"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49889764"
 ---
 # <a name="custom-task-panes"></a>カスタム作業ウィンドウ
   作業ウィンドウは、通常、Microsoft Office アプリケーションのウィンドウの一辺にドッキングされているユーザー インターフェイス ウィンドウです。 カスタム作業ウィンドウは、独自の作業ウィンドウを作成し、ユーザーがソリューションの各機能にアクセスする際に使い慣れたインターフェイスを利用できるようにするものです。 たとえば、インターフェイスにはドキュメントを変更するコードや、データ ソースのデータを表示するコードを実行するコントロールが含まれます。  
@@ -55,11 +55,11 @@ ms.locfileid: "42635558"
 ## <a name="create-a-custom-task-pane"></a>カスタム作業ウィンドウを作成します。  
  2 つの手順で、基本的なカスタム作業ウィンドウを作成できます。  
   
-1.  Windows フォーム コントロールを <xref:System.Windows.Forms.UserControl> オブジェクトに追加することにより、カスタム作業ウィンドウのユーザー インターフェイスを作成します。  
+1. Windows フォーム コントロールを <xref:System.Windows.Forms.UserControl> オブジェクトに追加することにより、カスタム作業ウィンドウのユーザー インターフェイスを作成します。  
   
-2.  そのユーザー コントロールを VSTO アドインの <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> オブジェクトに渡すことにより、カスタム作業ウィンドウをインスタンス化します。 このコレクションは、作業ウィンドウの外観を変更し、ユーザー イベントに応答するために使用できる新しい <xref:Microsoft.Office.Tools.CustomTaskPane> オブジェクトを返します。  
+2. そのユーザー コントロールを VSTO アドインの <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> オブジェクトに渡すことにより、カスタム作業ウィンドウをインスタンス化します。 このコレクションは、作業ウィンドウの外観を変更し、ユーザー イベントに応答するために使用できる新しい <xref:Microsoft.Office.Tools.CustomTaskPane> オブジェクトを返します。  
   
- 詳細については、次を参照してください。[方法: カスタム作業ウィンドウをアプリケーションに追加](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)します。  
+   詳細については、次を参照してください。[方法: カスタム作業ウィンドウをアプリケーションに追加](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)します。  
   
 ### <a name="create-the-user-interface"></a>ユーザー インターフェイスを作成する  
  Visual Studio の Office 開発ツールを使用して作成されるすべてのカスタム作業ウィンドウには、<xref:System.Windows.Forms.UserControl> オブジェクトが含まれます。 このユーザー コントロールは、カスタム作業ウィンドウのユーザー インターフェイスを提供します。 デザイン時または実行時に、ユーザー コントロールを作成することができます。 デザイン時にユーザー コントロールを作成する場合は、Windows フォーム デザイナーを使用して、作業ウィンドウのユーザー インターフェイスを作成できます。  
@@ -77,11 +77,11 @@ ms.locfileid: "42635558"
   
  どのウィンドウが作業ウィンドウを表示するのかを決定するには、作業ウィンドウを作成するときに適切な <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> メソッド オーバーロードを使用します。  
   
--   作業ウィンドウをアクティブなウィンドウに関連付けるには、<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> メソッドを使用します。  
+- 作業ウィンドウをアクティブなウィンドウに関連付けるには、<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> メソッドを使用します。  
   
--   指定したウィンドウでホストされているドキュメントに作業ウィンドウを関連付けるには、<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> メソッドを使用します。  
+- 指定したウィンドウでホストされているドキュメントに作業ウィンドウを関連付けるには、<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> メソッドを使用します。  
   
- 一部の Office アプリケーションでは、複数のウィンドウが開いているときに作業ウィンドウを作成する、または表示するタイミングについて、明示的な命令が必要です。 その場合、作業ウィンドウがアプリケーションで確実に適切なドキュメントや項目に表示されるようにするために、カスタム作業ウィンドウをコードのどこでインスタンス化するかを検討することが重要になります。 詳細については、次を参照してください。[アプリケーション ウィンドウでカスタム作業ウィンドウを管理](#Managing)します。  
+  一部の Office アプリケーションでは、複数のウィンドウが開いているときに作業ウィンドウを作成する、または表示するタイミングについて、明示的な命令が必要です。 その場合、作業ウィンドウがアプリケーションで確実に適切なドキュメントや項目に表示されるようにするために、カスタム作業ウィンドウをコードのどこでインスタンス化するかを検討することが重要になります。 詳細については、次を参照してください。[アプリケーション ウィンドウでカスタム作業ウィンドウを管理](#Managing)します。  
   
 ## <a name="access-the-application-from-the-task-pane"></a>作業ウィンドウからアプリケーションへのアクセスします。  
  ユーザー コントロールからアプリケーションを自動化する場合、コード内の `Globals.ThisAddIn.Application` を使用して、オブジェクト モデルに直接アクセスできます。 静的な `Globals` クラスは、`ThisAddIn` オブジェクトへのアクセスを提供します。 このオブジェクトの `Application` フィールドは、アプリケーションのオブジェクト モデルへのエントリ ポイントです。  
@@ -136,11 +136,11 @@ ms.locfileid: "42635558"
   
  次のアプリケーション グループには別の開発要件があります。  
   
--   [Outlook](#Outlook)  
+- [Outlook](#Outlook)  
   
--   [Word、InfoPath、および PowerPoint](#WordAndInfoPath)  
+- [Word、InfoPath、および PowerPoint](#WordAndInfoPath)  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[方法: Word の VSTO アドインでの作業ウィンドウの操作を管理しますか?](http://go.microsoft.com/fwlink/?LinkId=136781)します。  
+  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[方法: Word の VSTO アドインでの作業ウィンドウの操作を管理しますか?](http://go.microsoft.com/fwlink/?LinkId=136781)します。  
   
 ##  <a name="Outlook"></a> Outlook  
  Outlook 用のカスタム作業ウィンドウを作成するときには、カスタム作業ウィンドウが特定のエクスプローラーまたはインスペクター ウィンドウに関連付けられます。 エクスプ ローラーは、フォルダーの内容を表示するウィンドウおよびインスペクターは電子メール メッセージやタスクなどの項目を表示するウィンドウ。  
@@ -149,23 +149,23 @@ ms.locfileid: "42635558"
   
  作業ウィンドウを特定のエクスプ ローラーまたはインスペクターに関連付けるを使用して、<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A>メソッドは、作業ウィンドウを作成して渡す、<xref:Microsoft.Office.Interop.Outlook.Explorer>または<xref:Microsoft.Office.Interop.Outlook.Inspector>オブジェクトを*ウィンドウ*パラメーター。 カスタム作業ウィンドウを作成する方法の詳細については、次を参照してください。[カスタム作業ウィンドウの概要](../vsto/custom-task-panes.md)します。  
   
--   <xref:Microsoft.Office.Interop.Outlook.ExplorersEvents_Event.NewExplorer>  
+- <xref:Microsoft.Office.Interop.Outlook.ExplorersEvents_Event.NewExplorer>  
   
--   <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Activate>  
+- <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Activate>  
   
--   <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Close>  
+- <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Close>  
   
--   <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Deactivate>  
+- <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Deactivate>  
   
- インスペクター ウィンドウの状態を監視するために、次のようなインスペクターに関連するイベントを処理できます。  
+  インスペクター ウィンドウの状態を監視するために、次のようなインスペクターに関連するイベントを処理できます。  
   
--   <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector>  
+- <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector>  
   
--   <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Activate>  
+- <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Activate>  
   
--   <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Close>  
+- <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Close>  
   
--   <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Deactivate>  
+- <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Deactivate>  
   
 ### <a name="prevent-multiple-instances-of-a-custom-task-pane-in-outlook"></a>Outlook のカスタム作業ウィンドウの複数のインスタンスを防ぐ  
  Outlook のウィンドウでカスタム作業ウィンドウの複数のインスタンスが表示されないようにするには、各ウィンドウが閉じられるときに `ThisAddIn` クラスの `CustomTaskPanes` コレクションからカスタム作業ウィンドウを明示的に削除します。 ウィンドウが閉じられるときに発生するイベント (<xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Close> や <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Close> など) で <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> メソッドを呼び出します。  

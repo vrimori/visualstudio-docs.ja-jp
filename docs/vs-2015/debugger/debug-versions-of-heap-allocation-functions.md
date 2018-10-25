@@ -30,12 +30,12 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d61d56800a69e0d651df6dd82043d0bb17f05e94
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7a6bf3976138f385f103c6d046e2b71133a8795d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49252786"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875003"
 ---
 # <a name="debug-versions-of-heap-allocation-functions"></a>デバッグ バージョンのヒープ割り当て関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,15 +46,15 @@ C ランタイム ライブラリには、デバッグ バージョンの特殊�
   
  しかし、明示的に `_malloc_dbg` を呼び出すこともできます。 明示的に `_malloc_dbg` を呼び出すと、さらに次の利点があります。  
   
--   `_CLIENT_BLOCK` 型の割り当てを追跡できます。  
+- `_CLIENT_BLOCK` 型の割り当てを追跡できます。  
   
--   割り当て要求が発生したソース ファイルと行番号を格納できます。  
+- 割り当て要求が発生したソース ファイルと行番号を格納できます。  
   
- 変換したくない場合、`malloc`呼び出し`_malloc_dbg`、定義することで、ソース ファイル情報を取得できます[_CRTDBG_MAP_ALLOC](http://msdn.microsoft.com/library/435242b8-caea-4063-b765-4a608200312b)、プリプロセッサに直接マップを停止すると、すべての呼び出しを`malloc`に`_malloc_dbg`のラッパーではなく`malloc`します。  
+  変換したくない場合、`malloc`呼び出し`_malloc_dbg`、定義することで、ソース ファイル情報を取得できます[_CRTDBG_MAP_ALLOC](http://msdn.microsoft.com/library/435242b8-caea-4063-b765-4a608200312b)、プリプロセッサに直接マップを停止すると、すべての呼び出しを`malloc`に`_malloc_dbg`のラッパーではなく`malloc`します。  
   
- クライアント ブロック内の個々の割り当て型を追跡するには、`_malloc_dbg` パラメーターを `blockType` に設定して、直接 `_CLIENT_BLOCK` を呼び出す必要があります。  
+  クライアント ブロック内の個々の割り当て型を追跡するには、`_malloc_dbg` パラメーターを `blockType` に設定して、直接 `_CLIENT_BLOCK` を呼び出す必要があります。  
   
- _DEBUG が定義されていないと呼び出しを`malloc`が影響を受けません、呼び出し`_malloc_dbg`に解決される`malloc`の定義[_CRTDBG_MAP_ALLOC](http://msdn.microsoft.com/library/435242b8-caea-4063-b765-4a608200312b)は無視され、ソース ファイルの情報に関連する、割り当て要求が指定されていません。 `malloc` にはブロック型を指定するパラメーターがないため、`_CLIENT_BLOCK` 型への割り当て要求は標準の割り当てとして扱われます。  
+  _DEBUG が定義されていないと呼び出しを`malloc`が影響を受けません、呼び出し`_malloc_dbg`に解決される`malloc`の定義[_CRTDBG_MAP_ALLOC](http://msdn.microsoft.com/library/435242b8-caea-4063-b765-4a608200312b)は無視され、ソース ファイルの情報に関連する、割り当て要求が指定されていません。 `malloc` にはブロック型を指定するパラメーターがないため、`_CLIENT_BLOCK` 型への割り当て要求は標準の割り当てとして扱われます。  
   
 ## <a name="see-also"></a>関連項目  
  [CRT のデバッグ技術](../debugger/crt-debugging-techniques.md)

@@ -1,5 +1,5 @@
 ---
-title: 未終了のコメント |Microsoft ドキュメント
+title: コメントがありません |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,11 +21,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 9fde5d5edd7e81060b088e4940d752aa05e65ded
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
-ms.locfileid: "24633702"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868106"
 ---
 # <a name="unterminated-comment"></a>未終了のコメントです。
 複数行のコメント ブロックを開始しましたが、正常に終了しませんでしたが。 複数行コメントが始まる、"/\*"逆で終わると組み合わせ、"\*/"の組み合わせ。 次に例を示します。  
@@ -37,7 +37,7 @@ This is another part of the same comment.*/
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   複数行コメントが終了することを確認する"*/"です。  
+-   複数行コメントが終了することを確認する"*/"。  
   
 ## <a name="see-also"></a>関連項目  
  [コメント ステートメント](../../javascript/reference/comment-statements-javascript.md)

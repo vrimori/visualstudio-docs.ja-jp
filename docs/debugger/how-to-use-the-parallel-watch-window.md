@@ -19,28 +19,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a142b512c5bbaf5d93dc0302aa39db92fb7c7ae
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: e9381479fdfa3d64f3504e947f49411b99d53e2d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38808075"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49857953"
 ---
 # <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio"></a>Visual Studio での並列スレッドの変数のウォッチ ポイントを設定します。
 [並列ウォッチ] ウィンドウには、複数のスレッドで 1 つの式が保持している値を同時に表示できます。 各行は、1 つのアプリケーションで実行中のスレッドを表しますが、スレッドは複数の行に表示される場合があります。 具体的には、各行は関数シグネチャが現在のスタック フレーム上の関数に一致する関数呼び出しを表します。 列内の項目の並べ替え、順序変更、削除、およびグループ化を行うことができます。 スレッドのフラグ設定、フラグ解除、凍結 (中断)、および凍結解除 (再開) を実行できます。 次の列が表示されます、**並列ウォッチ**ウィンドウ。  
   
--   フラグ列。特に注意する必要のあるスレッドをマークできます。  
+- フラグ列。特に注意する必要のあるスレッドをマークできます。  
   
--   スレッドの現在の列の黄色の矢印が、現在のスレッドを示します (巻いた尾の付いた緑色の矢印は、現在ではないスレッドの現在のデバッガーのコンテキストであることを示します)。  
+- スレッドの現在の列の黄色の矢印が、現在のスレッドを示します (巻いた尾の付いた緑色の矢印は、現在ではないスレッドの現在のデバッガーのコンテキストであることを示します)。  
   
--   構成可能な列。コンピューター、プロセス、タイル、タスク、スレッドを表示できます。  
+- 構成可能な列。コンピューター、プロセス、タイル、タスク、スレッドを表示できます。  
   
-    > [!TIP]
-    >  Dislay タスク情報を**並列ウォッチ**ウィンドウを開く必要があります最初、**タスク**ウィンドウ。  
+  > [!TIP]
+  >  Dislay タスク情報を**並列ウォッチ**ウィンドウを開く必要があります最初、**タスク**ウィンドウ。  
   
--   空白*ウォッチ式の追加*列、ウォッチする式を入力することができます。  
+- 空白*ウォッチ式の追加*列、ウォッチする式を入力することができます。  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
 ### <a name="to-display-the-parallel-watch-window"></a>[並列ウォッチ] ウィンドウを表示するには  
   

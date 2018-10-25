@@ -30,12 +30,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 168f89512dee8331448db1becabdc7262b5e4744
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: d390ba4cd47297c6d653cb68693439fd01c16815
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43774734"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853611"
 ---
 # <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-visual-studio-debugger"></a>呼び出し履歴を表示し、Visual Studio デバッガーで [呼び出し履歴] ウィンドウを使用
 
@@ -45,17 +45,17 @@ ms.locfileid: "43774734"
   
 `[Frames below may be incorrect and/or missing, no symbols loaded for name.dll]`
 
->  [!NOTE]
+> [!NOTE]
 > **呼び出し履歴**Eclipse などの一部の Ide ウィンドウはデバッグ パースペクティブに似ています。 
-
+> 
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ここで説明する内容と異なる場合があります。 設定を変更するには、次のように選択します。**インポートおよびエクスポート設定**上、**ツール**メニュー。  参照してください[IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)
   
 ## <a name="view-the-call-stack-while-in-the-debugger"></a>デバッガーで呼び出し履歴を表示します。 
   
--   デバッグ中に、**デバッグ**メニューの  **Windows > 呼び出し履歴**します。
+- デバッグ中に、**デバッグ**メニューの  **Windows > 呼び出し履歴**します。
 
- ![呼び出し履歴 ウィンドウ](../debugger/media/dbg_basics_callstack_window.png "CallStackWindow")
+  ![呼び出し履歴 ウィンドウ](../debugger/media/dbg_basics_callstack_window.png "CallStackWindow")
 
 黄色の矢印は、現在、実行ポインターが存在するスタック フレームを示します。 既定では、これは、ソース内の情報が表示されます、スタック フレーム**ローカル**、 **[自動変数]**、**ウォッチ**、および**逆アセンブル**windows. デバッガー コンテキストをスタック上の別のフレームに変更する場合は、行うことができますが[別のスタック フレームに切り替える](#bkmk_switch)します。   
   

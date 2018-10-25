@@ -17,12 +17,12 @@ caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4056a390bf2ed486df6391d48fd17c1d0af2cdad
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 9a3010e6304124ee306c5ecad3593df98d555523
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49194741"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921835"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>方法 : プロジェクトを構成して複数の対象プラットフォームを設定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -62,11 +62,11 @@ ms.locfileid: "49194741"
   
 #### <a name="to-build-multiple-solution-configurations-at-once"></a>一度に複数のソリューション構成をビルドするには  
   
-1.  **[構成マネージャー]** を使って、少なくとも 2 つの対象プラットフォームをソリューションに追加します。  
+1. **[構成マネージャー]** を使って、少なくとも 2 つの対象プラットフォームをソリューションに追加します。  
   
-2.  一度に複数のソリューション構成をビルドするには、**[バッチ ビルド]** ウィンドウを使います。  
+2. 一度に複数のソリューション構成をビルドするには、**[バッチ ビルド]** ウィンドウを使います。  
   
- ソリューション レベルのプラットフォームをたとえば [!INCLUDE[vcprx64](../includes/vcprx64-md.md)] に設定し、そのソリューション内のプロジェクトでは同じプラットフォームを対象としない、といったことができます。 また、ソリューション内の複数のプロジェクトで、それぞれ異なるプラットフォームを対象とすることもできます。 いずれかの状況の場合は、混乱を避けるためにわかりやすい名前で新しい構成を作成することをお勧めします。  
+   ソリューション レベルのプラットフォームをたとえば [!INCLUDE[vcprx64](../includes/vcprx64-md.md)] に設定し、そのソリューション内のプロジェクトでは同じプラットフォームを対象としない、といったことができます。 また、ソリューション内の複数のプロジェクトで、それぞれ異なるプラットフォームを対象とすることもできます。 いずれかの状況の場合は、混乱を避けるためにわかりやすい名前で新しい構成を作成することをお勧めします。  
   
 ## <a name="see-also"></a>関連項目  
  [方法 : 構成を作成および編集する](../ide/how-to-create-and-edit-configurations.md)   

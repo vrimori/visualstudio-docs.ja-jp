@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::GetDefaultIndexer |Microsoft ドキュメント
+title: IDebugClassField::GetDefaultIndexer |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3f16f4dc94a5019fa66425f55c8f7706db566db9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 75bb1bc0adb63a3c606b03cafc0b8a8c92d956df
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31101536"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934315"
 ---
 # <a name="idebugclassfieldgetdefaultindexer"></a>IDebugClassField::GetDefaultIndexer
 既定のインデクサーの名前を取得します。  
@@ -46,8 +46,8 @@ int GetDefaultIndexer(
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。 または、既定のインデクサーが存在しない場合は S_FALSE を返します。 それ以外の場合はエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- クラスの既定のインデクサー プロパティとしてマークされているは、`Default`配列へのアクセスのプロパティです。 これに固有[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]です。 宣言されている既定のインデクサーの使用例を次に示します[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]とその使用方法です。  
+## <a name="remarks"></a>Remarks  
+ クラスの既定のインデクサーはプロパティとしてマークされている、`Default`プロパティを配列にアクセスします。 これに固有[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]します。 宣言されている既定のインデクサーの例を次に示します[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]とその使用方法。  
   
 ```vb  
 Imports System.Collections;  

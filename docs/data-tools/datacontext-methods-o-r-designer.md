@@ -10,12 +10,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3d8e3a39c79b5dee339c8835c78143277f3015f6
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 95d84442b4aba74dbc44b7aacc97d0a965162150
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36756130"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924968"
 ---
 # <a name="datacontext-methods-or-designer"></a>DataContext メソッド (O/R デザイナー)
 
@@ -34,13 +34,13 @@ ms.locfileid: "36756130"
 
 DataContext メソッドは、データベース内のストアド プロシージャおよび関数にマップされるメソッドです。 作成してに DataContext メソッドを追加、**メソッド**のウィンドウ、 **O/R デザイナー**します。 2 種類の区別がある<xref:System.Data.Linq.DataContext>メソッドはそうでないものと 1 つまたは複数の結果セットを返すもの。
 
--   1 つ以上の結果セットを返す <xref:System.Data.Linq.DataContext> メソッド
+- 1 つ以上の結果セットを返す <xref:System.Data.Linq.DataContext> メソッド
 
-     この種類の <xref:System.Data.Linq.DataContext> メソッドは、アプリケーションでデータベース内のストアド プロシージャおよび関数を実行し、結果を返すことだけが必要な場合に作成します。 詳細については、次を参照してください。[方法: ストアド プロシージャおよび関数 (O/r デザイナー) にマップされる DataContext の作成メソッド](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)、System.Data.Linq.ISingleResult\<T >、および<xref:System.Data.Linq.IMultipleResults>します。
+   この種類の <xref:System.Data.Linq.DataContext> メソッドは、アプリケーションでデータベース内のストアド プロシージャおよび関数を実行し、結果を返すことだけが必要な場合に作成します。 詳細については、次を参照してください。[方法: ストアド プロシージャおよび関数 (O/r デザイナー) にマップされる DataContext の作成メソッド](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)、System.Data.Linq.ISingleResult\<T >、および<xref:System.Data.Linq.IMultipleResults>します。
 
--   結果セットを返さない <xref:System.Data.Linq.DataContext> メソッド (特定のエンティティ クラスの挿入、更新、削除など)
+- 結果セットを返さない <xref:System.Data.Linq.DataContext> メソッド (特定のエンティティ クラスの挿入、更新、削除など)
 
-     この種類の作成<xref:System.Data.Linq.DataContext>メソッド、アプリケーションがある既定値を使用する代わりにストアド プロシージャを実行する際に[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]保存の動作は、エンティティ クラスとデータベース間でデータを変更します。 詳細については、次を参照してください。[方法: 更新、挿入、および削除 (O/r デザイナー) を実行するストアド プロシージャを割り当てる](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)します。
+   この種類の作成<xref:System.Data.Linq.DataContext>メソッド、アプリケーションがある既定値を使用する代わりにストアド プロシージャを実行する際に[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]保存の動作は、エンティティ クラスとデータベース間でデータを変更します。 詳細については、次を参照してください。[方法: 更新、挿入、および削除 (O/r デザイナー) を実行するストアド プロシージャを割り当てる](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)します。
 
 ## <a name="return-types-of-datacontext-methods"></a>DataContext メソッドの戻り値の型
 
@@ -56,7 +56,7 @@ O/R デザイナー画面上にデータベースからドラッグしたオブ�
 - [Visual Studio での LINQ to SQL ツールします。](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [ストアド プロシージャ](/dotnet/framework/data/adonet/sql/linq/stored-procedures)
-- [方法: ストアド プロシージャおよび関数 (O/R デザイナー) にマップされる DataContext メソッドの作成](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)
-- [方法: 更新、挿入、および削除 (O/R デザイナー) を実行するストアド プロシージャを割り当てる](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)
+- [方法: ストアド プロシージャや関数にマップされる DataContext メソッドを作成する (O/R デザイナー)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)
+- [方法: 更新、挿入、および削除を実行するストアド プロシージャを割り当てる (O/R デザイナー)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)
 - [チュートリアル : エンティティ クラスの挿入、更新、および削除の動作のカスタマイズ](../data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes.md)
 - [チュートリアル: LINQ to SQL クラス (O/R デザイナー) を作成します。](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)

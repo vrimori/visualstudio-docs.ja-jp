@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ec3fff82fcdc8db8328d1129a860495d081be2e
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 7c4dc7cb560e6ae652474d16e003eafb352643ea
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44282813"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951068"
 ---
 # <a name="debugging-preparation-windows-forms-applications"></a>デバッグの準備 : Windows フォーム アプリケーション
 Windows フォーム プロジェクト テンプレートは、Windows フォーム アプリケーションを作成します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、この種類のアプリケーションを簡単にデバッグできます。 詳細については、次を参照してください。 [Windows アプリケーション プロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))します。  
@@ -47,23 +47,23 @@ Windows フォーム プロジェクト テンプレートは、Windows フォ�
   
 ### <a name="to-debug-a-c-f-or-visual-basic-windows-forms-application"></a>C#、F#、または Visual Basic の Windows フォーム アプリケーションをデバッグするには  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でプロジェクトを開きます。  
+1. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でプロジェクトを開きます。  
   
-2.  必要に応じて、ブレークポイントを作成します。  
+2. 必要に応じて、ブレークポイントを作成します。  
   
-     Windows フォーム アプリケーションはイベント ドリブンであるため、ブレークポイントはイベント ハンドラー コード内またはイベント ハンドラー コードによって呼び出されるメソッド内に設定します。 ブレークポイントが配置される一般的なイベントは次のとおりです。  
+    Windows フォーム アプリケーションはイベント ドリブンであるため、ブレークポイントはイベント ハンドラー コード内またはイベント ハンドラー コードによって呼び出されるメソッド内に設定します。 ブレークポイントが配置される一般的なイベントは次のとおりです。  
   
-    1.  Click、Enter などのコントロールに関連付けられたイベント。  
+   1. Click、Enter などのコントロールに関連付けられたイベント。  
   
-    2.  Load、Activated など、アプリケーションの起動またはシャットダウンに関連付けられたイベント。  
+   2. Load、Activated など、アプリケーションの起動またはシャットダウンに関連付けられたイベント。  
   
-    3.  フォーカス イベントと検証イベント。  
+   3. フォーカス イベントと検証イベント。  
   
-     詳細については、「[Windows フォーム内でのイベント ハンドラーの作成](/dotnet/framework/winforms/creating-event-handlers-in-windows-forms)」を参照してください。  
+      詳細については、「[Windows フォーム内でのイベント ハンドラーの作成](/dotnet/framework/winforms/creating-event-handlers-in-windows-forms)」を参照してください。  
   
-3.  **デバッグ** メニューのをクリックして**開始**します。  
+3. **デバッグ** メニューのをクリックして**開始**します。  
   
-4.  説明した手法を使用してデバッグ[デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)します。  
+4. 説明した手法を使用してデバッグ[デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   

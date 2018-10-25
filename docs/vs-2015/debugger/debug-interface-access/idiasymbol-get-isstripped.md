@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3c8069a0d8e4cee8e56c4e103fee9709684b6877
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: c927a3213816c9f452b5c64796b2baaa6563f4ea
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49269822"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847722"
 ---
 # <a name="idiasymbolgetisstripped"></a>IDiaSymbol::get_isStripped
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -51,7 +51,7 @@ HRESULT get_isStripped(
 ## <a name="remarks"></a>Remarks  
  このプロパティは、`SymTagExe`記号の型 (を参照してください[Exe](../../debugger/debug-interface-access/exe.md))。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

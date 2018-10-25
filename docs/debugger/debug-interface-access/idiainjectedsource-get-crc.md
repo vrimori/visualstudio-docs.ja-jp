@@ -1,5 +1,5 @@
 ---
-title: Idiainjectedsource::get_crc |Microsoft ドキュメント
+title: Idiainjectedsource::get_crc |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aa3aba392769465b03aecafc7e135a15e748879e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f99c48af26f2b40969ec818743ec8f4d220f8404
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31467168"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900619"
 ---
 # <a name="idiainjectedsourcegetcrc"></a>IDiaInjectedSource::get_crc
 ソース コードのバイト数から計算された巡回冗長検査 (CRC) を取得します。  
@@ -34,10 +34,10 @@ HRESULT get_crc (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ソース コードのバイト数から計算された CRC を返します。  
+ [out]返します、CRC は、ソース コードのバイト数から計算されます。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

@@ -15,12 +15,12 @@ ms.assetid: daa2df22-9181-4bad-b007-a7d40302bce1
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 950e7606292487f10ee6e901e82abaa3c6f92a08
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5c075d375e70a33d89e56dc9691b3f7af3ef4473
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49195730"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862986"
 ---
 # <a name="providing-a-language-service-context-by-using-the-legacy-api"></a>レガシ API を使用して、言語サービスのコンテキストを提供します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,20 +39,20 @@ ms.locfileid: "49195730"
   
  実装する 2 つの方法がある`IVsLanguageContextProvider`:  
   
--   コンテキスト バッグにするキーワードします。  
+- コンテキスト バッグにするキーワードします。  
   
-     コンテキスト バッグを更新する、エディターが呼び出されると、適切なキーワードと属性を渡すし、戻ります`S_OK`します。 この戻り値には、エディター コンテキスト バッグにカーソルをキーワードを指定するのではなく、キーワードと属性のコンテキストを保持するように指示します。  
+   コンテキスト バッグを更新する、エディターが呼び出されると、適切なキーワードと属性を渡すし、戻ります`S_OK`します。 この戻り値には、エディター コンテキスト バッグにカーソルをキーワードを指定するのではなく、キーワードと属性のコンテキストを保持するように指示します。  
   
--   カーソル位置にキーワードからキーワードを取得します。  
+- カーソル位置にキーワードからキーワードを取得します。  
   
-     コンテキスト バッグを更新する、エディターが呼び出されると、適切な属性を渡すし、戻ります`E_FAIL`します。 この戻り値には、エディター、コンテキスト バッグに、属性を保持がカーソル位置にキーワードを使用して、コンテキスト バッグを更新するように指示します。  
+   コンテキスト バッグを更新する、エディターが呼び出されると、適切な属性を渡すし、戻ります`E_FAIL`します。 この戻り値には、エディター、コンテキスト バッグに、属性を保持がカーソル位置にキーワードを使用して、コンテキスト バッグを更新するように指示します。  
   
- 次の図は、実装する言語サービスのコンテキストを提供する方法を示します`IVsLanguageContextProvider`します。  
+  次の図は、実装する言語サービスのコンテキストを提供する方法を示します`IVsLanguageContextProvider`します。  
   
- ![LangServiceImplementation2 グラフィック](../extensibility/media/vslanguageservice2.gif "vsLanguageService2")  
-言語サービスのコンテキスト  
+  ![LangServiceImplementation2 グラフィック](../extensibility/media/vslanguageservice2.gif "vsLanguageService2")  
+  言語サービスのコンテキスト  
   
- 図では、ご覧のとおり、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]テキストのコア エディターがコンテキスト バッグがアタッチされています。 このコンテキスト バッグが 3 つの個別のサブコンテキスト バッグを指す: 言語サービスの既定のエディターやテキスト マーカー。 言語サービスとテキスト マーカーのサブコンテキスト バッグを含む属性とキーワード、言語サービスの場合、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>インターフェイスを実装すると、およびテキスト マーカー場合、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider>インターフェイスを実装します。 これらのインターフェイスのいずれかを実装しない場合、エディターは、キーワードの既定のエディターのサブコンテキスト バッグ内のカーソル位置のコンテキストを提供します。  
+  図では、ご覧のとおり、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]テキストのコア エディターがコンテキスト バッグがアタッチされています。 このコンテキスト バッグが 3 つの個別のサブコンテキスト バッグを指す: 言語サービスの既定のエディターやテキスト マーカー。 言語サービスとテキスト マーカーのサブコンテキスト バッグを含む属性とキーワード、言語サービスの場合、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>インターフェイスを実装すると、およびテキスト マーカー場合、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider>インターフェイスを実装します。 これらのインターフェイスのいずれかを実装しない場合、エディターは、キーワードの既定のエディターのサブコンテキスト バッグ内のカーソル位置のコンテキストを提供します。  
   
 ## <a name="context-guidelines-for-editors-and-designers"></a>エディターとデザイナーのコンテキストのガイドライン  
  デザイナーおよびエディターには、エディターまたはデザイナー ウィンドウの一般的なキーワードを指定する必要があります。 これは、ユーザーが f1 キーを押したときに、デザイナーまたはエディターのジェネリックでは、適切なヘルプ トピックが表示されるように実行されます。 エディター、する必要があります。 さらに、カーソル位置の現在のキーワードを指定または現在の選択に基づく、重要な用語を指定します。 これは、ユーザーが f1 キーを押したときに表示を選択したテキストまたは UI 要素のヘルプ トピックを指していることを確認します。 デザイナーでは、フォーム上のボタンなどのデザイナーで選択した項目のコンテキストを提供します。 エディターとデザイナーする必要がありますもサービスに接続する言語」の説明に従って[レガシ言語サービスの基本情報](../extensibility/internals/legacy-language-service-essentials.md)します。

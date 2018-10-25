@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: da8ff01bed6446cc497c41ad21894c70df090efb
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 53bddbda7ed89a0d826e135d7989c1b8a01ce594
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380832"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915244"
 ---
 # <a name="use-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing"></a>shim を使用して単体テストでアプリケーションを他のアセンブリから分離する
 
@@ -435,7 +435,6 @@ public class ShimMyClass : ShimBase<MyClass> {
 var shim = new ShimMyClass();
 //return default(T) or do nothing
 shim.InstanceBehavior = ShimsBehaviors.DefaultValue;
-
 ```
 
 静的 `ShimsBehaviors.Current` プロパティを設定することによって `InstanceBehavior` プロパティが明示的に設定されていない、shim が適用されているすべてのインスタンスの動作を、グローバルに変更することもできます。
@@ -460,9 +459,9 @@ ShimMyClass.Behavior = ShimsBehaviors.NotImplemented;
 ShimMyClass.BehaveAsNotImplemented();
 ```
 
-##  <a name="BKMK_Concurrency"></a> 同時実行
+##  <a name="BKMK_Concurrency"></a> コンカレンシー
 
-shim 型は、AppDomain のすべてのスレッドに適用され、スレッド アフィニティを持ちません。 同時実行をサポートしているテスト ランナーを使用する予定の場合、これは重要な事実です。shim 型を含む複数のテストを同時に実行することはできません。 このプロパティが Fakes ランタイムによって強制されることはありません。
+shim 型は、AppDomain のすべてのスレッドに適用され、スレッド アフィニティを持ちません。 コンカレンシーをサポートしているテスト ランナーを使用する予定の場合、これは重要な事実です。shim 型を含む複数のテストをコンカレンシーすることはできません。 このプロパティが Fakes ランタイムによって強制されることはありません。
 
 ##  <a name="call-the-original-method-from-the-shim-method"></a>shim メソッドからの元のメソッドの呼び出し
 

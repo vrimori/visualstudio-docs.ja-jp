@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 6dd0f709e53a3595437bc432a1d1db9a4d6d5c79
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 9858768da0096c98ffb3014f0a52936adbf39019
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39379515"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49931117"
 ---
 # <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>方法: XML リテラルに XML スキーマ デザイナーを使用
 
@@ -43,35 +43,35 @@ ms.locfileid: "39379515"
 
 ## <a name="to-add-visual-basic-code-with-an-xml-literal-based-on-the-xsd-file-included-in-the-project"></a>プロジェクトに含まれる XSD ファイルに基づいて XML リテラルの Visual Basic コードを追加するには
 
-1.  コードに置き換えます*Module1.vb*を次のコード ファイル。
+1. コードに置き換えます*Module1.vb*を次のコード ファイル。
 
    ```vb
    Imports <xmlns:ns="http://tempuri.org/PurchaseOrderSchema.xsd">
 
    Module Module1
-       Sub Main()
+      Sub Main()
 
-           Dim XMLLiteral = <ns:PurchaseOrder OrderDate="1900-01-01">
-                                <ns:ShipTo country="US">
-                                    <ns:name>name1</ns:name>
-                                    <ns:street>street1</ns:street>
-                                    <ns:city>city1</ns:city>
-                                    <ns:state>state1</ns:state>
-                                    <ns:zip>1</ns:zip>
-                                </ns:ShipTo>
-                                <ns:BillTo country="US">
-                                    <ns:name>name1</ns:name>
-                                    <ns:street>street1</ns:street>
-                                    <ns:city>city1</ns:city>
-                                    <ns:state>state1</ns:state>
-                                    <ns:zip>1</ns:zip>
-                                </ns:BillTo>
-                            </ns:PurchaseOrder>
+          Dim XMLLiteral = <ns:PurchaseOrder OrderDate="1900-01-01">
+                               <ns:ShipTo country="US">
+                                   <ns:name>name1</ns:name>
+                                   <ns:street>street1</ns:street>
+                                   <ns:city>city1</ns:city>
+                                   <ns:state>state1</ns:state>
+                                   <ns:zip>1</ns:zip>
+                               </ns:ShipTo>
+                               <ns:BillTo country="US">
+                                   <ns:name>name1</ns:name>
+                                   <ns:street>street1</ns:street>
+                                   <ns:city>city1</ns:city>
+                                   <ns:state>state1</ns:state>
+                                   <ns:zip>1</ns:zip>
+                               </ns:BillTo>
+                           </ns:PurchaseOrder>
 
-       End Sub
+      End Sub
    End Module
    ```
 
-2.  XML リテラルまたは XML 名前空間インポートでの任意の XML ノードを右クリックして**スキーマ エクスプ ローラーで表示する**します。
+2. XML リテラルまたは XML 名前空間インポートでの任意の XML ノードを右クリックして**スキーマ エクスプ ローラーで表示する**します。
 
-     **XML スキーマ エクスプ ローラー**が XML スキーマのセットに関連付けられた XML リテラルのある Visual Basic ファイルと並んで表示されます。
+    **XML スキーマ エクスプ ローラー**が XML スキーマのセットに関連付けられた XML リテラルのある Visual Basic ファイルと並んで表示されます。

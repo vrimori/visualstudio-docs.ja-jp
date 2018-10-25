@@ -16,12 +16,12 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1669a13b047236044e5f7c65c2d27e187096b62b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 140dea9d65260a4ea5140e09df5876a59e64b2de
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49267463"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49938605"
 ---
 # <a name="graphics-pipeline-stages"></a>グラフィックス パイプライン ステージ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "49267463"
 ### <a name="links-to-related-graphics-objects"></a>関連するグラフィックス オブジェクトへのリンク  
  場合によっては、描画呼び出しが特定の方法でグラフィックス パイプラインと対話する理由を判断するために、追加のコンテキストが必要になります。 この追加のコンテキストを容易に見つけられるようにするために、[グラフィックス パイプライン ステージ] ウィンドウは、グラフィックス パイプラインで起こっていることに関連する追加のコンテキストを提供する、1 つ以上のオブジェクトにリンクします。  
   
--   Direct3D 12 では、このオブジェクトは通常、コマンドの一覧です。  
+- Direct3D 12 では、このオブジェクトは通常、コマンドの一覧です。  
   
--   Direct3D 11 では、このオブジェクトは通常、グラフィックス デバイス コンテキストです。  
+- Direct3D 11 では、このオブジェクトは通常、グラフィックス デバイス コンテキストです。  
   
- これらのリンクは、[グラフィックス パイプライン ステージ] ウィンドウの左上隅にある現在のグラフィックス イベントのシグネチャの一部です。 オブジェクトに関する追加の詳細について調べるには、これらのリンク先を表示します。  
+  これらのリンクは、[グラフィックス パイプライン ステージ] ウィンドウの左上隅にある現在のグラフィックス イベントのシグネチャの一部です。 オブジェクトに関する追加の詳細について調べるには、これらのリンク先を表示します。  
   
 ### <a name="viewing-and-debugging-shader-code"></a>シェーダー コードの表示およびデバッグ  
  [パイプライン ステージ] ウィンドウのそれぞれのステージの下部にあるコントロールを使用して、頂点シェーダー、ハル シェーダー、ドメイン シェーダー、ジオメトリ シェーダー、およびピクセル シェーダーのコードを検証してデバッグできます。  

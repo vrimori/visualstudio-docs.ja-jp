@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 75c6d92ae1cb5b71535d7f9aa4c9f2731f81e6ce
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: eb6e511fa899680338831f3bc8e2a411f2126006
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39640005"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861164"
 ---
 # <a name="how-to-implement-error-markers"></a>方法: エラーのマーカーの実装
 エラーのマーカー (または赤色の波下線) は、テキスト エディターのカスタマイズを実装するが最も難しいです。 ただし、VSPackage のユーザーに提供する利点は、提供するコストを上回るまでことができます。 エラーのマーカーは、微妙、言語のパーサーが波線または波状の赤い線で正しくないと判断されるテキストをマークします。 このインジケーターには、不適切なコードを視覚的に表示することでプログラマが役立ちます。  
@@ -27,23 +27,23 @@ ms.locfileid: "39640005"
   
 ## <a name="to-implement-the-red-wavy-underline-feature"></a>赤い波線の機能を実装するには  
   
-1.  赤い波線を配置するテキストを選択します。  
+1. 赤い波線を配置するテキストを選択します。  
   
-2.  型のマーカーを作成`MARKER_CODESENSE_ERROR`です。 詳細については、次を参照してください。[方法: 標準のテキスト マーカーを追加](../extensibility/how-to-add-standard-text-markers.md)します。  
+2. 型のマーカーを作成`MARKER_CODESENSE_ERROR`です。 詳細については、次を参照してください。[方法: 標準のテキスト マーカーを追加](../extensibility/how-to-add-standard-text-markers.md)します。  
   
-3.  その後、渡す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>インターフェイス ポインター。  
+3. その後、渡す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>インターフェイス ポインター。  
   
- このプロセスでは、特定のマーカーにツールヒントのテキストまたは特別なコンテキスト メニューを作成することもできます。 詳細については、次を参照してください。[方法: 標準のテキスト マーカーを追加](../extensibility/how-to-add-standard-text-markers.md)します。  
+   このプロセスでは、特定のマーカーにツールヒントのテキストまたは特別なコンテキスト メニューを作成することもできます。 詳細については、次を参照してください。[方法: 標準のテキスト マーカーを追加](../extensibility/how-to-add-standard-text-markers.md)します。  
   
- エラーのマーカーを表示する前に、次のオブジェクトが必要です。  
+   エラーのマーカーを表示する前に、次のオブジェクトが必要です。  
   
--   パーサーです。  
+- パーサーです。  
   
--   タスク プロバイダー (の実装は、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskProvider2>) 再解析する行を識別するために行情報の変更の記録を保持します。  
+- タスク プロバイダー (の実装は、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskProvider2>) 再解析する行を識別するために行情報の変更の記録を保持します。  
   
--   カレットをキャプチャするテキスト ビューのフィルターを使用して、ビューからイベントを変更する、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEvents.OnChangeCaretLine%2A>) メソッドです。  
+- カレットをキャプチャするテキスト ビューのフィルターを使用して、ビューからイベントを変更する、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEvents.OnChangeCaretLine%2A>) メソッドです。  
   
- パーサー、タスク プロバイダー、およびフィルターは、エラー マーカーを可能にするために必要なインフラストラクチャを提供します。 次の手順では、エラー マーカーを表示するため、プロセスを提供します。  
+  パーサー、タスク プロバイダー、およびフィルターは、エラー マーカーを可能にするために必要なインフラストラクチャを提供します。 次の手順では、エラー マーカーを表示するため、プロセスを提供します。  
   
 1.  フィルター選択されるビューでは、フィルターは、そのビューのデータに関連付けられているタスク プロバイダーへのポインターを取得します。  
   

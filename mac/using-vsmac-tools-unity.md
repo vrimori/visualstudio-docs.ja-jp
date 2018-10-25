@@ -5,12 +5,12 @@ author: dantogno
 ms.author: v-davian
 ms.date: 07/17/2017
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: cd368c6b6bfd8d38817ef1b7014e9f1c91cac2ab
-ms.sourcegitcommit: 522ba712c0d625e51352506146b0556414681964
+ms.openlocfilehash: f91651d72cff067bcc0e679fa66f250a8a1a55d0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37889945"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898825"
 ---
 # <a name="using-visual-studio-for-mac-tools-for-unity"></a>Visual Studio for Mac Tools for Unity を使用する
 
@@ -33,31 +33,31 @@ Unity エンジンは MonoBehaviour スクリプトにメッセージをブロ�
 
 ただし、Visual Studio for Mac Tools for Unity では、Unity メッセージ対応に IntelliSense 機能が拡張されています。 これにより、MonoBehaviour スクリプトに Unity メッセージを簡単に実装でき、Unity API の学習に役立ちます。 Unity メッセージ用の IntelliSense を使うには:
 
-1.  MonoBehaviour から派生するクラスの本体内部の新しい行にカーソルを置きます。
+1. MonoBehaviour から派生するクラスの本体内部の新しい行にカーソルを置きます。
 
-2.  Unity メッセージの名前 (`OnTriggerEnter` など) の入力を始めます。
+2. Unity メッセージの名前 (`OnTriggerEnter` など) の入力を始めます。
 
-3.  「**ont**」まで入力すると、intellisense による候補の一覧が表示されます。
+3. 「**ont**」まで入力すると、intellisense による候補の一覧が表示されます。
 
-  ![Using IntelliSense](media/using-vsmac-tools-unity-image2.png)
+   ![Using IntelliSense](media/using-vsmac-tools-unity-image2.png)
 
-4.  一覧での選択は、次の 3 つの方法で変更できます。
+4. 一覧での選択は、次の 3 つの方法で変更できます。
 
-    * **上**および**下**方向キーを使います。
+   * **上**および**下**方向キーを使います。
 
-    * 目的の項目をマウスでクリックします。
+   * 目的の項目をマウスでクリックします。
 
-    * 目的の項目の名前の入力を続けます。
+   * 目的の項目の名前の入力を続けます。
 
-5.  IntelliSense で選んだ Unity メッセージと必要なパラメーターを挿入するには、次のようにします。
+5. IntelliSense で選んだ Unity メッセージと必要なパラメーターを挿入するには、次のようにします。
 
-    * **Tab** キーを押します。
+   * **Tab** キーを押します。
 
-    * **Return** キーを押します。
+   * **Return** キーを押します。
 
-    * 選んだ項目をダブルクリックします。
+   * 選んだ項目をダブルクリックします。
 
-  ![IntelliSense から Unity メッセージを挿入する](media/using-vsmac-tools-unity-image3.png)
+   ![IntelliSense から Unity メッセージを挿入する](media/using-vsmac-tools-unity-image3.png)
 
 ## <a name="adding-new-unity-files-and-folders"></a>Unity の新しいファイルおよびフォルダーを追加する
 
@@ -93,22 +93,22 @@ Unity プロジェクトは Visual Studio for Mac でデバッグすることが
 
 デバッグを開始するには:
 
-1.  **[再生]** ボタンをクリックするか、**Command + Return** キーまたは **F5** キーを押して、Visual Studio を Unity に接続します。
+1. **[再生]** ボタンをクリックするか、**Command + Return** キーまたは **F5** キーを押して、Visual Studio を Unity に接続します。
 
-  ![Visual Studio で [再生] をクリックする](media/using-vsmac-tools-unity-image5.png)
+   ![Visual Studio で [再生] をクリックする](media/using-vsmac-tools-unity-image5.png)
 
-2.  Unity に切り替えた後、**[Play]\(再生\)** ボタンをクリックしてエディターでゲームを実行します。
+2. Unity に切り替えた後、**[Play]\(再生\)** ボタンをクリックしてエディターでゲームを実行します。
 
-  ![Unity で [Play]\(再生\) をクリックする](media/using-vsmac-tools-unity-image6.png)
+   ![Unity で [Play]\(再生\) をクリックする](media/using-vsmac-tools-unity-image6.png)
 
-3.  Visual Studio に接続しながら Unity エディターでゲームを実行しているときに、ブレークポイントに達すると、ゲームの実行は一時停止し、ゲームがブレークポイントにヒットしたコード行が Visual Studio for Mac に表示されます。
+3. Visual Studio に接続しながら Unity エディターでゲームを実行しているときに、ブレークポイントに達すると、ゲームの実行は一時停止し、ゲームがブレークポイントにヒットしたコード行が Visual Studio for Mac に表示されます。
 
 ### <a name="stop-debugging"></a>デバッグの停止
 
 デバッグを停止するには:
 
-1.  Visual Studio for Mac で **[停止]** ボタンをクリックするか、**Shift + Command + Return** キーを押します。
+1. Visual Studio for Mac で **[停止]** ボタンをクリックするか、**Shift + Command + Return** キーを押します。
 
-  ![Visual Studio で [停止] をクリックする](media/using-vsmac-tools-unity-image7.png)
+   ![Visual Studio で [停止] をクリックする](media/using-vsmac-tools-unity-image7.png)
 
 Visual Studio for Mac でのデバッグについて詳しくは、「[Using the debugger](https://docs.microsoft.com/visualstudio/mac/debugging)」(デバッガーの使用) をご覧ください。

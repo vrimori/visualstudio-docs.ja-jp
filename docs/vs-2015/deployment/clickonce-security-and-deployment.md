@@ -23,12 +23,12 @@ caps.latest.revision: 34
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 9c9a59d8b1d24ee854a4ff7e3f462f7db9062763
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 50654574dea18df98f8f4ecef8d606cccec93f14
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49232103"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898175"
 ---
 # <a name="clickonce-security-and-deployment"></a>ClickOnce のセキュリティと配置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "49232103"
   
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 展開は、展開における 3 つの主な問題を克服します。  
   
--   **アプリケーションの更新中における問題。** Microsoft Windows インストーラーの展開でアプリケーションが更新されるたびにユーザーが msp ファイルでは、更新プログラムをインストールしてインストールされた製品に適用します。[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開、更新プログラムを自動的に提供することができます。 アプリケーションの変更された部分のみがダウンロードされ、更新されたアプリケーションの全体はサイド バイ サイドの新しいフォルダーから再インストールされます。  
+- **アプリケーションの更新中における問題。** Microsoft Windows インストーラーの展開でアプリケーションが更新されるたびにユーザーが msp ファイルでは、更新プログラムをインストールしてインストールされた製品に適用します。[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開、更新プログラムを自動的に提供することができます。 アプリケーションの変更された部分のみがダウンロードされ、更新されたアプリケーションの全体はサイド バイ サイドの新しいフォルダーから再インストールされます。  
   
--   **ユーザーのコンピューターに及ぼす影響。** Windows インストーラーの展開、多くの場合、アプリケーションはバージョン管理の競合が発生する可能性を伴うの共有コンポーネントに依存しています。[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開、各アプリケーションは自己完結型、およびその他のアプリケーションに干渉することはできません。  
+- **ユーザーのコンピューターに及ぼす影響。** Windows インストーラーの展開、多くの場合、アプリケーションはバージョン管理の競合が発生する可能性を伴うの共有コンポーネントに依存しています。[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開、各アプリケーションは自己完結型、およびその他のアプリケーションに干渉することはできません。  
   
--   **セキュリティ アクセス許可。** Windows インストーラーの展開は、管理者権限を必要とし、限られたユーザーにのみインストールが制限されます。[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開は管理者権限をもたないユーザーにもインストールを可能とさせ、アプリケーションに必要なコード アクセス セキュリティのアクセス許可のみを付与します。  
+- **セキュリティ アクセス許可。** Windows インストーラーの展開は、管理者権限を必要とし、限られたユーザーにのみインストールが制限されます。[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開は管理者権限をもたないユーザーにもインストールを可能とさせ、アプリケーションに必要なコード アクセス セキュリティのアクセス許可のみを付与します。  
   
- 以前は、これらの問題が原因で、開発者のインストールの容易にするための豊富なユーザー インターフェイスを犠牲にして、Windows ベースのアプリケーションでの代わりに Web アプリケーションを作成することもありました。 使用してデプロイされたアプリケーションを使用して[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]、両方のテクノロジの長所があることができます。  
+  以前は、これらの問題が原因で、開発者のインストールの容易にするための豊富なユーザー インターフェイスを犠牲にして、Windows ベースのアプリケーションでの代わりに Web アプリケーションを作成することもありました。 使用してデプロイされたアプリケーションを使用して[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]、両方のテクノロジの長所があることができます。  
   
 ## <a name="what-is-a-clickonce-application"></a>ClickOnce アプリケーションとは何ですか。  
  A[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションには、Windows Presentation Foundation (.xbap)、Windows フォーム (.exe)、コンソール アプリケーション (.exe)、または Office ソリューション (.dll) を使用してパブリッシュ[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]テクノロジ。 発行することができます、 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 3 つの異なる方法でアプリケーション: Web ページから、ネットワーク ファイル共有の場合、または CD-ROM などのメディアから。 A[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションをエンドユーザーのコンピューターにインストールされているし、コンピューターがオフライン、またはエンドユーザーのコンピューターにインストールせず、オンライン専用モードで実行できる場合でもローカルで実行できます。 詳細については、「[ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)」を参照してください。  

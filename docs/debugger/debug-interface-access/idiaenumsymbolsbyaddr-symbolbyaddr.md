@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbolsbyaddr::symbolbyaddr |Microsoft ドキュメント
+title: Idiaenumsymbolsbyaddr::symbolbyaddr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 159c6fcc65734255f5303ee267a1368078f7af10
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d15901ac321a1a5d60db6e989b24c314bcd211b5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31460711"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844823"
 ---
 # <a name="idiaenumsymbolsbyaddrsymbolbyaddr"></a>IDiaEnumSymbolsByAddr::symbolByAddr
-イメージ セクション番号およびオフセットにより検索を実行して、列挙子を配置します。  
+イメージ セクションの数とオフセットの参照を実行し、列挙子を配置します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +36,7 @@ HRESULT symbolByAddr (
   
 #### <a name="parameters"></a>パラメーター  
  isect  
- [in]イメージ セクション番号です。  
+ [in]イメージ セクションの数。  
   
  offsect  
  [in]セクション内のオフセットします。  
@@ -45,7 +45,7 @@ HRESULT symbolByAddr (
  [out]返します、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)シンボルを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 返します`S_FALSE`場合は、シンボルが見つかりませんでした。 それ以外の場合はエラー コードを返します。  
+ 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合は、シンボルが見つかりませんでした。 それ以外の場合はエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   

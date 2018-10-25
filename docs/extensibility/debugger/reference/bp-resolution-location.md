@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_LOCATION |Microsoft ドキュメント
+title: BP_RESOLUTION_LOCATION |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 032228596773d4a5a164f904c1caae161b693f64
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0dda42a65824b8fdb93ec8561f3affb59ee5d166
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31106540"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926125"
 ---
 # <a name="bpresolutionlocation"></a>BP_RESOLUTION_LOCATION
-ブレークポイントの解像度の場所の構造を指定します。  
+ブレークポイント解像度の位置の構造を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,30 +53,30 @@ public struct BP_RESOLUTION_LOCATION {
  値、 [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)を解釈する方法を指定する列挙体、 `bpResLocation` union または`unionmemberX`メンバー。  
   
  `bpResLocation.bpresCode`  
- [C++ のみ]含まれています、 [BP_RESOLUTION_CODE](../../../extensibility/debugger/reference/bp-resolution-code.md)場合構造体`bpType`  = `BPT_CODE`です。  
+ [C++ のみ]含まれています、 [BP_RESOLUTION_CODE](../../../extensibility/debugger/reference/bp-resolution-code.md)場合構造体`bpType`  = `BPT_CODE`します。  
   
  `bpResLocation.bpresData`  
- [C++ のみ]含まれています、 [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md)場合構造体`bpType`  = `BPT_DATA`です。  
+ [C++ のみ]含まれています、 [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md)場合構造体`bpType`  = `BPT_DATA`します。  
   
  `bpResLocation.unused`  
  [C++ のみ]プレース ホルダー。  
   
  `unionmember1`  
- [C# の場合のみ]解釈する方法については、「解説」を参照してください。  
+ [C# のみ]解釈する方法については、「解説」を参照してください。  
   
  `unionmember2`  
- [C# の場合のみ]解釈する方法については、「解説」を参照してください。  
+ [C# のみ]解釈する方法については、「解説」を参照してください。  
   
  `unionmember3`  
- [C# の場合のみ]解釈する方法については、「解説」を参照してください。  
+ [C# のみ]解釈する方法については、「解説」を参照してください。  
   
  `unionmember4`  
- [C# の場合のみ]解釈する方法については、「解説」を参照してください。  
+ [C# のみ]解釈する方法については、「解説」を参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この構造体のメンバーである、 [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)と[BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)構造体。  
   
- [C# の場合のみ]`unionmemberX`メンバーは、次の表に従って解釈されます。 左の列を確認、`bpType`間でそれぞれを決定する値、`unionmemberX`マーシャ リングおよびメンバーを表します、`unionmemberX`それに従っています。 C# の場合、この構造体を解釈する方法の例を参照してください。  
+ [C# のみ]`unionmemberX`メンバーは、次の表に従って解釈されます。 左の列を確認、`bpType`間で各を決定する値、`unionmemberX`マーシャ リングおよびメンバーを表します、`unionmemberX`それに応じて。 C# では、この構造を解釈する方法の例を参照してください。  
   
 |`bpLocationType`|`unionmember1`|`unionmember2`|`unionmember3`|`unionmember4`|  
 |----------------------|--------------------|--------------------|--------------------|--------------------|  
@@ -84,7 +84,7 @@ public struct BP_RESOLUTION_LOCATION {
 |`BPT_DATA`|`string` (データ式)|`string` (関数名)|`string` (イメージ名)|`enum_BP_RES_DATA_FLAGS`|  
   
 ## <a name="example"></a>例  
- この例を解釈する方法を示しています、 `BP_RESOLUTION_LOCATION` c# の構造体。  
+ この例では、解釈、`BP_RESOLUTION_LOCATION`構造 (C#)。  
   
 ```csharp  
 using System;  
@@ -113,7 +113,7 @@ namespace MyPackage
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

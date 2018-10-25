@@ -12,43 +12,43 @@ caps.latest.revision: 9
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 34568cc24253eb2c0288fd7ba4311b5f33964df0
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 1e3a8cdd6d8551a4ea399a2ef387d383acca136c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49205069"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873670"
 ---
 # <a name="run-unit-tests-on-uml-extensions"></a>単体テストを UML 拡張機能で実行する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 変更が続いてもコードを安定した状態に保つため、単体テストを記述し、定期的なビルド処理の一部として実行することをお勧めします。 詳しくは、「[コードの単体テストUnit Test Your Code](../test/unit-test-your-code.md)」をご覧ください。 Visual Studio のモデル拡張でテストを設定するには、いくつかの重要な情報が必要です。 概要:  
   
--   [VSIX 拡張機能の単体テストの設定](#Host)  
+- [VSIX 拡張機能の単体テストの設定](#Host)  
   
-     VS IDE ホスト アダプターでテストを実行します。 各テスト メソッドにプレフィックス `[HostType("VS IDE")]`を付けます。 テストが実行されると、このホスト アダプターにより [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] が起動します。  
+   VS IDE ホスト アダプターでテストを実行します。 各テスト メソッドにプレフィックス `[HostType("VS IDE")]`を付けます。 テストが実行されると、このホスト アダプターにより [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] が起動します。  
   
--   [DTE および ModelStore へのアクセス](#DTE)  
+- [DTE および ModelStore へのアクセス](#DTE)  
   
-     通常は、テストの初期化時にモデルとその図を開いて、 `IModelStore` にアクセスする必要があります。  
+   通常は、テストの初期化時にモデルとその図を開いて、 `IModelStore` にアクセスする必要があります。  
   
--   [モデル図を開く](#Opening)  
+- [モデル図を開く](#Opening)  
   
-     `EnvDTE.ProjectItem` を `IDiagramContext`との間でキャストできます。  
+   `EnvDTE.ProjectItem` を `IDiagramContext`との間でキャストできます。  
   
--   [UI スレッドでの変更を実行します。](#UiThread)  
+- [UI スレッドでの変更を実行します。](#UiThread)  
   
-     モデル ストアに変更を加えるテストは UI スレッドで実行する必要があります。 これには `Microsoft.VSSDK.Tools.VsIdeTesting.UIThreadInvoker` を使用できます。  
+   モデル ストアに変更を加えるテストは UI スレッドで実行する必要があります。 これには `Microsoft.VSSDK.Tools.VsIdeTesting.UIThreadInvoker` を使用できます。  
   
--   [コマンド、ジェスチャ、およびその他の MEF コンポーネントのテスト](#MEF)  
+- [コマンド、ジェスチャ、およびその他の MEF コンポーネントのテスト](#MEF)  
   
-     MEF コンポーネントをテストするには、インポートされたプロパティを値に明示的に接続する必要があります。  
+   MEF コンポーネントをテストするには、インポートされたプロパティを値に明示的に接続する必要があります。  
   
- これらの点については、以降のセクションで詳しく説明します。  
+  これらの点については、以降のセクションで詳しく説明します。  
   
- 単体テストが設定された UML 拡張機能のサンプルは、コード サンプル ギャラリー「 [UML – テキストを使った迅速な入力](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)」で参照できます。  
+  単体テストが設定された UML 拡張機能のサンプルは、コード サンプル ギャラリー「 [UML – テキストを使った迅速な入力](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)」で参照できます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  「 [要件](../modeling/extend-uml-models-and-diagrams.md#Requirements)」を参照してください。  
   
  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  

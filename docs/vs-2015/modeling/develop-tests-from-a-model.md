@@ -14,12 +14,12 @@ caps.latest.revision: 22
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: fc773f9b4945a16bac0a9726e0a06f94726fad96
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 230cd5ae3bd4ae0d46baf4fe48f00eca9ffe879d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49236757"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825118"
 ---
 # <a name="develop-tests-from-a-model"></a>モデルからテストを開発する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -66,19 +66,19 @@ ms.locfileid: "49236757"
   
 ###### <a name="to-link-tests-to-a-use-case"></a>テストをユース ケースにリンクするには  
   
-1.  [!INCLUDE[TCMlong](../includes/tcmlong-md.md)] で要求を作成し、その要求に対してテスト スイートを作成します。 参照してください、する方法について[アプリケーションのテスト](http://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)します。  
+1. [!INCLUDE[TCMlong](../includes/tcmlong-md.md)] で要求を作成し、その要求に対してテスト スイートを作成します。 参照してください、する方法について[アプリケーションのテスト](http://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)します。  
   
-     作成した要求は、[!INCLUDE[vstsTfsShort](../includes/vststfsshort-md.md)] の作業項目になります。 これは、[!INCLUDE[esprfound](../includes/esprfound-md.md)] でプロジェクトが使用するプロセス テンプレートに応じて、ユーザー ストーリー、要求、ユース ケースの作業項目などになります。 詳細については、次を参照してください。 [Visual Studio Team Services または Team Foundation Server を使用して作業の追跡](http://msdn.microsoft.com/library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)します。  
+    作成した要求は、[!INCLUDE[vstsTfsShort](../includes/vststfsshort-md.md)] の作業項目になります。 これは、[!INCLUDE[esprfound](../includes/esprfound-md.md)] でプロジェクトが使用するプロセス テンプレートに応じて、ユーザー ストーリー、要求、ユース ケースの作業項目などになります。 詳細については、次を参照してください。 [Visual Studio Team Services または Team Foundation Server を使用して作業の追跡](http://msdn.microsoft.com/library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)します。  
   
-2.  モデル内の 1 つまたは複数のユース ケースに対して、要求の作業項目をリンクします。  
+2. モデル内の 1 つまたは複数のユース ケースに対して、要求の作業項目をリンクします。  
   
-     ユース ケース図でユース ケースを右クリックし、順にクリックします**作業項目へリンク**します。 詳細については、次を参照してください。[モデル要素をリンクし、作業項目](../modeling/link-model-elements-and-work-items.md)します。  
+    ユース ケース図でユース ケースを右クリックし、順にクリックします**作業項目へリンク**します。 詳細については、次を参照してください。[モデル要素をリンクし、作業項目](../modeling/link-model-elements-and-work-items.md)します。  
   
-3.  テスト スイートに追加して、ユース ケースを確認するケースをテストします。  
+3. テスト スイートに追加して、ユース ケースを確認するケースをテストします。  
   
- 通常、各ユーザー ストーリーまたは要求の作業項目は、モデル内の複数のユース ケースにリンクされます。また、各ユース ケースは複数のユーザー ストーリーや要求にリンクされます。 これは、各ユーザー ストーリーや要求が複数のユース ケースを開発する、一連のタスクを対象としているためです。 たとえば、プロジェクトの初期のイテレーションで、お客様がカタログから商品を選択し、配送を依頼することができる基本的なユーザー ストーリーを開発することができます。 後期のイテレーションでは、注文の終了時にお客様が支払いをして、商品が出荷された後、業者がお金を受け取るというストーリーになっていることがあります。  ストーリーごとに、Order Goods ユース ケースの事後条件に句が追加されます。  
+   通常、各ユーザー ストーリーまたは要求の作業項目は、モデル内の複数のユース ケースにリンクされます。また、各ユース ケースは複数のユーザー ストーリーや要求にリンクされます。 これは、各ユーザー ストーリーや要求が複数のユース ケースを開発する、一連のタスクを対象としているためです。 たとえば、プロジェクトの初期のイテレーションで、お客様がカタログから商品を選択し、配送を依頼することができる基本的なユーザー ストーリーを開発することができます。 後期のイテレーションでは、注文の終了時にお客様が支払いをして、商品が出荷された後、業者がお金を受け取るというストーリーになっていることがあります。  ストーリーごとに、Order Goods ユース ケースの事後条件に句が追加されます。  
   
- ユース ケース図で個別のコメントに句を書き込むことで、事後条件の句に要件から個別のリンクを作成することができます。 要求の作業項目に対して各コメントをリンクしたり、図のユース ケースに対してコメントをリンクしたりすることができます。  
+   ユース ケース図で個別のコメントに句を書き込むことで、事後条件の句に要件から個別のリンクを作成することができます。 要求の作業項目に対して各コメントをリンクしたり、図のユース ケースに対してコメントをリンクしたりすることができます。  
   
 ### <a name="base-tests-on-the-requirements-types"></a>要求型に関する基本テスト  
  型 (要求モデルの句、インターフェイス、列挙) では、ユーザーがビジネスについてどのように考え、やり取りするかという点について、概念と関係を記述します。 この場合、システムの内部設計にのみ関連する型は除外されます。  

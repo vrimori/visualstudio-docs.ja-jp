@@ -17,12 +17,12 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2e14da45b7c4f6064685cc4dbd88cd26aca3b0ff
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7bdae912e1eb43d3fa323850fa9dae35f2c56f18
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49198381"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923213"
 ---
 # <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer"></a>方法: Microsoft Office ドキュメントにクラス ダイアグラムの要素をコピーする (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "49198381"
   
 ### <a name="to-copy-all-the-elements-in-a-class-diagram"></a>クラス図のすべての要素をコピーするには  
   
-1.  ダイアグラム サーフェイスを右クリックし、**[すべて選択]** をクリックします。 (キーボード: **Ctrl + A**)  
+1. ダイアグラム サーフェイスを右クリックし、**[すべて選択]** をクリックします。 (キーボード: **Ctrl + A**)  
   
-2.  **[編集]** メニューで、**[イメージのコピー]** を選択します。  
+2. **[編集]** メニューで、**[イメージのコピー]** を選択します。  
   
- **[イメージのコピー]** の代わりに **[コピー]** を選択することもできます。 **[コピー]** は、イメージを通常のビットマップとしてコピーします。 **[イメージのコピー]** は、イメージをベクター ベースのイメージとしてコピーするので、ほとんどの Office アプリケーションにとってはこちらが向いています。  
+   **[イメージのコピー]** の代わりに **[コピー]** を選択することもできます。 **[コピー]** は、イメージを通常のビットマップとしてコピーします。 **[イメージのコピー]** は、イメージをベクター ベースのイメージとしてコピーするので、ほとんどの Office アプリケーションにとってはこちらが向いています。  
   
 ## <a name="see-also"></a>関連項目  
  [方法: クラス ダイアグラムを印刷する (クラス デザイナー)](../ide/how-to-print-class-diagrams-class-designer.md)   

@@ -21,12 +21,12 @@ caps.latest.revision: 32
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 63b5938131713c32f410f89c80a3efefa8b6c346
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6a171613c4bd6f34b826869214d11d247c9c59a9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49268243"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924006"
 ---
 # <a name="net-memory-allocations-view"></a>.NET メモリの割り当てビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "49268243"
   
  型行のデータには、プロファイリング実行で作成された型のオブジェクトの総数とその型のオブジェクトに割り当てられた総バイト数が表示されます。 型の包括値と排他値は常に同じです。  
   
--   包括値は、コール ツリーの親関数によって呼び出された関数とその子関数のインスタンスで作成されたオブジェクトの値です。  
+- 包括値は、コール ツリーの親関数によって呼び出された関数とその子関数のインスタンスで作成されたオブジェクトの値です。  
   
--   排他値は、親関数によって呼び出された関数によって直接作成されたオブジェクトの値です。 子関数で作成されたオブジェクトは含まれません。  
+- 排他値は、親関数によって呼び出された関数によって直接作成されたオブジェクトの値です。 子関数で作成されたオブジェクトは含まれません。  
   
- 関数のデータは、親型のオブジェクトに対して作成されたオブジェクト数と割り当てられたバイト数を示します。  
+  関数のデータは、親型のオブジェクトに対して作成されたオブジェクト数と割り当てられたバイト数を示します。  
   
 ## <a name="highlighting-the-execution-hot-path"></a>実行ホット パスの強調表示  
  親型のほとんどのオブジェクトを作成したコール ツリーの実行パスを見つけることができます。  

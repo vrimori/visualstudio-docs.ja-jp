@@ -25,12 +25,12 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 96235df516a7d02f63c79f897ec053c787b0cf45
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7d8ece4edf9ee91446565f2790392bd6d478fd3e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49205518"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818329"
 ---
 # <a name="quickstart-debug-javascript-using-the-console"></a>クイックスタート: コンソールを使用した JavaScript のデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,27 +41,27 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
   
  JavaScript コンソール ウィンドウを使うと次の作業ができます。  
   
--   アプリから、オブジェクト、値、メッセージをコンソール ウィンドウへ送信します。  
+- アプリから、オブジェクト、値、メッセージをコンソール ウィンドウへ送信します。  
   
--   実行中のアプリのローカル変数とグローバル変数の値の表示と修正を行います。  
+- 実行中のアプリのローカル変数とグローバル変数の値の表示と修正を行います。  
   
--   オブジェクトのビジュアライザーを表示します。  
+- オブジェクトのビジュアライザーを表示します。  
   
--   現在のスクリプト コンテキスト内で実行される JavaScript コードを実行します。  
+- 現在のスクリプト コンテキスト内で実行される JavaScript コードを実行します。  
   
--   ドキュメント オブジェクト モデル (DOM) と Windows ランタイムの例外に加えて、JavaScript のエラーと例外も表示されます。  
+- ドキュメント オブジェクト モデル (DOM) と Windows ランタイムの例外に加えて、JavaScript のエラーと例外も表示されます。  
   
--   画面のクリアなどの他のタスクを実行します。 コマンドの詳細については、「 [JavaScript Console commands](../debugger/javascript-console-commands.md) 」を参照してください。  
+- 画面のクリアなどの他のタスクを実行します。 コマンドの詳細については、「 [JavaScript Console commands](../debugger/javascript-console-commands.md) 」を参照してください。  
   
- このトピックの内容:  
+  このトピックの内容:  
   
--   [JavaScript コンソール ウィンドウを使用したデバッグ](#InteractiveConsole)  
+- [JavaScript コンソール ウィンドウを使用したデバッグ](#InteractiveConsole)  
   
--   [対話形式のデバッグと中断モード](#InteractiveDebuggingBreakMode)  
+- [対話形式のデバッグと中断モード](#InteractiveDebuggingBreakMode)  
   
--   [JavaScript コンソール ウィンドウの単一行モードと複数行モード](#SinglelineMultilineMode)  
+- [JavaScript コンソール ウィンドウの単一行モードと複数行モード](#SinglelineMultilineMode)  
   
--   [スクリプトの実行コンテキストの切り替え](#Switching)  
+- [スクリプトの実行コンテキストの切り替え](#Switching)  
   
 > [!TIP]
 >  閉じた JavaScript コンソール ウィンドウを再び開くには、 **[デバッグ]**>**[ウィンドウ]** > **JavaScript コンソール** の順に選びます。 このウィンドウは、スクリプトのデバッグ セッション中にのみ表示されます。  

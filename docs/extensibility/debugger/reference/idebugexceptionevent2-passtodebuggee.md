@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2::PassToDebuggee |Microsoft ドキュメント
+title: IDebugExceptionEvent2::PassToDebuggee |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ce8e6b53a07f191d967bbd676e6fcfc96b53dc14
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3b1fb575299000e4b9ab894a4700fdf314d17d6c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31113306"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832707"
 ---
 # <a name="idebugexceptionevent2passtodebuggee"></a>IDebugExceptionEvent2::PassToDebuggee
-例外を破棄する必要がある場合または実行が再開したときにデバッグするプログラムを例外を渡す必要があるかどうかを指定します。  
+例外を破棄する場合または実行の再開時にデバッグ中のプログラムを例外を渡す必要があるかどうかを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,15 +41,15 @@ int PassToDebuggee(
   
 #### <a name="parameters"></a>パラメーター  
  `fPass`  
- [in]0 以外 (`TRUE`) 場合は、例外は、実行が再開されるとときに、デバッグするプログラムまたはゼロ渡す必要があります (`FALSE`) 場合は、例外を破棄する必要があります。  
+ [in]0 以外の場合 (`TRUE`) 場合は、例外は、実行の再開時にデバッグ中のプログラムまたは 0 渡す必要があります (`FALSE`) 場合は、例外を破棄する必要があります。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドを呼び出すことも、デバッグ中のプログラムで実行するためのコードは実際には発生しません。 呼び出しは、次のコード実行の状態を設定するだけです。 たとえば、呼び出し、 [CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md)メソッドが返す可能性があります`S_OK`で、 [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)です。`dwState` フィールドに設定`EXCEPTION_STOP_SECOND_CHANCE`です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドを呼び出すことも、デバッグ中のプログラムで実行するためのコードは実際には発生しません。 呼び出しは、次のコード実行の状態を設定するだけです。 たとえば、呼び出し、 [CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md)メソッドが返す可能性があります`S_OK`で、 [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)します。`dwState` フィールドに設定`EXCEPTION_STOP_SECOND_CHANCE`します。  
   
- IDE が表示される、 [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)イベントと呼び出し、[続行](../../../extensibility/debugger/reference/idebugprogram2-continue.md)メソッドです。 デバッグ エンジン (DE) 場合を処理する既定の動作を持つ必要があります、`PassToDebuggee`メソッドは呼び出されません。  
+ IDE が表示される、 [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)イベントと呼び出し、[続行](../../../extensibility/debugger/reference/idebugprogram2-continue.md)メソッド。 デバッグ エンジン (DE) は大文字と小文字の場合を処理するために既定の動作が必要、`PassToDebuggee`メソッドは呼び出されません。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)   

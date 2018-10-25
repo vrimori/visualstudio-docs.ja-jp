@@ -23,12 +23,12 @@ caps.latest.revision: 183
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 3d44834fe02f873007e7461c789fb94f98c9208e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: df09e647908b264ade467b8fafd4487641d3be6c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49301867"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841105"
 ---
 # <a name="install-visual-studio-2015"></a>Visual Studio 2015 をインストールします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -135,17 +135,17 @@ Visual Studio 2017 の最新のインストール ドキュメントを参照し
   
 #### <a name="to-install-or-uninstall-help-content"></a>ヘルプ コンテンツをインストールまたはアンインストールするには  
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] メニュー バーで、 **[ヘルプ]**、 **[ヘルプ コンテンツの追加と削除]** の順にクリックします。  
+1. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] メニュー バーで、 **[ヘルプ]**、 **[ヘルプ コンテンツの追加と削除]** の順にクリックします。  
   
-2.  **[Microsoft ヘルプ ビューア―]** の **[コンテンツの管理]** タブで、ヘルプ コンテンツのインストール ソースを選択します。  
+2. **[Microsoft ヘルプ ビューア―]** の **[コンテンツの管理]** タブで、ヘルプ コンテンツのインストール ソースを選択します。  
   
-3.  特定のヘルプ コレクションを探している場合は、名前やキーワードを入力、**検索**テキスト ボックス、およびキーを押します**Enter**します。  
+3. 特定のヘルプ コレクションを探している場合は、名前やキーワードを入力、**検索**テキスト ボックス、およびキーを押します**Enter**します。  
   
-4.  必要なヘルプ コレクションの横で、 **[追加]** または **[削除]** リンクをクリックします。  
+4. 必要なヘルプ コレクションの横で、 **[追加]** または **[削除]** リンクをクリックします。  
   
-5.  をクリックして、 **Update**ボタンをクリックします。  
+5. をクリックして、 **Update**ボタンをクリックします。  
   
- インストールまたはオフラインのヘルプをデプロイする方法の詳細については、次を参照してください。、[ヘルプ ビューアーの管理者ガイド](../ide/help-viewer-administrator-guide.md)します。  
+   インストールまたはオフラインのヘルプをデプロイする方法の詳細については、次を参照してください。、[ヘルプ ビューアーの管理者ガイド](../ide/help-viewer-administrator-guide.md)します。  
   
 ##  <a name="serviceReleases"></a> サービス リリースと製品の更新プログラムの確認  
  すべての拡張機能に互換性があるためには、以前のバージョンからアップグレードすると、Visual Studio は自動的に拡張機能をアップグレードしません。 拡張機能を再インストールする必要があります、 [Visual Studio ギャラリー](http://go.microsoft.com/fwlink/?LinkId=178891)またはソフトウェア発行者から。  

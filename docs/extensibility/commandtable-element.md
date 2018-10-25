@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d3869a9d3350daac8b08398ed5afaab0729a05c
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 8c2adca249ba245825f9b664b46e1b4674d0ea50
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44278882"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49879910"
 ---
 # <a name="commandtable-element"></a>CommandTable 要素
 CommandTable のルート要素は、 *.vsct*ファイル。 これは、実際のレイアウトと、IDE に VSPackage を提供するコマンドの種類を定義するファイルです。 コマンドは、メニュー項目、メニューのツールバー、およびコンボ ボックスに含めることができます。 詳細については、次を参照してください。 [Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)します。  
@@ -47,10 +47,10 @@ CommandTable のルート要素は、 *.vsct*ファイル。 これは、実際�
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
-|---------------|-----------------|  
-|xmlns|必須。 XML 名前空間:<br /><br /> xmlns ="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable"<br /><br /> xmlns:xs ="http://www.w3.org/2001/XMLSchema"|  
-|language|任意。 言語属性がすべての既定の言語を指定するため\<文字列 > コマンド テーブル内の要素。  言語が指定されていない場合は、現在のプロセスの言語が使用されます。<br /><br /> language ="英語-米国"|  
+| 属性 | 説明 |
+|-----------| - |
+| xmlns | 必須。 XML 名前空間:<br /><br /> xmlns ="<http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable>"<br /><br /> xmlns:xs ="<http://www.w3.org/2001/XMLSchema>" |
+| language | 任意。 言語属性がすべての既定の言語を指定するため\<文字列 > コマンド テーブル内の要素。  言語が指定されていない場合は、現在のプロセスの言語が使用されます。<br /><br /> language ="英語-米国" |
   
 ### <a name="child-elements"></a>子要素  
   

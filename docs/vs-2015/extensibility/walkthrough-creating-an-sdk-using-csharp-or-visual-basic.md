@@ -13,12 +13,12 @@ ms.assetid: ef96a249-5eef-402a-a8d5-d74cb49239bd
 caps.latest.revision: 21
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 96b4ded80d3c00c0f2c7a5c9037758f72907ea28
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: c8f792553e29a4b24d30a25dd835db0b96befcbd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49215606"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49824270"
 ---
 # <a name="walkthrough-creating-an-sdk-using-c-or-visual-basic"></a>チュートリアル: C# または Visual Basic を使用して SDK を作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -138,23 +138,23 @@ ms.locfileid: "49215606"
   
 ##  <a name="createSample"></a> クラス ライブラリを使用するサンプル アプリを作成するには  
   
-1.  メニュー バーで、**ファイル**、**新規**、**新しいプロジェクト**します。  
+1. メニュー バーで、**ファイル**、**新規**、**新しいプロジェクト**します。  
   
-2.  テンプレートの一覧で  **Visual c#** または**Visual Basic**を選択し、 **Windows ストア**ノード。  
+2. テンプレートの一覧で  **Visual c#** または**Visual Basic**を選択し、 **Windows ストア**ノード。  
   
-3.  選択、**空のアプリ**名では、プロジェクト テンプレートは、 **ArithmeticUI**、選択し、 **OK**ボタン。  
+3. 選択、**空のアプリ**名では、プロジェクト テンプレートは、 **ArithmeticUI**、選択し、 **OK**ボタン。  
   
-4.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **ArithmeticUI**プロジェクトを選び、**追加**、**参照**します。  
+4. **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **ArithmeticUI**プロジェクトを選び、**追加**、**参照**します。  
   
-5.  参照型の一覧で、展開**Windows**を選び、**拡張機能**します。  
+5. 参照型の一覧で、展開**Windows**を選び、**拡張機能**します。  
   
-6.  詳細ペインで選択、**単純な数学 SDK**拡張機能。  
+6. 詳細ペインで選択、**単純な数学 SDK**拡張機能。  
   
-     SDK に関する追加情報が表示されます。 選択することができます、**詳細**を開くリンク http://www.msdn.microsoft.com 、このチュートリアルで先ほど SDKManifest.xml ファイルで指定しました。  
+    SDK に関する追加情報が表示されます。 選択することができます、**詳細**を開くリンク http://www.msdn.microsoft.com 、このチュートリアルで先ほど SDKManifest.xml ファイルで指定しました。  
   
-7.  **参照マネージャー**ダイアログ ボックスで、**単純な数学 SDK**チェック ボックスをオンにして、 **OK**ボタン。  
+7. **参照マネージャー**ダイアログ ボックスで、**単純な数学 SDK**チェック ボックスをオンにして、 **OK**ボタン。  
   
-8.  メニュー バーで、**ビュー**、**オブジェクト ブラウザー**します。  
+8. メニュー バーで、**ビュー**、**オブジェクト ブラウザー**します。  
   
 9. **参照**一覧で、選択**単純な算術**します。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "49215606"
   
      正しい結果が表示されます。  
   
- 作成し、拡張機能 SDK を使用できました。  
+    作成し、拡張機能 SDK を使用できました。  
   
 ## <a name="see-also"></a>関連項目  
  [チュートリアル: C++ を使用して、SDK の作成](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)   

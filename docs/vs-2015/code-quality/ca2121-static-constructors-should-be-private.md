@@ -20,15 +20,16 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 9425cabbc024e445df97d9b909f1803b7a972571
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 24fcd6970d368bfee739e47f9b7e0407f5cd6307
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49267320"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49918546"
 ---
 # <a name="ca2121-static-constructors-should-be-private"></a>CA2121: 静的コンストラクターはプライベートでなければなりません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
+
 |||
 |-|-|
 |TypeName|StaticConstructorsShouldBePrivate|
@@ -47,11 +48,11 @@ ms.locfileid: "49267320"
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  違反は、通常、次の操作のいずれかで発生します。
 
--   型の静的コンス トラクターを定義し、でした、プライベートにしません。
+- 型の静的コンス トラクターを定義し、でした、プライベートにしません。
 
--   プログラミング言語のコンパイラでは、型に既定の静的コンス トラクターを追加しを行わなかったことプライベートします。
+- プログラミング言語のコンパイラでは、型に既定の静的コンス トラクターを追加しを行わなかったことプライベートします。
 
- 1 つ目の違反を修正するには、静的コンス トラクターをプライベートにします。 2 つ目の種類を解決するの型にプライベート静的コンス トラクターを追加します。
+  1 つ目の違反を修正するには、静的コンス トラクターをプライベートにします。 2 つ目の種類を解決するの型にプライベート静的コンス トラクターを追加します。
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
  これらの違反を抑制しないでください。 ソフトウェアの設計では、静的コンス トラクターを明示的に呼び出す必要がある場合は、設計が重大な欠陥が含まれていて、確認する必要がありますは高くなります。

@@ -16,12 +16,12 @@ ms.assetid: 0da81b98-f5e3-40d3-ba9a-94551378d0b4
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cacd0c1cd2a1e36e7c160902c93c6bcc6bfc0cdd
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: c12ee9593bb7baadfbaf29ebade142f142e8f40a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49181208"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893883"
 ---
 # <a name="vsix-extension-schema-20-reference"></a>VSIX 拡張機能スキーマ 2.0 リファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -166,31 +166,31 @@ VSIX の配置マニフェスト ファイルでは、VSIX パッケージの内
 ### <a name="assets-element"></a>資産要素  
  この要素の一覧を含む`<Asset>`このパッケージによって各拡張機能またはコンテンツの要素のタグが表示されます。  
   
--   `<Asset>` -この要素には、次の属性と要素が含まれています。  
+- `<Asset>` -この要素には、次の属性と要素が含まれています。  
   
-    -   `Type` – これは、拡張機能またはこの要素によって表されるコンテンツの種類です。 各`<Asset>`要素が 1 つあります。 `Type`、が複数`<Asset>`要素は同じである可能性があります`Type`します。 この属性は、名前空間の規則に従って、完全修飾名として表す必要があります。 既知の型は次のとおりです。  
+  - `Type` – これは、拡張機能またはこの要素によって表されるコンテンツの種類です。 各`<Asset>`要素が 1 つあります。 `Type`、が複数`<Asset>`要素は同じである可能性があります`Type`します。 この属性は、名前空間の規則に従って、完全修飾名として表す必要があります。 既知の型は次のとおりです。  
   
-        1.  Microsoft.VisualStudio.VsPackage  
+    1. Microsoft.VisualStudio.VsPackage  
   
-        2.  Microsoft.VisualStudio.MefComponent  
+    2. Microsoft.VisualStudio.MefComponent  
   
-        3.  Microsoft.VisualStudio.ToolboxControl  
+    3. Microsoft.VisualStudio.ToolboxControl  
   
-        4.  Microsoft.VisualStudio.Samples  
+    4. Microsoft.VisualStudio.Samples  
   
-        5.  Microsoft.visualstudio.projecttemplate  
+    5. Microsoft.visualstudio.projecttemplate  
   
-        6.  [Microsoft.visualstudio.itemtemplate]  
+    6. [Microsoft.visualstudio.itemtemplate]  
   
-        7.  [Microsoft.visualstudio.assembly]  
+    7. [Microsoft.visualstudio.assembly]  
   
-         独自の型を作成して一意の名前を付けます。 Visual Studio 内で実行時に、コードが列挙し、拡張機能マネージャー API を介してこれらのカスタム型にアクセスできます。  
+       独自の型を作成して一意の名前を付けます。 Visual Studio 内で実行時に、コードが列挙し、拡張機能マネージャー API を介してこれらのカスタム型にアクセスできます。  
   
-    -   パス – ファイルまたは資産を含むパッケージ内のフォルダーへの相対パスです。  
+  - パス – ファイルまたは資産を含むパッケージ内のフォルダーへの相対パスです。  
   
-    -   `AnyAttribute*` – 拡張可能な一連の属性名前と値のペアのディクショナリとしての実行時に公開します。  
+  - `AnyAttribute*` – 拡張可能な一連の属性名前と値のペアのディクショナリとしての実行時に公開します。  
   
-         `<AnyElement>*` – 間構造化コンテンツは許可されて、`<Asset>`開始し、終了タグ。 すべての要素は、XmlElement オブジェクトの一覧として公開されます。 VSIX 拡張機能は、マニフェスト ファイルの構造化された型に固有のメタデータを定義し、実行時にそれらを列挙できます。  
+     `<AnyElement>*` – 間構造化コンテンツは許可されて、`<Asset>`開始し、終了タグ。 すべての要素は、XmlElement オブジェクトの一覧として公開されます。 VSIX 拡張機能は、マニフェスト ファイルの構造化された型に固有のメタデータを定義し、実行時にそれらを列挙できます。  
   
 ### <a name="sample-manifest"></a>サンプル マニフェスト  
   

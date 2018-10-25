@@ -13,12 +13,12 @@ ms.assetid: a793cf7a-f230-43ce-88d0-fa5d6f1aa9c7
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bda4e23fc98210ddf35bd81efee6ca41c2d945b9
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: f70950e616a4ce0cc2e355205b65b5da7ec7ce88
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49303322"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49848658"
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Visual Studio の UX の基本情報
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -168,15 +168,15 @@ ms.locfileid: "49303322"
 ### <a name="hyperlink-anti-patterns"></a>ハイパーリンクのアンチ パターン  
  次の例には、2 つのアンチ パターンが含まれています。  
   
-1.  ポインターを合わせると赤色にすると、フォア グラウンドでは、フォントのサービスから適切な共有色が使用されていないことを意味します。  
+1. ポインターを合わせると赤色にすると、フォア グラウンドでは、フォントのサービスから適切な共有色が使用されていないことを意味します。  
   
-2.  「詳細」は、概念説明トピックへのリンクの適切なテキストではありません。 ユーザーの目標は、任意の影響を理解してがについてさらに、ありません。  
+2. 「詳細」は、概念説明トピックへのリンクの適切なテキストではありません。 ユーザーの目標は、任意の影響を理解してがについてさらに、ありません。  
   
- ![ハイパーリンクのアンチ&#45;パターン](../../extensibility/ux-guidelines/media/0102-j-hyperlinkincorrect.png "0102 j_HyperlinkIncorrect")  
+   ![ハイパーリンクのアンチ&#45;パターン](../../extensibility/ux-guidelines/media/0102-j-hyperlinkincorrect.png "0102 j_HyperlinkIncorrect")  
   
- **色のサービスを無視し、「詳細」のハイパーリンクを使用して、Visual Studio のアンチ パターンが。**  
+   **色のサービスを無視し、「詳細」のハイパーリンクを使用して、Visual Studio のアンチ パターンが。**  
   
- **ソリューションの向上:** リンクをクリックして、ユーザーを求めるは質問が発生します。  
+   **ソリューションの向上:** リンクをクリックして、ユーザーを求めるは質問が発生します。  
   
 -   Windows Azure サービスのしくみ  
   

@@ -24,39 +24,39 @@ caps.latest.revision: 84
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 4aea0373c57f046b257ad51b102e5b2f1190bfbf
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 724ddcc00b1f49eb1f96e67d6b6e269933cb9d66
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49173720"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950492"
 ---
 # <a name="validate-code-with-layer-diagrams"></a>レイヤー図を使用したコードの検証
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 コードが設計と競合しないことを確認するには、Visual Studio でレイヤー図を使用してコードを検証します。 これが次の点で役立つ場合があります。  
   
--   レイヤー図のコードと依存関係で依存関係間の競合を見つける。  
+- レイヤー図のコードと依存関係で依存関係間の競合を見つける。  
   
--   提案された変更によって影響を受ける可能性がある依存関係を見つける。  
+- 提案された変更によって影響を受ける可能性がある依存関係を見つける。  
   
-     たとえば、レイヤー図を編集して予測されるアーキテクチャの変更を表示した後、コードを検証して、影響を受ける依存関係を確認できます。  
+   たとえば、レイヤー図を編集して予測されるアーキテクチャの変更を表示した後、コードを検証して、影響を受ける依存関係を確認できます。  
   
--   コードを別の設計にリファクターまたは移行する。  
+- コードを別の設計にリファクターまたは移行する。  
   
-     コードを別のアーキテクチャに移動したときに作業が必要なコード、または依存関係を見つけます。  
+   コードを別のアーキテクチャに移動したときに作業が必要なコード、または依存関係を見つけます。  
   
- **必要条件**  
+  **必要条件**  
   
--   Visual Studio  
+- Visual Studio  
   
--   Team Foundation ビルド サーバーにインストールされた Visual Studio (Team Foundation ビルドを使用してコードを自動的に検証するために必要)  
+- Team Foundation ビルド サーバーにインストールされた Visual Studio (Team Foundation ビルドを使用してコードを自動的に検証するために必要)  
   
--   レイヤー図を使用するモデリング プロジェクトが含まれたソリューション。 このレイヤー図は、検証する対象の Visual C# プロジェクトまたは Visual Basic .NET プロジェクトの成果物にリンクしている必要があります。 参照してください[コードからレイヤー図を作成する](../modeling/create-layer-diagrams-from-your-code.md)します。  
+- レイヤー図を使用するモデリング プロジェクトが含まれたソリューション。 このレイヤー図は、検証する対象の Visual C# プロジェクトまたは Visual Basic .NET プロジェクトの成果物にリンクしている必要があります。 参照してください[コードからレイヤー図を作成する](../modeling/create-layer-diagrams-from-your-code.md)します。  
   
- この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
+  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
- Visual Studio で開いているレイヤー図から、またはコマンド プロンプトから、コードを手動で検証できます。 ローカル ビルドまたは Team Foundation ビルドの実行時に、コードを自動的に検証することもできます。 参照してください[Channel 9 ビデオ: デザインとレイヤー図の使用によるアーキテクチャの検証](http://go.microsoft.com/fwlink/?LinkID=252073)です。  
+  Visual Studio で開いているレイヤー図から、またはコマンド プロンプトから、コードを手動で検証できます。 ローカル ビルドまたは Team Foundation ビルドの実行時に、コードを自動的に検証することもできます。 参照してください[Channel 9 ビデオ: デザインとレイヤー図の使用によるアーキテクチャの検証](http://go.microsoft.com/fwlink/?LinkID=252073)です。  
   
 > [!IMPORTANT]
 >  Team Foundation ビルドを使用してレイヤー検証を実行する場合は、ビルド サーバーに同じバージョンの Visual Studio をインストールすることも必要です。  
@@ -108,41 +108,41 @@ ms.locfileid: "49173720"
   
 #### <a name="to-validate-code-at-the-command-prompt"></a>コマンド プロンプトでコードを検証するには  
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のコマンド プロンプトを開きます。  
+1. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のコマンド プロンプトを開きます。  
   
-2.  次のいずれかを選択します。  
+2. 次のいずれかを選択します。  
   
-    -   ソリューションの特定のモデリング プロジェクトに対してコードを検証するには、次のカスタム プロパティを使用して [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] を実行します。  
+   - ソリューションの特定のモデリング プロジェクトに対してコードを検証するには、次のカスタム プロパティを使用して [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] を実行します。  
   
-        ```  
-        msbuild <FilePath+ModelProjectFileName>.modelproj /p:ValidateArchitecture=true  
-        ```  
+     ```  
+     msbuild <FilePath+ModelProjectFileName>.modelproj /p:ValidateArchitecture=true  
+     ```  
   
-         - または  
+     - または  
   
-         モデリング プロジェクト (.modelproj) ファイルとレイヤー図が入っているフォルダーを参照し、次のカスタム プロパティを使用して [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] を実行します。  
+       モデリング プロジェクト (.modelproj) ファイルとレイヤー図が入っているフォルダーを参照し、次のカスタム プロパティを使用して [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] を実行します。  
   
-        ```  
-        msbuild /p:ValidateArchitecture=true   
-        ```  
+     ```  
+     msbuild /p:ValidateArchitecture=true   
+     ```  
   
-    -   ソリューションのすべてのモデリング プロジェクトに対してコードを検証するには、次のカスタム プロパティを使用して [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] を実行します。  
+   - ソリューションのすべてのモデリング プロジェクトに対してコードを検証するには、次のカスタム プロパティを使用して [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] を実行します。  
   
-        ```  
-        msbuild <FilePath+SolutionName>.sln /p:ValidateArchitecture=true   
-        ```  
+     ```  
+     msbuild <FilePath+SolutionName>.sln /p:ValidateArchitecture=true   
+     ```  
   
-         - または  
+     - または  
   
-         レイヤー図が入っているモデリング プロジェクトを必ず含むソリューション フォルダーを参照し、次のカスタム プロパティを使用して [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] を実行します。  
+       レイヤー図が入っているモデリング プロジェクトを必ず含むソリューション フォルダーを参照し、次のカスタム プロパティを使用して [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] を実行します。  
   
-        ```  
-        msbuild /p:ValidateArchitecture=true  
-        ```  
+     ```  
+     msbuild /p:ValidateArchitecture=true  
+     ```  
   
      発生したすべてのエラーが表示されます。 詳細については[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]を参照してください[MSBuild](../msbuild/msbuild.md)と[MSBuild タスク](../msbuild/msbuild-task.md)します。  
   
- 検証エラーに関する詳細については、次を参照してください。[を把握して解決のレイヤー検証エラー](#UnderstandingValidationErrors)します。  
+   検証エラーに関する詳細については、次を参照してください。[を把握して解決のレイヤー検証エラー](#UnderstandingValidationErrors)します。  
   
 ###  <a name="ManageErrors"></a> 検証エラーを管理します。  
  開発プロセスの実行中は、検証時に報告される一部の競合を抑制できます。 たとえば、既に解決したエラーや特定のシナリオに関連しないエラーを抑制できます。 エラーを抑制した場合は、[!INCLUDE[esprfound](../includes/esprfound-md.md)] で作業項目をログに記録することをお勧めします。  
@@ -152,9 +152,9 @@ ms.locfileid: "49173720"
   
 ##### <a name="to-create-a-work-item-for-a-validation-error"></a>検証エラーの作業項目を作成するには  
   
--   **エラー一覧**ウィンドウで、エラーを右クリックし、 をポイント**作業項目の作成**、しを作成する作業項目の種類をクリックします。  
+- **エラー一覧**ウィンドウで、エラーを右クリックし、 をポイント**作業項目の作成**、しを作成する作業項目の種類をクリックします。  
   
- これらのタスクを使用して、検証エラーを管理する、**エラー一覧**ウィンドウ。  
+  これらのタスクを使用して、検証エラーを管理する、**エラー一覧**ウィンドウ。  
   
 |**目的**|**次の手順します。**|  
 |------------|----------------------------|  
@@ -176,29 +176,29 @@ ms.locfileid: "49173720"
   
  \- または -  
   
-1.  **ソリューション エクスプ ローラー**レイヤー図または図を含むモデリング プロジェクトを右クリックし、クリックして**プロパティ**します。  
+1. **ソリューション エクスプ ローラー**レイヤー図または図を含むモデリング プロジェクトを右クリックし、クリックして**プロパティ**します。  
   
-2.  **プロパティ**ウィンドウで、設定、モデリング プロジェクトの**アーキテクチャの検証**プロパティを**True**します。  
+2. **プロパティ**ウィンドウで、設定、モデリング プロジェクトの**アーキテクチャの検証**プロパティを**True**します。  
   
-     これには、検証プロセス内のモデリング プロジェクトが含まれます。  
+    これには、検証プロセス内のモデリング プロジェクトが含まれます。  
   
-3.  **ソリューション エクスプ ローラー**検証に使用するレイヤー図 (.layerdiagram) ファイルをクリックします。  
+3. **ソリューション エクスプ ローラー**検証に使用するレイヤー図 (.layerdiagram) ファイルをクリックします。  
   
-4.  **プロパティ**ウィンドウで、ことを確認します、ダイアグラムの**ビルド アクション**プロパティに設定されて**検証**です。  
+4. **プロパティ**ウィンドウで、ことを確認します、ダイアグラムの**ビルド アクション**プロパティに設定されて**検証**です。  
   
-     これには、検証プロセス内のレイヤー図が含まれます。  
+    これには、検証プロセス内のレイヤー図が含まれます。  
   
- エラー一覧 ウィンドウでエラーを管理するには、次を参照してください。[検証エラーの管理](#ManageErrors)します。  
+   エラー一覧 ウィンドウでエラーを管理するには、次を参照してください。[検証エラーの管理](#ManageErrors)します。  
   
 #### <a name="to-validate-code-automatically-during-a-team-foundation-build"></a>Team Foundation ビルド時にコードを自動的に検証するには  
   
-1.  **チーム エクスプ ローラー**ビルドの定義をダブルクリックし、クリックして**プロセス**します。  
+1. **チーム エクスプ ローラー**ビルドの定義をダブルクリックし、クリックして**プロセス**します。  
   
-2.  **ビルド プロセス パラメーター**、展開**コンパイル**では、次を入力し、 **MSBuild 引数**パラメーター。  
+2. **ビルド プロセス パラメーター**、展開**コンパイル**では、次を入力し、 **MSBuild 引数**パラメーター。  
   
-     `/p:ValidateArchitecture=true`  
+    `/p:ValidateArchitecture=true`  
   
- 検証エラーに関する詳細については、次を参照してください。[を把握して解決のレイヤー検証エラー](#UnderstandingValidationErrors)します。 [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] の詳細については、以下のトピックを参照してください。  
+   検証エラーに関する詳細については、次を参照してください。[を把握して解決のレイヤー検証エラー](#UnderstandingValidationErrors)します。 [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] の詳細については、以下のトピックを参照してください。  
   
 -   [アプリケーションのビルド](http://msdn.microsoft.com/library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)  
   
@@ -220,13 +220,13 @@ ms.locfileid: "49173720"
 ##  <a name="UnderstandingValidationErrors"></a> 理解とレイヤー検証エラーの解決  
  レイヤー図と照らし合わせてコードを検証すると、コードが設計と競合している場合に検証エラーが発生します。 たとえば、次の条件のとき、検証エラーが発生する場合があります。  
   
--   成果物が不適切なレイヤーに割り当てられている。 この場合、成果物を移動します。  
+- 成果物が不適切なレイヤーに割り当てられている。 この場合、成果物を移動します。  
   
--   クラスなどの成果物が、アーキテクチャに違反する形で別のクラスを使用している。 この場合、コードをリファクタリングして依存関係を削除します。  
+- クラスなどの成果物が、アーキテクチャに違反する形で別のクラスを使用している。 この場合、コードをリファクタリングして依存関係を削除します。  
   
- これらのエラーを解決するには、コードを更新して、検証時にエラーが表示されなくなるようにします。 この作業は、反復的な方法で実行します。  
+  これらのエラーを解決するには、コードを更新して、検証時にエラーが表示されなくなるようにします。 この作業は、反復的な方法で実行します。  
   
- 次のセクションでは、これらのエラーで使用される構文を示し、これらのエラーの意味を説明し、エラーを解決または管理するために実行できることを提示します。  
+  次のセクションでは、これらのエラーで使用される構文を示し、これらのエラーの意味を説明し、エラーを解決または管理するために実行できることを提示します。  
   
 |**構文**|**説明**|  
 |----------------|---------------------|  

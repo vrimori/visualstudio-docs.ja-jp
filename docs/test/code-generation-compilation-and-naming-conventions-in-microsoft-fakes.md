@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 93aec7e83ba5af9bab8da351624df861b46e475c
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 65b00ab033feb9f057be195afe28b0416f44f95e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36282107"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926021"
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Microsoft Fakes におけるコード生成、コンパイル、および名前付け規則
 
@@ -201,42 +201,42 @@ attribute of the Assembly element in the .fakes:
 
  **名前空間**
 
--   .Fakes サフィックスは名前空間に追加されます。
+- .Fakes サフィックスは名前空間に追加されます。
 
-     たとえば、`System.Fakes` 名前空間には System 名前空間の shim 型が含まれています。
+   たとえば、`System.Fakes` 名前空間には System 名前空間の shim 型が含まれています。
 
--   Global.Fakes には、空の名前空間の shim 型が含まれています。
+- Global.Fakes には、空の名前空間の shim 型が含まれています。
 
- **型名**
+  **型名**
 
--   Shim プレフィックスが型名に追加されて、shim 型名が作成されます。
+- Shim プレフィックスが型名に追加されて、shim 型名が作成されます。
 
-     たとえば、ShimExample は Example 型の shim 型です。
+   たとえば、ShimExample は Example 型の shim 型です。
 
--   Stub プレフィックスが型名に追加されて、stub 型名が作成されます。
+- Stub プレフィックスが型名に追加されて、stub 型名が作成されます。
 
-     たとえば、StubIExample は IExample 型の stub 型です。
+   たとえば、StubIExample は IExample 型の stub 型です。
 
- **型引数および入れ子にされた型の構造体**
+  **型引数および入れ子にされた型の構造体**
 
--   ジェネリック型の引数がコピーされます。
+- ジェネリック型の引数がコピーされます。
 
--   shim 型の場合、入れ子にされた型の構造体がコピーされます。
+- shim 型の場合、入れ子にされた型の構造体がコピーされます。
 
 ### <a name="shim-delegate-property-or-stub-delegate-field-naming-conventions"></a>Shim デリゲート プロパティまたはスタブ デリゲート フィールドの名前付け規則
 
 空の名前から始まるフィールド名の付け方の**基本的な規則**は次のとおりです。
 
--   メソッド名が追加されます。
+- メソッド名が追加されます。
 
--   メソッド名が明示的なインターフェイスの実装の場合、ドットは削除されます。
+- メソッド名が明示的なインターフェイスの実装の場合、ドットは削除されます。
 
--   メソッドがジェネリックの場合、`Of`*n* が追加されます。ここで、*n* はジェネリック メソッドの引数の数です。
+- メソッドがジェネリックの場合、`Of`*n* が追加されます。ここで、*n* はジェネリック メソッドの引数の数です。
 
- プロパティの get/set アクセス操作子などの**特殊なメソッド名**は、次の表に示すように処理されます。
+  プロパティの get/set アクセス操作子などの**特殊なメソッド名**は、次の表に示すように処理されます。
 
 |メソッドの種類|例|追加されるメソッド名|
-|-------------------|-------------|--------------------------|
+|-|-|-|
 |**コンストラクター**|`.ctor`|`Constructor`|
 |静的**コンストラクター**|`.cctor`|`StaticConstructor`|
 |"_" で区切られた 2 つの部分で構成されるメソッド名を持つ**アクセサー** (プロパティの get アクセス操作子など)|*kind_name* (一般的なケース。ただし ECMA で強制されていない)|*NameKind*。両方のパーツが大文字になり、前後が逆になっています|
@@ -256,7 +256,7 @@ attribute of the Assembly element in the .fakes:
 ### <a name="parameter-type-naming-conventions"></a>パラメーターの型の名前付け規則
 
 |種類|追加される文字列|
-|-----------|-------------------------|
+|-|-|
 |**型**`T`|T<br /><br /> 名前空間、入れ子になった構造体、およびジェネリック チックは削除されます。|
 |**out パラメーター** `out T`|`TOut`|
 |**ref パラメーター** `ref T`|`TRef`|

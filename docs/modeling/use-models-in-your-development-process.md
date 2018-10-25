@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e2d973d1ec992002b2239383f9dbed228a0d59b
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: e69fe2741329ee7e8b2cae6b99dca150caa022fe
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859394"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49824297"
 ---
 # <a name="use-models-in-your-development-process"></a>開発プロセス内でのモデルの使用
 
@@ -123,7 +123,7 @@ Visual Studio では、システム、アプリケーション、またはコン
 さまざまな種類の図は、さまざまな抽象化レベルの設計を記述するのに役立ちます。 図の種類の多くは、複数のレベルで役立ちます。 次の表は、各種の図の使用方法を示しています。
 
 |設計レベル|図の種類|
-|------------------|-------------------|
+|-|-|
 |ビジネス プロセス<br /><br /> システムで使用するコンテキストを理解すると、ユーザーがコンテキストから必要としているものを理解することができます。|-概念クラス図では、ビジネス プロセス内で使用されるビジネスの概念について説明します。|
 |ユーザー要件<br /><br /> ユーザーがシステムから必要とするものの定義です。|ビジネス ルールとサービス品質要求は、個別のドキュメントに記述できます。|
 |概要設計<br /><br /> システムの全体的な構造、つまり主なコンポーネントとその組み合わせの仕方です。|-依存関係図では、相互に依存する部分に、システムを構成する方法について説明します。 アーキテクチャに従っていることを確認する依存関係図と照らし合わせてプログラム コードを検証することができます。|
@@ -132,9 +132,9 @@ Visual Studio では、システム、アプリケーション、またはコン
 ## <a name="external-resources"></a>外部リソース
 
 |**カテゴリ**|**リンク**|
-|------------------|---------------|
+|-|-|
 |**ビデオ**|![ビデオへのリンク](../data-tools/media/playvideo.gif) [MSDN How Do I ビデオ: UML モデルを使用を (Visual Studio 2010 Ultimate) の図では、作成する方法](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![ビデオへのリンク](../data-tools/media/playvideo.gif) [Channel 9: Visual Studio 2010 での UML](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![ビデオへのリンク](../data-tools/media/playvideo.gif) [MSDN How Do I シリーズ: UML ツールと機能拡張 (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkID=214467)|
-|**フォーラム**|- [Visual Studio の視覚化およびモデリング ツール](http://go.microsoft.com/fwlink/?LinkId=184720)<br />- [Visual Studio の視覚化およびモデリング SDK (DSL ツール)](http://go.microsoft.com/fwlink/?LinkId=184721)|
+|**フォーラム**|- [Visual Studio の視覚化ツールとモデリング ツール](http://go.microsoft.com/fwlink/?LinkId=184720)<br />- [Visual Studio の視覚化ツールとモデリング SDK (DSL ツール)](http://go.microsoft.com/fwlink/?LinkId=184721)|
 |**ブログ**|[Microsoft の DevOps](https://blogs.msdn.microsoft.com/devops/)|
 |**技術記事とジャーナル**|[MSDN アーキテクチャ センター](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Visual Studio アーキテクチャ ツーリング ガイダンス](../modeling/visual-studio-architecture-tooling-guidance.md)|
 

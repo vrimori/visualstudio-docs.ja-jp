@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cd35f8545c1c768b07ff45ff8a6cdf84d24f3c58
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: d344cc8cd30d250c441788a7920d05086c38ca5f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176968"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49940009"
 ---
 # <a name="view-threads-and-tasks-using-the-parallel-stacks-window"></a>スレッドと並列スタック ウィンドウを使用してタスクを表示します。
 **並列スタック**ウィンドウで、マルチ スレッド アプリケーションをデバッグする場合に便利です。 その**スレッド ビュー**アプリケーションのすべてのスレッドの呼び出し履歴情報が表示されます。 これを使用して、スレッドとそれらのスレッドのスタック フレームの間を移動できます。 マネージ コードで、**タスク ビュー**呼び出しの履歴が表示されます<xref:System.Threading.Tasks.Task?displayProperty=fullName>オブジェクト。 ネイティブ コードで、**タスク ビュー**呼び出しの履歴が表示されます[タスク グループ](/cpp/parallel/concrt/task-parallelism-concurrency-runtime)、[並列アルゴリズム](/cpp/parallel/concrt/parallel-algorithms)、[非同期エージェント](/cpp/parallel/concrt/asynchronous-agents)、および[軽量タスク](/cpp/parallel/concrt/task-scheduler-concurrency-runtime)します。  
@@ -92,21 +92,21 @@ ms.locfileid: "39176968"
 ## <a name="tasks-view"></a>タスク ビュー  
  アプリケーションが使用されている場合<xref:System.Threading.Tasks.Task?displayProperty=fullName>オブジェクト (マネージ コード) または`task_handle`並列処理を表現するオブジェクト (ネイティブ コード) が、並列スタック ウィンドウのツールバーのコンボ ボックスを使用に切り替える*タスク ビュー*します。 タスク ビューには、スレッドではなくタスクの呼び出し履歴が表示されます。 タスク ビューがスレッド ビューと異なる点は次のとおりです。  
   
--   タスクを実行していないスレッドの呼び出し履歴は表示されません。  
+- タスクを実行していないスレッドの呼び出し履歴は表示されません。  
   
--   タスクを実行しているスレッドの呼び出し履歴は上下の項目が非表示になり、タスクに関連する重要なフレームだけが表示されます。  
+- タスクを実行しているスレッドの呼び出し履歴は上下の項目が非表示になり、タスクに関連する重要なフレームだけが表示されます。  
   
--   1 つのスレッドに複数のタスクがある場合、それらのタスクの呼び出し履歴が個々のノードに分けられます。  
+- 1 つのスレッドに複数のタスクがある場合、それらのタスクの呼び出し履歴が個々のノードに分けられます。  
   
- 次の図は、右側に [並列スタック] のタスク ビュー、左側に対応するスレッド ビューを示したものです。  
+  次の図は、右側に [並列スタック] のタスク ビュー、左側に対応するスレッド ビューを示したものです。  
   
- ![並列スタック ウィンドウのビューをタスク](../debugger/media/parallel_tasksview.png "Parallel_TasksView")  
+  ![並列スタック ウィンドウのビューをタスク](../debugger/media/parallel_tasksview.png "Parallel_TasksView")  
   
- すべての呼び出し履歴を表示する切り替えスレッド ビューに戻るスタック フレームを右クリックし、をクリックして**スレッドに移動**します。  
+  すべての呼び出し履歴を表示する切り替えスレッド ビューに戻るスタック フレームを右クリックし、をクリックして**スレッドに移動**します。  
   
- ポインターを合わせると、メソッドでは、前の表で説明したように、追加情報を確認できます。 次の図は、スレッド ビューおよびタスク ビューのツールヒントに表示される情報を示しています。  
+  ポインターを合わせると、メソッドでは、前の表で説明したように、追加情報を確認できます。 次の図は、スレッド ビューおよびタスク ビューのツールヒントに表示される情報を示しています。  
   
- ![並列スタック ウィンドウのツールヒント](../debugger/media/parallel_stack_tooltips.png "Parallel_Stack_Tooltips")  
+  ![並列スタック ウィンドウのツールヒント](../debugger/media/parallel_stack_tooltips.png "Parallel_Stack_Tooltips")  
   
 ## <a name="method-view"></a>メソッド ビュー  
  スレッド ビューまたはタスク ビューでツール バーの [メソッド ビュー] アイコンをクリックすると、現在のメソッドを中心とするグラフを表示できます。 メソッド ビューを使用すると、現在のメソッドを呼び出すか現在のメソッドから呼び出されるすべてのスレッドのすべてのメソッドを一目で確認できます。 次の図は、スレッド ビューと共に、同じ情報がメソッド ビューではどのように表示されるかを示したものです。  
@@ -119,8 +119,7 @@ ms.locfileid: "39176968"
  [マルチ スレッド アプリケーションのデバッグの開始します。](../debugger/get-started-debugging-multithreaded-apps.md)   
  [チュートリアル: 並行アプリケーションのデバッグ](../debugger/walkthrough-debugging-a-parallel-application.md)   
  [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)   
- 
-  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
+ [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
  [並列プログラミング](/dotnet/standard/parallel-programming/index)   
  [タスク ウィンドウを使用します。](../debugger/using-the-tasks-window.md)   
  [Task クラス](../extensibility/debugger/task-class-internal-members.md)

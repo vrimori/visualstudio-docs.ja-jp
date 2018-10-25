@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetInfo |Microsoft ドキュメント
+title: IDebugStackFrame2::GetInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b291af7f8f50d672655a098e22ef938d99e0daed
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 31c63db74410e6a742b5076a8ddda25b562f86f6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31119118"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853897"
 ---
 # <a name="idebugstackframe2getinfo"></a>IDebugStackFrame2::GetInfo
 スタック フレームの説明を取得します。  
@@ -45,16 +45,16 @@ int GetInfo (
   
 #### <a name="parameters"></a>パラメーター  
  `dwFieldSpec`  
- [in]フラグの組み合わせ、 [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)のどのフィールドを指定する列挙体、`pFrameInfo`パラメーターは、入力します。  
+ [in]フラグの組み合わせ、 [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)のどのフィールドを指定する列挙体、`pFrameInfo`パラメーター入力します。  
   
  `nRadix`  
  [in]任意の数値情報を書式設定で使用する基数。  
   
  `pFrameInfo`  
- [out]A [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)スタック フレームの説明が入力構造です。  
+ [out]A [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)構造体のスタック フレームの説明が入力されます。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   

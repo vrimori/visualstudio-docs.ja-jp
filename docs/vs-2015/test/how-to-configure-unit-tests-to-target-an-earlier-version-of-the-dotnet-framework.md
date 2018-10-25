@@ -13,12 +13,12 @@ ms.assetid: adb6c011-5abd-41d2-8ead-08cd7579bf37
 caps.latest.revision: 14
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: e0e608f58f19acf0d2ae01b288943f71f9983c6a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 978f4e3edeb83d5980d793d74cf209e8e8f7205e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49173109"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892793"
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>方法: .NET Framework の旧バージョンを対象とした単体テストを構成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,31 +27,31 @@ Microsoft Visual Studio でテスト プロジェクトを作成すると、最�
   
  特定のバージョンの .NET Framework を対象とする単体テスト プロジェクトを作成することができます。 対象とするバージョンは 3.5 以降である必要があり、クライアント バージョンにすることはできません。 Visual Studio では、特定のバージョンを対象とする単体テストに対して次のような基本サポートが可能です。  
   
--   単体テスト プロジェクトを作成して、特定のバージョンの .NET Framework の対象とすることができます。  
+- 単体テスト プロジェクトを作成して、特定のバージョンの .NET Framework の対象とすることができます。  
   
--   ローカル コンピューターの Visual Studio から特定のバージョンの .NET Framework を対象とする単体テストを実行できます。  
+- ローカル コンピューターの Visual Studio から特定のバージョンの .NET Framework を対象とする単体テストを実行できます。  
   
--   コマンド プロンプトから MSTest.exe を使用して、特定のバージョンの .NET Framework を対象とする単体テストを実行できます。  
+- コマンド プロンプトから MSTest.exe を使用して、特定のバージョンの .NET Framework を対象とする単体テストを実行できます。  
   
--   ビルドの一部としてビルド エージェントで単体テストを実行できます。  
+- ビルドの一部としてビルド エージェントで単体テストを実行できます。  
   
- **テスト用 SharePoint アプリケーション**  
+  **テスト用 SharePoint アプリケーション**  
   
- 上記の機能を使用すると、Visual Studio で SharePoint アプリケーションの単体テストおよび統合テストを記述することもできます。 Visual Studio を使用した SharePoint アプリケーションの開発方法に関する [!INCLUDE[crabout](../includes/crabout-md.md)] は、「[SharePoint ソリューションの作成](http://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631)」、「[SharePoint ソリューションのビルドとデバッグ](http://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae)」、および「[SharePoint コードの検証およびデバッグ](http://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c)」を参照してください。  
+  上記の機能を使用すると、Visual Studio で SharePoint アプリケーションの単体テストおよび統合テストを記述することもできます。 Visual Studio を使用した SharePoint アプリケーションの開発方法に関する [!INCLUDE[crabout](../includes/crabout-md.md)] は、「[SharePoint ソリューションの作成](http://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631)」、「[SharePoint ソリューションのビルドとデバッグ](http://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae)」、および「[SharePoint コードの検証およびデバッグ](http://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c)」を参照してください。  
   
- **制限事項**  
+  **制限事項**  
   
- テスト プロジェクトを再ターゲットして、以前のバージョンの .NET Framework を使用する場合、次の制限が適用されます。  
+  テスト プロジェクトを再ターゲットして、以前のバージョンの .NET Framework を使用する場合、次の制限が適用されます。  
   
--   .NET Framework 3.5 では、複数バージョン対応は、単体テストのみを含むテスト プロジェクトでサポートされています。 .NET Framework 3.5 は、コード化された UI テストまたはロード テストなど他のテストの種類をサポートしていません。 単体テスト以外のテストの種類では、再ターゲットはブロックされます。  
+- .NET Framework 3.5 では、複数バージョン対応は、単体テストのみを含むテスト プロジェクトでサポートされています。 .NET Framework 3.5 は、コード化された UI テストまたはロード テストなど他のテストの種類をサポートしていません。 単体テスト以外のテストの種類では、再ターゲットはブロックされます。  
   
--   以前のバージョンの .NET Framework で対象となっているテストの実行は、既定のホスト アダプターでのみサポートされます。 ASP.NET ホスト アダプターではサポートされていません。 ASP.NET 開発サーバーのコンテキストで実行する必要がある ASP.NET アプリケーションは、現在のバージョンの.NET Framework と互換性がある必要があります。  
+- 以前のバージョンの .NET Framework で対象となっているテストの実行は、既定のホスト アダプターでのみサポートされます。 ASP.NET ホスト アダプターではサポートされていません。 ASP.NET 開発サーバーのコンテキストで実行する必要がある ASP.NET アプリケーションは、現在のバージョンの.NET Framework と互換性がある必要があります。  
   
--   .NET Framework 3.5 の複数バージョン対応をサポートしているテストを実行する場合、データ収集サポートは無効になります。 Visual Studio コマンドライン ツールを使用して、コード カバレッジを実行できます。  
+- .NET Framework 3.5 の複数バージョン対応をサポートしているテストを実行する場合、データ収集サポートは無効になります。 Visual Studio コマンドライン ツールを使用して、コード カバレッジを実行できます。  
   
--   .NET Framework 3.5 を使用する単体テストは、リモート コンピューターでは実行できません。  
+- .NET Framework 3.5 を使用する単体テストは、リモート コンピューターでは実行できません。  
   
--   以前のクライアント バージョンのフレームワークに対して、単体テストを対象にすることはできません。  
+- 以前のクライアント バージョンのフレームワークに対して、単体テストを対象にすることはできません。  
   
 ### <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-visual-basic-unit-test-projects"></a>Visual Basic 単体テスト プロジェクト用に特定のバージョンの .NET Framework を再ターゲットする  
   

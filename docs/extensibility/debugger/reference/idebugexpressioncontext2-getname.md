@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionContext2::GetName |Microsoft ドキュメント
+title: IDebugExpressionContext2::GetName |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84ac767c8e2cd53045dec9921f6d90300f1a87e0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5664710d69b8c6d7af315de600fd1fcd27a2b36d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31111193"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873527"
 ---
 # <a name="idebugexpressioncontext2getname"></a>IDebugExpressionContext2::GetName
 評価コンテキストの名前を取得します。  
@@ -44,10 +44,10 @@ int GetName(
  [out]評価コンテキストの名前を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 名前は、この評価コンテキストの説明です。 これは通常この正確な評価のコンテキストを表す式エバリュエーターで解析できます。 たとえば、C++ では、名前のとおりです。  
+## <a name="remarks"></a>Remarks  
+ 名前は、この評価コンテキストの説明です。 通常この正確な評価コンテキストを参照する式エバリュエーターで解析できます。 たとえば、C++ では、名前とおりです。  
   
 ```  
 "{ function-name, source-file-name, module-file-name }"  

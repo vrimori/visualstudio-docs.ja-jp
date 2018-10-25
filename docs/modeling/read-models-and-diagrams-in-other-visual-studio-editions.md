@@ -11,12 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: cfd6188bc4d48f26e85ae8778d75d2fa99ef0f25
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 466c9c6598102381e0b2163b800cc2a9616d7fff
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859680"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936980"
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>Visual Studio の他のエディションでモデルおよびダイアグラムを読み取る
 モデルの作成をサポートしていないバージョンの Visual Studio でモデルを開くと、モデルは読み取り専用モードで開きます。 このモードでは、ダイアグラムのレイアウトは変更できますが、モデルは変更できません。
@@ -47,16 +47,16 @@ ms.locfileid: "47859680"
 ## <a name="changes-that-you-can-make-in-read-only-mode"></a>読み取り専用モードで行える変更
  モデルの作成をサポートしていないバージョンの Visual Studio でモデルおよびその図を開く場合、モデルは変更できません。 つまり、図またはモデル エクスプローラーに表示されている要素と関係は変更できません。 ただし、図のレイアウトに次のような変更を加えることはできます:
 
--   図形およびコネクタを図に再配置する。
+- 図形およびコネクタを図に再配置する。
 
--   図形を展開および折りたたむ。
+- 図形を展開および折りたたむ。
 
- これらの変更は保存できます。 変更内容を他のユーザーに表示されるようにする場合は、送信しなければならない以上で、更新された **.layout**ファイル。
+  これらの変更は保存できます。 変更内容を他のユーザーに表示されるようにする場合は、送信しなければならない以上で、更新された **.layout**ファイル。
 
 ## <a name="RelatedTopics"></a> 関連トピック
 
 |Title|説明|
-|-----------|-----------------|
+|-|-|
 |[依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)|レイヤー図には、既存のアーキテクチャまたは提案されるアーキテクチャの構造が示されます。 コードを記述する際に、レイヤー図と照らし合わせて自動的に検証されるようにできます。|
 
 ## <a name="see-also"></a>関連項目

@@ -1,7 +1,7 @@
 ---
-title: '方法: - Just-in-time デバッガーへの応答 |Microsoft Docs'
+title: 単にデバッガーを無効にする |Microsoft Docs
 ms.custom: ''
-ms.date: 05/23/17
+ms.date: 05/23/18
 ms.technology: vs-ide-debug
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -13,41 +13,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fd3f565d8bb58ae290b0b569bb61d4cb57e8edaa
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 147e16bab14a6a038622804cf9c57e5fdc92bf02
+ms.sourcegitcommit: c5e72875206b8c5737c29d5b1ec7b86eec747303
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39179776"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49382780"
 ---
-# <a name="how-to-respond-to-the-just-in-time-debugger"></a>方法: - Just-in-time デバッガーへの応答
+# <a name="disable-the-just-in-time-debugger"></a>単にデバッガーを無効にします。 
 
-時にのみ表示される場合に行う必要がありますアクション デバッガー ダイアログ ボックスでは、何を行うに依存します。
+Just-In-Time デバッガー ダイアログ ボックスは、アプリが実行中にエラーが発生したときに開くし、アプリが継続するを防ぐ可能性があります。 
 
-#### <a name="if-you-want-to-fix-or-debug-the-error-visual-studio-users"></a>解決する方法 (Visual Studio のユーザー) のエラーをデバッグする場合
+Just-In-Time デバッガーでは、エラーをデバッグする Visual Studio を起動するオプションを選択できます。 必要があります[Visual Studio](http://visualstudio.microsoft.com)または別の選択したデバッガーが、エラーに関する詳細情報を表示またはそれをデバッグしようとしています。 インストールされています。 
 
-- 必要があります[Visual Studio がインストールされている](http://visualstudio.microsoft.com)デバッグしようとして、エラーに関する詳細情報を表示します。 詳細については、次を参照してください。 [Just-In-Time デバッガーを使用してデバッグ](../debugger/debug-using-the-just-in-time-debugger.md)します。 エラーを解決することはできません、アプリを修正する場合は、エラーを解決するのには、アプリの所有者に問い合わせてください。
+Visual Studio のユーザーを参照してください、エラーをデバッグしようとする必要がある場合[Just-In-Time デバッガーを使用してデバッグ](../debugger/debug-using-the-just-in-time-debugger.md)します。 場合は、エラーを修正するか、開けない Just-In-Time デバッガーを保持することはできません、 [Visual Studio からデバッグを使用しないジャスト イン タイム](debug-using-the-just-in-time-debugger.md#BKMK_Enabling)します。 
 
-#### <a name="if-you-want-to-prevent-the-just-in-time-debugger-dialog-box-from-appearing"></a>Just-In-Time デバッガー ダイアログ ボックスが表示されないようにする場合
+Visual Studio のインストールが不要になった操作を行いますがあれば、可能性がある必要があります。 [Windows レジストリからデバッグを使用しないジャスト イン タイム](debug-using-the-just-in-time-debugger.md#disable-just-in-time-debugging-from-the-windows-registry)します。 
 
-Just ポイントイン タイムを防ぐために手順を実行することができますデバッガー ダイアログ ボックスが表示されません。 アプリでは、エラーを処理する場合は、通常、アプリを実行できます。
+Visual Studio インストールを持っていない場合は、時間で Just スクリプトのデバッグまたはサーバー側のデバッグを無効にしてデバッグを防ぐことができます。 
 
-1. (Web アプリ)Web アプリを実行しようとする場合は、スクリプトのデバッグを無効にできます。
+- Web アプリを実行しようとしている場合は、スクリプトのデバッグを無効にします。
+  
+  Windows で**コントロール パネルの ** > **ネットワークとインターネット** > **インターネット オプション**、**無効にするスクリプト デバッグ (Internet Explorer)** と**スクリプトのデバッグ (その他) を無効にする**します。 正確な手順と設定は、Windows と、ブラウザーのバージョンによって異なります。
+  
+  ![インターネット オプションの JIT](../debugger/media/jitinternetoptions.png "JIT インターネット オプション")
+  
+- IIS で ASP.NET web アプリをホストしている場合は、サーバー側のデバッグを無効にします。
 
-    Internet Explorer または Edge では、[インターネット オプション] ダイアログ ボックスでスクリプトのデバッグを無効にします。 これらの設定にアクセスすることができます、**コントロール パネルの** > **ネットワークとインターネット** > **インターネット オプション**(正確な手順が異なります、Windows のバージョンおよびお使いのブラウザー)。
+  1. IIS マネージャーで**機能ビュー**下で、 **ASP.NET**セクションで、ダブルクリックして **.NET コンパイル**、またはそれを選択し、 **機能を開く**で、**アクション**ウィンドウ。 
+  1. **動作** > **デバッグ**、 **False**します。 手順は、古いバージョンの IIS で異なります。
 
-    ![JITInternetOptions](../debugger/media/jitinternetoptions.png "JITInternetOptions")
+時間内でデバッグを無効にした後、アプリでは、エラーを処理し、通常どおりに実行することができます。 
 
-    エラーを確認したところ、web ページを閉じてください。 この設定を変更しても問題が解決しない場合は、問題を解決する web アプリの所有者にお問い合わせください。
+アプリには、まだハンドルされないエラーがある場合、エラー メッセージが表示することがあります。 またはアプリがクラッシュまたはハング可能性があります。 エラーが修正されるまで、アプリが正常に実行できません。 アプリの所有者に連絡し、その修正を依頼しようとすることができます。
 
-3. (Visual Studio のユーザー)Visual Studio のインストールがある (または以前にインストールし、削除した場合)、[デバッグを使用しないジャスト イン タイム](../debugger/debug-using-the-just-in-time-debugger.md)再度アプリを実行しようとします。
-
-    > [!IMPORTANT]
-    > ジャスト イン タイムを無効にした場合のデバッグと、アプリで未処理の例外 (エラー) が発生した、標準エラー ダイアログが代わりに、表示されますか、または、アプリのクラッシュやハングします。 (ユーザーまたはアプリの所有者の) によって、エラーが修正されるまで、アプリは通常どおり実行されません。
-
-2. (ASP.NET および IIS)IIS で ASP.NET Web アプリをホストしている場合は、サーバー側のデバッグを無効にします。
-
-    IIS マネージャーで、サーバー ノードを右クリックし、選択**機能ビューに切り替える**します。 [ASP.NET] セクションで次のように選択します。 **.NET コンパイル**選択するかどうかを確認して、 **False** (手順では古いバージョンの IIS で異なります) のデバッグ動作として。
-
-## <a name="see-also"></a>関連項目
- [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)

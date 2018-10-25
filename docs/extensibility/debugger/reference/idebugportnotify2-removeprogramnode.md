@@ -1,5 +1,5 @@
 ---
-title: IDebugPortNotify2::RemoveProgramNode |Microsoft ドキュメント
+title: IDebugPortNotify2::RemoveProgramNode |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60c6e7141d7a433bd40e0ab02802408c8a04c76e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b1e56af8e5abe649a83c61d8404d1df80310485b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31116582"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875581"
 ---
 # <a name="idebugportnotify2removeprogramnode"></a>IDebugPortNotify2::RemoveProgramNode
-実行されているポートからデバッグできるプログラムの登録を解除します。  
+実行されているポートからデバッグできるプログラムを登録解除します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +41,13 @@ int RemoveProgramNode(
   
 #### <a name="parameters"></a>パラメーター  
  `pProgramNode`  
- [in][IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)を登録解除するプログラムを表す objecy です。  
+ [in][IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)登録解除するプログラムを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドを呼び出して追加されたプログラム ノードを削除する、 [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ このメソッドの呼び出しで追加されたプログラム ノードを削除する、 [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)メソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)   

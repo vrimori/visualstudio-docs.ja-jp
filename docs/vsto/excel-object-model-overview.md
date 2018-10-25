@@ -22,33 +22,33 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4c5dee963faaf52b6e1511d0b689ebe6ee5554e2
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 8ca93cae45eed272b683275896efcf83229ca9a3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35673318"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880794"
 ---
 # <a name="excel-object-model-overview"></a>Excel オブジェクト モデルの概要
   Microsoft Office Excel を使用するソリューションを開発するため、Excel オブジェクト モデルによって提供されるオブジェクトと対話することができます。 このトピックでは、特に重要なオブジェクトについて説明します。  
   
--   <xref:Microsoft.Office.Interop.Excel.Application>  
+- <xref:Microsoft.Office.Interop.Excel.Application>  
   
--   <xref:Microsoft.Office.Interop.Excel.Workbook>  
+- <xref:Microsoft.Office.Interop.Excel.Workbook>  
   
--   <xref:Microsoft.Office.Interop.Excel.Worksheet>  
+- <xref:Microsoft.Office.Interop.Excel.Worksheet>  
   
--   <xref:Microsoft.Office.Interop.Excel.Range>  
+- <xref:Microsoft.Office.Interop.Excel.Range>  
   
- [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
+  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- オブジェクト モデルは、ユーザー インターフェイスに緊密に従います。 <xref:Microsoft.Office.Interop.Excel.Application> オブジェクトは、アプリケーション全体を表し、それぞれの <xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトには `Worksheet` オブジェクトのコレクションが含まれます。 つまり、セルを表す主要な概念は <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトになり、これにより個々のセルやセルのグループを使用できるようになります。  
+  オブジェクト モデルは、ユーザー インターフェイスに緊密に従います。 <xref:Microsoft.Office.Interop.Excel.Application> オブジェクトは、アプリケーション全体を表し、それぞれの <xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトには `Worksheet` オブジェクトのコレクションが含まれます。 つまり、セルを表す主要な概念は <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトになり、これにより個々のセルやセルのグループを使用できるようになります。  
   
- Visual Studio での Office プロジェクトを提供する Excel オブジェクト モデルだけでなく*ホスト項目*と*ホスト コントロール*Excel オブジェクト モデルの一部のオブジェクトを拡張します。 ホスト項目とホスト コントロールは、これらが拡張する Excel オブジェクトと同様に動作しますが、これ以外にデータ バインディング機能や他のイベントなどの追加機能もあります。 詳細については、次を参照してください。[拡張オブジェクトを使用して Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)と[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)します。  
+  Visual Studio での Office プロジェクトを提供する Excel オブジェクト モデルだけでなく*ホスト項目*と*ホスト コントロール*Excel オブジェクト モデルの一部のオブジェクトを拡張します。 ホスト項目とホスト コントロールは、これらが拡張する Excel オブジェクトと同様に動作しますが、これ以外にデータ バインディング機能や他のイベントなどの追加機能もあります。 詳細については、次を参照してください。[拡張オブジェクトを使用して Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)と[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)します。  
   
- ここでは、Excel オブジェクト モデルの概念について簡単に説明します。 全体の Excel オブジェクト モデルの詳細を説明できます資料については、次を参照してください。 [Excel オブジェクト モデルのドキュメントを使用して、](#ExcelOMDocumentation)します。  
+  ここでは、Excel オブジェクト モデルの概念について簡単に説明します。 全体の Excel オブジェクト モデルの詳細を説明できます資料については、次を参照してください。 [Excel オブジェクト モデルのドキュメントを使用して、](#ExcelOMDocumentation)します。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i: を使用してイベント ハンドラーで、Excel 2007 アドイン?](http://go.microsoft.com/fwlink/?LinkID=130291)、および[How do i: を使用して図形をバブル チャートを作成するには。excel しますか](http://go.microsoft.com/fwlink/?LinkID=130313)。  
+  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i: を使用してイベント ハンドラーで、Excel 2007 アドイン?](http://go.microsoft.com/fwlink/?LinkID=130291)、および[How do i: を使用して図形をバブル チャートを作成するには。excel しますか](http://go.microsoft.com/fwlink/?LinkID=130313)。  
   
 ## <a name="access-objects-in-an-excel-project"></a>Excel プロジェクトでオブジェクトにアクセス  
  Excel の新しい VSTO アドイン プロジェクトを作成すると、Visual Studio は自動的に作成、 *ThisAddIn.vb*または*ThisAddIn.cs*コード ファイル。 `Me.Application` または `this.Application` を使用して、アプリケーション オブジェクトにアクセスすることができます。  
@@ -69,26 +69,26 @@ ms.locfileid: "35673318"
   
  Excel ドキュメントのデータは高度に構造化されているため、オブジェクト モデルは階層的で単純です。 Excel では、何百ものオブジェクトが、操作可能な場合がありますが、使用可能なオブジェクトの小さなサブセットに重点を置いた、最初に、オブジェクト モデルを取得できます。 このようなオブジェクトには次の 4 つがあります。  
   
--   アプリケーション  
+- アプリケーション  
   
--   ブック  
+- ブック  
   
--   ワークシート  
+- ワークシート  
   
--   範囲  
+- 範囲  
   
- Excel の作業の多くはこれら 4 つのオブジェクトとそのメンバーを中心に行われます。  
+  Excel の作業の多くはこれら 4 つのオブジェクトとそのメンバーを中心に行われます。  
   
 ### <a name="application-object"></a>Application オブジェクト  
  Excel の <xref:Microsoft.Office.Interop.Excel.Application> オブジェクトは、Excel のアプリケーション自体を表します。 <xref:Microsoft.Office.Interop.Excel.Application> オブジェクトは、実行中のアプリケーション、そのインスタンスに適用されるオプション、そのインスタンス内で開いている現在のユーザー オブジェクトに関する多くの情報を公開します。  
   
 > [!NOTE]  
->  設定しないでください、<xref:Microsoft.Office.Interop.Excel.ApplicationClass.EnableEvents%2A>のプロパティ、<xref:Microsoft.Office.Interop.Excel.Application>に Excel のオブジェクト**false**します。 このプロパティを false に設定すると、ホスト コントロールのイベントを含む、すべてのイベントが Excel で発生しなくなります。  
+>  Excel の <xref:Microsoft.Office.Interop.Excel.ApplicationClass.EnableEvents%2A> オブジェクトの <xref:Microsoft.Office.Interop.Excel.Application> プロパティを **false**と呼ばれるオブジェクトを拡張します。 このプロパティを false に設定すると、ホスト コントロールのイベントを含む、すべてのイベントが Excel で発生しなくなります。  
   
 ### <a name="workbook-object"></a>Workbook オブジェクト  
  <xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトは、Excel アプリケーション内の 1 つのブックを表します。  
   
- Visual Studio の Office 開発ツールは、<xref:Microsoft.Office.Tools.Excel.Workbook> 型を提供することにより、<xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトを拡張します。 この型により、<xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトのすべての機能にアクセスできるようになります。 詳細については、次を参照してください。 [Workbook ホスト項目](../vsto/workbook-host-item.md)します。  
+ Visual Studio の Office 開発ツールには、 <xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトを拡張する <xref:Microsoft.Office.Tools.Excel.Workbook> 型が用意されています。 この型により、<xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトのすべての機能にアクセスできるようになります。 詳細については、次を参照してください。 [Workbook ホスト項目](../vsto/workbook-host-item.md)します。  
   
 ### <a name="worksheet-object"></a>Worksheet オブジェクト  
  <xref:Microsoft.Office.Interop.Excel.Worksheet> オブジェクトは <xref:Microsoft.Office.Interop.Excel.Worksheets> コレクションのメンバーです。 <xref:Microsoft.Office.Interop.Excel.Worksheet> のプロパティ、メソッド、およびイベントの多くは、<xref:Microsoft.Office.Interop.Excel.Application> または <xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトによって提供されるメンバーと同一か類似しています。  

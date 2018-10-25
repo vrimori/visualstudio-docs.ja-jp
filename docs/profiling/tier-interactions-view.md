@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4636a391e2472dbff427956077719e75f34a81de
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d92144a6b9bd94e23397a033fbbee45bd5aeed4a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31584972"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917772"
 ---
 # <a name="tier-interactions-view"></a>階層相互作用のビュー
 
@@ -34,7 +34,7 @@ ms.locfileid: "31584972"
 
 - マスター ウィンドウでデータベース呼び出しノードをクリックすると、データベース呼び出しのインスタンスのデータが詳細ウィンドウに表示されます。
 
- 時間は、ミリ秒数または CPU クロック ティック数として表示されます。 表示される時間単位を変更するには、**[ツール]** メニュー、**[オプション]** の順にクリックして、**[時間の値を次の単位で表示]** オプションのいずれかを選択します。
+  時間は、ミリ秒数または CPU クロック ティック数として表示されます。 表示される時間単位を変更するには、**[ツール]** メニュー、**[オプション]** の順にクリックして、**[時間の値を次の単位で表示]** オプションのいずれかを選択します。
 
 ## <a name="master-pane"></a>マスター ウィンドウ
 

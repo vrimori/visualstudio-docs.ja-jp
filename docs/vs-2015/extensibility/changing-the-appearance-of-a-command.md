@@ -17,12 +17,12 @@ ms.assetid: da2474fa-f92d-4e9e-b8bf-67c61bf249c2
 caps.latest.revision: 24
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 832a6732789d8e218a739b03fb5aa6541ec8276f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 53b4470a3df4a1501145b476991a475bddae6813
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49294724"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834254"
 ---
 # <a name="changing-the-appearance-of-a-command"></a>コマンドの外観の変更
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "49294724"
   
  コマンドの外観を変更するには、これらの操作を実行します。  
   
--   コマンド テーブルのファイルでコマンドの定義では、適切なフラグを指定します。  
+- コマンド テーブルのファイルでコマンドの定義では、適切なフラグを指定します。  
   
--   使用して、<xref:Microsoft.VisualStudio.Shell.OleMenuCommandService>サービス。  
+- 使用して、<xref:Microsoft.VisualStudio.Shell.OleMenuCommandService>サービス。  
   
--   実装、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>インターフェイスおよび生のコマンド オブジェクトを変更します。  
+- 実装、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>インターフェイスおよび生のコマンド オブジェクトを変更します。  
   
- 次の手順では、検索およびマネージ パッケージ フレームワーク (MPF) を使用して、コマンドの外観を更新する方法を示します。  
+  次の手順では、検索およびマネージ パッケージ フレームワーク (MPF) を使用して、コマンドの外観を更新する方法を示します。  
   
 ### <a name="to-change-the-appearance-of-a-menu-command"></a>メニュー コマンドの外観を変更するには  
   

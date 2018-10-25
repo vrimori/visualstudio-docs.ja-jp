@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 31b632177ba941ad0e5ddb5700ae430573fd817d
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 0bce0be0f6c7953c44601edd090b1e1e7d3b6f6a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36758454"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832993"
 ---
 # <a name="delay-activity-designer"></a>Delay アクティビティ デザイナー
 
@@ -38,14 +38,14 @@ ms.locfileid: "36758454"
 次の表は、<xref:System.Activities.Statements.Delay>プロパティと、デザイナーでの使用方法について説明します。 これらのプロパティは、プロパティ グリッドで編集でき、その一部は、ワークフロー デザイナー画面で編集できます。
 
 |プロパティ名|必須|使用方法|
-|-------------------|--------------|-----------|
+|-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.Delay> アクティビティの表示名。 既定値は Delay です。 ただし、<xref:System.Activities.Activity.DisplayName%2A>値が厳密には必要ありません、1 つを使用することをお勧めします。|
 |<xref:System.Activities.Statements.Delay.Duration%2A>|True|ワークフローの実行を遅らせる時間の長さ。 このプロパティは、プロパティ グリッドで設定します。 時間の長さを指定するには、00:00:00 という形式のリテラル <xref:System.TimeSpan>、または Visual Basic の式を入力します。|
 
 ## <a name="see-also"></a>関連項目
 
 - [Primitives](../workflow-designer/primitives-activity-designers.md)
-- [割り当てる](../workflow-designer/assign-activity-designer.md)
+- [Assign](../workflow-designer/assign-activity-designer.md)
 - [Delay アクティビティ デザイナー](../workflow-designer/delay-activity-designer.md)
 - [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md)
 - [WriteLine](../workflow-designer/writeline-activity-designer.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject::GetCount |Microsoft ドキュメント
+title: IDebugArrayObject::GetCount |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 81788423523837b6e8b29a8869abca7b393cf37a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4edfaf7b9ef655473244bdcd18bf6b2c31b8210d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31101067"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891402"
 ---
 # <a name="idebugarrayobjectgetcount"></a>IDebugArrayObject::GetCount
-配列内の要素の数を取得します。  
+配列内の要素数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,13 +43,13 @@ int GetCount(
   
 #### <a name="parameters"></a>パラメーター  
  `pdwElements`  
- [out]カウントを返します。  
+ [out]数を返します。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、1 次元の配列として、配列オブジェクトがマルチ ディメンションの場合でもすべての要素の配列オブジェクトのように表示されます。 たとえば、配列を指定`myarray[3][2][6]`、メソッドは 36 で、`pdwElements`パラメーター。 使用して、 [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md)を一度に 1 つの個々 の要素を取得する方法です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、1 次元の配列として配列オブジェクトが多次元である場合でもすべて配列オブジェクトの要素のように表示されます。 たとえば、配列を指定`myarray[3][2][6]`、メソッドはで 36、`pdwElements`パラメーター。 使用して、 [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md)メソッドに一度に 1 つの個々 の要素を取得します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

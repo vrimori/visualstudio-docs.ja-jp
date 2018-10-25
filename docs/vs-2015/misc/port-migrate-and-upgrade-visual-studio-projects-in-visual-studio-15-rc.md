@@ -21,12 +21,12 @@ caps.latest.revision: 6
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: a9a57cacc8d8d37c13e7380f5b68c800c5c31075
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5ee4eb0490e68f2ea4f83c728ed684b1e939467b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49226188"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893749"
 ---
 # <a name="port-migrate-and-upgrade-visual-studio-projects-in-visual-studio-quot15quot-rc"></a>ポート、移行、および Visual Studio で Visual Studio プロジェクトをアップグレード&quot;15&quot; RC
 かどうか、ソリューション、プロジェクト、ファイル、およびその他の資産で作成したのいずれかを変更する必要がありますを知りたいとしてが Visual Studio の新しいバージョンに移行すると[!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)]、 [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]、または[!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]いずれかで実行する前に[!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)]または[!INCLUDE[vs_dev15_md](../includes/vs-dev15-md.md)]. このページを支援します。 
@@ -88,19 +88,19 @@ ms.locfileid: "49226188"
 ## <a name="troubleshooting-project-compatibility-issues"></a>プロジェクトの互換性の問題のトラブルシューティング  
  ここでは、プロジェクトが [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)] または [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]で開かない場合に実行できるいくつかの対処方法を示します。  
   
--   [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)] または [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] でサポートされていないプロジェクトを開く場合、そのプロジェクトに関連付けられているバージョンの Visual Studio がインストールされていなければ、プロジェクトの種類がサポートされていないことを示すメッセージが表示されることがあります。その際、 **[プロジェクトとソリューションの変更をレビュー]** ダイアログ ボックスの **[サポートされていないプロジェクト]** の下にそのプロジェクトの種類が表示されることがあります。 この問題を解決するには、Windows の **コントロール パネル**を開き、 **[Visual Studio]**、 **[変更]**、 **[修復]** の順に選択します。 ここで、必要なバージョンをインストールできます。  
+- [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)] または [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] でサポートされていないプロジェクトを開く場合、そのプロジェクトに関連付けられているバージョンの Visual Studio がインストールされていなければ、プロジェクトの種類がサポートされていないことを示すメッセージが表示されることがあります。その際、 **[プロジェクトとソリューションの変更をレビュー]** ダイアログ ボックスの **[サポートされていないプロジェクト]** の下にそのプロジェクトの種類が表示されることがあります。 この問題を解決するには、Windows の **コントロール パネル**を開き、 **[Visual Studio]**、 **[変更]**、 **[修復]** の順に選択します。 ここで、必要なバージョンをインストールできます。  
   
--   [!INCLUDE[vs_dev12_expwin](../includes/vs-dev12-expwin-md.md)] でデスクトップ アプリのプロジェクトを開こうとすると、エラーが発生し、"このエディションの Visual Studio は、[!INCLUDE[win81](../includes/win81-md.md)] アプリのみをサポートします。" または "このプロジェクトは、Visual Studio の現在のエディションと互換性がありません。" というメッセージが表示されます。 [!INCLUDE[vs_dev12_expwin](../includes/vs-dev12-expwin-md.md)] は、Windows 8.1 向けに設計された Windows ストア アプリの開発、テスト、展開用に制限されています。 デスクトップ アプリ プロジェクトを開くには、そのプロジェクトの種類をサポートしている Visual Studio のエディションを使用する必要があります。  
+- [!INCLUDE[vs_dev12_expwin](../includes/vs-dev12-expwin-md.md)] でデスクトップ アプリのプロジェクトを開こうとすると、エラーが発生し、"このエディションの Visual Studio は、[!INCLUDE[win81](../includes/win81-md.md)] アプリのみをサポートします。" または "このプロジェクトは、Visual Studio の現在のエディションと互換性がありません。" というメッセージが表示されます。 [!INCLUDE[vs_dev12_expwin](../includes/vs-dev12-expwin-md.md)] は、Windows 8.1 向けに設計された Windows ストア アプリの開発、テスト、展開用に制限されています。 デスクトップ アプリ プロジェクトを開くには、そのプロジェクトの種類をサポートしている Visual Studio のエディションを使用する必要があります。  
   
-     Visual Studio のエディションに関する詳細については、「 [Microsoft Visual Studio Products (Microsoft Visual Studio 製品)](http://go.microsoft.com/fwlink/?LinkId=254332)」をご覧ください。  
+   Visual Studio のエディションに関する詳細については、「 [Microsoft Visual Studio Products (Microsoft Visual Studio 製品)](http://go.microsoft.com/fwlink/?LinkId=254332)」をご覧ください。  
   
--   [!INCLUDE[vs_dev12_expwin](../includes/vs-dev12-expwin-md.md)] Desktop で Windows ストア アプリ プロジェクトを開こうとすると、エラーが発生します。 [!INCLUDE[vs_dev12_expwin](../includes/vs-dev12-expwin-md.md)] Desktop を使用して Windows ストア アプリをビルドできません。 Windows ストア アプリをビルドするには、[!INCLUDE[vs_dev12_expwin](../includes/vs-dev12-expwin-md.md)] をインストールします。 または、Microsoft のすべてのプラットフォームと Web 用のアプリを開発するには、Visual Studio Professional 2013 を試してください。  
+- [!INCLUDE[vs_dev12_expwin](../includes/vs-dev12-expwin-md.md)] Desktop で Windows ストア アプリ プロジェクトを開こうとすると、エラーが発生します。 [!INCLUDE[vs_dev12_expwin](../includes/vs-dev12-expwin-md.md)] Desktop を使用して Windows ストア アプリをビルドできません。 Windows ストア アプリをビルドするには、[!INCLUDE[vs_dev12_expwin](../includes/vs-dev12-expwin-md.md)] をインストールします。 または、Microsoft のすべてのプラットフォームと Web 用のアプリを開発するには、Visual Studio Professional 2013 を試してください。  
   
--   プロジェクトで [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] に固有の機能が必要な場合は、以前のバージョンでそのプロジェクトを開くことはできません。  
+- プロジェクトで [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] に固有の機能が必要な場合は、以前のバージョンでそのプロジェクトを開くことはできません。  
   
--   [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] を使用している場合に、 [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]で作成されたプロジェクトを開くには、プロジェクト システムをカスタマイズして、 [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]の機能を組み込む方法を使用できます。 これを行う方法については、次を参照してください。[を行うカスタム プロジェクト バージョンの認識](../misc/making-custom-projects-version-aware.md)します。  
+- [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] を使用している場合に、 [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]で作成されたプロジェクトを開くには、プロジェクト システムをカスタマイズして、 [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]の機能を組み込む方法を使用できます。 これを行う方法については、次を参照してください。[を行うカスタム プロジェクト バージョンの認識](../misc/making-custom-projects-version-aware.md)します。  
   
- 追加のトラブルシューティング情報については、サポート技術情報の「 ["Visual Studio 2013 Compatibility (Visual Studio 2013 の互換性)](http://support.microsoft.com/kb/2863286) 」を参照してください。  
+  追加のトラブルシューティング情報については、サポート技術情報の「 ["Visual Studio 2013 Compatibility (Visual Studio 2013 の互換性)](http://support.microsoft.com/kb/2863286) 」を参照してください。  
   
 ##  <a name="file"></a> ファイル  
  次の一覧では、 [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] で各ファイルの種類がサポートされているかどうか、 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] と Visual Studio 2010 SP1 でファイルを開くことができるかどうか、および互換性を保持するために変更を加える必要があるかどうかを確認できます。  

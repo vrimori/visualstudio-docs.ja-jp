@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetContainer |Microsoft ドキュメント
+title: IDebugField::GetContainer |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 826274b42aad8e695772abab75d4a2d5f2611336
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7b9078fdc7849912436c0b8dc3d72338f746b36c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31116672"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942037"
 ---
 # <a name="idebugfieldgetcontainer"></a>IDebugField::GetContainer
 このメソッドは、フィールドのコンテナーを取得します。  
@@ -41,13 +41,13 @@ int GetContainer(
   
 #### <a name="parameters"></a>パラメーター  
  `ppContainerField`  
- [out]によって表されるコンテナーが返されます、 [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)インターフェイスです。  
+ [out]によって表されるコンテナーを返します、 [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)インターフェイス。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このフィールドが返された、コンテナーを持たないかどうか`ppContainerField`は null 値になります。  
+## <a name="remarks"></a>Remarks  
+ このフィールドが、返された、コンテナーを持たないかどうか`ppContainerField`は null 値になります。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   

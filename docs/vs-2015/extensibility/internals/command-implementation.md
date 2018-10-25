@@ -15,25 +15,25 @@ ms.assetid: c782175c-cce4-4bd0-8374-4a897ceb1b3d
 caps.latest.revision: 25
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 46c2a944227218db2294258081fbd1af2d5f084b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ee10719fa8f0c5c45d9b45f3b1d686f454d808a4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49305375"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925915"
 ---
 # <a name="command-implementation"></a>コマンドの実装
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 VSPackage のコマンドを実装するには、次のタスクを実行する必要があります。  
   
-1.  .Vsct ファイルでは、コマンド グループをセットアップし、コマンドを追加します。 詳細については、次を参照してください。 [Visual Studio Command Table (します。Vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)'  
+1. .Vsct ファイルでは、コマンド グループをセットアップし、コマンドを追加します。 詳細については、次を参照してください。 [Visual Studio Command Table (します。Vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)'  
   
-2.  Visual Studio でのコマンドを登録します。  
+2. Visual Studio でのコマンドを登録します。  
   
-3.  コマンドを実装します。  
+3. コマンドを実装します。  
   
- 次のセクションでは、登録およびコマンドを実装する方法を説明します。  
+   次のセクションでは、登録およびコマンドを実装する方法を説明します。  
   
 ## <a name="registering-commands-with-visual-studio"></a>Visual Studio でのコマンドを登録します。  
  コマンドがメニューを表示するかどうか、追加する必要あります、 <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> VSPackage、およびメニューの名前またはそのリソース ID のいずれかの値として使用する  
@@ -68,35 +68,35 @@ if ( null != mcs )
 ## <a name="query-status-methods"></a>状態のクエリ メソッド  
  いずれかを実装している場合、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>メソッドまたは<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A>メソッドで、コマンド、コマンドが所属するセットの GUID を確認し、コマンドの ID。 次のガイドラインに従ってください。  
   
--   いずれかのメソッドの実装を返す必要があります、GUID が認識されないかどうか<xref:Microsoft.VisualStudio.OLE.Interop.Constants>します。  
+- いずれかのメソッドの実装を返す必要があります、GUID が認識されないかどうか<xref:Microsoft.VisualStudio.OLE.Interop.Constants>します。  
   
--   いずれかのメソッドの実装、GUID は認識が、コマンドは実際に実装していない場合、メソッドが返す必要があります<xref:Microsoft.VisualStudio.OLE.Interop.Constants>します。  
+- いずれかのメソッドの実装、GUID は認識が、コマンドは実際に実装していない場合、メソッドが返す必要があります<xref:Microsoft.VisualStudio.OLE.Interop.Constants>します。  
   
--   かどうかには、いずれかのメソッドの実装は、GUID と、コマンドの両方を認識し、メソッドは、すべてのコマンドのコマンド フラグ フィールドを設定する必要があります (で、`prgCmds`パラメーター)、次のフラグを使用しています。  
+- かどうかには、いずれかのメソッドの実装は、GUID と、コマンドの両方を認識し、メソッドは、すべてのコマンドのコマンド フラグ フィールドを設定する必要があります (で、`prgCmds`パラメーター)、次のフラグを使用しています。  
   
-    -   <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> 場合は、コマンドがサポートされています。  
+  -   <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> 場合は、コマンドがサポートされています。  
   
-    -   <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> 場合は、コマンドは表示されません。  
+  -   <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> 場合は、コマンドは表示されません。  
   
-    -   <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> コマンドがオンにし、あると思われる場合はチェックされています。  
+  -   <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> コマンドがオンにし、あると思われる場合はチェックされています。  
   
-    -   <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> 場合は、コマンドが有効になっているとします。  
+  -   <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> 場合は、コマンドが有効になっているとします。  
   
-    -   <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> ショートカット メニューに表示される場合、コマンドを非表示にする場合。  
+  -   <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> ショートカット メニューに表示される場合、コマンドを非表示にする場合。  
   
-    -   <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> コマンドがメニュー コント ローラーが有効でないかどうかが、ドロップダウン メニューからリストが空でないとは引き続き使用できます。 (このフラグはあまり使用されません。)  
+  -   <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> コマンドがメニュー コント ローラーが有効でないかどうかが、ドロップダウン メニューからリストが空でないとは引き続き使用できます。 (このフラグはあまり使用されません。)  
   
--   コマンドを使用して、.vsct ファイルで定義したかどうか、`TextChanges`フラグは、次のパラメーターを設定します。  
+- コマンドを使用して、.vsct ファイルで定義したかどうか、`TextChanges`フラグは、次のパラメーターを設定します。  
   
-    -   設定、`rgwz`の要素、`pCmdText`パラメーターをコマンドの新しいテキスト。  
+  -   設定、`rgwz`の要素、`pCmdText`パラメーターをコマンドの新しいテキスト。  
   
-    -   設定、`cwActual`の要素、`pCmdText`パラメーターをコマンド文字列のサイズ。  
+  -   設定、`cwActual`の要素、`pCmdText`パラメーターをコマンド文字列のサイズ。  
   
- オートメーション機能を処理するために、コマンドの目的は特にない限りは、現在のコンテキストは、automation 関数ではないことを確認しますをことも。  
+  オートメーション機能を処理するために、コマンドの目的は特にない限りは、現在のコンテキストは、automation 関数ではないことを確認しますをことも。  
   
- 特定のコマンドをサポートすることを示す、返す<xref:Microsoft.VisualStudio.VSConstants.S_OK>します。 その他のすべてのコマンドでは、返す<xref:Microsoft.VisualStudio.OLE.Interop.Constants>します。  
+  特定のコマンドをサポートすることを示す、返す<xref:Microsoft.VisualStudio.VSConstants.S_OK>します。 その他のすべてのコマンドでは、返す<xref:Microsoft.VisualStudio.OLE.Interop.Constants>します。  
   
- 次の例では、クエリ状態メソッド最初は、コンテキストは、automation 関数ではありませんし、適切なコマンド セットの GUID とコマンド ID を検索してください。 コマンド自体は、有効にされ、サポートに設定されます。 その他のコマンドがサポートされていません。  
+  次の例では、クエリ状態メソッド最初は、コンテキストは、automation 関数ではありませんし、適切なコマンド セットの GUID とコマンド ID を検索してください。 コマンド自体は、有効にされ、サポートに設定されます。 その他のコマンドがサポートされていません。  
   
 ```  
 public int QueryStatus(ref Guid pguidCmdGroup, uint cCmds, OLECMD[] prgCmds, IntPtr pCmdText)  

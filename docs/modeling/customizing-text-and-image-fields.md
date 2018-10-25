@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: d14dd126806e2c7b9a903e415dbc7a8a6f834517
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 32bba243cd38132a4c64a0b8706f9dbdca823ad3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566896"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942375"
 ---
 # <a name="customizing-text-and-image-fields"></a>テキストおよびイメージ フィールドのカスタマイズ
 図形のテキスト デコレータを定義するときに、テキスト フィールドで表されます。 テキスト フィールドとその他の ShapeFields の初期化の例については、DSL ソリューションで Dsl\GeneratedCode\Shapes.cs を検査します。
@@ -80,7 +80,6 @@ public virtual Font GetFont(ShapeElement shape)
 // To change per shape or dynamically, override this.
 public virtual StyleSetResourceId GetFontId(ShapeElement parentShape)
 { return DefaultFontId; }
-
 ```
 
  他のいくつかのペアがある`Get`メソッドと`Default`プロパティなど`DefaultMultipleLine/GetMultipleLine()`します。 図形フィールドのすべてのインスタンスの値を変更する既定のプロパティに値を割り当てることができます。 もう 1 つ、または、モデル要素または図形の状態に依存する図形の 1 つのインスタンスを異なる値を作成するには、オーバーライド、`Get`メソッド。
@@ -106,7 +105,6 @@ public virtual StyleSetResourceId GetFontId(ShapeElement parentShape)
       TextField commentField = ShapeElement.FindShapeField(shapeFields, "CommentDecorator") as TextField;
       // Use the standard font for comments:
       commentField.DefaultFontId = DiagramFonts.CommentText;
-
 ```
 
 ## <a name="dynamic-customizations"></a>動的なカスタマイズ
@@ -169,7 +167,6 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
     }
 
   }
-
 ```
 
 ## <a name="style-sets"></a>スタイルのセット
@@ -264,7 +261,6 @@ partial class ExampleShape
     }
   }
 }
-
 ```
 
 ## <a name="see-also"></a>関連項目

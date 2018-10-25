@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointChecksumRequest2::IsChecksumEnabled |Microsoft ドキュメント
+title: IDebugBreakpointChecksumRequest2::IsChecksumEnabled |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 34afc9af142371537c82effbfb8c636bcba09dbd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 306a20b3e2f99acd883332b43751f248db2bf5c5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31098980"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863127"
 ---
 # <a name="idebugbreakpointchecksumrequest2ischecksumenabled"></a>IDebugBreakpointChecksumRequest2::IsChecksumEnabled
 このドキュメントのチェックサムが有効になっているかどうかを判断します。  
@@ -42,7 +42,7 @@ public int IsChecksumEnabled(
  [out]チェックサムが有効なかどうかは TRUE を返しますそれ以外の場合、FALSE を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugBreakpointChecksumRequest2](../../../extensibility/debugger/reference/idebugbreakpointchecksumrequest2.md)

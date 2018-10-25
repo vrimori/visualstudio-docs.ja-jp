@@ -1,5 +1,5 @@
 ---
-title: EXCEPTION_STATE |Microsoft ドキュメント
+title: EXCEPTION_STATE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1faa847d907af938bb5f91206a5f438bcba886a3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f1032be313c6be8c71799ea493e82c03fd9e96ad
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31104905"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818251"
 ---
 # <a name="exceptionstate"></a>EXCEPTION_STATE
-例外状態を指定します。  
+例外の状態を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -78,19 +78,19 @@ public enum enum_EXCEPTION_STATE {
   
 ## <a name="members"></a>メンバー  
  EXCEPTION_NONE  
- 例外では停止されません。  
+ 例外は停止されません。  
   
  EXCEPTION_STOP_FIRST_CHANCE  
- 例外の最初の起動処理を停止します。 例外イベントを記述する場合、このフラグは、例外イベントが初回例外イベントを示します。  
+ 例外の最初の実行を停止します。 例外イベントを記述する場合、このフラグは、例外イベントでは、初回の例外イベントを示します。  
   
  EXCEPTION_STOP_SECOND_CHANCE  
  例外の 2 つ目の実行を停止します。 例外イベントを記述する場合は、例外イベントでは、次の例外イベントを示します。  
   
  EXCEPTION_STOP_USER_FIRST_CHANCE  
- ユーザー モード例外の最初の起動処理を停止します。 例外イベントを記述する場合は、例外イベントでは、ユーザーの初回例外イベントを示します。  
+ ユーザー モードの例外の最初の実行を停止します。 例外イベントを記述する場合は、例外イベントのユーザーの初回の例外イベントであることを示します。  
   
  EXCEPTION_STOP_USER_UNCAUGHT  
- ユーザー モード例外がキャッチされない場合は停止します。 例外イベントを記述する場合、例外イベントがキャッチされていないユーザー モード例外イベントことを示します。  
+ ユーザー モードの例外がキャッチされない場合は停止します。 例外イベントを記述する場合は、例外イベントのキャッチされないユーザー モード例外イベントであることを示します。  
   
  EXCEPTION_STOP_ALL  
  すべての例外で停止します。 例外イベントを記述する場合は使用されません。  
@@ -99,37 +99,37 @@ public enum enum_EXCEPTION_STATE {
  例外イベントを記述する場合から例外を続行することはできませんを示します。  
   
  EXCEPTION_CODE_SUPPORTED  
- 例外のコードをサポートしていることを示します。 例外を表示するために使用します。  
+ 例外にそれをサポートするコードがあることを示します。 例外を表示するために使用  
   
  EXCEPTION_CODE_DISPLAY_IN_HEX  
  例外コードを 16 進数で表示することを示します。 例外を表示するために使用されます。  
   
  EXCEPTION_JUST_MY_CODE_SUPPORTED  
- 例外コードが JustMyCode をサポートしていることを示します。 例外を表示するために使用されます。  
+ 例外コード JustMyCode をサポートしていることを示します。 例外を表示するために使用されます。  
   
  EXCEPTION_MANAGED_DEBUG_ASSISTANT  
- マネージ コードのデバッガーが例外を処理することを示します。 指定しない場合、セット、既定のデバッガーが例外を処理します。 これは渡される、 [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md)メソッドで使用されていないと、 [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)構造体。  
+ マネージ コードのデバッガーが例外を処理することを示します。 指定しない場合、セット、既定のデバッガー、例外を処理します。 渡されます、 [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md)メソッドで使用されていないと、 [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)構造体。  
   
  EXCEPTION_STOP_FIRST_CHANCE_USE_PARENT  
- 旧式で、使用しないでください。  
+ 廃止された、使用しないでください。  
   
  EXCEPTION_STOP_SECOND_CHANCE_USE_PARENT  
- 旧式で、使用しないでください。  
+ 廃止された、使用しないでください。  
   
  EXCEPTION_STOP_USER_FIRST_CHANCE_USE_PARENT  
- 旧式で、使用しないでください。  
+ 廃止された、使用しないでください。  
   
  EXCEPTION_STOP_USER_SECOND_CHANCE_USE_PARENT  
- 旧式で、使用しないでください。  
+ 廃止された、使用しないでください。  
   
-## <a name="remarks"></a>コメント  
- として使用される、`dwState`のメンバー、 [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)例外とは何を実行できる状態を示すための構造体。  
+## <a name="remarks"></a>Remarks  
+ として使用される、`dwState`のメンバー、 [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)構造については、何ができると、例外の状態を示します。  
   
- これらの値が渡されるも、 [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md)すべての例外の状態を設定します。  
+ これらの値は渡されることも、 [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md)メソッドすべての例外の状態を設定します。  
   
  これらのフラグは、ビットごとの OR と組み合わせることがあります。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

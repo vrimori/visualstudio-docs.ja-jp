@@ -12,12 +12,12 @@ ms.topic: article
 ms.assetid: 5233d3ff-6e89-4401-b449-51b4686becca
 caps.latest.revision: 33
 manager: douge
-ms.openlocfilehash: 3ae06a36155ed7270ce01178fa49e40dff06aed8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 038f478d6a8dbdd3dc050b6db85af82be377c325
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49236328"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833006"
 ---
 # <a name="making-custom-projects-version-aware"></a>カスタム プロジェクトでのバージョンの認識
 カスタム プロジェクト システムでは、カスタム プロジェクトを Visual Studio の複数のバージョンに読み込むことができます。 また、そのタイプのプロジェクトが、以前のバージョンの Visual Studio に読み込まれないようにすることもできます。 そのプロジェクトの修復や変換や廃止が必要になった場合に備えて、今後のバージョンでそのプロジェクト自体が識別されるようにすることもできます。  
@@ -125,13 +125,13 @@ IVsProjectUpgradeViaFactory::UpgradeProject_CheckOnly(
   
  このメソッドが `pUpgradeRequired` を TRUE に設定し、 `S_OK`を返した場合、その結果は "アップグレード" として扱われ、メソッドが値 `VSPUVF_PROJECT_ONEWAYUPGRADE`にアップグレード フラグを設定した場合と同様になります。このことについては、このトピックで後述します。 この古いメソッドを使用することで、次の戻り値がサポートされます。ただし、`pUpgradeRequired` を TRUE に設定しているときに限られます。  
   
-1.  `VS_S_PROJECT_SAFEREPAIRREQUIRED`。 この戻り値は、`VSPUVF_PROJECT_SAFEREPAIR` (このトピックで後述) と同様、`pUpgradeRequired` 値を TRUE に変換します。  
+1. `VS_S_PROJECT_SAFEREPAIRREQUIRED`。 この戻り値は、`VSPUVF_PROJECT_SAFEREPAIR` (このトピックで後述) と同様、`pUpgradeRequired` 値を TRUE に変換します。  
   
-2.  `VS_S_PROJECT_UNSAFEREPAIRREQUIRED`。 この戻り値は、`VSPUVF_PROJECT_UNSAFEREPAIR` (このトピックで後述) と同様、`pUpgradeRequired` 値を TRUE に変換します。  
+2. `VS_S_PROJECT_UNSAFEREPAIRREQUIRED`。 この戻り値は、`VSPUVF_PROJECT_UNSAFEREPAIR` (このトピックで後述) と同様、`pUpgradeRequired` 値を TRUE に変換します。  
   
-3.  `VS_S_PROJECT_ONEWAYUPGRADEREQUIRED`。 この戻り値は、`VSPUVF_PROJECT_ONEWAYUPGRADE` (このトピックで後述) と同様、`pUpgradeRequired` 値を TRUE に変換します。  
+3. `VS_S_PROJECT_ONEWAYUPGRADEREQUIRED`。 この戻り値は、`VSPUVF_PROJECT_ONEWAYUPGRADE` (このトピックで後述) と同様、`pUpgradeRequired` 値を TRUE に変換します。  
   
- `IVsProjectUpgradeViaFactory4` と `IVsProjectFlavorUpgradeViaFactory2` の新しい実装により、移行の種類をより正確に指定できます。  
+   `IVsProjectUpgradeViaFactory4` と `IVsProjectFlavorUpgradeViaFactory2` の新しい実装により、移行の種類をより正確に指定できます。  
   
 > [!NOTE]
 >  `UpgradeProject_CheckOnly` メソッドで互換性チェックの結果をキャッシュして、後で `CreateProject`を呼び出すことでもその結果を使用できるようにすることができます。  

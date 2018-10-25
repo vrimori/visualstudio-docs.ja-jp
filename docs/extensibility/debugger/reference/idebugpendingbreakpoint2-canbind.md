@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::CanBind |Microsoft ドキュメント
+title: IDebugPendingBreakpoint2::CanBind |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e09bae8cfa6b4c2ba1b79ff74945e5256e23ed2c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 47a40691de66828a1b46067393cddaa7e303d118
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115724"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872604"
 ---
 # <a name="idebugpendingbreakpoint2canbind"></a>IDebugPendingBreakpoint2::CanBind
 この保留中のブレークポイントをコードの場所にバインドできるかどうかを判断します。  
@@ -42,16 +42,16 @@ int CanBind (
   
 #### <a name="parameters"></a>パラメーター  
  `ppErrorEnum`  
- [out]返します、 [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)オブジェクトの一覧を含む[IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)かどうかでしたエラーが発生するオブジェクトします。  
+ [out]返します、 [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)オブジェクトの一覧を含む[IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)オブジェクトのエラーが存在することがあるかどうか。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK.`返します`S_FALSE`ブレークポイントをバインドできない場合に、エラーによって返される、`ppErrorEnum`パラメーター。 それ以外の場合はエラー コードを返します。 返します`E_BP_DELETED`場合は、ブレークポイントが削除されました。  
+ 成功した場合、返します`S_OK.`返します`S_FALSE`ブレークポイントがバインドできない場合に、エラーによって返される、`ppErrorEnum`パラメーター。 それ以外の場合はエラー コードを返します。 返します`E_BP_DELETED`ブレークポイントが削除されている場合。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは何が起こるかを決定するこの保留中のブレークポイントがバインドされている場合。 呼び出す、[バインド](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)実際には保留中のブレークポイントをバインドするメソッド。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは何が起こるかを判断するこの保留中のブレークポイントがバインドされている場合。 呼び出す、[バインド](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)メソッドを実際には保留中のブレークポイントをバインドします。  
   
 ## <a name="example"></a>例  
- 次の例は、単純なは、このメソッドを実装する方法を示します`CPendingBreakpoint`を公開するオブジェクト、 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)インターフェイスです。  
+ 次の例は、単純なは、このメソッドを実装する方法を示しています。`CPendingBreakpoint`を公開するオブジェクト、 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)インターフェイス。  
   
 ```cpp  
 HRESULT CPendingBreakpoint::CanBind(IEnumDebugErrorBreakpoints2** ppErrorEnum)    
@@ -142,4 +142,4 @@ HRESULT CPendingBreakpoint::CanBind(IEnumDebugErrorBreakpoints2** ppErrorEnum)
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
  [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)   
  [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)   
- [バインド](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)
+ [Bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)

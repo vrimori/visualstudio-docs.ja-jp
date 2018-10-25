@@ -16,12 +16,12 @@ ms.assetid: 03b2d507-f463-417e-bc22-bdac68eeda52
 caps.latest.revision: 25
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 654a0d7de3ad75c541d14a38a2a897adb731ea7a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: d64ff7ec1aea24a5e98b3f37339639440e31bf42
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49249211"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837244"
 ---
 # <a name="legacy-language-service-interfaces"></a>従来の言語サービスのインターフェイス
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -35,15 +35,15 @@ ms.locfileid: "49249211"
   
  別のクラスの任意の数には、コア言語サービスのインターフェイスを実装できます。 ただし、一般的なアプローチは、1 つのクラスで、次のインターフェイスを実装するためには。  
   
--   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>  
+- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>  
   
--   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems>  
+- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems>  
   
--   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageDebugInfo>  
+- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageDebugInfo>  
   
--   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageBlock> (省略可能)  
+- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageBlock> (省略可能)  
   
- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>すべての言語サービスでインターフェイスを実装する必要があります。 ローカライズされた言語、言語サービスと、colorizer を取得する方法に関連付けられているファイル名拡張子の名前など、言語サービスに関する情報を提供します。  
+  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>すべての言語サービスでインターフェイスを実装する必要があります。 ローカライズされた言語、言語サービスと、colorizer を取得する方法に関連付けられているファイル名拡張子の名前など、言語サービスに関する情報を提供します。  
   
 ## <a name="additional-language-service-interfaces"></a>追加の言語サービスのインターフェイス  
  言語サービスでは、他のインターフェイスを提供できます。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] テキスト バッファーのインスタンスごとにこれらのインターフェイスの別のインスタンスを要求します。 そのため、独自のオブジェクトでこれらの各インターフェイスを実装する必要があります。 次の表では、テキスト バッファーのインスタンスごとに 1 つのインスタンスを必要とするインターフェイスを示します。  

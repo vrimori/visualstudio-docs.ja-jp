@@ -12,12 +12,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 9d4c919347b42229bd0c73164281f3cbf2254a66
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: dee095f83d09ecf1425fa1117cafd629eb1a1add
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757714"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906781"
 ---
 # <a name="state-activity-designer"></a>State アクティビティ デザイナー
 
@@ -32,7 +32,7 @@ ms.locfileid: "36757714"
 次の表に、ワークフロー デザイナーを使用して設定できる <xref:System.Activities.Statements.State> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティの中には、プロパティ グリッドで編集できるものがあります。また、その一部はデザイナー画面で編集できます。
 
 |プロパティ名|必須|使用方法|
-|-------------------|--------------|-----------|
+|-|--------------|-|
 |<xref:System.Activities.Statements.State.DisplayName%2A>|False|ヘッダーの <xref:System.Activities.Statements.State> アクティビティ デザイナーの表示名を指定します。 既定値は**状態**します。 この値は、プロパティ グリッドで編集することも、アクティビティ デザイナーのヘッダーで直接編集することもできます。 <xref:System.Activities.Statements.State.DisplayName%2A> は、ワークフロー デザイナーの上部に表示される階層リンク バーで使用されます。<br /><br /> <xref:System.Activities.Statements.State.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|
 |<xref:System.Activities.Statements.State.Entry%2A>|False|この状態の遷移時に発生するアクションを指定します。 ときに、<xref:System.Activities.Statements.State>アクティビティが展開されているからアクティビティをドラッグしてこの値を設定することができます、**ツールボックス**にドロップし、**エントリ**状態のセクション。|
 |<xref:System.Activities.Statements.State.Exit%2A>|False|この状態からの遷移時に発生するアクションを指定します。 ときに、<xref:System.Activities.Statements.State>アクティビティが展開されているからアクティビティをドラッグしてこの値を設定することができます、**ツールボックス**にドロップし、**終了**状態のセクション。|
@@ -42,4 +42,4 @@ ms.locfileid: "36757714"
 
 - [StateMachine](../workflow-designer/statemachine-activity-designer.md)
 - [FinalState](../workflow-designer/finalstate-activity-designer.md)
-- [移行](../workflow-designer/transition-activity-designer.md)
+- [Transition](../workflow-designer/transition-activity-designer.md)

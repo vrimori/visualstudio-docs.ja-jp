@@ -19,12 +19,12 @@ ms.assetid: 13b74765-0b7c-418e-8cd9-5f2e8db51ae5
 caps.latest.revision: 27
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1620de29372d1d8e397ad879e3c9f413c41b1286
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 1893a30ff46470949fb5aa534f61f590e7ba2d95
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49219584"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873553"
 ---
 # <a name="test-guide-for-source-control-plug-ins"></a>ソース管理プラグイン向けのテスト ガイド
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -46,19 +46,19 @@ ms.locfileid: "49219584"
  Web プロジェクト  
  Web プロジェクトの 4 つの種類があります。 ファイル システム、ローカル IIS、リモートのサイトおよび FTP です。  
   
--   ファイル システムのプロジェクトは、ローカル パスに作成されますが、インターネット インフォメーション サービス (IIS) には、UNC パスを使用して内部的にアクセスし、クライアント プロジェクトと同様に、IDE 内からソース管理下に置くことができますをインストールする必要はありません。  
+- ファイル システムのプロジェクトは、ローカル パスに作成されますが、インターネット インフォメーション サービス (IIS) には、UNC パスを使用して内部的にアクセスし、クライアント プロジェクトと同様に、IDE 内からソース管理下に置くことができますをインストールする必要はありません。  
   
--   ローカル IIS プロジェクト、ローカル コンピューターを指す URL を使用して IIS が同じマシンにインストールされ、アクセスを使用します。  
+- ローカル IIS プロジェクト、ローカル コンピューターを指す URL を使用して IIS が同じマシンにインストールされ、アクセスを使用します。  
   
--   リモート サイトのプロジェクトは、IIS サービスも作成されますとからではなく、IIS サーバー コンピューターで、ソース管理下にあるそれらの内部で、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE。  
+- リモート サイトのプロジェクトは、IIS サービスも作成されますとからではなく、IIS サーバー コンピューターで、ソース管理下にあるそれらの内部で、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE。  
   
--   FTP のプロジェクトは、リモートの FTP サーバーからアクセスしますが、ソース管理下に配置することはできません。  
+- FTP のプロジェクトは、リモートの FTP サーバーからアクセスしますが、ソース管理下に配置することはできません。  
   
- 参加リスト  
- ソリューションまたはプロジェクトをソース管理の別の用語です。  
+  参加リスト  
+  ソリューションまたはプロジェクトをソース管理の別の用語です。  
   
- バージョン ストア  
- ソース管理プラグイン API を通じてアクセスされているソース管理データベース。  
+  バージョン ストア  
+  ソース管理プラグイン API を通じてアクセスされているソース管理データベース。  
   
 ## <a name="test-areas-covered-in-this-section"></a>このセクションで説明するテスト区分  
   

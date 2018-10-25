@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram3::ExecuteOnThread |Microsoft ドキュメント
+title: IDebugProgram3::ExecuteOnThread |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,15 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8aff643014da16ed9644573a77cb8444836d713d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: afca4a97380d010897ca1dfb7c6229f3f1897ef9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31117063"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49865948"
 ---
 # <a name="idebugprogram3executeonthread"></a>IDebugProgram3::ExecuteOnThread
-デバッガーのプログラムを実行します。 どのスレッドで、ユーザーが表示プログラムを実行するときにデバッガーの情報を提供し、スレッドが返されます。  
+デバッガーでプログラムを実行します。 プログラムを実行するときに表示するユーザー スレッドをデバッガーの情報を提供するスレッドが返されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,19 +41,19 @@ int ExecuteOnThread(
  [in][IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- これには、デバッガーが停止後に実行を再開できます 3 つの異なる方法があります。  
+## <a name="remarks"></a>Remarks  
+ デバッガーが停止後に実行を再開できる 3 つのさまざまな方法はあります。  
   
--   実行します。 は、前の手順をキャンセルしに、次のブレークポイントまで実行します。  
+- 実行します。 は、前の手順をキャンセルし、これに、次のブレークポイントまで実行します。  
   
--   手順: は、いずれかの古い手順をキャンセルし、新しい手順が完了するまで実行します。  
+- 手順: はか前の手順をキャンセルし、新しい手順が完了するまで実行します。  
   
--   続行: を再度実行し、いずれかの古い手順のアクティブなままにします。  
+- 続行: を再度実行して、古いのいずれかの手順のアクティブなままにします。  
   
- 渡されるスレッド`ExecuteOnThread`をキャンセルする手順を決定する場合に便利です。 実行している実行スレッドがわからない場合は、すべてのステップをキャンセルします。 スレッドの知識さえあれば、のみ、アクティブなスレッドでの手順をキャンセルする必要があります。  
+  渡されるスレッド`ExecuteOnThread`をキャンセルする手順を決定する場合に便利です。 実行している実行スレッドがわからない場合は、すべての手順をキャンセルします。 スレッドの知識があれば、のみのアクティブ スレッドで手順をキャンセルする必要があります。  
   
 ## <a name="see-also"></a>関連項目  
- [実行します。](../../../extensibility/debugger/reference/idebugprogram2-execute.md)   
+ [実行](../../../extensibility/debugger/reference/idebugprogram2-execute.md)   
  [IDebugProgram3](../../../extensibility/debugger/reference/idebugprogram3.md)

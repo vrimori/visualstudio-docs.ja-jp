@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d5118aafae296d839ad182d51b996da11a6bc556
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 04ffdd5d0256ae0fc42b89dfa850fb0ae2d36748
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37057399"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818667"
 ---
 # <a name="debugging-dll-projects-from-visual-studio"></a>Visual Studio から DLL プロジェクトのデバッグ
 次の Visual Studio テンプレートでは、Dll を作成します。  
@@ -54,24 +54,24 @@ ms.locfileid: "37057399"
 ##  <a name="vxtskdebuggingdllprojectswaystodebugthedll"></a> Ways to debug the DLL  
  このセクションの各プロジェクトでは、DLL を作成します。 DLL は直接実行できず、アプリケーション (通常は EXE) から呼び出す必要があります。 詳細については、「 [Creating and Managing Visual C++ Projects](/cpp/ide/creating-and-managing-visual-cpp-projects)」を参照してください。 呼び出し元のアプリケーションは、次の条件のいずれかに該当している場合があります。  
   
--   クラス ライブラリを格納する同じ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューション内の、別のプロジェクトにビルドされたアプリケーション  
+- クラス ライブラリを格納する同じ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューション内の、別のプロジェクトにビルドされたアプリケーション  
   
--   テスト コンピューターや運用コンピューターに既に配置されている既存のアプリケーション  
+- テスト コンピューターや運用コンピューターに既に配置されている既存のアプリケーション  
   
--   Web に配置され、URL からアクセスするアプリケーション  
+- Web に配置され、URL からアクセスするアプリケーション  
   
--   DLL を埋め込む Web ページを含む Web アプリケーション  
+- DLL を埋め込む Web ページを含む Web アプリケーション  
   
 ###  <a name="vxtskdebuggingdllprojectsthecallingapplication"></a> Debugging the calling application  
 DLL をデバッグするには、まず呼び出し元のアプリケーション (通常、EXE または Web アプリケーション) をデバッグします。 これには、複数の方法があります。  
   
--   呼び出し元のアプリケーションに対するプロジェクトが存在する場合は、そのプロジェクトを開いて、 **[デバッグ]** メニューから実行を開始できます。 詳細については、次を参照してください。[デバッガーの概要](../debugger/getting-started-with-the-debugger.md)します。  
+- 呼び出し元のアプリケーションに対するプロジェクトが存在する場合は、そのプロジェクトを開いて、 **[デバッグ]** メニューから実行を開始できます。 詳細については、次を参照してください。[デバッガーの概要](../debugger/getting-started-with-the-debugger.md)します。  
   
--   呼び出し元のアプリケーションが、テスト コンピューターや運用コンピューターに配置されている既存のプログラムであり、既に動作している場合は、それにアタッチできます。 DLL が Internet Explorer によってホストされるコントロール、または Web ページ上のコントロールである場合は、この方法を使用します。 詳細については、「 [How to: Attach to a Running Process](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)」を参照してください。  
+- 呼び出し元のアプリケーションが、テスト コンピューターや運用コンピューターに配置されている既存のプログラムであり、既に動作している場合は、それにアタッチできます。 DLL が Internet Explorer によってホストされるコントロール、または Web ページ上のコントロールである場合は、この方法を使用します。 詳細については、「 [How to: Attach to a Running Process](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)」を参照してください。  
   
--   DLL プロジェクトからデバッグできます。 詳細については、「 [How to: Debug from a DLL Project](../debugger/how-to-debug-from-a-dll-project.md)」を参照してください。  
+- DLL プロジェクトからデバッグできます。 詳細については、「 [How to: Debug from a DLL Project](../debugger/how-to-debug-from-a-dll-project.md)」を参照してください。  
   
--   デバッグすることができます、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [イミディ エイト ウィンドウ](#vxtskdebuggingdllprojectstheimmediatewindow)します。 この場合、 **イミディエイト** ウィンドウは、アプリケーションの役割をします。  
+- デバッグすることができます、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [イミディ エイト ウィンドウ](#vxtskdebuggingdllprojectstheimmediatewindow)します。 この場合、 **イミディエイト** ウィンドウは、アプリケーションの役割をします。  
   
 呼び出し元のアプリケーションのデバッグを始める前に、通常はクラス ライブラリ内にブレークポイントを設定します。 詳細については、「 [Using Breakpoints](../debugger/using-breakpoints.md)」を参照してください。 ブレークポイントにヒットした場合は、コードのステップ実行により、1 行ずつアクションを確認して問題を特定できます。 詳細については、次を参照してください。[デバッガーでコード内を移動](../debugger/navigating-through-code-with-the-debugger.md)します。
   
@@ -110,7 +110,7 @@ DLL をデバッグするには、まず呼び出し元のアプリケーショ�
 
 プロジェクトは、DLL とデバッグに使用される .pdb ファイルを検索できる必要があります。 これらのファイルのコピー先のカスタム ビルド タスクを作成することができます、 **\<プロジェクト フォルダー > \Debug**出力フォルダー、またはファイルを出力フォルダーに手動でコピーできます。
 
-プロパティ ページで、ヘッダー ファイルと *.lib ファイルの場所を簡単に設定できます (C++ プロジェクトを右クリックし、選択**プロパティの表示**を選び、**すべての構成**) をコピーする必要はありませんそれらを出力フォルダーには:
+ヘッダー ファイルの場所を簡単に設定できますと<em>プロパティ ページで、.lib ファイル (C++ プロジェクトを右クリックして、* * プロパティの表示</em><em>、し **すべての構成</em>*)出力フォルダーにコピーすることがなく。
 
 - [C/C++] フォルダー ([全般] カテゴリ) - ヘッダー ファイルを含むフォルダーを指定して、**追加のインクルード ディレクトリ**フィールド。
 - [リンカー] フォルダー ([全般] カテゴリ) - .lib ファイルを含むフォルダーを指定して、**追加のライブラリ ディレクトリ**フィールド。 
@@ -121,8 +121,7 @@ DLL をデバッグするには、まず呼び出し元のアプリケーショ�
 プロジェクトの設定の詳細については、次を参照してください。[プロパティ ページ (Visual c)](/cpp/ide/property-pages-visual-cpp)します。
   
 ## <a name="see-also"></a>関連項目  
- 
-  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
+ [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
  [Visual C++ プロジェクトの種類](../debugger/debugging-preparation-visual-cpp-project-types.md)   
  [C#、F#、および Visual Basic のプロジェクトの種類](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
  [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)   

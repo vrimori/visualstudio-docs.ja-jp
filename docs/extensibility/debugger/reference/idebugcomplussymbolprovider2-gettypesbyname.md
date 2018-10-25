@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider2::GetTypesByName |Microsoft ドキュメント
+title: IDebugComPlusSymbolProvider2::GetTypesByName |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 098c04615629b844fae8022058d47455db9cd98a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 020dd8fd4296594acf4b22347f7092e0ac224f7f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31104278"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882446"
 ---
 # <a name="idebugcomplussymbolprovider2gettypesbyname"></a>IDebugComPlusSymbolProvider2::GetTypesByName
 その名前を指定する型を取得します。  
@@ -44,22 +44,22 @@ int GetTypesByName(
   
 #### <a name="parameters"></a>パラメーター  
  `pszClassName`  
- [in]型の名前です。  
+ [in]型の名前。  
   
  `nameMatch`  
- [in]たとえば、一致の大文字小文字を区別の種類を選択します。 値、 [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md)列挙します。  
+ [in]たとえば、一致の大文字小文字を区別の種類を選択します。 値、 [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md)列挙体。  
   
  `ppEnum`  
- [out]型または指定した名前の型が含まれている列挙子。  
+ [out]指定した名前の種類を含む列挙子。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- ジェネリック型を検索する名前の 'リスト\<int >' または' リスト\<int、int >' 'List' になります。 複数のモジュールで同じ名前の型が表示されない場合は、`ppEnum`パラメーターには、すべてのコピーにが含まれます。 使用する必要がある[GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)し、区別に基づいて、`guidModule`パラメーター。  
+## <a name="remarks"></a>Remarks  
+ 検索する名前、ジェネリック型の 'リスト\<int >' または' リスト\<int, int >' 'List' になります。 複数のモジュールで同じ名前の型が表示されない場合、`ppEnum`パラメーターはすべてのコピーが格納されます。 使用して[GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)と区別に基づいて、`guidModule`パラメーター。  
   
 ## <a name="example"></a>例  
- 次の例に対して、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)インターフェイスです。  
+ 次の例では、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)インターフェイス。  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::GetTypesByName(  

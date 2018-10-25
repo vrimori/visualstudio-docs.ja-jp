@@ -11,12 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: f0fa4a3848fedae642c6471dd001933ca1b7d011
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 90668c751005e697c4b78d0f3caf58f8a85db925
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31951272"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812025"
 ---
 # <a name="text-template-control-blocks"></a>テキスト テンプレートのコントロール ブロック
 コントロール ブロックを使用すると、出力を変更するためにテキスト テンプレートにコードを記述できます。 コントロール ブロックは 3 種類あり、左山かっこで区別されます。
@@ -80,7 +80,6 @@ Some text.
 <#
  }
 #>
-
 ```
 
 ## <a name="expression-control-block"></a>式コントロール ブロック
@@ -148,7 +147,7 @@ Some text.
 
  コントロール ブロックの使用時には、次の考慮事項に留意してください。
 
--   **言語。** テキスト テンプレートでは、C# または Visual Basic のコードを使用できます。 既定の言語は C# ですが、`template` ディレクティブの `language` パラメーターで Visual Basic を指定できます。 (詳細については、`template`ディレクティブを参照してください[T4 テキスト テンプレート ディレクティブ](../modeling/t4-text-template-directives.md))。
+-   **言語。** テキスト テンプレートでは、C# または Visual Basic のコードを使用できます。 既定の言語は C# ですが、`template` ディレクティブの `language` パラメーターで Visual Basic を指定できます。 (の詳細については、`template`ディレクティブを参照してください[T4 テキスト テンプレート ディレクティブ](../modeling/t4-text-template-directives.md))。
 
      コントロール ブロックで使用する言語は、テキスト テンプレートで生成するテキストの言語または書式とは無関係です。 Visual Basic コードを使用して C# を生成することも、C# コードを使用して Visual Basic を生成することもできます。
 
@@ -158,7 +157,7 @@ Some text.
 
      特に複数のテキスト テンプレートをインクルードする場合は、ローカル変数を宣言するときに、そのローカル変数を妥当な値に初期化するのも良い方法です。
 
--   **コントロール ブロックの入れ子になった。** コントロール ブロックどうしを入れ子にすることはできません。 次のコントロール ブロックを開始する前に、前のコントロール ブロックを必ず終了する必要があります。 たとえば、式ブロック内のテキストを標準コントロール ブロックの一部として出力する方法を次に示します。
+-   **コントロール ブロックの入れ子。** コントロール ブロックどうしを入れ子にすることはできません。 次のコントロール ブロックを開始する前に、前のコントロール ブロックを必ず終了する必要があります。 たとえば、式ブロック内のテキストを標準コントロール ブロックの一部として出力する方法を次に示します。
 
     ```
     <#
@@ -170,4 +169,4 @@ Some text.
     <# } #>
     ```
 
--   **リファクタリングしてください。** テキスト テンプレートを簡潔で理解しやすい状態に保つために、コードの繰り返しを避けることを強くお勧めします。そのためには、再利用できるコードをクラス機能ブロックのヘルパー関数にファクタリングするか、Microsoft.VisualStudio.TextTemplating.TextTransformation クラスを継承する独自のテキスト テンプレート クラスを作成します。
+-   **リファクタリング。** テキスト テンプレートを簡潔で理解しやすい状態に保つために、コードの繰り返しを避けることを強くお勧めします。そのためには、再利用できるコードをクラス機能ブロックのヘルパー関数にファクタリングするか、Microsoft.VisualStudio.TextTemplating.TextTransformation クラスを継承する独自のテキスト テンプレート クラスを作成します。

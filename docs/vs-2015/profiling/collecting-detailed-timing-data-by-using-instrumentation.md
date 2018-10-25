@@ -17,12 +17,12 @@ caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8355911a54e6682b763d7f3aecbf29812fa4a1e9
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 95bd21e908b24e00619a659445b3cd30d4e915a4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49186265"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49870108"
 ---
 # <a name="collecting-detailed-timing-data-by-using-instrumentation"></a>インストルメンテーションを使用した詳細なタイミング データの収集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "49186265"
 ## <a name="common-tasks"></a>一般的なタスク  
  追加のオプションを、パフォーマンス セッションの [ _パフォーマンス セッション]_**[プロパティ ページ]** ダイアログ ボックスで指定できます。 このダイアログ ボックスを開くには:  
   
--   **パフォーマンス エクスプローラー**で、パフォーマンス セッション名を右クリックして **[プロパティ]** をクリックします。  
+- **パフォーマンス エクスプローラー**で、パフォーマンス セッション名を右クリックして **[プロパティ]** をクリックします。  
   
- 次の表の各タスクでは、インストルメンテーション メソッドを使用してプロファイリングを実行する際に、[ _パフォーマンス セッション]_**[プロパティ ページ]** ダイアログ ボックスで指定できるオプションについて説明しています。  
+  次の表の各タスクでは、インストルメンテーション メソッドを使用してプロファイリングを実行する際に、[ _パフォーマンス セッション]_**[プロパティ ページ]** ダイアログ ボックスで指定できるオプションについて説明しています。  
   
 |タスク|関連するコンテンツ|  
 |----------|---------------------|  

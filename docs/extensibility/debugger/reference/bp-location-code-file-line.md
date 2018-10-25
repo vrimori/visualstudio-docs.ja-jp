@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_CODE_FILE_LINE |Microsoft ドキュメント
+title: BP_LOCATION_CODE_FILE_LINE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a37bbc808322c54d1e0c9354353de2f59b2e19af
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c4c114919d74fba7a28c9d3ea11fc5bb9947d6a3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31109017"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866026"
 ---
 # <a name="bplocationcodefileline"></a>BP_LOCATION_CODE_FILE_LINE
 コードのソース ファイル内の特定の行のブレークポイントの場所のデータが含まれています。  
@@ -36,15 +36,15 @@ typedef struct _BP_LOCATION_CODE_FILE_LINE {
   
 ## <a name="members"></a>メンバー  
  `bstrContext`  
- ブレークポイントのコンテキスト、通常、呼び出し履歴に見られるようメソッドまたは関数の名前。  
+ ブレークポイントのコンテキスト、通常は呼び出し履歴で見られる同様のメソッドまたは関数の名前。  
   
  `pDocPos`  
  [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)ドキュメントのブレークポイントの位置を表すオブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この構造体のメンバーである、 [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)構造体、共用体の一部として。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

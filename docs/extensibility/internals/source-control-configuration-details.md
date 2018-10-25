@@ -1,5 +1,5 @@
 ---
-title: ソース コントロールの構成の詳細 |Microsoft ドキュメント
+title: ソース管理構成の詳細 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,45 +13,45 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc10c7602f3298b532b4af76e66b43d469416ba5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 85ba74ba9d9beabaefd22607df0fac6ebaaf2235
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31134127"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825934"
 ---
-# <a name="source-control-configuration-details"></a>ソース コントロールの構成の詳細
-ソース管理を実装するためには、エディターは、次に、プロジェクト システムを適切に構成する必要があります。
+# <a name="source-control-configuration-details"></a>ソース管理構成の詳細
+ソース管理を実装するために、プロジェクト システムやには、次のエディターを適切に構成する必要があります。
 
 -   変更された状態に遷移するアクセス許可を要求します。
 
 -   ファイルを保存するアクセス許可を要求します。
 
--   追加、削除、またはプロジェクト内のファイルの名前を変更するアクセス許可を要求します。
+-   追加、削除、またはプロジェクト内のファイルの名前を変更する許可を要求します。
 
 ## <a name="request-permission-to-transition-to-changed-state"></a>変更された状態に遷移するアクセス許可を要求します。
- プロジェクトまたはエディターは、呼び出すことによって変更 (ダーティ) 状態に遷移するアクセス許可を要求する必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>です。 実装する各エディター<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData.IsDocDataDirty%2A>呼び出す必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A>を返す前に、環境からのドキュメントの変更に承認を得ると`True`の<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData.IsDocDataDirty%2A>します。 プロジェクトは、プロジェクト ファイルをエディターでは基本的には、その結果、担当しています、同じテキスト エディターはそのファイルのようにプロジェクト ファイルの状態変更の追跡を実装するためです。 環境が、このソリューションの変更後の状態を処理しますが、任意のオブジェクトを参照しますが、格納しません、プロジェクト ファイルまたはその項目と同様に、ソリューションの変更の状態を処理する必要があります。 一般に、プロジェクトまたはエディターがアイテムを持続性の管理を担当する場合、なります状態変更の追跡の実装を担当します。
+ プロジェクトまたはエディターを呼び出すことによって変更された (ダーティ) 状態に遷移するためのアクセス許可を要求する必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>します。 実装する各エディター<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData.IsDocDataDirty%2A>呼び出す必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A>を返す前に、環境からドキュメントの変更の承認を得ると`True`の<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData.IsDocDataDirty%2A>します。 プロジェクトでは、プロジェクト ファイルは、エディターでは基本的をその結果、そのファイルはテキスト エディターのようにプロジェクト ファイルの変更状態の追跡を実装するための同じの責任を持ちます。 環境は、ソリューションの変更の状態を処理しますが、任意のオブジェクトを参照していては格納されません、プロジェクト ファイルやその項目のように、ソリューションの変更の状態を処理する必要があります。 一般に、プロジェクトまたはエディターがアイテムの永続化を管理する場合、られます変更状態の追跡を実装する責任を負います。
 
  応答、`IVsQueryEditQuerySave2::QueryEditFiles`を呼び出すには、環境は、次を実行できます。
 
--   (クリーン) 状態は変更されないまま必要がありますケース エディターまたはプロジェクトを変更する呼び出しを拒否します。
+- ケース エディターまたはプロジェクトがいなければ、unchanged (クリーン) 状態を変更する呼び出しを拒否します。
 
--   ドキュメント データを再読み込みすることを示してください。 プロジェクトの場合、環境は、プロジェクトのデータを再読み込みします。 エディターが使用したディスクからデータを再読み込みする必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.ReloadDocData%2A>実装します。 いずれの場合、データが再読み込みされるときに、プロジェクトまたはエディターでは、コンテキストは変更できます。
+- ドキュメント データを再読み込みするかを示します。 プロジェクトの場合、環境はプロジェクトのデータを再読み込みは。 エディターは、使用したディスクからデータを再読み込みする必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.ReloadDocData%2A>実装します。 どちらの場合、データの再読み込み時、プロジェクトまたはエディターのコンテキストは変更できます。
 
- 適切な英語複雑かつタスク`IVsQueryEditQuerySave2::QueryEditFiles`既存のコード ベースへの呼び出しです。 その結果、これらの呼び出しは、プロジェクトまたはエディターの作成中に統合する必要があります。
+  複雑で困難なタスクに組み込む適切な`IVsQueryEditQuerySave2::QueryEditFiles`呼び出し、既存のコード ベースにします。 その結果、これらの呼び出しは、プロジェクトまたはエディターの作成時に統合する必要があります。
 
 ## <a name="request-permission-to-save-a-file"></a>ファイルを保存するアクセス許可を要求します。
- プロジェクトまたはエディターは、ファイルを保存して、前に呼び出す必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFile%2A>または<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A>です。 プロジェクト ファイルのこれらの呼び出しがあり、プロジェクト ファイルを保存するときに認識しているソリューションによって自動的に完了します。 エディターは、しない限り、これらの呼び出しを行うためのエディターの実装`IVsPersistDocData2`ヘルパー関数を使用して<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SaveDocDataToFile%2A>です。 エディターを実装する場合`IVsPersistDocData2`し、このようにへの呼び出しで`IVsQueryEditQuerySave2::QuerySaveFile`または`IVsQueryEditQuerySave2::QuerySaveFiles`が行われます。
+ プロジェクトまたはエディターは、ファイルを保存して、前に呼び出す必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFile%2A>または<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A>します。 プロジェクト ファイルのこれらの呼び出しは、プロジェクト ファイルを保存するタイミングを認識しているソリューションによって自動的に完了します。 しない限り、これらの呼び出しを行うためのエディターは、エディターの実装の`IVsPersistDocData2`ヘルパー関数を使用して<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SaveDocDataToFile%2A>します。 エディターを実装する場合`IVsPersistDocData2`への呼び出し、この方法で`IVsQueryEditQuerySave2::QuerySaveFile`または`IVsQueryEditQuerySave2::QuerySaveFiles`が行われます。
 
 > [!NOTE]
->  必ずこれらの呼び出しをプリエンプティブ: つまり、エディターは、[キャンセル] を受信できない場合にします。
+>  必ずこれらの呼び出しを事前-これは、エディターが、[キャンセル] を受信できないときにします。
 
-## <a name="request-permission-to-add-remove-or-rename-files-in-the-project"></a>追加、削除、またはプロジェクト内のファイルの名前を変更するアクセス許可を要求します。
- プロジェクトは追加、名前の変更、またはファイルまたはディレクトリを削除することができます、前に呼び出す必要があります、適切な`IVsTrackProjectDocuments2::OnQuery*`環境からの許可を要求するメソッド。 アクセス許可が付与されるかどうか、プロジェクトの操作を完了して、適切なを呼び出す必要があります`IVsTrackProjectDocuments2::OnAfter*`環境、操作が完了したことを通知するメソッド。 プロジェクトのメソッドを呼び出す必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>すべてのファイル (たとえば、特別なファイル) と親のファイルだけでなくインターフェイスです。 ファイルの呼び出しは必須ですが、ディレクトリの呼び出しは省略可能です。 かどうかは、ディレクトリ情報がプロジェクトに、適切なに呼び出す必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>メソッドが、この情報がないかどうかは、環境は、ディレクトリ情報が推測されます。
+## <a name="request-permission-to-add-remove-or-rename-files-in-the-project"></a>追加、削除、またはプロジェクト内のファイルの名前を変更する許可を要求します。
+ プロジェクトを追加、名前の変更、またはファイルまたはディレクトリを削除、前に呼び出す必要があります、適切な`IVsTrackProjectDocuments2::OnQuery*`環境からの許可を要求するメソッド。 アクセス許可が付与されるかどうか、プロジェクトが、操作を完了する必要があります、呼び出して、適切な`IVsTrackProjectDocuments2::OnAfter*`操作が完了した環境に通知するメソッド。 プロジェクトでのメソッドを呼び出す必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>のすべてのファイル (たとえば、特別なファイル) と親のファイルだけでなくインターフェイスです。 ファイルの呼び出しが必須ですには、ディレクトリの呼び出しは省略可能です。 かどうかは、プロジェクトには、ディレクトリ情報が、適切なを呼び出す必要がある<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>メソッドが、この情報がないかどうかは、環境では、ディレクトリ情報を推論します。
 
- プロジェクトがのメソッドを呼び出す必要がありますいない`IVsTrackProjectDocuments2`プロジェクトを開くまたは閉じる。 スタートアップ時に、この情報をリスナーで待機できる、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenSolution%2A>イベントで必要な情報を検索するようにソリューションを反復処理します。 シャット ダウン時、この情報は必要ありません。 `IVsTrackProjectDocuments2` 提供される、<xref:Microsoft.VisualStudio.Shell.Interop.SVsTrackProjectDocuments>です。
+ プロジェクトのメソッドを呼び出さないでください`IVsTrackProjectDocuments2`プロジェクトを開くまたは閉じる。 スタートアップ時に、この情報をリスナーで待機できる、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenSolution%2A>イベント必要な情報を検索するソリューションを反復処理します。 シャット ダウン時、この情報は必要ありません。 `IVsTrackProjectDocuments2` 提供されている場合は、<xref:Microsoft.VisualStudio.Shell.Interop.SVsTrackProjectDocuments>します。
 
- 各追加、名前変更、および削除アクションがある、`OnQuery*`メソッドおよび`OnAfter*`メソッドです。 呼び出す、`OnQuery*`を追加する許可を得るためのメソッドは、名前変更、または、ファイルまたはディレクトリを削除します。 呼び出す、`OnAfter*`プロジェクトの状態が新しい状態を反映し、ファイルまたはディレクトリが追加、変更、または削除された後にします。
+ 各追加、名前の変更、および削除アクションは、`OnQuery*`メソッドと`OnAfter*`メソッド。 呼び出す、`OnQuery*`を追加するためのアクセス許可を要求するメソッドの名前変更、またはファイルまたはディレクトリを削除します。 呼び出す、`OnAfter*`後に、プロジェクトの状態が新しい状態を反映し、ファイルまたはディレクトリが追加、名前の変更、または削除されました。
 
 ## <a name="see-also"></a>関連項目
 

@@ -15,12 +15,12 @@ ms.assetid: 81a58e40-7cd0-4ef4-a475-c4e1e84d6e06
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 73555abcc1a3c6afebf6528cc493e62a403ad00a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 9d81916910eb4769801ae330c10edde24cb52f52
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49196327"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923408"
 ---
 # <a name="registering-verbs-for-file-name-extensions"></a>ファイル名拡張子の動詞を登録する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,17 +32,17 @@ ms.locfileid: "49196327"
 ## <a name="registering-standard-verbs"></a>標準的な動詞を登録します。  
  オペレーティング システムでは、次の標準的な動詞を認識します。  
   
--   開く  
+- 開く  
   
--   編集  
+- 編集  
   
--   再生  
+- 再生  
   
--   の  
+- の  
   
--   [プレビュー]  
+- [プレビュー]  
   
- 可能であれば、標準的な動詞を登録します。 最も一般的な選択肢では、Open 動詞です。 ファイルを開くと、ファイルの編集の間の明確な違いがある場合にのみ編集動詞を使用します。 たとえば、.htm のファイルを開くに表示されます、ブラウザーは HTML エディターが起動 .htm ファイルを編集します。 標準的な動詞は、オペレーティング システムのロケールでローカライズされます。  
+  可能であれば、標準的な動詞を登録します。 最も一般的な選択肢では、Open 動詞です。 ファイルを開くと、ファイルの編集の間の明確な違いがある場合にのみ編集動詞を使用します。 たとえば、.htm のファイルを開くに表示されます、ブラウザーは HTML エディターが起動 .htm ファイルを編集します。 標準的な動詞は、オペレーティング システムのロケールでローカライズされます。  
   
 > [!NOTE]
 >  標準的な動詞を登録するときに、開いているキーの既定値を設定しないでください。 既定値には、メニューの表示文字列が含まれています。 オペレーティング システムでは、標準的な動詞にこの文字列を提供します。  

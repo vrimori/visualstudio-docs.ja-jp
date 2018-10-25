@@ -20,12 +20,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0d2d7d14b1e87a584da9f789c5092373db5519d5
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: b5e66be099734008e09456cbd1e0f4fb4b0d5c9d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36327142"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854287"
 ---
 # <a name="create-item-templates-and-project-templates-for-sharepoint-project-items"></a>項目テンプレートとの SharePoint プロジェクト アイテムのプロジェクト テンプレートを作成します。
   カスタム SharePoint プロジェクト項目の種類を定義するときに、項目テンプレートとプロジェクト テンプレートを関連付けることができます。 この関連付けにより、他の開発者が Visual Studio でプロジェクト項目を使用します。 テンプレートのウィザードを作成することもできます。
@@ -47,14 +47,16 @@ ms.locfileid: "36327142"
 
  次の表には、いくつかの項目テンプレートに含めることができる最も一般的な省略可能なファイルが一覧表示します。 プロジェクト項目の種類によっては、この一覧にないその他のファイルを必要があります。
 
-|省略可能なファイル|説明|
-|-------------------|-----------------|
-|*Elements.xml*|A *Feature 要素*ファイル。 このファイルは、プロジェクト アイテムによって作成されたカスタマイズの動作と UI を定義します。 それぞれのリスト インスタンス、コンテンツの種類、またはカスタムの動作などのカスタマイズの種類は、このファイルの内容を定義する別のスキーマを持ちます。 詳細については、次を参照してください。[ビルディング ブロック: 機能](http://go.microsoft.com/fwlink/?LinkId=169183)と[機能スキーマ](http://go.microsoft.com/fwlink/?LinkId=169192)します。|
-|*Schema.xml*|リスト定義のスキーマ ファイルです。 詳細については、次を参照してください。[ビルディング ブロック: リストとドキュメント ライブラリ](http://go.microsoft.com/fwlink/?LinkId=177792)と[Schema.xml](http://go.microsoft.com/fwlink/?LinkId=177793)します。|
-|*.webpart*|A *Web パーツ定義*ファイル。 このファイルには、Web パーツのプロパティの設定が含まれています。 詳細については、次を参照してください。[構成要素: Web パーツ](http://go.microsoft.com/fwlink/?LinkId=177791)します。|
-|*.ascx*|ASP.NET ユーザー コントロール ファイルの場合。 このファイルは、視覚的 Web パーツの UI を定義します。|
-|*.aspx*|ASP.NET ページファイル このファイルには、アプリケーション ページを定義する XML マークアップが含まれています。|
-|*.cs*または *.vb*ファイル|これらのコード ファイルは、Visual c# または Visual Basic コード、アプリケーション ページ、Web パーツ、ワークフローなどからアクセスできるプログラミング モデルがある SharePoint のカスタマイズの動作を定義します。|
+
+| 省略可能なファイル | 説明 |
+|----------------------| - |
+| *Elements.xml* | A *Feature 要素*ファイル。 このファイルは、プロジェクト アイテムによって作成されたカスタマイズの動作と UI を定義します。 それぞれのリスト インスタンス、コンテンツの種類、またはカスタムの動作などのカスタマイズの種類は、このファイルの内容を定義する別のスキーマを持ちます。 詳細については、次を参照してください。[ビルディング ブロック: 機能](http://go.microsoft.com/fwlink/?LinkId=169183)と[機能スキーマ](http://go.microsoft.com/fwlink/?LinkId=169192)します。 |
+| *Schema.xml* | リスト定義のスキーマ ファイルです。 詳細については、次を参照してください。[ビルディング ブロック: リストとドキュメント ライブラリ](http://go.microsoft.com/fwlink/?LinkId=177792)と[Schema.xml](http://go.microsoft.com/fwlink/?LinkId=177793)します。 |
+| *.webpart* | A *Web パーツ定義*ファイル。 このファイルには、Web パーツのプロパティの設定が含まれています。 詳細については、次を参照してください。[構成要素: Web パーツ](http://go.microsoft.com/fwlink/?LinkId=177791)します。 |
+| *.ascx* | ASP.NET ユーザー コントロール ファイルの場合。 このファイルは、視覚的 Web パーツの UI を定義します。 |
+| *.aspx* | ASP.NET ページファイル このファイルには、アプリケーション ページを定義する XML マークアップが含まれています。 |
+| *.cs*または *.vb*ファイル | これらのコード ファイルは、Visual c# または Visual Basic コード、アプリケーション ページ、Web パーツ、ワークフローなどからアクセスできるプログラミング モデルがある SharePoint のカスタマイズの動作を定義します。 |
+
 ## <a name="create-project-templates"></a>プロジェクト テンプレートを作成する
  SharePoint プロジェクト テンプレートを作成するときに特定の種類のプロジェクトで使用することが、必須およびオプションのファイルは、常にいくつかのファイルがあります。 通常、SharePoint プロジェクトには、少なくとも 1 つの SharePoint プロジェクト アイテムが含まれます。 ただし、これは必要ではありません。 たとえば、他のプロジェクトで作成した SharePoint ソリューションのデプロイにのみ使用するためのものでは、SharePoint プロジェクト テンプレートを定義できます。
 

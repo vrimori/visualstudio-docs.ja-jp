@@ -1,5 +1,5 @@
 ---
-title: マネージ コードでアサーション |Microsoft ドキュメント
+title: マネージ コードでアサーション |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -24,18 +24,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e5b4c66beba2a4c3953a0720a3f770f7f651db79
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 07f422348a10bbe6d5c02a50073c9486a679cfaf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31465409"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892065"
 ---
-# <a name="assertions-in-managed-code"></a>マネージ コードのアサーション
+# <a name="assertions-in-managed-code"></a>マネージド コードのアサーション
 アサーション、つまり `Assert` ステートメントは、条件をテストします。この条件は、`Assert` ステートメントへの引数として指定します。 条件が true と評価された場合、アクションは発生しません。 条件が false と評価された場合、アサーションは失敗です。 また、デバッグ ビルドを実行している場合、プログラムは中断モードになります。  
   
 ##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
- [System.Diagnostics Namespace 内の assert します。](#BKMK_Asserts_in_the_System_Diagnostics_Namespace)  
+ [System.Diagnostics Namespace でアサートします。](#BKMK_Asserts_in_the_System_Diagnostics_Namespace)  
   
  [Debug.Assert メソッド](#BKMK_The_Debug_Assert_method)  
   
@@ -47,12 +47,12 @@ ms.locfileid: "31465409"
   
  [Assert の動作をカスタマイズします。](#BKMK_Customizing_Assert_behavior)  
   
- [構成ファイル内のアサーションの設定](#BKMK_Setting_assertions_in_configuration_files)  
+ [構成ファイルでのアサーションの設定](#BKMK_Setting_assertions_in_configuration_files)  
   
-##  <a name="BKMK_Asserts_in_the_System_Diagnostics_Namespace"></a> System.Diagnostics Namespace 内の assert します。  
+##  <a name="BKMK_Asserts_in_the_System_Diagnostics_Namespace"></a> System.Diagnostics Namespace でアサートします。  
  Visual Basic および Visual C# では、`Assert` 名前空間内の <xref:System.Diagnostics.Debug> または <xref:System.Diagnostics.Trace> から <xref:System.Diagnostics> メソッドを使用できます。 <xref:System.Diagnostics.Debug> クラスのメソッドはプログラムのリリース バージョンには含まれないので、リリース コードのサイズを増加させたり処理速度を低下させることはありません。  
   
- C++ は、<xref:System.Diagnostics.Debug> クラスのメソッドをサポートしません。 使用して同じ効果を得ることができます、<xref:System.Diagnostics.Trace>条件付きコンパイルは、のようにクラス`#ifdef DEBUG`しています.`#endif`.  
+ C++ は、<xref:System.Diagnostics.Debug> クラスのメソッドをサポートしません。 使用して同じ効果を得ることができます、<xref:System.Diagnostics.Trace>などの条件付きコンパイルは、クラス`#ifdef DEBUG`.`#endif`.  
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
@@ -144,22 +144,22 @@ Debug.Assert ( temp != 0 );
   
  それ以外の場合は、<xref:System.Diagnostics.Trace> メソッドが動作するように、プログラムのソース ファイルの先頭に次のいずれかを記述する必要があります。  
   
--   `#Const TRACE = True` (Visual Basic の場合)  
+- `#Const TRACE = True` (Visual Basic の場合)  
   
--   `#define TRACE` (Visual C# および C++ の場合)  
+- `#define TRACE` (Visual C# および C++ の場合)  
   
- または、次に示すように、TRACE オプションを使用してプログラムをビルドする必要があります。  
+  または、次に示すように、TRACE オプションを使用してプログラムをビルドする必要があります。  
   
--   `/d:TRACE=True` (Visual Basic の場合)  
+- `/d:TRACE=True` (Visual Basic の場合)  
   
--   `/d:TRACE` (Visual C# および C++ の場合)  
+- `/d:TRACE` (Visual C# および C++ の場合)  
   
- C# または Visual Basic のリリース ビルドで Debug メソッドを使用する必要がある場合は、リリース構成にデバッグ シンボルを定義する必要があります。  
+  C# または Visual Basic のリリース ビルドで Debug メソッドを使用する必要がある場合は、リリース構成にデバッグ シンボルを定義する必要があります。  
   
- C++ は、<xref:System.Diagnostics.Debug> クラスのメソッドをサポートしません。 使用して同じ効果を得ることができます、<xref:System.Diagnostics.Trace>条件付きコンパイルは、のようにクラス`#ifdef DEBUG`しています.`#endif`. これらのシンボルを定義することができます、 **\<プロジェクト > プロパティ ページ** ダイアログ ボックス。 詳細については、次を参照してください。 [Visual Basic デバッグ構成のプロジェクトの設定を変更する](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)または[C または C++ デバッグ構成のプロジェクトの設定を変更する](../debugger/project-settings-for-a-cpp-debug-configuration.md)です。  
+  C++ は、<xref:System.Diagnostics.Debug> クラスのメソッドをサポートしません。 使用して同じ効果を得ることができます、<xref:System.Diagnostics.Trace>などの条件付きコンパイルは、クラス`#ifdef DEBUG`.`#endif`. これらのシンボルを定義することができます、 **\<プロジェクト > プロパティ ページ** ダイアログ ボックス。 詳細については、次を参照してください。 [Visual Basic デバッグ構成のプロジェクトの設定を変更する](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)または[C または C++ デバッグ構成のプロジェクトの設定を変更する](../debugger/project-settings-for-a-cpp-debug-configuration.md)します。  
   
 ##  <a name="BKMK_Assert_arguments"></a> Assert の引数  
- <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> と <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> は、最大で 3 つの引数を受け取ります。 最初の引数は調べる条件です。これは必ず指定します。 呼び出す場合<xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName>または<xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName>、引数の 1 つだけで、`Assert`メソッドは、条件をチェックして、結果が false の場合は、コール スタックの内容を出力、**出力**ウィンドウです。 <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName> および <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName> の使用例は、次のようになります。  
+ <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> と <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> は、最大で 3 つの引数を受け取ります。 最初の引数は調べる条件です。これは必ず指定します。 呼び出す場合<xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName>または<xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName>、引数の 1 つだけで、`Assert`メソッドは、条件をチェックし、結果が false の場合は、呼び出し履歴の内容を出力、**出力**ウィンドウ。 <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName> および <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName> の使用例は、次のようになります。  
   
 ```VB  
 Debug.Assert(stacksize > 0)  
@@ -199,7 +199,7 @@ Trace.Assert ( stacksize > 0, "Out of stack space", "Failed in inctemp" );
  [このトピックの内容](#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Customizing_Assert_behavior"></a> Assert の動作をカスタマイズします。  
- ユーザー インターフェイス モードでアプリケーションを実行する場合、`Assert`メソッドが表示されます、**アサーションが失敗した**ダイアログ ボックスの条件が失敗したとします。 アサーションが失敗したときに発生するアクションはによって制御されます、<xref:System.Diagnostics.Debug.Listeners%2A>または<xref:System.Diagnostics.Trace.Listeners%2A>プロパティです。  
+ ユーザー インターフェイス モードでアプリケーションを実行する場合、`Assert`メソッドが表示されます、**アサーションが失敗した**ダイアログ ボックスの条件が失敗したとします。 アサーションが失敗したときに発生するアクションは、によって制御されます、<xref:System.Diagnostics.Debug.Listeners%2A>または<xref:System.Diagnostics.Trace.Listeners%2A>プロパティ。  
   
  出力動作をカスタマイズするには、<xref:System.Diagnostics.TraceListener> オブジェクトを `Listeners` コレクションに追加するか、<xref:System.Diagnostics.TraceListener> を `Listeners` コレクションから削除します。または、既存の <xref:System.Diagnostics.TraceListener.Fail%2A?displayProperty=fullName> の `TraceListener` メソッドをオーバーライドして動作を変更します。  
   
@@ -207,12 +207,12 @@ Trace.Assert ( stacksize > 0, "Out of stack space", "Failed in inctemp" );
   
  この方法で出力をカスタマイズするには、プログラムにリスナーが含まれている必要があります。また、<xref:System.Diagnostics.TraceListener> を継承し、その <xref:System.Diagnostics.TraceListener.Fail%2A?displayProperty=fullName> メソッドをオーバーライドする必要があります。  
   
- 詳細については、次を参照してください。[トレース リスナー](/dotnet/framework/debug-trace-profile/trace-listeners)です。  
+ 詳細については、次を参照してください。[トレース リスナー](/dotnet/framework/debug-trace-profile/trace-listeners)します。  
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Setting_assertions_in_configuration_files"></a> 構成ファイル内のアサーションの設定  
- アサーションは、コード内だけでなく、プログラム構成ファイル内でも設定できます。 詳細については、<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName><xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>」または」を参照してください。  
+##  <a name="BKMK_Setting_assertions_in_configuration_files"></a> 構成ファイルでのアサーションの設定  
+ アサーションは、コード内だけでなく、プログラム構成ファイル内でも設定できます。 詳細については、「<xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>」または「<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>   
@@ -221,4 +221,4 @@ Trace.Assert ( stacksize > 0, "Out of stack space", "Failed in inctemp" );
  [アプリケーションのトレースとインストルメント](/dotnet/framework/debug-trace-profile/tracing-and-instrumenting-applications)   
  [方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](/dotnet/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug)   
  [C#、F#、および Visual Basic のプロジェクトの種類](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
- [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)
+ [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)

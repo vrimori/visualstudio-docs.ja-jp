@@ -1,5 +1,5 @@
 ---
-title: INTERCEPT_EXCEPTION_ACTION |Microsoft ドキュメント
+title: INTERCEPT_EXCEPTION_ACTION |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e8241ab85ad705200e256b4facccaecd0a50a1de
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1249e6b435f7cd396ea7912cb7aebf8d78cf94f7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31124458"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948383"
 ---
 # <a name="interceptexceptionaction"></a>INTERCEPT_EXCEPTION_ACTION
 例外をインターセプトするときに実行するアクションを指定します。  
@@ -44,12 +44,12 @@ public enum enum_INTERCEPT_EXCEPTION_ACTION
   
 #### <a name="parameters"></a>パラメーター  
  IEA_INTERCEPT  
- 現在の例外をインターセプトし、有効にします。 これは現時点ではサポートされている唯一の値であり、指定する必要があります。  
+ 現在の例外をインターセプトできるようにします。 これは現時点ではサポートされている唯一の値であり、指定する必要があります。  
   
-## <a name="remarks"></a>コメント  
- これらの値に渡される、 [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ これらの値に渡される、 [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

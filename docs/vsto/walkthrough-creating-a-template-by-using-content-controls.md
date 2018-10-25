@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0f49e2e9e23f19a4346080b0e59435128e33849d
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: e597f13d2627a8b3e40aa65926d1c990be839c38
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672862"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833188"
 ---
 # <a name="walkthrough-create-a-template-by-using-content-controls"></a>チュートリアル: コンテンツ コントロールを使用してテンプレートを作成します。
   このチュートリアルでは、コンテンツ コントロールを使用して、Microsoft Office Word テンプレートで構造化された再利用可能なコンテンツを作成するための、ドキュメント レベルのカスタマイズを作成する方法について説明します。  
@@ -35,17 +35,17 @@ ms.locfileid: "35672862"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   デザイン時に Word テンプレートで、コンテンツ コントロールが含まれる表を作成する。  
+- デザイン時に Word テンプレートで、コンテンツ コントロールが含まれる表を作成する。  
   
--   プログラムを使用して、コンボ ボックス コンテンツ コントロールおよびドロップダウン リスト コンテンツ コントロールのデータを読み込む。  
+- プログラムを使用して、コンボ ボックス コンテンツ コントロールおよびドロップダウン リスト コンテンツ コントロールのデータを読み込む。  
   
--   特定の表を保護してユーザーが編集できないようにする。  
+- 特定の表を保護してユーザーが編集できないようにする。  
   
--   表をテンプレートの文書パーツ コレクションに追加する。  
+- 表をテンプレートの文書パーツ コレクションに追加する。  
   
--   テンプレートで使用可能な文書パーツを表示するコンテンツ コントロールを作成する。  
+- テンプレートで使用可能な文書パーツを表示するコンテンツ コントロールを作成する。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
@@ -68,31 +68,31 @@ ms.locfileid: "35672862"
   
 ### <a name="to-create-the-employee-table"></a>従業員表を作成するには  
   
-1.  ホストされている Word テンプレートで、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]デザイナーのリボンで、をクリックして、**挿入**タブ。  
+1. ホストされている Word テンプレートで、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]デザイナーのリボンで、をクリックして、**挿入**タブ。  
   
-2.  **テーブル**グループで、**テーブル**、2 つの列と 4 つの行を含むテーブルを挿入します。  
+2. **テーブル**グループで、**テーブル**、2 つの列と 4 つの行を含むテーブルを挿入します。  
   
-3.  最初の列に次のようにテキストを入力します。  
+3. 最初の列に次のようにテキストを入力します。  
   
-    ||  
-    |-|  
-    |**従業員の名前**|  
-    |**採用日**|  
-    |**タイトル**|  
-    |**画像**|  
+   ||  
+   |-|  
+   |**従業員の名前**|  
+   |**採用日**|  
+   |**タイトル**|  
+   |**画像**|  
   
-4.  2 番目の列の最初のセルをクリックします (横に**Employee Name**)。  
+4. 2 番目の列の最初のセルをクリックします (横に**Employee Name**)。  
   
-5.  リボンの **[開発]** タブをクリックします。  
+5. リボンの **[開発]** タブをクリックします。  
   
-    > [!NOTE]  
-    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、次を参照してください。[方法: リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
+   > [!NOTE]  
+   >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、次を参照してください。[方法: リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
   
-6.  **コントロール**グループで、、**テキスト**ボタン![PlainTextContentControl](../vsto/media/plaintextcontrol.gif "PlainTextContentControl") を追加する<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>最初のセルにします。  
+6. **コントロール**グループで、、**テキスト**ボタン![PlainTextContentControl](../vsto/media/plaintextcontrol.gif "PlainTextContentControl") を追加する<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>最初のセルにします。  
   
-7.  2 番目の列では、2 番目のセルをクリックします (横に**Hire Date**)。  
+7. 2 番目の列では、2 番目のセルをクリックします (横に**Hire Date**)。  
   
-8.  **コントロール**グループで、、**日付選択カレンダー**ボタン![DatePickerContentControl](../vsto/media/datepicker.gif "DatePickerContentControl") を追加するには<xref:Microsoft.Office.Tools.Word.DatePickerContentControl> 2 番目のセルにします。  
+8. **コントロール**グループで、、**日付選択カレンダー**ボタン![DatePickerContentControl](../vsto/media/datepicker.gif "DatePickerContentControl") を追加するには<xref:Microsoft.Office.Tools.Word.DatePickerContentControl> 2 番目のセルにします。  
   
 9. 2 番目の列の 3 番目のセルをクリックします (横に**タイトル**)。  
   
@@ -107,27 +107,27 @@ ms.locfileid: "35672862"
   
 ### <a name="to-create-the-customer-feedback-table"></a>顧客フィードバック表を作成するには  
   
-1.  Word テンプレートで、先ほど追加した従業員表の後の行をクリックし、キーを押します**Enter**新しい段落を追加します。  
+1. Word テンプレートで、先ほど追加した従業員表の後の行をクリックし、キーを押します**Enter**新しい段落を追加します。  
   
-2.  リボンのクリックして、**挿入**タブ。  
+2. リボンのクリックして、**挿入**タブ。  
   
-3.  **テーブル**グループで、**テーブル**、2 つの列と 3 つの行を含むテーブルを挿入します。  
+3. **テーブル**グループで、**テーブル**、2 つの列と 3 つの行を含むテーブルを挿入します。  
   
-4.  最初の列に次のようにテキストを入力します。  
+4. 最初の列に次のようにテキストを入力します。  
   
-    ||  
-    |-|  
-    |**顧客名**|  
-    |**満足度評価**|  
-    |**コメント**|  
+   ||  
+   |-|  
+   |**顧客名**|  
+   |**満足度評価**|  
+   |**コメント**|  
   
-5.  2 番目の列の最初のセルをクリックして (横に**顧客名**)。  
+5. 2 番目の列の最初のセルをクリックして (横に**顧客名**)。  
   
-6.  リボンの **[開発]** タブをクリックします。  
+6. リボンの **[開発]** タブをクリックします。  
   
-7.  **コントロール**グループで、、**テキスト**ボタン![PlainTextContentControl](../vsto/media/plaintextcontrol.gif "PlainTextContentControl") を追加する<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>最初のセルにします。  
+7. **コントロール**グループで、、**テキスト**ボタン![PlainTextContentControl](../vsto/media/plaintextcontrol.gif "PlainTextContentControl") を追加する<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>最初のセルにします。  
   
-8.  2 番目の列の 2 つ目のセルをクリックして (横に**満足度評価**)。  
+8. 2 番目の列の 2 つ目のセルをクリックして (横に**満足度評価**)。  
   
 9. **コントロール**グループで、、**ドロップ ダウン リスト**ボタン![DropDownListContentControl](../vsto/media/dropdownlist.gif "DropDownListContentControl")を追加する、<xref:Microsoft.Office.Tools.Word.DropDownListContentControl> 2 番目のセルにします。  
   

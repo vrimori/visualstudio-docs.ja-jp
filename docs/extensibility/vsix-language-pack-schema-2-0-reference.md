@@ -16,12 +16,12 @@ author: dgriffen
 manager: douge
 ms.workload:
 - dagriffe
-ms.openlocfilehash: e4a8bc0f4b276ed649cdff986bdfc56cf8c77e06
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: 94d785ce55b57e35b0880537e099cbc3e03d20ab
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586223"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855816"
 ---
 # <a name="vsix-language-pack-schema-20-reference"></a>VSIX 言語パック スキーマ 2.0 リファレンス
 
@@ -34,6 +34,7 @@ VSIX 言語パックのスキーマは、VSIX パッケージのローカライ�
 ### <a name="packagelangaugepackmanifest-element"></a>PackageLangaugePackManifest 要素
 
 内で、`<PackageLanguagePackManifest>`要素の次の要素が存在する必要があります。
+
 |Title|説明|
 |-----------|-----------------|
 |`<Metadata>`| ローカライズされたパッケージのすべてのメタデータのコンテナー要素
@@ -41,6 +42,7 @@ VSIX 言語パックのスキーマは、VSIX パッケージのローカライ�
 ### <a name="metadata-element"></a>メタデータ要素
 
 内で、`<Metadata>`要素は、次の要素があることができます。
+
 |Title|説明|
 |-----------|-----------------|
 |`<DisplayName>`|拡張機能のインストールのローカライズされた名前|

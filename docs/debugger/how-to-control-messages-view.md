@@ -1,5 +1,5 @@
 ---
-title: '方法: メッセージ ビューを制御 |Microsoft ドキュメント'
+title: '方法: メッセージ ビューを制御 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -13,22 +13,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e06757307a71d34e2d38aa24695915b7e64bc8d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 64b83107d4dda72aea7db9e9c911305c96de7097
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31473200"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836373"
 ---
 # <a name="how-to-control-messages-view"></a>方法: メッセージ ビューを制御する
-Spy++ では、内容を細かく制御がある、[メッセージ ビュー](../debugger/messages-view.md)ウィンドウです。 実行できます[開始および停止](../debugger/how-to-start-and-stop-the-message-log-display.md)を指定して、いつでもにメッセージを表示することができます。  
+Spy++ では、コンテンツの制御がある、[メッセージ ビュー](../debugger/messages-view.md)ウィンドウ。 できます[開始および停止](../debugger/how-to-start-and-stop-the-message-log-display.md)指定して、いつでもにメッセージを表示することができます。  
   
--   表示するメッセージの種類。  
+- 表示するメッセージの種類。  
   
--   監視する windows です。  
+- 監視する windows。  
   
--   メッセージ行の表示形式。  
+- メッセージの行の表示形式。  
   
- これらの設定はから利用可能な[メッセージ オプション ダイアログ ボックス](../debugger/message-options-dialog-box.md)と、アクティブにのみ適用されます[メッセージ ビュー](../debugger/messages-view.md)ウィンドウです。 このダイアログ ボックスを開くには、選択**ログ メッセージ**から、**スパイ**メニュー。  
+  これらの設定はから利用可能な[メッセージ オプション ダイアログ ボックス](../debugger/message-options-dialog-box.md)、作業中にのみ適用されると[メッセージ ビュー](../debugger/messages-view.md)ウィンドウ。 このダイアログ ボックスを開くには、次のように選択します。**ログ メッセージ**から、**スパイ**メニュー。  
   
- メッセージのオプションの 3 つのタブ付きペインを利用できます。 詳細については、次を参照してください。 [Windows タブの [メッセージ オプション] ダイアログ ボックス](../debugger/windows-tab-message-options-dialog-box.md)、[メッセージタブの [メッセージ オプション] ダイアログ ボックス](../debugger/messages-tab-message-options-dialog-box.md)、および[出力タブの [メッセージ オプション] ダイアログ ボックス](../debugger/output-tab-message-options-dialog-box.md)です。
+  メッセージのオプションの 3 つのタブ付きペインを利用できます。 詳細については、次を参照してください。 [Windows タブの [メッセージ オプション] ダイアログ ボックス](../debugger/windows-tab-message-options-dialog-box.md)、[メッセージタブの [メッセージ オプション] ダイアログ ボックス](../debugger/messages-tab-message-options-dialog-box.md)、および[出力タブの [メッセージ オプション] ダイアログ ボックス](../debugger/output-tab-message-options-dialog-box.md)です。

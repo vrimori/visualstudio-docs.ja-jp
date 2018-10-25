@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findInlineeLinesByVA |Microsoft ドキュメント
+title: IDiaSymbol::findInlineeLinesByVA |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fd0167eaea86b13c8d197d39c6042f5ad183fcd
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f004b189a22c510599ae9a5f1c719a151ed7d39f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31464389"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914906"
 ---
 # <a name="idiasymbolfindinlineelinesbyva"></a>IDiaSymbol::findInlineeLinesByVA
-クライアントはインライン展開を直接または間接的に、指定された仮想アドレス (VA) 内でこのシンボルのすべての関数の行番号情報を反復処理を可能にする列挙体を取得します。  
+により、クライアントは、行番号の情報がインライン展開されて、直接または間接的に、この記号を指定した仮想アドレス (VA) 内のすべての関数を反復処理する列挙体を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,16 +34,16 @@ HRESULT findInlineeLinesByVA (
   
 #### <a name="parameters"></a>パラメーター  
  `va`  
- [in]問い合わせください。 としてアドレスを指定します。  
+ [in]として、問い合わせください。 アドレスを指定します。  
   
  `length`  
- [in]このクエリに対応する、バイト数で、アドレスの範囲を指定します。  
+ [in]このクエリをカバーする、バイト数では、アドレスの範囲を指定します。  
   
  `ppResult`  
  [out]保持する`IDiaEnumLineNumbers`取得される行番号の一覧を含むオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   

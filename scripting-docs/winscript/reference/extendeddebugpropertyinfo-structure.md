@@ -1,5 +1,5 @@
 ---
-title: ExtendedDebugPropertyInfo 構造体 |Microsoft ドキュメント
+title: ExtendedDebugPropertyInfo 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,15 +18,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ee06b0ace93f068e0530a3aa62b8c28d11069f44
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 62b9f3b5877f7919a57e9747355276e438240796
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24641332"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888906"
 ---
 # <a name="extendeddebugpropertyinfo-structure"></a>ExtendedDebugPropertyInfo 構造体
-拡張、`DebugPropertyInfo`構造体メンバーを追加して拡張プロパティを設定します。  
+拡張、`DebugPropertyInfo`を特徴付ける拡張プロパティの追加メンバーを含む構造体。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ typedef struct ExtendedDebugPropertyInfo{
   
 ## <a name="members"></a>メンバー  
  `dwValidFields`  
- 列挙型のフィールドが初期化されますを指定するために使用します。  
+ 列挙データ型フィールドが初期化されるかを指定するために使用します。  
   
  `bstrName`  
  コンテキスト内でプロパティ名。  
@@ -67,7 +67,7 @@ typedef struct ExtendedDebugPropertyInfo{
  デバッグ プロパティの属性のフラグを指定する列挙です。  
   
  `pDebugProp`  
- `IDebugProperty`これに対応するオブジェクト`ExtendedDebugPropertyInfo`です。  
+ `IDebugProperty` これに対応するオブジェクト`ExtendedDebugPropertyInfo`します。  
   
  `nDISPID`  
  ディスパッチ id。  
@@ -76,13 +76,13 @@ typedef struct ExtendedDebugPropertyInfo{
  拡張プロパティの型。  
   
  `varValue`  
- バリアント型に収まる場合は、拡張プロパティ値です。  
+ バリアントに収めることができる場合は、拡張プロパティ値。  
   
  `plbValue`  
- プロパティの値の実際のデータのバイト数。  
+ プロパティ値の実際のデータのバイト数。  
   
  `pDebugExtProp`  
- `IDebugExtendedProperty`これに対応するオブジェクト`ExtendedDebugPropertyInfo`です。  
+ `IDebugExtendedProperty` これに対応するオブジェクト`ExtendedDebugPropertyInfo`します。  
   
 ## <a name="see-also"></a>関連項目  
  [DebugPropertyInfo 構造体](../../winscript/reference/debugpropertyinfo-structure.md)   

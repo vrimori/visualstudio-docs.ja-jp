@@ -15,12 +15,12 @@ ms.assetid: 3f59a285-6c33-4ae3-a4fb-ec1f5aa21bd1
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c7fb7214f4cd9d338c06e9f1eba5f1cc2c50fbc0
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 65e3c544fc5e571368afb9872e6e13fda128e79a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49215671"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877583"
 ---
 # <a name="managed-extensibility-framework-in-the-editor"></a>エディター内の Managed Extensibility Framework
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "49215671"
 ### <a name="component-parts-and-composition-containers"></a>コンポーネントの部分と合成コンテナー  
  コンポーネントの一部は、クラス、または、次のいずれか (または両方) を実行できるクラスのメンバーには。  
   
--   別のコンポーネントを使用します。  
+- 別のコンポーネントを使用します。  
   
--   別のコンポーネントで消費されます。  
+- 別のコンポーネントで消費されます。  
   
- たとえば、倉庫の在庫コンポーネントによって提供される製品の可用性データに依存する注文エントリ コンポーネントを含むショッピング アプリケーションを検討してください。 在庫部品をできる MEF の用語で*エクスポート*製品の可用性データ、および注文のエントリに、一部は*インポート*データ。 注文の入力部分とインベントリの一部が; 相互について知っておく必要は*合成コンテナー* (ホスト アプリケーションによって提供される) のエクスポート、セットを維持し、エクスポートの解決を担当してインポートします。  
+  たとえば、倉庫の在庫コンポーネントによって提供される製品の可用性データに依存する注文エントリ コンポーネントを含むショッピング アプリケーションを検討してください。 在庫部品をできる MEF の用語で*エクスポート*製品の可用性データ、および注文のエントリに、一部は*インポート*データ。 注文の入力部分とインベントリの一部が; 相互について知っておく必要は*合成コンテナー* (ホスト アプリケーションによって提供される) のエクスポート、セットを維持し、エクスポートの解決を担当してインポートします。  
   
- 合成コンテナー、<xref:System.ComponentModel.Composition.Hosting.CompositionContainer>は、通常、ホストによって所有されます。 合成コンテナーを保持する*カタログ*エクスポートされた構成部品の。  
+  合成コンテナー、<xref:System.ComponentModel.Composition.Hosting.CompositionContainer>は、通常、ホストによって所有されます。 合成コンテナーを保持する*カタログ*エクスポートされた構成部品の。  
   
 ### <a name="exporting-and-importing-component-parts"></a>エクスポートとインポート コンポーネント パーツ  
  パブリック クラスまたはクラス (プロパティまたはメソッド) のパブリック メンバーとして実装されます限り、機能をエクスポートできます。 コンポーネント部分を派生する必要はありません<xref:System.ComponentModel.Composition.Primitives.ComposablePart>します。 代わりに、追加する必要があります、<xref:System.ComponentModel.Composition.ExportAttribute>属性をクラスまたはクラス メンバーをエクスポートします。 この属性を指定します、*コントラクト*一部を別のコンポーネントで、機能をインポートできます。  

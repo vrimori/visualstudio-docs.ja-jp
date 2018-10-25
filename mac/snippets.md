@@ -5,12 +5,12 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: 0FE27C0C-A861-4133-A74E-8D0505CF5342
-ms.openlocfilehash: 864b39331944e881fe1bcdcfefa2dd7c1cebab09
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: bc362c950b919a4f9f663b5bd3ce1a2f0cbfb00a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224114"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906854"
 ---
 # <a name="code-snippets"></a>コード スニペット 
 
@@ -28,11 +28,11 @@ ms.locfileid: "43224114"
 
 * **ツールボックス** - ツールボックス パッドを使ってすべてのコード スニペットの一覧を表示します。 ツールボックスからソース コード内の正しい位置にテンプレートをドラッグします。
 
- ![ツールボックスでのコード スニペット](media/source-editor-image14.png)
+  ![ツールボックスでのコード スニペット](media/source-editor-image14.png)
 
 * **テンプレート挿入コマンド** - 現在、テンプレートの挿入に対する既定のキー バインド セットはありません。 キー バインド セットを作成するには、**[Visual Studio] > [ユーザー設定] > [キー バインディング]** の順に選んで、`template` を検索します。 [バインディングの編集] フィールドに目的のキー バインドを追加して、**[適用]** をクリックします。
 
- ![テンプレート挿入コマンド](media/source-editor-image15.png)
+  ![テンプレート挿入コマンド](media/source-editor-image15.png)
 
 ## <a name="creating-a-new-template"></a>新しいテンプレートの作成
 

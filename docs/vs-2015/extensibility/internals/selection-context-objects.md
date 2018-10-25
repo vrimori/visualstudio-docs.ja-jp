@@ -16,12 +16,12 @@ ms.assetid: 7308ea8f-a42c-47e5-954e-7dee933dce7a
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9c1a0c138cbfcf3892508fb9ae42685ffe895411
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: b3d65a1fb510daec68060261141ddb2d05822988
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49228658"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836854"
 ---
 # <a name="selection-context-objects"></a>コンテキスト オブジェクトの選択
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "49228658"
   
  Vspackage を監視するグローバルの選択コンテキストのトリガー イベントを変更します。 Vspackage が実装することで、次のタスクを実行できます`IVsTrackSelectionEx`と<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>インターフェイス。  
   
--   階層内の現在アクティブなファイルを更新します。  
+- 階層内の現在アクティブなファイルを更新します。  
   
--   特定の種類の要素への変更を監視します。 例では、VSPackage が特別なを使用している場合、**プロパティ**ウィンドウで、アクティブな変更を監視できます**プロパティ**ウィンドウし、必要な場合に自分を再起動します。  
+- 特定の種類の要素への変更を監視します。 例では、VSPackage が特別なを使用している場合、**プロパティ**ウィンドウで、アクティブな変更を監視できます**プロパティ**ウィンドウし、必要な場合に自分を再起動します。  
   
- 次の順序は、選択の追跡の一般的な手順を示しています。  
+  次の順序は、選択の追跡の一般的な手順を示しています。  
   
 1.  IDE では、新しく開かれたウィンドウから選択コンテキストを取得し、グローバルの選択コンテキスト内に配置します。 HIERARCHY_DONTPROPAGATE または SELCONTAINER_DONTPROPAGATE を選択コンテキストを使用する場合、グローバルなコンテキストにその情報は反映されません。 詳細については、次を参照してください。[ユーザーへのフィードバック](../../extensibility/internals/feedback-to-the-user.md)します。  
   

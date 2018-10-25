@@ -15,23 +15,23 @@ ms.assetid: c7ec2366-91c4-477f-908d-e89068bdb3e3
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3c82100a544a9f59fbb64af8b78d51314b39690f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 91becc7afb7c236ebe9d6e08c1b8a221cb9f90fe
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49282701"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49826546"
 ---
 # <a name="supporting-multiple-document-views"></a>複数のドキュメント ビューのサポート
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 エディター用の個別のドキュメント データとドキュメント ビュー オブジェクトを作成して、ドキュメントの 1 つ以上のビューを行うことができます。 場合によっては便利ですが、追加のドキュメント ビューは次のとおりです。  
   
--   新しいウィンドウのサポート: エディターで開いているウィンドウを既に持っているユーザーが選択して、新しいウィンドウを開けるように、同じ型の 2 つ以上のビューを提供する、エディターが必要な**新しいウィンドウ**コマンドから、 **ウィンドウ**メニュー。  
+- 新しいウィンドウのサポート: エディターで開いているウィンドウを既に持っているユーザーが選択して、新しいウィンドウを開けるように、同じ型の 2 つ以上のビューを提供する、エディターが必要な**新しいウィンドウ**コマンドから、 **ウィンドウ**メニュー。  
   
--   フォームおよびコードの表示のサポート: さまざまな種類のビューを提供するエディターとして使用します。 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]、たとえば、フォーム ビューとコード ビューの両方を提供します。  
+- フォームおよびコードの表示のサポート: さまざまな種類のビューを提供するエディターとして使用します。 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]、たとえば、フォーム ビューとコード ビューの両方を提供します。  
   
- 詳細については、Visual Studio パッケージ テンプレートによって作成されたカスタム エディターのプロジェクトで EditorFactory.cs ファイル CreateEditorInstance プロシージャを参照してください。 このプロジェクトの詳細については、次を参照してください。[チュートリアル: カスタム エディターを作成する](../extensibility/walkthrough-creating-a-custom-editor.md)します。  
+  詳細については、Visual Studio パッケージ テンプレートによって作成されたカスタム エディターのプロジェクトで EditorFactory.cs ファイル CreateEditorInstance プロシージャを参照してください。 このプロジェクトの詳細については、次を参照してください。[チュートリアル: カスタム エディターを作成する](../extensibility/walkthrough-creating-a-custom-editor.md)します。  
   
 ## <a name="synchronizing-views"></a>ビューの同期  
  複数のビューを実装するときに、ドキュメント データ オブジェクトは、すべてのビューと、データの同期を維持する責任を負います。 インターフェイスを処理するイベントを使用する<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>データと複数のビューを同期します。  

@@ -1,5 +1,5 @@
 ---
-title: Idiaenumframedata::next |Microsoft ドキュメント
+title: Idiaenumframedata::next |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6835cda6c8c2a5cb20135abf92a523a270b32c78
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 55320b4f07eb2acda1d46875fa6f3bd5eefe2813
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31461243"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949982"
 ---
 # <a name="idiaenumframedatanext"></a>IDiaEnumFrameData::Next
-指定した列挙のシーケンス内のデータ要素のフレーム数を取得します。  
+指定した列挙体シーケンス内のデータ要素のフレーム数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,16 +36,16 @@ HRESULT Next (
   
 #### <a name="parameters"></a>パラメーター  
  celt  
- [in]フレーム データ要素を取得する列挙子の数。  
+ [in]フレームを取得する列挙子のデータ要素の数。  
   
  rgelt  
- [out]配列[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)要求フレーム データ要素を使用して入力するオブジェクト。  
+ [out]配列の[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)で要求されたフレームのデータ要素を格納するオブジェクト。  
   
  pceltFetched  
- [out]フェッチされた列挙子には、フレーム データ要素の数を返します。  
+ [out]フェッチされた列挙子では、フレーム データ要素の数を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 返します`S_FALSE`レコードがある場合。 それ以外の場合はエラー コードを返します。  
+ 成功した場合、返します`S_OK`します。 返します`S_FALSE`レコードがある場合。 それ以外の場合はエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)   

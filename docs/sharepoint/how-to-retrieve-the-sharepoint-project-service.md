@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7e2dc633621734740065b8e0c80dd34795eac830
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: e8f9faa0ca539c3b5381aca4159cc4653543087a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119907"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880599"
 ---
 # <a name="how-to-retrieve-the-sharepoint-project-service"></a>方法: SharePoint プロジェクト サービスを取得
   次の種類のソリューションで SharePoint プロジェクト サービスにアクセスすることができます。  
@@ -96,11 +96,11 @@ ms.locfileid: "37119907"
   
  要求することができます、VSPackage で、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService>次のメソッドのいずれかを使用してオブジェクト。  
   
--   <xref:System.IServiceProvider.GetService%2A>から派生したマネージ VSPackage のメソッド、<xref:Microsoft.VisualStudio.Shell.Package>クラス。 詳細については、次を参照してください。[方法: サービスを取得](../extensibility/how-to-get-a-service.md)します。  
+- <xref:System.IServiceProvider.GetService%2A>から派生したマネージ VSPackage のメソッド、<xref:Microsoft.VisualStudio.Shell.Package>クラス。 詳細については、次を参照してください。[方法: サービスを取得](../extensibility/how-to-get-a-service.md)します。  
   
--   静的な<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>メソッド。 詳細については、次を参照してください。[使用 GetGlobalService](../extensibility/internals/service-essentials.md#how-to-use-getglobalservice)します。  
+- 静的な<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>メソッド。 詳細については、次を参照してください。[使用 GetGlobalService](../extensibility/internals/service-essentials.md#how-to-use-getglobalservice)します。  
   
- Visual Studio の拡張機能にアクセスできる、<xref:EnvDTE80.DTE2>オブジェクトを要求できます、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService>オブジェクトを使用して、<xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A>のメソッドを<xref:Microsoft.VisualStudio.Shell.ServiceProvider>オブジェクト。 詳細については、次を参照してください。 [DTE オブジェクトからサービスを取得する](../extensibility/how-to-get-a-service.md#getting-a-service-from-the-dte-object)します。  
+  Visual Studio の拡張機能にアクセスできる、<xref:EnvDTE80.DTE2>オブジェクトを要求できます、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService>オブジェクトを使用して、<xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A>のメソッドを<xref:Microsoft.VisualStudio.Shell.ServiceProvider>オブジェクト。 詳細については、次を参照してください。 [DTE オブジェクトからサービスを取得する](../extensibility/how-to-get-a-service.md#getting-a-service-from-the-dte-object)します。  
   
 ## <a name="see-also"></a>関連項目
  [SharePoint プロジェクト サービスを使用します。](../sharepoint/using-the-sharepoint-project-service.md)   

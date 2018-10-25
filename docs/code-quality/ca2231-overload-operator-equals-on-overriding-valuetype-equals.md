@@ -20,14 +20,15 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: b7965665ea59da6833a01885201a25f1e24b80ca
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: afdbb6f75754f5f7c839326139a57f2c20de97c3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45547384"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816593"
 ---
 # <a name="ca2231-overload-operator-equals-on-overriding-valuetypeequals"></a>CA2231: ValueType.Equals のオーバーライドで、演算子 equals をオーバーロードします
+
 |||
 |-|-|
 |TypeName|OverloadOperatorEqualsOnOverridingValueTypeEquals|

@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 959be2a2f80f215aa3d72a36b8b989e6fa219c3d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 45a7cef09937181fbf6c721b8c8eca73b6351742
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31947938"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930545"
 ---
 # <a name="environment-options-dialog-box"></a>[環境] ([オプション] ダイアログ ボックス)
 **[オプション]** ダイアログ ボックスの **[環境]** フォルダーのページを使用すると、統合開発環境 (IDE) の特定の要素の表示方法と動作方法を設定できます。 メニュー バーで **[ツール]**、**[オプション]** を順にクリックし、次に **[環境]** をクリックすると、[環境] の各ページにアクセスできます。
@@ -28,7 +28,7 @@ ms.locfileid: "31947938"
 
 
 |使用方法の詳細については、以下の資料を参照してください。|解決方法については、|
-|----------------------------------|---------|
+| - |---------|
 |ウィンドウ、メニュー、および IDE の他の要素の外観や動作をカスタマイズします。|[[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)|
 |ファイルの自動保存および復元の設定を変更します。|[[自動バックアップ] ([オプション] ダイアログ ボックス - [環境])](../../ide/reference/autorecover-environment-options-dialog-box.md)|
 |[その他のファイル] の動作を含め、ドキュメントの表示や管理の設定を行います。|[[ドキュメント] ([オプション] ダイアログ ボックス - [環境])](../../ide/reference/documents-environment-options-dialog-box.md)|

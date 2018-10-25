@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::DetachDebugger_V7 |Microsoft ドキュメント
+title: IDebugProgramNode2::DetachDebugger_V7 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a79c073048fe30a4abed069487ad09943253475
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 20981c744408e8d25e6e851c39532db939c71b2b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115032"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939959"
 ---
 # <a name="idebugprogramnode2detachdebuggerv7"></a>IDebugProgramNode2::DetachDebugger_V7
 
 > [!Note]
-> 推奨されなくなりました。 使用しないでください。
+> 非推奨とされます。 使用しないでください。
 
 ## <a name="syntax"></a>構文
 
@@ -41,14 +41,14 @@ int DetachDebugger_V7 ();
 
 ## <a name="return-value"></a>戻り値
 
-実装を常に返します`E_NOTIMPL`です。
+実装は常に返す必要があります`E_NOTIMPL`します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 > [!WARNING]
-> Visual Studio 2005 の時点でこのメソッドは使用されなくを常に返す必要があります`E_NOTIMPL`です。
+> Visual Studio 2005 の時点でこのメソッドは使用されなくと常に返す必要があります`E_NOTIMPL`します。
 
-このメソッドは、デバッガーが突然終了するときに呼び出されます。 このメソッドが呼び出されたときに、DE は必要があります、ユーザーがそこからデタッチされたものとしてプログラムを再開します。 これ以上のデバッグ イベントを送信する必要があります。 プログラムは、デバッガーの別のインスタンスからアタッチ可能な状態である必要があります。
+このメソッドは、デバッガーが突然終了するときに呼び出されます。 ユーザーがそこからデタッチされたものとしてこのメソッドが呼び出されるには、DE でプログラムが再開されます。 デバッグ イベントを送信する必要があります。 プログラムが、デバッガーの別のインスタンスからアタッチ可能な状態でなければなりません。
 
 ## <a name="see-also"></a>関連項目
 

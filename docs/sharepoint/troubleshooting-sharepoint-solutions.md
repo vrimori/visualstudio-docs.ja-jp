@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b7c17306bd437c627ca2232bfd3f35d3ac05d70e
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 9f029cad2b0c8cb215a054502de5bc693cce5df5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119471"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928959"
 ---
 # <a name="troubleshoot-sharepoint-solutions"></a>SharePoint ソリューションをトラブルシューティングします。
   以下の問題または警告は、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] デバッガーを使用して SharePoint ソリューションをデバッグするときに発生することがあります。 詳細については、次を参照してください。 [SharePoint 2007 ワークフロー ソリューションのデバッグ](http://msdn.microsoft.com/en-us/3a5392f3-66f3-48be-956e-02de23fa6247)します。
@@ -53,21 +53,21 @@ ms.locfileid: "37119471"
 ### <a name="resolution"></a>解像度  
  SharePoint のプロジェクトとプロジェクト アイテムの名前では、次の文字だけを使用してください。  
   
--   ASCII 英数字  
+- ASCII 英数字  
   
--   スペース  
+- スペース  
   
--   ピリオド (.)  
+- ピリオド (.)  
   
--   コンマ (,)  
+- コンマ (,)  
   
--   アンダースコア (_)  
+- アンダースコア (_)  
   
--   ダッシュ (-)  
+- ダッシュ (-)  
   
--   円記号 (\\)  
+- 円記号 (\\)  
   
- プロジェクトがパッケージされるとき、検証規則により、配置される各ファイルの配置パス プロパティに有効な文字だけが含まれていることが確認されます。  
+  プロジェクトがパッケージされるとき、検証規則により、配置される各ファイルの配置パス プロパティに有効な文字だけが含まれていることが確認されます。  
   
 ## <a name="errors-when-creating-custom-fields"></a>カスタム フィールドを作成するときにエラー
  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] では、カスタム フィールドは、XML で定義されます。 フィールドが特定の形式で定義または参照されていない場合、エラーが発生する可能性があります。  
@@ -99,7 +99,7 @@ ms.locfileid: "37119471"
  フィールドのソース XML の形式が間違っている場合、有効な XML ファイルでない場合、またはその他の問題がある場合、"ファイルを解析できません" エラーが発生します。  
   
 ## <a name="new-non-english-site-definitions-do-not-appear-in-site-creation-page-after-deployment"></a>デプロイ後にサイトの作成 ページに新しい英語以外のサイト定義は表示されません。
- 作成しの英語以外のバージョンを使用してサイト定義を展開すると[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] (ロケールとバージョンは、 [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] 1033 以外)、 **SharePoint のカスタマイズ**タブが表示されず、 **テンプレートの選択**にボックスと、新しいサイト テンプレートがない、**新しい SharePoint サイト**ページ。  
+ 作成しの英語以外のバージョンを使用してサイト定義を展開すると[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)](ロケールとバージョンは、 [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] 1033 以外)、 **SharePoint のカスタマイズ**タブが表示されず、 **テンプレートの選択**にボックスと、新しいサイト テンプレートがない、**新しい SharePoint サイト**ページ。  
   
 ### <a name="error-message"></a>エラー メッセージ
  なし。  
@@ -134,7 +134,7 @@ ms.locfileid: "37119471"
   
 ### <a name="resolution"></a>解像度  
   
--   [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] をインストールします。  
+-   [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)]をインストールします。  
   
 -   SharePoint Web サイトに対する管理者の権限があることを確認します。 詳細については、次を参照してください。、[!INCLUDE[TLA2#tla_office](../sharepoint/includes/tla2sharptla-office-md.md)]オンライン記事[割り当てまたは SharePoint サーバーのサービス アプリケーションの管理者を削除](https://docs.microsoft.com/en-us/sharepoint/administration/assign-or-remove-administrators-of-service-applications)します。  
   
@@ -147,15 +147,15 @@ ms.locfileid: "37119471"
 ### <a name="resolution"></a>解像度  
  この問題は、サイト レベルのイベントを処理するにはフィーチャーのスコープが "サイト" である必要があるのに、イベント レシーバー プロジェクトの既定のフィーチャー スコープが "Web" になっているために発生します。 影響を受ける Web イベントは次のとおりです。  
   
--   サイトが削除されています (WebDeleting)  
+- サイトが削除されています (WebDeleting)  
   
--   サイトが削除されました (WebDeleted)  
+- サイトが削除されました (WebDeleted)  
   
--   サイトが移動されています (WebMoving)  
+- サイトが移動されています (WebMoving)  
   
--   サイトが移動されました (WebMoved)  
+- サイトが移動されました (WebMoved)  
   
- この問題を修正するには、イベント レシーバーのフィーチャー スコープを次のように変更します。  
+  この問題を修正するには、イベント レシーバーのフィーチャー スコープを次のように変更します。  
   
 ##### <a name="to-change-the-feature-scope-of-the-event-receiver"></a>イベント レシーバーのフィーチャー スコープを変更するには  
   
@@ -215,7 +215,7 @@ ms.locfileid: "37119471"
  この問題は、インポートしたリスト インスタンスの名前を変更した後、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で実行した場合に発生します。  
   
 ### <a name="error-message"></a>エラー メッセージ
- ビルド エラー: 配置手順 ' 機能のアクティブ化でエラーが発生しました: ファイル Template\Features\\[*プロジェクトのインポート**機能**名前*] \Files\Lists\\[*古い * * リスト名*] \Schema.xml が存在しません。  
+ ビルド エラー: 配置手順 ' 機能のアクティブ化でエラーが発生しました: ファイル Template\Features\\[*プロジェクトのインポート*<em>機能</em>*名前*] \Files\Lists\\[*古い*<em>リスト名</em>] \Schema.xml が存在しません。  
   
 ### <a name="resolution"></a>解像度  
  リスト インスタンスをインポートすると、CustomSchema という名前の属性がリスト インスタンスの Elements.xml ファイルに追加されます。 Elements.xml には、リスト インスタンス用のカスタム schema.xml のパスが含まれます。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] でリスト インスタンスの名前を変更すると、カスタム schema.xml の配置パスは変更されますが、CustomSchema 属性のパス値は更新されません。 その結果、リスト インスタンスが見つかりません、 *schema.xml*機能がアクティブな場合は、CustomSchema 属性で指定された古いパス内のファイル。  

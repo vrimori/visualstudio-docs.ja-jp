@@ -17,12 +17,12 @@ ms.assetid: 8b12e223-aae3-4c23-813d-ede1125f5f69
 caps.latest.revision: 55
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f7158dcbd55229998e49e2d2891ae46d88c7fbc9
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 0a23acf29b0ffc3a763b34ca12e08abd5a81b5d1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49199538"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942572"
 ---
 # <a name="walkthrough-creating-a-basic-isolated-shell-application"></a>チュートリアル: 基本的な分離シェル アプリケーションの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -75,13 +75,13 @@ ms.locfileid: "49199538"
   
 #### <a name="to-customize-the-default-web-browser-home-page"></a>既定の Web ブラウザーのホーム ページをカスタマイズするには  
   
-1.  MyVSShellStub.Application.pkgdef ファイルで、変更、`DefaultHomePage`要素の値"http://www.microsoft.com"。  
+1. MyVSShellStub.Application.pkgdef ファイルで、変更、`DefaultHomePage`要素の値"<http://www.microsoft.com>"。  
   
-2.  MyVSShellStub プロジェクトをリビルドします。  
+2. MyVSShellStub プロジェクトをリビルドします。  
   
-3.  ソリューションをビルドし、デバッグを開始します。  
+3. ソリューションをビルドし、デバッグを開始します。  
   
-4.  **ビュー/その他の Windows**、 をクリックして**Web ブラウザー**します。 **Web ブラウザー**ウィンドウには、Microsoft Corporation のホーム ページが表示されます。  
+4. **ビュー/その他の Windows**、 をクリックして**Web ブラウザー**します。 **Web ブラウザー**ウィンドウには、Microsoft Corporation のホーム ページが表示されます。  
   
 ## <a name="removing-the-print-command"></a>印刷コマンドを削除します。  
  分離シェルの UI プロジェクトで .vsct ファイル形式の宣言のセットから構成`<Define name=No_`*要素*`>`ここで、*要素*は標準の Visual Studio メニューのいずれかとコマンド。  
@@ -173,26 +173,26 @@ ms.locfileid: "49199538"
 ## <a name="deploying-the-isolated-shell-application"></a>分離シェル アプリケーションを展開します。  
  対象のコンピュータに、分離シェル アプリケーションを展開するには、セットアップ プロジェクトを作成します。 これらの操作を指定する必要があります。  
   
--   ターゲット コンピューター上のフォルダーおよびファイル レイアウト。  
+- ターゲット コンピューター上のフォルダーおよびファイル レイアウト。  
   
--   .NET Framework と Visual Studio シェルのランタイムを保証する起動条件は、ターゲット コンピューターにインストールされます。  
+- .NET Framework と Visual Studio シェルのランタイムを保証する起動条件は、ターゲット コンピューターにインストールされます。  
   
- 次の手順では、InstallShield Limited Edition をコンピューターにインストールする必要があります。  
+  次の手順では、InstallShield Limited Edition をコンピューターにインストールする必要があります。  
   
 #### <a name="to-create-the-setup-project"></a>セットアップ プロジェクトを作成するには  
   
-1.  **ソリューション エクスプ ローラー**ソリューション ノードを右クリックし、クリックして**新しいプロジェクトの追加**します。  
+1. **ソリューション エクスプ ローラー**ソリューション ノードを右クリックし、クリックして**新しいプロジェクトの追加**します。  
   
-2.  **新しいプロジェクト** ダイアログ ボックスで、展開**その他のプロジェクトの種類**選び**セットアップと配置**。 InstallShield のテンプレートを選択します。 新しいプロジェクトの名前`MySetup` をクリックし、 **OK**します。  
+2. **新しいプロジェクト** ダイアログ ボックスで、展開**その他のプロジェクトの種類**選び**セットアップと配置**。 InstallShield のテンプレートを選択します。 新しいプロジェクトの名前`MySetup` をクリックし、 **OK**します。  
   
-3.  InstallShield Limited Edition が既にインストールされている場合は、次の手順に進みます。  
+3. InstallShield Limited Edition が既にインストールされている場合は、次の手順に進みます。  
   
-     InstallShield Limited Edition が既にインストールされていない場合は、InstallShield のダウンロード ページが表示されます。 ダウンロードして Visual Studio のバージョンと互換性がある InstallShield のバージョンを選択、製品をインストールする手順を実行します。 InstallShield のインストールを登録または評価版として使用するかどうかを決定する必要があります。 インストールが完了した後は、Visual Studio を再起動する必要があります。  
+    InstallShield Limited Edition が既にインストールされていない場合は、InstallShield のダウンロード ページが表示されます。 ダウンロードして Visual Studio のバージョンと互換性がある InstallShield のバージョンを選択、製品をインストールする手順を実行します。 InstallShield のインストールを登録または評価版として使用するかどうかを決定する必要があります。 インストールが完了した後は、Visual Studio を再起動する必要があります。  
   
-    > [!IMPORTANT]
-    >  InstallShield プロジェクトを作成する前に、管理者として Visual Studio を起動する必要があります。 これを行わない場合に、プロジェクトをビルドするときに、エラーが表示されます。  
+   > [!IMPORTANT]
+   >  InstallShield プロジェクトを作成する前に、管理者として Visual Studio を起動する必要があります。 これを行わない場合に、プロジェクトをビルドするときに、エラーが表示されます。  
   
- 次の手順では、セットアップ プロジェクトを構成する方法を示します。  
+   次の手順では、セットアップ プロジェクトを構成する方法を示します。  
   
 > [!IMPORTANT]
 >  セットアップ プロジェクトを構成する前に、分離シェル プロジェクトのリリースの構成は、少なくとも 1 回を構築したことを確認します。  

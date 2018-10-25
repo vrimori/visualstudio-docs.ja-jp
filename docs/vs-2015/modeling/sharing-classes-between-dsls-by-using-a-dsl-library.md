@@ -12,12 +12,12 @@ caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 2c0192aca40c6f58468fba35ee1fd174b0445bf1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ed469b4621205539e3f7a2ce59878bd318ba556f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49241521"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860037"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>DSL ライブラリによる DSL 間でのクラスの共有
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,21 +52,21 @@ ms.locfileid: "49241521"
   
 #### <a name="to-import-a-dsl-library"></a>DSL ライブラリをインポートするには  
   
-1.  別の DSL 定義内で**DSL エクスプ ローラー**、DSL のルート クラスを右クリックし、クリックして**新しい DslLibrary インポートの追加**します。  
+1. 別の DSL 定義内で**DSL エクスプ ローラー**、DSL のルート クラスを右クリックし、クリックして**新しい DslLibrary インポートの追加**します。  
   
-2.  [プロパティ] ウィンドウで次のように設定します。、**ファイル パス**ライブラリ。 相対パスまたは絶対パスを使用することができます。  
+2. [プロパティ] ウィンドウで次のように設定します。、**ファイル パス**ライブラリ。 相対パスまたは絶対パスを使用することができます。  
   
-     インポートされたライブラリは、読み取り専用モードには、DSL エクスプ ローラーで表示されます。  
+    インポートされたライブラリは、読み取り専用モードには、DSL エクスプ ローラーで表示されます。  
   
-3.  基底クラスとしてインポートされたクラスを使用することができます。 インポートの DSL のドメイン クラスを作成し、プロパティ ウィンドウで、設定**ベース クラス**をインポートするクラス。  
+3. 基底クラスとしてインポートされたクラスを使用することができます。 インポートの DSL のドメイン クラスを作成し、プロパティ ウィンドウで、設定**ベース クラス**をインポートするクラス。  
   
-4.  すべてのテンプレートの変換 をクリックします。  
+4. すべてのテンプレートの変換 をクリックします。  
   
-5.  DSL ライブラリのプロジェクトによってビルドされたアセンブリ (DLL) への参照を DSL プロジェクトに追加します。  
+5. DSL ライブラリのプロジェクトによってビルドされたアセンブリ (DLL) への参照を DSL プロジェクトに追加します。  
   
-6.  ソリューションをビルドします。  
+6. ソリューションをビルドします。  
   
- DSL ライブラリには、その他のライブラリをインポートできます。 ライブラリをインポートするときに、そのインポートは DSL エクスプ ローラーにも自動的に表示されます。  
+   DSL ライブラリには、その他のライブラリをインポートできます。 ライブラリをインポートするときに、そのインポートは DSL エクスプ ローラーにも自動的に表示されます。  
   
 ## <a name="see-also"></a>関連項目  
  [方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)

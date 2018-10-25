@@ -9,12 +9,12 @@ description: MPN パートナーのために Visual Studio サブスクリプシ
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: a81cf891a58a8c6bf206b057b883d133d92b0a85
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 4a113d88b93b5fe7532a72956ca6129be1773ebe
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
-ms.locfileid: "30862771"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949111"
 ---
 # <a name="managing-visual-studio-subscriptions-offered-through-the-microsoft-partner-network-mpn"></a>Microsoft Partner Network (MPN) で提供されている Visual Studio サブスクリプションの管理
 
@@ -68,7 +68,7 @@ Microsoft Action Pack サブスクライバーと Visual Studio サブスクリ�
 
 > [!NOTE]
 > Visual Studio サブスクリプションには、技術担当者ロールが必要
-    - 8 ページ: Assigning Visual Studio subscriptions for Competency Partners (コンピテンシー パートナーへの Visual Studio サブスクリプションの割り当て)
+>     - 8 ページ: Assigning Visual Studio subscriptions for Competency Partners (コンピテンシー パートナーへの Visual Studio サブスクリプションの割り当て)
 
 ## <a name="need-help"></a>お困りの際は、
 サブスクライバーのサブスクリプションへのアクセスに関する問題を解決するには、サブスクライバーとプログラム管理者が、Microsoft Partner Network のサポート チームと直接作業する必要があります。 [パートナーのサポート](https://partner.microsoft.com/support) ページをご覧ください  (MPN サインイン資格情報が必要です)。

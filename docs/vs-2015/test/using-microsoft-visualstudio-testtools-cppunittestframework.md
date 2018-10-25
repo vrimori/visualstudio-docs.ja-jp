@@ -13,12 +13,12 @@ ms.assetid: d1ac9188-d79f-407e-9f3a-80dbefa66317
 caps.latest.revision: 10
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: cc643f8bd8addefc2bec4c62645e8091aaedc11c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 68f083bf6aa99177f6b9e697be8affa5d29804a8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49291240"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49889608"
 ---
 # <a name="using-microsoftvisualstudiotesttoolscppunittestframework"></a>Microsoft.VisualStudio.TestTools.CppUnitTestFramework の使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,71 +32,71 @@ ms.locfileid: "49291240"
 ##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
  [CppUnitTest.h](#BKMK_CppUnitTest_h)  
   
--   [テスト クラスとメソッドを作成する](#BKMK_Create_test_classes_and_methods)  
+- [テスト クラスとメソッドを作成する](#BKMK_Create_test_classes_and_methods)  
   
--   [初期化とクリーンアップ](#BKMK_Initialize_and_cleanup)  
+- [初期化とクリーンアップ](#BKMK_Initialize_and_cleanup)  
   
-    -   [テスト メソッド](#BKMK_Test_methods)  
+  -   [テスト メソッド](#BKMK_Test_methods)  
   
-    -   [テスト クラス](#BKMK_Test_classes)  
+  -   [テスト クラス](#BKMK_Test_classes)  
   
-    -   [テスト モジュール](#BKMK_Test_modules)  
+  -   [テスト モジュール](#BKMK_Test_modules)  
   
--   [テスト属性を作成する](#BKMK_Create_test_attributes)  
+- [テスト属性を作成する](#BKMK_Create_test_attributes)  
   
-    -   [テスト メソッド属性](#BKMK_Test_method_attributes)  
+  - [テスト メソッド属性](#BKMK_Test_method_attributes)  
   
-    -   [テスト クラス属性](#BKMK_Test_class_attributes)  
+  - [テスト クラス属性](#BKMK_Test_class_attributes)  
   
-    -   [テスト モジュール属性](#BKMK_Test_module_attributes)  
+  - [テスト モジュール属性](#BKMK_Test_module_attributes)  
   
-    -   [定義済みの属性](#BKMK_Pre_defined_attributes)  
+  - [定義済みの属性](#BKMK_Pre_defined_attributes)  
   
-     [CppUnitTestAssert.h](#BKMK_CppUnitTestAssert_h)  
+    [CppUnitTestAssert.h](#BKMK_CppUnitTestAssert_h)  
   
-    -   [一般的なアサート](#BKMK_General_Asserts)  
+  - [一般的なアサート](#BKMK_General_Asserts)  
   
-        -   [等しい](#BKMK_General_Are_Equal)  
+    -   [等しい](#BKMK_General_Are_Equal)  
   
-        -   [等しくない](#BKMK_General_Are_Not_Equal)  
+    -   [等しくない](#BKMK_General_Are_Not_Equal)  
   
-        -   [同じである](#BKMK_General_Are_Same)  
+    -   [同じである](#BKMK_General_Are_Same)  
   
-        -   [同じではない](#BKMK_General_Are_Not_Same)  
+    -   [同じではない](#BKMK_General_Are_Not_Same)  
   
-        -   [Null である](#BKMK_General_Is_Null)  
+    -   [Null である](#BKMK_General_Is_Null)  
   
-        -   [Null ではない](#BKMK_General_Is_Not_Null)  
+    -   [Null ではない](#BKMK_General_Is_Not_Null)  
   
-        -   [True である](#BKMK_General_Is_True)  
+    -   [True である](#BKMK_General_Is_True)  
   
-        -   [False である](#BKMK_General_Is_False)  
+    -   [False である](#BKMK_General_Is_False)  
   
-        -   [失敗](#BKMK_General_Fail)  
+    -   [失敗](#BKMK_General_Fail)  
   
-    -   [Windows ランタイム アサート](#BKMK_WinRT_Asserts)  
+  - [Windows ランタイム アサート](#BKMK_WinRT_Asserts)  
   
-        -   [等しい](#BKMK_WinRT_Are_Equal)  
+    -   [等しい](#BKMK_WinRT_Are_Equal)  
   
-        -   [同じである](#BKMK_WinRT_Are_Same)  
+    -   [同じである](#BKMK_WinRT_Are_Same)  
   
-        -   [等しくない](#BKMK_WinRT_Are_Not_Equal)  
+    -   [等しくない](#BKMK_WinRT_Are_Not_Equal)  
   
-        -   [同じではない](#BKMK_WinRT_Are_Not_Same)  
+    -   [同じではない](#BKMK_WinRT_Are_Not_Same)  
   
-        -   [Null である](#BKMK_WinRT_Is_Null)  
+    -   [Null である](#BKMK_WinRT_Is_Null)  
   
-        -   [Null ではない](#BKMK_WinRT_Is_Not_Null)  
+    -   [Null ではない](#BKMK_WinRT_Is_Not_Null)  
   
-    -   [例外アサート](#BKMK_Exception_Asserts)  
+  - [例外アサート](#BKMK_Exception_Asserts)  
   
-        -   [例外を想定する](#BKMK_Expect_Exception)  
+    - [例外を想定する](#BKMK_Expect_Exception)  
   
-         [CppUnitTestLogger.h](#BKMK_CppUnitTestLogger_h)  
+      [CppUnitTestLogger.h](#BKMK_CppUnitTestLogger_h)  
   
-        -   [Logger](#BKMK_Logger)  
+    - [Logger](#BKMK_Logger)  
   
-        -   [メッセージの書き込み](#BKMK_Write_Message)  
+    - [メッセージの書き込み](#BKMK_Write_Message)  
   
 ##  <a name="BKMK_CppUnitTest_h"></a> CppUnitTest.h  
   

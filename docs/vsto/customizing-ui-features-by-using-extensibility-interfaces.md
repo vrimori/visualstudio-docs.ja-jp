@@ -23,12 +23,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 15d666ed4e2896a1645f1f47a5a310dc3151309f
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 6a18ad30fac44028f4eda89da72babeb36ffe24a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672771"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873975"
 ---
 # <a name="customize-ui-features-by-using-extensibility-interfaces"></a>機能拡張インターフェイスによる UI 機能をカスタマイズします。
   Visual Studio に含まれる Office 開発ツールは、VSTO アドインにおけるカスタム作業ウィンドウ、リボンのカスタマイズ、および Outlook フォーム領域の作成に使用可能な、多数の実装の詳細を処理するクラスとデザイナーを提供します。 ただし、特別な要件がある場合、各機能の *拡張インターフェイス* を自分で実装することもできます。  
@@ -61,17 +61,17 @@ ms.locfileid: "35672771"
 ### <a name="example-of-implementing-an-extensibility-interface"></a>機能拡張インターフェイスの実装の例  
  次のコード例は、カスタム作業ウィンドウを作成するための <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> インターフェイスの簡単な実装を示します。 この例では、2 つのクラスを定義しています。  
   
--   `TaskPaneHelper` クラスは、カスタム作業ウィンドウの作成と表示を行うための <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> を実装します。  
+- `TaskPaneHelper` クラスは、カスタム作業ウィンドウの作成と表示を行うための <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> を実装します。  
   
--   `TaskPaneUI` クラスは、作業ウィンドウの UI を提供します。 `TaskPaneUI` クラスの属性により、クラスが COM に対して可視化され、Microsoft Office アプリケーションがクラスを発見することができるようになります。 この例で、UI は空の <xref:System.Windows.Forms.UserControl>ですが、コードを修正してコントロールを追加できます。  
+- `TaskPaneUI` クラスは、作業ウィンドウの UI を提供します。 `TaskPaneUI` クラスの属性により、クラスが COM に対して可視化され、Microsoft Office アプリケーションがクラスを発見することができるようになります。 この例で、UI は空の <xref:System.Windows.Forms.UserControl>ですが、コードを修正してコントロールを追加できます。  
   
-    > [!NOTE]  
-    >  `TaskPaneUI` クラスを COM に公開するには、プロジェクトの **[COM の相互運用機能の登録]** プロパティを設定する必要もあります。  
+  > [!NOTE]  
+  >  `TaskPaneUI` クラスを COM に公開するには、プロジェクトの **[COM の相互運用機能の登録]** プロパティを設定する必要もあります。  
   
- [!code-vb[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#1)]
- [!code-csharp[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#1)]  
+  [!code-vb[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#1)]
+  [!code-csharp[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#1)]  
   
- 実装の詳細については<xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>を参照してください[、2007 Office system でカスタム作業ウィンドウを作成する](http://msdn.microsoft.com/256313db-18cc-496c-a961-381ed9ca94be)Microsoft Office ドキュメントにします。  
+  実装の詳細については<xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>を参照してください[、2007 Office system でカスタム作業ウィンドウを作成する](http://msdn.microsoft.com/256313db-18cc-496c-a961-381ed9ca94be)Microsoft Office ドキュメントにします。  
   
 ### <a name="example-of-overriding-the-requestservice-method"></a>RequestService メソッドをオーバーライドする例  
  次のコード例は、前のコード例から <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> クラスのインスタンスを返すために `TaskPaneHelper` メソッドをオーバーライドする方法を示します。 *serviceGuid* パラメーターの値を検査し、要求されているインターフェイスを特定して、そのインターフェイスを実装するオブジェクトを返します。  

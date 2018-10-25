@@ -18,23 +18,23 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 23fbe0a7563dbb1ebb3832dbe5c340e67dacac72
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 3a31bac6b3cbd13fcff8c841c9947e8c14f8984a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35673643"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839766"
 ---
 # <a name="how-to-update-a-data-source-with-data-from-a-host-control"></a>方法: ホスト コントロールからのデータでデータ ソースを更新
   ホスト コントロールをデータ ソースにバインドし、コントロール内のデータに加えられた変更でデータ ソースを更新することができます。 この処理には主に 2 つの手順があります。  
   
-1.  コントロールで変更されたデータを使用して、メモリ内データ ソースを更新します。 一般に、メモリ内データ ソースは <xref:System.Data.DataSet>、 <xref:System.Data.DataTable>、またはその他のデータ オブジェクトです。  
+1. コントロールで変更されたデータを使用して、メモリ内データ ソースを更新します。 一般に、メモリ内データ ソースは <xref:System.Data.DataSet>、 <xref:System.Data.DataTable>、またはその他のデータ オブジェクトです。  
   
-2.  メモリ内データ ソースで変更されたデータを使用して、データベースを更新します。 これは、データ ソースが SQL Server や Microsoft Office Access データベースなどのバックエンド データベースに接続されている場合にのみ有効です。  
+2. メモリ内データ ソースで変更されたデータを使用して、データベースを更新します。 これは、データ ソースが SQL Server や Microsoft Office Access データベースなどのバックエンド データベースに接続されている場合にのみ有効です。  
   
- ホスト コントロールとデータ バインディングの詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)と[Office ソリューションでのコントロールにデータをバインド](../vsto/binding-data-to-controls-in-office-solutions.md)します。  
+   ホスト コントロールとデータ バインディングの詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)と[Office ソリューションでのコントロールにデータをバインド](../vsto/binding-data-to-controls-in-office-solutions.md)します。  
   
- [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]  
+   [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]  
   
 ## <a name="update-the-in-memory-data-source"></a>メモリ内データ ソースを更新します。  
  既定では、単純データ バインディングを有効にしているホスト コントロール (Word 文書のコンテンツ コントロールや Excel ワークシートの名前付き範囲コントロールなど) は、データの変更内容をメモリ内データ ソースに保存しません。 つまり、エンド ユーザーがホスト コントロールの値に変更を加えてからコントロールの外に移動すると、コントロールの新しい値は自動的にはデータ ソースに保存されません。  
@@ -57,16 +57,16 @@ ms.locfileid: "35673643"
   
 #### <a name="to-set-a-control-to-automatically-update-the-in-memory-data-source-by-using-code"></a>コードを使用してメモリ内データ ソースを自動的に更新するようにコントロールを設定するには  
   
-1.  System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged モードを使用して、<xref:System.Windows.Forms.Binding>コントロールをデータ ソースにバインドするオブジェクト。 データ ソースの更新には 2 つのオプションがあります。  
+1. System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged モードを使用して、<xref:System.Windows.Forms.Binding>コントロールをデータ ソースにバインドするオブジェクト。 データ ソースの更新には 2 つのオプションがあります。  
   
-    -   コントロールが検証されると、データ ソースを更新するには、System.Windows.Forms.DataSourceUpdateMode.OnValidation にこのプロパティを設定します。  
+   - コントロールが検証されると、データ ソースを更新するには、System.Windows.Forms.DataSourceUpdateMode.OnValidation にこのプロパティを設定します。  
   
-    -   コントロールのデータ バインド プロパティの値が変更されたときに、データ ソースを更新するには、System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged にこのプロパティを設定します。  
+   - コントロールのデータ バインド プロパティの値が変更されたときに、データ ソースを更新するには、System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged にこのプロパティを設定します。  
   
-        > [!NOTE]  
-        >  Word ではないプラン文書変更やコントロール変更の通知はために、System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged オプションは、Word ホスト コントロールには適用されません。 ただし、Word 文書上の Windows フォーム コントロールには、このオプションを使用できます。  
+     > [!NOTE]  
+     >  Word ではないプラン文書変更やコントロール変更の通知はために、System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged オプションは、Word ホスト コントロールには適用されません。 ただし、Word 文書上の Windows フォーム コントロールには、このオプションを使用できます。  
   
-     コントロールの値が変わると自動的にデータ ソースを更新するように <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを構成する例を次に示します。 この例は、 <xref:Microsoft.Office.Tools.Excel.NamedRange> という名前の `namedRange1` コントロールで <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> プロパティがデータ ソースのフィールドにバインドされていることを前提としています。  
+     コントロールの値が変わると自動的にデータ ソースを更新するように <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを構成する例を次に示します。 この例は、`namedRange1` という名前の <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールで <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> プロパティがデータ ソースのフィールドにバインドされていることを前提としています。  
   
      [!code-csharp[Trin_VstcoreDataExcel#19](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#19)]
      [!code-vb[Trin_VstcoreDataExcel#19](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#19)]  
@@ -92,7 +92,7 @@ ms.locfileid: "35673643"
   
 6.  **[フォーマットと詳細バインド]** ダイアログ ボックスを閉じます。  
   
-## <a name="update-the-database"></a>データベースを更新します。  
+## <a name="update-the-database"></a>データベースを更新する  
  メモリ内データ ソースがデータベースに関連付けられている場合、データ ソースへの変更内容を使用して、データベースを更新する必要があります。 データベースの更新の詳細については、次を参照してください。[データをデータベースに保存](../data-tools/save-data-back-to-the-database.md)と[TableAdapter を使用してデータ更新](../data-tools/update-data-by-using-a-tableadapter.md)します。  
   
 ### <a name="to-update-the-database"></a>データベースを更新するには  

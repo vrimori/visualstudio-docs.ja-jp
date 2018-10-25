@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5b8fb9c83d8948ca3edc0650e85af6ea8c011abc
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 7c0284dd268621fddeaa9322c9a3cc17de7a3e71
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39639829"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811622"
 ---
 # <a name="sccenumchangedfiles-function"></a>SccEnumChangedFiles 関数
 ローカル ファイルの一覧を指定するには、この関数は、どのファイルとは異なるソース コードの管理データベースに対応するバージョンを決定します。  

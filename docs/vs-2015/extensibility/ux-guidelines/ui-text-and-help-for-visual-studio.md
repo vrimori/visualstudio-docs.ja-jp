@@ -13,12 +13,12 @@ ms.assetid: e8747d07-6c90-46cc-b425-55b589f7e9e4
 caps.latest.revision: 3
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 350a379e14e526385776b815ce7e356a437d12af
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: bb802aa9dd797004b61ab856dda7b7670f204c79
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49303817"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908243"
 ---
 # <a name="ui-text-and-help-for-visual-studio"></a>UI テキストと Visual Studio のヘルプ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -319,15 +319,15 @@ ms.locfileid: "49303817"
   
  このソリューションは、バグを引き起こす可能性のある 4 つの前提条件です。  
   
--   ダイアログ ボックスの [ヘルプ] ボタンを**IDHELP** (9)。  
+- ダイアログ ボックスの [ヘルプ] ボタンを**IDHELP** (9)。  
   
--   ダイアログ ボックスが正しいよう、[ヘルプ] ボタンを非表示にします。  
+- ダイアログ ボックスが正しいよう、[ヘルプ] ボタンを非表示にします。  
   
--   ダイアログ ボックスでは、winproc は置換しません。  
+- ダイアログ ボックスでは、winproc は置換しません。  
   
--   ダイアログ ボックスは、別のダイアログ内では埋め込まれません。  
+- ダイアログ ボックスは、別のダイアログ内では埋め込まれません。  
   
- ダイアログ msenv 内に存在して使用しない場合**VBDialogBoxParam**、活用することを調査**VBDialogBoxParam**独自のハンドラーを実装する前にします。  
+  ダイアログ msenv 内に存在して使用しない場合**VBDialogBoxParam**、活用することを調査**VBDialogBoxParam**独自のハンドラーを実装する前にします。  
   
 ##### <a name="dialogs-created-through-other-packages"></a>その他のパッケージを使って作成されたダイアログ ボックス  
  ダイアログの msenv の外部にある場合、独自のソリューションを実装することができます。 VSPackage で、共有ダイアログ クラスは、タイトル バーに、ボタンを移動または各ダイアログ ボックスで、ハンドラーの実装を検討してください。 次のコードでは、実装を開始するためのスケルトンは。  

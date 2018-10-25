@@ -11,12 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 12363adb78c4fca7d5ef3416a2642a68a7c3eab7
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: e1101a3e21fa75a180ec2421cdce37aa40bc9656
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47860525"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861281"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>モデル、クラス、およびリレーションシップについて
 ドメイン固有言語 (DSL) は、作成した場合、カスタム プログラム コードと共に、DSL 定義ファイルによって定義されます。 DSL ソリューションのプログラム コードのほとんどは、このファイルから生成されます。
@@ -135,7 +135,7 @@ ms.locfileid: "47860525"
  ダイアグラムに入力するか、変更することで、ロールの多重度を構成、`Multiplicity`プロパティ、**プロパティ**ウィンドウ。 次の表では、このプロパティの設定について説明します。
 
 |型の多重度|説明|
-|-----------------------|-----------------|
+|-|-|
 |0.. * (ゼロ対多)|ドメイン クラスの各インスタンスは、リレーションシップの複数のインスタンスまたはリレーションシップのインスタンスがないことができます。|
 |0..1 (0 から 1)|ドメイン クラスの各インスタンスは、リレーションシップの複数のインスタンスまたはリレーションシップのインスタンスがないことができます。|
 |1..1 (1 つ)|ドメイン クラスの各インスタンスは、リレーションシップの 1 つのインスタンスを持つことができます。 Role クラスの任意のインスタンスからこのリレーションシップの 1 つ以上のインスタンスを作成することはできません。 検証が有効になっている場合、ロール クラスの任意のインスタンスには、リレーションシップのインスタンスがあるないときに検証エラーが表示されます。|

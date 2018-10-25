@@ -1,5 +1,5 @@
 ---
-title: DEBUGPROP_INFO_FLAGS |Microsoft ドキュメント
+title: DEBUGPROP_INFO_FLAGS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d9ecaab348ca69a792c39a8cb74e998d8f3a6aa
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f92138aa9cb3867343ec1d83653d8b30f9b1a8a6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31104340"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49927605"
 ---
 # <a name="debugpropinfoflags"></a>DEBUGPROP_INFO_FLAGS
-Debug プロパティ オブジェクトの概要を取得するには、どのような情報を指定します。  
+デバッグ プロパティ オブジェクトを取得するには、どのような情報を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -72,52 +72,52 @@ public enum enum_DEBUGPROP_INFO_FLAGS {
   
 ## <a name="members"></a>メンバー  
  DEBUGPROP_INFO_FULLNAME  
- 初期化/を使用して、`bstrFullName`フィールドです。  
+ 初期化/使用、`bstrFullName`フィールド。  
   
  DEBUGPROP_INFO_NAME  
- 初期化/を使用して、`bstrName`フィールドです。  
+ 初期化/使用、`bstrName`フィールド。  
   
  DEBUGPROP_INFO_TYPE  
- 初期化/を使用して、`bstrType`フィールドです。  
+ 初期化/使用、`bstrType`フィールド。  
   
  DEBUGPROP_INFO_VALUE  
- 初期化/を使用して、`bstrValue`フィールドです。  
+ 初期化/使用、`bstrValue`フィールド。  
   
  DEBUGPROP_INFO_ATTRIB  
- 初期化/を使用して、`dwAttrib`フィールドです。  
+ 初期化/使用、`dwAttrib`フィールド。  
   
  DEBUGPROP_INFO_PROP、  
- 初期化/を使用して、`pProperty`を含むフィールドを[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)インターフェイスです。  
+ 初期化/使用、`pProperty`フィールドを含む、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)インターフェイス。  
   
  DEBUGPROP_INFO_VALUE_AUTOEXPAND  
  [値] フィールドは、この種類のオブジェクトの使用可能な場合は、自動拡張値を含める必要がありますを指定します。  
   
  DEBUGPROP_INFO_VALUE_NOFUNCEVAL  
- 使用しないでください。  
+ 非推奨。  
   
  DEBUGPROP_INFO_VALUE_RAW  
- Beautified 値やメンバーは返しません (つまり、値はフォーマットされません)。  
+ 任意の見た目を整理できます値またはメンバーを返さない (つまり、値はフォーマットされません)。  
   
  DEBUGPROP_INFO_VALUE_NO_TOSTRING  
- 任意の特殊な合成された値を返さない (たとえば、呼び出す必要はありません`ToString()`値を生成するオブジェクトに)。  
+ 特別な合成された値は返されません (たとえば、呼び出さないでください`ToString()`値を生成するオブジェクト)。  
   
  DEBUGPROP_INFO_NONE  
  フラグが設定されていないことを指定します。  
   
  DEBUGPROP_INFO_STANDARD  
- 初期化/を使用して、 `dwAttrib`、 `bstrName`、 `bstrType`、および`bstrValue`フィールドです。  
+ 初期化/使用、 `dwAttrib`、 `bstrName`、 `bstrType`、および`bstrValue`フィールド。  
   
  DEBUGPROP_INFO_All  
  すべてのフラグのマスクを示します。  
   
-## <a name="remarks"></a>コメント  
- これらの値が渡される、 [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)、 [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)、および[EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md)することを示すフィールドを初期化するメソッド、 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)構造体。  
+## <a name="remarks"></a>Remarks  
+ これらの値を渡す、 [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)、 [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)、および[EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md)メソッドを初期化するフィールドを示すために、 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)構造体。  
   
- これらの値がの使用も、`dwFields`のメンバー、`DEBUG_PROPERTY_INFO`を示すために、構造体のフィールドに使用されると有効な構造が返される構造体。  
+ これらの値の使用も、`dwFields`のメンバー、`DEBUG_PROPERTY_INFO`構造が返される構造体のフィールドが使用し、有効なときは、構造体。  
   
- これらの値は、ビットごとと組み合わせること`OR`です。  
+ これらの値は、演算と組み合わせることがあります`OR`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

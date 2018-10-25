@@ -9,12 +9,12 @@ description: 提供されているサブスクリプションの種類、該当�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: b3bea3831e2d16f43d378bfe77a4dc8f84fdda3f
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 7175dd503c2e91091b5bb6499fa54c0e5f2586ec
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283575"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876770"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Microsoft Partner Network (MPN) でパートナーに提供される Visual Studio サブスクリプション
 MPN でコンピテンシーを取得するか、Action Pack を購入したパートナーは、Visual Studio サブスクリプションを使用できます。 これらのサブスクリプションは、ユーザーごとにライセンスされ、パートナー企業で働く特定の名前付きユーザーに割り当てられている場合にのみ有効です。
@@ -23,11 +23,13 @@ MPN でコンピテンシーを取得するか、Action Pack を購入したパ�
 パートナーがコンピテンシー (Silver または Gold レベル) を取得した場合、パートナーは Visual Studio Enterprise サブスクリプションのコア数を取得します。 パートナーが Gold コンピテンシーを 1 つ以上取得すると、このコア特典が変更されます。 Visual Studio Enterprise サブスクリプションは、[Visual Studio Enterprise 年間クラウド サブスクリプション](https://visualstudio.microsoft.com/vs/pricing/)とほぼ同等のカスタム プランですが、特定の特典が除かれています (その多くは、MPN から提供される Visual Studio Enterprise サブスクリプションの一部としてではなく、一般的な MPN 特典としてパートナーに個別に提供されます)。
 
 ### <a name="core-visual-studio-benefit-for-earning-at-least-one-competency-of-any-kind"></a>任意の種類のコンピテンシーを 1 つ以上取得したときの Visual Studio のコア特典
+
 | Silver レベルでのみ取得されるコンピテンシー               | 1 つ以上の Gold レベルで取得されるコンピテンシー   |
 |------------------------------------------------------------|----------------------------------------------------|
 | 5 Visual Studio Enterprise サブスクリプション                   | 10 Visual Studio Enterprise サブスクリプション          |
 
 ### <a name="additional-visual-studio-benefit-for-select-competencies"></a>選択したコンピテンシーに対する追加の Visual Studio 特典
+
 | コンピテンシー                                  | **Silver** コンピテンシーで取得する追加のサブスクリプション | **Gold** コンピテンシーで取得する追加のサブスクリプション |
 |---------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------|
 | アプリケーション開発                     | 5 Visual Studio Enterprise サブスクリプション                  | 25 Visual Studio Enterprise サブスクリプション               |
@@ -39,6 +41,7 @@ MPN でコンピテンシーを取得するか、Action Pack を購入したパ�
 パートナーが取得したコンピテンシーの数に関係なく、Visual Studio サブスクリプションの数は次のように制限されます。
 
 ### <a name="limits-for-visual-studio-subscriptions-earned-through-competencies"></a>コンピテンシーから取得した Visual Studio サブスクリプションの制限
+
 | Silver コンピテンシーのみを持つパートナー向けの最大の特典                   | 1 つ以上の Gold コンピテンシーを持つパートナー向けの最大の特典               |
 |------------------------------------------------------------------------------|------------------------------------------------------------------------------|
 | 国ごとに 25 Visual Studio Enterprise サブスクリプション、世界中で 75 個          | 国ごとに 50 Visual Studio Enterprise サブスクリプション、世界中で 150 個         |

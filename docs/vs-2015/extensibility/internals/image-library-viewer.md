@@ -10,37 +10,37 @@ ms.assetid: 9d9c7fbb-ebae-4b20-9dd8-3c9070c0d0d1
 caps.latest.revision: 7
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 884f97acb6ff0e54c641c3a5df9c5edba9868e50
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5f88aa5b9983390771a9b869a6e141802e94d684
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49184107"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949813"
 ---
 # <a name="image-library-viewer"></a>イメージ ライブラリ ビューア
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 Visual Studio Image Library ビューアー ツールは、読み込みおよびユーザーが Visual Studio と同じ方法で操作できるように、イメージのマニフェストを検索できます。 ユーザーは、バック グラウンド、サイズ、DPI、ハイ コントラスト、およびその他の設定を変更できます。 このツールは、各イメージ マニフェストの読み込み情報を表示し、イメージ マニフェスト内の各イメージのソース情報を表示します。 このツールは、場合に便利です。  
   
-1.  エラーを診断します。  
+1. エラーを診断します。  
   
-2.  カスタム イメージのマニフェストで確保属性が正しく設定します。  
+2. カスタム イメージのマニフェストで確保属性が正しく設定します。  
   
-3.  Visual Studio 拡張機能は、Visual Studio のスタイルに合わせてイメージを使用できるように、Visual Studio イメージ カタログ内のイメージの検索  
+3. Visual Studio 拡張機能は、Visual Studio のスタイルに合わせてイメージを使用できるように、Visual Studio イメージ カタログ内のイメージの検索  
   
- ![イメージ ライブラリ ビューアーのヒーロー](../../extensibility/internals/media/image-library-viewer-hero.png "イメージ ライブラリ ビューアーのヒーロー")  
+   ![イメージ ライブラリ ビューアーのヒーロー](../../extensibility/internals/media/image-library-viewer-hero.png "イメージ ライブラリ ビューアーのヒーロー")  
   
- **イメージのモニカー**  
+   **イメージのモニカー**  
   
- イメージのモニカー (または略してモニカー) はのイメージ アセットまたはイメージ ライブラリにあるイメージの一覧の資産を一意に識別する GUID:ID のペアです。  
+   イメージのモニカー (または略してモニカー) はのイメージ アセットまたはイメージ ライブラリにあるイメージの一覧の資産を一意に識別する GUID:ID のペアです。  
   
- **イメージ マニフェスト ファイル**  
+   **イメージ マニフェスト ファイル**  
   
- イメージ マニフェスト (.imagemanifest) ファイルは、これらの資産と実際のイメージまたは各資産を表すイメージを表すモニカーのイメージ アセットのセットを定義する XML ファイルです。 従来の UI サポートのイメージを一覧表示またはイメージ マニフェストは、スタンドアロン画像を定義できます。 さらに、ときに、これらの資産を表示する方法を変更する、資産または各資産の背後にある個別のイメージのいずれかに設定できる属性があります。  
+   イメージ マニフェスト (.imagemanifest) ファイルは、これらの資産と実際のイメージまたは各資産を表すイメージを表すモニカーのイメージ アセットのセットを定義する XML ファイルです。 従来の UI サポートのイメージを一覧表示またはイメージ マニフェストは、スタンドアロン画像を定義できます。 さらに、ときに、これらの資産を表示する方法を変更する、資産または各資産の背後にある個別のイメージのいずれかに設定できる属性があります。  
   
- **イメージ マニフェスト スキーマ**  
+   **イメージ マニフェスト スキーマ**  
   
- イメージの完了のマニフェストのようになります。  
+   イメージの完了のマニフェストのようになります。  
   
 ```xml  
 <ImageManifest>  

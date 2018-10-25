@@ -28,12 +28,12 @@ caps.latest.revision: 31
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9448b6116f59f22aed6dd0796a3409806021ba0e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5877bcf4501125968e2fb14f56c41c1ccbc9e561
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49262159"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49885136"
 ---
 # <a name="debugging-preparation-windows-forms-applications"></a>デバッグの準備 : Windows フォーム アプリケーション
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -56,23 +56,23 @@ Windows フォーム プロジェクト テンプレートは、Windows フォ�
   
 ### <a name="to-debug-a-c-f-or-visual-basic-windows-forms-application"></a>C#、F#、または Visual Basic の Windows フォーム アプリケーションをデバッグするには  
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] でプロジェクトを開きます。  
+1. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] でプロジェクトを開きます。  
   
-2.  必要に応じて、ブレークポイントを作成します。  
+2. 必要に応じて、ブレークポイントを作成します。  
   
-     Windows フォーム アプリケーションはイベント ドリブンであるため、ブレークポイントはイベント ハンドラー コード内またはイベント ハンドラー コードによって呼び出されるメソッド内に設定します。 ブレークポイントが配置される一般的なイベントは次のとおりです。  
+    Windows フォーム アプリケーションはイベント ドリブンであるため、ブレークポイントはイベント ハンドラー コード内またはイベント ハンドラー コードによって呼び出されるメソッド内に設定します。 ブレークポイントが配置される一般的なイベントは次のとおりです。  
   
-    1.  Click、Enter などのコントロールに関連付けられたイベント。  
+   1. Click、Enter などのコントロールに関連付けられたイベント。  
   
-    2.  Load、Activated など、アプリケーションの起動またはシャットダウンに関連付けられたイベント。  
+   2. Load、Activated など、アプリケーションの起動またはシャットダウンに関連付けられたイベント。  
   
-    3.  フォーカス イベントと検証イベント。  
+   3. フォーカス イベントと検証イベント。  
   
-     詳細については、「[Windows フォーム内でのイベント ハンドラーの作成](http://msdn.microsoft.com/library/6514e530-c6b8-489c-a8d2-eda7b7072701)」を参照してください。  
+      詳細については、「[Windows フォーム内でのイベント ハンドラーの作成](http://msdn.microsoft.com/library/6514e530-c6b8-489c-a8d2-eda7b7072701)」を参照してください。  
   
-3.  **デバッグ** メニューのをクリックして**開始**します。  
+3. **デバッグ** メニューのをクリックして**開始**します。  
   
-4.  説明した手法を使用してデバッグ[デバッガーの基本事項](../debugger/debugger-basics.md)します。  
+4. 説明した手法を使用してデバッグ[デバッガーの基本事項](../debugger/debugger-basics.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   

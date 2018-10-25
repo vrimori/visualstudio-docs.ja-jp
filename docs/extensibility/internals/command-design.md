@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 09792f951b0cc77d2087904b1dcebc1c9b3b6a06
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 5bd810d0c2f33d4a8ddbffd876357ead7e0e5e7a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513060"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816509"
 ---
 # <a name="command-design"></a>コマンド デザイン
 VSPackage にコマンドを追加するときに表示されるが、可能な場合とが処理されるようにする方法を指定する必要があります。  
@@ -44,15 +44,15 @@ VSPackage にコマンドを追加するときに表示されるが、可能な�
 ### <a name="command-organization"></a>コマンドの組織  
  環境では、グループ、優先度、メニューでコマンドを配置します。  
   
--   グループは、関連するコマンドの論理的なコレクション、たとえば、**切り取り**、**コピー**、および**貼り付け**コマンド グループ。 グループは、メニューに表示されるコマンドです。  
+- グループは、関連するコマンドの論理的なコレクション、たとえば、**切り取り**、**コピー**、および**貼り付け**コマンド グループ。 グループは、メニューに表示されるコマンドです。  
   
--   優先順位は、グループ内の個々 のコマンドがメニューに表示される順序を決定します。  
+- 優先順位は、グループ内の個々 のコマンドがメニューに表示される順序を決定します。  
   
--   メニューは、グループのコンテナーとして機能します。  
+- メニューは、グループのコンテナーとして機能します。  
   
- 環境はいくつかのコマンド、グループ、およびメニューが組み込まれています。 詳細については、次を参照してください。[既定コマンド、グループ、およびツールバーの配置](../../extensibility/internals/default-command-group-and-toolbar-placement.md)します。  
+  環境はいくつかのコマンド、グループ、およびメニューが組み込まれています。 詳細については、次を参照してください。[既定コマンド、グループ、およびツールバーの配置](../../extensibility/internals/default-command-group-and-toolbar-placement.md)します。  
   
- コマンドは、プライマリ グループに割り当てることができます。 プライマリ グループは、メインのメニュー構造とコマンドの位置を制御、**カスタマイズ** ダイアログ ボックス。 コマンドは、複数のグループに表示できます。たとえば、コマンドには、メイン メニューのショートカット メニューおよびツールバーができます。 詳細については、次を参照してください。 [Vspackage ではどのように追加のユーザー インターフェイス要素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)します。  
+  コマンドは、プライマリ グループに割り当てることができます。 プライマリ グループは、メインのメニュー構造とコマンドの位置を制御、**カスタマイズ** ダイアログ ボックス。 コマンドは、複数のグループに表示できます。たとえば、コマンドには、メイン メニューのショートカット メニューおよびツールバーができます。 詳細については、次を参照してください。 [Vspackage ではどのように追加のユーザー インターフェイス要素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)します。  
   
 ### <a name="command-routing"></a>コマンド ルーティング  
  呼び出すと、Vspackage 用コマンドのルーティングのプロセスは、オブジェクトのインスタンスに対してメソッドを呼び出してのプロセスによって異なります。  

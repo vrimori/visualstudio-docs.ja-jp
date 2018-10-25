@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 306f8c0497228ff67adab1b472ea74e2ba9e5d90
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 585615c07d9f11f75468bccde1bae05a355bf98f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637183"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899956"
 ---
 # <a name="projectitem-element-visual-studio-project-templates"></a>ProjectItem 要素 (Visual Studio プロジェクト テンプレート)
 プロジェクト テンプレートに含まれているファイルを指定します。  
@@ -53,14 +53,14 @@ ms.locfileid: "39637183"
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
-|---------------|-----------------|  
-|`TargetFileName`|省略可能な属性です。<br /><br /> テンプレートからプロジェクトが作成されたときに、プロジェクト項目のパスと名前を指定します。 この属性は、テンプレートのディレクトリ構造からさまざまなディレクトリ構造の作成に役立つ *.zip*ファイル、またはパラメーター置換を使用して、アイテムの名前を作成します。|  
-|`ReplaceParameters`|省略可能な属性です。<br /><br /> アイテムが、テンプレートからプロジェクトが作成されるときに置き換える必要があるパラメーターの値があるかどうかを指定するブール値。 既定値は `false`にする必要があります。|  
-|`OpenInEditor`|省略可能な属性です。<br /><br /> それぞれのエディターで、項目を開く必要があるかどうかを指定するブール値[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]テンプレートからプロジェクトを作成する時。<br /><br /> `OpenInWebBrowser`と`OpenInHelpBrowser`を持つ項目の属性は無視されます、 `OpenInEditor` @property`true`します。<br /><br /> 既定値は `false` です。|  
-|`OpenInWebBrowser`|省略可能な属性です。<br /><br /> かどうか、項目開く必要があります、Web ブラウザー、テンプレートからプロジェクトが作成されるときを示すブール値。<br /><br /> Web ブラウザーでは、HTML ファイルとは、プロジェクトにローカル テキスト ファイルだけを開くことができます。 この属性では、外部 Url を開くことができません。<br /><br /> 既定値は `false` です。|  
-|`OpenInHelpBrowser`|省略可能な属性です。<br /><br /> テンプレートからプロジェクトが作成されたときに、アイテムをヘルプ ビューアーで開く必要があるかどうかを指定するブール値。<br /><br /> HTML ファイルとは、プロジェクトにローカル テキスト ファイルだけは、ヘルプ ブラウザーで開くことができます。 この属性では、外部 Url を開くことができません。<br /><br /> 既定値は `false` です。|  
-|`OpenOrder`|省略可能な属性です。<br /><br /> 項目が、それぞれのエディターで開かれることの順序を表す数値を指定します。 すべての値は 10 の倍数である必要があります。 以上の項目`OpenOrder`値が最初に開かれます。|  
+| 属性 | 説明 |
+|---------------------| - |
+| `TargetFileName` | 省略可能な属性です。<br /><br /> テンプレートからプロジェクトが作成されたときに、プロジェクト項目のパスと名前を指定します。 この属性は、テンプレートのディレクトリ構造からさまざまなディレクトリ構造の作成に役立つ *.zip*ファイル、またはパラメーター置換を使用して、アイテムの名前を作成します。 |
+| `ReplaceParameters` | 省略可能な属性です。<br /><br /> アイテムが、テンプレートからプロジェクトが作成されるときに置き換える必要があるパラメーターの値があるかどうかを指定するブール値。 既定値は `false`にする必要があります。 |
+| `OpenInEditor` | 省略可能な属性です。<br /><br /> それぞれのエディターで、項目を開く必要があるかどうかを指定するブール値[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]テンプレートからプロジェクトを作成する時。<br /><br /> `OpenInWebBrowser`と`OpenInHelpBrowser`を持つ項目の属性は無視されます、 `OpenInEditor` @property`true`します。<br /><br /> 既定値は `false` です。 |
+| `OpenInWebBrowser` | 省略可能な属性です。<br /><br /> かどうか、項目開く必要があります、Web ブラウザー、テンプレートからプロジェクトが作成されるときを示すブール値。<br /><br /> Web ブラウザーでは、HTML ファイルとは、プロジェクトにローカル テキスト ファイルだけを開くことができます。 この属性では、外部 Url を開くことができません。<br /><br /> 既定値は `false` です。 |
+| `OpenInHelpBrowser` | 省略可能な属性です。<br /><br /> テンプレートからプロジェクトが作成されたときに、アイテムをヘルプ ビューアーで開く必要があるかどうかを指定するブール値。<br /><br /> HTML ファイルとは、プロジェクトにローカル テキスト ファイルだけは、ヘルプ ブラウザーで開くことができます。 この属性では、外部 Url を開くことができません。<br /><br /> 既定値は `false` です。 |
+| `OpenOrder` | 省略可能な属性です。<br /><br /> 項目が、それぞれのエディターで開かれることの順序を表す数値を指定します。 すべての値は 10 の倍数である必要があります。 以上の項目`OpenOrder`値が最初に開かれます。 |
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -69,7 +69,7 @@ ms.locfileid: "39637183"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[Project](../extensibility/project-element-visual-studio-templates.md)|ファイルまたはプロジェクトに追加するディレクトリを指定します。|  
+|[プロジェクト](../extensibility/project-element-visual-studio-templates.md)|ファイルまたはプロジェクトに追加するディレクトリを指定します。|  
   
 ## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
@@ -91,27 +91,27 @@ ms.locfileid: "39637183"
   
 ### <a name="to-rename-files-with-parameters"></a>パラメーターを持つファイルの名前を変更するには  
   
-1.  次の XML を使用して、 *.vstemplate*ファイル。  
+1. 次の XML を使用して、 *.vstemplate*ファイル。  
   
-    ```xml  
-    <ProjectItem TargetFileName="$safeprojectname$.vb">MyFile.vb</ProjectItem>  
-    ```  
+   ```xml  
+   <ProjectItem TargetFileName="$safeprojectname$.vb">MyFile.vb</ProjectItem>  
+   ```  
   
-2.  プロジェクト ファイルを開きます (*.vbproj*の[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]プロジェクト) をテキスト エディターでまたは[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。  
+2. プロジェクト ファイルを開きます (*.vbproj*の[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]プロジェクト) をテキスト エディターでまたは[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。  
   
-3.  次の xml のようなプロジェクト ファイル内の行を見つけます。  
+3. 次の xml のようなプロジェクト ファイル内の行を見つけます。  
   
-    ```xml  
-    <Compile Include="MyFile.vb">  
-    ```  
+   ```xml  
+   <Compile Include="MyFile.vb">  
+   ```  
   
-4.  コード行を次の XML に置き換えます。  
+4. コード行を次の XML に置き換えます。  
   
-    ```xml  
-    <Compile Include="$safeprojectname$.vb">  
-    ```  
+   ```xml  
+   <Compile Include="$safeprojectname$.vb">  
+   ```  
   
-     ファイル名はで、ユーザーが入力した名前に基づいて、このテンプレートからプロジェクトが作成されると、**新しいプロジェクト** ダイアログ ボックスのすべての安全でない文字とスペースを削除します。 詳細については、次を参照してください。[テンプレート パラメーター](../ide/template-parameters.md)します。  
+    ファイル名はで、ユーザーが入力した名前に基づいて、このテンプレートからプロジェクトが作成されると、**新しいプロジェクト** ダイアログ ボックスのすべての安全でない文字とスペースを削除します。 詳細については、次を参照してください。[テンプレート パラメーター](../ide/template-parameters.md)します。  
   
 ## <a name="example"></a>例  
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] アプリケーションでのプロジェクト テンプレートのメタデータの例を次に示します。  

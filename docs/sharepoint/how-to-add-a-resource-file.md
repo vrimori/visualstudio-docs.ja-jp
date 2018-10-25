@@ -18,32 +18,32 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2a2a89a0c838a91559c6066bea341924e5ca627e
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 0091054c0c0d2cfb7f19f2ca46839cfdcf47832b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43774655"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861190"
 ---
 # <a name="how-to-add-a-resource-file"></a>方法: リソース ファイルを追加
   リソース ファイルを追加するためのコマンドは、ソリューション エクスプ ローラー内のノードの機能、ソリューション ノードのショートカット メニューでです。 詳細については、次を参照してください。[をローカライズする SharePoint ソリューション](../sharepoint/localizing-sharepoint-solutions.md)します。  
   
 ### <a name="to-add-a-global-resource-file-to-a-sharepoint-solution"></a>SharePoint ソリューションにグローバル リソース ファイルを追加するには  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、SharePoint ソリューションを開きます。  
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、SharePoint ソリューションを開きます。  
   
-2.  **ソリューション エクスプ ローラー**を SharePoint プロジェクト ノードを選択し、メニュー バーで、次のように選択します。**プロジェクト** > **新しい項目の追加**します。  
+2. **ソリューション エクスプ ローラー**を SharePoint プロジェクト ノードを選択し、メニュー バーで、次のように選択します。**プロジェクト** > **新しい項目の追加**します。  
   
-3.  **新しい項目の追加** ダイアログ ボックスで、選択、**グローバル リソース ファイル**テンプレートを選択し、**追加**ボタン。  
+3. **新しい項目の追加** ダイアログ ボックスで、選択、**グローバル リソース ファイル**テンプレートを選択し、**追加**ボタン。  
   
-    > [!NOTE]  
-    >  グローバル リソース ファイル プロジェクト項目テンプレートは、SharePoint プロジェクト アイテムが選択されている場合にのみ表示されます。  
+   > [!NOTE]  
+   >  グローバル リソース ファイル プロジェクト項目テンプレートは、SharePoint プロジェクト アイテムが選択されている場合にのみ表示されます。  
   
-4.  **リソースの追加** ダイアログ ボックスで、英語 (米国) など、リソース ファイル用のカルチャを選択します。  
+4. **リソースの追加** ダイアログ ボックスで、英語 (米国) など、リソース ファイル用のカルチャを選択します。  
   
-     この手順は、グローバル リソース ファイルを Resource_x_ の形式でソリューションに追加します **。** 。_カルチャ_**.** resx、次のように、 *Resource1.en US.resx*します。  
+    この手順は、グローバル リソース ファイルを Resource_x_ の形式でソリューションに追加します **。** 。<em>カルチャ</em><strong>.</strong>resx、次のように、 *Resource1.en US.resx*します。  
   
-5.  ときに、**リソース エディター**で開きます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、リソース ファイルにリソースを追加します。  
+5. ときに、**リソース エディター**で開きます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、リソース ファイルにリソースを追加します。  
   
 ### <a name="to-add-a-feature-resource-file-to-a-sharepoint-feature"></a>フィーチャー リソース ファイルを SharePoint フィーチャーに追加するには  
   

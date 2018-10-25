@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 1455c0e1d4d5ff0aae952294ef3ee127a0d325a3
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: ba5c208e6354e0588f939074ac73a49c5b24b049
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859901"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49929973"
 ---
 # <a name="customizing-the-model-explorer"></a>モデル エクスプローラーのカスタマイズ
 変更、エクスプ ローラーの動作と外観をドメイン固有言語デザイナーのとおり。
@@ -42,23 +42,23 @@ ms.locfileid: "47859901"
 
 #### <a name="to-add-an-icon-to-an-explorer-node"></a>エクスプ ローラーのノードにアイコンを追加するには
 
-1.  作成、 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Task Flow ソリューション テンプレートを使用してソリューション。
+1. 作成、 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Task Flow ソリューション テンプレートを使用してソリューション。
 
-2.  16 x 16 ピクセルのアイコンを含む .bmp ファイルを配置、 **dsl \resources**ソリューションのフォルダー。
+2. 16 x 16 ピクセルのアイコンを含む .bmp ファイルを配置、 **dsl \resources**ソリューションのフォルダー。
 
-3.  **DSL エクスプ ローラー**、右クリックして**エクスプ ローラーの動作**順にクリックします**エクスプ ローラー ノードの新しい設定の追加**します。
+3. **DSL エクスプ ローラー**、右クリックして**エクスプ ローラーの動作**順にクリックします**エクスプ ローラー ノードの新しい設定の追加**します。
 
-     **ExplorerNodeSettings**ノードが表示されます、**カスタム ノード設定**ノード。
+    **ExplorerNodeSettings**ノードが表示されます、**カスタム ノード設定**ノード。
 
-4.  選択**ExplorerNodeSettings**、し、**プロパティ**ウィンドウで、設定**クラス**に**アクター**します。
+4. 選択**ExplorerNodeSettings**、し、**プロパティ**ウィンドウで、設定**クラス**に**アクター**します。
 
-5.  設定**アイコンを表示する**アイコン ファイルのパスにします。
+5. 設定**アイコンを表示する**アイコン ファイルのパスにします。
 
-6.  すべてのテンプレートの変換およびビルドして、ソリューションを実行します。
+6. すべてのテンプレートの変換およびビルドして、ソリューションを実行します。
 
-7.  生成されたデザイナーでは、図のサンプルを開きます。
+7. 生成されたデザイナーでは、図のサンプルを開きます。
 
-     エクスプ ローラーは、3 つを表示する必要があります**アクター**アイコンがあるノード。
+    エクスプ ローラーは、3 つを表示する必要があります**アクター**アイコンがあるノード。
 
 > [!NOTE]
 >  生成された、エクスプ ローラーに表示される任意の要素のノードのアイコンを設定すると、エクスプ ローラーのすべてのノードにアイコンが表示されます。 アイコンが設定されていない場合、ノードの既定のアイコンが表示されます。

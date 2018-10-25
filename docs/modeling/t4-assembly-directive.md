@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 49329dab868e5d8fb1418915a27449de3cbd1f7e
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: cd7f1f36374f3411b5a76f5df5e3e25bb52df230
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47858250"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948643"
 ---
 # <a name="t4-assembly-directive"></a>T4 アセンブリ ディレクティブ
 
@@ -34,11 +34,11 @@ Visual Studio のデザイン時テキスト テンプレートで、`assembly`�
 
  アセンブリ名は、次のいずれかであることが必要です。
 
--   GAC のアセンブリの厳密な名前 (`System.Xml.dll` など)。 `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"` のような長い形式を使用することもできます。 詳細については、「<xref:System.Reflection.AssemblyName>」を参照してください。
+- GAC のアセンブリの厳密な名前 (`System.Xml.dll` など)。 `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"` のような長い形式を使用することもできます。 詳細については、「 <xref:System.Reflection.AssemblyName> 」を参照してください。
 
--   アセンブリの絶対パス。
+- アセンブリの絶対パス。
 
- 使用することができます、`$(variableName)`など Visual Studio の変数を参照する構文`$(SolutionDir)`、および`%VariableName%`環境変数を参照します。 例えば:
+  使用することができます、`$(variableName)`など Visual Studio の変数を参照する構文`$(SolutionDir)`、および`%VariableName%`環境変数を参照します。 例えば:
 
 ```
 <#@ assembly name="$(SolutionDir)\MyProject\bin\Debug\SomeLibrary.Dll" #>
@@ -49,21 +49,21 @@ Visual Studio のデザイン時テキスト テンプレートで、`assembly`�
 ## <a name="standard-assemblies"></a>標準アセンブリ
  次のアセンブリは自動的に読み込まれるので、これらのアセンブリのアセンブリ ディレクティブを記述する必要はありません。
 
--   `Microsoft.VisualStudio.TextTemplating.1*.dll`
+- `Microsoft.VisualStudio.TextTemplating.1*.dll`
 
--   `System.dll`
+- `System.dll`
 
--   `WindowsBase.dll`
+- `WindowsBase.dll`
 
- カスタム ディレクティブを使用する場合は、ディレクティブ プロセッサによって追加のアセンブリが読み込まれます。 たとえば、ドメイン固有言語 (DSL) のテンプレートを作成した場合、次のアセンブリのアセンブリ ディレクティブを記述する必要はありません。
+  カスタム ディレクティブを使用する場合は、ディレクティブ プロセッサによって追加のアセンブリが読み込まれます。 たとえば、ドメイン固有言語 (DSL) のテンプレートを作成した場合、次のアセンブリのアセンブリ ディレクティブを記述する必要はありません。
 
--   `Microsoft.VisualStudio.Modeling.Sdk.1*.dll`
+- `Microsoft.VisualStudio.Modeling.Sdk.1*.dll`
 
--   `Microsoft.VisualStudio.Modeling.Sdk.Diagrams.1*.dsl`
+- `Microsoft.VisualStudio.Modeling.Sdk.Diagrams.1*.dsl`
 
--   `Microsoft.VisualStudio.TextTemplating.Modeling.1*.dll`
+- `Microsoft.VisualStudio.TextTemplating.Modeling.1*.dll`
 
--   DSL を含むアセンブリ
+- DSL を含むアセンブリ
 
 ## <a name="msbuild"></a> MSBuild および Visual Studio の両方でプロジェクト プロパティの使用
  $ (Solutiondir) などの visual Studio マクロは、MSBuild で機能しません。 ビルド コンピューターでテンプレートを変換する場合、代わりにプロジェクトのプロパティを使用する必要があります。
@@ -82,7 +82,6 @@ Visual Studio のデザイン時テキスト テンプレートで、`assembly`�
       <Value>$(myLibFolder)</Value>
     </T4ParameterValues>
   </ItemGroup>
-
 ```
 
  これで、Visual Studio および MSBuild の両方で正しく変換できるテキスト テンプレートでプロジェクトのプロパティを使用できます。

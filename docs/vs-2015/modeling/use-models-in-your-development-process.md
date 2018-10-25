@@ -16,12 +16,12 @@ caps.latest.revision: 31
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 94185303eeb1d9efef32adf814b23d8cb21360b3
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: e731803e58ac641034699719a9fb0cbfe3cb6f13
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49286001"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872285"
 ---
 # <a name="use-models-in-your-development-process"></a>開発プロセス内でのモデルの使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,15 +33,15 @@ Visual Studio では、システム、アプリケーション、またはコン
 ## <a name="how-to-use-models"></a>モデルの使用方法  
  モデルは、いくつかの方法で役立ちます。  
   
--   モデリング図を描画すると、要件、アーキテクチャ、および概要設計に関連する概念を明確にすることができます。 詳細については、次を参照してください。[ユーザー要件をモデル化](../modeling/model-user-requirements.md)します。  
+- モデリング図を描画すると、要件、アーキテクチャ、および概要設計に関連する概念を明確にすることができます。 詳細については、次を参照してください。[ユーザー要件をモデル化](../modeling/model-user-requirements.md)します。  
   
--   モデルの操作は、要件の不整合を明らかにするのに役立ちます。  
+- モデルの操作は、要件の不整合を明らかにするのに役立ちます。  
   
--   モデルとの通信では、自然言語でのやり取りよりも曖昧さを残さずに、重要な概念をやり取りできます。 詳細については、次を参照してください。 [、アプリケーションのアーキテクチャをモデル化](../modeling/model-your-app-s-architecture.md)します。  
+- モデルとの通信では、自然言語でのやり取りよりも曖昧さを残さずに、重要な概念をやり取りできます。 詳細については、次を参照してください。 [、アプリケーションのアーキテクチャをモデル化](../modeling/model-your-app-s-architecture.md)します。  
   
--   場合によっては、モデルを使用して、コードまたはデータベース スキーマやドキュメントなどのその他の成果物を生成できます。 たとえば、[!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] のモデリング コンポーネントはモデルから生成されます。  詳細については、次を参照してください。[生成モデルからアプリを構成および](../modeling/generate-and-configure-your-app-from-models.md)します。  
+- 場合によっては、モデルを使用して、コードまたはデータベース スキーマやドキュメントなどのその他の成果物を生成できます。 たとえば、[!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] のモデリング コンポーネントはモデルから生成されます。  詳細については、次を参照してください。[生成モデルからアプリを構成および](../modeling/generate-and-configure-your-app-from-models.md)します。  
   
- モデルは、手軽なアジャイルから高度なセレモニーまで、広範囲のプロセスで使用することができます。  
+  モデルは、手軽なアジャイルから高度なセレモニーまで、広範囲のプロセスで使用することができます。  
   
 ### <a name="use-models-to-reduce-ambiguity"></a>モデルを使用したあいまいさの低減  
  モデリング言語は、自然言語よりもあいまいさが少なく、一般的にソフトウェアの開発時に必要なアイデアを表すように設計されています。  

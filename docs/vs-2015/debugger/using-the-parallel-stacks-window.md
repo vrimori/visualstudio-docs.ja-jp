@@ -23,12 +23,12 @@ caps.latest.revision: 22
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 353d9a39a299c0803bb4f27843fcae43375105cf
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 3be45a598535d81e23cd32ff4d30045ae2ac8dcb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49182173"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891727"
 ---
 # <a name="using-the-parallel-stacks-window"></a>[並列スタック] ウィンドウの使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -99,21 +99,21 @@ ms.locfileid: "49182173"
 ## <a name="tasks-view"></a>タスク ビュー  
  アプリケーションが使用されている場合<xref:System.Threading.Tasks.Task?displayProperty=fullName>オブジェクト (マネージ コード) または`task_handle`並列処理を表現するオブジェクト (ネイティブ コード) が、並列スタック ウィンドウのツールバーのコンボ ボックスを使用に切り替える*タスク ビュー*します。 タスク ビューには、スレッドではなくタスクの呼び出し履歴が表示されます。 タスク ビューがスレッド ビューと異なる点は次のとおりです。  
   
--   タスクを実行していないスレッドの呼び出し履歴は表示されません。  
+- タスクを実行していないスレッドの呼び出し履歴は表示されません。  
   
--   タスクを実行しているスレッドの呼び出し履歴は上下の項目が非表示になり、タスクに関連する重要なフレームだけが表示されます。  
+- タスクを実行しているスレッドの呼び出し履歴は上下の項目が非表示になり、タスクに関連する重要なフレームだけが表示されます。  
   
--   1 つのスレッドに複数のタスクがある場合、それらのタスクの呼び出し履歴が個々のノードに分けられます。  
+- 1 つのスレッドに複数のタスクがある場合、それらのタスクの呼び出し履歴が個々のノードに分けられます。  
   
- 次の図は、右側に [並列スタック] のタスク ビュー、左側に対応するスレッド ビューを示したものです。  
+  次の図は、右側に [並列スタック] のタスク ビュー、左側に対応するスレッド ビューを示したものです。  
   
- ![並列スタック ウィンドウのビューをタスク](../debugger/media/parallel-tasksview.png "Parallel_TasksView")  
+  ![並列スタック ウィンドウのビューをタスク](../debugger/media/parallel-tasksview.png "Parallel_TasksView")  
   
- すべての呼び出し履歴を表示する切り替えスレッド ビューに戻るスタック フレームを右クリックし、をクリックして**スレッドに移動**します。  
+  すべての呼び出し履歴を表示する切り替えスレッド ビューに戻るスタック フレームを右クリックし、をクリックして**スレッドに移動**します。  
   
- 前の表で説明したように、メソッドのコンテキストにカーソルを置くと詳しい情報を表示できます。 次の図は、スレッド ビューおよびタスク ビューのツールヒントに表示される情報を示しています。  
+  前の表で説明したように、メソッドのコンテキストにカーソルを置くと詳しい情報を表示できます。 次の図は、スレッド ビューおよびタスク ビューのツールヒントに表示される情報を示しています。  
   
- ![並列スタック ウィンドウのツールヒント](../debugger/media/parallel-stack-tooltips.png "Parallel_Stack_Tooltips")  
+  ![並列スタック ウィンドウのツールヒント](../debugger/media/parallel-stack-tooltips.png "Parallel_Stack_Tooltips")  
   
 ## <a name="method-view"></a>メソッド ビュー  
  スレッド ビューまたはタスク ビューでツール バーの [メソッド ビュー] アイコンをクリックすると、現在のメソッドを中心とするグラフを表示できます。 メソッド ビューを使用すると、現在のメソッドを呼び出すか現在のメソッドから呼び出されるすべてのスレッドのすべてのメソッドを一目で確認できます。 次の図は、スレッド ビューと共に、同じ情報がメソッド ビューではどのように表示されるかを示したものです。  

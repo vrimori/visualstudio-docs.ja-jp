@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 402b8e24b68f39524a9095a6ad5b177ab963f05a
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: f0121efb2e226b2407eee7eea50354a80482b1cc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44281040"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892092"
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>方法: コード分析チェックイン ポリシーを保守しやすいコードを適用します。
 
@@ -47,15 +47,15 @@ Team foundation バージョン管理の管理者は、チェックイン ポリ
 
 2. 次の規則のチェック ボックスを選択します。
 
-    -   継承の深さ: **CA1501 AvoidExcessiveInheritance** -しきい値: 深さは 5 以上のレベルで警告が発生
+   - 継承の深さ: **CA1501 AvoidExcessiveInheritance** -しきい値: 深さは 5 以上のレベルで警告が発生
 
-    -   複雑さ: **CA1502 AvoidExcessiveComplexity** -しきい値: 25 以上の警告
+   - 複雑さ: **CA1502 AvoidExcessiveComplexity** -しきい値: 25 以上の警告
 
-    -   保守容易性指数: **CA1505 AvoidUnmaintainableCode** -しきい値: 20 未満で警告が発生
+   - 保守容易性指数: **CA1505 AvoidUnmaintainableCode** -しきい値: 20 未満で警告が発生
 
-    -   クラス結合度: **CA1506 AvoidExcessiveClassCoupling** -しきい値: クラスの 80 以上とメソッドの 30 以上で警告が発生
+   - クラス結合度: **CA1506 AvoidExcessiveClassCoupling** -しきい値: クラスの 80 以上とメソッドの 30 以上で警告が発生
 
-    さらに、成功したビルドを防ぐために規則違反する場合は、選択、**警告をエラーとして扱う**ルールの説明の横にあるチェック ボックス。
+     さらに、成功したビルドを防ぐために規則違反する場合は、選択、**警告をエラーとして扱う**ルールの説明の横にあるチェック ボックス。
 
 3. **[OK]** をクリックします。 新しいチェックイン ポリシーは、将来のチェックインに適用されます。
 

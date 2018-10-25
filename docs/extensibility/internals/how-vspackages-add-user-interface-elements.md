@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c595018dc588b6b6fbb014e074c737a53ea2013
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 8b498f9df752fd5ac1f1212649aa5b8bb62d27fb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512123"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839116"
 ---
 # <a name="how-vspackages-add-user-interface-elements"></a>Vspackage がユーザー インターフェイス要素を追加する方法
 VSPackage は、たとえば、メニュー、ツールバーのユーザー インターフェイス (UI) 要素を追加し、ツール ウィンドウ、Visual studio で、 *.vsct*ファイル。  
@@ -90,15 +90,15 @@ VSPackage は、たとえば、メニュー、ツールバーのユーザー イ
 #### <a name="menus"></a>メニュー  
  各メニューとして定義されている、[メニュー要素](../../extensibility/menu-element.md)で、`Menus`セクション。 メニューがあります`guid`、 `id`、および`priority`属性、および`Parent`要素と次の追加属性も子。  
   
--   A`type`属性をある種のメニューまたはツールバーとして IDE で、メニューを表示する必要があるかどうかを指定します。  
+- A`type`属性をある種のメニューまたはツールバーとして IDE で、メニューを表示する必要があるかどうかを指定します。  
   
--   A[文字列要素](../../extensibility/strings-element.md)を格納している、 [ButtonText 要素](../../extensibility/buttontext-element.md)、IDE では、メニューのタイトルを指定して、 [CommandName 要素](../../extensibility/commandname-element.md)は、名前を指定します。使用される、**コマンド**ウィンドウ メニューにアクセスします。  
+- A[文字列要素](../../extensibility/strings-element.md)を格納している、 [ButtonText 要素](../../extensibility/buttontext-element.md)、IDE では、メニューのタイトルを指定して、 [CommandName 要素](../../extensibility/commandname-element.md)は、名前を指定します。使用される、**コマンド**ウィンドウ メニューにアクセスします。  
   
--   オプションのフラグ。 A [CommandFlag 要素](../../extensibility/command-flag-element.md)外観や IDE での動作を変更するメニュー定義に表示される可能性があります。  
+- オプションのフラグ。 A [CommandFlag 要素](../../extensibility/command-flag-element.md)外観や IDE での動作を変更するメニュー定義に表示される可能性があります。  
   
- すべて`Menu`要素は、ツールバーなどのドッキング可能な要素である場合を除きに、親としてのグループをいる必要があります。 ドッキング可能なメニューは、それ自身の親です。 メニューと値の詳細については、`type`属性を参照してください、[メニュー要素](../../extensibility/menu-element.md)ドキュメント。  
+  すべて`Menu`要素は、ツールバーなどのドッキング可能な要素である場合を除きに、親としてのグループをいる必要があります。 ドッキング可能なメニューは、それ自身の親です。 メニューと値の詳細については、`type`属性を参照してください、[メニュー要素](../../extensibility/menu-element.md)ドキュメント。  
   
- 次の例は、Visual Studio のメニュー バーの横に表示されるメニュー、**ツール**メニュー。  
+  次の例は、Visual Studio のメニュー バーの横に表示されるメニュー、**ツール**メニュー。  
   
 ```xml  
 <Menu guid="guidTopLevelMenuCmdSet"  
@@ -159,11 +159,11 @@ priority="0x0100" type="Menu">
 ##### <a name="combos"></a>Combos  
  Combos がで定義されている、`Combos`セクション。 各`Combo`要素は、IDE でのドロップダウン リスト ボックスを表します。 リスト ボックスがまたはの値に応じて、ユーザーが書き込み可能なことができない可能性があります、`type`コンボ ボックスの属性です。 Combos が同じ要素を持ち、ボタンの動作があると、次の追加属性を持つことができますも。  
   
--   A`defaultWidth`ピクセル幅を指定する属性。  
+- A`defaultWidth`ピクセル幅を指定する属性。  
   
--   `idCommandList`属性リスト ボックスに表示される項目を含むリストを指定します。 同じコマンドの一覧を宣言する必要があります`GuidSymbol`コンボ ボックスを含むノードです。  
+- `idCommandList`属性リスト ボックスに表示される項目を含むリストを指定します。 同じコマンドの一覧を宣言する必要があります`GuidSymbol`コンボ ボックスを含むノードです。  
   
- 次の例では、複合要素を定義します。  
+  次の例では、複合要素を定義します。  
   
 ```xml  
 <Combos>  
@@ -192,7 +192,7 @@ priority="0x0100" type="Menu">
  次の規則は、項目がその親として別のアイテムを呼び出す方法を制御します。  
   
 |要素|コマンド テーブルのこのセクションで定義されています。|含まれている可能性があります (親、または内の配置によって、`CommandPlacements`セクション、またはその両方)|含めることができます ("親"と呼ばれます)|  
-|-------------|--------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------|  
+|-------------| - | - | - |  
 |グループ化|[Groups 要素](../../extensibility/groups-element.md)IDE、その他の Vspackage|メニュー、グループ、アイテム自体|メニューのグループ、およびコマンド|  
 |メニュー|[Menus 要素](../../extensibility/menus-element.md)IDE、その他の Vspackage|1 ~ *n*グループ|0 ~ *n*グループ|  
 |ツール バー|[Menus 要素](../../extensibility/menus-element.md)IDE、その他の Vspackage|項目自体|0 ~ *n*グループ|  
@@ -290,17 +290,17 @@ priority="0x0100" type="Menu">
 ## <a name="interface-element-appearance"></a>インターフェイス要素の外観  
  選択して、コマンド要素の配置に関する考慮事項は次のとおりです。  
   
--   [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 配置に応じて異なる方法で表示される多くの UI 要素を提供します。  
+- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 配置に応じて異なる方法で表示される多くの UI 要素を提供します。  
   
--   使用して定義されている UI 要素、`DefaultInvisible`の VSPackage 実装によって表示されるいずれかである場合を除き、フラグを IDE に表示されませんが、<xref:EnvDTE.IDTCommandTarget.QueryStatus%2A>メソッドで特定の UI コンテキストに関連付けられているか、`VisibilityConstraints`セクション。  
+- 使用して定義されている UI 要素、`DefaultInvisible`の VSPackage 実装によって表示されるいずれかである場合を除き、フラグを IDE に表示されませんが、<xref:EnvDTE.IDTCommandTarget.QueryStatus%2A>メソッドで特定の UI コンテキストに関連付けられているか、`VisibilityConstraints`セクション。  
   
--   正常に配置されているコマンドでもは表示されません。 これは IDE が自動的に非表示にまたはインターフェイスを VSPackage が (またはされていない) に応じて、いくつかのコマンドが表示されますので、実装します。 たとえば、いくつかの VSPackage の実装は、自動的に表示されるビルドに関連するメニュー項目を原因インターフェイス ビルドします。  
+- 正常に配置されているコマンドでもは表示されません。 これは IDE が自動的に非表示にまたはインターフェイスを VSPackage が (またはされていない) に応じて、いくつかのコマンドが表示されますので、実装します。 たとえば、いくつかの VSPackage の実装は、自動的に表示されるビルドに関連するメニュー項目を原因インターフェイス ビルドします。  
   
--   適用、 `CommandWellOnly` UI 要素の定義でフラグはコマンドのカスタマイズによってのみ追加できることを意味します。  
+- 適用、 `CommandWellOnly` UI 要素の定義でフラグはコマンドのカスタマイズによってのみ追加できることを意味します。  
   
--   コマンドは、IDE がデザイン ビューである場合は、ダイアログが表示されます。 場合にのみ、UI、特定のコンテキストなどでのみ使用可能なことがあります。  
+- コマンドは、IDE がデザイン ビューである場合は、ダイアログが表示されます。 場合にのみ、UI、特定のコンテキストなどでのみ使用可能なことがあります。  
   
--   IDE に表示される特定の UI 要素には、1 つまたは複数のインターフェイスを実装またはコードを記述する必要があります。  
+- IDE に表示される特定の UI 要素には、1 つまたは複数のインターフェイスを実装またはコードを記述する必要があります。  
   
 ## <a name="see-also"></a>関連項目  
  [メニューとコマンドを拡張します。](../../extensibility/extending-menus-and-commands.md)

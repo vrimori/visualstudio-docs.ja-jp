@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: eb4d8696755a70005923833625c72a95e5f1e80a
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 7a5262814f6ccfb28ba796140e52175e2fe940a9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079951"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842769"
 ---
 # <a name="how-to-use-clickonce-to-deploy-applications-that-can-run-on-multiple-versions-of-the-net-framework"></a>方法: .NET framework の複数のバージョンで実行できるアプリケーションを配置する ClickOnce を使用
 ClickOnce 配置テクノロジを使用して複数バージョンの .NET Framework を対象とするアプリケーションを展開することができます。 これは、生成し、アプリケーション マニフェストと配置マニフェストを更新する必要があります。  
@@ -82,23 +82,23 @@ ClickOnce 配置テクノロジを使用して複数バージョンの .NET Fram
   
 ### <a name="to-change-the-application-manifest-to-mark-dependent-assemblies-as-net-framework-assemblies"></a>依存アセンブリの .NET Framework アセンブリとしてマークするアプリケーション マニフェストを変更するには  
   
-1.  発行ディレクトリには、Visual Studio で、XML エディターを使用して、アプリケーション マニフェストを開きます。 配置マニフェスト、 *.manifest*ファイル名拡張子。  
+1. 発行ディレクトリには、Visual Studio で、XML エディターを使用して、アプリケーション マニフェストを開きます。 配置マニフェスト、 *.manifest*ファイル名拡張子。  
   
-2.  追加`group="framework"`sentinel アセンブリの依存関係 XML を (`System.Core`、 `WindowsBase`、 `Sentinel.v3.5Client`、および`System.Data.Entity`)。 たとえば、XML は次のようになります。  
+2. 追加`group="framework"`sentinel アセンブリの依存関係 XML を (`System.Core`、 `WindowsBase`、 `Sentinel.v3.5Client`、および`System.Data.Entity`)。 たとえば、XML は次のようになります。  
   
-    ```xml  
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true" group="framework">  
-    ```  
+   ```xml  
+   <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true" group="framework">  
+   ```  
   
-3.  更新プログラムのバージョン番号、`<assemblyIdentity>`最小公分母をある .NET Framework のバージョン番号を Microsoft.Windows.CommonLanguageRuntime の要素。 たとえば、アプリケーションが .NET Framework 3.5 を対象とし、 [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]、バージョン番号を使用して、[2.0.50727.0] と、XML、次のようになります。  
+3. 更新プログラムのバージョン番号、`<assemblyIdentity>`最小公分母をある .NET Framework のバージョン番号を Microsoft.Windows.CommonLanguageRuntime の要素。 たとえば、アプリケーションが .NET Framework 3.5 を対象とし、 [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]、バージョン番号を使用して、[2.0.50727.0] と、XML、次のようになります。  
   
-    ```xml  
-    <dependency>  
-      <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">  
-        <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />  
-      </dependentAssembly>  
-    </dependency>  
-    ```  
+   ```xml  
+   <dependency>  
+     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">  
+       <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />  
+     </dependentAssembly>  
+   </dependency>  
+   ```  
   
 ### <a name="to-update-and-re-sign-the-application-and-deployment-manifests"></a>マニフェストを更新して、アプリケーションおよび配置に再署名  
   

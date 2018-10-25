@@ -14,29 +14,29 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0f07c169b6c282b68c96c2e1c9be821ef4e00700
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6a93caaf861c5118bf95651efbf41fcee1ef817e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49276043"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846058"
 ---
 # <a name="memory-usage"></a>メモリ使用量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 デバッガーに統合された **メモリ使用量** 診断ツールを使用したデバッグ中に、メモリ リークおよび非効率的なメモリを見つけます。 メモリ使用量ツールを使用すると、マネージド メモリ ヒープ、およびネイティブ メモリ ヒープの 1 つまたは複数の *スナップショット* を取得できます。 .NET アプリ、ネイティブ アプリ、または混在モード (.NET とネイティブ) アプリのスナップショットを収集できます。  
   
--   単一のスナップショットを分析することにより、オブジェクト型のメモリ使用に対する相対的な影響を理解し、アプリ内でメモリが効率的に使用されていないコードを検出することができます。  
+- 単一のスナップショットを分析することにより、オブジェクト型のメモリ使用に対する相対的な影響を理解し、アプリ内でメモリが効率的に使用されていないコードを検出することができます。  
   
--   アプリの 2 つのスナップショットを比較 (diff) することにより、コード内で時間の経過に伴ってメモリ使用量が増加している箇所を検出することもできます。  
+- アプリの 2 つのスナップショットを比較 (diff) することにより、コード内で時間の経過に伴ってメモリ使用量が増加している箇所を検出することもできます。  
   
- 次の図は、Visual Studio 2015 Update 1 の **[診断ツール]** ウィンドウを示しています。  
+  次の図は、Visual Studio 2015 Update 1 の **[診断ツール]** ウィンドウを示しています。  
   
- ![DiagnosticTools&#45;Update1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-Update1")  
+  ![DiagnosticTools&#45;Update1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-Update1")  
   
- **メモリ使用量** ツールでメモリのスナップショットをいつでも収集できますが、Visual Studio デバッガーを使用すると、パフォーマンスの問題を調査中にアプリケーションの実行方法を制御することができます。 ブレークポイントの設定、ステップ実行、すべて中断、その他のデバッガー アクションは、パフォーマンスの調査を最も関連性の高いコード パスに集中させるのに役立ちます。 アプリの実行中にこれらのアクションを実行することで、目的としていないコードからのノイズを除去することができ、問題の診断にかかる時間を大幅に短縮できます。  
+  **メモリ使用量** ツールでメモリのスナップショットをいつでも収集できますが、Visual Studio デバッガーを使用すると、パフォーマンスの問題を調査中にアプリケーションの実行方法を制御することができます。 ブレークポイントの設定、ステップ実行、すべて中断、その他のデバッガー アクションは、パフォーマンスの調査を最も関連性の高いコード パスに集中させるのに役立ちます。 アプリの実行中にこれらのアクションを実行することで、目的としていないコードからのノイズを除去することができ、問題の診断にかかる時間を大幅に短縮できます。  
   
- さらに、デバッガーの外部のメモリ ツールも使用できます。 「 [Memory Usage without Debugging](http://msdn.microsoft.com/library/8883bc5f-df86-4f84-aa2b-a21150f499b0)」を参照してください。  
+  さらに、デバッガーの外部のメモリ ツールも使用できます。 「 [Memory Usage without Debugging](http://msdn.microsoft.com/library/8883bc5f-df86-4f84-aa2b-a21150f499b0)」を参照してください。  
   
 > [!NOTE]
 >  **カスタム アロケーター サポート** ネイティブ メモリ プロファイラーは、実行時に生成された割り当て [ETW](https://msdn.microsoft.com/library/windows/desktop/bb968803\(v=vs.85\).aspx) イベント データを収集して機能します。  CRT および Windows SDK のアロケーターには、割り当てデータをキャプチャできるように、ソース レベルで注釈が付けられています。  独自のアロケーターを作成する場合、新しく割り当てられたヒープ メモリへのポインターを返すすべての関数は、 [__declspec](http://msdn.microsoft.com/library/832db681-e8e1-41ca-b78c-cd9d265cdb87)(アロケーター) で修飾できます。myMalloc での例を次に示します。  
@@ -57,29 +57,29 @@ ms.locfileid: "49276043"
  ![スナップショットを取得する](../profiling/media/dbgdiag-mem-mixedtoolbar-takesnapshot.png "DBGDIAG_MEM_MixedToolbar_TakeSnapshot")  
   
 > [!TIP]
->  -   メモリ比較のベースラインを作成するには、デバッグ セッションの開始時に、スナップショットを取得することを検討します。  
-> -   アプリがメモリの割り当てと割り当て解除を頻繁に行う場合、目的とする操作のメモリ プロファイルを取得するのは容易ではないため、操作の最初と最後にブレークポイントを設定するか、操作をステップ実行して、メモリが変更される正確なポイントを見つけます。  
+> - メモリ比較のベースラインを作成するには、デバッグ セッションの開始時に、スナップショットを取得することを検討します。  
+>   -   アプリがメモリの割り当てと割り当て解除を頻繁に行う場合、目的とする操作のメモリ プロファイルを取得するのは容易ではないため、操作の最初と最後にブレークポイントを設定するか、操作をステップ実行して、メモリが変更される正確なポイントを見つけます。  
   
 ## <a name="viewing-memory-snapshot-details"></a>メモリのスナップショットの詳細表示  
  メモリ使用量の概要テーブルの行には、デバッグ セッション中に取得したスナップショットが一覧表示されます。  
   
  行の列は、プロジェクトのプロパティで選択したデバッグ モード (.NET、ネイティブ、または混合 (.NET とネイティブの両方)) によって決まります。  
   
--   **[管理オブジェクト]** および **[ネイティブ割り当て]** 列には、スナップショット取得時の .NET メモリおよびネイティブ メモリ内のオブジェクト数が表示されます。  
+- **[管理オブジェクト]** および **[ネイティブ割り当て]** 列には、スナップショット取得時の .NET メモリおよびネイティブ メモリ内のオブジェクト数が表示されます。  
   
--   **[マネージド ヒープ サイズ]** および **[ネイティブ ヒープ サイズ]** 列には、.NET ヒープおよびネイティブ ヒープのバイト数が表示されます。  
+- **[マネージド ヒープ サイズ]** および **[ネイティブ ヒープ サイズ]** 列には、.NET ヒープおよびネイティブ ヒープのバイト数が表示されます。  
   
--   複数のスナップショットを取得した場合、概要テーブルのセルには、行のスナップショットと前のスナップショットの間の値の変化が含まれます。  
+- 複数のスナップショットを取得した場合、概要テーブルのセルには、行のスナップショットと前のスナップショットの間の値の変化が含まれます。  
   
-     ![メモリの概要テーブル セル](../profiling/media/dbgdiag-mem-summarytablecell.png "DBGDIAG_MEM_SummaryTableCell")  
+   ![メモリの概要テーブル セル](../profiling/media/dbgdiag-mem-summarytablecell.png "DBGDIAG_MEM_SummaryTableCell")  
   
- **詳細レポートの表示方法:**  
+  **詳細レポートの表示方法:**  
   
--   選択したスナップショットのみの詳細を表示するには、現在のリンクを選択します。  
+- 選択したスナップショットのみの詳細を表示するには、現在のリンクを選択します。  
   
--   現在のスナップショットと前のスナップショットの相違点の詳細を表示するには、変更リンクを選択します。  
+- 現在のスナップショットと前のスナップショットの相違点の詳細を表示するには、変更リンクを選択します。  
   
- レポートが新しいウィンドウに表示されます。  
+  レポートが新しいウィンドウに表示されます。  
   
 ## <a name="memory-usage-details-reports"></a>メモリ使用量の詳細レポート  
   
@@ -121,17 +121,17 @@ ms.locfileid: "49276043"
   
 ### <a name="change-diff-reports"></a>変更 (Diff) レポート  
   
--   **[診断ツール]** ウィンドウの **[メモリ使用量]** タブで、概要テーブルのセルにある変更リンクを選択します。  
+- **[診断ツール]** ウィンドウの **[メモリ使用量]** タブで、概要テーブルのセルにある変更リンクを選択します。  
   
-     ![変更 &#40;差分&#41; レポートの選択](../profiling/media/dbgdiag-mem-choosediffreport.png "DBGDIAG_MEM_ChooseDiffReport")  
+   ![変更 &#40;差分&#41; レポートの選択](../profiling/media/dbgdiag-mem-choosediffreport.png "DBGDIAG_MEM_ChooseDiffReport")  
   
--   マネージド レポート、もしくはネイティブ レポートの **[比較対象]** 一覧でスナップショットを選択します。  
+- マネージド レポート、もしくはネイティブ レポートの **[比較対象]** 一覧でスナップショットを選択します。  
   
-     ![比較対象の一覧からスナップショットを選択](../profiling/media/dbgdiag-mem-choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
+   ![比較対象の一覧からスナップショットを選択](../profiling/media/dbgdiag-mem-choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
   
- 変更レポートを実行すると、基本のスナップショット値と比較のスナップショットの差分を表示する列 ( **(Diff)** のマークが付けられる) が、基本レポートに追加されます。 ネイティブ型の差分レポート ビューは次のようになります。  
+  変更レポートを実行すると、基本のスナップショット値と比較のスナップショットの差分を表示する列 ( **(Diff)** のマークが付けられる) が、基本レポートに追加されます。 ネイティブ型の差分レポート ビューは次のようになります。  
   
- ![ネイティブ型の差分ビュー](../profiling/media/dbgdiag-mem-native-typesviewdiff.png "DBGDIAG_MEM_Native_TypesViewDiff")  
+  ![ネイティブ型の差分ビュー](../profiling/media/dbgdiag-mem-native-typesviewdiff.png "DBGDIAG_MEM_Native_TypesViewDiff")  
   
 ## <a name="blogs-and-videos"></a>ブログとビデオ  
  [Visual Studio 2015 の診断ツール [デバッガー] ウィンドウ](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015.aspx)  

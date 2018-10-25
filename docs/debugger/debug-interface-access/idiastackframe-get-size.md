@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_size |Microsoft ドキュメント
+title: Idiastackframe::get_size |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 07286ca93b3d5c0a7d4d6fe5036756244bd658ba
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4988bf047bf500c7d7cd8a17a4783cac47596833
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31461282"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861385"
 ---
 # <a name="idiastackframegetsize"></a>IDiaStackFrame::get_size
 (バイト単位) のスタック フレームのサイズを取得します。  
@@ -37,7 +37,7 @@ HRESULT get_size (
  [out]スタック フレームのサイズをバイト単位で返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 返します`S_FALSE`プロパティがサポートされていない場合。 それ以外の場合はエラー コードを返します。  
+ 成功した場合、返します`S_OK`します。 返します`S_FALSE`プロパティがサポートされていない場合。 それ以外の場合はエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

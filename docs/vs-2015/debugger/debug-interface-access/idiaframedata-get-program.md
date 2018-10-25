@@ -18,12 +18,12 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d7195e303b3a900858aedee0cb9904860e6f2d56
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ad54e98e2f05647a129158a10459cb111e199c99
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49190607"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49859214"
 ---
 # <a name="idiaframedatagetprogram"></a>IDiaFrameData::get_program
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -48,15 +48,15 @@ HRESULT get_program (
 ## <a name="remarks"></a>Remarks  
  プログラムの文字列は、プロローグを確立するために解釈されるマクロのシーケンスです。 たとえば、一般的なスタック フレームを使用プログラム文字列`"$T0 $ebp = $eip $T0 4 + ^ = $ebp $T0 ^ = $esp $T0 8 + ="`します。 形式は、逆ポーランド表記法、演算子がオペランドに従ってください。 `T0` スタック上の一時変数を表します。 この例では、次の手順を実行します。  
   
-1.  レジスタの内容を移動`ebp`に`T0`します。  
+1. レジスタの内容を移動`ebp`に`T0`します。  
   
-2.  追加`4`の値に`T0`をアドレスを生成、そのアドレスから値を取得およびレジスタに値を格納`eip`します。  
+2. 追加`4`の値に`T0`をアドレスを生成、そのアドレスから値を取得およびレジスタに値を格納`eip`します。  
   
-3.  格納されているアドレスから値を取得`T0`レジスタに値を格納および`ebp`します。  
+3. 格納されているアドレスから値を取得`T0`レジスタに値を格納および`ebp`します。  
   
-4.  追加`8`の値に`T0`レジスタに値を格納および`esp`します。  
+4. 追加`8`の値に`T0`レジスタに値を格納および`esp`します。  
   
- プログラム文字列が、CPU と現在のスタック フレームで表される関数を設定する呼び出し規約に固有であるに注意してください。  
+   プログラム文字列が、CPU と現在のスタック フレームで表される関数を設定する呼び出し規約に固有であるに注意してください。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

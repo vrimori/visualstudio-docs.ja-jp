@@ -17,12 +17,12 @@ ms.assetid: 173dcbda-5019-4c5e-bca9-a071838b5739
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: aa03f59945b1e51d0c86aee48dde27d0fa4b326b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: d198baa227052fcff9e82a4d77b12624f8340616
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49177087"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825696"
 ---
 # <a name="idebugengine2attach"></a>IDebugEngine2::Attach
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -73,25 +73,25 @@ int Attach(
 ## <a name="remarks"></a>Remarks  
  次のように、プログラムにアタッチするための 3 つの理由があります。  
   
--   `ATTACH_REASON_LAUNCH` ユーザーにそれを含んでいるプロセスが起動されるので、DE がプログラムに添付することを示します。  
+- `ATTACH_REASON_LAUNCH` ユーザーにそれを含んでいるプロセスが起動されるので、DE がプログラムに添付することを示します。  
   
--   `ATTACH_REASON_USER` ユーザーがプログラム (または、プロセス、プログラムを含む) にアタッチする DE を明示的に要求することを示します。  
+- `ATTACH_REASON_USER` ユーザーがプログラム (または、プロセス、プログラムを含む) にアタッチする DE を明示的に要求することを示します。  
   
--   `ATTACH_REASON_AUTO` 既に特定のプロセスでは、他のプログラムのデバッグのために、特定のプログラムに、DE をアタッチすることを示します。 これもと呼ばれる自動アタッチします。  
+- `ATTACH_REASON_AUTO` 既に特定のプロセスでは、他のプログラムのデバッグのために、特定のプログラムに、DE をアタッチすることを示します。 これもと呼ばれる自動アタッチします。  
   
- このメソッドが呼び出されたときに、DE はシーケンス内のこれらのイベントを送信する必要があります。  
+  このメソッドが呼び出されたときに、DE はシーケンス内のこれらのイベントを送信する必要があります。  
   
-1.  [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md) (かどうかそれが既に送信されていません、デバッグ エンジンの特定のインスタンスの)  
+1. [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md) (かどうかそれが既に送信されていません、デバッグ エンジンの特定のインスタンスの)  
   
-2.  [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md)  
+2. [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md)  
   
-3.  [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md)  
+3. [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md)  
   
- さらに、アタッチするための理由である場合`ATTACH_REASON_LAUNCH`、送信する必要があります、DE、 [IDebugEntryPointEvent2](../../../extensibility/debugger/reference/idebugentrypointevent2.md)イベント。  
+   さらに、アタッチするための理由である場合`ATTACH_REASON_LAUNCH`、送信する必要があります、DE、 [IDebugEntryPointEvent2](../../../extensibility/debugger/reference/idebugentrypointevent2.md)イベント。  
   
- DE 取得 1 回、 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)オブジェクトのデバッグ中のプログラムに対応する、任意のプライベート インターフェイスのクエリを実行できます。  
+   DE 取得 1 回、 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)オブジェクトのデバッグ中のプログラムに対応する、任意のプライベート インターフェイスのクエリを実行できます。  
   
- 指定された配列で、[プログラム] ノードのメソッドを呼び出す前に`pProgram`または`rgpProgramNodes`、権限借用では、必要な場合、する必要がありますで有効にする、`IDebugProgram2`プログラム ノードを表すインターフェイスです。 通常、ただし、この手順は必要ではありません。 詳細については、次を参照してください。[セキュリティの問題](../../../extensibility/debugger/security-issues.md)します。  
+   指定された配列で、[プログラム] ノードのメソッドを呼び出す前に`pProgram`または`rgpProgramNodes`、権限借用では、必要な場合、する必要がありますで有効にする、`IDebugProgram2`プログラム ノードを表すインターフェイスです。 通常、ただし、この手順は必要ではありません。 詳細については、次を参照してください。[セキュリティの問題](../../../extensibility/debugger/security-issues.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   

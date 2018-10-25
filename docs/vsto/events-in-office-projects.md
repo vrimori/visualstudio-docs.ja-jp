@@ -1,5 +1,5 @@
 ---
-title: Office プロジェクトのイベント
+title: Office プロジェクト内のイベント
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -35,14 +35,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 10cd0e1740aa53902d266ed0af6820b500a453e9
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 85cbee61cde596831d06aa83af326cc0a0534f0f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34448715"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949683"
 ---
-# <a name="events-in-office-projects"></a>Office プロジェクトのイベント
+# <a name="events-in-office-projects"></a>Office プロジェクト内のイベント
   各 Office プロジェクト テンプレートは、自動的に複数のイベント ハンドラーを生成します。 ドキュメント レベルのカスタマイズに使用するイベント ハンドラーは、VSTO アドイン用のイベント ハンドラーとは若干異なります。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
@@ -51,7 +51,7 @@ ms.locfileid: "34448715"
  Visual Studio では、ドキュメント レベルのカスタマイズ内の新規または既存のドキュメントまたはワークシートの背後に生成されたコードを提供します。 このコードは 2 つの異なるイベントを発生させます。 **Startup** と **Shutdown**です。  
   
 ### <a name="startup-event"></a>Startup イベント  
- **Startup** イベントは、ドキュメントが実行中になり、アセンブリ内の初期化コードがすべて実行された後で、ホスト項目 (ドキュメント、ブックまたはワークシート) ごとに発生します。 これは、コードが実行されているクラスのコンストラクターで最後に実行されるイベントです。 ホスト項目の詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)です。  
+ **Startup** イベントは、ドキュメントが実行中になり、アセンブリ内の初期化コードがすべて実行された後で、ホスト項目 (ドキュメント、ブックまたはワークシート) ごとに発生します。 これは、コードが実行されているクラスのコンストラクターで最後に実行されるイベントです。 ホスト項目の詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)します。  
   
  ドキュメント レベルのプロジェクトを作成する場合、Visual Studio は生成されたコード ファイル内の **Startup** イベント用に次のイベント ハンドラーを作成します。  
   
@@ -106,29 +106,29 @@ ms.locfileid: "34448715"
 ### <a name="order-of-events-in-document-level-excel-projects"></a>ドキュメント レベルの Excel プロジェクト内のイベントの順序  
  Excel プロジェクト内の **Startup** イベント ハンドラーは、次の順序で呼び出されます。  
   
-1.  `ThisWorkbook_Startup`。  
+1. `ThisWorkbook_Startup`。  
   
-2.  `Sheet1_Startup`。  
+2. `Sheet1_Startup`。  
   
-3.  `Sheet2_Startup`。  
+3. `Sheet2_Startup`。  
   
-4.  `Sheet3_Startup`。  
+4. `Sheet3_Startup`。  
   
-5.  順にその他のシート。  
+5. 順にその他のシート。  
   
- ブック ソリューション内の **Shutdown** イベント ハンドラーは、次の順序で呼び出されます。  
+   ブック ソリューション内の **Shutdown** イベント ハンドラーは、次の順序で呼び出されます。  
   
-1.  `ThisWorkbook_Shutdown`。  
+6. `ThisWorkbook_Shutdown`。  
   
-2.  `Sheet1_Shutdown`。  
+7. `Sheet1_Shutdown`。  
   
-3.  `Sheet2_Shutdown`。  
+8. `Sheet2_Shutdown`。  
   
-4.  `Sheet3_Shutdown`。  
+9. `Sheet3_Shutdown`。  
   
-5.  順にその他のシート。  
+10. 順にその他のシート。  
   
- 順序は、プロジェクトがコンパイルされるときに決定されます。 場合は、ユーザーには、実行時にシートが再配置し、そのイベントで、次回ブックが開かれたり閉じられたりが発生する順序は変わりません。  
+    順序は、プロジェクトがコンパイルされるときに決定されます。 場合は、ユーザーは、実行時にシートを再配置し、そのイベントに、次回ブックが開かれたり閉じられたりが発生する順序は変わりません。  
   
 ## <a name="vsto-add-in-projects"></a>VSTO アドイン プロジェクト  
  Visual Studio は、VSTO アドインで生成されたコードを提供します。このコードは 2 つの異なるイベントを発生させます。 <xref:Microsoft.Office.Tools.AddInBase.Startup> と <xref:Microsoft.Office.Tools.AddInBase.Shutdown>です。  
@@ -138,9 +138,9 @@ ms.locfileid: "34448715"
   
  `ThisAddIn_Startup` イベント ハンドラー内のコードは、VSTO アドインが <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> メソッドをオーバーライドしない限り、最初に実行されるユーザー コードです。 この場合、 `ThisAddIn_Startup` イベント ハンドラーが、 <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A>の後に呼び出されます。  
   
- コードを追加しないで、`ThisAdd-In_Startup`コードでは、ドキュメントを開く場合、イベント ハンドラー。 代わりに、ユーザーがドキュメントを作成するとき、または開くときに Office アプリケーションが発生させるイベントにそのコードを追加します。 詳細については、次を参照してください。 [Office アプリケーションの起動時にドキュメントにアクセス](../vsto/programming-vsto-add-ins.md#AccessingDocuments)です。  
+ 内のコードを追加しないでください、`ThisAdd-In_Startup`イベント ハンドラーの場合は、コードがドキュメントを開く必要があります。 代わりに、ユーザーがドキュメントを作成するとき、または開くときに Office アプリケーションが発生させるイベントにそのコードを追加します。 詳細については、次を参照してください。 [Office アプリケーションの起動時にドキュメントにアクセス](../vsto/programming-vsto-add-ins.md#AccessingDocuments)します。  
   
- VSTO アドインの起動処理の詳細については、次を参照してください。[アーキテクチャの VSTO アドイン](../vsto/architecture-of-vsto-add-ins.md)です。  
+ VSTO アドインの詳細については、スタートアップ シーケンスは、次を参照してください。 [Architecture of VSTO アドイン](../vsto/architecture-of-vsto-add-ins.md)します。  
   
 ### <a name="shutdown-event"></a>Shutdown イベント  
  <xref:Microsoft.Office.Tools.AddInBase.Shutdown> イベントは、コードが読み込まれるアプリケーション ドメインがアンロードされるときに発生します。 このイベントは、生成されたコード ファイル内の `ThisAddIn_Shutdown` メソッドによって処理されます。 このイベント ハンドラーは、VSTO アドインがアンロードされるときに最後に実行されるユーザー コードです。  
@@ -153,12 +153,12 @@ ms.locfileid: "34448715"
 -   <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Close> オブジェクトの <xref:Microsoft.Office.Interop.Outlook.Explorer> イベント。  
   
 > [!NOTE]  
->  レジストリを変更して終了する場合、Outlook が <xref:Microsoft.Office.Tools.AddInBase.Shutdown> イベントを発生させるように強制することができます。 ただし、管理者がこの設定を元に戻す場合、 `ThisAddIn_Shutdown` メソッドに追加したコードは Outlook の終了時に実行されなくなります。 詳細については、次を参照してください。 [Outlook 2010 を変更して、シャット ダウン](http://go.microsoft.com/fwlink/?LinkID=184614)です。  
+>  レジストリを変更して終了する場合、Outlook が <xref:Microsoft.Office.Tools.AddInBase.Shutdown> イベントを発生させるように強制することができます。 ただし、管理者がこの設定を元に戻す場合、 `ThisAddIn_Shutdown` メソッドに追加したコードは Outlook の終了時に実行されなくなります。 詳細については、次を参照してください。 [Outlook 2010 でのシャット ダウンの変更](http://go.microsoft.com/fwlink/?LinkID=184614)します。  
   
 ## <a name="see-also"></a>関連項目  
  [Office ソリューションを開発します。](../vsto/developing-office-solutions.md)   
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
- [ドキュメント レベルのカスタマイズをプログラミングします。](../vsto/programming-document-level-customizations.md)   
+ [プログラムのドキュメント レベルのカスタマイズ](../vsto/programming-document-level-customizations.md)   
  [VSTO アドインをプログラミングします。](../vsto/programming-vsto-add-ins.md)   
  [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)  
   

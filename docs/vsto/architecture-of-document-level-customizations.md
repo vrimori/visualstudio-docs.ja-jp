@@ -22,25 +22,25 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 3532f4e5b1fc38c25ebb462916bc7eefae9f9725
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: a0188a54e500f56c9c3d947ec27d53640173837b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672755"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49912631"
 ---
 # <a name="architecture-of-document-level-customizations"></a>ドキュメント レベルのカスタマイズのアーキテクチャ
   [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] には、Microsoft Office Word および Microsoft Office Excel のドキュメント レベルのカスタマイズを作成するためのプロジェクトが含まれています。 ここでは、ドキュメント レベルのカスタマイズの次の側面について説明します。  
   
--   [カスタマイズを理解します。](#UnderstandingCustomizations)  
+- [カスタマイズを理解します。](#UnderstandingCustomizations)  
   
--   [カスタマイズのコンポーネント](#Components)  
+- [カスタマイズのコンポーネント](#Components)  
   
--   [カスタマイズと Microsoft Office アプリケーションの連携](#HowCustomizationsWork)  
+- [カスタマイズと Microsoft Office アプリケーションの連携](#HowCustomizationsWork)  
   
- [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
+  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- ドキュメント レベルのカスタマイズを作成する方法の概要については、次を参照してください[Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)、 [Word用ドキュメントレベルカスタマイズのプログラミングを開始します。](../vsto/getting-started-programming-document-level-customizations-for-word.md)、および[Excel のドキュメント レベルのカスタマイズのプログラミングを始める](../vsto/getting-started-programming-document-level-customizations-for-excel.md)します。  
+  ドキュメント レベルのカスタマイズを作成する方法の概要については、次を参照してください[Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)、 [Word用ドキュメントレベルカスタマイズのプログラミングを開始します。](../vsto/getting-started-programming-document-level-customizations-for-word.md)、および[Excel のドキュメント レベルのカスタマイズのプログラミングを始める](../vsto/getting-started-programming-document-level-customizations-for-excel.md)します。  
   
 ##  <a name="UnderstandingCustomizations"></a> カスタマイズを理解します。  
  Visual Studio の Office 開発ツールを使用してドキュメント レベルのカスタマイズをビルドする場合は、特定の文書に関連付けられたマネージド コード アセンブリを作成します。 アセンブリがリンクされている文書やブックは、マネージド コード拡張機能がある、と言い表されます。 詳細については、次を参照してください。[デザイン Office ソリューションの作成と](../vsto/designing-and-creating-office-solutions.md)します。  
@@ -94,11 +94,11 @@ ms.locfileid: "35672755"
 ### <a name="support-for-word-documents-that-have-xml-file-name-extensions"></a>.Xml ファイル名拡張子を持つ Word 文書のサポート  
  ドキュメント レベルのプロジェクト テンプレートを使用して、次のファイル形式に基づくプロジェクトを作成することはできません。  
   
--   Word XML 文書 (*\*xml*)。  
+- Word XML 文書 (*\*xml*)。  
   
--   Word 2003 XML 文書 (*\*xml*)。  
+- Word 2003 XML 文書 (*\*xml*)。  
   
- エンド ユーザーがこれらのファイル形式でカスタマイズを使用できるようにするには、前の表に示した、サポートされているいずれかのファイル形式に基づくカスタマイズを作成して配置します。 カスタマイズをインストールすると、エンドユーザーは、Word XML ドキュメントのドキュメントを保存できます (*\*xml*) 形式または Word 2003 XML 文書 (*\*xml*) 形式、およびカスタマイズは引き続き期待どおりに動作します。  
+  エンド ユーザーがこれらのファイル形式でカスタマイズを使用できるようにするには、前の表に示した、サポートされているいずれかのファイル形式に基づくカスタマイズを作成して配置します。 カスタマイズをインストールすると、エンドユーザーは、Word XML ドキュメントのドキュメントを保存できます (*\*xml*) 形式または Word 2003 XML 文書 (*\*xml*) 形式、およびカスタマイズは引き続き期待どおりに動作します。  
   
 ##  <a name="Components"></a> カスタマイズのコンポーネント  
  カスタマイズの主要なコンポーネントは、ドキュメントとアセンブリです。 これらのコンポーネントに加えて、Microsoft Office アプリケーションがカスタマイズを検出して読み込むときに重要な役割を果たすものがあります。  
@@ -142,11 +142,11 @@ ms.locfileid: "35672755"
   
 8.  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は、カスタマイズ アセンブリをアプリケーション ドメインに読み込みます。  
   
-9. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]呼び出し、**スタートアップ**カスタマイズ アセンブリ内のイベント ハンドラー。 詳細については、次を参照してください[Office プロジェクト内のイベント。](../vsto/events-in-office-projects.md)  
+9. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は、カスタマイズ アセンブリ内の **Startup** イベント ハンドラーを呼び出します。 詳細については、次を参照してください[Office プロジェクト内のイベント。](../vsto/events-in-office-projects.md)  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio での Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)   
- [VSTO アドインのアーキテクチャ](../vsto/architecture-of-vsto-add-ins.md)   
+ [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)   
  [Visual Studio のツール for Office runtime の概要](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
  [セキュリティで保護された Office ソリューション](../vsto/securing-office-solutions.md)   
  [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   

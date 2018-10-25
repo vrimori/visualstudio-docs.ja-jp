@@ -18,12 +18,12 @@ caps.latest.revision: 22
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e4b15434c75fb4cd2a295789794f6c9f8eb882bb
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: d8cc7968664f201482647861a031a27c850611c2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49254898"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914711"
 ---
 # <a name="task-writing"></a>タスクの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "49254898"
   
  タスクを実装するには 2 つの方法があります。  
   
--   <xref:Microsoft.Build.Framework.ITask> インターフェイスを直接実装します。  
+- <xref:Microsoft.Build.Framework.ITask> インターフェイスを直接実装します。  
   
--   Microsoft.Build.Utilities.dll アセンブリで定義されているヘルパー クラス <xref:Microsoft.Build.Utilities.Task> からクラスを継承します。 Task は ITask を実装し、一部の ITask メンバーの既定の実装を提供します。 また、ログは簡単に記録できます。  
+- Microsoft.Build.Utilities.dll アセンブリで定義されているヘルパー クラス <xref:Microsoft.Build.Utilities.Task> からクラスを継承します。 Task は ITask を実装し、一部の ITask メンバーの既定の実装を提供します。 また、ログは簡単に記録できます。  
   
- いずれの場合でも、クラスを `Execute` という名前のメソッドに追加する必要があります。これは、タスクの実行時に呼び出されるメソッドです。 このメソッドはパラメーターを取らず、`Boolean` 値を返します。タスクが成功した場合は `true` を、失敗した場合は `false` を返します。 次は、何のアクションも実行せず、`true` を返すタスクの例です。  
+  いずれの場合でも、クラスを `Execute` という名前のメソッドに追加する必要があります。これは、タスクの実行時に呼び出されるメソッドです。 このメソッドはパラメーターを取らず、`Boolean` 値を返します。タスクが成功した場合は `true` を、失敗した場合は `false` を返します。 次は、何のアクションも実行せず、`true` を返すタスクの例です。  
   
 ```  
 using System;  

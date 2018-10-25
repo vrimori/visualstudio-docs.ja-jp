@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4465eff996664dca2fe1b5dcb31b5d7af049db53
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: cccaef2d5678bffa19e822cf537f4acb3d046cca
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44320788"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907522"
 ---
 # <a name="welcome-to-the-visual-studio-ide"></a>Visual Studio IDE へようこそ
 
@@ -94,11 +94,11 @@ Visual Studio の全体像を視覚的に確認できるように、次のイメ
 
 - [定義に移動](../ide/go-to-and-peek-definition.md)
 
-  [定義に移動] 機能では、関数または型が定義されている場所に直接移動できます。
+   [定義に移動] 機能では、関数または型が定義されている場所に直接移動できます。
 
    ![定義へ移動](../ide/media/go-to-definition-menu.png)
 
-- [ピークの定義](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)
+- [定義をここに表示](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)
 
    **[ピークの定義]** ウィンドウには、実際に個々のファイルを開かなくても、メソッドまたは型の定義が表示されます。
 
@@ -112,14 +112,14 @@ Visual Studio の全体像を視覚的に確認できるように、次のイメ
 
    ![メニュー バーで [ファイル]、[新しいプロジェクト] の順に選択します。](../ide/media/file-new-project-menu.png)
 
-1. **[新しいプロジェクト]** ダイアログ ボックスには複数のプロジェクト "*テンプレート*" が表示されます。 テンプレートには、特定のプロジェクト タイプに必要な基本的なファイルと設定が含まれています。 **[Visual C#]** で **[.NET Core]** カテゴリを選択し、**[Console App (.NET Core)]\(コンソール アプリ (.NET Core)\)** テンプレートを選択します。 **[名前]** テキスト ボックスに「**HelloWorld**」と入力し、**[OK]** ボタンを選びます。
+2. **[新しいプロジェクト]** ダイアログ ボックスには複数のプロジェクト "*テンプレート*" が表示されます。 テンプレートには、特定のプロジェクト タイプに必要な基本的なファイルと設定が含まれています。 **[Visual C#]** で **[.NET Core]** カテゴリを選択し、**[Console App (.NET Core)]\(コンソール アプリ (.NET Core)\)** テンプレートを選択します。 **[名前]** テキスト ボックスに「**HelloWorld**」と入力し、**[OK]** ボタンを選びます。
 
    ![.NET Core アプリ テンプレート](../ide/media/overview-new-project-dialog.png)
 
    Visual Studio によってプロジェクトが作成されます。 これは、リテラル文字列 "Hello World!" を表示する <xref:System.Console.WriteLine?displayProperty=nameWithType> メソッドを呼び出す単純な "Hello World" アプリケーションです。 コンソール (プログラムの出力) ウィンドウでに表示されます。
 
-  > [!NOTE]
-  > **[.NET Core]** カテゴリが表示されない場合は、**[.NET Core クロスプラットフォームの開発]** ワークロードをインストールする必要があります。 これを実行するには、**[新しいプロジェクト]** ダイアログ ボックスの左下側の **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが開いたら、**[.NET Core クロスプラットフォームの開発]** ワークロードまで下にスクロールして選択してから **[変更]** を選択します。
+   > [!NOTE]
+   > **[.NET Core]** カテゴリが表示されない場合は、**[.NET Core クロスプラットフォームの開発]** ワークロードをインストールする必要があります。 これを実行するには、**[新しいプロジェクト]** ダイアログ ボックスの左下側の **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが開いたら、**[.NET Core クロスプラットフォームの開発]** ワークロードまで下にスクロールして選択してから **[変更]** を選択します。
 
    すぐに次のようなグラフが表示されます。
 
@@ -127,21 +127,21 @@ Visual Studio の全体像を視覚的に確認できるように、次のイメ
 
    アプリケーションの C# コードは領域の大部分を占めるエディター ウィンドウに表示されます。 キーワードや型など、コードの異なる部分を示すようにテキストが自動的に色分けされているのに注目してください。 また、コードの縦の小さな点線は互いに一致する括弧を示し、行番号は後でコードの場所を探すのに役立ちます。 小さな四角で囲まれたマイナス記号を選択するとコード ブロックが折りたたまれ、折りたたまれている場合は展開できます。 このコードのアウトライン機能を使用すると、必要のないコードを非表示にして画面を整理できます。 プロジェクト ファイルは右側の**ソリューション エクスプローラー**と呼ばれるウィンドウに一覧表示されます。
 
-  ![赤色のボックスを持つ Visual Studio IDE](../ide/media/overview-ide-console-app-red-boxes.png)
+   ![赤色のボックスを持つ Visual Studio IDE](../ide/media/overview-ide-console-app-red-boxes.png)
 
-  他にもメニューやツール ウィンドウが用意されていますが、今は次に進みましょう。
+   他にもメニューやツール ウィンドウが用意されていますが、今は次に進みましょう。
 
-1. アプリを起動します。 そのためには、メニュー バーの **[デバッグ]** メニューから **[デバッグなしで開始]** を選択します。 あるいは、**Ctrl** + **F5 キー**を押します。
+3. アプリを起動します。 そのためには、メニュー バーの **[デバッグ]** メニューから **[デバッグなしで開始]** を選択します。 あるいは、**Ctrl** + **F5 キー**を押します。
 
-  ![[デバッグ]、[デバッグなしで開始] メニューを選択](../ide/media/overview-start-without-debugging.png)
+   ![[デバッグ]、[デバッグなしで開始] メニューを選択](../ide/media/overview-start-without-debugging.png)
 
-  Visual Studio でアプリがビルドされ、コンソール ウィンドウが開き、メッセージ **Hello World!** が表示されます。 これで実行中のアプリができました。
+   Visual Studio でアプリがビルドされ、コンソール ウィンドウが開き、メッセージ **Hello World!** が表示されます。 これで実行中のアプリができました。
 
-  ![コンソール ウィンドウ](../ide/media/overview-console-window.png)
+   ![コンソール ウィンドウ](../ide/media/overview-console-window.png)
 
-1. コンソール ウィンドウを閉じるには、キーボードで任意のキーを押します。
+4. コンソール ウィンドウを閉じるには、キーボードで任意のキーを押します。
 
-1. 何らかの追加コードをアプリに追加しましょう。 `Console.WriteLine("Hello World!");` という行の前に次の C# コードを追加します。
+5. 何らかの追加コードをアプリに追加しましょう。 `Console.WriteLine("Hello World!");` という行の前に次の C# コードを追加します。
 
    ```csharp
    Console.WriteLine("\nWhat is your name?");
@@ -150,21 +150,21 @@ Visual Studio の全体像を視覚的に確認できるように、次のイメ
 
    このコードはコンソール ウィンドウに **What is your name?** と表示し、ユーザーがテキストを入力して **Enter** キーを押すまで待機します。
 
-1. `Console.WriteLine("Hello World!");` という行を次のコードに変更します。
+6. `Console.WriteLine("Hello World!");` という行を次のコードに変更します。
 
    ```csharp
    Console.WriteLine($"\nHello {name}!");
    ```
 
-1. **[デバッグ]** > **[デバッグなしで開始]** の順に選択するか、**Ctrl** + **F5** キーを押してアプリを再び実行します。
+7. **[デバッグ]** > **[デバッグなしで開始]** の順に選択するか、**Ctrl** + **F5** キーを押してアプリを再び実行します。
 
    Visual Studio によってアプリが再度ビルドされ、コンソール ウィンドウが開き、名前を入力するように求められます。
 
-1. コンソール ウィンドウに名前を入力し、**Enter** キーを押します。
+8. コンソール ウィンドウに名前を入力し、**Enter** キーを押します。
 
    ![コンソール ウィンドウの入力](media/overview-console-input.png)
 
-1. 任意のキーを押してコンソール ウィンドウを閉じ、プログラムの実行を停止します。
+9. 任意のキーを押してコンソール ウィンドウを閉じ、プログラムの実行を停止します。
 
 ## <a name="use-refactoring-and-intellisense"></a>リファクタリングと IntelliSense の使用
 
@@ -174,11 +174,11 @@ Visual Studio の全体像を視覚的に確認できるように、次のイメ
 
 1. 変数 `name` をダブルクリックして選択します。
 
-1. 変数の新しい名前として「**username**」と入力します。
+2. 変数の新しい名前として「**username**」と入力します。
 
    変数の周りに灰色のボックスが表示され、余白に電球が表示されることに注意してください。
 
-1. 電球アイコンを選択して、使用可能な[クイック アクション](quick-actions.md)を表示します。 **['name' から 'username' へ名前を変更]** を選択します。
+3. 電球アイコンを選択して、使用可能な[クイック アクション](quick-actions.md)を表示します。 **['name' から 'username' へ名前を変更]** を選択します。
 
    ![Visual Studio での名前変更アクション](media/rename-quick-action.png)
 
@@ -186,15 +186,15 @@ Visual Studio の全体像を視覚的に確認できるように、次のイメ
 
    ![Visual Studio での名前変更リファクタリングを示すアニメーション gif](media/rename-refactoring.gif)
 
-1. 次は IntelliSense を試してみましょう。 `Console.WriteLine($"\nHello {username}!");` という行の下に、「**DateTime now = DateTime.**」と入力します。
+4. 次は IntelliSense を試してみましょう。 `Console.WriteLine($"\nHello {username}!");` という行の下に、「**DateTime now = DateTime.**」と入力します。
 
    ボックスに <xref:System.DateTime> クラスのメンバーが表示されます。 さらに、現在選択されているメンバーの説明が独立したボックスに表示されます。
 
    ![Visual Studio での IntelliSense リスト メンバー](media/intellisense-list-members.png)
 
-1. **Now** という名前のメンバーを、ダブルクリックするか **Tab** キーを押して選択します。これはクラスのプロパティです。セミコロンを **;** 追加してコード行を完了します。
+5. **Now** という名前のメンバーを、ダブルクリックするか **Tab** キーを押して選択します。これはクラスのプロパティです。セミコロンを **;** 追加してコード行を完了します。
 
-1. その下に、次のコード行を入力またはコピーします。
+6. その下に、次のコード行を入力またはコピーします。
 
    ```csharp
    int dayOfYear = now.DayOfYear;
@@ -206,17 +206,17 @@ Visual Studio の全体像を視覚的に確認できるように、次のイメ
    > [!TIP]
    > <xref:System.Console.Write%2A?displayProperty=nameWithType> は <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> と少し異なり、出力の後に行終端記号を追加しません。 つまり、次に出力に送信されるテキストは、同じ書き出されます。 コードでこれらのメソッドをポイントすると、その説明が表示されます。
 
-1. 次に、もう一度リファクタリングを使ってコードを少し簡単にします。 `DateTime now = DateTime.Now;` の行で変数 `now` をクリックします。
+7. 次に、もう一度リファクタリングを使ってコードを少し簡単にします。 `DateTime now = DateTime.Now;` の行で変数 `now` をクリックします。
 
    その行の余白に小さいドライバー アイコンが表示されることに注意してください。
 
-1. ドライバー アイコンをクリックして、Visual Studio で使用可能な推奨事項を確認します。 この場合は、全体の動作を変更することなくコードの行を削除する[インラインの一時変数](reference/inline-temporary-variable.md)リファクタリングが表示されています。
+8. ドライバー アイコンをクリックして、Visual Studio で使用可能な推奨事項を確認します。 この場合は、全体の動作を変更することなくコードの行を削除する[インラインの一時変数](reference/inline-temporary-variable.md)リファクタリングが表示されています。
 
    ![Visual Studio でのインラインの一時変数リファクタリング](media/inline-temporary-variable-refactoring.png)
 
-1. **[インラインの一時変数]** をクリックしてコードをリファクタリングします。
+9. **[インラインの一時変数]** をクリックしてコードをリファクタリングします。
 
-1. **Ctrl** + **F5** キーを押してプログラムを再び実行です。 出力は次のようになります。
+10. **Ctrl** + **F5** キーを押してプログラムを再び実行です。 出力は次のようになります。
 
    ![プログラムの出力が表示されたコンソール ウィンドウ](../ide/media/overview-console-final.png)
 
@@ -252,7 +252,7 @@ Visual Studio でのデバッグの詳細については、[デバッガーの�
 
 1. メニュー バーから **[ツール]** > **[オプション]** の順に選択して、**[オプション]** ダイアログを開きます。
 
-1. **[環境]**  >  **[全般]** オプションのページで、**[配色テーマ]** の選択内容を **[濃色]** に変更して **[OK]** を選択します。
+2. **[環境]**  >  **[全般]** オプションのページで、**[配色テーマ]** の選択内容を **[濃色]** に変更して **[OK]** を選択します。
 
    IDE 全体の配色テーマが**濃色**に変更されます。
 

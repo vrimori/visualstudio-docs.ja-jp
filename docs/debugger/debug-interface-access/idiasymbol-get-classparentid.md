@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_classparentid |Microsoft ドキュメント
+title: Idiasymbol::get_classparentid |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4956d47912a17d528085b0431bf529cdeeb8beb7
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4b335748c40d78cc2539e2c0700c1e7753935970
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31461919"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863063"
 ---
 # <a name="idiasymbolgetclassparentid"></a>IDiaSymbol::get_classParentId
 シンボルのクラスの親識別子を取得します。  
@@ -37,19 +37,19 @@ HRESULT get_classParentId (
  [out]シンボルのクラスの親 ID を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  識別子は、一意としてすべてのシンボルをマークする DIA SDK によって作成された一意の値です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|dia2.h|  
+|ヘッダー:|Dia2.h|  
 |バージョン:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>関連項目  

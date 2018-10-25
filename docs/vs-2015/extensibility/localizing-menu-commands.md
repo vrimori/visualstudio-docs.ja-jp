@@ -20,12 +20,12 @@ ms.assetid: b04ee0f6-82ea-47e6-853a-72382267d6da
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9b2486df22db8ebcbf8a9dd40a0bd374b6d8abfe
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 2584c3cdd60c130183e09d2a809ff0ee1621856d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49197707"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868847"
 ---
 # <a name="localizing-menu-commands"></a>メニュー コマンドのローカライズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,48 +37,48 @@ ms.locfileid: "49197707"
 ## <a name="localizing-command-names"></a>コマンド名のローカライズ  
  Vspackage では、メニュー コマンドやツールバーのボタンは、.vsct ファイルで定義されます。  
   
-1.  **ソリューション エクスプ ローラー**から .vsct ファイルの名前を変更*filename*に .vsct *filename*.en US.vsct します。  
+1. **ソリューション エクスプ ローラー**から .vsct ファイルの名前を変更*filename*に .vsct *filename*.en US.vsct します。  
   
-2.  コピーを作成*filename*.en-US.vsct 各ローカライズ言語。  
+2. コピーを作成*filename*.en-US.vsct 各ローカライズ言語。  
   
-     各コピーを名前*filename*.*ロケール*.vsct、場所*ロケール*は特定のカルチャの名前です。 カルチャ名の値の一覧は、次を参照してください。 [Microsoft によるロケール Id 割り当て](https://msdn.microsoft.com/library/windows/apps/jj657969.aspx)します。  
+    各コピーを名前*filename*.*ロケール*.vsct、場所*ロケール*は特定のカルチャの名前です。 カルチャ名の値の一覧は、次を参照してください。 [Microsoft によるロケール Id 割り当て](https://msdn.microsoft.com/library/windows/apps/jj657969.aspx)します。  
   
-     これら*filename*.*ロケール*.vsct ファイル、パッケージのローカライズされたメニュー テキストが含まれます。  
+    これら*filename*.*ロケール*.vsct ファイル、パッケージのローカライズされたメニュー テキストが含まれます。  
   
-3.  各を開きます*filename*。 *。ロケール*.vsct ファイルをテキストをローカライズします。  
+3. 各を開きます*filename*。 *。ロケール*.vsct ファイルをテキストをローカライズします。  
   
-    1.  変更、 [ButtonText](../extensibility/buttontext-element.md)要素が特定の言語のとして適切な値します。  
+   1. 変更、 [ButtonText](../extensibility/buttontext-element.md)要素が特定の言語のとして適切な値します。  
   
-    2.  ローカライズされたアイコンを提供する場合は、変更、[ビットマップ](../extensibility/bitmap-element.md)ターゲット ファイルを指定する値。  
+   2. ローカライズされたアイコンを提供する場合は、変更、[ビットマップ](../extensibility/bitmap-element.md)ターゲット ファイルを指定する値。  
   
-     次の例では、コマンドのファミリ ツリー エクスプ ローラー ツール ウィンドウを開きを英語とスペイン語のボタンのテキストを示します。  
+      次の例では、コマンドのファミリ ツリー エクスプ ローラー ツール ウィンドウを開きを英語とスペイン語のボタンのテキストを示します。  
   
-     [FamilyTree.en US.vsct]  
+      [FamilyTree.en US.vsct]  
   
-    ```xml  
-    <Button guid="guidLocalizedPackageCmdSet" id="cmdidFamilyTree" priority="0x0100" type="Button">  
-      <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>  
-      <Icon guid="guidImages" id="bmpPic2" />  
-      <Strings>  
-        <CommandName>cmdidFamilyTree</CommandName>  
-        <ButtonText>Family Tree Explorer</ButtonText>  
-      </Strings>  
-    </Button>  
-    ```  
+   ```xml  
+   <Button guid="guidLocalizedPackageCmdSet" id="cmdidFamilyTree" priority="0x0100" type="Button">  
+     <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>  
+     <Icon guid="guidImages" id="bmpPic2" />  
+     <Strings>  
+       <CommandName>cmdidFamilyTree</CommandName>  
+       <ButtonText>Family Tree Explorer</ButtonText>  
+     </Strings>  
+   </Button>  
+   ```  
   
-     [FamilyTree.es ES.vsct]  
+    [FamilyTree.es ES.vsct]  
   
-    ```xml  
-    <Button guid="guidLocalizedPackageCmdSet" id="cmdidFamilyTree" priority="0x0100" type="Button">  
-      <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>  
-      <Icon guid="guidImages" id="bmpPic2" />  
-      <Strings>  
-        <CommandName>cmdidFamilyTree</CommandName>  
-        <ButtonText>Explorar el arbol genealogico</ButtonText>  
-      </Strings>  
-    </Button>  
+   ```xml  
+   <Button guid="guidLocalizedPackageCmdSet" id="cmdidFamilyTree" priority="0x0100" type="Button">  
+     <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>  
+     <Icon guid="guidImages" id="bmpPic2" />  
+     <Strings>  
+       <CommandName>cmdidFamilyTree</CommandName>  
+       <ButtonText>Explorar el arbol genealogico</ButtonText>  
+     </Strings>  
+   </Button>  
   
-    ```  
+   ```  
   
 ## <a name="localizing-other-text-resources"></a>その他のテキストのリソースをローカライズします。  
  コマンド名以外の文字列リソースは、リソース (.resx) ファイルで定義されます。  

@@ -15,12 +15,12 @@ caps.latest.revision: 49
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 486d41927e45dc8c99fda06c29d14871008d7066
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 329cb0a6008824b23d7188c0ea6c4cf5e524476d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49251937"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49817874"
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>チュートリアル: 生成済みディレクティブ プロセッサへのホストの接続
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -56,34 +56,34 @@ ms.locfileid: "49251937"
   
 #### <a name="to-use-domain-specific-language-tools-to-generate-a-directive-processor-that-is-based-on-a-domain-model"></a>ドメイン固有言語ツールを使用して、ドメイン モデルに基づいているディレクティブ プロセッサを生成するには  
   
-1.  次の特性を持つドメイン固有言語ソリューションを作成します。  
+1. 次の特性を持つドメイン固有言語ソリューションを作成します。  
   
-    -   名前: DSLMinimalTest  
+   - 名前: DSLMinimalTest  
   
-    -   ソリューション テンプレート: 最小言語  
+   - ソリューション テンプレート: 最小言語  
   
-    -   ファイル拡張子: min  
+   - ファイル拡張子: min  
   
-    -   会社名: Fabrikam  
+   - 会社名: Fabrikam  
   
      ドメイン固有言語ソリューションを作成する方法の詳細については、次を参照してください。[方法: ドメイン固有言語ソリューションを作成](../modeling/how-to-create-a-domain-specific-language-solution.md)です。  
   
-2.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
+2. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
-    > [!IMPORTANT]
-    >  この手順では、ディレクティブ プロセッサを生成し、レジストリでは、キーを追加します。  
+   > [!IMPORTANT]
+   >  この手順では、ディレクティブ プロセッサを生成し、レジストリでは、キーを追加します。  
   
-3.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
+3. **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
-     2 番目のインスタンスの[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]が開きます。  
+    2 番目のインスタンスの[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]が開きます。  
   
-4.  実験用のビルドで**ソリューション エクスプ ローラー**、ファイルをダブルクリックして**sample.min**します。  
+4. 実験用のビルドで**ソリューション エクスプ ローラー**、ファイルをダブルクリックして**sample.min**します。  
   
-     ファイルがデザイナーで開きます。 モデルが 2 つの要素、ExampleElement1 と ExampleElement2、およびそれらの間のリンクを持つことに注意してください。  
+    ファイルがデザイナーで開きます。 モデルが 2 つの要素、ExampleElement1 と ExampleElement2、およびそれらの間のリンクを持つことに注意してください。  
   
-5.  2 つ目のインスタンスを閉じて[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。  
+5. 2 つ目のインスタンスを閉じて[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。  
   
-6.  ソリューションを保存し、ドメイン固有言語デザイナーを閉じます。  
+6. ソリューションを保存し、ドメイン固有言語デザイナーを閉じます。  
   
 ## <a name="connecting-a-custom-text-template-host-to-a-directive-processor"></a>ディレクティブ プロセッサへのカスタム テキスト テンプレート ホストの接続  
  作成したカスタム テキスト テンプレート ホスト、ディレクティブ プロセッサを接続するディレクティブ プロセッサを生成した後[チュートリアル: カスタム テキスト テンプレート ホストの作成](../modeling/walkthrough-creating-a-custom-text-template-host.md)です。  

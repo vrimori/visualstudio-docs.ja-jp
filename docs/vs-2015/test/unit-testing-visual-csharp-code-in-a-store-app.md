@@ -14,12 +14,12 @@ caps.latest.revision: 21
 author: alexhomer1
 ms.author: gewarren
 manager: robinr
-ms.openlocfilehash: 593ef51a9c9462253c77a9ca91d3d5460cd65f5f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ae41a5a646860526cbc5b3f6e3c04bfbf7612e2b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49245441"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49901555"
 ---
 # <a name="unit-testing-visual-c-code-in-a-store-app"></a>ストア アプリの Visual C# コードの単体テスト
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "49245441"
   
 > [!NOTE]
 >  Visual Studio Community、Enterprise、 および Professional には、単体テストの追加機能が備わっています。  
->   
->  -   Microsoft テスト エクスプローラーのアドオン アダプターを作成したサードパーティおよびオープン ソースの単体テスト フレームワークを使用します。 また、テストのコード カバレッジ情報を分析して表示することもできます。  
-> -   ビルドの後に毎回テストを実行します。  
-> -   VS Enterprise には Microsoft Fakes も含まれています。これは、システムおよびサードパーティの機能をテスト コードに置き換えることにより、自分のコードにテストの重点を置くことができる、マネージド コードの分離フレームワークです。  
->   
->  詳細については、MSDN ライブラリの「[単体テストを使用したコードの検証](http://msdn.microsoft.com/library/dd264975.aspx)」を参照してください。  
+> 
+> - Microsoft テスト エクスプローラーのアドオン アダプターを作成したサードパーティおよびオープン ソースの単体テスト フレームワークを使用します。 また、テストのコード カバレッジ情報を分析して表示することもできます。  
+>   -   ビルドの後に毎回テストを実行します。  
+>   -   VS Enterprise には Microsoft Fakes も含まれています。これは、システムおよびサードパーティの機能をテスト コードに置き換えることにより、自分のコードにテストの重点を置くことができる、マネージド コードの分離フレームワークです。  
+> 
+>   詳細については、MSDN ライブラリの「[単体テストを使用したコードの検証](http://msdn.microsoft.com/library/dd264975.aspx)」を参照してください。  
   
 ##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
  [ソリューションと単体テスト プロジェクトを作成する](#BKMK_Create_the_solution_and_the_unit_test_project)  
@@ -152,48 +152,48 @@ ms.locfileid: "49245441"
   
 ##  <a name="BKMK_Couple_the_test_project_to_the_app_project"></a> アプリケーション プロジェクトにテスト プロジェクトを結合する  
   
-1.  RooterTests プロジェクトに Maths アプリケーションへの参照を追加します。  
+1. RooterTests プロジェクトに Maths アプリケーションへの参照を追加します。  
   
-    1.  ソリューション エクスプローラーで、**RooterTests** プロジェクトを選択し、ショートカット メニューの **[参照の追加...]** をクリックします。  
+   1.  ソリューション エクスプローラーで、**RooterTests** プロジェクトを選択し、ショートカット メニューの **[参照の追加...]** をクリックします。  
   
-    2.  **[参照の追加 - RooterTests]** ダイアログ ボックスの **[ソリューション]** を展開し、**[プロジェクト]** をクリックします。 次に **[Maths]** 項目を選択します。  
+   2.  **[参照の追加 - RooterTests]** ダイアログ ボックスの **[ソリューション]** を展開し、**[プロジェクト]** をクリックします。 次に **[Maths]** 項目を選択します。  
   
-         ![Maths プロジェクトへの参照の追加](../test/media/ute-cs-windows-addreference.png "UTE_Cs_windows_AddReference")  
+        ![Maths プロジェクトへの参照の追加](../test/media/ute-cs-windows-addreference.png "UTE_Cs_windows_AddReference")  
   
-2.  使用するステートメントを UnitTest1.cs ファイルに追加します。  
+2. 使用するステートメントを UnitTest1.cs ファイルに追加します。  
   
-    1.  **UnitTest1.cs** を開きます。  
+   1.  **UnitTest1.cs** を開きます。  
   
-    2.  `using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;` 行の下に次のコードを追加します。  
+   2.  `using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;` 行の下に次のコードを追加します。  
   
-        ```csharp  
-        using Maths;  
-        ```  
+       ```csharp  
+       using Maths;  
+       ```  
   
-3.  Rooter 関数を使用するテストを追加します。 **UnitTest1.cpp** に次のコードを追加します。  
+3. Rooter 関数を使用するテストを追加します。 **UnitTest1.cpp** に次のコードを追加します。  
   
-    ```csharp  
-    [TestMethod]  
-    public void BasicTest()  
-    {  
-        Maths.Rooter rooter = new Rooter();  
-        double expected = 0.0;  
-        double actual = rooter.SquareRoot(expected * expected);  
-        double tolerance = .001;  
-        Assert.AreEqual(expected, actual, tolerance);  
-    }  
+   ```csharp  
+   [TestMethod]  
+   public void BasicTest()  
+   {  
+       Maths.Rooter rooter = new Rooter();  
+       double expected = 0.0;  
+       double actual = rooter.SquareRoot(expected * expected);  
+       double tolerance = .001;  
+       Assert.AreEqual(expected, actual, tolerance);  
+   }  
   
-    ```  
+   ```  
   
-4.  ソリューションをビルドします。  
+4. ソリューションをビルドします。  
   
-     新しいテストがテスト エクスプローラーの **[テストを実行しない]** ノードに表示されます。  
+    新しいテストがテスト エクスプローラーの **[テストを実行しない]** ノードに表示されます。  
   
-5.  テスト エクスプローラーで **[すべて実行]** をクリックします。  
+5. テスト エクスプローラーで **[すべて実行]** をクリックします。  
   
-     ![基本テスト成功](../test/media/ute-cpp-testexplorer-basictest.png "UTE_Cpp_TestExplorer_BasicTest")  
+    ![基本テスト成功](../test/media/ute-cpp-testexplorer-basictest.png "UTE_Cpp_TestExplorer_BasicTest")  
   
- テストとコード プロジェクトをセット アップして、コード プロジェクトで関数を実行するテストを実行できることを確認しました。 ここで、実際のテストおよびコードの記述を開始できます。  
+   テストとコード プロジェクトをセット アップして、コード プロジェクトで関数を実行するテストを実行できることを確認しました。 ここで、実際のテストおよびコードの記述を開始できます。  
   
 ##  <a name="BKMK_Iteratively_augment_the_tests_and_make_them_pass"></a> テストを繰り返し増やして成功させる  
   
@@ -256,70 +256,70 @@ ms.locfileid: "49245441"
   
 ##  <a name="BKMK_Debug_a_failing_test"></a> 失敗したテストをデバッグする  
   
-1.  **UnitTest1.cs** に別のテストを追加します。  
+1. **UnitTest1.cs** に別のテストを追加します。  
   
-    ```csharp  
-    // Verify that negative inputs throw an exception.  
-    [TestMethod]  
-    public void NegativeRangeTest()  
-    {  
-        string message;  
-        Rooter rooter = new Rooter();  
-        for (double v = -0.1; v > -3.0; v = v - 0.5)  
-        {  
-            try  
-            {  
-                // Should raise an exception:  
-                double actual = rooter.SquareRoot(v);  
+   ```csharp  
+   // Verify that negative inputs throw an exception.  
+   [TestMethod]  
+   public void NegativeRangeTest()  
+   {  
+       string message;  
+       Rooter rooter = new Rooter();  
+       for (double v = -0.1; v > -3.0; v = v - 0.5)  
+       {  
+           try  
+           {  
+               // Should raise an exception:  
+               double actual = rooter.SquareRoot(v);  
   
-                message = String.Format("No exception for input {0}", v);  
-                Assert.Fail(message);  
-            }  
-            catch (ArgumentOutOfRangeException ex)  
-            {  
-                continue; // Correct exception.  
-            }  
-            catch (Exception e)  
-            {  
-                message = String.Format("Incorrect exception for {0}", v);  
-                Assert.Fail(message);  
-            }  
-        }  
-    }  
+               message = String.Format("No exception for input {0}", v);  
+               Assert.Fail(message);  
+           }  
+           catch (ArgumentOutOfRangeException ex)  
+           {  
+               continue; // Correct exception.  
+           }  
+           catch (Exception e)  
+           {  
+               message = String.Format("Incorrect exception for {0}", v);  
+               Assert.Fail(message);  
+           }  
+       }  
+   }  
   
-    ```  
+   ```  
   
-2.  テスト エクスプローラーで **[すべて実行]** をクリックします。  
+2. テスト エクスプローラーで **[すべて実行]** をクリックします。  
   
-     テストが失敗します。 テスト エクスプローラーでテスト名を選択します。 失敗したアサーションが強調表示されます。 エラー メッセージは、テスト エクスプ ローラーの [詳細] ウィンドウに表示されます。  
+    テストが失敗します。 テスト エクスプローラーでテスト名を選択します。 失敗したアサーションが強調表示されます。 エラー メッセージは、テスト エクスプ ローラーの [詳細] ウィンドウに表示されます。  
   
-     ![Negativerangetest 失敗](../test/media/ute-cpp-testexplorer-negativerangetest-fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")  
+    ![Negativerangetest 失敗](../test/media/ute-cpp-testexplorer-negativerangetest-fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")  
   
-3.  テストが失敗した理由を表示するには、関数をステップ実行します。  
+3. テストが失敗した理由を表示するには、関数をステップ実行します。  
   
-    1.  `SquareRoot` 関数の先頭にブレークポイントを設定します。  
+   1.  `SquareRoot` 関数の先頭にブレークポイントを設定します。  
   
-    2.  失敗したテストのショートカット メニューで **[選択したテストのデバッグ]** をクリックします。  
+   2.  失敗したテストのショートカット メニューで **[選択したテストのデバッグ]** をクリックします。  
   
-         実行がブレークポイントで停止したら、コードをステップ実行します。  
+        実行がブレークポイントで停止したら、コードをステップ実行します。  
   
-    3.  例外をキャッチするには、Rooter メソッドにコードを追加します。  
+   3.  例外をキャッチするには、Rooter メソッドにコードを追加します。  
   
-        ```csharp  
-        public double SquareRoot(double x)  
-        {  
-            if (x < 0.0)  
-            {  
-                throw new ArgumentOutOfRangeException();  
-        }  
+       ```csharp  
+       public double SquareRoot(double x)  
+       {  
+           if (x < 0.0)  
+           {  
+               throw new ArgumentOutOfRangeException();  
+       }  
   
-        ```  
+       ```  
   
-    1.  テスト エクスプローラーで **[すべて実行]** をクリックして、修正されたメソッドをテストし、回帰が生じていないことを確認します。  
+   1.  テスト エクスプローラーで **[すべて実行]** をクリックして、修正されたメソッドをテストし、回帰が生じていないことを確認します。  
   
- 今回は、すべてのテストに合格します。  
+   今回は、すべてのテストに合格します。  
   
- ![すべてのテストの成功](../test/media/ute-ult-alltestspass.png "UTE_ULT_AllTestsPass")  
+   ![すべてのテストの成功](../test/media/ute-ult-alltestspass.png "UTE_ULT_AllTestsPass")  
   
 ##  <a name="BKMK_Refactor_the_code_"></a> コードをリファクタリングする  
  **SquareRoot 関数の中心的な計算を簡素化します。**  

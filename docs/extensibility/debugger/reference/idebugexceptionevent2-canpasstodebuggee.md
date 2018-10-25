@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2::CanPassToDebuggee |Microsoft ドキュメント
+title: IDebugExceptionEvent2::CanPassToDebuggee |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f0ffea7be736cbf6d04c368ba6124d0faf22be61
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1ea3ac73ceb5ce61cbf7cc9acb71c610b1a34b59
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31110628"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846266"
 ---
 # <a name="idebugexceptionevent2canpasstodebuggee"></a>IDebugExceptionEvent2::CanPassToDebuggee
-デバッグ エンジン (DE) が実行を再開したときにデバッグするプログラムにこの例外を渡すことのオプションをサポートしているかどうかを判断します。  
+デバッグ エンジン (DE) に実行が再開されるときにデバッグするプログラムにこの例外を渡すことがサポートしているかどうかを判断します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,10 +38,10 @@ int CanPassToDebuggee();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- どちらかを返します`S_OK`(例外は、プログラムに渡すことができます) または`S_FALSE`(は、例外を渡すことができません)。  
+ どちらかを返します`S_OK`(例外は、プログラムに渡されることができます) または`S_FALSE`(は、例外を渡すことができません)。  
   
-## <a name="remarks"></a>コメント  
- DE、デバッグ対象に渡すのための既定のアクションが必要です。 IDE が表示される、 [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)イベントと呼び出し、[続行](../../../extensibility/debugger/reference/idebugprocess3-continue.md)メソッドを呼び出さず、`CanPassToDebuggee`メソッドです。 そのため、デには、か例外を渡すための既定のケースがあります。  
+## <a name="remarks"></a>Remarks  
+ DE、デバッグ対象に渡すのための既定のアクションが必要です。 IDE が表示される、 [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)イベントと呼び出し、[続行](../../../extensibility/debugger/reference/idebugprocess3-continue.md)メソッドを呼び出さずに、`CanPassToDebuggee`メソッド。 そのため、DE には、かどうか例外を渡すための既定のケースが必要です。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)   

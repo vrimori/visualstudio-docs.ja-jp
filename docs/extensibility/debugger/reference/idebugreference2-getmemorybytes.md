@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::GetMemoryBytes |Microsoft ドキュメント
+title: IDebugReference2::GetMemoryBytes |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c3dfe557fc114cad61ae666c22be6c5f50079ee1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 023212274e2d06cd246f51497adf79fa730d1a5d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115526"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951081"
 ---
 # <a name="idebugreference2getmemorybytes"></a>IDebugReference2::GetMemoryBytes
-参照の値を物理的に格納するメモリのバイト数を取得します。 将来使用するために予約されています。  
+物理的に 参照の値が含まれているメモリのバイト数を取得します。 将来使用するために予約されています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +41,7 @@ int GetMemoryBytes (
   
 #### <a name="parameters"></a>パラメーター  
  `ppMemoryBytes`  
- [out]返します、 [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)参照の値を含んでいるメモリを取得するために使用できるオブジェクト。  
+ [out]返します、 [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)参照の値を含むメモリを取得するために使用できるオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
  常に `E_NOTIMPL` を返します。  

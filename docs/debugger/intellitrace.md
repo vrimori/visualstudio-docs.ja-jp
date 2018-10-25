@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cfa8b1430bde66416a47d2bbc93bd6f728c0709b
-ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
+ms.openlocfilehash: e2ee2e3662e550e013b2f8436cc32ee9585a419d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46542457"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825421"
 ---
 # <a name="intellitrace"></a>[IntelliTrace]
 
@@ -52,11 +52,11 @@ IntelliTrace は Visual Studio Enterprise Edition で使用できます (Profess
 
 ## <a name="IntelliTraceSupport"></a> IntelliTrace でデバッグするアプリには
 
-|||
-|-|-|
-|**完全なサポート**|-.NET Framework 2.0 または以降のバージョンを使用する Visual Basic および Visual c# のアプリケーション。<br/>ASP.NET、Microsoft Azure、Windows フォーム、WCF、WPF、Windows Workflow、SharePoint 2010、SharePoint 2013、および 64 ビットのアプリを含むほとんどのアプリケーションをデバッグできます。<br/>IntelliTrace を使用した SharePoint アプリケーションをデバッグするを参照してください。[チュートリアル: IntelliTrace を使用した、SharePoint アプリケーションのデバッグ](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md)します。<br/> IntelliTrace を使用した Microsoft Azure アプリをデバッグするを参照してください。 [IntelliTrace および Visual Studio で発行されたクラウド サービスのデバッグ](/azure/vs-azure-tools-intellitrace-debug-published-cloud-services)します。|
-|**制限付きサポート**|-IntelliTrace ステップ バックを使用してスナップショットを表示する Windows のサポートを対象とするネイティブ アプリです。 デバッガーおよび例外のイベントのみがサポートされています。<br />-.NET core と ASP.NET Core アプリでサポートされて特定のイベントのみ (MVC コント ローラー、ADO.NET、および HTTPClicent イベント) ローカル デバッグします。 スタンドアロン コレクターは、.NET Core または ASP.NET Core アプリはサポートされていません。<br />の f# 実験的な単位でアプリ<br />イベントについてのみサポートされている UWP アプリ|
-|**サポートされていません**|-その他の言語とスクリプト<br />-Windows サービス、Silverlight、Xbox、または[!INCLUDE[winmobile](../debugger/includes/winmobile_md.md)]アプリ|
+| | |
+|---------------------| - |
+| **完全なサポート** | -.NET Framework 2.0 または以降のバージョンを使用する Visual Basic および Visual c# のアプリケーション。<br/>ASP.NET、Microsoft Azure、Windows フォーム、WCF、WPF、Windows Workflow、SharePoint 2010、SharePoint 2013、および 64 ビットのアプリを含むほとんどのアプリケーションをデバッグできます。<br/>IntelliTrace を使用した SharePoint アプリケーションをデバッグするを参照してください。[チュートリアル: IntelliTrace を使用した、SharePoint アプリケーションのデバッグ](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md)します。<br/> IntelliTrace を使用した Microsoft Azure アプリをデバッグするを参照してください。 [IntelliTrace および Visual Studio で発行されたクラウド サービスのデバッグ](/azure/vs-azure-tools-intellitrace-debug-published-cloud-services)します。 |
+| **制限付きサポート** | -IntelliTrace ステップ バックを使用してスナップショットを表示する Windows のサポートを対象とするネイティブ アプリです。 デバッガーおよび例外のイベントのみがサポートされています。<br />-.NET core と ASP.NET Core アプリでサポートされて特定のイベントのみ (MVC コント ローラー、ADO.NET、および HTTPClicent イベント) ローカル デバッグします。 スタンドアロン コレクターは、.NET Core または ASP.NET Core アプリはサポートされていません。<br />の f# 実験的な単位でアプリ<br />イベントについてのみサポートされている UWP アプリ |
+| **サポートされていません** | -その他の言語とスクリプト<br />-Windows サービス、Silverlight、Xbox、または[!INCLUDE[winmobile](../debugger/includes/winmobile_md.md)]アプリ |
 
 > [!NOTE]
 > 既に実行されているプロセスをデバッグする場合は、IntelliTrace イベントのみ (呼び出し情報なし) を収集できます。 のみ、ローカル コンピューター上の 32 ビットまたは 64 ビット プロセスにアタッチすることができます。 プロセスにアタッチする前に発生するイベントは収集されません。
@@ -77,7 +77,7 @@ IntelliTrace は、これらの時点で特定のイベントやデータを記�
 
 - Microsoft Monitoring Agent を単独、または System Center 2012 と連携して使用する場合の、IIS でホストされている ASP.NET Web アプリ、または配置されて実行中の SharePoint 2010 アプリケーションと SharePoint 2013 アプリケーション。 参照してください[IntelliTrace スタンドアロン コレクターを使用して、](../debugger/using-the-intellitrace-stand-alone-collector.md)と[Microsoft Monitoring Agent による監視](http://technet.microsoft.com/library/dn465153.aspx)します。
 
- IntelliTrace を使用したデバッグがどのように役立つかの例を次に示します。
+  IntelliTrace を使用したデバッグがどのように役立つかの例を次に示します。
 
 - アプリケーションのデータ ファイルが破損していますが、このイベントの発生場所を特定できません。
 
@@ -111,11 +111,11 @@ IntelliTrace は、これらの時点で特定のイベントやデータを記�
 
      、パフォーマンスを向上させるは既定では、IntelliTrace が、デバッガー イベントのすべての値を記録しません。 代わりに、次の値を記録します。
 
-    - 値、**ローカル**ウィンドウ。 保持、**ローカル**ウィンドウに、これらの値を参照してください。
+  - 値、**ローカル**ウィンドウ。 保持、**ローカル**ウィンドウに、これらの値を参照してください。
 
-    - 値、 **[自動変数]** ウィンドウ場合にのみ、 **[自動変数]** ウィンドウが開いて
+  - 値、 **[自動変数]** ウィンドウ場合にのみ、 **[自動変数]** ウィンドウが開いて
 
-    - 値を表示するためにソース ウィンドウの変数の上にマウス ポインターを移動すると表示されるデータヒントの値。 IntelliTrace は、固定されたデータヒントの値は収集しません。
+  - 値を表示するためにソース ウィンドウの変数の上にマウス ポインターを移動すると表示されるデータヒントの値。 IntelliTrace は、固定されたデータヒントの値は収集しません。
 
     IntelliTrace が各デバッガーでアプリケーションのプロセスのスナップショットを取得、IntelliTrace イベントとスナップショット モードを有効にすると、**ブレークポイント**と**手順**イベント。 これで値が記録されます、**ローカル**、 **[自動変数]**、および**ウォッチ**かどうか、開いているウィンドウかどうかに関係なく、windows。 任意のピン留めされたデータ ヒントでの値も収集されます。
 

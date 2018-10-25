@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 442e37dfac8e7eb022ee12bfaadacae548625793
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: ce47b5e9db018a8c3c525d5202a01f0860def2a6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36303041"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49940451"
 ---
 # <a name="create-a-data-driven-coded-ui-test"></a>データ ドリブンのコード化された UI テストの作成
 
@@ -33,64 +33,64 @@ ms.locfileid: "36303041"
 
 ### <a name="step-1---create-a-coded-ui-test"></a>ステップ 1 - コード化された UI テストを作成する
 
-1.  プロジェクトを作成します。
+1. プロジェクトを作成します。
 
-     ![コード化された UI テスト プロジェクトを作成](../test/media/cuit_datadriven_.png)
+    ![コード化された UI テスト プロジェクトを作成](../test/media/cuit_datadriven_.png)
 
    > [!NOTE]
    > **[コード化された UI テスト プロジェクト]** テンプレートが表示されない場合は、[コード化された UI テスト コンポーネントをインストール](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component)する必要があります。
 
-2.  **アクションを記録する**ことを選択します。
+2. **アクションを記録する**ことを選択します。
 
-     ![アクション記録の選択](../test/media/cuit_datadriven_generatecodedialog.png)
+    ![アクション記録の選択](../test/media/cuit_datadriven_generatecodedialog.png)
 
-3.  電卓アプリを開き、テストの記録を開始します。
+3. 電卓アプリを開き、テストの記録を開始します。
 
-     ![アクションを記録](../test/media/cuit_datadriven_cuitbuilder.png)
+    ![アクションを記録](../test/media/cuit_datadriven_cuitbuilder.png)
 
-4.  1 と 2 を加算し、レコーダーを一時停止し、テスト メソッドを生成します。 後で、このユーザー入力の値をデータ ファイルからの値に置換することになります。
+4. 1 と 2 を加算し、レコーダーを一時停止し、テスト メソッドを生成します。 後で、このユーザー入力の値をデータ ファイルからの値に置換することになります。
 
-     ![テスト メソッドの生成](../test/media/cuit_datadriven_cuitbuildergencode.png)
+    ![テスト メソッドの生成](../test/media/cuit_datadriven_cuitbuildergencode.png)
 
-     テスト ビルダーを閉じます。 メソッドがテストに追加されます。
+    テスト ビルダーを閉じます。 メソッドがテストに追加されます。
 
-    ```csharp
-    [TestMethod]
-    public void CodedUITestMethod1()
-    {
-        // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-        this.UIMap.AddNumbers();
-    }
-    ```
+   ```csharp
+   [TestMethod]
+   public void CodedUITestMethod1()
+   {
+       // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
+       this.UIMap.AddNumbers();
+   }
+   ```
 
-5.  `AddNumbers()` メソッドを使用して、テストが実行されていることを確認します。 前に示したテスト メソッドにカーソルを置き、コンテキスト メニューを開き、**[テストの実行]** を選択します。 (キーボード ショートカット: **Ctrl** + **R**、**T**)。
+5. `AddNumbers()` メソッドを使用して、テストが実行されていることを確認します。 前に示したテスト メソッドにカーソルを置き、コンテキスト メニューを開き、**[テストの実行]** を選択します。 (キーボード ショートカット: **Ctrl** + **R**、**T**)。
 
-     テストの合格または失敗を示すテスト結果が、**[テスト エクスプローラー]** ウィンドウに表示されます。 [テスト エクスプローラー] ウィンドウを開くには、**[テスト]** メニューの **[Windows]** を選択し、**[テスト エクスプローラー]** を選択します。
+    テストの合格または失敗を示すテスト結果が、**[テスト エクスプローラー]** ウィンドウに表示されます。 [テスト エクスプローラー] ウィンドウを開くには、**[テスト]** メニューの **[Windows]** を選択し、**[テスト エクスプローラー]** を選択します。
 
-6.  予期される値を検証するテストでのアサーション パラメーター値のためにデータ ソースを使用する場合もあるため、2 つの数値の合計が正しいことを検証するアサーションを追加してみます。 前に示したテスト メソッドにカーソルを置き、コンテキスト メニューを開き、**[コード化された UI テストのコードの生成]**、**[コード化された UI テスト ビルダーの使用]** の順に選択します。
+6. 予期される値を検証するテストでのアサーション パラメーター値のためにデータ ソースを使用する場合もあるため、2 つの数値の合計が正しいことを検証するアサーションを追加してみます。 前に示したテスト メソッドにカーソルを置き、コンテキスト メニューを開き、**[コード化された UI テストのコードの生成]**、**[コード化された UI テスト ビルダーの使用]** の順に選択します。
 
-     合計を表示する電卓のテキスト コントロールをマップします。
+    合計を表示する電卓のテキスト コントロールをマップします。
 
-     ![UI テキスト コントロールのマッピング](../test/media/cuit_datadriven_addassertion.png)
+    ![UI テキスト コントロールのマッピング](../test/media/cuit_datadriven_addassertion.png)
 
-7.  合計の値が正しいことを検証するアサーションを追加します。 値が **3** である **[DisplayText]** プロパティを選択し、**[アサーションの追加]** を選択します。 **AreEqual** 比較演算子を使用し、比較値が **3** であることを確認します。
+7. 合計の値が正しいことを検証するアサーションを追加します。 値が **3** である **[DisplayText]** プロパティを選択し、**[アサーションの追加]** を選択します。 **AreEqual** 比較演算子を使用し、比較値が **3** であることを確認します。
 
-     ![アサーションの構成](../test/media/cuit_datadriven_builderaddassertion2.png)
+    ![アサーションの構成](../test/media/cuit_datadriven_builderaddassertion2.png)
 
-8.  アサーションを構成した後、ビルダーからコードを再生成します。 これにより、検証用の新しいメソッドが作成されます。
+8. アサーションを構成した後、ビルダーからコードを再生成します。 これにより、検証用の新しいメソッドが作成されます。
 
-     ![アサーション メソッドの生成](../test/media/cuit_datadriven_assertiongencode.png)
+    ![アサーション メソッドの生成](../test/media/cuit_datadriven_assertiongencode.png)
 
-     `ValidateSum` メソッドは、`AddNumbers` メソッドの結果を検証するため、コード ブロックの末尾に移動します。
+    `ValidateSum` メソッドは、`AddNumbers` メソッドの結果を検証するため、コード ブロックの末尾に移動します。
 
-    ```csharp
-    public void CodedUITestMethod1()
-    {
-        // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-        this.UIMap.AddNumbers();
-        this.UIMap.ValidateSum();
-    }
-    ```
+   ```csharp
+   public void CodedUITestMethod1()
+   {
+       // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
+       this.UIMap.AddNumbers();
+       this.UIMap.ValidateSum();
+   }
+   ```
 
 9. `ValidateSum()` メソッドを使用して、テストが実行されていることを確認します。 前に示したテスト メソッドにカーソルを置き、コンテキスト メニューを開き、**[テストの実行]** を選択します。 (キーボード ショートカット: **Ctrl** + **R**、**T**)。
 

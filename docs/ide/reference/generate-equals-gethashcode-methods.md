@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: deaa0b37988e2df04bb7937c76f341af849698f0
-ms.sourcegitcommit: aea5cdb76fbc7eb31d1e5cc3c8d6adb0c743220f
+ms.openlocfilehash: 9af687eb4b39afdbe9fd34df1aa03f18ce243ef8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44124971"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903115"
 ---
 # <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>Visual Studio で Equals および GetHashCode メソッドのオーバーライドを生成する
 
@@ -43,10 +43,10 @@ ms.locfileid: "44124971"
 1. 次に、以下のいずれかを実行します。
 
    - **キーボード**
-     - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
+      - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
    - **マウス**
-     - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
-     - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
+      - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
+      - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
 
    ![オーバーライド生成のプレビュー](media/overrides-preview-cs.png)
 

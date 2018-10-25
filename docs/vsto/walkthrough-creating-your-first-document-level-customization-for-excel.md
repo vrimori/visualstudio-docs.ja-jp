@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2a63dd4eae31b99646af04ceabe76e4edb946027
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: ce16e3c2aca99acf6de9a7ce74c0c2ff46c0dcbb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38800933"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849035"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>チュートリアル: 初めての Excel 用ドキュメント レベルのカスタマイズを作成します。
   この入門編のチュートリアルでは、Microsoft Office Excel 用のドキュメント レベルのカスタマイズを作成する方法について説明します。 この種のソリューションで作成した機能は、特定のブックが開いている場合にのみ使用可能です。 ドキュメント レベルのカスタマイズでは、ブックが開いたときに新しいリボン タブを表示するなどの、アプリケーション全体の変更を行うことはできません。  
@@ -31,19 +31,19 @@ ms.locfileid: "38800933"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   Excel ブック プロジェクトを作成する。  
+- Excel ブック プロジェクトを作成する。  
   
--   Visual Studio デザイナーでホストされるワークシートにテキストを追加する。  
+- Visual Studio デザイナーでホストされるワークシートにテキストを追加する。  
   
--   カスタマイズされたワークシートが開かれたときに Excel のオブジェクト モデルを使用してテキストを追加するコードを記述する。  
+- カスタマイズされたワークシートが開かれたときに Excel のオブジェクト モデルを使用してテキストを追加するコードを記述する。  
   
--   プロジェクトをビルドし、実行してテストする。  
+- プロジェクトをビルドし、実行してテストする。  
   
--   完成したプロジェクトをクリーンアップして、不要なビルド ファイルやセキュリティ設定を開発用コンピューターから削除する。  
+- 完成したプロジェクトをクリーンアップして、不要なビルド ファイルやセキュリティ設定を開発用コンピューターから削除する。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -54,35 +54,35 @@ ms.locfileid: "38800933"
   
 ### <a name="to-create-a-new-excel-workbook-project-in-visual-studio"></a>Visual Studio で新しい Excel ブック プロジェクトを作成するには  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を起動します。  
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を起動します。  
   
-2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
+2. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-3.  テンプレート ペインで、 **[Visual C#]** または **[Visual Basic]** を展開してから、 **[Office/SharePoint]** を展開します。  
+3. テンプレート ペインで、 **[Visual C#]** または **[Visual Basic]** を展開してから、 **[Office/SharePoint]** を展開します。  
   
-4.  展開した **[Office/SharePoint]** ノードの下で、 **[Office Add-ins]** ノードを選択します。  
+4. 展開した **[Office/SharePoint]** ノードの下で、 **[Office Add-ins]** ノードを選択します。  
   
-5.  プロジェクト テンプレートの一覧で、Excel VSTO アドイン プロジェクトを選択します。  
+5. プロジェクト テンプレートの一覧で、Excel VSTO アドイン プロジェクトを選択します。  
   
-6.  **名前**ボックスに「 **FirstWorkbookCustomization**します。  
+6. **名前**ボックスに「 **FirstWorkbookCustomization**します。  
   
-7.  **[OK]** をクリックします。  
+7. **[OK]** をクリックします。  
   
-     **Visual Studio Tools for Office プロジェクト ウィザード** が開きます。  
+    **Visual Studio Tools for Office プロジェクト ウィザード** が開きます。  
   
-8.  選択**新しい文書を作成**、 をクリック**OK**します。  
+8. 選択**新しい文書を作成**、 をクリック**OK**します。  
   
-    -   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 作成、 **FirstWorkbookCustomization**プロジェクトし、次のファイルをプロジェクトに追加します。  
+   - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 作成、 **FirstWorkbookCustomization**プロジェクトし、次のファイルをプロジェクトに追加します。  
   
-    -   *FirstWorkbookCustomization*.xlsx は、プロジェクト内の Excel ブックを表します。 すべてのワークシートとグラフが含まれます。  
+   - *FirstWorkbookCustomization*.xlsx は、プロジェクト内の Excel ブックを表します。 すべてのワークシートとグラフが含まれます。  
   
-    -   Sheet1 (*.vb* Visual basic のファイルまたは *.cs* Visual c# ファイル) のブック内の最初のワークシートのデザイン画面とコードを提供します。 詳細については、次を参照してください。 [Worksheet ホスト項目](../vsto/worksheet-host-item.md)します。  
+   - Sheet1 (*.vb* Visual basic のファイルまたは *.cs* Visual c# ファイル) のブック内の最初のワークシートのデザイン画面とコードを提供します。 詳細については、次を参照してください。 [Worksheet ホスト項目](../vsto/worksheet-host-item.md)します。  
   
-    -   Sheet2 (*.vb* Visual basic のファイルまたは *.cs* Visual c# ファイル)-ブックの 2 番目のワークシートのデザイン画面とコードを提供します。  
+   - Sheet2 (*.vb* Visual basic のファイルまたは *.cs* Visual c# ファイル)-ブックの 2 番目のワークシートのデザイン画面とコードを提供します。  
   
-    -   Sheet3 (*.vb* Visual basic のファイルまたは *.cs* Visual c# ファイル) の 3 番目のワークシートをブック内のデザイン画面とコードを提供します。  
+   - Sheet3 (*.vb* Visual basic のファイルまたは *.cs* Visual c# ファイル) の 3 番目のワークシートをブック内のデザイン画面とコードを提供します。  
   
-    -   ThisWorkbook (*.vb* Visual basic のファイルまたは *.cs* Visual c# ファイル) のデザイン画面とブック レベルのカスタマイズのコードが含まれています。 詳細については、次を参照してください。 [Workbook ホスト項目](../vsto/workbook-host-item.md)します。  
+   - ThisWorkbook (*.vb* Visual basic のファイルまたは *.cs* Visual c# ファイル) のデザイン画面とブック レベルのカスタマイズのコードが含まれています。 詳細については、次を参照してください。 [Workbook ホスト項目](../vsto/workbook-host-item.md)します。  
   
      デザイナーで、Sheet1 コード ファイルが自動的に開かれます。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "38800933"
 ## <a name="add-text-to-a-worksheet-programmatically"></a>プログラムによってワークシートにテキストを追加します。  
  次に、Sheet1 コード ファイルにコードを追加します。 この新しいコードでは、Excel のオブジェクト モデルを使用して、ブックに 2 行目のテキストを追加します。 Sheet1 コード ファイルには、次の生成コードが既定で含まれています。  
   
--   `Sheet1` クラスの部分定義。このクラスは、ワークシートのプログラミング モデルを表し、Excel のオブジェクト モデルへのアクセスを提供します。 詳細については、 [Worksheet ホスト項目](../vsto/worksheet-host-item.md)と[Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)します。 `Sheet1` クラスの残りの部分は、変更するべきではない非表示のコード ファイルに定義されています。  
+-   `Sheet1` クラスの部分定義。このクラスは、ワークシートのプログラミング モデルを表し、Excel のオブジェクト モデルへのアクセスを提供します。 詳細については、 [Worksheet ホスト項目](../vsto/worksheet-host-item.md)と[Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)します。 `Sheet1` クラスの残りの部分は、変更することができない非表示のコード ファイルに定義されています。  
   
--   `Sheet1_Startup` イベント ハンドラーと `Sheet1_Shutdown` イベント ハンドラー。 これらのイベント ハンドラーは、Excel がユーザーのカスタマイズを読み込むときとアンロードするときに呼び出されます。 これらのイベント ハンドラーを使用して、読み込まれるときにはカスタマイズを初期化し、アンロードされるときにはカスタマイズが使用したリソースをクリーンアップします。 詳細については、次を参照してください。 [Office プロジェクト内のイベント](../vsto/events-in-office-projects.md)します。  
+-   `Sheet1_Startup` および `Sheet1_Shutdown` イベント ハンドラー。 これらのイベント ハンドラーは、Excel がユーザーのカスタマイズを読み込むときとアンロードするときに呼び出されます。 これらのイベント ハンドラーを使用して、読み込まれるときにはカスタマイズを初期化し、アンロードされるときにはカスタマイズが使用したリソースをクリーンアップします。 詳細については、次を参照してください。 [Office プロジェクト内のイベント](../vsto/events-in-office-projects.md)します。  
   
 ### <a name="to-add-a-second-line-of-text-to-the-worksheet-by-using-code"></a>コードを使用してワークシートに 2 行目のテキストを追加するには  
   

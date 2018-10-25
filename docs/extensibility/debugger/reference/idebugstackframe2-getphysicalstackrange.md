@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetPhysicalStackRange |Microsoft ドキュメント
+title: IDebugStackFrame2::GetPhysicalStackRange |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: be53b50bc21d81c60f7131e8ed437ecb2ac2f16c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a1b46dd9993eb8a7611b4d84211016168d609101
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31120843"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950382"
 ---
 # <a name="idebugstackframe2getphysicalstackrange"></a>IDebugStackFrame2::GetPhysicalStackRange
-スタック フレームに関連付けられている物理アドレスの範囲のコンピューターに依存する形式を取得します。  
+スタック フレームに関連付けられている物理アドレスの範囲のマシンに依存する形式を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,12 +49,12 @@ int GetPhysicalStackRange (
  [out]このスタック フレームに関連付けられている最上位の物理アドレスを返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドによって返される情報は、スタック フレームを並べ替え、セッション デバッグ マネージャー (SDM) によって使用されます。  
+## <a name="remarks"></a>Remarks  
+ このメソッドによって返される情報は、スタック フレームの並べ替えにセッション デバッグ マネージャー (SDM) によって使用されます。  
   
- 呼び出し履歴が、ダウンされている拡張する、新しいスタック フレームがますます下位メモリ アドレスに追加されると見なされます。 実行時のアーキテクチャでは、この想定を一致する物理的なスタック範囲を提供する必要があります。  
+ 呼び出し履歴が、ダウンされている拡張する、新しいスタック フレームがますます下位メモリ アドレスに追加されると見なされます。 実行時のアーキテクチャでは、この前提に一致する物理スタック範囲を提供する必要があります。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

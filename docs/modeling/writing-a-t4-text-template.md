@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: abb318f74c04c372aaddb520ff581e7f84128f5e
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: afee98dfd4d3192bb964c09ba4813c4469af95ed
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47860395"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839909"
 ---
 # <a name="writing-a-t4-text-template"></a>T4 テキスト テンプレートの作成
 テキスト テンプレートには、そのテンプレートから生成されるテキストが含まれます。 たとえば、web ページを作成するテンプレートが含まれて"\<html >..."と HTML ページの他のすべての標準的な部分です。 テンプレートに挿入が*コントロール ブロック*、プログラム コードのフラグメントであります。 コントロール ブロックはさまざまな値を提供すると共に、テキストの一部を条件付きにしたり、繰り返したりできるようにします。
@@ -255,7 +255,6 @@ private void WriteSquareLine(int i)
 #>
 Content of MyFile.txt is:
 <#= myFile #>
-
 ```
 
 ホストから提供される他のサービスを取得することもできます。 詳細については、次を参照してください。[にアクセスする Visual Studio またはテンプレートからのその他のホスト](http://msdn.microsoft.com/0556f20c-fef4-41a9-9597-53afab4ab9e4)します。
@@ -272,7 +271,7 @@ Content of MyFile.txt is:
 ## <a name="related-topics"></a>関連トピック
 
 |タスク|トピック|
-|----------|-----------|
+|-|-|
 |テンプレートを作成する。|[T4 テキスト テンプレートの記述に関するガイドライン](../modeling/guidelines-for-writing-t4-text-templates.md)|
 |プログラム コードを使用してテキストを生成する。|[テキスト テンプレートの構造](../modeling/writing-a-t4-text-template.md)|
 |Visual Studio ソリューションでは、ファイルを生成します。|[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|

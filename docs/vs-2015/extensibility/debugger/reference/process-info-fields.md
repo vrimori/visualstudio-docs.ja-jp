@@ -17,12 +17,12 @@ ms.assetid: 0d9cc345-3d3a-44d8-ae15-a67acb97a828
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2941d06e84f26f9ae8a8fa40cf3af1b91c743f8e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5b15cc4577a07650aa64afd8103f06ef0b6e20c0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49282960"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898072"
 ---
 # <a name="processinfofields"></a>PROCESS_INFO_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -95,7 +95,7 @@ public enum enum_PROCESS_INFO_FIELDS {
   
  これらのフラグは、演算と組み合わせることがあります`OR`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

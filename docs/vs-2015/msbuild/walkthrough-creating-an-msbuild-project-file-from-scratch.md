@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 029cd44bc19bd279ed9b5d46a5fea53539706a23
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ad32edc94bea49010dfb7073cacbd84419513783
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49272364"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49913892"
 ---
 # <a name="walkthrough-creating-an-msbuild-project-file-from-scratch"></a>チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,27 +33,27 @@ ms.locfileid: "49272364"
   
  このチュートリアルでは、テキスト エディターのみを使用して、基本的なプロジェクト ファイルをインクリメント方式で作成する方法について説明します。 このチュートリアルの手順を以下に示します。  
   
--   最低限の内容のみを含むアプリケーション ソース ファイルを作成します。  
+- 最低限の内容のみを含むアプリケーション ソース ファイルを作成します。  
   
--   最低限の内容のみを含む MSBuild プロジェクト ファイルを作成します。  
+- 最低限の内容のみを含む MSBuild プロジェクト ファイルを作成します。  
   
--   MSBuild が含まれるように PATH 環境変数を拡張します。  
+- MSBuild が含まれるように PATH 環境変数を拡張します。  
   
--   プロジェクト ファイルを使用してアプリケーションをビルドします。  
+- プロジェクト ファイルを使用してアプリケーションをビルドします。  
   
--   ビルドを制御するためのプロパティを追加します。  
+- ビルドを制御するためのプロパティを追加します。  
   
--   プロパティの値を変更してビルドを制御します。  
+- プロパティの値を変更してビルドを制御します。  
   
--   ビルド ターゲットを追加します。  
+- ビルド ターゲットを追加します。  
   
--   ターゲットを指定してビルドを制御します。  
+- ターゲットを指定してビルドを制御します。  
   
--   インクリメンタル ビルドを実行します。  
+- インクリメンタル ビルドを実行します。  
   
- このチュートリアルでは、コマンド プロンプトでプロジェクトをビルドして結果を確認する方法を説明します。 MSBuild の詳細および MSBuild をコマンド プロンプトで実行する方法の詳細については、「[チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)」をご覧ください。  
+  このチュートリアルでは、コマンド プロンプトでプロジェクトをビルドして結果を確認する方法を説明します。 MSBuild の詳細および MSBuild をコマンド プロンプトで実行する方法の詳細については、「[チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)」をご覧ください。  
   
- このチュートリアルを実行するには、.NET Framework (Version 2.0、3.5、4.0、または 4.5) がインストールされている必要があります。これらには、このチュートリアルに必要な MSBuild と Visual C# コンパイラが含まれています。  
+  このチュートリアルを実行するには、.NET Framework (Version 2.0、3.5、4.0、または 4.5) がインストールされている必要があります。これらには、このチュートリアルに必要な MSBuild と Visual C# コンパイラが含まれています。  
   
 ## <a name="creating-a-minimal-application"></a>最低限の内容のみを含むアプリケーションを作成する  
  ここでは、最低限の内容のみを含む Visual C# アプリケーション ソース ファイルをテキスト エディターで作成する方法を説明します。  
@@ -109,39 +109,39 @@ ms.locfileid: "49272364"
   
 #### <a name="to-create-a-minimal-msbuild-project-file"></a>最低限の内容のみを含む MSBuild プロジェクト ファイルを作成するには  
   
-1.  テキスト エディターで、既存のテキストを次の 2 つの行に置き換えます。  
+1. テキスト エディターで、既存のテキストを次の 2 つの行に置き換えます。  
   
-    ```  
-    <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
-    </Project>  
-    ```  
+   ```  
+   <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+   </Project>  
+   ```  
   
-2.  次の `ItemGroup` ノードを `Project` ノードの子要素として挿入します。  
+2. 次の `ItemGroup` ノードを `Project` ノードの子要素として挿入します。  
   
-    ```  
-    <ItemGroup>  
-      <Compile Include="helloworld.cs" />  
-    </ItemGroup>  
-    ```  
+   ```  
+   <ItemGroup>  
+     <Compile Include="helloworld.cs" />  
+   </ItemGroup>  
+   ```  
   
-     この `ItemGroup` には既に項目要素が含まれています。  
+    この `ItemGroup` には既に項目要素が含まれています。  
   
-3.  `Target` ノードの子要素として `Project` ノードを追加します。 そのノードに `Build` という名前を付けます。  
+3. `Target` ノードの子要素として `Project` ノードを追加します。 そのノードに `Build` という名前を付けます。  
   
-    ```  
-    <Target Name="Build">  
-    </Target>  
-    ```  
+   ```  
+   <Target Name="Build">  
+   </Target>  
+   ```  
   
-4.  次のタスク要素を `Target` ノードの子要素として挿入します。  
+4. 次のタスク要素を `Target` ノードの子要素として挿入します。  
   
-    ```  
-    <Csc Sources="@(Compile)"/>  
-    ```  
+   ```  
+   <Csc Sources="@(Compile)"/>  
+   ```  
   
-5.  このプロジェクト ファイルを Helloworld.csproj という名前で保存します。  
+5. このプロジェクト ファイルを Helloworld.csproj という名前で保存します。  
   
- 最低限の内容のみを含むプロジェクト ファイルが完成すると、コードが次のようになります。  
+   最低限の内容のみを含むプロジェクト ファイルが完成すると、コードが次のようになります。  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -201,36 +201,36 @@ ms.locfileid: "49272364"
   
 #### <a name="to-add-build-properties"></a>ビルド プロパティを追加するには  
   
-1.  コマンド プロンプトで「**del helloworld.exe**」と入力して、既存のアプリケーションを削除します。  
+1. コマンド プロンプトで「**del helloworld.exe**」と入力して、既存のアプリケーションを削除します。  
   
-2.  プロジェクト ファイルで、次の `PropertyGroup` 要素を開始 `Project` 要素の直後に挿入します。  
+2. プロジェクト ファイルで、次の `PropertyGroup` 要素を開始 `Project` 要素の直後に挿入します。  
   
-    ```  
-    <PropertyGroup>  
-      <AssemblyName>MSBuildSample</AssemblyName>  
-      <OutputPath>Bin\</OutputPath>  
-    </PropertyGroup>  
-    ```  
+   ```  
+   <PropertyGroup>  
+     <AssemblyName>MSBuildSample</AssemblyName>  
+     <OutputPath>Bin\</OutputPath>  
+   </PropertyGroup>  
+   ```  
   
-3.  次のタスクを Build ターゲットの `Csc` タスクの直前に追加します。  
+3. 次のタスクを Build ターゲットの `Csc` タスクの直前に追加します。  
   
-    ```  
-    <MakeDir Directories="$(OutputPath)"      Condition="!Exists('$(OutputPath)')" />  
-    ```  
+   ```  
+   <MakeDir Directories="$(OutputPath)"      Condition="!Exists('$(OutputPath)')" />  
+   ```  
   
-     この `MakeDir` タスクは、`OutputPath` プロパティによって指定されるフォルダーを、同名のフォルダーが存在しない場合に作成します。  
+    この `MakeDir` タスクは、`OutputPath` プロパティによって指定されるフォルダーを、同名のフォルダーが存在しない場合に作成します。  
   
-4.  次の `OutputAssembly` 属性を `Csc` タスクに追加します。  
+4. 次の `OutputAssembly` 属性を `Csc` タスクに追加します。  
   
-    ```  
-    <Csc Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe" />  
-    ```  
+   ```  
+   <Csc Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe" />  
+   ```  
   
-     この属性は、Visual C# コンパイラに対して、`AssemblyName` プロパティによって指定されるアセンブリを生成し、`OutputPath` プロパティによって指定されるフォルダーに配置するように指定します。  
+    この属性は、Visual C# コンパイラに対して、`AssemblyName` プロパティによって指定されるアセンブリを生成し、`OutputPath` プロパティによって指定されるフォルダーに配置するように指定します。  
   
-5.  変更内容を保存します。  
+5. 変更内容を保存します。  
   
- プロジェクト ファイルのコードが次のようになります。  
+   プロジェクト ファイルのコードが次のようになります。  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -279,34 +279,34 @@ ms.locfileid: "49272364"
 ## <a name="adding-build-targets"></a>ビルド ターゲットを追加する  
  次に、次の 2 つのターゲットをプロジェクト ファイルに追加します。  
   
--   古いファイルを削除する Clean ターゲット  
+- 古いファイルを削除する Clean ターゲット  
   
--   `DependsOnTargets` 属性を使用して Build タスクの前に強制的に Clean タスクを実行する Rebuild ターゲット  
+- `DependsOnTargets` 属性を使用して Build タスクの前に強制的に Clean タスクを実行する Rebuild ターゲット  
   
- ターゲットが複数になるので、Build ターゲットを既定のターゲットに設定します。  
+  ターゲットが複数になるので、Build ターゲットを既定のターゲットに設定します。  
   
 #### <a name="to-add-build-targets"></a>ビルド ターゲットを追加するには  
   
-1.  プロジェクト ファイルで、Build ターゲットの直後に次の 2 つのターゲットを追加します。  
+1. プロジェクト ファイルで、Build ターゲットの直後に次の 2 つのターゲットを追加します。  
   
-    ```  
-    <Target Name="Clean" >  
-      <Delete Files="$(OutputPath)$(AssemblyName).exe" />  
-    </Target>  
-    <Target Name="Rebuild" DependsOnTargets="Clean;Build" />  
-    ```  
+   ```  
+   <Target Name="Clean" >  
+     <Delete Files="$(OutputPath)$(AssemblyName).exe" />  
+   </Target>  
+   <Target Name="Rebuild" DependsOnTargets="Clean;Build" />  
+   ```  
   
-     Clean ターゲットは、Delete タスクを呼び出してアプリケーションを削除します。 Rebuild ターゲットは、Clean ターゲットと Build ターゲットの両方が実行されるまで実行されません。 Rebuild ターゲットにはタスクは含まれていませんが、このターゲットにより、Build ターゲットの前に Clean ターゲットが実行されるようになります。  
+    Clean ターゲットは、Delete タスクを呼び出してアプリケーションを削除します。 Rebuild ターゲットは、Clean ターゲットと Build ターゲットの両方が実行されるまで実行されません。 Rebuild ターゲットにはタスクは含まれていませんが、このターゲットにより、Build ターゲットの前に Clean ターゲットが実行されるようになります。  
   
-2.  次の `DefaultTargets` 属性を開始 `Project` 要素に追加します。  
+2. 次の `DefaultTargets` 属性を開始 `Project` 要素に追加します。  
   
-    ```  
-    <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
-    ```  
+   ```  
+   <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+   ```  
   
-     これにより、Build ターゲットが既定のターゲットに設定されます。  
+    これにより、Build ターゲットが既定のターゲットに設定されます。  
   
- プロジェクト ファイルのコードが次のようになります。  
+   プロジェクト ファイルのコードが次のようになります。  
   
 ```  
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  

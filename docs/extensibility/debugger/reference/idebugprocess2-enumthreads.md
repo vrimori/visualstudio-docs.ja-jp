@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::EnumThreads |Microsoft ドキュメント
+title: IDebugProcess2::EnumThreads |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 786a3b4b5988b66e1fccc624154eeef67285ec84
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c916e8b176444a8af81cb874c394e9eb832a01b4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31116696"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939710"
 ---
 # <a name="idebugprocess2enumthreads"></a>IDebugProcess2::EnumThreads
 プロセスで実行されているすべてのスレッドの一覧を取得します。  
@@ -41,15 +41,15 @@ int EnumThreads(
   
 #### <a name="parameters"></a>パラメーター  
  `ppEnum`  
- [out]返します、 [IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md)すべてのスレッド、プロセス内のすべてのプログラムの一覧を含むオブジェクト。  
+ [out]返します、 [IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md)プロセス内のすべてのプログラムのすべてのスレッドの一覧を格納しているオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、各プログラムで実行中のスレッドを列挙し、スレッドのプロセス ビューに結合します。 1 つのスレッドが複数のプログラムの実行可能性があります。このメソッドは、そのスレッドを 1 回だけを列挙します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、各プログラムで実行中のスレッドを列挙し、し、これらをスレッドのプロセス ビューに結合します。 複数のプログラムで実行される可能性が 1 つのスレッドこのメソッドは、そのスレッドを 1 回だけ列挙します。  
   
- このメソッドは、重複がなく、プロセスのスレッドの一覧を表示します。 それ以外の場合、特定のプログラムで実行中のスレッドを列挙するには、次のように使用します。、 [EnumThreads](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md)メソッドです。  
+ このメソッドは、重複せず、プロセスのスレッドの一覧を表示します。 それ以外の場合、特定のプログラムで実行中のスレッドを列挙するために使用して、 [EnumThreads](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md)メソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   

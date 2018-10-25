@@ -13,12 +13,12 @@ ms.assetid: c3c3df69-83b4-4fd0-b5b1-e18c33f39376
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 44f9bff7fe1508094474b7067237e8c0b6620605
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ca4fd95664d45c480557b8a00d503550327c60ed
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49275471"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833032"
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Visual Studio のフォントと書式
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -356,13 +356,13 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 ##### <a name="title-case"></a>大文字  
  タイトルの場合は、ほとんどまたはすべての語句内の単語の最初の文字が大文字で入力スタイルです。 Visual Studio など、多くの項目の先頭文字が大文字を使用します。  
   
--   **ツールヒント。** 例:「プレビュー選択した項目」  
+- **ツールヒント。** 例:「プレビュー選択した項目」  
   
--   **列ヘッダー。** 例:「システム応答」  
+- **列ヘッダー。** 例:「システム応答」  
   
--   **メニュー項目。** 例:「すべてを保存」  
+- **メニュー項目。** 例:「すべてを保存」  
   
- 大文字を使用する場合は、単語を大文字に変換する場合と小文字のままにする場合のガイドライン。  
+  大文字を使用する場合は、単語を大文字に変換する場合と小文字のままにする場合のガイドライン。  
   
 |大文字|コメントと例|  
 |---------------|---------------------------|  

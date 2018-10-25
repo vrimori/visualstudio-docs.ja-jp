@@ -16,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 79b129a31439b175bde61f9a995abcf98a7a9708
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 57b6d6a089570c52607cf73eeed4fc00978ab251
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671909"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924838"
 ---
 # <a name="how-to-resize-bookmark-controls"></a>方法: Bookmark コントロールのサイズを変更します。
   <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールのサイズは、Microsoft Office Word ドキュメントに追加するときに設定します。 サイズは後から変更することもできます。  
@@ -30,21 +30,21 @@ ms.locfileid: "35671909"
   
  ブックマークのサイズは、次の 3 通りの方法で変更できます。  
   
--   <xref:Microsoft.Office.Tools.Word.Bookmark> コントロール内でテキストを追加または削除する。  
+- <xref:Microsoft.Office.Tools.Word.Bookmark> コントロール内でテキストを追加または削除する。  
   
-     ブックマークのテキストを追加するたびに、ブックマークのサイズは自動的に、新しいテキスト分だけ大きくなります。 テキストを削除すると、ブックマークのサイズは自動的に小さくなります。  
+   ブックマークのテキストを追加するたびに、ブックマークのサイズは自動的に、新しいテキスト分だけ大きくなります。 テキストを削除すると、ブックマークのサイズは自動的に小さくなります。  
   
--   <xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A> コントロールの <xref:Microsoft.Office.Tools.Word.Bookmark.End%2A> および <xref:Microsoft.Office.Tools.Word.Bookmark> プロパティを変更する。  
+- <xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A> コントロールの <xref:Microsoft.Office.Tools.Word.Bookmark.End%2A> および <xref:Microsoft.Office.Tools.Word.Bookmark> プロパティを変更する。  
   
-     これは、数文字分だけサイズを変更する場合に役立ちます。  
+   これは、数文字分だけサイズを変更する場合に役立ちます。  
   
--   <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを作成し直す。  
+- <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを作成し直す。  
   
-     これは、ブックマークのサイズや場所に大幅な変更がある場合に便利です。  
+   これは、ブックマークのサイズや場所に大幅な変更がある場合に便利です。  
   
- ドキュメント レベルのプロジェクトでは、デザイン時または実行時にプロジェクトの文書に <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加できます。 VSTO アドイン プロジェクトに追加することができます<xref:Microsoft.Office.Tools.Word.Bookmark>実行時に開いているドキュメントのコントロール。 詳細については、次を参照してください。[方法: Word 文書にコントロールをブックマークの追加](../vsto/how-to-add-bookmark-controls-to-word-documents.md)します。  
+  ドキュメント レベルのプロジェクトでは、デザイン時または実行時にプロジェクトの文書に <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加できます。 VSTO アドイン プロジェクトに追加することができます<xref:Microsoft.Office.Tools.Word.Bookmark>実行時に開いているドキュメントのコントロール。 詳細については、次を参照してください。[方法: Word 文書にコントロールをブックマークの追加](../vsto/how-to-add-bookmark-controls-to-word-documents.md)します。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="change-the-start-and-end-properties"></a>Start および end プロパティを変更します。  
   

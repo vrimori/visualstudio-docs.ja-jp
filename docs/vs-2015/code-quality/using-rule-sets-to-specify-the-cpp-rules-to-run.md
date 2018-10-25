@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0d343139a23453af12555b4ffbec8e3de7e2a827
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: d2b3aed9e2504011a61fe13acdf4a836cb41f8df
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49230887"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49859669"
 ---
 # <a name="using-rule-sets-to-specify-the-c-rules-to-run"></a>規則セットを使用した実行対象の C++ 規則の指定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,19 +32,19 @@ ms.locfileid: "49230887"
   
 #### <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>既存の 1 つの規則セットからカスタム規則を作成するには  
   
-1.  ソリューション エクスプ ローラーで プロジェクトのショートカット メニューを開き、**プロパティ**します。  
+1. ソリューション エクスプ ローラーで プロジェクトのショートカット メニューを開き、**プロパティ**します。  
   
-2.  **プロパティ** タブで、選択**コード分析**します。  
+2. **プロパティ** タブで、選択**コード分析**します。  
   
-3.  **ルール セットの**ドロップダウン リストで、次のいずれかの操作を行います。  
+3. **ルール セットの**ドロップダウン リストで、次のいずれかの操作を行います。  
   
-    -   規則セットをカスタマイズするを選択します。  
+   - 規則セットをカスタマイズするを選択します。  
   
      \- または -  
   
-    -   選択 **\<[参照...] >** を既存の規則セットを指定されていないリスト。  
+   - 選択 **\<[参照...] >** を既存の規則セットを指定されていないリスト。  
   
-4.  選択**オープン**ルール セット エディターで、ルールを表示します。  
+4. 選択**オープン**ルール セット エディターで、ルールを表示します。  
   
 #### <a name="to-modify-a-rule-set-in-the-rule-set-editor"></a>規則セット エディターで規則セットを変更するには  
   

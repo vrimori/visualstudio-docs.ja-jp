@@ -13,23 +13,23 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f44264eace04475fc96e42b533a288ef87dd2c2b
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 5bcdd9120088663e469070c31962dfacc97bce0a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36758484"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891012"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET を使用して単純なデータ アプリケーションを作成します。
 
 データベース内のデータを操作するアプリケーションを作成するときに、接続文字列の定義、データの挿入、ストアド プロシージャを実行しているなどの基本的なタスクを実行します。 このトピックでは、Visual c# または Visual Basic および ADO.NET を使用して単純な Windows フォームの「フォーム オーバー データ」アプリケーションからデータベースと対話する方法を検出できます。  すべての .NET データ テクノロジ: LINQ to SQL、および Entity Framework のデータセットを含む-最終的にこの記事で示したものとよく似ている手順を実行します。
 
- この記事では、高速の方法で、データベースからデータを取得する簡単な方法を示します。 を、アプリケーションが自明でない方法でデータを変更し、データベースを更新する必要がある場合は、Entity Framework を使用して、基になるデータの変更をユーザー インターフェイス コントロールを自動的に同期へのデータ バインディングを使用してを検討してください。
+この記事では、高速の方法で、データベースからデータを取得する簡単な方法を示します。 を、アプリケーションが自明でない方法でデータを変更し、データベースを更新する必要がある場合は、Entity Framework を使用して、基になるデータの変更をユーザー インターフェイス コントロールを自動的に同期へのデータ バインディングを使用してを検討してください。
 
 > [!IMPORTANT]
 > コードをシンプルにするには、実稼働可能な例外処理は含まれない。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 アプリケーションの作成には、次が必要です:
 
@@ -65,29 +65,29 @@ ms.locfileid: "36758484"
 
 ## <a name="create-the-forms-and-add-controls"></a>フォームを作成してコントロールを追加する
 
-1.  Windows フォーム アプリケーションでは、プロジェクトを作成し、名前を**SimpleDataApp**します。
+1. Windows フォーム アプリケーションでは、プロジェクトを作成し、名前を**SimpleDataApp**します。
 
-     Visual Studio プロジェクトとという名前の空の Windows フォームを含む、複数のファイル作成**Form1**します。
+    Visual Studio プロジェクトとという名前の空の Windows フォームを含む、複数のファイル作成**Form1**します。
 
-2.  3 つの形式を持つように、2 つの Windows フォームをプロジェクトに追加し、次の名前を付けるし。
+2. 3 つの形式を持つように、2 つの Windows フォームをプロジェクトに追加し、次の名前を付けるし。
 
-    -   **ナビゲーション**
+   -   **ナビゲーション**
 
-    -   **NewCustomer**
+   -   **NewCustomer**
 
-    -   **FillOrCancel**
+   -   **FillOrCancel**
 
-3.  各フォームに、次の図に示されるように、テキスト ボックス、ボタン、および他のコントロールを追加します。 各コントロールに、テーブルを示すプロパティを設定します。
+3. 各フォームに、次の図に示されるように、テキスト ボックス、ボタン、および他のコントロールを追加します。 各コントロールに、テーブルを示すプロパティを設定します。
 
-    > [!NOTE]
-    >  グループ ボックス、およびラベル コントロールは明確性を追加しますが、コードでは使用されません。
+   > [!NOTE]
+   > グループ ボックス、およびラベル コントロールは明確性を追加しますが、コードでは使用されません。
 
- **Navigation フォーム**
+   **Navigation フォーム**
 
- ![ナビゲーション ダイアログ ボックス](../data-tools/media/simpleappnav.png)
+   ![ナビゲーション ダイアログ ボックス](../data-tools/media/simpleappnav.png)
 
 |Navigation フォームのコントロール|プロパティ|
-|--------------------------------------|----------------|
+| - |----------------|
 |ボタン|Name = btnGoToAdd|
 |ボタン|Name = btnGoToFillOrCancel|
 |ボタン|Name = btnExit|
@@ -97,7 +97,7 @@ ms.locfileid: "36758484"
  ![新しい顧客を追加して注文を作成する](../data-tools/media/simpleappnewcust.png)
 
 |NewCustomer フォームのコントロール|プロパティ|
-|---------------------------------------|----------------|
+| - |----------------|
 |TextBox|Name = txtCustomerName|
 |TextBox|Name = txtCustomerID<br /><br /> Readonly = True|
 |ボタン|Name = btnCreateAccount|
@@ -112,7 +112,7 @@ ms.locfileid: "36758484"
  ![注文の入力または取り消し](../data-tools/media/simpleappcancelfill.png)
 
 |FillOrCancel フォームのコントロール|プロパティ|
-|----------------------------------------|----------------|
+| - |----------------|
 |TextBox|Name = txtOrderID|
 |ボタン|Name = btnFindByOrderID|
 |DateTimePicker|Format = Short<br /><br /> Name = dtpFillDate|

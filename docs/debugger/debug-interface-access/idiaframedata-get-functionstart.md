@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::get_functionstart |Microsoft ドキュメント
+title: Idiaframedata::get_functionstart |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a54fd51b63bb53521b9f1e9c75f75e49d771b0ba
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 6be173020e4aeb3b69197a038b4bc6d66c7eedc8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31458142"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908302"
 ---
 # <a name="idiaframedatagetfunctionstart"></a>IDiaFrameData::get_functionStart
 ブロックが関数のエントリ ポイントを含むかどうかを示すフラグを取得します。  
@@ -34,13 +34,13 @@ HRESULT get_functionStart (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]返します`TRUE`ブロックには、エントリ ポイントが含まれている場合、それ以外の場合を返します`FALSE`です。  
+ [out]返します`TRUE`ブロックには、エントリ ポイントが含まれている場合を返しますそれ以外の場合`FALSE`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 関数の開始をできないフレームは、インライン メソッドや関数に挿入された関数を表すためにスタック フレームのことができます。  
+## <a name="remarks"></a>Remarks  
+ フレームを表す、インライン メソッドや関数の関数に挿入されるため、関数の開始をできないスタック フレームのことができます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

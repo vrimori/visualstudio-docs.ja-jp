@@ -24,12 +24,12 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b3c58bed9dd25cc9d25ad122b4c4c42f72ddf60f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 0bf63fb2eedc03b62af46f3ecdf746aaee6dde09
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49236809"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49848671"
 ---
 # <a name="how-to-use-the-gpu-threads-window"></a>方法: GPU スレッド ウィンドウを使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,25 +38,25 @@ GPU スレッド ウィンドウでは、デバッグ中のアプリケーショ
   
  GPU スレッド ウィンドウには、すべての列で同じ値を持つ一連の GPU スレッドを各行が表すテーブルが表示されます。 列内の項目を並べ替え、順序変更、削除、およびグループ化することができます。 GPU スレッド ウィンドウから、スレッドのフラグ設定、フラグ解除、凍結 (中断)、および凍結解除 (再開) を実行できます。 GPU スレッド ウィンドウには次の列が表示されます。  
   
--   フラグ列。特に注意する必要のあるスレッドをマークできます。  
+- フラグ列。特に注意する必要のあるスレッドをマークできます。  
   
--   アクティブ スレッド列。黄色の矢印は、アクティブ スレッドであることを示します。 矢印は、実行がデバッガーに割り込んだスレッドを示します。  
+- アクティブ スレッド列。黄色の矢印は、アクティブ スレッドであることを示します。 矢印は、実行がデバッガーに割り込んだスレッドを示します。  
   
--   **Thread Count**列は、同じ場所にあるスレッドの数が表示されます。  
+- **Thread Count**列は、同じ場所にあるスレッドの数が表示されます。  
   
--   **行**列は、スレッドの各グループが配置されるコードの行が表示されます。  
+- **行**列は、スレッドの各グループが配置されるコードの行が表示されます。  
   
--   **アドレス**列は、スレッドの各グループのある命令アドレスが表示されます。 既定では、この列は非表示になっています。  
+- **アドレス**列は、スレッドの各グループのある命令アドレスが表示されます。 既定では、この列は非表示になっています。  
   
--   **場所**列は、ソース コード内の位置です。  
+- **場所**列は、ソース コード内の位置です。  
   
--   **状態**列は、スレッドがアクティブ、ブロック、未開始、または完全なかどうかを示します。  
+- **状態**列は、スレッドがアクティブ、ブロック、未開始、または完全なかどうかを示します。  
   
--   **タイル**列は、行のスレッドのタイル インデックスを示しています。  
+- **タイル**列は、行のスレッドのタイル インデックスを示しています。  
   
- テーブルのヘッダーは、表示されているタイルとスレッドを示します。  
+  テーブルのヘッダーは、表示されているタイルとスレッドを示します。  
   
- [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
   
 ### <a name="to-display-the-gpu-threads-window"></a>GPU スレッド ウィンドウを表示するには  
   

@@ -23,12 +23,12 @@ caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9c1c9337fac3cde818fd8af298813c89c8c13daf
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 03cb6c67b4887762885a0cb920eb928359b4708b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49199252"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917649"
 ---
 # <a name="create-and-configure-tableadapters"></a>Tableadapter の作成および構成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,15 +38,15 @@ TableAdapter を使用すると、アプリケーションとデータベース�
   
  次の操作のいずれかを実行するときの Tableadapter が作成されます。  
   
--   実行、[データ ソース構成ウィザード](http://msdn.microsoft.com/library/c4df7de5-5da0-4064-940c-761dd6d9e28f)いずれかを選択し、**データベース**または**Web サービス**データ ソースの種類。  
+- 実行、[データ ソース構成ウィザード](http://msdn.microsoft.com/library/c4df7de5-5da0-4064-940c-761dd6d9e28f)いずれかを選択し、**データベース**または**Web サービス**データ ソースの種類。  
   
--   データベース オブジェクトをドラッグ[サーバー エクスプ ローラー](http://msdn.microsoft.com/library/4ea29b3b-bbb2-45e4-9082-eaf635c41c4d)に、**データセット デザイナー**します。  
+- データベース オブジェクトをドラッグ[サーバー エクスプ ローラー](http://msdn.microsoft.com/library/4ea29b3b-bbb2-45e4-9082-eaf635c41c4d)に、**データセット デザイナー**します。  
   
- 新しい TableAdapter を作成してで空の領域に TableAdapter をツールボックスからドラッグしてデータ ソースと構成、**データセット デザイナー**画面。  
+  新しい TableAdapter を作成してで空の領域に TableAdapter をツールボックスからドラッグしてデータ ソースと構成、**データセット デザイナー**画面。  
   
- Tableadapter の概要については、次を参照してください。 [Tableadapter を使用してデータセットを入力](../data-tools/fill-datasets-by-using-tableadapters.md)します。  
+  Tableadapter の概要については、次を参照してください。 [Tableadapter を使用してデータセットを入力](../data-tools/fill-datasets-by-using-tableadapters.md)します。  
   
- [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
   
 ## <a name="use-the-tableadapter-configuration-wizard"></a>TableAdapter 構成ウィザードを使用  
  実行、 **TableAdapter 構成ウィザード**Tableadapter および関連する Datatable の作成または編集します。 既存の TableAdapter を構成するには、上で右クリックし、**データセット デザイナー**します。  

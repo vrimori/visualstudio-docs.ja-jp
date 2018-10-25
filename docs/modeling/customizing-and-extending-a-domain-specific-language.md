@@ -11,12 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ba8c37e4fd5e62a0f8d05d735fb991c86937698d
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: a49d9998aa319e66c22baa345864bc473f733c87
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859992"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816703"
 ---
 # <a name="customizing-and-extending-a-domain-specific-language"></a>ドメイン固有言語のカスタマイズおよび拡張
 Visual Studio のモデリングと視覚エフェクト SDK (VMSDK) は、いくつかのレベルをモデリング ツールを定義することができますを提供します。
@@ -35,7 +35,7 @@ Visual Studio のモデリングと視覚エフェクト SDK (VMSDK) は、い�
 ## <a name="customShapes"></a> このセクションでは
 
 |この効果を実現するには|このトピックを参照してください。|
-|----------------------------|-------------------------|
+|-|-|
 |図形の色とスタイルのプロパティを設定するユーザーを許可します。|シェイプまたはコネクタ クラスを右クリックし、**公開追加**項目をクリックします。<br /><br /> 参照してください[ダイアグラムの外観のカスタマイズ](../modeling/customizing-presentation-on-the-diagram.md)します。|
 |モデル要素の種類のクラス ダイアグラムで、初期の高さと幅、色、ツールヒントなどのプロパティを共有するようになります。|図形またはコネクタ クラス間の継承を使用します。 派生図形と派生ドメイン クラス間のマッピングは、親のマッピングの詳細を継承します。<br /><br /> または、同じ図形クラスに別のドメイン クラスをマップします。|
 |モデル要素のクラスは、さまざまな図形のコンテキストで表示されます。|同じドメイン クラスには、複数の図形クラスをマップします。 ソリューションをビルドするときに次のエラー レポートと使用するには、どのような形状を決定する、要求されたコードを指定します。|

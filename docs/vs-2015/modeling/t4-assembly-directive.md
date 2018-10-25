@@ -12,12 +12,12 @@ caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 3ede2e84ac644fc8e1438873ea561ef3010f670c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 97e28347ba6985d99386647219f92aac9a221398
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49301005"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873579"
 ---
 # <a name="t4-assembly-directive"></a>T4 アセンブリ ディレクティブ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "49301005"
   
  アセンブリ名は、次のいずれかであることが必要です。  
   
--   GAC のアセンブリの厳密な名前 (`System.Xml.dll` など)。 `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"` のような長い形式を使用することもできます。 詳細については、「 <xref:System.Reflection.AssemblyName> 」を参照してください。  
+- GAC のアセンブリの厳密な名前 (`System.Xml.dll` など)。 `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"` のような長い形式を使用することもできます。 詳細については、「 <xref:System.Reflection.AssemblyName> 」を参照してください。  
   
--   アセンブリの絶対パス。  
+- アセンブリの絶対パス。  
   
- `$(variableName)` 構文を使用して、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の変数 (`$(SolutionDir)` など) を参照し、`%VariableName%` を使用して環境変数を参照できます。 例えば:  
+  `$(variableName)` 構文を使用して、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の変数 (`$(SolutionDir)` など) を参照し、`%VariableName%` を使用して環境変数を参照できます。 例えば:  
   
 ```  
 <#@ assembly name="$(SolutionDir)\MyProject\bin\Debug\SomeLibrary.Dll" #>  
@@ -53,21 +53,21 @@ ms.locfileid: "49301005"
 ## <a name="standard-assemblies"></a>標準アセンブリ  
  次のアセンブリは自動的に読み込まれるので、これらのアセンブリのアセンブリ ディレクティブを記述する必要はありません。  
   
--   `Microsoft.VisualStudio.TextTemplating.1*.dll`  
+- `Microsoft.VisualStudio.TextTemplating.1*.dll`  
   
--   `System.dll`  
+- `System.dll`  
   
--   `WindowsBase.dll`  
+- `WindowsBase.dll`  
   
- カスタム ディレクティブを使用する場合は、ディレクティブ プロセッサによって追加のアセンブリが読み込まれます。 たとえば、ドメイン固有言語 (DSL) のテンプレートを作成した場合、次のアセンブリのアセンブリ ディレクティブを記述する必要はありません。  
+  カスタム ディレクティブを使用する場合は、ディレクティブ プロセッサによって追加のアセンブリが読み込まれます。 たとえば、ドメイン固有言語 (DSL) のテンプレートを作成した場合、次のアセンブリのアセンブリ ディレクティブを記述する必要はありません。  
   
--   `Microsoft.VisualStudio.Modeling.Sdk.1*.dll`  
+- `Microsoft.VisualStudio.Modeling.Sdk.1*.dll`  
   
--   `Microsoft.VisualStudio.Modeling.Sdk.Diagrams.1*.dsl`  
+- `Microsoft.VisualStudio.Modeling.Sdk.Diagrams.1*.dsl`  
   
--   `Microsoft.VisualStudio.TextTemplating.Modeling.1*.dll`  
+- `Microsoft.VisualStudio.TextTemplating.Modeling.1*.dll`  
   
--   DSL を含むアセンブリ  
+- DSL を含むアセンブリ  
   
 ##  <a name="msbuild"></a> MSBuild および Visual Studio の両方でプロジェクト プロパティの使用  
  $(SolutionDir) などの Visual Studio のマクロは、MSBuild では動作しません。 ビルド コンピューターでテンプレートを変換する場合、代わりにプロジェクトのプロパティを使用する必要があります。  

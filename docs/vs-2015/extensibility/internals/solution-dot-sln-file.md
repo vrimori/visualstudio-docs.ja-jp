@@ -17,12 +17,12 @@ ms.assetid: 7d7ef539-2e4b-4637-b853-8ec7626609df
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0b6248bf97650212324fe9ca0791ccbd981d92ce
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 4bd3089d6916615a8b16d07b92b51f32afafaedc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49173681"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49886956"
 ---
 # <a name="solution-sln-file"></a>ソリューション (.Sln) ファイル
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -65,45 +65,45 @@ EndGlobal
   
  ソリューションを読み込むには、環境は、次の一連のタスクを実行します。  
   
-1.  環境の .sln ファイルのグローバル セクションの読み取りし、マークされているすべてのセクションを処理`preSolution`します。 この場合、このような 1 つのステートメントがあります。  
+1. 環境の .sln ファイルのグローバル セクションの読み取りし、マークされているすべてのセクションを処理`preSolution`します。 この場合、このような 1 つのステートメントがあります。  
   
-    ```  
-    GlobalSection(SolutionConfiguration) = preSolution  
-         ConfigName.0 = Debug  
-         ConfigName.1 = Release  
-    ```  
+   ```  
+   GlobalSection(SolutionConfiguration) = preSolution  
+        ConfigName.0 = Debug  
+        ConfigName.1 = Release  
+   ```  
   
-     環境を読み取るとき、`GlobalSection('name')`タグ、レジストリを使用して VSPackage に名をマップにします。 キー名は、下のレジストリに存在する必要があります [HKLM\\< アプリケーション ID のレジストリ ルート\>\SolutionPersistence\AggregateGUIDs]。 キーの既定値は、エントリを記述した VSPackage のパッケージ GUID (REG_SZ) です。  
+    環境を読み取るとき、`GlobalSection('name')`タグ、レジストリを使用して VSPackage に名をマップにします。 キー名は、下のレジストリに存在する必要があります [HKLM\\< アプリケーション ID のレジストリ ルート\>\SolutionPersistence\AggregateGUIDs]。 キーの既定値は、エントリを記述した VSPackage のパッケージ GUID (REG_SZ) です。  
   
-2.  環境に呼び出し、VSPackage が読み込まれる`QueryInterface`の VSPackage に、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps>インターフェイス、および呼び出し、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.ReadSolutionProps%2A> VSPackage が、データを格納するためのセクションでは、データを持つメソッド。 環境ごとにこのプロセスを繰り返します`preSolution`セクション。  
+2. 環境に呼び出し、VSPackage が読み込まれる`QueryInterface`の VSPackage に、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps>インターフェイス、および呼び出し、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.ReadSolutionProps%2A> VSPackage が、データを格納するためのセクションでは、データを持つメソッド。 環境ごとにこのプロセスを繰り返します`preSolution`セクション。  
   
-3.  環境は、プロジェクトの永続化要素を反復処理します。 この場合は、1 つのプロジェクトがあります。  
+3. 環境は、プロジェクトの永続化要素を反復処理します。 この場合は、1 つのプロジェクトがあります。  
   
-    ```  
-    Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Project1",  
-    "Project1.vbproj", "{8CDD8387-B905-44A8-B5D5-07BB50E05BEA}"  
-    EndProject  
-    ```  
+   ```  
+   Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Project1",  
+   "Project1.vbproj", "{8CDD8387-B905-44A8-B5D5-07BB50E05BEA}"  
+   EndProject  
+   ```  
   
-     このステートメントには、GUID の一意のプロジェクトおよびプロジェクトの種類の GUID が含まれています。 この情報は、プロジェクト ファイルまたはソリューションに属するファイルを検索する環境で使用し、VSPackage は、各プロジェクトに必要なします。 GUID に渡されるプロジェクト<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>し、プロジェクトに関連する特定の VSPackage を読み込むには、プロジェクトは、VSPackage によって読み込まします。 ここでは、このプロジェクトに読み込まれる VSPackage は、Visual Basic です。  
+    このステートメントには、GUID の一意のプロジェクトおよびプロジェクトの種類の GUID が含まれています。 この情報は、プロジェクト ファイルまたはソリューションに属するファイルを検索する環境で使用し、VSPackage は、各プロジェクトに必要なします。 GUID に渡されるプロジェクト<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>し、プロジェクトに関連する特定の VSPackage を読み込むには、プロジェクトは、VSPackage によって読み込まします。 ここでは、このプロジェクトに読み込まれる VSPackage は、Visual Basic です。  
   
-     ソリューション内の他のプロジェクトで必要に応じて、アクセスできるように、各プロジェクトは、一意のプロジェクト インスタンス ID を保持できます。 理想的には、ソリューションとプロジェクトがソース コード管理下にある場合は、プロジェクトにパスの起点ソリューションへのパスにする必要があります。 ソリューションが最初に読み込まれたときに、プロジェクト ファイルは、ユーザーのコンピューターにすることはできません。 ソリューション ファイルの相対サーバーに格納されているプロジェクト ファイルで、プロジェクト ファイルを見つけ、ユーザーのコンピューターにコピーの比較的シンプルです。 コピーにし、プロジェクトに必要なファイルの残りの部分を読み込みます。  
+    ソリューション内の他のプロジェクトで必要に応じて、アクセスできるように、各プロジェクトは、一意のプロジェクト インスタンス ID を保持できます。 理想的には、ソリューションとプロジェクトがソース コード管理下にある場合は、プロジェクトにパスの起点ソリューションへのパスにする必要があります。 ソリューションが最初に読み込まれたときに、プロジェクト ファイルは、ユーザーのコンピューターにすることはできません。 ソリューション ファイルの相対サーバーに格納されているプロジェクト ファイルで、プロジェクト ファイルを見つけ、ユーザーのコンピューターにコピーの比較的シンプルです。 コピーにし、プロジェクトに必要なファイルの残りの部分を読み込みます。  
   
-4.  .Sln ファイルの [プロジェクト] セクションに含まれている情報に基づいて、環境は、各プロジェクト ファイルを読み込みます。 プロジェクト自体は、プロジェクト階層を設定し、任意の入れ子になったプロジェクトの読み込みを担当します。  
+4. .Sln ファイルの [プロジェクト] セクションに含まれている情報に基づいて、環境は、各プロジェクト ファイルを読み込みます。 プロジェクト自体は、プロジェクト階層を設定し、任意の入れ子になったプロジェクトの読み込みを担当します。  
   
-5.  .Sln ファイルのセクションではすべてが処理された後、ソリューションはソリューション エクスプ ローラーで表示され、ユーザーによる変更の準備ができて。  
+5. .Sln ファイルのセクションではすべてが処理された後、ソリューションはソリューション エクスプ ローラーで表示され、ユーザーによる変更の準備ができて。  
   
- ソリューションにプロジェクトを実装するすべての VSPackage を読み込むが失敗した場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.OnProjectLoadFailure%2A>メソッドが呼び出され、ソリューション内の他のすべてのプロジェクトが読み込み中に加えた可能性のある変更を無視するチャンスが与えられる。 解析エラーが発生した場合は、ソリューション ファイルをできるだけ多くの情報が保持され、環境には、ソリューションが破損していることをユーザーに警告 ダイアログ ボックスが表示されます。  
+   ソリューションにプロジェクトを実装するすべての VSPackage を読み込むが失敗した場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.OnProjectLoadFailure%2A>メソッドが呼び出され、ソリューション内の他のすべてのプロジェクトが読み込み中に加えた可能性のある変更を無視するチャンスが与えられる。 解析エラーが発生した場合は、ソリューション ファイルをできるだけ多くの情報が保持され、環境には、ソリューションが破損していることをユーザーに警告 ダイアログ ボックスが表示されます。  
   
- ソリューションを保存または閉じたときに、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.QuerySaveSolutionProps%2A>メソッドが呼び出され、.sln ファイルに入力する必要があるソリューションに変更が加えられましたかどうかに表示する階層に渡されます。 渡される、null 値`QuerySaveSolutionProps`で<xref:Microsoft.VisualStudio.Shell.Interop.VSQUERYSAVESLNPROPS>情報は、ソリューションの永続化されることを示します。 ポインターによって決定されます、特定のプロジェクトの永続化された情報は、値が null でない場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>インターフェイス。  
+   ソリューションを保存または閉じたときに、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.QuerySaveSolutionProps%2A>メソッドが呼び出され、.sln ファイルに入力する必要があるソリューションに変更が加えられましたかどうかに表示する階層に渡されます。 渡される、null 値`QuerySaveSolutionProps`で<xref:Microsoft.VisualStudio.Shell.Interop.VSQUERYSAVESLNPROPS>情報は、ソリューションの永続化されることを示します。 ポインターによって決定されます、特定のプロジェクトの永続化された情報は、値が null でない場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>インターフェイス。  
   
- 保存する情報がある場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>インターフェイスへのポインターを使用して呼び出した、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.SaveSolutionProps%2A>メソッド。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.WriteSolutionProps%2A>から名前/値ペアを取得するための環境ではメソッドが呼び出されます`IPropertyBag`インターフェイスし、.sln ファイルに情報を書き込みます。  
+   保存する情報がある場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>インターフェイスへのポインターを使用して呼び出した、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.SaveSolutionProps%2A>メソッド。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.WriteSolutionProps%2A>から名前/値ペアを取得するための環境ではメソッドが呼び出されます`IPropertyBag`インターフェイスし、.sln ファイルに情報を書き込みます。  
   
- `SaveSolutionProps` `WriteSolutionProps`から保存する情報を取得するための環境でオブジェクトに再帰的が呼び出されます、 `IPropertyBag` .sln ファイルにすべての変更が入力されるまでのインターフェイスします。 これにより、ソリューションと使用可能な次に、ソリューションを開いたときの情報を保存することを確認できます。  
+   `SaveSolutionProps` `WriteSolutionProps`から保存する情報を取得するための環境でオブジェクトに再帰的が呼び出されます、 `IPropertyBag` .sln ファイルにすべての変更が入力されるまでのインターフェイスします。 これにより、ソリューションと使用可能な次に、ソリューションを開いたときの情報を保存することを確認できます。  
   
- .Sln ファイルに保存するものがあるかどうかをすべて読み込む VSPackage が列挙されます。 レジストリ キーがクエリの読み込み時にのみになります。 環境は、ソリューションを保存時にメモリ内にいるため、すべての読み込まれたパッケージについて認識します。  
+   .Sln ファイルに保存するものがあるかどうかをすべて読み込む VSPackage が列挙されます。 レジストリ キーがクエリの読み込み時にのみになります。 環境は、ソリューションを保存時にメモリ内にいるため、すべての読み込まれたパッケージについて認識します。  
   
- だけ、.sln ファイル内のエントリが含まれる、`preSolution`と`postSolution`セクション。 ありませんと同様のセクションでは、.suo ファイルでソリューションには、この情報を正常に読み込むことが必要があるため。 .Suo ファイルには、共有またはソース コード管理下に配置するものではありませんが秘密のノートなど、ユーザー固有のオプションが含まれています。  
+   だけ、.sln ファイル内のエントリが含まれる、`preSolution`と`postSolution`セクション。 ありませんと同様のセクションでは、.suo ファイルでソリューションには、この情報を正常に読み込むことが必要があるため。 .Suo ファイルには、共有またはソース コード管理下に配置するものではありませんが秘密のノートなど、ユーザー固有のオプションが含まれています。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps>   

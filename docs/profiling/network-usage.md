@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a8698c3402fdbbd4daa3e132b1455d722b40ef1
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: d620ae0f93b2bbcee66419cfe9ff5e76e470c5f0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35669139"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49918884"
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>UWP アプリのネットワーク使用量を分析する
 Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http API](/uwp/api/windows.web.http) を使用して実行されたネットワーク操作についてのデータを収集します。 そのデータを分析すると、アクセスや認証の問題、不適切なキャッシュの使用、表示やダウンロードの低パフォーマンスなどの問題を解決するのに役立ちます。  
@@ -28,19 +28,19 @@ Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http A
 ## <a name="collect-network-tool-data"></a>ネットワーク ツール データの収集  
  **ネットワーク** ツールを実行するには、Visual Studio コンピューター上で開かれた状態の Visual Studio プロジェクトが必要です。  
   
-1.  Visual Studio でプロジェクトを開きます。  
+1. Visual Studio でプロジェクトを開きます。  
   
-2.  **[デバッグ] > [パフォーマンス プロファイラー]** の順にクリックします。 **[ネットワーク]** を選択し、**[開始]** をクリックします。  
+2. **[デバッグ] > [パフォーマンス プロファイラー]** の順にクリックします。 **[ネットワーク]** を選択し、**[開始]** をクリックします。  
   
-3.  ネットワーク ツールは、アプリの HTTP トラフィックの収集を開始します。  
+3. ネットワーク ツールは、アプリの HTTP トラフィックの収集を開始します。  
   
-     アプリを実行する際、左側のウィンドウにある [概要] ビューに、キャプチャされた HTTP 操作の一覧が自動的に表示されます。 右側のウィンドウにある [詳細] パネルで詳細を確認するには、[概要] ビューの項目を選択します。  
+    アプリを実行する際、左側のウィンドウにある [概要] ビューに、キャプチャされた HTTP 操作の一覧が自動的に表示されます。 右側のウィンドウにある [詳細] パネルで詳細を確認するには、[概要] ビューの項目を選択します。  
   
-4.  **[停止]** をクリックしてアプリを閉じます。  
+4. **[停止]** をクリックしてアプリを閉じます。  
   
- レポート ウィンドウは次のように表示されます。  
+   レポート ウィンドウは次のように表示されます。  
   
- ![[ネットワーク] ウィンドウ](../profiling/media/network_fullwindow.png "NETWORK_FullWindow")  
+   ![[ネットワーク] ウィンドウ](../profiling/media/network_fullwindow.png "NETWORK_FullWindow")  
   
 ## <a name="analyze-data"></a>データの分析  
  アプリの実行中、またはアプリが閉じられた後でも、[概要] ビューに表示されたいずれかのネットワーク操作を選択すると、キャプチャされた HTTP トラフィックを分析できます。  

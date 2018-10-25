@@ -20,15 +20,16 @@ caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 8dda659a746f98bfa8038156d38316729f43016c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ec0980d312d4a65a770e63f0a23203a7e95c546f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49282504"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862340"
 ---
 # <a name="ca1720-identifiers-should-not-contain-type-names"></a>CA1720: 識別子には型名を含めないでください
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
+
 |||
 |-|-|
 |TypeName|IdentifiersShouldNotContainTypeNames|
@@ -48,89 +49,89 @@ ms.locfileid: "49282504"
 
  各トークンのパラメーターまたはメンバーの名前は、大文字と小文字で、次の言語に固有のデータ型名に対してチェックされます。
 
--   Bool
+- Bool
 
--   WChar
+- WChar
 
--   Int8
+- Int8
 
--   UInt8
+- UInt8
 
--   Short
+- Short
 
--   UShort
+- UShort
 
--   Int
+- Int
 
--   UInt
+- UInt
 
--   整数型
+- 整数型
 
--   UInteger
+- UInteger
 
--   Long
+- Long
 
--   ULong
+- ULong
 
--   符号なし
+- 符号なし
 
--   符号付き
+- 符号付き
 
--   Float
+- Float
 
--   float32
+- float32
 
--   float64
+- float64
 
- さらに、パラメーターの名前もチェックされます、次の言語に依存しないデータ型名に対して大文字と小文字。
+  さらに、パラメーターの名前もチェックされます、次の言語に依存しないデータ型名に対して大文字と小文字。
 
--   Object
+- Object
 
--   obj
+- obj
 
--   ブール型
+- ブール型
 
--   Char
+- Char
 
--   String
+- String
 
--   SByte
+- SByte
 
--   Byte
+- Byte
 
--   UByte
+- UByte
 
--   Int16
+- Int16
 
--   UInt16
+- UInt16
 
--   Int32
+- Int32
 
--   UInt32
+- UInt32
 
--   Int64
+- Int64
 
--   UInt64
+- UInt64
 
--   IntPtr
+- IntPtr
 
--   ptr
+- ptr
 
--   ポインター
+- ポインター
 
--   UInptr
+- UInptr
 
--   UPtr
+- UPtr
 
--   UPointer
+- UPointer
 
--   Single
+- Single
 
--   倍精度浮動小数点型
+- 倍精度浮動小数点型
 
--   Decimal (10 進数型)
+- Decimal (10 進数型)
 
--   GUID
+- GUID
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  **場合は、パラメーターに対して起動します。**

@@ -30,12 +30,12 @@ caps.latest.revision: 22
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 00b448f84e0103d5cf98ae27c519e247ad3d0c25
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 3bd033a9341975b6b785076188a53daf3e91a5a8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49202177"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49817347"
 ---
 # <a name="debugging-mixed-mode-applications"></a>方法 : 混合モード アプリケーションをデバッグする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -54,13 +54,13 @@ ms.locfileid: "49202177"
   
 #### <a name="to-turn-off-property-evaluation"></a>プロパティ評価をオフにするには  
   
-1.  **[ツール]** メニューの **[オプション]** をクリックします。  
+1. **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **オプション**ダイアログ ボックスで、**デバッグ**フォルダーと選択、**全般**カテゴリ。  
+2. **オプション**ダイアログ ボックスで、**デバッグ**フォルダーと選択、**全般**カテゴリ。  
   
-3.  クリア、**プロパティの評価とその他の暗黙的な関数呼び出しを有効にする**チェック ボックスをオンします。  
+3. クリア、**プロパティの評価とその他の暗黙的な関数呼び出しを有効にする**チェック ボックスをオンします。  
   
- ネイティブな呼び出し履歴とマネージド呼び出し履歴は異なるため、デバッガーでは、混合コードに対して常に完全な呼び出し履歴を表示できるとは限りません。 ネイティブ コードがマネージド コードを呼び出したときに、不一致が生じていることがわかります。 詳細については、次を参照してください。[の混合コードと不足情報呼び出し履歴 ウィンドウで](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)します。  
+   ネイティブな呼び出し履歴とマネージド呼び出し履歴は異なるため、デバッガーでは、混合コードに対して常に完全な呼び出し履歴を表示できるとは限りません。 ネイティブ コードがマネージド コードを呼び出したときに、不一致が生じていることがわかります。 詳細については、次を参照してください。[の混合コードと不足情報呼び出し履歴 ウィンドウで](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)

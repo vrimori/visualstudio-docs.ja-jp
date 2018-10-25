@@ -14,12 +14,12 @@ caps.latest.revision: 49
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 6f2b97f2b7f3db141bbbbe17d5cf1ab63212be81
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: da21c3b8646ef69432259e4430b940824ad05dd8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49176541"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920666"
 ---
 # <a name="define-validation-constraints-for-uml-models"></a>UML モデルの検証制約を定義する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "49176541"
   
  UML モデルをサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  「 [要件](../modeling/extend-uml-models-and-diagrams.md#Requirements)」を参照してください。  
   
  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
@@ -51,24 +51,24 @@ ms.locfileid: "49176541"
   
 #### <a name="to-create-a-validation-extension-in-its-own-vsix"></a>検証拡張機能を独自の VSIX に生成するには  
   
-1.  **[新しいプロジェクト]** ダイアログ ボックスの **[モデリング プロジェクト]** で、 **[検証拡張機能]** をクリックします。  
+1. **[新しいプロジェクト]** ダイアログ ボックスの **[モデリング プロジェクト]** で、 **[検証拡張機能]** をクリックします。  
   
-2.  新しいプロジェクトで **.cs** ファイルを開き、クラスを変更して検証制約を実装します。  
+2. 新しいプロジェクトで **.cs** ファイルを開き、クラスを変更して検証制約を実装します。  
   
-     詳細については、「 [検証制約の評価](#Implementing)」を参照してください。  
+    詳細については、「 [検証制約の評価](#Implementing)」を参照してください。  
   
-    > [!IMPORTANT]
-    >  **.cs** ファイルに次の `using` ステートメントが含まれていることを確認します。  
-    >   
-    >  `using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;`  
+   > [!IMPORTANT]
+   >  **.cs** ファイルに次の `using` ステートメントが含まれていることを確認します。  
+   >   
+   >  `using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;`  
   
-3.  新しいメソッドを定義して制約を追加できます。 メソッドを検証メソッドとして識別するには、最初の検証メソッドと同じように属性をタグ付ける必要があります。  
+3. 新しいメソッドを定義して制約を追加できます。 メソッドを検証メソッドとして識別するには、最初の検証メソッドと同じように属性をタグ付ける必要があります。  
   
-4.  F5 キーを押して制約をテストします。 詳細については、「 [検証制約の実行](#Executing)」を参照してください。  
+4. F5 キーを押して制約をテストします。 詳細については、「 [検証制約の実行](#Executing)」を参照してください。  
   
-5.  メニュー コマンドを別のコンピューターでファイルをコピーしてインストール**bin\\\*\\\*.vsix**は、プロジェクトでビルドしました。 詳細については、「 [拡張機能のインストールとアンインストール](#Installing)」を参照してください。  
+5. メニュー コマンドを別のコンピューターでファイルをコピーしてインストール**bin\\\*\\\*.vsix**は、プロジェクトでビルドしました。 詳細については、「 [拡張機能のインストールとアンインストール](#Installing)」を参照してください。  
   
- 他の **.cs** ファイルを追加すると、通常は次の `using` ステートメントが必要になります。  
+   他の **.cs** ファイルを追加すると、通常は次の `using` ステートメントが必要になります。  
   
 ```csharp  
 using System.Collections.Generic;  
@@ -272,13 +272,13 @@ public void ValidateSomething
   
  `context.LogError("error string", errorCode, elementsWithError);`  
   
--   `"error string"` が、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] エラー一覧に表示されます。  
+- `"error string"` が、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] エラー一覧に表示されます。  
   
--   `errorCode` は、エラーの一意の識別子である文字列です。  
+- `errorCode` は、エラーの一意の識別子である文字列です。  
   
--   `elementsWithError` は、モデル内の要素を識別します。 ユーザーがエラー レポートをダブルクリックすると、この要素を表すシェイプが選択されます。  
+- `elementsWithError` は、モデル内の要素を識別します。 ユーザーがエラー レポートをダブルクリックすると、この要素を表すシェイプが選択されます。  
   
- `LogError(),`、`LogWarning()`、および `LogMessage()` は、エラー一覧の異なるセクションにメッセージを配置します。  
+  `LogError(),`、`LogWarning()`、および `LogMessage()` は、エラー一覧の異なるセクションにメッセージを配置します。  
   
 ## <a name="how-validation-methods-are-applied"></a>検証メソッドの適用方法  
  検証は、リレーションシップや、クラスの属性や操作のパラメーターなどの大きい要素のパートを含む、モデルのすべての要素に対して適用されます。  
@@ -389,15 +389,15 @@ context.LogError(... , usecase);
   
 #### <a name="to-uninstall-an-extension"></a>拡張機能をアンインストールするには  
   
-1.  **[ツール]** メニューの **[拡張機能と更新プログラム]** をクリックします。  
+1. **[ツール]** メニューの **[拡張機能と更新プログラム]** をクリックします。  
   
-2.  **[インストール済みの拡張機能]** を展開します。  
+2. **[インストール済みの拡張機能]** を展開します。  
   
-3.  拡張機能を選択し、 **[アンインストール]** をクリックします。  
+3. 拡張機能を選択し、 **[アンインストール]** をクリックします。  
   
- 拡張機能の障害が原因で読み込みが失敗し、エラー ウィンドウにレポートが生成されることがまれにありますが、それは拡張機能マネージャーには表示されません。 次の場所からファイルを削除することによって、拡張機能を削除する場合、場所 *%localappdata%* は通常*DriveName*: \Users\\*ユーザー名*\AppData\Local:  
+   拡張機能の障害が原因で読み込みが失敗し、エラー ウィンドウにレポートが生成されることがまれにありますが、それは拡張機能マネージャーには表示されません。 次の場所からファイルを削除することによって、拡張機能を削除する場合、場所 *%localappdata%* は通常*DriveName*: \Users\\*ユーザー名*\AppData\Local:  
   
- *%Localappdata%* **\Microsoft\VisualStudio\\[バージョン] \Extensions**  
+   *%Localappdata%* **\Microsoft\VisualStudio\\[バージョン] \Extensions**  
   
 ##  <a name="Example"></a> 「例」  
  この例は、要素間の依存関係におけるループを検索します。  

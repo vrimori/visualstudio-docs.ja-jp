@@ -11,18 +11,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a34a49a3a66cebb81553f3e2786f281758c4dee
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: eb29a985a39344c5bffad59e63a9d540311ec648
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747578"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925124"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>手順 1: プロジェクトの作成とフォームへのラベルの追加
+
 このクイズを開発する最初のステップとして、プロジェクトを作成し、ラベル、ボタン、およびその他のコントロールをフォームに追加します。 また、追加する各コントロールのプロパティを設定します。 プロジェクトには、フォーム、コントロール、およびコード (チュートリアルで後ほど説明) が含まれます。 ボタンはクイズを開始し、ラベルはクイズ問題を表示し、その他のコントロールはクイズの解答とクイズを完了するために残っている時間を示します。
 
 > [!NOTE]
->  このトピックは、コーディングの基本概念に関するチュートリアル シリーズの一部です。 チュートリアルの概要については、「[チュートリアル 2: 制限時間ありの計算クイズの作成](../ide/tutorial-2-create-a-timed-math-quiz.md)」を参照してください。
+> このトピックは、コーディングの基本概念に関するチュートリアル シリーズの一部です。 チュートリアルの概要については、「[チュートリアル 2: 制限時間ありの計算クイズの作成](../ide/tutorial-2-create-a-timed-math-quiz.md)」を参照してください。
 
 ## <a name="to-create-a-project-and-set-properties-for-a-form"></a>プロジェクトを作成し、フォームのプロパティを設定するには
 
@@ -68,8 +69,7 @@ ms.locfileid: "34747578"
 
      次の画像に示すように、複数のフォント プロパティを変更できます。
 
-     ![フォント サイズが表示された [プロパティ] ウィンドウ](../ide/media/express_setfontsize.png)
-フォント サイズが表示された **[プロパティ]** ウィンドウ
+     ![フォント サイズを示す [プロパティ] ウィンドウ](../ide/media/express_setfontsize.png)
 
 8.  **ツールボックス**から別の Label コントロールを追加し、フォント サイズを **15.75** に設定します。
 
@@ -117,7 +117,7 @@ ms.locfileid: "34747578"
 
      次の画像に示すように、最初の行が作成されました。
 
-     ![計算クイズの最初の行](../ide/media/express_firstrow.png) 計算クイズの最初の行
+     ![計算クイズの最初の行](../ide/media/express_firstrow.png)
 
 ## <a name="to-add-controls-for-the-subtraction-multiplication-and-division-problems"></a>減算、乗算、除算問題のコントロールを追加するには
 
@@ -144,7 +144,7 @@ ms.locfileid: "34747578"
 9. 4 番目の行については、最初のラベルに **dividedLeftLabel** という名前を付け、2 番目のラベルの **Text** プロパティを **÷** (除算記号) に変更し、3 番目のラベルに **dividedRightLabel** という名前を付け、NumericUpDown コントロールに **quotient** という名前を付けます。
 
     > [!NOTE]
-    >  乗算記号 × と除算記号 ÷ は、このチュートリアルからコピーしてフォームに貼り付けることができます。
+    > 乗算記号 × と除算記号 ÷ は、このチュートリアルからコピーしてフォームに貼り付けることができます。
 
 ## <a name="to-add-a-start-button-and-set-the-tab-index-order"></a>[Start] ボタンを追加し、タブ インデックスの順序を設定するには
 
@@ -161,13 +161,13 @@ ms.locfileid: "34747578"
 6.  **startButton** コントロールの **TabIndex** プロパティの値を **1** に設定します。
 
     > [!NOTE]
-    >  クイズの受け手が **Tab** キーを押すと、**TabIndex** プロパティはコントロールの順序を設定します。 この動作を確認するには、ダイアログ ボックス (たとえば、メニュー バーで、**[ファイル]** > **[開く]** をクリックします) を開き、**Tab** キーを数回押します。 **Tab** キーを押すたびに、カーソルが次のコントロールへと切り替わっていくのがわかります。 この順序は、そのフォームが設計されたときにプログラマによって決められています。
+    > クイズの受け手が **Tab** キーを押すと、**TabIndex** プロパティはコントロールの順序を設定します。 この動作を確認するには、ダイアログ ボックス (たとえば、メニュー バーで、**[ファイル]** > **[開く]** をクリックします) を開き、**Tab** キーを数回押します。 **Tab** キーを押すたびに、カーソルが次のコントロールへと切り替わっていくのがわかります。 この順序は、そのフォームが設計されたときにプログラマによって決められています。
 
 7.  NumericUpDown sum コントロールの **TabIndex** プロパティの値を **2** に設定し、difference コントロールは **3** に設定し、product コントロールは **4** に設定し、quotient コントロールは **5** に設定します。
 
      フォームは次の図のようになります。
 
-     ![計算クイズの初期フォーム](../ide/media/express_formlaidout.png) 計算クイズの初期フォーム
+     ![計算クイズの初期フォーム](../ide/media/express_formlaidout.png)
 
 8.  予測どおりに **TabIndex** プロパティが動作するかどうかを確認するには、**F5** キーを押してプログラムを保存して実行するか、またはメニュー バーの **[デバッグ]** > **[デバッグの開始]** をクリックし、**Tab** キーを数回押します。
 

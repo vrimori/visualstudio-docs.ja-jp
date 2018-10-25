@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerObject::SetBytes |Microsoft ドキュメント
+title: IDebugPointerObject::SetBytes |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a8234117d7965c4f2e471855d39ed0c3cee1f88c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9f3a496eb0212863f2ed08479216ac6ca546009f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31114295"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891506"
 ---
 # <a name="idebugpointerobjectsetbytes"></a>IDebugPointerObject::SetBytes
 一連の連続するバイトを指す値を設定します。  
@@ -47,7 +47,7 @@ int SetBytes(
   
 #### <a name="parameters"></a>パラメーター  
  `dwStart`  
- [in]指されるオブジェクトの先頭からのバイト単位のオフセット。  
+ [in]指すオブジェクトの先頭からのバイト単位のオフセット。  
   
  `dwCount`  
  [in]設定するバイト数。  
@@ -61,8 +61,8 @@ int SetBytes(
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 場合、このメソッドは使用これによって表されるポインター [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)プリミティブ型またはプリミティブ型 (つまり、単純なバイト シーケンスによって表すことができる配列) の単純な配列を指します。 これは、`IDebugPointerObject`オブジェクトが null 参照 (メモリ内のアドレスを指している必要があります) にすることはできません。  
+## <a name="remarks"></a>Remarks  
+ 場合、このメソッドが使用されるこれによって表されるポインター [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)プリミティブ型またはプリミティブ型 (つまり、単純なバイト シーケンスで表すことができる配列) の単純な配列を指します。 これは、`IDebugPointerObject`オブジェクトが null 参照 (メモリ内のアドレスを指している必要があります) にすることはできません。  
   
 ## <a name="see-also"></a>関連項目  
  [GetBytes](../../../extensibility/debugger/reference/idebugpointerobject-getbytes.md)   

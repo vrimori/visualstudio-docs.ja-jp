@@ -19,12 +19,12 @@ caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8ffa0506b6a7c49cdf1ba1f3c86d865df3c59a7d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6a4b163aef25972968933d3352486aab9ebbf962
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49296180"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950977"
 ---
 # <a name="how-to-customize-class-diagrams-class-designer"></a>方法: クラス ダイアグラムをカスタマイズする (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -129,11 +129,11 @@ ms.locfileid: "49296180"
   
 ##  <a name="DisplayAssociationAndInheritance"></a> 非表示のリレーションシップを表示する  
   
-1.  クラス デザイナーでクラス ダイアグラム ファイルを開いて選択します。  
+1. クラス デザイナーでクラス ダイアグラム ファイルを開いて選択します。  
   
-2.  非表示になっている関連行または継承線を持つ型を右クリックします。  
+2. 非表示になっている関連行または継承線を持つ型を右クリックします。  
   
- 関連行の場合は **[すべてのメンバーの表示]**、継承線の場合は **[基本クラスの表示]** または **[派生クラスの表示]** をクリックします。  
+   関連行の場合は **[すべてのメンバーの表示]**、継承線の場合は **[基本クラスの表示]** または **[派生クラスの表示]** をクリックします。  
   
 ##  <a name="RemoveCodeAndShape"></a> クラス ダイアグラムから図形を削除する  
  型の基になるコードに影響を与えずに型シェイプをクラス ダイアグラムから削除できます。 クラス ダイアグラムからの型シェイプの削除は、そのダイアグラムだけに影響します。型を定義する基礎のコードと、型を表示する他のダイアグラムには影響しません。  

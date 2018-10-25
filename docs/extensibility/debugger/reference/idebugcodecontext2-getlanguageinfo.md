@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext2::GetLanguageInfo |Microsoft ドキュメント
+title: IDebugCodeContext2::GetLanguageInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 915c6009d796209e34abc38fe5769ebdd90635d8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3c2638a072c3cf7c234adc88c26bace3348533f2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31106696"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49931026"
 ---
 # <a name="idebugcodecontext2getlanguageinfo"></a>IDebugCodeContext2::GetLanguageInfo
 このコードのコンテキストの言語情報を取得します。  
@@ -43,15 +43,15 @@ int GetLanguageInfo(
   
 #### <a name="parameters"></a>パラメーター  
  `pbstrLanguage`  
- [入力、出力]."C++"など、言語の名前を表す文字列を返します  
+ [入力、出力]"C++"などの言語の名前を含む文字列を返します  
   
  `pguidLanguage`  
- [入力、出力].たとえば、コードのコンテキストの言語の GUID を返します`guidCPPLang`です。  
+ [入力、出力]たとえば、コードのコンテキストの言語の GUID を返します`guidCPPLang`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  Null 以外の値を返す、パラメーターの少なくとも 1 つ必要があります。  
   
 ## <a name="see-also"></a>関連項目  

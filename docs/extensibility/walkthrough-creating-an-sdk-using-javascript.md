@@ -11,21 +11,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7a1db47703c2a78a4a5163671146c3817e94e0dc
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: 1be1cf15e1f43af5999d4d65a5342d9c7b46da25
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46495909"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49884070"
 ---
 # <a name="walkthrough-create-an-sdk-using-javascript"></a>チュートリアル: JavaScript を使用して SDK を作成します。
 このチュートリアルでは、JavaScript を使用して単純な算術 SDK と Visual Studio Extension (VSIX) を作成する方法について説明します。  このチュートリアルは、これらの部分に分かれています。  
   
--   [SimpleMathVSIX 拡張機能 SDK のプロジェクトを作成するには](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSimpleMathVSIX)  
+- [SimpleMathVSIX 拡張機能 SDK のプロジェクトを作成するには](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSimpleMathVSIX)  
   
--   [SDK を使用するサンプル アプリを作成するには](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSampleApp)  
+- [SDK を使用するサンプル アプリを作成するには](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSampleApp)  
   
- の JavaScript 用クラス ライブラリ プロジェクトの種類はありません。 このチュートリアルでは、このサンプルで*arithmetic.js* VSIX プロジェクトに直接ファイルを作成します。 実際を最初にビルドしてテストする JavaScript と CSS ファイルを Windows ストア アプリとしてお勧め — などを使用して、**空のアプリ**テンプレート、VSIX プロジェクトに配置する前にします。  
+  の JavaScript 用クラス ライブラリ プロジェクトの種類はありません。 このチュートリアルでは、このサンプルで*arithmetic.js* VSIX プロジェクトに直接ファイルを作成します。 実際を最初にビルドしてテストする JavaScript と CSS ファイルを Windows ストア アプリとしてお勧め — などを使用して、**空のアプリ**テンプレート、VSIX プロジェクトに配置する前にします。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)します。  
@@ -143,57 +143,57 @@ ms.locfileid: "46495909"
   
 ##  <a name="createSampleApp"></a> SDK を使用するサンプル アプリを作成するには  
   
-1.  メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。  
+1. メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。  
   
-2.  テンプレートのカテゴリの一覧で  **JavaScript**を選択します**Windows ストア**を選び、**空のアプリ**テンプレート。  
+2. テンプレートのカテゴリの一覧で  **JavaScript**を選択します**Windows ストア**を選び、**空のアプリ**テンプレート。  
   
-3.  **名前**ボックスで、指定`ArithmeticUI`します。 **[OK]** を選択します。  
+3. **名前**ボックスで、指定`ArithmeticUI`します。 **[OK]** を選択します。  
   
-4.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **ArithmeticUI**プロジェクトを選び、**追加** > **参照**.  
+4. **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **ArithmeticUI**プロジェクトを選び、**追加** > **参照**.  
   
-5.  **Windows**、選択**拡張**、ことに注意して**単純な算術**が表示されます。  
+5. **Windows**、選択**拡張**、ことに注意して**単純な算術**が表示されます。  
   
-6.  選択、**単純な算術**チェック ボックスをオンにして、 **OK**ボタン。  
+6. 選択、**単純な算術**チェック ボックスをオンにして、 **OK**ボタン。  
   
-7.  **ソリューション エクスプ ローラー****参照**、注意、**単純な算術**参照が表示されます。 あることに注意してください。 を展開し、**\js\** を含むフォルダー **arithmetic.js**します。 開くことができます**arithmetic.js**をソース コードがインストールされていることを確認します。  
+7. **ソリューション エクスプ ローラー****参照**、注意、**単純な算術**参照が表示されます。 あることに注意してください。 を展開し、 **\js\\** を含むフォルダー **arithmetic.js**します。 開くことができます**arithmetic.js**をソース コードがインストールされていることを確認します。  
   
-8.  次のコードを使用して、内容を置き換える*default.htm*します。  
+8. 次のコードを使用して、内容を置き換える*default.htm*します。  
   
-    ```html  
-    <!DOCTYPE html>  
-    <html>  
-    <head>  
-        <meta charset="utf-8" />  
-        <title>ArithmeticUI</title>  
+   ```html  
+   <!DOCTYPE html>  
+   <html>  
+   <head>  
+       <meta charset="utf-8" />  
+       <title>ArithmeticUI</title>  
   
-        <!-- WinJS references -->  
-        <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />  
-        <script src="//Microsoft.WinJS.1.0/js/base.js"></script>  
-        <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>  
+       <!-- WinJS references -->  
+       <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />  
+       <script src="//Microsoft.WinJS.1.0/js/base.js"></script>  
+       <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>  
   
-        <!-- ArithmeticUI references -->  
-        <link href="/css/default.css" rel="stylesheet" />  
-        <script src="/js/default.js"></script>  
-        <script src="/SimpleMath/js/arithmetic.js"></script>  
-    </head>  
-    <body>  
-        <form>  
-        <div id="calculator" class="ms-grid">  
-            <input name="firstNumber" id="firstNumber" type="number" step="any">  
-            <div id="operators">  
-                <button class="operator" type="button">+</button>  
-                <button class="operator" type="button">-</button>  
-                <button class="operator" type="button">*</button>  
-                <button class="operator" type="button">/</button>  
-            </div>  
-            <input id="secondNumber" type="number">  
-            <button class="calculate" type="button">=</button>  
-            <input id="result" type="number" name="result" disabled="" readonly="">  
-        </div>  
-        </form>  
-    </body>  
-    </html>  
-    ```  
+       <!-- ArithmeticUI references -->  
+       <link href="/css/default.css" rel="stylesheet" />  
+       <script src="/js/default.js"></script>  
+       <script src="/SimpleMath/js/arithmetic.js"></script>  
+   </head>  
+   <body>  
+       <form>  
+       <div id="calculator" class="ms-grid">  
+           <input name="firstNumber" id="firstNumber" type="number" step="any">  
+           <div id="operators">  
+               <button class="operator" type="button">+</button>  
+               <button class="operator" type="button">-</button>  
+               <button class="operator" type="button">*</button>  
+               <button class="operator" type="button">/</button>  
+           </div>  
+           <input id="secondNumber" type="number">  
+           <button class="calculate" type="button">=</button>  
+           <input id="result" type="number" name="result" disabled="" readonly="">  
+       </div>  
+       </form>  
+   </body>  
+   </html>  
+   ```  
   
 9. 次のコードを使用して、内容を置き換える*\js\default.js*します。  
   

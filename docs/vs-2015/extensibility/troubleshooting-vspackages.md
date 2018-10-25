@@ -16,12 +16,12 @@ ms.assetid: 274673e7-72e7-476f-a263-3411b5b874be
 caps.latest.revision: 23
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0317b4d641cb965b5f92ad31cfab6d3580db30a6
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 0cc3395f065d211c2d8e7d4f68a6b3ec8c25474d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49225564"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949313"
 ---
 # <a name="troubleshooting-vspackages"></a>VSPackage のトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -116,19 +116,19 @@ ms.locfileid: "49225564"
   
 ### <a name="to-troubleshoot-a-missing-vspackage-or-one-of-its-dependencies"></a>不足している VSPackage またはその依存関係の 1 つのトラブルシューティングを行う  
   
-1.  マネージ コードは、参照パスが正しいことを確認します。  
+1. マネージ コードは、参照パスが正しいことを確認します。  
   
-    1.  **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+   1.  **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-    2.  選択、**参照** タブで、**プロパティ ページ**のすべてのパスが正しい ダイアログ ボックスを確認します。 また、使用することができます、**オブジェクト ブラウザー**の参照先のオブジェクトをブラウズします。  
+   2.  選択、**参照** タブで、**プロパティ ページ**のすべてのパスが正しい ダイアログ ボックスを確認します。 また、使用することができます、**オブジェクト ブラウザー**の参照先のオブジェクトをブラウズします。  
   
-         マネージ コードを使用することができます、 [Fuslogvw.exe (アセンブリ バインディング ログ ビューアー)](http://msdn.microsoft.com/library/e32fa443-0778-4cc3-bf36-5c8ea297d296)失敗したアセンブリの読み込みの詳細を表示します。  
+        マネージ コードを使用することができます、 [Fuslogvw.exe (アセンブリ バインディング ログ ビューアー)](http://msdn.microsoft.com/library/e32fa443-0778-4cc3-bf36-5c8ea297d296)失敗したアセンブリの読み込みの詳細を表示します。  
   
-2.  アンマネージ コードの場合で、VSPackage の CLSID を検索、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] CLSID レジストリ ノード。  
+2. アンマネージ コードの場合で、VSPackage の CLSID を検索、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] CLSID レジストリ ノード。  
   
-     HKLM\Software\Microsoft\Visual Studio\\*\<バージョン >* \CLSID  
+    HKLM\Software\Microsoft\Visual Studio\\*\<バージョン >* \CLSID  
   
- InprocServer32 エントリが VSPackage の dll のパスが正しいことを確認します。  
+   InprocServer32 エントリが VSPackage の dll のパスが正しいことを確認します。  
   
 ## <a name="see-also"></a>関連項目  
  [VSPackage](../extensibility/internals/vspackages.md)

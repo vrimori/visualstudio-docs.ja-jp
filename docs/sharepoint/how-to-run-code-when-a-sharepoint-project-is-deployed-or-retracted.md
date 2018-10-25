@@ -15,38 +15,38 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4fa7d2652e65e26686a5058fcb2c8f5130fbbdde
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: da1b6dd4ff71bcc78043ea88c8f833b9c0f32a38
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119806"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832447"
 ---
 # <a name="how-to-run-code-when-a-sharepoint-project-is-deployed-or-retracted"></a>方法: SharePoint プロジェクトを配置または取り消すときに、コードを実行
   SharePoint プロジェクトを配置または取り消すときに、追加のタスクを実行する場合は、Visual Studio によって生成されるイベントを処理できます。 詳細については、次を参照してください。 [SharePoint の拡張のパッケージ化と配置](../sharepoint/extending-sharepoint-packaging-and-deployment.md)します。  
   
 ### <a name="to-run-code-when-a-sharepoint-project-is-deployed-or-retracted"></a>SharePoint プロジェクトのコードを実行するには、配置時または取り消し  
   
-1.  プロジェクト項目の拡張機能、プロジェクトの拡張機能、または新しいプロジェクト項目の種類の定義を作成します。 詳細については、次のトピックを参照してください。  
+1. プロジェクト項目の拡張機能、プロジェクトの拡張機能、または新しいプロジェクト項目の種類の定義を作成します。 詳細については、次のトピックを参照してください。  
   
-    -   [方法: SharePoint プロジェクト項目の拡張機能の作成](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)  
+   -   [方法: SharePoint プロジェクト項目の拡張機能の作成](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)  
   
-    -   [方法: SharePoint プロジェクト拡張機能の作成](../sharepoint/how-to-create-a-sharepoint-project-extension.md)  
+   -   [方法: SharePoint プロジェクト拡張機能の作成](../sharepoint/how-to-create-a-sharepoint-project-extension.md)  
   
-    -   [方法: SharePoint プロジェクト項目の種類の定義](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)  
+   -   [方法: SharePoint プロジェクト項目の種類の定義](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)  
   
-2.  拡張機能のアクセス、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService>オブジェクト。 詳細については、次を参照してください。[方法: SharePoint プロジェクト サービスを取得](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md)します。  
+2. 拡張機能のアクセス、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService>オブジェクト。 詳細については、次を参照してください。[方法: SharePoint プロジェクト サービスを取得](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md)します。  
   
-3.  処理、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted>と<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted>プロジェクト サービスのイベント。  
+3. 処理、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted>と<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted>プロジェクト サービスのイベント。  
   
-4.  イベント ハンドラーを使用して、<xref:Microsoft.VisualStudio.SharePoint.DeploymentEventArgs>パラメーターの現在の配置セッションに関する情報を取得します。 たとえば、どのプロジェクトが現在の配置セッションとされているかどうかを判断できます配置または取り消します。  
+4. イベント ハンドラーを使用して、<xref:Microsoft.VisualStudio.SharePoint.DeploymentEventArgs>パラメーターの現在の配置セッションに関する情報を取得します。 たとえば、どのプロジェクトが現在の配置セッションとされているかどうかを判断できます配置または取り消します。  
   
- 次のコード例は、処理する方法を示します、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted>と<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted>プロジェクトの拡張機能内のイベント。 この拡張機能を追加のメッセージを書き込みます、**出力**デプロイが開始し、SharePoint プロジェクトの完了時にウィンドウ。  
+   次のコード例は、処理する方法を示します、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted>と<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted>プロジェクトの拡張機能内のイベント。 この拡張機能を追加のメッセージを書き込みます、**出力**デプロイが開始し、SharePoint プロジェクトの完了時にウィンドウ。  
   
- [!code-csharp[SPExtensibility.ProjectSystemExtension.General#12](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/handleprojectdeploymentevents.cs#12)]
- [!code-vb[SPExtensibility.ProjectSystemExtension.General#12](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/handleprojectdeploymentevents.vb#12)]  
+   [!code-csharp[SPExtensibility.ProjectSystemExtension.General#12](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/handleprojectdeploymentevents.cs#12)]
+   [!code-vb[SPExtensibility.ProjectSystemExtension.General#12](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/handleprojectdeploymentevents.vb#12)]  
   
-## <a name="compile-the-code"></a>コードをコンパイルします  
+## <a name="compile-the-code"></a>コードのコンパイル  
  この例では、次のアセンブリへの参照が必要です。  
   
 -   Microsoft.VisualStudio.SharePoint  

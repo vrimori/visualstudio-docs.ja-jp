@@ -18,12 +18,12 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7a03b706957d6308dce90fb9f0dd2284338e7609
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 463acc185a73b9a483bf74c98d4bde1cf0f42494
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49294615"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877505"
 ---
 # <a name="how-to-use-environment-variables-in-a-build"></a>方法 : ビルドで環境変数を使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "49294615"
   
 #### <a name="to-use-an-environment-variable-in-an-msbuild-project"></a>MSBuild プロジェクトで環境変数を使用するには  
   
--   プロジェクト ファイルで宣言された変数と同様に、環境変数を参照します。 たとえば、次のコードは、BIN_PATH 環境変数を参照します。  
+- プロジェクト ファイルで宣言された変数と同様に、環境変数を参照します。 たとえば、次のコードは、BIN_PATH 環境変数を参照します。  
   
-     `<FinalOutput>$(BIN_PATH)\MyAssembly.dll</FinalOutput>`  
+   `<FinalOutput>$(BIN_PATH)\MyAssembly.dll</FinalOutput>`  
   
- 環境変数が設定されていない場合は、`Condition` 属性を使用して、プロパティの既定値を指定することができます。  
+  環境変数が設定されていない場合は、`Condition` 属性を使用して、プロパティの既定値を指定することができます。  
   
 #### <a name="to-provide-a-default-value-for-a-property"></a>プロパティの既定値を指定するには  
   

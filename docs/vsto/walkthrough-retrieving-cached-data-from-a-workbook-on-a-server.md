@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: eb7cb76c471681fe49e5ea6957cd94f9829c64db
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 255121bb7dd504ecd96d05fb6257c3b2edeb96ec
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672683"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816964"
 ---
 # <a name="walkthrough-retrieve-cached-data-from-a-workbook-on-a-server"></a>チュートリアル: サーバー上のブックからのキャッシュされたデータを取得します。
   このチュートリアルを使用して起動することがなく、Microsoft Office Excel ブックにキャッシュされているデータセットからデータを取得する方法について説明、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>クラス。  
@@ -33,17 +33,17 @@ ms.locfileid: "35672683"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   データを含むデータセットを定義する、 *AdventureWorksLT*データベース。  
+- データを含むデータセットを定義する、 *AdventureWorksLT*データベース。  
   
--   Excel ブック プロジェクトと、コンソール アプリケーション プロジェクトで、データセットのインスタンスを作成しています。  
+- Excel ブック プロジェクトと、コンソール アプリケーション プロジェクトで、データセットのインスタンスを作成しています。  
   
--   作成する、 <xref:Microsoft.Office.Tools.Excel.ListObject> 、ブック、データセットにバインドされていると設定は、<xref:Microsoft.Office.Tools.Excel.ListObject>データ ブックを開いたときに使用します。  
+- 作成する、 <xref:Microsoft.Office.Tools.Excel.ListObject> 、ブック、データセットにバインドされていると設定は、<xref:Microsoft.Office.Tools.Excel.ListObject>データ ブックを開いたときに使用します。  
   
--   ブックのデータ キャッシュにデータセットを追加します。  
+- ブックのデータ キャッシュにデータセットを追加します。  
   
--   起動することがなく、コンソール アプリケーションのデータセットにキャッシュされたデータセットからデータの読み取り。  
+- 起動することがなく、コンソール アプリケーションのデータセットにキャッシュされたデータセットからデータの読み取り。  
   
- このチュートリアルでは、開発用コンピューターに、コードを実行していることを前提としていますが、Excel がインストールされていないサーバーでこのチュートリアルで示されるコードを使用できます。  
+  このチュートリアルでは、開発用コンピューターに、コードを実行していることを前提としていますが、Excel がインストールされていないサーバーでこのチュートリアルで示されるコードを使用できます。  
   
 > [!NOTE]  
 >  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
@@ -93,29 +93,29 @@ ms.locfileid: "35672683"
   
 ### <a name="define-a-typed-dataset-in-the-class-library-project"></a>クラス ライブラリ プロジェクトで型指定されたデータセットを定義します。  
   
-1.  **ソリューション エクスプ ローラー**、クリックして、 **AdventureWorksDataSet**プロジェクト。  
+1. **ソリューション エクスプ ローラー**、クリックして、 **AdventureWorksDataSet**プロジェクト。  
   
-2.  場合、**データソース**ウィンドウが表示されない、メニュー バーで 表示することによって、**ビュー** > **その他の Windows**  >  **データ ソース**します。  
+2. 場合、**データソース**ウィンドウが表示されない、メニュー バーで 表示することによって、**ビュー** > **その他の Windows**  >  **データ ソース**します。  
   
-3.  **[新しいデータ ソースの追加]** をクリックして **データ ソース構成ウィザード**を開始します。  
+3. **[新しいデータ ソースの追加]** をクリックして **データ ソース構成ウィザード**を開始します。  
   
-4.  **[データベース]** をクリックして、 **[次へ]** をクリックします。  
+4. **[データベース]** をクリックして、 **[次へ]** をクリックします。  
   
-5.  AdventureWorksLT データベースに既存の接続があれば、この接続を選択し、をクリックして**次**します。  
+5. AdventureWorksLT データベースに既存の接続があれば、この接続を選択し、をクリックして**次**します。  
   
-     それ以外の場合は、 **[新しい接続]** をクリックし、 **[接続の追加]** ダイアログ ボックスを使用して新しい接続を作成します。 詳細については、次を参照してください。[新しい接続を追加](../data-tools/add-new-connections.md)します。  
+    それ以外の場合は、 **[新しい接続]** をクリックし、 **[接続の追加]** ダイアログ ボックスを使用して新しい接続を作成します。 詳細については、次を参照してください。[新しい接続を追加](../data-tools/add-new-connections.md)します。  
   
-6.  **[アプリケーション構成ファイルへの接続文字列を保存]** ページで、 **[次へ]** をクリックします。  
+6. **[アプリケーション構成ファイルへの接続文字列を保存]** ページで、 **[次へ]** をクリックします。  
   
-7.  **データベース オブジェクトの選択** ページで、展開**テーブル**選択**Product (SalesLT)** します。  
+7. **データベース オブジェクトの選択** ページで、展開**テーブル**選択**Product (SalesLT)** します。  
   
-8.  **[完了]** をクリックします。  
+8. **[完了]** をクリックします。  
   
-     *AdventureWorksLTDataSet.xsd*ファイルに追加されます、 **AdventureWorksDataSet**プロジェクト。 このファイルでは、次の項目を定義します。  
+    *AdventureWorksLTDataSet.xsd*ファイルに追加されます、 **AdventureWorksDataSet**プロジェクト。 このファイルでは、次の項目を定義します。  
   
-    -   `AdventureWorksLTDataSet`という名前の型指定されたデータセット。 このデータセットは、AdventureWorksLT データベースの Product テーブルの内容を表します。  
+   - `AdventureWorksLTDataSet`という名前の型指定されたデータセット。 このデータセットは、AdventureWorksLT データベースの Product テーブルの内容を表します。  
   
-    -   という名前の TableAdapter`ProductTableAdapter`します。 この TableAdapter データを読み書きするために使用できます、`AdventureWorksLTDataSet`します。 詳細については、次を参照してください。 [TableAdapter の概要](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview)します。  
+   - という名前の TableAdapter`ProductTableAdapter`します。 この TableAdapter データを読み書きするために使用できます、`AdventureWorksLTDataSet`します。 詳細については、次を参照してください。 [TableAdapter の概要](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview)します。  
   
      これらのオブジェクトは、どちらもこのチュートリアルの後半で使用します。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "35672683"
   
 3.  ドラッグ、**製品**テーブルのセル A1 にします。  
   
-     A<xref:Microsoft.Office.Tools.Excel.ListObject>という名前のコントロール`productListObject`セル A1 から始まる、ワークシート上に作成されます。 同時、という名前のデータセット オブジェクト`adventureWorksLTDataSet`と<xref:System.Windows.Forms.BindingSource>という`productBindingSource`プロジェクトに追加されます。 <xref:Microsoft.Office.Tools.Excel.ListObject> が <xref:System.Windows.Forms.BindingSource>にバインドされ、さらにこれがデータセット オブジェクトにバインドされます。  
+     A<xref:Microsoft.Office.Tools.Excel.ListObject>という名前のコントロール`productListObject`セル A1 から始まる、ワークシート上に作成されます。 同時に、 `adventureWorksLTDataSet` という名前のデータセット オブジェクトと、 <xref:System.Windows.Forms.BindingSource> という名前の `productBindingSource` がプロジェクトに追加されます。 <xref:Microsoft.Office.Tools.Excel.ListObject> が <xref:System.Windows.Forms.BindingSource>にバインドされ、さらにこれがデータセット オブジェクトにバインドされます。  
   
 ## <a name="add-the-dataset-to-the-data-cache"></a>データ キャッシュにデータセットを追加します。  
  ブック内のデータセットにアクセスする Excel ブック プロジェクトの外側のコードを有効にするには、データ キャッシュにデータセットを追加する必要があります。 データ キャッシュの詳細については、次を参照してください。[ドキュメント レベルのカスタマイズでキャッシュされたデータ](../vsto/cached-data-in-document-level-customizations.md)と[データ キャッシュ](../vsto/caching-data.md)します。  
@@ -236,44 +236,44 @@ ms.locfileid: "35672683"
   
 ### <a name="retrieve-data-from-the-cached-dataset"></a>キャッシュされたデータセットからデータを取得します。  
   
-1.  **ソリューション エクスプ ローラー**を右クリックし、 **DataReader**プロジェクトし、クリックして**参照の追加**します。  
+1. **ソリューション エクスプ ローラー**を右クリックし、 **DataReader**プロジェクトし、クリックして**参照の追加**します。  
   
-2.  **.NET** ] タブで [ **Microsoft.VisualStudio.Tools.Applications.ServerDocument**します。  
+2. **.NET** ] タブで [ **Microsoft.VisualStudio.Tools.Applications.ServerDocument**します。  
   
-3.  **[OK]** をクリックします。  
+3. **[OK]** をクリックします。  
   
-4.  **ソリューション エクスプ ローラー**を右クリックし、 **DataReader**プロジェクトし、クリックして**参照の追加**します。  
+4. **ソリューション エクスプ ローラー**を右クリックし、 **DataReader**プロジェクトし、クリックして**参照の追加**します。  
   
-5.  **プロジェクト** タブで  **AdventureWorksDataSet**、 をクリック**OK**します。  
+5. **プロジェクト** タブで  **AdventureWorksDataSet**、 をクリック**OK**します。  
   
-6.  開く、 *Program.cs*または*Module1.vb*コード エディターでファイル。  
+6. 開く、 *Program.cs*または*Module1.vb*コード エディターでファイル。  
   
-7.  次の追加**を使用して**(c#) のまたは**Imports** (Visual Basic) のステートメントをコード ファイルの先頭にします。  
+7. 次の追加**を使用して**(c#) のまたは**Imports** (Visual Basic) のステートメントをコード ファイルの先頭にします。  
   
-     [!code-csharp[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#1)]
-     [!code-vb[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#1)]  
+    [!code-csharp[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#1)]
+    [!code-vb[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#1)]  
   
-8.  `Main` メソッドに次のコードを追加します。 このコードは、次のオブジェクトを宣言します。  
+8. `Main` メソッドに次のコードを追加します。 このコードは、次のオブジェクトを宣言します。  
   
-    -   インスタンス、`AdventureWorksLTDataSet`型で定義されている、 **AdventureWorksDataSet**プロジェクト。  
+   - インスタンス、`AdventureWorksLTDataSet`型で定義されている、 **AdventureWorksDataSet**プロジェクト。  
   
-    -   ビルド フォルダー内の AdventureWorksReport ブックへのパス、 **AdventureWorksReport**プロジェクト。  
+   - ビルド フォルダー内の AdventureWorksReport ブックへのパス、 **AdventureWorksReport**プロジェクト。  
   
-    -   A<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>ブック内のデータ キャッシュへのアクセスに使用するオブジェクト。  
+   - A<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>ブック内のデータ キャッシュへのアクセスに使用するオブジェクト。  
   
-        > [!NOTE]  
-        >  次のコードを使用して、ブックを保存することを想定しています、 *.xlsx*拡張機能。 プロジェクトのブックに別の拡張機能がある場合は、必要に応じて、パスを変更します。  
+     > [!NOTE]  
+     >  次のコードを使用して、ブックを保存することを想定しています、 *.xlsx*拡張機能。 プロジェクトのブックに別の拡張機能がある場合は、必要に応じて、パスを変更します。  
   
      [!code-csharp[Trin_CachedDataWalkthroughs#10](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#10)]
      [!code-vb[Trin_CachedDataWalkthroughs#10](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#10)]  
   
 9. 次のコードを追加、`Main`前の手順で追加したコードの後のメソッド。 このコードは次のタスクを実行します。  
   
-    -   使用して、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A>のプロパティ、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>ブックのキャッシュされたデータセットにアクセスするクラス。  
+   - 使用して、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A>のプロパティ、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>ブックのキャッシュされたデータセットにアクセスするクラス。  
   
-    -   ローカルのデータセットにキャッシュされたデータセットからデータを読み取る。  
+   - ローカルのデータセットにキャッシュされたデータセットからデータを読み取る。  
   
-    -   ローカルのデータセットのデータがあることを確認する行の数を表示します。  
+   - ローカルのデータセットのデータがあることを確認する行の数を表示します。  
   
      [!code-csharp[Trin_CachedDataWalkthroughs#11](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#11)]
      [!code-vb[Trin_CachedDataWalkthroughs#11](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#11)]  

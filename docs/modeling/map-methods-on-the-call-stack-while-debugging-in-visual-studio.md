@@ -30,12 +30,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a99899f9a909ead3db7d925cd703612a7f68bcf2
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: e1d0139463f468ed6d909658bb143412dc122020
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47858707"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49856185"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Visual Studio でデバッグを行うときの呼び出し履歴に対するメソッドのマップ
 デバッグ中に呼び出し履歴を視覚的にトレース コード マップを作成します。 コメントをマップに追加することでバグの発見に重点を置いてコードの動作を追跡できます。
@@ -44,27 +44,27 @@ ms.locfileid: "47858707"
 
  要件:
 
--   [Visual Studio Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+- [Visual Studio Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
--   Visual c#、Visual Basic、C++、JavaScript、または x++ など、デバッグできるコード
+- Visual c#、Visual Basic、C++、JavaScript、または x++ など、デバッグできるコード
 
- 参照トピック
+  参照トピック
 
--   [ビデオ: は、コード マップ デバッガーの統合 (チャネル 9) で視覚的にデバッグします。](http://go.microsoft.com/fwlink/?LinkId=293418)
+- [ビデオ: は、コード マップ デバッガーの統合 (チャネル 9) で視覚的にデバッグします。](http://go.microsoft.com/fwlink/?LinkId=293418)
 
--   [呼び出し履歴でマップします。](#MapStack)
+- [呼び出し履歴でマップします。](#MapStack)
 
--   [コードに関するメモを作成します。](#MakeNotes)
+- [コードに関するメモを作成します。](#MakeNotes)
 
--   [次の呼び出し履歴でマップを更新](#UpdateMap)
+- [次の呼び出し履歴でマップを更新](#UpdateMap)
 
--   [マップに関連するコードを追加します。](#AddRelatedCode)
+- [マップに関連するコードを追加します。](#AddRelatedCode)
 
--   [マップを使用してバグを見つける](#FindBugs)
+- [マップを使用してバグを見つける](#FindBugs)
 
--   [Q &AMP; A](#QA)
+- [Q &AMP; A](#QA)
 
- コマンドとコード マップを使用する場合に使用できる操作の詳細については、次を参照してください。[参照およびコード マップの再配置](../modeling/browse-and-rearrange-code-maps.md)します。
+  コマンドとコード マップを使用する場合に使用できる操作の詳細については、次を参照してください。[参照およびコード マップの再配置](../modeling/browse-and-rearrange-code-maps.md)します。
 
 ## <a name="MapStack"></a> 呼び出し履歴でマップします。
 
@@ -129,63 +129,63 @@ ms.locfileid: "47858707"
 
 ## <a name="QA"></a> Q & A
 
--   **すべての呼び出しは、マップに表示されます。その理由を教えてください。**
+- **すべての呼び出しは、マップに表示されます。その理由を教えてください。**
 
-     既定では、ユーザー自身のコードだけがマップに表示されます。 外部コードを表示するで有効にする、**呼び出し履歴**ウィンドウ。
+   既定では、ユーザー自身のコードだけがマップに表示されます。 外部コードを表示するで有効にする、**呼び出し履歴**ウィンドウ。
 
-     ![[呼び出し履歴] ウィンドウを使用して外部コードを表示](../debugger/media/debuggermap_callstackmenu.png)
+   ![[呼び出し履歴] ウィンドウを使用して外部コードを表示](../debugger/media/debuggermap_callstackmenu.png)
 
-     オフにするか**マイ コードのみを有効にする**Visual studio のデバッグ オプション。
+   オフにするか**マイ コードのみを有効にする**Visual studio のデバッグ オプション。
 
-     ![[オプション] ダイアログ ボックスを使用して、外部コードを表示](../debugger/media/debuggermap_debugoptions.png)
+   ![[オプション] ダイアログ ボックスを使用して、外部コードを表示](../debugger/media/debuggermap_debugoptions.png)
 
--   **マップを変更するコードに影響しますか。**
+- **マップを変更するコードに影響しますか。**
 
-     マップを変更すると、任意の方法でコードに影響しません。 マップでの名前変更、移動、削除は自由に行うことができます。
+   マップを変更すると、任意の方法でコードに影響しません。 マップでの名前変更、移動、削除は自由に行うことができます。
 
--   **このメッセージの意味:「ダイアグラムは、コードの古いバージョンに基づく可能性があります」でしょうか。**
+- **このメッセージの意味:「ダイアグラムは、コードの古いバージョンに基づく可能性があります」でしょうか。**
 
-     マップを最後に更新してからコードが変更されている可能性があります。 たとえば、マップ上の呼び出しがコードに存在しなくなった可能性があります。 メッセージを閉じてから、マップを再び更新する前にソリューションをリビルドしてみます。
+   マップを最後に更新してからコードが変更されている可能性があります。 たとえば、マップ上の呼び出しがコードに存在しなくなった可能性があります。 メッセージを閉じてから、マップを再び更新する前にソリューションをリビルドしてみます。
 
--   **マップのレイアウトを制御する方法は?**
+- **マップのレイアウトを制御する方法は?**
 
-     開く、**レイアウト**マップのツールバー メニュー。
+   開く、**レイアウト**マップのツールバー メニュー。
 
-    -   既定のレイアウトを変更します。
+  -   既定のレイアウトを変更します。
 
-    -   オフにする、マップを自動的に再配置を停止する**デバッグ時に自動レイアウト**します。
+  -   オフにする、マップを自動的に再配置を停止する**デバッグ時に自動レイアウト**します。
 
-    -   項目を追加するときに、できるだけ少なくのマップを再配置、オフにする。**インクリメンタル レイアウト**します。
+  -   項目を追加するときに、できるだけ少なくのマップを再配置、オフにする。**インクリメンタル レイアウト**します。
 
--   **マップを他のユーザーと共有できますか。**
+- **マップを他のユーザーと共有できますか。**
 
-     マップをエクスポート、Microsoft Outlook、またはソース管理にチェックインすることができますので、ソリューションに保存した場合は、他のユーザーに送信できます。
+   マップをエクスポート、Microsoft Outlook、またはソース管理にチェックインすることができますので、ソリューションに保存した場合は、他のユーザーに送信できます。
 
-     ![呼び出し履歴コード マップを他のユーザーと共有](../debugger/media/debuggermap_sharewithothers.png)
+   ![呼び出し履歴コード マップを他のユーザーと共有](../debugger/media/debuggermap_sharewithothers.png)
 
--   **新しい呼び出し履歴を自動的に追加することから、マップを停止するにはどうすればよいですか。**
+- **新しい呼び出し履歴を自動的に追加することから、マップを停止するにはどうすればよいですか。**
 
-     選択![ボタン&#45;Show コール スタックは、自動的にコード マップに](../debugger/media/debuggermap_automaticupdateicon.gif)マップのツールバー。 マップを現在の呼び出し履歴を手動で追加するには、キーを押して**Ctrl** + **Shift** + **`** します。
+   選択![ボタン&#45;Show コール スタックは、自動的にコード マップに](../debugger/media/debuggermap_automaticupdateicon.gif)マップのツールバー。 マップを現在の呼び出し履歴を手動で追加するには、キーを押して**Ctrl** + **Shift** + **`** します。
 
-     デバッグ中に、マップ上の既存の呼び出し履歴を強調表示、マップが続行されます。
+   デバッグ中に、マップ上の既存の呼び出し履歴を強調表示、マップが続行されます。
 
--   **項目のアイコンと矢印の意味**
+- **項目のアイコンと矢印の意味**
 
-     項目に関する詳細情報を取得するには、上にマウス ポインターを移動し、項目のツールヒントを確認します。 検索することも、**凡例**に各アイコンの意味について説明します。
+   項目に関する詳細情報を取得するには、上にマウス ポインターを移動し、項目のツールヒントを確認します。 検索することも、**凡例**に各アイコンの意味について説明します。
 
-     ![呼び出し履歴コード マップのアイコンの意味](../debugger/media/debuggermap_showlegend.png)
+   ![呼び出し履歴コード マップのアイコンの意味](../debugger/media/debuggermap_showlegend.png)
 
- 参照トピック
+  参照トピック
 
--   [呼び出し履歴でマップします。](#MapStack)
+- [呼び出し履歴でマップします。](#MapStack)
 
--   [コードに関するメモを作成します。](#MakeNotes)
+- [コードに関するメモを作成します。](#MakeNotes)
 
--   [次の呼び出し履歴でマップを更新](#UpdateMap)
+- [次の呼び出し履歴でマップを更新](#UpdateMap)
 
--   [マップに関連するコードを追加します。](#AddRelatedCode)
+- [マップに関連するコードを追加します。](#AddRelatedCode)
 
--   [マップを使用してバグを見つける](#FindBugs)
+- [マップを使用してバグを見つける](#FindBugs)
 
 ## <a name="see-also"></a>関連項目
 

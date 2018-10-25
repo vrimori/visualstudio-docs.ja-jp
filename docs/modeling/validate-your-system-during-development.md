@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b3c0c17da3bd5b83260556a7762733924cfe276c
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: e7a8ff8ac2de47e9f4d52e44f61ea4ec99f7d87f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283627"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907301"
 ---
 # <a name="validate-your-system-during-development"></a>開発時のシステムの検証
 Visual Studio を使用すると、ソフトウェアがユーザーの要件とシステムのアーキテクチャに合致した状態を維持することができます。
@@ -27,14 +27,14 @@ Visual Studio を使用すると、ソフトウェアがユーザーの要件と
  ソフトウェアを検証するには、次のタスクを使用します。
 
 |**タスク**|**関連するトピック**|
-|---------------|---------------------------|
+|-|-|
 |**ソフトウェアがユーザーの要件を満たしているか確認する**:<br /><br /> システムとそのコンポーネントのテストを編成する際に、要件モデルとアーキテクチャ モデルを使用できます。 こうすることで、ユーザーやその他の利害関係者にとって重要な要求をテストしやすくなり、要求が変更された場合にすばやくテストを更新することができます。|-   [モデルからテストを開発します。](../modeling/develop-tests-from-a-model.md)|
 |**ソフトウェアが、意図されたシステム設計に合致した状態を保っているか確認する:**<br /><br /> 依存関係図には、アプリケーションのコンポーネント間で必要な依存関係について説明します。 開発中に、コード内の実際の依存関係が、意図された設計に準拠しているか検証できます。|-   [コードから依存関係図を作成します。](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [依存関係図を使用したコードを検証します。](../modeling/validate-code-with-layer-diagrams.md)|
 
 ## <a name="external-resources"></a>外部リソース
 
 |**カテゴリ**|**リンク**|
-|------------------|---------------|
+|-|-|
 |**ビデオ**|![ビデオへのリンク](../data-tools/media/playvideo.gif) [Channel 9: Doug 7: コードの理解と Visual Studio 2010 のシステムの設計](http://go.microsoft.com/fwlink/?LinkId=216100)<br /><br /> ![ビデオへのリンク](../data-tools/media/playvideo.gif) [Channel 9: 依存関係図を使用してアプリケーションの設計](http://go.microsoft.com/fwlink/?LinkID=201117)<br /><br /> ![ビデオへのリンク](../data-tools/media/playvideo.gif) [MSDN How Do I シリーズ: 依存関係図を使用してコードを検証する方法](http://go.microsoft.com/fwlink/?LinkID=214405)|
 |**フォーラム**|-   [Visual Studio の視覚化ツールとモデリング ツール](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio の視覚化ツールとモデリング SDK (DSL ツール)](http://go.microsoft.com/fwlink/?LinkId=184721)|
 |**ブログ**|-   [Microsoft の DevOps](https://blogs.msdn.microsoft.com/devops/)|

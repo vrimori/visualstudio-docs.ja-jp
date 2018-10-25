@@ -22,12 +22,12 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bc4da4df18c2a214372ec6ea67865c10c507677e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 8631d10d56a35f8cf4ef6024d087bf94ec89b9d9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49296011"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845733"
 ---
 # <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>方法 : プロジェクト ファイルの名前または場所を参照する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,15 +40,15 @@ ms.locfileid: "49296011"
   
 #### <a name="to-use-the-msbuildprojectname-property"></a>MSBuildProjectName プロパティを使用するには  
   
--   他のすべてのプロパティの場合と同様に、$() 表記でプロジェクト ファイルのプロパティを参照します。 例えば:  
+- 他のすべてのプロパティの場合と同様に、$() 表記でプロジェクト ファイルのプロパティを参照します。 例えば:  
   
-    ```  
-    <CSC Sources = "@(CSFile)"   
-        OutputAssembly = "$(MSBuildProjectName).exe"/>  
-    </CSC>  
-    ```  
+  ```  
+  <CSC Sources = "@(CSFile)"   
+      OutputAssembly = "$(MSBuildProjectName).exe"/>  
+  </CSC>  
+  ```  
   
- 予約済みのプロパティを使用する利点は、プロジェクト ファイル名への変更がすべて自動的に組み込まれることです。 次回プロジェクトをビルドするとき、出力ファイルに新しい名前が付けられ、追加の操作は必要ありません。  
+  予約済みのプロパティを使用する利点は、プロジェクト ファイル名への変更がすべて自動的に組み込まれることです。 次回プロジェクトをビルドするとき、出力ファイルに新しい名前が付けられ、追加の操作は必要ありません。  
   
 > [!NOTE]
 >  予約済みのプロパティは、プロジェクト ファイルで再定義できません。  

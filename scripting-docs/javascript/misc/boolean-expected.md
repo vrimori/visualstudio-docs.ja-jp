@@ -1,5 +1,5 @@
 ---
-title: ブール値を期待 |Microsoft ドキュメント
+title: ブール値が必要です |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,28 +20,29 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 600ab26f60c2196ebc682adcffcd6b24c23cd358
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: cb8ec8f7244b98cfa628794b485859dbec611c19
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633222"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868093"
 ---
 # <a name="boolean-expected"></a>ブール値が必要です。
-呼び出そうとした、 **Boolean.prototype.toString**または**Boolean.prototype.valueOf**メソッド以外の型のオブジェクトを`Boolean`です。 この呼び出し元のオブジェクト型でなければなりません`Boolean`です。 例:  
-  
-```JavaScript  
-var o = new Object;  
-o.f = Boolean.prototype.toString;  
-o.f();  
-```  
-  
-### <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
--   ブール値を呼び出すだけ **. prototype.toString**または**Boolean.prototype.valueOf**型のオブジェクトに対するメソッド**ブール値。**  
-  
-## <a name="see-also"></a>関連項目  
- [Boolean オブジェクト](../../javascript/reference/boolean-object-javascript.md)   
- [データ型](../../javascript/data-types-javascript.md)   
- [プログラム フローの制御](../../javascript/controlling-program-flow-javascript.md)   
- [データのコピー、受け渡し、および比較](../../javascript/advanced/copying-passing-and-comparing-data-javascript.md)
+呼び出そうとしたか、 **Boolean.prototype.toString**または**Boolean.prototype.valueOf**メソッド以外の型のオブジェクトを`Boolean`します。 呼び出し元のオブジェクト型でなければなりません`Boolean`します。 例えば:
+
+```JavaScript
+var o = new Object;
+o.f = Boolean.prototype.toString;
+o.f();
+```
+
+## <a name="to-correct-this-error"></a>このエラーを解決するには
+
+- のみを呼び出す、 **Boolean.prototype.toString**または**Boolean.prototype.valueOf**型のオブジェクトに対するメソッド**ブール値。**
+
+## <a name="see-also"></a>関連項目
+
+- [Boolean オブジェクト](../../javascript/reference/boolean-object-javascript.md)
+- [データの種類](../../javascript/data-types-javascript.md)
+- [プログラム フローの制御](../../javascript/controlling-program-flow-javascript.md)
+- [データのコピー、受け渡し、および比較](../../javascript/advanced/copying-passing-and-comparing-data-javascript.md)

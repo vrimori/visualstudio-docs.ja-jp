@@ -12,12 +12,12 @@ caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 847f37d14743ae45efc273e8ac0b9f6d68b83e3e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6fa8f027fbb3418fff47b0459628afb691c8a05a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49204339"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893677"
 ---
 # <a name="t4-import-directive"></a>T4 インポート ディレクティブ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,15 +45,15 @@ The file contains: <#=  fileContent #>
 ## <a name="standard-imports"></a>標準インポート  
  次の名前空間は自動的にインポートされるので、この名前空間のインポート ディレクティブを記述する必要はありません。  
   
--   `System`  
+- `System`  
   
- また、カスタム ディレクティブを使用する場合は、ディレクティブ プロセッサによって一部の名前空間が自動的にインポートされます。  
+  また、カスタム ディレクティブを使用する場合は、ディレクティブ プロセッサによって一部の名前空間が自動的にインポートされます。  
   
- たとえば、ドメイン固有言語 (DSL) のテンプレートを作成する場合、次の名前空間のインポート ディレクティブを記述する必要はありません。  
+  たとえば、ドメイン固有言語 (DSL) のテンプレートを作成する場合、次の名前空間のインポート ディレクティブを記述する必要はありません。  
   
--   `Microsoft.VisualStudio.Modeling`  
+- `Microsoft.VisualStudio.Modeling`  
   
--   DSL の名前空間  
+- DSL の名前空間  
   
 ## <a name="see-also"></a>関連項目  
  [T4 アセンブリ ディレクティブ](../modeling/t4-assembly-directive.md)

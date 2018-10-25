@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 808cd12386e6bf0431c3786f7afd89ecd38af372
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: 320ba112303b0f3fc6c076fbd6be7068c83cf27f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46496000"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880586"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft ヘルプ ビューアー SDK
 この記事には、Visual Studio ヘルプ ビューアーのインテグレーターの次のタスクが含まれています。  
@@ -266,107 +266,107 @@ some F# code
 </div>  
 </body>  
 </html>  
-  
 ```  
-  
+
 **F1 サポート**  
-  
+
 Visual Studio で、f1 キーを選択すると、IDE 内でカーソルの位置から指定された値を生成し、入力します「プロパティ バッグ」と指定された値 (カーソル位置に基づきます。 カーソルが機能 x の上にあるときは、機能 x はアクティブ/にフォーカスし、値を持つプロパティ バッグを入力します。  F1 キーを選択すると、プロパティ バッグが設定され、顧客の既定のヘルプ ソースがローカルまたはオンラインかどうかを次のコードを Visual Studio の F1 (オンラインの既定値)、ユーザーの設定に基づく適切な文字列を作成し (オンラインは、既定値)、シェルの実行(ヘルプ管理者ガイド exe の起動パラメーターを参照してください)、ローカルのヘルプ ビューアーとローカルのヘルプが既定値、またはパラメーター リストでキーワードを使って MSDN URL の場合は、プロパティ バッグからキーワードのパラメーターを使用します。  
-  
+
 複数値の文字列として実行する最初の用語では、参照、ヒットのと呼ばれる場合は、f1 キーを 3 つの文字列が返されるかどうかが見つかると、完了です。ない場合は、次の文字列に移動します。  順序は重要です。 複数値キーワードのプレゼンテーションを最も短い文字列の最大長の文字列があります。  複数値キーワードの場合は、これを確認するには、オンラインの F1 URL の文字列は、選択したキーワードが含まれますで確認できます。  
-  
+
 Visual Studio 2012 で意図的に行いましたより強力な除算オンラインとオフラインの間でオンラインの場合、ユーザーの設定は、単に渡すように F1 要求、クエリのオンライン サービスに直接ヘルプ ライブラリ エージェントを介してルーティングするのではなく、MSDN にVisual Studio 2010 にありました。 後の状態に依存して"インストールされている仕入先のコンテンツ = true"をそのコンテキストで異なる処理を実行するかどうかを判断します。 True の場合、お客様のサポートを希望に応じて、この解析およびルーティング ロジックを実行します。 False の場合、し、ここに移動する MSDN です。 ユーザーの設定は、ローカルには、し、すべての呼び出しをしてください、ローカル ヘルプのエンジンです。  
-  
+
 F1 フロー ダイアグラム:  
-  
+
 ![F1 フロー](../../extensibility/internals/media/f1flow.png "F1flow")  
-  
+
 ヘルプ ビューアーの既定のヘルプ コンテンツ ソースをオンライン (ブラウザーで起動) を設定するとします。  
-  
+
 -   Visual Studio パートナー (VSP) 機能は、F1 プロパティ バッグ (プロパティ バッグ prefix.keyword と、レジストリで見つかったプリフィックスの online の URL) に値を出力: F1 VSP URL + パラメーターをブラウザーに送信します。  
-  
+
 -   Visual Studio の機能 (言語のエディター、Visual Studio の特定のメニュー項目など): F1 は、Visual Studio の URL をブラウザーに送信します。  
-  
+
 ヘルプ ビューアーの既定のヘルプ コンテンツ ソースをローカルのヘルプ (ヘルプ ビューアーで起動) を設定すると。  
-  
+
 -   F1 プロパティ バッグとローカル ストアのインデックス間のキーワードの一致する VSP 機能 (プロパティ バッグ prefix.keyword は、ローカル ストアのインデックス内で見つかった値を =): F1 ヘルプ ビューアーでトピックを表示します。  
-  
+
 -   Visual Studio の機能 (Visual Studio の機能から生成されたプロパティ バッグをオーバーライドする VSP のオプションはありません): F1 ヘルプ ビューアーでの Visual Studio のトピックを表示します。  
-  
+
 ヘルプ コンテンツの仕入先の F1 フォールバックを有効にするのには、次のレジストリ値を設定します。 フォールバックの F1 ヘルプ ビューアーがオンラインでの F1 ヘルプ コンテンツを検索する設定を仕入先のコンテンツをローカル ユーザーのハード ドライブにインストールを意味します。 場合でも、オンライン ヘルプの既定の設定は、ローカル ヘルプ コンテンツのヘルプ ビューアーになります。  
-  
-1.  設定、 **VendorContent** 2.3 のヘルプのレジストリ キー値。  
-  
-    -   32 ビット オペレーティング システム。  
-  
-         HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Catalogs\VisualStudio15  
-  
-         "VendorContent"= dword:00000001  
-  
-    -   64 ビット オペレーティング システム。  
-  
-         HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15  
-  
-         "VendorContent"= dword:00000001  
-  
-2.  2.3 のヘルプのレジストリ キーの下のパートナーの名前空間を登録します。  
-  
-    -   32 ビット オペレーティング システム。  
-  
-         HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Partner*\\< 名前空間\>*  
-  
-         「場所"=」オフライン"  
-  
-    -   64 ビット オペレーティング システム。  
-  
-         HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Partner*\\< 名前空間\>*  
-  
-         「場所"=」オフライン"  
-  
+
+1. 設定、 **VendorContent** 2.3 のヘルプのレジストリ キー値。  
+
+   -   32 ビット オペレーティング システム。  
+
+        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Catalogs\VisualStudio15  
+
+        "VendorContent"= dword:00000001  
+
+   -   64 ビット オペレーティング システム。  
+
+        HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15  
+
+        "VendorContent"= dword:00000001  
+
+2. 2.3 のヘルプのレジストリ キーの下のパートナーの名前空間を登録します。  
+
+   - 32 ビット オペレーティング システム。  
+
+      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Partner<em>\\< 名前空間\></em>  
+
+      「場所"=」オフライン"  
+
+   - 64 ビット オペレーティング システム。  
+
+      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Partner<em>\\< 名前空間\></em>  
+
+      「場所"=」オフライン"  
+
 **解析する基本のネイティブ Namespace**  
-  
+
 ネイティブのベース名前空間の解析を有効にするレジストリに新しい DWORD して追加の名前: BaseNativeNamespaces 1 (をサポートする、カタログ キー) の下にその値を設定します。  たとえば、Visual Studio のカタログを使用する場合は、パスにキーを追加できます。  
-  
+
 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15
-  
+
 ヘッダー/メソッドが検出された形式で、F1 キーワード、ときの '/' 文字は次の構成体は、その結果、解析されます。  
-  
+
 -   ヘッダー: は、レジストリに登録するために使用する名前空間になります  
-  
+
 -   方法: このなりますを介して渡されたキーワード。  
-  
+
 たとえば、CustomLibrary と呼ばれるカスタム ライブラリと、f1 キーを要求を受け取ったこととして書式設定するときに、MyTestMethod に呼び出されるメソッドを指定`CustomLibrary/MyTestMethod`します。  
-  
+
 ユーザーがパートナー hive では、下の名前空間として CustomLibrary を登録し、および状況が該当する任意の場所のキーを指定でき、クエリに渡されるキーワード MyTestMethod になります。  
-  
+
 **デバッグ ツール、IDE のヘルプを有効にします。**  
-  
+
 次のレジストリ キーと値を追加します。  
-  
+
 HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Dynamic ヘルプ キー: 小売価格でのデバッグ出力を表示します [はい]。  
-  
+
 [ヘルプ] メニュー項目で、IDE で「ヘルプ コンテキストのデバッグ」を選択します。  
-  
+
 **コンテンツのメタデータ**  
-  
+
 次の表では、角かっこの間に表示される任意の文字列は認識されている値で置き換える必要があるプレース ホルダーです。 たとえば、\<メタ name="Microsoft.Help.Locale"コンテンツ =「[言語コード]」/>、「[言語コード]」をなどの値で置換する必要があります"en-米国"。  
+
   
-|プロパティ (HTML 形式)|説明|  
-|--------------------------------------|-----------------|  
-|\< メタ name="Microsoft.Help.Locale"内容 =「[言語コード]」/>|このトピックでは、ロケールを設定します。 トピックでは、このタグを使用する場合は、1 回だけ使用する必要がありには、他の Microsoft ヘルプのタグの上に挿入する必要があります。 このタグを使用しない場合、トピックの本文が指定されている場合、製品のロケールに関連付けられているワード ブレーカーを使用してインデックスが作成します。それ以外の場合、en-私たちのワード ブレーカーを使用します。 このタグは、ISOC RFC 4646 に準拠します。 Microsoft ヘルプが正しく動作することを確認するには、するには、一般的な言語属性の代わりにこのプロパティを使用します。|  
-|\< メタ name="Microsoft.Help.TopicLocale"内容 =「[言語コード]」/>|その他のロケールを使用しても、このトピックでは、ロケールを設定します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 カタログには、1 つ以上の言語でコンテンツが含まれている場合は、このタグを使用します。 カタログ内の複数のトピックでは、同じ ID を使用できますが、それぞれ一意 TopicLocale を指定する必要があります。 カタログのロケールに一致する TopicLocale を示すトピックでは、目次に表示されるトピックです。 ただし、トピックのすべての言語バージョンは、検索結果に表示されます。|  
-|\< タイトル > [Title]\</title >|このトピックのタイトルを指定します。 このタグが必要、トピックの 1 回だけ使用する必要があります。 トピックの本文にタイトルが含まれていないかどうかは\<div > とコンテンツのテーブルのトピックのセクションでは、このタイトルが表示されます。|  
-|\< メタデータ名 ="Microsoft.Help.Keywords"内容 ="[aKeywordPhrase]"/>|ヘルプ ビューアーのインデックスのウィンドウに表示されるリンクのテキストを指定します。 リンクがクリックされたときに、トピックが表示されます。トピックでは、複数のインデックス キーワードを指定するか、インデックスに表示するには、このトピックにリンクしたくない場合は、このタグを省略できます。 以前のバージョンのヘルプ キーワードを"K"は、このプロパティに変換できます。|  
-|\< メタ name="Microsoft.Help.Id"内容 ="[TopicID]"/>|このトピックの識別子を設定します。 このタグが必要、トピックの 1 回だけ使用する必要があります。 ID は、カタログを同じロケールの設定を持つトピックの間で一意である必要があります。 別のトピックでは、この ID を使用して、このトピックへのリンクを作成できます。|  
-|\< メタ name="Microsoft.Help.F1"content="[System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator]"/ >|このトピックでは、F1 キーワードを指定します。 トピックでは、複数の F1 キーワードを指定するか、アプリケーション ユーザーが f1 キーを押したときに表示するには、このトピックしたくない場合は、このタグを省略することができます。 通常は、トピックの 1 つだけの F1 キーワードを指定します。 以前のバージョンのヘルプ キーワードを"F"は、このプロパティに変換できます。|  
-|\< メタデータ名"Description"のコンテンツを = =「[トピックの説明]」/>|このトピックの内容の簡単な概要を提供します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 このプロパティは、クエリ ライブラリによって直接アクセスします。インデックス ファイルには格納されません。|  
- メタ name="Microsoft.Help.TocParent"内容 ="[parent_Id]"/>|このトピックの親トピックの目次を指定します。 このタグが必要、トピックの 1 回だけ使用する必要があります。 値は、親の Microsoft.Help.Id です。 トピックには、コンテンツのテーブルの 1 つの場所を持つことができます。 「-1」では、目次のルートのトピックの「ID をと見なされます。 [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]、そのページは、ヘルプ ビューアー ホーム ページ。 これは、同様の理由が表示されること上部にあるレベルを確認するいくつかのトピックを具体的には TocParent = 1 を追加します。ヘルプ ビューアーのホーム ページは、システム ページと置き換え可能なためです。 コンテンツのセットに加わることがありますが、ヘルプ ビューアーのシステム ページのヘルプ ビューアー ホームを常に使用する場合、VSP が-1 の ID を持つページを追加しようとすると、|  
-|\< メタ name="Microsoft.Help.TocOrder"内容 =「[正の整数]」/>|目次の内容でこのトピックが表示される場所のピアのトピックを基準を指定します。 このタグが必要、トピックの 1 回だけ使用する必要があります。 値は、整数です。 トピックでは高い値の整数を指定します、小さい方の値の整数を指定するトピックが表示されます。|  
-|\< メタ name="Microsoft.Help.Product"内容 =「[製品コード]」/>|このトピックで説明する製品を指定します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 この情報は、ヘルプのインデクサーに渡されるパラメーターとしても指定することができます。|  
-|\< メタ name="Microsoft.Help.ProductVersion"内容 =「[バージョン番号]」/>|このトピックで説明する製品のバージョンを指定します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 この情報は、ヘルプのインデクサーに渡されるパラメーターとしても指定することができます。|  
-|\< メタ name="Microsoft.Help.Category"内容 ="[string]"/>|コンテンツのサブセクションを識別するために、製品で使用します。 トピックでは、複数のサブセクションを識別するまたは任意のサブセクションを識別するためにリンクしたくない場合は、このタグを省略できます。 このタグを使用して、以前のバージョンのヘルプからトピックが変換されるとき、TargetOS と TargetFrameworkMoniker 属性を格納します。 コンテンツの形式は、AttributeName:AttributeValue です。|  
-|\< メタ name="Microsoft.Help.TopicVersion コンテンツ ="[トピックの「バージョン番号]"/>|複数のバージョンがカタログに存在する場合は、このバージョンのトピックを指定します。 このタグはトピックの 1 つ以上のバージョンに存在する場合、カタログ、たとえば、カタログでは、.NET Framework 3.5 とトピックのトピックを含む、.NET Framework 4 のどちらも同じマイクロときに、必要なため、一意である Microsoft.Help.Id は限りませんが、します。ソフトです。Help.Id します。|  
-|\< メタデータ名"SelfBranded"コンテンツを = =「TRUE または FALSE」/>|ここでは、ヘルプ ライブラリ マネージャーのスタートアップのブランド パッケージまたはトピックに固有のブランド パッケージかどうかを指定します。 このタグは TRUE である必要がありますまたは FALSE。 場合は、関連するトピックのブランド パッケージは、ヘルプ ライブラリ マネージャーを開始するので、その他のコンテンツのレンダリングとは異なる場合でもを意図したとおり、トピックが表示されるときに設定されているブランド パッケージをオーバーライドし、TRUE になります。 FALSE の場合は、ヘルプ ライブラリ マネージャーの開始時に設定されているブランド パッケージに従って、現在のトピックが表示されます。 既定では、ヘルプ ライブラリ マネージャー前提を false に SelfBranded 変数が TRUE であると宣言されない限り自己ブランド化そのため、宣言する必要はない\<メタ名"SelfBranded"コンテンツを = ="FALSE"/>。|  
+| プロパティ (HTML 形式) | 説明 |
+| - | - |
+| \< メタ name="Microsoft.Help.Locale"内容 =「[言語コード]」/> | このトピックでは、ロケールを設定します。 トピックでは、このタグを使用する場合は、1 回だけ使用する必要がありには、他の Microsoft ヘルプのタグの上に挿入する必要があります。 このタグを使用しない場合、トピックの本文が指定されている場合、製品のロケールに関連付けられているワード ブレーカーを使用してインデックスが作成します。それ以外の場合、en-私たちのワード ブレーカーを使用します。 このタグは、ISOC RFC 4646 に準拠します。 Microsoft ヘルプが正しく動作することを確認するには、するには、一般的な言語属性の代わりにこのプロパティを使用します。 |
+| \< メタ name="Microsoft.Help.TopicLocale"内容 =「[言語コード]」/> | その他のロケールを使用しても、このトピックでは、ロケールを設定します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 カタログには、1 つ以上の言語でコンテンツが含まれている場合は、このタグを使用します。 カタログ内の複数のトピックでは、同じ ID を使用できますが、それぞれ一意 TopicLocale を指定する必要があります。 カタログのロケールに一致する TopicLocale を示すトピックでは、目次に表示されるトピックです。 ただし、トピックのすべての言語バージョンは、検索結果に表示されます。 |
+| \< タイトル > [Title]\</title > | このトピックのタイトルを指定します。 このタグが必要、トピックの 1 回だけ使用する必要があります。 トピックの本文にタイトルが含まれていないかどうかは\<div > とコンテンツのテーブルのトピックのセクションでは、このタイトルが表示されます。 |
+| \< メタデータ名 ="Microsoft.Help.Keywords"内容 ="[aKeywordPhrase]"/> | ヘルプ ビューアーのインデックスのウィンドウに表示されるリンクのテキストを指定します。 リンクがクリックされたときに、トピックが表示されます。トピックでは、複数のインデックス キーワードを指定するか、インデックスに表示するには、このトピックにリンクしたくない場合は、このタグを省略できます。 以前のバージョンのヘルプ キーワードを"K"は、このプロパティに変換できます。 |
+| \< メタ name="Microsoft.Help.Id"内容 ="[TopicID]"/> | このトピックの識別子を設定します。 このタグが必要、トピックの 1 回だけ使用する必要があります。 ID は、カタログを同じロケールの設定を持つトピックの間で一意である必要があります。 別のトピックでは、この ID を使用して、このトピックへのリンクを作成できます。 |
+| \< メタ name="Microsoft.Help.F1"content="[System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator]"/ > | このトピックでは、F1 キーワードを指定します。 トピックでは、複数の F1 キーワードを指定するか、アプリケーション ユーザーが f1 キーを押したときに表示するには、このトピックしたくない場合は、このタグを省略することができます。 通常は、トピックの 1 つだけの F1 キーワードを指定します。 以前のバージョンのヘルプ キーワードを"F"は、このプロパティに変換できます。 |
+| \< メタデータ名"Description"のコンテンツを = =「[トピックの説明]」/> | このトピックの内容の簡単な概要を提供します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 このプロパティは、クエリ ライブラリによって直接アクセスします。インデックス ファイルには格納されません。 |
+| メタ name="Microsoft.Help.TocParent"内容 ="[parent_Id]"/> | このトピックの親トピックの目次を指定します。 このタグが必要、トピックの 1 回だけ使用する必要があります。 値は、親の Microsoft.Help.Id です。 トピックには、コンテンツのテーブルの 1 つの場所を持つことができます。 「-1」では、目次のルートのトピックの「ID をと見なされます。 [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]、そのページは、ヘルプ ビューアー ホーム ページ。 これは、同様の理由が表示されること上部にあるレベルを確認するいくつかのトピックを具体的には TocParent = 1 を追加します。ヘルプ ビューアーのホーム ページは、システム ページと置き換え可能なためです。 コンテンツのセットに加わることがありますが、ヘルプ ビューアーのシステム ページのヘルプ ビューアー ホームを常に使用する場合、VSP が-1 の ID を持つページを追加しようとすると、 |
+| \< メタ name="Microsoft.Help.TocOrder"内容 =「[正の整数]」/> | 目次の内容でこのトピックが表示される場所のピアのトピックを基準を指定します。 このタグが必要、トピックの 1 回だけ使用する必要があります。 値は、整数です。 トピックでは高い値の整数を指定します、小さい方の値の整数を指定するトピックが表示されます。 |
+| \< メタ name="Microsoft.Help.Product"内容 =「[製品コード]」/> | このトピックで説明する製品を指定します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 この情報は、ヘルプのインデクサーに渡されるパラメーターとしても指定することができます。 |
+| \< メタ name="Microsoft.Help.ProductVersion"内容 =「[バージョン番号]」/> | このトピックで説明する製品のバージョンを指定します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 この情報は、ヘルプのインデクサーに渡されるパラメーターとしても指定することができます。 |
+| \< メタ name="Microsoft.Help.Category"内容 ="[string]"/> | コンテンツのサブセクションを識別するために、製品で使用します。 トピックでは、複数のサブセクションを識別するまたは任意のサブセクションを識別するためにリンクしたくない場合は、このタグを省略できます。 このタグを使用して、以前のバージョンのヘルプからトピックが変換されるとき、TargetOS と TargetFrameworkMoniker 属性を格納します。 コンテンツの形式は、AttributeName:AttributeValue です。 |
+| \< メタ name="Microsoft.Help.TopicVersion コンテンツ ="[トピックの「バージョン番号]"/> | 複数のバージョンがカタログに存在する場合は、このバージョンのトピックを指定します。 このタグはトピックの 1 つ以上のバージョンに存在する場合、カタログ、たとえば、カタログでは、.NET Framework 3.5 とトピックのトピックを含む、.NET Framework 4 のどちらも同じマイクロときに、必要なため、一意である Microsoft.Help.Id は限りませんが、します。ソフトです。Help.Id します。 |
+| \< メタデータ名"SelfBranded"コンテンツを = =「TRUE または FALSE」/> | ここでは、ヘルプ ライブラリ マネージャーのスタートアップのブランド パッケージまたはトピックに固有のブランド パッケージかどうかを指定します。 このタグは TRUE である必要がありますまたは FALSE。 場合は、関連するトピックのブランド パッケージは、ヘルプ ライブラリ マネージャーを開始するので、その他のコンテンツのレンダリングとは異なる場合でもを意図したとおり、トピックが表示されるときに設定されているブランド パッケージをオーバーライドし、TRUE になります。 FALSE の場合は、ヘルプ ライブラリ マネージャーの開始時に設定されているブランド パッケージに従って、現在のトピックが表示されます。 既定では、ヘルプ ライブラリ マネージャー前提を false に SelfBranded 変数が TRUE であると宣言されない限り自己ブランド化そのため、宣言する必要はない\<メタ名"SelfBranded"コンテンツを = ="FALSE"/>。 |
   
 ### <a name="creating-a-branding-package"></a>ブランド パッケージを作成します。  
 Visual Studio のリリースには、Visual Studio パートナーの統合シェルと分離を含む別の Visual Studio 製品数が含まれます。  各製品には、ある程度のサポート、製品に固有のブランド化トピック ベースのヘルプ コンテンツが必要です。  たとえば、Visual Studio のトピックが必要です、一貫性のあるブランド プレゼンテーション ISO シェルをラップする SQL Studio は、独自固有のヘルプ コンテンツのブランド化の各トピックが必要です。  統合の Shell パートナーは、ブランド化、独自のトピックを維持しながら Visual Studio 製品のヘルプ コンテンツの親内に、ヘルプ トピックを必要があります。  
@@ -435,88 +435,89 @@ Branding.xml ファイルには、一貫してトピックが含まれている�
   
 **Branding.xml**  
   
-|||  
-|-|-|  
-|機能:|**CollapsibleArea**|  
-|使用:|折りたたまれてコンテンツ コントロールのテキストを展開します。|  
-|**要素**|**[値]**|  
-|ExpandText|Expand|  
-|CollapseText|折りたたむ|  
-|機能:|**CodeSnippet**|  
-|使用:|コード スニペットのコントロールのテキスト。  注:「改行」領域でのコード スニペットのコンテンツは、スペースに変更されます。|  
-|**要素**|**[値]**|  
-|CopyToClipboard|クリップボードにコピー|  
-|ViewColorizedText|色付きテキストで表示|  
-|CombinedVBTabDisplayLanguage|Visual Basic (サンプル)|  
-|VBDeclaration|宣言|  
-|VBUsage|使用法|  
-|機能:|**フィードバック、フッター、およびロゴ**|  
-|使用:|電子メールを使用して現在のトピックに関するフィードバックを提供する顧客のフィードバック コントロールを提供します。  コンテンツの著作権テキスト。  ロゴの定義。|  
-|**要素**|**値 (これらの文字列はコンテンツの導入者のニーズを満たすために変更できます)。**|  
-|著作権情報|© 2013 Microsoft Corporation. All rights reserved.|  
-|SendFeedback|\<a ="{0}" {1}> フィードバックの送信\</a > を Microsoft には、このトピックでします。|  
-|FeedbackLink||  
-|LogoTitle|[!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]|  
-|LogoFileName|vs_logo_bk.gif|  
-|LogoFileNameHC|vs_logo_wh.gif|  
-|機能:|**免責事項**|  
-|使用:|一連のマシンのケースに関する免責事項に翻訳されたコンテンツを指定します。|  
-|**要素**|**[値]**|  
-|MT_Editable|この記事では、機械翻訳されたものでした。 インターネット接続があれば、同時に元の英語コンテンツを編集可能モードでこのページを表示する「このトピックをオンラインでの表示」を選択します。|  
-|MT_NonEditable|この記事では、機械翻訳されたものでした。 インターネット接続があれば、同時に元の英語コンテンツを編集可能モードでこのページを表示する「このトピックをオンラインでの表示」を選択します。|  
-|MT_QualityEditable|この記事では手動翻訳されたものです。 インターネット接続があれば、同時に元の英語コンテンツを編集可能モードでこのページを表示する「このトピックをオンラインでの表示」を選択します。|  
-|MT_QualityNonEditable|この記事では手動翻訳されたものです。 インターネット接続があれば、同時に元の英語コンテンツを編集可能モードでこのページを表示する「このトピックをオンラインでの表示」を選択します。|  
-|MT_BetaContents|この記事では、機械翻訳、暫定版用でした。 インターネット接続があれば、同時に元の英語コンテンツを編集可能モードでこのページを表示する「このトピックをオンラインでの表示」を選択します。|  
-|MT_BetaRecycledContents|この記事では、暫定版用手動翻訳されたものです。 インターネット接続があれば、同時に元の英語コンテンツを編集可能モードでこのページを表示する「このトピックをオンラインでの表示」を選択します。|  
-|機能:|**LinkTable**|  
-|使用:|オンラインのトピックへのリンクのサポート|  
-|**要素**|**[値]**|  
-|LinkTableTitle|リンク テーブル|  
-|TopicEnuLinkText|英語版が表示\</a > のこのトピックでは、コンピューターで使用します。|  
-|TopicOnlineLinkText|このトピックを表示\<、href ="{0}" {1}> オンライン\</a >|  
-|OnlineText|Online|  
-|機能:|**ビデオのオーディオ コントロール**|  
-|使用:|要素およびビデオ コンテンツのテキストを表示します。|  
-|**要素**|**[値]**|  
-|MultiMediaNotSupported|サポートするには、Internet Explorer 9 またはインストール中に大きくする必要があります。{0}コンテンツ。|  
-|VideoText|ビデオの表示|  
-|AudioText|オーディオのストリーミング|  
-|OnlineVideoLinkText|\<p > このトピックに関連付けられているビデオを表示するには、次のようにクリックします{0} \<、href ="{1}">{2}ここ\</a >。\< 。/p >|  
-|OnlineAudioLinkText|\<p > をクリックすると、このトピックに関連付けられているオーディオを聴く{0} \<、href ="{1}">{2}ここ\</a >.\</p >|  
-|機能:|**コンテンツのインストールされていないコントロール**|  
-|使用:|Contentnotinstalled.htm のレンダリングに使用するテキスト要素 (文字列)|  
-|**要素**|**[値]**|  
-|ContentNotInstalledTitle|コンピューターにコンテンツが見つかりませんでした。|  
-|ContentNotInstalledDownloadContentText|\<p >、コンピューターにコンテンツをダウンロードする\<、href ="{0}" {1}>、[管理] タブをクリックします\</a >。\< 。/p >|  
-|ContentNotInstalledText|\<p > お使いのコンピューターにコンテンツがインストールされていません。 ローカル ヘルプ コンテンツのインストールは、管理者を参照してください。\</p >|  
-|機能:|**トピックが見つかりません。 コントロール**|  
-|使用:|Topicnotfound.htm のレンダリングに使用するテキスト要素 (文字列)|  
-|**要素**|**[値]**|  
-|TopicNotFoundTitle|コンピューターには、要求されたトピックを見つけることができません。|  
-|TopicNotFoundViewOnlineText|\<p > 要求されたトピックは、コンピューターにありませんでしたが\<、href ="{0}" {1}> オンライン トピックを参照して\</a >.\</p >|  
-|TopicNotFoundDownloadContentText|\<p > と同様のトピックへのリンクのナビゲーション ウィンドウを参照してくださいまたは\<a ="{0}" {1}>、[管理] タブをクリックします。\</a > をコンピューターにコンテンツをダウンロードする。\< 。/p >|  
-|TopicNotFoundText|\<p > 要求されたトピックがコンピューターに見つかりませんでした。\</p >|  
-|機能:|**トピックには、コントロールが破損しています**|  
-|使用:|Topiccorrupted.htm のレンダリングに使用するテキスト要素 (文字列)|  
-|**要素**|**[値]**|  
-|TopicCorruptedTitle|要求されたトピックを表示することができません。|  
-|TopicCorruptedViewOnlineText|\<p > ヘルプ ビューアーは、要求されたトピックを表示できません。 トピックのコンテンツまたは基になるシステム依存関係のエラーである可能性があります。\</p >|  
-|機能:|**ホーム ページのコントロール**|  
-|使用:|ヘルプ ビューアーの最上位ノードのコンテンツの表示をサポートしているテキスト。|  
-|**要素**|**[値]**|  
-|HomePageTitle|ヘルプ ビューアー ホーム|  
-|HomePageIntroduction|\<p > Microsoft ヘルプのビューアー、重要な Microsoft ツール、製品、テクノロジ、およびサービスを使用するすべての情報ソースへようこそ。 ヘルプ ビューアーでは、方法や参考情報、サンプル コード、技術記事、およびアクセスできます。 目次の内容の参照が必要なコンテンツを検索するには、フルテキスト検索を使用またはキーワード インデックスを使用してコンテンツを移動します。\</p >|  
-|HomePageContentInstallText|\<p >\<br/> 使用、 \<a ="{0}" {1}> コンテンツの管理\</a > に、次の操作 タブ:\<ul >\<li > お使いのコンピューターにコンテンツを追加します\<。/li >\<li > ローカル コンテンツへの更新プログラムを確認します\<。/li >\<li > お使いのコンピューターからコンテンツを削除します\<。/li >\</ul >\</p >|  
-|HomePageInstalledBooks|インストールされているブック|  
-|HomePageNoBooksInstalled|コンピューターにコンテンツが見つかりませんでした。|  
-|HomePageHelpSettings|ヘルプ コンテンツの設定|  
-|HomePageHelpSettingsText|\<p > 現在の設定は、ローカルのヘルプ。 ヘルプ ビューアーには、コンピューターにインストールされているコンテンツが表示されます。\<br/> Visual Studio のメニュー バーで、上のヘルプ コンテンツのソースを変更する\<span style ="{0}"> ヘルプ設定のため、\</span >.\<br/>\</p >|  
-|メガバイト数|MB|  
-  
+
+| | |
+| - | - |
+| 機能: | **CollapsibleArea** |
+| 使用: | 折りたたまれてコンテンツ コントロールのテキストを展開します。 |
+| **要素** | **[値]** |
+| ExpandText | Expand |
+| CollapseText | 折りたたむ |
+| 機能: | **CodeSnippet** |
+| 使用: | コード スニペットのコントロールのテキスト。  注:「改行」領域でのコード スニペットのコンテンツは、スペースに変更されます。 |
+| **要素** | **[値]** |
+| CopyToClipboard | クリップボードにコピー |
+| ViewColorizedText | 色付きテキストで表示 |
+| CombinedVBTabDisplayLanguage | Visual Basic (サンプル) |
+| VBDeclaration | 宣言 |
+| VBUsage | 使用法 |
+| 機能: | **フィードバック、フッター、およびロゴ** |
+| 使用: | 電子メールを使用して現在のトピックに関するフィードバックを提供する顧客のフィードバック コントロールを提供します。  コンテンツの著作権テキスト。  ロゴの定義。 |
+| **要素** | **値 (これらの文字列はコンテンツの導入者のニーズを満たすために変更できます)。** |
+| 著作権情報 | © 2013 Microsoft Corporation. All rights reserved. |
+| SendFeedback | \<a ="{0}" {1}> フィードバックの送信\</a > を Microsoft には、このトピックでします。 |
+| FeedbackLink | |
+| LogoTitle | [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] |
+| LogoFileName | vs_logo_bk.gif |
+| LogoFileNameHC | vs_logo_wh.gif |
+| 機能: | **免責事項** |
+| 使用: | 一連のマシンのケースに関する免責事項に翻訳されたコンテンツを指定します。 |
+| **要素** | **[値]** |
+| MT_Editable | この記事では、機械翻訳されたものでした。 インターネット接続があれば、同時に元の英語コンテンツを編集可能モードでこのページを表示する「このトピックをオンラインでの表示」を選択します。 |
+| MT_NonEditable | この記事では、機械翻訳されたものでした。 インターネット接続があれば、同時に元の英語コンテンツを編集可能モードでこのページを表示する「このトピックをオンラインでの表示」を選択します。 |
+| MT_QualityEditable | この記事では手動翻訳されたものです。 インターネット接続があれば、同時に元の英語コンテンツを編集可能モードでこのページを表示する「このトピックをオンラインでの表示」を選択します。 |
+| MT_QualityNonEditable | この記事では手動翻訳されたものです。 インターネット接続があれば、同時に元の英語コンテンツを編集可能モードでこのページを表示する「このトピックをオンラインでの表示」を選択します。 |
+| MT_BetaContents | この記事では、機械翻訳、暫定版用でした。 インターネット接続があれば、同時に元の英語コンテンツを編集可能モードでこのページを表示する「このトピックをオンラインでの表示」を選択します。 |
+| MT_BetaRecycledContents | この記事では、暫定版用手動翻訳されたものです。 インターネット接続があれば、同時に元の英語コンテンツを編集可能モードでこのページを表示する「このトピックをオンラインでの表示」を選択します。 |
+| 機能: | **LinkTable** |
+| 使用: | オンラインのトピックへのリンクのサポート |
+| **要素** | **[値]** |
+| LinkTableTitle | リンク テーブル |
+| TopicEnuLinkText | 英語版が表示\</a > のこのトピックでは、コンピューターで使用します。 |
+| TopicOnlineLinkText | このトピックを表示\<、href ="{0}" {1}> オンライン\</a > |
+| OnlineText | Online |
+| 機能: | **ビデオのオーディオ コントロール** |
+| 使用: | 要素およびビデオ コンテンツのテキストを表示します。 |
+| **要素** | **[値]** |
+| MultiMediaNotSupported | サポートするには、Internet Explorer 9 またはインストール中に大きくする必要があります。{0}コンテンツ。 |
+| VideoText | ビデオの表示 |
+| AudioText | オーディオのストリーミング |
+| OnlineVideoLinkText | \<p > このトピックに関連付けられているビデオを表示するには、次のようにクリックします{0} \<、href ="{1}">{2}ここ\</a >。\< 。/p > |
+| OnlineAudioLinkText | \<p > をクリックすると、このトピックに関連付けられているオーディオを聴く{0} \<、href ="{1}">{2}ここ\</a >.\</p > |
+| 機能: | **コンテンツのインストールされていないコントロール** |
+| 使用: | Contentnotinstalled.htm のレンダリングに使用するテキスト要素 (文字列) |
+| **要素** | **[値]** |
+| ContentNotInstalledTitle | コンピューターにコンテンツが見つかりませんでした。 |
+| ContentNotInstalledDownloadContentText | \<p >、コンピューターにコンテンツをダウンロードする\<、href ="{0}" {1}>、[管理] タブをクリックします\</a >。\< 。/p > |
+| ContentNotInstalledText | \<p > お使いのコンピューターにコンテンツがインストールされていません。 ローカル ヘルプ コンテンツのインストールは、管理者を参照してください。\</p > |
+| 機能: | **トピックが見つかりません。 コントロール** |
+| 使用: | Topicnotfound.htm のレンダリングに使用するテキスト要素 (文字列) |
+| **要素** | **[値]** |
+| TopicNotFoundTitle | コンピューターには、要求されたトピックを見つけることができません。 |
+| TopicNotFoundViewOnlineText | \<p > 要求されたトピックは、コンピューターにありませんでしたが\<、href ="{0}" {1}> オンライン トピックを参照して\</a >.\</p > |
+| TopicNotFoundDownloadContentText | \<p > と同様のトピックへのリンクのナビゲーション ウィンドウを参照してくださいまたは\<a ="{0}" {1}>、[管理] タブをクリックします。\</a > をコンピューターにコンテンツをダウンロードする。\< 。/p > |
+| TopicNotFoundText | \<p > 要求されたトピックがコンピューターに見つかりませんでした。\</p > |
+| 機能: | **トピックには、コントロールが破損しています** |
+| 使用: | Topiccorrupted.htm のレンダリングに使用するテキスト要素 (文字列) |
+| **要素** | **[値]** |
+| TopicCorruptedTitle | 要求されたトピックを表示することができません。 |
+| TopicCorruptedViewOnlineText | \<p > ヘルプ ビューアーは、要求されたトピックを表示できません。 トピックのコンテンツまたは基になるシステム依存関係のエラーである可能性があります。\</p > |
+| 機能: | **ホーム ページのコントロール** |
+| 使用: | ヘルプ ビューアーの最上位ノードのコンテンツの表示をサポートしているテキスト。 |
+| **要素** | **[値]** |
+| HomePageTitle | ヘルプ ビューアー ホーム |
+| HomePageIntroduction | \<p > Microsoft ヘルプのビューアー、重要な Microsoft ツール、製品、テクノロジ、およびサービスを使用するすべての情報ソースへようこそ。 ヘルプ ビューアーでは、方法や参考情報、サンプル コード、技術記事、およびアクセスできます。 目次の内容の参照が必要なコンテンツを検索するには、フルテキスト検索を使用またはキーワード インデックスを使用してコンテンツを移動します。\</p > |
+| HomePageContentInstallText | \<p >\<br/> 使用、 \<a ="{0}" {1}> コンテンツの管理\</a > に、次の操作 タブ:\<ul >\<li > お使いのコンピューターにコンテンツを追加します\<。/li >\<li > ローカル コンテンツへの更新プログラムを確認します\<。/li >\<li > お使いのコンピューターからコンテンツを削除します\<。/li >\</ul >\</p > |
+| HomePageInstalledBooks | インストールされているブック |
+| HomePageNoBooksInstalled | コンピューターにコンテンツが見つかりませんでした。 |
+| HomePageHelpSettings | ヘルプ コンテンツの設定 |
+| HomePageHelpSettingsText | \<p > 現在の設定は、ローカルのヘルプ。 ヘルプ ビューアーには、コンピューターにインストールされているコンテンツが表示されます。\<br/> Visual Studio のメニュー バーで、上のヘルプ コンテンツのソースを変更する\<span style ="{0}"> ヘルプ設定のため、\</span >.\<br/>\</p > |
+| メガバイト数 | MB |
+
 **branding.js**  
-  
+
 Branding.js ファイルには、Visual Studio ヘルプ ビューアーのブランド化要素で使用される JavaScript が含まれています。  ブランド化要素とサポートの JavaScript 関数の一覧を以下に示します。  このファイルをローカライズするすべての文字列は、このファイルの上部にある「ローカライズ可能な文字列」のセクションで定義されます。  Branding.js ファイル内の loc 文字列 ICL ファイルが作成されたことに注意してください。  
-  
+
 ||||  
 |-|-|-|  
 |**ブランド化機能**|**JavaScript 関数**|**説明**|  
@@ -549,11 +550,11 @@ Branding.js ファイルには、Visual Studio ヘルプ ビューアーのブ�
 ||styleRectify (styleName、styleValue)||  
 ||showCC(id)||  
 ||subtitle(id)||  
-  
+
 **HTM ファイル**  
-  
+
 ブランド パッケージには、一連シナリオをサポートするコンテンツのセットがインストールされている説明したセクションとトピックできないときにユーザーに示すページが含まれています、ホーム ページのヘルプ コンテンツのユーザーにキー情報を伝達する HTM ファイルにはが含まれています。ローカルの一連のトピックを記載されてください。 製品ごとにこれらの HTM ファイルを変更できることに注意してください。  ISO シェル ベンダーは、既定のブランド パッケージを実行し、動作とこれらのページの内容を変更 suite 必要性。  これらのファイルは、ブランド タグ branding.xml ファイルから対応するコンテンツを取得するために、それぞれブランド パッケージを参照してください。  
-  
+
 ||||  
 |-|-|-|  
 |**ファイル**|**使用**|**コンテンツ ソースの表示**|  
@@ -574,21 +575,21 @@ Branding.js ファイルには、Visual Studio ヘルプ ビューアーのブ�
 ||&LT; META_CONTENT_NOT_INSTALLED_TITLE_ADD/&GT;|Branding.xml、タグ\<ContentNotInstalledTitle >|  
 ||&LT; META_CONTENT_NOT_INSTALLED_ID_ADD/&GT;|Branding.xml、タグ\<ContentNotInstalledDownloadContentText >|  
 ||&LT; CONTENT_NOT_INSTALLED_SECTION_ADD/&GT;|Branding.xml、タグ\<ContentNotInstalledText >|  
-  
+
 **CSS ファイル**  
-  
+
 Visual Studio ヘルプ ビューアー ブランド パッケージには、一貫性のある Visual Studio ヘルプ コンテンツのプレゼンテーションをサポートするために 2 つの css ファイルが含まれています。  
-  
+
 -   Branding.css - には、場所を表示するための css 要素が含まれています SelfBranded = false。  
-  
+
 -   Printer.css - には、場所を表示するための css 要素が含まれています SelfBranded = false。  
-  
+
 Branding.css ファイルには、Visual Studio のトピックの「プレゼンテーションの定義にはが含まれています (注意点ありますが、Branding_ branding.css が含まれている\<ロケール > パッケージ サービスから .mshc が変わる可能性があります)。  
-  
+
 **グラフィック ファイル**  
-  
+
 Visual Studio コンテンツには、Visual Studio ロゴおよびその他のグラフィックスが表示されます。  Visual Studio ヘルプ ビューアーのブランド パッケージ内のグラフィック ファイルの完全な一覧は、以下に示します。  
-  
+
 ||||  
 |-|-|-|  
 |**ファイル**|**使用**|**例**|  
@@ -603,18 +604,18 @@ Visual Studio コンテンツには、Visual Studio ロゴおよびその他の�
 |ccOff.png|キャプションのグラフィック||  
 |ccOn.png|キャプションのグラフィック||  
 |ImageSprite.png|折りたたみ可能な領域を表示するために使用|展開または折りたたむグラフィック|  
-  
+
 ### <a name="deploying-a-set-of-topics"></a>トピックのセットを展開します。  
 これは、MSHA ファイルと cab ファイルのセットの構成設定、ヘルプ ビューアーのコンテンツ展開を作成するための非常にシンプルかつ簡単なチュートリアルまたは MSHC を含むトピック。 MSHA は、cab ファイルのセットを表す XML ファイルまたは MSHC ファイルです。 ヘルプ ビューアーは、(、コンテンツの一覧を取得する MSHA を読み取ることができます。CAB またはします。MSHC ファイル) のローカル インストールに使用できます。  
-  
+
 これは、非常に基本的な XML スキーマを記述する、ヘルプ ビューアー MSHA の入門書のみです。  この簡単な概要の下の実装例があることに注意してくださいし、HelpContentSetup.msha サンプルします。  
-  
+
 この入門書では、ため、MSHA の名前は HelpContentSetup.msha (ファイルの名前できます拡張子を持つもの。MSHA)。 HelpContentSetup.msha (次の例) は、cab ファイルまたは使用可能な MSHCs の一覧を含める必要があります。  (MSHA と CAB ファイルの種類の組み合わせをサポートしません) MSHA 内で一貫性のあるファイルの種類である必要がありますに注意してください。 各 CAB または MSHC あります、 \<div クラス =「パッケージ」>.\</div > (次の例を参照してください)。  
-  
+
 注: 次の実装の例で扱った、ブランド パッケージ。 これが、必要な Visual Studio のコンテンツの表示要素とコンテンツの動作を取得するためには、重要です。  
-  
+
 HelpContentSetup.msha ファイルのサンプル: (「コンテンツは、名前の 1 を設定」を置換し、"コンテンツ セット name 2" など、ファイル名)。  
-  
+
 ```html
 <html>  
 <head />  
@@ -636,7 +637,6 @@ HelpContentSetup.msha ファイルのサンプル: (「コンテンツは、名�
 <span class="deployed">True</span>  
 <a class="current-link"href=" Your_Company _Content_Set_2.mshc "> Your_Company _Content_Set_2.mshc </a>  
 </div>.  
-  
 ```  
   
 1.  "C:\SampleContent"のようなもののローカル フォルダーを作成します。  
@@ -703,11 +703,11 @@ HelpContentSetup.msha ファイルのサンプル: (「コンテンツは、名�
   
 分離シェル ベースのアプリケーションとそのヘルプを作成するための基本的な手順:  
   
-1.  取得、 [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] ISO Shell 再頒布可能パッケージ (Microsoft ダウンロード)。  
+1. 取得、 [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] ISO Shell 再頒布可能パッケージ (Microsoft ダウンロード)。  
   
-2.  Visual Studio で、ヘルプの拡張機能に基づいている Isolated Shell には、このチュートリアルの後半で説明されている Contoso ヘルプ拡張機能を作成します。  
+2. Visual Studio で、ヘルプの拡張機能に基づいている Isolated Shell には、このチュートリアルの後半で説明されている Contoso ヘルプ拡張機能を作成します。  
   
-3.  拡張機能と ISO Shell の MSI (アプリケーションのセットアップ) のデプロイに再頒布可能パッケージをラップします。 このチュートリアルでは、セットアップ手順は含まれません。  
+3. 拡張機能と ISO Shell の MSI (アプリケーションのセットアップ) のデプロイに再頒布可能パッケージをラップします。 このチュートリアルでは、セットアップ手順は含まれません。  
   
 Visual Studio のコンテンツ ストアを作成します。 統合シェルのシナリオで、次のように製品のカタログ名を Visual Studio12 を変更します。  
   
@@ -722,13 +722,13 @@ Visual Studio のコンテンツ ストアを作成します。 統合シェル�
   
 レジストリのコンテンツ ストアを定義します。 統合シェル VisualStudio15 を製品カタログの名前に変更します。  
   
--   HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15  
+- HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15  
   
-     キー: LocationPath 文字列の値: C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15\  
+   キー: LocationPath 文字列の値: C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15\  
   
--   HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15\en-US  
+- HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15\en-US  
   
-     キー: CatalogName 文字列の値:[!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]ドキュメント  
+   キー: CatalogName 文字列の値:[!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]ドキュメント  
   
 **プロジェクトの作成**  
   
@@ -772,42 +772,42 @@ Visual Studio のコンテンツ ストアを作成します。 統合シェル�
   
 展開されているかのようにテスト。  
   
-1.  コンピューターで、ダウンロードした ISO シェル、(上記) をインストールする Contoso を展開します。  
+1. コンピューターで、ダウンロードした ISO シェル、(上記) をインストールする Contoso を展開します。  
   
-2.  フォルダーを作成\\\Program Files (x86)\\、名前を付けます`Contoso`します。  
+2. フォルダーを作成\\\Program Files (x86)\\、名前を付けます`Contoso`します。  
   
-3.  ContosoHelpShell リリース フォルダーの内容をコピー \\\Program Files (x86) \Contoso\ フォルダー。  
+3. ContosoHelpShell リリース フォルダーの内容をコピー \\\Program Files (x86) \Contoso\ フォルダー。  
   
-4.  レジストリ エディターを選択して開始**実行**で、**開始**メニューと入力する`Regedit`します。 レジストリ エディターで次のように選択します。**ファイル**、し**インポート**します。 ContosoHelpShell プロジェクト フォルダーに移動します。 ContosoHelpShell サブフォルダーでは、ContosoHelpShell.reg を選択します。  
+4. レジストリ エディターを選択して開始**実行**で、**開始**メニューと入力する`Regedit`します。 レジストリ エディターで次のように選択します。**ファイル**、し**インポート**します。 ContosoHelpShell プロジェクト フォルダーに移動します。 ContosoHelpShell サブフォルダーでは、ContosoHelpShell.reg を選択します。  
   
-5.  コンテンツ ストアを作成します。  
+5. コンテンツ ストアを作成します。  
   
-     ISO shell - C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\ContosoDev12 Contoso コンテンツ ストアを作成します。  
+    ISO shell - C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\ContosoDev12 Contoso コンテンツ ストアを作成します。  
   
-     [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]統合シェル C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15 フォルダーを作成します。  
+    [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]統合シェル C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15 フォルダーを作成します。  
   
-6.  CatalogType.xml を作成し、格納されている (前の手順) のコンテンツ ストアに追加します。  
+6. CatalogType.xml を作成し、格納されている (前の手順) のコンテンツ ストアに追加します。  
   
-    ```  
-    <?xml version="1.0" encoding="UTF-8"?>  
-    <catalogType>UserManaged</catalogType>  
-    ```  
+   ```  
+   <?xml version="1.0" encoding="UTF-8"?>  
+   <catalogType>UserManaged</catalogType>  
+   ```  
   
-7.  次のレジストリ キーを追加します。  
+7. 次のレジストリ キーを追加します。  
   
-     HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15Key: LocationPath 文字列値。  
+    HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15Key: LocationPath 文字列値。  
   
-     ISO シェル。  
+    ISO シェル。  
   
-     C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15  
+    C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15  
   
-     [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] 統合シェル:  
+    [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] 統合シェル:  
   
-     C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15en-米国  
+    C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15en-米国  
   
-     キー: CatalogName 文字列の値:[!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]ドキュメント。 ISO シェルでは、これは、カタログの名前です。  
+    キー: CatalogName 文字列の値:[!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]ドキュメント。 ISO シェルでは、これは、カタログの名前です。  
   
-8.  (Cabs または MSHC および MSHA) コンテンツをローカル フォルダーにコピーします。  
+8. (Cabs または MSHC および MSHA) コンテンツをローカル フォルダーにコピーします。  
   
 9. 統合シェル コマンドラインの例のコンテンツ ストアをテストします。 ISO のシェルの製品と一致する適切なカタログと launchingApp の値を変更します。  
   

@@ -27,12 +27,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cb699b02723e88454f26f4b897cfd7ba3ff46592
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: 0bb8395d0e0a3b7d4295577cd86568cf15f0db3d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32425126"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49901191"
 ---
 # <a name="understand-build-configurations"></a>ビルド構成について
 
@@ -51,7 +51,7 @@ ms.locfileid: "32425126"
 
 > [!NOTE]
 > 新しいソリューション構成を定義して **[新しいプロジェクト構成を作成する]** チェック ボックスをオンにした場合、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、すべてのプロジェクトに新しい構成が自動的に割り当てられます。 同様に、新しいソリューション プラットフォームを定義して **[新しいプロジェクト プラットフォームを作成する]** チェック ボックスをオンにした場合、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、すべてのプロジェクトに新しいプラットフォームが自動的に割り当てられます。 また、新しいプラットフォームを対象とするプロジェクトを追加すると、Visual Studio により、そのプラットフォームがソリューション プラットフォームの一覧に追加され、すべてのプロジェクトに割り当てられます。
->
+> 
 > その場合も、各プロジェクトの設定は変更できます。
 
 アクティブなソリューション構成には、IDE 用にコンテキストを用意する役割もあります。 たとえば、プロジェクトでの作業中に、プロジェクトがモバイル デバイス用にビルドされるように構成で指定されていると、モバイル デバイス プロジェクトで使用できる項目のみが **[ツールボックス]** に表示されます。

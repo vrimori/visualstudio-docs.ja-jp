@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluationCompleteEvent2::GetResult |Microsoft ドキュメント
+title: IDebugExpressionEvaluationCompleteEvent2::GetResult |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 92496965fe463df4343d51b07819c073de163368
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 96db3f4ea63f4d1bca5bce725db272791361f934
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31111142"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920522"
 ---
 # <a name="idebugexpressionevaluationcompleteevent2getresult"></a>IDebugExpressionEvaluationCompleteEvent2::GetResult
 式の評価の結果を取得します。  
@@ -44,10 +44,10 @@ int GetResult(
  [out]返します、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)式の評価の結果を表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 返された[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)オブジェクトには、式の評価結果の値が含まれています。 この値は配列などの複雑な値である可能性がありますが、最終的な結果か必要があります、数値文字列をユーザーに表示される値に注意してください。  
+## <a name="remarks"></a>Remarks  
+ 返された[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)オブジェクトには、評価された式の値が含まれています。 この値は、配列など複雑な値である可能性がありますが、最終的な結果する必要がありますが、数値または文字列をユーザーに表示される値に注意してください。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)   

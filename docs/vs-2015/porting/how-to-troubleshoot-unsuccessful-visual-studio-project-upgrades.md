@@ -23,12 +23,12 @@ caps.latest.revision: 31
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 4a7ab025b4d0a89555ebb29c8cda2579eb9c455c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: c7dab8df520105aae1ba4168c675326ad588e603
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49176118"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911604"
 ---
 # <a name="how-to-troubleshoot-unsuccessful-visual-studio-project-upgrades"></a>方法: Visual Studio プロジェクトのアップグレードが成功しなかった場合のトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,13 +53,13 @@ Visual Studio が、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の旧バージ
   
 #### <a name="to-resolve-incorrect-references"></a>不適切な参照を解決するには  
   
-1.  プロジェクト ファイルをテキスト エディターで開きます。  
+1. プロジェクト ファイルをテキスト エディターで開きます。  
   
-2.  プロジェクトのプロパティを開きます。  
+2. プロジェクトのプロパティを開きます。  
   
-3.  適切な**ターゲット フレームワーク**値。 または、プロジェクト ファイルの `<TargetFrameworkVersion>` 要素の値を直接変更することもできます。  
+3. 適切な**ターゲット フレームワーク**値。 または、プロジェクト ファイルの `<TargetFrameworkVersion>` 要素の値を直接変更することもできます。  
   
- アップグレードされた [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] バージョンでプロジェクトを実行する場合は、そのプロジェクトの参照を更新し、参照を呼び出す `Imports` ステートメントまたは `Using` ステートメントも更新する必要があります。 使用して、参照を更新するには、IDE でプロジェクトが読み込まれると場合、**ソリューション エクスプ ローラー**または**参照マネージャー**  ダイアログ ボックス。  
+   アップグレードされた [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] バージョンでプロジェクトを実行する場合は、そのプロジェクトの参照を更新し、参照を呼び出す `Imports` ステートメントまたは `Using` ステートメントも更新する必要があります。 使用して、参照を更新するには、IDE でプロジェクトが読み込まれると場合、**ソリューション エクスプ ローラー**または**参照マネージャー**  ダイアログ ボックス。  
   
 ## <a name="see-also"></a>関連項目  
  [/アップグレード (devenv.exe)](../ide/reference/upgrade-devenv-exe.md)   

@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c4102decf844d70d85342aae9f140610102ff58
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 1e93e8ab84a751c447488e1b4dc6e3e6779b86b8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39077784"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49913282"
 ---
 # <a name="how-to-specify-a-support-url-for-individual-prerequisites-in-a-clickonce-deployment"></a>方法: ClickOnce 配置で個々 の必要条件のサポート URL を指定
 A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]数のクライアント コンピューターで使用する必要がある前提条件の展開をテストできます、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションを実行します。 これらの依存関係の必要な最小バージョンは含まれて、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]のバージョン、オペレーティング システムとすべてのアセンブリをグローバル アセンブリ キャッシュ (GAC) にプレインストールする必要があります。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]、ただし、インストールできませんこれらの前提条件のいずれか。前提条件が存在しない場合、インストールを中止し、インストールが失敗した理由を説明するダイアログ ボックスが表示されます。  
@@ -33,52 +33,52 @@ A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]数のクラ�
   
 ### <a name="specify-a-support-url-for-an-individual-prerequisite"></a>個々 の前提条件のサポート URL を指定します  
   
-1.  アプリケーション マニフェストを開きます (、 *.manifest*ファイル) の[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]テキスト エディターでアプリケーション。  
+1. アプリケーション マニフェストを開きます (、 *.manifest*ファイル) の[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]テキスト エディターでアプリケーション。  
   
-2.  オペレーティング システムの前提条件を追加、`supportUrl`属性を`dependentOS`要素。  
+2. オペレーティング システムの前提条件を追加、`supportUrl`属性を`dependentOS`要素。  
   
-    ```xml  
+   ```xml  
+    <dependency>  
+       <dependentOS supportUrl="http://www.adatum.com/MyApplication/wrongOSFound.htm">  
+         <osVersionInfo>  
+           <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" servicePackMinor="0" />  
+         </osVersionInfo>  
+       </dependentOS>  
+     </dependency>  
+   ```  
+  
+3. 共通言語ランタイムの特定のバージョンの前提条件を追加、`supportUrl`属性を`dependentAssembly`共通言語ランタイムの依存関係を示すエントリ。  
+  
+   ```xml  
      <dependency>  
-        <dependentOS supportUrl="http://www.adatum.com/MyApplication/wrongOSFound.htm">  
-          <osVersionInfo>  
-            <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" servicePackMinor="0" />  
-          </osVersionInfo>  
-        </dependentOS>  
-      </dependency>  
-    ```  
+       <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true" supportUrl=" http://www.adatum.com/MyApplication/wrongClrVersionFound.htm">  
+         <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />  
+       </dependentAssembly>  
+     </dependency>  
+   ```  
   
-3.  共通言語ランタイムの特定のバージョンの前提条件を追加、`supportUrl`属性を`dependentAssembly`共通言語ランタイムの依存関係を示すエントリ。  
+4. アセンブリをグローバル アセンブリ キャッシュにプレインストールする必要がありますの前提条件、設定、`supportUrl`の`dependentAssembly`必要なアセンブリを指定する要素。  
   
-    ```xml  
-      <dependency>  
-        <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true" supportUrl=" http://www.adatum.com/MyApplication/wrongClrVersionFound.htm">  
-          <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />  
-        </dependentAssembly>  
-      </dependency>  
-    ```  
+   ```xml  
+     <dependency>  
+       <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true" supportUrl=" http://www.adatum.com/MyApplication/missingSampleGACAssembly.htm">  
+         <assemblyIdentity name="SampleGACAssembly" version="5.0.0.0" publicKeyToken="04529dfb5da245c5" processorArchitecture="msil" language="neutral" />  
+       </dependentAssembly>  
+     </dependency>  
+   ```  
   
-4.  アセンブリをグローバル アセンブリ キャッシュにプレインストールする必要がありますの前提条件、設定、`supportUrl`の`dependentAssembly`必要なアセンブリを指定する要素。  
+5. 任意。 配置マニフェストを開いて、.NET Framework 4 を対象とするアプリケーション (、 *.application*ファイル) の[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]テキスト エディターでアプリケーション。  
   
-    ```xml  
-      <dependency>  
-        <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true" supportUrl=" http://www.adatum.com/MyApplication/missingSampleGACAssembly.htm">  
-          <assemblyIdentity name="SampleGACAssembly" version="5.0.0.0" publicKeyToken="04529dfb5da245c5" processorArchitecture="msil" language="neutral" />  
-        </dependentAssembly>  
-      </dependency>  
-    ```  
+6. .NET Framework 4 の前提条件では、追加、`supportUrl`属性を`compatibleFrameworks`要素。  
   
-5.  任意。 配置マニフェストを開いて、.NET Framework 4 を対象とするアプリケーション (、 *.application*ファイル) の[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]テキスト エディターでアプリケーション。  
+   ```xml  
+   <compatibleFrameworks  xmlns="urn:schemas-microsoft-com:clickonce.v2" supportUrl="http://adatum.com/MyApplication/CompatibleFrameworks.htm">  
+     <framework targetVersion="4.0" profile="Client" supportedRuntime="4.0.30319" />  
+     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />  
+   </compatibleFrameworks>  
+   ```  
   
-6.  .NET Framework 4 の前提条件では、追加、`supportUrl`属性を`compatibleFrameworks`要素。  
-  
-    ```xml  
-    <compatibleFrameworks  xmlns="urn:schemas-microsoft-com:clickonce.v2" supportUrl="http://adatum.com/MyApplication/CompatibleFrameworks.htm">  
-      <framework targetVersion="4.0" profile="Client" supportedRuntime="4.0.30319" />  
-      <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />  
-    </compatibleFrameworks>  
-    ```  
-  
-7.  アプリケーション マニフェストを手動で変更した後、デジタル証明書を使用してアプリケーション マニフェストに再署名更新にも、配置マニフェストに再署名をする必要があります。 使用して、 *Mage.exe*または*MageUI.exe* SDK ツールを使用してこれらのファイルを再生成すると、このタスクを実行する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]手動で変更を消去します。 Mage.exe を使用してマニフェストに再署名する詳細については、次を参照してください。[方法: re-sign Application and Deployment Manifests](../deployment/how-to-re-sign-application-and-deployment-manifests.md)します。  
+7. アプリケーション マニフェストを手動で変更した後、デジタル証明書を使用してアプリケーション マニフェストに再署名更新にも、配置マニフェストに再署名をする必要があります。 使用して、 *Mage.exe*または*MageUI.exe* SDK ツールを使用してこれらのファイルを再生成すると、このタスクを実行する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]手動で変更を消去します。 Mage.exe を使用してマニフェストに再署名する詳細については、次を参照してください。[方法: re-sign Application and Deployment Manifests](../deployment/how-to-re-sign-application-and-deployment-manifests.md)します。  
   
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
  サポート URL は、部分信頼で実行するアプリケーションがマークされている場合、ダイアログ ボックスでは表示されません。  

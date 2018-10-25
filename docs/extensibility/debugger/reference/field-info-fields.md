@@ -1,5 +1,5 @@
 ---
-title: FIELD_INFO_FIELDS |Microsoft ドキュメント
+title: FIELD_INFO_FIELDS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d74f39ce8e9e350c791371f20b7401d685fb1d18
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 78ea2148290402f2a8e5c08474de125fc52bca47
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31102494"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936512"
 ---
 # <a name="fieldinfofields"></a>FIELD_INFO_FIELDS
 取得するには、どのような情報を指定します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
@@ -52,25 +52,25 @@ public enum enum_FIELD_INFO_FIELDS {
   
 ## <a name="members"></a>メンバー  
  FIF_FULLNAME  
- 初期化/を使用して、`bstrFullName`フィールドで、 [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)構造体。  
+ 初期化/使用、`bstrFullName`フィールドに、 [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)構造体。  
   
  FIF_NAME  
- 初期化/を使用して、`bstrName`フィールドで、`FIELD_INFO`構造体。  
+ 初期化/使用、`bstrName`フィールドに、`FIELD_INFO`構造体。  
   
  FIF_TYPE  
- 初期化/を使用して、`bstrType`フィールドで、`FIELD_INFO`構造体。  
+ 初期化/使用、`bstrType`フィールドに、`FIELD_INFO`構造体。  
   
  FIF_MODIFIERS  
- 初期化/を使用して、`bstrModifiers`フィールドで、`FIELD_INFO`構造体。  
+ 初期化/使用、`bstrModifiers`フィールドに、`FIELD_INFO`構造体。  
   
-## <a name="remarks"></a>コメント  
- これらの値が引数として渡されるも、 [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)のどのフィールドを指定する方法、 [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)構造が初期化するのには。  
+## <a name="remarks"></a>Remarks  
+ これらの値がへの引数として渡されることも、 [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)のどのフィールドを指定するメソッド、 [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)構造体が初期化するには。  
   
- これらの値はでも使用、`dwFields`のメンバー、`FIELD_INFO`構造のどのフィールドが使用されていると有効なことを示します。  
+ これらの値が使用されることも、`dwFields`のメンバー、`FIELD_INFO`フィールドが使用し、有効なときは、構造体。  
   
- これらのフラグは、ビットごとと組み合わせること`OR`です。  
+ これらのフラグは、演算と組み合わせることがあります`OR`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

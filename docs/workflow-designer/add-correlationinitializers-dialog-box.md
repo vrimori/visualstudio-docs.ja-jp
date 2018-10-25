@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d54724655db7147c06687aa88a4fe623bb277a45
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 724c4e3ac911e5fda62304a08565937f38425368
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36756944"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948955"
 ---
 # <a name="add-correlationinitializers-dialog-box"></a>[関連付け初期化子の追加] ダイアログ ボックス
 
@@ -33,7 +33,7 @@ ms.locfileid: "36756944"
 次の表に、ユーザー インターフェイス (UI) 要素の **[関連付け初期化子**] ダイアログ ボックス。
 
 |UI 要素|説明|
-|----------------|-----------------|
+|-|-----------------|
 |**初期化子を追加します。**|をクリックして、**追加初期化**ボックス、コレクションに追加の初期化子を追加します。|
 |**関連付けの種類**|関連付け初期化子の種類を指定します。 次の 4 種類から選択できます。<br /><br /> 1.<xref:System.ServiceModel.Activities.CallbackCorrelationInitializer> を指定するためのコールバック関連付け初期化子。<br />2.<xref:System.ServiceModel.Activities.CorrelationInitializer> を指定するためのコンテキスト関連付け初期化子。<br />3.<xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> を指定するための要求/応答関連付け初期化子。<br />4.<xref:System.ServiceModel.Activities.QueryCorrelationInitializer> を指定するためのクエリ関連付け初期化子。<br /><br /> 編集する、 **CorrelationType**<br /><br /> 1.特定の行にタブ、**初期化子の追加**DataGrid します。<br />2.フォーカスを設定する**CorrelationTypeComboBox**、キーを押して**Ctrl**+**タブ**します。<br />3.ポップアップ表示するには、Alt + Down キーを押して、 **ComboBox**して編集できます。|
 |**XPath クエリ**|送受信メッセージから相関関係データを抽出するためのクエリを含む、キーと値のペア。 このリストは、<xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 型を使用している場合にのみ有効です。|

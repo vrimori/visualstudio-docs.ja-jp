@@ -10,14 +10,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ae9d21808ba256612526e24b722717fed365a8b
-ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
+ms.openlocfilehash: 119c896313adb94524417cde73624987dd96e279
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38977995"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891831"
 ---
 # <a name="keyboard-shortcuts-in-blend"></a>Blend でのキーボード ショートカット
+
 ## <a name="project-shortcuts"></a>プロジェクトのショートカット
 
 |目的|方法|

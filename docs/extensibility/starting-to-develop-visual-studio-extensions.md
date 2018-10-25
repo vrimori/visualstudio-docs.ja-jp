@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 50d5876f38b7c539beb33d5918387a06f45b193b
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: a04993581be6edae89633bcda901a8d85ff6c765
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44321269"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849542"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Visual Studio 拡張機能の開発を開始しています
 Visual Studio 拡張機能を初めて作成する場合に、いくつかの疑問をもたれるかもしれません。 ここでは、最も一般的なものの一部を一覧にしています。 探している情報が見つからない場合は、フィードバック ボタンを使用して (画面の下部にある **このページは役に立ちましたか?** ) お探しの情報を問い合わせてください。
@@ -30,13 +30,13 @@ Visual Studio 拡張機能を初めて作成する場合に、いくつかの疑
 ## <a name="what-kinds-of-things-can-i-do-with-visual-studio-extensions"></a>Visual Studio 拡張機能でどのような種類の項目を行えるはでしょうか。
  無限の可能性に関してはさまざまな Visual Studio 拡張機能を考えたときに制限します。 もちろん、ほとんどの拡張機能がある問題、コードの記述であることが、大文字と小文字をする必要はありません。 拡張機能の作成の種類のいくつかの例を次に示します。
 
--   構文の色分け、IntelliSense、コンパイラとデバッグのサポートと、Visual Studio に含まれていない言語のサポート
+- 構文の色分け、IntelliSense、コンパイラとデバッグのサポートと、Visual Studio に含まれていない言語のサポート
 
--   その他のテンプレート、コードのリファクタリング、新しいダイアログ ボックスまたはツール ウィンドウを使用した生産性向上ツールのコアを拡張が IDE のエクスペリエンスします。
+- その他のテンプレート、コードのリファクタリング、新しいダイアログ ボックスまたはツール ウィンドウを使用した生産性向上ツールのコアを拡張が IDE のエクスペリエンスします。
 
--   データのデザインまたはクラウドのサポートなどのシナリオのドメイン固有のデザイナー
+- データのデザインまたはクラウドのサポートなどのシナリオのドメイン固有のデザイナー
 
- 拡張機能の例については、チェック アウト、 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs)します。 多くの拡張機能はオープン ソース、および Marketplace には、GitHub リポジトリへのリンクが含まれています。
+  拡張機能の例については、チェック アウト、 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs)します。 多くの拡張機能はオープン ソース、および Marketplace には、GitHub リポジトリへのリンクが含まれています。
 
 ## <a name="which-visual-studio-features-can-i-extend"></a>Visual Studio 機能を拡張できますか。
  理論上は、Visual Studio のあらゆる部分を拡張することができます: メニューのツールバー、コマンド、windows、ソリューション、プロジェクト、エディターなど。

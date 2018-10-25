@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b72e058a2ef025b0118dac8fd419e75d1ad53349
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 3e174440411e54d0f3960035874bd3b84b392c57
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36327230"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939499"
 ---
 # <a name="associate-custom-data-with-sharepoint-tools-extensions"></a>SharePoint ツール拡張機能とカスタム データを関連付ける
   カスタム データは、SharePoint ツール拡張機能の特定のオブジェクトを追加することができます。 これは、機能は、データが、拡張機能の他のコードから、後でアクセスする、拡張機能の 1 つの部分である場合に便利です。 データを格納し、アクセス、カスタマイズした方法を実装するには、代わりには、オブジェクトと、拡張機能で、データを関連付けるし、後で、同じオブジェクトからデータを取得します。  
@@ -73,14 +73,14 @@ ms.locfileid: "36327230"
   
  SharePoint ツール拡張機能内のオブジェクトからのカスタム データを取得するには、取得、<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A>次のメソッドのいずれか、使用したオブジェクトのプロパティ。  
   
--   <xref:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.TryGetValue%2A>。 このメソッドが戻る**true**データ オブジェクトが存在する場合または**false**が存在しない場合。 このメソッドを使用すると、値の型または参照型のインスタンスを取得します。  
+- <xref:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.TryGetValue%2A>。 このメソッドが戻る**true**データ オブジェクトが存在する場合または**false**が存在しない場合。 このメソッドを使用すると、値の型または参照型のインスタンスを取得します。  
   
--   <xref:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.GetValue%2A>。 このメソッドは、データを返します。 セッションを終了する場合は、オブジェクトまたは**null**が存在しない場合。 このメソッドは、参照型のインスタンスを取得する場合のみ使用できます。  
+- <xref:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.GetValue%2A>。 このメソッドは、データを返します。 セッションを終了する場合は、オブジェクトまたは**null**が存在しない場合。 このメソッドは、参照型のインスタンスを取得する場合のみ使用できます。  
   
- 次のコード例では、特定のデータ オブジェクトがプロジェクト項目に関連付けが既にかどうかを判断します。 データ オブジェクトがプロジェクト項目に関連付けられていないかどうかは、オブジェクトを追加するコードを<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A>プロジェクト項目のプロパティ。 例のコンテキストでは、この例を確認するには、次を参照してください。[方法: カスタム SharePoint プロジェクト項目の種類にプロパティを追加](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)します。  
+  次のコード例では、特定のデータ オブジェクトがプロジェクト項目に関連付けが既にかどうかを判断します。 データ オブジェクトがプロジェクト項目に関連付けられていないかどうかは、オブジェクトを追加するコードを<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A>プロジェクト項目のプロパティ。 例のコンテキストでは、この例を確認するには、次を参照してください。[方法: カスタム SharePoint プロジェクト項目の種類にプロパティを追加](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)します。  
   
- [!code-vb[SPExtensibility.ProjectItemExtension.MenuAndProperty#13](../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb#13)]
- [!code-csharp[SPExtensibility.ProjectItemExtension.MenuAndProperty#13](../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypeproperty.cs#13)]  
+  [!code-vb[SPExtensibility.ProjectItemExtension.MenuAndProperty#13](../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb#13)]
+  [!code-csharp[SPExtensibility.ProjectItemExtension.MenuAndProperty#13](../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypeproperty.cs#13)]  
   
 ## <a name="see-also"></a>関連項目
  [プログラミングの概念と機能の SharePoint ツール拡張機能](../sharepoint/programming-concepts-and-features-for-sharepoint-tools-extensions.md)   

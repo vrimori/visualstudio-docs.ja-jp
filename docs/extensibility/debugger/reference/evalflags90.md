@@ -1,5 +1,5 @@
 ---
-title: EVALFLAGS90 |Microsoft ドキュメント
+title: EVALFLAGS90 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,15 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 120bf38afbf05f367757de3a5e453cab8b4311b1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 43c8c7dcba7ea1125c031f0cc64a902d88f67017
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31102708"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849428"
 ---
 # <a name="evalflags90"></a>EVALFLAGS90
-式の評価を制御するフラグの有効な値を列挙します。 この列挙体を拡張、 [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)列挙します。  
+式の評価を制御するフラグの有効な値を列挙します。 この列挙体を拡張、 [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)列挙体。  
   
 ## <a name="syntax"></a>構文  
   
@@ -66,25 +66,25 @@ public enum enum_EVALFLAGS90
   
 #### <a name="parameters"></a>パラメーター  
  EVAL90_RETURNVALUE  
- 存在する場合は、戻り値を評価することを指定します。  
+ 存在する場合は、戻り値に評価することを指定します。  
   
  EVAL90_NOSIDEEFFECTS  
  副作用を許可しないことを指定します。  
   
  EVAL90_ALLOWBPS  
- ブレークポイントで停止を指定します。  
+ ブレークポイントの停止を指定します。  
   
  EVAL90_ALLOWERRORREPORT  
- 許可されるには、ホストに報告するエラーを指定します。 主に、Internet Explorer でスクリプト内の式の評価に使用します。  
+ そのエラーを許可するホストにレポートを指定します。 主に、Internet Explorer でスクリプトに式の評価に使用します。  
   
  EVAL90_FUNCTION_AS_ADDRESS  
- 関数を呼び出す代わりに、アドレスとして評価される関数を強制的に実行します。  
+ 関数を呼び出す代わりに、アドレスとして評価される関数を強制的にします。  
   
  EVAL90_NOFUNCEVAL  
- 関数が評価するを防ぎます。 たとえば、`int`トークン、式で`myExpression(int) + 10`です。 この関数は、値としてではなくが、アドレスとして正しく評価できます。  
+ 関数が評価するを防ぎます。 たとえば、`int`式トークン`myExpression(int) + 10`します。 この関数は、アドレスとしてではない値を正しく評価できます。  
   
  EVAL90_NOEVENTS  
- 式の評価中に発生するイベントがセッション デバッグ マネージャー (SDM) または IDE にいない送信することを示すフラグです。  
+ セッション デバッグ マネージャー (SDM) または、IDE には式の評価中に発生するイベントを送信しないかを示すフラグです。  
   
  EVAL90_DESIGN_TIME_EXPR_EVAL  
  デザイン時の式の評価を有効にします。  
@@ -93,9 +93,9 @@ public enum enum_EVALFLAGS90
  暗黙的な変数の作成を許可します。  
   
  EVAL90_FORCE_EVALUATION_NOW  
- 直ちに評価を強制的に実行します。 これは、機能は、ユーザーの要求など、要求を処理するときに便利です。  
+ 直ちに強制的に評価します。 これは、機能は、ユーザーの要求など、要求を処理するときに便利です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Msdbg90.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

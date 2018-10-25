@@ -26,12 +26,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: aff5a67d54376488ccce2bca5dd67b84d6c73949
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 87ab5ccde2c1100fbd0efc5f4272efe27803b717
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49210185"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49938618"
 ---
 # <a name="how-to-delete-records-in-a-database"></a>方法 : データベースのレコードを削除する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,12 +49,12 @@ ms.locfileid: "49210185"
   
 #### <a name="to-delete-records-from-a-database-using-the-tableadapterupdate-method"></a>TableAdapter.Update メソッドを使用してデータベースからレコードを削除するには  
   
--   必要なレコードを削除<xref:System.Data.DataTable>を削除して<xref:System.Data.DataRow>テーブルからのオブジェクト。 詳細については、次を参照してください。[方法: DataTable の行の削除](http://msdn.microsoft.com/library/add481e5-08c7-4923-9276-f036ae29d31e)します。 行を削除した後、<xref:System.Data.DataTable>を呼び出し、`TableAdapter.Update`メソッド。 全体を渡すことで更新するデータの量を制御できます<xref:System.Data.DataSet>、 <xref:System.Data.DataTable>、配列の<xref:System.Data.DataRow>、または 1 つ<xref:System.Data.DataRow>します。 次のコードからレコードを削除する方法を示します、<xref:System.Data.DataTable>を呼び出して、`TableAdapter.Update`メソッドは通信の変更をデータベースから行を削除します。 (この例の Northwind データベースの`Region`テーブルです)。  
+- 必要なレコードを削除<xref:System.Data.DataTable>を削除して<xref:System.Data.DataRow>テーブルからのオブジェクト。 詳細については、次を参照してください。[方法: DataTable の行の削除](http://msdn.microsoft.com/library/add481e5-08c7-4923-9276-f036ae29d31e)します。 行を削除した後、<xref:System.Data.DataTable>を呼び出し、`TableAdapter.Update`メソッド。 全体を渡すことで更新するデータの量を制御できます<xref:System.Data.DataSet>、 <xref:System.Data.DataTable>、配列の<xref:System.Data.DataRow>、または 1 つ<xref:System.Data.DataRow>します。 次のコードからレコードを削除する方法を示します、<xref:System.Data.DataTable>を呼び出して、`TableAdapter.Update`メソッドは通信の変更をデータベースから行を削除します。 (この例の Northwind データベースの`Region`テーブルです)。  
   
-     [!code-csharp[VbRaddataSaving#20](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form5.cs#20)]
-     [!code-vb[VbRaddataSaving#20](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form5.vb#20)]  
+   [!code-csharp[VbRaddataSaving#20](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form5.cs#20)]
+   [!code-vb[VbRaddataSaving#20](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form5.vb#20)]  
   
- アプリケーションは、アプリケーションでデータを格納するオブジェクトを使用する場合は、データベースから直接データを削除する TableAdapter の DBDirect メソッドを使用できます。 呼び出す、`Delete`メソッドに渡されたパラメーター値に基づいて、データベースからレコードを削除します。  
+  アプリケーションは、アプリケーションでデータを格納するオブジェクトを使用する場合は、データベースから直接データを削除する TableAdapter の DBDirect メソッドを使用できます。 呼び出す、`Delete`メソッドに渡されたパラメーター値に基づいて、データベースからレコードを削除します。  
   
 #### <a name="to-delete-records-from-a-database-using-the-tableadapterdelete-method"></a>TableAdapter.Delete メソッドを使用してデータベースからレコードを削除するには  
   

@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 575f847758bd18c5e13298b1fddd3e34ddb98545
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: ad60aa15b3924bd562ed95c30ed9aaf4adef0133
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671975"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862191"
 ---
 # <a name="walkthrough-insert-text-into-a-document-from-an-actions-pane"></a>チュートリアル: 操作ウィンドウから文書にテキストを挿入します。
   このチュートリアルでは、Microsoft Office Word ドキュメントで、[操作] ウィンドウを作成する方法を示します。 [操作] ウィンドウには、入力を収集し、文書にテキストを送信する 2 つのコントロールが含まれています。  
@@ -60,17 +60,17 @@ ms.locfileid: "35671975"
   
 ### <a name="to-add-text-to-your-document"></a>文書にテキストを追加するには  
   
-1.  Word ドキュメントには、次のテキストを入力します。  
+1. Word ドキュメントには、次のテキストを入力します。  
   
-     **2008 年 3 月 21 日**  
+    **2008 年 3 月 21 日**  
   
-     **Name**  
+    **Name**  
   
-     **アドレス**  
+    **アドレス**  
   
-     **これは、Word の基本的な操作ウィンドウの例です。**  
+    **これは、Word の基本的な操作ウィンドウの例です。**  
   
- 追加することができます、<xref:Microsoft.Office.Tools.Word.Bookmark>コントロールをドラッグしてから、ドキュメント、**ツールボックス**Visual Studio でまたはを使用して、**ブックマーク**Word のダイアログ ボックス。  
+   追加することができます、<xref:Microsoft.Office.Tools.Word.Bookmark>コントロールをドラッグしてから、ドキュメント、**ツールボックス**Visual Studio でまたはを使用して、**ブックマーク**Word のダイアログ ボックス。  
   
 ### <a name="to-add-a-bookmark-control-to-your-document"></a>ドキュメントにブックマーク コントロールを追加するには  
   

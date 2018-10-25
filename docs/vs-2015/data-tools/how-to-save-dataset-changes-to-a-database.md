@@ -24,12 +24,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: a197952bcc392f84db3f612a158817237e077d36
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 60bb855202cfb333820fe2292fedc0b31608c5c6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49202281"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949020"
 ---
 # <a name="how-to-save-dataset-changes-to-a-database"></a>方法 : データセットの変更をデータベースに保存する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -69,15 +69,15 @@ ms.locfileid: "49202281"
 ## <a name="updating-two-related-tables-in-a-dataset"></a>データセットの 2 つの関連テーブルの更新  
  データセットの関連テーブルを更新する場合は、適切な順序で更新し、参照整合性の制約に違反する可能性を小さくする必要があります。 コマンド実行の順序も、データセットの <xref:System.Data.DataRowCollection> のインデックスに従います。 データの整合性エラーが発生しないようにするには、最も適切な方法として、次の順序でデータベースを更新します。  
   
-1.  子テーブル : レコードを削除する。  
+1. 子テーブル : レコードを削除する。  
   
-2.  親テーブル : レコードを挿入、更新、および削除する。  
+2. 親テーブル : レコードを挿入、更新、および削除する。  
   
-3.  子テーブル : レコードを挿入および更新する。  
+3. 子テーブル : レコードを挿入および更新する。  
   
- 複数のテーブルからデータを保存する方法の詳細については、次を参照してください。[データベース (複数テーブル) にデータを保存](../data-tools/save-data-to-a-database-multiple-tables.md)します。  
+   複数のテーブルからデータを保存する方法の詳細については、次を参照してください。[データベース (複数テーブル) にデータを保存](../data-tools/save-data-to-a-database-multiple-tables.md)します。  
   
- 複数の関連するテーブルを更新する場合、トランザクション内にすべての更新ロジックを含める必要があります。 トランザクションは、データベースに対するすべての関連する変更が正常に完了した後に、変更をコミットするプロセスです。 詳細については、「[トランザクションと同時実行](http://msdn.microsoft.com/library/f46570de-9e50-4fe6-8710-a8c31fa8569b)します。  
+   複数の関連するテーブルを更新する場合、トランザクション内にすべての更新ロジックを含める必要があります。 トランザクションは、データベースに対するすべての関連する変更が正常に完了した後に、変更をコミットするプロセスです。 詳細については、「[トランザクションと同時実行](http://msdn.microsoft.com/library/f46570de-9e50-4fe6-8710-a8c31fa8569b)します。  
   
 #### <a name="to-update-two-related-tables-using-a-tableadapter"></a>TableAdapter を使用した 2 つの関連するテーブルの更新  
   

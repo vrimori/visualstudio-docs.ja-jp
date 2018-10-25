@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b94001c13f5925107cecb49936ecdc5fb1e73514
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 5ba91d26e038c0b0223217793f66debeeb63af85
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35254359"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876036"
 ---
 # <a name="processon-and-processoff"></a>ProcessOn と ProcessOff
 VSPerfCmd.exe の **ProcessOff** サブコマンドと **ProcessOn** サブコマンドでは、コマンド ライン プロファイル セッションの指定されたプロセスのプロファイリングを一時停止および再開します。 **ProcessOff** がプロセスのプロファイリングを停止し、**ProcessOn** がプロセスのプロファイリングを開始します。  
@@ -26,11 +26,11 @@ VSPerfCmd.exe の **ProcessOff** サブコマンドと **ProcessOn** サブコ�
   
  **ProcessOff** サブコマンドと **ProcessOn** サブコマンドは、プロファイラー API 関数によって操作されるプロセスの開始/停止数にも影響します。  
   
--   **ProcessOff** は、プロセスの開始/停止数を直ちに 0 に設定して、プロファイリングを一時停止します。  
+- **ProcessOff** は、プロセスの開始/停止数を直ちに 0 に設定して、プロファイリングを一時停止します。  
   
--   **ProcessOn** は、プロセスの開始/停止数を直ちに 1 に設定して、プロファイリングを再開します。  
+- **ProcessOn** は、プロセスの開始/停止数を直ちに 1 に設定して、プロファイリングを再開します。  
   
- 詳細については、[「プロファイリング ツールの API」](../profiling/profiling-tools-apis.md) を参照してください。  
+  詳細については、[「プロファイリング ツールの API」](../profiling/profiling-tools-apis.md) を参照してください。  
   
 ## <a name="syntax"></a>構文  
   

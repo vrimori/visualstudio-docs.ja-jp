@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0323e6902be9c5b784a17bfc8b48f4f9a1225e41
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 4d86dfcd84ba203891deb52b8a4b646f610a3567
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39180322"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925217"
 ---
 # <a name="anatomy-of-a-coded-ui-test"></a>コード化された UI テストの構造
 
@@ -27,7 +27,7 @@ ms.locfileid: "39180322"
 コード化された UI テストを作成すると、**[コード化された UI テスト ビルダー]** によってテスト対象のユーザー インターフェイスのマップが作成されるほか、すべてのテストのテスト メソッド、パラメーター、およびアサーションも作成されます。 また、各テストのクラス ファイルも作成されます。
 
 |ファイル|目次|編集可能かどうか|
-|----------|--------------|---------------|
+|-|-|-|
 |[UIMap.Designer.cs](#UIMapDesignerFile)|[宣言セクション](#UIMapDesignerFile)<br /><br /> [UIMap クラス](#UIMapClass) (部分クラス、自動生成)<br /><br /> [メソッド](#UIMapMethods)<br /><br /> [プロパティ](#UIMapProperties)|×|
 |[UIMap.cs](#UIMapCS)|[UIMap クラス](#UIMapCS) (部分クラス)|[はい]|
 |[CodedUITest1.cs](#CodedUITestCS)|[CodedUITest1 クラス](#CodedUITestCS)<br /><br /> [メソッド](#CodedUITestMethods)<br /><br /> [プロパティ](#CodedUITestProperties)|[はい]|

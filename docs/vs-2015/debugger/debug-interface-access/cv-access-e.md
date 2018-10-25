@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1afaea538e96af7997da4be68fba8bc76ac0674a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: dceccecc480976351a32d8ac6aa9494392a58092
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49179752"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49815170"
 ---
 # <a name="cvaccesse"></a>CV_access_e
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -53,7 +53,7 @@ typedef enum CV_access_e {
 ## <a name="remarks"></a>Remarks  
  `friend`アクセス指定子は含まれませんので、通常は、クラスの private と protected の両方の要素にアクセスできる非メンバー関数によって使用されます。 使用して、 [idiasymbol::get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)でシンボルを検索するメソッド`SymTagFriend`アクセスします。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: cvconst.h  
   
 ## <a name="see-also"></a>関連項目  

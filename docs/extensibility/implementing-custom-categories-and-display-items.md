@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2dbb6744b925dac1bfa91a73024ef14ef9ad29ac
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 850e4396c11cbd83f578304eed78a25042185a25
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499326"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894639"
 ---
 # <a name="implement-custom-categories-and-display-items"></a>カスタム カテゴリを実装し、アイテムを表示
 VSPackage は、そのテキストの色とフォントの制御を提供できます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) でカスタム カテゴリとアイテムを表示します。
@@ -32,82 +32,82 @@ VSPackage は、そのテキストの色とフォントの制御を提供でき�
 
  ユーザー設定を実装する**カテゴリ**または**項目を表示**VSPackage にする必要があります。
 
--   作成するか、レジストリ内のカテゴリを特定します。
+- 作成するか、レジストリ内のカテゴリを特定します。
 
-     IDE の実装、**フォントおよび色**プロパティ ページでは、この情報を使用して、特定のカテゴリをサポートしているサービスのクエリを正常にします。
+   IDE の実装、**フォントおよび色**プロパティ ページでは、この情報を使用して、特定のカテゴリをサポートしているサービスのクエリを正常にします。
 
--   作成またはレジストリに (省略可能) グループを識別します。
+- 作成またはレジストリに (省略可能) グループを識別します。
 
-     2 つ以上のカテゴリの和集合を表すグループを定義することができます。 グループが定義されている場合、IDE によって自動的にサブカテゴリをマージし、配布グループ内のアイテムの表示。
+   2 つ以上のカテゴリの和集合を表すグループを定義することができます。 グループが定義されている場合、IDE によって自動的にサブカテゴリをマージし、配布グループ内のアイテムの表示。
 
--   IDE のサポートを実装します。
+- IDE のサポートを実装します。
 
--   フォントと色の変更を処理します。
+- フォントと色の変更を処理します。
 
- 詳しくは、次を参照してください。[へのアクセスには、フォントおよび色の設定が格納されている](../extensibility/accessing-stored-font-and-color-settings.md)します。
+  詳しくは、次を参照してください。[へのアクセスには、フォントおよび色の設定が格納されている](../extensibility/accessing-stored-font-and-color-settings.md)します。
 
 ## <a name="to-create-or-identify-categories"></a>作成またはカテゴリを識別するには
 
--   カテゴリのレジストリ エントリの特殊な型を構築 *[hklm \software\microsoft \Visual Studio\\*\<Visual Studio のバージョン >*\FontAndColors\\ `<Category>`]*
+- カテゴリのレジストリ エントリの特殊な型を構築 *[hklm \software\microsoft \Visual Studio\\*\<Visual Studio のバージョン >*\FontAndColors\\ `<Category>`]*
 
-     *\<カテゴリ >* カテゴリのローカライズされていない名前を指定します。
+   *\<カテゴリ >* カテゴリのローカライズされていない名前を指定します。
 
--   2 つの値を使用してレジストリを設定します。
+- 2 つの値を使用してレジストリを設定します。
 
-    |name|型|データ|説明|
-    |----------|----------|----------|-----------------|
-    |カテゴリ|REG_SZ|GUID|カテゴリを識別するために作成された GUID。|
-    |Package|REG_SZ|GUID|カテゴリをサポートする VSPackage のサービスの GUID です。|
+  |名前|型|データ|説明|
+  |----------|----------|----------|-----------------|
+  |カテゴリ|REG_SZ|GUID|カテゴリを識別するために作成された GUID。|
+  |Package|REG_SZ|GUID|カテゴリをサポートする VSPackage のサービスの GUID です。|
 
- レジストリで指定されたサービスの実装を提供する必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>の対応するカテゴリ。
+  レジストリで指定されたサービスの実装を提供する必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>の対応するカテゴリ。
 
 ## <a name="to-create-or-identify-groups"></a>グループを作成または識別するのには
 
--   カテゴリのレジストリ エントリの特殊な型を構築 *[hklm \software\microsoft \Visual Studio\\*\<Visual Studio のバージョン >*\FontAndColors\\* \<グループ >*]*
+- カテゴリのレジストリ エントリの特殊な型を構築 *[hklm \software\microsoft \Visual Studio\\*\<Visual Studio のバージョン >*\FontAndColors\\* \<グループ >*]*
 
-     *\<グループ >* はローカライズされていないグループの名前です。
+   *\<グループ >* はローカライズされていないグループの名前です。
 
--   2 つの値を使用してレジストリを設定します。
+- 2 つの値を使用してレジストリを設定します。
 
-    |name|型|データ|説明|
-    |----------|----------|----------|-----------------|
-    |カテゴリ|REG_SZ|GUID|グループを識別する GUID が作成されます。|
-    |Package|REG_SZ|GUID|カテゴリをサポートするサービスの GUID です。|
+  |名前|型|データ|説明|
+  |----------|----------|----------|-----------------|
+  |カテゴリ|REG_SZ|GUID|グループを識別する GUID が作成されます。|
+  |Package|REG_SZ|GUID|カテゴリをサポートするサービスの GUID です。|
 
- レジストリで指定されたサービスの実装を提供する必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup>の対応するグループ。
+  レジストリで指定されたサービスの実装を提供する必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup>の対応するグループ。
 
 ## <a name="to-implement-ide-support"></a>IDE のサポートを実装するには
 
--   実装<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider.GetObject%2A>、いずれかが返されます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>インターフェイスまたは<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup>インターフェイスごとに、IDE に**カテゴリ**またはグループの GUID が指定されています。
+- 実装<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider.GetObject%2A>、いずれかが返されます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>インターフェイスまたは<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup>インターフェイスごとに、IDE に**カテゴリ**またはグループの GUID が指定されています。
 
--   すべて**カテゴリ**をサポートし、VSPackage の実装の別のインスタンス、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>インターフェイス。
+- すべて**カテゴリ**をサポートし、VSPackage の実装の別のインスタンス、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>インターフェイス。
 
--   メソッドの実装を通じて<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>を使用して IDE を提供する必要があります。
+- メソッドの実装を通じて<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>を使用して IDE を提供する必要があります。
 
-    -   リストの**表示項目**で、**カテゴリ。**
+  -   リストの**表示項目**で、**カテゴリ。**
 
-    -   ローカライズ可能な名前**表示項目**します。
+  -   ローカライズ可能な名前**表示項目**します。
 
-    -   各メンバーの情報を表示**カテゴリ**します。
+  -   各メンバーの情報を表示**カテゴリ**します。
 
-    > [!NOTE]
-    >  すべて**カテゴリ**少なくとも 1 つ含める必要があります**表示項目**します。
+  > [!NOTE]
+  >  すべて**カテゴリ**少なくとも 1 つ含める必要があります**表示項目**します。
 
--   IDE を使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup>いくつかのカテゴリの共用体を定義するインターフェイス。
+- IDE を使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup>いくつかのカテゴリの共用体を定義するインターフェイス。
 
-     その実装を使用して IDE を提供します。
+   その実装を使用して IDE を提供します。
 
-    -   一覧、**カテゴリ**特定のグループを構成します。
+  -   一覧、**カテゴリ**特定のグループを構成します。
 
-    -   インスタンスへのアクセス<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>それぞれをサポートしている**カテゴリ**グループ内。
+  -   インスタンスへのアクセス<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>それぞれをサポートしている**カテゴリ**グループ内。
 
-    -   ローカライズ可能なグループの名前。
+  -   ローカライズ可能なグループの名前。
 
--   IDE の更新。
+- IDE の更新。
 
-     IDE に関する情報をキャッシュする**フォントおよびカラー**設定します。 IDE の変更後にそのため、**フォントおよびカラー**構成では、キャッシュが最新であるかどうかを確認することをお勧めします。
+   IDE に関する情報をキャッシュする**フォントおよびカラー**設定します。 IDE の変更後にそのため、**フォントおよびカラー**構成では、キャッシュが最新であるかどうかを確認することをお勧めします。
 
- キャッシュの更新を行う、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorCacheManager>インターフェイスし、実行のグローバルまたはだけで選択した項目を指定できます。
+  キャッシュの更新を行う、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorCacheManager>インターフェイスし、実行のグローバルまたはだけで選択した項目を指定できます。
 
 ## <a name="to-handle-font-and-color-changes"></a>フォントと色の変更を処理するには
  VSPackage を表示するテキストの色づけを正しくサポートする VSPackage のサポートの色づけサービスはを通じて行われたユーザーによる変更に応答する必要があります、**フォントおよび色**プロパティ ページ。 VSPackage では、、この検証を行います。

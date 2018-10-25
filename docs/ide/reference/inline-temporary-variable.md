@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: acfbfd2a23c85c81e0956190ff8e9e8501533559
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: fb6fc6888e33b2cc0d210e9cb1e1aababe304f2a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31945611"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49916765"
 ---
 # <a name="inline-a-temporary-variable-refactoring"></a>一時変数のインライン化リファクタリング
 
@@ -39,30 +39,30 @@ ms.locfileid: "31945611"
 
    - C#: 
 
-    ![強調表示されたコード - C#](media/inline-highlight-cs.png)
+       ![強調表示されたコード - C#](media/inline-highlight-cs.png)
 
    - Visual Basic: 
 
-    ![強調表示されたコード - Visual Basic](media/inline-highlight-vb.png)
+       ![強調表示されたコード - Visual Basic](media/inline-highlight-vb.png)
 
-1. 次に、以下のいずれかを実行します。
+2. 次に、以下のいずれかを実行します。
 
    - **キーボード**
-     - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
+      - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
    - **マウス**
-     - コードを右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
+      - コードを右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
 
-1. [プレビュー] ウィンドウ ポップアップから **[インラインの一時変数]** を選択します。
+3. [プレビュー] ウィンドウ ポップアップから **[インラインの一時変数]** を選択します。
 
    変数が削除されて、その使用箇所が変数の値に置き換えられます。
 
    - C#: 
 
-    ![インラインの結果 - C#](media/inline-result-cs.png)
+      ![インラインの結果 - C#](media/inline-result-cs.png)
 
    - Visual Basic: 
 
-    ![インラインの結果 - Visual Basic](media/inline-result-vb.png)
+      ![インラインの結果 - Visual Basic](media/inline-result-vb.png)
 
 ## <a name="see-also"></a>関連項目
 

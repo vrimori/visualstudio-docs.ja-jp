@@ -4,17 +4,19 @@ ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
+f1_keywords:
+- VS.ToolsOptionsPages.Text_Editor.All_Languages.CodeLens
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b50ea1ae20f6d8a03609dfd37a080108ca2e58e
-ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
+ms.openlocfilehash: ab45a6867fd94294746c03560dc49eeda9e68af0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44384202"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853520"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>CodeLens によるコード変更とその他の履歴の検索
 
@@ -162,7 +164,7 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 **[分岐]** 列のアイコンは、分岐が、作業中の分岐とどのような関係にあるのかを示します。
 
 |**アイコン**|**変更元:**|
-|--------------|-----------------------------------------|
+|--------------| - |
 |![CodeLens: [現在の分岐からの変更] アイコン](../ide/media/codelensbranchcurrenticon.png)|現在の分岐|
 |![CodeLens: [親分岐からの変更] アイコン](../ide/media/codelensbranchparenticon.png)|親分岐|
 |![CodeLens: [子分岐からの変更] アイコン](../ide/media/codelensbranchchildicon.png)|子分岐|

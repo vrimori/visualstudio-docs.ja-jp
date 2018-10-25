@@ -1,5 +1,5 @@
 ---
-title: ATTACH_REASON |Microsoft ドキュメント
+title: ATTACH_REASON |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2dc7736f9210ef15cec8cece45d7899cc116a334
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6e2e103a345a3a064afb96cc7861bd3394da3a0f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31099523"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861619"
 ---
 # <a name="attachreason"></a>ATTACH_REASON
-デバッグ エンジン (DE)、[プログラム] ノードにアタッチする理由を指定します。  
+プログラム ノードにアタッチするデバッグ エンジン (DE) の理由を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,18 +46,18 @@ public enum enum_ATTACH_REASON {
   
 ## <a name="members"></a>メンバー  
  ATTACH_REASON_AUTO  
- プロセスがデバッグ モードでは現在のでをアタッチします。  
+ プロセスがデバッグ モードでは現在ためにをアタッチします。  
   
  ATTACH_REASON_LAUNCH  
- アタッチ プロセスが開始されました。  
+ プロセスが起動されているため、接続します。  
   
  ATTACH_REASON_USER  
- ユーザーの要求のためにアタッチします。  
+ ユーザーの要求によりアタッチします。  
   
-## <a name="remarks"></a>コメント  
- これらの値はパラメーターとして使用、[アタッチ](../../../extensibility/debugger/reference/idebugengine2-attach.md)と[アタッチ](../../../extensibility/debugger/reference/idebugprogramex2-attach.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ これらの値がパラメーターとして使用される、[アタッチ](../../../extensibility/debugger/reference/idebugengine2-attach.md)と[アタッチ](../../../extensibility/debugger/reference/idebugprogramex2-attach.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

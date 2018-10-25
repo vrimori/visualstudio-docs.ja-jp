@@ -16,12 +16,12 @@ ms.assetid: 9600d6f0-e2b6-4fe0-b935-fb32affb97a4
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: da04f97cc31ba235fd70aea60f01c51f8c8a2b75
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: d4b955879380166aae7d9a8e210ac7d5e53f882f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49291903"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873475"
 ---
 # <a name="commenting-code-in-a-legacy-language-service"></a>従来の言語サービスのコメント コード
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "49291903"
 ## <a name="comment-styles"></a>コメントのスタイル  
  コメントの 2 つの一般的なスタイルがあります。  
   
-1.  行のコメントを 1 行にコメントがあります。  
+1. 行のコメントを 1 行にコメントがあります。  
   
-2.  ブロックのコメント、コメントが複数の行を含めることができます。  
+2. ブロックのコメント、コメントが複数の行を含めることができます。  
   
- 行のコメントは、通常、開始文字 (文字)、ブロックのコメントの中に開始と終了の両方の文字があります。 たとえば、c# の場合は、行のコメントから始まります//、ブロックのコメントの始まりと/* で終わる\*/。  
+   行のコメントは、通常、開始文字 (文字)、ブロックのコメントの中に開始と終了の両方の文字があります。 たとえば、c# の場合は、行のコメントから始まります//、ブロックのコメントの始まりと/* で終わる\*/。  
   
- ユーザーがコマンドを選択すると**選択範囲のコメント**から、**編集** -> **詳細** メニューにコマンドがルーティングされます、<xref:Microsoft.VisualStudio.Package.Source.CommentSpan%2A>メソッドを<xref:Microsoft.VisualStudio.Package.Source>クラス。 ユーザーがコマンドを選択すると**選択範囲のコメントを解除します**にルーティングは、コマンド、<xref:Microsoft.VisualStudio.Package.Source.UncommentSpan%2A>メソッド。  
+   ユーザーがコマンドを選択すると**選択範囲のコメント**から、**編集** -> **詳細** メニューにコマンドがルーティングされます、<xref:Microsoft.VisualStudio.Package.Source.CommentSpan%2A>メソッドを<xref:Microsoft.VisualStudio.Package.Source>クラス。 ユーザーがコマンドを選択すると**選択範囲のコメントを解除します**にルーティングは、コマンド、<xref:Microsoft.VisualStudio.Package.Source.UncommentSpan%2A>メソッド。  
   
 ## <a name="supporting-code-comments"></a>コードのコメントをサポートしています。  
  言語サービスのサポート コード コメントがあることができます、`EnableCommenting`名前付きのパラメーター、<xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>します。 これにより設定、<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCommenting%2A>のプロパティ、<xref:Microsoft.VisualStudio.Package.LanguagePreferences>クラス。 サービス機能の言語を設定する方法についての詳細については、次を参照してください。[従来の言語サービスを登録する](../../extensibility/internals/registering-a-legacy-language-service1.md))。  

@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d3c7ed095d0efe756e7a23409cd5a54f9e6dcda8
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: c4ebf998dc7c278fda1e605d18198945958a7fed
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38808658"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933184"
 ---
 # <a name="walkthrough-bind-to-data-from-a-service-in-a-vsto-add-in-project"></a>チュートリアル: VSTO アドイン プロジェクトでサービスにデータ バインドします。
   VSTO アドイン プロジェクトでは、データをホスト コントロールにバインドできます。 このチュートリアルでは、実行時に Microsoft Office の Word ドキュメントにコントロールを追加し、それらのコントロールを MSDN コンテンツ サービスから取得されたデータにバインドして、イベントに応答する方法について説明します。  
@@ -31,15 +31,15 @@ ms.locfileid: "38808658"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   追加、<xref:Microsoft.Office.Tools.Word.RichTextContentControl>実行時にドキュメントにコントロール。  
+- 追加、<xref:Microsoft.Office.Tools.Word.RichTextContentControl>実行時にドキュメントにコントロール。  
   
--   バインド、 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> web サービスからデータを制御します。  
+- バインド、 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> web サービスからデータを制御します。  
   
--   <xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering> コントロールの <xref:Microsoft.Office.Tools.Word.RichTextContentControl> イベントに応答する  
+- <xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering> コントロールの <xref:Microsoft.Office.Tools.Word.RichTextContentControl> イベントに応答する  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -53,7 +53,7 @@ ms.locfileid: "38808658"
   
 1.  Visual Basic または C# のいずれかを使用して、「 **MTPS コンテンツ サービス**」という名前の Word VSTO アドイン プロジェクトを作成します。  
   
-     詳細については、次を参照してください。[方法: Visual Studio でプロジェクトを作成する Office](../vsto/how-to-create-office-projects-in-visual-studio.md)します。  
+     詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
   
      `ThisAddIn.vb` または `ThisAddIn.cs` ファイルが Visual Studio で開かれ、プロジェクトが **ソリューション エクスプローラー**に追加されます。  
   

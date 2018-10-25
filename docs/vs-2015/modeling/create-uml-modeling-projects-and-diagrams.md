@@ -28,12 +28,12 @@ caps.latest.revision: 50
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 69027b99d1c7db25f1d01e91d8e6d5c05141a2d3
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: c5b7f053a2a63830e80247eeeeadcf34e2a6a351
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49250485"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926099"
 ---
 # <a name="create-uml-modeling-projects-and-diagrams"></a>UML モデリング プロジェクトおよびダイアグラムを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,29 +50,29 @@ UML モデルは、ソフトウェア システムを理解したり設計した
   
 #### <a name="to-create-a-diagram-and-add-it-to-a-project"></a>図を作成してプロジェクトに追加するには  
   
-1.  **アーキテクチャ**] メニューの [選択**新しい UML またはレイヤー図**します。  
+1. **アーキテクチャ**] メニューの [選択**新しい UML またはレイヤー図**します。  
   
-2.  **新しいダイアグラムの追加** ダイアログ ボックスで、目的のモデリング図の種類をクリックします。  
+2. **新しいダイアグラムの追加** ダイアログ ボックスで、目的のモデリング図の種類をクリックします。  
   
-     ![[追加] ダイアログの新しいダイアグラム](../modeling/media/uml-adddiagram.png "UML_AddDiagram")  
+    ![[追加] ダイアログの新しいダイアグラム](../modeling/media/uml-adddiagram.png "UML_AddDiagram")  
   
-3.  新しい図の名前を入力します。  
+3. 新しい図の名前を入力します。  
   
-4.  **モデリング プロジェクトに追加**ボックス。  
+4. **モデリング プロジェクトに追加**ボックス。  
   
-    -   ソリューションで既に存在するモデリング プロジェクトを選択し、クリックして**OK**します。  
+   - ソリューションで既に存在するモデリング プロジェクトを選択し、クリックして**OK**します。  
   
      \- または -  
   
-    1.  選択**新しいモデリング プロジェクトを作成する**、順にクリックします**OK**します。  
+   1.  選択**新しいモデリング プロジェクトを作成する**、順にクリックします**OK**します。  
   
-    2.  **新しいモデリング プロジェクトの作成**ダイアログ ボックスで、新規のプロジェクトの場所と名前を入力し、順にクリックします**OK**します。  
+   2.  **新しいモデリング プロジェクトの作成**ダイアログ ボックスで、新規のプロジェクトの場所と名前を入力し、順にクリックします**OK**します。  
   
-         ![新しいモデリング プロジェクト ダイアログ ボックスを作成する](../modeling/media/uml-createmodel.png "UML_CreateModel")  
+        ![新しいモデリング プロジェクト ダイアログ ボックスを作成する](../modeling/media/uml-createmodel.png "UML_CreateModel")  
   
-         ソリューションが開いている場合は、新しいプロジェクトがソリューションに追加されます。 開いているソリューションがない場合は、新しいソリューションの名前を入力できます。  
+        ソリューションが開いている場合は、新しいプロジェクトがソリューションに追加されます。 開いているソリューションがない場合は、新しいソリューションの名前を入力できます。  
   
- モデリング プロジェクトが既に存在する場合は、次の手順を使用することもできます。  
+   モデリング プロジェクトが既に存在する場合は、次の手順を使用することもできます。  
   
 #### <a name="to-add-a-diagram-to-an-existing-modeling-project"></a>既存のモデリング プロジェクトに図を追加するには  
   

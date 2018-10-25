@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::CreateReplacementObject |Microsoft ドキュメント
+title: IPropertyProxyEESide::CreateReplacementObject |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56e5001d7abd498982361a51d0386db4b2624cf7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9aab08d85f91cb56677ddaf354d8f7c316e4b4a6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31135606"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49870433"
 ---
 # <a name="ipropertyproxyeesidecreatereplacementobject"></a>IPropertyProxyEESide::CreateReplacementObject
 式エバリュエーター (EE) に固有のデータ オブジェクトのコピーを作成します。  
@@ -43,18 +43,18 @@ int CreateReplacementObject(
   
 #### <a name="parameters"></a>パラメーター  
  `dataIn`  
- [in][IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)をコピーするデータを保持するオブジェクト。  
+ [in][IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)データのコピーを保持しているオブジェクト。  
   
  `dataOut`  
  [out]新しいを返します`IEEDataStorage`オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドが指定された、 [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)バイトの配列を表すオブジェクト。 この入力方向のデータ オブジェクトは通常、EE によって実装されていません。 ただし、このメソッドによって返されるオブジェクトは常に実装して EE を実装できるようにすると、EE、`IEEDataStorage`にどのようなクラスが必要なインターフェイスです。  
+## <a name="remarks"></a>Remarks  
+ このメソッドが指定された、 [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)バイトの配列を表すオブジェクト。 この入力方向のデータ オブジェクトは通常、EE によって実装されていません。 ただし、このメソッドによって返されるオブジェクトは、EE 実装できるように、EE によって実装は常に、`IEEDataStorage`でどのようなクラスが必要なインターフェイスです。  
   
- データが受信によって提供されることに注意してください`IEEDataStorage`オブジェクトは、送信で同じデータである必要があります`IEEDataStorage`オブジェクト。  
+ データが受信によって提供されることに注意してください。`IEEDataStorage`オブジェクトは、送信で同じデータである必要があります`IEEDataStorage`オブジェクト。  
   
 ## <a name="see-also"></a>関連項目  
  [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)   

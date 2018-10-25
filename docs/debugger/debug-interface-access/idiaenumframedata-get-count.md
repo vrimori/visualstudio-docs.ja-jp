@@ -1,5 +1,5 @@
 ---
-title: Idiaenumframedata::get_count |Microsoft ドキュメント
+title: Idiaenumframedata::get_count |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a15df11cbdc5cc13aa991e5a7704929e65e29875
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 34cf638b9d0448adc6ec06a09f41a93e65fdc362
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31456543"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923856"
 ---
 # <a name="idiaenumframedatagetcount"></a>IDiaEnumFrameData::get_Count
 フレーム データ要素の数を取得します。  
@@ -37,7 +37,7 @@ HRESULT get_Count (
  [out]フレーム データ要素の数を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)   

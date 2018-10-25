@@ -10,12 +10,12 @@ ms.assetid: ad02477b-e101-4f32-aeb7-292bf95d5c2f
 caps.latest.revision: 4
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7e44ea1c267d9fe57c3f32ddad876b412f69ea24
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 9137510f8d6949271a255b14b293f59366048f77
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49221157"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923447"
 ---
 # <a name="upgrading-custom-project-and-item-templates-for-visual-studio-15"></a>Visual Studio「15」のカスタム プロジェクトと項目テンプレートをアップグレードします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -181,24 +181,24 @@ VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.c
 ## <a name="upgrades-for-extensions-installed-with-an-msi"></a>拡張機能のアップグレードがと共にインストールします。MSI  
  一部 MSI ベースの拡張機能は、次などの一般的なテンプレート場所にテンプレートを展開します。  
   
--   **\<Visual Studio のインストール ディレクトリ > \Common7\IDE\\< ProjectTemplates/項目テンプレート >**  
+- **\<Visual Studio のインストール ディレクトリ > \Common7\IDE\\< ProjectTemplates/項目テンプレート >**  
   
--   **\<Visual Studio のインストール ディレクトリ > \Common7\IDE\Extensions\\< ExtensionName\>\\< プロジェクト/項目テンプレート >**  
+- **\<Visual Studio のインストール ディレクトリ > \Common7\IDE\Extensions\\< ExtensionName\>\\< プロジェクト/項目テンプレート >**  
   
- 拡張機能は、MSI ベースの展開を実行する場合は、テンプレート マニフェストを手動で生成し、拡張機能のセットアップに含まれていることを確認する必要があります。 上に挙げた .vstman 例を比較する必要があります、 [Visual Studio テンプレート マニフェスト スキーマ参照](../extensibility/visual-studio-template-manifest-schema-reference.md)します。 含める必要がありますを表示するには  
+  拡張機能は、MSI ベースの展開を実行する場合は、テンプレート マニフェストを手動で生成し、拡張機能のセットアップに含まれていることを確認する必要があります。 上に挙げた .vstman 例を比較する必要があります、 [Visual Studio テンプレート マニフェスト スキーマ参照](../extensibility/visual-studio-template-manifest-schema-reference.md)します。 含める必要がありますを表示するには  
   
- プロジェクトと項目テンプレートでは、個別のマニフェストを作成する必要があり、ルート テンプレートのディレクトリとして指定された上記を指す必要があります。 拡張機能とロケールごとの 1 つのマニフェストを作成する必要があります。  
+  プロジェクトと項目テンプレートでは、個別のマニフェストを作成する必要があり、ルート テンプレートのディレクトリとして指定された上記を指す必要があります。 拡張機能とロケールごとの 1 つのマニフェストを作成する必要があります。  
   
 ## <a name="troubleshooting-template-installation"></a>テンプレートのインストールのトラブルシューティング  
  プロジェクトまたは項目テンプレートのデプロイ時に問題が発生した場合は、診断ログを有効にできます。  
   
-1.  ログ記録を有効にするレジストリ キーを設定するのには、次のコマンドを実行します。  
+1. ログ記録を有効にするレジストリ キーを設定するのには、次のコマンドを実行します。  
   
-     **reg は、HKCU\software\microsoft\visualstudio\15.0_Config\VSTemplate/v EnableTemplateDiscoveryLog/t REG_DWORD/d 1 を追加します。**  
+    **reg は、HKCU\software\microsoft\visualstudio\15.0_Config\VSTemplate/v EnableTemplateDiscoveryLog/t REG_DWORD/d 1 を追加します。**  
   
-2.  Visual Studio を起動し、両方のテンプレートのツリーを初期化するために、新しいプロジェクトと新しい項目のダイアログ ボックスを起動します。 テンプレートは、ログに表示されている **%LOCALAPPDATA%\Microsoft\VisualStudio\15.0\VsTemplateDiagnosticsList.csv**します。 各テンプレート ツリーの初期化では、このログにエントリを追加します。  
+2. Visual Studio を起動し、両方のテンプレートのツリーを初期化するために、新しいプロジェクトと新しい項目のダイアログ ボックスを起動します。 テンプレートは、ログに表示されている **%LOCALAPPDATA%\Microsoft\VisualStudio\15.0\VsTemplateDiagnosticsList.csv**します。 各テンプレート ツリーの初期化では、このログにエントリを追加します。  
   
- ログ ファイルには、次の列が含まれています。  
+   ログ ファイルには、次の列が含まれています。  
   
 -   **FullPathToTemplate**、次の値を持ちます。  
   

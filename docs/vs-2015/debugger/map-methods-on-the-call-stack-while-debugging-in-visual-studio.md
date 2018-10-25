@@ -35,12 +35,12 @@ caps.latest.revision: 43
 author: mikejo5000
 ms.author: mikejo
 manager: douge
-ms.openlocfilehash: 0841670c1dfe65f1ad542f931267c310d0ef711a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6995255125de6bf78fbdd8718ffb836b9ed42dde
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49194884"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49922134"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Visual Studio でデバッグを行うときの呼び出し履歴に対するメソッドのマップ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -51,13 +51,13 @@ ms.locfileid: "49194884"
   
  要件:  
   
--   [Visual Studio Enterprise](https://www.visualstudio.com/downloads/download-visual-studio-vs)  
+- [Visual Studio Enterprise](https://www.visualstudio.com/downloads/download-visual-studio-vs)  
   
--   デバッグできるコード (Visual C# .NET、Visual Basic .NET、C++、JavaScript、X++ など) です。  
+- デバッグできるコード (Visual C# .NET、Visual Basic .NET、C++、JavaScript、X++ など) です。  
   
- 参照:[ビデオ: コード マップ デバッガーの統合 (チャネル 9) で視覚的にデバッグ](http://go.microsoft.com/fwlink/?LinkId=293418)•[呼び出し履歴でマップ](#MapStack)•[コードに関するメモを作成](#MakeNotes)•[でマップを更新します次の呼び出し履歴](#UpdateMap)•[マップに関連するコードを追加](#AddRelatedCode)•[マップを使用してバグの検索](#FindBugs)• [Q & A](#QA)  
+  参照:[ビデオ: コード マップ デバッガーの統合 (チャネル 9) で視覚的にデバッグ](http://go.microsoft.com/fwlink/?LinkId=293418)•[呼び出し履歴でマップ](#MapStack)•[コードに関するメモを作成](#MakeNotes)•[でマップを更新します次の呼び出し履歴](#UpdateMap)•[マップに関連するコードを追加](#AddRelatedCode)•[マップを使用してバグの検索](#FindBugs)• [Q & A](#QA)  
   
- コマンドとコード マップを使用する場合に使用できる操作の詳細については、次を参照してください。[参照およびコード マップの再配置](../modeling/browse-and-rearrange-code-maps.md)します。  
+  コマンドとコード マップを使用する場合に使用できる操作の詳細については、次を参照してください。[参照およびコード マップの再配置](../modeling/browse-and-rearrange-code-maps.md)します。  
   
 ##  <a name="MapStack"></a> 呼び出し履歴でマップします。  
   
@@ -122,53 +122,53 @@ ms.locfileid: "49194884"
   
 ##  <a name="QA"></a> Q & A  
   
--   **すべての呼び出しは、マップに表示されます。その理由を教えてください。**  
+- **すべての呼び出しは、マップに表示されます。その理由を教えてください。**  
   
-     既定では、ユーザー自身のコードだけがマップに表示されます。 外部コードを表示するで有効にする、**呼び出し履歴**ウィンドウ。  
+   既定では、ユーザー自身のコードだけがマップに表示されます。 外部コードを表示するで有効にする、**呼び出し履歴**ウィンドウ。  
   
-     ![呼び出し履歴 ウィンドウを使用して外部コードの表示](../debugger/media/debuggermap-callstackmenu.png "DebuggerMap_CallStackMenu")  
+   ![呼び出し履歴 ウィンドウを使用して外部コードの表示](../debugger/media/debuggermap-callstackmenu.png "DebuggerMap_CallStackMenu")  
   
-     オフにするか**マイ コードのみを有効にする**Visual studio のデバッグ オプション。  
+   オフにするか**マイ コードのみを有効にする**Visual studio のデバッグ オプション。  
   
-     ![[オプション] ダイアログを使用して外部コードの表示](../debugger/media/debuggermap-debugoptions.png "DebuggerMap_DebugOptions")  
+   ![[オプション] ダイアログを使用して外部コードの表示](../debugger/media/debuggermap-debugoptions.png "DebuggerMap_DebugOptions")  
   
--   **マップを変更するコードに影響しますか。**  
+- **マップを変更するコードに影響しますか。**  
   
-     マップを変更してもコードは何も影響を受けません。 マップでの名前変更、移動、削除は自由に行うことができます。  
+   マップを変更してもコードは何も影響を受けません。 マップでの名前変更、移動、削除は自由に行うことができます。  
   
--   **このメッセージの意味:「ダイアグラムは、コードの古いバージョンに基づく可能性があります」でしょうか。**  
+- **このメッセージの意味:「ダイアグラムは、コードの古いバージョンに基づく可能性があります」でしょうか。**  
   
-     マップを最後に更新してからコードが変更されている可能性があります。 たとえば、マップ上の呼び出しがコードに存在しなくなった可能性があります。 メッセージを閉じてから、マップを再び更新する前にソリューションをリビルドしてみます。  
+   マップを最後に更新してからコードが変更されている可能性があります。 たとえば、マップ上の呼び出しがコードに存在しなくなった可能性があります。 メッセージを閉じてから、マップを再び更新する前にソリューションをリビルドしてみます。  
   
--   **マップのレイアウトを制御する方法は?**  
+- **マップのレイアウトを制御する方法は?**  
   
-     開く、**レイアウト**マップのツールバー メニュー。  
+   開く、**レイアウト**マップのツールバー メニュー。  
   
-    -   既定のレイアウトを変更します。  
+  -   既定のレイアウトを変更します。  
   
-    -   オフにする、マップを自動的に再配置を停止する**デバッグ時に自動レイアウト**します。  
+  -   オフにする、マップを自動的に再配置を停止する**デバッグ時に自動レイアウト**します。  
   
-    -   項目を追加するときに、できるだけ少なくのマップを再配置、オフにする。**インクリメンタル レイアウト**します。  
+  -   項目を追加するときに、できるだけ少なくのマップを再配置、オフにする。**インクリメンタル レイアウト**します。  
   
--   **マップを他のユーザーと共有できますか。**  
+- **マップを他のユーザーと共有できますか。**  
   
-     マップをエクスポートし、Microsoft Outlook があれば、他のユーザーに送信できます。または、マップを独自のソリューションに保存し、Team Foundation バージョン管理にチェックインできます。  
+   マップをエクスポートし、Microsoft Outlook があれば、他のユーザーに送信できます。または、マップを独自のソリューションに保存し、Team Foundation バージョン管理にチェックインできます。  
   
-     ![他のユーザーと共有呼び出し履歴コード マップ](../debugger/media/debuggermap-sharewithothers.png "DebuggerMap_ShareWithOthers")  
+   ![他のユーザーと共有呼び出し履歴コード マップ](../debugger/media/debuggermap-sharewithothers.png "DebuggerMap_ShareWithOthers")  
   
--   **新しい呼び出し履歴を自動的に追加することから、マップを停止するにはどうすればよいですか。**  
+- **新しい呼び出し履歴を自動的に追加することから、マップを停止するにはどうすればよいですか。**  
   
-     選択![ボタン&#45;Show コール スタックは、自動的にコード マップに](../debugger/media/debuggermap-automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon")マップのツールバー。 マップを現在の呼び出し履歴を手動で追加するには、キーを押して**Ctrl** + **Shift** + **`** します。  
+   選択![ボタン&#45;Show コール スタックは、自動的にコード マップに](../debugger/media/debuggermap-automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon")マップのツールバー。 マップを現在の呼び出し履歴を手動で追加するには、キーを押して**Ctrl** + **Shift** + **`** します。  
   
-     マップでは引き続き、デバッグ中にマップ上の既存の呼び出し履歴が強調表示されます。  
+   マップでは引き続き、デバッグ中にマップ上の既存の呼び出し履歴が強調表示されます。  
   
--   **項目のアイコンと矢印の意味**  
+- **項目のアイコンと矢印の意味**  
   
-     項目に関する詳細を取得するには、その項目の上にマウス ポインターを移動し、アイテムのヒントを確認します。 検索することも、**凡例**に各アイコンの意味について説明します。  
+   項目に関する詳細を取得するには、その項目の上にマウス ポインターを移動し、アイテムのヒントを確認します。 検索することも、**凡例**に各アイコンの意味について説明します。  
   
-     ![呼び出し履歴のコード マップ上のアイコンの意味](../debugger/media/debuggermap-showlegend.png "DebuggerMap_ShowLegend")  
+   ![呼び出し履歴のコード マップ上のアイコンの意味](../debugger/media/debuggermap-showlegend.png "DebuggerMap_ShowLegend")  
   
- 参照:[呼び出し履歴でマップ](#MapStack)•[コードに関するメモ](#MakeNotes)•[次の呼び出し履歴でマップを更新](#UpdateMap)•[マップに関連するコードを追加](#AddRelatedCode)• [マップを使用してバグを見つける](#FindBugs)  
+  参照:[呼び出し履歴でマップ](#MapStack)•[コードに関するメモ](#MakeNotes)•[次の呼び出し履歴でマップを更新](#UpdateMap)•[マップに関連するコードを追加](#AddRelatedCode)• [マップを使用してバグを見つける](#FindBugs)  
   
 ## <a name="see-also"></a>関連項目  
  [ソリューション間の依存関係をマップします。](../modeling/map-dependencies-across-your-solutions.md)   

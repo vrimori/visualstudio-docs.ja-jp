@@ -1,5 +1,5 @@
 ---
-title: IDiaEnumSymbols::get__NewEnum |Microsoft ドキュメント
+title: IDiaEnumSymbols::get__NewEnum |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 83525ead2b44b6f89151c633e222975faec0830b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d5de191e718fa79ce5ed26bfc80086b7508e17fe
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31458841"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898344"
 ---
 # <a name="idiaenumsymbolsgetnewenum"></a>IDiaEnumSymbols::get__NewEnum
 取得、<xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT>この列挙子のバージョン。  
@@ -34,10 +34,10 @@ HRESULT get__NewEnum (
   
 #### <a name="parameters"></a>パラメーター  
  pRetVal  
- [out]返します、`IUnknown`を表すインターフェイスを<xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT>この列挙子のバージョン。  
+ [out]返します、`IUnknown`インターフェイスを表す、<xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT>この列挙子のバージョン。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

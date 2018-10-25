@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetExpressionContext |Microsoft ドキュメント
+title: IDebugStackFrame2::GetExpressionContext |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 23aa07fee47645f50ed0e6d08efa9833d2487259
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3953f02e1795f2b8b4b6fbfc6536ac83c16ce205
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31121457"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934133"
 ---
 # <a name="idebugstackframe2getexpressioncontext"></a>IDebugStackFrame2::GetExpressionContext
-スタック フレームおよびスレッドの現在のコンテキストで式の評価の評価コンテキストを取得します。  
+スタック フレームとスレッドの現在のコンテキストで式の評価の評価コンテキストを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,10 +44,10 @@ int GetExpressionContext (
  [out]返します、 [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)式の評価のコンテキストを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 一般に、式の評価コンテキストはようなものの式の評価を実行するためのスコープです。 呼び出す、 [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)式を解析し、その結果を呼び出すメソッド[EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)または[EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)解析された式を評価するメソッド。  
+## <a name="remarks"></a>Remarks  
+ 一般に、式の評価コンテキストは、式の評価を実行するためのスコープとして考えることができます。 呼び出す、 [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)式を解析し、結果を呼び出すメソッド[EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)または[EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)解析された式を評価するメソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   

@@ -15,12 +15,12 @@ ms.assetid: e8e78514-5720-4fc2-aa43-00b6af482e38
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3ff4df9e76494e6409ce9d988781926e1a10602a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: f1ced074e3257bee41cb9ffcc33279e17b148bbf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49242958"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49838284"
 ---
 # <a name="how-to-implement-error-markers"></a>方法: エラーのマーカーの実装
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "49242958"
   
 ### <a name="to-implement-the-red-wavy-underline-feature"></a>赤い波線の機能を実装するには  
   
-1.  赤い波線を配置するテキストを選択します。  
+1. 赤い波線を配置するテキストを選択します。  
   
-2.  型のマーカーを作成`MARKER_CODESENSE_ERROR`です。 詳細については、次を参照してください。[方法: 標準のテキスト マーカーの追加](../extensibility/how-to-add-standard-text-markers.md)します。  
+2. 型のマーカーを作成`MARKER_CODESENSE_ERROR`です。 詳細については、次を参照してください。[方法: 標準のテキスト マーカーの追加](../extensibility/how-to-add-standard-text-markers.md)します。  
   
-3.  その後、渡す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>インターフェイス ポインター。  
+3. その後、渡す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>インターフェイス ポインター。  
   
- このプロセスでは、特定のマーカーにツールヒントのテキストまたは特別なコンテキスト メニューを作成することもできます。 詳細については、次を参照してください。[方法: 標準のテキスト マーカーの追加](../extensibility/how-to-add-standard-text-markers.md)します。  
+   このプロセスでは、特定のマーカーにツールヒントのテキストまたは特別なコンテキスト メニューを作成することもできます。 詳細については、次を参照してください。[方法: 標準のテキスト マーカーの追加](../extensibility/how-to-add-standard-text-markers.md)します。  
   
- エラーのマーカーを表示する前に、次のオブジェクトが必要です。  
+   エラーのマーカーを表示する前に、次のオブジェクトが必要です。  
   
--   パーサーです。  
+- パーサーです。  
   
--   タスク プロバイダー (の実装は、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskProvider2>) 再解析する行を識別するために行情報の変更の記録を保持します。  
+- タスク プロバイダー (の実装は、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskProvider2>) 再解析する行を識別するために行情報の変更の記録を保持します。  
   
--   カレットをキャプチャするテキスト ビューのフィルターを使用して、ビューからイベントを変更する、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEvents.OnChangeCaretLine%2A>) メソッドです。  
+- カレットをキャプチャするテキスト ビューのフィルターを使用して、ビューからイベントを変更する、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEvents.OnChangeCaretLine%2A>) メソッドです。  
   
- パーサー、タスク プロバイダー、およびフィルターは、エラー マーカーを可能にするために必要なインフラストラクチャを提供します。 次の手順では、エラー マーカーを表示するため、プロセスを提供します。  
+  パーサー、タスク プロバイダー、およびフィルターは、エラー マーカーを可能にするために必要なインフラストラクチャを提供します。 次の手順では、エラー マーカーを表示するため、プロセスを提供します。  
   
 1.  フィルター選択されるビューでは、フィルターは、そのビューのデータに関連付けられているタスク プロバイダーへのポインターを取得します。  
   

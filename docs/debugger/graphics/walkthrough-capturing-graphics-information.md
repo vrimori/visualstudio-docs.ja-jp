@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: グラフィックス情報のキャプチャ |Microsoft ドキュメント'
+title: 'チュートリアル: グラフィックス情報のキャプチャ |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 037bdbbfb81c36e4f8e4d124801907ca0600aee7
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 81e647f1e98a13a87c1b526630eee349fde3fd69
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31476349"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49932930"
 ---
 # <a name="walkthrough-capturing-graphics-information"></a>チュートリアル: グラフィックス情報のキャプチャ
 このチュートリアルでは、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のグラフィックス診断を使用して、Direct3D アプリケーションから手動でグラフィックス情報をキャプチャする方法を示します。  
@@ -31,34 +31,34 @@ ms.locfileid: "31476349"
   
 #### <a name="to-enable-the-capture-of-graphics-information-after-a-project-or-solution-is-loaded"></a>プロジェクトまたはソリューションの読み込み後にグラフィックス情報のキャプチャを有効にするには  
   
-1.  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]で、グラフィックス情報をキャプチャするアプリケーションのプロジェクト ファイルまたはソリューション ファイルを読み込みます。  
+1. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]で、グラフィックス情報をキャプチャするアプリケーションのプロジェクト ファイルまたはソリューション ファイルを読み込みます。  
   
-2.  グラフィックス診断ツール バーで、 **[診断の開始]** を選択します。  
+2. グラフィックス診断ツール バーで、 **[診断の開始]** を選択します。  
   
 #### <a name="to-enable-the-capture-of-graphics-information-without-loading-a-project-or-solution"></a>プロジェクトまたはソリューションを読み込まずにグラフィックス情報のキャプチャを有効にするには  
   
-1.  メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。 **[プロジェクトを開く]** ダイアログ ボックスが表示されます。  
+1. メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。 **[プロジェクトを開く]** ダイアログ ボックスが表示されます。  
   
-2.  プロジェクト ファイルまたはソリューション ファイルの代わりに、グラフィックス情報をキャプチャするアプリケーションの実行可能ファイルを指定し、 **[開く]** を選択します。  
+2. プロジェクト ファイルまたはソリューション ファイルの代わりに、グラフィックス情報をキャプチャするアプリケーションの実行可能ファイルを指定し、 **[開く]** を選択します。  
   
-3.  メニュー バーで、 **[デバッグ]**、 **[グラフィックス]**、 **[診断の開始]** の順に選択します。  
+3. メニュー バーで、 **[デバッグ]**、 **[グラフィックス]**、 **[診断の開始]** の順に選択します。  
   
- アプリを開始して、フレームがレンダリングされると、グラフィックス情報をキャプチャすることができます。  
+   アプリを開始して、フレームがレンダリングされると、グラフィックス情報をキャプチャすることができます。  
   
 #### <a name="to-capture-graphics-information"></a>グラフィックス情報をキャプチャするには  
   
--   グラフィックス診断ツール バーで、 **[キャプチャ]** ボタンをクリックします。 ![グラフィックス キャプチャ ボタン アイコン](media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")  
+- グラフィックス診断ツール バーで、 **[キャプチャ]** ボタンをクリックします。 ![グラフィックス キャプチャ ボタン アイコン](media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")  
   
-     - または -  
+   - または -  
   
-     アプリケーションにフォーカスを置いた状態で、 **PrintScreen**キーを押します。  
+   アプリケーションにフォーカスを置いた状態で、 **PrintScreen**キーを押します。  
   
- フレームに関する情報をキャプチャするたびに、グラフィックス診断は Direct3D イベントおよび関連付けられた状態を記録し、グラフィックス ログにデータを追加します。 グラフィックス ログは、グラフィックス診断のセッションごとに新しく作成されます。 グラフィックス ログの詳細については、次を参照してください。[概要](overview-of-visual-studio-graphics-diagnostics.md)です。  
+  フレームに関する情報をキャプチャするたびに、グラフィックス診断は Direct3D イベントおよび関連付けられた状態を記録し、グラフィックス ログにデータを追加します。 グラフィックス ログは、グラフィックス診断のセッションごとに新しく作成されます。 グラフィックス ログについては、次を参照してください。[概要](overview-of-visual-studio-graphics-diagnostics.md)します。  
   
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルでは、手動でグラフィックス情報をキャプチャする方法を示しました。 次の手順では、次のオプションを検討します。  
   
--   グラフィックス診断ツールを使用してキャプチャされたグラフィックス情報を解析する方法について学習します。 参照してください[概要](overview-of-visual-studio-graphics-diagnostics.md)です。  
+-   グラフィックス診断ツールを使用してキャプチャされたグラフィックス情報を解析する方法について学習します。 参照してください[概要](overview-of-visual-studio-graphics-diagnostics.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [Capturing Graphics Information](capturing-graphics-information.md)

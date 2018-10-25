@@ -26,12 +26,12 @@ caps.latest.revision: 47
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 9224314dbcb5fcb424708c7dad4ca674af661604
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: dcc331defab98303a805f75f75afb3e309c7d2dd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49208914"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910928"
 ---
 # <a name="creating-bootstrapper-packages"></a>ブートストラップ パッケージの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,37 +45,37 @@ ms.locfileid: "49208914"
   
  ブートストラップ パッケージを作成するには、Bootstrapper Manifest Generator に EXE 形式または MSI 形式の再頒布可能ファイルを指定する必要があります。 Bootstrapper Manifest Generator によって次のファイルが作成されます。  
   
--   パッケージの言語的に中立なメタデータをすべて含む製品マニフェスト (product.xml)。 再頒布可能コンポーネントのすべてのローカライズ バージョンに共通するメタデータが含まれます。  
+- パッケージの言語的に中立なメタデータをすべて含む製品マニフェスト (product.xml)。 再頒布可能コンポーネントのすべてのローカライズ バージョンに共通するメタデータが含まれます。  
   
--   言語固有のメタデータを含むパッケージ マニフェスト (package.xml)。通常、ローカライズされたエラー メッセージが含まれます。 コンポーネントの各ローカライズ バージョンに対して、少なくとも 1 つのパッケージ マニフェストが必要です。  
+- 言語固有のメタデータを含むパッケージ マニフェスト (package.xml)。通常、ローカライズされたエラー メッセージが含まれます。 コンポーネントの各ローカライズ バージョンに対して、少なくとも 1 つのパッケージ マニフェストが必要です。  
   
- これらのファイルが作成されたら、製品マニフェスト ファイルをカスタム ブートストラップ名のフォルダーに格納します。 パッケージ マニフェスト ファイルは、ロケール名のフォルダーに格納します。 たとえば、英語の再頒布用のパッケージ マニフェスト ファイルは、en というフォルダーに格納します。 日本語用は ja、ドイツ語用は de など、ロケールごとにこの手順を繰り返します。 最終的に、カスタム ブートストラップ パッケージは次のようなフォルダー構造になります。  
+  これらのファイルが作成されたら、製品マニフェスト ファイルをカスタム ブートストラップ名のフォルダーに格納します。 パッケージ マニフェスト ファイルは、ロケール名のフォルダーに格納します。 たとえば、英語の再頒布用のパッケージ マニフェスト ファイルは、en というフォルダーに格納します。 日本語用は ja、ドイツ語用は de など、ロケールごとにこの手順を繰り返します。 最終的に、カスタム ブートストラップ パッケージは次のようなフォルダー構造になります。  
   
- `CustomBootstrapperPackage`  
+  `CustomBootstrapperPackage`  
   
- `product.xml`  
+  `product.xml`  
   
- `CustomBootstrapper.msi`  
+  `CustomBootstrapper.msi`  
   
- `de`  
+  `de`  
   
- `eula.rtf`  
+  `eula.rtf`  
   
- `package.xml`  
+  `package.xml`  
   
- `en`  
+  `en`  
   
- `eula.rtf`  
+  `eula.rtf`  
   
- `package.xml`  
+  `package.xml`  
   
- `ja`  
+  `ja`  
   
- `eula.rtf`  
+  `eula.rtf`  
   
- `package.xml`  
+  `package.xml`  
   
- 最後に、再頒布可能ファイルをブートストラップ フォルダーにコピーします。 詳細については、「 [How to: Create a Localized Bootstrapper Package](../deployment/how-to-create-a-localized-bootstrapper-package.md)」を参照してください。  
+  最後に、再頒布可能ファイルをブートストラップ フォルダーにコピーします。 詳細については、「 [How to: Create a Localized Bootstrapper Package](../deployment/how-to-create-a-localized-bootstrapper-package.md)」を参照してください。  
   
 ```  
 \Program Files\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages  

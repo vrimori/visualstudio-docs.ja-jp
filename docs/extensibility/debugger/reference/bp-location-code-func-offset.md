@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_CODE_FUNC_OFFSET |Microsoft ドキュメント
+title: BP_LOCATION_CODE_FUNC_OFFSET |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d312824bb88022cba9b58945cb5f3e78c13b837
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9a1828a7cea62893ecddec6d28f44ca6475352dd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31108649"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911396"
 ---
 # <a name="bplocationcodefuncoffset"></a>BP_LOCATION_CODE_FUNC_OFFSET
-コード内の関数内のブレークポイントのオフセットの位置をについて説明します。  
+コード内の関数のブレークポイントの位置をについて説明します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,17 +36,17 @@ typedef struct _BP_LOCATION_CODE_FUNC_OFFSET {
   
 ## <a name="members"></a>メンバー  
  `bstrContext`  
- ブレークポイントのコンテキスト、通常、呼び出し履歴に見られるようメソッドまたは関数の名前。  
+ ブレークポイントのコンテキスト、通常は呼び出し履歴で見られる同様のメソッドまたは関数の名前。  
   
  `pFuncPos`  
- [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md)関数の名前、および関数の先頭からの相対位置を記述するオブジェクト。  
+ [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md)の名前、関数と関数の先頭からの相対位置を示すオブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この構造体のメンバーである、 [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)構造体、共用体の一部として。  
   
- `pFuncPos`メンバーは関数のブレークポイントを設定する場所を示します。  
+ `pFuncPos`メンバー関数のブレークポイントを設定する場所を示します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

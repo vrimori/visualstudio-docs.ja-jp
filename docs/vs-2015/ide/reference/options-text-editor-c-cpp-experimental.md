@@ -15,12 +15,12 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6b07bdc7ab114619629ab4ef360ded3bf6655e6e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: aae8681bf9db0998c1d86ad00112d3228a76081d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49285117"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49814416"
 ---
 # <a name="options-text-editor-cc-experimental"></a>[オプション]、[テキスト エディター]、[C/C++]、[実験用]
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -59,15 +59,15 @@ ms.locfileid: "49285117"
   
  Visual Studio ギャラリーのその他のテキスト エディター機能については、 [ここ](http://go.microsoft.com/fwlink/?LinkId=692016)の一覧をご覧ください。 例として、 [C++ Quick Fixes](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f)があります。これは、次をサポートします。  
   
--   **不足している #include の追加** -コード内の不明なシンボルについて関連する #include を提案します  
+- **不足している #include の追加** -コード内の不明なシンボルについて関連する #include を提案します  
   
--   **名前空間/完全修飾シンボルの使用を追加** - 前の項目と同様ですが、名前空間に機能します。  
+- **名前空間/完全修飾シンボルの使用を追加** - 前の項目と同様ですが、名前空間に機能します。  
   
--   **不足しているセミコロンの追加**  
+- **不足しているセミコロンの追加**  
   
--   **MSDN ヘルプ** - MSDN を検索して、エラー メッセージを調べます  
+- **MSDN ヘルプ** - MSDN を検索して、エラー メッセージを調べます  
   
- 波線の上にカーソルを合わせて電球マークを表示させるか、Ctrl キーを押しながらドットを押すだけです (Ctrl+.、既定のキーボード ショートカット)。 キーボード ショートカットでは、キャレットを特定のエラーやトークンの位置に置く必要はありません。エラーが出た同じ行にカーソルがあれば、行の上の何らかのものに対して解決策が提示されます。  
+  波線の上にカーソルを合わせて電球マークを表示させるか、Ctrl キーを押しながらドットを押すだけです (Ctrl+.、既定のキーボード ショートカット)。 キーボード ショートカットでは、キャレットを特定のエラーやトークンの位置に置く必要はありません。エラーが出た同じ行にカーソルがあれば、行の上の何らかのものに対して解決策が提示されます。  
   
 ## <a name="see-also"></a>関連項目  
  [言語固有のエディター オプションの設定](../../ide/reference/setting-language-specific-editor-options.md)   

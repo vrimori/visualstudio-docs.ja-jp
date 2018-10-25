@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aff486d906c340bf79939cbe5b43cbc2447d26f5
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 512675f0752f675bd393f324220eece87301af8a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39153830"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914828"
 ---
 # <a name="task-element-msbuild"></a>Task 要素 (MSBuild)
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクのインスタンスを作成し、実行します。 要素名は、作成されるタスクの名前によって決まります。  
@@ -60,9 +60,9 @@ ms.locfileid: "39153830"
 
 ### <a name="parent-elements"></a>親要素  
 
-|要素|説明|  
-|-------------|-----------------|  
-|[Target](../msbuild/target-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクのコンテナー要素。|  
+| 要素 | 説明 |
+| - | - |
+| [Target](../msbuild/target-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクのコンテナー要素。 |
 
 ## <a name="remarks"></a>コメント  
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイル内の `Task` 要素は、タスクのインスタンスを作成し、そこにプロパティを設定して実行します。 `Output` 要素は、プロジェクト ファイル内の別の場所で使用するプロパティまたは項目に出力パラメーターを格納します。  

@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 1dffa349aa94c5221e359633c7a8b4ef2e4fdde5
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 3fc044d7b59a1d9bfa48139c479625e47440b5e5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49250620"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928686"
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>トラブルシューティングと既知の問題 (Visual Studio Tools for Unity)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -64,21 +64,21 @@ ms.locfileid: "49250620"
   
 ##### <a name="to-report-that-visual-studio-freezes-while-debugging-with-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity でデバッグすると Visual Studio がフリーズすることを報告する方法  
   
-1.  Visual Studio の新しいインスタンスを開きます。  
+1. Visual Studio の新しいインスタンスを開きます。  
   
-2.  [プロセスにアタッチ] ダイアログ ボックスを開きます。 Visual Studio の新しいインスタンスのメイン メニューで、**[デバッグ]**、**[プロセスにアタッチ]** を選択します。  
+2. [プロセスにアタッチ] ダイアログ ボックスを開きます。 Visual Studio の新しいインスタンスのメイン メニューで、**[デバッグ]**、**[プロセスにアタッチ]** を選択します。  
   
-3.  Visual Studio のフリーズしたインスタンスに、デバッガーをアタッチします。 **[プロセスにアタッチ]** ダイアログ ボックスで、**[選択可能なプロセス]** テーブルからフリーズした Visual Studio インスタンスを選択し、**[アタッチ]** ボタンを選択します。  
+3. Visual Studio のフリーズしたインスタンスに、デバッガーをアタッチします。 **[プロセスにアタッチ]** ダイアログ ボックスで、**[選択可能なプロセス]** テーブルからフリーズした Visual Studio インスタンスを選択し、**[アタッチ]** ボタンを選択します。  
   
-4.  デバッガーを一時停止します。 Visual Studio の新しいインスタンスのメイン メニューで、**[デバッグ]**、**[すべて中断]** を選択するか、単に **Ctrl+Alt+Break**押します。  
+4. デバッガーを一時停止します。 Visual Studio の新しいインスタンスのメイン メニューで、**[デバッグ]**、**[すべて中断]** を選択するか、単に **Ctrl+Alt+Break**押します。  
   
-5.  スレッド ダンプを作成します。 コマンド ウィンドウで、次のコマンドを入力して **Enter**を押します。  
+5. スレッド ダンプを作成します。 コマンド ウィンドウで、次のコマンドを入力して **Enter**を押します。  
   
-    ```powershell  
-    Debug.ListCallStack /AllThreads /ShowExternalCode  
-    ```  
+   ```powershell  
+   Debug.ListCallStack /AllThreads /ShowExternalCode  
+   ```  
   
-     最初に **[コマンド]** ウィンドウを表示しなければならない場合もあります。 Visual Studio のメイン メニューで、**[ビュー]**、**[その他のウィンドウ]**、**[コマンド ウィンドウ]** の順に選択します。  
+    最初に **[コマンド]** ウィンドウを表示しなければならない場合もあります。 Visual Studio のメイン メニューで、**[ビュー]**、**[その他のウィンドウ]**、**[コマンド ウィンドウ]** の順に選択します。  
   
-6.  最後に、Visual Studio がフリーズ状態になったときに実行していた作業内容に関する説明を添えて、スレッド ダンプを [vstusp@microsoft.com](mailto:vstusp@microsoft.com)に送信します。
+6. 最後に、Visual Studio がフリーズ状態になったときに実行していた作業内容に関する説明を添えて、スレッド ダンプを [vstusp@microsoft.com](mailto:vstusp@microsoft.com)に送信します。
 

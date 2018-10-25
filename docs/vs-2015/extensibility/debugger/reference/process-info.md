@@ -17,12 +17,12 @@ ms.assetid: 260c33cc-a05e-4645-84b6-536d0b3b0537
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 60551419fa041bdcd5021363a882ba8efae4a507
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 94fa9edf53d56fefb817c1a4ba6d7b3f027ab2a6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49183861"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49886423"
 ---
 # <a name="processinfo"></a>PROCESS_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -90,7 +90,7 @@ public struct PROCESS_INFO {
 ## <a name="remarks"></a>Remarks  
  この構造体に渡される、 [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)メソッドでいっぱいになった場所。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

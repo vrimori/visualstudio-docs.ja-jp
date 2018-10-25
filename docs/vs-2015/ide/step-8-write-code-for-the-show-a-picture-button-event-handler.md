@@ -14,25 +14,25 @@ caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 37d47adff9bf8bc364e1972a6ab588a3591c120b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6172188fb7d06122cdcc178889b2a5b37ca1bb0f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49203269"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933548"
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>手順 8: [Show a Picture] ボタンのイベント ハンドラーのコードの記述
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 この手順では、**[Show a picture]** ボタンの機能を次のように設定します。  
   
--   ユーザーがボタンをクリックすると **[ファイルを開く]** ダイアログ ボックスが開く。  
+- ユーザーがボタンをクリックすると **[ファイルを開く]** ダイアログ ボックスが開く。  
   
--   ユーザーがピクチャ ファイルを開くとそのピクチャが PictureBox に表示される。  
+- ユーザーがピクチャ ファイルを開くとそのピクチャが PictureBox に表示される。  
   
- IDE には、コードの記述に役立つ IntelliSense と呼ばれる強力なツールが備わっています。 コードを入力する際に単語の一部を入力すると、入力に合わせてボックスが開き、入力候補が提示されます。 このツールは、ユーザーの次の操作を予測し、ユーザーが一覧から選択した最後の項目に自動的にジャンプします。 ユーザーは、上方向キーまたは下方向キーを使用して一覧内を移動したり、文字の入力を続けて選択肢を絞り込んだりすることができます。 目的の選択肢が見つかったら、Tab キーを押して選択します。 入力候補が不要な場合は無視してもかまいません。  
+  IDE には、コードの記述に役立つ IntelliSense と呼ばれる強力なツールが備わっています。 コードを入力する際に単語の一部を入力すると、入力に合わせてボックスが開き、入力候補が提示されます。 このツールは、ユーザーの次の操作を予測し、ユーザーが一覧から選択した最後の項目に自動的にジャンプします。 ユーザーは、上方向キーまたは下方向キーを使用して一覧内を移動したり、文字の入力を続けて選択肢を絞り込んだりすることができます。 目的の選択肢が見つかったら、Tab キーを押して選択します。 入力候補が不要な場合は無視してもかまいません。  
   
- ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 4](http://go.microsoft.com/fwlink/?LinkId=205215)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 4](http://go.microsoft.com/fwlink/?LinkId=205203)」を参照してください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
+  ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 4](http://go.microsoft.com/fwlink/?LinkId=205215)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 4](http://go.microsoft.com/fwlink/?LinkId=205203)」を参照してください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
   
 ### <a name="to-write-code-for-the-show-a-picture-button-event-handler"></a>[Show a picture] ボタンのイベント ハンドラーのコードを記述するには  
   

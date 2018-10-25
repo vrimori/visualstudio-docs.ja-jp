@@ -20,15 +20,16 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: bd572cfff52537eab58e06ddf8f7a34bb087513c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: cb3cb13484d427bb5389a0ec89573231376efdf8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49305384"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811142"
 ---
 # <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: アセンブリに AssemblyVersionAttribute を設定します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
+
 |||
 |-|-|
 |TypeName|MarkAssembliesWithAssemblyVersion|
@@ -42,15 +43,15 @@ ms.locfileid: "49305384"
 ## <a name="rule-description"></a>規則の説明
  アセンブリの id は、次の情報で構成されます。
 
--   [アセンブリ名]
+- [アセンブリ名]
 
--   バージョン番号
+- バージョン番号
 
--   culture
+- culture
 
--   (厳密な名前付きアセンブリの場合) の公開キー。
+- (厳密な名前付きアセンブリの場合) の公開キー。
 
- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] では、バージョン番号を使用してアセンブリを一意に識別し、厳密な名前を持つアセンブリの型にバインドします。 バージョン番号は、バージョンと発行者のポリシーと共に使用されます。 既定で、アプリケーションは、ビルドされたアセンブリのバージョンでのみ実行されます。
+  [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] では、バージョン番号を使用してアセンブリを一意に識別し、厳密な名前を持つアセンブリの型にバインドします。 バージョン番号は、バージョンと発行者のポリシーと共に使用されます。 既定で、アプリケーションは、ビルドされたアセンブリのバージョンでのみ実行されます。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  この規則違反を修正するを使用して、アセンブリにバージョン番号を追加します。、<xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName>属性。 次の例を参照してください。

@@ -20,12 +20,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d44077dbe839fe6ce6b369f8d8b3b828bdb982a
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: b968a94b76f0b2161eef84fdad2cf01288165e65
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45549431"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899410"
 ---
 # <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: 基本型をパラメーターとして渡すことを考慮します
 
@@ -37,16 +37,20 @@ ms.locfileid: "45549431"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- メソッドの宣言には、派生型では、仮パラメーターが含まれていて、メソッドは、パラメーターの基本型のメンバーだけを呼び出します。
+
+メソッドの宣言には、派生型では、仮パラメーターが含まれていて、メソッドは、パラメーターの基本型のメンバーだけを呼び出します。
 
 ## <a name="rule-description"></a>規則の説明
- メソッドの宣言で基本型をパラメーターとして指定すると、その基本型から派生した型は、メソッドに対応する引数として渡すことができます。 メソッド本体内で、引数を使用する場合に実行される特定のメソッドは、引数の型に依存します。 派生型によって提供される追加機能が必要ない場合、基本データ型の使用により、メソッドのより広範囲に利用します。
+
+メソッドの宣言で基本型をパラメーターとして指定すると、その基本型から派生した型は、メソッドに対応する引数として渡すことができます。 メソッド本体内で、引数を使用する場合に実行される特定のメソッドは、引数の型に依存します。 派生型によって提供される追加機能が必要ない場合、基本データ型の使用により、メソッドのより広範囲に利用します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を解決するには、その基本型にパラメーターの型を変更します。
+
+この規則違反を解決するには、その基本型にパラメーターの型を変更します。
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制します。
- このルールから警告を抑制しても安全です。
+
+このルールから警告を抑制しても安全です。
 
 - メソッドが派生型によって提供される特定の機能が必要な場合
 
@@ -54,14 +58,16 @@ ms.locfileid: "45549431"
 
 - 派生型のみ、またはより強い派生型では、適用するのには、メソッドに渡されます。
 
- このような場合は、コードは、堅牢になります、コンパイラとランタイムによって提供される厳密な型チェックのためです。
+このような場合は、コードは、堅牢になります、コンパイラとランタイムによって提供される厳密な型チェックのためです。
 
 ## <a name="example"></a>例
- 次の例では、メソッド、`ManipulateFileStream`でのみ使用できる、<xref:System.IO.FileStream>オブジェクトで、この規則に違反します。 2 番目のメソッド`ManipulateAnyStream`、置き換えることで、ルールを満たす、<xref:System.IO.FileStream>パラメーターを使用して、<xref:System.IO.Stream>します。
 
- [!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CSharp/ca1011-consider-passing-base-types-as-parameters_1.cs)]
- [!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CPP/ca1011-consider-passing-base-types-as-parameters_1.cpp)]
- [!code-vb[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/VisualBasic/ca1011-consider-passing-base-types-as-parameters_1.vb)]
+次の例では、メソッド、`ManipulateFileStream`でのみ使用できる、<xref:System.IO.FileStream>オブジェクトで、この規則に違反します。 2 番目のメソッド`ManipulateAnyStream`、置き換えることで、ルールを満たす、<xref:System.IO.FileStream>パラメーターを使用して、<xref:System.IO.Stream>します。
+
+[!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CSharp/ca1011-consider-passing-base-types-as-parameters_1.cs)]
+[!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CPP/ca1011-consider-passing-base-types-as-parameters_1.cpp)]
+[!code-vb[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/VisualBasic/ca1011-consider-passing-base-types-as-parameters_1.vb)]
 
 ## <a name="related-rules"></a>関連するルール
- [CA1059: メンバーは特定の具象型を公開できません](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)
+
+[CA1059: メンバーは特定の具象型を公開できません](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)

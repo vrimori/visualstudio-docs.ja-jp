@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8fa6a1547a604e5d073c4e45c7769c68e0674d74
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: bdd96c124dafabf5584dfa13547cdea1e2b843b8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39497743"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49879325"
 ---
 # <a name="walkthrough-display-statement-completion"></a>チュートリアル: ステートメント補完の表示
 入力候補を提供する識別子を定義し、補完セッションをトリガーし、言語ベースのステートメント入力候補を実装できます。 言語サービスのコンテキストでステートメント入力候補を定義、ファイル名拡張子とコンテンツの種類を定義し、補完機能をその型だけを表示できます。 または、既存のコンテンツ タイプの完了をトリガーする — たとえば、「プレーン テキスト」。 このチュートリアルでは、「プレーン テキスト」コンテンツ タイプ、テキスト ファイルのコンテンツの種類の入力候補をトリガーする方法を示します。 「テキスト」コンテンツの種類は、すべての他のコンテンツの種類のコードと XML ファイルを含む先祖です。  
@@ -34,7 +34,7 @@ ms.locfileid: "39497743"
   
 #### <a name="to-create-a-mef-project"></a>MEF プロジェクトを作成するには  
   
-1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を`CompletionTest`します。  
+1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューション `CompletionTest`の名前を指定します。  
   
 2.  エディター分類子の項目テンプレートをプロジェクトに追加します。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能を作成する](../extensibility/creating-an-extension-with-an-editor-item-template.md)します。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "39497743"
   
 ### <a name="to-implement-the-completion-source"></a>入力候補のソースを実装するには  
   
-1.  クラス ファイルを追加し、名前`TestCompletionSource`します。  
+1.  クラス ファイルを追加し、その名前を `TestCompletionSource`にします。  
   
 2.  これらのインポートを追加します。  
   
@@ -148,48 +148,48 @@ ms.locfileid: "39497743"
   
 #### <a name="to-implement-the-completion-command-handler"></a>完了コマンド ハンドラーを実装するには  
   
-1.  という名前のクラスを追加`TestCompletionCommandHandler`を実装する<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>:  
+1. という名前のクラスを追加`TestCompletionCommandHandler`を実装する<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>:  
   
-     [!code-csharp[VSSDKCompletionTest#15](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_15.cs)]
-     [!code-vb[VSSDKCompletionTest#15](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_15.vb)]  
+    [!code-csharp[VSSDKCompletionTest#15](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_15.cs)]
+    [!code-vb[VSSDKCompletionTest#15](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_15.vb)]  
   
-2.  次のコマンド ハンドラー (に渡すコマンド)、テキスト ビュー、(これにより、さまざまなサービスへのアクセス)、コマンド ハンドラー プロバイダーには、プライベート フィールドを追加し、補完セッション。  
+2. 次のコマンド ハンドラー (に渡すコマンド)、テキスト ビュー、(これにより、さまざまなサービスへのアクセス)、コマンド ハンドラー プロバイダーには、プライベート フィールドを追加し、補完セッション。  
   
-     [!code-csharp[VSSDKCompletionTest#16](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_16.cs)]
-     [!code-vb[VSSDKCompletionTest#16](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_16.vb)]  
+    [!code-csharp[VSSDKCompletionTest#16](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_16.cs)]
+    [!code-vb[VSSDKCompletionTest#16](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_16.vb)]  
   
-3.  テキスト ビューとプロバイダーのフィールドを設定し、コマンドのチェーンにコマンドを追加するコンス トラクターを追加します。  
+3. テキスト ビューとプロバイダーのフィールドを設定し、コマンドのチェーンにコマンドを追加するコンス トラクターを追加します。  
   
-     [!code-csharp[VSSDKCompletionTest#17](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_17.cs)]
-     [!code-vb[VSSDKCompletionTest#17](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_17.vb)]  
+    [!code-csharp[VSSDKCompletionTest#17](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_17.cs)]
+    [!code-vb[VSSDKCompletionTest#17](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_17.vb)]  
   
-4.  実装、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>に沿ってコマンドを渡すことによってメソッド。  
+4. 実装、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>に沿ってコマンドを渡すことによってメソッド。  
   
-     [!code-csharp[VSSDKCompletionTest#18](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_18.cs)]
-     [!code-vb[VSSDKCompletionTest#18](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_18.vb)]  
+    [!code-csharp[VSSDKCompletionTest#18](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_18.cs)]
+    [!code-vb[VSSDKCompletionTest#18](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_18.vb)]  
   
-5.  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> メソッドを実装します。 このメソッドは、キーストロークを受信すると、次のいずれかが行う必要があります。  
+5. <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> メソッドを実装します。 このメソッドは、キーストロークを受信すると、次のいずれかが行う必要があります。  
   
-    -   文字、バッファーに書き込むと、トリガー、または完了をフィルター処理を許可します。 (印刷文字そいます。)  
+   - 文字、バッファーに書き込むと、トリガー、または完了をフィルター処理を許可します。 (印刷文字そいます。)  
   
-    -   完了すると、コミットしますが、バッファーに書き込まれる文字を許可しません。 (空白、**タブ**、および **」と入力**完了セッションが表示されるときにこの操作を行います)。  
+   - 完了すると、コミットしますが、バッファーに書き込まれる文字を許可しません。 (空白、**タブ**、および **」と入力**完了セッションが表示されるときにこの操作を行います)。  
   
-    -   次のハンドラー渡されるコマンドを使用できます。 (その他のコマンドです。)  
+   - 次のハンドラー渡されるコマンドを使用できます。 (その他のコマンドです。)  
   
      このメソッドは、UI を表示可能性があります、ために、呼び出す<xref:Microsoft.VisualStudio.Shell.VsShellUtilities.IsInAutomationFunction%2A>automation コンテキストで呼び出されるしないことを確認します。  
   
      [!code-csharp[VSSDKCompletionTest#19](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_19.cs)]
      [!code-vb[VSSDKCompletionTest#19](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_19.vb)]  
   
-6.  このコード補完セッションをトリガーするプライベート メソッドを示します。  
+6. このコード補完セッションをトリガーするプライベート メソッドを示します。  
   
-     [!code-csharp[VSSDKCompletionTest#20](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_20.cs)]
-     [!code-vb[VSSDKCompletionTest#20](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_20.vb)]  
+    [!code-csharp[VSSDKCompletionTest#20](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_20.cs)]
+    [!code-vb[VSSDKCompletionTest#20](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_20.vb)]  
   
-7.  次の例は、プライベート メソッドからアンサブスク ライブする、<xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Dismissed>イベント。  
+7. 次の例は、プライベート メソッドからアンサブスク ライブする、<xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Dismissed>イベント。  
   
-     [!code-csharp[VSSDKCompletionTest#21](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_21.cs)]
-     [!code-vb[VSSDKCompletionTest#21](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_21.vb)]  
+    [!code-csharp[VSSDKCompletionTest#21](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_21.cs)]
+    [!code-vb[VSSDKCompletionTest#21](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_21.vb)]  
   
 ## <a name="build-and-test-the-code"></a>ビルドし、コードのテスト  
  このコードをテストするには、CompletionTest ソリューションをビルドし、実験用インスタンスで実行します。  

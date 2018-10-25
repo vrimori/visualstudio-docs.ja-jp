@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::DisableENC |Microsoft ドキュメント
+title: IDebugProcess3::DisableENC |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2da464c82332f6fc4f9bcd57ee8197e111e9fa0a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bc769e7386777dbf59dadbbe93b53bc9cac01ce0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31116631"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875867"
 ---
 # <a name="idebugprocess3disableenc"></a>IDebugProcess3::DisableENC
-このメソッドに明示的に無効にエディット コンティニュでこの処理 (およびすべてのプログラムが含まれています)。 カスタム ポートのサプライヤーを常に返します`E_NOTIMPL`です。  
+このメソッドに明示的に無効にします。 エディット コンティニュでこのプロセス (およびすべてのプログラムが含まれています)。 カスタム ポート サプライヤーが常に返す必要があります`E_NOTIMPL`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,16 +40,16 @@ HRESULT DisableENC(
   
 #### <a name="parameters"></a>パラメーター  
  `reason`  
- [in]値、 [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md)列挙します。  
+ [in]値、 [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md)列挙体。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 > [!NOTE]
->  カスタム ポートのサプライヤーを常に返します`E_NOTIMPL`です。  
+>  カスタム ポート サプライヤーが常に返す必要があります`E_NOTIMPL`します。  
   
-## <a name="remarks"></a>コメント  
- 1 回の編集、およびプロセスの続行は無効、プロセスを再起動するだけで再度有効にします。  
+## <a name="remarks"></a>Remarks  
+ 1 回の編集しプロセスの続行は無効です、プロセスを再起動することによってのみ再度有効にできます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   

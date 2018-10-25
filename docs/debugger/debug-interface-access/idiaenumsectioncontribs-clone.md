@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsectioncontribs::clone |Microsoft ドキュメント
+title: Idiaenumsectioncontribs::clone |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b799ab378de4c772f6671791d9750688bcadd9ca
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 1c02f47f3df97c0e5a9fb1f86762de62aaf01cec
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31457414"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844406"
 ---
 # <a name="idiaenumsectioncontribsclone"></a>IDiaEnumSectionContribs::Clone
-現在の列挙子と同じ列挙の状態を含む列挙子を作成します。  
+現在の列挙子と同じ列挙状態を格納する列挙子を作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,10 +34,10 @@ HRESULT Clone(
   
 #### <a name="parameters"></a>パラメーター  
  ppenum  
- [out]返します、 [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)列挙子の重複を含むオブジェクトです。 列挙子のみ貢献していないセクションが重複しています。  
+ [out]返します、 [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)列挙子の重複を含むオブジェクト。 列挙子のみの投稿物がないセクションが重複しています。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)

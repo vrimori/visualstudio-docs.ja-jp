@@ -27,12 +27,12 @@ caps.latest.revision: 24
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c65a5ed9cc06c8d9c4d471b878762d863802f5f0
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 20accedd9591c777cad26aed30c05954dfabbdfc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49289043"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811090"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-does-not-have-permission-to-connect-to-this-computer"></a>エラー : リモート コンピューター上の Microsoft Visual Studio リモート デバッグ モニターには、このコンピューターに接続するアクセス許可がありません。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,17 +41,17 @@ ms.locfileid: "49289043"
   
 ### <a name="to-fix-this-problem"></a>この問題を解決するには  
   
--   リモート コンピューターで msvsmon を実行しているユーザー アカウントと同じ名前およびパスワードを使用して、Visual Studio デバッガー ホスト コンピューターにユーザー アカウントを追加します。  
+- リモート コンピューターで msvsmon を実行しているユーザー アカウントと同じ名前およびパスワードを使用して、Visual Studio デバッガー ホスト コンピューターにユーザー アカウントを追加します。  
   
-     \- または -  
+   \- または -  
   
--   ローカル コンピューターを呼び出すアクセス許可を持つユーザーとして msvsmon を実行します。 つまり、ユーザーは msvsmon コンピューターのドメイン ユーザーおよび管理者である必要があります。 msvsmon を実行するユーザー アカウントは次の 2 とおりの方法で指定できます。  
+- ローカル コンピューターを呼び出すアクセス許可を持つユーザーとして msvsmon を実行します。 つまり、ユーザーは msvsmon コンピューターのドメイン ユーザーおよび管理者である必要があります。 msvsmon を実行するユーザー アカウントは次の 2 とおりの方法で指定できます。  
   
-    -   Msvsmon アイコンを右クリックし **実行**ショートカット メニューの   
+  - Msvsmon アイコンを右クリックし **実行**ショートカット メニューの   
   
-     \- または -  
+    \- または -  
   
-    -   コマンド プロンプトで `runas.exe` を実行します。  
+  - コマンド プロンプトで `runas.exe` を実行します。  
   
 ## <a name="see-also"></a>関連項目  
  [リモート ドメイン間でのデバッグ](http://msdn.microsoft.com/library/8e697ce1-55e8-4ab0-a05f-f87225e2f29b)   

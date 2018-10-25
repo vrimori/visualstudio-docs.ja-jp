@@ -13,12 +13,12 @@ ms.assetid: f7e9e4a2-5d01-4f78-b408-5be3892bd162
 caps.latest.revision: 28
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: a78c73afb11f5c04ef3cc61a5efecb9d8069bac4
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 806c19b7132a4541ff97c253700a5e5e980ef556
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49255620"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49817978"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>.runsettings ファイルを使用して単体テストを構成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,17 +36,17 @@ Visual Studio の単体テストは、*.runsettings ファイルを使用して�
   
 ## <a name="customizing-tests-with-a-runsettings-file"></a>.runsettings ファイルによるテストのカスタマイズ  
   
-1.  XML ファイルを Visual Studio ソリューションに追加し、ファイル名を test.runsettings に変更します。 (ファイル名は自由ですが、拡張子には runsettings を使用する必要があります。)  
+1. XML ファイルを Visual Studio ソリューションに追加し、ファイル名を test.runsettings に変更します。 (ファイル名は自由ですが、拡張子には runsettings を使用する必要があります。)  
   
-2.  ファイルの内容を以下の [サンプル](#example)で置き換えます。  
+2. ファイルの内容を以下の [サンプル](#example)で置き換えます。  
   
-     必要に応じてファイルを編集します。  
+    必要に応じてファイルを編集します。  
   
-3.  **[テスト]** メニューの **[テストの設定]** をクリックし、 **[テスト設定ファイルの選択]** をクリックします。  
+3. **[テスト]** メニューの **[テストの設定]** をクリックし、 **[テスト設定ファイルの選択]** をクリックします。  
   
- ソリューション内に複数の \*.runsettings ファイルを作成し、**[テストの設定]** メニューを使用して状況に応じてそれらを有効または無効にすることができます。  
+   ソリューション内に複数の \*.runsettings ファイルを作成し、**[テストの設定]** メニューを使用して状況に応じてそれらを有効または無効にすることができます。  
   
- ![実行設定ファイルの有効化](../test/media/runsettings-1.png "RunSettings-1")  
+   ![実行設定ファイルの有効化](../test/media/runsettings-1.png "RunSettings-1")  
   
 ##  <a name="example"></a> このサンプル .runsettings ファイルをコピーする  
  一般的な *.runsettings ファイルを示します。 すべての値には既定値があるため、ファイルの各要素は省略可能です。  

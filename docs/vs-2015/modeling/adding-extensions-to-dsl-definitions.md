@@ -12,12 +12,12 @@ caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: beeee40e7318102786a1e06b36a0eba3028eb7b7
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 9c3e74f66edc0a8b33ad1fe8205cc02cd0e80054
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49261080"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866156"
 ---
 # <a name="adding-extensions-to-dsl-definitions"></a>DSL 定義への拡張機能の追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,19 +26,19 @@ DSL 定義の拡張機能では、ドメイン固有言語 (DSL) の拡張機能
   
  追加の機能を次に含めることができます。  
   
--   モデルとプレゼンテーション要素のプロパティ  
+- モデルとプレゼンテーション要素のプロパティ  
   
--   シェイプとコネクタのデコレーター  
+- シェイプとコネクタのデコレーター  
   
--   クラス、リレーションシップ、図形とコネクタ  
+- クラス、リレーションシップ、図形とコネクタ  
   
--   検証制約  
+- 検証制約  
   
--   ツールボックス項目とタブ  
+- ツールボックス項目とタブ  
   
- 拡張の DSL のユーザーが作成し、追加の機能のインスタンスを含むモデルを保存し、これらは、適切な拡張機能がインストールされている他のユーザーで読み取ることができます。 拡張機能をインストールしていないユーザーは、追加の機能を使用できませんが、更新、追加の機能を失うことがなく、モデルを保存します。  
+  拡張の DSL のユーザーが作成し、追加の機能のインスタンスを含むモデルを保存し、これらは、適切な拡張機能がインストールされている他のユーザーで読み取ることができます。 拡張機能をインストールしていないユーザーは、追加の機能を使用できませんが、更新、追加の機能を失うことがなく、モデルを保存します。  
   
- サンプル コードとこの機能の詳細については、次を参照してください。、 [Visual Studio Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128) Web サイト。  
+  サンプル コードとこの機能の詳細については、次を参照してください。、 [Visual Studio Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128) Web サイト。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128)

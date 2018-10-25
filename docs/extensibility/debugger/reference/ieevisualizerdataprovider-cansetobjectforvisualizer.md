@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider::CanSetObjectForVisualizer |Microsoft ドキュメント
+title: IEEVisualizerDataProvider::CanSetObjectForVisualizer |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d8848fd5628fbbb7e0e642de2389d6b98375fa6f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e9a70ca947a6b794f74baec9805941c5a9610936
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31120882"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825719"
 ---
 # <a name="ieevisualizerdataprovidercansetobjectforvisualizer"></a>IEEVisualizerDataProvider::CanSetObjectForVisualizer
-このメソッドは、ビジュアライザーで、データ オブジェクトが表す更新できるかどうかを判断します。  
+このメソッドは、ビジュアライザーのデータ オブジェクトを表す更新できるかどうかを判断します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +41,13 @@ int CanSetObjectForVisualizer(
   
 #### <a name="parameters"></a>パラメーター  
  `b`  
- [out]0 以外 (`TRUE`) ビジュアライザーでは、上のオブジェクトを更新できる場合は 0 (`FALSE`) できない場合。  
+ [out]0 以外の場合 (`TRUE`) ビジュアライザーは、上のオブジェクトを更新する場合は 0 (`FALSE`) できない場合。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- オブジェクトは、たとえば、読み取り専用のメモリにバインドされている場合は、変更できない可能性があります。  
+## <a name="remarks"></a>Remarks  
+ オブジェクトは、たとえば読み取り専用のメモリにバインドされている場合は、変更しない場合があります。  
   
 ## <a name="see-also"></a>関連項目  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)

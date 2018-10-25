@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_INFO |Microsoft ドキュメント
+title: BP_RESOLUTION_INFO |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e163daff6466f9cc6e0f83fff20b89006a73dcc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fafba8e09ad4f0dccb40ebd6fb88b75eef70964d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31099565"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896797"
 ---
 # <a name="bpresolutioninfo"></a>BP_RESOLUTION_INFO
-コードのブレークポイントまたはデータ ブレークポイントのいずれかのバインドされたブレークポイント情報について説明します。  
+コードのブレークポイントまたは データ ブレークポイントのバインドされたブレークポイント情報について説明します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,21 +47,21 @@ public struct BP_RESOLUTION_INFO {
   
 ## <a name="members"></a>メンバー  
  `dwFields`  
- フラグのコレクション、 [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)のどのフィールドを指定する列挙体が埋められます。  
+ フラグのコレクション、 [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)フィールドを指定する列挙値を入力します。  
   
  `bpResLocation`  
- [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)コードまたはデータで、ブレークポイントの場所を指定します。  
+ [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)コードまたはデータ内のブレークポイントの位置を指定する構造体。  
   
  `pProgram`  
- [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)ブレークポイント エラーが発生したアプリケーションを表すオブジェクト。  
+ [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)ブレークポイントのエラーが発生したアプリケーションを表すオブジェクト。  
   
  `pThread`  
- [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)ブレークポイント エラーを格納しているアプリケーションが実行されているスレッドを表すオブジェクト。  
+ [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)ブレークポイントのエラーを格納しているアプリケーションが実行されているスレッドを表すオブジェクト。  
   
-## <a name="remarks"></a>コメント  
- この構造体は、によって返される[GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)です。  
+## <a name="remarks"></a>Remarks  
+ この構造体がによって返される[GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

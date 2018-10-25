@@ -16,12 +16,12 @@ ms.assetid: 2d301ee6-4523-4b82-aedb-be43f352978e
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b731f10a30f20e3c5a9670a91400e86be004852e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7105299956a338d0dd4a637b404f9ccad2447662
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49267372"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839142"
 ---
 # <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>従来の言語サービスでのナビゲーション バーのサポート
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -69,11 +69,11 @@ namespace TestLanguagePackage
   
  ドロップダウン リストの種類の選択が変更された、メンバーの一覧、新しい型を反映するように更新する必要があります。 メンバーの一覧に表示内容は、いずれかを指定できます。  
   
--   現在の型のメンバーの一覧。  
+- 現在の型のメンバーの一覧。  
   
--   ソースで使用可能なすべてのメンバーは、ファイルしますが、淡色のテキストに表示される現在の型ではなく、すべてのメンバーを含む。 ユーザーは、クイック ナビゲーションのために使用できますが、色は、現在選択されている型の一部ではないことを示します、灰色のメンバーを選択もできます。  
+- ソースで使用可能なすべてのメンバーは、ファイルしますが、淡色のテキストに表示される現在の型ではなく、すべてのメンバーを含む。 ユーザーは、クイック ナビゲーションのために使用できますが、色は、現在選択されている型の一部ではないことを示します、灰色のメンバーを選択もできます。  
   
- 実装、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>メソッドは通常、次の手順を実行します。  
+  実装、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>メソッドは通常、次の手順を実行します。  
   
 1.  ソース ファイルの現在の宣言の一覧を取得します。  
   

@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::EnumLocals |Microsoft ドキュメント
+title: IDebugMethodField::EnumLocals |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8379407a275fa4b89b4107037b2a39691d062dd9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a7983943aaa6680539557f68376d19e1e19580cd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31118172"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888243"
 ---
 # <a name="idebugmethodfieldenumlocals"></a>IDebugMethodField::EnumLocals
-メソッドの選択したローカル変数の列挙子を作成します。  
+メソッドの選択されたローカル変数の列挙子を作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,15 +46,15 @@ int EnumLocals(
  [in][IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)コンテキストまたはローカル変数の取得元のスコープを選択するデバッグ アドレスを表すオブジェクト。  
   
  `ppLocals`  
- [out]返します、 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)ローカル変数の一覧を表すオブジェクト。 それ以外の場合、ローカル変数が存在しない場合、null 値を返します。  
+ [out]返します、 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)をローカル変数の一覧を表すオブジェクト。 それ以外の場合、ローカル変数がない場合に null 値を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、S_OK を返します。 または、ローカル変数が存在しない場合は S_FALSE を返します。 それ以外の場合はエラー コードを返します。  
+ 成功した場合は S_OK を返します。 またはローカル変数がない場合は S_FALSE を返します。 それ以外の場合はエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 指定されたデバッグ アドレスを含むブロック内で定義されている変数のみが列挙されます。 すべてコンパイラによって生成されたローカル変数を含むすべてのローカル変数が必要な場合は、呼び出し、 [EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 指定されたデバッグ アドレスを含むブロック内で定義されている変数のみが列挙されます。 すべてコンパイラによって生成されたローカル変数を含むすべてのローカル変数が必要な場合は、呼び出し、 [EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md)メソッド。  
   
- メソッドは、複数のスコープのコンテキストまたはブロックを含めることができます。 たとえば、次の不自然なメソッドには、3 つのスコープ、2 つの内部ブロックと、メソッド本体が含まれています。  
+ メソッドは、複数のスコープのコンテキストまたはブロックに含めることができます。 たとえば、次の不自然なメソッドには、3 つのスコープ、2 つの内部ブロックと、メソッド本体が含まれています。  
   
 ```csharp  
 public void func(int index)  
@@ -74,7 +74,7 @@ public void func(int index)
 }  
 ```  
   
- [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)オブジェクトが表す、`func`メソッド自体です。 呼び出す、`EnumLocals`メソッドを[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)に設定、`Inner Scope 1`アドレスを含む列挙を返します、`temp1`例については、変数です。  
+ [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)オブジェクトが表す、`func`メソッド自体。 呼び出す、`EnumLocals`メソッドを[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)に設定、`Inner Scope 1`アドレスを含む列挙を返します、`temp1`例については、変数。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   

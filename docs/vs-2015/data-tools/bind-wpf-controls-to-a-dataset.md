@@ -21,12 +21,12 @@ caps.latest.revision: 35
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5b56371ed66287f4b8f8005b6e793f6311427100
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 19189e63a3fb3fdfa3016cb2643cc34a193a2a52
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49289563"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893001"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>データセットへの WPF コントロールのバインド
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,30 +36,30 @@ ms.locfileid: "49289563"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   WPF アプリケーションと、AdventureWorksLT サンプル データベースのデータから生成されるデータセットを作成する。  
+- WPF アプリケーションと、AdventureWorksLT サンプル データベースのデータから生成されるデータセットを作成する。  
   
--   データ テーブルをドラッグしてデータ バインド コントロールのセットを作成、**データソース**WPF デザイナーのウィンドウのウィンドウ。  
+- データ テーブルをドラッグしてデータ バインド コントロールのセットを作成、**データソース**WPF デザイナーのウィンドウのウィンドウ。  
   
--   製品レコード間を前後に移動するためのボタンを作成する。  
+- 製品レコード間を前後に移動するためのボタンを作成する。  
   
--   ユーザーが製品レコードに加えた変更を、データ テーブルおよび基になるデータ ソースに保存するボタンを作成する。  
+- ユーザーが製品レコードに加えた変更を、データ テーブルおよび基になるデータ ソースに保存するボタンを作成する。  
   
-     [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
+   [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]  
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]  
   
--   AdventureWorksLT サンプル データベースが添付された、SQL Server または SQL Server Express の実行中のインスタンスへのアクセス権。 AdventureWorksLT データベースをダウンロードすることができます、 [CodePlex Web サイト](http://go.microsoft.com/fwlink/?linkid=87843)します。  
+- AdventureWorksLT サンプル データベースが添付された、SQL Server または SQL Server Express の実行中のインスタンスへのアクセス権。 AdventureWorksLT データベースをダウンロードすることができます、 [CodePlex Web サイト](http://go.microsoft.com/fwlink/?linkid=87843)します。  
   
- 次の概念に関する知識があると役立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
+  次の概念に関する知識があると役立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
   
--   データセットおよび TableAdapter。 詳細については、次を参照してください。 [Visual Studio でのデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)と[TableAdapter の概要](../data-tools/tableadapter-overview.md)します。  
+- データセットおよび TableAdapter。 詳細については、次を参照してください。 [Visual Studio でのデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)と[TableAdapter の概要](../data-tools/tableadapter-overview.md)します。  
   
--   WPF デザイナーの操作。 詳細については、次を参照してください。 [WPF および Silverlight デザイナーの概要](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62)します。  
+- WPF デザイナーの操作。 詳細については、次を参照してください。 [WPF および Silverlight デザイナーの概要](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62)します。  
   
--   WPF データ バインディング。 詳しくは、「 [データ バインディングの概要](http://msdn.microsoft.com/library/c707c95f-7811-401d-956e-2fffd019a211)」をご覧ください。  
+- WPF データ バインディング。 詳しくは、「 [データ バインディングの概要](http://msdn.microsoft.com/library/c707c95f-7811-401d-956e-2fffd019a211)」をご覧ください。  
   
 ## <a name="create-the-project"></a>プロジェクトの作成  
  新しい WPF プロジェクトを作成します。 このプロジェクトでは、製品レコードを表示します。  

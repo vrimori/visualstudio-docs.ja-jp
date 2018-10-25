@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cd2b4802d5078a007d6e2c4fab081b88481156de
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 35febfa4c4d13b3f5d3d279f7d1c35e96051d54b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672739"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867118"
 ---
 # <a name="how-to-add-namedrange-controls-to-worksheets"></a>方法: ワークシートに NamedRange コントロールを追加
   追加することができます<xref:Microsoft.Office.Tools.Excel.NamedRange>およびドキュメント レベルのプロジェクトでの実行時のデザイン時に、Microsoft Office Excel ワークシートにコントロール。  
@@ -33,13 +33,13 @@ ms.locfileid: "35672739"
   
  このトピックでは、次のタスクについて説明します。  
   
--   [デザイン時に NamedRange コントロールを追加します。](#designtime)  
+- [デザイン時に NamedRange コントロールを追加します。](#designtime)  
   
--   [ドキュメント レベルのプロジェクトの実行時に NamedRange コントロールを追加します。](#runtimedoclevel)  
+- [ドキュメント レベルのプロジェクトの実行時に NamedRange コントロールを追加します。](#runtimedoclevel)  
   
--   [VSTO アドイン プロジェクトでの実行時に NamedRange コントロールを追加](#runtimeaddin)  
+- [VSTO アドイン プロジェクトでの実行時に NamedRange コントロールを追加](#runtimeaddin)  
   
- 詳細については<xref:Microsoft.Office.Tools.Excel.NamedRange>コントロールを参照してください[NamedRange コントロール](../vsto/namedrange-control.md)します。  
+  詳細については<xref:Microsoft.Office.Tools.Excel.NamedRange>コントロールを参照してください[NamedRange コントロール](../vsto/namedrange-control.md)します。  
   
 ##  <a name="designtime"></a> デザイン時に NamedRange コントロールを追加します。  
  デザイン時にドキュメント レベルのプロジェクトのワークシートに <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを追加する方法として、Excel から行う方法、Visual Studio の **ツールボックス**から行う方法、 **[データ ソース]** ウィンドウから行う方法があります。  

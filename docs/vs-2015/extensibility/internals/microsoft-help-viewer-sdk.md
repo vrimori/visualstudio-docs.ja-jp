@@ -13,12 +13,12 @@ ms.assetid: 620d7dcd-d462-475e-a449-fbfa06ff12c5
 caps.latest.revision: 34
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 19ef7da357cf4b920dc6aca563fcdf6d68f69077
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ac5df4c8042bccb9218a7c46c1cbaa50fbbfcede
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49267621"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872552"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft ヘルプ ビューアー SDK
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -48,41 +48,41 @@ ms.locfileid: "49267621"
   
  通常、トピックには、2 つのセクションが含まれます。  
   
--   メタデータ (コンテンツのメタデータ参照を参照してください)。 トピックの「一意の ID、キーワードの値、トピックの目次の ID などのトピックについてのデータは親ノードの ID などです。  
+- メタデータ (コンテンツのメタデータ参照を参照してください)。 トピックの「一意の ID、キーワードの値、トピックの目次の ID などのトピックについてのデータは親ノードの ID などです。  
   
--   本文のコンテンツ: 1.1 XHTML の基本的な W3C に準拠してが含まれています (折りたたみ可能な領域、コード スニペットなどコンテンツの動作をサポートです。完全な一覧は、次に示します)。  
+- 本文のコンテンツ: 1.1 XHTML の基本的な W3C に準拠してが含まれています (折りたたみ可能な領域、コード スニペットなどコンテンツの動作をサポートです。完全な一覧は、次に示します)。  
   
- Visual Studio ブランド パッケージには、コントロールがサポートされています。  
+  Visual Studio ブランド パッケージには、コントロールがサポートされています。  
   
--   リンク  
+- リンク  
   
--   CodeSnippet  
+- CodeSnippet  
   
--   CollapsibleArea  
+- CollapsibleArea  
   
--   継承されたメンバー  
+- 継承されたメンバー  
   
--   LanguageSpecificText  
+- LanguageSpecificText  
   
- サポートされている言語の文字列 (いない大文字小文字を区別):  
+  サポートされている言語の文字列 (いない大文字小文字を区別):  
   
--   javascript  
+- javascript  
   
--   csharp または (c#)  
+- csharp または (c#)  
   
--   cplusplus visualc++ または c + +  
+- cplusplus visualc++ または c + +  
   
--   jscript  
+- jscript  
   
--   visual basic または vb  
+- visual basic または vb  
   
--   f# または fsharp または fs  
+- f# または fsharp または fs  
   
--   – 他の言語の名前を表す文字列  
+- – 他の言語の名前を表す文字列  
   
- **ビューアーのヘルプ トピックの作成**  
+  **ビューアーのヘルプ トピックの作成**  
   
- ContosoTopic4.htm、という名前の新しい XHTML ドキュメントを作成し、title タグ (下記) を含めます。  
+  ContosoTopic4.htm、という名前の新しい XHTML ドキュメントを作成し、title タグ (下記) を含めます。  
   
 ```html  
 <html>  
@@ -99,17 +99,17 @@ ms.locfileid: "49267621"
   
  次に、どのトピックを (単独かどうかをブランド化された)、表示の方法を定義するデータを追加 (その他のトピックでリンク参照) をその ID、TOC 内のこのトピックでの存在、f1 キーをこのトピックを参照するなど。サポートされているメタデータの完全な一覧については、次の表「コンテンツ メタデータ」を参照してください。  
   
--   この場合は、独自のブランド化パッケージを Visual Studio ヘルプ ビューアーのブランド パッケージの一種を使用します。  
+- この場合は、独自のブランド化パッケージを Visual Studio ヘルプ ビューアーのブランド パッケージの一種を使用します。  
   
--   F1 メタデータの名前と値の追加 ("Microsoft.Help.F1"コンテンツ"ContosoTopic4"=) は、IDE のプロパティ バッグ内の指定された F1 値と一致します。  (詳細については、f1 キーのサポート セクションを参照してください)。 これは、f1 キーに一致する値、IDE で f1 キーを選択すると、このトピックを表示する IDE 内から呼び出します。  
+- F1 メタデータの名前と値の追加 ("Microsoft.Help.F1"コンテンツ"ContosoTopic4"=) は、IDE のプロパティ バッグ内の指定された F1 値と一致します。  (詳細については、f1 キーのサポート セクションを参照してください)。 これは、f1 キーに一致する値、IDE で f1 キーを選択すると、このトピックを表示する IDE 内から呼び出します。  
   
--   トピック ID を追加します。 このトピックにリンクするその他のトピックで使用される文字列です。  これは、このトピックではヘルプ ビューアー ID です。  
+- トピック ID を追加します。 このトピックにリンクするその他のトピックで使用される文字列です。  これは、このトピックではヘルプ ビューアー ID です。  
   
--   目次のこのトピックの目次ノードが表示される場所を定義する、このトピックの親ノードを追加します。  
+- 目次のこのトピックの目次ノードが表示される場所を定義する、このトピックの親ノードを追加します。  
   
--   目次のこのトピックのノードの順序を追加します。 親ノードに子ノードの n の数が設定されているときは、このトピックの場所の子ノードの順序で定義します。 たとえば、このトピックでは、4 つの子トピックの数 4)。  
+- 目次のこのトピックのノードの順序を追加します。 親ノードに子ノードの n の数が設定されているときは、このトピックの場所の子ノードの順序で定義します。 たとえば、このトピックでは、4 つの子トピックの数 4)。  
   
- メタデータ セクションの例:  
+  メタデータ セクションの例:  
   
 ```html  
 <html>  
@@ -287,73 +287,73 @@ some F# code
   
  ヘルプ ビューアーの既定のヘルプ コンテンツ ソースをオンライン (ブラウザーで起動) を設定するとします。  
   
--   Visual Studio パートナー (VSP) 機能は、F1 プロパティ バッグ (プロパティ バッグ prefix.keyword と、レジストリで見つかったプリフィックスの online の URL) に値を出力: F1 VSP URL + パラメーターをブラウザーに送信します。  
+- Visual Studio パートナー (VSP) 機能は、F1 プロパティ バッグ (プロパティ バッグ prefix.keyword と、レジストリで見つかったプリフィックスの online の URL) に値を出力: F1 VSP URL + パラメーターをブラウザーに送信します。  
   
--   Visual Studio の機能 (言語のエディター、Visual Studio の特定のメニュー項目など): F1 は、Visual Studio の URL をブラウザーに送信します。  
+- Visual Studio の機能 (言語のエディター、Visual Studio の特定のメニュー項目など): F1 は、Visual Studio の URL をブラウザーに送信します。  
   
- ヘルプ ビューアーの既定のヘルプ コンテンツ ソースをローカルのヘルプ (ヘルプ ビューアーで起動) を設定すると。  
+  ヘルプ ビューアーの既定のヘルプ コンテンツ ソースをローカルのヘルプ (ヘルプ ビューアーで起動) を設定すると。  
   
--   F1 プロパティ バッグとローカル ストアのインデックス間のキーワードの一致する VSP 機能 (プロパティ バッグ prefix.keyword は、ローカル ストアのインデックス内で見つかった値を =): F1 ヘルプ ビューアーでトピックを表示します。  
+- F1 プロパティ バッグとローカル ストアのインデックス間のキーワードの一致する VSP 機能 (プロパティ バッグ prefix.keyword は、ローカル ストアのインデックス内で見つかった値を =): F1 ヘルプ ビューアーでトピックを表示します。  
   
--   Visual Studio の機能 (Visual Studio の機能から生成されたプロパティ バッグをオーバーライドする VSP のオプションはありません): F1 ヘルプ ビューアーでの Visual Studio のトピックを表示します。  
+- Visual Studio の機能 (Visual Studio の機能から生成されたプロパティ バッグをオーバーライドする VSP のオプションはありません): F1 ヘルプ ビューアーでの Visual Studio のトピックを表示します。  
   
- ヘルプ コンテンツの仕入先の F1 フォールバックを有効にするのには、次のレジストリ値を設定します。 フォールバックの F1 ヘルプ ビューアーがオンラインでの F1 ヘルプ コンテンツを検索する設定を仕入先のコンテンツをローカル ユーザーのハード ドライブにインストールを意味します。 場合でも、オンライン ヘルプの既定の設定は、ローカル ヘルプ コンテンツのヘルプ ビューアーになります。  
+  ヘルプ コンテンツの仕入先の F1 フォールバックを有効にするのには、次のレジストリ値を設定します。 フォールバックの F1 ヘルプ ビューアーがオンラインでの F1 ヘルプ コンテンツを検索する設定を仕入先のコンテンツをローカル ユーザーのハード ドライブにインストールを意味します。 場合でも、オンライン ヘルプの既定の設定は、ローカル ヘルプ コンテンツのヘルプ ビューアーになります。  
   
-1.  設定、 **VendorContent**ヘルプ 2.1 のレジストリ キー値。  
+1. 設定、 **VendorContent**ヘルプ 2.1 のレジストリ キー値。  
   
-    -   32 ビット オペレーティング システム。  
+   -   32 ビット オペレーティング システム。  
   
-         HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.1\Catalogs\VisualStudio12  
+        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.1\Catalogs\VisualStudio12  
   
-         "VendorContent"= dword:00000001  
+        "VendorContent"= dword:00000001  
   
-    -   64 ビット オペレーティング システム。  
+   -   64 ビット オペレーティング システム。  
   
-         HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Catalogs\VisualStudio12  
+        HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Catalogs\VisualStudio12  
   
-         "VendorContent"= dword:00000001  
+        "VendorContent"= dword:00000001  
   
-2.  2.1 のヘルプのレジストリ キーの下のパートナーの名前空間を登録します。  
+2. 2.1 のヘルプのレジストリ キーの下のパートナーの名前空間を登録します。  
   
-    -   32 ビット オペレーティング システム。  
+   - 32 ビット オペレーティング システム。  
   
-         HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.1\Partner*\\< 名前空間\>*  
+      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.1\Partner<em>\\< 名前空間\></em>  
   
-         「場所"=」オフライン"  
+      「場所"=」オフライン"  
   
-    -   64 ビット オペレーティング システム。  
+   - 64 ビット オペレーティング システム。  
   
-         HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Partner*\\< 名前空間\>*  
+      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Partner<em>\\< 名前空間\></em>  
   
-         「場所"=」オフライン"  
+      「場所"=」オフライン"  
   
- **解析する基本のネイティブ Namespace**  
+   **解析する基本のネイティブ Namespace**  
   
- ネイティブのベース名前空間の解析を有効にするレジストリに新しい DWORD して追加の名前: BaseNativeNamespaces 1 (をサポートする、カタログ キー) の下にその値を設定します。  たとえば、Visual Studio のカタログを使用する場合は、パスにキーを追加できます。  
+   ネイティブのベース名前空間の解析を有効にするレジストリに新しい DWORD して追加の名前: BaseNativeNamespaces 1 (をサポートする、カタログ キー) の下にその値を設定します。  たとえば、Visual Studio のカタログを使用する場合は、パスにキーを追加できます。  
   
- HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Catalogs\VisualStudio12  
+   HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Catalogs\VisualStudio12  
   
- ヘッダー/メソッドが検出された形式で、F1 キーワード、ときの '/' 文字は次の構成体は、その結果、解析されます。  
+   ヘッダー/メソッドが検出された形式で、F1 キーワード、ときの '/' 文字は次の構成体は、その結果、解析されます。  
   
--   ヘッダー: は、レジストリに登録するために使用する名前空間になります  
+- ヘッダー: は、レジストリに登録するために使用する名前空間になります  
   
--   方法: このなりますを介して渡されたキーワード。  
+- 方法: このなりますを介して渡されたキーワード。  
   
- たとえば、CustomLibrary と呼ばれるカスタム ライブラリと、f1 キーを要求を受け取ったこととして書式設定するときに、MyTestMethod に呼び出されるメソッドを指定`CustomLibrary/MyTestMethod`します。  
+  たとえば、CustomLibrary と呼ばれるカスタム ライブラリと、f1 キーを要求を受け取ったこととして書式設定するときに、MyTestMethod に呼び出されるメソッドを指定`CustomLibrary/MyTestMethod`します。  
   
- ユーザーがパートナー hive では、下の名前空間として CustomLibrary を登録し、および状況が該当する任意の場所のキーを指定でき、クエリに渡されるキーワード MyTestMethod になります。  
+  ユーザーがパートナー hive では、下の名前空間として CustomLibrary を登録し、および状況が該当する任意の場所のキーを指定でき、クエリに渡されるキーワード MyTestMethod になります。  
   
- **デバッグ ツール、IDE のヘルプを有効にします。**  
+  **デバッグ ツール、IDE のヘルプを有効にします。**  
   
- 次のレジストリ キーと値を追加します。  
+  次のレジストリ キーと値を追加します。  
   
- HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\12.0\Dynamic ヘルプ キー: 小売価格でのデバッグ出力を表示します [はい]。  
+  HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\12.0\Dynamic ヘルプ キー: 小売価格でのデバッグ出力を表示します [はい]。  
   
- [ヘルプ] メニュー項目で、IDE で「ヘルプ コンテキストのデバッグ」を選択します。  
+  [ヘルプ] メニュー項目で、IDE で「ヘルプ コンテキストのデバッグ」を選択します。  
   
- **コンテンツのメタデータ**  
+  **コンテンツのメタデータ**  
   
- 次の表では、角かっこの間に表示される任意の文字列は認識されている値で置き換える必要があるプレース ホルダーです。 たとえば、\<メタ name="Microsoft.Help.Locale"コンテンツ =「[言語コード]」/>、「[言語コード]」をなどの値で置換する必要があります"en-米国"。  
+  次の表では、角かっこの間に表示される任意の文字列は認識されている値で置き換える必要があるプレース ホルダーです。 たとえば、\<メタ name="Microsoft.Help.Locale"コンテンツ =「[言語コード]」/>、「[言語コード]」をなどの値で置換する必要があります"en-米国"。  
   
 |プロパティ (HTML 形式)|説明|  
 |--------------------------------------|-----------------|  
@@ -377,67 +377,67 @@ some F# code
   
  ブランド パッケージは、ヘルプ ビューアーを格納している製品によってインストールされます。  Visual Studio 製品。  
   
--   フォールバック ブランド パッケージ (Branding_\<ロケール > .mshc)、ヘルプ ビューアー 2.1 アプリのルートにインストールされている (例: C:\Program Files (x86) \Microsoft Help Viewer\v2.1) によって、ヘルプ ビューアー言語パック。  これはパッケージをブランド化のいずれかの製品がインストールされていない場合に使用されます (コンテンツがインストールされていない) か、インストールされているブランド パッケージが壊れています。  ブランド パッケージ アプリのルート フォールバックを使用すると、Visual Studio の要素 (ロゴとフィードバック) は無視されることに注意してください。  
+- フォールバック ブランド パッケージ (Branding_\<ロケール > .mshc)、ヘルプ ビューアー 2.1 アプリのルートにインストールされている (例: C:\Program Files (x86) \Microsoft Help Viewer\v2.1) によって、ヘルプ ビューアー言語パック。  これはパッケージをブランド化のいずれかの製品がインストールされていない場合に使用されます (コンテンツがインストールされていない) か、インストールされているブランド パッケージが壊れています。  ブランド パッケージ アプリのルート フォールバックを使用すると、Visual Studio の要素 (ロゴとフィードバック) は無視されることに注意してください。  
   
--   コンテンツ パッケージ サービスから Visual Studio コンテンツがインストールされている、ブランド パッケージは (最初の時間のコンテンツのインストール シナリオ) にもインストールされます。  ブランド パッケージの更新プログラムがある場合は、次のコンテンツの更新または追加のパッケージのインストール操作が発生したときに更新プログラムがインストールします。  
+- コンテンツ パッケージ サービスから Visual Studio コンテンツがインストールされている、ブランド パッケージは (最初の時間のコンテンツのインストール シナリオ) にもインストールされます。  ブランド パッケージの更新プログラムがある場合は、次のコンテンツの更新または追加のパッケージのインストール操作が発生したときに更新プログラムがインストールします。  
   
- Microsoft ヘルプ ビューアーでは、トピックの「メタデータに基づいてトピックのブランド化をサポートします。  
+  Microsoft ヘルプ ビューアーでは、トピックの「メタデータに基づいてトピックのブランド化をサポートします。  
   
--   トピックの「メタデータを定義してブランド セルフ = true レンダリングのトピックでは、(ブランド) に関して何もしません。  
+- トピックの「メタデータを定義してブランド セルフ = true レンダリングのトピックでは、(ブランド) に関して何もしません。  
   
--   = False のトピックでメタデータを定義してブランド セルフ TopicVendor メタデータの値に関連付けられているブランド パッケージを使用します。  
+- = False のトピックでメタデータを定義してブランド セルフ TopicVendor メタデータの値に関連付けられているブランド パッケージを使用します。  
   
--   コンテンツの場所のトピックのメタデータには、name="Microsoft.Help.TopicVendor が定義されています"=\<ベンダー MSHA でブランド パッケージ名 >、コンテンツの値で定義されているブランド パッケージを使用します。  
+- コンテンツの場所のトピックのメタデータには、name="Microsoft.Help.TopicVendor が定義されています"=\<ベンダー MSHA でブランド パッケージ名 >、コンテンツの値で定義されているブランド パッケージを使用します。  
   
--   Visual Studio カタログ内で、ブランド パッケージの優先度のアプリケーションがあるください。  最初の Visual Studio の既定ブランドが適用され、次でサポートされ、トピックの「メタデータで定義されている場合 (インストール msha で定義) された関連付けられているブランド パッケージ、、オーバーライドとして定義されているベンダーをブランド化が適用されます。  
+- Visual Studio カタログ内で、ブランド パッケージの優先度のアプリケーションがあるください。  最初の Visual Studio の既定ブランドが適用され、次でサポートされ、トピックの「メタデータで定義されている場合 (インストール msha で定義) された関連付けられているブランド パッケージ、、オーバーライドとして定義されているベンダーをブランド化が適用されます。  
   
- ブランド化要素は、通常、次の 3 つの主なカテゴリに分類されます。  
+  ブランド化要素は、通常、次の 3 つの主なカテゴリに分類されます。  
   
--   (例については、[フィードバック] リンク、条件付きの免責、ロゴ) ヘッダー要素  
+- (例については、[フィードバック] リンク、条件付きの免責、ロゴ) ヘッダー要素  
   
--   コンテンツの動作 (例は、展開/折りたたみコントロールのテキスト要素を含めるし、コード スニペットの要素)  
+- コンテンツの動作 (例は、展開/折りたたみコントロールのテキスト要素を含めるし、コード スニペットの要素)  
   
--   フッター要素 (著作権情報の例)  
+- フッター要素 (著作権情報の例)  
   
- 項目のブランド化された要素を含めると見なされます (この仕様に記載)。  
+  項目のブランド化された要素を含めると見なされます (この仕様に記載)。  
   
--   カタログ/製品のロゴ (例、Visual Studio)  
+- カタログ/製品のロゴ (例、Visual Studio)  
   
--   フィードバックのリンクと電子メールの要素  
+- フィードバックのリンクと電子メールの要素  
   
--   免責事項  
+- 免責事項  
   
--   著作権テキスト  
+- 著作権テキスト  
   
- Visual Studio ヘルプ ビューアーのブランド パッケージのサポート ファイルは次のとおりです。  
+  Visual Studio ヘルプ ビューアーのブランド パッケージのサポート ファイルは次のとおりです。  
   
--   グラフィックス (ロゴ、アイコンなど。)  
+- グラフィックス (ロゴ、アイコンなど。)  
   
--   Branding.js – スクリプト ファイルのコンテンツの動作をサポート  
+- Branding.js – スクリプト ファイルのコンテンツの動作をサポート  
   
--   Branding.xml – カタログ コンテンツの間で一貫して使用される文字列。  注: Visual Studio、branding.xml 内のテキスト要素のローカリゼーション インクルード _locID ="\<一意の値 >"  
+- Branding.xml – カタログ コンテンツの間で一貫して使用される文字列。  注: Visual Studio、branding.xml 内のテキスト要素のローカリゼーション インクルード _locID ="\<一意の値 >"  
   
--   Branding.css – プレゼンテーション一貫性を保つのためのスタイルの定義  
+- Branding.css – プレゼンテーション一貫性を保つのためのスタイルの定義  
   
--   Printing.css – の一貫性のあるプレゼンテーションの印刷スタイルの定義  
+- Printing.css – の一貫性のあるプレゼンテーションの印刷スタイルの定義  
   
- 前述のように、ブランド パッケージは、トピックに関連付けられました。  
+  前述のように、ブランド パッケージは、トピックに関連付けられました。  
   
--   ときに SelfBranded = false がメタデータで定義されている、トピックは、パッケージをブランド化カタログを継承  
+- ときに SelfBranded = false がメタデータで定義されている、トピックは、パッケージをブランド化カタログを継承  
   
--   または SelfBranded = false と一意のブランド パッケージに定義されて、MSHA 使用可能なコンテンツがインストールされている場合  
+- または SelfBranded = false と一意のブランド パッケージに定義されて、MSHA 使用可能なコンテンツがインストールされている場合  
   
- カスタム ブランド パッケージを実装する Vsp (VSP コンテンツ、SelfBranded = True)、続行する方法の 1 つは、(ヘルプ ビューアーを使用したインストール)、フォールバック ブランド パッケージから開始し、適切なファイルの名前を変更します。  Branding_\<ロケール > .mshc ファイルは、.mshc に変更されたファイル拡張子を持つ zip ファイル、単純に .mshc から拡張子を .zip に変更し、コンテンツを抽出します。  ブランド パッケージ要素の下を参照してくださいし、必要に応じて変更 (VSP ロゴおよび Branding.xml ファイル内のロゴへの参照にロゴを変更する、VSP 仕様など 1 Branding.xml を更新など。)。  
+  カスタム ブランド パッケージを実装する Vsp (VSP コンテンツ、SelfBranded = True)、続行する方法の 1 つは、(ヘルプ ビューアーを使用したインストール)、フォールバック ブランド パッケージから開始し、適切なファイルの名前を変更します。  Branding_\<ロケール > .mshc ファイルは、.mshc に変更されたファイル拡張子を持つ zip ファイル、単純に .mshc から拡張子を .zip に変更し、コンテンツを抽出します。  ブランド パッケージ要素の下を参照してくださいし、必要に応じて変更 (VSP ロゴおよび Branding.xml ファイル内のロゴへの参照にロゴを変更する、VSP 仕様など 1 Branding.xml を更新など。)。  
   
- すべての変更が完了すると、目的のブランド化要素を含む zip ファイルを作成し、拡張機能を .mshc に変更します。  
+  すべての変更が完了すると、目的のブランド化要素を含む zip ファイルを作成し、拡張機能を .mshc に変更します。  
   
- カスタム ブランド パッケージに関連付けるには、(トピックを含む) コンテンツ mshc と共にブランド mshc ファイルへの参照を含む MSHA を作成します。  基本的な MSHA を作成する方法については、"MSHA"の下を参照してください。  
+  カスタム ブランド パッケージに関連付けるには、(トピックを含む) コンテンツ mshc と共にブランド mshc ファイルへの参照を含む MSHA を作成します。  基本的な MSHA を作成する方法については、"MSHA"の下を参照してください。  
   
- Branding.xml ファイルには、一貫してトピックが含まれている場合、トピックの特定のアイテムの描画に使用リストの要素が含まれています。\<メタ name="Microsoft.Help.SelfBranded"内容 ="false"/>。  Visual Studio の Branding.xml ファイル内の要素の一覧は、以下に記載されています。  このリストが使用するテンプレートとして ISO シェルの採用を独自の製品ブランドのニーズを満たすのこれらの要素 (たとえばロゴ、フィードバック、および著作権) を変更するものであるに注意してください。  
+  Branding.xml ファイルには、一貫してトピックが含まれている場合、トピックの特定のアイテムの描画に使用リストの要素が含まれています。\<メタ name="Microsoft.Help.SelfBranded"内容 ="false"/>。  Visual Studio の Branding.xml ファイル内の要素の一覧は、以下に記載されています。  このリストが使用するテンプレートとして ISO シェルの採用を独自の製品ブランドのニーズを満たすのこれらの要素 (たとえばロゴ、フィードバック、および著作権) を変更するものであるに注意してください。  
   
- 注:"{n}"の先の変数は、コードの依存関係を持つ – を削除するか、これらの値を変更すると、エラーおよびアプリケーション クラッシュの原因の可能性があります。Visual Studio ブランド パッケージには、ローカリゼーション識別子 (例 _locID="codesnippet.n") が含まれます。  
+  注:"{n}"の先の変数は、コードの依存関係を持つ – を削除するか、これらの値を変更すると、エラーおよびアプリケーション クラッシュの原因の可能性があります。Visual Studio ブランド パッケージには、ローカリゼーション識別子 (例 _locID="codesnippet.n") が含まれます。  
   
- **Branding.xml**  
+  **Branding.xml**  
   
 |||  
 |-|-|  
@@ -583,15 +583,15 @@ some F# code
   
  Visual Studio ヘルプ ビューアー ブランド パッケージには、一貫性のある Visual Studio ヘルプ コンテンツのプレゼンテーションをサポートするために 2 つの css ファイルが含まれています。  
   
--   Branding.css: に場所を表示するための css 要素が含まれています SelfBranded = false  
+- Branding.css: に場所を表示するための css 要素が含まれています SelfBranded = false  
   
--   Printer.css: に場所を表示するための css 要素が含まれています SelfBranded = false  
+- Printer.css: に場所を表示するための css 要素が含まれています SelfBranded = false  
   
- Branding.css ファイルには、Visual Studio のトピックの「プレゼンテーションの定義にはが含まれています (注意点ありますが、Branding_ branding.css が含まれている\<ロケール > パッケージ サービスから .mshc が変わる可能性があります)。  
+  Branding.css ファイルには、Visual Studio のトピックの「プレゼンテーションの定義にはが含まれています (注意点ありますが、Branding_ branding.css が含まれている\<ロケール > パッケージ サービスから .mshc が変わる可能性があります)。  
   
- **グラフィック ファイル**  
+  **グラフィック ファイル**  
   
- Visual Studio コンテンツには、Visual Studio ロゴおよびその他のグラフィックスが表示されます。  Visual Studio ヘルプ ビューアーのブランド パッケージ内のグラフィック ファイルの完全な一覧は、以下に示します。  
+  Visual Studio コンテンツには、Visual Studio ロゴおよびその他のグラフィックスが表示されます。  Visual Studio ヘルプ ビューアーのブランド パッケージ内のグラフィック ファイルの完全な一覧は、以下に示します。  
   
 ||||  
 |-|-|-|  
@@ -643,15 +643,15 @@ some F# code
   
 ```  
   
-1.  "C:\SampleContent"のようなもののローカル フォルダーを作成します。  
+1. "C:\SampleContent"のようなもののローカル フォルダーを作成します。  
   
-2.  この例では、トピックを含む、MSHC ファイルを使用します。  MSHC を .zip から変更されたファイル拡張子を持つ zip ファイルです。MSHC します。  
+2. この例では、トピックを含む、MSHC ファイルを使用します。  MSHC を .zip から変更されたファイル拡張子を持つ zip ファイルです。MSHC します。  
   
-3.  作成、テキスト ファイルとして HelpContentSetup.msha 以下 (メモ帳は、ファイルの作成に使用された) 上記の付いているフォルダーに保存 (手順 1 を参照してください)。  
+3. 作成、テキスト ファイルとして HelpContentSetup.msha 以下 (メモ帳は、ファイルの作成に使用された) 上記の付いているフォルダーに保存 (手順 1 を参照してください)。  
   
- 注意してください「ブランド化」が存在し、一意のクラス。 インストールされているコンテンツのブランドになり、MSHCs に含まれているコンテンツの動作はブランド パッケージに含まれる適切なサポート要素ように、この入門書でブランド化 mshc が含まれます。 これは、システムがサポートの項目は取り込んだ (インストール) の一部のコンテンツを探すときにエラーが発生します。  
+   注意してください「ブランド化」が存在し、一意のクラス。 インストールされているコンテンツのブランドになり、MSHCs に含まれているコンテンツの動作はブランド パッケージに含まれる適切なサポート要素ように、この入門書でブランド化 mshc が含まれます。 これは、システムがサポートの項目は取り込んだ (インストール) の一部のコンテンツを探すときにエラーが発生します。  
   
- パッケージをブランド化、Visual Studio を入手するには、作業フォルダーにある C:\Program Files (x86) \Microsoft Help Viewer\v2.1\ Branding_en US.mshc ファイルをコピーします。  
+   パッケージをブランド化、Visual Studio を入手するには、作業フォルダーにある C:\Program Files (x86) \Microsoft Help Viewer\v2.1\ Branding_en US.mshc ファイルをコピーします。  
   
 ```html  
 <html>  
@@ -697,107 +697,107 @@ some F# code
   
  **必要条件**  
   
-1.  [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]  
+1. [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]  
   
-2.  [Visual Studio 2013 Shell 再頒布可能パッケージの分離](http://www.microsoft.com/visualstudio/11/downloads#vs-shell)  
+2. [Visual Studio 2013 Shell 再頒布可能パッケージの分離](http://www.microsoft.com/visualstudio/11/downloads#vs-shell)  
   
- **概要**  
+   **概要**  
   
- [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]シェルは、のバージョン、 [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] IDE をアプリケーションを作成できます。 このようなアプリケーションには、作成した拡張機能と分離シェルが含まれます。 含まれている分離シェル プロジェクト テンプレートを使用して、 [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] SDK、拡張機能を作成します。  
+   [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]シェルは、のバージョン、 [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] IDE をアプリケーションを作成できます。 このようなアプリケーションには、作成した拡張機能と分離シェルが含まれます。 含まれている分離シェル プロジェクト テンプレートを使用して、 [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] SDK、拡張機能を作成します。  
   
- 分離シェル ベースのアプリケーションとそのヘルプを作成するための基本的な手順:  
+   分離シェル ベースのアプリケーションとそのヘルプを作成するための基本的な手順:  
   
-1.  取得、 [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] ISO Shell 再頒布可能パッケージ (Microsoft ダウンロード)。  
+3. 取得、 [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] ISO Shell 再頒布可能パッケージ (Microsoft ダウンロード)。  
   
-2.  Visual Studio で、ヘルプの拡張機能に基づいている Isolated Shell には、このチュートリアルの後半で説明されている Contoso ヘルプ拡張機能を作成します。  
+4. Visual Studio で、ヘルプの拡張機能に基づいている Isolated Shell には、このチュートリアルの後半で説明されている Contoso ヘルプ拡張機能を作成します。  
   
-3.  拡張機能と ISO Shell の MSI (アプリケーションのセットアップ) のデプロイに再頒布可能パッケージをラップします。 このチュートリアルでは、セットアップ手順は含まれません。  
+5. 拡張機能と ISO Shell の MSI (アプリケーションのセットアップ) のデプロイに再頒布可能パッケージをラップします。 このチュートリアルでは、セットアップ手順は含まれません。  
   
- Visual Studio のコンテンツ ストアを作成します。 統合シェルのシナリオで、次のように製品のカタログ名を Visual Studio12 を変更します。  
+   Visual Studio のコンテンツ ストアを作成します。 統合シェルのシナリオで、次のように製品のカタログ名を Visual Studio12 を変更します。  
   
--   C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio12 フォルダーを作成します。  
+- C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio12 フォルダーを作成します。  
   
--   CatalogType.xml という名前のファイルを作成し、フォルダーに追加します。 ファイルには、次のコード行を含める必要があります。  
+- CatalogType.xml という名前のファイルを作成し、フォルダーに追加します。 ファイルには、次のコード行を含める必要があります。  
   
-    ```  
-    <?xml version="1.0" encoding="UTF-8"?>  
-    <catalogType>UserManaged</catalogType>  
-    ```  
+  ```  
+  <?xml version="1.0" encoding="UTF-8"?>  
+  <catalogType>UserManaged</catalogType>  
+  ```  
   
- レジストリのコンテンツ ストアを定義します。 統合シェル VisualStudio12 を製品カタログの名前に変更します。  
+  レジストリのコンテンツ ストアを定義します。 統合シェル VisualStudio12 を製品カタログの名前に変更します。  
   
--   HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Catalogs\VisualStudio12  
+- HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Catalogs\VisualStudio12  
   
-     キー: LocationPath 文字列の値: C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio12\  
+   キー: LocationPath 文字列の値: C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio12\  
   
--   HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Catalogs\VisualStudio12\en-US  
+- HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Catalogs\VisualStudio12\en-US  
   
-     キー: CatalogName 文字列の値:[!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]ドキュメント  
+   キー: CatalogName 文字列の値:[!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]ドキュメント  
   
- **プロジェクトの作成**  
+  **プロジェクトの作成**  
   
- 分離シェルの拡張機能を作成します。  
+  分離シェルの拡張機能を作成します。  
   
-1.  Visual Studio で、**ファイル**、選択**新しいプロジェクト****その他のプロジェクトの種類**選択**Extensibility**を選択し**Visual Studio Shell Isolated**します。 プロジェクトに名前を`ContosoHelpShell`) Visual Studio 分離シェル テンプレートに基づいて、拡張機能プロジェクトを作成します。  
+1. Visual Studio で、**ファイル**、選択**新しいプロジェクト****その他のプロジェクトの種類**選択**Extensibility**を選択し**Visual Studio Shell Isolated**します。 プロジェクトに名前を`ContosoHelpShell`) Visual Studio 分離シェル テンプレートに基づいて、拡張機能プロジェクトを作成します。  
   
-2.  ソリューション エクスプ ローラーでのリソース ファイル フォルダーで、ContosoHelpShellUI プロジェクトで ApplicationCommands.vsct を開きます。 この行がコメント アウト ("No_Help"を検索) を確認します。 `<!-- <define name=“No_HelpMenuCommands”/> -->`  
+2. ソリューション エクスプ ローラーでのリソース ファイル フォルダーで、ContosoHelpShellUI プロジェクトで ApplicationCommands.vsct を開きます。 この行がコメント アウト ("No_Help"を検索) を確認します。 `<!-- <define name=“No_HelpMenuCommands”/> -->`  
   
-3.  F5 キーをコンパイルして実行する**デバッグ**します。 分離シェル IDE の実験用インスタンスの選択、**ヘルプ**メニュー。 確認、**ヘルプの表示**、**ヘルプ コンテンツの削除と追加**、および**ヘルプ設定**コマンドが表示されます。  
+3. F5 キーをコンパイルして実行する**デバッグ**します。 分離シェル IDE の実験用インスタンスの選択、**ヘルプ**メニュー。 確認、**ヘルプの表示**、**ヘルプ コンテンツの削除と追加**、および**ヘルプ設定**コマンドが表示されます。  
   
-4.  ソリューション エクスプ ローラーでのシェルのカスタマイズ フォルダーで、ContosHelpShell プロジェクトで ContosoHelpShell.pkgdef を開きます。 Contoso ヘルプ カタログを定義するには、次の行を追加します。  
+4. ソリューション エクスプ ローラーでのシェルのカスタマイズ フォルダーで、ContosHelpShell プロジェクトで ContosoHelpShell.pkgdef を開きます。 Contoso ヘルプ カタログを定義するには、次の行を追加します。  
   
-    ```  
-     [$RootKey$\Help]  
-    "Product"="Contoso"  
-    "Catalog"="Contoso"  
-    “Version"="100"  
-    "BrandingPackage"="ContosoBrandingPackage.mshc"  
-    ```  
+   ```  
+    [$RootKey$\Help]  
+   "Product"="Contoso"  
+   "Catalog"="Contoso"  
+   “Version"="100"  
+   "BrandingPackage"="ContosoBrandingPackage.mshc"  
+   ```  
   
-5.  ソリューション エクスプ ローラーでのシェルのカスタマイズ フォルダーで、ContosHelpShell プロジェクトで ContosoHelpShell.Application.pkgdef を開きます。 F1 ヘルプを有効にするには、次の行を追加します。  
+5. ソリューション エクスプ ローラーでのシェルのカスタマイズ フォルダーで、ContosHelpShell プロジェクトで ContosoHelpShell.Application.pkgdef を開きます。 F1 ヘルプを有効にするには、次の行を追加します。  
   
-    ```  
-    // F1 Help Provider  
+   ```  
+   // F1 Help Provider  
   
-    [$RootKey$\HelpProviders\{C99BDC23-FF29-46bf-9658-ADD634CCAED8}]  
-    "Name"="13407"  
-    "Package"="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}"  
-    @="Help3 Provider"  
-    [$RootKey$\HelpProviders]  
-    @="{C99BDC23-FF29-46bf-9658-ADD634CCAED8}"  
-    [$RootKey$\Services\{C99BDC23-FF29-46bf-9658-ADD634CCAED8}]  
-    "Name"="Help3 Provider"  
-    @="{4A791146-19E4-11D3-B86B-00C04F79F802}"  
-    ```  
+   [$RootKey$\HelpProviders\{C99BDC23-FF29-46bf-9658-ADD634CCAED8}]  
+   "Name"="13407"  
+   "Package"="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}"  
+   @="Help3 Provider"  
+   [$RootKey$\HelpProviders]  
+   @="{C99BDC23-FF29-46bf-9658-ADD634CCAED8}"  
+   [$RootKey$\Services\{C99BDC23-FF29-46bf-9658-ADD634CCAED8}]  
+   "Name"="Help3 Provider"  
+   @="{4A791146-19E4-11D3-B86B-00C04F79F802}"  
+   ```  
   
-6.  ソリューション エクスプ ローラーで、ContosoHelpShell ソリューションのコンテキスト メニューの選択、**プロパティ**メニュー項目。 **構成プロパティ**、 **Configuration Manager**します。 **構成**列、"Debug"のすべての値を「リリース」に変更します。  
+6. ソリューション エクスプ ローラーで、ContosoHelpShell ソリューションのコンテキスト メニューの選択、**プロパティ**メニュー項目。 **構成プロパティ**、 **Configuration Manager**します。 **構成**列、"Debug"のすべての値を「リリース」に変更します。  
   
-7.  ソリューションをビルドします。 これは、次のセクションで使用されるリリースのフォルダーに一連のファイルを作成します。  
+7. ソリューションをビルドします。 これは、次のセクションで使用されるリリースのフォルダーに一連のファイルを作成します。  
   
- 展開されているかのようにテスト。  
+   展開されているかのようにテスト。  
   
-1.  コンピューターで、ダウンロードした ISO シェル、(上記) をインストールする Contoso を展開します。  
+8. コンピューターで、ダウンロードした ISO シェル、(上記) をインストールする Contoso を展開します。  
   
-2.  フォルダーを作成\\\Program Files (x86)\\、名前を付けます`Contoso`します。  
+9. フォルダーを作成\\\Program Files (x86)\\、名前を付けます`Contoso`します。  
   
-3.  ContosoHelpShell リリース フォルダーの内容をコピー \\\Program Files (x86) \Contoso\ フォルダー。  
+10. ContosoHelpShell リリース フォルダーの内容をコピー \\\Program Files (x86) \Contoso\ フォルダー。  
   
-4.  レジストリ エディターを選択して開始**実行**で、**開始**メニューと入力する`Regedit`します。 レジストリ エディターで次のように選択します。**ファイル**、し**インポート**します。 ContosoHelpShell プロジェクト フォルダーに移動します。 ContosoHelpShell サブフォルダーでは、ContosoHelpShell.reg を選択します。  
+11. レジストリ エディターを選択して開始**実行**で、**開始**メニューと入力する`Regedit`します。 レジストリ エディターで次のように選択します。**ファイル**、し**インポート**します。 ContosoHelpShell プロジェクト フォルダーに移動します。 ContosoHelpShell サブフォルダーでは、ContosoHelpShell.reg を選択します。  
   
-5.  コンテンツ ストアを作成します。  
+12. コンテンツ ストアを作成します。  
   
      ISO shell - C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\ContosoDev12 Contoso コンテンツ ストアを作成します。  
   
      [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]統合シェル C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio12 フォルダーを作成します。  
   
-6.  CatalogType.xml を作成し、格納されている (前の手順) のコンテンツ ストアに追加します。  
+13. CatalogType.xml を作成し、格納されている (前の手順) のコンテンツ ストアに追加します。  
   
     ```  
     <?xml version="1.0" encoding="UTF-8"?>  
     <catalogType>UserManaged</catalogType>  
     ```  
   
-7.  次のレジストリ キーを追加します。  
+14. 次のレジストリ キーを追加します。  
   
      HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Catalogs\VisualStudio12Key: LocationPath 文字列値。  
   
@@ -811,17 +811,17 @@ some F# code
   
      キー: CatalogName 文字列の値:[!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]ドキュメント。 ISO シェルでは、これは、カタログの名前です。  
   
-8.  (Cabs または MSHC および MSHA) コンテンツをローカル フォルダーにコピーします。  
+15. (Cabs または MSHC および MSHA) コンテンツをローカル フォルダーにコピーします。  
   
-9. 統合シェル コマンドラインの例のコンテンツ ストアをテストします。 ISO のシェルの製品と一致する適切なカタログと launchingApp の値を変更します。  
+16. 統合シェル コマンドラインの例のコンテンツ ストアをテストします。 ISO のシェルの製品と一致する適切なカタログと launchingApp の値を変更します。  
   
-     "C:\Program Files (x86) \Microsoft Help Viewer\v2.1\HlpViewer.exe"/catalogName VisualStudio12/helpQuery メソッド ="ページ"&"id = ContosoTopic0"/launchingApp Microsoft VisualStudio、12.0  
+      "C:\Program Files (x86) \Microsoft Help Viewer\v2.1\HlpViewer.exe"/catalogName VisualStudio12/helpQuery メソッド ="ページ"&"id = ContosoTopic0"/launchingApp Microsoft VisualStudio、12.0  
   
-10. (Contoso アプリのルート) から Contoso アプリケーションを起動します。 ISO のシェル内で選択、**ヘルプ**メニュー項目と変更、**ヘルプ設定**に**ローカル ヘルプの使用**します。  
+17. (Contoso アプリのルート) から Contoso アプリケーションを起動します。 ISO のシェル内で選択、**ヘルプ**メニュー項目と変更、**ヘルプ設定**に**ローカル ヘルプの使用**します。  
   
-11. シェル内で選択、**ヘルプ**し、メニュー項目**ヘルプの表示**します。 ローカルのヘルプ ビューアーを起動する必要があります。 **[コンテンツの管理]** タブを選択します。**インストール ソース**、選択、**ディスク**オプション ボタンをクリックします。 選択、 **.** ボタンをクリックし、Contoso のコンテンツ (前の手順でローカル フォルダーにコピー) を含むローカル フォルダーを参照します。 HelpContentSetup.msha を選択します。 Contoso は、オプションの書籍で書籍として表示されます。 選択**追加**を選択し、**更新**ボタン (右下隅)。  
+18. シェル内で選択、**ヘルプ**し、メニュー項目**ヘルプの表示**します。 ローカルのヘルプ ビューアーを起動する必要があります。 **[コンテンツの管理]** タブを選択します。**インストール ソース**、選択、**ディスク**オプション ボタンをクリックします。 選択、 **.** ボタンをクリックし、Contoso のコンテンツ (前の手順でローカル フォルダーにコピー) を含むローカル フォルダーを参照します。 HelpContentSetup.msha を選択します。 Contoso は、オプションの書籍で書籍として表示されます。 選択**追加**を選択し、**更新**ボタン (右下隅)。  
   
-12. Contoso、IDE 内で f1 キー機能をテストする、F1 キーを選択します。  
+19. Contoso、IDE 内で f1 キー機能をテストする、F1 キーを選択します。  
   
 ### <a name="additional-resources"></a>その他のリソース  
  ランタイム API では、次を参照してください。 [Windows API のヘルプ](http://msdn.microsoft.com/library/windows/desktop/hh447318\(v=vs.85\).aspx)します。  

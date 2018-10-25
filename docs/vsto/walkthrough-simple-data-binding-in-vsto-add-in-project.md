@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8903f18a578c9365b34ea420706b4e9f41fd2b1c
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 4710dea4e194328a226f0e9d76b236d3e30e97bb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36758891"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890232"
 ---
 # <a name="walkthrough-simple-data-binding-in-vsto-add-in-project"></a>チュートリアル: VSTO アドイン プロジェクトでの単純データ バインディング
 
@@ -40,7 +40,7 @@ VSTO アドイン プロジェクトでは、ホスト コントロールと Win
 
 [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルを実行するには、次のコンポーネントが必要です。
 
@@ -62,39 +62,39 @@ VSTO アドイン プロジェクトでは、ホスト コントロールと Win
 
 1.  Visual Basic または C# を使用して、 **Populating Documents from a Database**という名前の Word VSTO アドイン プロジェクトを作成します。
 
-     詳細については、次を参照してください。[方法: Visual Studio でプロジェクトを作成する Office](../vsto/how-to-create-office-projects-in-visual-studio.md)します。
+     詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。
 
      Visual Studio を開き、 *ThisAddIn.vb*または*ThisAddIn.cs*ファイルし、追加、 **Populating Documents from データベース**プロジェクトを**ソリューション エクスプ ローラー**.
 
 2.  場合、プロジェクトのターゲット、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]または[!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]への参照を追加、 *Microsoft.Office.Tools.Word.v4.0.Utilities.dll*アセンブリ。 この参照は、このチュートリアルの後半でプログラムを使用して Windows フォーム コントロールをドキュメントに追加するのに必要です。
 
-## <a name="create-a-data-source"></a>データ ソースを作成します。
+## <a name="create-a-data-source"></a>データ ソースの作成
 
 **[データ ソース]** ウィンドウを使用して、型指定されたデータセットをプロジェクトに追加します。
 
 ### <a name="to-add-a-typed-dataset-to-the-project"></a>型指定されたデータセットをプロジェクトに追加するには
 
-1.  場合、**データソース**ウィンドウが表示されない、メニュー バーで 表示することによって、**ビュー** > **その他の Windows**  >  **データ ソース**します。
+1. 場合、**データソース**ウィンドウが表示されない、メニュー バーで 表示することによって、**ビュー** > **その他の Windows**  >  **データ ソース**します。
 
-2.  **[新しいデータ ソースの追加]** をクリックして **データ ソース構成ウィザード**を開始します。
+2. **[新しいデータ ソースの追加]** をクリックして **データ ソース構成ウィザード**を開始します。
 
-3.  **[データベース]** をクリックして、 **[次へ]** をクリックします。
+3. **[データベース]** をクリックして、 **[次へ]** をクリックします。
 
-4.  `AdventureWorksLT` データベースへの既存の接続がある場合は、その接続を選んで **[次へ]** をクリックします。
+4. `AdventureWorksLT` データベースへの既存の接続がある場合は、その接続を選んで **[次へ]** をクリックします。
 
-     それ以外の場合は、 **[新しい接続]** をクリックし、 **[接続の追加]** ダイアログ ボックスを使用して新しい接続を作成します。 詳細については、次を参照してください。[新しい接続を追加](../data-tools/add-new-connections.md)します。
+    それ以外の場合は、 **[新しい接続]** をクリックし、 **[接続の追加]** ダイアログ ボックスを使用して新しい接続を作成します。 詳細については、次を参照してください。[新しい接続を追加](../data-tools/add-new-connections.md)します。
 
-5.  **[アプリケーション構成ファイルへの接続文字列を保存]** ページで、 **[次へ]** をクリックします。
+5. **[アプリケーション構成ファイルへの接続文字列を保存]** ページで、 **[次へ]** をクリックします。
 
-6.  **[データベース オブジェクトの選択]** ページで、 **[テーブル]** を展開し、 **[Customer (SalesLT)]** を選びます。
+6. **[データベース オブジェクトの選択]** ページで、 **[テーブル]** を展開し、 **[Customer (SalesLT)]** を選びます。
 
-7.  **[完了]** をクリックします。
+7. **[完了]** をクリックします。
 
-     *AdventureWorksLTDataSet.xsd*ファイルに追加されます**ソリューション エクスプ ローラー**します。 このファイルでは、次の項目を定義します。
+    *AdventureWorksLTDataSet.xsd*ファイルに追加されます**ソリューション エクスプ ローラー**します。 このファイルでは、次の項目を定義します。
 
-    -   `AdventureWorksLTDataSet`という名前の型指定されたデータセット。 このデータセットは、AdventureWorksLT データベースの **Customer (SalesLT)** テーブルの内容を表します。
+   - `AdventureWorksLTDataSet`という名前の型指定されたデータセット。 このデータセットは、AdventureWorksLT データベースの **Customer (SalesLT)** テーブルの内容を表します。
 
-    -   という名前の TableAdapter`CustomerTableAdapter`します。 この TableAdapter データを読み書きするために使用できます、`AdventureWorksLTDataSet`します。 詳細については、次を参照してください。 [TableAdapter の概要](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview)します。
+   - という名前の TableAdapter`CustomerTableAdapter`します。 この TableAdapter データを読み書きするために使用できます、`AdventureWorksLTDataSet`します。 詳細については、次を参照してください。 [TableAdapter の概要](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview)します。
 
      これらのオブジェクトは、どちらもこのチュートリアルの後半で使用します。
 

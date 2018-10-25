@@ -31,12 +31,12 @@ caps.latest.revision: 32
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e5cd62b5cc5eabd731e5ad398cbb9ddbe60db073
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: feae495e83e4f78fcd627bec25dd5e988962cec4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49219116"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917701"
 ---
 # <a name="assertions-in-managed-code"></a>マネージド コードのアサーション
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -153,19 +153,19 @@ Debug.Assert ( temp != 0 );
   
  それ以外の場合は、<xref:System.Diagnostics.Trace> メソッドが動作するように、プログラムのソース ファイルの先頭に次のいずれかを記述する必要があります。  
   
--   `#Const TRACE = True` (Visual Basic の場合)  
+- `#Const TRACE = True` (Visual Basic の場合)  
   
--   `#define TRACE` (Visual C# および C++ の場合)  
+- `#define TRACE` (Visual C# および C++ の場合)  
   
- または、次に示すように、TRACE オプションを使用してプログラムをビルドする必要があります。  
+  または、次に示すように、TRACE オプションを使用してプログラムをビルドする必要があります。  
   
--   `/d:TRACE=True` (Visual Basic の場合)  
+- `/d:TRACE=True` (Visual Basic の場合)  
   
--   `/d:TRACE` (Visual C# および C++ の場合)  
+- `/d:TRACE` (Visual C# および C++ の場合)  
   
- C# または Visual Basic のリリース ビルドで Debug メソッドを使用する必要がある場合は、リリース構成にデバッグ シンボルを定義する必要があります。  
+  C# または Visual Basic のリリース ビルドで Debug メソッドを使用する必要がある場合は、リリース構成にデバッグ シンボルを定義する必要があります。  
   
- C++ は、<xref:System.Diagnostics.Debug> クラスのメソッドをサポートしません。 使用して同じ効果を得ることができます、<xref:System.Diagnostics.Trace>などの条件付きコンパイルは、クラス`#ifdef DEBUG`.`#endif`. これらのシンボルを定義することができます、 **\<プロジェクト > プロパティ ページ** ダイアログ ボックス。 詳細については、次を参照してください。 [Visual Basic デバッグ構成のプロジェクトの設定を変更する](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)または[C または C++ デバッグ構成のプロジェクトの設定を変更する](../debugger/project-settings-for-a-cpp-debug-configuration.md)します。  
+  C++ は、<xref:System.Diagnostics.Debug> クラスのメソッドをサポートしません。 使用して同じ効果を得ることができます、<xref:System.Diagnostics.Trace>などの条件付きコンパイルは、クラス`#ifdef DEBUG`.`#endif`. これらのシンボルを定義することができます、 **\<プロジェクト > プロパティ ページ** ダイアログ ボックス。 詳細については、次を参照してください。 [Visual Basic デバッグ構成のプロジェクトの設定を変更する](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)または[C または C++ デバッグ構成のプロジェクトの設定を変更する](../debugger/project-settings-for-a-cpp-debug-configuration.md)します。  
   
 ##  <a name="BKMK_Assert_arguments"></a> Assert の引数  
  <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> と <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> は、最大で 3 つの引数を受け取ります。 最初の引数は調べる条件です。これは必ず指定します。 呼び出す場合<xref:System.Diagnostics.Trace.Assert%28System.Boolean%29?displayProperty=fullName>または<xref:System.Diagnostics.Debug.Assert%28System.Boolean%29?displayProperty=fullName>、引数の 1 つだけで、`Assert`メソッドは、条件をチェックし、結果が false の場合は、呼び出し履歴の内容を出力、**出力**ウィンドウ。 <xref:System.Diagnostics.Trace.Assert%28System.Boolean%29?displayProperty=fullName> および <xref:System.Diagnostics.Debug.Assert%28System.Boolean%29?displayProperty=fullName> の使用例は、次のようになります。  

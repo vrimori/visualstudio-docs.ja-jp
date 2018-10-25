@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eae1f0d61492eba29b442d0fbfb22b77377228fc
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: d1da881dfb7f7a8c063b94e49198d1b299b2e47b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117063"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942050"
 ---
 # <a name="correlationscope-activity-designer"></a>CorrelationScope アクティビティ デザイナー
 
@@ -42,7 +42,7 @@ ms.locfileid: "37117063"
 次の表に、<xref:System.ServiceModel.Activities.CorrelationScope> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティのどちらでも編集**プロパティ**ウィンドウ ワークフロー デザイナー画面で、両方で多くの場合、または。
 
 |プロパティ名|必須|使用方法|
-|-------------------|--------------|-----------|
+|-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.ServiceModel.Activities.InitializeCorrelation> アクティビティの省略可能な表示名。|
 |<xref:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith%2A>|False|子メッセージング アクティビティの管理に使用する <xref:System.ServiceModel.Activities.CorrelationHandle> を指定します。 このプロパティを設定しない場合は、<xref:System.ServiceModel.Activities.CorrelationScope> に、暗黙の <xref:System.ServiceModel.Activities.CorrelationHandle> が自動的に作成されます。|
 |<xref:System.ServiceModel.Activities.CorrelationScope.Body%2A>|False|相関関係のスコープ内のアクティビティを指定します。|
@@ -50,8 +50,8 @@ ms.locfileid: "37117063"
 ## <a name="see-also"></a>関連項目
 
 - [InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)
-- [受信](../workflow-designer/receive-activity-designer.md)
+- [Receive](../workflow-designer/receive-activity-designer.md)
 - [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)
-- [送信](../workflow-designer/send-activity-designer.md)
+- [Send](../workflow-designer/send-activity-designer.md)
 - [SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md)
 - [TransactedReceiveScope](../workflow-designer/transactedreceivescope-activity-designer.md)

@@ -20,15 +20,16 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: d53cdb1622fbb9750cddd2a79b1bbc7cd606ba20
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 0078309f1c87e4bd1feb9a8c82d7c654185c13df
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49188345"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948805"
 ---
 # <a name="ca1304-specify-cultureinfo"></a>CA1304: CultureInfo を指定します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
+
 |||
 |-|-|
 |TypeName|SpecifyCultureInfo|
@@ -48,15 +49,15 @@ ms.locfileid: "49188345"
 ## <a name="rule-description"></a>規則の説明
  ときに、<xref:System.Globalization.CultureInfo>または<xref:System.IFormatProvider?displayProperty=fullName>オブジェクトが指定されていない、オーバー ロードされたメンバーによって提供される既定値はすべてのロケールに効果がありません。 また、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]メンバーが既定のカルチャを選択し、コードの適切なことができない可能性がある前提条件に基づく書式設定します。 コードのシナリオでは、予想どおりに機能させるには、次のガイドラインに従って、カルチャに固有の情報を指定する必要があります。
 
--   場合は、値は、ユーザーに表示されますが、現在のカルチャを使用します。 以下を参照してください。<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>
+- 場合は、値は、ユーザーに表示されますが、現在のカルチャを使用します。 以下を参照してください。<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>
 
--   場合は、値が格納され、ソフトウェアからアクセスされる、インバリアント カルチャを使用、ファイルまたはデータベースに永続化は、します。 以下を参照してください。<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>
+- 場合は、値が格納され、ソフトウェアからアクセスされる、インバリアント カルチャを使用、ファイルまたはデータベースに永続化は、します。 以下を参照してください。<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>
 
--   値の変換先がわからない場合は、データ コンシューマーがあるか、プロバイダーが、カルチャを指定します。
+- 値の変換先がわからない場合は、データ コンシューマーがあるか、プロバイダーが、カルチャを指定します。
 
- なお<xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>のインスタンスを使用して、ローカライズされたリソースを取得するためだけに使用、<xref:System.Resources.ResourceManager?displayProperty=fullName>クラス。
+  なお<xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>のインスタンスを使用して、ローカライズされたリソースを取得するためだけに使用、<xref:System.Resources.ResourceManager?displayProperty=fullName>クラス。
 
- オーバー ロードされたメンバーの既定の動作がニーズに適した場合でもを明示的にされるため、コードを自己文書化して保守が簡単なカルチャ固有のオーバー ロードを呼び出すことをお勧めします。
+  オーバー ロードされたメンバーの既定の動作がニーズに適した場合でもを明示的にされるため、コードを自己文書化して保守が簡単なカルチャ固有のオーバー ロードを呼び出すことをお勧めします。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  このルールの違反を修正するを受け取るオーバー ロードを使用して、<xref:System.Globalization.CultureInfo>または<xref:System.IFormatProvider>し上記で示したガイドラインに従って引数を指定します。

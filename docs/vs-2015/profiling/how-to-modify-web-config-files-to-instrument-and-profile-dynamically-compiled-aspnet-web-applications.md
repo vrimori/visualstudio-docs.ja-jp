@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8c5cfc94bef15e34deaec9d07a4b66021cb4fc39
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5be66c8a762d7d690ec30a7658c59bcff75c3d53
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49176307"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877492"
 ---
 # <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>方法: Web.config ファイルを変更して、動的にコンパイルされた ASP.NET Web アプリケーションをインストルメント化およびプロファイルする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "49176307"
   
  web.config ファイルのルートは、**configuration** 要素です。 動的にコンパイルされた [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーションをインストルメント化およびプロファイルするには、次の要素を追加するか変更する必要があります。  
   
--   プロファイリングを制御する Microsoft.VisualStudio.Enterprise.ASPNetHelper アセンブリを識別する **configuration/runtime/assemblyBinding/dependentAssembly** 要素。 **dependentAssembly** 要素には、2 つの子要素、**assemblyIdentity** と **codeBase** が含まれます。  
+- プロファイリングを制御する Microsoft.VisualStudio.Enterprise.ASPNetHelper アセンブリを識別する **configuration/runtime/assemblyBinding/dependentAssembly** 要素。 **dependentAssembly** 要素には、2 つの子要素、**assemblyIdentity** と **codeBase** が含まれます。  
   
--   ターゲット アセンブリに対するプロファイラーの処理後のコンパイル手順を指定する **configuration/system.web/compilation** 要素。  
+- ターゲット アセンブリに対するプロファイラーの処理後のコンパイル手順を指定する **configuration/system.web/compilation** 要素。  
   
--   プロファイリング ツールの場所を識別する 2 つの **add** 要素が **configuration/appSettings** セクションに追加されます。  
+- プロファイリング ツールの場所を識別する 2 つの **add** 要素が **configuration/appSettings** セクションに追加されます。  
   
- アプリケーションの構成を復元するために使用できるように、変更前の web.config ファイルのコピーを作成することをお勧めします。  
+  アプリケーションの構成を復元するために使用できるように、変更前の web.config ファイルのコピーを作成することをお勧めします。  
   
 ### <a name="to-add-the-aspnethelper-assembly-as-a-configurationruntimeassemblybindingdependentassembly-element"></a>ASPNetHelper アセンブリを configuration/runtime/assemblyBinding/dependentAssembly 要素として追加するには  
   

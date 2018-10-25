@@ -10,27 +10,27 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d9c97725f4d78923384d7a3ec9f327a7dd2aca7b
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: af0a07abe1cbb380acde91067e3e6252d0cd8596
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512959"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49830055"
 ---
 # <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>方法: visual スタイルが有効になっている WPF アプリケーションの発行
 visual スタイルを使用すると、ユーザーが選択したテーマに基づいてコモン コントロールの外観を変更できます。 既定では、Visual スタイルは、Windows Presentation Foundation (WPF) アプリケーションで有効になっていないため、手動で有効にする必要があります。 ただし、WPF アプリケーションの Visual スタイルを有効にすると、ソリューションの発行によりエラーが発生します。 このトピックでは、このエラーを解決する方法と、Visual スタイルを有効にした WPF アプリケーションを発行するためのプロセスについて説明します。 Visual スタイルの詳細については、次を参照してください。 [Visual スタイルの概要](/windows/desktop/Controls/visual-styles-overview)します。 エラー メッセージの詳細については、次を参照してください。 [ClickOnce 配置で特定のエラーのトラブルシューティング](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)します。  
   
  エラーを解決し、ソリューションを発行するには、次のタスクを実行します。  
   
--   [Visual スタイルを有効にせずに、ソリューションを発行](#publish-the-solution-without-visual-styles-enabled)します。  
+- [Visual スタイルを有効にせずに、ソリューションを発行](#publish-the-solution-without-visual-styles-enabled)します。  
   
--   [マニフェスト ファイルを作成](#create-a-manifest-file)です。  
+- [マニフェスト ファイルを作成](#create-a-manifest-file)です。  
   
--   [発行済みのソリューションの実行可能ファイルにマニフェスト ファイルを埋め込む](#embed-the-manifest-file-into-the-executable-file-of-the-published-solution)します。  
+- [発行済みのソリューションの実行可能ファイルにマニフェスト ファイルを埋め込む](#embed-the-manifest-file-into-the-executable-file-of-the-published-solution)します。  
   
--   [アプリケーションと配置マニフェストに署名](#sign-the-application-and-deployment-manifests)します。  
+- [アプリケーションと配置マニフェストに署名](#sign-the-application-and-deployment-manifests)します。  
   
- その後、エンド ユーザーがアプリケーションをインストールする場所に、発行されたファイルを移動できます。  
+  その後、エンド ユーザーがアプリケーションをインストールする場所に、発行されたファイルを移動できます。  
   
 ##  <a name="publish-the-solution-without-visual-styles-enabled"></a>Visual スタイルを有効にせずにソリューションを公開するには  
   
@@ -94,72 +94,72 @@ visual スタイルを使用すると、ユーザーが選択したテーマに�
   
 ## <a name="embed-the-manifest-file-into-the-executable-file-of-the-published-solution"></a>マニフェスト ファイルを発行済みソリューションの実行可能ファイルに埋め込むには  
   
-1.  開く、 **Visual Studio コマンド プロンプト**します。  
+1. 開く、 **Visual Studio コマンド プロンプト**します。  
   
-     詳細を開く方法については、 **Visual Studio コマンド プロンプト**を参照してください[コマンド プロンプト](/dotnet/framework/tools/developer-command-prompt-for-vs)します。  
+    詳細を開く方法については、 **Visual Studio コマンド プロンプト**を参照してください[コマンド プロンプト](/dotnet/framework/tools/developer-command-prompt-for-vs)します。  
   
-    > [!NOTE]
-    >  残りの手順は、ソリューションに関して以下を前提とします。  
-    >   
-    >  -   ソリューションの名前は**mywpfproject です**します。  
-    > -   ソリューションは、次のディレクトリにある:`%UserProfile%\Documents\Visual Studio 2010\Projects\`します。  
-    >   
-    >      次のディレクトリにソリューションを発行:`%UserProfile%\Documents\Visual Studio 2010\Projects\publish`します。  
-    > -   発行済みアプリケーション ファイルの最新バージョンについては、次のディレクトリにあります。 `%UserProfile%\Documents\Visual Studio 2010\Projects\publish\Application Files\WPFApp_1_0_0_0`  
-    >   
-    >  上記の名前とディレクトリの場所は、いずれも使用する必要はありません。 前の名前と場所は、ソリューションの公開に必要な手順について説明するためにのみ使用されます。  
+   > [!NOTE]
+   >  残りの手順は、ソリューションに関して以下を前提とします。  
+   > 
+   > - ソリューションの名前は**mywpfproject です**します。  
+   >   -   ソリューションは、次のディレクトリにある:`%UserProfile%\Documents\Visual Studio 2010\Projects\`します。  
+   > 
+   >   次のディレクトリにソリューションを発行:`%UserProfile%\Documents\Visual Studio 2010\Projects\publish`します。  
+   >   -   発行済みアプリケーション ファイルの最新バージョンについては、次のディレクトリにあります。 `%UserProfile%\Documents\Visual Studio 2010\Projects\publish\Application Files\WPFApp_1_0_0_0`  
+   > 
+   >   上記の名前とディレクトリの場所は、いずれも使用する必要はありません。 前の名前と場所は、ソリューションの公開に必要な手順について説明するためにのみ使用されます。  
   
-2.  コマンド プロンプトで、発行済みのアプリケーション ファイルの最新バージョンが含まれるディレクトリへのパスを変更します。 この手順を次の例に示します。  
+2. コマンド プロンプトで、発行済みのアプリケーション ファイルの最新バージョンが含まれるディレクトリへのパスを変更します。 この手順を次の例に示します。  
   
-    ```cmd  
-cd "%UserProfile%\Documents\Visual Studio 2010\Projects\MyWPFProject\publish\Application Files\WPFApp_1_0_0_0"  
-    ```  
+   ```cmd  
+   cd "%UserProfile%\Documents\Visual Studio 2010\Projects\MyWPFProject\publish\Application Files\WPFApp_1_0_0_0"  
+   ```  
   
-3.  コマンド プロンプトで、次のコマンドを実行して、アプリケーションの実行可能ファイルにマニフェスト ファイルを埋め込みます。  
+3. コマンド プロンプトで、次のコマンドを実行して、アプリケーションの実行可能ファイルにマニフェスト ファイルを埋め込みます。  
   
-    ```cmd
-    mt -manifest c:\temp\themes.manifest -outputresource:MyWPFApp.exe.deploy  
-    ```  
+   ```cmd
+   mt -manifest c:\temp\themes.manifest -outputresource:MyWPFApp.exe.deploy  
+   ```  
   
 ## <a name="sign-the-application-and-deployment-manifests"></a>アプリケーション マニフェストと配置マニフェストに署名します。  
   
-1.  コマンド プロンプトでは、削除するには、次のコマンドを実行、 *.deploy*現在のディレクトリで実行可能ファイルから拡張機能。  
+1. コマンド プロンプトでは、削除するには、次のコマンドを実行、 *.deploy*現在のディレクトリで実行可能ファイルから拡張機能。  
   
-    ```cmd  
-    ren MyWPFApp.exe.deploy MyWPFApp.exe  
-    ```  
+   ```cmd  
+   ren MyWPFApp.exe.deploy MyWPFApp.exe  
+   ```  
   
-    > [!NOTE]
-    >  この例では、1 ファイルだけが、 *.deploy*ファイル拡張子。 このディレクトリを持つすべてのファイルの名前を変更することを確認、 *.deploy*ファイル拡張子。  
+   > [!NOTE]
+   >  この例では、1 ファイルだけが、 *.deploy*ファイル拡張子。 このディレクトリを持つすべてのファイルの名前を変更することを確認、 *.deploy*ファイル拡張子。  
   
-2.  コマンド プロンプトで、次のコマンドを実行してアプリケーション マニフェストに署名します。  
+2. コマンド プロンプトで、次のコマンドを実行してアプリケーション マニフェストに署名します。  
   
-    ```cmd  
-    mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx  
-    ```  
+   ```cmd  
+   mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx  
+   ```  
   
-    > [!NOTE]
-    >  この例を使用して、マニフェストに署名すること、 *.pfx*プロジェクトのファイル。 マニフェストに署名していない場合は、省略、`-cf`この例で使用されるパラメーター。 パスワードが必要な証明書でマニフェストに署名する場合の指定、`-password`オプション (`For example: mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx - password Password`)。  
+   > [!NOTE]
+   >  この例を使用して、マニフェストに署名すること、 *.pfx*プロジェクトのファイル。 マニフェストに署名していない場合は、省略、`-cf`この例で使用されるパラメーター。 パスワードが必要な証明書でマニフェストに署名する場合の指定、`-password`オプション (`For example: mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx - password Password`)。  
   
-3.  コマンド プロンプトでは、追加するには、次のコマンドを実行、 *.deploy*拡張機能には、この手順の前の手順で名前を変更したファイルの名前。  
+3. コマンド プロンプトでは、追加するには、次のコマンドを実行、 *.deploy*拡張機能には、この手順の前の手順で名前を変更したファイルの名前。  
   
-    ```  
-    ren MyWPFApp.exe MyWPFApp.exe.deploy  
-    ```  
+   ```  
+   ren MyWPFApp.exe MyWPFApp.exe.deploy  
+   ```  
   
-    > [!NOTE]
-    >  この例では 1 ファイルだけが、 *.deploy*ファイル拡張子。 以前にこのディレクトリ内のすべてのファイルの名前を変更することを確認、 *.deploy*ファイル名拡張子。  
+   > [!NOTE]
+   >  この例では 1 ファイルだけが、 *.deploy*ファイル拡張子。 以前にこのディレクトリ内のすべてのファイルの名前を変更することを確認、 *.deploy*ファイル名拡張子。  
   
-4.  コマンド プロンプトで、次のコマンドを実行して配置マニフェストに署名します。  
+4. コマンド プロンプトで、次のコマンドを実行して配置マニフェストに署名します。  
   
-    ```  
-    mage -u ..\..\MyWPFApp.application -appm MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx  
-    ```  
+   ```  
+   mage -u ..\..\MyWPFApp.application -appm MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx  
+   ```  
   
-    > [!NOTE]
-    >  この例を使用して、マニフェストに署名すること、 *.pfx*プロジェクトのファイル。 マニフェストに署名していない場合は、省略、`-cf`この例で使用されるパラメーター。 パスワードが必要な証明書でマニフェストに署名する場合の指定、`-password`オプションは、この例のように:`For example: mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx - password Password`します。  
+   > [!NOTE]
+   >  この例を使用して、マニフェストに署名すること、 *.pfx*プロジェクトのファイル。 マニフェストに署名していない場合は、省略、`-cf`この例で使用されるパラメーター。 パスワードが必要な証明書でマニフェストに署名する場合の指定、`-password`オプションは、この例のように:`For example: mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx - password Password`します。  
   
- これらの手順を実行した後、エンド ユーザーがアプリケーションをインストールする場所に、発行されたファイルを移動できます。 ソリューションを頻繁に更新する場合は、新しいバージョンを発行するたびに、スクリプトにこれらのコマンドを移動し、スクリプトを実行できます。  
+   これらの手順を実行した後、エンド ユーザーがアプリケーションをインストールする場所に、発行されたファイルを移動できます。 ソリューションを頻繁に更新する場合は、新しいバージョンを発行するたびに、スクリプトにこれらのコマンドを移動し、スクリプトを実行できます。  
   
 ## <a name="see-also"></a>関連項目
 

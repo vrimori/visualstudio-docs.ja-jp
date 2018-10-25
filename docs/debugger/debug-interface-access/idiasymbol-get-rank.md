@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_rank |Microsoft ドキュメント
+title: Idiasymbol::get_rank |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b78ba89b56c6d8c473060e39d402ee46e4ae15f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: fc12e9251bd452edc3fdede1a5f7414462162301
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31469244"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847696"
 ---
 # <a name="idiasymbolgetrank"></a>IDiaSymbol::get_rank
-FORTRAN 多次元配列のランク (次元数) を取得します。  
+FORTRAN の多次元配列のランク (次元数) を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,16 +34,16 @@ HRESULT get_rank (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]FORTRAN 多次元配列の次元数を返します。  
+ [out]FORTRAN の多次元配列の次元数を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>コメント  
- ランクとして、配列が宣言されている配列の次元数を指す`myarray[1,2,3]`です。 この例では、3 つおよび 3 つのディメンションのランクがあります。 ランクは、各次元の配列の配列の概念を使用する C++ には適用されません (つまり、 `myarray[1][2][3]`)。  
+## <a name="remarks"></a>Remarks  
+ ランクとして、配列が宣言されている配列の次元数を指す`myarray[1,2,3]`します。 この例では、3、3 つのディメンションのランクがあります。 ランクは、各次元の配列の配列の概念を使用する C++ には適用されません (つまり、 `myarray[1][2][3]`)。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

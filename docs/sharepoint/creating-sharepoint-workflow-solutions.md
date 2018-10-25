@@ -23,12 +23,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: dd67173078a81c5fc250ca993474a60057076d70
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c4e808d93d2ae3039d4c5d79d1c14c65360bba32
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42634723"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892312"
 ---
 # <a name="create-sharepoint-workflow-solutions"></a>SharePoint ワークフロー ソリューションを作成します。
 
@@ -70,25 +70,25 @@ SharePoint の詳細については、次を参照してください。 [Microso
 
  2 種類のアクティビティがあります。
 
--   *単純なアクティビティ*「1 日の遅延」または「Web サービスを開始します。」など、作業の 1 つの単位を実行します。
+- *単純なアクティビティ*「1 日の遅延」または「Web サービスを開始します。」など、作業の 1 つの単位を実行します。
 
--   *複合アクティビティ*他のアクティビティを含めることが。 たとえば、条件付きアクティビティが 2 つの分岐を含めることができます。
+- *複合アクティビティ*他のアクティビティを含めることが。 たとえば、条件付きアクティビティが 2 つの分岐を含めることができます。
 
- 両方の種類のアクティビティが表示されます、**ツールボックス**します。
+  両方の種類のアクティビティが表示されます、**ツールボックス**します。
 
- アクティビティには、プロパティ、メソッド、およびイベントを持つことができます。 使用して、**プロパティ**アクティビティのプロパティを設定するウィンドウ。
+  アクティビティには、プロパティ、メソッド、およびイベントを持つことができます。 使用して、**プロパティ**アクティビティのプロパティを設定するウィンドウ。
 
- カスタム アクティビティを作成することもできます。 詳細については、次を参照してください。[チュートリアル: サイトのカスタム ワークフロー アクティビティを作成する](../sharepoint/walkthrough-create-a-custom-site-workflow-activity.md)します。
+  カスタム アクティビティを作成することもできます。 詳細については、次を参照してください。[チュートリアル: サイトのカスタム ワークフロー アクティビティを作成する](../sharepoint/walkthrough-create-a-custom-site-workflow-activity.md)します。
 
- アクティビティは、次のタブでに編成、**ツールボックス**:
+  アクティビティは、次のタブでに編成、**ツールボックス**:
 
--   **SharePoint ワークフロー**
+- **SharePoint ワークフロー**
 
--   **Windows Workflow v3.0**
+- **Windows Workflow v3.0**
 
--   **Windows Workflow v3.5**
+- **Windows Workflow v3.5**
 
- すべての主要なワークフロー活動は、SharePoint でサポートされます。 詳細については、次を参照してください。[ワークフロー アクティビティの Windows SharePoint Services の概要](http://go.microsoft.com/fwlink/?LinkID=156094)します。
+  すべての主要なワークフロー活動は、SharePoint でサポートされます。 詳細については、次を参照してください。[ワークフロー アクティビティの Windows SharePoint Services の概要](http://go.microsoft.com/fwlink/?LinkID=156094)します。
 
 #### <a name="sharepoint-workflow-activities"></a>SharePoint ワークフロー アクティビティ
  **SharePoint ワークフロー**タブで使用するための特殊な活動を含む[!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)]します。 これらのアクティビティは、簡略化し、ドキュメントのライフ サイクル ワークフローの開発を合理化します。 表示されているアクティビティの詳細については、 **SharePoint ワークフロー**  タブを参照してください[ワークフロー アクティビティの Windows SharePoint Services の概要](http://go.microsoft.com/fwlink/?LinkID=156094)します。
@@ -111,15 +111,15 @@ SharePoint の詳細については、次を参照してください。 [Microso
 
  ワークフローで使用できるフォームの 4 つの種類があります。
 
--   関連付け
+- 関連付け
 
--   開始
+- 開始
 
--   変更
+- 変更
 
--   タスク
+- タスク
 
- これらのうち、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]アソシエーションと開始フォーム項目テンプレートが含まれています。 例、*関連付けフォーム*経費ワークフローの使用制限など、ワークフローに関連するパラメーターを入力できるように、管理者のワークフローをインストールする 1 つです。 例、*開始フォーム*経費ワークフローのユーザーがワークフローに費やされた金額を入力できる 1 つです。 この種類のフォームの詳細については、次を参照してください。 [SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)します。
+  これらのうち、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]アソシエーションと開始フォーム項目テンプレートが含まれています。 例、*関連付けフォーム*経費ワークフローの使用制限など、ワークフローに関連するパラメーターを入力できるように、管理者のワークフローをインストールする 1 つです。 例、*開始フォーム*経費ワークフローのユーザーがワークフローに費やされた金額を入力できる 1 つです。 この種類のフォームの詳細については、次を参照してください。 [SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)します。
 
 ### <a name="item-properties"></a>項目のプロパティ
  SharePoint ライブラリまたはリスト内の項目のプロパティを使用して、ユーザーから情報を収集することもできます。 メイン コード ファイル (Workflow1.cs workflow1.vb) という名前の Microsoft.SharePoint.Workflow.SPWorkflowActivationProperties.WorkflowProperties クラスのインスタンスを宣言します`workflowProperties`します。 使用して、`workflowProperties`ライブラリまたはコードの一覧のプロパティにアクセスするオブジェクト。 例については、次を参照してください。[チュートリアル: を作成し、SharePoint ワークフロー ソリューションのデバッグ](../sharepoint/walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md)します。

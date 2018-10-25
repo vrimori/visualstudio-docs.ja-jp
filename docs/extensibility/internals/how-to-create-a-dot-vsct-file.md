@@ -13,77 +13,77 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 266b3c4154c10f537cdc9dec78b0f0a036d94503
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 612ad5668ebb1033ef07dcad1fc07030d78e1643
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512593"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921211"
 ---
 # <a name="how-to-create-a-vsct-file"></a>方法: .vsct ファイルを作成  
   
 XML ベースの Visual Studio コマンド テーブル構成を作成するいくつかの方法があります (*.vsct*) ファイル。  
   
--   新しい VSPackage を作成することができます、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]パッケージ テンプレート。  
+- 新しい VSPackage を作成することができます、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]パッケージ テンプレート。  
   
--   XML ベースのコマンド テーブル構成コンパイラを使用する*Vsct.exe*、既存のファイルを生成する *.ctc*ファイル。  
+- XML ベースのコマンド テーブル構成コンパイラを使用する*Vsct.exe*、既存のファイルを生成する *.ctc*ファイル。  
   
--   使用することができます*Vsct.exe*を生成する、 *.vsct*既存のファイル *.cto*ファイル。  
+- 使用することができます*Vsct.exe*を生成する、 *.vsct*既存のファイル *.cto*ファイル。  
   
--   新しい手動で作成してできます *.vsct*ファイル。  
+- 新しい手動で作成してできます *.vsct*ファイル。  
   
- この記事では、新たに手動で作成する方法をについて説明します *.vsct*ファイル。  
+  この記事では、新たに手動で作成する方法をについて説明します *.vsct*ファイル。  
   
 ### <a name="to-manually-create-a-new-vsct-file"></a>新しい .vsct ファイルを手動で作成するには  
   
-1.  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を起動します。  
+1. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を起動します。  
   
-2.  **ファイル**メニューで、**新規**、 をクリックし、**ファイル**します。  
+2. **ファイル**メニューで、**新規**、 をクリックし、**ファイル**します。  
   
-3.  **テンプレート**ウィンドウで、をクリックして**XML ファイル**順にクリックします**オープン**します。  
+3. **テンプレート**ウィンドウで、をクリックして**XML ファイル**順にクリックします**オープン**します。  
   
-4.  **ビュー**  メニューのをクリックして**プロパティ**XML ファイルのプロパティを表示します。  
+4. **ビュー**  メニューのをクリックして**プロパティ**XML ファイルのプロパティを表示します。  
   
-5.  **プロパティ**ウィンドウで、をクリックして、**参照**のボタンでは、**スキーマ**プロパティ。  
+5. **プロパティ**ウィンドウで、をクリックして、**参照**のボタンでは、**スキーマ**プロパティ。  
   
-6.  XSD スキーマの一覧で選択、 *vsct.xsd*スキーマ。 一覧にいない場合、クリックして**追加**しローカル ドライブ上のファイルを検索します。 クリックして**OK**は終了するとき。  
+6. XSD スキーマの一覧で選択、 *vsct.xsd*スキーマ。 一覧にいない場合、クリックして**追加**しローカル ドライブ上のファイルを検索します。 クリックして**OK**は終了するとき。  
   
-7.  XML ファイルで次のように入力します。 *< CommandTable*押します**タブ**します。」と入力してタグを閉じる *>* します。  
+7. XML ファイルで次のように入力します。 *< CommandTable*押します**タブ**します。」と入力してタグを閉じる *>* します。  
   
-     この操作により、基本的な作成 *.vsct*ファイル。  
+    この操作により、基本的な作成 *.vsct*ファイル。  
   
-8.  従い、追加する XML ファイルの要素を入力、 [VSCT XML スキーマ リファレンス](../../extensibility/vsct-xml-schema-reference.md)します。 詳細については、次を参照してください[.vsct ファイルの作成。](../../extensibility/internals/authoring-dot-vsct-files.md)  
+8. 従い、追加する XML ファイルの要素を入力、 [VSCT XML スキーマ リファレンス](../../extensibility/vsct-xml-schema-reference.md)します。 詳細については、次を参照してください[.vsct ファイルの作成。](../../extensibility/internals/authoring-dot-vsct-files.md)  
   
 <a name="how-to-create-a-dot-vsct-file-from-an-existing-dot-ctc-file"></a>
 
 ## <a name="how-to-create-a-vsct-file-from-an-existing-ctc-file"></a>方法: 既存の .ctc ファイルから .vsct ファイルを作成します。  
   
-XML ベースを作成する *.vsct*コマンドの既存のテーブルからのファイル *.ctc*ソース ファイル。 これにより、新しい活用を行う XML ベース[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]コマンド テーブル (VSCT) コンパイラ形式。  
+XML ベースを作成する *.vsct*コマンドの既存のテーブルからのファイル *.ctc*ソース ファイル。 これにより、新しい XML ベースの [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] コマンド テーブル (VSCT) コンパイラ形式を利用できます。  
   
 ### <a name="to-create-a-vsct-file-from-a-ctc-file"></a>.ctc ファイルから .vsct ファイルを作成するには  
   
-1.  Perl 言語のコピーを取得します。  
+1. Perl 言語のコピーを取得します。  
   
-2.  Perl スクリプトのコピーを入手*ConvertCTCToVSCT.pl*、一般にある、  *\<Visual Studio SDK インストール パス > \VisualStudioIntegration\Tools\bin*フォルダー。  
+2. Perl スクリプトのコピーを入手*ConvertCTCToVSCT.pl*、一般にある、  *\<Visual Studio SDK インストール パス > \VisualStudioIntegration\Tools\bin*フォルダー。  
   
-3.  コピーを取得、 *.ctc*に変換するソース ファイル。  
+3. コピーを取得、 *.ctc*に変換するソース ファイル。  
   
-4.  同じディレクトリにファイルを配置します。  
+4. 同じディレクトリにファイルを配置します。  
   
-5.  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]コマンド プロンプト ウィンドウで、ディレクトリに移動します。  
+5. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]コマンド プロンプト ウィンドウで、ディレクトリに移動します。  
   
-6.  型  
+6. 型  
   
-    ```  
-    perl.exe ConvertCTCtoVSCT.pl PkgCmd.ctc PkgCmd.vsct  
-    ```  
+   ```  
+   perl.exe ConvertCTCtoVSCT.pl PkgCmd.ctc PkgCmd.vsct  
+   ```  
   
-     場所*PkgCmd.ctc*の名前を指定します、 *.ctc*ファイルと*PkgCmd.vsct*の名前を指定します、 *.vsct*ファイルを作成します。  
+    場所*PkgCmd.ctc*の名前を指定します、 *.ctc*ファイルと*PkgCmd.vsct*の名前を指定します、 *.vsct*ファイルを作成します。  
   
-     この操作は、新しい作成 *.vsct* XML コマンド テーブル ソース ファイル。 使用して、ファイルをコンパイルする*Vsct.exe*、するとき、VSCT コンパイラはその他の *.vsct*ファイル。  
+    この操作は、新しい作成 *.vsct* XML コマンド テーブル ソース ファイル。 使用して、ファイルをコンパイルする*Vsct.exe*、するとき、VSCT コンパイラはその他の *.vsct*ファイル。  
   
-    > [!NOTE]
-    >  読みやすさを向上させることができます、 *.vsct* XML コメントのフォーマット ファイル。  
+   > [!NOTE]
+   >  読みやすさを向上させることができます、 *.vsct* XML コメントのフォーマット ファイル。  
   
 <a name="how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file"></a>
 
@@ -109,7 +109,7 @@ XML ベースを作成する *.vsct*既存のバイナリからファイル *.ct
   
      このプロセスを作成する新しい *.vsct* XML コマンド テーブル コンパイラ ファイル。 編集して使用して、ファイルをコンパイル*vsct.exe*、するとき、vsct コンパイラはその他の *.vsct*ファイル。  
   
-## <a name="compile-the-code"></a>コードをコンパイルします  
+## <a name="compile-the-code"></a>コードのコンパイル  
  追加するだけで、 *.vsct*ファイルをプロジェクトがコンパイルされません。 ビルド プロセスでは、それを組み込む必要があります。  
   
 ### <a name="to-add-a-vsct-file-to-project-compilation"></a>プロジェクトのコンパイルに .vsct ファイルを追加するには  

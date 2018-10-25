@@ -23,12 +23,12 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c0ae1272820b7d8ec5ef124aaaa77d44a1285dde
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: e9613d154cd0d9bb307fbde6d7255a8f1ecce000
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49297402"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891480"
 ---
 # <a name="insert-new-records-into-a-database"></a>データベースに新しいレコードを挿入する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -51,18 +51,18 @@ ms.locfileid: "49297402"
   
 #### <a name="to-insert-new-records-into-a-database-by-using-the-tableadapterupdate-method"></a>TableAdapter.Update メソッドを使用して、データベースに新しいレコードを挿入するには  
   
-1.  新しいレコードの追加に必要な<xref:System.Data.DataTable>新しい<xref:System.Data.DataRow>に追加することと、<xref:System.Data.DataTable.Rows%2A>コレクション。 詳細については、次を参照してください。[方法: DataTable に行の追加](http://msdn.microsoft.com/library/78ebbb43-c402-49cf-81da-0715289487bf)します。  
+1. 新しいレコードの追加に必要な<xref:System.Data.DataTable>新しい<xref:System.Data.DataRow>に追加することと、<xref:System.Data.DataTable.Rows%2A>コレクション。 詳細については、次を参照してください。[方法: DataTable に行の追加](http://msdn.microsoft.com/library/78ebbb43-c402-49cf-81da-0715289487bf)します。  
   
-2.  新しい行を追加した後、<xref:System.Data.DataTable>を呼び出し、`TableAdapter.Update`メソッド。 全体のいずれかで渡すことで更新するデータの量を制御できます<xref:System.Data.DataSet>、 <xref:System.Data.DataTable>、配列の<xref:System.Data.DataRow>、または 1 つ<xref:System.Data.DataRow>します。  
+2. 新しい行を追加した後、<xref:System.Data.DataTable>を呼び出し、`TableAdapter.Update`メソッド。 全体のいずれかで渡すことで更新するデータの量を制御できます<xref:System.Data.DataSet>、 <xref:System.Data.DataTable>、配列の<xref:System.Data.DataRow>、または 1 つ<xref:System.Data.DataRow>します。  
   
-     次のコードは新しいレコードを追加する方法、<xref:System.Data.DataTable>を呼び出して、`TableAdapter.Update`を新しい行をデータベースに保存するメソッド。 (この例では、 `Region` Northwind データベースのテーブルです)。  
+    次のコードは新しいレコードを追加する方法、<xref:System.Data.DataTable>を呼び出して、`TableAdapter.Update`を新しい行をデータベースに保存するメソッド。 (この例では、 `Region` Northwind データベースのテーブルです)。  
   
-     [!code-csharp[VbRaddataSaving#14](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form5.cs#14)]
-     [!code-vb[VbRaddataSaving#14](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form5.vb#14)]  
+    [!code-csharp[VbRaddataSaving#14](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form5.cs#14)]
+    [!code-vb[VbRaddataSaving#14](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form5.vb#14)]  
   
- アプリケーションでは、データを格納するオブジェクトを使用する場合は使用できます、`TableAdapter.Insert`メソッドを直接データベースに新しい行を作成します。 `Insert`メソッドはパラメーターとして各列の値を受け取ります。 メソッドを呼び出すことで渡されたパラメーター値をデータベースに新しいレコードを挿入します。  
+   アプリケーションでは、データを格納するオブジェクトを使用する場合は使用できます、`TableAdapter.Insert`メソッドを直接データベースに新しい行を作成します。 `Insert`メソッドはパラメーターとして各列の値を受け取ります。 メソッドを呼び出すことで渡されたパラメーター値をデータベースに新しいレコードを挿入します。  
   
- 次の手順を使用して、`Region`例として、Northwind データベースのテーブル。  
+   次の手順を使用して、`Region`例として、Northwind データベースのテーブル。  
   
 #### <a name="to-insert-new-records-into-a-database-by-using-the-tableadapterinsert-method"></a>TableAdapter.Insert メソッドを使用して、データベースに新しいレコードを挿入するには  
   

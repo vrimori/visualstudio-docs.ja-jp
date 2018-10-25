@@ -11,12 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 6c05befbfa59063956d0df37a7aa57d955503ec5
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 806e0984ce0309ff071e595725615034a7d42f09
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47860343"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882523"
 ---
 # <a name="accessing-models-from-text-templates"></a>テキスト テンプレートからモデルへのアクセス
 テキスト テンプレートを使用すると、レポート ファイル、ソース コード ファイル、およびその他のドメイン固有言語モデルを基にテキスト ファイルを作成できます。 テキスト テンプレートの基本については、次を参照してください。[コードの生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)します。 テキスト テンプレートは、DSL をデバッグするときは、実験モードで動作し、DSL が配置されているコンピューターにも機能します。
@@ -26,11 +26,11 @@ ms.locfileid: "47860343"
 
  テキスト テンプレートからモデルにアクセスします。
 
--   Template ディレクティブの継承プロパティを設定<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation>します。 これは、ストアにアクセスを提供します。
+- Template ディレクティブの継承プロパティを設定<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation>します。 これは、ストアにアクセスを提供します。
 
--   アクセスする DSL のディレクティブ プロセッサを指定します。 テキスト テンプレートのコードでは、ドメイン クラス、プロパティ、およびリレーションシップを使用できるように、DSL のアセンブリを読み込みます。 また、指定したモデル ファイルを読み込みます。
+- アクセスする DSL のディレクティブ プロセッサを指定します。 テキスト テンプレートのコードでは、ドメイン クラス、プロパティ、およびリレーションシップを使用できるように、DSL のアセンブリを読み込みます。 また、指定したモデル ファイルを読み込みます。
 
- A`.tt`最小言語の DSL テンプレートから新しい Visual Studio ソリューションを作成するときに、デバッグ プロジェクトに次の例のようなファイルが作成されます。
+  A`.tt`最小言語の DSL テンプレートから新しい Visual Studio ソリューションを作成するときに、デバッグ プロジェクトに次の例のようなファイルが作成されます。
 
 ```
 <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
@@ -50,22 +50,21 @@ Here is a list of elements in the model:
 <#
   }
 #>
-
 ```
 
  このテンプレートについては、次の点に注意してください。
 
--   テンプレートには、ドメイン クラス、プロパティ、および、DSL 定義で定義されているリレーションシップを使用できます。
+- テンプレートには、ドメイン クラス、プロパティ、および、DSL 定義で定義されているリレーションシップを使用できます。
 
--   テンプレートで指定したモデル ファイルを読み込み、`requires`プロパティ。
+- テンプレートで指定したモデル ファイルを読み込み、`requires`プロパティ。
 
--   プロパティに`this`ルート要素が含まれています。 そこから、コードは、モデルの他の要素に移動できます。 プロパティの名前は、通常、DSL のルート ドメイン クラスと同じです。 この例では、 `this.ExampleModel`です。
+- プロパティに`this`ルート要素が含まれています。 そこから、コードは、モデルの他の要素に移動できます。 プロパティの名前は、通常、DSL のルート ドメイン クラスと同じです。 この例では、 `this.ExampleModel`です。
 
--   コード フラグメントを記述する言語が必要な場合は、c# を使用して、あらゆる種類のテキストを生成できます。 コードを記述できますまた[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]プロパティを追加することで`language="VB"`を`template`ディレクティブ。
+- コード フラグメントを記述する言語が必要な場合は、c# を使用して、あらゆる種類のテキストを生成できます。 コードを記述できますまた[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]プロパティを追加することで`language="VB"`を`template`ディレクティブ。
 
--   テンプレートをデバッグするには、追加`debug="true"`を`template`ディレクティブ。 テンプレートは、例外が発生した場合、Visual Studio の別のインスタンスで開かれます。 コードの特定の時点でデバッガーを中断する場合は、insert ステートメント `System.Diagnostics.Debugger.Break();`
+- テンプレートをデバッグするには、追加`debug="true"`を`template`ディレクティブ。 テンプレートは、例外が発生した場合、Visual Studio の別のインスタンスで開かれます。 コードの特定の時点でデバッガーを中断する場合は、insert ステートメント `System.Diagnostics.Debugger.Break();`
 
-     詳細については、次を参照してください。 [T4 テキスト テンプレートのデバッグ](../modeling/debugging-a-t4-text-template.md)します。
+   詳細については、次を参照してください。 [T4 テキスト テンプレートのデバッグ](../modeling/debugging-a-t4-text-template.md)します。
 
 ## <a name="about-the-dsl-directive-processor"></a>DSL のディレクティブ プロセッサについて
  テンプレートには、DSL 定義で定義されているドメイン クラスを使用できます。 これはの詳細については、通常は、テンプレートの先頭近くに表示される、ディレクティブになります。 前の例では、次は。
@@ -87,16 +86,15 @@ Here is a list of elements in the model:
 
 ```
 <#@ MyLanguage processor="MyLanguageDirectiveProcessor" requires="fileName='Sample.myDsl1';validation='open|load|save|menu'" #>
-
 ```
 
  以下の点に注意してください。
 
-1.  `filename`と`validation`パラメーターで区切られます「;」必要があるその他の区切り記号またはスペースがあるとします。
+1. `filename`と`validation`パラメーターで区切られます「;」必要があるその他の区切り記号またはスペースがあるとします。
 
-2.  どの検証メソッドが実行される検証カテゴリの一覧を決定します。 複数のカテゴリを区切る必要があります"&#124;"必要があるその他の区切り記号またはスペースがあるとします。
+2. どの検証メソッドが実行される検証カテゴリの一覧を決定します。 複数のカテゴリを区切る必要があります"&#124;"必要があるその他の区切り記号またはスペースがあるとします。
 
- エラーが見つかった場合は、[エラー] ウィンドウで報告し、結果ファイルは、エラー メッセージが格納されます。
+   エラーが見つかった場合は、[エラー] ウィンドウで報告し、結果ファイルは、エラー メッセージが格納されます。
 
 ## <a name="Multiple"></a> テキスト テンプレートから複数のモデルへのアクセス
 
@@ -173,7 +171,6 @@ For Each element As ExampleElement In Me.WorkModel.Elements
    // Here you generate more content derived from the element.
   }
 #>
-
 ```
 
  `LoopSplitter.tt` 呼び出す`LoopTemplate.t4`、結果として得られるファイルにはセグメントに分割します。 モデルは読み取られませんので、このテンプレートにモデル化のテンプレートがないことに注意してください。
@@ -215,5 +212,4 @@ For Each element As ExampleElement In Me.WorkModel.Elements
      File.WriteAllText(Path.Combine(dir, parts[0] + ".txt"), parts[1]);
   }
 #>
-
 ```

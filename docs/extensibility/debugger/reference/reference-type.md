@@ -1,5 +1,5 @@
 ---
-title: REFERENCE_TYPE |Microsoft ドキュメント
+title: REFERENCE_TYPE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c30bb562784d9de0d9b44a2c3169b595bb4bd39
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bcbf8792cf2972c4b419b6309ba2f561b8308812
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31127143"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906898"
 ---
 # <a name="referencetype"></a>REFERENCE_TYPE
 参照型を指定します。  
@@ -44,17 +44,17 @@ public enum enum_REFERENCE_TYPE {
   
 ## <a name="members"></a>メンバー  
  REF_TYPE_WEAK  
- 弱い参照を指定します。 組み合わせて使用できない`REF_TYPE_STRONG`です。  
+ 弱い参照を指定します。 組み合わせて使用できない`REF_TYPE_STRONG`します。  
   
  REF_TYPE_STRONG  
- 強い参照を指定します。 組み合わせて使用できない`REF_TYPE_WEAK`です。  
+ 強い参照を指定します。 組み合わせて使用できない`REF_TYPE_WEAK`します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  として使用される、`dwRefType`のメンバー、 [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)構造体。  
   
- パラメーターとして渡される、 [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md)メソッドです。  
+ パラメーターとして渡される、 [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

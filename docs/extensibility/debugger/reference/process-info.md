@@ -1,5 +1,5 @@
 ---
-title: PROCESS_INFO |Microsoft ドキュメント
+title: PROCESS_INFO |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d35b94b6153b65672453ed8b4e7d2c0d9c2bd5eb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2a8f07cfb99ac42704d3829c30dbf5adbb16e9d0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31134396"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864622"
 ---
 # <a name="processinfo"></a>PROCESS_INFO
-プロセスに関する情報が含まれています。  
+プロセスの情報が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -57,36 +57,36 @@ public struct PROCESS_INFO {
   
 ## <a name="members"></a>メンバー  
  フィールド  
- フラグの組み合わせ、 [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md)のどのフィールドが埋められますを指定する列挙体です。  
+ フラグの組み合わせ、 [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md)フィールドが記入を指定する列挙体。  
   
  bstrFileName  
- プロセスの完全なパス名。 呼び出すことと同等、 [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) 、パラメーターを持つメソッド`GN_FILENAME`です。  
+ プロセスの完全なパス名。 呼び出しに相当、 [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) 、パラメーターを持つメソッド`GN_FILENAME`します。  
   
  bstrBaseName  
- ファイル名とプロセスの拡張機能。 呼び出すことと同等、 `IDebugProcess2::Getname` 、パラメーターを持つメソッド`GN_BASENAME`です。  
+ ファイル名とプロセスの拡張機能。 呼び出しに相当、 `IDebugProcess2::Getname` 、パラメーターを持つメソッド`GN_BASENAME`します。  
   
  bstrTitle  
- 1 つが存在する場合は、プロセスのタイトル。 呼び出すことと同等、 `IDebugProcess2::Getname` 、パラメーターを持つメソッド`GN_TITLE`です。  
+ 存在する場合に、プロセスのタイトル。 呼び出しに相当、 `IDebugProcess2::Getname` 、パラメーターを持つメソッド`GN_TITLE`します。  
   
  ProcessId  
- [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)プロセスを識別する構造体。 呼び出すことと同等、 [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)メソッドです。  
+ [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)プロセスを識別する構造体。 呼び出しに相当、 [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)メソッド。  
   
  dwSessionId  
  このプロセスで実行されているデバッグ セッションの識別子。  
   
  bstrAttachedSessionName  
- 接続されているセッションの名前です。 呼び出すことと同等、 [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)メソッドです。  
+ 接続されているセッションの名前。 呼び出しに相当、 [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)メソッド。  
   
  CreationTime  
  プロセスが作成された時刻。  
   
  フラグ  
- フラグの組み合わせ、 [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md)プロセスのプロパティを指定する列挙です。  
+ フラグの組み合わせ、 [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md)プロセスのプロパティを指定する列挙体。  
   
-## <a name="remarks"></a>コメント  
- この構造体に渡される、 [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)で塗り分けはメソッドです。  
+## <a name="remarks"></a>Remarks  
+ この構造体に渡される、 [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)メソッドでいっぱいになった場所。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
@@ -98,6 +98,6 @@ public struct PROCESS_INFO {
  [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md)   
  [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)   
- [getName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)   
+ [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)   
  [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)   
  [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)

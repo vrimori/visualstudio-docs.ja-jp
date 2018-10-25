@@ -21,12 +21,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 28c6b2a9fa289bacaad783f70cd85365b7b0628f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 859ec81ff3ed2c3b6385de1d093ba512203da9d9
+ms.sourcegitcommit: 551f13774e8bb0eb47cbd973745628a956e866aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31951997"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459791"
 ---
 # <a name="signing-page-project-designer"></a>[署名] ページ (プロジェクト デザイナー)
 **プロジェクト デザイナー**の **[署名]** ページを使用して、アプリケーション マニフェストと配置マニフェストに署名し、アセンブリに署名します (厳密な名前の署名)。
@@ -73,7 +73,7 @@ ms.locfileid: "31951997"
 
  アセンブリに署名し、厳密な名前のキー ファイルを作成するには、このチェック ボックスをオンにします。 **プロジェクト デザイナー**を使用してアセンブリに署名する詳細については、「[方法: アセンブリに署名する (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)」を参照してください。
 
- このオプションは、[!INCLUDE[winsdklong](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name) で提供される Al.exe ツールを使用します。
+ このオプションは、Windows ソフトウェア開発キット (Windows SDK) で提供される Al.exe ツールを使用して、アセンブリに署名します。 Al.exe の詳細については、「[方法 : 厳密な名前でアセンブリに署名する](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)」を参照してください。
 
  **[厳密な名前のキー ファイルを選択してください]** 一覧
 

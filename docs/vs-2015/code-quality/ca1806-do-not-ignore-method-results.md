@@ -20,12 +20,12 @@ caps.latest.revision: 27
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 5d28ca688bbad0054f7522034bfe309dcb1fe698
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 9e6b7bdd99500f0be29c8101ef9993b565914300
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49250108"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49830588"
 ---
 # <a name="ca1806-do-not-ignore-method-results"></a>CA1806: メソッドの結果を無視しない
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,17 +40,17 @@ ms.locfileid: "49250108"
 ## <a name="cause"></a>原因  
  この警告のいくつかの理由があります。  
   
--   新しいオブジェクトが作成されたが、使用されていません。  
+- 新しいオブジェクトが作成されたが、使用されていません。  
   
--   作成して新しい文字列を返すメソッドが呼び出され、新しい文字列が使用されることはありません。  
+- 作成して新しい文字列を返すメソッドが呼び出され、新しい文字列が使用されることはありません。  
   
--   HRESULT またはエラー コードを返す COM または P/invoke メソッドは使用されません。 規則の説明  
+- HRESULT またはエラー コードを返す COM または P/invoke メソッドは使用されません。 規則の説明  
   
- 不要なオブジェクトの作成と使用されていないオブジェクトの関連付けられているガベージ コレクションは、パフォーマンスを低下します。  
+  不要なオブジェクトの作成と使用されていないオブジェクトの関連付けられているガベージ コレクションは、パフォーマンスを低下します。  
   
- 文字列は不変であり String.ToUpper などのメソッドが呼び出し元のメソッド内の文字列のインスタンスを変更する代わりに、文字列の新しいインスタンスを返します。  
+  文字列は不変であり String.ToUpper などのメソッドが呼び出し元のメソッド内の文字列のインスタンスを変更する代わりに、文字列の新しいインスタンスを返します。  
   
- HRESULT またはエラー コードを無視すると、エラー条件で予期しない動作や低リソース状態が誘導できます。  
+  HRESULT またはエラー コードを無視すると、エラー条件で予期しない動作や低リソース状態が誘導できます。  
   
 ## <a name="how-to-fix-violations"></a>違反の修正方法  
  メソッド A が使用されていません。 B オブジェクトの新しいインスタンスを作成した場合、インスタンスを引数として別のメソッドに渡すまたは変数に代入します。 オブジェクトの作成が必要でない場合は、それを除去- または -  

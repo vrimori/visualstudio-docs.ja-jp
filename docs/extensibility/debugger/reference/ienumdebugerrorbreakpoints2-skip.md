@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugErrorBreakpoints2::Skip |Microsoft ドキュメント
+title: IEnumDebugErrorBreakpoints2::Skip |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3aea378f589346df2b96a1d667bc16930c5a0744
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f6b56dcc1db8d3b0a675dc9a51136169c8769ce8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31123368"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880644"
 ---
 # <a name="ienumdebugerrorbreakpoints2skip"></a>IEnumDebugErrorBreakpoints2::Skip
 指定した要素数をスキップします。  
@@ -44,10 +44,10 @@ int Skip(
  [in]スキップする要素の数。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 返します`S_FALSE`場合`celt`残りの要素の数よりも大きいです。 それ以外の場合、エラー コードを返します。  
+ 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合`celt`が残りの要素の数より大きい。 それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 場合`celt`数より大きい値を指定して残りの要素の列挙体が最後に設定し、`S_FALSE`が返されます。  
+## <a name="remarks"></a>Remarks  
+ 場合`celt`数より大きい値を指定します。 残りの要素の列挙体が最後に設定し、`S_FALSE`が返されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)

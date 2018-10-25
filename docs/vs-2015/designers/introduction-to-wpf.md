@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8eee94b8d3e2b384ac645cf1178403556f0496ae
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: b29e4e241589134c8dfa5b94e997d6603b075ee3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49277421"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49826355"
 ---
 # <a name="introduction-to-wpf"></a>WPF の概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,13 +40,13 @@ Windows Presentation Foundation (WPF) を使用して、視覚的に美しいユ
 ##  <a name="Markup_And_Codebehind"></a> マークアップおよび分離コード  
  WPF では *マークアップ* と *分離コード*の両方を使用したアプリケーションを開発できます。これは ASP.NET 開発者にとってなじみ深いエクスペリエンスに違いありません。 一般に、アプリケーションの外観を実装するには XAML マークアップを使用し、一方、その動作を実装するには、マネージド プログラミング言語 (分離コード) を使用します。 外観と動作の実装を別々に行うことには、次の利点があります。  
   
--   外観固有のマークアップが動作固有のコードと密接に結び付いていないので、開発と保守のコストが削減されます。  
+- 外観固有のマークアップが動作固有のコードと密接に結び付いていないので、開発と保守のコストが削減されます。  
   
--   デザイナーがアプリケーションの外観を実装しているとき同時に、開発者はアプリケーションの動作を実装できるため、開発がより効率的に進みます。  
+- デザイナーがアプリケーションの外観を実装しているとき同時に、開発者はアプリケーションの動作を実装できるため、開発がより効率的に進みます。  
   
--   WPF アプリケーションの[グローバリゼーションとローカリゼーション](https://msdn.microsoft.com/library/ms788718\(v=vs.100\).aspx) が簡略化します。  
+- WPF アプリケーションの[グローバリゼーションとローカリゼーション](https://msdn.microsoft.com/library/ms788718\(v=vs.100\).aspx) が簡略化します。  
   
- WPF のマークアップおよび分離コードの簡単な概要を次に示します。  
+  WPF のマークアップおよび分離コードの簡単な概要を次に示します。  
   
 ### <a name="markup"></a>マークアップ  
  XAML は、アプリケーションの外観を宣言的に実装するために使用される XML ベースのマークアップ言語です。 一般的に、ウィンドウ、ダイアログ ボックス、ページ、ユーザー コントロールの作成と、これらにコントロール、図形、グラフィックスを入れるために使用されます。  
@@ -194,23 +194,23 @@ End Namespace
   
  レイアウト システムは基本の WPF クラスを介して子コントロールに公開されます。 グリッド、スタック、ドックなどの一般的なレイアウトについて、WPF には複数のレイアウト コントロールが組み込まれています。  
   
--   <xref:System.Windows.Controls.Canvas>: 子コントロールは独自のレイアウトを提供します。  
+- <xref:System.Windows.Controls.Canvas>: 子コントロールは独自のレイアウトを提供します。  
   
--   <xref:System.Windows.Controls.DockPanel>: 子コントロールはパネルの縁に並べられます。  
+- <xref:System.Windows.Controls.DockPanel>: 子コントロールはパネルの縁に並べられます。  
   
--   <xref:System.Windows.Controls.Grid>: 子コントロールは行ごと、列ごとに位置指定されます。  
+- <xref:System.Windows.Controls.Grid>: 子コントロールは行ごと、列ごとに位置指定されます。  
   
--   <xref:System.Windows.Controls.StackPanel>: 子コントロールは垂直方向または水平方向に積み上げられます。  
+- <xref:System.Windows.Controls.StackPanel>: 子コントロールは垂直方向または水平方向に積み上げられます。  
   
--   <xref:System.Windows.Controls.VirtualizingStackPanel>: 子コントロールは仮想化され、水平方向または垂直方向の 1 本の線上に配置されます。  
+- <xref:System.Windows.Controls.VirtualizingStackPanel>: 子コントロールは仮想化され、水平方向または垂直方向の 1 本の線上に配置されます。  
   
--   <xref:System.Windows.Controls.WrapPanel>: 子コントロールは左から右への順序に配置され、現在の行に納まらない場合は、次の行に折り返されます。  
+- <xref:System.Windows.Controls.WrapPanel>: 子コントロールは左から右への順序に配置され、現在の行に納まらない場合は、次の行に折り返されます。  
   
- 次の例では <xref:System.Windows.Controls.DockPanel> を使用して複数の <xref:System.Windows.Controls.TextBox> コントロールを配置しています。  
+  次の例では <xref:System.Windows.Controls.DockPanel> を使用して複数の <xref:System.Windows.Controls.TextBox> コントロールを配置しています。  
   
- [!code-xml[IntroToWPFSnippets#LayoutMARKUP](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/LayoutWindow.xaml#layoutmarkup)]  
+  [!code-xml[IntroToWPFSnippets#LayoutMARKUP](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/LayoutWindow.xaml#layoutmarkup)]  
   
- <xref:System.Windows.Controls.DockPanel> により、子 <xref:System.Windows.Controls.TextBox> コントロールはどのように配置するかを伝えることができます。 このために、 <xref:System.Windows.Controls.DockPanel> は <xref:System.Windows.Controls.DockPanel.Dock%2A> プロパティを実装しています。このプロパティが子コントロールに公開されて、それぞれのコントロールがドック スタイルを指定できるようになります。  
+  <xref:System.Windows.Controls.DockPanel> により、子 <xref:System.Windows.Controls.TextBox> コントロールはどのように配置するかを伝えることができます。 このために、 <xref:System.Windows.Controls.DockPanel> は <xref:System.Windows.Controls.DockPanel.Dock%2A> プロパティを実装しています。このプロパティが子コントロールに公開されて、それぞれのコントロールがドック スタイルを指定できるようになります。  
   
 > [!NOTE]
 >  子コントロールが使うために、親コントロールにより実装されるプロパティは、 [添付プロパティ](https://msdn.microsoft.com/library/ms749011\(v=vs.100\).aspx)と呼ばれる WPF 構成要素です。  
@@ -222,33 +222,33 @@ End Namespace
 ##  <a name="Data_Binding"></a> データ バインディング  
  ほとんどのアプリケーションは、データの表示と編集の手段をユーザーに提供するために作成されます。 WPF アプリケーションの場合、データ格納とアクセスの機能は、SQL Server や ADO .NET などのテクノロジにより、すでに提供されています。 データがアクセスされ、アプリケーションの管理対象オブジェクトに読み込まれると、WPF アプリケーションの処理が開始します。 基本的に、これには 2 つの処理が伴います。  
   
-1.  管理対象のオブジェクトからコントロールにデータをコピーします。これらのコントロールで、データを表示および編集できます。  
+1. 管理対象のオブジェクトからコントロールにデータをコピーします。これらのコントロールで、データを表示および編集できます。  
   
-2.  コントロールを使用してデータに対して行う変更が、必ず管理対象オブジェクトにもう一度コピーされるようにしてください。  
+2. コントロールを使用してデータに対して行う変更が、必ず管理対象オブジェクトにもう一度コピーされるようにしてください。  
   
- アプリケーションの開発を簡素化するために、WPF にはこれらの手順を自動的に実行する、データ バインディング エンジンが用意されています。 データ バインディング エンジンの中核となる単位は <xref:System.Windows.Data.Binding> クラスであり、その仕事はコントロール (バインディング ターゲット) をデータ オブジェクト (バインディング ソース) にバインドすることです。 この関係を次の図に示します。  
+   アプリケーションの開発を簡素化するために、WPF にはこれらの手順を自動的に実行する、データ バインディング エンジンが用意されています。 データ バインディング エンジンの中核となる単位は <xref:System.Windows.Data.Binding> クラスであり、その仕事はコントロール (バインディング ターゲット) をデータ オブジェクト (バインディング ソース) にバインドすることです。 この関係を次の図に示します。  
   
- ![基本的なデータ バインディング ダイアグラム](../designers/media/databindingmostbasic.png "DataBindingMostBasic")  
+   ![基本的なデータ バインディング ダイアグラム](../designers/media/databindingmostbasic.png "DataBindingMostBasic")  
   
- 次の例は、<xref:System.Windows.Controls.TextBox> をカスタム `Person` オブジェクトのインスタンスにバインドする方法を示しています。 `Person` の実装を次のコードに示します。  
+   次の例は、<xref:System.Windows.Controls.TextBox> をカスタム `Person` オブジェクトのインスタンスにバインドする方法を示しています。 `Person` の実装を次のコードに示します。  
   
- [!code-csharp[SimpleDataBindingSnippets#PersonClassCODE](../snippets/csharp/VS_Snippets_Wpf/SimpleDataBindingSnippets/CSharp/Person.cs#personclasscode)]
- [!code-vb[SimpleDataBindingSnippets#PersonClassCODE](../snippets/visualbasic/VS_Snippets_Wpf/SimpleDataBindingSnippets/VisualBasic/Person.vb#personclasscode)]  
+   [!code-csharp[SimpleDataBindingSnippets#PersonClassCODE](../snippets/csharp/VS_Snippets_Wpf/SimpleDataBindingSnippets/CSharp/Person.cs#personclasscode)]
+   [!code-vb[SimpleDataBindingSnippets#PersonClassCODE](../snippets/visualbasic/VS_Snippets_Wpf/SimpleDataBindingSnippets/VisualBasic/Person.vb#personclasscode)]  
   
- 次のマークアップは <xref:System.Windows.Controls.TextBox> をカスタム `Person` オブジェクトのインスタンスにバインドします。  
+   次のマークアップは <xref:System.Windows.Controls.TextBox> をカスタム `Person` オブジェクトのインスタンスにバインドします。  
   
- [!code-xml[SimpleDataBindingSnippets#DataBindingMARKUP1](../snippets/csharp/VS_Snippets_Wpf/SimpleDataBindingSnippets/CSharp/DataBindingWindow.xaml#databindingmarkup1)]  
-[!code-xml[SimpleDataBindingSnippets#DataBindingMARKUP2](../snippets/csharp/VS_Snippets_Wpf/SimpleDataBindingSnippets/CSharp/DataBindingWindow.xaml#databindingmarkup2)]  
-[!code-xml[SimpleDataBindingSnippets#DataBindingMARKUP3](../snippets/csharp/VS_Snippets_Wpf/SimpleDataBindingSnippets/CSharp/DataBindingWindow.xaml#databindingmarkup3)]  
+   [!code-xml[SimpleDataBindingSnippets#DataBindingMARKUP1](../snippets/csharp/VS_Snippets_Wpf/SimpleDataBindingSnippets/CSharp/DataBindingWindow.xaml#databindingmarkup1)]  
+   [!code-xml[SimpleDataBindingSnippets#DataBindingMARKUP2](../snippets/csharp/VS_Snippets_Wpf/SimpleDataBindingSnippets/CSharp/DataBindingWindow.xaml#databindingmarkup2)]  
+   [!code-xml[SimpleDataBindingSnippets#DataBindingMARKUP3](../snippets/csharp/VS_Snippets_Wpf/SimpleDataBindingSnippets/CSharp/DataBindingWindow.xaml#databindingmarkup3)]  
   
- [!code-csharp[SimpleDataBindingSnippets#DataBindingCODEBEHIND](../snippets/csharp/VS_Snippets_Wpf/SimpleDataBindingSnippets/CSharp/DataBindingWindow.xaml.cs#databindingcodebehind)]
- [!code-vb[SimpleDataBindingSnippets#DataBindingCODEBEHIND](../snippets/visualbasic/VS_Snippets_Wpf/SimpleDataBindingSnippets/VisualBasic/DataBindingWindow.xaml.vb#databindingcodebehind)]  
+   [!code-csharp[SimpleDataBindingSnippets#DataBindingCODEBEHIND](../snippets/csharp/VS_Snippets_Wpf/SimpleDataBindingSnippets/CSharp/DataBindingWindow.xaml.cs#databindingcodebehind)]
+   [!code-vb[SimpleDataBindingSnippets#DataBindingCODEBEHIND](../snippets/visualbasic/VS_Snippets_Wpf/SimpleDataBindingSnippets/VisualBasic/DataBindingWindow.xaml.vb#databindingcodebehind)]  
   
- この例で、 `Person` クラスは、分離コードでインスタンス化され、 `DataBindingWindow`のデータ コンテキストとして設定されます。 マークアップでは、 <xref:System.Windows.Controls.TextBox.Text%2A> の <xref:System.Windows.Controls.TextBox> プロパティが、 `Person.Name` プロパティにバインドされます ("`{Binding ... }`" XAML 構文を使用)。 この XAML は WPF に対して、ウィンドウの <xref:System.Windows.Controls.TextBox> プロパティに格納されている `Person` オブジェクトに、 <xref:System.Windows.FrameworkElement.DataContext%2A> コントロールをバインドするよう、指示します。  
+   この例で、 `Person` クラスは、分離コードでインスタンス化され、 `DataBindingWindow`のデータ コンテキストとして設定されます。 マークアップでは、 <xref:System.Windows.Controls.TextBox.Text%2A> の <xref:System.Windows.Controls.TextBox> プロパティが、 `Person.Name` プロパティにバインドされます ("`{Binding ... }`" XAML 構文を使用)。 この XAML は WPF に対して、ウィンドウの <xref:System.Windows.Controls.TextBox> プロパティに格納されている `Person` オブジェクトに、 <xref:System.Windows.FrameworkElement.DataContext%2A> コントロールをバインドするよう、指示します。  
   
- WPF データ バインディング エンジンは、検証、並べ替え、フィルター処理、グループ化などのその他のサポートを提供します。 さらにデータ バインディングでは、標準の WPF コントロールによって表示されたユーザー インターフェイスが適切ではない場合に、バインドされたデータを操作するためのカスタム ユーザー インターフェイスをデータ テンプレートで作成することをサポートしています。  
+   WPF データ バインディング エンジンは、検証、並べ替え、フィルター処理、グループ化などのその他のサポートを提供します。 さらにデータ バインディングでは、標準の WPF コントロールによって表示されたユーザー インターフェイスが適切ではない場合に、バインドされたデータを操作するためのカスタム ユーザー インターフェイスをデータ テンプレートで作成することをサポートしています。  
   
- 詳しくは、「 [データ バインディングの概要](https://msdn.microsoft.com/library/ms752347\(v=vs.100\).aspx)」をご覧ください。  
+   詳しくは、「 [データ バインディングの概要](https://msdn.microsoft.com/library/ms752347\(v=vs.100\).aspx)」をご覧ください。  
   
 ##  <a name="Graphics"></a> グラフィックス  
  WPF では次の利点を備えた、広範囲にわたるスケーラブルで柔軟なグラフィックス機能セットが導入されています。  
@@ -335,21 +335,21 @@ End Namespace
 ##  <a name="Text_and_Typography"></a> テキストとタイポグラフィ  
  高品質のテキスト レンダリングを容易に行うために、WPF では次の機能が提供されています。  
   
--   OpenType フォントのサポート。  
+- OpenType フォントのサポート。  
   
--   ClearType 機能拡張。  
+- ClearType 機能拡張。  
   
--   ハードウェアの高速化を利用する高パフォーマンス。  
+- ハードウェアの高速化を利用する高パフォーマンス。  
   
--   テキストと、メディア、グラフィックス、アニメーションとの統合。  
+- テキストと、メディア、グラフィックス、アニメーションとの統合。  
   
--   国際対応フォントのサポートとフォールバック メカニズム。  
+- 国際対応フォントのサポートとフォールバック メカニズム。  
   
- テキストとグラフィックスの統合のデモとして、次の図に文字の装飾の適用を示します。  
+  テキストとグラフィックスの統合のデモとして、次の図に文字の装飾の適用を示します。  
   
- ![さまざまなテキスト装飾を含むテキスト](../designers/media/wpfintrofigure23.png "WPFIntroFigure23")  
+  ![さまざまなテキスト装飾を含むテキスト](../designers/media/wpfintrofigure23.png "WPFIntroFigure23")  
   
- 詳しくは、「 [Windows Presentation Foundation のタイポグラフィ](https://msdn.microsoft.com/library/ms742190\(v=vs.100\).aspx)」をご覧ください。  
+  詳しくは、「 [Windows Presentation Foundation のタイポグラフィ](https://msdn.microsoft.com/library/ms742190\(v=vs.100\).aspx)」をご覧ください。  
   
 ##  <a name="WPF_Customization"></a> WPF アプリケーションのカスタマイズ  
  ここまで、アプリケーションを開発するための中核となる WPF 構成要素を説明してきました。 主にコントロールから成るアプリケーション コンテンツをホストして提供するには、アプリケーション モデルを使用します。 ユーザー インターフェイスでのコントロールの配置を簡素化して、ウィンドウ サイズや表示設定に変更が発生した場合にも配置を維持するには、WPF レイアウト システムを使用します。 ほとんどのアプリケーションでは、ユーザーがデータと対話できるようになっているため、データ バインディングを使用すればユーザー インターフェイスとデータの統合作業を削減できます。 アプリケーションの外観を向上させるには、WPF が提供する幅広いグラフィックス、アニメーション、メディアのサポートを使用します。  
@@ -445,51 +445,51 @@ End Namespace
   
  この例では `Window.Resources` プロパティ要素を使用して、背景色リソースを実装しています。 このリソースは <xref:System.Windows.Window>のすべての子に使用できます。 次のように、リソースのスコープは多様です。この一覧では、解決される順序で各スコープが並べられています。  
   
-1.  個々のコントロール (継承された <xref:System.Windows.FrameworkElement.Resources%2A?displayProperty=fullName> プロパティを使用)。  
+1. 個々のコントロール (継承された <xref:System.Windows.FrameworkElement.Resources%2A?displayProperty=fullName> プロパティを使用)。  
   
-2.  <xref:System.Windows.Window> または <xref:System.Windows.Controls.Page> (これも、継承された <xref:System.Windows.FrameworkElement.Resources%2A?displayProperty=fullName> プロパティを使用)。  
+2. <xref:System.Windows.Window> または <xref:System.Windows.Controls.Page> (これも、継承された <xref:System.Windows.FrameworkElement.Resources%2A?displayProperty=fullName> プロパティを使用)。  
   
-3.  <xref:System.Windows.Application> ( <xref:System.Windows.Application.Resources%2A?displayProperty=fullName> プロパティを使用)。  
+3. <xref:System.Windows.Application> ( <xref:System.Windows.Application.Resources%2A?displayProperty=fullName> プロパティを使用)。  
   
- このようなスコープの多様さのおかげで、リソースを柔軟に定義して共有できるようになります。  
+   このようなスコープの多様さのおかげで、リソースを柔軟に定義して共有できるようになります。  
   
- リソースを特定のスコープに直接関連付ける代わりに、アプリケーションの他の部分で参照できる別個の <xref:System.Windows.ResourceDictionary> を使用して、1 つ以上のリソースをパッケージ化することができます。 たとえば、次の例ではリソース ディクショナリに既定の背景色を定義しています。  
+   リソースを特定のスコープに直接関連付ける代わりに、アプリケーションの他の部分で参照できる別個の <xref:System.Windows.ResourceDictionary> を使用して、1 つ以上のリソースをパッケージ化することができます。 たとえば、次の例ではリソース ディクショナリに既定の背景色を定義しています。  
   
- [!code-xml[IntroToWPFSnippets#ResourceDictionaryMARKUP1](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/BackgroundColorResources.xaml#resourcedictionarymarkup1)]  
-[!code-xml[IntroToWPFSnippets#ResourceDictionaryMARKUP2](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/BackgroundColorResources.xaml#resourcedictionarymarkup2)]  
+   [!code-xml[IntroToWPFSnippets#ResourceDictionaryMARKUP1](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/BackgroundColorResources.xaml#resourcedictionarymarkup1)]  
+   [!code-xml[IntroToWPFSnippets#ResourceDictionaryMARKUP2](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/BackgroundColorResources.xaml#resourcedictionarymarkup2)]  
   
- 次の例では、前の例で定義したリソース ディクショナリを参照し、アプリケーション全体で共有されるようにしています。  
+   次の例では、前の例で定義したリソース ディクショナリを参照し、アプリケーション全体で共有されるようにしています。  
   
- [!code-xml[IntroToWPFSnippets#ApplicationScopedResourceDictionaryMARKUP1](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/App.xaml#applicationscopedresourcedictionarymarkup1)]  
-[!code-xml[IntroToWPFSnippets#ApplicationScopedResourceDictionaryMARKUP2](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/App.xaml#applicationscopedresourcedictionarymarkup2)]  
+   [!code-xml[IntroToWPFSnippets#ApplicationScopedResourceDictionaryMARKUP1](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/App.xaml#applicationscopedresourcedictionarymarkup1)]  
+   [!code-xml[IntroToWPFSnippets#ApplicationScopedResourceDictionaryMARKUP2](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/App.xaml#applicationscopedresourcedictionarymarkup2)]  
   
- リソースおよびリソース ディクショナリは、テーマとスキンに対する WPF サポートの基礎です。  
+   リソースおよびリソース ディクショナリは、テーマとスキンに対する WPF サポートの基礎です。  
   
- 詳しくは、「 [リソースの概要](https://msdn.microsoft.com/library/ms750613\(v=vs.100\).aspx)」をご覧ください。  
+   詳しくは、「 [リソースの概要](https://msdn.microsoft.com/library/ms750613\(v=vs.100\).aspx)」をご覧ください。  
   
 ### <a name="custom-controls"></a>カスタム コントロール  
  WPF にはカスタマイズに対する多くのサポートが用意されていますが、状況によっては既存の WPF コントロールではアプリケーションやそのユーザーのニーズを満たせない場合があります。 次のような状況が考えられます。  
   
--   WPF の既存の実装のルックアンドフィールをカスタマイズしても、必要とするユーザー インターフェイスを作成できない。  
+- WPF の既存の実装のルックアンドフィールをカスタマイズしても、必要とするユーザー インターフェイスを作成できない。  
   
--   WPF の既存の実装が、必要とする動作をサポートしない (または簡単にはサポートできない)。  
+- WPF の既存の実装が、必要とする動作をサポートしない (または簡単にはサポートできない)。  
   
- ただし現時点では、3 つの WPF モデルのいずれかを利用して、新しいコントロールを作成できます。 各モデルは固有のシナリオを対象としており、カスタム コントロールは特定の WPF 基底クラスから派生するものでなければなりません。 この 3 つのモデルは次のとおりです。  
+  ただし現時点では、3 つの WPF モデルのいずれかを利用して、新しいコントロールを作成できます。 各モデルは固有のシナリオを対象としており、カスタム コントロールは特定の WPF 基底クラスから派生するものでなければなりません。 この 3 つのモデルは次のとおりです。  
   
--   **ユーザー コントロール モデル** カスタム コントロールは <xref:System.Windows.Controls.UserControl> から派生し、他の 1 つ以上のコントロールで構成されます。  
+- **ユーザー コントロール モデル** カスタム コントロールは <xref:System.Windows.Controls.UserControl> から派生し、他の 1 つ以上のコントロールで構成されます。  
   
--   **コントロール モデル** カスタム コントロールは <xref:System.Windows.Controls.Control> から派生し、大半の WPF コントロール同様、テンプレートを使用して、動作を外観から分離する実装を構築するために使用されます。 <xref:System.Windows.Controls.Control> から派生することにより、ユーザー コントロールよりも自由度の高いカスタム ユーザー インターフェイスを作成できますが、これにはより多くの労力が必要です。  
+- **コントロール モデル** カスタム コントロールは <xref:System.Windows.Controls.Control> から派生し、大半の WPF コントロール同様、テンプレートを使用して、動作を外観から分離する実装を構築するために使用されます。 <xref:System.Windows.Controls.Control> から派生することにより、ユーザー コントロールよりも自由度の高いカスタム ユーザー インターフェイスを作成できますが、これにはより多くの労力が必要です。  
   
--   **フレームワーク要素モデル** カスタム コントロールは、カスタム レンダリング ロジック (テンプレートではなく) によって外観が定義されるときに、 <xref:System.Windows.FrameworkElement> から派生します。  
+- **フレームワーク要素モデル** カスタム コントロールは、カスタム レンダリング ロジック (テンプレートではなく) によって外観が定義されるときに、 <xref:System.Windows.FrameworkElement> から派生します。  
   
- 次の例に <xref:System.Windows.Controls.UserControl>から派生するカスタムの数値のアップダウン コントロールを示します。  
+  次の例に <xref:System.Windows.Controls.UserControl>から派生するカスタムの数値のアップダウン コントロールを示します。  
   
- [!code-xml[IntroToWPFSnippets#UserControlMARKUP](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/NumericUpDown.xaml#usercontrolmarkup)]  
+  [!code-xml[IntroToWPFSnippets#UserControlMARKUP](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/NumericUpDown.xaml#usercontrolmarkup)]  
   
- [!code-csharp[IntroToWPFSnippets#UserControlCODEBEHIND1](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/NumericUpDown.xaml.cs#usercontrolcodebehind1)]
- [!code-vb[IntroToWPFSnippets#UserControlCODEBEHIND1](../snippets/visualbasic/VS_Snippets_Wpf/IntroToWPFSnippets/VisualBasic/NumericUpDown.xaml.vb#usercontrolcodebehind1)]  
-[!code-csharp[IntroToWPFSnippets#UserControlCODEBEHIND2](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/NumericUpDown.xaml.cs#usercontrolcodebehind2)]
-[!code-vb[IntroToWPFSnippets#UserControlCODEBEHIND2](../snippets/visualbasic/VS_Snippets_Wpf/IntroToWPFSnippets/VisualBasic/NumericUpDown.xaml.vb#usercontrolcodebehind2)]  
+  [!code-csharp[IntroToWPFSnippets#UserControlCODEBEHIND1](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/NumericUpDown.xaml.cs#usercontrolcodebehind1)]
+  [!code-vb[IntroToWPFSnippets#UserControlCODEBEHIND1](../snippets/visualbasic/VS_Snippets_Wpf/IntroToWPFSnippets/VisualBasic/NumericUpDown.xaml.vb#usercontrolcodebehind1)]  
+  [!code-csharp[IntroToWPFSnippets#UserControlCODEBEHIND2](../snippets/csharp/VS_Snippets_Wpf/IntroToWPFSnippets/CSharp/NumericUpDown.xaml.cs#usercontrolcodebehind2)]
+  [!code-vb[IntroToWPFSnippets#UserControlCODEBEHIND2](../snippets/visualbasic/VS_Snippets_Wpf/IntroToWPFSnippets/VisualBasic/NumericUpDown.xaml.vb#usercontrolcodebehind2)]  
   
   
  次の例は、ユーザー コントロールを <xref:System.Windows.Window>に組み込むために必要な XAML を示しています。  

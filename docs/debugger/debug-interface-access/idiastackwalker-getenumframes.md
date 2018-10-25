@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalker::getEnumFrames |Microsoft ドキュメント
+title: IDiaStackWalker::getEnumFrames |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a86af24d863982a527a5f3bd2fae58b4dbc6d431
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f4c7d8d30dee1d9c0a058177ad54aab864cee28d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31467509"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836162"
 ---
 # <a name="idiastackwalkergetenumframes"></a>IDiaStackWalker::getEnumFrames
-X86 用のスタック フレームの列挙子を取得プラットフォームです。  
+X86 スタック フレームの列挙子を取得します。 プラットフォーム。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,10 +41,10 @@ HRESULT getEnumFrames(
  [out]返します、 [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)オブジェクトの一覧を含む[IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- その他の任意のプラットフォームでスタック フレームの一覧を取得する、 [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ その他の任意のプラットフォームでスタック フレームの一覧を取得する、 [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md)メソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaStackWalker](../../debugger/debug-interface-access/idiastackwalker.md)   

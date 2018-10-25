@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 650b550b21f239f382bb464078ee766920262309
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 09aa3046c66b9b4beb825dad8e8bc648d50851d0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079850"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887190"
 ---
 # <a name="itemdefinitiongroup-element-msbuild"></a>ItemDefinitionGroup 要素 (MSBuild)
 `ItemDefinitionGroup` 要素を使うと、一連の項目定義を定義できます。これは、プロジェクト内のすべての項目に既定で適用されるメタデータ値です。 ItemDefinitionGroup は、[CreateItem タスク](../msbuild/createitem-task.md)および [CreateProperty タスク](../msbuild/createproperty-task.md)を使う必要性より優先されます。 詳細については、「[項目定義](../msbuild/item-definitions.md)」を参照してください。  
@@ -59,9 +59,9 @@ ms.locfileid: "39079850"
 
 ### <a name="parent-elements"></a>親要素  
 
-|要素|説明|  
-|-------------|-----------------|  
-|[プロジェクト](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。|  
+| 要素 | 説明 |
+| - | - |
+| [プロジェクト](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。 |
 
 ## <a name="example"></a>例  
  次のコード例では、ItemDefinitionGroup に 2 つのメタデータ項目 m と n を定義します。 この例では、項目 "i" ではメタデータ "m" が明示的に定義されていないため、既定のメタデータ "m" が項目 "i" に適用されます。 ただし、項目 "i" でメタデータ "n" が既に定義されているため、既定のメタデータ "n" は項目 "i" には適用されません。  

@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::Enable |Microsoft ドキュメント
+title: IDebugBoundBreakpoint2::Enable |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0cd5b36d8985ef36b67d5983113989a2f60bf588
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b3f8589e8e7084853a4db5bb39b79c1abd6ee293
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31100592"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936642"
 ---
 # <a name="idebugboundbreakpoint2enable"></a>IDebugBoundBreakpoint2::Enable
 有効または、ブレークポイントを無効にします。  
@@ -42,13 +42,13 @@ int Enable(
   
 #### <a name="parameters"></a>パラメーター  
  `fEnable`  
- [in]0 以外に設定 (`TRUE`) を有効にするか、0 (`FALSE`)、ブレークポイントを無効にします。  
+ [in]0 以外に設定 (`TRUE`) またはゼロに有効にする (`FALSE`)、ブレークポイントを無効にします。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 返します`E_BP_DELETED`バインドされたブレークポイント オブジェクトの状態は に設定されているかどうかは`BPS_DELETED`(の一部、 [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)列挙型)。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 返します`E_BP_DELETED`にバインドされたブレークポイント オブジェクトの状態が設定されてかどうか`BPS_DELETED`(の一部、 [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)列挙型)。  
   
 ## <a name="example"></a>例  
- 次の例は、単純なは、このメソッドを実装する方法を示します`CBoundBreakpoint`を公開するオブジェクト、 [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)インターフェイスです。  
+ 次の例は、単純なは、このメソッドを実装する方法を示しています。`CBoundBreakpoint`を公開するオブジェクト、 [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)インターフェイス。  
   
 ```  
 HRESULT CBoundBreakpoint::Enable(BOOL fEnable)    

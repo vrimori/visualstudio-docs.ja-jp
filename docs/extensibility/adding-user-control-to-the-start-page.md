@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ddd64829f1e9f04c1e7634537818f3b6a081db8f
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 96b280221ba7efdefd3023f015bd4075b8c03aaa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44280611"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910496"
 ---
 # <a name="add-user-control-to-the-start-page"></a>スタート ページにユーザー コントロールを追加します。
 このチュートリアルでは、カスタム スタート ページへの DLL の参照を追加する方法を示します。 例では、ソリューションにユーザー コントロールを追加、ユーザー コントロールをビルドおよびスタート ページからビルドされたアセンブリを参照 *.xaml*ファイル。 新しいタブでは、基本的な Web ブラウザーとして機能するユーザー コントロールをホストします。  
@@ -137,41 +137,41 @@ ms.locfileid: "44280611"
 ## <a name="add-the-user-control-to-the-start-page"></a>スタート ページに、ユーザー コントロールを追加します。  
  このコントロールで使用できるように、スタート ページ プロジェクトにスタート ページ プロジェクト ファイルでは、新しいコントロール ライブラリへの参照を追加します。 スタート ページの XAML マークアップをコントロールを追加できます。  
   
-1.  **ソリューション エクスプ ローラー**、スタート ページ プロジェクトを右クリックして**参照**順にクリックします**参照の追加**します。  
+1. **ソリューション エクスプ ローラー**、スタート ページ プロジェクトを右クリックして**参照**順にクリックします**参照の追加**します。  
   
-2.  **プロジェクト**] タブで [ **WebUserControl**順にクリックします**OK**します。  
+2. **プロジェクト**] タブで [ **WebUserControl**順にクリックします**OK**します。  
   
-3.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
+3. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
-     ソリューションを構築可能ユーザー コントロールに IntelliSense ソリューションで他のファイル。  
+    ソリューションを構築可能ユーザー コントロールに IntelliSense ソリューションで他のファイル。  
   
- スタート ページの XAML マークアップには、コントロールを追加するには、アセンブリへの参照を名前空間を追加し、ページにコントロールを配置します。  
+   スタート ページの XAML マークアップには、コントロールを追加するには、アセンブリへの参照を名前空間を追加し、ページにコントロールを配置します。  
   
 ### <a name="to-add-the-control-to-the-markup"></a>コントロールのマークアップを追加するには  
   
-1.  **ソリューション エクスプ ローラー**、スタート ページを開く *.xaml*ファイル。  
+1. **ソリューション エクスプ ローラー**、スタート ページを開く *.xaml*ファイル。  
   
-2.  **XAML**ウィンドウで、最上位レベルに次の名前空間宣言を追加<xref:System.Windows.Controls.Grid>要素。  
+2. **XAML**ウィンドウで、最上位レベルに次の名前空間宣言を追加<xref:System.Windows.Controls.Grid>要素。  
   
-    ```xml  
-    xmlns:vsc="clr-namespace:WebUserControl;assembly=WebUserControl"  
-    ```  
+   ```xml  
+   xmlns:vsc="clr-namespace:WebUserControl;assembly=WebUserControl"  
+   ```  
   
-3.  **XAML**ウィンドウまでスクロールすると、\<グリッド > セクション。  
+3. **XAML**ウィンドウまでスクロールすると、\<グリッド > セクション。  
   
-     セクションが含まれて、<xref:System.Windows.Controls.TabControl>内の要素を<xref:System.Windows.Controls.Grid>要素。  
+    セクションが含まれて、<xref:System.Windows.Controls.TabControl>内の要素を<xref:System.Windows.Controls.Grid>要素。  
   
-4.  追加、 \<TabControl > 要素を含む、 \<TabItem > ユーザー コントロールへの参照を格納しています。  
+4. 追加、 \<TabControl > 要素を含む、 \<TabItem > ユーザー コントロールへの参照を格納しています。  
   
-    ```xml  
+   ```xml  
   
-    <TabItem Header="Web" Height="Auto">  
-        <vsc:UserControl1 />  
-    </TabItem>  
+   <TabItem Header="Web" Height="Auto">  
+       <vsc:UserControl1 />  
+   </TabItem>  
   
-    ```  
+   ```  
   
- これで、コントロールをテストできます。  
+   これで、コントロールをテストできます。  
   
 ## <a name="test-a-manually-created-custom-start-page"></a>手動で作成したカスタム スタート ページをテストします。  
   

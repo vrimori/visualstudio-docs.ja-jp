@@ -20,12 +20,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8f836662b9dfe4df8e45e24a7210664b8cecd49e
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: d7a2775526a088129060fc6375958b08cf6b19eb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671946"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906560"
 ---
 # <a name="powerpoint-solutions"></a>PowerPoint ソリューション
   Visual Studio には、Microsoft Office PowerPoint の VSTO アドインを作成するために使用できるプロジェクト テンプレートが用意されています。 VSTO アドインを使用すると、PowerPoint の自動化、PowerPoint 機能の拡張、PowerPoint ユーザー インターフェイス (UI) のカスタマイズが可能です。  
@@ -42,15 +42,15 @@ ms.locfileid: "35671946"
 ## <a name="automate-powerpoint-by-using-the-powerpoint-object-model"></a>PowerPoint オブジェクト モデルを使用して PowerPoint を自動化します。  
  PowerPoint オブジェクト モデルでは、PowerPoint の自動化に使用できる型が多数公開されています。 それらの型によって、次のような一般的なタスクを実行するコードを作成できます。  
   
--   プログラムによるプレゼンテーションの作成と書式指定  
+- プログラムによるプレゼンテーションの作成と書式指定  
   
--   プレゼンテーションへのスライドの追加または削除  
+- プレゼンテーションへのスライドの追加または削除  
   
--   スライドへの図形の追加または変更  
+- スライドへの図形の追加または変更  
   
- VSTO アドインから PowerPoint オブジェクト モデルにアクセスするには、使用、`Application`のフィールド、`ThisAddIn`プロジェクト内のクラス。 `Application` フィールドは PowerPoint の現在のインスタンスを表す <xref:Microsoft.Office.Interop.PowerPoint.Application> オブジェクトを返します。 詳細については、次を参照してください。[プログラム VSTO アドイン](../vsto/programming-vsto-add-ins.md)します。  
+  VSTO アドインから PowerPoint オブジェクト モデルにアクセスするには、使用、`Application`のフィールド、`ThisAddIn`プロジェクト内のクラス。 `Application` フィールドは PowerPoint の現在のインスタンスを表す <xref:Microsoft.Office.Interop.PowerPoint.Application> オブジェクトを返します。 詳細については、次を参照してください。[プログラム VSTO アドイン](../vsto/programming-vsto-add-ins.md)します。  
   
- PowerPoint オブジェクト モデルを呼び出すときには、PowerPoint のプライマリ相互運用機能アセンブリに用意された型を使用します。 プライマリ相互運用機能アセンブリは、VSTO アドインのマネージド コードと PowerPoint の COM オブジェクト モデルとの仲介役を果たします。 PowerPoint プライマリ相互運用機能アセンブリ内の型は、すべて <xref:Microsoft.Office.Interop.PowerPoint> 名前空間に定義されています。 プライマリ相互運用機能アセンブリの詳細については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41; ](../vsto/office-solutions-development-overview-vsto.md)と[Office プライマリ相互運用機能アセンブリ](../vsto/office-primary-interop-assemblies.md)します。  
+  PowerPoint オブジェクト モデルを呼び出すときには、PowerPoint のプライマリ相互運用機能アセンブリに用意された型を使用します。 プライマリ相互運用機能アセンブリは、VSTO アドインのマネージド コードと PowerPoint の COM オブジェクト モデルとの仲介役を果たします。 PowerPoint プライマリ相互運用機能アセンブリ内の型は、すべて <xref:Microsoft.Office.Interop.PowerPoint> 名前空間に定義されています。 プライマリ相互運用機能アセンブリの詳細については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41; ](../vsto/office-solutions-development-overview-vsto.md)と[Office プライマリ相互運用機能アセンブリ](../vsto/office-primary-interop-assemblies.md)します。  
   
 ##  <a name="WordOMDocumentation"></a> PowerPoint オブジェクト モデル ドキュメントを使用します。  
  PowerPoint オブジェクト モデルの詳細については、PowerPoint プライマリ相互運用機能アセンブリ (PIA) のリファレンスと、VBA オブジェクト モデルのリファレンスを参照してください。  
@@ -80,7 +80,7 @@ ms.locfileid: "35671946"
  [チュートリアル: は powerpoint の場合、最初の VSTO アドイン作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md)   
  [VSTO アドインのプログラミングを始める](../vsto/getting-started-programming-vsto-add-ins.md)   
  [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
- [VSTO アドインのアーキテクチャ](../vsto/architecture-of-vsto-add-ins.md)   
+ [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)   
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [VSTO アドインをプログラミングします。](../vsto/programming-vsto-add-ins.md)   
  [Office ソリューションでコードを記述します。](../vsto/writing-code-in-office-solutions.md)   

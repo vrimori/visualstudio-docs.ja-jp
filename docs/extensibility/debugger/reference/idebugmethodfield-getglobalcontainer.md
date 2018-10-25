@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::GetGlobalContainer |Microsoft ドキュメント
+title: IDebugMethodField::GetGlobalContainer |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb97f61c7c475f41280b78d43c0842e5546fab2c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dc7ead16cf796d5ecdd98adfd98bc28b6b2d9fbb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31113293"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49947884"
 ---
 # <a name="idebugmethodfieldgetglobalcontainer"></a>IDebugMethodField::GetGlobalContainer
-メソッドのグローバルのコンテナーを取得します。  
+メソッドのグローバル コンテナーを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +41,13 @@ int GetGlobalContainer(
   
 #### <a name="parameters"></a>パラメーター  
  `ppClass`  
- [out]返します、 [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)このメソッドが定義されているモジュールを表すです。  
+ [out]返します、 [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)このメソッドが定義されているモジュールを表します。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 返された[IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)オブジェクトはモジュール全体を表し、人為的なオブジェクトしますつまり、モジュール自体には、実際のクラスはありませんがで表すことができます、`IDebugClassField`さまざまなをすることにより、オブジェクト。列挙され、検出するモジュールの要素です。  
+## <a name="remarks"></a>Remarks  
+ 返された[IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)オブジェクトは、モジュール全体を表しており、人為的なオブジェクトは、つまり、モジュール自体には、実際のクラスはありませんで表すことができます、`IDebugClassField`さまざまなことにより、オブジェクト列挙され、検出されたモジュールの要素です。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   

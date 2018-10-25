@@ -20,12 +20,12 @@ caps.latest.revision: 28
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 87f8cd822dcd67ff7837dcaa31e47c23e0a0550b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: be77104c4570068cbebf6c25801f600757a6ee0d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49203672"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49850426"
 ---
 # <a name="immediate-window"></a>イミディエイト ウィンドウ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -58,31 +58,31 @@ ms.locfileid: "49203672"
   
 #### <a name="to-execute-a-function-at-design-time"></a>デザイン時に関数を実行するには  
   
-1.  次のコードを [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] コンソール アプリケーションにコピーします。  
+1. 次のコードを [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] コンソール アプリケーションにコピーします。  
   
-    ```  
-    Module Module1  
+   ```  
+   Module Module1  
   
-        Sub Main()  
-            MyFunction(5)  
-        End Sub  
+       Sub Main()  
+           MyFunction(5)  
+       End Sub  
   
-        Function MyFunction(ByVal input as Integer) As Integer  
-            Return input * 2  
-        End Function  
+       Function MyFunction(ByVal input as Integer) As Integer  
+           Return input * 2  
+       End Function  
   
-    End Module  
-    ```  
+   End Module  
+   ```  
   
-2.  **[デバッグ]** メニューの **[ウィンドウ]** をポイントし、**[イミディエイト]** をクリックします。  
+2. **[デバッグ]** メニューの **[ウィンドウ]** をポイントし、**[イミディエイト]** をクリックします。  
   
-3.  **[イミディエイト]** ウィンドウで「`?MyFunction(2)`」と入力し、Enter キーを押します。  
+3. **[イミディエイト]** ウィンドウで「`?MyFunction(2)`」と入力し、Enter キーを押します。  
   
-     **[イミディエイト]** ウィンドウで `MyFunction` が実行され、`4` と表示されます。  
+    **[イミディエイト]** ウィンドウで `MyFunction` が実行され、`4` と表示されます。  
   
- 関数またはサブルーチンにブレークポイントが含まれているとき、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] は適切なポイントで実行を中断します。 デバッガー ウィンドウを使用して、プログラムの状態を確認できます。 詳細については、「[チュートリアル: デザイン時のデバッグ](../../debugger/walkthrough-debugging-at-design-time.md)」を参照してください。  
+   関数またはサブルーチンにブレークポイントが含まれているとき、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] は適切なポイントで実行を中断します。 デバッガー ウィンドウを使用して、プログラムの状態を確認できます。 詳細については、「[チュートリアル: デザイン時のデバッグ](../../debugger/walkthrough-debugging-at-design-time.md)」を参照してください。  
   
- デザイン時の式の評価は、実行時環境の起動を必要とするプロジェクトの種類 ([!INCLUDE[trprVSTOshort](../../includes/trprvstoshort-md.md)] プロジェクト、Web プロジェクト、スマート デバイス プロジェクト、SQL プロジェクトなど) には使用できません。  
+   デザイン時の式の評価は、実行時環境の起動を必要とするプロジェクトの種類 ([!INCLUDE[trprVSTOshort](../../includes/trprvstoshort-md.md)] プロジェクト、Web プロジェクト、スマート デバイス プロジェクト、SQL プロジェクトなど) には使用できません。  
   
 ### <a name="design-time-expression-evaluation-in-multi-project-solutions"></a>デザイン時の式の評価 (複数のプロジェクトから成るソリューションの場合)  
  デザイン時の式の評価におけるコンテキストを設定する際、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] はソリューション エクスプローラーで現在選択されているプロジェクトを参照します。 ソリューション エクスプローラーでプロジェクトが選択されていない場合、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] はスタートアップ プロジェクトで関数を評価します。 現在のコンテキストで関数を評価できない場合は、エラー メッセージが表示されます。 ソリューションのスタートアップ プロジェクト以外のプロジェクトで関数を評価しようとしていたときにエラーを受け取った場合は、ソリューション エクスプローラーで評価対象プロジェクトを選択し、再度評価を試みてください。  

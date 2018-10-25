@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: fd034f4802679daa442f04b469a37f04d580ea94
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: da2ddc582c6555e8ec4567f4faace603f6f0f677
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36758943"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872487"
 ---
 # <a name="walkthrough-complex-data-binding-in-vsto-add-in-project"></a>チュートリアル: VSTO アドイン プロジェクトで複雑なデータ バインディング
   VSTO アドイン プロジェクトでは、ホスト コントロールと Windows フォーム コントロールにデータをバインドできます。 このチュートリアルでは、Microsoft Office Excel ワークシートにコントロールを追加して、そのコントロールを実行時にデータにバインドする方法を示します。
@@ -31,13 +31,13 @@ ms.locfileid: "36758943"
 
  このチュートリアルでは、次の作業について説明します。
 
--   追加、<xref:Microsoft.Office.Tools.Excel.ListObject>コントロールをワークシートに実行時にします。
+- 追加、<xref:Microsoft.Office.Tools.Excel.ListObject>コントロールをワークシートに実行時にします。
 
--   コントロールをデータセットのインスタンスに接続する <xref:System.Windows.Forms.BindingSource> を作成する。
+- コントロールをデータセットのインスタンスに接続する <xref:System.Windows.Forms.BindingSource> を作成する。
 
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
  このチュートリアルを実行するには、次のコンポーネントが必要です。
 
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -61,32 +61,32 @@ ms.locfileid: "36758943"
 
      Visual Studio により、 `ThisAddIn.vb` ファイルまたは `ThisAddIn.cs` ファイルが開かれ、 **Populating Worksheets from a Database** プロジェクトが **ソリューション エクスプローラー**に追加されます。
 
-## <a name="create-a-data-source"></a>データ ソースを作成します。
+## <a name="create-a-data-source"></a>データ ソースの作成
  **[データ ソース]** ウィンドウを使用して、型指定されたデータセットをプロジェクトに追加します。
 
 ### <a name="to-add-a-typed-dataset-to-the-project"></a>型指定されたデータセットをプロジェクトに追加するには
 
-1.  場合、**データソース**ウィンドウが表示されない、メニュー バーで 表示することによって、**ビュー** > **その他の Windows**  >  **データ ソース**します。
+1. 場合、**データソース**ウィンドウが表示されない、メニュー バーで 表示することによって、**ビュー** > **その他の Windows**  >  **データ ソース**します。
 
-2.  **[新しいデータ ソースの追加]** をクリックして **データ ソース構成ウィザード**を開始します。
+2. **[新しいデータ ソースの追加]** をクリックして **データ ソース構成ウィザード**を開始します。
 
-3.  **[データベース]** をクリックして、 **[次へ]** をクリックします。
+3. **[データベース]** をクリックして、 **[次へ]** をクリックします。
 
-4.  `AdventureWorksLT` データベースへの既存の接続がある場合は、その接続を選んで **[次へ]** をクリックします。
+4. `AdventureWorksLT` データベースへの既存の接続がある場合は、その接続を選んで **[次へ]** をクリックします。
 
-     それ以外の場合は、 **[新しい接続]** をクリックし、 **[接続の追加]** ダイアログ ボックスを使用して新しい接続を作成します。 詳細については、次を参照してください。[新しい接続を追加](../data-tools/add-new-connections.md)します。
+    それ以外の場合は、 **[新しい接続]** をクリックし、 **[接続の追加]** ダイアログ ボックスを使用して新しい接続を作成します。 詳細については、次を参照してください。[新しい接続を追加](../data-tools/add-new-connections.md)します。
 
-5.  **[アプリケーション構成ファイルへの接続文字列を保存]** ページで、 **[次へ]** をクリックします。
+5. **[アプリケーション構成ファイルへの接続文字列を保存]** ページで、 **[次へ]** をクリックします。
 
-6.  **[データベース オブジェクトの選択]** ページで、 **[テーブル]** を展開し、 **[Address (SalesLT)]** を選びます。
+6. **[データベース オブジェクトの選択]** ページで、 **[テーブル]** を展開し、 **[Address (SalesLT)]** を選びます。
 
-7.  **[完了]** をクリックします。
+7. **[完了]** をクリックします。
 
-     *AdventureWorksLTDataSet.xsd*ファイルに追加されます**ソリューション エクスプ ローラー**します。 このファイルでは、次の項目を定義します。
+    *AdventureWorksLTDataSet.xsd*ファイルに追加されます**ソリューション エクスプ ローラー**します。 このファイルでは、次の項目を定義します。
 
-    -   `AdventureWorksLTDataSet`という名前の型指定されたデータセット。 このデータセットは、AdventureWorksLT データベースの **Address (SalesLT)** テーブルの内容を表します。
+   - `AdventureWorksLTDataSet`という名前の型指定されたデータセット。 このデータセットは、AdventureWorksLT データベースの **Address (SalesLT)** テーブルの内容を表します。
 
-    -   という名前の TableAdapter`AddressTableAdapter`します。 この TableAdapter データを読み書きするために使用できます、`AdventureWorksLTDataSet`します。 詳細については、次を参照してください。 [TableAdapter の概要](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview)します。
+   - という名前の TableAdapter`AddressTableAdapter`します。 この TableAdapter データを読み書きするために使用できます、`AdventureWorksLTDataSet`します。 詳細については、次を参照してください。 [TableAdapter の概要](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview)します。
 
      これらのオブジェクトは、どちらもこのチュートリアルの後半で使用します。
 

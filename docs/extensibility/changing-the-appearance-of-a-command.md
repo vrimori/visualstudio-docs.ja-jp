@@ -15,25 +15,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d3c30b665a27f4e77d21744582a23555fdb899c9
-ms.sourcegitcommit: 95aedf723c6be5272c3c5a2911cb2bdec50e2148
+ms.openlocfilehash: 61ba39bc8a312fb06499bed7ca94e33dc5e7153e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47228774"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825991"
 ---
 # <a name="change-the-appearance-of-a-command"></a>コマンドの外観を変更します。
 コマンドの外観を変更することで、ユーザーにフィードバックを提供できます。 たとえば、ご利用いただけませんが異なって表示するコマンドをたい場合があります。 非ことができますコマンドを使用できないか使用できないこと、または、それらを表示するまたは確認メニューでそれらをオフにします。  
   
  コマンドの外観を変更するには、これらの操作を実行します。  
   
--   コマンド テーブルのファイルでコマンドの定義では、適切なフラグを指定します。  
+- コマンド テーブルのファイルでコマンドの定義では、適切なフラグを指定します。  
   
--   使用して、<xref:Microsoft.VisualStudio.Shell.OleMenuCommandService>サービス。  
+- 使用して、<xref:Microsoft.VisualStudio.Shell.OleMenuCommandService>サービス。  
   
--   実装、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>インターフェイスおよび生のコマンド オブジェクトを変更します。  
+- 実装、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>インターフェイスおよび生のコマンド オブジェクトを変更します。  
   
- 次の手順では、検索およびマネージ パッケージ フレームワーク (MPF) を使用して、コマンドの外観を更新する方法を示します。  
+  次の手順では、検索およびマネージ パッケージ フレームワーク (MPF) を使用して、コマンドの外観を更新する方法を示します。  
   
 ### <a name="to-change-the-appearance-of-a-menu-command"></a>メニュー コマンドの外観を変更するには  
   

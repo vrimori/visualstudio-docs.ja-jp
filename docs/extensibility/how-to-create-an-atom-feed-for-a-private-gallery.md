@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0ea9df0bac68f9c16f5442d04fa4229f21bb29b2
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: c3f85c2568e9066384d65027ff69e8cd4c16c13e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39638493"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942102"
 ---
 # <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>方法: Atom プライベート ギャラリーのフィードの作成
 Atom (RSS) フィードを拡張機能を含みにフィードを追加するイントラネット上の場所を作成する**拡張機能と更新**をプライベート ギャラリーとして。 詳細については、次を参照してください。[プライベート ギャラリー](../extensibility/private-galleries.md)します。  
@@ -27,17 +27,17 @@ Atom (RSS) フィードを拡張機能を含みにフィードを追加するイ
 ## <a name="create-an-atom-feed"></a>Atom フィードを作成します。  
  Atom をプライベート ギャラリーとしてフィードを作成するを収集して、拡張機能 (*.vsix*ファイル) のフォルダーにします。 場合は、サブフォルダーにそれらを編成できます。 次のリソースも必要になります。  
   
--   *Atom.xml*ファイルをプライベート ギャラリーとして拡張機能を利用できるようにします。 接続する方法については、 *atom.xml*ファイルを**拡張機能と更新**を参照してください[プライベート ギャラリー](../extensibility/private-galleries.md)します。  
+- *Atom.xml*ファイルをプライベート ギャラリーとして拡張機能を利用できるようにします。 接続する方法については、 *atom.xml*ファイルを**拡張機能と更新**を参照してください[プライベート ギャラリー](../extensibility/private-galleries.md)します。  
   
--   拡張機能 (たとえば、スクリーン ショット) から抽出されたすべてのイメージ ファイルを格納するフォルダー。 *Atom.xml*で利用できるように、ファイルがこれらのイメージへの相対リンクを含む**拡張機能と更新**します。  
+- 拡張機能 (たとえば、スクリーン ショット) から抽出されたすべてのイメージ ファイルを格納するフォルダー。 *Atom.xml*で利用できるように、ファイルがこれらのイメージへの相対リンクを含む**拡張機能と更新**します。  
   
- たとえば、フォルダーに次の 2 つの拡張機能を収集したとします。  
+  たとえば、フォルダーに次の 2 つの拡張機能を収集したとします。  
   
--   *Template_Wizard_239.vsix*、これは、空の VSIX プロジェクト テンプレート。  
+- *Template_Wizard_239.vsix*、これは、空の VSIX プロジェクト テンプレート。  
   
--   *SelectionHighlight.vsix*、選択した単語のすべてのインスタンスを強調表示するためのツールであります。  
+- *SelectionHighlight.vsix*、選択した単語のすべてのインスタンスを強調表示するためのツールであります。  
   
- 内容、 *atom.xml*ファイルは次の例のようになります。  
+  内容、 *atom.xml*ファイルは次の例のようになります。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>   

@@ -13,12 +13,12 @@ ms.assetid: 99e5566d-450e-4660-9bca-454e1c056a02
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 34ce6854c5af256c9a4fde35340414b6b2de640f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: de18b0371baae2d48be9341b605f064875ef21de
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49252500"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49869055"
 ---
 # <a name="walkthrough-displaying-light-bulb-suggestions"></a>チュートリアル: 電球アイコンによる提案の表示
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,21 +27,21 @@ ms.locfileid: "49252500"
   
  Visual c# および Visual Basic のエディターで記述して、自動的に電球を表示するアクションを含む独自のコード アナライザーをパッケージ化する .NET コンパイラ プラットフォーム ("Roslyn") を使用することもできます。 詳細については次を参照してください:  
   
--   [方法: c# 診断とコード修正を書き込む](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)  
+- [方法: c# 診断とコード修正を書き込む](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)  
   
--   [方法: Visual Basic の診断とコード修正を書き込む](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix)  
+- [方法: Visual Basic の診断とコード修正を書き込む](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix)  
   
- C++ などの他の言語では、その関数のスタブ実装を作成する提案など、いくつかのクイック アクションの電球も提供します。  
+  C++ などの他の言語では、その関数のスタブ実装を作成する提案など、いくつかのクイック アクションの電球も提供します。  
   
- Light bulb によっては次のようになります。 赤い波線は、Visual Basic または Visual c# プロジェクトで無効である場合に変数の名前で表示されます。 無効な識別子にマウスを置く、カーソルの近くに電球が表示されます。  
+  Light bulb によっては次のようになります。 赤い波線は、Visual Basic または Visual c# プロジェクトで無効である場合に変数の名前で表示されます。 無効な識別子にマウスを置く、カーソルの近くに電球が表示されます。  
   
- ![電球](../extensibility/media/lightbulb.png "電球")  
+  ![電球](../extensibility/media/lightbulb.png "電球")  
   
- 電球で下矢印をクリックすると、一連の推奨されるアクションが表示され、選択したアクションのプレビュー。 この場合、アクションを実行する場合に、コードになる変更を示しています。  
+  電球で下矢印をクリックすると、一連の推奨されるアクションが表示され、選択したアクションのプレビュー。 この場合、アクションを実行する場合に、コードになる変更を示しています。  
   
- ![電球のプレビュー](../extensibility/media/lightbulbpreview.png "LightBulbPreview")  
+  ![電球のプレビュー](../extensibility/media/lightbulbpreview.png "LightBulbPreview")  
   
- 電球を使用して、独自の推奨されるアクションを提供することができます。 たとえば、新しい行に中かっこを開くを移動または前の行の末尾に移動するアクションを提供できます。 次のチュートリアルでは、現在の単語の上に表示される電球を作成する方法と、2 つのアクションを提案が:**大文字に変換**と**小文字に変換**します。  
+  電球を使用して、独自の推奨されるアクションを提供することができます。 たとえば、新しい行に中かっこを開くを移動または前の行の末尾に移動するアクションを提供できます。 次のチュートリアルでは、現在の単語の上に表示される電球を作成する方法と、2 つのアクションを提案が:**大文字に変換**と**小文字に変換**します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  

@@ -15,17 +15,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2adc7125c79afc6b9ebc16b6c4b36f5c147bcdfb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9ed7eb9c98ad8da45a50af79918480e74d76779e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115396"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908549"
 ---
 # <a name="idebugprogramnode2gethostmachinenamev7"></a>IDebugProgramNode2::GetHostMachineName_V7
 
 > [!Note]
-> 推奨されなくなりました。 使用しないでください。
+> 非推奨とされます。 使用しないでください。
 
 ## <a name="syntax"></a>構文
 
@@ -44,16 +44,16 @@ int GetHostMachineName_V7 (
 #### <a name="parameters"></a>パラメーター
 
 `pbstrHostMachineName`  
-[out]プログラムが実行されているコンピューターの名前を返します。
+[out]プログラムが実行されているマシンの名前を返します。
 
 ## <a name="return-value"></a>戻り値
 
-実装を常に返します`E_NOTIMPL`です。
+実装は常に返す必要があります`E_NOTIMPL`します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 > [!WARNING]
-> Visual Studio 2005 の時点でこのメソッドは使用されなくを常に返す必要があります`E_NOTIMPL`です。
+> Visual Studio 2005 の時点でこのメソッドは使用されなくと常に返す必要があります`E_NOTIMPL`します。
 
 ## <a name="see-also"></a>関連項目
 

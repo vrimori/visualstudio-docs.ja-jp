@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::EnumErrorBreakpoints |Microsoft ドキュメント
+title: IDebugPendingBreakpoint2::EnumErrorBreakpoints |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9bf419ccf3b0935dccf1fa4e56ec156bc4338da6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4c43c3bd314ae9db7025448b2632562e9ae947c4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115328"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942271"
 ---
 # <a name="idebugpendingbreakpoint2enumerrorbreakpoints"></a>IDebugPendingBreakpoint2::EnumErrorBreakpoints
-この保留中のブレークポイントから生成されるすべてのエラー ブレークポイントの一覧を取得します。  
+この保留中のブレークポイントの結果として生じたすべてのブレークポイントのエラーの一覧を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,16 +44,16 @@ int EnumErrorBreakpoints(
   
 #### <a name="parameters"></a>パラメーター  
  `bpErrorType`  
- [in]値の組み合わせ、 [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md)列挙型を列挙するエラーの種類を選択します。  
+ [in]値の組み合わせ、 [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md)列挙体を列挙するエラーの種類を選択します。  
   
  `ppEnum`  
  [out]返します、 [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)オブジェクトの一覧を含む[IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 返します`E_BP_DELETED`場合は、ブレークポイントが削除されました。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 返します`E_BP_DELETED`ブレークポイントが削除されている場合。  
   
 ## <a name="example"></a>例  
- 次の例は、単純なは、このメソッドを実装する方法を示します`CPendingBreakpoint`を公開するオブジェクト、 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)インターフェイスです。  
+ 次の例は、単純なは、このメソッドを実装する方法を示しています。`CPendingBreakpoint`を公開するオブジェクト、 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)インターフェイス。  
   
 ```cpp  
 HRESULT CPendingBreakpoint::EnumErrorBreakpoints(  

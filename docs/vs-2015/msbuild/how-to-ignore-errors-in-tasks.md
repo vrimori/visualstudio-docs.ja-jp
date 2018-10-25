@@ -17,12 +17,12 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 852bf01278829616a2e8592a8c6ffcbaa87d3628
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 72f638a17fd6d49157f13d54a6ec1deba0e2bf27
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49232467"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891194"
 ---
 # <a name="how-to-ignore-errors-in-tasks"></a>方法 : タスクで発生したエラーを無視する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,15 +35,15 @@ ms.locfileid: "49232467"
   
  `ContinueOnError` 属性には、次の値のいずれかを含めることができます。  
   
--   **WarnAndContinue** または **true**。 タスクが失敗すると、[Target](../msbuild/target-element-msbuild.md) 要素の後続のタスクとビルドの実行が継続し、タスクのすべてのエラーが警告として扱われます。  
+- **WarnAndContinue** または **true**。 タスクが失敗すると、[Target](../msbuild/target-element-msbuild.md) 要素の後続のタスクとビルドの実行が継続し、タスクのすべてのエラーが警告として扱われます。  
   
--   **ErrorAndContinue**。 タスクが失敗すると、`Target` 要素の後続のタスクとビルドの実行が継続し、タスクのすべてのエラーがエラーとして扱われます。  
+- **ErrorAndContinue**。 タスクが失敗すると、`Target` 要素の後続のタスクとビルドの実行が継続し、タスクのすべてのエラーがエラーとして扱われます。  
   
--   **ErrorAndStop** または **false** (既定値)。 タスクが失敗すると、`Target` 要素の残りのタスクとビルドは実行されず、`Target` 要素全体とビルドは失敗したと見なされます。  
+- **ErrorAndStop** または **false** (既定値)。 タスクが失敗すると、`Target` 要素の残りのタスクとビルドは実行されず、`Target` 要素全体とビルドは失敗したと見なされます。  
   
- バージョン 4.5 より前の .NET Framework では、`true` 値と `false` 値のみがサポートされます。  
+  バージョン 4.5 より前の .NET Framework では、`true` 値と `false` 値のみがサポートされます。  
   
- `ContinueOnError` の既定値は `ErrorAndStop` です。 属性を `ErrorAndStop` に設定すると、プロジェクト ファイルを読むユーザーにとって動作は明確になります。  
+  `ContinueOnError` の既定値は `ErrorAndStop` です。 属性を `ErrorAndStop` に設定すると、プロジェクト ファイルを読むユーザーにとって動作は明確になります。  
   
 #### <a name="to-ignore-an-error-in-a-task"></a>タスクのエラーを無視するには  
   

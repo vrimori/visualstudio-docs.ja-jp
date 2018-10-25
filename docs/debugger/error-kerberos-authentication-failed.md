@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 085b120974ee23d0d7e3712cdbb0a8f7f7021e83
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 0cf34885ee715a5685e4c2ced8b5a116e5c33e8d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37056858"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49857666"
 ---
 # <a name="error-kerberos-authentication-failed"></a>エラー : Kerberos 認証に失敗しました。
 リモート デバッグを実行するときに、次のエラー メッセージが表示されることがあります。  
@@ -34,15 +34,15 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
   
  Kerberos 認証は、以下の場合には使用できません。  
   
--   ターゲット コンピューターまたはデバッガー ホスト コンピューターがドメインではなくワークグループに属している。  
+- ターゲット コンピューターまたはデバッガー ホスト コンピューターがドメインではなくワークグループに属している。  
   
-     \- または -  
+   \- または -  
   
--   ドメイン コントローラーで Kerberos が無効になっている。  
+- ドメイン コントローラーで Kerberos が無効になっている。  
   
- Kerberos 認証が使用できない場合は、Visual Studio リモート デバッグ モニターの実行に使用するアカウントを変更してください。 手順については、次を参照してください。[エラー: ターゲット コンピューターで、Visual Studio リモート デバッガー サービスは、このコンピューターに接続できない](../debugger/error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md)します。  
+  Kerberos 認証が使用できない場合は、Visual Studio リモート デバッグ モニターの実行に使用するアカウントを変更してください。 手順については、次を参照してください。[エラー: ターゲット コンピューターで、Visual Studio リモート デバッガー サービスは、このコンピューターに接続できない](../debugger/error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md)します。  
   
- 両方のコンピューターが同じドメインに接続しているにもかかわらず、このメッセージが表示される場合は、ターゲット コンピューターの DNS がデバッガー ホスト コンピューターの名前を正しく解決していることを確認してください。 以降の手順を参照してください。  
+  両方のコンピューターが同じドメインに接続しているにもかかわらず、このメッセージが表示される場合は、ターゲット コンピューターの DNS がデバッガー ホスト コンピューターの名前を正しく解決していることを確認してください。 以降の手順を参照してください。  
   
 ### <a name="to-verify-that-dns-on-the-target-computer-is-correctly-resolving-the-debugger-host-computer-name"></a>ターゲット コンピューターの DNS がデバッガー ホスト コンピューター名を正しく解決していることを確認するには  
   

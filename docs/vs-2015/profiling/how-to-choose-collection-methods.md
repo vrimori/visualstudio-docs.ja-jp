@@ -18,12 +18,12 @@ caps.latest.revision: 39
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 478183902012bd4e0a4400bf275fd7e67fade6b5
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 20617a8c05a0d9b9a57f0a181a4c985d7ffc1f4e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49274418"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49940958"
 ---
 # <a name="how-to-choose-collection-methods"></a>方法: 収集方法を選択する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "49274418"
   
  **必要条件**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
+- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
- パフォーマンス セッションの **[メソッド]** プロパティを使用すると、アプリケーションに最適の収集方法を指定できます。 収集方法はパフォーマンス ウィザード、パフォーマンス エクスプローラー、またはパフォーマンス セッションのプロパティ ページから設定することができます。 コマンド ライン ツールを使用する場合、詳細については「[コマンド ラインからのプロファイリング](../profiling/using-the-profiling-tools-from-the-command-line.md)」を参照してください。  
+  パフォーマンス セッションの **[メソッド]** プロパティを使用すると、アプリケーションに最適の収集方法を指定できます。 収集方法はパフォーマンス ウィザード、パフォーマンス エクスプローラー、またはパフォーマンス セッションのプロパティ ページから設定することができます。 コマンド ライン ツールを使用する場合、詳細については「[コマンド ラインからのプロファイリング](../profiling/using-the-profiling-tools-from-the-command-line.md)」を参照してください。  
   
 ## <a name="performance-wizard"></a>パフォーマンス ウィザード  
   

@@ -1,5 +1,5 @@
 ---
-title: DisassemblyData |Microsoft ドキュメント
+title: DisassemblyData |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4276009244f1d49b89311d5d158a34bebf3fcf23
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: a7ab7b278c03d092e1e559f1eb74f5d6bdc86d85
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31619703"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816860"
 ---
 # <a name="disassemblydata"></a>DisassemblyData
-表示する、統合開発環境 (IDE) の 1 つの逆アセンブリ命令について説明します。  
+表示する統合開発環境 (IDE) の 1 つの逆アセンブリ命令をについて説明します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -65,13 +65,13 @@ public struct DisassemblyData {
   
 ## <a name="members"></a>メンバー  
  `dwFields`  
- [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)のどのフィールドが埋められますを指定する定数。  
+ [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)フィールドが記入を指定する定数。  
   
  `bstrAddress`  
- いくつかの開始位置 (通常は、関連付けられた関数の先頭) からのオフセットとしてのアドレス。  
+ いくつかの開始ポイント (通常は、関連付けられている関数の先頭) からのオフセットとしてのアドレス。  
   
  `bstrCodeBytes`  
- この命令のコードのバイト数。  
+ この命令コードのバイト数。  
   
  `bstrOpcode`  
  この命令のオペコードです。  
@@ -80,41 +80,41 @@ public struct DisassemblyData {
  この命令のオペランド。  
   
  `bstrSymbol`  
- シンボル名存在する場合に関連付けられているアドレス (パブリック シンボル、ラベル、およびなど)。  
+ シンボル名では、存在する場合に関連付けられているアドレス (パブリック シンボル、ラベル、およびなど)。  
   
  `uCodeLocationId`  
- この行を逆アセンブルしたコードの場所の識別子。 最初の逆アセンブルしたコードの場所識別子は、2 つ目のコードの場所 id よりも大きい値でも 1 つの行のコード コンテキスト アドレスが、別のコードのコンテキストのアドレスよりも大きい場合は。  
+ この逆アセンブルした行のコードの場所の識別子。 1 行のコード コンテキストのアドレスが別のコード コンテキストのアドレスよりも大きい場合は、最初の逆アセンブルしたコードの場所の識別子が、2 つ目のコードの場所 id より大きくするもは。  
   
  `posBeg`  
- [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)の逆アセンブル データ開始位置、ドキュメント内の位置に対応します。  
+ [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)ドキュメントの逆アセンブリ データの開始位置に対応します。  
   
  `posEnd`  
- [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)逆アセンブル データが終了するドキュメント内の位置に対応します。  
+ [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)逆アセンブリ データの終了位置となるドキュメント内の位置に対応します。  
   
  `bstrDocumentUrl`  
- ファイル名として表すことができるテキスト ドキュメント、`bstrDocumentUrl`フィールドは、ソースがある、ファイル名を使用して、形式を使用して`file://file name`です。  
+ ファイル名として表すことができるテキスト ドキュメントの`bstrDocumentUrl`フィールドは、ソースの場所、ファイル名を使用して、形式を使用して`file://file name`します。  
   
- ファイル名として表現できないテキスト ドキュメント用`bstrDocumentUrl`、ドキュメントの一意の識別子であり、デバッグ エンジンを実装する必要があります、 [GetDocument](../../../extensibility/debugger/reference/idebugdisassemblystream2-getdocument.md)メソッドです。  
+ ファイル名を表すことができないテキスト ドキュメントの`bstrDocumentUrl`、ドキュメントの一意の識別子であり、デバッグ エンジンを実装する必要があります、 [GetDocument](../../../extensibility/debugger/reference/idebugdisassemblystream2-getdocument.md)メソッド。  
   
  このフィールドは、チェックサムに関する追加情報を含めることもできます。 詳細については、「解説」を参照してください。  
   
  `dwByteOffset`  
- 命令は、コード行の先頭からのバイト数。  
+ コードの行の先頭からバイトの命令の数。  
   
  `dwFlags`  
- [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)アクティブなフラグを指定する定数。  
+ [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)有効などのフラグを指定する定数。  
   
-## <a name="remarks"></a>コメント  
- 各`DisassemblyData`構造体には、混合モードの 1 つの命令がについて説明します。 これらの構造体の配列から返される、[読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 各`DisassemblyData`構造体には、逆アセンブリの 1 つの命令がについて説明します。 これらの構造体の配列が返される、[読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)メソッド。  
   
- [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)テキスト ベースのドキュメントの構造体を使用します。 この命令のソース コードの範囲は、たとえば、ステートメントまたは行から生成された最初の命令に対してのみ入力すると、`dwByteOffset == 0`です。  
+ [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)テキスト ベースのドキュメントの構造を使用します。 たとえば、ステートメントまたは行から生成された最初の命令に対してのみ、この命令のソース コードの範囲が記入、`dwByteOffset == 0`します。  
   
- ドキュメントは、テキスト以外に、コードからドキュメントのコンテキストを取得できます、`bstrDocumentUrl`フィールドが null 値にする必要があります。 場合、`bstrDocumentUrl`フィールドと同じ、`bstrDocumentUrl`フィールド、以前に`DisassemblyData`配列の要素、し、設定、`bstrDocumentUrl`を null 値にします。  
+ ドキュメントは、テキスト以外には、ドキュメントのコンテキストを取得して、コードから、`bstrDocumentUrl`フィールドが null の値を指定する必要があります。 場合、`bstrDocumentUrl`フィールドが同じ、`bstrDocumentUrl`フィールドの前に`DisassemblyData`配列の要素、し、設定、 `bstrDocumentUrl` null 値にします。  
   
- 場合、`dwFlags`フィールドには、`DF_DOCUMENT_CHECKSUM`フラグが設定、追加のチェックサム情報が指す文字列に依存し、`bstrDocumentUrl`フィールドです。 具体的には、null 文字列終端文字の後に存在に依存してチェックサム内のバイト数を示す 4 バイトの値によってさらにその後にさらに、その後に、チェックサムのバイトのチェックサム アルゴリズムを識別する GUID。 エンコードし、デコードでこのフィールドについて、このトピックの例を参照してください[!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)]です。  
+ 場合、`dwFlags`フィールドが、`DF_DOCUMENT_CHECKSUM`フラグが設定、追加のチェックサム情報が指す文字列に依存し、`bstrDocumentUrl`フィールド。 具体的には、null 文字列終端文字の後に依存、チェックサムのバイト数を示す 4 バイトの値を後にさらに、順番が後に、チェックサムのバイトによってチェックサム アルゴリズムを識別する GUID があります。 エンコードおよびでは、このフィールドをデコードする方法の例では、このトピックを参照してください[!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)]します。  
   
 ## <a name="example"></a>例  
- `bstrDocumentUrl`場合、フィールドは、文字列以外の追加情報を含めることができます、`DF_DOCUMENT_CHECKSUM`フラグが設定されています。 作成して、このエンコードされた文字列を読み取り中のプロセスに単純です[!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)]です。 ただし、 [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)]、これは別の問題です。 ユーザーについては、調べたい、次の例からエンコードされた文字列を作成する方法の 1 つ[!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)]でエンコードされた文字列をデコードする方法の 1 つと[!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)]です。  
+ `bstrDocumentUrl`場合は、フィールドに、文字列以外の追加情報が含まれることができます、`DF_DOCUMENT_CHECKSUM`フラグを設定します。 作成して、このエンコードされた文字列の読み取りのプロセスは簡単です[!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)]します。 ただし、 [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)]、別の問題です。 次の例では、ユーザーにとっては、調べたいからエンコードされた文字列を作成する方法の 1 つを示しています[!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)]でエンコードされた文字列をデコードする方法の 1 つと[!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)]します。  
   
 ```csharp  
 using System;  

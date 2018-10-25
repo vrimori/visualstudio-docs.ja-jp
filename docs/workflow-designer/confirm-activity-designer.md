@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 68259200bbd89f851e75a5ca097b248153a2399e
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 9f6823b564b7ec3da1585810c27db2f97c1b16ae
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757549"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906534"
 ---
 # <a name="confirm-activity-designer"></a>Confirm アクティビティ デザイナー
 
@@ -37,7 +37,7 @@ ms.locfileid: "36757549"
  次の表に、<xref:System.Activities.Statements.Confirm> のプロパティと、デザイナーでのその使用方法を示します。 <xref:System.Activities.Activity.DisplayName%2A>プロパティ グリッドで、またはワークフロー デザイナー画面で、プロパティを編集できますが、<xref:System.Activities.Statements.Confirm.Target%2A>プロパティは、プロパティ グリッドで編集する必要があります。
 
 |プロパティ名|必須|使用方法|
-|-------------------|--------------|-----------|
+|-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.CancellationScope> アクティビティの表示名を指定します (省略可能)。 既定値は Confirm です。|
 |<xref:System.Activities.Statements.Confirm.Target%2A>|True|この <xref:System.Activities.InArgument%601> アクティビティの <xref:System.Activities.Statements.CompensationToken> を含む <xref:System.Activities.Statements.Confirm> を指定します。|
 
@@ -46,5 +46,5 @@ ms.locfileid: "36757549"
 - [トランザクション](../workflow-designer/transaction-activity-designers.md)
 - [CancellationScope](../workflow-designer/cancellationscope-activity-designer.md)
 - [CompensableActivity](../workflow-designer/compensableactivity-activity-designer.md)
-- [補正](../workflow-designer/compensate-activity-designer.md)
+- [Compensate](../workflow-designer/compensate-activity-designer.md)
 - [TransactionScope](../workflow-designer/transactionscope-activity-designer.md)

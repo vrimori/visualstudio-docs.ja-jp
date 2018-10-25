@@ -22,12 +22,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: 922d33e52e02a0d2cde9c17f799f6e35f1ae2db4
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 1fc90acf94fde0ef815fc3a487412bba8e8257ff
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49253189"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49913138"
 ---
 # <a name="walkthrough-displaying-related-data-in-a-wpf-application"></a>チュートリアル: WPF アプリケーションでの関連データの表示
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,28 +36,28 @@ ms.locfileid: "49253189"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   WPF アプリケーションと、AdventureWorksLT サンプル データベース内のデータから生成される Entity Data Model を作成します。  
+- WPF アプリケーションと、AdventureWorksLT サンプル データベース内のデータから生成される Entity Data Model を作成します。  
   
--   一連の注文の概要情報を表示するデータ バインド コントロールのセットを作成します。 親エンティティをドラッグして、コントロールを作成する、**データソース**ウィンドウ**WPF デザイナー**します。  
+- 一連の注文の概要情報を表示するデータ バインド コントロールのセットを作成します。 親エンティティをドラッグして、コントロールを作成する、**データソース**ウィンドウ**WPF デザイナー**します。  
   
--   作成、<xref:System.Windows.Controls.DataGrid>ごとに関連する詳細を表示するコントロールは、順序を選択します。 子エンティティをドラッグして、コントロールを作成する、**データソース**ウィンドウのウィンドウに**WPF デザイナー**します。  
+- 作成、<xref:System.Windows.Controls.DataGrid>ごとに関連する詳細を表示するコントロールは、順序を選択します。 子エンティティをドラッグして、コントロールを作成する、**データソース**ウィンドウのウィンドウに**WPF デザイナー**します。  
   
-     [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
+   [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。  
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。  
   
--   AdventureWorksLT サンプル データベースが添付された、SQL Server または SQL Server Express の実行中のインスタンスへのアクセス権。 AdventureWorksLT データベースをダウンロードすることができます、 [CodePlex Web サイト](http://go.microsoft.com/fwlink/?linkid=87843)します。  
+- AdventureWorksLT サンプル データベースが添付された、SQL Server または SQL Server Express の実行中のインスタンスへのアクセス権。 AdventureWorksLT データベースをダウンロードすることができます、 [CodePlex Web サイト](http://go.microsoft.com/fwlink/?linkid=87843)します。  
   
- 次の概念に関する知識があると役立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
+  次の概念に関する知識があると役立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
   
--   Entity Data Model および ADO.NET Entity Framework。 詳細については、次を参照してください。 [Entity Framework の概要](http://msdn.microsoft.com/library/a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0)します。  
+- Entity Data Model および ADO.NET Entity Framework。 詳細については、次を参照してください。 [Entity Framework の概要](http://msdn.microsoft.com/library/a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0)します。  
   
--   WPF デザイナーの操作。 詳細については、次を参照してください。 [WPF および Silverlight デザイナーの概要](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62)します。  
+- WPF デザイナーの操作。 詳細については、次を参照してください。 [WPF および Silverlight デザイナーの概要](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62)します。  
   
--   WPF データ バインディング。 詳しくは、「 [データ バインディングの概要](http://msdn.microsoft.com/library/c707c95f-7811-401d-956e-2fffd019a211)」をご覧ください。  
+- WPF データ バインディング。 詳しくは、「 [データ バインディングの概要](http://msdn.microsoft.com/library/c707c95f-7811-401d-956e-2fffd019a211)」をご覧ください。  
   
 ## <a name="creating-the-project"></a>プロジェクトの作成  
  注文レコードを表示する新しい WPF プロジェクトを作成します。  
@@ -85,80 +85,80 @@ ms.locfileid: "49253189"
   
 #### <a name="to-create-an-entity-data-model"></a>Entity Data Model を作成するには  
   
-1.  **データ** メニューのをクリックして**新しいデータ ソースの追加**を開く、**データ ソース構成ウィザード**します。  
+1. **データ** メニューのをクリックして**新しいデータ ソースの追加**を開く、**データ ソース構成ウィザード**します。  
   
-2.  **データ ソースの種類を選択**] ページで [**データベース**、順にクリックします**次**します。  
+2. **データ ソースの種類を選択**] ページで [**データベース**、順にクリックします**次**します。  
   
-3.  **データベース モデルの選択**] ページで [ **Entity Data Model**、順にクリックします**次**。  
+3. **データベース モデルの選択**] ページで [ **Entity Data Model**、順にクリックします**次**。  
   
-4.  **モデルのコンテンツの選択**] ページで [**データベースから生成**、順にクリックします**次**。  
+4. **モデルのコンテンツの選択**] ページで [**データベースから生成**、順にクリックします**次**。  
   
-5.  **データ接続の選択** ページで、次のいずれかを実行します。  
+5. **データ接続の選択** ページで、次のいずれかを実行します。  
   
-    -   AdventureWorksLT サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は、これを選択します。  
+   - AdventureWorksLT サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は、これを選択します。  
   
-         - または -  
+      - または -  
   
-    -   クリックして**新しい接続**AdventureWorksLT データベースへの接続を作成します。  
+   - クリックして**新しい接続**AdventureWorksLT データベースへの接続を作成します。  
   
      確認します、 **app.config にエンティティ接続設定の保存**オプションが選択されているをクリックして**次**します。  
   
-6.  **データベース オブジェクトの選択** ページで、展開**テーブル**、次のテーブルを選択します。  
+6. **データベース オブジェクトの選択** ページで、展開**テーブル**、次のテーブルを選択します。  
   
-    -   **SalesOrderDetail**  
+   -   **SalesOrderDetail**  
   
-    -   **SalesOrderHeader**  
+   -   **SalesOrderHeader**  
   
-7.  **[完了]** をクリックします。  
+7. **[完了]** をクリックします。  
   
-8.  プロジェクトをビルドします。  
+8. プロジェクトをビルドします。  
   
 ## <a name="creating-data-bound-controls-that-display-the-orders"></a>注文を表示するコントロールのデータ バインドを作成  
  ドラッグして、注文レコードを表示するコントロールを作成、`SalesOrderHeaders`からエンティティを**データソース**WPF デザイナーにウィンドウ。  
   
 #### <a name="to-create-data-bound-controls-that-display-the-order-records"></a>注文レコードを表示するデータ バインド コントロールを作成するには  
   
-1.  **ソリューション エクスプ ローラー**MainWindow.xaml をダブルクリックします。  
+1. **ソリューション エクスプ ローラー**MainWindow.xaml をダブルクリックします。  
   
-     WPF デザイナーでウィンドウが開きます。  
+    WPF デザイナーでウィンドウが開きます。  
   
-2.  XAML を編集するため、**高さ**と**幅**800 にプロパティが設定されます  
+2. XAML を編集するため、**高さ**と**幅**800 にプロパティが設定されます  
   
-3.  **データ ソース**ウィンドウで、ドロップダウン メニューをクリックして、 **[salesorderheaders]** ノード**詳細**します。  
+3. **データ ソース**ウィンドウで、ドロップダウン メニューをクリックして、 **[salesorderheaders]** ノード**詳細**します。  
   
-4.  展開、 **[salesorderheaders]** ノード。  
+4. 展開、 **[salesorderheaders]** ノード。  
   
-5.  横にドロップダウン メニューをクリックして**SalesOrderID**選択**ComboBox**します。  
+5. 横にドロップダウン メニューをクリックして**SalesOrderID**選択**ComboBox**します。  
   
-6.  次の子ノードの各、 **[salesorderheaders]** ノード、次に、ノードのドロップダウン メニューをクリックし、選択**None**:  
+6. 次の子ノードの各、 **[salesorderheaders]** ノード、次に、ノードのドロップダウン メニューをクリックし、選択**None**:  
   
-    -   **RevisionNumber**  
+   - **RevisionNumber**  
   
-    -   **OnlineOrderFlag**  
+   - **OnlineOrderFlag**  
   
-    -   **ShipToAddressID**  
+   - **ShipToAddressID**  
   
-    -   **BillToAddressID**  
+   - **BillToAddressID**  
   
-    -   **CreditCardApprovalCode**  
+   - **CreditCardApprovalCode**  
   
-    -   **小計の表示 します。**  
+   - **小計の表示 します。**  
   
-    -   **TaxAmt**  
+   - **TaxAmt**  
   
-    -   **Freight**  
+   - **Freight**  
   
-    -   **rowguid**  
+   - **rowguid**  
   
-    -   **ModifiedDate**  
+   - **ModifiedDate**  
   
      この操作は、次の手順において、これらのノードに対応するデータ バインド コントロールが Visual Studio で作成されるのを防ぎます。 このチュートリアルでは、これらのデータをエンド ユーザーが参照する必要はありません。  
   
-7.  **データソース**ウィンドウで、ドラッグ、 **[salesorderheaders]** ノードでのウィンドウに**WPF デザイナー**します。  
+7. **データソース**ウィンドウで、ドラッグ、 **[salesorderheaders]** ノードでのウィンドウに**WPF デザイナー**します。  
   
-     Visual Studio 内のデータにバインドされているコントロールのセットを作成する XAML の生成、 **[salesorderheaders]** エンティティ、およびデータを読み込むコード。 生成された XAML とコードの詳細については、次を参照してください。 [Visual Studio でのデータにコントロールをバインドする WPF](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)します。  
+    Visual Studio 内のデータにバインドされているコントロールのセットを作成する XAML の生成、 **[salesorderheaders]** エンティティ、およびデータを読み込むコード。 生成された XAML とコードの詳細については、次を参照してください。 [Visual Studio でのデータにコントロールをバインドする WPF](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)します。  
   
-8.  次に、デザイナーのクリックしてコンボ ボックス、 **Sales Order ID**ラベル。  
+8. 次に、デザイナーのクリックしてコンボ ボックス、 **Sales Order ID**ラベル。  
   
 9. **プロパティ**ウィンドウで、横にあるチェック ボックスを選択、 **IsReadOnly**プロパティ。  
   
@@ -167,28 +167,28 @@ ms.locfileid: "49253189"
   
 #### <a name="to-create-a-datagrid-that-displays-the-order-details"></a>注文の詳細を表示する DataGrid を作成するのには  
   
-1.  **データソース**ウィンドウで、検索、 **SalesOrderDetails**ノードの子である、 **[salesorderheaders]** ノード。  
+1. **データソース**ウィンドウで、検索、 **SalesOrderDetails**ノードの子である、 **[salesorderheaders]** ノード。  
   
-    > [!NOTE]
-    >  **SalesOrderDetails**のピア ノード、 **[salesorderheaders]** ノード。 子ノードを選択することを確認、 **[salesorderheaders]** ノード。  
+   > [!NOTE]
+   >  **SalesOrderDetails**のピア ノード、 **[salesorderheaders]** ノード。 子ノードを選択することを確認、 **[salesorderheaders]** ノード。  
   
-2.  子展開**SalesOrderDetails**ノード。  
+2. 子展開**SalesOrderDetails**ノード。  
   
-3.  次の子ノードの各、 **SalesOrderDetails**ノード、次に、ノードのドロップダウン メニューをクリックし、選択**None**:  
+3. 次の子ノードの各、 **SalesOrderDetails**ノード、次に、ノードのドロップダウン メニューをクリックし、選択**None**:  
   
-    -   **SalesOrderID**  
+   - **SalesOrderID**  
   
-    -   **SalesOrderDetailID**  
+   - **SalesOrderDetailID**  
   
-    -   **rowguid**  
+   - **rowguid**  
   
-    -   **ModifiedDate**  
+   - **ModifiedDate**  
   
      この操作によりが Visual Studio でこのデータを含む、<xref:System.Windows.Controls.DataGrid>次の手順で作成するコントロール。 このチュートリアルでは、これらのデータをエンド ユーザーが参照する必要はありません。  
   
-4.  **データ ソース**ウィンドウで、子のドラッグ**SalesOrderDetails**ノードでのウィンドウに**WPF デザイナー**します。  
+4. **データ ソース**ウィンドウで、子のドラッグ**SalesOrderDetails**ノードでのウィンドウに**WPF デザイナー**します。  
   
-     Visual Studio で新しいデータ バインドを定義する XAML が生成される<xref:System.Windows.Controls.DataGrid>コントロール、およびコントロールが、デザイナーに表示されます。 Visual Studio も更新され、生成された`GetSalesOrderHeadersQuery`内のデータを含めるよう分離コード ファイル内のメソッド、 **SalesOrderDetails**エンティティ。  
+    Visual Studio で新しいデータ バインドを定義する XAML が生成される<xref:System.Windows.Controls.DataGrid>コントロール、およびコントロールが、デザイナーに表示されます。 Visual Studio も更新され、生成された`GetSalesOrderHeadersQuery`内のデータを含めるよう分離コード ファイル内のメソッド、 **SalesOrderDetails**エンティティ。  
   
 ## <a name="testing-the-application"></a>アプリケーションのテスト  
  ビルドして、注文レコードが表示されることを確認するアプリケーションを実行します。  

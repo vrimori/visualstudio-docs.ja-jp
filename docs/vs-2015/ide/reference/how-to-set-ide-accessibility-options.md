@@ -16,12 +16,12 @@ caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5701efe5da55ebd85d683da55f90f41223220c91
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 485529a8be2adf57f7b79a3d2f0844d662920448
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49205895"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867287"
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>方法: IDE アクセシビリティ オプションを設定する
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "49205895"
  また、エディター内のテキスト、マージン インジケーター、空白文字、およびコード要素の既定の色を変更することもできます。  
   
 > [!NOTE]
->  オペレーティング システム上の全アプリケーション ウィンドウでハイコントラスト色を使用する場合は、左 **Alt +** 左 **Shift + PrintScreen** キーを押します。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] が起動されている場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を終了してから再起動すると、ハイコントラスト色の機能を完全に利用できます。  
+>  オペレーティング システム上の全アプリケーション ウィンドウでハイコントラスト色を使用する場合は、左 <strong>Alt +</strong> 左 **Shift + PrintScreen** キーを押します。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] が起動されている場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を終了してから再起動すると、ハイコントラスト色の機能を完全に利用できます。  
   
 ##### <a name="to-change-the-color-of-items-in-the-editor"></a>エディター内の項目の色を変更するには  
   

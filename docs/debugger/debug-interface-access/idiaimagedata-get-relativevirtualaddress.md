@@ -1,5 +1,5 @@
 ---
-title: Idiaimagedata::get_relativevirtualaddress |Microsoft ドキュメント
+title: Idiaimagedata::get_relativevirtualaddress |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2651b0ab8ee65967bba08dd415a574171759e218
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 032b4db0a69dd1aeec6b312b8506fd29d079cf0c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31458467"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935602"
 ---
 # <a name="idiaimagedatagetrelativevirtualaddress"></a>IDiaImageData::get_relativeVirtualAddress
-アプリケーションを基準とモジュールの仮想メモリの場所を取得します。  
+アプリケーションを基準モジュールの仮想メモリの場所を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +37,7 @@ HRESULT get_relativeVirtualAddress (
  [out]モジュールの仮想メモリの相対的なオフセットを返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

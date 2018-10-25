@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6f64f5510974af133100a355656bf3689d928869
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: dd910b0e0295ca12807b96af189032ffec766429
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49261587"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949826"
 ---
 # <a name="advanced-compiler-settings-dialog-box-visual-basic"></a>[ビルドの詳細設定] ダイアログ ボックス (Visual Basic)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "49261587"
   
 ### <a name="to-access-this-dialog-box"></a>このダイアログ ボックスを表示するには  
   
-1.  **ソリューション エクスプローラー**で、**[ソリューション]** ノードではなくプロジェクト ノードを選びます。  
+1. **ソリューション エクスプローラー**で、**[ソリューション]** ノードではなくプロジェクト ノードを選びます。  
   
-2.  **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 **プロジェクト デザイナー**が表示されたら、**[コンパイル]** タブをクリックします。  
+2. **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 **プロジェクト デザイナー**が表示されたら、**[コンパイル]** タブをクリックします。  
   
-3.  [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md) で、**[構成]** と **[プラットフォーム]** を選択します。 簡易ビルド構成では、**[構成]** と **[プラットフォーム]** の一覧は表示されません。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+3. [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md) で、**[構成]** と **[プラットフォーム]** を選択します。 簡易ビルド構成では、**[構成]** と **[プラットフォーム]** の一覧は表示されません。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
   
-4.  **[詳細コンパイル オプション]** をクリックします。  
+4. **[詳細コンパイル オプション]** をクリックします。  
   
- [!INCLUDE[note_settings_general](../../includes/note-settings-general-md.md)]  
+   [!INCLUDE[note_settings_general](../../includes/note-settings-general-md.md)]  
   
 ## <a name="optimizations"></a>最適化  
  次のオプションは最適化を指定するもので、プログラム ファイルの小型化、プログラムの実行の高速化、またはビルド プロセスの時間短縮を実現できる場合があります。  

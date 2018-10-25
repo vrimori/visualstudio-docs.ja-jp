@@ -10,12 +10,12 @@ ms.assetid: 2cfcad00-352c-4161-814c-f5ae32d8ada8
 caps.latest.revision: 19
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 7bd65f109b15ce955da4b71139882358a7e1d1b3
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 58596bc4ab8286641ddeda8bec7f9200da5ccd25
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49289200"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874112"
 ---
 # <a name="setup-and-install"></a>セットアップとインストール
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "49289200"
   
 Xamarin を使用して一般的な C#/.NET コード ベースからネイティブの iOS、Android、および Windows のアプリを作成するには、次の条件を満たす必要があります。  
   
--   Windows アプリと Android アプリの開発: Visual Studio 2015 と Xamarin 4 がインストールされている Windows 開発用コンピューター (下記のメモを参照)。 ([Xamarin を直接インストールする](https://developer.xamarin.com/guides/cross-platform/getting_started/requirements/#install)手順 (xamarin.com) を実行すれば、Visual Studio 2013 を使うこともできます。)   
+- Windows アプリと Android アプリの開発: Visual Studio 2015 と Xamarin 4 がインストールされている Windows 開発用コンピューター (下記のメモを参照)。 ([Xamarin を直接インストールする](https://developer.xamarin.com/guides/cross-platform/getting_started/requirements/#install)手順 (xamarin.com) を実行すれば、Visual Studio 2013 を使うこともできます。)   
   
--   iOS アプリの開発: XCode と Xamarin がインストールされている、OS X Yosemite (10.10.5) 以降を搭載した Mac。  
+- iOS アプリの開発: XCode と Xamarin がインストールされている、OS X Yosemite (10.10.5) 以降を搭載した Mac。  
   
- Windows と Mac のコンピューターを同時にセットアップできます。また、インストーラーを実行している間に、「[Learn about mobile development with Xamarin (Xamarin によるモバイル開発の概要)](../cross-platform/learn-about-mobile-development-with-xamarin.md)」にアクセスして、必要な背景情報を読んだり見たりすることができます。  
+  Windows と Mac のコンピューターを同時にセットアップできます。また、インストーラーを実行している間に、「[Learn about mobile development with Xamarin (Xamarin によるモバイル開発の概要)](../cross-platform/learn-about-mobile-development-with-xamarin.md)」にアクセスして、必要な背景情報を読んだり見たりすることができます。  
  
 このセットアップとインストールを実行した後、Xamarin を使用する上で問題がある場合は、[forums.xamarin.com](http://forums.xamarin.com/) に質問を投稿してください。
   
@@ -63,38 +63,38 @@ Xamarin を使用して一般的な C#/.NET コード ベースからネイテ�
 > [!TIP]
 >  次の手順は、Visual Studio 2015 に適用されます。 Xamarin を Visual Studio 2013 (Update 2 が必要) で使うには、[Xamarin の直接インストール](https://developer.xamarin.com/guides/cross-platform/getting_started/requirements/#install) (xamarin.com) の指示に従ってください。  
   
-1.  [任意のエディションの Visual Studio 2015 のインストーラーをダウンロードして起動します](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) (Community、Professional、Enterprise)。 Visual Studio 2015 Community は、無料のエディションです。Professional および Enterprise の各エディションは評価版として 30 日間使用できます (その後はライセンスを購入する必要があります)。  
+1. [任意のエディションの Visual Studio 2015 のインストーラーをダウンロードして起動します](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) (Community、Professional、Enterprise)。 Visual Studio 2015 Community は、無料のエディションです。Professional および Enterprise の各エディションは評価版として 30 日間使用できます (その後はライセンスを購入する必要があります)。  
   
-    1.  既に Visual Studio をインストールしてある場合は、**[コントロール パネル] > [プログラムと機能]** を開き、**[Visual Studio 2015]** の項目を選択して、**[変更]** をクリックします。 インストーラーが表示されたら、**[変更]** をクリックし、以下のステップ 3 にスキップします。  
+   1.  既に Visual Studio をインストールしてある場合は、**[コントロール パネル] > [プログラムと機能]** を開き、**[Visual Studio 2015]** の項目を選択して、**[変更]** をクリックします。 インストーラーが表示されたら、**[変更]** をクリックし、以下のステップ 3 にスキップします。  
   
-2.  (新規インストールの場合のみ) インストーラー内で **[カスタム]** インストールを選択します。  
+2. (新規インストールの場合のみ) インストーラー内で **[カスタム]** インストールを選択します。  
   
-     ![Visual Studio のインストールで [カスタム] オプションを選びます](../cross-platform/media/cross-plat-xamarin-setup-1.png "クロスプラットフォームの Xamarin セットアップ 1")  
+    ![Visual Studio のインストールで [カスタム] オプションを選びます](../cross-platform/media/cross-plat-xamarin-setup-1.png "クロスプラットフォームの Xamarin セットアップ 1")  
   
-3.  次のチェック ボックスを選択します。  
+3. 次のチェック ボックスを選択します。  
   
-    1.  **[クロスプラットフォーム モバイル開発] > [C#/.NET (Xamarin)]**。 これにより、[共通のツールとソフトウェア開発キット] の下のさまざまな Android ツールも自動的に選択されます。 このオプションでは、既存の Xamarin インストールも更新されるはずです。  
+   1.  **[クロスプラットフォーム モバイル開発] > [C#/.NET (Xamarin)]**。 これにより、[共通のツールとソフトウェア開発キット] の下のさまざまな Android ツールも自動的に選択されます。 このオプションでは、既存の Xamarin インストールも更新されるはずです。  
   
-         ![[クロスプラットフォーム モバイル開発] の [Xamarin] オプションを選択します](../cross-platform/media/cross-plat-xamarin-setup-2.png "クロスプラットフォームの Xamarin セットアップ 2")  
+        ![[クロスプラットフォーム モバイル開発] の [Xamarin] オプションを選択します](../cross-platform/media/cross-plat-xamarin-setup-2.png "クロスプラットフォームの Xamarin セットアップ 2")  
   
-    2.  Windows 8 以降の場合: **[クロスプラットフォーム モバイル開発] > [Microsoft Visual Studio Emulator for Android]**。 注: Windows 7 またはそれ以前のコンピューターを使用している場合、または Mac 上で Windows を実行している場合は、これが*選択解除*されていることを確認してください。 ステップ 5 の後にある、「Windows コンピューター上のエミュレーターに関するメモ」をご覧ください。 この項目は、物理 Android デバイスでのみデバッグする予定の場合も、選択解除のままにしておくことができます。  
+   2.  Windows 8 以降の場合: **[クロスプラットフォーム モバイル開発] > [Microsoft Visual Studio Emulator for Android]**。 注: Windows 7 またはそれ以前のコンピューターを使用している場合、または Mac 上で Windows を実行している場合は、これが*選択解除*されていることを確認してください。 ステップ 5 の後にある、「Windows コンピューター上のエミュレーターに関するメモ」をご覧ください。 この項目は、物理 Android デバイスでのみデバッグする予定の場合も、選択解除のままにしておくことができます。  
   
-    3.  (省略可能) Windows デバイスを対象とすることを計画している場合は、**[Windows 開発と Web 開発] > [ユニバーサル Windows アプリ開発ツール]** または **[Windows 8.1 および Windows Phone 8.0/8.1 ツール]** も選択します (両方でもよい)。 これらには、ダウンロードに時間がかかるエミュレーター イメージをインストールするためのオプションが含まれています。いつでも Visual Studio インストーラーに戻って後で追加できます。  
+   3.  (省略可能) Windows デバイスを対象とすることを計画している場合は、**[Windows 開発と Web 開発] > [ユニバーサル Windows アプリ開発ツール]** または **[Windows 8.1 および Windows Phone 8.0/8.1 ツール]** も選択します (両方でもよい)。 これらには、ダウンロードに時間がかかるエミュレーター イメージをインストールするためのオプションが含まれています。いつでも Visual Studio インストーラーに戻って後で追加できます。  
   
-4.  [インストール] ボタンをクリックし、プロセスを実行します。 このプロセスでも、完了までにしばらく時間がかかります。その間、Mac のセットアップ手順を続行し、「[Xamarin を使用したモバイル開発について学習します](../cross-platform/learn-about-mobile-development-with-xamarin.md)」を読むことができます。  
+4. [インストール] ボタンをクリックし、プロセスを実行します。 このプロセスでも、完了までにしばらく時間がかかります。その間、Mac のセットアップ手順を続行し、「[Xamarin を使用したモバイル開発について学習します](../cross-platform/learn-about-mobile-development-with-xamarin.md)」を読むことができます。  
   
-5.  インストールが完了したら、Visual Studio を起動し、アカウントを求められたら Microsoft アカウントでサインインします (これは Windows で使用するのと同じアカウントです)。 次に、**[ツール] > [オプション] > [Xamarin]** または **[ツール] > [オプション] > [Xamarin] > [その他]** を選択して、Xamarin の更新プログラムを確認します。ここには **[今すぐ確認]** リンクが表示されます。  
+5. インストールが完了したら、Visual Studio を起動し、アカウントを求められたら Microsoft アカウントでサインインします (これは Windows で使用するのと同じアカウントです)。 次に、**[ツール] > [オプション] > [Xamarin]** または **[ツール] > [オプション] > [Xamarin] > [その他]** を選択して、Xamarin の更新プログラムを確認します。ここには **[今すぐ確認]** リンクが表示されます。  
   
-     ![Visual Studio のオプションで Xamarin の更新プログラムを確認します](../cross-platform/media/cross-plat-xamarin-setup-3.png "クロスプラットフォームの Xamarin セットアップ 3")  
+    ![Visual Studio のオプションで Xamarin の更新プログラムを確認します](../cross-platform/media/cross-plat-xamarin-setup-3.png "クロスプラットフォームの Xamarin セットアップ 3")  
   
-    > [!NOTE]
-    >  前述のとおり、以前の Xamarin でのライセンス問題を回避するために、Xamarin をバージョン 4.0.3.214 以上に更新してください。  
+   > [!NOTE]
+   >  前述のとおり、以前の Xamarin でのライセンス問題を回避するために、Xamarin をバージョン 4.0.3.214 以上に更新してください。  
 
-    **[ツール] > [オプション]** に Xamarin のオプションがない場合は、インストールをもう一度確認するか、Visual Studio を再起動してみてください。 または、[オプション] ダイアログで Xamarin を検索することもできます。
+   **[ツール] > [オプション]** に Xamarin のオプションがない場合は、インストールをもう一度確認するか、Visual Studio を再起動してみてください。 または、[オプション] ダイアログで Xamarin を検索することもできます。
       
-6.  Windows 7 以前の場合、または Mac 上で Windows を実行している場合に、物理デバイスを持っていないときは、[Android SDK Emulator](https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/debug-on-emulator/android-sdk-emulator/) を使います。 下記のメモをご覧ください。  
+6. Windows 7 以前の場合、または Mac 上で Windows を実行している場合に、物理デバイスを持っていないときは、[Android SDK Emulator](https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/debug-on-emulator/android-sdk-emulator/) を使います。 下記のメモをご覧ください。  
   
- **Windows コンピューター上のエミュレーターに関するメモ:** CPU でサポートされる仮想化テクノロジは、一度に 1 つだけです。このため、開発用コンピューター上では 1 つのみを使用することをお勧めします。 主要な仮想化テクノロジには次の 3 つがあります。Hyper-V (Android 用の Visual Studio エミュレーターおよび Windows Phone エミュレーターで使用)、Virtual Box (Genymotion で使用)、Intel HAXM (Android SDK エミュレーターで使用)。 Hyper-V と Virtual Box 間にはさまざまな問題があるため、特定のコンピューター上では 1 種類のエミュレーターだけを使用することをお勧めします。したがって、Windows 8 以降のコンピューターでは Hyper-V を使用すること、および Windows 7 以前のコンピューターと Mac 上で実行している Windows では HAXM エミュレーターを使用することが前述のとおり推奨されます。  
+   **Windows コンピューター上のエミュレーターに関するメモ:** CPU でサポートされる仮想化テクノロジは、一度に 1 つだけです。このため、開発用コンピューター上では 1 つのみを使用することをお勧めします。 主要な仮想化テクノロジには次の 3 つがあります。Hyper-V (Android 用の Visual Studio エミュレーターおよび Windows Phone エミュレーターで使用)、Virtual Box (Genymotion で使用)、Intel HAXM (Android SDK エミュレーターで使用)。 Hyper-V と Virtual Box 間にはさまざまな問題があるため、特定のコンピューター上では 1 種類のエミュレーターだけを使用することをお勧めします。したがって、Windows 8 以降のコンピューターでは Hyper-V を使用すること、および Windows 7 以前のコンピューターと Mac 上で実行している Windows では HAXM エミュレーターを使用することが前述のとおり推奨されます。  
   
 ##  <a name="mac"></a> Mac のセットアップ (Apple ID、Xcode、および Xamarin)  
   

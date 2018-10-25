@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b74929d741b166d30762d7a84bf001a0ea7ba429
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a5aef90403babfd7a30812cac59b8c0c5acff79f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49268171"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933431"
 ---
 # <a name="overriding-and-extending-the-generated-classes"></a>生成済みクラスのオーバーライドおよび拡張
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -60,13 +60,13 @@ DSL 定義は、ドメイン固有言語に基づくツールの強力なセッ�
   
  Library.dsl、サンプルなどで、`CirculationBook`ドメイン クラスには、`Generates``Double Derived`プロパティに設定`true`します。 そのドメイン クラスに対して生成されたコードには、2 つのクラスが含まれています。  
   
--   `CirculationBookBase`、抽象であるし、すべてのメソッドとプロパティが含まれています。  
+- `CirculationBookBase`、抽象であるし、すべてのメソッドとプロパティが含まれています。  
   
--   `CirculationBook`、から派生`CirculationBookBase`します。 そのコンス トラクターを除く、空になります。  
+- `CirculationBook`、から派生`CirculationBookBase`します。 そのコンス トラクターを除く、空になります。  
   
- 任意のメソッドをオーバーライドするには、作成する派生クラスの部分定義など`CirculationBook`します。 生成されたメソッドとモデリング framework から継承されたメソッドの両方をオーバーライドすることができます。  
+  任意のメソッドをオーバーライドするには、作成する派生クラスの部分定義など`CirculationBook`します。 生成されたメソッドとモデリング framework から継承されたメソッドの両方をオーバーライドすることができます。  
   
- このメソッドは、モデル要素、リレーションシップ、図形、図、およびコネクタを含む要素のすべての種類で使用できます。 生成された他のクラスのメソッドをオーバーライドすることもできます。 クラスは、ToolboxHelper は double 型の派生では常になどいくつか生成されます。  
+  このメソッドは、モデル要素、リレーションシップ、図形、図、およびコネクタを含む要素のすべての種類で使用できます。 生成された他のクラスのメソッドをオーバーライドすることもできます。 クラスは、ToolboxHelper は double 型の派生では常になどいくつか生成されます。  
   
 ### <a name="custom-constructors"></a>カスタム コンス トラクター  
  コンス トラクターをオーバーライドすることはできません。 Double 型から派生したクラスであっても、コンス トラクターは、派生クラスでなければなりません。  

@@ -18,12 +18,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ad9cd6c3356d38184b24a7e2ecfa06ca954bfbb0
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: ebff9aaeb49d99b26b92d1908e22397b9ab0a20d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499878"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868691"
 ---
 # <a name="extend-the-properties-task-list-output-and-options-windows"></a>プロパティ、タスク一覧、出力、およびオプションの windows を拡張します。
 Visual Studio のいずれかのツール ウィンドウにアクセスできます。 このチュートリアルは、新しいツール ウィンドウに関する情報を統合する方法を示す**オプション**ページと、新しい設定で、**プロパティ** ページで、またに書き込む方法、**タスク一覧**と**出力**windows。  
@@ -98,33 +98,33 @@ Visual Studio のいずれかのツール ウィンドウにアクセスでき�
 ## <a name="create-an-options-page"></a>オプション ページを作成します。  
  内のページを行うことができます、**オプション** ダイアログ ボックスのユーザーがツール ウィンドウの設定を変更できるようにします。 オプションと内のエントリを記述する、クラスにもオプション ページを作成する必要があります、 *TodoListPackage.cs*または*TodoListPackage.vb*ファイル。  
   
-1.  という名前のクラスを追加`ToolsOptions.cs`します。 ように、`ToolsOptions`クラスから継承する<xref:Microsoft.VisualStudio.Shell.DialogPage>します。  
+1. という名前のクラスを追加`ToolsOptions.cs`します。 ように、`ToolsOptions`クラスから継承する<xref:Microsoft.VisualStudio.Shell.DialogPage>します。  
   
-    ```csharp  
-    class ToolsOptions : DialogPage  
-    {  
-    }  
-    ```  
+   ```csharp  
+   class ToolsOptions : DialogPage  
+   {  
+   }  
+   ```  
   
-2.  次の追加ステートメントを使用します。  
+2. 次の追加ステートメントを使用します。  
   
-    ```csharp  
-    using Microsoft.VisualStudio.Shell;  
-    ```  
+   ```csharp  
+   using Microsoft.VisualStudio.Shell;  
+   ```  
   
-3.  このチュートリアルでは、[オプション] ページでは、DaysAhead という名前の 1 つだけのオプションを提供します。 というプライベート フィールドを追加**daysAhead**という名前のプロパティと**DaysAhead**を`ToolsOptions`クラス。  
+3. このチュートリアルでは、[オプション] ページでは、DaysAhead という名前の 1 つだけのオプションを提供します。 というプライベート フィールドを追加**daysAhead**という名前のプロパティと**DaysAhead**を`ToolsOptions`クラス。  
   
-    ```csharp  
-    private double daysAhead;  
+   ```csharp  
+   private double daysAhead;  
   
-    public double DaysAhead  
-    {  
-        get { return daysAhead; }  
-        set { daysAhead = value; }  
-    }  
-    ```  
+   public double DaysAhead  
+   {  
+       get { return daysAhead; }  
+       set { daysAhead = value; }  
+   }  
+   ```  
   
- これで、プロジェクトをこのオプション ページの対応する必要があります。  
+   これで、プロジェクトをこのオプション ページの対応する必要があります。  
   
 ### <a name="make-the-options-page-available-to-users"></a>[オプション] ページをユーザーが利用できるように  
   

@@ -15,21 +15,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 717cff683f5f16f8f42f967c5f3b90ff2fe1e3fc
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: adc7d06b8479da4aef7042fd64702cff5ca3be60
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39635970"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900658"
 ---
 # <a name="save-data-in-project-files"></a>プロジェクト ファイル内のデータを保存します。
 プロジェクト サブタイプは、保存し、プロジェクト ファイルのサブタイプに固有のデータを取得できます。 マネージ パッケージ フレームワーク (MPF) は、このタスクを実行する 2 つのインターフェイスを提供します。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>からアクセス プロパティの値により、インターフェイス、 **MSBuild**プロジェクト ファイルのセクション。 によって提供されるメソッド<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>ユーザーのニーズを読み込みまたは保存に関連するデータをビルドするたびにすべてのユーザーが呼び出すことができます。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>からアクセス プロパティの値により、インターフェイス、 **MSBuild**プロジェクト ファイルのセクション。 によって提供されるメソッド<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>ユーザーのニーズを読み込みまたは保存に関連するデータをビルドするたびにすべてのユーザーが呼び出すことができます。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>自由形式の XML でないビルド関連のデータを保持するために使用します。 によって提供されるメソッド<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>によって呼び出される[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]たびに[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]非ビルド プロジェクト ファイルに関連するデータを保持する必要があります。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>自由形式の XML でないビルド関連のデータを保持するために使用します。 によって提供されるメソッド<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>によって呼び出される[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]たびに[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]非ビルド プロジェクト ファイルに関連するデータを保持する必要があります。  
   
- ビルドと非ビルド関連のデータを維持する方法の詳細については、次を参照してください。 [MSBuild プロジェクト ファイル内のデータを永続化](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)します。  
+  ビルドと非ビルド関連のデータを維持する方法の詳細については、次を参照してください。 [MSBuild プロジェクト ファイル内のデータを永続化](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)します。  
   
 ## <a name="save-and-retrieve-build-related-data"></a>ビルド関連のデータの保存および取得  
   

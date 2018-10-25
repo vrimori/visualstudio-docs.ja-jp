@@ -18,23 +18,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ce5fda0eee836a8da5ad69053faa23d3c6e60082
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 001393a856dc374d92e11ff2d4707346a35aea12
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44280651"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887424"
 ---
 # <a name="limitations-on-wcf-debugging"></a>WCF デバッグの制約
 WCF サービスのデバッグを開始するには、次の 3 つの方法があります。  
   
--   サービスを呼び出すクライアント プロセスをデバッグします。 デバッガーがサービスにステップ インします。 サービスは、クライアント アプリケーションと同じソリューションになくてもかまいません。  
+- サービスを呼び出すクライアント プロセスをデバッグします。 デバッガーがサービスにステップ インします。 サービスは、クライアント アプリケーションと同じソリューションになくてもかまいません。  
   
--   サービスを要求するクライアント プロセスをデバッグします。 サービスは、ソリューションの一部である必要があります。  
+- サービスを要求するクライアント プロセスをデバッグします。 サービスは、ソリューションの一部である必要があります。  
   
--   使用する**プロセスにアタッチ**を現在実行中のサービスにアタッチします。 サービス内部でデバッグが開始されます。  
+- 使用する**プロセスにアタッチ**を現在実行中のサービスにアタッチします。 サービス内部でデバッグが開始されます。  
   
- このトピックでは、これらのシナリオの制約について説明します。  
+  このトピックでは、これらのシナリオの制約について説明します。  
   
 ## <a name="limitations-on-stepping-into-a-service"></a>サービスへのステップ インの制約  
  デバッグ中のクライアント アプリケーションのサービスにステップ インするには、次の条件を満たす必要があります。  
@@ -61,19 +61,19 @@ WCF サービスのデバッグを開始するには、次の 3 つの方法が�
 ## <a name="limitations-on-automatic-attach-to-a-service"></a>サービスへのオート アタッチの制約  
  サービスへのオート アタッチには、次の制約があります。  
   
--   サービスは、デバッグしている [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションの一部である必要があります。  
+- サービスは、デバッグしている [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションの一部である必要があります。  
   
--   サービスはホストされている必要があります。 Web サイト プロジェクト (ファイル システムおよび HTTP)、Web アプリケーション プロジェクト (ファイル システムおよび HTTP)、または WCF サービス ライブラリ プロジェクトの一部である可能性があります。 WCF サービス ライブラリ プロジェクトは、サービス ライブラリまたはワークフロー サービス ライブラリです。  
+- サービスはホストされている必要があります。 Web サイト プロジェクト (ファイル システムおよび HTTP)、Web アプリケーション プロジェクト (ファイル システムおよび HTTP)、または WCF サービス ライブラリ プロジェクトの一部である可能性があります。 WCF サービス ライブラリ プロジェクトは、サービス ライブラリまたはワークフロー サービス ライブラリです。  
   
--   サービスは、WCF クライアントから起動される必要があります。  
+- サービスは、WCF クライアントから起動される必要があります。  
   
--   app.config ファイルまたは Web.config ファイルの次のコードでデバッグが有効にされている必要があります。  
+- app.config ファイルまたは Web.config ファイルの次のコードでデバッグが有効にされている必要があります。  
   
-    ```xml
-    <system.web>  
-      <compilation debug="true" />  
-    <system.web>  
-    ```  
+  ```xml
+  <system.web>  
+    <compilation debug="true" />  
+  <system.web>  
+  ```  
   
 ## <a name="self-hosting"></a>セルフホスト  
  A*自己ホスト型サービス*WCF サービス、WCF サービス ホストを IIS 内で実行していない、または[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]開発サーバーです。 自己ホスト型サービスをデバッグする方法については、次を参照してください。[方法: 自己ホスト型 WCF サービスをデバッグ](../debugger/how-to-debug-a-self-hosted-wcf-service.md)します。  

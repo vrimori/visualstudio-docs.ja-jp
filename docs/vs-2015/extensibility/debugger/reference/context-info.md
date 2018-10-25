@@ -17,12 +17,12 @@ ms.assetid: 6b513f4e-e7b0-4969-adf0-2205ccc1e09b
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 37fa2bc4ecf31588f9f56082f2ce465cb9690908
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 851ed9d5124907aff892357b4faf4af6ad3c1f8f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49214328"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837868"
 ---
 # <a name="contextinfo"></a>CONTEXT_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -57,7 +57,7 @@ public struct CONTEXT_INFO {
   
 ## <a name="members"></a>メンバー  
  dwFields  
- 彼からフラグの組み合わせ[CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)フィールドが記入を指定する列挙体**します。**  
+ 彼からフラグの組み合わせ[CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)フィールドが記入を指定する列挙体<strong>します。</strong>  
   
  bstrModuleUrl  
  コンテキストが配置されているモジュールの名前。  
@@ -82,7 +82,7 @@ public struct CONTEXT_INFO {
   
  この構造体の一般的な用途は、のサポートには、**メモリ**デバッグ ウィンドウ。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

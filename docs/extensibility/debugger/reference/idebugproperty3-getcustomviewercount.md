@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::GetCustomViewerCount |Microsoft ドキュメント
+title: IDebugProperty3::GetCustomViewerCount |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb04a772a9ca2a6bf63861c02e3c65870639da56
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1e609451af16d202828fac30cd0da133bf3bea73
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31117258"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898877"
 ---
 # <a name="idebugproperty3getcustomviewercount"></a>IDebugProperty3::GetCustomViewerCount
-このプロパティで使用できる可能性のあるカスタム ビューアーの数を取得します。  
+このプロパティの使用可能な可能性があるカスタム ビューアーの数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,15 +44,15 @@ int GetCustomViewerCount(
  [out]このプロパティの使用可能なカスタム ビューアーの数。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 型のビジュアライザーをサポートするためには、このメソッドはへの呼び出しを転送、 [GetCustomViewerCount](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md)メソッドです。 式エバリュエーターは、このプロパティの型のカスタム ビューアーをサポートする場合、このメソッドは、返される値をカスタム ビューアーの数を追加します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドが呼び出しを転送する型のビジュアライザーをサポートするために、 [GetCustomViewerCount](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md)メソッド。 式エバリュエーターでは、このプロパティの型のカスタム ビューアーもサポートする場合、このメソッドは、返された値のカスタム ビューアーの数を追加します。  
   
- ビジュアライザーの型とカスタム ビューアーの違いの詳細については、次を参照してください。[型ビジュアライザーとカスタム ビューアー](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)です。  
+ 型のビジュアライザーおよびカスタム ビューアーとの違いについての詳細については、次を参照してください。[型のビジュアライザーとカスタム ビューアー](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)します。  
   
 ## <a name="example"></a>例  
- 次の例に対して、このメソッドを実装する方法を示しています、 **CProperty**を公開するオブジェクト、 [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)インターフェイスです。  
+ 次の例では、このメソッドを実装する方法を示しています、 **CProperty**を公開するオブジェクト、 [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)インターフェイス。  
   
 ```cpp  
 STDMETHODIMP CProperty::GetCustomViewerCount(ULONG* pcelt)  

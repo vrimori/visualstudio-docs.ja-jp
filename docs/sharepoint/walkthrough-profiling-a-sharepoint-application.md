@@ -18,27 +18,27 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d235508bb0b58ac17846d0b02db25f044c504deb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5db5e9408a64df80311667267561ee69234fd7d5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42634707"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852753"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>チュートリアル: SharePoint アプリケーションをプロファイリングします。
   このチュートリアルでは、Visual Studio のプロファイル ツールを使用し、SharePoint アプリケーションのパフォーマンスを最適化する方法について説明します。 アプリケーション例は SharePoint フィーチャー イベント レシーバーで、これにはフィーチャー イベント レシーバーのパフォーマンスを低下させるアイドル ループが含まれています。 Visual Studio プロファイラーを使用するとも呼ばれるプロジェクトの最も負荷の高い (実行する最も遅い) 部分を排除を見つけて、*ホット パス*します。  
   
  このチュートリアルでは、次のタスクについて説明します。  
   
--   [機能とフィーチャー イベント レシーバーを追加する](#BKMK_AddFtrandFtrEvntReceiver)します。  
+- [機能とフィーチャー イベント レシーバーを追加する](#BKMK_AddFtrandFtrEvntReceiver)します。  
   
--   [SharePoint アプリケーションをデプロイして構成する](#BKMK_ConfigSharePointApp)します。  
+- [SharePoint アプリケーションをデプロイして構成する](#BKMK_ConfigSharePointApp)します。  
   
--   [SharePoint アプリケーションを実行している](#BKMK_RunSPApp)します。  
+- [SharePoint アプリケーションを実行している](#BKMK_RunSPApp)します。  
   
--   [表示とプロファイルの結果を解釈](#BKMK_ViewResults)します。  
+- [表示とプロファイルの結果を解釈](#BKMK_ViewResults)します。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
@@ -52,23 +52,23 @@ ms.locfileid: "42634707"
   
 #### <a name="to-create-a-sharepoint-project"></a>SharePoint プロジェクトを作成するには  
   
-1.  メニュー バーで、**ファイル** > **新規** > **プロジェクト**を表示する、**新しいプロジェクト** ダイアログ ボックス。  
+1. メニュー バーで、**ファイル** > **新規** > **プロジェクト**を表示する、**新しいプロジェクト** ダイアログ ボックス。  
   
-2.  展開、 **SharePoint**のどちらかのノード**Visual c#** または**Visual Basic**を選択し、 **2010**ノード。  
+2. 展開、 **SharePoint**のどちらかのノード**Visual c#** または**Visual Basic**を選択し、 **2010**ノード。  
   
-3.  [テンプレート] ペインで選択、 **SharePoint 2010 プロジェクト**テンプレート。  
+3. [テンプレート] ペインで選択、 **SharePoint 2010 プロジェクト**テンプレート。  
   
-4.  **名前**ボックスに、入力**ProfileTest**、選択し、 **OK**ボタン。  
+4. **名前**ボックスに、入力**ProfileTest**、選択し、 **OK**ボタン。  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  
+    **SharePoint カスタマイズ ウィザード**が表示されます。  
   
-5.  **デバッグのサイトとセキュリティのレベルを指定**ページで、サイト定義をデバッグする SharePoint サーバー サイトの URL を入力するか、既定の場所を使用して (http://*システム名*/).  
+5. **デバッグのサイトとセキュリティのレベルを指定**ページで、サイト定義をデバッグする SharePoint サーバー サイトの URL を入力するか、既定の場所を使用して (http://<em>システム名</em>/).  
   
-6.  **この SharePoint ソリューションの信頼レベルとは何ですか?** セクションで、選択、**ファーム ソリューションとして配置**オプション ボタンをクリックします。  
+6. **この SharePoint ソリューションの信頼レベルとは何ですか?** セクションで、選択、**ファーム ソリューションとして配置**オプション ボタンをクリックします。  
   
-     現時点では、ファーム ソリューションのプロファイルのみを実行できます。 サンド ボックス ソリューションとファーム ソリューションの詳細については、次を参照してください。[サンド ボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)します。  
+    現時点では、ファーム ソリューションのプロファイルのみを実行できます。 サンド ボックス ソリューションとファーム ソリューションの詳細については、次を参照してください。[サンド ボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)します。  
   
-7.  選択、**完了**ボタンをクリックします。 プロジェクトが表示されます**ソリューション エクスプ ローラー**します。  
+7. 選択、**完了**ボタンをクリックします。 プロジェクトが表示されます**ソリューション エクスプ ローラー**します。  
   
 ## <a name="add-a-feature-and-feature-event-receiver"></a>機能とフィーチャー イベント レシーバーを追加します。
  次に、フィーチャーを、そのイベント レシーバーと共にプロジェクトに追加します。 このイベント レシーバーには、プロファイル対象のコードが含まれます。  
@@ -215,7 +215,7 @@ ms.locfileid: "42634707"
      ウィザード アプリケーションが、サーバー上でプロファイリングを有効に、表示、**パフォーマンス エクスプ ローラー**ウィンドウ、およびビルド、配置、および SharePoint アプリケーションを実行します。  
   
 ## <a name="run-the-sharepoint-application"></a>SharePoint アプリケーションを実行します。
- `FeatureActivation` イベント コードの実行をトリガーし、SharePoint 内の機能をアクティブ化します。  
+ `FeatureActivation` イベント コードの実行をトリガーし、SharePoint 内のフューチャーをアクティブ化します。  
   
 #### <a name="to-run-the-sharepoint-application"></a>SharePoint アプリケーションを実行するには  
   

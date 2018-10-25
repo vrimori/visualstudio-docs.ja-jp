@@ -19,12 +19,12 @@ caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2683f9dc520603004e71778e8498f5b2493b1895
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: af0ce2e4ff9b8df28ebc0c6dd57ad5b4ebee895f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49301822"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914568"
 ---
 # <a name="cpu-and-windows-counters"></a>CPU カウンターと Windows カウンター
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -93,19 +93,19 @@ Visual Studio プロファイラーでは、オペレーティング システ�
   
 ##### <a name="to-view-a-list-of-a-list-of-all-cpu-counters-that-are-supported-on-the-current-platform"></a>現在のプラットフォームでサポートされているすべての CPU カウンターの一覧を表示するには  
   
-1.  パフォーマンス エクスプローラーで、パフォーマンス セッションを右クリックして、**[プロパティ]** をクリックします。  
+1. パフォーマンス エクスプローラーで、パフォーマンス セッションを右クリックして、**[プロパティ]** をクリックします。  
   
-2.  次のいずれかの操作を行います。  
+2. 次のいずれかの操作を行います。  
   
-    -   **[サンプリング]** をクリックし、**[サンプル]** イベントの一覧から **[パフォーマンス カウンター]** を選びます。 **[使用可能なパフォーマンス カウンター]** に CPU カウンターが一覧表示されます。  
+   - **[サンプリング]** をクリックし、**[サンプル]** イベントの一覧から **[パフォーマンス カウンター]** を選びます。 **[使用可能なパフォーマンス カウンター]** に CPU カウンターが一覧表示されます。  
   
-         **注** 前のサンプリング構成に戻るには、**[キャンセル]** をクリックします。  
+      **注** 前のサンプリング構成に戻るには、**[キャンセル]** をクリックします。  
   
      - または -  
   
-    -   **[CPU カウンター]** を選び、**[CPU カウンターの収集]** を選びます。 **[使用可能なカウンター]** に CPU カウンターが一覧表示されます。  
+   - **[CPU カウンター]** を選び、**[CPU カウンターの収集]** を選びます。 **[使用可能なカウンター]** に CPU カウンターが一覧表示されます。  
   
-         **注** 前のカウンター収集構成に戻るには、**[キャンセル]** をクリックします。  
+      **注** 前のカウンター収集構成に戻るには、**[キャンセル]** をクリックします。  
   
 ##### <a name="to-view-a-list-of-a-list-of-window-counters-that-are-supported-on-the-current-platform"></a>現在のプラットフォームでサポートされている Windows カウンターの一覧を表示するには  
   

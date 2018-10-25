@@ -1,5 +1,5 @@
 ---
-title: THREADPROPERTIES |Microsoft ドキュメント
+title: THREADPROPERTIES |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e4079c688358f3e7deedd28b5eb05e556192bfe6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 14db7869717a2edf1ac64be744ab1f6058455c1a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31125765"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845317"
 ---
 # <a name="threadproperties"></a>THREADPROPERTIES
 スレッドのプロパティについて説明します。  
@@ -53,30 +53,30 @@ public struct THREADPROPERTIES {
   
 ## <a name="members"></a>メンバー  
  dwFields  
- フラグの組み合わせ、 [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)有効ではこの構造体のフィールドを説明する列挙です。  
+ フラグの組み合わせ、 [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)有効ではこの構造体のフィールドを記述する列挙。  
   
  dwThreadId  
  スレッドの id。  
   
  dwSuspendCount  
- スレッドは、カウントを中断します。  
+ スレッドは中断回数です。  
   
  dwThreadState  
- 値、 [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md)操作スレッドの状態を示す列挙値。  
+ 値、 [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md)動作のスレッドの状態を示す列挙値。  
   
  bstrPriority  
- スレッドの優先度を指定する文字列たとえば、"上記 Normal"、"Normal"、または時間で「重大」です。  
+ スレッドの優先順位を指定する文字列たとえば、"上記 Normal"、"Normal"または「時間は重要な」。  
   
  bstName  
  スレッド名。  
   
  bstrLocation  
- 通常の実行が中断されているメソッドの名前として表現されるスレッドの場所 (通常、最上位のスタック フレーム)。  
+ 通常の実行が中断されているメソッドの名前として表現されるスレッドの場所 (通常は最上位のスタック フレーム)。  
   
-## <a name="remarks"></a>コメント  
- この構造体への呼び出しによって入力されます、 [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)メソッドです。 情報が返されます。 これが設定で通常使用される、**スレッド**ウィンドウです。  
+## <a name="remarks"></a>Remarks  
+ この構造体への呼び出しによって入力されます、 [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)メソッド。 そのために返される情報は通常設定で使用、**スレッド**ウィンドウ。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

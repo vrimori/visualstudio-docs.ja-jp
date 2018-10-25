@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d9e78a1944817d9384d0c55b9584e58a758ccc
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 79b4adcfbcacc8cf342b5fc4183ae4fe27431b09
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31925082"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864771"
 ---
 # <a name="visual-c-structures-in-class-designer"></a>クラス デザイナーの Visual C++ 構造体
 
@@ -37,7 +37,7 @@ struct MyStructure
 クラス ダイアグラムにおける C++ 構造体の図形の形状と動作はクラスの図形に似ていますが、ラベルが **[Struct]** である点と、角が丸くなく直角である点が異なります。
 
 |コード要素|クラス デザイナー ビュー|
-|------------------|-------------------------|
+|------------------| - |
 |`struct StructureName {};`|**StructureName**<br /><br /> 構造体|
 
 ## <a name="see-also"></a>関連項目

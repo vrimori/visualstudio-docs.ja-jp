@@ -20,12 +20,12 @@ caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b152b381aaca2b9e43729616979cd7765d3a8c53
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 34ebe35ba7cad601a0ba5d43cd5c424743cb2684
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49305467"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49848385"
 ---
 # <a name="how-to-specify-pre--and-post-instrument-commands"></a>方法 : インストルメント前のコマンドおよびインストルメント後のコマンドを指定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,25 +36,25 @@ ms.locfileid: "49305467"
   
  **Requirements**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
+- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
- コマンドが実行される作業ディレクトリは、[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] を実行しているオペレーティング システムと、プロファイリング対象アプリケーションの対象プラットフォームによって異なります。  
+  コマンドが実行される作業ディレクトリは、[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] を実行しているオペレーティング システムと、プロファイリング対象アプリケーションの対象プラットフォームによって異なります。  
   
- **32 ビット コンピューター**  
+  **32 ビット コンピューター**  
   
- 32 ビット コンピューターでの既定のプロファイリング ツール ディレクトリは、Drive\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools です。  
+  32 ビット コンピューターでの既定のプロファイリング ツール ディレクトリは、Drive\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools です。  
   
- **64 ビット コンピューター**  
+  **64 ビット コンピューター**  
   
- 64 ビット コンピューターでは、プロファイリングするアプリケーションのターゲット プラットフォームに応じてパスを指定します。  
+  64 ビット コンピューターでは、プロファイリングするアプリケーションのターゲット プラットフォームに応じてパスを指定します。  
   
--   32 ビット アプリケーションの場合、既定のプロファイリング ツール ディレクトリは以下のとおりです。  
+- 32 ビット アプリケーションの場合、既定のプロファイリング ツール ディレクトリは以下のとおりです。  
   
-     *Drive*\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Performance Tools  
+   *Drive*\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Performance Tools  
   
--   64 ビット アプリケーションの場合、既定のプロファイリング ツール ディレクトリは以下のとおりです。  
+- 64 ビット アプリケーションの場合、既定のプロファイリング ツール ディレクトリは以下のとおりです。  
   
-     *Drive*\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Performance Tools\x64  
+   *Drive*\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Performance Tools\x64  
   
 ### <a name="to-specify-pre-instrument-commands"></a>インストルメント化前のコマンドを指定するには  
   

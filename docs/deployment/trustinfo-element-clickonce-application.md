@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 75695598c31b1dcc3a8ae4845a41249ead71236b
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: d6d6f7955cb010d981b62e2b9fcdc70a092d76ef
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39151064"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941231"
 ---
 # <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustInfo&gt;要素 (ClickOnce アプリケーション)
 アプリケーションをクライアント コンピューター上で実行するのに必要な最低限のセキュリティ権限について説明します。  
@@ -142,21 +142,21 @@ ms.locfileid: "39151064"
 ## <a name="requestedexecutionlevel"></a>requestedExecutionLevel  
  任意。 アプリケーションを実行するために必要なセキュリティ レベルを指定します。 この要素には子はなく、次の属性があります。  
   
--   `Level`  
+- `Level`  
   
-     必須。 アプリケーションが要求するセキュリティ レベルを指定します。 指定できる値は次のとおりです。  
+   必須。 アプリケーションが要求するセキュリティ レベルを指定します。 指定できる値は次のとおりです。  
   
-     `asInvoker`。アクセス許可の追加要求は行いません。 このレベルでは、追加の信頼確認は不要です。  
+   `asInvoker`。アクセス許可の追加要求は行いません。 このレベルでは、追加の信頼確認は不要です。  
   
-     `highestAvailable`。親プロセスが利用できる最上位のアクセス許可を要求します。  
+   `highestAvailable`。親プロセスが利用できる最上位のアクセス許可を要求します。  
   
-     `requireAdministrator`。完全な管理者のアクセス許可を要求します。  
+   `requireAdministrator`。完全な管理者のアクセス許可を要求します。  
   
-     [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションは、 `asInvoker`値のみでインストールされます。 それ以外の値でインストールすると、エラーが発生します。  
+   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションは、 `asInvoker`値のみでインストールされます。 それ以外の値でインストールすると、エラーが発生します。  
   
--   `uiAccess`  
+- `uiAccess`  
   
-     任意。 アプリケーションが、保護されたユーザー インターフェイス要素へのアクセスを必要とするかどうかを指定します。 指定できる値は、 `true` または `false`です。既定値は false です。 署名付きのアプリケーションのみ、true の値を設定する必要があります。  
+   任意。 アプリケーションが、保護されたユーザー インターフェイス要素へのアクセスを必要とするかどうかを指定します。 指定できる値は、 `true` または `false`です。既定値は false です。 署名付きのアプリケーションのみ、true の値を設定する必要があります。  
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションが、クライアント コンピューターによって既定で与えられる以上のアクセス許可を求める場合は、より高いレベルの信頼を与えるかどうかを確認するメッセージが、共通言語ランタイムの Trust Manager によって表示されます。 ユーザーが信頼を与えない場合、アプリケーションは実行されません。信頼を与えた場合は、ここで要求されたアクセス許可で実行されます。  

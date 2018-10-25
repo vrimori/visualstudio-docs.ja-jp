@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject::CreateStringObject |Microsoft ドキュメント
+title: IDebugFunctionObject::CreateStringObject |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d56356aee150680b4d3a21327e28db353da51469
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c7933b2d7082432bd4f9db567ad6bb5b7788e28b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31111335"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887687"
 ---
 # <a name="idebugfunctionobjectcreatestringobject"></a>IDebugFunctionObject::CreateStringObject
 文字列オブジェクトを作成します。  
@@ -46,13 +46,13 @@ int CreateStringObject(
  [in]文字列オブジェクトの文字列値。  
   
  `ppObject`  
- [out]返します、 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)を新しく作成された文字列オブジェクトを表すオブジェクト。  
+ [out]返します、 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)新しく作成された文字列オブジェクトを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- によって表される関数のパラメーターを表す文字列を表すオブジェクトを作成するには、このメソッドを呼び出す、 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)インターフェイスです。  
+## <a name="remarks"></a>Remarks  
+ によって表される関数のパラメーターを表す文字列を表すオブジェクトを作成するには、このメソッドを呼び出して、 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)インターフェイス。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

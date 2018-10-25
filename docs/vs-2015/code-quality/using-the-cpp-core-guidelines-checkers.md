@@ -11,12 +11,12 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2fc975ab5c9c1e43b79ddd861bca3a61e9005f5f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 63cd97a23f26d23b99aa7c93be90cef91a630856
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49194091"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906170"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>C++ Core ガイドライン チェッカーの使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,25 +35,25 @@ C++ Core ガイドラインは、ガイドライン、ルール、および C++ 
   
 #### <a name="to-add-the-microsoftcppcorecheck-package-to-your-project"></a>Microsoft.CppCoreCheck パッケージをプロジェクトに追加するには  
   
-1.  **ソリューション エクスプ ローラー**、右クリックすると、パッケージを追加するソリューションで、プロジェクトのコンテキスト メニューを開きます。 選択**NuGet パッケージの管理**を開く、 **NuGet パッケージ マネージャー**します。  
+1. **ソリューション エクスプ ローラー**、右クリックすると、パッケージを追加するソリューションで、プロジェクトのコンテキスト メニューを開きます。 選択**NuGet パッケージの管理**を開く、 **NuGet パッケージ マネージャー**します。  
   
-2.  **NuGet パッケージ マネージャー**ウィンドウで、Microsoft.CppCoreCheck を検索します。  
+2. **NuGet パッケージ マネージャー**ウィンドウで、Microsoft.CppCoreCheck を検索します。  
   
-     ![Nuget パッケージ マネージャー ウィンドウは、CppCoreCheck パッケージを示しています](../code-quality/media/cppcorecheck-nuget-window.PNG "CPPCoreCheck_Nuget_Window。")  
+    ![Nuget パッケージ マネージャー ウィンドウは、CppCoreCheck パッケージを示しています](../code-quality/media/cppcorecheck-nuget-window.PNG "CPPCoreCheck_Nuget_Window。")  
   
-3.  Microsoft.CppCoreCheck パッケージを選択し、選択、**インストール**をプロジェクトに規則を追加するボタンをクリックします。  
+3. Microsoft.CppCoreCheck パッケージを選択し、選択、**インストール**をプロジェクトに規則を追加するボタンをクリックします。  
   
- NuGet パッケージでは、プロジェクトでコード分析を有効にしたときに呼び出されるプロジェクトに追加の MSBuild .targets ファイルを追加します。 この .targets ファイルでは、Visual Studio コード分析ツールに追加の拡張機能として、C++ Core Check の規則を追加します。  
+   NuGet パッケージでは、プロジェクトでコード分析を有効にしたときに呼び出されるプロジェクトに追加の MSBuild .targets ファイルを追加します。 この .targets ファイルでは、Visual Studio コード分析ツールに追加の拡張機能として、C++ Core Check の規則を追加します。  
   
- 選択してプロジェクトでコード分析を有効にすることができます、**ビルドに対するコード分析を有効にする**でチェック ボックスをオン、**コード分析**のセクション、**プロパティ ページ**のダイアログ ボックスプロジェクト。  
+   選択してプロジェクトでコード分析を有効にすることができます、**ビルドに対するコード分析を有効にする**でチェック ボックスをオン、**コード分析**のセクション、**プロパティ ページ**のダイアログ ボックスプロジェクト。  
   
- ![コード分析の全般設定のプロパティ ページ](../code-quality/media/cppcorecheck-codeanalysis-general.png "CPPCoreCheck_CodeAnalysis_General")  
+   ![コード分析の全般設定のプロパティ ページ](../code-quality/media/cppcorecheck-codeanalysis-general.png "CPPCoreCheck_CodeAnalysis_General")  
   
- C++ Core Check の規則では、コード分析が有効になっているときに実行される既定の規則セットの一部になります。 C++ Core Check の規則では、開発中であるため、いくつかのルールは、すべてのコードで使用する準備ができていない可能性がありますが、開発中に有益あります。 これらの規則は、実験用にリリースされます。 プロジェクトのプロパティでリリースされたまたは試験用の規則を実行するかどうかを選択できます。  
+   C++ Core Check の規則では、コード分析が有効になっているときに実行される既定の規則セットの一部になります。 C++ Core Check の規則では、開発中であるため、いくつかのルールは、すべてのコードで使用する準備ができていない可能性がありますが、開発中に有益あります。 これらの規則は、実験用にリリースされます。 プロジェクトのプロパティでリリースされたまたは試験用の規則を実行するかどうかを選択できます。  
   
- ![コード分析の拡張機能設定のプロパティ ページ](../code-quality/media/cppcorecheck-codeanalysis-extensions.png "CPPCoreCheck_CodeAnalysis_Extensions")  
+   ![コード分析の拡張機能設定のプロパティ ページ](../code-quality/media/cppcorecheck-codeanalysis-extensions.png "CPPCoreCheck_CodeAnalysis_Extensions")  
   
- 有効または、C++ Core Check の規則セットを無効にする、開く、**プロパティ ページ**プロジェクトのダイアログ。 **構成プロパティ**、展開**コード分析**、**拡張**します。 横にドロップダウン リストで制御**を有効にする C++ Core の Check (リリース)** または**を有効にする C++ Core の Check (試験段階)**、選択**はい**または**いいえ**します。 選択**OK**または**適用**変更を保存します。  
+   有効または、C++ Core Check の規則セットを無効にする、開く、**プロパティ ページ**プロジェクトのダイアログ。 **構成プロパティ**、展開**コード分析**、**拡張**します。 横にドロップダウン リストで制御**を有効にする C++ Core の Check (リリース)** または**を有効にする C++ Core の Check (試験段階)**、選択**はい**または**いいえ**します。 選択**OK**または**適用**変更を保存します。  
   
 ## <a name="check-types-bounds-and-lifetimes"></a>型、境界、および有効期間を確認してください。  
  C++ Core Check パッケージには、現在のチェッカーが含まれる、[タイプ セーフ](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#SS-type)、[安全性の境界](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#SS-bounds)、および[有効期間の安全性](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#SS-lifetime)プロファイル。  
@@ -81,15 +81,15 @@ int main()
   
  この例では、C++ Core Check の規則を検索する警告のいくつかを示します。  
   
--   C26494 はルール Type.5: 常にオブジェクトを初期化します。  
+- C26494 はルール Type.5: 常にオブジェクトを初期化します。  
   
--   C26485 はルール Bounds.3: 配列からポインターへの減退しません。  
+- C26485 はルール Bounds.3: 配列からポインターへの減退しません。  
   
--   C26481 はルール Bounds.1: ポインター演算を使用しないでください。 代わりに、`span` を使用してください。  
+- C26481 はルール Bounds.1: ポインター演算を使用しないでください。 代わりに、`span` を使用してください。  
   
- C++ Core Check のコード分析ルールセットはインストールされている、このコードをコンパイルすると、最初の 2 つの警告は、出力が、3 つ目の抑制を有効になっている場合。 コード例からのビルド出力を次に示します。  
+  C++ Core Check のコード分析ルールセットはインストールされている、このコードをコンパイルすると、最初の 2 つの警告は、出力が、3 つ目の抑制を有効になっている場合。 コード例からのビルド出力を次に示します。  
   
- **1 >---ビルド開始: プロジェクト: CoreCheckExample、構成: デバッグ Win32--**  
+  **1 >---ビルド開始: プロジェクト: CoreCheckExample、構成: デバッグ Win32--**  
 **----**  
 **1 > CoreCheckExample.cpp**  
 **1 > CoreCheckExample.vcxproj C:\Users\username\documents\visual studio 2015\P を ->**  

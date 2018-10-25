@@ -16,12 +16,12 @@ ms.assetid: 497e479b-add8-4644-870a-917f15306b97
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 281dfa7a8c671923dd64eb8ecaee0629d4b8e224
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 23f633b57a677996a5f286ca1f5ac4b911b3cdda
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49223055"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829314"
 ---
 # <a name="windows-installer-basics"></a>Windows インストーラーの基本事項
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -33,17 +33,17 @@ Windows インストーラーは、Windows インストーラーのコンポー�
 ## <a name="authoring-a-vspackage"></a>VSPackage の作成  
  Windows インストーラーは、Windows インストーラーは、インストール、アンインストール、または製品を修復し、セットアップ ユーザー インターフェイス (UI) を実行する必要がある情報が含まれるインストール パッケージを使用します。 各インストール パッケージには、インストール データベース、概要情報ストリーム、およびインストールのさまざまな部分のデータ ストリームを含む .msi ファイルが含まれています。 インストーラーを使用するには、インストールを作成する必要があります。 インストーラーでは、コンポーネントの概念にインストールを整理し、リレーショナル データベースのインストールに関する情報を格納、ため広範インストール パッケージを作成するプロセスには、次の手順が必要です。  
   
-1.  作成、バージョン管理とサイド バイ サイドで戦略をサポートするために、セットアップを計画します。  
+1. 作成、バージョン管理とサイド バイ サイドで戦略をサポートするために、セットアップを計画します。  
   
-2.  ユーザーに表示するのには、機能を特定します。  
+2. ユーザーに表示するのには、機能を特定します。  
   
-3.  VSPackage と依存関係をコンポーネントに編成します。  
+3. VSPackage と依存関係をコンポーネントに編成します。  
   
-4.  情報を含むインストール データベースを設定します。  
+4. 情報を含むインストール データベースを設定します。  
   
-5.  インストール パッケージを検証します。  
+5. インストール パッケージを検証します。  
   
- このドキュメントは主に、プロセスの最初と 3 番目の手順を実行します。 これらの手順で、VSPackage の特徴に編成する WICs、バージョン管理とサービスの今後のバージョンに対応する方針をフレームできますので[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。 残りの 3 つの手順は、プラットフォーム SDK の Windows インストーラーのドキュメントで詳しく説明します。  
+   このドキュメントは主に、プロセスの最初と 3 番目の手順を実行します。 これらの手順で、VSPackage の特徴に編成する WICs、バージョン管理とサービスの今後のバージョンに対応する方針をフレームできますので[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。 残りの 3 つの手順は、プラットフォーム SDK の Windows インストーラーのドキュメントで詳しく説明します。  
   
 ## <a name="key-terms"></a>主な用語  
  Windows インストーラー テクノロジに関連する主な用語の定義を次に示します。  

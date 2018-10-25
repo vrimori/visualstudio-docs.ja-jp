@@ -17,12 +17,12 @@ ms.assetid: 27d4bbcf-99b1-498f-8b66-40002e3db0f8
 caps.latest.revision: 47
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 89526f799c0b4e260bba140c413f2c89e573a701
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 327d312ec13e449f0e116a11f920f17a439f569c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49223734"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818106"
 ---
 # <a name="adding-a-most-recently-used-list-to-a-submenu"></a>最近使用した一覧のサブメニューへの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "49223734"
   
 ## <a name="creating-an-extension"></a>拡張機能の作成  
   
--   次の手順では、[サブメニューのメニューに追加](../extensibility/adding-a-submenu-to-a-menu.md)で、次の手順が変更されるサブメニューを作成します。  
+- 次の手順では、[サブメニューのメニューに追加](../extensibility/adding-a-submenu-to-a-menu.md)で、次の手順が変更されるサブメニューを作成します。  
   
- このチュートリアルの手順では、VSPackage の名前があると仮定`TopLevelMenu`で使用される名前である[Visual Studio のメニュー バーにメニューを追加する](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)します。  
+  このチュートリアルの手順では、VSPackage の名前があると仮定`TopLevelMenu`で使用される名前である[Visual Studio のメニュー バーにメニューを追加する](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)します。  
   
 ## <a name="creating-a-dynamic-item-list-command"></a>項目の動的リスト コマンドの作成  
   

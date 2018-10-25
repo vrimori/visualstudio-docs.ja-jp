@@ -17,12 +17,12 @@ ms.assetid: beba7174-e787-45c2-b6ff-a60f67ad4998
 caps.latest.revision: 27
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8179262ceabe1765ee6c9eab96553bcbcbbee419
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: bab850a6943268581035336a923232377e6489f2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49191400"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843679"
 ---
 # <a name="accessing-stored-font-and-color-settings"></a>ストアドのフォントと色の設定にアクセスします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,17 +53,17 @@ ms.locfileid: "49191400"
 ## <a name="to-use-state-persistence-of-fonts-and-colors"></a>フォントおよび色の状態の永続化を使用するには  
  永続化するフォントと色が含まれます。  
   
--   IDE 設定をレジストリに格納されている設定を同期しています。  
+- IDE 設定をレジストリに格納されている設定を同期しています。  
   
--   レジストリの変更情報を伝達します。  
+- レジストリの変更情報を伝達します。  
   
--   設定して、レジストリに格納されている設定を取得します。  
+- 設定して、レジストリに格納されている設定を取得します。  
   
- IDE 設定と記憶域の設定の同期は、きわめて透過的です。 基になる IDE が自動的に更新された設定を書き込みます**表示項目**カテゴリのレジストリ エントリにします。  
+  IDE 設定と記憶域の設定の同期は、きわめて透過的です。 基になる IDE が自動的に更新された設定を書き込みます**表示項目**カテゴリのレジストリ エントリにします。  
   
- VSPackage が、イベントが生成される必要があります複数 Vspackage では、特定のカテゴリを共有している場合場合のメソッド、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>インターフェイスを使用してストアドのレジストリ設定を変更します。  
+  VSPackage が、イベントが生成される必要があります複数 Vspackage では、特定のカテゴリを共有している場合場合のメソッド、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>インターフェイスを使用してストアドのレジストリ設定を変更します。  
   
- 既定では、イベントの生成は有効になっていません。 イベントの生成を有効にするを使用して、カテゴリを開く<xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS>します。 これにより、IDE を呼び出して、適切な<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents>VSPackage を実装するメソッド。  
+  既定では、イベントの生成は有効になっていません。 イベントの生成を有効にするを使用して、カテゴリを開く<xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS>します。 これにより、IDE を呼び出して、適切な<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents>VSPackage を実装するメソッド。  
   
 > [!NOTE]
 >  によって変更、**フォントおよびカラー**プロパティ ページの独立したイベントを生成する<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>します。 使用することができます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorCacheManager>インターフェイスのメソッドを呼び出す前にキャッシュされているフォントおよび色の設定の更新が必要かどうかを判断、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>クラス。  

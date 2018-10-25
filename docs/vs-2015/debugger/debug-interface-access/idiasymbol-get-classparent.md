@@ -18,12 +18,12 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4b6376fe452cad893e7fd80f7b3c8b6a5a444d4c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 9fdb83069276134d064ed88555e77bcbbad30627
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49171926"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890362"
 ---
 # <a name="idiasymbolgetclassparent"></a>IDiaSymbol::get_classParent
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -48,7 +48,7 @@ HRESULT get_classParent (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティがシンボルを使用できないことを意味します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

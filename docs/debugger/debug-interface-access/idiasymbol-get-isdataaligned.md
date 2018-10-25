@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_isdataaligned |Microsoft ドキュメント
+title: Idiasymbol::get_isdataaligned |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2888ce16c64b12ad846289148412733b18bc2500
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d4c2d43129eadb0b0779086fc5dba0860c735cac
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31465552"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837803"
 ---
 # <a name="idiasymbolgetisdataaligned"></a>IDiaSymbol::get_isDataAligned
 ユーザー定義型 (UDT) がいくつかの特定のメモリ境界に配置されたかどうかを指定するフラグを取得します。  
@@ -34,22 +34,22 @@ HRESULT get_isDataAligned(
   
 #### <a name="parameters"></a>パラメーター  
  `pFlag`  
- [out]返します`TRUE`UDT がいくつかメモリ境界に配置された場合、それを返します`FALSE`です。  
+ [out]返します`TRUE`UDT がいくつかメモリ境界に配置された場合を返しますそれ以外の場合、`FALSE`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティが、シンボルを使用できないことを意味します。  
+>  戻り値`S_FALSE`プロパティがシンボルを使用できないことを意味します。  
   
-## <a name="remarks"></a>コメント  
- 既定以外のデータの整列の実行可能ファイルがコンパイルされるときに、このプロパティを設定、通常は。 たとえば、Microsoft C コンパイラがコマンド ライン オプションを使用してデータのアラインメントを変更できます/Zp*#* ここで、 *#* バイト値です。  
+## <a name="remarks"></a>Remarks  
+ 既定以外のデータの配置で実行可能ファイルがコンパイルされるとき、このプロパティは設定一般にします。 Microsoft C コンパイラがコマンド ライン オプションをデータの配置を変更するなど、/Zp<em>#</em>ここで、 *#* はバイト値です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|dia2.h|  
+|ヘッダー:|Dia2.h|  
 |バージョン:|DIA SDK バージョン 8.0|  
   
 ## <a name="see-also"></a>関連項目  

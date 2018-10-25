@@ -15,12 +15,12 @@ ms.assetid: 6b151891-c06d-40b1-9867-42298caa8492
 caps.latest.revision: 22
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b089794cc9135d8658a47d61d3d40c3feef7451a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 1ab7e4e0cf46d90a437f4239798c0ec8a0a28e74
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49227007"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862763"
 ---
 # <a name="getting-started-with-language-service-and-editor-extensions"></a>言語サービスとエディターの拡張機能の概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,17 +48,17 @@ ms.locfileid: "49227007"
   
  基本的な種類のエディター拡張機能の一部を次に示します。  
   
--   余白とスクロール バー  
+- 余白とスクロール バー  
   
--   Tags  
+- Tags  
   
--   修飾  
+- 修飾  
   
--   オプション  
+- オプション  
   
--   IntelliSense  
+- IntelliSense  
   
- エディターの拡張ポイントの詳細については、次を参照してください。[言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)します。  
+  エディターの拡張ポイントの詳細については、次を参照してください。[言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)します。  
   
 ## <a name="deploying-editor-extensions"></a>エディターの拡張機能の配置  
  Visual Studio では、source.extension.vsixmanifest をソリューションに、ソリューションの構築をという名前のメタデータ ファイルを追加して、Visual Studio に認識されているフォルダーにバイナリ ファイルとマニフェストのコピーを追加してエディター拡張機能をデプロイします。 マニフェスト ファイルは、拡張機能 (たとえば、名前、作成者、バージョン、およびコンテンツの種類など) に関する基本的な情報を定義します。 VSIX のマニフェスト ファイルと拡張機能をデプロイする方法の詳細については、次を参照してください。 [Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)します。  

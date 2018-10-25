@@ -22,12 +22,12 @@ caps.latest.revision: 42
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 47cb401bae952e8ecdfaf18848e63f9d9a320be7
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 853719e66bf7cd6a258bc2df231ca04fca7a9242
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49186200"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49884902"
 ---
 # <a name="walkthrough-debugging-a-multithreaded-application"></a>チュートリアル : マルチスレッド アプリケーションのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -105,17 +105,17 @@ Thread::Sleep(3000);
   
 #### <a name="to-discover-the-thread-marker"></a>スレッド マーカーを見つけるには  
   
-1.  右クリックし、**スレッド**ウィンドウで、 をクリックし、**ソース スレッドを表示**。  
+1. 右クリックし、**スレッド**ウィンドウで、 をクリックし、**ソース スレッドを表示**。  
   
-2.  ウィンドウ左端の余白に注目します。 マーカーがある行には、2 色のより糸の形をしたアイコンがあります。 色は、片方は赤で、もう片方は青です。 スレッド マーカーは、スレッドが停止している位置を示します。 このことから、スレッドはこの位置で停止していると考えられます。  
+2. ウィンドウ左端の余白に注目します。 マーカーがある行には、2 色のより糸の形をしたアイコンがあります。 色は、片方は赤で、もう片方は青です。 スレッド マーカーは、スレッドが停止している位置を示します。 このことから、スレッドはこの位置で停止していると考えられます。  
   
-3.  スレッド マーカーの上にポインターを置きます。 データヒントが表示されます。 データヒントは、停止したスレッドごとに名前とスレッド ID 番号を表示します。 この場合、スレッドは 1 つだけで、名前は `<noname>` です。  
+3. スレッド マーカーの上にポインターを置きます。 データヒントが表示されます。 データヒントは、停止したスレッドごとに名前とスレッド ID 番号を表示します。 この場合、スレッドは 1 つだけで、名前は `<noname>` です。  
   
-4.  スレッド マーカーを右クリックします。 ショートカット メニューに表示される項目に注目します。  
+4. スレッド マーカーを右クリックします。 ショートカット メニューに表示される項目に注目します。  
   
- このアイコンは、*スレッド マーカー*:  
+   このアイコンは、*スレッド マーカー*:  
   
- ![スレッド マーカー](../debugger/media/threadmarker.gif "ThreadMarker")  
+   ![スレッド マーカー](../debugger/media/threadmarker.gif "ThreadMarker")  
   
 ## <a name="flagging-and-unflagging-threads"></a>スレッドに対するフラグの設定と設定解除  
  [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)] では、特に注目するスレッドにフラグを設定できます。 スレッドに対するフラグの設定は、重要なスレッドを追跡し、注目する必要がないスレッドを無視するのに適しています。  

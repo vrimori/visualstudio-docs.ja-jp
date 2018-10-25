@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_STREAM_FIELDS |Microsoft ドキュメント
+title: DISASSEMBLY_STREAM_FIELDS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a8735992574699ba2b108fc493e9003ca52c9b2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9489b8c4399ae72bf7f6a70011eec347d870ca80
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31103527"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928335"
 ---
 # <a name="disassemblystreamfields"></a>DISASSEMBLY_STREAM_FIELDS
 [逆アセンブル] フィールドの詳細を取得するには、どのような情報を指定します。  
@@ -66,52 +66,52 @@ public enum enum_DISASSEMBLY_STREAM_FIELDS {
   
 ## <a name="members"></a>メンバー  
  DSF_ADDRESS  
- 初期化/を使用して、`bstrAddress`フィールドです。  
+ 初期化/使用、`bstrAddress`フィールド。  
   
  DSF_ADDRESSOFFSET  
- 初期化/を使用して、`bstrAddressOffset`フィールドです。  
+ 初期化/使用、`bstrAddressOffset`フィールド。  
   
  DSF_CODEBYTES  
- 初期化/を使用して、`bstrCodeBytes`フィールドです。  
+ 初期化/使用、`bstrCodeBytes`フィールド。  
   
  DSF_OPCODE  
- 初期化/を使用して、`bstrOpCode`フィールドです。  
+ 初期化/使用、`bstrOpCode`フィールド。  
   
  DSF_OPERANDS  
- 初期化/を使用して、`bstrOperands`フィールドです。  
+ 初期化/使用、`bstrOperands`フィールド。  
   
  DSF_SYMBOL  
- 初期化/を使用して、`bstrSymbol`フィールドです。  
+ 初期化/使用、`bstrSymbol`フィールド。  
   
  DSF_CODELOCATIONID  
- 初期化/を使用して、`uCodeLocationId`フィールドです。  
+ 初期化/使用、`uCodeLocationId`フィールド。  
   
  DSF_POSITION  
- 初期化/を使用して、`posBeg`と`posEnd`フィールドです。  
+ 初期化/使用、`posBeg`と`posEnd`フィールド。  
   
  DSF_DOCUMENTURL  
- 初期化/を使用して、`bstrDocumentUrl`フィールドです。  
+ 初期化/使用、`bstrDocumentUrl`フィールド。  
   
  DSF_BYTEOFFSET  
- 初期化/を使用して、`dwByteOffset`フィールドです。  
+ 初期化/使用、`dwByteOffset`フィールド。  
   
  DSF_FLAGS  
- 初期化/を使用して、 `dwFlags` ([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) フィールドです。  
+ 初期化/使用、 `dwFlags` ([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) フィールド。  
   
  DSF_OPERANDS_SYMBOLS  
- シンボル名を含む、`bstrOperands`フィールドです。  
+ 内のシンボル名を含める、`bstrOperands`フィールド。  
   
  DSF_ALL  
  [逆アセンブル] ストリームのすべてのフィールドを指定します。  
   
-## <a name="remarks"></a>コメント  
- パラメーターとして渡される、[読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)メソッドのどのフィールドを示すために、 [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)構造が初期化するのには。  
+## <a name="remarks"></a>Remarks  
+ パラメーターとして渡される、[読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)のどのフィールドを示すメソッド、 [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)構造体が初期化されるは。  
   
- 使用、`dwFields`のメンバー、`DisassemblyData`を示すためにどのフィールドに使用されると有効な構造が返される構造体。  
+ 使用、`dwFields`のメンバー、`DisassemblyData`構造体を構造体が返されるときにどのフィールドが使用し、有効なレポートを示します。  
   
- これらの値は、ビットごとと組み合わせること`OR`です。  
+ これらの値は、演算と組み合わせることがあります`OR`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

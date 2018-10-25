@@ -1,5 +1,5 @@
 ---
-title: Idiadatasource::loaddatafrompdb |Microsoft ドキュメント
+title: Idiadatasource::loaddatafrompdb |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1910d54ad1a9d2964869beb4854ea97600569b7c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0d1ed1d6edf2fc9ccc30f824cbfdf9ff67f0c2a5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31468360"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49918819"
 ---
 # <a name="idiadatasourceloaddatafrompdb"></a>IDiaDataSource::loadDataFromPdb
-開き、デバッグ データ ソースとしてのプログラム データベース (.pdb) ファイルを用意します。  
+開き、デバッグのデータ ソースとしてのプログラム データベース (.pdb) ファイルを準備します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,23 +37,23 @@ HRESULT loadDataFromPdb (
  [in].Pdb ファイルへのパス。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 次の表は、このメソッドの戻り値を示します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 次の表では、このメソッドの戻り値を示します。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|E_PDB_NOT_FOUND|開くには、ファイルが失敗したか、ファイル、無効な形式であることを確認します。|  
+|E_PDB_NOT_FOUND|ファイルを開いてに失敗したか、ファイルが無効な形式であることを確認します。|  
 |E_PDB_FORMAT|旧形式のファイルにアクセスしようとしています。|  
 |E_INVALIDARG|無効なパラメーター。|  
-|E_UNEXPECTED|データ ソースは、既に準備されています。|  
+|E_UNEXPECTED|データ ソースは既に準備されています。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このメソッドは、.pdb ファイルから直接デバッグ データを読み込みます。  
   
- 特定の条件に対して .pdb ファイルを検証するを使用して、 [idiadatasource::loadandvalidatedatafrompdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)メソッドです。  
+ 特定の条件に対して、.pdb ファイルを検証するには、使用、 [idiadatasource::loadandvalidatedatafrompdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)メソッド。  
   
- アクセスするデータの読み込みプロセス (コールバック機構) を通じてを使用して、 [idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)メソッドです。  
+ (コールバック機構) を通じてデータの読み込みプロセスにアクセスを使用して、 [idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)メソッド。  
   
- メモリから直接読み込む .pdb ファイルを使用して、 [idiadatasource::loaddatafromistream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)メソッドです。  
+ .Pdb ファイルをメモリから直接読み込むには使用、 [idiadatasource::loaddatafromistream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)メソッド。  
   
 ## <a name="example"></a>例  
   

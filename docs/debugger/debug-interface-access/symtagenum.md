@@ -1,5 +1,5 @@
 ---
-title: SymTagEnum |Microsoft ドキュメント
+title: SymTagEnum |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 36dc9b3d9fc15b06c92db27b38d94805c1ce8a25
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 9a9b3f28858bdeb6783175301de40de0d492739a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31480863"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875218"
 ---
 # <a name="symtagenum"></a>SymTagEnum
 記号の種類を指定します。  
@@ -70,19 +70,19 @@ enum SymTagEnum {
   
 ## <a name="elements"></a>Elements  
  `SymTagNull`  
- シンボルに型が含まれていないことを示します。  
+ シンボルに型がないことを示します。  
   
  `SymTagExe`  
- シンボルが .exe ファイルであることを示します。 1 つだけを使用する必要がある`SymTagExe`シンボル ストアごとのシンボルです。 これにより、グローバル スコープとして機能しは構文上の親がありません。  
+ シンボルが .exe ファイルであることを示します。 1 つしかない`SymTagExe`シンボル ストアごとのシンボルです。 グローバル スコープとして機能し、構文上の親はありません。  
   
  `SymTagCompiland`  
- コンパイル単位シンボルをシンボル ストアの各コンポーネントのコンパイル単位を示します。 ネイティブ アプリケーションは、`SymTagCompiland`シンボルが、イメージにリンクされたオブジェクト ファイルに対応します。 Microsoft Intermediate Language (MSIL) のイメージの一部の種類の場合は、クラスごとの 1 つのコンパイル単位です。  
+ コンパイル単位シンボルをシンボル ストアの場合は、各コンパイル単位コンポーネントを示します。 ネイティブ アプリケーションは、`SymTagCompiland`シンボルがイメージにリンクされているオブジェクト ファイルに対応しています。 Microsoft Intermediate Language (MSIL) のイメージの一部の種類の場合は、クラスごとの 1 つのコンパイル単位です。  
   
  `SymTagCompilandDetails`  
  シンボルが、コンパイル単位の拡張属性が含まれていることを示します。 これらのプロパティを取得するには、コンパイル単位シンボルを読み込む必要があります。  
   
  `SymTagCompilandEnv`  
- シンボルが、コンパイル単位に対して定義されている環境文字列であることを示します。  
+ シンボルが定義されている、コンパイル単位の環境文字列であることを示します。  
   
  `SymTagFunction`  
  シンボルが関数であることを示します。  
@@ -94,19 +94,19 @@ enum SymTagEnum {
  シンボルがデータであることを示します。  
   
  `SymTagAnnotation`  
- コードの注釈のシンボルであることを示します。 このシンボルの子が定数のデータの文字列 (`SymTagData`、 `LocIsConstant`、 `DataIsConstant`)。 ほとんどのクライアントは、このシンボルを無視します。  
+ コードの注釈のシンボルであることを示します。 このシンボルの子は定数データの文字列 (`SymTagData`、 `LocIsConstant`、 `DataIsConstant`)。 ほとんどのクライアントは、このシンボルを無視します。  
   
  `SymTagLabel`  
  シンボルはラベルであることを示します。  
   
  `SymTagPublicSymbol`  
- シンボルは、パブリック シンボルであることを示します。 ネイティブ アプリケーションは、このシンボルは、イメージをリンクする際に発生した COFF 外部シンボルです。  
+ シンボルは、パブリック シンボルであることを示します。 ネイティブ アプリケーションは、このシンボルは、イメージをリンク中に発生した COFF 外部シンボルです。  
   
  `SymTagUDT`  
- シンボルが、ユーザー定義型 (構造体、クラス、または和集合) であることを示します。  
+ シンボルは、ユーザー定義型 (構造体、クラス、または和集合) であることを示します。  
   
  `SymTagEnum`  
- シンボルが列挙型であることを示します。  
+ シンボルが列挙体であることを示します。  
   
  `SymTagFunctionType`  
  シンボルが関数のシグネチャの型であることを示します。  
@@ -124,43 +124,43 @@ enum SymTagEnum {
  シンボルがあることを示します、 `typedef`、つまり、別の型のエイリアスです。  
   
  `SymTagBaseClass`  
- シンボルがユーザー定義型の基底クラスであることを示します。  
+ シンボルは、ユーザー定義型の基底クラスであることを示します。  
   
  `SymTagFriend`  
- シンボルがユーザー定義型のフレンドであることを示します。  
+ シンボルは、ユーザー定義型のフレンドであることを示します。  
   
  `SymTagFunctionArgType`  
  シンボルが関数の引数であることを示します。  
   
  `SymTagFuncDebugStart`  
- シンボルが関数のプロローグ コードの終了位置であることを示します。  
+ シンボルは、関数のプロローグ コードの終了位置であることを示します。  
   
  `SymTagFuncDebugEnd`  
- シンボルが関数のエピローグ コードの開始位置であることを示します。  
+ シンボルは、関数のエピローグ コードの開始位置であることを示します。  
   
  `SymTagUsingNamespace`  
  シンボルが、現在のスコープでアクティブな名前空間の名前であることを示します。  
   
  `SymTagVTableShape`  
- シンボルが仮想テーブルの説明であることを示します。  
+ シンボルは、仮想テーブルの説明であることを示します。  
   
  `SymTagVTable`  
- シンボルが仮想テーブルへのポインターであることを示します。  
+ シンボルは、仮想テーブルのポインターであることを示します。  
   
  `SymTagCustom`  
- シンボルがカスタム シンボルであり、DIA. で解釈されないことを示します  
+ シンボルがカスタム シンボルであり、中で解釈されないことを示します  
   
  `SymTagThunk`  
- シンボルがサンクを 16、32 ビット コードの間でデータを共有するために使用されることを示します。  
+ シンボルがサンク 16、32 ビット コードの間でデータを共有するために使用されることを示します。  
   
  `SymTagCustomType`  
- シンボルがカスタム コンパイラ シンボルであることを示します。  
+ シンボルは、カスタム コンパイラ シンボルであることを示します。  
   
  `SymTagManagedType`  
- シンボルがメタデータであることを示します。  
+ メタデータのシンボルがあることを示します。  
   
  `SymTagDimension`  
- シンボルが、FORTRAN 多次元配列であることを示します。  
+ シンボルは、FORTRAN の多次元配列であることを示します。  
   
  `SymTagCallSite`  
  シンボルが呼び出しサイトを表すことを示します。  
@@ -172,20 +172,20 @@ enum SymTagEnum {
  シンボルは、基本インターフェイスであることを示します。  
   
  `SymTagVectorType`  
- シンボルがベクトルの型であることを示します。  
+ シンボルは、ベクター型であることを示します。  
   
  `SymTagMatrixType`  
  シンボルがマトリックス型であることを示します。  
   
  `SymTagHLSLType`  
- シンボルが高レベルのシェーダー言語の型であることを示します。  
+ シンボルが High Level Shader Language 型であることを示します。  
   
-## <a name="remarks"></a>コメント  
- デバッグ ファイル内のすべてのシンボルでは、シンボルの型を指定する識別タグがあります。  
+## <a name="remarks"></a>Remarks  
+ デバッグ ファイル内のすべてのシンボルはシンボルの種類を指定する識別タグがあります。  
   
- この列挙体の値がへの呼び出しによって返される、 [idiasymbol::get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)メソッドです。  
+ この列挙体の値が呼び出しによって返される、 [idiasymbol::get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)メソッド。  
   
- この列挙体の値は、特定の記号の型への検索のスコープを制限する次のメソッドに渡されます。  
+ この列挙体の値は、特定の記号の型を検索のスコープを制限する次のメソッドに渡されます。  
   
 -   [IDiaSession::findSymbolByAddr](../../debugger/debug-interface-access/idiasession-findsymbolbyaddr.md)  
   
@@ -203,7 +203,7 @@ enum SymTagEnum {
   
 -   [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: cvconst.h  
   
 ## <a name="see-also"></a>関連項目  

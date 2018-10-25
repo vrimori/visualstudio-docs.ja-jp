@@ -17,12 +17,12 @@ ms.assetid: 7d397207-db03-4ec0-9f79-3794056ed89f
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 237b5a7ab2397b6bb9cf395ca156b25db5336ae2
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 2061682280ab110ee7c951ed41cf6ccd42f5c080
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49296115"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49814806"
 ---
 # <a name="threadproperties"></a>THREADPROPERTIES
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -80,7 +80,7 @@ public struct THREADPROPERTIES {
 ## <a name="remarks"></a>Remarks  
  この構造体への呼び出しによって入力されます、 [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)メソッド。 そのために返される情報は通常設定で使用、**スレッド**ウィンドウ。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

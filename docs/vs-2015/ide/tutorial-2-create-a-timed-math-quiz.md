@@ -14,32 +14,32 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5d86d42ce7e345a30c56390bede6957dff8bcd67
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 8b0b7a5949ab8fe624a087a1e024367f896ddb99
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49205074"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49884889"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>チュートリアル 2: 制限時間ありの計算クイズの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 このチュートリアルでは、クイズの受け手が制限時間内にランダムに表示される 4 つの計算問題に答えるクイズを作成します。 以下の方法について説明します。  
   
--   `Random` クラスを使用して乱数を生成します。  
+- `Random` クラスを使用して乱数を生成します。  
   
--   **Timer** コントロールを使用して特定の時点で発生するようにイベントをトリガーします。  
+- **Timer** コントロールを使用して特定の時点で発生するようにイベントをトリガーします。  
   
--   `if else` ステートメントを使用してプログラム フローを制御します。  
+- `if else` ステートメントを使用してプログラム フローを制御します。  
   
--   コードで基本的な算術演算を実行します。  
+- コードで基本的な算術演算を実行します。  
   
- 完了すると、クイズは数値が異なることを除いて次の図のようになります。  
+  完了すると、クイズは数値が異なることを除いて次の図のようになります。  
   
- ![4 つの問題がある計算クイズ](../ide/media/express-finishedquiz.png "Express_FinishedQuiz")  
-このチュートリアルで作成するクイズ  
+  ![4 つの問題がある計算クイズ](../ide/media/express-finishedquiz.png "Express_FinishedQuiz")  
+  このチュートリアルで作成するクイズ  
   
- クイズの完全バージョンをダウンロードするには、「[Complete Math Quiz tutorial sample](http://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c)」(計算クイズのチュートリアルの完全なサンプル) を参照してください。  
+  クイズの完全バージョンをダウンロードするには、「[Complete Math Quiz tutorial sample](http://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c)」(計算クイズのチュートリアルの完全なサンプル) を参照してください。  
   
 > [!NOTE]
 >  このチュートリアルでは、Visual C# と Visual Basic の両方が取り上げられているため、使用しているプログラミング言語固有の情報に注意してください。  

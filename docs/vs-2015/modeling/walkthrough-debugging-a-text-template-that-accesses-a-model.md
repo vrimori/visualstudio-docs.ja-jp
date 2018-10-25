@@ -12,12 +12,12 @@ caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b8fd24f6c1e9b0427746296efa9a839bf46ed7ca
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ca80111415c869543297ed24707ae27f0490f07b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49220091"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924890"
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>チュートリアル: モデルにアクセスするテキスト テンプレートのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,15 +30,15 @@ ms.locfileid: "49220091"
 ## <a name="creating-a-domain-specific-language-solution"></a>ドメイン固有言語ソリューションを作成します。  
  この手順では、次の特性を持つドメイン固有言語ソリューションを作成します。  
   
--   名前: DebuggingTestLanguage  
+- 名前: DebuggingTestLanguage  
   
--   ソリューション テンプレート: 最小言語  
+- ソリューション テンプレート: 最小言語  
   
--   ファイル拡張子: .ddd  
+- ファイル拡張子: .ddd  
   
--   会社名: Fabrikam  
+- 会社名: Fabrikam  
   
- ドメイン固有言語ソリューションを作成する方法の詳細については、次を参照してください。[方法: ドメイン固有言語ソリューションを作成](../modeling/how-to-create-a-domain-specific-language-solution.md)です。  
+  ドメイン固有言語ソリューションを作成する方法の詳細については、次を参照してください。[方法: ドメイン固有言語ソリューションを作成](../modeling/how-to-create-a-domain-specific-language-solution.md)です。  
   
 ## <a name="creating-a-text-template"></a>テキスト テンプレートの作成  
  テキスト テンプレートをソリューションに追加します。  

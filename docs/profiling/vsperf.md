@@ -10,21 +10,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fcac1e902ccc1fcc5432a231c5f34629422815fd
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 5c841e6930db8f65aaf93c314359656689ecfd1c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34477393"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903544"
 ---
 # <a name="vsperf"></a>VSPerf
 **VsPerf** コマンド ライン ツールを使用して、次を行います。  
   
-1.  Visual Studio がデバイスにインストールされていない場合、UWP アプリをコマンド ラインからプロファイルします。  
+1. Visual Studio がデバイスにインストールされていない場合、UWP アプリをコマンド ラインからプロファイルします。  
   
-2.  サンプリング プロファイル方法を使用して、Windows 8 デスクトップ アプリケーションと Windows Server 2012 アプリケーションをプロファイルします。  
+2. サンプリング プロファイル方法を使用して、Windows 8 デスクトップ アプリケーションと Windows Server 2012 アプリケーションをプロファイルします。  
   
- プロファイル オプションの詳細については、「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
+   プロファイル オプションの詳細については、「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
   
 ## <a name="uwp-apps-only"></a>UWP アプリのみ  
  これらのオプションは、UWP アプリにのみ適用されます。  
@@ -34,7 +34,7 @@ ms.locfileid: "34477393"
 |**/app:{AppName}**|プロファイラーを起動し、スタート メニューから起動される指定したアプリを待機します。<br /><br /> `vsperf /listapps` を実行して、インストール済みアプリの Name と PackageFullName を表示します。|  
 |**/package:{PackageFullName}**|プロファイラーを起動し、スタート メニューから起動される指定したアプリを待機します。<br /><br /> `vsperf /listapps` を実行して、インストール済みアプリの Name と PackageFullName を表示します。|  
 |**/js**|JavaScript アプリのプロファイルを行うために必要です。<br /><br /> JavaScript アプリからパフォーマンス データを収集します。<br /><br /> /package または /attach でのみ使用します。|  
-|**/noclr**|任意。 CLR データは収集しません。<br /><br /> /package または /attach でのみ使用します。<br /><br /> 最適化で、マネージ シンボルは解決されません。|  
+|**/noclr**|任意。 CLR データは収集しません。<br /><br /> /package または /attach でのみ使用します。<br /><br /> 最適化で、マネージド シンボルは解決されません。|  
 |**/listapps**|インストール済みアプリの Name と PackageFullName を一覧表示します。|  
   
 ## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a>Windows 8 デスクトップ アプリケーション、および Windows Server 2012 のアプリケーションのみ  

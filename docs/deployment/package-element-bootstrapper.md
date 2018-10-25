@@ -17,18 +17,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a0c1ab7a2e304fcaede2a51a1047691343f34783
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 49867ddc897a9c1a1241a891a3ba3de866d84688
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39080787"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899241"
 ---
 # <a name="ltpackagegt-element-bootstrapper"></a>&lt;パッケージ&gt;要素 (ブートス トラップ)
 `Package`要素は、パッケージ ファイル内の最上位の XML 要素。  
-  
+
 ## <a name="syntax"></a>構文  
-  
+
 ```xml  
 <Package  
     Culture  
@@ -75,7 +75,7 @@ ms.locfileid: "39080787"
             SearchDepth  
         />  
     </InstallChecks>  
-  
+
     <Commands  
         Reboot  
     >  
@@ -111,7 +111,7 @@ ms.locfileid: "39080787"
             </ExitCodes>  
         </Command>  
     </Commands>  
-  
+
     <PackageFiles  
         CopyAllComponents  
     >  
@@ -122,14 +122,14 @@ ms.locfileid: "39080787"
             PublicKey  
         />  
     </PackageFiles>  
-  
+
     <Strings>  
         <String  
             Name  
         >  
         </String>  
     </Strings>  
-  
+
     <Schedules>  
         <Schedule  
             Name  
@@ -141,33 +141,34 @@ ms.locfileid: "39080787"
     </Schedules>  
 </Package>  
 ```  
-  
+
 ## <a name="elements-and-attributes"></a>要素と属性  
  `Package`要素が必要です。 次の属性があります。  
-  
-|属性|説明|  
-|---------------|-----------------|  
-|`Culture`|必須。 このパッケージには、使用する言語を決定するカルチャを定義します。 この属性がキーに、`Strings`要素で、インストール時に製品名とエラー メッセージのカルチャに固有の文字列の一覧を表示します。|  
-|`Name`|必須。 などのツールで開発者に表示されるパッケージの名前[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 この属性がキーに、`Strings`要素が含まれている、`String`を持つ要素、`Name`と`Culture`プロパティが一致するように設定、`Name`と`Culture`プロパティの`Package`します。|  
-|`LicenseAgreement`|任意。 ライセンス契約 (EULA) を含む配布パッケージでは、ファイルの名前を指定します。  このファイルは、プレーン テキストを指定できます (*.txt*) またはリッチ テキスト形式。 (*.rtf*)|  
-  
+
+
+| 属性 | 説明 |
+|--------------------| - |
+| `Culture` | 必須。 このパッケージには、使用する言語を決定するカルチャを定義します。 この属性がキーに、`Strings`要素で、インストール時に製品名とエラー メッセージのカルチャに固有の文字列の一覧を表示します。 |
+| `Name` | 必須。 などのツールで開発者に表示されるパッケージの名前[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 この属性がキーに、`Strings`要素が含まれている、`String`を持つ要素、`Name`と`Culture`プロパティが一致するように設定、`Name`と`Culture`プロパティの`Package`します。 |
+| `LicenseAgreement` | 任意。 ライセンス契約 (EULA) を含む配布パッケージでは、ファイルの名前を指定します。  このファイルは、プレーン テキストを指定できます (*.txt*) またはリッチ テキスト形式。 (*.rtf*) |
+
 ## <a name="example"></a>例  
  次のコード例は、再配布するための完全なパッケージ ファイルを示しています、[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]します。  
-  
+
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
-  
+
 <Package  
   xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"  
   Name="DisplayName"  
   Culture="Culture"  
   LicenseAgreement="eula.rtf"  
 >  
-  
+
     <PackageFiles>  
         <PackageFile Name="eula.rtf"/>  
     </PackageFiles>  
-  
+
     <!-- Defines a localizable string table for error messages-->  
     <Strings>  
         <String Name="DisplayName">.NET Framework 2.0</String>  
@@ -185,9 +186,9 @@ ms.locfileid: "39080787"
         <String Name="InstMsiAExe">http://go.microsoft.com/fwlink/?LinkId=37285</String>  
         <String Name="Msi30Exe">http://go.microsoft.com/fwlink/?LinkId=37287</String>  
     </Strings>  
-  
+
 </Package>  
 ```  
-  
+
 ## <a name="see-also"></a>関連項目  
  [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)

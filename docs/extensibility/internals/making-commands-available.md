@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd7344fe7227f6fa7afd00684a99d8172bad8736
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: c1292dc3879effa53f3b4a41b87374a3a5f46ff0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39510938"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49857134"
 ---
 # <a name="making-commands-available"></a>コマンドを使用可能にする
 Visual Studio には、複数の Vspackage を追加するときにユーザー インターフェイス (UI) をコマンドで overcrowded になる可能性があります。 次のように、この問題を軽減するためにパッケージをプログラムすることができます。
@@ -54,12 +54,13 @@ Visual Studio には、複数の Vspackage を追加するときにユーザー 
 
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] プロジェクトの読み込みまたはビルドから編集しようとしてなどのユーザー アクションの結果として変更を監視します。 変更が発生すると、IDE の外観が自動的に変更します。 次の表は、IDE の 4 つの主要なコンテキストを変更する[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]モニター。
 
-|コンテキストの種類|説明|
-|---------------------|-----------------|
-|アクティブなプロジェクトの種類|ほとんどの種類のプロジェクトのこの`GUID`値は、プロジェクトを実装する VSPackage の GUID と同じです。 ただし、[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]プロジェクト、プロジェクトの種類を使用して、`GUID`値として。|
-|アクティブなウィンドウ|通常、これは、現在の UI コンテキスト キー バインドを確立する最後のアクティブなドキュメント ウィンドウです。 ただし、ツール ウィンドウを内部 Web ブラウザーのようなキー バインドのテーブルを持つ可能性があります。 HTML エディターなどの複数タブ付きドキュメント ウィンドウ、すべてのタブが別のコマンド コンテキスト`GUID`します。|
-|アクティブな言語サービス|テキスト エディターで現在表示されているファイルに関連付けられている言語サービス。|
-|アクティブなツール ウィンドウ|開いていて、フォーカスのあるツール ウィンドウです。|
+
+| コンテキストの種類 | 説明 |
+|-------------------------| - |
+| アクティブなプロジェクトの種類 | ほとんどの種類のプロジェクトのこの`GUID`値は、プロジェクトを実装する VSPackage の GUID と同じです。 ただし、[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]プロジェクト、プロジェクトの種類を使用して、`GUID`値として。 |
+| アクティブなウィンドウ | 通常、これは、現在の UI コンテキスト キー バインドを確立する最後のアクティブなドキュメント ウィンドウです。 ただし、ツール ウィンドウを内部 Web ブラウザーのようなキー バインドのテーブルを持つ可能性があります。 HTML エディターなどの複数タブ付きドキュメント ウィンドウ、すべてのタブが別のコマンド コンテキスト`GUID`します。 |
+| アクティブな言語サービス | テキスト エディターで現在表示されているファイルに関連付けられている言語サービス。 |
+| アクティブなツール ウィンドウ | 開いていて、フォーカスのあるツール ウィンドウです。 |
 
  5 番目のコンテキストの主要な領域は、IDE の UI 状態です。 UI コンテキストがアクティブなコマンドのコンテキストによって識別される`GUID`s は、次のようにします。
 

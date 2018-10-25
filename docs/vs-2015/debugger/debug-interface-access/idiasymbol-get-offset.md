@@ -18,12 +18,12 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2ba1d0b1b657d937911d958bf2f7894c73911e6e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 2965d74efb785eaf9b793c01a574e6c2c0a8f3a6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49262341"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49848580"
 ---
 # <a name="idiasymbolgetoffset"></a>IDiaSymbol::get_offset
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -51,7 +51,7 @@ HRESULT get_offset (
 ## <a name="remarks"></a>Remarks  
  以前に判断によって認識されている時点からのオフセットです。 オフセットなど、`LocIsBitField`場所の型は、通常、含んでいるクラスの先頭から。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

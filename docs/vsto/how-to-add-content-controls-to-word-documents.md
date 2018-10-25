@@ -29,12 +29,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9d3cce301d5d49a7660751ee1580c99794c16d38
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: f654efacace3e4b7cbdfff8919309a09d4a544ff
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672335"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936967"
 ---
 # <a name="how-to-add-content-controls-to-word-documents"></a>方法: コンテンツの追加を Word 文書にコントロール
   ドキュメント レベルの Word プロジェクト デザイン時または実行時に、プロジェクト内の文書にコンテンツ コントロールを追加できます。 Word の VSTO アドイン プロジェクトでは、実行時に開いている文書にコンテンツ コントロールを追加できます。  
@@ -43,24 +43,24 @@ ms.locfileid: "35672335"
   
  このトピックでは、次のタスクについて説明します。  
   
--   [デザイン時にコンテンツ コントロールを追加します。](#designtime)  
+- [デザイン時にコンテンツ コントロールを追加します。](#designtime)  
   
--   [ドキュメント レベルのプロジェクトの実行時にコンテンツ コントロールを追加します。](#runtimedoclevel)  
+- [ドキュメント レベルのプロジェクトの実行時にコンテンツ コントロールを追加します。](#runtimedoclevel)  
   
--   [VSTO アドイン プロジェクトでの実行時にコンテンツ コントロールを追加します。](#runtimeaddin)  
+- [VSTO アドイン プロジェクトでの実行時にコンテンツ コントロールを追加します。](#runtimeaddin)  
   
- コンテンツ コントロールについて詳しくは、次を参照してください。[コンテンツ コントロール](../vsto/content-controls.md)します。  
+  コンテンツ コントロールについて詳しくは、次を参照してください。[コンテンツ コントロール](../vsto/content-controls.md)します。  
   
 ##  <a name="designtime"></a> コンテンツを追加するデザイン時コントロール  
  デザイン時にドキュメント レベルのプロジェクトの文書にコンテンツ コントロールを追加する方法はいくつかあります。  
   
--   **[ツールボックス]** の **[Word コントロール]** タブからコンテンツ コントロールを追加する。  
+- **[ツールボックス]** の **[Word コントロール]** タブからコンテンツ コントロールを追加する。  
   
--   Word でネイティブなコンテンツ コントロールを追加するのと同様に、ドキュメントにコンテンツ コントロールを追加します。  
+- Word でネイティブなコンテンツ コントロールを追加するのと同様に、ドキュメントにコンテンツ コントロールを追加します。  
   
--   **[データ ソース]** ウィンドウからコンテンツ コントロールを文書にドラッグする。 これは、コントロールの作成時にデータにコントロールをバインドする場合に役立ちます。 詳細については、次を参照してください。[方法: オブジェクトからのデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-objects.md)と[方法: データベースからデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-a-database.md)します。  
+- **[データ ソース]** ウィンドウからコンテンツ コントロールを文書にドラッグする。 これは、コントロールの作成時にデータにコントロールをバインドする場合に役立ちます。 詳細については、次を参照してください。[方法: オブジェクトからのデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-objects.md)と[方法: データベースからデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-a-database.md)します。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ### <a name="to-add-a-content-control-to-a-document-by-using-the-toolbox"></a>[ツールボックス] を使用して文書にコンテンツ コントロールを追加するには  
   
@@ -100,13 +100,13 @@ ms.locfileid: "35672335"
 ##  <a name="runtimedoclevel"></a> ドキュメント レベルのプロジェクトの実行時にコンテンツ コントロールを追加します。  
  コンテンツ コントロールのメソッドを使用して実行時にドキュメントをプログラムで追加できます、<xref:Microsoft.Office.Tools.Word.Document.Controls%2A>のプロパティ、`ThisDocument`プロジェクト内のクラス。 各メソッドには 3 つのオーバーロードがあります。それらを使用することにより、次のようにコンテンツ コントロールを追加できます。  
   
--   現在の選択項目でコントロールを追加します。  
+- 現在の選択項目でコントロールを追加します。  
   
--   指定された範囲にコントロールを追加します。  
+- 指定された範囲にコントロールを追加します。  
   
--   文書内のネイティブなコンテンツ コントロールに基づいたコントロールを追加します。  
+- 文書内のネイティブなコンテンツ コントロールに基づいたコントロールを追加します。  
   
- 動的に作成されたコンテンツ コントロールは、文書を閉じる際に文書に残りません。 ただし、ネイティブなコンテンツ コントロールは、文書内に残ります。 文書を次回開くときに、ネイティブのコンテンツ コントロールに基づくコンテンツ コントロールを再作成できます。 詳細については、次を参照してください。[実行時に Office ドキュメントにコントロールを追加](../vsto/adding-controls-to-office-documents-at-run-time.md)します。  
+  動的に作成されたコンテンツ コントロールは、文書を閉じる際に文書に残りません。 ただし、ネイティブなコンテンツ コントロールは、文書内に残ります。 文書を次回開くときに、ネイティブのコンテンツ コントロールに基づくコンテンツ コントロールを再作成できます。 詳細については、次を参照してください。[実行時に Office ドキュメントにコントロールを追加](../vsto/adding-controls-to-office-documents-at-run-time.md)します。  
   
 > [!NOTE]  
 >  Word 2010 プロジェクトで文書にチェック ボックス コンテンツ コントロールを追加するには、 <xref:Microsoft.Office.Tools.Word.ContentControl> オブジェクトを作成する必要があります。 詳細については、次を参照してください。[コンテンツ コントロール](../vsto/content-controls.md)します。  
@@ -141,15 +141,15 @@ ms.locfileid: "35672335"
 ##  <a name="runtimeaddin"></a> VSTO アドイン プロジェクトでの実行時にコンテンツ コントロールを追加します。  
  VSTO アドインを使用して実行時に開いている文書をプログラムでコンテンツ コントロールを追加できます。 そのためには、開いている文書に基づいた <xref:Microsoft.Office.Tools.Word.Document> ホスト項目を生成し、このホスト項目の <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> プロパティのメソッドを使用します。 各メソッドには 3 つのオーバーロードがあります。それらを使用することにより、次のようにコンテンツ コントロールを追加できます。  
   
--   現在の選択項目でコントロールを追加します。  
+- 現在の選択項目でコントロールを追加します。  
   
--   指定された範囲にコントロールを追加します。  
+- 指定された範囲にコントロールを追加します。  
   
--   文書内のネイティブなコンテンツ コントロールに基づいたコントロールを追加します。  
+- 文書内のネイティブなコンテンツ コントロールに基づいたコントロールを追加します。  
   
- 動的に作成されたコンテンツ コントロールは、文書を閉じる際に文書に残りません。 ただし、ネイティブなコンテンツ コントロールは、文書内に残ります。 文書を次回開くときに、ネイティブのコンテンツ コントロールに基づくコンテンツ コントロールを再作成できます。 詳細については、次を参照してください。 [Office ドキュメントでのダイナミック コントロールを永続化](../vsto/persisting-dynamic-controls-in-office-documents.md)します。  
+  動的に作成されたコンテンツ コントロールは、文書を閉じる際に文書に残りません。 ただし、ネイティブなコンテンツ コントロールは、文書内に残ります。 文書を次回開くときに、ネイティブのコンテンツ コントロールに基づくコンテンツ コントロールを再作成できます。 詳細については、次を参照してください。 [Office ドキュメントでのダイナミック コントロールを永続化](../vsto/persisting-dynamic-controls-in-office-documents.md)します。  
   
- VSTO アドイン プロジェクトでホスト項目の生成の詳細については、次を参照してください。[拡張 Word 文書や Excel ブックを実行時に VSTO アドインで](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)します。  
+  VSTO アドイン プロジェクトでホスト項目の生成の詳細については、次を参照してください。[拡張 Word 文書や Excel ブックを実行時に VSTO アドインで](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)します。  
   
 > [!NOTE]  
 >  文書にチェック ボックス コンテンツ コントロールを追加するには、 <xref:Microsoft.Office.Tools.Word.ContentControl> オブジェクトを作成する必要があります。 詳細については、次を参照してください。[コンテンツ コントロール](../vsto/content-controls.md)します。  

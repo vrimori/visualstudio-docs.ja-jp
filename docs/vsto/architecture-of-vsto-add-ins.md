@@ -19,25 +19,25 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ce7024f54eccf595fefa8fa45c438bcb2d55adf3
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: fdde21ef6e65a741b7a9ac08bfc69de4dd1f9856
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672264"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933444"
 ---
 # <a name="architecture-of-vsto-add-ins"></a>VSTO アドインのアーキテクチャ
   Visual Studio の Office Developer Tools を使用して作成される VSTO アドインには、安定性とセキュリティを重視するアーキテクチャ上の特性があり、Microsoft Office と密接に連携させることができます。 このトピックでは、VSTO アドインの次の点について説明します。  
   
--   [VSTO アドインを理解します。](#UnderstandingAddIns)  
+- [VSTO アドインを理解します。](#UnderstandingAddIns)  
   
--   [VSTO アドインのコンポーネント](#AddinComponents)  
+- [VSTO アドインのコンポーネント](#AddinComponents)  
   
--   [VSTO アドインと Microsoft Office アプリケーションの連携](#HowAddinsWork)  
+- [VSTO アドインと Microsoft Office アプリケーションの連携](#HowAddinsWork)  
   
- [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]  
+  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]  
   
- VSTO アドインの作成の概要については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41; ](../vsto/office-solutions-development-overview-vsto.md)と[VSTO アドインのプログラミングを始める](../vsto/getting-started-programming-vsto-add-ins.md)します。  
+  VSTO アドインの作成の概要については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41; ](../vsto/office-solutions-development-overview-vsto.md)と[VSTO アドインのプログラミングを始める](../vsto/getting-started-programming-vsto-add-ins.md)します。  
   
 ##  <a name="UnderstandingAddIns"></a> VSTO アドインを理解します。  
  VSTO アドインをビルドする Visual Studio で Office developer tools を使用する場合は、Microsoft Office アプリケーションによって読み込まれるマネージ コード アセンブリを作成します。 アセンブリが読み込まれると、VSTO アドインがアプリケーションで発生するイベント (ユーザーがメニュー項目をクリックした場合など) に応答できます。 また、VSTO アドインはオブジェクト モデルを呼び出して、アプリケーションの自動化や拡張を行うこともでき、さらに [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)]のすべてのクラスも使用できます。  

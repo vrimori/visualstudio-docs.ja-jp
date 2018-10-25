@@ -17,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ba9cd561c80aec7a0b1b47b98f75ff8046d8a1b
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: b41416ea923e8f14aa39bf1607ad7c349e0b149c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39081310"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880679"
 ---
 # <a name="use-3d-assets-in-your-game-or-app"></a>ゲームまたはアプリで 3D アセットを使用する
 
@@ -41,7 +41,7 @@ Visual Studio のツールを使用して 3D アセットを作成したら、�
 2.  **[使用できるビルド カスタマイズ ファイル]** で、次の表に示すように、プロジェクトで使用するアセットの種類に対応するチェック ボックスをオンにします。
 
     |アセットの種類|ビルドのカスタマイズの名前|
-    |----------------|------------------------------|
+    |----------------| - |
     |テクスチャとイメージ|**ImageContentTask(.targets、.props)**|
     |3D モデル|**MeshContentTask(.targets、.props)**|
     |シェーダー|**ShaderGraphContentTask(.targets、.props)**|
@@ -67,7 +67,7 @@ Visual Studio のツールを使用して 3D アセットを作成したら、�
 3 種類のコンテンツ パイプラインの項目の種類および関連のソース ファイルと出力ファイルの種類を、次に示します。
 
 |項目の種類|ソース ファイルの種類|出力ファイル形式|
-|---------------|-----------------------|------------------------|
+|---------------| - | - |
 |**イメージ コンテンツ パイプライン**|ポータブル ネットワーク グラフィックス (*.png*)<br /><br /> JPEG (*.jpg*、*.jpeg*、*.jpe*、*.jfif*)<br /><br /> DirectDraw Surface (*.dds*)<br /><br /> グラフィックス インターチェンジ形式 (*.gif*)<br /><br /> ビットマップ (*.bmp*、*.dib*)<br /><br /> TIFF 形式 (*.tif*、*.tiff*)<br /><br /> Targa (*.tga*)|DirectDraw Surface (*.dds*)|
 |**メッシュ コンテンツ パイプライン**|AutoDesk FBX インターチェンジ ファイル (*.fbx*)<br /><br /> Collada DAE ファイル (*.dae*)<br /><br /> Wavefront OBJ ファイル (*.obj*)|3D メッシュ ファイル (*.cmo*)|
 |**シェーダー コンテンツ パイプライン**|視覚シェーダー グラフ (*.dgsl*)|コンパイル済みシェーダー出力 (*.cso*)|

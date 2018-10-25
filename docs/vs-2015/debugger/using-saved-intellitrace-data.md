@@ -21,12 +21,12 @@ caps.latest.revision: 112
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5c241a4ac216fa42d6a67e7e2165e2ceac195e96
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7ab3e165a00fa55c8e08f4b538d749d53471e0eb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49279098"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49929492"
 ---
 # <a name="using-saved-intellitrace-data"></a>保存された IntelliTrace データの使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -164,25 +164,25 @@ IntelliTrace ログ (.iTrace) ファイルからデバッグを開始すると�
   
 ##### <a name="start-debugging-with-a-sharepoint-correlation-id"></a>SharePoint 相関 ID を使用してデバッグを開始する  
   
-1.  SharePoint 相関 ID をソースからコピーします。  
+1. SharePoint 相関 ID をソースからコピーします。  
   
-     例えば:  
+    例えば:  
   
-     ![IntelliTrace &#45; SharePoint エラー&#45;相関 ID](../debugger/media/sharepointerror-intellitrace.png "SharePointError_IntelliTrace")  
+    ![IntelliTrace &#45; SharePoint エラー&#45;相関 ID](../debugger/media/sharepointerror-intellitrace.png "SharePointError_IntelliTrace")  
   
-2.  .iTrace ファイルを開き、 **[分析]** に移動して、Web 要求と記録されたイベントの一致を確認するために SharePoint 相関 ID を入力します。  
+2. .iTrace ファイルを開き、 **[分析]** に移動して、Web 要求と記録されたイベントの一致を確認するために SharePoint 相関 ID を入力します。  
   
-     ![IntelliTrace ログ&#45;入力 SharePoint 相関 ID](../debugger/media/entersharepointcorrelationid.png "EnterSharePointCorrelationID")  
+    ![IntelliTrace ログ&#45;入力 SharePoint 相関 ID](../debugger/media/entersharepointcorrelationid.png "EnterSharePointCorrelationID")  
   
-3.  **[要求イベント]** で、イベントを確認します。 イベントは、発生した順に上から表示されます。  
+3. **[要求イベント]** で、イベントを確認します。 イベントは、発生した順に上から表示されます。  
   
-    1.  イベントを選択すると、その詳細が表示されます。  
+   1. イベントを選択すると、その詳細が表示されます。  
   
-    2.  **[デバッグ開始]** を選択すると、イベントが発生したポイントでデバッグが開始されます。  
+   2. **[デバッグ開始]** を選択すると、イベントが発生したポイントでデバッグが開始されます。  
   
-     ![IntelliTrace ログ ファイル&#45;web 要求の表示&#43;イベント](../debugger/media/entersharepointcorrelationid2.png "EnterSharePointCorrelationID2")  
+      ![IntelliTrace ログ ファイル&#45;web 要求の表示&#43;イベント](../debugger/media/entersharepointcorrelationid2.png "EnterSharePointCorrelationID2")  
   
- IntelliTrace イベントと共に、以下の種類の SharePoint イベントが表示されます。  
+   IntelliTrace イベントと共に、以下の種類の SharePoint イベントが表示されます。  
   
 -   **ユーザー プロファイル イベント**  
   
@@ -204,28 +204,28 @@ IntelliTrace ログ (.iTrace) ファイルからデバッグを開始すると�
   
 ##### <a name="start-debugging-from-an-unhandled-exception"></a>ハンドルされない例外からデバッグを開始する  
   
-1.  例外の SharePoint 相関 ID を選択します。 例外は、種類と呼び出し履歴によってグループ化されます。  
+1. 例外の SharePoint 相関 ID を選択します。 例外は、種類と呼び出し履歴によってグループ化されます。  
   
-2.  (省略可能) **[呼び出し履歴]** を展開して、例外のグループの呼び出し履歴を表示します。  
+2. (省略可能) **[呼び出し履歴]** を展開して、例外のグループの呼び出し履歴を表示します。  
   
-3.  **[例外のデバッグ]** を選択して、その例外が発生したポイントでデバッグを開始します。  
+3. **[例外のデバッグ]** を選択して、その例外が発生したポイントでデバッグを開始します。  
   
-     ![IntelliTrace ログ&#45;SharePoint 未処理の例外](../debugger/media/sharepointunhandledexceptions-intellitrace.png "SharePointUnhandledExceptions_IntelliTrace")  
+    ![IntelliTrace ログ&#45;SharePoint 未処理の例外](../debugger/media/sharepointunhandledexceptions-intellitrace.png "SharePointUnhandledExceptions_IntelliTrace")  
   
- チュートリアルについては、次を参照してください。[チュートリアル: IntelliTrace を使用した、SharePoint アプリケーションのデバッグ](http://msdn.microsoft.com/library/4bd80d2f-f680-4bf4-81c3-f14e8185f6a4)します。 エージェントのレコードが表示されるデータの種類の[IntelliTrace 機能](../debugger/intellitrace-features.md)します。  
+   チュートリアルについては、次を参照してください。[チュートリアル: IntelliTrace を使用した、SharePoint アプリケーションのデバッグ](http://msdn.microsoft.com/library/4bd80d2f-f680-4bf4-81c3-f14e8185f6a4)します。 エージェントのレコードが表示されるデータの種類の[IntelliTrace 機能](../debugger/intellitrace-features.md)します。  
   
 ###  <a name="ThreadsList"></a> スレッド一覧  
  ターゲット プロセスで実行されたスレッドの記録を確認します。 選択されているスレッドの最初の有効な IntelliTrace イベントからデバッグを開始できます。  
   
 ##### <a name="to-start-debugging-from-a-specific-thread"></a>特定のスレッドからデバッグを開始するには  
   
-1.  **[スレッド一覧]** で、スレッドを選択します。  
+1. **[スレッド一覧]** で、スレッドを選択します。  
   
-2.  **[スレッド一覧]** の下部にある **[デバッグ開始]** を選択します。 スレッドをダブルクリックすることもできます。  
+2. **[スレッド一覧]** の下部にある **[デバッグ開始]** を選択します。 スレッドをダブルクリックすることもできます。  
   
-     アプリが始まる場所からデバッグを開始するには、 **[メイン スレッド]** をダブルクリックします。 参照してください[IntelliTrace 機能](../debugger/intellitrace-features.md)します。  
+    アプリが始まる場所からデバッグを開始するには、 **[メイン スレッド]** をダブルクリックします。 参照してください[IntelliTrace 機能](../debugger/intellitrace-features.md)します。  
   
- ユーザーが作成するスレッド データは、IIS でホストされる Web アプリ用にサーバーが作成および管理するスレッドよりも便利な場合があります。  
+   ユーザーが作成するスレッド データは、IIS でホストされる Web アプリ用にサーバーが作成および管理するスレッドよりも便利な場合があります。  
   
 |**列**|**内容**|  
 |----------------|-------------------|  

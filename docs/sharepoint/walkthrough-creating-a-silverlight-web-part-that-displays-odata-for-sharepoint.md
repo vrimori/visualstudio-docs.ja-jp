@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 504ec33ef2cf6e0e691c00e3cf1cc013ece5ce81
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 58f03bc18c2e851bb7732b54ff334e6e3332f74e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42626166"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49878187"
 ---
 # <a name="walkthrough-create-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>チュートリアル: SharePoint の OData を表示する Silverlight web パーツを作成します。
   SharePoint 2010 では、OData を使用してそのリストのデータを公開します。 SharePoint では、OData サービスは、RESTful サービス ListData.svc によって実装されます。 このチュートリアルでは、Silverlight アプリケーションをホストする SharePoint web パーツを作成する方法を示します。 Silverlight アプリケーションでは、ListData.svc を使用して SharePoint のお知らせリストの情報が表示されます。 詳細については、次を参照してください。 [SharePoint Foundation REST インターフェイス](http://go.microsoft.com/fwlink/?LinkId=225999)と[Open Data Protocol](http://go.microsoft.com/fwlink/?LinkId=226000)します。  
@@ -42,25 +42,25 @@ ms.locfileid: "42626166"
   
 #### <a name="to-create-a-silverlight-application-and-silverlight-web-part"></a>Silverlight アプリケーションと Silverlight web パーツを作成するには
   
-1.  メニュー バーで、**ファイル** > **新規** > **プロジェクト**を表示する、**新しいプロジェクト** ダイアログ ボックス。  
+1. メニュー バーで、**ファイル** > **新規** > **プロジェクト**を表示する、**新しいプロジェクト** ダイアログ ボックス。  
   
-2.  展開、 **SharePoint**のどちらかのノード**Visual c#** または**Visual Basic**を選択し、 **2010**ノード。  
+2. 展開、 **SharePoint**のどちらかのノード**Visual c#** または**Visual Basic**を選択し、 **2010**ノード。  
   
-3.  [テンプレート] ペインで選択、 **SharePoint 2010 Silverlight Web パーツ**テンプレート。  
+3. [テンプレート] ペインで選択、 **SharePoint 2010 Silverlight Web パーツ**テンプレート。  
   
-4.  **名前**ボックスに、入力**SLWebPartTest**選択し、 **OK**ボタン。  
+4. **名前**ボックスに、入力**SLWebPartTest**選択し、 **OK**ボタン。  
   
-     **SharePoint カスタマイズ ウィザード** ダイアログ ボックスが表示されます。  
+    **SharePoint カスタマイズ ウィザード** ダイアログ ボックスが表示されます。  
   
-5.  **デバッグのサイトとセキュリティのレベルを指定**ページで、サイト定義をデバッグする SharePoint サーバー サイトの URL を入力するか、既定の場所を使用して (http://*システム名*/).  
+5. **デバッグのサイトとセキュリティのレベルを指定**ページで、サイト定義をデバッグする SharePoint サーバー サイトの URL を入力するか、既定の場所を使用して (http://<em>システム名</em>/).  
   
-6.  **この SharePoint ソリューションの信頼レベルとは何ですか?** セクションで、選択、**ファーム ソリューションとして配置**オプション ボタンをクリックします。  
+6. **この SharePoint ソリューションの信頼レベルとは何ですか?** セクションで、選択、**ファーム ソリューションとして配置**オプション ボタンをクリックします。  
   
-     この例では、ファーム ソリューションでは、Silverlight web パーツ プロジェクトは、ファームまたはサンド ボックス ソリューションとしてデプロイできます。 サンド ボックス ソリューションとファーム ソリューションの詳細については、次を参照してください。[サンド ボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)します。  
+    この例では、ファーム ソリューションでは、Silverlight web パーツ プロジェクトは、ファームまたはサンド ボックス ソリューションとしてデプロイできます。 サンド ボックス ソリューションとファーム ソリューションの詳細については、次を参照してください。[サンド ボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)します。  
   
-7.  **Silverlight Web パーツを関連付ける方法**のセクション、 **Silverlight 構成情報の指定**ページで、選択、**新しい Silverlight プロジェクトを作成し、web パーツに関連付ける**オプション ボタンをクリックします。  
+7. **Silverlight Web パーツを関連付ける方法**のセクション、 **Silverlight 構成情報の指定**ページで、選択、**新しい Silverlight プロジェクトを作成し、web パーツに関連付ける**オプション ボタンをクリックします。  
   
-8.  変更、**名前**に**SLApplication**設定**言語**いずれかに**Visual Basic**または**Visual c#**、設定**Silverlight バージョン**に**Silverlight 4.0**します。  
+8. 変更、**名前**に**SLApplication**設定**言語**いずれかに**Visual Basic**または**Visual c#**、設定**Silverlight バージョン**に**Silverlight 4.0**します。  
   
 9. 選択、**完了**ボタンをクリックします。 プロジェクトが表示される**ソリューション エクスプ ローラー**します。  
   

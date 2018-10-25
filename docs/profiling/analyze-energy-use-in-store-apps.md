@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 3578573a2020dbf048e3da4e0bf44a54df07860b
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 5e74ec5e1e4efe4cbdf98125aa17cb3646fbc136
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35669146"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930909"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>UWP アプリでのエネルギー使用の分析
 Visual Studio の **エネルギー消費** プロファイラーは、常時または一時的に内蔵バッテリで動作する低電力のタブレット デバイス上で、UWP アプリによる電力とエネルギーの消費量を分析するのに役立ちます。 バッテリ電源デバイスでは、エネルギー消費量が多すぎるアプリはユーザーに嫌われ、最終的にアンインストールされる場合もあります。 エネルギー使用を最適化することで、ユーザーがそのアプリを選択する可能性が高まり、使用頻度も向上します。  
@@ -35,15 +35,15 @@ Visual Studio の **エネルギー消費** プロファイラーは、常時ま
   
  エネルギー消費量プロファイラーでは、 *電力* と *エネルギー*を次のように定義しています。  
   
--   *電力* は、一定の時間内に行われる仕事のために使用される力の割合を測定します。 電気の分野では、電力の標準単位は *ワット*です。ワットは、1 アンペアの電流が 1 ボルトの電位差で流れるときに行われる仕事の割合として定義されています。 **[消費電力]** グラフでは、単位はワットの 1,000 分の 1 であるミリワット **(mW)** で表示されます。  
+- *電力* は、一定の時間内に行われる仕事のために使用される力の割合を測定します。 電気の分野では、電力の標準単位は *ワット*です。ワットは、1 アンペアの電流が 1 ボルトの電位差で流れるときに行われる仕事の割合として定義されています。 **[消費電力]** グラフでは、単位はワットの 1,000 分の 1 であるミリワット **(mW)** で表示されます。  
   
-     電力は割合であるため、方向 (一定時間内で仕事が増加または減少) と速度 (仕事が増加または減少する量) があることに注意してください。  
+   電力は割合であるため、方向 (一定時間内で仕事が増加または減少) と速度 (仕事が増加または減少する量) があることに注意してください。  
   
--   *エネルギー* は、バッテリの電力容量のような能力または潜在力として、または一定の時間内に消費された総電力量として、電力の総量を表します。 エネルギーの単位はワット時です。これは、1 ワットの電力を 1 時間にわたって常時加えた場合の電力量です。 **[Energy Summary]\(エネルギー使用の概要)** では、単位はミリワット時間 **(mW-h)** で表示されます。  
+- *エネルギー* は、バッテリの電力容量のような能力または潜在力として、または一定の時間内に消費された総電力量として、電力の総量を表します。 エネルギーの単位はワット時です。これは、1 ワットの電力を 1 時間にわたって常時加えた場合の電力量です。 **[Energy Summary]\(エネルギー使用の概要)** では、単位はミリワット時間 **(mW-h)** で表示されます。  
   
- ![エネルギー キャパシティ、使用電力、総使用エネルギー](../profiling/media/energyprof_capcitypowerused.png "ENERGYPROF_CapcityPowerUsed")  
+  ![エネルギー キャパシティ、使用電力、総使用エネルギー](../profiling/media/energyprof_capcitypowerused.png "ENERGYPROF_CapcityPowerUsed")  
   
- たとえば、タブレットの完全に充電されたバッテリには、一定量のエネルギーが蓄えられています。 エネルギーは、ネットワーク経由での通信、値の計算、グラフィックスの表示などのタスクを実行するために使用され、バッテリの電力が消費される速度もさまざまです。 一定の期間内に消費された総電力も、エネルギーで測定されます。  
+  たとえば、タブレットの完全に充電されたバッテリには、一定量のエネルギーが蓄えられています。 エネルギーは、ネットワーク経由での通信、値の計算、グラフィックスの表示などのタスクを実行するために使用され、バッテリの電力が消費される速度もさまざまです。 一定の期間内に消費された総電力も、エネルギーで測定されます。  
   
 ## <a name="identify-scenarios-with-user-marks"></a>ユーザー マークによるシナリオの識別  
  また、タイムライン ルーラーの領域を識別できるようにプロファイル データに *ユーザー マーク* を追加できます。  
@@ -59,8 +59,8 @@ Visual Studio の **エネルギー消費** プロファイラーは、常時ま
  メソッドが実行されると、ユーザー マークがメッセージと共にプロファイル データに追加されます。  
   
 > [!NOTE]
->  -   Windows.Foundation.Diagnostics LoggingChannel は [Windows.Foundation.IClosable](/uwp/api/windows.foundation.iclosable) インターフェイス (C# および VB で [System.IDisposable](/dotnet/api/system.idisposable) として投影) を実装します。オペレーティング システム リソースのリークを防ぐには、ログ チャネルで終了するときに [LoggingChannel.Close](/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel) (C# および VB では [Windows.Foundation.Diagnostics.LoggingChannel.Dispose](/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel)) を呼び出します。  
-> -   開いているログ記録チャネルそれぞれに一意の名前を付ける必要があります。 破棄されていないチャネルと同じ名前で新しくログ記録チャネルを作成しようとすると、例外が発生します。  
+> - Windows.Foundation.Diagnostics LoggingChannel は [Windows.Foundation.IClosable](/uwp/api/windows.foundation.iclosable) インターフェイス (C# および VB で [System.IDisposable](/dotnet/api/system.idisposable) として投影) を実装します。オペレーティング システム リソースのリークを防ぐには、ログ チャネルで終了するときに [LoggingChannel.Close](/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel) (C# および VB では [Windows.Foundation.Diagnostics.LoggingChannel.Dispose](/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel)) を呼び出します。  
+>   -   開いているログ記録チャネルそれぞれに一意の名前を付ける必要があります。 破棄されていないチャネルと同じ名前で新しくログ記録チャネルを作成しようとすると、例外が発生します。  
   
  例については、Windows SDK サンプル「[LoggingSession Sample](http://code.msdn.microsoft.com/windowsapps/LoggingSession-Sample-ccd52336)」を参照してください。  
   
@@ -80,9 +80,9 @@ if (performance && performance.mark) {
  正確な見積もりを取得するために、バッテリが電源になっている低電力デバイス上でのアプリのエネルギー使用をプロファイリングします。 Visual Studio は、これらのほとんどのデバイス上で動作しないため、Visual Studio Remote Tools を使用して、Visual Studio コンピューターをデバイスに接続する必要があります。 リモート デバイスに接続するには、Visual Studio プロジェクトとリモート デバイスの両方を構成する必要があります。 詳細については、「[Run UWP apps on a remote machine](../debugger/run-windows-store-apps-on-a-remote-machine.md)」(リモート コンピューターで UWP アプリを実行する) をご覧ください。  
   
 > [!TIP]
->  -   UWP シミュレーターまたは Visual Studio コンピューターでエネルギー プロファイリングを実行することはお勧めできません。 実際のデバイスでプロファイリングを実行する方が、はるかに現実的なデータを取得できます。  
-> -   プロファイリングは、ターゲット デバイスがバッテリ駆動されている間に行います。  
-> -   同じリソース (ネットワーク、CPU、またはディスプレイ) を使用する可能性がある他のアプリを閉じます。  
+> - UWP シミュレーターまたは Visual Studio コンピューターでエネルギー プロファイリングを実行することはお勧めできません。 実際のデバイスでプロファイリングを実行する方が、はるかに現実的なデータを取得できます。  
+>   -   プロファイリングは、ターゲット デバイスがバッテリ駆動されている間に行います。  
+>   -   同じリソース (ネットワーク、CPU、またはディスプレイ) を使用する可能性がある他のアプリを閉じます。  
   
 ## <a name="collect-energy-profile-data-for-your-app"></a>アプリのエネルギー プロファイル データの収集  
   
@@ -106,15 +106,15 @@ if (performance && performance.mark) {
 ## <a name="collect-energy-profile-data-for-an-installed-app"></a>インストール済みアプリのエネルギー プロファイル データの収集  
  エネルギー消費プロファイラーは、Visual Studio ソリューションから開始された UWP アプリまたは Microsoft Store からインストールされた UWP アプリに対してのみ実行できます。 ソリューションを Visual Studio で開いている場合、既定のターゲットは **[スタートアップ プロジェクト]** です。 インストール済みアプリを対象とするには、以下の手順に従います。  
   
-1.  **[ターゲットの変更]** をクリックし、 **[インストール済みのアプリ]** をクリックします。  
+1. **[ターゲットの変更]** をクリックし、 **[インストール済みのアプリ]** をクリックします。  
   
-2.  **[インストール済みアプリ パッケージの選択]** の一覧で、ターゲットをクリックします。  
+2. **[インストール済みアプリ パッケージの選択]** の一覧で、ターゲットをクリックします。  
   
-3.  診断ハブのページで **[エネルギー消費]** をクリックします。  
+3. 診断ハブのページで **[エネルギー消費]** をクリックします。  
   
-4.  **[開始]** をクリックして、プロファイリングを開始します。  
+4. **[開始]** をクリックして、プロファイリングを開始します。  
   
- プロファイリングを停止するには、Visual Studio に戻り (Alt + Tab)、診断ハブのページの **[コレクションの停止]** をクリックします。  
+   プロファイリングを停止するには、Visual Studio に戻り (Alt + Tab)、診断ハブのページの **[コレクションの停止]** をクリックします。  
   
 ## <a name="analyze-energy-profile-data"></a>エネルギー プロファイル データの分析  
  エネルギー プロファイル データは、Visual Studio のドキュメント ウィンドウに次のように表示されます。  

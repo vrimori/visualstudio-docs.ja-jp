@@ -30,12 +30,12 @@ caps.latest.revision: 29
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2700076fa0cc08aa137377b9a99c1179d9b8fc12
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 9540e40325293795c44e0d9c2283a27f1d9ea0c2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49212831"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49856706"
 ---
 # <a name="how-to-enable-and-disable-edit-and-continue"></a>方法 : エディット コンティニュを有効および無効にする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,18 +48,18 @@ ms.locfileid: "49212831"
   
 #### <a name="to-enabledisable-edit-and-continue"></a>[エディット コンティニュ] を有効または無効にするには  
   
-1.  デバッグ オプション ページを開く (**ツール/オプション/デバッグ**)。  
+1. デバッグ オプション ページを開く (**ツール/オプション/デバッグ**)。  
   
-2.  下へスクロールして**エディット コンティニュ**カテゴリ。  
+2. 下へスクロールして**エディット コンティニュ**カテゴリ。  
   
-3.  を有効にするのには、選択、**編集を有効にして続行**チェック ボックスをオンします。 無効にするには、このチェック ボックスをオフにします。  
+3. を有効にするのには、選択、**編集を有効にして続行**チェック ボックスをオンします。 無効にするには、このチェック ボックスをオフにします。  
   
-    > [!NOTE]
-    >  IntelliTrace が有効になっている場合に、IntelliTrace イベントと呼び出し情報の両方を収集すると、エディット コンティニュが無効になります。 詳細については、次を参照してください。[構成 IntelliTrace](http://msdn.microsoft.com/en-us/7657ecab-e07e-4b1b-872d-f05d966be37e)します。  
+   > [!NOTE]
+   >  IntelliTrace が有効になっている場合に、IntelliTrace イベントと呼び出し情報の両方を収集すると、エディット コンティニュが無効になります。 詳細については、次を参照してください。[構成 IntelliTrace](http://msdn.microsoft.com/en-us/7657ecab-e07e-4b1b-872d-f05d966be37e)します。  
   
-4.  **[OK]** をクリックします。  
+4. **[OK]** をクリックします。  
   
- これらのオプションの詳細については、次を参照してください。 [General, Debugging, オプション ダイアログ ボックス](../debugger/general-debugging-options-dialog-box.md)します。  
+   これらのオプションの詳細については、次を参照してください。 [General, Debugging, オプション ダイアログ ボックス](../debugger/general-debugging-options-dialog-box.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [エディット コンティニュ](../debugger/edit-and-continue.md)

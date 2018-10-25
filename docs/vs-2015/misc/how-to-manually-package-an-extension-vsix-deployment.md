@@ -12,23 +12,23 @@ ms.topic: article
 ms.assetid: d25990e0-e782-4a79-9d9a-1caf3c56c6a2
 caps.latest.revision: 10
 manager: douge
-ms.openlocfilehash: ad93bfe700c881977130ba6651bd3e271207a56f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 0d10d0e49389b43a288826adf2043c603aeff36a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49269309"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925839"
 ---
 # <a name="how-to-manually-package-an-extension-vsix-deployment"></a>方法: 拡張機能を手動でパッケージ化する (VSIX 配置)
 VSIX パッケージを作成して、配置用の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 拡張機能をラップすることができます。 パッケージを作成するには、3 つの方法があります。  
   
--   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] SDK に含まれている機能拡張テンプレートのいずれかを使用して、VSIX パッケージ プロジェクトを作成します。 これは、ほとんどのシナリオで最も簡単なオプションです。  
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] SDK に含まれている機能拡張テンプレートのいずれかを使用して、VSIX パッケージ プロジェクトを作成します。 これは、ほとんどのシナリオで最も簡単なオプションです。  
   
--   拡張プロジェクトの出力を空の [VSIX プロジェクト](../extensibility/vsix-project-template.md)でラップします。 テンプレート、サポートされていないアセンブリおよびカスタム型には、このオプションをお勧めします。  
+- 拡張プロジェクトの出力を空の [VSIX プロジェクト](../extensibility/vsix-project-template.md)でラップします。 テンプレート、サポートされていないアセンブリおよびカスタム型には、このオプションをお勧めします。  
   
--   VSIX パッケージを手動で作成します。 このオプションは、その他の 2 つのオプションが利用できない場合にのみお勧めします。  
+- VSIX パッケージを手動で作成します。 このオプションは、その他の 2 つのオプションが利用できない場合にのみお勧めします。  
   
- ここでは、3 つ目のオプションについて説明します。  
+  ここでは、3 つ目のオプションについて説明します。  
   
 ## <a name="creating-a-vsix-package"></a>VSIX パッケージの作成  
  拡張機能を手動でパッケージ化するには、extension.manifest ファイルと [Content_Types].xml ファイルを拡張機能プロジェクトに追加し、ビルド出力と一緒に圧縮ファイルに含め、.vsix ファイル名拡張子を持つように圧縮ファイルの名前を変更します。 パッケージ化する拡張機能は、 [VSIX スキーマ](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)でサポートされている種類のものである必要があります。  

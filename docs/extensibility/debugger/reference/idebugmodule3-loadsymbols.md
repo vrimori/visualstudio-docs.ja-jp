@@ -1,5 +1,5 @@
 ---
-title: IDebugModule3::LoadSymbols |Microsoft ドキュメント
+title: IDebugModule3::LoadSymbols |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a7f7a08e827b22f7011fe97babf1a57882245649
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ab00d1bf3743cf3785bcac5491655cf31c12bd39
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31111837"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898253"
 ---
 # <a name="idebugmodule3loadsymbols"></a>IDebugModule3::LoadSymbols
 現在のモジュールのシンボルを読み込みます。  
@@ -38,12 +38,12 @@ int LoadSymbols();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功したかどうか、それを返します`S_OK`です。 失敗した場合、エラー コードを返します。  
+ 返します、メソッドが成功したかどうかは`S_OK`します。 失敗した場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、現在の検索パスからシンボルを読み込みます (を呼び出して変更することができますが、 [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)メソッド)。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、現在の検索パスからシンボルを読み込みます (呼び出すことによって変更できますが、 [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)メソッド)。  
   
- このメソッドは、優先、 [ReloadSymbols_Deprecated](../../../extensibility/debugger/reference/idebugmodule2-reloadsymbols-deprecated.md)メソッドです。  
+ このメソッドより優先、 [ReloadSymbols_Deprecated](../../../extensibility/debugger/reference/idebugmodule2-reloadsymbols-deprecated.md)メソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)   

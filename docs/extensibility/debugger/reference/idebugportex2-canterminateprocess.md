@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2::CanTerminateProcess |Microsoft ドキュメント
+title: IDebugPortEx2::CanTerminateProcess |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f44df279cd8ad4721a6b4559af1dc3defb94714a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b5717d5312630c3e9adaac2e1a32fa0d44a3a213
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31112718"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49902335"
 ---
 # <a name="idebugportex2canterminateprocess"></a>IDebugPortEx2::CanTerminateProcess
-プロセスを終了できるかどうかを判断します。  
+プロセスが終了するかどうかを判断します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,7 +44,7 @@ HRESULT CanTerminateProcess(
  [in][IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)終了するプロセスを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 返します`S_OK`プロセスを終了する場合を返しますそれ以外の場合、`S_FALSE`です。  
+ 返します`S_OK`プロセスを終了する場合を返しますそれ以外の場合、`S_FALSE`します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)   

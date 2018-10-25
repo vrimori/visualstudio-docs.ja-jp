@@ -1,5 +1,5 @@
 ---
-title: DebugPropertyInfo 構造体 |Microsoft ドキュメント
+title: DebugPropertyInfo 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,15 +18,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c9baade1a742a06c952906c05c574e752806bc9c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0dca3dac5c2e55e512bd4f798ca4a9bce82f7e00
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24640812"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874190"
 ---
 # <a name="debugpropertyinfo-structure"></a>DebugPropertyInfo 構造体
-名前、型、および値を持つ階層的な性質のオブジェクトについて説明します。 ローカル変数やパラメーター、変数のウォッチ式のデバッグ プロパティを表すために使用し、登録します。  
+オブジェクトの名前、型、および値を持つ階層的な性質について説明します。 ローカル変数、パラメーター、変数のウォッチ式、およびデバッグ プロパティを記述するために使用され、登録されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,7 +44,7 @@ typedef struct DebugPropertyInfo{
   
 ## <a name="members"></a>メンバー  
  dwValidFields  
- 列挙型のフィールドが初期化されますを指定するために使用します。  
+ 列挙データ型フィールドが初期化されるかを指定するために使用します。  
   
  bstrName  
  コンテキスト内でプロパティ名。  
@@ -62,7 +62,7 @@ typedef struct DebugPropertyInfo{
  デバッグ プロパティの属性のフラグを指定する列挙です。  
   
  pDebugProp  
- `IDebugProperty`この情報によって記述`DebugPropertyInfo`構造体。  
+ `IDebugProperty`この情報が記載されている`DebugPropertyInfo`構造体。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProperty インターフェイス](../../winscript/reference/idebugproperty-interface.md)   

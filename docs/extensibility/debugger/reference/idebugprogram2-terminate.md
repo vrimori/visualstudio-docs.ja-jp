@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Terminate |Microsoft ドキュメント
+title: IDebugProgram2::Terminate |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5eb14280947ff93a4a0c2ab6d2cf025037fc06aa
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 88fcbf0667c026cbbfc449936f92d440590e9a8f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115838"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834267"
 ---
 # <a name="idebugprogram2terminate"></a>IDebugProgram2::Terminate
 プログラムを終了します。  
@@ -38,13 +38,13 @@ int Terminate();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  可能であれば、プログラムは終了し、プロセスからアンロードそれ以外の場合、デバッグ エンジン (DE) は、必要なクリーンアップを実行します。  
   
- このメソッドまたは[Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)メソッドがすべてのデバッグを停止する、ユーザーへの応答では通常、IDE によって呼び出されます。 このメソッドの実装では、プロセス内でプログラムを終了する、ことをお勧めします。 これが可能でない場合、DE 必要があります、プログラムがこのプロセスでこれ以上実行するを防ぎます (および、必要なクリーンアップ操作を行います)。 場合、`IDebugProcess2::Terminate`メソッドは、IDE によって呼び出された、プロセス全体は終了の後に、`IDebugProgram2::Terminate`メソッドが呼び出されます。  
+ このメソッドまたは[Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)メソッドはすべてのデバッグを停止するユーザーへの応答では通常、IDE によって呼び出されます。 このメソッドの実装では、プロセス内でプログラムを終了する必要があります、理想的には、します。 それができない場合、DE する必要がありますプログラムがこのプロセスではこれ以上実行されないように (および必要なクリーンアップを行います)。 場合、`IDebugProcess2::Terminate`メソッドは、IDE によって呼び出された、プロセス全体は終了されてからしばらく、`IDebugProgram2::Terminate`メソッドが呼び出されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
- [終了](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)
+ [Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)

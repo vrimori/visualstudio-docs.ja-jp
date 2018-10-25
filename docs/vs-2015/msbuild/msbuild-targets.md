@@ -16,12 +16,12 @@ caps.latest.revision: 29
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2eab4a6085ce6756d1b55b0669008cb745b82e28
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: af666f40dec018e2dfde330cfc5727159b8b1dc7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49288681"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925736"
 ---
 # <a name="msbuild-targets"></a>MSBuild ターゲット
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "49288681"
 </Target>  
 ```  
   
- MSBuild プロパティと同様に、ターゲットは再定義できます。 たとえば、オブジェクトに適用された  
+ MSBuild プロパティと同様に、ターゲットは再定義できます。 例えば以下のようにします。  
   
 ```  
 <Target Name="AfterBuild" >  
@@ -54,22 +54,22 @@ ms.locfileid: "49288681"
 ## <a name="target-build-order"></a>ターゲットのビルド順序  
  あるターゲットへの入力が別のターゲットの出力に依存する場合、ターゲットの順序を指定する必要があります。 ターゲットの実行順序はいくつかの方法で指定できます。  
   
--   初期ターゲット  
+- 初期ターゲット  
   
--   既定のターゲット  
+- 既定のターゲット  
   
--   最初のターゲット  
+- 最初のターゲット  
   
--   ターゲットの依存関係  
+- ターゲットの依存関係  
   
--   `BeforeTargets` と `AfterTargets` (MSBuild 4.0)  
+- `BeforeTargets` と `AfterTargets` (MSBuild 4.0)  
   
- 1 つのビルドでターゲットが 2 回実行されることはありません。そのビルド内の後続のターゲットが先行するターゲットに依存している場合でも同じです。 ターゲットは一度実行されると、それ以上ビルドに影響しません。  
+  1 つのビルドでターゲットが 2 回実行されることはありません。そのビルド内の後続のターゲットが先行するターゲットに依存している場合でも同じです。 ターゲットは一度実行されると、それ以上ビルドに影響しません。  
   
- ターゲットのビルド順序に関する詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」を参照してください。  
+  ターゲットのビルド順序に関する詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」を参照してください。  
   
 ## <a name="target-batching"></a>ターゲットのバッチ  
- あるターゲット要素に、%(メタデータ) 形式でメタデータを指定する `Outputs` 属性が含まれている場合があります。 その場合、MSBuild は一意のメタデータ値ごとにターゲットを 1 回実行し、そのメタデータ値を含むアイテムをグループ化または "バッチ処理" します。 たとえば、オブジェクトに適用された  
+ あるターゲット要素に、%(メタデータ) 形式でメタデータを指定する `Outputs` 属性が含まれている場合があります。 その場合、MSBuild は一意のメタデータ値ごとにターゲットを 1 回実行し、そのメタデータ値を含むアイテムをグループ化または "バッチ処理" します。 例えば以下のようにします。  
   
 ```  
 <ItemGroup>  

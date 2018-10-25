@@ -17,12 +17,12 @@ ms.assetid: ac103ec5-771c-4667-92de-b5abb53bbb52
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 619e849d5bfd4d4f9b2372c6455d8fe3f92d6a6f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 25c551a9805c1a482dbbb58bb30dfb9400a8aaa6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49226142"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924695"
 ---
 # <a name="bpresolutioncode"></a>BP_RESOLUTION_CODE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -50,7 +50,7 @@ public struct BP_RESOLUTION_CODE {
 ## <a name="remarks"></a>Remarks  
  この構造体のメンバーである、 [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)がで有効にするのメンバーの構造、 [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)によって返される構造体、 [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

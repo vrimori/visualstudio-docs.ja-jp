@@ -1,5 +1,5 @@
 ---
-title: IEEDataStorage::GetSize |Microsoft ドキュメント
+title: IEEDataStorage::GetSize |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9fb6c315971c5d7886626239387d6c6ff501ed0a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f9ac01907015a58681ee5cacb5b5ae38d32c2896
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31119829"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820643"
 ---
 # <a name="ieedatastoragegetsize"></a>IEEDataStorage::GetSize
 このオブジェクトに含まれるバイト数を返します。  
@@ -44,9 +44,9 @@ int GetSize(
  [out]このオブジェクトに含まれるバイト数。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用して、 [GetData](../../../extensibility/debugger/reference/ieedatastorage-getdata.md)実際のデータのバイト数を取得します。  
   
 ## <a name="see-also"></a>関連項目  

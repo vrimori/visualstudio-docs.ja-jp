@@ -10,24 +10,26 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 53829ffaeab44eb758b1850f5619de43db31e589
-ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
+ms.openlocfilehash: 8ae5fb4b3785bde0e092f68b62a9b030069a52aa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37089686"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942700"
 ---
 # <a name="how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-or-designer"></a>方法: ストアド プロシージャおよび関数 (O/R デザイナー) にマップされる DataContext メソッドの作成
+
 ストアド プロシージャと関数を追加することができます、 **O/R デザイナー**として<xref:System.Data.Linq.DataContext>メソッド。 メソッドを呼び出すと、必要なパラメーターを渡すこと、データベースでストアド プロシージャまたは関数を実行し、戻り値の型のデータを返します、<xref:System.Data.Linq.DataContext>メソッド。 詳細については<xref:System.Data.Linq.DataContext>メソッドを参照してください[DataContext メソッド (O/R デザイナー)](../data-tools/datacontext-methods-o-r-designer.md)します。
 
 > [!NOTE]
->  既定値をオーバーライドするストアド プロシージャを使用することもできます[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]実行時の動作を挿入、更新を実行し、データベースに、エンティティ クラスから変更が保存されたときに削除します。 詳細については、次を参照してください。[方法: 更新、挿入、および削除 (O/r デザイナー) を実行するストアド プロシージャを割り当てる](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)します。
+> 既定値をオーバーライドするストアド プロシージャを使用することもできます[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]実行時の動作を挿入、更新を実行し、データベースに、エンティティ クラスから変更が保存されたときに削除します。 詳細については、次を参照してください。[方法: 更新、挿入、および削除 (O/r デザイナー) を実行するストアド プロシージャを割り当てる](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)します。
 
 ## <a name="create-datacontext-methods"></a>DataContext メソッドを作成します。
- 作成することができます<xref:System.Data.Linq.DataContext>メソッドをドラッグしてストアド プロシージャまたは関数から * * サーバー エクスプ ローラーまたは**データベース エクスプ ローラー**上に、 **O/R デザイナー**します。
+
+作成することができます<xref:System.Data.Linq.DataContext>メソッドをドラッグしてストアド プロシージャまたは関数から<strong>サーバー エクスプ ローラーまたは * * データベース エクスプ ローラー</strong>上に、 **O/R デザイナー**します。
 
 > [!NOTE]
->  生成された戻り値の型<xref:System.Data.Linq.DataContext>メソッドは、ストアド プロシージャを削除またはで関数をする場所によって異なります、 **O/R デザイナー**します。 既存のエンティティ クラスに項目を直接ドロップすると、そのエンティティ クラスを戻り値の型とする <xref:System.Data.Linq.DataContext> メソッドが作成されます。 空の領域に項目をドロップする、 **O/R デザイナー**作成、<xref:System.Data.Linq.DataContext>自動的に生成された型を返すメソッド。 戻り値の型を変更することができます、<xref:System.Data.Linq.DataContext>メソッドに追加した後、**メソッド**ウィンドウ。 検査または戻り値の型を変更する、<xref:System.Data.Linq.DataContext>メソッドを選択し、検査、**戻り値の型**プロパティ、**プロパティ**ウィンドウ。 詳細については、次を参照してください。[方法: DataContext メソッド (O/r デザイナー) の戻り値の型を変更する](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md)します。
+> 生成された戻り値の型<xref:System.Data.Linq.DataContext>メソッドは、ストアド プロシージャを削除またはで関数をする場所によって異なります、 **O/R デザイナー**します。 既存のエンティティ クラスに項目を直接ドロップすると、そのエンティティ クラスを戻り値の型とする <xref:System.Data.Linq.DataContext> メソッドが作成されます。 空の領域に項目をドロップする、 **O/R デザイナー**作成、<xref:System.Data.Linq.DataContext>自動的に生成された型を返すメソッド。 戻り値の型を変更することができます、<xref:System.Data.Linq.DataContext>メソッドに追加した後、**メソッド**ウィンドウ。 検査または戻り値の型を変更する、<xref:System.Data.Linq.DataContext>メソッドを選択し、検査、**戻り値の型**プロパティ、**プロパティ**ウィンドウ。 詳細については、次を参照してください。[方法: DataContext メソッド (O/r デザイナー) の戻り値の型を変更する](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md)します。
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
@@ -48,7 +50,7 @@ ms.locfileid: "37089686"
      <xref:System.Data.Linq.DataContext>メソッドが、選択したエンティティ クラスの戻り値の型で作成され、**メソッド**ウィンドウ。
 
 > [!NOTE]
->  既存の戻り値の型を変更する方法について<xref:System.Data.Linq.DataContext>メソッドを参照してください[方法: DataContext メソッド (O/R デザイナー) の戻り値の型を変更する](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md)します。
+> 既存の戻り値の型を変更する方法について<xref:System.Data.Linq.DataContext>メソッドを参照してください[方法: DataContext メソッド (O/R デザイナー) の戻り値の型を変更する](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md)します。
 
 ## <a name="see-also"></a>関連項目
 

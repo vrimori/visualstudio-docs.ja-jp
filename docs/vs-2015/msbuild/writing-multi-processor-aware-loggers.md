@@ -18,12 +18,12 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 486c8e32b577b6c794a03c080a909023b40eafde
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 2b05c0f1782382f437a5e1d90bf19c724a05ca6a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49219963"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49826391"
 ---
 # <a name="writing-multi-processor-aware-loggers"></a>マルチプロセッサ対応の logger の記述
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -71,13 +71,13 @@ public interface INodeLogger: ILogger
   
  分散ログには次の 2 つの使用方法があります。  
   
--   <xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger> という名前の用意された転送 logger をカスタマイズします。  
+- <xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger> という名前の用意された転送 logger をカスタマイズします。  
   
--   カスタム転送 logger を独自に作成します。  
+- カスタム転送 logger を独自に作成します。  
   
- ConfigurableForwardingLogger を実際の要件に合わせて変更できます。 これを行うには、この logger をコマンド ラインで MSBuild.exe を使用して呼び出し、この logger から中央ノードに転送するビルド イベントを指定します。  
+  ConfigurableForwardingLogger を実際の要件に合わせて変更できます。 これを行うには、この logger をコマンド ラインで MSBuild.exe を使用して呼び出し、この logger から中央ノードに転送するビルド イベントを指定します。  
   
- また、カスタム転送 logger を作成することもできます。 カスタム転送 logger を作成すると、logger の動作を細かく調整できます。 ただし、カスタム転送 logger を作成する作業は ConfigurableForwardingLogger をカスタマイズする場合より複雑です。 詳細については、「[転送 logger の作成](../msbuild/creating-forwarding-loggers.md)」を参照してください。  
+  また、カスタム転送 logger を作成することもできます。 カスタム転送 logger を作成すると、logger の動作を細かく調整できます。 ただし、カスタム転送 logger を作成する作業は ConfigurableForwardingLogger をカスタマイズする場合より複雑です。 詳細については、「[転送 logger の作成](../msbuild/creating-forwarding-loggers.md)」を参照してください。  
   
 ## <a name="using-the-configurableforwardinglogger-for-simple-distributed-logging"></a>ConfigurableForwardingLogger を使用した簡単な分散ログ  
  ConfigurableForwardingLogger またはカスタム転送 logger をアタッチするには、MSBuild.exe を使用したコマンド ライン ビルドに `/distributedlogger` スイッチ (短縮形は `/dl`) を指定します。 logger の型名およびクラス名の形式は、`/logger` スイッチの場合と同じです。ただし、分散 logger は常に転送 logger と中央 logger という 2 つのログ記録クラスから成ります。 XMLForwardingLogger というカスタム転送 logger をアタッチするコードの例を次に示します。  

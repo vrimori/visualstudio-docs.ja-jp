@@ -23,12 +23,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 21e2b1a7a90df2baef48483647c692c8b986c59f
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: f8555d1edae8d22acd6a34a14c66f4e432b39e61
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672006"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917103"
 ---
 # <a name="troubleshoot-errors-in-office-solutions"></a>Office ソリューションのエラーをトラブルシューティングします。
   Visual Studio で Office ソリューションを開発する際、次のタスクを実行するときに問題が発生する場合があります。  
@@ -139,11 +139,11 @@ Word.DocumentClass document = (Word.DocumentClass) Globals.ThisAddIn.Application
   
  このコードを実行すると、次のようなコンパイル エラーが発生します。  
   
--   Visual Basic の場合:「クラス 'DocumentClass' への参照は許可されません、アセンブリが NO-PIA モードを使用してリンクされている場合。」  
+- Visual Basic の場合:「クラス 'DocumentClass' への参照は許可されません、アセンブリが NO-PIA モードを使用してリンクされている場合。」  
   
--   Visual c#:"相互運用機能型 'microsoft.office.interop.word.documentclass' を埋め込むことができません。 代わりに適用可能なインターフェイスを使用してください。"  
+- Visual c#:"相互運用機能型 'microsoft.office.interop.word.documentclass' を埋め込むことができません。 代わりに適用可能なインターフェイスを使用してください。"  
   
- このエラーを解決するには、対応するインターフェイスを代わりに参照するようにコードを変更します。 たとえば、<xref:Microsoft.Office.Interop.Word.DocumentClass> オブジェクトを参照するのではなく、代わりに <xref:Microsoft.Office.Interop.Word.Document> インターフェイスを参照します。  
+  このエラーを解決するには、対応するインターフェイスを代わりに参照するようにコードを変更します。 たとえば、<xref:Microsoft.Office.Interop.Word.DocumentClass> オブジェクトを参照するのではなく、代わりに <xref:Microsoft.Office.Interop.Word.Document> インターフェイスを参照します。  
   
 ```vb  
 Dim document As Word.Document = Globals.ThisAddIn.Application.ActiveDocument  

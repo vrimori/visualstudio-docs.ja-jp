@@ -17,12 +17,12 @@ ms.assetid: 5277b5fa-073b-4bd1-8ba1-9dc913aa3c50
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7dda375cb4657bc6fcc2089341600611b370e52b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: c7422b0dae02b12d731713f6da416361798d3276
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49216100"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49824311"
 ---
 # <a name="elimination-of-sak-files"></a>~SAK ファイルの削除
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "49216100"
 ## <a name="sak-files"></a>~ SAK ファイル  
  Visual Studio .NET 2003 の付いた一時ファイルを作成する ~ SAK します。 これらのファイルは、ソース管理プラグインをサポートしているかどうかに使用されます。  
   
--   MSSCCPRJ します。SCC ファイルです。  
+- MSSCCPRJ します。SCC ファイルです。  
   
--   複数の (共有) チェック アウトします。  
+- 複数の (共有) チェック アウトします。  
   
- プラグインのソース管理プラグイン API 1.2 で提供される高度な機能をサポートする、IDE は、新機能、フラグ、および、次のセクションに記載された関数を使用して一時ファイルを作成することがなくこれらの機能を検出できます。  
+  プラグインのソース管理プラグイン API 1.2 で提供される高度な機能をサポートする、IDE は、新機能、フラグ、および、次のセクションに記載された関数を使用して一時ファイルを作成することがなくこれらの機能を検出できます。  
   
 ## <a name="new-capability-flags"></a>新しい機能フラグ  
  `SCC_CAP_SCCFILE`  

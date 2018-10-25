@@ -15,12 +15,12 @@ ms.assetid: 23fb8384-4f12-446f-977f-ce7910347947
 caps.latest.revision: 28
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5c8fe37de7db5a09e9c0e81f25b09e9b4ff345c1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: c217426d4186477f22a21c9348ff30e181faa840
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49237654"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863283"
 ---
 # <a name="walkthrough-displaying-quickinfo-tooltips"></a>チュートリアル: クイック ヒントの表示
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,17 +29,17 @@ ms.locfileid: "49237654"
   
  クイック ヒントの例では、このチュートリアルは、ユーザーは、メソッド名の上、ポインターを移動すると、ツールヒントを表示します。 この設計では、これら 4 つのインターフェイスを実装する必要があります。  
   
--   ソース インターフェイス  
+- ソース インターフェイス  
   
--   ソース プロバイダーのインターフェイス  
+- ソース プロバイダーのインターフェイス  
   
--   コント ローラーのインターフェイス  
+- コント ローラーのインターフェイス  
   
--   コント ローラーのプロバイダー インターフェイス  
+- コント ローラーのプロバイダー インターフェイス  
   
- ソースとコント ローラーのプロバイダーは Managed Extensibility Framework (MEF) コンポーネント パーツ、ソースとコント ローラー クラスをエクスポートする責任を負います、サービスのインポートしブローカーなど、<xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService>ツールヒントのテキストを作成します。バッファー、および<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker>、QuickInfo セッションが開始します。  
+  ソースとコント ローラーのプロバイダーは Managed Extensibility Framework (MEF) コンポーネント パーツ、ソースとコント ローラー クラスをエクスポートする責任を負います、サービスのインポートしブローカーなど、<xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService>ツールヒントのテキストを作成します。バッファー、および<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker>、QuickInfo セッションが開始します。  
   
- この例でクイック ヒントのソースがメソッドの名前と説明については、ハード コーディングされた一覧には、完全な実装で、言語サービスと言語のドキュメントがそのコンテンツを提供する責任を負います。  
+  この例でクイック ヒントのソースがメソッドの名前と説明については、ハード コーディングされた一覧には、完全な実装で、言語サービスと言語のドキュメントがそのコンテンツを提供する責任を負います。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  

@@ -14,35 +14,35 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7fadabf4becdf53453b24a4bc60e7b4e3a6cd21e
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: e3c73b118f7e137847c1342fb9949c3d7dd6dd0b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39511282"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863246"
 ---
 # <a name="handle-specialized-deployment"></a>特殊化された展開を処理します。
 展開は、プロジェクトの省略可能な操作です。 Web プロジェクトは、たとえば、Web サーバーを更新するプロジェクトへのデプロイをサポートします。 同様に、**スマート デバイス**プロジェクトは、ターゲット デバイスにビルドされたアプリケーションをコピーする展開をサポートしています。 プロジェクト サブタイプが実装することによって特殊化された展開の動作を指定できます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>インターフェイス。 このインターフェイスは、デプロイ操作の完全なセットを定義します。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.AdviseDeployStatusCallback%2A>  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.AdviseDeployStatusCallback%2A>  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Commit%2A>  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Commit%2A>  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStartDeploy%2A>  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStartDeploy%2A>  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStatusDeploy%2A>  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStatusDeploy%2A>  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Rollback%2A>  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Rollback%2A>  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StartDeploy%2A>  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StartDeploy%2A>  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StopDeploy%2A>  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StopDeploy%2A>  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.UnadviseDeployStatusCallback%2A>  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.UnadviseDeployStatusCallback%2A>  
   
- 別のスレッドで実際の展開操作を実行する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ユーザーの操作により応答性の高い。 によって提供されるメソッド<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>によって非同期的と呼ばれる[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]し、必要に応じていつでもデプロイ操作の状態を照会するか、操作を停止する環境をできるように、バック グラウンドで動作します。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>展開コマンドを選択すると、デプロイ操作のインターフェイスは、環境によって呼び出されます。  
+  別のスレッドで実際の展開操作を実行する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ユーザーの操作により応答性の高い。 によって提供されるメソッド<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>によって非同期的と呼ばれる[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]し、必要に応じていつでもデプロイ操作の状態を照会するか、操作を停止する環境をできるように、バック グラウンドで動作します。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>展開コマンドを選択すると、デプロイ操作のインターフェイスは、環境によって呼び出されます。  
   
- 呼び出す必要があるプロジェクト サブタイプに環境をデプロイ操作が開始または終了を通知する、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnStartDeploy%2A>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnEndDeploy%2A>メソッド。  
+  呼び出す必要があるプロジェクト サブタイプに環境をデプロイ操作が開始または終了を通知する、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnStartDeploy%2A>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnEndDeploy%2A>メソッド。  
   
   
 ## <a name="to-handle-a-specialized-deployment-by-a-subtype-project"></a>プロジェクト サブタイプによって特殊化された展開を処理するには  

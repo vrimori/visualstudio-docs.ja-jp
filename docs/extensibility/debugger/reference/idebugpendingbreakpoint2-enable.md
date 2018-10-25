@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Enable |Microsoft ドキュメント
+title: IDebugPendingBreakpoint2::Enable |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 930e806616ef5f4c30aa39b8c6e8ac156ab4a1ba
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 51309f1af6a96663e9d2ad71348a5b56a0fab6f8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31122796"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855483"
 ---
 # <a name="idebugpendingbreakpoint2enable"></a>IDebugPendingBreakpoint2::Enable
 保留中のブレークポイントの有効な状態を切り替えます。  
@@ -42,18 +42,18 @@ int Enable(
   
 #### <a name="parameters"></a>パラメーター  
  `fEnable`  
- [in]0 以外の値を設定 (`TRUE`) 保留中のブレークポイントを有効にする、または 0 (`FALSE`) を無効にします。  
+ [in]0 以外に設定 (`TRUE`) またはゼロに保留中のブレークポイントを有効にする (`FALSE`) を無効にします。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 返します`E_BP_DELETED`場合は、ブレークポイントが削除されました。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 返します`E_BP_DELETED`ブレークポイントが削除されている場合。  
   
-## <a name="remarks"></a>コメント  
- 保留中のブレークポイントが有効になっているか、無効になっている、ときに、そこからバインドされているすべてのブレークポイントは、同じ状態に設定されます。  
+## <a name="remarks"></a>Remarks  
+ 保留中のブレークポイントを有効または無効になっている、ときに、そこからバインドされているすべてのブレークポイントは、同じ状態に設定されます。  
   
- このメソッドは、ブレークポイントが既に有効になっているか、無効になっている場合でも、必要な回数呼び出す可能性があります。  
+ このメソッドは、ブレークポイントが既に有効または無効になっている場合でも、必要な回数だけ呼び出すことがあります。  
   
 ## <a name="example"></a>例  
- 次の例は、単純なは、このメソッドを実装する方法を示します`CPendingBreakpoint`を公開するオブジェクト、 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)インターフェイスです。  
+ 次の例は、単純なは、このメソッドを実装する方法を示しています。`CPendingBreakpoint`を公開するオブジェクト、 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)インターフェイス。  
   
 ```cpp  
 HRESULT CPendingBreakpoint::Enable(BOOL fEnable)    

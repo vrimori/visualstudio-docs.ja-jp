@@ -19,12 +19,12 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9c63936fb78d2de58a9ae1c937a9f8f536a8714c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: c117f6864aadd7c981aa2b89302c06ccfd6c9768
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49256985"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923785"
 ---
 # <a name="item-metadata-in-task-batching"></a>タスクのバッチの項目メタデータ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "49256985"
   
 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] には、項目メタデータに基づき、項目リストをさまざまなカテゴリまたはバッチに分割し、各バッチで一度に 1 つのタスクを実行する機能があります。 厳密にどの項目がどのバッチで渡されるのかは少々複雑です。 このトピックでは、バッチ処理を伴う一般的なシナリオについて説明します。  
   
--   1 つの項目リストをバッチに分割する  
+- 1 つの項目リストをバッチに分割する  
   
--   複数の項目リストをバッチに分割する  
+- 複数の項目リストをバッチに分割する  
   
--   一度に 1 つの項目をバッチ処理する  
+- 一度に 1 つの項目をバッチ処理する  
   
--   項目リストをフィルター処理する  
+- 項目リストをフィルター処理する  
   
- [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] によるバッチ処理については、「[バッチ処理](../msbuild/msbuild-batching.md)」を参照してください。  
+  [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] によるバッチ処理については、「[バッチ処理](../msbuild/msbuild-batching.md)」を参照してください。  
   
 ## <a name="dividing-an-item-list-into-batches"></a>1 つの項目リストをバッチに分割する  
  バッチ処理では、項目メタデータに基づいて 1 つの項目リストを複数のバッチに分割し、各バッチを 1 つのタスクに個別に渡すことができます。 サテライト アセンブリのビルドに便利です。  

@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c3525eb8964ed603e40ba74f0c06b17b494390c7
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: edfdef1c1f946e2c5f677d0ff1578a40ea7bcd8f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36755841"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906235"
 ---
 # <a name="initialize-correlation-dialog-box"></a>[関連付け初期化] ダイアログ ボックス
 
@@ -26,7 +26,7 @@ ms.locfileid: "36755841"
 次の表に、ユーザー インターフェイス (UI) 要素の**関連付けの初期化** ダイアログ ボックス。
 
 |UI 要素|説明|
-|----------------|-----------------|
+|-|-----------------|
 |**相関関係**|初期化する関連付けの <xref:System.ServiceModel.Activities.CorrelationHandle>。|
 |**初期化します。**|初期化するデータが格納されているキー/値ペア。 この値に対応、<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>プロパティ。 有効なキー/値ペアの例では、"OrderID"OrderID という名前の変数のペアをという名前のキーです。|
 

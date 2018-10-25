@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 35c5854afe5363641979e0f79af70c2d3b925b05
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 67e6e8744672c35bdf13e30269297dcc52c50a04
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37116989"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49929609"
 ---
 # <a name="generate-a-class-or-type-in-visual-studio"></a>Visual Studio でクラスまたは型を生成する
 
@@ -41,24 +41,24 @@ ms.locfileid: "37116989"
 
    - C#: 
 
-    ![強調表示された C# のコード](media/class-highlight-cs.png)
+       ![強調表示された C# のコード](media/class-highlight-cs.png)
 
    - Visual Basic: 
 
-    ![強調表示された VB のコード](media/class-highlight-vb.png)
+       ![強調表示された VB のコード](media/class-highlight-vb.png)
 
-1. 次に、以下のいずれかを実行します。
+2. 次に、以下のいずれかを実行します。
 
    - **キーボード**
-     - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
+      - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
    - **マウス**
-     - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
-     - 赤い波線をポイントし、表示された ![電球](media/bulb-cs.png) アイコンをクリックします。
-     - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
+      - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
+      - 赤い波線をポイントし、表示された ![電球](media/bulb-cs.png) アイコンをクリックします。
+      - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
 
-    ![クラス生成のプレビュー](media/class-preview-cs.png)
+      ![クラス生成のプレビュー](media/class-preview-cs.png)
 
-1. ドロップダウン メニューからいずれかのオプションを選択します。
+3. ドロップダウン メニューからいずれかのオプションを選択します。
 
    - [新しいファイルにクラス '*TypeName*' を生成する] &mdash; *TypeName* という名前のクラスを *TypeName*.cs/.vb という名前のファイルに作成します。
    - [クラス '*TypeName*' を生成する] &mdash; *TypeName* という名前のクラスを現在のファイルに作成します。
@@ -68,7 +68,7 @@ ms.locfileid: "37116989"
    > [!TIP]
    > プレビュー ウィンドウの下部にある **[変更のプレビュー]** リンクを使うと、選択する前に、行われる[すべての変更を確認する](../../ide/preview-changes.md)ことができます。
 
-1. **[新しい型の生成]** 項目を選択した場合、**[型の生成]** ダイアログ ボックスが開きます。 新しい型のアクセシビリティ、種類、および場所を構成します。
+4. **[新しい型の生成]** 項目を選択した場合、**[型の生成]** ダイアログ ボックスが開きます。 新しい型のアクセシビリティ、種類、および場所を構成します。
 
    ![型の生成](media/class-newtype-cs.png)
 

@@ -24,12 +24,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: fd51bd397e6db3728c10f52db68d45e226fb605b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: d3ffe88fb54da26468ca510a2f1a7ab6170d88db
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49251044"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49881723"
 ---
 # <a name="how-to-install-sample-databases"></a>方法 : サンプル データベースをインストールする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -96,11 +96,11 @@ ms.locfileid: "49251044"
   
 #### <a name="to-install-the-northwind-sample-database-for-microsoft-access"></a>Microsoft Access 用の Northwind サンプル データベースをインストールするには  
   
-1.  Microsoft Access 2010 以降では、Northwind のオンライン テンプレートの検索し、選択**デスクトップ Northwind 2007 サンプル データベース**します。  
+1. Microsoft Access 2010 以降では、Northwind のオンライン テンプレートの検索し、選択**デスクトップ Northwind 2007 サンプル データベース**します。  
   
-2.  Microsoft Access で、データベース ファイルを Northwind.accdb として保存します。  
+2. Microsoft Access で、データベース ファイルを Northwind.accdb として保存します。  
   
- Access データベースの新しい拡張子は .accdb です。 参照してください[Microsoft Access 2010 を使用したデータ プログラミング](http://msdn.microsoft.com/library/office/ff965871.aspx)します。 アクセスを使用して、Northwind データベースに接続するを参照してください。[方法: Northwind データベースへの接続](../data-tools/how-to-connect-to-the-northwind-database.md)します。  
+   Access データベースの新しい拡張子は .accdb です。 参照してください[Microsoft Access 2010 を使用したデータ プログラミング](http://msdn.microsoft.com/library/office/ff965871.aspx)します。 アクセスを使用して、Northwind データベースに接続するを参照してください。[方法: Northwind データベースへの接続](../data-tools/how-to-connect-to-the-northwind-database.md)します。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  サンプル データベースは例示のみを目的としており、必ずしもセキュリティに関するベスト プラクティスを示しているとは限りません。  

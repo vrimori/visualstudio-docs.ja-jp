@@ -17,25 +17,25 @@ caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 53443ed1681e5709edc0581fca8e2fd46a51834d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5e0bda22a63b5286db9336bc0924ce11bc05e2bc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49245560"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844576"
 ---
 # <a name="collecting-net-memory-allocation-and-lifetime-data"></a>.NET メモリの割り当ておよび有効期間データの収集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツールは、.NET メモリ割り当てとオブジェクト有効期間データの収集をサポートしています。アプリケーションのメモリに関連するパフォーマンスの問題を検出できます。  
   
--   .NET メモリ割り当てに関するデータには、割り当てられた .NET Framework メモリ オブジェクトのサイズと数が含まれています。  
+- .NET メモリ割り当てに関するデータには、割り当てられた .NET Framework メモリ オブジェクトのサイズと数が含まれています。  
   
--   オブジェクトの有効期間データには、3 つのガベージ コレクション生成で解放される .NET Framework メモリ オブジェクトのサイズと数が含まれています。  
+- オブジェクトの有効期間データには、3 つのガベージ コレクション生成で解放される .NET Framework メモリ オブジェクトのサイズと数が含まれています。  
   
- **必要条件**  
+  **必要条件**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
+- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
 > [!NOTE]
 >  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 Windows ストア アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
@@ -64,9 +64,9 @@ ms.locfileid: "49245560"
 ## <a name="common-tasks"></a>一般的なタスク  
  追加のオプションを、パフォーマンス セッションの [ _パフォーマンス セッション]_**[プロパティ ページ]** ダイアログ ボックスで指定できます。 このダイアログ ボックスを開くには:  
   
--   **パフォーマンス エクスプローラー**で、パフォーマンス セッション名を右クリックして **[プロパティ]** をクリックします。  
+- **パフォーマンス エクスプローラー**で、パフォーマンス セッション名を右クリックして **[プロパティ]** をクリックします。  
   
- 次の表の各タスクでは、.NET メモリ データを収集する際に、_[パフォーマンス セッション]_**[プロパティ ページ]** ダイアログ ボックスで指定できるオプションについて説明しています。  
+  次の表の各タスクでは、.NET メモリ データを収集する際に、_[パフォーマンス セッション]_**[プロパティ ページ]** ダイアログ ボックスで指定できるオプションについて説明しています。  
   
 |タスク|関連するコンテンツ|  
 |----------|---------------------|  

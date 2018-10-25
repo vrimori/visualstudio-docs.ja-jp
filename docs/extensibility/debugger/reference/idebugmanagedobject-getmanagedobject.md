@@ -1,5 +1,5 @@
 ---
-title: IDebugManagedObject::GetManagedObject |Microsoft ドキュメント
+title: IDebugManagedObject::GetManagedObject |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 81b90a43f1de02ba4d195f43b78ee1179c562eff
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f30c76dfd0c2f9dafa4844f815ce2506e70346f3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31111194"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917935"
 ---
 # <a name="idebugmanagedobjectgetmanagedobject"></a>IDebugManagedObject::GetManagedObject
-マネージ オブジェクトを表すインターフェイスを返します。  
+管理対象のオブジェクトを表すインターフェイスを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +41,13 @@ int GetManagedObject(
   
 #### <a name="parameters"></a>パラメーター  
  `ppManagedObject`  
- [out]マネージ オブジェクトを表すインターフェイスを返します。  
+ [out]管理対象のオブジェクトを表すインターフェイスを返します。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドから返されたインターフェイスを呼び出すためのメソッドを許可するマネージ クラスによって実装されるインターフェイスのクエリを実行できます。  
+## <a name="remarks"></a>Remarks  
+ このメソッドから返されるインターフェイスは、そのメソッドを呼び出せるように、マネージ クラスによって実装されるインターフェイスの照会できます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

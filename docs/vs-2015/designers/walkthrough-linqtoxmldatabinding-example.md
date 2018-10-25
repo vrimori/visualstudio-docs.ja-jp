@@ -14,12 +14,12 @@ caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 54e714aa95ee1206e278546bcd61e31687c45211
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 3c69c69cfed53b0080614984853b3128908c2e89
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49182294"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893651"
 ---
 # <a name="walkthrough-linqtoxmldatabinding-example"></a>チュートリアル : LinqToXmlDataBinding の例
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,19 +32,19 @@ ms.locfileid: "49182294"
 ## <a name="remarks"></a>Remarks  
  LinqToXmlDataBinding プログラムは、C# ソース ファイルと XAML ソース ファイルで構成される Windows Presentation Foundation (WPF) アプリケーションです。 このプログラムには書籍の一覧を定義する組み込み XML ドキュメントが含まれており、ユーザーはそれらのエントリを表示、追加、削除、および編集することができます。 このプログラムは、次の 2 つの主要なソース ファイルで構成されています。  
   
--   L2DBForm.xaml には、メイン ウィンドウのユーザー インターフェイス (UI) の XAML 宣言コードが含まれています。 また、書籍一覧のデータ プロバイダーと組み込み XML ドキュメントを定義するウィンドウ リソース セクションも含まれています。  
+- L2DBForm.xaml には、メイン ウィンドウのユーザー インターフェイス (UI) の XAML 宣言コードが含まれています。 また、書籍一覧のデータ プロバイダーと組み込み XML ドキュメントを定義するウィンドウ リソース セクションも含まれています。  
   
--   L2DBForm.xaml.cs には、UI に関連付けられている初期化メソッドとイベント処理メソッドが含まれています。  
+- L2DBForm.xaml.cs には、UI に関連付けられている初期化メソッドとイベント処理メソッドが含まれています。  
   
- メイン ウィンドウは縦に区切られ、次の 4 つの UI セクションに分かれています。  
+  メイン ウィンドウは縦に区切られ、次の 4 つの UI セクションに分かれています。  
   
--   **[XML]** には、組み込まれている書籍一覧の生の XML ソースが表示されます。  
+- **[XML]** には、組み込まれている書籍一覧の生の XML ソースが表示されます。  
   
--   **[Book List]** には書籍エントリが標準テキストで表示され、ユーザーはエントリを個別に選択および削除できます。  
+- **[Book List]** には書籍エントリが標準テキストで表示され、ユーザーはエントリを個別に選択および削除できます。  
   
--   **[Edit Selected Book]** では、ユーザーは現在選択している書籍エントリに関連付けられている値を編集できます。  
+- **[Edit Selected Book]** では、ユーザーは現在選択している書籍エントリに関連付けられている値を編集できます。  
   
--   **[Add New Book]** では、ユーザーが入力した値に基づいて新しい書籍エントリを作成できます。  
+- **[Add New Book]** では、ユーザーが入力した値に基づいて新しい書籍エントリを作成できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

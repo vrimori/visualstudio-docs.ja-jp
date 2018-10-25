@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5e257df6d59616869a044a5366c0dfd39f6fbb3d
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: fe25385d49e5553a6e9d4309dd0bb0d12a294a5c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859979"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49883978"
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>テキスト テンプレートでの Visual Studio ModelBus の使用
 Visual Studio ModelBus 参照を含むモデルを読み取るテキスト テンプレートを記述する場合は、ターゲットのモデルへのアクセスに参照を解決する可能性があります。 その場合は、テキスト テンプレートと参照先のドメイン固有言語 (Dsl) を調整する必要があります。
@@ -145,7 +145,6 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
   // Other useful code: this.Host.ResolvePath(filename) gets an absolute filename
   // from a path that is relative to the text template.
 #>
-
 ```
 
  このテキスト テンプレートを実行すると、`SourceDsl`ディレクティブは、ファイルを読み込みます`Sample.source`します。 テンプレートがモデルでは、開始からの要素にアクセスできます`this.ModelRoot`します。 コードには、ドメイン クラスとその DSL のプロパティを使用できます。
@@ -178,77 +177,77 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
 #### <a name="construct-a-dsl-that-is-accessible-to-modelbus"></a>DSL を ModelBus にアクセスできるコンス トラクター
 
-1.  新しい DSL ソリューションを作成します。 この例では、Task Flow ソリューション テンプレートを選択します。 言語名を設定`MBProvider`と".provide"にファイル名拡張子。
+1. 新しい DSL ソリューションを作成します。 この例では、Task Flow ソリューション テンプレートを選択します。 言語名を設定`MBProvider`と".provide"にファイル名拡張子。
 
-2.  DSL 定義図で、上部近くない図の空白部分を右クリックし、順にクリックします**Modelbus の有効化**します。
+2. DSL 定義図で、上部近くない図の空白部分を右クリックし、順にクリックします**Modelbus の有効化**します。
 
-    -   表示されない場合**Modelbus の有効化**、ダウンロードして、VMSDK ModelBus 拡張機能をインストールする必要があります。 VMSDK サイトで探す: [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579)します。
+   -   表示されない場合**Modelbus の有効化**、ダウンロードして、VMSDK ModelBus 拡張機能をインストールする必要があります。 VMSDK サイトで探す: [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579)します。
 
-3.  **Modelbus の有効化**ダイアログ ボックスで、**この DSL を ModelBus に公開**、 をクリックし、 **OK**。
+3. **Modelbus の有効化**ダイアログ ボックスで、**この DSL を ModelBus に公開**、 をクリックし、 **OK**。
 
-     新しいプロジェクトの場合は、`ModelBusAdapter`ソリューションに追加されます。
+    新しいプロジェクトの場合は、`ModelBusAdapter`ソリューションに追加されます。
 
- DSL を ModelBus を使用してテキスト テンプレートからアクセスできるようになりましたがあります。 コマンド、イベント ハンドラー、または規則、モデル ファイル エディターの AppDomain で動作するすべてのコードへの参照を解決できます。 ただし、テキスト テンプレートでは、別の AppDomain で実行され、編集されているときに、モデルにアクセスできません。 テキスト テンプレートからこの DSL を ModelBus references をアクセスする場合は、個別の ModelBusAdapter が必要です。
+   DSL を ModelBus を使用してテキスト テンプレートからアクセスできるようになりましたがあります。 コマンド、イベント ハンドラー、または規則、モデル ファイル エディターの AppDomain で動作するすべてのコードへの参照を解決できます。 ただし、テキスト テンプレートでは、別の AppDomain で実行され、編集されているときに、モデルにアクセスできません。 テキスト テンプレートからこの DSL を ModelBus references をアクセスする場合は、個別の ModelBusAdapter が必要です。
 
 #### <a name="to-create-a-modelbus-adapter-that-is-configured-for-text-templates"></a>テキスト テンプレート用に構成された ModelBus アダプターを作成するには
 
-1.  Windows エクスプ ローラーでコピーして、ModelBusAdapter.csproj を含むフォルダーを貼り付けます。
+1. Windows エクスプ ローラーでコピーして、ModelBusAdapter.csproj を含むフォルダーを貼り付けます。
 
-     T4ModelBusAdapter フォルダーの名前を付けます。
+    T4ModelBusAdapter フォルダーの名前を付けます。
 
-     T4ModelBusAdapter.csproj プロジェクト ファイルの名前を変更します。
+    T4ModelBusAdapter.csproj プロジェクト ファイルの名前を変更します。
 
-2.  ソリューション エクスプ ローラーで T4ModelBusAdapter を MBProvider ソリューションに追加します。 ソリューション ノードを右クリックし、[**追加**、] をクリックし、**既存のプロジェクト**します。
+2. ソリューション エクスプ ローラーで T4ModelBusAdapter を MBProvider ソリューションに追加します。 ソリューション ノードを右クリックし、[**追加**、] をクリックし、**既存のプロジェクト**します。
 
-3.  T4ModelBusAdapter プロジェクト ノードを右クリックし、し、[プロパティ] をクリックします。 プロジェクトのプロパティ ウィンドウで次のように変更します。、**アセンブリ名**と**既定 Namespace**に`Company.MBProvider.T4ModelBusAdapters`します。
+3. T4ModelBusAdapter プロジェクト ノードを右クリックし、し、[プロパティ] をクリックします。 プロジェクトのプロパティ ウィンドウで次のように変更します。、**アセンブリ名**と**既定 Namespace**に`Company.MBProvider.T4ModelBusAdapters`します。
 
-4.  T4ModelBusAdapter で各 *.tt ファイルには、行は、次のようにするため、名前空間の最後の部分に"T4"を挿入します。
+4. T4ModelBusAdapter で各 *.tt ファイルには、行は、次のようにするため、名前空間の最後の部分に"T4"を挿入します。
 
-     `namespace <#= CodeGenerationUtilities.GetPackageNamespace(this.Dsl) #>.T4ModelBusAdapters`
+    `namespace <#= CodeGenerationUtilities.GetPackageNamespace(this.Dsl) #>.T4ModelBusAdapters`
 
-5.  `DslPackage`プロジェクトでプロジェクト参照を追加、`T4ModelBusAdapter`します。
+5. `DslPackage`プロジェクトでプロジェクト参照を追加、`T4ModelBusAdapter`します。
 
-6.  下にある次の行を追加で DslPackage\source.extension.tt、`<Content>`します。
+6. 下にある次の行を追加で DslPackage\source.extension.tt、`<Content>`します。
 
-     `<MefComponent>|T4ModelBusAdapter|</MefComponent>`
+    `<MefComponent>|T4ModelBusAdapter|</MefComponent>`
 
-7.  `T4ModelBusAdapter`プロジェクトへの参照の追加: **Microsoft.VisualStudio.TextTemplating.Modeling.11.0**
+7. `T4ModelBusAdapter`プロジェクトへの参照の追加: **Microsoft.VisualStudio.TextTemplating.Modeling.11.0**
 
-8.  T4ModelBusAdapter\AdapterManager.tt を開きます。
+8. T4ModelBusAdapter\AdapterManager.tt を開きます。
 
-    1.  AdapterManagerBase の基底クラスを <xref:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager> に変更します。 ファイルのこの部分が、次のようになります。
+   1.  AdapterManagerBase の基底クラスを <xref:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager> に変更します。 ファイルのこの部分が、次のようになります。
 
-        ```
-        namespace <#= CodeGenerationUtilities.GetPackageNamespace(this.Dsl) #>.T4ModelBusAdapters
-        {
-            /// <summary>
-            /// Adapter manager base class (double derived pattern) for the <#= dslName #> Designer
-            /// </summary>
-            public partial class <#= dslName #>AdapterManagerBase
-            : Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager
-            {
+       ```
+       namespace <#= CodeGenerationUtilities.GetPackageNamespace(this.Dsl) #>.T4ModelBusAdapters
+       {
+           /// <summary>
+           /// Adapter manager base class (double derived pattern) for the <#= dslName #> Designer
+           /// </summary>
+           public partial class <#= dslName #>AdapterManagerBase
+           : Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager
+           {
 
-        ```
+       ```
 
-    2.  ファイルの最後に、近くには、クラス AdapterManager の前に、次の追加の属性を挿入します。
+   2.  ファイルの最後に、近くには、クラス AdapterManager の前に、次の追加の属性を挿入します。
 
-         `[Microsoft.VisualStudio.Modeling.Integration.HostSpecific(HostName)]`
+        `[Microsoft.VisualStudio.Modeling.Integration.HostSpecific(HostName)]`
 
-         結果では、次の項目に似ています。
+        結果では、次の項目に似ています。
 
-        ```
-        /// <summary>
-        /// ModelBus modeling adapter manager for a <#= dslName #>Adapter model adapter
-        /// </summary>
-        [Mef::Export(typeof(DslIntegration::ModelBusAdapterManager))]
-        [Mef::ExportMetadata(DslIntegration::CompositionAttributes.AdapterIdKey,<#= dslName #>Adapter.AdapterId)]
-        [DslIntegration::HostSpecific(DslIntegrationShell::VsModelingAdapterManager.HostName)]
-        [Microsoft.VisualStudio.Modeling.Integration.HostSpecific(HostName)]
-        public partial class <#= dslName #>AdapterManager : <#= dslName #>AdapterManagerBase
-        {
-        }
+       ```
+       /// <summary>
+       /// ModelBus modeling adapter manager for a <#= dslName #>Adapter model adapter
+       /// </summary>
+       [Mef::Export(typeof(DslIntegration::ModelBusAdapterManager))]
+       [Mef::ExportMetadata(DslIntegration::CompositionAttributes.AdapterIdKey,<#= dslName #>Adapter.AdapterId)]
+       [DslIntegration::HostSpecific(DslIntegrationShell::VsModelingAdapterManager.HostName)]
+       [Microsoft.VisualStudio.Modeling.Integration.HostSpecific(HostName)]
+       public partial class <#= dslName #>AdapterManager : <#= dslName #>AdapterManagerBase
+       {
+       }
 
-        ```
+       ```
 
 9. クリックして**すべてのテンプレートの変換**タイトル バーのソリューション エクスプ ローラーでします。
 
@@ -256,55 +255,55 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
 11. F5 キーを押して、DSL が動作していることを確認します。 実験用のプロジェクトで開きます`Sample.provider`します。 Visual Studio の実験用インスタンスを終了します。
 
- テキスト テンプレートと通常のコードで、この DSL を ModelBus References を解決ようになりましたことができます。
+    テキスト テンプレートと通常のコードで、この DSL を ModelBus References を解決ようになりましたことができます。
 
 #### <a name="construct-a-dsl-with-a-modelbus-reference-domain-property"></a>ModelBus 参照ドメインのプロパティを使用して、DSL を作成します。
 
-1.  最小言語ソリューション テンプレートを使用して、新しい DSL を作成します。 MBConsumer 言語の名前を指定し、".consume"にファイル名拡張子を設定します。
+1. 最小言語ソリューション テンプレートを使用して、新しい DSL を作成します。 MBConsumer 言語の名前を指定し、".consume"にファイル名拡張子を設定します。
 
-2.  DSL プロジェクトでは、MBProvider DSL アセンブリへの参照を追加します。 右クリックして`MBConsumer\Dsl\References` をクリックし、**参照の追加**します。 **参照**タブで、 `MBProvider\Dsl\bin\Debug\Company.MBProvider.Dsl.dll`
+2. DSL プロジェクトでは、MBProvider DSL アセンブリへの参照を追加します。 右クリックして`MBConsumer\Dsl\References` をクリックし、**参照の追加**します。 **参照**タブで、 `MBProvider\Dsl\bin\Debug\Company.MBProvider.Dsl.dll`
 
-     これにより、他の DSL を使用するコードを作成することができます。 いくつかの Dsl への参照を作成する場合も追加します。
+    これにより、他の DSL を使用するコードを作成することができます。 いくつかの Dsl への参照を作成する場合も追加します。
 
-3.  DSL 定義図でダイアグラムを右クリックし をクリックし、 **ModelBus の有効化**します。 ダイアログ ボックスで、次のように選択します。 **、ModelBus を使用するには、この DSL を有効にする**します。
+3. DSL 定義図でダイアグラムを右クリックし をクリックし、 **ModelBus の有効化**します。 ダイアログ ボックスで、次のように選択します。 **、ModelBus を使用するには、この DSL を有効にする**します。
 
-4.  クラスの`ExampleElement`、新しいドメインのプロパティを追加`MBR`、[プロパティ] ウィンドウにその型を設定および`ModelBusReference`。
+4. クラスの`ExampleElement`、新しいドメインのプロパティを追加`MBR`、[プロパティ] ウィンドウにその型を設定および`ModelBusReference`。
 
-5.  上の図は、ドメイン プロパティを右クリックし、をクリックし、**編集 ModelBusReference 固有プロパティ**します。 ダイアログ ボックスで、次のように選択します。**モデル要素**します。
+5. 上の図は、ドメイン プロパティを右クリックし、をクリックし、**編集 ModelBusReference 固有プロパティ**します。 ダイアログ ボックスで、次のように選択します。**モデル要素**します。
 
-     次に、ファイル ダイアログ フィルターを設定します。
+    次に、ファイル ダイアログ フィルターを設定します。
 
-     `Provider File|*.provide`
+    `Provider File|*.provide`
 
-     後の部分文字列"&#124;"はファイルの選択 ダイアログ ボックスのフィルターです。 使用してすべてのファイルを許可するように設定できます *。\*
+    後の部分文字列"&#124;"はファイルの選択 ダイアログ ボックスのフィルターです。 使用してすべてのファイルを許可するように設定できます *。\*
 
-     **モデル要素の型**一覧で、プロバイダーの DSL (たとえば、Company.MBProvider.Task) 以上のドメイン クラスの 1 つ以上の名前を入力します。 抽象クラスがあります。 一覧を空白のままにした場合、ユーザーは任意の要素への参照を設定できます。
+    **モデル要素の型**一覧で、プロバイダーの DSL (たとえば、Company.MBProvider.Task) 以上のドメイン クラスの 1 つ以上の名前を入力します。 抽象クラスがあります。 一覧を空白のままにした場合、ユーザーは任意の要素への参照を設定できます。
 
-6.  ダイアログ ボックスを閉じると**すべてのテンプレートの変換**します。
+6. ダイアログ ボックスを閉じると**すべてのテンプレートの変換**します。
 
- 別の DSL 内の要素への参照を含むことのできる DSL を作成しました。
+   別の DSL 内の要素への参照を含むことのできる DSL を作成しました。
 
 #### <a name="create-a-modelbus-reference-to-another-file-in-the-solution"></a>ソリューション内の別のファイルへの ModelBus 参照を作成します。
 
-1.  MBConsumer ソリューションでは、ctrl キーを押しながら f5 キーを押します。 Visual Studio の実験用インスタンスが開き、 **MBConsumer\Debugging**プロジェクト。
+1. MBConsumer ソリューションでは、ctrl キーを押しながら f5 キーを押します。 Visual Studio の実験用インスタンスが開き、 **MBConsumer\Debugging**プロジェクト。
 
-2.  Sample.provide へのコピーを追加、 **MBConsumer\Debugging**プロジェクト。 これは、機能は、ModelBus 参照する必要があります、同じソリューション内のファイルを参照しているため必要です。
+2. Sample.provide へのコピーを追加、 **MBConsumer\Debugging**プロジェクト。 これは、機能は、ModelBus 参照する必要があります、同じソリューション内のファイルを参照しているため必要です。
 
-    1.  デバッグ プロジェクトを右クリックし、[**追加**、] をクリックし、**既存項目の**します。
+   1.  デバッグ プロジェクトを右クリックし、[**追加**、] をクリックし、**既存項目の**します。
 
-    2.  **項目の追加**ダイアログ ボックスで、フィルターを設定**すべてのファイル (\*.\*)**.
+   2.  **項目の追加**ダイアログ ボックスで、フィルターを設定**すべてのファイル (\*.\*)**.
 
-    3.  移動します`MBProvider\Debugging\Sample.provide`し**追加**します。
+   3.  移動します`MBProvider\Debugging\Sample.provide`し**追加**します。
 
-3.  `Sample.consume` を開きます。
+3. `Sample.consume`を開きます。
 
-4.  例の 1 つの図形をクリックし、[プロパティ] ウィンドウで次のようにクリックします **[...]。** MBR プロパティ。 ダイアログ ボックスで、次のようにクリックします。**参照**選択`Sample.provide`します。 要素のウィンドウでタスクの種類を展開し、要素の 1 つを選択します。
+4. 例の 1 つの図形をクリックし、[プロパティ] ウィンドウで次のようにクリックします **[...]。** MBR プロパティ。 ダイアログ ボックスで、次のようにクリックします。**参照**選択`Sample.provide`します。 要素のウィンドウでタスクの種類を展開し、要素の 1 つを選択します。
 
-5.  ファイルを保存します。
+5. ファイルを保存します。
 
-     (まだ閉じないでください Visual Studio の実験用インスタンス。)
+    (まだ閉じないでください Visual Studio の実験用インスタンス。)
 
- 別のモデル内の要素への ModelBus 参照を含むモデルを作成しました。
+   別のモデル内の要素への ModelBus 参照を含むモデルを作成しました。
 
 #### <a name="resolve-a-modelbus-reference-in-a-text-template"></a>テキスト テンプレート内の ModelBus 参照を解決するには
 

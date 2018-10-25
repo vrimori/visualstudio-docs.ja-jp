@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f720c86f98aa484a6f83721dcf6d6c0881822b22
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: dceca1e518783f405490d3f2527156bd20bf81aa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079639"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911526"
 ---
 # <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>方法: プロジェクト ファイルの名前または場所を参照する
 独自のプロパティを作成することなく、プロジェクト ファイル自体のプロジェクトの名前または場所を使用できます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は、プロジェクトのファイル名とプロジェクトに関連するその他のプロパティを参照する、予約済みのプロパティを提供します。 予約済みのプロパティの詳細については、「[MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)」を参照してください。  
@@ -33,15 +33,15 @@ ms.locfileid: "39079639"
   
 #### <a name="to-use-the-project-properties"></a>プロジェクトのプロパティを使用するには
   
--   他のすべてのプロパティの場合と同様に、$() 表記でプロジェクト ファイルのプロパティを参照します。 例:  
+- 他のすべてのプロパティの場合と同様に、$() 表記でプロジェクト ファイルのプロパティを参照します。 例:  
   
-    ```xml  
-    <CSC Sources = "@(CSFile)"   
-        OutputAssembly = "$(MSBuildProjectName).exe"/>  
-    </CSC>  
-    ```          
+  ```xml  
+  <CSC Sources = "@(CSFile)"   
+      OutputAssembly = "$(MSBuildProjectName).exe"/>  
+  </CSC>  
+  ```          
   
- 予約済みのプロパティを使用する利点は、プロジェクト ファイル名への変更がすべて自動的に組み込まれることです。 次回プロジェクトをビルドするとき、出力ファイルに新しい名前が付けられ、追加の操作は必要ありません。  
+  予約済みのプロパティを使用する利点は、プロジェクト ファイル名への変更がすべて自動的に組み込まれることです。 次回プロジェクトをビルドするとき、出力ファイルに新しい名前が付けられ、追加の操作は必要ありません。  
   
 > [!NOTE]
 >  予約済みのプロパティは、プロジェクト ファイルで再定義できません。  

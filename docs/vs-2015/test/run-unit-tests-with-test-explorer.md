@@ -15,12 +15,12 @@ ms.assetid: 91b167a3-280a-498b-8fc2-f67859a2c64e
 caps.latest.revision: 29
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 837e004dfffbaba5eac154b195ff4ed8c382430d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: f4c5a8a4d090a7603f83f6fb3c3d9deb0c67d5f8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49218349"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846838"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>テスト エクスプローラーを使用して単体テストを実行する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -67,17 +67,17 @@ ms.locfileid: "49218349"
 ###  <a name="BKMK_Run_tests"></a> テストの実行  
  ソリューション内のすべてのテスト、グループ内のすべてのテスト、または選択した一連のテストを実行できます。 次のいずれかの操作を行います。  
   
--   ソリューション内のすべてのテストを実行するには、 **[すべて実行]** をクリックします。  
+- ソリューション内のすべてのテストを実行するには、 **[すべて実行]** をクリックします。  
   
--   既定のグループ内のすべてのテストを実行するには、 **[実行]** をクリックし、メニューでグループを選択します。  
+- 既定のグループ内のすべてのテストを実行するには、 **[実行]** をクリックし、メニューでグループを選択します。  
   
--   実行する個々のテストを選択し、選択したテストのコンテキスト メニューを開いて、 **[選択したテストの実行]** を選択します。  
+- 実行する個々のテストを選択し、選択したテストのコンテキスト メニューを開いて、 **[選択したテストの実行]** を選択します。  
   
--   個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute-parallelicon-small.png "UTE_parallelicon-small") トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。  
+- 個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute-parallelicon-small.png "UTE_parallelicon-small") トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。  
   
- テストの実行中、テスト エクスプローラー ウィンドウの一番上にある成功/失敗ステータス バーがアニメーション化されます。 テストの実行の終了時に、すべてのテストが成功した場合は、成功/失敗ステータス バーが緑色に変わり、いずれかのテストが失敗した場合は、赤色に変わります。  
+  テストの実行中、テスト エクスプローラー ウィンドウの一番上にある成功/失敗ステータス バーがアニメーション化されます。 テストの実行の終了時に、すべてのテストが成功した場合は、成功/失敗ステータス バーが緑色に変わり、いずれかのテストが失敗した場合は、赤色に変わります。  
   
- ![ページのトップへ](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
+  ![ページのトップへ](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
 ###  <a name="BKMK_Run_tests_after_every_build"></a> 各ビルドの後にテストを実行する  
   
@@ -102,19 +102,19 @@ ms.locfileid: "49218349"
   
  テストの詳細ペインに次の情報が表示されます。  
   
--   テスト メソッドのソース ファイル名と行番号。  
+- テスト メソッドのソース ファイル名と行番号。  
   
--   テストの状態。  
+- テストの状態。  
   
--   テスト メソッドの実行に要した経過時間。  
+- テスト メソッドの実行に要した経過時間。  
   
- テストが失敗した場合、詳細ペインには次の情報も表示されます。  
+  テストが失敗した場合、詳細ペインには次の情報も表示されます。  
   
--   テストの単体テスト フレームワークによって返されたメッセージ。  
+- テストの単体テスト フレームワークによって返されたメッセージ。  
   
--   テストが失敗した時刻のスタック トレース。  
+- テストが失敗した時刻のスタック トレース。  
   
- ![ページのトップへ](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
+  ![ページのトップへ](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
 ###  <a name="BKMK_View_the_source_code_of_a_test_method"></a> テスト メソッドのソース コードを表示する  
  Visual Studio エディターのテスト メソッドのソース コードを表示するには、テストを選択し、コンテキスト メニューの **[テストを開く]** を選択します (キーボードの F12 キー)。  
@@ -197,13 +197,13 @@ TEST_METHOD(Method1)
   
  異なる条件でフィルター処理するには  
   
-1.  検索ボックスの右にあるドロップダウン リストを開きます。  
+1. 検索ボックスの右にあるドロップダウン リストを開きます。  
   
-2.  新しい条件を選択します。  
+2. 新しい条件を選択します。  
   
-3.  引用符の間にフィルターの値を入力します。  
+3. 引用符の間にフィルターの値を入力します。  
   
- ![テスト エクスプローラーでテストをフィルター処理する](../test/media/ute-filtertestlist.png "UTE_FilterTestList")  
+   ![テスト エクスプローラーでテストをフィルター処理する](../test/media/ute-filtertestlist.png "UTE_FilterTestList")  
   
 > [!NOTE]
 >  検索では大文字と小文字を区別せず、指定された文字列が条件の値の一部と一致するかどうかを照合します。  
@@ -224,7 +224,7 @@ TEST_METHOD(Method1)
 FilterName:"Criteria" -FilterName:"SubsetCriteria"  
 ```  
   
- たとえば、オブジェクトに適用された  
+ 例えば以下のようにします。  
   
 ```  
 FullName:"MyClass" - FullName:"PerfTest"  
@@ -255,16 +255,16 @@ FullName:"MyClass" - FullName:"PerfTest"
 ###  <a name="BKMK_Debug_unit_tests"></a> 単体テストをデバッグする  
  テスト エクスプローラーを使用して、テストのデバッグ セッションを開始できます。 Visual Studio デバッガーを使用してコードをシームレスにステップ実行すると、テスト対象のプロジェクトと単体テストの間を切り替えることができます。 デバッグを開始するには:  
   
-1.  Visual Studio エディターで、デバッグする 1 つ以上のテスト メソッドにブレークポイントを設定します。  
+1. Visual Studio エディターで、デバッグする 1 つ以上のテスト メソッドにブレークポイントを設定します。  
   
-    > [!NOTE]
-    >  テスト メソッドを任意の順序で実行できるため、デバッグするすべてのテスト メソッドにブレークポイントを設定します。  
+   > [!NOTE]
+   >  テスト メソッドを任意の順序で実行できるため、デバッグするすべてのテスト メソッドにブレークポイントを設定します。  
   
-2.  テスト エクスプローラーでテスト メソッドを選択し、コンテキスト メニューの **[選択したテストのデバッグ]** を選択します。  
+2. テスト エクスプローラーでテスト メソッドを選択し、コンテキスト メニューの **[選択したテストのデバッグ]** を選択します。  
   
- デバッガーの詳細については、「[Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)」を参照してください。  
+   デバッガーの詳細については、「[Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)」を参照してください。  
   
- ![ページのトップへ](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
+   ![ページのトップへ](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
 ###  <a name="BKMK_Diagnose_test_method_performance_issues"></a> テスト メソッドのパフォーマンスの問題を診断する  
  テスト メソッドに時間がかかる原因を診断するには、エクスプローラーでメソッドを選択し、コンテキスト メニューの [プロファイル] を選択します。 「[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)」を参照してください。  
@@ -278,19 +278,19 @@ FullName:"MyClass" - FullName:"PerfTest"
   
  ソリューションのテスト メソッドのコード カバレッジを実行するには:  
   
-1.  Visual Studio メニューの **[テスト]** を選択し、 **[コード カバレッジの分析]** を選択します。  
+1. Visual Studio メニューの **[テスト]** を選択し、 **[コード カバレッジの分析]** を選択します。  
   
-2.  サブメニューから次のいずれかのコマンドを選択します。  
+2. サブメニューから次のいずれかのコマンドを選択します。  
   
-    -   **[選択されたテスト]** : テスト エクスプローラーで選択したテスト メソッドを実行します。  
+   -   **[選択されたテスト]** : テスト エクスプローラーで選択したテスト メソッドを実行します。  
   
-    -   **[All tests (すべてのテスト)]** : ソリューション内のすべてのテスト メソッドを実行します。  
+   -   **[All tests (すべてのテスト)]** : ソリューション内のすべてのテスト メソッドを実行します。  
   
- [コード カバレッジの結果] ウィンドウに、行、関数、クラス、名前空間、およびモジュールで実行された製品コードのブロックのパーセンテージが表示されます。  
+   [コード カバレッジの結果] ウィンドウに、行、関数、クラス、名前空間、およびモジュールで実行された製品コードのブロックのパーセンテージが表示されます。  
   
- 詳細については、「[コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)」を参照してください。  
+   詳細については、「[コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)」を参照してください。  
   
- ![ページのトップへ](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
+   ![ページのトップへ](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
 ##  <a name="BKMK_External_resources"></a> 外部リソース  
   

@@ -1,5 +1,5 @@
 ---
-title: SYMBOL_SEARCH_INFO_FIELDS |Microsoft ドキュメント
+title: SYMBOL_SEARCH_INFO_FIELDS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c69f21c72e8816d9ddf6eb5b88cf7798bc7d1f4e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dac1234a765bbb3064ea4471d7531864306e0220
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31127550"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842925"
 ---
 # <a name="symbolsearchinfofields"></a>SYMBOL_SEARCH_INFO_FIELDS
 取得するシンボル情報の種類を指定します。  
@@ -52,13 +52,13 @@ public enum enum_SYMBOL_SEARCH_INFO_FIELDS
  SSIF_VERBOSE_SEARCH_INFO  
  すべての検索シンボルを検索するために使用されるパスを返します。  
   
-## <a name="remarks"></a>コメント  
- これらのフラグがパラメーターとして渡される、 [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)情報の量を決定するメソッドが返されます。  
+## <a name="remarks"></a>Remarks  
+ これらのフラグは、パラメーターとして渡される、 [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)情報の量を判断するメソッドが返されます。  
   
 > [!NOTE]
->  現時点では、のみ`SSIF_VERBOSE_SEARCH_INFO`はサポートされている、として指定する必要があります、`dwFlags`パラメーターを`IDebugModule3::GetSymbolInfo`です。 その他のすべての値は、エラーを返します。  
+>  現時点では、のみ`SSIF_VERBOSE_SEARCH_INFO`はサポートされていることを指定する必要があります、`dwFlags`パラメーターを`IDebugModule3::GetSymbolInfo`します。 その他のすべての値は、エラーを返します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

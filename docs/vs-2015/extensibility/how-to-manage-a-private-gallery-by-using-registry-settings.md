@@ -16,12 +16,12 @@ ms.assetid: 86b86442-4293-4cad-9fe2-876eef65f426
 caps.latest.revision: 7
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ec96812041ce6d86857dbd53414f5120ccf5a524
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 020754fb1ddb020e120ba11e8aa3ec8d97206603
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49242035"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852298"
 ---
 # <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>方法: レジストリ設定を使用してプライベート ギャラリーを管理します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,17 +45,17 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
   
  `Repositories`キーは有効または無効にするギャラリーを参照します。 Visual Studio ギャラリーとサンプル ギャラリーは、次のリポジトリの Guid を使用します。  
   
--   Visual Studio ギャラリー: 0F45E408-7995-4375-9485-86B8DB553DC9  
+- Visual Studio ギャラリー: 0F45E408-7995-4375-9485-86B8DB553DC9  
   
--   サンプル ギャラリー: AEB9CB40-D8E6-4615-B52C-27E307F8506C  
+- サンプル ギャラリー: AEB9CB40-D8E6-4615-B52C-27E307F8506C  
   
- `Disabled`値は省略可能です。 既定では、ギャラリーが有効にします。  
+  `Disabled`値は省略可能です。 既定では、ギャラリーが有効にします。  
   
- `Priority`値は、[オプション] ダイアログ ボックスで、ギャラリーが表示される順序を決定します。 Visual Studio ギャラリーが 10 の優先順位とサンプル ギャラリーが 20 の優先順位。 プライベート ギャラリーは、優先度 100 から始まります。 表示される順序が、ローカライズ済みの値によって決まりますがいくつかのギャラリーには、同じ優先順位の値がある、`DisplayName`属性。  
+  `Priority`値は、[オプション] ダイアログ ボックスで、ギャラリーが表示される順序を決定します。 Visual Studio ギャラリーが 10 の優先順位とサンプル ギャラリーが 20 の優先順位。 プライベート ギャラリーは、優先度 100 から始まります。 表示される順序が、ローカライズ済みの値によって決まりますがいくつかのギャラリーには、同じ優先順位の値がある、`DisplayName`属性。  
   
- `Protocol`値が Atom ベースまたは SharePoint ベースのギャラリーが必要です。  
+  `Protocol`値が Atom ベースまたは SharePoint ベースのギャラリーが必要です。  
   
- いずれか`DisplayName`、またはその両方`DisplayNameResourceID`と`DisplayNamePackageGuid`を指定する必要があります。 All が指定した場合、`DisplayNameResourceID`と`DisplayNamePackageGuid`ペアを使用します。  
+  いずれか`DisplayName`、またはその両方`DisplayNameResourceID`と`DisplayNamePackageGuid`を指定する必要があります。 All が指定した場合、`DisplayNameResourceID`と`DisplayNamePackageGuid`ペアを使用します。  
   
 ## <a name="disabling-the-visual-studio-gallery-using-a-pkgdef-file"></a>.Pkgdef ファイルを使用して、Visual Studio ギャラリーを無効にします。  
  .Pkgdef ファイルでのギャラリーを無効にすることができます。 次のエントリには、Visual Studio ギャラリーが無効にします。  

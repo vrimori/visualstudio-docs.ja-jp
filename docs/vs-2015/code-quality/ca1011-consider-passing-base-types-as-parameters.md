@@ -20,15 +20,16 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 71bf8247fca736fd1257ec7489c71752cd9cc21a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a9afb073ef3e722a2a07a05e1ee8629b31b4cfab
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49220156"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898643"
 ---
 # <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: 基本型をパラメーターとして渡すことを考慮します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
+
 |||
 |-|-|
 |TypeName|ConsiderPassingBaseTypesAsParameters|
@@ -48,13 +49,13 @@ ms.locfileid: "49220156"
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
  このルールから警告を抑制しても安全です。
 
--   メソッドが派生型によって提供される特定の機能が必要な場合
+- メソッドが派生型によって提供される特定の機能が必要な場合
 
-     \- または -
+   \- または -
 
--   派生型のみ、またはより強い派生型では、適用するのには、メソッドに渡されます。
+- 派生型のみ、またはより強い派生型では、適用するのには、メソッドに渡されます。
 
- このような場合は、コードは、堅牢になります、コンパイラとランタイムによって提供される厳密な型チェックのためです。
+  このような場合は、コードは、堅牢になります、コンパイラとランタイムによって提供される厳密な型チェックのためです。
 
 ## <a name="example"></a>例
  次の例では、メソッド、`ManipulateFileStream`でのみ使用できる、<xref:System.IO.FileStream>オブジェクトで、この規則に違反します。 2 番目のメソッド`ManipulateAnyStream`、置き換えることで、ルールを満たす、<xref:System.IO.FileStream>パラメーターを使用して、<xref:System.IO.Stream>します。

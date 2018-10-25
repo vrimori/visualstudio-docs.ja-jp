@@ -16,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a72a5cb07f39f8d2acaec59e5da5a66a30293453
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 5e82c50c83a8824b4570779034b0480aa0615a30
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35258221"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904675"
 ---
 # <a name="walkthrough-update-a-chart-in-a-document-using-radio-buttons"></a>チュートリアル: オプション ボタンを使用してドキュメントのグラフを更新します。
   このチュートリアルでは、Microsoft Office Word のドキュメント レベルのカスタマイズでオプション ボタンを使用して、文書上でグラフのスタイルを選択するオプションをユーザーに提供する方法を示します。  
@@ -30,17 +30,17 @@ ms.locfileid: "35258221"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   デザイン時におけるドキュメント レベルのプロジェクトの文書へのグラフの追加  
+- デザイン時におけるドキュメント レベルのプロジェクトの文書へのグラフの追加  
   
--   ユーザー コントロールへの追加によるオプション ボタンのグループ化  
+- ユーザー コントロールへの追加によるオプション ボタンのグループ化  
   
--   オプション選択時のグラフ スタイルの変更  
+- オプション選択時のグラフ スタイルの変更  
   
- 完成したサンプルとして結果を参照してくださいで Word コントロールのサンプルを参照してください。 [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)します。  
+  完成したサンプルとして結果を参照してくださいで Word コントロールのサンプルを参照してください。 [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)します。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -52,7 +52,7 @@ ms.locfileid: "35258221"
   
 ### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1.  名前の Word 文書プロジェクトを作成**My Chart Options**します。 ウィザードで、次のように選択します。**新しい文書を作成**です。 詳細については、次を参照してください。[方法: Visual Studio でプロジェクトを作成する Office](../vsto/how-to-create-office-projects-in-visual-studio.md)します。  
+1.  名前の Word 文書プロジェクトを作成**My Chart Options**します。 ウィザードで、次のように選択します。**新しい文書を作成**です。 詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
   
      デザイナーで新しい Word 文書を開き、 **My Chart Options**プロジェクトを**ソリューション エクスプ ローラー**します。  
   

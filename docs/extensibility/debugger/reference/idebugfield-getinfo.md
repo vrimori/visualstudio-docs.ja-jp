@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetInfo |Microsoft ドキュメント
+title: IDebugField::GetInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6738306abd991062c5091f95375972ffe0d3384e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ed9a83d11f180467938ba2f9a1e783c73866837e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31116595"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899449"
 ---
 # <a name="idebugfieldgetinfo"></a>IDebugField::GetInfo
 このメソッドは、フィールドの表示可能な情報を取得します。  
@@ -43,13 +43,13 @@ int GetInfo(
   
 #### <a name="parameters"></a>パラメーター  
  `dwFields`  
- [in]組み合わせた[FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md)を表示する情報を選択する定数。 フィールドを表す場合、シンボル、これは通常、シンボルの名前と種類です。  
+ [in]組み合わせた[FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md)定数を表示する情報を選択します。 フィールドが記号である場合は、これは通常記号名と型です。  
   
  `pFieldInfo`  
- [out]提供された情報を返します[FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)構造体。  
+ [out]指定された情報を返します[FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)構造体。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   

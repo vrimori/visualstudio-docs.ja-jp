@@ -17,12 +17,12 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8f04ea48505bee0f27fdeaa62458aa7ef8df915e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6aa1f4027746ebf1304362217c16fffa7e68a75d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49279635"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822412"
 ---
 # <a name="options-text-editor-javascript-intellisense"></a>[オプション]、[テキスト エディター]、[JavaScript]、[IntelliSense]
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -68,16 +68,16 @@ JavaScript での IntelliSense の動作設定を変更するには、 **[オプ
   
  定義済みの参照グループを使用して、特定の IntelliSense (.js) ファイルがさまざまな JavaScript プロジェクトのスコープ内にあることを指定できます。 4 つの参照グループを使用できます。  
   
--   暗黙 (Windows *バージョン*)、JavaScript を使用する [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] アプリケーション用。 このグループに含まれるファイルは、JavaScript を使用する [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] アプリケーションのコード エディターで開かれる、すべての .js ファイルのスコープ内にあります。  
+- 暗黙 (Windows *バージョン*)、JavaScript を使用する [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] アプリケーション用。 このグループに含まれるファイルは、JavaScript を使用する [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] アプリケーションのコード エディターで開かれる、すべての .js ファイルのスコープ内にあります。  
   
--   暗黙 (Web)、HTML5 プロジェクト用。 このグループに含まれるファイルは、これらのプロジェクト タイプのコード エディターで開かれる、すべての .js ファイルのスコープ内にあります。  
+- 暗黙 (Web)、HTML5 プロジェクト用。 このグループに含まれるファイルは、これらのプロジェクト タイプのコード エディターで開かれる、すべての .js ファイルのスコープ内にあります。  
   
--   専用のワーカーの参照グループ、HTML5 Web ワーカー用。 このグループで指定されたファイルは、専用のワーカーの参照グループへの明示的な参照がある .js ファイルのスコープ内にあります。  
+- 専用のワーカーの参照グループ、HTML5 Web ワーカー用。 このグループで指定されたファイルは、専用のワーカーの参照グループへの明示的な参照がある .js ファイルのスコープ内にあります。  
   
--   ジェネリック、他の JavaScript プロジェクト タイプ用。  
+- ジェネリック、他の JavaScript プロジェクト タイプ用。  
   
- **[インクルード ファイル]**  
- このオプションで、ファイルが言語サービスのコンテキストに読み込まれる順序を指定します。 **[削除]**、 **[上へ移動]**、および **[下へ移動]** ボタンを使用して順序を構成できます。 IntelliSense が正しく動作するためには、別のファイルに依存しているファイルはその別のファイルの後に読み込む必要があります。  
+  **[インクルード ファイル]**  
+  このオプションで、ファイルが言語サービスのコンテキストに読み込まれる順序を指定します。 **[削除]**、 **[上へ移動]**、および **[下へ移動]** ボタンを使用して順序を構成できます。 IntelliSense が正しく動作するためには、別のファイルに依存しているファイルはその別のファイルの後に読み込む必要があります。  
   
 > [!CAUTION]
 >  オブジェクトが複数の暗黙的な参照で無条件で定義されている場合、その一覧内の最後の参照を使用してオブジェクトが定義されます。  

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_basetype |Microsoft ドキュメント
+title: Idiasymbol::get_basetype |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 080c8872682f9c255eda77449cb24dd703cd9583
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f7cb7b8a003f3aea5d821d5ffb9f312d069edb99
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31461767"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49901789"
 ---
 # <a name="idiasymbolgetbasetype"></a>IDiaSymbol::get_baseType
-このシンボルの基本データ型を取得*です。*  
+このシンボルの基本型を取得します。<em>します。</em>  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,16 +34,16 @@ HRESULT get_baseType (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]値を返します、 [BasicType 列挙型](../../debugger/debug-interface-access/basictype.md)シンボルの基本型を指定する列挙です。  
+ [out]値を返します、 [BasicType 列挙型](../../debugger/debug-interface-access/basictype.md)シンボルの基本型を指定する列挙体。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティが、シンボルを使用できないことを意味します。  
+>  戻り値`S_FALSE`プロパティがシンボルを使用できないことを意味します。  
   
-## <a name="remarks"></a>コメント  
- シンボル用の基本的な型は、まず、シンボルの種類を取得し、し、その基本型の型が返されますの問い合わせで決定できます。 いくつかの記号可能性がありますいない必要がある基本データ型: 構造体名ではたとえば、します。  
+## <a name="remarks"></a>Remarks  
+ シンボルの基本的な型は、まず、記号の種類を取得し、その基本型の型が返されますを問い合わせるで決定できます。 注一部のシンボルは、基本データ型を持てません — たとえば、構造体名。  
   
 ## <a name="example"></a>例  
   
@@ -60,11 +60,11 @@ if (pType->get_type( &pBaseType ) == S_OK)
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|dia2.h|  
+|ヘッダー:|Dia2.h|  
 |バージョン:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>関連項目  

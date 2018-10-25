@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: dbac1e67e5b23f277d2698c0cb1a959918c32372
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 8a21067eab6e55f3fb031e57fa2257b0d40a7eb6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47860499"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49886462"
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>ファイル格納処理および XML シリアル化処理をカスタマイズする
 
@@ -301,7 +301,7 @@ Xml プロパティの各ノードはクラス ノードの下にあります。
 ロールのデータ ノードはソース クラスのノードの下にあります。
 
 |プロパティ|説明|
-|--------------|-----------------|
+|-|-|
 |カスタム モニカー|これを生成して、このリレーションシップを走査するモニカーを解決するための独自のコードを提供する場合は true に設定します。<br /><br /> 詳細な手順については、ソリューションをビルドし、エラー メッセージをダブルクリックします。|
 |ドメイン リレーションシップ|これらのオプションを適用するリレーションシップを指定します。 読み取り専用。|
 |要素を省略します。|True の場合は、ソース ロールに対応する XML ノードがスキーマから省略されます。<br /><br /> ソースとターゲットのクラス間で複数のリレーションシップがある場合、このロールのノードは 2 つのリレーションシップに属しているリンクによって区別されます。 そのためことはないオプションを設定するこのここでお勧めします。|

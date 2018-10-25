@@ -16,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 966f9dd422137b2966deb23a7c29e328a21957a5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ef2a2800ecb46f12f9dde4357bf54711a1df8797
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42635269"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934679"
 ---
 # <a name="walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension"></a>チュートリアル: サーバー エクスプ ローラー拡張機能では、SharePoint クライアント オブジェクト モデルを呼び出す
   このチュートリアルの拡張機能から SharePoint クライアント オブジェクト モデルを呼び出す方法、 **SharePoint 接続**ノード**サーバー エクスプ ローラー**します。 SharePoint クライアント オブジェクト モデルを使用する方法の詳細については、次を参照してください。[の SharePoint オブジェクト モデルを呼び出す](../sharepoint/calling-into-the-sharepoint-object-models.md)します。  
@@ -57,11 +57,11 @@ ms.locfileid: "42635269"
 ## <a name="create-the-projects"></a>プロジェクトを作成します。
  このチュートリアルを完了するには、2 つのプロジェクトを作成する必要があります。  
   
--   VSIX プロジェクトを配置するための VSIX パッケージを作成、**サーバー エクスプ ローラー**拡張機能。  
+- VSIX プロジェクトを配置するための VSIX パッケージを作成、**サーバー エクスプ ローラー**拡張機能。  
   
--   実装するクラス ライブラリ プロジェクト、**サーバー エクスプ ローラー**拡張機能。  
+- 実装するクラス ライブラリ プロジェクト、**サーバー エクスプ ローラー**拡張機能。  
   
- この 2 つのプロジェクトを作成することから始めます。  
+  この 2 つのプロジェクトを作成することから始めます。  
   
 #### <a name="to-create-the-vsix-project"></a>VSIX プロジェクトを作成するには  
   

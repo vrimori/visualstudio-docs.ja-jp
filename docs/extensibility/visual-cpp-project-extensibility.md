@@ -11,12 +11,12 @@ ms.author: corob
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 76adb5df7fec7663f5c9bc1a4c84c378f0e14a82
-ms.sourcegitcommit: b9a32c3d94b19e7344f4872bc026efd3157cf220
+ms.openlocfilehash: 2b9f8bfcaf9e6f584d4f0038ebef17daad3aa74a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46135660"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49850815"
 ---
 # <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Visual Studio の C++ プロジェクト システムの機能拡張とツールセットの統合
 
@@ -478,12 +478,13 @@ CPS は、コンテキストの種類の他の値をサポートしています�
 
 `PageTemplate`属性でルールを表示する方法を定義、**プロパティ ページ**ダイアログ。 属性は、これらの値の 1 つがあります。
 
-|属性|説明|
-|-|-|
-`generic`|すべてのプロパティがカテゴリの見出しの下の 1 つのページに表示されます。<br/>ルールが表示されていることができます`Project`と`PropertySheet`、コンテキストがない`File`します。<br/><br/> 例: `$(VCTargetsPath)` \\ *1033*\\*general.xml*
-`tool`|カテゴリは、サブページとして表示されます。<br/>このルールはすべてのコンテキストで表示できます: `Project`、`PropertySheet`と`File`します。<br/>プロジェクトに項目がある場合にのみ、ルールがプロジェクトのプロパティに表示される、`ItemType`で定義されている`Rule.DataSource`にルールの名前が含まれていなければ、`ProjectTools`項目グループ。<br/><br/>例: `$(VCTargetsPath)` \\ *1033*\\*clang.xml*
-`debugger`|[デバッグ] ページの一部として、ページが表示されます。<br/>カテゴリは現在は無視されます。<br/>ルールの名前はデバッグ ランチャー MEF オブジェクトの一致する必要があります`ExportDebugger`属性。<br/><br/>例: `$(VCTargetsPath)` \\ *1033*\\*デバッガー\_ローカル\_windows.xml*
-*custom*| カスタム テンプレートです。 テンプレートの名前に一致する必要があります、`ExportPropertyPageUIFactoryProvider`の属性、 `PropertyPageUIFactoryProvider` MEF オブジェクト。 参照してください**Microsoft.VisualStudio.ProjectSystem.Designers.Properties.IPropertyPageUIFactoryProvider**します。<br/><br/> 例: `$(VCTargetsPath)` \\ *1033*\\*userMacros.xml*
+
+| 属性 | 説明 |
+|------------| - |
+| `generic` | すべてのプロパティがカテゴリの見出しの下の 1 つのページに表示されます。<br/>ルールが表示されていることができます`Project`と`PropertySheet`、コンテキストがない`File`します。<br/><br/> 例: `$(VCTargetsPath)` \\ *1033*\\*general.xml* |
+| `tool` | カテゴリは、サブページとして表示されます。<br/>このルールはすべてのコンテキストで表示できます: `Project`、`PropertySheet`と`File`します。<br/>プロジェクトに項目がある場合にのみ、ルールがプロジェクトのプロパティに表示される、`ItemType`で定義されている`Rule.DataSource`にルールの名前が含まれていなければ、`ProjectTools`項目グループ。<br/><br/>例: `$(VCTargetsPath)` \\ *1033*\\*clang.xml* |
+| `debugger` | [デバッグ] ページの一部として、ページが表示されます。<br/>カテゴリは現在は無視されます。<br/>ルールの名前はデバッグ ランチャー MEF オブジェクトの一致する必要があります`ExportDebugger`属性。<br/><br/>例: `$(VCTargetsPath)` \\ *1033*\\*デバッガー\_ローカル\_windows.xml* |
+| *custom* | カスタム テンプレートです。 テンプレートの名前に一致する必要があります、`ExportPropertyPageUIFactoryProvider`の属性、 `PropertyPageUIFactoryProvider` MEF オブジェクト。 参照してください**Microsoft.VisualStudio.ProjectSystem.Designers.Properties.IPropertyPageUIFactoryProvider**します。<br/><br/> 例: `$(VCTargetsPath)` \\ *1033*\\*userMacros.xml* |
 
 ルールは、プロパティ グリッド ベースのテンプレートのいずれかを使用している場合は、そのプロパティのこれらの拡張ポイントを使用できます。
 

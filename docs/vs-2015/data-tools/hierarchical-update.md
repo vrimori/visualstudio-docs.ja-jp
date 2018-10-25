@@ -27,12 +27,12 @@ caps.latest.revision: 29
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 550eedd1157d05f180e2229cec7594ae48c2fe45
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 342d51b5057ac0c17e92db1d4c454962b50df19a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49239383"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843393"
 ---
 # <a name="hierarchical-update"></a>階層更新
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -89,14 +89,14 @@ ms.locfileid: "49239383"
   
 #### <a name="to-update-the-code-to-commit-changes-to-the-related-tables-before-saving"></a>保存前に、関連テーブルへの変更をコミットするコードを更新するには  
   
-1.  ダブルクリックして、**保存**ボタンを<xref:System.Windows.Forms.BindingNavigator>を開く**Form1**コード エディターで。  
+1. ダブルクリックして、**保存**ボタンを<xref:System.Windows.Forms.BindingNavigator>を開く**Form1**コード エディターで。  
   
-2.  `OrdersBindingSource.EndEdit` メソッドを呼び出す行の後に、`CustomersBindingSource.EndEdit` メソッドを呼び出すコード行を追加します。 コードでは、**保存**ボタン クリック イベント、次のようになります。  
+2. `OrdersBindingSource.EndEdit` メソッドを呼び出す行の後に、`CustomersBindingSource.EndEdit` メソッドを呼び出すコード行を追加します。 コードでは、**保存**ボタン クリック イベント、次のようになります。  
   
-     [!code-csharp[VSProDataOrcasHierarchicalUpdate#1](../snippets/csharp/VS_Snippets_VBCSharp/VSProDataOrcasHierarchicalUpdate/CS/Form1.cs#1)]
-     [!code-vb[VSProDataOrcasHierarchicalUpdate#1](../snippets/visualbasic/VS_Snippets_VBCSharp/VSProDataOrcasHierarchicalUpdate/VB/Form1.vb#1)]  
+    [!code-csharp[VSProDataOrcasHierarchicalUpdate#1](../snippets/csharp/VS_Snippets_VBCSharp/VSProDataOrcasHierarchicalUpdate/CS/Form1.cs#1)]
+    [!code-vb[VSProDataOrcasHierarchicalUpdate#1](../snippets/visualbasic/VS_Snippets_VBCSharp/VSProDataOrcasHierarchicalUpdate/VB/Form1.vb#1)]  
   
- データベースにデータを保存する前に関連子テーブルに対する変更をコミットするだけでなく、新しい子レコードをデータセットに追加する前に、新しく作成された親レコードをコミットすることが必要な場合もあります。 つまり、外部キー制約により、新しい子レコード (Orders) をデータセットに追加する前に、データセットに新しい親レコード (Customer) を追加することが必要な場合もあります。 この操作を行うには、子 `BindingSource.AddingNew` イベントを使用します。  
+   データベースにデータを保存する前に関連子テーブルに対する変更をコミットするだけでなく、新しい子レコードをデータセットに追加する前に、新しく作成された親レコードをコミットすることが必要な場合もあります。 つまり、外部キー制約により、新しい子レコード (Orders) をデータセットに追加する前に、データセットに新しい親レコード (Customer) を追加することが必要な場合もあります。 この操作を行うには、子 `BindingSource.AddingNew` イベントを使用します。  
   
 > [!NOTE]
 >  新しい親レコードをコミットする必要があるかどうかは、データ ソースにバインドするために使用されるコントロールの種類によって異なります。 このチュートリアルでは、親テーブルにバインドする個々 のコントロールを使用します。 これには、新しい親レコードをコミットするコードを追加が必要です。 親レコードは、複雑なバインド コントロールに代わりに表示されていた場合と同様、<xref:System.Windows.Forms.DataGridView>この追加<xref:System.Windows.Forms.BindingSource.EndEdit%2A>呼び出しの親レコードは必要ありません。 これは、コントロールの基になるデータ バインディング機能によって、新しいレコードのコミットが行われるためです。  

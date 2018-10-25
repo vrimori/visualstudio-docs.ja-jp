@@ -12,12 +12,12 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: e163386c7f00f0646bb711617e402a1873e544e2
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: f89ea35c9113ddff67a9d1322b1c83c41e05709a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49280528"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49848983"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>方法: ドラッグ アンド ドロップ ハンドラーを追加する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -51,45 +51,45 @@ using System.Linq;
   
  新しいファイル内で、ドラッグ操作に応答する必要がある図形または図クラスの部分クラスを定義します。 次のメソッドをオーバーライドします。  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A>- このメソッドは、ドラッグ操作時にマウス ポインターが図形の中に入ると呼び出されます。 メソッドはユーザーがドラッグしている項目を検査し、Effect プロパティを設定して、ユーザーがこの図形の上に項目をドロップできるかどうかを示す必要があります。 Effect プロパティは、カーソルがこの図形の上にある間の外観を決定するほか、ユーザーがマウス ボタンを離したときに `OnDragDrop()` が呼び出されるかどうかを決定します。  
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A>- このメソッドは、ドラッグ操作時にマウス ポインターが図形の中に入ると呼び出されます。 メソッドはユーザーがドラッグしている項目を検査し、Effect プロパティを設定して、ユーザーがこの図形の上に項目をドロップできるかどうかを示す必要があります。 Effect プロパティは、カーソルがこの図形の上にある間の外観を決定するほか、ユーザーがマウス ボタンを離したときに `OnDragDrop()` が呼び出されるかどうかを決定します。  
   
-    ```csharp  
-    partial class MyShape // MyShape generated from DSL Definition.  
-    {  
-        public override void OnDragOver(DiagramDragEventArgs e)  
+  ```csharp  
+  partial class MyShape // MyShape generated from DSL Definition.  
+  {  
+      public override void OnDragOver(DiagramDragEventArgs e)  
+      {  
+        base.OnDragOver(e);  
+        if (e.Effect == System.Windows.Forms.DragDropEffects.None   
+             && IsAcceptableDropItem(e)) // To be defined  
         {  
-          base.OnDragOver(e);  
-          if (e.Effect == System.Windows.Forms.DragDropEffects.None   
-               && IsAcceptableDropItem(e)) // To be defined  
-          {  
-            e.Effect = System.Windows.Forms.DragDropEffects.Copy;  
-          }  
+          e.Effect = System.Windows.Forms.DragDropEffects.Copy;  
         }  
+      }  
   
-    ```  
+  ```  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> – このメソッドは、`OnDragOver(DiagramDragEventArgs e)` が以前に `e.Effect` を `None` 以外の値に設定した場合、マウス ポインターがこの図形または図の上にある間にユーザーがマウス ボタンを離すと呼び出されます。  
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> – このメソッドは、`OnDragOver(DiagramDragEventArgs e)` が以前に `e.Effect` を `None` 以外の値に設定した場合、マウス ポインターがこの図形または図の上にある間にユーザーがマウス ボタンを離すと呼び出されます。  
   
-    ```csharp  
-    public override void OnDragDrop(DiagramDragEventArgs e)  
+  ```csharp  
+  public override void OnDragDrop(DiagramDragEventArgs e)  
+      {  
+        if (!IsAcceptableDropItem(e))  
         {  
-          if (!IsAcceptableDropItem(e))  
-          {  
-            base.OnDragDrop(e);  
-          }  
-          else   
-          { // Process the dragged item, for example merging a copy into the diagram  
-            ProcessDragDropItem(e); // To be defined  
-          }    
+          base.OnDragDrop(e);  
         }  
+        else   
+        { // Process the dragged item, for example merging a copy into the diagram  
+          ProcessDragDropItem(e); // To be defined  
+        }    
+      }  
   
-    ```  
+  ```  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> – このメソッドは、ユーザーが図形または図をダブルクリックすると呼び出されます。  
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> – このメソッドは、ユーザーが図形または図をダブルクリックすると呼び出されます。  
   
-     詳細については、次を参照してください。[方法: シェイプまたはデコレーターに対するクリック](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)します。  
+   詳細については、次を参照してください。[方法: シェイプまたはデコレーターに対するクリック](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)します。  
   
- `IsAcceptableDropItem(e)` を定義してドラッグした項目が受け入れられるかどうかを決定し、ProcessDragDropItem(e) を定義して項目がドロップされたときにモデルを更新します。 これらのメソッドは、最初にイベント引数から項目を抽出する必要があります。 その方法については、次を参照してください。[ドラッグした項目への参照を取得する方法](#extracting)します。  
+  `IsAcceptableDropItem(e)` を定義してドラッグした項目が受け入れられるかどうかを決定し、ProcessDragDropItem(e) を定義して項目がドロップされたときにモデルを更新します。 これらのメソッドは、最初にイベント引数から項目を抽出する必要があります。 その方法については、次を参照してください。[ドラッグした項目への参照を取得する方法](#extracting)します。  
   
 ##  <a name="MEF"></a> MEF の使用によるジェスチャ ハンドラーの定義  
  MEF (Managed Extensibility Framework) を使用して、最小構成でインストール可能なコンポーネントを定義できます。 詳しくは、「[Managed Extensibility Framework (MEF)](http://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)」を参照してください。  
@@ -139,32 +139,32 @@ using System.Linq;
   
  ドラッグ ソース情報が使用可能な形式を見つけるには、コードをデバッグ モードで実行し、ブレークポイントを `OnDragOver()` または `CanDragDrop()` のエントリに設定します。 `DiagramDragEventArgs` パラメーターの値を確認します。 情報は次の 2 つの形式で提供されます。  
   
--   <xref:System.Windows.Forms.IDataObject>  `Data` – このプロパティは、1 つ以上の形式では、通常、ソース オブジェクトのシリアル化されたバージョンを実行します。 最も有用な関数は次のとおりです。  
+- <xref:System.Windows.Forms.IDataObject>  `Data` – このプロパティは、1 つ以上の形式では、通常、ソース オブジェクトのシリアル化されたバージョンを実行します。 最も有用な関数は次のとおりです。  
   
-    -   diagramEventArgs.Data.GetDataFormats() – ドラッグしたオブジェクトをデコード可能な形式を一覧表示します。 たとえば、ユーザーがデスクトップからファイルをドラッグした場合、使用可能な形式にはファイル名 ("`FileNameW`") が含まれます。  
+  -   diagramEventArgs.Data.GetDataFormats() – ドラッグしたオブジェクトをデコード可能な形式を一覧表示します。 たとえば、ユーザーがデスクトップからファイルをドラッグした場合、使用可能な形式にはファイル名 ("`FileNameW`") が含まれます。  
   
-    -   `diagramEventArgs.Data.GetData(format)` – ドラッグしたオブジェクトを指定形式でデコードします。 オブジェクトを適切な型にキャストします。 次に例を示します。  
+  -   `diagramEventArgs.Data.GetData(format)` – ドラッグしたオブジェクトを指定形式でデコードします。 オブジェクトを適切な型にキャストします。 次に例を示します。  
   
-         `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`  
+       `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`  
   
-         ソースからモデル バス参照などのオブジェクトを独自のカスタム形式で転送することもできます。 詳細については、次を参照してください。[ドラッグ アンド ドロップでモデル バス参照を送信する方法](#mbr)します。  
+       ソースからモデル バス参照などのオブジェクトを独自のカスタム形式で転送することもできます。 詳細については、次を参照してください。[ドラッグ アンド ドロップでモデル バス参照を送信する方法](#mbr)します。  
   
--   <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> `Prototype` – ユーザーが DSL または UML モデルから項目をドラッグする場合は、このプロパティを使用します。 1 つの要素グループ プロトタイプには 1 つ以上のオブジェクト、リンク、およびそれらのプロパティ値が含まれます。 これは貼り付け操作やツールボックスから要素を追加する際にも使用されます。 プロトタイプ内のオブジェクトとそれらの種類は GUID により識別されます。 たとえば、次のコードを使用して、ユーザーはクラス要素を UML 図または UML モデル エクスプローラーからドラッグできます。  
+- <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> `Prototype` – ユーザーが DSL または UML モデルから項目をドラッグする場合は、このプロパティを使用します。 1 つの要素グループ プロトタイプには 1 つ以上のオブジェクト、リンク、およびそれらのプロパティ値が含まれます。 これは貼り付け操作やツールボックスから要素を追加する際にも使用されます。 プロトタイプ内のオブジェクトとそれらの種類は GUID により識別されます。 たとえば、次のコードを使用して、ユーザーはクラス要素を UML 図または UML モデル エクスプローラーからドラッグできます。  
   
-    ```csharp  
-    private bool IsAcceptableDropItem(DiagramDragEventArgs e)  
-    {  
-      return e.Prototype != null && e.Prototype.RootProtoElements.Any(element =>   
-            element.DomainClassId.ToString()   
-            == "3866d10c-cc4e-438b-b46f-bb24380e1678"); // Accept UML class shapes.  
-     // Or, from another DSL: SourceNamespace.SourceShapeClass.DomainClassId  
-    }  
+  ```csharp  
+  private bool IsAcceptableDropItem(DiagramDragEventArgs e)  
+  {  
+    return e.Prototype != null && e.Prototype.RootProtoElements.Any(element =>   
+          element.DomainClassId.ToString()   
+          == "3866d10c-cc4e-438b-b46f-bb24380e1678"); // Accept UML class shapes.  
+   // Or, from another DSL: SourceNamespace.SourceShapeClass.DomainClassId  
+  }  
   
-    ```  
+  ```  
   
-     UML 図形を受け入れるには、テストを実行して UML 図形クラスの GUID を決定します。 通常、どの図でも要素の種類には複数あることに注意してください。 また、DSL または UML 図からドラッグするオブジェクトは図形であり、モデル要素ではありません。  
+   UML 図形を受け入れるには、テストを実行して UML 図形クラスの GUID を決定します。 通常、どの図でも要素の種類には複数あることに注意してください。 また、DSL または UML 図からドラッグするオブジェクトは図形であり、モデル要素ではありません。  
   
- `DiagramDragEventArgs` には、現在のマウス ポインターの位置およびユーザーが CTRL、ALT、SHIFT のうちどのキーを押したのかを示すプロパティも含まれます。  
+  `DiagramDragEventArgs` には、現在のマウス ポインターの位置およびユーザーが CTRL、ALT、SHIFT のうちどのキーを押したのかを示すプロパティも含まれます。  
   
 ##  <a name="getOriginal"></a> ドラッグした要素の元のファイルを取得する方法  
  イベント引数の `Data` プロパティおよび `Prototype` プロパティはドラッグした図形への参照のみを含みます。 通常、いずれかの方法でプロトタイプから派生するオブジェクトをターゲット DSL で作成する場合、元の項目へのアクセス、たとえば、ファイル内容の読み取りまたは図形により表されるモデル要素への移動などを取得する必要があります。  この処理には Visual Studio モデル バスを使用できます。  

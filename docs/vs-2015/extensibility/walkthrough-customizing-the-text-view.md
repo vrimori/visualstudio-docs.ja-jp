@@ -15,12 +15,12 @@ ms.assetid: 32d32ac8-22ff-4de7-af69-bd46ec4ad9bf
 caps.latest.revision: 23
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 661c812625856551f2f6c8194fa97e5df21efbaf
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: e8474190b6b140883a43555f5dc35091daecebe7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49199044"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923200"
 ---
 # <a name="walkthrough-customizing-the-text-view"></a>チュートリアル: テキスト ビューのカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,26 +52,26 @@ ms.locfileid: "49199044"
   
 ## <a name="defining-the-content-type"></a>コンテンツの種類を定義します。  
   
-1.  クラス ファイルを追加し、その名前を `ViewPropertyModifier`にします。  
+1. クラス ファイルを追加し、その名前を `ViewPropertyModifier`にします。  
   
-2.  次の追加`using`ディレクティブ。  
+2. 次の追加`using`ディレクティブ。  
   
-     [!code-csharp[VSSDKViewPropertyTest#1](../snippets/csharp/VS_Snippets_VSSDK/vssdkviewpropertytest/cs/viewpropertymodifier.cs#1)]
-     [!code-vb[VSSDKViewPropertyTest#1](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkviewpropertytest/vb/viewpropertymodifier.vb#1)]  
+    [!code-csharp[VSSDKViewPropertyTest#1](../snippets/csharp/VS_Snippets_VSSDK/vssdkviewpropertytest/cs/viewpropertymodifier.cs#1)]
+    [!code-vb[VSSDKViewPropertyTest#1](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkviewpropertytest/vb/viewpropertymodifier.vb#1)]  
   
-3.  という名前のクラスを宣言`TestViewCreationListener`から継承する<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>します。 このクラスで次の属性をエクスポートします。  
+3. という名前のクラスを宣言`TestViewCreationListener`から継承する<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>します。 このクラスで次の属性をエクスポートします。  
   
-    -   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> このリスナーを適用するコンテンツの種類を指定します。  
+   - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> このリスナーを適用するコンテンツの種類を指定します。  
   
-    -   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> このリスナーのロールを指定します。  
+   - <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> このリスナーのロールを指定します。  
   
      [!code-csharp[VSSDKViewPropertyTest#2](../snippets/csharp/VS_Snippets_VSSDK/vssdkviewpropertytest/cs/viewpropertymodifier.cs#2)]
      [!code-vb[VSSDKViewPropertyTest#2](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkviewpropertytest/vb/viewpropertymodifier.vb#2)]  
   
-4.  このクラスは、インポート、<xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>します。  
+4. このクラスは、インポート、<xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>します。  
   
-     [!code-csharp[VSSDKViewPropertyTest#3](../snippets/csharp/VS_Snippets_VSSDK/vssdkviewpropertytest/cs/viewpropertymodifier.cs#3)]
-     [!code-vb[VSSDKViewPropertyTest#3](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkviewpropertytest/vb/viewpropertymodifier.vb#3)]  
+    [!code-csharp[VSSDKViewPropertyTest#3](../snippets/csharp/VS_Snippets_VSSDK/vssdkviewpropertytest/cs/viewpropertymodifier.cs#3)]
+    [!code-vb[VSSDKViewPropertyTest#3](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkviewpropertytest/vb/viewpropertymodifier.vb#3)]  
   
 ## <a name="changing-the-view-properties"></a>ビューのプロパティを変更します。  
   

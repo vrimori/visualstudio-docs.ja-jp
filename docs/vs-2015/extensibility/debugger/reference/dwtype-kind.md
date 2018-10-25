@@ -17,12 +17,12 @@ ms.assetid: 6ff56b0f-c502-4e6c-9829-bfa05361b783
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8b77091d249de0c2f8c1171aa01707219f64f2b7
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: adfbd4ce924acb7ef6cd3f22a1a7d4bf5de27683
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49237797"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933977"
 ---
 # <a name="dwtypekind"></a>dwTYPE_KIND
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -62,7 +62,7 @@ public enum enum_dwTYPE_KIND {
 ## <a name="remarks"></a>Remarks  
  この列挙体の値に表示されます、`dwKind`のフィールド、 [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)構造体し、解釈する方法を決定するために使用、`type`共用体メンバーです。 `TYPE_INFO`への呼び出しによって返される構造体、 [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

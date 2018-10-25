@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointUnboundEvent2::GetReason |Microsoft ドキュメント
+title: IDebugBreakpointUnboundEvent2::GetReason |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f231a1d6ee27c56f423a64cc430ba8e743e308f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c6b2dfa661b6dc21b50dec33afc736e0cc3be90a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31104294"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926320"
 ---
 # <a name="idebugbreakpointunboundevent2getreason"></a>IDebugBreakpointUnboundEvent2::GetReason
-ブレークポイントがバインドできなかった理由を取得します。  
+ブレークポイントがバインドされた理由を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,16 +41,16 @@ int GetReason(
   
 #### <a name="parameters"></a>パラメーター  
  `pdwUnboundReason`  
- [out]値を返します、 [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md)ブレークポイントがバインドできなかった理由を指定する列挙です。  
+ [out]値を返します、 [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md)ブレークポイントがバインドされた理由を指定する列挙体。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 理由には、エディット コンティニュの操作の場合、または、ブレークポイントがエラーにバインドされている特定の後に別の場所に再バインドされているブレークポイントが含まれます。  
+## <a name="remarks"></a>Remarks  
+ 上の理由からには、エディット コンティニュの操作の場合、またはエラーでブレークポイントがバインドされている決定した後、別の場所に再バインドされているブレークポイントが含まれます。  
   
 ## <a name="example"></a>例  
- 次の例に対して、このメソッドを実装する方法を示しています、 **CBreakpointUnboundDebugEventBase**を公開するオブジェクト、 [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md)インターフェイスです。  
+ 次の例では、このメソッドを実装する方法を示しています、 **CBreakpointUnboundDebugEventBase**を公開するオブジェクト、 [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md)インターフェイス。  
   
 ```cpp  
 STDMETHODIMP CBreakpointUnboundDebugEventBase::GetReason(  

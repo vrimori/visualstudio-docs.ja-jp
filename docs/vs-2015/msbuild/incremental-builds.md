@@ -16,12 +16,12 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ef689ede76b85a393fc56e452f1f5af4b059d0e3
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 187761ce813081877434c2a7c3a570059bc556ee
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49251459"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812323"
 ---
 # <a name="incremental-builds"></a>インクリメンタル ビルド
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,13 +50,13 @@ ms.locfileid: "49251459"
   
  次の 3 つの場合があります。  
   
--   ターゲットに `Condition` と評価される `false` 属性が指定されている場合。 この場合、ターゲットは実行されず、ビルドには影響しません。  
+- ターゲットに `Condition` と評価される `false` 属性が指定されている場合。 この場合、ターゲットは実行されず、ビルドには影響しません。  
   
--   ターゲットに古い出力があり、ターゲットを実行して最新の状態にする場合。  
+- ターゲットに古い出力があり、ターゲットを実行して最新の状態にする場合。  
   
--   ターゲットに古い出力がなく、ターゲットがスキップされる場合。 MSBuild はターゲットを評価し、ターゲットが実行された場合と同じように項目とプロパティを変更します。  
+- ターゲットに古い出力がなく、ターゲットがスキップされる場合。 MSBuild はターゲットを評価し、ターゲットが実行された場合と同じように項目とプロパティを変更します。  
   
- インクリメンタル コンパイルをサポートするために、タスクでは `TaskParameter` 要素の `Output` 属性値がタスク入力パラメーターと等しいことを確認する必要があります。 次にいくつかの例を示します。  
+  インクリメンタル コンパイルをサポートするために、タスクでは `TaskParameter` 要素の `Output` 属性値がタスク入力パラメーターと等しいことを確認する必要があります。 次にいくつかの例を示します。  
   
 ```  
 <CreateProperty Value="123">  

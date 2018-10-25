@@ -13,16 +13,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f15a8d5b00d947dc3d77dca58ce6ff5fa2cf58e0
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 54efd3d68e81908d3843525b588d9c28cc1be3ad
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34765390"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921289"
 ---
 # <a name="how-to-choose-collection-methods"></a>方法 : 収集方法を選択する
 
-Visual Studio プロファイリング ツールでは、サンプリング、インストルメンテーション、同時実行という 3 種類のパフォーマンス データ収集方法をサポートしています。 また、.NET メモリ割り当てと有効期間データの収集には、サンプリングまたはインストルメンテーションの方式を使用できます。
+Visual Studio プロファイリング ツールでは、サンプリング、インストルメンテーション、コンカレンシーという 3 種類のパフォーマンス データ収集方法をサポートしています。 また、.NET メモリ割り当てと有効期間データの収集には、サンプリングまたはインストルメンテーションの方式を使用できます。
 
 パフォーマンス セッションの **[メソッド]** プロパティを使用すると、アプリケーションに最適の収集方法を指定できます。 収集方法はパフォーマンス ウィザード、パフォーマンス エクスプローラー、またはパフォーマンス セッションのプロパティ ページから設定することができます。 コマンド ライン ツールを使用する場合、詳細については「[コマンド ラインからのプロファイリング](../profiling/using-the-profiling-tools-from-the-command-line.md)」を参照してください。
 
@@ -32,12 +32,12 @@ Visual Studio プロファイリング ツールでは、サンプリング、�
 
 - ウィザードの最初のページで、次のいずれかのオプションを選択します。
 
-|オプション|説明|
-|------------|-----------------|
-|**CPU サンプリング**|初期の分析と CPU 使用率の問題の分析に役立つアプリケーション統計情報を収集します。|
-|**インストルメンテーション**|焦点を絞った分析、および入出力パフォーマンスの問題分析に役立つ詳しいタイミング データを収集します。|
-|**.NET メモリ割り当て**|サンプリング プロファイリング方式を使用して [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] メモリ割り当てデータを収集します。|
-|**同時実行**|数値のリソース競合データを収集します。|
+| オプション | 説明 |
+|----------------------------| - |
+| **CPU サンプリング** | 初期の分析と CPU 使用率の問題の分析に役立つアプリケーション統計情報を収集します。 |
+| **インストルメンテーション** | 焦点を絞った分析、および入出力パフォーマンスの問題分析に役立つ詳しいタイミング データを収集します。 |
+| **.NET メモリ割り当て** | サンプリング プロファイリング方式を使用して [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] メモリ割り当てデータを収集します。 |
+| **コンカレンシー** | 数値のリソース競合データを収集します。 |
 
 ## <a name="performance-explorer"></a>パフォーマンス エクスプローラー
 
@@ -83,13 +83,13 @@ Visual Studio プロファイリング ツールでは、サンプリング、�
 
      .NET メモリ データの収集に使用できるその他のオプションについては、[.NET メモリの割り当てと有効期間データを収集する](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)方法に関するページを参照してください。
 
-### <a name="to-select-concurrency-data-collection-by-using-performance-session-properties"></a>パフォーマンス セッションのプロパティを使用して同時実行データの収集を選択するには
+### <a name="to-select-concurrency-data-collection-by-using-performance-session-properties"></a>パフォーマンス セッションのプロパティを使用してコンカレンシー データの収集を選択するには
 
 1. **パフォーマンス エクスプローラー**で、パフォーマンス セッションを右クリックして、 **[プロパティ]** をクリックします。
 
 2. **[プロパティ ページ]** で **[全般]** をクリックします。
 
-3. **[同時実行]** をクリックします。
+3. **[コンカレンシー]** をクリックします。
 
 ## <a name="see-also"></a>関連項目
 

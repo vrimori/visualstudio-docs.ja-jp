@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fa98e9b9b66f863915e120c2c31b0ab508c9929f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d8cb2cec8258813fa9c93c466afb607ce88acc7e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31918983"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49865967"
 ---
 # <a name="configuring-warnings-in-visual-basic"></a>Visual Basic での警告の構成
 
@@ -39,7 +39,7 @@ ms.locfileid: "31918983"
  コンパイラの **/warnaserror** コマンド ライン オプションを使って、警告をエラーとして扱うかどうかを指定することもできます。 コンマ区切りリストをこのオプションに追加し、+ または - を使ってエラーまたは警告として扱う必要がある警告を指定できます。 次の表では、使用できるオプションを詳しく説明します。
 
 |コマンド ライン オプション|指定内容|
-|--------------------------|---------------|
+| - |---------------|
 |`/warnaserror+`|すべての警告をエラーとして扱います。|
 |`/warnsaserror`-|警告をエラーとして扱いません。 既定値です。|
 |`/warnaserror+:<warning list` `>`|コンマ区切りリストでエラー ID 番号を指定した特定の警告をエラーとして扱います。|

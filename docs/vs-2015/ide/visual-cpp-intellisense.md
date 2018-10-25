@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 104c85f7b23af8bfb412423ad1eeb27190a235c2
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ced999c20678cc64dc5f96e86070b5f39d5ca2c7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49212941"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49881678"
 ---
 # <a name="visual-c-intellisense"></a>Visual C# の IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -73,23 +73,23 @@ Visual Studio 2015 では、単一コードのファイルおよびプロジェ�
   
  次の点に注意してください。  
   
--   __ANDROID\_\_ が Android プロジェクトに対して定義されているため、8 行目の #else 分岐は淡色表示で非アクティブ領域として表示されています。  
+- # 8 行目の else 分岐が淡色表示、非アクティブな領域を示すため`__ANDROID__`Android プロジェクト用に定義されています。  
   
--   11 行目のあいさつの変数は HELLO 識別子で初期化され、紫の波線で表示されています。 これは現在アクティブではない iOS プロジェクトに、HELLO 識別子が定義されていないためです。 Android プロジェクトでは、11 行目がコンパイルされますが、iOS ではコンパイルされません。 これは共有コードのため、現在アクティブな構成でコンパイルする場合でも、変更する必要があります。  
+- 11 行目のあいさつの変数は HELLO 識別子で初期化され、紫の波線で表示されています。 これは現在アクティブではない iOS プロジェクトに、HELLO 識別子が定義されていないためです。 Android プロジェクトでは、11 行目がコンパイルされますが、iOS ではコンパイルされません。 これは共有コードのため、現在アクティブな構成でコンパイルする場合でも、変更する必要があります。  
   
--   12 行目の BYE 識別子は赤の波線で表示されており、現在選択されているアクティブ プロジェクトでは定義されていません。  
+- 12 行目の BYE 識別子は赤の波線で表示されており、現在選択されているアクティブ プロジェクトでは定義されていません。  
   
- ここで、アクティブなプロジェクトを iOS.StaticLibrary に変更し、波線がどう変化するかに注目してください。  
+  ここで、アクティブなプロジェクトを iOS.StaticLibrary に変更し、波線がどう変化するかに注目してください。  
   
- ![アクティブなプロジェクトとして iOS が選択されています。](../ide/media/intellisensecppcrossplatform2.png "IntelliSenseCppCrossPlatform2")  
+  ![アクティブなプロジェクトとして iOS が選択されています。](../ide/media/intellisensecppcrossplatform2.png "IntelliSenseCppCrossPlatform2")  
   
- 次の点に注意してください。  
+  次の点に注意してください。  
   
--   __ANDROID\_\_ が iOS プロジェクトに対して定義されていないため、6 行目の #ifdef 分岐は淡色表示で非アクティブ領域として表示されています。  
+- 6 行目は、#ifdef 分岐は淡色表示、非アクティブな領域を示すため *_ANDROID\\*  \_ iOS プロジェクトが定義されていません。  
   
--   11 行目のあいさつの変数は、HELLO 識別子で初期化され、赤の波線で表示されています。 これは現在アクティブな iOS プロジェクトに、HELLO 識別子が定義されていないためです。  
+- 11 行目のあいさつの変数は、HELLO 識別子で初期化され、赤の波線で表示されています。 これは現在アクティブな iOS プロジェクトに、HELLO 識別子が定義されていないためです。  
   
--   12 行目の BYE 識別子は紫の波線で表示されており、現在非アクティブな Android.NativeActivity プロジェクトでは定義されていません。  
+- 12 行目の BYE 識別子は紫の波線で表示されており、現在非アクティブな Android.NativeActivity プロジェクトでは定義されていません。  
   
 ## <a name="single-file-intellisense"></a>単一ファイルの IntelliSense  
  プロジェクトの外部で 1 つのファイルを開いても、やはり IntelliSense を取得します。 **[テキスト エディター]、[C/C++]、[詳細]** にアクセスして IntelliSense 機能をオン/オフすることにより、特定の機能を有効または無効にすることができます。 プロジェクトの一部ではない 1 つのファイルに IntelliSense を構成するには、**[詳細設定]** のセクションで **IntelliSense and Browsing for Non-Project Files** (IntelliSense およびプロジェクト以外のファイルの参照) を検索します。 「[Visual C++ ガイド ツアー](http://msdn.microsoft.com/en-us/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)」を参照してください。  

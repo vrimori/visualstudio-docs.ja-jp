@@ -16,12 +16,12 @@ caps.latest.revision: 24
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 18045c8b6c388839f09ba42284ab498caf11dbf5
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 35506967ee20ff6c936e2de4a19d7860e154e4c5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49182066"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866572"
 ---
 # <a name="item-definitions"></a>項目定義
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -94,11 +94,11 @@ ms.locfileid: "49182066"
 ## <a name="additive-and-multiple-definitions"></a>追加が可能な複数の定義  
  定義を追加したり複数の ItemDefinitionGroup を使用したりするときには、次の点に注意してください。  
   
--   追加のメタデータ指定は、その型に追加されます。  
+- 追加のメタデータ指定は、その型に追加されます。  
   
--   最後のメタデータ指定が優先されます。  
+- 最後のメタデータ指定が優先されます。  
   
- 複数の ItemDefinitionGroup がある場合、それ以降メタデータ指定を行うたびに、そのメタデータが前の定義に追加されます。 例えば:  
+  複数の ItemDefinitionGroup がある場合、それ以降メタデータ指定を行うたびに、そのメタデータが前の定義に追加されます。 例えば:  
   
 ```  
 <ItemDefinitionGroup>  

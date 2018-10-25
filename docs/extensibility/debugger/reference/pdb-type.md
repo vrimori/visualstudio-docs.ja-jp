@@ -1,5 +1,5 @@
 ---
-title: PDB_TYPE |Microsoft ドキュメント
+title: PDB_TYPE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc610963fa1ca82fec30e04abb90583db48bdf55
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 83d891de330b66841b1ad48a7fc4593b1144e9e7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31125377"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888126"
 ---
 # <a name="pdbtype"></a>PDB_TYPE
-この構造体では、PDB シンボルから取得したフィールドの種類に関する情報を指定します。  
+この構造体には、PDB シンボルから取得したフィールドの種類に関する情報を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,18 +45,18 @@ public struct PDB_TYPE {
   
 #### <a name="parameters"></a>パラメーター  
  ulAppDomainID  
- シンボルが元のアプリケーションの ID。 これについては、アプリケーションのインスタンスを一意に識別に使用します。  
+ シンボルが元のアプリケーションの ID。 これは、アプリケーションのインスタンスを一意に識別するに使用されます。  
   
  guidModule  
- このフィールドを含むモジュールの GUID です。  
+ このフィールドが含まれるモジュールの GUID です。  
   
  symid  
  このフィールドに対応するシンボルの ID。  
   
-## <a name="remarks"></a>コメント  
- この構造体がの共用体の一部として表示されます、 [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)ときに構造体、`dwKind`のフィールド、`TYPE_INFO`構造に設定されている`TYPE_KIND_PDB`(から値、 [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)列挙体)。  
+## <a name="remarks"></a>Remarks  
+ 共用体の一部としてこの構造体が表示されます、 [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)ときに構造体、`dwKind`のフィールド、`TYPE_INFO`構造に設定されている`TYPE_KIND_PDB`(からの値、 [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)列挙型)。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

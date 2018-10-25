@@ -20,15 +20,16 @@ caps.latest.revision: 32
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 0f81efa03c3955114561e923c232e8ee81dd2af6
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: b582d4679aee10010741994117b8b17f47b23aa5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49259078"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890583"
 ---
 # <a name="ca1502-avoid-excessive-complexity"></a>CA1502: メソッドの実装を複雑にしすぎないでください
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
+
 |||
 |-|-|
 |TypeName|AvoidExcessiveComplexity|
@@ -59,11 +60,11 @@ ms.locfileid: "49259078"
 ## <a name="how-cyclomatic-complexity-is-calculated"></a>サイクロマティック複雑度の計算方法
  サイクロマティック複雑度は、次に 1 を加算して計算されます。
 
--   分岐の数 (など`if`、 `while`、および`do`)
+- 分岐の数 (など`if`、 `while`、および`do`)
 
--   数`case`内のステートメント、 `switch`
+- 数`case`内のステートメント、 `switch`
 
- 次の例では、さまざまなサイクロマティック複雑度のあるメソッドを示します。
+  次の例では、さまざまなサイクロマティック複雑度のあるメソッドを示します。
 
 ## <a name="example"></a>例
  **1 のサイクロマティック複雑度**

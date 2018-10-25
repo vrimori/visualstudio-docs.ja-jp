@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplierEx2::SetServer |Microsoft ドキュメント
+title: IDebugPortSupplierEx2::SetServer |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,15 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 736820495f388e979de01c853233d7a17afa3d29
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3c1abbddd18dce9cfb7162a58496821ac2301659
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31112448"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896108"
 ---
 # <a name="idebugportsupplierex2setserver"></a>IDebugPortSupplierEx2::SetServer
-ポートのサプライヤーのコア サーバーを設定します。  
+ポート サプライヤーのコア サーバーを設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,10 +39,10 @@ int SetServer(
   
 #### <a name="parameters"></a>パラメーター  
  `pServer`  
- コア サーバー ポート サプライヤーに設定します。  
+ コア サーバーのポート サプライヤーを設定します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugPortSupplierEx2](../../../extensibility/debugger/reference/idebugportsupplierex2.md)

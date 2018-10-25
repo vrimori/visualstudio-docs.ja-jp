@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_offsetinudt |Microsoft ドキュメント
+title: Idiasymbol::get_offsetinudt |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 22e0574f8892c2e73a12ebf241af604b85a5ed30
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 48b13de8a9d1680ae4e2a6a94a4fda120a74a18e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31469231"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911422"
 ---
 # <a name="idiasymbolgetoffsetinudt"></a>IDiaSymbol::get_offsetInUdt
 UDT のメンバーのユーザー定義型 (UDT) の先頭までのオフセットを取得します。  
@@ -37,15 +37,15 @@ HRESULT get_offsetInUdt(
  [out]シンボルの場所のバイト オフセットを返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>コメント  
- この関数は、ローカルのレコードを最適化されたビルドでのみ使用されます。  
+## <a name="remarks"></a>Remarks  
+ この関数は、最適化されたビルドでレコードをローカルでのみ使用されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

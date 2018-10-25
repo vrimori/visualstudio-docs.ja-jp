@@ -21,12 +21,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 8b6d5d7b6196b78bfaa68d944b9e652dabf54b85
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: fd1bd7965f0277ce1d3d900be6ee10db097eeb3f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49300962"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909108"
 ---
 # <a name="how-to-create-file-associations-for-a-clickonce-application"></a>方法 : ClickOnce アプリケーションのファイルの関連付けを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,31 +35,31 @@ ms.locfileid: "49300962"
   
 ### <a name="to-create-file-associations-for-a-clickonce-application"></a>ClickOnce アプリケーションのファイルの関連付けを作成するには  
   
-1.  作成、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーション通常は、使用して、既存または[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーション。  
+1. 作成、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーション通常は、使用して、既存または[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーション。  
   
-2.  テキスト エディターまたはメモ帳などの XML エディターでは、アプリケーション マニフェストを開きます。  
+2. テキスト エディターまたはメモ帳などの XML エディターでは、アプリケーション マニフェストを開きます。  
   
-3.  `assembly` 要素を検索します。 詳細については、「[ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)」を参照してください。  
+3. `assembly` 要素を検索します。 詳細については、「[ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)」を参照してください。  
   
-4.  子として、`assembly`要素を追加、`fileAssociation`要素。 `fileAssociation`要素には 4 つの属性。  
+4. 子として、`assembly`要素を追加、`fileAssociation`要素。 `fileAssociation`要素には 4 つの属性。  
   
-    -   `extension`: アプリケーションに関連付けるファイル名拡張子。  
+   - `extension`: アプリケーションに関連付けるファイル名拡張子。  
   
-    -   `description`: Windows シェルに表示されるファイルの種類の説明。  
+   - `description`: Windows シェルに表示されるファイルの種類の説明。  
   
-    -   `progid`: レジストリ内でマークする、ファイルの種類を一意に識別する文字列。  
+   - `progid`: レジストリ内でマークする、ファイルの種類を一意に識別する文字列。  
   
-    -   `defaultIcon`: このファイルの種類を使用するアイコン。 アイコンは、アプリケーション マニフェストでファイルのリソースとして追加する必要があります。 詳細については、「 [方法 : ClickOnce アプリケーションにデータ ファイルを含める](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)」を参照してください。  
+   - `defaultIcon`: このファイルの種類を使用するアイコン。 アイコンは、アプリケーション マニフェストでファイルのリソースとして追加する必要があります。 詳細については、「 [方法 : ClickOnce アプリケーションにデータ ファイルを含める](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)」を参照してください。  
   
      例については、`file`と`fileAssociation`、要素を参照してください[ \<fileAssociation > 要素](../deployment/fileassociation-element-clickonce-application.md)します。  
   
-5.  1 つ以上のファイルの種類をアプリケーションに関連付ける場合は、さらに追加`fileAssociation`要素。 なお、`progid`属性ごとに異なる必要があります。  
+5. 1 つ以上のファイルの種類をアプリケーションに関連付ける場合は、さらに追加`fileAssociation`要素。 なお、`progid`属性ごとに異なる必要があります。  
   
-6.  アプリケーション マニフェストが完了したら、マニフェストに再署名します。 この設定は、Mage.exe を使用して、コマンドラインから行うことができます。  
+6. アプリケーション マニフェストが完了したら、マニフェストに再署名します。 この設定は、Mage.exe を使用して、コマンドラインから行うことができます。  
   
-     `mage -Sign WindowsFormsApp1.exe.manifest -CertFile mycert.pfx`  
+    `mage -Sign WindowsFormsApp1.exe.manifest -CertFile mycert.pfx`  
   
-     詳細については、次を参照してください[Mage.exe (マニフェスト生成および編集ツール)。](http://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)  
+    詳細については、次を参照してください[Mage.exe (マニフェスト生成および編集ツール)。](http://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)  
   
 ## <a name="see-also"></a>関連項目  
  [\<fileAssociation > 要素](../deployment/fileassociation-element-clickonce-application.md)   

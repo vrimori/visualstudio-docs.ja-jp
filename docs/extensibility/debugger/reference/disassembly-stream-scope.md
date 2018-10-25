@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_STREAM_SCOPE |Microsoft ドキュメント
+title: DISASSEMBLY_STREAM_SCOPE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a0c72d0f14da9840c0a77d5ae88cb0acb5b54cba
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 860d563abd5922ecf0461ed5f03ffa231ba9450f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31102068"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831160"
 ---
 # <a name="disassemblystreamscope"></a>DISASSEMBLY_STREAM_SCOPE
 [逆アセンブル] ストリームのスコープを指定します。  
@@ -48,23 +48,23 @@ public enum enum_DISASSEMBLY_STREAM_SCOPE {
   
 ## <a name="members"></a>メンバー  
  DSS_HUGE  
- コードのコンテキストを分解すると、クライアントは 1 回の呼び出しで取得する必要が通常以上の出力が生成することを指定します。  
+ コードのコンテキストを逆アセンブルする生成クライアントは、1 回の呼び出しで取得するが通常よりも多くの出力を指定します。  
   
  DSS_FUNCTION  
- コードのコンテキストに含まれる関数を逆アセンブルすることを指定します。 によって返されるときに逆アセンブル ストリームが、関数を表すことを指定します、 [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md)メソッドです。  
+ コードのコンテキストに含まれる関数を逆アセンブルすることを指定します。 によって返されるときに混合モードのストリームが、関数を表すことを指定、 [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md)メソッド。  
   
  DSS_MODULE  
- によって返されるときに、`IDebugDisassemblyStream2::GetScope`メソッドは、逆アセンブル ストリームがモジュールを表すことを指定します。  
+ によって返されるときに、`IDebugDisassemblyStream2::GetScope`メソッドでは、混合モードのストリームがモジュールを表すことを指定します。  
   
  DSS_ALL  
  アドレス空間全体の逆アセンブリを指定します。  
   
-## <a name="remarks"></a>コメント  
- 引数として渡される、 [GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md)メソッドによって返されると、 [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 引数として渡される、 [GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md)メソッドによって返されると、 [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md)メソッド。  
   
- これらの値は、ビットごとと組み合わせること`OR`です。  
+ これらの値は、演算と組み合わせることがあります`OR`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

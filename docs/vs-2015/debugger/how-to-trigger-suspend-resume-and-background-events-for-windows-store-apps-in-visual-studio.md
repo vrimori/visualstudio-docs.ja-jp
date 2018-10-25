@@ -21,12 +21,12 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5496e9b5122d2f2206118445a4e7316c2717bc37
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 12c22b8ef7aa545e4256c8b122395a72508b94ab
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49214761"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49938384"
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio"></a>Visual Studio で Windows ストア アプリの中断イベント、再開イベント、およびバックグラウンド イベントをトリガーする方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "49214761"
   
  [バックグラウンド タスクをトリガーする](#BKMK_Trigger_background_tasks)  
   
--   [標準デバッグ セッションからバックグラウンド タスク イベントをトリガーする](#BKMK_Trigger_a_background_task_event_from_a_standard_debug_session)  
+- [標準デバッグ セッションからバックグラウンド タスク イベントをトリガーする](#BKMK_Trigger_a_background_task_event_from_a_standard_debug_session)  
   
--   [アプリが実行されていないときにバックグラウンド タスクをトリガーする](#BKMK_Trigger_a_background_task_when_the_app_is_not_running)  
+- [アプリが実行されていないときにバックグラウンド タスクをトリガーする](#BKMK_Trigger_a_background_task_when_the_app_is_not_running)  
   
- [インストール済みのアプリからプロセス継続時間管理イベントとバックグラウンド タスクをトリガーする](#BKMK_Trigger_Process_Lifetime_Management_events_and_background_tasks_from_an_installed_app)  
+  [インストール済みのアプリからプロセス継続時間管理イベントとバックグラウンド タスクをトリガーする](#BKMK_Trigger_Process_Lifetime_Management_events_and_background_tasks_from_an_installed_app)  
   
- [バックグラウンド タスクのアクティブ化エラーの診断](#BKMK_Diagnosing_background_task_activation_errors)  
+  [バックグラウンド タスクのアクティブ化エラーの診断](#BKMK_Diagnosing_background_task_activation_errors)  
   
 ##  <a name="BKMK_Trigger_Process_Lifecycle_Management_events"></a> プロセス継続時間管理イベントを発生させる  
  Windows では、ユーザーが他のアプリに切り替えた場合、または Windows が低電力状態に入った場合にアプリを中断できます。 `Suspending` イベントに応答して、関連するアプリとユーザー データを永続ストレージに保存し、リソースを解放できます。 **中断** 状態から再開されたアプリは **実行** 状態に入り、中断状態に入った時点の状態から実行を続行します。 `Resuming` イベントに応答してアプリの状態を復元するか更新し、リソースを再要求できます。  

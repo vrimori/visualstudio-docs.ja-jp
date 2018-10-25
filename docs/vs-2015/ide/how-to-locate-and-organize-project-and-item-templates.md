@@ -21,12 +21,12 @@ caps.latest.revision: 28
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e497800f209c7653c1f47904df03baf604b3b134
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 2a3954e5d18db6585c8dbda017773969f96b33de
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49229399"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49830978"
 ---
 # <a name="how-to-locate-and-organize-project-and-item-templates"></a>方法 : プロジェクト テンプレートと項目テンプレートを配置して整理する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,26 +39,26 @@ ms.locfileid: "49229399"
 ### <a name="installed-templates"></a>インストールされたテンプレート  
  既定では、製品と共にインストールされたテンプレートは次の場所に配置されます。  
   
--   \\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\\*言語*\\*ロケール*\  
+- \\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\\*言語*\\*ロケール*\  
   
--   \\*VisualStudioInstallationDirectory*\Common7\IDE\ProjectTemplates\\*言語*\\*ロケール*\\  
+- \\*VisualStudioInstallationDirectory*\Common7\IDE\ProjectTemplates\\*言語*\\*ロケール*\\  
   
- たとえば、次のディレクトリには英語用の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクト テンプレートが含まれています。  
+  たとえば、次のディレクトリには英語用の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクト テンプレートが含まれています。  
   
- C:\\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\VisualBasic\1033\  
+  C:\\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\VisualBasic\1033\  
   
 ### <a name="custom-templates"></a>カスタム テンプレート  
  既定では、カスタム テンプレートは次の場所に配置されます。  
   
--   \My Documents\Visual Studio *バージョン*\Templates\ProjectTemplates\\*言語*\  
+- \My Documents\Visual Studio *バージョン*\Templates\ProjectTemplates\\*言語*\  
   
--   \My Documents\Visual Studio *バージョン*\Templates\ItemTemplates\\*言語*\  
+- \My Documents\Visual Studio *バージョン*\Templates\ItemTemplates\\*言語*\  
   
- たとえば、次のディレクトリにはカスタム [!INCLUDE[csprcs](../includes/csprcs-md.md)] プロジェクト テンプレートが含まれています。  
+  たとえば、次のディレクトリにはカスタム [!INCLUDE[csprcs](../includes/csprcs-md.md)] プロジェクト テンプレートが含まれています。  
   
- C:\Documents and Settings\UserName\My ドキュメント\\< Visual Studio バージョン\>\Templates\ProjectTemplates\Visual C \  
+  C:\Documents and Settings\UserName\My ドキュメント\\< Visual Studio バージョン\>\Templates\ProjectTemplates\Visual C \  
   
- カスタム テンプレートには、ローカライズされたテンプレート用のサブディレクトリは含まれていません。 カスタム テンプレートの既定ディレクトリは、**[オプション]** ダイアログ ボックスの **[環境] > [プロジェクトおよびソリューション]** で変更できます。  
+  カスタム テンプレートには、ローカライズされたテンプレート用のサブディレクトリは含まれていません。 カスタム テンプレートの既定ディレクトリは、**[オプション]** ダイアログ ボックスの **[環境] > [プロジェクトおよびソリューション]** で変更できます。  
   
 ## <a name="organizing-templates"></a>テンプレートの整理  
  **[新しいプロジェクト]** ダイアログ ボックスおよび **[新しい項目の追加]** ダイアログ ボックスには、インストールされたテンプレートやカスタム テンプレートの場所のディレクトリ構造がカテゴリとして反映されます。 これらのディレクトリ構造を変更することにより、自分にとってわかりやすいようにテンプレートを整理できます。  
@@ -73,25 +73,25 @@ ms.locfileid: "49229399"
   
 ##### <a name="to-create-new-installed-project-template-categories"></a>インストールされたプロジェクト テンプレートの新しいカテゴリを作成するには  
   
-1.  インストールされたテンプレートのディレクトリの言語フォルダーに、フォルダーを作成します。 たとえば、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクト テンプレートに対して Office カテゴリを作成するには、次のディレクトリを作成する必要があります。  
+1. インストールされたテンプレートのディレクトリの言語フォルダーに、フォルダーを作成します。 たとえば、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクト テンプレートに対して Office カテゴリを作成するには、次のディレクトリを作成する必要があります。  
   
-     \\*Visual Studio のインストール ディレクトリ*\Common7\IDE\ProjectTemplates\VisualBasic\1033\Office\  
+    \\*Visual Studio のインストール ディレクトリ*\Common7\IDE\ProjectTemplates\VisualBasic\1033\Office\  
   
-2.  このカテゴリのすべてのテンプレートを新しいフォルダーに配置します。  
+2. このカテゴリのすべてのテンプレートを新しいフォルダーに配置します。  
   
-3.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のすべてのインスタンスを閉じます。  
+3. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のすべてのインスタンスを閉じます。  
   
-4.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックし、「**cmd**」と入力し、**[OK]** をクリックします。  
+4. **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックし、「**cmd**」と入力し、**[OK]** をクリックします。  
   
-5.  コマンド プロンプトで、devenv.exe を含むディレクトリに移動し、「**devenv /installvstemplates**」と入力します。  
+5. コマンド プロンプトで、devenv.exe を含むディレクトリに移動し、「**devenv /installvstemplates**」と入力します。  
   
-6.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] を実行します。  
+6. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] を実行します。  
   
-7.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
+7. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-8.  Office カテゴリが **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** ウィンドウの [[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]] の下に表示されることを確認します。  
+8. Office カテゴリが **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** ウィンドウの [[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]] の下に表示されることを確認します。  
   
- プロジェクト項目テンプレートのサブセットをカスタム フォルダーとしてグループ化することもできます。  
+   プロジェクト項目テンプレートのサブセットをカスタム フォルダーとしてグループ化することもできます。  
   
 ##### <a name="to-create-new-installed-item-template-categories"></a>インストールされた項目テンプレートの新しいカテゴリを作成するには  
   
@@ -120,17 +120,17 @@ ms.locfileid: "49229399"
   
 ##### <a name="to-create-new-custom-project-template-categories"></a>カスタム プロジェクト テンプレートの新しいカテゴリを作成するには  
   
-1.  カスタム プロジェクト テンプレートのディレクトリの言語フォルダーに、フォルダーを作成します。 たとえば、[!INCLUDE[csprcs](../includes/csprcs-md.md)] テンプレートに対して HelloWorld カテゴリを作成するには、次のディレクトリを作成する必要があります。  
+1. カスタム プロジェクト テンプレートのディレクトリの言語フォルダーに、フォルダーを作成します。 たとえば、[!INCLUDE[csprcs](../includes/csprcs-md.md)] テンプレートに対して HelloWorld カテゴリを作成するには、次のディレクトリを作成する必要があります。  
   
-     \My documents\\< Visual Studio バージョン\>\Templates\ProjectTemplates\CSharp\HelloWorld\  
+    \My documents\\< Visual Studio バージョン\>\Templates\ProjectTemplates\CSharp\HelloWorld\  
   
-2.  このカテゴリのすべてのテンプレートを新しいフォルダーに配置します。  
+2. このカテゴリのすべてのテンプレートを新しいフォルダーに配置します。  
   
-3.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
+3. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-4.  HelloWorld カテゴリが **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** ウィンドウの [[!INCLUDE[csprcs](../includes/csprcs-md.md)]] の下に表示されることを確認します。  
+4. HelloWorld カテゴリが **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** ウィンドウの [[!INCLUDE[csprcs](../includes/csprcs-md.md)]] の下に表示されることを確認します。  
   
- カスタム項目テンプレートのサブセットをカスタム フォルダーとしてグループ化することもできます。  
+   カスタム項目テンプレートのサブセットをカスタム フォルダーとしてグループ化することもできます。  
   
 ##### <a name="to-create-new-custom-item-template-categories"></a>カスタム項目テンプレートの新しいカテゴリを作成するには  
   
