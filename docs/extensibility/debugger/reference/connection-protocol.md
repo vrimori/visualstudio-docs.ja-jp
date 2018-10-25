@@ -1,5 +1,5 @@
 ---
-title: CONNECTION_PROTOCOL |Microsoft ドキュメント
+title: CONNECTION_PROTOCOL |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e1e1dc8cd22b529eafd6183578be7de6ffe69549
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d70aa31e7574e9fcdb0ed4e8d89847e832f3739b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31110004"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832771"
 ---
 # <a name="connectionprotocol"></a>CONNECTION_PROTOCOL
-デバッグ サーバーとデバッグ パッケージ (DE) 間の通信に使用されているプロトコルを示します。  
+デバッグ サーバーとパッケージのデバッグ (DE) 間の通信に使用されるプロトコルを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,30 +53,30 @@ public enum CONNECTION_PROTOCOL {
   
 #### <a name="parameters"></a>パラメーター  
  CONNECTION_NONE  
- サーバーに接続が確立したありません。  
+ サーバーに接続が確立されていません。  
   
  CONNECTION_UNKNOWN  
- 接続が確立されましたが、不明な種類のします。  
+ 接続が確立されていますが、不明な型のです。  
   
  CONNECTION_LOCAL  
  ローカル サーバーへの接続です。  
   
  CONNECTION_PIPE  
- 名前付きパイプは接続です。  
+ 接続では、名前付きパイプ経由です。  
   
  CONNECTION_TCPIP  
- 接続には、TCP/IP が使用されます。  
+ 接続は、TCP/IP を使用します。  
   
  CONNECTION_HTTP  
- 接続は、(Web サーバー) を介して、HTTP を使用します。  
+ 接続は、(Web サーバー) 経由の HTTP を使用します。  
   
  CONNECTION_OTHER  
- その他の何らかの種類の接続が確立された (この値は現在使用されません)。  
+ 他の種類の接続が確立されています (この値は現在使用されません)。  
   
-## <a name="remarks"></a>コメント  
- これらの値から返される、 [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ これらの値から返される、 [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

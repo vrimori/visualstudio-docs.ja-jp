@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 40322ffaed98e2254fa09592be3c3eda52acc999
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a8e0bd339d8e7b6d145cc9a916dafc2be9fc975e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49247521"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845785"
 ---
 # <a name="getting-started-with-ptvs-start-coding-projects"></a>PTVS の概要: コーディングの開始 (プロジェクト)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,13 +36,13 @@ Python Tools for Visual Studio (PTVS) を使用すると、コードを管理で
  
 - コンポーネントの境界を定義します。 アプリに複数のコンポーネントがある場合は、それぞれを別のプロジェクトに含めることができます。 これらは最終的に、別のビルドやデバッグ設定で構築された別のサーバーに展開される場合があります。または、C++ や Node.js など Visual Studio でサポートされている別の言語を使用して記述されることさえあります。 
  
- 作業を開始するために役立つ、いくつかのプロジェクト テンプレートがあります。 作業する Python コードが既にある場合、From Existing code ウィザードは、すべてのファイルを含むプロジェクトを作成するために役立ちます。 いくつかの一般的なフレームワーク用に、複数の Web プロジェクトがあります。 PTVS サンプル パックでは、さらに多くのテンプレートが使用可能です。 指定された web テンプレートを他のフレームワークで使用できるようにするためのオプションがあります。 Python アプリケーション テンプレートは、クリーンな空のプロジェクトです。 開始するための 1 つのモジュールがあります。 
+  作業を開始するために役立つ、いくつかのプロジェクト テンプレートがあります。 作業する Python コードが既にある場合、From Existing code ウィザードは、すべてのファイルを含むプロジェクトを作成するために役立ちます。 いくつかの一般的なフレームワーク用に、複数の Web プロジェクトがあります。 PTVS サンプル パックでは、さらに多くのテンプレートが使用可能です。 指定された web テンプレートを他のフレームワークで使用できるようにするためのオプションがあります。 Python アプリケーション テンプレートは、クリーンな空のプロジェクトです。 開始するための 1 つのモジュールがあります。 
  
- Visual Studio のソリューション エクスプローラー ウィンドウには、すべてのファイル、検索パス、Python 環境などの、開いているプロジェクトが表示されます。 新しい項目を追加するには、プロジェクト フォルダーを選択し、コンテキスト メニュー (右のポインター ボタンを押す) から [追加]、[新しい項目] の順に選択します。 ダイアログ内のいずれかの項目を選択し、項目の名前をカスタマイズして、その項目をプロジェクトに追加することができます。 
+  Visual Studio のソリューション エクスプローラー ウィンドウには、すべてのファイル、検索パス、Python 環境などの、開いているプロジェクトが表示されます。 新しい項目を追加するには、プロジェクト フォルダーを選択し、コンテキスト メニュー (右のポインター ボタンを押す) から [追加]、[新しい項目] の順に選択します。 ダイアログ内のいずれかの項目を選択し、項目の名前をカスタマイズして、その項目をプロジェクトに追加することができます。 
  
- ソリューション エクスプローラーにドラッグ アンドドロップできます。 既にファイルをプロジェクトのディレクトリ構造にコピーした場合は、ソリューション エクスプローラーの上部にある [すべてのファイルを表示] を選択できます。 その後、追加する項目を選択して、コンテキスト メニューから [プロジェクトに含める] を選択できます。 
+  ソリューション エクスプローラーにドラッグ アンドドロップできます。 既にファイルをプロジェクトのディレクトリ構造にコピーした場合は、ソリューション エクスプローラーの上部にある [すべてのファイルを表示] を選択できます。 その後、追加する項目を選択して、コンテキスト メニューから [プロジェクトに含める] を選択できます。 
  
- これらの手順は、非常に短い [youtube ビデオ](https://www.youtube.com/watch?v=KHPoVpL7zHg&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=2)で視聴できます。 
+  これらの手順は、非常に短い [youtube ビデオ](https://www.youtube.com/watch?v=KHPoVpL7zHg&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=2)で視聴できます。 
  
 ## <a name="see-also"></a>関連項目 
  [Wiki ドキュメント](https://github.com/Microsoft/PTVS/wiki/Projects) [PTVS Getting Started と Deep Dive のビデオ](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)

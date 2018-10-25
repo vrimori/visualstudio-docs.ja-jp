@@ -15,12 +15,12 @@ ms.assetid: 12bc1f12-47b1-44f6-b8db-862aa88d50d1
 caps.latest.revision: 23
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: be4e5fb7f5c5013ee9151f5db9b30d91a0894ee4
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 0b9dc7d2ef8aabab628f13ce9648e0fa5dc1f3b8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49265006"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845096"
 ---
 # <a name="how-to-provide-a-service"></a>方法: サービスを提供
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,50 +36,50 @@ VSPackage では、その他の Vspackage を使用できるサービスを提�
   
 #### <a name="implementing-a-service"></a>サービスの実装  
   
-1.  VSIX プロジェクトを作成 (**ファイル/新規、プロジェクト/Visual c#/呼び出/VSIX プロジェクト**)。  
+1. VSIX プロジェクトを作成 (**ファイル/新規、プロジェクト/Visual c#/呼び出/VSIX プロジェクト**)。  
   
-2.  VSPackage をプロジェクトに追加します。 プロジェクト ノードを選択、**ソリューション エクスプ ローラー**クリック**追加/新しい項目/Visual c# アイテム/機能拡張/Visual Studio パッケージ**。  
+2. VSPackage をプロジェクトに追加します。 プロジェクト ノードを選択、**ソリューション エクスプ ローラー**クリック**追加/新しい項目/Visual c# アイテム/機能拡張/Visual Studio パッケージ**。  
   
-3.  サービスを実装するには次の 3 つの種類を作成する必要があります。  
+3. サービスを実装するには次の 3 つの種類を作成する必要があります。  
   
-    -   サービスを表すインターフェイスです。 これらのインターフェイスの多くは、空、つまり、どのメソッド。  
+   - サービスを表すインターフェイスです。 これらのインターフェイスの多くは、空、つまり、どのメソッド。  
   
-    -   サービス インターフェイスを記述するインターフェイスです。 このインターフェイスには、実装するメソッドが含まれています。  
+   - サービス インターフェイスを記述するインターフェイスです。 このインターフェイスには、実装するメソッドが含まれています。  
   
-    -   サービスと、サービス インターフェイスの両方を実装するクラス。  
+   - サービスと、サービス インターフェイスの両方を実装するクラス。  
   
      次の例では、3 種類の非常に基本的な実装を示します。 サービス クラスのコンス トラクターは、サービス プロバイダーを設定する必要があります。  
   
-    ```csharp  
-    public class MyService : SMyService, IMyService  
-    {  
-        private Microsoft.VisualStudio.OLE.Interop.IServiceProvider serviceProvider;  
-        private string myString;  
-        public MyService(Microsoft.VisualStudio.OLE.Interop.IServiceProvider sp)  
-        {  
-            Trace.WriteLine(  
-                   "Constructing a new instance of MyService");  
-            serviceProvider = sp;  
-        }  
-        public void Hello()  
-        {  
-            myString = "hello";  
-        }  
-        public string Goodbye()  
-        {  
-           return "goodbye";  
-        }  
-    }  
-    public interface SMyService  
-    {  
-    }  
-    public interface IMyService  
-    {  
-        void Hello();  
-        string Goodbye();  
-    }  
+   ```csharp  
+   public class MyService : SMyService, IMyService  
+   {  
+       private Microsoft.VisualStudio.OLE.Interop.IServiceProvider serviceProvider;  
+       private string myString;  
+       public MyService(Microsoft.VisualStudio.OLE.Interop.IServiceProvider sp)  
+       {  
+           Trace.WriteLine(  
+                  "Constructing a new instance of MyService");  
+           serviceProvider = sp;  
+       }  
+       public void Hello()  
+       {  
+           myString = "hello";  
+       }  
+       public string Goodbye()  
+       {  
+          return "goodbye";  
+       }  
+   }  
+   public interface SMyService  
+   {  
+   }  
+   public interface IMyService  
+   {  
+       void Hello();  
+       string Goodbye();  
+   }  
   
-    ```  
+   ```  
   
 ### <a name="registering-a-service"></a>サービスを登録します。  
   

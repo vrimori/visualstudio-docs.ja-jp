@@ -17,33 +17,33 @@ ms.assetid: 8b8ab77f-a134-495c-be42-3bc51aa62dfb
 caps.latest.revision: 31
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f1f13f3a9008d86812b0e1e11886cdc66457271e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5603450bdc761626a55f34813dc46cb8141da7be
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49232597"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811868"
 ---
 # <a name="debugger-components"></a>デバッガーのコンポーネント
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]デバッガーは、VSPackage として実装され、全体のデバッグ セッションを管理します。 デバッグ セッションには、次の要素が構成されています。  
   
--   **パッケージのデバッグ:** 、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]デバッガーがデバッグ中に関係なく同じユーザー インターフェイスを提供します。  
+- **パッケージのデバッグ:** 、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]デバッガーがデバッグ中に関係なく同じユーザー インターフェイスを提供します。  
   
--   **セッション デバッグ マネージャー (SDM):** に一貫性のあるプログラム インターフェイスを提供、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]さまざまなデバッグ エンジンの管理用のデバッガーです。 によって実装されている[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。  
+- **セッション デバッグ マネージャー (SDM):** に一貫性のあるプログラム インターフェイスを提供、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]さまざまなデバッグ エンジンの管理用のデバッガーです。 によって実装されている[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。  
   
--   **プロセス デバッグ マネージャー (PDM):** 管理、実行中のすべてのインスタンスの[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、またはデバッグ中のすべてのプログラムの一覧。 によって実装されている[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。  
+- **プロセス デバッグ マネージャー (PDM):** 管理、実行中のすべてのインスタンスの[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、またはデバッグ中のすべてのプログラムの一覧。 によって実装されている[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。  
   
--   **デバッグ エンジン (DE):** のデバッグ中のプログラムを監視、SDM を PDM は、実行中のプログラムの状態との相互作用のリアルタイム分析を提供するには、式エバリュエーターとシンボル プロバイダー、プログラムのメモリと変数の状態。 によって実装されます[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)](の対応言語) と、独自のランタイムをサポートするサード パーティ ベンダー。  
+- **デバッグ エンジン (DE):** のデバッグ中のプログラムを監視、SDM を PDM は、実行中のプログラムの状態との相互作用のリアルタイム分析を提供するには、式エバリュエーターとシンボル プロバイダー、プログラムのメモリと変数の状態。 によって実装されます[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)](の対応言語) と、独自のランタイムをサポートするサード パーティ ベンダー。  
   
--   **式エバリュエーター (EE):** 変数と、プログラムが特定の時点で停止したときに、ユーザーが指定した式を動的に評価するためのサポートを提供します。 によって実装されます[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)](の対応言語) とは自分の言語をサポートするサード パーティ ベンダー。  
+- **式エバリュエーター (EE):** 変数と、プログラムが特定の時点で停止したときに、ユーザーが指定した式を動的に評価するためのサポートを提供します。 によって実装されます[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)](の対応言語) とは自分の言語をサポートするサード パーティ ベンダー。  
   
--   **シンボル プロバイダー (SP):** とも呼ばれるシンボル ハンドラーでは、プログラムのデバッグ シンボルにマップ、プログラムの実行中のインスタンス (ソース コード レベルのデバッグ、式の評価) など意味のある情報を提供できるようにします。 によって実装されている[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)](共通言語ランタイム [CLR] のシンボルと [PDB] プログラム データベース シンボル ファイルの形式)、デバッグ情報を保存する独自の専用メソッドを持つサード パーティ ベンダー。  
+- **シンボル プロバイダー (SP):** とも呼ばれるシンボル ハンドラーでは、プログラムのデバッグ シンボルにマップ、プログラムの実行中のインスタンス (ソース コード レベルのデバッグ、式の評価) など意味のある情報を提供できるようにします。 によって実装されている[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)](共通言語ランタイム [CLR] のシンボルと [PDB] プログラム データベース シンボル ファイルの形式)、デバッグ情報を保存する独自の専用メソッドを持つサード パーティ ベンダー。  
   
- 次の図は、Visual Studio デバッガーのこれらの要素間の関係を示します。  
+  次の図は、Visual Studio デバッガーのこれらの要素間の関係を示します。  
   
- ![コンポーネント デバッグの概要](../../extensibility/debugger/media/dbugcompovrview.gif "DBugCompOvrview")  
+  ![コンポーネント デバッグの概要](../../extensibility/debugger/media/dbugcompovrview.gif "DBugCompOvrview")  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [パッケージのデバッグ](../../extensibility/debugger/debug-package.md)  

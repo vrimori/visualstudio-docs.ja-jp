@@ -24,12 +24,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: b880353b227eae86c7c35f274271fb404b62ede0
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: b62dc86425dcbebb225c66eecd51505f674e20ec
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49199521"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949033"
 ---
 # <a name="how-to-update-records-in-a-database"></a>方法 : データベースのレコードを更新する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -62,18 +62,18 @@ ms.locfileid: "49199521"
   
 #### <a name="to-update-records-in-a-database-with-the-tableadapterupdate-method-that-takes-dataset-datatable-datarow-or-datarows"></a>DataSet、DataTable、DataRow、または DataRows() を受け取る TableAdapter.Update メソッドを使用してデータベース内のレコードを更新するには  
   
-1.  目的のレコードを編集<xref:System.Data.DataTable>を直接編集して、<xref:System.Data.DataRow>で、<xref:System.Data.DataTable>します。 詳細については、次を参照してください。[方法: DataTable の行の編集](http://msdn.microsoft.com/library/d5eea200-9bfa-4956-bf7c-08dd6fb6663c)します。  
+1. 目的のレコードを編集<xref:System.Data.DataTable>を直接編集して、<xref:System.Data.DataRow>で、<xref:System.Data.DataTable>します。 詳細については、次を参照してください。[方法: DataTable の行の編集](http://msdn.microsoft.com/library/d5eea200-9bfa-4956-bf7c-08dd6fb6663c)します。  
   
-2.  行を編集した後、<xref:System.Data.DataTable>を呼び出し、`TableAdapter.Update`メソッド。 全体のいずれかで渡すことで更新するデータの量を制御できます<xref:System.Data.DataSet>、 <xref:System.Data.DataTable>、配列の<xref:System.Data.DataRow>、または 1 つ<xref:System.Data.DataRow>します。  
+2. 行を編集した後、<xref:System.Data.DataTable>を呼び出し、`TableAdapter.Update`メソッド。 全体のいずれかで渡すことで更新するデータの量を制御できます<xref:System.Data.DataSet>、 <xref:System.Data.DataTable>、配列の<xref:System.Data.DataRow>、または 1 つ<xref:System.Data.DataRow>します。  
   
-     次のコード内のレコードを編集する方法を示しています、<xref:System.Data.DataTable>を呼び出して、`TableAdapter.Update`メソッドをデータベースに変更を保存します。 (この例は、Northwind データベースのリージョンのテーブルを使用します)。  
+    次のコード内のレコードを編集する方法を示しています、<xref:System.Data.DataTable>を呼び出して、`TableAdapter.Update`メソッドをデータベースに変更を保存します。 (この例は、Northwind データベースのリージョンのテーブルを使用します)。  
   
-     [!code-csharp[VbRaddataSaving#17](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form5.cs#17)]
-     [!code-vb[VbRaddataSaving#17](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form5.vb#17)]  
+    [!code-csharp[VbRaddataSaving#17](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form5.cs#17)]
+    [!code-vb[VbRaddataSaving#17](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form5.vb#17)]  
   
- アプリケーションは、アプリケーションでデータを格納するオブジェクトを使用する場合は、TableAdapter を使用することができます`DBDirect`オブジェクトからデータをデータベースに直接送信する方法。 これらのメソッドを使用すると、メソッドのパラメーターとして各列の個別の値を渡すことができます。 このメソッドを呼び出すと、メソッドに渡された列の値を持つデータベースの既存のレコードが更新されます。  
+   アプリケーションは、アプリケーションでデータを格納するオブジェクトを使用する場合は、TableAdapter を使用することができます`DBDirect`オブジェクトからデータをデータベースに直接送信する方法。 これらのメソッドを使用すると、メソッドのパラメーターとして各列の個別の値を渡すことができます。 このメソッドを呼び出すと、メソッドに渡された列の値を持つデータベースの既存のレコードが更新されます。  
   
- 次の手順は、Northwind`Region`例としてテーブル。  
+   次の手順は、Northwind`Region`例としてテーブル。  
   
 #### <a name="to-update-records-in-a-database-using-the-tableadapterupdate-method-that-takes-column-values"></a>列の値を受け取る TableAdapter.Update メソッドを使用してデータベースにレコードを更新するには  
   

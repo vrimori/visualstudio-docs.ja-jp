@@ -16,12 +16,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: b6726b2c859143f5dbc9b264e67bb9bb91757de5
-ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
+ms.openlocfilehash: 9099c1ee0b1ed3af108c11792f7629453dfbf7c6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37089313"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819044"
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>方法: 追加、更新、または WCF データ サービス参照の削除
 A *service リファレンス*アクセスを 1 つまたは複数のプロジェクト[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]します。 使用して、**サービス参照の追加**を検索 ダイアログ ボックス[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]でローカルに、ローカル エリア ネットワーク、またはインターネット上の現在のソリューションです。
@@ -55,21 +55,21 @@ A *service リファレンス*アクセスを 1 つまたは複数のプロジ�
 
 ### <a name="to-add-a-reference-to-a-service-in-the-current-solution"></a>現在のソリューションでサービスへの参照を追加するには
 
-1.  **ソリューション エクスプ ローラー**をクリックして、サービスを追加するプロジェクトの名前を右クリックして**サービス参照の追加**します。
+1. **ソリューション エクスプ ローラー**をクリックして、サービスを追加するプロジェクトの名前を右クリックして**サービス参照の追加**します。
 
-     **サービス参照の追加** ダイアログ ボックスが表示されます。
+    **サービス参照の追加** ダイアログ ボックスが表示されます。
 
-2.  クリックして**検出**します。
+2. クリックして**検出**します。
 
-     すべてのサービス (両方[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]および WCF サービス) で、現在のソリューションに追加されます、**サービス**一覧。
+    すべてのサービス (両方[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]および WCF サービス) で、現在のソリューションに追加されます、**サービス**一覧。
 
-3.  **サービス**一覧で、ノードを使用して、エンティティ セットを選択するサービスを展開します。
+3. **サービス**一覧で、ノードを使用して、エンティティ セットを選択するサービスを展開します。
 
-4.  **Namespace**ボックスに、参照で使用する名前空間を入力します。
+4. **Namespace**ボックスに、参照で使用する名前空間を入力します。
 
-5.  クリックして**OK**プロジェクトへの参照を追加します。
+5. クリックして**OK**プロジェクトへの参照を追加します。
 
-     サービス クライアント (プロキシ) を生成、およびサービスを記述したメタデータに追加されます、 *app.config*ファイル。
+    サービス クライアント (プロキシ) を生成、およびサービスを記述したメタデータに追加されます、 *app.config*ファイル。
 
 ## <a name="update-a-service-reference"></a>サービス参照を更新します。
  エンティティ データ モデル、[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]場合があります。 この場合、サービス参照を更新する必要があります。

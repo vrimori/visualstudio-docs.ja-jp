@@ -15,29 +15,29 @@ ms.assetid: 50081d48-987f-43db-8bf9-51b7cf76e9c0
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d4e4a2a5c502058835d59793d2e22107ff3c07d5
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 8b34db3de6d99754f0ea6598a39777622554988e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49241060"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49828079"
 ---
 # <a name="document-windows"></a>ドキュメント ウィンドウ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 Visual Studio で、*ドキュメント ウィンドウ*はマルチ ドキュメント インターフェイス (MDI) ウィンドウに関連付けられている子フレーム ウィンドウです。 ドキュメント ウィンドウは、通常、表示やソース コードまたはテキストの変更を使用しますが、その他の機能の種類をホストすることもできます。 ドキュメント ウィンドウ:  
   
--   同時に複数のファイルを表示できるように、MDI 親内の別の水平または垂直タブ グループに整理できます。  
+- 同時に複数のファイルを表示できるように、MDI 親内の別の水平または垂直タブ グループに整理できます。  
   
--   任意の順序で MDI 親にドッキングできます。  
+- 任意の順序で MDI 親にドッキングできます。  
   
--   自由にフロートすることができます。  
+- 自由にフロートすることができます。  
   
--   その他の MDI ウィンドウのタブ オーダー内でリンクされています。  
+- その他の MDI ウィンドウのタブ オーダー内でリンクされています。  
   
- グループ化のためのコマンドをドッキングとフローティング見つかりますドキュメント ウィンドウ タブのショートカット メニュー上。  
+  グループ化のためのコマンドをドッキングとフローティング見つかりますドキュメント ウィンドウ タブのショートカット メニュー上。  
   
- Visual Studio でウィンドウの動作の詳細については、次を参照してください。[ウィンドウ レイアウトをカスタマイズ](../../ide/customizing-window-layouts-in-visual-studio.md)します。  
+  Visual Studio でウィンドウの動作の詳細については、次を参照してください。[ウィンドウ レイアウトをカスタマイズ](../../ide/customizing-window-layouts-in-visual-studio.md)します。  
   
 ## <a name="document-window-implementation"></a>ドキュメント ウィンドウの実装  
  ドキュメント ウィンドウは、エディターの実装によって作成されます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>インターフェイス エディターをインスタンス化の一部としてドキュメント ウィンドウを作成します。 詳細については、次を参照してください。[エディターでのレガシー インターフェイス](../../extensibility/legacy-interfaces-in-the-editor.md)します。  

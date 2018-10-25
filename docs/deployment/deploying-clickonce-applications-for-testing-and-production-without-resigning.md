@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bb8e84397a5c08a00b704bc571ca1eba3361bfd6
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: abfa170fe0f30cbc4fac941a6d77d0ac8b407f7f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39081398"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846591"
 ---
 # <a name="deploy-clickonce-applications-for-testing-and-production-servers-without-resigning"></a>署名なしの ClickOnce アプリケーションのテストと実稼働サーバーの展開します。
 この記事では、マニフェストをバージョン 3.5 再署名または ClickOnce を変更せずに複数のネットワークの場所からの ClickOnce アプリケーションの展開をできるようにする .NET Framework で導入された ClickOnce の機能について説明します。  
@@ -54,11 +54,11 @@ ms.locfileid: "39081398"
   
  この点を明確にする 2 つの例を示します。 ない ClickOnce アプリケーションを発行する最初の例では、`deploymentProvider`してからインストールして、タグもらいます http://www.adatum.com/MyApplication/ します。 アプリケーションからの次の更新を発行したい場合 http://subdomain.adatum.com/MyApplication/、配置マニフェスト内にあるでこれを表す方法があるない http://www.adatum.com/MyApplication/ します。 次の 2 つのいずれかの操作を行うことができます。  
   
--   以前のバージョンをアンインストールするユーザーに通知し、新しい場所から新しいバージョンをインストールします。  
+- 以前のバージョンをアンインストールするユーザーに通知し、新しい場所から新しいバージョンをインストールします。  
   
--   更新プログラムを含める http://www.adatum.com/MyApplication/ を含む、`deploymentProvider`を指す http://www.adatum.com/MyApplication/ します。 次に、後で別の更新プログラムをリリース`deploymentProvider`を指す http://subdomain.adatum.com/MyApplication/ します。  
+- 更新プログラムを含める http://www.adatum.com/MyApplication/ を含む、`deploymentProvider`を指す http://www.adatum.com/MyApplication/ します。 次に、後で別の更新プログラムをリリース`deploymentProvider`を指す http://subdomain.adatum.com/MyApplication/ します。  
   
- 2 番目の例を指定する ClickOnce アプリケーションを発行する`deploymentProvider`、削除対象とするとします。 なしの新しいバージョンに 1 回`deploymentProvider`ダウンロードをクライアントに更新プログラムを持つアプリケーションのバージョンをリリースするまでに使用されるパスにリダイレクトすることはできません`deploymentProvider`復元します。 最初の例と同じ`deploymentProvider`更新の現在の場所、新しい場所ではなく最初に指す必要があります。 挿入しようとした場合、この場合、`deploymentProvider`を参照する http://subdomain.adatum.com/MyApplication/、次回の更新は失敗します。  
+  2 番目の例を指定する ClickOnce アプリケーションを発行する`deploymentProvider`、削除対象とするとします。 なしの新しいバージョンに 1 回`deploymentProvider`ダウンロードをクライアントに更新プログラムを持つアプリケーションのバージョンをリリースするまでに使用されるパスにリダイレクトすることはできません`deploymentProvider`復元します。 最初の例と同じ`deploymentProvider`更新の現在の場所、新しい場所ではなく最初に指す必要があります。 挿入しようとした場合、この場合、`deploymentProvider`を参照する http://subdomain.adatum.com/MyApplication/、次回の更新は失敗します。  
   
 ## <a name="create-a-deployment"></a>展開を作成します。  
  別のネットワークの場所から展開できる展開の作成のステップ バイ ステップ ガイダンスについては、次を参照してください[チュートリアル: 再署名が要求されるされないのブランド情報を保持するClickOnceアプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md).  

@@ -17,12 +17,12 @@ caps.latest.revision: 30
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 09f2a3b03c09ffd3f215c0fc404f027601c8b549
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6eb4a1822d0be86d19f25bfaa46e296abc7a73a0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49176008"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811751"
 ---
 # <a name="obtaining-build-logs-with-msbuild"></a>MSBuild でのビルド ログの取得
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,15 +36,15 @@ MSBuild でスイッチを使用することで、確認するビルド デー�
 ## <a name="setting-the-level-of-detail"></a>詳細レベルを設定する  
  詳細レベルを指定せずに MSBuild を使用して、プロジェクトをビルドすると、出力ログに次の情報が表示されます。  
   
--   重要度 - 高として分類されたエラー、警告、メッセージ。  
+- 重要度 - 高として分類されたエラー、警告、メッセージ。  
   
--   一部の状態イベント。  
+- 一部の状態イベント。  
   
--   ビルドの概要。  
+- ビルドの概要。  
   
- **/verbosity** (**/v**) スイッチを使用して、出力ログに表示するデータ量を制御できます。 トラブルシューティングを行う場合は、`detailed` (`d`) または `diagnostic` (`diag`) のいずれかの詳細レベルを使用します。後者は情報が最も多くなります。  
+  **/verbosity** (**/v**) スイッチを使用して、出力ログに表示するデータ量を制御できます。 トラブルシューティングを行う場合は、`detailed` (`d`) または `diagnostic` (`diag`) のいずれかの詳細レベルを使用します。後者は情報が最も多くなります。  
   
- **/verbosity** を `detailed` に設定すると、ビルド処理は遅くなることがあります。また、**/verbosity** を `diagnostic` に設定するとさらに遅くなる可能性があります。  
+  **/verbosity** を `detailed` に設定すると、ビルド処理は遅くなることがあります。また、**/verbosity** を `diagnostic` に設定するとさらに遅くなる可能性があります。  
   
 ```  
 msbuild MyProject.proj /t:go /v:diag  

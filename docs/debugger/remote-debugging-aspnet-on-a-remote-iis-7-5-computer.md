@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: d64850910d1a6a25514eb48e46f70168d245e168
-ms.sourcegitcommit: 40b6438b5acd7e59337a382c39ec711b9e99cc8a
+ms.openlocfilehash: 1a13488f632e3cf1f244449b2a7a4dbfd7869428
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49101090"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49826509"
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>リモートの IIS コンピューター上の ASP.NET のリモート デバッグ
 IIS に配置されている ASP.NET アプリケーションをデバッグするには、インストールし、アプリをデプロイしたコンピューターでリモート ツールを実行して Visual Studio から、実行中のアプリにアタッチします。
@@ -30,7 +30,7 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 これらの手順は、これらのサーバー構成でテストされています。
 * Windows Server 2012 R2 と IIS 8 (Windows Server 2008 R2 の server 手順は異なります)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 リモート デバッガーは、Windows Server の Windows Server 2008 Service Pack 2 以降でサポートされます。 要件の完全な一覧を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)します。
 
@@ -47,7 +47,7 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 
 ## <a name="create-the-aspnet-452-application-on-the-visual-studio-computer"></a>ASP.NET 4.5.2 を作成する Visual Studio コンピューターでアプリケーション
   
-1. MVC の ASP.NET アプリケーションを新規作成します。 (**ファイル > 新規 > プロジェクト**を選択し、* * Visual c# > Web > ASP.NET Web アプリケーション。 **[ASP.NET 4.5.2** テンプレート] セクションで、 **[MVC]** を選択します。 確認します**Docker サポートを有効にする**が選択されていないことと**認証**に設定されている**認証なし**します。 プロジェクトに名前を**MyASPApp**)。
+1. MVC の ASP.NET アプリケーションを新規作成します。 (**ファイル > 新規 > プロジェクト**を選択し、 <strong>Visual C# > Web > ASP.NET Web アプリケーション。**ASP.NET 4.5.2 で</strong>テンプレート セクション**MVC**します。 確認します**Docker サポートを有効にする**が選択されていないことと**認証**に設定されている**認証なし**します。 プロジェクトに名前を**MyASPApp**)。
 
 2. HomeController.cs ファイルを開き、 `About()` メソッドにブレークポイントを設定します。
 
