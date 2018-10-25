@@ -12,12 +12,12 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b9a332916d1f680f403992c35a1fb5a47a6be093
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 298e649704731157164db363dfa198ff6f2cdc41
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49231414"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893829"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>ロック ポリシーの定義と読み取り専用セグメントの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -74,11 +74,11 @@ partition.SetLocks(Locks.Delete);
 ## <a name="lock-values"></a>ロックの値  
  ロックは、ストア、パーティション、または個々 のモデル要素を設定できます。 ロックは、`Flags`列挙: を使用してその値を組み合わせることができます '&#124;'。  
   
--   倉庫管理ロックには、常にそのパーティションのロックが含まれています。  
+- 倉庫管理ロックには、常にそのパーティションのロックが含まれています。  
   
--   パーティションのロックには、常に、ストアのロックが含まれています。  
+- パーティションのロックには、常に、ストアのロックが含まれています。  
   
- パーティションにロックを設定または保存し、同時に、個々 の要素のロックを無効にすることはできません。  
+  パーティションにロックを設定または保存し、同時に、個々 の要素のロックを無効にすることはできません。  
   
 |[値]|つまり場合`IsLocked(Value)`が true|  
 |-----------|------------------------------------------|  

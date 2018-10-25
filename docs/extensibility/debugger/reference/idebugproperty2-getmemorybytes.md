@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetMemoryBytes |Microsoft ドキュメント
+title: IDebugProperty2::GetMemoryBytes |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b116937183b1cf558ee7d916bdcd094ead955b55
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1b6b8b82067405e91f4d1d7fac4aeccd5e29ffa0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115620"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948019"
 ---
 # <a name="idebugproperty2getmemorybytes"></a>IDebugProperty2::GetMemoryBytes
 プロパティの値を構成するメモリのバイト数を取得します。  
@@ -41,10 +41,10 @@ int GetMemoryBytes (
   
 #### <a name="parameters"></a>パラメーター  
  `ppMemoryBytes`  
- [out]返します、 [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)プロパティの値を含んでいるメモリを取得するために使用できるオブジェクト。  
+ [out]返します、 [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)プロパティの値を含むメモリを取得するために使用できるオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`; エラー コードを返しますそれ以外の場合。 返します`S_GETMEMORYBYTES_NO_MEMORY_BYTES`取得するバイトのメモリがない場合。  
+ 成功した場合、返します`S_OK`; エラー コードを返します。 返します`S_GETMEMORYBYTES_NO_MEMORY_BYTES`取得するバイトのメモリがない場合。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   

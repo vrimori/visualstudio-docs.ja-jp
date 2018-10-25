@@ -15,12 +15,12 @@ ms.assetid: e9f715dc-12b7-439b-bdf3-f3dc75e62f1c
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 85a30c8987311ea8d6216312533dc70072c96f2c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 2b860e279696b4f8c325995ecd09fe257621adab
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49283674"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941335"
 ---
 # <a name="authoring-vsct-files"></a>作成します。Vsct ファイル
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -86,159 +86,159 @@ ms.locfileid: "49283674"
   
 ##### <a name="to-define-ui-elements"></a>UI 要素を定義するには  
   
-1.  新しいメニューのサブメニュー、ショートカット メニューやツールバーを定義する場合は、追加、`Menus`要素を`Commands`要素。 次に、各メニューを作成するには、追加、[メニュー](../../extensibility/menu-element.md)要素を`Menus`要素。  
+1. 新しいメニューのサブメニュー、ショートカット メニューやツールバーを定義する場合は、追加、`Menus`要素を`Commands`要素。 次に、各メニューを作成するには、追加、[メニュー](../../extensibility/menu-element.md)要素を`Menus`要素。  
   
-     設定、`guid`と`id`の属性、`Menu`要素、および設定して、`type`属性をこの種のメニューを選択します。 設定することも、`priority`属性を親グループで、メニューの相対位置を確立します。  
+    設定、`guid`と`id`の属性、`Menu`要素、および設定して、`type`属性をこの種のメニューを選択します。 設定することも、`priority`属性を親グループで、メニューの相対位置を確立します。  
   
-    > [!NOTE]
-    >  `priority`属性は、ツールバーとコンテキスト メニューには適用されません。  
+   > [!NOTE]
+   >  `priority`属性は、ツールバーとコンテキスト メニューには適用されません。  
   
-2.  Visual Studio IDE のすべてのコマンドは、メニューおよびツールバーの直接の子であるコマンド グループでホストする必要があります。 IDE に新しいメニューまたはツールバーを追加する場合、新しいコマンドのグループが含まれますする必要があります。 コマンドは、視覚的にグループ化できるように、既存のメニューおよびツールバーにコマンドのグループを追加できます。  
+2. Visual Studio IDE のすべてのコマンドは、メニューおよびツールバーの直接の子であるコマンド グループでホストする必要があります。 IDE に新しいメニューまたはツールバーを追加する場合、新しいコマンドのグループが含まれますする必要があります。 コマンドは、視覚的にグループ化できるように、既存のメニューおよびツールバーにコマンドのグループを追加できます。  
   
-     最初に作成する必要がある新しいコマンドのグループを追加すると、`Groups`要素を追加し、[グループ](../../extensibility/group-element.md)コマンド グループごとの要素。  
+    最初に作成する必要がある新しいコマンドのグループを追加すると、`Groups`要素を追加し、[グループ](../../extensibility/group-element.md)コマンド グループごとの要素。  
   
-     設定、`guid`と`id`の各属性`Group`要素、および設定して、`priority`属性を親メニューのグループの相対位置を確立します。 詳細については、次を参照してください。[ボタンの再利用可能なグループの作成](../../extensibility/creating-reusable-groups-of-buttons.md)です。  
+    設定、`guid`と`id`の各属性`Group`要素、および設定して、`priority`属性を親メニューのグループの相対位置を確立します。 詳細については、次を参照してください。[ボタンの再利用可能なグループの作成](../../extensibility/creating-reusable-groups-of-buttons.md)です。  
   
-3.  IDE に新しいコマンドを追加する場合は、追加、`Buttons`要素を`Commands`要素。 次に、各コマンドでは、追加、[ボタン](../../extensibility/button-element.md)要素を`Buttons`要素。  
+3. IDE に新しいコマンドを追加する場合は、追加、`Buttons`要素を`Commands`要素。 次に、各コマンドでは、追加、[ボタン](../../extensibility/button-element.md)要素を`Buttons`要素。  
   
-    1.  設定、`guid`と`id`の各属性`Button`要素、および設定して、`type`ボタンの種類に属性します。 設定することも、`priority`属性を親グループで、コマンドの相対位置を確立します。  
+   1. 設定、`guid`と`id`の各属性`Button`要素、および設定して、`type`ボタンの種類に属性します。 設定することも、`priority`属性を親グループで、コマンドの相対位置を確立します。  
   
-        > [!NOTE]
-        >  使用`type="button"`標準メニュー コマンドとツールバーのボタン。  
+      > [!NOTE]
+      >  使用`type="button"`標準メニュー コマンドとツールバーのボタン。  
   
-    2.  `Button`要素を追加、[文字列](../../extensibility/strings-element.md)要素を含む、 [ButtonText](../../extensibility/buttontext-element.md)要素と[CommandName](../../extensibility/commandname-element.md)要素。 `ButtonText`要素がメニュー項目、またはツール バー ボタンのツールヒントのテキスト ラベルを提供します。 `CommandName`要素も、コマンドで使用するコマンドの名前を提供します。  
+   2. `Button`要素を追加、[文字列](../../extensibility/strings-element.md)要素を含む、 [ButtonText](../../extensibility/buttontext-element.md)要素と[CommandName](../../extensibility/commandname-element.md)要素。 `ButtonText`要素がメニュー項目、またはツール バー ボタンのツールヒントのテキスト ラベルを提供します。 `CommandName`要素も、コマンドで使用するコマンドの名前を提供します。  
   
-    3.  コマンドがアイコンである場合は、作成、[アイコン](../../extensibility/icon-element.md)内の要素、`Button`要素、およびセットの`guid`と`id`属性を`Bitmap`アイコンの要素。  
+   3. コマンドがアイコンである場合は、作成、[アイコン](../../extensibility/icon-element.md)内の要素、`Button`要素、およびセットの`guid`と`id`属性を`Bitmap`アイコンの要素。  
   
-        > [!NOTE]
-        >  ツール バー ボタンのアイコンがあります。  
+      > [!NOTE]
+      >  ツール バー ボタンのアイコンがあります。  
   
-     詳細については、次を参照してください。 [Menucommand とします。OleMenuCommands](../../misc/menucommands-vs-olemenucommands.md)します。  
+      詳細については、次を参照してください。 [Menucommand とします。OleMenuCommands](../../misc/menucommands-vs-olemenucommands.md)します。  
   
-4.  コマンドのいずれかには、アイコンが必要とする場合は、追加、[ビットマップ](../../extensibility/bitmaps-element.md)要素を`Commands`要素。 次に、各アイコンの追加、[ビットマップ](../../extensibility/bitmap-element.md)要素を`Bitmaps`要素。 これは、ビットマップ リソースの場所を指定します。 詳細については、次を参照してください。[メニュー コマンドに追加するアイコン](../../extensibility/adding-icons-to-menu-commands.md)します。  
+4. コマンドのいずれかには、アイコンが必要とする場合は、追加、[ビットマップ](../../extensibility/bitmaps-element.md)要素を`Commands`要素。 次に、各アイコンの追加、[ビットマップ](../../extensibility/bitmap-element.md)要素を`Bitmaps`要素。 これは、ビットマップ リソースの場所を指定します。 詳細については、次を参照してください。[メニュー コマンドに追加するアイコン](../../extensibility/adding-icons-to-menu-commands.md)します。  
   
- ほとんどのメニューのグループ、およびコマンドを正しく配置する親子構造を利用できます。 非常に大量のコマンド セットでは、コマンドの配置を指定することをお勧め メニューのグループ、またはコマンドは、複数の場所に表示する必要があります、または。  
+   ほとんどのメニューのグループ、およびコマンドを正しく配置する親子構造を利用できます。 非常に大量のコマンド セットでは、コマンドの配置を指定することをお勧め メニューのグループ、またはコマンドは、複数の場所に表示する必要があります、または。  
   
 ##### <a name="to-rely-on-parenting-to-place-ui-elements-in-the-ide"></a>IDE の UI 要素を配置する親子関係に依存するには  
   
-1.  一般的な親は、作成、`Parent`の各要素`Menu`、 `Group`、および`Command`パッケージで定義されている要素。  
+1. 一般的な親は、作成、`Parent`の各要素`Menu`、 `Group`、および`Command`パッケージで定義されている要素。  
   
-     対象、`Parent`要素がメニューやメニューを含むグループをグループ、またはコマンド。  
+    対象、`Parent`要素がメニューやメニューを含むグループをグループ、またはコマンド。  
   
-    1.  設定、`guid`属性の名前を`GuidSymbol`コマンド セットを定義する要素。 ターゲット要素でない場合、パッケージの一部は、対応する .vsct ファイルで定義されているそのコマンド セットの guid を使用します。  
+   1.  設定、`guid`属性の名前を`GuidSymbol`コマンド セットを定義する要素。 ターゲット要素でない場合、パッケージの一部は、対応する .vsct ファイルで定義されているそのコマンド セットの guid を使用します。  
   
-    2.  設定、`id`と一致する属性、 `id` [ターゲット] メニューまたはグループの属性です。 メニューおよび Visual Studio によって公開されているグループの一覧については、次を参照してください。 [Guid と Visual Studio メニューの Id の](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)または[Guid と Visual Studio ツールバーの Id の](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)します。  
+   2.  設定、`id`と一致する属性、 `id` [ターゲット] メニューまたはグループの属性です。 メニューおよび Visual Studio によって公開されているグループの一覧については、次を参照してください。 [Guid と Visual Studio メニューの Id の](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)または[Guid と Visual Studio ツールバーの Id の](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)します。  
   
- IDE では、配置する UI 要素の数が多いがある場合、または複数の場所に表示される要素がある場合は、定義への配置、 [CommandPlacements](../../extensibility/commandplacements-element.md)要素は、次の手順で示すようにします。  
+   IDE では、配置する UI 要素の数が多いがある場合、または複数の場所に表示される要素がある場合は、定義への配置、 [CommandPlacements](../../extensibility/commandplacements-element.md)要素は、次の手順で示すようにします。  
   
 ##### <a name="to-use-command-placement-to-place-ui-elements-in-the-ide"></a>コマンド配置を使用して、IDE の UI 要素を配置するには  
   
-1.  後に、`Commands`要素を追加、`CommandPlacements`要素。  
+1. 後に、`Commands`要素を追加、`CommandPlacements`要素。  
   
-2.  `CommandPlacements`要素を追加、`CommandPlacement`要素の各メニューのグループ、または配置するコマンド。  
+2. `CommandPlacements`要素を追加、`CommandPlacement`要素の各メニューのグループ、または配置するコマンド。  
   
-     各`CommandPlacement`要素または`Parent`要素が 1 つのメニューのグループ、またはコマンドを IDE の 1 つの場所に配置します。 UI 要素が持てる親は 1 つだけですが、コマンドの配置を複数持つことができます。 UI 要素を複数の場所に配置するには追加、`CommandPlacement`場所ごとの要素。  
+    各`CommandPlacement`要素または`Parent`要素が 1 つのメニューのグループ、またはコマンドを IDE の 1 つの場所に配置します。 UI 要素が持てる親は 1 つだけですが、コマンドの配置を複数持つことができます。 UI 要素を複数の場所に配置するには追加、`CommandPlacement`場所ごとの要素。  
   
-3.  設定、`guid`と`id`の各属性`CommandPlacement`ホスティングのメニューまたはグループの場合と同様、する要素の場合、`Parent`要素。 設定することも、 `priority` UI 要素の相対位置を確立するために属性。  
+3. 設定、`guid`と`id`の各属性`CommandPlacement`ホスティングのメニューまたはグループの場合と同様、する要素の場合、`Parent`要素。 設定することも、 `priority` UI 要素の相対位置を確立するために属性。  
   
- 親子関係を配置し、コマンドの配置を混在させることができます。 ただし、非常に大量のコマンド セットでは、コマンドの配置のみを使用することを勧めします。  
+   親子関係を配置し、コマンドの配置を混在させることができます。 ただし、非常に大量のコマンド セットでは、コマンドの配置のみを使用することを勧めします。  
   
 ### <a name="adding-specialized-behaviors"></a>特殊な動作を追加します。  
  使用することができます[CommandFlag](../../extensibility/command-flag-element.md)たとえばメニューとコマンドの動作を変更する、外観と可視性を変更する要素。 使用して、コマンドが表示されている場合に影響することができますも[VisibilityConstraints](../../extensibility/visibilityconstraints-element.md)を使用してキーボード ショートカットを追加または[KeyBindings](../../extensibility/keybindings-element.md)します。 メニューとコマンドが既にある種の専門的なビヘイビアーが組み込まれています。  
   
 ##### <a name="to-add-specialized-behaviors"></a>特殊な動作を追加するには  
   
-1.  UI 要素を表示する UI、特定のコンテキストなどでのみソリューションが読み込まれるときに、可視性の制約を使用します。  
+1. UI 要素を表示する UI、特定のコンテキストなどでのみソリューションが読み込まれるときに、可視性の制約を使用します。  
   
-    1.  後に、`Commands`要素を追加、`VisibilityConstraints`要素。  
+   1.  後に、`Commands`要素を追加、`VisibilityConstraints`要素。  
   
-    2.  各 UI には、制約の項目が、追加、 [VisibilityItem](../../extensibility/visibilityitem-element.md)要素。  
+   2.  各 UI には、制約の項目が、追加、 [VisibilityItem](../../extensibility/visibilityitem-element.md)要素。  
   
-    3.  各`VisibilityItem`要素、設定、`guid`と`id`メニューのグループ、またはコマンド、および設定する属性、 `context` UI のコンテキストで定義されている属性、<xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>クラス。 詳細については、次を参照してください。 [VisibilityItem 要素](../../extensibility/visibilityitem-element.md)します。  
+   3.  各`VisibilityItem`要素、設定、`guid`と`id`メニューのグループ、またはコマンド、および設定する属性、 `context` UI のコンテキストで定義されている属性、<xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>クラス。 詳細については、次を参照してください。 [VisibilityItem 要素](../../extensibility/visibilityitem-element.md)します。  
   
-2.  コードで、可視性または UI アイテムの可用性を設定するには、次のコマンド フラグの 1 つ以上を使用します。  
+2. コードで、可視性または UI アイテムの可用性を設定するには、次のコマンド フラグの 1 つ以上を使用します。  
   
-    -   DefaultDisabled  
+   - DefaultDisabled  
   
-    -   DefaultInvisible  
+   - DefaultInvisible  
   
-    -   DynamicItemStart  
+   - DynamicItemStart  
   
-    -   DynamicVisibility  
+   - DynamicVisibility  
   
-    -   NoShowOnMenuController  
+   - NoShowOnMenuController  
   
-    -   NotInTBList  
-  
-     詳細については、次を参照してください。 [Command Flag 要素](../../extensibility/command-flag-element.md)します。  
-  
-3.  要素の表示、またはその外観を動的に変更を変更するには、次のコマンド フラグの 1 つ以上を使用します。  
-  
-    -   通常  
-  
-    -   CommandWellOnly  
-  
-    -   DefaultDocked  
-  
-    -   DontCache  
-  
-    -   DynamicItemStart  
-  
-    -   FixMenuController  
-  
-    -   IconAndText  
-  
-    -   pict  
-  
-    -   StretchHorizontally  
-  
-    -   TextMenuUseButton  
-  
-    -   テキスト  
-  
-    -   TextOnly  
+   - NotInTBList  
   
      詳細については、次を参照してください。 [Command Flag 要素](../../extensibility/command-flag-element.md)します。  
   
-4.  コマンドを受信したときの要素の反応を変更するには、次のコマンド フラグの 1 つ以上を使用します。  
+3. 要素の表示、またはその外観を動的に変更を変更するには、次のコマンド フラグの 1 つ以上を使用します。  
   
-    -   AllowParams  
+   - 通常  
   
-    -   CaseSensitive  
+   - CommandWellOnly  
   
-    -   CommandWellOnly  
+   - DefaultDocked  
   
-    -   フィルター キー機能  
+   - DontCache  
   
-    -   NoAutoComplete  
+   - DynamicItemStart  
   
-    -   NoButtonCustomize  
+   - FixMenuController  
   
-    -   NoKeyCustomize  
+   - IconAndText  
   
-    -   NoToolbarClose  
+   - pict  
   
-    -   PostExec  
+   - StretchHorizontally  
   
-    -   RouteToDocs  
+   - TextMenuUseButton  
   
-    -   TextIsAnchorCommand  
+   - テキスト  
+  
+   - TextOnly  
   
      詳細については、次を参照してください。 [Command Flag 要素](../../extensibility/command-flag-element.md)します。  
   
-5.  メニューまたはメニュー項目をメニューに依存するキーボード ショートカットをアタッチする追加のアンパサンド文字 ('& ') で、`ButtonText`メニューまたはメニュー項目の要素。 アンパサンドの後の文字は、親メニューが開いているときにアクティブなキーボード ショートカットが。  
+4. コマンドを受信したときの要素の反応を変更するには、次のコマンド フラグの 1 つ以上を使用します。  
   
-6.  コマンドにアタッチしてショートカット メニューに依存しないキーを使用して[KeyBindings](../../extensibility/keybindings-element.md)します。 詳細については、次を参照してください。 [KeyBinding 要素](../../extensibility/keybinding-element.md)します。  
+   - AllowParams  
   
-7.  メニュー テキストをローカライズするには、使用、`LocCanonicalName`要素。 詳細については、次を参照してください。[文字列要素](../../extensibility/strings-element.md)します。  
+   - CaseSensitive  
   
- 一部のメニューおよびボタンの種類には、特殊な動作が含まれます。 次の表では、いくつかの特別なメニューとボタンの種類について説明します。 他の種類では、次を参照してください。、`types`属性の説明で[メニュー要素](../../extensibility/menu-element.md)、[ボタン要素](../../extensibility/button-element.md)、および[Combo 要素](../../extensibility/combo-element.md)します。  
+   - CommandWellOnly  
   
- コンボ ボックス  
- コンボ ボックスは、ツールバーの使用できるドロップダウン リストです。 UI には、コンボ ボックスを追加するには、作成、 [Combos](../../extensibility/combos-element.md)内の要素、`Commands`要素。 追加し、`Combos`要素、`Combo`要素を追加するには、各コンボ ボックス。 `Combo` 要素の属性と子としてが同じである`Button`要素も`DefaultWidth`と`idCommandList`属性。 `DefaultWidth`属性 (ピクセル単位) の幅を設定して、`idCommandList`属性は、コンボ ボックスに入力するために使用するコマンド ID をポイントします。 詳細については、次を参照してください。、`Combo`要素のドキュメント。  
+   - フィルター キー機能  
   
- MenuController  
- メニュー コント ローラーは、その横にある矢印の付いたボタンです。 矢印をクリックすると、リストが開きます。 UI には、メニュー コント ローラーを追加するには、作成、`Menu`要素その`type`属性を**MenuController**または**MenuControllerLatched**、目的の動作によって異なります。 親として設定 メニュー コント ローラーを設定する、`Group`要素。 メニュー コント ローラーは、そのグループのすべての子をそのドロップダウン リストに表示されます。  
+   - NoAutoComplete  
+  
+   - NoButtonCustomize  
+  
+   - NoKeyCustomize  
+  
+   - NoToolbarClose  
+  
+   - PostExec  
+  
+   - RouteToDocs  
+  
+   - TextIsAnchorCommand  
+  
+     詳細については、次を参照してください。 [Command Flag 要素](../../extensibility/command-flag-element.md)します。  
+  
+5. メニューまたはメニュー項目をメニューに依存するキーボード ショートカットをアタッチする追加のアンパサンド文字 ('& ') で、`ButtonText`メニューまたはメニュー項目の要素。 アンパサンドの後の文字は、親メニューが開いているときにアクティブなキーボード ショートカットが。  
+  
+6. コマンドにアタッチしてショートカット メニューに依存しないキーを使用して[KeyBindings](../../extensibility/keybindings-element.md)します。 詳細については、次を参照してください。 [KeyBinding 要素](../../extensibility/keybinding-element.md)します。  
+  
+7. メニュー テキストをローカライズするには、使用、`LocCanonicalName`要素。 詳細については、次を参照してください。[文字列要素](../../extensibility/strings-element.md)します。  
+  
+   一部のメニューおよびボタンの種類には、特殊な動作が含まれます。 次の表では、いくつかの特別なメニューとボタンの種類について説明します。 他の種類では、次を参照してください。、`types`属性の説明で[メニュー要素](../../extensibility/menu-element.md)、[ボタン要素](../../extensibility/button-element.md)、および[Combo 要素](../../extensibility/combo-element.md)します。  
+  
+   コンボ ボックス  
+   コンボ ボックスは、ツールバーの使用できるドロップダウン リストです。 UI には、コンボ ボックスを追加するには、作成、 [Combos](../../extensibility/combos-element.md)内の要素、`Commands`要素。 追加し、`Combos`要素、`Combo`要素を追加するには、各コンボ ボックス。 `Combo` 要素の属性と子としてが同じである`Button`要素も`DefaultWidth`と`idCommandList`属性。 `DefaultWidth`属性 (ピクセル単位) の幅を設定して、`idCommandList`属性は、コンボ ボックスに入力するために使用するコマンド ID をポイントします。 詳細については、次を参照してください。、`Combo`要素のドキュメント。  
+  
+   MenuController  
+   メニュー コント ローラーは、その横にある矢印の付いたボタンです。 矢印をクリックすると、リストが開きます。 UI には、メニュー コント ローラーを追加するには、作成、`Menu`要素その`type`属性を**MenuController**または**MenuControllerLatched**、目的の動作によって異なります。 親として設定 メニュー コント ローラーを設定する、`Group`要素。 メニュー コント ローラーは、そのグループのすべての子をそのドロップダウン リストに表示されます。  
   
 ## <a name="see-also"></a>関連項目  
  [拡張メニューとコマンド](../../extensibility/extending-menus-and-commands.md)   

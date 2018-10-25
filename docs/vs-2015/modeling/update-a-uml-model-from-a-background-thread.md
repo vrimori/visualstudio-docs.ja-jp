@@ -12,12 +12,12 @@ caps.latest.revision: 15
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 6ed72cc65535849516de35c861942913ca750fba
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7faef9f085f21db4d4f819746acf52c119189f6d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49216854"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49940997"
 ---
 # <a name="update-a-uml-model-from-a-background-thread"></a>バックグラウンド スレッドから UML モデルを更新する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,35 +35,35 @@ ms.locfileid: "49216854"
   
 #### <a name="to-run-the-example"></a>例を実行するには  
   
-1.  C# プロジェクトでコマンド ハンドラーの作成」の説明に従って[モデリング図にメニュー コマンドを定義](../modeling/define-a-menu-command-on-a-modeling-diagram.md)します。  
+1. C# プロジェクトでコマンド ハンドラーの作成」の説明に従って[モデリング図にメニュー コマンドを定義](../modeling/define-a-menu-command-on-a-modeling-diagram.md)します。  
   
-2.  次のアセンブリへの参照がプロジェクトに含まれていることを確認します。  
+2. 次のアセンブリへの参照がプロジェクトに含まれていることを確認します。  
   
-    -   Microsoft.VisualStudio.ArchitectureTools.Extensibility  
+   -   Microsoft.VisualStudio.ArchitectureTools.Extensibility  
   
-    -   Microsoft.VisualStudio.Modeling.Sdk.[バージョン]  
+   -   Microsoft.VisualStudio.Modeling.Sdk.[バージョン]  
   
-    -   Microsoft.VisualStudio.Modeling.Sdk.Diagrams.[バージョン]  
+   -   Microsoft.VisualStudio.Modeling.Sdk.Diagrams.[バージョン]  
   
-    -   Microsoft.VisualStudio.Uml.Interfaces  
+   -   Microsoft.VisualStudio.Uml.Interfaces  
   
-    -   System.ComponentModel.Composition  
+   -   System.ComponentModel.Composition  
   
-    -   System.Windows.Forms  
+   -   System.Windows.Forms  
   
-3.  という名前の Windows フォームをプロジェクトに追加**ProgressForm**します。 このフォームには、更新が実行中であることを示すメッセージが表示されます。 他のコントロールを追加する必要はありません。  
+3. という名前の Windows フォームをプロジェクトに追加**ProgressForm**します。 このフォームには、更新が実行中であることを示すメッセージが表示されます。 他のコントロールを追加する必要はありません。  
   
-4.  手順 7. の後に記載されているコードを格納している C# ファイルを追加します。  
+4. 手順 7. の後に記載されているコードを格納している C# ファイルを追加します。  
   
-5.  プロジェクトをビルドして実行します。  
+5. プロジェクトをビルドして実行します。  
   
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の新しいインスタンスが実験モードで起動されます。  
+    [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の新しいインスタンスが実験モードで起動されます。  
   
-6.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の実験用のインスタンスで UML クラス図を作成するか、または開きます。  
+6. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の実験用のインスタンスで UML クラス図を作成するか、または開きます。  
   
-7.  UML クラス図内を右クリックし、**いくつかの UML クラスの追加**します。  
+7. UML クラス図内を右クリックし、**いくつかの UML クラスの追加**します。  
   
- 複数の新しいクラス ボックスが 0.5 秒間隔で図に順次表示されます。  
+   複数の新しいクラス ボックスが 0.5 秒間隔で図に順次表示されます。  
   
 ```csharp  
 using System;  

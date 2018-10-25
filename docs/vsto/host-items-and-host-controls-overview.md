@@ -39,12 +39,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 96cd626e283e9cf86b1a24a63a1939e717cab7b4
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 48ce311a767d68ce1402961d2ddf4cf8b673637c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671981"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937500"
 ---
 # <a name="host-items-and-host-controls-overview"></a>ホスト項目とホスト コントロールの概要
   ホスト項目とホスト コントロールは、Visual Studio の Office 開発ツールを使用して作成される Office ソリューションのプログラミング モデルを提供する助けとなる型です。 ホスト項目とホスト コントロールは、Microsoft Office Word および Microsoft Office Excel の COM ベースのオブジェクト モデルとの対話を、Windows フォーム コントロールなどのマネージド オブジェクトとの対話と似たものにします。  
@@ -54,21 +54,21 @@ ms.locfileid: "35671981"
 ## <a name="host-items"></a>ホスト項目  
  ホスト項目は、Office プロジェクトでオブジェクト モデルの階層構造の最上位にある型です。 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は、Word ソリューションおよび Excel ソリューションに対して次のホスト項目を定義します:  
   
--   <xref:Microsoft.Office.Tools.Word.Document>  
+- <xref:Microsoft.Office.Tools.Word.Document>  
   
--   <xref:Microsoft.Office.Tools.Excel.Workbook>  
+- <xref:Microsoft.Office.Tools.Excel.Workbook>  
   
--   <xref:Microsoft.Office.Tools.Excel.Worksheet>  
+- <xref:Microsoft.Office.Tools.Excel.Worksheet>  
   
--   <xref:Microsoft.Office.Tools.Excel.ChartSheet>  
+- <xref:Microsoft.Office.Tools.Excel.ChartSheet>  
   
- これらの型はそれぞれが、Word または Excel のオブジェクト モデルにネイティブに存在する *ネイティブ Office オブジェクト*と呼ばれるオブジェクトを拡張します。 たとえば、 <xref:Microsoft.Office.Tools.Word.Document> ホスト項目は、Word のプライマリ相互運用機能アセンブリに定義されている <xref:Microsoft.Office.Interop.Word.Document> オブジェクトを拡張します。  
+  これらの型はそれぞれが、Word または Excel のオブジェクト モデルにネイティブに存在する *ネイティブ Office オブジェクト*と呼ばれるオブジェクトを拡張します。 たとえば、 <xref:Microsoft.Office.Tools.Word.Document> ホスト項目は、Word のプライマリ相互運用機能アセンブリに定義されている <xref:Microsoft.Office.Interop.Word.Document> オブジェクトを拡張します。  
   
- ホスト項目は、一般に、対応する Office オブジェクトと同じ基本機能を備えていますが、さらに次の機能を備えています：  
+  ホスト項目は、一般に、対応する Office オブジェクトと同じ基本機能を備えていますが、さらに次の機能を備えています：  
   
--   ホスト コントロールや Windows フォーム コントロールなどのマネージド コントロールをホストする機能。  
+- ホスト コントロールや Windows フォーム コントロールなどのマネージド コントロールをホストする機能。  
   
--   豊富なイベント モデル。 ネイティブの Word または Excel オブジェクト モデルの一部の文書、ブック、ワークシート イベントはアプリケーション レベルでのみ発生します。 ホスト項目は文書レベルでこれらのイベントを提供します。そのため、特定の文書のイベントを簡単に処理できます。  
+- 豊富なイベント モデル。 ネイティブの Word または Excel オブジェクト モデルの一部の文書、ブック、ワークシート イベントはアプリケーション レベルでのみ発生します。 ホスト項目は文書レベルでこれらのイベントを提供します。そのため、特定の文書のイベントを簡単に処理できます。  
   
 ### <a name="understand-host-items-in-document-level-projects"></a>ドキュメント レベルのプロジェクトでのホスト項目を理解します。  
  ドキュメント レベルのプロジェクトでは、ホスト項目はコードのエントリ ポイントを提供し、ソリューションの開発に役立つデザイナーを備えています。  
@@ -85,35 +85,35 @@ ms.locfileid: "35671981"
  ホスト項目を生成すると、文書にコントロールを追加するなどのタスクを実行できます。 詳細については、次を参照してください。[拡張 Word 文書や Excel ブックを実行時に VSTO アドインで](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)します。  
   
 ## <a name="host-controls"></a>ホスト コントロール  
- ホスト コントロールなど、Word および Excel オブジェクト モデルのさまざまなユーザー インターフェイス (UI) オブジェクトは拡張`Microsoft.Office.Interop.Word.ContentControl`と<xref:Microsoft.Office.Interop.Excel.Range>オブジェクト。  
+ ホスト コントロールは、Word や Excel のオブジェクト モデルで、`Microsoft.Office.Interop.Word.ContentControl` や <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトなどのさまざまなユーザー インターフェイス (UI) オブジェクトを拡張します。  
   
  Excel プロジェクトで使用できるホスト コントロールを次に示します:  
   
--   [グラフ コントロール](../vsto/chart-control.md)  
+- [グラフ コントロール](../vsto/chart-control.md)  
   
--   [ListObject コントロール](../vsto/listobject-control.md)  
+- [ListObject コントロール](../vsto/listobject-control.md)  
   
--   [NamedRange コントロール](../vsto/namedrange-control.md)  
+- [NamedRange コントロール](../vsto/namedrange-control.md)  
   
--   [XmlMappedRange コントロール](../vsto/xmlmappedrange-control.md)  
+- [XmlMappedRange コントロール](../vsto/xmlmappedrange-control.md)  
   
- Word プロジェクトで使用できるホスト コントロールを次に示します:  
+  Word プロジェクトで使用できるホスト コントロールを次に示します:  
   
--   [Bookmark コントロール](../vsto/bookmark-control.md)  
+- [Bookmark コントロール](../vsto/bookmark-control.md)  
   
--   [コンテンツ コントロール](../vsto/content-controls.md)  
+- [コンテンツ コントロール](../vsto/content-controls.md)  
   
--   [XMLNode コントロール](../vsto/xmlnode-control.md)  
+- [XMLNode コントロール](../vsto/xmlnode-control.md)  
   
--   [XMLNodes コントロール](../vsto/xmlnodes-control.md)  
+- [XMLNodes コントロール](../vsto/xmlnodes-control.md)  
   
- Office ドキュメントに追加されたホスト コントロールは、ネイティブな Office オブジェクトのように動作しますが、ホスト コントロールには、イベントやデータ バインディング機能を含む追加の機能があります。 たとえば、Excel 内のネイティブな <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトのイベントをキャプチャするには、最初にワークシートの変更イベントを処理する必要があります。 次に、変更が <xref:Microsoft.Office.Interop.Excel.Range>内で発生したかどうかを判断する必要があります。 一方、 <xref:Microsoft.Office.Tools.Excel.NamedRange> ホスト コントロールには、直接処理できる <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> イベントがあります。  
+  Office ドキュメントに追加されたホスト コントロールは、ネイティブな Office オブジェクトのように動作しますが、ホスト コントロールには、イベントやデータ バインディング機能を含む追加の機能があります。 たとえば、Excel 内のネイティブな <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトのイベントをキャプチャするには、最初にワークシートの変更イベントを処理する必要があります。 次に、変更が <xref:Microsoft.Office.Interop.Excel.Range>内で発生したかどうかを判断する必要があります。 一方、 <xref:Microsoft.Office.Tools.Excel.NamedRange> ホスト コントロールには、直接処理できる <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> イベントがあります。  
   
- ホスト項目とホスト コントロール間のリレーションシップは、Windows フォームおよび Windows フォーム コントロールの間のリレーションシップに似ています。 Windows フォームにテキスト ボックス コントロールを配置するのと同じように、 <xref:Microsoft.Office.Tools.Excel.NamedRange> ホスト項目に <xref:Microsoft.Office.Tools.Excel.Worksheet> コントロールを配置します。 次の図は、ホスト項目とホスト コントロールの関係を示しています。  
+  ホスト項目とホスト コントロール間のリレーションシップは、Windows フォームおよび Windows フォーム コントロールの間のリレーションシップに似ています。 Windows フォームにテキスト ボックス コントロールを配置するのと同じように、 <xref:Microsoft.Office.Tools.Excel.NamedRange> ホスト項目に <xref:Microsoft.Office.Tools.Excel.Worksheet> コントロールを配置します。 次の図は、ホスト項目とホスト コントロールの関係を示しています。  
   
- ![ホスト項目とホスト コントロールの間のリレーションシップ](../vsto/media/hostitemscontrols.png "ホスト項目とホスト コントロールの間のリレーションシップ")  
+  ![ホスト項目とホスト コントロールの間のリレーションシップ](../vsto/media/hostitemscontrols.png "ホスト項目とホスト コントロールの間のリレーションシップ")  
   
- また、Windows フォーム コントロールを Word および Excel の文書領域に直接追加することによって、Office ソリューションで Windows フォーム コントロールを使用できます。 詳細については、次を参照してください。 [Windows フォーム コントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)します。  
+  また、Windows フォーム コントロールを Word および Excel の文書領域に直接追加することによって、Office ソリューションで Windows フォーム コントロールを使用できます。 詳細については、次を参照してください。 [Windows フォーム コントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)します。  
   
 > [!NOTE]  
 >  Word サブ文書へのホスト コントロールおよび Windows フォーム コントロールの追加はサポートされていません。  
@@ -121,31 +121,31 @@ ms.locfileid: "35671981"
 ### <a name="add-host-controls-to-your-documents"></a>ホスト コントロールをドキュメントに追加します。  
  ドキュメント レベルのプロジェクトでは、次の方法を使用して、デザイン時に Word 文書や Excel ワークシートにホスト コントロールを追加できます。  
   
--   ホスト コントロールを、デザイン時に、ネイティブ オブジェクトを追加する場合と同じ方法でドキュメントに追加します。  
+- ホスト コントロールを、デザイン時に、ネイティブ オブジェクトを追加する場合と同じ方法でドキュメントに追加します。  
   
--   **ツールボックス** からホスト コントロールを文書やワークシートにドラッグします。 Excel のホスト コントロールは Excel プロジェクトの **[Excel コントロール]** タブにあり、Word のホスト コントロールは、Word プロジェクトの **[Word コントロール]** タブにあります。  
+- **ツールボックス** からホスト コントロールを文書やワークシートにドラッグします。 Excel のホスト コントロールは Excel プロジェクトの **[Excel コントロール]** タブにあり、Word のホスト コントロールは、Word プロジェクトの **[Word コントロール]** タブにあります。  
   
--   **[データ ソース]** ウィンドウから文書やワークシートに、ホスト コントロールをドラッグします。 これによって、既にデータにバインドされているコントロールを追加できます。 詳細については、次を参照してください。 [Office ソリューションでのコントロールにデータをバインド](../vsto/binding-data-to-controls-in-office-solutions.md)します。  
+- **[データ ソース]** ウィンドウから文書やワークシートに、ホスト コントロールをドラッグします。 これによって、既にデータにバインドされているコントロールを追加できます。 詳細については、次を参照してください。 [Office ソリューションでのコントロールにデータをバインド](../vsto/binding-data-to-controls-in-office-solutions.md)します。  
   
- ドキュメント レベルと VSTO アドイン プロジェクトでは、実行時にドキュメントをいくつかのホスト コントロールを追加することもできます。 詳細については、次を参照してください。[実行時に Office ドキュメントにコントロールを追加](../vsto/adding-controls-to-office-documents-at-run-time.md)します。  
+  ドキュメント レベルと VSTO アドイン プロジェクトでは、実行時にドキュメントをいくつかのホスト コントロールを追加することもできます。 詳細については、次を参照してください。[実行時に Office ドキュメントにコントロールを追加](../vsto/adding-controls-to-office-documents-at-run-time.md)します。  
   
- ホスト コントロールをドキュメントに追加する方法の詳細については、以下のトピックを参照してください:  
+  ホスト コントロールをドキュメントに追加する方法の詳細については、以下のトピックを参照してください:  
   
--   [方法: ワークシートに Chart コントロールを追加](../vsto/how-to-add-chart-controls-to-worksheets.md)  
+- [方法: ワークシートに Chart コントロールを追加](../vsto/how-to-add-chart-controls-to-worksheets.md)  
   
--   [方法: ワークシートに ListObject コントロールを追加](../vsto/how-to-add-listobject-controls-to-worksheets.md)  
+- [方法: ワークシートに ListObject コントロールを追加](../vsto/how-to-add-listobject-controls-to-worksheets.md)  
   
--   [方法: ワークシートに NamedRange コントロールを追加](../vsto/how-to-add-namedrange-controls-to-worksheets.md)  
+- [方法: ワークシートに NamedRange コントロールを追加](../vsto/how-to-add-namedrange-controls-to-worksheets.md)  
   
--   [方法: ワークシートに XMLMappedRange コントロールを追加](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)  
+- [方法: ワークシートに XMLMappedRange コントロールを追加](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)  
   
--   [方法: Word 文書に Bookmark コントロールを追加](../vsto/how-to-add-bookmark-controls-to-word-documents.md)  
+- [方法: Word 文書に Bookmark コントロールを追加](../vsto/how-to-add-bookmark-controls-to-word-documents.md)  
   
--   [方法: コンテンツの追加を Word 文書にコントロール](../vsto/how-to-add-content-controls-to-word-documents.md)  
+- [方法: コンテンツの追加を Word 文書にコントロール](../vsto/how-to-add-content-controls-to-word-documents.md)  
   
--   [方法: Word 文書に XMLNode コントロールを追加](../vsto/how-to-add-xmlnode-controls-to-word-documents.md)  
+- [方法: Word 文書に XMLNode コントロールを追加](../vsto/how-to-add-xmlnode-controls-to-word-documents.md)  
   
--   [方法: Word 文書に XMLNodes コントロールを追加](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)  
+- [方法: Word 文書に XMLNodes コントロールを追加](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)  
   
 ### <a name="name-host-controls"></a>ホスト コントロールの名前  
  **ツールボックス** から文書にホスト コントロールをドラッグすると、コントロールには自動的にコントロールの型と末尾の増分番号で構成される名前が付けられます。 たとえば、ブックマークには **bookmark1**や **bookmark2**などの名前が付けられます。 Word または Excel のネイティブ機能を使用してコントロールを追加する場合は、コントロールの作成時に特定の名前を指定できます。 **[プロパティ]** ウィンドウで、 **[名前]** プロパティの値を変更してコントロールの名前を変更することもできます。  

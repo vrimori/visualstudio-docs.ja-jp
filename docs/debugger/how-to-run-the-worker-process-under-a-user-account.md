@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 05c0fb64c5be7912f9453d3f9f25fd86a6fbfc1e
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 8e0caba3cce487f8a706aee7e0944a75255d1df6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37057188"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939115"
 ---
 # <a name="how-to-run-the-worker-process-under-a-user-account"></a>方法 : ユーザー アカウントでワーカー プロセスを実行する
 ユーザー アカウントを使用して [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセス (aspnet_wp.exe または w3wp.exe) を実行できるようにコンピューターを設定するには、次の手順を実行します。  
@@ -38,41 +38,41 @@ ms.locfileid: "37057188"
   
 #### <a name="to-run-aspnetwpexe-under-a-user-account"></a>ユーザー アカウントで aspnet_wp.exe を実行するには  
   
-1.  コンピューターでランタイムをインストールしたパスの CONFIG フォルダーにある machine.config ファイルを開きます。  
+1. コンピューターでランタイムをインストールしたパスの CONFIG フォルダーにある machine.config ファイルを開きます。  
   
-2.  検索、 &lt;processModel&gt;セクションし、ユーザー名とパスワードの属性を aspnet_wp.exe を実行するユーザー アカウントのパスワードと名前に変更します。  
+2. 検索、 &lt;processModel&gt;セクションし、ユーザー名とパスワードの属性を aspnet_wp.exe を実行するユーザー アカウントのパスワードと名前に変更します。  
   
-3.  machine.config ファイルを保存します。  
+3. machine.config ファイルを保存します。  
   
-4.  [!INCLUDE[winxpsvr](../debugger/includes/winxpsvr_md.md)] では、既定で、IIS 6.0 がインストールされます。 対応するワーカー プロセスは w3wp.exe です。aspnet_wp.exe をワーカー プロセスとして IIS 6.0 モードで実行するには、次の手順を実行します。  
+4. [!INCLUDE[winxpsvr](../debugger/includes/winxpsvr_md.md)] では、既定で、IIS 6.0 がインストールされます。 対応するワーカー プロセスは w3wp.exe です。aspnet_wp.exe をワーカー プロセスとして IIS 6.0 モードで実行するには、次の手順を実行します。  
   
-    1.  クリックして**開始**、 をクリックして**管理ツール**選び、**インターネット インフォメーション サービス**します。  
+   1.  クリックして**開始**、 をクリックして**管理ツール**選び、**インターネット インフォメーション サービス**します。  
   
-    2.  **インターネット インフォメーション サービス**ダイアログ ボックスを右クリックし、 **Websites**フォルダー選択**プロパティ**します。  
+   2.  **インターネット インフォメーション サービス**ダイアログ ボックスを右クリックし、 **Websites**フォルダー選択**プロパティ**します。  
   
-    3.  **Web サイトのプロパティ** ダイアログ ボックスで、選択**サービス**します。  
+   3.  **Web サイトのプロパティ** ダイアログ ボックスで、選択**サービス**します。  
   
-    4.  選択**実行 WWW サービスを使用して IIS6.0 分離モードで**します。  
+   4.  選択**実行 WWW サービスを使用して IIS6.0 分離モードで**します。  
   
-    5.  閉じる、**プロパティ** ダイアログ ボックスと**インターネット サービス マネージャー**します。  
+   5.  閉じる、**プロパティ** ダイアログ ボックスと**インターネット サービス マネージャー**します。  
   
-5.  Windows のコマンド プロンプトを開き、次を実行してサーバーをリセットします。  
+5. Windows のコマンド プロンプトを開き、次を実行してサーバーをリセットします。  
   
-    ```cmd
-    iisreset  
-    ```  
-    または  
+   ```cmd
+   iisreset  
+   ```  
+   または  
   
-    ```cmd
-    net stop iisadmin /y  
-    net start w3svc  
-    ```  
+   ```cmd
+   net stop iisadmin /y  
+   net start w3svc  
+   ```  
   
-6.  [Temporary [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Files] フォルダーを探します。このフォルダーは、[CONFIG] フォルダーと同じパスにあります。 一時的なを右クリックして[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]ファイルのフォルダーと選択**プロパティ**ショートカット メニューの します。  
+6. [Temporary [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Files] フォルダーを探します。このフォルダーは、[CONFIG] フォルダーと同じパスにあります。 一時的なを右クリックして[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]ファイルのフォルダーと選択**プロパティ**ショートカット メニューの します。  
   
-7.  **Temporary ASP.NET Files のプロパティ**ダイアログ ボックスで、をクリックして、**セキュリティ**タブ。  
+7. **Temporary ASP.NET Files のプロパティ**ダイアログ ボックスで、をクリックして、**セキュリティ**タブ。  
   
-8.  **[詳細設定]** をクリックします。  
+8. **[詳細設定]** をクリックします。  
   
 9. **Temporary ASP.Net Files のセキュリティの詳細設定**ダイアログ ボックスで、をクリックして**追加**します。  
   
