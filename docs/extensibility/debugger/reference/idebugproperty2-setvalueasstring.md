@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::SetValueAsString |Microsoft ドキュメント
+title: IDebugProperty2::SetValueAsString |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5fb55fb6f9a90cf39120be408428524f64463d3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d8f165ade12f6a4d8661ca4b0070efb1452ec09a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31116953"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903037"
 ---
 # <a name="idebugproperty2setvalueasstring"></a>IDebugProperty2::SetValueAsString
-指定した文字列からのプロパティの値を設定します。  
+指定した文字列からプロパティの値を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,13 +48,13 @@ int SetValueAsString (
  [in]設定する値を含む文字列。  
   
  `nRadix`  
- [in]任意の数値情報を解釈するときに使用する基数。 基数を自動的に決定するしようとする場合は 0 を指定できます。  
+ [in]任意の数値情報を解釈するときに使用する基数。 これは、自動的に基数を判断しようとする場合は 0 です。  
   
  `dwTimeout`  
- [in]このメソッドから戻る前に待機するミリ秒単位で最大の時間を指定します。 使用して`INFINITE`無制限に待機します。  
+ [in]このメソッドから戻る前に待機するミリ秒単位で最大の時間を指定します。 使用`INFINITE`を無期限に待機します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`; エラー コードを返しますそれ以外の場合。 次の表は、他の値を示します。  
+ 成功した場合、返します`S_OK`; エラー コードを返します。 次の表では、使用可能なその他の値を示します。  
   
 |[値]|説明|  
 |-----------|-----------------|  

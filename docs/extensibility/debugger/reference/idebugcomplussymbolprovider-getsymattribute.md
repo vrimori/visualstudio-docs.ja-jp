@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetSymAttribute |Microsoft ドキュメント
+title: IDebugComPlusSymbolProvider::GetSymAttribute |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 283333c8d505952e36dc8524d1377fd828142aca
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ae9bafa3aa97146abd63cd6f98516632d079bfd3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31104996"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903245"
 ---
 # <a name="idebugcomplussymbolprovidergetsymattribute"></a>IDebugComPlusSymbolProvider::GetSymAttribute
-指定したモジュールの指定した親属性でのデバッグ シンボルを取得します。  
+指定したモジュールの指定した親属性で、デバッグ シンボルを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -61,22 +61,22 @@ int GetSymAttribute (
  [in]親属性のトークンです。  
   
  `pstrName`  
- [in]モジュールの名前です。  
+ [in]モジュールの名前。  
   
  `cBuffer`  
- [in]出力に必要なバイト数`buffer`です。  
+ [in]出力に必要なバイト数`buffer`します。  
   
  `pcBuffer`  
- [out]出力の長さ`buffer`です。  
+ [out]出力の長さ`buffer`します。  
   
  `buffer`  
  [out]シンボルを含む配列。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="example"></a>例  
- 次の例に対して、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスです。  
+ 次の例では、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイス。  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::GetSymAttribute(  

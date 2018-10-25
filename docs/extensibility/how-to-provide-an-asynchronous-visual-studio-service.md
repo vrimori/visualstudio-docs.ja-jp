@@ -9,12 +9,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6139187ec619ac1825cc56f801035bc4f719854b
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: c022f1a039aacee3599dd680adfa92a9404b34b8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39639261"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915673"
 ---
 # <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>方法: 非同期の Visual Studio サービスを提供
 UI スレッドをブロックすることがなくサービスを取得する場合は、非同期のサービスを作成し、バック グラウンド スレッドでパッケージを読み込みます。 この目的に使用することができます、<xref:Microsoft.VisualStudio.Shell.AsyncPackage>なく<xref:Microsoft.VisualStudio.Shell.Package>、非同期のパッケージの特殊な非同期メソッドを持つサービスを追加します。
@@ -104,11 +104,11 @@ UI スレッドをブロックすることがなくサービスを取得する�
 ## <a name="register-a-service"></a>サービスを登録します。  
  サービスを登録するには、追加、<xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute>サービスを提供するパッケージにします。 同期サービスを登録するのには異なる場合があるパッケージとサービスの両方が非同期の読み込みをサポートしているかどうかを確認します。
   
--   追加する必要があります、 **AllowsBackgroundLoading = true**フィールドを<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>、PackageRegistrationAttribute の詳細についてはパッケージを非同期的に初期化できることを確認するを参照してください[を登録し、。Vspackage の登録解除](../extensibility/registering-and-unregistering-vspackages.md)します。  
+- 追加する必要があります、 **AllowsBackgroundLoading = true**フィールドを<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>、PackageRegistrationAttribute の詳細についてはパッケージを非同期的に初期化できることを確認するを参照してください[を登録し、。Vspackage の登録解除](../extensibility/registering-and-unregistering-vspackages.md)します。  
   
--   追加する必要があります、 **IsAsyncQueryable = true**フィールドを<xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute>サービス インスタンスを非同期的に初期化できることを確認します。
+- 追加する必要があります、 **IsAsyncQueryable = true**フィールドを<xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute>サービス インスタンスを非同期的に初期化できることを確認します。
 
- 次の例に示します、`AsyncPackage`非同期のサービスの登録で。
+  次の例に示します、`AsyncPackage`非同期のサービスの登録で。
   
 ```csharp  
 [ProvideService((typeof(STextWriterService)), IsAsyncQueryable = true)]  

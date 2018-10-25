@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 028c88e1c2cd88736cf98a1f513654692ee50daf
-ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
+ms.openlocfilehash: 5f184fc08679100562a53c1f3f27d797a4cdff37
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863843"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49918026"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Visual Studio の色とスタイル
 
@@ -425,7 +425,7 @@ VSPackage を表示するテキストの色づけを正しくサポートする�
 
 - **IDE で生成されたイベントを処理する**実装することによって、 [IVsFontAndColorEvents](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents)インターフェイス。 IDE では、次のユーザーの変更、フォントおよび色 ページの適切なメソッドを呼び出します。 たとえば、呼び出す、 [OnFontChanged](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.onfontchanged)メソッドが新しいフォントが選択されている場合。
 
- **OR**
+  **OR**
 
 - **IDE の変更をポーリング**します。 これは、システムによって実装されるを通して実行[IVsFontAndColorStorage](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage)インターフェイス。 主に、永続化のサポートには、 [GetItem](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem)メソッドは、表示項目のフォントと色の情報を取得できます。 フォントおよび色の設定の詳細については、MSDN の記事を参照してください。[にアクセスする格納されているフォントと色の設定](../accessing-stored-font-and-color-settings.md)します。
 

@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_columnnumberend |Microsoft ドキュメント
+title: Idialinenumber::get_columnnumberend |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d3d7dd317cf24f2580d72fdc05ccbb8f60668fd1
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b39cd627ab41d44ac65acbe13516fc3e5597b8a7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31460161"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875646"
 ---
 # <a name="idialinenumbergetcolumnnumberend"></a>IDiaLineNumber::get_columnNumberEnd
-式またはステートメントが終了するソースの 1 から始まる列数を取得します。  
+式またはステートメントの終了位置となる 1 ベースのソース列番号を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,13 +34,13 @@ HRESULT get_columnNumberEnd (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]式またはステートメントの終了列番号を返します。 値がゼロの場合、最後の列情報がありません。  
+ [out]式またはステートメントの終了列番号を返します。 値が 0 の場合は、最後の列情報が存在しません。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドによって返される列の値は、バイトの行のステートメントの最後の文字後位置に行へのオフセットです。  
+## <a name="remarks"></a>Remarks  
+ このメソッドによって返される列の値は、バイトの行にステートメントの最後の文字の後の位置に行のオフセットです。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

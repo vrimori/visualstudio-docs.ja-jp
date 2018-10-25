@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d1540e66893aeb99c4932c4667fa384b837e15a7
-ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
+ms.openlocfilehash: cb5e20697e5dc5364fbcbac7a1d3052790a123a2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37433316"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872656"
 ---
 # <a name="0x2x4x-msaa-variants"></a>0x/2x/4x MSAA バリアント
 すべてのレンダー ターゲットおよびスワップ チェーン上で multi-sample anti-aliasing (MSAA) の設定をオーバーライドします。  
@@ -33,23 +33,23 @@ ms.locfileid: "37433316"
 ## <a name="remarks"></a>Remarks  
  これらのバリアントは、レンダー ターゲットを作成する `ID3DDevice::CreateTexture2D` への呼び出しが行われるときに sample count および sample-quality 引数をオーバーライドします。 具体的には、以下の場合にこれらのパラメーターがオーバーライドされます。  
   
--   `D3D11_TEXTURE2D_DESC` で渡される`pDesc` オブジェクトがレンダー ターゲットを記述する場合。つまり  
+- `D3D11_TEXTURE2D_DESC` で渡される`pDesc` オブジェクトがレンダー ターゲットを記述する場合。つまり  
   
-    -   BindFlags メンバーは、D3D11_BIND_TARGET フラグまたは D3D11_BIND_DEPTH_STENCIL フラグのいずれかを設定します。  
+  -   BindFlags メンバーは、D3D11_BIND_TARGET フラグまたは D3D11_BIND_DEPTH_STENCIL フラグのいずれかを設定します。  
   
-    -   Usage メンバーは D3D11_USAGE_DEFAULT に設定されます。  
+  -   Usage メンバーは D3D11_USAGE_DEFAULT に設定されます。  
   
-    -   CPUAccessFlags メンバーは 0 に設定されます。  
+  -   CPUAccessFlags メンバーは 0 に設定されます。  
   
-    -   MipLevels メンバーは 1 に設定されます。  
+  -   MipLevels メンバーは 1 に設定されます。  
   
--   デバイスは、要求されたレンダー ターゲット形式 (D3D11_TEXTURE2D_DESC::Format member) に対して、要求された sample count (0、2、または 4) および sample quality (0) を、`ID3D11Device::CheckMultisampleQualityLevels` で定義されているとおりにサポートします。  
+- デバイスは、要求されたレンダー ターゲット形式 (D3D11_TEXTURE2D_DESC::Format member) に対して、要求された sample count (0、2、または 4) および sample quality (0) を、`ID3D11Device::CheckMultisampleQualityLevels` で定義されているとおりにサポートします。  
   
- D3D11_TEXTURE2D_DESC::BindFlags メンバーが D3D_BIND_SHADER_RESOUCE または D3D11_BIND_UNORDERED_ACCESS フラグを設定した場合、2 つのバージョンのテクスチャが作成されます。最初のバージョンは、レンダー ターゲットとして使用するためにフラグがクリアされています。もうひとつのバージョンは非 MSAA テクスチャであり、最初のバージョンのリゾルブ バッファーとして機能するよう、フラグがそのまま保持されています。 MSAA テクスチャをシェーダー リソースとして使用すること、または非順序アクセスに対して使用することは妥当ではない (たとえば、MSAA テクスチャで機能するシェーダーは、非 MSAA テクスチャを予期しているため間違った結果が生成される) と思われるため、このしくみは必要です。 バリアントがセカンダリ非 MSAA テクスチャを作成すると、MSAA レンダー ターゲットがデバイス コンテキストから設定解除されるたびに、コンテキストが非 MSAA テクスチャに解決されます。 同様に、MSAA レンダー ターゲットをシェーダー リソースとしてバインドしなければならない場合、または非順序アクセス ビューで使用する場合は、解決された非 MSAA テクスチャが代わりにバインドされます。  
+  D3D11_TEXTURE2D_DESC::BindFlags メンバーが D3D_BIND_SHADER_RESOUCE または D3D11_BIND_UNORDERED_ACCESS フラグを設定した場合、2 つのバージョンのテクスチャが作成されます。最初のバージョンは、レンダー ターゲットとして使用するためにフラグがクリアされています。もうひとつのバージョンは非 MSAA テクスチャであり、最初のバージョンのリゾルブ バッファーとして機能するよう、フラグがそのまま保持されています。 MSAA テクスチャをシェーダー リソースとして使用すること、または非順序アクセスに対して使用することは妥当ではない (たとえば、MSAA テクスチャで機能するシェーダーは、非 MSAA テクスチャを予期しているため間違った結果が生成される) と思われるため、このしくみは必要です。 バリアントがセカンダリ非 MSAA テクスチャを作成すると、MSAA レンダー ターゲットがデバイス コンテキストから設定解除されるたびに、コンテキストが非 MSAA テクスチャに解決されます。 同様に、MSAA レンダー ターゲットをシェーダー リソースとしてバインドしなければならない場合、または非順序アクセス ビューで使用する場合は、解決された非 MSAA テクスチャが代わりにバインドされます。  
   
- また、これらのバリアントは `IDXGIFactory::CreateSwapChain`、`IDXGIFactory2::CreateSwapChainForHwnd`、`IDXGIFactory2::CreateSwapChainForCoreWindow`、`IDXGIFactory2::CreateSwapChainForComposition`、および `ID3D11CreateDeviceAndSwapChain` を使用して作成したすべてのスワップ チェーン上の MSAA 設定をオーバーライドします。  
+  また、これらのバリアントは `IDXGIFactory::CreateSwapChain`、`IDXGIFactory2::CreateSwapChainForHwnd`、`IDXGIFactory2::CreateSwapChainForCoreWindow`、`IDXGIFactory2::CreateSwapChainForComposition`、および `ID3D11CreateDeviceAndSwapChain` を使用して作成したすべてのスワップ チェーン上の MSAA 設定をオーバーライドします。  
   
- これらの変更の実際の影響として、すべてのレンダリングが 1 つの MSAA レンダー ターゲットに対して行われます。ただし、アプリケーションでこれらのレンダー ターゲットの 1 つ、またはスワップ チェーン バッファーをシェーダー リソース ビュー、または非順序アクセス ビューとして使用している場合、レンダー ターゲットの解決された非 MSAA コピーからデータ サンプルを取得します。  
+  これらの変更の実際の影響として、すべてのレンダリングが 1 つの MSAA レンダー ターゲットに対して行われます。ただし、アプリケーションでこれらのレンダー ターゲットの 1 つ、またはスワップ チェーン バッファーをシェーダー リソース ビュー、または非順序アクセス ビューとして使用している場合、レンダー ターゲットの解決された非 MSAA コピーからデータ サンプルを取得します。  
   
 ## <a name="restrictions-and-limitations"></a>制約と制限  
  Direct3D11 では、MSAA テクスチャは非 MSAA テクスチャよりも制限が多くなります。 たとえば、MSAA テクスチャでは `ID3D11DeviceContext::UpdateSubresource` を呼び出しできません。また、ソース リソースと宛先リソースの sample count と sample quality が一致しない場合 (このバリアントが一方のリソースの MSAA 設定をオーバーライドしたのに、他方の設定をオーバーライドしていない場合に、このような状況が発生する可能性があります)、`ID3D11DeviceContext::CopySubresourceRegion` の呼び出しは失敗します。  

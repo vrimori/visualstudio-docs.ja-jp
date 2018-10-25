@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_virtualtableshape |Microsoft ドキュメント
+title: Idiasymbol::get_virtualtableshape |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fa0a7d238b72ea6f3137aad9b5d5ff8a31659f8e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 48c5bc66938d6139eaacf23c5f269c507800d68f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31481932"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49871850"
 ---
 # <a name="idiasymbolgetvirtualtableshape"></a>IDiaSymbol::get_virtualTableShape
-ユーザー定義型の仮想テーブルの種類のシンボルのインターフェイスを取得します。  
+ユーザー定義型の仮想テーブルの型のシンボルのインターフェイスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,10 +37,10 @@ HRESULT get_virtualTableShape (
  [out]返します、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)ユーザー定義型の仮想テーブルを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

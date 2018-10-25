@@ -18,12 +18,12 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c44e1ba2d21b7063cc09379ee5e2120b9ba35231
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7e241d279898929119cd79530e5ee8b0ceb76a2c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49272949"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867885"
 ---
 # <a name="idiasymbolgetfrontendmajor"></a>IDiaSymbol::get_frontEndMajor
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -53,7 +53,7 @@ HRESULT get_frontEndMajor (
   
  フロント エンドまたはバックエンドのバージョン番号は 3 つの部分で構成されます:\<メジャー >.\<マイナー >。\<ビルド > ここで、\<主要な >、メジャー バージョン番号は、\<マイナー > はマイナー バージョン番号、および\<ビルド > ビルド番号です。 たとえば、13.10.3077 です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  

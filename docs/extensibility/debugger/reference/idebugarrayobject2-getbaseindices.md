@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject2::GetBaseIndices |Microsoft ドキュメント
+title: IDebugArrayObject2::GetBaseIndices |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 41b35475bb56b417729fa70d0e980411ae0f0e3a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8b53b8f2cd7819650abbb4fc88a7ec3f4b6dfe21
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31108662"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903193"
 ---
 # <a name="idebugarrayobject2getbaseindices"></a>IDebugArrayObject2::GetBaseIndices
-配列の次元数を指定された各インデックスの基本のインデックス (下限) を取得します。  
+配列の次元数を指定されたインデックスごとに、基本のインデックス (下限) を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,13 +45,13 @@ int GetBaseIndices (
  [in]配列の次元 (rank) の数。  
   
  `dwIndices`  
- [out]配列の基本インデックス (下限) です。  
+ [out]配列のベース インデックス (下限) です。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- たとえば、この関数に次の c# コードで作成された配列にある ' 5' と返されます。  
+## <a name="remarks"></a>Remarks  
+ 例として、この関数は、次の c# コードで作成された配列の「5」を返します。  
   
 ```  
 int[] lengths = { 12 };  

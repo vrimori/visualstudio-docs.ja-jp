@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94b5db74c6480c848f669983cea0febcd922cefe
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: da231c924e3167a50c885cf18ef878a02b28b166
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39639351"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915582"
 ---
 # <a name="persist-the-property-of-a-project-item"></a>プロジェクト項目のプロパティを永続化します。
 ソース ファイルの作成者などのプロジェクト項目に追加するプロパティを保持することがあります。 プロジェクト ファイルでプロパティを格納することで、これを行うことができます。
@@ -117,22 +117,22 @@ ms.locfileid: "39639351"
 
 ## <a name="to-verify-that-the-property-is-persisted"></a>プロパティが保持されていることを確認するには
 
-1.  開始[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]開くか、ソリューションを作成します。
+1. 開始[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]開くか、ソリューションを作成します。
 
-2.  プロジェクトを選択項目で VsPkg.cs**ソリューション エクスプ ローラー**します。
+2. プロジェクトを選択項目で VsPkg.cs**ソリューション エクスプ ローラー**します。
 
-3.  ブレークポイントを使用して、またはそれ以外の場合、VSPackage が読み込まれていると、SetItemAttribute が実行されることを確認します。
+3. ブレークポイントを使用して、またはそれ以外の場合、VSPackage が読み込まれていると、SetItemAttribute が実行されることを確認します。
 
-    > [!NOTE]
-    > UI のコンテキストで VSPackage を自動読み込みを実行できます<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_guid>します。 詳細については、次を参照してください。[ロード Vspackage](../extensibility/loading-vspackages.md)します。
+   > [!NOTE]
+   > UI のコンテキストで VSPackage を自動読み込みを実行できます<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_guid>します。 詳細については、次を参照してください。[ロード Vspackage](../extensibility/loading-vspackages.md)します。
 
-4.  閉じる[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]し、メモ帳でプロジェクト ファイルを開きます。 表示する必要があります、\<作成者 > 次のように、値は、Tom タグします。
+4. 閉じる[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]し、メモ帳でプロジェクト ファイルを開きます。 表示する必要があります、\<作成者 > 次のように、値は、Tom タグします。
 
-    ```xml
-    <Compile Include="VsPkg.cs">
-        <Author>Tom</Author>
-    </Compile>
-    ```
+   ```xml
+   <Compile Include="VsPkg.cs">
+       <Author>Tom</Author>
+   </Compile>
+   ```
 
 ## <a name="see-also"></a>関連項目
 

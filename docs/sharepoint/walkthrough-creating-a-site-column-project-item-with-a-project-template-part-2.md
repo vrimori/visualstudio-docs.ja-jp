@@ -14,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7616dd184bae2cabb433879ceadae79dbeb23b93
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d4512dc15d394cdf2442d8bfcf440ccb31623a29
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42626017"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942076"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>チュートリアル: プロジェクト テンプレート、第 2 部でのサイト列プロジェクト項目を作成します。
   SharePoint プロジェクト項目のカスタム種類を定義し、Visual Studio でその種類をプロジェクト テンプレートと関連付けてから、テンプレート用のウィザードを用意することもできます。 ウィザードを使用すると、ユーザーがテンプレートを使用してプロジェクト項目を含む新しいプロジェクトを作成するときに、ユーザーから情報を収集できます。 収集した情報を使用して、プロジェクト項目を初期化できます。  
@@ -48,15 +48,15 @@ ms.locfileid: "42626017"
   
  また、このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
   
--   サポート対象エディションの Windows、SharePoint、Visual Studio。
+- サポート対象エディションの Windows、SharePoint、Visual Studio。
   
--   Visual Studio SDK。 このチュートリアルでは、 **VSIX プロジェクト**sdk プロジェクト アイテムを配置するための VSIX パッケージを作成するテンプレート。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)します。  
+- Visual Studio SDK。 このチュートリアルでは、 **VSIX プロジェクト**sdk プロジェクト アイテムを配置するための VSIX パッケージを作成するテンプレート。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)します。  
   
- 次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
+  次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
   
--   Visual Studio のプロジェクトおよび項目テンプレート用のウィザード。 詳細については、次を参照してください。[方法: プロジェクト テンプレートにウィザードの使用](../extensibility/how-to-use-wizards-with-project-templates.md)と<xref:Microsoft.VisualStudio.TemplateWizard.IWizard>インターフェイス。  
+- Visual Studio のプロジェクトおよび項目テンプレート用のウィザード。 詳細については、次を参照してください。[方法: プロジェクト テンプレートにウィザードの使用](../extensibility/how-to-use-wizards-with-project-templates.md)と<xref:Microsoft.VisualStudio.TemplateWizard.IWizard>インターフェイス。  
   
--   SharePoint のサイト内の列。 詳細については、次を参照してください。[列](http://go.microsoft.com/fwlink/?LinkId=183547)します。  
+- SharePoint のサイト内の列。 詳細については、次を参照してください。[列](http://go.microsoft.com/fwlink/?LinkId=183547)します。  
   
 ## <a name="understand-the-wizard-components"></a>ウィザードのコンポーネントを理解します。
  このチュートリアルで説明されているウィザードには、いくつかのコンポーネントが含まれています。 次の表は、これらのコンポーネントについての説明です。  
@@ -72,11 +72,11 @@ ms.locfileid: "42626017"
 ## <a name="create-the-projects"></a>プロジェクトを作成します。
  このチュートリアルを完了するにはいくつかのプロジェクトで作成した SiteColumnProjectItem ソリューションに追加する必要があります[チュートリアル: プロジェクト テンプレート、第 1 部でサイト列プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md):  
   
--   WPF プロジェクト。 このプロジェクトで、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを実装し、ウィザードの UI を定義します。  
+- WPF プロジェクト。 このプロジェクトで、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを実装し、ウィザードの UI を定義します。  
   
--   SharePoint コマンドを定義するクラス ライブラリ プロジェクト。 このプロジェクトは .NET Framework 3.5 を対象にする必要があります。  
+- SharePoint コマンドを定義するクラス ライブラリ プロジェクト。 このプロジェクトは .NET Framework 3.5 を対象にする必要があります。  
   
- この 2 つのプロジェクトを作成することから始めます。  
+  この 2 つのプロジェクトを作成することから始めます。  
   
 #### <a name="to-create-the-wpf-project"></a>WPF プロジェクトを作成するには
   
@@ -192,13 +192,13 @@ ms.locfileid: "42626017"
 ## <a name="create-the-wizard-model-signing-manager-and-sharepoint-command-ids"></a>ウィザード モデル、署名マネージャー、および SharePoint コマンド Id を作成します。
  ProjectTemplateWizard プロジェクトにコードを追加して、サンプルの次のコンポーネントを実装します。  
   
--   SharePoint コマンド ID。 これらは、ウィザードによって使用される SharePoint コマンドを識別する文字列です。 このチュートリアルで後で、コマンドを実装する SharePointCommands プロジェクトにコードを追加します。  
+- SharePoint コマンド ID。 これらは、ウィザードによって使用される SharePoint コマンドを識別する文字列です。 このチュートリアルで後で、コマンドを実装する SharePointCommands プロジェクトにコードを追加します。  
   
--   ウィザード データ モデル。  
+- ウィザード データ モデル。  
   
--   プロジェクト署名マネージャー。  
+- プロジェクト署名マネージャー。  
   
- これらのコンポーネントの詳細については、次を参照してください。[ウィザードのコンポーネントについて](#wizardcomponents)します。  
+  これらのコンポーネントの詳細については、次を参照してください。[ウィザードのコンポーネントについて](#wizardcomponents)します。  
   
 #### <a name="to-define-the-sharepoint-command-ids"></a>SharePoint コマンド ID を定義するには
   
@@ -485,29 +485,29 @@ ms.locfileid: "42626017"
   
 #### <a name="to-test-the-wizard-in-visual-studio"></a>Visual Studio でウィザードをテストするには  
   
-1.  メニュー バーで、Visual Studio の実験用インスタンスで次のように選択します。**ファイル** > **新規** > **プロジェクト**します。  
+1. メニュー バーで、Visual Studio の実験用インスタンスで次のように選択します。**ファイル** > **新規** > **プロジェクト**します。  
   
-2.  展開、 **Visual c#** ノードまたは**Visual Basic** (言語に応じて、プロジェクト テンプレートがサポートする)、ノードを展開、 **SharePoint**ノードを選択し、**2010**ノード。  
+2. 展開、 **Visual c#** ノードまたは**Visual Basic** (言語に応じて、プロジェクト テンプレートがサポートする)、ノードを展開、 **SharePoint**ノードを選択し、**2010**ノード。  
   
-3.  プロジェクト テンプレートの一覧で選択**Site Column**、プロジェクトに名前を**SiteColumnWizardTest**、選択し、 **[ok]** ボタンをクリックします。  
+3. プロジェクト テンプレートの一覧で選択**Site Column**、プロジェクトに名前を**SiteColumnWizardTest**、選択し、 **[ok]** ボタンをクリックします。  
   
-4.  Visual Studio のもう一方のインスタンスで、先ほど `RunStarted` メソッドに設定したブレークポイントで、コードが停止していることを確認します。  
+4. Visual Studio のもう一方のインスタンスで、先ほど `RunStarted` メソッドに設定したブレークポイントで、コードが停止していることを確認します。  
   
-5.  選択して、プロジェクトのデバッグを続行、 **F5**キーか、メニュー バーで**デバッグ** > **続行**します。  
+5. 選択して、プロジェクトのデバッグを続行、 **F5**キーか、メニュー バーで**デバッグ** > **続行**します。  
   
-6.  **SharePoint カスタマイズ ウィザード**、デバッグに使用するサイトの URL を入力し、、**次**ボタンをクリックします。  
+6. **SharePoint カスタマイズ ウィザード**、デバッグに使用するサイトの URL を入力し、、**次**ボタンをクリックします。  
   
-7.  2 ページ目で、 **SharePoint カスタマイズ ウィザード**、次の選択を行います。  
+7. 2 ページ目で、 **SharePoint カスタマイズ ウィザード**、次の選択を行います。  
   
-    -   **型**一覧で、選択**ブール**します。  
+   - **型**一覧で、選択**ブール**します。  
   
-    -   **グループ**一覧で、選択**Custom Yes/No Columns**します。  
+   - **グループ**一覧で、選択**Custom Yes/No Columns**します。  
   
-    -   **名前**ボックスに、入力**My Yes/No Column**、選択し、**完了**ボタンをクリックします。  
+   - **名前**ボックスに、入力**My Yes/No Column**、選択し、**完了**ボタンをクリックします。  
   
      **ソリューション エクスプ ローラー**、新しいプロジェクトが表示され、プロジェクト項目の名前が含まれて**Field1**、Visual Studio プロジェクトの表示と*Elements.xml*ファイルがエディターでします。  
   
-8.  いることを確認*Elements.xml*ウィザードで指定した値が含まれています。  
+8. いることを確認*Elements.xml*ウィザードで指定した値が含まれています。  
   
 #### <a name="to-test-the-site-column-in-sharepoint"></a>SharePoint でサイト内の列をテストするには  
   

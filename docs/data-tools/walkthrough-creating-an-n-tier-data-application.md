@@ -16,12 +16,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 007a0a85bf9d7200860194b881a3d0505f6bee45
-ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
+ms.openlocfilehash: 87b88c6fc8c6add2c93721b46165ffd295f4d614
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175344"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942895"
 ---
 # <a name="walkthrough-create-an-n-tier-data-application"></a>チュートリアル: n 層データ アプリケーションを作成します。
 *N 層*データ アプリケーションは、データにアクセスし、複数の論理レイヤーに分割されているアプリケーションまたは*層*します。 アプリケーション コンポーネントをこのように別個の層に分離すると、アプリケーションの保守容易性とスケーラビリティが向上します。 これは、ソリューション全体を再設計しなくても 1 つの層に適用できる、新しい技術を簡単に導入できるようにすることで実現されます。 n 層アーキテクチャには、プレゼンテーション層、中間層、およびデータ層が存在します。 通常、中間層には、データ アクセス層、ビジネス ロジック層、および認証や検証などの共有コンポーネントが含まれます。 データ層には、リレーショナル データベースが含まれます。 通常、n 層アプリケーションでは、機密情報が中間層のデータ アクセス層に格納され、プレゼンテーション層にアクセスするエンド ユーザーから分離されます。 詳細については、次を参照してください。 [N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)します。
@@ -52,7 +52,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 
 ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版について、次を参照してください。 [Video How to: n 層データ アプリケーションを作成する](http://go.microsoft.com/fwlink/?LinkId=115188)します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 このチュートリアルでは、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。
 
 1.  SQL Server Express LocalDB をお持ちでない場合は、インストールのいずれかから、 [SQL Server Express のダウンロード ページ](https://www.microsoft.com/sql-server/sql-server-editions-express)、または、 **Visual Studio インストーラー**します。 **Visual Studio インストーラー**の一部として SQL Server Express LocalDB をインストールすることができます、 **.NET デスクトップ開発**ワークロード、または個々 のコンポーネントとして。
@@ -73,7 +73,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
  このチュートリアルでは、まず、1 つのソリューションと 2 つのクラス ライブラリ プロジェクトを作成します。 最初のクラス ライブラリは、データセットを保持 (生成された型指定された`DataSet`クラスと、アプリケーションのデータを保持する Datatable)。 このプロジェクトは、アプリケーションのデータ エンティティ層として使用され、通常は中間層に配置されます。 データセットは、初期データセットを作成し、2 つのクラス ライブラリにコードを自動的に分割します。
 
 > [!NOTE]
->  クリックする前に、プロジェクトとソリューションを正しく名前を必ず**OK**します。 これにより、チュートリアルの完了が容易になります。
+> クリックする前に、プロジェクトとソリューションを正しく名前を必ず**OK**します。 これにより、チュートリアルの完了が容易になります。
 
 ### <a name="to-create-the-n-tier-solution-and-dataentitytier-class-library"></a>n 層ソリューションと DataEntityTier クラス ライブラリを作成するには
 
@@ -106,7 +106,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
  次に、型指定されたデータセットを作成します。 Dataset クラスで型指定されたデータセットが作成されます (含む`DataTables`クラス) と`TableAdapter`1 つのプロジェクト内のクラス。 (すべてのクラスが 1 つのファイルに生成されます)。まま、その他のプロジェクトに移動されたデータセット クラスが、データセットと TableAdapters を別々 のプロジェクトに分離する場合、`TableAdapter`元のプロジェクト内のクラス。 そのため、Tableadapter (DataAccessTier プロジェクト) を含む最終的にプロジェクトで、データセットを作成します。 使用して、データセットを作成して、**データ ソース構成ウィザード**します。
 
 > [!NOTE]
->  接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。 Northwind サンプル データベースを設定する方法については、次を参照してください。[方法: サンプル データベースをインストール](../data-tools/installing-database-systems-tools-and-samples.md)します。
+> 接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。 Northwind サンプル データベースを設定する方法については、次を参照してください。[方法: サンプル データベースをインストール](../data-tools/installing-database-systems-tools-and-samples.md)します。
 
 ### <a name="to-create-the-dataset"></a>データセットを作成するには
 
@@ -129,7 +129,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 6.  データベースは、パスワードを必要とする場合、機密データを含めるし、オプションを選択**次**します。
 
     > [!NOTE]
-    >  SQL Server に接続するのではなく、ローカル データベース ファイルを選択した場合は、ファイルをプロジェクトに追加するかどうかをたずねるメッセージが表示されます。 選択**はい**データベース ファイルをプロジェクトに追加します。
+    > SQL Server に接続するのではなく、ローカル データベース ファイルを選択した場合は、ファイルをプロジェクトに追加するかどうかをたずねるメッセージが表示されます。 選択**はい**データベース ファイルをプロジェクトに追加します。
 
 7.  選択**次**上、**アプリケーション構成ファイルへの接続文字列を保存**ページ。
 
@@ -144,20 +144,20 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 
 ### <a name="to-separate-the-tableadapters-from-the-dataset"></a>データセットと TableAdapter を分離するには
 
-1.  ダブルクリック**NorthwindDataSet.xsd**で**ソリューション エクスプ ローラー**でデータセットを開きます、**データセット デザイナー**します。
+1. ダブルクリック**NorthwindDataSet.xsd**で**ソリューション エクスプ ローラー**でデータセットを開きます、**データセット デザイナー**します。
 
-2.  デザイナーの空の領域を選択します。
+2. デザイナーの空の領域を選択します。
 
-3.  検索、 **DataSet プロジェクト**内のノード、**プロパティ**ウィンドウ。
+3. 検索、 **DataSet プロジェクト**内のノード、**プロパティ**ウィンドウ。
 
-4.  **DataSet プロジェクト**一覧で、 **DataEntityTier**します。
+4. **DataSet プロジェクト**一覧で、 **DataEntityTier**します。
 
-5.  **[ビルド]** メニューの **[ソリューションのビルド]** を選択します。
+5. **[ビルド]** メニューの **[ソリューションのビルド]** を選択します。
 
- データセットと TableAdapter が、2 つのクラス ライブラリ プロジェクトに分離されます。 データセット全体を含んでいたプロジェクト (`DataAccessTier`) には Tableadapter しか含まれています。 指定したプロジェクト、 **DataSet プロジェクト**プロパティ (`DataEntityTier`)、型指定されたデータセットが含まれています: *NorthwindDataSet.Dataset.Designer.vb* (または*NorthwindDataSet.Dataset.Designer.cs*)。
+   データセットと TableAdapter が、2 つのクラス ライブラリ プロジェクトに分離されます。 データセット全体を含んでいたプロジェクト (`DataAccessTier`) には Tableadapter しか含まれています。 指定したプロジェクト、 **DataSet プロジェクト**プロパティ (`DataEntityTier`)、型指定されたデータセットが含まれています: *NorthwindDataSet.Dataset.Designer.vb* (または*NorthwindDataSet.Dataset.Designer.cs*)。
 
 > [!NOTE]
->  データセットと Tableadapter を分離する場合 (設定して、 **DataSet プロジェクト**プロパティ)、プロジェクト内の既存のデータセット部分クラスが自動的に移動されません。 既存のデータセット部分クラスは、手動でデータセット プロジェクトに移動する必要があります。
+> データセットと Tableadapter を分離する場合 (設定して、 **DataSet プロジェクト**プロパティ)、プロジェクト内の既存のデータセット部分クラスが自動的に移動されません。 既存のデータセット部分クラスは、手動でデータセット プロジェクトに移動する必要があります。
 
 ## <a name="create-a-new-service-application"></a>新しいサービス アプリケーションを作成します。
 このチュートリアルでは、WCF サービスを使用して、データ アクセス層へのアクセス、それでは、新しい WCF サービス アプリケーションを作成する方法を示します。
@@ -224,7 +224,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
  これで、データを返すメソッドをデータ アクセス層に含めることができました。次に、データ サービスにメソッドを作成して、データ アクセス層のメソッドを呼び出します。
 
 > [!NOTE]
->  C# プロジェクトの場合は、次のコードをコンパイルするために `System.Data.DataSetExtensions` アセンブリへの参照を追加する必要があります。
+> C# プロジェクトの場合は、次のコードをコンパイルするために `System.Data.DataSetExtensions` アセンブリへの参照を追加する必要があります。
 
 ### <a name="to-create-the-getcustomers-and-getorders-functions-in-the-data-service"></a>データ サービスに GetCustomers 関数と GetOrders 関数を作成するには
 
@@ -323,7 +323,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 3.  選択**Service1**選択**OK**します。
 
     > [!NOTE]
-    >  現在のコンピューターに複数のサービスがあれば、このチュートリアルで以前に作成したサービスを選択します。 (含まれているサービス、`GetCustomers`と`GetOrders`メソッド)。
+    > 現在のコンピューターに複数のサービスがあれば、このチュートリアルで以前に作成したサービスを選択します。 (含まれているサービス、`GetCustomers`と`GetOrders`メソッド)。
 
 ## <a name="add-datagridviews-to-the-form-to-display-the-data-returned-by-the-data-service"></a>データ サービスによって返されるデータを表示するフォームに Datagridview を追加します。
  データ サービスにサービス参照を追加した後、**データソース**ウィンドウは、サービスによって返されるデータが設定されます。
@@ -361,7 +361,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 既定値`maxReceivedMessageSize`から取得されたデータを保持するために十分な大きさでない、`Customers`と`Orders`テーブル。 次の手順では、値を 6553600 が増加します。 サービス参照を自動的に更新すると、クライアントで値を変更するとします。
 
 > [!NOTE]
->  既定のサイズが低く設定されているのは、サービス拒否 (DoS) 攻撃を受けるリスクを低減するためです。 詳細については、「<xref:System.ServiceModel.WSHttpBindingBase.MaxReceivedMessageSize%2A>」を参照してください。
+> 既定のサイズが低く設定されているのは、サービス拒否 (DoS) 攻撃を受けるリスクを低減するためです。 詳細については、「<xref:System.ServiceModel.WSHttpBindingBase.MaxReceivedMessageSize%2A>」を参照してください。
 
 ### <a name="to-increase-the-maxreceivedmessagesize-value"></a>maxReceivedMessageSize 値を増やすには
 

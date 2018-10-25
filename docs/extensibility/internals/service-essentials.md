@@ -1,5 +1,5 @@
 ---
-title: サービスの Essentials |Microsoft ドキュメント
+title: Essentials のサービス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,71 +13,71 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5a9858109c9fe0d8af0d00621b717417a0c0e53
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 26bfa7ce51249adc883415d09689ed390b7dfabc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31132656"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934406"
 ---
-# <a name="service-essentials"></a>サービスの基礎
-サービスは、次の 2 つの Vspackage の間のコントラクトです。 1 つの VSPackage では、別の VSPackage を使用するためのインターフェイスの特定のセットを提供します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 自体は、その他の Vspackage にサービスを提供する Vspackage のコレクションです。  
+# <a name="service-essentials"></a>サービスの基本情報
+サービスは、2 つの Vspackage の間のコントラクトです。 1 つの VSPackage では、別の VSPackage を使用するためのインターフェイスの特定のセットを提供します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 自体は、その他の Vspackage にサービスを提供する Vspackage のコレクションです。  
   
- たとえば、SVsActivityLog サービスを使用すると、アクティビティ ログへの書き込みに使用できる、IVsActivityLog インターフェイスを取得します。 詳細については、次を参照してください。[する方法: アクティビティ ログを使用して](../../extensibility/how-to-use-the-activity-log.md)です。  
+ たとえば、SVsActivityLog サービスを使用すると、アクティビティ ログへの書き込みに使用できる、IVsActivityLog インターフェイスを取得します。 詳細については、次を参照してください。[方法: アクティビティ ログを使用して、](../../extensibility/how-to-use-the-activity-log.md)します。  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 登録されていないいくつかの組み込みサービスも用意されています。 Vspackage では、サービス オーバーライドを提供することにより、組み込みまたはその他のサービスを置き換えることができます。 任意のサービスには、1 つのサービスの上書きが許可します。  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 登録されていないいくつかの組み込みサービスを提供します。 Vspackage では、サービスのオーバーライドを提供することで、組み込みやその他のサービスを置き換えることができます。 1 つのサービスのオーバーライドは、すべてのサービスに許可されます。  
   
- サービス探索可能性があるありません。 したがってを使用するサービスのサービス識別子 (SID) を知る必要があります、提供するインターフェイスを知る必要があります。 サービスに関するリファレンス ドキュメントは、この情報を提供します。  
+ サービスには、見つけやすさはあるありません。 したがってを使用するサービスのサービス識別子 (SID) を知る必要がありますを提供するインターフェイスを知る必要があります。 サービスのリファレンス ドキュメントは、この情報を提供します。  
   
--   サービスを提供する Vspackage は、サービス プロバイダーと呼ばれます。  
+- サービスを提供する Vspackage は、サービス プロバイダーと呼ばれます。  
   
--   その他の Vspackage に提供されているサービスは、グローバル サービスと呼ばれます。  
+- その他の Vspackage に提供されるサービスは、グローバル サービスと呼ばれます。  
   
--   または、それらを実装する VSPackage にのみ、任意のオブジェクトを作成するかどうかを利用できるサービスは、ローカル サービスと呼ばれます。  
+- または、それらを実装する VSPackage にのみ、任意のオブジェクトを作成するかどうかを利用できるサービスは、ローカル サービスと呼ばれます。  
   
--   組み込みのサービスまたは他のパッケージで提供されるサービスを置き換えるサービスは、サービスの上書きと呼ばれます。  
+- 組み込みのサービスまたは他のパッケージで提供されるサービスを置き換えるサービスは、サービスの上書きと呼ばれます。  
   
--   サービス、またはサービス オーバーライドが要求時に読み込まれて、別の VSPackage によって提供するサービスが要求されたときに、サービス プロバイダーが読み込まれます。  
+- サービス、またはサービスの上書きがオンデマンドで読み込まれる、別の VSPackage に提供するサービスを要求すると、サービス プロバイダーが読み込まれます。  
   
--   オンデマンド読み込みをサポートするために、サービス プロバイダーとグローバル サービスを登録[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 詳細については、次を参照してください。[する方法: サービスを提供](../../extensibility/how-to-provide-a-service.md)です。  
+- サービス プロバイダーをオンデマンドの読み込みをサポートするには、グローバル サービスを登録します[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。 詳細については、次を参照してください。[方法: サービスを提供](../../extensibility/how-to-provide-a-service.md)します。  
   
--   サービスを取得した後を使用して[QueryInterface](/cpp/atl/queryinterface) (アンマネージ コード) またはなどの目的のインターフェイスを取得するキャスト (マネージ コード)。  
+- サービスを取得した後を使用して、 [QueryInterface](/cpp/atl/queryinterface) (アンマネージ コード) やなどの目的のインターフェイスを取得するキャスト (マネージ コード)。  
   
-    ```vb  
-    TryCast(GetService(GetType(SVsActivityLog)), IVsActivityLog)  
-    ```  
+  ```vb  
+  TryCast(GetService(GetType(SVsActivityLog)), IVsActivityLog)  
+  ```  
   
-    ```csharp  
-    GetService(typeof(SVsActivityLog)) as IVsActivityLog;  
-    ```  
+  ```csharp  
+  GetService(typeof(SVsActivityLog)) as IVsActivityLog;  
+  ```  
   
--   マネージ コードは、アンマネージ コードは、GUID によって、サービス、その型によって、サービスを参照します。  
+- マネージ コードは、アンマネージ コードは、GUID によって、サービスには、その型によって、サービスを指します。  
   
--   ときに[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]VSPackage を読み込む、サービス プロバイダーに渡して、VSPackage にグローバル サービスを VSPackage のアクセスを付与します。 これは、VSPackage を"サイト"設定と呼ばれます。  
+- ときに[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]VSPackage を読み込む、グローバル サービスを VSPackage のアクセスを提供する VSPackage に、サービス プロバイダーを渡されます。 これは、VSPackage を「配置」と呼ばれます。  
   
--   Vspackage では、作成したオブジェクトに対するサービス プロバイダーを指定できます。 たとえば、フォームは、そのフレームは、要求を渡すことがありますのカラー サービスの要求を送信可能性があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
+- Vspackage では、サービス プロバイダーを作成するオブジェクトを指定できます。 たとえば、フォームはへの要求を渡すことがあります、そのフレームに色サービスに対する要求を送信可能性があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。  
   
--   深く入れ子になっているか、まったくが配置されていない管理対象のオブジェクトを呼び出すことが<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>グローバル サービスに直接アクセスします。   
+- 深く入れ子になったか、まったくが配置されていないマネージ オブジェクトを呼び出すことが<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>グローバル サービスに直接アクセスします。   
   
 <a name="how-to-use-getglobalservice"></a>  
   
 ## <a name="use-getglobalservice"></a>GetGlobalService を使用します。  
   
-ツール ウィンドウからサービスを取得またはサービスが認識していないサービス プロバイダーのコンテナーに配置されているか、または配置されていないするコンテナーを制御する必要があります。 たとえば、コントロール内のアクティビティ ログに書き込むことができます。 これらおよびその他のシナリオの詳細については、次を参照してください。[する方法: サービスのトラブルシューティングを行う](../../extensibility/how-to-troubleshoot-services.md)です。  
+場合によっては、ツール ウィンドウからサービスを取得するサービスを認識しませんが、サービス プロバイダーをコンテナーに配置されているか、またはしない配置されているコンテナーを制御したり必要があります。 たとえば、コントロール内からアクティビティ ログに書き込む可能性があります。 これらおよびその他のシナリオの詳細については、次を参照してください。[方法: サービスのトラブルシューティングを行う](../../extensibility/how-to-troubleshoot-services.md)します。  
   
-ほとんどの Visual Studio サービスを取得するには、静的なを呼び出すことによって<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>メソッドです。  
+ほとんどの Visual Studio サービスを取得するには、静的で<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>メソッド。  
   
-<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> 依存しているキャッシュされたサービスに初めてパッケージから派生した任意の VSPackage が初期化されているプロバイダーが配置されています。 この条件を満たすには、か、または null のサービスの準備をするを保証する必要があります。  
+<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> 依存パッケージから派生したすべての VSPackage を初めて初期化されるプロバイダーが配置されたキャッシュ サービスにします。 この条件が満たされるか、または null のサービスに対応することを保証する必要があります。  
   
-さいわい、<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>ほとんどの時間が正常に動作します。  
+さいわい、<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>ほとんどの場合、正常に動作します。  
   
 -   VSPackage では、別の VSPackage にしか認識サービスを提供する場合、サービスを要求する VSPackage は、サービスが読み込まれるを提供する VSPackage の前に配置されてます。  
   
--   VSPackage でツール ウィンドウを作成する場合は、ツール ウィンドウを作成する前に、VSPackage が配置されました。  
+-   ツール ウィンドウを作成する場合は、VSPackage によっては、ツール ウィンドウを作成する前に、VSPackage が配置されました。  
   
--   コントロールのコンテナーが VSPackage によって作成されたツール ウィンドウでホストされている場合は、コントロールのコンテナーが作成される前に、VSPackage が配置されました。  
+-   VSPackage で作成したツール ウィンドウでコントロールのコンテナーがホストされている場合は、コントロールのコンテナーを作成する前に、VSPackage が配置されました。  
   
-### <a name="to-get-a-service-from-within-a-tool-window-or-control-container"></a>ツール ウィンドウまたはコントロールのコンテナー内からのサービスを取得するには  
+### <a name="to-get-a-service-from-within-a-tool-window-or-control-container"></a>ツール ウィンドウまたはコントロールのコンテナー内からサービスを取得するには  
   
 -   このコードをコンス トラクター、ツール ウィンドウ、またはコントロールのコンテナーに挿入します。  
   
@@ -92,10 +92,10 @@ ms.locfileid: "31132656"
     End If
     ```  
     
-    このコードは、SVsActivityLog サービスを取得し、アクティビティ ログへの書き込みに使用できる IVsActivityLog インターフェイスにキャストします。 例については、次を参照してください。[する方法: アクティビティ ログを使用して](../../extensibility/how-to-use-the-activity-log.md)です。  
+    このコードは、SVsActivityLog サービスを取得し、アクティビティ ログへの書き込みに使用できる IVsActivityLog インターフェイスにキャストされます。 例については、次を参照してください。[方法: アクティビティ ログを使用して、](../../extensibility/how-to-use-the-activity-log.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [使用可能なサービスの一覧](../../extensibility/internals/list-of-available-services.md)   
+ [利用可能なサービスの一覧](../../extensibility/internals/list-of-available-services.md)   
  [使用して、サービスを提供します。](../../extensibility/using-and-providing-services.md)   
  [キャストと型変換](/dotnet/csharp/programming-guide/types/casting-and-type-conversions)   
  [キャスト](/cpp/cpp/casting)

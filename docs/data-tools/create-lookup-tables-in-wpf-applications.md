@@ -18,12 +18,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 98dbffecc51b19a40b1b54cc9afc654fb850155b
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: bbecb481d96df1071388e834d44f8f712def2935
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176129"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924201"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>WPF アプリケーションでルックアップ テーブルを作成します。
 用語*ルックアップ テーブル*(とも呼ばれる、*ルックアップ バインディング*) 別のテーブルの外部キー フィールドの値に基づいて 1 つのデータ テーブルからの情報を表示するコントロールについて説明します。 親テーブルの主ノードをドラッグして、ルックアップ テーブルを作成したり、オブジェクト、**データソース**列または関連する子テーブルのプロパティに既にバインドされているコントロールにウィンドウ。
@@ -83,7 +83,7 @@ ms.locfileid: "39176129"
      Visual Studio では、検索バインドを構成するコントロールのいくつかのプロパティを設定します。 次の表は、Visual Studio を変更するプロパティを一覧表示します。 かどうか、必要に応じて変更できます、XAML またはこれらのプロパティ、**プロパティ**ウィンドウ。
 
     |プロパティ|設定の説明|
-    |--------------|----------------------------|
+    |--------------| - |
     |<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>|このプロパティは、コレクションまたはコントロールに表示されるデータを取得するために使用するバインディングを指定します。 Visual Studio では、このプロパティを設定、<xref:System.Windows.Data.CollectionViewSource>親データをコントロールにドラッグします。|
     |<xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>|このプロパティは、コントロールに表示されるデータ項目のパスを指定します。 Visual Studio は、文字列データ型を持つ、主キーの後、最初の列または親のデータのプロパティにこのプロパティを設定します。<br /><br /> 親データで別々 の列またはプロパティを表示する場合は、別のプロパティのパスにこのプロパティを変更します。|
     |<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>|Visual Studio は、このプロパティを列または子データをデザイナーにドラッグした先のプロパティにバインドします。 これは、親データへの外部キーです。|

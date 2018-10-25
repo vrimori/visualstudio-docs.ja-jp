@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0443a8fc23c2dc9a78cf35ba8a822fc6627a1c1c
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 8136a090dbf5e3c3f86ce9b4ade1321f7b36b829
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672365"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858889"
 ---
 # <a name="get-started-programming-vsto-add-ins"></a>VSTO アドインのプログラミングを始める
   VSTO アドインを使用することにより、Microsoft Office アプリケーションを自動化し、アプリケーションの機能を拡張できるほか、アプリケーションのユーザー インターフェイス (UI) をカスタマイズすることもできます。 Visual Studio を使用して作成できる他の種類の Office ソリューションに VSTO アドインの比較については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)します。  
@@ -60,40 +60,40 @@ ms.locfileid: "35672365"
 ## <a name="customize-the-user-interface-of-applications"></a>アプリケーションのユーザー インターフェイスをカスタマイズします。  
  VSTO アドインを使用して、ホスト アプリケーションの UI をカスタマイズするいくつかのさまざまな方法はあります。  
   
--   Excel や Word の場合、ドキュメントにマネージド コントロールを追加できます。 詳細については、次を参照してください。[拡張 Word 文書や Excel ブックを実行時に VSTO アドインで](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)します。  
+- Excel や Word の場合、ドキュメントにマネージド コントロールを追加できます。 詳細については、次を参照してください。[拡張 Word 文書や Excel ブックを実行時に VSTO アドインで](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)します。  
   
--   アプリケーションでサポートされている場合は、リボンをカスタマイズできます。 詳細については、次を参照してください。[リボンの概要](../vsto/ribbon-overview.md)します。  
+- アプリケーションでサポートされている場合は、リボンをカスタマイズできます。 詳細については、次を参照してください。[リボンの概要](../vsto/ribbon-overview.md)します。  
   
--   アプリケーションでサポートされている場合は、カスタム作業ウィンドウを作成できます。 詳細については、次を参照してください。[カスタム作業ウィンドウ](../vsto/custom-task-panes.md)します。  
+- アプリケーションでサポートされている場合は、カスタム作業ウィンドウを作成できます。 詳細については、次を参照してください。[カスタム作業ウィンドウ](../vsto/custom-task-panes.md)します。  
   
--   Outlook では、カスタム フォーム領域を作成できます。 詳細については、次を参照してください。[作成の Outlook フォーム領域](../vsto/creating-outlook-form-regions.md)します。  
+- Outlook では、カスタム フォーム領域を作成できます。 詳細については、次を参照してください。[作成の Outlook フォーム領域](../vsto/creating-outlook-form-regions.md)します。  
   
--   すべての Microsoft Office アプリケーションで、VSTO アドインに Windows フォームを表示できます。  
+- すべての Microsoft Office アプリケーションで、VSTO アドインに Windows フォームを表示できます。  
   
- Microsoft Office の UI アプリケーションをカスタマイズする方法の詳細については、次を参照してください。 [Office UI のカスタマイズ](../vsto/office-ui-customization.md)します。  
+  Microsoft Office の UI アプリケーションをカスタマイズする方法の詳細については、次を参照してください。 [Office UI のカスタマイズ](../vsto/office-ui-customization.md)します。  
   
 ## <a name="next-steps"></a>次の手順  
  VSTO アドインの作成方法については、次のチュートリアルを参照してください。  
   
--   [Excel 用の最初の VSTO アドインのチュートリアル: 作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-excel.md)  
+- [Excel 用の最初の VSTO アドインのチュートリアル: 作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-excel.md)  
   
--   [チュートリアル: は、初めて VSTO アドインを Outlook の作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)  
+- [チュートリアル: は、初めて VSTO アドインを Outlook の作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)  
   
--   [チュートリアル: は powerpoint の場合、最初の VSTO アドイン作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md)  
+- [チュートリアル: は powerpoint の場合、最初の VSTO アドイン作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md)  
   
--   [チュートリアル: が初めて VSTO アドイン プロジェクトの作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-project.md)  
+- [チュートリアル: が初めて VSTO アドイン プロジェクトの作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-project.md)  
   
--   [チュートリアル: Word の最初の VSTO アドイン作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-word.md)  
+- [チュートリアル: Word の最初の VSTO アドイン作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-word.md)  
   
- これらのチュートリアルでは、Visual Studio の Office 開発ツール、および VSTO アドインのプログラミング モデルを紹介します。  
+  これらのチュートリアルでは、Visual Studio の Office 開発ツール、および VSTO アドインのプログラミング モデルを紹介します。  
   
- Office プロジェクトで、一般的なタスクを解説しているトピックの一覧は、次を参照してください。 [Office プログラミングで一般的なタスク](../vsto/common-tasks-in-office-programming.md)します。  
+  Office プロジェクトで、一般的なタスクを解説しているトピックの一覧は、次を参照してください。 [Office プログラミングで一般的なタスク](../vsto/common-tasks-in-office-programming.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Office ソリューションでコードを記述します。](../vsto/writing-code-in-office-solutions.md)   
- [VSTO アドインのアーキテクチャ](../vsto/architecture-of-vsto-add-ins.md)   
+ [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)   
  [VSTO アドインをプログラミングします。](../vsto/programming-vsto-add-ins.md)  
   
   

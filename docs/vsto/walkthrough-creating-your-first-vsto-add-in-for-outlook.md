@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 25155e6dee56fd816425f795a5082667c90c242a
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: fc0f2e7cc7dc40dc305f7860223b5d4acf19a573
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38778129"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950964"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-outlook"></a>チュートリアル: は、初めて VSTO アドインを Outlook の作成します。
   このチュートリアルでは、Microsoft Office Outlook 用の VSTO アドインを作成する方法について説明します。 この種のソリューションに作成した機能は、どの Outlook 項目が開いているかにかかわらず、アプリケーション自体に対して使用できます。 詳細については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)します。  
@@ -32,17 +32,17 @@ ms.locfileid: "38778129"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   Outlook 用の Outlook VSTO アドイン プロジェクトを作成する。  
+- Outlook 用の Outlook VSTO アドイン プロジェクトを作成する。  
   
--   Outlook のオブジェクト モデルを使用して、新しいメール メッセージの件名と本文にテキストを追加するコードを記述する。  
+- Outlook のオブジェクト モデルを使用して、新しいメール メッセージの件名と本文にテキストを追加するコードを記述する。  
   
--   プロジェクトをビルドし、実行してテストする。  
+- プロジェクトをビルドし、実行してテストする。  
   
--   完成したプロジェクトをクリーンアップして、開発用コンピューターでこの VSTO アドインが自動的に実行されないようにする。  
+- 完成したプロジェクトをクリーンアップして、開発用コンピューターでこの VSTO アドインが自動的に実行されないようにする。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -78,24 +78,24 @@ ms.locfileid: "38778129"
   
 ### <a name="to-add-text-to-the-subject-and-body-of-each-new-mail-message"></a>新しい各メール メッセージの件名と本文にテキストを追加するには  
   
-1.  ThisAddIn コード ファイルで、 `inspectors` クラスに `ThisAddIn` というフィールドを宣言します。 `inspectors` フィールドは、Outlook の現在のインスタンスに含まれるインスペクター ウィンドウのコレクションへの参照を保持します。 この参照によって、 <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> イベントのイベント ハンドラーが格納されたメモリをガベージ コレクターが解放することを防止できます。  
+1. ThisAddIn コード ファイルで、 `inspectors` クラスに `ThisAddIn` というフィールドを宣言します。 `inspectors` フィールドは、Outlook の現在のインスタンスに含まれるインスペクター ウィンドウのコレクションへの参照を保持します。 この参照によって、 <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> イベントのイベント ハンドラーが格納されたメモリをガベージ コレクターが解放することを防止できます。  
   
-     [!code-vb[Trin_OutlookAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb#1)]
-     [!code-csharp[Trin_OutlookAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs#1)]  
+    [!code-vb[Trin_OutlookAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb#1)]
+    [!code-csharp[Trin_OutlookAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs#1)]  
   
-2.  `ThisAddIn_Startup` メソッドを次のコードに置き換えます。 このコードは <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> イベントにイベント ハンドラーをアタッチします。  
+2. `ThisAddIn_Startup` メソッドを次のコードに置き換えます。 このコードは <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> イベントにイベント ハンドラーをアタッチします。  
   
-     [!code-vb[Trin_OutlookAddInTutorial#2](../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb#2)]
-     [!code-csharp[Trin_OutlookAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs#2)]  
+    [!code-vb[Trin_OutlookAddInTutorial#2](../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb#2)]
+    [!code-csharp[Trin_OutlookAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs#2)]  
   
-3.  ThisAddIn コード ファイルで、次のコードを `ThisAddIn` クラスに追加します。 このコードは、 <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> イベントのイベント ハンドラーを定義します。  
+3. ThisAddIn コード ファイルで、次のコードを `ThisAddIn` クラスに追加します。 このコードは、 <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> イベントのイベント ハンドラーを定義します。  
   
-     ユーザーが新しいメール メッセージを作成すると、このイベント ハンドラーにより、メッセージの件名と本文にテキストが追加されます。  
+    ユーザーが新しいメール メッセージを作成すると、このイベント ハンドラーにより、メッセージの件名と本文にテキストが追加されます。  
   
-     [!code-vb[Trin_OutlookAddInTutorial#3](../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb#3)]
-     [!code-csharp[Trin_OutlookAddInTutorial#3](../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs#3)]  
+    [!code-vb[Trin_OutlookAddInTutorial#3](../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb#3)]
+    [!code-csharp[Trin_OutlookAddInTutorial#3](../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs#3)]  
   
- 新しい各メール メッセージを変更するために、前のコード例では次のオブジェクトを使用しています。  
+   新しい各メール メッセージを変更するために、前のコード例では次のオブジェクトを使用しています。  
   
 -   `Application` クラスの `ThisAddIn` フィールド。 `Application` フィールドは Outlook の現在のインスタンスを表す <xref:Microsoft.Office.Interop.Outlook.Application> オブジェクトを返します。  
   

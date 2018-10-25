@@ -131,12 +131,12 @@ caps.latest.revision: 17
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8e3a49283763a8de2bec7cee003610b75cc62ce2
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: dbd84b13757e4d742896c0450bd4661b5c4d06cf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49297168"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900164"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>関数パラメーターおよび戻り値の注釈設定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -304,92 +304,92 @@ ms.locfileid: "49297168"
   
  **注釈と説明**  
   
--   `_Outptr_`  
+- `_Outptr_`  
   
-     パラメーターを null にすることはできませんし、後の状態に示される場所は null にすることはできず、有効にする必要があります。  
+   パラメーターを null にすることはできませんし、後の状態に示される場所は null にすることはできず、有効にする必要があります。  
   
--   `_Outptr_opt_`  
+- `_Outptr_opt_`  
   
-     パラメーターが null であるが、後の状態に示される場所は null にすることはできず、有効にする必要があります。  
+   パラメーターが null であるが、後の状態に示される場所は null にすることはできず、有効にする必要があります。  
   
--   `_Outptr_result_maybenull_`  
+- `_Outptr_result_maybenull_`  
   
-     パラメーターを null にすることはできませんし、後の状態では、参照先の場所を null にすることができます。  
+   パラメーターを null にすることはできませんし、後の状態では、参照先の場所を null にすることができます。  
   
--   `_Outptr_opt_result_maybenull_`  
+- `_Outptr_opt_result_maybenull_`  
   
-     パラメーターが null であるし、後の状態では、参照先の場所を null にすることができます。  
+   パラメーターが null であるし、後の状態では、参照先の場所を null にすることができます。  
   
- 次の表に、その他の部分文字列は、さらに、注釈の意味を修飾する注釈の名前に挿入されます。  さまざまな部分文字列は`_z`、 `_COM_`、 `_buffer_`、 `_bytebuffer_`、および`_to_`します。  
+  次の表に、その他の部分文字列は、さらに、注釈の意味を修飾する注釈の名前に挿入されます。  さまざまな部分文字列は`_z`、 `_COM_`、 `_buffer_`、 `_bytebuffer_`、および`_to_`します。  
   
 > [!IMPORTANT]
 >  注釈はインターフェイスが COM の場合は、これらの注釈の COM のフォームを使用します。 その他の種類のインターフェイスを COM の注釈を使用しないでください。  
   
  **注釈と説明**  
   
--   `_Outptr_result_z_`  
+- `_Outptr_result_z_`  
   
-     `_Outptr_opt_result_z_`  
+   `_Outptr_opt_result_z_`  
   
-     `_Outptr_result_maybenull_z_`  
+   `_Outptr_result_maybenull_z_`  
   
-     `_Ouptr_opt_result_maybenull_z_`  
+   `_Ouptr_opt_result_maybenull_z_`  
   
-     返されるポインターが、`_Null_terminated_`注釈。  
+   返されるポインターが、`_Null_terminated_`注釈。  
   
--   `_COM_Outptr_`  
+- `_COM_Outptr_`  
   
-     `_COM_Outptr_opt_`  
+   `_COM_Outptr_opt_`  
   
-     `_COM_Outptr_result_maybenull_`  
+   `_COM_Outptr_result_maybenull_`  
   
-     `_COM_Outptr_opt_result_maybenull_`  
+   `_COM_Outptr_opt_result_maybenull_`  
   
-     返されるポインターは COM のセマンティクスがあり、そのため実行を`_On_failure_`事後条件の返されたポインターが null であります。  
+   返されるポインターは COM のセマンティクスがあり、そのため実行を`_On_failure_`事後条件の返されたポインターが null であります。  
   
--   `_Outptr_result_buffer_(s)`  
+- `_Outptr_result_buffer_(s)`  
   
-     `_Outptr_result_bytebuffer_(s)`  
+   `_Outptr_result_bytebuffer_(s)`  
   
-     `_Outptr_opt_result_buffer_(s)`  
+   `_Outptr_opt_result_buffer_(s)`  
   
-     `_Outptr_opt_result_bytebuffer_(s)`  
+   `_Outptr_opt_result_bytebuffer_(s)`  
   
-     返されるポインターが有効なサイズのバッファーを指す`s`要素またはバイト数。  
+   返されるポインターが有効なサイズのバッファーを指す`s`要素またはバイト数。  
   
--   `_Outptr_result_buffer_to_(s, c)`  
+- `_Outptr_result_buffer_to_(s, c)`  
   
-     `_Outptr_result_bytebuffer_to_(s, c)`  
+   `_Outptr_result_bytebuffer_to_(s, c)`  
   
-     `_Outptr_opt_result_buffer_to_(s,c)`  
+   `_Outptr_opt_result_buffer_to_(s,c)`  
   
-     `_Outptr_opt_result_bytebuffer_to_(s,c)`  
+   `_Outptr_opt_result_bytebuffer_to_(s,c)`  
   
-     返されるポインターがサイズのバッファーを指す`s`要素またはバイト数のうち、最初の`c`は有効です。  
+   返されるポインターがサイズのバッファーを指す`s`要素またはバイト数のうち、最初の`c`は有効です。  
   
- 特定のインターフェイスの規則は、エラー発生時の出力パラメーターを無効するを推測します。  明示的に COM コードなどを除く、次の表のフォームが望ましいです。  COM コードなど、前のセクションに記載されている COM の対応する形式を使用します。  
+  特定のインターフェイスの規則は、エラー発生時の出力パラメーターを無効するを推測します。  明示的に COM コードなどを除く、次の表のフォームが望ましいです。  COM コードなど、前のセクションに記載されている COM の対応する形式を使用します。  
   
- **注釈と説明**  
+  **注釈と説明**  
   
--   `_Result_nullonfailure_`  
+- `_Result_nullonfailure_`  
   
-     その他の注釈を変更します。 結果は、関数が失敗した場合は null に設定されます。  
+   その他の注釈を変更します。 結果は、関数が失敗した場合は null に設定されます。  
   
--   `_Result_zeroonfailure_`  
+- `_Result_zeroonfailure_`  
   
-     その他の注釈を変更します。 関数が失敗した場合、結果は 0 に設定します。  
+   その他の注釈を変更します。 関数が失敗した場合、結果は 0 に設定します。  
   
--   `_Outptr_result_nullonfailure_`  
+- `_Outptr_result_nullonfailure_`  
   
-     返されるポインターは、関数が失敗した場合、関数が成功すると、有効なバッファーまたは null を指します。 この注釈は省略できないパラメーターです。  
+   返されるポインターは、関数が失敗した場合、関数が成功すると、有効なバッファーまたは null を指します。 この注釈は省略できないパラメーターです。  
   
--   `_Outptr_opt_result_nullonfailure_`  
+- `_Outptr_opt_result_nullonfailure_`  
   
-     返されるポインターは、関数が失敗した場合、関数が成功すると、有効なバッファーまたは null を指します。 この注釈は、省略可能なパラメーターです。  
+   返されるポインターは、関数が失敗した場合、関数が成功すると、有効なバッファーまたは null を指します。 この注釈は、省略可能なパラメーターです。  
   
--   `_Outref_result_nullonfailure_`  
+- `_Outref_result_nullonfailure_`  
   
-     返されるポインターは、関数が失敗した場合、関数が成功すると、有効なバッファーまたは null を指します。 この注釈は、参照パラメーターです。  
+   返されるポインターは、関数が失敗した場合、関数が成功すると、有効なバッファーまたは null を指します。 この注釈は、参照パラメーターです。  
   
 ## <a name="output-reference-parameters"></a>出力の参照パラメーター  
  参照パラメーターの一般的な用途は、出力パラメーターです。  単純な出力参照パラメーター-たとえば、 `int&`—`_Out_`正しいセマンティクスを提供します。  ただし、出力値がポインター — たとえば`int *&`— などのポインターと同じ注釈`_Outptr_ int **`正しいセマンティクスを指定しません。  ポインター型の出力の参照パラメーターのセマンティクスを簡潔に記述するには、このような複合注釈を使用します。  

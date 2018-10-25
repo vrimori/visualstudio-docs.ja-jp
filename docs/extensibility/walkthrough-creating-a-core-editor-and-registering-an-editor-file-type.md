@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3ee391ce1200cce03e83f80b6f345ead4cd03199
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: 3e00b96d1f5361d3d5260296532be47636f430d6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46495246"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921458"
 ---
 # <a name="walkthrough-create-a-core-editor-and-registering-an-editor-file-type"></a>チュートリアル: コア エディターとエディター ファイルの種類の登録を作成します。
 このチュートリアルを開始する VSPackage を作成する方法について説明、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターでファイルがいつ、 *.myext*ファイル名拡張子が読み込まれます。  
@@ -37,97 +37,97 @@ ms.locfileid: "46495246"
   
 ### <a name="to-create-the-vspackage"></a>VSPackage を作成するには  
   
--   開始[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を作成し、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]という名前の VSPackage `MyPackage`」の説明に従って、[チュートリアル: メニュー コマンド VSPackage を作成する](https://msdn.microsoft.com/library/d699c149-5d1e-47ff-94c7-e1222af02c32)します。  
+- 開始[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を作成し、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]という名前の VSPackage `MyPackage`」の説明に従って、[チュートリアル: メニュー コマンド VSPackage を作成する](https://msdn.microsoft.com/library/d699c149-5d1e-47ff-94c7-e1222af02c32)します。  
   
 ### <a name="to-add-the-editor-factory"></a>エディター ファクトリを追加するには  
   
-1.  右クリックし、 **MyPackage**プロジェクトをポイントして、**追加**、 をクリックし、**クラス**します。  
+1. 右クリックし、 **MyPackage**プロジェクトをポイントして、**追加**、 をクリックし、**クラス**します。  
   
-2.  **新しい項目の追加** ダイアログ ボックスに、必ず、**クラス**テンプレートを選択すると、型`EditorFactory.cs`名、およびクリック**追加**をプロジェクトにクラスを追加します。  
+2. **新しい項目の追加** ダイアログ ボックスに、必ず、**クラス**テンプレートを選択すると、型`EditorFactory.cs`名、およびクリック**追加**をプロジェクトにクラスを追加します。  
   
-     *EditorFactory.cs*ファイルが自動的に開く必要があります。  
+    *EditorFactory.cs*ファイルが自動的に開く必要があります。  
   
-3.  コードから、次のアセンブリを参照します。  
+3. コードから、次のアセンブリを参照します。  
   
-    ```vb  
-    Imports System.Runtime.InteropServices  
-    Imports Microsoft.VisualStudio  
-    Imports Microsoft.VisualStudio.Shell  
-    Imports Microsoft.VisualStudio.Shell.Interop  
-    Imports Microsoft.VisualStudio.OLE.Interop  
-    Imports Microsoft.VisualStudio.TextManager.Interop  
-    Imports IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider  
-    ```  
+   ```vb  
+   Imports System.Runtime.InteropServices  
+   Imports Microsoft.VisualStudio  
+   Imports Microsoft.VisualStudio.Shell  
+   Imports Microsoft.VisualStudio.Shell.Interop  
+   Imports Microsoft.VisualStudio.OLE.Interop  
+   Imports Microsoft.VisualStudio.TextManager.Interop  
+   Imports IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider  
+   ```  
   
-    ```csharp  
-    using System.Runtime.InteropServices;  
-    using Microsoft.VisualStudio;  
-    using Microsoft.VisualStudio.Shell;  
-    using Microsoft.VisualStudio.Shell.Interop;  
-    using Microsoft.VisualStudio.OLE.Interop;  
-    using Microsoft.VisualStudio.TextManager.Interop;  
-    using IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider;  
+   ```csharp  
+   using System.Runtime.InteropServices;  
+   using Microsoft.VisualStudio;  
+   using Microsoft.VisualStudio.Shell;  
+   using Microsoft.VisualStudio.Shell.Interop;  
+   using Microsoft.VisualStudio.OLE.Interop;  
+   using Microsoft.VisualStudio.TextManager.Interop;  
+   using IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider;  
   
-    ```  
+   ```  
   
-4.  追加するのには、GUID、`EditorFactory`クラスを追加することで、`Guid`クラス宣言の直前の属性。  
+4. 追加するのには、GUID、`EditorFactory`クラスを追加することで、`Guid`クラス宣言の直前の属性。  
   
-     使用して、新しい GUID を生成することができます、 *guidgen.exe*でプログラムを[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コマンド プロンプトでは、またはをクリックして**GUID の作成**上、**ツール**メニュー。 ここで使用される GUID はほんの一例です。プロジェクトでは使用しないでください。  
+    使用して、新しい GUID を生成することができます、 *guidgen.exe*でプログラムを[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コマンド プロンプトでは、またはをクリックして**GUID の作成**上、**ツール**メニュー。 ここで使用される GUID はほんの一例です。プロジェクトでは使用しないでください。  
   
-    ```vb  
-    <Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")> _  
-    ```  
+   ```vb  
+   <Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")> _  
+   ```  
   
-    ```csharp  
-    [Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")]   
-    ```  
+   ```csharp  
+   [Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")]   
+   ```  
   
-5.  クラスの定義では、親パッケージとサービス プロバイダーを格納するための 2 つのプライベート変数を追加します。  
+5. クラスの定義では、親パッケージとサービス プロバイダーを格納するための 2 つのプライベート変数を追加します。  
   
-    ```vb  
-    Class EditorFactory  
-        Private parentPackage As Package  
-        Private serviceProvider As IOleServiceProvider  
-    ```  
+   ```vb  
+   Class EditorFactory  
+       Private parentPackage As Package  
+       Private serviceProvider As IOleServiceProvider  
+   ```  
   
-    ```csharp  
-    class EditorFactory  
-    {  
-        private Package parentPackage;  
-        private IOleServiceProvider serviceProvider;  
-    }  
+   ```csharp  
+   class EditorFactory  
+   {  
+       private Package parentPackage;  
+       private IOleServiceProvider serviceProvider;  
+   }  
   
-    ```  
+   ```  
   
-6.  型の 1 つのパラメーターを受け取るパブリック クラスのコンス トラクターを追加<xref:Microsoft.VisualStudio.Shell.Package>:  
+6. 型の 1 つのパラメーターを受け取るパブリック クラスのコンス トラクターを追加<xref:Microsoft.VisualStudio.Shell.Package>:  
   
-    ```vb  
-    Public Sub New(ByVal parentPackage As Package)  
-        Me.parentPackage = parentPackage  
-    End Sub  
-    ```  
+   ```vb  
+   Public Sub New(ByVal parentPackage As Package)  
+       Me.parentPackage = parentPackage  
+   End Sub  
+   ```  
   
-    ```csharp  
-    public EditorFactory(Package parentPackage)  
-    {  
-        this.parentPackage = parentPackage;  
-    }  
-    ```  
+   ```csharp  
+   public EditorFactory(Package parentPackage)  
+   {  
+       this.parentPackage = parentPackage;  
+   }  
+   ```  
   
-7.  変更、`EditorFactory`クラスから派生する宣言、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>インターフェイス。  
+7. 変更、`EditorFactory`クラスから派生する宣言、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>インターフェイス。  
   
-    ```vb  
-    Class EditorFactory Implements IVsEditorFacto  
-    ```  
+   ```vb  
+   Class EditorFactory Implements IVsEditorFacto  
+   ```  
   
-    ```csharp  
-    class EditorFactory : IVsEditorFactory  
+   ```csharp  
+   class EditorFactory : IVsEditorFactory  
   
-    ```  
+   ```  
   
-8.  右クリック<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>、 をクリックして**インターフェイスの実装**、 をクリックし、**インターフェイスを明示的に実装**します。  
+8. 右クリック<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>、 をクリックして**インターフェイスの実装**、 をクリックし、**インターフェイスを明示的に実装**します。  
   
-     この手順で実装する必要がある 4 つのメソッドを追加します、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>インターフェイス。  
+    この手順で実装する必要がある 4 つのメソッドを追加します、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>インターフェイス。  
   
 9. `IVsEditorFactory.Close` メソッドの内容を次のコードに置き換えます。  
   
@@ -321,63 +321,63 @@ ms.locfileid: "46495246"
   
 ### <a name="to-register-the-editor-factory"></a>エディター ファクトリを登録するには  
   
-1.  **ソリューション エクスプ ローラー**をダブルクリック、 **Resources.resx**これで、文字列テーブルを開くファイルをエントリ**String1 が**選択されています。  
+1. **ソリューション エクスプ ローラー**をダブルクリック、 **Resources.resx**これで、文字列テーブルを開くファイルをエントリ**String1 が**選択されています。  
   
-2.  識別子の名前を変更`IDS_EDITORNAME`とテキストを**MyPackage エディター。** この文字列は、エディターの名前として表示されます。  
+2. 識別子の名前を変更`IDS_EDITORNAME`とテキストを**MyPackage エディター。** この文字列は、エディターの名前として表示されます。  
   
-3.  開く、 **VSPackage.resx**ファイル、新しい文字列を追加、名前に設定します**101**、値を設定および`IDS_EDITORNAME`します。 この手順では、作成した文字列にアクセスするリソース ID を持つパッケージを提供します。  
+3. 開く、 **VSPackage.resx**ファイル、新しい文字列を追加、名前に設定します**101**、値を設定および`IDS_EDITORNAME`します。 この手順では、作成した文字列にアクセスするリソース ID を持つパッケージを提供します。  
   
-    > [!NOTE]
-    >  場合、 **VSPackage.resx**ファイルを含む別の文字列を`name`属性に設定**101**では、次の手順は、別の一意の数値の値を置き換えてください。  
+   > [!NOTE]
+   >  場合、 **VSPackage.resx**ファイルを含む別の文字列を`name`属性に設定**101**では、次の手順は、別の一意の数値の値を置き換えてください。  
   
-4.  **ソリューション エクスプ ローラー**、オープン、 **MyPackagePackage.cs**ファイル。  
+4. **ソリューション エクスプ ローラー**、オープン、 **MyPackagePackage.cs**ファイル。  
   
-     このファイルは、メイン パッケージ ファイルです。  
+    このファイルは、メイン パッケージ ファイルです。  
   
-5.  直前に次のユーザー属性を追加、`Guid`属性。  
+5. 直前に次のユーザー属性を追加、`Guid`属性。  
   
-    ```vb  
-    <ProvideEditorFactoryAttribute(GetType(EditorFactory), 101)> _  
-    <ProvideEditorExtensionAttribute(GetType(EditorFactory), _  
-          ".myext", 32, NameResourceID:=101 )> _  
-    ```  
+   ```vb  
+   <ProvideEditorFactoryAttribute(GetType(EditorFactory), 101)> _  
+   <ProvideEditorExtensionAttribute(GetType(EditorFactory), _  
+         ".myext", 32, NameResourceID:=101 )> _  
+   ```  
   
-    ```csharp  
-    [ProvideEditorFactory(typeof(EditorFactory), 101)]  
-    [ProvideEditorExtension(typeof(EditorFactory),   
-          ".myext", 32, NameResourceID = 101)]   
-    ```  
+   ```csharp  
+   [ProvideEditorFactory(typeof(EditorFactory), 101)]  
+   [ProvideEditorExtension(typeof(EditorFactory),   
+         ".myext", 32, NameResourceID = 101)]   
+   ```  
   
-     <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute>属性に関連付け、 *.myext*ファイル エディター ファクトリは、拡張機能にいつでも拡張機能が読み込まれる、エディター ファクトリが呼び出されることを持つファイル。  
+    <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute>属性に関連付け、 *.myext*ファイル エディター ファクトリは、拡張機能にいつでも拡張機能が読み込まれる、エディター ファクトリが呼び出されることを持つファイル。  
   
-6.  プライベート変数の追加、 `MyPackage` 、コンス トラクターの直前に、クラスし、型を付けます`EditorFactory`します。  
+6. プライベート変数の追加、 `MyPackage` 、コンス トラクターの直前に、クラスし、型を付けます`EditorFactory`します。  
   
-    ```vb  
-    Private editorFactory As EditorFactory  
-    ```  
+   ```vb  
+   Private editorFactory As EditorFactory  
+   ```  
   
-    ```csharp  
-    private EditorFactory editorFactory;  
-    ```  
+   ```csharp  
+   private EditorFactory editorFactory;  
+   ```  
   
-7.  検索、`Initialize`メソッド (を開く必要があります、`Package Members`非表示の領域) を呼び出した後、次のコードを追加および`base.Initialize()`します。  
+7. 検索、`Initialize`メソッド (を開く必要があります、`Package Members`非表示の領域) を呼び出した後、次のコードを追加および`base.Initialize()`します。  
   
-    ```vb  
-    'Create our editor factory and register it.   
-    Me.editorFactory = New EditorFactory(Me)  
-    MyBase.RegisterEditorFactory(Me.editorFactory)  
-    ```  
+   ```vb  
+   'Create our editor factory and register it.   
+   Me.editorFactory = New EditorFactory(Me)  
+   MyBase.RegisterEditorFactory(Me.editorFactory)  
+   ```  
   
-    ```csharp  
-    // Create our editor factory and register it.  
-    this.editorFactory = new EditorFactory(this);  
-    base.RegisterEditorFactory(this.editorFactory);  
+   ```csharp  
+   // Create our editor factory and register it.  
+   this.editorFactory = new EditorFactory(this);  
+   base.RegisterEditorFactory(this.editorFactory);  
   
-    ```  
+   ```  
   
-8.  プログラムをコンパイルして、エラーがないかどうかを確認します。  
+8. プログラムをコンパイルして、エラーがないかどうかを確認します。  
   
-     この手順の実験用のレジストリ ハイブでエディター ファクトリを登録します[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 オーバーライドするメッセージが表示されたら、 *resource.h*ファイルで、をクリックして**OK**します。  
+    この手順の実験用のレジストリ ハイブでエディター ファクトリを登録します[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 オーバーライドするメッセージが表示されたら、 *resource.h*ファイルで、をクリックして**OK**します。  
   
 9. という名前のサンプル ファイルを作成する*TextFile1.myext*します。  
   

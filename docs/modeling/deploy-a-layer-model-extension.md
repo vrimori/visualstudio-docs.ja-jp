@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: dace2a3de8e61a92672442adbf77199232c76e12
-ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
+ms.openlocfilehash: feae82f3909be5816e025de21200acda20933d63
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46370914"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874619"
 ---
 # <a name="deploy-a-layer-model-extension"></a>レイヤー モデル拡張機能の配置
 
@@ -29,13 +29,13 @@ Visual Studio の他のユーザーは、Visual Studio を使って作成され�
 
 ### <a name="to-install-the-extension"></a>拡張機能をインストールするには
 
-1.  含むプロジェクトで**source.vsix.manifest**オープン**bin\\ \*** ファイル エクスプ ローラーでします。
+1. 含むプロジェクトで**source.vsix.manifest**、オープン、 *bin*ファイル エクスプ ローラーでディレクトリ。
 
-2.  コピー、  **\*.vsix**ファイルを拡張機能をインストールするコンピューターにします。
+2. コピー、  **\*.vsix**ファイルを拡張機能をインストールするコンピューターにします。
 
-3.  インストール先のコンピューターの Windows エクスプローラーで *.vsix をダブルクリックします。
+3. インストール先のコンピューターの Windows エクスプローラーで *.vsix をダブルクリックします。
 
-     VSIX インストーラーが起動します。
+    VSIX インストーラーが起動します。
 
 ### <a name="to-uninstall-the-extension"></a>拡張機能をアンインストールするには
 

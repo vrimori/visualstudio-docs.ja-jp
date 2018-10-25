@@ -11,59 +11,63 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ffb018e590b95a13e811180e88d1906bf5f703b0
-ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
+ms.openlocfilehash: e9343ed8fdb1f3993fcd5c2f70595fd4bdd92dcd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46370836"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875451"
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>カスタム アーキテクチャ検証を依存関係図に追加する
+
 Visual Studio で、ソース コードが依存関係図に、依存関係に準拠していることを確認できるように、ユーザーはレイヤー モデルに対するプロジェクト内のソース コードを検証することができます。 標準の検証アルゴリズムがありますが、独自の検証拡張機能を定義できます。
 
- ユーザーが選択すると、**アーキテクチャの検証**標準の検証メソッドが呼び出されるがインストールされている検証拡張機能の後に、依存関係図にコマンドします。
+ユーザーが選択すると、**アーキテクチャの検証**標準の検証メソッドが呼び出されるがインストールされている検証拡張機能の後に、依存関係図にコマンドします。
 
 > [!NOTE]
->  依存関係図では、検証の主な目的は、ソリューションの他の部分でプログラム コードを含むダイアグラムの比較です。
+> 依存関係図では、検証の主な目的は、ソリューションの他の部分でプログラム コードを含むダイアグラムの比較です。
 
- レイヤー検証拡張機能を Visual Studio Integration Extension (VSIX) にパッケージ化し、他の Visual Studio ユーザーに配布できます。 検証機能は、単独で VSIX に配置することも、他の拡張機能と組み合わせて同じ VSIX に含めることもできます。 検証コントロールのコードは、他の拡張機能と同じプロジェクトではなく、専用の Visual Studio プロジェクトで作成する必要があります。
+レイヤー検証拡張機能を Visual Studio Integration Extension (VSIX) にパッケージ化し、他の Visual Studio ユーザーに配布できます。 検証機能は、単独で VSIX に配置することも、他の拡張機能と組み合わせて同じ VSIX に含めることもできます。 検証コントロールのコードは、他の拡張機能と同じプロジェクトではなく、専用の Visual Studio プロジェクトで作成する必要があります。
 
 > [!WARNING]
->  検証プロジェクトを作成したら、このトピックの最後にある [コード例](#example) をコピーし、各自のニーズに合わせて編集してください。
+> 検証プロジェクトを作成したら、このトピックの最後にある [コード例](#example) をコピーし、各自のニーズに合わせて編集してください。
 
-## <a name="requirements"></a>要件
- 「 [要件](../modeling/extend-layer-diagrams.md#prereqs)」を参照してください。
+## <a name="requirements"></a>必要条件
+
+「 [要件](../modeling/extend-layer-diagrams.md#prereqs)」を参照してください。
 
 ## <a name="defining-a-layer-validator-in-a-new-vsix"></a>新しい VSIX でレイヤー検証コントロールを定義する
- 最も簡単に検証コントロールを作成するには、プロジェクト テンプレートを使用します。 この方法では、コードと VSIX マニフェストが同じプロジェクトに配置されます。
 
-#### <a name="to-define-an-extension-by-using-a-project-template"></a>プロジェクト テンプレートを使用して拡張機能を定義するには
+最も簡単に検証コントロールを作成するには、プロジェクト テンプレートを使用します。 この方法では、コードと VSIX マニフェストが同じプロジェクトに配置されます。
 
-1.  **[ファイル]** メニューの **[新しいプロジェクト]** を使用して、新しいソリューションにプロジェクトを作成します。
+### <a name="to-define-an-extension-by-using-a-project-template"></a>プロジェクト テンプレートを使用して拡張機能を定義するには
 
-2.  **[新しいプロジェクト]** ダイアログ ボックスの **[モデリング プロジェクト]** で、 **[Layer Designer Validation Extension]**(レイヤー デザイナー検証拡張機能) をクリックします。
+1. **[ファイル]** メニューの **[新しいプロジェクト]** を使用して、新しいソリューションにプロジェクトを作成します。
 
-     このテンプレートでは、小さい例を含むプロジェクトが作成されます。
+2. **[新しいプロジェクト]** ダイアログ ボックスの **[モデリング プロジェクト]** で、 **[Layer Designer Validation Extension]**(レイヤー デザイナー検証拡張機能) をクリックします。
 
-    > [!WARNING]
-    >  正しく動作するためのテンプレート。
-    >
-    >  -   `LogValidationError` の呼び出しを編集し、省略可能な引数 `errorSourceNodes` と `errorTargetNodes`を削除します。
-    > -   カスタム プロパティを使用する場合に記載されている更新プログラムを適用[依存関係図へのカスタム プロパティの追加](../modeling/add-custom-properties-to-layer-diagrams.md)します。
+    このテンプレートでは、小さい例を含むプロジェクトが作成されます。
 
-3.  コードを編集して検証を定義します。 詳細については、「 [検証のプログラミング](#programming)」を参照してください。
+   > [!WARNING]
+   > テンプレートを正常に機能させるには:
+   >
+   > - `LogValidationError` の呼び出しを編集し、省略可能な引数 `errorSourceNodes` と `errorTargetNodes`を削除します。
+   > - カスタム プロパティを使用する場合に記載されている更新プログラムを適用[依存関係図へのカスタム プロパティの追加](../modeling/add-custom-properties-to-layer-diagrams.md)します。
 
-4.  拡張機能をテストするには、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。
+3. コードを編集して検証を定義します。 詳細については、「 [検証のプログラミング](#programming)」を参照してください。
 
-    > [!NOTE]
-    >  メソッドは特定の状況においてのみ呼び出され、ブレークポイントは自動的には動作しません。 詳細については、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。
+4. 拡張機能をテストするには、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。
 
-5.  または別のコンピューターで、Visual Studio のメイン インスタンスで、拡張機能をインストールするには、検索、 **.vsix**ファイル**bin\\\*** します。 このファイルをインストール先のコンピューターにコピーして、ダブルクリックします。 拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。
+   > [!NOTE]
+   > メソッドは特定の状況においてのみ呼び出され、ブレークポイントは自動的には動作しません。 詳細については、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。
+
+5. または別のコンピューターで、Visual Studio のメイン インスタンスで、拡張機能をインストールするには、検索、 *.vsix*ファイル、 *bin*ディレクトリ。 このファイルをインストール先のコンピューターにコピーして、ダブルクリックします。 これをアンインストールするには、選択**拡張機能と更新**上、**ツール**メニュー。
 
 ## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>レイヤー検証コントロールを別の VSIX に追加する
- レイヤー検証コントロール、コマンド、および他の拡張機能を含む 1 つの VSIX を作成する場合は、VSIX を定義するプロジェクトとハンドラー用のプロジェクトを別にすることをお勧めします。
 
-#### <a name="to-add-layer-validation-to-a-separate-vsix"></a>レイヤー検証を別の VSIX に追加するには
+レイヤー検証コントロール、コマンド、および他の拡張機能を含む 1 つの VSIX を作成する場合は、VSIX を定義するプロジェクトとハンドラー用のプロジェクトを別にすることをお勧めします。
+
+### <a name="to-add-layer-validation-to-a-separate-vsix"></a>レイヤー検証を別の VSIX に追加するには
 
 1.  新規または既存の Visual Studio ソリューションでクラス ライブラリ プロジェクトを作成します。 **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual C#]** をクリックし、 **[クラス ライブラリ]** をクリックします。 このプロジェクトには、レイヤー検証クラスが含められます。
 
@@ -100,7 +104,7 @@ Visual Studio で、ソース コードが依存関係図に、依存関係に�
 5.  レイヤー検証プロジェクトに戻り、次のプロジェクト参照を追加します。
 
     |**参照**|**実行できる操作**|
-    |-------------------|------------------------------------|
+    |-|-|
     |Microsoft.VisualStudio.GraphModel.dll|アーキテクチャ グラフを読み取る|
     |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|レイヤーと関連付けられているコード DOM を読み取る|
     |Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|レイヤー モデルを読み取る|
@@ -113,104 +117,108 @@ Visual Studio で、ソース コードが依存関係図に、依存関係に�
 7.  拡張機能をテストするには、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。
 
     > [!NOTE]
-    >  メソッドは特定の状況においてのみ呼び出され、ブレークポイントは自動的には動作しません。 詳細については、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。
+    > メソッドは特定の状況においてのみ呼び出され、ブレークポイントは自動的には動作しません。 詳細については、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。
 
 8.  または別のコンピューターで、Visual Studio のメイン インスタンスで、VSIX をインストールするには、検索、 **.vsix**ファイル、 **bin** VSIX プロジェクトのディレクトリ。 このファイルを、VSIX をインストールするコンピューターにコピーします。 Windows エクスプローラーで、VSIX ファイルをダブルクリックします。
 
      拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。
 
 ##  <a name="programming"></a> 検証のプログラミング
- レイヤー検証拡張機能を定義するには、以下の特性を備えたクラスを定義します。
 
--   宣言の全体的な形式を次に示します。
+レイヤー検証拡張機能を定義するには、以下の特性を備えたクラスを定義します。
 
-    ```
+- 宣言の全体的な形式を次に示します。
 
-    using System.ComponentModel.Composition;
-    using Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema;
-    using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;
-    using Microsoft.VisualStudio.GraphModel;
-    ...
-     [Export(typeof(IValidateArchitectureExtension))]
-      public partial class Validator1Extension :
-                      IValidateArchitectureExtension
+  ```csharp
+  using System.ComponentModel.Composition;
+  using Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema;
+  using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;
+  using Microsoft.VisualStudio.GraphModel;
+  ...
+   [Export(typeof(IValidateArchitectureExtension))]
+    public partial class Validator1Extension :
+                    IValidateArchitectureExtension
+    {
+      public void ValidateArchitecture(Graph graph)
       {
-        public void ValidateArchitecture(Graph graph)
-        {
-           GraphSchema schema = graph.DocumentSchema;
-          ...
-      } }
-    ```
+         GraphSchema schema = graph.DocumentSchema;
+        ...
+    } }
+  ```
 
--   エラーを検出したときは、 `LogValidationError()`を使用して報告できます。
+- エラーを検出したときは、 `LogValidationError()`を使用して報告できます。
 
-    > [!WARNING]
-    >  `LogValidationError`の省略可能なパラメーターを使用しないでください。
+  > [!WARNING]
+  > `LogValidationError`の省略可能なパラメーターを使用しないでください。
 
- ユーザーが **[アーキテクチャの検証]** を実行すると、レイヤーのランタイム システムがレイヤーとその成果物を分析して、グラフを生成します。 グラフは 4 つの部分で構成されます。
+ユーザーが **[アーキテクチャの検証]** を実行すると、レイヤーのランタイム システムがレイヤーとその成果物を分析して、グラフを生成します。 グラフは 4 つの部分で構成されます。
 
--   ノードと、グラフ内のリンクとして表されるレイヤー、Visual Studio のソリューションのモデル。
+- ノードと、グラフ内のリンクとして表されるレイヤー、Visual Studio のソリューションのモデル。
 
--   ソリューションで定義されているコード、プロジェクト アイテム、および他の成果物は、ノードおよび分析システムによって検出された依存関係を示すリンクとして表されます。
+- ソリューションで定義されているコード、プロジェクト アイテム、および他の成果物は、ノードおよび分析システムによって検出された依存関係を示すリンクとして表されます。
 
--   レイヤー ノードからコード成果物ノードへのリンク。
+- レイヤー ノードからコード成果物ノードへのリンク。
 
--   検証コントロールによって検出されたエラーを表すノード。
+- 検証コントロールによって検出されたエラーを表すノード。
 
- グラフが作成されると、標準の検証メソッドが呼び出されます。 これが完了すると、インストールされているすべての拡張検証メソッドが、不定の順序で呼び出されます。 グラフを渡された各 `ValidateArchitecture` メソッドは、グラフをスキャンし、検出したエラーを報告します。
+グラフが作成されると、標準の検証メソッドが呼び出されます。 これが完了すると、インストールされているすべての拡張検証メソッドが、不定の順序で呼び出されます。 グラフを渡された各 `ValidateArchitecture` メソッドは、グラフをスキャンし、検出したエラーを報告します。
 
 > [!NOTE]
->  これはドメイン固有言語で使用できる検証プロセスと同じです。
+> これはドメイン固有言語で使用できる検証プロセスと同じです。
 
- 検証メソッドでは、レイヤー モデルまたは検証対象のコードを変更することはできません。
+検証メソッドでは、レイヤー モデルまたは検証対象のコードを変更することはできません。
 
- グラフ モデルは、 <xref:Microsoft.VisualStudio.GraphModel>で定義されています。 そのプリンシパル クラスは、 <xref:Microsoft.VisualStudio.GraphModel.GraphNode> および <xref:Microsoft.VisualStudio.GraphModel.GraphLink>です。
+グラフ モデルは、 <xref:Microsoft.VisualStudio.GraphModel>で定義されています。 そのプリンシパル クラスは、 <xref:Microsoft.VisualStudio.GraphModel.GraphNode> および <xref:Microsoft.VisualStudio.GraphModel.GraphLink>です。
 
- 各ノードおよび各リンクには 1 つ以上のカテゴリがあり、それぞれが表す要素または関係の種類が指定されています。 標準的なグラフのノードには以下のカテゴリがあります。
+各ノードおよび各リンクには 1 つ以上のカテゴリがあり、それぞれが表す要素または関係の種類が指定されています。 標準的なグラフのノードには以下のカテゴリがあります。
 
--   Dsl.LayerModel
+- Dsl.LayerModel
 
--   Dsl.Layer
+- Dsl.Layer
 
--   Dsl.Reference
+- Dsl.Reference
 
--   CodeSchema_Type
+- CodeSchema_Type
 
--   CodeSchema_Namespace
+- CodeSchema_Namespace
 
--   CodeSchema_Type
+- CodeSchema_Type
 
--   CodeSchema_Method
+- CodeSchema_Method
 
--   CodeSchema_Field
+- CodeSchema_Field
 
--   CodeSchema_Property
+- CodeSchema_Property
 
- レイヤーからコード内の要素へのリンクのカテゴリは "Represents" です。
+レイヤーからコード内の要素へのリンクのカテゴリは "Represents" です。
 
 ##  <a name="debugging"></a> 検証のデバッグ
- レイヤー検証拡張機能をデバッグするには、Ctrl キーを押しながら F5 キーを押します。 Visual Studio の実験用インスタンスが開きます。 このインスタンスで、レイヤー モデルを開くか作成します。 このモデルは、コードと関連付けられている必要があり、少なくとも 1 つの依存関係を含む必要があります。
+
+レイヤー検証拡張機能をデバッグするには、Ctrl キーを押しながら F5 キーを押します。 Visual Studio の実験用インスタンスが開きます。 このインスタンスで、レイヤー モデルを開くか作成します。 このモデルは、コードと関連付けられている必要があり、少なくとも 1 つの依存関係を含む必要があります。
 
 ### <a name="test-with-a-solution-that-contains-dependencies"></a>依存関係を含むソリューションでのテスト
- 以下の特性が存在していない限り、検証は実行されません。
 
--   依存関係図に、少なくとも 1 つの依存関係リンクがあります。
+以下の特性が存在していない限り、検証は実行されません。
 
--   コード要素と関連付けられたレイヤーがモデルに存在する。
+- 依存関係図に、少なくとも 1 つの依存関係リンクがあります。
 
- 最初に、検証拡張機能をテストする Visual Studio の実験用インスタンスを開始するには、開くか、これらの特性を持つソリューションを作成します。
+- コード要素と関連付けられたレイヤーがモデルに存在する。
+
+最初に、検証拡張機能をテストする Visual Studio の実験用インスタンスを開始するには、開くか、これらの特性を持つソリューションを作成します。
 
 ### <a name="run-clean-solution-before-validate-architecture"></a>アーキテクチャを検証する前に [ソリューションのクリーン] を実行する
- 検証コードを更新したときは常に、検証コマンドをテストする前に、実験用ソリューションで **[ビルド]** メニューの **[ソリューションのクリーン]** を使用します。 これは、検証の結果がキャッシュされているために必要です。 テストの依存関係図またはそのコードを更新していない場合、検証メソッドは実行されません。
+
+検証コードを更新したときは常に、検証コマンドをテストする前に、実験用ソリューションで **[ビルド]** メニューの **[ソリューションのクリーン]** を使用します。 これは、検証の結果がキャッシュされているために必要です。 テストの依存関係図またはそのコードを更新していない場合、検証メソッドは実行されません。
 
 ### <a name="launch-the-debugger-explicitly"></a>デバッガーを明示的に起動する
- 検証は別のプロセスで実行されます。 したがって、検証メソッド内のブレークポイントはトリガーされません。 検証が開始したら、デバッガーをプロセスに明示的にアタッチする必要があります。
 
- デバッガーを検証プロセスにアタッチするには、検証メソッドの先頭に `System.Diagnostics.Debugger.Launch()` の呼び出しを挿入します。 デバッグのダイアログ ボックスが表示されたら、Visual Studio のメイン インスタンスを選択します。
+検証は別のプロセスで実行されます。 したがって、検証メソッド内のブレークポイントはトリガーされません。 検証が開始したら、デバッガーをプロセスに明示的にアタッチする必要があります。
 
- または、 `System.Windows.Forms.MessageBox.Show()`の呼び出しを挿入してもかまいません。 メッセージ ボックスが表示されたら、Visual Studio のメイン インスタンスに移動、**デバッグ**ボタンをクリックし**プロセスにアタッチ**します。 **Graphcmd.exe**という名前のプロセスを選択します。
+デバッガーを検証プロセスにアタッチするには、検証メソッドの先頭に `System.Diagnostics.Debugger.Launch()` の呼び出しを挿入します。 デバッグのダイアログ ボックスが表示されたら、Visual Studio のメイン インスタンスを選択します。
 
- 常に、Ctrl キーを押しながら F5 キーを押して (**[デバッグなしで開始]**) 実験用インスタンスを起動します。
+または、 `System.Windows.Forms.MessageBox.Show()`の呼び出しを挿入してもかまいません。 メッセージ ボックスが表示されたら、Visual Studio のメイン インスタンスに移動、**デバッグ**ボタンをクリックし**プロセスにアタッチ**します。 **Graphcmd.exe**という名前のプロセスを選択します。
+
+常に、Ctrl キーを押しながら F5 キーを押して (**[デバッグなしで開始]**) 実験用インスタンスを起動します。
 
 ### <a name="deploying-a-validation-extension"></a>検証拡張機能を配置する
 

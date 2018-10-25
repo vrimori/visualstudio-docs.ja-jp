@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider::SetObjectForVisualizer |Microsoft ドキュメント
+title: IEEVisualizerDataProvider::SetObjectForVisualizer |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0d1a6272f8a04316c8695f301d5c45512b05f2d3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f02f90ce8325a0ba75c31904a689e84705a5273a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31120729"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866169"
 ---
 # <a name="ieevisualizerdataprovidersetobjectforvisualizer"></a>IEEVisualizerDataProvider::SetObjectForVisualizer
 このメソッドは、ビジュアライザーを表すオブジェクトを変更します。  
@@ -51,13 +51,13 @@ int SetObjectForVisualizer(
  [out]オブジェクトを設定中にエラーがあった場合、この文字列は、エラー メッセージを保持します。  
   
  `pException`  
- [out]エラーがあった場合、このオブジェクトは、例外情報を格納します。  
+ [out]エラーがあった場合、このオブジェクトは、例外情報を保持します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- エラー情報を返す方法を決定する、実装者の責任です。 ただし、可能であればだけで認識に、例外オブジェクトが返されたかどうかにエラーが発生しました、エラーが発生した場合、このメソッドは例外オブジェクトを返す常にする必要がありますのでがいくつかの呼び出し元に可能性があります。 エラー文字列は、呼び出し元がようにしたい場合にも指定するのに使用します。  
+## <a name="remarks"></a>Remarks  
+ エラー情報を返す方法を決定する、実装者の責任です。 ただし、これはことを認識する例外オブジェクトが返されたかどうかにエラーが発生しました、エラーが発生した場合、このメソッドは例外オブジェクトを返す常にする必要がありますのでのみがいくつかの呼び出し元に可能性がありますができます。 エラー文字列は、呼び出し元が作成する場合も指定するのに使用します。  
   
 ## <a name="see-also"></a>関連項目  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)   

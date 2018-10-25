@@ -11,12 +11,12 @@ ms.author: bertaygu
 manager: douge
 ms.workload:
 - bertaygu
-ms.openlocfilehash: 8ef7b61eca40c1a5c74deeb0b3e61de0df8a6be1
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: d1f2942c9f5987a686226c94e9764b8ab6300050
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637576"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934926"
 ---
 # <a name="measuring-extension-impact-in-startup"></a>スタートアップの拡張機能への影響を測定します。
 
@@ -169,11 +169,11 @@ PerfView はスレッドのより詳細な分析のための独自のヘルプ] 
 
 1. IO を使用して`System.IO`クラス: ファイル IO の速度がマシンからマシンを異なるため、潜在的な問題の原因はこれらのフレームの包括的なコストは、トレースにコストが高すぎるはないかもしれませんが、します。
 
-  ![システム io フレーム](media/perfview-system-io-frames.png)
+   ![システム io フレーム](media/perfview-system-io-frames.png)
 
 2. 他の作業を非同期に待機している呼び出しをブロックします。 ここでは、包括時間は、非同期操作の完了時にメイン スレッドがブロックされている時間を表します。
 
-  ![ブロッキング呼び出しフレーム](media/perfview-blocking-call-frames.png)
+   ![ブロッキング呼び出しフレーム](media/perfview-blocking-call-frames.png)
 
 影響を判断で役に立つトレース内の他のビューの 1 つでは、**イメージ読み込みスタック**します。 同じフィルターを適用するに適用される**スレッド時間スタック**を表示し、自動の読み込まれたパッケージによって実行されるコードのために読み込まれたすべてのアセンブリを見つけます。
 

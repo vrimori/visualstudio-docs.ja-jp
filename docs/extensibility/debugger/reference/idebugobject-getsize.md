@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetSize |Microsoft ドキュメント
+title: IDebugObject::GetSize |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a3a6880b7b3a09b92ca4dd9c31d01cb1c05d1620
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 08dcc3306d812dafe99b22ec534a81b4420606c2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31112494"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926034"
 ---
 # <a name="idebugobjectgetsize"></a>IDebugObject::GetSize
 オブジェクトのサイズをバイト単位で取得します。  
@@ -46,8 +46,8 @@ int GetSize(
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 使用して、 [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md)バイトのシーケンスとして値を取得します。  
+## <a name="remarks"></a>Remarks  
+ 使用して、 [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md)バイトのシーケンスとして値を取得するメソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   

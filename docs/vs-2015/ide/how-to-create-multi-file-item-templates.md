@@ -18,25 +18,25 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cda39459d0ddc0920dbb5b47157d90160ad3d166
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 00d7fbaa97172c98db61f93706f7e596bb22ddee
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49286794"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862178"
 ---
 # <a name="how-to-create-multi-file-item-templates"></a>方法 : 複数ファイルの項目テンプレートを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 項目テンプレートには 1 つの項目のみを指定できますが、1 つの項目が複数のファイルから構成されている場合があります。 たとえば、Visual Basic の Windows フォーム項目テンプレートには、次の 3 つのファイルが必要です。  
   
--   フォームのコードを含む .vb ファイル。  
+- フォームのコードを含む .vb ファイル。  
   
--   フォームのデザイナー情報を含む .designer.vb ファイル。  
+- フォームのデザイナー情報を含む .designer.vb ファイル。  
   
--   フォームの埋め込みリソースを含む .resx ファイル。  
+- フォームの埋め込みリソースを含む .resx ファイル。  
   
- 複数ファイルの項目テンプレートでは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で項目が作成されるときに正しいファイル名拡張子が使用されるようにするために、パラメーターが必要です。 **テンプレートのエクスポート** ウィザードを使用して項目テンプレートを作成する場合は、これらのパラメーターが自動的に生成されるので、それ以上編集する必要はありません。 次の手順では、正しいファイル名拡張子を作成するためのパラメーターの使用方法について説明します。  
+  複数ファイルの項目テンプレートでは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で項目が作成されるときに正しいファイル名拡張子が使用されるようにするために、パラメーターが必要です。 **テンプレートのエクスポート** ウィザードを使用して項目テンプレートを作成する場合は、これらのパラメーターが自動的に生成されるので、それ以上編集する必要はありません。 次の手順では、正しいファイル名拡張子を作成するためのパラメーターの使用方法について説明します。  
   
 ### <a name="to-manually-create-a-multi-file-item-template"></a>複数ファイルの項目テンプレートを手動で作成するには  
   

@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: fd0aa403e702a591a0b09d0891116063a3ed9ff2
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: f8d1ae730947a70cac253866d0257aa4e0216626
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44281053"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882770"
 ---
 # <a name="run-uwp-apps-in-the-simulator"></a>シミュレーターで UWP アプリを実行する
 UWP アプリ用の Visual Studio シミュレーターは、UWP アプリをシミュレートするデスクトップ アプリケーションです。 通常は、接続されたデバイス、またはリモート コンピューターのローカル コンピューター上でデバッグします。 ただし、一部のシナリオでの Visual Studio シミュレーターを使用して、別の物理的な画面サイズと解像度をエミュレートすることがあります。 また、一般的なタッチと回転イベントのシミュレートし、ネットワーク接続のプロパティをシミュレートできます。
@@ -109,41 +109,41 @@ UWP アプリ用の Visual Studio シミュレーターは、UWP アプリをシ
      ![設定のコンテキスト メニューのスクリーン ショット](../debugger/media/simulator_screenshotsettingscntxmnu.png "SIMULATOR_ScreenShotSettingsCntxMnu")  
   
 ##  <a name="BKMK_Simulate_network_connection_properties"></a> ネットワーク接続のプロパティをシミュレートする  
- アプリのユーザーが従量制ネットワーク接続のコストを管理するには、ネットワーク接続コストやデータ プランの状態の変更の認識を維持し、この情報を使用して、ローミングや超過のための追加コストの発生を避けるためにアプリを有効にすることができます、指定したデータ転送の制限。 [Windows.Networking.Connectivity](/uwp/api/windows.networking.connectivity) Api に応答できます。 [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation)と[TriggerType](/uwp/api/windows.applicationmodel.background.systemtrigger)署名を行うイベント。 参照してください[クイック スタート: 従量制課金接続の管理のコスト制約](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)します。  
+ アプリのユーザーが従量制ネットワーク接続のコストを管理するには、ネットワーク接続コストやデータ プランの状態の変更の認識を維持し、この情報を使用して、ローミングや超過のための追加コストの発生を避けるためにアプリを有効にすることができます、指定したデータ転送の制限。 [Windows.Networking.Connectivity](/uwp/api/windows.networking.connectivity) API を使用すると、 [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) および署名を行うイベント [TriggerType](/uwp/api/windows.applicationmodel.background.systemtrigger) に応答できます。 「 [従量制課金接続のコスト制約を管理する方法 (HTML)](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)」をご覧ください。  
   
  シミュレーターをデバッグまたは、ネットワーク コストを認識するコードをテスト、を通じて公開されているネットワークのプロパティを模倣できます、 [ConnectionProfile](/uwp/api/windows.networking.connectivity.connectionprofile)によって返されるオブジェクト[GetInternetConnectionProfile](/uwp/api/windows.networking.connectivity.networkinformation)します。
   
  ネットワークのプロパティをシミュレートするには、次のようにします。  
   
-1.  シミュレーターのツール バーの **[ネットワーク プロパティの変更]** ボタンをクリックします。  
+1. シミュレーターのツール バーの **[ネットワーク プロパティの変更]** ボタンをクリックします。  
   
-2.  **[ネットワーク プロパティの設定]** ダイアログ ボックスの **[シミュレートされたネットワーク プロパティの使用]** をクリックします。  
+2. **[ネットワーク プロパティの設定]** ダイアログ ボックスの **[シミュレートされたネットワーク プロパティの使用]** をクリックします。  
   
-     チェック ボックスをオフにしてシミュレーションを削除し、現在接続されているインターフェイスのネットワーク プロパティに戻ります。  
+    チェック ボックスをオフにしてシミュレーションを削除し、現在接続されているインターフェイスのネットワーク プロパティに戻ります。  
   
-3.  シミュレートされたネットワークの **[プロファイル名]** を入力します。 シミュレーションを識別するために使用できる一意の名前を使用することをお勧めします。、 [ProfileName](/uwp/api/windows.networking.connectivity.connectionprofile)のプロパティ、 [ConnectionProfile](/uwp/api/windows.networking.connectivity.connectionprofile)オブジェクト。  
+3. シミュレートされたネットワークの **[プロファイル名]** を入力します。 [ConnectionProfile](/uwp/api/windows.networking.connectivity.connectionprofile) オブジェクトの [ProfileName](/uwp/api/windows.networking.connectivity.connectionprofile) プロパティでシミュレーションを識別するために使用できる一意の名前を使用することをお勧めします。  
   
-4.  選択、 [NetworkCostType](/uwp/api/windows.networking.connectivity.networkcosttype)からプロファイルの値、**ネットワーク コストの種類**一覧。  
+4. [[ネットワーク コストの種類]](/uwp/api/windows.networking.connectivity.networkcosttype) の一覧からプロファイルの **NetworkCostType** 値を選択します。  
   
-5.  **データの限度の状態フラグ**] ボックスの一覧を設定できます、 [ApproachingDataLimit](/uwp/api/windows.networking.connectivity.connectioncost)プロパティまたは[OverDataLimit](/uwp/api/windows.networking.connectivity.connectioncost)プロパティを true を選択または**データの制限 [** 両方の値を false に設定します。  
+5. **データの限度の状態フラグ**] ボックスの一覧を設定できます、 [ApproachingDataLimit](/uwp/api/windows.networking.connectivity.connectioncost)プロパティまたは[OverDataLimit](/uwp/api/windows.networking.connectivity.connectioncost)プロパティを true を選択または**データの制限 [** 両方の値を false に設定します。  
   
-6.  **ローミングの状態**一覧で、設定、[ローミング](/uwp/api/windows.networking.connectivity.connectioncost)プロパティ。  
+6. **[ローミングの状態]** の一覧から、 [Roaming](/uwp/api/windows.networking.connectivity.connectioncost) プロパティを設定します。  
   
-7.  選択**プロパティの設定**、前景をトリガーすることによって、ネットワークのプロパティをシミュレートするために[NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation)イベントとバック グラウンド[SystemTrigger](/uwp/api/windows.applicationmodel.background.systemtrigger)型の**NetworkStateChange**します。  
+7. **[プロパティの設定]** をクリックして、前景の [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) イベントおよび [NetworkStateChange](/uwp/api/windows.applicationmodel.background.systemtrigger) 型の背景の **SystemTrigger**をトリガーして、ネットワーク プロパティをシミュレートします。  
   
- **ネットワーク接続の管理の詳細について**  
+   **ネットワーク接続の管理の詳細について**  
   
- [クイック スタート:、ネットワーク コストの制約が従量制課金を管理します。](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)  
+   [従量制課金接続のコスト制約を管理する方法 (HTML)](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)  
   
- [ネットワーク情報のサンプル](https://code.msdn.microsoft.com/windowsapps/Network-Information-Sample-63aaa201)  
+   [ネットワーク情報のサンプル](https://code.msdn.microsoft.com/windowsapps/Network-Information-Sample-63aaa201)  
   
- [エネルギー使用の分析](../profiling/analyze-energy-use-in-store-apps.md)  
+   [エネルギー使用の分析](../profiling/analyze-energy-use-in-store-apps.md)  
   
- [Windows.Networking.Connectivity](/uwp/api/windows.networking.connectivity)  
+   [Windows.Networking.Connectivity](/uwp/api/windows.networking.connectivity)  
   
- [バック グラウンド タスクでシステム イベントに応答する方法](/previous-versions/windows/apps/hh977058(v=win.10))  
+   [バックグラウンド タスクでシステム イベントに応答する方法](/previous-versions/windows/apps/hh977058(v=win.10))  
   
- [UWP アプリで中断イベント、再開イベント、およびバックグラウンド イベントをトリガーする方法](/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio)  
+   [UWP アプリで中断イベント、再開イベント、およびバックグラウンド イベントをトリガーする方法](/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio)  
   
 ##  <a name="BKMK_Navigate_the_simulator_with_the_keyboard"></a> キーボードを使用してシミュレーター内を移動する  
  キーを押して、シミュレーター ツールバーをナビゲートできます**CTRL + ALT + ↑**シミュレーター ウィンドウからシミュレーター ツールバーにフォーカスを移動します。 ツール バーのボタンの間を移動するには、 **上向きの矢印** と **下向きの矢印** を使用します。  

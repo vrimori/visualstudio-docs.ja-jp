@@ -1,5 +1,5 @@
 ---
-title: PROCESS_INFO_FIELDS |Microsoft ドキュメント
+title: PROCESS_INFO_FIELDS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3376db379e4e911bcaa8e865a16c63d1251229f6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 40a8bd1719ec69f78a5697f089062d86211542c0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31126387"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858317"
 ---
 # <a name="processinfofields"></a>PROCESS_INFO_FIELDS
 プロセスを取得する情報の種類を指定します。  
@@ -58,40 +58,40 @@ public enum enum_PROCESS_INFO_FIELDS {
   
 ## <a name="members"></a>メンバー  
  PIF_FILE_NAME  
- 初期化/を使用して、`bstrFileName`のフィールド、 [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)構造体。  
+ 初期化/使用、`bstrFileName`のフィールド、 [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)構造体。  
   
  PIF_BASE_NAME  
- 初期化/を使用して、`bstrBaseName`のフィールド、`PROCESS_INFO`構造体。  
+ 初期化/使用、`bstrBaseName`のフィールド、`PROCESS_INFO`構造体。  
   
  PIF_TITLE  
- 初期化/を使用して、`bstrTitle`のフィールド、`PROCESS_INFO`構造体。  
+ 初期化/使用、`bstrTitle`のフィールド、`PROCESS_INFO`構造体。  
   
  PIF_PROCESS_ID  
- 初期化/を使用して、`ProcessId`のフィールド、`PROCESS_INFO`構造体。  
+ 初期化/使用、`ProcessId`のフィールド、`PROCESS_INFO`構造体。  
   
  PIF_SESSION_ID  
- 初期化/を使用して、`dwSessionId`のフィールド、`PROCESS_INFO`構造体。  
+ 初期化/使用、`dwSessionId`のフィールド、`PROCESS_INFO`構造体。  
   
  PIF_ATTACHED_SESSION_NAME  
- 初期化/を使用して、`bstrAttachedSessionName`のフィールド、`PROCESS_INFO`構造体。  
+ 初期化/使用、`bstrAttachedSessionName`のフィールド、`PROCESS_INFO`構造体。  
   
  PIF_CREATION_TIME  
- 初期化/を使用して、`CreationTime`のフィールド、`PROCESS_INFO`構造体。  
+ 初期化/使用、`CreationTime`のフィールド、`PROCESS_INFO`構造体。  
   
  PIF_FLAGS  
- 初期化/を使用して、`Flags`のフィールド、`PROCESS_INFO`構造体。  
+ 初期化/使用、`Flags`のフィールド、`PROCESS_INFO`構造体。  
   
  PIF_ALL  
  すべてのフィールドに入力します。  
   
-## <a name="remarks"></a>コメント  
- 渡される、 [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)メソッドのどのフィールドを示すために、 [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)構造が初期化するのには。  
+## <a name="remarks"></a>Remarks  
+ 渡される、 [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)のどのフィールドを示すメソッド、 [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)構造体が初期化されるは。  
   
- 使用`Fields`のフィールド、`PROCESS_INFO`構造のどのフィールドが使用されていると有効なことを示します。  
+ 使用`Fields`のフィールド、`PROCESS_INFO`フィールドが使用し、有効なときは、構造体。  
   
- これらのフラグは、ビットごとと組み合わせること`OR`です。  
+ これらのフラグは、演算と組み合わせることがあります`OR`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

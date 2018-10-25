@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a6c38eb732a6e431804070505ecbd01e869c34ca
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 76be049c670fb91911be70132b459cad5e5183bd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079873"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49902465"
 ---
 # <a name="how-to-specify-an-alternate-location-for-deployment-updates"></a>方法: 配置の更新用の別の場所を指定します。
 インストールすることができます、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] CD やファイル共有から最初にアプリケーションが、アプリケーションは、Web での定期的な更新プログラムを確認する必要があります。 その最初のインストール後に、Web からアプリケーションを更新できるように、配置マニフェストの更新プログラムの別の場所を指定できます。  
@@ -46,16 +46,16 @@ ms.locfileid: "39079873"
   
 ### <a name="specify-an-alternate-location-for-updates-by-using-mageexe"></a>Mage.exe を使用して更新プログラムの別の場所を指定します。  
   
-1.  .NET Framework コマンド プロンプトを開きます。  
+1. .NET Framework コマンド プロンプトを開きます。  
   
-2.  次のコマンドを使用して更新プログラムの場所を設定します。 この例で*HelloWorld.exe.application*へのパス、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]は .application という拡張子を持つ常に、アプリケーション マニフェストと*http://adatum.com/Update/Path*そのをURLには[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]はアプリケーションの更新プログラムを確認します。  
+2. 次のコマンドを使用して更新プログラムの場所を設定します。 この例で*HelloWorld.exe.application*へのパス、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]は .application という拡張子を持つ常に、アプリケーション マニフェストと*<http://adatum.com/Update/Path>* そのをURLには[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]はアプリケーションの更新プログラムを確認します。  
   
-     **Mage-HelloWorld.exe.application ProviderUrl の更新 http://adatum.com/Update/Path**  
+    **Mage-HelloWorld.exe.application ProviderUrl の更新 http://adatum.com/Update/Path**  
   
-3.  ファイルを保存します。  
+3. ファイルを保存します。  
   
-    > [!NOTE]
-    >  今すぐに使用して、ファイルを再署名する必要があります*Mage.exe*します。 詳細については、次を参照してください。[チュートリアル: ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。  
+   > [!NOTE]
+   >  今すぐに使用して、ファイルを再署名する必要があります*Mage.exe*します。 詳細については、次を参照してください。[チュートリアル: ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  場合は、CD などのオフライン メディアから、アプリケーションをインストールして、コンピューターがオンラインで[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]で指定された URL はまず、`<deploymentProvider>`タグの最新のバージョンが更新プログラムの場所に含まれているかどうか、配置マニフェストで、アプリケーション。 その場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]の代わりに、最初のインストール ディレクトリから、そこから直接アプリケーションをインストールし、共通言語ランタイム (CLR) は、アプリケーションの信頼を決定します。 レベルを使用して`<deploymentProvider>`。 コンピューターがオフラインの場合、または`<deploymentProvider>`にアクセスできない[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]CD、および CLR からのインストールには、インストール ポイントに基づいて信頼が与えられます。 つまり CD インストールの場合、アプリケーションは完全な信頼を受け取ります。 すべての後続の更新では、その信頼レベルを継承します。  

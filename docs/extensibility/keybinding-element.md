@@ -14,17 +14,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: eb8e0dca8293d5d5e853dde19e0c411cfd3e4e63
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: 77fb94e702615d0d27ce2587c034000f6c4b3e3d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46495298"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905104"
 ---
 # <a name="keybinding-element"></a>KeyBinding 要素
 KeyBinding 要素には、コマンドのキーボード ショートカットを指定します。  
   
- コマンドには、1 台または 2 の両方のキー バインドを使用して、それらに関連付けられていることができます。 1 つのキー バインドの例は、 **Ctrl**+**S**の**保存**コマンド。 2 つのキー バインドでは、コマンドをトリガーする 2 つの連続するキーの組み合わせが必要です。 2 つのキー バインドの例は、 **Ctrl * +** K **、** Ctrl**+** K * は、ブックマークを設定します。  
+ コマンドには、1 台または 2 の両方のキー バインドを使用して、それらに関連付けられていることができます。 1 つのキー バインドの例は、 **Ctrl**+**S**の**保存**コマンド。 2 つのキー バインドでは、コマンドをトリガーする 2 つの連続するキーの組み合わせが必要です。 二重キー バインドの例は、 <strong>Ctrl*+</strong>K<strong>、</strong>Ctrl<strong>+</strong>K** ブックマークを設定します。  
   
 ## <a name="syntax"></a>構文  
   

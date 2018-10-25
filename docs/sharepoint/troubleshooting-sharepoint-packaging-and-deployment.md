@@ -26,12 +26,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ea1c04066099b385b03c1b81bc4d85c7fb13e329
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: ba6f0a1aff0c263534c17256b7f5cf49ff9c9533
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119502"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898058"
 ---
 # <a name="troubleshoot-sharepoint-packaging-and-deployment"></a>SharePoint のパッケージ化とデプロイをトラブルシューティングします。
   このトピックでは、SharePoint ソリューションをパッケージ化および配置するときに発生する可能性があるさまざまな問題について説明します。
@@ -59,13 +59,13 @@ ms.locfileid: "37119502"
 ## <a name="differences-between-f5-deployment"></a>F5 キーによる配置の相違点
  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を使用してテストおよびデバッグのために SharePoint プロジェクトをローカル SharePoint サーバーに配置する際に、いくつかの追加の手順が [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によって実行されます。
 
-1.  配置手順の間にインターネット インフォメーション サービス (IIS) がリセットされます。
+1. 配置手順の間にインターネット インフォメーション サービス (IIS) がリセットされます。
 
-2.  ワークフローが自動的に関連付けられます。
+2. ワークフローが自動的に関連付けられます。
 
-3.  パッケージ デザイナーの階層構造に従ってフィーチャーのアクティブ化の順序が設定されます。
+3. パッケージ デザイナーの階層構造に従ってフィーチャーのアクティブ化の順序が設定されます。
 
- さらに変更するカスタムの配置手順を追加することができます、 **F5**動作します。 詳細については、次を参照してください。[チュートリアル: SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)です。
+   さらに変更するカスタムの配置手順を追加することができます、 **F5**動作します。 詳細については、次を参照してください。[チュートリアル: SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)です。
 
 ## <a name="delay-displaying-sharepoint-page-when-deploy-visual-web-part"></a>遅延の SharePoint ページを表示する視覚的 web パーツを展開する場合
  [!INCLUDE[wiprlhext](../sharepoint/includes/wiprlhext-md.md)]、[!INCLUDE[win7](../sharepoint/includes/win7-md.md)]、または [!INCLUDE[winsvr08](../sharepoint/includes/winsvr08-md.md)] の Bin フォルダーに可視 Web パーツを配置するときに、SharePoint ページの表示に時間がかかります。 これは、Bin ディレクトリなどの最上位の [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] ディレクトリのファイルを変更すると Web アプリケーション全体が再コンパイルされるためです。 結果として、SharePoint ページの表示に最大で 25 秒の遅延が生じます。

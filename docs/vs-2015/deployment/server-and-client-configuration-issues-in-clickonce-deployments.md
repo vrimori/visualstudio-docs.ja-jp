@@ -23,12 +23,12 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 58a7c92cab0f7bbf410d28cc1bc86dd6ce4f13df
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 8cf7a6db209bb6bbed1d8044bbdc3ed106e64836
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49231531"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948942"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 配置でのサーバーおよびクライアント構成の問題
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,15 +41,15 @@ Windows Server で、インターネット インフォメーション サービ
   
  一部の Web サーバーでは、.dll、.config、.mdf ファイルなどの拡張子を持つファイルをブロック可能性があります。 通常、Windows ベースのアプリケーションには、これらの拡張機能の一部のファイルが含まれます。 ユーザーが実行する場合、 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Web サーバーでブロックされているファイルにアクセスするアプリケーションでは、エラーが発生します。 すべてのファイル拡張子のブロックを解除するのではなく[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]既定では、".deploy"ファイル拡張子を持つすべてのアプリケーション ファイルを発行します。 そのため、管理者では、次の 3 つのファイル拡張子のブロックを解除する Web サーバーを構成する必要がのみ。  
   
--   .application  
+- .application  
   
--   .manifest  
+- .manifest  
   
--   .deploy  
+- .deploy  
   
- オフにすると、このオプションを無効にするただし、 **".deploy"ファイル拡張子を使用して、** オプションを[Publish Options Dialog Box](http://msdn.microsoft.com/en-us/fd9baa1b-7311-4f9e-8ffb-ae50cf110592)、その場合、すべてのファイル拡張子のブロックを解除する Web サーバーを構成する必要がありますアプリケーションで使用されます。  
+  オフにすると、このオプションを無効にするただし、 **".deploy"ファイル拡張子を使用して、** オプションを[Publish Options Dialog Box](http://msdn.microsoft.com/en-us/fd9baa1b-7311-4f9e-8ffb-ae50cf110592)、その場合、すべてのファイル拡張子のブロックを解除する Web サーバーを構成する必要がありますアプリケーションで使用されます。  
   
- IIS をインストールしていないを使用している場合、.manifest、.application、および .deploy、たとえば、構成する必要が、 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]、または別の Web サーバー (Apache など) を使用している場合。  
+  IIS をインストールしていないを使用している場合、.manifest、.application、および .deploy、たとえば、構成する必要が、 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]、または別の Web サーバー (Apache など) を使用している場合。  
   
 ## <a name="clickonce-and-secure-sockets-layer-ssl"></a>ClickOnce と Secure Sockets Layer (SSL)  
  A[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーション、SSL 経由で Internet Explorer で SSL 証明書に関するプロンプトを生成するとき以外は問題なく動作します。 プロンプトは、有効期限が切れたときに、サイト名が一致しないなど、証明書または証明書に何らかの問題がある場合に発生することができます。 させる[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]SSL 接続経由で動作、証明書が、最新の状態であり、証明書のデータがサイト データと一致するかどうかを確認します。  
@@ -122,11 +122,11 @@ Windows Server で、インターネット インフォメーション サービ
   
  IIS サーバーを使用してを展開する場合は、inetmgr.exe を実行し、既定の Web ページの新しいファイルの種類を追加します。  
   
--   .Application、.manifest の拡張機能の MIME の種類が「/x ms-アプリケーションです」をする必要があります。 その他のファイルの種類の MIME の種類が「アプリケーションまたはオクテット ストリームです」をする必要があります。  
+- .Application、.manifest の拡張機能の MIME の種類が「/x ms-アプリケーションです」をする必要があります。 その他のファイルの種類の MIME の種類が「アプリケーションまたはオクテット ストリームです」をする必要があります。  
   
--   拡張子の MIME の種類を作成する場合は、"*"MIME の種類「アプリケーションまたはオクテット ストリーム」では、そのファイルのダウンロードをブロックされていないファイルの種類が許可されます。 (ただし、ブロック ファイル .aspx、.asmx などの種類をダウンロードすることはできません。)  
+- 拡張子の MIME の種類を作成する場合は、"*"MIME の種類「アプリケーションまたはオクテット ストリーム」では、そのファイルのダウンロードをブロックされていないファイルの種類が許可されます。 (ただし、ブロック ファイル .aspx、.asmx などの種類をダウンロードすることはできません。)  
   
- Windows Server の MIME の種類を構成する方法については、マイクロソフト サポート技術情報の資料を参照 KB326965、「IIS 6.0 は対応不明な MIME 型ではなく」で[ http://support.microsoft.com/default.aspx?scid=kb; en-ご; 326965](http://support.microsoft.com/default.aspx?scid=kb;en-us;326965)します。  
+  Windows Server の MIME の種類を構成する方法については、マイクロソフト サポート技術情報の資料を参照 KB326965、「IIS 6.0 は対応不明な MIME 型ではなく」で[ http://support.microsoft.com/default.aspx?scid=kb; en-ご; 326965](http://support.microsoft.com/default.aspx?scid=kb;en-us;326965)します。  
   
 ## <a name="content-type-mappings"></a>コンテンツの種類のマッピング  
  HTTP 経由で発行するとき、.application ファイルのコンテンツ タイプ (MIME の種類とも呼ばれます) があります「/x ms-アプリケーションです」 あれば[!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)]サーバーにインストール、設定されます。 が自動的にします。 これがインストールされていないかどうかは、MIME の種類の関連付けを作成する必要がある、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーション vroot (またはサーバー全体)。  

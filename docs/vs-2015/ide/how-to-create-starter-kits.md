@@ -16,12 +16,12 @@ caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a0fb7e9593ee49df3e766fbc52c578e635e2d72d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 163fcc07318ae02ff88fda13d4ea6300d513806e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49243389"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49857407"
 ---
 # <a name="how-to-create-starter-kits"></a>方法 : スタート キットを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,19 +33,19 @@ ms.locfileid: "49243389"
   
  サンプル アプリケーションまたはプラグインを作成する場合は、以下を実行します。  
   
--   ビルド エラーが発生しないプロジェクトを作成します。  
+- ビルド エラーが発生しないプロジェクトを作成します。  
   
--   テンプレート コードを追加して、追加タスクを実装します (省略可能)。  
+- テンプレート コードを追加して、追加タスクを実装します (省略可能)。  
   
--   ドキュメントを準備します。  
+- ドキュメントを準備します。  
   
- 学習ツールを作成する場合は、以下を実行します。  
+  学習ツールを作成する場合は、以下を実行します。  
   
--   ビルド エラーが発生しないプロジェクトを作成します。  
+- ビルド エラーが発生しないプロジェクトを作成します。  
   
--   コード スニペットや項目テンプレートなどのリソースを整理します。  
+- コード スニペットや項目テンプレートなどのリソースを整理します。  
   
--   ドキュメントを準備します。  
+- ドキュメントを準備します。  
   
 ## <a name="creating-a-template"></a>テンプレートの作成  
  プロジェクトとドキュメントが完成したら、スタート キット用のプロジェクト テンプレートを作成できます。 このプロセスは、プロジェクト テンプレートの作成とまったく同じです。  

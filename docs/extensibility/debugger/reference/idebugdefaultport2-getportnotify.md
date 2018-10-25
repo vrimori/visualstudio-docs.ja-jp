@@ -1,5 +1,5 @@
 ---
-title: IDebugDefaultPort2::GetPortNotify |Microsoft ドキュメント
+title: IDebugDefaultPort2::GetPortNotify |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: eca2893f388c4dabb244d042d652d3ab604d88bf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: feb21f020f6a470b9fded56939987f0a03333206
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31103284"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872740"
 ---
 # <a name="idebugdefaultport2getportnotify"></a>IDebugDefaultPort2::GetPortNotify
-このメソッドは、取得、 [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)このポートのインターフェイスです。  
+このメソッドは、取得、 [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)このポートのインターフェイス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,10 +44,10 @@ int GetPortNotify(
  [out][IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 通常、`QueryInterface`メソッドが実装するオブジェクト、 [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)インターフェイスを取得する、 [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)インターフェイスです。 ただし、別のオブジェクトに必要なインターフェイスを実装する場合があります。 このメソッドは、このような状況を非表示にし、返します、`IDebugPortNotify2`最も適切なオブジェクトからのインターフェイスです。  
+## <a name="remarks"></a>Remarks  
+ 通常、`QueryInterface`メソッドが実装するオブジェクト、 [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)を取得するインターフェイス、 [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)インターフェイス。 ただし、別のオブジェクトに必要なインターフェイスが実装される場合があります。 このメソッドは、このような状況を非表示にし、返します、`IDebugPortNotify2`最も適切なオブジェクトからのインターフェイス。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)   

@@ -1,5 +1,5 @@
 ---
-title: ASSEMBLYLOCRESOLUTION |Microsoft ドキュメント
+title: ASSEMBLYLOCRESOLUTION |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 331df62dabcdb919f2d8489de02ab7f2f815ef40
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 03d05cf8c224a24d143feb3d22df4357d623d308
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31110017"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933210"
 ---
 # <a name="assemblylocresolution"></a>ASSEMBLYLOCRESOLUTION
-アセンブリの場所を指定します。  
+アセンブリがある場所を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,20 +51,20 @@ public enum enum_ASSEMBLYLOCRESOLUTION {
  アセンブリは、現在の名前空間にあります。  
   
  ALR_USERDIR  
- アセンブリは、ユーザー ディレクトリにあります。  
+ アセンブリは、ユーザー ディレクトリ内にあります。  
   
  ALR_SHAREDDIR  
- アセンブリは、共有ディレクトリにあります。  
+ アセンブリは共有ディレクトリにあります。  
   
  ALR_REMOTEDIR  
- アセンブリは、リモート ディレクトリにあります。  
+ アセンブリは、リモート ディレクトリ内にあります。  
   
-## <a name="remarks"></a>コメント  
- これらの値がによって返される、 [ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md)と[GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ これらの値がによって返される、 [ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md)と[GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md)メソッド。  
   
- これらの値と組み合わせることができます、`OR`操作します。  
+ これらの値と組み合わせることができます、`OR`操作。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

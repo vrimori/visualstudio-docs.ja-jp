@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::CreateObjectID |Microsoft ドキュメント
+title: IDebugProperty3::CreateObjectID |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: df4e45c442745652b3305fd91146bd31ffe79e4b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1514c21345356bbece6680b9ccd212d15dbfa191
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31120976"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920977"
 ---
 # <a name="idebugproperty3createobjectid"></a>IDebugProperty3::CreateObjectID
-その他のすべてのプロパティの間で一意であることを確認するこのプロパティの一意の ID を作成します。  
+その他のすべてのプロパティ間で一意であることを確認するこのプロパティの一意の ID を作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,15 +38,15 @@ int CreateObjectID();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- セッションのデバッグ マネージャーが他のすべてのプロパティと共に、このプロパティを一意に識別することを確認するときに、このメソッドが呼び出されます。 デバッグ エンジン (DE) は、処理のプロパティは既に一意に識別しない限り、このメソッドをサポートしています。 返すかどうか、DE は、このメソッドをサポートしていません、`E_NOTIMPL`です。  
+## <a name="remarks"></a>Remarks  
+ セッション デバッグ マネージャーがこのプロパティは、その他のすべてのプロパティの間で一意に識別することを確認するときに、このメソッドが呼び出されます。 デバッグ エンジン (DE) は、処理プロパティが既に一意に識別される場合を除き、このメソッドをサポートしています。 返すかどうか、DE は、このメソッドをサポートしていません、`E_NOTIMPL`します。  
   
- 一意の ID が作成された`CreateObjectID`が破棄されるときに、 [DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md)メソッドが呼び出されます。 これも終えたことをこのプロパティを一意に識別する必要の。  
+ 一意の ID が作成された`CreateObjectID`が破棄されるときに、 [DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md)メソッドが呼び出される; も、このプロパティを一意に識別するための必要性の終端を表すこれです。  
   
 > [!NOTE]
->  デできる一意の Id に対応して必要なために、この一意の ID を取得するメソッドがない場合に、`CreateObjectID`メソッドが呼び出されます。  
+>  一意の Id にして必要な DE を行うことができます、この一意の ID を取得するメソッドがないときに、`CreateObjectID`メソッドが呼び出されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   

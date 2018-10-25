@@ -15,12 +15,12 @@ caps.latest.revision: 30
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 142e39a9d1b826edaaf519eea2ecaf8dfb72b5ef
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: abb37b7bdfbc01affea63aa90d35b3702dcb4719
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49208651"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907925"
 ---
 # <a name="code-generation-in-a-build-process"></a>ビルド処理でのコード生成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -160,11 +160,11 @@ TransformFile ではワイルドカードを使用できます。
 
 `AfterTransform` では、ファイルのリストを参照できます。
 
--   GeneratedFiles: 処理中に出力されたファイルのリスト。 既存の読み取り専用ファイルを上書きしたファイルについては、%(GeneratedFiles.ReadOnlyFileOverwritten) が true になります。 これらのファイルは、ソース管理からチェックアウトできます。
+- GeneratedFiles: 処理中に出力されたファイルのリスト。 既存の読み取り専用ファイルを上書きしたファイルについては、%(GeneratedFiles.ReadOnlyFileOverwritten) が true になります。 これらのファイルは、ソース管理からチェックアウトできます。
 
--   NonGeneratedFiles: 上書きされなかった読み取り専用ファイルのリスト。
+- NonGeneratedFiles: 上書きされなかった読み取り専用ファイルのリスト。
 
- たとえば、GeneratedFiles をチェックアウトするタスクを定義します。
+  たとえば、GeneratedFiles をチェックアウトするタスクを定義します。
 
 ## <a name="outputfilepath-and-outputfilename"></a>OutputFilePath と OutputFileName
 
@@ -255,7 +255,6 @@ $(SolutionDir) などの Visual Studio のマクロは、MSBuild では動作し
       <Value>$(myLibFolder)</Value>
     </T4ParameterValues>
   </ItemGroup>
-
 ```
 
 これで、assembly ディレクティブおよび include ディレクティブでプロジェクト プロパティを使用できます。

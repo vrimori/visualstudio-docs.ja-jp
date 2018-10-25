@@ -15,29 +15,29 @@ ms.assetid: f78c4892-8060-49c4-8ecd-4360f1b4d133
 caps.latest.revision: 39
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ab478d6a007081787d8b076e906f5094caea8b2d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 9d0f89d02d0fcccc66ddd1f66b411f6b3f542cff
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49206922"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939268"
 ---
 # <a name="adding-search-to-a-tool-window"></a>ツール ウィンドウへの検索の追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 作成または拡張機能でツール ウィンドウを更新するときは、Visual Studio の他の場所に表示される同じ検索機能を追加できます。 この機能には、次の機能が含まれています。  
   
--   常に、ツールバーのカスタムの領域にある検索ボックス。  
+- 常に、ツールバーのカスタムの領域にある検索ボックス。  
   
--   検索ボックス自体に重ねて表示する進行状況インジケーター。  
+- 検索ボックス自体に重ねて表示する進行状況インジケーター。  
   
--   (クイック検索) の各文字を入力するとすぐ、または Enter キー (オンデマンドでの検索) を選択した後にのみ結果を表示する権限です。  
+- (クイック検索) の各文字を入力するとすぐ、または Enter キー (オンデマンドでの検索) を選択した後にのみ結果を表示する権限です。  
   
--   した最近検索した用語を示す一覧です。  
+- した最近検索した用語を示す一覧です。  
   
--   特定のフィールド、または検索対象の関連で検索をフィルター処理する権限です。  
+- 特定のフィールド、または検索対象の関連で検索をフィルター処理する権限です。  
   
- このチュートリアルでは、次のタスクを実行する方法について説明します。  
+  このチュートリアルでは、次のタスクを実行する方法について説明します。  
   
 1.  VSPackage プロジェクトを作成します。  
   

@@ -20,12 +20,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e19c2ab969de8f3e1e24cf789ae3979d2c15809b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 249799bc9daf13992bd9fe03dff8c86263f91263
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42626503"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49851479"
 ---
 # <a name="walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio"></a>チュートリアル: SharePoint Designer の再利用可能なワークフローの Visual Studio へのインポートします。
   SharePoint Designer 2010 で作成した再利用可能なワークフローをインポートする方法についても説明、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ワークフロー プロジェクトです。  
@@ -38,17 +38,17 @@ ms.locfileid: "42626503"
   
  このチュートリアルでは、次のタスクについて説明します。  
   
--   SharePoint Designer で再利用可能な単純なワークフローを作成します。  
+- SharePoint Designer で再利用可能な単純なワークフローを作成します。  
   
--   SharePoint Designer の再利用可能なワークフローをエクスポート、 *.wsp*ファイルおよび SharePoint にします。  
+- SharePoint Designer の再利用可能なワークフローをエクスポート、 *.wsp*ファイルおよび SharePoint にします。  
   
--   インポート、 *.wsp*ファイルを[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]再利用可能なワークフローのインポート プロジェクトを使用しています。  
+- インポート、 *.wsp*ファイルを[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]再利用可能なワークフローのインポート プロジェクトを使用しています。  
   
--   コードを追加して、ワークフローを変更します。  
+- コードを追加して、ワークフローを変更します。  
   
--   SharePoint サイトでは、インポートしたワークフローを使用します。  
+- SharePoint サイトでは、インポートしたワークフローを使用します。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
@@ -64,21 +64,21 @@ ms.locfileid: "42626503"
   
 #### <a name="to-create-sharepoint-subsites"></a>SharePoint のサブサイトを作成するには  
   
-1.  SharePoint Designer 2010 でのメニュー バーで選択**ファイル** > **空の Web サイトを新しい**します。  
+1. SharePoint Designer 2010 でのメニュー バーで選択**ファイル** > **空の Web サイトを新しい**します。  
   
-2.  **空の Web サイトを新しい**ダイアログ ボックスで、ワークフローを作成または http:// の値を使用する SharePoint サイトへの参照*SystemName*/選択し、 **OK**ボタンをクリックします。  
+2. **空の Web サイトを新しい**ダイアログ ボックスで、ワークフローを作成または http:// の値を使用する SharePoint サイトへの参照<em>SystemName</em>/選択し、 **OK**ボタンをクリックします。  
   
-     ホーム ページが表示されます。  
+    ホーム ページが表示されます。  
   
-3.  **サブサイト**セクションで、選択、**新規**ボタンをクリックします。  
+3. **サブサイト**セクションで、選択、**新規**ボタンをクリックします。  
   
-4.  **新規** ダイアログ ボックスで、選択**SharePoint テンプレート**左側のウィンドウで、一覧から選択**チーム サイト**右側のウィンドウで、一覧から。  
+4. **新規** ダイアログ ボックスで、選択**SharePoint テンプレート**左側のウィンドウで、一覧から選択**チーム サイト**右側のウィンドウで、一覧から。  
   
-5.  **Web サイトの場所を指定**ボックスに、単語に置き換えた**サブサイト**URL の先頭で**SPD1**、選択し、 **[ok]** ボタンをクリックします。  
+5. **Web サイトの場所を指定**ボックスに、単語に置き換えた**サブサイト**URL の先頭で**SPD1**、選択し、 **[ok]** ボタンをクリックします。  
   
-     SharePoint Designer に新しいサイトが開きます。 SharePoint Designer のインスタンスを閉じるし、最初のインスタンス (最上位のサイト) に戻ります。  
+    SharePoint Designer に新しいサイトが開きます。 SharePoint Designer のインスタンスを閉じるし、最初のインスタンス (最上位のサイト) に戻ります。  
   
-6.  手順 3 ~ 5 を 2 つ目のサブサイトを作成するには、この時間がという単語を置き換える**サブサイト**で、[!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)]で**SPD2**します。  
+6. 手順 3 ~ 5 を 2 つ目のサブサイトを作成するには、この時間がという単語を置き換える**サブサイト**で、[!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)]で**SPD2**します。  
   
 ## <a name="create-a-sharepoint-designer-reusable-workflow"></a>SharePoint Designer の再利用可能なワークフローを作成します。
  SharePoint にこの例で使用できる再利用可能なワークフローが含まれていないために、1 つを作成します。 この単純なワークフローでは、ユーザーが特定のタイトルを持つタスク リストで新しいタスクに入ったとき、タスクがそのユーザーに割り当てられます。  
@@ -158,32 +158,32 @@ ms.locfileid: "42626503"
   
 #### <a name="to-import-a-workflow-from-a-wsp-file-and-modify-it"></a>.Wsp ファイルからワークフローをインポートし、それを変更するには  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、メニュー バーで、**ファイル** > **新規** > **プロジェクト**します。  
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、メニュー バーで、**ファイル** > **新規** > **プロジェクト**します。  
   
-2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **SharePoint**のどちらかのノード**Visual c#** または**Visual Basic**、を選択し、**2010**ノード。  
+2. **新しいプロジェクト** ダイアログ ボックスで、展開、 **SharePoint**のどちらかのノード**Visual c#** または**Visual Basic**、を選択し、**2010**ノード。  
   
-3.  **テンプレート**ウィンドウで、選択、**再利用可能な SharePoint 2010 ワークフローのインポート**テンプレートとしてプロジェクトの名前をそのまま**WorkflowImportProject1**、選択し、**OK**ボタンをクリックします。  
+3. **テンプレート**ウィンドウで、選択、**再利用可能な SharePoint 2010 ワークフローのインポート**テンプレートとしてプロジェクトの名前をそのまま**WorkflowImportProject1**、選択し、**OK**ボタンをクリックします。  
   
-     SharePoint カスタマイズ ウィザードが表示されます。  
+    SharePoint カスタマイズ ウィザードが表示されます。  
   
-4.  **デバッグのサイトとセキュリティのレベルを指定**ページで、入力、[!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)]以前に作成した 2 番目の SharePoint サブサイトの: http://*システム名*/SPD2 します。  
+4. **デバッグのサイトとセキュリティのレベルを指定**ページで、入力、[!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)]以前に作成した 2 番目の SharePoint サブサイトの: http://<em>システム名</em>/SPD2 します。  
   
-5.  **この SharePoint ソリューションの信頼レベルとは何ですか?** セクションで、選択、**ファーム ソリューションとして配置**オプション ボタンをクリックして、**次**ボタン。  
+5. **この SharePoint ソリューションの信頼レベルとは何ですか?** セクションで、選択、**ファーム ソリューションとして配置**オプション ボタンをクリックして、**次**ボタン。  
   
-     サンド ボックスの詳細については、ファーム ソリューションではなく、次を参照してください。[サンド ボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)します。  
+    サンド ボックスの詳細については、ファーム ソリューションではなく、次を参照してください。[サンド ボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)します。  
   
-6.  **新しいプロジェクトのソースを指定** ページで、以前に保存する場所、システム上の場所を参照、 *.wsp*ファイル、ファイルを開いて、および選択し、**次**ボタンをクリックします。  
+6. **新しいプロジェクトのソースを指定** ページで、以前に保存する場所、システム上の場所を参照、 *.wsp*ファイル、ファイルを開いて、および選択し、**次**ボタンをクリックします。  
   
-    > [!NOTE]  
-    >  選択、**完了**で利用可能なすべての項目をインポートする ボタン、 *.wsp*ファイル。  
+   > [!NOTE]  
+   >  選択、**完了**で利用可能なすべての項目をインポートする ボタン、 *.wsp*ファイル。  
   
-     これには、インポートするために使用できる、再利用可能なワークフローの一覧が表示されます。  
+    これには、インポートするために使用できる、再利用可能なワークフローの一覧が表示されます。  
   
-7.  **をインポートする項目の選択**ボックスで、選択、 **SPD タスク ワークフロー**ワークフローを選択し、 **[完了]** ボタン。  
+7. **をインポートする項目の選択**ボックスで、選択、 **SPD タスク ワークフロー**ワークフローを選択し、 **[完了]** ボタン。  
   
-     プロジェクトの名前、インポート操作が完了すると、 **WorkflowImportProject1**という名前のワークフローを含む作成**SPD_Workflow_TestFT**します。 このフォルダーには、ワークフローの定義ファイルが*Elements.xml*とワークフロー デザイナー ファイル (*.xoml*)。 デザイナーには、2 つのファイルが含まれています。 ルール ファイル (.rules) と分離コード ファイル (いずれか *.cs*または *.vb*プロジェクトのプログラミング言語に応じて、)。  
+    プロジェクトの名前、インポート操作が完了すると、 **WorkflowImportProject1**という名前のワークフローを含む作成**SPD_Workflow_TestFT**します。 このフォルダーには、ワークフローの定義ファイルが*Elements.xml*とワークフロー デザイナー ファイル (*.xoml*)。 デザイナーには、2 つのファイルが含まれています。 ルール ファイル (.rules) と分離コード ファイル (いずれか *.cs*または *.vb*プロジェクトのプログラミング言語に応じて、)。  
   
-8.  **ソリューション エクスプ ローラー**、削除、**インポートされたファイルの他の**フォルダー。  
+8. **ソリューション エクスプ ローラー**、削除、**インポートされたファイルの他の**フォルダー。  
   
 9. *Elements.xml*ファイルで、削除`InstantiationURL="_layouts/IniErkflIP.sspx"`します。  
   
@@ -203,11 +203,11 @@ ms.locfileid: "42626503"
   
 13. **Windows Workflow v3.0**のノード、**ツールボックス**、次の手順のいずれかを実行します。  
   
-    -   ショートカット メニューを開き、**コード**アクティビティを選び、**コピー**します。 ワークフロー デザイナーで下にある行のショートカット メニューを開き、 **SequenceActivity1**アクティビティを選び、**貼り付け**。  
+    - ショートカット メニューを開き、**コード**アクティビティを選び、**コピー**します。 ワークフロー デザイナーで下にある行のショートカット メニューを開き、 **SequenceActivity1**アクティビティを選び、**貼り付け**。  
   
-    -   ドラッグ、**コード**からのアクティビティ、**ツールボックス**をワークフロー デザイナー、および下にある行への接続、 **SequenceActivity1**アクティビティ。  
+    - ドラッグ、**コード**からのアクティビティ、**ツールボックス**をワークフロー デザイナー、および下にある行への接続、 **SequenceActivity1**アクティビティ。  
   
-     これは、という名前のワークフロー デザイナーにアクティビティが追加されます**CodeActivity1**します。 このアクティビティでは、ユーザー、ワークフローの開始時に、お知らせリストにお知らせを作成するコードをアクションを追加します。  
+      これは、という名前のワークフロー デザイナーにアクティビティが追加されます**CodeActivity1**します。 このアクティビティでは、ユーザー、ワークフローの開始時に、お知らせリストにお知らせを作成するコードをアクションを追加します。  
   
 14. 次のいずれかの操作を実行します。  
   

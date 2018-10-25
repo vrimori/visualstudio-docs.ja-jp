@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7901c0acaf9500673b9b6cfc551ed3151e1b3c5b
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 1a37dcac9d75cbd773894b3d708dd4931f77b4ce
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637764"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888412"
 ---
 # <a name="expose-properties-to-the-properties-window"></a>[プロパティ] ウィンドウにプロパティを公開します。
 このチュートリアルは、オブジェクトのパブリック プロパティを公開、**プロパティ**ウィンドウ。 これらのプロパティに加えた変更に反映されます、**プロパティ**ウィンドウ。  
@@ -33,72 +33,72 @@ ms.locfileid: "39637764"
   
 ### <a name="to-expose-properties-to-the-properties-window"></a>[プロパティ] ウィンドウにプロパティを公開するには  
   
-1.  すべての Visual Studio 拡張機能は、拡張機能資産が含まれる VSIX 配置プロジェクトで開始します。 作成、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]という名前の VSIX プロジェクト`MyObjectPropertiesExtension`します。 VSIX プロジェクト テンプレートを見つけることができます、**新しいプロジェクト**] ダイアログ ボックス [ **Visual c#** > **Extensibility**します。  
+1. すべての Visual Studio 拡張機能は、拡張機能資産が含まれる VSIX 配置プロジェクトで開始します。 作成、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]という名前の VSIX プロジェクト`MyObjectPropertiesExtension`します。 VSIX プロジェクト テンプレートを見つけることができます、**新しいプロジェクト**] ダイアログ ボックス [ **Visual c#** > **Extensibility**します。  
   
-2.  ツール ウィンドウを追加するには、という名前のカスタム ツール ウィンドウの項目テンプレートを追加`MyToolWindow`します。 **ソリューション エクスプ ローラー**でプロジェクト ノードを右クリックし、選択**追加** > **新しい項目の**します。 **新しい項目の追加 ダイアログ**に移動して、 **Visual c# アイテム** > **拡張**選択**カスタム ツール ウィンドウ**。 **名前**ダイアログの下部にあるフィールドに、ファイル名を変更して*MyToolWindow.cs*します。 カスタム ツール ウィンドウを作成する方法の詳細については、次を参照してください。[ツール ウィンドウで拡張機能を作成する](../extensibility/creating-an-extension-with-a-tool-window.md)します。  
+2. ツール ウィンドウを追加するには、という名前のカスタム ツール ウィンドウの項目テンプレートを追加`MyToolWindow`します。 **ソリューション エクスプ ローラー**でプロジェクト ノードを右クリックし、選択**追加** > **新しい項目の**します。 **新しい項目の追加 ダイアログ**に移動して、 **Visual c# アイテム** > **拡張**選択**カスタム ツール ウィンドウ**。 **名前**ダイアログの下部にあるフィールドに、ファイル名を変更して*MyToolWindow.cs*します。 カスタム ツール ウィンドウを作成する方法の詳細については、次を参照してください。[ツール ウィンドウで拡張機能を作成する](../extensibility/creating-an-extension-with-a-tool-window.md)します。  
   
-3.  オープン*MyToolWindow.cs*し、次を追加ステートメントを使用します。  
+3. オープン*MyToolWindow.cs*し、次を追加ステートメントを使用します。  
   
-    ```csharp  
-    using System.Collections;  
-    using System.ComponentModel;  
-    using Microsoft.VisualStudio.Shell.Interop;  
-    ```  
+   ```csharp  
+   using System.Collections;  
+   using System.ComponentModel;  
+   using Microsoft.VisualStudio.Shell.Interop;  
+   ```  
   
-4.  次のフィールドを追加、`MyToolWindow`クラス。  
+4. 次のフィールドを追加、`MyToolWindow`クラス。  
   
-    ```csharp  
-    private ITrackSelection trackSel;  
-    private SelectionContainer selContainer;  
+   ```csharp  
+   private ITrackSelection trackSel;  
+   private SelectionContainer selContainer;  
   
-    ```  
+   ```  
   
-5.  `MyToolWindow` クラスに次のコードを追加します。  
+5. `MyToolWindow` クラスに次のコードを追加します。  
   
-    ```csharp  
-    private ITrackSelection TrackSelection  
-    {  
-        get  
-        {  
-            if (trackSel == null)  
-                trackSel =  
-                   GetService(typeof(STrackSelection)) as ITrackSelection;  
-            return trackSel;  
-        }  
-    }  
+   ```csharp  
+   private ITrackSelection TrackSelection  
+   {  
+       get  
+       {  
+           if (trackSel == null)  
+               trackSel =  
+                  GetService(typeof(STrackSelection)) as ITrackSelection;  
+           return trackSel;  
+       }  
+   }  
   
-    public void UpdateSelection()  
-    {  
-        ITrackSelection track = TrackSelection;  
-        if (track != null)  
-            track.OnSelectChange((ISelectionContainer)selContainer);  
-    }  
+   public void UpdateSelection()  
+   {  
+       ITrackSelection track = TrackSelection;  
+       if (track != null)  
+           track.OnSelectChange((ISelectionContainer)selContainer);  
+   }  
   
-    public void SelectList(ArrayList list)  
-    {  
-        selContainer = new SelectionContainer(true, false);  
-        selContainer.SelectableObjects = list;  
-        selContainer.SelectedObjects = list;  
-        UpdateSelection();  
-    }  
+   public void SelectList(ArrayList list)  
+   {  
+       selContainer = new SelectionContainer(true, false);  
+       selContainer.SelectableObjects = list;  
+       selContainer.SelectedObjects = list;  
+       UpdateSelection();  
+   }  
   
-    public override void OnToolWindowCreated()  
-    {  
-        ArrayList listObjects = new ArrayList();  
-        listObjects.Add(this);  
-        SelectList(listObjects);  
-    }  
-    ```  
+   public override void OnToolWindowCreated()  
+   {  
+       ArrayList listObjects = new ArrayList();  
+       listObjects.Add(this);  
+       SelectList(listObjects);  
+   }  
+   ```  
   
-     `TrackSelection`プロパティで使用`GetService`を取得する、`STrackSelection`提供するサービスを<xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection>インターフェイス。 `OnToolWindowCreated`イベント ハンドラーと`SelectList`メソッドが一緒にのみ、ツール ウィンドウ ペイン オブジェクト自体を含む、選択したオブジェクトのリストを作成します。 `UpdateSelection`方法では、**プロパティ**ツール ウィンドウ ペインのパブリック プロパティを表示するウィンドウ。  
+    `TrackSelection`プロパティで使用`GetService`を取得する、`STrackSelection`提供するサービスを<xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection>インターフェイス。 `OnToolWindowCreated`イベント ハンドラーと`SelectList`メソッドが一緒にのみ、ツール ウィンドウ ペイン オブジェクト自体を含む、選択したオブジェクトのリストを作成します。 `UpdateSelection`方法では、**プロパティ**ツール ウィンドウ ペインのパブリック プロパティを表示するウィンドウ。  
   
-6.  プロジェクトをビルドし、デバッグを開始します。 Visual Studio の実験用インスタンスが表示されます。  
+6. プロジェクトをビルドし、デバッグを開始します。 Visual Studio の実験用インスタンスが表示されます。  
   
-7.  場合、**プロパティ**ウィンドウが表示されない、キーを押して開きます**F4**します。  
+7. 場合、**プロパティ**ウィンドウが表示されない、キーを押して開きます**F4**します。  
   
-8.  開く、 **MyToolWindow**ウィンドウ。 見つかります**ビュー** > **その他の Windows**します。  
+8. 開く、 **MyToolWindow**ウィンドウ。 見つかります**ビュー** > **その他の Windows**します。  
   
-     ウィンドウが開き、ウィンドウ ペインのパブリック プロパティに表示されます、**プロパティ**ウィンドウ。  
+    ウィンドウが開き、ウィンドウ ペインのパブリック プロパティに表示されます、**プロパティ**ウィンドウ。  
   
 9. 変更、**キャプション**プロパティ、**プロパティ**ウィンドウ**My のオブジェクト プロパティ**します。  
   

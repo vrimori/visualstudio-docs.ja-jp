@@ -17,12 +17,12 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bccb790a374e9ce6b197927760f9c3cc15d5a7eb
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: b1178fc6ff2cb5b4664930eaa70fd3de5ebed0f5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49198039"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949072"
 ---
 # <a name="ltparamgt-javascript"></a>&lt;param&gt; (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,47 +49,47 @@ ms.locfileid: "49198039"
  `type`  
  任意。 パラメーターのデータ型。 型は以下のいずれかです。  
   
--   `Number` や `Object` など、ECMAScript 5 仕様に含まれる ECMAScript 言語の型。  
+- `Number` や `Object` など、ECMAScript 5 仕様に含まれる ECMAScript 言語の型。  
   
--   `HTMLElement`、`Window`、`Document` などの DOM オブジェクト。  
+- `HTMLElement`、`Window`、`Document` などの DOM オブジェクト。  
   
--   JavaScript のコンストラクター関数。  
+- JavaScript のコンストラクター関数。  
   
- `integer`  
- 任意。 `type` が `Number` である場合に、パラメーターが整数かどうかを指定します。 パラメーターが整数であることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
+  `integer`  
+  任意。 `type` が `Number` である場合に、パラメーターが整数かどうかを指定します。 パラメーターが整数であることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
   
- `domElement`  
- 任意。 この属性は非推奨とされました。この属性より `type` 属性が優先されます。 この属性は、ドキュメント化されたパラメーターが DOM 要素であるかどうかを指定します。 パラメーターが DOM 要素であることを指定する場合は `true` に設定します。それ以外の場合は `false` に設定します。 `type` 属性が設定されておらず `domElement` が `true` に設定されている場合、IntelliSense の入力候補機能では、ドキュメント化されたパラメーターが `HTMLElement` として処理されます。  
+  `domElement`  
+  任意。 この属性は非推奨とされました。この属性より `type` 属性が優先されます。 この属性は、ドキュメント化されたパラメーターが DOM 要素であるかどうかを指定します。 パラメーターが DOM 要素であることを指定する場合は `true` に設定します。それ以外の場合は `false` に設定します。 `type` 属性が設定されておらず `domElement` が `true` に設定されている場合、IntelliSense の入力候補機能では、ドキュメント化されたパラメーターが `HTMLElement` として処理されます。  
   
- `mayBeNull`  
- 任意。 ドキュメント化されたパラメーターを null に設定できるかどうかを指定します。 パラメーターを null に設定できることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 既定値は `false` です。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
+  `mayBeNull`  
+  任意。 ドキュメント化されたパラメーターを null に設定できるかどうかを指定します。 パラメーターを null に設定できることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 既定値は `false` です。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
   
- `elementType`  
- 任意。 `type` が `Array` であれば、この属性は、配列内の要素の型を指定します。  
+  `elementType`  
+  任意。 `type` が `Array` であれば、この属性は、配列内の要素の型を指定します。  
   
- `elementInteger`  
- 任意。 `type` が `Array` であり、`elementType` が `Number` である場合、この属性は、配列内の要素が整数であるかどうかを指定します。 配列内の要素が整数であることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
+  `elementInteger`  
+  任意。 `type` が `Array` であり、`elementType` が `Number` である場合、この属性は、配列内の要素が整数であるかどうかを指定します。 配列内の要素が整数であることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
   
- `elementDomElement`  
- 任意。 この属性は非推奨とされました。この属性より `elementType` 属性が優先されます。 `type` が `Array` である場合、この属性は、配列内の要素が DOM 要素であるかどうかを指定します。 要素が DOM 要素であることを指定する場合は `true` に設定します。それ以外の場合は `false` に設定します。 `elementType` 属性が設定されておらず `elementDomElement` が `true` に設定されている場合、IntelliSense の入力候補機能では、配列内の各要素が `HTMLElement` として処理されます。  
+  `elementDomElement`  
+  任意。 この属性は非推奨とされました。この属性より `elementType` 属性が優先されます。 `type` が `Array` である場合、この属性は、配列内の要素が DOM 要素であるかどうかを指定します。 要素が DOM 要素であることを指定する場合は `true` に設定します。それ以外の場合は `false` に設定します。 `elementType` 属性が設定されておらず `elementDomElement` が `true` に設定されている場合、IntelliSense の入力候補機能では、配列内の各要素が `HTMLElement` として処理されます。  
   
- `elementMayBeNull`  
- 任意。 `type` が `Array` である場合、配列内の要素を null に設定できるかどうかを指定します。 配列内の要素を null に設定できることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 既定値は `false` です。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
+  `elementMayBeNull`  
+  任意。 `type` が `Array` である場合、配列内の要素を null に設定できるかどうかを指定します。 配列内の要素を null に設定できることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 既定値は `false` です。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
   
- `locid`  
- 任意。 パラメーターに関するローカライズ情報用の識別子。 この識別子は、メンバーの ID であるか、または OpenAjax のメタデータで定義されているメッセージ バンドル内の `name` 属性値に対応します。 識別子の型で指定された形式によって異なります、 [ \<loc >](../ide/loc-javascript.md)要素。  
+  `locid`  
+  任意。 パラメーターに関するローカライズ情報用の識別子。 この識別子は、メンバーの ID であるか、または OpenAjax のメタデータで定義されているメッセージ バンドル内の `name` 属性値に対応します。 識別子の型で指定された形式によって異なります、 [ \<loc >](../ide/loc-javascript.md)要素。  
   
- `parameterArray`  
- 任意。 `String.format` 関数でサポートされるパラメーターの繰り返しと同様に、ドキュメント化されたパラメーターを関数呼び出しで繰り返すことができるかどうかを指定します。 パラメーターを繰り返すことができることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
+  `parameterArray`  
+  任意。 `String.format` 関数でサポートされるパラメーターの繰り返しと同様に、ドキュメント化されたパラメーターを関数呼び出しで繰り返すことができるかどうかを指定します。 パラメーターを繰り返すことができることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
   
- `optional`  
- 任意。 呼び出し元の関数で、ドキュメント化されたパラメーターが省略可能であるかどうかを指定します。 パラメーターが省略可能であることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。  
+  `optional`  
+  任意。 呼び出し元の関数で、ドキュメント化されたパラメーターが省略可能であるかどうかを指定します。 パラメーターが省略可能であることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。  
   
- `value`  
- 任意。 関数コード自体ではなく、IntelliSense による使用のための評価が必要なコードを指定します。 パラメーターの型が定義されていない場合に、この属性を使用して型情報を提供できます。 たとえば、使用することができます`value=’1’`を数値としてパラメーターの型を処理します。  
+  `value`  
+  任意。 関数コード自体ではなく、IntelliSense による使用のための評価が必要なコードを指定します。 パラメーターの型が定義されていない場合に、この属性を使用して型情報を提供できます。 たとえば、使用することができます`value=’1’`を数値としてパラメーターの型を処理します。  
   
- `description`  
- 任意。 パラメーターの説明。  
+  `description`  
+  任意。 パラメーターの説明。  
   
 ## <a name="remarks"></a>Remarks  
  必須属性は `name` だけです。 他のすべての属性は省略可能です。  

@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetAddressesFromContext |Microsoft ドキュメント
+title: IDebugSymbolProvider::GetAddressesFromContext |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 09bc0d4fc0a723c259e2897b95abbd8611b10c7d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 94920e72b7d83e45fc7d7e49849f3c1983b180ef
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31119858"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49931520"
 ---
 # <a name="idebugsymbolprovidergetaddressesfromcontext"></a>IDebugSymbolProvider::GetAddressesFromContext
 このメソッドは、ドキュメントのコンテキストをデバッグ アドレスの配列にマップします。  
@@ -53,18 +53,18 @@ int GetAddressesFromContext(
  [in]TRUE の場合は、1 つのステートメントにデバッグ アドレスを制限します。  
   
  `ppEnumBegAddresses`  
- [out]このステートメントまたは行に関連付けられている開始デバッグ アドレスの列挙子を返します。  
+ [out]このステートメントまたは行に関連付けられた開始デバッグ アドレスの列挙子を返します。  
   
  `ppEnumEndAddresses`  
- [out]返します、 [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)このステートメントまたは行に関連付けられている終了デバッグ アドレスの列挙子。  
+ [out]返します、 [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)このステートメントまたは行に関連付けられている終了のデバッグ アドレスの列挙子。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- ドキュメントのコンテキストは、通常、ソース行の範囲を示します。 このメソッドは、開始し、これらの行に関連付けられているアドレスのデバッグを終了します。 一部の言語では、ステートメントで複数の行または複数のステートメントを含む行にまたがるできるようにします。 このメソッドは、1 つのステートメントにデバッグ アドレスを制限するためのフラグを提供します。  
+## <a name="remarks"></a>Remarks  
+ ドキュメントのコンテキストは、通常、ソース行の範囲を示します。 このメソッドを提供開始と、これらの行に関連付けられている終了デバッグ アドレス。 一部の言語では、複数の行または複数のステートメントを含む行にまたがるステートメントを使用できます。 このメソッドは、1 つのステートメントにデバッグ アドレスを制限するためのフラグを提供します。  
   
- テンプレートの場合と同様に、デバッグの複数のアドレスを 1 つのステートメントのことができます。  
+ テンプレートの場合と同様、複数のデバッグ アドレスを 1 つのステートメントのことができます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

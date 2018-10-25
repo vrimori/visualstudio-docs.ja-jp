@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8f2a2979fdc836f0204dec580d49e86ae235d5c1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 147d15133a2c5c682960e853defcf5965d04b1d3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49254697"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868028"
 ---
 # <a name="creating-portable-profiling-data-files-from-the-command-line"></a>移植可能なプロファイル データ ファイルのコマンド ラインからの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,19 +37,19 @@ ms.locfileid: "49254697"
   
 ### <a name="to-embed-the-symbols-for-a-profiling-run-into-a-profiling-data-vsp-file"></a>プロファイリング実行のシンボルをプロファイリング データ (.vsp) ファイルに組み込むには  
   
--   [コマンド プロンプト] ウィンドウで、次のコマンドを入力します。  
+- [コマンド プロンプト] ウィンドウで、次のコマンドを入力します。  
   
-     \<Path>**VSPerfReport \<** VSP File> **/PackSymbols**  
+   \<Path><strong>VSPerfReport \<</strong>VSP File> **/PackSymbols**  
   
-     既定では、.vsps ファイルには、.vsp ファイルのベース名で名前が付けられます。 **Output** オプションを利用し、代替名を指定できます。  
+   既定では、.vsps ファイルには、.vsp ファイルのベース名で名前が付けられます。 **Output** オプションを利用し、代替名を指定できます。  
   
 ### <a name="to-create-a-summary-profiling-data-file"></a>概要プロファイリング データ ファイルを作成するには  
   
--   [コマンド プロンプト] ウィンドウで、次のコマンドを入力します。  
+- [コマンド プロンプト] ウィンドウで、次のコマンドを入力します。  
   
-     \<Path>**VSPerfReport \<** VSP File> **/SummaryFile** [**/Output:**\<File Name>]  
+   \<Path><strong>VSPerfReport \<</strong>VSP File> **/SummaryFile** [**/Output:**\<File Name>]  
   
-     既定では、.vsps ファイルには、.vsp ファイルのベース名で名前が付けられます。 **Output** オプションを利用し、代替名を指定できます。
+   既定では、.vsps ファイルには、.vsp ファイルのベース名で名前が付けられます。 **Output** オプションを利用し、代替名を指定できます。
 
 
 

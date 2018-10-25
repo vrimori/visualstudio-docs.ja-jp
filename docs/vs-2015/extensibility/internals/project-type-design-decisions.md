@@ -18,12 +18,12 @@ ms.assetid: f68671fe-fd7a-4e56-a0b5-330b0f1fedb1
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9b5738f3119a8e5f1f6c1d8cb3ee47d64df1541d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6c7e3c0804fb354bc1f17fa4769ce118e13b3352
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49195482"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939554"
 ---
 # <a name="project-type-design-decisions"></a>プロジェクト タイプのデザインの方針
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -48,13 +48,13 @@ ms.locfileid: "49195482"
   
  プロジェクト内の項目の永続性に関して考慮すべきいくつかのオプションがあります。 次のオプションのいずれかを実行できます。  
   
--   変更されると、各ファイルを個別に保存します。  
+- 変更されると、各ファイルを個別に保存します。  
   
--   1 つの多くのトランザクションをキャプチャ**保存**操作。  
+- 1 つの多くのトランザクションをキャプチャ**保存**操作。  
   
--   ファイルをローカルに保存をサーバーにパブリッシュしたり、アイテムは、リモート オブジェクトへのデータ接続を表す場合に、プロジェクト項目を保存するための別のアプローチを使用してキーを押します。  
+- ファイルをローカルに保存をサーバーにパブリッシュしたり、アイテムは、リモート オブジェクトへのデータ接続を表す場合に、プロジェクト項目を保存するための別のアプローチを使用してキーを押します。  
   
- 永続化の詳細については、次を参照してください。[プロジェクトの永続化](../../extensibility/internals/project-persistence.md)と[とプロジェクト項目の保存](../../extensibility/internals/opening-and-saving-project-items.md)します。  
+  永続化の詳細については、次を参照してください。[プロジェクトの永続化](../../extensibility/internals/project-persistence.md)と[とプロジェクト項目の保存](../../extensibility/internals/opening-and-saving-project-items.md)します。  
   
 ## <a name="project-commitment-model"></a>コミットメントのプロジェクト モデル  
  永続化されたデータ オブジェクトが開かれるダイレクト モードまたはトランザクション モードにしますか?  

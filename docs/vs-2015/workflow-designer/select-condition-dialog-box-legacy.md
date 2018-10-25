@@ -16,29 +16,29 @@ caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: 4baec4427c09eff34b2fedb205de5556f22a4aa6
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: bd45feec9fed576882aa665a2b0193a996884f54
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49246149"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897772"
 ---
 # <a name="select-condition-dialog-box-legacy"></a>[条件の選択] ダイアログ ボックス (レガシ)
 このトピックで説明する方法を使用して、**条件の選択** ダイアログ ボックスで、従来の[!INCLUDE[wfd1](../includes/wfd1-md.md)]します。 [!INCLUDE[wfd2](../includes/wfd2-md.md)] または [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]を使用します。  
   
  **条件の選択**アクティビティの条件のプロパティに割り当てる宣言的ルール条件を選択するダイアログ ボックスを使用します。 これらのルール条件は、Windows Workflow Foundation の事前定義アクティビティにプロパティとして公開されています。  
   
--   [ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)  
+- [ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)  
   
--   [IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65034)  
+- [IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65034)  
   
--   [ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65039)  
+- [ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65039)  
   
--   [WhileActivity](http://go.microsoft.com/fwlink?LinkID=65049)  
+- [WhileActivity](http://go.microsoft.com/fwlink?LinkID=65049)  
   
- アクセスする方法については、**条件の選択**ダイアログ ボックスを参照してください[方法: 宣言型ルール条件 (レガシ) 作成](../workflow-designer/how-to-create-a-declarative-rule-condition-legacy.md)です。  
+  アクセスする方法については、**条件の選択**ダイアログ ボックスを参照してください[方法: 宣言型ルール条件 (レガシ) 作成](../workflow-designer/how-to-create-a-declarative-rule-condition-legacy.md)です。  
   
- 次の表に、ユーザー インターフェイス (UI) 要素の**条件の選択** ダイアログ ボックス。  
+  次の表に、ユーザー インターフェイス (UI) 要素の**条件の選択** ダイアログ ボックス。  
   
 |UI 要素|説明|  
 |----------------|-----------------|  

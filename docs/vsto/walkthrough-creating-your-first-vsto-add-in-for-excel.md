@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6421df0109d68d2647cafff5713aecb297c3536d
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 6a9b7540a42dbaf7b7079793158d33d761199720
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38797800"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949904"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-excel"></a>Excel 用の最初の VSTO アドインのチュートリアル: 作成します。
   この入門チュートリアルでは、Microsoft Office Excel 用のアプリケーション レベルのアドインを作成する方法について説明します。 この種のソリューションに作成した機能は、どのブックが開いているかにかかわらず、アプリケーション自体に対して使用できます。  
@@ -32,17 +32,17 @@ ms.locfileid: "38797800"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   Excel 用の Excel VSTO アドイン プロジェクトを作成する。  
+- Excel 用の Excel VSTO アドイン プロジェクトを作成する。  
   
--   Excel のオブジェクト モデルを使用して、保存時にテキストをブックに追加するコードを記述する。  
+- Excel のオブジェクト モデルを使用して、保存時にテキストをブックに追加するコードを記述する。  
   
--   プロジェクトをビルドし、実行してテストする。  
+- プロジェクトをビルドし、実行してテストする。  
   
--   完成したプロジェクトをクリーンアップして、開発用コンピューターでこの VSTO アドインが自動的に実行されないようにする。  
+- 完成したプロジェクトをクリーンアップして、開発用コンピューターでこの VSTO アドインが自動的に実行されないようにする。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -53,7 +53,7 @@ ms.locfileid: "38797800"
   
 #### <a name="to-create-a-new-excel-vsto-add-in-project-in-visual-studio"></a>Visual Studio で新しい Excel VSTO アドイン プロジェクトを作成するには  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を起動します。  
+1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]を起動します。  
   
 2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
@@ -78,22 +78,22 @@ ms.locfileid: "38797800"
   
 ### <a name="to-add-a-line-of-text-to-the-saved-workbook"></a>保存するブックにテキストの行を追加するには  
   
-1.  ThisAddIn コード ファイルで、次のコードを `ThisAddIn` クラスに追加します。 この新しいコードでは、ブックが保存されるときに発生する <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> イベントのイベント ハンドラーを定義します。  
+1. ThisAddIn コード ファイルで、次のコードを `ThisAddIn` クラスに追加します。 この新しいコードでは、ブックが保存されるときに発生する <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> イベントのイベント ハンドラーを定義します。  
   
-     ユーザーがブックを保存すると、イベント ハンドラーによって新しいテキストがアクティブなワークシートの先頭に追加されます。  
+    ユーザーがブックを保存すると、イベント ハンドラーによって新しいテキストがアクティブなワークシートの先頭に追加されます。  
   
-     [!code-vb[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ExcelAddInTutorial/ThisAddIn.vb#1)]
-     [!code-csharp[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs#1)]  
+    [!code-vb[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ExcelAddInTutorial/ThisAddIn.vb#1)]
+    [!code-csharp[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs#1)]  
   
-2.  C# を使用する場合は、次の必要なコードを `ThisAddIn_Startup` イベント ハンドラーに追加します。 このコードは、 `Application_WorkbookBeforeSave` イベント ハンドラーを <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> イベントに接続するために使用します。  
+2. C# を使用する場合は、次の必要なコードを `ThisAddIn_Startup` イベント ハンドラーに追加します。 このコードは、 `Application_WorkbookBeforeSave` イベント ハンドラーを <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> イベントに接続するために使用します。  
   
-     [!code-csharp[Trin_ExcelAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs#2)]  
+    [!code-csharp[Trin_ExcelAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs#2)]  
   
- 保存時にブックを変更するために、前のコード例では次のオブジェクトを使用しています。  
+   保存時にブックを変更するために、前のコード例では次のオブジェクトを使用しています。  
   
--   `Application` クラスの `ThisAddIn` フィールド。 `Application` フィールドは Excel の現在のインスタンスを表す <xref:Microsoft.Office.Interop.Excel.Application> オブジェクトを返します。  
+-   `ThisAddIn` クラスの `Application` フィールド。 `Application` フィールドは Excel の現在のインスタンスを表す <xref:Microsoft.Office.Interop.Excel.Application> オブジェクトを返します。  
   
--   `Wb` イベントのイベント ハンドラーの <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> パラメーター。 `Wb` パラメーターは、保存されるブックを表す <xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトです。 詳細については、次を参照してください。 [Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)します。  
+-   `Wb` イベントのイベント ハンドラーの <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> パラメーター。 `Wb` パラメーターは、保存されるブックを表す <xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトです。 詳細については、次の [Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)を参照してください。  
   
 ## <a name="test-the-project"></a>プロジェクトをテストします。  
   

@@ -1,5 +1,5 @@
 ---
-title: DBGPROP_ATTRIB_FLAGS |Microsoft ドキュメント
+title: DBGPROP_ATTRIB_FLAGS |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -20,12 +20,12 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 43db6cd118e2097d857d5c41334341c595088302
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 831f12d11515e6796941b64e114bdc084309b87d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24642012"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862412"
 ---
 # <a name="dbgpropattribflags"></a>DBGPROP_ATTRIB_FLAGS
 `IDebugProperty` のさまざまな属性について説明します。 `DebugPropertyInfo` 構造体のメンバーです。  
@@ -107,7 +107,7 @@ DBGPROP_ATTRIB_NO_ATTRIB  =0x00000000,
  DBGPROP_ATTRIB_VALUE_IS_RETURN_VALUE  
  値が関数からの戻り値であることを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  これらのフラグは、オブジェクトの子のフィルター処理にも使用されます。 値は、ビットごとの OR と組み合わせることができます。  
   
 ## <a name="see-also"></a>関連項目  

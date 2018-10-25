@@ -1,5 +1,5 @@
 ---
-title: Idiadatasource::opensession |Microsoft ドキュメント
+title: Idiadatasource::opensession |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 39fe9bf3a67d3ad5f26ff7c4ccdaa9772cf1346b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 8266102e8bc2c347ed8a554a3c64d9504f1e863b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31459868"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933509"
 ---
 # <a name="idiadatasourceopensession"></a>IDiaDataSource::openSession
 シンボルを照会するためのセッションを開きます。  
@@ -37,18 +37,18 @@ HRESULT openSession (
  [out]返します、 [IDiaSession](../../debugger/debug-interface-access/idiasession.md)開いているセッションを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 次の表は、このメソッドの戻り値を示します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 次の表では、このメソッドの戻り値を示します。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|E_UNEXPECTED|[IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)シンボルのソースにオブジェクトが既に初期化されていません。|  
+|E_UNEXPECTED|[IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)シンボルのソースとオブジェクトが既に初期化されていません。|  
 |E_INVALIDARG|無効な`ppSession`パラメーター。|  
 |E_OUTOFMEMORY|メモリ不足のため、セッションを開きます。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドを開き、 [IDiaSession](../../debugger/debug-interface-access/idiasession.md)データ ソース用オブジェクトです。  
+## <a name="remarks"></a>Remarks  
+ このメソッドを開き、 [IDiaSession](../../debugger/debug-interface-access/idiasession.md)データ ソースのオブジェクト。  
   
- `IDiaSession` オブジェクトは、データ ソースにクエリを実装します。 セッションでは、デバッグ シンボルのセットごとに 1 つのアドレス空間を管理します。 データ ソースのシンボルによって記述される .exe または .dll ファイルが場合は、複数のアドレスでアクティブな範囲は (たとえば、複数のプロセスでは、読み込まれることがある) ため、その各アドレス範囲の 1 つのセッションを使用する必要があります。  
+ `IDiaSession` オブジェクトは、データ ソースにクエリを実装します。 セッションでは、デバッグ シンボルのセットごとに 1 つのアドレス空間を管理します。 データ ソースのシンボルによって記述される .exe または .dll ファイルがある場合は、アクティブでは、複数のアドレスの範囲 (たとえば、複数のプロセスでは、読み込まれることがある) ため、し、アドレス範囲ごとに 1 つのセッションを使用する必要があります。  
   
 ## <a name="example"></a>例  
   

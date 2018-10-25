@@ -17,12 +17,12 @@ ms.assetid: 0ace5ac3-f9e1-4e6d-add4-42967b1f96a6
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 591967bd9ac61b611b1b062a006a5069fc94d114
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: b1cf22cd0bc717e9e9e3d0b06b76bed8420d1778
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49285299"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910798"
 ---
 # <a name="word-completion-in-a-legacy-language-service"></a>従来の言語サービスでの単語補完
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -36,15 +36,15 @@ ms.locfileid: "49285299"
   
 ## <a name="implementation-steps"></a>実装手順  
   
-1.  ユーザーが選択すると**入力候補**から、 **IntelliSense** ] メニューの [、<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>コマンド言語サービスに送信されます。  
+1. ユーザーが選択すると**入力候補**から、 **IntelliSense** ] メニューの [、<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>コマンド言語サービスに送信されます。  
   
-2.  <xref:Microsoft.VisualStudio.Package.ViewFilter>クラスは、コマンド ウィンドウと呼び出しをキャッチ、<xref:Microsoft.VisualStudio.Package.Source.Completion%2A>メソッドの解析の理由で<xref:Microsoft.VisualStudio.Package.ParseReason>します。  
+2. <xref:Microsoft.VisualStudio.Package.ViewFilter>クラスは、コマンド ウィンドウと呼び出しをキャッチ、<xref:Microsoft.VisualStudio.Package.Source.Completion%2A>メソッドの解析の理由で<xref:Microsoft.VisualStudio.Package.ParseReason>します。  
   
-3.  <xref:Microsoft.VisualStudio.Package.Source>呼び出し、クラス、その、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>可能性がある単語の入力候補とツール ヒント内の単語の一覧を使用して、表示の一覧を取得するメソッド、<xref:Microsoft.VisualStudio.Package.CompletionSet>クラス。  
+3. <xref:Microsoft.VisualStudio.Package.Source>呼び出し、クラス、その、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>可能性がある単語の入力候補とツール ヒント内の単語の一覧を使用して、表示の一覧を取得するメソッド、<xref:Microsoft.VisualStudio.Package.CompletionSet>クラス。  
   
-     1 つだけに一致する単語がある場合、<xref:Microsoft.VisualStudio.Package.Source>クラスがという単語を完了します。  
+    1 つだけに一致する単語がある場合、<xref:Microsoft.VisualStudio.Package.Source>クラスがという単語を完了します。  
   
- または、スキャナーは、トリガーの値を返す場合<xref:Microsoft.VisualStudio.Package.TokenTriggers>識別子の最初の文字を入力すると、<xref:Microsoft.VisualStudio.Package.Source>クラスは、これを検出し、呼び出し、<xref:Microsoft.VisualStudio.Package.Source.Completion%2A>メソッドの解析の理由で<xref:Microsoft.VisualStudio.Package.ParseReason>。 この場合、パーサーはメンバーの選択範囲の文字の存在を検出し、メンバーの一覧を指定する必要があります。  
+   または、スキャナーは、トリガーの値を返す場合<xref:Microsoft.VisualStudio.Package.TokenTriggers>識別子の最初の文字を入力すると、<xref:Microsoft.VisualStudio.Package.Source>クラスは、これを検出し、呼び出し、<xref:Microsoft.VisualStudio.Package.Source.Completion%2A>メソッドの解析の理由で<xref:Microsoft.VisualStudio.Package.ParseReason>。 この場合、パーサーはメンバーの選択範囲の文字の存在を検出し、メンバーの一覧を指定する必要があります。  
   
 ## <a name="enabling-support-for-the-complete-word"></a>入力候補のサポートを有効にします。  
  単語の入力候補のセットのサポートを有効にする、`CodeSense`名前付きパラメーターに渡される、<xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>言語パッケージに関連付けられているユーザーの属性。 これにより設定、<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A>プロパティを<xref:Microsoft.VisualStudio.Package.LanguagePreferences>クラス。  

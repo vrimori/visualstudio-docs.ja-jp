@@ -1,5 +1,5 @@
 ---
-title: LocationType |Microsoft ドキュメント
+title: LocationType |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fb46eb1c7477f93ed63dfc4424d881886c8d0c8f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e816ac9dca3c70e88ae023b4fda4edf0b99f9c96
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31480005"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872097"
 ---
 # <a name="locationtype"></a>LocationType
 シンボルの場所の情報の種類を示します。  
@@ -45,13 +45,13 @@ enum LocationType {
   
 ## <a name="elements"></a>Elements  
  `LocIsNull`  
- 場所の情報は使用できません。  
+ 場所の情報は、ご利用いただけません。  
   
  `LocIsStatic`  
  場所は静的です。  
   
  `LocIsTLS`  
- 場所は、スレッド ローカル ストレージです。  
+ 場所は、スレッド ローカル ストレージにです。  
   
  `LocIsRegRel`  
  場所は、レジスタの相対です。  
@@ -63,29 +63,29 @@ enum LocationType {
  場所は、レジスタでです。  
   
  `LocIsBitField`  
- 場所は、ビット フィールドです。  
+ 場所は、ビット フィールドでです。  
   
  `LocIsSlot`  
  場所は、Microsoft Intermediate Language (MSIL) のスロットです。  
   
  `LocIsIlRel`  
- 場所は、MSIL relative です。  
+ 場所は、MSIL 相対パスです。  
   
  `LocInMetaData`  
- 場所は、メタデータでです。  
+ メタデータ内の場所は。  
   
  `LocIsConstant`  
- 場所は、定数値です。  
+ 場所は、定数値でです。  
   
  `LocTypeMax`  
  この列挙体の場所の種類の数。  
   
-## <a name="remarks"></a>コメント  
- 使用できるプロパティ、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)インターフェイスは、イメージ ファイル内のシンボルの場所によって異なります。 詳細については、次を参照してください。[シンボルの場所](../../debugger/debug-interface-access/symbol-locations.md)です。  
+## <a name="remarks"></a>Remarks  
+ 使用できるプロパティ、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)インターフェイスは、イメージ ファイル内のシンボルの場所によって異なります。 詳細については、次を参照してください。[シンボルの場所](../../debugger/debug-interface-access/symbol-locations.md)します。  
   
- この列挙体の値がへの呼び出しによって返される、 [idiasymbol::get_locationtype](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md)メソッドです。  
+ この列挙体の値が呼び出しによって返される、 [idiasymbol::get_locationtype](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: cvconst.h  
   
 ## <a name="see-also"></a>関連項目  

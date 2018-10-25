@@ -27,12 +27,12 @@ caps.latest.revision: 27
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5dd01b20e84bbe39e0c082a0b598fb6742f33d9f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: fa90ddb397d1c18e88ab8f25e2a0c3aee3e4d9a5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49279020"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891129"
 ---
 # <a name="validate-data-in-datasets"></a>データセットのデータの検証
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -47,21 +47,21 @@ ms.locfileid: "49279020"
 ## <a name="validate-data"></a>データを検証します。  
  次の方法では、データセット内での検証を実行できます。  
   
--   変更時に個々 のデータ列の値をチェックできるアプリケーション固有の検証を作成します。  詳細については、次を参照してください。[方法: 列変更中にデータを検証](http://msdn.microsoft.com/library/a2680600-67b6-4a40-a77e-b5bc638281c5)です。  
+- 変更時に個々 のデータ列の値をチェックできるアプリケーション固有の検証を作成します。  詳細については、次を参照してください。[方法: 列変更中にデータを検証](http://msdn.microsoft.com/library/a2680600-67b6-4a40-a77e-b5bc638281c5)です。  
   
--   データ全体の中に値にデータをチェックできるアプリケーション固有の検証を作成して、行が変更されます。 詳細については、次を参照してください。[方法: 行変更中にデータを検証](http://msdn.microsoft.com/library/afc03c77-dfed-4302-9376-929400468ecc)です。  
+- データ全体の中に値にデータをチェックできるアプリケーション固有の検証を作成して、行が変更されます。 詳細については、次を参照してください。[方法: 行変更中にデータを検証](http://msdn.microsoft.com/library/afc03c77-dfed-4302-9376-929400468ecc)です。  
   
--   これに、データセットの実際のスキーマ定義の一部としてキー、一意の制約を作成します。 スキーマ定義に検証を組み込む方法についての詳細については、次を参照してください。[一意の値を含むに DataColumn を制約する](http://msdn.microsoft.com/library/8ca21f77-b99a-47a7-a656-7cfd7a1bd9df)します。  
+- これに、データセットの実際のスキーマ定義の一部としてキー、一意の制約を作成します。 スキーマ定義に検証を組み込む方法についての詳細については、次を参照してください。[一意の値を含むに DataColumn を制約する](http://msdn.microsoft.com/library/8ca21f77-b99a-47a7-a656-7cfd7a1bd9df)します。  
   
--   プロパティを設定して、<xref:System.Data.DataColumn>オブジェクトのなど<xref:System.Data.DataColumn.MaxLength%2A>、 <xref:System.Data.DataColumn.AllowDBNull%2A>、および<xref:System.Data.DataColumn.Unique%2A>します。  
+- プロパティを設定して、<xref:System.Data.DataColumn>オブジェクトのなど<xref:System.Data.DataColumn.MaxLength%2A>、 <xref:System.Data.DataColumn.AllowDBNull%2A>、および<xref:System.Data.DataColumn.Unique%2A>します。  
   
- によって複数のイベントが発生する、<xref:System.Data.DataTable>オブジェクトのレコードの変更が発生している場合。  
+  によって複数のイベントが発生する、<xref:System.Data.DataTable>オブジェクトのレコードの変更が発生している場合。  
   
--   <xref:System.Data.DataTable.ColumnChanging>と<xref:System.Data.DataTable.ColumnChanged>中およびそれぞれ個々 の列の変更後のイベントが発生します。 <xref:System.Data.DataTable.ColumnChanging>イベントは、特定の列で変更を検証する場合に便利です。 提案された変更については、イベントの引数として渡されます。 詳細については、次を参照してください。[方法: 列変更中にデータを検証](http://msdn.microsoft.com/library/a2680600-67b6-4a40-a77e-b5bc638281c5)です。  
+- <xref:System.Data.DataTable.ColumnChanging>と<xref:System.Data.DataTable.ColumnChanged>中およびそれぞれ個々 の列の変更後のイベントが発生します。 <xref:System.Data.DataTable.ColumnChanging>イベントは、特定の列で変更を検証する場合に便利です。 提案された変更については、イベントの引数として渡されます。 詳細については、次を参照してください。[方法: 列変更中にデータを検証](http://msdn.microsoft.com/library/a2680600-67b6-4a40-a77e-b5bc638281c5)です。  
   
--   <xref:System.Data.DataTable.RowChanging>と<xref:System.Data.DataTable.RowChanged>イベントが発生中と後に行の変更。 <xref:System.Data.DataTable.RowChanging>イベントは一般的な。 これは、変更が、行のどこかに発生しているが、どの列が変更されたがわからないことを示します。 詳細については、次を参照してください。[方法: 行変更中にデータを検証](http://msdn.microsoft.com/library/afc03c77-dfed-4302-9376-929400468ecc)です。  
+- <xref:System.Data.DataTable.RowChanging>と<xref:System.Data.DataTable.RowChanged>イベントが発生中と後に行の変更。 <xref:System.Data.DataTable.RowChanging>イベントは一般的な。 これは、変更が、行のどこかに発生しているが、どの列が変更されたがわからないことを示します。 詳細については、次を参照してください。[方法: 行変更中にデータを検証](http://msdn.microsoft.com/library/afc03c77-dfed-4302-9376-929400468ecc)です。  
   
- 既定では、それぞれの列の変更はそのため 4 つのイベントを生成します。 1 つは、<xref:System.Data.DataTable.ColumnChanging>と<xref:System.Data.DataTable.ColumnChanged>が変更されている特定の列のイベント。 次に、<xref:System.Data.DataTable.RowChanging>と<xref:System.Data.DataTable.RowChanged>イベント。 行に複数の変更が行わ、イベントが各変更に対して発生します。  
+  既定では、それぞれの列の変更はそのため 4 つのイベントを生成します。 1 つは、<xref:System.Data.DataTable.ColumnChanging>と<xref:System.Data.DataTable.ColumnChanged>が変更されている特定の列のイベント。 次に、<xref:System.Data.DataTable.RowChanging>と<xref:System.Data.DataTable.RowChanged>イベント。 行に複数の変更が行わ、イベントが各変更に対して発生します。  
   
 > [!NOTE]
 >  データ行の<xref:System.Data.DataRow.BeginEdit%2A>メソッドがオフ、<xref:System.Data.DataTable.RowChanging>と<xref:System.Data.DataTable.RowChanged>それぞれ個々 の列の変更後のイベント。 までイベントが発生しない場合、<xref:System.Data.DataRow.EndEdit%2A>メソッドが呼び出されて、ときに、<xref:System.Data.DataTable.RowChanging>と<xref:System.Data.DataTable.RowChanged>イベントは 1 回だけ発生します。 詳細については、次を参照してください。[データセットの読み込み中に制約を無効に](../data-tools/turn-off-constraints-while-filling-a-dataset.md)します。  
@@ -94,13 +94,13 @@ ms.locfileid: "49279020"
   
  データを検証するには、データ列の値が応答することで変更されたときに、<xref:System.Data.DataTable.ColumnChanging>イベント。 発生すると、このイベントはイベント引数を渡します (<xref:System.Data.DataColumnChangeEventArgs.ProposedValue%2A>) は、現在の列の提示された値を格納します。 内容に基づく`e.ProposedValue`を実行できます。  
   
--   何もせずに、指示された値を受け入れます。  
+- 何もせずに、指示された値を受け入れます。  
   
--   列のエラーを設定して指定された値を拒否する (<xref:System.Data.DataRow.SetColumnError%2A>) から列を変更するイベント ハンドラー内にします。  
+- 列のエラーを設定して指定された値を拒否する (<xref:System.Data.DataRow.SetColumnError%2A>) から列を変更するイベント ハンドラー内にします。  
   
--   オプションで <xref:System.Windows.Forms.ErrorProvider> コントロールを使用して、ユーザーにエラー メッセージを表示します。 詳細については、次を参照してください。 [ErrorProvider コンポーネント](http://msdn.microsoft.com/library/c0f2e231-c5c9-413d-a507-75af2db499b6)します。  
+- オプションで <xref:System.Windows.Forms.ErrorProvider> コントロールを使用して、ユーザーにエラー メッセージを表示します。 詳細については、次を参照してください。 [ErrorProvider コンポーネント](http://msdn.microsoft.com/library/c0f2e231-c5c9-413d-a507-75af2db499b6)します。  
   
- 中に検証を実行することも、<xref:System.Data.DataTable.RowChanging>イベント。 詳細については、次を参照してください。[方法: 行変更中にデータを検証](http://msdn.microsoft.com/library/afc03c77-dfed-4302-9376-929400468ecc)です。  
+  中に検証を実行することも、<xref:System.Data.DataTable.RowChanging>イベント。 詳細については、次を参照してください。[方法: 行変更中にデータを検証](http://msdn.microsoft.com/library/afc03c77-dfed-4302-9376-929400468ecc)です。  
   
 ## <a name="validate-data-during-row-changes"></a>行の変更時にデータを検証します。  
  検証する各列にアプリケーションの要件を満たすデータが格納されていることを検証するコードを記述できます。 そうで提案された値が許容されない場合、エラーが含まれているかを示す列を設定します。 `Quantity` 列が 0 以下の場合に列エラーを設定する例を次に示します。 行変更イベント ハンドラーは、次のように記述します。  
