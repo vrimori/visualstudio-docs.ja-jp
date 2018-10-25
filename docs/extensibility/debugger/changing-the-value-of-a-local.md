@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 788f496f2afeb3b6392cb165d243a9d83f8ea005
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 1ed8ea2aa16ec9bddd626c08f1e45d502d402b57
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39151074"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823191"
 ---
 # <a name="change-the-value-of-a-local"></a>ローカルの値を変更します。
 > [!IMPORTANT]
@@ -29,21 +29,21 @@ ms.locfileid: "39151074"
   
  これは、ローカルの値を変更するプロセスの概要を示します。  
   
-1.  新しい値を入力すると、Visual Studio は呼び出し[SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md)上、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)ローカルに関連付けられているオブジェクト。  
+1. 新しい値を入力すると、Visual Studio は呼び出し[SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md)上、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)ローカルに関連付けられているオブジェクト。  
   
-2.  `IDebugProperty2::SetValueAsString` では次のタスクを実行します。  
+2. `IDebugProperty2::SetValueAsString` では次のタスクを実行します。  
   
-    1.  値を生成する文字列を評価します。  
+   1.  値を生成する文字列を評価します。  
   
-    2.  関連付けられているバインド[IDebugField](../../extensibility/debugger/reference/idebugfield.md)オブジェクトを取得する、 [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)オブジェクト。  
+   2.  関連付けられているバインド[IDebugField](../../extensibility/debugger/reference/idebugfield.md)オブジェクトを取得する、 [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)オブジェクト。  
   
-    3.  一連のバイト値に変換します。  
+   3.  一連のバイト値に変換します。  
   
-    4.  呼び出し[SetValue](../../extensibility/debugger/reference/idebugobject-setvalue.md)デバッグ中のプログラムがアクセスできるように、メモリに、値のバイトを格納します。  
+   4.  呼び出し[SetValue](../../extensibility/debugger/reference/idebugobject-setvalue.md)デバッグ中のプログラムがアクセスできるように、メモリに、値のバイトを格納します。  
   
-3.  Visual Studio の更新、**ローカル**表示 (を参照してください[表示の [ローカル]](../../extensibility/debugger/displaying-locals.md)詳細については)。  
+3. Visual Studio の更新、**ローカル**表示 (を参照してください[表示の [ローカル]](../../extensibility/debugger/displaying-locals.md)詳細については)。  
   
- 内の変数の値を変更するこの手順を使用しても、**ウォッチ**ウィンドウで、ある点を除く、`IDebugProperty2`の代わりに使用されるローカル変数の値に関連付けられているオブジェクト、`IDebugProperty2`オブジェクトに関連付けられたローカル自体。  
+   内の変数の値を変更するこの手順を使用しても、**ウォッチ**ウィンドウで、ある点を除く、`IDebugProperty2`の代わりに使用されるローカル変数の値に関連付けられているオブジェクト、`IDebugProperty2`オブジェクトに関連付けられたローカル自体。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [値を変更するサンプルの実装](../../extensibility/debugger/sample-implementation-of-changing-values.md)  

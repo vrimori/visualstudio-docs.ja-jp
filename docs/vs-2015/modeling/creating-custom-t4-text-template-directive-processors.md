@@ -14,12 +14,12 @@ caps.latest.revision: 31
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: d4e0b6b325f2418c031f00defc0f28bd2fc6b3f0
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 0defae5127b3443eb30f02558fd1acf545651e3e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49176931"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852746"
 ---
 # <a name="creating-custom-t4-text-template-directive-processors"></a>カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -54,19 +54,19 @@ ms.locfileid: "49176931"
   
  最も重要な`DirectiveProcessor`を実装する必要があるメソッドは、次のとおりです。  
   
--   `bool IsDirectiveSupported(string directiveName)` -戻り`true`ディレクティブ プロセッサは、名前付きディレクティブを扱うことができる場合。  
+- `bool IsDirectiveSupported(string directiveName)` -戻り`true`ディレクティブ プロセッサは、名前付きディレクティブを扱うことができる場合。  
   
--   `void ProcessDirective (string directiveName, IDictionary<string, string> arguments)` -テンプレート エンジンでは、テンプレートのディレクティブの各インスタンスに対してこのメソッドを呼び出します。 プロセッサは、結果を保存する必要があります。  
+- `void ProcessDirective (string directiveName, IDictionary<string, string> arguments)` -テンプレート エンジンでは、テンプレートのディレクティブの各インスタンスに対してこのメソッドを呼び出します。 プロセッサは、結果を保存する必要があります。  
   
- ProcessDirective() に対するすべての呼び出し後に、テンプレート エンジンはこれらのメソッドを呼び出します。  
+  ProcessDirective() に対するすべての呼び出し後に、テンプレート エンジンはこれらのメソッドを呼び出します。  
   
--   `string[] GetReferencesForProcessingRun()` -テンプレート コードを必要とするアセンブリの名前を返します。  
+- `string[] GetReferencesForProcessingRun()` -テンプレート コードを必要とするアセンブリの名前を返します。  
   
--   `string[] GetImportsForProcessingRun()` -テンプレート コードで使用できる名前空間を返します。  
+- `string[] GetImportsForProcessingRun()` -テンプレート コードで使用できる名前空間を返します。  
   
--   `string GetClassCodeForProcessingRun()` -メソッド、プロパティ、およびテンプレート コードで使用できるその他の宣言のコードを返します。 これを行う最も簡単な方法では、c# または Visual Basic コードを含む文字列を作成します。 ディレクティブ プロセッサを任意の CLR 言語を使用するテンプレートから呼び出すことができるように、CodeDom ツリーとして、ステートメントを作成し、テンプレートで使用する言語でツリーをシリアル化の結果を返すできます。  
+- `string GetClassCodeForProcessingRun()` -メソッド、プロパティ、およびテンプレート コードで使用できるその他の宣言のコードを返します。 これを行う最も簡単な方法では、c# または Visual Basic コードを含む文字列を作成します。 ディレクティブ プロセッサを任意の CLR 言語を使用するテンプレートから呼び出すことができるように、CodeDom ツリーとして、ステートメントを作成し、テンプレートで使用する言語でツリーをシリアル化の結果を返すできます。  
   
--   詳細については、次を参照してください。[チュートリアル: カスタム ディレクティブ プロセッサの作成](../modeling/walkthrough-creating-a-custom-directive-processor.md)です。  
+- 詳細については、次を参照してください。[チュートリアル: カスタム ディレクティブ プロセッサの作成](../modeling/walkthrough-creating-a-custom-directive-processor.md)です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [カスタム ディレクティブ プロセッサの配置](../modeling/deploying-a-custom-directive-processor.md)  

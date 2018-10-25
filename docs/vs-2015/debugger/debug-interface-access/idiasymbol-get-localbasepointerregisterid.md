@@ -18,12 +18,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3052ac88d25d7846f6da0ada0538aae4cdf3911c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 0f0201e062d0106e297c128c71c22dadf43a7890
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49279722"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860566"
 ---
 # <a name="idiasymbolgetlocalbasepointerregisterid"></a>IDiaSymbol::get_localBasePointerRegisterId
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -50,7 +50,7 @@ HRESULT get_localBasePointerRegisterId (
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

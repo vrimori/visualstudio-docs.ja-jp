@@ -18,12 +18,12 @@ ms.assetid: f6895cd4-3e95-4f0e-aa9e-8c7750f46ed4
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f28f0efc755f40a0d2f4cfdc710eda8f2f4799ff
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 43f7638039672fad530cb2cd2447dbe8174011cb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49259327"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894080"
 ---
 # <a name="projectsubtype-element-visual-studio-templates"></a>ProjectSubType 要素 (Visual Studio テンプレート)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -65,15 +65,15 @@ ms.locfileid: "49259327"
   
  `ProjectSubType`要素は、サブカテゴリを[ProjectType](../extensibility/projecttype-element-visual-studio-templates.md)要素。 この値を含めることができます。  
   
--   `SmartDevice-NETCFv1`: を指定するテンプレートの対象と、[!INCLUDE[Compact](../includes/compact-md.md)]バージョン 1.0。  
+- `SmartDevice-NETCFv1`: を指定するテンプレートの対象と、[!INCLUDE[Compact](../includes/compact-md.md)]バージョン 1.0。  
   
--   `SmartDevice-NETCFv2`: 指定 tempalate ターゲット、[!INCLUDE[Compact](../includes/compact-md.md)]バージョン 2.0。  
+- `SmartDevice-NETCFv2`: 指定 tempalate ターゲット、[!INCLUDE[Compact](../includes/compact-md.md)]バージョン 2.0。  
   
- テンプレートが含まれている場合、`ProjectType`要素の値を持つ`Web`、`ProjectSubType`要素がテンプレートのプログラミング言語を指定します。 この要素は、次の値を持つことができます。  
+  テンプレートが含まれている場合、`ProjectType`要素の値を持つ`Web`、`ProjectSubType`要素がテンプレートのプログラミング言語を指定します。 この要素は、次の値を持つことができます。  
   
--   `CSharp`: このテンプレートが作成を指定します、 [!INCLUDE[csprcs](../includes/csprcs-md.md)] Web プロジェクトまたは項目。  
+- `CSharp`: このテンプレートが作成を指定します、 [!INCLUDE[csprcs](../includes/csprcs-md.md)] Web プロジェクトまたは項目。  
   
--   `VisualBasic`: このテンプレートが作成を指定します、 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Web プロジェクトまたは項目。  
+- `VisualBasic`: このテンプレートが作成を指定します、 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Web プロジェクトまたは項目。  
   
 ## <a name="example"></a>例  
  次の例のためのプロジェクト テンプレート メタデータを[!INCLUDE[csprcs](../includes/csprcs-md.md)]デバイス アプリケーションを対象とする、[!INCLUDE[Compact](../includes/compact-md.md)]バージョン 2.0。  

@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_datacrc |Microsoft ドキュメント
+title: Idiasectioncontrib::get_datacrc |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 705486da2822774037e105a79a8a6181d237239c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 872f4cf70d24ce1da1dd5cf193632ffb2f55a320
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31466300"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903089"
 ---
 # <a name="idiasectioncontribgetdatacrc"></a>IDiaSectionContrib::get_dataCrc
 セクション内のデータの巡回冗長検査 (CRC) を取得します。  
@@ -34,10 +34,10 @@ HRESULT get_dataCrc (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]セクションで、データの CRC を返します。  
+ [out]セクションでは、データの CRC を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

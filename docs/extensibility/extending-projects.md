@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ce2ab15d215b9758e42c0a7d973153f2f5c18f8d
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: a914afada4422364db043582be43658cf494b9c0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42902820"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864674"
 ---
 # <a name="extend-projects"></a>プロジェクトを拡張します。
 プロジェクトおよびソリューションは、Visual Studio コードとリソース ファイルをコンパイルおよび展開の単位に整理する方法です。 プロジェクトの詳細については見つかります[プロジェクト (Visual Studio SDK)](../extensibility/extending-projects.md)します。  
@@ -36,7 +36,7 @@ ms.locfileid: "42902820"
  カスタム プロジェクト システムを作成する方法について説明します。  
   
  [プロジェクト ファイル内のデータを保存します。](../extensibility/saving-data-in-project-files.md)  
- 説明をプロジェクトに追加する方法 (*.* proj *) ファイル。  
+ 説明をプロジェクトに追加する方法 (<em>.</em>proj *) ファイル。  
   
  [実行時に、プロジェクトのサブタイプを確認します。](../extensibility/verifying-subtypes-of-a-project-at-run-time.md)  
  実行時に、プロジェクトのサブタイプであることを確認する方法について説明します。  

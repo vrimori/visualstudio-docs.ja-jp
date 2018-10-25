@@ -13,12 +13,12 @@ ms.assetid: 4a2df0a3-42da-4f7b-996f-ee16a35ac922
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8c4e0950010247387d8ddc1380589a6f684ab8ae
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 9e31588850d47276d63bda724e61e502c38a4575
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49265117"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862321"
 ---
 # <a name="walkthrough-creating-a-view-adornment-commands-and-settings-column-guides"></a>チュートリアル: ビューの表示要素、コマンド、設定 (垂直グリッド ガイド) の作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,21 +27,21 @@ ms.locfileid: "49265117"
   
  このチュートリアルでは。  
   
--   VSIX プロジェクトを作成します。  
+- VSIX プロジェクトを作成します。  
   
--   エディター ビューの表示要素を追加します。  
+- エディター ビューの表示要素を追加します。  
   
--   保存と設定の取得 (どこに描画列ガイドと、色) のサポートを追加します。  
+- 保存と設定の取得 (どこに描画列ガイドと、色) のサポートを追加します。  
   
--   コマンドの追加 (列ガイドの追加と削除、その色を変更する)  
+- コマンドの追加 (列ガイドの追加と削除、その色を変更する)  
   
--   テキスト ドキュメントのコンテキスト メニューの [編集] メニューで、コマンドを配置します。  
+- テキスト ドキュメントのコンテキスト メニューの [編集] メニューで、コマンドを配置します。  
   
--   Visual Studio コマンド ウィンドウからコマンドを呼び出すためのサポートを追加します。  
+- Visual Studio コマンド ウィンドウからコマンドを呼び出すためのサポートを追加します。  
   
- この Visual Studio ギャラリーで列ガイド機能のバージョンを試すことができます[拡張子](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home)します。  
+  この Visual Studio ギャラリーで列ガイド機能のバージョンを試すことができます[拡張子](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home)します。  
   
- **注**: このチュートリアルでは、多くのコードに貼り付ける visual studio 拡張機能のテンプレートによって生成されるいくつかのファイルが、すぐにこのチュートリアルでは他の拡張機能の例を使用して github で完成したソリューションを参照します。  Generictemplate アイコンを使用する代わりに実際のコマンドのアイコンがあることで、完成したコードは若干異なります。  
+  **注**: このチュートリアルでは、多くのコードに貼り付ける visual studio 拡張機能のテンプレートによって生成されるいくつかのファイルが、すぐにこのチュートリアルでは他の拡張機能の例を使用して github で完成したソリューションを参照します。  Generictemplate アイコンを使用する代わりに実際のコマンドのアイコンがあることで、完成したコードは若干異なります。  
   
 ## <a name="getting-started"></a>作業の開始  
  Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
@@ -49,21 +49,21 @@ ms.locfileid: "49265117"
 ## <a name="setting-up-the-solution"></a>ソリューションのセットアップ  
  最初 VSIX プロジェクトを作成、エディター ビュー表示要素を追加し、(これは、コマンドを所有するために VSPackage を追加) コマンドを追加するは。  基本的なアーキテクチャは次のとおりです。  
   
--   テキスト ビュー作成リスナーを作成するがある、`ColumnGuideAdornment`ビューごとにオブジェクト。  このオブジェクトがビューの変更に関するイベントをリッスンまたはの設定変更、列を更新または再描画が必要に応じてガイドします。  
+- テキスト ビュー作成リスナーを作成するがある、`ColumnGuideAdornment`ビューごとにオブジェクト。  このオブジェクトがビューの変更に関するイベントをリッスンまたはの設定変更、列を更新または再描画が必要に応じてガイドします。  
   
--   `GuidesSettingsManager` Visual Studio の設定の保存場所から読み取りと書き込みを処理します。  設定マネージャーは、ユーザーのコマンドをサポートする設定を更新するための操作もあります (列を追加、列の削除、色を変更する)。  
+- `GuidesSettingsManager` Visual Studio の設定の保存場所から読み取りと書き込みを処理します。  設定マネージャーは、ユーザーのコマンドをサポートする設定を更新するための操作もあります (列を追加、列の削除、色を変更する)。  
   
--   ユーザーのコマンドがある場合に必要な VSIP パッケージがありますが、コマンドの実装オブジェクトを初期化する定型コードだけです。  
+- ユーザーのコマンドがある場合に必要な VSIP パッケージがありますが、コマンドの実装オブジェクトを初期化する定型コードだけです。  
   
--   `ColumnGuideCommands` .Vsct ファイルで宣言されているユーザーのコマンドを実装して、コマンドに対するコマンド ハンドラーをフックするオブジェクト。  
+- `ColumnGuideCommands` .Vsct ファイルで宣言されているユーザーのコマンドを実装して、コマンドに対するコマンド ハンドラーをフックするオブジェクト。  
   
- **VSIX**します。  使用**ファイル&#124;新しい.** プロジェクトを作成するコマンド。  左側のナビゲーション ウィンドウで c# の機能拡張ノードを選択し、 **VSIX プロジェクト**右側のペインでします。  ColumnGuides の名前を入力し、選択**OK**プロジェクトを作成します。  
+  **VSIX**します。  使用**ファイル&#124;新しい.** プロジェクトを作成するコマンド。  左側のナビゲーション ウィンドウで c# の機能拡張ノードを選択し、 **VSIX プロジェクト**右側のペインでします。  ColumnGuides の名前を入力し、選択**OK**プロジェクトを作成します。  
   
- **装飾の表示**します。  ソリューション エクスプ ローラーでプロジェクト ノードを右ポインター ボタンを押します。  選択、**追加&#124;新しい項目.** 新しいビューの表示要素項目を追加するコマンド。  選択**拡張&#124;エディター**左側のナビゲーション ウィンドウで選択**エディターのビューポート Adornment**右側のウィンドウで。  項目の名前として ColumnGuideAdornment の名前を入力し、選択**追加**に追加します。  
+  **装飾の表示**します。  ソリューション エクスプ ローラーでプロジェクト ノードを右ポインター ボタンを押します。  選択、**追加&#124;新しい項目.** 新しいビューの表示要素項目を追加するコマンド。  選択**拡張&#124;エディター**左側のナビゲーション ウィンドウで選択**エディターのビューポート Adornment**右側のウィンドウで。  項目の名前として ColumnGuideAdornment の名前を入力し、選択**追加**に追加します。  
   
- この項目テンプレート プロジェクト (だけでなく参照およびなど) に 2 つのファイルを追加するを参照してください: ColumnGuideAdornment.cs と ColumnGuideAdornmentTextViewCreationListener.cs します。  テンプレートは、ビューにだけ紫色の四角形を描画します。  次に示すビュー作成リスナー内の行のいくつかの変更され、ColumnGuideAdornment.cs の内容を置き換えます。  
+  この項目テンプレート プロジェクト (だけでなく参照およびなど) に 2 つのファイルを追加するを参照してください: ColumnGuideAdornment.cs と ColumnGuideAdornmentTextViewCreationListener.cs します。  テンプレートは、ビューにだけ紫色の四角形を描画します。  次に示すビュー作成リスナー内の行のいくつかの変更され、ColumnGuideAdornment.cs の内容を置き換えます。  
   
- **コマンド**します。  ソリューション エクスプ ローラーでプロジェクト ノードを右ポインター ボタンを押します。  選択、**追加&#124;新しい項目.** 新しいビューの表示要素項目を追加するコマンド。  選択**拡張&#124;VSPackage**左側のナビゲーション ウィンドウで選択**カスタム コマンド**右側のウィンドウでします。  項目の名前として ColumnGuideCommands の名前を入力し、選択**追加**に追加します。  ColumnGuideCommands.cs、ColumnGuideCommandsPackage.cs、および ColumnGuideCommandsPackage.vsct、だけでなく、複数の参照は追加コマンドおよびパッケージの追加。  以下を定義し、コマンドを実装する最初と最後のファイルの内容を置き換えます。  
+  **コマンド**します。  ソリューション エクスプ ローラーでプロジェクト ノードを右ポインター ボタンを押します。  選択、**追加&#124;新しい項目.** 新しいビューの表示要素項目を追加するコマンド。  選択**拡張&#124;VSPackage**左側のナビゲーション ウィンドウで選択**カスタム コマンド**右側のウィンドウでします。  項目の名前として ColumnGuideCommands の名前を入力し、選択**追加**に追加します。  ColumnGuideCommands.cs、ColumnGuideCommandsPackage.cs、および ColumnGuideCommandsPackage.vsct、だけでなく、複数の参照は追加コマンドおよびパッケージの追加。  以下を定義し、コマンドを実装する最初と最後のファイルの内容を置き換えます。  
   
 ## <a name="setting-up-the-text-view-creation-listener"></a>テキスト ビューの作成のリスナーを設定  
  ColumnGuideAdornmentTextViewCreationListener.cs をエディターで開きます。  このコードは、for Visual Studio でのテキスト ビューを作成するたびに、ハンドラーを実装します。  ビューの特性に応じて、ハンドラーが呼び出されたときを制御する属性があります。  

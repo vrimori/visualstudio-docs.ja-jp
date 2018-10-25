@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 776ebca3b412b631634e45846ca15f00f31126f5
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 9e8ad899d7cf62b2d874d5dc4971c8e7ad7f950a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44282453"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829769"
 ---
 # <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>方法: オンライン ClickOnce アプリケーションでは、クエリ文字列の情報の取得
 *クエリ文字列* とは、URL のうちの疑問符 (?) で始まる部分であり、 *name=value*の形式で任意の情報を記述します。 たとえば、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] でホストされている `WindowsApp1` という `servername`アプリケーションがあり、このアプリケーションを起動するときに、 `username` という変数に値を渡すとします。 URL は次のようになります。  
@@ -57,17 +57,17 @@ ms.locfileid: "44282453"
   
 ### <a name="to-enable-query-string-passing-in-a-clickonce-application-with-mageuiexe"></a>MageUI.exe を使用して ClickOnce アプリケーションでクエリ文字列の受け渡しを有効にする方法  
   
-1.  .NET Framework のコマンド プロンプトを開き、次のように入力します。  
+1. .NET Framework のコマンド プロンプトを開き、次のように入力します。  
   
-    ```cmd  
-    MageUI  
-    ```  
+   ```cmd  
+   MageUI  
+   ```  
   
-2.  **[ファイル]** メニューの **[開く]** をクリックし、対象の [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの配置マニフェストを開きます。配置マニフェスト ファイルの拡張子は `.application` です。  
+2. **[ファイル]** メニューの **[開く]** をクリックし、対象の [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの配置マニフェストを開きます。配置マニフェスト ファイルの拡張子は `.application` です。  
   
-3.  左側のナビゲーション ウィンドウにある **[配置オプション]** パネルをクリックし、 **[URL パラメーターをアプリケーションに渡すことを許可する]** チェック ボックスをオンにします。  
+3. 左側のナビゲーション ウィンドウにある **[配置オプション]** パネルをクリックし、 **[URL パラメーターをアプリケーションに渡すことを許可する]** チェック ボックスをオンにします。  
   
-4.  **[ファイル]** メニューの **[保存]** をクリックします。  
+4. **[ファイル]** メニューの **[保存]** をクリックします。  
   
 > [!NOTE]
 >  または、 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]でクエリ文字列を渡すことができるようにすることもできます。 **[URL パラメーターをアプリケーションに渡すことを許可する]** チェック ボックスをオンにします。このチェック ボックスは、 **[プロジェクトのプロパティ]** を開いて **[発行]** タブをクリックし、 **[オプション]** ボタンをクリックして **[マニフェスト]** を選択すると表示されます。  

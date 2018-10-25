@@ -14,12 +14,12 @@ caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6b16ff8a5969282f2c062c19fed84292f0755d0b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 59eece0ffae18b72504c258fd3134c7dc8e952d2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49212421"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894431"
 ---
 # <a name="linq-to-xml-dynamic-properties"></a>LINQ to XML の動的プロパティ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "49212421"
   
  このセクションの動的プロパティは、解決される値に関連して次の 2 つのカテゴリに分類されます。  
   
--   1 つの値に解決される単純なプロパティ (`Value` クラスや <xref:System.Xml.Linq.XAttribute> クラスの <xref:System.Xml.Linq.XElement> プロパティなど)。  
+- 1 つの値に解決される単純なプロパティ (`Value` クラスや <xref:System.Xml.Linq.XAttribute> クラスの <xref:System.Xml.Linq.XElement> プロパティなど)。  
   
--   インデクサー型に解決されるインデックス値 (<xref:System.Xml.Linq.XElement> の [Elements](../designers/elements-xelement-dynamic-property.md) プロパティや [Descendants](../designers/descendants-xelement-dynamic-property.md) プロパティなど)。 インデクサー型が目的の値やコレクションに解決されるようにするには、展開名のパラメーターを渡す必要があります。  
+- インデクサー型に解決されるインデックス値 (<xref:System.Xml.Linq.XElement> の [Elements](../designers/elements-xelement-dynamic-property.md) プロパティや [Descendants](../designers/descendants-xelement-dynamic-property.md) プロパティなど)。 インデクサー型が目的の値やコレクションに解決されるようにするには、展開名のパラメーターを渡す必要があります。  
   
- <xref:System.Collections.Generic.IEnumerable%601> 型のインデックス値を返す動的プロパティはすべて遅延実行を使用します。 遅延実行について詳しくは、「[LINQ クエリの概要 (C#)](http://msdn.microsoft.com/library/37895c02-268c-41d5-be39-f7d936fa88a8)」をご覧ください。  
+  <xref:System.Collections.Generic.IEnumerable%601> 型のインデックス値を返す動的プロパティはすべて遅延実行を使用します。 遅延実行について詳しくは、「[LINQ クエリの概要 (C#)](http://msdn.microsoft.com/library/37895c02-268c-41d5-be39-f7d936fa88a8)」をご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

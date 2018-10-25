@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: adc829148916ed65be4e166906b03244f688bb66
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: f03b9af3f34fe7d06d2612a036e3ecd6003ee5c5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637289"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49830731"
 ---
 # <a name="sccaddfromscc-function"></a>SccAddFromScc 関数
 この関数は、ソース管理システムに既に存在するファイルの参照をでき、その後に、現在のプロジェクトの一環としてそのファイル。 たとえば、この関数は、ファイルをコピーせず、現在のプロジェクトに共通のヘッダー ファイルを取得できます。 ファイルの戻り値の配列`lplpFileNames`ユーザーが、IDE プロジェクトを追加するファイルの一覧が含まれています。  

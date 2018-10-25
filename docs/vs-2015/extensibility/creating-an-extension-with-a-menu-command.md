@@ -18,12 +18,12 @@ ms.assetid: f97104c8-2bcb-45c7-a3c9-85abeda8df98
 caps.latest.revision: 57
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 111b20eb427f1e1e2b4d00d1d2ced33c4bd677f2
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: cc470e08511c7bda44bfda2012636b626ba41e83
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49174630"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925930"
 ---
 # <a name="creating-an-extension-with-a-menu-command"></a>メニュー コマンドを使用した拡張機能の作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -122,21 +122,21 @@ ms.locfileid: "49174630"
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルでは、Visual Studio 拡張機能で何ができるのごく一部のみを説明します。 Visual Studio 拡張機能で行えること (簡単) などの短い一覧を次に示します。  
   
-1.  多くの単純なメニュー コマンドを使用して行うことができます。  
+1. 多くの単純なメニュー コマンドを使用して行うことができます。  
   
-    1.  独自のアイコンの追加:[メニュー コマンドに追加するアイコン](../extensibility/adding-icons-to-menu-commands.md)  
+   1.  独自のアイコンの追加:[メニュー コマンドに追加するアイコン](../extensibility/adding-icons-to-menu-commands.md)  
   
-    2.  メニュー コマンドのテキストを変更:[メニュー コマンドのテキストを変更します。](../extensibility/changing-the-text-of-a-menu-command.md)  
+   2.  メニュー コマンドのテキストを変更:[メニュー コマンドのテキストを変更します。](../extensibility/changing-the-text-of-a-menu-command.md)  
   
-    3.  メニューのショートカットをコマンドに追加:[メニュー項目のキーボード ショートカットのバインド](../extensibility/binding-keyboard-shortcuts-to-menu-items.md)  
+   3.  メニューのショートカットをコマンドに追加:[メニュー項目のキーボード ショートカットのバインド](../extensibility/binding-keyboard-shortcuts-to-menu-items.md)  
   
-2.  さまざまな種類のコマンド、メニューのおよびツールバーを追加:[拡張メニューとコマンド](../extensibility/extending-menus-and-commands.md)  
+2. さまざまな種類のコマンド、メニューのおよびツールバーを追加:[拡張メニューとコマンド](../extensibility/extending-menus-and-commands.md)  
   
-3.  ツール ウィンドウを追加し、組み込みの Visual Studio ツール ウィンドウの拡張:[拡張とカスタマイズ ツールの Windows](../extensibility/extending-and-customizing-tool-windows.md)  
+3. ツール ウィンドウを追加し、組み込みの Visual Studio ツール ウィンドウの拡張:[拡張とカスタマイズ ツールの Windows](../extensibility/extending-and-customizing-tool-windows.md)  
   
-4.  IntelliSense、コードの修正候補を追加し、その他の機能は、既存のコード エディター:[エディターと言語サービス拡張](../extensibility/extending-the-editor-and-language-services.md)  
+4. IntelliSense、コードの修正候補を追加し、その他の機能は、既存のコード エディター:[エディターと言語サービス拡張](../extensibility/extending-the-editor-and-language-services.md)  
   
-5.  オプションとプロパティ ページとユーザー設定、拡張機能を追加:[拡張プロパティとプロパティ ウィンドウ](../extensibility/extending-properties-and-the-property-window.md)と[Extending User Settings and オプション](../extensibility/extending-user-settings-and-options.md)  
+5. オプションとプロパティ ページとユーザー設定、拡張機能を追加:[拡張プロパティとプロパティ ウィンドウ](../extensibility/extending-properties-and-the-property-window.md)と[Extending User Settings and オプション](../extensibility/extending-user-settings-and-options.md)  
   
- 他の種類の拡張機能が、新しい種類のプロジェクトの作成などのもう少し作業が必要です ([拡張プロジェクト](../extensibility/extending-projects.md))、エディターの新しい種類の作成 ([を作成するカスタム エディターとデザイナー](../extensibility/creating-custom-editors-and-designers.md))、または分離シェルで、拡張機能を実装する: [Visual Studio 分離シェル](../extensibility/visual-studio-isolated-shell.md)
+   他の種類の拡張機能が、新しい種類のプロジェクトの作成などのもう少し作業が必要です ([拡張プロジェクト](../extensibility/extending-projects.md))、エディターの新しい種類の作成 ([を作成するカスタム エディターとデザイナー](../extensibility/creating-custom-editors-and-designers.md))、または分離シェルで、拡張機能を実装する: [Visual Studio 分離シェル](../extensibility/visual-studio-isolated-shell.md)
 

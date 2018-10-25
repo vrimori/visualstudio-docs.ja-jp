@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 73a2dd2288ae54c184405793323cd3084b90e35a
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: 67b80eb48129fb989822e28bcb0ac0e330c426bd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46495285"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49828432"
 ---
 # <a name="vspackage-registration"></a>VSPackage の登録
 Vspackage に通知する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]読み込めませんがインストールされ、必要があります。 このプロセスは、レジストリの情報を記述することで実施されます。 インストーラーの標準的なジョブです。  
@@ -48,15 +48,15 @@ Vspackage に通知する必要があります[!INCLUDE[vsprvs](../../code-quali
   
  理論上は適切です、自己登録は VSPackage のインストールには適さないするいくつかの欠点があります。  
   
--   インストール、アンインストール、インストールのロールバック、およびアンインストールのロールバックを正しくサポートするには、RegPkg を呼び出して自己登録するすべてのマネージ VSPackage の 4 つのカスタム アクションを作成する必要があります。  
+- インストール、アンインストール、インストールのロールバック、およびアンインストールのロールバックを正しくサポートするには、RegPkg を呼び出して自己登録するすべてのマネージ VSPackage の 4 つのカスタム アクションを作成する必要があります。  
   
--   サイド バイ サイドでサポートするアプローチがサポートされているどのバージョンの RegSvr32 または RegPkg を呼び出す次の 4 つのカスタム アクションを作成する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。  
+- サイド バイ サイドでサポートするアプローチがサポートされているどのバージョンの RegSvr32 または RegPkg を呼び出す次の 4 つのカスタム アクションを作成する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。  
   
--   自己登録済みモジュールのインストールは、自己登録キーが別の機能またはアプリケーションによって使用されるかどうかに通知する手段がないために戻す安全にロールバックできません。  
+- 自己登録済みモジュールのインストールは、自己登録キーが別の機能またはアプリケーションによって使用されるかどうかに通知する手段がないために戻す安全にロールバックできません。  
   
--   補助の Dll は存在しないか、間違ったバージョンがも自己登録済みの Dll にリンクします。 これに対し、Windows インストーラーは、システムの現在の状態に依存せずに、レジストリのテーブルを使用して Dll を登録できます。  
+- 補助の Dll は存在しないか、間違ったバージョンがも自己登録済みの Dll にリンクします。 これに対し、Windows インストーラーは、システムの現在の状態に依存せずに、レジストリのテーブルを使用して Dll を登録できます。  
   
--   タイプ ライブラリなどのネットワーク リソースへのアクセス コンポーネントがある場合ソースからの実行として指定し、SelfReg テーブルに格納されて、自己登録コードを拒否できます。 管理者用インストールが失敗するコンポーネントのインストールがある可能性があります。  
+- タイプ ライブラリなどのネットワーク リソースへのアクセス コンポーネントがある場合ソースからの実行として指定し、SelfReg テーブルに格納されて、自己登録コードを拒否できます。 管理者用インストールが失敗するコンポーネントのインストールがある可能性があります。  
   
 ## <a name="see-also"></a>関連項目  
  [Windows インストーラー](/windows/desktop/Msi/windows-installer-portal)   

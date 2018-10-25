@@ -16,12 +16,12 @@ ms.assetid: eea69f03-349c-44bb-bd4f-4925c0dc3e55
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 96a641778811d88c0087a23822ab789e72b066f0
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 45f0084d060e9727f30ba39233ec5b92818d9205
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49190009"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829886"
 ---
 # <a name="intercepting-legacy-language-service-commands"></a>従来の言語サービスのコマンドの受信
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "49190009"
   
  コマンド処理のため、次のオプションがあります。  
   
--   コマンドを処理し、チェーンの次のコマンドのフィルターにコマンドを渡します。  
+- コマンドを処理し、チェーンの次のコマンドのフィルターにコマンドを渡します。  
   
--   コマンドを処理し、次のコマンドのフィルターにコマンドを渡さないでください。  
+- コマンドを処理し、次のコマンドのフィルターにコマンドを渡さないでください。  
   
--   コマンドを処理しませんが、次のコマンドのフィルターにコマンドを渡します。  
+- コマンドを処理しませんが、次のコマンドのフィルターにコマンドを渡します。  
   
--   コマンドを無視します。 現在のフィルター処理しないと、次のフィルターに渡されません。  
+- コマンドを無視します。 現在のフィルター処理しないと、次のフィルターに渡されません。  
   
- 言語サービスを処理するコマンドの詳細については、次を参照してください。[言語サービス フィルターの重要なコマンド](../../extensibility/internals/important-commands-for-language-service-filters.md)します。
+  言語サービスを処理するコマンドの詳細については、次を参照してください。[言語サービス フィルターの重要なコマンド](../../extensibility/internals/important-commands-for-language-service-filters.md)します。
 

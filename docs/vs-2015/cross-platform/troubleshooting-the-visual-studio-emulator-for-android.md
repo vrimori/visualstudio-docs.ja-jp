@@ -13,12 +13,12 @@ ms.assetid: f3fb5df4-3aae-40e4-9450-bbe15b0c5af5
 caps.latest.revision: 25
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: aaec132bc8780ef01e4bff403f6cbf17df570204
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5f5bff1d2977ffafa4b745eaf6fd9d6b5c84bdab
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49177854"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890688"
 ---
 # <a name="troubleshooting-the-visual-studio-emulator-for-android"></a>Visual Studio Emulator for Android のトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -100,11 +100,11 @@ ms.locfileid: "49177854"
 ##  <a name="ManualNetworkConfig"></a> ネットワーク設定で手動構成が要求されている場合に、ネットワーク上の接続先に接続できません  
  エミュレーターからネットワーク上の接続先に接続するには、ネットワークが次の要件を満たしている必要があります。  
   
--   DHCP。 エミュレーターは、独自の IP アドレスでネットワーク上に個別のデバイスとして自動的に構成されるため、DHCP が必要です。  
+- DHCP。 エミュレーターは、独自の IP アドレスでネットワーク上に個別のデバイスとして自動的に構成されるため、DHCP が必要です。  
   
--   自動的に構成された DNS およびゲートウェイの設定。 エミュレーターの DNS およびゲートウェイ設定を手動で構成することはできません。  
+- 自動的に構成された DNS およびゲートウェイの設定。 エミュレーターの DNS およびゲートウェイ設定を手動で構成することはできません。  
   
- ネットワークで手動構成の設定が必要な場合は、IT 管理者に問い合わせて、エミュレーターのネットワーク接続を可能にする方法を確認してください。  
+  ネットワークで手動構成の設定が必要な場合は、IT 管理者に問い合わせて、エミュレーターのネットワーク接続を可能にする方法を確認してください。  
   
 ##  <a name="SlowStart"></a> エミュレーターの起動に時間がかかるか、タイムアウトによって起動が失敗するか、アプリを配置できません  
  特定の状況においては、エミュレーターの起動に数分かかることや、タイムアウトによって起動が失敗することがあります。 エミュレーターが起動に失敗すると、”`App deployment failed. Please try again`” というメッセージが表示されます。 このエラーの原因として、次のような状況が考えられます。  
@@ -147,131 +147,131 @@ ms.locfileid: "49177854"
 ##  <a name="NoStart"></a> Emulator fails to start (first use)  
  エミュレーターが起動しない場合は、次のタスクを順に実行して、問題を特定して解決します。  
   
--   ハードウェアの最小要件を満たしていることと、BIOS 設定が正しいことを確認します。  
+- ハードウェアの最小要件を満たしていることと、BIOS 設定が正しいことを確認します。  
   
-     エミュレーターと Windows 8 Hyper-V には、第 2 レベルのアドレス変換 (SLAT) をサポートする 64 ビット プロセッサが必要です。 Intel では、本質的に Core i3、i5 または i7 プロセッサが必要です (または多くの Xeon のいずれか)。 AMD のチップの一覧は [こちら](http://support.amd.com/en-us)です。  
+   エミュレーターと Windows 8 Hyper-V には、第 2 レベルのアドレス変換 (SLAT) をサポートする 64 ビット プロセッサが必要です。 Intel では、本質的に Core i3、i5 または i7 プロセッサが必要です (または多くの Xeon のいずれか)。 AMD のチップの一覧は [こちら](http://support.amd.com/en-us)です。  
   
-    1.  コンピューターが [システム要件](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)を満たしていることを確認します。  
+  1. コンピューターが [システム要件](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)を満たしていることを確認します。  
   
-    2.  [SLAT ツール](https://slatstatuscheck.codeplex.com/) によって、コンピューターが SLAT 対応であることがレポートされていることを確認します。  
+  2. [SLAT ツール](https://slatstatuscheck.codeplex.com/) によって、コンピューターが SLAT 対応であることがレポートされていることを確認します。  
   
-    3.  コンピューターの BIOS 設定で、すべての仮想化テクノロジが有効になっていることを確認します。 BIOS の正確な記述はハードウェアの製造元によって異なる場合があります。 通常は、以下に関する機能を有効にします。  
+  3. コンピューターの BIOS 設定で、すべての仮想化テクノロジが有効になっていることを確認します。 BIOS の正確な記述はハードウェアの製造元によって異なる場合があります。 通常は、以下に関する機能を有効にします。  
   
-        -   SLAT (第 2 レベルのアドレス変換)  
+     -   SLAT (第 2 レベルのアドレス変換)  
   
-        -   EPT (Extended Page Tables) (Intel)  
+     -   EPT (Extended Page Tables) (Intel)  
   
-        -   NPT (Nested Page Tables) (AMD)  
+     -   NPT (Nested Page Tables) (AMD)  
   
-        -   RVI (Rapid Virtualization Indexing) (AMD)  
+     -   RVI (Rapid Virtualization Indexing) (AMD)  
   
-        -   VMX (ハードウェア支援による仮想化機能のサポートを示す Intel の頭字語)  
+     -   VMX (ハードウェア支援による仮想化機能のサポートを示す Intel の頭字語)  
   
-        -   SVM (ハードウェア支援による仮想化機能のサポートを示す AMD の頭字語)  
+     -   SVM (ハードウェア支援による仮想化機能のサポートを示す AMD の頭字語)  
   
-        -   XD (Execute Disable) (Intel)。これを有効にする必要があります。  
+     -   XD (Execute Disable) (Intel)。これを有効にする必要があります。  
   
-        -   NX (Execute) (AMD)。これを有効にする必要があります。  
+     -   NX (Execute) (AMD)。これを有効にする必要があります。  
   
-    4.  BIOS に次のオプションが存在する場合は、無効にします。  
+  4. BIOS に次のオプションが存在する場合は、無効にします。  
   
-        -   Intel VT-d を無効にする  
+     - Intel VT-d を無効にする  
   
-        -   Trusted Execution を無効にする  
+     - Trusted Execution を無効にする  
   
-         詳細については、TechNet の記事「Hyper-v を有効にして BIOS エラーを修正する方法」を参照してください。  
+       詳細については、TechNet の記事「Hyper-v を有効にして BIOS エラーを修正する方法」を参照してください。  
   
-    5.  少なくとも 4 GB のシステム メモリがあり、リソースを大量に消費する他のプログラムおよびプロセスによって消費されていないことを確認します。  
+  5. 少なくとも 4 GB のシステム メモリがあり、リソースを大量に消費する他のプログラムおよびプロセスによって消費されていないことを確認します。  
   
-    6.  Windows 8 Professional 以上を実行していることを確認します (Windows Server 2008 はサポートされていません)。 Windows Server 2012 はサポートされていますが、デスクトップ エクスペリエンスを有効にする必要があります。  
+  6. Windows 8 Professional 以上を実行していることを確認します (Windows Server 2008 はサポートされていません)。 Windows Server 2012 はサポートされていますが、デスクトップ エクスペリエンスを有効にする必要があります。  
   
      イベント ビューアーを調べて、ハイパーバイザーのエラーがないかどうかを確認することができます。 これを行うには、イベント ビューアーを開き (スタート キーを押しながら R キーを押して、「 `eventvwr`」と入力)、 **[Windows ログ]**、 **[システム]** を選択します。 次に、ソースを **Hyper-V ハイパーバイザー**に設定して、イベント ソースでログをフィルタリングします。 エラー確認は、根本原因の特定に役立ちます。  
   
      プロセッサが最小要件を満たしているにもかかわらず、ハイパーバイザーでまだ障害が発生する場合は、コンピューターに使用可能な BIOS アップグレードがあるかどうかを確認してみてください。 アップグレードがあり、アップグレードすることを選択する場合は、BIOS のアップグレード時に製造元からの注意事項 (BIOS が完全に破損する可能性のある、停電により BIOS ファームウェアのアップグレードが中断されないようにするなど) をすべて確認してください。  
   
--   少なくとも 4 GB のシステム メモリがあり、リソースを大量に消費する他のプログラムおよびプロセスによって消費されていないことを確認します。  
+- 少なくとも 4 GB のシステム メモリがあり、リソースを大量に消費する他のプログラムおよびプロセスによって消費されていないことを確認します。  
   
--   仮想ネットワークに干渉する場合があるサード パーティ製ドライバーまたはソフトウェアを削除または無効にします。  
+- 仮想ネットワークに干渉する場合があるサード パーティ製ドライバーまたはソフトウェアを削除または無効にします。  
   
-     Hyper-V ネットワーク スタックと完全に互換性がないネットワーク ドライバーやプロトコルなど、Windows 8 にインストールされている一部のサード パーティ製品に関する既知の問題がいくつかあります。  
+   Hyper-V ネットワーク スタックと完全に互換性がないネットワーク ドライバーやプロトコルなど、Windows 8 にインストールされている一部のサード パーティ製品に関する既知の問題がいくつかあります。  
   
-     一般に、Windows 8 および Hyper-V と互換性のあるソフトウェアを更新するかどうかは、製品の開発者の責任となります。  
+   一般に、Windows 8 および Hyper-V と互換性のあるソフトウェアを更新するかどうかは、製品の開発者の責任となります。  
   
-     Windows 8 と互換性を持たせるためにアップグレードが必要になる可能性がある製品には、VirtualBox、Virtual PC 7、VMWare、一部の VPN クライアント、ソフトウェア ファイアウォール、一部のバージョンの Cisco VPN クライアント、およびその他の仮想化システムがあります。 問題のある仮想化ソフトウェアの開発者と協力して、ソフトウェアをアップグレードし、Windows 8 および Hyper-V と互換性を持たせるようにしてください。  
+   Windows 8 と互換性を持たせるためにアップグレードが必要になる可能性がある製品には、VirtualBox、Virtual PC 7、VMWare、一部の VPN クライアント、ソフトウェア ファイアウォール、一部のバージョンの Cisco VPN クライアント、およびその他の仮想化システムがあります。 問題のある仮想化ソフトウェアの開発者と協力して、ソフトウェアをアップグレードし、Windows 8 および Hyper-V と互換性を持たせるようにしてください。  
   
-     **回避策**として、Visual Studio との通信のためにエミュレーターで使用される仮想ネットワークに干渉している可能性があるすべてのサード パーティ製のドライバーとアプリケーションを無効にすることができます。 これらのアプリケーションには以下のようなものがあります。  
+   **回避策**として、Visual Studio との通信のためにエミュレーターで使用される仮想ネットワークに干渉している可能性があるすべてのサード パーティ製のドライバーとアプリケーションを無効にすることができます。 これらのアプリケーションには以下のようなものがあります。  
   
-    -   ウイルス対策アプリケーション (ネットワーク スタックにフックする)  
+  - ウイルス対策アプリケーション (ネットワーク スタックにフックする)  
   
-    -   ネットワーク監視ツール  
+  - ネットワーク監視ツール  
   
-    -   ネットワーク ログ ツール  
+  - ネットワーク ログ ツール  
   
-    -   その他のシステム監視ソフトウェア  
+  - その他のシステム監視ソフトウェア  
   
-     問題のある製品のアンインストール (および製品開発者への更新版のリリースの要求) 以外に考えられる別の回避策では、次の手順を実行します。  
+    問題のある製品のアンインストール (および製品開発者への更新版のリリースの要求) 以外に考えられる別の回避策では、次の手順を実行します。  
   
-    1.  ネットワーク接続マネージャーを起動します (スタート画面から「 `View Network Connections` 」と入力し、このオプションを選択してネットワーク接続を表示)。  
+  1. ネットワーク接続マネージャーを起動します (スタート画面から「 `View Network Connections` 」と入力し、このオプションを選択してネットワーク接続を表示)。  
   
-    2.  vEthernet (Internal Ethernet Port Windows Phone Emulator Internal Switch) アダプターの場合は、コンテキスト メニューから **[プロパティ]** を選択します。  
+  2. vEthernet (Internal Ethernet Port Windows Phone Emulator Internal Switch) アダプターの場合は、コンテキスト メニューから **[プロパティ]** を選択します。  
   
-         ![Hyper&#45;V で使用される仮想アダプター](../cross-platform/media/android-emu-virtual-adapter.png "Android_Emu_Virtual_Adapter")  
+      ![Hyper&#45;V で使用される仮想アダプター](../cross-platform/media/android-emu-virtual-adapter.png "Android_Emu_Virtual_Adapter")  
   
-         ここでアダプター プロパティが表示されます。  
+      ここでアダプター プロパティが表示されます。  
   
-         ![仮想アダプターのプロパティ](../cross-platform/media/android-emu-virtual-adapter-properties.png "Android_Emu_Virtual_Adapter_Properties")  
+      ![仮想アダプターのプロパティ](../cross-platform/media/android-emu-virtual-adapter-properties.png "Android_Emu_Virtual_Adapter_Properties")  
   
-    3.  このアダプターの場合、 **[この接続は次の項目を使用します]** で選択する必要があるのは以下の項目のみです。  
+  3. このアダプターの場合、 **[この接続は次の項目を使用します]** で選択する必要があるのは以下の項目のみです。  
   
-        -   Microsoft ネットワーク用クライアント  
+     -   Microsoft ネットワーク用クライアント  
   
-        -   QoS パケット スケジューラ  
+     -   QoS パケット スケジューラ  
   
-        -   Microsoft ネットワーク用ファイルとプリンター共有  
+     -   Microsoft ネットワーク用ファイルとプリンター共有  
   
-        -   Microsoft LLDP Protocol Driver  
+     -   Microsoft LLDP Protocol Driver  
   
-        -   Link-Layer Topology Discovery Mapper I/O Driver  
+     -   Link-Layer Topology Discovery Mapper I/O Driver  
   
-        -   Link-Layer Topology Discovery Responder  
+     -   Link-Layer Topology Discovery Responder  
   
-        -   インターネット プロトコル バージョン 6 (TCP/IPv6)  
+     -   インターネット プロトコル バージョン 6 (TCP/IPv6)  
   
-        -   インターネット プロトコル バージョン 4 (TCP/IPv4)  
+     -   インターネット プロトコル バージョン 4 (TCP/IPv4)  
   
-    4.  その他の項目の選択は解除します。  
+  4. その他の項目の選択は解除します。  
   
      この手法を使用する場合の欠点は、新しいサード パーティ製品でサポートされていないドライバーがインストールされるたび、またはエミュレーターがインストールされるたびに、これらの手順を繰り返す必要があることです。  
   
      サード パーティ製品をアンインストールした後で、Windows Phone Emulator Internal Switch を復元する必要があります。 これを行うには、次のようにします。  
   
-    -   Hyper V を開き、仮想スイッチ マネージャーに移動します。 「Windows Phone Emulator Internal Switch」という名前の仮想スイッチを作成し、その接続の種類を **内部ネットワーク**に設定します。  
+  - Hyper V を開き、仮想スイッチ マネージャーに移動します。 「Windows Phone Emulator Internal Switch」という名前の仮想スイッチを作成し、その接続の種類を **内部ネットワーク**に設定します。  
   
-         ![仮想スイッチ マネージャー](../cross-platform/media/android-emu-virtual-switch-manager.png "Android_Emu_Virtual_Switch_Manager")  
+     ![仮想スイッチ マネージャー](../cross-platform/media/android-emu-virtual-switch-manager.png "Android_Emu_Virtual_Switch_Manager")  
   
-     ここでエミュレーターを起動します。 エミュレーターが作動します。  
+    ここでエミュレーターを起動します。 エミュレーターが作動します。  
   
 ##  <a name="NoBoot"></a> エミュレーターのインストール後にコンピューターを起動できません  
  この問題は、次の条件に該当する場合に発生する可能性があります。  
   
--   コンピューターに Gigabyte マザーボードがある。  
+- コンピューターに Gigabyte マザーボードがある。  
   
--   USB3 がマザーボードで有効になっている。  
+- USB3 がマザーボードで有効になっている。  
   
- この問題を解決するには、マザーボードの BIOS 設定で USB3 を無効にして、コンピューターを再起動します。 次に、Gigabyte からマザーボードの BIOS の更新プログラムがリリースされているかどうかを確認します。  
+  この問題を解決するには、マザーボードの BIOS 設定で USB3 を無効にして、コンピューターを再起動します。 次に、Gigabyte からマザーボードの BIOS の更新プログラムがリリースされているかどうかを確認します。  
   
- 詳細については、サポート技術情報の記事「 [Gigabyte システムで Hyper-V ロールのインストール後に起動できない](https://support.microsoft.com/en-us/kb/2693144)」を参照してください。  
+  詳細については、サポート技術情報の記事「 [Gigabyte システムで Hyper-V ロールのインストール後に起動できない](https://support.microsoft.com/en-us/kb/2693144)」を参照してください。  
   
 ##  <a name="ADB"></a> Visual Studio がエミュレーターにアプリを配置しようとして行き詰まっているか、エミュレーターが他の IDE でデバッグ ターゲットとして表示されません。  
  エミュレーターが実行されていても、ADB (Android Debug Bridge) に接続されているように見えない、または ADB を利用する Android ツール (Android Studio や Eclipse など) 内で見えない場合は、エミュレーターが ADB を検索する場所を調整する必要があります。 エミュレーターはレジストリ キーを使用して、Android SDK の基本場所を識別し、そのディレクトリで \platform-tools\adb.exe ファイルを検索します。 エミュレーターで使用される Android SDK パスを変更するには、次のようにします。  
   
--   スタート ボタンのコンテキスト メニューから **[ファイル名を指定して実行]** を選択して、ダイアログ ボックスに「 `regedit` 」と入力し、 **[OK]** を選択してレジストリ エディターを開きます。  
+- スタート ボタンのコンテキスト メニューから **[ファイル名を指定して実行]** を選択して、ダイアログ ボックスに「 `regedit` 」と入力し、 **[OK]** を選択してレジストリ エディターを開きます。  
   
--   左側のフォルダー ツリーで、HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Android SDK ツールに移動します。  
+- 左側のフォルダー ツリーで、HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Android SDK ツールに移動します。  
   
--   Android SDK へのパスと一致するように **パス** レジストリ変数を変更します。  
+- Android SDK へのパスと一致するように **パス** レジストリ変数を変更します。  
   
- エミュレーターを再起動します。これで、ADB と関連する Android ツールにエミュレーターが接続されていることを確認できるはずです。  
+  エミュレーターを再起動します。これで、ADB と関連する Android ツールにエミュレーターが接続されていることを確認できるはずです。  
   
 ##  <a name="XamarinPlayer"></a> UDP ポートを設定できなかったため、エミュレーターがハングする  
  Xamarin Player との互換性がないためにこの問題が発生する可能性があります。 エミュレーターがハングしているように見えたり、"エミュレーターがデバイスのオペレーティング システムに接続できません。UDP ポートを設定できませんでした。  一部の機能が無効になっている可能性があります。" というエラー メッセージが表示されたりした場合は、この問題が発生している可能性があります。 次の手順を実行します。  

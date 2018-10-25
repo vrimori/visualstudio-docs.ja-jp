@@ -24,12 +24,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9ebda2068358a43ed942e25d46e58ed2f45d9733
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bf13870d54de312be3e97009c07076b49785516b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42635542"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49913970"
 ---
 # <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>チュートリアル: sharepoint ビジネス データを使用して外部リストを作成します。
 
@@ -187,7 +187,7 @@ ms.locfileid: "42635542"
 
 10. 手順 6 の各次のフィールドの型記述子を作成する.
 
-    |name|型の名前|
+    |名前|型の名前|
     |----------|---------------|
     |FirstName|System.String|
     |LastName|System.String|
@@ -232,12 +232,12 @@ ms.locfileid: "42635542"
 
 5. `ContactService`クラス、置換、`ReadList`メソッドを次のコード。 このコードは次のタスクを実行します。
 
-    - AdventureWorks データベースの Contacts テーブルからデータを取得します。
+   - AdventureWorks データベースの Contacts テーブルからデータを取得します。
 
-    - BDC サービスには、Contact エンティティの一覧を返します。
+   - BDC サービスには、Contact エンティティの一覧を返します。
 
-    > [!NOTE]
-    > 値を置き換える、`ServerName`フィールドに、サーバーの名前。
+     > [!NOTE]
+     > 値を置き換える、`ServerName`フィールドに、サーバーの名前。
 
      [!code-csharp[SP_BDC#2](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#2)]
      [!code-vb[SP_BDC#2](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#2)]

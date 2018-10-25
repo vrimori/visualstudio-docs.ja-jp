@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::GetManagedViewerCreationData |Microsoft ドキュメント
+title: IPropertyProxyEESide::GetManagedViewerCreationData |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 47ae1c724542d628e7f3c047efd8ed2da1f6f1f8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cd8da39b89311939017698b4095321df450112e6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31124751"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49821371"
 ---
 # <a name="ipropertyproxyeesidegetmanagedviewercreationdata"></a>IPropertyProxyEESide::GetManagedViewerCreationData
-そのビューアーをインスタンス化するのには、このプロパティの種類のビューアーに関する情報を取得します。  
+そのビューアーをインスタンス化するために、このプロパティの種類ビューアーに関する情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,25 +54,25 @@ int GetManagedViewerCreationData(
  [out]このオブジェクトを保持しているアセンブリの名前を返します。  
   
  `assemBytes`  
- [out]返します、 [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) (これは、null 値使用可能なバイトがない場合)、このオブジェクトのアセンブリのバイト数を含むオブジェクト。  
+ [out]返します、 [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) (これは、null 値をバイトが使用できない場合)、このオブジェクトのアセンブリのバイト数を格納しているオブジェクト。  
   
  `assemPdb`  
- [out]返します、`IEEDataStorage`シンボルを含むオブジェクトは、このオブジェクトの情報を (これは、null 値のシンボル ストアが使用できない場合) を格納します。  
+ [out]返します、`IEEDataStorage`シンボルを含むオブジェクトは、(これは、null 値をシンボル ストアが使用できない場合)、このオブジェクトの情報を格納します。  
   
  `className`  
- [out]このオブジェクトを含むクラス名を返します。  
+ [out]このオブジェクトを含むクラスの名前を返します。  
   
  `alr`  
  [out]値を返します、 [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)アセンブリの場所を示す列挙値。  
   
  `replacementOk`  
- [out]0 以外を返します (`TRUE`) このオブジェクトの値を変更できる場合は 0 (`FALSE`) 場合は、オブジェクトは読み取り専用です。  
+ [out]0 以外の値を返します (`TRUE`) このオブジェクトの値を変更できる場合は 0 (`FALSE`) オブジェクトが読み取り専用である場合。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 型のビジュアライザーはこのメソッドを使用して、管理されているビューアーをインスタンス化します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、管理対象のビューアーをインスタンス化する型のビジュアライザーによって使用されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)   

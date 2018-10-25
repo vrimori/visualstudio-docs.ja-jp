@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_sealed |Microsoft ドキュメント
+title: Idiasymbol::get_sealed |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d6ec278fd3ed2b3fef157c30300c16ccaaa8087b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e77e379d3f3635cf6976765450ba32ea6de81ef2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31478975"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841807"
 ---
 # <a name="idiasymbolgetsealed"></a>IDiaSymbol::get_sealed
-クラスまたはメソッドが封印されているかどうかを指定するフラグを取得します。  
+クラスまたはメソッドがシールされているかどうかを指定するフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,18 +34,18 @@ HRESULT get_sealed(
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]返します`TRUE`クラスまたはメソッドがシールされている場合を返しますそれ以外の場合、`FALSE`です。  
+ [out]返します`TRUE`クラスまたはメソッドがシールされている場合を返しますそれ以外の場合、`FALSE`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  シール クラスは、基底クラスとして使用できません。 シール メソッドは、上書きをすることはできません。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

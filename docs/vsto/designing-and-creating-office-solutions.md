@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 22ba120513d188f0a945ff18331b37062c08018f
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 602525666e62a5eaa6e8db13c6e7029d8773bc8b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672710"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917182"
 ---
 # <a name="design-and-create-office-solutions"></a>設計および Office ソリューションの作成
   Visual Studio には、さまざまな種類の Office ソリューションの作成に使用できるプロジェクト テンプレートが用意されています。 ここでは、プロジェクト テンプレートについて説明し、Office プロジェクトを作成するためのガイダンスを示します。 プロジェクトを作成した後、コードやユーザー インターフェイスのカスタマイズを実装する方法については、次を参照してください。 [Office の開発ソリューション](../vsto/developing-office-solutions.md)します。  
@@ -41,19 +41,19 @@ ms.locfileid: "35672710"
 ## <a name="choose-a-net-framework-version"></a>.NET Framework バージョンを選択します  
  要件に最適なプロジェクトの種類を選択した後に、開発工程で使用する .NET Framework のバージョンを選択できます。 Office プロジェクトでは、次のバージョンの .NET Framework を対象にすることができます。  
   
--   [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]  
+- [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]  
   
--   [!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)]  
+- [!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)]  
   
--   [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]  
+- [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]  
   
- ソリューションを実行するエンドユーザーのコンピューターにプロジェクト用に選択した .NET Framework のバージョンが必要です。 たとえば場合、プロジェクトのターゲット、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]エンドユーザーのコンピューターが必要です。 この例では、エンドユーザーのコンピューターに .NET Framework 3.5 がインストールされている場合のみ、ソリューションは実行されません。  
+  ソリューションを実行するエンドユーザーのコンピューターにプロジェクト用に選択した .NET Framework のバージョンが必要です。 たとえば場合、プロジェクトのターゲット、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]エンドユーザーのコンピューターが必要です。 この例では、エンドユーザーのコンピューターに .NET Framework 3.5 がインストールされている場合のみ、ソリューションは実行されません。  
   
- .NET Framework 3.5 を対象とする VSTO アドイン プロジェクトを移行する場合、インストールした Office のバージョンに応じて、Visual Studio によってプロジェクトのターゲット フレームワークが [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に変更されます。  
+  .NET Framework 3.5 を対象とする VSTO アドイン プロジェクトを移行する場合、インストールした Office のバージョンに応じて、Visual Studio によってプロジェクトのターゲット フレームワークが [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に変更されます。  
   
- ただし、プロジェクトで特定の機能を使用している場合は、Visual Studio によるターゲット フレームワークの変更後に、プロジェクトのコードの一部を変更することが必要になる場合があります。 ターゲット フレームワークを変更する方法の詳細については、次を参照してください。[方法: .NET Framework のバージョンを対象](../ide/how-to-target-a-version-of-the-dotnet-framework.md)します。 プロジェクトでする必要があります変更の詳細については、次を参照してください。[以降、.NET Framework 4 への移行 Office ソリューション](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)します。  
+  ただし、プロジェクトで特定の機能を使用している場合は、Visual Studio によるターゲット フレームワークの変更後に、プロジェクトのコードの一部を変更することが必要になる場合があります。 ターゲット フレームワークを変更する方法の詳細については、次を参照してください。[方法: .NET Framework のバージョンを対象](../ide/how-to-target-a-version-of-the-dotnet-framework.md)します。 プロジェクトでする必要があります変更の詳細については、次を参照してください。[以降、.NET Framework 4 への移行 Office ソリューション](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)します。  
   
- Visual Studio プロジェクトのターゲットの .NET Framework を変更する、ソリューションの配置に ClickOnce を使用している場合は、.NET Framework での対応するバージョンを選択すること確認、**の前提条件** ダイアログ ボックス。 プロジェクトのターゲット フレームワークを変更しても、この選択内容は自動的には変わりません。 詳細については、次を参照してください。[方法: Office ソリューションを実行するエンドユーザーのコンピューターに前提条件をインストール](http://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)します。  
+  Visual Studio プロジェクトのターゲットの .NET Framework を変更する、ソリューションの配置に ClickOnce を使用している場合は、.NET Framework での対応するバージョンを選択すること確認、**の前提条件** ダイアログ ボックス。 プロジェクトのターゲット フレームワークを変更しても、この選択内容は自動的には変わりません。 詳細については、次を参照してください。[方法: Office ソリューションを実行するエンドユーザーのコンピューターに前提条件をインストール](http://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)します。  
   
 > [!NOTE]  
 >  .NET Framework 3.5 以前を [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] を使用して作成した Office プロジェクトの対象にすることはできません。 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] を使用して作成した Office プロジェクトには、[!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)] で導入された機能が必要です。  

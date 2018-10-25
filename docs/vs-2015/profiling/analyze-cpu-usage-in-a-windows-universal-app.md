@@ -20,12 +20,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: f91fa126c066d3c028cb7e634468ab8b455c8e30
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a7f39e3210d898e07f96f3ff787915953148e008
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49250719"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833604"
 ---
 # <a name="analyze-cpu-usage-in-a-windows-universal-app"></a>Windows ユニバーサル アプリでの CPU 使用率の分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -55,27 +55,27 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
 ##  <a name="BKMK_Collect_CPU_usage_data"></a> CPU 使用率のデータの収集  
  ![シミュレーターでアプリのリリース ビルドを実行する](../profiling/media/cpu-use-wt-setsimulatorandretail.png "CPU_USE_WT_SetSimulatorAndRetail")  
   
-1.  Visual Studio で、配置ターゲットを **[シミュレーター]** に設定し、ソリューション構成を **[リリース]** に設定します。  
+1. Visual Studio で、配置ターゲットを **[シミュレーター]** に設定し、ソリューション構成を **[リリース]** に設定します。  
   
-    -   シミュレーターでアプリを実行すると、アプリと Visual Studio IDE との間で簡単に切り替えることができます。  
+   -   シミュレーターでアプリを実行すると、アプリと Visual Studio IDE との間で簡単に切り替えることができます。  
   
-    -   このアプリを **[リリース]** モードで実行すると、アプリの実際のパフォーマンスをよりよく把握できます。  
+   -   このアプリを **[リリース]** モードで実行すると、アプリの実際のパフォーマンスをよりよく把握できます。  
   
-2.  **[デバッグ]** メニューの **[パフォーマンス プロファイラー...]** をクリックします。  
+2. **[デバッグ]** メニューの **[パフォーマンス プロファイラー...]** をクリックします。  
   
-3.  パフォーマンスと診断ハブで、**[CPU 使用率]** をクリックしてから、**[開始]** をクリックします。  
+3. パフォーマンスと診断ハブで、**[CPU 使用率]** をクリックしてから、**[開始]** をクリックします。  
   
-     ![CpuUsage 診断セッションの開始](../profiling/media/cpu-use-wt-perfdiaghub.png "CPU_USE_WT_PerfDiagHub")  
+    ![CpuUsage 診断セッションの開始](../profiling/media/cpu-use-wt-perfdiaghub.png "CPU_USE_WT_PerfDiagHub")  
   
-4.  アプリが起動したら、**[最大数を取得]** をクリックします。 出力の表示後に約 1 秒待ってから、**[非同期の最大数の取得]** を選択します。 ボタンのクリック間隔を空けると、診断レポートにおいてボタン クリックのルーチンを分離しやすくなります。  
+4. アプリが起動したら、**[最大数を取得]** をクリックします。 出力の表示後に約 1 秒待ってから、**[非同期の最大数の取得]** を選択します。 ボタンのクリック間隔を空けると、診断レポートにおいてボタン クリックのルーチンを分離しやすくなります。  
   
-5.  2 番目の出力行が表示された後、パフォーマンスと診断ハブで **[コレクションの停止]** をクリックします。  
+5. 2 番目の出力行が表示された後、パフォーマンスと診断ハブで **[コレクションの停止]** をクリックします。  
   
- ![CpuUsage データ コレクションの停止](../profiling/media/cpu-use-wt-stopcollection.png "CPU_USE_WT_StopCollection")  
+   ![CpuUsage データ コレクションの停止](../profiling/media/cpu-use-wt-stopcollection.png "CPU_USE_WT_StopCollection")  
   
- CPU 使用率ツールがデータを分析してレポートを表示します。  
+   CPU 使用率ツールがデータを分析してレポートを表示します。  
   
- ![CpuUsage レポート](../profiling/media/cpu-use-wt-report.png "CPU_USE_WT_Report")  
+   ![CpuUsage レポート](../profiling/media/cpu-use-wt-report.png "CPU_USE_WT_Report")  
   
 ##  <a name="BKMK_Analyze_the_CPU_Usage_report"></a> CPU 使用率レポートの分析  
   

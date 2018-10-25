@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 52fb199af53d0fbbf30c0ae0dc6a2ad7083e4971
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: d4ca98b5e4f991e795af95e479fa57a38ca2b57a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36234648"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49912047"
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>従来の言語サービスのパーサーとスキャナー
 パーサーは、言語サービスの中核です。 マネージ パッケージ フレームワーク (MPF) 言語のクラスには、表示されているコードに関する情報を選択する言語のパーサーが必要です。 パーサーは、テキストを構文トークンに分割し、し、それらのトークンの種類と機能を識別します。  
@@ -59,11 +59,11 @@ namespace MyNamespace
 ## <a name="types-of-parsers"></a>パーサーの種類  
  言語サービス パーサーは、コンパイラの一部として使用されるパーサーと同じではありません。 ただし、この種のパーサーは、コンパイラのパーサーと同様に、スキャナーとパーサーの両方を使用する必要があります。  
   
--   スキャナーを使用して、トークンの種類を識別します。 この情報は、構文の強調表示し、トークンの種類など、他の操作をトリガーできるかっこの一致をすばやく識別するために使用されます。 このスキャナーがによって表される、<xref:Microsoft.VisualStudio.Package.IScanner>インターフェイス。  
+- スキャナーを使用して、トークンの種類を識別します。 この情報は、構文の強調表示し、トークンの種類など、他の操作をトリガーできるかっこの一致をすばやく識別するために使用されます。 このスキャナーがによって表される、<xref:Microsoft.VisualStudio.Package.IScanner>インターフェイス。  
   
--   パーサーを使用して、機能と、トークンのスコープを記述します。 この情報は、メソッド、変数、パラメーター、および宣言などの言語要素を識別するために、メンバーおよびメソッド シグネチャのコンテキストに基づいての一覧を指定して、IntelliSense の操作で使用されます。 このパーサーは、中かっこおよびかっこなどの一致する言語要素ペアを検索するも使用されます。 このパーサーは、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッドで、<xref:Microsoft.VisualStudio.Package.LanguageService>クラス。  
+- パーサーを使用して、機能と、トークンのスコープを記述します。 この情報は、メソッド、変数、パラメーター、および宣言などの言語要素を識別するために、メンバーおよびメソッド シグネチャのコンテキストに基づいての一覧を指定して、IntelliSense の操作で使用されます。 このパーサーは、中かっこおよびかっこなどの一致する言語要素ペアを検索するも使用されます。 このパーサーは、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッドで、<xref:Microsoft.VisualStudio.Package.LanguageService>クラス。  
   
- 言語サービス スキャナーとパーサーを実装する方法は自由です。 利用できるいくつかのリソースは、パーサーのしくみと、独自のパーサーを作成する方法について説明します。 また、いくつかの無償および商用製品は使用可能なパーサーを作成するのに役立ちます。  
+  言語サービス スキャナーとパーサーを実装する方法は自由です。 利用できるいくつかのリソースは、パーサーのしくみと、独自のパーサーを作成する方法について説明します。 また、いくつかの無償および商用製品は使用可能なパーサーを作成するのに役立ちます。  
   
 ### <a name="the-parsesource-parser"></a>ParseSource パーサー  
  (場所、トークンから実行可能コードのいくつかの形式に変換されます) コンパイラの一部として使用されるパーサーとは異なりさまざまな理由と、多数の異なるコンテキストで、言語サービス パーサーを呼び出すことができます。 このアプローチを実装する方法、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッドで、<xref:Microsoft.VisualStudio.Package.LanguageService>クラスは自由です。 留意することが重要です、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>バック グラウンド スレッドでメソッドを呼び出すことがあります。  

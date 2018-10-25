@@ -1,5 +1,5 @@
 ---
-title: OBJECT_TYPE |Microsoft ドキュメント
+title: OBJECT_TYPE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bc5c7367a8b134324073d40452ec9b7ec20c1ffc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eff83198e337a3f89c88663722bf34046d3d4f62
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31127661"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905741"
 ---
 # <a name="objecttype"></a>OBJECT_TYPE
-式エバリュエーターからのオブジェクトの種類を指定します。  
+式エバリュエーターからオブジェクトの種類を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -85,7 +85,7 @@ public enum enum_OBJECT_TYPE {
  オブジェクトが 2 バイト符号付き整数であることを示します。  
   
  OBJECT_TYPE_U2  
- オブジェクトが 2 バイトの符号なし整数であることを示します。  
+ オブジェクトが 2 バイト符号なし整数であることを示します。  
   
  OBJECT_TYPE_I4  
  オブジェクトが 4 バイト符号付き整数であることを示します。  
@@ -103,7 +103,7 @@ public enum enum_OBJECT_TYPE {
  オブジェクトが 4 バイト浮動小数点数であることを示します。  
   
  OBJECT_TYPE_R8  
- オブジェクトが 8 バイト浮動小数点数であることを示します。  
+ オブジェクトが 8 バイトの浮動小数点数であることを示します。  
   
  OBJECT_TYPE_OBJECT  
  オブジェクトがオブジェクトであることを示します。  
@@ -112,12 +112,12 @@ public enum enum_OBJECT_TYPE {
  オブジェクトが NULL であることを示します。  
   
  OBJECT_TYPE_CLASS  
- オブジェクトが、クラスであることを示します。  
+ オブジェクトがクラスであることを示します。  
   
-## <a name="remarks"></a>コメント  
- 引数として渡される、 [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md)と[CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 引数として渡される、 [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md)と[CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: ee.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

@@ -16,12 +16,12 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c53db386ee9eb0815ebb27f82794118035d6cba6
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: b91c12807482f411783ed6ef5f50e29716612ffd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49254736"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921935"
 ---
 # <a name="lines-view---contention-data"></a>行ビュー - 競合データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,21 +30,21 @@ ms.locfileid: "49254736"
   
  ステートメントは、次のデータによって識別されます。  
   
--   関数のステートメントを含むソース ファイル。  
+- 関数のステートメントを含むソース ファイル。  
   
--   ステートメントを含む関数。  
+- ステートメントを含む関数。  
   
--   ステートメントが開始されるソース行。  
+- ステートメントが開始されるソース行。  
   
--   ステートメントが開始されるソース行の文字。  
+- ステートメントが開始されるソース行の文字。  
   
--   ステートメントが終了するソース行。  
+- ステートメントが終了するソース行。  
   
--   ステートメントが終了するソース行の文字。  
+- ステートメントが終了するソース行の文字。  
   
- [ソース/行番号] 列は、識別子データを連結したもので、この列による並べ替えが可能です。  
+  [ソース/行番号] 列は、識別子データを連結したもので、この列による並べ替えが可能です。  
   
- 次の表では、行ビュー レポートの列について説明します。  
+  次の表では、行ビュー レポートの列について説明します。  
   
 |Column|説明|  
 |------------|-----------------|  

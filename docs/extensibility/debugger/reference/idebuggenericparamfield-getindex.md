@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericParamField::GetIndex |Microsoft ドキュメント
+title: IDebugGenericParamField::GetIndex |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7dc623eca2221c0ca9c073e830683739d048f84b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 197796549ce865733f037d99e20382ac74b8a74d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31110833"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49857251"
 ---
 # <a name="idebuggenericparamfieldgetindex"></a>IDebugGenericParamField::GetIndex
 このジェネリック パラメーターのインデックスを取得します。  
@@ -42,13 +42,13 @@ int GetIndex(
  [out]このジェネリック パラメーターのインデックス値。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- たとえば、Dictionary(K,V)、K はインデックス 0、V はインデックス 1 です。  
+## <a name="remarks"></a>Remarks  
+ たとえば、Dictionary(K,V)、K はインデックス 0、V はインデックス 1。  
   
 ## <a name="example"></a>例  
- 次の例に対して、このメソッドを実装する方法を示しています、 **CDebugGenericParamFieldType**を公開するオブジェクト、 [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)インターフェイスです。  
+ 次の例では、このメソッドを実装する方法を示しています、 **CDebugGenericParamFieldType**を公開するオブジェクト、 [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)インターフェイス。  
   
 ```cpp  
 HRESULT CDebugGenericParamFieldType::GetIndex(DWORD* pIndex)  

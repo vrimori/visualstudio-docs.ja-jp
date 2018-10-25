@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_DATA |Microsoft ドキュメント
+title: BP_RESOLUTION_DATA |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f76cba8fa2b1ea01a2cbd7670a05b449d476127b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0f7ad3c88f0dd804daba2ee52126c7c6321a2a2b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31109926"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876088"
 ---
 # <a name="bpresolutiondata"></a>BP_RESOLUTION_DATA
 データ ブレークポイントのバインドの結果について説明します。  
@@ -47,21 +47,21 @@ public struct BP_RESOLUTION_DATA {
   
 ## <a name="members"></a>メンバー  
  `bstrDataExpr`  
- バインドされたデータ式です。  
+ バインドされたデータ式。  
   
  `bstrFunc`  
- 関数の名前、データ ブレークポイントがバインド (存在する場合)。  
+ 関数の名前 (ある場合) でバインド データ ブレークポイントは。  
   
  `bstrImage`  
  データ ブレークポイントがバインドされているモジュール (たとえば MyModule.dll) の名前。  
   
  `dwFlags`  
- 値、 [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md)データ ブレークポイントを実装する方法を説明する列挙です。  
+ 値、 [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md)データ ブレークポイントを実装する方法を説明する列挙。  
   
-## <a name="remarks"></a>コメント  
- この構造体のメンバーである、 [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)がで有効にするのメンバーの構造、 [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)によって返される構造体、 [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ この構造体のメンバーである、 [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)がで有効にするのメンバーの構造、 [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)によって返される構造体、 [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

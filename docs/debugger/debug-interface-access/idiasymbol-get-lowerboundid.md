@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_lowerboundid |Microsoft ドキュメント
+title: Idiasymbol::get_lowerboundid |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 62fe2434b53932f6fdf9f579e45a095ff46e5564
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 1fe7109957167b9f2073660e035298bcc7613feb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31465617"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873332"
 ---
 # <a name="idiasymbolgetlowerboundid"></a>IDiaSymbol::get_lowerBoundId
-FORTRAN 配列の次元の下限値のシンボル id を取得します。  
+FORTRAN 配列の次元の下限の境界のシンボルの識別子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,15 +34,15 @@ HRESULT get_lowerBoundId (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]FORTRAN 配列の次元の下限の境界を表す記号のシンボル ID を返します。  
+ [out]FORTRAN 配列の次元の下限の境界を表すシンボルのシンボル ID を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  識別子は、一意としてすべてのシンボルをマークする DIA SDK によって作成された一意の値です。  
   
 ## <a name="see-also"></a>関連項目  

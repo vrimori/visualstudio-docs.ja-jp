@@ -17,25 +17,25 @@ caps.latest.revision: 24
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 141c8ee9e2a5924ce74dca119e1ba897add0c04b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 567640eafb3886d51469447eba31e439ca150618
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49185901"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836984"
 ---
 # <a name="profiling-and-windows-vista-security"></a>プロファイルと Windows Vista のセキュリティ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 コンピューターの管理者が使用可能にした [!INCLUDE[wiprlhext](../includes/wiprlhext-md.md)] ユーザー アクセス許可の設定に応じて、個々のユーザーは、コンピューター上でプロセスをプロファイリングするためのセキュリティ アクセス許可を持っている場合があります。 次の例では、考えられるユーザーごとの違いについて説明します。  
   
--   管理者がドライバーとサービスが起動するように設定しているときには、一部のユーザーが高度なプロファイリング機能にアクセスできることがあります。  
+- 管理者がドライバーとサービスが起動するように設定しているときには、一部のユーザーが高度なプロファイリング機能にアクセスできることがあります。  
   
--   ドメイン ユーザーはサンプルのプロファイリングにのみアクセスできる場合があります。  
+- ドメイン ユーザーはサンプルのプロファイリングにのみアクセスできる場合があります。  
   
--   一部のユーザーが他のすべてのユーザーに対してプロファイリングへのアクセスを拒否することがあります。  
+- 一部のユーザーが他のすべてのユーザーに対してプロファイリングへのアクセスを拒否することがあります。  
   
- 詳細については、「[VSPerfCmd](../profiling/vsperfcmd.md)」の ADMIN オプションを参照してください。  
+  詳細については、「[VSPerfCmd](../profiling/vsperfcmd.md)」の ADMIN オプションを参照してください。  
   
 ## <a name="cross-session-profiling"></a>セッション間プロファイリング  
  *セッション間プロファイリング*は、別のログオン セッションで実行しているプロセスをプロファイリングする機能です。 たとえば、サービスのほとんどはセッション 0 で実行され、ユーザーはセッション 0 で直接実行できません。 パフォーマンス エクスプローラーのツールバーで **[プロセスにアタッチ]** ボタン、または VSPerfCmd コマンド ライン ツールの /attach オプションを使用して、さまざまなログオン セッションでのほとんどのプロセスをプロファイリングすることができます。  

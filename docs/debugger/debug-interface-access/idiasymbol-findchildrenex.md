@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findChildrenEx |Microsoft ドキュメント
+title: IDiaSymbol::findChildrenEx |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: abc8657f57ad58f8a6c259b38e98c34455019186
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 5304c77dd772a1aa74b90d89df7eb73361ab7561
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31464496"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836802"
 ---
 # <a name="idiasymbolfindchildrenex"></a>IDiaSymbol::findChildrenEx
-シンボルの子を取得します。 返されるローカル シンボルにはでの最適化を使用して、プログラムがコンパイルされている場合、ライブの範囲の情報が含まれます。  
+シンボルの子を取得します。 返されるローカル シンボルにはで最適化を使用して、プログラムがコンパイルされている場合、ライブの範囲の情報が含まれます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,24 +37,24 @@ HRESULT findChildrenEx (
   
 #### <a name="parameters"></a>パラメーター  
  `symtag`  
- [in]タグを指定します、シンボルの子を取得するので定義されている、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)です。 設定`SymTagNull`すべての子を取得します。  
+ [in]定義されているを取得するには、子のシンボル タグを指定します、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)します。 設定`SymTagNull`のすべての子を取得します。  
   
  `name`  
- [in]取得する子の名前を指定します。 設定`NULL`すべての子を取得します。  
+ [in]取得する子の名前を指定します。 設定`NULL`のすべての子を取得します。  
   
  `compareFlags`  
- [in]名前の一致に適用する比較オプションを指定します。 値から、 [NameSearchOptions 列挙型](../../debugger/debug-interface-access/namesearchoptions.md)列挙体は、単独または組み合わせて使用できます。  
+ [in]名前の一致に適用される比較オプションを指定します。 値から、 [NameSearchOptions 列挙型](../../debugger/debug-interface-access/namesearchoptions.md)列挙体は、単独または組み合わせて使用できます。  
   
  `ppResult`  
- [out]返します、 [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)子の記号の一覧を含むオブジェクトを取得します。  
+ [out]返します、 [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)子シンボルの一覧を含むオブジェクトを取得します。  
   
 ## <a name="return-value"></a>戻り値  
- 返します`S_OK`シンボルの少なくとも 1 つの子が見つかりましたが、または返す`S_FALSE`場合は子が見つかりませんでした。 エラー コードを返しますそれ以外の場合。  
+ 返します`S_OK`シンボルの少なくとも 1 つの子が検出されましたが、またはを返す`S_FALSE`場合は子が見つかりませんでした。 それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、拡張のバージョンの[idiasymbol::findchildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、拡張のバージョンの[idiasymbol::findchildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

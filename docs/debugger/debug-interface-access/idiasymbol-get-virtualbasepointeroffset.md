@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_virtualbasepointeroffset |Microsoft ドキュメント
+title: Idiasymbol::get_virtualbasepointeroffset |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 918855f7b602d9aeaf08389805a2c05eea9a7c3d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 17fda4a74c1497d48baea1d9e1a817b4b12cf344
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31470089"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898953"
 ---
 # <a name="idiasymbolgetvirtualbasepointeroffset"></a>IDiaSymbol::get_virtualBasePointerOffset
 仮想基底ポインターのオフセットを取得します。  
@@ -37,10 +37,10 @@ HRESULT get_virtualBasePointerOffset (
  [out]仮想基底ポインターのオフセットを返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティが、シンボルを使用できないことを意味します。  
+>  戻り値`S_FALSE`プロパティがシンボルを使用できないことを意味します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

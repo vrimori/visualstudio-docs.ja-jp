@@ -17,12 +17,12 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3bbe5eec0a512dafd6689f1420e721d6a2a63e1e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 9a196f49765623966a48b07eef3abe3f8ca7e5a1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49189853"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900541"
 ---
 # <a name="how-to-implement-an-interface-class-designer"></a>方法: インターフェイスを実装する (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "49189853"
   
 ### <a name="to-implement-an-interface-by-drawing-an-inheritance-line"></a>継承線を描画してインターフェイスを実装するには  
   
-1.  クラス ダイアグラムで、インターフェイスおよびインターフェイスを実装するクラスを表示します。  
+1. クラス ダイアグラムで、インターフェイスおよびインターフェイスを実装するクラスを表示します。  
   
-2.  クラスとインターフェイスから継承線を描画します。  
+2. クラスとインターフェイスから継承線を描画します。  
   
-     クラスにアタッチされたロリポップが表示され、インターフェイス名が表示されたラベルによって継承関係が示されます。 Visual Studio は、すべてのインターフェイス メンバーのスタブを生成します。  
+    クラスにアタッチされたロリポップが表示され、インターフェイス名が表示されたラベルによって継承関係が示されます。 Visual Studio は、すべてのインターフェイス メンバーのスタブを生成します。  
   
- 詳細については、「[方法: 型の間の継承を作成する (クラス デザイナー)](../ide/how-to-create-inheritance-between-types-class-designer.md)」を参照してください。  
+   詳細については、「[方法: 型の間の継承を作成する (クラス デザイナー)](../ide/how-to-create-inheritance-between-types-class-designer.md)」を参照してください。  
   
 ### <a name="to-implement-an-interface-from-the-class-view-window"></a>[クラス ビュー] ウィンドウからインターフェイスを実装するには  
   

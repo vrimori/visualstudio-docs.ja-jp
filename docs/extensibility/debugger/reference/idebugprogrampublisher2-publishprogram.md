@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2::PublishProgram |Microsoft ドキュメント
+title: IDebugProgramPublisher2::PublishProgram |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 67ac5bad37ad5df85022ba6572da44d32de39736
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b0ac385eaff1344d21b47e902e7c76d7f4c39343
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31120125"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49869760"
 ---
 # <a name="idebugprogrampublisher2publishprogram"></a>IDebugProgramPublisher2::PublishProgram
-この方法は、デバッグ エンジン (DEs) の利用可能なプログラムとセッションのデバッグ マネージャーになります。  
+この方法は、デバッグ エンジン (DEs) を利用プログラムおよびセッション デバッグ マネージャーになります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,19 +45,19 @@ int PublishProgram(
   
 #### <a name="parameters"></a>パラメーター  
  `Engines`  
- [in]起動したり、このプログラムにアタッチできる DEs の Guid の配列。  
+ [in]DEs を開始したり、このプログラムにアタッチされる Guid の配列。  
   
  `szFriendlyName`  
  [in]プログラムのフレンドリーな名前（これはメニューまたはユーザーに表示されるダイアログに表示されます）。  
   
  `pDebuggeeInterface`  
- [in]`IUnknown`プログラム インターフェイス (この値は、プログラムを一意に識別するクッキーとして使用この同じ値は、プログラムを"取り消す"に使用)。  
+ [in]`IUnknown`プログラム インターフェイス (この値は、プログラムを一意に識別するために cookie として使用されますこの同じの値は、プログラムを"非公開"に使用されます)。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- プログラムをデバッグするためには使用できなくするを呼び出す[UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)です。  
+## <a name="remarks"></a>Remarks  
+ プログラムをデバッグに使用できなくするには、呼び出す[UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)   

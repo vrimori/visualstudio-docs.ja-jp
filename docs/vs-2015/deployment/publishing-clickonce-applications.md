@@ -26,12 +26,12 @@ caps.latest.revision: 24
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 70cf261f2d235a8ed1b27550acad916cf5a355a7
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 4282ce38671e2270c1e91d70df8968d790c54a22
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49265643"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891766"
 ---
 # <a name="publishing-clickonce-applications"></a>ClickOnce アプリケーションの発行
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,15 +43,15 @@ ms.locfileid: "49265643"
 ## <a name="publish-wizard"></a>発行ウィザード  
  発行ウィザードを使用して、アプリケーションを発行するときの基本的な設定を指定できます。 たとえば、次の発行プロパティが含まれます。  
   
--   発行フォルダーの場所 - Visual Studio がファイルをコピーする場所 (ローカル コンピューター、ネットワーク ファイル共有、FTP サーバー、または Web サイト)。  
+- 発行フォルダーの場所 - Visual Studio がファイルをコピーする場所 (ローカル コンピューター、ネットワーク ファイル共有、FTP サーバー、または Web サイト)。  
   
--   インストール フォルダーの場所 - エンド ユーザーがインストールを開始する場所 (ネットワーク ファイル共有、FTP サーバー、Web サイト、CD/DVD)。  
+- インストール フォルダーの場所 - エンド ユーザーがインストールを開始する場所 (ネットワーク ファイル共有、FTP サーバー、Web サイト、CD/DVD)。  
   
--   オンラインまたはオフラインの可用性 - エンド ユーザーがネットワーク接続でアプリケーションにアクセスできるかどうか。  
+- オンラインまたはオフラインの可用性 - エンド ユーザーがネットワーク接続でアプリケーションにアクセスできるかどうか。  
   
--   更新間隔 - 新しい更新プログラムをアプリケーションがチェックする頻度。  
+- 更新間隔 - 新しい更新プログラムをアプリケーションがチェックする頻度。  
   
- 詳細については、次を参照してください。[方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)します。  
+  詳細については、次を参照してください。[方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)します。  
   
 ## <a name="publish-page"></a>ページの発行  
  **プロジェクト デザイナー** の **[発行]** ページは、ClickOnce 配置用のプロパティを構成する場合に使用します。 次の表にトピックを示します。  

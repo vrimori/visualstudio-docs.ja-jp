@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::GetMethodLocationProperty |Microsoft ドキュメント
+title: IDebugExpressionEvaluator::GetMethodLocationProperty |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f10a26eca06aed24d53b70cd406fe3f24e2fe898
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: af772ebfd844679c7fb8d482b0fd0adf7d84e0e7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31111821"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905351"
 ---
 # <a name="idebugexpressionevaluatorgetmethodlocationproperty"></a>IDebugExpressionEvaluator::GetMethodLocationProperty
-このメソッドは、メモリ アドレスに、メソッドの場所とオフセットを変換します。  
+このメソッドは、メモリ アドレスにメソッドの場所とオフセットを変換します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,13 +49,13 @@ int GetMethodLocationProperty(
   
 #### <a name="parameters"></a>パラメーター  
  `upstrFullyQualifiedMethodPlusOffset`  
- [in]オフセットとメソッドの場所は、文字列として表されます。  
+ [in]メソッドの場所とのオフセットは、文字列として表されます。  
   
  `pSymbolProvider`  
  [in]シンボル プロバイダーで表した、 [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)オブジェクト。  
   
  `pAddress`  
- [in]表される、メソッド内のアドレス、 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)オブジェクト。  
+ [in]表されるメソッド内のアドレス、 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)オブジェクト。  
   
  `pBinder`  
  [in]バインダーで表した、 [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)オブジェクト。  
@@ -64,12 +64,12 @@ int GetMethodLocationProperty(
  [out]返します、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)メモリ アドレスを表すインターフェイスです。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- たとえば、ブレークポイントを設定する、返されたアドレスを使用できます。  
+## <a name="remarks"></a>Remarks  
+ たとえば、ブレークポイントを設定するのには、返されたアドレスを使用できます。  
   
- 名前に関係なく`upstrFullyQualifiedMethodPlusOffset`、部分修飾メソッド名をこのパラメーターに渡すことができます。 その場合は、選択した方法であるを囲む`pAddress`です。 このパラメーターを解釈する方法は、式エバリュエーターとサポートする言語の実装によって異なります。  
+ 名前に関係なく`upstrFullyQualifiedMethodPlusOffset`、このパラメーターは、部分的に修飾メソッド名を渡すことができます。 選択したメソッドを囲む、1 つは、その場合は、`pAddress`します。 このパラメーターを解釈する方法は、式エバリュエーターと言語のサポートの実装の責任です。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

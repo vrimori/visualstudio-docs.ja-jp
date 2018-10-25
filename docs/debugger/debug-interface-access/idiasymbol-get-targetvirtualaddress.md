@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_targetvirtualaddress |Microsoft ドキュメント
+title: Idiasymbol::get_targetvirtualaddress |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6732ecad84e379ee574be94ce0170b9758329bc2
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 9f4d4759bb256eea4db9cf00c6c051410c462131
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31480925"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882376"
 ---
 # <a name="idiasymbolgettargetvirtualaddress"></a>IDiaSymbol::get_targetVirtualAddress
 サンク ターゲットの仮想アドレス (VA) を取得します。  
@@ -37,15 +37,15 @@ HRESULT get_targetVirtualAddress (
  [out]サンク ターゲットの VA を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>コメント  
- このプロパティは、有効な場合にのみ、記号として、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の値`SymTagThunk`です。  
+## <a name="remarks"></a>Remarks  
+ このプロパティは有効な場合にのみとしてシンボルを[SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の値`SymTagThunk`します。  
   
- 「サンク」は、32 ビット メモリ アドレス空間 (フラットのアドレス空間とも呼ばれます) と (セグメント化されたアドレス空間と呼ばれます) の 16 ビット アドレス空間の間で変換するコードです。  
+ 「サンク」は、32 ビット メモリ アドレス空間 (フラットのアドレス空間とも呼ばれます) と (セグメント化されたアドレス空間と呼ばれます)、16 ビットのアドレス空間を変換するコードです。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

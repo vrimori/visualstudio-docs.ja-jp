@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetDocument |Microsoft ドキュメント
+title: IDebugDisassemblyStream2::GetDocument |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8585a777ace0d49749570d4efcbd78f133fb0edd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5b0d697a7596f7582a69466193534d4f8908f2fc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31105178"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822203"
 ---
 # <a name="idebugdisassemblystream2getdocument"></a>IDebugDisassemblyStream2::GetDocument
 この入力ストリームに関連付けられているソース ドキュメントを取得します。  
@@ -49,10 +49,10 @@ int GetDocument(
  [out]返します、 [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)ドキュメントを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、実際のファイルに格納されていないテキスト ドキュメントのデバッグ エンジンによって実装されます。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、テキスト ドキュメントを実際のファイルに格納されていないデバッグ エンジンによって実装されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   

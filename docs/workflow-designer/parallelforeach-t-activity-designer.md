@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 53b8a8790cfa4f4e1f962fa5e6ce82b62781430f
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: c62918811ba91fe9c30f60e930ce77a640959d0f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36756907"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846344"
 ---
 # <a name="parallelforeach-activity-designer"></a>ParallelForEach アクティビティ デザイナー
 
@@ -44,7 +44,7 @@ ms.locfileid: "36756907"
 次の表に、最も役に立つ <xref:System.Activities.Statements.ParallelForEach%601> アクティビティのプロパティと、デザイナーでのその使用方法を示します。
 
 |プロパティ名|必須|使用方法|
-|-------------------|--------------|-----------|
+|-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|ヘッダーのアクティビティ デザイナーの表示名を指定します。 既定値は**ParallelForEach\<Int32 >** します。 値を必要に応じて編集、**プロパティ**グリッドまたは直接アクティビティ デザイナーのヘッダー。|
 |<xref:System.Activities.Statements.ParallelForEach%601.Body%2A>|False|コレクション内の各項目に対して実行するアクティビティ。 追加する、<xref:System.Activities.Statements.ParallelForEach%601.Body%2A>アクティビティ、アクティビティをツールボックスからドロップ、**本文**ボックスに、 **ParallelForEach\<T >** アクティビティ デザイナーの「ドロップ アクティビティここ」ヒント テキスト。|
 |**TypeArgument**|True|内の項目の種類、<xref:System.Activities.Statements.ParallelForEach%601.Values%2A>ジェネリック パラメーターで指定されたコレクション*T*します。既定では、 **TypeArgument**に設定されている**Int32**します。 型 T を変更する、 **ParallelForEach < T\>** アクティビティ デザイナーの値を変更、 **TypeArgument**プロパティ グリッドのコンボ ボックス。|
@@ -55,6 +55,6 @@ ms.locfileid: "36756907"
 
 ## <a name="see-also"></a>関連項目
 
-- [シーケンス](../workflow-designer/sequence-activity-designer.md)
-- [並列](../workflow-designer/parallel-activity-designer.md)
+- [Sequence](../workflow-designer/sequence-activity-designer.md)
+- [Parallel](../workflow-designer/parallel-activity-designer.md)
 - [制御フロー](../workflow-designer/control-flow-activity-designers.md)

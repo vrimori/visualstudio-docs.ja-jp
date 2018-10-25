@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_bitposition |Microsoft ドキュメント
+title: Idiasymbol::get_bitposition |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 406cfd6c94af4d9dbd3f66b7321241f906e80648
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: bba39752470cf9f282245cbece7f260558b8b21d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31464181"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49838476"
 ---
 # <a name="idiasymbolgetbitposition"></a>IDiaSymbol::get_bitPosition
-位置のビット位置を取得します。 際に使用される、 [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)は`LocIsBitField`します。  
+位置のビット位置を取得します。 使用するときに、 [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)は`LocIsBitField`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,16 +37,16 @@ HRESULT get_bitPosition (
  [out]位置のビット位置を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|dia2.h|  
+|ヘッダー:|Dia2.h|  
 |バージョン:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>関連項目  

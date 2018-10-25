@@ -11,12 +11,12 @@ caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 21c509656ab32c1532bb9523d0bbc3d8cf94f0a1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a6e1ff0cd6f77d2155ff4982ca02657a741c02d7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49219298"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890570"
 ---
 # <a name="query-datasets"></a>データセットのクエリ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -75,13 +75,13 @@ ms.locfileid: "49219298"
   
  次のコード例では、型指定されたデータセットのリレーションシップを上下に移動する方法を示します。 型指定されたコードの例として使用<xref:System.Data.DataRow>s (`NorthwindDataSet.OrdersRow`) され、生成された`FindBy` *PrimaryKey* (`FindByCustomerID`) を目的の行を見つけて、関連レコードを返すメソッド。 例では、正しくコンパイルして実行した場合にのみ。  
   
--   という名前のデータセットのインスタンス`NorthwindDataSet`で、`Customers`テーブル。  
+- という名前のデータセットのインスタンス`NorthwindDataSet`で、`Customers`テーブル。  
   
--   `Orders`テーブル。  
+- `Orders`テーブル。  
   
--   という名前のリレーションシップ`FK_Orders_Customers`使用可能な 2 つのテーブルに関連する、コードのスコープ  
+- という名前のリレーションシップ`FK_Orders_Customers`使用可能な 2 つのテーブルに関連する、コードのスコープ  
   
- さらに、両方のテーブルは、返されるレコードにデータを格納する必要があります。  
+  さらに、両方のテーブルは、返されるレコードにデータを格納する必要があります。  
   
 #### <a name="to-return-the-child-records-of-a-selected-parent-record"></a>選択した親レコードのレコードの子を取得するには  
   

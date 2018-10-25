@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findSymbolsByRVAForAcceleratorPointerTag |Microsoft ドキュメント
+title: IDiaSession::findSymbolsByRVAForAcceleratorPointerTag |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a75b82da742bee6ec6d504ec66876548f664cf57
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 8d936e8110443cc42e77ea523a5b3df288e28d8c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31468490"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887268"
 ---
 # <a name="idiasessionfindsymbolsbyrvaforacceleratorpointertag"></a>IDiaSession::findSymbolsByRVAForAcceleratorPointerTag
-対応するタグの値を指定するには、このメソッドは、指定された相対仮想アドレスでは、指定した親アクセラレータ スタブ関数に含まれている記号の列挙を返します。  
+対応するタグの値を指定すると、このメソッドは、指定の相対仮想アドレスにある指定した親アクセラレータ スタブ関数に含まれているシンボルの列挙体を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,13 +44,13 @@ HRESULT findSymbolsByRVAForAcceleratorPointerTag (
  [in]相対仮想アドレス。  
   
  `ppResult`  
- [out]ポインター、`IDiaEnumSymbols`結果で初期化されたインターフェイス ポインター。  
+ [out]ポインター、`IDiaEnumSymbols`インターフェイス ポインターでは、結果を使用して初期化します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- のみこのメソッドを呼び出して、`IDiaSymbol`アクセラレータ スタブ関数に対応するインターフェイスです。  
+## <a name="remarks"></a>Remarks  
+ のみこのメソッドを呼び出し、`IDiaSymbol`アクセラレータのスタブ関数に対応するインターフェイス。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   

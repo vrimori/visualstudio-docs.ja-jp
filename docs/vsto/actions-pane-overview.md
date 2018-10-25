@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e19494af4d0c774e7cb70613151376be733f0a63
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: e62f13d0c947ef8f1a9cfdd014f5c03b194ea71d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35673406"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908354"
 ---
 # <a name="actions-pane-overview"></a>操作ウィンドウの概要
   操作ウィンドウは、カスタマイズ可能な**ドキュメント アクション**特定の Microsoft Office Word ドキュメントまたは Microsoft Office Excel ブックに関連付けられている作業ウィンドウ。 [操作] ウィンドウがなどの他の組み込み作業ウィンドウと Office 作業ウィンドウ内でホストされる、 **XML ソース**Excel での作業ウィンドウ、または**スタイルと書式**Word 作業ウィンドウ。 操作ウィンドウのユーザー インターフェイスは、Windows フォーム コントロールまたは WPF コントロールを使用してデザインできます。
@@ -48,16 +48,16 @@ ms.locfileid: "35673406"
 ### <a name="add-multiple-controls-to-the-actions-pane"></a>[操作] ウィンドウに複数のコントロールを追加します。  
  ユーザー コントロールでコントロールをグループ化し、ユーザー コントロールを追加する必要があります [操作] ウィンドウに複数のコントロールを追加すると、<xref:Microsoft.Office.Tools.ActionsPane.Controls%2A>プロパティ。 このプロセスには、次の手順が含まれます。  
 
-1.  追加することで、[操作] ウィンドウのユーザー インターフェイス (UI) を作成、**操作ウィンドウ コントロール**または**ユーザー コントロール**をプロジェクトに項目。 これらのアイテムのどちらにも、カスタム Windows フォーム <xref:System.Windows.Forms.UserControl> クラスが含まれています。 **操作ウィンドウ コントロール**と**ユーザー コントロール**項目は同等です。 唯一の違いは、名前。  
+1. 追加することで、[操作] ウィンドウのユーザー インターフェイス (UI) を作成、**操作ウィンドウ コントロール**または**ユーザー コントロール**をプロジェクトに項目。 これらのアイテムのどちらにも、カスタム Windows フォーム <xref:System.Windows.Forms.UserControl> クラスが含まれています。 **操作ウィンドウ コントロール**と**ユーザー コントロール**項目は同等です。 唯一の違いは、名前。  
 
-2.  デザイナーを使用するか、またはコードを記述して、Windows フォーム コントロールを <xref:System.Windows.Forms.UserControl> に追加します。  
+2. デザイナーを使用するか、またはコードを記述して、Windows フォーム コントロールを <xref:System.Windows.Forms.UserControl> に追加します。  
 
-    > [!NOTE]  
-    >  また、WPF の <xref:System.Windows.Controls.UserControl> を Windows フォーム <xref:System.Windows.Forms.UserControl> に追加することにより、WPF コントロールを操作ウィンドウに追加することもできます。 詳細については、次を参照してください。 [Office ソリューションでコントロールを使用して WPF](../vsto/using-wpf-controls-in-office-solutions.md)します。  
+   > [!NOTE]  
+   >  また、WPF の <xref:System.Windows.Controls.UserControl> を Windows フォーム <xref:System.Windows.Forms.UserControl> に追加することにより、WPF コントロールを操作ウィンドウに追加することもできます。 詳細については、次を参照してください。 [Office ソリューションでコントロールを使用して WPF](../vsto/using-wpf-controls-in-office-solutions.md)します。  
 
-3.  カスタム ユーザー コントロールのインスタンスを、プロジェクトの `ThisWorkbook` クラス (Excel の場合) または `ThisDocument` クラス (Word の場合) の `ActionsPane` フィールドに含まれるコントロールに追加します。  
+3. カスタム ユーザー コントロールのインスタンスを、プロジェクトの `ThisWorkbook` クラス (Excel の場合) または `ThisDocument` クラス (Word の場合) の `ActionsPane` フィールドに含まれるコントロールに追加します。  
 
- このプロセスの詳細を示す例については、次を参照してください。[方法: Word 文書に操作ウィンドウを追加したり、Excel ブック](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)します。  
+   このプロセスの詳細を示す例については、次を参照してください。[方法: Word 文書に操作ウィンドウを追加したり、Excel ブック](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)します。  
 
 ## <a name="hide-the-actions-pane"></a>[操作] ウィンドウを非表示にします。  
  <xref:Microsoft.Office.Tools.ActionsPane> クラスには <xref:Microsoft.Office.Tools.ActionsPane.Hide%2A> メソッドと <xref:Microsoft.Office.Tools.ActionsPane.Visible%2A> プロパティがありますが、<xref:Microsoft.Office.Tools.ActionsPane> クラス自体のメンバーを使用して、ユーザー インターフェイスから操作ウィンドウを削除することはできません。 呼び出す、<xref:Microsoft.Office.Tools.ActionsPane.Hide%2A>メソッドまたはの設定、<xref:Microsoft.Office.Tools.ActionsPane.Visible%2A>プロパティを**false** ; 操作ウィンドウ上のコントロールのみを非表示にタスク ウィンドウで、非表示になりません。  

@@ -15,31 +15,31 @@ ms.assetid: a6a1efdc-b243-40c8-a778-6f69f6b018be
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 218f6aa05bebfe0d35776b64e6a42e4fbea4e72f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a9dfe6beeefdb8f6e7c7509083a1a8e622c23870
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49296466"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49827391"
 ---
 # <a name="processes"></a>プロセス
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 デバッガーのアーキテクチャの観点から、**プロセス**:  
   
--   プログラムの一連のコンテナーです。 Windows プロセス、スレッドのセットのコンテナーであると密接に似ています。  
+- プログラムの一連のコンテナーです。 Windows プロセス、スレッドのセットのコンテナーであると密接に似ています。  
   
--   名前、識別子、または物理的な識別子で自身を識別できます。  
+- 名前、識別子、または物理的な識別子で自身を識別できます。  
   
--   実行中のすべてのプログラム (とそのスレッド) を列挙できます。  
+- 実行中のすべてのプログラム (とそのスレッド) を列挙できます。  
   
--   自体では、実行されているポートとそれを含んでいるマシンを記述できます。  
+- 自体では、実行されているポートとそれを含んでいるマシンを記述できます。  
   
--   1 つを作成したり、他のプログラムの作成、プログラムを終了またはプログラムを停止します。  
+- 1 つを作成したり、他のプログラムの作成、プログラムを終了またはプログラムを停止します。  
   
--   によって表される、 [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)インターフェイスで、プロセスを起動するときに作成されます。 いずれかのセッション デバッグ マネージャー (SDM) プロセスの起動時または[LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)します。  
+- によって表される、 [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)インターフェイスで、プロセスを起動するときに作成されます。 いずれかのセッション デバッグ マネージャー (SDM) プロセスの起動時または[LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)します。  
   
- パッケージのデバッグは呼び出すことによって、プロセスにデバッグ エンジン (DE) をアタッチすることができます[アタッチ](../../extensibility/debugger/reference/idebugprocess2-attach.md)します。 つまり、DE が処理できるプロセスで実行されているすべての可能なプログラムにアタッチします。 たとえば場合、DE、共通言語ランタイムは、プロセスにアタッチして、マネージ コードが実行されているプログラムのみにアタッチします。  
+  パッケージのデバッグは呼び出すことによって、プロセスにデバッグ エンジン (DE) をアタッチすることができます[アタッチ](../../extensibility/debugger/reference/idebugprocess2-attach.md)します。 つまり、DE が処理できるプロセスで実行されているすべての可能なプログラムにアタッチします。 たとえば場合、DE、共通言語ランタイムは、プロセスにアタッチして、マネージ コードが実行されているプログラムのみにアタッチします。  
   
 ## <a name="see-also"></a>関連項目  
  [プログラム](../../extensibility/debugger/programs.md)   

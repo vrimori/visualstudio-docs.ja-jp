@@ -1,5 +1,5 @@
 ---
-title: Idiasegment::get_write |Microsoft ドキュメント
+title: Idiasegment::get_write |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6023caea9a2227d1773e900214e3abf87b272d2e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f4c312c0b2c6b4374ad407fa449ddbedfa774233
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31462040"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825999"
 ---
 # <a name="idiasegmentgetwrite"></a>IDiaSegment::get_write
 セグメントを変更できるかどうかを示すフラグを取得します。  
@@ -34,10 +34,10 @@ HRESULT get_write (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]返します`TRUE`セグメントできますを書き込む場合に、それ以外を返します`FALSE`です。  
+ [out]返します`TRUE`セグメントは書き込まれた場合は。 それ以外を返します。`FALSE`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

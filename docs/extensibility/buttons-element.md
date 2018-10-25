@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 522a69dc703a83ef601a5c7f0c54a5e0c224366e
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: f6ce3deedd14707943a93387dcec0a73b8471339
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39155413"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904896"
 ---
 # <a name="buttons-element"></a>Buttons 要素
 グループ[ボタン](../extensibility/button-element.md)要素で、個々 のコマンドを表します。  

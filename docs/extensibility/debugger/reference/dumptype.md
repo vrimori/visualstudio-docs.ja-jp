@@ -1,5 +1,5 @@
 ---
-title: DUMPTYPE |Microsoft ドキュメント
+title: DUMPTYPE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa44dfa59f4883fa29a1724344124267f28bce9f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5e886649a7eaa5f9f99eb2e2bfcc48985f12a5e4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31099637"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949553"
 ---
 # <a name="dumptype"></a>DUMPTYPE
-量を指定 (実行中のスレッド、スタック フレーム、および現在の命令アドレス) など、プログラムの状態をダンプします。  
+指定します (実行中のスレッド、スタック フレームでは、現在の命令ポインター アドレスなど)、プログラムの状態の量をダンプします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,15 +44,15 @@ public enum enum_DUMPTYPE {
   
 ## <a name="members"></a>メンバー  
  DUMP_MINIDUMP  
- 小規模でコンパクトなダンプを指定します。  
+ 小規模かつコンパクトなダンプを指定します。  
   
  DUMP_FULLDUMP  
  大規模な完全なダンプを指定します。  
   
-## <a name="remarks"></a>コメント  
- 引数として渡される、 [WriteDump](../../../extensibility/debugger/reference/idebugprogram2-writedump.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 引数として渡される、 [WriteDump](../../../extensibility/debugger/reference/idebugprogram2-writedump.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
