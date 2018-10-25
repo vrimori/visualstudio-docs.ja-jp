@@ -1,5 +1,5 @@
 ---
-title: IPerPropertyBrowsing2::GetDisplayString |Microsoft ドキュメント
+title: IPerPropertyBrowsing2::GetDisplayString |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,15 +18,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: be6f665d1f63966b3828868f4fb8fbf1cae002e9
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: be88a76ce22dfd863e680fcc1a6794065ecaf76f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729102"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836880"
 ---
 # <a name="iperpropertybrowsing2getdisplaystring"></a>IPerPropertyBrowsing2::GetDisplayString
-取得型は、本質的に表示できませんが、返されるテキストを表示する文字列、名、プロパティを記述するであり、呼び出し元のユーザー インターフェイスに表示されることができます。  
+取得に表示される型は本質的に表示されませんが、返されるテキスト文字列は、プロパティを説明する名前を指定および呼び出し元のユーザー インターフェイスに表示することができます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,16 +39,16 @@ HRESULT GetDisplayString(
   
 #### <a name="parameters"></a>パラメーター  
  `dispid`  
- [in]表示名が要求されたプロパティの識別子をディスパッチします。  
+ [in]表示名を持つが要求されたプロパティの識別子をディスパッチします。  
   
  `pBstr`  
- [out]ポインター、`BSTR`によって識別されたプロパティの表示名を含む`dispID`です。  
+ [out]ポインター、`BSTR`によって識別されたプロパティの表示名を含む`dispID`します。  
   
 ## <a name="return-value"></a>戻り値  
- 有効な返します`HRESULT`通常`S_OK`です。  
+ 有効な返します`HRESULT`、通常`S_OK`します。  
   
-## <a name="remarks"></a>コメント  
- 返される文字列は、プロパティの有効な値ではありません。 プロパティの文字列の表示だけです。  
+## <a name="remarks"></a>Remarks  
+ 返される文字列は、プロパティの有効な値ではありません。 プロパティの文字列の表示だけになります。  
   
 ## <a name="see-also"></a>関連項目  
  [IPerPropertyBrowsing2 インターフェイス 1](../../winscript/reference/iperpropertybrowsing2-interface-1.md)
