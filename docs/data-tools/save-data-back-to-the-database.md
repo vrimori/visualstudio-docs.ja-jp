@@ -22,12 +22,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 426377d82385cd42de5dd265b0e727a94c0b24d1
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: e33fa9b6047cbe470702cebdbb27f74d074e460e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39177345"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49916908"
 ---
 # <a name="save-data-back-to-the-database"></a>データをデータベースに保存する
 
@@ -48,7 +48,7 @@ Tableadapter を使い慣れているの場合は、これらのトピックの�
 |[データベースに新しいレコードを挿入する](../data-tools/insert-new-records-into-a-database.md)|実行する方法を更新し、Tableadapter またはコマンド オブジェクトを使用して挿入|
 |[TableAdapter を使用してデータを更新する](../data-tools/update-data-by-using-a-tableadapter.md)|Tableadapter が更新を実行する方法|
 |[階層更新](../data-tools/hierarchical-update.md)|2 つ以上の関連テーブルを含むデータセットから更新プログラムを実行する方法|
-|[同時実行例外を処理する](../data-tools/handle-a-concurrency-exception.md)|2 人のユーザーが、同時に、データベース内の同じデータを変更しようとしています。 ときに例外を処理する方法|
+|[コンカレンシー例外を処理する](../data-tools/handle-a-concurrency-exception.md)|2 人のユーザーが、同時に、データベース内の同じデータを変更しようとしています。 ときに例外を処理する方法|
 |[方法: トランザクションを使用してデータを保存](../data-tools/save-data-by-using-a-transaction.md)|システムを使用してトランザクションでデータを保存する方法。 トランザクションの名前空間と TransactionScope オブジェクト|
 |[トランザクションにデータを保存する](../data-tools/save-data-in-a-transaction.md)|トランザクション内でのデータベースにデータの保存を示す Windows フォーム アプリケーションを作成するチュートリアル|
 |[データベースへのデータの保存 (複数テーブル)](../data-tools/save-data-to-a-database-multiple-tables.md)|レコードを編集し、元のデータベースに複数のテーブルで変更を保存する方法|
@@ -73,26 +73,26 @@ Tableadapter を使い慣れているの場合は、これらのトピックの�
 データセットをマージするときに、ブール型の引数を渡すことができます (`preserveChanges`) を示す、<xref:System.Data.DataSet.Merge%2A>メソッド ターゲット データセットの既存の変更を保持するかどうか。 データセットのレコードの複数のバージョン管理、ためには、レコードの 1 つ以上のバージョンがマージされることを念頭に重要です。 次の表は、2 つのデータセット内のレコードをマージする方法を示しています。
 
 |DataRowVersion|ターゲット データセット|ソース データセット|
-|--------------------|--------------------|--------------------|
+| - | - | - |
 |元|James Wilson|James C. Wilson|
 |現在|Jim Wilson|James C. Wilson|
 
 呼び出す、<xref:System.Data.DataSet.Merge%2A>メソッドで、前の表を`preserveChanges=false targetDataset.Merge(sourceDataset)`結果、次のデータ。
 
 |DataRowVersion|ターゲット データセット|ソース データセット|
-|--------------------|--------------------|--------------------|
+| - | - | - |
 |元|James C. Wilson|James C. Wilson|
 |現在|James C. Wilson|James C. Wilson|
 
 呼び出す、<xref:System.Data.DataSet.Merge%2A>メソッド`preserveChanges = true targetDataset.Merge(sourceDataset, true)`結果、次のデータ。
 
 |DataRowVersion|ターゲット データセット|ソース データセット|
-|--------------------|--------------------|--------------------|
+| - | - | - |
 |元|James C. Wilson|James C. Wilson|
 |現在|Jim Wilson|James C. Wilson|
 
 > [!CAUTION]
-> `preserveChanges = true`シナリオでは場合、<xref:System.Data.DataSet.RejectChanges%2A>メソッドは、ターゲット データセットのレコードにし、元のデータに戻ります、*ソース*データセット。 これは、ことをターゲット データセットによって元のデータ ソースを更新しようとすると、その可能性がありますできないことを意味を更新する元の行を検索します。 データ ソースからレコードの更新された別のデータセットを入力し、同時実行制御違反を防ぐために、マージを実行することによって、同時実行制御違反を防ぐことができます。 (同時実行違反は、データセットにレコードが格納された後で別のユーザーがデータ ソース内のレコードを変更すると発生します)。
+> `preserveChanges = true`シナリオでは場合、<xref:System.Data.DataSet.RejectChanges%2A>メソッドは、ターゲット データセットのレコードにし、元のデータに戻ります、*ソース*データセット。 これは、ことをターゲット データセットによって元のデータ ソースを更新しようとすると、その可能性がありますできないことを意味を更新する元の行を検索します。 データ ソースからレコードの更新された別のデータセットを入力し、同時実行制御違反を防ぐために、マージを実行することによって、同時実行制御違反を防ぐことができます。 (コンカレンシー違反は、データセットにレコードが格納された後で別のユーザーがデータ ソース内のレコードを変更すると発生します。)
 
 ## <a name="update-constraints"></a>制約を更新します。
 
@@ -128,7 +128,7 @@ Tableadapter を使い慣れているの場合は、これらのトピックの�
 <xref:System.Data.DataRowState> 列挙定数に使用できる値の詳細を次の表に示します。
 
 |DataRowState 列挙定数の値|説明|
-|------------------------|-----------------|
+| - |-----------------|
 |<xref:System.Data.DataRowState.Added>|行は項目として <xref:System.Data.DataRowCollection> に追加されました。 (この状態の行は存在しなかったため、対応する元のバージョンがないときに、最終<xref:System.Data.DataRow.AcceptChanges%2A>メソッドが呼び出されました)。|
 |<xref:System.Data.DataRowState.Deleted>|行は <xref:System.Data.DataRow.Delete%2A> オブジェクトの <xref:System.Data.DataRow> を使用して削除されました。|
 |<xref:System.Data.DataRowState.Detached>|行は作成されましたが、<xref:System.Data.DataRowCollection> の一部ではありません。 A<xref:System.Data.DataRow>がコレクションから削除された後、それが作成されたら、前が追加されました、コレクションにすぐに、オブジェクトがこの状態にします。|
@@ -142,7 +142,7 @@ Tableadapter を使い慣れているの場合は、これらのトピックの�
 <xref:System.Data.DataRowVersion> 列挙定数に使用できる値の詳細を次の表に示します。
 
 |DataRowVersion 列挙定数の値|説明|
-|--------------------------|-----------------|
+| - |-----------------|
 |<xref:System.Data.DataRowVersion.Current>|レコードの現在のバージョンには、レコードで前回実行されたすべての変更が含まれています。<xref:System.Data.DataRow.AcceptChanges%2A>が呼び出されました。 行が削除されている場合、現在のバージョンはありません。|
 |<xref:System.Data.DataRowVersion.Default>|データセット スキーマまたはデータ ソースにより定義されたレコードの既定値です。|
 |<xref:System.Data.DataRowVersion.Original>|レコードの元のバージョンは、データセットで最後の変更がコミットされたときのレコードのコピーです。 つまり、通常はデータ ソースから読み込まれたときのレコードのバージョンです。|

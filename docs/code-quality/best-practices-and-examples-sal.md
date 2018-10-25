@@ -9,12 +9,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f1287d97ed50e781a0b7bf30be1f77d558c908f
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 7922d381d61d40c20fa69859dd091849684723b2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945443"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899969"
 ---
 # <a name="best-practices-and-examples-sal"></a>ベスト プラクティスと例 (SAL)
 最もからソース コード注釈言語 (SAL) を取得し、一般的な問題を回避する方法を示します。
@@ -61,7 +61,6 @@ void Func2(_Out_ int *p1)
 {
     *p = 1;
 }
-
 ```
 
 ## <a name="predefensive-and-postdefensive"></a>\_プレ\_防御\_と\_Post\_防御\_
@@ -78,7 +77,6 @@ void Func2(_Out_ int *p1)
 void Func1(_Out_writes_(size) CHAR *pb,
     DWORD size
 );
-
 ```
 
 注釈`_Out_writes_`バッファーがあることを示します。 `cb`初期化終了時に最初のバイトで、割り当てられたバイト数。 この注釈が厳密に正しくないと、割り当てサイズを表現することをお勧めします。 ただし、示されていない要素の数が、関数によって初期化されます。
@@ -100,7 +98,6 @@ void Func2(_Out_writes_all_(size) CHAR *pb,
 void Func3(_Out_writes_(size) PSTR pb,
     DWORD size
 );
-
 ```
 
 ## <a name="out-pstr"></a>\_Out\_ PSTR
@@ -114,7 +111,6 @@ void Func1(_Out_ PSTR pFileName, size_t n);
 
 // Correct
 void Func2(_Out_writes_(n) PSTR wszFileName, size_t n);
-
 ```
 
 注釈のような`_In_ PCSTR`は一般的で便利です。 NULL で終わるを持つため、入力文字列の指すの precondition`_In_`により、NULL で終わる文字列を認識します。
@@ -130,7 +126,6 @@ void Func1(_In_ WCHAR* wszFileName);
 
 // Correct
 void Func2(_In_ PWSTR wszFileName);
-
 ```
 
 NULL 終了の適切な仕様が不足しているが一般的です。 使用して、適切な`STR`バージョンを次の例に示すように、型を置き換えます。
@@ -148,7 +143,6 @@ BOOL StrEquals2(_In_ PSTR p1, _In_ PSTR p2)
 {
     return strcmp(p1, p2) == 0;
 }
-
 ```
 
 ## <a name="outrange"></a>\_Out\_範囲\_
@@ -170,7 +164,6 @@ void Func2(
     DWORD cbSize,
     _Deref_out_range_(0, cbSize) _Out_ DWORD *pcbFilled
 );
-
 ```
 
  `_Deref_out_range_(0, cbSize)` 推測するためにはいくつかのツールには必須ではありません`_Out_writes_to_(cbSize,*pcbFilled)`が完全を期すのためここで表示されます。
@@ -188,7 +181,6 @@ int Func1(_In_ MyData *p, int flag);
 // Correct
 _When_(flag == 0, _Requires_lock_held_(p->cs))
 int Func2(_In_ MyData *p, int flag);
-
 ```
 
  式`result`前の状態では利用できません後の状態の値を参照します。
@@ -210,7 +202,6 @@ _Success_(return != 0, _Acquires_lock_(*lpCriticalSection))
 BOOL WINAPI TryEnterCriticalSection(
   _Inout_ LPCRITICAL_SECTION lpCriticalSection
 );
-
 ```
 
 ## <a name="reference-variable"></a>参照変数
@@ -230,7 +221,6 @@ void Func2(
     _Out_writes_bytes_all_(cbSize) BYTE *pb,
     _Out_range_(0, 2) _Out_ DWORD &cbSize
 );
-
 ```
 
 ## <a name="annotations-on-return-values"></a>戻り値に関する注釈
@@ -244,7 +234,6 @@ _Out_opt_ void *MightReturnNullPtr1();
 
 // Correct
 _Ret_maybenull_ void *MightReturnNullPtr2();
-
 ```
 
 この例で`_Out_opt_`という、ポインターが前提条件の一部として NULL をする可能性があります。 ただし、前提条件は、戻り値に適用できません。 適切な注釈は、この場合、`_Ret_maybenull_`します。

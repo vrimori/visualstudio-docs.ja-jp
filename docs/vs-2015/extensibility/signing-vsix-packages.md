@@ -19,12 +19,12 @@ ms.assetid: e34cfc2c-361c-44f8-9cfe-9f2be229d248
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 091edab3b3fad6707058ff7d35918176854c02f1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 8ab10152afbefbdc49f0934f3fd062a74a2a1f30
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49263884"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915595"
 ---
 # <a name="signing-vsix-packages"></a>VSIX パッケージの署名
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,17 +41,17 @@ ms.locfileid: "49263884"
   
 #### <a name="to-use-the-vsixsigntool"></a>VSIXSignTool を使用するには  
   
-1.  プロジェクトに、VSIX を追加します。  
+1. プロジェクトに、VSIX を追加します。  
   
-2.  ソリューション エクスプ ローラーでプロジェクト ノードを右クリックして選択**追加&#124;NuGet パッケージの管理**します。  詳細については、NuGet、NuGet を追加するパッケージを参照してください[NuGet の概要](http://docs.nuget.org/)と[ダイアログによる NuGet パッケージの管理](http://docs.nuget.org/Consume/Package-Manager-Dialog)します。  
+2. ソリューション エクスプ ローラーでプロジェクト ノードを右クリックして選択**追加&#124;NuGet パッケージの管理**します。  詳細については、NuGet、NuGet を追加するパッケージを参照してください[NuGet の概要](http://docs.nuget.org/)と[ダイアログによる NuGet パッケージの管理](http://docs.nuget.org/Consume/Package-Manager-Dialog)します。  
   
-3.  VSIXSignTool VisualStudioExtensibility から検索し、NuGet パッケージをインストールします。  
+3. VSIXSignTool VisualStudioExtensibility から検索し、NuGet パッケージをインストールします。  
   
-4.  プロジェクトのローカル パッケージの場所から、VSIXSignTool を実行できます。 署名のシナリオでは、ツールのコマンドラインのヘルプを参照してください (VSIXSignTool.exe/?)。  
+4. プロジェクトのローカル パッケージの場所から、VSIXSignTool を実行できます。 署名のシナリオでは、ツールのコマンドラインのヘルプを参照してください (VSIXSignTool.exe/?)。  
   
- パスワード保護されている証明書ファイルで署名する例。  
+   パスワード保護されている証明書ファイルで署名する例。  
   
- VSIXSignTool.exe サインオン/f \<certfile >/p\<パスワード > \<VSIXfile >  
+   VSIXSignTool.exe サインオン/f \<certfile >/p\<パスワード > \<VSIXfile >  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)

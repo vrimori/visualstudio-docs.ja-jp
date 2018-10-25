@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::EnumCodeContexts |Microsoft ドキュメント
+title: IDebugProgram2::EnumCodeContexts |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c90afe268a68d6a72e4444dd78a5748d30ddf7b6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ddd3f6f3fe06b0a02a1df992561428aa04895748
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115815"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49902517"
 ---
 # <a name="idebugprogram2enumcodecontexts"></a>IDebugProgram2::EnumCodeContexts
-ソース ファイル内の指定位置にコード コンテキストの一覧を取得します。  
+ソース ファイル内の指定位置のコード コンテキストの一覧を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,16 +43,16 @@ int EnumCodeContexts(
   
 #### <a name="parameters"></a>パラメーター  
  `pDocPos`  
- [in][IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)を IDE に既知のソース ファイル内の抽象の位置を表すオブジェクト。  
+ [in][IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) IDE に呼ばれるソース ファイルに抽象の位置を表すオブジェクト。  
   
  `ppEnum`  
- [out]返します、 [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)コード コンテキストの一覧を含むオブジェクトです。  
+ [out]返します、 [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)コード コンテキストの一覧を格納しているオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドにより、セッションのデバッグ マネージャー (SDM) または IDE でコードの位置にソース ファイルの位置をマップします。 ソース コード (たとえば、C++ テンプレート) の複数のブロックを生成する場合は、1 つ以上のコードのコンテキストが返されます。  
+## <a name="remarks"></a>Remarks  
+ このメソッドによりセッション デバッグ マネージャー (SDM) または IDE でコードの位置にソース ファイルの位置をマップします。 ソース コード (たとえば、C++ テンプレート) の複数のブロックを生成する場合、1 つ以上のコードのコンテキストが返されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   

@@ -20,15 +20,16 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 58b1d329447ab73f9df93d2f75a62c2e21a6dcfc
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 3229b8432af89857d1aadd8bf1531c8b11a29ed7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49204725"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897993"
 ---
 # <a name="ca1700-do-not-name-enum-values-39reserved39"></a>1700 ca: いない名前列挙型値&#39;予約済み&#39;
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
+
 |||
 |-|-|
 |TypeName|DoNotNameEnumValuesReserved|
@@ -46,11 +47,11 @@ ms.locfileid: "49204725"
 
  元のメンバーは、元の値を保持する場合でも、ケースの数に制限は、メンバーの追加、互換性に影響する変更です。 主に、新しいメンバーは返せません既存のコード パスからを使用する呼び出し元を損なうことがなく、 `switch` (`Select`で[!INCLUDE[vbprvb](../includes/vbprvb-md.md)])、戻り値全体のメンバーの一覧を包含して、例外をスローするステートメント、既定のケース。 セカンダリの問題は、クライアント コードがリフレクション メソッドからの動作の変更など<xref:System.Enum.IsDefined%2A?displayProperty=fullName>します。 したがって、新しいメンバーが既存のメソッドから返される、またはリフレクションの不適切な使用状況が発生する既知のアプリケーションの互換性がない、互換性に影響しないが唯一のソリューションに。
 
-1.  元と新しいメンバーを含む新しい列挙体を追加します。
+1. 元と新しいメンバーを含む新しい列挙体を追加します。
 
-2.  元の列挙を<xref:System.ObsoleteAttribute?displayProperty=fullName>属性。
+2. 元の列挙を<xref:System.ObsoleteAttribute?displayProperty=fullName>属性。
 
- 外部から参照できる型またはメンバーを元の列挙型を公開するのと同じ手順に従います。
+   外部から参照できる型またはメンバーを元の列挙型を公開するのと同じ手順に従います。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  このルールの違反を修正するには、削除またはメンバーの名前を変更します。

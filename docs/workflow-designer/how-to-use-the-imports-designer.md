@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d50267ca8899343d2b704aa28beabc07ed432936
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: e26dafe6d8d7e455d1977f82f96f776185a5fdb3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36755863"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845266"
 ---
 # <a name="how-to-use-the-imports-designer"></a>インポート デザイナーを使用する方法
 
@@ -25,13 +25,13 @@ ms.locfileid: "36755863"
 
 インポート デザイナーでは、UI での変更とワークフローの保存時に行われる変更の両方に応じて処理を行います。 ワークフローの保存時に、インポート デザイナーに名前空間を自動的に追加できます。 次に例を示します。
 
--   変数および引数の宣言で使用されている型の名前空間。
+- 変数および引数の宣言で使用されている型の名前空間。
 
--   式で使用されている型の名前空間。
+- 式で使用されている型の名前空間。
 
--   ワークフローをシリアル化するために必要な、上記以外の名前空間 (ワークフロー内で削除されたカスタム アクティビティで使用した名前空間など)。
+- ワークフローをシリアル化するために必要な、上記以外の名前空間 (ワークフロー内で削除されたカスタム アクティビティで使用した名前空間など)。
 
- ワークフローを保存すると、手動で削除したいくつかの名前空間がインポート デザイナーに自動的に再度追加されることがあります。これは、上記の一覧で説明したロジックによるものです。
+  ワークフローを保存すると、手動で削除したいくつかの名前空間がインポート デザイナーに自動的に再度追加されることがあります。これは、上記の一覧で説明したロジックによるものです。
 
 ## <a name="to-add-a-namespace-to-the-list-of-imported-namespaces"></a>名前空間をインポートされた名前空間の一覧に追加するには
 

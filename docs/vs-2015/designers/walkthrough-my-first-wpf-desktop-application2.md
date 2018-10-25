@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1b1ec46cf032928a090991577b83782e1fcfb513
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7d8af02051774b744f9229e15a6184603c4d9f6b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49289920"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899280"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル: 初めての WPF デスクトップ アプリケーション
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -958,27 +958,27 @@ name =「概要」></a>このチュートリアルは、Windows Presentation Fou
   
  WPF のアーキテクチャおよびプログラミング モデルの詳細については、次のトピックを参照してください。  
   
--   [WPF アーキテクチャ](https://msdn.microsoft.com/library/ms750441\(v=vs.100\).aspx)  
+- [WPF アーキテクチャ](https://msdn.microsoft.com/library/ms750441\(v=vs.100\).aspx)  
   
--   [XAML の概要](https://msdn.microsoft.com/library/ms752059\(v=vs.100\).aspx)  
+- [XAML の概要](https://msdn.microsoft.com/library/ms752059\(v=vs.100\).aspx)  
   
--   [依存関係プロパティの概要](https://msdn.microsoft.com/library/ms752914\(v=vs.100\).aspx)  
+- [依存関係プロパティの概要](https://msdn.microsoft.com/library/ms752914\(v=vs.100\).aspx)  
   
--   [レイアウト システム](https://msdn.microsoft.com/library/ms745058\(v=vs.100\).aspx)  
+- [レイアウト システム](https://msdn.microsoft.com/library/ms745058\(v=vs.100\).aspx)  
   
--   [スタイルおよびテンプレート](https://msdn.microsoft.com/library/bb613570\(v=vs.100\).aspx)  
+- [スタイルおよびテンプレート](https://msdn.microsoft.com/library/bb613570\(v=vs.100\).aspx)  
   
- アプリケーションの作成の詳細については、次のトピックを参照してください。  
+  アプリケーションの作成の詳細については、次のトピックを参照してください。  
   
--   [アプリケーション開発の概要](https://msdn.microsoft.com/library/bb613549\(v=vs.100\).aspx)  
+- [アプリケーション開発の概要](https://msdn.microsoft.com/library/bb613549\(v=vs.100\).aspx)  
   
--   [コントロールの概要](https://msdn.microsoft.com/library/bb613551\(v=vs.100\).aspx)  
+- [コントロールの概要](https://msdn.microsoft.com/library/bb613551\(v=vs.100\).aspx)  
   
--   [データ バインディングの概要](https://msdn.microsoft.com/library/ms752347\(v=vs.100\).aspx)  
+- [データ バインディングの概要](https://msdn.microsoft.com/library/ms752347\(v=vs.100\).aspx)  
   
--   [WPF のグラフィックス、アニメーション、およびメディアの概要](https://msdn.microsoft.com/library/ms742562\(v=vs.100\).aspx)  
+- [WPF のグラフィックス、アニメーション、およびメディアの概要](https://msdn.microsoft.com/library/ms742562\(v=vs.100\).aspx)  
   
--   [WPF のドキュメント](https://msdn.microsoft.com/library/ms748388\(v=vs.100\).aspx)  
+- [WPF のドキュメント](https://msdn.microsoft.com/library/ms748388\(v=vs.100\).aspx)  
   
 ## <a name="see-also"></a>関連項目  
  [チュートリアル: Azure モバイル サービスに接続された WPF デスクトップ アプリケーションの作成](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)   

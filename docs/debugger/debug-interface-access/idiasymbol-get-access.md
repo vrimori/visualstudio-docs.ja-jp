@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_access |Microsoft ドキュメント
+title: Idiasymbol::get_access |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 36ae8a1d805e548ef2dfb4c30087ef4d57625894
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 88d801ded2d871952d4737596ae13bd07b551e04
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31464226"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904077"
 ---
 # <a name="idiasymbolgetaccess"></a>IDiaSymbol::get_access
-クラスのメンバーのアクセス修飾子を取得します。  
+クラス メンバーのアクセス修飾子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,19 +34,19 @@ HRESULT get_access (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]値を返します、 [CV_access_e 列挙型](../../debugger/debug-interface-access/cv-access-e.md)クラス メンバーのアクセス修飾子を指定する列挙です。  
+ [out]値を返します、 [CV_access_e 列挙型](../../debugger/debug-interface-access/cv-access-e.md)クラスのメンバーのアクセス修飾子を指定する列挙体。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティが、シンボルを使用できないことを意味します。  
+>  戻り値`S_FALSE`プロパティがシンボルを使用できないことを意味します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|dia2.h|  
+|ヘッダー:|Dia2.h|  
 |バージョン:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>関連項目  

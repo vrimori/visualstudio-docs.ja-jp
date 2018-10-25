@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1e495f5f07e5db2214c7eca8bc2c21df253fa49e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7eb0ae4fd357b5a021bee0f885af5586048033e1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49195521"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899293"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,52 +34,52 @@ Windows 8 および Windows Server 2012 の強化されたセキュリティ機�
   
  [Windows 8 デスクトップまたは Windows Server 2012 で実行中のアプリ上のデータを Visual Studio IDE から収集する](#BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE)  
   
--   [Windows 8 デスクトップまたは Windows Server 2012 で実行中のアプリ上のデータを Visual Studio IDE からサンプリングを使用して収集する](#BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_by_using_sampling_from_the_Visual_Studio_IDE)  
+- [Windows 8 デスクトップまたは Windows Server 2012 で実行中のアプリ上のデータを Visual Studio IDE からサンプリングを使用して収集する](#BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_by_using_sampling_from_the_Visual_Studio_IDE)  
   
- [コマンド ラインからのプロファイリング](#BKMK_Profiling_from_the_command_line)  
+  [コマンド ラインからのプロファイリング](#BKMK_Profiling_from_the_command_line)  
   
- [階層の相互作用 (TIP) データを収集する](#BKMK_Collecting_tier_interaction__TIP__data)  
+  [階層の相互作用 (TIP) データを収集する](#BKMK_Collecting_tier_interaction__TIP__data)  
   
 ##  <a name="BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE"></a>Visual Studio IDE から Windows ストア アプリ上のデータを収集する  
  JavaScript および HTML 5 で記述された Windows ストア アプリのプロファイリングを行う場合は、JavaScript コードのインストルメンテーション データを収集します。 Visual C++、Visual C#、または Visual Basic で記述された Windows ストア アプリまたはコンポーネントのプロファイリングを行う場合は、ネイティブ コードおよびマネージド コードのサンプリング データを収集します。 ローカル コンピューターまたはリモート コンピューター上のアプリをプロファイリングすることもできます。  
   
  Windows ストア アプリのプロファイリングを行う場合、次のプロファイル機能およびオプションはサポートされていません。  
   
--   サンプリング メソッドを使用した JavaScript アプリのプロファイリング。  
+- サンプリング メソッドを使用した JavaScript アプリのプロファイリング。  
   
--   インストルメンテーション メソッドを使用したマネージド コードおよびネイティブ コードのプロファイリング。  
+- インストルメンテーション メソッドを使用したマネージド コードおよびネイティブ コードのプロファイリング。  
   
--   コンカレンシー プロファイル  
+- コンカレンシー プロファイル  
   
--   .NET メモリ プロファイル。  
+- .NET メモリ プロファイル。  
   
--   階層相互作用プロファイリング (TIP)。  
+- 階層相互作用プロファイリング (TIP)。  
   
--   サンプリング イベントや時間間隔の設定、追加のパフォーマンス カウンター データの収集などのサンプリング オプション。  
+- サンプリング イベントや時間間隔の設定、追加のパフォーマンス カウンター データの収集などのサンプリング オプション。  
   
--   パフォーマンス カウンター データや Windows カウンター データの収集、追加のコマンド ライン オプションの指定などのインストルメンテーション オプション。  
+- パフォーマンス カウンター データや Windows カウンター データの収集、追加のコマンド ライン オプションの指定などのインストルメンテーション オプション。  
   
- Windows ストア アプリのプロファイリングの詳細については、Windows デベロッパー センターの次のトピックを参照してください。  
+  Windows ストア アプリのプロファイリングの詳細については、Windows デベロッパー センターの次のトピックを参照してください。  
   
- [ローカル コンピューターでの Windows ストア アプリの実行](../debugger/run-windows-store-apps-on-the-local-machine.md)  
+  [ローカル コンピューターでの Windows ストア アプリの実行](../debugger/run-windows-store-apps-on-the-local-machine.md)  
   
- [リモート コンピューターでの Windows ストア アプリの実行](../debugger/run-windows-store-apps-on-a-remote-machine.md)  
+  [リモート コンピューターでの Windows ストア アプリの実行](../debugger/run-windows-store-apps-on-a-remote-machine.md)  
   
- [アプリのパフォーマンスを分析します。](http://msdn.microsoft.com/library/58acb30b-8428-41a6-b195-b0fdedb89575)  
+  [アプリのパフォーマンスを分析します。](http://msdn.microsoft.com/library/58acb30b-8428-41a6-b195-b0fdedb89575)  
   
--   [JavaScript 関数タイミング](http://msdn.microsoft.com/library/b2bf49fc-aea7-4d9c-8fcf-cff8b8dd0c03)  
+- [JavaScript 関数タイミング](http://msdn.microsoft.com/library/b2bf49fc-aea7-4d9c-8fcf-cff8b8dd0c03)  
   
--   [リモート デバイスで JavaScript 関数タイミング](http://msdn.microsoft.com/library/d78812b6-a97e-46dc-8d99-e724d1d725d8)  
+- [リモート デバイスで JavaScript 関数タイミング](http://msdn.microsoft.com/library/d78812b6-a97e-46dc-8d99-e724d1d725d8)  
   
--   [JavaScript 関数タイミング データを分析します。](http://msdn.microsoft.com/library/b5aea8d8-36df-47ba-a7ca-95406700ca9b)  
+- [JavaScript 関数タイミング データを分析します。](http://msdn.microsoft.com/library/b5aea8d8-36df-47ba-a7ca-95406700ca9b)  
   
--   [ローカル コンピューターでの Windows ストア アプリの Visual C++、Visual C#、および Visual Basic コードのプロファイリング](http://msdn.microsoft.com/en-us/2d0c939e-0bac-48c5-b727-46f6c6113060)  
+- [ローカル コンピューターでの Windows ストア アプリの Visual C++、Visual C#、および Visual Basic コードのプロファイリング](http://msdn.microsoft.com/en-us/2d0c939e-0bac-48c5-b727-46f6c6113060)  
   
--   [リモート デバイスでの Windows ストア アプリの Visual C++、Visual C#、および Visual Basic コードのプロファイリング](http://msdn.microsoft.com/en-us/b932a2be-11b0-40fd-b996-75c6b6a79d22)  
+- [リモート デバイスでの Windows ストア アプリの Visual C++、Visual C#、および Visual Basic コードのプロファイリング](http://msdn.microsoft.com/en-us/b932a2be-11b0-40fd-b996-75c6b6a79d22)  
   
--   [Windows ストア アプリの Visual C++、Visual C#、および Visual Basic コードのパフォーマンス データの分析](http://msdn.microsoft.com/en-us/5de4a413-d924-425f-afc4-e1ecfb0fca18)  
+- [Windows ストア アプリの Visual C++、Visual C#、および Visual Basic コードのパフォーマンス データの分析](http://msdn.microsoft.com/en-us/5de4a413-d924-425f-afc4-e1ecfb0fca18)  
   
- [このトピックの内容](#BKMK_In_this_topic)  
+  [このトピックの内容](#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE"></a> Windows 8 デスクトップまたは Windows Server 2012 で実行中のアプリ上のデータを Visual Studio IDE から収集する  
  インストルメンテーション メソッドを使用したプロファイリングについては、Windows 8 での変更点はありません。  
@@ -129,25 +129,25 @@ Windows 8 および Windows Server 2012 の強化されたセキュリティ機�
   
  **Windows 8 と Windows Server 2012**  
   
-1.  Windows 8 デスクトップまたは Windows Server 2012 で実行されるアプリから相互作用データを収集するには、インストルメンテーション メソッドを使用する必要があります。  
+1. Windows 8 デスクトップまたは Windows Server 2012 で実行されるアプリから相互作用データを収集するには、インストルメンテーション メソッドを使用する必要があります。  
   
-2.  Windows ストア アプリの階層相互作用データを収集することはできません。  
+2. Windows ストア アプリの階層相互作用データを収集することはできません。  
   
-3.  階層相互作用データは、サポートされている他のバージョンの Windows で、すべてのプロファイル方法に含めることができます。  
+3. 階層相互作用データは、サポートされている他のバージョンの Windows で、すべてのプロファイル方法に含めることができます。  
   
- **パフォーマンス ウィザードとパフォーマンス エクスプローラー**  
+   **パフォーマンス ウィザードとパフォーマンス エクスプローラー**  
   
- パフォーマンス エクスプローラーから、階層相互作用データの収集オプションをプロファイリング実行に追加する必要があります。 また、パフォーマンス エクスプローラーのターゲット ノードに、プロジェクト、実行可能ファイル、または Web サイトを追加する必要があります。 「[Visual Studio IDE を使用した階層相互作用データの収集](../profiling/collecting-tier-interaction-data.md)」をご覧ください。  
+   パフォーマンス エクスプローラーから、階層相互作用データの収集オプションをプロファイリング実行に追加する必要があります。 また、パフォーマンス エクスプローラーのターゲット ノードに、プロジェクト、実行可能ファイル、または Web サイトを追加する必要があります。 「[Visual Studio IDE を使用した階層相互作用データの収集](../profiling/collecting-tier-interaction-data.md)」をご覧ください。  
   
- **リモート コンピューターでの TIP データの収集**  
+   **リモート コンピューターでの TIP データの収集**  
   
- コピーする必要がありますをリモート コンピューターで階層相互作用データを収集する、 **vs\_プロファイラー\_**_\<プラットフォーム >_ **\_**_\<言語 >_**.exe**ファイルから、 _%vsinstalldir%_**\Team Tools\Performance \setups**Visual Studio のフォルダーを選択し、コンピューターのリモート コンピューターにインストールします。 [Visual Studio Remote Tools](http://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c) のダウンロード パッケージにあるプロファイリング ツールを使用することはできません。  
+   コピーする必要がありますをリモート コンピューターで階層相互作用データを収集する、 **vs\_プロファイラー\_**_\<プラットフォーム >_ **\_**_\<言語 >_**.exe**ファイルから、 _%vsinstalldir%_**\Team Tools\Performance \setups**Visual Studio のフォルダーを選択し、コンピューターのリモート コンピューターにインストールします。 [Visual Studio Remote Tools](http://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c) のダウンロード パッケージにあるプロファイリング ツールを使用することはできません。  
   
- プロファイル データを収集するには、[VSPerfCmd](../profiling/vsperfcmd.md) または [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) を使用できます。  
+   プロファイル データを収集するには、[VSPerfCmd](../profiling/vsperfcmd.md) または [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) を使用できます。  
   
- **TIP レポート**  
+   **TIP レポート**  
   
- 階層相互作用データは、 [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] または [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] IDE でのみ表示できます。 [VSPerfReport](../profiling/vsperfreport.md) の使用による、ファイル ベースの階層相互作用レポートは利用できません。  
+   階層相互作用データは、 [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] または [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] IDE でのみ表示できます。 [VSPerfReport](../profiling/vsperfreport.md) の使用による、ファイル ベースの階層相互作用レポートは利用できません。  
   
 ## <a name="see-also"></a>関連項目  
  [パフォーマンス エクスプローラー](../profiling/performance-explorer.md)   

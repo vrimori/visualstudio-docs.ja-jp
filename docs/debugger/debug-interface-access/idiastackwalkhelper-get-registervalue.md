@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::get_registerValue |Microsoft ドキュメント
+title: IDiaStackWalkHelper::get_registerValue |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ccc491ec9e966b8d893b6d669aafc64ebc5c8cf
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: af5f68aaf5b2caed50d28a1a53022a095d478e60
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31462770"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887918"
 ---
 # <a name="idiastackwalkhelpergetregistervalue"></a>IDiaStackWalkHelper::get_registerValue
 レジスタの値を取得します。  
@@ -35,16 +35,16 @@ HRESULT get_registerValue (
   
 #### <a name="parameters"></a>パラメーター  
  `index`  
- [in]値、 [CV_HREG_e 列挙型](../../debugger/debug-interface-access/cv-hreg-e.md)から値を取得するように登録するを指定する列挙です。  
+ [in]値、 [CV_HREG_e 列挙型](../../debugger/debug-interface-access/cv-hreg-e.md)から値を取得する登録を指定する列挙体。  
   
  `pRetVal`  
  [out]レジスタの現在の値を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- サイズに関係なく、`pRetVal`パラメーター、実装がだけ何レジスタは、通常を保持を格納する必要があります。 たとえば、8 ビット レジスタはだけ、最下位 8 ビットの指定した値を保持します。 この 8 ビット値は、このメソッドから返されるときに 64 ビットに拡張されます。  
+## <a name="remarks"></a>Remarks  
+ サイズに関係なく、`pRetVal`パラメーター、実装がのみ何レジスタは、通常は保持を格納する必要があります。 など、8 ビット レジスタのみ、最下位 8 ビットの指定された値を保持します。 この 8 ビット値は、このメソッドから返されるときに 64 ビットに拡張されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   

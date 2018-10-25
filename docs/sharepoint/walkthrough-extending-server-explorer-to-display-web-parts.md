@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 84060ed018059f4b067b4744465bf4116f72841b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: dc6b015058445ddf35e5d247847a40d01e691047
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42634739"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915816"
 ---
 # <a name="walkthrough-extend-server-explorer-to-display-web-parts"></a>チュートリアル: web パーツを表示するサーバー エクスプ ローラーの拡張します。
   Visual Studio で使用することができます、 **SharePoint 接続**のノード**サーバー エクスプ ローラー** SharePoint サイトにコンポーネントを表示します。 ただし、**サーバー エクスプ ローラー**一部のコンポーネントが既定では表示されません。 このチュートリアルで拡張します**サーバー エクスプ ローラー** SharePoint サイトが接続されている各 Web パーツ ギャラリーで表示するようです。  
@@ -48,26 +48,26 @@ ms.locfileid: "42634739"
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
   
--   Windows、SharePoint、Visual Studio のエディションがサポートされています。  
+- Windows、SharePoint、Visual Studio のエディションがサポートされています。  
   
--   Visual Studio SDK。 このチュートリアルでは、 **VSIX プロジェクト**sdk プロジェクト アイテムを配置するための VSIX パッケージを作成するテンプレート。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)します。  
+- Visual Studio SDK。 このチュートリアルでは、 **VSIX プロジェクト**sdk プロジェクト アイテムを配置するための VSIX パッケージを作成するテンプレート。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)します。  
   
- 次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
+  次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
   
--   For SharePoint サーバー オブジェクト モデルを使用します。 詳細については、次を参照してください。 [SharePoint Foundation サーバー側オブジェクト モデルを使用して](http://go.microsoft.com/fwlink/?LinkId=177796)します。  
+- For SharePoint サーバー オブジェクト モデルを使用します。 詳細については、次を参照してください。 [SharePoint Foundation サーバー側オブジェクト モデルを使用して](http://go.microsoft.com/fwlink/?LinkId=177796)します。  
   
--   SharePoint ソリューションの web パーツ。 詳細については、次を参照してください。 [Web パーツの概要](http://go.microsoft.com/fwlink/?LinkId=177803)します。  
+- SharePoint ソリューションの web パーツ。 詳細については、次を参照してください。 [Web パーツの概要](http://go.microsoft.com/fwlink/?LinkId=177803)します。  
   
 ## <a name="create-the-projects"></a>プロジェクトを作成します。
  このチュートリアルを完了するには、3 つのプロジェクトを作成する必要があります。  
   
--   拡張機能をデプロイする VSIX パッケージを作成する VSIX プロジェクト。  
+- 拡張機能をデプロイする VSIX パッケージを作成する VSIX プロジェクト。  
   
--   拡張機能を実装するクラス ライブラリ プロジェクト。 このプロジェクトは、.NET Framework 4.5 をターゲットする必要があります。  
+- 拡張機能を実装するクラス ライブラリ プロジェクト。 このプロジェクトは、.NET Framework 4.5 をターゲットする必要があります。  
   
--   カスタムの SharePoint コマンドを定義するクラス ライブラリ プロジェクト。 このプロジェクトは .NET Framework 3.5 を対象にする必要があります。  
+- カスタムの SharePoint コマンドを定義するクラス ライブラリ プロジェクト。 このプロジェクトは .NET Framework 3.5 を対象にする必要があります。  
   
- この 2 つのプロジェクトを作成することから始めます。  
+  この 2 つのプロジェクトを作成することから始めます。  
   
 #### <a name="to-create-the-vsix-project"></a>VSIX プロジェクトを作成するには  
   

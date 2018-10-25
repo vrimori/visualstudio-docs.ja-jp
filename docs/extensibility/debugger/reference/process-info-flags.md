@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 91e4c4648108cdc6afa28f5a5dd8f9bfd46fcf59
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 04bc34de6e7ecbc438cfc63ed08c684cf4224366
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31126348"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917025"
 ---
 # <a name="processinfoflags"></a>PROCESS_INFO_FLAGS
 
@@ -52,21 +52,21 @@ PIFLAG_SYSTEM_PROCESS
 プロセスがシステム プロセスであることを示します。
 
 PIFLAG_DEBUGGER_ATTACHED  
-プロセスは、デバッガーによってデバッグされていることを示します。 ある可能性があります、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]デバッガー、またはそれにいくつか他のデバッガー、WinDbg などの可能性があります。
+プロセスは、デバッガーによってデバッグされていることを示します。 可能性がある、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]デバッガー、またはに、いくつかその他のデバッガー、WinDbg などを指定する可能性があります。
 
 PIFLAG_PROCESS_STOPPED  
-プロセスが停止していることを示します。 有効な場合にのみ`PIFLAG_DEBUGGER_ATTACHED`も指定されています。 Visual Studio 2005 以降を使用できます。
+プロセスが停止していることを示します。 有効な場合にのみ`PIFLAG_DEBUGGER_ATTACHED`も指定します。 Visual Studio 2005 以降で利用できます。
 
 PIFLAG_PROCESS_RUNNING  
-プロセスが実行されていることを示します。 有効な場合にのみ`PIFLAG_DEBUGGER_ATTACHED`も指定されています。 Visual Studio 2005 以降を使用できます。
+プロセスが実行されていることを示します。 有効な場合にのみ`PIFLAG_DEBUGGER_ATTACHED`も指定します。 Visual Studio 2005 以降で利用できます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 使用、`Flags`のメンバー、 [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)構造体。
 
-これらのフラグは、ビットごとと組み合わせること`OR`です。
+これらのフラグは、演算と組み合わせることがあります`OR`します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ヘッダー: msdbg.h
 

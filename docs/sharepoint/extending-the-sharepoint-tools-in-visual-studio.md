@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 312c216f3670599653ddc6833f3e8f0e5cf5a8d2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f360982f26cf2eb9ffe26678743bb514d9606ae7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42625925"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890675"
 ---
 # <a name="extend-the-sharepoint-tools-in-visual-studio"></a>Visual Studio の SharePoint ツールを拡張します。
   Visual Studio の SharePoint ツールでは、多くのアプリケーション開発シナ リオの要件を満たします。 ただし、か、他の開発者が必要とする機能が常に提供されるとはないを見つけることがあります。 このような場合は、必要な機能を作成する SharePoint ツールを拡張できます。
@@ -38,11 +38,11 @@ ms.locfileid: "42625925"
 ### <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>サーバー エクスプ ローラーで、SharePoint 接続 ノードを拡張します。
  Visual Studio で使用することができます、 **SharePoint 接続**内のノード、**サーバー エクスプ ローラー**階層ツリー ビューで 1 つのコンポーネントの多くまたは複数のローカル SharePoint サイトを表示するウィンドウ。 拡張することも、 **SharePoint 接続**次の方法でノード。
 
--   独自のノードを追加します。 これは、既定で表示されていない SharePoint サイトのコンポーネントを表示する場合に便利です。
+- 独自のノードを追加します。 これは、既定で表示されていない SharePoint サイトのコンポーネントを表示する場合に便利です。
 
--   既存のノードを拡張します。 たとえば、新しい子ノードを追加するには、既存のノードにまたはノードにショートカット メニュー項目を追加し、開発者がメニュー項目をクリックしたときにタスクを実行します。
+- 既存のノードを拡張します。 たとえば、新しい子ノードを追加するには、既存のノードにまたはノードにショートカット メニュー項目を追加し、開発者がメニュー項目をクリックしたときにタスクを実行します。
 
- 詳細については、次を参照してください。[サーバー エクスプ ローラーで、SharePoint 接続 ノードを拡張](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)します。
+  詳細については、次を参照してください。[サーバー エクスプ ローラーで、SharePoint 接続 ノードを拡張](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)します。
 
 ## <a name="development-computer-requirements"></a>開発コンピューターの要件
  SharePoint ツールの拡張機能を作成するには、開発用コンピューターに Visual Studio で SharePoint ソリューションを作成するため、同じ要件を満たす必要があります。

@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ef8ac70ae10389bb39a86e5ad305f3457c54bbb8
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: afbb16d3f5bd9d9278ba6e787a6bba673cc28acb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499724"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910011"
 ---
 # <a name="create-a-settings-category"></a>設定カテゴリを作成します。
 このチュートリアルでは、Visual Studio の設定のカテゴリを作成し、使用する値を保存し、値の設定ファイルから復元します。 設定のカテゴリは「カスタム設定ポイント」; として表示される関連するプロパティのグループです。つまりのチェック ボックスと、**インポートおよびエクスポート設定**ウィザード。 (で検索することができます、**ツール**メニュー)。設定の保存や、カテゴリとして復元し、個々 の設定は、ウィザードに表示されません。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
@@ -39,7 +39,7 @@ ms.locfileid: "39499724"
   
 2.  開く、 *VSPackage.resx*ファイルし、これらの 3 つの文字列リソースを追加します。  
   
-    |name|[値]|  
+    |名前|[値]|  
     |----------|-----------|  
     |106|私のカテゴリ|  
     |107|設定|  

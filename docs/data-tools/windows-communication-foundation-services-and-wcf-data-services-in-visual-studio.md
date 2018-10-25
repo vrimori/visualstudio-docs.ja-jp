@@ -37,12 +37,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: e83a541c9cff15375f8dc0fcdde74119a40713e4
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 197418bc1a4f8049c0388af005ef36eff287a856
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178879"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915933"
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Visual Studio での Windows Communication Foundation サービスと WCF データ サービス
 Visual Studio には、Windows Communication Foundation (WCF) を操作するためのツールが用意されていて、 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、分散アプリケーションを作成するための Microsoft テクノロジです。 このトピックでは、Visual Studio の観点からサービスの概要を説明します。 完全なドキュメントについては、次を参照してください。 [WCF データ サービスの 4.5](/dotnet/framework/data/wcf/index)します。
@@ -234,16 +234,16 @@ Windows Communication Foundation (WCF) サービスのほとんどのメソッ�
 
 ## <a name="related-topics"></a>関連トピック
 
-|タイトル|説明|
-|-----------|-----------------|
-|[チュートリアル : Windows フォームでの簡単な WCF サービスの作成](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md)|Visual Studio で作成および WCF サービスのステップ バイ ステップ デモを提供します。|
-|[チュートリアル: WPF と Entity Framework を使用する WCF data service の作成](../data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md)|作成して使用する方法の詳細なデモンストレーションを行います[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]Visual Studio でします。|
-|[WCF 開発ツールの使用](/dotnet/framework/wcf/using-the-wcf-development-tools)|作成し、Visual Studio で WCF サービスをテストする方法について説明します。|
-||[方法: 追加、更新、または WCF データ サービス参照の削除](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md)|参照および使用する方法について説明します[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]Visual Studio でします。|
-|[サービス参照のトラブルシューティング](../data-tools/troubleshooting-service-references.md)|サービス参照とその回避方法で発生することがいくつかの一般的なエラーを表示します。|
-|[WCF サービスのデバッグ](../debugger/debugging-wcf-services.md)|一般的な問題のデバッグと WCF サービスのデバッグ時に発生する手法について説明します。|
-|[チュートリアル: n 層データ アプリケーションの作成](../data-tools/walkthrough-creating-an-n-tier-data-application.md)|型指定されたデータセットを作成し、TableAdapter とデータセット コードを複数のプロジェクトに分離する手順について説明します。|
-|[サービス参照 ダイアログ ボックスを構成します。](../data-tools/configure-service-reference-dialog-box.md)|ユーザー インターフェイス要素について説明します、**サービス参照の構成** ダイアログ ボックス。|
+| タイトル | 説明 |
+| - | - |
+| [チュートリアル : Windows フォームでの簡単な WCF サービスの作成](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md) | Visual Studio で作成および WCF サービスのステップ バイ ステップ デモを提供します。 |
+| [チュートリアル: WPF と Entity Framework を使用する WCF data service の作成](../data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md) | 作成して使用する方法の詳細なデモンストレーションを行います[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]Visual Studio でします。 |
+| [WCF 開発ツールの使用](/dotnet/framework/wcf/using-the-wcf-development-tools) | 作成し、Visual Studio で WCF サービスをテストする方法について説明します。 |
+| | [方法: 追加、更新、または WCF データ サービス参照の削除](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md) |
+| [サービス参照のトラブルシューティング](../data-tools/troubleshooting-service-references.md) | サービス参照とその回避方法で発生することがいくつかの一般的なエラーを表示します。 |
+| [WCF サービスのデバッグ](../debugger/debugging-wcf-services.md) | 一般的な問題のデバッグと WCF サービスのデバッグ時に発生する手法について説明します。 |
+| [チュートリアル: n 層データ アプリケーションの作成](../data-tools/walkthrough-creating-an-n-tier-data-application.md) | 型指定されたデータセットを作成し、TableAdapter とデータセット コードを複数のプロジェクトに分離する手順について説明します。 |
+| [サービス参照 ダイアログ ボックスを構成します。](../data-tools/configure-service-reference-dialog-box.md) | ユーザー インターフェイス要素について説明します、**サービス参照の構成** ダイアログ ボックス。 |
 
 ## <a name="reference"></a>参照
 

@@ -1,5 +1,5 @@
 ---
-title: Idiasession::symbolbyid |Microsoft ドキュメント
+title: Idiasession::symbolbyid |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 55e5e2815985aacd43603d24f1c6f4052b66c19c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 8ca800c4409c9c3c1b72b625aa8cedac31e5b194
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31467590"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911636"
 ---
 # <a name="idiasessionsymbolbyid"></a>IDiaSession::symbolById
-一意の識別子、シンボルを取得します。  
+一意の識別子をシンボルを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,15 +41,15 @@ HRESULT symbolById (
  [out]返します、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)シンボルを表すオブジェクトを取得します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 指定した識別子が、一意の値がすべてのシンボルを一意にする、DIA SDK によって内部的に使用します。  
+## <a name="remarks"></a>Remarks  
+ 指定された識別子が、一意の値がすべてのシンボルを一意にする、DIA SDK によって内部的に使用します。  
   
- このメソッドで使用できますなど、他の記号の種類を表すシンボルを取得する (この例を参照してください)。  
+ このメソッドができますが、たとえば、他の記号の型を表すシンボルを取得する (例を参照してください)。  
   
 ## <a name="example"></a>例  
- この例では、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)他の記号の種類を表すです。 この例を使用する方法を示しています、`symbolById`セッション内のメソッドです。 簡単な方法が呼び出されて、 [idiasymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)型のシンボルを直接取得する方法です。  
+ この例では取得、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)他の記号の型を表します。 この例は、使用する方法を示します、`symbolById`セッション内のメソッド。 簡単な方法には、 [idiasymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)型のシンボルを直接取得するメソッド。  
   
 ```C++  
 IDiaSymbol *GetSymbolType(IDiaSymbol *pSymbol, IDiaSession *pSession)  

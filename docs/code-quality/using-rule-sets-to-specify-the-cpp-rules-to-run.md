@@ -9,12 +9,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 432246ed1cbb11589e9a42a5fce90cd2e7239223
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: a2bd14e4d052179df8a61dfa4b418f07b0f31e3c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672234"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893599"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>規則セットを使用して、実行対象の C++ 規則の指定
 
@@ -34,11 +34,11 @@ Visual Studio でカスタム C++ 規則を作成するには、は、C と C++ 
 
 3. **ルール セットの**ドロップダウン リストで、次のいずれかの操作を行います。
 
-    - 規則セットをカスタマイズするを選択します。
+   - 規則セットをカスタマイズするを選択します。
 
      \- または -
 
-    - 選択 **\<[参照...] >** を既存の規則セットを指定されていないリスト。
+   - 選択 **\<[参照...] >** を既存の規則セットを指定されていないリスト。
 
 4. 選択**オープン**ルール セット エディターで、ルールを表示します。
 

@@ -13,12 +13,12 @@ ms.assetid: 7b866776-f2d5-4823-8d15-919f889db26f
 caps.latest.revision: 31
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 604ac82fbcda190c63a15e5ba0a1800022853b07
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 808482fdd7599adb270fe7634d61d4b88acb0d80
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49285936"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890145"
 ---
 # <a name="test-windows-uwp-and-81-phone-apps-with-coded-ui-tests"></a>コード化された UI テストを使用した Windows UWP および 8.1 Phone アプリのテスト
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -85,37 +85,37 @@ ms.locfileid: "49285936"
 
 [ユニバーサル Windows プラットフォーム (UWP) アプリ用のコード化された UI テストは、どのようにして作成できますか?](#uwpapps)
   
-1.  Windows Phone アプリを使用するソリューションに、新しいコード化された UI テスト プロジェクトを追加します。  
+1. Windows Phone アプリを使用するソリューションに、新しいコード化された UI テスト プロジェクトを追加します。  
   
-     ![Windows Phone 用のコード化された UI テストを新規作成する](../test/media/cuit-phone-newproject.png "CUIT_Phone_NewProject")  
+    ![Windows Phone 用のコード化された UI テストを新規作成する](../test/media/cuit-phone-newproject.png "CUIT_Phone_NewProject")  
   
-2.  十字線ツールを使用して UI マップを編集することを選択します。  
+2. 十字線ツールを使用して UI マップを編集することを選択します。  
   
-     ![十字線ツールを使用してコード化された UI テストを生成する](../test/media/cuit-phone-howgencodedialog.png "CUIT_Phone_HowGenCodeDialog")  
+    ![十字線ツールを使用してコード化された UI テストを生成する](../test/media/cuit-phone-howgencodedialog.png "CUIT_Phone_HowGenCodeDialog")  
   
-3.  十字線ツールを使用してアプリを選択してから、アプリの **[AutomationId]** プロパティの値をコピーします。この値は後で、テストでアプリを起動するために使用します。  
+3. 十字線ツールを使用してアプリを選択してから、アプリの **[AutomationId]** プロパティの値をコピーします。この値は後で、テストでアプリを起動するために使用します。  
   
-     ![アプリの AutomationId 値をコピーする](../test/media/cuit-phone-getautomationid.png "CUIT_Phone_GetAutomationId")  
+    ![アプリの AutomationId 値をコピーする](../test/media/cuit-phone-getautomationid.png "CUIT_Phone_GetAutomationId")  
   
-4.  エミュレーターでアプリを起動し、十字線ツールを使用してボタン コントロールを選択します。 次に、ボタン コントロールを UI コントロール マップに追加します。  
+4. エミュレーターでアプリを起動し、十字線ツールを使用してボタン コントロールを選択します。 次に、ボタン コントロールを UI コントロール マップに追加します。  
   
-     ![十字線ツールを使用してコントロールをマップする](../test/media/cuit-phone-mapbuttoncontrol.png "CUIT_Phone_MapButtonControl")  
+    ![十字線ツールを使用してコントロールをマップする](../test/media/cuit-phone-mapbuttoncontrol.png "CUIT_Phone_MapButtonControl")  
   
-5.  テキスト ボックス コントロールを UI コントロール マップに追加するには、前の手順を繰り返します。  
+5. テキスト ボックス コントロールを UI コントロール マップに追加するには、前の手順を繰り返します。  
   
-     ![十字線ツールを使用して TextBox コントロールをマップする](../test/media/cuit-phone-maptextboxcontrol.png "CUIT_Phone_MapTextBoxControl")  
+    ![十字線ツールを使用して TextBox コントロールをマップする](../test/media/cuit-phone-maptextboxcontrol.png "CUIT_Phone_MapTextBoxControl")  
   
-6.  コードを生成して、UI コントロール マップの変更に対応するコードを作成します。  
+6. コードを生成して、UI コントロール マップの変更に対応するコードを作成します。  
   
-     ![ビルダーからコードを生成する](../test/media/cuit-phone-generatecode.png "CUIT_Phone_GenerateCode")  
+    ![ビルダーからコードを生成する](../test/media/cuit-phone-generatecode.png "CUIT_Phone_GenerateCode")  
   
-7.  十字線ツールを使用してテキスト ボックス コントロールを選択し、 **[Text]** プロパティを選択します。  
+7. 十字線ツールを使用してテキスト ボックス コントロールを選択し、 **[Text]** プロパティを選択します。  
   
-     ![[テキスト] プロパティを選択する](../test/media/cuit-phone-textproperty.png "CUIT_Phone_TextProperty")  
+    ![[テキスト] プロパティを選択する](../test/media/cuit-phone-textproperty.png "CUIT_Phone_TextProperty")  
   
-8.  アサーションを追加します。 これは、値が正しいことを確認するためにテストで使用されます。  
+8. アサーションを追加します。 これは、値が正しいことを確認するためにテストで使用されます。  
   
-     ![テストへアサーション追加する](../test/media/cuit-phone-addassertion.png "CUIT_Phone_AddAssertion")  
+    ![テストへアサーション追加する](../test/media/cuit-phone-addassertion.png "CUIT_Phone_AddAssertion")  
   
 9. Assert メソッドのコードを追加および生成します。  
   
@@ -223,37 +223,37 @@ ms.locfileid: "49285936"
   
 11. ソリューション エクスプローラーで、CodedUITest1.cs ファイルまたは CodedUITest1.vb ファイルを開きます。 これで、テストを実行する必要がある操作の CodedUTTestMethod1 メソッドにコードを追加できます。 UIMap に追加したコントロールを使用して、次のコードを追加します。  
   
-    1.  前にクリップボードにコピーしたオートメーション ID プロパティを使用して、Windows Phone アプリを起動します。  
+    1. 前にクリップボードにコピーしたオートメーション ID プロパティを使用して、Windows Phone アプリを起動します。  
   
-        ```csharp  
-        XamlWindow myAppWindow = XamlWindow.Launch("ed85f6ff-2fd1-4ec5-9eef-696026c3fa7b_cyrqexqw8cc7c!App");  
-        ```  
+       ```csharp  
+       XamlWindow myAppWindow = XamlWindow.Launch("ed85f6ff-2fd1-4ec5-9eef-696026c3fa7b_cyrqexqw8cc7c!App");  
+       ```  
   
-        ```vb  
-        XamlWindow.Launch("ed85f6ff-2fd1-4ec5-9eef-696026c3fa7b_cyrqexqw8cc7c!App");  
-        ```  
+       ```vb  
+       XamlWindow.Launch("ed85f6ff-2fd1-4ec5-9eef-696026c3fa7b_cyrqexqw8cc7c!App");  
+       ```  
   
-    2.  ボタン コントロールをタップするジェスチャを追加します。ボタン コントロールをタップするジェスチャを追加します。  
+    2. ボタン コントロールをタップするジェスチャを追加します。ボタン コントロールをタップするジェスチャを追加します。  
   
-        ```csharp  
-        Gesture.Tap(this.UIMap.UIApp1Window.UIButtonButton);  
-        ```  
+       ```csharp  
+       Gesture.Tap(this.UIMap.UIApp1Window.UIButtonButton);  
+       ```  
   
-        ```vb  
-        Gesture.Tap(Me.UIMap.UIApp1Window.UIButtonButton)  
-        ```  
+       ```vb  
+       Gesture.Tap(Me.UIMap.UIApp1Window.UIButtonButton)  
+       ```  
   
-    3.  自動的に生成された Assert メソッドへの呼び出しが、アプリの起動とボタンのタップ ジェスチャの後にあることを確認します。  
+    3. 自動的に生成された Assert メソッドへの呼び出しが、アプリの起動とボタンのタップ ジェスチャの後にあることを確認します。  
   
-        ```csharp  
-        this.UIMap.AssertMethod1();  
-        ```  
+       ```csharp  
+       this.UIMap.AssertMethod1();  
+       ```  
   
-        ```vb  
-        Me.UIMap.AssertMethod1()  
-        ```  
+       ```vb  
+       Me.UIMap.AssertMethod1()  
+       ```  
   
-     コードを追加すると、CodedUITestMethod1 テスト メソッドは次のようになります。  
+       コードを追加すると、CodedUITestMethod1 テスト メソッドは次のようになります。  
   
     ```csharp  
     [TestMethod]  
@@ -340,11 +340,11 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 ### <a name="q-how-do-i-create-coded-ui-tests-for-universal-windows-platform-uwp-apps"></a>Q: ユニバーサル Windows プラットフォーム (UWP) アプリ用のコード化された UI テストは、どのようにして作成できますか?  
  **A**: コード化された UI テスト プロジェクトは、UWP アプリをテストしているプラットフォームに応じて、次のいずれかの方法で作成します。  
   
--   ローカル コンピューターで実行している UWP アプリは、ストア アプリとして実行されます。 このアプリをテストする場合、 **コード化された UI テスト プロジェクト (Windows)** のテンプレートを使用します。 新しいプロジェクトの作成時にこのテンプレートを検索するには、 **[Windows]**、 **[ユニバーサル]** ノードに移動します。 あるいは、 **[Windows]**、 **[Windows 8]**、 **[Windows]** ノードに移動します。  
+- ローカル コンピューターで実行している UWP アプリは、ストア アプリとして実行されます。 このアプリをテストする場合、 **コード化された UI テスト プロジェクト (Windows)** のテンプレートを使用します。 新しいプロジェクトの作成時にこのテンプレートを検索するには、 **[Windows]**、 **[ユニバーサル]** ノードに移動します。 あるいは、 **[Windows]**、 **[Windows 8]**、 **[Windows]** ノードに移動します。  
   
--   モバイル デバイスまたはエミュレーターで実行している UWP アプリは、Phone アプリケーションとして実行されます。 このアプリをテストする場合、 **コード化された UI テスト プロジェクト (Windows Phone)** のテンプレートを使用します。 新しいプロジェクトの作成時にこのテンプレートを検索するには、 **[Windows]**、 **[ユニバーサル]** ノードに移動します。 あるいは、 **[Windows]**、 **[Windows 8]**、 **[Windows Phone]** ノードに移動します。  
+- モバイル デバイスまたはエミュレーターで実行している UWP アプリは、Phone アプリケーションとして実行されます。 このアプリをテストする場合、 **コード化された UI テスト プロジェクト (Windows Phone)** のテンプレートを使用します。 新しいプロジェクトの作成時にこのテンプレートを検索するには、 **[Windows]**、 **[ユニバーサル]** ノードに移動します。 あるいは、 **[Windows]**、 **[Windows 8]**、 **[Windows Phone]** ノードに移動します。  
   
- プロジェクトを作成した後も、テストの作成は以前と同じままになります。  
+  プロジェクトを作成した後も、テストの作成は以前と同じままになります。  
   
 ### <a name="q-can-i-select-controls-that-are-outside-the-emulator"></a>Q: エミュレーターにはないコントロールを選択することはできますか?  
  **A**: いいえ、できません。そのようなコントロールは、ビルダーで検出されません。  

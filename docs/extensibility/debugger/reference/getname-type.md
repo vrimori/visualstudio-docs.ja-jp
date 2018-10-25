@@ -1,5 +1,5 @@
 ---
-title: GETNAME_TYPE |Microsoft ドキュメント
+title: GETNAME_TYPE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 17cd40938d177f3ea74af13bd84fcf1b873dd650
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 40ee5cb4bf552b04683c4c2119a8c43a595b2105
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31102331"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900307"
 ---
 # <a name="getnametype"></a>GETNAME_TYPE
 取得するファイルの名前の種類を指定します。  
@@ -63,21 +63,21 @@ public enum enum_GETNAME_TYPE {
  ドキュメントまたはコンテキストの完全なパスではなく基本ファイル名を指定します。  
   
  GN_MONIKERNAME  
- モニカーの形式で、ドキュメントまたはコンテキストの一意の名前を指定します。  
+ モニカーの形式でドキュメントまたはコンテキストの一意の名前を指定します。  
   
  GN_URL  
  ドキュメントまたはコンテキストの URL 名を指定します。  
   
  GN_TITLE  
- 1 つが存在する場合は、ドキュメントのタイトルを指定します。  
+ 存在する場合は、ドキュメントのタイトルを指定します。  
   
  GN_STARTPAGEURL  
  プロセスの開始ページの URL を取得します。  
   
-## <a name="remarks"></a>コメント  
- これらの値がパラメーターとして渡される、 [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md)、 [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)、および[GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)メソッド名の種類を指定します。  
+## <a name="remarks"></a>Remarks  
+ これらの値をパラメーターとして渡される、 [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md)、 [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)、および[GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)メソッド名を返しますの種類を指定します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
@@ -86,6 +86,6 @@ public enum enum_GETNAME_TYPE {
   
 ## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [getName](../../../extensibility/debugger/reference/idebugdocument2-getname.md)   
- [getName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)   
- [getName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)
+ [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md)   
+ [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)   
+ [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)

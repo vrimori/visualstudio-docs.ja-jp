@@ -1,5 +1,5 @@
 ---
-title: プロジェクトのコマンドの処理を実装する入れ子になった |Microsoft ドキュメント
+title: プロジェクトのコマンドの処理を実装する入れ子になった |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,46 +13,46 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f3f02752fad6932bac90597d56f27257e78b84cd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 044c39c6e3240e7777b98e8a25a94e838cc614e8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31129001"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917987"
 ---
-# <a name="implementing-command-handling-for-nested-projects"></a>入れ子になったプロジェクトの処理コマンドの実装
-IDE が経由で渡されるコマンドを渡すことができます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>と<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>入れ子になったプロジェクト、または親プロジェクトへのインターフェイスのフィルター処理または、コマンドを無視できます。  
+# <a name="implementing-command-handling-for-nested-projects"></a>入れ子になったプロジェクト向けのコマンド処理の実装
+IDE が経由で渡されるコマンドを渡すことができます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>と<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>インターフェイスを入れ子になったプロジェクト、または親プロジェクトには、フィルター処理またはコマンドをオーバーライドできます。  
   
 > [!NOTE]
->  通常、親プロジェクトによって処理されるコマンドのみをフィルター処理することができます。 などのコマンド**ビルド**と**展開**によって処理される、IDE をフィルター処理することはできません。  
+>  親プロジェクトによって処理される通常のコマンドのみをフィルター処理できます。 などのコマンド**ビルド**と**デプロイ**によって処理される IDE をフィルター処理することはできません。  
   
- 次の手順では、コマンドの処理を実装するためのプロセスについて説明します。  
+ 次の手順では、コマンドの処理を実装するプロセスについて説明します。  
   
 ## <a name="procedures"></a>手順  
   
 #### <a name="to-implement-command-handling"></a>コマンドの処理を実装するには  
   
-1.  選択すると、ユーザー、入れ子になったプロジェクトまたはノードの入れ子にされたプロジェクト。  
+1. 選択すると、ユーザー、入れ子になったプロジェクトまたはノードで入れ子になったプロジェクト。  
   
-    1.  IDE の呼び出し、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>メソッドです。  
+   1. IDE の呼び出し、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>メソッド。  
   
-     または  
+      または  
   
-    1.  ソリューション エクスプ ローラーで、ショートカット メニュー コマンドなどの階層ウィンドウで、コマンドが作成された場合は、IDE によって呼び出さ、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A>プロジェクトの親のメソッドです。  
+   2. ソリューション エクスプローラで、ショートカット メニュー コマンドなどの階層ウィンドウで、コマンドが作成された場合は、IDE を呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A>プロジェクトの親のメソッド。  
   
-2.  渡されるパラメーターを調べることができます、親プロジェクト`QueryStatus`など`pguidCmdGroup`と`prgCmds`が親プロジェクトが、コマンドのフィルターを適用する必要があるかどうかを決定します。 コマンドをフィルター処理には、親プロジェクトが実装されている場合、これを設定する必要があります。  
+2. 親プロジェクトに渡されるパラメーターを調べることができます`QueryStatus`など`pguidCmdGroup`と`prgCmds`親プロジェクトで、コマンドをフィルター処理する必要があるかどうかを決定します。 親プロジェクトは、コマンドをフィルター処理を実装する場合は、設定する必要があります。  
   
-    ```  
-    prgCmds[0].cmdf = OLECMDF_SUPPORTED;  
-    // make sure it is disabled  
-    prgCmds[0].cmdf &= ~MSOCMDF_ENABLED;  
-    ```  
+   ```  
+   prgCmds[0].cmdf = OLECMDF_SUPPORTED;  
+   // make sure it is disabled  
+   prgCmds[0].cmdf &= ~MSOCMDF_ENABLED;  
+   ```  
   
-     親プロジェクトを返す必要があります`S_OK`です。  
+    親プロジェクトを返す必要があります`S_OK`します。  
   
-     親プロジェクトのコマンドは、フィルター処理しないかどうか、これだけを返します`S_OK`です。 ここでは、IDE は、子プロジェクトに対して、コマンドを自動的にルーティングします。  
+    親プロジェクトのコマンドは、フィルター処理しないかどうか、これだけを返します`S_OK`します。 この場合、IDE は、子プロジェクトに対してコマンドを自動的にルーティングします。  
   
-     親プロジェクトは、子プロジェクトに対して、コマンドをルーティングする必要はありません。 IDE では、このタスクを実行.  
+    親プロジェクトは、子プロジェクトに対して、コマンドをルーティングする必要はありません。 IDE は、このタスクを実行します.  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>   

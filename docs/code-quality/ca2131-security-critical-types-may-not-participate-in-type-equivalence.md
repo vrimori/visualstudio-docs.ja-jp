@@ -12,14 +12,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 681b2916ef6e6e5c90d98b7a88874a7fb0166549
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: d83f005d1f1093e3fd2826a573200194e3babcef
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45546708"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49918286"
 ---
 # <a name="ca2131-security-critical-types-may-not-participate-in-type-equivalence"></a>CA2131: セキュリティ上重要な型は型等価性に参加してはならない
+
 |||
 |-|-|
 |TypeName|CriticalTypesMustNotParticipateInTypeEquivalence|

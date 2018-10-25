@@ -17,12 +17,12 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6b22de4b3dd94ba39015605353a71412836a9ff4
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: f7ac10e62c1c982f1b2357fcaea17b6b54865dec
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49228419"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872071"
 ---
 # <a name="adding-tier-interaction-data-from-the-command-line"></a>コマンド ラインからの階層相互作用データの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -55,36 +55,36 @@ ms.locfileid: "49228419"
   
 ##### <a name="profiling-a-windows-desktop-application-example"></a>Windows デスクトップ アプリケーションのプロファイルの例  
   
-1.  管理者特権を使用して、コマンド プロンプト ウィンドウを開きます。 **[スタート]** ボタンをクリックし、**[すべてのプログラム]**、**[アクセサリ]** の順にポイントします。 **[コマンド プロンプト]** を右クリックしてから、**[管理者として実行]** をクリックします。  
+1. 管理者特権を使用して、コマンド プロンプト ウィンドウを開きます。 **[スタート]** ボタンをクリックし、**[すべてのプログラム]**、**[アクセサリ]** の順にポイントします。 **[コマンド プロンプト]** を右クリックしてから、**[管理者として実行]** をクリックします。  
   
-2.  .NET プロファイル環境変数と TIP を環境変数初期化します。 次のコマンドを入力します。  
+2. .NET プロファイル環境変数と TIP を環境変数初期化します。 次のコマンドを入力します。  
   
-    ```  
-    vsperfclrenv /traceon  
-    vsperfclrenv /interactionon  
-    ```  
+   ```  
+   vsperfclrenv /traceon  
+   vsperfclrenv /interactionon  
+   ```  
   
-3.  プロファイラーを起動します。 次のコマンドを入力します。  
+3. プロファイラーを起動します。 次のコマンドを入力します。  
   
-    ```  
-    vsperfcmd /start:trace /output:Desktop_tip.vsp   
-    ```  
+   ```  
+   vsperfcmd /start:trace /output:Desktop_tip.vsp   
+   ```  
   
-4.  VSPerfCmd でアプリケーションを起動します。 次のコマンドを入力します。  
+4. VSPerfCmd でアプリケーションを起動します。 次のコマンドを入力します。  
   
-    ```  
-    vsperfcmd /launch:DesktopApp.exe  
-    ```  
+   ```  
+   vsperfcmd /launch:DesktopApp.exe  
+   ```  
   
-5.  プロファイリング データを収集するアプリケーションを実行し、通常の方法でアプリケーションを終了します。  
+5. プロファイリング データを収集するアプリケーションを実行し、通常の方法でアプリケーションを終了します。  
   
-6.  TIP 環境変数を削除します。 次のコマンドを入力します。  
+6. TIP 環境変数を削除します。 次のコマンドを入力します。  
   
-    ```  
-    vsperfclrenv /off  
-    ```  
+   ```  
+   vsperfclrenv /off  
+   ```  
   
- 詳細については、「[スタンドアロン アプリケーションのコマンド ラインによるプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)」を参照してください。  
+   詳細については、「[スタンドアロン アプリケーションのコマンド ラインによるプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)」を参照してください。  
   
 ### <a name="profiling-services"></a>サービスのプロファイリング  
  [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] アプリケーションなどのサービスをプロファイルするには、**VSPerfClrEnv /GlobalInteractionOn** オプションを使用して環境変数を設定し、**VSPerfClrEnv/GlobalInteractionOff** オプションを使用してそれらを削除します。  
@@ -95,33 +95,33 @@ ms.locfileid: "49228419"
   
 ##### <a name="profiling-a-windows-service-example"></a>Windows サービスのプロファイリングの例  
   
-1.  インストールの必要なサービスがあればインストールします。  
+1. インストールの必要なサービスがあればインストールします。  
   
-2.  管理者特権を使用して、コマンド プロンプト ウィンドウを開きます。 **[スタート]** ボタンをクリックし、**[すべてのプログラム]**、**[アクセサリ]** の順にポイントします。 **[コマンド プロンプト]** を右クリックしてから、**[管理者として実行]** をクリックします。  
+2. 管理者特権を使用して、コマンド プロンプト ウィンドウを開きます。 **[スタート]** ボタンをクリックし、**[すべてのプログラム]**、**[アクセサリ]** の順にポイントします。 **[コマンド プロンプト]** を右クリックしてから、**[管理者として実行]** をクリックします。  
   
-3.  .NET プロファイル環境変数を初期化します。 次のコマンドを入力します。  
+3. .NET プロファイル環境変数を初期化します。 次のコマンドを入力します。  
   
-    ```  
-    vsperfclrenv /globaltraceon  
-    ```  
+   ```  
+   vsperfclrenv /globaltraceon  
+   ```  
   
-4.  TIP 環境変数を初期化します。 次のコマンドを入力します。  
+4. TIP 環境変数を初期化します。 次のコマンドを入力します。  
   
-    ```  
-    vsperfclrenv /globalinteractionon  
-    ```  
+   ```  
+   vsperfclrenv /globalinteractionon  
+   ```  
   
-5.  コンピューターを再起動して環境変数を登録します。  
+5. コンピューターを再起動して環境変数を登録します。  
   
-6.  管理者特権を使用して、コマンド プロンプト ウィンドウを開きます。  
+6. 管理者特権を使用して、コマンド プロンプト ウィンドウを開きます。  
   
-7.  プロファイラーを起動します。 次のコマンドを入力します。  
+7. プロファイラーを起動します。 次のコマンドを入力します。  
   
-    ```  
-    vsperfcmd /start:trace /output:MiddleTier_tip.vsp /user:SYSTEM /crosssession   
-    ```  
+   ```  
+   vsperfcmd /start:trace /output:MiddleTier_tip.vsp /user:SYSTEM /crosssession   
+   ```  
   
-8.  起動の必要なサービスがあれば起動します。  
+8. 起動の必要なサービスがあれば起動します。  
   
 9. プロファイラーをサービスにアタッチします。 次のコマンドを入力します。  
   
@@ -143,11 +143,11 @@ ms.locfileid: "49228419"
   
 13. コンピューターを再起動して、削除された環境変数を登録します。  
   
- 詳細については、次のトピックを参照してください。  
+    詳細については、次のトピックを参照してください。  
   
- [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)  
+    [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)  
   
- [プロファイリング (サービスの)](../profiling/command-line-profiling-of-services.md)  
+    [プロファイリング (サービスの)](../profiling/command-line-profiling-of-services.md)  
   
 ## <a name="adding-tier-interaction-data-with-vsperfaspnetcmd"></a>VSPerfASPNETCmd に階層相互作用データを追加する  
  VSPerfASPNETCmd コマンド ライン ツールを使用すると、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーションを簡単にプロファイルできます。 **VSPerfCmd** コマンド ライン ツールと比較すると、オプションが減り、環境変数を設定する必要がなく、コンピューターを再起動する必要がありません。 VSPerfASPNETCmd のこれらの機能により、階層相互作用データの収集が非常に簡単になります。  

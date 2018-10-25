@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject::CreateObject |Microsoft ドキュメント
+title: IDebugFunctionObject::CreateObject |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 15b41cc5ff9f60143cdbf006005358cb86eb7f30
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d0af1607d8352b158c28248fc4bd85ed0fbaf7b3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31110690"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908642"
 ---
 # <a name="idebugfunctionobjectcreateobject"></a>IDebugFunctionObject::CreateObject
 コンス トラクターを使用してオブジェクトを作成します。  
@@ -53,18 +53,18 @@ int CreateObject(
  [in]パラメーターの数、`pArg`配列。 コンス トラクターに渡されるパラメーターの数を表します。  
   
  `pArg`  
- [in]配列[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)コンス トラクターに渡されるパラメーターを表すオブジェクトします。  
+ [in]配列の[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)コンス トラクターに渡されるパラメーターを表すオブジェクトします。  
   
  `ppObject`  
- [out]返します、`IDebugObject`新しく作成されたオブジェクトを表すです。  
+ [out]返します、`IDebugObject`新しく作成されたオブジェクトを表します。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- クラス (またはその他の複合型コンス トラクターが必要です) のインスタンスを表すオブジェクトを作成するには、このメソッドの呼び出しによって表される関数のパラメーターは、 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)インターフェイスです。  
+## <a name="remarks"></a>Remarks  
+ クラス (またはその他の複合型コンス トラクターが必要です) のインスタンスを表すオブジェクトを作成するには、このメソッドを呼び出すによって表される関数のパラメーターは、 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)インターフェイス。  
   
- オブジェクトのパラメーターにコンス トラクターが必要としない場合は、呼び出し、 [CreateObjectNoConstructor](../../../extensibility/debugger/reference/idebugfunctionobject-createobjectnoconstructor.md)メソッドです。  
+ オブジェクトのパラメーターにコンス トラクターを必要としない場合、 [CreateObjectNoConstructor](../../../extensibility/debugger/reference/idebugfunctionobject-createobjectnoconstructor.md)メソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)   

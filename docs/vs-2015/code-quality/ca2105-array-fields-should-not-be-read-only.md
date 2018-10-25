@@ -20,15 +20,16 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: a310957f1552e289993643d39965d8a6a8693fe2
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 51878d18deb56c77ebbef0d0aa84b399ef2fa722
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49207949"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894977"
 ---
 # <a name="ca2105-array-fields-should-not-be-read-only"></a>CA2105: 配列フィールドは読み取り専用にできません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
+
 |||
 |-|-|
 |TypeName|ArrayFieldsShouldNotBeReadOnly|
@@ -47,11 +48,11 @@ ms.locfileid: "49207949"
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  このルールで識別されるセキュリティの脆弱性を修正するのに依存しないパブリックにアクセスできる読み取り専用配列の内容。 次の手順のいずれかを使用することを強くお勧めします。
 
--   厳密に型指定されたコレクションは変更できない配列に置き換えます。 詳細については、「 <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName> 」を参照してください。
+- 厳密に型指定されたコレクションは変更できない配列に置き換えます。 詳細については、「 <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName> 」を参照してください。
 
--   プライベート配列の複製を返すメソッドでは、パブリック フィールドを置き換えます。 コードが、複製に依存しないためにありません危険要素が変更された場合です。
+- プライベート配列の複製を返すメソッドでは、パブリック フィールドを置き換えます。 コードが、複製に依存しないためにありません危険要素が変更された場合です。
 
- 2 番目の方法を選択した場合、フィールドと置き換えないでプロパティ悪影響を与える、配列を返すプロパティは、パフォーマンスに影響します。 詳細については、次を参照してください。 [ca 1819: プロパティは、配列を返す必要がありますいない](../code-quality/ca1819-properties-should-not-return-arrays.md)します。
+  2 番目の方法を選択した場合、フィールドと置き換えないでプロパティ悪影響を与える、配列を返すプロパティは、パフォーマンスに影響します。 詳細については、次を参照してください。 [ca 1819: プロパティは、配列を返す必要がありますいない](../code-quality/ca1819-properties-should-not-return-arrays.md)します。
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
  この規則による警告の除外はお勧めします。 読み取り専用フィールドの内容が重要ではない場合はほとんどありませんが発生します。 シナリオの場合は場合、削除、`readonly`修飾子の代わりに、メッセージを除外します。
