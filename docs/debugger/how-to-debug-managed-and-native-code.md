@@ -2,7 +2,7 @@
 title: 'チュートリアル: マネージ コードとネイティブ コード (混在モード) のデバッグします。'
 description: 混合モード デバッグを使用して .NET Core または .NET Framework アプリからネイティブ DLL をデバッグする方法について説明します
 ms.custom: ''
-ms.date: 04/27/2018
+ms.date: 10/24/2018
 ms.technology: vs-ide-debug
 ms.topic: tutorial
 dev_langs:
@@ -16,14 +16,14 @@ manager: douge
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: 1f34f6af0a98e71f5feb910f84e8d67ada051ae9
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 97ad3b6e112a05db817f7a522c3865893d439fd7
+ms.sourcegitcommit: 12d6398c02e818de4fbcb4371bae9e5db6cf9509
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37057038"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050327"
 ---
-# <a name="tutorial-debug-managed-and-native-code-in-visual-studio"></a>チュートリアル: Visual Studio でマネージ コードとネイティブ コードをデバッグします。
+# <a name="tutorial-debug-managed-and-native-code-in-the-same-debugging-session"></a>チュートリアル: 同じデバッグ セッションでのマネージ コードとネイティブ コードをデバッグします。
 
 Visual Studio デバッガーの 1 つ以上の種類をデバッグするときに混合モードのデバッグと呼ばれるを有効にすることができます。 このチュートリアルでは、1 つのデバッグ セッションでマネージ コードとネイティブの両方のコードをデバッグするオプションを設定します。 このチュートリアルは、管理対象アプリからネイティブ コードをデバッグする方法を示しますが、その逆を実行することもでき、[ネイティブ アプリからマネージ コードをデバッグ](../debugger/how-to-debug-in-mixed-mode.md)します。 デバッガーは、他の種類のデバッグなど、混合モードのデバッグもサポートしています。 [Python とネイティブ コード](../python/debugging-mixed-mode-c-cpp-python-in-visual-studio.md)と ASP.NET などのアプリの種類のスクリプト デバッガーを使用します。
 
@@ -36,13 +36,13 @@ Visual Studio デバッガーの 1 つ以上の種類をデバッグするとき
 > * 管理対象アプリでのブレークポイントにヒットします。
 > * ネイティブ コードにステップ イン
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 * Visual Studio をインストールする必要があります、 **C++ によるデスクトップ開発**ワークロード。
 
-    Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
+    既に Visual Studio をインストールしていない場合は、 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) を無料でインストールするページ。
 
-    ワークロードをインストールする必要があるが、既に Visual Studio を所有している場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 **[Node.js 開発]** ワークロードを選択し、**[変更]** を選択します。
+    ワークロードをインストールする必要があるが、既に Visual Studio を所有している場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 **[C++ によるデスクトップ開発]** ワークロード、**[変更]** の順に選択します。
 
 * いずれかをいる必要があります、 **.NET デスクトップ開発**ワークロードまたは **.NET Core クロス プラットフォーム開発**ワークロードがインストールされているアプリの種類に応じて作成します。
 
@@ -50,26 +50,26 @@ Visual Studio デバッガーの 1 つ以上の種類をデバッグするとき
 
 1. Visual Studio で、次のように選択します。**ファイル** > **新規** > **プロジェクト**します。
 
-1. **新しいプロジェクト** ダイアログ ボックスで、選択**Visual C**、**全般**し、インストールされているテンプレート セクションから、中央のペインで選択**空のプロジェクト**.
+1. **新しいプロジェクト** ダイアログ ボックスで、選択**Visual C**、**他**し、インストールされているテンプレート セクションから、中央のペインで選択**空のプロジェクト**.
 
-1. **名前**フィールドに「**混合モード デバッグ** をクリック**OK**します。
+1. **名前**フィールドに「 **Mixed_Mode_Debugging**  をクリック**OK**します。
 
     Visual Studio では、右側のウィンドウで、ソリューション エクスプ ローラーで表示される空のプロジェクトを作成します。
 
-1. ソリューション エクスプ ローラーで右クリックし、**ソース ファイル**ノード、C++ でプロジェクトを選び、**追加** > **新しい項目の**、し、 **C++ファイル (.cpp)** します。 ファイルの名前を付けます**Mixed Mode.cpp**、選択**追加**します。
+1. ソリューション エクスプ ローラーで右クリックし、**ソース ファイル**ノード、C++ でプロジェクトを選び、**追加** > **新しい項目の**、し、 **C++ファイル (.cpp)** します。 ファイルの名前を付けます**Mixed_Mode.cpp**、選択**追加**します。
 
     Visual Studio では、新しい C++ ファイルを追加します。
 
-1. 次のコードをコピー *Mixed Mode.cpp*:
+1. 次のコードをコピー *Mixed_Mode.cpp*:
 
     ```cpp
     #include "Mixed_Mode.h"
     ```
-1. ソリューション エクスプ ローラーで右クリックし、**ヘッダー ファイル**ノード、C++ でプロジェクトを選び、**追加** > **新しい項目の**、し、 **ヘッダー ファイル (.h)** します。 ファイルの名前を付けます**Mixed Mode.h**、選択**追加**します。
+1. ソリューション エクスプ ローラーで右クリックし、**ヘッダー ファイル**ノード、C++ でプロジェクトを選び、**追加** > **新しい項目の**、し、 **ヘッダー ファイル (.h)** します。 ファイルの名前を付けます**Mixed_Mode.h**、選択**追加**します。
 
     Visual Studio では、新しいヘッダー ファイルを追加します。
 
-1. 次のコードをコピー *Mixed Mode.h*:
+1. 次のコードをコピー *Mixed_Mode.h*:
 
     ```cpp
     #ifndef MIXED_MODE_MULTIPLY_HPP
@@ -84,26 +84,29 @@ Visual Studio デバッガーの 1 つ以上の種類をデバッグするとき
     #endif
     ```
 
-1. デバッグ ツールバーで、次のように選択します。、**デバッグ**構成と**Any CPU**としてのプラットフォームまたは .NET Core の、選択**x64**プラットフォームとして。
+1. [デバッグ] ツールバーから次のように選択します、**デバッグ**構成と**x86**または**x64**プラットフォームとして (.NET Core は、常に 64 ビット モードで実行して、選択**x64。** プラットフォーム)。
 
-    > [!NOTE]
-    > .NET Core では、選択**x64**プラットフォームとして。 これは、必要な .NET core は常に 64 ビット モードで実行されます。
+1. ソリューション エクスプ ローラーでプロジェクト ノードを右クリックし (**Mixed_Mode_Debugging**) 選択**プロパティ**します。
 
-1. ソリューション エクスプ ローラーでプロジェクト ノードを右クリックし (**混合モード デバッグ**) 選択**プロパティ**します。
+    > [!IMPORTANT]
+    > C++ のプロパティの構成は、プラットフォームごとのです。 そのため、1 から、その他 (x64 を x86 またはその逆) に切り替えた場合に、新しい構成のプロパティを設定もする必要があります。 (のプロパティ ページで、いずれかを確認します**x64**または**Win32**ページの上部にある、プラットフォームとして設定されます)。
 
-1. **プロパティ**ページで、選択**構成プロパティ** > **リンカー** > **詳細**と次に、**エントリ ポイントなし**ドロップダウン リストで、**いいえ**します。 設定を適用します。
+1. **プロパティ**ページで、選択**構成プロパティ** > **リンカー** > **詳細**と次に、**エントリ ポイントなし**ドロップダウン リストで、ことを確認します**いいえ**が選択されています。 設定を変更する必要がある場合**いいえ**を選択し、**適用**します。
 
 1. **プロパティ**ページで、選択**構成プロパティ** > **全般**、し、**ダイナミック ライブラリ (.dll)** から、**構成の種類**フィールド。 設定を適用します。
 
     ![ネイティブ DLL に切り替える](../debugger/media/mixed-mode-set-as-native-dll.png)
 
-1. プロジェクトを右クリックし、選択**デバッグ** > **ビルド**します。
+1. プロジェクトを右クリックし、選択**ビルド**します。
 
     プロジェクトがエラーのない状態でビルドされます。
 
 ## <a name="create-a-simple-net-framework-or-net-core-app-to-call-the-dll"></a>DLL を呼び出す単純な .NET Framework または .NET Core アプリを作成します。
 
 1. Visual Studio で、次のように選択します。**ファイル** > **新規** > **プロジェクト**します。
+
+    > [!NOTE]
+    > 新しいソリューションの作成ではなく、C++ プロジェクトでソリューションに新しいマネージ プロジェクトを追加することもできますはないをここで行ってデバッグ シナリオのより大きなセットをサポートするために。
 
 1. アプリケーション コードのテンプレートを選択します。
 
@@ -128,9 +131,9 @@ Visual Studio デバッガーの 1 つ以上の種類をデバッグするとき
             // Replace the file path shown here with the
             // file path on your computer. For .NET Core, the typical (default) path
             // for a 64-bit DLL might look like this:
-            // C:\Users\username\source\repos\Mixed-Mode-Debugging\x64\Debug\Mixed-Mode-Debugging.dll
-            // Here, we show a typical path for a DLL targeting the **Any CPU** option.
-            [DllImport(@"C:\Users\username\source\repos\Mixed-Mode-Debugging\Debug\Mixed-Mode-Debugging.dll", EntryPoint =
+            // C:\Users\username\source\repos\Mixed_Mode_Debugging\x64\Debug\Mixed_Mode_Debugging.dll
+            // Here, we show a typical path for a DLL targeting the **x86** option.
+            [DllImport(@"C:\Users\username\source\repos\Mixed_Mode_Debugging\Debug\Mixed_Mode_Debugging.dll", EntryPoint =
             "mixed_mode_multiply", CallingConvention = CallingConvention.StdCall)]
             public static extern int Multiply(int x, int y);
             public static void Main(string[] args)
@@ -142,6 +145,8 @@ Visual Studio デバッガーの 1 つ以上の種類をデバッグするとき
         }
     }
     ```
+
+1. 新しいコードには、以前 (コードのコメントを参照してください) を作成した DLL のパスにファイル パスを更新します。 置換するかどうかを確認、 *username*プレース ホルダーです。
 
 ## <a name="configure-mixed-mode-debugging-net-framework"></a>混合モードのデバッグ (.NET Framework) の構成します。
 
