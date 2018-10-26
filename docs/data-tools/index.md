@@ -10,12 +10,12 @@ ms.technology: vs-data-tools
 ms.topic: landing-page
 ms.workload:
 - data-storage
-ms.openlocfilehash: 87a928f1d987d496bee40c4236f53b5e14cb034d
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: bb2a5c33f0cdfe75f6e2bf6713ab92e36b588986
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34691067"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948409"
 ---
 # <a name="use-data-tools-in-visual-studio-to-develop-data-solutions"></a>Visual Studio でデータ ツールを使用してデータ ソリューションを開発する
 
@@ -33,7 +33,7 @@ Visual Studio でデータ ツールを使用して、SQL Server、Azure Data La
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>データ アプリケーションを開発するための Visual Studio と .NET Framework のツールおよび API のサポートについて学ぶ</h3>
+                        <h3>データ アプリケーションを開発するための Visual Studio と .NET Framework のツールおよび API のサポートについて学習する</h3>
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@ Visual Studio でデータ ツールを使用して、SQL Server、Azure Data La
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>設計、配置、および SQL Server Data Tools のデータベースの保守の詳細します。</h3>
+                        <h3>SQL Server Data Tools でのデータベースの設計、展開、保守について学習する</h3>
                     </div>
                 </div>
             </div>
