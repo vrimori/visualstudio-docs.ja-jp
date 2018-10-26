@@ -8,12 +8,12 @@ title: Visual Studio 機能拡張のドキュメント | Microsoft Docs
 description: Visual Studio 機能拡張の詳細についてはこちらをご覧ください。
 ms.workload:
 - apexprodleads
-ms.openlocfilehash: 37f5bfbac42c55a332ddf6f1904e2008d50ae40f
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 3e5973cf0e5bd5ac87a14a167af24797c1b3d7dc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39500298"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842951"
 ---
 # <a name="visual-studio-extensibility-documentation"></a>Visual Studio 機能拡張ドキュメント
 
@@ -49,7 +49,7 @@ Visual Studio では、多くの機能拡張オプションを提供していま
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>.NET コンパイラ プラットフォーム ("Roslyn") の拡張機能</h3>
+                        <h3>.NET コンパイラ プラットフォーム (&quot;Roslyn&quot;) の拡張機能</h3>
                     </div>
                 </div>
             </div>
