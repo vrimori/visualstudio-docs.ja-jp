@@ -18,18 +18,18 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8ea54b743853bba445618ad3b6e08fd9a9a54027
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 86c766f776195da17a33b9d52570a2867f700c9b
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49271051"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219992"
 ---
 # <a name="options-text-editor-javascript-formatting"></a>[オプション]、[テキスト エディター]、[JavaScript]、[書式設定]
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
   
-**[オプション]** ダイアログ ボックスの **[書式設定]** ページで、コード エディターでのコード書式オプションを設定します。 このページにアクセスするには、メニュー バーで **[ツール]**、**[オプション]** の順にクリックし、次に、**[テキスト エディター]**、**[JavaScript]**、**[書式設定]** を展開します。  
+[**オプション**] ダイアログ ボックスの [**書式設定**] ページで、コード エディターでのコード書式オプションを設定します。 このページにアクセスするには、メニュー バーで [**ツール**]、[**オプション**] の順にクリックし、次に、[**テキスト エディター**]、[**JavaScript**]、[**書式設定**] を展開します。  
   
  [!INCLUDE[note_settings_general](../../includes/note-settings-general-md.md)]  
   
@@ -56,7 +56,7 @@ ms.locfileid: "49271051"
 |**新しい行にコントロール ブロックの始めかっこを配置する**|このオプションをオンにすると、コントロール ブロック (`if` コントロール ブロック、`while` コントロール ブロックなど) に関連付けられている始めかっこが新しい行に移動します。|  
   
 ## <a name="spacing"></a>スペース  
- 次のオプションによって、**ソース** ビューにスペースが挿入される条件を指定します。  
+ これらのオプションでスペースを挿入する方法を決定**ソース**ビュー。  
   
 ## <a name="uielement-list"></a>UIElement の一覧  
   

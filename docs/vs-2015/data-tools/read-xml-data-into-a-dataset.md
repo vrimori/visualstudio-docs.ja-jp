@@ -26,12 +26,12 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3a4f5a7497e24ccd8e769198938dbd20a6bdf0f2
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6eb85fcef78b4b856c47ccb4436d1314ae440136
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49284558"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219732"
 ---
 # <a name="read-xml-data-into-a-dataset"></a>XML データのデータセットへの読み込み
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -63,7 +63,7 @@ ADO.NET では、XML データを操作するための単純なメソッドを�
   
 2.  プロジェクトに `ReadingXML` という名前を付けます。  
   
-3.  選択**Windows アプリケーション**、し、**OK**します。 詳細については、次を参照してください。[クライアント アプリケーション](http://msdn.microsoft.com/library/2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68)します。  
+3.  選択**Windows アプリケーション**、し、 **OK**します。 詳細については、次を参照してください。[クライアント アプリケーション](http://msdn.microsoft.com/library/2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68)します。  
   
      **ReadingXML**プロジェクトが作成されに追加**ソリューション エクスプ ローラー**します。  
   
@@ -187,7 +187,7 @@ ADO.NET では、XML データを操作するための単純なメソッドを�
   
 2.  [ツールボックス、[データ] タブ](../ide/reference/toolbox-data-tab.md)、ドラッグ、**データセット**に**Form1**します。  
   
-3.  **データセットの追加**ダイアログ ボックスで、**型指定されていないデータセット**、し、**OK**します。  
+3.  **データセットの追加**ダイアログ ボックスで、**型指定されていないデータセット**、し、 **OK**します。  
   
      **DataSet1**コンポーネント トレイに追加されます。  
   

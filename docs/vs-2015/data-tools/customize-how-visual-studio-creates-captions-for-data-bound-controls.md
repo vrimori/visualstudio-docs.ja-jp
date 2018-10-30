@@ -22,12 +22,12 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bf3d47c4e14606a4d3cc3006735fbe04af809600
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: b6906e68c74bbb718f9bfc041ab35075b3f9b0aa
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49195612"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220187"
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Visual Studio がデータ バインド コントロールのキャプションを作成する方法をカスタマイズする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]

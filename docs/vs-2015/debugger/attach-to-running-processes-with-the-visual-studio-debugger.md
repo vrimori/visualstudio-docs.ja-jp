@@ -34,12 +34,12 @@ caps.latest.revision: 62
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b2c5c15e9ec78efa2fa3c12c0c70d2573bd50697
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 604c9834594c14e8c1cc6b2c310f96cb68321931
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49825705"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220005"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>実行中のプロセスへのアタッチ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "49825705"
   
    2. **[修飾子]** ボックスの一覧の横のドロップダウン矢印をクリックし、一覧でコンピューター名を選択します。  
   
-   3. **[修飾子]** ボックスの一覧の横にある **[検索]** ボタンをクリックして、 **[リモート デバッガー接続の選択]** ダイアログ ボックスを開きます。 **[リモート デバッガー接続の選択]** ダイアログ ボックスには、ローカル サブネット上にあるデバイスと、イーサネット ケーブルで自分のコンピューターに直接接続されているデバイスがすべて表示されます。 目的のコンピューターまたはデバイスをクリックし、 **[選択]** をクリックします。 
+   3. をクリックして、**検索**横に、**修飾子**を開く ボックスの一覧、**リモート デバッガー接続の選択** ダイアログ ボックス。 **[リモート デバッガー接続の選択]** ダイアログ ボックスには、ローカル サブネット上にあるデバイスと、イーサネット ケーブルで自分のコンピューターに直接接続されているデバイスがすべて表示されます。 目的のコンピューターまたはデバイスをクリックし、 **[選択]** をクリックします。 
   
       **[修飾子]** の設定は、その修飾子でデバッグ接続が成功した場合のみ、デバッグ セッション間で保持されます。
      

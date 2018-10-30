@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ce10e56d197b720922356b72ab7245036c4f7d8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: b10635c1aefedf7af83a1c884717b80b442e8998
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49865363"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219914"
 ---
 # <a name="diagnose-problems-after-deployment-using-intellitrace"></a>IntelliTrace を使用したデプロイ後に問題を診断します。
 
@@ -44,7 +44,7 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
 
 Visual Studio 2017 には含まれません、 *BuildInfo.config*ファイルでは、非推奨し、し、削除されました。 デプロイ後に ASP.NET web アプリをデバッグするには、次のメソッドのいずれかを使用します。
 
-* Azure にデプロイする場合は、使用[Application Insights](https://docs.microsoft.com/en-us/azure/application-insights/)します。
+* Azure にデプロイする場合は、使用[Application Insights](https://docs.microsoft.com/azure/application-insights/)します。
 
 * IntelliTrace を使用する必要がある場合は、Visual Studio でプロジェクトを開くし、一致するビルドからシンボル ファイルを読み込みます。 シンボル ファイルを読み込むことができます、**モジュール**ウィンドウ内のシンボルを構成することで、または**ツール** > **オプション** > **デバッグ**  > **シンボル**します。
 
@@ -385,6 +385,6 @@ Visual Studio 2017 には含まれません、 *BuildInfo.config*ファイルで
  **A:** [ワークスペースにはソースのコピーが格納](/azure/devops/repos/tfvc/create-work-workspaces?view=vsts) されるので、作業をチェックインする前に、そのコピーを別に開発およびテストできます。 検出されたソリューションまたはプロジェクトに特別に割り当てられたワークスペースがまだない場合、Visual Studio では、使用可能なワークスペースを選択するか、既定のワークスペースと同じコンピューター名で新しいワークスペースを作成するように求めるメッセージが表示されます。
 
 ####  <a name="UntrustedSymbols"></a> 信頼されていないシンボルに関するメッセージを取得する q はありますか
- ![信頼されていないシンボル パスでデバッグしますか。](../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")
+ ![信頼されていないシンボル パスでデバッグしますか。] (../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")
 
  **A:** このメッセージを表示するときに、ビルド マニフェスト ファイルでシンボル パス (\<*ProjectName*>。BuildInfo.config) が、信頼されたシンボル パスの一覧に含まれていません。 このパスをシンボル パスの一覧に追加するには、デバッガー オプションを使用します。

@@ -24,12 +24,12 @@ caps.latest.revision: 27
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 616b837613e0e2c76330a68133929e6b85a94f98
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a3141f2480aabc2ce6aa7b10f99991fc5cba0d05
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49812934"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220418"
 ---
 # <a name="handle-a-concurrency-exception"></a>コンカレンシー例外を処理する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "49812934"
   
 3.  **テンプレート**ペインで、 **Windows アプリケーション**します。  
   
-4.  プロジェクトに名前を`ConcurrencyWalkthrough`、し、**OK**します。  
+4.  プロジェクトに名前を`ConcurrencyWalkthrough`、し、 **OK**します。  
   
      Visual Studio にプロジェクトが追加**ソリューション エクスプ ローラー**し、デザイナーで新しいフォームを表示します。  
   
@@ -215,8 +215,8 @@ ms.locfileid: "49812934"
   
      コンカレンシー エラーが発生し、メッセージ ボックスが表示されます。  
   
-10. 選択**いいえ**更新をキャンセルし、現在、データベース内にある値でデータセットを更新します。選択**はい**データベースに指定された値を書き込みます。  
+10. 選択**いいえ**更新をキャンセルし、現在、データベース内にある値でデータセットを更新します。 選択**はい**データベースに指定された値を書き込みます。
   
-## <a name="see-also"></a>関連項目  
- [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)
+## <a name="see-also"></a>関連項目
 
+- [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)

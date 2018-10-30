@@ -23,12 +23,12 @@ caps.latest.revision: 49
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 88e5815abbd9b773db1b6c35f2ecbbf08fd4862f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 70ebc816b5bf0b2b27805499ebd688f62431a87f
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49291311"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220288"
 ---
 # <a name="vsinstr"></a>VSInstr
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,7 +53,7 @@ VSInstr [/U] filename [/options]
 |**ExcludeSmallFuncs**|小規模関数 (関数呼び出しを行わない短い関数) をインストルメンテーションから除外します。 **ExcludeSmallFuncs** オプションを指定すると、インストルメンテーション オーバーヘッドが軽減されてインストルメンテーションの速度が向上します。<br /><br /> 小規模関数を除外すると、.vsp ファイルのサイズが小さくなり、解析に要する時間も短くなります。|  
 |**Mark:**{**Before**`&#124;`**After**`&#124;`**Top**`&#124;`**Bottom**}`,funcname,markid`|.vsp レポート ファイル内のデータ範囲の先頭または末尾を識別するために使用できるプロファイル マーク (レポート内のデータを区切るために使用する識別子) を挿入します。<br /><br /> **Before** - 対象の関数に入る直前。<br /><br /> **After** - 対象の関数が終了した直後。<br /><br /> **Top** - 対象の関数に入った直後。<br /><br /> **Bottom** - 対象の関数の各復帰の直前。<br /><br /> `funcname` - 対象の関数の名前<br /><br /> `Markid` - プロファイル マークの識別子として使用する正の整数 (long)。|  
 |**Coverage**|カバレッジ インストルメンテーションを実行します。 これと併用できるオプションは **Verbose**、**OutputPath**、**Exclude**、**Logfile** だけです。|  
-|**Verbose**|**Verbose** オプションは、インストルメンテーション プロセスに関する詳細情報を表示するために使用します。|  
+|**Verbose**|**Verbose**オプションを使用して、インストルメンテーション プロセスに関する詳細情報を表示します。|  
 |**NoWarn** `[:[Message Number[;Message Number]]]`|すべてまたは特定の警告を抑制します。<br /><br /> `Message Number` - 警告番号。 `Message Number` を省略した場合、すべての警告が抑制されます。<br /><br /> 詳細については、「[VSInstr の警告](../profiling/vsinstr-warnings.md)」を参照してください。|  
 |**Control** `:{` **Thread** `&#124;` **Process** `&#124;` **Global** `}`|次の VSInstr データ収集制御オプションのプロファイリング レベルを指定します。<br /><br /> **Start**<br /><br /> **StartOnly**<br /><br /> **Suspend**<br /><br /> **StopOnly**<br /><br /> **SuspendOnly**<br /><br /> **ResumeOnly**<br /><br /> **Thread** - スレッド レベルのデータ収集制御関数を指定します。 プロファイリングは、現在のスレッドに対してのみ開始または停止されます。 他のスレッドのプロファイリング状態は影響を受けません。 既定値は thread です。<br /><br /> **Process** - プロセス レベルのプロファイリング データ収集制御関数を指定します。 プロファイリングは、現在のプロセスのすべてのスレッドに対して開始または停止されます。 他のプロセスのプロファイリング状態は影響を受けません。<br /><br /> **Global** - グローバル レベル (プロセス間) のデータ収集制御関数を指定します。<br /><br /> プロファイリング レベルを指定しない場合は、エラーが発生します。|  
 |**Start** `:{` **Inside** `&#124;` **Outside** `},funcname`|データ収集を対象の関数とその関数から呼び出される子関数に制限します。<br /><br /> **Inside** - 対象の関数に入った直後に StartProfile 関数を挿入します。 対象の関数が戻るたびに、その直前に StopProfile 関数を挿入します。<br /><br /> **Outside** - 対象の関数を呼び出すたびに、その直前に StartProfile 関数を挿入します。 対象の関数を呼び出すたびに、その直後に StopProfile 関数を挿入します。<br /><br /> `funcname` - 対象の関数の名前。|  

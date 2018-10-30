@@ -17,12 +17,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 67c773fcd6afe5953d47e7f563189263d1092444
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 35e2c354293679d9cb6044b0c5f21b77aadb7f52
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49926547"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220161"
 ---
 # <a name="guids-and-ids-of-visual-studio-commands"></a>コマンドの Guid と Visual Studio の Id
 Visual Studio 統合開発環境 (IDE) で含まれているコマンドの GUID と ID の値は、Visual Studio SDK の一部としてインストールされている .vsct ファイルで定義されます。 詳細については、次を参照してください。 [IDE 定義コマンド、メニュー、およびグループ](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)します。  
@@ -57,7 +57,7 @@ Visual Studio 統合開発環境 (IDE) で含まれているコマンドの GUID
   
 -   など、下線付きの文字を含むメニュー項目、**印刷**コマンドを**ファイル**をメニュー、 *P*下線が引かれます。  
   
-     前にアンパサンド文字 (&) メニュー項目名の文字を表示、下線が引かれました。 ただし、 *.vsct*ファイルはアンパサンド (&) を使用して、特殊文字を指定し、として表示するには、アンパサンドをスペルする必要があることが必要ですが XML で記述された *&amp;amp;* します。 そのため、 *.vsct*ファイル、 **P**として rint コマンドが表示されます *&amp;amp;印刷*します。  
+     前にアンパサンド文字 (&) メニュー項目名の文字を表示、下線が引かれました。 ただし、 *.vsct*ファイルはアンパサンド (&) を使用して、特殊文字を指定し、として表示するには、アンパサンドをスペルする必要があることが必要ですが XML で記述された *&amp;amp;* します。 そのため、 *.vsct*ファイル、**印刷**としてコマンドが表示される *&amp;amp;印刷*します。  
   
 -   コマンドのテキストを動的をなどが含まれない**保存**\<現在のファイル名\>で項目などのメニュー項目を動的に生成されると、**最近使ったファイル**一覧。  
   
