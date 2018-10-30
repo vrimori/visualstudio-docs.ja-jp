@@ -22,12 +22,12 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6d84780565d1761e75de7be9e5996a908d399f5f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 4c73dd654a2d48be963e592d94685c74d3a16057
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49233786"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219576"
 ---
 # <a name="save-data-by-using-a-transaction"></a>トランザクションを使用してデータを保存する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "49233786"
   
 1.  **プロジェクト**メニューの **参照の追加**します。  
   
-2.  **.NET**  タブ (**SQL Server**の SQL Server プロジェクト タブ) を選択します**System.Transactions**、およびその**ok**します。  
+2.  **.NET**  タブ (**SQL Server**の SQL Server プロジェクト タブ) を選択します**System.Transactions**、し、 **OK**。  
   
      System.Transactions.dll への参照は、プロジェクトに追加されます。  
   

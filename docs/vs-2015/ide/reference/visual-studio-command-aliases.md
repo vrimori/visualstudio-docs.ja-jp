@@ -22,12 +22,12 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4c2daf9aa4e92ef4a017f36cbcc806abc50d6bde
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: dbde5651c66582b7d0536be906358d3a4446f587
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49240436"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220275"
 ---
 # <a name="visual-studio-command-aliases"></a>Visual Studio Command Aliases
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "49240436"
   
 エイリアスを使用すると、コマンドの実行に必要な文字列を短縮して **[検索]** ボックスまたは **[コマンド]** ウィンドウに入力できます。 たとえば、**[ファイルを開く]** ダイアログ ボックスを表示するときに、「`>File.OpenFile`」ではなく、定義済みのエイリアス「`>of`」を入力できます。  
   
- **[コマンド]** ウィンドウで「`alias`」と入力すると、現在のエイリアスおよびその定義の一覧が表示されます。 **[コマンド]** ウィンドウの内容を消去するには、「`>cls`」と入力します。 特定のコマンドのエイリアスを表示するには、「`alias <command name>`」と入力します。  
+ **[コマンド]** ウィンドウで「`alias`」と入力すると、現在のエイリアスとその定義の一覧が表示されます。 **[コマンド]** ウィンドウの内容を消去するには、「`>cls`」と入力します。 特定のコマンドのエイリアスを表示するには、「`alias <command name>`」と入力します。  
   
  いずれかの Visual Studio コマンド (引数の有無を問わず) について、独自のエイリアスを作成する操作は簡単です。 たとえば、`File.NewFile MyFile.txt` のエイリアスを作成する構文は、「`alias MyAlias File.NewFile MyFile.txt`」です。 特定のエイリアスを削除するには、「`alias <alias name> /delete`」を使用します。  
   

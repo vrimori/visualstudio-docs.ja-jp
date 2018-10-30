@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b4da9c5cd5d4aaf3a99fd891a814b1f8ccef04ac
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 774a0f5639057ea5b1dc190ce475278477a7f373
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49245857"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219615"
 ---
 # <a name="how-to-use-xml-snippets"></a>方法 : XML スニペットを使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]

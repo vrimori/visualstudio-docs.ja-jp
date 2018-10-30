@@ -19,12 +19,12 @@ ms.assetid: 19f483b6-4d3e-424e-9d68-dc129c788e47
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c7100e3fc6e18387cf8ef8cfdc2b485b610b3dc8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 009e9269961b3cd532736fd5b72e28a389a4382a
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49812713"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220044"
 ---
 # <a name="binding-keyboard-shortcuts-to-menu-items"></a>キーボード ショートカットのメニュー項目へのバインド
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -44,12 +44,12 @@ ms.locfileid: "49812713"
   
 3. **ショートカット キーを押して**ボックスに、使用するキーボード ショートカットを入力します。  
   
-    ショートカットが Visual Studio で既に使用されている場合、**によって現在使用ショートカット**ボックス ショートカットを現在呼び出すコマンドが表示されます。  
+    ショートカットが Visual Studio で既に使用されている場合、**現在使用されているショートカット**ボックスに、ショートカットを現在呼び出すコマンドを表示します。  
   
 4. マップされていないものが見つかるまで、さまざまなキーの組み合わせをお試しください。  
   
    > [!NOTE]
-   >  Alt キーを使用するキーボード ショートカットは、メニューを開くし、コマンドを直接実行可能性があります。 そのため、**によって現在使用ショートカット**alt キーを含むショートカットを入力するときにボックスを空白にすることがあります。 ショートカットを閉じて、メニューが開きますしないことを確認することができます、**オプション** ダイアログ ボックスとし、キーを押します。  
+   >  Alt キーを使用するキーボード ショートカットは、メニューを開くし、コマンドを直接実行可能性があります。 そのため、**現在使用されているショートカット**alt キーを含むショートカットを入力するときにボックスを空白にすることがあります。 ショートカットを閉じて、メニューが開きますしないことを確認することができます、**オプション** ダイアログ ボックスとし、キーを押します。  
   
    次の手順では、メニュー コマンドを使用して既存の VSPackage があることを前提としています。 この操作の説明を必要がある場合について見て[メニュー コマンドを使用して拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)です。  
   

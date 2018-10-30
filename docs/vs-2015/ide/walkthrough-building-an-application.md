@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 350ff6d481c3f7cffc47519a252b1cb65d2748ba
-ms.sourcegitcommit: 1abb9cf4c3ccb90e3481ea8079272c98aad12875
+ms.openlocfilehash: e6c45a552e66c2d256c191f6bd8296f5b2ca2c61
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50143178"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220208"
 ---
 # <a name="walkthrough-building-an-application"></a>チュートリアル: アプリケーションをビルドする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "50143178"
   
 4. **[アクティブ ソリューション プラットフォーム]** 一覧の **[新規作成]** をクリックします。  
   
-5. **[新しいソリューション プラットフォーム]** ダイアログ ボックスで、**[x64]** を選択します。x86 プラットフォームの設定はコピーしません。  
+5. **新しいソリューション プラットフォーム** ダイアログ ボックスで、選択**x64**、x86 の設定はコピーしませんプラットフォーム。  
   
     ![[新しいソリューション プラットフォーム] ダイアログ ボックス](../ide/media/buildwalk-newsolutionplatform.png "BuildWalk_NewSolutionPlatform")  
   

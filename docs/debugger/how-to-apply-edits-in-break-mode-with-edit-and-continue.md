@@ -1,5 +1,5 @@
 ---
-title: '方法: 編集と中断モードで編集を適用して続行 |Microsoft ドキュメント'
+title: '方法: エディット中断モードで編集を適用して続行 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -24,23 +24,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f031598e0c8f290907e759bcfceac85c1b063f5f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 263e4bf4505995a4c8eccbe7c33f59115412dda5
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31474194"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219511"
 ---
 # <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue"></a>方法 : エディット コンティニュの中断モード時に編集を適用する
 エディット コンティニュを使用すると、中断モードでコードを編集した後、コードを停止したり再起動したりせずにデバッグを継続できます。  
   
-デバッグ中にエディット コンティニュの使用に関する制限については、次を参照してください[サポートされているコードの変更 (c# および Visual Basic](../debugger/supported-code-changes-csharp.md)]。
+デバッグ中にエディット コンティニュの使用に関する制限については、次を参照してください[サポートされているコードの変更 (C#および Visual Basic](../debugger/supported-code-changes-csharp.md)]。
   
 ### <a name="to-edit-code-in-break-mode"></a>中断モードでコードを編集するには  
   
 1.  以下のいずれかの操作を行って中断モードに入ります。  
   
-    -   選択し、コードにブレークポイントを設定**デバッグの開始**から、**デバッグ**メニューとアプリケーション、ブレークポイントにヒットするを待っています。  
+    -   コードでブレークポイントを設定し、選択**デバッグの開始**から、**デバッグ**メニューとアプリケーション、ブレークポイントにヒットするまで待ちます。  
   
          - または -  
   
@@ -48,11 +48,11 @@ ms.locfileid: "31474194"
   
          - または -  
   
-    -   例外が発生するときに選択**編集を有効にする**上、**例外処理アシスタント**です。  
+    -   例外が発生したときに選択**編集を有効にする**上、**例外処理アシスタント**します。  
   
 2.  必要なサポートされているコード変更を加えます。  
   
-     詳細については、次を参照してください。[サポートされているコードの変更 (c# および Visual Basic](../debugger/supported-code-changes-csharp.md)です。  
+     詳細については、次を参照してください。[サポートされているコードの変更 (c# および Visual Basic](../debugger/supported-code-changes-csharp.md)します。  
   
     > [!NOTE]
     >  エディット コンティニュで許可されないコード変更を行おうとすると、編集部分の下に紫の波線が表示され、タスク一覧にタスクが表示されます。 この場合、無効なコード変更を元に戻さない限り、コードの実行を続行できません。  
