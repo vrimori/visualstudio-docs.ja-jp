@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 19f903ae02413bf18474aa2d95d71d765c288fa9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 71667a9d00dd1935e8eaeb281c5f0c6834208702
+ms.sourcegitcommit: 401be39a42ffe007593528b5bba62583ca9fcafd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49900632"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50244399"
 ---
 # <a name="ca2228-do-not-ship-unreleased-resource-formats"></a>CA2228: 未公開のリソース形式を出荷しません
 
@@ -39,7 +39,7 @@ ms.locfileid: "49900632"
  .NET Framework のプレリリース バージョンを使用してビルドされたリソース ファイルは、サポートされているバージョンの .NET Framework で使用できるしない場合があります。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、.NET Frameworkk のサポートされているバージョンを使用して、リソースをビルドします。
+ この規則違反を修正するには、サポートされているバージョンの .NET Framework を使用して、リソースをビルドします。
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  この規則による警告は抑制しないでください。

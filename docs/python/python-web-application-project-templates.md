@@ -1,7 +1,7 @@
 ---
 title: Python 用 Web アプリケーション テンプレート
 description: デバッグの構成や Azure App Service への発行など、Bottle、Flask、および Django フレームワークを使って Python で書かれた Web アプリケーション用の Visual Studio テンプレートの概要です。
-ms.date: 07/03/2018
+ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0db1d84c09c44cc39fe3fd614379c2381b915014
-ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
+ms.openlocfilehash: cbdf9b6890613cc4ad41af77e27f7f41c6f5c9da
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029028"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219849"
 ---
 # <a name="python-web-application-project-templates"></a>Python Web アプリケーション プロジェクト テンプレート
 
@@ -34,7 +34,7 @@ Python Web アプリを Azure にデプロイする方法については、「[A
 
 前述の汎用的な **Web プロジェクト** テンプレートは、空の Visual Studio プロジェクトのみを提供し、コードはなく Python プロジェクトであること以外に前提条件もありません。 **Azure クラウド サービス** テンプレートの詳細については、「[Python 用 Azure クラウド サービス プロジェクト](python-azure-cloud-service-project-template.md)」を参照してください。
 
-その他のテンプレートはすべて、Bottle、Flask、または Django の Web フレームワークに基づいており、次のセクションで説明する 3 つの一般的なグループに分類されます。 このようなテンプレートのいずれかで作成されたアプリには、アプリをローカルで実行およびデバッグするのに必要なコードが含まれています。 また、各テンプレートでは、[Azure App Service にデプロイ](publishing-python-web-applications-to-azure-from-visual-studio.md)するために必要な [WSGI アプリ オブジェクト](http://www.python.org/dev/peps/pep-3333/) (python.org) も用意されています。
+その他のテンプレートはすべて、Bottle、Flask、または Django の Web フレームワークに基づいており、次のセクションで説明する 3 つの一般的なグループに分類されます。 このようなテンプレートのいずれかで作成されたアプリには、アプリをローカルで実行およびデバッグするのに必要なコードが含まれています。 また、各テンプレートでは、実稼働 Web サーバーで使用するために必要な [WSGI アプリ オブジェクト](http://www.python.org/dev/peps/pep-3333/) (python.org) も用意されています。
 
 ### <a name="blank-group"></a>空白のグループ
 

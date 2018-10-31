@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 80e76fd7677eab8c56827dcdbaeaf42ee72c5c28
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 9b2710b6efcc765f98977c2730c5f729e3a8b260
+ms.sourcegitcommit: e7b3fc8c788fb49d6ba4215abf27139f2a08e1a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39081785"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120384"
 ---
 # <a name="msbuild-reference"></a>MSBuild リファレンス
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のビルド システムです。 次のリンクは、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] リファレンス情報を示すトピックへのリンクです。  
@@ -71,25 +71,24 @@ ms.locfileid: "39081785"
  正しく解釈するために "エスケープ" する必要のある文字を一覧表示します。 エスケープ シーケンスは、それに続く部分を別の方法で解釈することを示す一連の文字です。  
   
 ## <a name="see-also"></a>関連項目  
- [MSBuild の概要](../msbuild/msbuild.md) [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] を紹介し、プロジェクトのビルドにおける使用方法を説明するトピックへのリンクを示します。  
+ [MSBuild の概要](../msbuild/msbuild.md)     
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] を紹介し、プロジェクトのビルドにおける使用方法を説明するトピックへのリンクを示します。  
   
- <xref:Microsoft.Build.Conversion>  
+ [Microsoft.Build.Conversion](https://docs.microsoft.com/dotnet/api/microsoft.build.conversion)  
  Conversion 名前空間のリファレンスです。  
   
- <xref:Microsoft.Build.Evaluation>  
+ [Microsoft.Build.Evaluation](https://docs.microsoft.com/dotnet/api/microsoft.build.evaluation)  
  Evaluation 名前空間のリファレンスです。  
   
- <xref:Microsoft.Build.Execution>  
+ [Microsoft.Build.Execution](https://docs.microsoft.com/dotnet/api/microsoft.build.execution)  
  Execution 名前空間のリファレンスです。  
   
- <xref:Microsoft.Build.Framework>  
+ [Microsoft.Build.Framework](https://docs.microsoft.com/dotnet/api/microsoft.build.framework)  
  Framework 名前空間のリファレンスです。  
   
- <xref:Microsoft.Build.Logging>  
- Logging 名前空間のリファレンスです。  
+ [Microsoft.Build.Logging](https://docs.microsoft.com/dotnet/api/microsoft.build.logging) Logging 名前空間のリファレンスです。  
   
- <xref:Microsoft.Build.Tasks>  
+ [Microsoft.Build.Tasks](https://docs.microsoft.com/dotnet/api/microsoft.build.tasks)  
  Tasks 名前空間のリファレンスです。  
   
- <xref:Microsoft.Build.Utilities>  
- Utilities 名前空間のリファレンスです。
+ [Microsoft.Build.Utilities](https://docs.microsoft.com/dotnet/api/microsoft.build.utilities) Utilities 名前空間のリファレンスです。

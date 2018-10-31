@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8319c99e5de12ce1c09a2c20fc5cf1b132f34092
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: c282bdbfbfad589418c48d6caa65dedfdc7a53b2
+ms.sourcegitcommit: 40b6438b5acd7e59337a382c39ec711b9e99cc8a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776036"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100940"
 ---
 # <a name="python-item-templates"></a>Python 項目テンプレート
 
@@ -42,15 +42,10 @@ ms.locfileid: "43776036"
 | **IronPython WPF ウィンドウ** | 2 つの横並びのファイルで構成される WPF ウィンドウ: 空の `<Grid>` 要素で `<Window>` を定義する *.xaml* ファイルと、`wpf` ライブラリを使用して XAML ファイルを読み込む、関連する *.py* ファイル。 通常は、IronPython プロジェクト テンプレートの 1 つを使用して作成されたプロジェクト内で使用されます。 [「Python プロジェクトの管理」の「プロジェクト テンプレート」のセクション](managing-python-projects-in-visual-studio.md#project-templates)をご覧ください。 |
 | **Web ロール サポート ファイル** | プロジェクト ルートにある *bin* フォルダー (プロジェクト内で選択されたフォルダーとは関係ありません)。 Azure クラウド サービス Web ロールの既定のデプロイ スクリプトと *web.config* ファイルが格納されています。 また、テンプレートには、詳細を説明する *readme.html* ファイルが含まれています。 |
 | **Worker ロールのサポート ファイル** | プロジェクト ルートにある *bin* フォルダー (プロジェクト内で選択されたフォルダーとは関係ありません)。 Azure クラウド サービス Worker ロールの既定のデプロイ スクリプトと *web.config* ファイルが格納されています。 また、テンプレートには、詳細を説明する *readme.html* ファイルが含まれています。 |
-| **Azure web.config (FastCGI)** | 受信接続の処理に [WSGI](https://wsgi.readthedocs.io/en/latest/) オブジェクトを使うアプリ用のエントリを含む *web.config* ファイル。 このファイルは通常、Azure App Service などの IIS を実行している Web サーバーのルートにデプロイされます。 詳細については、「[Azure App Service に発行する](publishing-python-web-applications-to-azure-from-visual-studio.md)」をご覧ください。 |
-| **Azure web.config (HttpPlatformHandler)** | 受信接続のためのソケット上でリッスンするアプリのエントリを含む *web.config* ファイル。 このファイルは通常、Azure App Service などの IIS を実行している Web サーバーのルートにデプロイされます。 詳細については、「[Azure App Service に発行する](publishing-python-web-applications-to-azure-from-visual-studio.md)」をご覧ください。 |
-| **Azure 静的ファイルの web.config** | *web.config* ファイル。通常は *static* フォルダー (または、静的な項目を格納する他のフォルダー) に追加されて、そのフォルダーの Python 処理を無効にします。 この構成ファイルは、上記の FastCGI または HttpPlatformHandler 構成ファイルと組み合わせることで、機能します。 詳細については、「[Azure App Service に発行する](publishing-python-web-applications-to-azure-from-visual-studio.md)」をご覧ください。 |
-| **Azure リモート デバッグの web.config** | *Microsoft.PythonTools.WebRole.dll* と、リモート デバッグを有効にするためにサーバーにデプロイするモジュールを格納した *ptvsd* フォルダーと共に、WebSockets でリモート デバッグを有効にする *web.config.debug* ファイル。 通常は、*web.config* ファイルと同じ場所にこの項目を作成します。 詳細については、「[Azure 上で Python コードをリモートでデバッグする](debugging-remote-python-code-on-azure.md)」をご覧ください。 以下の注意事項も確認してください。 |
-
-> [!Note]
-> デバッグ *web.config* テンプレートをプロジェクトに追加し、Python リモート デバッグを使用する計画がある場合は、**デバッグ** 構成でサイトを発行する必要があります。 この設定は、現在アクティブなソリューション構成とは別であり、既定値は常に**リリース**です。 これを変更するには、**発行**ウィザードで **[設定]** タブを開き、**[構成]** コンボ ボックスを使用します。 (Azure Web Apps の作成とデプロイに関する詳細については、[Azure ドキュメント](https://azure.microsoft.com/develop/python/) をご覧ください)。
->
-> ![発行構成の変更](media/template-web-publish-config.png)
+| **Azure web.config (FastCGI)** | 受信接続の処理に [WSGI](https://wsgi.readthedocs.io/en/latest/) オブジェクトを使うアプリ用のエントリを含む *web.config* ファイル。 このファイルは通常、IIS を実行している Web サーバーのルートに配置されます。 詳細については、[IIS 用のアプリの構成](configure-web-apps-for-iis-windows.md)に関連するページをご覧ください。 |
+| **Azure web.config (HttpPlatformHandler)** | 受信接続のためのソケット上でリッスンするアプリのエントリを含む *web.config* ファイル。 このファイルは通常、Azure App Service などの IIS を実行している Web サーバーのルートにデプロイされます。 詳細については、[IIS 用のアプリの構成](configure-web-apps-for-iis-windows.md)に関連するページをご覧ください。 |
+| **Azure 静的ファイルの web.config** | *web.config* ファイル。通常は *static* フォルダー (または、静的な項目を格納する他のフォルダー) に追加されて、そのフォルダーの Python 処理を無効にします。 この構成ファイルは、上記の FastCGI または HttpPlatformHandler 構成ファイルと組み合わせることで、機能します。 詳細については、[IIS 用のアプリの構成](configure-web-apps-for-iis-windows.md)に関連するページをご覧ください。 |
+| **Azure リモート デバッグの web.config** | 非推奨です (Windows 用の Azure App Service 上でのリモート デバッグに使用されていましたが、現在ではサポートされていません)。 |
 
 ## <a name="see-also"></a>関連項目
 

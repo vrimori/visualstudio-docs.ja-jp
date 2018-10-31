@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 109d95202d5ce67b2bdda1aab61d1b725a3ac23c
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 3c8835dab5ca866762a7d2b0e6cad1d0d80726b0
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39080751"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48879199"
 ---
 # <a name="msbuild-properties"></a>MSBuild プロパティ
 プロパティはビルドを設定するための名前と値のペアです。 プロパティを使用することで、タスクに値を渡したり、条件を評価したりできるだけでなく、プロジェクト ファイルで参照する値を格納しておくこともできます。  
@@ -84,12 +84,12 @@ $(registry:Hive\MyKey\MySubKey)
 ```  
   
 ## <a name="global-properties"></a>グローバル プロパティ  
- MSBuild では、**/property** (または **/p**) スイッチを使用してコマンド ラインからプロパティを設定できます。 これらのグローバル プロパティ値は、プロジェクト ファイルで設定されたプロパティ値をオーバーライドします。 これには環境プロパティは含まれますが、予約済みのプロパティは含まれません。予約済みのプロパティは変更できません。  
+ MSBuild では、**-property** (または **-p**) スイッチを使用してコマンド ラインからプロパティを設定できます。 これらのグローバル プロパティ値は、プロジェクト ファイルで設定されたプロパティ値をオーバーライドします。 これには環境プロパティは含まれますが、予約済みのプロパティは含まれません。予約済みのプロパティは変更できません。  
   
  グローバルな `Configuration` プロパティを `DEBUG` に設定する例を次に示します。  
   
 ```cmd  
-msbuild.exe MyProj.proj /p:Configuration=DEBUG  
+msbuild.exe MyProj.proj -p:Configuration=DEBUG  
 ```  
   
  グローバル プロパティは、MSBuild タスクの `Properties` 属性を使用することで、複数プロジェクトのビルドに含まれる子プロジェクトに対して設定または変更することもできます。 グローバル プロパティは、MSBuild タスクの `RemoveProperties` 属性が転送しないプロパティの一覧を指定するために使用されていなければ、子プロジェクトにも転送されます。 詳細については、「[MSBuild タスク](../msbuild/msbuild-task.md)」を参照してください。

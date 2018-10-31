@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d7e862322995c7cda4a7080ee387c7a080437748
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 94fdbb5f143d1c087d97490961d230ace239f348
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178519"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880150"
 ---
 # <a name="walkthrough-use-msbuild"></a>チュートリアル: MSBuild の使用
 MSBuild は Microsoft および Visual Studio のビルド プラットフォームです。 このチュートリアルでは、MSBuild のビルド ブロックについて説明し、MSBuild プロジェクトを記述、操作、およびデバッグする方法について説明します。 ここで学習する内容を以下に示します。
@@ -39,7 +39,7 @@ MSBuild は、Visual Studio から実行することも、**コマンド ウィ�
 
 2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
 
-3.  **[新しいプロジェクト]** ダイアログ ボックスで、プロジェクトの種類として **[Visual C#]** を選択し、**[Windows フォーム アプリケーション]** テンプレートをクリックします。 **[名前]** ボックスに「`BuildApp`」と入力します。 **[場所]** ボックスにソリューションの場所を入力します (「*D:\\*」など)。 それ以外は、既定値をそのまま使用します (**[ソリューションのディレクトリを作成]** はオン、**[ソース管理に追加]** はオフ、**[ソリューション名]** は **BuildApp**)。
+3.  **[新しいプロジェクト]** ダイアログ ボックスで、プロジェクトの種類として **[Visual C#]** を選択し、**[Windows フォーム アプリケーション]** テンプレートをクリックします。 **[名前]** ボックスに「 `BuildApp`」と入力します。 **[場所]** ボックスにソリューションの場所を入力します (「*D:\\*」など)。 それ以外は、既定値をそのまま使用します (**[ソリューションのディレクトリを作成]** はオン、**[ソース管理に追加]** はオフ、**[ソリューション名]** は **BuildApp**)。
 
 4.    **[OK]** をクリックして、プロジェクト ファイルを作成します。
 
@@ -116,7 +116,7 @@ Message タスクは、MSBuild に含まれている数多くのタスクの 1 �
 Message タスクは、Text 属性の文字列値を入力として受け取り、それを出力デバイスに表示します。 HelloWorld ターゲットでは、Message タスクが 2 回実行されます。1 回目の実行で "Hello" と表示され、2 回目の実行で "World" と表示されます。
 
 ## <a name="build-the-target"></a>ターゲットをビルドする
- **Visual Studio コマンド プロンプト**から MSBuild を実行して、上で定義した HelloWorld ターゲットをビルドします。 ターゲットを選択するには、コマンド ライン スイッチの /target または /t を使用します。
+ **Visual Studio コマンド プロンプト**から MSBuild を実行して、上で定義した HelloWorld ターゲットをビルドします。 ターゲットを選択するには、コマンド ライン スイッチの -target または -t を使用します。
 
 > [!NOTE]
 >  以降では、**Visual Studio コマンド プロンプト**を**コマンド ウィンドウ**と呼びます。
@@ -127,10 +127,10 @@ Message タスクは、Text 属性の文字列値を入力として受け取り�
 
 2.  コマンド ウィンドウで、プロジェクト ファイルを含むフォルダー (この場合は *D:\BuildApp\BuildApp*) に移動します。
 
-3.  コマンド ライン スイッチ /t:HelloWorld を使用して msbuild を実行します。 HelloWorld ターゲットが選択されてビルドされます。
+3.  コマンド ライン スイッチ -t:HelloWorld を使用して msbuild を実行します。 HelloWorld ターゲットが選択されてビルドされます。
 
     ```cmd
-    msbuild buildapp.csproj /t:HelloWorld
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
 4.  **コマンド ウィンドウ**で出力を確認します。 "Hello" と "World" の 2 つの行が表示されます。
@@ -200,7 +200,7 @@ $(PropertyName)
 3.  **コマンド ウィンドウ**で、次の行を入力して実行します。
 
     ```cmd
-    msbuild buildapp.csproj /t:HelloWorld
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
 4.  出力を調べます。 次の 2 つの行が表示されます (.NET Framework のバージョンが異なる場合もあります)。
@@ -231,14 +231,14 @@ $(PropertyName)
  プロジェクト ファイルで環境変数を参照する場合も、ビルド プロパティを参照するときと同じ方法を使用します。 たとえば、プロジェクト ファイルで PATH 環境変数を使用するには、$(Path) と記述します。 プロジェクト ファイルに、環境変数と同じ名前のプロパティが定義されている場合、環境変数の値はプロジェクト内のプロパティによってオーバーライドされます。 環境変数の使用方法の詳細については、「[方法: ビルドで環境変数を使用する](../msbuild/how-to-use-environment-variables-in-a-build.md)」をご覧ください。
 
 ## <a name="set-properties-from-the-command-line"></a>コマンドラインからプロパティを設定する
- プロパティは、コマンド ライン スイッチの /property または /p を使用してコマンド ラインで定義することもできます。 プロジェクト ファイルに設定されたプロパティ値や環境変数として設定されたプロパティ値は、コマンド ラインから渡されたプロパティ値によってオーバーライドされます。
+ プロパティは、コマンド ライン スイッチの -property または -p を使用してコマンド ラインで定義することもできます。 プロジェクト ファイルに設定されたプロパティ値や環境変数として設定されたプロパティ値は、コマンド ラインから渡されたプロパティ値によってオーバーライドされます。
 
 #### <a name="to-set-a-property-value-from-the-command-line"></a>コマンド ラインからプロパティ値を設定するには
 
 1.  **コマンド ウィンドウ**で、次の行を入力して実行します。
 
     ```cmd
-    msbuild buildapp.csproj /t:HelloWorld /p:Configuration=Release
+    msbuild buildapp.csproj -t:HelloWorld -p:Configuration=Release
     ```
 
 2.  出力を調べます。 次の行が表示されます。
@@ -267,7 +267,7 @@ Configuration プロパティが作成されて、値が "Release" に設定さ�
 3.  **コマンド ウィンドウ**で、次の行を入力して実行します。
 
     ```cmd
-    msbuild buildapp.csproj /t:HelloWorld
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
 4.  出力を調べます。 次の行が表示されます。
@@ -329,7 +329,7 @@ Configuration プロパティが作成されて、値が "Release" に設定さ�
 3.  **コマンド ウィンドウ**で、次の行を入力して実行します。
 
     ```cmd
-    msbuild buildapp.csproj /t:HelloWorld
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
 4.  出力を調べます。 次の長い行が表示されます。
@@ -361,7 +361,7 @@ Message タスクに変更を加えて、復帰と改行 (%0A%0D) を使用し�
 3.  **コマンド ウィンドウ**で、次の行を入力して実行します。
 
     ```cmd
-    msbuild buildapp.csproj /t:HelloWorld
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
 4.  出力を調べます。 次の行が表示されます。
@@ -441,7 +441,7 @@ Exclude 属性は、同一の項目要素内にある Include 属性によって
 4.  **コマンド ウィンドウ**で、次の行を入力して実行します。
 
     ```cmd
-    msbuild buildapp.csproj /t:HelloWorld
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
 5.  出力を調べます。 次の行が表示されます。
@@ -482,7 +482,7 @@ Exclude 属性は、同一の項目要素内にある Include 属性によって
 3.  **コマンド ウィンドウ**で、次の行を入力して実行します。
 
     ```cmd
-    msbuild buildapp.csproj /t:HelloWorld
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
 4.  出力を調べます。 次の行が表示されます。
@@ -512,7 +512,7 @@ Exclude 属性は、同一の項目要素内にある Include 属性によって
 3.  **コマンド ウィンドウ**で、次の行を入力して実行します。
 
     ```cmd
-    msbuild buildapp.csproj /t:HelloWorld
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
 4.  出力を調べます。 次の行が表示されます。
@@ -550,7 +550,7 @@ Exclude 属性は、同一の項目要素内にある Include 属性によって
 3.  **コマンド ウィンドウ**で、次の行を入力して実行します。
 
     ```cmd
-    msbuild buildapp.csproj /t:HelloWorld
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
 4.  出力を調べます。 次の行が表示されます。

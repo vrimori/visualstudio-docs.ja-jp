@@ -15,35 +15,44 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d921236fe44c7402bb26800c02624e2c391301a
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 701db598872f6dde5a07740ef7601a6c8de7c5f0
+ms.sourcegitcommit: 6672a1e9d135d7e5cca3cceea07c6fe5a0871475
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39077067"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47443403"
 ---
 # <a name="how-to-escape-special-characters-in-msbuild"></a>方法: MSBuild で特殊文字をエスケープする
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルでは、特定の文字が特殊な意味を持ちます。 そのような文字の例として、セミコロン (;) およびアスタリスク (*) があります。 特殊文字の完全な一覧については、「[MSBuild の特殊文字](../msbuild/msbuild-special-characters.md)」を参照してください。  
+
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルでは、特定の文字が特殊な意味を持ちます。 そのような文字の例として、セミコロン (`;`) およびアスタリスク (`*`) があります。 特殊文字の完全な一覧については、「[MSBuild の特殊文字](../msbuild/msbuild-special-characters.md)」を参照してください。
   
- これらの特殊文字をプロジェクト ファイル内でリテラルとして使用するには、構文 %\<xx> でそれらの文字を指定する必要があります。ここで、\<xx> は文字の ASCII 16 進値を表します。  
+これらの特殊文字をプロジェクト ファイル内でリテラルとして使用するには、構文 `%<xx>` を使ってそれらの文字を指定する必要があります。ここで、`<xx>` は文字の ASCII 16 進値を表します。
   
-## <a name="msbuild-special-characters"></a>MSBuild の特殊文字  
+## <a name="msbuild-special-characters"></a>MSBuild の特殊文字
+
  特殊文字が使用される場所の 1 つの例として、アイテム一覧の `Include` 属性が挙げられます。 たとえば、次のアイテム一覧では、*MyFile.cs* と *MyClass.cs* の 2 つのアイテムを宣言しています。  
   
 ```xml  
 <Compile Include="MyFile.cs;MyClass.cs"/>  
 ```  
   
- 名前にセミコロンを含むアイテムを宣言する場合は、構文 %\<xx> を使用してセミコロンをエスケープし、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] によって 2 つの別々のアイテムが宣言されることを防ぐ必要があります。 たとえば、次のアイテムではセミコロンをエスケープして、*MyFile.cs;MyClass.cs* という名前の 1 つのアイテムを宣言しています。  
+名前にセミコロンを含むアイテムを宣言する場合は、構文 `%<xx>` を使用してセミコロンをエスケープし、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] によって 2 つの別々のアイテムが宣言されることを防ぐ必要があります。 たとえば、次のアイテムではセミコロンをエスケープして、`MyFile.cs;MyClass.cs` という名前の 1 つのアイテムを宣言しています。
   
 ```xml  
 <Compile Include="MyFile.cs%3BMyClass.cs"/>  
 ```  
-  
-#### <a name="to-use-an-msbuild-special-character-as-a-literal-character"></a>MSBuild の特殊文字をリテラル文字として使用するには  
-  
--   特殊文字の代わりに %\<xx> という表記を使用します。ここで、\<xx> は ASCII 文字の 16 進値を表します。 たとえば、アスタリスク (*) をリテラル文字として使用するには、値 `%2A` を使用します。  
-  
+
+また、[プロパティ関数](../msbuild/property-functions.md)を使用して文字列をエスケープすることもできます。 たとえば、これは上記の例と同じです。
+
+```xml
+<Compile Include="$([MSBuild]::Escape('MyFile.cs;MyClass.cs'))" />
+```
+
+### <a name="to-use-an-msbuild-special-character-as-a-literal-character"></a>MSBuild の特殊文字をリテラル文字として使用するには
+
+特殊文字の代わりに `%<xx>` という表記を使用します。ここで、`<xx>` は ASCII 文字の 16 進値を表します。 たとえば、アスタリスク (`*`) をリテラル文字として使用するには、値 `%2A` を使用します。
+
+ 
 ## <a name="see-also"></a>関連項目  
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [MSBuild](../msbuild/msbuild.md)   
