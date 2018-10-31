@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 2766af365625890a0769f298d1801179da9c7e07
-ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
+ms.openlocfilehash: ee40aadd3287018e52910ad6b4a4000db6bcce8a
+ms.sourcegitcommit: 6672a1e9d135d7e5cca3cceea07c6fe5a0871475
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029310"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47443416"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>クイック スタート: Visual Studio を使用して初めての C# コンソール アプリを作成する
 
@@ -39,9 +39,9 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
    ![Visual Studio IDE の [新しいプロジェクト] ダイアログ ボックスに示されているコンソール アプリ (.NET Core) プロジェクト テンプレート](../ide/media/new-project-csharp-dotnetcore-helloworld-console-app.png)
 
-     **[Console App (.NET Core)]** プロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。
+     **[Console App (.NET Core)]** プロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクを選択します。
 
-   ![[新しいプロジェクト] ダイアログ ボックスで [Visual Studio インストーラーを開く] リンクをクリックする](../ide/media/csharp-open-visual-studio-installer-hello-world.png)
+   ![[新しいプロジェクト] ダイアログ ボックスから [Visual Studio インストーラーを開く] リンクを選択する](../ide/media/csharp-open-visual-studio-installer-hello-world.png)
 
      Visual Studio インストーラーが起動します。 **[.NET Core クロスプラットフォームの開発]** ワークロードを選択し、**[変更]** を選択します。
 
@@ -75,9 +75,9 @@ C# プロジェクト テンプレートを選択し、プロジェクトに名�
 
 ## <a name="run-the-application"></a>アプリケーションの実行
 
-1. ツールバーの **HelloWorld** ボタンをクリックして、デバッグ モードでアプリケーションを実行します。 (または、**F5** キーを押します。)
+1. ツールバーの **HelloWorld** ボタンを選択して、デバッグ モードでアプリケーションを実行します。 (または、**F5** キーを押します。)
 
-   ![[Hello World] ボタンをクリックして、ツールバーからプログラムを実行する](../ide/media/csharp-console-hello-world-button.png)
+   ![[Hello World] ボタンを選択して、ツールバーからアプリを実行する](../ide/media/csharp-console-hello-world-button.png)
 
 1. コンソール ウィンドウでアプリを確認します。
 
@@ -98,4 +98,4 @@ C# プロジェクト テンプレートを選択し、プロジェクトに名�
 このクイック スタートは完了しました。 C# と Visual Studio IDE について、少しはご理解いただけたかと思います。 詳細については、引き続き以下のチュートリアルをご覧ください。
 
 > [!div class="nextstepaction"]
-> [C# のチュートリアル](/dotnet/csharp/tutorials/)
+> [Visual Studio での C# コンソール アプリの概要](tutorial-csharp-console.md)

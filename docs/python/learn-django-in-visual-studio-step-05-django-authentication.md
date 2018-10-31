@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 419c9f54d0c537d417034eb4375d6402951609bd
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: cc238b6a8ba1a190471d25952a4d7c976ca56b9f
+ms.sourcegitcommit: e7b3fc8c788fb49d6ba4215abf27139f2a08e1a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42626981"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120356"
 ---
 # <a name="step-5-authenticate-users-in-django"></a>手順 5: Django でユーザーを認証する
 
@@ -198,9 +198,9 @@ ms.locfileid: "42626981"
 
 1. すべて完了したら、サーバーを停止し、もう一度ソース管理に変更をコミットします。
 
-### <a name="question-what-is-the-purpose-of-the--crsftoken--tag-that-appears-in-the-form-elements"></a>質問: \<form\> 要素に表示される {% crsf_token %} タグの目的は何ですか。
+### <a name="question-what-is-the-purpose-of-the--csrftoken--tag-that-appears-in-the-form-elements"></a>質問: \<form\> 要素に表示される {% csrf_token %} タグの目的は何ですか。
 
-回答: `{% crsf_token %}` タグには Django の組み込みの[クロスサイト リクエスト フォージェリ (crsf) 保護](https://docs.djangoproject.com/en/2.0/ref/csrf/) (Django docs) が含まれています。 このタグは通常、フォームなどの POST、PUT、または DELETE 要求のメソッドに関連する任意の要素に追加します。 その後、テンプレートのレンダリング関数 (`render`) により、必要な保護が挿入されます。
+回答: `{% csrf_token %}` タグには Django の組み込みの[クロスサイト リクエスト フォージェリ (csrf) 保護](https://docs.djangoproject.com/en/2.0/ref/csrf/) (Django docs) が含まれています。 このタグは通常、フォームなどの POST、PUT、または DELETE 要求のメソッドに関連する任意の要素に追加します。 その後、テンプレートのレンダリング関数 (`render`) により、必要な保護が挿入されます。
 
 ## <a name="next-steps"></a>次の手順
 
