@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f0c18e4e895d8a0563699cf08e5a49fdecc973ab
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 4da159ae0fcb4347052efcea5d0dbd24d5ccd8f1
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39152260"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219238"
 ---
 # <a name="update-an-existing-application-for-msbuild-15"></a>既存のアプリケーションを MSBuild 15 用に更新する
 
@@ -40,7 +40,7 @@ MSBuild が中央の場所から確実に読み込まれるようにするには
 
 #### <a name="use-nuget-packages-preferred"></a>NuGet パッケージを使用する (推奨)
 
-以下の手順では、[PackageReference スタイルの NuGet の参照](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files)を使用しているものとします。
+以下の手順では、[PackageReference スタイルの NuGet の参照](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files)を使用しているものとします。
 
 NuGet パッケージから MSBuild アセンブリを参照するようにプロジェクト ファイルを変更します。 `ExcludeAssets=runtime` を指定して、アセンブリはビルド時にのみ必要であり、出力ディレクトリにコピーしてはならないことを、NuGet に伝えます。
 

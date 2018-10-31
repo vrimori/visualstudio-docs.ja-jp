@@ -330,7 +330,7 @@ docs.microsoft により、GitHub Flavored Markdown にいくつかの拡張機�
 > [!div class="button"]
 [ボタン リンク](../docs/core/index.md)
 
-ボタンが実際に動作している例を、[Intune ドキュメント](https://docs.microsoft.com/en-us/intune/get-started/choose-how-to-enroll-devices)でご覧ください。 
+ボタンが実際に動作している例を、[Intune ドキュメント](https://docs.microsoft.com/intune/get-started/choose-how-to-enroll-devices)でご覧ください。 
 
 ### <a name="selectors"></a>セレクター
 
@@ -338,7 +338,7 @@ docs.microsoft により、GitHub Flavored Markdown にいくつかの拡張機�
 - [macOS](../docs/core/tutorials/using-on-macos.md)
 - [Windows](../docs/core/tutorials/using-on-windows.md)
 
-セレクターが実際に動作している例を、[Intune ドキュメント](https://docs.microsoft.com/en-us/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune#how-your-end-users-get-their-apps)でご覧ください。
+セレクターが実際に動作している例を、[Intune ドキュメント](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune#how-your-end-users-get-their-apps)でご覧ください。
 
 ### <a name="step-by-steps"></a>操作手順
 
@@ -346,4 +346,4 @@ docs.microsoft により、GitHub Flavored Markdown にいくつかの拡張機�
 [前へ](../docs/csharp/expression-trees-interpreting.md)
 [次へ](../docs/csharp/expression-trees-translating.md)
 
-操作手順が実際に動作している例を、[Advanced Threat Analytics のドキュメント](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/install-ata-step2)でご覧ください。
+操作手順が実際に動作している例を、[Advanced Threat Analytics のドキュメント](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/install-ata-step2)でご覧ください。
