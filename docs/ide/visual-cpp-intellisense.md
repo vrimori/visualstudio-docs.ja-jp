@@ -1,24 +1,32 @@
 ---
 title: C++ IntelliSense
-ms.date: 09/06/2018
+ms.date: 10/08/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
-manager: douge
+author: mikeblome
+ms.author: mblome
+manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27b7912e624881e7dcd40ff2fdb9476d61d29e1c
-ms.sourcegitcommit: aea5cdb76fbc7eb31d1e5cc3c8d6adb0c743220f
+ms.openlocfilehash: ab520f7cdf512ebbfd07770d63d2ed50caee7a55
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44124906"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48879851"
 ---
 # <a name="visual-c-intellisense-features"></a>Visual C++ IntelliSense の機能
 
 IntelliSense は、コード作成をより便利にするための一連の機能に与えられた名前です。 C++ 用の IntelliSense は、スタンドアロン ファイルおよび C++ プロジェクトの一部を成すファイルで使用することができます。 クロスプラットフォーム プロジェクトでは、いくつかの IntelliSense 機能が、Android や iOS のコンテキスト内にいるときでも共有コード プロジェクト内の *.cpp* および *.c* ファイルで使用できます。
+
+この記事では、C++ IntelliSense 機能の概要について説明します。 IntelliSense 用にプロジェクトを構成する方法、および問題をトラブルシューティングする方法については、「[IntelliSense の C++ プロジェクトを構成する](visual-cpp-intellisense-configuration.md)」をご覧ください。
+
+## <a name="intellisense-features-in-c"></a>C++ の IntelliSense 機能
+
+IntelliSense は、コード作成をより便利にするための一連の機能に与えられた名前です。 便利さについては、人によって考え方が違うので、ほぼすべての IntelliSense 機能を **[テキスト エディター]** > **[C/C++]** > **[詳細]** の **[オプション]** ダイアログボックスで有効または無効にできます。 **[オプション]** ダイアログ ボックスは、メニュー バーの **[ツール]** メニューから使用できます。
+
+![[オプション] ダイアログ ボックス](../ide/media/sintellisensecpptoolsoptions.PNG)
 
 次の画像のメニュー項目とキーボード ショートカットを使用すると、IntelliSense にアクセスできます。
 
@@ -100,4 +108,5 @@ Android や iOS 用にビルドするように構成されている OpenGLES ア
 
 ## <a name="see-also"></a>関連項目
 
-- [IntelliSense を使用する](../ide/using-intellisense.md)
+- [IntelliSense の使用](../ide/using-intellisense.md)
+- [IntelliSense の C++ プロジェクトを構成する](visual-cpp-intellisense-configuration.md)

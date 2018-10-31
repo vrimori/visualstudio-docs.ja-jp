@@ -1,7 +1,7 @@
 ---
 title: Python Interactive ウィンドウ (REPL)
 description: コードを迅速に開発するために Visual Studio で Python コード用の対話型ウィンドウ (REPL) を使う方法について説明します。
-ms.date: 06/26/2018
+ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2eeffea641fd6d571b8b682aebab7f7d0ff83a41
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 8146e43a51e4d1634cbba78d789a3ef8cff99f95
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499069"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219927"
 ---
 # <a name="work-with-the-python-interactive-window"></a>Python 対話型ウィンドウの使用
 
@@ -82,7 +82,7 @@ Visual Studio では、複数の Python REPL モードから選ぶことがで�
 | --- | --- |
 | `$$` | コメントを挿入します。セッションのコードにコメントを追加するのに役立ちます。 |
 | `$attach` | Visual Studio のデバッガーを REPL ウィンドウ プロセスにアタッチして、デバッグできるようにします。 |
-| `$cls`, `$clear` | エディター ウィンドウの内容を消去し、履歴と実行コンテキストはそのまま維持します。 |
+| `$cls`、 `$clear` | エディター ウィンドウの内容を消去し、履歴と実行コンテキストはそのまま維持します。 |
 | `$help` | コマンドの一覧または特定のコマンドのヘルプを表示します。 |
 | `$load` | ファイルからコマンドを読み込み、完了するまで実行します。 |
 | `$mod` | 現在のスコープを指定されたモジュール名に切り替えます。 |

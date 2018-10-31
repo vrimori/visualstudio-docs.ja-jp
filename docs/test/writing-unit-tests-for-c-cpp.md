@@ -1,20 +1,20 @@
 ---
 title: Visual Studio で C/C++ 用の単体テストを作成する
-ms.date: 11/04/2017
+ms.date: 10/09/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: mblome
-manager: douge
+manager: wpickett
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 7838d4435c71fa332711c0ef3794c8bed556827a
-ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
+ms.openlocfilehash: e79b65628193c7b90a03b2e1141dfc45b6b0829f
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341373"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48879227"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio で C/C++ 用の単体テストを作成する
 
@@ -31,6 +31,10 @@ Visual Studio には次の C++ テスト フレームワークが含まれてお
 - CTest
 
 インストールされているフレームワークに加えて、Visual Studio 内で使いたいどのようなフレームワークについても、独自のテスト アダプターを作成できます。 テスト アダプターは、単体テストを **[テスト エクスプローラー]** ウィンドウと統合できます。 [Visual Studio Marketplace](https://marketplace.visualstudio.com) では複数のサードパーティ製アダプターを利用できます。 詳細については、「[サードパーティ製の単体テスト フレームワークをインストールする](install-third-party-unit-test-frameworks.md)」をご覧ください。
+
+**Visual Studio 2017 バージョン 15.7 (Professional および Enterprise)**
+
+C++ 単体テスト プロジェクトでは [CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md) がサポートされています。
 
 **Visual Studio 2017 バージョン 15.5**
 
@@ -80,13 +84,14 @@ TEST_CLASS と TEST_METHOD は、[Microsoft ネイティブ テスト フレー�
 TEST_METHOD は void を返します。 テスト結果を生成するには、`Assert` クラスの静的メソッドを使って、期待される結果に対して実際の結果をテストします。 次の例では、`MyClass` に `std::string` を受け取るコンストラクターがあるものとします。 コンストラクターが期待どおりにクラスを初期化することを次のようにテストできます。
 
 ```cpp
-        TEST_METHOD(TestClassInit)
-        {
-            std::string name = "Bill";
-            MyClass mc(name);
-            Assert::AreEqual(name, mc.GetName());
-        }
+TEST_METHOD(TestClassInit)
+{
+    std::string name = "Bill";
+    MyClass mc(name);
+    Assert::AreEqual(name, mc.GetName());
+}
 ```
+
 前の例では、`Assert::AreEqual` の呼び出しの結果によって、テストが成功か失敗かが決まります。 Assert クラスには、予想される結果と実際の結果を比較するためのメソッドが他にも多く含まれています。
 
 テスト メソッドに "*特徴*" を追加して、テストの所有者、優先度、他の情報を指定できます。 その後、これらの値を使って、**テスト エクスプローラー**でテストの並べ替えやグループ化を行うことができます。 詳細については、「[テスト エクスプローラーを使用して単体テストを実行する](run-unit-tests-with-test-explorer.md)」を参照してください。
@@ -111,6 +116,22 @@ TEST_METHOD は void を返します。 テスト結果を生成するには、`
 **テスト エクスプローラー**の使い方については、「[テスト エクスプローラーを使用して単体テストを実行する](run-unit-tests-with-test-explorer.md)」をご覧ください。
 
 単体テストに関するベスト プラクティスについては、「[単体テストの基本](unit-test-basics.md)」をご覧ください
+
+## <a name="use-codelens"></a>CodeLens を使用する
+
+**Visual Studio 2017 バージョン 15.7 Professional および Enterprise Edition のみ**: [CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md) を使用すると、コード エディターを離れることなく単体テストの状態を簡単に確認することができます。 次の中の任意の方法で、C++ 単体テスト プロジェクト用に CodeLens を初期化できます。
+
+- テスト プロジェクトまたはソリューションを編集してビルドします。
+- プロジェクトまたはソリューションをリビルドします。
+- **テスト エクスプローラー** ウィンドウからテストを実行します。
+
+**CodeLens** が初期化されたら、各単体テストの上にテストの状態アイコンが表示されます。
+
+![C++ の CodeLens アイコン](media/cpp-test-codelens-icons.png)
+
+ アイコンをクリックして詳細を表示するか、単体テストを実行またはデバッグします。
+
+![C++ の CodeLens の実行およびデバッグ](media/cpp-test-codelens-run-debug.png)
 
 ## <a name="see-also"></a>関連項目
 

@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 89a8fd27dbf16db2277b52b2def2fac1e9f06e68
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: bbefb90cad3b2aa3e6e7b0870548d44567ea8914
+ms.sourcegitcommit: 56f3c31f1a06f6a6d2a8793b1abfa60cdf482497
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945206"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48817322"
 ---
 # <a name="exec-task"></a>Exec タスク
 指定された引数を使って、指定されたプログラムまたはコマンドを実行します。  
@@ -37,17 +37,17 @@ ms.locfileid: "37945206"
 |---------------|-----------------|  
 |`Command`|必須の `String` 型のパラメーターです。<br /><br /> 実行するコマンドです。 attrib などのシステム コマンド、または *program.exe*、*runprogram.bat*、*setup.msi* などの実行可能ファイルを指定できます。<br /><br /> このパラメーターで複数のコマンド行を指定できます。 または、複数のコマンドをバッチ ファイルに入れ、このパラメーターを使ってそれを実行することもできます。|  
 |`ConsoleOutput`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の出力パラメーターです。<br /><br /> 各項目出力は、ツールによって生成される標準出力または標準エラー ストリームの行です。 これは、`ConsoleToMsBuild` が `true` に設定されている場合にのみキャプチャされます。|
-|`ConsoleToMsBuild`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、タスクは、ツールの標準エラーと標準出力をキャプチャして、`ConsoleOutput` 出力パラメーターで利用できるようにします。 既定値は `false` です。|
-|`CustomErrorRegularExpression`|省略可能な `String` 型のパラメーターです。<br /><br /> ツールの出力でエラー行を示すために使う正規表現を指定します。 これは、普通とは異なる書式設定の出力を生成するツールに便利です。|  
-|`CustomWarningRegularExpression`|省略可能な `String` 型のパラメーターです。<br /><br /> ツールの出力で警告行を示すために使う正規表現を指定します。 これは、普通とは異なる書式設定の出力を生成するツールに便利です。|  
-|`EchoOff`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、タスクは `Command` の拡張形式を MSBuild ログに出力しません。 既定値は `false` です。|
+|`ConsoleToMsBuild`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、タスクは、ツールの標準エラーと標準出力をキャプチャして、`ConsoleOutput` 出力パラメーターで利用できるようにします。<br /><br />既定値:`false`。|  
+|`CustomErrorRegularExpression`|省略可能な `String` 型のパラメーターです。<br /><br /> ツールの出力でエラー行を示すために使う正規表現を指定します。 これは、普通とは異なる書式設定の出力を生成するツールに便利です。<br /><br />既定値: `null` (カスタム処理はありません)。|  
+|`CustomWarningRegularExpression`|省略可能な `String` 型のパラメーターです。<br /><br /> ツールの出力で警告行を示すために使う正規表現を指定します。 これは、普通とは異なる書式設定の出力を生成するツールに便利です。<br /><br />既定値: `null` (カスタム処理はありません)。|  
+|`EchoOff`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、タスクは `Command` の拡張形式を MSBuild ログに出力しません。<br /><br />既定値:`false`。|
 |`ExitCode`|省略可能な `Int32` 型の読み取り専用出力パラメーターです。<br /><br /> 実行したコマンドの終了コードを示します。|  
-|`IgnoreExitCode`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、タスクは実行したコマンドで提供されている終了コードを無視します。 それ以外の場合、実行されたコマンドが 0 以外の終了コードを返すときは、タスクは `false` を返します。|  
-|`IgnoreStandardErrorWarningFormat`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `false` の場合は、標準エラー/警告の形式に一致する出力行を選び、エラー/警告としてログに記録します。 `true` の場合は、この動作は無効になります。 既定値は `false` です。|  
+|`IgnoreExitCode`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、タスクは実行したコマンドで提供されている終了コードを無視します。 それ以外の場合、実行されたコマンドが 0 以外の終了コードを返すときは、タスクは `false` を返します。<br /><br />既定値:`false`。|  
+|`IgnoreStandardErrorWarningFormat`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `false` の場合は、標準エラー/警告の形式に一致する出力行を選び、エラー/警告としてログに記録します。 `true` の場合は、この動作は無効になります。<br /><br />既定値:`false`。|  
 |`Outputs`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の出力パラメーターです。<br /><br /> タスクからの出力項目を含みます。 `Exec` タスク自体はこれらを設定しません。 代わりに、タスクが設定したかのようにユーザーが提供して、プロジェクトの後の処理で使うことができます。|  
 |`StdErrEncoding`|省略可能な `String` 型の出力パラメーターです。<br /><br /> キャプチャしたタスクの標準エラー ストリームのエンコーディングを指定します。 既定値は、現在のコンソール出力のエンコーディングです。|  
 |`StdOutEncoding`|省略可能な `String` 型の出力パラメーターです。<br /><br /> キャプチャしたタスクの標準出力ストリームのエンコーディングを指定します。 既定値は、現在のコンソール出力のエンコーディングです。|  
-|`WorkingDirectory`|省略可能な `String` 型のパラメーターです。<br /><br /> コマンドを実行するディレクトリを指定します。|  
+|`WorkingDirectory`|省略可能な `String` 型のパラメーターです。<br /><br /> コマンドを実行するディレクトリを指定します。<br /><br />既定値: プロジェクトの現在の作業ディレクトリ。|  
   
 ## <a name="remarks"></a>コメント  
  このタスクは、実行したいジョブの特定の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクを使用できないときに便利です。 ただし、`Exec` タスクは、固有のタスクとは異なり、実行したツールまたはコマンドの結果に基づいて追加処理や条件演算を行うことはできません。
@@ -69,10 +69,9 @@ ms.locfileid: "37945206"
         <!-- set security on binaries-->  
         <Exec Command="echo y| cacls %(Binaries.Identity) /G everyone:R"/>  
     </Target>  
-  
 </Project>  
-```  
-  
+```
+
 ## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
  [タスク リファレンス](../msbuild/msbuild-task-reference.md)

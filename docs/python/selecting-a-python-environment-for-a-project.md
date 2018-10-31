@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 813fdbccaf7bb685f0b4bf182f0bd0aede907f83
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: e738eb52ce8cb7cef4090dd9812f6c421a7d11fd
+ms.sourcegitcommit: 40b6438b5acd7e59337a382c39ec711b9e99cc8a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45551663"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101135"
 ---
 # <a name="how-to-assign-which-python-environment-is-used-for-a-project"></a>プロジェクトで使用される Python 環境を割り当てる方法
 
@@ -50,7 +50,7 @@ Visual Studio のすべての新しい Python プロジェクトは、最初は�
 
 仮想環境を使用する利点は、プロジェクトを開発しているときに、仮想環境ではプロジェクトの正確な依存関係が常に反映されることです  (一方、共有グローバル環境では、プロジェクトでの使用の有無に関係なく、複数のライブラリが含まれます)。仮想環境から *requirements.txt* ファイルを簡単に作成でき、そのファイルを使用して依存関係を別の開発環境または実稼働コンピューターに再インストールできます。 詳細については、「[requirements.txt での必須パッケージの管理](managing-required-packages-with-requirements-txt.md)」をご覧ください。
 
-*requirements.txt* ファイルが含まれているプロジェクトを Visual Studio で開くと、仮想環境を再作成するためのオプションが自動的に示されます。 Visual Studio がインストールされていないコンピューター (Azure App Service など) では、`pip install -r requirements.txt` を使用して、パッケージを復元できます (このプロセスについては、「[Azure App Service での Python の管理](managing-python-on-azure-app-service.md)」をご覧ください)。
+*requirements.txt* ファイルが含まれているプロジェクトを Visual Studio で開くと、仮想環境を再作成するためのオプションが自動的に示されます。 Visual Studio がインストールされていないコンピューターでは、`pip install -r requirements.txt` を使用してパッケージを復元できます。
 
 仮想環境には基本インタープリターへのハード コードされたパスが含まれていること、および *requirements.txt* を使用して環境を再作成できるため、通常は、ソース管理から仮想環境フォルダー全体が除外されます。
 

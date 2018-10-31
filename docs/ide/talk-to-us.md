@@ -1,7 +1,7 @@
 ---
 title: ご意見
 ms.custom: ''
-ms.date: 02/19/2018
+ms.date: 10/09/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
 ms.topic: conceptual
@@ -14,28 +14,28 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: faa0e17537f8f5b5e10b4d133615e3d82471c629
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: d301d2a43e820f59979692071edbfb25ba1d7386
+ms.sourcegitcommit: 50b19010b2e2b4736835350710e2edf93b980b56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46495883"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49073742"
 ---
 # <a name="visual-studio-product-feedback"></a>Visual Studio 製品フィードバック
 
-製品およびドキュメントをより良いものにするために、皆様のご意見をお寄せください。 いつも個別に回答できるとは限りませんが、お寄せいただいたフィードバックは、適切な担当者または担当チームに届けられます。
+ご意見 製品およびドキュメントをより良いものにするために、皆様のご意見をお寄せください。 いつも個別に回答できるとは限りませんが、お寄せいただいたフィードバックは、適切な担当者または担当チームに届けられます。
 
 ## <a name="i-want-to-report-a-problem-with-visual-studio"></a>Visual Studio に関する問題を報告する方法
 
-クラッシュ、パフォーマンスの低下、予期しない動作など、Visual Studio の使用で問題が発生している場合は、**[問題の報告]** ツールを使用して、Microsoft に問題をご連絡ください。 単に **[クイック起動]** の横にあるフィードバック アイコンをクリックするか、メニュー バーで **[ヘルプ]** > **[フィードバックの送信]** > **[問題の報告]** の順に選択します。 Visual Studio によって、問題が [Developer Community](https://developercommunity.visualstudio.com) に報告されます。 詳細については、「[Visual Studio 2017 で問題を報告する方法](how-to-report-a-problem-with-visual-studio-2017.md)」を参照してください。
+Visual Studio を使用していて問題 &mdash; クラッシュ、パフォーマンスの低下、予期しない動作など &mdash; が発生した場合は、**[問題を報告する]** ツールを使ってお知らせください。 Visual Studio で、**[クイック起動]** の横にあるフィードバック アイコンをクリックするか、メニュー バーで **[ヘルプ]** > **[フィードバックの送信]** > **[問題の報告]** の順に選択します。 次に、Visual Studio によって[開発者コミュニティ](https://developercommunity.visualstudio.com) ページがブラウザーで開かれます。ここにサインインして問題を報告することができます。 詳細については、「[Visual Studio 2017 で問題を報告する方法](how-to-report-a-problem-with-visual-studio-2017.md)」を参照してください。
 
 ## <a name="i-want-to-make-a-suggestion-about-visual-studio-features"></a>Visual Studio の機能に関するご提案
 
-改善できる点がありましたら、ぜひご連絡ください! **[ヘルプ]** > **[フィードバックの送信]** > **[提案事項の送信]** を選択して、Visual Studio チームに機能または変更を提案します。 提案事項は自動的に [UserVoice](https://visualstudio.uservoice.com) に投稿され、それに対して他のユーザーが投票できるようになります。
+改善できる点がありましたら、ぜひご連絡ください。 Visual Studio のメニュー バーから、**[ヘルプ]** > **[フィードバックの送信]** > **[提案の送信]** の順に選択します。 次に、Visual Studio によって[開発者コミュニティ](https://developercommunity.visualstudio.com) ページがブラウザーで開かれます。ここにサインインしてアイデアを共有することができます。 詳細については、[Visual Studio 2017 用の機能の提案](suggest-a-feature.md)に関連するページをご覧ください。
 
 ### <a name="rate-this-product"></a>この製品を評価する
 
-Visual Studio のプレリリース版には、 **[この製品を評価する]** メニュー項目があり、実行しているビルドの品質に関するフィードバックを送信できます。 これは製品のリリース版には表示されません。
+プレリリース バージョンの Visual Studio には、リリース バージョンの製品にはないメニュー項目 **[この製品を評価する]** があります。 このメニュー項目 **[この製品を評価する]** を使用して、実行中のプレリリース ビルドの品質に関するフィードバックを送信します。
 
 ## <a name="i-want-to-contact-microsoft-support"></a>Microsoft サポートに問い合わせる
 
@@ -50,11 +50,11 @@ Visual Studio のサポート情報については、[サポートのライフ �
 
 製品が新しいコンピューターやデバイスに最初からインストールされていた場合は、ハードウェアの製造元がこのソフトウェアの技術サポートや支援を行います。 サポートについては、製造元に直接お問い合わせください。
 
-Microsoft サポート サービスは、当時最新だった価格、条項、および条件に基づきます。 料金および条件は将来予告なしに変更することがあります。
+Microsoft サポート サービスは、当時最新だった価格、条項、および条件に基づきます。 価格、条項、および条件は、将来予告なしに変更される場合があります。
 
 ## <a name="i-want-to-get-involved-in-the-developer-community"></a>開発者コミュニティへの参加
 
-質問や回答を他の開発者と共有する場合は、[Visual Studio Developer Community](https://developercommunity.visualstudio.com) サイト、[MSDN フォーラム](http://social.msdn.microsoft.com/Forums/home)、または [StackOverflow](http://stackoverflow.com/) をご利用になれます。 「[開発者コード サンプル](http://code.msdn.microsoft.com/)」サイトで、他の開発者のコードを閲覧したり、ご自分の例を公開したりすることもできます。
+質問や回答を他の開発者と共有する場合は、[Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com) サイト、[MSDN フォーラム](http://social.msdn.microsoft.com/Forums/home)、または [StackOverflow](http://stackoverflow.com/) を使用します。 「[開発者コード サンプル](http://code.msdn.microsoft.com/)」サイトで、他の開発者のコードを閲覧したり、ご自分の例を公開したりすることもできます。
 
 ## <a name="i-want-to-help-improve-the-visual-studio-documentation"></a>Visual Studio ドキュメントの品質向上にご協力ください
 
