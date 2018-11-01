@@ -42,7 +42,7 @@ ms.locfileid: "49270973"
 
 デバッグをリモートで試行した場合に、次のエラーが発生することがあります。  
   
--   [Error: Unable to Automatically Step Into the Server](../debugger/error-unable-to-automatically-step-into-the-server.md)  
+-   [エラー : サーバーに自動的にステップ インできません](../debugger/error-unable-to-automatically-step-into-the-server.md)  
   
 -   [エラー : Microsoft Visual Studio リモート デバッグ モニター (MSVSMON.EXE) は、リモート コンピューター上では実行されていません。](../debugger/error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running-on-the-remote-computer.md)  
   
