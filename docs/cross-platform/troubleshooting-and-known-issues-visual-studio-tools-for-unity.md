@@ -90,7 +90,7 @@ Visual Studio が特定のブレークポイントのソースの場所を見つ
 
 ## <a name="breakpoints-not-hit"></a>ブレークポイントがヒットない
 
-使っているスクリプトが現在の Unity シーンに正しく読み込まれて使われていることを確認してください。 Visual Studio と Unity の両方を終了し、すべての生成されたファイル (*.csproj、*.sln) と Library フォルダー全体を削除します。
+使っているスクリプトが現在の Unity シーンに正しく読み込まれて使われていることを確認してください。 Visual Studio と Unity の両方を終了し、すべての生成されたファイル (\*.csproj、\*.sln) と Library フォルダー全体を削除します。
 
 ## <a name="unable-to-debug-android-players"></a>Android プレーヤーをデバッグできない
 
