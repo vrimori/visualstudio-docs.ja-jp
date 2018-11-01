@@ -37,7 +37,7 @@ ms.locfileid: "31943320"
 1. *vstemplate* ファイルの XML がテンプレート スキーマに準拠していることを確認します。 *vstemplate* スキーマの詳細については、[テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)に関するページを参照してください。
 
     > [!NOTE]
-    > *vstemplate* ファイルを作成する際に IntelliSense サポートを取得するには、`xmlns` 属性を `VSTemplate` 要素に追加し、http://schemas.microsoft.com/developer/vstemplate/2005 の値を割り当てます。
+    > *vstemplate* ファイルを作成する際に IntelliSense サポートを取得するには、`xmlns` 属性を `VSTemplate` 要素に追加し、 http://schemas.microsoft.com/developer/vstemplate/2005 の値を割り当てます。
 
 1. *vstemplate* ファイルを保存して、閉じます。
 

@@ -105,7 +105,7 @@ Visual Studio 2015 を使っている場合、そのインストーラーには 
 
 ## <a name="install-tools-for-ios"></a>Install tools for iOS
 
-Visual C++ for Cross-Platform Mobile Development を使用して、iOS コードを編集およびデバッグし、iOS シミュレーターまたは iOS デバイスに配置することができます。ただし、ライセンスの制限により、コードのビルドはリモートの Mac 上で行わなければなりません。 Visual Studio を使用して iOS アプリをビルドおよび実行するには、Mac 上にリモート エージェントをセットアップして構成する必要があります。 インストール方法、前提条件、構成オプションの詳細については、「[Install And Configure Tools to Build using iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md)」を参照してください。 iOS 用にビルドするのでない場合は、この手順を省略できます。
+Visual C++ for Cross-Platform Mobile Development を使用して、iOS コードを編集およびデバッグし、iOS シミュレーターまたは iOS デバイスに配置することができます。ただし、ライセンスの制限により、コードのビルドはリモートの Mac 上で行わなければなりません。 Visual Studio を使用して iOS アプリをビルドおよび実行するには、Mac 上にリモート エージェントをセットアップして構成する必要があります。 インストール方法、前提条件、構成オプションの詳細については、「[iOS を使用してビルドするためのツールのインストールおよび構成](../cross-platform/install-and-configure-tools-to-build-using-ios.md)」を参照してください。 iOS 用にビルドするのでない場合は、この手順を省略できます。
 
 ## <a name="install-or-update-dependencies-manually"></a>手動による依存関係のインストールまたは更新
 
