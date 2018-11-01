@@ -16,41 +16,41 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9b5b66690d3856a2bf1fc6df417b60ab5e293127
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 4142ebe86ea69fbb0a74f25c2a7053a60c527cdb
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35256745"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671561"
 ---
 # <a name="how-to-programmatically-create-new-visio-documents"></a>方法: プログラムによって新しい Visio 図面を作成
-  追加する新しい Microsoft Office Visio 図面のドキュメントを作成するときに、`Microsoft.Office.Interop.Visio.Documents`開いている Visio 図面のコレクション。 その結果、`Microsoft.Office.Interop.Visio.Documents.Add`メソッドは、新しい Visio 描画図面を作成します。 詳細については、 [Microsoft.Office.Interop.Visio.Documents.Add](http://msdn.microsoft.com/library/office/ff766868.aspx) メソッドの VBA リファレンス ドキュメントを参照してください。  
+  Microsoft Office Visio 描画図面を新規に作成する場合、開いている Visio 図面の `Microsoft.Office.Interop.Visio.Documents` コレクションにその図面を追加します。 これにより、`Microsoft.Office.Interop.Visio.Documents.Add` メソッドで新しい Visio 描画図面が作成されます。 詳細については、 [Microsoft.Office.Interop.Visio.Documents.Add](/office/vba/api/Visio.Documents.Add) メソッドの VBA リファレンス ドキュメントを参照してください。  
   
 ## <a name="create-new-blank-documents"></a>新しい空白の図面を作成します。  
   
 ### <a name="to-create-a-new-document"></a>新しい図面を作成するには  
   
--   使用して、`Microsoft.Office.Interop.Visio.Documents.Add`メソッドをテンプレートに基づかない新しい空白の文書を作成します。  
+-   `Microsoft.Office.Interop.Visio.Documents.Add` メソッドを使用して、テンプレートに基づかない新しい空白の図面を作成します。  
   
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#1](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#1)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#1](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#1)]  
   
 ## <a name="create-documents-copied-from-existing-documents"></a>既存のドキュメントからコピーしたドキュメントを作成します。  
- `Microsoft.Office.Interop.Visio.Documents.Add`メソッドは、既存の Visio 図面のコピーである新しいドキュメントを作成できます。 図のファイル名と完全修飾パスを指定する必要があります。  
+ `Microsoft.Office.Interop.Visio.Documents.Add` メソッドは、既存の Visio 図面をコピーして新しい図面を作成できます。 図のファイル名と完全修飾パスを指定する必要があります。  
   
 ### <a name="to-create-a-new-document-that-is-copied-from-an-existing-document"></a>既存の図面をコピーして新しい図面を作成するには  
   
--   呼び出す、`Microsoft.Office.Interop.Visio.Documents.Add`メソッドと、Visio 図面のパスを指定します。  
+-   `Microsoft.Office.Interop.Visio.Documents.Add` メソッドを呼び出して、Visio 図面のパスを指定します。  
   
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#2](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#2)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#2](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#2)]  
   
 ## <a name="create-stencils-copied-from-existing-stencils"></a>既存のステンシルをコピーしてステンシルを作成します。  
- [Microsoft.Office.Interop.Visio.Documents.Add](http://msdn.microsoft.com/library/office/ff766868.aspx) メソッドは、既存の Visio ステンシルをコピーして新しいステンシルを作成できます。 ステンシルのファイル名と完全修飾パスを指定する必要があります。  
+ [Microsoft.Office.Interop.Visio.Documents.Add](/office/vba/api/Visio.Documents.Add) メソッドは、既存の Visio ステンシルをコピーして新しいステンシルを作成できます。 ステンシルのファイル名と完全修飾パスを指定する必要があります。  
   
 ### <a name="to-create-a-new-stencil-that-is-copied-from-an-existing-stencil"></a>既存のステンシルをコピーして新しいステンシルを作成するには  
   
--   呼び出す、`Microsoft.Office.Interop.Visio.Documents.Add`メソッド ステンシルのパスを指定します。  
+-   `Microsoft.Office.Interop.Visio.Documents.Add` メソッドを呼び出して、ステンシルのパスを指定します。  
   
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#3](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#3)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#3](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#3)]  
@@ -60,12 +60,12 @@ ms.locfileid: "35256745"
   
 ### <a name="to-create-a-new-document-that-is-based-on-an-existing-template"></a>既存のテンプレートに基づいて新しい図面を作成するには  
   
--   呼び出す、`Microsoft.Office.Interop.Visio.Documents.Add`メソッド、テンプレートのパスを指定します。  
+-   `Microsoft.Office.Interop.Visio.Documents.Add` メソッドを呼び出して、テンプレートのパスを指定します。  
   
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#4](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#4)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#4](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#4)]  
   
-## <a name="compile-the-code"></a>コードをコンパイルします  
+## <a name="compile-the-code"></a>コードのコンパイル  
  このコード例で必要な要素は次のとおりです。  
   
 -   という名前の Visio 図面`myDrawing.vsd`という名前のディレクトリである必要があります`Test`で、 *My Documents*フォルダー (Windows XP 以前) または*ドキュメント*フォルダー (Windows Vista)。  

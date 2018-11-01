@@ -22,12 +22,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c2710fae53cd860b6d67cc9f9d8c7ce61afa2b03
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6fac14df471b0dfcda1d0bf4763158280211bc33
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49929856"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50672461"
 ---
 # <a name="features-available-by-office-application-and-project-type"></a>Office アプリケーションおよびプロジェクトの種類で使用できる機能
   Visual Studio には、次のように、Microsoft Office アプリケーションのさまざまなビジネス シナリオをサポートするプロジェクト テンプレートがいくつか用意されています。  
@@ -62,9 +62,9 @@ ms.locfileid: "49929856"
 |他の Microsoft Office ソリューションに VSTO アドイン内のオブジェクトを公開します。|VSTO アドイン プロジェクト。|[他の Office ソリューションから VSTO アドイン内のコードを呼び出す](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)|  
 |次のホスト コントロール:<br /><br /> -グラフ<br />-ListObject<br />-NamedRange<br />-コンテンツ コントロール<br />-ブックマーク|ドキュメントレベルのプロジェクト。<br /><br /> Word と Excel 用の VSTO アドイン プロジェクト。|[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)|  
 |次のホスト コントロール:<br /><br /> -XMLMappedRange<br />-XMLNode<br />-XMLNodes|ドキュメントレベルのプロジェクト。|[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)|  
-|複数プロジェクトの配置。|ドキュメントレベルのプロジェクト。<br /><br /> VSTO アドイン プロジェクト。|[チュートリアル: 単一の ClickOnce インストーラーで複数の Office ソリューションを展開します。](http://msdn.microsoft.com/051223c0-4082-4799-b78b-a4763a9def55)|  
+|複数プロジェクトの配置。|ドキュメントレベルのプロジェクト。<br /><br /> VSTO アドイン プロジェクト。|[チュートリアル: 単一の ClickOnce インストーラーで複数の Office ソリューションを展開します。](https://msdn.microsoft.com/051223c0-4082-4799-b78b-a4763a9def55)|  
 |Outlook フォーム領域。|Outlook 用の VSTO アドイン プロジェクト。|[Outlook フォーム領域を作成します。](../vsto/creating-outlook-form-regions.md)|  
-|配置後の動作。|ドキュメントレベルのプロジェクト。<br /><br /> VSTO アドイン プロジェクト。|[チュートリアル: ClickOnce のインストール後にドキュメントをエンドユーザーのコンピューターにコピーします。](http://msdn.microsoft.com/100090f7-bc63-4152-b3e1-19b48bc27466)|  
+|配置後の動作。|ドキュメントレベルのプロジェクト。<br /><br /> VSTO アドイン プロジェクト。|[チュートリアル: ClickOnce のインストール後にドキュメントをエンドユーザーのコンピューターにコピーします。](https://msdn.microsoft.com/100090f7-bc63-4152-b3e1-19b48bc27466)|  
 |リボンのカスタマイズ。|ドキュメントレベルのプロジェクト。<br /><br /> 次のアプリケーション用の VSTO アドイン プロジェクト:<br /><br /> -Excel<br />-InfoPath (InfoPath 2013 と InfoPath 2010 のみ)<br />-Outlook<br />-PowerPoint<br />-プロジェクト<br />Visio<br />ワード|[リボンの概要](../vsto/ribbon-overview.md)|  
 |視覚的なドキュメント デザイナー。|ドキュメントレベルのプロジェクト。|[Visual Studio 環境における office プロジェクト](../vsto/office-projects-in-the-visual-studio-environment.md)|  
   

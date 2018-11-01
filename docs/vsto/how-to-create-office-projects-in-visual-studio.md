@@ -24,12 +24,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 06d91a2a9e7dc206e2303637bce013b473cf6560
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6930ce085405c010e59e13adb8a3d380cff28d0e
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49839038"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50672770"
 ---
 # <a name="how-to-create-office-projects-in-visual-studio"></a>方法: Visual Studio での Office プロジェクトの作成
   使用することができます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]VSTO アドインとドキュメント レベルの作成に Microsoft Office アプリケーション用のカスタマイズ。 これらの種類のプロジェクトの詳細については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)します。  
@@ -87,7 +87,7 @@ ms.locfileid: "49839038"
 7. **[OK]** を選択します。
   
     > [!NOTE]  
-    >  アドイン プロジェクトを作成すると、必ず保存されます。 アドイン プロジェクトを一時プロジェクトとして作成することはできません。 一時プロジェクトの詳細については、次を参照してください。[一時プロジェクト](http://msdn.microsoft.com/9cf1944c-7045-44cc-8701-7b0eb4099f2b)します。  
+    >  アドイン プロジェクトを作成すると、必ず保存されます。 アドイン プロジェクトを一時プロジェクトとして作成することはできません。 一時プロジェクトの詳細については、次を参照してください。[一時プロジェクト](https://msdn.microsoft.com/9cf1944c-7045-44cc-8701-7b0eb4099f2b)します。  
   
 ### <a name="to-create-a-document-level-customization-project"></a>ドキュメント レベルのカスタマイズ プロジェクトを作成するには  
   

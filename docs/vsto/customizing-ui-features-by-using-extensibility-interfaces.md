@@ -23,12 +23,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6a18ad30fac44028f4eda89da72babeb36ffe24a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ec1f538515c8765629e812b8d7f4070476dd95ba
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49873975"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50670846"
 ---
 # <a name="customize-ui-features-by-using-extensibility-interfaces"></a>機能拡張インターフェイスによる UI 機能をカスタマイズします。
   Visual Studio に含まれる Office 開発ツールは、VSTO アドインにおけるカスタム作業ウィンドウ、リボンのカスタマイズ、および Outlook フォーム領域の作成に使用可能な、多数の実装の詳細を処理するクラスとデザイナーを提供します。 ただし、特別な要件がある場合、各機能の *拡張インターフェイス* を自分で実装することもできます。  
@@ -71,7 +71,7 @@ ms.locfileid: "49873975"
   [!code-vb[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#1)]
   [!code-csharp[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#1)]  
   
-  実装の詳細については<xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>を参照してください[、2007 Office system でカスタム作業ウィンドウを作成する](http://msdn.microsoft.com/256313db-18cc-496c-a961-381ed9ca94be)Microsoft Office ドキュメントにします。  
+  実装の詳細については<xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>を参照してください[、2007 Office system でカスタム作業ウィンドウを作成する](/previous-versions/office/developer/office-2007/aa338197(v=office.12))Microsoft Office ドキュメントにします。  
   
 ### <a name="example-of-overriding-the-requestservice-method"></a>RequestService メソッドをオーバーライドする例  
  次のコード例は、前のコード例から <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> クラスのインスタンスを返すために `TaskPaneHelper` メソッドをオーバーライドする方法を示します。 *serviceGuid* パラメーターの値を検査し、要求されているインターフェイスを特定して、そのインターフェイスを実装するオブジェクトを返します。  

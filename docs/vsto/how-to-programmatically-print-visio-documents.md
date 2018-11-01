@@ -16,17 +16,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4caf48d0268e653b7ce6f7a5c8e7efb1e2ec39e6
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 6beed729ed670d5f34c645575795b625e03e9583
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35257506"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671223"
 ---
 # <a name="how-to-programmatically-print-visio-documents"></a>方法: プログラムによって Visio 図面を印刷します。
   Microsoft Office Visio 図面の全体または特定のページだけを印刷することができます。  
   
- 印刷メソッドの詳細については、 [Microsoft.Office.Interop.Visio.Document.Print](https://msdn.microsoft.com/library/office/ff767996.aspx) メソッドと [Microsoft.Office.Interop.Visio.Page.Print](https://msdn.microsoft.com/library/office/ff765064.aspx) メソッドの VBA リファレンス ドキュメントを参照してください。  
+ 印刷メソッドの詳細については、 [Microsoft.Office.Interop.Visio.Document.Print](/office/vba/api/Visio.Document.Print) メソッドと [Microsoft.Office.Interop.Visio.Page.Print](/office/vba/api/Visio.Page.Print) メソッドの VBA リファレンス ドキュメントを参照してください。  
   
 ## <a name="print-a-visio-document"></a>Visio 図面を印刷します。  
   

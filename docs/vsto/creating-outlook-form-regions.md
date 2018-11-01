@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a5be9417ab3140ce652535b8c0c6a5979d50ffb6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d5d4aed381841d5f88209aefdcff641a2a821f01
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49866429"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50673082"
 ---
 # <a name="create-outlook-form-regions"></a>Outlook フォーム領域を作成します。
   フォーム領域を使用して、Microsoft Office Outlook フォームをカスタマイズできます。 Visual Studio には、フォーム領域のデザイン、開発、およびデバッグを簡単に行うことができる高度なツールが用意されています。  
@@ -60,7 +60,7 @@ ms.locfileid: "49866429"
   
 - 閲覧ペインとインスペクターにカスタム UI を表示する。  
   
-  詳細については、次を参照してください。[のフォーム ページおよびフォーム領域をカスタマイズ](http://msdn.microsoft.com/library/office/ff869060.aspx)します。  
+  詳細については、次を参照してください。[のフォーム ページおよびフォーム領域をカスタマイズ](/office/vba/outlook/Concepts/Forms/customizing-form-pages-and-form-regions)します。  
   
 ##  <a name="Adding"></a> Outlook フォーム領域をプロジェクトに追加します。  
  使用することができます、**新しい Outlook フォーム領域**新しいフォーム領域をデザインまたは Outlook でデザインしたフォーム領域をインポートするウィザード。 また、別の Outlook VSTO アドイン プロジェクトで使用したフォーム領域がある場合は、既存のフォーム領域を再利用できます。  

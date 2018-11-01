@@ -23,12 +23,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f8555d1edae8d22acd6a34a14c66f4e432b39e61
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: bcc5600f38e2d53244d972e4c4c7094182bfa48c
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49917103"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50672952"
 ---
 # <a name="troubleshoot-errors-in-office-solutions"></a>Office ソリューションのエラーをトラブルシューティングします。
   Visual Studio で Office ソリューションを開発する際、次のタスクを実行するときに問題が発生する場合があります。  
@@ -124,7 +124,7 @@ ms.locfileid: "49917103"
   
  [!code-csharp[Trin_VstcoreTroubleshootingExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingExcelCS/ThisWorkbook.cs#1)]  
   
- Office Pia のイベント インターフェイスの詳細については、次を参照してください。 [Office プライマリ相互運用機能アセンブリのクラスおよびインターフェイスの概要](http://msdn.microsoft.com/da92dc3c-8209-44de-8095-a843659368d5)します。  
+ Office Pia のイベント インターフェイスの詳細については、次を参照してください。 [Office プライマリ相互運用機能アセンブリのクラスおよびインターフェイスの概要](/previous-versions/office/office-12//ms247299(v=office.12))します。  
   
 ### <a name="cannot-reference-office-pia-classes-in-projects-that-target-the-includenetv40shortsharepointincludesnet-v40-short-mdmd-or-the-includenetv45vstoincludesnet-v45-mdmd"></a>できません Office PIA のリファレンス内のクラス プロジェクトを対象とする、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]または [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]  
  [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] または [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] を対象とするプロジェクトでは、Office PIA で定義されているクラスを参照するコードは、既定ではコンパイルされません。 Pia のクラスは、名前付け規則を使用して*objectname*クラスなど、<xref:Microsoft.Office.Interop.Word.DocumentClass>と<xref:Microsoft.Office.Interop.Excel.WorkbookClass>します。 たとえば、Word の VSTO アドイン プロジェクトの次のコードはコンパイルされません。  

@@ -22,11 +22,11 @@ manager: douge
 ms.workload:
 - office
 ms.openlocfilehash: f329680d4e469d5009c8659e7a2047c87f906105
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672678"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744871"
 ---
 # <a name="bind-data-to-controls-in-office-solutions"></a>Office ソリューションでのコントロールにデータをバインドします。
   Microsoft Office Word 文書または Microsoft Office Excel ワークシート上の Windows フォーム コントロールや *ホスト コントロール* を、データ ソースにバインドできます。この場合、コントロールには自動的にデータが表示されます。 アプリケーション レベルのプロジェクトとドキュメント レベルのプロジェクトの両方で、コントロールにデータをバインドできます。  
@@ -42,7 +42,7 @@ ms.locfileid: "35672678"
 ## <a name="simple-data-binding"></a>単純データ バインディング  
  単純データ バインディングは、コントロール プロパティが、データ テーブル内の値など、単一のデータ要素にバインドされる場合に存在します。 たとえば、 <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールは、データセット内のフィールドにバインドできる <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> プロパティを持ちます。 データセット内のフィールドが変更されると、名前付き範囲内の値も変更されます。 <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールを除くすべてのホスト コントロールが、単純データ バインディングをサポートしています。 <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールはコレクションであるため、データ バインディングをサポートしません。  
   
- ホスト コントロールへの単純データ バインディングを実行するには追加、<xref:System.Windows.Forms.Binding>を`DataBindings`コントロールのプロパティ。 <xref:System.Windows.Forms.Binding> オブジェクトは、コントロールのプロパティ値とデータ要素の値との間の単純バインディングを表します。  
+ ホスト コントロールへの単純データ バインディングを実行するには、コントロールの `DataBindings` プロパティに <xref:System.Windows.Forms.Binding> を追加します。 <xref:System.Windows.Forms.Binding> オブジェクトは、コントロールのプロパティ値とデータ要素の値との間の単純バインディングを表します。  
   
  ドキュメント レベルのプロジェクトにあるデータ要素に <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> プロパティをバインドする方法を、次の例に示します。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "35672678"
  単純データ バインディングを示すチュートリアルでは、次を参照してください[チュートリアル: ドキュメント レベルのプロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)のドキュメント レベルのプロジェクトと[チュートリアル: VSTO アドイン プロジェクトでの単純データ バインディング。](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md) VSTO アドイン プロジェクト。  
   
 ## <a name="complex-data-binding"></a>複合データ バインディング  
- 複合データ バインディングは、コントロール プロパティが、データ テーブル内の複数の列など、複数のデータ要素にバインドされる場合に存在します。 Excel の <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールは、複合データ バインディングをサポートする唯一のホスト コントロールです。 ただし、複合データ バインディングをサポートする Windows フォーム コントロールが数多くあります ( <xref:System.Windows.Forms.DataGridView> コントロールなど)。  
+ 複合データ バインディングは、コントロール プロパティが、データ テーブル内の複数の列など、複数のデータ要素にバインドされる場合に存在します。 Excel の <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールは、複合データ バインディングをサポートする唯一のホスト コントロールです。 ただし、複合データ バインディングをサポートする Windows フォーム コントロールが数多くあります (<xref:System.Windows.Forms.DataGridView> コントロールなど)。  
   
- 複合データ バインディングを実行するのには、設定、`DataSource`複合データ バインディングでサポートされているデータ ソース オブジェクトにコントロールのプロパティ。 たとえば、 <xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A> コントロールの <xref:Microsoft.Office.Tools.Excel.ListObject> プロパティは、データ テーブル内の複数の列にバインドできます。 データ テーブル内のすべてのデータは <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールに表示され、データ テーブル内のデータが変更されると、 <xref:Microsoft.Office.Tools.Excel.ListObject> も変更されます。 複合データ バインディングに使用できるデータ ソースの一覧では、次を参照してください。 [Windows フォームでサポートされるデータ ソース](/dotnet/framework/winforms/data-sources-supported-by-windows-forms)します。  
+ 複合データ バインディングを実行するには、コントロールの `DataSource` プロパティを、複合データ バインディングでサポートされるデータ ソース オブジェクトに設定します。 たとえば、<xref:Microsoft.Office.Tools.Excel.ListObject> コントロールの <xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A> プロパティは、データ テーブル内の複数の列にバインドできます。 データ テーブル内のすべてのデータは <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールに表示され、データ テーブル内のデータが変更されると、 <xref:Microsoft.Office.Tools.Excel.ListObject> も変更されます。 複合データ バインディングに使用できるデータ ソースの一覧では、次を参照してください。 [Windows フォームでサポートされるデータ ソース](/dotnet/framework/winforms/data-sources-supported-by-windows-forms)します。  
   
  次のコード例は、2 つの <xref:System.Data.DataSet> オブジェクトを持つ <xref:System.Data.DataTable> を作成し、そのうち 1 つのテーブルにデータを入力します。 次に、コードはデータを含むテーブルに <xref:Microsoft.Office.Tools.Excel.ListObject> をバインドします。 これは、Excel のドキュメント レベルのプロジェクト用の例です。  
   

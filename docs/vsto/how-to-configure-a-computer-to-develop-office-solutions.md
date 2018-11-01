@@ -16,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 53a54c0d3ead9670f745258260461c86849cf0b9
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 6a07545fb9a7ddb2fc70ba5053ad131d2e214636
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672723"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671314"
 ---
 # <a name="how-to-configure-a-computer-to-develop-office-solutions"></a>方法: Office ソリューションを開発コンピューターを構成します。
   Visual Studio の Microsoft Office Developer Tools を使用できるように開発コンピューターを構成するには、次のトピックの手順を実行します。 これらの手順を実行するには、開発コンピューターの管理特権を保持している必要があります。  
@@ -37,7 +37,7 @@ ms.locfileid: "35672723"
 3.  Visual Studio の英語版ですが英語以外の設定を使用して、Windows の場合はインストールできます、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]に言語パックを参照してください[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Windows と同じ言語でのメッセージ。 英語版以外の Visual Studio では、この言語パックが自動的にインストールされます。 言語パックはから利用可能な[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=140386)します。  
   
 ## <a name="see-also"></a>関連項目  
- [新機能の Office 開発の新機能](http://msdn.microsoft.com/bf054af2-c896-4723-aa15-6381145b14bb)   
+ [新機能の Office 開発の新機能](https://msdn.microsoft.com/bf054af2-c896-4723-aa15-6381145b14bb)   
  [開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
  [方法: Visual Studio Tools for Office ランタイム再頒布可能パッケージのインストール](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)   
  [方法: Office プライマリ相互運用機能アセンブリ](../vsto/how-to-install-office-primary-interop-assemblies.md)  

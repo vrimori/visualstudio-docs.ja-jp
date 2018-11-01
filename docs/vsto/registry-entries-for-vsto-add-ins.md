@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ceb85bbad90074a7cfb6db053398698a0a333c1a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 14d35e8d6aa6209f628e38be65c9be5fbc614561
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49881782"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50673017"
 ---
 # <a name="registry-entries-for-vsto-add-ins"></a>VSTO アドインのレジストリ エントリ
   Visual Studio で作成した VSTO アドインを配置するときには、一連のレジストリ エントリを作成する必要があります。 それらのレジストリ エントリで指定する情報によって、Microsoft Office アプリケーションは VSTO アドインを検出し、読み込むことができます。  
@@ -88,7 +88,7 @@ ms.locfileid: "49881782"
   
  すべての VSTO アドインで共有されるその他のレジストリ エントリと同様に、プロジェクトをビルドすると、Visual Studio によって開発用コンピューター上にフォーム領域レジストリ エントリが作成されます。 ClickOnce を使用して、VSTO アドインを展開する場合、レジストリ エントリはエンドユーザーのコンピューターに自動的に作成します。 Windows インストーラーを使用して、VSTO アドインを展開する場合は、エンドユーザーのコンピューター上のレジストリ エントリを作成する、InstallShield Limited Edition プロジェクトを構成する必要があります。  
   
- フォーム領域レジストリ エントリの詳細については、次を参照してください。 [、カスタム フォームでフォーム領域の場所を指定](http://msdn.microsoft.com/library/office/ff868998.aspx)します。 Outlook フォーム領域の詳細については、次を参照してください。[作成の Outlook フォーム領域](../vsto/creating-outlook-form-regions.md)します。  
+ フォーム領域レジストリ エントリの詳細については、次を参照してください。 [、カスタム フォームでフォーム領域の場所を指定](/office/vba/outlook/Concepts/Creating-Form-Regions/specify-the-location-of-a-form-region-in-a-custom-form)します。 Outlook フォーム領域の詳細については、次を参照してください。[作成の Outlook フォーム領域](../vsto/creating-outlook-form-regions.md)します。  
   
 ##  <a name="LoadBehavior"></a> LoadBehavior の値  
  **LoadBehavior**の下のエントリ、*ルート*\Software\Microsoft\Office\\*アプリケーション名*\Addins\\*アドインID*キーには、VSTO アドインの実行時の動作を指定する値のビットごとの組み合わせが含まれています。 最下位のビット (値 0 および 1) は、VSTO アドインが現在アンロードされているか、または読み込み済みであるかを示します。 その他のビットは、アプリケーションが VSTO アドインを読み込もうとしていることを示します。  

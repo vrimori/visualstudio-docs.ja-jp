@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 81d6aefcf98b43524e7ffa1e0965e6a5df9189fb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 852e66bb4e29e732093cdac6b44c6791ad9b772d
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49865727"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671081"
 ---
 # <a name="secure-deployment"></a>デプロイのセキュリティ保護します。
   Office ソリューションを作成するときに実行するプロジェクトでコードを許可する、開発用コンピューターが自動的に更新されます。 ただし、ソリューションを配置するときに、ソリューションに証明書で署名するかを使用して、信頼の決定の基になる証拠を提供する必要があります、[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]信頼プロンプト キー。 詳細については、次を参照してください。 [Office ソリューションに信頼を付与](../vsto/granting-trust-to-office-solutions.md)します。  
@@ -49,7 +49,7 @@ ms.locfileid: "49865727"
   
 ## <a name="see-also"></a>関連項目  
  [Office ソリューションをデプロイします。](../vsto/deploying-an-office-solution.md)   
- [実行したり、Office ソリューションをホストするコンピューターを準備します。](http://msdn.microsoft.com/be1b173f-7261-4d74-aa4e-94ccd43db8d8)   
+ [実行したり、Office ソリューションをホストするコンピューターを準備します。](https://msdn.microsoft.com/be1b173f-7261-4d74-aa4e-94ccd43db8d8)   
  [セキュリティで保護された Office ソリューション](../vsto/securing-office-solutions.md)  
   
   

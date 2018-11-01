@@ -20,12 +20,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 248fa3051a3d639798f37270dc7957a759e20d6e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c7fc3f699cd33f2bb45487ca1329d812cfbeb950
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49941985"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671548"
 ---
 # <a name="visio-solutions"></a>Visio ソリューション
   Visual Studio には、Microsoft Office Visio の VSTO アドインを作成するために使用できるプロジェクト テンプレートが用意されています。 VSTO アドインを使用して、Visio の自動化、Visio 機能の拡張、または Visio ユーザー インターフェイス (UI) のカスタマイズが可能です。  
@@ -66,7 +66,7 @@ ms.locfileid: "49941985"
 |----------|--------------------------|  
 |リボンをカスタマイズします。|[リボンの概要](../vsto/ribbon-overview.md)|  
   
- Visio の UI をカスタマイズする方法の詳細については、 [Visio.UIObject](https://msdn.microsoft.com/library/office/ff765763.aspx) クラスの VBA リファレンス ドキュメントを参照してください。  
+ Visio の UI をカスタマイズする方法の詳細については、 [Visio.UIObject](/office/vba/api/Visio.UIObject) クラスの VBA リファレンス ドキュメントを参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [VSTO アドインのプログラミングを始める](../vsto/getting-started-programming-vsto-add-ins.md)   

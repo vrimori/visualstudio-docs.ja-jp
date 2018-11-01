@@ -16,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f469cf6e3dba13f1a4c7ad6ec847cf8c8190447c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e46a0bdc23ee16c4821d3da751d5a90aa62a14c3
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49859370"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50673069"
 ---
 # <a name="deploy-an-office-solution-by-using-clickonce"></a>ClickOnce を使用して Office ソリューションを配置します。
   ClickOnce を使用する場合は、少しの手順で Office ソリューションを配置できます。 更新プログラムを発行する場合は、ソリューションはそれらを自動的に検出してインストールします。 ただし、ClickOnce を使用する場合は、コンピューターのユーザーごとに、ソリューションを個別にインストールする必要があります。 Windows インストーラーを使用してそのため、検討 (*.msi*) 場合は、複数のユーザーは同じコンピューターにソリューションを実行します。  
@@ -86,7 +86,7 @@ ms.locfileid: "49859370"
 9. ソリューションが .NET Framework 4.5 を対象とする場合も選択する、 **Visual Studio 2010 Tools for Office Runtime**チェック ボックスをオンします。  
 
     > [!NOTE]  
-    >  既定では、このチェック ボックスは表示されません。 このチェック ボックスを表示するには、ブートストラップ パッケージを作成する必要があります。 参照してください[Visual Studio 2012 での Office 2013 VSTO アドインをブートス トラップ パッケージを作成](http://blogs.msdn.com/b/vsto/archive/2012/12/21/creating-a-bootstrapper-package-for-an-office-2013-vsto-add-in-with-visual-studio-2012.aspx)です。  
+    >  既定では、このチェック ボックスは表示されません。 このチェック ボックスを表示するには、ブートストラップ パッケージを作成する必要があります。 参照してください[Visual Studio 2012 での Office 2013 VSTO アドインをブートス トラップ パッケージを作成](create-vsto-add-ins-for-office-by-using-visual-studio.md)です。  
 
 10. **の前提条件のインストール場所を指定**を選択し、表示されるオプションのいずれかを選択、 **OK**ボタン。  
 
@@ -362,7 +362,7 @@ ms.locfileid: "49859370"
 |エラー コード|定義|  
 |----------------|----------------|  
 |0|ソリューションが正常にインストールまたはアンインストールされたか、VSTOInstaller ヘルプが表示されました。|  
-|-100|1 つ以上のコマンド ライン オプションが有効でないか、複数回設定されました。 詳細については、次のように入力します"vstoinstaller/でしょうか。"。 参照してくださいまたは[ClickOnce Office ソリューション用のカスタム インストーラーを作成する](http://msdn.microsoft.com/3e5887ed-155f-485d-b8f6-3c02c074085e)します。|  
+|-100|1 つ以上のコマンド ライン オプションが有効でないか、複数回設定されました。 詳細については、次のように入力します"vstoinstaller/でしょうか。"。 参照してくださいまたは[ClickOnce Office ソリューション用のカスタム インストーラーを作成する](https://msdn.microsoft.com/3e5887ed-155f-485d-b8f6-3c02c074085e)します。|  
 |-101|1 つまたは複数のコマンド ライン オプションが無効です。 詳細については、"vstoinstaller /?" と入力してください。|  
 |-200|配置マニフェストの URI が無効です。 詳細については、"vstoinstaller /?" と入力してください。|  
 |-201|配置マニフェストが有効でないために、ソリューションをインストールできませんでした。 参照してください[Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)します。|  
@@ -463,9 +463,9 @@ ms.locfileid: "49859370"
 ## <a name="see-also"></a>関連項目  
  [Office ソリューションをデプロイします。](../vsto/deploying-an-office-solution.md)   
  [Office ソリューションを発行します。](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
- [方法: ClickOnce を使用して、Office ソリューションを発行します。](http://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)   
- [方法: ClickOnce Office ソリューションのインストール](http://msdn.microsoft.com/14702f48-9161-4190-994c-78211fe18065)   
- [方法: ClickOnce を使用して SharePoint サーバーに、ドキュメント レベルの Office ソリューションを発行する.](http://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58)   
- [ClickOnce office ソリューション用のカスタム インストーラーを作成します。](http://msdn.microsoft.com/3e5887ed-155f-485d-b8f6-3c02c074085e)  
+ [方法: ClickOnce を使用して、Office ソリューションを発行します。](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)   
+ [方法: ClickOnce Office ソリューションのインストール](https://msdn.microsoft.com/14702f48-9161-4190-994c-78211fe18065)   
+ [方法: ClickOnce を使用して SharePoint サーバーに、ドキュメント レベルの Office ソリューションを発行する.](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58)   
+ [ClickOnce office ソリューション用のカスタム インストーラーを作成します。](https://msdn.microsoft.com/3e5887ed-155f-485d-b8f6-3c02c074085e)  
 
 

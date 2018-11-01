@@ -45,7 +45,7 @@ ms.locfileid: "39638584"
   
 5.  **URL**フィールドに、Atom フィードまたはプライベート ギャラリーをホストしている SharePoint サイトの URL を入力します。  
   
-    1.  プライベート ギャラリーに接続するホストが Atom フィードの場合は、このいずれかの URL のようになります:http://www.mywebsite/mygallery/atom.xmlします。  この URL は、ファイルまたはネットワーク パスを参照できます。  
+    1.  プライベート ギャラリーに接続するホストが Atom フィードの場合は、このいずれかの URL のようになります: http://www.mywebsite/mygallery/atom.xml します。  この URL は、ファイルまたはネットワーク パスを参照できます。  
   
     2.  ホストが SharePoint サイトの場合は、URL のようになりますこのいずれか:http://mysharepoint/sites/mygallery/forms/AllItems.aspxします。  
   

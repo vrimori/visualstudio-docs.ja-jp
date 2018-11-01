@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 145bc3c4301b337a0f882b3893910ad5bb2fc2ac
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ebf335291246ac8c3c15d8f04fb064a3bfaa8ef7
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49857849"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50670898"
 ---
 # <a name="visual-studio-tools-for-office-runtime-installation-scenarios"></a>Visual Studio のツール for Office runtime のインストール シナリオ
   3 つの方法で、Visual Studio 2010 Tools for Office ランタイムをインストールすることができます。  
@@ -60,14 +60,14 @@ ms.locfileid: "49857849"
   
  [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 用の Office 拡張機能は、Office と共にインストールされます。 エンド ユーザーは、Windows Update をインストールすることで [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] 用の Office 拡張機能を取得できます。  
   
- ユーザーは、アプリケーションを使用するために必要な拡張機能であることを確認するには、するには、Visual Studio 2010 Tools for Office ランタイムが、ソリューションの前提条件として再頒布可能パッケージの最新バージョンを含めます。 前提条件の詳細については、次を参照してください。[展開 Office ソリューションの前提条件](http://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e)します。  
+ ユーザーは、アプリケーションを使用するために必要な拡張機能であることを確認するには、するには、Visual Studio 2010 Tools for Office ランタイムが、ソリューションの前提条件として再頒布可能パッケージの最新バージョンを含めます。 前提条件の詳細については、次を参照してください。[展開 Office ソリューションの前提条件](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e)します。  
   
 ### <a name="install-the-runtime-by-using-the-runtime-redistributable"></a>再頒布可能パッケージのランタイムを使用して、ランタイムをインストールします。  
  または、Office ソリューションを展開するときに、前提条件として再頒布可能パッケージを含めることによって、Visual Studio 2010 Tools for Office ランタイム再頒布可能パッケージを手動で実行してランタイムをインストールすることができます。  
   
  Office ランタイム再頒布可能パッケージ、.NET Framework 3.5 用の Office 拡張機能および用の Office 拡張機能を Visual Studio 2010 Tools を使用して、ランタイムをインストールすると、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]以降がインストールされている場合、対応するバージョンの .NETFramework がコンピューターに存在します。 ランタイムをインストールするときにこれらのバージョンの .NET Framework の 1 つがコンピューターに存在しない場合、その時点では、存在しないバージョンの .NET Framework 用の Office 拡張機能はインストールされません。 存在しないバージョンの .NET Framework を後でインストールすると、次回、対応する Office 拡張機能を必要とするソリューションがインストールされたとき (ClickOnce を使用して配置されたソリューションと共にランタイムがインストールされた場合) または読み込まれたときに (Windows インストーラーを使用して配置されたソリューションと共にランタイムがインストールされた場合)、その拡張機能がランタイムによって自動的にインストールされます。  
   
- ClickOnce ソリューションの必須コンポーネントを含む詳細については、次を参照してください。[方法: Office ソリューションを実行するためにエンド ユーザー コンピューターの前提条件をインストール](http://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)します。 再頒布可能パッケージからランタイムを手動でインストールする方法の詳細については、次を参照してください。[方法: Visual Studio Tools for Office ランタイム再頒布可能パッケージをインストール](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)します。  
+ ClickOnce ソリューションの必須コンポーネントを含む詳細については、次を参照してください。[方法: Office ソリューションを実行するためにエンド ユーザー コンピューターの前提条件をインストール](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)します。 再頒布可能パッケージからランタイムを手動でインストールする方法の詳細については、次を参照してください。[方法: Visual Studio Tools for Office ランタイム再頒布可能パッケージをインストール](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio のツール for Office runtime の概要](../vsto/visual-studio-tools-for-office-runtime-overview.md)   

@@ -16,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c3d763209d60440066df758b6c1eca087dea9b03
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a9f065a32fc26d372b97a31eb70836451b31fa00
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49906677"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50670729"
 ---
 # <a name="how-to-programmatically-save-visio-documents"></a>方法: プログラムによって Visio 図面を保存
   Microsoft Office Visio 図面を保存するには、次のようないくつかの方法があります。  
@@ -32,7 +32,7 @@ ms.locfileid: "49906677"
   
 - 引数を指定して図面を保存する。  
   
-  詳細については、 [Microsoft.Office.Interop.Visio.Document.Save](https://msdn.microsoft.com/library/office/ff766478.aspx) メソッド、 [Microsoft.Office.Interop.Visio.Document.SaveAs](https://msdn.microsoft.com/library/office/ff765824.aspx) メソッド、および [Microsoft.Office.Interop.Visio.Document.SaveAsEx](https://msdn.microsoft.com/library/office/ff768149.aspx) メソッドの VBA リファレンス ドキュメントを参照してください。  
+  詳細については、 [Microsoft.Office.Interop.Visio.Document.Save](/office/vba/api/Visio.Document.Save) メソッド、 [Microsoft.Office.Interop.Visio.Document.SaveAs](/office/vba/api/Visio.Document.SaveAs) メソッド、および [Microsoft.Office.Interop.Visio.Document.SaveAsEx](/office/vba/api/Visio.Document.SaveAsEx) メソッドの VBA リファレンス ドキュメントを参照してください。  
   
 ## <a name="save-an-existing-document"></a>既存のドキュメントを保存します。  
   
