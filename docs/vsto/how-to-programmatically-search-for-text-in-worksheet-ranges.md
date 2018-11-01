@@ -17,15 +17,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c0dcf2787706de121fba691edaf42e9971747524
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a323336979e16be376cfcd3da44cbc9b12bd73ea
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49920080"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671964"
 ---
 # <a name="how-to-programmatically-search-for-text-in-worksheet-ranges"></a>方法: プログラムによってワークシートの範囲内のテキストの検索
-  <xref:Microsoft.Office.Interop.Excel.Range.Find%2A>のメソッド、<xref:Microsoft.Office.Interop.Excel.Range>オブジェクトでは、範囲内でテキストを検索することができます。 このテキストのエラー文字列など、ワークシートのセルに表示されることができますを指定できますも`#NULL!`または`#VALUE!`します。 エラー文字列の詳細については、次を参照してください。[エラー値をセル](http://msdn.microsoft.com/library/office/ff839168.aspx)します。  
+  <xref:Microsoft.Office.Interop.Excel.Range.Find%2A>のメソッド、<xref:Microsoft.Office.Interop.Excel.Range>オブジェクトでは、範囲内でテキストを検索することができます。 このテキストのエラー文字列など、ワークシートのセルに表示されることができますを指定できますも`#NULL!`または`#VALUE!`します。 エラー文字列の詳細については、次を参照してください。[エラー値をセル](/office/vba/excel/Concepts/Cells-and-Ranges/cell-error-values)します。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   

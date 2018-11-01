@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ccdff67cc9c918818a28bf60a94ea1f1119e7d2e
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: c53db1dffad5c755cba699986d64786471075776
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35673707"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671938"
 ---
 # <a name="project-upgrade-options-dialog-box"></a>プロジェクトのアップグレード オプション ダイアログ ボックス
   **[プロジェクトのアップグレード]** ページを使用して、Visual Studio が、開発用コンピューターにインストールされている Office のバージョンを対象とするように自動的に VSTO アドイン プロジェクトを変更するかどうかを指定します。  
@@ -37,6 +37,6 @@ ms.locfileid: "35673707"
   
 ## <a name="see-also"></a>関連項目  
  [アップグレードし、Office ソリューションの移行](../vsto/upgrading-and-migrating-office-solutions.md)   
- [方法: アップグレードの Office ソリューション](http://msdn.microsoft.com/a269e539-b717-4680-a568-2152b070347e)  
+ [方法: アップグレードの Office ソリューション](https://msdn.microsoft.com/a269e539-b717-4680-a568-2152b070347e)  
   
   

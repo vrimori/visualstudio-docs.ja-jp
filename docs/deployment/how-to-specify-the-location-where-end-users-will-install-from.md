@@ -41,7 +41,7 @@ ms.locfileid: "39078086"
   
 2.  **発行**タブをクリックします。  
   
-3.  インストール URL フィールドに、形式を使用して完全修飾 URL を使用して、インストール場所を入力します*http://www.microsoft.com/ApplicationName*、または UNC パス形式を使用して *\\\Server\ApplicationName*.  
+3.  インストール URL フィールドに、形式を使用して完全修飾 URL を使用して、インストール場所を入力します*http://www.microsoft.com/ApplicationName*、または UNC パス形式を使用して*\\\Server\ApplicationName*.  
   
 ## <a name="see-also"></a>関連項目  
  [方法: Visual Studio がファイルをコピーする場所を指定します。](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   

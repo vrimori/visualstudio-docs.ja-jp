@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ad60aa15b3924bd562ed95c30ed9aaf4adef0133
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c858cfbd2fb48aa850e395d74d7f03386ec8bc2f
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49862191"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671860"
 ---
 # <a name="walkthrough-insert-text-into-a-document-from-an-actions-pane"></a>チュートリアル: 操作ウィンドウから文書にテキストを挿入します。
   このチュートリアルでは、Microsoft Office Word ドキュメントで、[操作] ウィンドウを作成する方法を示します。 [操作] ウィンドウには、入力を収集し、文書にテキストを送信する 2 つのコントロールが含まれています。  
@@ -178,14 +178,14 @@ ms.locfileid: "49862191"
 ## <a name="next-steps"></a>次の手順  
  ここでは、次のタスクを行います。  
   
--   Excel で操作ウィンドウを作成します。 詳細については、次を参照してください。[方法: Excel ブックに操作ウィンドウを追加する](http://msdn.microsoft.com/62abfce6-e44f-419d-85d8-26bf59f33872)します。  
+-   Excel で操作ウィンドウを作成します。 詳細については、次を参照してください。[方法: Excel ブックに操作ウィンドウを追加する](/previous-versions/visualstudio/visual-studio-2010/e3zbk0hz(v=vs.100))します。  
   
 -   データを操作ウィンドウ上のコントロールにバインドします。 詳細については、次を参照してください。[チュートリアル: Word の操作ウィンドウ上のコントロールにデータをバインド](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   
  [方法: Word 文書に操作ウィンドウを追加したり、Excel ブック](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
- [方法: Excel ブックに操作ウィンドウを追加します。](http://msdn.microsoft.com/62abfce6-e44f-419d-85d8-26bf59f33872)   
+ [方法: Excel ブックに操作ウィンドウを追加します。](/previous-versions/visualstudio/visual-studio-2010/e3zbk0hz(v=vs.100))   
  [方法: アクション ペイン上のコントロールのレイアウトの管理](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
  [Bookmark コントロール](../vsto/bookmark-control.md)  
   

@@ -41,12 +41,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6880437616f2a1250488e5faaf910823a1b4b58a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 924f31ac38219453ae96fd573d968b18ce19c913
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49940230"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50672900"
 ---
 # <a name="content-controls"></a>コンテンツ コントロール
   コンテンツ コントロールは、次のような機能を備える文書やテンプレートをデザインするときに使用します。  
@@ -81,7 +81,7 @@ ms.locfileid: "49940230"
  文書に追加できるコンテンツ コントロールは 9 種類あります。 ほとんどのコンテンツ コントロールには、<xref:Microsoft.Office.Tools.Word> 名前空間内に対応する型が存在します。 また、使用可能なものであればどのようなコンテンツ コントロールになることもできる汎用コントロール、<xref:Microsoft.Office.Tools.Word.ContentControl> を使用することもできます。 利用可能なコンテンツ コントロールの各使用方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: コンテンツ コントロールを使用してテンプレートを作成](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)です。  
   
 ### <a name="build-block-gallery"></a>ビルド ブロック ギャラリー  
- 文書パーツ ギャラリーにより、ユーザーの一覧から選択する*の構成要素を文書化*ドキュメントに挿入します。 文書パーツは、コンテンツとして何度も使用できるように作成された部品のようなもの (共通の表紙、書式設定された表、ヘッダーなど) です。 詳細については、<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> 型を参照してください。 構成要素の詳細については、次を参照してください。 [Word 2007 の開発者向け新機能については](http://msdn.microsoft.com/74aa6688-65b3-4167-997d-131f26ad8f84)します。  
+ 文書パーツ ギャラリーにより、ユーザーの一覧から選択する*の構成要素を文書化*ドキュメントに挿入します。 文書パーツは、コンテンツとして何度も使用できるように作成された部品のようなもの (共通の表紙、書式設定された表、ヘッダーなど) です。 詳細については、<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> 型を参照してください。 構成要素の詳細については、次を参照してください。 [Word 2007 の開発者向け新機能については](/previous-versions/office/developer/office-2007/bb266218(v=office.12))します。  
   
 ### <a name="check-box"></a>チェック ボックス  
  チェック ボックスは、2 値 (オンまたはオフ) の状態を表す UI です。  

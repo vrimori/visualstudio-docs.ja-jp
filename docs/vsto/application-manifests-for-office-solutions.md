@@ -16,11 +16,11 @@ manager: douge
 ms.workload:
 - office
 ms.openlocfilehash: df388fb346c43f173ec1f96e3869088d7ce5b9dc
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35673347"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744939"
 ---
 # <a name="application-manifests-for-office-solutions"></a>Office ソリューション用アプリケーション マニフェスト
   アプリケーション マニフェストは、Microsoft Office ソリューションに読み込まれるアセンブリについて記述した XML ファイルです。 Visual Studio での Office 開発ツールを使用して、[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]アプリケーション マニフェスト スキーマで定義されている、 [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)参照。  
@@ -96,7 +96,7 @@ ms.locfileid: "35673347"
  Office ソリューションのアプリケーション マニフェストと配置マニフェストは、手動で編集できます。 その後、アプリケーションを再署名する必要があり、配置が、マニフェストの生成および編集ツールを使用してマニフェスト (*mage.exe*と*mageui.exe*)。 詳細については、次を参照してください。[方法: アプリケーション マニフェストと配置マニフェストに再署名](/visualstudio/deployment/how-to-re-sign-application-and-deployment-manifests)します。  
   
 ## <a name="file-location"></a>ファイルの場所  
- アプリケーション マニフェストは単一のバージョンのソリューションに特有のものです。 このため、アプリケーション マニフェストは、配置マニフェストとは別の場所に格納する必要があります。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] バージョンに固有のファイルを関連するバージョンにちなんだ名前のサブディレクトリに配置、*アプリケーション ファイル*publish フォルダー内のサブディレクトリ。  
+ アプリケーション マニフェストは単一のバージョンのソリューションに特有のものです。 このため、アプリケーション マニフェストは、配置マニフェストとは別の場所に格納する必要があります。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] は、バージョン固有のファイルを、発行フォルダーの *Application Files* サブディレクトリ内にある、関連するバージョンにちなんだ名前のサブディレクトリに格納します。  
   
 ## <a name="file-name-syntax"></a>ファイル名の構文  
  アプリケーションのマニフェスト ファイルの名前は、アプリケーションの拡張機能と完全な名前で識別される、 **assemblyIdentity**要素を拡張子が続きます *.manifest*します。 たとえば、参照するアプリケーション マニフェスト、 *OutlookAddIn1.dll*カスタマイズでは、次のファイル名構文を使用します。  

@@ -14,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: bf00afb612e12ce6712206808897a3b851d68b3a
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 3f821b9769b9353fbee6379ddc1b3826f87ac2de
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671862"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671094"
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>COM、VSTO、および VBA の office アドインの開発のベスト プラクティスします。
   Office の COM、VSTO または VBA アドインを開発する場合はこの記事で説明されている開発のベスト プラクティスに従います。   ことができます。
@@ -39,12 +39,12 @@ ms.locfileid: "35671862"
 ソリューションは、以前のバージョンの .NET を使用している場合は、.NET 4.0 以降を使用するソリューションを更新することをお勧めします。 .NET 4.0 以降を使用して、新しいバージョンの Windows での実行時の前提条件が軽減されます。
   
 ## <a name="avoid-depending-on-specific-office-versions"></a>特定の Office バージョンに応じて回避します。  
-ソリューションにのみ新しいバージョンの Office で使用できる機能を使用する場合は、(たとえば、処理、または、バージョンを確認して例外を使用して) 実行時に、機能が (可能であれば、機能レベル) に存在するを確認します。 など、オブジェクト モデルでサポートされている Api を使用して、特定のバージョンではなく、最小バージョンは、検証、 [Application.Version プロパティ](https://msdn.microsoft.com/library/office/microsoft.office.interop.excel._application.version.aspx)します。 インストール、環境、およびバージョンとの間を変更できるため、Office バイナリ メタデータ、インストール パス、またはレジストリ キーに依存することをお勧めします。
+ソリューションにのみ新しいバージョンの Office で使用できる機能を使用する場合は、(たとえば、処理、または、バージョンを確認して例外を使用して) 実行時に、機能が (可能であれば、機能レベル) に存在するを確認します。 など、オブジェクト モデルでサポートされている Api を使用して、特定のバージョンではなく、最小バージョンは、検証、 [Application.Version プロパティ](<xref:Microsoft.Office.Interop.Excel._Application.Version%2A>)します。 インストール、環境、およびバージョンとの間を変更できるため、Office バイナリ メタデータ、インストール パス、またはレジストリ キーに依存することをお勧めします。
 
 ## <a name="enable-both-32-bit-and-64-bit-office-usage"></a>Office の使用状況を 32 ビットと 64 ビットの両方を有効にします。   
 既定の build ターゲットは、ソリューションは、特定のビット数でのみ使用するライブラリに依存していない限り 32 ビット (x86) と 64 ビット (x64) の両方をサポートする必要があります。 Office の 64 ビット版は特にビッグ データ環境での導入に増加します。 32 ビットと 64 ビットの両方のサポートやすく、ユーザーが Office の 32 ビットおよび 64 ビットのバージョン間の遷移です。
 
-VBA コードを記述するとき使用して 64 ビットの安全は declare ステートメントし、適切な変数を変換します。 さらに、各ビット数のコードを提供することで、32 ビットまたは 64 ビット バージョンの Office を実行しているユーザーの間でドキュメントを共有できることを確認します。 詳細については、次を参照してください。 [64 ビットの Visual Basic アプリケーションの概要の](https://msdn.microsoft.com/library/office/gg264421.aspx)します。
+VBA コードを記述するとき使用して 64 ビットの安全は declare ステートメントし、適切な変数を変換します。 さらに、各ビット数のコードを提供することで、32 ビットまたは 64 ビット バージョンの Office を実行しているユーザーの間でドキュメントを共有できることを確認します。 詳細については、次を参照してください。 [64 ビットの Visual Basic アプリケーションの概要の](/office/vba/Language/Concepts/Getting-Started/64-bit-visual-basic-for-applications-overview)します。
 
 ## <a name="support-restricted-environments"></a>制限された環境をサポートします。   
 ソリューションでは、ユーザー アカウントの昇格または管理者特権は必要ありません必要があります。 さらに、設定または変更するのには、ソリューションが依存する必要があります。

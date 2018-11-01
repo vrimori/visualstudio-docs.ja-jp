@@ -20,12 +20,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 05d7c3cc2c391eee6ceeba492cd083efd3c00015
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 1bc8aee0a1294aeda4c57a3416de4a0cc98129f3
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49916752"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50673043"
 ---
 # <a name="walkthrough-bind-content-controls-to-custom-xml-parts"></a>チュートリアル: コンテンツ コントロールをカスタム XML 部分にバインドします。
   このチュートリアルでは、Word のドキュメント レベルのカスタマイズで、コンテンツ コントロールを同じ文書内の XML データにバインドする方法を説明します。  
@@ -296,7 +296,7 @@ ms.locfileid: "49916752"
   
 9. ファイルに名前を**EmployeeControls.docx.zip**します。  
   
-     **EmployeeControls.docx**オープン XML 形式で文書を保存します。 このドキュメントでの名前を変更して、 *.zip*ファイル名拡張子をドキュメントの内容を調べることができます。 Open XML の詳細については、技術記事を参照してください。[概要 Office (2007) Open XML ファイル形式](http://msdn.microsoft.com/96018532-f62c-4da7-bbff-16b96a483fbf)します。  
+     **EmployeeControls.docx**オープン XML 形式で文書を保存します。 このドキュメントでの名前を変更して、 *.zip*ファイル名拡張子をドキュメントの内容を調べることができます。 Open XML の詳細については、技術記事を参照してください。[概要 Office (2007) Open XML ファイル形式](/previous-versions/office/developer/office-2007/aa338205(v=office.12))します。  
   
 10. 開く、 **EmployeeControls.docx.zip**ファイル。  
   

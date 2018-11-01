@@ -26,12 +26,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b31ce44c458f7f376d98fac83670595b8a163d65
-ms.sourcegitcommit: 48bc8492973e93612e5afaba3b47d0f98aecf97c
+ms.openlocfilehash: 71720ef96ee7d17bd52ea118a8c44a8f4b117cad
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49325004"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671730"
 ---
 # <a name="custom-xml-parts-overview"></a>カスタム XML 部分の概要
   一部の Microsoft Office アプリケーションのドキュメントに XML データを埋め込むことができます。 データがという名前をドキュメントに XML データを埋め込むときに、*カスタム XML 部分*します。  
@@ -50,13 +50,13 @@ ms.locfileid: "49325004"
   
  Open XML およびカスタム XML 部分の構造の詳細については、次の記事をご覧ください。  
   
--   [Office (2007) Open XML ファイル形式の概要](http://msdn.microsoft.com/96018532-f62c-4da7-bbff-16b96a483fbf)  
+-   [Office (2007) Open XML ファイル形式の概要](/previous-versions/office/developer/office-2007/aa338205(v=office.12))  
   
--   [方法: Open XML 形式のドキュメントの操作](http://msdn.microsoft.com/c989d4e2-053d-4e1f-83be-257c608b343f)  
+-   [方法: Open XML 形式のドキュメントの操作](/previous-versions/office/developer/office-2007/aa982683(v=office.12))  
   
--   [チュートリアル: Word 2007 の XML の形式](http://msdn.microsoft.com/fc1afcb2-27fb-4608-9f29-11b7bd23ea4a)  
+-   [チュートリアル: Word 2007 の XML の形式](/previous-versions/office/developer/office-2007/bb266220(v=office.12))  
   
--   [Open XML 形式を使用して Word 2007 ドキュメントを作成します。](http://msdn.microsoft.com/59a46f4e-5a5a-4dac-86e5-7dfd43330766)  
+-   [Open XML 形式を使用して Word 2007 ドキュメントを作成します。](/previous-versions/office/developer/office-2007/bb264572(v=office.12))  
   
 > [!NOTE]  
 >  Excel、Word、および PowerPoint ではバイナリ ファイル形式で保存されているドキュメント内のカスタム XML 部分を使用することもできます。 ただし、バイナリ形式でドキュメントを保存する場合は、Microsoft Office アプリケーションを起動せずにカスタム XML 部分を追加または変更することはできません。  
@@ -76,7 +76,7 @@ ms.locfileid: "49325004"
 ### <a name="modify-xml-parts-without-starting-the-office-application"></a>Office アプリケーションを起動せずに XML 部分を変更します。  
  Excel、PowerPoint、または Word を起動しないでカスタム XML 部分を変更できます。 これは、Microsoft Office アプリケーションがインストールされていないサーバーなどのコンピューターで、ドキュメント内の XML データを使用する場合に便利です。  
   
- Microsoft Office を起動せずにカスタム XML 部分を追加するには Open XML SDK のクラスを使用します。 これらのクラスは、Office ドキュメントに固有の Open XML コンテンツにアクセスするために設計されています。 使用する Excel ブックにカスタム XML 部分を追加するなど、 [AddNewPart\<T >](https://msdn.microsoft.com/library/office/cc562657.aspx)のメソッド、 [WorkbookPart](https://msdn.microsoft.com/library/office/documentformat.openxml.packaging.workbookpart.aspx)オブジェクト。 詳細については、次を参照してください。 [Open XML 用 SDK](/office/open-xml/open-xml-sdk)します。  
+ Microsoft Office を起動せずにカスタム XML 部分を追加するには Open XML SDK のクラスを使用します。 これらのクラスは、Office ドキュメントに固有の Open XML コンテンツにアクセスするために設計されています。 使用する Excel ブックにカスタム XML 部分を追加するなど、<xref:DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddNewPart%2A>のメソッドを<xref:DocumentFormat.OpenXml.Packaging.WorkbookPart>オブジェクト。 詳細については、次を参照してください。 [Open XML 用 SDK](/office/open-xml/open-xml-sdk)します。  
   
 ## <a name="bind-custom-xml-parts-to-word-content-controls"></a>カスタム XML 部分を Word コンテンツ コントロールにバインドします。  
  Word ソリューションのコンテンツ コントロールをカスタム XML 部分の要素にバインドできます。 カスタム XML 部分にコンテンツ コントロールがバインドされると、カスタム XML 部分のデータがコンテンツ コントロールのユーザー インターフェイス (UI) に表示されます。 ユーザーがコントロール内のテキストを編集すると、対応する XML 要素が自動的に更新されます。 同様に、カスタム XML 部分の要素の値が変更されると、その XML 要素にバインドされているコンテンツ コントロールに新しいデータが表示されます。 詳細については、次を参照してください。[コンテンツ コントロール](../vsto/content-controls.md)します。  
@@ -87,5 +87,3 @@ ms.locfileid: "49325004"
  [方法: VSTO アドインを使用して、カスタム XML 部分をドキュメントに追加](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)   
  [コンテンツ コントロール](../vsto/content-controls.md)   
  [チュートリアル: コンテンツ コントロールをカスタム XML 部分にバインドします。](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)  
-  
-  
