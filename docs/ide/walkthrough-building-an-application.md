@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c23e7c7f6a6de9912a9c886f3eeba91208ae0ee6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 23d22e5fc3169cc731428e8c5fafff607847c156
+ms.sourcegitcommit: 1abb9cf4c3ccb90e3481ea8079272c98aad12875
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49942219"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143191"
 ---
 # <a name="walkthrough-build-an-application"></a>チュートリアル: アプリケーションをビルドする
 
@@ -100,7 +100,7 @@ ms.locfileid: "49942219"
 
 1. **[ビルド]** ページを選択し、**[警告の表示なし]** ボックスで、警告番号 **0168** を指定します。
 
-     ![[ビルド] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk_csharpsupresswarnings.png)
+     ![[ビルド] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk_csharpsuppresswarnings.png)
 
      詳細については、「[Build Page, Project Designer (C#)](../ide/reference/build-page-project-designer-csharp.md)」([ビルド] ページ (プロジェクト デザイナー) (C#)) を参照してください。
 
@@ -120,7 +120,7 @@ ms.locfileid: "49942219"
 
 3. **[コンパイル]** ページで、**[すべての警告を表示しない]** チェック ボックスをオンにします。
 
-     ![[コンパイル] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk_vbsupresswarnings.png)
+     ![[コンパイル] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk_vbsuppresswarnings.png)
 
      詳細については、「[Visual Basic での警告の構成](../ide/configuring-warnings-in-visual-basic.md)」を参照してください。
 
