@@ -1,0 +1,128 @@
+items:
+- name: Visual Studio を使用した Azure 開発
+  href: index.yml
+  expanded: true
+- name: Azure に発行する
+  items:
+  - name: Azure に ASP.NET Core アプリを発行する
+    href: /aspnet/core/tutorials/publish-to-azure-webapp-using-vs?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json&view=aspnetcore-2.1
+  - name: Azure に .NET TODO リスト Web アプリを発行する
+    href: /dotnet/azure/dotnet-quickstart-vs?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json&view=azure-dotnet
+  - name: Azure Functions を発行する
+    href: /azure/azure-functions/functions-develop-vs?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+  - name: Visual Studio および Git と ASP.NET Core を組み合わせた Azure への継続的配置
+    href: /aspnet/core/host-and-deploy/azure-apps/azure-continuous-deploymenttoc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json&?view=aspnetcore-2.1
+  - name: Azure Pipelines による Azure への継続的デプロイ
+    href: /azure/devops/pipelines/get-started-yaml?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json&view=vsts
+  - name: Azure VM に ASP.NET Web アプリを発行する
+    href: /azure/virtual-machines/windows/publish-web-app-from-visual-studio?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+  expanded: true
+- name: Azure サービスに接続する
+  items:
+  - name: Azure ストレージを追加する
+    href: vs-azure-tools-connected-services-storage.md
+  - name: Azure Key Vault を追加する
+    href: /azure/key-vault/vs-key-vault-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+  - name: Azure Active Directory (AD) を追加する
+    href: /azure/active-directory/develop/vs-active-directory-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+  - name: Cognitive Services を追加する
+    href: cognitive-services-connected-services.yml
+    items:
+    - name: Text Analytics
+      href: /azure/cognitive-services/text-analytics/vs-text-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+    - name: Bing 検索
+      href: /azure/cognitive-services/bing-news-search/vs-bing-news-search-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+    - name: 顔認識
+      href: /azure/cognitive-services/face/vs-face-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+    - name: Computer Vision
+      href: /azure/cognitive-services/computer-vision/vs-computer-vision-connected-service?toc=/visualstudio/azure/vs-azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+  expanded: false
+- name: Cloud Services
+  items:
+  - name: Visual Studio でクラウド サービス プロジェクトを作業する
+    items:
+    - name: Visual Studio での Azure プライベート クラウドへのアクセス
+      href: vs-azure-tools-access-private-azure-clouds-with-visual-studio.md
+    - name: Visual Studio での Azure クラウド サービス プロジェクトの作成
+      href: vs-azure-tools-azure-project-create.md
+    - name: Visual Studio での Azure クラウド サービスのロールの管理
+      href: vs-azure-tools-cloud-service-project-managing-roles.md
+    - name: Visual Studio からのクラウド サービスの発行またはデプロイの準備
+      href: vs-azure-tools-cloud-service-publish-set-up-required-services-in-visual-studio.md
+    - name: Azure クラウド サービスの固定仮想 IP アドレスを保持する方法
+      href: vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address.md
+    - name: コマンドラインから Azure プロジェクトを構築する
+      href: vs-azure-tools-command-line-build.md
+    - name: Visual Studio で Azure クラウド サービスのロールを構成する
+      href: vs-azure-tools-configure-roles-for-cloud-service.md
+    - name: Visual Studio で Azure クラウド サービス プロジェクトを構成する
+      href: vs-azure-tools-configuring-an-azure-project.md
+    - name: 複数のサービス構成を使用するための Visual Studio での Azure プロジェクトの構成
+      href: vs-azure-tools-multiple-services-project-configurations.md
+    - name: 現行バージョンの Azure Tools for Visual Studio にプロジェクトをアップグレードする方法
+      href: vs-azure-tools-upgrade-projects-to-the-current-version-of-the-azure-tools.md
+  - name: クラウド サービスのテストとデバッグ
+    items:
+    - name: Visual Studio での Azure クラウド サービスまたは仮想マシンのデバッグ
+      href: vs-azure-tools-debug-cloud-services-virtual-machines.md
+    - name: Azure クラウド サービスをデバッグするためのさまざまな方法を理解する
+      href: vs-azure-tools-debugging-cloud-services-overview.md
+    - name: Azure クラウド サービスと仮想マシンに対する診断を設定する
+      href: vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md
+    - name: Emulator Express を使用したローカル コンピューターでの Azure クラウド サービスの実行とデバッグ
+      href: vs-azure-tools-emulator-express-debug-run.md
+    - name: Visual Studio と IntelliTrace を使用した発行済みの Azure クラウド サービスのデバッグ
+      href: vs-azure-tools-intellitrace-debug-published-cloud-services.md
+    - name: クラウド サービスのパフォーマンスのテスト
+      href: vs-azure-tools-performance-profiling-cloud-services.md
+    - name: Azure のコードの最適化
+      href: vs-azure-tools-optimizing-azure-code-in-visual-studio.md
+  - name: Azure にクラウド サービスを発行する
+    items:
+    - name: Visual Studio から Azure クラウド サービスに Web アプリケーションの移行および発行を行う
+      href: vs-azure-tools-migrate-publish-web-app-to-cloud-service.md
+    - name: Visual Studio の Azure アプリケーションの公開ウィザードの使用
+      href: vs-azure-tools-publish-azure-application-wizard.md
+    - name: Visual Studio を使用したクラウド サービスの発行
+      href: vs-azure-tools-publishing-a-cloud-service.md
+    - name: Windows PowerShell スクリプトを使用した開発およびテスト環境への発行
+      href: vs-azure-tools-publishing-using-powershell-scripts.md
+    - name: Publish-WebApplicationVM (Windows PowerShell スクリプト)
+      href: vs-azure-tools-publish-webapplicationvm.md
+    - name: Publish-WebApplicationWebSite (Windows PowerShell スクリプト)
+      href: vs-azure-tools-publish-webapplicationwebsite-windows-powershell-script.md
+    - name: サービス構成とプロファイルを管理する方法
+      href: vs-azure-tools-service-configurations-and-profiles-how-to-manage.md
+    - name: 名前付き認証資格情報の設定
+      href: vs-azure-tools-setting-up-named-authentication-credentials.md
+  - name: Visual Studio で Azure Storage を使用する
+    items:
+    - name: Storage Explorer の概要
+      href: /azure/vs-azure-tools-storage-manage-with-storage-explorer?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+    - name: Visual Studio でのストレージ エミュレーターの構成と使用
+      href: /azure/vs-azure-tools-storage-emulator-using?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+    - name: テーブル デザイナーのフィルター文字列の作成
+      href: vs-azure-tools-table-designer-construct-filter-strings.md
+    - name: Storage Explorer を使用して Azure Blob Storage リソースを管理する
+      href: /azure/vs-azure-tools-storage-explorer-blobs?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+    - name: Azure File Storage でのストレージ エクスプローラーの使用
+      href: /azure/vs-azure-tools-storage-explorer-files?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+    - name: Microsoft Azure Storage Explorer のリリース ノート
+      href: /azure/vs-azure-tools-storage-explorer-relnotes?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+    - name: Storage Explorer のアクセシビリティ
+      href: /azure/vs-azure-tools-storage-explorer-accessibility?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+  expanded: false
+- name: Cloud Explorer
+  items:
+  - name: サーバー エクスプローラーを使用したストレージ リソースの参照と管理
+    href: vs-azure-tools-storage-resources-server-explorer-browse-manage.md
+  - name: Visual Studio Cloud Explorer で Azure アカウントに関連付けられているリソースを管理する
+    href: vs-azure-tools-resources-managing-with-cloud-explorer.md
+  - name: サーバー エクスプローラーから Azure Virtual Machines へのアクセス
+    href: vs-azure-tools-virtual-machines-access-from-server-explorer.md
+ms.openlocfilehash: 0e3e8ddeca9bbbbc00aa99e978688ce0cd57773c
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50673173"
