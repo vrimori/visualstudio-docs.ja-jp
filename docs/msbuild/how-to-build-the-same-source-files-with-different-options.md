@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d524626187e95a02654f00ca7cf7921fd819e7c6
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: e80252582f93c995330f9c586a56e2f8f2c4e6a3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39081658"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897174"
 ---
 # <a name="how-to-build-the-same-source-files-with-different-options"></a>方法: 同じソース ファイルを異なるオプションでビルドする
 プロジェクトをビルドする場合、同じコンポーネントを異なるビルド オプションでコンパイルすることがよくあります。 たとえば、シンボル情報を付ければデバッグ ビルドを作成でき、シンボル情報なしで最適化を有効にすればリリース ビルドを作成できます。 あるいは、x86 や [!INCLUDE[vcprx64](../extensibility/internals/includes/vcprx64_md.md)] などのように、特定のプラットフォーム上で実行するようにプロジェクトをビルドできます。 これらのいずれの場合も、ほとんどのビルド オプションは同じままで、ビルド構成を制御するためにいくつかのオプションが変更されるだけです。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、異なるビルド構成を作成するためにプロパティと条件を使用します。  
@@ -50,41 +50,41 @@ ms.locfileid: "39081658"
     ```  
   
 ## <a name="specify-properties-on-the-command-line"></a>コマンド ラインでプロパティを指定する  
- 複数の構成を受け入れるようにプロジェクト ファイルを作成したら、プロジェクトをビルドするときに構成を変更できなければなりません。 それができるよう、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ではコマンド ラインで **/property** または **/p** スイッチを使用してプロパティを指定できるようになっています。  
+ 複数の構成を受け入れるようにプロジェクト ファイルを作成したら、プロジェクトをビルドするときに構成を変更できなければなりません。 それができるよう、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ではコマンド ラインで **-property** または **-p** スイッチを使用してプロパティを指定できるようになっています。  
   
 #### <a name="to-set-a-project-property-at-the-command-line"></a>コマンド ライン上でプロジェクト プロパティを設定するには  
   
--   **/property** スイッチをプロパティおよびプロパティ値と共に使用します。 例:  
+-   **-property** スイッチをプロパティおよびプロパティ値と共に使用します。 例:  
   
     ```cmd  
-    msbuild file.proj /property:Flavor=Debug  
+    msbuild file.proj -property:Flavor=Debug  
     ```  
   
     または  
   
     ```cmd  
-    Msbuild file.proj /p:Flavor=Debug  
+    Msbuild file.proj -p:Flavor=Debug  
     ```  
   
 #### <a name="to-specify-more-than-one-project-property-at-the-command-line"></a>コマンド ライン上で 2 つ以上のプロジェクト プロパティを指定するには  
   
--   **/property** または **/p** スイッチをプロパティおよびプロパティ値と共に複数回使用するか、**/property** または **/p** スイッチを 1 回使用し、複数のプロパティをセミコロン (;) で分けます。 例:  
+- **-property** または **-p** スイッチをプロパティおよびプロパティ値と共に複数回使用するか、**-property** または **-p** スイッチを 1 回使用し、複数のプロパティをセミコロン (;) で分けます。 例:  
   
-    ```cmd  
-    msbuild file.proj /p:Flavor=Debug;Platform=x86  
-    ```  
+  ```cmd  
+  msbuild file.proj -p:Flavor=Debug;Platform=x86  
+  ```  
   
-    または
+  または
   
-    ```cmd  
-    msbuild file.proj /p:Flavor=Debug /p:Platform=x86  
-    ```  
+  ```cmd  
+  msbuild file.proj -p:Flavor=Debug -p:Platform=x86  
+  ```  
   
- 環境変数はプロパティとしても扱われ、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] によって自動的に組み込まれます。 環境変数の使用に関する詳細については、「[方法: ビルドで環境変数を使用する](../msbuild/how-to-use-environment-variables-in-a-build.md)」を参照してください。  
+  環境変数はプロパティとしても扱われ、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] によって自動的に組み込まれます。 環境変数の使用に関する詳細については、「[方法: ビルドで環境変数を使用する](../msbuild/how-to-use-environment-variables-in-a-build.md)」を参照してください。  
   
- コマンド ラインで指定されたプロパティ値は、同じプロパティに対してプロジェクト ファイル内で設定されているどの値よりも優先され、プロジェクト ファイル内の値は環境変数の値よりも優先されます。  
+  コマンド ラインで指定されたプロパティ値は、同じプロパティに対してプロジェクト ファイル内で設定されているどの値よりも優先され、プロジェクト ファイル内の値は環境変数の値よりも優先されます。  
   
- この動作は、プロジェクト タグの `TreatAsLocalProperty` 属性を使用して変更できます。 その属性と共に記載されたプロパティ名については、コマンド ラインで指定されたプロパティ値がプロジェクト ファイル内の値よりも優先されることはありません。 このトピックの後の部分でその例を示します。  
+  この動作は、プロジェクト タグの `TreatAsLocalProperty` 属性を使用して変更できます。 その属性と共に記載されたプロパティ名については、コマンド ラインで指定されたプロパティ値がプロジェクト ファイル内の値よりも優先されることはありません。 このトピックの後の部分でその例を示します。  
   
 ## <a name="example"></a>例  
  以下の "Hello World" プロジェクトのコード例には、デバッグ ビルドとリリース ビルドを作成するために使用できる 2 つの新しいプロパティ グループが含まれています。  
@@ -92,13 +92,13 @@ ms.locfileid: "39081658"
  このプロジェクトのデバッグ バージョンをビルドするには、以下のように入力します。  
   
 ```cmd  
-msbuild consolehwcs1.proj /p:flavor=debug  
+msbuild consolehwcs1.proj -p:flavor=debug  
 ```  
   
  このプロジェクトのリテール バージョンをビルドするには、以下のように入力します。  
   
 ```cmd  
-msbuild consolehwcs1.proj /p:flavor=retail  
+msbuild consolehwcs1.proj -p:flavor=retail  
 ```  
   
 ```xml  
@@ -159,7 +159,7 @@ msbuild consolehwcs1.proj /p:flavor=retail
  プロジェクトをビルドするには、次のコマンドを入力します。  
   
 ```cmd  
-msbuild colortest.proj /t:go /property:Color=Green  
+msbuild colortest.proj -t:go -property:Color=Green  
 ```  
   
 ```xml  

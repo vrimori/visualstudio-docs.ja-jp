@@ -12,16 +12,17 @@ ms.service: multiple
 ms.technology: vs-ai-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f60fa346df7d2b9e89f3d6905e273d0191bdf3b
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 4bca48113349607de2f5ada53356f1d24eb82088
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44281742"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933990"
 ---
 # <a name="train-a-tensorflow-model-locally"></a>TensorFlow モデルをローカルにトレーニングする
 
 このクイック スタートでは、Visual Studio Tools for AI でローカルに [MNIST](http://yann.lecun.com/exdb/mnist/) データセットを使って TensorFlow モデルをトレーニングします。
+
 MNIST データベースには、60,000 例のトレーニング セットと、手書きの数字の 10,000 例のテスト セットが含まれます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
@@ -31,6 +32,7 @@ MNIST データベースには、60,000 例のトレーニング セットと、
 ### <a name="google-tensorflow"></a>Google TensorFlow
 
 端末で次のコマンドを実行します。
+
 ```cmd
 C:\>pip.exe install tensorflow
 ```
@@ -47,9 +49,9 @@ TensorFlow、CNTK、Theano などでディープ ラーニングを始めるた�
 
 - ダウンロードしたサンプル リポジトリで **Tensorflow Examples** フォルダーを選び、**TensorflowExamples.sln** ファイルを開きます。
 
-![プロジェクトを開く](media\tensorflow-local\open-project.png)
+   ![プロジェクトを開く](media/tensorflow-local/open-project.png)
 
-![ソリューションを開く](media\tensorflow-local\open-solution.png)
+   ![ソリューションを開く](media/tensorflow-local/open-solution.png)
 
 - **ソリューション エクスプローラー**で MNIST プロジェクトを探して右クリックし、**[スタートアップ プロジェクトに設定]** を選びます。
 
@@ -57,7 +59,7 @@ TensorFlow、CNTK、Theano などでディープ ラーニングを始めるた�
 
 - 出力がコンソールに表示されます。
 
-![コンソールからの出力例](media\tensorflow-local\console-output.png)
+   ![コンソールからの出力例](media/tensorflow-local/console-output.png)
 
 > [!div class="nextstepaction"]
 > [クラウドで TensorFlow モデルをトレーニングする](tensorflow-vm.md)

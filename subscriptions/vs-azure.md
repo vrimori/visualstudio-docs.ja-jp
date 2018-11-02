@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Azure の�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: b8f3542fce0d04e4e6efeba6e2558740c5f5d12f
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: a97dbd638c4840266f22c46610f78ec5b2d527d6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44282314"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862347"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションで Microsoft Azure を使用する
 
@@ -24,51 +24,52 @@ Visual Studio サブスクライバーは、追加料金なしで Microsoft Azur
 
 ## <a name="eligibility"></a>特典を受ける条件
 
-| サブスクリプション レベル/プログラム                                 | 特長                     | 更新可能かどうか                                                   |
-|--------------------------------------------------------------|-----------------------------|--------------------------------------------------------------|
-| Visual Studio Enterprise Standard                            | 150 ドルのクレジット/月         |   [はい]                                                        |
-| Visual Studio Enterprise - 年間プラン                              | 150 ドルのクレジット/月         |   [はい]                                                        |
-| Visual Studio Enterprise - 月間プラン                             | 使用できません               |                                                              |
-| Visual Studio Professional Standard                          | 50 ドルのクレジット/月          |   [はい]                                                        |
-| Visual Studio Professional - 年間プラン                            | 50 ドルのクレジット/月          |   [はい]                                                        |
-| Visual Studio Professional - 月間プラン                           | 使用できません               |                                                              |
-| Visual Studio Test Pro                                       | 50 ドルのクレジット/月          |   [はい]                                                        |
-| MSDN Platforms                                               | 100 ドルのクレジット/月         |   [はい]                                                        |
-| Visual Studio Dev Essentials                                 | 無料のサービスと 200 ドルのクレジット | 無料のサービスは永続的です。  200 ドルのクレジットは 1 回限りのみです。  |
-| Visual Studio Enterprise - NFR*                              | 150 ドルのクレジット/月         |   [はい]                                                        |
-| Visual Studio Enterprise - FTE                               | 150 ドルのクレジット/月         |   [はい]                                                        |
-| Visual Studio Enterprise - Microsoft Partner Network         | 150 ドルのクレジット/月         |   [はい]                                                        |
-| Visual Studio Professional - Microsoft Partner Network       | 使用できません               |                                                              |
-| Visual Studio Enterprise – Imagine (Standard)                | 使用できません               |                                                              |
-| Visual Studio Enterprise – Imagine (Premium)                 | 使用できません               |                                                              |
-| Visual Studio Enterprise – BizSpark                          | 150 ドルのクレジット/月         |   [はい]                                                        |
-| Visual Studio Enterprise – MCT Software & Services           | 100 ドルのクレジット/月         |   [はい]                                                        |
-| Visual Studio Enterprise – MCT Software & Services Developer | 150 ドルのクレジット/月         |   [はい]                                                        |
-*Not for Resale (NFR)、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP) が含まれます。
+|                 サブスクリプション レベル/プログラム                 |           特長           |                         更新可能かどうか                          |
+|--------------------------------------------------------------|-----------------------------|-------------------------------------------------------------|
+|              Visual Studio Enterprise Standard               |     150 ドルのクレジット/月     |                             [はい]                             |
+|               Visual Studio Enterprise - 年間プラン                |     150 ドルのクレジット/月     |                             [はい]                             |
+|               Visual Studio Enterprise - 月間プラン               |        使用できません        |                                                             |
+|             Visual Studio Professional Standard              |     50 ドルのクレジット/月      |                             [はい]                             |
+|              Visual Studio Professional - 年間プラン               |     50 ドルのクレジット/月      |                             [はい]                             |
+|              Visual Studio Professional - 月間プラン              |        使用できません        |                                                             |
+|                    Visual Studio Test Pro                    |     50 ドルのクレジット/月      |                             [はい]                             |
+|                        MSDN Platforms                        |     100 ドルのクレジット/月     |                             [はい]                             |
+|                 Visual Studio Dev Essentials                 | 無料のサービスと 200 ドルのクレジット | 無料のサービスは永続的です。  200 ドルのクレジットは 1 回限りのみです。 |
+|               Visual Studio Enterprise - NFR\*               |     150 ドルのクレジット/月     |                             [はい]                             |
+|                Visual Studio Enterprise - FTE                |     150 ドルのクレジット/月     |                             [はい]                             |
+|     Visual Studio Enterprise - Microsoft Partner Network     |     150 ドルのクレジット/月     |                             [はい]                             |
+|    Visual Studio Professional - Microsoft Partner Network    |        使用できません        |                                                             |
+|        Visual Studio Enterprise – Imagine (Standard)         |        使用できません        |                                                             |
+|         Visual Studio Enterprise – Imagine (Premium)         |        使用できません        |                                                             |
+|             Visual Studio Enterprise – BizSpark              |     150 ドルのクレジット/月     |                             [はい]                             |
+|      Visual Studio Enterprise – MCT Software & Services      |     100 ドルのクレジット/月     |                             [はい]                             |
+| Visual Studio Enterprise – MCT Software & Services Developer |     150 ドルのクレジット/月     |                             [はい]                             |
+
+*Not for Resale (NFR)、Microsoft Valued Professional (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP) が含まれます
 
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 
 ## <a name="activation-steps"></a>アクティブ化の手順
 
-1.  [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
+1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
-2.  [特典] ページの [ツール] セクションで、Azure のタイルを見つけて、特典タイルの下部にある **[ライセンス認証]** リンクをクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![Azure タイル](_img\vs-azure\vs-azure-tile.png)
+2. [特典] ページの [ツール] セクションで、Azure のタイルを見つけて、特典タイルの下部にある **[ライセンス認証]** リンクをクリックします。
+   > [!div class="mx-imgBorder"]
+   > ![Azure タイル](_img/vs-azure/vs-azure-tile.png)
 
-3.  Azure サブスクリプションの作成に必要な情報を入力して、ご利用条件に同意するチェック ボックスをオンにしてから、**[サインアップ]** をクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![Azure のサインアップ](_img\vs-azure\vs-azure-sign-up-cropped.png)
+3. Azure サブスクリプションの作成に必要な情報を入力して、ご利用条件に同意するチェック ボックスをオンにしてから、**[サインアップ]** をクリックします。
+   > [!div class="mx-imgBorder"]
+   > ![Azure のサインアップ](_img/vs-azure/vs-azure-sign-up-cropped.png)
 
-4.  アカウントの準備ができると、Azure サポート プラン (別売り) を選ぶか、Azure サブスクリプションで始めることができます。
-    > [!div class="mx-imgBorder"]
-    > ![Azure 準備作業](_img\vs-azure\vs-azure-getting-ready-cropped.png)
+4. アカウントの準備ができると、Azure サポート プラン (別売り) を選ぶか、Azure サブスクリプションで始めることができます。
+   > [!div class="mx-imgBorder"]
+   > ![Azure 準備作業](_img/vs-azure/vs-azure-getting-ready-cropped.png)
 
-5.  Azure ダッシュボードが読み込まれ、初めて使うときはツアーを見ることができます。  ツアーは、さまざまなタスクを実行したり関連情報を検索したりする方法を示す一連の画面ヒントで構成されます。  ツアーを最後まで見るか閉じると、Azure のダッシュボードが表示されます。
+5. Azure ダッシュボードが読み込まれ、初めて使うときはツアーを見ることができます。  ツアーは、さまざまなタスクを実行したり関連情報を検索したりする方法を示す一連の画面ヒントで構成されます。  ツアーを最後まで見るか閉じると、Azure のダッシュボードが表示されます。
 
-6.  後で簡単にアクセスできるようにするには、[Azure Portal](https://portal.azure.com) にブックマークを付けます。
-    > [!div class="mx-imgBorder"]
-    > ![Azure ダッシュボード](_img\vs-azure\vs-azure-dashboard-cropped.png)
+6. 後で簡単にアクセスできるようにするには、[Azure Portal](https://portal.azure.com) にブックマークを付けます。
+   > [!div class="mx-imgBorder"]
+   > ![Azure ダッシュボード](_img/vs-azure/vs-azure-dashboard-cropped.png)
 
 ## <a name="faq"></a>FAQ
 

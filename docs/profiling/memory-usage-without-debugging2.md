@@ -1,7 +1,7 @@
 ---
 title: VS デバッガーなしでメモリ使用量を分析する | Microsoft Docs
 ms.custom: H1Hack27Feb2017
-ms.date: 11/04/2016
+ms.date: 09/28/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
@@ -14,23 +14,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e6647fb758d6895db98aa6bad47295a6a4aae86
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 2c79184af7afa11e2008ff32ce2ffb2dedd19559
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35669419"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49827735"
 ---
 # <a name="analyze-memory-usage-without-the-visual-studio-debugger"></a>Visual Studio デバッガーを使わずにメモリ使用量を分析する
 デバッグなしの**メモリ使用量**ツールを使用して、次のような操作を行えます  
   
--   シナリオの開発中に Visual Studio 内でのアプリのメモリ使用量が適切かどうかを監視します。  
+- シナリオの開発中に Visual Studio 内でのアプリのメモリ使用量が適切かどうかを監視します。  
   
--   アプリのメモリの状態の詳しいスナップショットを作成します。  
+- アプリのメモリの状態の詳しいスナップショットを作成します。  
   
--   スナップショットを比べて、メモリの問題の根本原因を見つけます。  
+- スナップショットを比べて、メモリの問題の根本原因を見つけます。  
   
- このトピックでは、メモリ使用量ツールを使って UWP XAML アプリを分析する方法について説明します。 JavaScript と HTML を使用する UWP アプリでのメモリ使用量を分析する場合、[メモリ使用量の分析 (JavaScript)](../profiling/javascript-memory.md) に関する記事をご覧ください。  
+  現時点では、.NET Core アプリのメモリ使用量を測定するには、デバッガーがアタッチされたツールを使用する必要があります。 その他のマネージド アプリとネイティブ アプリには、デバッガーがアタッチされたツールまたはされていないツールのいずれかを使用することができます。 このトピックのスクリーンショットは、UWP XAML アプリを示しています。 JavaScript と HTML を使用する UWP アプリでのメモリ使用量を分析する場合、[メモリ使用量の分析 (JavaScript)](../profiling/javascript-memory.md) に関する記事をご覧ください。
   
 ## <a name="start-a-memory-usage-diagnostic-session"></a>メモリ使用量診断セッションの開始  
   
@@ -69,13 +69,13 @@ ms.locfileid: "35669419"
 ###  <a name="BKMK_Memory_Usage_snapshot_views"></a> メモリ使用量のスナップショット ビュー  
  Visual Studio の新しいウィンドウで詳しいレポートを開くには、スナップショット ビューを使います。 スナップショット ビューには次の 2 種類があります。  
   
--   [スナップショットの詳細レポート](#snapshot-reports)には、1 つのスナップショットに含まれる型とインスタンスが表示されます。  
+- [スナップショットの詳細レポート](#snapshot-reports)には、1 つのスナップショットに含まれる型とインスタンスが表示されます。  
   
--   [スナップショットの相違 (diff) レポート](#snapshot-difference-diff-reports)では、2 つのスナップショットに含まれる型とインスタンスが比較されます。  
+- [スナップショットの相違 (diff) レポート](#snapshot-difference-diff-reports)では、2 つのスナップショットに含まれる型とインスタンスが比較されます。  
   
- ![スナップショット表示のリンク](../profiling/media/memuse__snapshotview_numbered.png "MEMUSE__SnapshotView_Numbered")  
+  ![スナップショット表示のリンク](../profiling/media/memuse__snapshotview_numbered.png "MEMUSE__SnapshotView_Numbered")  
   
- スナップショット ビューの画像に番号を付けて示した項目は、メモリ使用量レポートのビューを開くリンクです。  
+  スナップショット ビューの画像に番号を付けて示した項目は、メモリ使用量レポートのビューを開くリンクです。  
   
 |||  
 |-|-|  

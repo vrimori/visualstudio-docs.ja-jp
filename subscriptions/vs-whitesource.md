@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる WhiteSourc
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: a7c384a8bc4b84aea4982bd195b0d92820c68ecb
-ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
+ms.openlocfilehash: 981d6a655a203a7d44728fa7d12761fba2918d76
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46542352"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935778"
 ---
 #  <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの WhiteSource Bolt
 
@@ -22,49 +22,51 @@ ms.locfileid: "46542352"
 
 ## <a name="activation-steps"></a>アクティブ化の手順
 
-1.  WhiteSource Bolt 特典をアクティブ化するには、[https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
+1. WhiteSource Bolt 特典をアクティブ化するには、[https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
-2.  [ツール] セクションで、 WhiteSource Bolt のタイルを見つけて、特典タイルの下部にある **[コードを取得]** リンクをクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![WhiteSource 特典タイル](_img\vs-whitesource\vs-whitesource-tile.png)
+2. [ツール] セクションで、 WhiteSource Bolt のタイルを見つけて、特典タイルの下部にある **[コードを取得]** リンクをクリックします。
+   > [!div class="mx-imgBorder"]
+   > ![WhiteSource 特典タイル](_img/vs-whitesource/vs-whitesource-tile.png)
 
-2.  アクティブ化コードを表示する通知を受け取ります。  **コードをクリップボードにコピーし**、**[アクティブ化]** をクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![WhiteSource 特典コード](_img\vs-whitesource\vs-whitesource-code.png)
+3. アクティブ化コードを表示する通知を受け取ります。  **コードをクリップボードにコピーし**、**[アクティブ化]** をクリックします。
+   > [!div class="mx-imgBorder"]
+   > ![WhiteSource 特典コード](_img/vs-whitesource/vs-whitesource-code.png)
 
-3.  WhiteSource の Web ページで、**[Activate]\(アクティブ化\)** ボタンをクリックするか、ページの **[Activate your account]\(アカウントのアクティブ化\)** セクションまで下にスクロールします。
-    > [!div class="mx-imgBorder"]
-    > ![WhiteSource 特典のアクティブ化](_img\vs-whitesource\vs-whitesource-activate-page-cropped.png)
+4. WhiteSource の Web ページで、**[Activate]\(アクティブ化\)** ボタンをクリックするか、ページの **[Activate your account]\(アカウントのアクティブ化\)** セクションまで下にスクロールします。
+   > [!div class="mx-imgBorder"]
+   > ![WhiteSource 特典のアクティブ化](_img/vs-whitesource/vs-whitesource-activate-page-cropped.png)
 
-4.  ページの **[Activate your account]\(アカウントのアクティブ化\)** セクションでは、4 つのステップが案内されます。
+5. ページの **[Activate your account]\(アカウントのアクティブ化\)** セクションでは、4 つのステップが案内されます。
 
-    - Microsoft Visual Studio Marketplace から WhiteSource Bolt 拡張機能を[インストール](https://marketplace.visualstudio.com/items?itemName=whitesource.ws-bolt)します。 拡張機能をインストールする権限がない場合は、「[Install free extensions for Azure DevOps Services](/azure/devops/marketplace/install-vsts-extension?view=vsts)」 (Azure DevOps Services の拡張機能を無料でインストールする) を参照してください。
+   - Microsoft Visual Studio Marketplace から WhiteSource Bolt 拡張機能を[インストール](https://marketplace.visualstudio.com/items?itemName=whitesource.ws-bolt)します。 拡張機能をインストールする権限がない場合は、「[Install free extensions for Azure DevOps Services](/azure/devops/marketplace/install-vsts-extension?view=vsts)」 (Azure DevOps Services の拡張機能を無料でインストールする) を参照してください。
 
 
-    Azure DevOps Services を使っている場合は緑の **[インストール]** ボタンをクリックし、Team Foundation Server の場合は **[ダウンロード]** ボタンをクリックします。  この例では、Azure DevOps Services を使用します。
-    > [!div class="mx-imgBorder"]
-    > ![WhiteSource 特典拡張機能のインストール](_img\vs-whitesource\vs-whitesource-download-install.png)
+~~~
+Click the green **Install** button if you are using Azure DevOps Services, or the **Download** button for Team Foundation Server.  For this example, we will use Azure DevOps Services.
+> [!div class="mx-imgBorder"]
+> ![WhiteSource Benefit Install Extension](_img\vs-whitesource\vs-whitesource-download-install.png)
 
-    - 次に、使用する Azure DevOps 組織を選択して、**[確認]** をクリックします。  (まだ Azure DevOps Services を設定していない場合は、[特典](https://my.visualstudio.com/benefits)ページに移動して Azure DevOps Services 特典をアクティブ化します。)
+- Next, select the Azure DevOps organization you want to use and click **Confirm**.  (If you have not yet set up Azure DevOps Services, visit the [Benefits](https://my.visualstudio.com/benefits) page and activate your Azure DevOps Services benefit.)
 
-    > [!div class="mx-imgBorder"]
-    > ![WhiteSource 特典アカウントの確認](_img\vs-whitesource\vs-whitesource-confirm-account.png)
+> [!div class="mx-imgBorder"]
+> ![WhiteSource Benefit Confirm Account](_img\vs-whitesource\vs-whitesource-confirm-account.png)
 
-    - 拡張機能がインストールされて使えることを示す確認が表示されます。  **[Get started]\(使用開始\)** をクリックして WhiteSource Bolt ページに戻って続けます。
-    > [!div class="mx-imgBorder"]
-    > ![WhiteSource 特典インストール完了](_img\vs-whitesource\vs-whitesource-install-complete.png)
+- You’ll receive a confirmation that the extension is installed and ready to use.  Click **Get started** to return to the WhiteSource Bolt page and continue.
+> [!div class="mx-imgBorder"]
+> ![WhiteSource Benefit Install Complete](_img\vs-whitesource\vs-whitesource-install-complete.png)
+~~~
 
-5.  Azure DevOps プロジェクトのダッシュボードを開き、**Azure Pipelines** メニューをクリックして **WhiteSource Bolt** を選択します。
-    > [!div class="mx-imgBorder"]
-    > ![WhiteSource 特典拡張機能の追加](_img\vs-whitesource\vs-whitesource-installed-cropped.png)
+5. Azure DevOps プロジェクトのダッシュボードを開き、**Azure Pipelines** メニューをクリックして **WhiteSource Bolt** を選択します。
+   > [!div class="mx-imgBorder"]
+   > ![WhiteSource 特典拡張機能の追加](_img/vs-whitesource/vs-whitesource-installed-cropped.png)
 
 6. WhiteSource Bolt 特典タイルからアクティブ化コードを貼り付けて、**[アクティブ化]** をクリックします。 各アクティブ化コードでアクティブ化できるプロジェクトは 1 つだけです。
-    > [!div class="mx-imgBorder"]
-    > ![WhiteSource 特典アクティブ化コード](_img\vs-whitesource\vs-whitesource-activate-code-cropped.png)
+   > [!div class="mx-imgBorder"]
+   > ![WhiteSource 特典アクティブ化コード](_img/vs-whitesource/vs-whitesource-activate-code-cropped.png)
 
-7.  アクティブ化が完了し、180 日間サブスクリプションに残っています。
+7. アクティブ化が完了し、180 日間サブスクリプションに残っています。
 
-8.  ビルド ステップの 1 つとして、WhiteSource Bolt 拡張機能を追加する必要があります。  方法については、[WhiteSource Bolt ページ](https://www.whitesourcesoftware.com/whitesource_bolt_visualstudio_2017/#activate)のビデオをご覧ください。
+8. ビルド ステップの 1 つとして、WhiteSource Bolt 拡張機能を追加する必要があります。  方法については、[WhiteSource Bolt ページ](https://www.whitesourcesoftware.com/whitesource_bolt_visualstudio_2017/#activate)のビデオをご覧ください。
 
 9. ビルドを実行すると、次の包括的なレポートとダッシュボードが自動的に生成されます。
     - セキュリティ脆弱性ダッシュボード
@@ -84,7 +86,7 @@ ms.locfileid: "46542352"
 | Visual Studio Dev Essentials | N/A  | 使用できません |N/A |
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
 
-<sup>1</sup> *Microsoft Partner Network (Enterprise) が含まれます。他の Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、FTE、MCT Software & Services Developer、BizSpark、Imagine、Microsoft Valued Partner (MVP)、Region Director (RD)、MCT Software & Services、Microsoft Partner Network (Professional) は含まれません。*
+<sup>1</sup> *Microsoft Partner Network (Enterprise) が含まれます。他の Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、FTE、MCT Software & Services Developer、BizSpark、Imagine、Microsoft Valued Professional (MVP)、Region Director (RD)、MCT Software & Services、Microsoft Partner Network (Professional) は含まれません。*
 
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 

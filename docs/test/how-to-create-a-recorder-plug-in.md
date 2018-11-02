@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 639e6dc4fb2d62258f94ca09d9f9155396748379
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 3851b70f818c9cc601dbbdabce059e16fec747ee
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382066"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909778"
 ---
 # <a name="how-to-create-a-recorder-plug-in"></a>方法: レコーダー プラグインを作成する
 
@@ -87,11 +87,11 @@ ms.locfileid: "39382066"
 
 ### <a name="deploy-the-recorder-plug-in"></a>レコーダー プラグインの配置
 
-レコーダー プラグインをコンパイルした後で、生成された DLL を次のうちいずれかの場所に配置する必要があります。
+レコーダー プラグインをコンパイルした後で、生成された DLL を次のうちいずれかの場所に配置します。
 
--   *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\WebTestPlugins*
+- *%ProgramFiles(x86)%\Microsoft Visual Studio\\[バージョン]\\[エディション]\Common7\IDE\PrivateAssemblies\WebTestPlugins*
 
--   *%USERPROFILE%\My Documents\Visual Studio \<* version *>\WebTestPlugins*
+- *%USERPROFILE%\Documents\Visual Studio [バージョン]\WebTestPlugins*
 
 > [!WARNING]
 > レコーダー プラグインを 2 つの場所の一方にコピーした後で、レコーダー プラグインを登録するために Visual Studio を再起動する必要があります。
@@ -113,8 +113,8 @@ ms.locfileid: "39382066"
     >
     > この問題が発生するのは、いずれかのプラグインのコードを変更して、新しい DLL バージョン **(Version=0.0.0.0)** を作成したのに、プラグインが元のプラグイン バージョンを参照したままになっている場合です。 この問題を解決するには、次の手順を実行します。
     >
-    > 1.  Web パフォーマンスとロード テストのプロジェクトで、参照に関する警告が表示されます。 プラグイン DLL への参照を削除し、再度追加します。
-    > 2.  プラグインをテストまたは該当する場所から削除し、その後、追加し直します。
+    > 1. Web パフォーマンスとロード テストのプロジェクトで、参照に関する警告が表示されます。 プラグイン DLL への参照を削除し、再度追加します。
+    > 2. プラグインをテストまたは該当する場所から削除し、その後、追加し直します。
 
 ## <a name="example"></a>例
 
@@ -123,7 +123,7 @@ ms.locfileid: "39382066"
 > [!NOTE]
 > サンプル コードの完全な一覧は、このトピックの最後にあります。
 
- **サンプル コードのレビュー**
+**サンプル コードのレビュー**
 
 ## <a name="iterate-through-the-result-to-find-first-page-with-reportsession"></a>ReportSession で最初のページを検索するための、結果の反復処理
 

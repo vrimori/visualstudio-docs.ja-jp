@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Enterprise
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 81d93a4a030fd4a588903073d065041a6dbd69e6
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 96f093f6f267e80c5136bd87a009dd25e43ab2cf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283289"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930116"
 ---
 # <a name="enterprise-mobility--security-ems-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Enterprise Mobility + Security (EMS)
 
@@ -27,31 +27,32 @@ Visual Studio Enterprise の年間クラウド サブスクリプションと標
 
 EMS を使うには、アカウントを設定するか、既存のアカウントを使ってサインインする必要があります。
 
-1.  [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
+1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
-2.  [ツール] セクションで、Enterprise Mobility & Security のタイルを見つけて、タイルの下部にある **[コードを取得]** リンクをクリックします。   コードが正常に取得された通知を受け取ります。  **[アクティブ化]** をクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![EMS 特典タイル](_img\vs-ems\vs-ems-tile.png)
+2. [ツール] セクションで、Enterprise Mobility & Security のタイルを見つけて、タイルの下部にある **[コードを取得]** リンクをクリックします。   コードが正常に取得された通知を受け取ります。  **[アクティブ化]** をクリックします。
+   > [!div class="mx-imgBorder"]
+   > ![EMS 特典タイル](_img/vs-ems/vs-ems-tile.png)
 
-2.  Enterprise Mobility + Security E5 ページでは、既存サブスクリプションでのサインインまたは新しいサブスクリプションの作成が可能です。  新しいサブスクリプションを作るには、必要な情報を入力して、**[次へ]** をクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![EMS 特典アカウント作成](_img\vs-ems\vs-ems-create-account-cropped.png)
+3. Enterprise Mobility + Security E5 ページでは、既存サブスクリプションでのサインインまたは新しいサブスクリプションの作成が可能です。  新しいサブスクリプションを作るには、必要な情報を入力して、**[次へ]** をクリックします。
+   > [!div class="mx-imgBorder"]
+   > ![EMS 特典アカウント作成](_img/vs-ems/vs-ems-create-account-cropped.png)
 
-3. ユーザー ID とパスワードを作成します。  **[アカウントの作成]** をクリックして続けます。
-    > [!div class="mx-imgBorder"]
-    > ![EMS 特典ユーザー ID 作成](_img\vs-ems\vs-ems-userID-cropped.png)
+4. ユーザー ID とパスワードを作成します。  **[アカウントの作成]** をクリックして続けます。
+   > [!div class="mx-imgBorder"]
+   > ![EMS 特典ユーザー ID 作成](_img/vs-ems/vs-ems-userID-cropped.png)
 
-4.  次に、電話またはテキストで確認コードを受け取るための電話番号を指定します。  コードを入力して、**[次へ]** をクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![EMS 特典の検証](_img\vs-ems\vs-ems-robot-cropped.png)
+5. 次に、電話またはテキストで確認コードを受け取るための電話番号を指定します。  コードを入力して、**[次へ]** をクリックします。
+   > [!div class="mx-imgBorder"]
+   > ![EMS 特典の検証](_img/vs-ems/vs-ems-robot-cropped.png)
 
-5.  次のページでは、サインイン ページとユーザー ID が表示されます。  後で使うので情報を保存します。  **[You’re ready to go…]\(...の準備ができました\)** をクリックします
-    > [!div class="mx-imgBorder"]
-    > ![EMS 特典アカウント作成済み](_img\vs-ems\vs-ems-save-info-cropped.png)
+6. 次のページでは、サインイン ページとユーザー ID が表示されます。  後で使うので情報を保存します。  **[You’re ready to go…]\(...の準備ができました\)** をクリックします
+   > [!div class="mx-imgBorder"]
+   > ![EMS 特典アカウント作成済み](_img/vs-ems/vs-ems-save-info-cropped.png)
 
-6.  EMS では、Microsoft [Azure Portal](https://azure.microsoft.com) へのアクセスが必要です。  EMS ランディング ページの 3 つのステップに従って、Azure サブスクリプションをアクティブ化し、ユーザーを追加して、EMS を構成します。
+7. EMS では、Microsoft [Azure Portal](https://azure.microsoft.com) へのアクセスが必要です。  EMS ランディング ページの 3 つのステップに従って、Azure サブスクリプションをアクティブ化し、ユーザーを追加して、EMS を構成します。
 
 ## <a name="eligibility"></a>特典を受ける条件
+
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 使用可能       |  [はい]          |
@@ -61,7 +62,7 @@ EMS を使うには、アカウントを設定するか、既存のアカウン�
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure | 使用できません | N/A |
 | Visual Studio Dev Essentials | N/A  | 使用できません |N/A |
 
-<sup>1</sup> *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (MPN)、FTE、MCT Software & Services Developer、BizSpark が含まれます。Microsoft Valued Partner (MVP)、Region Director (RD)、MCT Software & Services、Imagine、Microsoft Partner Network (Professional) は含まれません。*
+<sup>1</sup> *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (MPN)、FTE、MCT Software & Services Developer、BizSpark が含まれます。Microsoft Valued Professional (MVP)、Region Director (RD)、MCT Software & Services、Imagine、Microsoft Partner Network (Professional) は含まれません。*
 
 <sup>2</sup>  *Microsoft Partner Network (Professional) は含まれません*
 

@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d70460671bcea19f0a4e56de6ebdd3c7affdb670
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 4e2fba3d5a80de2be973d7a1efad7290731e5a7c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39179191"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49828876"
 ---
 # <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成
 .NET Framework を対象とするプログラミング言語は、MSBuild プロジェクト ファイルを使用してアプリケーションのビルド プロセスを記述および制御します。 Visual Studio を使用して MSBuild プロジェクト ファイルを作成すると、適切な XML が自動的に追加されますが、 その XML がどのように構成されているかや、それに変更を加えてビルドを制御するにはどうすればよいかを知っておくことも有用です。  
@@ -172,7 +172,7 @@ Build ターゲットのタスクは順番に実行されます。 ここでは�
   
 #### <a name="to-build-the-application"></a>アプリケーションをビルドするには  
   
-1.  コマンド プロンプトで、「**msbuild helloworld.csproj/t:Build**」と入力します。  
+1.  コマンド プロンプトで、「**msbuild helloworld.csproj -t:Build**」と入力します。  
   
      Visual C# コンパイラが呼び出され、Helloworld プロジェクト ファイルの Build ターゲットがビルドされて、Helloworld アプリケーションが作成されます。  
   
@@ -183,7 +183,7 @@ Build ターゲットのタスクは順番に実行されます。 ここでは�
 > [!NOTE]
 >  詳細レベルを上げると、ビルドの詳細情報を表示できます。 詳細レベルを "detailed" に設定するには、コマンド プロンプトで次のコマンドを入力します。  
 >   
->  **msbuild helloworld.csproj /t:Build /verbosity:detailed**  
+>  **msbuild helloworld.csproj -t:Build -verbosity:detailed**  
   
 ## <a name="add-build-properties"></a>ビルド プロパティを追加する  
  プロジェクト ファイルにビルド プロパティを追加すると、ビルドをさらに細かく制御できます。 ここでは、次のプロパティを追加します。  
@@ -259,7 +259,7 @@ Build ターゲットのタスクは順番に実行されます。 ここでは�
   
 #### <a name="to-test-the-build-properties"></a>ビルド プロパティをテストするには  
   
-1.  コマンド プロンプトで、「**msbuild helloworld.csproj/t:Build**」と入力します。  
+1.  コマンド プロンプトで、「**msbuild helloworld.csproj -t:Build**」と入力します。  
   
      *\Bin\\* フォルダーが作成され、Visual C# コンパイラが呼び出されて、*MSBuildSample* アプリケーションが作成されて *\Bin\\* フォルダーに配置されます。  
   
@@ -334,9 +334,9 @@ Build ターゲットのタスクは順番に実行されます。 ここでは�
   
 #### <a name="to-test-the-build-targets"></a>ビルド ターゲットをテストするには  
   
-1.  コマンド プロンプトで、「**msbuild helloworld.csproj /p:AssemblyName=Greetings**」と入力します。  
+1.  コマンド プロンプトで、「**msbuild helloworld.csproj -p:AssemblyName=Greetings**」と入力します。  
   
-     **/t** スイッチを使用してターゲットを明示的に設定していないため、既定の Build ターゲットがビルドされます。 **/p** スイッチでは、`AssemblyName` プロパティをオーバーライドして新しい値 `Greetings` を割り当てています。 これにより、*Greetings.exe* という新しいアプリケーションが *\Bin\\* フォルダーに作成されます。  
+     **-t** スイッチを使用してターゲットを明示的に設定していないため、MSBuild により既定の Build ターゲットがビルドされます。 **-p** スイッチでは、`AssemblyName` プロパティをオーバーライドして新しい値 `Greetings` を割り当てています。 これにより、*Greetings.exe* という新しいアプリケーションが *\Bin\\* フォルダーに作成されます。  
   
 2.  *\Bin\\* フォルダーに *MSBuildSample* アプリケーションと新しい *Greetings* アプリケーションの両方が含まれていることを確認するには、「**dir Bin**」と入力します。  
   
@@ -344,11 +344,11 @@ Build ターゲットのタスクは順番に実行されます。 ここでは�
   
      "**Hello, world!**"  というメッセージが表示されます。  
   
-4.  「**msbuild helloworld.csproj /t:clean**」を入力して、MSBuildSample アプリケーションを削除します。  
+4.  「**msbuild helloworld.csproj -t:clean**」を入力して、MSBuildSample アプリケーションを削除します。  
   
      Clean タスクが実行されて、`AssemblyName` プロパティの値が既定値の `MSBuildSample` になっているアプリケーションが削除されます。  
   
-5.  「**msbuild helloworld.csproj /t:clean /p:AssemblyName=Greetings**」を入力して、Greetings アプリケーションを削除します。  
+5.  「**msbuild helloworld.csproj -t:clean -p:AssemblyName=Greetings**」を入力して、Greetings アプリケーションを削除します。  
   
      Clean タスクが実行されて、**AssemblyName** プロパティの値が、指定した値 `Greetings` になっているアプリケーションが削除されます。  
   
@@ -382,11 +382,11 @@ Build ターゲットのタスクは順番に実行されます。 ここでは�
     </Target>  
     ```  
   
-2.  コマンド プロンプトで「**msbuild /v:d**」と入力して、Build ターゲットをテストします。  
+2.  コマンド プロンプトで「**msbuild -v:d**」と入力して、Build ターゲットをテストします。  
   
      *helloworld.csproj* が既定のプロジェクト ファイルであること、Build が既定のターゲットであることに注意してください。  
   
-     **/v:d** スイッチは、ビルド処理の詳細な説明を表示するように指定します。  
+     **-v:d** スイッチは、ビルド処理の詳細な説明を表示するように指定します。  
   
      以下の行が表示されます。  
   

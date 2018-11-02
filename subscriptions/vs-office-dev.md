@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Office 365
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: a97f32bdb2e4a2639962cb3bfc1240f27473bfd6
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: d75c64c3d8902432adde846badabe18a820a16b0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283185"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858343"
 ---
 # <a name="the-office-365-developer-subscription-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Office 365 Developer サブスクリプション特典
 
@@ -29,37 +29,43 @@ ms.locfileid: "44283185"
 3. サインイン プロセスが完了したら、サブスクリプション特典のページが表示されます。  複数のサブスクリプションがある場合は、右上隅の黒のリボンの下にあるドロップダウン矢印をクリックして、サブスクリプション間で切り替えることができます。  Office 365 Developer サブスクリプション特典タイルは、[ツール] カテゴリにあります。  タイル行の右側にある矢印を使用して、Office タイルが表示されるまでスクロールします。
 
 4. 特典タイルの下部にある **[アクティブ化]** リンクをクリックします。   
-    > [!div class="mx-imgBorder"]
-    > ![Office 365 Developer 特典タイル](_img\vs-office-dev\vs-office-dev-tile.png)
+   > [!div class="mx-imgBorder"]
+   > ![Office 365 Developer 特典タイル](_img/vs-office-dev/vs-office-dev-tile.png)
 
-5.  次に、アカウントを作成します。  名前とサインイン電子メール アドレスが表示されます。  
-- 国を選択します。
-- 会社名を入力します。 
-- 最初のチェック ボックスをオンにして使用条件に同意します。 
-- **[次へ]** をクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![Office 365 Developer サインアップ](_img\vs-office-dev\vs-office-dev-signup.png)
-    
-6.  ユーザー設定と関心のある領域を指定し、**[サブスクリプションのアクティブ化]** をクリックします。   
-    > [!div class="mx-imgBorder"]
-    > ![Office 365 Developer ユーザー設定](_img\vs-office-dev\vs-office-dev-preferences.png)
+5. 次に、アカウントを作成します。  名前とサインイン電子メール アドレスが表示されます。  
+6. 国を選択します。
+7. 会社名を入力します。 
+8. 最初のチェック ボックスをオンにして使用条件に同意します。 
+9. **[次へ]** をクリックします。
+   > [!div class="mx-imgBorder"]
+   > ![Office 365 Developer サインアップ](_img/vs-office-dev/vs-office-dev-signup.png)
 
-7.  次に、国/地域を確認して、ユーザー名、ドメイン、パスワードを作成します。
+10. ユーザー設定と関心のある領域を指定し、**[サブスクリプションのアクティブ化]** をクリックします。   
     > [!div class="mx-imgBorder"]
-    > ![Office 365 Developer ユーザー名とドメイン](_img\vs-office-dev\vs-office-dev-domain.png)
+    > ![Office 365 Developer ユーザー設定](_img/vs-office-dev/vs-office-dev-preferences.png)
 
-8.  電話番号を入力し、**[コードの送信]** をクリックします。  これはアカウントが実在する人によって作成されていることを確認するのに役立ちます。 
+11. 次に、国/地域を確認して、ユーザー名、ドメイン、パスワードを作成します。
     > [!div class="mx-imgBorder"]
-    > ![Office 365 Developer 電話検証](_img\vs-office-dev\vs-office-dev-send-code.png)
+    > ![Office 365 Developer ユーザー名とドメイン](_img/vs-office-dev/vs-office-dev-domain.png)
 
-9.  受け取ったコードを入力し、**[設定]** をクリックします。
+12. 電話番号を入力し、**[コードの送信]** をクリックします。  これはアカウントが実在する人によって作成されていることを確認するのに役立ちます。 
     > [!div class="mx-imgBorder"]
-    > ![Office 365 Developer コードの検証](_img\vs-office-dev\vs-office-dev-setup.png)
+    > ![Office 365 Developer 電話検証](_img/vs-office-dev/vs-office-dev-send-code.png)
 
-これで完了です。  ユーザー設定に合わせた情報がページに表示されます。  Developer サブスクリプションにアクセスするには、[office.com](https://www.office.com) に移動して今作成したユーザー ID とパスワードでサインインします。
+13. 受け取ったコードを入力し、**[設定]** をクリックします。
+    > [!div class="mx-imgBorder"]
+    > ![Office 365 Developer コードの検証](_img/vs-office-dev/vs-office-dev-setup.png)
+
+これで完了です。  ユーザー設定に合わせた情報がページに表示されます。  
+
+## <a name="next-steps"></a>次の手順
+Developer サブスクリプションにアクセスするには、[office.com](https://www.office.com) に移動して今作成したユーザー ID とパスワードでサインインします。
+
+Office 365 Developer サブスクリプションの詳細については、「[Office 365 Developer Program FAQ](https://docs.microsoft.com/office/developer-program/office-365-developer-program-faq)」を参照してください。 
 
 
 ## <a name="eligibility"></a>特典を受ける条件
+
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | Included      |  [はい]          |
@@ -69,7 +75,7 @@ ms.locfileid: "44283185"
 | Visual Studio Dev Essentials | N/A  | 使用できません |N/A |
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
 
-<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、FTE、BizSpark、MCT Software & Services Developer、MCT Software & Services が含まれます。Microsoft Partner Network (MPN)、Imagine、Microsoft Valued Partner (MVP)、Region Director (RD) は含まれません。*
+<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、FTE、BizSpark、MCT Software & Services Developer、MCT Software & Services が含まれます。Microsoft Partner Network (MPN)、Imagine、Microsoft Valued Professional (MVP)、Region Director (RD) は含まれません。*
 
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 

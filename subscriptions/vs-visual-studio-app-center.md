@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Visual Stu
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 266ce307b8ee06eed427385d67c48d4258ae2a1c
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 112597455bbabe9f42cc2834bd06bf5c52d7cc9f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283172"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49940984"
 ---
 # <a name="visual-studio-app-center-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Visual Studio App Center
 
@@ -41,6 +41,7 @@ Visual Studio App Center を開始するのは簡単です。
     > ![VS App Center ポータル](_img/vs-app-center/vs-app-center-portal.png)
 
 ## <a name="eligibility"></a>特典を受ける条件
+
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (標準、年間クラウド、月間クラウド)   | VL、Azure、リテール、NFR<sup>1</sup> | Included       |  [はい]          |
@@ -50,7 +51,7 @@ Visual Studio App Center を開始するのは簡単です。
 | Visual Studio Dev Essentials | N/A  | Included                                                            |[はい] |
 
 
-<sup>1</sup> *Not for Resale (NFR)、FTE、Visual Studio Industry Partner (VSIP)、Imagine、Microsoft Partner Network (MPN)、MCT Software & Services、MCT Software & Services Developer、BizSpark、Microsoft Valued Partner (MVP)、Region Director (RD) が含まれます。*
+<sup>1</sup> *Not for Resale (NFR)、FTE、Visual Studio Industry Partner (VSIP)、Imagine、Microsoft Partner Network (MPN)、MCT Software & Services、MCT Software & Services Developer、BizSpark、Microsoft Valued Professional (MVP)、Region Director (RD) が含まれます。*
 
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 

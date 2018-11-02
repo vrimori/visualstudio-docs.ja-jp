@@ -25,12 +25,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 702c1124e3b14f8bfec4f514edd8e1e7def6b776
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 238c903fc81ef2323d0de44e4e5b900a9b68d766
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31947639"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915847"
 ---
 # <a name="install-and-manage-local-content"></a>ローカル コンテンツのインストールと管理
 
@@ -110,9 +110,9 @@ Microsoft ヘルプ ビューアーを使用すると、ソフトウェア開発
 
 ### <a name="to-update-local-content"></a>ローカル コンテンツを更新するには
 
--   ステータス バーの右下隅の **[今すぐダウンロードするにはここをクリックします]** リンクを選択します。
+- ステータス バーの右下隅の **[今すぐダウンロードするにはここをクリックします]** リンクを選択します。
 
- 更新時間は変化する可能性がありますが、ステータス バーで更新の進行状況を確認できます。
+更新時間は変化する可能性がありますが、ステータス バーで更新の進行状況を確認できます。
 
 ## <a name="move-local-content"></a>ローカル コンテンツを移動する
 

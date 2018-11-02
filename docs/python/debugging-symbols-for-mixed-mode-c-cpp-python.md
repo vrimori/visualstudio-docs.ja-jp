@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ddb171a32af89e384122a733208f92d70ad624b5
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: e551ee503fc0083c81db44327c50965ea45d0c21
+ms.sourcegitcommit: 9571742f4a808c75b1034aa72fc24b54bc50692e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45547959"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411028"
 ---
 # <a name="install-debugging-symbols-for-python-interpreters"></a>Python インタープリターのデバッグ シンボルをインストールする
 
@@ -77,6 +77,7 @@ Visual Studio でシンボルが必要なとき、通常は混合モードのデ
 | 3.3.2 | [32 ビット](https://www.org/ftp/python/3.3.2/python-3.3.2-pdb.zip) - [64 ビット](https://www.org/ftp/python/3.3.2/python-3.3.2.amd64-pdb.zip) |
 | 3.3.1 | [32 ビット](https://www.org/ftp/python/3.3.1/python-3.3.1-pdb.zip) - [64 ビット](https://www.org/ftp/python/3.3.1/python-3.3.1.amd64-pdb.zip) |
 | 3.3.0 | [32 ビット](https://www.org/ftp/python/3.3.0/python-3.3.0-pdb.zip) - [64 ビット](https://www.org/ftp/python/3.3.0/python-3.3.0.amd64-pdb.zip) |
+| 2.7.12 | [32 ビット](https://www.python.org/ftp/python/2.7.12/python-2.7.12-pdb.zip) - [64 ビット](https://www.python.org/ftp/python/2.7.12/python-2.7.12.amd64-pdb.zip) |
 | 2.7.11 | [32 ビット](https://www.python.org/ftp/python/2.7.11/python-2.7.11-pdb.zip) - [64 ビット](https://www.python.org/ftp/python/2.7.11/python-2.7.11.amd64-pdb.zip) |
 | 2.7.10 | [32 ビット](https://www.python.org/ftp/python/2.7.10/python-2.7.10-pdb.zip) - [64 ビット](https://www.python.org/ftp/python/2.7.10/python-2.7.10.amd64-pdb.zip) |
 | 2.7.9 | [32 ビット](https://www.python.org/ftp/python/2.7.9/python-2.7.9-pdb.zip) - [64 ビット](https://www.python.org/ftp/python/2.7.9/python-2.7.9.amd64-pdb.zip) |
