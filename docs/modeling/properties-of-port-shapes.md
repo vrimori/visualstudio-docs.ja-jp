@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: f537388d439c401df13e955db18e661863dc5ebf
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 21b0ecfc26728fa4692a07eaa1e2e43ecdcf9cc0
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49820851"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967143"
 ---
 # <a name="properties-of-port-shapes"></a>ポート シェイプのプロパティ
 ポート図形を使用すると、生成されたデザイナーでのドメイン クラスを表します。
@@ -57,4 +57,4 @@ ms.locfileid: "49820851"
 
 ## <a name="see-also"></a>関連項目
 
-- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [ドメイン固有言語ツールの用語集](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

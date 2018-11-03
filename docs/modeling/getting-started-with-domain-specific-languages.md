@@ -9,19 +9,19 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 276ec679525682486db5a579ac34f52cec5081f8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 89723d09fdd6362cdc301f1fa551b7c062639df0
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49885664"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967325"
 ---
 # <a name="get-started-with-domain-specific-languages"></a>ドメイン固有言語の概要
 
 このトピックを定義すると、Visual Studio Modeling SDK で作成したドメイン固有言語 (DSL) を使用して基本的な概念について説明します。
 
 > [!NOTE]
-> Visual Studio 2017 では、テキスト テンプレート変換の SDK と Visual Studio Modeling SDK が自動的にインストール Visual Studio の特定の機能をインストールするときにします。 詳細については、次を参照してください。[このブログの投稿](https://blogs.msdn.microsoft.com/visualstudioalm/2016/12/12/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)します。
+> Visual Studio 2017 では、テキスト テンプレート変換の SDK と Visual Studio Modeling SDK が自動的にインストール Visual Studio の特定の機能をインストールするときにします。 詳細については、次を参照してください。[このブログの投稿](https://blogs.msdn.microsoft.com/devops/2016/12/12/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)します。
 
 作業することをお勧めの Dsl に慣れていない場合、 **DSL ツール ラボ**、このサイトで入手できます: [Visualizaton and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128)
 
@@ -112,7 +112,7 @@ DSL ソリューションを作成するとすぐに実行できます。 後で
 1.  クリックして**すべてのテンプレートの変換**で、**ソリューション エクスプ ローラー**ツールバー。 これには、DslDefinition.dsl からソース コードの大部分が再生成します。
 
     > [!NOTE]
-    > 変更するたびに*DslDefinition.dsl*、クリックする必要があります**すべてのテンプレートの変換**ソリューションを再構築する前にします。 このステップは自動化できます。 詳細については、次を参照してください。[すべてのテンプレートの変換を自動化する方法](http://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a)します。
+    > 変更するたびに*DslDefinition.dsl*、クリックする必要があります**すべてのテンプレートの変換**ソリューションを再構築する前にします。 このステップは自動化できます。 詳細については、次を参照してください。[すべてのテンプレートの変換を自動化する方法](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\))します。
 
 2.  **F5**キーを押すか、または **[デバッグ]** メニューの **[デバッグ開始]** をクリックします。
 

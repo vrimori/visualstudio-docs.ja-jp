@@ -9,12 +9,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d89cd2f7ff1be28ac9d96578ba5ce57f653cc65e
-ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
+ms.openlocfilehash: e8946647c67c2949523411cc7be43463798d47c9
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750911"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966805"
 ---
 # <a name="get-started-with-roslyn-analyzers"></a>Roslyn アナライザーを概要します。
 
@@ -37,5 +37,6 @@ Visual Studio で、プロジェクト ベースのライブ コード アナラ
 ## <a name="see-also"></a>関連項目
 
 - [Roslyn アナライザーの概要](../code-quality/roslyn-analyzers-overview.md)
+- [.NET コンパイラ プラットフォーム パッケージのバージョンのリファレンス](roslyn-version-support.md)
 - [OSS の GitHub サイトの複数のドキュメント](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)
 - [FxCop ルールが GitHub で Roslyn アナライザーの実装](https://github.com/dotnet/roslyn/tree/master/src/Diagnostics/FxCop)

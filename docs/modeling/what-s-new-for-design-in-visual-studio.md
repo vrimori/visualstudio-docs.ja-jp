@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 26ea23c6091910a83ddec41194aa43ae93c9b9eb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ee3c602dfc89aeafbfb82ae50771abc7ce66937e
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49820775"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966939"
 ---
 # <a name="whats-new-for-design-in-visual-studio"></a>Visual Studio での設計向けの新機能
 
@@ -40,7 +40,7 @@ ms.locfileid: "49820775"
 
 表示、ソリューションの現在のコード分析の結果ですぐに、変更の影響、ダイアグラムを保存するたびにします。 不要「依存関係の検証」コマンドの完了を待機する必要はありません。
 
-詳細については、次を参照してください。[このブログの投稿](https://blogs.msdn.microsoft.com/visualstudioalm/2016/10/07/live-architecture-dependency-validation-in-visual-studio-15-preview-5/)します。
+詳細については、次を参照してください。[このブログの投稿](https://blogs.msdn.microsoft.com/devops/2016/10/07/live-architecture-dependency-validation-in-visual-studio-15-preview-5/)します。
 
 ## <a name="uml-designers-have-been-removed"></a>UML デザイナー向けが削除されました
 
@@ -61,7 +61,7 @@ UML デザイナーは、このバージョンの Visual Studio Enterprise か�
 
 UML デザイナー向けの重要なユーザーの場合は、UML のニーズに代替のツールを決定するときに、Visual Studio 2015 またはそれ以前のバージョンを使用することもできます。
 
-詳細については、次を参照してください。[このブログの投稿](https://blogs.msdn.microsoft.com/visualstudioalm/2016/10/14/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/)します。
+詳細については、次を参照してください。[このブログの投稿](https://blogs.msdn.microsoft.com/devops/2016/10/14/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/)します。
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 

@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 911c7dd0ff70029a3ca83ded9008472269dceaed
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a41b86068f9f7aedbe10635bf859818c0b468789
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49829470"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967455"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 テキスト テンプレートを使用したデザイン時コード生成
 デザイン時 T4 テキスト テンプレートでは、Visual Studio プロジェクトでプログラム コードやその他のファイルを生成できます。 テンプレートを作成する通常、異なるデータに応じて生成されるコードを*モデル*します。 モデルは、ファイルまたはアプリケーションの要件に関する重要な情報を含むデータベースです。
@@ -153,7 +153,7 @@ ms.locfileid: "49829470"
 
     ```csharp
 
-              <#@ template debug="false" hostspecific="false" language="C#" #>
+    <#@ template debug="false" hostspecific="false" language="C#" #>
     <#@ output extension=".cs" #>
     <# var properties = new string [] {"P1", "P2", "P3"}; #>
     // This is generated code:
@@ -225,7 +225,7 @@ ms.locfileid: "49829470"
 
 ```csharp
 
-      <# var properties = File.ReadLines("C:\\propertyList.txt");#>
+<# var properties = File.ReadLines("C:\\propertyList.txt");#>
 ...
 <# foreach (string propertyName in properties) { #>
 ...
@@ -270,12 +270,13 @@ ms.locfileid: "49829470"
  `this.Host` (VB の場合は `Me.Host`) の型は、`Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost` です。
 
 ### <a name="getting-data-from-visual-studio"></a>Visual Studio からのデータの取得
- Visual Studio で提供されるサービスを使用する設定、`hostSpecific`属性と負荷、`EnvDTE`アセンブリ。 その後、IServiceProvider.GetCOMService() を使用して、DTE などのサービスにアクセスできます。 次に例を示します。
+ Visual Studio で提供されるサービスを使用する設定、`hostSpecific`属性と負荷、`EnvDTE`アセンブリ。 インポート`Microsoft.VisualStudio.TextTemplating`が含まれています、`GetCOMService()`拡張メソッド。  その後、IServiceProvider.GetCOMService() を使用して、DTE などのサービスにアクセスできます。 次に例を示します。
 
-```scr
+```src
 <#@ template hostspecific="true" language="C#" #>
 <#@ output extension=".txt" #>
 <#@ assembly name="EnvDTE" #>
+<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
 <#
   IServiceProvider serviceProvider = (IServiceProvider)this.Host;
   EnvDTE.DTE dte = (EnvDTE.DTE) serviceProvider.GetCOMService(typeof(EnvDTE.DTE));
@@ -295,7 +296,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
  Visual Studio Modeling SDK をインストールする場合、すべてのテンプレートのビルドを実行するたびに自動的に変換されることができます。 そのためには、プロジェクト ファイル (.csproj または .vbproj) をテキスト エディターで編集し、ファイルの末尾付近の、他の `<import>` ステートメントよりも後に次のコード行を追加します。
 
 > [!NOTE]
-> Visual Studio 2017 では、テキスト テンプレート変換の SDK と Visual Studio Modeling SDK が自動的にインストール Visual Studio の特定の機能をインストールするときにします。 詳細については、次を参照してください。[このブログの投稿](https://blogs.msdn.microsoft.com/visualstudioalm/2016/12/12/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)します。
+> Visual Studio 2017 では、テキスト テンプレート変換の SDK と Visual Studio Modeling SDK が自動的にインストール Visual Studio の特定の機能をインストールするときにします。 詳細については、次を参照してください。[このブログの投稿](https://blogs.msdn.microsoft.com/devops/2016/12/12/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)します。
 
 ```xml
 <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets" />

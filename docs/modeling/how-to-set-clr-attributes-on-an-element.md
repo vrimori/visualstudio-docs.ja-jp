@@ -13,29 +13,29 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ceca2556e269d554d40e025e5edcb91753149622
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 1609b92e631abdaba34a18bd32d4fc6d892f7cd7
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31948913"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966792"
 ---
 # <a name="how-to-set-clr-attributes-on-an-element"></a>方法: 要素の CLR 属性を設定する
-カスタム属性は、ドメインの要素、図形、コネクタ、およびダイアグラムを追加できる特別な属性です。 継承する任意の属性を追加することができます、`System.Attribute`クラスです。
+カスタム属性は、ドメイン要素、図形、コネクタ、およびダイアグラムを追加できる特別な属性です。 継承する任意の属性を追加することができます、`System.Attribute`クラス。
 
 ### <a name="to-add-a-custom-attribute"></a>カスタム属性を追加するには
 
-1.  **DSL のエクスプ ローラー**、カスタム属性を追加する要素を選択します。
+1.  **DSL エクスプ ローラー**、カスタム属性を追加する要素を選択します。
 
-2.  **プロパティ**ウィンドウで、[次へ] を**カスタム属性**プロパティ、[参照] をクリックして (**.**) のアイコン。
+2.  **プロパティ**ウィンドウ、次へ を**カスタム属性**プロパティで、参照 をクリックします (**...**) アイコン。
 
-     **属性を編集** ダイアログ ボックスが表示されます。
+     **属性の編集** ダイアログ ボックスが表示されます。
 
-3.  **名前**列で、をクリックして**\<属性を追加 >** し、属性の名前を入力します。 ENTER キーを押します。
+3.  **名前**列、 をクリックして**\<属性の追加 >** 属性の名前を入力します。 ENTER キーを押します。
 
-4.  属性名の下にある行は、かっこを示しています。 この行に入力属性のパラメーターの型 (たとえば、 `string`)、ENTER キーを押します。
+4.  属性名の下にある行は、かっこを示しています。 この行に入力属性のパラメーターの型 (たとえば、 `string`)、し、ENTER キーを押します。
 
-5.  **Name プロパティ**列で、たとえば、適切な名前を入力`MyString`です。
+5.  **Name プロパティ**列で、たとえば、適切な名前を入力`MyString`します。
 
 6.  **[OK]** をクリックします。
 
@@ -45,4 +45,4 @@ ms.locfileid: "31948913"
 
 ## <a name="see-also"></a>関連項目
 
-- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [ドメイン固有言語ツールの用語集](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

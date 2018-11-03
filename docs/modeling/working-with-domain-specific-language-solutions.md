@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: e1d485e647f6bb32ea0685ee6098ff8bec19b2a2
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: e9f4c77f06e1a899cd6490479802ef300bea4256
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47858604"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966454"
 ---
 # <a name="working-with-domain-specific-language-solutions"></a>ドメイン固有言語ソリューションの使用
 ドメイン固有言語 (DSL) は、Visual Studio ソリューションを使用して作成されます。 このセクション設定し、ソリューションをカスタマイズする方法の詳細については。
@@ -38,4 +38,4 @@ ms.locfileid: "47858604"
 
  [方法: ドメイン固有言語デザイナーを拡張](../modeling/how-to-extend-the-domain-specific-language-designer.md)DSL デザイナーの メニュー コマンドをカスタマイズすることができます。
 
- [すべてのテンプレートの変換を自動化する方法](http://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a)クリックするとすべてのテンプレートの変換を避けるために行うことができますが、ビルドの自動の一部です。
+ [すべてのテンプレートの変換を自動化する方法](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\))クリックするとすべてのテンプレートの変換を避けるために行うことができますが、ビルドの自動の一部です。
