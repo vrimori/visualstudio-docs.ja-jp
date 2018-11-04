@@ -2,7 +2,7 @@
 title: Visual Studio での C# コンソール アプリの概要
 description: Visual Studio で C# コンソール アプリを作成する方法について、ステップ バイ ステップで説明します。
 ms.custom: ''
-ms.date: 09/28/2018
+ms.date: 10/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
 ms.topic: tutorial
@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: ad1ee95cb9cc754261502e7377cde6c91e5befce
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 3450572e4cf4959530599c5eea9efb3168485b58
+ms.sourcegitcommit: 401be39a42ffe007593528b5bba62583ca9fcafd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859511"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50244373"
 ---
 # <a name="tutorial-get-started-with-a-c-console-app-in-visual-studio"></a>チュートリアル: Visual Studio での C# コンソール アプリの概要
 
@@ -61,11 +61,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ## <a name="create-a-c-console-calculator-app"></a>"C# Console Calculator" アプリを作成する
 
-1. Visual Studio 2017 を開き、上部のメニュー バーから **[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択します。
-
-1. 左側のウィンドウの **[新しいプロジェクト]** ダイアログ ボックスで、**[C#]** を展開し、**[.NET Core]** を選択します。 中央のウィンドウで、**[Console App (.NET Core)]** を選択します。 次に、ファイルに *Calculator* という名前を付けます。
-
-1. コード エディターに次のコードを入力または貼り付けます。
+1. **C# コンソール アプリケーション**を作成した後、コード エディターに次のコードを入力または貼り付けます。
 
     ```csharp
     using System;

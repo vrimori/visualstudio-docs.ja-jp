@@ -12,12 +12,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: b1b41fe707c751b5cd32706d1c27f707f964dff8
-ms.sourcegitcommit: 40b6438b5acd7e59337a382c39ec711b9e99cc8a
+ms.openlocfilehash: 9f1eb52e87cf9a411cf453c90f35ebc192616e8c
+ms.sourcegitcommit: 12d6398c02e818de4fbcb4371bae9e5db6cf9509
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100927"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050223"
 ---
 # <a name="azure-sdk-for-python"></a>Azure SDK for Python
 
@@ -39,7 +39,7 @@ Azure ドキュメントの「[Python と SDK のインストール](https://doc
 
 「[Python デベロッパー センター](https://docs.microsoft.com/python/azure/?view=azure-python)」にも、さまざまなチュートリアルを含む有用なリソースが数多く用意されています。
 
-- Linux 上の Azure App Service に Web アプリを作成する (/azure/app-service/containers/quickstart-python)。
+- [Linux 上の Azure App Service に Web アプリを作成する](/azure/app-service/containers/quickstart-python)。
 - [Python から Azure BLOB ストレージを使用する方法](/azure/storage/blobs/storage-quickstart-blobs-python)
 - [Python から Table ストレージを使用する方法](/azure/cosmos-db/table-storage-how-to-use-python)
 - [Python から Queue ストレージを使用する方法](/azure/storage/storage-python-how-to-use-queue-storage)

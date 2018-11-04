@@ -32,12 +32,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c06e9a92eb6b6df82e4f45790b877286e6c52725
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 5cd79db9b5bfc2e68dea2ff711b2da6ce55c9bc0
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39081710"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220122"
 ---
 # <a name="link-task"></a>Link タスク
 Visual C++ リンカー ツール (*link.exe*) をラップします。 リンカー ツールは、COFF (Common Object File Format) オブジェクト ファイルとライブラリをリンクし、実行可能ファイル (*.exe*) やダイナミック リンク ライブラリ (DLL) を生成します。 詳細については、「[リンカー オプション](/cpp/build/reference/linker-options)」を参照してください。  
@@ -67,7 +67,7 @@ Visual C++ リンカー ツール (*link.exe*) をラップします。 リン�
   
      マニフェスト ファイルの `dependency` セクションに置かれる属性を指定します。  
   
-     詳細については、「[/MANIFESTDEPENDENCY (マニフェストの依存関係を指定する)](/cpp/build/reference/manifestdependency-specify-manifest-dependencies)」を参照してください。 「[Publisher configuration files](https://docs.microsoft.com/en-us/windows/desktop/SbsCs/publisher-configuration-files)」(パブリッシャー構成ファイル) も参照してください。  
+     詳細については、「[/MANIFESTDEPENDENCY (マニフェストの依存関係を指定する)](/cpp/build/reference/manifestdependency-specify-manifest-dependencies)」を参照してください。 「[Publisher configuration files](https://docs.microsoft.com/windows/desktop/SbsCs/publisher-configuration-files)」(パブリッシャー構成ファイル) も参照してください。  
   
 -   **AdditionalOptions**  
   
@@ -119,7 +119,7 @@ Visual C++ リンカー ツール (*link.exe*) をラップします。 リン�
   
      省略可能な **String** 型のパラメーターです。  
   
-     ビルド対象のプログラムまたは DLL のベース アドレスを設定します。 `{address[,size] | @filename,key}` を指定します。  
+     ビルド対象のプログラムまたは DLL のベース アドレスを設定します。 `{address[,size] | @filename,key}`を指定します。  
   
      詳細については、「[/BASE (ベース アドレス)](/cpp/build/reference/base-base-address)」を参照してください。  
   
@@ -187,7 +187,7 @@ Visual C++ リンカー ツール (*link.exe*) をラップします。 リン�
   
      マネージド コードからネイティブ DLL への、リンカーによって生成された P/Invoke 呼び出しに対して、**SuppressUnmanagedCodeSecurityAttribute** を適用するかどうかを指定します。  
   
-    詳細については、「[/CLRUNMANAGEDCODECHECK (SupressUnmanagedCodeSecurityAttribute の追加)](/cpp/build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute)」を参照してください。  
+    詳細については、「[/CLRUNMANAGEDCODECHECK (SuppressUnmanagedCodeSecurityAttribute の追加)](/cpp/build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute)」を参照してください。  
   
 -   **CreateHotPatchableImage**  
   
@@ -537,7 +537,7 @@ Visual C++ リンカー ツール (*link.exe*) をラップします。 リン�
   
      省略可能な **String** 型のパラメーターです。  
   
-     イメージ内のセクションを結合します。 `from-section=to-section` を指定します。  
+     イメージ内のセクションを結合します。 `from-section=to-section`を指定します。  
   
      詳細については、「[/MERGE (セクションの結合)](/cpp/build/reference/merge-combine-sections)」を参照してください。  
   
