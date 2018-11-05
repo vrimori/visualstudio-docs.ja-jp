@@ -10,12 +10,12 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 859e44c912ed98a50d5127675eb2c1bed699ede6
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 11b5086c934b433d4e28095c1d50471ea44e15a8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36235314"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49919300"
 ---
 # <a name="control-where-r-code-runs-with-workspaces"></a>ワークスペースで R コードが実行する場所を制御する
 
@@ -37,7 +37,7 @@ R Tools for Visual Studio (RTVS) のワークスペースを使用すると、R 
 
 ローカル ワークスペースのリストには、コンピューターにインストールされているすべての R インタープリターが表示されます。 
 
-Visual Studio は起動時に、**HKEY_LOCAL_MACHINE\Software\R-Core\** レジストリ キーを調べて、インストールされているすべてのバージョンの R を自動的に検出します。 このチェックは起動時にのみ行われるため、新しい R インタープリターをインストールした場合は、Visual Studio を再起動する必要があります。
+Visual Studio は起動時に、**HKEY_LOCAL_MACHINE\Software\R-Core\\** レジストリ キーを調べて、インストールされているすべてのバージョンの R を自動的に検出します。 このチェックは起動時にのみ行われるため、新しい R インタープリターをインストールした場合は、Visual Studio を再起動する必要があります。
 
 RTVS は、標準ではない方法で (たとえば、インストーラーを実行する代わりに単にファイルをフォルダーにコピーすることで) インストールされた R インタープリターを、検出しない可能性があります。 その場合は、次のようにして手動で新しいローカル R ワークスペースを作成します。
 
