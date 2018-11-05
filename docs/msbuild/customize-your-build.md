@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bd397420652d5d70429daa7ecea35210194dd37a
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 31856366712da0a2287f73906c6e3a5f81f63a00
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39175957"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49857589"
 ---
 # <a name="customize-your-build"></a>ビルドのカスタマイズ
 
@@ -34,6 +34,11 @@ MSBuild バージョン 15 より前では、ソリューション内のプロ�
 
 ただし、現在では、ソースが含まれるルート フォルダーにある *Directory.Build.props* という単一のファイルで新しいプロパティを定義することで、1 つのステップですべてのプロジェクトに追加できます。 MSBuild が実行されると、*Microsoft.Common.props* はディレクトリ構造で *Directory.Build.props* ファイルを検索します (また、*Microsoft.Common.targets* は *Directory.Build.targets* を探します)。 該当するものが見つかった場合、プロパティがインポートされます。 *Directory.Build.props* は、ディレクトリの下のプロジェクトをカスタマイズできるようにする、ユーザー定義のファイルです。
 
+> [!NOTE]
+> Linux ベースのファイル システムは、大文字小文字を区別します。 Directory.Build.props ファイル名の大文字と小文字が正確に一致していることを確認してください。一致していないと、ビルド プロセス中に検出されません。
+>
+> 詳細については、[こちらの GitHub の問題](https://github.com/dotnet/core/issues/1991#issue-368441031)のページを参照してください。
+
 ### <a name="directorybuildprops-example"></a>Directory.Build.props の例
 
 たとえば、すべてのプロジェクトで新しい Roslyn の **/deterministic** 機能 (プロパティ `$(Deterministic)` によって Roslyn `CoreCompile` ターゲットで公開される) にアクセスできるようにする場合は、次のようにします。
@@ -41,13 +46,13 @@ MSBuild バージョン 15 より前では、ソリューション内のプロ�
 1. リポジトリのルートに *Directory.Build.props* という新しいファイルを作成します。
 2. そのファイルに次の XML を追加します。
 
-  ```xml
-  <Project>
+   ```xml
+   <Project>
     <PropertyGroup>
       <Deterministic>true</Deterministic>
     </PropertyGroup>
-  </Project>
-  ```
+   </Project>
+   ```
 3. MSBuild を実行します。 プロジェクトの既存の *Microsoft.Common.props* と *Microsoft.Common.targets* のインポートで、ファイルが検索され、インポートされます。
 
 ### <a name="search-scope"></a>検索範囲

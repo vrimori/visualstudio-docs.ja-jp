@@ -1,20 +1,21 @@
 ---
 layout: LandingPage
+title: C++ でのモバイル開発
+description: iOS、Android、Windows 用のネイティブ C++ アプリを Visual Studio で作成します。
+ms.date: 10/31/2018
 author: jasongroce
-ms.author: apexprodleads
+ms.author: jasgro
 ms.topic: landing-page
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-mobile
-title: C++ によるモバイル開発のドキュメント | Microsoft Docs
-description: iOS、Android、Windows 用のネイティブ C++ アプリを Visual Studio で作成します。
 ms.workload:
 - apexprodleads
-ms.openlocfilehash: d10f0409b30198d7976f08a78b1d45d0099ac093
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 59d244e4224e408c43fbcee44d103313fcfa1d1e
+ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39232021"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751038"
 ---
 # <a name="mobile-development-with-c-documentation"></a>C++ ドキュメントによるモバイル開発
 

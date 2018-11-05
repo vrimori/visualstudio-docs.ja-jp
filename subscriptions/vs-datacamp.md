@@ -9,12 +9,12 @@ description: 一部の Visual Studio サブスクリプションに含まれる 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: f0a6fe16edf12616dd93b394b118f40651ffb0ec
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: cd0b92d8515e488d74cc124c888bb0e8ca9537e6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44282417"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863909"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの DataCamp トレーニング特典
 
@@ -27,15 +27,15 @@ DataCamp 特典の有効期間は、Visual Studio サブスクリプションに
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
 2. "専門能力開発" カテゴリで DataCamp 特典タイルを見つけて、**[アクティブ化]** をクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![DataCamp 特典のタイル](_img\vs-datacamp\vs-datacamp-tile-2.png)
+   > [!div class="mx-imgBorder"]
+   > ![DataCamp 特典のタイル](_img/vs-datacamp/vs-datacamp-tile-2.png)
 
 3. [DataCamp] ページで、新しいアカウントを作成できます。  電子メール アドレスとパスワードを入力するか、LinkedIn、Google、または Facebook から既存のアカウントを使用してサインインすることができます。  サインイン情報を指定したら、**[Get Started]\(作業の開始\)** をクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![DataCamp: 新しいアカウントの作成](_img\vs-datacamp\vs-datacamp-create-account.png)
-
-    > [!NOTE]
-    > アカウントの作成を開始すると、"問題が発生しました。ご利用のプロモーション コードが無効であるか、  有効期限が切れています" という内容のエラー メッセージが表示される場合があります。  これは、作成されたプロモーション コードの有効期限が数分後に切れた場合に発生します。  このメッセージが表示された場合は、[[特典]](https://my.visualstudio.com/benefits) ページに戻り、DataCamp 特典タイルの **[アクティブ化]** リンクをクリックするだけです。
+   > [!div class="mx-imgBorder"]
+   > ![DataCamp: 新しいアカウントの作成](_img/vs-datacamp/vs-datacamp-create-account.png)
+   > 
+   > [!NOTE]
+   > アカウントの作成を開始すると、"問題が発生しました。ご利用のプロモーション コードが無効であるか、  有効期限が切れています" という内容のエラー メッセージが表示される場合があります。  これは、作成されたプロモーション コードの有効期限が数分後に切れた場合に発生します。  このメッセージが表示された場合は、[[特典]](https://my.visualstudio.com/benefits) ページに戻り、DataCamp 特典タイルの **[アクティブ化]** リンクをクリックするだけです。
 
 4. アカウントが作成されたら、ラーニング パスを選択できます。  次のオプションがあります。
     - データ サイエンス用の Learning R
@@ -43,28 +43,30 @@ DataCamp 特典の有効期間は、Visual Studio サブスクリプションに
     - データ サイエンス スキルセットを開発する
 
 
-    開始するには、選択したパスをクリックするだけです。
-    > [!div class="mx-imgBorder"]
-    > ![DataCamp: パスの選択](_img\vs-datacamp\vs-datacamp-choose-path.png)
+~~~
+Just click on your chosen path to get started.
+> [!div class="mx-imgBorder"]
+> ![DataCamp Choose Path](_img\vs-datacamp\vs-datacamp-choose-path.png)
+~~~
 
 5. 目的のパスを選択したら、目標を選択して、ラーニング パスを絞り込むことができます。  たとえば、"データ サイエンス スキルセットを開発する" パスを選択すると、次のオプションが表示されます。 オプションを選択するか、**[I am not sure.Show me all career paths]\(わかりません。すべてのキャリア パスを表示してください\)** をクリックしてより広範なパスを作成します。
-    > [!div class="mx-imgBorder"]
-    > ![DataCamp: データ サイエンス スキルセット](_img\vs-datacamp\vs-datacamp-datascience.png)
+   > [!div class="mx-imgBorder"]
+   > ![DataCamp: データ サイエンス スキルセット](_img/vs-datacamp/vs-datacamp-datascience.png)
 
 
 6. 選択したパスとオプションに基づいて、キャリア トラックの選択が表示されます。  選択したトラックの **[登録]** ボタンをクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![DataCamp: キャリア トラック](_img\vs-datacamp\vs-datacamp-all-tracks.png)
+   > [!div class="mx-imgBorder"]
+   > ![DataCamp: キャリア トラック](_img/vs-datacamp/vs-datacamp-all-tracks.png)
 
 7. トラックに登録されると、そのトラックの最初のコースが開きます。  コースの操作方法 (ナビゲーションやコース演習の実行など) を説明するチュートリアルが表示されます。
 
-    > [!div class="mx-imgBorder"]
-    > ![DataCamp: 開始](_img\vs-datacamp\vs-datacamp-getting-started.png)
+   > [!div class="mx-imgBorder"]
+   > ![DataCamp: 開始](_img/vs-datacamp/vs-datacamp-getting-started.png)
 
 任意のポイントで停止し、次のセッションでトレーニングを再開できます。  [http://www.datacamp.com](http://www.datacamp.com) にアクセスしてサインインします。  ダッシュ ボードが表示され、一時停止した箇所からトレーニングを再開できます。 **[Continue Track]\(トラックを続行\)** をクリックします。
 
 > [!div class="mx-imgBorder"]   
-> ![DataCamp: トレーニングの続行](_img\vs-datacamp\vs-datacamp-continue-training.png)
+> ![DataCamp: トレーニングの続行](_img/vs-datacamp/vs-datacamp-continue-training.png)
 
 ## <a name="eligibility"></a>特典を受ける条件
 
@@ -80,7 +82,7 @@ DataCamp 特典の有効期間は、Visual Studio サブスクリプションに
 
 
 
-<sup>1</sup> *Not for Resale (NFR)、FTE、Microsoft Valued Partner (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、Visual Studio Industry Partner (VSIP)、Microsoft Certified Trainer、BizSpark、Imagine が含まれます*
+<sup>1</sup> *Not for Resale (NFR)、FTE、Microsoft Valued Professional (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、Visual Studio Industry Partner (VSIP)、Microsoft Certified Trainer、BizSpark、Imagine が含まれます*
 
 
 

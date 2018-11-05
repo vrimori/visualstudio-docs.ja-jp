@@ -4,12 +4,12 @@ hide_bc: true
 title: Visual Studio のドキュメント | Microsoft Docs
 description: Visual Studio 2017 を使って、アプリケーション、サービス、ツールを、任意の言語で、特定のプラットフォームやデバイス向けに開発する方法について説明します。
 ms.topic: hub-page
-ms.openlocfilehash: b16114bd175be4c8e13c0418494c730ed58b9d12
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: d458683758916e78d3773b2700fb9ab2ae3acd39
+ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50672870"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50750717"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -308,7 +308,7 @@ ASP.NET Core Web アプリ</a>
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>デバッグ</h3>
-                                                    <p>コードの問題を調査し、修正します。</p>
+                                                    <p>コードのバグを調査し、修正します。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -402,7 +402,7 @@ ASP.NET Core Web アプリ</a>
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>パフォーマンスの向上</h3>
+                                                    <h3>パフォーマンスの計測</h3>
                                                     <p>診断ツールを使ってボトルネックを特定し、コードのパフォーマンスを最適化します。
                                                     </p>
                                                 </div>

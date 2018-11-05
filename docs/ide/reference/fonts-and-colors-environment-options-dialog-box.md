@@ -5,7 +5,6 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
-- VS.ToolsOptionsPag.Environment.Fonts_And_Colors
 - VS.ToolsOptionsPages.FontsAndColors
 - VS.ToolsOptionsPages.Environment.Fonts_And_Colors
 - VS.Environment.Fonts And Colors
@@ -28,12 +27,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d25ff0f0439d778d871cb2762db83e9261deaf94
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 751ae59a5a41d22728dd31f71491ec0d9a93ea19
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31954230"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220262"
 ---
 # <a name="fonts-and-colors-environment-options-dialog-box"></a>[フォントおよび色] ([オプション] ダイアログ ボックス - [環境])
 **[オプション]** ダイアログ ボックスの **[フォントおよび色]** ページを使用すると、統合開発環境 (IDE) のさまざまなユーザー インターフェイス要素について、カスタムのフォントや配色を設定できます。 このダイアログ ボックスを表示するには、**[ツール] メニューの [オプション]** をクリックし、**[環境] フォルダーの [フォントおよび色]** ページを選択します。 このページが一覧に表示されない場合は、**[オプション]** ダイアログ ボックスの **[すべての設定を表示]** を選択します。

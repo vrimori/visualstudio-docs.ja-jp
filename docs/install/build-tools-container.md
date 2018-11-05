@@ -12,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 42bf1427e71c21fecb0cd3822469b143b9d42df5
-ms.sourcegitcommit: 6b092e7d466377f06913d49d183dbbdca16730f0
+ms.openlocfilehash: 08026b744cc6b71e31179666c5f85102a4093843
+ms.sourcegitcommit: 9571742f4a808c75b1034aa72fc24b54bc50692e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43138652"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411015"
 ---
 # <a name="install-build-tools-into-a-container"></a>Build Tools をコンテナーにインストールする
 
@@ -57,7 +57,7 @@ Visual Studio Build Tools さらには Visual Studio 全体では、すべての
 
 **Windows 10 の場合**:
 
-1. システム トレイの [Docker for Windows アイコンを右クリック](https://docs.docker.com/docker-for-windows/#docker-settings)して、**[設定...]** をクリックします。
+1. システム トレイの [Docker for Windows アイコンを右クリック](https://docs.docker.com/docker-for-windows/#docker-settings)して、**[設定]** をクリックします。
 2. [[Daemon]\(デーモン\) セクションをクリック](https://docs.docker.com/docker-for-windows/#docker-daemon)します。
 3. [**[Basic]\(基本\)** ボタンを **[Advanced]\(詳細\)** に切り替え](https://docs.docker.com/docker-for-windows/#edit-the-daemon-configuration-file)ます。
 4. 次の JSON 配列プロパティを追加して、ディスク容量を 120 GB に増やします(Build Tools の拡大を見込んで十分に余裕がある量)。

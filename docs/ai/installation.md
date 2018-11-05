@@ -1,6 +1,6 @@
 ---
-title: AI Tools for Visual Studio のインストール
-description: AI Tools for Visual Studio のインストール
+title: AI Tools をインストールする
+description: AI Tools for Visual Studio をインストールする方法を説明します。
 keywords: AI, Visual Studio
 author: lisawong19
 ms.author: liwong
@@ -12,12 +12,12 @@ ms.service: multiple
 ms.technology: vs-ai-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 4785bc8362d7e50b5fb48bf88df29313ddfcc0c8
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: 465443211d1a3f1aff8bfa63fa6cb8068b55980b
+ms.sourcegitcommit: 551f13774e8bb0eb47cbd973745628a956e866aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36303110"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459765"
 ---
 # <a name="installation"></a>インストール
 
@@ -27,19 +27,20 @@ Visual Studio Tools for AI は、64 ビットの Windows オペレーティン�
 
 この拡張機能は、Visual Studio 2015 および Visual Studio 2017 の Community Edition 以上で動作します。
 
-インストールするには、[Visual Studio Marketplace](http://aka.ms/vstoolsforai) または Visual Studio 内からダウンロードします
+このツールは、[Visual Studio Marketplace](http://aka.ms/vstoolsforai) または Visual Studio 内からダウンロードしてインストールします。
 
-1. **[ツール]**  > **[拡張機能と更新プログラム]** を選択します
+1. **[ツール]** > **[拡張機能と更新プログラム]** を選択します。
 
-![Windows に CUDA をインストールする](media\installation\extensions.png)
+   ![Visual Studio の拡張機能と更新プログラム メニュー](media/installation/extensions.png)
 
-1. 右上隅の **[検索]** で「Tools for AI」を検索します
-2. **Visual Studio Tools for AI** を選択します
-3. **[ダウンロード]** をクリックします
+2. **[拡張機能と更新プログラム]** ダイアログ ボックスで左側の **[オンライン]** を選択します。
+3. 右上隅の検索ボックスに「tools for ai」と入力します。
+4. 結果から、「**Visual Studio Tools for AI**」を選択します。
+5. **[ダウンロード]** をクリックします。
 
 ## <a name="prepare-your-local-machine"></a>ローカル コンピューターを準備する
 
-ローカル コンピューター上でディープ ラーニング モデルをトレーニングする前に、該当する最新の前提条件がインストールされていることを確認する必要があります。 これには、NVIDIA GPU (ある場合) の最新のドライバーとライブラリの確認が含まれます。 また、Python と Python ライブラリ (NumPy、SciPy など)、およびプロジェクトで使う予定の適切なディープ ラーニング フレームワーク (Microsoft Cognitive Toolkit (CNTK)、TensorFlow、Caffe2、MXNet、Keras、Theano、PyTorch、Chainer など) がインストールされていることも確認する必要があります。
+ローカル コンピューター上でディープ ラーニング モデルをトレーニングする前に、該当する前提条件がインストールされていることを確認する必要があります。 これには、NVIDIA GPU (お持ちの場合) の最新のドライバーとライブラリの所持の確認が含まれます。 また、Python と Python ライブラリ (NumPy、SciPy など)、およびプロジェクトで使う予定の適切なディープ ラーニング フレームワーク (Microsoft Cognitive Toolkit (CNTK)、TensorFlow、Caffe2、MXNet、Keras、Theano、PyTorch、Chainer など) が確実にインストールされているようにする必要があります。
 
 > [!NOTE]
 > 以下のソフトウェアの概要は、これらのホーム ページからの抜粋です。
@@ -50,9 +51,7 @@ Visual Studio Tools for AI は、64 ビットの Windows オペレーティン�
 
 ### <a name="cuda"></a>CUDA
 
-[CUDA](https://developer.nvidia.com/cuda-zone) は、NVIDIA によって考案された並列コンピューティング プラットフォームおよびプログラミング モデルです。
-CUDA は、GPU のパワーを活用することで、計算のパフォーマンスを劇的に高めます。
-現在、ディープ ラーニング フレームワークには CUDA Toolkit 8.0 が必要です。
+[CUDA](https://developer.nvidia.com/cuda-zone) は、NVIDIA によって考案された並列コンピューティング プラットフォームおよびプログラミング モデルです。 CUDA は、GPU のパワーを活用することで、計算のパフォーマンスを劇的に高めます。 現在、ディープ ラーニング フレームワークには CUDA Toolkit 8.0 が必要です。
 
 CUDA をインストールするには
 
@@ -60,7 +59,7 @@ CUDA をインストールするには
 - CUDA ランタイム ライブラリがインストールされたことを確認し、%PATH% または $Path 環境変数に CUDA バイナリのパスを追加します。
 - Windows での既定のこのパスは、"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin" です。
 
-![Windows に CUDA をインストールする](media\installation\install_cuda_win.png)
+![Windows に CUDA をインストールする](media/installation/install_cuda_win.png)
 
 ### <a name="cudnn"></a>cuDNN
 
@@ -86,7 +85,7 @@ Python は、ディープ ラーニング アプリケーションの主要な�
 
 ディープ ラーニング フレームワーク自体のインストールに pip が必要です。
 
-![Windows に Python をインストールする](media\installation\install_python_win.png)
+![Windows に Python をインストールする](media/installation/install_python_win.png)
 
 Python 3.5 が正しくインストールされていることを確認し、端末で次のコマンドを実行して pip を最新バージョンにアップグレードする必要があります。
 

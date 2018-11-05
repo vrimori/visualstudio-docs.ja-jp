@@ -21,12 +21,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 17b0cfb4ecc1809098670b0b9d3e831b5bc75a62
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 71eebd95db1a616d4f86866ef60fb32251634cc0
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49835710"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967286"
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>依存関係図を使用したコードの検証
 
@@ -173,7 +173,7 @@ Web サイト、Office ドキュメント、プレーン テキスト ファイ�
 
 ## <a name="validate-code-automatically"></a>コードを自動的に検証する
 
-ローカル ビルドを実行するたびにレイヤー検証を実行できます。 チームは、Azure DevOps を使用している場合は、ゲート チェックイン、これは、カスタム MSBuild タスクと検証エラーを収集するビルド レポートを使用して作成して指定できますでレイヤー検証を実行できます。 ゲート チェックイン ビルドを作成するを参照してください。[ゲート チェックイン ビルド プロセスを使用して変更を検証する](http://msdn.microsoft.com/Library/9cfc8b9c-1023-40fd-8ab5-1b1bd9c172ec)します。
+ローカル ビルドを実行するたびにレイヤー検証を実行できます。 チームは、Azure DevOps を使用している場合は、ゲート チェックイン、これは、カスタム MSBuild タスクと検証エラーを収集するビルド レポートを使用して作成して指定できますでレイヤー検証を実行できます。 ゲート チェックイン ビルドを作成するを参照してください。 [TFVC ゲート チェックイン](/azure/devops/pipelines/build/triggers#gated)します。
 
 ### <a name="to-validate-code-automatically-during-a-local-build"></a>ローカル ビルド時にコードを自動的に検証するには
 
@@ -237,6 +237,6 @@ Web サイト、Office ドキュメント、プレーン テキスト ファイ�
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Studio 2017 でのリアルタイム依存関係の検証](https://blogs.msdn.microsoft.com/visualstudioalm/2016/11/30/live-dependency-validation-in-visual-studio-2017/)
+- [Visual Studio 2017 でのリアルタイム依存関係の検証](https://blogs.msdn.microsoft.com/devops/2016/11/30/live-dependency-validation-in-visual-studio-2017/)
 - [開発時のシステムの検証](../modeling/validate-your-system-during-development.md)
 - [ビデオ: リアルタイムでアーキテクチャ依存関係を検証します。](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)
