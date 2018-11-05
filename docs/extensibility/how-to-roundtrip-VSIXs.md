@@ -1,30 +1,30 @@
 ---
-title: '方法: Visual Studio の拡張機能をラウンドトリップする| Microsoft Docs'
-ms.custom: ''
+title: 拡張機能のラウンドト リップする方法
 ms.date: 06/25/2017
 ms.technology:
 - vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: 2d6cf53c-011e-4c9e-9935-417edca8c486
 author: willbrown
-ms.author: willbrown
+ms.author: gregvanl
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: cdbd8703f3aad9a32b2a86efa01ce5922ed64144
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 826089f1018bc6156cd49bab3afb19e7bb34a47d
+ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498686"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50750733"
 ---
 # <a name="how-to-make-extensions-compatible-with-visual-studio-2017-and-visual-studio-2015"></a>方法: Visual Studio 2017 と Visual Studio 2015 と互換性のある拡張機能を作成
 
-このドキュメントでは、拡張機能プロジェクトを Visual Studio 2015 と Visual Studio 2017 間でラウンドトリップさせる方法について説明します。 このアップグレードを完了すると、Visual Studio 2015 と Visual Studio 2017 の両方でプロジェクトを開いてビルド、インストール、および実行できるようになります。  参考として、[ここ](https://github.com/Microsoft/VSSDK-Extensibility-Samples)に示された Microsoft の拡張機能の例に、Visual Studio 2015 と Visual Studio 2017 間でラウンドトリップできるいくつかの拡張機能が含まれています。
+このドキュメントでは、拡張機能プロジェクトを Visual Studio 2015 と Visual Studio 2017 間でラウンドトリップさせる方法について説明します。 このアップグレードを完了すると、Visual Studio 2015 と Visual Studio 2017 の両方でプロジェクトを開いてビルド、インストール、および実行できるようになります。 参考として、Visual Studio 2015 と Visual Studio 2017 の間でラウンドト リップできるいくつかの拡張で見つかる、 [VS SDK 拡張機能サンプル](https://github.com/Microsoft/VSSDK-Extensibility-Samples)します。
 
 Visual Studio 2017 でビルドが Visual Studio 2015 と Visual Studio 2017 の両方で VSIX を出力する場合を参照し、[拡張機能の移行のドキュメント](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)します。
 
->**注:** Visual Studio のバージョン間での変更が原因で、あるバージョンで利用できた機能が別のバージョンでは利用できないことがあります。 アクセスしようとしている機能が、両方のバージョンで利用可能であることを確認してください。この確認を行わない場合、拡張機能で予期しない結果が発生します。
+> [!NOTE]
+> Visual Studio のバージョン間の変更、により、1 つのバージョンで動作していたものは、別の機能しません。 アクセスしようとしている機能は、両方のバージョンで使用または拡張機能は必要があります。 予期しない結果。
 
 VSIX をラウンドトリップするためにこのドキュメントで実行する手順の概要を以下に示します。
 
@@ -57,13 +57,13 @@ VSIX をラウンドトリップするためにこのドキュメントで実行
 プロジェクトが含まれている場合、 *project.json*ファイル。
 
 * 内の参照をメモに取ります*project.json*します。
-* **ソリューション エクスプ ローラー**、削除、 *project.json*プロジェクトからのファイル。
-    * これは、削除、 *project.json*ファイルを開き、プロジェクトから削除します。
-* プロジェクトに NuGet 参照を再度追加します。
+* **ソリューション エクスプ ローラー**、削除、 *project.json*プロジェクトからのファイル。 これにより、削除、 *project.json*ファイルを開き、プロジェクトから削除されます。
+* NuGet 参照をプロジェクトに再度追加します。
     * 右クリックし、**ソリューション**選択**ソリューションの NuGet パッケージの管理**します。
-    * Visual Studio が自動的に作成、 *packages.config*ファイルが
+    * Visual Studio が自動的に作成、 *packages.config*ファイル。
 
->**注:** プロジェクトに EnvDTE パッケージが含まれていた場合、**[参照]** を右クリックして **[参照の追加]** を選択し、適切な参照を追加して、このパッケージを追加することが必要な場合があります。  NuGet パッケージを使用すると、プロジェクトのビルドを試みたときにエラーが発生する可能性があります。
+> [!NOTE]
+> プロジェクトに EnvDTE パッケージが含まれている場合は、右クリックして追加する必要がある**参照**選択**参照の追加**適切な参照を追加するとします。  NuGet パッケージを使用すると、プロジェクトのビルドを試みたときにエラーが発生する可能性があります。
 
 ## <a name="add-appropriate-build-tools"></a>適切なビルド ツールを追加します。
 
@@ -113,7 +113,8 @@ VSIX をビルドする対象のバージョンを Visual Studio に指示する
 
 * ファイルを保存して閉じます。
 
->**注:** Visual Studio 2017 の VSIX デザイナーを使用してこの操作を行う場合は、必須コンポーネントのバージョンを手動で編集して、Visual Studio 2017 のすべてのバージョンに対応させる必要があります。  なぜならば、デザイナーは最小バージョンをVisual Studio の現在のバージョンとして挿入するからです (例: 15.0.26208.0)。  しかし、他のユーザーがそれより前のバージョンを使用している可能性があるため、これを 15.0 に編集する必要があります。
+> [!NOTE]
+> これを実現する Visual Studio 2017 の VSIX デザイナーで選択した場合は、Visual Studio 2017 のすべてのバージョンと互換性があることを確認する前提条件のバージョンを手動で編集する必要があります。  なぜならば、デザイナーは最小バージョンをVisual Studio の現在のバージョンとして挿入するからです (例: 15.0.26208.0)。  しかし、他のユーザーがそれより前のバージョンを使用している可能性があるため、これを 15.0 に編集する必要があります。
 
 この時点で、マニフェスト ファイルは次のようになります。
 
@@ -139,7 +140,8 @@ VSIX をビルドする対象のバージョンを Visual Studio に指示する
 
 * プロパティ グループに次のタグ `<VsixType>v3</VsixType>` を追加します。
 
->**注:** これは `<OutputType></OutputType>` タグの下に追加することをお勧めします。
+> [!NOTE]
+> これを追加することをお勧めの下、`<OutputType></OutputType>`タグ。
 
 ### <a name="3-add-the-debugging-properties"></a>3.デバッグ プロパティを追加する
 
@@ -211,4 +213,5 @@ VSIX をビルドする対象のバージョンを Visual Studio に指示する
 
 ![VSIX を検索します。](media/finding-a-VSIX-example.png)
 
->**注:** メッセージで、プロジェクトがハングした場合**ファイルを開く**、強制的にシャット ダウンは、Visual Studio、プロジェクト ディレクトリに移動し、非表示のフォルダーを表示および削除、 *.vs*フォルダー。
+> [!NOTE]
+> メッセージで、プロジェクトがハングした場合**ファイルを開く**、強制的にシャット ダウンは、Visual Studio、プロジェクト ディレクトリに移動し、非表示のフォルダーを表示および削除、 *.vs*フォルダー。
