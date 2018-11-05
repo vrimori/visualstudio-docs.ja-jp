@@ -11,25 +11,25 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 802cd979160203baa36db3bc9945dd077146871c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8d8101b3cd88b4cfa81e6d32327581de5336dcd1
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31951204"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966510"
 ---
 # <a name="text-template-utility-methods"></a>テキスト テンプレートのユーティリティ メソッド
 
-Visual Studio テキスト テンプレートでコードを記述する場合は、常に使用できるいくつかの方法はあります。 これらのメソッドが定義されている<xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>です。
+Visual Studio のテキスト テンプレートでコードを記述する場合に使用可能な常にいくつかの方法はあります。 これらのメソッドが定義されている<xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>します。
 
 > [!TIP]
-> また、他のメソッドと正規 (いない前処理された) テキスト テンプレートでのホスト環境で提供されるサービスを使用することができます。 たとえば、ファイルのパスを解決するには、エラーをログに記録して Visual Studio やいずれかによって提供されるサービスを取得パッケージをロードします。 詳細については、次を参照してください。[テキスト テンプレートから Visual Studio のへのアクセス](http://msdn.microsoft.com/0556f20c-fef4-41a9-9597-53afab4ab9e4)です。
+> 他のメソッドと正規表現 (いない前処理された) テキスト テンプレートでのホスト環境によって提供されるサービスを使用することもできます。 たとえば、ファイル パスを解決、エラーをログに記録してと Visual Studio によって提供されるサービスを取得読み込まれたパッケージ。 詳細については、次を参照してください。[テキスト テンプレートから Visual Studio のへのアクセス](/previous-versions/visualstudio/visual-studio-2010/gg604090\(v\=vs.100\))します。
 
-## <a name="write-methods"></a>書き込みメソッド
+## <a name="write-methods"></a>メソッドを記述します。
 
-使用することができます、`Write()`と`WriteLine()`式コード ブロックを使用する代わりに、標準のコード ブロック内のテキストを追加する方法です。 次の 2 つのコード ブロックは、機能的に等価です。
+使用することができます、`Write()`と`WriteLine()`式のコード ブロックを使用する代わりに、標準のコード ブロック内でテキストを追加する方法。 次の 2 つのコード ブロックは、機能的に同等です。
 
-### <a name="code-block-with-an-expression-block"></a>式ブロックを含むコード ブロック
+### <a name="code-block-with-an-expression-block"></a>式ブロックのコード ブロック
 
 ```
 <#
@@ -53,9 +53,9 @@ while (i-- > 0)
 #>
 ```
 
-入れ子になった制御構造を持つ長いコード ブロックの内部式ブロックの代わりにこれらのユーティリティ メソッドのいずれかを使用すると便利です。
+入れ子になった制御構造を持つ長いコード ブロック内で式ブロックの代わりにこれらのユーティリティ メソッドのいずれかを使用すると便利です。
 
-`Write()`と`WriteLine()`メソッドが 2 つのオーバー ロードを持つ、複合書式指定文字列と、文字列に含めるオブジェクトの配列を受け取り、1 つの文字列パラメーターと 1 つを受け取るいずれか (のように、`Console.WriteLine()`メソッド)。 次の 2 つの使い方`WriteLine()`は機能的に同等です。
+`Write()`と`WriteLine()`メソッドは、2 つのオーバー ロードが場合、複合書式指定文字列と、文字列に含めるオブジェクトの配列を受け取り、1 つの文字列パラメーターと 1 つを受け取るいずれか (など、`Console.WriteLine()`メソッド)。 次の 2 つの用途の`WriteLine()`は機能的に同等です。
 
 ```
 <#
@@ -71,7 +71,7 @@ while (i-- > 0)
 
 ## <a name="indentation-methods"></a>インデント メソッド
 
-インデント メソッドを使用するには、テキスト テンプレートの出力を書式設定します。 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>クラスには、`CurrentIndent`テキスト テンプレートでの現在のインデントを示すプロパティを文字列と`indentLengths`フィールドが追加されているへこみの一覧です。 インデント設定を追加することができます、`PushIndent()`メソッドおよび減算で、インデント、`PopIndent()`メソッドです。 すべてのインデントを削除する場合を使用して、`ClearIndent()`メソッドです。 次のコード ブロックは、これらのメソッドの使用を示しています。
+インデント メソッドを使用するには、テキスト テンプレートの出力を書式設定します。 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>クラスには、`CurrentIndent`文字列テキスト テンプレートでの現在のインデントの位置を示すプロパティと`indentLengths`フィールドに追加されているインデントの一覧。 インデントを追加することができます、`PushIndent()`メソッドおよび減算で、インデント、`PopIndent()`メソッド。 すべてのインデントを削除する場合を使用して、`ClearIndent()`メソッド。 次のコード ブロックは、これらのメソッドの使用を示しています。
 
 ```
 <#
@@ -87,7 +87,7 @@ while (i-- > 0)
 #>
 ```
 
-次のコード ブロックには、次の出力が生成されます。
+このコード ブロックには、次の出力が生成されます。
 
 ```
 Hello
@@ -115,25 +115,25 @@ Hello
 #>
 ```
 
-## <a name="access-to-host-and-service-provider"></a>ホストおよびサービス プロバイダーへのアクセス
+## <a name="access-to-host-and-service-provider"></a>ホストとサービス プロバイダーへのアクセス
 
-プロパティ`this.Host`テンプレートを実行しているホストによって公開されるプロパティへのアクセスを提供できます。 使用する`this.Host`、設定する必要があります`hostspecific`属性、`<@template#>`ディレクティブ。
+プロパティ`this.Host`テンプレートを実行しているホストによって公開されるプロパティにアクセスできるようにします。 使用する`this.Host`を設定する必要があります`hostspecific`属性、`<@template#>`ディレクティブ。
 
 `<#@template ... hostspecific="true" #>`
 
-型`this.Host`テンプレートを実行しているホストの種類によって異なります。 Visual Studio で実行されているテンプレートでキャストできます`this.Host`に`IServiceProvider`IDE などのサービスにアクセスするためにします。 例えば:
+型`this.Host`テンプレートを実行しているホストの種類によって異なります。 キャストすることができますが、Visual Studio で実行されているテンプレートを`this.Host`に`IServiceProvider`IDE などのサービスにアクセスします。 例えば:
 
 ```
 EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
                        .GetService(typeof(EnvDTE.DTE));
 ```
 
-## <a name="using-a-different-set-of-utility-methods"></a>別の一連のユーティリティ メソッドを使用します。
+## <a name="using-a-different-set-of-utility-methods"></a>さまざまなユーティリティ メソッドを使用します。
 
-常に名前のクラスに変換された、テンプレート ファイル、テキストの生成処理の一環として、`GeneratedTextTransformation`から継承して<xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>です。 別に使用するメソッドの代わりに、設定するは、独自のクラスを作成し、テンプレート ディレクティブに指定します。 クラスを継承する必要があります<xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>です。
+名前は常に、クラスに、テンプレート ファイルを変換、テキスト生成処理の一環として、`GeneratedTextTransformation`から継承して<xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>します。 別に使用するメソッドの代わりに、設定するは、独自のクラスを記述し、template ディレクティブで指定します。 クラスを継承する必要があります<xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>します。
 
 ```
 <#@ template inherits="MyUtilityClass" #>
 ```
 
-使用して、`assembly`コンパイル済みのクラスが含まれるアセンブリを参照するディレクティブ。
+使用して、`assembly`コンパイル済みのクラスがあるアセンブリを参照するディレクティブ。

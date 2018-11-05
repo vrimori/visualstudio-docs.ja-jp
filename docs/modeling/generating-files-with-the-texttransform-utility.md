@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 61c71b67c02493ac77a2fd1c21bb47e78122a1d7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6572ef97027466fa97c254664327f2f77b4ea7f2
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49928660"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967082"
 ---
 # <a name="generate-files-with-the-texttransform-utility"></a>TextTransform ユーティリティを使用したファイルを生成します。
 
@@ -62,7 +62,7 @@ TextTransform [<options>] <templateName>
 |**-I** \<includedirectory>|指定したテキスト テンプレートに含まれるテキスト テンプレートを格納するディレクトリ。|
 |**-P** \<referencepath>|またはを使用して、テキスト テンプレート内で指定されたアセンブリを検索するディレクトリを **-r**オプション。<br /><br /> たとえば、Visual Studio API を使用するアセンブリは、次のように使用します。<br /><br /> `-P "%VSSHELLFOLDER%\Common7\IDE\PublicAssemblies"`|
 |**-dp** \<processorName>!\<className>!\<assemblyName&#124;codeBase>|名前、完全な型の名前とテキスト テンプレート内のカスタム ディレクティブの処理に使用できるディレクティブ プロセッサのアセンブリ。|
-|**-** [processorName] [。directiveName]。\<parameterName >!\<parameterValue >|ディレクティブ プロセッサのパラメーター値を指定します。 パラメーター名と値のみを指定するパラメーターはすべてのディレクティブ プロセッサにできます。 ディレクティブ プロセッサを指定する場合、パラメーターが指定したプロセッサでのみ使用できます。 ディレクティブの名前を指定する場合、パラメーターの値は、指定されたディレクティブが処理されている場合にのみ使用です。<br /><br /> ディレクティブ プロセッサまたはテキスト テンプレートからパラメーター値にアクセスするには、使用[ITextTemplatingEngineHost.ResolveParameterValue](https://msdn.microsoft.com/library/microsoft.visualstudio.texttemplating.itexttemplatingenginehost.resolveparametervalue.aspx)します。 テキスト テンプレートでは、 `hostspecific` template ディレクティブでのメッセージを呼び出すと`this.Host`。 例えば:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`。<br /><br /> 入力を常に、'!' の省略可能なプロセッサとディレクティブの名前を省略した場合でも、マークします。 例えば:<br /><br /> `-a !!param!value`|
+|**-** [processorName] [。directiveName]。\<parameterName >!\<parameterValue >|ディレクティブ プロセッサのパラメーター値を指定します。 パラメーター名と値のみを指定するパラメーターはすべてのディレクティブ プロセッサにできます。 ディレクティブ プロセッサを指定する場合、パラメーターが指定したプロセッサでのみ使用できます。 ディレクティブの名前を指定する場合、パラメーターの値は、指定されたディレクティブが処理されている場合にのみ使用です。<br /><br /> ディレクティブ プロセッサまたはテキスト テンプレートからパラメーター値にアクセスするには、使用[ITextTemplatingEngineHost.ResolveParameterValue](/previous-versions/visualstudio/visual-studio-2012/bb126369\(v\=vs.110\))します。 テキスト テンプレートでは、 `hostspecific` template ディレクティブでのメッセージを呼び出すと`this.Host`。 例えば:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`。<br /><br /> 入力を常に、'!' の省略可能なプロセッサとディレクティブの名前を省略した場合でも、マークします。 例えば:<br /><br /> `-a !!param!value`|
 |**-h**|ヘルプを提供します。|
 
 ## <a name="related-topics"></a>関連トピック

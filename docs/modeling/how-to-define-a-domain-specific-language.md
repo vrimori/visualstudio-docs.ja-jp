@@ -18,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 3e80e90928bd5ff81e7364e23a1d5035d2bfbe3a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ed1259ef04f59d37752d89f922623b963bcbbc22
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49860644"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967533"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>方法: ドメイン固有言語を定義する
 ドメイン固有言語 (DSL) を定義するには、テンプレートから Visual Studio ソリューションを作成します。 ソリューションの主要な機能は DSL 定義図です。これは DslDefinition.dsl に保存されています。 DSL 定義は、DSL のクラスとシェイプを定義します。 これらの要素を変更および追加した後で、プログラム コードを追加して DSL を詳細にカスタマイズできます。
@@ -213,7 +213,7 @@ ms.locfileid: "49860644"
 
 ##### <a name="to-test-the-new-domain-classes"></a>新しいドメイン クラスをテストするには
 
-1.  **すべてのテンプレートの変換をクリックします。** DSL デザイナー コードを生成する、ソリューション エクスプ ローラーのツールバー。 このステップは自動化できます。 詳細については、次を参照してください。[すべてのテンプレートの変換を自動化する方法](http://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a)します。
+1.  **すべてのテンプレートの変換をクリックします。** DSL デザイナー コードを生成する、ソリューション エクスプ ローラーのツールバー。 このステップは自動化できます。 詳細については、次を参照してください。[すべてのテンプレートの変換を自動化する方法](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\))します。
 
 2.  **ビルドして、DSL を実行します。** Visual Studio の新しいインスタンスを実験モードで実行するには、f5 キーまたは ctrl キーを押しながら f5 キーを押します。 Visual Studio の実験用インスタンスを開くか、DSL のファイル名拡張子を持つファイルを作成します。
 

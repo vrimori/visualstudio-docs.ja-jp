@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 7b48fc77dd88cf327050c0bf8ba893f8d4a626fa
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: b5d652c24f5250af38e6a1c82dbb57dc739cbe3b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36303004"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880781"
 ---
 # <a name="customize-code-coverage-analysis"></a>コード カバレッジ分析のカスタマイズ
 
@@ -91,7 +91,7 @@ ms.locfileid: "36303004"
 
 Include ノードと Exclude ノードでは、正規表現を使用できます。 詳細については、[Visual Studio で正規表現を使用する](../ide/using-regular-expressions-in-visual-studio.md)方法に関するページを参照してください。 正規表現は、ワイルドカードと同じではありません。 特に次の点に注意してください。
 
-- **.\*** は任意の文字の文字列と一致します
+- **.\\*** は任意の文字の文字列と一致します
 
 - **\\.** はピリオド "." と一致します
 

@@ -11,12 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: e1101a3e21fa75a180ec2421cdce37aa40bc9656
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 74172b6e7f03d7e3baef329f053fc4a83ee6ae28
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49861281"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967390"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>モデル、クラス、およびリレーションシップについて
 ドメイン固有言語 (DSL) は、作成した場合、カスタム プログラム コードと共に、DSL 定義ファイルによって定義されます。 DSL ソリューションのプログラム コードのほとんどは、このファイルから生成されます。
@@ -152,4 +152,4 @@ ms.locfileid: "49861281"
 
 ## <a name="see-also"></a>関連項目
 
-- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [ドメイン固有言語ツールの用語集](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

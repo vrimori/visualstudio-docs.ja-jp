@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 67b3a5a1a382b6768d25ce2b0550197fc09643fa
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: 8ffe7a2a730f10d0f29a13b5123fbd7f56beda13
+ms.sourcegitcommit: 12d6398c02e818de4fbcb4371bae9e5db6cf9509
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924782"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050158"
 ---
 # <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>Node.js Tools for Visual Studio を使用して Vue.js アプリケーションを作成する
 
@@ -37,7 +37,7 @@ Visual Studio 2017 には [Vue.js](https://vuejs.org/) フレームワークの�
     > [!IMPORTANT]
     > この記事では、Visual Studio 2017 バージョン 15.8 Preview 3 以降でのみ使用できる機能が必要です。
 
-    Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
+    Visual Studio をまだインストールしていない場合は、 [Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)  ページに移動し、無料試用版をインストールしてください。
 
     ワークロードをインストールする必要があるが、既に Visual Studio を所有している場合は、(**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択し) **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 **[Node.js 開発]** ワークロードを選択し、**[変更]** を選択します。
 
@@ -79,7 +79,7 @@ Vue.js では、迅速にスキャフォールディングするプロジェク�
 * *./Startup.cs* ファイルを開き、Configure メソッドに次の行を追加します。
 
     ```csharp
-    app.UseDefaultFiles() // Enables default file mapping on the web root.
+    app.UseDefaultFiles(); // Enables default file mapping on the web root.
     app.UseStaticFiles(); // Marks files on the web root as servable.
     ```
 

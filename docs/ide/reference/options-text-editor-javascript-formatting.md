@@ -8,18 +8,21 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.Formatting.Spacing
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.Formatting.General
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.Formatting.New_Lines
+- VS.ToolsOptionsPages.Text_Editor.TypeScript.Formatting.Spacing
+- VS.ToolsOptionsPages.Text_Editor.TypeScript.Formatting.General
+- VS.ToolsOptionsPages.Text_Editor.TypeScript.Formatting.New_Lines
 ms.assetid: 28a0aef1-9353-4d94-95a5-54b42e15c0dc
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 84c2f89aa578aa8b2c3c9ea4d033a5cff66a238e
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: cd4f166bc8b90db4012296c8d81c1d89e1b5eae5
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38800621"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219758"
 ---
 # <a name="options-text-editor-javascript-formatting"></a>[オプション]、[テキスト エディター]、[JavaScript]、[書式設定]
 **[オプション]** ダイアログ ボックスの **[書式設定]** ページで、コード エディターでのコード書式オプションを設定します。 このページにアクセスするには、メニュー バーで **[ツール]**、**[オプション]** の順にクリックし、次に、**[テキスト エディター]**、**[JavaScript]**、**[書式設定]** を展開します。
@@ -49,7 +52,7 @@ ms.locfileid: "38800621"
 |**新しい行にコントロール ブロックの始めかっこを配置する**|このオプションをオンにすると、コントロール ブロック (`if` コントロール ブロック、`while` コントロール ブロックなど) に関連付けられている始めかっこが新しい行に移動します。|
 
 ## <a name="spacing"></a>スペース
- 次のオプションによって、**ソース** ビューにスペースが挿入される条件を指定します。
+ 次のオプションによって、**[ソース]** ビューにスペースが挿入される条件を指定します。
 
 ## <a name="uielement-list"></a>UIElement の一覧
 

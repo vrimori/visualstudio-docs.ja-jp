@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: c89a437938a042ead343ee5c1386ea11d637663d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 87a70451799c7fc3a15eb14a9efbb0233ea2b154
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49834532"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220148"
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>ユニバーサル Windows アプリの HTML UI の応答性を分析する
 このトピックでは、アプリのパフォーマンス問題を UI 応答性プロファイラーを使って切り分ける方法を説明します。UI 応答性プロファイラーは、ユニバーサル Windows アプリで利用できるパフォーマンス ツールです。  

@@ -1,9 +1,9 @@
 ---
-title: Visual Studio でコード メトリックスの結果ウィンドウ
+title: コード メトリックス ウィンドウ
 ms.date: 12/12/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.codemetrics.output
 helpviewer_keywords:
@@ -15,40 +15,38 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 40e265e5bdc453ec658de16f288e9c184979975f
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: 6aa1de7b3c4a029038072e84bea1918ea33031db
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44321256"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967169"
 ---
-# <a name="using-the-code-metrics-results-window"></a>コード メトリックスの結果 ウィンドウの使用
+# <a name="use-the-code-metrics-results-window"></a>コード メトリックスの結果 ウィンドウを使用します。
 
 **コード メトリックスの結果**ウィンドウには、コード メトリックスの分析によって生成されるデータが表示されます。 コード メトリックス データの値の詳細については、次を参照してください。[コード メトリックス値](../code-quality/code-metrics-values.md)します。
 
-## <a name="displaying-code-metrics-results"></a>コード メトリックスの結果を表示します。
+## <a name="display-code-metrics-results"></a>コード メトリックスの結果を表示します。
 
 **コード メトリックスの結果**コード メトリックスの結果を生成するときに、ウィンドウが自動的に表示されます。 いつでも、ウィンドウを表示することもできます。
 
-### <a name="to-display-the-code-metrics-results-window"></a>コード メトリックスの結果ウィンドウを表示するには
+次の順序でメニューのいずれかを使用して、コード メトリックスの結果ウィンドウを表示できます。
 
 - **分析**] メニューの [選択**Windows** > **コード メトリックスの結果**します。
 
-   \- または -
-
 - **ビュー** ] メニューの [選択**その他の Windows** > **コード メトリックスの結果**します。
 
-**コード メトリックスの結果**結果が含まれていない場合でも、ウィンドウが表示されます。
+**コード メトリックスの結果**結果が含まれていない場合でも、ウィンドウが開きます。
 
 ### <a name="to-view-code-metrics-details"></a>コード メトリックの詳細を表示するには
 
 コード メトリックスの結果が生成された場合のツリーを展開、**階層**列。
 
-## <a name="filtering-code-metrics-results"></a>コード メトリックスの結果をフィルター処理
+## <a name="filter-code-metrics-results"></a>コード メトリックスの結果をフィルター処理します。
 
 表示される結果をフィルター処理することができます、**コード メトリックスの結果**ウィンドウ上部にあるツールバーを使用します。 たとえば、65 以下の保守容易性指数のある結果のみを表示します。
 
-**フィルター**ドロップダウン ボックスに結果列の名前が含まれています。 フィルターが定義されている場合、インデントと共に一覧の一番下に追加されます。 一覧には、定義された最後の 10 個のフィルターを含めることができます。
+**フィルター**ドロップダウン ボックスに結果列の名前が含まれています。 フィルターが定義されている場合、インデントと共に一覧の一番下に追加されます。 一覧には、定義された 10 個までのフィルターを含めることができます。
 
 ### <a name="to-filter-the-code-metrics-results"></a>コード メトリックスの結果をフィルター処理するには
 
@@ -62,45 +60,29 @@ ms.locfileid: "44321256"
 
 5.  結果の詳細を表示するには、階層ツリーを展開します。
 
-## <a name="adding-removing-and-rearranging-data-columns"></a>追加、削除、およびデータ列の並べ替え
+## <a name="add-remove-and-rearrange-data-columns"></a>追加、削除、およびデータ列を並べ替える
 
 追加したり削除からの列の結果、**コード メトリックスの結果**ウィンドウ。 さらに、希望する順序で表示されるので、結果の列を並べ替えることができます。
 
-### <a name="to-remove-a-column"></a>列を削除するには
+### <a name="add-or-remove-a-column"></a>追加または列を削除します。
+
+1. をクリックして、**列の追加/削除**ボタンをクリックすると、または任意の列見出しを右クリックし、クリックして**列の追加/削除**します。
+
+1. **列の追加/削除**の追加または削除、および選択する列のチェック ボックス ダイアログ ボックスをオンまたはオフ**OK**します。
+
+### <a name="rearrange-columns"></a>列を並べ替える
 
 1. をクリックして、**列の追加/削除**ボタンをクリックします。
 
-     \- 任意の列見出しを右クリックし をクリックしてまたは -**列の追加/削除**します。
+1. **列の追加/削除** ダイアログ ボックスに移動し、上矢印または下矢印を選択する列を選択します。
 
-1. **列の追加/削除**ダイアログ ボックスで、チェック ボックスをオフ列の削除 をクリックする**OK**します。
+1. 目的の場所列を配置すると、選択**OK**します。
 
-### <a name="to-add-a-previously-removed-column"></a>以前に削除した列を追加するには
-
-1. をクリックして、**列の追加/削除**ボタンをクリックします。
-
-     \- または -
-
-     任意の列見出しを右クリックし、をクリックし、**列の追加/削除**します。
-
-1. **列の追加/削除** ダイアログ ボックスをクリックして追加する列のチェック ボックスをオン**OK**します。
-
-### <a name="to-rearrange-columns"></a>列を並べ替える
-
-1. をクリックして、**列の追加/削除**ボタンをクリックします。
-
-     \- または -
-
-     任意の列見出しを右クリックし、をクリックし、**列の追加/削除**します。
-
-1. **列の追加/削除** ダイアログ ボックスに移動し、上矢印または下矢印をクリックする列を選択します。
-
-1. 目的の場所列を配置すると、クリックして**OK**します。
-
-## <a name="copying-data-to-the-clipboard-or-excel"></a>クリップボードまたは Excel へのデータのコピー
+## <a name="copy-data-to-the-clipboard-or-excel"></a>クリップボードまたは Excel にデータをコピーします。
 
 選択し、各データ列の値と名前の 1 つの行を含むテキスト文字列として選択した行のコード メトリックス データをクリップボードにコピーできます。 クリックすることもできます**Microsoft Excel で開いて選択**すべてのコード メトリックスの結果を Excel のスプレッドシートにエクスポートします。
 
-## <a name="creating-a-work-item-based-on-code-metric-results"></a>コード メトリックの結果に基づいて作業項目を作成します。
+## <a name="create-a-work-item-based-on-code-metric-results"></a>コード メトリックの結果に基づいて作業項目を作成します。
 
 作成することができます、 [Azure ボード](/azure/devops/boards/index?view=vsts)に基づいている作業項目の結果、**コード メトリックスの結果**ウィンドウ。 Visual Studio が自動的にタイトルを入力して、作業項目が作成されたときに、**タイトル**フィールドとコード メトリック データの下で、**履歴**タブ。
 

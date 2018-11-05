@@ -1,6 +1,6 @@
 ---
-title: '方法: ドメイン固有言語の名前空間を変更する'
-ms.date: 11/04/2016
+title: '方法: ドメイン固有言語の名前空間を変更します。'
+ms.date: 10/31/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, namespace
@@ -11,48 +11,49 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a237664a30dacf351edc048c82d8c9cdc304aa45
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 47e13e8399cba7762ff7443e4fc4cbf3a89375a6
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43775891"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966831"
 ---
-# <a name="how-to-change-the-namespace-of-a-domain-specific-language"></a>方法: ドメイン固有言語の名前空間を変更する
-ドメイン固有言語の名前空間を変更することができます。 変更を加える必要があります、 **DSL エクスプ ローラー**、Dsl パッケージ プロジェクトのプロパティおよびアセンブリ情報です。
+# <a name="how-to-change-the-namespace-of-a-domain-specific-language"></a>方法: ドメイン固有言語の名前空間を変更します。
 
-### <a name="to-change-the-namespace-of-a-domain-specific-language"></a>ドメイン固有言語の名前空間を変更するには
+ドメイン固有言語の名前空間を変更することができます。 変更を行う、 **DSL エクスプ ローラー**、Dsl パッケージ プロジェクトのプロパティおよびアセンブリ情報です。
 
-1.  **DSL エクスプ ローラー**、クリックして、 **Dsl**ノード。
+## <a name="to-change-the-namespace-of-a-domain-specific-language"></a>ドメイン固有言語の名前空間を変更するには
 
-2.  **プロパティ**ウィンドウで、変更、 **Namespace**プロパティ。
+1. **DSL エクスプ ローラー**を選択、 **Dsl**ノード。
 
-3.  ソリューションを保存し、テンプレートを変換します。
+2. **プロパティ**ウィンドウで、変更、 **Namespace**プロパティ。
 
-4.  **プロジェクト** メニューのをクリックして**Dsl プロパティ**します。
+3. ソリューションを保存し、テンプレートを変換します。
 
-     プロジェクトのプロパティが表示されます。
+4. **プロジェクト**] メニューの [選択**Dsl プロパティ**します。
 
-5.  **[アプリケーション]** タブをクリックします。
+   プロジェクトのプロパティが表示されます。
 
-6.  変更、**既定の名前空間**プロパティを新しい名前空間の名前。
+5. 選択、**アプリケーション**タブ。
 
-7.  アセンブリの名前を変更する場合は、変更、 **Assembly name プロパティです。**
+6. 変更、**既定の名前空間**プロパティを新しい名前空間の名前。
 
-8.  アセンブリ名を変更した場合は、DslPackage\Package.tt を開き、この行を更新します。
+7. アセンブリの名前を変更する場合は、変更、 **Assembly name プロパティです。**
 
-     `string dslAssembly = "YourDSLassembly.Dsl.dll";`
+8. アセンブリ名を変更した場合は、DslPackage\Package.tt を開き、この行を更新します。
+
+   `string dslAssembly = "YourDSLassembly.Dsl.dll";`
 
 9. カスタム コードを記述した場合は、コード ファイルの名前空間とクラス参照を変更することを確認してください。
 
 10. Visual Studio 実験用インスタンスをリセットします。
 
-    1.  削除**\Users\\**_{名}_**\AppData\Local\Microsoft\VisualStudio\\\*Exp**
+    1. 削除**\Users\\**_{名}_**\AppData\Local\Microsoft\VisualStudio\\\*Exp**します。
 
-    2.  Windows で**開始**] メニューの [選択**すべてのプログラム**、 **Microsoft Visual Studio 2010 SDK**、**ツール**、**リセット、実験用インスタンス**します。
+    2. Windows で**開始**] メニューの [選択**すべてのプログラム** > **Microsoft Visual Studio 2010 SDK** > **ツール**  > **実験用インスタンスをリセット**します。
 
 11. **ビルド**] メニューの [選択**ソリューションのリビルド**します。
 
 ## <a name="see-also"></a>関連項目
 
-- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+[ドメイン固有言語ツールの用語集](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

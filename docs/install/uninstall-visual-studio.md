@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ad0b8d2de1cad4f4575ca9ee7f35713383149314
-ms.sourcegitcommit: b45daa3c4f0820b69f9e702c8c1f352ef6856b4d
+ms.openlocfilehash: 0760c101ce669dc2e44527ea18b8f213a12df973
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43288984"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49817744"
 ---
 # <a name="uninstall-visual-studio"></a>Visual Studio のアンインストール
 
@@ -28,12 +28,12 @@ ms.locfileid: "43288984"
 
 1. コンピューター上で Visual Studio インストーラーを見つけます。
 
-     たとえば、Windows 10 Anniversary Update を実行しているコンピューター上では、**[スタート]** を選択し、**Visual Studio インストーラー**としてリスト表示される **V** の文字までスクロールします。
+     たとえば、Windows 10 Anniversary Update 以降を実行しているコンピューター上では、**[スタート]** を選択し、**Visual Studio インストーラー**としてリスト表示される **V** の文字までスクロールします。
 
      ![Visual Studio インストーラー](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio インストーラーの検索")
 
-     >[!NOTE]
-     一部のコンピューターでは、Visual Studio インストーラーが **Microsoft Visual Studio インストーラー**として **"M"** の項に表示される場合があります。<br/><br/> Visual Studio インストーラーは `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe` にもあります。
+   > [!NOTE]
+   >   一部のコンピューターでは、Visual Studio インストーラーが **Microsoft Visual Studio インストーラー**として **"M"** の項に表示される場合があります。<br/><br/> Visual Studio インストーラーは `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe` にもあります。
 
 2. クリックしてインストーラーを起動し、![詳細アイコン](media/vs2017uninstall-UninstallIcon.png "オプション アイコンを選択") アイコンをクリックして、**[アンインストール]** をクリックします。
 

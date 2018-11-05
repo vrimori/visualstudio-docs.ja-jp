@@ -12,27 +12,27 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bab71bce4ccec17f485f6aafad7389e3b981b6e
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 13405d197fc5ab64d4c7b7040580f073e36f98c7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43774946"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812661"
 ---
 # <a name="target-build-order"></a>ターゲットのビルド順序
 あるターゲットへの入力が別のターゲットの出力に依存する場合、ターゲットの順序を指定する必要があります。 以下の属性を使用して、ターゲットを実行する順序を指定できます。  
   
--   `InitialTargets`。 この `Project` 属性は、ターゲットがコマンド ラインまたは `DefaultTargets` 属性に指定されている場合でも最初に実行されるターゲットを指定します。  
+- `InitialTargets`。 この `Project` 属性は、ターゲットがコマンド ラインまたは `DefaultTargets` 属性に指定されている場合でも最初に実行されるターゲットを指定します。  
   
--   `DefaultTargets`。 この `Project` 属性は、ターゲットがコマンドラインで明示的に指定されていない場合に実行するターゲットを指定します。  
+- `DefaultTargets`。 この `Project` 属性は、ターゲットがコマンドラインで明示的に指定されていない場合に実行するターゲットを指定します。  
   
--   `DependsOnTargets`。 この `Target` 属性は、このターゲットを実行する前に実行する必要があるターゲットを指定します。  
+- `DependsOnTargets`。 この `Target` 属性は、このターゲットを実行する前に実行する必要があるターゲットを指定します。  
   
--   `BeforeTargets` および `AfterTargets`。 これらの `Target` 属性は、このターゲットを、指定されたターゲットの前または後に実行するように指定します (MSBuild 4.0)。  
+- `BeforeTargets` および `AfterTargets`。 これらの `Target` 属性は、このターゲットを、指定されたターゲットの前または後に実行するように指定します (MSBuild 4.0)。  
   
- ビルド内の後続のターゲットがそのターゲットに依存している場合でも、ビルド中に 1 つのターゲットが 2 回実行されることはありません。 ターゲットは一度実行されると、それ以上ビルドに影響しません。  
+  ビルド内の後続のターゲットがそのターゲットに依存している場合でも、ビルド中に 1 つのターゲットが 2 回実行されることはありません。 ターゲットは一度実行されると、それ以上ビルドに影響しません。  
   
- ターゲットには `Condition` 属性を指定することができます。 指定した条件が `false` と評価された場合、ターゲットは実行されず、ビルドには影響しません。 条件の詳細については、「[条件](../msbuild/msbuild-conditions.md)」を参照してください。  
+  ターゲットには `Condition` 属性を指定することができます。 指定した条件が `false` と評価された場合、ターゲットは実行されず、ビルドには影響しません。 条件の詳細については、「[条件](../msbuild/msbuild-conditions.md)」を参照してください。  
   
 ## <a name="initial-targets"></a>初期ターゲット  
  [Project](../msbuild/project-element-msbuild.md) 要素の `InitialTargets` 属性は、ターゲットがコマンド ラインまたは `DefaultTargets` 属性に指定されている場合でも最初に実行されるターゲットを指定します。 通常、初期ターゲットはエラー チェックに使用されます。  
@@ -56,9 +56,9 @@ ms.locfileid: "43774946"
 <Project DefaultTargets="Clean;Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
 ```  
   
- コマンド ラインで **/target** スイッチを使用して、既定のターゲットをオーバーライドすることができます。 次の例では、`Build` ターゲットを実行してから `Report` ターゲットを実行するように指定しています。 この方法でターゲットを指定する場合、既定のターゲットは無視されます。  
+ コマンド ラインで **-target** スイッチを使用して、既定のターゲットをオーバーライドすることができます。 次の例では、`Build` ターゲットを実行してから `Report` ターゲットを実行するように指定しています。 この方法でターゲットを指定する場合、既定のターゲットは無視されます。  
   
- `msbuild /target:Build;Report`  
+ `msbuild -target:Build;Report`  
   
  初期ターゲットと既定のターゲットの両方が指定されており、コマンド ライン ターゲットが指定されていない場合、MSBuild はまず初期ターゲットを実行してから、既定のターゲットを実行します。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "43774946"
   
 1.  `InitialTargets` ターゲットが実行されます。  
   
-2.  **/target** スイッチによってコマンドラインで指定されたターゲットが実行されます。 コマンド ラインでターゲットが指定されていない場合、`DefaultTargets` ターゲットが実行されます。 どちらも存在しない場合は、検出された最初のターゲットが実行されます。  
+2.  **-target** スイッチによってコマンドラインで指定されたターゲットが実行されます。 コマンド ラインでターゲットが指定されていない場合、`DefaultTargets` ターゲットが実行されます。 どちらも存在しない場合は、検出された最初のターゲットが実行されます。  
   
 3.  ターゲットの `Condition` 属性が評価されます。 `Condition` 属性が存在し、`false` と評価された場合、ターゲットは実行されず、ビルドにはそれ以上影響しません。
 

@@ -1,7 +1,7 @@
 ---
 title: リモート Linux コンピューターでの Python コードのデバッグ
 description: 必要な構成手順、セキュリティ、トラブルシューティングなど、Visual Studio を使ってリモート Linux コンピューターで動作する Python コードをデバッグする方法について説明します。
-ms.date: 09/03/2018
+ms.date: 10/15/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3462e3e46a551b9f9245dc2cb5bf25bbcde768a5
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 654ac9cfd466cfdd6486ea5aa9e658495d5704fe
+ms.sourcegitcommit: e680e8ac675f003ebcc8f8c86e27f54ff38da662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45549312"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356770"
 ---
 # <a name="remotely-debug-python-code-on-linux"></a>Linux 上で Python コードをリモートでデバッグする
 
@@ -74,10 +74,8 @@ Azure VM のファイアウォール ルールの作成の詳細については�
 
    ```python
    import ptvsd
-   ptvsd.enable_attach('my_secret')
+   ptvsd.enable_attach()
    ```
-
-   `enable_attach` に渡される最初の引数 ("シークレット" と呼ばれます) は、実行中のスクリプトへのアクセスを制限します。このシークレットは、リモート デバッガーをアタッチするときに入力します (推奨されませんが、`enable_attach(secret=None)` の接続と使用を任意のユーザーに許可することもできます)。
 
 1. ファイルを保存して `python3 guessing-game.py` を実行します。 `enable_attach` を呼び出すとバックグラウンドで実行され、受信接続を待機します。それ以外の場合はプログラムと対話しています。 必要な場合は、`wait_for_attach` 関数を `enable_attach` の後に呼び出して、デバッガーがアタッチされるまでプログラムをブロックすることもできます。
 
@@ -96,10 +94,7 @@ Azure VM のファイアウォール ルールの作成の詳細については�
 
 1. 表示される **[プロセスにアタッチ]** ダイアログで、**[接続の種類]** を **[Python remote (ptvsd)]** (Python リモート (ptvsd)) に設定します (旧バージョンの Visual Studio では、これらのコマンドは **[トランスポート]** と **[Python リモート デバッグ]** という名称でした)。
 
-1. **[接続先]** フィールド (旧バージョンでは **[修飾子]**) に「`tcp://<secret>@<ip_address>:5678`」と入力します。`<secret>` は Python コードで渡される文字列 `enable_attach` です。`<ip_address>` はリモート コンピューターの IP アドレスです (明示的なアドレスまたは myvm.cloudapp.net のような名前を指定できます)。`:5678` はリモート デバッグ ポート番号です。
-
-    > [!Warning]
-    > パブリック インターネット経由で接続している場合は、代わりに `tcps` を使用し、以下の「[デバッガー接続の SSL によるセキュリティ保護](#secure-the-debugger-connection-with-ssl)」の指示に従ってください。
+1. **[接続先]** フィールド (旧バージョンでは **[修飾子]**) に「`tcp://<ip_address>:5678`」と入力します。ここで、`<ip_address>` は、(明示的なアドレスまたは myvm.cloudapp.net のような名前を指定できる) リモート コンピューターの IP アドレスで、`:5678` はリモート デバッグ ポート番号です。
 
 1. **Enter** キーを押すと、そのコンピューターで使用できる ptvsd プロセスの一覧が生成されます。
 
@@ -121,7 +116,7 @@ Azure VM のファイアウォール ルールの作成の詳細については�
 1. **[Connection Target]**(接続のターゲット) (または **[修飾子]**) のシークレットがリモート コードのシークレットと完全に一致することを確認します。
 1. **[接続先]** (または **[修飾子]**) の IP アドレスがリモート コンピューターと一致することを確認します。
 1. リモート コンピューターのリモート デバッグ ポートを開いていること、接続先に `:5678` などのポート サフィックスを含めていることを確認します。
-    - 別のポートを使用する必要がある場合は、`enable_attach` の呼び出しで `ptvsd.enable_attach(secret = 'my_secret', address = ('0.0.0.0', 8080))` のように `address` 引数を使用して指定できます。 この場合、ファイアウォールでもそのポートを開きます。
+    - 別のポートを使用する必要がある場合は、`enable_attach` の呼び出しで `ptvsd.enable_attach(address = ('0.0.0.0', 8080))` のように `address` 引数を使用して指定できます。 この場合、ファイアウォールでもそのポートを開きます。
 1. `pip3 list` から返されたリモート コンピューターにインストールされている ptvsd のバージョンが、Visual Studio で使用している Python ツールのバージョンで使用されている ptvsd のバージョン (以下の表を参照してください) が一致することを確認します。 必要に応じて、リモート コンピューターの ptvsd を更新します。
 
     | Visual Studio のバージョン | Python ツール/ptvsd のバージョン |
@@ -136,9 +131,15 @@ Azure VM のファイアウォール ルールの作成の詳細については�
     | 2013 | 2.2.2 |
     | 2012, 2010 | 2.1 |
 
-## <a name="secure-the-debugger-connection-with-ssl"></a>SSL を使用してデバッガー接続をセキュリティで保護する
+## <a name="using-ptvsd-3x"></a>ptvsd 3.x を使用する
 
-ptvsd のリモート デバッグ サーバーへの接続は、既定で、シークレットのみで保護されており、すべてのデータはプレーンテキストで渡されます。 より高いセキュリティの接続には、ptvsd でサポートされている SSL を使用します。設定手順は次のとおりです。
+以下は、ptvsd 4.x では削除された特定の機能を含む、ptvsd 3.x を使用したリモート デバッグに限定した情報です。
+
+1. ptvsd 3.x では、`enable_attach` 関数で、実行中のスクリプトへのアクセスを制限する "シークレット" を最初の引数として渡す必要がありました。 このシークレットは、リモート デバッガーをアタッチするときに入力します。 推奨はされませんが、`enable_attach(secret=None)` を使用するとすべてのユーザーに接続を許可することができます。
+
+1. 接続のターゲット URL は `tcp://<secret>@<ip_address>:5678` です (ここで、`<secret>` は渡した文字列で、`enable_attach` は Python コードです)。
+
+ptvsd 3.x のリモート デバッグ サーバーへの接続は、既定で、シークレットのみで保護されており、すべてのデータはプレーンテキストで渡されます。 ptvsd 3.x では、より高いセキュリティでの接続に `tcsp` を使用した SSL をサポートしています。設定手順は次のとおりです。
 
 1. リモート コンピューターで、openssl を使用して別の自己署名証明書とキー ファイルを生成します。
 
@@ -171,17 +172,12 @@ ptvsd のリモート デバッグ サーバーへの接続は、既定で、シ
 
     ![SSL を使用するリモート デバッグ トランスポートの選択](media/remote-debugging-qualifier-ssl.png)
 
-### <a name="warnings"></a>警告
+1. 後述のとおり、Visual Studio で SSL 接続を実行する場合、証明書で問題が発生する可能性があると表示されます。 この警告を無視して続行しても問題ありません。無視しても、man-in-the-middle 攻撃を受ける可能性がある傍受を防ぐために、チャネルは暗号化されます。
 
-後述のように、Visual Studio で SSL で接続するときに証明書の問題の可能性が表示されます。 この警告を無視して続行しても問題ありません。無視しても、man-in-the-middle 攻撃を受ける可能性がある傍受を防ぐために、チャネルは暗号化されます。
+    1. 以下の "**リモート証明書は信頼されていません**" という警告が表示される場合、[信頼されたルート CA] に証明書が適切に追加されていないことを意味します。 追加手順を確認して、もう一度試してください。
 
-1. 以下の "**リモート証明書は信頼されていません**" という警告が表示される場合、[信頼されたルート CA] に証明書が適切に追加されていないことを意味します。 追加手順を確認して、もう一度試してください。
+        ![SSL 証明書の信頼の警告](media/remote-debugging-ssl-warning.png)
 
-    ![SSL 証明書の信頼の警告](media/remote-debugging-ssl-warning.png)
+    1. 以下の "**リモート証明書名がホスト名と一致しません**" という警告が表示される場合、証明書の作成時に **[共通名]** として正しいホスト名や IP アドレスを指定していないことを意味します。
 
-1. 以下の "**リモート証明書名がホスト名と一致しません**" という警告が表示される場合、証明書の作成時に **[共通名]** として正しいホスト名や IP アドレスを指定していないことを意味します。
-
-    ![SSL 証明書のホスト名の警告](media/remote-debugging-ssl-warning2.png)
-
-> [!Warning]
-> 現在、これらの警告を無視すると、Visual Studio 2017 はハングします。 すべての問題を修正してから、接続を試行してください。
+        ![SSL 証明書のホスト名の警告](media/remote-debugging-ssl-warning2.png)

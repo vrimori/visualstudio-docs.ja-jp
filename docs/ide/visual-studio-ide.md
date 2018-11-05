@@ -1,6 +1,6 @@
 ---
 title: Visual Studio 2017 の概要
-ms.date: 06/01/2018
+ms.date: 10/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -13,20 +13,22 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cccaef2d5678bffa19e822cf537f4acb3d046cca
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: bc5961e2565c8618ad0f34a8c58d149e4a82c935
+ms.sourcegitcommit: 401be39a42ffe007593528b5bba62583ca9fcafd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49907522"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50244451"
 ---
 # <a name="welcome-to-the-visual-studio-ide"></a>Visual Studio IDE へようこそ
 
 Visual Studio *統合開発環境* は、コードの編集、デバッグ、ビルドを行ってから、アプリを発行するために使用できるクリエイティブなランチパッドです。 統合開発環境 (IDE) は、ソフトウェア開発の多くの側面で使用できる機能を豊富に備えたプログラムです。 大部分の IDE が備える標準的なエディターおよびデバッガーに加えて、Visual Studio ではコンパイラ、コード補完ツール、グラフィック デザイナーなど、ソフトウェア開発プロセスを容易にする多くの機能を用意しています。
 
-Visual Studio は Windows と Mac で利用できます。 [Visual Studio for Mac](/visualstudio/mac/) は Visual Studio 2017 と同じ機能を多く備え、クロスプラットフォーム アプリとモバイル アプリの開発用に最適化されています。
+Visual Studio は Windows と Mac で利用できます。 [Visual Studio for Mac](/visualstudio/mac/) は Visual Studio 2017 と同じ機能を多く備え、クロスプラットフォーム アプリとモバイル アプリの開発用に最適化されています。 この記事では、Windows バージョンの Visual Studio 2017 について説明します。
 
-この概要記事では、Windows 用の Visual Studio 2017 について説明します。 IDE の基本的な機能を紹介します。 簡単なプロジェクトの作成、コーディング支援としての [IntelliSense](using-intellisense.md) の使用、プログラム実行中の変数の値を確認するためのアプリのデバッグなど、Visual Studio で実行できることをいくつか見ていきます。 さまざまなツール ウィンドウについても説明します。
+Visual Studio 2017 には 3 つのエディション: Community、Professional、および Enterprise があります。 各エディションでサポートされている機能については、「[Visual Studio 2017 IDE の比較](https://visualstudio.microsoft.com/vs/compare/)」を参照してください。
+
+この概要の記事では、IDE の基本的な機能を紹介します。 簡単なプロジェクトの作成、コーディング支援としての [IntelliSense](using-intellisense.md) の使用、プログラム実行中の変数の値を確認するためのアプリのデバッグなど、Visual Studio で実行できることをいくつか見ていきます。 さまざまなツール ウィンドウについても説明します。
 
 ## <a name="install-the-visual-studio-ide"></a>Visual Studio IDE のインストール
 

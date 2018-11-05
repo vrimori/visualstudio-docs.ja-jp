@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 039d88fb3aac6c1f7f0880be8b0f08dcf71bff5a
-ms.sourcegitcommit: aea5cdb76fbc7eb31d1e5cc3c8d6adb0c743220f
+ms.openlocfilehash: 711d7b65eb329e844fedb0148006cacb1c7a0ebf
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126640"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219096"
 ---
 # <a name="packagejson-configuration"></a>package.json の構成
 
@@ -28,7 +28,7 @@ npm パッケージのバージョン管理システムには、厳密な規則�
 
     [major].[minor].[patch]
 
-たとえば、アプリ内に 5.2.1 のバージョンのパッケージがあるとします。 5 はメジャー バージョン、2 はマイナー バージョン、1 は修正プログラムです。
+たとえば、アプリ内に 5.2.1 のバージョンのパッケージがあるとします。 メジャー バージョンは 5、マイナー バージョンは 2、修正プログラムは 1 です。
 
 * メジャー バージョンの更新では、パッケージには旧バージョンとの下位互換性のない新機能、すなわち互換性に影響する変更点が含まれています。
 * マイナー バージョンの更新では、前のパッケージ バージョンと下位互換性のある機能がパッケージに追加されています。

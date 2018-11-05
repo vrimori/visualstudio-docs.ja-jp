@@ -21,20 +21,21 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 21ebae03dd2ba58a751a839f5e3151654faa39e0
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 1868d670458e204f6e503b132aaceab17f3da742
+ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757596"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50750924"
 ---
 # <a name="filter-and-sort-data-in-a-windows-forms-application"></a>Windows フォーム アプリケーションのデータのフィルター処理および並べ替えを行う
+
 データをフィルター処理するには、<xref:System.Windows.Forms.BindingSource.Filter%2A> プロパティに目的のレコードを返す文字列式を設定します。
 
- 設定してデータを並べ替える、<xref:System.Windows.Forms.BindingSource.Sort%2A>プロパティを並べ替える。 追加の列名を`DESC`を降順で並べ替える付加したり`ASC`を昇順で並べ替えます。
+設定してデータを並べ替える、<xref:System.Windows.Forms.BindingSource.Sort%2A>プロパティを並べ替える。 追加の列名を`DESC`を降順で並べ替える付加したり`ASC`を昇順で並べ替えます。
 
 > [!NOTE]
->  アプリケーションを使用しない場合<xref:System.Windows.Forms.BindingSource>フィルター処理できる、コンポーネントを使用してデータを並べ替えると<xref:System.Data.DataView>オブジェクト。 詳細については、次を参照してください。 [Dataview](/dotnet/framework/data/adonet/dataset-datatable-dataview/dataviews)します。
+> アプリケーションを使用しない場合<xref:System.Windows.Forms.BindingSource>フィルター処理できる、コンポーネントを使用してデータを並べ替えると<xref:System.Data.DataView>オブジェクト。 詳細については、次を参照してください。 [Dataview](/dotnet/framework/data/adonet/dataset-datatable-dataview/dataviews)します。
 
 ## <a name="to-filter-data-by-using-a-bindingsource-component"></a>BindingSource コンポーネントを使用してデータをフィルター処理するには
 

@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aeda3752fdee6ce36094c68758d99c612c82fd76
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: 9f884b92d03027782eed27f4583e06b1141341db
+ms.sourcegitcommit: e680e8ac675f003ebcc8f8c86e27f54ff38da662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44320840"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356796"
 ---
 # <a name="quickstart-first-look-at-profiling-tools"></a>クイック スタート: プロファイリング ツールの概要
 
@@ -34,7 +34,8 @@ Visual Studio にはさまざまなプロファイリング ツールがあり�
 
 **[診断ツール]** ウィンドウはアプリをプロファイリングする方法として人気がありますが、リリース ビルドではアプリの事後分析を行うこともできます。 各種手法の詳細については、「[デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」を参照してください。 プロファイリング ツールがサポートする他のアプリの種類については、「[使用するツール](#which-tool-should-i-use)」のセクションをご覧ください。
 
-> ![注] Windows 7 以降では事後検証ツールを使用できます。 Windows 8 以降では、デバッガーを使用してプロファイル ツールを実行する必要があります (**[診断ツール]** ウィンドウ)。
+> [!NOTE]
+> Windows 7 以降では事後検証ツールを使用できます。 Windows 8 以降では、デバッガーを使用してプロファイル ツールを実行する必要があります (**[診断ツール]** ウィンドウ)。
 
 ## <a name="analyze-cpu-usage"></a>CPU 使用率の分析
 
@@ -119,7 +120,7 @@ Direct3D アプリ (Direct3D コンポーネントは C++ である必要があ�
 
 また、グラフを利用し、CPU バインドまたは GPU バインドのパフォーマンス問題があるかどうかを判断できます。
 
-## <a name="analyze-performance-javascript"></a>パフォーマンスを分析する (JavaScript)
+## <a name="analyze-performance-javascript-uwp"></a>パフォーマンスを分析する (JavaScript UWP)
 
 UWP アプリの場合、JavaScript メモリ ツールと HTML UI 応答性ツールを利用できます。
 
@@ -155,8 +156,8 @@ CPU 使用量ツールやメモリ使用量ツールに現在入っていない�
   
 |パフォーマンス ツール|Windows デスクトップ|UWP|ASP.NET/ASP.NET Core| 
 |----------------------|---------------------|-------------|-------------|  
-|[メモリ使用量](../profiling/memory-usage.md)|可|可|可| 
 |[CPU 使用率](../profiling/cpu-usage.md)|可|可|可|
+|[メモリ使用量](../profiling/memory-usage.md)|可|可|可| 
 |[GPU 使用率](../debugger/gpu-usage.md)|可|可|Ｘ| 
 |[アプリケーションのタイムライン](../profiling/application-timeline.md)|可|可|Ｘ|
 |[パフォーマンスのヒント](../profiling/perftips.md)|可|XAML の場合は可、HTML の場合は不可|可|

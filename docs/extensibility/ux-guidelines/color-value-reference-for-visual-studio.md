@@ -1,27 +1,25 @@
 ---
-title: Visual Studio の色の値の参照 |Microsoft Docs
+title: カラー値の参照
 description: '新しい Visual Studio の色のトークンを作成するためのリファレンス: 16 進コード'
 keywords: color、16 進コード、色合い、テーマの UI、テーマ
 author: brickgeorge
-ms.author: v-brickg
+ms.author: gregvanl
 ms.date: 08/04/2017
 ms.topic: conceptual
 ms.assetid: 694ffb31-132c-4d63-b930-8254e7c50c25
-ms.custom: ''
 ms.reviewer: Jamie.Young
 ms.technology:
 - vs-ide-sdk
 manager: douge
-ms.workload:
-- v-brickg
-ms.openlocfilehash: d0055ae3d0031d1cb1ffa7896a4594eadf69d42d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 5216be58983b8b354a8136f9d7941a460915dc44
+ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49902607"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751090"
 ---
 # <a name="color-value-reference-for-visual-studio"></a>Visual Studio のカラー値の参照
+
 このトピックでは、新しい色のトークンを作成するための参照です。 新しい UI を作成するときは、各メイン テーマの色とその要素のハイ コントラスト テーマのシステム色の名前を選択するのに既存の UI からの似た色を使用できます。 
 
 新しい色のトークンを作成する方法の実装については、次を参照してください。[色のテーマのツール](../../extensibility/internals/color-theming-tools.md)します。

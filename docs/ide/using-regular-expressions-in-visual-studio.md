@@ -18,12 +18,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bb9186726a54099b0c75a468a99d760abd22b7f3
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: bef854fd04ce8ac2ddf6fe834b3bede0f371eefe
+ms.sourcegitcommit: 12d6398c02e818de4fbcb4371bae9e5db6cf9509
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945547"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050301"
 ---
 # <a name="use-regular-expressions-in-visual-studio"></a>Visual Studio での正規表現の使用
 
@@ -49,7 +49,8 @@ Visual Studio は、テキストの検索と置換をするときに、[.NET Fra
 |直前の正規表現の 0 回以上の繰り返しに一致します (一致する文字列の長さを最小限にします)。|*?|`e.*?e` は、"feeder" の中の "ee" に一致しますが、"eede" には一致しません。|
 |直前の正規表現の 1 回以上の繰り返しを検索します (一致する文字列の長さを最小限にします)。|+?|`e.+?e` は、"enterprise" 中の "ente" および "erprise" には一致しますが、単語全体 "enterprise" には一致しません。|
 |一致文字列を、行頭または文字列の先頭に固定します。|^|`^car` は、単語 "car" が行の先頭に登場する場合のみ、その単語に一致します。|
-|一致文字列を、行末に固定します。|\r?$|`End\r?$` は、"end" が行末に登場する場合のみ、その単語に一致します。|
+|一致文字列を、行末に固定します。|\r?$|`end\r?$` は、"end" が行末に登場する場合のみ、その単語に一致します。|
+|一致文字列を、ファイルの末尾に固定します。|$|`end$` は、"end" がファイルの末尾に登場する場合のみ、その単語に一致します。|
 |セット内の任意の 1 文字と一致します。|[abc]|`b[abc]` は、"ba"、"bb"、および "bc" に一致します。|
 |範囲内の任意の文字に一致します|[a-f]|`be[n-t]` は、"between" の中の "bet"、"beneath" の中の "ben"、および "beside" の中の "bes" には一致しますが、"below" の中の "bel" には一致しません。|
 |かっこで囲まれた表現を 1 つのまとまりとして扱い、その表現に対して暗黙的に番号を付けます。|()|`([a-z])X\1` は、"aXa" および "bXb" に一致しますが、"aXb" には一致しません。 "\1"は、最初の表現グループ "[a-z]" を指します。|
@@ -58,8 +59,8 @@ Visual Studio は、テキストの検索と置換をするときに、[.NET Fra
 |記号の前にある表現、または後にある表現のいずれかに一致します。|&#124;|`(sponge\|mud) bath` は "sponge bath" および "mud bath" に一致します。|
 |円記号の後の文字をエスケープ処理します。| \\ |`\^` は、^ 文字に一致します。|
 |直前の文字またはグループが登場する回数を指定します。|{x}、ここで x は登場する回数です。|`x(ab){2}x` は "xababx" に一致し、`x(ab){2,3}x` は "xababx" および "xabababx" に一致しますが、"xababababx" には一致しません。|
-|Unicode 文字クラスに含まれるテキストに一致します。ここで、"X" は Unicode 番号です。 Unicode 文字クラスの詳細については、次を参照してください。<br /><br /> [Unicode 規格 5.2 の文字のプロパティ](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf)。|\p{X}|`\p{Lu}` は "Thomas Doe" の中の "T" および "D" に一致します。|
-|ワード境界に一致します。|`\b` (\b が文字クラスの外部にあるときはワード境界を指定し、文字クラスの内部にあるときはバックスペースを指定します)。|`\bin` は、"inside" の中の "in" と一致しますが、"pinto" には一致しません。|
+|Unicode 文字クラスに含まれるテキストに一致します。 Unicode 文字クラスの詳細については、次を参照してください。<br /><br /> [Unicode 規格 5.2 の文字のプロパティ](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf)。|\p{X}、ここで "X" は Unicode 番号です。|`\p{Lu}` は "Thomas Doe" の中の "T" および "D" に一致します。|
+|ワード境界に一致します。|\b (文字クラス `\b` の外部にあるときはワード境界を指定し、文字クラス `\b` の内部にあるときはバックスペースを指定します)。|`\bin` は、"inside" の中の "in" と一致しますが、"pinto" には一致しません。|
 |改行 (つまり、キャリッジ リターンとそれに続く新しい行) に一致します。|\r?\n|`End\r?\nBegin` は、"End" が行の最後の文字列で、"Begin" が次の行の先頭の文字列である場合のみ、単語 "End" と "Begin" に一致します。|
 |任意の英数字 1 文字に一致します。|\w|`a\wd` は、"add" および "a1d" に一致しますが、"a d" には一致しません。|
 |任意の空白文字と一致します。|(?([^\r\n])\s)|`Public\sInterface` は、語句 "Public Interface" に一致します。|

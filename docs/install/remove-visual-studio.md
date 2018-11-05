@@ -21,16 +21,16 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 69e301f61ddf6acca9d90b8410630cbf7acd65d6
-ms.sourcegitcommit: 6b092e7d466377f06913d49d183dbbdca16730f0
+ms.openlocfilehash: e72482dce3df2ceaa5d5131838ce08b13a05cd90
+ms.sourcegitcommit: c5e72875206b8c5737c29d5b1ec7b86eec747303
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43138855"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49382767"
 ---
 # <a name="remove-visual-studio"></a>Visual Studio の削除
 
-致命的なエラーが発生して Visual Studio の修復またはアンインストールができない場合は、`InstallCleanup.exe` ツールを実行してインストール ファイルと製品情報を削除することができます。 このツールの実行は修復またはアンインストールに失敗した場合の最終手段として行ってください。その他の Visual Studio のインストールやその他の製品の機能がアンインストールされ、後で修復が必要になる場合があります。
+致命的なエラーが発生して Visual Studio の修復またはアンインストールができない場合は、`InstallCleanup.exe` ツールを実行して Visual Studio 2017 以降のすべてのインストール済みインスタンスのインストール ファイルと製品情報を削除することができます。 このツールの実行は修復またはアンインストールに失敗した場合の最終手段として行ってください。その他の Visual Studio のインストールやその他の製品の機能がアンインストールされ、後で修復が必要になる場合があります。
 
 以下の手順では、以下の動作のコマンドライン スイッチでツールを実行することができます。
 

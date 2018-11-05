@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 473cc26a9d3e7b7bc5ec97d1608706aea2ca3009
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0417507323a627753bc62e50b424c37b547d4dad
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49898721"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967481"
 ---
 # <a name="add-a-tracking-property-to-a-domain-specific-language-definition"></a>ドメイン固有言語の定義に追跡プロパティを追加する
 
@@ -28,7 +28,7 @@ A*追跡ドメイン*プロパティは、ユーザーを更新できますが�
 
 たとえば、ドメイン固有言語ツール (DSL) ツールでユーザーが、ドメイン クラスの名前を使用して計算される既定値を持つドメイン クラスのプロパティの表示名デザイン時に値を変更したりできます計算値にリセットします。
 
-このチュートリアルでは、ドメイン固有言語 (DSL) を持つモデルの既定の Namespace プロパティに基づいて既定値を持つプロパティの追跡の Namespace を作成します。 プロパティの追跡の詳細については、次を参照してください。[追跡プロパティを定義する](http://msdn.microsoft.com/0538b0e4-6221-4e7d-911a-b92cd622f0be)します。
+このチュートリアルでは、ドメイン固有言語 (DSL) を持つモデルの既定の Namespace プロパティに基づいて既定値を持つプロパティの追跡の Namespace を作成します。 プロパティの追跡の詳細については、次を参照してください。[追跡プロパティを定義する](https://msdn.microsoft.com/0538b0e4-6221-4e7d-911a-b92cd622f0be)します。
 
 - DSL ツール サポートは、プロパティ記述子を追跡します。 ただし、DSL デザイナーを使用して、言語にトラッキング プロパティを追加することはできません。 したがって、定義して、トラッキング プロパティを実装するカスタム コードを追加する必要があります。
 

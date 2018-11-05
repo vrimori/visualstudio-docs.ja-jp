@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Pluralsigh
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 3b90ac75cf92ac9adfef5023b3677b8044d44350
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 06acd50823b05e6b39cdf9cb41d2f4ec2d456c0d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283146"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49912007"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Pluralsight トレーニング特典
 
@@ -27,61 +27,63 @@ ms.locfileid: "44283146"
 
 ## <a name="activation-steps"></a>アクティブ化の手順
 1. サブスクリプションをアクティブ化するには、[https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) に接続し、[専門能力開発] セクションにある Pluralsight 特典タイトルの **[コードを取得]** リンクをクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![Pluralsight 特典タイル](_img\vs-pluralsight\vs-pluralsight-3month-tile.png)
-
-    > [!IMPORTANT]
-    > Pluralsight 特典タイルの [コードを取得] リンクをクリックすると、次のような内容のメッセージが表示される可能性があります。
-    >
-    > **"注: 以前に Visual Studio サブスクリプションで別の Pluralsight オファーをアクティブにした場合は、このコードで新しい Pluralsight アカウントを作成できない可能性があります。"**
+   > [!div class="mx-imgBorder"]
+   > ![Pluralsight 特典タイル](_img/vs-pluralsight/vs-pluralsight-3month-tile.png)
+   > 
+   > [!IMPORTANT]
+   > Pluralsight 特典タイルの [コードを取得] リンクをクリックすると、次のような内容のメッセージが表示される可能性があります。
+   > 
+   > **"注: 以前に Visual Studio サブスクリプションで別の Pluralsight オファーをアクティブにした場合は、このコードで新しい Pluralsight アカウントを作成できない可能性があります。"**
 
 2. クーポン コードが正常に取得された通知を受け取ります。  **[アクティブ化]** をクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![Pluralsight 特典のアクティブ化](_img\vs-pluralsight\vs-pluralsight-activate.png)
+   > [!div class="mx-imgBorder"]
+   > ![Pluralsight 特典のアクティブ化](_img/vs-pluralsight/vs-pluralsight-activate.png)
 
-3.  Visual Studio サブスクリプションに含まれる特典の Pluralsight ページにリダイレクトされます。  この例では、Visual Studio Dev Essentials メンバーシップで提供される特典をアクティブ化します。 **[特典の有効化]** をクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![Pluralsight VSDE ランディング ページ](_img\vs-pluralsight\vs-pluralsight-vsde-landing.png)
+3. Visual Studio サブスクリプションに含まれる特典の Pluralsight ページにリダイレクトされます。  この例では、Visual Studio Dev Essentials メンバーシップで提供される特典をアクティブ化します。 **[特典の有効化]** をクリックします。
+   > [!div class="mx-imgBorder"]
+   > ![Pluralsight VSDE ランディング ページ](_img/vs-pluralsight/vs-pluralsight-vsde-landing.png)
 
-4.  アクティブ化ページで次のようにします。
-    - フォームで要求された連絡先情報を入力します
-    - チェック ボックスをオンにして、使用条件とプライバシー ポリシーに同意します
-    - **[I agree, activate benefit]\(特典のアクティブ化に同意します\)** をクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![Pluralsight 特典アクティブ化](_img\vs-pluralsight\vs-pluralsight-create-account-no-code.png)
-    > [!div class="mx-imgBorder"]
-    > ![Pluralsight 特典の使用条件](_img\vs-pluralsight\vs-pluralsight-terms.png)
+4. アクティブ化ページで次のようにします。
+   - フォームで要求された連絡先情報を入力します
+   - チェック ボックスをオンにして、使用条件とプライバシー ポリシーに同意します
+   - **[I agree, activate benefit]\(特典のアクティブ化に同意します\)** をクリックします。
+     > [!div class="mx-imgBorder"]
+     > ![Pluralsight 特典アクティブ化](_img/vs-pluralsight/vs-pluralsight-create-account-no-code.png)
+     > [!div class="mx-imgBorder"]
+     > ![Pluralsight 特典の使用条件](_img/vs-pluralsight/vs-pluralsight-terms.png)
 
-5.  アカウントの設定にはしばらく時間がかかる場合があります。  完了すると、ページに確認メッセージが表示され、ログイン情報を示すメールが届きます。  メールは、アカウントを作成したときに指定した別名に送信されます。  メッセージが見つからない場合は、必ず、迷惑メール フォルダーまたはスパム メール フォルダーをご確認ください。
-    > [!div class="mx-imgBorder"]
-    > ![Pluralsight 特典の確認](_img\vs-pluralsight\vs-pluralsight-confirmation-vse.png)
+5. アカウントの設定にはしばらく時間がかかる場合があります。  完了すると、ページに確認メッセージが表示され、ログイン情報を示すメールが届きます。  メールは、アカウントを作成したときに指定した別名に送信されます。  メッセージが見つからない場合は、必ず、迷惑メール フォルダーまたはスパム メール フォルダーをご確認ください。
+   > [!div class="mx-imgBorder"]
+   > ![Pluralsight 特典の確認](_img/vs-pluralsight/vs-pluralsight-confirmation-vse.png)
+   > 
+   > [!NOTE]
+   > ご利用のアカウントに新しいプランを利用する資格がない場合、アカウントに資格がないため、作成中に問題が発生したことが受信メールで説明されます。  また、アカウントに関する質問に回答できる Pluralsight のサポート チームへの連絡先情報も含まれます。
 
-    > [!NOTE]
-    > ご利用のアカウントに新しいプランを利用する資格がない場合、アカウントに資格がないため、作成中に問題が発生したことが受信メールで説明されます。  また、アカウントに関する質問に回答できる Pluralsight のサポート チームへの連絡先情報も含まれます。
+6. アカウントが正常に作成されている場合は、受信メールにユーザー名が含まれ、パスワードを作成するよう求められます。  パスワードを入力し、確認のためもう一度入力して **[Log in to Pluralsight]\(Pluralsight にログイン\)** をクリックします。
+   > [!div class="mx-imgBorder"]
+   > ![Pluralsight 特典のウェルカム メール](_img/vs-pluralsight/vs-pluralsight-welcome-email.png)
 
-6.  アカウントが正常に作成されている場合は、受信メールにユーザー名が含まれ、パスワードを作成するよう求められます。  パスワードを入力し、確認のためもう一度入力して **[Log in to Pluralsight]\(Pluralsight にログイン\)** をクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![Pluralsight 特典のウェルカム メール](_img\vs-pluralsight\vs-pluralsight-welcome-email.png)
+7. ウェルカム メールに示されているユーザー名と、作成したパスワードを入力して、**[サインイン]** をクリックします。
+   > [!div class="mx-imgBorder"]
+   > ![Pluralsight 特典のログイン](_img/vs-pluralsight/vs-pluralsight-login.png)
 
-7.  ウェルカム メールに示されているユーザー名と、作成したパスワードを入力して、**[サインイン]** をクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![Pluralsight 特典のログイン](_img\vs-pluralsight\vs-pluralsight-login.png)
-
-8.  これで完了です。  数千の Pluralsight コースで学習を開始する準備ができました。
-    > [!div class="mx-imgBorder"]
-    > ![Pluralsight 特典のホーム](_img\vs-pluralsight\vs-pluralsight-home.png)
+8. これで完了です。  数千の Pluralsight コースで学習を開始する準備ができました。
+   > [!div class="mx-imgBorder"]
+   > ![Pluralsight 特典のホーム](_img/vs-pluralsight/vs-pluralsight-home.png)
 
 ## <a name="eligibility"></a>特典を受ける条件
-| サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
-|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール | 6 か月       |  ×<sup>2</sup>|
-| Visual Studio Professional (標準、年間クラウド) | VL、Azure、リテール                                       | 3 か月                                                           |×<sup>2</sup>         |
-| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 3 か月                                                           |×<sup>2</sup>         |
-| MSDN Platforms (標準)                                          | VL、リテール                                              | 3 か月                                                           |×<sup>2</sup>         |
-| Visual Studio Dev Essentials | N/A  | 3 か月 |×|
-| Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                  |N/A|
-| Visual Studio Enterprise (NFR<sup>1</sup>) | プログラム                                       | 使用できません                                  |N/A|
-<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、BizSpark、MCT Software & Services Developer、MCT Software & Service、Microsoft Valued Partner (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、FTE、Imagine が含まれます。*
+
+|                          サブスクリプション レベル                          |     チャネル      |    特長    |   更新可能かどうか   |
+|----------------------------------------------------------------------|-------------------|---------------|----------------|
+|          Visual Studio Enterprise (標準、年間クラウド)           | VL、Azure、リテール |   6 か月    | ×<sup>2</sup> |
+|         Visual Studio Professional (標準、年間クラウド)          | VL、Azure、リテール |   3 か月    | ×<sup>2</sup> |
+|              Visual Studio Test Professional (標準)              |    VL、リテール     |   3 か月    | ×<sup>2</sup> |
+|                      MSDN Platforms (標準)                       |    VL、リテール     |   3 か月    | ×<sup>2</sup> |
+|                     Visual Studio Dev Essentials                     |        N/A         |   3 か月    |       ×       |
+| Visual Studio Enterprise、Visual Studio Professional (月間クラウド) |       Azure       | 使用できません |       N/A       |
+|             Visual Studio Enterprise (NFR<sup>1</sup>)              |      プログラム      | 使用できません |       N/A       |
+
+<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、BizSpark、MCT Software & Services Developer、MCT Software & Service、Microsoft Valued Professional (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、FTE、Imagine が含まれます。*
 
 <sup>2</sup>  *Pluralsight 特典は、個人に関連付けられた単一ユーザーのみが使用できます。一度サブスクライバーが特典を使用すると、特典はリセットされません。詳細については、以下のよく寄せられる質問を参照してください。Pluralsight サブスクリプションの有効期限が切れた後、3 つの学習分野のいずれかで 50 個の選ばれた Pluralsight コースに 12 か月間アクセスできます。*
 

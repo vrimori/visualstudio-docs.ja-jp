@@ -12,16 +12,16 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: e42d37e6cb31917a7da8666a5bd0b4dd54f0a837
-ms.sourcegitcommit: ed524fd809b17ad1d06bf9cd4c3374c71a44d7bf
+ms.openlocfilehash: d908467ca131546d3d224e4c51f38bb5eaa850d9
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409805"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967117"
 ---
 # <a name="code-generation-in-a-build-process"></a>ビルド プロセスでのコード生成
 
-[テキスト変換](../modeling/code-generation-and-t4-text-templates.md)の一部として呼び出すことができます、[ビルド プロセス](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)の Visual Studio ソリューションです。 テキスト変換に特化したビルド タスクがあります。 T4 ビルド タスクはデザイン時テキスト テンプレートを実行し、また、実行時 (前処理済み) テキスト テンプレートをコンパイルします。
+[テキスト変換](../modeling/code-generation-and-t4-text-templates.md)の一部として呼び出すことができます、[ビルド プロセス](/azure/devops/pipelines/index)の Visual Studio ソリューションです。 テキスト変換に特化したビルド タスクがあります。 T4 ビルド タスクはデザイン時テキスト テンプレートを実行し、また、実行時 (前処理済み) テキスト テンプレートをコンパイルします。
 
 使用するビルド エンジンに応じて、ビルド タスクができることには違いが生じます。 テキスト テンプレートに、Visual Studio API (EnvDTE) をアクセスできる場合、Visual Studio でソリューションをビルドすると、 [hostspecific ="true"](../modeling/t4-template-directive.md)属性を設定します。 違いますコマンドラインからソリューションをビルドするとき、または Visual Studio でサーバー ビルドを開始します。 このような場合、ビルドは MSBuild によって実行され、別の T4 ホストが使用されます。
 
@@ -33,7 +33,7 @@ ms.locfileid: "39409805"
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-場合[ビルド サーバー](http://msdn.microsoft.com/Library/788443c3-0547-452e-959c-4805573813a9)を Visual Studio がインストールされていない、コンピューター上の実行は、開発用コンピューターからビルド コンピューターに次のファイルをコピーします。 最新のバージョン番号に置き換えてください ' *'。
+場合[ビルド サーバー](/azure/devops/pipelines/agents/agents)を Visual Studio がインストールされていない、コンピューター上の実行は、開発用コンピューターからビルド コンピューターに次のファイルをコピーします。 最新のバージョン番号に置き換えてください ' *'。
 
 - $(ProgramFiles)\MSBuild\Microsoft\VisualStudio\v*.0\TextTemplating
 
@@ -236,7 +236,7 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 The project folder is: <#= ProjectFolder #>
 ```
 
-ディレクティブ プロセッサの場合で呼び出すことができます[ITextTemplatingEngineHost.ResolveParameterValue](https://msdn.microsoft.com/library/microsoft.visualstudio.texttemplating.itexttemplatingenginehost.resolveparametervalue.aspx):
+ディレクティブ プロセッサの場合で呼び出すことができます[ITextTemplatingEngineHost.ResolveParameterValue](/previous-versions/visualstudio/visual-studio-2012/bb126369\(v\=vs.110\)):
 
 ```csharp
 string value = Host.ResolveParameterValue("-", "-", "parameterName");

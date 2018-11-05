@@ -11,12 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 990b55f4ba78f32acba40c325ade596f5628c54f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 1fd001f5371e346a07f82c9c48a3acb699cefd52
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49893937"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966766"
 ---
 # <a name="properties-of-a-dsl-definition"></a>DSL 定義のプロパティ
 DslDefinition プロパティ定義*ドメイン固有言語*バージョン番号などのプロパティを定義します。 DslDefinition プロパティに表示されます、**プロパティ**ウィンドウでは、図の空いている領域をクリックすると、*ドメイン固有言語デザイナー*します。
@@ -46,4 +46,4 @@ DslDefinition プロパティ定義*ドメイン固有言語*バージョン番�
 
 ## <a name="see-also"></a>関連項目
 
-- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [ドメイン固有言語ツールの用語集](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 418ea3661f236866bbadcf278f288632c5e49435
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: bf6c9299f994ba1f5272c68724171fb42e85a679
+ms.sourcegitcommit: 1abb9cf4c3ccb90e3481ea8079272c98aad12875
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44280095"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143204"
 ---
 # <a name="step-5-use-the-polls-flask-web-project-template"></a>手順 5: ポーリング Flask Web プロジェクト テンプレートを使用する
 
@@ -228,7 +228,7 @@ def seed():
     return redirect('/')
 ```
 
-`repository.add_sample_polls()` への呼び出しは、選択したデータ ストアへの特定の `Repository` の実装のうちの 1 つになります。 実装ごとに *models\__init__.py* で検出された `_load_samples_json` メソッドが呼び出され、*models\samples.json* ファイルがメモリに読み込まれます。次に、そのデータが反復処理され、データ ストア内に必要な `Poll` オブジェクトと `Choice` オブジェクトが作成されます。
+`repository.add_sample_polls()` への呼び出しは、選択したデータ ストアへの特定の `Repository` の実装のうちの 1 つになります。 実装ごとに *models\_\_init\_\_.py* で検出された `_load_samples_json` メソッドが呼び出され、*models\samples.json* ファイルがメモリに読み込まれます。次に、そのデータが反復処理され、データ ストア内に必要な `Poll` オブジェクトと `Choice` オブジェクトが作成されます。
 
 この処理が完了すると、`seed` メソッドの `redirect('/')` ステートメントにより、ホーム ページに戻ります。 `repository.get_polls` でデータ オブジェクトが返されるようになったため、*templates\index.html* の条件タグはポーリングを含むテーブルをレンダリングするようになります。
 
@@ -352,11 +352,8 @@ Visual Studio で "Blank Flask Web プロジェクト"、"Flask[/Jade] Web プ�
 
 開発用コンピューター上で Web アプリを実行することは、アプリを顧客に提供するための単なる 1 つの手順です。 今後の手順には、以下のようなタスクがあります。
 
-- Web アプリを Azure App Service などの運用サーバーに展開します。 Flask アプリに必要な具体的な変更などについては、「[Azure App Service への発行](publishing-python-web-applications-to-azure-from-visual-studio.md)」を参照してください。
+- Web アプリを Azure App Service などの運用サーバーに展開します。 「[Azure App Service に発行する](publishing-python-web-applications-to-azure-from-visual-studio.md)」を参照してください。
 
 - PostgreSQL、MySQL、SQL Server など (これらはいずれも Azure でホストできます) など、別の運用レベルのデータ ストアを使用するリポジトリの実装を追加します。 テーブルや BLOB のような Azure ストレージ サービスと Cosmos DB を使用する場合は、[Azure SDK for Python](azure-sdk-for-python.md) も使用できます。
 
-- Azure Pipelines などのサービスに対して、継続的インテグレーション/継続的配置パイプラインを設定します。 (Azure Repos、GitHub、または他の場所で) ソース コード管理を使用するだけでなく、リリースの前提条件として Azure Test Plans で単体テストを自動的に実行することができます。また、運用環境に展開する前に、追加テストのためにステージング サーバーに展開するパイプラインを構成することもできます。 さらに、Azure DevOps Services は App Insights などの監視ソリューションと統合されているので、アジャイル計画ツールを使用してサイクル全体を閉じることができます。 詳細については次を参照してください:
-
-  - [Azure DevOps Projects を使用して Python 用の CI/CD パイプラインを作成する](/azure/devops-project/azure-devops-project-python?view=vsts)
-  - [Visual Studio Team Services を使用した Azure での Python 開発 (ビデオ、11 分 21 秒)](https://azure.microsoft.com/resources/videos/connect-2017-python-development-in-azure-with-visual-studio-team-services/)
+- Azure DevOps などのサービスに対して、継続的インテグレーション/継続的配置パイプラインを設定します。 (Azure Repos、GitHub、または他の場所で) ソース コード管理を使用するだけでなく、リリースの前提条件として単体テストを自動的に実行するよう、Azure DevOps プロジェクトを構成することができます。また、運用環境にデプロイする前に、追加テストのためにステージング サーバーにデプロイするパイプラインを構成することもできます。 さらに、Azure DevOps は App Insights などの監視ソリューションと統合されているので、アジャイル計画ツールを使用してサイクル全体に対応することができます。 詳細については、「[Azure DevOps プロジェクトで Python 用の CI/CD パイプラインを作成する](/azure/devops-project/azure-devops-project-python?view=vsts)」、および一般的な [Azure DevOps ドキュメント](/azure/devops/?view=vsts)を参照してください。
