@@ -9,12 +9,12 @@ description: 一部の Visual Studio サブスクリプションに含まれる 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 739598d8783a6ba0eb7930b5efff6c018eed942a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 50c9b39772e65ba00f859254df4a993870f08023
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49894561"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219537"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Power BI Pro
 
@@ -92,9 +92,24 @@ A: 特典は無料ですが、アクティブ化には有料の注文を処理�
 - クレジット カード。  クレジット カード番号を入力した場合、カードに課金されることはありません。 
 - 請求書。  支払い方法に "請求書" を選択した場合、クレジット カード番号を入力する必要はありません。  期間を "年間" に設定することもできます。  これにより、請求書の準備ができたことを知らせる電子メールが 1 回送信されます。  請求金額は $0.00 になります。  
 
-### <a name="q--can-the-power-bi-pro-benefit-included-in-my-subscription-be-used-in-a-production-environment"></a>Q: 自分のサブスクリプションに含まれる Power BI Pro の特典を運用環境で使用することはできますか。
+### <a name="q--is-the-power-bi-pro-benefit-included-in-my-subscription-licenses-for-use-in-a-production-environment"></a>Q: 自分のサブスクリプション ライセンスに含まれる Power BI Pro の特典を運用環境で使用することはできますか。
 A: できます。  
 
+### <a name="q--when-i-try-to-activate-power-bi-pro-i-get-a-message-you-already-have-an-account-through-work--can-i-still-use-the-benefit"></a>Q: Power BI Pro をアクティブ化しようとすると、"You already have an account through work\(作業中に既にアカウントを登録しています\)" というメッセージが表示されます。  特典はまだ使用できますか。
+A: できます。  このメッセージは、管理者ではないアクティブな Office 365 テナントが既に含まれるドメインにログオンしていることを示しています。  Power BI Pro をテナントに追加するには、そのテナントの管理者である必要があります。  この問題を解決するには、次の手順に従って独自のテナントを作成します。
+1.  作業中に既にアカウントを登録しているというメッセージが表示されたら、**[新しいアカウントを作成]** をクリックします。
+
+2.  次の画面で連絡先情報を入力して、**[次へ]** をクリックします。
+
+3.  ユーザー ID とパスワードを作成します。  無料プランの特典を利用するには、**. onmicrosoft.com** をドメインとして選択してください。 **[アカウントの作成]** をクリックします。
+    > [!div class="mx-imgBorder"]
+    > ![Power BI Pro 特典によるプライベート テナント ユーザー ID の作成](_img/vs-pbi/vs-pbi-work-userid.png)
+    
+4.  プロセスの残りの手順は、記事の本文に示されている手順 6 以降と同じです。
+
+
+### <a name="q--im-on-a-government-domain--can-i-use-the-benefit"></a>Q: 政府機関向けドメインを使用しています。  特典を使用できますか。 
+A: いいえ。  Power BI Pro 特典は、政府機関向けドメインのテナントには追加できません。 
 
 ## <a name="support-resources"></a>サポート リソース
 -  Power BI Pro のヘルプが必要ですか。
@@ -103,3 +118,6 @@ A: できます。
     - よくある問題を調べ、コミュニティからサポートを受けるか、[サポート ページ](https://powerbi.microsoft.com/support/)でサポート チケットを送信してください。
 -  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://visualstudio.microsoft.com/subscriptions/support/)にお問い合わせください。
 -  Visual Studio IDE、Azure DevOps Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。
+
+## <a name="next-steps"></a>次の手順
+Power BI Pro 特典をアクティブ化にする場合は、[https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にアクセスしてください

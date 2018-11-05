@@ -9,12 +9,12 @@ description: 一部の Visual Studio サブスクリプションに含まれる 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: a3aa6a9dc60ea48db5e0d97b7a3c417dcb18559a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 273bba31f0b080116677e9a8dfa727af462fb7bc
+ms.sourcegitcommit: 401be39a42ffe007593528b5bba62583ca9fcafd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49908393"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50244464"
 ---
 # <a name="office-365-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Office 365
 
@@ -25,15 +25,24 @@ ms.locfileid: "49908393"
 次の手順で Office 365 をダウンロードし、アクティブ化します。
 1. Visual Studio Enterprise サブスクリプションにサインインします。  
 2. **[ダウンロード]** タブをクリックします。
-3. おすすめダウンロード リストが表示されます。 Office リストから **[Office Professional Plus 2019]** を選択します
-0. 2 つのリストが表示されます。  Office 365 のリストは 2 つ目のリストです。  最初と最後のドロップダウン リスト (アーキテクチャとメディアの種類を決定するもの) で、それぞれ **UNK** と **OTH** が読み取られることを確認します。   
-0. Office 365 をインストールするには、プロダクト キーが必要です。  2 つ目のリストの **[キーの取得]** をクリックします。
-0. ポップアップ ウィンドウには、既に要求したキーが表示されます。  新しいキーを取得するには、**[Claim key]\(キーの要求\)** をクリックします。
+3. おすすめダウンロード リストが表示されます。 Office リストから **[Office 365]** を選択します。 
+   > [!div class="mx-imgBorder"]
+   > ![Office 365 のダウンロード](_img/vs-office365/vs-office365-downloads.png)
+0. Office 365 をインストールするには、プロダクト キーが必要です。  Office 365 リストにある **[キーの取得]** をクリックします。
+   > [!div class="mx-imgBorder"]
+   > ![Office 365 のプロダクト キーの入手](_img/vs-office365/vs-office365-get-key.png)
+0. フライ アウト ウィンドウに、既に要求しているすべてのキーと、利用可能なキーが表示されます。  新しいキーを入手するには、**Office Professional Plus 2019** リストにある **[Claim key]\(キーの要求\)** をクリックします。
+   > [!div class="mx-imgBorder"]
+   > ![Office 365 のプロダクト キーの要求](_img/vs-office365/vs-office365-claim-key.png)
 0. 要求したキーをメモします (いつでもこのリストに戻って確認することができます)。
 0. ポップアップ ウィンドウを閉じます。
 0. **[ダウンロード]** ボタンをクリックします。 
+   > [!div class="mx-imgBorder"]
+   > ![Office 365 のダウンロードの開始](_img/vs-office365/vs-office365-download-button.png)
 0. Microsoft アカウントでサインインします (既にサインインしている場合は **[次へ]** をクリックします)。
 0. プロダクト キー、国または地域、言語を入力し、**[次へ]** をクリックします。
+   > [!div class="mx-imgBorder"]
+   > ![Office 365 のプロダクト キーの入力](_img/vs-office365/vs-office365-enter-key.png)
 0. もう一度 **[次へ]** をクリックします。
 0. **[インストール]** をクリックして Office アプリケーションをインストールします。 
 
