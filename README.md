@@ -13,10 +13,10 @@ Visual Basic と Visual C# のドキュメントは別のリポジトリ [http:/
 
 ## <a name="contributing-to-the-documentation"></a>ドキュメントへの貢献
 
-このドキュメントへの貢献については、[貢献に関するガイド](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/CONTRIBUTING.md)をご覧ください。
+このドキュメントへの貢献については、[貢献に関するガイド](CONTRIBUTING.md)をご覧ください。
 Visual Studio のドキュメントの改善にご協力ください。このリポジトリのすべての記事では、GitHub 形式のマークダウンが使われています。
 
-Visual Studio の複数の機能領域については、このリポジトリに専用のフォルダーがあります。デバッグについての **debugger** や、Visual Studio の対話型開発環境 (IDE) についてのトピックの **ide** などです。 各フォルダーの **/media** サブフォルダーには、トピックのアート ファイルが含まれます。 詳しくは、[貢献に関するガイド](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/CONTRIBUTING.md)をご覧ください。
+Visual Studio の複数の機能領域については、このリポジトリに専用のフォルダーがあります。デバッグについての **debugger** や、Visual Studio の対話型開発環境 (IDE) についてのトピックの **ide** などです。 各フォルダーの **/media** サブフォルダーには、トピックのアート ファイルが含まれます。 詳しくは、[貢献に関するガイド](CONTRIBUTING.md)をご覧ください。
 
 このプロジェクトでは、[Microsoft オープン ソース倫理規定](https://opensource.microsoft.com/codeofconduct/)が採用されています。 詳細については「[Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)」(倫理規定 FAQ) を参照し、さらに疑問や意見がある場合は [opencode@microsoft.com](mailto:opencode@microsoft.com) にご連絡ください。
 
