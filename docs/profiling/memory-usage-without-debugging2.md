@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c79184af7afa11e2008ff32ce2ffb2dedd19559
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 4fb3f0c5d44ed8043266640cfeb30838f7d37894
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49827735"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220776"
 ---
 # <a name="analyze-memory-usage-without-the-visual-studio-debugger"></a>Visual Studio デバッガーを使わずにメモリ使用量を分析する
 デバッグなしの**メモリ使用量**ツールを使用して、次のような操作を行えます  
@@ -204,5 +204,5 @@ ms.locfileid: "49827735"
  [JavaScript メモリ](../profiling/javascript-memory.md)  
  [Visual Studio のプロファイル](../profiling/index.md)  
  [プロファイル ツールの概要](../profiling/profiling-feature-tour.md)  
- [C++、C#、または Visual Basic を使った UWP アプリのパフォーマンスのベスト プラクティス](http://msdn.microsoft.com/library/windows/apps/hh750313.aspx)   
+ [C++、C#、または Visual Basic を使った UWP アプリのパフォーマンスのベスト プラクティス](/previous-versions/windows/apps/hh750313\(v\=win.10\))   
  [Visual Studio で新しいメモリ使用量ツールでメモリの問題を診断する](http://go.microsoft.com/fwlink/p/?LinkId=394706)

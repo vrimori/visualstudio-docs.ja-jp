@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5f5ee0493a8a780710eb4b6bbbd9426e23baf48e
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: c3bf20f945c40dd963820b1bf3f4032a2dd517ca
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43774917"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295970"
 ---
 # <a name="deploy-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio の SharePoint ツールの拡張機能をデプロイします。
 
@@ -235,13 +235,13 @@ SharePoint ツール拡張機能の VSIX パッケージを手動で作成する
 
 4.  Extension.vsixmanifest ファイルを変更します。
 
-    -   追加、`Microsoft.VisualStudio.MefComponent`の下の要素、`Assets`要素、および、VSIX パッケージで、拡張機能を実装するアセンブリの相対パスに新しい要素の値を設定します。 詳細については、次を参照してください。 [MEFComponent 要素 (VSX Schema)](http://msdn.microsoft.com/en-us/8a813141-8b73-44c9-b80b-ca85bbac9551)します。
+    -   追加、`Microsoft.VisualStudio.MefComponent`の下の要素、`Assets`要素、および、VSIX パッケージで、拡張機能を実装するアセンブリの相対パスに新しい要素の値を設定します。 詳細については、次を参照してください。 [MEFComponent 要素 (VSX Schema)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\))します。
 
-    -   拡張機能には、SharePoint のサーバー オブジェクト モデルを呼び出す SharePoint コマンドが含まれている場合は、追加、`Microsoft.VisualStudio.Assembly`の下の要素、`Assets`要素。 VSIX パッケージ内の SharePoint コマンドを実装するアセンブリの相対パスに新しい要素の値を設定します。 詳細については、次を参照してください。[資産要素 (VSX Schema)](http://msdn.microsoft.com/en-us/9fcfc098-edc7-484b-9d4c-acd17829d737)します。
+    -   拡張機能には、SharePoint のサーバー オブジェクト モデルを呼び出す SharePoint コマンドが含まれている場合は、追加、`Microsoft.VisualStudio.Assembly`の下の要素、`Assets`要素。 VSIX パッケージ内の SharePoint コマンドを実装するアセンブリの相対パスに新しい要素の値を設定します。 詳細については、次を参照してください。[資産要素 (VSX Schema)](https://msdn.microsoft.com/9fcfc098-edc7-484b-9d4c-acd17829d737)します。
 
-    -   拡張機能には、プロジェクトのテンプレートや項目テンプレートが含まれている場合は、追加、`ProjectTemplate`または`ItemTemplate`の下の要素、`Assets`要素。 VSIX パッケージ内のテンプレートが含まれるフォルダーの相対パスに新しい要素の値を設定します。 詳細については、次を参照してください。 [ProjectTemplate 要素 (VSX Schema)](http://msdn.microsoft.com/en-us/87add64c-9dcd-495f-8815-209dab182cb1)と[ItemTemplate の要素 (VSX Schema)](http://msdn.microsoft.com/en-us/1d489e54-c1c5-4f96-a510-6c2640867ff0)します。
+    -   拡張機能には、プロジェクトのテンプレートや項目テンプレートが含まれている場合は、追加、`ProjectTemplate`または`ItemTemplate`の下の要素、`Assets`要素。 VSIX パッケージ内のテンプレートが含まれるフォルダーの相対パスに新しい要素の値を設定します。 詳細については、次を参照してください。 [ProjectTemplate 要素 (VSX Schema)](/previous-versions/visualstudio/visual-studio-2010/dd393735\(v\=vs.100\))と[ItemTemplate の要素 (VSX Schema)](/previous-versions/visualstudio/visual-studio-2010/dd393681\(v\=vs.100\))します。
 
-    -   拡張機能には、プロジェクトのテンプレートや項目テンプレートのカスタム ウィザードが含まれている場合は、追加、`Assembly`の下の要素、`Assets`要素。 VSIX パッケージ内のアセンブリの相対パスに新しい要素の値を設定し、設定、`AssemblyName`属性 (バージョン、カルチャ、および公開キー トークンを含む) 完全なアセンブリ名にします。 詳細については、次を参照してください。 [Dependency 要素 (VSX Schema)](http://msdn.microsoft.com/en-us/1f63f60a-98ad-48ec-8e44-4eba383d3e37)します。
+    -   拡張機能には、プロジェクトのテンプレートや項目テンプレートのカスタム ウィザードが含まれている場合は、追加、`Assembly`の下の要素、`Assets`要素。 VSIX パッケージ内のアセンブリの相対パスに新しい要素の値を設定し、設定、`AssemblyName`属性 (バージョン、カルチャ、および公開キー トークンを含む) 完全なアセンブリ名にします。 詳細については、次を参照してください。 [Dependency 要素 (VSX Schema)](https://msdn.microsoft.com/1f63f60a-98ad-48ec-8e44-4eba383d3e37)します。
 
 ### <a name="example"></a>例
 

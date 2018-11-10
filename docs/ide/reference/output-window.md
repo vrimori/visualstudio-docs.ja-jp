@@ -18,12 +18,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e9af45262649473f9676bff80b4a238fdd642ac
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: 51fcd9ece62afca8c5369c813d5ca8e5314dafe6
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34844213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50670885"
 ---
 # <a name="output-window"></a>[出力] ウィンドウ
 
@@ -78,7 +78,7 @@ C++ では、警告とエラー メッセージ、およびその合計数を**�
 ## <a name="see-also"></a>関連項目
 
 - [出力ウィンドウの診断メッセージ](../../debugger/diagnostic-messages-in-the-output-window.md)
-- [方法: 出力ウィンドウを制御する](http://msdn.microsoft.com/Library/91aebd15-8854-4a7a-9f7d-57376fb4e858)
+- [方法: 出力ウィンドウを制御する](https://msdn.microsoft.com/Library/91aebd15-8854-4a7a-9f7d-57376fb4e858)
 - [コンパイルとビルド](../../ide/compiling-and-building-in-visual-studio.md)
 - [ビルド構成について](../../ide/understanding-build-configurations.md)
 - [クラス ライブラリの概要](/dotnet/standard/class-library-overview)

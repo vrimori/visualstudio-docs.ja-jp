@@ -20,15 +20,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 586d7181c1a8eb3c94a8ad236d4ff40602378199
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ec2b0173838446c770f3323aacefebabc195c48b
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49869263"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51294982"
 ---
 # <a name="how-to-define-the-type-descriptor-of-a-parameter"></a>方法: パラメーターの型記述子を定義
-  型記述子には、パラメーターのデータ型を表すプロパティが含まれています。 型記述子では、フィールド、エンティティ、またはエンティティのコレクションを定義できます。 詳細については、次を参照してください。 [TypeDescriptor](http://msdn.microsoft.com/library/ms543392%28v=office.12%29.aspx)します。  
+  型記述子には、パラメーターのデータ型を表すプロパティが含まれています。 型記述子では、フィールド、エンティティ、またはエンティティのコレクションを定義できます。 詳細については、次を参照してください。 [TypeDescriptor](/previous-versions/office/developer/sharepoint-2007/ms543392\(v\=office.12\))します。  
   
 ### <a name="to-define-the-type-descriptor-of-a-parameter"></a>パラメーターの型記述子を定義するには  
   
@@ -46,7 +46,7 @@ ms.locfileid: "49869263"
   
 2.  横のリストで、 **TypeName**プロパティ、適切なデータ型を選択して (たとえば、 **Int32**)。  
   
-     その他の省略可能なパラメーターについては、次を参照してください。 [TypeDescriptor](http://msdn.microsoft.com/library/ms543392%28v=office.12%29.aspx)します。  
+     その他の省略可能なパラメーターについては、次を参照してください。 [TypeDescriptor](/previous-versions/office/developer/sharepoint-2007/ms543392\(v\=office.12\))します。  
   
 ### <a name="to-define-an-entity"></a>エンティティを定義するには  
   

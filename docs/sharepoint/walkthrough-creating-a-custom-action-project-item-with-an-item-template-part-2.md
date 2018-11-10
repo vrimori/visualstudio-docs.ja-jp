@@ -14,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 19792a9804072e7c6ade836b408951e2cfadd070
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 2c37ab6f42be8e363dcba8a3e2aa6ef78816bff0
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49910967"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296243"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-2"></a>チュートリアル: 項目テンプレート、第 2 部でのカスタム動作プロジェクト項目を作成します。
   カスタム SharePoint プロジェクト項目の種類を定義し、Visual Studio で項目テンプレートに関連付ける、テンプレートのウィザードを提供する可能性がありますもします。 ウィザードを使用すると、プロジェクトにプロジェクト項目の新しいインスタンスを追加するのにテンプレートを使用するときに、ユーザーから情報を収集します。 収集した情報を使用して、プロジェクト項目を初期化できます。  
@@ -306,7 +306,7 @@ ms.locfileid: "49910967"
   
 13. **説明**ボックスに、入力**SharePoint デベロッパー センター web サイトが開きます**します。  
   
-14. **URL**ボックスに、入力**http://msdn.microsoft.com/sharepoint/default.aspx**、選択し、**完了**ボタンをクリックします。  
+14. **URL**ボックスに、入力**https://docs.microsoft.com/sharepoint/dev/**、選択し、**完了**ボタンをクリックします。  
   
      Visual Studio がという名前の項目を追加します**CustomAction1**開きますをプロジェクトに、 *Elements.xml*ファイルがエディターでします。 いることを確認*Elements.xml*ウィザードで指定した値が含まれています。  
   
@@ -327,7 +327,7 @@ ms.locfileid: "49910967"
   
      **一覧の設定**ページが表示されます。  
   
-4.  、**通信**見出し、ページの上部で、選択、 **SharePoint デベロッパー センター**リンクで、ブラウザーが web サイトを開くことを確認します。 http://msdn.microsoft.com/sharepoint/default.aspx、し、ブラウザーを閉じます。  
+4.  、**通信**見出し、ページの上部で、選択、 **SharePoint デベロッパー センター**リンクで、ブラウザーが web サイトを開くことを確認します。 https://docs.microsoft.com/sharepoint/dev/、し、ブラウザーを閉じます。  
   
 ## <a name="cleaning-up-the-development-computer"></a>開発用コンピューターのクリーンアップ
  プロジェクト項目のテストが終わったら、プロジェクト項目テンプレートを Visual Studio の実験用インスタンスから削除します。  

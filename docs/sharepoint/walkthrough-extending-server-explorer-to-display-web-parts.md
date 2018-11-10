@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: dc6b015058445ddf35e5d247847a40d01e691047
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6d32f76965c0dbef359e54bda114221e460a9bfd
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49915816"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296386"
 ---
 # <a name="walkthrough-extend-server-explorer-to-display-web-parts"></a>チュートリアル: web パーツを表示するサーバー エクスプ ローラーの拡張します。
   Visual Studio で使用することができます、 **SharePoint 接続**のノード**サーバー エクスプ ローラー** SharePoint サイトにコンポーネントを表示します。 ただし、**サーバー エクスプ ローラー**一部のコンポーネントが既定では表示されません。 このチュートリアルで拡張します**サーバー エクスプ ローラー** SharePoint サイトが接続されている各 Web パーツ ギャラリーで表示するようです。  
@@ -278,7 +278,7 @@ ms.locfileid: "49915816"
   
 1.  **ソリューション エクスプ ローラー**、WebPartNode プロジェクトで開き、 **source.extension.vsixmanifest**マニフェスト エディターでファイル。  
   
-     source.extension.vsixmanifest ファイルが、すべての VSIX パッケージで必要になる extension.vsixmanifest ファイルの基礎となります。 このファイルの詳細については、次を参照してください。 [VSIX 拡張機能スキーマ 1.0 リファレンス](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)します。  
+     source.extension.vsixmanifest ファイルが、すべての VSIX パッケージで必要になる extension.vsixmanifest ファイルの基礎となります。 このファイルの詳細については、次を参照してください。 [VSIX 拡張機能スキーマ 1.0 リファレンス](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)します。  
   
 2.  **製品名**ボックスに、入力**for サーバー エクスプ ローラー Web パーツのギャラリー ノード**します。  
   
@@ -293,7 +293,7 @@ ms.locfileid: "49915816"
 6.  **型**一覧で、選択**Microsoft.VisualStudio.MefComponent**します。  
   
     > [!NOTE]  
-    >  この値は、extension.vsixmanifest ファイル内の `MefComponent` 要素に対応します。 この要素は、VSIX パッケージ内の拡張機能アセンブリの名前を指定します。 詳細については、次を参照してください。 [MEFComponent 要素 (VSX Schema)](http://msdn.microsoft.com/en-us/8a813141-8b73-44c9-b80b-ca85bbac9551)します。  
+    >  この値は、extension.vsixmanifest ファイル内の `MefComponent` 要素に対応します。 この要素は、VSIX パッケージ内の拡張機能アセンブリの名前を指定します。 詳細については、次を参照してください。 [MEFComponent 要素 (VSX Schema)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\))します。  
   
 7.  **ソース**一覧で、選択**現在のソリューションでプロジェクトを**します。  
   
@@ -306,7 +306,7 @@ ms.locfileid: "49915816"
 10. **型**ボックスに、入力**SharePoint.Commands.v4**します。  
   
     > [!NOTE]  
-    >  この要素は、Visual Studio 拡張機能に含めるカスタム拡張機能を指定します。 詳細については、次を参照してください。[資産要素 (VSX Schema)](http://msdn.microsoft.com/en-us/9fcfc098-edc7-484b-9d4c-acd17829d737)します。  
+    >  この要素は、Visual Studio 拡張機能に含めるカスタム拡張機能を指定します。 詳細については、次を参照してください。[資産要素 (VSX Schema)](https://msdn.microsoft.com/9fcfc098-edc7-484b-9d4c-acd17829d737)します。  
   
 11. **ソース**一覧で、選択、**現在のソリューションでプロジェクトを**リスト項目。  
   

@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 5e74ec5e1e4efe4cbdf98125aa17cb3646fbc136
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 08723f30957ece57af0f666a5464907a686ad604
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49930909"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220737"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>UWP アプリでのエネルギー使用の分析
 Visual Studio の **エネルギー消費** プロファイラーは、常時または一時的に内蔵バッテリで動作する低電力のタブレット デバイス上で、UWP アプリによる電力とエネルギーの消費量を分析するのに役立ちます。 バッテリ電源デバイスでは、エネルギー消費量が多すぎるアプリはユーザーに嫌われ、最終的にアンインストールされる場合もあります。 エネルギー使用を最適化することで、ユーザーがそのアプリを選択する可能性が高まり、使用頻度も向上します。  
@@ -54,7 +54,7 @@ Visual Studio の **エネルギー消費** プロファイラーは、常時ま
   
  **C#、Visual Basic、C++ コードに対するマークの追加**  
   
- C#、Visual Basic、C++ コードにユーザー マークを追加するには、まず [Windows.Foundation.Diagnostics LoggingChannel](http://msdn.microsoft.com/library/windows/apps/windows.foundation.diagnostics.loggingchannel.aspx) オブジェクトを作成します。 次に、マークするコードの位置に [LoggingChannel.LogMessage](http://msdn.microsoft.com/library/windows/apps/dn264210.aspx) メソッドの呼び出しを挿入します。 呼び出しでは [LoggingLevel.Information](http://msdn.microsoft.com/library/windows/apps/windows.foundation.diagnostics.logginglevel.aspx) を使用します。  
+ C#、Visual Basic、C++ コードにユーザー マークを追加するには、まず [Windows.Foundation.Diagnostics LoggingChannel](xref:Windows.Foundation.Diagnostics.LoggingChannel) オブジェクトを作成します。 次に、マークするコードの位置に [LoggingChannel.LogMessage](xref:Windows.Foundation.Diagnostics.LoggingChannel.LogMessage%2A) メソッドの呼び出しを挿入します。 呼び出しでは [LoggingLevel.Information](xref:Windows.Foundation.Diagnostics.LoggingLevel) を使用します。  
   
  メソッドが実行されると、ユーザー マークがメッセージと共にプロファイル データに追加されます。  
   
@@ -62,7 +62,7 @@ Visual Studio の **エネルギー消費** プロファイラーは、常時ま
 > - Windows.Foundation.Diagnostics LoggingChannel は [Windows.Foundation.IClosable](/uwp/api/windows.foundation.iclosable) インターフェイス (C# および VB で [System.IDisposable](/dotnet/api/system.idisposable) として投影) を実装します。オペレーティング システム リソースのリークを防ぐには、ログ チャネルで終了するときに [LoggingChannel.Close](/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel) (C# および VB では [Windows.Foundation.Diagnostics.LoggingChannel.Dispose](/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel)) を呼び出します。  
 >   -   開いているログ記録チャネルそれぞれに一意の名前を付ける必要があります。 破棄されていないチャネルと同じ名前で新しくログ記録チャネルを作成しようとすると、例外が発生します。  
   
- 例については、Windows SDK サンプル「[LoggingSession Sample](http://code.msdn.microsoft.com/windowsapps/LoggingSession-Sample-ccd52336)」を参照してください。  
+ 例については、Windows SDK サンプル「[LoggingSession Sample](https://code.msdn.microsoft.com/windowsapps/LoggingSession-Sample-ccd52336)」を参照してください。  
   
  **JavaScript コードに対するマークの追加**  
   
@@ -147,7 +147,7 @@ if (performance && performance.mark) {
   
 ## <a name="other-resources"></a>その他のリソース  
   
--   Windows デベロッパー センターの **C#/VB/C++ と XAML** および [JavaScript と HTML](http://msdn.microsoft.com/en-us/0ee0b706-8432-4d49-9801-306ed90764e1) の「 [接続状態とコストの管理](http://msdn.microsoft.com/en-us/372afa6a-1c7c-4657-967d-03a77cd8e933) 」セクションでは、ネットワーク接続情報を提供する Windows API について説明しています。この情報を使って、アプリはネットワーク トラフィックのコストを最小限にすることができます。  
+-   Windows デベロッパー センターの **C#/VB/C++ と XAML** および [JavaScript と HTML](/previous-versions/windows/apps/hh452985\(v\=win.10\)) の「 [接続状態とコストの管理](https://msdn.microsoft.com/372afa6a-1c7c-4657-967d-03a77cd8e933) 」セクションでは、ネットワーク接続情報を提供する Windows API について説明しています。この情報を使って、アプリはネットワーク トラフィックのコストを最小限にすることができます。  
   
      UWP アプリ用の Visual Studio シミュレーターでは、ネットワーク情報 API のデータ接続プロパティをシミュレートすることができます。 「[シミュレーターで UWP アプリを実行する](../debugger/run-windows-store-apps-in-the-simulator.md)」をご覧ください  
   

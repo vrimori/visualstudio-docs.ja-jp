@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 87a70451799c7fc3a15eb14a9efbb0233ea2b154
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: ec3f3be069e92d52071a6b40857f7fac46e8d3e5
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50220148"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51221049"
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>ユニバーサル Windows アプリの HTML UI の応答性を分析する
 このトピックでは、アプリのパフォーマンス問題を UI 応答性プロファイラーを使って切り分ける方法を説明します。UI 応答性プロファイラーは、ユニバーサル Windows アプリで利用できるパフォーマンス ツールです。  
@@ -351,11 +351,11 @@ if (performance.mark && performance.measure) {
   
 ## <a name="additional-information"></a>追加情報  
   
--   UI 応答性プロファイラーについては、この Build 2013 カンファレンスの [ビデオ](http://channel9.msdn.com/Events/Build/2013/3-316) をご覧ください。  
+-   UI 応答性プロファイラーについては、この Build 2013 カンファレンスの [ビデオ](https://channel9.msdn.com/Events/Build/2013/3-316) をご覧ください。  
   
--   JavaScript を使用して Windows 用にビルドされた UWP アプリのパフォーマンスのヒントを参照します。 詳細については、「[JavaScript を使った UWP アプリのパフォーマンスのベスト プラクティス](http://msdn.microsoft.com/library/windows/apps/hh465194.aspx)」を参照してください。  
+-   JavaScript を使用して Windows 用にビルドされた UWP アプリのパフォーマンスのヒントを参照します。 詳細については、「[JavaScript を使った UWP アプリのパフォーマンスのベスト プラクティス](/previous-versions/windows/apps/hh465194\(v\=win.10\))」を参照してください。  
   
--   シングル スレッドのコード実行モデルとパフォーマンスについては、「 [コードの実行](http://msdn.microsoft.com/library/windows/apps/hh781217.aspx)」を参照してください。  
+-   シングル スレッドのコード実行モデルとパフォーマンスについては、「 [コードの実行](/previous-versions/windows/apps/hh781217\(v\=win.10\))」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [プロファイル ツールの概要](../profiling/profiling-feature-tour.md)

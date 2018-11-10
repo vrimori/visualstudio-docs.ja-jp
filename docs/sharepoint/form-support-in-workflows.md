@@ -16,15 +16,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b2ccffd384bd508998f2d82098a99835f59ad641
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 27e8ab6651c6838de92b8a3d83311ebd47fabcbb
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49908783"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296191"
 ---
 # <a name="form-support-in-workflows"></a>ワークフロー内でのフォームのサポート
-  次の 4 つの種類のフォームをワークフローで使用できます: アソシエーション、開始、タスク、および変更します。 これらのフォーム型は、ASPX フォームまたは InfoPath フォームのいずれかに基づいて作成できます。 レベルをサポートする[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]は特定のフォームは、次の表で説明されているいくつかの要因によって異なります。 ワークフローの形式の種類の詳細については、次を参照してください。[ワークフロー フォームの概要](http://go.microsoft.com/fwlink/?LinkId=185228)MSDN Web サイト。  
+  次の 4 つの種類のフォームをワークフローで使用できます: アソシエーション、開始、タスク、および変更します。 これらのフォーム型は、ASPX フォームまたは InfoPath フォームのいずれかに基づいて作成できます。 レベルをサポートする[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]は特定のフォームは、次の表で説明されているいくつかの要因によって異なります。 ワークフローの形式の種類の詳細については、次を参照してください。[ワークフロー フォームの概要](http://go.microsoft.com/fwlink/?LinkId=185228)します。  
   
 ## <a name="xml-refactoring"></a>XML のリファクタリング
  ASPX アソシエーションまたは開始フォームを追加すると、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]ワークフロー プロジェクト項目、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]でワークフローの XML を自動的にリファクタリング*Elements.xml*アソシエーションに参照する属性を保持するファイルまたは、同期フォームの名前または配置パスが更新されるたびに開始フォームまたはフォームを削除します。 ただし、タスクまたは変更フォームなど、ワークフロー内の他のフォームの種類を使用すると、 *Elements.xml*ファイルをリファクタリングできません。  
