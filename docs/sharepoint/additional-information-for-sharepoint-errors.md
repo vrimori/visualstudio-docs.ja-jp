@@ -21,15 +21,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 85d4dc4ab6b18cf7e9aa1f26167234572362231b
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 0ee3f5765c3be3228453ef6c870335bde5e999d8
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36326022"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295021"
 ---
 # <a name="additional-information-for-sharepoint-errors"></a>SharePoint のエラーに関する追加情報
-  トラブルシューティングで支援が見つかります[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint ツールのエラーと警告のトラブルシューティングのトピックと、Microsoft Developer Network (MSDN) のパブリック フォーラム。  
+  トラブルシューティングで支援が見つかります[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint ツールのエラーと警告のトラブルシューティングのトピックとパブリック フォーラム。  
   
 ## <a name="troubleshoot-errors-and-issues"></a>エラーおよび問題をトラブルシューティングします。
  一般的なエラーとその他の問題の支援について[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint ツールでは、次のトピックを参照してください。  
@@ -41,7 +41,7 @@ ms.locfileid: "36326022"
 -   [SharePoint のパッケージ化とデプロイをトラブルシューティングします。](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)  
   
 ## <a name="other-resources"></a>その他のリソース
- 次の表、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ツールのフォーラムその他のリソースは MSDN で利用できます。  
+ 次の表、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ツールのフォーラムやその他のリソースを使用できます。  
   
 |用語|定義|  
 |----------|----------------|  
@@ -52,6 +52,6 @@ ms.locfileid: "36326022"
  必要な回答が見つからない場合は、Microsoft 製品サポート サービスに連絡またはサポート技術情報の記事を検索してなどのオンライン サポート オプションを表示できます。 詳細については、次を参照してください。、 [Microsoft ヘルプとサポート](http://go.microsoft.com/fwlink/?LinkID=155371)ページ。  
   
 ## <a name="see-also"></a>関連項目
- [ビルドし、SharePoint ソリューションのデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
+ [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
   
  

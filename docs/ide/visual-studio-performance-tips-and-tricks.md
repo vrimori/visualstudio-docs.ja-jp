@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5215770d362e2f1ebd21f9131b82073376c28bf6
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: e1c4e55fe6275d750d3bc3b03fb8f0ac5eec2751
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42626980"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50672926"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio のパフォーマンスのヒントとテクニック
 
@@ -27,7 +27,7 @@ Visual Studio のパフォーマンスの推奨事項は、まれなケースで
 
 システムを Windows の 32 ビット版から 64 ビット版にアップグレードすると、Visual Studio が使用できる仮想メモリの量が 2 GB から 4 GB に増えます。 これにより、Visual Studio では、32 ビット プロセスですが非常に大きいワークロードを処理できるようになります。
 
-詳細については、[メモリの制限](https://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx#memory_limits)に関するページと、「[Using /LARGEADDRESSAWARE on 64-bit Windows](https://blogs.msdn.microsoft.com/oldnewthing/20050601-24/?p=35483/)」(64 ビット Windows での /LARGEADDRESSAWARE の使用) を参照してください。
+詳細については、[メモリの制限](/windows/desktop/Memory/memory-limits-for-windows-releases#memory_limits)に関するページと、「[Using /LARGEADDRESSAWARE on 64-bit Windows](https://blogs.msdn.microsoft.com/oldnewthing/20050601-24/?p=35483/)」(64 ビット Windows での /LARGEADDRESSAWARE の使用) を参照してください。
 
 ## <a name="disable-automatic-file-restore"></a>自動ファイル復元を無効にする
 

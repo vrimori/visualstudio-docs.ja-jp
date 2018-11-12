@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 58f03bc18c2e851bb7732b54ff334e6e3332f74e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 67742078cefcd0608d1cff9a5bab609053544392
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49878187"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296113"
 ---
 # <a name="walkthrough-create-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>チュートリアル: SharePoint の OData を表示する Silverlight web パーツを作成します。
   SharePoint 2010 では、OData を使用してそのリストのデータを公開します。 SharePoint では、OData サービスは、RESTful サービス ListData.svc によって実装されます。 このチュートリアルでは、Silverlight アプリケーションをホストする SharePoint web パーツを作成する方法を示します。 Silverlight アプリケーションでは、ListData.svc を使用して SharePoint のお知らせリストの情報が表示されます。 詳細については、次を参照してください。 [SharePoint Foundation REST インターフェイス](http://go.microsoft.com/fwlink/?LinkId=225999)と[Open Data Protocol](http://go.microsoft.com/fwlink/?LinkId=226000)します。  
@@ -71,7 +71,7 @@ ms.locfileid: "49878187"
   
 #### <a name="to-customize-the-silverlight-application"></a>Silverlight アプリケーションをカスタマイズするには
   
-1.  Silverlight アプリケーションで System.Windows.Data にアセンブリ参照を追加します。 詳細については、次を参照してください。[方法: 追加または参照の追加 ダイアログ ボックスを使用して参照を削除する](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)します。  
+1.  Silverlight アプリケーションで System.Windows.Data にアセンブリ参照を追加します。 詳細については、次を参照してください。[方法: 追加または参照の追加 ダイアログ ボックスを使用して参照を削除する](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)します。  
   
 2.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き**参照**を選び、**サービス参照の追加**します。  
   

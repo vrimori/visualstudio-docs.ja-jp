@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b84223f9758302064622313cd5406b10c872f170
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 16b8c3a35a7d4a489a199b4de9f7fbe34bca9361
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39179906"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671015"
 ---
 # <a name="localizing-applications"></a>アプリケーションのローカライズ
 
@@ -42,6 +42,6 @@ ms.locfileid: "39179906"
 
  [Windows フォームのグローバル化](/dotnet/framework/winforms/advanced/globalizing-windows-forms) 複数のカルチャをサポートする Windows アプリケーションの作成について説明したページへのリンクを提供します。
 
- [グローバライズとローカライズ](http://msdn.microsoft.com/Library/8ef3838e-9d05-4236-9dd0-ceecff9df80d) 複数のカルチャをサポートする Web アプリケーションの作成について説明したページへのリンクを提供します。
+ [グローバライズとローカライズ](https://msdn.microsoft.com/Library/8ef3838e-9d05-4236-9dd0-ceecff9df80d) 複数のカルチャをサポートする Web アプリケーションの作成について説明したページへのリンクを提供します。
 
- [推奨される国際対応アプリケーション開発手順](http://msdn.microsoft.com/Library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c) 設計に関する問題や用語など、各国のユーザー向けのプログラミングについての情報を示します。
+ [推奨される国際対応アプリケーション開発手順](/dotnet/standard/globalization-localization/best-practices-for-developing-world-ready-apps) 設計に関する問題や用語など、各国のユーザー向けのプログラミングについての情報を示します。

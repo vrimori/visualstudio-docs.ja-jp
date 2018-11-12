@@ -14,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d301d2a43e820f59979692071edbfb25ba1d7386
-ms.sourcegitcommit: 50b19010b2e2b4736835350710e2edf93b980b56
+ms.openlocfilehash: 4c38a74a48dbac190b5f557641e10f54a0413703
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49073742"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671990"
 ---
 # <a name="visual-studio-product-feedback"></a>Visual Studio 製品フィードバック
 
@@ -54,7 +54,7 @@ Microsoft サポート サービスは、当時最新だった価格、条項、
 
 ## <a name="i-want-to-get-involved-in-the-developer-community"></a>開発者コミュニティへの参加
 
-質問や回答を他の開発者と共有する場合は、[Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com) サイト、[MSDN フォーラム](http://social.msdn.microsoft.com/Forums/home)、または [StackOverflow](http://stackoverflow.com/) を使用します。 「[開発者コード サンプル](http://code.msdn.microsoft.com/)」サイトで、他の開発者のコードを閲覧したり、ご自分の例を公開したりすることもできます。
+質問や回答を他の開発者と共有する場合は、[Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com) サイト、[MSDN フォーラム](https://social.msdn.microsoft.com/Forums/home)、または [StackOverflow](http://stackoverflow.com/) を使用します。 「[開発者コード サンプル](https://code.msdn.microsoft.com/)」サイトで、他の開発者のコードを閲覧したり、ご自分の例を公開したりすることもできます。
 
 ## <a name="i-want-to-help-improve-the-visual-studio-documentation"></a>Visual Studio ドキュメントの品質向上にご協力ください
 

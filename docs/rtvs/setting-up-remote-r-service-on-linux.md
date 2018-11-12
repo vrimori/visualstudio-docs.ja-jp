@@ -11,12 +11,12 @@ ms.reviewer: karthiknadig
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: fa985b88e5857d12324f25a5bd1581ca3f9e211e
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 81a0a5c26e91056e757bc6e6f68cd217e98c7e06
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35667926"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220815"
 ---
 # <a name="remote-r-service-for-linux"></a>Linux 用のリモート R サービス
 
@@ -108,7 +108,7 @@ Linux 用のリモート R サービスは現在、rtvs デーモンとしてパ
 
 ### <a name="windows-subsystem-for-linux-wsl"></a>Windows Subsystem for Linux (WSL)
 
-1. [Windows 10](https://msdn.microsoft.com/commandline/wsl/install-win10) または [Windows Server](https://msdn.microsoft.com/en-us/commandline/wsl/install-on-server) 用の WSL インストール手順に従います。
+1. [Windows 10](/windows/wsl/install-win10#install-the-windows-subsystem-for-linux) または [Windows Server](/windows/wsl/install-on-server#enable-the-windows-subsystem-for-linux-wsl) 用の WSL インストール手順に従います。
 1. Windows で bash を起動し、前述の[物理的な Ubuntu コンピューター](#physical-ubuntu-computer)の手順に従います。ただし、例外が 1 つあります。 手順 3 では、代わりに `rtvsd` コマンドを使用してサービスを開始します。これは、WSL が現時点で systemd/systemctl インターフェイスをサポートしていないためです。
 
 ### <a name="local-or-remote-docker-container-clean-build"></a>ローカルまたはリモートの Docker コンテナー (クリーン ビルド)

@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d620ae0f93b2bbcee66419cfe9ff5e76e470c5f0
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 03b5a669c0977aa35ef6943af3fa6afe6dda2aaa
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49918884"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220789"
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>UWP アプリのネットワーク使用量を分析する
 Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http API](/uwp/api/windows.web.http) を使用して実行されたネットワーク操作についてのデータを収集します。 そのデータを分析すると、アクセスや認証の問題、不適切なキャッシュの使用、表示やダウンロードの低パフォーマンスなどの問題を解決するのに役立ちます。  
@@ -23,7 +23,7 @@ Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http A
  ネットワーク ツールは、UWP アプリのみをサポートします。 その他のプラットフォームは現時点ではサポートされていません。  
   
 > [!NOTE]
->  ネットワーク ツールの詳細については、[Visual Studio のネットワーク ツールの概要](http://blogs.msdn.com/b/visualstudio/archive/2015/05/04/introducing-visual-studios-network-tool.aspx)に関する記事をご覧ください。  
+>  ネットワーク ツールの詳細については、[Visual Studio のネットワーク ツールの概要](https://blogs.msdn.microsoft.com/visualstudio/2015/05/04/introducing-visual-studios-network-tool/)に関する記事をご覧ください。  
   
 ## <a name="collect-network-tool-data"></a>ネットワーク ツール データの収集  
  **ネットワーク** ツールを実行するには、Visual Studio コンピューター上で開かれた状態の Visual Studio プロジェクトが必要です。  
@@ -75,6 +75,6 @@ Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http A
 ## <a name="see-also"></a>関連項目  
  [デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)  
  [Visual Studio ブログ: Visual Studio のネットワーク インスペクターの紹介](http://go.microsoft.com/fwlink/?LinkId=535022)   
- [Channel 9 ビデオ: Visual Studio 診断ツール - 新しいネットワーク プロファイラー](http://channel9.msdn.com/Series/ConnectOn-Demand/206)  
+ [Channel 9 ビデオ: Visual Studio 診断ツール - 新しいネットワーク プロファイラー](https://channel9.msdn.com/Series/ConnectOn-Demand/206)  
  [Visual Studio のプロファイル](../profiling/index.md)  
  [プロファイル ツールの概要](../profiling/profiling-feature-tour.md)

@@ -11,12 +11,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 933f31d6cbfe34846b0331d76abdc39cdf261d29
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 593d778247e3c1e6b9a09358c82b5fd7139cfbb9
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43775853"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50672913"
 ---
 # <a name="step-3-assign-a-random-icon-to-each-label"></a>手順 3: 各ラベルへのランダムなアイコンの割り当て
 ゲームで毎回、同じアイコンが同じセルに表示されていたのでは、やりがいがありません。 これを避けるには、`AssignIconsToSquares()` メソッドを使用して、フォームのラベル コントロールにアイコンをランダムに割り当てます。
@@ -47,9 +47,9 @@ ms.locfileid: "43775853"
 
      最初の行では、**control** 変数を **iconLabel** という名前のラベルに変換しています。 その次の行は、変換が成功したかどうかを確認する `if` ステートメントです。 変換が成功した場合は、`if` ステートメント内のステートメントが実行されます  (前のチュートリアルでも説明したように、`if` ステートメントは、指定した任意の条件を評価するために使用されます)。`if` ステートメントの最初の行では、**randomNumber** という名前の変数を作成し、icons リスト内の項目のいずれかに対応する乱数をこの変数に格納します。 そのために、前に作成した <xref:System.Random.Next> オブジェクトの <xref:System.Random> メソッドを使用します。 `Next` メソッドは乱数を返します。 またこの行では、**icons** リストの <xref:System.Collections.Generic.List%601.Count> プロパティを使用して、乱数を選択する範囲を決定しています。 次の行では、icons リストのいずれかの項目をラベルの <xref:System.Windows.Forms.Label.Text> プロパティに割り当てています。 コメントアウトしている行は、このトピックの後半で説明します。 最後に、`if` ステートメントの最終の行で、フォームに追加したアイコンをリストから削除しています。
 
-     コード内にわからない部分があれば、コード要素の上にマウス ポインターを合わせると、関連するヒントが表示されます。 Visual Studio デバッガーを使用して、プログラムの実行中にコードの各行をステップ実行することもできます。 詳しくは、「[How Do I: Step with The Debugger in Visual Studio?](http://msdn.microsoft.com/vstudio/ee672313.aspx)」 (操作方法: Visual Studio のデバッガーでステップ実行する) または「[デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)」をご覧ください。
+     コード内にわからない部分があれば、コード要素の上にマウス ポインターを合わせると、関連するヒントが表示されます。 Visual Studio デバッガーを使用して、プログラムの実行中にコードの各行をステップ実行することもできます。 詳しくは、「[How Do I: Step with The Debugger in Visual Studio?](https://msdn.microsoft.com/vstudio/ee672313.aspx)」 (操作方法: Visual Studio のデバッガーでステップ実行する) または「[デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)」をご覧ください。
 
-3.  ゲーム ボードをアイコンで埋めるには、プログラムが起動したらすぐに `AssignIconsToSquares()` メソッドを呼び出す必要があります。 Visual C# を使用している場合は、**Form1**_constructor_ の `InitializeComponent()` メソッドの呼び出しのすぐ下にステートメントを追加し、フォームが新しいメソッドを呼び出してフォーム自体の設定後に表示されるようにします。 新しいオブジェクト (クラスや構造体など) を作成するときは、コンストラクターを呼び出します。 詳しくは、「[コンストラクター (C# プログラミング ガイド)](http://msdn.microsoft.com/library/ace5hbzh.aspx)」または「[コンストラクターとデストラクターの使用方法](http://msdn.microsoft.com/library/2z08e49e.aspx)」(Visual Basic の場合) をご覧ください。
+3.  ゲーム ボードをアイコンで埋めるには、プログラムが起動したらすぐに `AssignIconsToSquares()` メソッドを呼び出す必要があります。 Visual C# を使用している場合は、**Form1**_constructor_ の `InitializeComponent()` メソッドの呼び出しのすぐ下にステートメントを追加し、フォームが新しいメソッドを呼び出してフォーム自体の設定後に表示されるようにします。 新しいオブジェクト (クラスや構造体など) を作成するときは、コンストラクターを呼び出します。 詳しくは、「[コンストラクター (C# プログラミング ガイド)](/dotnet/csharp/programming-guide/classes-and-structs/constructors)」または「[コンストラクターとデストラクターの使用方法](/previous-versions/visualstudio/visual-studio-2008/2z08e49e\(v\=vs.90\))」(Visual Basic の場合) をご覧ください。
 
      [!code-csharp[VbExpressTutorial4Step2_3_4#13](../ide/codesnippet/CSharp/step-3-assign-a-random-icon-to-each-label_4.cs)]
 

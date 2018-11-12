@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: ec6364b3d130ab3ca333838c7e1b6eb2fdcb4a3d
-ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
+ms.openlocfilehash: 27eb9b7e3cda7c05515f5a7413b067dce2b8567e
+ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34815052"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51000401"
 ---
 # <a name="settings-waterfall"></a>設定ウォーターフォール
 
@@ -50,4 +50,4 @@ namespace MyTests
 
 ## <a name="got-feedback"></a>フィードバックをお寄せください
 
-ご意見や機能に関するご要望を [UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest) で投稿してください。
+ご意見や機能に関するご要望を[開発者コミュニティ](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)で投稿してください。

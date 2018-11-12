@@ -1,7 +1,7 @@
 ---
 title: '方法: 混合モードでデバッグ |Microsoft Docs'
 ms.custom: ''
-ms.date: 06/19/2018
+ms.date: 11/05/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a08cf3cf95073d06c1dfa350f2de86bf72837c5
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 2ef87a1f9fd90395a9a1f5c99ad6e8090b13304e
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49182677"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295476"
 ---
 # <a name="how-to-debug-in-mixed-mode"></a>方法: 混合モードでデバッグ
 次の手順では、デバッグまとめて、混合モードとも呼ばれるマネージ コードとネイティブ コードのデバッグを有効にする方法について説明します。 2 つの混合モード デバッグ シナリオがあります。  
@@ -58,9 +58,12 @@ ms.locfileid: "49182677"
    
 1. 選択、**デバッグ**、タブを選び**ネイティブ コードのデバッグを有効にする**します。
    
-1. 使用**ファイル** > **選択した項目の保存**または**Ctrl + S**変更を保存します。
+1. 変更を保存するプロパティ ページを閉じます。
 
    ![ネイティブ コードのデバッグを有効にする](../debugger/media/dbg-mixed-mode-from-csharp.png "ネイティブ コードのデバッグを有効にします。")
   
+>[!NOTE]
+>ほとんどのバージョンの Visual Studio 2017 では、使用する必要があります、 *launchSettings.json* .NET Core アプリでネイティブ コードの混合モードのデバッグを有効にするプロジェクトのプロパティではなくファイル。 詳細については、次を参照してください。[マネージとネイティブ コード デバッグ](../debugger/how-to-debug-managed-and-native-code.md)します。
+
 ## <a name="see-also"></a>関連項目  
  [方法 : DLL プロジェクトからデバッグする](../debugger/how-to-debug-from-a-dll-project.md)

@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 07031432218f2d4e0eb037582f2b1f5a76193cdb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e22b24889a14d49afddd3c30858814ddec663e6a
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49879759"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50672731"
 ---
 # <a name="options-page-environment-node-properties"></a>[環境] ノード プロパティ ([オプション] ページ)
 このドキュメントでは、**[オプション]** ダイアログ ボックスの **[環境]** カテゴリ (`DTE.Properties("Environment", <Property Page>)`) に関連付けられているページ (またはプロパティ コレクション) について説明します。 各サブセクションの見出しは、Properties コレクションにアクセスするための呼び出しです。その下の表では、コレクションのプロパティを示します。
@@ -161,8 +161,8 @@ ms.locfileid: "49879759"
 
 ## <a name="see-also"></a>参照
 
-- [オプション設定の制御](http://msdn.microsoft.com/Library/a09ed242-7494-4cde-bbd1-7a8ec617965d)
-- [オプション ページにあるプロパティ項目名の確認](http://msdn.microsoft.com/Library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)
+- [オプション設定の制御](https://msdn.microsoft.com/Library/a09ed242-7494-4cde-bbd1-7a8ec617965d)
+- [オプション ページにあるプロパティ項目名の確認](https://msdn.microsoft.com/Library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)
 - [[フォントおよび色] ノード プロパティ ([オプション] ページ)](../../ide/reference/options-page-fonts-and-colors-node-properties.md)
 - [[テキスト エディター] ノード プロパティ ([オプション] ページ)](../../ide/reference/options-page-text-editor-node-properties.md)
 - [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)

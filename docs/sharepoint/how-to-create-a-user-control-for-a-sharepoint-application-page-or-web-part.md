@@ -18,15 +18,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 98333049f711e9d28d7adb1ad0c17cfc8514e4ad
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 1e099cd5e3de88d88fa3a48b1d9b287d5d185000
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119390"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296165"
 ---
 # <a name="how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part"></a>方法: SharePoint アプリケーション ページまたは web パーツのユーザー コントロールの作成
-  SharePoint ソリューション向けの独自の機能を備えたカスタム ユーザー コントロールを作成し、その機能をプロジェクト内で再利用することができます。 ユーザー コントロールは、Web パーツまたはアプリケーション ページに含めることができます。他の ASP.NET コントロールや SharePoint コントロールを追加し、コントロールのプロパティとメソッドを定義することもできます。 ユーザー コントロールの詳細については、次を参照してください。 [web パーツまたはアプリケーション ページの再利用可能なコントロール作成](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)と[ユーザー コントロールと SharePoint のサーバー コントロール](http://blogs.msdn.com/b/kaevans/archive/2011/04/28/user-controls-and-server-controls-in-sharepoint.aspx)します。  
+  SharePoint ソリューション向けの独自の機能を備えたカスタム ユーザー コントロールを作成し、その機能をプロジェクト内で再利用することができます。 ユーザー コントロールは、Web パーツまたはアプリケーション ページに含めることができます。他の ASP.NET コントロールや SharePoint コントロールを追加し、コントロールのプロパティとメソッドを定義することもできます。 ユーザー コントロールの詳細については、次を参照してください。 [web パーツまたはアプリケーション ページの再利用可能なコントロール作成](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)と[ユーザー コントロールと SharePoint のサーバー コントロール](https://blogs.msdn.microsoft.com/kaevans/2011/04/28/user-controls-and-server-controls-in-sharepoint/)します。  
   
 ### <a name="to-create-a-user-control-for-sharepoint"></a>SharePoint のユーザー コントロールを作成するには  
   
@@ -51,7 +51,7 @@ ms.locfileid: "37119390"
   
      複数のフォルダーとファイルがプロジェクトに追加されます。 これらのファイルの詳細については、次を参照してください。 [web パーツまたはアプリケーション ページの再利用可能なコントロール作成](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)です。  
   
-     既定では、ユーザー コントロール ファイルの表示で、**ソース**Visual Web Developer デザイナーのビュー。 このビューで、コントロールの XML マークアップを編集できます。 切り替えることができます**デザイン**からコントロールをドラッグしてコントロールを視覚的にデザインする場合の表示、**ツールボックス**します。 参照してください[デザイン ビュー、Web ページ デザイナー](http://msdn.microsoft.com/en-us/d8f2270a-357d-40a4-9b39-1a3f2366216d)します。  
+     既定では、ユーザー コントロール ファイルの表示で、**ソース**Visual Web Developer デザイナーのビュー。 このビューで、コントロールの XML マークアップを編集できます。 切り替えることができます**デザイン**からコントロールをドラッグしてコントロールを視覚的にデザインする場合の表示、**ツールボックス**します。 参照してください[デザイン ビュー、Web ページ デザイナー](/previous-versions/aspnet/ms178149\(v\=vs.100\))します。  
   
 7.  コントロールで発生するイベントを処理する場合は、ユーザー コントロールのコード ファイルにコードを追加します。  
   

@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d58fbaf598e4844d4b76898e17dac5331a8b2e54
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 60a1de6a499b033f99844280c3d2aa73b6ed8ba6
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49935069"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51294969"
 ---
 # <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer"></a>方法: 追加して、パッケージ デザイナーを使用して機能と、パッケージにアイテムを削除
   SharePoint ソリューションを作成するときに、Visual Studio は、ソリューション内のパッケージに既定の SharePoint 機能を追加します。 最終的な配置は、前に追加し、SharePoint プロジェクト アイテムと SharePoint のパッケージを変更する機能を削除できます。  
@@ -64,5 +64,5 @@ ms.locfileid: "49935069"
 ## <a name="see-also"></a>関連項目
  [SharePoint ソリューション パッケージを作成します。](../sharepoint/creating-sharepoint-solution-packages.md)   
  [方法: SharePoint ソリューション パッケージをカスタマイズします。](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)  
- [方法: パッケージを作成します。](http://msdn.microsoft.com/en-us/b24be45c-e91d-49bb-afb0-7b265404214b)  
+ [方法: パッケージを作成します。](https://msdn.microsoft.com/b24be45c-e91d-49bb-afb0-7b265404214b)  
   

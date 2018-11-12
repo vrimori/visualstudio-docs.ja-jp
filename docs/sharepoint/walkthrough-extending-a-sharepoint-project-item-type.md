@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 683d0e75ca5e925ccd7bf56ceffb0e28da844cc5
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 756486daa709efd6ce1ff697d6d190bb7f4a2e34
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50220327"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295723"
 ---
 # <a name="walkthrough-extend-a-sharepoint-project-item-type"></a>チュートリアル: SharePoint プロジェクト項目の種類を拡張します。
   使用することができます、 **Business Data Connectivity モデル**sharepoint ビジネス データ接続 (BDC) サービスのモデルを作成するプロジェクト アイテム。 既定では、このプロジェクト項目を使用してモデルを作成しただけでは、モデル内のデータがユーザーに表示されません。 ユーザーがデータを閲覧できるようにするには、それに加えて、SharePoint に外部リストを作成する必要があります。  
@@ -164,7 +164,7 @@ ms.locfileid: "50220327"
   
 1.  **ソリューション エクスプ ローラー**、GenerateExternalDataLists プロジェクトの source.extension.vsixmanifest ファイルのショートカット メニューを開き、選択し、**開く**します。  
   
-     Visual Studio によってマニフェスト エディターでファイルが開きます。 source.extension.vsixmanifest ファイルが、すべての VSIX パッケージで必要とされる extension.vsixmanifest ファイルの基礎となります。 このファイルの詳細については、次を参照してください。 [VSIX 拡張機能スキーマ 1.0 リファレンス](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)します。  
+     Visual Studio によってマニフェスト エディターでファイルが開きます。 source.extension.vsixmanifest ファイルが、すべての VSIX パッケージで必要とされる extension.vsixmanifest ファイルの基礎となります。 このファイルの詳細については、次を参照してください。 [VSIX 拡張機能スキーマ 1.0 リファレンス](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)します。  
   
 2.  **製品名**ボックスに、入力**External Data List Generator**します。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "50220327"
 6.  **型**一覧で、選択**Microsoft.VisualStudio.MefComponent**します。  
   
     > [!NOTE]  
-    >  この値は、extension.vsixmanifest ファイル内の `MefComponent` 要素に対応します。 この要素は、VSIX パッケージ内の拡張機能アセンブリの名前を指定します。 詳細については、次を参照してください。 [MEFComponent 要素 (VSX Schema)](http://msdn.microsoft.com/en-us/8a813141-8b73-44c9-b80b-ca85bbac9551)します。  
+    >  この値は、extension.vsixmanifest ファイル内の `MefComponent` 要素に対応します。 この要素は、VSIX パッケージ内の拡張機能アセンブリの名前を指定します。 詳細については、次を参照してください。 [MEFComponent 要素 (VSX Schema)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\))します。  
   
 7.  **ソース**一覧で、選択**現在のソリューションでプロジェクトを**します。  
   
