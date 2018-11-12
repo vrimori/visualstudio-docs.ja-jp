@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: eefbb12584cdff2bb32b9d4406c916969ec435c4
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 9f390ddf14925b43f1aa1d9e79db05e2aa64f234
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119375"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296204"
 ---
 # <a name="how-to-create-an-application-page"></a>方法: アプリケーション ページを作成
   1 つまたは複数の SharePoint サイトの ASP.NET web ページを作成することができます。 SharePoint では、これらのページに、アプリケーション ページは呼び出されます。 サイトのページとは異なり、アプリケーション ページには、ページの背後で実行されるコードが含まれています。 詳細については、次を参照してください。[用 SharePoint アプリケーション ページを作成](../sharepoint/creating-application-pages-for-sharepoint.md)です。  
@@ -46,7 +46,7 @@ ms.locfileid: "37119375"
   
      複数のフォルダーとファイルがプロジェクトに追加されます。 これらのファイルの詳細については、次を参照してください。[用 SharePoint アプリケーション ページを作成](../sharepoint/creating-application-pages-for-sharepoint.md)です。  
   
-     **ソース**ASP.NET ページファイル、Visual Web Developer デザイナーのビューが表示されます。 コントロールを追加して、ページを設計することができます、**ツールボックス**コンテンツ プレース ホルダーに配置することです。 詳細については、次を参照してください。[ソース ビュー、Web ページ デザイナー](http://msdn.microsoft.com/en-us/5911396b-fe51-4150-9ff1-b085f812862f)します。  
+     **ソース**ASP.NET ページファイル、Visual Web Developer デザイナーのビューが表示されます。 コントロールを追加して、ページを設計することができます、**ツールボックス**コンテンツ プレース ホルダーに配置することです。 詳細については、次を参照してください。[ソース ビュー、Web ページ デザイナー](/previous-versions/aspnet/ms178154\(v\=vs.100\))します。  
   
 7.  コントロールのイベントを処理する場合は、アプリケーション ページのコード ファイルにコードを追加します。  
   

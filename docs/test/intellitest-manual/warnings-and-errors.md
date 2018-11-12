@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 75cda2b45137d982038587ee1dcb73661b77f0df
-ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
+ms.openlocfilehash: efb82a7419ba58c27ccab864d2360538075a1089
+ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34815796"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51000615"
 ---
 # <a name="warnings-and-errors"></a>警告とエラー
 
@@ -81,9 +81,9 @@ public void MyTest(...) {
 テスト コードでは、[PexSymbolicValue](static-helper-classes.md#pexsymbolicvalue) を使用して、ループ条件によって生成される制約を無視することができます。
 
 ```csharp
-for (int i=0; 
+for (int i=0;
     PexSymbolicValue.Ignore(i<100); // IntelliTest will 'forget' about this path condition
-    i++) 
+    i++)
 { }
 ```
 
@@ -111,7 +111,7 @@ void ParameterizedTest(int n) {
     { ... }
 
     // irrelevant for MaxConditions, since conditions do not depend on input
-    for (int i=0; i<100; i++) 
+    for (int i=0; i<100; i++)
     { ... }
 }
 ```
@@ -135,7 +135,7 @@ void ParameterizedTest(int n) {
     int nshadow = PexSymbolicValue.Ignore(n); // IntelliTest looses track of 'n'
 
     // irrevelant for MaxConditions, since nshadow is not related to input
-    for (int i=0; i<nshadow; i++)  
+    for (int i=0; i<nshadow; i++)
     {...}
 }
 ```
@@ -220,16 +220,18 @@ public void MyTest(...) {
 <a name="help-construct"></a>
 ## <a name="need-help-to-construct-object"></a>オブジェクトを構築するための情報を指定してください
 
-IntelliTest は、[テスト入力を生成し](input-generation.md)、いくつかの入力がフィールドを持つオブジェクトである場合があります。 この場合、IntelliTest は、プライベート フィールドを持つクラスのインスタンスを生成しようとし、このプライベート フィールドに特定の値がある場合に興味深いプログラム動作が発生すると仮定します。 
+IntelliTest は、[テスト入力を生成し](input-generation.md)、いくつかの入力がフィールドを持つオブジェクトである場合があります。
+この場合、IntelliTest は、プライベート フィールドを持つクラスのインスタンスを生成しようとし、このプライベート フィールドに特定の値がある場合に興味深いプログラム動作が発生すると仮定します。
 
-しかし、これはリフレクションを使用して実行可能ですが、IntelliTest は任意のフィールドの値を持つオブジェクトを生成しません。 代わりに、このような場合は、オブジェクトを作成するためのクラスのパブリック メソッドの使用方法に関するヒントをユーザーが提供することに依存し、プライベート フィールドに目的の値がある状態にします。
+しかし、これはリフレクションを使用して実行可能ですが、IntelliTest は任意のフィールドの値を持つオブジェクトを生成しません。
+代わりに、このような場合は、オブジェクトを作成するためのクラスのパブリック メソッドの使用方法に関するヒントをユーザーが提供することに依存し、プライベート フィールドに目的の値がある状態にします。
 
-IntelliTest で興味深いオブジェクトを構築できるようにする方法については、「[既存のクラスのインスタンス化](input-generation.md#existing-classes)」を参照してください。 
+IntelliTest で興味深いオブジェクトを構築できるようにする方法については、「[既存のクラスのインスタンス化](input-generation.md#existing-classes)」を参照してください。
 
 <a name="help-types"></a>
 ## <a name="need-help-to-find-types"></a>型を見つけるための情報を指定してください
 
-IntelliTest は、すべての .NET 型の[テスト入力を生成します](input-generation.md)。 ここでは、IntelliTest は、抽象クラスから派生するか抽象インターフェイスを実装するインスタンスを作成しようとしますが、IntelliTest は制約を満たす型を知りません。 
+IntelliTest は、すべての .NET 型の[テスト入力を生成します](input-generation.md)。 ここでは、IntelliTest は、抽象クラスから派生するか抽象インターフェイスを実装するインスタンスを作成しようとしますが、IntelliTest は制約を満たす型を知りません。
 
 制約に一致する 1 つまたは複数の型をポイントして IntelliTest を補助することができます。 通常は、次のいずれかの属性が役に立ちます。
 
@@ -252,7 +254,7 @@ IntelliTest は、すべての .NET 型の[テスト入力を生成します](in
 <a name="usable-type-guessed"></a>
 ## <a name="usable-type-guessed"></a>使用可能な型を推測しました
 
-IntelliTest は、すべての .NET 型の[テスト入力を生成します](input-generation.md)。 型が抽象またはインターフェイスの場合、IntelliTest は、その型の特定の実装を選択する必要があります。 選択を行うには、どの型が存在するかを知る必要があります。 
+IntelliTest は、すべての .NET 型の[テスト入力を生成します](input-generation.md)。 型が抽象またはインターフェイスの場合、IntelliTest は、その型の特定の実装を選択する必要があります。 選択を行うには、どの型が存在するかを知る必要があります。
 
 この警告が表示されたときには、IntelliTest が、いくつかの参照先アセンブリを参照して実装の型を見つけたにもかかわらず、その型を使用するかどうかを確認できないか、別の場所により適切な使用可能な型があることを示しています。 IntelliTest は、単に有望と思われる型を選択しました。
 
@@ -275,12 +277,14 @@ IntelliTest は、すべての .NET 型の[テスト入力を生成します](in
 
 IntelliTest は、プログラムの実行を監視することによって[テスト入力を生成します](input-generation.md)。 IntelliTest が動作を監視できるように、関連するコードが正しくインストルメント化されることが重要です。
 
-この警告は、インストルメント化されたコードが、インストルメントされていない別のアセンブリ内のメソッドを呼び出したときに表示されます。 両方の相互作用を IntelliTest で調査する場合、別のアセンブリ (またはその一部) もインストルメント化する必要があります。
+この警告は、インストルメント化されたコードが、インストルメントされていない別のアセンブリ内のメソッドを呼び出したときに表示されます。
+両方の相互作用を IntelliTest で調査する場合、別のアセンブリ (またはその一部) もインストルメント化する必要があります。
 
 <a name="external-method-called"></a>
 ## <a name="external-method-called"></a>外部メソッドが呼び出されました
 
-IntelliTest は、.NET アプリケーションの実行を監視することによって[テスト入力を生成します](input-generation.md)。 IntelliTest は、.NET 言語で記述されていないコードに関して意味のあるテスト入力を生成できません。
+IntelliTest は、.NET アプリケーションの実行を監視することによって[テスト入力を生成します](input-generation.md)。
+IntelliTest は、.NET 言語で記述されていないコードに関して意味のあるテスト入力を生成できません。
 
 この警告は、インストルメント化されたコードが、IntelliTest が分析できないアンマネージドのネイティブ メソッドを呼び出したときに表示されます。 両方の相互作用を IntelliTest で調査する場合、アンマネージド メソッドを模擬表示する必要があります。
 
@@ -289,7 +293,7 @@ IntelliTest は、.NET アプリケーションの実行を監視することに
 
 IntelliTest は、.NET アプリケーションの実行を監視することによって[テスト入力を生成します](input-generation.md)。 ただし、技術的な理由により、IntelliTest で監視できないいくつかのメソッドがあります。 たとえば、IntelliTest は、静的コンストラクターを監視できません。
 
-この警告は、インストルメント化されたコードが、IntelliTest が監視できないメソッドを呼び出したときに表示されます。 
+この警告は、インストルメント化されたコードが、IntelliTest が監視できないメソッドを呼び出したときに表示されます。
 
 <a name="testability-issue"></a>
 ## <a name="testability-issue"></a>テストの容易性の問題
@@ -309,7 +313,7 @@ IntelliTest は、[制約ソルバー](input-generation.md#constraint-solver)を
 * 浮動小数点と整数の間の変換
 * **System.Decimal** 型のすべての操作
 
-この警告は、実行されたコードが、IntelliTest で解釈できない操作を実行するかそのようなメソッドを呼び出したときに表示されます。 
+この警告は、実行されたコードが、IntelliTest で解釈できない操作を実行するかそのようなメソッドを呼び出したときに表示されます。
 
 <a name="observed-call-mismatch"></a>
 ## <a name="observed-call-mismatch"></a>観察された呼び出しが一致しません
@@ -321,7 +325,7 @@ IntelliTest は、コードを監視できないときには、そのコード�
 
 * IntelliTest が、インストルメントされていないメソッドの呼び出しを開始する一部のコードを監視した。
 * インストルメントされていないメソッドがインストルメント化されているメソッドを呼び出した。
-* IntelliTest が、呼び出されたインストルメント化されたメソッドを監視している。 
+* IntelliTest が、呼び出されたインストルメント化されたメソッドを監視している。
 
 IntelliTest は、インストルメントされていない中間メソッドが実行した処理を知らないので、入れ子になったインストルメント化された呼び出しに関連するテスト入力を生成できない場合があります。
 
@@ -342,4 +346,4 @@ IntelliTest は、単体テストが確定的である場合のみ (言い換え
 
 ## <a name="got-feedback"></a>フィードバックをお寄せください
 
-ご意見や機能に関するご要望を **[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)** で投稿してください。
+ご意見や機能に関するご要望を[開発者コミュニティ](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)で投稿してください。

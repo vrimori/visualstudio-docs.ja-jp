@@ -16,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2a74f2b7a2810a268c68306490dbbe2c197f0c72
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: a5d4c2950754ebbef2920720cf784084b2968a82
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119406"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295060"
 ---
 # <a name="use-the-sharepoint-project-service"></a>SharePoint プロジェクト サービスを使用します。
   SharePoint プロジェクト システムには、そのプロジェクト システムに関係するタスクを実行するために使用できるプロジェクト サービスが含まれています。 プロジェクト サービスは <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> オブジェクトです。  
@@ -50,5 +50,5 @@ ms.locfileid: "37119406"
  [方法: SharePoint プロジェクト サービスを取得](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md)   
  [Visual Studio の SharePoint ツールを拡張します。](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)   
  [ツールの拡張機能を SharePoint のプログラミング モデルの概要](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)   
- [方法: DTE オブジェクトからサービスを取得する](http://msdn.microsoft.com/library/bb166401.aspx)  
+ [方法: DTE オブジェクトからサービスを取得する](https://msdn.microsoft.com/library/bb166401.aspx)  
   

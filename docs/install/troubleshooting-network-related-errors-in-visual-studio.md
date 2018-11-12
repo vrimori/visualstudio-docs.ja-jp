@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 210a39d5392ef6ba93f4988c86850db58644ed10
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 28c92fdc09320effcb8603c42edcfca152f71248
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49865783"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50672315"
 ---
 # <a name="troubleshooting-network-related-errors-when-you-install-or-use-visual-studio"></a>Visual Studio をインストールまたは使用するときのネットワーク関連のエラーのトラブルシューティング
 
@@ -69,7 +69,7 @@ ms.locfileid: "49865783"
 
      OR
 
-- 「[How to connect through an authenticated Web Proxy](http://blogs.msdn.com/b/rido/archive/2010/05/06/how-to-connect-to-tfs-through-authenticated-web-proxy.aspx)」 (認証された Web プロキシを通して接続する方法) ブログ投稿に含まれる手順に従うこともできます。プロキシを使用するためのコードを追加する方法が説明されています。
+- 「[How to connect through an authenticated Web Proxy](https://blogs.msdn.microsoft.com/rido/2010/05/06/how-to-connect-to-tfs-through-authenticated-web-proxy/)」 (認証された Web プロキシを通して接続する方法) ブログ投稿に含まれる手順に従うこともできます。プロキシを使用するためのコードを追加する方法が説明されています。
 
 ## <a name="error-the-underlying-connection-was-closed"></a>エラー: "接続が切断されました"
 

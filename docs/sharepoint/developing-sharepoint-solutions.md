@@ -18,17 +18,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b9eb1de3f18c487a2e6d3cdf3d0ce7ef95e578b3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 25a7402a8d0464152e9b1bdd9d2edcdc66824914
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49889998"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295905"
 ---
 # <a name="develop-sharepoint-solutions"></a>SharePoint ソリューションを開発します。
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] には、SharePoint サイトおよびサイト要素を作成するための SharePoint プロジェクトの種類のテンプレートがいくつか用意されています。 使用可能なプロジェクトの種類の一覧は、次を参照してください。 [SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)します。 次に、SharePoint プロジェクトの要素およびプロパティについて説明します。  
   
- SharePoint 2013 アドインと SharePoint アドインについては、「 [SharePoint 2013](http://msdn.microsoft.com/library/jj162979.aspx) 」および「 [SharePoint アドインの作成](http://msdn.microsoft.com/library/office/apps/jj163230%28v=office.15%29.aspx)」を参照してください。  
+ SharePoint 2013 アドインと SharePoint アドインについては、「 [SharePoint 2013](https://msdn.microsoft.com/library/jj162979.aspx) 」および「 [SharePoint アドインの作成](/sharepoint/dev/sp-add-ins/sharepoint-add-ins)」を参照してください。  
   
 ## <a name="elements-of-a-sharepoint-project"></a>SharePoint プロジェクトの要素
  SharePoint プロジェクトのノードは、 *SharePoint アイテム*と呼ばれます。 また、SharePoint アイテムには、 *SharePoint アイテム ファイル*と呼ばれる 1 つ以上のサブ ファイル ( [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 構成ファイル、.aspx フォームなど) が含まれる場合があります。  
@@ -97,10 +97,10 @@ ms.locfileid: "49889998"
   
 |プロパティ名|説明|  
 |-------------------|-----------------|  
-|ビルド アクション|ファイルとビルド プロセスおよび配置プロセスの関係を指定します。 詳細については、「 [ファイルのプロパティ](http://msdn.microsoft.com/library/0c6xyb66(v=vs.100).aspx)」を参照してください。|  
-|出力ディレクトリにコピー|出力ディレクトリにソース ファイルをコピーするかどうかを指定します。 次のいずれかの値になります。<br /><br /> -   *コピーしません。*<br />-   *常にコピーします。*<br />-   *新しい場合はコピーします。*<br /><br /> 詳細については、「 [ファイルのプロパティ](http://msdn.microsoft.com/library/0c6xyb66(v=vs.100).aspx)」を参照してください。|  
-|カスタム ツール|デザイン時にファイルを変換し、変換の結果を別のファイルに出力するツールが存在する場合に、そのツールの名前を指定します。 たとえば、データセット (.[!INCLUDE[TLA2#tla_xsd](../sharepoint/includes/tla2sharptla-xsd-md.md)]) ファイルでは既定のカスタム ツールを使用できます。 詳細については、「 [ファイルのプロパティ](http://msdn.microsoft.com/library/0c6xyb66(v=vs.100).aspx)」を参照してください。|  
-|カスタム ツールの名前空間|カスタム ツールの出力がコピーされる名前空間です。 詳細については、「 [ファイルのプロパティ](http://msdn.microsoft.com/library/0c6xyb66(v=vs.100).aspx)」を参照してください。|  
+|ビルド アクション|ファイルとビルド プロセスおよび配置プロセスの関係を指定します。 詳細については、「 [ファイルのプロパティ](/previous-versions/visualstudio/visual-studio-2010/0c6xyb66\(v\=vs.100\))」を参照してください。|  
+|出力ディレクトリにコピー|出力ディレクトリにソース ファイルをコピーするかどうかを指定します。 次のいずれかの値になります。<br /><br /> -   *コピーしません。*<br />-   *常にコピーします。*<br />-   *新しい場合はコピーします。*<br /><br /> 詳細については、「 [ファイルのプロパティ](/previous-versions/visualstudio/visual-studio-2010/0c6xyb66\(v\=vs.100\))」を参照してください。|  
+|カスタム ツール|デザイン時にファイルを変換し、変換の結果を別のファイルに出力するツールが存在する場合に、そのツールの名前を指定します。 たとえば、データセット (.[!INCLUDE[TLA2#tla_xsd](../sharepoint/includes/tla2sharptla-xsd-md.md)]) ファイルでは既定のカスタム ツールを使用できます。 詳細については、「 [ファイルのプロパティ](/previous-versions/visualstudio/visual-studio-2010/0c6xyb66\(v\=vs.100\))」を参照してください。|  
+|カスタム ツールの名前空間|カスタム ツールの出力がコピーされる名前空間です。 詳細については、「 [ファイルのプロパティ](/previous-versions/visualstudio/visual-studio-2010/0c6xyb66\(v\=vs.100\))」を参照してください。|  
 |配置場所|SharePoint サーバー上のファイルの完全修飾パス。 このパスは、[配置ルート] プロパティと [配置パス] プロパティで構成されます。|  
 |配置パス|Workflow1 など、SharePoint サーバー ファイル上のファイルの相対パス\\します。 ファイルの完全修飾パスは、 *Deployment Path* 値の末尾に *Deployment Root* 値を連結することによって作成されます。<br /><br /> 値を選択する*RootFile*の*展開の種類*プロパティの変更、 *Deployment Root*プロパティを\<{sharepointroot} >\\の完全修飾パスで結果として得られる、 \<{sharepointroot} > \Workflow1\\します。 詳細については、次を参照してください。[パッケージ化と SharePoint ソリューションの配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)します。|  
 |Deployment Root|文字列。 ファイルの配置先となる SharePoint Server 上のルート フォルダーです たとえば、 \<{sharepointroot} > \Template\Features\\\<FeatureName >\\します。<br /><br /> *Deployment Root* プロパティの値は、 *Deployment Type* の設定に依存します。|  

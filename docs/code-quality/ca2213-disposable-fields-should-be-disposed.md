@@ -1,6 +1,6 @@
 ---
 title: 'CA2213: 破棄可能なフィールドは破棄されなければなりません'
-ms.date: 11/04/2016
+ms.date: 11/05/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 143a094375871bf8073999f89d7fac5d6df01b4f
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: be06c9bf38ec360cedc858d92a84b1f89c662856
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45551861"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220633"
 ---
 # <a name="ca2213-disposable-fields-should-be-disposed"></a>CA2213: 破棄可能なフィールドは破棄されなければなりません
 
@@ -33,26 +33,33 @@ ms.locfileid: "45551861"
 |互換性に影響する変更点|中断なし|
 
 ## <a name="cause"></a>原因
- 実装する型<xref:System.IDisposable?displayProperty=fullName>も実装する型のフィールドを宣言<xref:System.IDisposable>します。 <xref:System.IDisposable.Dispose%2A>フィールドのメソッドを呼び出さない、<xref:System.IDisposable.Dispose%2A>宣言型のメソッド。
+
+実装する型<xref:System.IDisposable?displayProperty=fullName>も実装する型のフィールドを宣言<xref:System.IDisposable>します。 <xref:System.IDisposable.Dispose%2A>フィールドのメソッドを呼び出さない、<xref:System.IDisposable.Dispose%2A>宣言型のメソッド。
 
 ## <a name="rule-description"></a>規則の説明
- 型はすべて、アンマネージ リソースの破棄を担当これは、実装することによって実現<xref:System.IDisposable>します。 このルールは、破棄可能な型かどうかを確認します`T`フィールドを宣言して`F`破棄可能な型のインスタンスである`FT`します。 各フィールドの`F`、ルールの呼び出しを検索しようとしました。`FT.Dispose`します。 ルールによって呼び出されるメソッドを検索する`T.Dispose`、および下位のレベル (によって呼び出されるメソッドによって呼び出されるメソッド`FT.Dispose`)。
+
+型は、そのすべてのアンマネージ リソースを破棄します。 破棄可能な型かどうかを確認する ca 2213 チェックの規則 (つまり、1 つを実装する<xref:System.IDisposable>)`T`フィールドを宣言して`F`破棄可能な型のインスタンスである`FT`します。 各フィールドの`F`メソッドまたは包含する型の初期化子内でローカルで作成されたオブジェクトが割り当てられている`T`、ルールの呼び出しを検索しようとしました。`FT.Dispose`します。 このルールによって呼び出されるメソッドを検索する`T.Dispose`と 1 レベル下 (によって呼び出されるメソッドによって呼び出されるメソッドは、 `FT.Dispose`)。
+
+> [!NOTE]
+> Ca 2213 のルールは、含む型のメソッドと初期化子内でローカルで作成された破棄可能なオブジェクトに割り当てられているフィールドに対してのみが発生します。 オブジェクトが作成または型の外部で割り当てられたかどうか`T`ルールは発生しません。 これには、含んでいる型が、オブジェクトを破棄する責任を所有しない場合のノイズが削減されます。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するに<xref:System.IDisposable.Dispose%2A>を実装する型のフィールドで<xref:System.IDisposable>を割り当て、そのフィールドによって保持されているアンマネージ リソースを解放します。
+
+このルールの違反を修正するには、呼び出す<xref:System.IDisposable.Dispose%2A>を実装する型のフィールドで<xref:System.IDisposable>します。
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制します。
- いないの責任者は、フィールドによって保持されているリソースを解放する場合、または場合にこの規則による警告を抑制するのには安全では、呼び出し<xref:System.IDisposable.Dispose%2A>ルール チェックよりも詳細な呼び出し元のレベルで発生します。
+
+慣れていない場合、フィールドによって保持されているリソースを解放するのか、この規則による警告を抑制するのには安全では、呼び出し<xref:System.IDisposable.Dispose%2A>ルール チェックよりも詳細な呼び出し元のレベルで発生します。
 
 ## <a name="example"></a>例
- 次の例は、型`TypeA`を実装する<xref:System.IDisposable>(`FT` previosu ディスカッションで)。
 
- [!code-csharp[FxCop.Usage.IDisposablePattern#1](../code-quality/codesnippet/CSharp/ca2213-disposable-fields-should-be-disposed_1.cs)]
+次のスニペットは、型`TypeA`を実装する<xref:System.IDisposable>します。
 
-## <a name="example"></a>例
- 次の例は、型`TypeB`フィールドを宣言することでこの規則に違反する`aFieldOfADisposableType`(`F`上記の説明で)、破棄可能な型として (`TypeA`) を呼び出さない<xref:System.IDisposable.Dispose%2A>フィールド。 `TypeB` 対応する`T`で、前に説明します。
+[!code-csharp[FxCop.Usage.IDisposablePattern#1](../code-quality/codesnippet/CSharp/ca2213-disposable-fields-should-be-disposed_1.cs)]
 
- [!code-csharp[FxCop.Usage.IDisposableFields#1](../code-quality/codesnippet/CSharp/ca2213-disposable-fields-should-be-disposed_2.cs)]
+次のスニペットは、型`TypeB`フィールドを宣言することで ca 2213 の規則に違反する`aFieldOfADisposableType`破棄可能な型として (`TypeA`) を呼び出さない<xref:System.IDisposable.Dispose%2A>フィールド。
+
+[!code-csharp[FxCop.Usage.IDisposableFields#1](../code-quality/codesnippet/CSharp/ca2213-disposable-fields-should-be-disposed_2.cs)]
 
 ## <a name="see-also"></a>関連項目
 

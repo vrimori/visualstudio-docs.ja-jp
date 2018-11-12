@@ -11,12 +11,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f8f0b90ae76717ce8365bad2ef780efb51b509d1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d2c76a6eb760e55659c7da4df2a1a341426f0c6e
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49874671"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671808"
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>手順 8: [Show a Picture] ボタンのイベント ハンドラーのコードの記述
 
@@ -28,7 +28,7 @@ ms.locfileid: "49874671"
 
 IDE には、コードの記述に役立つ IntelliSense と呼ばれる強力なツールが備わっています。 コードを入力する際に単語の一部を入力すると、入力に合わせてボックスが開き、入力候補が提示されます。 このツールは、ユーザーの次の操作を予測し、ユーザーが一覧から選択した最後の項目に自動的にジャンプします。 ユーザーは、上方向キーまたは下方向キーを使用して一覧内を移動したり、文字の入力を続けて選択肢を絞り込んだりすることができます。 目的の選択肢が見つかったら、**Tab** キーを押して選択します。 入力候補が不要な場合は無視してもかまいません。
 
-![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[Tutorial 1: Create a picture viewer in Visual Basic - Video 4](https://msdn.microsoft.com/en-us/vstudio/gg315355.aspx)」(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 4) をご覧ください。 このビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
+![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[Tutorial 1: Create a picture viewer in Visual Basic - Video 4](https://msdn.microsoft.com/vstudio/gg315355.aspx)」(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 4) をご覧ください。 このビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
 
 ## <a name="to-write-code-for-the-show-a-picture-button-event-handler"></a>[Show a picture] ボタンのイベント ハンドラーのコードを記述するには
 
@@ -48,7 +48,7 @@ IDE には、コードの記述に役立つ IntelliSense と呼ばれる強力�
 
     2.  **IntelliSense** ウィンドウが開き、**openFileDialog1** が表示されます。 **Tab** キーを押して選択します。 (Visual Basic の場合は、先頭文字が大文字のため、**OpenFileDialog1** が表示されます。 **OpenFileDialog1** が選択されていることを確認してください)。
 
-         `OpenFileDialog` の詳細については、「[OpenFileDialog クラス](http://msdn.microsoft.com/library/system.windows.forms.openfiledialog.aspx)」を参照してください。
+         `OpenFileDialog` の詳細については、「[OpenFileDialog クラス](<xref:System.Windows.Forms.OpenFileDialog>)」を参照してください。
 
     3.  ピリオド (`.`) を入力します (多くのプログラマはこれをドットと呼んでいます)。**openFileDialog1** のすぐ後にドットを入力したため、**IntelliSense** ウィンドウが開き、**OpenFileDialog** コンポーネントのプロパティとメソッドがすべて表示されます。 これらは、**Windows フォーム デザイナー**でクリックした場合に **[プロパティ]** ウィンドウに表示されるプロパティと同じです。 また、コンポーネントで実行する処理 (ダイアログ ボックスを開くなど) を指定するメソッドも選択できます。
 
@@ -63,7 +63,7 @@ IDE には、コードの記述に役立つ IntelliSense と呼ばれる強力�
 
     4.  「`ShowDialog`」の入力を開始します (IntelliSense では大文字と小文字の区別は重要ではありません)。 **[ファイルを開く]** ダイアログ ボックスを表示するメソッドは `ShowDialog()` です。 ウィンドウで **ShowDialog** が強調表示されたら、**Tab** キーを押します。 また、"ShowDialog" を強調表示し、**F1** キーを押して、それに関するヘルプを表示することもできます。
 
-         `ShowDialog()` メソッドの詳細については、「[ShowDialog メソッド](http://msdn.microsoft.com/library/c7ykbedk.aspx)」を参照してください。
+         `ShowDialog()` メソッドの詳細については、「[ShowDialog メソッド](<xref:System.Windows.Forms.Form.ShowDialog%2A>)」を参照してください。
 
     5.  コントロールまたはコンポーネントでメソッドを使用する ("*メソッドを呼び出す*" といいます) ときは、かっこを追加する必要があります。 そこで、`ShowDialog` で "g" の直後に左かっこと右かっこを入力します: `()`。つまり、"openFileDialog1.ShowDialog()" となります。
 
@@ -79,7 +79,7 @@ IDE には、コードの記述に役立つ IntelliSense と呼ばれる強力�
 
     8.  ドットを入力します。DialogResult の値の **IntelliSense** ウィンドウが開きます。 「`O`」と入力し、**Tab** キーを押して **OK** を挿入します。
 
-         DialogResult について詳しくは、「[DialogResult 列挙体](http://msdn.microsoft.com/library/system.windows.forms.dialogresult.aspx)」をご覧ください。
+         DialogResult について詳しくは、「[DialogResult 列挙体](<xref:System.Windows.Forms.DialogResult>)」をご覧ください。
 
         > [!NOTE]
         >  コードの 1 行目はこれで完了です。 Visual C# の場合は、次のようになります。
