@@ -1,6 +1,6 @@
 ---
 title: '[オプション]、[テキスト エディター]、[C#]、[詳細]'
-ms.date: 11/04/2016
+ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 16c92111fc29071447d4af5e736b881fa7c7a769
-ms.sourcegitcommit: e680e8ac675f003ebcc8f8c86e27f54ff38da662
+ms.openlocfilehash: 7cfbc6d57e5bfd3c6a8f317967448039a9b3f5e4
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356744"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50670716"
 ---
 # <a name="options-text-editor-c-advanced"></a>[オプション]、[テキスト エディター]、[C#]、[詳細]
 
@@ -36,7 +36,7 @@ ms.locfileid: "49356744"
 
 - using を並べ替える際に、'System' ディレクティブを先頭に配置する
 
-   選択した場合、右クリック メニューの **[using の削除と並べ替え]** コマンドによって `using` ディレクティブが並べ替えられ、'System' 名前空間が一覧の先頭に置かれます
+   選択した場合、右クリック メニューの **[using の削除と並べ替え]** コマンドによって `using` ディレクティブが並べ替えられ、'System' 名前空間が一覧の先頭に置かれます。
 
    並べ替える前:
 
@@ -89,9 +89,10 @@ ms.locfileid: "49356744"
    using System.Linq;
    ```
    
-- 参照アセンブリと NuGet パッケージの型に using を追加する 
+- 参照アセンブリの型に using を提案する 
+- NuGet パッケージの型に using を提案する 
 
-   選択した場合、[クイック アクション](../quick-actions.md) を使用して NuGet パッケージをインストールし、参照されていない型の `using` ディレクティブを追加できます。
+   これらのオプションを選択した場合、[クイック アクション](../quick-actions.md)を使用して NuGet パッケージをインストールし、参照されていない型の `using` ディレクティブを追加できます。
 
    ![Visual Studio に NuGet パッケージをインストールするためのクイック アクション](media/nuget-lightbulb.png)
   
@@ -106,6 +107,16 @@ ms.locfileid: "49356744"
 - ファイルが開かれたときにアウトライン モードを実行する
 
    選択すると、コードの折りたたみ可能なブロックを作成するコード ファイルが自動的にアウトラインになります。 初めてファイルが開かれると、#regions ブロックとアクティブでないコード ブロックが折りたたまれます。
+
+- プロシージャ行の区切り記号を表示する
+
+   テキスト エディターに、プロシージャのスコープが表示されます。 プロジェクトの *.vb* ソース ファイルで、次の表に示す場所に線が表示されます。
+
+   |.vb ソース ファイル内の場所|線が表示される場所の例|
+   |---------------------------------|------------------------------|
+   |ブロック宣言構造の後|-   クラス、構造体、モジュール、インターフェイス、または列挙型の最後<br />-   プロパティ、関数、または sub の後<br />-   プロパティの get 句と set 句の間は対象外|
+   |一連の単一行構造|-   import ステートメントの後、クラス ファイルの型定義の前<br />-   クラスで宣言されている変数の後、プロシージャの前|
+   |単一行宣言|-   Import ステートメント、Inherits ステートメント、変数宣言、イベント宣言、デリゲート宣言、および DLL の Declare ステートメントの後|
 
 ## <a name="editor-help"></a>エディターのヘルプ
 

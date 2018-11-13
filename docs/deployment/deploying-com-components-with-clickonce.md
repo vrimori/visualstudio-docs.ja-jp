@@ -20,19 +20,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 28b233f360e4a5fb066ae41b288dc0cdb2d610f9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e81462b2ccb5d29a0090623d72cf78183abd6917
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49820463"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51348748"
 ---
 # <a name="deploy-com-components-with-clickonce"></a>ClickOnce での COM コンポーネントをデプロイします。
 従来の COM コンポーネントのデプロイには、困難な作業がきました。 コンポーネントは、グローバルに登録する必要があるおり、したがって重複しているアプリケーション間では、望ましくない副作用が発生することができます。 このような状況問題には一般に .NET Framework アプリケーションでコンポーネントがアプリケーションに完全に分離されたまたはサイド バイ サイドでの互換性があるのためです。 Visual Studio、Windows XP または以上のオペレーティング システムの分離された COM コンポーネントを配置することができます。  
   
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .NET アプリケーションをデプロイするための簡単で安全なメカニズムを提供します。 ただし、アプリケーションでは、従来の COM コンポーネントを使用する場合は、それらを展開するための追加の手順を実行する必要があります。 このトピックでは、分離された COM コンポーネントをデプロイして (たとえば、Visual Basic 6.0 または Visual C) からのネイティブ コンポーネントを参照する方法について説明します。  
   
- 分離された COM コンポーネントの配置の詳細については、次を参照してください。"とアプリの展開を単純化[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]および Registration-free COM"で[ http://msdn.microsoft.com/msdnmag/issues/05/04/RegFreeCOM/default.aspx](http://msdn.microsoft.com/msdnmag/issues/05/04/RegFreeCOM/default.aspx)します。  
+ 分離された COM コンポーネントの配置の詳細については、次を参照してください。 [ClickOnce および Registration-free COM でのアプリ展開の簡略化](https://web.archive.org/web/20050326005413/msdn.microsoft.com/msdnmag/issues/05/04/RegFreeCOM/default.aspx)します。
   
 ## <a name="registration-free-com"></a>Registration-free COM  
  登録を必要としない COM は、展開および分離 COM コンポーネントをアクティブ化するための新しいテクノロジです。 でも、すべてのコンポーネントのタイプ ライブラリと、マニフェストと呼ばれる XML ファイルに、システム レジストリに通常インストールされている登録情報を配置することで、アプリケーションと同じフォルダーに格納されています。  

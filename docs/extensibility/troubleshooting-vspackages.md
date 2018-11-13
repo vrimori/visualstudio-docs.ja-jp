@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 92ca071c7e46325901425048417b0fd1a07607fd
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ad5ab8a337d790af8cd6d800c7bf36ea6ff01286
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49826534"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51348683"
 ---
 # <a name="troubleshooting-vspackages"></a>VSPackage のトラブルシューティング
 一般的な問題、VSPackage に可能性のあるし、問題を解決するためのヒントを次に示します。  
@@ -44,7 +44,7 @@ ms.locfileid: "49826534"
   
 3. VSPackage のレジストリ エントリを確認します。  
   
-    詳細については、次を参照してください。 [Vspackage の登録](http://msdn.microsoft.com/en-us/31e6050f-1457-4849-944a-a3c36b76f3dd)と[管理 Vspackage](../extensibility/managing-vspackages.md)します。  
+    詳細については、次を参照してください。 [Vspackage の登録](registering-and-unregistering-vspackages.md)と[管理 Vspackage](../extensibility/managing-vspackages.md)します。  
   
 4. 開く、**出力**ウィンドウのインスタンスの[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]が VSPackage の読み込みに失敗します。 VSPackage の読み込みが失敗した理由に関する情報は、そのウィンドウに表示可能性があります。  
   

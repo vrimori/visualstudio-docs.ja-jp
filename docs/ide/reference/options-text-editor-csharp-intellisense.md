@@ -18,12 +18,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: d8f6928dd09b971e2c5924d34058a1a0d5e28394
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3ab871d07a8519fa6850ad3d1743a7cd1d0fa110
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31947392"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50672486"
 ---
 # <a name="options-text-editor-c-intellisense"></a>[オプション]、[テキスト エディター]、[C#]、[IntelliSense]
 
@@ -46,9 +46,7 @@ C# での IntelliSense の動作設定を変更するには、**[IntelliSense]**
 
 - 入力候補の項目フィルターを表示する
 
-- 名前の提案を表示
-
-### <a name="snippets-behavior"></a>スニペットの動作
+## <a name="snippets-behavior"></a>スニペットの動作
 
 - スニペットを含めない
 
@@ -62,7 +60,7 @@ C# での IntelliSense の動作設定を変更するには、**[IntelliSense]**
 
    このオプションをオンにした場合、識別子の後で **?** + **Tab** キーを押すと、IntelliSense によって C# コード スニペットのエイリアスが入力候補一覧に追加されます。
 
-### <a name="enter-key-behavior"></a>Enter キー入力時動作
+## <a name="enter-key-behavior"></a>Enter キー入力時動作
 
 - Enter キーで新しい行を追加しない
 
@@ -85,6 +83,10 @@ C# での IntelliSense の動作設定を変更するには、**[IntelliSense]**
 - Enter キーで常に新しい行を追加する
 
    入力候補一覧内のエントリの "*いずれかの*" 文字を入力して **Enter** キーを押すと、新しい行が自動的に追加されて、新しい行にカーソルが移動することを指定します。
+
+## <a name="show-name-suggestions"></a>名前の提案を表示
+
+   最近選択したメンバーのオブジェクト名の自動補完を実行します。 
 
 ## <a name="see-also"></a>関連項目
 

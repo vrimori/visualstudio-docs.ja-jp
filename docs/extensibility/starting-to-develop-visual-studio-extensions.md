@@ -14,21 +14,27 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a04993581be6edae89633bcda901a8d85ff6c765
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a5d6e84bc526cf597fbfd22bd36b93cd419ba0d6
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49849542"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349664"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Visual Studio 拡張機能の開発を開始しています
+
 Visual Studio 拡張機能を初めて作成する場合に、いくつかの疑問をもたれるかもしれません。 ここでは、最も一般的なものの一部を一覧にしています。 探している情報が見つからない場合は、フィードバック ボタンを使用して (画面の下部にある **このページは役に立ちましたか?** ) お探しの情報を問い合わせてください。
 
+> [!NOTE]
+> この記事では、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac では、次を参照してください。 [Visual Studio for Mac の拡張](/visualstudio/mac/extending-visual-studio-mac)します。
+
 ## <a name="what-software-do-i-need-to-develop-visual-studio-extensions"></a>Visual Studio 拡張機能を開発するために必要なソフトウェアはなんですか。
- Visual Studio 拡張機能を開発するために Visual Studio だけでなく、Visual Studio SDK をインストールする必要があります。 通常のセットアップの一部として、Visual Studio SDK をインストールすることができますし、または後からインストールすることもできます。 Visual Studio SDK のインストールに関する詳細は、次の [Visual Studio SDK](../extensibility/visual-studio-sdk.md) を参照してください。
+
+Visual Studio 拡張機能を開発するために Visual Studio だけでなく、Visual Studio SDK をインストールする必要があります。 通常のセットアップの一部として、Visual Studio SDK をインストールすることができますし、または後からインストールすることもできます。 Visual Studio SDK のインストールに関する詳細は、次の [Visual Studio SDK](../extensibility/visual-studio-sdk.md) を参照してください。
 
 ## <a name="what-kinds-of-things-can-i-do-with-visual-studio-extensions"></a>Visual Studio 拡張機能でどのような種類の項目を行えるはでしょうか。
- 無限の可能性に関してはさまざまな Visual Studio 拡張機能を考えたときに制限します。 もちろん、ほとんどの拡張機能がある問題、コードの記述であることが、大文字と小文字をする必要はありません。 拡張機能の作成の種類のいくつかの例を次に示します。
+
+無限の可能性に関してはさまざまな Visual Studio 拡張機能を考えたときに制限します。 もちろん、ほとんどの拡張機能がある問題、コードの記述であることが、大文字と小文字をする必要はありません。 拡張機能の作成の種類のいくつかの例を次に示します。
 
 - 構文の色分け、IntelliSense、コンパイラとデバッグのサポートと、Visual Studio に含まれていない言語のサポート
 
@@ -36,12 +42,13 @@ Visual Studio 拡張機能を初めて作成する場合に、いくつかの疑
 
 - データのデザインまたはクラウドのサポートなどのシナリオのドメイン固有のデザイナー
 
-  拡張機能の例については、チェック アウト、 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs)します。 多くの拡張機能はオープン ソース、および Marketplace には、GitHub リポジトリへのリンクが含まれています。
+拡張機能の例については、チェック アウト、 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs)します。 多くの拡張機能はオープン ソース、および Marketplace には、GitHub リポジトリへのリンクが含まれています。
 
 ## <a name="which-visual-studio-features-can-i-extend"></a>Visual Studio 機能を拡張できますか。
- 理論上は、Visual Studio のあらゆる部分を拡張することができます: メニューのツールバー、コマンド、windows、ソリューション、プロジェクト、エディターなど。
 
- 実際には、ほとんどの人が拡張する機能は、コマンド、メニューとツールバー、windows、IntelliSense、およびプロジェクトが見つかりました。 関連するセクションへのリンクを次に示します。
+理論上は、Visual Studio のあらゆる部分を拡張することができます: メニューのツールバー、コマンド、windows、ソリューション、プロジェクト、エディターなど。
+
+実際には、ほとんどの人が拡張する機能は、コマンド、メニューとツールバー、windows、IntelliSense、およびプロジェクトが見つかりました。 関連するセクションへのリンクを次に示します。
 
 -   [メニューとコマンドの拡張](../extensibility/extending-menus-and-commands.md): Visual Studio メニューおよびツールバーに独自の項目を追加します。 Visual Studio の新機能または独自の外部ヘルパー アプリケーションの起動に使用できます。 メニュー項目のカスタム ショートカットを指定することもできます。
 
@@ -88,3 +95,7 @@ Visual Studio 拡張機能を初めて作成する場合に、いくつかの疑
  別のコンピューターで、拡張機能をインストールしたり、.vsix ファイルをダブルクリックしてインストールすると、友人に送信することができます。 VSIX パッケージの詳細については[Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)します。
 
  Visual Studio のお客様が大量にできるように、Visual Studio Marketplace で拡張機能を公開することもできます。 Marketplace の拡張機能をパッケージ化の例は、次を参照してください。[チュートリアル: Visual Studio 拡張機能を公開](../extensibility/walkthrough-publishing-a-visual-studio-extension.md)します。 Marketplace での発行を行う必要がある内容の詳細については、次を参照してください。[製品と Visual Studio の拡張機能](/azure/devops/extend/overview?view=vsts)します。
+
+## <a name="see-also"></a>関連項目
+
+- [Visual Studio for Mac の拡張](/visualstudio/mac/extending-visual-studio-mac)

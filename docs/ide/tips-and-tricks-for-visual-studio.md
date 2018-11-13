@@ -1,6 +1,6 @@
 ---
 title: Visual Studio のキーボード ショートカット
-ms.date: 06/21/2017
+ms.date: 11/02/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cc99820eded646d745d54e50fb58917a2c15b094
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: cde519515782f453a8a60894a8bcc6dc6c714cc1
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44321282"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220854"
 ---
 # <a name="keyboard-shortcuts-for-visual-studio"></a>Visual Studio のキーボード ショートカット
 
@@ -73,6 +73,11 @@ Visual Studio では、この記事のキーボード ショートカットを�
 
 |コマンド|ショートカット|利用可能なバージョン|
 |-|-|-|
+|すべてに移動|**Ctrl** + **T**|
+|最近使ったファイルへ移動|**Ctrl** + **T**、**R**|
+|マルチキャレットの複数挿入ポイント|**Ctrl** + **Alt** + **クリック**|
+|マルチキャレットの追加一致選択|**Shift** + **Alt** + **Ins**|
+|ドキュメントのフォーマット|**Ctrl** + **K**、**D**|Visual Studio 2017 バージョン 15.8|
 |IntelliSense 候補提示モード|**Ctrl** + **Alt** + **スペース** (トグル)||
 |IntelliSense の強制表示|**Ctrl** + **J**||
 |クイック アクション|**Ctrl**+**.**||
@@ -95,6 +100,9 @@ Visual Studio では、この記事のキーボード ショートカットを�
 |複数の [定義をここに表示] ウィンドウ間を移動する|**Ctrl** + **Alt** + **-** と **Ctrl** + **Alt** + **=**||
 |複数のピーク結果の間を移動する|**F8** と **Shift** + **F8**||
 |コード エディター ウィンドウと [定義をここに表示] ウィンドウの間で切り替える|**Shift** + **Esc**||
+|囲みブロックへ移動|**Ctrl** + **Alt** + **上矢印**|
+|次/前の問題に移動|**Alt** + **PgUp** / **PgDn**|
+|コンテキストに応じたナビゲーション メニュー|**Alt** + **`**|
 
 ## <a name="toolbars"></a>ツールバー
 
@@ -128,4 +136,4 @@ Visual Studio では、この記事のキーボード ショートカットを�
 
 - [アクセシビリティのヒントとテクニック](../ide/reference/accessibility-tips-and-tricks.md)
 - [キーボード ショートカット (Azure DevOps Services と TFS)](/azure/devops/project/navigation/keyboard-shortcuts?view=vsts)
-- [Visual Studio のヒントとテクニックに関するブログ](http://blogs.msdn.com/b/zainnab)
+- [Visual Studio のヒントとテクニックに関するブログ](https://blogs.msdn.com/b/zainnab)

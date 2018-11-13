@@ -73,9 +73,9 @@ ms.locfileid: "39512318"
   
 -   入力フィールドは、順番に表示されます、ウィンドウの幅に合わせてしないにも、任意のパスのような長いフィールドの長さと一致には、コンテンツに合わせてサイズに設定する必要があります。 長さ フィールドに文字数が許可されているかの制限事項のユーザーを示す値があります。  
   
-     ![正しくない入力フィールドの長さ: 名前はこれだけの時間になります可能性はほとんどありません。] (../../extensibility/ux-guidelines/media/0707-01_incorrectinputfieldcontrol.png "0707 01_IncorrectInputFieldControl")<br />正しくない入力フィールドの長さ: 名前はこれだけの時間になります可能性はほとんどありません。
+     ![正しくない入力フィールドの長さ: 名前はこれだけの時間になります可能性はほとんどありません。](../../extensibility/ux-guidelines/media/0707-01_incorrectinputfieldcontrol.png "0707 01_IncorrectInputFieldControl")<br />正しくない入力フィールドの長さ: 名前はこれだけの時間になります可能性はほとんどありません。
   
-     ![入力フィールドの長さを修正: 入力フィールドは、必要なコンテンツの妥当な幅。] (../../extensibility/ux-guidelines/media/0707-02_correctinputfieldcontrol.png "0707 02_CorrectInputFieldControl")<br />入力フィールドの長さを修正: 入力フィールドは、必要なコンテンツの妥当な幅。
+     ![入力フィールドの長さを修正: 入力フィールドは、必要なコンテンツの妥当な幅。](../../extensibility/ux-guidelines/media/0707-02_correctinputfieldcontrol.png "0707 02_CorrectInputFieldControl")<br />入力フィールドの長さを修正: 入力フィールドは、必要なコンテンツの妥当な幅。
   
 ###  <a name="BKMK_ComboBoxesAndDropDowns"></a> コンボ ボックスとドロップダウン リスト  
 一般的な操作の動作に従って、[ドロップダウン リストとコンボ ボックスの Windows デスクトップ ガイドライン](/windows/desktop/uxguide/ctrl-drop)します。  
@@ -89,9 +89,9 @@ ms.locfileid: "39512318"
 #### <a name="layout"></a>レイアウト  
 コンボ ボックスとドロップダウン リストは、順番に表示されます、ウィンドウの幅に合わせてしないにも、任意のパスのような長いフィールドの長さと一致には、コンテンツに合わせてサイズにする必要があります。  
   
-![: 正しくないドロップダウン幅では、表示されるコンテンツには長すぎます。] (../../extensibility/ux-guidelines/media/0707-03_incorrectdropdownlayout.png "0707 03_IncorrectDropDownLayout")<br />: 正しくないドロップダウン幅では、表示されるコンテンツには長すぎます。
+![: 正しくないドロップダウン幅では、表示されるコンテンツには長すぎます。](../../extensibility/ux-guidelines/media/0707-03_incorrectdropdownlayout.png "0707 03_IncorrectDropDownLayout")<br />: 正しくないドロップダウン幅では、表示されるコンテンツには長すぎます。
   
-![: 適切なドロップダウン リストのサイズ、翻訳の増加を許可するが、不必要に長い。] (../../extensibility/ux-guidelines/media/0707-04_correctdropdownlayout.png "0707 04_CorrectDropDownLayout")<br />: 適切なドロップダウン リストのサイズ、翻訳の増加を許可するが、不必要に長い。 
+![: 適切なドロップダウン リストのサイズ、翻訳の増加を許可するが、不必要に長い。](../../extensibility/ux-guidelines/media/0707-04_correctdropdownlayout.png "0707 04_CorrectDropDownLayout")<br />: 適切なドロップダウン リストのサイズ、翻訳の増加を許可するが、不必要に長い。 
   
 ###  <a name="BKMK_CheckBoxes"></a> チェック ボックス  
 一般的な操作の動作に従って、[チェック ボックスについては、Windows デスクトップ](/windows/desktop/uxguide/ctrl-check-boxes)します。  
@@ -108,9 +108,9 @@ ms.locfileid: "39512318"
   
 -   チェック ボックスをテキストの最初の行のベースラインに揃えます。  
   
-     ![: 正しくないチェック ボックスは、テキストの中心します。] (../../extensibility/ux-guidelines/media/0707-05_incorrectcheckboxalign.png "0707 05_IncorrectCheckBoxAlign")<br />: 正しくないチェック ボックスは、テキストの中心します。
+     ![: 正しくないチェック ボックスは、テキストの中心します。](../../extensibility/ux-guidelines/media/0707-05_incorrectcheckboxalign.png "0707 05_IncorrectCheckBoxAlign")<br />: 正しくないチェック ボックスは、テキストの中心します。
   
-     ![: 正しいチェック ボックスは、テキストの最初の行に配置します。] (../../extensibility/ux-guidelines/media/0707-06_correctcheckboxalign.png "0707 06_CorrectCheckBoxAlign")<br />: 正しいチェック ボックスは、テキストの最初の行に配置します。
+     ![: 正しいチェック ボックスは、テキストの最初の行に配置します。](../../extensibility/ux-guidelines/media/0707-06_correctcheckboxalign.png "0707 06_CorrectCheckBoxAlign")<br />: 正しいチェック ボックスは、テキストの最初の行に配置します。
   
 ###  <a name="BKMK_RadioButtons"></a> オプション ボタン  
 一般的な操作の動作に従って、[ラジオ ボタンの Windows デスクトップ ガイドライン](/windows/desktop/uxguide/ctrl-radio-buttons)します。  
@@ -346,9 +346,9 @@ Visual Studio でのほとんどのボタンは、ユーティリティのダイ
 #### <a name="selection"></a>選択ツール  
 ツリー ビュー内のノードを選択すると、強調表示がツリー ビュー コントロールの幅いっぱいに展開する必要があります。 これにより、ユーザーが選択した項目を明確に識別できます。 選択範囲の色は、現在の Visual Studio のテーマを反映します。  
   
-![正しい: 選択したノードの強調表示には、ツリー ビュー コントロールの幅全体が収まるようにします。] (../../extensibility/ux-guidelines/media/070705-1_treeviewcorrect.png "070705 1_TreeViewCorrect")<br />正しい: 選択したノードの強調表示には、ツリー ビュー コントロールの幅全体が収まるようにします。
+![正しい: 選択したノードの強調表示には、ツリー ビュー コントロールの幅全体が収まるようにします。](../../extensibility/ux-guidelines/media/070705-1_treeviewcorrect.png "070705 1_TreeViewCorrect")<br />正しい: 選択したノードの強調表示には、ツリー ビュー コントロールの幅全体が収まるようにします。
   
-![正しくない: 選択したノードの強調表示は、ツリー ビュー コントロールの幅全体に収まりません。] (../../extensibility/ux-guidelines/media/070705-3_treeviewincorrect2.png "070705 3_TreeViewIncorrect2")<br />正しくない: 選択したノードの強調表示は、ツリー ビュー コントロールの幅全体に収まりません。
+![正しくない: 選択したノードの強調表示は、ツリー ビュー コントロールの幅全体に収まりません。](../../extensibility/ux-guidelines/media/070705-3_treeviewincorrect2.png "070705 3_TreeViewIncorrect2")<br />正しくない: 選択したノードの強調表示は、ツリー ビュー コントロールの幅全体に収まりません。
   
 #### <a name="icons"></a>アイコン  
 項目間の相違点を特定する視覚的に支援している場合、ツリー ビュー コントロールのアイコンを使用のみする必要があります。 一般に、アイコンは、アイコンが要素の種類を区別するために情報を保持する異種のリストでのみ使用する必要があります。 同種のリストのアイコンを使用してノイズとして頻繁に表示できるし、避ける必要があります。 その場合はグループのアイコン (親) には、その中の項目の種類を伝達できます。 この規則の例外は、アイコンは動的でありの状態を示すために使用がかどうかになります。  
@@ -356,14 +356,14 @@ Visual Studio でのほとんどのボタンは、ユーティリティのダイ
 #### <a name="scroll-bars"></a>スクロール バー  
 コンテンツがツリー ビュー コントロール内に収まる場合、スクロール バーを非表示常にする必要があります。 スクロール可能なウィンドウを非表示、または半透明にして、フォーカスのあるウィンドウのツリー ビューを格納しているときに表示またはツリーのホバー時にそれ自体を表示するスクロール バーとして受け入れ可能です。  
   
-![内容がツリー ビュー コントロールの制限を超えたために、両方の垂直および水平スクロール バーが表示されます。] (../../extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705 4_Scrollbars")<br />内容がツリー ビュー コントロールの制限を超えたために、両方の垂直および水平スクロール バーが表示されます。
+![内容がツリー ビュー コントロールの制限を超えたために、両方の垂直および水平スクロール バーが表示されます。](../../extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705 4_Scrollbars")<br />内容がツリー ビュー コントロールの制限を超えたために、両方の垂直および水平スクロール バーが表示されます。
   
 ###  <a name="BKMK_TreeViewInteractions"></a> ツリー ビューの相互作用  
   
 #### <a name="context-menus"></a>コンテキスト メニュー  
 ツリー ビュー ノードには、コンテキスト メニューのサブメニューで開くオプションを表示できます。 通常、これは、ユーザーが項目を右クリックしてまたは選択された項目を持つ Windows キーボードでメニュー キーを押したときに発生します。 ノードがフォーカスでが選択されていることは重要です。 これにより、ユーザーに属しているサブメニュー項目を識別できます。  
   
-![項目をユーザーに通知するコンテキスト メニューの向上のフォーカスの生成がどの項目が選択されています。] (../../extensibility/ux-guidelines/media/070705-5_contextmenu.png "070705 5_ContextMenu")<br />項目をユーザーに通知するコンテキスト メニューの向上のフォーカスの生成がどの項目が選択されています。
+![項目をユーザーに通知するコンテキスト メニューの向上のフォーカスの生成がどの項目が選択されています。](../../extensibility/ux-guidelines/media/070705-5_contextmenu.png "070705 5_ContextMenu")<br />項目をユーザーに通知するコンテキスト メニューの向上のフォーカスの生成がどの項目が選択されています。
   
 #### <a name="keyboard"></a>キーボード  
 ツリー ビュー アイテムを選択し、キーボードを使用してノードの展開/折りたたみ機能が提供する必要があります。 これにより、ナビゲーションが、当社のアクセシビリティ要件を満たしていること。  

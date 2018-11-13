@@ -13,16 +13,16 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc0783ad10b01e8dcc7f5f85fa627ec142334597
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 3f5ddf5a42199c8097e982c6ddd8e559185787fb
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50218619"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50672341"
 ---
 # <a name="options-text-editor-cc-experimental"></a>[オプション]、[テキスト エディター]、[C/C++]、[実験用]
 
-これらのオプションを変更することによって、C または C++ でプログラミングを行うときに、IntelliSense に関連する動作と参照データベースを変更できます。 これらの機能は完全に実験用であり、Visual Studio の将来のリリースでは変更または削除される可能性があります。 このトピックでは、Visual Studio 2017 のオプションについて説明します。 Visual Studio 2015 の詳細については、「[[オプション]、[テキスト エディター]、[C/C++]、[実験用]](https://msdn.microsoft.com/library/mt591979.aspx)」を参照してください。
+これらのオプションを変更することによって、C または C++ でプログラミングを行うときに、IntelliSense に関連する動作と参照データベースを変更できます。 これらの機能は完全に実験用であり、Visual Studio の将来のリリースでは変更または削除される可能性があります。 このトピックでは、Visual Studio 2017 のオプションについて説明します。 Visual Studio 2015 については、目次の上のセレクターで **2015** を選択してください。
 
 このプロパティ ページにアクセスするには、**Control + Q** キーを押し、`Quick Launch` をアクティブ化してから「実験用」と入力します。 クイック起動では、最初の数文字に一致するページが検索されます。 **[ツール] - [オプション]** を選択して **[テキスト エディター]** を展開し、**[C/C++]**、**[実験用]** の順に選択してアクセスすることもできます。
 
@@ -57,4 +57,4 @@ ms.locfileid: "50218619"
 ## <a name="see-also"></a>関連項目
 
 - [言語固有のエディター オプションの設定](../../ide/reference/setting-language-specific-editor-options.md)
-- [C++ でのリファクタリング (VC のブログ)](http://blogs.msdn.com/b/vcblog/archive/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview.aspx)
+- [C++ でのリファクタリング (VC のブログ)](https://blogs.msdn.microsoft.com/vcblog/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview/)

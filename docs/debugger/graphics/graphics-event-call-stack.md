@@ -24,7 +24,7 @@ Visual Studio Graphics Analyzer のグラフィックス イベント呼び出�
   
  [イベント呼び出し履歴] ウィンドウを次に示します。  
   
- ![DrawIndexed イベントの前の呼び出し履歴。] (media/gfx_diag_demo_graphics_event_call_stack_orientation.png "gfx_diag_demo_graphics_event_call_stack_orientation")  
+ ![DrawIndexed イベントの前の呼び出し履歴。](media/gfx_diag_demo_graphics_event_call_stack_orientation.png "gfx_diag_demo_graphics_event_call_stack_orientation")  
   
 ## <a name="understanding-the-graphics-event-call-stack"></a>グラフィックス イベント呼び出し履歴について  
  [イベント呼び出し履歴] を使用すると、特定の Direct3D イベントが発生するまでの実行フローを理解できます。 表示する点が、現在のスレッドの現在の呼び出し履歴を表示するアプリの実行中に、代わりに、呼び出し履歴には、選択した Direct3D イベントの発生時に存在していた Visual Studio の呼び出し履歴 ウィンドウと似ています。 [イベント呼び出し履歴] から、選択した Direct3D イベントの呼び出しサイトに移動して、前後のコードを確認できます。  

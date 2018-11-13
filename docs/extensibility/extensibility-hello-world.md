@@ -1,5 +1,5 @@
 ---
-title: Hello World |Microsoft Docs
+title: Hello World の拡張機能のチュートリアル |Microsoft Docs
 ms.custom: ''
 ms.date: 07/10/2017
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 91d9c809d16a3763bed75d5de4c03bd7112c6e8a
-ms.sourcegitcommit: e680e8ac675f003ebcc8f8c86e27f54ff38da662
+ms.openlocfilehash: e2122a98778372690990a75269be2f3087653678
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356757"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349466"
 ---
 # <a name="create-your-first-extension-hello-world"></a>初めての拡張機能の作成: Hello World
 
@@ -30,6 +30,9 @@ ms.locfileid: "49356757"
 この例で使用します (Visual C#)「と Hello World!」という名前のカスタム メニュー ボタンを追加するには 次に示します。
 
 ![Hello World コマンド](media/hello-world-say-hello-world.png)
+
+> [!NOTE]
+> この記事では、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac では、次を参照してください。[拡張機能のチュートリアルでは、Visual Studio for Mac](/visualstudio/mac/extending-visual-studio-mac-walkthrough)します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -133,6 +136,6 @@ Visual Studio の実験用インスタンスでソース コードを実行で�
 
 Visual Studio Extensibility の操作の基礎を理解できた次詳細についてここに示します。
 
-* [Visual Studio 拡張機能の開発を始める](starting-to-develop-visual-studio-extensions.md)-サンプル、チュートリアル。 拡張機能を公開します。
+* [Visual Studio 拡張機能の開発を始める](starting-to-develop-visual-studio-extensions.md)-サンプル、チュートリアル。 拡張機能を公開
 * [新機能については、Visual Studio 2017 SDK](what-s-new-in-the-visual-studio-2017-sdk.md) -Visual Studio 2017 での新しい拡張機能
 * [Visual Studio SDK の内部](internals/inside-the-visual-studio-sdk.md)-Visual Studio 機能拡張の詳細を説明します。
