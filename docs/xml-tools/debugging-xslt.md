@@ -10,27 +10,27 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e48d777332c63859f84f56425c786b430018d1f
-ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
+ms.openlocfilehash: 55c52d1ed054d5005a68f160e0b5442fbd02c3f1
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34547999"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51348540"
 ---
 # <a name="debugging-xslt"></a>XSLT のデバッグ
 
 Visual Studio デバッガーを使用して XSLT をデバッグすることができます。 このデバッガーは、ブレークポイントの設定や、XSLT 実行状態の表示などをサポートします。
 
 > [!NOTE]
-> XSLT デバッガーを Visual Studio 2017 の Enterprise edition でできるだけです。
+> XSLT デバッガーには、Visual Studio 2017 の Enterprise edition ではできるだけです。
 
 ## <a name="xslt-profiler"></a>XSLT プロファイラー
 
-[XSLT profiler](../xml-tools/xslt-profiler.md)開発者を計測、評価、および詳細な XSLT パフォーマンス レポートを作成することで XSLT コード内のパフォーマンス関連の問題を特定できるようにするツールです。
+[XSLT プロファイラー](../xml-tools/xslt-profiler.md)計測、評価、および詳細な XSLT パフォーマンス レポートを作成して XSLT コード内のパフォーマンスに関連する問題を特定できるようにするツールです。
 
 ## <a name="related-sections"></a>関連項目
 
-- [XSLT スタイル シート編集](../xml-tools/editing-xslt-style-sheets.md)スタイル シートを編集する XML エディターの使用について説明します。
-- [XML データを操作するときのセキュリティに関する考慮事項](../xml-tools/security-considerations-when-working-with-xml-data.md)XML エディターや XSLT デバッガーを使用する際に知っておくべきセキュリティの問題について説明します。
-- [Visual Studio でデバッグ](../debugger/debugging-in-visual-studio.md)Visual Studio デバッガーが導入されています。
-- [XSLT 参照](http://msdn.microsoft.com/678bcd68-cbbb-4be5-9dd2-40f94488a1cf)XSLT 要素と関数についての参考資料を提供します。
+- [XSLT スタイル シートの編集](../xml-tools/editing-xslt-style-sheets.md)XML エディターを使用したスタイル シートの編集について説明します。
+- [XML データを使用する場合のセキュリティに関する考慮事項](../xml-tools/security-considerations-when-working-with-xml-data.md)XML エディターや XSLT デバッガーを使用する際に理解する必要があるセキュリティの問題について説明します。
+- [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)Visual Studio デバッガーが導入されています。
+- [XSLT 参照](https://msdn.microsoft.com/678bcd68-cbbb-4be5-9dd2-40f94488a1cf)XSLT 要素と関数の参照資料を提供します。

@@ -1,7 +1,7 @@
 ---
-title: R コードの編集
+title: R コードを編集する
 description: Visual Studio では、拡張機能の使用に関するすべての機能は維持されたまま、R 用に調整された編集エクスペリエンスが提供されます。
-ms.date: 01/24/2018
+ms.date: 11/05/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-rtvs
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 9eef75c505cb3ed41e24f99e08468512e424884a
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: c1d44e6d316db2ddce799784169a11a06578fe7f
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36235338"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220880"
 ---
 # <a name="edit-r-code-in-visual-studio"></a>Visual Studio で R コードを編集する
 
-R Tools for Visual Studio (RTVS) により、Visual Studio の編集エクスペリエンスは R 用に変わりますが、拡張機能を使用するすべての機能は維持されます (たとえば、VIM キー バインドを使いたい場合は、無料の [VsVim 拡張機能](https://visualstudiogallery.msdn.microsoft.com/59ca71b3-a4a3-46ca-8fe1-0e90e3f79329)を Visual Studio ギャラリーからインストールできます)。
+R Tools for Visual Studio (RTVS) により、Visual Studio の編集エクスペリエンスは R 用に変わりますが、拡張機能を使用するすべての機能は維持されます (たとえば、VIM キー バインドを使いたい場合は、無料の [VsVim 拡張機能](https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim)を Visual Studio Marketplace からインストールできます)。
 
 この記事で説明する機能に加えて、[IntelliSense](r-intellisense.md)、[lint](linting-r-code.md)、[コード スニペット](code-snippets-for-r.md)、[R Markdown](rmarkdown-with-r-in-visual-studio.md) に関する説明もご覧ください。
 

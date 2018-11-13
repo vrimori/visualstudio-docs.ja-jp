@@ -1,5 +1,5 @@
 ---
-title: MSTest コマンドライン オプション
+title: VSTest.Console.exe のコマンド ライン オプション
 ms.date: 07/12/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -12,12 +12,12 @@ author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f090607f1ebae6a03c7f12536e0dd5d46199f6e
-ms.sourcegitcommit: 7bb0225e1fd45999ce09e0b49c2cfae515c27e11
+ms.openlocfilehash: 4394fe8d7920f4127f5043808003d400bc991590
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45612663"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220971"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe のコマンド ライン オプション
 
@@ -41,10 +41,10 @@ ms.locfileid: "45612663"
 |**/Enablecodecoverage**|テストの実行で、データ診断アダプター CodeCoverage を有効にします。<br />設定ファイルで指定されていない場合は、既定の設定が使用されます。|
 |**/InIsolation**|分離プロセスでテストを実行します。<br />この分離により、テストでエラーが発生しても *vstest.console.exe* プロセスが停止することは少なくなりますが、テストの実行速度は低下する可能性があります。|
 |**/UseVsixExtensions**|このオプションでは、テストの実行の際に、*vstest.console.exe* プロセスでインストール済みの VSIX 拡張機能 (ある場合) を使用するかスキップするかを指定します。<br />このオプションは非推奨です。 Visual Studio の次のメジャー リリース以降、このオプションは削除される可能性があります。 NuGet パッケージとして利用可能な拡張機能の使用に移行してください。<br />例 : `/UseVsixExtensions:true`|
-|**/TestAdapterPath:[*パス*]**|*vstest.console.exe* プロセスで、テストの実行の際に指定されたパス (ある場合) からカスタム テスト アダプターを使用するように強制します。<br />例 : `/TestAdapterPath:&lt;pathToCustomAdapters&gt;`|
+|**/TestAdapterPath:[*パス*]**|*vstest.console.exe* プロセスで、テストの実行の際に指定されたパス (ある場合) からカスタム テスト アダプターを使用するように強制します。<br />例 : `/TestAdapterPath:[pathToCustomAdapters]`|
 |**/Platform:[*プラットフォームの種類*]**|テストの実行対象とするプラットフォーム アーキテクチャです。<br />有効な値は x86、x64、ARM です。|
 |**/Framework: [*フレームワークのバージョン*]**|テストの実行に使用する対象の .NET Framework バージョンを指定します。<br />有効な値は、Framework35、Framework40、Framework45、FrameworkUap10 です。<br />ターゲット フレームワークが **Framework35** として指定されている場合、テストは CLR 4.0 の "互換モード" で実行されます。<br />例 : `/Framework:framework40`|
-|**/TestCaseFilter:[*式*]**|指定した式に一致するテストを実行します。<br /><Expression\> は <プロパティ\>=<値\>[&#124;<Expression\>] という形式です。<br />例 : `/TestCaseFilter:"Priority=1"`<br />例 : `/TestCaseFilter:"TestCategory=Nightly&#124;FullyQualifiedName=Namespace.ClassName.MethodName"`<br />**/TestCaseFilter** コマンドライン オプションを、**/Tests** コマンドライン オプションと一緒に使用することはできません。 <br />式の作成と使用については、「[TestCase filter](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)」(TestCase フィルター) を参照してください。|
+|**/TestCaseFilter:[*式*]**|指定した式に一致するテストを実行します。<br /><Expression>\> は <property\>=<value\>[\|<Expression\>] の形式です。<br />例 : `/TestCaseFilter:"Priority=1"`<br />例: `/TestCaseFilter:"TestCategory=Nightly|FullyQualifiedName=Namespace.ClassName.MethodName"`<br />**/TestCaseFilter** コマンドライン オプションを、**/Tests** コマンドライン オプションと一緒に使用することはできません。 <br />式の作成と使用については、「[TestCase filter](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)」(TestCase フィルター) を参照してください。|
 |**/?**|使用情報を表示します。|
 |**/Logger:[*uri/friendlyname*]**|テスト結果のロガーを指定します。<br />例: Visual Studio テスト結果ファイル (TRX) に結果のログを書き込むには、**/Logger:trx** を使用します。<br />例: Team Foundation Server にテスト結果を発行するには、次のように TfsPublisher を使用します。<br />**/logger:TfsPublisher;**<br />**Collection=<プロジェクト URL\>;**<br />**BuildName=<ビルド名\>;**<br />**TeamProject=<プロジェクト名\>;**<br />**[;Platform=<既定値は "Any CPU">]**<br />**[;Flavor = <既定値は "Debug">]**<br />**[;RunTitle=<タイトル\>]**|
 |**/ListTests: [*ファイル名*]**|指定されたテスト コンテナーから探索されたテストを一覧表示します。|

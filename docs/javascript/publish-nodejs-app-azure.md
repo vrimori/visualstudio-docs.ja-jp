@@ -2,7 +2,7 @@
 title: Node.js アプリを Linux App Service に発行する
 description: Visual Studio で作成した Node.js アプリケーションを、Azure 上の Linux App Service に発行できます
 ms.custom: ''
-ms.date: 06/10/2018
+ms.date: 11/1/2018
 ms.technology: vs-nodejs
 ms.topic: tutorial
 ms.devlang: javascript
@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: cf96610abcd0cc18bdaab6177980ca04e0232642
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: 8af99919fe80f1f5e2776e381d24aa8d37bad36d
+ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924772"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50750768"
 ---
 # <a name="publish-a-nodejs-application-to-azure-linux-app-service"></a>Node.js アプリケーションを Azure (Linux App Service) に発行する
 
@@ -42,15 +42,19 @@ Linux App Service は、Node.js アプリケーションを実行するために
 
 1. **[ファイル]** > **[新しいプロジェクト]** ダイアログ ボックスを使って、新しい TypeScript Express アプリを作成します。
 
+1. **[TypeScript]** ノードで **[基本の Node.js Express 4 アプリケーション]** を選択します。
+
     ![新しい TypeScript Express アプリを作成する](../javascript/media/azure-ts-express-app.png)
 
-2. **F5** キーを押してアプリをビルドして実行し、すべてが想定どおり実行していることを確認します。
+1. **[OK]** をクリックして、Visual Studio にプロジェクトを作成します。
 
-3. **[ファイル]** > **[ソース管理に追加]** を選択して、プロジェクト用にローカル Git リポジトリを作成します。
+1. **F5** キーを押してアプリをビルドして実行し、すべてが想定どおり実行していることを確認します。
+
+1. **[ファイル]** > **[ソース管理に追加]** を選択して、プロジェクト用にローカル Git リポジトリを作成します。
 
     この時点で、Express フレームワークを使用する、TypeScript で記述された Node.js アプリが動作するようになり、ローカル ソース管理にチェックインされます。
 
-4. 次の手順に進む前に、必要に応じてプロジェクトを編集します。
+1. 次の手順に進む前に、必要に応じてプロジェクトを編集します。
 
 ## <a name="push-code-from-visual-studio-to-github"></a>Visual Studio から GitHub にコードをプッシュする
 

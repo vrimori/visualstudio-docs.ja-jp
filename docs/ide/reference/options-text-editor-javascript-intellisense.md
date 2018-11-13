@@ -1,6 +1,6 @@
 ---
 title: '[オプション]、[テキスト エディター]、[JavaScript]、[IntelliSense]'
-ms.date: 11/04/2016
+ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,54 +14,32 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 36ca451f4585e57c430456412e1811ddb56d8adf
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 742d6394975b6920218579e1b4652bb2e99c479c
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50220392"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50670781"
 ---
 # <a name="options-text-editor-javascript-intellisense"></a>[オプション]、[テキスト エディター]、[JavaScript]、[IntelliSense]
-JavaScript での IntelliSense の動作設定を変更するには、 **[オプション]** ダイアログ ボックスの **[IntelliSense]** ページを使用します。 **[IntelliSense]** ページにアクセスするには、メニュー バーの **[ツール]**, **[オプション]** をクリックし、 **[テキスト エディター]**, **[JavaScript]**, **[IntelliSense].** と展開します。
+JavaScript での IntelliSense の動作設定を変更するには、 **[オプション]** ダイアログ ボックスの **[IntelliSense]** ページを使用します。 **[IntelliSense]** ページにアクセスするには、メニュー バーの **[ツール]** > **[オプション]** を選択し、**[テキスト エディター]** > **[JavaScript]** > **[IntelliSense]** の順に展開します。
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
 **[IntelliSense]** ページには、以下のセクションがあります。
 
-## <a name="validation"></a>検証
- これらの設定を使用して、JavaScript エディターがドキュメントの構文を検証する方法を設定できます。
-
-## <a name="uielement-list"></a>UIElement の一覧
- **[構文エラーの表示]**
-
- このチェック ボックスをオフにすると、JavaScript エディターに構文エラーが表示されなくなります。 このオプションは、自分が記述したものではなく、構文エラーを修正する必要がないコードを扱うときに便利です。
-
- このチェック ボックスをオンにすると、 **[エラーを警告として表示]** チェック ボックスをオンにできるようになります。
-
- **[エラーを警告として表示]**
-
- このチェック ボックスをオンにすると、JavaScript のエラーがエラー一覧ウィンドウにエラーではなく警告として表示されます。
-
- **[その他のファイル プロジェクト内のファイルのリモート参照 (http:// など) をダウンロードする]**
-
- このチェック ボックスをオンにすると、プロジェクトのコンテキストの外部で開かれる JavaScript ファイルがある場合、IntelliSense の情報を提供するために、Visual Studio によってそのファイルで参照されているリモート JavaScript ファイルがダウンロードされます。 このオプションを選択している場合、JavaScript ファイルに参照として含まれるファイルがダウンロードされます。
-
-> [!NOTE]
-> Web プロジェクトでは、プロジェクトで参照されるリモート ファイルは既定でダウンロードされます。
-
-
 ## <a name="statement-completion"></a>[入力候補]
  これらのオプションを使用して、IntelliSense のステートメントの入力候補の動作を変更できます。
 
-## <a name="uielement-list"></a>UIElement の一覧
+### <a name="uielement-list"></a>UIElement の一覧
  **[Tab キーと Enter キーのみをコミットに使用する]**
 
- このチェック ボックスをオンにすると、Tab または Enter キーを選択した後にのみ、JavaScript コード エディターによって入力候補一覧で選択された項目を含むステートメントが追加されます。 このチェック ボックスがオフの場合、ピリオド、コンマ、コロン、始めかっこ、始め中かっこ ({) など、その他の文字でも選択された項目を含むステートメントを追加できます。
+ このチェック ボックスをオンにすると、**Tab** または **Enter** キーを押した後でのみ、JavaScript コード エディターによって入力候補一覧で選択された項目を含むステートメントが追加されます。 このチェック ボックスをオフにすると、ピリオド、コンマ、コロン、左かっこ、左中かっこ ({) など、その他の文字でも選択された項目を含むステートメントを追加できます。
 
 ## <a name="references"></a>参照
  これらのオプションを使用して、JavaScript のさまざまなプロジェクトの種類のスコープ内にある IntelliSense (.js) ファイルの種類を指定できます。 通常、IntelliSense 参照は、グローバル オブジェクトに IntelliSense サポートを提供するために使用されます。 このページを使用して、実行時に読み込む必要があるスクリプトの読み込み順序を設定したり、IntelliSense の拡張ファイルを追加したりすることもできます。
 
-## <a name="uielement-list"></a>UIElement の一覧
+### <a name="uielement-list"></a>UIElement の一覧
  **[参照グループ]**
 
  このオプションで、参照グループの種類を指定します。 3 つの参照グループがサポートされています。
@@ -87,6 +65,15 @@ JavaScript での IntelliSense の動作設定を変更するには、 **[オプ
 **[Add a reference to the group] (グループへの参照の追加)**
 
 このオプションを使用すると、適切なファイルを参照して IntelliSense (.js) ファイルを追加できます。
+
+**[その他のファイル プロジェクト内のファイルのリモート参照 (http:// など) をダウンロードする]**
+
+このチェック ボックスをオンにすると、プロジェクトのコンテキストの外部で開かれる JavaScript ファイルがある場合、IntelliSense の情報を提供するために、Visual Studio によってそのファイルで参照されているリモート JavaScript ファイルがダウンロードされます。 このオプションを選択している場合、JavaScript ファイルに参照として含まれるファイルがダウンロードされます。
+
+> [!NOTE]
+> Web プロジェクトでは、プロジェクトで参照されるリモート ファイルは既定でダウンロードされます。
+
+
 
 ## <a name="see-also"></a>参照
 

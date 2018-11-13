@@ -24,7 +24,7 @@ Visual Studio Graphics Analyzer の [ピクセル履歴] ウィンドウでは�
   
  [ピクセル履歴] ウィンドウを次に示します。  
   
- ![その履歴で次の 3 つの Direct3D イベントと共にピクセルです。] (media/gfx_diag_demo_pixel_history_orientation.png "gfx_diag_demo_pixel_history_orientation")  
+ ![その履歴で次の 3 つの Direct3D イベントと共にピクセルです。](media/gfx_diag_demo_pixel_history_orientation.png "gfx_diag_demo_pixel_history_orientation")  
   
 ## <a name="understanding-the-pixel-history-window"></a>[ピクセル履歴] ウィンドウについて  
  [ピクセル履歴] を使用すると、レンダー ターゲットの特定のピクセルが、特定のフレームの処理で Direct3D イベントの影響をどのように受けたかを分析できます。 ピクセルの最終的なカラー値が、後続のイベントまたは同じイベント内の後続のプリミティブによって変更された場合でも、レンダリングに関する問題の発生元である Direct3D イベントを正確に特定できます。 たとえば、ピクセルが正しくレンダリングされず、その色がフレームバッファー内で別の半透明ピクセルの色と混ざり合うことによって、あいまいになる場合があります。 レンダー ターゲットの最終的な内容だけを手がかりに、このような問題を診断することは困難です。  
@@ -42,9 +42,9 @@ Visual Studio Graphics Analyzer の [ピクセル履歴] ウィンドウでは�
   
 |アイコン|除外の理由|  
 |----------|--------------------------|  
-|![深度テスト エラーのアイコン。] (media/vsg_hist_icon_failed_depth.png "vsg_hist_icon_failed_depth")|ピクセルは深度テストに失敗したため除外されました。|  
-|![ハサミ テスト エラーのアイコン。] (media/vsg_hist_icon_failed_scissor.png "vsg_hist_icon_failed_scissor")|ピクセルはハサミ テストに失敗したため除外されました。|  
-|![ステンシル テスト エラーのアイコン。] (media/vsg_hist_icon_failed_stencil.png "vsg_hist_icon_failed_stencil")|ピクセルはステンシル テストに失敗したため除外されました。|  
+|![深度テスト エラーのアイコン。](media/vsg_hist_icon_failed_depth.png "vsg_hist_icon_failed_depth")|ピクセルは深度テストに失敗したため除外されました。|  
+|![ハサミ テスト エラーのアイコン。](media/vsg_hist_icon_failed_scissor.png "vsg_hist_icon_failed_scissor")|ピクセルはハサミ テストに失敗したため除外されました。|  
+|![ステンシル テスト エラーのアイコン。](media/vsg_hist_icon_failed_stencil.png "vsg_hist_icon_failed_stencil")|ピクセルはステンシル テストに失敗したため除外されました。|  
   
 ### <a name="draw-call-exclusion"></a>描画呼び出しの除外  
  描画呼び出し内のすべてのプリミティブが、テストに失敗したことが原因で、レンダー ターゲットに影響を与えるプリミティブから除外された場合、その描画呼び出しは展開できず、除外の理由に対応するアイコンが、描画呼び出しの横に表示されます。 描画呼び出しの除外の理由は、プリミティブの除外の理由と似ており、そのアイコンも似ています。  

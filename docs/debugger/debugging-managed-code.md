@@ -18,11 +18,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c40d5b088dbf41e56fff1ad41b6ce4381f6602b3
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 92485f93bb4c2d1782f907acdb1e5252f611cdbe
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
+ms.lasthandoff: 11/12/2018
 ms.locfileid: "39179480"
 ---
 # <a name="debugging-managed-code"></a>マネージド コードのデバッグ
@@ -34,8 +34,7 @@ ms.locfileid: "39179480"
 [出力ウィンドウの診断メッセージ](../debugger/diagnostic-messages-in-the-output-window.md)  
 について説明します、<xref:System.Diagnostics.Debug>と<xref:System.Diagnostics.Trace>クラスを実行時のメッセージを記述できます、**出力**ウィンドウ。 Debug クラスと Trace クラスに含まれている出力メソッドを使用すると、実行の中断を伴わない情報出力、および指定した条件が満たされなかった場合に実行の中断を伴う情報出力ができます。
 
-
-  [マネージド コードのアサーション](../debugger/assertions-in-managed-code.md)  
+[マネージド コードのアサーション](../debugger/assertions-in-managed-code.md)  
 マネージド コードのアサーションについて説明し、`Assert` メソッドの引数として指定された条件をテストします。 ここでは、サンプル コード、<xref:System.Diagnostics.Debug> クラスと <xref:System.Diagnostics.Trace> クラスのメソッドの使用に関する情報、デバッグ バージョンとリリース バージョンのコードの注意事項、副作用、アサートの引数、アサートの動作のカスタマイズ、および構成ファイルについても説明します。
 
 [Visual Basic の Stop ステートメント](../debugger/stop-statements-in-visual-basic.md)  
@@ -47,7 +46,7 @@ Windows フォームを作成し、そのフォームをデバッグする方法
 [OnStart メソッドのデバッグ](../debugger/how-to-debug-the-onstart-method.md)  
 マネージド Windows サービスの `OnStart` メソッドのデバッグに使用できるコード例を紹介します。 Windows サービスの `OnStart` メソッドをデバッグするには、サービスをシミュレートする数行のコードを追加する必要があります。
 
-[混合モードのデバッグ](../debugger/debugging-mixed-mode-applications.md)  
+[Mixed-Mode Debugging](../debugger/debugging-mixed-mode-applications.md)  
 混合モード アプリケーションのデバッグについて説明します。 これは、ネイティブ コードとマネージド コードを組み合わせたアプリケーションです。
 
 [エラー: システム上でカーネル デバッガーが有効になっているため、デバッグできません](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)  
