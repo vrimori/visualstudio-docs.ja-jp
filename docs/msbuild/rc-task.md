@@ -24,15 +24,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b7751a53430518df9ce80fd053be5414e015143d
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 0db327943dcaf9b14a921cf4437b6c23874b4380
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39151655"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219433"
 ---
 # <a name="rc-task"></a>RC タスク
-Microsoft Windows リソース コンパイラ ツールである *rc.exe* をラップします。 **RC** タスクは、カーソル、アイコン、ビットマップ、ダイアログ ボックス、フォントなどのリソースをコンパイルし、リソース ファイル (*.res*) を作成します。 詳しくは、「[リソース コンパイラ](https://docs.microsoft.com/en-us/windows/desktop/menurc/resource-compiler)」をご覧ください。
+Microsoft Windows リソース コンパイラ ツールである *rc.exe* をラップします。 **RC** タスクは、カーソル、アイコン、ビットマップ、ダイアログ ボックス、フォントなどのリソースをコンパイルし、リソース ファイル (*.res*) を作成します。 詳しくは、「[リソース コンパイラ](https://docs.microsoft.com/windows/desktop/menurc/resource-compiler)」をご覧ください。
   
 ## <a name="parameters"></a>パラメーター  
  以下の表で、RC タスクのパラメーターについて説明します。 タスク パラメーターの大部分とパラメーターのいくつかのセットは、コマンド ライン オプションに対応します。  

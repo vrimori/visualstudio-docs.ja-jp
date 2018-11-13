@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2f4e486ad1e19a85bc0f7c64a56db9303bb70960
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 550963966b45ed2d8024b36735f17ff24b6701fc
+ms.sourcegitcommit: 12d6398c02e818de4fbcb4371bae9e5db6cf9509
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35673614"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050210"
 ---
 # <a name="assemblies-in-the-visual-studio-tools-for-office-runtime"></a>Visual Studio Tools for Office ランタイムのアセンブリ
   Office プロジェクトを作成すると、Visual Studio によって、そのプロジェクト タイプとプロジェクトの対象 .NET Framework に使用する [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] アセンブリの参照が自動的に追加されます。 .NET Framework 3.5、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]、 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]の Office 拡張機能にさまざまなアセンブリがあります。 Office 拡張機能の詳細については、次を参照してください。 [Visual Studio Tools for Office runtime の概要](../vsto/visual-studio-tools-for-office-runtime-overview.md)します。  
@@ -59,7 +59,7 @@ ms.locfileid: "35673614"
 |Microsoft.Office.Tools.Word.v9.0.dll|Word ソリューションのホスト項目とホスト コントロールを提供します。 詳細については、次を参照してください。[拡張オブジェクトを使用して Word の自動化](../vsto/automating-word-by-using-extended-objects.md)します。|  
 |Microsoft.Office.Tools.v9.0.dll|次の型を提供します。<br /><br /> - [RemoteBindableComponent](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb546360(v=vs.90))クラスで、ホスト コントロールでドキュメント レベルのカスタマイズのデータ バインディング機能を提供します。<br />-Visual Studio Tools for Office runtime インフラストラクチャの一部であり、コードから直接使用するものではありませんその他の種類です。|  
 |Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll|次の型を提供します。<br /><br /> -<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute>属性と<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType>インターフェイスで、ドキュメント レベル カスタマイズでキャッシュ データ オブジェクトを使用することができます。 詳細については、次を参照してください。[データ キャッシュ](../vsto/caching-data.md)します。<br />-Visual Studio Tools for Office ランタイムによってスローされる例外。<br />-Visual Studio Tools for Office runtime インフラストラクチャの一部であり、コードから直接使用するものではありませんその他の種類です。|  
-|Microsoft.VisualStudio.Tools.Applications.Runtime.v10.0.dll|Office ソリューションの ClickOnce インストーラーの最後の手順として追加のインストール手順を実行するために実装できる <xref:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction> インターフェイスを提供します。 詳細については、次を参照してください。[高度な Office ソリューションの配置](http://msdn.microsoft.com/9147b6f6-849f-4cb1-b2c5-e22658d74b02)します。|  
+|Microsoft.VisualStudio.Tools.Applications.Runtime.v10.0.dll|Office ソリューションの ClickOnce インストーラーの最後の手順として追加のインストール手順を実行するために実装できる <xref:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction> インターフェイスを提供します。 詳細については、次を参照してください。[高度な Office ソリューションの配置](/previous-versions/visualstudio/visual-studio-2010/dd234217(v=vs.100))します。|  
 |Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll|次の型を提供します。<br /><br /> -<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>クラスは、プログラムでカスタマイズ アセンブリをドキュメントにアタッチして、キャッシュされたデータをドキュメントにアクセスするを使用することができます。 詳細については、次を参照してください。 [ServerDocument クラスを使用してサーバー上のドキュメントを管理](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)します。<br />、階層を表すいくつかのクラスには、ドキュメント レベル カスタマイズ内のデータがキャッシュされます。 詳細については、次を参照してください。[サーバー上のドキュメント内のデータ アクセス](../vsto/accessing-data-in-documents-on-the-server.md)します。|  
 |Microsoft.VisualStudio.Tools.Office.Runtime.v10.0.dll|次の型を提供します。<br /><br /> リストのエントリを Office に信頼を与えるユーザー信頼を作成するのに使用できる-Microsoft.VisualStudio.Tools.Office.Runtime.Security.AddInSecurityEntry と Microsoft.VisualStudio.Tools.Office.Runtime.Security.UserInclusionList クラス.NET Framework 3.5 を対象とするソリューションです。<br />-Visual Studio Tools for Office runtime インフラストラクチャの一部であり、コードから直接使用するものではありませんその他の種類です。|  
   

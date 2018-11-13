@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 291f24c6ffdf885cf3d24c5ff163c2f4f911d7ce
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 3bb858f2ee20eb65c09dd4979f2bbba1470cbe0d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44279560"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908249"
 ---
 # <a name="debug-an-installed-app-package-in-visual-studio-uwp"></a>Visual Studio (UWP) でインストールされているアプリ パッケージをデバッグします。
 
@@ -78,18 +78,18 @@ ms.locfileid: "44279560"
 
      コンピューター名を使用してアタッチすることはできません場合、(選択した後**開始**)、代わりに IP アドレスを使用します。 XBox、HoloLens、IoT デバイスの IP アドレスを使用します。
 
-5. オプションを選択して認証する方法を選択**認証モード**します。
+6. オプションを選択して認証する方法を選択**認証モード**します。
 
     ほとんどのアプリでは、既定値をそのまま**ユニバーサル (暗号化されていないプロトコル)** します。
 
-6. デバッグするアプリの名前を選択**を実行している**または**実行されていない**選択**開始**(アプリを実行) するため、または**アタッチ**します。
+7. デバッグするアプリの名前を選択**を実行している**または**実行されていない**選択**開始**(アプリを実行) するため、または**アタッチ**します。
 
      選択した場合**起動しないが、開始時に、コードをデバッグ**、これは、Visual Studio デバッガーはカスタム時に起動するときに、アプリ パッケージにアタッチします。 これからコントロールのパスをデバッグする効果的な方法は、[さまざまな起動メソッド](/windows/uwp/xbox-apps/automate-launching-uwp-apps)、カスタム パラメーターでプロトコルのアクティブ化などです。
 
      最初に接続されているか、XBox、HoloLens、IoT デバイスにインストールされているアプリ パッケージをデバッグするときに、Visual Studio には、ターゲット デバイスのリモート デバッガーの正しいバージョンがインストールされます。 これには多少時間かかる場合があり、メッセージが表示されます``Starting remote debugger``この問題が発生します。
 
      > [!NOTE]
-> 存在する場合は、XBox または HoloLens デバイスは既に実行されている場合にアタッチされたデバッガー、アプリを再起動します。
+   > 存在する場合は、XBox または HoloLens デバイスは既に実行されている場合にアタッチされたデバッガー、アプリを再起動します。
 
 UWP アプリのリモート展開の詳細設定オプションについては、[展開とデバッグ UWP apps]((/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options) を参照してください。 
   

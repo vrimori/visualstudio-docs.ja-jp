@@ -28,22 +28,15 @@ Visual Studio でマネージ コード プロジェクトの静的コード分�
 > このセクションでは、ルール セットは、静的コード分析に関するものです。 Roslyn アナライザー パッケージの使用可能なルール セットについては、次を参照してください。 [Roslyn アナライザーの使用規則セットを使用する](analyzer-rule-sets.md)します。
 
 - ["すべての規則" 規則セット](all-rules-rule-set.md)
-- 
-  [マネージド コードの "基本正確性規則" 規則セット](basic-correctness-rules-rule-set-for-managed-code.md)
-- 
-  [マネージド コードの "基本デザイン ガイドライン規則" 規則セット](basic-design-guideline-rules-rule-set-for-managed-code.md)
-- 
-  [マネージド コードの "拡張正確性規則" 規則セット](extended-correctness-rules-rule-set-for-managed-code.md)
-- 
-  [マネージド コードの "拡張デザイン ガイドライン規則" 規則セット](extended-design-guidelines-rules-rule-set-for-managed-code.md)
-- 
-  [マネージド コードの "グローバリゼーション規則" 規則セット](globalization-rules-rule-set-for-managed-code.md)
+- [マネージド コードの "基本正確性規則" 規則セット](basic-correctness-rules-rule-set-for-managed-code.md)
+- [マネージド コードの "基本デザイン ガイドライン規則" 規則セット](basic-design-guideline-rules-rule-set-for-managed-code.md)
+- [マネージド コードの "拡張正確性規則" 規則セット](extended-correctness-rules-rule-set-for-managed-code.md)
+- [マネージド コードの "拡張デザイン ガイドライン規則" 規則セット](extended-design-guidelines-rules-rule-set-for-managed-code.md)
+- [マネージド コードの "グローバリゼーション規則" 規則セット](globalization-rules-rule-set-for-managed-code.md)
 - [マネージ コードの設定"マネージ最小規則"規則](managed-minimum-rules-rule-set-for-managed-code.md)
-- 
-  [マネージド コードの "マネージ推奨規則" 規則セット](managed-recommended-rules-rule-set-for-managed-code.md)
+- [マネージド コードの "マネージ推奨規則" 規則セット](managed-recommended-rules-rule-set-for-managed-code.md)
 - ["混合最小規則" 規則セット](mixed-minimum-rules-rule-set.md)
 - ["混合推奨規則" 規則セット](mixed-recommended-rules-rule-set.md)
 - ["ネイティブ最小規則" 規則セット](native-minimum-rules-rule-set.md)
 - ["ネイティブ推奨規則" 規則セット](native-recommended-rules-rule-set.md)
-- 
-  [マネージド コードの "セキュリティ規則" 規則セット](security-rules-rule-set-for-managed-code.md)
+- [マネージド コードの "セキュリティ規則" 規則セット](security-rules-rule-set-for-managed-code.md)

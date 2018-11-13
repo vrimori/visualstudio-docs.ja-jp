@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: af9d6476e82f37d02e1a32b1d6cb23812f0fdde5
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 2987df6c8ed8a26c2cf95020e26f67c36721d676
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34748219"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50672783"
 ---
 # <a name="walkthrough-build-an-application"></a>チュートリアル: アプリケーションをビルドする
 
@@ -100,7 +100,7 @@ ms.locfileid: "34748219"
 
 1. **[ビルド]** ページを選択し、**[警告の表示なし]** ボックスで、警告番号 **0168** を指定します。
 
-     ![[ビルド] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk_csharpsupresswarnings.png)
+     ![[ビルド] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk_csharpsuppresswarnings.png)
 
      詳細については、「[Build Page, Project Designer (C#)](../ide/reference/build-page-project-designer-csharp.md)」([ビルド] ページ (プロジェクト デザイナー) (C#)) を参照してください。
 
@@ -114,23 +114,23 @@ ms.locfileid: "34748219"
 
 1. **ソリューション エクスプローラー**で、最上位のプロジェクト ノードを選択します。
 
-1. メニュー バーで **[表示]** > **[プロパティ ページ]** の順に選びます。
+2. メニュー バーで **[表示]** > **[プロパティ ページ]** の順に選びます。
 
      **プロジェクト デザイナー**が開きます。
 
-1. **[コンパイル]** ページで、**[すべての警告を表示しない]** チェック ボックスをオンにします。
+3. **[コンパイル]** ページで、**[すべての警告を表示しない]** チェック ボックスをオンにします。
 
-     ![[コンパイル] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk_vbsupresswarnings.png)
+     ![[コンパイル] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk_vbsuppresswarnings.png)
 
      詳細については、「[Visual Basic での警告の構成](../ide/configuring-warnings-in-visual-basic.md)」を参照してください。
 
-1. ソリューションをビルドします。
+4. ソリューションをビルドします。
 
- **[出力]** ウィンドウには、ビルドの概要情報のみが表示されます。
+   **[出力]** ウィンドウには、ビルドの概要情報のみが表示されます。
 
- ![出力ウィンドウ、Visual Basic ビルド警告](../ide/media/buildwalk_visualbasicbuildwarnings.png)
+   ![出力ウィンドウ、Visual Basic ビルド警告](../ide/media/buildwalk_visualbasicbuildwarnings.png)
 
- 詳細については、「[方法: コンパイラ警告を非表示にする](../ide/how-to-suppress-compiler-warnings.md)」を参照してください。
+   詳細については、「[方法: コンパイラ警告を非表示にする](../ide/how-to-suppress-compiler-warnings.md)」を参照してください。
 
 ## <a name="display-additional-build-details-in-the-output-window"></a>出力ウィンドウに追加のビルド詳細を表示する
 
@@ -138,7 +138,6 @@ ms.locfileid: "34748219"
 
 > [!IMPORTANT]
 > 詳細情報を表示する場合は、ビルドの完了までにかかる時間が長くなります。
-
 
 ### <a name="change-the-amount-of-information-in-the-output-window"></a>[出力] ウィンドウの情報量を変更する
 
@@ -221,10 +220,10 @@ ms.locfileid: "34748219"
 
    指定したネットワーク パスに、実行可能ファイルがコピーされます。 そのパスは `\\myserver\builds\\FileName.exe` になります。
 
-これで、このチュートリアルを完了できました。
+おめでとうございます!  これで、このチュートリアルを完了できました。
 
 ## <a name="see-also"></a>関連項目
 
 - [チュートリアル: プロジェクトの構築 (C++)](/cpp/ide/walkthrough-building-a-project-cpp)
-- [ASP.NET Web アプリケーション プロジェクト プリコンパイルの概要](http://msdn.microsoft.com/b940abbd-178d-4570-b441-52914fa7b887)
+- [ASP.NET Web アプリケーション プロジェクト プリコンパイルの概要](/previous-versions/aspnet/aa983464\(v\=vs.110\))
 - [チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)

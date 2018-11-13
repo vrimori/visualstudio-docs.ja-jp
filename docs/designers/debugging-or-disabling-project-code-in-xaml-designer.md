@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 4764df436a7adeb3ac65c574812c8f7d334d497b
-ms.sourcegitcommit: 522ba712c0d625e51352506146b0556414681964
+ms.openlocfilehash: 191d180a68edd439c729fa963b607c992ff3c00e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37890566"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816803"
 ---
 # <a name="debug-or-disable-project-code-in-xaml-designer"></a>XAML デザイナーでプロジェクト コードをデバッグまたは無効化する
 
@@ -86,6 +86,19 @@ ms.locfileid: "37890566"
 
     > [!NOTE]
     > プロジェクト コードを無効にすると、デザイン時データが失われることがあります。 別の方法は、デザイナーで実行されているコードをデバッグすることです。
+
+## <a name="control-display-options"></a>コントロールの表示オプション
+
+> [!NOTE]
+> **コントロールの表示オプション**は、Windows 10 Fall Creators Update (ビルド 16299) 以降を対象とするユニバーサル Windows プラットフォーム アプリケーションでのみ使用できます。 **コントロールの表示オプション**機能は、Visual Studio 2017 バージョン 15.9 以降で使用できます。 
+
+XAML デザイナーでは、Windows SDK からのプラットフォーム コントロールのみを表示するようにコントロールの表示オプションを変更できます。 これにより、XAML デザイナーの信頼性が向上する可能性があります。
+
+コントロールの表示オプションを変更するには、デザイナー ウィンドウの左下のアイコンをクリックし、**[コントロールの表示オプション]** の下でオプションを選択します。
+
+![コントロールの表示オプション](../designers/media/control_display_options.png)
+
+**[プラットフォーム コントロールのみを表示]** を選択すると、SDK からのすべてのカスタム コントロールや顧客ユーザー コントロールなどが完全にレンダリングされなくなります。 代わりに、これらはコントロールの位置とサイズを示すフォールバック コントロールで置き換えられます。
 
 ## <a name="see-also"></a>関連項目
 

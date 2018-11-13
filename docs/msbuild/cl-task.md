@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f23a23f1dbdb8dc66a46e1eb1e0b9f1156182e2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 1c239dc78d152e9060d176ebe1d4abd3b981a57d
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49922407"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220366"
 ---
 # <a name="cl-task"></a>CL タスク
 Visual C++ コンパイラ ツール (*cl.exe*) をラップします。 コンパイラは、実行可能ファイル (*.exe*)、ダイナミック リンク ライブラリ (*.dll*) ファイル、またはコード モジュール (*.netmodule*) ファイルを生成します。 詳細については、「[コンパイラ オプション](/cpp/build/reference/compiler-options)」を参照してください。  
@@ -52,7 +52,9 @@ Visual C++ コンパイラ ツール (*cl.exe*) をラップします。 コン�
   
    詳細については、「[コンパイラ オプション](/cpp/build/reference/compiler-options)」を参照してください。  
   
-- **AdditionalUsingDirectories**省略可能な String[] 型のパラメーター。  
+- **AdditionalUsingDirectories**
+
+   省略可能な String[] 型のパラメーター。  
   
    **#using** ディレクティブに渡されたファイル参照を解決するために、コンパイラによって検索されるディレクトリを指定します。  
   

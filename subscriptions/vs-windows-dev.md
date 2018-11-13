@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Windows �
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: c9d7bc13013d3dd98f675a22b5fb01ac46b2b134
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: be7a740e22201a230658dec0803a8523f7716462
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44279324"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832408"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Windows 開発者アカウント
 
@@ -29,27 +29,28 @@ Windows 開発者アカウントを使うには、アカウントを設定する
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
 2. [ツール] セクションで、Windows 開発者アカウントのタイルを見つけて、特典タイルの下部にある **[コードを取得]** リンクをクリックします。  コードをクリップボードにコピーし、**[アクティブ化]** をクリックします。
-    > [!div class="mx-imgBorder"]
-    > ![Windows 開発者特典のタイル](_img\vs-windows-dev\vs-windows-dev-tile.png)
+   > [!div class="mx-imgBorder"]
+   > ![Windows 開発者特典のタイル](_img/vs-windows-dev/vs-windows-dev-tile.png)
 
-2. [https://developer.microsoft.com](https://developer.microsoft.com) サイト上で登録プロセスを開始できます。  **[サインアップ]** をクリックして続行します。
-    > [!div class="mx-imgBorder"]
-    > ![Windows 開発者特典の登録](_img\vs-windows-dev\vs-windows-dev-register1-cropped.png)
+3. [https://developer.microsoft.com](https://developer.microsoft.com) サイト上で登録プロセスを開始できます。  **[サインアップ]** をクリックして続行します。
+   > [!div class="mx-imgBorder"]
+   > ![Windows 開発者特典の登録](_img/vs-windows-dev/vs-windows-dev-register1-cropped.png)
 
-3. 自分のサブスクリプションにサインインします。  複数のアカウントがある場合は、エンタープライズ サブスクリプションに関連付けられているアカウントを選択します。
-4. 次のページで、居住地または会社の所在地の国または地域を選択し、**[次へ]** をクリックします。
-5. アカウントの種類として **[個別]** を選択します。
-6. 発行者表示名を作成します。  これは、アプリ、アドイン、およびサービスに関連付けられている一意の名前で、ユーザーに表示されます。
-7. 連絡先情報と優先する電子メールの言語を入力し、**[次へ]** をクリックします。
-8. パスワードを確認するように要求される場合があります。  パスワードを入力し、**[サインイン]** をクリックします。
-9. [登録 – 支払い] ページでは、[プロモーション コード] フィールドにコピーしたコードを貼り付けます。  ページが更新され、"*支払いは必要ありません*" と表示されます。  **[次へ]** をクリックします。
+4. 自分のサブスクリプションにサインインします。  複数のアカウントがある場合は、エンタープライズ サブスクリプションに関連付けられているアカウントを選択します。
+5. 次のページで、居住地または会社の所在地の国または地域を選択し、**[次へ]** をクリックします。
+6. アカウントの種類として **[個別]** を選択します。
+7. 発行者表示名を作成します。  これは、アプリ、アドイン、およびサービスに関連付けられている一意の名前で、ユーザーに表示されます。
+8. 連絡先情報と優先する電子メールの言語を入力し、**[次へ]** をクリックします。
+9. パスワードを確認するように要求される場合があります。  パスワードを入力し、**[サインイン]** をクリックします。
+10. [登録 – 支払い] ページでは、[プロモーション コード] フィールドにコピーしたコードを貼り付けます。  ページが更新され、"*支払いは必要ありません*" と表示されます。  **[次へ]** をクリックします。
     > [!div class="mx-imgBorder"]
-    > ![Windows 開発者特典の登録](_img\vs-windows-dev\vs-windows-dev-promo-cropped.png)
+    > ![Windows 開発者特典の登録](_img/vs-windows-dev/vs-windows-dev-promo-cropped.png)
 
-10. アカウント情報を確認し、アプリ開発者契約を確認して、条件に同意することを示すチェック ボックスをクリックします。  **[完了]** をクリックします。
-11. **[ダッシュボードへ移動]** をクリックして、Windows 開発者アカウントの使用を開始します。
+11. アカウント情報を確認し、アプリ開発者契約を確認して、条件に同意することを示すチェック ボックスをクリックします。  **[完了]** をクリックします。
+12. **[ダッシュボードへ移動]** をクリックして、Windows 開発者アカウントの使用を開始します。
 
 ## <a name="eligibility"></a>特典を受ける条件
+
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | Included       |  [はい]|
@@ -59,7 +60,7 @@ Windows 開発者アカウントを使うには、アカウントを設定する
 | Visual Studio Dev Essentials | N/A  | 使用できません                                            |  N/A|
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
 
-<sup>1</sup> *Not for Resale (NFR)、FTE、Visual Studio Industry Partner (VSIP)、BizSpark、MCT Software & Services Developer が含まれます。Microsoft Partner Network (MPN)、Imagine、Microsoft Valued Partner (MVP)、Region Director (RD)、MCT Software & Services は含まれません。*
+<sup>1</sup> *Not for Resale (NFR)、FTE、Visual Studio Industry Partner (VSIP)、BizSpark、MCT Software & Services Developer が含まれます。Microsoft Partner Network (MPN)、Imagine、Microsoft Valued Professional (MVP)、Region Director (RD)、MCT Software & Services は含まれません。*
 
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 

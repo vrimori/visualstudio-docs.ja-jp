@@ -17,12 +17,12 @@ ms.assetid: abc5d9d9-b267-48a1-92ad-75fbf2f4c1b9
 caps.latest.revision: 61
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0f97202daa4626f0060a53781f609382bf082c17
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: aa1ffdc982fa3f9773770957a0dbb177ad3d4156
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49283271"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872448"
 ---
 # <a name="how-vspackages-add-user-interface-elements"></a>VSPackage でユーザー インターフェイス要素を追加する方法
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -94,15 +94,15 @@ VSPackage では、ユーザー インターフェイス (UI) 要素、たとえ
 #### <a name="menus"></a>メニュー  
  各メニューとして定義されている、[メニュー要素](../../extensibility/menu-element.md)で、`Menus`セクション。 メニューがあります`guid`、 `id`、および`priority`属性、および`Parent`要素と次の追加属性も子。  
   
--   A`type`属性をある種のメニューまたはツールバーとして IDE で、メニューを表示する必要があるかどうかを指定します。  
+- A`type`属性をある種のメニューまたはツールバーとして IDE で、メニューを表示する必要があるかどうかを指定します。  
   
--   A[文字列要素](../../extensibility/strings-element.md)を格納している、 [ButtonText 要素](../../extensibility/buttontext-element.md)、IDE では、メニューのタイトルを指定して、 [CommandName 要素](../../extensibility/commandname-element.md)は、名前を指定します。使用される、**コマンド**ウィンドウ メニューにアクセスします。  
+- A[文字列要素](../../extensibility/strings-element.md)を格納している、 [ButtonText 要素](../../extensibility/buttontext-element.md)、IDE では、メニューのタイトルを指定して、 [CommandName 要素](../../extensibility/commandname-element.md)は、名前を指定します。使用される、**コマンド**ウィンドウ メニューにアクセスします。  
   
--   オプションのフラグ。 A [Command Flag 要素](../../extensibility/command-flag-element.md)外観や IDE での動作を変更するメニュー定義に表示される可能性があります。  
+- オプションのフラグ。 A [Command Flag 要素](../../extensibility/command-flag-element.md)外観や IDE での動作を変更するメニュー定義に表示される可能性があります。  
   
- すべて`Menu`要素は、ツールバーなどのドッキング可能な要素である場合を除きに、親としてのグループをいる必要があります。 ドッキング可能なメニューは、それ自身の親です。 メニューと値の詳細については、`type`属性を参照してください、[メニュー要素](../../extensibility/menu-element.md)ドキュメント。  
+  すべて`Menu`要素は、ツールバーなどのドッキング可能な要素である場合を除きに、親としてのグループをいる必要があります。 ドッキング可能なメニューは、それ自身の親です。 メニューと値の詳細については、`type`属性を参照してください、[メニュー要素](../../extensibility/menu-element.md)ドキュメント。  
   
- 次の例は、Visual Studio のメニュー バーの横に表示されるメニュー、**ツール**メニュー。  
+  次の例は、Visual Studio のメニュー バーの横に表示されるメニュー、**ツール**メニュー。  
   
 ```xml  
 <Menu guid="guidTopLevelMenuCmdSet"  
@@ -163,11 +163,11 @@ priority="0x0100" type="Menu">
 ##### <a name="combos"></a>Combos  
  Combos がで定義されている、`Combos`セクション。 各`Combo`要素は、IDE でのドロップダウン リスト ボックスを表します。 リスト ボックスがまたはの値に応じて、ユーザーが書き込み可能なことができない可能性があります、`type`コンボ ボックスの属性です。 Combos が同じ要素を持ち、ボタンの動作があると、次の追加属性を持つことができますも。  
   
--   A`defaultWidth`ピクセル幅を指定する属性。  
+- A`defaultWidth`ピクセル幅を指定する属性。  
   
--   `idCommandList`属性リスト ボックスに表示される項目を含むリストを指定します。 同じコマンドの一覧を宣言する必要があります`GuidSymbol`コンボ ボックスを含むノードです。  
+- `idCommandList`属性リスト ボックスに表示される項目を含むリストを指定します。 同じコマンドの一覧を宣言する必要があります`GuidSymbol`コンボ ボックスを含むノードです。  
   
- 次の例では、複合要素を定義します。  
+  次の例では、複合要素を定義します。  
   
 ```xml  
 <Combos>  

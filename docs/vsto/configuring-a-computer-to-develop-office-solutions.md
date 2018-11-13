@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2e25ac55a1198cf15b497b7b88522be44dfddb73
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 19c7e012775ff1a761b5c267f05b8f7ff250d5c6
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671933"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50672227"
 ---
 # <a name="configure-a-computer-to-develop-office-solutions"></a>Office ソリューションを開発コンピューターを構成します。
 
@@ -44,7 +44,7 @@ Visual Studio、.NET Framework、および Microsoft Office のサポートさ�
 
      これらのツールがインストールされていることを確認する、Visual Studio のセットアップ プログラムを開始して、**変更**ボタンをクリックします。 **[Microsoft Office Developer Tools]** チェック ボックスをオンにして **[更新]** ボタンをクリックします。
 
-- 実行で提供された Office のバージョンを実行していないことを確認します。 参照してください[方法: Outlook がコンピューター上のクリック クイック実行アプリケーションかどうかを確認](http://msdn.microsoft.com/library/office/ff864733(v=office.14).aspx)します。
+- 実行で提供された Office のバージョンを実行していないことを確認します。 参照してください[方法: Outlook がコンピューター上のクリック クイック実行アプリケーションかどうかを確認](/previous-versions/office/developer/office-2010/ff864733(v=office.14))します。
 
 - Microsoft Office の 1 つだけのバージョンを実行していることを確認します。
 

@@ -1,6 +1,6 @@
 ---
 title: '[オプション]、[テキスト エディター]、[JavaScript]、[書式設定]'
-ms.date: 11/04/2016
+ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -8,18 +8,21 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.Formatting.Spacing
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.Formatting.General
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.Formatting.New_Lines
+- VS.ToolsOptionsPages.Text_Editor.TypeScript.Formatting.Spacing
+- VS.ToolsOptionsPages.Text_Editor.TypeScript.Formatting.General
+- VS.ToolsOptionsPages.Text_Editor.TypeScript.Formatting.New_Lines
 ms.assetid: 28a0aef1-9353-4d94-95a5-54b42e15c0dc
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 84c2f89aa578aa8b2c3c9ea4d033a5cff66a238e
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: aa846a25e1383c0c164dfb4747899f5e86237d32
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38800621"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671054"
 ---
 # <a name="options-text-editor-javascript-formatting"></a>[オプション]、[テキスト エディター]、[JavaScript]、[書式設定]
 **[オプション]** ダイアログ ボックスの **[書式設定]** ページで、コード エディターでのコード書式オプションを設定します。 このページにアクセスするには、メニュー バーで **[ツール]**、**[オプション]** の順にクリックし、次に、**[テキスト エディター]**、**[JavaScript]**、**[書式設定]** を展開します。
@@ -29,19 +32,20 @@ ms.locfileid: "38800621"
 ## <a name="automatic-formatting"></a>自動書式
  次のオプションによって、**ソース** ビューで書式設定が実行される条件を指定します。
 
-## <a name="uielement-list"></a>UIElement の一覧
+### <a name="uielement-list"></a>UIElement の一覧
 
 |オプション|説明|
 |------------|-----------------|
 |**Enter キーを押して行を終了したときに書式設定する**|このオプションをオンにすると、コード エディターで Enter キーを押したときに自動的に行が書式設定されます。|
 |**; を入力しステートメントを終了したときに書式設定する**|このオプションをオンにすると、コード エディターでセミコロン キーを押したときに自動的に行が書式設定されます。|
+|**Format opened block on { ({ で開始したブロックを書式設定する)**|このオプションをオンにすると、コード エディターで左中かっこ ({) キーを押したときに自動的に行が書式設定されます。|
 |**} を入力しブロックを終了したときに書式設定する**|このオプションをオンにすると、コード エディターで右中かっこ (}) キーを押したときに自動的に行が書式設定されます。|
 |**貼り付け時に書式設定する**|このオプションをオンにすると、コード エディターにコードを貼り付けるとコードの書式が再設定されます。 エディターでは、現在定義されている書式指定規則が使用されます。 このオプションがオンになっていない場合、エディターでは、貼り付けられたコードの元の書式が使用されます。|
 
 ## <a name="new-lines"></a>改行
  次のオプションによって、新しい行に関数およびコントロール ブロックの始めかっこを挿入するかどうかを指定します。
 
-## <a name="uielement-list"></a>UIElement の一覧
+### <a name="uielement-list"></a>UIElement の一覧
 
 |オプション|説明|
 |------------|-----------------|
@@ -49,9 +53,9 @@ ms.locfileid: "38800621"
 |**新しい行にコントロール ブロックの始めかっこを配置する**|このオプションをオンにすると、コントロール ブロック (`if` コントロール ブロック、`while` コントロール ブロックなど) に関連付けられている始めかっこが新しい行に移動します。|
 
 ## <a name="spacing"></a>スペース
- 次のオプションによって、**ソース** ビューにスペースが挿入される条件を指定します。
+ 次のオプションによって、**[ソース]** ビューにスペースが挿入される条件を指定します。
 
-## <a name="uielement-list"></a>UIElement の一覧
+### <a name="uielement-list"></a>UIElement の一覧
 
 |オプション|説明|
 |------------|-----------------|

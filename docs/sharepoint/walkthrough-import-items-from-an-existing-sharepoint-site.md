@@ -18,25 +18,25 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2d9542e14f41722a2f339bfac5c3353dc2e89263
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 86256cdecd878c78c34d7128a05eb7b795067701
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42635467"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909758"
 ---
 # <a name="walkthrough-import-items-from-an-existing-sharepoint-site"></a>チュートリアル: 既存の SharePoint サイトからのアイテムをインポートします。
   アイテムを既存の SharePoint サイトからインポートする方法についても説明、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint プロジェクト。  
   
  このチュートリアルでは、次のタスクについて説明します。  
   
--   カスタムのサイト内の列を追加することで、SharePoint サイトのカスタマイズ (とも呼ばれる、*フィールド*します。  
+- カスタムのサイト内の列を追加することで、SharePoint サイトのカスタマイズ (とも呼ばれる、*フィールド*します。  
   
--   SharePoint サイトを .wsp ファイルにエクスポートしています。  
+- SharePoint サイトを .wsp ファイルにエクスポートしています。  
   
--   .Wsp ファイルをインポートする[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].wsp プロジェクトのインポートを使用して SharePoint。  
+- .Wsp ファイルをインポートする[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].wsp プロジェクトのインポートを使用して SharePoint。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
@@ -50,21 +50,21 @@ ms.locfileid: "42635467"
   
 #### <a name="to-create-and-customize-a-sharepoint-site"></a>作成して SharePoint サイトをカスタマイズするには  
   
-1.  Http:// などの Web ブラウザーを使用して SharePoint サイトを開きます。*システム名*/SitePages/Home.aspx します。  
+1. Http:// などの Web ブラウザーを使用して SharePoint サイトを開きます。<em>システム名</em>/SitePages/Home.aspx します。  
   
-2.  開き、メインの SharePoint サイトに対してサブサイトを作成、**サイトの操作**メニューを**新しいサイト**します。  
+2. 開き、メインの SharePoint サイトに対してサブサイトを作成、**サイトの操作**メニューを**新しいサイト**します。  
   
-3.  サイトの**作成** ダイアログ ボックスで、選択、**空のサイト**型。  
+3. サイトの**作成** ダイアログ ボックスで、選択、**空のサイト**型。  
   
-4.  **タイトル**ボックスに、入力**サイト列テスト 1**; で、 **URL 名**ボックスに、入力**columntest1**; 他の設定を既定のままにします値。選択し、**作成**ボタンをクリックします。  
+4. **タイトル**ボックスに、入力**サイト列テスト 1**; で、 **URL 名**ボックスに、入力**columntest1**; 他の設定を既定のままにします値。選択し、**作成**ボタンをクリックします。  
   
-5.  メインのサイトにブラウザー内を移動する、サイトを作成すると、 http://*システム名*/SitePages/Home.aspx します。  
+5. メインのサイトにブラウザー内を移動する、サイトを作成すると、 http://<em>システム名</em>/SitePages/Home.aspx します。  
   
-6.  開き、メインの SharePoint サイトから空白サブサイトを作成、**サイトの操作**] メニューの [選択**新しいサイト**、クリックして、**空のサイト**型。  
+6. 開き、メインの SharePoint サイトから空白サブサイトを作成、**サイトの操作**] メニューの [選択**新しいサイト**、クリックして、**空のサイト**型。  
   
-7.  **タイトル**ボックスに、入力**サイト列 Test 2**; で、 **URL 名**ボックスに、入力**columntest2**; 他の設定を既定のままにします値。選択し、**作成**ボタンをクリックします。  
+7. **タイトル**ボックスに、入力**サイト列 Test 2**; で、 **URL 名**ボックスに、入力**columntest2**; 他の設定を既定のままにします値。選択し、**作成**ボタンをクリックします。  
   
-8.  最初のサブサイトに戻る http://*SystemName*/columntest1/default.aspx します。  
+8. 最初のサブサイトに戻る http://<em>SystemName</em>/columntest1/default.aspx します。  
   
 9. **サイトの操作** メニューの 選択**サイト設定**サイト設定 ページを表示します。  
   
@@ -107,28 +107,28 @@ ms.locfileid: "42635467"
   
 #### <a name="to-import-a-wsp-file"></a>.Wsp ファイルをインポートするには  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、メニュー バーで、**ファイル** > **新規** > **プロジェクト**を表示する、**新しいプロジェクト** ダイアログ ボックス。 お使いの IDE が Visual Basic 開発設定を使用して、メニュー バーに設定されている場合は、選択**ファイル** > **新しいプロジェクト**します。  
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、メニュー バーで、**ファイル** > **新規** > **プロジェクト**を表示する、**新しいプロジェクト** ダイアログ ボックス。 お使いの IDE が Visual Basic 開発設定を使用して、メニュー バーに設定されている場合は、選択**ファイル** > **新しいプロジェクト**します。  
   
-2.  展開、 **SharePoint**のどちらかのノード**Visual c#** または**Visual Basic**を選択し、 **2010**ノード。  
+2. 展開、 **SharePoint**のどちらかのノード**Visual c#** または**Visual Basic**を選択し、 **2010**ノード。  
   
-3.  選択、 **SharePoint 2010 ソリューション パッケージのインポート**テンプレート、**テンプレート**ウィンドウとして WspImportProject1、プロジェクトの名前のままにし、、 **OK**ボタンをクリックします。  
+3. 選択、 **SharePoint 2010 ソリューション パッケージのインポート**テンプレート、**テンプレート**ウィンドウとして WspImportProject1、プロジェクトの名前のままにし、、 **OK**ボタンをクリックします。  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  
+    **SharePoint カスタマイズ ウィザード**が表示されます。  
   
-4.  **デバッグのサイトとセキュリティのレベルを指定**ページで、入力、[!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)]先ほど作成した 2 番目の SharePoint サブサイトの。 新しいカスタムの追加フィールド http:// で項目を*システム名*/columntest2、そのサブサイトにします。  
+4. **デバッグのサイトとセキュリティのレベルを指定**ページで、入力、[!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)]先ほど作成した 2 番目の SharePoint サブサイトの。 新しいカスタムの追加フィールド http:// で項目を<em>システム名</em>/columntest2、そのサブサイトにします。  
   
-5.  **この SharePoint ソリューションの信頼レベルとは何ですか?** セクションで、何も選択のままに**サンド ボックス ソリューションとして配置**します。  
+5. **この SharePoint ソリューションの信頼レベルとは何ですか?** セクションで、何も選択のままに**サンド ボックス ソリューションとして配置**します。  
   
-6.  **新しいプロジェクトのソースを指定** ページで、保存されているシステム上の場所を参照、 *.wsp*クリックして、ファイルの以前、**次**ボタン。  
+6. **新しいプロジェクトのソースを指定** ページで、保存されているシステム上の場所を参照、 *.wsp*クリックして、ファイルの以前、**次**ボタン。  
   
-    > [!NOTE]  
-    >  選択した場合、**完了**で利用可能なすべての項目は、このページのボタン、 *.wsp*ファイルがインポートされます。  
+   > [!NOTE]  
+   >  選択した場合、**完了**で利用可能なすべての項目は、このページのボタン、 *.wsp*ファイルがインポートされます。  
   
-7.  **をインポートする項目の選択**ボックスに、すべてのリストを除くのチェック ボックスをオフに**テスト列**、選択し、**完了**ボタン。  
+7. **をインポートする項目の選択**ボックスに、すべてのリストを除くのチェック ボックスをオフに**テスト列**、選択し、**完了**ボタン。  
   
-     選択することができます、一覧に多数の項目が含まれているため、 **Ctrl**+**A**一覧で、すべての項目を選択するキーがすべてのチェック ボックスをオフに Space キーを選択し、チェックのみを選択し、ボックスの横に、**テスト列**項目。  
+    選択することができます、一覧に多数の項目が含まれているため、 **Ctrl**+**A**一覧で、すべての項目を選択するキーがすべてのチェック ボックスをオフに Space キーを選択し、チェックのみを選択し、ボックスの横に、**テスト列**項目。  
   
-     インポート操作が完了したら、という名前の新しいプロジェクト**WspImportProject1**が作成されるという名前のフォルダーを格納している**フィールド**します。 このフォルダーには、カスタムのサイト列**テスト列**とその定義ファイル*Elements.xml*します。  
+    インポート操作が完了したら、という名前の新しいプロジェクト**WspImportProject1**が作成されるという名前のフォルダーを格納している**フィールド**します。 このフォルダーには、カスタムのサイト列**テスト列**とその定義ファイル*Elements.xml*します。  
   
 ## <a name="deploy-the-project"></a>プロジェクトを配置します。
  最後に、デプロイ**WspImportProject1** 2 番目の SharePoint にサブサイトをカスタムのサイト内の列を表示する前に作成しました。  

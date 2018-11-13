@@ -23,12 +23,12 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7bade19778c64b6338c29db1eef8eb09a0d95fa3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: b0912ffbe2a9a82ac5efbd3b2ca6ba3566ce5b02
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49874645"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219303"
 ---
 # <a name="save-data-in-a-transaction"></a>トランザクションでデータを保存します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "49874645"
   
 2.  プロジェクトに名前を**SavingDataInATransactionWalkthrough**します。  
   
-3.  選択**Windows アプリケーション**、し、**OK**します。 詳細については、次を参照してください。[クライアント アプリケーション](http://msdn.microsoft.com/library/2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68)します。  
+3.  選択**Windows アプリケーション**、し、 **OK**します。 詳細については、次を参照してください。[クライアント アプリケーション](http://msdn.microsoft.com/library/2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68)します。  
   
      **SavingDataInATransactionWalkthrough**プロジェクトが作成されに追加**ソリューション エクスプ ローラー**します。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "49874645"
   
 1.  **プロジェクト**メニューの **参照の追加**します。  
   
-2.  選択**System.Transactions**(上、 **.NET** ] タブ)、し、[**[ok]** します。  
+2.  選択**System.Transactions**(上、 **.NET** ] タブ)、し、[ **[ok]** します。  
   
      参照を**System.Transactions**プロジェクトに追加されます。  
   

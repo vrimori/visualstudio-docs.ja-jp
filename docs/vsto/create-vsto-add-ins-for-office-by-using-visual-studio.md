@@ -13,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a89f77dc7a4adc7f1aafa1a59b425eefc5b4074e
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: ab047953c1a19d444b4315b7dc605a1a990667df
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35673715"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50670873"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Visual Studio を使用して Office 用 VSTO アドインを作成する
   Visual Studio の Microsoft Office Developer Tools を使用して、Office を拡張する .NET Framework アプリケーションを作成できます。 このようなアプリケーションは、 *Office ソリューション*とも呼ばれます。  
@@ -108,10 +108,10 @@ ms.locfileid: "35673715"
  [MSDN ライブラリの Microsoft Office 開発 セクション](http://go.microsoft.com/fwlink/?LinkId=149870)  
  場所の記事を検索し、いくつかのバージョンの Office (Visual Studio を使用して Office 開発に限定されません) のソリューションの開発に関するドキュメントを参照して、MSDN ライブラリの領域。  
   
- [Visual Studio でのアプリケーション開発](http://msdn.microsoft.com/97490c1b-a247-41fb-8f2c-bc4c201eff68)  
+ [Visual Studio でのアプリケーション開発](https://msdn.microsoft.com/97490c1b-a247-41fb-8f2c-bc4c201eff68)  
  設計、開発、デバッグ、Visual Studio を使用してし、web アプリケーション、XML web サービス、および従来のクライアント アプリケーションをデプロイする方法を説明するトピックへのリンクが含まれています。  
   
- [Visual Studio での .NET framework プログラミング](http://msdn.microsoft.com/f3f63195-82c6-48e8-a4a0-612810e7d093)  
+ [Visual Studio での .NET framework プログラミング](/previous-versions/visualstudio/visual-studio-2010/k1s94fta(v=vs.100))  
  Visual Basic および Visual C# での .NET Framework を使用したアプリケーション開発について説明します。  
   
   

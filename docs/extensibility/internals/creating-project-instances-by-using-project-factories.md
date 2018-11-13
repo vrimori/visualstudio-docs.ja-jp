@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 10b62093f85c51ee349386ec09470228d0194e9d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 4a02d6dd09ec019ad05404c033889f89ed140dd1
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49833996"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219498"
 ---
 # <a name="create-project-instances-by-using-project-factories"></a>プロジェクト ファクトリを使用してプロジェクトのインスタンスを作成します。
 プロジェクトの種類に[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を使用して、*プロジェクト ファクトリ*プロジェクトのオブジェクトのインスタンスを作成します。 プロジェクト ファクトリは、標準のクラス ファクトリ cocreatable COM オブジェクトに似ています。 ただし、プロジェクトのオブジェクトが cocreatable;プロジェクト ファクトリを使用してのみ作成できます。  
@@ -27,8 +27,6 @@ ms.locfileid: "49833996"
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE は、ユーザーが既存のプロジェクトを読み込みますかで新しいプロジェクトを作成、VSPackage の実装プロジェクト ファクトリを呼び出す[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。 新しいプロジェクトのオブジェクトを設定するための十分な情報を使用して IDE を提供する**ソリューション エクスプ ローラー**します。 新しいプロジェクトのオブジェクトには、IDE によって開始されたすべての関連する UI 操作をサポートするため、必要なインターフェイスも提供します。  
   
  実装することができます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>プロジェクト内のクラスのインターフェイス。 通常、独自のモジュールに存在します。  
-  
- 実装の例については、`IVsProjectFactory`インターフェイスは、「 *PrjFac.cpp*、に含まれている、[基本的なプロジェクト](https://www.microsoft.com/download/details.aspx?id=55984)サンプル ディレクトリ。  
   
  所有者によって集計をサポートするプロジェクトは、プロジェクト ファイルで、所有者のキーを保持する必要があります。 ときに、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A> 、所有者キー プロジェクトでメソッドを呼び出すと、所有しているプロジェクトは、その所有者のキーを GUID を呼び出してプロジェクト ファクトリに変換します、`CreateProject`を実際の作成を行うには、このプロジェクト ファクトリ メソッド。  
   

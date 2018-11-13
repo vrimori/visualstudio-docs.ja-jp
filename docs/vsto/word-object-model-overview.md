@@ -20,12 +20,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0005dd52c9c70edf41c9fc32c51e555748c78bfc
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 75a5f8e79bbd6dd34b046cbff6d59844a977efb3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35258455"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49878012"
 ---
 # <a name="word-object-model-overview"></a>Word オブジェクト モデルの概要
   Visual Studio で Word ソリューションを開発するときは、Word オブジェクト モデルと対話します。 このオブジェクト モデルは、Word のプライマリ相互運用機能アセンブリで提供されるクラスとインターフェイスで構成されています。これらのクラスとインターフェイスは <xref:Microsoft.Office.Interop.Word> 名前空間に定義されています。  
@@ -53,17 +53,17 @@ ms.locfileid: "35258455"
   
  この後のセクションでは、最上位レベルのオブジェクトとそれらの相互関係について、簡単に説明します。 これらのオブジェクトには次の 5 つが含まれます。  
   
--   Application オブジェクト  
+- Application オブジェクト  
   
--   Document オブジェクト  
+- Document オブジェクト  
   
--   Selection オブジェクト  
+- Selection オブジェクト  
   
--   Range オブジェクト  
+- Range オブジェクト  
   
--   Bookmark オブジェクト  
+- Bookmark オブジェクト  
   
- Visual Studio の Office プロジェクトには、Word オブジェクト モデルだけでなく、Word オブジェクト モデルの一部のオブジェクトを拡張する *ホスト項目* と *ホスト コントロール* が用意されています。 ホスト項目とホスト コントロールは、拡張元の Word オブジェクトと同様に動作しますが、データ バインディング機能や付加的なイベントなどの追加機能も備えています。 詳細については、次を参照してください。[拡張オブジェクトを使用して Word の自動化](../vsto/automating-word-by-using-extended-objects.md)と[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)します。  
+  Visual Studio の Office プロジェクトには、Word オブジェクト モデルだけでなく、Word オブジェクト モデルの一部のオブジェクトを拡張する *ホスト項目* と *ホスト コントロール* が用意されています。 ホスト項目とホスト コントロールは、拡張元の Word オブジェクトと同様に動作しますが、データ バインディング機能や付加的なイベントなどの追加機能も備えています。 詳細については、次を参照してください。[拡張オブジェクトを使用して Word の自動化](../vsto/automating-word-by-using-extended-objects.md)と[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)します。  
   
 ### <a name="application-object"></a>Application オブジェクト  
  <xref:Microsoft.Office.Interop.Word.Application> オブジェクトは Word アプリケーションを表し、他のすべてのオブジェクトの親になります。 そのメンバーは、通常、Word 全体に適用されます。 このオブジェクトのプロパティとメソッドを使用して、Word の環境を制御できます。  
@@ -90,17 +90,17 @@ ms.locfileid: "35258455"
 ### <a name="range-object"></a>Range オブジェクト  
  <xref:Microsoft.Office.Interop.Word.Range> オブジェクトは、文書内の連続した領域を表し、開始文字位置と終了文字位置によって定義されます。 <xref:Microsoft.Office.Interop.Word.Range> オブジェクトは 1 つに限定されていません。 同じ文書内に複数の <xref:Microsoft.Office.Interop.Word.Range> オブジェクトを定義できます。 <xref:Microsoft.Office.Interop.Word.Range> オブジェクトには次の特徴があります。  
   
--   単独の挿入ポイント、テキストの範囲、または文書全体で構成されます。  
+- 単独の挿入ポイント、テキストの範囲、または文書全体で構成されます。  
   
--   空白、タブ文字、段落記号などの非印刷文字を含みます。  
+- 空白、タブ文字、段落記号などの非印刷文字を含みます。  
   
--   現在の選択範囲によって表される領域、または現在の選択範囲とは異なる領域を表すことができます。  
+- 現在の選択範囲によって表される領域、または現在の選択範囲とは異なる領域を表すことができます。  
   
--   常に表示されている選択範囲とは異なり、文書内には表示されません。  
+- 常に表示されている選択範囲とは異なり、文書内には表示されません。  
   
--   文書と共に保存されることはなく、コードの実行中にのみ存在します。  
+- 文書と共に保存されることはなく、コードの実行中にのみ存在します。  
   
- 範囲の末尾にテキストを挿入すると、挿入したテキストが含まれるように自動的に範囲が拡張されます。  
+  範囲の末尾にテキストを挿入すると、挿入したテキストが含まれるように自動的に範囲が拡張されます。  
   
 ### <a name="content-control-objects"></a>コンテンツ コントロール オブジェクト  
  <xref:Microsoft.Office.Interop.Word.ContentControl> は、Word 文書のテキストおよびその他の種類のコンテンツの入力と表示を制御する方法を提供します。 <xref:Microsoft.Office.Interop.Word.ContentControl> は、Word 文書内で使用するために最適化されたさまざまな種類の UI (リッチ テキスト コントロール、日付選択、コンボ ボックスなど) を表示できます。 <xref:Microsoft.Office.Interop.Word.ContentControl> を使用して、ユーザーが文書やテンプレートのセクションを編集できないようにすることもできます。  
@@ -110,13 +110,13 @@ ms.locfileid: "35258455"
 ### <a name="bookmark-object"></a>Bookmark オブジェクト  
  <xref:Microsoft.Office.Interop.Word.Bookmark> オブジェクトは、開始位置と終了位置によって文書内の連続した領域を表します。 ブックマークは、文書内の場所にマークを付けたり、文書内のテキストのコンテナーとして使用したりできます。 <xref:Microsoft.Office.Interop.Word.Bookmark> オブジェクトは、挿入ポイントで構成されますが、文書全体になることもあります。 <xref:Microsoft.Office.Interop.Word.Bookmark> には、 <xref:Microsoft.Office.Interop.Word.Range> オブジェクトとは異なる次の特徴があります。  
   
--   デザイン時に、ブックマークに名前を付けることができます。  
+- デザイン時に、ブックマークに名前を付けることができます。  
   
--   <xref:Microsoft.Office.Interop.Word.Bookmark> オブジェクトは文書と共に保存されるため、コードの実行を停止したり文書を閉じたりしても、削除されません。  
+- <xref:Microsoft.Office.Interop.Word.Bookmark> オブジェクトは文書と共に保存されるため、コードの実行を停止したり文書を閉じたりしても、削除されません。  
   
--   ブックマークを非表示や、設定して表示するように、<xref:Microsoft.Office.Interop.Word.View.ShowBookmarks%2A>のプロパティ、<xref:Microsoft.Office.Interop.Word.View>オブジェクトを**false**または**true**します。  
+- ブックマークを非表示や、設定して表示するように、<xref:Microsoft.Office.Interop.Word.View.ShowBookmarks%2A>のプロパティ、<xref:Microsoft.Office.Interop.Word.View>オブジェクトを**false**または**true**します。  
   
- Visual Studio は <xref:Microsoft.Office.Interop.Word.Bookmark> ホスト コントロールを提供することで <xref:Microsoft.Office.Tools.Word.Bookmark> オブジェクトを拡張します。 <xref:Microsoft.Office.Tools.Word.Bookmark> ホスト コントロールは、ネイティブな <xref:Microsoft.Office.Interop.Word.Bookmark>と同様に動作しますが、付加的なイベントやデータ バインディング機能を備えています。 Windows フォームのテキスト ボックス コントロールにデータをバインドするのと同じ方法で、文書の Bookmark コントロールにデータをバインドできます。 詳細については、次を参照してください。 [Bookmark コントロール](../vsto/bookmark-control.md)します。  
+  Visual Studio は <xref:Microsoft.Office.Interop.Word.Bookmark> ホスト コントロールを提供することで <xref:Microsoft.Office.Tools.Word.Bookmark> オブジェクトを拡張します。 <xref:Microsoft.Office.Tools.Word.Bookmark> ホスト コントロールは、ネイティブな <xref:Microsoft.Office.Interop.Word.Bookmark>と同様に動作しますが、付加的なイベントやデータ バインディング機能を備えています。 Windows フォームのテキスト ボックス コントロールにデータをバインドするのと同じ方法で、文書の Bookmark コントロールにデータをバインドできます。 詳細については、次を参照してください。 [Bookmark コントロール](../vsto/bookmark-control.md)します。  
   
 ##  <a name="WordOMDocumentation"></a> Word オブジェクト モデルを使用して、  
  Word オブジェクト モデルの詳細については、Word プライマリ相互運用機能アセンブリ (PIA) のリファレンス、および Visual Basic for Applications (VBA) オブジェクト モデルのリファレンスを参照してください。  
@@ -124,7 +124,7 @@ ms.locfileid: "35258455"
 ### <a name="primary-interop-assembly-reference"></a>プライマリ相互運用機能アセンブリのリファレンス  
  Word PIA のリファレンス ドキュメントでは、Word プライマリ相互運用機能アセンブリの型について説明しています。 このドキュメントは、次の場所から使用可能な: [Word 2010 プライマリ相互運用機能アセンブリ リファレンス](http://go.microsoft.com/fwlink/?LinkId=189588)します。  
   
- PIA のイベントの実装方法、PIA のクラスとインターフェイスの違いなど、Word PIA の設計に関する詳細を参照してください[Office プライマリ相互運用機能アセンブリのクラスおよびインターフェイスの概要](http://go.microsoft.com/fwlink/?LinkId=189592)。  
+ PIA のイベントの実装方法、PIA のクラスとインターフェイスの違いなど、Word PIA の設計に関する詳細を参照してください[Office プライマリ相互運用機能アセンブリのクラスおよびインターフェイスの概要。](http://go.microsoft.com/fwlink/?LinkId=189592).  
   
 ### <a name="vba-object-model-reference"></a>VBA オブジェクト モデル リファレンス  
  VBA オブジェクト モデルのリファレンスでは、VBA コードに公開される Word オブジェクト モデルについて説明しています。 詳細については、次を参照してください。 [Word 2010 オブジェクト モデル リファレンス](http://go.microsoft.com/fwlink/?LinkId=199772)します。  

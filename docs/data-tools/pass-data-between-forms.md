@@ -19,20 +19,21 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c8d400f8fa46fa10876d1827205671b6d90a3e33
-ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
+ms.openlocfilehash: 580ca6a9a384fff373a72e5449af2790a8c1e5b8
+ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37089439"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50750762"
 ---
 # <a name="pass-data-between-forms"></a>フォーム間でデータを渡す
+
 このチュートリアルでは、フォーム間でデータを渡す手順について説明します。 顧客と Northwind の orders テーブルを使用して、1 つの形式は、ユーザーが顧客を選択して、2 番目の形式は、選択した顧客の注文を表示します。 このチュートリアルでは、最初のフォームからデータを受信する 2 番目の形式でメソッドを作成する方法を示します。
 
 > [!NOTE]
->  このチュートリアルでは、フォーム間でデータを渡す 1 つの方法についてのみ説明します。 データを受信する 2 つ目のコンス トラクターの作成など、フォームにデータを渡すためには、その他のオプションがあるか、最初のフォームからデータをパブリック プロパティの作成を設定できます。
+> このチュートリアルでは、フォーム間でデータを渡す 1 つの方法についてのみ説明します。 データを受信する 2 つ目のコンス トラクターの作成など、フォームにデータを渡すためには、その他のオプションがあるか、最初のフォームからデータをパブリック プロパティの作成を設定できます。
 
- このチュートリアルでは、以下のタスクを行います。
+このチュートリアルでは、以下のタスクを行います。
 
 -   新しいを作成する**Windows フォーム アプリケーション**プロジェクト。
 
@@ -48,7 +49,8 @@ ms.locfileid: "37089439"
 
 -   フォーム間でデータを渡します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
+
 このチュートリアルでは、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。
 
 1.  SQL Server Express LocalDB をお持ちでない場合は、インストールのいずれかから、 [SQL Server Express のダウンロード ページ](https://www.microsoft.com/sql-server/sql-server-editions-express)、または、 **Visual Studio インストーラー**します。 一部として Visual Studio インストーラーでは、SQL Server Express LocalDB をインストールすることができます、**データ ストレージと処理**ワークロード、または個々 のコンポーネントとして。
@@ -65,9 +67,7 @@ ms.locfileid: "37089439"
 
        しばらくすると、クエリの実行が完了し、Northwind データベースを作成します。
 
-## <a name="create-the-windows-forms-application"></a>Windows フォーム アプリケーションを作成します。
-
-### <a name="to-create-the-new-windows-project"></a>新しい Windows プロジェクトを作成するには
+## <a name="create-the-windows-forms-app-project"></a>Windows フォーム アプリ プロジェクトを作成します。
 
 1. Visual Studio での**ファイル**メニューの **新規** > **プロジェクト**します。
 
@@ -80,8 +80,6 @@ ms.locfileid: "37089439"
      **PassingDataBetweenForms**プロジェクトを作成するとに追加**ソリューション エクスプ ローラー**します。
 
 ## <a name="create-the-data-source"></a>データ ソースを作成します。
-
-### <a name="to-create-the-data-source"></a>データ ソースを作成するには
 
 1.  **[データ]** メニューの **[データ ソースの表示]** をクリックします。
 
@@ -108,7 +106,8 @@ ms.locfileid: "37089439"
      **NorthwindDataSet**がプロジェクトに追加、**顧客**と**注文**に表示されるテーブル、**データ ソース**ウィンドウ。
 
 ## <a name="create-the-first-form-form1"></a>最初のフォーム (Form1) を作成します。
- データ バインド グリッドを作成することができます (、<xref:System.Windows.Forms.DataGridView>コントロール)、ドラッグして、**顧客**ノードから、**データ ソース**ウィンドウから、フォームにします。
+
+データ バインド グリッドを作成することができます (、<xref:System.Windows.Forms.DataGridView>コントロール)、ドラッグして、**顧客**ノードから、**データ ソース**ウィンドウから、フォームにします。
 
 ### <a name="to-create-a-data-bound-grid-on-the-form"></a>フォームにデータ バインド グリッドを作成するには
 
@@ -116,9 +115,9 @@ ms.locfileid: "37089439"
 
      A<xref:System.Windows.Forms.DataGridView>とツール ストリップ (<xref:System.Windows.Forms.BindingNavigator>) レコードを移動するために表示されます。 **Form1**します。 A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、CustomersTableAdapter、 <xref:System.Windows.Forms.BindingSource>、および<xref:System.Windows.Forms.BindingNavigator>コンポーネント トレイに表示されます。
 
-## <a name="create-the-second-form-form2"></a>2 番目のフォーム (Form2) を作成します。
+## <a name="create-the-second-form"></a>2 番目のフォームを作成します。
 
-### <a name="to-create-a-second-form-to-pass-the-data-to"></a>データの渡し先となる 2 番目のフォームを作成するには
+データを渡すには 2 番目の形式を作成します。
 
 1.  **[プロジェクト]** メニューの **[Windows フォームの追加]** を選択します。
 
@@ -132,9 +131,9 @@ ms.locfileid: "37089439"
 
      **OrdersBindingNavigator**から消えます**Form2**します。
 
-## <a name="add-a-tableadapter-query-to-form2-to-load-orders-for-the-selected-customer-on-form1"></a>Form2 を Form1 で選択した顧客の注文を読み込む TableAdapter クエリを追加します。
+## <a name="add-a-tableadapter-query"></a>TableAdapter クエリを追加します。
 
-### <a name="to-create-a-tableadapter-query"></a>TableAdapter クエリを作成するには
+Form2 を Form1 で選択した顧客の注文を読み込むには、TableAdapter クエリを追加します。
 
 1.  ダブルクリックして、 **NorthwindDataSet.xsd**ファイル**ソリューション エクスプ ローラー**します。
 
@@ -153,7 +152,7 @@ ms.locfileid: "37089439"
     ```
 
     > [!NOTE]
-    >  データベースに対してパラメーターの構文が正しいことを確認します。 たとえば、Microsoft Access では、WHERE 句は `WHERE CustomerID = ?` のようになります。
+    > データベースに対してパラメーターの構文が正しいことを確認します。 たとえば、Microsoft Access では、WHERE 句は `WHERE CustomerID = ?` のようになります。
 
 6.  **[次へ]** をクリックします。
 
@@ -165,8 +164,6 @@ ms.locfileid: "37089439"
 
 ## <a name="create-a-method-on-form2-to-pass-data-to"></a>データの渡し先となる Form2 のメソッドを作成します。
 
-### <a name="to-create-a-method-to-pass-data-to"></a>データの渡し先となるメソッドを作成するには
-
 1.  右クリック**Form2**、選択と**コードの表示**を開く**Form2**で、**コード エディター**します。
 
 2.  次のコードを追加**Form2**後、`Form2_Load`メソッド。
@@ -175,8 +172,6 @@ ms.locfileid: "37089439"
      [!code-csharp[VbRaddataDisplaying#1](../data-tools/codesnippet/CSharp/pass-data-between-forms_1.cs)]
 
 ## <a name="create-a-method-on-form1-to-pass-data-and-display-form2"></a>データを渡して、Form2 を表示する Form1 のメソッドを作成します。
-
-### <a name="to-create-a-method-to-pass-data-to-form2"></a>Form2 にデータを渡すメソッドを作成するには
 
 1.  **Form1**、顧客データ グリッドを右クリックし、クリックして**プロパティ**します。
 
@@ -191,9 +186,7 @@ ms.locfileid: "37089439"
      [!code-csharp[VbRaddataDisplaying#2](../data-tools/codesnippet/CSharp/pass-data-between-forms_2.cs)]
      [!code-vb[VbRaddataDisplaying#2](../data-tools/codesnippet/VisualBasic/pass-data-between-forms_2.vb)]
 
-## <a name="run-the-application"></a>アプリケーションを実行する
-
-### <a name="to-run-the-application"></a>アプリケーションを実行するには
+## <a name="run-the-app"></a>アプリを実行する
 
 -   **F5** キーを押してアプリケーションを実行します。
 

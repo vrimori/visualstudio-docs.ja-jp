@@ -1,7 +1,7 @@
 ---
 title: Office ソリューションの自動保存の影響
 ms.custom: ''
-ms.date: 07/20/2017
+ms.date: 10/26/2018
 ms.technology:
 - office-development
 ms.topic: conceptual
@@ -15,18 +15,20 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 21c49599ddc992bf35e6c1464b664a23fb33a691
-ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
+ms.openlocfilehash: 60c83b8d83967d93f079033c4853904068ad29d5
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34548851"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50672432"
 ---
 # <a name="how-autosave-impacts-office-solutions"></a>Office ソリューションの自動保存の影響
 
-自動保存、Excel、PowerPoint の機能でありになっている場合、Word、自動的かつ継続的に保存する、ユーザーの編集を有効にします。 自動保存がになっている場合、保存をトリガーする手動での永続化するユーザーの変更。 この機能の追加により、それが動作するスムーズに自動保存が入っているときでもことを確認するために、Office ソリューションを調整する必要があります。 詳細については、「[自動保存方法影響を与えます、アドインやマクロ](https://msdn.microsoft.com/vba/office-shared-vba/articles/how-autosave-impacts-addins-and-macros)です。 自動保存の詳細については一般を参照してください[自動保存は何ですか?](https://support.office.com/en-US/article/What-is-AutoSave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)です。
+自動保存は、Excel、PowerPoint、および自動的かつ継続的に、編集内容を保存します。 Word の機能です。 機能がオフの場合は、変更を保存するには、手動でファイルを保存する必要があります。 自動保存が中であってもが、スムーズに動作するように、Office ソリューションを調整する必要があります。 詳細については、次を参照してください。[自動保存する方法に影響するアドインとマクロ](/office/vba/library-reference/concepts/how-autosave-impacts-addins-and-macros)します。 自動保存の詳細については一般に、表示[自動保存は何ですか?](https://support.office.com/en-US/article/What-is-AutoSave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)します。
 
-注: Windows デスクトップの Word、Excel、PowerPoint の自動保存 2017年に導入された、office 365 のサブスクライバーで現在使用できます。 Office 2016 または以前にライセンスを購入したユーザーは現在ありません coauthoring 機能へのアクセス。 (Excel Online では、Excel for Android、ios、Excel および Excel モバイル、Windows ストアでもサポート自動保存) します。 
+> [!NOTE]
+> Windows デスクトップ AutoSave Word、Excel、および PowerPoint 2017 で導入され、は、office 365 のサブスクライバーで現在使用できます。 Office 2016 またはそれ以前の永続的ライセンスを購入した場合は、チームの機能へのアクセスが存在しません。 (Excel Online では、Excel for Android、ios、Excel および Excel Mobile、Windows ストアではこの機能をサポート、ただし。)
 
 ## <a name="see-also"></a>関連項目
+
 [Office ソリューションを開発します。](./developing-office-solutions.md)

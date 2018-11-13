@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 23286c6b042b7064c5ebfdf758a6b82e1b97f961
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 2eb7d535b99aa6af8b977711fbc60f7b4d9856dd
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49850244"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349492"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger"></a>シンボル (.pdb) ファイル、ソース ファイル、およびバイナリ ファイルの検索
 
@@ -73,7 +73,7 @@ Visual Studio IDE でプロジェクトをデバッグするときに、デバ�
    
    - 任意のローカル シンボル キャッシュ フォルダー。  
   
-   - 選択されている場合は、ネットワーク、インターネット、またはローカル シンボル サーバー、および Microsoft シンボル サーバーなどの場所を指定します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 実装するシンボル サーバーからデバッグ シンボル ファイルをダウンロードすることができます、`symsrv`プロトコル。 [Visual Studio Team Foundation Server](http://msdn.microsoft.com/Library/bd6977ca-e30a-491a-a153-671d81222ce6)と[ツールを Windows のデバッグ](http://msdn.microsoft.com/library/windows/hardware/ff551063\(v=VS.85\).aspx)シンボル サーバーを使用できるツールが 2 つです。 
+   - 選択されている場合は、ネットワーク、インターネット、またはローカル シンボル サーバー、および Microsoft シンボル サーバーなどの場所を指定します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 実装するシンボル サーバーからデバッグ シンボル ファイルをダウンロードすることができます、`symsrv`プロトコル。 [Visual Studio Team Foundation Server](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols)と[ツールを Windows のデバッグ](/windows-hardware/drivers/debugger/index)シンボル サーバーを使用できるツールが 2 つです。
       
      使用するシンボル サーバーは次のとおりです。  
       

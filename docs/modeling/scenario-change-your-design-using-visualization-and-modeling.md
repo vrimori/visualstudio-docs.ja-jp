@@ -17,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 933c18a43cb8ebacd32914cb487fb0216b538b25
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: bc8066148b2c8612b3a07922e15422022b8c9c4d
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49942479"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967507"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>シナリオ: 視覚化およびモデリングを使用したデザインの変更
 
@@ -186,11 +186,11 @@ Dinner Now では、新しい要求を満たすためのコストを見積もる
 
 参照トピック
 
-- [ビルド プロセスの定義](http://msdn.microsoft.com/Library/61593e10-d24b-492f-b19a-af4d85abea6b)
+- [ビジュアル デザイナーを使用します。](/azure/devops/pipelines/get-started-designer)
 
-- [変更内容を検証するためのゲート チェックイン ビルド プロセスの定義](http://msdn.microsoft.com/Library/9cfc8b9c-1023-40fd-8ab5-1b1bd9c172ec)
+- [TFVC ゲート チェックイン](/azure/devops/pipelines/build/triggers#gated)
 
-- [ビルド プロセス テンプレートのカスタマイズ](http://msdn.microsoft.com/Library/b94c58f2-ae6f-4245-bedb-82cd114f6039)
+- [ビルドし、リリース タスク](/azure/devops/pipelines/tasks/index)
 
 ### <a name="general-tips-for-creating-and-using-models"></a>モデルの生成と使用に関する一般的なヒント
 
@@ -220,7 +220,7 @@ Dinner Now と Lucerne は、作業の進行に伴って、タスクに費やさ
 
 - [グラフとダッシュ ボードにウィジェット (Azure DevOps サービス)](/azure/devops/report/dashboards/overview?view=vsts)
 
-- [Project を使用したバックログとタスクの作成](http://msdn.microsoft.com/Library/be5cef4f-755f-4ffe-8dd7-876d1e02c330)
+- [Project を使用したバックログとタスクの作成](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project)
 
 ### <a name="TestValidateCheckInCode"></a> テスト、検証、およびコードのチェックイン
 
@@ -486,5 +486,5 @@ Dinner Now と Lucerne は協力して、2 つのシステムを統合するの�
 
 - [コードの視覚化](../modeling/visualize-code.md)
 - [開発プロセス内でのモデルの使用](../modeling/use-models-in-your-development-process.md)
-- [アジャイル開発でのモデルを使用します。](http://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)
+- [アジャイル開発でのモデルを使用します。](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)
 - [開発時のシステムの検証](../modeling/validate-your-system-during-development.md)

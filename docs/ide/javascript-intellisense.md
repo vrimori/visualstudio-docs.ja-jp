@@ -26,19 +26,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 16e0efd8393d6324321a505247a3dad171a81a57
-ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
+ms.openlocfilehash: 02e34d891fe972bc5d8722598e4b8b1af6066384
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103477"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671028"
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 
 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] では、すぐに使用できる強力な JavaScript 編集エクスペリエンスが提供されます。 TypeScript ベースの言語サービスを活用して、Visual Studio で高度な IntelliSense が提供されます。また、最新の JavaScript 機能がサポートされ、定義へ移動、リファクタリングなどの生産性向上機能が改善されています。
 
 > [!NOTE]
-> [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] の JavaScript 言語サービスでは、言語サービス ("Salsa" と呼ばれる) の新しいエンジンが使用されます。 このトピックでも詳しく説明しますが、この[ブログ投稿](https://blogs.msdn.microsoft.com/visualstudio/2016/11/28/more-productive-javascript-in-visual-studio-2017-rc)も参照してください。 新しい編集機能のほとんどは Visual Studio Code にも適用されます。 詳細については、[VS コードのドキュメント](https://code.visualstudio.com/docs/languages/javascript)を参照してください。
+> [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] の JavaScript 言語サービスでは、言語サービス ("Salsa" と呼ばれる) の新しいエンジンが使用されます。 このトピックでも詳しく説明しますが、この[ブログ投稿](https://blogs.msdn.microsoft.com/visualstudio/2016/11/28/more-productive-javascript-in-visual-studio-2017-rc/)も参照してください。 新しい編集機能のほとんどは Visual Studio Code にも適用されます。 詳細については、[VS コードのドキュメント](https://code.visualstudio.com/docs/languages/javascript)を参照してください。
 
 Visual Studio の一般的な IntelliSense の機能の詳細については、「[IntelliSense の使用方法](../ide/using-intellisense.md)」を参照してください。
 

@@ -24,12 +24,12 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 150105de459912716cd3cfccff9efb35927c7d49
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 56e14d66275bd961829fc09e06f7d5e99dbcc2c4
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49823503"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50218900"
 ---
 # <a name="create-parameterized-tableadapter-queries"></a>パラメーター付きの TableAdapter クエリを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "49823503"
 2. **データ**メニューの **クエリの追加**または**データ スマート タグ**します。  
   
    > [!NOTE]
-   >  場合**クエリの追加**では使用できません、**データ**メニューで、パラメーターの追加設定の表示、データ ソースにするフォームにコントロールを選択します。 たとえば、フォームに <xref:System.Windows.Forms.DataGridView> コントロールのデータが表示される場合は、そのコントロールを選択します。 フォームに個々のコントロールのデータが表示される場合は、いずれかのデータ バインド コントロールを選択します。  
+   > 場合**クエリの追加**では使用できません、**データ**メニューで、パラメーターの追加設定の表示、データ ソースにするフォームにコントロールを選択します。 たとえば、フォームに <xref:System.Windows.Forms.DataGridView> コントロールのデータが表示される場合は、そのコントロールを選択します。 フォームに個々のコントロールのデータが表示される場合は、いずれかのデータ バインド コントロールを選択します。  
   
 3. **ソース テーブルのデータの選択**領域で、追加するパラメーター化を選択 tablethat します。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "49823503"
   
 5. **クエリ テキスト**ボックスに、パラメーターを受け取るクエリを入力します。  
   
-6. 選択**OK**します。  
+6. **[OK]** を選択します。  
   
     パラメーターを入力するコントロールと**ロード**でフォームにボタンを追加、<xref:System.Windows.Forms.ToolStrip>コントロール。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "49823503"
   
 1.  **データセット デザイナー**、null パラメーター値をそのまま使用する必要がある TableAdapter クエリを選択します。  
   
-2.  **プロパティ**ウィンドウで、**パラメーター**します。省略記号ボタンを押します (**.**) ボタンをクリックする、**パラメーター コレクション エディター**します。  
+2.  **プロパティ**ウィンドウで、**パラメーター**します。 省略記号ボタンを押します (**.**) ボタンをクリックする、**パラメーター コレクション エディター**します。  
   
 3.  Null 値を許容するパラメーターを選択し、設定、 **AllowDbNull**プロパティを`true`します。  
   

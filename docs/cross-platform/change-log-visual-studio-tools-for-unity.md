@@ -10,19 +10,28 @@ ms.author: tglee
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: abec2e0d2485b99d5cde020bffc5ad0b2dd473ac
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: da2e91e15572a9904115926447523d8dba23a36a
+ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43775385"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51000727"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>変更ログ (Visual Studio Tools for Unity、Windows)
 Visual Studio Tools for Unity の変更ログです。
 
+## <a name="3807"></a>3.8.0.7
+ リリース日: 2018 年 9 月 20 日
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **デバッガー:**
+
+    -   Unity のデバッガー エンジンとの通信に使用されるライブラリでのデッドロックを修正しました。このバグによって、特に [Unity にアタッチ] を選択した場合やゲームを再起動したときに、Visual Studio または Unity がフリーズしていました。
+
 ## <a name="3806"></a>3.8.0.6
  リリース日: 2018 年 8 月 27 日
- 
+
 ### <a name="bug-fixes"></a>バグ修正
 
 -   **統合:**
@@ -31,7 +40,7 @@ Visual Studio Tools for Unity の変更ログです。
 
 ## <a name="3805"></a>3.8.0.5
  リリース日: 2018 年 8 月 20 日
- 
+
 ### <a name="bug-fixes"></a>バグ修正
 
 -   **統合:**
@@ -40,13 +49,13 @@ Visual Studio Tools for Unity の変更ログです。
 
 ## <a name="3804"></a>3.8.0.4
  リリース日: 2018 年 8 月 14 日
- 
+
 ### <a name="new-features"></a>新機能
 
 -   **評価:**
 
     -   ポインター値のサポートが追加されました。
-    
+
     -   ジェネリック メソッドのサポートが追加されました。
 
 ### <a name="bug-fixes"></a>バグ修正
@@ -57,7 +66,7 @@ Visual Studio Tools for Unity の変更ログです。
 
 ## <a name="3803"></a>3.8.0.3
  リリース日: 2018 年 7 月 24 日
- 
+
 ### <a name="bug-fixes"></a>バグ修正
 
 -   **プロジェクトの生成:**
@@ -66,24 +75,24 @@ Visual Studio Tools for Unity の変更ログです。
 
 ## <a name="3802"></a>3.8.0.2
  リリース日: 2018 年 7 月 7 日
- 
+
 ### <a name="bug-fixes"></a>バグ修正
 
 -   **プロジェクトの生成:**
 
     -   Unity のパフォーマンスのバグの一時的な回避策: プロジェクト生成時の MonoIslands のキャッシュ。
-    
+
 ## <a name="3801"></a>3.8.0.1
  リリース日: 2018 年 6 月 26 日
- 
+
 ### <a name="new-features"></a>新機能
 
 -   **デバッグ:**
 
     -   UserLog コマンドと UserBreak コマンドのサポートを追加しました。
-    
+
     -   Lazy 型ロード サポートを追加しました (ネットワーク ロードとデバッガー応答待機時間を最適化)。
-       
+
 ### <a name="bug-fixes"></a>バグ修正
 
 -   **評価:**
@@ -92,19 +101,19 @@ Visual Studio Tools for Unity の変更ログです。
 
 ## <a name="3800"></a>3.8.0.0
  リリース日: 2018 年 5 月 30 日
- 
+
 ### <a name="new-features"></a>新機能
 
 -   **デバッグ:**
 
     -   非同期コンストラクトで変数を表示するためのサポートが追加されました。
-    
+
     -   コンパイラ コンストラクトによる警告を回避するために、ブレークポイント設定時に入れ子にされた型を処理するサポートが追加されました。
-    
+
 -   **統合:**
 
     -   Shader の TextMate 文法のサポートが追加されました (Shader コード配色には C++ ワークロードが不要になりました)。
-    
+
 ### <a name="bug-fixes"></a>バグ修正
 
 -   **プロジェクトの生成:**
@@ -128,15 +137,15 @@ Visual Studio Tools for Unity の変更ログです。
 -   **デバッグ:**
 
     -   調整されたデバッグのサポートが追加されました (同じ Visual Studio セッションでの複数のプレーヤー/エディターのデバッグ)。
-    
+
     -   Android USB プレーヤーのデバッグのサポートが追加されました。
-    
+
     -   UWP/IL2CPP プレーヤーのデバッグのサポートが追加されました。
 
 -   **評価:**
 
     -   16 進指定子のサポートが追加されました。
-    
+
     -   ウォッチ ウィンドウの評価エクスペリエンスが強化されました。
 
 ### <a name="bug-fixes"></a>バグ修正
@@ -832,9 +841,9 @@ Visual Studio Tools for Unity の変更ログです。
 
 ### <a name="bug-fixes"></a>バグ修正
 
--   Visual Studio のテーマの処理を修正しました。 以前は、黒のテーマでダイアログを表示すると内容が空になることがありました (Microsoft Connect 問題番号 [#932637](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/932637/) および [#936439](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/936439/))。
+-   Visual Studio のテーマの処理を修正しました。 以前は、黒のテーマでダイアログを表示すると内容が空になることがありました。
 
--   Unity の再コンパイル中にデバッガーを接続すると Unity がフリーズする問題を修正しました (Microsoft Connect 問題番号 [#947119](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/947119/) および [#969211](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/969211/))。
+-   Unity の再コンパイル中にデバッガーを接続すると Unity がフリーズする問題を修正しました。
 
 -   別のシステムでコンパイルされたリモート エディターまたはプレーヤーをデバッグする際のブレークポイントを修正しました。
 
@@ -844,7 +853,7 @@ Visual Studio Tools for Unity の変更ログです。
 
 -   デバッガーでの変数のスコープ処理の問題 (ライブ変数がスコープ外として表示される) を修正しました。
 
--   デバッガーの式の評価で静的メンバーの参照の問題を修正しました (Microsoft Connect 問題番号 [#953379](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/953379/))。
+-   デバッガーの式の評価で静的メンバーの参照の問題を修正しました。
 
 -   デバッガーの式の評価で、静的フィールドおよびプロパティを表示する際の型の表示の問題を修正しました。
 

@@ -36,12 +36,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c3466a5a448baf378cf18a00c0e987f3cbcc0cb5
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: e9773c06293f189e572ef84e9b10f45a1ca5d5d8
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672300"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50670989"
 ---
 # <a name="write-code-in-office-solutions"></a>Office ソリューションでコードを記述します。
   Office プロジェクトのコードの記述には、Visual Studio の他のプロジェクトの種類とは異なる点があります。 相違点の多くは、Office オブジェクト モデルがマネージド コードに公開される方法に関連しています。 Office プロジェクトのデザインに関連する相違点もあります。  
@@ -62,7 +62,7 @@ ms.locfileid: "35672300"
  エンド ユーザーのコンピューターで [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とした Office ソリューションを実行する場合には、Office PIA は必要ありません。 詳細については、次を参照してください。[デザイン Office ソリューションの作成と](../vsto/designing-and-creating-office-solutions.md)します。  
   
 ### <a name="use-types-in-primary-interop-assemblies"></a>プライマリ相互運用機能アセンブリで型を使用します。  
- Office PIA には、Office アプリケーションのオブジェクト モデルを公開する型とコード内で直接使用することを目的としていない追加のインフラストラクチャの型の組み合わせが含まれています。 Office Pia の型の概要については、次を参照してください。 [Office プライマリ相互運用機能アセンブリのクラスおよびインターフェイスの概要](http://msdn.microsoft.com/da92dc3c-8209-44de-8095-a843659368d5)します。  
+ Office PIA には、Office アプリケーションのオブジェクト モデルを公開する型とコード内で直接使用することを目的としていない追加のインフラストラクチャの型の組み合わせが含まれています。 Office Pia の型の概要については、次を参照してください。 [Office プライマリ相互運用機能アセンブリのクラスおよびインターフェイスの概要](/previous-versions/office/office-12/ms247299\(v\=office.12\))します。  
   
  Office PIA の型は COM ベース オブジェクト モデルの型に対応しているため、これらの型の使用方法は、他のマネージド型の使用方法とは異なる場合があります。 たとえば、Office プライマリ相互運用機能アセンブリの省略可能なパラメーターを持つメソッドを呼び出す方法は、プロジェクトで使用するプログラミング言語によって異なります。 詳細については、次のトピックを参照してください。  
   

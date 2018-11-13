@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5d18e7c2e4c57e867cac47d0c8927eadbc357286
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e6c45a552e66c2d256c191f6bd8296f5b2ca2c61
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49923096"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220208"
 ---
 # <a name="walkthrough-building-an-application"></a>チュートリアル: アプリケーションをビルドする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "49923096"
   
 4. **[アクティブ ソリューション プラットフォーム]** 一覧の **[新規作成]** をクリックします。  
   
-5. **[新しいソリューション プラットフォーム]** ダイアログ ボックスで、**[x64]** を選択します。x86 プラットフォームの設定はコピーしません。  
+5. **新しいソリューション プラットフォーム** ダイアログ ボックスで、選択**x64**、x86 の設定はコピーしませんプラットフォーム。  
   
     ![[新しいソリューション プラットフォーム] ダイアログ ボックス](../ide/media/buildwalk-newsolutionplatform.png "BuildWalk_NewSolutionPlatform")  
   
@@ -142,7 +142,7 @@ ms.locfileid: "49923096"
   
 3.  **[ビルド]** ページを選択し、**[警告の表示なし]** ボックスで、警告番号 `1762` を指定します。  
   
-     ![[ビルド] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk-csharpsupresswarnings.png "BuildWalk_CsharpSupressWarnings")  
+     ![[ビルド] ページ、プロジェクト デザイナー](../ide/media/buildwalk-csharpsuppresswarnings.png "BuildWalk_CsharpSuppressWarnings")  
   
      詳細については、「[Build Page, Project Designer (C#)](../ide/reference/build-page-project-designer-csharp.md)」([ビルド] ページ (プロジェクト デザイナー) (C#)) を参照してください。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "49923096"
   
 3. **[コンパイル]** ページで、**[すべての警告を表示しない]** チェック ボックスをオンにします。  
   
-    ![[コンパイル] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk-vbsupresswarnings.png "BuildWalk_VBSupressWarnings")  
+    ![[コンパイル] ページ、プロジェクト デザイナー](../ide/media/buildwalk-vbsuppresswarnings.png "BuildWalk_VBSuppressWarnings")  
   
     詳しくは、「[Visual Basic での警告の構成](../ide/configuring-warnings-in-visual-basic.md)」をご覧ください。  
   

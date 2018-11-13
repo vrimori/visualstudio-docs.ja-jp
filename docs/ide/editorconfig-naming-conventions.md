@@ -12,12 +12,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 3630eee4a58571277cf6a0c2c265fee95f2e37e1
-ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
+ms.openlocfilehash: df74252361e330ac992f8f3e852d9c33006d18e7
+ms.sourcegitcommit: 6672a1e9d135d7e5cca3cceea07c6fe5a0871475
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42626975"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47443585"
 ---
 # <a name="net-naming-conventions-for-editorconfig"></a>EditorConfig での .NET の名前付け規則
 
@@ -88,11 +88,14 @@ ms.locfileid: "42626975"
 
 許容される値を次のリストに示します。個々の値をコンマで区切ることで複数の値を指定できます。
 
-- abstract または must_inherit
-- async
-- const
-- readonly
-- static または shared
+- `abstract` または `must_inherit`
+- `async`
+- `const`
+- `readonly`
+- `static` または `shared`
+
+   > [!NOTE]
+   > `static` または `shared` シンボルに対する名前付け規則がある場合、それは暗黙的に静的である `const` シンボルにも適用されます。 `static` 名前付け規則を `const` シンボルに適用しない場合は、`const` シンボルに対する別の名前付け規則を作成します。
 
 `required_modifiers` は省略可能なプロパティです。 このプロパティを省略した場合、名前付け規則はすべての修飾子に適用されます。
 

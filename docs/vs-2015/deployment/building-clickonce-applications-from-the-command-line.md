@@ -22,12 +22,12 @@ caps.latest.revision: 25
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: dac26a7846f4a6b611c53e9cd537d112a8205d2f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c9a9b2e248e4f10e9b5d3f045c67a9622edd2c2b
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49836789"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220018"
 ---
 # <a name="building-clickonce-applications-from-the-command-line"></a>ClickOnce アプリケーションのコマンド ラインからのビルド
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "49836789"
   
 5. 「`msbuild /target:publish`」と入力します。  
   
-   上記の手順は、完全な[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]P を同じ名前のプロジェクトのサブフォルダーに、アプリケーションの展開**ublish**します。 CmdLineDemo.application は、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]配置マニフェスト。 フォルダー CmdLineDemo_1.0.0.0 CmdLineDemo.exe および CmdLineDemo.exe.manifest、ファイルが含まれています、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーション マニフェスト。 Setup.exe が既定でインストールするように構成するブートス トラップ、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]します。 DotNetFX フォルダーには再頒布可能パッケージが含まれています、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]します。 これは、Web 上または UNC パスまたは CD または DVD を使用して、アプリケーションをデプロイする必要があるファイルのセット全体です。  
+   上記の手順は、完全な[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]という名前のプロジェクトのサブフォルダーに、アプリケーションの展開**発行**します。 CmdLineDemo.application は、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]配置マニフェスト。 フォルダー CmdLineDemo_1.0.0.0 CmdLineDemo.exe および CmdLineDemo.exe.manifest、ファイルが含まれています、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーション マニフェスト。 Setup.exe が既定でインストールするように構成するブートス トラップ、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]します。 DotNetFX フォルダーには再頒布可能パッケージが含まれています、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]します。 これは、Web 上または UNC パスまたは CD または DVD を使用して、アプリケーションをデプロイする必要があるファイルのセット全体です。  
   
 ## <a name="publishing-properties"></a>発行プロパティ  
  上記の手順で、アプリケーションを発行するとき、次のプロパティは、発行ウィザードによって、プロジェクト ファイルに挿入されます。 これらのプロパティに直接影響を与える方法、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションが生成されます。  

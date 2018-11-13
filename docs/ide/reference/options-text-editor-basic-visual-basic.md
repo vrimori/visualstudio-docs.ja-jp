@@ -1,5 +1,5 @@
 ---
-title: '[オプション]、[テキスト エディター]、[基本] (Visual Basic)'
+title: '[オプション]、[テキスト エディター]、[基本] (VB)、[詳細]'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -10,6 +10,7 @@ f1_keywords:
 - VS.ToolsOptionsPages.Visual_Basic_Editor.Editor
 - VS.ToolsOptionsPages.Text_Editor.Basic.SimplifiedEditorPage
 - VS.ToolsOptionsPages.Text_Editor.Basic
+- VS.ToolsOptionsPages.Text_Editor.Basic.Advanced
 - VS.ToolsOptionsPages.Text_Editor.Basic.VB_Specific
 helpviewer_keywords:
 - Basic Text Editor Options dialog box
@@ -19,17 +20,33 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 27048b5d70674cd492227e96682f8401ed7160ee
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: b15617dce090a3aacde71ad48bf4984f5efbcac4
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31945858"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50218926"
 ---
-# <a name="options-text-editor-basic-visual-basic"></a>[オプション]、[テキスト エディター]、[基本] (Visual Basic)
+# <a name="options-text-editor-basic-visual-basic-advanced"></a>[オプション]、[テキスト エディター]、[基本] (Visual Basic)、[詳細]
 **[オプション]** (**[ツール]** メニュー) ダイアログ ボックスの **[テキスト エディター]** フォルダーにある **[Basic]** フォルダーの **[VB 固有]** プロパティ ページでは、次のプロパティを指定します。
 
- **[構造文の終端の自動挿入]** たとえば、プロシージャ宣言の最初の行として `Sub Main—` を入力し、Enter キーを押すと、対応する `End Sub` 行がテキスト エディターに追加されます。 同様に、[For](/dotnet/visual-basic/language-reference/statements/for-next-statement) ループを追加すると、対応する `Next` ステートメントがテキスト エディターに追加されます。 このオプションをオンにすると、コード エディターで自動的に End 構造が追加されます。
+ **[参照とキーワードの強調表示を有効にする]**
+
+テキスト エディターでは、`If..Then`、`While...End While`、`Try...Catch...Finally` などの句のシンボルのすべてのインスタンス、またはすべてのキーワードを強調表示できます。 強調表示された参照間またはキーワード間を移動するには、**Ctrl** + **Shift** + **下方向キー**を押すか、**Ctrl** + **Shift** + **上方向キー**を押します。
+
+**[アウトライン モードを有効にする]**
+
+ファイルをコード エディターで開くときに、ドキュメントをアウトライン モードで表示できます。 詳細については、「[アウトライン](../../ide/outlining.md)」を参照してください。 このオプションをオンにすると、ファイルを開くときにアウトライン表示機能が有効になります。
+
+**[プロシージャ行の区切り文字を表示する]**
+
+テキスト エディターに、プロシージャのスコープが表示されます。 プロジェクトの *.vb* ソース ファイルで、次の表に示す場所に線が表示されます。
+
+|.vb ソース ファイル内の場所|線が表示される場所の例|
+|---------------------------------|------------------------------|
+|ブロック宣言構造の後|-   クラス、構造体、モジュール、インターフェイス、または列挙型の最後<br />-   プロパティ、関数、または sub の後<br />-   プロパティの get 句と set 句の間は対象外|
+|一連の単一行構造|-   import ステートメントの後、クラス ファイルの型定義の前<br />-   クラスで宣言されている変数の後、プロシージャの前|
+|単一行宣言|-   Import ステートメント、Inherits ステートメント、変数宣言、イベント宣言、デリゲート宣言、および DLL の Declare ステートメントの後|
 
  **[コードの再フォーマット]** 必要に応じてコードの書式が再設定されます。 このオプションをオンにすると、コード エディターによって次の処理が行われます。
 
@@ -47,31 +64,17 @@ ms.locfileid: "31945858"
 
 -   日付の書式を正す。
 
-**[アウトライン モードを有効にする]**
+**[End コンストラクトの自動挿入]**
 
-ファイルをコード エディターで開くときに、ドキュメントをアウトライン モードで表示できます。 詳細については、「[アウトライン](../../ide/outlining.md)」を参照してください。 このオプションをオンにすると、ファイルを開くときにアウトライン表示機能が有効になります。
+ たとえば、プロシージャ宣言の最初の行として `Sub Main—` を入力し、**Enter** キーを押すと、対応する `End Sub` 行がテキスト エディターに追加されます。 同様に、[For](/dotnet/visual-basic/language-reference/statements/for-next-statement) ループを追加すると、対応する `Next` ステートメントがテキスト エディターに追加されます。 このオプションをオンにすると、コード エディターで自動的に End 構造が追加されます。
 
 **[Interface と MustOverride メンバーの自動挿入]**
 
 クラスの `Implements` ステートメントまたは `Inherits` ステートメントをコミットすると、実装またはオーバーライドする必要があるメンバーのそれぞれのプロトタイプがテキスト エディターに自動的に挿入されます。
 
-**[プロシージャ行の区切り文字を表示する]**
-
-テキスト エディターに、プロシージャのスコープが表示されます。 プロジェクトの .vb ソース ファイルで、次の表に示す場所に線が表示されます。
-
-|.vb ソース ファイル内の場所|線が表示される場所の例|
-|---------------------------------|------------------------------|
-|ブロック宣言構造の後|-   クラス、構造体、モジュール、インターフェイス、または列挙型の最後<br />-   プロパティ、関数、または sub の後<br />-   プロパティの get 句と set 句の間は対象外|
-|一連の単一行構造|-   import ステートメントの後、クラス ファイルの型定義の前<br />-   クラスで宣言されている変数の後、プロシージャの前|
-|単一行宣言|-   Import ステートメント、Inherits ステートメント、変数宣言、イベント宣言、デリゲート宣言、および DLL の Declare ステートメントの後|
-
 **[エラー修正候補を有効にする]**
 
 一般的なエラーの解決方法がテキスト エディターに表示され、適切な修正方法を選択できます。修正方法を選択するとコードに適用されます。
-
-**[参照とキーワードの強調表示を有効にする]**
-
-テキスト エディターでは、`If..Then`、`While...End While`、`Try...Catch...Finally` などの句のシンボルのすべてのインスタンス、またはすべてのキーワードを強調表示できます。 強調表示された参照間またはキーワード間を移動するには、Ctrl キーと Shift キーを押しながら下方向キーを押すか、Ctrl キーと Shift キーを押しながら上方向キーを押します。
 
 ## <a name="see-also"></a>参照
 

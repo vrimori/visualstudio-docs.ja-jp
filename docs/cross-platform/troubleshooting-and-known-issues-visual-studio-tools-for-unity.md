@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 86f547ae686176ab6361f44f4f0ba432c6466da9
-ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
+ms.openlocfilehash: 077754b31b80575c4fbee78d0a2f19f87f82e481
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39251576"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220893"
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>トラブルシューティングと既知の問題 (Visual Studio Tools for Unity)
 
@@ -90,7 +90,7 @@ Visual Studio が特定のブレークポイントのソースの場所を見つ
 
 ## <a name="breakpoints-not-hit"></a>ブレークポイントがヒットない
 
-使っているスクリプトが現在の Unity シーンに正しく読み込まれて使われていることを確認してください。 Visual Studio と Unity の両方を終了し、すべての生成されたファイル (*.csproj、*.sln) と Library フォルダー全体を削除します。
+使っているスクリプトが現在の Unity シーンに正しく読み込まれて使われていることを確認してください。 Visual Studio と Unity の両方を終了し、すべての生成されたファイル (\*.csproj、\*.sln) と Library フォルダー全体を削除します。
 
 ## <a name="unable-to-debug-android-players"></a>Android プレーヤーをデバッグできない
 

@@ -22,12 +22,12 @@ caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6bb326f1cad6ea019c5d057ca24d198c28dca2a6
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6b7a7ec1d244f8bf711f0d1aaf4726c910846357
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49220817"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219719"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect メソッドを使用してデータを保存する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "49220817"
   
 2.  プロジェクトに名前を**TableAdapterDbDirectMethodsWalkthrough**します。  
   
-3.  選択**Windows アプリケーション**、およびその**OK**します。 詳細については、次を参照してください。[クライアント アプリケーション](http://msdn.microsoft.com/library/2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68)します。  
+3.  選択**Windows アプリケーション**、し、 **OK**します。 詳細については、次を参照してください。[クライアント アプリケーション](http://msdn.microsoft.com/library/2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68)します。  
   
      **TableAdapterDbDirectMethodsWalkthrough**プロジェクトが作成されに追加**ソリューション エクスプ ローラー**します。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "49220817"
   
 #### <a name="to-create-the-data-source"></a>データ ソースを作成するには  
   
-1.  **データ**メニューの **データ ソースの**します。  
+1.  **データ**メニューの  **データ ソースの**します。  
   
 2.  **データソース**ウィンドウで、**新しいデータ ソースの追加**を開始する、**データ ソース構成ウィザード**します。  
   

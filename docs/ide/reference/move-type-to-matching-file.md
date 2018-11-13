@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 00fab87a8fed4d1dcd9b4899551d68eaab28d46a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 73e1d9d67d905fed5eb37e29c1be1ba7677da3e8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31945338"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49884150"
 ---
 # <a name="move-a-type-to-a-matching-file-refactoring"></a>一致するファイルへの型の移動リファクタリング
 
@@ -35,32 +35,32 @@ ms.locfileid: "31945338"
 
 ## <a name="how-to"></a>方法
 
-1. 移動する型の名前を強調表示するか、名前の内側にテキスト カーソルを置きます。
+1. 定義されている型の名前の中にカーソルを配置します。 例:
+
+   ```csharp
+   class Person
+   ```
+
+   ```vb
+   Class Person
+   ```
+
+2. 次に、以下のいずれかを実行します。
+
+   - 行の任意の場所で **Ctrl**+**.** キーを押すと、
+   - 型名を右クリックして **[クイック アクションとリファクタリング]** を選択します。
+
+1. メニューから **[型を *TypeName*.cs に移動]** を選択します。*TypeName* は選択した型の名前です。
+
+   型と同じ名前を持つプロジェクト内の新しいファイルに型が移動されます。
 
    - C#: 
 
-    ![強調表示されたコード - C#](media/movetype-highlight-cs.png)
+      ![インラインの結果 - C#](media/movetype-result-cs.png)
 
    - Visual Basic: 
 
-    ![強調表示されたコード - Visual Basic](media/movetype-highlight-vb.png)
-
-1. 次に、以下のいずれかを実行します。
-
-   - **キーボード**
-     - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーし、[プレビュー] ウィンドウ ポップアップ から **[型を *TypeName*.cs に移動]** を選択します。ここで、*TypeName* は選択した型の名前です。
-   - **マウス**
-     - コードを右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、[プレビュー] ウィンドウ ポップアップ から **[型を *TypeName*.cs に移動]** を選択します。ここで、*TypeName* は選択した型の名前です。
-
-   ソリューションの一部として、型がその名前の新しいファイルに移動されます。
-
-   - C#: 
-
-    ![インラインの結果 - C#](media/movetype-result-cs.png)
-
-   - Visual Basic: 
-
-    ![インラインの結果 - Visual Basic](media/movetype-result-vb.png)
+      ![インラインの結果 - Visual Basic](media/movetype-result-vb.png)
 
 ## <a name="see-also"></a>関連項目
 

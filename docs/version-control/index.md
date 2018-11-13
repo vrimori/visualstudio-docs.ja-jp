@@ -1,7 +1,7 @@
 ---
 layout: LandingPage
-title: Visual Studio でのバージョン コントロール | VSTS & TFS
-description: Viual Studio でのバージョン コントロール概要ガイド
+title: バージョン管理
+description: Visual Studio でバージョン コントロールを始めるためのガイド
 keywords: VSTS, TFS, バージョン コントロール
 author: steved0x
 ms.manager: douge
@@ -12,23 +12,24 @@ ms.prod: .net-core
 ms.assetid: 2c119a5f-0272-48c0-8d6c-806196944aea
 ms.workload:
 - multiple
-ms.openlocfilehash: e37645f8960aae54907dffeb0bcb88848d9cd63f
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: 3640fba7d1ca3993841adb94dfdd08bc7d405e9b
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44320580"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51348163"
 ---
 # <a name="version-control-in-visual-studio"></a>Visual Studio でのバージョン コントロール
 
 バージョン コントロール システムは、コードに徐々に加えた変更を追跡するのに役立ちます。 ユーザーが変更を行うと、バージョン コントロール システムによってファイルのスナップショットが取得されます。 バージョン コントロール システムはスナップショットを永続的に保存するので、後で必要なときに呼び戻すことができます。 Visual Studio では、[Git](/azure/devops/repos/git/index?view=vsts) と [Team Foundation バージョン管理 (TFVC)](/azure/devops/repos/tfvc/index?view=vsts) を利用できます。 この 2 つのシステムのどちらかに決めるには、「[Choosing the right version control for your project (プロジェクトに適切なバージョン コントロールの選択)](/azure/devops/repos/tfvc/comparison-git-tfvc?toc=/visualstudio/version-control/toc.json&bc=/azure/devops/repos/git/breadcrumb/vc/toc.json)」をご覧ください。
 
 ## <a name="git"></a>Git
+
 Git は現在、最も使用されているバージョン コントロール システムであり、バージョン コントロールの標準になりました。 Git は分散型バージョン コントロール システムであり、コードのローカル コピーが完全なバージョン コントロール リポジトリになります。 このように完全な機能を備えたローカル リポジトリによって、オフラインまたはリモートでの作業が容易になりました。 作業をローカルでコミットし、次にリポジトリのコピーをサーバー上のコピーに同期させます。 このパラダイムは、コードの新しいバージョンを作成する前にクライアントがコードをサーバーと同期する必要のある集中型バージョン コントロールとは異なります。
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="https://docs.microsoft.com/azure/devops/git/what-is-git">
+        <a href="/azure/devops/git/what-is-git">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -46,7 +47,7 @@ Git は現在、最も使用されているバージョン コントロール �
         </a>
     </li>
     <li>
-        <a href="/azure/devops/repos/git/share-your-code-in-git-vs-2017?toc=/visualstudio/version-control/toc.json&bc=/azure/devops/repos/git/breadcrumb/vc/toc.json">
+        <a href="/azure/devops/repos/git/share-your-code-in-git-vs-2017">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -56,7 +57,7 @@ Git は現在、最も使用されているバージョン コントロール �
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Visual Studio で Git の使用を開始する</h3>
+                        <h3>Visual Studio での Git の概要</h3>
                     </div>
                 </div>
             </div>
@@ -64,7 +65,7 @@ Git は現在、最も使用されているバージョン コントロール �
         </a>
     </li>
     <li>
-        <a href="/azure/devops/repos/git/clone?toc=/visualstudio/version-control/toc.json&bc=/azure/devops/repos/git/breadcrumb/vc/toc.json">
+        <a href="/azure/devops/repos/git/clone">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -107,7 +108,7 @@ Team Foundation バージョン管理 (TFVC) は、一元化されたバージ�
         </a>
     </li>
     <li>
-        <a href="/azure/devops/repos/tfvc/share-your-code-in-tfvc-vs?toc=/visualstudio/version-control/toc.json&bc=/azure/devops/repos/git/breadcrumb/vc/toc.json">
+        <a href="/azure/devops/repos/tfvc/share-your-code-in-tfvc-vs">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -125,7 +126,7 @@ Team Foundation バージョン管理 (TFVC) は、一元化されたバージ�
         </a>
     </li>
    <li>
-        <a href="/azure/devops/repos/tfvc/get-code-reviewed-vs?toc=/visualstudio/version-control/toc.json&bc=/azure/devops/repos/git/breadcrumb/vc/toc.json">
+        <a href="/azure/devops/repos/tfvc/get-code-reviewed-vs">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -144,9 +145,9 @@ Team Foundation バージョン管理 (TFVC) は、一元化されたバージ�
     </li>
 </ul>
 
-
 ## <a name="resources"></a>リソース
 
 - [Pro Git ブック](https://git-scm.com/book/en/v2)
 - [Git への移行を計画する](https://docs.microsoft.com/azure/devops/git/centralized-to-git)
 - [TFVC から Git への移行](https://docs.microsoft.com/azure/devops/git/migrate-from-tfvc-to-git)
+- [バージョン コントロール (Visual Studio for Mac)](/visualstudio/mac/version-control)

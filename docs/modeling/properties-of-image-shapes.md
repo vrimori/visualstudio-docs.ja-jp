@@ -14,14 +14,15 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7e492996a194c6602af3ec412b86f7477ef233e1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 20da1fc95160be69c1388f9d2986c7dc254eefa2
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49928712"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967130"
 ---
 # <a name="properties-of-image-shapes"></a>イメージ シェイプのプロパティ
+
 イメージ シェイプを使用すると、ドメイン クラスが生成されたデザイナーで表示する方法を指定します。 設定して、イメージ シェイプの定義、`Image`クラスを定義済みのイメージ ファイルのプロパティ。 次の形式がサポートされています。
 
 - .gif
@@ -38,11 +39,11 @@ ms.locfileid: "49928712"
 
 - .png
 
-  既定では、イメージ ファイルなどのデザイナーのリソース ファイル内にある、**リソース**フォルダーで、 **Dsl**プロジェクト。
+既定では、イメージ ファイルなどのデザイナーのリソース ファイル内にある、**リソース**フォルダーで、 **Dsl**プロジェクト。
 
-  詳細については、次を参照してください。[ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)します。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語を拡張する](../modeling/customizing-and-extending-a-domain-specific-language.md)します。
+詳細については、次を参照してください。[ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)します。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語を拡張する](../modeling/customizing-and-extending-a-domain-specific-language.md)します。
 
-  イメージ シェイプには、次の表に記載されているプロパティがあります。
+イメージ シェイプには、次の表に記載されているプロパティがあります。
 
 |プロパティ|説明|既定値|
 |-|-|-|
@@ -74,4 +75,4 @@ ms.locfileid: "49928712"
 
 ## <a name="see-also"></a>関連項目
 
-- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [ドメイン固有言語ツールの用語集](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

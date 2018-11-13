@@ -10,12 +10,12 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 1b5cc415d95377cdca0d44c31ed2c3b84cd11c5c
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 4fdf7cb791339350ff9644d0f727e3adc299add6
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297617"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220906"
 ---
 # <a name="how-to-install-r-tools-for-visual-studio"></a>R Tools for Visual Studio のインストール方法
 
@@ -76,10 +76,11 @@ RTVS for Visual Studio 2015 は、`%ProgramFiles(x86)%\Microsoft Visual Studio 1
 
 オフライン インストールは、インターネットに接続されていないコンピューターに適しています。
 
-1. 次の指示に従って、お使いの Visual Studio のバージョンのオフライン インストーラーを作成します。
+1. 「[Visual Studio 2017 のオフライン インストールを作成する](../install/create-an-offline-installation-of-visual-studio.md)」に進みます。
 
-    - [Visual Studio 2017](../install/create-an-offline-installation-of-visual-studio.md)
-    - [Visual Studio 2015](https://msdn.microsoft.com/library/mt706497.aspx)
+1. Visual Studio 2015 を使用している場合、目次の上にあるセレクターで **2015** を選択します。
+
+1. Web ページにあるオフライン インストールを作成する方法に従います。
 
 1. Visual Studio 2015 の場合は、R Tools for Visual Studio のオフライン インストーラーを [https://aka.ms/rtvs-current-zip](https://aka.ms/rtvs-current-zip) および [https://aka.ms/rtvs-remote-zip](https://aka.ms/rtvs-remote-zip) からダウンロードします。
 

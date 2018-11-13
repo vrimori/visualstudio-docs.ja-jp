@@ -36,12 +36,12 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ab3e3238e78062bc1193a6d81b3f74749a263968
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f2ca9c721567d89bddad4a9ee61639bd3a82f10d
+ms.sourcegitcommit: 1abb9cf4c3ccb90e3481ea8079272c98aad12875
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49897720"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143451"
 ---
 # <a name="link-task"></a>Link タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -194,7 +194,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
    マネージド コードからネイティブ DLL への、リンカーによって生成された P/Invoke 呼び出しに対して、**SuppressUnmanagedCodeSecurityAttribute** を適用するかどうかを指定します。  
   
-   詳細については、「[/CLRUNMANAGEDCODECHECK (SupressUnmanagedCodeSecurityAttribute の追加)](http://msdn.microsoft.com/library/73abc426-dab0-45e2-be85-0f9a14206cc2)」を参照してください。  
+   詳細については、次を参照してください。 [/CLRUNMANAGEDCODECHECK (追加 SuppressUnmanagedCodeSecurityAttribute)](http://msdn.microsoft.com/library/73abc426-dab0-45e2-be85-0f9a14206cc2)します。  
   
 - **CreateHotPatchableImage**  
   

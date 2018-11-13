@@ -12,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a059e25546abf0d1624d3c8bc08a531d3fc4b382
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: f0d53ece6add1c781cb18569139fea5ffbbeca76
+ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "36755925"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51000230"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-2017"></a>Visual Studio 2017 で問題を報告する方法
 
@@ -125,7 +125,7 @@ Visual Studio 2017 バージョン 15.5 以降には、新しいワークフロ�
 
 Visual Studio を使って問題を報告することが望ましくない場合、またはできない場合は、[Visual Studio Developer Community](https://developercommunity.visualstudio.com/) ページで既に問題が報告され、解決策が投稿されている可能性があります。
 
-レポートする問題はないが、製品に関するフィードバックや提案を提供したい場合、そのための場所も用意されています。 詳細については、[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-ide) ページを参照してください。
+レポートする問題はないが、機能を提案したい場合は、そのための場所も用意されています。 詳細については、「[Suggest a feature](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)」(機能を提案する) ページをご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

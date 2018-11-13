@@ -2,7 +2,7 @@
 title: Visual Studio での C# および ASP.NET Core の概要
 description: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する方法について段階的に説明します。
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
 ms.topic: tutorial
@@ -15,18 +15,30 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: d0e337ebb97b487adfd79be43ddc1301612ba090
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: d684ecb9e29dd4c6f140ad7d6f52e301e0d0da13
+ms.sourcegitcommit: 401be39a42ffe007593528b5bba62583ca9fcafd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46496117"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50244490"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>チュートリアル: Visual Studio での C# および ASP.NET Core の概要
 
 Visual Studio を使用した ASP.NET Core での C# 開発に関するこのチュートリアルでは、C# ASP.NET Core Web アプリを作成し、それを変更し、IDE の一部の機能を検討した後で、アプリを実行します。
 
+## <a name="before-you-begin"></a>始める前に
+
+### <a name="install-visual-studio"></a>Visual Studio のインストール
+
 Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
+
+### <a name="update-visual-studio"></a>Visual Studio 2017 を更新する
+
+Visual Studio を既にインストールしている場合は、最新のリリースを実行していることを確認します。 インストールを更新する方法の詳細については、「[Visual Studio 2017 を最新リリースに更新する](../install/update-visual-studio.md)」ページを参照してください。
+
+### <a name="choose-your-theme-optional"></a>テーマを選択する (省略可能)
+
+このチュートリアルには、ダーク テーマを使用しているスクリーン ショットが含まれます。 ダーク テーマを使用していないが、使用したい場合は、その方法について「[Visual Studio IDE とエディターのカスタマイズ](quickstart-personalize-the-ide.md)」ページを参照してください。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
@@ -46,7 +58,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 #### <a name="option-1-use-the-new-project-dialog-box"></a>オプション 1: [新しいプロジェクト] ダイアログ ボックスを使用する
 
-1. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで、**[Visual Studio インストーラーを開く]** リンクを選択します。
+1. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで、**[Visual Studio インストーラーを開く]** リンクを選択します。 (ディスプレイの設定によっては、表示するためにスクロールする必要があります。)
 
    ![[新しいプロジェクト] ダイアログ ボックスで [Visual Studio インストーラーを開く] リンクを選択する](../ide/media/open-visual-studio-installer-mycoreapp.png)
 
@@ -71,6 +83,9 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 1. 上部のドロップダウン メニューに **[ASP.NET Core 2.1]** が表示されていることを確認します。 次に、**[OK]** を選択します。
 
    ![[新しい ASP.NET Core Web アプリケーション] ダイアログ ボックス](../ide/media/new-project-csharp-aspnet-razor-web-app.png)
+
+   > [!NOTE]
+   > 上部のドロップダウン メニューで **[ASP.NET Core 2.0]** 以降が表示されない場合は、最新リリースの Visual Studio を実行していることを確認します。 インストールを更新する方法の詳細については、「[Visual Studio 2017 を最新リリースに更新する](../install/update-visual-studio.md)」ページを参照してください。
 
 ### <a name="about-your-solution"></a>ソリューションについて
 
@@ -131,7 +146,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 1. ブラウザー ウィンドウを開いたまま、Visual Studio に戻ります。
 
-1. Visual Studio で **About.cshtml** を選択します。 次に、「_changed_」という単語を削除して、その代わりに「_file and directory_」という文字列を追加します。
+1. Visual Studio で **About.cshtml** を選択します。 次に、「_additional_」という単語を削除して、その代わりに「_file and directory_」という文字列を追加します。
 
     ![About.cshtml ファイル内のテキストを変更する](../ide/media/csharp-aspnet-razor-aboutcshtml-mycoreapp-code-changed.png)
 
@@ -197,4 +212,4 @@ Visual Studio は、開発者向け生産性向上ツールの統合開発スイ
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio を使用して Azure App Service に Web アプリを発行する](..//deployment/quickstart-deploy-to-azure.md)
+[Visual Studio を使用して Azure App Service に Web アプリを発行する](../deployment/quickstart-deploy-to-azure.md)

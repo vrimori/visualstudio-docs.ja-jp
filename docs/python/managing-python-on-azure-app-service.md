@@ -1,7 +1,7 @@
 ---
-title: Azure App Service での Python の構成
+title: Azure App Service での Python の構成 (Windows)
 description: Azure App Service に Python インタープリターとライブラリをインストールし、そのインタープリターを正しく参照するように Web アプリケーションを構成する方法について説明します。
-ms.date: 07/26/2018
+ms.date: 10/18/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -12,20 +12,19 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 76d413e37ec7ebeabd8c76655b4c47758ffafc48
-ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
+ms.openlocfilehash: 10da39ca8074148ac11e69be559af8da9931213e
+ms.sourcegitcommit: 551f13774e8bb0eb47cbd973745628a956e866aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39468716"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459869"
 ---
-# <a name="how-to-set-up-a-python-environment-on-azure-app-service"></a>Azure App Service で Python 環境を設定する方法
+# <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>Azure App Service で Python 環境を設定する方法 (Windows)
 
 > [!Important]
-> Microsoft では、この記事で説明するとおり、App Service 用の Python の拡張機能を廃止し、Linux の App Service に直接デプロイできるようにする予定です。 拡張機能はその間も動作する予定です。 Linux に App Service を展開するには、「[Deploy a Python web app in Web App for Containers](/azure/app-service/containers/quickstart-python)」 (Web App for Containers に Python Web アプリを展開する) を参照してください。
+> この記事で説明するとおり Microsoft では、App Service 用の Python の拡張機能を非推奨にし、[Linux の App Service](publishing-python-web-applications-to-azure-from-visual-studio.md) の直接デプロイを選択しまました。
 
-
-  [Azure App Service](https://azure.microsoft.com/services/app-service/) は、Web アプリに提供するサービスとしてのプラットフォームです。Web アプリがブラウザーでアクセスされるサイト、自身のクライアントで使用される REST API、またはイベント トリガーされる処理かどうかは関係ありません。 App Service は、Python を使用してアプリの実装を完全にサポートします。
+[Azure App Service](https://azure.microsoft.com/services/app-service/) は、Web アプリに提供するサービスとしてのプラットフォームです。Web アプリがブラウザーでアクセスされるサイト、自身のクライアントで使用される REST API、またはイベント トリガーされる処理かどうかは関係ありません。 App Service は、Python を使用してアプリの実装を完全にサポートします。
 
 Azure App Service でのカスタマイズ可能な Python のサポートは、App Service *サイトの拡張機能*のセットとして提供されます。拡張機能にはそれぞれ Python ランタイムの特定のバージョンが含まれています。 その後、この記事の説明に従って、希望のパッケージを直接環境にインストールすることができます。 App Service 自体で環境をカスタマイズすることにより、Web アプリ プロジェクトでパッケージを管理したり、アプリ コードと一緒にアップロードする必要はありません。
 

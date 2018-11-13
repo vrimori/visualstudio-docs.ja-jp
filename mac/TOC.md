@@ -2,7 +2,8 @@
 # [IDE ツアー](ide-tour.md)
 
 # [インストール](installation.md)
-## [インストールのプレビュー](install-preview.md)
+## [ファイアウォールまたはプロキシの内側にインストールして使用する](install-behind-a-firewall-or-proxy-server.md)
+## [プレビュー リリースをインストールする](install-preview.md)
 ## [更新](update.md)
 ## [アンインストール](uninstall.md)
 

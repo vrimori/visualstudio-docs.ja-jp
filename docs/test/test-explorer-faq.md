@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: douge
-ms.openlocfilehash: 069150d7f441b754b21c0a3a487f5238ef94e039
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: c9321c90132b026a71733dbbadc19a82db20d981
+ms.sourcegitcommit: 401be39a42ffe007593528b5bba62583ca9fcafd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43775105"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50244386"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio テスト エクスプローラーに関する FAQ
 
@@ -84,6 +84,10 @@ ms.locfileid: "43775105"
 **テスト エクスプローラーの検索ボックスの "ファイル パス" フィルターはもう存在しません。**
 
 **テスト エクスプローラー**の検索ボックスのファイル パス フィルターは、Visual Studio 2017 バージョン 15.7 プレビュー 3 で削除されました。 この機能は使用頻度が低く、この機能を除外することで、テスト エクスプローラーはテスト メソッドを高速で取得できます。 この変更によって開発フローが中断される場合は、[開発者コミュニティ](https://developercommunity.visualstudio.com/)でフィードバックを送信してその旨をお知らせください。
+
+## <a name="remove-undocumented-interfaces"></a>ドキュメントに記載されていないインターフェイスを削除する
+**テストに関連する一部の API は、Visual Studio 2019 には存在していません。何か変更されたのでしょうか?**
+Visual Studio 2019 では、前にパブリックとしてマークされていたが、ドキュメントに正式に記載されたことがないいくつかのテスト ウィンドウ API が削除されます。 これらは、拡張機能の管理者に対して早期に警告を発するために、Visual Studio 2017 で "非推奨" としてマークされていました。 弊社の知る限りでは、これらの API を検出して依存関係を築いている拡張機能は、ごくわずかです。 これらのメソッドには、`IGroupByProvider`、`IGroupByProvider<T>`、`KeyComparer`、`ISearchFilter`、`ISearchFilterToken`、`ISearchToken`、および `SearchFilterTokenType` が含まれます。 この変更が拡張機能に影響を与える場合は、[開発者コミュニティ](https://developercommunity.visualstudio.com)でバグを入力して、その旨をお知らせください。
 
 ## <a name="test-adapter-nuget-reference"></a>テスト アダプターの NuGet 参照
 **Visual Studio 2017 バージョン 15.8 で、テストは検出されますが、実行されません。**

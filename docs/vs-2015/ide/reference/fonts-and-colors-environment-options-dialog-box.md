@@ -32,12 +32,12 @@ caps.latest.revision: 31
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cae9f5af0c6b8df6594a78bc7601ac123c349dc5
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: dbaaab64a50a918844a8f9060ce80ee8c8e7ae00
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49949436"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220236"
 ---
 # <a name="fonts-and-colors-environment-options-dialog-box"></a>[フォントおよび色]\([オプション] ダイアログ ボックス - [環境])
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -153,7 +153,7 @@ ms.locfileid: "49949436"
 |**キーワード**|特定の言語用に予約済みのキーワード。 たとえば、class、namespace などです。|  
 |**メモリ アドレス**|**[メモリ]** ウィンドウ内でアドレス列の表示に使用されるテキストの色。|  
 |**メモリ変更**|**[メモリ]** ウィンドウ内で変更されたデータの表示に使用されるテキストの色。|  
-|**メモリ データ**|**[メモリ]** ウィンドウ内でデータの表示に使用されるテキストの色。|  
+|**メモリ データ**|内のデータを表示するために使用するテキストの色、**メモリ**ウィンドウ。|  
 |**メモリ読み取り不可**|**[メモリ]** ウィンドウ内で読み取り不可能なメモリ領域の表示に使用されるテキストの色。|  
 |**数値**|実際の数値を表す、コード内の数字。|  
 |**Operator**|+、-、!= などの演算子。|  

@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ccaebf42100f4d9c0664bdf72be7d7f3808ebc1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: af0871e428d57d9bb4da85a16963f539ecd08d96
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49911318"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51221036"
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>UWP アプリでの JavaScript のメモリ使用量を分析する
 Visual Studio に用意されている JavaScript メモリ アナライザーは、メモリ使用量を把握し、JavaScript を使用して Windows 用に開発された UWP アプリのメモリ リークを検出するのに役立ちます。 サポートされるアプリには、ユニバーサル Windows アプリのアプリが含まれます。
@@ -355,15 +355,15 @@ if (performance && performance.mark) {
   
 -   ユーザーが新しいページに移動した後も誤ってメモリに保持されているオブジェクトを検索します。これは、一般的なメモリの問題の原因です。 例:  
   
-    -   [URL.CreateObjectUrl](http://msdn.microsoft.com/library/windows/apps/hh453196.aspx) 関数の不適切な使用により、この問題が発生する場合があります。  
+    -   [URL.CreateObjectUrl](https://developer.mozilla.org/docs/Web/API/URL/createObjectURL) 関数の不適切な使用により、この問題が発生する場合があります。  
   
-    -   一部のオブジェクトは `dispose` メソッドおよび使用の推奨を提供する場合があります。 たとえば、一覧から `dispose` メソッドを呼び出して、ページから移動した場合には、 [WinJS.Binding.List](http://msdn.microsoft.com/library/windows/apps/Hh700774.aspx) で `createFiltered` を呼び出す必要があります。  
+    -   一部のオブジェクトは `dispose` メソッドおよび使用の推奨を提供する場合があります。 たとえば、一覧から `dispose` メソッドを呼び出して、ページから移動した場合には、 [WinJS.Binding.List](/previous-versions/windows/apps/hh700774\(v\=win.10\)) で `createFiltered` を呼び出す必要があります。  
   
     -   1 つ以上のイベント リスナーを削除する必要が生じる場合があります。 詳細については、「 [View DOM event listeners](../debugger/view-dom-event-listeners.md)」を参照してください。  
   
--   JavaScript メモリ アナライザーについては、この Build 2013 カンファレンスの [ビデオ](http://channel9.msdn.com/Events/Build/2013/3-316) の後半部分をご覧ください。  
+-   JavaScript メモリ アナライザーについては、この Build 2013 カンファレンスの [ビデオ](https://channel9.msdn.com/Events/Build/2013/3-316) の後半部分をご覧ください。  
   
--   「[Managing memory in UWP apps](http://msdn.microsoft.com/magazine/jj651575.aspx)」(UWP アプリでのメモリの管理) をお読みください。  
+-   「[Managing memory in UWP apps](https://msdn.microsoft.com/magazine/jj651575.aspx)」(UWP アプリでのメモリの管理) をお読みください。  
   
 -   問題を特定するためにコードを一時的に変更することを検討してください。 たとえば、次の操作を行います。  
   

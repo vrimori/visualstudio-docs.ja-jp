@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ad5cc6dc41fb3c9b481eef717ccc3ad07b5e2e9
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 404a8a3f40d5d84d60fe4822fb692e4f48a57503
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43780701"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220808"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 と Windows Server 2012 アプリケーションのパフォーマンス ツール
 
@@ -31,7 +31,7 @@ UWP アプリのプロファイリングを行う場合、次のプロファイ�
 
 - サンプリング メソッドを使用した JavaScript アプリのプロファイリング。
 - インストルメンテーション メソッドを使用したマネージド コードおよびネイティブ コードのプロファイリング。
-- 同時実行プロファイル。
+- コンカレンシー プロファイル
 - .NET メモリ プロファイル。
 - 階層相互作用プロファイリング (TIP)。
 - サンプリング イベントや時間間隔の設定、追加のパフォーマンス カウンター データの収集などのサンプリング オプション。
@@ -43,9 +43,9 @@ UWP アプリのプロファイリングの詳細については、次の記事�
 - [リモート コンピューターで UWP アプリを実行する](../debugger/run-windows-store-apps-on-a-remote-machine.md)
 - [プロファイル ツールの概要](profiling-feature-tour.md)
 - [JavaScript メモリ](../profiling/javascript-memory.md)
-- [ローカル コンピューターでの UWP アプリの Visual C++、Visual C#、および Visual Basic コードのプロファイリング](http://msdn.microsoft.com/en-us/2d0c939e-0bac-48c5-b727-46f6c6113060)
-- [リモート デバイスでの UWP アプリの Visual C++、Visual C#、および Visual Basic コードのプロファイリング](http://msdn.microsoft.com/en-us/b932a2be-11b0-40fd-b996-75c6b6a79d22)
-- [UWP アプリの Visual C++、Visual C#、および Visual Basic コードのパフォーマンス データの分析](http://msdn.microsoft.com/en-us/5de4a413-d924-425f-afc4-e1ecfb0fca18)
+- [ローカル コンピューターでの UWP アプリの Visual C++、Visual C#、および Visual Basic コードのプロファイリング](https://msdn.microsoft.com/2d0c939e-0bac-48c5-b727-46f6c6113060)
+- [リモート デバイスでの UWP アプリの Visual C++、Visual C#、および Visual Basic コードのプロファイリング](https://msdn.microsoft.com/b932a2be-11b0-40fd-b996-75c6b6a79d22)
+- [UWP アプリの Visual C++、Visual C#、および Visual Basic コードのパフォーマンス データの分析](https://msdn.microsoft.com/5de4a413-d924-425f-afc4-e1ecfb0fca18)
 
 ## <a name="collect-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-from-the-visual-studio-ide"></a>Windows 8 デスクトップまたは Windows Server 2012 で実行中のアプリ上のデータを Visual Studio IDE から収集する
 
@@ -68,7 +68,7 @@ Visual Studio がインストールされていないデバイスを含めて、
 |ツール名|説明|
 |---------------|-----------------|
 |[VSPerf](../profiling/vsperf.md)|UWP アプリからプロファイル データを収集し、Windows 8 デスクトップ アプリケーションおよび Windows Server 2012 アプリケーションからサンプル プロファイル データを収集します。|
-|[VSPerfCmd](../profiling/vsperfcmd.md)|Windows 8 デスクトップまたは Windows Server 2012 で実行されるアプリから、インストルメンテーション、同時実行、および階層相互作用プロファイル データを収集します。 以前のバージョンの Windows からすべてのタイプのプロファイル データを収集します。|
+|[VSPerfCmd](../profiling/vsperfcmd.md)|Windows 8 デスクトップまたは Windows Server 2012 で実行されるアプリから、インストルメンテーション、コンカレンシー、および階層相互作用プロファイル データを収集します。 以前のバージョンの Windows からすべてのタイプのプロファイル データを収集します。|
 
 これらのツールはどちらも、Visual Studio と共にローカル コンピューターにインストールされます。
 

@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b7e42c274bd1ef5bb2d04db2e856418ea6719f8
-ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
+ms.openlocfilehash: 6eba5c5dc2ec357d9aaf6a5e8f9cdef18102b8da
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44384293"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49856172"
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 のインストール
 
@@ -63,11 +63,11 @@ Visual Studio 2017 と以前のバージョンの Visual Studio を共存させ�
 
 1. **[ダウンロード]** フォルダーで、次のいずれかのファイルと一致する、または似ているブートストラップをダブルクリックします。
 
-  * Visual Studio Enterprise の場合は **vs_enterprise.exe**
-  * Visual Studio Professional の場合は **vs_professional.exe**
-  * Visual Studio Community の場合は **vs_community.exe**  <br><br>
+   * Visual Studio Enterprise の場合は **vs_enterprise.exe**
+   * Visual Studio Professional の場合は **vs_professional.exe**
+   * Visual Studio Community の場合は **vs_community.exe**  <br><br>
 
-  ユーザー アカウント制御の通知を受信する場合、**[はい]** をクリックします。
+   ユーザー アカウント制御の通知を受信する場合、**[はい]** をクリックします。
 
 2. Microsoft の[ライセンス条項](https://visualstudio.microsoft.com/license-terms/)と[プライバシーに関する声明](https://privacy.microsoft.com/privacystatement)の確認を求められます。 **[続行]** をクリックします。
 
@@ -79,7 +79,7 @@ Visual Studio 2017 と以前のバージョンの Visual Studio を共存させ�
 
 1. **[Visual Studio のインストール]** 画面で、必要なワークロードを見つけます。
 
- ![Visual Studio 2017 の設定ダイアログからワークロードを選択する](../install/media/install-visual-studio-community.png)
+   ![Visual Studio 2017 の設定ダイアログからワークロードを選択する](../install/media/install-visual-studio-community.png)
 
      たとえば、".NET デスクトップ開発" ワークロードを選択します。 これには既定のコア エディターが用意されており、20 を超える言語の基本的なコード編集サポートが含まれ、プロジェクトなしで任意のフォルダーからコードを開いて編集することができます。また、統合ソース コード管理を利用できます。
 
@@ -130,15 +130,17 @@ Visual Studio のインストールをカスタマイズする際にワークロ
 
 ## <a name="step-8---start-developing"></a>手順 8 - 開発を始める
 
-1. Visual Studio のインストールが完了したら **[起動]** をクリックして、[Visual Studio を使用した開発を開始](../ide/get-started-developing-with-visual-studio.md)します。
+1. Visual Studio のインストールが完了したら **[起動]** をクリックして、Visual Studio を使用した開発を開始します。
 
 2. **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。
 
-3. プロジェクトの種類を選択します。 <br><br>
-   たとえば、[C++ アプリをビルドする](../ide/getting-started-with-cpp-in-visual-studio.md)には、**[インストール済み]** をクリックし、**[Visual C++]** を展開して、ビルドする C++ プロジェクトの種類を選択します。 <br><br>
+3. プロジェクトの種類を選択します。
+
+   たとえば、[C++ アプリをビルドする](../ide/getting-started-with-cpp-in-visual-studio.md)には、**[インストール済み]** をクリックし、**[Visual C++]** を展開して、ビルドする C++ プロジェクトの種類を選択します。
+
    [C# アプリをビルドする](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)には、**[インストール済み]** をクリックし、**[Visual C#]** を展開して、ビルドする C# プロジェクトの種類を選択します。
 
-[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)] 
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: 共同編集し、アドインを理解します。
+title: 共同編集と、アドインを理解します。
 ms.custom: ''
 ms.date: 07/20/2017
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ea525a97b38a043137b372f7c224f15c39478a97
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 39098a56b3ff17b1e491c15f3b6119978a28a2ca
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768171"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671119"
 ---
-# <a name="understand-coauthoring-and-add-ins"></a>共同編集し、アドインを理解します。
+# <a name="understand-coauthoring-and-add-ins"></a>共同編集と、アドインを理解します。
 
-共同編集は、他のユーザーと同時に (つまり、OneDrive、OneDrive for Business または SharePoint Online)、クラウドでホストされているブックを編集できるようにする Excel for Windows desktop の機能です。 この機能の追加により、それが動作するスムーズにユーザーが共同編集中であってもことを確認するために、Excel ソリューションを調整する必要があります。 参照してください[Excel の共同編集に関する](https://msdn.microsoft.com/vba/excel-vba/articles/about-coauthoring-in-excel)です。
+共同編集は、他のユーザーと同時に使用すると、クラウド (つまり、OneDrive、OneDrive for Business、または SharePoint Online など) でホストされているブックを編集 Excel for Windows desktop の機能です。 この機能の追加により、それが動作する滑らかにユーザーが共同で行う場合でも、ことを確認するには、Excel ソリューションを調整する必要があります。 参照してください[Excel で共同編集に関する](/office/vba/excel/concepts/about-coauthoring-in-excel)します。
 
-注: は for Windows Desktop の Excel 共同編集 2017年に導入され、は office 365 のサブスクライバーを使用します。 Office 2016 または以前にライセンスを購入するユーザーは現在ありません coauthoring 機能へのアクセス。 (Excel Online では、Excel for Android、ios、Excel および Excel モバイル、Windows ストアでもサポート共同編集)。
+注: は、2017年で導入された for Windows Desktop の Excel 共同編集とは、office 365 のサブスクライバーで現在使用できます。 Office 2016 以前の永続的ライセンスを購入したユーザーは現在ありません、チームでの機能へのアクセス。 (Excel Online では、Excel for Android、ios、Excel および Excel Mobile、Windows ストアでもサポート共同で行う)。
 
 ## <a name="see-also"></a>関連項目
 [Excel ソリューション](./excel-solutions.md)

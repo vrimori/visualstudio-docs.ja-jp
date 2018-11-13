@@ -7,7 +7,6 @@ ms.topic: reference
 f1_keywords:
 - VS.Environment.Web Browser
 - VS.ToolsOptionsPages.Environment.WebBrowser
-- VS.ToolsOptionsPag.Environment.Web_Browser
 - VS.ToolsOptionsPages.Environment.Web_Browser
 helpviewer_keywords:
 - browsers, customizing
@@ -25,12 +24,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c6f8dc8fb781e75116dbdcb6e316981225f32439
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: b7f492c1a192f8c12418c679f498bf282859cbf3
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31947119"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671886"
 ---
 # <a name="web-browser-environment-options-dialog-box"></a>[Web ブラウザー] ([オプション] ダイアログ ボックス - [環境])
 内部 Web ブラウザーと Internet Explorer のオプションを設定します。 このダイアログ ボックスにアクセスするには、**[ツール]** メニューの **[オプション]** をクリックし、**[環境]** フォルダーを展開して **[Web ブラウザー]** を選択します。
@@ -54,7 +53,7 @@ ms.locfileid: "31947119"
 
 -   **ソース エディター** 選択すると、[エディター](../../ide/writing-code-in-the-code-and-text-editor.md)にソースが表示されます。
 
--   **HTML エディター** 選択すると、[HTML デザイナー](http://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)にソースが表示されます。 この場合、デザイン ビューまたは標準のテキストベースのソース ビューで Web ページを編集します。
+-   **HTML エディター** 選択すると、[HTML デザイナー](https://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)にソースが表示されます。 この場合、デザイン ビューまたは標準のテキストベースのソース ビューで Web ページを編集します。
 
 -   **外部エディター** 選択すると、別のエディターにソースが表示されます。 選択するエディター (Notepad.exe など) のパスを指定します。
 
@@ -69,4 +68,4 @@ ms.locfileid: "31947119"
 
 - [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)
 - [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)
-- [HTML デザイナー](http://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)
+- [HTML デザイナー](https://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)

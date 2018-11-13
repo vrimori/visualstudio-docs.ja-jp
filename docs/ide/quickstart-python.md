@@ -1,7 +1,7 @@
 ---
 title: 'クイック スタート: Visual Studio を使用して Python Web アプリを作成する'
 description: このクイック スタートでは、Visual Studio と Flask フレームワークを使用し、Pythonで簡単な Web アプリを作成します。
-ms.date: 06/27/2018
+ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: quickstart
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0a7da7d09bf9bcb419ba174a4eb60fe370e83cda
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 025adc3a99e2c5aabe2588852885e537553ddce6
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49877115"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219277"
 ---
 # <a name="quickstart-create-your-first-python-web-app-using-visual-studio"></a>クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成する
 

@@ -1,7 +1,7 @@
 ---
 title: IntelliTrace 機能拡張の API リファレンス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 11/07/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 03f86c1e93de5a2443a91d047c68528f3ec49b08
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 04ac7a4947576b8c06741ac2c407c35e3663acd0
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39153505"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349518"
 ---
 # <a name="api-reference-for-intellitrace-extensibility"></a>IntelliTrace 機能拡張の API リファレンス
 
@@ -25,14 +25,14 @@ ms.locfileid: "39153505"
   
 ## <a name="in-this-section"></a>このセクションの内容
 
- この IntelliTrace 拡張機能 API は、1 つの名前空間に含まれています。  
+この名前空間には、IntelliTrace 機能拡張 Api にはが含まれています。
   
 - <xref:Microsoft.VisualStudio.IntelliTrace>  
   
 ## <a name="related-sections"></a>関連項目
 
- [IntelliTrace](../debugger/intellitrace.md)  
- IntelliTrace によるデバッグの方法について説明します。  
+[IntelliTrace](../debugger/intellitrace.md)  
+IntelliTrace によるデバッグの方法について説明します。  
   
- [MSDN コード ギャラリー](https://code.msdn.microsoft.com/)  
- IntelliTrace 機能拡張の使用方法を示すサンプル アプリケーションを提供します。
+[開発者コード サンプル](https://code.msdn.microsoft.com/)  
+IntelliTrace 機能拡張の使用方法を示すサンプル アプリケーションを提供します。

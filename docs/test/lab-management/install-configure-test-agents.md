@@ -1,6 +1,6 @@
 ---
 title: テスト エージェントとテスト コントローラーのインストール
-ms.date: 07/06/2018
+ms.date: 10/24/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bcdc556366a84deffa37d7e0234b1c543882022c
-ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
+ms.openlocfilehash: 8055e1c11f38ab83ae9c3a0570064ca49158b886
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46370966"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219030"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>テスト エージェントとテスト コントローラーのインストール
 
@@ -44,9 +44,9 @@ ISO ファイル形式のインストーラーを入手できるので、仮想�
 
 ## <a name="compatible-versions-of-tfs-microsoft-test-manager-the-test-controller-and-test-agent"></a>TFS、Microsoft Test Manager、テスト コントローラー、テスト エージェントの互換性のあるバージョン
 
-次の表に従って、異なるバージョンの TFS、Microsoft Test Manager (MTM)、テスト コントローラー、およびテスト エージェントを混在させることができます。
+次の表に従って、異なるバージョンの TFS、Microsoft Test Manager、テスト コントローラー、およびテスト エージェントを混在させることができます。
 
-| TFS | MTM とラボ センター | コントローラー | エージェント |
+| TFS | Microsoft Test Manager (ラボ センターを使用する場合) | コントローラー | エージェント |
 | --- | -------------------------------------- | ---------- | ----- |
 | 2017: 2015 からのアップグレードまたは新規インストール | 2017 | 2017 | 2017 |
 | 2017: 2015 からのアップグレードまたは新規インストール | 2017 | 2013 Update 5 | 2013 Update 5 |
@@ -55,6 +55,9 @@ ISO ファイル形式のインストーラーを入手できるので、仮想�
 | 2015: 新規インストール | 2013 | 2013 | 2013 |
 | 2015: 2013 からのアップグレードまたは新規インストール | 2015 | 2013 | 2013 |
 | 2013 | 2015 | 2013 | 2013 |
+
+> [!NOTE]
+> TFS 2018 および Azure DevOps Services でのラボ管理シナリオは非推奨となっています。 詳細については、「[TFS 2018 のリリース ノート](/visualstudio/releasenotes/tfs2018-relnotes#--removing-support-for-lab-center-and-automated-testing-flows-in-microsoft-test-manager)」を参照してください。
 
 ## <a name="upgrade-from-visual-studio-2013-test-agents"></a>Visual Studio 2013 テスト エージェントからのアップグレード
 

@@ -59,7 +59,7 @@ ms.locfileid: "36327204"
  デプロイの前後に実行するためのコマンドを追加することもできます。 詳細については、次を参照してください。[方法: SharePoint の設定の配置コマンド](../sharepoint/how-to-set-sharepoint-deployment-commands.md)します。  
   
 ## <a name="publish-packages-to-a-remote-or-local-server"></a>リモートまたはローカル サーバーにパッケージを公開します。
- メニュー バーでのリモート サーバーをセキュリティで保護された SharePoint ソリューションを発行する選択**ビルド**、**発行**、[、**発行**] ダイアログ ボックスで、選択、 **SharePoint サイトに発行**など、リモート サーバーの URL を提供する、オプション ボタン **https://someremoteserver.sharepoint.microsoftonline.com**します。  
+ メニュー バーでのリモート サーバーをセキュリティで保護された SharePoint ソリューションを発行する選択**ビルド**、**発行**、[、**発行**] ダイアログ ボックスで、選択、 **SharePoint サイトに発行**など、リモート サーバーの URL を提供する、オプション ボタン **https://someremoteserver.sharepoint.microsoftonline.com** します。  
   
  ローカル サーバーに SharePoint ソリューションの発行、**発行** ダイアログ ボックスで、選択、**ファイル システムに公開**オプション ボタン、ローカル システム パスを指定します。  
   

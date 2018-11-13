@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 602525666e62a5eaa6e8db13c6e7029d8773bc8b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 05cf317823d4f5853d960109bd97da77ea8a927d
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49917182"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671247"
 ---
 # <a name="design-and-create-office-solutions"></a>設計および Office ソリューションの作成
   Visual Studio には、さまざまな種類の Office ソリューションの作成に使用できるプロジェクト テンプレートが用意されています。 ここでは、プロジェクト テンプレートについて説明し、Office プロジェクトを作成するためのガイダンスを示します。 プロジェクトを作成した後、コードやユーザー インターフェイスのカスタマイズを実装する方法については、次を参照してください。 [Office の開発ソリューション](../vsto/developing-office-solutions.md)します。  
@@ -53,7 +53,7 @@ ms.locfileid: "49917182"
   
   ただし、プロジェクトで特定の機能を使用している場合は、Visual Studio によるターゲット フレームワークの変更後に、プロジェクトのコードの一部を変更することが必要になる場合があります。 ターゲット フレームワークを変更する方法の詳細については、次を参照してください。[方法: .NET Framework のバージョンを対象](../ide/how-to-target-a-version-of-the-dotnet-framework.md)します。 プロジェクトでする必要があります変更の詳細については、次を参照してください。[以降、.NET Framework 4 への移行 Office ソリューション](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)します。  
   
-  Visual Studio プロジェクトのターゲットの .NET Framework を変更する、ソリューションの配置に ClickOnce を使用している場合は、.NET Framework での対応するバージョンを選択すること確認、**の前提条件** ダイアログ ボックス。 プロジェクトのターゲット フレームワークを変更しても、この選択内容は自動的には変わりません。 詳細については、次を参照してください。[方法: Office ソリューションを実行するエンドユーザーのコンピューターに前提条件をインストール](http://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)します。  
+  Visual Studio プロジェクトのターゲットの .NET Framework を変更する、ソリューションの配置に ClickOnce を使用している場合は、.NET Framework での対応するバージョンを選択すること確認、**の前提条件** ダイアログ ボックス。 プロジェクトのターゲット フレームワークを変更しても、この選択内容は自動的には変わりません。 詳細については、次を参照してください。[方法: Office ソリューションを実行するエンドユーザーのコンピューターに前提条件をインストール](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)します。  
   
 > [!NOTE]  
 >  .NET Framework 3.5 以前を [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] を使用して作成した Office プロジェクトの対象にすることはできません。 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] を使用して作成した Office プロジェクトには、[!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)] で導入された機能が必要です。  
@@ -61,7 +61,7 @@ ms.locfileid: "49917182"
 ### <a name="understand-when-the-office-pias-are-required-on-end-user-computers"></a>Office Pia がエンドユーザーのコンピューターに必要な場合を理解します。  
  既定では、Office プライマリ相互運用機能アセンブリ (Pia) する必要はありませんがエンドユーザーのコンピューターにインストールされている場合、 **Embed Interop Types**プロジェクト内の各 Office PIA 参照のプロパティに設定されて**True**、これは、既定値です。 この場合、プロジェクトをビルドすると、ソリューションが使用する PIA 型の型情報がソリューション アセンブリに埋め込まれます。 実行時に、埋め込み型情報は、Office アプリケーションの COM ベースのオブジェクト モデルへの呼び出しを Pia の代わりに使用します。 ソリューションに Pia の型を埋め込む方法の詳細については、次を参照してください。[等価性と埋め込まれた相互運用機能型の入力](/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)します。  
   
- 場合、 **Embed Interop Types**プロジェクト内の各 Office PIA 参照のプロパティに設定されて**False**、Office Pia をインストールして、各エンドユーザーのコンピューターのグローバル アセンブリ キャッシュに登録する必要がありますがソリューションを実行します。 ほとんどの場合、PIA は既定で Office と共にインストールされますが、ソリューションの必須コンポーネントとして再頒布可能な PIA を含めることもできます。 詳細については、次を参照してください。[展開 Office ソリューションの前提条件](http://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e)します。  
+ 場合、 **Embed Interop Types**プロジェクト内の各 Office PIA 参照のプロパティに設定されて**False**、Office Pia をインストールして、各エンドユーザーのコンピューターのグローバル アセンブリ キャッシュに登録する必要がありますがソリューションを実行します。 ほとんどの場合、PIA は既定で Office と共にインストールされますが、ソリューションの必須コンポーネントとして再頒布可能な PIA を含めることもできます。 詳細については、次を参照してください。[展開 Office ソリューションの前提条件](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e)します。  
   
 ### <a name="understand-the-client-profile"></a>クライアント プロファイルを理解します。  
  .NET Framework Client Profile は、完全な .NET Framework のサブセットです。 .NET Framework のクライアント機能のみを使用し、Office ソリューションをできる限り迅速に配置する必要がある場合は、.NET Framework Client Profile を対象にすることができます。 詳細については、次を参照してください。 [.NET Framework クライアント プロファイル](/dotnet/framework/deployment/client-profile)します。  

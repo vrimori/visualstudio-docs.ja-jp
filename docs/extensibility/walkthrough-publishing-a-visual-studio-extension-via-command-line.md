@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0b50e5e1c0198f1a8c6e33254f0cdab17bc38535
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 8d95e2fbe36a73074b97f47f6714f1fc4aa8228c
+ms.sourcegitcommit: 12d6398c02e818de4fbcb4371bae9e5db6cf9509
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49883355"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050184"
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>チュートリアル: コマンドラインを使用して Visual Studio 拡張機能の発行
 
@@ -38,7 +38,7 @@ VsixPublisher.exe は、Marketplace への発行の Visual Studio 拡張機能�
 |ペイロード (必須) | いずれかのパスを発行するペイロードまたは"詳細情報の URL"として使用するリンク。 |
 |publishManifest (必須) | 発行へのパスはマニフェストを使用するファイルです。 |
 |ignoreWarnings | 拡張機能を発行するときに無視する警告の一覧。 これらの警告は、拡張機能を発行するときに、コマンド ライン メッセージとして表示されます。 (たとえば、"VSIXValidatorWarning01、VSIXValidatorWarning02")  
-|personalAccesToken | 個人用アクセス トークンを発行元を認証するために使用します。 指定しない場合、pat、ログインしているユーザーから取得されます。 |
+|personalAccessToken | 個人用アクセス トークン (PAT)、発行元を認証するために使用します。 指定しない場合、PAT、ログインしているユーザーから取得されます。 |
 
 ```
 VsixPublisher.exe publish -payload "{path to vsix}" -publishManifest "{path to vs-publish.json}" -ignoreWarnings "VSIXValidatorWarning01,VSIXValidatorWarning02"

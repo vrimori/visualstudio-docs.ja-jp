@@ -1,6 +1,6 @@
 ---
-title: Application Page, Project Designer (Visual Basic)
-ms.date: 11/04/2016
+title: VB プロジェクトのプロパティの [アプリケーション] ページ
+ms.date: 10/30/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,18 +15,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 62cbae6115b8268adbb1e2f9d6c27df8bf94a28b
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 4ceb1612ee678a005cba0be0cfb44337c126cb71
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38800734"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50670963"
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Application Page, Project Designer (Visual Basic)
 
 プロジェクト デザイナーの **[アプリケーション]** ページを使用して、プロジェクトのアプリケーション設定とプロパティを指定します。
 
-**[アプリケーション]** ページにアクセスするには、**ソリューション エクスプローラー**のプロジェクト ノード (**[ソリューション]** ノードではありません) を選択します。 その後、メニュー バーで **[プロジェクト]**  >  **[プロパティ]** を選択します。 プロジェクト デザイナーが表示されたら、**[アプリケーション]** タブを選択します。
+**[アプリケーション]** ページにアクセスするには、**ソリューション エクスプローラー**のプロジェクト ノード (**[ソリューション]** ノードではありません) を選択します。 その後、メニュー バーで **[プロジェクト]**  >  **[プロパティ]** を選択します。 **プロジェクト デザイナー**が表示されたら、**[アプリケーション]** タブを選択します。
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -36,7 +36,11 @@ ms.locfileid: "38800734"
 
 ### <a name="assembly-name"></a>[アセンブリ名]
 
-アセンブリ マニフェストが含まれる出力ファイルの名前を指定します。 このプロパティを変更すると、**[出力名]** プロパティも変更されます。 [/out (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/out)コンパイラ スイッチを使用して、コマンド プロンプトから出力ファイルの名前を指定することもできます。 プログラムを使用してこのプロパティにアクセスする方法については、「<xref:VSLangProj.ProjectProperties.AssemblyName%2A>」を参照してください。
+アセンブリ マニフェストが含まれる出力ファイルの名前を指定します。 このプロパティを変更すると、**[出力名]** プロパティも変更されます。
+
+[/out (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/out)コンパイラ スイッチを使用して、コマンド プロンプトから出力ファイルの名前を指定することもできます。
+
+プログラムを使用してこのプロパティにアクセスする方法については、「<xref:VSLangProj.ProjectProperties.AssemblyName%2A>」を参照してください。
 
 ### <a name="root-namespace"></a>ルート名前空間
 
@@ -45,7 +49,7 @@ ms.locfileid: "38800734"
 **[ルート名前空間]** をクリアした場合は、コードにプロジェクトの名前空間の構造を指定できます。
 
 > [!NOTE]
-> [Namespace ステートメント](/dotnet/visual-basic/language-reference/statements/namespace-statement)で Global グローバル キーワードを使用する場合は、プロジェクトのルート名前空間以外の名前空間を定義できます。 **[ルート名前空間]** をクリアすると、`Global` は最上位レベルの名前空間になり、`Namespace` ステートメントの `Global` キーワードは不要になります。 詳細については、「[Visual Basic における名前空間](/dotnet/visual-basic/programming-guide/program-structure/namespaces)」の「名前空間のステートメントでの Global キーワード」を参照してください。
+> [Namespace ステートメント](/dotnet/visual-basic/language-reference/statements/namespace-statement)で `Global` キーワードを使用する場合は、プロジェクトのルート名前空間以外の名前空間を定義できます。 **[ルート名前空間]** をクリアすると、`Global` は最上位レベルの名前空間になり、`Namespace` ステートメントの `Global` キーワードは不要になります。 詳細については、「[Visual Basic における名前空間](/dotnet/visual-basic/programming-guide/program-structure/namespaces)」の「名前空間のステートメントでの Global キーワード」を参照してください。
 
 コードで名前空間を作成する方法については、「[Namespace ステートメント](/dotnet/visual-basic/language-reference/statements/namespace-statement)」を参照してください。
 
@@ -66,20 +70,17 @@ ms.locfileid: "38800734"
 
 ### <a name="application-type"></a>アプリケーションの種類
 
-ビルドするアプリケーションの種類を指定します。 Windows 8.x アプリの場合は、**[Windows ストア アプリ]**、**[クラス ライブラリ]**、または **[WinMD ファイル]** を指定できます。 他のほとんどのアプリケーションの種類では、**[Windows アプリケーション]**、**[コンソール アプリケーション]**、**[クラス ライブラリ]**、**[Windows サービス]**、または **[Web コントロール ライブラリ]** を指定できます。
+ビルドするアプリケーションの種類を指定します。 値は、プロジェクトの種類によって異なります。 たとえば、**Windows フォーム アプリ** プロジェクトの場合は、**[Windows フォーム アプリケーション]**、**[クラス ライブラリ]**、**[コンソール アプリケーション]**、**[Windows サービス]**、または **[Web コントロール ライブラリ]** を指定できます。
 
 Web アプリケーション プロジェクトでは、**[クラス ライブラリ]** を指定する必要があります。
 
-**[WinMD ファイル]** オプションを指定した場合、種類を Windows ランタイムのプログラミング言語に射影できます。 WinMD ファイルとしてプロジェクトの出力をパッケージ化することで、複数の言語でアプリケーションをコード化し、すべて同じ言語で記述した場合と同様に、コードを相互運用することができます。 [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] アプリを含む、Windows ランタイム ライブラリをターゲットとするソリューションに対して、**[WinMD ファイル]** オプションを使用できます。 詳細については、「[C# および Visual Basic での Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)」を参照してください。
-
-> [!NOTE]
-> Windows ランタイムでは、どの言語で使用される場合でも、ネイティブ オブジェクトとして表示されるように種類を射影できます。 たとえば、Windows ランタイムと対話する JavaScript アプリケーションでは JavaScript オブジェクト セットとして使用され、C# アプリケーションでは .NET オブジェクト コレクションとしてライブラリが使用されます。 WinMD ファイルとしてプロジェクトの出力をパッケージ化することで、Windows ランタイムで使用されるのと同じテクノロジを利用できます。
-
 **[アプリケーションの種類]** プロパティの詳細については、「[/target (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/target)」を参照してください。 プログラムを使用してこのプロパティにアクセスする方法については、「<xref:VSLangProj.ProjectProperties.OutputType%2A>」を参照してください。
 
-### <a name="icon"></a>アイコン
+### <a name="auto-generate-binding-redirects"></a>バインド リダイレクトの自動生成
 
-プログラム アイコンとして使用する .ico ファイルを設定します。 **[\<参照...>]** を選択して、既存のグラフィックを参照します。 詳細については、「[/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon)」 (または「[/win32icon (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)」) を参照してください。 プログラムを使用してこのプロパティにアクセスする方法については、「<xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>」を参照してください。
+アプリまたはそのコンポーネントで同じアセンブリの複数のバージョンが参照されている場合、バインド リダイレクトがプロジェクトに追加されます。 プロジェクト ファイルにおいて手動でバインド リダイレクトを定義したい場合は、**[バインド リダイレクトの自動生成]** をオフにします。 このチェック ボックスは、Visual Studio 2017 バージョン 15.7 で導入されました。
+
+リダイレクトの詳細については、「[アセンブリ バージョンのリダイレクト](/dotnet/framework/configure-apps/redirect-assembly-versions)」をご覧ください。
 
 ### <a name="startup-form--startup-object--startup-uri"></a>スタートアップ フォーム / スタートアップ オブジェクト / スタートアップ URI
 
@@ -92,6 +93,10 @@ Web アプリケーション プロジェクトでは、**[クラス ライブ�
 **[アプリケーション フレームワークを有効にする]** の選択を解除すると、この一覧は **[スタートアップ オブジェクト]** になり、フォームと、`Sub Main` を含むクラスまたはモジュールの両方が表示されます。
 
 **[スタートアップ オブジェクト]** では、アプリケーションの読み込み時に呼び出されるようにエントリ ポイントを定義します。 通常、これは、アプリケーションのメイン フォーム、またはアプリケーションの起動時に実行する必要がある `Sub Main` プロシージャに設定されます。 クラス ライブラリにはエントリ ポイントがないため、このプロパティのオプションのみが **[(なし)]** になります。 詳細については、「[/main](/dotnet/visual-basic/reference/command-line-compiler/main)」を参照してください。 プログラムを使用してこのプロパティにアクセスする方法については、「<xref:VSLangProj.ProjectProperties.StartupObject%2A>」を参照してください。
+
+### <a name="icon"></a>アイコン
+
+プログラム アイコンとして使用する .ico ファイルを設定します。 **[\<参照...>]** を選択して、既存のグラフィックを参照します。 詳細については、「[/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon)」 (または「[/win32icon (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)」) を参照してください。 プログラムを使用してこのプロパティにアクセスする方法については、「<xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>」を参照してください。
 
 ### <a name="assembly-information"></a>アセンブリ情報
 
@@ -107,7 +112,7 @@ Web アプリケーション プロジェクトでは、**[クラス ライブ�
 
 ### <a name="view-windows-settings"></a>Windows 設定の表示
 
-このボタンをクリックすると、app.manifest ファイルが生成され、開きます。 Visual Studio ではこのファイルを使用して、アプリケーションのマニフェスト データを生成します。 その後、次のように、app.manifest の `<requestedExecutionLevel>` タグを変更し、UAC 要求実行レベルを設定します。
+このボタンをクリックすると、*app.manifest* ファイルが生成されて開かれます。 Visual Studio ではこのファイルを使用して、アプリケーションのマニフェスト データを生成します。 その後、次のように、*app.manifest* の `<requestedExecutionLevel>` タグを変更し、UAC 要求実行レベルを設定します。
 
 `<requestedExecutionLevel level="asInvoker" />`
 
@@ -117,7 +122,10 @@ ClickOnce は `asInvoker` のレベル、または仮想化モードで機能し
 
 ## <a name="windows-application-framework-properties"></a>Windows アプリケーション フレームワーク プロパティ
 
-次の設定は、**[Windows アプリケーション フレームワーク プロパティ]** セクションで使用できます。 これらのオプションは、**[アプリケーション フレームワークを有効にする]** チェック ボックスがオンになっている場合にのみ使用できます。 この後に続くセクションでは、Windows Presentation Foundation (WPF) アプリケーションの **Windows アプリケーション フレームワーク プロパティ**の設定について説明します。
+次の設定は、**[Windows アプリケーション フレームワーク プロパティ]** セクションで使用できます。 これらのオプションは、**[アプリケーション フレームワークを有効にする]** チェック ボックスがオンになっている場合にのみ使用できます。
+
+> [!TIP]
+> この後に続くセクションでは、Windows Presentation Foundation (WPF) アプリに固有の **Windows アプリケーション フレームワーク プロパティ**の設定について説明します。
 
 ### <a name="enable-xp-visual-styles"></a>XP Visual スタイルを有効にする
 
@@ -153,13 +161,13 @@ Windows XP Visual スタイル (*Windows XP テーマ*ともいう) を有効ま
 
 このボタンをクリックすると、イベント コード ファイルが表示され、アプリケーション フレームワーク イベント (`Startup`、`Shutdown`、`UnhandledException`、`StartupNextInstance` および `NetworkAvailabilityChanged`) に対してイベントを記述できます。 また、特定のアプリケーション フレームワーク メソッドをオーバーライドすることもできます。 たとえば、`OnInitialize` をオーバーライドして、スプラッシュ スクリーンの表示動作を変更することができます。
 
-## <a name="windows-application-framework-properties-for-windows-presentation-foundation-wpf-applications"></a>Windows Presentation Foundation (WPF) アプリケーションの Windows アプリケーション フレームワーク プロパティ
+## <a name="windows-application-framework-properties-for-windows-presentation-foundation-wpf-apps"></a>Windows Presentation Foundation (WPF) アプリの Windows アプリ フレームワーク プロパティ
 
-プロジェクトが Windows Presentation Foundation アプリケーションである場合は、**Windows アプリケーション フレームワーク プロパティ**で以下の設定を使用できます。 これらのオプションは、**[アプリケーション フレームワークを有効にする]** チェック ボックスがオンになっている場合にのみ使用できます。 次の表にリストされているオプションは、WPF アプリケーションまたは WPF ブラウザー アプリケーションのみで使用できます。 WPF ユーザー コントロールやカスタム コントロール ライブラリでは使用できません。
+プロジェクトが Windows Presentation Foundation (WPF) アプリである場合は、**Windows アプリケーション フレームワーク プロパティ**で以下の設定を使用できます。 これらのオプションは、**[アプリケーション フレームワークを有効にする]** チェック ボックスがオンになっている場合にのみ使用できます。 次の表にリストされているオプションは、WPF または WPF ブラウザー アプリケーションのみで使用できます。 WPF ユーザー コントロールやカスタム コントロール ライブラリでは使用できません。
 
 ### <a name="shutdown-mode"></a>シャットダウン モード
 
-このプロパティは、Windows Presentation Foundation アプリケーションにのみ適用されます。
+このプロパティは、Windows Presentation Foundation (WPF) アプリケーションにのみ適用されます。
 
 <xref:System.Windows.Application.Shutdown%2A> を明示的に呼び出したときにアプリケーションが終了するように指定する場合は、**[明示的にシャットダウンするとき]** を選択します。
 
@@ -171,10 +179,10 @@ Windows XP Visual スタイル (*Windows XP テーマ*ともいう) を有効ま
 
 ### <a name="edit-xaml"></a>XAML の編集
 
-XAML エディターでアプリケーション定義ファイル (Application.xaml) を開き、変更する場合は、このボタンをクリックします。 このボタンをクリックすると、アプリケーション定義ノードに Application.xaml が開きます。 リソースの定義などの特定のタスクを実行するには、このファイルを編集する必要があります。 アプリケーション定義ファイルが存在しない場合、プロジェクト デザイナーで作成されます。
+このボタンをクリックすると、XAML エディターでアプリケーション定義ファイル (Application.xaml) が開きます。 このボタンをクリックすると、*Application.xaml* のアプリケーション定義ノードが開きます。 リソースの定義などの特定のタスクを実行するには、このファイルを編集する必要があります。 アプリケーション定義ファイルが存在しない場合、プロジェクト デザイナーで作成されます。
 
 ### <a name="view-application-events"></a>アプリケーション イベントの表示
 
-コード エディターで `Application` の部分クラス ファイル (Application.xaml.vb) を表示する場合は、このボタンをクリックします。 ファイルが存在しない場合、プロジェクト デザイナーで、適切なクラス名と名前空間を使用して作成されます。
+このボタンをクリックすると、コード エディターで `Application` クラス ファイル (*Application.xaml.vb*) が開きます。 ファイルが存在しない場合、プロジェクト デザイナーで、適切なクラス名と名前空間を使用して作成されます。
 
 特定のアプリケーション状態が変化すると (アプリケーション スタートアップやシャットダウンなどで)、<xref:System.Windows.Application> オブジェクトでイベントが発生します。 このクラスで公開されるイベントの完全な一覧については、「<xref:System.Windows.Application>」を参照してください。 これらのイベントは、`Application` 部分クラスのユーザー コード セクションで処理されます。

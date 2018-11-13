@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 61a7b36892e5cec36a4641c154227df8621c6602
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 92b34ed0abbef18473ab9ccf6b85c236111822f9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776156"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812622"
 ---
 # <a name="step-2-create-a-flask-app-with-views-and-page-templates"></a>手順 2: ビューおよびページ テンプレートを使用して Flask アプリを作成する
 
@@ -36,7 +36,7 @@ ms.locfileid: "43776156"
 
 1. プロジェクト フォルダーで、`HelloFlask` という名前のアプリ フォルダーを作成します (**ソリューション エクスプローラー**でプロジェクトを右クリックし、**[追加]**、**[新しいフォルダー]** の順に選択します)。
 
-1. *HelloFlask* フォルダーで、*\_\_init\_\_.py* という名前のファイルを次の内容で作成します。`Flask` インスタンスが作成され、(次の手順で作成された) アプリのビューが読み込まれます。
+2. *HelloFlask* フォルダーで、*\_\_init\_\_.py* という名前のファイルを次の内容で作成します。`Flask` インスタンスが作成され、(次の手順で作成された) アプリのビューが読み込まれます。
 
     ```python
     from flask import Flask
@@ -45,7 +45,7 @@ ms.locfileid: "43776156"
     import HelloFlask.views
     ```
 
-1. *HelloFlask* フォルダーで、*views.py* という名前のファイルを次の内容で作成します。 *views.py* という名前が重要になるのは、*\_\_init\_\_.py* 内で `import HelloFlask.views` を使用したためです。名前が一致しない場合、実行時にエラーが表示されます。
+3. *HelloFlask* フォルダーで、*views.py* という名前のファイルを次の内容で作成します。 *views.py* という名前が重要になるのは、*\_\_init\_\_.py* 内で `import HelloFlask.views` を使用したためです。名前が一致しない場合、実行時にエラーが表示されます。
 
     ```python
     from flask import Flask
@@ -59,9 +59,9 @@ ms.locfileid: "43776156"
 
     関数とルートの名前を `home` に変更することに加え、このコードには *app.py* からのページ レンダリング コードが含まれ、*\_\_init\_\_.py* で宣言されている `app` オブジェクトをインポートします。
 
-1. *HelloFlask* に *templates* という名前のサブフォルダーを作成します。今のところは空のままです。
+4. *HelloFlask* に *templates* という名前のサブフォルダーを作成します。今のところは空のままです。
 
-1. プロジェクトのルート フォルダーで、*app.py* の名前を *runserver.py* に変更し、コンテンツを次のコードに一致させます。
+5. プロジェクトのルート フォルダーで、*app.py* の名前を *runserver.py* に変更し、コンテンツを次のコードに一致させます。
 
     ```python
     import os
@@ -77,17 +77,17 @@ ms.locfileid: "43776156"
 
         app.run(HOST, PORT)
     ```
-1. プロジェクト構造は次の画像のようになります。
+6. プロジェクト構造は次の画像のようになります。
 
     ![コードのリファクタリング後のプロジェクト構造](media/flask/step02-project-structure.png)
 
-1. **[デバッグ]** > **[デバッグの開始]** (**F5** キー) の順に選択するか、ツール バーの **[Web サーバー]** を使用して (表示されるブラウザーは異なる可能性があります)、アプリを起動し、ブラウザーを開きます。 URL ルートには / と /home の両方を試してください。
+7. **[デバッグ]** > **[デバッグの開始]** (**F5** キー) の順に選択するか、ツール バーの **[Web サーバー]** を使用して (表示されるブラウザーは異なる可能性があります)、アプリを起動し、ブラウザーを開きます。 URL ルートには / と /home の両方を試してください。
 
-1. コードのさまざまな部分にブレークポイントを設定し、アプリを再開し、スタートアップ シーケンスを続行することもできます。 たとえば、*runserver.py* と *HelloFlask\__init__.py* の最初の行と *views.py* の行 `return "Hello Flask!"` にブレークポイントを設定します。 その後、アプリを再開し (**[デバッグ]** > **[再開]** の順に選択するか、**Ctrl** + **F5** キーを押すか、下の画像にあるツール ボタンをクリックします)、コードをステップ実行するか (**F10** キー)、**F5** キーを使って各ブレークポイントから実行します。
+8. コードのさまざまな部分にブレークポイントを設定し、アプリを再開し、スタートアップ シーケンスを続行することもできます。 たとえば、*runserver.py* と *HelloFlask\_* init *_.py* の最初の行と *views.py* の行 `return "Hello Flask!"` にブレークポイントを設定します。 その後、アプリを再開し (**[デバッグ]** > **[再開]** の順に選択するか、**Ctrl** + **F5** キーを押すか、下の画像にあるツール ボタンをクリックします)、コードをステップ実行するか (**F10** キー)、**F5** キーを使って各ブレークポイントから実行します。
 
     ![Visual Studio のデバッグ ツールバーにある再起動ボタン](media/debugging-restart-toolbar-button.png)
 
-1. 完了したら、アプリを停止します。
+9. 完了したら、アプリを停止します。
 
 ### <a name="commit-to-source-control"></a>ソース管理へのコミット
 

@@ -1,7 +1,7 @@
 ---
 title: Python コードのデバッグ
 description: ブレークポイントの設定、ステップ実行、値の検査、例外の確認、対話型ウィンドウでのデバッグなど、特に Python コードについての Visual Studio でのデバッグ機能のチュートリアルです。
-ms.date: 08/14/2018
+ms.date: 10/10/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6766e5e498b631ea4e95a535d65ebf09ff973b59
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: 52869de661d9818252b68271c089f6b04a0b9f00
+ms.sourcegitcommit: 40b6438b5acd7e59337a382c39ec711b9e99cc8a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42626544"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101161"
 ---
 # <a name="debug-your-python-code"></a>Python コードのデバッグ
 
@@ -25,7 +25,6 @@ Visual Studio は、実行中のプロセスへのアタッチ、**ウォッチ*
 シナリオ固有のデバッグに関する次の記事も参照してください。
 
 - [Linux リモート デバッグ](debugging-python-code-on-remote-linux-machines.md)
-- [Azure リモート デバッグ](debugging-remote-python-code-on-azure.md)
 - [Python/C++ 混合モード デバッグ](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)
 - [混合モード デバッグのシンボル](debugging-symbols-for-mixed-mode-c-cpp-python.md)
 
@@ -169,22 +168,22 @@ HTML、XML、JSON のビジュアライザーは別のポップアップ ウィ�
 
 | コマンド | 引数 | 説明 |
 | --- | --- | --- |
-| `$continue`、`$cont`、`$c` | 現在のステートメントからプログラムの実行を開始します。 |
-| `$down`, `$d` | スタック トレースで現在のフレームを 1 つ下のレベルに移動します。 |
+| `$continue`、 `$cont`、 `$c` | 現在のステートメントからプログラムの実行を開始します。 |
+| `$down`、 `$d` | スタック トレースで現在のフレームを 1 つ下のレベルに移動します。 |
 | `$frame` | | 現在のフレーム ID を表示します。
 | `$frame` | フレーム ID | 現在のフレームを指定のフレーム ID に切り替えます。
 | `$load` | ファイルからコマンドを読み込み、完了するまで実行します。 |
 | `$proc` |  | 現在のプロセス ID を表示します。 |
 | `$proc` | プロセス ID | 現在のプロセスを指定のプロセス ID に切り替えます。 |
 | `$procs` | | 現在デバッグ中のプロセスの一覧を表示します。 |
-| `$stepin`、`$step`、`$s` | 次の関数呼び出しにステップ インします (可能な場合)。 |
-| `$stepout`、`$return`、`$r` | 現在の関数からステップ アウトします。 |
-| `$stepover`、`$until`、`$unt` | 次の関数呼び出しにステップ オーバーします。 |
+| `$stepin`、 `$step`、 `$s` | 次の関数呼び出しにステップ インします (可能な場合)。 |
+| `$stepout`、 `$return`、 `$r` | 現在の関数からステップ アウトします。 |
+| `$stepover`、 `$until`、 `$unt` | 次の関数呼び出しにステップ オーバーします。 |
 | `$thread` | | 現在のスレッド ID を表示します。 |
 | `$thread` | スレッド ID | 現在のスレッドを指定のスレッド ID に切り替えます。 |
 | `$threads` | | 現在デバッグ中のスレッドの一覧を表示します。 |
-| `$up`, `$u` | | スタック トレースで現在のフレームを 1 つ上のレベルに移動します。 |
-| `$where`、`$w`、`$bt` | 現在のスレッドのフレームを一覧表示します。 |
+| `$up`、 `$u` | | スタック トレースで現在のフレームを 1 つ上のレベルに移動します。 |
+| `$where`、 `$w`、 `$bt` | 現在のスレッドのフレームを一覧表示します。 |
 
 標準のデバッガー ウィンドウの**プロセス**、**スレッド**、**呼び出し履歴**などは、**Debug Interactive** ウィンドウとは同期されないことに注意してください。 **Debug Interactive** ウィンドウでアクティブなプロセス、スレッド、またはフレームを変更しても、他のデバッガー ウィンドウに影響はありません。 同様に、他のデバッガー ウィンドウでアクティブなプロセス、スレッド、またはフレームを変更しても、**Debug Interactive** ウィンドウに影響はありません。
 
@@ -227,9 +226,45 @@ ptvsd のインストールを管理するには
 
 1. バージョンが 4.1.1a9 より前のもの (Visual Studio にバンドルされていたバージョン) である場合は、パッケージの右側にある **[X]** を選択して古いバージョンをアンインストールします。 これで、Visual Studio ではバンドルされていたバージョンが使用されます  (`pip uninstall ptvsd` を使用して、PowerShell からアンインストールすることもできます)。
 
-1. あるいは、ptvsd パッケージをその最新バージョンに更新することもできます。 検索ボックスに「`ptvsd --upgrade -pre`」と入力し、**[次のコマンドを実行する: pip install ptvsd --upgrade -pre]** を選択します  (PowerShell から同じコマンドを使用することもできます)。
+1. または、[トラブルシューティング](#troubleshooting)のセクションに記載されている手順に従って、ptvsd パッケージを最新バージョンに更新できます。
 
-    ![[Python 環境] ウィンドウでのアップグレード コマンドの指定](media/debugging-experimental-upgrade-ptvsd.png)
+## <a name="troubleshooting"></a>トラブルシューティング
+
+デバッガーで問題が発生する場合は、まず次のように ptvsd のバージョンをアップグレードします。
+
+1. **[Python 環境]** ウィンドウの **[パッケージ]** タブに移動します。
+
+1. 検索ボックスに「`ptvsd --upgrade`」と入力し、**[次のコマンドを実行する: pip install ptvsd --upgrade]** を選択します。 (PowerShell から同じコマンドを使用することもできます)。
+
+    ![[Python 環境] ウィンドウでの ptvsd のアップグレード コマンドの指定](media/debugging-experimental-upgrade-ptvsd.png)
+
+問題が解決しない場合は、[PTVS GitHub リポジトリ](https://github.com/Microsoft/ptvs/issues)で問題を報告してください。
+
+### <a name="enable-debugger-logging"></a>デバッガーのログ記録を有効にする
+
+デバッガーの問題を調査する過程で、診断に役立つデバッガーのログを有効にし、ログを収集するよう Microsoft から求められる場合があります。
+
+次の手順により、現在の Visual Studio セッションでのデバッグが有効になります。
+
+1. **[ビュー]** > **[その他のウィンドウ]** > **[コマンド ウィンドウ]** メニュー コマンドを使用して、Visual Studio でコマンド ウィンドウを開きます。
+
+1. 次のコマンドを入力します。
+
+    ```ps
+    DebugAdapterHost.Logging /On
+    ```
+
+1. デバッグを開始し、問題を再現するために必要な手順をすべて実行します。 この期間中、**[デバッグ アダプターのホスト ログ]** の下の **[出力]** ウィンドウにデバッグ ログが表示されます。 次に、そのウィンドウからログをコピーし、GitHub の問題や電子メールなどに貼り付けることができます。
+
+    ![[出力] ウィンドウ内のデバッガーのログ記録の出力](media/debugger-logging-output.png)
+
+1. Visual Studio がハングしたり、または **[出力]** ウィンドウにアクセスできない場合は、Visual Studio を再起動してコマンド ウィンドウを開き、次のコマンドを入力します。
+
+    ```ps
+    DebugAdapterHost.Logging /On /OutputWindow
+    ```
+
+1. デバッグを開始し、もう一度問題を再現します。 これで、デバッガーのログが `%temp%\DebugAdapterHostLog.txt` に見つかります。
 
 ## <a name="see-also"></a>関連項目
 

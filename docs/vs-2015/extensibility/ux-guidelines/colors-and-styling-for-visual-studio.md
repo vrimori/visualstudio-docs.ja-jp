@@ -13,12 +13,12 @@ ms.assetid: 0e384ea1-4d9e-4307-8884-6e183900732c
 caps.latest.revision: 7
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b57b50672fb476cfeac3a8748202d9e7dcb47a13
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 51e924f14ebb8b20f193d163529096efe76318f1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49267411"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831759"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Visual Studio の色とスタイル
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -26,23 +26,23 @@ ms.locfileid: "49267411"
 ## <a name="using-color-in-visual-studio"></a>Visual Studio での色の使用  
  Visual Studio で、色は、主に装飾としてだけでなく、通信ツールとして使用されます。 必要がある場合の予約し、最小限の色を使用します。  
   
--   意味や所属 (たとえば、プラットフォームや言語の修飾子を) 通信します。  
+- 意味や所属 (たとえば、プラットフォームや言語の修飾子を) 通信します。  
   
--   (たとえば、状態の変更を示す) の注意をひきつける  
+- (たとえば、状態の変更を示す) の注意をひきつける  
   
--   読みやすさを向上させるし、UI を移動するためのランドマークの提供  
+- 読みやすさを向上させるし、UI を移動するためのランドマークの提供  
   
--   魅力を増やす  
+- 魅力を増やす  
   
- Visual Studio での UI 要素に色を割り当てるのいくつかのオプションが存在します。 場合によっては難しい図を使用することになっているオプションを判断またはそれを正しく使用する方法。 このトピックに役立ちます。  
+  Visual Studio での UI 要素に色を割り当てるのいくつかのオプションが存在します。 場合によっては難しい図を使用することになっているオプションを判断またはそれを正しく使用する方法。 このトピックに役立ちます。  
   
-1.  Visual Studio での色を定義するために使用するシステムのさまざまなサービスを把握します。  
+1. Visual Studio での色を定義するために使用するシステムのさまざまなサービスを把握します。  
   
-2.  指定された要素の適切なオプションを選択します。  
+2. 指定された要素の適切なオプションを選択します。  
   
-3.  正しく選択したオプションを使用します。  
+3. 正しく選択したオプションを使用します。  
   
- **重要:** ハードコーディング 16 進数、RGB、または、UI 要素に色のシステム カラーことはありません。 サービスを使用すると、柔軟性が hue をチューニングします。 さらに、サービス、することができなくのテーマの切り替え機能を活用するために、 [The VSColor Service](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService)します。  
+   **重要:** ハードコーディング 16 進数、RGB、または、UI 要素に色のシステム カラーことはありません。 サービスを使用すると、柔軟性が hue をチューニングします。 さらに、サービス、することができなくのテーマの切り替え機能を活用するために、 [The VSColor Service](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService)します。  
   
 ### <a name="methods-for-assigning-color-to-visual-studio-interface-elements"></a>Visual Studio のインターフェイスの要素に色を割り当てる方法  
  UI 要素に最も適した方法を選択します。  
@@ -383,23 +383,23 @@ protected override void Dispose(bool disposing)
   
  メソッドの実装を通じて[IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)を使用して IDE を提供する必要があります。  
   
--   カテゴリの表示項目の一覧  
+- カテゴリの表示項目の一覧  
   
--   表示項目のローカライズ可能な名前  
+- 表示項目のローカライズ可能な名前  
   
--   カテゴリの各メンバーの情報を表示します。  
+- カテゴリの各メンバーの情報を表示します。  
   
- **注:** すべてのカテゴリは、少なくとも 1 つの表示項目を含める必要があります。  
+  **注:** すべてのカテゴリは、少なくとも 1 つの表示項目を含める必要があります。  
   
- IDE を使用して、 **T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup**いくつかのカテゴリの共用体を定義するインターフェイス。  
+  IDE を使用して、 **T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup**いくつかのカテゴリの共用体を定義するインターフェイス。  
   
- その実装を使用して IDE を提供します。  
+  その実装を使用して IDE を提供します。  
   
--   特定のグループを構成するカテゴリの一覧  
+- 特定のグループを構成するカテゴリの一覧  
   
--   インスタンスへのアクセス[IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)グループ内の各カテゴリのサポート  
+- インスタンスへのアクセス[IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)グループ内の各カテゴリのサポート  
   
--   ローカライズ可能なグループ名  
+- ローカライズ可能なグループ名  
   
 #### <a name="updating-the-ide"></a>IDE の更新  
  IDE では、フォントと色の設定に関する情報をキャッシュします。 そのため、IDE のフォントと色の構成の変更、後に、ベスト プラクティスをキャッシュが最新であることを確認します。  
@@ -411,13 +411,13 @@ protected override void Dispose(bool disposing)
   
  これを行うには、VSPackage では次の必要があります。  
   
--   **IDE で生成されたイベントを処理する**実装することによって、 [IVsFontAndColorEvents](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.aspx)インターフェイス。 IDE では、次のユーザーの変更、フォントおよび色 ページの適切なメソッドを呼び出します。 たとえば、呼び出す、 [OnFontChanged](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.onfontchanged.aspx)メソッドが新しいフォントが選択されている場合。  
+- **IDE で生成されたイベントを処理する**実装することによって、 [IVsFontAndColorEvents](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.aspx)インターフェイス。 IDE では、次のユーザーの変更、フォントおよび色 ページの適切なメソッドを呼び出します。 たとえば、呼び出す、 [OnFontChanged](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.onfontchanged.aspx)メソッドが新しいフォントが選択されている場合。  
   
- **OR**  
+  **OR**  
   
--   **IDE の変更をポーリング**します。 これは、システムによって実装されるを通して実行[IVsFontAndColorStorage](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx)インターフェイス。 主に、永続化のサポートには、 [GetItem](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem.aspx)メソッドは、表示項目のフォントと色の情報を取得できます。 フォントおよび色の設定の詳細については、MSDN の記事を参照してください。[にアクセスする格納されているフォントと色の設定](https://msdn.microsoft.com/library/bb166382.aspx)します。  
+- **IDE の変更をポーリング**します。 これは、システムによって実装されるを通して実行[IVsFontAndColorStorage](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx)インターフェイス。 主に、永続化のサポートには、 [GetItem](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem.aspx)メソッドは、表示項目のフォントと色の情報を取得できます。 フォントおよび色の設定の詳細については、MSDN の記事を参照してください。[にアクセスする格納されているフォントと色の設定](https://msdn.microsoft.com/library/bb166382.aspx)します。  
   
- **注:** ポーリングの結果が正しいことを確認するを使用して、 [IVsFontAndColorCacheManager](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager.aspx)インターフェイスの取得メソッドを呼び出す前に、キャッシュのフラッシュと更新プログラムが必要なかどうかを決定する、 [IVsFontAndColorStorage](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx)インターフェイス。  
+  **注:** ポーリングの結果が正しいことを確認するを使用して、 [IVsFontAndColorCacheManager](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager.aspx)インターフェイスの取得メソッドを呼び出す前に、キャッシュのフラッシュと更新プログラムが必要なかどうかを決定する、 [IVsFontAndColorStorage](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx)インターフェイス。  
   
 #### <a name="registering-custom-font-and-color-category-without-implementing-interfaces"></a>インターフェイスを実装することがなく、カスタムのフォントと色のカテゴリを登録します。  
  次のコード例では、カスタム フォントを登録し、インターフェイスを実装することがなくカテゴリの色の方法を示します。  

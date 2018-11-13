@@ -12,12 +12,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: a9daea659f1a19919da31ea57946a7b287e6c040
-ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
+ms.openlocfilehash: da1ee8b930ad7e7366f2f0702be2ef3a538009f5
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39468326"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219680"
 ---
 # <a name="azure-cloud-service-projects-for-python"></a>Python 用 Azure クラウド サービス プロジェクト
 
@@ -25,7 +25,7 @@ Visual Studio は、Python を使用して Azure Cloud Services の作成に使�
 
 [クラウド サービス](https://docs.microsoft.com/azure/cloud-services/)は、任意の数の *worker ロール*と *Web ロール*から構成され、それぞれが概念的に独立したタスクを実行しますが、規模拡張の必要に応じて仮想マシン間で個別にレプリケートできます。 Web ロールでは、フロントエンド Web アプリケーションのホスティングが提供されます。 Python が接続されている場合、WSGI をサポートする任意の Web フレームワークを使用して、このようなアプリケーションを作成できます ([Web プロジェクト テンプレート](python-web-application-project-templates.md)でサポート)。 worker ロールは、ユーザーと直接対話しない長時間実行されるプロセスを意図しています。 通常は、[`pip install azure`](http://pypi.org/project/azure) でインストールされる "azure" パッケージ内のパッケージを利用します。
 
-この記事では、Visual Studio 2017 のプロジェクト テンプレートとその他のサポートについて詳しく説明します (以前のバージョンも同様ですが、いくつかの違いがあります)。 Python からの Azure の操作について詳しくは、[Azure Python デベロッパー センター](https://docs.microsoft.com/en-us/python/azure/?view=azure-python)をご覧ください。
+この記事では、Visual Studio 2017 のプロジェクト テンプレートとその他のサポートについて詳しく説明します (以前のバージョンも同様ですが、いくつかの違いがあります)。 Python からの Azure の操作について詳しくは、[Azure Python デベロッパー センター](https://docs.microsoft.com/python/azure/?view=azure-python)をご覧ください。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 

@@ -9,12 +9,12 @@ description: 一部の Visual Studio サブスクリプションに含まれる 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 92115e0beef07b50e2ea0783ccde6a9cc792c838
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 693e51d969481d6511e3663d2f675861821c99fb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283731"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937461"
 ---
 # <a name="azure-community"></a>Azure コミュニティ
 
@@ -24,7 +24,7 @@ Azure コミュニティを通じて、選ばれたサポート フォーラム�
 |---------------------------------------|----------------------------------------------------|--------------------------------------|
 | [Cloud Services (Web ロールと Worker ロール)](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuredevelopment&filter=alltypes&sort=lastpostdesc) | [Azure Networking (DNS、Traffic Manager、VPN、VNET)](https://social.msdn.microsoft.com/Forums/home?forum=WAVirtualMachinesVirtualNetwork&filter=alltypes&sort=lastpostdesc) | [Azure App Service - Web Apps](https://social.msdn.microsoft.com/forums/home?forum=windowsazurewebsitespreview&filter=alltypes&sort=lastpostdesc)         |
 | [Azure SQL Database](https://social.msdn.microsoft.com/Forums/home?forum=ssdsgetstarted&filter=alltypes&sort=lastpostdesc)                    | [Azure Active Directory](https://social.msdn.microsoft.com/forums/home?forum=WindowsAzureAD&filter=alltypes&sort=lastpostdesc)                             | [Azure Service Bus](https://social.msdn.microsoft.com/forums/home?forum=servbus&filter=alltypes&sort=lastpostdesc)                    |
-| [Azure Storage](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuredata&filter=alltypes&sort=lastpostdesc)                         | [Azure API Management](https://social.msdn.microsoft.com/Forums/home?forum=azureapimgmt&filter=alltypes&sort=lastpostdesc)                               | [Azure DevTest Labs](https://social.msdn.microsoft.com/forums/home?forum=AzureDevTestLabs&filter=alltypes&sort=lastpostdesc)                   |
+| [Azure ストレージ](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuredata&filter=alltypes&sort=lastpostdesc)                         | [Azure API Management](https://social.msdn.microsoft.com/Forums/home?forum=azureapimgmt&filter=alltypes&sort=lastpostdesc)                               | [Azure DevTest Labs](https://social.msdn.microsoft.com/forums/home?forum=AzureDevTestLabs&filter=alltypes&sort=lastpostdesc)                   |
 | [Azure HDInsight](https://social.msdn.microsoft.com/Forums/azure/home?forum=hdinsight&filter=alltypes&sort=lastpostdesc)                       | [Azure Websites](https://social.msdn.microsoft.com/Forums/home?forum=windowsazurewebsitespreview&filter=alltypes&sort=lastpostdesc)                                     | [Azure Mobile Apps](https://social.msdn.microsoft.com/forums/home?forum=azuremobile&filter=alltypes&sort=lastpostdesc)                    |
 | [Azure Multi-Factor Authentication](https://social.msdn.microsoft.com/Forums/azure/home?forum=windowsazureactiveauthentication&filter=alltypes&sort=lastpostdesc)     | [価格と請求](https://social.msdn.microsoft.com/Forums/azure/home?forum=windowsazurepurchasing&filter=alltypes&sort=lastpostdesc)                                | [Azure のスクリプトとコマンド ライン ツール](https://social.msdn.microsoft.com/forums/home?forum=azurescripting&filter=alltypes&sort=lastpostdesc) |
 | [Microsoft Azure の管理ポータル](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuremanagement&filter=alltypes&sort=lastpostdesc)               | [Azure Backup](https://social.msdn.microsoft.com/forums/home?forum=windowsazureonlinebackup&filter=alltypes&sort=lastpostdesc)                                       | [Azure Stack](https://social.msdn.microsoft.com/forums/home?forum=AzureStack&filter=alltypes&sort=lastpostdesc)                          |
@@ -51,16 +51,18 @@ Azure コミュニティの開始は簡単です。
 ## <a name="eligibility"></a>特典を受ける条件
 Azure コミュニティ特典を利用できるかどうかは、以下のようにサブスクリプション レベルによって変わります。
 
-| サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
-|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール   | 1 年      |  [はい]          |
-| Visual Studio Professional (標準、年間クラウド)  | VL、Azure、リテール                                      | 1 年                                                           |  [はい]          |
-| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 1 年                                             |  [はい]          |
-| MSDN Platforms (標準)                                          | VL、リテール                                              |1 年                                              |  [はい]          |
-| Visual Studio Enterprise (月間クラウド)、Visual Studio Professional (月間クラウド)、NFR<sup>1</sup>                                          | すべて                                              |使用できません                                              |  ×          |
-| Visual Studio Dev Essentials                                        | N/A                                              |使用できません                                              |  ×          |
-|
-<sup>1</sup>  *Not for Resale (NFR)、Microsoft FTE、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP)、BizSpark、Imagine、Microsoft Certified Trainer (MCT) が含まれます*
+
+|                                          サブスクリプション レベル                                           |     チャネル      |    特長    | 更新可能かどうか |
+|-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
+|                           Visual Studio Enterprise (標準、年間クラウド)                           | VL、Azure、リテール |   1 年    |    [はい]     |
+|                          Visual Studio Professional (標準、年間クラウド)                          | VL、Azure、リテール |   1 年    |    [はい]     |
+|                              Visual Studio Test Professional (標準)                               |    VL、リテール     |   1 年    |    [はい]     |
+|                                       MSDN Platforms (標準)                                       |    VL、リテール     |   1 年    |    [はい]     |
+| Visual Studio Enterprise (月間クラウド)、Visual Studio Professional (月間クラウド)、NFR<sup>1</sup> |        すべて        | 使用できません |     ×     |
+|                                     Visual Studio Dev Essentials                                      |        N/A        | 使用できません |     ×     |
+|                                                                                                       |                   |               |            |
+
+<sup>1</sup>  *Not for Resale (NFR)、Microsoft FTE、Microsoft Valued Professional (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP)、BizSpark、Imagine、Microsoft Certified Trainer (MCT) が含まれます*
 
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 

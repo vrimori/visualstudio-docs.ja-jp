@@ -11,12 +11,12 @@ ms.author: corob
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2b9f8bfcaf9e6f584d4f0038ebef17daad3aa74a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 913ad2e785fcdb2067f89d0d4de2b250db40468b
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49850815"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349677"
 ---
 # <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Visual Studio の C++ プロジェクト システムの機能拡張とツールセットの統合
 
@@ -434,7 +434,7 @@ Visual C プロジェクト システムがに基づいて、 [VS プロジェ�
 
 ### <a name="project-property-pages"></a>プロジェクト プロパティ ページ
 
-一般的な設計については、次を参照してください。[プラットフォームの拡張性 - パート 1](http://blogs.msdn.com/b/vsproject/archive/2009/06/10/platform-extensibility-part-1.aspx)と[プラットフォームの拡張性 - パート 2](http://blogs.msdn.com/b/vsproject/archive/2009/06/18/platform-extensibility-part-2.aspx)します。
+一般的な設計については、次を参照してください。[プラットフォームの拡張性 - パート 1](https://blogs.msdn.microsoft.com/vsproject/2009/06/09/platform-extensibility-part-1/)と[プラットフォームの拡張性 - パート 2](https://blogs.msdn.microsoft.com/vsproject/2009/06/18/platform-extensibility-part-2/)します。
 
 簡単に言えば、プロパティ ページを参照してください、**プロジェクトのプロパティ**C++ プロジェクトのダイアログが定めた*ルール*ファイル。 ルール ファイルには、一連のプロパティ ページでは、表示し、プロジェクトに保存する必要があり、どのファイルのプロパティを指定します。 ルール ファイルは、Xaml 形式を使用する .xml ファイルです。 シリアル化に使用する型が記載されて[Microsoft.Build.Framework.XamlTypes](/dotnet/api/microsoft.build.framework.xamltypes)します。 プロジェクト内のルール ファイルの使用に関する詳細については、次を参照してください。[プロパティ ページの XML ルール ファイル](/cpp/ide/property-page-xml-files)します。
 

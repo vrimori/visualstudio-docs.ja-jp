@@ -11,12 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 4ced1cb0fda46a77bb9303a8f69e9f413b2e4751
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 5988876bc1cdc7d186efb60d7d3875f9946bfc7d
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49898552"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967520"
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl ファイル
 
@@ -298,7 +298,7 @@ DslDefinition.dsl ファイルではパスは `<DomainPath>...</DomainPath>` タ
 このモデルに対して c# を記述する場合に関連するクラスの各リレーションシップを生成するプロパティを使用して、1 つの手順でリンク経由でジャンプできます。
 
 ```
-     InPort port; ...  Component c = port.Component;
+     InPort port; ...  Component c = port.Component;
 ```
 
 ただし、両方のホップは明示的にパス構文で行う必要があります。 この要件から、中間リンクへのアクセスが容易になります。 リンクから Component へのホップを実行するコードを次に示します。
@@ -581,6 +581,6 @@ ComponentHasPorts . Component / ! Component /    ComponentModelHasComponents . C
 
 ## <a name="see-also"></a>関連項目
 
-- [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [ドメイン固有言語ツールの用語集](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
 - [方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)
 - [モデル、クラス、およびリレーションシップについて](../modeling/understanding-models-classes-and-relationships.md)

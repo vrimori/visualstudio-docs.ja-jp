@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b1bfc0f31770fa327f0991f459ee8637d7347732
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ae6381ed30d93078e79f5108cf14642b0eda3ea0
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813961"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219706"
 ---
 # <a name="idiaenumdebugstreamsnext"></a>IDiaEnumDebugStreams::Next
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "49813961"
 ## <a name="syntax"></a>構文  
   
 ```cpp#  
-HRESULT Next (   
+HRESULT Next (   
    ULONG                     celt,   
    IDiaEnumDebugStreamData** rgelt,  
    ULONG*                    pceltFetched  
@@ -42,7 +42,7 @@ HRESULT Next (
   
 #### <a name="parameters"></a>パラメーター  
  celt  
- [in]**T**デバッグ ストリームを取得する列挙子の数。  
+ [in]デバッグ ストリームを取得する列挙子の数。  
   
  rgelt  
  [out]配列を返します[IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)デバッグを表すオブジェクトをストリームを取得します。  

@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 717bfaf8bc97c0f45a45bdc8ba686d4c1df12e49
-ms.sourcegitcommit: 50b19010b2e2b4736835350710e2edf93b980b56
+ms.openlocfilehash: 5dfa0ad9b27b94c472feabc0e202bd9eee58f08d
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49073442"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50670911"
 ---
 # <a name="grant-trust-to-documents"></a>ドキュメントに信頼を付与
   ドキュメント レベルのプロジェクトでは、証明書を使用したマニフェストへの署名や、信頼プロンプトのクリックなど、アプリケーション レベルのプロジェクトと同じセキュリティ要件が適用されます。 また、ドキュメントまたはブックは、信頼できる場所として指定されたディレクトリに置く必要があります。  
@@ -44,7 +44,7 @@ ms.locfileid: "49073442"
   
 -   ドキュメント自体は信頼できる場所を使用することによって信頼されますが、カスタマイズを信頼するためには追加のアクセス許可が必要です。 証明書を使用したマニフェストの署名、信頼プロンプトの表示、またはに Office ソリューションのインストールを使用して、カスタマイズに完全な信頼を付与することができます、 *Program Files*ディレクトリ。  
   
--   ドキュメント レベルのソリューションのドキュメントまたはブックは、アセンブリと同じディレクトリ、または別のディレクトリに保存できます。 たとえば、ドキュメントを SharePoint サーバー上に置き、アセンブリをネットワーク ファイル共有に置くことも可能です。 詳細については、次を参照してください。[方法: ClickOnce を使用して、ドキュメント レベルの Office ソリューションを SharePoint サーバーに発行](http://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58)します。  
+-   ドキュメント レベルのソリューションのドキュメントまたはブックは、アセンブリと同じディレクトリ、または別のディレクトリに保存できます。 たとえば、ドキュメントを SharePoint サーバー上に置き、アセンブリをネットワーク ファイル共有に置くことも可能です。 詳細については、次を参照してください。[方法: ClickOnce を使用して、ドキュメント レベルの Office ソリューションを SharePoint サーバーに発行](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58)します。  
   
 ## <a name="see-also"></a>関連項目  
  [Office ソリューションに信頼を付与](../vsto/granting-trust-to-office-solutions.md)   

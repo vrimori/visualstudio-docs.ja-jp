@@ -13,12 +13,12 @@ ms.assetid: d20a30c0-0dcc-4e2c-a809-31c8ea28c7df
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 250e7c80e47b9ea53306697d57b305fdcc9c645c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6f5a8ec02368c5a05587665f1e41b55b2daba409
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49267632"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49886397"
 ---
 # <a name="visual-language-dictionary-for-visual-studio"></a>Visual Studio の visual Language Dictionary
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -27,15 +27,15 @@ Visual Studio では、そのことは考えません、およびその他の画
   
  **一般的なガイドライン**  
   
--   これらのビジュアルの概念、辞書の定義を常に使用する必要があります。 それ以外の場合、しに一貫性のある意味を持つ共通の要素を期待するユーザーが混乱する可能性があります。  
+- これらのビジュアルの概念、辞書の定義を常に使用する必要があります。 それ以外の場合、しに一貫性のある意味を持つ共通の要素を期待するユーザーが混乱する可能性があります。  
   
--   画像が鮮明かつ簡単に区別できるように、アイコンが、使用するため最も関連性または重要な概念のみを選択します。  
+- 画像が鮮明かつ簡単に区別できるように、アイコンが、使用するため最も関連性または重要な概念のみを選択します。  
   
--   各イメージでは、1 つまたは 2 つの概念を使用します。  
+- 各イメージでは、1 つまたは 2 つの概念を使用します。  
   
--   デザイン アイコンの詳細戦略は、次を参照してください。[アイコン デザイン](../../extensibility/ux-guidelines/images-and-icons-for-visual-studio.md#BKMK_IconDesign)します。  
+- デザイン アイコンの詳細戦略は、次を参照してください。[アイコン デザイン](../../extensibility/ux-guidelines/images-and-icons-for-visual-studio.md#BKMK_IconDesign)します。  
   
- **セクションにジャンプします。**  
+  **セクションにジャンプします。**  
   
 1.  [概念の A ~ Z](../../extensibility/ux-guidelines/visual-language-dictionary-for-visual-studio.md#BKMK_VLDConcepts)  
   
@@ -60,7 +60,7 @@ Visual Studio では、そのことは考えません、およびその他の画
 |**アドレス**|![アドレス アイコン](../../extensibility/ux-guidelines/media/vld-c-address.png "VLD_C_Address")||  
 |**アラートを生成します。**|![警告アイコン](../../extensibility/ux-guidelines/media/vld-c-alert.png "VLD_C_Alert")||  
 |**アルファ チャネル**|![アルファ チャネル アイコン](../../extensibility/ux-guidelines/media/vld-c-alphachannel.png "VLD_C_AlphaChannel")||  
-|**アニメーション**|![アニメーション アイコン](../../extensibility/ux-guidelines/media/vld-c-animation.png "VLD_C_Animation")|![アニメーション エラー アイコン](../../extensibility/ux-guidelines/media/vld-c-animation-animationerror.png "VLD_C_Animation_AnimationError")アニメーション エラー![[次へ] のアニメーション アイコン](../../extensibility/ux-guidelines/media/vld-c-animation-nextanimation.png "VLD_C_Animation_NextAnimation")次のアニメーション|  
+|**アニメーション**|![アニメーション アイコン](../../extensibility/ux-guidelines/media/vld-c-animation.png "VLD_C_Animation")|![アニメーション エラー アイコン](../../extensibility/ux-guidelines/media/vld-c-animation-animationerror.png "VLD_C_Animation_AnimationError")アニメーション エラー![[次へ のアニメーション] アイコン](../../extensibility/ux-guidelines/media/vld-c-animation-nextanimation.png "VLD_C_Animation_NextAnimation")次のアニメーション|  
 |**アプリケーション**プロジェクト|![アプリケーション アイコン](../../extensibility/ux-guidelines/media/vld-c-application.png "VLD_C_Application")|![アプリケーション ロール エラー アイコン](../../extensibility/ux-guidelines/media/vld-c-application-applicationroleerror.png "VLD_C_Application_ApplicationRoleError")アプリケーション ロール エラー![C&#43; &#43; MFC プロジェクト アイコン](../../extensibility/ux-guidelines/media/vld-c-application-cppmfcproject.png "VLD_C_Application_CPPMFCProject") C++ MFC プロジェクト|  
 |**区分**|![領域のアイコン](../../extensibility/ux-guidelines/media/vld-c-area.png "VLD_C_Area")|![スプライン面グラフ アイコン](../../extensibility/ux-guidelines/media/vld-c-area-splineareachart.png "VLD_C_Area_SplineAreaChart")スプライン面グラフ![積み上げ領域の系列 アイコン](../../extensibility/ux-guidelines/media/vld-c-area-stackedareaseries.png "VLD_C_Area_StackedAreaSeries")積み上げ面シリーズ|  
 |**配置します。**|![[整列] アイコン](../../extensibility/ux-guidelines/media/vld-c-arrange.png "VLD_C_Arrange")|![図形アイコンの整列](../../extensibility/ux-guidelines/media/vld-c-arrange-arrangeshapes.png "VLD_C_Arrange_ArrangeShapes")図形の整列![自動&#45;図形アイコンの整列](../../extensibility/ux-guidelines/media/vld-c-arrange-autoarrangeshapes.png "VLD_C_Arrange_AutoArrangeShapes")図形の自動配置|  

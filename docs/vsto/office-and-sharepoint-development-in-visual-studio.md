@@ -24,12 +24,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7217c2b3177d3eb1f591cbb6256b9e40fba23b12
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 38291b46f2f9fee83ba9af0ae553cecca5ee35f6
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35673678"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671704"
 ---
 # <a name="office-and-sharepoint-development-in-visual-studio"></a>Visual Studio での office および SharePoint 開発
   ユーザーが [Office ストア](https://store.office.com/) または組織のカタログからダウンロードする軽量なアプリやアドインを作成するか、ユーザーがコンピューターにインストールする .NET Framework ベースのソリューションを作成することによって、Microsoft Office および SharePoint を拡張できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "35673678"
 ##  <a name="Apps"></a> Office と SharePoint 用アドインの作成  
  Office 2013 と SharePoint 2013 では、Office と SharePoint を拡張するためのアドインを構築、配布、収益化するために役立つ新しいアドイン モデルが導入されます。  これらのアドインは、Office Online または SharePoint Online で実行でき、ユーザーは多くのデバイスからアプリと対話できます。  
   
- 新たに使用する方法について[Office アドイン モデル](https://msdn.microsoft.com/library/office/jj220082.aspx)ユーザーの Office エクスペリエンスを拡張します。  
+ 新たに使用する方法について[Office アドイン モデル](/office/dev/add-ins/overview/office-add-ins)ユーザーの Office エクスペリエンスを拡張します。  
   
  これらのアドインは VSTO アドインと、ソリューションと比較して小さいフット プリントを持ち、ほぼすべての web プログラミング HTML5、JavaScript、CSS3、XML などのテクノロジを使用して、それらをビルドすることができます。  作業を始めるには、Visual Studio で Office Developer Tools を使用するか、コードネーム "Napa" Office 365 開発ツールと呼ばれる、軽量な Web ベースのツールを使用します。これらのツールを使用すると、プロジェクトを作成し、コードを記述した後、構築したアドインをブラウザー内で実行できます。  
   
@@ -64,8 +64,8 @@ ms.locfileid: "35673678"
   
 |終了|解決方法については、|  
 |--------|---------|  
-|Office アドインの詳細を確認し、アドインを構築する。|[Office アドイン](http://msdn.microsoft.com/office/dn448457)|  
-|Office のさまざまな拡張方法を比較し、アプリと Office アドインのどちらを使用する必要があるかを判断する。|[Office アドイン、VSTO、および VBA のためのロードマップ](http://blogs.msdn.com/b/officeapps/archive/2013/06/18/roadmap-for-apps-for-office-vsto-and-vba.aspx)|  
+|Office アドインの詳細を確認し、アドインを構築する。|[Office アドイン](/office/dev/add-ins/publish/publish)|  
+|Office のさまざまな拡張方法を比較し、アプリと Office アドインのどちらを使用する必要があるかを判断する。|[Office アドイン、VSTO、および VBA のためのロードマップ](https://blogs.msdn.microsoft.com/officeapps/2013/06/18/roadmap-for-apps-for-office-vsto-and-vba/)|  
   
 ### <a name="build-a-sharepoint-add-in"></a>SharePoint アドインのビルドします。  
  ユーザー向けに SharePoint を拡張するには、SharePoint アドインを構築します。 これは、ユーザーやビジネスの必要性を解決するための小規模な使いやすい、スタンドアロン アプリケーションでは基本的にします。  
@@ -80,9 +80,9 @@ ms.locfileid: "35673678"
   
 |終了|解決方法については、|  
 |--------|---------|  
-|SharePoint アドインの詳細を確認し、アドインを構築する。|[SharePoint アドイン](https://msdn.microsoft.com/library/office/fp179930.aspx)|  
-|SharePoint アドインを従来の SharePoint ソリューションと比較する。|[SharePoint アドインが SharePoint ソリューションと比較](http://msdn.microsoft.com/library/office/jj163114.aspx)|  
-|SharePoint ソリューションと SharePoint アドインのどちらを構築するかを選択する。|[SharePoint アドインと SharePoint ソリューションの決定します。](https://msdn.microsoft.com/library/office/jj163114.aspx)|
+|SharePoint アドインの詳細を確認し、アドインを構築する。|[SharePoint アドイン](/sharepoint/dev/sp-add-ins/sharepoint-add-ins)|  
+|SharePoint アドインを従来の SharePoint ソリューションと比較する。|[SharePoint アドインが SharePoint ソリューションと比較](/sharepoint/dev/general-development/sharepoint-server-application-lifecycle-management)|  
+|SharePoint ソリューションと SharePoint アドインのどちらを構築するかを選択する。|[SharePoint アドインと SharePoint ソリューションの決定します。](/sharepoint/dev/general-development/sharepoint-server-application-lifecycle-management)|
   
 ##  <a name="Add-ins"></a> VSTO アドインの作成します。  
  VSTO アドインを Office 2007 または Office 2010 を対象とする、または Office 2013 および Office 2016 を超える Office アドインでできることを作成します。VSTO アドインはデスクトップ上でのみ動作します。 ユーザーは、通常の展開およびサポートをより困難になるように、VSTO アドインをインストールする必要があります。  ただし、VSTO アドインは、より密接に Office に統合できます。 たとえば、Office リボンにタブやコントロールを追加し、文書の結合やグラフの変更などの高度な自動化タスクを実行できます。 また、.NET Framework を活用し、C# および Visual Basic を使用して、Office オブジェクトと対話することもできます。  
@@ -95,8 +95,8 @@ ms.locfileid: "35673678"
   
 |終了|読み取り|  
 |--------|----------|  
-|Office のさまざまな拡張方法を比較し、VSTO アドインと Office アドインのどちらを使用する必要があるかを判断する。|[Office アドイン、VSTO、および VBA のためのロードマップ](http://blogs.msdn.com/b/officeapps/archive/2013/06/18/roadmap-for-apps-for-office-vsto-and-vba.aspx)|  
-|VSTO アドインを作成する。|[Visual Studio で作成した VSTO アドイン](https://msdn.microsoft.com/library/jj620922.aspx)|  
+|Office のさまざまな拡張方法を比較し、VSTO アドインと Office アドインのどちらを使用する必要があるかを判断する。|[Office アドイン、VSTO、および VBA のためのロードマップ](https://blogs.msdn.microsoft.com/officeapps/2013/06/18/roadmap-for-apps-for-office-vsto-and-vba/)|  
+|VSTO アドインを作成する。|[Visual Studio で作成した VSTO アドイン](create-vsto-add-ins-for-office-by-using-visual-studio.md)|  
   
 ##  <a name="Solutions"></a> SharePoint ソリューションの作成  
  SharePoint Foundation 2010 および SharePoint Server 2010 を対象とする、または SharePoint アドインでできること以外の方法で SharePoint 2013 と SharePoint 2016 を拡張する SharePoint ソリューションを作成します。  
@@ -107,7 +107,7 @@ ms.locfileid: "35673678"
   
 |終了|解決方法については、|  
 |--------|---------|  
-|SharePoint ソリューションを SharePoint アドインと比較する。|[SharePoint アドインが SharePoint ソリューションと比較](http://msdn.microsoft.com/library/office/jj163114.aspx)|  
+|SharePoint ソリューションを SharePoint アドインと比較する。|[SharePoint アドインが SharePoint ソリューションと比較](/sharepoint/dev/general-development/sharepoint-server-application-lifecycle-management)|  
 |SharePoint ソリューションを作成する。|[SharePoint ソリューションの作成](../sharepoint/create-sharepoint-solutions.md)|  
   
   

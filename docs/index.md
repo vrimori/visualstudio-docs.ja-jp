@@ -4,12 +4,12 @@ hide_bc: true
 title: Visual Studio のドキュメント | Microsoft Docs
 description: Visual Studio 2017 を使って、アプリケーション、サービス、ツールを、任意の言語で、特定のプラットフォームやデバイス向けに開発する方法について説明します。
 ms.topic: hub-page
-ms.openlocfilehash: ded793e4a6ac95d2db61fdc4e275f0c59e36d0e1
-ms.sourcegitcommit: 6672a1e9d135d7e5cca3cceea07c6fe5a0871475
+ms.openlocfilehash: 961d9f46d78b23fa976b3a8cdc774d219445c8b1
+ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47443620"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51000284"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -89,12 +89,12 @@ ms.locfileid: "47443620"
                                             <div class="cardText">
                                                 <h3>Visual Studio の使用方法を学ぶ</h3>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="ide/visual-studio-ide.md"><img  src="https://docs.microsoft.com/media/common/i_overview.svg" alt="Guided tour icon" />ガイド ツアーを開始する</a></li>
-                                                    <li><a class="barLink" href="ide/index-writing-code.md"><img  src="https://docs.microsoft.com/media/common/i_code-edit.svg" alt="Pencil icon" />コードを作成して編集する</a></li>
-                                                    <li><a class="barLink" href="ide/compiling-and-building-in-visual-studio.md"><img  src="https://docs.microsoft.com/media/common/i_build.svg" alt="Crane icon" />コードをビルドする</a></li>
-                                                    <li><a class="barLink" href="debugger/getting-started-with-the-debugger.md"><img  src="https://docs.microsoft.com/media/common/i_debug.svg" alt="Debug icon" />コードをデバッグする</a></li>
-                                                    <li><a class="barLink" href="test/getting-started-with-unit-testing.md"><img  src="https://docs.microsoft.com/media/common/i_test.svg" alt="Science flask icon" />コードをテストする</a></li>
-                                                    <li><a class="barLink" href="data-tools/create-a-sql-database-by-using-a-designer.md"><img  src="https://docs.microsoft.com/media/common/i_generic-database.svg" alt="Database icon" />ローカルまたはクラウドでデータにアクセスする</a></li>
+                                                    <li><a class="barLink" href="ide/visual-studio-ide.md"><img height="60" width="60" src="https://docs.microsoft.com/media/common/i_overview.svg" alt="Guided tour icon" />ガイド ツアーを開始する</a></li>
+                                                    <li><a class="barLink" href="ide/index-writing-code.md"><img height="60" width="60" src="https://docs.microsoft.com/media/common/i_code-edit.svg" alt="Pencil icon" />コードを作成して編集する</a></li>
+                                                    <li><a class="barLink" href="ide/compiling-and-building-in-visual-studio.md"><img height="60" width="60" src="https://docs.microsoft.com/media/common/i_build.svg" alt="Crane icon" />コードをビルドする</a></li>
+                                                    <li><a class="barLink" href="debugger/getting-started-with-the-debugger.md"><img height="60" width="60" src="https://docs.microsoft.com/media/common/i_debug.svg" alt="Debug icon" />コードをデバッグする</a></li>
+                                                    <li><a class="barLink" href="test/getting-started-with-unit-testing.md"><img height="60" width="60" src="https://docs.microsoft.com/media/common/i_test.svg" alt="Science flask icon" />コードをテストする</a></li>
+                                                    <li><a class="barLink" href="data-tools/create-a-sql-database-by-using-a-designer.md"><img height="60" width="60" src="https://docs.microsoft.com/media/common/i_generic-database.svg" alt="Database icon" />ローカルまたはクラウドでデータにアクセスする</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -156,7 +156,7 @@ Node.js</a>
                                         <div class="card">
                                             <div class="cardText">
                                                 <h3>5 分間のクイック スタートを試す</h3>
-                                                <h4>任意の言語で "Hello, World" をビルドします。</h4>
+                                                <h4>任意の言語で &quot;Hello, World&quot; をビルドします。</h4>
                                                 <table cellpadding="0" cellspacing="0" border="0">
                                                     <tr>
                                                         <td style="border-top-color:transparent!important;padding-left:0;">
@@ -175,6 +175,7 @@ F# </a>
                                                                     <a class="barLink" href="/visualstudio/ide/quickstart-visual-basic-console">
                                                                         <img src="https://docs.microsoft.com/media/logos/logo_vb.svg" alt="VB logo">
 Visual Basic </a>
+                                                                </li>
                                                             </ul>
                                                         </td>
                                                         <td style="border-top-color:transparent!important;padding-left:0;">
@@ -196,7 +197,6 @@ Node.js </a>
                                                                 </li>
                                                             </ul>
                                                         </td>
-                                                        </td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -213,7 +213,7 @@ Node.js </a>
                                         <div class="card">
                                             <div class="cardText">
                                                 <h3>または開発する内容を選択する</h3>
-                                                 <table cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top-color:transparent!important;padding-left:0;">
+                                                <table cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top-color:transparent!important;padding-left:0;">
                                                 <ul class="noBullet">
                                                     <li>
                                                         <a class="barLink" href="/visualstudio/ide/quickstart-uwp-csharp">
@@ -241,7 +241,8 @@ Unity ゲーム</a>
                                                             <img src="https://docs.microsoft.com/media/logos/logo_NET.svg" alt=".NET logo">
 ASP.NET Core Web アプリ</a>
                                                     </li>
-                                                </ul></td></tr></table>
+                                                </ul></td></tr>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
@@ -258,7 +259,7 @@ ASP.NET Core Web アプリ</a>
                         <a href="#features1"> </a>
                         <ul id="features1" class="cardsC">
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=856608">
+                                <a href="ide/index-writing-code.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -277,7 +278,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833077">
+                                <a href="ide/compiling-and-building-in-visual-studio.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -296,7 +297,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833078">
+                                <a href="/visualstudio/debugger/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -307,7 +308,7 @@ ASP.NET Core Web アプリ</a>
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>デバッグ</h3>
-                                                    <p>コードの問題を調査し、修正します。</p>
+                                                    <p>コードのバグを調査し、修正します。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -315,7 +316,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833079">
+                                <a href="test/improve-code-quality.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -334,7 +335,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=834349">
+                                <a href="/visualstudio/deployment/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -391,7 +392,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=834348">
+                                <a href="/visualstudio/profiling/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -401,7 +402,7 @@ ASP.NET Core Web アプリ</a>
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>パフォーマンスの向上</h3>
+                                                    <h3>パフォーマンスの計測</h3>
                                                     <p>診断ツールを使ってボトルネックを特定し、コードのパフォーマンスを最適化します。
                                                     </p>
                                                 </div>
@@ -411,7 +412,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833081">
+                                <a href="/visualstudio/extensibility/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -430,7 +431,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=856607">
+                                <a href="data-tools/accessing-data-in-visual-studio.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -449,7 +450,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=872032">
+                                <a href="/visualstudio/liveshare/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -506,7 +507,7 @@ ASP.NET Core Web アプリ</a>
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://go.microsoft.com/fwlink/?linkid=833062">
+                                                <a href="/dotnet/csharp/">
                                                     <h3>C#</h3>
                                                     <p>.NET プラットフォーム上のあらゆるアプリケーションを構築するための、関数型プログラミング機能を備えた最新のオブジェクト指向プログラミング言語。</p>
                                                 </a>
@@ -525,7 +526,7 @@ ASP.NET Core Web アプリ</a>
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://go.microsoft.com/fwlink/?linkid=833060">
+                                                <a href="/dotnet/visual-basic/">
                                                     <h3>Visual Basic</h3>
                                                     <p>Windows アプリケーションを簡単に作成することに重点を置いた、.NET プラットフォーム用の最新で学習が容易なオブジェクト指向プログラミング言語。</p>
                                                 </a>
@@ -544,7 +545,7 @@ ASP.NET Core Web アプリ</a>
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://go.microsoft.com/fwlink/?linkid=833063">
+                                                <a href="/cpp/">
                                                     <h3>C++</h3>
                                                     <p>Windows、Linux、iOS、Android 向けのアプリケーションを作成するための、強力で柔軟なプログラミング言語および開発環境。</p>
                                                 </a>
@@ -563,7 +564,7 @@ ASP.NET Core Web アプリ</a>
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://go.microsoft.com/fwlink/?linkid=833067">
+                                                <a href="/dotnet/fsharp/">
                                                     <h3>F#</h3>
                                                     <p>あらゆるタスクに対して簡単に関数型プログラミングを行うことに重点を置いた、.NET プラットフォーム向けの、オブジェクト指向の機能を備えた最新の関数型プログラミング言語。</p>
                                                 </a>
@@ -582,7 +583,7 @@ ASP.NET Core Web アプリ</a>
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://go.microsoft.com/fwlink/?linkid=833064">
+                                                <a href="/scripting/">
                                                     <h3>JavaScript</h3>
                                                     <p>Web ページの対話性を高めるためにしばしば使われる、軽量でクロスプラットフォームのスクリプト言語。</p>
                                                 </a>
@@ -601,7 +602,7 @@ ASP.NET Core Web アプリ</a>
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://go.microsoft.com/fwlink/?linkid=833066">
+                                                <a href="http://www.typescriptlang.org/docs/tutorial.html">
                                                     <h3>TypeScript</h3>
                                                     <p>プレーンな JavaScript にコンパイルできる JavaScript のスーパーセットで、よりスケーラブルなコードを作成することができます。</p>
                                                 </a>
@@ -620,7 +621,7 @@ ASP.NET Core Web アプリ</a>
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://go.microsoft.com/fwlink/?linkid=833068">
+                                                <a href="/visualstudio/python/">
                                                     <h3>Python</h3>
                                                     <p>RAD (Rapid Application Development) のためにしばしば使われる、動的でオブジェクト指向の高水準プログラミング言語。</p>
                                                 </a>
@@ -639,7 +640,7 @@ ASP.NET Core Web アプリ</a>
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://go.microsoft.com/fwlink/?linkid=833070">
+                                                <a href="/visualstudio/rtvs/">
                                                     <h3>R</h3>
                                                     <p>通常、統計的な計算とグラフィックスのために使われる、拡張可能なプログラミング言語。</p>
                                                 </a>
@@ -665,7 +666,7 @@ ASP.NET Core Web アプリ</a>
                                 </div>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833085">
+                                <a href="/aspnet/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -684,7 +685,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833086">
+                                <a href="/visualstudio/azure">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -703,7 +704,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833068">
+                                <a href="/visualstudio/python/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -722,7 +723,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=834351">
+                                <a href="javascript/quickstart-vuejs-with-nodejs.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -741,7 +742,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833095">
+                                <a href="/visualstudio/data-tools/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -760,7 +761,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=834748">
+                                <a href="rtvs/data-science-and-analytical-applications-workload.md">
                                   <div class="cardSize">
                                     <div class="cardPadding">
                                       <div class="card">
@@ -779,7 +780,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833075">
+                                <a href="https://developer.microsoft.com/office/docs">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -808,7 +809,7 @@ ASP.NET Core Web アプリ</a>
                                 </div>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833082">
+                                <a href="cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -827,7 +828,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833083">
+                                <a href="/dotnet/framework/develop-client-apps">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -846,7 +847,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833084">
+                                <a href="/cpp/windows/desktop-applications-visual-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -875,7 +876,7 @@ ASP.NET Core Web アプリ</a>
                                 </div>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833088">
+                                <a href="/xamarin/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -894,7 +895,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833091">
+                                <a href="cross-platform/visual-studio-tools-for-unity.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -913,7 +914,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833089">
+                                <a href="/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -932,7 +933,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833090">
+                                <a href="/visualstudio/cross-platform/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -951,7 +952,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=834749">
+                                <a href="/windows/uwp/gaming/e2e">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -975,7 +976,7 @@ ASP.NET Core Web アプリ</a>
                         <a href="#other">その他のツールセット</a>
                         <ul id="other" class="cardsC">
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=834750">
+                                <a href="/visualstudio/extensibility/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -994,7 +995,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833099">
+                                <a href="/cpp/linux/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -1013,7 +1014,7 @@ ASP.NET Core Web アプリ</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=856606">
+                                <a href="/dotnet/core/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -1035,25 +1036,27 @@ ASP.NET Core Web アプリ</a>
                     </li>
                 </ul>
             </li>
+            </li>
+            </li>
         </ul>
     </div>
     <div class="container centered pageFooter">
         <h2>コミュニケーションを取るには</h2>
         <ul class="links">
            <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833100"> ブログ </a>
+                <a href="https://blogs.msdn.microsoft.com/visualstudio/"> ブログ </a>
             </li>
             <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833101"> Twitter </a>
+                <a href="https://twitter.com/VisualStudio"> Twitter </a>
             </li>
             <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833103"> Stack Overflow </a>
+                <a href="https://stackoverflow.com/questions/tagged/visual-studio"> Stack Overflow </a>
             </li>
             <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=874480"> 問題点の報告 </a>
+                <a href="ide/talk-to-us.md"> 問題点の報告 </a>
             </li>
             <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833105"> ユーザーの声 </a>
+                <a href="https://developercommunity.visualstudio.com/spaces/8/index.html"> 開発者コミュニティ </a>
             </li>
         </ul>
     </div>

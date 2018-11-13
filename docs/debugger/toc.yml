@@ -2,7 +2,11 @@ items:
 - name: デバッガー向けドキュメント
   href: index.md
 - name: 概要
-  href: debugger-overview.md
+  items:
+  - name: デバッグとは
+    href: what-is-debugging.md
+  - name: Visual Studio を使用して C# コードを書く
+    href: write-better-code-with-visual-studio.md
 - name: クイックスタート
   items:
   - name: デバッガーでのはじめに
@@ -129,7 +133,7 @@ items:
     - name: Just-In-Time デバッガーを使用してデバッグする
       href: debug-using-the-just-in-time-debugger.md
       items:
-      - name: Just-In-Time デバッガーへの応答
+      - name: Just-In-Time デバッガーを無効にする
         href: just-in-time-debugging-in-visual-studio.md
   - name: デバッグを構成する
     items:
@@ -367,7 +371,7 @@ items:
       - name: UWP アプリのデバッグ セッションを開始する
         href: start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md
         items:
-        - name: リモート コンピューターで UWP アプリを実行する
+        - name: リモート コンピューターで UWP アプリをデバッグする
           href: run-windows-store-apps-on-a-remote-machine.md
         - name: シミュレーターで UWP アプリを実行する
           href: run-windows-store-apps-in-the-simulator.md
@@ -832,9 +836,9 @@ items:
   items:
   - name: Visual Studio のデバッガーの新機能
     href: what-s-new-for-the-debugger-in-visual-studio.md
-ms.openlocfilehash: 54fa8b8653abd4e69a115dc50d287f3e182fc53a
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: a765e04da6e5d03c47a17e3b9d1642aec182c1f7
+ms.sourcegitcommit: a34b7d4fdb3872865fcf98ba24a0fced58532adc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48880748"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51561687"

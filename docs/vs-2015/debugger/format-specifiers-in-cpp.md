@@ -33,12 +33,12 @@ caps.latest.revision: 45
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2f1a09cf7e4f6e15ee49ce62914b650c3622e6e5
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 20b27a232c0e707751f8dd8111989d761635e9e6
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49894054"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220314"
 ---
 # <a name="format-specifiers-in-c"></a>C++ の書式指定子
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -106,7 +106,7 @@ int main() {
 |---------------|------------|---------------------------|---------------------|  
 |n|10 進数または **16 進数** の整数|pBuffer,[32]<br /><br /> pBuffer,**[0x20]**|`pBuffer` を 32 要素の配列として表示します。|  
 |**[exp]**|整数に評価される有効な C++ 式|pBuffer,[bufferSize]|pBuffer を `bufferSize` 要素の配列として表示します。|  
-|**expand(n)**|整数に評価される有効な C++ 式|pBuffer, expand(2)| `pBuffer`|  
+|**expand(n)**|整数に評価される有効な C++ 式|pBuffer, expand(2)|  `pBuffer`|  
   
 ##  <a name="BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue"></a> C++/CLI での相互運用機能デバッグ用の書式指定子  
  **太字** で示されている指定子は、ネイティブおよび C++/CLI コードをデバッグする場合にのみサポートされます。  
@@ -120,7 +120,7 @@ int main() {
 |**l,h**|d、i、u、o、x、X の long 型または short 型のプレフィックス。|00406042|0x0c22|  
 |**f**|符号付き浮動小数点数値。|(3./2.), f|1.500000|  
 |**e**|符号付き指数表記。|(3.0/2.0)|1.500000e+000|  
-|**g**g|符号付き浮動小数点数値または符号付き指数表記の短い方。|(3.0/2.0)|1.5|  
+|**g**|符号付き浮動小数点数値または符号付き指数表記の短い方。|(3.0/2.0)|1.5|  
 |c|単一文字|\<場所 >|101 'e'|  
 |s|const char*|\<場所 >|"hello world"|  
 |su|const wchar_t*<br /><br /> const char16_t\*|\<場所 >|L"hello world"|  

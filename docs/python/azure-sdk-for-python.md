@@ -1,7 +1,7 @@
 ---
 title: Azure SDK for Python
 description: Azure SDK for Python を使うと、任意のプラットフォームで実行している Python アプリケーションから Microsoft Azure サービスを簡単に利用できるようになります。
-ms.date: 06/26/2018
+ms.date: 10/10/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 6c7f38dbe58c5172c8480c88ae84c6e28f5d512b
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 9f1eb52e87cf9a411cf453c90f35ebc192616e8c
+ms.sourcegitcommit: 12d6398c02e818de4fbcb4371bae9e5db6cf9509
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45545555"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050223"
 ---
 # <a name="azure-sdk-for-python"></a>Azure SDK for Python
 
-Azure SDK for Python を使用すると、Windows、Mac OSX、Linux で実行されているアプリケーションからの Microsoft Azure サービスの使用と管理が簡単になります。
+Azure SDK for Python を使用すると、Windows、MacOS、Linux で実行されているアプリケーションからの Microsoft Azure サービスの使用と管理が簡単になります。
 
 ## <a name="installation"></a>インストール
 
@@ -37,13 +37,11 @@ Azure ドキュメントの「[Python と SDK のインストール](https://doc
 
 ## <a name="documentation"></a>ドキュメント
 
-ドキュメントは [azure-sdk-for-python.readthedocs.org](https://docs.microsoft.com/en-us/python/azure/?view=azure-python) にあります。
+「[Python デベロッパー センター](https://docs.microsoft.com/python/azure/?view=azure-python)」にも、さまざまなチュートリアルを含む有用なリソースが数多く用意されています。
 
-「[Python デベロッパー センター](https://azure.microsoft.com/develop/python/)」にも、さまざまなチュートリアルを含む有用なリソースが数多く用意されています。
-
-- [Django](/azure/app-service-web/web-sites-python-create-deploy-django-app)、[Flask](/azure/app-service-web/web-sites-python-create-deploy-flask-app)、[Bottle](/azure/app-service-web/web-sites-python-create-deploy-bottle-app) を使用した Web アプリの作成
-- [Python から Azure BLOB ストレージを使用する方法](/azure/storage/storage-python-how-to-use-blob-storage)
-- [Python から Table ストレージを使用する方法](/azure/storage/storage-python-how-to-use-table-storage)
+- [Linux 上の Azure App Service に Web アプリを作成する](/azure/app-service/containers/quickstart-python)。
+- [Python から Azure BLOB ストレージを使用する方法](/azure/storage/blobs/storage-quickstart-blobs-python)
+- [Python から Table ストレージを使用する方法](/azure/cosmos-db/table-storage-how-to-use-python)
 - [Python から Queue ストレージを使用する方法](/azure/storage/storage-python-how-to-use-queue-storage)
 - [Azure Cosmos DB](/azure/cosmos-db/sql-api-python-application)
 - [Service Bus キューの使用方法](/azure/service-bus-messaging/service-bus-python-how-to-use-queues)
@@ -58,6 +56,6 @@ Azure ドキュメントの「[Python と SDK のインストール](https://doc
 
 ## <a name="support"></a>サポート
 
-SDK の Git リポジトリは、[https://github.com/Azure/azure-sdk-for-python](https://github.com/Azure/azure-sdk-for-python) にあります。
+SDK の GitHub リポジトリは、[https://github.com/Azure/azure-sdk-for-python](https://github.com/Azure/azure-sdk-for-python) にあります。
 
 SDK の使用方法についての問題や質問がある場合は、[リポジトリに問題を登録してください](https://github.com/Azure/azure-sdk-for-python/issues)。

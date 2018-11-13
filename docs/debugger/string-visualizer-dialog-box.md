@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 689889e98a5a9b69a49e73ccea73f30fc3c25249
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: e2204f10711db96033976cf7b4f7bd3639daf422
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49274314"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349089"
 ---
 # <a name="view-strings-in-a-string-visualizer-in-visual-studio"></a>Visual Studio での文字列のビジュアライザーで文字列の表示
 
@@ -43,9 +43,9 @@ Visual Studio でデバッグする場合は、組み込みの文字列のビジ
 
 ## <a name="view-string-visualizer-data"></a>文字列ビジュアライザー データの表示
 
-文字列ビジュアライザー ウィンドウで、**式**変数または式をしているポインターを合わせると、フィールドに表示されます、**値**フィールドには、文字列値が表示されます。 
+文字列ビジュアライザー ウィンドウで、**式**変数または式をしているポインターを合わせると、フィールドに表示されます、**値**フィールドには、文字列値が表示されます。
 
-空白**値**ビジュアライザーを選択したが、文字列を認識できないことを意味します。 たとえば、 **XML ビジュアライザー**は空白を示しています。**値**XML タグのない、テキスト文字列または JSON 文字列。 
+空白**値**ビジュアライザーを選択したが、文字列を認識できないことを意味します。 たとえば、 **XML ビジュアライザー**は空白を示しています。**値**XML タグのない、テキスト文字列または JSON 文字列。
 
 選択したビジュアライザーを認識できない文字列を表示するには、選択、**テキスト ビジュアライザー**します。 **テキスト ビジュアライザー**プレーン テキストが表示されます。
 
@@ -67,5 +67,7 @@ XML ビジュアライザーで、次の図のように整形式 XML 文字列�
 
 ![HTML 文字列ビジュアライザー](../debugger/media/dbg-string-visualizers-html.png "HTML 文字列ビジュアライザー")
 
-## <a name="see-also"></a>関連項目  
- [(C#、Visual Basic) のカスタム ビジュアライザーを作成します。](../debugger/create-custom-visualizers-of-data.md)
+## <a name="see-also"></a>関連項目
+
+- [(C#、Visual Basic) のカスタム ビジュアライザーを作成します。](../debugger/create-custom-visualizers-of-data.md)
+- [Visual studio for Mac のデータの視覚化](/visualstudio/mac/data-visualizations)

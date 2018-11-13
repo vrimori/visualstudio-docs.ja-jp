@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bcd3a3f47af8251f6f4bfa1b5b5f08da7a1f3e3e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f82d53d5bbc9d309ba5d7e8710f0afe2023b8965
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49933561"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219888"
 ---
 # <a name="walkthrough-debug-a-multithreaded-application-in-visual-studio-using-the-threads-window"></a>チュートリアル: [スレッド] ウィンドウを使用して Visual Studio でマルチ スレッド アプリケーションをデバッグします。
 Visual Studio では、**スレッド**ウィンドウとその他のユーザー インターフェイスのマルチ スレッド アプリケーションのデバッグに役立つ要素です。 このチュートリアルで使用する方法、**スレッド**ウィンドウと**デバッグの場所**ツールバー。 その他のツールについては、次を参照してください。[マルチ スレッド アプリケーションのデバッグの開始](../debugger/get-started-debugging-multithreaded-apps.md)します。 このチュートリアルでは、わずか数分ですが、完了に慣れることがするマルチ スレッド アプリケーションのデバッグ機能を使用します。   
@@ -37,7 +37,7 @@ Visual Studio では、**スレッド**ウィンドウとその他のユーザ�
   
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  **プロジェクトの種類**s ボックスに、好みの言語をクリックします。 **Visual Basic**、 **Visual c#**、または**Visual c**します。  
+2.  **プロジェクトの種類**ボックスに、好みの言語をクリックします。 **Visual Basic**、 **Visual C#** 、または**Visual c**します。  
   
 3.  **Windows デスクトップ**、選択**コンソール アプリ**します。  
   
