@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6100f6b0a793b138712250ac5451454784bc877a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9b9d61b4a57e0255577fdb0621dafd4263fc127c
+ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49876751"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607771"
 ---
 # <a name="create-an-options-page"></a>オプション ページを作成します。
 このチュートリアルでは、プロパティ グリッドを使用して確認し、プロパティを設定する単純なツール/オプション ページを作成します。  
@@ -110,7 +110,7 @@ ms.locfileid: "49876751"
   
 2.  次の追加ステートメントを使用します。  
   
-    ```vb  
+    ```csharp  
     using System.Windows.Forms;  
     ```  
   
@@ -231,7 +231,7 @@ ms.locfileid: "49876751"
   
 1.  パッケージのコード ファイルでというパブリック プロパティを追加**OptionInteger**を**MyToolsOptionsPackage**クラス。  
   
-    ```  
+    ```csharp  
     public int OptionInteger  
     {  
         get  

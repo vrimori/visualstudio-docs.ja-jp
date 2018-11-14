@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: e2301e1c0cf2a90f701e74445d22810e67785999
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 7d743dd11b67c3883bad815b26234717f377ff57
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36233914"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295996"
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>コード化された UI テスト ログを使用したコード化された UI テストの分析
 
@@ -88,4 +88,4 @@ ms.locfileid: "36233914"
 ## <a name="see-also"></a>関連項目
 
 - [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)
-- [方法: Microsoft Visual Studio からテストを実行する](http://msdn.microsoft.com/Library/1a1207a9-2a33-4a1e-a1e3-ddf0181b1046)
+- [方法: Microsoft Visual Studio からテストを実行する](https://msdn.microsoft.com/Library/1a1207a9-2a33-4a1e-a1e3-ddf0181b1046)

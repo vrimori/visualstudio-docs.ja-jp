@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 16ec8cdb2402546f2059053495a8e656427783e3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a3adcb961e3031180054706da9d43dd04dccdedf
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49937331"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51348644"
 ---
 # <a name="design-xaml-in-visual-studio"></a>Visual Studio で XAML をデザインする
 
@@ -52,7 +52,7 @@ Visual Studio と Blend for Visual Studio は自在に切り替えることが�
 
 - **共通のソリューション エクスプローラー:** **ソリューション エクスプ ローラー**によって、プロジェクトやファイルが整理して表示されるだけでなく、プロジェクトやファイルに関連付けられているコマンドにすばやくアクセスできます。 ソリューション エクスプ ローラーを使用すると、大規模なエンタープライズ プロジェクトでの作業が容易になります。 「[ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)」をご覧ください。
 
-- **チーム エクスプ ローラー:** チーム エクスプ ローラーを使用すると、プロジェクトを GIT または TFS リポジトリを使用して管理でき、チームのコラボレーションが容易になります。 [チーム エクスプローラーでの作業](http://msdn.microsoft.com/Library/fd7a5cf7-7916-4fa0-b5e6-5a83cf377a02)を参照してください。
+- **チーム エクスプ ローラー:** チーム エクスプ ローラーを使用すると、プロジェクトを GIT または TFS リポジトリを使用して管理でき、チームのコラボレーションが容易になります。 [チーム エクスプローラーでの作業](/azure/devops/user-guide/work-team-explorer)を参照してください。
 
 - **NuGet:** Visual Studio と Blend for Visual Studio の両方で NuGet パッケージを管理できます。 NuGet は、パッケージのインストールと、ソリューションからの削除を簡略化する .NET Framework 用のパッケージ マネージャーです。
 
