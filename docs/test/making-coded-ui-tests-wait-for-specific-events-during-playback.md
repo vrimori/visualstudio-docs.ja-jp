@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: faee56676329d9dd70f189eeddac82bba680a1d9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c8a88980869d6eb7f8b30c4e1197f373f1895d52
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49912787"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295125"
 ---
 # <a name="make-coded-ui-tests-wait-for-specific-events-during-playback"></a>再生中に特定のイベントを待機するようにコード化された UI テストを設定する
 
@@ -25,7 +25,7 @@ ms.locfileid: "49912787"
  Visual Studio Enterprise
 
 > [!TIP]
-> またコード化された UI テスト エディターで操作の前に遅延を追加することもできます。 詳細については、「[方法: コード化された UI テスト エディターを使用して UI アクションの前に遅延を挿入する](http://msdn.microsoft.com/Library/509f8ef7-e105-4049-b11b-d64549e055b0)」をご覧ください。
+> またコード化された UI テスト エディターで操作の前に遅延を追加することもできます。 詳細については、「[方法: コード化された UI テスト エディターを使用して UI アクションの前に遅延を挿入する](editing-coded-ui-tests-using-the-coded-ui-test-editor.md#insert-a-delay-before-a-ui-action)」をご覧ください。
 
 
  **UITestControl.WaitForControlXXX() メソッド**
@@ -113,4 +113,4 @@ UITestControl.WaitForCondition<UITestControl[]>(new UITestControl[] { statusText
 - [チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
 - [コード化された UI テストの構造](../test/anatomy-of-a-coded-ui-test.md)
 - [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
-- [方法: コード化された UI テスト エディターを使用して UI アクションの前に遅延を挿入する](http://msdn.microsoft.com/Library/509f8ef7-e105-4049-b11b-d64549e055b0)
+- [方法: コード化された UI テスト エディターを使用して UI アクションの前に遅延を挿入する](editing-coded-ui-tests-using-the-coded-ui-test-editor.md#insert-a-delay-before-a-ui-action)
