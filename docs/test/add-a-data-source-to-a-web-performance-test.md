@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 49e1b465bbc964e962942304d5f8b63f8c5480b9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: bda1c548b4db5d7f94a1dd85befdff5645460b83
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49930714"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295099"
 ---
 # <a name="add-a-data-source-to-a-web-performance-test"></a>Web パフォーマンス テストへのデータ ソースの追加
 
@@ -24,7 +24,7 @@ ms.locfileid: "49930714"
 
  ![Web パフォーマンス テストにデータをバインドする](../test/media/web_test_databinding_conceptual.png)
 
- サンプル ASP.NET アプリを使用します。 このサンプルでは、3 種類の *.aspx* ページ (既定ページ、Red ページ、Blue ページ) を使用します。 既定のページには、Red または Blue を選択するオプション ボタン コントロールと送信ボタンが表示されます。 他の 2 種類の *.aspx* ページは非常にシンプルです。 一方には Red という名前のラベルがあり、他方には Blue という名前のラベルがあります。 既定のページで送信ボタンをクリックすると、いずれかのページが表示されます。 [ColorWebApp](http://code.msdn.microsoft.com/Sample-ColorWebApp-76ff7506) サンプルをダウンロードするか、ご自身の Web アプリケーションの手順に従うことができます。
+ サンプル ASP.NET アプリを使用します。 このサンプルでは、3 種類の *.aspx* ページ (既定ページ、Red ページ、Blue ページ) を使用します。 既定のページには、Red または Blue を選択するオプション ボタン コントロールと送信ボタンが表示されます。 他の 2 種類の *.aspx* ページは非常にシンプルです。 一方には Red という名前のラベルがあり、他方には Blue という名前のラベルがあります。 既定のページで送信ボタンをクリックすると、いずれかのページが表示されます。 [ColorWebApp](https://code.msdn.microsoft.com/Sample-ColorWebApp-76ff7506) サンプルをダウンロードするか、ご自身の Web アプリケーションの手順に従うことができます。
 
  ![テストする Web アプリの実行](../test/media/web_test_databinding_runwebapp.png)
 

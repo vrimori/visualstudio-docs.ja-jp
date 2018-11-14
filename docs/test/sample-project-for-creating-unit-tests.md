@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 93335be347e9c2ae66045bc49f9609d6cb3a929d
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: deddf46a479e0ab8d4e0bebbaf3fffe4d90b622d
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39379775"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51293448"
 ---
 # <a name="sample-code-for-testing"></a>テスト用のサンプル コード
 
@@ -27,7 +27,7 @@ ms.locfileid: "39379775"
 このコードは、次のチュートリアルで使用されます。
 
 - [マネージド コードの単体テストを作成し、実行する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)。 このチュートリアルでは、単体テストの作成とカスタマイズ、実行、およびテスト結果の検討の手順について説明します。
-- [コマンド ライン テスト ユーティリティを使用する](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867)。 このチュートリアルでは、*MSTest.exe* コマンドライン ユーティリティを使用してテストを実行し、結果を表示します。
+- [コマンド ライン テスト ユーティリティを使用する](https://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867)。 このチュートリアルでは、*MSTest.exe* コマンドライン ユーティリティを使用してテストを実行し、結果を表示します。
 
 ## <a name="sample-code"></a>サンプル コード
 
@@ -135,4 +135,4 @@ namespace BankAccountNS
 ## <a name="see-also"></a>関連項目
 
 - [チュートリアル: マネージド コードの単体テストを作成し、実行する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
-- [チュートリアル: コマンド ライン テスト ユーティリティの使用](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867)
+- [チュートリアル: コマンド ライン テスト ユーティリティの使用](https://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867)

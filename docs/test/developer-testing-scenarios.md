@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a731f7a481280d5755d72a83a4532eb8e6998f97
-ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
+ms.openlocfilehash: 396bbfdb915d0e3ecc31f516d60eab80cca6a421
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46370641"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295151"
 ---
 # <a name="developer-testing-tools-scenarios-and-capabilities"></a>開発者用テスト ツール、シナリオ、および機能
 
@@ -31,7 +31,7 @@ IntelliTest でカバレッジを改善し、回帰を回避します。 Intelli
 ![実行中の IntelliTest](media/devtest-intellitest.png)
 
 * [Visual Studio での IntelliTest の概要](http://download.microsoft.com/download/6/2/B/62B60ECE-B9DC-4E8A-A97C-EA261BFB935E/Docs/Introduction%20to%20IntelliTest%20with%20Visual%20Studio%20Enterprise%202015.docx)
-* [IntelliTest – 1 回のテストですべてのルールを把握](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/05/intellitest-one-test-to-rule-them-all.aspx)
+* [IntelliTest – 1 回のテストですべてのルールを把握](https://blogs.msdn.microsoft.com/devops/2015/07/05/intellitest-one-test-to-rule-them-all/)
 * [IntelliTest のビデオ](https://channel9.msdn.com/Series/Test-Tools-in-Visual-Studio)
 * [IntelliTest の概要](generate-unit-tests-for-your-code-with-intellitest.md)
 * [IntelliTest リファレンス マニュアル](intellitest-manual/index.md)
@@ -80,7 +80,7 @@ Visual Studio は拡張可能であり、NUnit や xUnit.net などのサード 
 ## <a name="see-also"></a>関連項目
 
 * [単体テストの概要](getting-started-with-unit-testing.md)
-* [Team Foundation Server での単体テストの実行の高速化](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/30/speeding-up-test-execution-in-tfs.aspx)
-* [並列および状況依存の単体テストの実行](https://blogs.msdn.microsoft.com/visualstudioalm/2016/02/08/parallel-and-context-sensitive-test-execution-with-visual-studio-2015-update-1/)
+* [Team Foundation Server での単体テストの実行の高速化](https://blogs.msdn.microsoft.com/devops/2015/07/30/speeding-up-unit-test-execution-in-tfs/)
+* [並列および状況依存の単体テストの実行](https://blogs.msdn.microsoft.com/devops/2016/02/08/parallel-and-context-sensitive-test-execution-with-visual-studio-2015-update-1/)
 * [Visual Studio での単体テスト、コード カバレッジおよびコード クローン分析 (ラボ)](http://download.microsoft.com/download/6/2/B/62B60ECE-B9DC-4E8A-A97C-EA261BFB935E/Docs/Unit%20Testing,%20Code%20Coverage%20and%20Code%20Clone%20Analysis%20with%20Visual%20Studio%202015.docx)
 * [C/C++ 用の単体テストの記述](writing-unit-tests-for-c-cpp.md)

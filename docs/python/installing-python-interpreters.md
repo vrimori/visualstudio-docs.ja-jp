@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7791eec2408f14a442a8dd50c1a881ffc0802697
-ms.sourcegitcommit: 48bc8492973e93612e5afaba3b47d0f98aecf97c
+ms.openlocfilehash: 3a81d81160bd6ad097e848f4af964d6ed00b17a5
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324978"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51348709"
 ---
 # <a name="install-python-interpreters"></a>Python インタープリターのインストール
 
@@ -30,7 +30,7 @@ Visual Studio (すべてのバージョン) でレジストリ (「[PEP 514 - Py
 
 Visual Studio でインストール済みの環境が検出されない場合は、「[既存の環境を手動で識別する](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)」をご覧ください。
 
-Visual Studio の [**[Python 環境]**](managing-python-environments-in-visual-studio.md) ウィンドウには既知の環境がすべて表示され、既存のインタープリターの更新プログラムが自動的に検出されます。
+Visual Studio の [**[Python 環境]**](managing-python-environments-in-visual-studio.md#the-python-environments-window) ウィンドウには既知の環境がすべて表示され、既存のインタープリターの更新プログラムが自動的に検出されます。
 
 | インタープリター | 説明 |
 | --- | --- |
