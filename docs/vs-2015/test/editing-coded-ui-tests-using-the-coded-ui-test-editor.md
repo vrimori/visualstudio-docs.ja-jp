@@ -80,7 +80,7 @@ UI 操作のプロパティの編集
   
  UI 操作のプロパティを **[UI 操作]** ウィンドウで変更する場合は、プロパティを編集する対象の UI 操作を含むテスト メソッドを展開し、UI 操作を選択してから [プロパティ] ウィンドウを使用してプロパティを変更します。  
   
- たとえば、サーバーが使用できないと、Web ブラウザーに関連付けられた UI 操作があるかどうかを示す**Web ページに移動 '<http://Contoso1/default.aspx’>** への URL を変更することが`‘ http://Contoso2/default.aspx’`します。  
+ たとえば、サーバーが使用できないと、Web ブラウザーに関連付けられた UI 操作があるかどうかを示す**Web ページに移動 '<http://Contoso1/default.aspx’>** への URL を変更することが`‘http://Contoso2/default.aspx’`します。  
   
  ![コントロールのプロパティ](../test/media/codeduitestcontrolprop.png "CodedUITestControlProp")  
 コントロールのプロパティの編集  
