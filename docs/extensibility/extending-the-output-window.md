@@ -13,17 +13,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ceb739cc8ad2dc65b1aca6c38d6c4f49ec792215
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 33e34a78fc06bc2b7f40129e33b6d2d78ff561c5
+ms.sourcegitcommit: 20d1b9a5bf041bb28453501eb63bc0537a8e4f54
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39635870"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51645212"
 ---
 # <a name="extend-the-output-window"></a>出力ウィンドウを拡張します。
 **出力**ウィンドウはテキスト ペインの読み取り/書き込みのセットです。 Visual Studio がこれらの組み込みペイン:**ビルド**、プロジェクトのビルドに関するメッセージを通信および**全般**を[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]は IDE に関するメッセージを伝えます。 プロジェクトへの参照を取得する、**ビルド**ペインを使用して自動的に、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>インターフェイスのメソッド、および Visual Studio への直接アクセスを提供しています、**全般**ウィンドウを通じて、 <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> 。サービス。 だけでなく、組み込みのペインには、作成および独自のカスタム ペインを管理することができます。  
   
- 制御することができます、**出力**ウィンドウ経由で直接、<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane>インターフェイス。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow>によって提供される、インターフェイス、<xref:Microsoft.VisualStudio.Shell.Interop.SVsOutputWindow>サービスを作成、取得、および破棄のメソッドを定義**出力**ウィンドウ ペインがあります。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow>インターフェイス ウィンドウを表示、ウィンドウを非表示、およびそれぞれのテキストを操作するためのメソッドを定義します。 別の方法を制御する、**出力**ウィンドウは、<xref:EnvDTE.OutputWindow>と<xref:EnvDTE.OutputWindowPane>Visual Studio オートメーション オブジェクト モデル内のオブジェクト。 これらのオブジェクトをカプセル化の機能のほぼすべて、<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane>インターフェイス。 さらに、<xref:EnvDTE.OutputWindow>と<xref:EnvDTE.OutputWindowPane>オブジェクトを列挙しやすく上位レベルの機能の追加、**出力**ウィンドウ ペインからテキストを取得するとします。  
+ 制御することができます、**出力**ウィンドウ経由で直接、<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane>インターフェイス。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow>によって提供される、インターフェイス、<xref:Microsoft.VisualStudio.Shell.Interop.SVsOutputWindow>サービスを作成、取得、および破棄のメソッドを定義**出力**ウィンドウ ペインがあります。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane>インターフェイス ウィンドウを表示、ウィンドウを非表示、およびそれぞれのテキストを操作するためのメソッドを定義します。 別の方法を制御する、**出力**ウィンドウは、<xref:EnvDTE.OutputWindow>と<xref:EnvDTE.OutputWindowPane>Visual Studio オートメーション オブジェクト モデル内のオブジェクト。 これらのオブジェクトをカプセル化の機能のほぼすべて、<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane>インターフェイス。 さらに、<xref:EnvDTE.OutputWindow>と<xref:EnvDTE.OutputWindowPane>オブジェクトを列挙しやすく上位レベルの機能の追加、**出力**ウィンドウ ペインからテキストを取得するとします。  
   
 ## <a name="create-an-extension-that-uses-the-output-pane"></a>[出力] ペインを使用する拡張機能を作成します。  
  [出力] ウィンドウのさまざまな側面を実行する拡張機能を行うことができます。  
