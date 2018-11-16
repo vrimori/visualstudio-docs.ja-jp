@@ -17,12 +17,12 @@ ms.assetid: 0be6ffc1-8afd-4d02-9a5d-e27dde05fde6
 caps.latest.revision: 20
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7b7f1c5f9f052253e2b18ac2f7c669b7442ac391
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 371fd4269cee5918bd0d0b623eb49e1f709a311d
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49294217"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51781713"
 ---
 # <a name="creating-a-windows-forms-toolbox-control"></a>Windows フォーム ツールボックス コントロールの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -81,16 +81,16 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
 3.  次のパブリック プロパティの宣言を作成します。  
   
     ```csharp  
-    public int Value {  
+    public int Value {  
         get { return currentValue; }   
     }  
   
-    public string Message {  
+    public string Message {  
         get { return displayText; }  
         set { displayText = value; }  
     }  
   
-    public bool ShowReset {  
+    public bool ShowReset {  
         get { return btnReset.Visible; }  
         set { btnReset.Visible = value; }  
     }  
@@ -102,7 +102,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
 4.  次のコードを配置、`Load`コントロールのイベント。  
   
     ```csharp  
-    private void Counter_Load(object sender, EventArgs e)  
+    private void Counter_Load(object sender, EventArgs e)  
     {  
         currentValue = 0;  
         label1.Text = Message + Value;  
@@ -115,7 +115,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
 5.  カウンターをインクリメントする次のパブリック メソッドを作成します。  
   
     ```csharp  
-    public void Increment()  
+    public void Increment()  
     {  
         currentValue++;  
         label1.Text = displayText + Value;  
@@ -127,7 +127,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
 6.  宣言を追加、`Incremented`コントロール クラスにイベント。  
   
     ```csharp  
-    public event EventHandler Incremented;  
+    public event EventHandler Incremented;  
     ```  
   
      呼び出し元は、カウンターの値の変更に応答するには、このイベントにハンドラーを追加することができます。  
@@ -135,7 +135,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
 7.  ダブルクリックしてデザイン ビューに戻り、`Reset`を生成するボタン、`btnReset_Click`イベント ハンドラーをクリックし、次の例に示すように入力します。  
   
     ```csharp  
-    private void btnReset_Click(object sender, EventArgs e)  
+    private void btnReset_Click(object sender, EventArgs e)  
     {  
         currentValue = 0;  
         label1.Text = displayText + Value;  
@@ -149,7 +149,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
     ```csharp  
     [ProvideToolboxControl("General", false)]  
-    public partial class Counter : UserControl  
+    public partial class Counter : UserControl  
     ```  
   
 ### <a name="testing-the-control"></a>コントロールのテスト  
