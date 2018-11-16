@@ -17,12 +17,12 @@ ms.assetid: a8bbe061-c382-4fe9-a193-3f7d12216041
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 49eadec53bd100b4413748be8a77cdf47996f369
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: afd33063614430cd51b9a6a7cdb4ec979242943c
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49280398"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51745999"
 ---
 # <a name="idebugcontainerfield"></a>IDebugContainerField
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49280398"
 ## <a name="syntax"></a>構文  
   
 ```  
-IDebugContainerField : IDebugField  
+IDebugContainerField : IDebugField  
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
@@ -51,7 +51,7 @@ IDebugContainerField : IDebugField
 ## <a name="remarks"></a>Remarks  
  配列 (変数のコンテナー)、(メソッドおよび変数のコンテナー) のクラスおよびメソッド (パラメーターとローカル変数のコンテナー) は、コンテナーのすべての例を示します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

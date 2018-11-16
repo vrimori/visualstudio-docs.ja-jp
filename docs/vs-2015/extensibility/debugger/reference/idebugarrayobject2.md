@@ -15,12 +15,12 @@ ms.assetid: be6e504d-4ab3-4141-a61b-0953ee0e038e
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 669d764b58d9655c4337ce548f248a646441937c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 192eac33a668f85412aad5e1abc6898f08b26c32
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49189957"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51748288"
 ---
 # <a name="idebugarrayobject2"></a>IDebugArrayObject2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -50,7 +50,7 @@ IDebugArrayObject2 : IDebugArrayObject
 ## <a name="remarks"></a>Remarks  
  式エバリュエーターでは、このインターフェイスを使用して、解析ツリー内のマネージ配列を表します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Ee.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
