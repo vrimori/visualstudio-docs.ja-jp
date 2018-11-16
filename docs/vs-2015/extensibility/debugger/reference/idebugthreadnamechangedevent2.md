@@ -17,12 +17,12 @@ ms.assetid: 34c1652e-f019-48ba-8b26-ace20f8a158c
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e91770bfefa235a990bfef5a69592aaa99f0000c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a227a7701377468d591990baf8a228e4694941a6
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49244531"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51738677"
 ---
 # <a name="idebugthreadnamechangedevent2"></a>IDebugThreadNameChangedEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49244531"
 ## <a name="syntax"></a>構文  
   
 ```  
-IDebugThreadNameChangedEvent2 : IUnknown  
+IDebugThreadNameChangedEvent2 : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
@@ -41,7 +41,7 @@ IDebugThreadNameChangedEvent2 : IUnknown
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
  デでは、作成し、スレッドの名前が変更されたレポートにこのイベント オブジェクトを送信します。 使用して、イベントが送信される、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)デバッグ中のプログラムにアタッチされているときに、SDM によって指定されたコールバック関数。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

@@ -17,12 +17,12 @@ ms.assetid: a7d5c70f-a1a5-4120-9f70-184e01c25bff
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 63b39e45d73be47538263b7e7cd5ce1e12769f95
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: cc5e780bb5e211b8900a22b181749e0376c6f242
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49215645"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51742609"
 ---
 # <a name="idebugproperty2"></a>IDebugProperty2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -76,7 +76,7 @@ IDebugProperty2 : IUnknown
   
  IDE を使用できる、`IDebugProperty2`ユーザー参照および実行時にプロパティを変更できるようにするインターフェイス。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
