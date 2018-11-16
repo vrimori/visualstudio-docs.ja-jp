@@ -17,12 +17,12 @@ ms.assetid: 8a042beb-b319-48e3-b3c8-9c8336ab371b
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c7e5c09a407286b9825a3a58974010241be93608
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 2f6e037b4901f7856a286ffdfe999562740217f3
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49265039"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51732939"
 ---
 # <a name="idebugbreakpointrequest3"></a>IDebugBreakpointRequest3
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -51,7 +51,7 @@ IDebugBreakpointRequest3 : IDebugBreakpointRequest2
 ## <a name="remarks"></a>Remarks  
  DE に追加情報を提供するこのインターフェイスを使用、 [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)構造体。 この追加の情報には、DE のベンダーの ID (GUID の形式) で、トレース ポイントの名前やブレークポイント制約の名前が含まれています。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

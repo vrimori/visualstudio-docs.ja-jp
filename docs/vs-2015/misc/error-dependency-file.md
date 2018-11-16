@@ -13,15 +13,15 @@ f1_keywords:
 - vs.tasklisterror.copy_version_conflict
 ms.assetid: cd7de1eb-7d58-4e2c-9811-a7201f7817be
 caps.latest.revision: 7
-author: mikeblome
-ms.author: mblome
+author: gewarren
+ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 0a8d6fe7440a39fc207d8d9a1b56bea06547e273
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 4edf474cd67d21833743891eeeb75ce09decb87e
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49274301"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51751942"
 ---
 # <a name="error-the-dependency-39file39-in-project-39project39-cannot-be-copied-to-the-run-directory-because-it-would-conflict-with-dependency-39file39"></a>エラー: 依存関係&#39;ファイル&#39;プロジェクトで&#39;プロジェクト&#39;依存関係と競合するために、実行ディレクトリにコピーできません&#39;ファイル&#39;
 参照間で競合が発生しています。アプリケーションが実行される bin ディレクトリに、ファイル名が同じ複数の依存関係がコピーされようとしています。 どの依存関係もプライマリ参照ではないため、実行ディレクトリは競合を解決できません。  

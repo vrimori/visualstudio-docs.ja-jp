@@ -17,12 +17,12 @@ ms.assetid: be6486ed-b070-4898-95b1-58581bcb4447
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ecc08f6304bf692e8b16c4b8aad7e8eaefb18200
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 4aa7733dee79d60a2cc09123bc22ccb587f82cb9
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49223746"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51765609"
 ---
 # <a name="idebugparsedexpression"></a>IDebugParsedExpression
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -54,7 +54,7 @@ IDebugParsedExpression : IUnknown
 ## <a name="remarks"></a>Remarks  
  呼び出す、呼び出し元の式を評価する準備ができたら[EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)を返す、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)評価の結果を格納しています。 この 2 つの部分には、評価、評価、により、解析された式を複数回評価し、解析、式を解析の時間のかかるプロセスをバイパスするアプローチが。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: ee.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
