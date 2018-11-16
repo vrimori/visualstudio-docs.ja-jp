@@ -1,7 +1,7 @@
 ---
-title: '方法: ASP.NET プロセスの名前を見つける |Microsoft ドキュメント'
+title: 実行中の ASP.NET プロセスの検索 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 11/04/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
@@ -18,41 +18,35 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 899860baf5461eb798341cebf775ccde488915b7
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 6bbb2aed6f7218170e26b736d82ba0f3d88b2fae
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31473820"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51751771"
 ---
-# <a name="how-to-find-the-name-of-the-aspnet-process"></a>方法 : ASP.NET プロセスの名前を見つける
-実行中の [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションにアタッチする場合、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] プロセスの名前を把握している必要があります。  
+# <a name="find-the-name-of-the-aspnet-process"></a>ASP.NET プロセスの名前を見つける
 
--   IIS または iis Express で ASP.NET Core を実行している場合は、dotnet.exe は、プロセス名です。
+デバッグ、実行中に[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]アプリに Visual Studio デバッガーをアタッチする必要があります、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]名前で処理します。
 
--   IIS 6.0 で ASP.NET を後で実行している場合、名前は w3wp.exe です。  
-  
--   以前のバージョンの IIS で ASP.NET を実行している場合、名前は aspnet_wp.exe です。
+**確認するには、プロセスは、ASP.NET アプリを実行しています。**
 
--   Iis Express で ASP.NET を実行している場合は、iisexpress.exe は名前です。
-  
-Visual Studio、Visual Studio 2012 より前のバージョンを使用してビルドされたアプリケーション、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]コードをファイル システム上におよび、テスト サーバー WebDev.WebServer.exe または WebDev.WebServer40.exe の下で実行できます。 その場合は、WebDev.WebServer.exe またはの代わりに WebDev.WebServer40.exe にアタッチする必要があります、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]プロセスです。 ただし、これは、ローカル デバッグだけに当てはまります。
-  
-古いバージョンの ASP アプリケーションは、インプロセスで実行する場合、IIS プロセス inetinfo.exe 内で実行します。  
+1. アプリが実行されている、Visual Studio で、次のように選択します。**デバッグ** > **プロセスにアタッチ**します。 
+   
+1. **プロセスにアタッチ**ダイアログ ボックスで、型プロセスの最初の文字が次の一覧から名前または検索ボックスに入力します。 ASP.NET アプリの実行を実行している 1 つです。 アプリをデバッグするには、そのプロセスにアタッチします。 
+   
+    - *w3wp.exe* 6.0 以降、IIS です。 
+    - *aspnet_wp.exe*は IIS の以前のバージョン。
+    - *iisexpress.exe* IISExpress です。
+    - *dotnet.exe* ASP.NET Core です。
+    - *inetinfo.exe*インプロセスで実行されている古い ASP アプリケーションです。 
 
-### <a name="to-determine-the-iis-version-under-which-the-application-is-running"></a>アプリケーションが実行されている IIS のバージョンを判断するには  
+>[!NOTE]
+>Visual Studio 2012 以前[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]コードがファイル システム上にあるし、テスト サーバーで実行*WebDev.WebServer.exe*または*WebDev.WebServer40.exe*します。 この場合は、ローカル デバッグにアタッチ*WebDev.WebServer.exe*または*WebDev.WebServer40.exe*の代わりに、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]プロセス。 
 
-1.  アプリケーションが実行されているかどうかを確認し、その後、Visual Studio から、次のように使用します。、[プロセスにアタッチする](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)コマンド。
+**参照してください。**
 
-2.  W3wp.exe プロセスをすばやく検索するように、プロセス名の最初の文字を入力、**選択可能なプロセス** ボックスの一覧です。
-
-    このトピックの一覧から選択可能なプロセスは、IIS のバージョンが利用可能なおよびアプリケーションを実行しているどのプロセスで示されます。
-
-    > [!NOTE]
-    > Visual Studio 2017 以降、検索ボックスを使用して、プロセス名を検索します。
-  
-## <a name="see-also"></a>関連項目  
  [実行中のプロセスにアタッチする](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)  
- [リモートの Web アプリケーションのデバッグの前提](../debugger/prerequistes-for-remote-debugging-web-applications.md)   
+ [Web アプリケーションのリモート デバッグの前提条件](../debugger/prerequistes-for-remote-debugging-web-applications.md)   
  [システム要件](../debugger/aspnet-debugging-system-requirements.md)   
- [ASP.NET アプリケーションをデバッグします。](../debugger/how-to-enable-debugging-for-aspnet-applications.md)
+ [ASP.NET アプリケーションをデバッグする](../debugger/how-to-enable-debugging-for-aspnet-applications.md)
