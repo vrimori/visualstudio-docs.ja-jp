@@ -18,15 +18,15 @@ dev_langs:
 - C++
 ms.assetid: b7495655-54c0-4315-8422-43bf63b8c22e
 caps.latest.revision: 8
-author: mikejo5000
+author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c7735e1199e7871324fe22b0af33d2ff3230ca51
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: d6669cb7f2a869acf1d2df371219e9323d2d751d
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49175774"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51733977"
 ---
 # <a name="mixed-mode-debugging-for-x64-processes-is-only-supported-when-using-microsoftnet-framework-4-or-greater"></a>x64 プロセスの混合モード デバッグは、4 より前の Microsoft .NET Framework バージョンを使用している場合にはサポートされません。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]

@@ -15,12 +15,12 @@ ms.assetid: 524eb882-0ad5-4bfb-95eb-eb3abb3d0237
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: dc3ed9762a781b26c6bf12e0c51fa95efaf9056b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 8cbbec576b4e7b17f1a87e9d60ed1857fb3157b5
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49294997"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51733264"
 ---
 # <a name="idebugcodecontext3"></a>IDebugCodeContext3
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -47,7 +47,7 @@ IDebugCodeContext3 : IDebugCodeContext2
 ## <a name="remarks"></a>Remarks  
  これは、一般に、実装する必要はありませんが、省略可能なインターフェイスです。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

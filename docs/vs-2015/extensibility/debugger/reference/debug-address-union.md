@@ -17,12 +17,12 @@ ms.assetid: e3d11aab-de0d-4109-b5dc-11e07e64382d
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5a7bc7edf46533c377857a3aae85e8dc97da8012
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0bff5235224b0bc93ebe63b7b77b812bb54e0845
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49827526"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51754851"
 ---
 # <a name="debugaddressunion"></a>DEBUG_ADDRESS_UNION
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -94,12 +94,12 @@ public struct DEBUG_ADDRESS_UNION {
  [C++ のみ]共用体の名前。  
   
  unionmember  
- [C# のみ]この値に基づいて、適切な構造体の型にマーシャ リングする必要がある`dwKind`します。 間の関連付けは、「解説」を参照してください`dwKind`と共用体の解釈します。  
+ [C#のみ]この値に基づいて、適切な構造体の型にマーシャ リングする必要がある`dwKind`します。 間の関連付けは、「解説」を参照してください`dwKind`と共用体の解釈します。  
   
 ## <a name="remarks"></a>Remarks  
  この構造体の一部は、 [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)構造体し、さまざまな種類のアドレスの数のいずれかを表します (、`DEBUG_ADDRESS`構造体への呼び出しによって入力されます、 [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)メソッド)。  
   
- [C# のみ]次の表を解釈する方法を示しています、`unionmember`アドレスの種類ごとのメンバー。 この例では、1 つの種類のアドレスにこれを行う方法を示します。  
+ [C#のみ]次の表を解釈する方法を示しています、`unionmember`アドレスの種類ごとのメンバー。 この例では、1 つの種類のアドレスにこれを行う方法を示します。  
   
 |`dwKind`|`unionmember` として解釈されます。|  
 |--------------|----------------------------------|  
