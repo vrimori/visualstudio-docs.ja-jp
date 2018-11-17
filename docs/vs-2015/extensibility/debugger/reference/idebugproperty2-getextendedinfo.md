@@ -17,12 +17,12 @@ ms.assetid: 0c9c0b2b-7540-4424-adb5-fce7aa37a026
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 23782a80527e35c6dafeb4ffd51eadf1a0ff2b06
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9f6fd711a70c050a6f490a27a56eb860c84de867
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49948793"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51726963"
 ---
 # <a name="idebugproperty2getextendedinfo"></a>IDebugProperty2::GetExtendedInfo
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -32,14 +32,14 @@ ms.locfileid: "49948793"
 ## <a name="syntax"></a>構文  
   
 ```cpp#  
-HRESULT GetExtendedInfo (   
+HRESULT GetExtendedInfo (   
    REFGUID* guidExtendedInfo,  
    VARIANT* pExtendedInfo  
 );  
 ```  
   
 ```csharp  
-int GetExtendedInfo (   
+int GetExtendedInfo (   
    ref Guid guidExtendedInfo,  
    out object pExtendedInfo  
 );  
@@ -50,7 +50,7 @@ int GetExtendedInfo (
  [in]取得する拡張情報の種類を決定する GUID。 詳細については、「解説」を参照してください。  
   
  `pExtendedInfo`  
- [out]返します、 `VARIANT` (C++) または拡張プロパティの情報を取得するために使用できます (c#) オブジェクト。 たとえば、このパラメーターを返す可能性があります、`IUnknown`インターフェイスのクエリを実行できる、 [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)インターフェイス。 詳細については、「解説」を参照してください。  
+ [out]返します、 `VARIANT` (C++) またはオブジェクト (C#) 拡張プロパティの情報を取得できます。 たとえば、このパラメーターを返す可能性があります、`IUnknown`インターフェイスのクエリを実行できる、 [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)インターフェイス。 詳細については、「解説」を参照してください。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`; エラー コードを返します。 返します`S_GETEXTENDEDINFO_NO_EXTENDEDINFO`を取得する拡張情報がない場合。  

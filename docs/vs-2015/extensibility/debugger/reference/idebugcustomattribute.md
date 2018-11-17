@@ -17,12 +17,12 @@ ms.assetid: c5ae41e9-00b9-4cca-871d-b8de9ef390d1
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1fafb47239512cab4110118d6f464e0c96e22096
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 4230f8db75841e0ae7d990c906fe68cf71af701a
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49225967"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51796910"
 ---
 # <a name="idebugcustomattribute"></a>IDebugCustomAttribute
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49225967"
 ## <a name="syntax"></a>構文  
   
 ```  
-IDebugCustomAttribute : IUnknown  
+IDebugCustomAttribute : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
@@ -54,7 +54,7 @@ IDebugCustomAttribute : IUnknown
 ## <a name="remarks"></a>Remarks  
  カスタム属性は、特定のクラスやメソッドに関連付けられているカスタム メタデータを提供する、c# の構造です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
