@@ -11,15 +11,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5279ab9b-71d9-4be5-81f6-a1f24b06f5fb
 caps.latest.revision: 19
-author: stevehoag
-ms.author: shoag
+author: gewarren
+ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: d59ccac2ef8f91fae9bede5951ff42ec5a43be0e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 8d4bc5d8e8a24483c30ac813d3253626e58dd353
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49848554"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51791749"
 ---
 # <a name="migrate-apps-to-the-universal-windows-platform-uwp"></a>アプリを Universal Windows Platform (UWP) へ移行する
 Visual Studio 2015 RC で作成された Windows Store 8.1 アプリ、Windows Phone 8.1 アプリ、またはユニバーサル Windows アプリ用の既存のプロジェクト ファイルに必要な変更を手動で加え、Visual Studio 2015 RTM で使用できるようにします。 (Windows アプリのプロジェクトと Windows Phone プロジェクトの両方を備えた Windows 8.1 ユニバーサル アプリがある場合、各プロジェクトを移行するための手順に従う必要があります。)  
@@ -503,7 +503,7 @@ Visual Studio 2015 RC で作成された Windows Store 8.1 アプリ、Windows P
      <PackageDependency  
           Name="Microsoft.VCLibs.120.00"  
           Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"  
-          MinVersion="12.0.30113.0" />  
+          MinVersion="12.0.30113.0" />  
     </Dependencies>  
   
     ```  

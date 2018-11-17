@@ -17,12 +17,12 @@ ms.assetid: 257fa167-b46e-4ffb-9a12-272efbf26702
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4aab9051c8c5ae60ff4a8fa3fb83bc091e3e6f47
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 976c5bdf2ac0dda702521dcae3646f16dfc4f23b
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49197162"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51797625"
 ---
 # <a name="idebugpointerobject"></a>IDebugPointerObject
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "49197162"
 ## <a name="syntax"></a>構文  
   
 ```  
-IDebugPointerObject : IDebugObject  
+IDebugPointerObject : IDebugObject  
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
@@ -56,7 +56,7 @@ IDebugPointerObject : IDebugObject
 ## <a name="remarks"></a>Remarks  
  式エバリュエーターでは、このインターフェイスを使用して、解析ツリー内のポインターを表します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: ee.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
