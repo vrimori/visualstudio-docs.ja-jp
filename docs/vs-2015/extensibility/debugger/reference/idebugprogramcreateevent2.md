@@ -17,12 +17,12 @@ ms.assetid: b19a7934-6179-4a68-9075-bd7dcd640b05
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cd69afea6723050478f1b91d9b298a893b6ceceb
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: d9c62756b30003dfbb1c9d892e3504b44fc3751d
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49302602"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51816607"
 ---
 # <a name="idebugprogramcreateevent2"></a>IDebugProgramCreateEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -44,7 +44,7 @@ IDebugProgramCreateEvent2 : IUnknown
 ## <a name="remarks"></a>Remarks  
  DE またはカスタムのポート サプライヤーは、新しい発行[IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)呼び出してインターフェイス[PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

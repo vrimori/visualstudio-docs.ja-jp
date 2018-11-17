@@ -16,12 +16,12 @@ ms.assetid: b6b3dee7-91c5-4556-9f69-0d56b675e83b
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 820b0e992b79af28ca1b7f65f6a2f6221396da9e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 910764df2f6a6e3069136bce64b77f267e473b9d
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49192609"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51749957"
 ---
 # <a name="private-galleries"></a>Private Galleries
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "49192609"
   
 5.  **URL**フィールドに、Atom フィードまたはプライベート ギャラリーをホストしている SharePoint サイトの URL を入力します。  
   
-    1.  プライベート ギャラリーに接続するホストが Atom フィードの場合は、このいずれかの URL のようになります:http://www.mywebsite/mygallery/atom.xmlします。  この URL は、ファイルまたはネットワーク パスを参照できます。  
+    1.  プライベート ギャラリーに接続するホストが Atom フィードの場合は、このいずれかの URL のようになります: http://www.mywebsite/mygallery/atom.xml します。  この URL は、ファイルまたはネットワーク パスを参照できます。  
   
     2.  ホストが SharePoint サイトの場合は、URL のようになりますこのいずれか:http://mysharepoint/sites/mygallery/forms/AllItems.aspxします。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "49192609"
   
 ```  
 [$RootPath$\ExtensionManager\Repositories\{UniqueGUID}]  
-@={URI}  (REG_SZ)  
+@={URI}  (REG_SZ)  
 Disabled=0 | 1 (DWORD)  
 Priority=0 (highest priority) … MaxInt (lowest priority) (DWORD) (uint)  
 Protocol=VSGallery|Atom|Sharepoint (REG_SZ)  

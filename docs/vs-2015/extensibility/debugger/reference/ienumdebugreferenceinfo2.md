@@ -17,12 +17,12 @@ ms.assetid: 7ed01441-686f-4032-8268-a4c750f19f85
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1ff325d33c3a116b1e1b6537b6e3dc1b15dbfb66
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 48505c99bf5af8f94fb8d196df468785bf645e7a
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49259000"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51766579"
 ---
 # <a name="ienumdebugreferenceinfo2"></a>IEnumDebugReferenceInfo2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -55,7 +55,7 @@ IEnumDebugReferenceInfo2 : IUnknown
 ## <a name="remarks"></a>Remarks  
  参照は、プロパティは、名前、種類、およびアドレスは、実質的に型と、アドレス。 参照は、メモリ内に存在するオブジェクトが参照される限り、永続化します。 参照してください[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)の詳細。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
