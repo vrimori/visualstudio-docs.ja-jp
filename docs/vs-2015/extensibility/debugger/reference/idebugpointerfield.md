@@ -17,12 +17,12 @@ ms.assetid: d51bd5b2-f18e-4e27-b4fb-e6f652fbf635
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 30f78829fa13fef1083826998729a5d38c8d2211
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 33541d151b4e9500ff810a1e69cbc081f6e7353b
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49264019"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51758245"
 ---
 # <a name="idebugpointerfield"></a>IDebugPointerField
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -51,7 +51,7 @@ IDebugPointerField : IDebugContainerField
 ## <a name="remarks"></a>Remarks  
  C および C++ でのポインターはコンテナーとして配列表記と共に使用する場合。 たとえば、 `char *pString`、`pString`へのポインターの型を持つ`char`します。 `pString[3]` ポインターであるコンテナーの型を持つ`char`そのコンテナーの 4 番目の要素を参照します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
