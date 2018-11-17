@@ -16,16 +16,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 865fbca5092378af044d6121862119ecba8625a2
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: HT
+ms.openlocfilehash: df2f0c94fa5d3bfc275a09b065555f32f260ba91
+ms.sourcegitcommit: 331dbb12e11fcd7f5d15fab05f3c861e48126e43
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
-ms.locfileid: "51748682"
+ms.locfileid: "51826754"
 ---
 # <a name="navigate-through-code-with-the-visual-studio-debugger"></a>Visual Studio デバッガーでコード内を移動します。
 
-Visual Studio デバッガーでは、アプリの状態を検査し、その実行フローを表示するコード内を移動できます。 キーボード ショートカット、デバッグ コマンド、ブレークポイント、およびその他の機能を使用するを簡単に確認するコードを取得します。 デバッガー ナビゲーション コマンドとショートカットの知識は、高速かつ簡単に見つけ、アプリの問題を解決します。  
+Visual Studio デバッガーでは、アプリの状態を検査し、その実行フローを表示するコード内を移動できます。 キーボード ショートカット、デバッグ コマンド、ブレークポイント、およびその他の機能を使用するを簡単に確認するコードを取得します。 デバッガー ナビゲーション コマンドとショートカットの知識は、高速かつ簡単に見つけ、アプリの問題を解決します。  コードをデバッグしようとした初めての場合は、読み取りをする可能性があります[優れたC#Visual Studio を使用してコード](../debugger/write-better-code-with-visual-studio.md)と[超初心者向けのデバッグ](../debugger/debugging-absolute-beginners.md)にこの記事に進む前にします。
   
 ## <a name="basic-debugging"></a>デバッグの基本  
 
@@ -183,4 +183,9 @@ Microsoft のシンボルを読み込むには、次を参照してください�
 1. **モジュール**ウィンドウで、ことがわかりますモジュールに読み込まれたシンボルがある、**シンボルの状態**列。 シンボルを読み込むし、選択するモジュールを右クリックして**シンボルの読み込み**します。  
   
 ##  <a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a> マネージド コード内のプロパティと演算子にステップ インする  
- 既定で、デバッガーをステップ オーバー プロパティおよび演算子ではマネージ コードです。 通常のプロパティおよび演算子をステップ実行デバッグ エクスペリエンスの向上を提供します。 プロパティと演算子にステップ インを有効にする**ツール**(または**デバッグ**) >**オプション** > **デバッグ** > **全般**チェック ボックスをオフ、**プロパティおよび演算子 (マネージドのみ) をステップ オーバー**チェック ボックスをオンします。
+ デバッガーは既定ではマネージド コード内のプロパティと演算子をステップ オーバーします。 ほとんどの場合、これにより正しくデバッグを実行できます。 プロパティや演算子にステップ インを有効にするには、**デバッグ** > **オプション**します。 **デバッグ** > **全般** ページで、クリア、**プロパティおよび演算子 (マネージドのみ) をステップ オーバー**チェック ボックスをオンします。
+
+## <a name="see-also"></a>関連項目
+ [何をデバッグするとしますか。](../debugger/what-is-debugging.md)  
+ [優れたC#Visual Studio を使用するコード](../debugger/write-better-code-with-visual-studio.md)  
+ [デバッグの概要](../debugger/debugger-feature-tour.md) 
