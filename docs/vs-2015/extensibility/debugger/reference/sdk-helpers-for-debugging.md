@@ -19,12 +19,12 @@ ms.assetid: 80a52e93-4a04-4ab2-8adc-a7847c2dc20b
 caps.latest.revision: 29
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f4b058b4e3f831f4d8eddcbd816e4e35dbd83803
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 904ac14433bf6b7b839a4fe634175a7f583e27ab
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49232861"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51772184"
 ---
 # <a name="sdk-helpers-for-debugging"></a>デバッグ用の SDK ヘルパー
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -424,7 +424,7 @@ HRESULT EnumMetricSections(
 |*[例外の種類]*|処理できる例外のクラスを識別するサブキーの一般的なタイトルです。 一般的な名前は**C++ 例外**、 **Win32 例外**、 **Common Language Runtime Exceptions**、および**ネイティブ ランタイム チェック**します。 これらの名前は、ユーザーに例外の特定のクラスを識別するためにも使用されます。|  
 |*[例外]*|例外の名前。 たとえば、 **_com_error**または**コントロール ブレーク**します。 これらの名前は、ユーザーに特定の例外を識別するためにも使用されます。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  これらのファイルにある、 [!INCLUDE[vs_dev10_ext](../../../includes/vs-dev10-ext-md.md)] SDK のインストール ディレクトリ (既定では、 *[ドライブ]* \Program Files\Microsoft Visual Studio 2010 SDK\\)。  
   
  ヘッダー: includes\dbgmetric.h  

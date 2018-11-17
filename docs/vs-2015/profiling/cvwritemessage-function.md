@@ -29,15 +29,15 @@ helpviewer_keywords:
 - CvWriteMessageExA method
 ms.assetid: e20ae7be-bfa7-437a-b8c1-fa0f1baa7f83
 caps.latest.revision: 8
-author: mikejo5000
+author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 028b27f74f66f35321f3fc30b097009942239d31
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: d98ead3931e884c0a99b112a71ee3921e85e3eb3
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49249536"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51793296"
 ---
 # <a name="cvwritemessage-function"></a>CvWriteMessage 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -119,7 +119,7 @@ HRESULT CvWriteMessageExVA(
 ## <a name="return-value"></a>戻り値  
  メッセージが書き込まれると S_OK を返します。 エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** cvmarkers.h  
   
  **Unicode:** CvWriteMessageW、CvWriteMessageVW、CvWriteMessageExW、CvWriteMessageExVW  

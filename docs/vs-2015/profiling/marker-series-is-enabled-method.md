@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Concurrency::diagnostic::marker_series::is_enabled method
 ms.assetid: 8ce4dd50-ca29-4c72-98d6-582693f7d501
 caps.latest.revision: 8
-author: mikejo5000
+author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 774b1281209787a19cdd83e4ef1019e4bf63591c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6e512e51cfcd33d44072308fcff1ef0c9d69e112
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49263797"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51806348"
 ---
 # <a name="markerseriesisenabled-method"></a>marker_series::is_enabled メソッド
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,7 +49,7 @@ bool is_enabled(
   
 ## <a name="return-value"></a>戻り値  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** cvmarkersobj.h  
   
  **名前空間:** Concurrency::diagnostic  

@@ -17,12 +17,12 @@ ms.assetid: 72915146-215f-4c99-a034-131b2b474e0e
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 91a226c7927f5969f5bad64f5128e24e0912d6ec
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 484ad1b1a084d40fe86c3ba36c90fdbc5cc4effa
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49262250"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51773835"
 ---
 # <a name="ienumdebugcodecontexts2"></a>IEnumDebugCodeContexts2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -57,7 +57,7 @@ IEnumDebugCodeContexts2 : IUnknown
 ## <a name="remarks"></a>Remarks  
  Visual Studio 呼び出し[EnumCodeContexts](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md)コード コンテキストの一覧を設定、ユーザーが選択できる場合に、次のステートメントを設定またはソース ファイルの逆アセンブルを表示します。 複数のコード コンテキストには、たとえば、C++ スタイルのテンプレートの複数のインスタンスがある場合が発生します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

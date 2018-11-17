@@ -15,12 +15,12 @@ ms.assetid: b804b619-70eb-4c38-80d9-c8b32b65ed3e
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b1ffb957f15611562011b7d147a8388f09f11558
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6954d6fada83de2af5c668dabe4af37f1a01a659
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49208196"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51809442"
 ---
 # <a name="idebugcustomattributequery"></a>IDebugCustomAttributeQuery
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -41,7 +41,7 @@ IDebugCustomAttributeQuery : IUnknown
 |[GetCustomAttributeByName](../../../extensibility/debugger/reference/idebugcustomattributequery-getcustomattributebyname.md)|指定した名前のカスタム属性を取得します。|  
 |[IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery-iscustomattributedefined.md)|指定した決定カスタム属性を定義します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

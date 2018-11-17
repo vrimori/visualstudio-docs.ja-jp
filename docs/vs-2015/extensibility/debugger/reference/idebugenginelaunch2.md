@@ -17,12 +17,12 @@ ms.assetid: 5eaf2ad8-3fbf-446e-b48b-5327ad3f5255
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d67bdd4c4d2901c98409b85f784aa117da434d7e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: c4f052e640b479b51a4dff512a885ff17bf8cc7c
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49258251"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51816867"
 ---
 # <a name="idebugenginelaunch2"></a>IDebugEngineLaunch2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49258251"
 ## <a name="syntax"></a>構文  
   
 ```  
-IDebugEngineLaunch2 : IDebugEngine2  
+IDebugEngineLaunch2 : IDebugEngine2  
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
@@ -51,7 +51,7 @@ IDebugEngineLaunch2 : IDebugEngine2
 |[CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md)|プロセスが終了するかどうかを決定します。|  
 |[TerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-terminateprocess.md)|プロセスを終了します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

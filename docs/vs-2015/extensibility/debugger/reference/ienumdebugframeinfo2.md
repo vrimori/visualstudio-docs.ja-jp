@@ -17,12 +17,12 @@ ms.assetid: 994e30ad-435a-4f9e-9272-d96d9e01099c
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bc5d0fcd97de40826d4cc3815ab621728892f36b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6938641b2ec274d23928742bbaa014c43c02dc48
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49183834"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51728276"
 ---
 # <a name="ienumdebugframeinfo2"></a>IEnumDebugFrameInfo2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -55,7 +55,7 @@ IEnumDebugFrameInfo2 : IUnknown
 ## <a name="remarks"></a>Remarks  
  Visual Studio は、ブレークポイント、例外、またはデバッグ中のプログラムの一時停止をユーザーが生成したを処理する最初の手順として、このインターフェイスを取得します。 一連の[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)構造体が現在の呼び出し履歴を表す、一覧と、最も古い関数の先頭には、現在の関数呼び出しで、一覧の最後に呼び出します。 各`FRAMEINFO`コンテキストは、式を評価して、ローカル変数を調べる、スタック フレームを表します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

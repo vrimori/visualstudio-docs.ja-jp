@@ -17,12 +17,12 @@ ms.assetid: 37eb7360-28e9-4273-862a-4c17f22af690
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fab0f340c4ef1598acde844f3af6b0e3a5cbf304
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 389ed3bc716efe06a5e648de660c77fdf45d4c02
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49258194"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51806842"
 ---
 # <a name="idebugloadcompleteevent2"></a>IDebugLoadCompleteEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -44,7 +44,7 @@ IDebugLoadCompleteEvent2 : IUnknown
 ## <a name="remarks"></a>Remarks  
  このイベントは stopping イベントで、必要があります、`EVENT_STOPPING`フラグがイベントの属性を設定します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

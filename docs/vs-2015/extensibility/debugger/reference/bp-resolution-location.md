@@ -17,12 +17,12 @@ ms.assetid: 21dc5246-69c1-43e3-855c-9cd4e596c0e6
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a04b6b171cf2a0cf6a8759d56264c4d4201f681d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: dc70710ea0a811b75e6bad3098fbbc46dae0bd3b
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49812414"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51760758"
 ---
 # <a name="bpresolutionlocation"></a>BP_RESOLUTION_LOCATION
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -66,21 +66,21 @@ public struct BP_RESOLUTION_LOCATION {
  [C++ のみ]プレース ホルダー。  
   
  `unionmember1`  
- [C# のみ]解釈する方法については、「解説」を参照してください。  
+ [C#のみ]解釈する方法については、「解説」を参照してください。  
   
  `unionmember2`  
- [C# のみ]解釈する方法については、「解説」を参照してください。  
+ [C#のみ]解釈する方法については、「解説」を参照してください。  
   
  `unionmember3`  
- [C# のみ]解釈する方法については、「解説」を参照してください。  
+ [C#のみ]解釈する方法については、「解説」を参照してください。  
   
  `unionmember4`  
- [C# のみ]解釈する方法については、「解説」を参照してください。  
+ [C#のみ]解釈する方法については、「解説」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
  この構造体のメンバーである、 [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)と[BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)構造体。  
   
- [C# のみ]`unionmemberX`メンバーは、次の表に従って解釈されます。 左の列を確認、`bpType`間で各を決定する値、`unionmemberX`マーシャ リングおよびメンバーを表します、`unionmemberX`それに応じて。 C# では、この構造を解釈する方法の例を参照してください。  
+ [C#のみ]`unionmemberX`メンバーは、次の表に従って解釈されます。 左の列を確認、`bpType`間で各を決定する値、`unionmemberX`マーシャ リングおよびメンバーを表します、`unionmemberX`それに応じて。 C# では、この構造を解釈する方法の例を参照してください。  
   
 |`bpLocationType`|`unionmember1`|`unionmember2`|`unionmember3`|`unionmember4`|  
 |----------------------|--------------------|--------------------|--------------------|--------------------|  
