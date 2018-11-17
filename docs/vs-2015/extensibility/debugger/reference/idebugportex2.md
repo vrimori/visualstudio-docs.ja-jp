@@ -17,12 +17,12 @@ ms.assetid: 144724d0-38ee-4c9b-87ca-8a504371182b
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ab8036061f51a63079b43f04abe64564ed141fee
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: b74893c29215bbcb3857361abf970a9dd046200f
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49212832"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51720803"
 ---
 # <a name="idebugportex2"></a>IDebugPortEx2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -58,7 +58,7 @@ IDebugPortEx2 : IUnknown
   
  デバッグ エンジン (DE) にこのインターフェイスの参照することが必要な場合、 [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)に渡されたインターフェイス[LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)して[LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md)プログラムを起動します。 これは要件ではありません、ただし、あり要求プログラムを起動するために必要な DE が行うことができます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: portpriv.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

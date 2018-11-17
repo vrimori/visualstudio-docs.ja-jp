@@ -17,12 +17,12 @@ ms.assetid: 5fdfe6e3-b94e-4edb-acc5-41d8773d8ca5
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: db685850553990d6492d8da3f603e010ec0a0929
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 844f591055eb309be3ff14171d937b2998d47c71
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49238369"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51724087"
 ---
 # <a name="ieevisualizerdataprovider"></a>IEEVisualizerDataProvider
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -56,7 +56,7 @@ IEEVisualizerDataProvider : IUnknown
 ## <a name="remarks"></a>Remarks  
  ビジュアライザー サービス (によって表される、 [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)インターフェイスし、によって返される[CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)) 実装するオブジェクトへの参照を保持、`IEEVisualizerDataProvider`インターフェイス. 結果として、`IEEVisualizerDataProvider`を実装するオブジェクトと同じで、インターフェイスを実装しないように、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)そのオブジェクトへの参照を保持している場合、`IEEVisualizerService`オブジェクト: 循環参照の結果とオブジェクトが破棄されるときに、デッドロックが発生します。 推奨されるアプローチを実装するためには`IEEVisualizerDataProvider`を個別のオブジェクトで、`IDebugProperty2`呼び出さずにデリゲートをオブジェクト`IUnknown::AddRef`にします。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: ee.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
