@@ -17,12 +17,12 @@ ms.assetid: 9667b0a5-4295-46cc-9388-b75c1350be15
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 346131bcbddd3c3aaf915dfabc606111f379e867
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ef60550dcea362fd196ba2740d7347981a6d01bb
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49208274"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51745636"
 ---
 # <a name="idebugarrayfield"></a>IDebugArrayField
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49208274"
 ## <a name="syntax"></a>構文  
   
 ```  
-IDebugArrayField : IDebugContainerField  
+IDebugArrayField : IDebugContainerField  
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
@@ -50,7 +50,7 @@ IDebugArrayField : IDebugContainerField
 |[GetElementType](../../../extensibility/debugger/reference/idebugarrayfield-getelementtype.md)|配列内の要素の型を取得します。|  
 |[GetRank](../../../extensibility/debugger/reference/idebugarrayfield-getrank.md)|配列のランクを取得します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

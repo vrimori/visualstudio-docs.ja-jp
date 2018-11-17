@@ -16,12 +16,12 @@ ms.assetid: 9dc6c33f-e6cf-4cf2-9b05-e8f7bfac1cfb
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fe76797d64bf2fac4f077fd5c2e5f582cfb0448f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 628c9ef34fc23776672a4252886c091a38f63b4b
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49260716"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51734963"
 ---
 # <a name="vsct-compiler-command-line-flags"></a>VSCT コンパイラのコマンドライン フラグ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -44,15 +44,15 @@ Syntax: vsct <infile> [<outfile>] [-S[symbols file]] [-D<preprocessor-define>]*
 [-I<include-path>]* [-L<language>] [-E[C|H|N]:<name>]  
   
   -D    Specify any additional preprocessor defines  
-  -I    Indcate what additional include paths to send to the preprocessor  
-  -L    Specify the langauge to use when selecting strings  
+  -I    Indicate what additional include paths to send to the preprocessor  
+  -L    Specify the language to use when selecting strings  
   -E    Emit C# objects in the specified namespace for command items,  
-        folowed by [L|F|H|N]:<value>  
+        followed by [L|F|H|N]:<value>  
         F = Name of the file to emit (used if -EL is provided)  
         L = Name of a language providing a CodeDOM provider  
         N = namespace (required if -EL is provided)  
         H = C++ header  
-  -c    Clean build skipping dependancy checks  
+  -c    Clean build skipping dependency checks  
   -v    Verbose output  
 ```  
   
@@ -66,7 +66,7 @@ Syntax: vsct <infile> [<outfile>] [-S[symbols file]] [-D<preprocessor-define>]*
 |-D|追加定義されたシンボルを指定します。|  
 |-|追加のインクルード ファイルの参照を解決するときに使用されるパスを指定します。|  
 |-L|指定、<xref:System.Globalization.CultureInfo>カルチャ名、たとえば"EN-US"です。|  
-|-E|後に、コマンドの項目の指定した名前空間での c# オブジェクトを生成 [C&#124;H&#124;N]:*filename*場所 C = c#、H C++ ヘッダー、N = = 名前空間。 名前空間は、c# に必要です。|  
+|-E|出力C#コマンドの項目の指定した名前空間内のオブジェクトが続く [C&#124;H&#124;N]:*filename*場所 C = C#、H C++ ヘッダー、N = = 名前空間。 名前空間は、c# に必要です。|  
 |-v|詳細な出力。|  
   
  -L スイッチに対応するバイナリ .cto ファイルを生成するために文字列のグループを選択するようにコンパイラに指示、指定された<xref:System.Globalization.CultureInfo>カルチャ名。 指定されたカルチャ名は 1 つまたは複数の Language 属性と一致する必要があります[文字列要素](../../extensibility/strings-element.md).vsct ファイルでします。 親から継承されている言語の属性の文字列要素がない場合は、 [CommandTable 要素](../../extensibility/commandtable-element.md)します。  
