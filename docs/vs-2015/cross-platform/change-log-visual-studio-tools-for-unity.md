@@ -11,15 +11,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
 caps.latest.revision: 14
-author: TerryGLee
-ms.author: tglee
+author: conceptdev
+ms.author: crdun
 manager: ghogen
-ms.openlocfilehash: 98d0aa1be1ac30de74a226735ca90743474043b7
-ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
+ms.openlocfilehash: f21a5491d1b0e23bff90ce0105b81eb6291ac7e5
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51000843"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51807194"
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>変更ログ (Visual Studio Tools for Unity)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -333,9 +333,9 @@ Visual Studio Tools for Unity の変更ログです。
 
 ### <a name="bug-fixes"></a>バグ修正
 
--   Visual Studio のテーマの処理を修正しました。 以前は、黒のテーマでダイアログ ボックスは空表示します。
+-   Visual Studio のテーマの処理を修正しました。 以前は、黒のテーマでダイアログを表示すると内容が空になることがありました。
 
--   Unity が再コンパイル中にデバッガーを接続するときに、Unity のフリーズを修正します。
+-   Unity の再コンパイル中にデバッガーを接続すると Unity がフリーズする問題を修正しました。
 
 -   別のシステムでコンパイルされたリモート エディターまたはプレーヤーをデバッグする際のブレークポイントを修正しました。
 
@@ -345,7 +345,7 @@ Visual Studio Tools for Unity の変更ログです。
 
 -   デバッガーでの変数のスコープ処理の問題 (ライブ変数がスコープ外として表示される) を修正しました。
 
--   デバッガーの式の評価で静的メンバーの参照を修正します。
+-   デバッガーの式の評価で静的メンバーの参照の問題を修正しました。
 
 -   デバッガーの式の評価で、静的フィールドおよびプロパティを表示する際の型の表示の問題を修正しました。
 
