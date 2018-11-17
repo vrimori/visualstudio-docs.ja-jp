@@ -17,12 +17,12 @@ ms.assetid: b1d17f63-7146-4076-a588-034cfc6858b9
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b6da3a4404c9d982081ce21c5b1e253f6992042b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 89d0dd95f4587950e1381f5fd16d690d010109c3
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49216316"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51747092"
 ---
 # <a name="idebugprogrampublisher2"></a>IDebugProgramPublisher2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -55,7 +55,7 @@ IDebugProgramPublisher2 : IUnknown
 ## <a name="remarks"></a>Remarks  
  このインターフェイスを使用可能プログラムとプログラムのノード (つまり、「公開」) DEs およびセッション デバッグ マネージャー (SDM) で使用します。 公開されたプログラムとプログラムのノードにアクセスするには、使用、 [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)インターフェイス。 これは、Visual Studio は、プログラムをデバッグすることを認識できる唯一の方法です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

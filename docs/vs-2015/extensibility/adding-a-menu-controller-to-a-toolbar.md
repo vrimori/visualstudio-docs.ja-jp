@@ -17,12 +17,12 @@ ms.assetid: 6af9b0b4-037f-404c-bb40-aaa1970768ea
 caps.latest.revision: 39
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d6ccae3f53181863ada9dcaa93cb616431885cda
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 13dec4b907b52e35b5b2377aafa511e50dc5cc48
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49830952"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51771533"
 ---
 # <a name="adding-a-menu-controller-to-a-toolbar"></a>メニュー コントローラーのツールバーへの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -122,15 +122,15 @@ ms.locfileid: "49830952"
 1.  TWTestCommandPackageGuids.cs では、既存のコマンド Id の後に、次の 3 つのメニュー項目のコマンド Id を追加します。  
   
     ```csharp  
-    public const int cmdidMCItem1 = 0x130;  
-    public const int cmdidMCItem2 = 0x131;  
-    public const int cmdidMCItem3 = 0x132;  
+    public const int cmdidMCItem1 = 0x130;  
+    public const int cmdidMCItem2 = 0x131;  
+    public const int cmdidMCItem3 = 0x132;  
     ```  
   
 2.  TWTestCommand.cs では、TWTestCommand クラスの上部にある次のコードを追加します。  
   
     ```csharp  
-    private int currentMCCommand; // The currently selected menu controller command  
+    private int currentMCCommand; // The currently selected menu controller command  
     ```  
   
 3.  TWTestCommand コンス トラクターの最後の呼び出しの後で、`AddCommand`メソッドでは、コマンドごとに同じハンドラーを使用してイベントをルーティングするコードを追加します。  
@@ -145,7 +145,7 @@ ms.locfileid: "49830952"
           EventHandler(OnMCItemClicked), cmdID);  
         mc.BeforeQueryStatus += new EventHandler(OnMCItemQueryStatus);  
         commandService.AddCommand(mc);  
-        // The first item is, by default, checked.   
+        // The first item is, by default, checked.   
         if (TWTestCommandPackageGuids.cmdidMCItem1 == i)  
         {  
             mc.Checked = true;  
@@ -157,7 +157,7 @@ ms.locfileid: "49830952"
 4.  チェックされているように選択したコマンドをマークする TWTestCommand クラスにイベント ハンドラーを追加します。  
   
     ```csharp  
-    private void OnMCItemQueryStatus(object sender, EventArgs e)  
+    private void OnMCItemQueryStatus(object sender, EventArgs e)  
     {  
         OleMenuCommand mc = sender as OleMenuCommand;  
         if (null != mc)  
@@ -170,7 +170,7 @@ ms.locfileid: "49830952"
 5.  メニュー コント ローラー上のコマンドを選択すると、メッセージ ボックスを表示するイベント ハンドラーを追加します。  
   
     ```csharp  
-    private void OnMCItemClicked(object sender, EventArgs e)  
+    private void OnMCItemClicked(object sender, EventArgs e)  
     {  
         OleMenuCommand mc = sender as OleMenuCommand;  
         if (null != mc)  

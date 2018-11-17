@@ -17,12 +17,12 @@ ms.assetid: 4fe28074-a960-41ad-b74d-b57f04c0c0ad
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8177463d1eabf222c34fefc09eb7115cd010e97f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 0f4b53a6c6290f57e6d54856b602edf3558ff841
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49266735"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51742990"
 ---
 # <a name="ienumdebugmodules2"></a>IEnumDebugModules2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -57,7 +57,7 @@ IEnumDebugModules2 : IUnknown
   
  Visual Studio でのデバッグの目的では、プログラムはコード命令をそのモジュールの境界を越えることができますの論理シーケンス、1 つのモジュールの一覧の必要性[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)インターフェイス。 一覧の最初のモジュールには、通常、関連付けられたプログラムの最初のエントリ ポイントが含まれています。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

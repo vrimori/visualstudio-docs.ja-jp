@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CvIsEnabledEx method
 ms.assetid: 2e4fea6d-758d-4150-8744-6102a1d58c1c
 caps.latest.revision: 8
-author: mikejo5000
+author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4349d42309482622ae57ba27bb3e675bbdd6a403
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 91a8a0a27456299a914b2919aaf169fa72edf540
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49222470"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51723892"
 ---
 # <a name="cvisenabled-function"></a>CvIsEnabled 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -58,7 +58,7 @@ HRESULT CvIsEnabledEx(
 ## <a name="return-value"></a>戻り値  
  プロバイダーが現在有効になっている場合は S_OK を返します。 プロバイダーが現在無効になっている場合は S_FALSE を返します。 エラーが発生した場合はエラー コードを返します。 FAILED マクロを使用し、エラーの状態を確認し、それから S_OK/S_FALSE を確認します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** cvmarkers.h  
   
 ## <a name="see-also"></a>関連項目  
