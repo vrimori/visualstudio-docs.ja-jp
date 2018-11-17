@@ -17,12 +17,12 @@ ms.assetid: 993d70a4-f6a5-4e47-a603-0b162b9fde00
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d62edf5ce181779f4a5d607cdcf3908efe16ed3e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 61a82cf9df873073b8d08e8fe2ad4ef9b281659f
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49848814"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51720538"
 ---
 # <a name="idebugprogramengines2enumpossibleengines"></a>IDebugProgramEngines2::EnumPossibleEngines
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49848814"
 ## <a name="syntax"></a>構文  
   
 ```cpp#  
-HRESULT EnumPossibleEngines(   
+HRESULT EnumPossibleEngines(   
    DWORD  celtBuffer,  
    GUID*  rgguidEngines,  
    DWORD* pceltEngines  
@@ -40,7 +40,7 @@ HRESULT EnumPossibleEngines(
 ```  
   
 ```csharp  
-int EnumPossibleEngines(   
+int EnumPossibleEngines(   
    uint      celtBuffer,  
    GUID[]    rgguidEngines,  
    ref DWORD pceltEngines  
@@ -58,7 +58,7 @@ int EnumPossibleEngines(
  [out]返される DE Guid の実際の数を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 [C++] を返します`HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)`または [c#] 0x8007007A バッファーが十分な大きさでない場合。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 [C++] を返します`HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)`または [C#] 0x8007007A バッファーが十分な大きさでない場合。  
   
 ## <a name="remarks"></a>Remarks  
  エンジンの数は判断をするために 1 回このメソッドを呼び出す、`celtBuffer`パラメーター 0 に設定し、`rgguidEngines`パラメーターが null の値に設定します。 返されます。 `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` (0x8007007A C# の場合)、および`pceltEngines`パラメーターが必要なバッファーのサイズを返します。  

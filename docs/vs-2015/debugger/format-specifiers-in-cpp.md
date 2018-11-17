@@ -30,15 +30,15 @@ helpviewer_keywords:
 - debugger, format specifiers recognized by
 ms.assetid: 0f6f3b7c-ce2c-4b4d-b14f-7589dbed5444
 caps.latest.revision: 45
-author: mikejo5000
+author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 20b27a232c0e707751f8dd8111989d761635e9e6
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 6634124e7dc0b50236a9fd6ff9c5c5388c3063bc
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50220314"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51810521"
 ---
 # <a name="format-specifiers-in-c"></a>C++ の書式指定子
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -106,7 +106,7 @@ int main() {
 |---------------|------------|---------------------------|---------------------|  
 |n|10 進数または **16 進数** の整数|pBuffer,[32]<br /><br /> pBuffer,**[0x20]**|`pBuffer` を 32 要素の配列として表示します。|  
 |**[exp]**|整数に評価される有効な C++ 式|pBuffer,[bufferSize]|pBuffer を `bufferSize` 要素の配列として表示します。|  
-|**expand(n)**|整数に評価される有効な C++ 式|pBuffer, expand(2)|  `pBuffer`|  
+|**expand(n)**|整数に評価される有効な C++ 式|pBuffer, expand(2)| `pBuffer`|  
   
 ##  <a name="BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue"></a> C++/CLI での相互運用機能デバッグ用の書式指定子  
  **太字** で示されている指定子は、ネイティブおよび C++/CLI コードをデバッグする場合にのみサポートされます。  

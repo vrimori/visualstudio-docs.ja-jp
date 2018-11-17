@@ -15,15 +15,15 @@ helpviewer_keywords:
 - CvReleaseMarkerSeries method
 ms.assetid: 3b4711ee-e534-411d-9128-f69cd7932a48
 caps.latest.revision: 8
-author: mikejo5000
+author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7b65c84257bb99e85b949006fa0fa17505c88690
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: cf62ece61be25ef92866a9b761819c842d9154c3
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49226279"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51801525"
 ---
 # <a name="cvreleasemarkerseries-function"></a>CvReleaseMarkerSeries 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ HRESULT CvReleaseMarkerSeries(
 ## <a name="return-value"></a>戻り値  
  マーカー系列がリリースされると S_OK を、エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** cvmarkers.h  
   
 ## <a name="see-also"></a>関連項目  
