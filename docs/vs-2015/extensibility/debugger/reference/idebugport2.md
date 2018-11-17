@@ -17,12 +17,12 @@ ms.assetid: 8fd87f05-a950-4d14-b925-98be29d4facc
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 373be4eb65230bdcdc52984ab83e637ae7d3db08
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: f6a3cdbc39ec3575f34e415aa9bbf2e371c66e68
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49269400"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51800212"
 ---
 # <a name="idebugport2"></a>IDebugPort2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -58,7 +58,7 @@ IDebugPort2 : IUnknown
 ## <a name="remarks"></a>Remarks  
  ローカル ポートは、すべてのプロセスと、ローカル コンピューターで実行されるプログラムへのアクセスを提供します。 その他のポートには、Windows CE ベースのデバイスにシリアル ケーブルで接続または DCOM 以外のコンピューターへのネットワーク接続を表すことができます。 `IDebugPort2`インターフェイスを使用した名前と識別子、ポートの列挙、ポートで実行されているすべてのプロセスを検索しを起動すると、ポート上のプロセスを終了して機能を提供します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

@@ -1,5 +1,5 @@
 ---
-title: ワークフロー デザイナーでパラメーターの追加し、引数 ダイアログ ボックスを追加
+title: ワークフロー デザイナーでパラメーターを追加し、追加の引数 ダイアログ ボックス
 ms.date: 11/04/2016
 ms.topic: reference
 ms.prod: visual-studio-dev15
@@ -12,24 +12,24 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 67e81423bbd14065249cf7fe91503ab280ec2d8a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 1b01e08ee5579f5422e8e51562444302d685d58d
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31967639"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51789045"
 ---
 # <a name="add-parameters-and-add-arguments-dialog-boxes"></a>[パラメーターの追加] ダイアログ ボックスと [引数の追加] ダイアログ ボックス
 
-次の表は、ユーザー インターフェイス (UI) 要素の**パラメーターの追加** ダイアログ ボックスで使用される、<xref:System.Activities.Statements.InvokeMethod>デザイナー。
+次の表に、ユーザー インターフェイス (UI) 要素の**パラメーターを追加して**で使用されるダイアログ ボックス、<xref:System.Activities.Statements.InvokeMethod>デザイナー。
 
 |||
 |-|-|
 |**方向**|パラメーターがメソッドに入っていくデータ フロー、メソッドから出てくるデータ フロー、またはその両方のいずれを表すのかを指定します。|
 |**Type**|新しいパラメーターの型名。|
-|**[値]**|新しいパラメーターに既定値を割り当てるために使用される VB の式。|
+|**[値]**|新しいパラメーターに既定値を代入するために使用する Visual Basic の式|
 
-次の表は、ユーザー インターフェイス (UI) 要素の**追加引数** ダイアログ ボックスで使用される、<xref:System.Activities.Statements.InvokeDelegate>デザイナー。
+次の表に、ユーザー インターフェイス (UI) 要素の**追加引数**で使用されるダイアログ ボックス、<xref:System.Activities.Statements.InvokeDelegate>デザイナー。
 
 |||
 |-|-|
