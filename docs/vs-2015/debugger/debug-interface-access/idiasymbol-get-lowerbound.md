@@ -15,15 +15,15 @@ helpviewer_keywords:
 - IDiaSymbol::get_lowerBound method
 ms.assetid: e9a6440b-d068-4de4-a240-6723d20812b9
 caps.latest.revision: 11
-author: mikejo5000
+author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 998a009545604ace15496bfa05e19c59a57872eb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 3592926ce5a95ef4bab77a8a8568f01b9be4f1a5
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49818888"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51772769"
 ---
 # <a name="idiasymbolgetlowerbound"></a>IDiaSymbol::get_lowerBound
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -33,7 +33,7 @@ FORTRAN 配列の次元の下限を取得します。
 ## <a name="syntax"></a>構文  
   
 ```cpp#  
-HRESULT get_lowerBound (   
+HRESULT get_lowerBound (   
    IDiaSymbol** pRetVal  
 );  
 ```  

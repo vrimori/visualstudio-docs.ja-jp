@@ -17,12 +17,12 @@ ms.assetid: d7647575-0e06-4190-88f5-ca40b82209a4
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 80bf7aa4ad16fd2f213f2761779195b36e126b29
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ddbe101efe069787bbbb2ad6462c87bc1151c0cd
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49180792"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51751949"
 ---
 # <a name="idebugmemorybytes2"></a>IDebugMemoryBytes2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -55,7 +55,7 @@ IDebugMemoryBytes2 : IUnknown
   
  Visual Studio の**メモリ ビュー**呼び出し[GetMemoryBytes](../../../extensibility/debugger/reference/idebugprogram2-getmemorybytes.md)を取得する、`IDebugMemoryBytes2`システム メモリにアクセスするためのインターフェイス。 アクセスできるアドレスを取得、メモリのビューに、アドレスとして入力された式を解析し、使用して、解析された式を評価して[EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)を取得する、`IDebugProperty2`インターフェイス。 呼び出し[GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md)を返します、 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)メモリ アドレスを記述します。 このメモリ コンテキストに渡されます[ReadAt](../../../extensibility/debugger/reference/idebugmemorybytes2-readat.md)と[WriteAt](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md)します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
