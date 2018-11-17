@@ -15,12 +15,12 @@ ms.assetid: 0827361c-b97c-4851-9898-ab6d88c81811
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: eadd21622c7db2415d0170d252b3641e8bde927b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a1037f79c93ce438bd63de877a685a43db9d629c
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49206211"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51720937"
 ---
 # <a name="idebugfirewallconfigurationcallback2"></a>IDebugFirewallConfigurationCallback2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -43,7 +43,7 @@ IDebugFirewallConfigurationCallback2 : IUnknown
 |------------|-----------------|  
 |[EnsureDCOMUnblocked](../../../extensibility/debugger/reference/idebugfirewallconfigurationcallback2-ensuredcomunblocked.md)|ファイアウォール ブロックされていないことのリモート デバッグを要求します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

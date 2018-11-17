@@ -17,12 +17,12 @@ ms.assetid: adee79df-8db5-4510-a7df-c50f4dbf5e35
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7e3f54f0a8b14a9fdbe85700371f13ae03622764
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 341f65c1a7e441c81e91fca5a66dd302a30849d7
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49269231"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51730944"
 ---
 # <a name="idebugbreakpointerrorevent2"></a>IDebugBreakpointErrorEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -53,7 +53,7 @@ IDebugBreakpointErrorEvent2 : IUnknown
   
  たとえば、保留中のブレークポイントに関連付けられている条件は、解析または評価のため失敗した場合、警告が送信現時点で保留中のブレークポイントをバインドすることはできません。 これは、ブレークポイントのコードがまだ読み込まれていない場合に発生する可能性があります。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - CvReleaseProvider method
 ms.assetid: 8d74379e-295d-452b-bd5f-0769df387d4f
 caps.latest.revision: 8
-author: mikejo5000
+author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f5b644dfdb469d84b90a1a0d7d59651fbad2460b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 2c59e5516129d5712983a228f68e4e91301656c2
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49300782"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51738811"
 ---
 # <a name="cvreleaseprovider-function"></a>CvReleaseProvider 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ HRESULT CvReleaseProvider(
 ## <a name="return-value"></a>戻り値  
  プロバイダーがリリースされると S_OK を、エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** cvmarkers.h  
   
 ## <a name="see-also"></a>関連項目  

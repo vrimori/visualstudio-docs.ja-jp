@@ -16,12 +16,12 @@ author: dgriffen
 manager: douge
 ms.workload:
 - dagriffe
-ms.openlocfilehash: 94d785ce55b57e35b0880537e099cbc3e03d20ab
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 3c1dfa0e3de06bcd6c61472a085ea3c4cdeeac27
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49855816"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51780790"
 ---
 # <a name="vsix-language-pack-schema-20-reference"></a>VSIX 言語パック スキーマ 2.0 リファレンス
 
@@ -31,7 +31,7 @@ VSIX 言語パックのスキーマは、VSIX パッケージのローカライ�
 
 言語パックのファイルのルート要素は`<PackageLanguagePackManifest>`の属性を持つ`Version`、言語パックの形式のバージョンであります。 この記事で説明を設定して、マニフェストで指定されている言語パックの形式のバージョン 2.0、`Version`属性値を`Version="2.0.0"`します。 ルート要素には、正確に 1 つの子が含まれています。`<Metadata>`要素。
 
-### <a name="packagelangaugepackmanifest-element"></a>PackageLangaugePackManifest 要素
+### <a name="packagelanguagepackmanifest-element"></a>PackageLanguagePackManifest 要素
 
 内で、`<PackageLanguagePackManifest>`要素の次の要素が存在する必要があります。
 

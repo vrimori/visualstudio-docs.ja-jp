@@ -15,15 +15,15 @@ helpviewer_keywords:
 - IDiaAddressMap interface
 ms.assetid: e6467529-508c-4328-85d7-89444ae4d1c1
 caps.latest.revision: 13
-author: mikejo5000
+author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f5bc452e65bff046863995333546c8c799566de1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 041b784154ef5c95f75d8574700a65460a0ec663
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49225083"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51722726"
 ---
 # <a name="idiaaddressmap"></a>IDiaAddressMap
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -33,7 +33,7 @@ DIA SDK がデバッグ オブジェクトの仮想および相対の仮想ア�
 ## <a name="syntax"></a>構文  
   
 ```  
-IDiaAddressMap : IUnknown  
+IDiaAddressMap : IUnknown  
 ```  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
@@ -56,7 +56,7 @@ IDiaAddressMap : IUnknown
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
  このインターフェイスは、DIA セッション オブジェクトから入手できます。 クライアントの呼び出し、 `QueryInterface` DIA セッション オブジェクト インターフェイスで、通常はメソッド[IDiaSession](../../debugger/debug-interface-access/idiasession.md)、取得、`IDiaAddressMap`インターフェイス。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

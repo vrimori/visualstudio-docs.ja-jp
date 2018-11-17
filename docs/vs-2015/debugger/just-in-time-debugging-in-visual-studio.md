@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Just-In-Time debugging
 ms.assetid: 14972d5f-69bc-479b-9529-03b8787b118f
 caps.latest.revision: 51
-author: mikejo5000
+author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a2fdbbd98833ff43e07b17f605b6c3a105eb3efe
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 44dd2f18a9d6314a253eb1ea56456ff6f39f3e0c
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49940582"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51788655"
 ---
 # <a name="just-in-time-debugging-in-visual-studio"></a>Just-In-Time Debugging in Visual Studio (Visual Studio での Just-In-Time デバッグ)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
