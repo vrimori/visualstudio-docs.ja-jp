@@ -17,12 +17,12 @@ ms.assetid: 8f0e1838-a818-4459-9138-a3dceb7408de
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 747457a93c7cd4da5efe305b0d7f07432fd880b2
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 284cae38309938d51f6ad5c58a89fc0297d8a10a
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307580"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51735238"
 ---
 # <a name="idebugqueryengine2"></a>IDebugQueryEngine2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -51,7 +51,7 @@ IDebugQueryEngine2 : IUnknown
 ## <a name="remarks"></a>Remarks  
  このインターフェイスは、通常を実装するオブジェクトの実装、 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)インターフェイス関数をステップ実行因果関係の順序付けられているつまり、関数から、デバッガーがステップ実行をサポートするために、。次の関数を実行できない可能性があります、スタックで、前の関数が別のスレッド内の関数全体。 「因果関係」の定義では、次を参照してください。、 [Visual Studio デバッガーの用語集](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md)します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
