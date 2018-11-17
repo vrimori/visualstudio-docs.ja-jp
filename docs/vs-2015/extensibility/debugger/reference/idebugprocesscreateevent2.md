@@ -17,12 +17,12 @@ ms.assetid: c660439d-8b23-4dbb-923e-ebb5e1d7edf5
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5b075a3e456774af5bca579cc2abaea742a27682
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 9359590ab2987a917963cf6bc4862da09202433d
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49178868"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51723811"
 ---
 # <a name="idebugprocesscreateevent2"></a>IDebugProcessCreateEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49178868"
 ## <a name="syntax"></a>構文  
   
 ```  
-IDebugProcessCreateEvent2 : IUnknown  
+IDebugProcessCreateEvent2 : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
@@ -41,7 +41,7 @@ IDebugProcessCreateEvent2 : IUnknown
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
  DE、またはカスタムのポート サプライヤーは、作成し、プロセスの作成を報告するには、このイベント オブジェクトを送信します。 デを使用してこのイベントを送信する、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)デバッグ中のプログラムにアタッチされているときに、SDM によって指定されたコールバック関数。 このイベントを使用してカスタム ポート サプライヤーに送信、 [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md)インターフェイス。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
