@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e4f4e79941be143f4eb6252dac735015f6145881
-ms.sourcegitcommit: 48bc8492973e93612e5afaba3b47d0f98aecf97c
+ms.openlocfilehash: 5e7479a8d121eeb518d5ba39c9eb1444af64a788
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324991"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349022"
 ---
 # <a name="how-to-install-python-support-in-visual-studio-on-windows"></a>Windows に Visual Studio の Python サポートをインストールする方法
 
@@ -59,7 +59,7 @@ Visual Studio 用の Python サポート (Python Tools for Visual Studio (PTVS) 
 
     | オプション | 説明 |
     | --- | --- |
-    | Python ディストリビューション | 使用する予定の Python 2、Python 3、Anaconda2、および Anaconda3 ディストリビューションの 32 ビットおよび 64 ビットのバリアントを任意の組み合わせで選択します。 それぞれには、ディストリビューションのインタープリター、ランタイム、およびライブラリが含まれます。 Anaconda とは、具体的には、さまざまな事前インストール パッケージを含むオープンなデータ サイエンス プラットフォームです。 (ディストリビューションを追加または削除する場合には、Visual Studio インストーラーへはいつでも戻ることができます。)**注**: Visual Studio インストーラー以外で配布をインストールした場合、ここで対応するオプションを確認する必要はありません。 Visual Studio は、既存の Python インストールを自動的に検出します。 [Python 環境](managing-python-environments-in-visual-studio.md)に関するページを参照してください。 また、インストーラーに表示されているものよりも新しいバージョンの Python を利用できる場合は、そのバージョンを個別にインストールすれば Visual Studio によって検出されます。 |
+    | Python ディストリビューション | 使用する予定の Python 2、Python 3、Anaconda2、および Anaconda3 ディストリビューションの 32 ビットおよび 64 ビットのバリアントを任意の組み合わせで選択します。 それぞれには、ディストリビューションのインタープリター、ランタイム、およびライブラリが含まれます。 Anaconda とは、具体的には、さまざまな事前インストール パッケージを含むオープンなデータ サイエンス プラットフォームです。 (ディストリビューションを追加または削除する場合には、Visual Studio インストーラーへはいつでも戻ることができます。)**注**: Visual Studio インストーラー以外で配布をインストールした場合、ここで対応するオプションを確認する必要はありません。 Visual Studio は、既存の Python インストールを自動的に検出します。 「[[Python 環境] ウィンドウ](managing-python-environments-in-visual-studio.md#the-python-environments-window)」を参照してください。 また、インストーラーに表示されているものよりも新しいバージョンの Python を利用できる場合は、そのバージョンを個別にインストールすれば Visual Studio によって検出されます。 |
     | **Cookiecutter テンプレートのサポート** | テンプレートの検出、テンプレート オプションの入力、プロジェクトとファイルの作成を行うための Cookiecutter グラフィカル UI をインストールできます。 「[Cookiecutter 拡張機能の使用](using-python-cookiecutter-templates.md)」を参照してください。 |
     | **Python Web サポート** | HTML、CSS、および JavaScript の編集をサポートする Web 開発用ツールを、Bottle、Flask、および Django フレームワークを使用するプロジェクトのテンプレートと共にインストールします。 「[Python Web プロジェクト テンプレート](python-web-application-project-templates.md)」を参照してください。 |
     | **Python IoT サポート** | Python を使用した、Windows IoT Core 開発がサポートされます。 |

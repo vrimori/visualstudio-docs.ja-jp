@@ -5,18 +5,18 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
 ms.assetid: 6F2ECF5A-E195-4890-8399-12A88C7D62FD
-ms.openlocfilehash: f1df4aaa3eeaf0361176ca433cc2262afca480ce
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: e29e1f1d7cce6fc77157628ee6e1889a538a1800
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224336"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51294475"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Visual Studio カスタマー エクスペリエンス向上プログラム
 
-Visual Studio カスタマー エクスペリエンス向上プログラム (VSCEIP) は、Microsoft による Visual Studio for Mac の改善を長い期間にわたり支援するように設計されたプログラムです。 このプログラムは、コンピューターでのユーザーのタスクを中断させずにコンピューター ハードウェアおよびユーザーの Visual Studio for Mac の利用に関する情報を収集します。 収集される情報は、Microsoft が改善する機能を特定するために役立ちます。 このドキュメントは、VSCEIP を有効または無効を選択する方法を説明します。
+Visual Studio カスタマー エクスペリエンス向上プログラム (VSCEIP) は、Microsoft による Visual Studio for Mac の改善を長い期間にわたり支援するように設計されたプログラムです。 このプログラムは、コンピューターでのユーザーのタスクを中断させずにコンピューター ハードウェアおよびユーザーの Visual Studio for Mac の利用に関する情報を収集します。 収集される情報は、Microsoft が改善する機能を特定するために役立ちます。 この記事では、VSCEIP をオプトインまたはオプトアウトする方法を説明します。
 
-VSCEIP によって収集、処理、または送信される情報については、「[Microsoft のプライバシーに関する声明](https://privacy.microsoft.com/privacystatement)」を参照してください。  
+VSCEIP によって収集、処理、または送信される情報については、「[Microsoft のプライバシーに関する声明](https://privacy.microsoft.com/privacystatement)」を参照してください。
 
 ## <a name="choice-and-control-over-the-visual-studio-customer-experience-improvement-program"></a>Visual Studio カスタマー エクスペリエンス向上プログラムの選択と制御
 
@@ -34,6 +34,8 @@ VSCEIP は既定で有効になっています。 次の手順で、オフにし
 
 ## <a name="see-also"></a>関連項目
 
+* [カスタマー エクスペリエンス向上プログラム (Windows の Visual Studio)](/visualstudio/ide/visual-studio-experience-improvement-program)
+* [Visual Studio で収集したシステムによって生成されたログ (Windows)](/visualstudio/ide/diagnostic-data-collection)
 * [Visual Studio for Mac で問題を報告する方法](report-a-problem.md)
 * [Visual Studio for Mac 開発者コミュニティ](https://developercommunity.visualstudio.com/spaces/41/index.html)
 * [Microsoft のプライバシーに関する声明](https://privacy.microsoft.com/privacystatement)

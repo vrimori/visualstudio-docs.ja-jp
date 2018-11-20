@@ -1,29 +1,29 @@
 ---
-title: Visual Studio for Mac のアンインストール
+title: Visual Studio for Mac をアンインストールする
 description: Visual Studio for Mac と関連ツールをアンインストールする方法を説明します。
 author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: 2c74cf7ddd78bee538a3d37d7e4c4daa4556e3c9
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 4a0ecef49d8c3493ff6094be66f1d05ad588077c
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43223969"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295671"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Visual Studio for Mac のアンインストール
 
 Visual Studio for Mac のようなスタンドアロン アプリなど、クロスプラットフォーム アプリケーション開発が可能な Xamarin 製品がいくつかあります。
 
-このガイドを使用すると、関連するセクションに移動して各製品を個別にアンインストールすることができます。または、「[アンインストール スクリプト](#uninstall-script)」で示されるスクリプトを使用して、すべてをアンインストールすることができます。
+このガイドを使用すると、関連するセクションに移動することで、各製品を個別にアンインストールすることができます。または、「[アンインストール スクリプト](#uninstall-script)」で示されるスクリプトを使用して、すべてをアンインストールすることができます。
 
-以前に Xamarin Studio を自分のマシンにインストールしてある場合は、以下の手順に加えて、「[Xamarin のアンインストール](https://docs.microsoft.com/xamarin/cross-platform/get-started/installation/uninstalling-xamarin#uninstall-xamarin-studio-on-mac)」ガイドの手順にも従うことが必要な場合もあります。
+以前に Xamarin Studio を自分のマシンにインストールしてある場合は、以下の手順に加えて、「[Xamarin のアンインストール](/xamarin/cross-platform/get-started/installation/uninstalling-xamarin#uninstall-xamarin-studio-on-mac)」ガイドの手順にも従うことが必要な場合もあります。
 
 ## <a name="uninstall-script"></a>アンインストール スクリプト
 
-Visual Studio for Mac とコンピューター用のすべてのコンポーネントをアンインストールするために使用できるスクリプトが 2 つあります。
+Visual Studio for Mac とご利用のコンピューター用のコンポーネントをすべてアンインストールするために使用できるスクリプトが 2 つあります。
 
 - [Visual Studio と Xamarin スクリプト](#visual-studio-for-mac-and-xamarin-script)
 - [.NET Core スクリプト](#net-core-script)
@@ -41,7 +41,7 @@ Visual Studio for Mac とコンピューター用のすべてのコンポーネ�
 
 スクリプトを実行するには、次の手順のようにします。
 
-1. スクリプトを右クリックして **[名前を付けて保存]** を選び、 Mac にファイルを保存します。
+1. スクリプトを右クリックして **[名前を付けて保存]** を選び、ご利用の Mac 上にファイルを保存します。
 2. ターミナルを開き、スクリプトをダウンロードした場所に作業ディレクトリを変更します。
 
     ```bash
@@ -61,7 +61,7 @@ Visual Studio for Mac とコンピューター用のすべてのコンポーネ�
 
 スクリプトを実行するには、次の手順のようにします。
 
-1. スクリプトを右クリックして **[名前を付けて保存]** を選び、 Mac にファイルを保存します。
+1. スクリプトを右クリックして **[名前を付けて保存]** を選び、ご利用の Mac 上にファイルを保存します。
 2. ターミナルを開き、スクリプトをダウンロードした場所に作業ディレクトリを変更します。
 
     ```bash
@@ -81,9 +81,9 @@ Mac から Visual Studio をアンインストールするときは最初に、*
 
 ![Visual Studio アプリケーションをごみ箱に移動する](media/uninstall-image1.png)
 
-このアプリ バンドルを削除すると Visual Studio for Mac は削除されますが、Xamarin 関連の他のファイルがファイル システムにまだ残っている可能性があります。
+このアプリ バンドルを削除すると、Visual Studio for Mac は削除されますが、Xamarin 関連の他のファイルがファイル システムにまだ残っている可能性があります。
 
-Visual Studio for Mac のすべてのトレースを削除するには、ターミナルで次のコマンドを実行する必要があります。
+Visual Studio for Mac のすべてのトレースを削除するには、ターミナルで次のコマンドを実行します。
 
 ```bash
 sudo rm -rf "/Applications/Visual Studio.app"
@@ -136,8 +136,7 @@ Java SDK (JDK) は Mac OS X/macOS の一部として既にあらかじめパッ�
 ### <a name="uninstall-android-avd"></a>Android AVD をアンインストールする
 
 > [!WARNING]
-> Android Studio など、Visual Studio for Mac 以外にも Android AVD とこれらの追加 Android コンポーネントを使うアプリケーションがあります。
-> このディレクトリを削除すると、プロジェクトが Android Studio で壊れる可能性があります。 
+> Android Studio など、Visual Studio for Mac 以外にも Android AVD とこれらの追加 Android コンポーネントを使うアプリケーションがあります。このディレクトリを削除すると、Android Studio のプロジェクトが中断される可能性があります。
 
 Android AVD および追加 Android コンポーネントを削除するには、次のコマンドを使います。
 
@@ -150,8 +149,6 @@ Android AVD のみを削除するには、次のコマンドを使います。
 ```bash
 rm -rf ~/.android/avd
 ```
-
- 
 
 ## <a name="uninstall-xamarinios"></a>Xamarin.iOS をアンインストールする
 
@@ -210,3 +207,7 @@ rm -rf ~/Library/Logs/VisualStudioInstaller/
 rm -rf ~/Library/Preferences/Xamarin/
 rm -rf "~/Library/Preferences/Visual Studio/"
 ```
+
+## <a name="see-also"></a>関連項目
+
+- [Visual Studio のアンインストール (Windows)](/visualstudio/install/uninstall-visual-studio)

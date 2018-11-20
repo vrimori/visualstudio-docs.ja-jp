@@ -7,17 +7,17 @@ ms.date: 09/05/2018
 ms.topic: article
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
-ms.openlocfilehash: 5a1d7fb7519e9402e2fa780e978fc1176702b26d
-ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
+ms.openlocfilehash: 9cb6a466d764c85012477fb2d849c05920908f02
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46542439"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295931"
 ---
 # <a name="connecting-to-team-foundation-version-control"></a>Team Foundation バージョン管理に接続する
 
 > [!NOTE]
-> **注**: 現在、Team Foundation バージョン管理サポートはプレビューとして提供されており、一部の機能は完全に動作していません。 [開発者コミュニティ](https://developercommunity.visualstudio.com/spaces/41/index.html)で問題についてフィードバックしてください。 今後、さらに変更される予定です。
+> 現在、Team Foundation バージョン管理サポートはプレビューとして提供されており、一部の機能は完全に動作していません。 [開発者コミュニティ](https://developercommunity.visualstudio.com/spaces/41/index.html)で問題についてフィードバックしてください。 今後、さらに変更される予定です。
 
 Azure Repos には、バージョン管理のモデルが 2 つあります。分散型バージョン管理の Git と、集中型バージョン管理の Team Foundation バージョン管理 (TFVC) です。 この入門編は、Visual Studio for Mac で TFVC を使用する際の出発点としてご利用いただけます。
 
@@ -31,7 +31,7 @@ Azure Repos には、バージョン管理のモデルが 2 つあります。�
 
 Visual Studio for Mac でメニューから **[Visual Studio] > [拡張機能]** の順に選びます。 **[ギャラリー]** タブで **[バージョン管理] > [Team Foundation Version Control for TFS and VSTS]\(TFS と VSTS の Team Foundation バージョン管理\)** を選択し、**[インストール]** をクリックします。
 
-  ![拡張機能マネージャー](media/tfvc-install.png)
+![拡張機能マネージャー](media/tfvc-install.png)
 
 画面の指示に従って、拡張機能をインストールします。 インストールした後、IDE を再起動します。
 
@@ -39,27 +39,27 @@ Visual Studio for Mac でメニューから **[Visual Studio] > [拡張機能]**
 
 TFVC 拡張機能への更新プログラムは、定期的に作成されます。 更新プログラムにアクセスするには、メニューから **[Visual Studio]、[拡張機能]** の順に選び、**[更新]** タブを選択します。リスト内の拡張機能を選択して、**[更新]** ボタンを押します。
 
-  ![更新プログラムが表示されている拡張機能マネージャー](media/tfvc-update.png)
+![更新プログラムが表示されている拡張機能マネージャー](media/tfvc-update.png)
 
 次のダイアログで **[インストール]** を押して古いパッケージをアンインストールし、新しいパッケージをインストールします。
 
-各リリースの新着情報については、[リリース ノート](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-preview-relnotes#team-foundation-version-control-extension--release-notes)に関するページを参照してください。
+各リリースの新着情報については、[リリース ノート](/visualstudio/releasenotes/vs2017-mac-preview-relnotes#team-foundation-version-control-extension--release-notes)に関するページを参照してください。
 
 ## <a name="using-the-add-in"></a>アドインの使用
 
 拡張機能をインストールしたら、**[バージョン管理]、[TFS/Azure DevOps]、[Open from Remote Repository]\(リモート リポジトリから開く\)** メニュー項目の順に選択します。
 
-  ![拡張機能を開くメニュー項目](media/tfvc-source-control-explorer-devops.png)
+![拡張機能を開くメニュー項目](media/tfvc-source-control-explorer-devops.png)
 
 最初に VSTS または Team Foundation Server のいずれかを選択して、**[続行]** を押します。
 
-  ![サーバーで接続する](media/tfvc-choose-server-type-devops.png)
+![サーバーで接続する](media/tfvc-choose-server-type-devops.png)
 
 ### <a name="azure-repos-authentication"></a>Azure Repos の認証
 
 Azure Repos でホストされているプロジェクトを選択すると、Microsoft アカウントの情報を入力する画面が表示されます。
 
-  ![Azure Repos に接続する](media/tfvc-vsts-login.png)
+![Azure Repos に接続する](media/tfvc-vsts-login.png)
 
 ### <a name="tfs-authentication"></a>TFS 認証
 
@@ -71,7 +71,7 @@ TFS に接続するには、サーバーの詳細とアカウントの資格情�
 
 認証が正常に行われると、**[Open from Source Control]\(ソース管理から開く\)** ダイアログでアカウントに関連付けられているリポジトリのリストを確認できます。
 
-  ![プロジェクトを表示しているソース管理から開くダイアログ](media/tfvc-vsts-projects.png)
+![プロジェクトを表示しているソース管理から開くダイアログ](media/tfvc-vsts-projects.png)
 
 このダイアログは、次のノードで構成されています。
 
@@ -188,3 +188,7 @@ TFS に接続するには、サーバーの詳細とアカウントの資格情�
 - ワークスペース名で無効な文字が使用されていない。
 - 名前が 64 文字未満である。
 - 他のワークスペースによってローカル パスが使用されていない。
+
+## <a name="see-also"></a>関連項目
+
+- [Visual Studio を使用して TFVC でコードを開発および共有する (Windows)](/azure/devops/repos/tfvc/share-your-code-in-tfvc-vs)

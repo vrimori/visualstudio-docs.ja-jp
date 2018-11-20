@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: d413d5b440c39c3603e1e909fb0c4645719f188b
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 7089a9a654d1c346fefcca119f74a87d89f323b8
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34064851"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349375"
 ---
 # <a name="quick-actions"></a>クイック アクション
 
@@ -29,6 +29,9 @@ ms.locfileid: "34064851"
 - コード アナライザーの規則違反を[抑制する](../code-quality/use-roslyn-analyzers.md)
 - リファクタリングを適用する (例: [一時変数をインライン化する](../ide/reference/inline-temporary-variable.md))
 - コードを生成する (例: [ローカル変数を導入する](../ide/reference/introduce-local-variable.md))
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、「[リファクタリング (Visual Studio for Mac)](/visualstudio/mac/refactoring)」を参照してください。
 
 クイック アクションは、電球 ![電球アイコン](media/light-bulb-icon.png) アイコンまたはねじ回し ![ねじ回しアイコン](media/screwdriver-icon.png) アイコンを使うか、適切なコード行にカーソルを置いて **Ctrl**+**.** キーを押すと 利用できます。 エラーを示す赤い波線があり、Visual Studio にそのエラーに対処するために使用可能な解決策がある場合は、エラー電球 ![エラー電球アイコン](media/error-light-bulb-icon.png) が表示されます。
 
@@ -60,3 +63,4 @@ ms.locfileid: "34064851"
 - [共通のクイック アクション](../ide/common-quick-actions.md)
 - [コード スタイルとクイック アクション](../ide/code-styles-and-quick-actions.md)
 - [コードの記述とリファクタリング (C++)](/cpp/ide/writing-and-refactoring-code-cpp)
+- [リファクタリング (Visual Studio for Mac)](/visualstudio/mac/refactoring)

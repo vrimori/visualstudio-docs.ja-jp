@@ -1,6 +1,6 @@
 ---
-title: '方法 : エディターのワード ラップを管理する'
-ms.date: 11/04/2016
+title: 右端で折り返す
+ms.date: 11/07/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -14,16 +14,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a1419a473bc0edc9fbc68ab978feb776ed63636
-ms.sourcegitcommit: a6734c4d76dae3d21b55b10f3bc618dfa6b62dea
+ms.openlocfilehash: 6fc38d1ee5a8e5543675700c35cc0cb298aefad9
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42626827"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349115"
 ---
 # <a name="how-to-manage-word-wrap-in-the-editor"></a>方法 : エディターのワード ラップを管理する
 
 **[右端で折り返す]** オプションを設定および解除できます。 このオプションを設定すると、コード エディター ウィンドウの現在の幅からはみ出した長い行の部分は次の行に表示されます。 たとえば行番号の使用を容易にするためにこのオプションをオフにすると、右にスクロールして長い行の末尾を表示できます。
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio にのみ適用されます。 現在、Visual Studio for Mac はワード ラップをサポートしていません。
 
 ## <a name="to-set-word-wrap-preferences"></a>ワード ラップ オプションを設定するには
 

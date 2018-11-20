@@ -1,5 +1,5 @@
 ---
-title: Visual Studio のソリューションおよびプロジェクト
+title: ソリューションとプロジェクト
 ms.date: 10/05/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -26,14 +26,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7368778928384f50e96bfd8c5f3f1e107e6b411d
-ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
+ms.openlocfilehash: ba0ed54e8acd28be3f267d83473f9514f471ef4a
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37089660"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349310"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio のソリューションおよびプロジェクト
+
+この記事では、Visual Studio の*プロジェクト*と*ソリューション*の概念について説明します。 また、新しいプロジェクトの作成方法と、**ソリューション エクスプローラー** ツール ウィンドウについても簡単に説明します。
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、[Visual Studio for Mac のプロジェクトおよびソリューション](/visualstudio/mac/projects-and-solutions)に関するページを参照してください。
 
 ## <a name="projects"></a>プロジェクト
 
@@ -62,7 +67,7 @@ Visual Studio では、ソリューションの設定を格納するために、
 
 ## <a name="create-new-projects"></a>プロジェクトの新規作成
 
-新しいプロジェクトを作成する最も簡単な方法は、特定の種類のアプリケーションまたは Web サイトのプロジェクト テンプレートから始めることです。 プロジェクト テンプレートは、生成済みのコード ファイル、構成ファイル、資産、設定の基本セットで構成されます。 これらのテンプレートは、**[ファイル]**、**[新規作成]**、**[プロジェクト]** または **[ファイル]**、**[新規作成]**、**[Web サイト]** を選択して **[新しいプロジェクト]** または **[新しい Web サイト]** ダイアログ ボックスに移動したときに表示されます。 詳細については、[ソリューションとプロジェクトの作成](../ide/creating-solutions-and-projects.md)に関するページを参照してください。
+新しいプロジェクトを作成する最も簡単な方法は、特定の種類のアプリケーションまたは Web サイトのプロジェクト テンプレートから始めることです。 プロジェクト テンプレートは、生成済みのコード ファイル、構成ファイル、資産、設定の基本セットで構成されます。 これらのテンプレートは、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択して **[新しいプロジェクト]** ダイアログ ボックスに移動したときに表示されます。 詳細については、[ソリューションとプロジェクトの作成](../ide/creating-solutions-and-projects.md)に関するページを参照してください。
 
 カスタム プロジェクトや項目テンプレートを作成することもできます。 詳細については、[プロジェクト テンプレートと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)に関するページをご覧ください。
 
@@ -75,3 +80,5 @@ Visual Studio では、ソリューションの設定を格納するために、
 ## <a name="see-also"></a>関連項目
 
 - [Visual Studio IDE](../ide/visual-studio-ide.md)
+- [プロジェクトとソリューション (Visual Studio for Mac)](/visualstudio/mac/projects-and-solutions)
+- [プロジェクト アイテムの追加と削除 (Visual Studio for Mac)](/visualstudio/mac/add-and-remove-project-items)

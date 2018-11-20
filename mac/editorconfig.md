@@ -7,18 +7,18 @@ ms.date: 05/06/2018
 ms.topic: article
 ms.technology: vs-ide-install
 ms.assetid: 26A0DE31-2FBF-4E1B-99FB-083111AA1680
-ms.openlocfilehash: a2f813bee641b55b52ad3611c155bd273345ba73
-ms.sourcegitcommit: 9e796d8a8b737ed9d5bf024db89b1abf99ea809b
+ms.openlocfilehash: d42103d17b64ee9b3fb2a0660017824490655808
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "43223904"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51294020"
 ---
 # <a name="creating-and-editing-a-custom-editorconfig-file"></a>カスタム EditorConfig ファイルの作成と編集
 
 Visual Studio for Mac では、[EditorConfig](http://editorconfig.org/) ファイルをプロジェクトまたはソリューションに追加して、そのコードベースを使用するすべてのユーザーに一貫したコーディング スタイルを使用させることができます。 EditorConfig ファイルで宣言された設定は、Visual Studio for Mac テキスト エディターのグローバルな設定より優先されます。 プロジェクトまたはコードベース内で EditorConfig ファイルを使用すると、プロジェクトのコード記述スタイル、優先設定、警告を設定できます。 このファイルはコードベースの一部であるため、すべてのユーザーが使用している IDE またはコード エディターに関わらず、より容易にプロジェクトのコーディング方法に従うことができます。
 
-[EditorConfig](http://editorconfig.org/) ファイルは、Visual Studio 2017 など、さまざまな IDE やコード エディターでサポートされています。 
+[EditorConfig](http://editorconfig.org/) ファイルは、Visual Studio 2017 など、さまざまな IDE やコード エディターでサポートされています。
 
 ## <a name="supported-settings"></a>サポートされる設定
 
@@ -33,15 +33,15 @@ Visual Studio for Mac のエディターは、[EditorConfig プロパティ](htt
 - `insert_final_newline`
 - `root`
 
-EditorConfig は、C# の[コーディング規則](https://docs.microsoft.com/visualstudio/ide/editorconfig-code-style-settings-reference)もサポートしています。
+EditorConfig は、C# の[コーディング規則](/visualstudio/ide/editorconfig-code-style-settings-reference)もサポートしています。
 
 ## <a name="add-an-editorconfig-file-to-a-project"></a>EditorConfig ファイルをプロジェクトに追加する
 
 ### <a name="adding-a-new-editorconfig-file"></a>新しい EditorConfig ファイルを追加する
 
-1. Visual Studio for Mac でプロジェクトを開きます。 EditorConfig ファイルを追加するソリューションまたはプロジェクト ノードのいずれかを選択します。 ソリューション ディレクトリにファイルを追加すると、ソリューション内のすべてのプロジェクトに .editorconfig の設定が適用されます。 
+1. Visual Studio for Mac でプロジェクトを開きます。 EditorConfig ファイルを追加するソリューションまたはプロジェクト ノードのいずれかを選択します。 ソリューション ディレクトリにファイルを追加すると、ソリューション内のすべてのプロジェクトに .editorconfig の設定が適用されます。
 
-2. ノードを右クリックし、**[追加]、[新しいファイル]** の順に選択し、 **[新しいファイル]** ダイアログを開きます。
+2. ノードを右クリックして **[追加]、[新しいファイル]** の順に選択し、**[新しいファイル]** ダイアログを開きます。
 
     ![コンテンツ メニュー項目](media/editorconfig-image0.png)
 
@@ -76,13 +76,13 @@ EditorConfig は、C# の[コーディング規則](https://docs.microsoft.com/v
 
 ### <a name="adding-an-existing-editorconfig-file"></a>既存の EditorConfig ファイルを追加する
 
-`.editorconfig` ファイルが既に含まれているプロジェクトかソリューションを使用している場合、設定の適用に必要な作業はありません。 新しいコード行はすべて、EditorConfig の設定に従って書式設定されます。 
+`.editorconfig` ファイルが既に含まれているプロジェクトかソリューションを使用している場合、設定の適用に必要な作業はありません。 新しいコード行はすべて、EditorConfig の設定に従って書式設定されます。
 
 プロジェクトの既存の `.editorconfig` ファイルを再利用すると便利な場合があります。 既存のファイルを追加するには、次を実行します。
 
-1. それを追加するフォルダーを右クリックし、**[追加]、[ファイルの追加]** を選択します。
+1. それを追加するフォルダーを右クリックし、**[追加]、[ファイルの追加]** の順に選択します。
 
-2. 必要なファイルのディレクトリに移動します。 
+2. 必要なファイルのディレクトリに移動します。
 
 3. macOS では、(`.editorconfig` などの) `.` で始まるファイルは隠しファイルであるため、**Command + Shift + .** を押して `.editorconfig` ファイルを表示します。
 
@@ -104,9 +104,7 @@ EditorConfig は、C# の[コーディング規則](https://docs.microsoft.com/v
 
 ## <a name="editing-an-editorconfig-file"></a>EditorConfig ファイルを編集する
 
-
 EditorConfig ファイルでは、単純なファイル レイアウトを利用し、設定を指定します。前の例を利用して説明すると下のようになります。
-
 
 ```EditorConfig
 # This file is the top-most EditorConfig file
@@ -123,7 +121,7 @@ trim_trailing_whitespace = false
 csharp_new_line_before_open_brace = none
 ```
 
-`root` を `true` に設定すると、このファイルがコードベースの一番上のファイルとして設定され、プロジェクトでそれより上の `.editorconfig` ファイルは無視されます。詳細は「[EditorConfig 設定のオーバーライド](#override-editorconfig-settings)」セクションにあります。
+「[EditorConfig 設定のオーバーライド](#override-editorconfig-settings)」セクションに説明されているように、`root` を `true` に設定すると、このファイルがコードベースの一番上のファイルとしてフラグを設定され、プロジェクトでそれより上の `.editorconfig` ファイルは無視されます。
 
 各セクションには角括弧 (**[ ]**) が付き、後続のプロパティが付属するファイルの型に関する情報が指定されます。
 
@@ -137,11 +135,11 @@ csharp_new_line_before_open_brace = none
 
 ![EditorConfig 設定の適用後](media/editorconfig-image5.png)
 
-利用できる EditorConfig 設定に関する詳細については、「[EditorConfig の .NET コーディング規則の設定](https://docs.microsoft.com/visualstudio/ide/editorconfig-code-style-settings-reference)」という記事と、公式ドキュメントの[サポート プロパティ](http://editorconfig.org/#supported-properties)に関するセクションを参照してください。
+利用できる EditorConfig 設定に関する詳細については、「[EditorConfig の .NET コーディング規則の設定](/visualstudio/ide/editorconfig-code-style-settings-reference)」という記事と、公式ドキュメントの[サポート プロパティ](http://editorconfig.org/#supported-properties)に関するセクションを参照してください。
 
 ## <a name="override-editorconfig-settings"></a>EditorConfig 設定のオーバーライド
 
-各ソリューションに複数の `.editorconfig` ファイルを与えることができます。 Visual Studio for Mac は、ソリューションで上から下へと `.editorconfig` ファイルを読み込みながら、設定を追加およびオーバーライドします。これは、編集しているファイルに_最も近い_ `.editorconfig` の設定が優先されることを意味します。 設定は、(存在する場合) 同じフォルダーの `.editorconfig` ファイルから、次いで (存在する場合) 親フォルダーなどの `.editorconfig` から取得されます。 これは、`root=true` が見つかるまで実行されます。  
+各ソリューションに複数の `.editorconfig` ファイルを与えることができます。 Visual Studio for Mac は、ソリューションで上から下へと `.editorconfig` ファイルを読み込みながら、設定を追加およびオーバーライドします。これは、編集しているファイルに_最も近い_ `.editorconfig` の設定が優先されることを意味します。 設定は、(存在する場合) 同じフォルダーの `.editorconfig` ファイルから、次いで (存在する場合) 親フォルダーなどの `.editorconfig` から取得されます。 これは、`root=true` が見つかるまで実行されます。
 
 すべての上位レベルの `.editorconfig` ファイルからの設定がコードベースのこの部分に適用_されない_ようにするには、次のように `root=true` プロパティを下位レベルの `.editorconfig` ファイルに追加します。
 
@@ -149,3 +147,7 @@ csharp_new_line_before_open_brace = none
 # top-most EditorConfig file
 root = true
 ```
+
+## <a name="see-also"></a>関連項目
+
+- [EditorConfig でカスタム エディター設定を作成する (Windows の Visual Studio)](/visualstudio/ide/create-portable-custom-editor-options)

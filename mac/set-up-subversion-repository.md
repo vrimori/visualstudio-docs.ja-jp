@@ -5,14 +5,14 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: 0D58FB37-530E-495B-BED6-FD499477A9B6
-ms.openlocfilehash: 8e8e17f7787486e5f14fd94927278bb957439e81
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 3995db4ef4609f68512dede454855da1f770141f
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224386"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295554"
 ---
-# <a name="setting-up-a-subversion-repository"></a>Subversion リポジトリのセットアップ
+# <a name="set-up-a-subversion-repository"></a>Subversion リポジトリの設定
 
 Subversion は集中管理されている_バージョン管理システム_です。つまり、すべてのファイルとリビジョンが格納された単一のサーバーが存在し、ユーザーはそこから任意のファイルの任意のバージョンをチェック アウトできます。 ファイルがリモート Subversion リポジトリからチェックアウトされると、ユーザーはその時点のリポジトリのスナップショットを取得します。
 
@@ -32,19 +32,19 @@ xcode-select --install
 
 Subversion がコンピューターにインストールされたら、次の手順を使用して、SVN でプロジェクトを発行します。
 
-1. オンラインで無料の SVN リポジトリを作成します。 この例では [Assembla](https://app.assembla.com/) が使用されています。 作成後に、URL が提供されます。これはリポジトリへの接続に使用されます。 
+1. オンラインで無料の SVN リポジトリを作成します。 この例では [Assembla](https://app.assembla.com/) が使用されています。 作成後に、URL が提供されます。これはリポジトリへの接続に使用されます。
 
     ![SVN URL をコピーします](media/version-control-subversion1-sml.png)
 
 2. Visual Studio for Mac プロジェクトを開くか、作成します。
 
-3. 次のように、プロジェクトを右クリックして、**[バージョン管理]、[Publish in Version Control...]\(バージョン管理で発行...\)** の順に選択します。 
+3. 次のように、プロジェクトを右クリックして、**[バージョン管理]、[Publish in Version Control...]\(バージョン管理で発行...\)** の順に選択します。
 
     ![プロジェクトの発行を開始する](media/version-control-subversion2.png)
 
 4. **[リポジトリへの接続]** タブで、上部のドロップダウンから **[Subversion]** を選択します。
 
-5. 手順 1. の URL を入力します。 URL が入力されたら、他のフィールドが既定により設定されます。 
+5. 手順 1. の URL を入力します。 URL が入力されたら、他のフィールドが既定により設定されます。
 
     ![[リポジトリの選択] と詳細入力ダイアログ](media/version-control-subversion3.png)
 
@@ -56,3 +56,6 @@ Subversion がコンピューターにインストールされたら、次の手
 
 8.  これで、使用可能なすべてのバージョン管理コマンドがバージョン管理メニューに表示されます。
 
+## <a name="see-also"></a>関連項目
+
+- [Subversion の使用](working-with-subversion.md)

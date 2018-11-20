@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 11a74d5214e434c7d7330bc7ea4e3bcd8a3e5905
 ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/01/2018
 ms.locfileid: "34572700"
 ---
-# <a name="sample-xsd-file-simple-schema"></a>サンプル XSD ファイル: 単純なスキーマ
+# <a name="sample-xsd-file-simple-schema"></a>サンプル XSD ファイル: シンプルなスキーマ
 
 次の XSD ファイルは、XSD スキーマ デザイナーのドキュメントのさまざまな例で使用されます。 このファイルは、シンプルな購買発注書のスキーマです。
 

@@ -5,12 +5,12 @@ ms.assetid: 41CB62FF-0F39-4CE8-8917-6A77F058719F
 author: conceptdev
 ms.author: crdun
 ms.date: 04/04/2018
-ms.openlocfilehash: bcc09fab45bf9580349675a65150319c34236f97
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 463b002ed2a511c47b518dba756f3ca4c6a5ca35
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43223994"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295177"
 ---
 # <a name="connected-services-walkthrough"></a>接続済みサービスのチュートリアル
 
@@ -18,8 +18,7 @@ ms.locfileid: "43223994"
 
 このチュートリアルでは、クロスプラットフォーム Xamarin.Forms ポータブル クラス ライブラリ (PCL) アプリケーションに、クラウド データ ストレージ、認証、およびプッシュ通知を提供する Azure バックエンド サービスを追加する方法を説明します。
 
-
-1.  まず、ソリューションの **[接続済みサービス]** をダブルクリックして起動し、**[Services Gallery]** \(サービス ギャラリー\) を起動します。
+1. まず、ソリューションの **[接続済みサービス]** をダブルクリックすると、**[Services Gallery]** \(サービス ギャラリー\) が表示されます。
   この一覧は、そのアプリケーションの種類で利用可能なすべてのサービスです。 サービス (**Azure App Service を使用したモバイル バックエンド** など) をクリックして選択します。
 
     [![Visual Studio for Mac の接続済みサービス ノード](media/connected-services-image001-sml.png "Visual Studio for Mac の接続済みサービス ノード")](media/connected-services-image001.png#lightbox)
@@ -68,7 +67,11 @@ ms.locfileid: "43223994"
 
 -   **App Service の名前**: プランに対して一意の名前/ID
 -   **サブスクリプション**: サービスの支払いに使用するサブスクリプション
--   **リソース グループ**: プロジェクトのすべての Azure リソースを整理する方法。 既存のものを使用するか、新規作成するオプション。 これが初めての Azure サービスである場合、新規作成します。
+-   **リソース グループ**: プロジェクトでご利用のすべての Azure リソースを整理する方法。 既存のものを使用するか、新規作成するオプション。 これが初めての Azure サービスである場合、新規作成します。
 -   **サービス プラン**: それが使用されるすべてのリソースの場所とコストを決定する。 既存のものを使用するか、新規作成するオプション。 これが初めての Azure サービスである場合、既定のものを使用するか、無料プラン (F1) で新規作成します。
 
-詳細については、[Azure App Service ドキュメント](https://azure.microsoft.com/documentation/learning-paths/appservice-mobileapps/)に関するページを参照してください。
+詳細については、「[Mobile Apps ドキュメント](/azure/app-service-mobile/)」を参照してください。
+
+## <a name="see-also"></a>関連項目
+
+- [接続済みサービス (Windows の Visual Studio)](/visualstudio/azure/vs-azure-tools-connected-services-storage)

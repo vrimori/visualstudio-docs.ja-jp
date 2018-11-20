@@ -19,16 +19,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e0e854cc2d271048a7d7205017710264efac0395
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: b9a80a84276648f8a0f0d5a94992b5f58cbcfefa
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39381648"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51348134"
 ---
 # <a name="manage-application-resources-net"></a>アプリケーション リソースの管理 (.NET)
 
 リソース ファイルとは、アプリケーションの一部ですが、コンパイルされないファイルのことであり、たとえばアイコン ファイルやオーディオ ファイルが該当します。 これらのファイルはコンパイル処理の一部ではないため、バイナリを再コンパイルする必要なしで変更することができます。 アプリケーションをローカライズすることを計画している場合は、アプリケーションをローカライズするときに変更する必要があるすべての文字列とその他のリソースに関して、リソース ファイルを使用する必要があります。
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、「[アプリ リソースの管理 (Visual Studio for Mac)](/visualstudio/mac/managing-app-resources)」を参照してください。
 
 .NET デスクトップ アプリのリソースの詳細については、「[デスクトップ アプリケーションのリソース](/dotnet/framework/resources/index)」を参照してください。
 
@@ -52,3 +55,4 @@ ms.locfileid: "39381648"
 ## <a name="see-also"></a>関連項目
 
 - [デスクトップ アプリケーションのリソース (.NET Framework)](/dotnet/framework/resources/index)
+- [アプリ リソースの管理 (Visual Studio for Mac)](/visualstudio/mac/managing-app-resources)

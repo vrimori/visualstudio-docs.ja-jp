@@ -6,23 +6,22 @@ ms.author: crdun
 ms.date: 05/06/2018
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
-ms.openlocfilehash: 66f7b33c944ced6ab662cf8e89341be6d7a2fb8b
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: e17a423e9db6826c8cc693e1c75c75bb067a19e8
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43223902"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295294"
 ---
 # <a name="debugging-with-xamarin"></a>Xamarin を使ったデバッグ
 
-
 Visual Studio for Mac には、Xamarin.iOS、Xamarin.Mac、Xamarin.Android アプリケーションのデバッグをサポートするネイティブ デバッガーが備わっています。
+
 Visual Studio for Mac では、Visual Studio for Mac ですべてのプラットフォームでマネージド コードをデバッグするために、Mono ランタイムに実装されている [*Mono Soft Debugger*](http://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/) を使用しています。
 
 ## <a name="the-debugger"></a>デバッガー
 
 Visual Studio for Mac では、すべての Xamarin アプリケーションのマネージド コード (C# または F#) をデバッグするために Mono Soft Debugger を使用しています。 Mono Soft Debugger は通常のデバッガーとは異なり、Mono ランタイムに組み込まれている協調的なデバッガーです。生成されるコードと Mono ランタイムは IDE と連携され、デバッグ機能を使用できます。 Mono ランタイムはワイヤ プロトコルを介してデバッグ機能を公開しています。詳細については、[Mono のドキュメント](http://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger-wire-format/)を参照してください。
-
 
 [LLDB]( http://lldb.llvm.org/index.html) や [GDB]( https://www.gnu.org/software/gdb/) などのハード デバッガーの場合、デバッグ済みのプログラムの知識や連携を使用せずにプログラムを制御しますが、ネイティブ iOS または Android コードをデバッグする必要があり、Xamarin アプリケーションをデバッグするときには便利なことがあります。
 
@@ -38,11 +37,9 @@ IDE でブレークポイントを設定するには、エディターで、中�
 
 ![余白でのブレークポイントの設定](media/debugging-image0.png)
 
-
 コードに設定したすべてのブレークポイントを表示するには、**[ブレークポイント] パッド**を開きます。
 
 ![ブレークポイントの一覧](media/debugging-image0a.png)
-
 
 ## <a name="start-debugging"></a>[デバッグ開始]
 
@@ -62,17 +59,13 @@ IDE でブレークポイントを設定するには、エディターで、中�
 
 ブレークポイントが発生する状況を指示した規則を設定することもできます。これは*条件付きブレークポイント*の追加とも呼ばれます。 条件付きブレークポイントを設定するには、**[ブレークポイントのプロパティ] ウィンドウ**にアクセスします。アクセスする方法は 2 つあります。
 
-
 * 新しい条件付きブレークポイントを追加するには、ブレークポイントを設定するコードの行番号の左にあるエディターの余白を右クリックし、[ブレークポイントの作成] を選択します。
-
 
  ![ブレークポイント コンテキスト メニュー](media/debugging-image4.png)
 
 * 既存のブレークポイントに条件を追加するには、ブレークポイントを右クリックし、**[ブレークポイントのプロパティ]** を選択します。または **[ブレークポイント]** パッドで、次の図の [ブレークポイントの編集] ボタンを選択します。
 
-
  ![[ブレークポイント] パッドで既存のブレークポイントを編集する](media/debugging-image5.png)
-
 
 この画面で、ブレークポイントが発生する条件を入力できます。
 
@@ -91,12 +84,16 @@ IDE でブレークポイントを設定するには、エディターで、中�
 *   **ステップ イン** - このボタンの場合も次のコード行が実行されます。 次行が関数呼び出しの場合、[ステップ イン] をクリックすると関数の最初の行で停止するので、関数のデバッグを 1 行ずつ続行できます。 次行が関数ではない場合の動作は、[ステップ オーバー] と同じです。
 *   **ステップ アウト** - 現在の関数が呼び出された行に戻ります。
 
-
 ## <a name="debugging-monos-class-libraries"></a>Mono のクラス ライブラリのデバッグ
+
 Xamarin 製品には、Mono のクラス ライブラリのソース コードが付属しているため、デバッガーからのステップ実行にそのソース コードを利用して、内部でどのような処理が実行されているかを検査することができます。
 
 この機能はデバッグ中に消費されるメモリが多いため、既定ではオフです。
 
 この機能を有効にするには、**[Visual Studio for Mac] > [ユーザー設定] > [デバッガー]** に移動し、**[プロジェクト コードのみをデバッグする。フレームワーク コードにはステップ インしない。]** オプションを次の図のように**オフ**にします。
 
- ![[フレームワーク コードにはステップ インしない] オプション](media/debugging-image8.png)
+![[フレームワーク コードにはステップ インしない] オプション](media/debugging-image8.png)
+
+## <a name="see-also"></a>関連項目
+
+- [Visual Studio でのデバッグ (Windows)](/visualstudio/debugger/)

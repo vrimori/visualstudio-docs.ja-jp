@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2995e3b71ffb46b726d17ffc2f1f7fe68f6663ff
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: dffc0344c0cd7c226ae6651679c4a8f491d8aaa3
+ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42627108"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607804"
 ---
 # <a name="learn-about-projects-and-solutions"></a>プロジェクトとソリューションについて理解する
 
@@ -100,7 +100,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
    }
    ```
 
-   このコードが何を行うかを理解する必要はありませんが、必要なら、プログラムを実行して、コンソール (または標準出力) ウィンドウに今日の日付が出力されるのを確認することができます。
+   このコードが何を行うかを理解する必要はありませんが、必要なら、**Ctrl**+**F5** キーを押してプログラムを実行し、コンソール (または標準出力) ウィンドウに今日の日付が出力されるのを確認することができます。
 
 ## <a name="add-a-second-project"></a>2 つ目のプロジェクトを追加する
 
@@ -148,7 +148,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
    コードの一部分の下に赤色の "波線" が表示されます。 テスト プロジェクトを、**QuickDate** プロジェクトに対する[フレンド アセンブリ](/dotnet/csharp/programming-guide/concepts/assemblies-gac/friend-assemblies)にすることで、このエラーを修正します。
 
-1. **QuickDate** プロジェクトに戻り、*Calendar.cs* ファイルをまだ開いていない場合は開きます。さらに、次の [using ステートメント](/dotnet/csharp/language-reference/keywords/using-statement)と <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を追加して、テスト プロジェクトのエラーを解決します。
+1. **QuickDate** プロジェクトに戻り、*Calendar.cs* ファイルをまだ開いていない場合は開きます。さらに、次の [using ステートメント](/dotnet/csharp/language-reference/keywords/using-statement)と <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性をファイルの先頭に追加して、テスト プロジェクトのエラーを解決します。
 
    ```csharp
    using System.Runtime.CompilerServices;
@@ -162,11 +162,11 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ## <a name="project-properties"></a>プロジェクト プロパティ
 
-<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を含む C# コード ファイル内の行は、**QuickTest** プロジェクトのアセンブリ名 (ファイル名) を参照します。 アセンブリ名はプロジェクト名と常に同じであるとは限りません。 プロジェクトのアセンブリ名を検索するには、プロジェクトのプロパティを開きます。
+<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を含む *Calendar.cs* ファイル内の行は、**QuickTest** プロジェクトのアセンブリ名 (ファイル名) を参照します。 アセンブリ名はプロジェクト名と常に同じであるとは限りません。 プロジェクトのアセンブリ名を検索するには、プロジェクトのプロパティを開きます。
 
 1. **ソリューション エクスプローラー**で **QuickTest** プロジェクトを選択します。 右クリックまたはコンテキスト メニューから、**[プロパティ]** を選択するか、または**Alt**+**Enter** キーを押します。
 
-   **[アプリケーション]** タブで、プロジェクトの "*プロパティ ページ*" が開きます。プロパティ ページには、プロジェクトのさまざまな設定が含まれます。 **QuickTest** プロジェクトのアセンブリ名が "QuickTest" であることに注目してください。 これを変更する場合は、ここでその変更を行います。 テスト プロジェクトをビルドすると、結果として得られる実行可能ファイルの名前は *QuickTest.exe* から、選択した任意の名前に変わります。
+   **[アプリケーション]** タブで、プロジェクトの "*プロパティ ページ*" が開きます。プロパティ ページには、プロジェクトのさまざまな設定が含まれます。 **QuickTest** プロジェクトのアセンブリ名が "QuickTest" であることに注目してください。 これを変更する場合は、ここでその変更を行います。 テスト プロジェクトをビルドすると、結果として得られるバイナリ ファイルの名前は *QuickTest.dll* から、選択した任意の名前に変わります。
 
    ![プロジェクト プロパティ](media/quickstart-projects-properties.png)
 
@@ -175,6 +175,11 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 ## <a name="next-steps"></a>次の手順
 
 単体テストが動作していることを確認する場合は、メニュー バーから **[テスト]** > **[実行]** > **[すべてのテスト]** を選択します。 **テスト エクスプローラー**と呼ばれるウィンドウが開くので、**TestGetCurrentDate** テストが成功しているか確認する必要があります。
+
+![テストに合格したことを示す Visual Studio のテキスト エクスプローラー](media/quickstart-projects-test-explorer.png)
+
+> [!TIP]
+> **テスト エクスプローラー**が自動的に開かない場合は、メニュー バーから **[テスト]** > **[Windows]** > **[テスト エクスプローラー]** を選択して開きます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -5,12 +5,12 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: 4AD51385-B0A8-4BA7-B2D4-BF2BD167A142
-ms.openlocfilehash: 79d96ac61bcec198c899d709677df775332db383
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 54e07d3c170859405ef584b884547dad335788f3
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224251"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295281"
 ---
 # <a name="managing-references-in-a-project"></a>プロジェクト内の参照の管理
 
@@ -27,9 +27,9 @@ Visual Studio for Mac には、プロジェクトに参照を追加する方法�
 
 ## <a name="assembly-references"></a>アセンブリ参照
 
-Xamarin 内の各フレームワークには、十数個のアセンブリが付属しています。 これらのアセンブリ パッケージの一部は、プロジェクトの既定では参照されていません。 
+Xamarin 内の各フレームワークには、十数個のアセンブリが付属しています。 これらのアセンブリ パッケージの一部は、プロジェクトの既定では参照されていません。
 
-プロジェクトで参照するパッケージを編集するには、_[参照の編集]_ ダイアログを使用します。このダイアログを表示するには、[参照] フォルダーをダブルクリックするか、コンテキスト メニュー操作で [参照の編集] を選択します。
+ご利用のプロジェクトで参照するパッケージを編集するには、**[参照の編集]** ダイアログを使用します。このダイアログは、[参照] フォルダーをダブルクリックするか、コンテキスト メニュー操作で **[参照の編集]** を選択することで表示できます。
 
 ![アセンブリの参照ダイアログ](media/projects-and-solutions-image11.png)
 
@@ -42,3 +42,8 @@ NuGet は、.NET 開発用の最も人気のあるパッケージ マネージ�
 追加するには、Solution Pad で **[パッケージ]** フォルダーを右クリックし、[パッケージの追加] を選択します。
 
 NuGet パッケージの使用方法については、「[Including a NuGet package in your Project](nuget-walkthrough.md)」(プロジェクトに NuGet パッケージを含める) チュートリアルを参照してください。
+
+## <a name="see-also"></a>関連項目
+
+- [参照の管理 (Windows の Visual Studio)](/visualstudio/ide/managing-references-in-a-project)
+- [拡張 SDK と比較して NuGet を使用した参照の追加 (Windows の Visual Studio)](/visualstudio/ide/adding-references-using-nuget-versus-an-extension-sdk)

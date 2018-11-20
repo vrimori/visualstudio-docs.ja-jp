@@ -5,12 +5,12 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: 4071689D-1C21-42D7-8963-550E7BCB4B67
-ms.openlocfilehash: d7401395d817d4c07b179c0d096612469fed6291
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: dc37b3a376b99c39d4216ba0ae2b05d707d11484
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224115"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296295"
 ---
 # <a name="adding-and-removing-project-items"></a>プロジェクト項目の追加と削除
 
@@ -26,7 +26,6 @@ ms.locfileid: "43224115"
 
 既存のファイルをプロジェクトに追加できます。プロジェクト ノードを右クリックし、**[追加]、[ファイルの追加...]** の順に選択します。あるいは、フォルダー全体を追加するには、**[追加]、[既存のフォルダーの追加...]** の順に選択します。これでファイル ブラウザーが表示されます。このブラウザーでシステム内を探し、追加する項目を見つけます。
 
-
 ## <a name="removing-items"></a>項目を削除する
 
 現在のプロジェクトから項目を削除するには、項目を右クリックし、**[削除]** を選択します。
@@ -38,4 +37,8 @@ ms.locfileid: "43224115"
 ![[項目の削除] ダイアログ](media/add-and-remove-project-items-image4.png)
 
 * **削除** - プロジェクトとディスクから項目を削除します。
-* **プロジェクトから削除** - プロジェクトから項目が削除されますが、ディスクからは削除されません。 
+* **プロジェクトから削除** - プロジェクトから項目が削除されますが、ディスクからは削除されません。
+
+## <a name="see-also"></a>関連項目
+
+* [Visual Studio のソリューションおよびプロジェクト (Windows)](/visualstudio/ide/solutions-and-projects-in-visual-studio)
