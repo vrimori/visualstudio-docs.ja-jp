@@ -13,12 +13,12 @@ ms.assetid: f0ef65e9-0f1f-45f4-9f25-6e2398691168
 caps.latest.revision: 7
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8494878dfc1760717e8e01b408822ea5dd1ea6cc
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: e5787d6ce0eddd8d0f9229c54694f30f055c61ca
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49248002"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51724386"
 ---
 # <a name="notifications-and-progress-for-visual-studio"></a>通知と Visual Studio の進行状況
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -265,7 +265,7 @@ ms.locfileid: "49248002"
   
  **チーム エクスプ ローラーのグローバル不確定な進行状況バー**  
   
-##### <a name="dialogs"></a>ダイアログ ボックス  
+##### <a name="dialogs"></a>ダイアログ  
  ダイアログ ボックスには、進行状況ローダーの種類のいずれかを含めることができます。 進行状況の指標でくメッセージングとペアになっているだけでなく複数レベルの細分化された表現とサブ プロセスに進行状況の表示と組み合わせます。  
   
  ![複数の進行状況インジケーターの種類を持つダイアログ](../../extensibility/ux-guidelines/media/0903-11-dialog.png "0903 11_Dialog")  
