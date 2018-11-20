@@ -1,6 +1,6 @@
 ---
 title: Visual Studio のヘルプを作成できるようにC#バグを使用したコード
-description: アプリをデバッグするデバッガーを使用するタイミングを理解します。
+description: バグをより優れたコードを記述する方法を理解します。
 ms.custom: debug-experiments
 ms.date: 10/30/2018
 ms.technology: vs-ide-debug
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b020dcf27ee9b248b460465a9b0c75cdb3b0ab6
-ms.sourcegitcommit: a34b7d4fdb3872865fcf98ba24a0fced58532adc
+ms.openlocfilehash: 914b4332a715c86aab7e1fad7d901231cbfd40c5
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51561831"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948960"
 ---
 # <a name="write-better-c-code-using-visual-studio"></a>優れたC#Visual Studio を使用するコード
 
@@ -33,7 +33,7 @@ ms.locfileid: "51561831"
 
 * デバッガーを使用する場合
 
-これらのタスクを示すためには、エラーと、アプリをデバッグするときに発生するバグの最も一般的な種類のいくつか説明します。 サンプル コードがC#、概念的な情報は、C++、Visual Basic、JavaScript に通常適用されると (場合を除き) Visual Studio で、他の言語がサポートされています。 スクリーン ショットは、c# では。
+これらのタスクを示すためには、エラーと、アプリをデバッグするときに発生するバグの最も一般的な種類のいくつか説明します。 サンプル コードがC#、概念的な情報は、C++、Visual Basic、JavaScript に通常適用されると (場合を除き) Visual Studio で、他の言語がサポートされています。 スクリーン ショットは C# になっています。
 
 ## <a name="follow-along-using-the-sample-app"></a>サンプル アプリを使用して作業を進めるに
 
@@ -42,7 +42,7 @@ ms.locfileid: "51561831"
 アプリを作成する Visual Studio を開き、選択**ファイル > 新しいプロジェクト**します。 **Visual C#** 、選択**Windows デスクトップ**または **.NET Core**、中央のペインの 、**コンソール アプリ**します。 ような名前を入力**Console_Parse_JSON**  をクリック**OK**します。 Visual Studio によってプロジェクトが作成されます。 貼り付け、[サンプル コード](#sample-code)にプロジェクトの*Program.cs*ファイル。
 
 > [!NOTE]
-> 表示されない場合、**コンソール アプリケーション**プロジェクト テンプレートをクリックして、 **Visual Studio インストーラーを開く**の左側のウィンドウで、リンク、**新しいプロジェクト** ダイアログ ボックス。 Visual Studio インストーラーが起動します。 選択、 **.NET デスクトップ開発**または **.NET Core クロス プラットフォーム開発**ワークロードを選択し、**変更**します。
+> **[コンソール アプリケーション]** プロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 選択、 **.NET デスクトップ開発**または **.NET Core クロス プラットフォーム開発**ワークロードを選択し、**変更**します。
 
 ## <a name="find-the-red-and-green-squiggles"></a>赤と緑の波線を確認してください。
 
@@ -166,13 +166,13 @@ A`try/catch`ブロックにはパフォーマンスの低下されたとき、�
     }
     ```
 
-* アプリに含めることがよく知らないメソッドでは、どのような例外、メソッドをスローする可能性の高いドキュメントを確認してください。 これは、適切なエラー処理とアプリのデバッグに重要な情報を指定できます。
+* (Web 要求の場合) などの外部のデータを扱うもの expecially アプリに含めることがよく知らない関数では、どのような例外、関数をスローする可能性の高いドキュメントを確認してください。 これは、適切なエラー処理とアプリのデバッグに重要な情報を指定できます。
 
 サンプル アプリでは、修正、`SerializationException`で、`GetJsonData`メソッドを変更して`4o`に`40`します。
 
 ## <a name="clarify-your-code-intent-by-using-assert"></a>Assert を使用して、コードの意図を明確化します。
 
-をクリックして、**再起動**![アプリの再起動](../debugger/media/dbg-tour-restart.png "RestartApp")デバッグ ツールバーのボタン (**Ctrl** + **Shift**  +  **F5**)。 これには、少ない手順で、アプリが再起動されます。 コンソール ウィンドウに次の出力を表示します。
+デバッグ ツール バーの **[再起動]** ![アプリの再起動](../debugger/media/dbg-tour-restart.png "RestartApp") ボタンをクリックします (**Ctrl** + **Shift** + **F5**)。 これには、少ない手順で、アプリが再起動されます。 コンソール ウィンドウに次の出力を表示します。
 
 ![出力に null 値](../debugger/media/write-better-code-using-assert-null-output.png)
 
@@ -208,7 +208,7 @@ if (existingUser == false)
 
 この方法で目的を指定して、要件を強制します。 これは、開発中に表面的なバグに使用できる簡単で便利なメソッドです。 (`assert`ステートメントは、単体テストの主要な要素としても使用します)。
 
-をクリックして、**再起動**![アプリの再起動](../debugger/media/dbg-tour-restart.png "RestartApp")デバッグ ツールバーのボタン (**Ctrl** + **Shift**  +  **F5**)。
+デバッグ ツール バーの **[再起動]** ![アプリの再起動](../debugger/media/dbg-tour-restart.png "RestartApp") ボタンをクリックします (**Ctrl** + **Shift** + **F5**)。
 
 > [!NOTE]
 > `assert`コードがデバッグ ビルドでのみアクティブになっています。
@@ -217,7 +217,10 @@ if (existingUser == false)
 
 ![False に解決されるをアサートします。](../debugger/media/write-better-code-using-assert.png)
 
-`assert`エラーは、調査する必要のある問題があることを示します。 `assert` 例外を必ずしも表示されない多くのシナリオに対応できます。 この例では、ユーザーによって例外が表示されません (他のシナリオで、`NullReferenceException`発生する可能性があります)、および`null`として値を追加取得`firstname`データベース内。 これは、問題が生じる後で (など、コンソール出力を参照してください) とデバッグが困難になる可能性があります。
+`assert`エラーは、調査する必要のある問題があることを示します。 `assert` 例外を必ずしも表示されない多くのシナリオに対応できます。 ユーザー、この例では、例外は表示されません、`null`として値を追加取得`firstname`レコードの一覧にします。 これは、問題が生じる後で (など、コンソール出力を参照してください) とデバッグが困難になる可能性があります。
+
+> [!NOTE]
+> メソッドを呼び出すシナリオで、`null`値、`NullReferenceException`結果。 通常使用しないようにする、`try/catch`は、特定のライブラリ関数に関連付けられていない例外での一般的な例外をブロックします。 任意のオブジェクトをスローできます、`NullReferenceException`します。 不明な場合は、ライブラリ関数のドキュメントを確認します。
 
 デバッグのプロセス中には、特定をお勧め`assert`に実際のコードの修正プログラムを置き換える必要がありますがわかるまでのステートメント。 たとえば、ユーザーには、アプリのリリース ビルドで例外が発生する可能性がありますを決定したとします。 その場合は、アプリが致命的な例外をスローまたはその他のエラーが発生しないことを確認するためのコードをリファクタリングする必要があります。 そのため、このコードを修正するには、次のコードを置き換えます。
 
@@ -276,7 +279,7 @@ Debug.Assert(users[0].points > 0);
 
 ## <a name="sample-code"></a> サンプル コード
 
-次のコードでは、Visual Studio IDE を使用して修正できるいくつかのバグを持っています。 ここで、アプリは、いくつかの操作がオブジェクトにデータを逆シリアル化し、新しいデータで単純なインメモリ データベースの更新から JSON データの取得をシミュレートする簡単なアプリです。
+次のコードでは、Visual Studio IDE を使用して修正できるいくつかのバグを持っています。 ここで、アプリは、いくつかの操作、オブジェクトにデータを逆シリアル化し、新しいデータで単純なリストを更新していますから JSON データの取得をシミュレートする簡単なアプリです。
 
 ```csharp
 using System;

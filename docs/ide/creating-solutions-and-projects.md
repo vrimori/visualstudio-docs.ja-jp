@@ -17,18 +17,21 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d8d222a35c06cd7d53e2e104761cc1f30bf816e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a912534b9e0212e68a947fa892395a233f263a87
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813818"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349638"
 ---
 # <a name="create-solutions-and-projects"></a>ソリューションとプロジェクトを作成する
 
 *プロジェクト*は Visual Studio の論理コンテナーであり、ソース コード ファイル、ビットマップ、アイコン、コンポーネント、サービス参照など、アプリのビルドに必要なアイテムが格納されます。 新しいプロジェクトを作成すると、そのプロジェクトを含む*ソリューション*が Visual Studio によって作成されます。 その後、必要に応じて他の新規または既存のプロジェクトをソリューションに追加できます。 ソリューションには、特定のプロジェクトに関連付けられていないファイルを含めることもできます。
 
 ![ソリューション/プロジェクト階層](./media/vside-proj-soln.png)
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、[Visual Studio for Mac でのプロジェクトの作成](/visualstudio/mac/create-new-projects)に関するページを参照してください。
 
 **ソリューション エクスプローラー**という名称のツール ウィンドウでソリューションやプロジェクトを表示できます。 次のスクリーンショットは、**ソリューション エクスプローラー** (**BikeSharing.Xamarin-UWP**) のサンプル ソリューションです。**BikeSharing.Clients.Core** と **BikeSharing.Clients.Windows** という 2 つのプロジェクトが含まれています。 各プロジェクトに複数のファイル、フォルダー、参照が含まれています。 太字のプロジェクト名は*スタートアップ プロジェクト*です。つまり、アプリを実行すると起動するプロジェクトです。 スタートアップ プロジェクトにするプロジェクトを指定できます。
 
@@ -138,3 +141,4 @@ ms.locfileid: "49813818"
 - [ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)
 - [GitHub の Microsoft のオープン ソース リポジトリ](https://github.com/Microsoft)
 - [開発者コード サンプル](https://code.msdn.microsoft.com/)
+- [プロジェクトの作成 (Visual Studio for Mac)](/visualstudio/mac/create-new-projects)
