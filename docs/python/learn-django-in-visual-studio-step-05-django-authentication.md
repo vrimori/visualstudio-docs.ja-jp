@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: cc238b6a8ba1a190471d25952a4d7c976ca56b9f
-ms.sourcegitcommit: e7b3fc8c788fb49d6ba4215abf27139f2a08e1a1
+ms.openlocfilehash: cd3dce86104343b6c10bd1329b3ee3cdb7c7ee4f
+ms.sourcegitcommit: a34b7d4fdb3872865fcf98ba24a0fced58532adc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120356"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51561648"
 ---
 # <a name="step-5-authenticate-users-in-django"></a>手順 5: Django でユーザーを認証する
 
@@ -152,24 +152,30 @@ ms.locfileid: "48120356"
 
 1. 認証済みユーザーに特定のリソースに対するアクセス権が付与されたかどうかを確認するには、ユーザー固有のアクセス許可をデータベースから取得する必要があります。 詳細については、[Django 認証システムの使用](https://docs.djangoproject.com/en/2.0/topics/auth/default/#permissions-and-authorization)に関するページ (Django docs) を参照してください。
 
-1. 特に、ス―パー ユーザーまたは管理者は、相対 URL "/admin/" および "/admin/doc/" を使用して、組み込みの Django 管理者インターフェイスにアクセスします。 これらのインターフェイスを有効にするには、Django プロジェクトの *urls.py* を開き、次のエントリからコメントを削除します。
+1. 特に、ス―パー ユーザーまたは管理者は、相対 URL "/admin/" および "/admin/doc/" を使用して、組み込みの Django 管理者インターフェイスにアクセスします。 これらのインターフェイスを有効にするには、次の手順を実行します。
 
-    ```python
-    from django.conf.urls import include
-    from django.contrib import admin
-    admin.autodiscover()
+    1. 環境に docutils Python パッケージをインストールします。 そのためには、*requirements.txt* ファイルに "docutils" を追加し、**ソリューション エクスプローラー**でプロジェクトを展開し、**[Python 環境]** ノードを選択してから、使用している環境を右クリックして **[requirements.txt からインストール]** を選択することをお勧めします。
 
-    # ...
-    urlpatterns = [
+    1. Django プロジェクトの *urls.py* を開き、次のエントリから既定のコメントを削除します。
+
+        ```python
+        from django.conf.urls import include
+        from django.contrib import admin
+        admin.autodiscover()
+
         # ...
-        url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-        url(r'^admin/', include(admin.site.urls)),
-    ]
-    ```
+        urlpatterns = [
+            # ...
+            url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+            url(r'^admin/', include(admin.site.urls)),
+        ]
+        ```
 
-    アプリを再起動したときに、"/admin/" および "/admin/doc/" に移動して、追加のユーザー アカウント作成などのタスクを実行できます。
+    1. Django プロジェクトの *settings.py* ファイルで、`INSTALLED_APPS` コレクションに移動して `'django.contrib.admindocs'` を追加します。
 
-    ![Django 管理者インターフェイス](media/django/step05-administrator-interface.png)
+    1. アプリを再起動したときに、"/admin/" および "/admin/doc/" に移動して、追加のユーザー アカウント作成などのタスクを実行できます。
+
+        ![Django 管理者インターフェイス](media/django/step05-administrator-interface.png)
 
 1. 認証フローの最後の部分は、ログオフです。 *loginpartial.html* でわかるように、**[Log off]** リンクは単純に相対 URL "/login" に対する POST を実行します。これは、組み込みのビュー `django.contrib.auth.views.logout` によって処理されます。 このビューには UI が表示されず、ホーム ページへの移動のみを行います (*urls.py* の "^logout$" パターンで確認できます)。 ログオフ ページを表示する場合は、最初に、次のように URL パターンを変更して、"template_name" プロパティを追加し "next_page" プロパティを削除します。
 

@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 96581fbaff9c2ddc85fbb92d73096f2a369d4c7b
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 77ac77ca999ef627c0f3c9e763b7e5799b97d679
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34746313"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349245"
 ---
 # <a name="manage-project-and-solution-properties"></a>プロジェクトおよびソリューションのプロパティの管理
 
@@ -25,6 +25,9 @@ ms.locfileid: "34746313"
 .NET プロジェクトでは、プロジェクト ツリー自体にプロパティ ノードが含まれる場合もあります。
 
 ![ソリューション エクスプローラー ツリーの [プロパティ] ノード](../ide/media/vs2015_props_se.png)
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、「[プロジェクトおよびソリューションのプロパティの管理 (Visual Studio for Mac)](/visualstudio/mac/managing-solutions-and-project-properties)」を参照してください。
 
 ## <a name="project-properties"></a>プロジェクト プロパティ
 
@@ -56,3 +59,4 @@ C++ プロジェクトのプロパティについては、[C++ プロジェク�
 ## <a name="see-also"></a>関連項目
 
 - [Visual Studio のソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)
+- [プロジェクトおよびソリューションのプロパティの管理 (Visual Studio for Mac)](/visualstudio/mac/managing-solutions-and-project-properties)

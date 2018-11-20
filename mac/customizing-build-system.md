@@ -5,25 +5,24 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/14/2017
 ms.assetid: 6958B102-8527-4B40-BC65-3505DB63F9D3
-ms.openlocfilehash: 9549a9d51fa2d86f60564e842bfc5e13a5f6523c
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 7fbd275e3e946461559db41668a749cd6631ba09
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224458"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296308"
 ---
 # <a name="customizing-the-build-system"></a>ビルド システムのカスタマイズ
 
 MSbuild は Microsoft が開発したビルド エンジンです。主に .NET アプリケーションのビルドを可能にします。 Mono フレームワークはまた、Microsoft のビルド エンジンを独自に実装しています。それが **xbuild** です。 ただし、xbuild は廃止となり、すべてのオペレーティング システムで MSBuild が使用されています。
 
-**MSbuild** は、Visual Studio for Mac のビルド システムとして主に使用されます。 
+**MSbuild** は、Visual Studio for Mac のビルド システムとして主に使用されます。
 
-MSBuild は、ソース ファイルなど、一連の入力を受け取ることで動作し、入力を実行可能ファイルなどの出力に変換します。 この出力は、コンパイラのようなツールを呼び出して行われます。 
-
+MSBuild は、ソース ファイルなど、一連の入力を受け取ることで動作し、入力を実行可能ファイルなどの出力に変換します。 この出力は、コンパイラのようなツールを呼び出して行われます。
 
 ## <a name="msbuild-file"></a>MSBuild ファイル
 
-MSBuild は、プロジェクト ファイルと呼ばれる XML ファイルを使用します。このファイルはプロジェクトの一部である*アイテム* (イメージ リソースなど) とプロジェクトのビルドに必要な*プロパティ*を定義します。 このプロジェクト ファイルのファイル拡張子は常に `proj` で終わります。たとえば、C# プロジェクトの場合、`.csproj` になります。 
+MSBuild は、プロジェクト ファイルと呼ばれる XML ファイルを使用します。このファイルはプロジェクトの一部である*アイテム* (イメージ リソースなど) とプロジェクトのビルドに必要な*プロパティ*を定義します。 このプロジェクト ファイルのファイル拡張子は常に `proj` で終わります。たとえば、C# プロジェクトの場合、`.csproj` になります。
 
 ### <a name="viewing-the-msbuild-file"></a>MSBuild ファイルを表示する
 
@@ -61,7 +60,7 @@ MSBuild には、*項目*と*プロパティ*という 2 つの基本データ�
 
 プロパティは、コンパイラ オプションなど、コンパイル設定を格納するための鍵と値のペアです。
 
-プロパティは PropertyGroup を利用して設定されます。また、プロパティには、任意の数の PropertiesGroups を追加できます (PropertiesGroups にはさらに任意の数のプロパティを追加できます)。 
+プロパティは PropertyGroup を利用して設定されます。また、プロパティには、任意の数の PropertiesGroups を追加できます (PropertiesGroups にはさらに任意の数のプロパティを追加できます)。
 
 たとえば、簡単なコンソール アプリケーションの PropertyGroup は次の XML のようになります。
 
@@ -83,7 +82,7 @@ MSBuild には、*項目*と*プロパティ*という 2 つの基本データ�
 
 項目を利用することで、ビルド システムへの入力をリストやセットとして扱うことができます。項目は一般的にファイルを表します。 項目にはそれぞれ、項目の*種類*と*仕様*が与えられ、任意で*メタデータ*が指定されます。 MSBuild が個々の項目に対して機能することはありません。項目*セット*と呼ばれる、特定の種類のすべての項目に対して機能します。
 
-項目は、`ItemGroup` を宣言することで作成されます。 任意の数の項目を含めた ItemGroups をさらに任意の数だけ作成できます。 
+項目は、`ItemGroup` を宣言することで作成されます。 任意の数の項目を含めた ItemGroups をさらに任意の数だけ作成できます。
 
 たとえば、次のコード スニペットでは、iOS の起動画面が作成されます。 起動画面には、ビルドの種類 `BundleResource` と、イメージのパスの指定が表示されます。
 
@@ -104,5 +103,5 @@ MSBuild には、*項目*と*プロパティ*という 2 つの基本データ�
 
 次のリソースで MSBuild についてさらに詳しく学習できます。
 
-* [MSDN - 概要](https://msdn.microsoft.com/library/dd393574.aspx)
-* [MSDN - 概念](https://msdn.microsoft.com/library/dd637714.aspx)
+* [MSBuild の概要](/visualstudio/msbuild/msbuild)
+* [MSBuild の概念](/visualstudio/msbuild/msbuild-concepts)

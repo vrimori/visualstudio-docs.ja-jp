@@ -5,12 +5,12 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: F7C2A28C-0759-4E0D-A28E-B72D5AB73DB6
-ms.openlocfilehash: 9f33892dc4caef726763c6ab7513ac1e44e7e47e
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 58ad6f41528fd11510d55c4062cdd9a6ae678989
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224039"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349612"
 ---
 # <a name="customizing-the-ide"></a>IDE のカスタマイズ
 
@@ -22,7 +22,7 @@ Visual Studio for Mac はさまざまな方法でカスタマイズできます�
 
 Visual Studio for Mac ではテーマを切り替えることができます。次の図のように、**[Visual Studio]、[ユーザー設定]、[環境]、[視覚スタイル]** の順に選択し、**[ユーザー インターフェイス テーマ]** ドロップダウンから希望のテーマを選択します。
 
- ![ダーク テーマの選択](media/customizing-the-ide-image7b.png)
+![ダーク テーマの選択](media/customizing-the-ide-image7b.png)
 
 ## <a name="localization"></a>ローカリゼーション
 
@@ -45,19 +45,17 @@ Visual Studio for Mac は次の 14 か国語にローカライズされており
 
 Visual Studio for Mac の表示言語を変更するには、次の図のように、**[Visual Studio]、[ユーザー設定]、[環境]、[視覚スタイル]** の順に選択し、**[ユーザー インターフェイス言語]** ドロップダウンから希望の言語を選択します。
 
-
 ![言語の選択](media/customizing-the-ide-image11a.png)
 
 ## <a name="author-information"></a>作成者情報
 
 作成者情報パネルでは、名前、メール アドレス、作品の著作権所有者、会社、商標など、自分に関する関連情報を追加できます。
 
- ![作成者情報の編集セクション](media/customizing-the-ide-image9a.png)
+![作成者情報の編集セクション](media/customizing-the-ide-image9a.png)
 
 この情報は、新しいファイルに追加する可能性がある、ライセンスなど、標準ファイル ヘッダーに入力するために使用されます。
 
- ![標準ヘッダー オプション](media/customizing-the-ide-image8a.png)
-
+![標準ヘッダー オプション](media/customizing-the-ide-image8a.png)
 
 Visual Studio for Mac のバージョン管理からコミットが行われた場合、そのコミットで、**[名前]** フィールドと **[電子メール]** フィールドに入力されたデータが利用されます。 このフィールドにデータを入力していない場合、バージョン管理の利用時、Visual Studio for Mac から入力が求められます。
 
@@ -67,7 +65,7 @@ Visual Studio for Mac のバージョン管理からコミットが行われた�
 
 次の図のように、**[Visual Studio]、[ユーザー設定]、[環境]、[キー バインド]** の順に選択し、キー バインドを設定できます。
 
- ![キー バインドの設定](media/customizing-the-ide-image10a.png)
+![キー バインドの設定](media/customizing-the-ide-image10a.png)
 
 ここからキー バインドの組み合わせを検索したり、競合するバインドを表示したり、新しいバインドを追加したり、既存のバインドを編集したりできます。
 
@@ -85,7 +83,7 @@ Visual Studio for Mac で新しいソリューションまたはファイルを�
 
 Visual Studio for Mac のパッドには追加情報、ツール、ナビゲーション補助が含まれています。これには、**[表示]、[パッド]** メニュー項目の順に選択し、それを追加するパッドを選択するとアクセスできるようになります。
 
- ![新しいパッドを選択する](media/customizing-the-ide-image3a.png)
+![新しいパッドを選択する](media/customizing-the-ide-image3a.png)
 
 パッドはさまざまなコマンドで自動的に開くこともできます。たとえば、**[複数のファイル内を検索]** (Shift + Command + F) コマンドを実行すると、別のパッドが開き、検索結果が表示されます。
 
@@ -99,7 +97,6 @@ Visual Studio for Mac のパッドには追加情報、ツール、ナビゲー�
 
 自動非表示のパッドはワークスペースの側面にドッキングされます。必要なとき、簡単に表示されます。 パッドの上にカーソルを合わせると再び表示されます。マウスやキーボードの焦点を外すと、非表示になります。
 
-
 ### <a name="organizing-layouts"></a>レイアウトの整理
 
 常に表示されるパッドは、現在のコンテキストによって決まります。 たとえば、ビジュアル デザイナーを使用するときは、ツールボックス パッドとプロパティ パッドが最も重要になります。デバッグのときには、スタックやローカルを表示するためにデバッガー パッドを用意すると便利です。
@@ -110,8 +107,7 @@ Visual Studio for Mac のパッドには追加情報、ツール、ナビゲー�
 
 1 つのレイアウトが常に有効になります。レイアウト内を変更すると、たとえば、パッドを追加したり、パッドの位置を変更したりすると、そのとき有効なレイアウトだけが変更されます。 Visual Studio for Mac を閉じると、変更は保存されません。
 
-
-ただし、新しいレイアウトを作成することができます。**[表示]、[Save Current Layout...]\(現在のレイアウトを保存...\)** メニュー項目を使用します。 これで現在のレイアウトがメニューに追加されます。追加したレイアウトはいつでも選択できます。
+ただし、新しいレイアウトを作成することができます。**[表示]、[Save Current Layout]\(現在のレイアウトを保存\)** メニュー項目を使用します。 これで現在のレイアウトがメニューに追加されます。追加したレイアウトはいつでも選択できます。
 
 ![現在のレイアウトを保存する](media/customizing-the-ide-image6a.png)
 
@@ -121,12 +117,16 @@ Visual Studio for Mac では、テキスト エディターを並べて開いた
 
 2 列モードは [表示] メニュー項目から有効にできます。**[表示]、[エディター列]、[2 列]** の順に選択するか、エディター領域の 1 つの端にエディター タブをドラッグします。
 
- ![2 列のサイド バイ サイド モード](media/customizing-the-ide-sbs.png)
+![2 列のサイド バイ サイド モード](media/customizing-the-ide-sbs.png)
 
 エディター タブはドキュメント領域の外にドラッグできます。エディター ウィンドウが別ウィンドウとして表示されます。 この別ウィンドウもサイド バイ サイド エディターに対応し、複数のエディター タブを含めることができます。
 
- ![新しいウィンドウを作成する](media/customizing-the-ide-sbs1.png)
+![新しいウィンドウを作成する](media/customizing-the-ide-sbs1.png)
 
- ![2 列サイド バイ サイドと追加タブ](media/customizing-the-ide-sbs2.png)
+![2 列サイド バイ サイドと追加タブ](media/customizing-the-ide-sbs2.png)
 
 1 つのエディターを開いている状態に戻すには、**[表示]、[エディター列]、[1 列]** の順に選択します。
+
+## <a name="see-also"></a>関連項目
+
+- [Visual Studio IDE のカスタマイズ (Windows)](/visualstudio/ide/personalizing-the-visual-studio-ide)

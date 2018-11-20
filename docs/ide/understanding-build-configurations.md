@@ -27,16 +27,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bb8395d0e0a3b7d4295577cd86568cf15f0db3d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a3e361b407d013f27f3cf76d1ff0da98aa36c3c8
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49901191"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349050"
 ---
 # <a name="understand-build-configurations"></a>ビルド構成について
 
 異なる種類のビルドに使用できるように、ソリューションおよびプロジェクト プロパティの異なる構成を保存することができます。 構成を作成、選択、変更、または削除するには、**構成マネージャー**を使用できます。 構成マネージャーを開くには、メニュー バーで、**[ビルド]** > **[構成マネージャー]** の順にクリックするか、**[クイック起動]** ボックスに「**構成**」と入力します。 また、**[標準]** ツール バーの **[ソリューション構成]** ボックスの一覧を使用して構成を選択することも、**[構成マネージャー]** を開くこともできます。
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、[Visual Studio for Mac でのビルド構成](/visualstudio/mac/configurations)に関するページを参照してください。
 
 > [!NOTE]
 > ツール バーでソリューション構成設定を見つけることができず、**[構成マネージャー]** にアクセスできないときは、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 開発設定を適用できます。 詳細については、「[方法: Visual Basic 開発者設定が適用された構成を管理する](../ide/how-to-manage-build-configurations-with-visual-basic-developer-settings-applied.md)」を参照してください。
@@ -51,7 +54,7 @@ ms.locfileid: "49901191"
 
 > [!NOTE]
 > 新しいソリューション構成を定義して **[新しいプロジェクト構成を作成する]** チェック ボックスをオンにした場合、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、すべてのプロジェクトに新しい構成が自動的に割り当てられます。 同様に、新しいソリューション プラットフォームを定義して **[新しいプロジェクト プラットフォームを作成する]** チェック ボックスをオンにした場合、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、すべてのプロジェクトに新しいプラットフォームが自動的に割り当てられます。 また、新しいプラットフォームを対象とするプロジェクトを追加すると、Visual Studio により、そのプラットフォームがソリューション プラットフォームの一覧に追加され、すべてのプロジェクトに割り当てられます。
-> 
+>
 > その場合も、各プロジェクトの設定は変更できます。
 
 アクティブなソリューション構成には、IDE 用にコンテキストを用意する役割もあります。 たとえば、プロジェクトでの作業中に、プロジェクトがモバイル デバイス用にビルドされるように構成で指定されていると、モバイル デバイス プロジェクトで使用できる項目のみが **[ツールボックス]** に表示されます。
@@ -92,3 +95,4 @@ ms.locfileid: "49901191"
 - [ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)
 - [C/C++ ビルドのリファレンス](/cpp/build/reference/c-cpp-building-reference)
 - [Devenv コマンド ライン スイッチ](../ide/reference/devenv-command-line-switches.md)
+- [ビルド構成 (Visual Studio for Mac)](/visualstudio/mac/configurations)

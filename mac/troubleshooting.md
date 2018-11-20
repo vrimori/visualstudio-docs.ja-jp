@@ -1,17 +1,17 @@
 ---
-title: Visual Studio for Mac のトラブルシューティング
+title: トラブルシューティング
 description: Visual Studio for Mac ユーザーのための一般的な問題と解決策です。
 ms.topic: troubleshooting
 author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: CE860D79-E29E-4B93-B094-BE74B35FC1C2
-ms.openlocfilehash: 6d8edc7942b460c4c11e20bc9a0c5cae204328cf
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 3a5ea59e6f98891cd113ccad9a74038ca52cccf8
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224208"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51294644"
 ---
 # <a name="troubleshooting"></a>トラブルシューティング
 
@@ -27,7 +27,7 @@ ms.locfileid: "43224208"
 
 ![例外に関する詳細情報を表示する](media/troubleshooting-image2.png)
 
-**[詳細の表示]** ダイアログが開き、例外に関する詳細情報が表示されます。
+**[詳細の表示]** ダイアログが表示され、例外に関する詳細情報が示されます。
 
 ![詳細ダイアログを表示する](media/troubleshooting-image3.png)
 
@@ -46,3 +46,7 @@ ms.locfileid: "43224208"
 11. コピー ボタン。`exception.ToString()` の出力をクリップボードにコピーします。
 
 これらのセクションの一部は、例外が内部例外である場合にのみ表示されることに注意してください。
+
+## <a name="see-also"></a>関連項目
+
+- [IDE に関するエラーのトラブルシューティング用のリソース (Windows の Visual Studio)](/visualstudio/ide/reference/resources-for-troubleshooting-integrated-development-environment-errors)

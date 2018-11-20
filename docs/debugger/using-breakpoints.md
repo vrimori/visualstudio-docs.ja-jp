@@ -36,15 +36,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 37e34d01d2488ad5345ff65237cd708c06764661
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: bd522a5f5ff39814df3526843ae7d03578f92e86
+ms.sourcegitcommit: 331dbb12e11fcd7f5d15fab05f3c861e48126e43
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49816685"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51826844"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでブレークポイントを使用します。
-ブレークポイントは、開発者のツールボックスで最も重要なデバッグ手法の 1 つです。 デバッガーの実行を一時停止したい場所にブレークポイントを設定するとします。 たとえば、コードの変数の状態を参照してください。 または、特定のブレークポイントで呼び出し履歴を確認する可能性があります。  
+ブレークポイントは、開発者のツールボックスで最も重要なデバッグ手法の 1 つです。 デバッガーの実行を一時停止したい場所にブレークポイントを設定するとします。 たとえば、コードの変数の状態を参照してください。 または、特定のブレークポイントで呼び出し履歴を確認する可能性があります。 コードのデバッグを試みるのが今回初めてである場合は、この記事を先に進む前に[超初心者向けのデバッグ方法](../debugger/debugging-absolute-beginners.md)に関するページを参照することをお勧めします。
   
 ##  <a name="BKMK_Overview"></a> ソース コードにブレークポイントを設定  
  ブレークポイントは、実行可能ファイルの任意のコード行に設定できます。 などの次の c# コード、する可能性がありますにブレークポイントを設定変数の宣言、`for`ループ、または任意のコード内で、`for`ループします。 名前空間またはクラス宣言、またはメソッド シグネチャでは、ブレークポイントを設定できません。  
@@ -235,8 +235,8 @@ ms.locfileid: "49816685"
  >- ネイティブ コードは、デバッガーは最初の評価でブレークポイントにヒットしないように変更する条件の最初の評価を考慮しません。 
  >- マネージ コード用デバッガーが後の最初の評価でブレークポイントに到達**変更されたときに**が選択されています。  
   
-### <a name="using-object-ids-in-conditional-expressions-c-and-f-only"></a>条件付きの式 (c# および f# ではのみ) でオブジェクト Id の使用  
- 特定のオブジェクトの動作を確認したい場合もあります。 たとえば、理由、オブジェクトがコレクションに複数回挿入されたことを確認します。 オブジェクト Id の特定のインスタンスを作成する c# および f# で[参照型](/dotnet/csharp/language-reference/keywords/reference-types)、し、ブレークポイントの条件で使用します。 オブジェクト ID は、共通言語ランタイム (CLR) のデバッグ サービスで生成されて、オブジェクトに関連付けられます。  
+### <a name="using-object-ids-in-conditional-expressions-c-and-f-only"></a>条件式でオブジェクト Id の使用 (C#とF#のみ)  
+ 特定のオブジェクトの動作を確認したい場合もあります。 たとえば、理由、オブジェクトがコレクションに複数回挿入されたことを確認します。 C#とF#、オブジェクト Id の特定のインスタンスを作成する[参照型](/dotnet/csharp/language-reference/keywords/reference-types)、し、ブレークポイントの条件で使用します。 オブジェクト ID は、共通言語ランタイム (CLR) のデバッグ サービスで生成されて、オブジェクトに関連付けられます。  
 
 **オブジェクト ID を作成します。** 
   
@@ -305,5 +305,7 @@ ms.locfileid: "49816685"
 トレース ポイントがソース コードの左余白に赤い菱形で表示および**ブレークポイント**windows。 
   
 ## <a name="see-also"></a>関連項目  
-[Visual Studio デバッガーでブレークポイントをトラブルシューティングします。](../debugger/troubleshooting-breakpoints.md)  
-[デバッガーでコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)
+ [何をデバッグするとしますか。](../debugger/what-is-debugging.md)  
+ [優れたC#Visual Studio を使用するコード](../debugger/write-better-code-with-visual-studio.md)  
+ [デバッグの概要](../debugger/debugger-feature-tour.md)  
+ [Visual Studio デバッガーでブレークポイントをトラブルシューティングします。](../debugger/troubleshooting-breakpoints.md)  

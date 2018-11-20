@@ -5,12 +5,12 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: 75247EB8-323A-4AFD-A451-6703A03D5D1F
-ms.openlocfilehash: dbfff9dcb03958ce2a8aa6bd2d2940ee79908dee
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 8d6a45f8cdd46483dda5ef252a6235e7eb2f0a04
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224328"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296321"
 ---
 # <a name="managing-project-and-solution-properties"></a>プロジェクトおよびソリューションのプロパティの管理
 
@@ -20,9 +20,9 @@ ms.locfileid: "43224328"
 
 Visual Studio for Mac の [プロジェクト オプション] を開くには、プロジェクト名をダブルクリックするか、右クリックしてコンテキスト メニューを開き、**[オプション]** を選択します。
 
- ![コンテキスト メニューの [オプション]](media/projects-and-solutions-image2.png)
+![コンテキスト メニューの [オプション]](media/projects-and-solutions-image2.png)
 
-編集可能なオプションとして、ソース コードのビルド、実行、および設定のオプションと、バージョン管理のオプションがあります。
+編集可能なオプションとして、ソース コードのビルド、実行、および設定のオプションと、バージョン コントロールのオプションがあります。
 
 [プロジェクト オプション] は 5 つのカテゴリに分かれています。
 
@@ -34,14 +34,18 @@ Visual Studio for Mac の [プロジェクト オプション] を開くには�
 
 各プロジェクトには、プラットフォームごとに異なるプロジェクト オプションを含めることができます。 たとえば、次の図のような Xamarin.Android プロジェクトの場合、Android ビルドに関連するオプション (リンカー オプションなど) や、アプリケーションに関連するオプション (アクセス許可など) があります。
 
- ![Android プロジェクトのオプション](media/projects-and-solutions-image5.png)
+![Android プロジェクトのオプション](media/projects-and-solutions-image5.png)
 
 Xamarin.iOS には、バンドルの署名に関連するオプション (使用する必須のプロビジョニング プロファイルなど) があります。
 
- ![iOS プロジェクトのオプション](media/projects-and-solutions-image6.png)
+![iOS プロジェクトのオプション](media/projects-and-solutions-image6.png)
 
-## <a name="solution-options"></a>ソリューション オプション 
+## <a name="solution-options"></a>ソリューション オプション
 
 ソリューション オプションは、プロジェクト オプションと似ていますが、スコープはソリューション全体です。 ソリューション オプションでは、作成者情報、ビルド設定、コードの書式スタイル、バージョン管理を設定できます。また、ソリューションのスタートアップ プロジェクトを割り当てることもできます。  [ソリューション オプション] ダイアログには、**[プロジェクト] > [ソリューション オプション]** メニュー項目、ソリューション パッドの [ソリューション] のコンテキスト メニュー項目である **[オプション]**、または Solution Pad の [ソリューション] のダブルクリックでアクセスできます。
 
- ![ソリューション オプション](media/projects-and-solutions-image7.png)
+![ソリューション オプション](media/projects-and-solutions-image7.png)
+
+## <a name="see-also"></a>関連項目
+
+* [プロジェクトおよびソリューションのプロパティの管理 (Windows の Visual Studio)](/visualstudio/ide/managing-project-and-solution-properties)

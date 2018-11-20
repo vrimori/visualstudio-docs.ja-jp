@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a4db887a3e27d995229da6d954c4b3f66173e9e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: aa469b109e0e22e426d76f75be50309196c6a264
+ms.sourcegitcommit: 331dbb12e11fcd7f5d15fab05f3c861e48126e43
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49897356"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51826792"
 ---
 # <a name="watch-variables-with-watch-windows-and-quickwatch"></a>ウォッチ ウィンドウと クイック ウォッチ変数なウォッチ 
 
@@ -278,5 +278,6 @@ static void Main(string[] args)
 1. デバッグを続行します。 内の変数を観察できます、**ウォッチ**ウィンドウ。
 
 ## <a name="see-also"></a>関連項目
-
-[デバッガー ウィンドウ](../debugger/debugger-windows.md)
+ [何をデバッグするとしますか。](../debugger/what-is-debugging.md)  
+ [優れたC#Visual Studio を使用するコード](../debugger/write-better-code-with-visual-studio.md)  
+ [最初に、デバッグについて](../debugger/debugger-feature-tour.md)[デバッガー ウィンドウ](../debugger/debugger-windows.md)

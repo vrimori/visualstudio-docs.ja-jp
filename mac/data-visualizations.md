@@ -6,12 +6,12 @@ ms.author: crdun
 ms.date: 05/06/2018
 ms.technology: vs-ide-debug
 ms.assetid: 527E6BEC-EF15-4002-ACB5-62AE1C16F6B7
-ms.openlocfilehash: f2d9e05a9325073e2844b0cdce97f2cfb480b880
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 896fa055c536f9f3ee693773ad4f4ae0edd7e7fe
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43223992"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349440"
 ---
 # <a name="data-visualizations"></a>データの視覚化
 
@@ -19,50 +19,46 @@ Visual Studio for Mac では、デバッガー用の UI がサポートされて
 
 行にマウス カーソルを移動したときに値の右に表示されるプレビュー アイコンをクリックすると、デバッグのビジュアライザーである **[ローカル]** パッドが表示されます。
 
- ![[ローカル] パッド](media/data-visualizations-image9.png)
+![[ローカル] パッド](media/data-visualizations-image9.png)
 
 ここでは、Visual Studio for Mac でデバッグするときに使用できる多数の新しい視覚化について説明します。
 
 ## <a name="point"></a>ポイント
 Point/PointF (iOS と Mac では CGPoint) は、X 値と Y 値を示すタプルとしてデバッグ パッドにレンダリングされます。
 
- ![ポイントの視覚化](media/data-visualizations-image10.png)
+![ポイントの視覚化](media/data-visualizations-image10.png)
 
 ## <a name="size"></a>サイズ
 Size/SizeF (iOS と Mac では CGSize) は、四角形としてレンダリングされます。 250 px を超えるディメンションまで拡大縮小して描画され、そこに 250 px の最大ディメンションに拡大縮小して四角形が表示されます。
 
-![サイズの視覚化](media/data-visualizations-image11.png)
-
+[サイズの視覚化](media/data-visualizations-image11.png)
 
 ## <a name="rectangle"></a>四角形
 Rectangle/RectangleF (iOS と Mac では CGRect) は、ディメンションと原点を表示します。 Size と同様に、250 px を超えるディメンションまで拡大縮小して描画されます。
 
- ![四角形の視覚化](media/data-visualizations-image12.png)
+![四角形の視覚化](media/data-visualizations-image12.png)
 
 ## <a name="coordinate"></a>座標
 中央の位置にピン留めされた状態で、座標がマップにプロットされます。
 
-![座標の視覚化](media/data-visualizations-image13.png)
+[座標の視覚化](media/data-visualizations-image13.png)
 
 ## <a name="color"></a>色
 色のプレビュー、RGBA コンポーネント、色相値-彩度値-輝度値、および色の 16 進値を示す UIColor、CGColor、および Color のプロパティが表示されます。
 
 ![色の視覚化](media/data-visualizations-image14.png)
 
-
 ## <a name="images"></a>イメージ
 
 メディアは、250 px の最大ディメンションまで拡大縮小してレンダリングされ、画像が 250 px を超える場合は 250 px に合わせて縮小表示されます。
 
- ![画像の視覚化](media/data-visualizations-image15.png)
-
+![画像の視覚化](media/data-visualizations-image15.png)
 
 ## <a name="bezier-curves"></a>ベジエ曲線
 
 ビジュアライザーには `NSBezierPath` が表示されます。
 
 ![ベジエ曲線の視覚化](media/data-visualizations-image16.png)
-
 
 ## <a name="string"></a>String
 
@@ -78,7 +74,7 @@ Rectangle/RectangleF (iOS と Mac では CGRect) は、ディメンションと�
 
 ### <a name="editor"></a>エディター:
 
- ![エディターの視覚化](media/data-visualizations-image21.png)
+![エディターの視覚化](media/data-visualizations-image21.png)
 
 ## <a name="ienumerable"></a>IEnumerable
 
@@ -90,7 +86,7 @@ IEnumerable はすべての値を列挙します。各値は、**[値の表示]*
 
 独自のインライン ビジュアライザーがあるその他の種類を紹介します。
 
- ![その他の視覚化](media/data-visualizations-image23.png)
+![その他の視覚化](media/data-visualizations-image23.png)
 
 *   **Primitives**
     *   基本型の生の値が表示されます。
@@ -104,3 +100,8 @@ IEnumerable はすべての値を列挙します。各値は、**[値の表示]*
     *   クリック可能なハイパーリンクが表示されます。
 *   **IntPtr**
     *   IntPtr の 16 進表現が表示されます。
+
+## <a name="see-also"></a>関連項目
+
+- [[自動変数] ウィンドウと [ローカル] ウィンドウの変数の検査 (Windows 上の Visual Studio)](/visualstudio/debugger/autos-and-locals-windows)
+- [ビジュアライザーで文字列を表示する (Windows 上の Visual Studio)](/visualstudio/debugger/string-visualizer-dialog-box)

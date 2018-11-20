@@ -11,18 +11,18 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: cbdf9b6890613cc4ad41af77e27f7f41c6f5c9da
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 3245cd647f5da391bb0e36afc65d867137618808
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50219849"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349337"
 ---
 # <a name="python-web-application-project-templates"></a>Python Web アプリケーション プロジェクト テンプレート
 
 Visual Studio の Python は、さまざまなフレームワークを処理するように構成できるプロジェクト テンプレートとデバッグ ランチャーにより、Bottle、Flask、Django などのフレームワークでの Web プロジェクトの開発をサポートします。 これらのテンプレートには、必要な依存関係を宣言する *requirements.txt* が含まれています。 これらのテンプレートのいずれかを基にプロジェクトを作成する場合は、それらのパッケージをインストールするように Visual Studio から求められます (この記事で後述する「[プロジェクト要件をインストールする](#install-project-requirements)」を参照してください)。
 
-Pyramid などの他のフレームワークには、汎用の **Web プロジェクト** テンプレートを使用できます。 この場合、フレームワークはテンプレートと一緒にインストールされません。 そのため、プロジェクトで使用する環境に必要なパッケージをインストールします ([Python 環境の管理](managing-python-environments-in-visual-studio.md)に関する記事を参照してください)。
+Pyramid などの他のフレームワークには、汎用の **Web プロジェクト** テンプレートを使用できます。 この場合、フレームワークはテンプレートと一緒にインストールされません。 そのため、プロジェクトで使用する環境に必要なパッケージをインストールします ([「[Python 環境] ウィンドウ」の「[パッケージ] タブ」](python-environments-window-tab-reference.md#packages-tab)を参照してください)。
 
 Python Web アプリを Azure にデプロイする方法については、「[Azure App Service への発行](publishing-python-web-applications-to-azure-from-visual-studio.md)」を参照してください。
 
@@ -44,7 +44,7 @@ Python Web アプリを Azure にデプロイする方法については、「[A
 | --- | --- |
 | **Blank Bottle Web プロジェクト** | *app.py* に対するホーム ページと、非常に短いインライン ページ テンプレートを使用して `/` にエコーする `/hello/<name>` ページとを備えた最小限のアプリを `<name>` 内に生成します。 |
 | **空の Django Web プロジェクト** | コア Django サイト構造を持つが Django アプリが含まれない Django プロジェクトを生成します。 詳細については、[Django テンプレート](python-django-web-application-project-template.md)に関する記事と [Django 手順 1](learn-django-in-visual-studio-step-01-project-and-solution.md)に関する記事を参照してください。 |
-| **Blank Flask Web プロジェクト** | "Hello World!" を 1 つ使用した最小限のアプリを生成します。 ページの`/`します。 このアプリは、[クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json)に関する記事で詳細説明した手順を実行して得られた結果と類似しています。 [Flask の詳細情報の手順 1](learn-flask-visual-studio-step-01-project-solution.md) に関するページも参照してください。
+| **Blank Flask Web プロジェクト** |  "Hello World!" を 1 つ使用した最小限のアプリを生成します。 ページの`/`します。 このアプリは、[クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json)に関する記事で詳細説明した手順を実行して得られた結果と類似しています。 [Flask の詳細情報の手順 1](learn-flask-visual-studio-step-01-project-solution.md) に関するページも参照してください。
 
 ### <a name="web-group"></a>Web グループ
 

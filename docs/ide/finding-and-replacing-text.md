@@ -33,12 +33,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f6359585f13a4086a332d8a4dbcc3c435aeaa26
-ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
+ms.openlocfilehash: 6120d1ece56e24712fd1217090159ec627f88d61
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44384241"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349102"
 ---
 # <a name="find-and-replace-text"></a>テキストの検索と置換
 
@@ -93,6 +93,9 @@ ms.locfileid: "44384241"
 
 ## <a name="multi-caret-selection"></a>マルチキャレット選択
 
+> [!NOTE]
+> このセクションは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、「[ブロック選択](/visualstudio/mac/block-selection)」を参照してください。
+
 **Visual Studio 2017 バージョン 15.8 の新機能**
 
 *マルチ キャレット選択* を使用して、複数の場所で同時に同じ編集を行うことができます。 たとえば、同時に複数の場所で同じテキストを挿入したり、既存のテキストを変更したりすることができます。
@@ -130,3 +133,4 @@ ms.locfileid: "44384241"
 
 - [Visual Studio での正規表現の使用](../ide/using-regular-expressions-in-visual-studio.md)
 - [Visual Studio でのコードのリファクタリング](../ide/refactoring-in-visual-studio.md)
+- [ブロック選択 (Visual Studio for Mac)](/visualstudio/mac/block-selection)
