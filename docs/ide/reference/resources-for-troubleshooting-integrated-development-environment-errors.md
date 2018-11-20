@@ -95,16 +95,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bcb994c0ee79cb36e1c2e2db792346842194c73
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 5dcdcffbcf947efa7da8471a970d07a23fe90ba4
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176542"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349290"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>統合開発環境に関するエラーのトラブルシューティング情報
 
 一部のエラー メッセージには、関連する固有のヘルプ トピックがありません。 エラー メッセージの情報では問題を解決できなかった場合は、サポート技術情報の文書、フォーラム、製品サポートなど、その他のリソースを利用できます。
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、「[トラブルシューティング (Visual Studio for Mac)](/visualstudio/mac/troubleshooting)」を参照してください。
 
 ## <a name="knowledge-base-articles"></a>サポート技術情報の文書
 
@@ -123,3 +126,4 @@ ms.locfileid: "39176542"
 ## <a name="see-also"></a>関連項目
 
 * [ネットワーク関連のエラーまたはプロキシ エラーをトラブルシューティングする](../../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md#troubleshoot-network-related-errors)
+* [トラブルシューティング (Visual Studio for Mac)](/visualstudio/mac/troubleshooting)

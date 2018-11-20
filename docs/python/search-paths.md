@@ -1,7 +1,7 @@
 ---
 title: Python 検索パスの適用方法
 description: Visual Studio で環境とプロジェクトの両方で Python 検索パスが使用されるしくみの概要。
-ms.date: 10/29/2018
+ms.date: 11/12/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e3a52579a5b22308c4255cbe41617bc37f47bbab
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: ab55c7cf1daa02416e6192a02a01ee3f9a35f6f0
+ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50219979"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607902"
 ---
 # <a name="how-visual-studio-uses-python-search-paths"></a>Visual Studio による Python 検索パスの使用方法
 
@@ -30,13 +30,19 @@ ms.locfileid: "50219979"
 
 そのため Visual Studio では、環境とプロジェクトの両方で検索パスを直接指定するための手段が用意されています。 Visual Studio で実行またはデバッグするコードは、検索パスを `PYTHONPATH` (およびその他の同等の変数) の値で受け取ります。 検索パスを追加すると、Visual Studio はそれらの場所でライブラリを検査し、必要に応じて IntelliSense データベースを構築します (Visual Studio 2017 バージョン 15.5 以前、ライブラリの数によっては時間がかかります)。
 
-検索パスを追加するには、**ソリューション エクスプローラー**で **[Search Paths (検索パス)]** 項目を右クリックし、**[Add Folder to Search Path (検索パスへのフォルダーの追加)]** を選んで、含めるフォルダーを選びます。 このパスは、プロジェクトに関連付けられているすべての環境に使われます。 (環境が Python 3 ベースの場合に、検索パスを Python 2.7 モジュールに追加しようとすると、エラーが発生することがあります。)
+検索パスを追加するには、**ソリューション エクスプローラー**に移動し、プロジェクト ノードを展開し、**[検索パス]** を右クリックして **[フォルダーを検索パスに追加]** を選択します。
 
-**[Add Zip Archive to Search Path (検索パスへの Zip アーカイブの追加)]** を選ぶことで、拡張子が *.zip* または *.egg* のファイルを検索パスとして追加することもできます。 フォルダーと同様に、これらのファイルの内容もスキャンされて、IntelliSense に利用されます。
+![ソリューション エクスプローラーの [検索パス] 上の [フォルダーを検索パスに追加] コマンド](media/search-paths-command.png)
 
-常に同じ検索パスを使い、内容があまり変化しない場合は、サイトパッケージ フォルダーにインストールする方が効率的な場合があります。 検索パスは分析されて IntelliSense データベースに格納され、常に適切な環境に関連付けられるため、各プロジェクトに検索パスを追加する必要はありません。
+このコマンドでブラウザーが表示されます。ここで、含めるフォルダーを選択します。
 
-### <a name="see-also"></a>関連項目
+`PYTHONPATH` 環境変数に必要なフォルダーが既に含まれている場合は、便利なショートカットとして **[PYTHONPATH を検索パスに追加]** を使用してください。
+
+フォルダーが検索パスに追加されると、Visual Studio ではプロジェクトに関連付けられているすべての環境にそれらのパスが使用されます。 (環境が Python 3 ベースの場合に、検索パスを Python 2.7 モジュールに追加しようとすると、エラーが発生することがあります。)
+
+**[Zip アーカイブを検索パスに追加]** コマンドを選択することで、拡張子が *.zip* または *.egg* のファイルを検索パスとして追加することもできます。 フォルダーと同様に、これらのファイルの内容もスキャンされて、IntelliSense に利用されます。
+
+## <a name="see-also"></a>関連項目
 
 - [Visual Studio での Python 環境の管理](managing-python-environments-in-visual-studio.md)
 - [プロジェクトのインタープリターの選択](selecting-a-python-environment-for-a-project.md)

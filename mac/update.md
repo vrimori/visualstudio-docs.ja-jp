@@ -6,14 +6,14 @@ ms.author: crdun
 ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: DB8DC9FE-FF21-4061-8A96-3F9FC08A4F8F
-ms.openlocfilehash: e363d02c7d84d80a3a60d54e13ff2a5341145dc5
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 6f60b32b66dc2c33a0ecbcd71f80fd613d273b64
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224121"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51294404"
 ---
-# <a name="updating-visual-studio-for-mac"></a>Visual Studio for Mac を更新する
+# <a name="update-visual-studio-for-mac"></a>Visual Studio for Mac を更新する
 
 Visual Studio for Mac では、IDE およびサポートされているフレームワークに対する更新プログラムが定期的に配布されます。 これらの更新プログラムは、新機能、機能向上、およびバグ修正の形式になっています。
 
@@ -26,7 +26,7 @@ Visual Studio for Mac では、3 つのチャネルでこれらの最新バー�
 
 **[Visual Studio の更新]** ボックスを使って、新しい更新プログラムの確認、チャネルの変更、更新プログラムのダウンロードとインストールを行うことができます。
 
-**[Visual Studio の更新]** を開くには、**[Visual Studio] > [更新の確認]** の順に選びます。
+**[Visual Studio の更新]** を開くには、**[Visual Studio] > [更新の確認]** の順に移動します。
 
 ![[更新の確認] オプション](media/update-image1.png)
 
@@ -51,3 +51,7 @@ Visual Studio for Mac では、3 つのチャネルでこれらの最新バー�
 ![更新プログラムのインストールを開始するボタン](media/update-image4.png)
 
 インストールの必要なコンポーネントによっては、追加のライセンスを受け入れるか、コンピューターの管理者のユーザー名とパスワードを入力することが必要になる場合があります。
+
+## <a name="see-also"></a>関連項目
+
+- [Visual Studio を更新する (Windows)](/visualstudio/install/update-visual-studio)

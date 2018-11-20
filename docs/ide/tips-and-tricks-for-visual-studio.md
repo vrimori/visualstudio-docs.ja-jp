@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cde519515782f453a8a60894a8bcc6dc6c714cc1
-ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
+ms.openlocfilehash: 039d0caac98bdb574f2e42303ccb001e9600a740
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51220854"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51348944"
 ---
 # <a name="keyboard-shortcuts-for-visual-studio"></a>Visual Studio のキーボード ショートカット
 
@@ -22,6 +22,9 @@ Visual Studio では、この記事のキーボード ショートカットを�
 
 > [!TIP]
 > ここでは、使用できるキーボード ショートカットの一部を紹介しています。 詳細については、[既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)に関するページを参照してください。
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、「[Visual Studio for Mac の一般的なキーボード ショートカット](/visualstudio/mac/keyboard-shortcuts)」を参照してください。
 
 ## <a name="window-management"></a>ウィンドウの管理
 
@@ -136,4 +139,5 @@ Visual Studio では、この記事のキーボード ショートカットを�
 
 - [アクセシビリティのヒントとテクニック](../ide/reference/accessibility-tips-and-tricks.md)
 - [キーボード ショートカット (Azure DevOps Services と TFS)](/azure/devops/project/navigation/keyboard-shortcuts?view=vsts)
-- [Visual Studio のヒントとテクニックに関するブログ](https://blogs.msdn.com/b/zainnab)
+- [Visual Studio のヒントとテクニックに関するブログ](https://blogs.msdn.microsoft.com/zainnab/)
+- [Visual Studio for Mac の一般的なキーボード ショートカット](/visualstudio/mac/keyboard-shortcuts)

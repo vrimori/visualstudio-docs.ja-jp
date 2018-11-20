@@ -5,12 +5,12 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: 852B6A9D-AEFA-4EF4-A5DD-94A506019D20
-ms.openlocfilehash: bb5a91929238452041a67942cff99973637d51af
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 10d5b34ece7d093a42bafc1f0e410b670dd342f1
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43223959"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296451"
 ---
 # <a name="working-with-git"></a>Git の使用
 
@@ -24,7 +24,7 @@ Git は、チームが同じドキュメントで同時に作業できるよう�
 
 ![[バージョン コントロール] メニュー項目](media/version-control-gitVersionControlMenu.png)
 
-## <a name="push-and-pull"></a>プッシュおよびプル 
+## <a name="push-and-pull"></a>プッシュおよびプル
 
 プッシュとプルは、Git 内で最もよく使用される 2 つのアクションです。 リモート リポジトリに他のユーザーが行った変更を同期するためには、そこから**プル**する必要があります。 これを行うには、Visual Studio for Mac で **[バージョン コントロール] > [ソリューションの更新]** を選択します。
 
@@ -54,11 +54,11 @@ Git は、チームが同じドキュメントで同時に作業できるよう�
 
     ![[ログ] タブ](media/version-control-gitLog.png)
 
-* **マージ** - 作業内容をコミットするときに競合のマージがある場合にこれを使用することができます。 自分や他の開発者が行った変更視覚的に表現し、コードの両方のセクションを正常に結合することができます。 
+* **マージ** - 作業内容をコミットするときに競合のマージがある場合にこれを使用することができます。 自分や他の開発者が行った変更視覚的に表現し、コードの両方のセクションを正常に結合することができます。
 
-## <a name="switching-branches"></a>ブランチの切り替え 
+## <a name="switching-branches"></a>ブランチの切り替え
 
-既定では、リポジトリに作成された最初のブランチは、**マスター** ブランチと呼ばれます。 マスター ブランチと他のブランチの間に技術的な違いは何もありませんが、マスター ブランチは開発チームで最も頻繁に "ライブ" または "運用" ブランチと見なされるブランチです。
+既定では、リポジトリに作成された最初のブランチは、 **マスター**  ブランチと呼ばれます。 マスター ブランチと他のブランチの間に技術的な違いは何もありませんが、マスター ブランチは開発チームで最も頻繁に "ライブ" または "運用" ブランチと見なされるブランチです。
 
 マスター (またはそのマスターの他のブランチ) から分岐することで独立した開発ラインを作成することができます これにより、その時点の新しいバージョンのマスター ブランチが提供され、"ライブ" とは別に開発できるようになります。 ソフトウェア開発における機能では頻繁にこの方法でブランチを使用します。
 
@@ -80,7 +80,7 @@ Solution Pad でプロジェクト名の横にある現在のブランチを参�
 
  ![ソリューション パッドに表示された現在のブランチ](media/version-control-gitBranchName.png)
 
-## <a name="reviewing-and-committing"></a>確認とコミット 
+## <a name="reviewing-and-committing"></a>確認とコミット
 
 ファイルの変更を確認するには、このトピックで前に示した、各ドキュメントの [変更]、[変更履歴]、[ログ]、[マージ] タブを使用します。
 
@@ -95,3 +95,7 @@ Solution Pad でプロジェクト名の横にある現在のブランチを参�
 ![ファイルをコミットする](media/version-control-gitCommit.png)
 
 変更をコミットした後、他のユーザーが表示できるようにそれらをリモート リポジトリにプッシュします。
+
+## <a name="see-also"></a>関連項目
+
+* [Visual Studio 2017 と Azure Repos Git を使用してコードを共有する](/azure/devops/repos/git/share-your-code-in-git-vs-2017)

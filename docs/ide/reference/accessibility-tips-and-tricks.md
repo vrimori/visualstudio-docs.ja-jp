@@ -13,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 57898fbcfba72c67b199ea584d494cb96dfbf491
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 473f46e87ded78e134ab021b68c57248f8ac1a33
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49811842"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349206"
 ---
 # <a name="accessibility-tips-and-tricks-for-visual-studio"></a>Visual Studio のアクセシビリティのヒントとテクニック
 
@@ -26,6 +26,9 @@ ms.locfileid: "49811842"
 > 最近実施されたアクセシビリティの更新の詳細については、ブログ投稿の「[Accessibility improvements in Visual Studio 2017 version 15.3 (Visual Studio 2017 バージョン 15.3 でのアクセシビリティの機能強化)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/accessibility-improvements-in-visual-studio-2017-version-15-3/)」をご覧ください。
 
 Visual Studio には、スクリーン リーダーやその他の支援テクノロジと互換性を持つユーザー補助機能が組み込まれています。 このトピックでは、キーボードのみを使用してタスクを実行するためによく使用されるショートカット キーの組み合わせを一覧すると共に、見やすさを改善するためのハイ コントラストのテーマの使用に関する情報を提供します。 さらに、注釈を使用してコードに関する有用な情報を表示する方法と、ビルドおよびブレークポイントのイベントに対してサウンド キューを設定する方法についても説明します。
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、[Visual Studio for Mac のユーザー補助機能](/visualstudio/mac/accessibility)に関するページを参照してください。
 
 ## <a name="save-your-ide-settings"></a>IDE 設定を保存する
 
@@ -104,3 +107,4 @@ Windows のサウンド アプレットを使用して、Visual Studio プログ
 * [方法: Visual Studio でメニューおよびツール バーをカスタマイズする](../../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)
 * [Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)
 * [Microsoft ユーザー補助機能](https://www.microsoft.com/Accessibility)
+* [ユーザー補助 (Visual Studio for Mac)](/visualstudio/mac/accessibility)

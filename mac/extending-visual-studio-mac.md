@@ -6,12 +6,12 @@ ms.author: crdun
 ms.date: 04/14/2017
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
-ms.openlocfilehash: 83d5eac54560d9c0c1960808d39a909858db323d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 8212039cd4f83cd9ea2b53a1050f32ed5dbad367
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49900671"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295138"
 ---
 # <a name="extending-visual-studio-for-mac"></a>Visual Studio for Mac の拡張
 
@@ -23,7 +23,7 @@ Visual Studio for Mac をカスタマイズするには、Visual Studio for Mac 
 
 ![アドイン アーキテクチャ](media/extending-visual-studio-mac-addin1.png)
 
-Visual Studio for Mac から拡張機能パッケージを構築するには、Visual Studio for Mac IDE 内の既存の拡張ポイントから構築された拡張機能が必要です。 拡張機能パッケージが、アドイン ホストに定義されている拡張ポイントに依存している場合、その拡張機能パッケージに_依存関係_があると言います。
+Visual Studio for Mac から拡張機能パッケージを構築するには、Visual Studio for Mac IDE 内の既存の拡張ポイントから構築された拡張機能が必要です。 拡張機能パッケージが、アドイン ホストに定義されている拡張ポイントに依存している場合、その拡張機能パッケージに _依存関係_ があると考えられます。
 
 このモジュール式設計の利点は、Visual Studio for Mac が拡張可能であり、カスタム拡張機能パッケージを使用して構築できる拡張ポイントが多数あります。 現在の拡張機能パッケージの例として、C# および F# のサポート、デバッガー ツール、プロジェクト テンプレートなどがあります。
 
@@ -52,13 +52,13 @@ Visual Studio for Mac から拡張機能パッケージを構築するには、V
 
 ![[Insert Date]\(日付の挿入\) のスクリーンショット](media/extending-visual-studio-mac-addin13.png)
 
-また、対応する `assembly:AddinDependency ` 属性もビルド時に追加されています。 メタ データと依存関係の宣言を設定したら、拡張機能パッケージの重要な構成要素に集中できます。
+また、対応する `assembly:AddinDependency` 属性もビルド時に追加されています。 メタ データと依存関係の宣言を設定したら、拡張機能パッケージの重要な構成要素に集中できます。
 
 ## <a name="extensions-and-extension-points"></a>拡張機能と拡張ポイント
 
 拡張ポイントは、データ構造 (型) を定義するプレースホルダーです。一方、拡張機能は、特定の拡張ポイントに指定されている構造に準拠するデータを定義します。 拡張ポイントは、受け入れることができる拡張機能の種類を宣言で指定します。 拡張機能は、型名または拡張機能パスを使用して宣言します。 必要な拡張ポイントを作成する詳細な説明については、[拡張ポイントのリファレンス](https://github.com/mono/mono-addins/wiki/Extension-Points)を参照してください。
 
-拡張機能/拡張ポイント アーキテクチャでは、Visual Studio for Mac の開発の速度とモジュール式はそのまま利用できます。 
+拡張機能/拡張ポイント アーキテクチャでは、Visual Studio for Mac の開発の速度とモジュール式はそのまま利用できます。
 
 <!--Since there are a large number of extension types, this article focuses on the ones used in the extension package that was built in the [Walkthrough](~/extending-visual-studio-mac-walkthrough.md).-->
 
@@ -163,3 +163,7 @@ public enum DateInserterCommands
 
 > [!NOTE]
 > 現在、Visual Studio for Mac の機能拡張シナリオを改善するために取り組んでいます。 拡張機能の作成中に追加のヘルプや情報が必要な場合、またはフィードバックを提供したい場合は、「[Visual Studio for Mac Extension Authoring (Visual Studio for Mac の拡張機能の作成)](https://aka.ms/vsmac-extensions-survey)」フォームに記入してお知らせください。
+
+## <a name="see-also"></a>関連項目
+
+- [Visual Studio 拡張機能の開発 (Windows)](/visualstudio/extensibility/starting-to-develop-visual-studio-extensions)

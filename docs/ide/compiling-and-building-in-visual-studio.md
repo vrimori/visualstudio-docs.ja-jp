@@ -13,20 +13,20 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ce6a85ff80d8da081b0d69763ed477174de7ed4
-ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
+ms.openlocfilehash: 9d2ad9e3e6644f3f0ffc2d4fbf163968f16065f3
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863622"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349134"
 ---
 # <a name="compile-and-build-in-visual-studio"></a>Visual Studio でのコンパイルとビルド
 
-ビルドを実行してソース コードからアセンブリと実行可能アプリケーションを作成することは、開発サイクルのどの時点でも行うことができます。 基本的に、ビルド プロセスはどのプロジェクト タイプでも (Windows、ASP.NET、モバイル アプリなど)、よく似ています。 同様に、どのプログラミング言語でも (C#、Visual Basic、C++、F# など) ビルド プロセスはよく似ています。
+ソース コードをビルドすると、ビルド エンジンによってアセンブリと実行可能アプリケーションが作成されます。 基本的に、ビルド プロセスはどのプロジェクト タイプでも (Windows、ASP.NET、モバイル アプリなど)、よく似ています。 同様に、どのプログラミング言語でも (C#、Visual Basic、C++、F# など) ビルド プロセスは似ています。
 
-コードを何度もビルドすることによって、構文の誤り、キーワードのスペルミス、型の不一致などのコンパイル時エラーをすばやく特定できます。 また、ロジック エラーやセマンティック エラーなどの実行時エラーについても、コードのデバッグ バージョンのビルドと実行を繰り返すことによってすばやく検出して修正できます。
+コードを何度もビルドすることによって、構文の誤り、キーワードのスペルミス、型の不一致などのコンパイル時エラーをすばやく特定できます。 また、コードのデバッグ バージョンをビルドして実行することにより、ロジック エラーやセマンティック エラーなどの実行時エラーを検出して修正できます。
 
-ビルドに成功することは、実質的には検証です。つまり、アプリケーションのソース コードの構文が正しいことと、ライブラリやアセンブリなどのコンポーネントへの静的参照がすべて解決済みであることが確認されます。 この結果としてアプリケーション実行可能ファイルが生成されるので、次にこれをテストします。[デバッグ環境](../debugger/index.md)で正しく機能することを確認するとともに、手動と自動のさまざまなテストを通して[コードの品質を検証](../test/improve-code-quality.md)します。 アプリケーションのテストが完了したら、リリース バージョンをコンパイルしてユーザーにリリースします。 このプロセスの入門資料については、「[チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)」を参照してください。
+ビルドの成功とは、アプリケーションのソース コードの構文が正しいことと、ライブラリやアセンブリなどのコンポーネントへの静的参照をすべて解決できることの確認です。 アプリケーション実行可能ファイルが生成されます。[デバッグ環境](../debugger/index.md)だけでなく、手動と自動のさまざまなテストを通して[コードの品質を検証](../test/improve-code-quality.md)して、正しく機能することをテストできます。 アプリケーションのテストが完了したら、リリース バージョンをコンパイルしてユーザーにリリースします。 このプロセスの入門資料については、「[チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)」を参照してください。
 
 Visual Studio IDE、MSBuild コマンド ライン ツール、Azure Pipelines のいずれかの方法を使用して、アプリケーションをビルドすることができます。
 
@@ -37,6 +37,9 @@ Visual Studio IDE、MSBuild コマンド ライン ツール、Azure Pipelines �
 | Azure Pipelines | - ビルド プロセスを継続的インテグレーション/継続的デリバリー パイプラインの一部として自動化できます。<br />- 自動テストをすべてのビルドに適用します。<br />- クラウド ベースのリソースをほぼ無制限にビルド プロセスに使用できます。<br />- ビルド ワークフローの変更やビルド アクティビティの作成が可能です。実行するタスクを大幅にカスタマイズできます。|
 
 このセクションでは、IDE ベースのビルド プロセスを詳しく解説します。 他の方法の詳細については、「[MSBuild](../msbuild/msbuild.md)」と「[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)」をそれぞれ参照してください。
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、「[Visual Studio for Mac のコンパイルとビルド](/visualstudio/mac/compiling-and-building)」を参照してください。
 
 ## <a name="overview-of-building-from-the-ide"></a>IDE でのビルドの概要
 
@@ -57,3 +60,4 @@ IDE の中でのビルド方法の入門資料については、「[チュート
 ## <a name="see-also"></a>関連項目
 
 - [Web サイト プロジェクトのビルド (コンパイル)](https://msdn.microsoft.com/Library/a9cbb88c-8fff-4c67-848b-98fbfd823193)
+- [コンパイルとビルド (Visual Studio for Mac)](/visualstudio/mac/compiling-and-building)

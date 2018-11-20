@@ -5,21 +5,21 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: DDC39599-8C5D-4CB9-8DA5-229E085384CA
-ms.openlocfilehash: 7f076d10b0c884f39fa887547e883ec4215fd74c
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 2d3134d4016c6eb86f37832ba9998010bddd3f13
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224060"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295408"
 ---
 # <a name="visual-studio-for-mac-workloads"></a>Visual Studio for Mac ワークロード
 
-Visual Studio for Mac には、次のワークロードがプレインストールされています。
+Visual Studio for Mac には、次の種類のアプリを開発するために、ワークロードがプレインストールされています。
 
 * .NET を使用したクロス プラットフォーム モバイル アプリ: Android、iOS、tvOS、watchOS
 * Mac デスクトップ アプリ
-* .NET Core アプリケーション
-* ASP.NET Core Web アプリケーション
+* .NET Core アプリ
+* ASP.NET Core Web アプリ
 * クロスプラットフォーム Unity ゲーム
 
 ## <a name="xamarin"></a>Xamarin
@@ -30,7 +30,7 @@ Visual Studio for Mac で Xamarin を使用する方法の詳細については�
 
 ## <a name="net-core-applications"></a>.NET Core アプリケーション
 
-.NET Core の使用方法の詳細については、[ドキュメント](https://docs.microsoft.com/dotnet/core/)を参照してください。
+.NET Core の使用方法の詳細については、[ドキュメント](/dotnet/core/)を参照してください。
 
 ## <a name="aspnet-core-web-applications"></a>ASP.NET Core Web アプリケーション
 

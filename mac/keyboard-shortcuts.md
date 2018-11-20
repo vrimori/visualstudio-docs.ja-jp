@@ -5,12 +5,12 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: 48E06A61-7294-4EC8-A09D-1763C32AD910
-ms.openlocfilehash: 3aea39862ee2221454a337d7c50defd41319623b
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: ff5a7d79bf59f841aaf1957095cb2ae0e53a46c7
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224206"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295112"
 ---
 # <a name="common-keyboard-shortcuts-in-visual-studio-for-mac"></a>Visual Studio for Mac の一般的なキーボード ショートカット
 
@@ -18,17 +18,17 @@ ms.locfileid: "43224206"
 
 このコマンドを実行すると、コンテキストに応じてコードが生成されます。
 
- `⌘ + 1`
+`⌘ + 1`
 
 ![選択したシンボルに関連するコードを生成するオプションがあるパネルが表示されます](media/keyboard-shortcuts-image8.png)
 
 ## <a name="search-files-symbols-and-commands"></a>ファイル、シンボル、コマンドの検索
 
-`control + .` 
+`control + .`
 
-## <a name="autocomplete"></a>オートコンプリート 
+## <a name="autocomplete"></a>オートコンプリート
 
-`control + /` 
+`control + /`
 
 ## <a name="quick-fixes-and-actions"></a>クイック修正とクイック アクション
 
@@ -50,7 +50,7 @@ ms.locfileid: "43224206"
 
 ## <a name="move-lines-around-in-editor"></a>エディター内の行の移動
 
-`alt + up/down` 
+`alt + up/down`
 
 現在の行または現在選択されている複数の行を上に移動するには、**Alt キーを押しながら↑キー**を押します。行を下に移動するには、**Alt キーを押しながら↓キー**を押します。 言語アドインでサポートされている場合、スコープの内外に行を移動すると、コンテキストに合わせて再インデントされます。
 
@@ -71,3 +71,7 @@ ms.locfileid: "43224206"
 論理的な方法でワード、サブ式、ステートメント、および行メンバーの選択を拡張します。
 
 `alt + shift + up` で選択、`alt + shift + down` で選択解除されます
+
+## <a name="see-also"></a>関連項目
+
+- [Visual Studio のキーボード ショートカット (Windows)](/visualstudio/ide/tips-and-tricks-for-visual-studio)

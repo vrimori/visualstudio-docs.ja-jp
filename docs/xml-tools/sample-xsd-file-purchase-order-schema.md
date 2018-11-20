@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 7c26272b2e30fa505a196828ecddc9fc8385fe4c
 ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/01/2018
 ms.locfileid: "34571814"
 ---
-# <a name="sample-xsd-file-purchase-order-schema"></a>サンプル XSD ファイル: 購買発注書スキーマ
+# <a name="sample-xsd-file-purchase-order-schema"></a>サンプル XSD ファイル: 購買発注書のスキーマ
 
 次の XSD ファイルは、XSD スキーマ デザイナーのドキュメントのさまざまな例で使用されます。 このファイルは、購買発注書のスキーマです。
 

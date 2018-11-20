@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.openlocfilehash: 78f1c071469026b9e0e7d503483b7ddacc6d3cf1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 244312646de83e935dfa84cde4a9b793eb01a76f
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49835905"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349716"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig で移植可能なカスタム エディター設定を作成する
 
@@ -23,6 +23,9 @@ Visual Studio 2017 では、[EditorConfig](http://editorconfig.org/) ファイ�
 EditorConfig の設定は、Visual Studio など、多くのコード エディターと IDE でサポートされています。 この設定は、コードと共に移動する移植可能なコンポーネントであり、Visual Studio の外部であってもコーディング スタイルを適用できます。
 
 Visual Studio のプロジェクトに EditorConfig ファイルを追加するときに、ドキュメントの書式を設定しない限り、既存のコードの書式設定は変更されません (既定のプロファイルの場合は **[編集]** > **[詳細設定]** > **[ドキュメントのフォーマット]**、または **Ctrl**+**K**、**Ctrl**+**D**)。 ただし、新しいコード行はすべて、EditorConfig の設定に従って書式設定されます。 [**[書式設定]** オプション ページ](reference/options-text-editor-csharp-formatting.md#format-document-settings)で、**ドキュメントのフォーマット**で適用する EditorConfig 設定を定義することができます。
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、[Visual Studio for Mac の EditorConfig](/visualstudio/mac/editorconfig) に関するページを参照してください。
 
 ## <a name="coding-consistency"></a>コーディングの一貫性
 
@@ -172,3 +175,4 @@ EditorConfig 規則の範囲を制御するには、リポジトリのルート�
 - [言語サービスの EditorConfig のサポート](../extensibility/supporting-editorconfig.md)
 - [EditorConfig.org](http://editorconfig.org/)
 - [コード エディターの機能](writing-code-in-the-code-and-text-editor.md)
+- [EditorConfig (Visual Studio for Mac)](/visualstudio/mac/editorconfig)

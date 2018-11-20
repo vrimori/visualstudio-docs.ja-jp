@@ -7,12 +7,12 @@ ms.technology: vs-ide-debug
 ms.author: mikejo
 author: mikejo5000
 manager: douge
-ms.openlocfilehash: f64c2748688f06e5f0f7035b1a98bc93d7a6a61c
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: de0edba7396ceb75ce6a367a57d98e22fd43a83b
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51348123"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948258"
 ---
 # <a name="debugging-in-visual-studio"></a>Visual Studio でのデバッグ
 
@@ -20,53 +20,35 @@ Visual Studio デバッガーを使用すると、プログラムの実行時の
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="https://docs.microsoft.com/visualstudio/debugger/debugger-feature-tour">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_road-map.svg" alt="">
+        <a href="https://docs.microsoft.com/visualstudio/debugger/what-is-debugging">
+            <div class="cardSize">
+                <div class="cardPadding">
+                    <div class="card">
+                        <div class="cardImageOuter">
+                            <div class="cardImage">
+                                <img src="/media/common/i_categorize.svg" alt="What is debugging?">
+                            </div>
                         </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>デバッガーの使用開始</h3>
+                        <div class="cardText">
+                            <h3>デバッグとは</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </a>
     </li>
     <li>
-        <a href="https://docs.microsoft.com/visualstudio/debugger/debugging-absolute-beginners">
+        <a href="https://docs.microsoft.com/visualstudio/debugger/write-better-code-with-visual-studio">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_debug.svg" alt="">
+                            <img src="/media/common/i_code-edit.svg" alt="Write better code">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>入門者向けのデバッグ</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="https://docs.microsoft.com/visualstudio/debugger/getting-started-with-the-debugger">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_debug.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>デバッグする方法を学習する</h3>
+                        <h3>バグの少ない C# コードを書く</h3>
                     </div>
                 </div>
             </div>
@@ -91,18 +73,136 @@ Visual Studio デバッガーを使用すると、プログラムの実行時の
         </div>
         </a>
     </li>
+</ul>
+
+<h2>5 分間のクイック スタートで Visual Studio のデバッグを体験する</h2>
+
+<ul class="panelContent cardsFTitle">
     <li>
-        <a href="https://docs.microsoft.com/visualstudio/debugger/remote-debugging">
+        <a href="https://docs.microsoft.com/visualstudio/debugger/debugger-feature-tour">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_learn-about.svg" alt="">
+                            <img src="/media/common/i_road-map.svg" alt="Road map">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>リモート デバッグの詳細</h3>
+                        <h3>デバッガーの機能を確認する</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+        <li>
+        <a href="https://docs.microsoft.com/visualstudio/debugger/quickstart-debug-with-managed">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="https://docs.microsoft.com/media/logos/logo_net.svg" alt=".NET">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>C# または Visual Basic アプリをデバッグする</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://docs.microsoft.com/visualstudio/debugger/quickstart-debug-with-cplusplus">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="https://docs.microsoft.com/media/logos/logo_Cplusplus.svg" alt="C++">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>C++ アプリをデバッグする</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://docs.microsoft.com/visualstudio/debugger/quickstart-debug-aspnet">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="https://docs.microsoft.com/media/logos/logo_net.svg" alt="ASP.NET">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>ASP.NET アプリをデバッグする</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+</ul>
+
+<h2>チュートリアルでさらに詳しく理解する</h2>
+
+<ul class="panelContent cardsFTitle">
+    <li>
+        <a href="https://docs.microsoft.com/visualstudio/debugger/debugging-absolute-beginners">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_get-started.svg" alt="Absolute beginners">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>初心者向けガイド</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://docs.microsoft.com/visualstudio/debugger/getting-started-with-the-debugger">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_get-started.svg" alt="Learn to use the debugger">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>デバッガーの使用方法を学習する</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://docs.microsoft.com/visualstudio/debugger/debugger-tips-and-tricks">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_debug.svg" alt="Tips and tricks">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>デバッガーのヒントと秘訣</h3>
                     </div>
                 </div>
             </div>
@@ -116,7 +216,7 @@ Visual Studio デバッガーを使用すると、プログラムの実行時の
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_get-started.svg" alt="">
+                            <img src="/media/common/i_debug.svg" alt="View historical app state">
                         </div>
                     </div>
                     <div class="cardText">
@@ -134,65 +234,11 @@ Visual Studio デバッガーを使用すると、プログラムの実行時の
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_get-started.svg" alt="">
+                            <img src="/media/common/i_debug.svg" alt="Debug Azure">
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>Azure App Service アプリケーションのライブ デバッグ</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="https://docs.microsoft.com/visualstudio/debugger/debugger-tips-and-tricks">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_debug.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>デバッガーのヒントと秘訣</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="https://docs.microsoft.com/visualstudio/debugger/get-started-debugging-multithreaded-apps">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_get-started.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>マルチスレッド アプリのデバッグ</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="https://docs.microsoft.com/visualstudio/debugger/what-s-new-for-the-debugger-in-visual-studio">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_whats-new.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>「デバッガーの新機能」を参照してください</h3>
                     </div>
                 </div>
             </div>

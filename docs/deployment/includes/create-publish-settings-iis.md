@@ -1,15 +1,15 @@
 
-1. UI の更新された構成オプションを表示する、IIS 管理コンソールを閉じてから。
+1. IIS 管理コンソールを閉じて、もう一度開き、UI の更新された構成オプションを表示します。
 
-2. IIS を右クリックし、**既定の Web サイト**、選択**デプロイ** > **Web 配置発行の構成**します。
+2. IIS で **[既定の Web サイト]** を右クリックして、**[展開]** > **[Web 配置による発行の有効化]** の順に選びます。
 
-    ![Web 配置の構成を構成します。](../../deployment/media/tutorial-configure-web-deploy-publishing.png)
+    ![Web 配置の構成](../../deployment/media/tutorial-configure-web-deploy-publishing.png)
 
-3. **Web 配置発行の構成** ダイアログ ボックスで、設定を確認します。
+3. **[Web 配置による発行の有効化]** ダイアログ ボックスで、この設定を確認します。
 
-4. クリックして**セットアップ**します。
+4. **[設定]** をクリックします。
 
-    **結果**パネルで、アクセス権をその出力を示しますが、指定したユーザーに付与されますを持つファイルを *.publishsettings*ダイアログ ボックスで示されている場所にファイル拡張子が生成されましたボックス。
+    **[結果]** パネルで、出力に特定のユーザーに付与されているアクセス権が示され、*.publishsettings* のファイル拡張子が付いたファイルがダイアログ ボックスで示されている場所に作成されています。
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -26,14 +26,14 @@
     </publishData>
     ```
 
-    Windows Server と IIS の構成によっては、XML ファイル内のさまざまな値参照してください。 いくつかの詳細については、表示される値を次に示します。
+    ご利用の Windows Server と IIS の構成によって、XML ファイルには異なる値が表示されます。 表示される値に関する詳細のいくつかを次に示します。
 
-   * *Msdeploy.axd*ファイルで参照されている、`publishUrl`属性は、Web デプロイのために動的に生成される HTTP ハンドラー ファイル。 (テスト目的で、`http://myhostname:8172`も機能します)。
-   * `publishUrl`ポートはポート 8172、Web 配置の既定値に設定します。
-   * `destinationAppUrl`ポートはポート 80、IIS の既定値に設定します。
-   * (後の手順) でホスト名を使用して Visual Studio でのリモート ホストに接続されない場合は、ホスト名の代わりに IP アドレスをテストします。
+   * `publishUrl` 属性で参照されている *msdeploy.axd* ファイルは、Web 配置用に動的に作成された HTTP ハンドラー ファイルです。 (テスト目的で、通常、`http://myhostname:8172` も動作します。)
+   * `publishUrl` ポートは、Web 配置の既定値であるポート 8172 に設定されます。
+   * `destinationAppUrl` ポートは、IIS の既定値であるポート 80 に設定されます。
+   * (後の手順で) Visual Studio でホスト名を使用してリモート ホストに接続できない場合は、ホスト名の代わりに IP アドレスでテストします。
 
      > [!NOTE]
-     > Azure VM で実行されている IIS に発行する場合は、ネットワーク セキュリティ グループで Web デプロイおよび IIS のポートを開く必要があります。 詳細については、次を参照してください。[実行 IIS をインストールして](/azure/virtual-machines/windows/quick-create-portal#open-port-80-for-web-traffic)します。
+     > Azure VM で実行されている IIS に発行する場合は、ネットワーク セキュリティ グループの Web 配置ポートと IIS ポートを開く必要があります。 詳細については、[IIS のインストールと実行](/azure/virtual-machines/windows/quick-create-portal#open-port-80-for-web-traffic)に関するページを参照してください。
 
-5. このファイルを Visual Studio を実行しているコンピューターにコピーします。
+5. Visual Studio を実行しているコンピューターにこのファイルをコピーします。

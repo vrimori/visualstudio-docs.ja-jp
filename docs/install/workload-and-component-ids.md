@@ -5,7 +5,7 @@ keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: douge
-ms.date: 08/14/2018
+ms.date: 11/13/2018
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -17,16 +17,16 @@ ms.prod: visual-studio-dev15
 ms.assetid: 34e19ef1-abfb-44fd-aad2-33c5d7874482
 ms.workload:
 - multiple
-ms.openlocfilehash: 1538a3c93088cf02bcfb040cfa8a349ef7756eb5
-ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
+ms.openlocfilehash: 96332b767f2bc44561358880c392cb6d96db297b
+ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47028911"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607472"
 ---
 # <a name="visual-studio-2017-workload-and-component-ids"></a>Visual Studio 2017 のワークロード ID とコンポーネント ID
 
-**[15.8 リリース](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017)の更新**
+**[15.9 リリース](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017)の更新**
 
 コマンド ラインを使用して Visual Studio をインストールする場合や、VSIX マニフェストで依存関係として指定する場合に必要となる使用可能なワークロードとコンポーネント ID を表示するには、以下の表のエディション名をクリックします。
 

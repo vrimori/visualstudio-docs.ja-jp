@@ -16,16 +16,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 47468c7ff7ead04ad2c6261725089ca454faffc2
-ms.sourcegitcommit: 7bb0225e1fd45999ce09e0b49c2cfae515c27e11
+ms.openlocfilehash: 7766a7fd935cc1e1131c4780a5a88ef6fa54e838
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45612702"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349400"
 ---
 # <a name="use-the-task-list"></a>タスク一覧の使用
 
 **[タスク一覧]** を使って、`TODO` や `HACK` などのトークンやカスタム トークンを使用するコード コメントを追跡し、コード内の事前に定義された場所に直接アクセスできるショートカットを管理できます。 ソース コード内のその場所に移動するには、一覧の項目をクリックします。
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、「[タスク コメント (Visual Studio for Mac)](/visualstudio/mac/task-comments)」を参照してください。
 
 ## <a name="the-task-list-window"></a>[タスク一覧] ウィンドウ
 
@@ -104,3 +107,4 @@ C++ の TODO コメントをオフにするには、**[ツール]** メニュー
 ## <a name="see-also"></a>関連項目
 
 - [[タスク一覧] ([オプション] ダイアログ ボックス - [環境])](../ide/reference/task-list-environment-options-dialog-box.md)
+- [タスク コメント (Visual Studio for Mac)](/visualstudio/mac/task-comments)

@@ -5,12 +5,12 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
-ms.openlocfilehash: a6ea00e468e178f96bf0a08b5520d2f7e3d64b85
-ms.sourcegitcommit: 95aedf723c6be5272c3c5a2911cb2bdec50e2148
+ms.openlocfilehash: 37c4f6c50cc5deaee1decf6fcfae5eda211018b2
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47228865"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295684"
 ---
 # <a name="visual-studio-for-mac-tour"></a>Visual Studio for Mac ツアー
 
@@ -56,13 +56,13 @@ Solution Pad では、ソリューション内のプロジェクトが整理さ�
 Visual Studio for Mac でプロジェクトとソリューションを使用する方法の詳細については、「[プロジェクトおよびソリューション](projects-and-solutions.md)」を参照してください。
 
 ## <a name="assembly-references"></a>アセンブリ参照
- 
+
 各プロジェクトのアセンブリ参照は、[参照] フォルダーの下に表示されます。
 
 ![Solution Pad の [参照] フォルダー](media/ide-tour-image19.png)
 
 その他の参照は、**[参照の編集]** ダイアログを使用して追加されます。このダイアログを表示するには、[参照] フォルダーをダブルクリックするか、コンテキスト メニュー操作で **[参照の編集]** を選択します。
- 
+
 ![[参照の編集] ダイアログ](media/ide-tour-image20.png)
 
 Visual Studio for Mac で参照を使用する方法については、「[プロジェクト内の参照の管理](managing-references-in-a-project.md)」を参照してください。
@@ -93,7 +93,7 @@ Visual Studio for Mac には、Xamarin.iOS、Xamarin.Mac、Xamarin.Android ア�
 
 ## <a name="version-control"></a>バージョン コントロール
 
-Visual Studio for Mac は、Git と Subversion ソース管理システムと統合されています。 ソース管理下にあるプロジェクトは、ソリューション名の横にブランチとして一覧表示されます。 
+Visual Studio for Mac は、Git と Subversion ソース管理システムと統合されています。 ソース管理下にあるプロジェクトは、ソリューション名の横にブランチとして一覧表示されます。
 
 ![ソース管理下にあるプロジェクトを示すブランチ名](media/ide-tour-image22.png)
 
@@ -102,3 +102,7 @@ Visual Studio for Mac は、Git と Subversion ソース管理システムと統
 ![Solution Pad のコミットされていないファイル](media/ide-tour-image23.png)
 
 Visual Studio でバージョン管理を使用する方法については、「[バージョン管理](version-control.md)」を参照してください。
+
+## <a name="see-also"></a>関連項目
+
+- [Visual Studio IDE (Windows)](/visualstudio/ide/visual-studio-ide)
