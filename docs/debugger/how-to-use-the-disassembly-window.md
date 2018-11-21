@@ -23,14 +23,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 51510d09a1840035bb96817d30aebdcd6bf3ebd7
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 9733569c3fa53d2c5a5905b5b893d16b4eeaf10b
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50671145"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257044"
 ---
-# <a name="view-disassembly-code-in-the-visual-studio-debugger"></a>Visual Studio デバッガーで逆アセンブリ コードの表示
+# <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio デバッガーでの逆アセンブリ コードの表示 (C#、C++、Visual Basic、 F#)
 
 **逆アセンブル**ウィンドウには、コンパイラによって作成された命令に対応するアセンブリ コードが表示されます。 マネージ コードをデバッグしている場合、これらのアセンブリ命令はない Microsoft intermediate language (MSIL) Visual Studio コンパイラによって作成された、ジャストイン タイム (JIT) コンパイラによって作成されたネイティブ コードに対応します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "50671145"
 
 アセンブリの命令だけでなく、**逆アセンブリ**ウィンドウは、次の省略可能な情報を表示できます。  
   
-- 各命令が配置されているメモリ アドレス。 ネイティブ アプリケーションの場合は、実際のメモリ アドレス。 Visual basic では、 C#、またはマネージド コードでは、関数の先頭からのオフセット。  
+- 各命令が配置されているメモリ アドレス。 ネイティブ アプリケーションの場合は、実際のメモリ アドレス。 Visual basic またはC#は、関数の先頭からのオフセット。  
   
 - アセンブリ コードの派生元のソース コード。  
   

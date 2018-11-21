@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d0bde2f36aa644bf9335ce74cf4a1ac3bd433a6c
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: f32b5e68dec6696f6947fe78883c64b4c3caa322
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44282067"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257031"
 ---
 # <a name="debugger-settings-and-preparation"></a>デバッガーの設定と準備
 ここでは、デバッグに関連するプロパティ設定と、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーを使用してプログラムをデバッグするために必要な準備について説明します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でプロジェクト テンプレートを使ってプログラムを作成する場合、これらの設定はデバッグ構成で正しく設定されます。  
@@ -44,9 +44,6 @@ ms.locfileid: "44282067"
   
  [方法 : Visual Studio ソリューションに含まれていない実行可能ファイルをデバッグする](../debugger/how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md)  
  Visual Studio プロジェクトの一部として作成されていない実行可能ファイルをデバッグする方法について説明します。  
-  
- [方法: Code Center Premium ソースをデバッグする](../debugger/how-to-debug-with-code-center-premium-source.md)  
- Visual Studio プロジェクト内から Microsoft Code Center Premium ソースをデバッグする方法について説明します。  
   
  [64 ビット アプリケーションをデバッグする](../debugger/debug-64-bit-applications.md)  
  64 ビット アプリケーションをデバッグする方法について説明します。  

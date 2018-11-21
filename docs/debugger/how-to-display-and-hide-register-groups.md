@@ -1,5 +1,5 @@
 ---
-title: '方法: 表示し、非表示レジスタ グループ |Microsoft ドキュメント'
+title: '方法: を表示し、登録グループを非表示 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -21,24 +21,25 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a06c6da95cfbdd899557f228d607d1cb06b0ecb3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: a98927d0132402e2977d5d8f1f28cbba43da636c
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31474090"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257148"
 ---
-# <a name="how-to-display-and-hide-register-groups"></a>方法 : レジスタ グループの表示と非表示を切り替える
+# <a name="how-to-display-and-hide-register-groups-c-c-visual-basic-f"></a>方法: を表示し、登録グループを非表示 (C#、C++、Visual Basic、 F#)
+
 **登録**ウィンドウのアドレス レベルのデバッグが有効になっている場合にのみ使用できますが、**オプション**ダイアログ ボックスで、**デバッグ**ノード、**全般**カテゴリ。  
   
- 、見やすくするために、**登録**ウィンドウはレジスタをグループに編成します。 右クリックした場合、**登録**ウィンドウで、以下に手順に応じて表示と非表示を切り替えることができます、これらのグループが含まれているショートカット メニューが表示されます。  
+ 、見やすくするために、**登録**ウィンドウには、グループにレジスタが整理されます。 右クリックした場合、**登録**ウィンドウで、表示したり、次の手順に応じて表示と非表示にしたり、これらのグループを格納しているショートカット メニューが表示されます。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
 ### <a name="to-display-or-hide-register-groups"></a>レジスタ グループの表示と非表示を切り替えるには  
   
-1.  右クリックし、**登録**ウィンドウです。  
+1.  右クリックし、**登録**ウィンドウ。  
   
 2.  ショートカット メニューで、表示または非表示にするレジスタ グループをクリックします。  
   
