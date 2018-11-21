@@ -18,12 +18,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ac74f5275288cdba35d3a70f4a7813c800e4327d
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: a97874ae1267677c5055e84650a839068479fc10
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704721"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948596"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 統合開発環境 (IDE) 内の文字列、通貨、およびその他の値に使用する既定の言語を設定します。
@@ -65,6 +65,6 @@ devenv /LCID 1033
 
 ## <a name="see-also"></a>参照
 
-- [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
+- [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
 - [[国際対応の設定] ([オプション] ダイアログ ボックス - [環境])](../../ide/reference/international-settings-environment-options-dialog-box.md)
 - [ウィンドウ レイアウトをカスタマイズする](../../ide/customizing-window-layouts-in-visual-studio.md)

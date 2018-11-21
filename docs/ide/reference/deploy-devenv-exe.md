@@ -15,15 +15,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 368680321f8ff8ab908e79e075a5797ba9ecd598
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0297058fea98568551f54d8960e62f80bb35ccd7
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31945117"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948882"
 ---
 # <a name="deploy-devenvexe"></a>/Deploy (devenv.exe)
-ビルドまたはリビルド後にソリューションを配置します。 マネージ コード プロジェクトにのみ適用されます。
+ビルドまたはリビルド後にソリューションを配置します。 マネージド コード プロジェクトにのみ適用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -64,7 +64,7 @@ devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\M
 
 ## <a name="see-also"></a>参照
 
-- [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
+- [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
 - [/Project (devenv.exe)](../../ide/reference/project-devenv-exe.md)
 - [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)
 - [/Clean (devenv.exe)](../../ide/reference/clean-devenv-exe.md)
