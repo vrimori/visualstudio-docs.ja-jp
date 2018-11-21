@@ -16,16 +16,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d72a9cd4ad29785884417881324e6d348e03d83
-ms.sourcegitcommit: 331dbb12e11fcd7f5d15fab05f3c861e48126e43
+ms.openlocfilehash: b196d993e7091fd9d4b09fe3c228346e7421911e
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51826715"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257213"
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows"></a>[自動変数] と [ローカル] ウィンドウに変数を検査します。
 
 **[自動変数]** と**ローカル**windows は、デバッグ中に変数の値を表示します。 Windows はデバッグ セッション中にのみ使用できます。 **[自動変数]** ウィンドウには、現在のブレークポイントを使用する変数が表示されます。 **ローカル**ウィンドウには、現在の関数またはメソッドは、通常は、ローカル スコープで定義された変数が表示されます。 コードをデバッグしようとした初めての場合は、読み取りをする可能性があります[優れたC#Visual Studio を使用してコード](../debugger/write-better-code-with-visual-studio.md)と[超初心者向けのデバッグ](../debugger/debugging-absolute-beginners.md)にこの記事に進む前にします。
+
+ **[自動変数]** ウィンドウが使用できるC#、Visual Basic、C++、および Python コードでは、JavaScript ではなくまたはF#します。
   
 開くには、 **[自動変数]** ウィンドウで、デバッグ中に、**デバッグ** > **Windows** > **[自動変数]**、またはキーを押します**Ctrl**+**Alt**+**V** > **A**します。  
 
@@ -34,7 +36,7 @@ ms.locfileid: "51826715"
 基本的なデバッグの詳細が必要な場合は、次を参照してください。[デバッガーの概要](../debugger/getting-started-with-the-debugger.md)します。
 
 > [!NOTE]
-> このトピックでは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac では、次を参照してください。 [Visual studio for Mac のデータの視覚化](/visualstudio/mac/data-visualizations)します。
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac では、次を参照してください。 [Visual studio for Mac のデータの視覚化](/visualstudio/mac/data-visualizations)します。
 
 ## <a name="use-the-autos-and-locals-windows"></a>[自動変数] と [ローカル] ウィンドウを使用します。
 
@@ -71,9 +73,7 @@ ms.locfileid: "51826715"
 
 ![[デバッグの場所] ツールバー](../debugger/media/debuglocationtoolbar.png "デバッグの場所 ツールバー")
 
-## <a name="bkmk_whatvariables"></a> [自動変数] ウィンドウで変数
-
- **[自動変数]** ウィンドウが使用できるC#、Visual Basic、C++ コードと、しない場合は JavaScript 用またはF#します。
+## <a name="bkmk_whatvariables"></a> [自動変数] ウィンドウで変数 (C#、C++、Visual Basic、Python)
 
  別のコードの言語での異なる変数を表示する、 **[自動変数]** ウィンドウ。
 

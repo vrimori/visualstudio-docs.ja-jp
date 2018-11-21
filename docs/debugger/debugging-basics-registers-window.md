@@ -19,14 +19,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 14f43e8708573a2fdd11a1c667a69bc1767ecda3
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 0219418b754c93b8e5e50997ede73e0611ed496a
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44278830"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257057"
 ---
-# <a name="about-the-registers-window-in-visual-studio"></a>Visual Studio で [レジスタ] ウィンドウについて
+# <a name="about-the-registers-window-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio で [レジスタ] ウィンドウの概要 (C#、C++、Visual Basic、 F#)
+
 **登録**ウィンドウのアドレス レベルのデバッグが有効になっている場合にのみ使用できますが、**オプション**ダイアログ ボックスで、**デバッグ**ノード。  
   
  レジスタとは、プロセッサ (CPU) 内部の特殊な場所で、プロセッサが処理している小さなデータを格納するために使用します。 ソース コードをコンパイルまたは解釈すると、必要に応じて、メモリのデータをレジスタに移動して再びメモリに戻す命令が生成されます。 メモリのデータにアクセスするよりもレジスタのデータにアクセスする方が速いため、データをレジスタに保管しておいて繰り返しアクセスできるようにプロセッサに対して許可するコードは、レジスタの読み込みとアンロードを繰り返す必要のあるコードよりも高速です。 コンパイラがレジスタにデータを保管してほかの最適化を実行するのを簡単にするには、グローバル変数を使用せずに、できる限りローカル変数を使用します。 この方法で書かれたコードは、データ参照の局所性が高いコードと呼ばれます。 C や C++ などの一部の言語では、可能な限り常時レジスタに変数を保管するようにコンパイラに指示するレジスタ変数をプログラマが宣言できます。 詳細については、次を参照してください。 [Register Keyword](https://msdn.microsoft.com/library/5b66905a-2f7f-4918-bb55-5e66d4bc50f9)します。  

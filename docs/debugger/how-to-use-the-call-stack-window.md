@@ -30,23 +30,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 92d138e954ce01af04405b72ce50ab72a76d8cf3
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: 264aeeeaac47e30eb08b4320443da15ea48a8601
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51348892"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257239"
 ---
 # <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-debugger"></a>呼び出し履歴を表示し、デバッガーで呼び出し履歴 ウィンドウを使用
 
-使用して、**呼び出し履歴**ウィンドウで、現在、スタック上にある関数またはプロシージャの呼び出しを表示できます。 **呼び出し履歴**ウィンドウ メソッドと関数を呼び出す作業はこれで順序が表示されます。 呼び出し履歴は、調査およびアプリの実行フローを理解することをお勧めします。
+使用して、**呼び出し履歴**ウィンドウで、現在、スタック上にある関数またはプロシージャの呼び出しを表示できます。 **[呼び出し履歴]** ウィンドウには、メソッドおよび関数が呼び出されている順番が表示されます。 呼び出し履歴は、アプリの実行フローを調査して理解するのに優れた方法です。
   
 ときに[デバッグ シンボル](#bkmk_symbols)、コール スタックの一部では使用できません、**呼び出し履歴**ウィンドウで表示する代わりに、コール スタックの部分の正しい情報を表示できない可能性があります。  
   
 `[Frames below may be incorrect and/or missing, no symbols loaded for name.dll]`
 
 > [!NOTE]
-> **呼び出し履歴**Eclipse などの一部の Ide ウィンドウはデバッグ パースペクティブに似ています。 
+> **[呼び出し履歴]** ウィンドウは、Eclipse のような一部の IDE におけるデバッグ パースペクティブに似ています。 
 > 
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ここで説明する内容と異なる場合があります。 設定を変更するには、次のように選択します。**インポートおよびエクスポート設定**上、**ツール**メニュー。  参照してください[IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)します。
@@ -103,7 +103,7 @@ Visual Studio enterprise (のみ)、デバッグ中に呼び出し履歴コー�
 
 ![コード マップに呼び出し履歴を表示](../debugger/media/dbg_basics_show_call_stack_on_code_map.gif "ShowCallStackOnCodeMap")
   
-## <a name="view-the-disassembly-code-for-a-function-on-the-call-stack"></a>呼び出し履歴上の関数の逆アセンブリ コードを表示します。  
+## <a name="view-the-disassembly-code-for-a-function-on-the-call-stack-c-c-visual-basic-f"></a>呼び出し履歴上の関数の逆アセンブリ コードの表示 (C#、C++、Visual Basic、 F#) 
   
 -   **呼び出し履歴**ウィンドウで、右クリックして選択する、逆アセンブリ コードを関数**アセンブルを**します。    
 
@@ -111,7 +111,8 @@ Visual Studio enterprise (のみ)、デバッグ中に呼び出し履歴コー�
   
 -   右クリックし、**呼び出し履歴**ウィンドウとセットまたはクリア**表示\<** _情報_**>**.  
   
-## <a name="bkmk_symbols"></a> モジュールのシンボルの読み込み
+## <a name="bkmk_symbols"></a> モジュールのシンボルを読み込む (C#、C++、Visual Basic、 F#)
+
 **呼び出し履歴**ウィンドウで、デバッグ シンボルが読み込まれていないコードのシンボルを読み込むことができます。 これらのシンボルには、.NET Framework または、Microsoft パブリック シンボル サーバーからダウンロードしたシステムのシンボルまたはシンボルでデバッグしているコンピューター上のシンボル パスを指定できます。  
   
 参照してください[シンボル (.pdb) ファイルとソース ファイルを指定](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)します。

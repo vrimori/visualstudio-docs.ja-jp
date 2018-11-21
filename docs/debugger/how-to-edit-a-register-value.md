@@ -1,5 +1,5 @@
 ---
-title: '方法: レジスタ値を編集 |Microsoft ドキュメント'
+title: '方法: レジスタ値を編集 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -21,19 +21,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: de743aa67b3875654dee1b13b27a74e208bb6d53
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0d0337f7c77d1ed601c7a6c13c702f4758cbfdbd
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31475004"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257082"
 ---
-# <a name="how-to-edit-a-register-value"></a>方法 : レジスタ値を編集する
-[レジスタ] ウィンドウがアドレス レベルのデバッグが有効になっている場合にのみ使用できますが、**オプション**ダイアログ ボックスで、**デバッグ**ノード。  
+# <a name="how-to-edit-a-register-value-c-c-visual-basic-f"></a>方法: レジスタ値を編集 (C#、C++、Visual Basic、 F#)
+
+[レジスタ] ウィンドウにアドレス レベルのデバッグが有効な場合にのみ使用できますが、**オプション**ダイアログ ボックスで、**デバッグ**ノード。  
   
 ### <a name="to-change-the-value-of-a-register"></a>レジスタ値を変更するには  
   
-1.  **登録**ウィンドウを使用して、TAB キーまたはカーソルを移動するには、マウスを変更する値をポイントします。 入力するときは、上書きする値の直前の位置にカーソルを置く必要があります。  
+1.  **登録**ウィンドウで、TAB キーまたはマウス カーソルを移動するポイント値を変更して使用します。 入力するときは、上書きする値の直前の位置にカーソルを置く必要があります。  
   
 2.  新しい値を入力します。  
   
