@@ -12,12 +12,12 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 31800a7ec4e5a008234f7ee72b6c43bba559fbf9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 5a2158663defe02dc51e91e888d47f325db7226a
+ms.sourcegitcommit: 20d1b9a5bf041bb28453501eb63bc0537a8e4f54
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49928348"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51645147"
 ---
 # <a name="visual-studio-2017-c-productivity-guide"></a>Visual Studio 2017 C# の生産性ガイド
 
@@ -46,7 +46,7 @@ ms.locfileid: "49928348"
 | **Ctrl**+**.** (C# Profile では **Alt** + **Enter** でも可能) | クイック アクションとリファクタリング | そのカーソル位置またはコード選択で、どのコード修正、コード生成アクション、リファクタリング、その他クイック アクションが使用できるかを表示します |
 | **Ctrl** + **D** | 行の複製 | カーソルのあるコード行を複製します (**Visual Studio 2017 バージョン 15.6** 以降で使用可能) |
 | **Shift** + **Alt** + **+**/**-** | 選択範囲の拡大/縮小 | エディターの現在の選択範囲を拡大または縮小します (**Visual Studio 2017 バージョン 15.5** 以降で使用できます) |
-| **Ctrl**  +  **Alt**  +  **.** | 次の一致にキャレットを挿入 | 現在の選択範囲と一致する次の場所で選択内容とキャレットを追加します (**Visual Studio 2017 バージョン 15.8** 以降で利用可能)。 |
+| **Shift**  +  **Alt**  +  **.** | 次の一致にキャレットを挿入 | 現在の選択範囲と一致する次の場所で選択内容とキャレットを追加します (**Visual Studio 2017 バージョン 15.8** 以降で利用可能)。 |
 | **Ctrl** + **Q** | クイック起動 | すべての Visual Studio の設定を検索します |
 | **F5** | デバッグの開始 | アプリケーションのデバッグを開始します |
 | **Ctrl** + **F5** | デバッグなしで開始 | デバッグなしでアプリケーションをローカルで実行します |

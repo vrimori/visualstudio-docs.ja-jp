@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d832753b798cc9e476b675f8791c1ab245b3adee
-ms.sourcegitcommit: a34b7d4fdb3872865fcf98ba24a0fced58532adc
+ms.openlocfilehash: ba3da2325750fca655e0de28e13bb13da208963d
+ms.sourcegitcommit: 331dbb12e11fcd7f5d15fab05f3c861e48126e43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51561674"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51826779"
 ---
 # <a name="tutorial-learn-to-debug-using-visual-studio"></a>チュートリアル: Visual Studio を使用したデバッグについて理解する
 
@@ -39,7 +39,7 @@ ms.locfileid: "51561674"
 > * デバッガーを起動して、ブレークポイントにヒットします。
 > * デバッガー内でコードをステップ実行するコマンドについて学習します。
 > * データ ヒントおよびデバッガー ウィンドウ内で変数を確認します。
-> * 呼び出し履歴を調べます。
+> * 呼び出し履歴を調べる
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -297,7 +297,7 @@ ms.locfileid: "51561674"
 
     ブレークポイントは、信頼できるデバッグの最も基本的で重要な機能です。 ブレークポイントは、Visual Studio が実行コードを中断する場所を示します。これにより、変数の値またはメモリの動作を確認したり、コードの分岐が実行されるかどうかを確認したりすることができます。 
 
-6. **F5** キーを押すか、または **[デバッグの開始]** ボタンをクリックします。アプリが起動され、デバッガーが実行されてブレークポイントを設定したコード行まで進みます。
+2. **F5** キーを押すか、または **[デバッグの開始]** ボタンをクリックします。アプリが起動され、デバッガーが実行されてブレークポイントを設定したコード行まで進みます。
 
     ![ブレークポイントを設定してそこにヒットする](../debugger/media/get-started-set-breakpoint.gif)
 
@@ -325,14 +325,14 @@ ms.locfileid: "51561674"
 
 ## <a name="navigate-code-using-run-to-click"></a>[クリックで実行] を使用してコード内を移動する
 
-5. コード エディター内で下方にスクロールして `Triangle` クラス内の `Console.WriteLine` メソッド (C++ では `std::cout`) にカーソルを合わせ、それによって左側に緑色の **[クリックで実行]** ボタン![クリックで実行](../debugger/media/dbg-tour-run-to-click.png "クリックで実行")が表示されるのを確認します。
+1. コード エディター内で下方にスクロールして `Triangle` クラス内の `Console.WriteLine` メソッド (C++ では `std::cout`) にカーソルを合わせ、それによって左側に緑色の **[クリックで実行]** ボタン![クリックで実行](../debugger/media/dbg-tour-run-to-click.png "クリックで実行")が表示されるのを確認します。
 
      ![[クリックで実行] 機能を使用する](../debugger/media/get-started-run-to-click.png "[クリックで実行]")
 
    > [!NOTE]
    > **[クリックで実行]** ボタンは [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] の新機能です。 緑色の矢印ボタンが表示されない場合、この例では代わりに **F11** キーを使用してデバッガーを適切な場所まで進めます。
 
-6. **[クリックで実行]** ボタン![クリックで実行](../debugger/media/dbg-tour-run-to-click.png "クリックで実行")をクリックします。
+2. **[クリックで実行]** ボタン![クリックで実行](../debugger/media/dbg-tour-run-to-click.png "クリックで実行")をクリックします。
 
     このボタンを使用することは、一時的なブレークポイントを設定することに似ています。 **[クリックで実行]** はアプリ コードの表示領域内をすばやく移動するのに便利です (開いている任意のファイル内でクリックすることができます)。
 
@@ -447,4 +447,4 @@ ms.locfileid: "51561674"
 このチュートリアルでは、デバッガーを起動する方法、コードをステップ実行する方法、変数を確認する方法について学習しました。 必要に応じて、デバッガー機能の概要と、詳細情報へのリンクを取得します。
 
 > [!div class="nextstepaction"]
-> [デバッガーのヒントと秘訣](../debugger/debugger-tips-and-tricks.md)
+> [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)

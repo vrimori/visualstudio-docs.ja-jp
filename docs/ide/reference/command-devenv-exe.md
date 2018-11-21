@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d6d2c5355fbce44bbb97a33e21ad623997ddceb
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: f2ee6f1166a543cc3dc85dfb62d19d1c5b194a16
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50670807"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948167"
 ---
 # <a name="command-devenvexe"></a>/Command (devenv.exe)
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の統合開発環境 (IDE: Integrated Development Environment) を起動してから、指定のコマンドを実行します。
@@ -46,5 +46,5 @@ devenv /command "Macros.MyMacros.Module1.OpenFavoriteFiles"
 
 ## <a name="see-also"></a>参照
 
-- [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
+- [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
 - [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)

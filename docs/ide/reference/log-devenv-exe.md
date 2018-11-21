@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3373f1e1a23ae0373a9c49a39a924398ebe143e0
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: fb33eedf322009cfd5602c481bce36beb4126a9b
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704773"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948399"
 ---
 # <a name="log-devenvexe"></a>/Log (devenv.exe)
 すべてのアクティビティをトラブルシューティング用のログ ファイルに記録します。 このファイルは、`devenv /log` を少なくとも 1 回呼び出した後に表示されます。 ログ ファイルは既定で次のものになります。
@@ -41,4 +41,4 @@ Devenv /log Path\NameOfLogFile
 
 ## <a name="see-also"></a>参照
 
-- [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
+- [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
