@@ -29,12 +29,12 @@ caps.latest.revision: 31
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: baddf87e24efc48ea597e44c52abcee5e5bdcfad
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6b6fd99b2b1a41d6baa3a110b2a595afb1dd7e3f
+ms.sourcegitcommit: c9a01c599ce19a5845605b3b28c0229fd0abb93f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49829645"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281850"
 ---
 # <a name="save-data-back-to-the-database"></a>データをデータベースに保存する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "49829645"
 ## <a name="two-stage-updates"></a>2 段階の更新  
  2 段階のプロセスは、データ ソースを更新します。 最初の手順では、新しいレコード、変更されたレコード、または削除されたレコードでデータセットを更新します。 アプリケーションは、データ ソースに戻ることはありませんこれらの変更を送信する場合を完了すると、更新されます。  
   
- 元のデータベースに変更を送信する場合、次の手順が必要です。 データ バインド コントロールを使用していない場合は手動でデータセットを作成するために使用する同じ TableAdapter (またはデータ アダプター) の Update メソッドを呼び出す必要があります。 ただし、1 つのデータ ソースからデータを移動する、または複数のデータ ソースを更新するも別のアダプターを使用することができます。 データ バインディングを使用していないし、関連テーブルの変更を保存していますが場合、は、TableAdapterManager、自動生成されたクラスの変数を手動でインスタンス化し、そのメソッドを呼び出す UdpateAll する必要があります。  
+ 元のデータベースに変更を送信する場合、次の手順が必要です。 データ バインド コントロールを使用していない場合は手動でデータセットを作成するために使用する同じ TableAdapter (またはデータ アダプター) の Update メソッドを呼び出す必要があります。 ただし、1 つのデータ ソースからデータを移動する、または複数のデータ ソースを更新するも別のアダプターを使用することができます。 データ バインディングを使用していないし、関連テーブルの変更を保存していますがある場合、自動生成された TableAdapterManager クラスの変数を手動でインスタンス化し、その UpdateAll メソッドを呼び出します。  
   
  ![Visual Basic データセット更新](../data-tools/media/vbdatasetupdates.gif "vbDatasetUpdates")  
 2 段階の更新プロセスと、正常な更新における DataRowVersion の役割  
