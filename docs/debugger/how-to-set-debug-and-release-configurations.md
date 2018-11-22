@@ -33,12 +33,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 18689a82fe2ae7c66eb8e8d6ef9bd115e2950cac
-ms.sourcegitcommit: 50b19010b2e2b4736835350710e2edf93b980b56
+ms.openlocfilehash: 9a65a3331c210bdfb4143ff890180fdc7d663229
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49073994"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257226"
 ---
 # <a name="set-debug-and-release-configurations-in-visual-studio"></a>デバッグ設定し、リリース Visual Studio での構成
 
@@ -64,7 +64,7 @@ Visual Studio プロジェクトでは、ご使用のプログラムに対応す
 
   ![ツールバーのビルド構成](../debugger/media/toolbarbuildconfiguration.png "ToolbarBuildConfiguration")
 
-## <a name="BKMK_symbols_release"></a>ビルドのシンボル (.pdb) ファイルを生成します。
+## <a name="BKMK_symbols_release"></a>ビルドのシンボル (.pdb) ファイルを生成 (C#、C++、Visual Basic、 F#)
 
 シンボル (.pdb) ファイルとその内容を生成することができますに含める情報をデバッグします。 ほとんどの種類のプロジェクトのコンパイラでは、既定ではデバッグのシンボル ファイルが生成されますビルドとリリース ビルド、プロジェクトの種類と Visual Studio のバージョンが異なるその他の既定の設定中にします。
 
