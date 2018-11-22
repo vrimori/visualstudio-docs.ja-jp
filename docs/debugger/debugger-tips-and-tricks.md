@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e2a9acf315541dcf231d774fdb37e4c82649a4c
-ms.sourcegitcommit: 7bb0225e1fd45999ce09e0b49c2cfae515c27e11
+ms.openlocfilehash: 072cfcf253bb01687df20a6a0f2d41b71468b90c
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45612728"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257356"
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>Visual Studio のデバッガーの生産性に関するヒントと秘訣を学習します。
 
@@ -54,16 +54,16 @@ Visual Studio でサポートされているほとんどの言語では、デバ
 
 3. 別の種類の条件に関心がある場合は、選択**フィルター**の代わりに**条件式**で、**ブレークポイントの設定** ダイアログ ボックスと、次のフィルターのヒント。
 
-## <a name="change-the-execution-flow"></a>実行フローを変更します。
+## <a name="change-the-execution-flow"></a>実行フローを変更する
 
 デバッガーでのコード行で一時停止、マウスを使用して、左側の黄色の矢印のポインターを取得します。 コードの実行パスの別のポイントには、黄色の矢印のポインターを移動します。 F5 キーまたはステップのコマンドを使用して、アプリの実行を続行します。
 
 ![実行ポインターを移動](../debugger/media/dbg-tour-move-the-execution-pointer.gif "実行ポインターを移動")
 
-実行フローを変更するには、別のコードの実行パスをテストまたはデバッガーを再起動しなくてもコードを再実行などの処理を行うことができます。
+実行フローを変更することにより、さまざまなコード実行パスをテストしたり、デバッガーを再起動することなくコードを再実行したりできます。
 
 > [!WARNING]
-> 多くの場合、この機能により、注意する必要があり、ツールヒントに警告を表示します。 すぎて他の警告を表示可能性があります。 ポインターを移動すると、アプリを以前のアプリケーション状態を元に戻すことはできません。
+> 多くの場合、この機能には注意する必要があり、ツールヒントに警告が表示されます。 他の警告が表示される場合もあります。 ポインターを移動すると、アプリを以前のアプリケーション状態を元に戻すことはできません。
 
 ## <a name="track-an-out-of-scope-object-c-visual-basic"></a>(C#、Visual Basic) の範囲外のオブジェクトを追跡します。
 
@@ -145,7 +145,7 @@ UWP アプリを使用して実行されたネットワーク操作を分析す�
 
 詳細については、「[ネットワーク使用率](../profiling/network-usage.md)」を参照してください。
 
-## <a name="modules_window"></a> アプリにデバッガーのアタッチをより理解を深める
+## <a name="modules_window"></a> アプリにデバッガーのアタッチをより理解を深める (C#、C++、Visual Basic、 F#)
 
 実行中のアプリに接続するには、デバッガーは、シンボル (.pdb) ファイルをデバッグしようとするアプリの正確な同じビルドの生成を読み込みます。 一部のシナリオでシンボル ファイルの少しの知識が役に立ちます。 Visual Studio がシンボルを使用してファイルを読み込む方法を調べることができます、**モジュール**ウィンドウ。
 
