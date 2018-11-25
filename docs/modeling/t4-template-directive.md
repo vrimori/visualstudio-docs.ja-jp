@@ -20,7 +20,7 @@ ms.locfileid: "50967039"
 
 Visual Studio T4 テキスト テンプレートは、通常で始まる、`template`ディレクティブで、テンプレートの処理方法を指定します。 テキスト テンプレートおよびそれに含まれるファイルには、template ディレクティブを 1 つしか含めることができません。
 
- テキスト テンプレートの作成方法の一般的な概要については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)です。
+ テキスト テンプレートの作成方法の一般的な概要については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)
 
 ## <a name="using-the-template-directive"></a>template ディレクティブの使用
 
@@ -54,13 +54,16 @@ Visual Studio T4 テキスト テンプレートは、通常で始まる、`temp
 debug="true"
 ```
 
- 有効な値:`true, false`します。 False が既定値です。
-
+ 有効な値:
+ `true`
+ 
+ `false` (既定値)
+ 
  `debug` 属性が `true` の場合、デバッガーでテンプレート内の中断または例外の発生位置を正確に特定できるようにする情報が中間コード ファイルに出力されるようになります。
 
- デザイン時テンプレートの中間コード ファイルが書き込まれる、 **%temp%** ディレクトリ。
+ デザイン時テンプレートの中間コード ファイルが書き込まれる、 **%TEMP%** ディレクトリ。
 
- をデバッガーでデザイン時テンプレートを実行する、テキスト テンプレートを保存し、ソリューション エクスプ ローラーで、テキスト テンプレートのショートカット メニューを開き、選択**T4 テンプレートのデバッグ**します。
+ デバッガー中でデザイン時テンプレートを実行するには、テキスト テンプレートを保存し、ソリューション エクスプローラーで、テキスト テンプレートのショートカット メニューを開き、**T4 テンプレートのデバッグ**を選択します。
 
 ## <a name="hostspecific-attribute"></a>hostspecific 属性
  例:
@@ -68,13 +71,18 @@ debug="true"
 hostspecific="true"
 ```
 
- 有効な値:`true, false, trueFromBase`します。 False が既定値です。
-
+ 有効な値:
+ `true`
+ 
+ `false`
+ 
+ `trueFromBase` (既定値)
+ 
  この属性の値を `true` に設定した場合、テキスト テンプレートによって生成されたクラスに、`Host` というプロパティが追加されます。 このプロパティは変換エンジンのホストへの参照であり、<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> として宣言されます。 カスタム ホストを定義している場合は、そのカスタム ホストの型にキャストできます。
 
- このプロパティの型はホストの型に依存するため、特定のホストとのみ連携するテキスト テンプレートを作成している場合以外、利用価値はありません。 適用[デザイン時テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)、なく[実行時テンプレート](../modeling/run-time-text-generation-with-t4-text-templates.md)します。
+ このプロパティの型はホストの型に依存するため、特定のホストとのみ連携するテキスト テンプレートを作成している場合以外、利用価値はありません。 これは、[デザイン時テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)には適用されますが、[実行時テンプレート](../modeling/run-time-text-generation-with-t4-text-templates.md)にはされません。
 
- ときに`hostspecific`は`true`と Visual Studio を使用している、キャストできます`this.Host`を Visual Studio の機能にアクセスする IServiceProvider。 また、`Host.ResolvePath(filename)` を使用して、プロジェクトのファイルの絶対パスを取得することもできます。 例えば:
+ `hostspecific`が`true`であり Visual Studio を使用しているときは、Visual Studio の機能にアクセスするために、`this.Host`を IServiceProvider にキャストできます。 また、`Host.ResolvePath(filename)` を使用して、プロジェクトのファイルの絶対パスを取得することもできます。 例:
 
 ```csharp
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -105,9 +113,9 @@ Content of myFile is:
 
  `VB`
 
- 言語属性の言語を指定します ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]または[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]) ステートメントと式ブロック内のソース コードを使用します。 出力の生成元である中間コード ファイルでこの言語が使用されます。 この言語はテンプレートで生成される言語とは無関係であり、どのような種類のテキストであってもかまいません。
+ `language` 属性は、ステートメントと式ブロック内で使用されるソース コードの言語 ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]または[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)])を指定します。 出力の生成元である中間コード ファイルでこの言語が使用されます。 この言語はテンプレートで生成される言語とは無関係であり、どのような種類のテキストであってもかまいません。
 
- 例えば:
+ 例:
 
 ```vb
 <#@ template language="VB" #>
@@ -126,14 +134,14 @@ Squares of numbers:
 ## <a name="inherits-attribute"></a>inherits 属性
  テンプレートのプログラム コードを別のクラスから継承できることを指定できます。クラスは、テキスト テンプレートから生成することもできます。
 
-### <a name="inheritance-in-a-run-time-preprocessed-text-template"></a>実行時 (前処理された) テキスト テンプレートでの継承
- 実行時テキスト テンプレート間で継承を使用して、複数の派生バリアントを含む基本テンプレートを作成できます。 実行時テンプレートが指定されている、**カスタム ツール**プロパティに設定**TextTemplatingFilePreprocessor**します。 実行時テンプレートでは、そのテンプレートに定義されているテキストを作成するために、アプリケーションで呼び出すことができるコードが生成されます。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)します。
+### <a name="inheritance-in-a-run-time-preprocessed-text-template"></a>ランタイム (前処理された) テキスト テンプレートでの継承
+ 実行時テキスト テンプレート間で継承を使用して、複数の派生バリアントを含む基本テンプレートを作成できます。 実行時テンプレートが指定されている、**カスタム ツール** プロパティに **TextTemplatingFilePreprocessor** を設定します。 実行時テンプレートでは、そのテンプレートに定義されているテキストを作成するために、アプリケーションで呼び出すことができるコードが生成されます。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)
 
  `inherits` 属性を指定しない場合は、テキスト テンプレートから基底クラスと派生クラスが生成されます。 `inherits` 属性を指定すると、派生クラスだけが生成されます。 基底クラスは手動で作成できますが、派生クラスで使用するメソッドを提供する必要があります。
 
  通常は、前処理された別のテンプレートを基底クラスとして指定します。 基本テンプレートでは、派生テンプレートのテキストとインタリーブできる共通のテキスト ブロックを提供します。 クラス機能ブロック (`<#+ ... #>`) を使用して、テキスト フラグメントを含むメソッドを定義できます。 たとえば、基本テンプレートに出力テキストのフレームワークを配置し、派生テンプレートでオーバーライドできる仮想メソッドを提供することができます。
 
- 実行時 (前処理された) テキスト テンプレートの BaseTemplate.tt:
+ ランタイム (前処理された) テキスト テンプレートの BaseTemplate.tt:
  ```scr
 This is the common header.
 <#
@@ -151,7 +159,7 @@ This is the common footer.
 #>
 ```
 
- 実行時 (前処理された) テキスト テンプレートの DerivedTemplate1.tt:
+ランタイム (前処理された) テキスト テンプレートの DerivedTemplate1.tt:
  ```csharp
 <#@ template language="C#" inherits="BaseTemplate" #>
 <#
@@ -197,28 +205,28 @@ This is the common footer.
 >  `inherits` 属性と `hostspecific` 属性を一緒に使用する場合は、派生クラスで hostspecific="trueFromBase"、基底クラスで host="true" を指定します。 これで、生成されるコードで `Host` プロパティの定義が重複することを回避できます。
 
 ### <a name="inheritance-in-a-design-time-text-template"></a>デザイン時テキスト テンプレートでの継承
- デザイン時テキスト テンプレートは、対象のファイル**カスタム ツール**に設定されている**TextTemplatingFileGenerator**します。 テンプレートには、コードまたは Visual Studio プロジェクトの一部を形成するテキストの出力ファイルが生成されます。 出力ファイルを生成するために、テンプレートは、まず中間プログラム コード ファイルに変換されます。通常、このファイルは表示されません。 `inherits` 属性では、この中間コードの基底クラスを指定します。
+ デザイン時テキスト テンプレートは、対象のファイルの **カスタム ツール** を **TextTemplatingFileGenerator** に設定します。 テンプレートには、コードまたは Visual Studio プロジェクトの一部を形成するテキストの出力ファイルが生成されます。 出力ファイルを生成するために、テンプレートは、まず中間プログラム コード ファイルに変換されます。通常、このファイルは表示されません。 `inherits` 属性では、この中間コードの基底クラスを指定します。
 
  デザイン時テキスト テンプレートの場合、<xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> から派生した基底クラスを指定できます。 `<#@assembly#>` ディレクティブを使用して、基底クラスを含むアセンブリまたはプロジェクトを読み込みます。
 
- 詳細については、次を参照してください。 ["継承でテキスト テンプレート"Gareth Jones のブログで](http://go.microsoft.com/fwlink/?LinkId=208373)します。
+ 詳細については、次を参照してください。 ["継承でテキスト テンプレート"Gareth Jones のブログで](http://go.microsoft.com/fwlink/?LinkId=208373)
 
-## <a name="linepragmas-attribute"></a>LinePragmas 属性
+## <a name="linepragmas-attribute"></a>linePragmas 属性
  例 : `linePragmas="false"`
 
  有効な値: `true` (既定値)
 
  `false`
 
- この属性を false に設定すると、生成されたコード内で行番号を識別するタグが削除されます。 つまり、コンパイラは生成されたコードの行番号を使用してエラーを報告します。このため、デバッグ時の選択肢が増えて、テキスト テンプレートをデバッグするか、それとも生成されたコードをデバッグするかを選択できます。
+ この属性を `false` に設定すると、生成されたコード内で行番号を識別するタグが削除されます。 コンパイラは生成されたコードの行番号を使用してエラーを報告することを意味します。このため、デバッグ時の選択肢が増えて、テキスト テンプレートをデバッグするか、それとも生成されたコードをデバッグするかを選択できます。
 
- この属性は無駄なマージ ソース コード管理下にある原因となっているプラグマの絶対ファイル名を検索している場合にも役立ちます。
+ この属性は ソース コード管理下にあるプラグマの絶対ファイル名が無駄なマージの原因となっている場合にも役立ちます。
 
-## <a name="visibility-attribute"></a>Visibility 属性
+## <a name="visibility-attribute"></a>visibility 属性
  例 : `visibility="internal"`
 
  有効な値: `public` (既定値)
 
  `internal`
 
- 実行時テキスト テンプレートでは、これは生成されたクラスの可視性属性を設定します。 既定では、クラスはコードのパブリック API の一部ですが、`visibility="internal"` を設定すると、自分のコードだけがそのテキスト生成クラスを使用するようにできます。
+ 実行時テキスト テンプレートでは、これは生成されたクラスの可視性の属性を設定します。 既定では、クラスはコードのパブリック API の一部となりますが、`visibility="internal"` を設定すると、自分のコードだけがそのテキスト生成クラスを使用できるようになります。
