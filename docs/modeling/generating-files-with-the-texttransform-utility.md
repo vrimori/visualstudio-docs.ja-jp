@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio における TextTransform ユーティリティを使用したファイルの生成
 ms.date: 03/22/2018
 ms.topic: conceptual

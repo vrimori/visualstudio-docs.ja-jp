@@ -1,4 +1,4 @@
----
+﻿---
 title: T4 テキスト テンプレートを使用した実行時テキスト生成
 ms.date: 11/04/2016
 ms.topic: conceptual
