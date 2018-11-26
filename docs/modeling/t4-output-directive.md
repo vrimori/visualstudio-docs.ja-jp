@@ -20,13 +20,13 @@ ms.locfileid: "47860200"
 
 Visual Studio のテキスト テンプレートで、`output`ディレクティブを使用して、ファイル名拡張子と変換後のファイルのエンコードを定義します。
 
- たとえば、Visual Studio プロジェクトには、という名前のテンプレート ファイルが含まれています。 **MyTemplate.tt** 、次のディレクティブが含まれています。
+ たとえば、Visual Studio プロジェクトに、次のディレクティブが含まれている **MyTemplate.tt** という名前のテンプレート ファイルが含まれているとすると、
 
  `<#@output extension=".cs"#>`
 
- Visual Studio はという名前のファイルを生成し、 **MyTemplate.cs**
+ Visual Studio は **MyTemplate.cs** という名前のファイルを生成します。
 
- `output` ディレクティブは、実行時 (前処理済み) のテキスト テンプレートには必要ありません。 その代わりに、アプリケーションは `TextTransform()` を呼び出して、生成済みの文字列を取得します。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)します。
+ `output` ディレクティブは、ランタイム (前処理済み) のテキスト テンプレートには必要ありません。 その代わりに、アプリケーションは `TextTransform()` を呼び出して、生成した文字列を取得します。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)
 
 ## <a name="using-the-output-directive"></a>出力ディレクティブの使用
 
@@ -34,12 +34,12 @@ Visual Studio のテキスト テンプレートで、`output`ディレクティ
 <#@ output extension=".fileNameExtension" [encoding="encoding"] #>
 ```
 
- 各テキスト テンプレートには複数の `output` ディレクティブを含めてはいけません。
+ 各テキスト テンプレートには複数の `output` ディレクティブを含められません。
 
-## <a name="extension-attribute"></a>拡張属性
- 生成されたテキスト出力ファイルのファイル名の拡張子を指定します。
+## <a name="extension-attribute"></a>extension 属性
+ 生成されるテキスト出力ファイルのファイル名の拡張子を指定します。
 
- 既定値は **.cs**
+ 既定値は **.cs** です。
 
  例: `<#@ output extension=".txt" #>`
 
