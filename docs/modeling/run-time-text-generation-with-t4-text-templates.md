@@ -1,4 +1,4 @@
----
+﻿---
 title: T4 テキスト テンプレートを使用した実行時テキスト生成
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -55,7 +55,7 @@ This report is Company Confidential.
 
 ### <a name="to-create-a-run-time-text-template"></a>ランタイム テキスト テンプレートを作成するには
 
-1. ソリューション エクスプ ローラーで、プロジェクトのショートカット メニューの 選択**追加** > **新しい項目の**します。
+1. ソリューション エクスプローラーで、プロジェクトのショートカット メニューの **追加** > **新しい項目の追加** を選択します。
 
 2. **新しい項目の追加** ダイアログ ボックスで、**ランタイム テキスト テンプレート** を選択します。 (Visual Basic では、**一般的な項目** > **全般**)。
 
@@ -66,7 +66,7 @@ This report is Company Confidential.
 
 4. **[追加]** をクリックします。
 
-    拡張子を持つ新しいファイルが作成された **.tt**します。 その**カスタム ツール**プロパティに設定されて**TextTemplatingFilePreprocessor**します。 次の行が含まれています。
+    拡張子 **.tt** を持つ新しいファイルが作成されます。 その **カスタム ツール** プロパティには **TextTemplatingFilePreprocessor** が設定されています。 次の行が含まれています。
 
     ```
     <#@ template language="C#" #>
@@ -82,14 +82,14 @@ This report is Company Confidential.
 
 ### <a name="to-convert-an-existing-text-file-to-a-run-time-template"></a>既存のテキスト ファイルをランタイム テンプレートに変換するには
 
-1. ファイルをプロジェクトに Visual Studio に含めます。 ソリューション エクスプ ローラーで、プロジェクトのショートカット メニューの 選択**追加** > **既存項目の**します。
+1. ファイルを Visual Studio プロジェクトに含めます。 ソリューション エクスプ ローラーで、プロジェクトのショートカット メニューの **追加** > **既存の項目** を選択します。
 
-2. ファイルの設定**カスタム ツール**プロパティを**TextTemplatingFilePreprocessor**します。 ソリューション エクスプ ローラーで、ファイルのショートカット メニューの 選択**プロパティ**します。
+2. ファイルの設定 **カスタム ツール** プロパティを **TextTemplatingFilePreprocessor** にします。 ソリューション エクスプ ローラーで、ファイルのショートカット メニューの **プロパティ** を選択します。
 
     > [!NOTE]
-    > プロパティが既に設定されている場合がある確認**TextTemplatingFilePreprocessor**なく**TextTemplatingFileGenerator**します。 拡張機能は既にファイルをインクルードする場合に生じる **.tt**します。
+    > プロパティが既に設定されている場合は、**TextTemplatingFilePreprocessor** ではなく **TextTemplatingFileGenerator** であることを確認します。 拡張子 **.tt** のファイルをインクルードする場合に起こりえます。
 
-3. ファイル名拡張子を変更する **.tt**します。 この手順は省略可能ですが、不適切なエディターでファイルを開いてを防ぐことができます。
+3. ファイル名の拡張子を **.tt** に変更します。 この手順は省略可能ですが、不適切なエディターでファイルを開いてしまうことを防ぎます。
 
 4. ファイル名の主要部分から、スペースや句読点を削除します。 たとえば"My Web Page.tt"は適切ではないですが、"MyWebPage.tt"は適切です。 ファイル名は、生成されたコード内のクラス名として使用されます。
 
@@ -121,7 +121,7 @@ This report is Company Confidential.
 
 ### <a name="embedded-program-code"></a>埋め込まれたプログラム コード
 
-間のプログラム コードを挿入する`<#`と`#>`します。 例:
+プログラム コードは`<#`と`#>`の間に挿入します。 例:
 
 ```csharp
 <table>
@@ -146,13 +146,13 @@ This report is Company Confidential.
 </table>
 ```
 
-間、ステートメントが挿入されることに注意してください。`<# ... #>`式に挿入されますと`<#= ... #>`します。 詳細については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)です。
+ステートメントは、`<# ... #>`の間に挿入され、式は`<#= ... #>`の間に挿入されていることにことに注意してください。 詳細については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)
 
 ## <a name="using-the-template"></a>テンプレートの使用
 
 ### <a name="the-code-built-from-the-template"></a>テンプレートから作成されるコード
 
-保存すると、 **.tt**ファイル、子会社 **.cs**または **.vb**ファイルが生成されます。 このファイルを確認する**ソリューション エクスプ ローラー**、展開、 **.tt**ファイル ノード。 Visual Basic プロジェクトでまず選択**すべてのファイル**で、**ソリューション エクスプ ローラー**ツールバー。
+保存すると、 **.tt** ファイルの子に **.cs** または **.vb** ファイルが生成されています。 **ソリューション エクスプ ローラー** でこのファイルを確認するには、**.tt** ファイル ノードを展開します。 Visual Basic プロジェクトでは、**ソリューション エクスプローラー** ツールバーの **すべてのファイル** をまず選択します。
 
 子ファイルには、`TransformText()`というメソッドを含む部分クラスが含まれています。 このメソッドは、アプリケーションから呼び出すことができます。
 
@@ -304,15 +304,15 @@ include ディレクティブは、テンプレート ファイルまたはイ�
 
 次の例で使用されるパターンでは、次の点に注意してください。
 
-- 基本クラス`SharedFragments`クラス機能ブロック内のメソッドを定義します。`<#+ ... #>`します。
+- 基底クラス`SharedFragments`は、クラス機能ブロック`<#+ ... #>`内でメソッドを定義します。
 
 - 基底クラスには、フリー テキストは含まれません。 代わりに、すべてのテキスト ブロックは、クラス機能メソッド内で発生します。
 
 - 派生クラスは、`SharedFragments`で定義されているメソッドを呼び出します。
 
-- アプリケーションの呼び出し、 `TextTransform()` 、派生クラスのメソッドが基底クラスを変換しない`SharedFragments`します。
+- アプリケーションは、派生クラスの `TextTransform()` メソッドを呼び出します。基底クラス`SharedFragments`を変換しません。
 
-- 基本と派生クラスの両方が実行時テキスト テンプレートです。つまり、**カスタム ツール**プロパティに設定されて**TextTemplatingFilePreprocessor**します。
+- 基底と派生クラスの両方がランタイム テキスト テンプレートです。つまり、**カスタム ツール**プロパティは、**TextTemplatingFilePreprocessor** に設定します。
 
 **SharedFragments.tt:**
 
@@ -417,7 +417,7 @@ string result = t1.TransformText();
 Console.WriteLine(result);
 ```
 
-**結果の出力。**
+**結果の出力:**
 
 ```
 Here is the description for this derived template:
@@ -431,9 +431,9 @@ End material for DerivedTemplate1.
 
 ## <a name="related-topics"></a>関連トピック
 
-デザイン時テンプレート: アプリケーションの一部になるコードを生成するテンプレートを使用する場合を参照してください[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)します。
+デザイン時テンプレート: アプリケーションの一部になるコードを生成するテンプレートを使用する場合は次を参照してください。[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 
-実行時テンプレートは、コンパイル時にテンプレートおよびその内容を決定する、任意のアプリケーションで使用できます。 実行時に、変更するテンプレートからテキストを生成する Visual Studio 拡張機能を記述するかどうかを参照してください。 [VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)します。
+ランタイム テンプレートは、コンパイル時にテンプレートおよびその内容を決定し、任意のアプリケーションで使用できます。 実行時に変更される、テンプレートからテキストを生成する Visual Studio 拡張機能を作成したい場合は、次を参照してください。 [VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)
 
 ## <a name="see-also"></a>関連項目
 

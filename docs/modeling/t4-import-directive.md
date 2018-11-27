@@ -18,9 +18,9 @@ ms.locfileid: "49916024"
 ---
 # <a name="t4-import-directive"></a>T4 インポート ディレクティブ
 
-Visual Studio T4 テキスト テンプレートのコード ブロックで、`import`ディレクティブを使用すると、完全修飾名を指定せず、別の名前空間内の要素を参照してください。 このディレクティブは、C# の `using` または `imports` の [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] に相当します。
+`import`ディレクティブにより、Visual Studio T4 テキスト テンプレートのコード ブロックにおいて、完全修飾名を指定せずに別の名前空間内の要素を参照を使用することができるようになります。 このディレクティブは、C# の `using` または、[!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)]の `imports` に相当します。
 
-T4 テキスト テンプレートの作成方法の一般的な概要については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)です。
+T4 テキスト テンプレートの作成方法の一般的な概要については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)
 
 ## <a name="using-the-import-directive"></a>import ディレクティブの使用
 
@@ -28,7 +28,7 @@ T4 テキスト テンプレートの作成方法の一般的な概要につい�
 <#@ import namespace="namespace" #>
 ```
 
- この例では、テンプレート コードで System.IO のメンバーの明示的な名前空間を省略できます。
+ 次の例では、テンプレート コードで System.IO のメンバーの名前空間の明示を省略できます。
 
 ```
 <#@ import namespace="System.IO" #>
