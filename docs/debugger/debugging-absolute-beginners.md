@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c10032bf12060c8c5e42f93f6596fe576adfccf
-ms.sourcegitcommit: 7bb0225e1fd45999ce09e0b49c2cfae515c27e11
+ms.openlocfilehash: fa998896ad4c67bcd9e10ee50b4939bdbf915330
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45612676"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257369"
 ---
 # <a name="how-to-debug-for-absolute-beginners"></a>超初心者でもわかるデバッグ方法
 
@@ -80,7 +80,7 @@ Visual Studio では、コード行の左にある余白をクリックして、
 
 1. Visual Studio をインストールし、作成するアプリの種類に応じて、**.NET デスクトップ開発**ワークロードまたは **.NET Core クロス プラットフォーム開発**ワークロードをインストールする必要があります。
 
-    Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
+    Visual Studio をまだインストールしていない場合は、 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)  ページに移動し、無料試用版をインストールしてください。
 
     Visual Studio は既にインストールされていて、ワークロードだけをインストールする必要がある場合は、**[ツール]** > **[ツールと機能を取得]** の順にクリックします。 Visual Studio インストーラーが起動します。 **[.NET デスクトップ開発]** (または **[.NET Core クロスプラットフォームの開発]**) ワークロードを選択し、**[変更]** を選択します。
 
@@ -325,11 +325,11 @@ Visual Studio では、コード行の左にある余白をクリックして、
 * アプリケーションで想定されたコードが実行されているかどうかを確認します。 (たとえば、サンプル アプリケーションでは、銀河の種類を Irregular に設定する switch ステートメントのコードが想定されましたが、タイプミスのためにアプリはそのコードをスキップしていました。)
 
 > [!TIP]
-> バグを見つけるにはデバッガーが役に立ちます。 デバッグ ツールは、コードの意図がわかっている場合にのみ、"*自動的に*" バグを発見できます。 開発者がその意図を表現した場合にのみ、ツールはコードの意図を認識できます。 それを行う方法は、[単体テスト](../test/improve-code-quality.md)を書くことです。
+> バグを見つけるにはデバッガーが役に立ちます。 デバッグ ツールは、コードの意図がわかっている場合にのみ、"*自動的に*" バグを発見できます。 開発者がその意図を表現した場合にのみ、ツールはコードの意図を認識できます。 それを行う方法は、[単体テスト](../test/improve-code-quality.md)を書くことです。 
 
 ## <a name="next-steps"></a>次の手順
 
-この記事では、いくつかの一般的なデバッグの概念を学びました。 次に、Visual Studio でのデバッグ方法の学習を始めることができます。
+この記事では、いくつかの一般的なデバッグの概念を学びました。 次は、デバッガーに関する詳細の学習を開始できます。
 
 > [!div class="nextstepaction"]
 > [Visual Studio を使用したデバッグについて理解する](../debugger/getting-started-with-the-debugger.md)

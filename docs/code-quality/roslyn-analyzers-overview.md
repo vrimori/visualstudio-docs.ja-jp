@@ -1,5 +1,5 @@
 ---
-title: Visual Studio の Roslyn アナライザー
+title: Roslyn アナライザーを使用したコード分析
 ms.date: 03/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
@@ -13,16 +13,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3d5836c0522ef97a634f44799934aab2750b3a45
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 620f2905e2511ed403f0d25f32fa1bfc9b1eca68
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39511423"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948843"
 ---
 # <a name="overview-of-net-compiler-platform-analyzers"></a>.NET Compiler Platform アナライザーの概要
 
-Visual Studio 2017 には、入力したときに C# や Visual Basic のコードを分析する、組み込みの .NET Compiler Platform アナライザーのセットが含まれています。 Visual Studio 拡張機能として、または NuGet パッケージとしてプロジェクトごとに、追加のアナライザーをインストールできます。 アナライザーでは、コード スタイル、コードの品質と保守性、コード設計、およびその他の問題が確認されます。
+Visual Studio 2017 には、入力したときに C# や Visual Basic のコードを分析する、組み込みの .NET Compiler Platform アナライザーのセットが含まれています。 アナライザーでは、コード スタイル、コードの品質と保守性、コード設計、およびその他の問題が確認されます。 Visual Studio 拡張機能として、または NuGet パッケージとしてプロジェクトごとに、追加のアナライザーをインストールできます。
 
 アナライザーでルール違反が見つかった場合は、コード エディターで問題のあるコードの下に*波線* として報告され、**[エラー一覧]** でも報告されます。
 

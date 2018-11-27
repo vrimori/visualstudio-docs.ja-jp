@@ -9,12 +9,12 @@ description: 別名またはフレンドリ名の使用でサインインに失�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 48faa1ce2e002b6a21c3e467db627d9c08bec2e6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 3743cc11d5001d12ba4cd030ddc0cfc914db3131
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49854469"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51817439"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-may-fail-when-using-aliases"></a>別名を使用した Visual Studio サブスクリプションへのサインインが失敗する場合がある
 
@@ -24,7 +24,7 @@ ms.locfileid: "49854469"
 
 "別名定義" という用語は、Windows (または Active Directory) へのサインインと電子メールへのアクセスに別々の ID を持っているユーザーを指します。
 
-別名定義は、JohnD@contoso.com のように、会社が自社のディレクトリのサインイン用に Microsoft オンライン サービスを持っているが、ユーザーは John.Doe@contoso.com などの別名や表示名を使用して自分の電子メール アカウントにアクセスしている場合に発生する場合があります。  ボリューム ライセンス サービス センター (VLSC) を介してサブスクリプションを管理している多くのユーザーにとって、これがサインインが失敗する原因となる場合があります。指定したメール アドレス (John.Doe@contoso.com) が、"職場または学校アカウント" オプションを通じて正常に認証するために必要なディレクトリ アドレス (JohnD@contoso.com) と一致していないからです。
+別名定義は、JohnD@contoso.com のように、会社が自社のディレクトリのサインイン用に Microsoft オンライン サービスを持っているが、ユーザーは John.Doe@contoso.com などの別名や表示名を使用して自分の電子メール アカウントにアクセスしている場合に発生する場合があります。 ボリューム ライセンス サービス センター (VLSC) を介してサブスクリプションを管理している多くのユーザーにとって、これがサインインが失敗する原因となる場合があります。指定したメール アドレス (John.Doe@contoso.com) が、"職場または学校アカウント" オプションを通じて正常に認証するために必要なディレクトリ アドレス (JohnD@contoso.com) と一致していないからです。
 
 ## <a name="as-an-administrator-what-options-do-i-have"></a>管理者として選択できるオプションとは
 
@@ -33,15 +33,15 @@ ms.locfileid: "49854469"
 - 2 番目のオプション (安全性で劣る) は、サブスクライバーに自身の "職場または学校" のメール アドレスを "個人用" アカウント (別名:  Microsoft アカウント (MSA)) に関連付けることを許可することです。 詳細については、この記事の「[職場または学校アカウントを個人用アカウントとして定義する](#defining-a-work-or-school-account-as-a-personal-account )」セクションを参照してください。
 
 > [!NOTE]
-> 会社が新しい Visual Studio サブスクリプションの[管理ポータル](https://manage.visualstudio.com)に移行すると、ディレクトリとメール アドレスの両方をサブスクライバーのプロファイルの一部として指定できる、新しい管理エクスペリエンスが利用できるようになります。  移行の詳細については、[こちら](https://support.microsoft.com/help/4013930/visual-studio-subscriptions-administrator-migration-details)をご覧ください。
+> 会社が新しい Visual Studio サブスクリプションの[管理ポータル](https://manage.visualstudio.com)に移行すると、ディレクトリとメール アドレスの両方をサブスクライバーのプロファイルの一部として指定できる、新しい管理エクスペリエンスが利用できるようになります。 移行の詳細については、[こちら](https://support.microsoft.com/help/4013930/visual-studio-subscriptions-administrator-migration-details)をご覧ください。
 
 ## <a name="as-a-subscriber-what-options-do-i-have"></a>サブスクライバーとして選択できるオプションとは
 
-サブスクライバーの観点からは、まず、管理者に問い合わせて、会社の ID の構成を理解することが重要です。  必要に応じて、管理者が管理ポータルから、サブスクライバーのアカウント設定を更新する必要がある場合や、サブスクライバーが自分の会社のメール アドレスを使用して Microsoft アカウント (MSA) を作成する必要がある場合があります。  MSA を作成する手順を実行する前に、この実行に関するポリシーまたは問題について管理者と話します。  詳細については、この記事の「[職場または学校アカウントを個人用アカウントとして定義する](#defining-a-work-or-school-account-as-a-personal-account )」セクションを参照してください。
+サブスクライバーの観点からは、まず、管理者に問い合わせて、会社の ID の構成を理解することが重要です。 必要に応じて、管理者が管理ポータルから、サブスクライバーのアカウント設定を更新する必要がある場合や、サブスクライバーが自分の会社のメール アドレスを使用して Microsoft アカウント (MSA) を作成する必要がある場合があります。 MSA を作成する手順を実行する前に、この実行に関するポリシーまたは問題について管理者と話します。 詳細については、この記事の「[職場または学校アカウントを個人用アカウントとして定義する](#defining-a-work-or-school-account-as-a-personal-account)」セクションを参照してください。
 
 ## <a name="assigning-subscribers-to-a-directory-account"></a>サブスクライバーをディレクトリ アカウントに割り当てる
 
-いずれのケースでも、ボリューム ライセンス サービス センター (VLSC) 内のサブスクリプション マネージャーは、新しいサブスクライバーのディレクトリ アドレスを使用するか、"既存の" サブスクライバーの電子メール アドレスを更新する必要があります。  ディレクトリ アドレスを使用すると、新しいサブスクライバーがウェルカム メールを受信しないため、管理者がサブスクライバーにサブスクリプションが割り当てられたことを通知する必要があることに注意してください。  次の手順を実行してから、自由にメール [テンプレート](#notifying-your-subscribers-with-directory-addresses)を使ってサブスクライバーに通知し、サインイン プロセスを支援してください。
+いずれのケースでも、ボリューム ライセンス サービス センター (VLSC) 内のサブスクリプション マネージャーは、新しいサブスクライバーのディレクトリ アドレスを使用するか、"既存の" サブスクライバーの電子メール アドレスを更新する必要があります。 ディレクトリ アドレスを使用すると、新しいサブスクライバーがウェルカム メールを受信しないため、管理者がサブスクライバーにサブスクリプションが割り当てられたことを通知する必要があることに注意してください。 次の手順を実行してから、自由にメール [テンプレート](#notifying-your-subscribers-with-directory-addresses)を使ってサブスクライバーに通知し、サインイン プロセスを支援してください。
 
 ### <a name="adding-new-subscribers"></a>新しいサブスクライバーを追加する
 
@@ -88,7 +88,7 @@ ms.locfileid: "49854469"
 
 %サブスクライバー名% 様
 
-Visual Studio サブスクリプションが割り当てられました。  https://my.visualstudio.com にアクセスして、%ディレクトリ アドレス% アドレスを使用してログインし、サブスクリプションをアクティブ化してアクセスしてください。
+Visual Studio サブスクリプションが割り当てられました。 https://my.visualstudio.com にアクセスして、%ディレクトリ アドレス% アドレスを使用してログインし、サブスクリプションをアクティブ化してアクセスしてください。
 
 問題がある場合は、サポート チームにお問い合わせください (https://visualstudio.microsoft.com/subscriptions/support/)。
 
@@ -99,8 +99,6 @@ Visual Studio サブスクリプションが割り当てられました。  http
    - 必要なサポート オプションを選択します
 
 ----------- コピーの終了 -----------
-
-
 
 ## <a name="defining-a-work-or-school-account-as-a-personal-account"></a>職場または学校アカウントを個人用アカウントとして定義する
 
@@ -119,7 +117,7 @@ Visual Studio サブスクリプションが割り当てられました。  http
    - Someone@example.com ボックスにウェルカム メールを受信したメール アドレスを入力します。
    - パスワードを作成します。
    - キャンペーンの設定を選択します。
-   - **[次へ]** をクリックします。
+   -  **[次へ]** をクリックします。
 
 3. 検証手順を実行して、**[次へ]** をクリックします。
 

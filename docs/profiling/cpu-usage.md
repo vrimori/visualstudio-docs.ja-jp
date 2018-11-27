@@ -1,7 +1,7 @@
 ---
 title: Visual Studio での CPU 使用率の分析 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
-ms.date: 11/04/2016
+ms.date: 11/04/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 7501a20d-04a1-480f-a69c-201524aa709d
@@ -10,105 +10,106 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f63e4f43db3f8c4b24b43bda02cf00b52befc94
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 1129d5574903db1d658b8521c920d7858c2dfe1c
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49842184"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948921"
 ---
-# <a name="analyze-cpu-usage"></a>CPU 使用率の分析
-アプリのパフォーマンスの問題を調査する必要がある場合、まず CPU の使用状況を理解することから始めることができます。 **CPU 使用率**ツールは、CPU が Visual C++、Visual C#/Visual Basic、JavaScript のコードを実行するとき、どこで時間を費やしているかを示します。 Visual Studio 2015 Update 1 以降、デバッガーを終了することなく CPU 使用率の関数ごとの内訳を確認できます。 デバッグ中に CPU プロファイリングのオンとオフを切り替えたり、ブレークポイントなど、実行が停止しているときに結果を表示できます。  
-  
-診断セッションの実行と管理にはいくつかの選択肢があります。 たとえば、 **CPU 使用率** ツールをローカルまたはリモートのコンピューターで、あるいはシミュレーターやエミュレーターで実行できます。 Visual Studio で開いているプロジェクトのパフォーマンスを分析したり、実行中のアプリにアタッチしたり、Microsoft ストアからインストールされたアプリを開始したりできます。 詳細については、「[デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」を参照してください。 
+# <a name="analyze-cpu-usage"></a>CPU 使用率の分析 
 
-ここでは、リリース ビルドで CPU 使用率を収集し、分析する方法について説明します。 デバッグ中の CPU 使用率分析については、「[パフォーマンス プロファイリングのビギナーズ ガイド](../profiling/beginners-guide-to-performance-profiling.md)」を参照してください。
+アプリのパフォーマンスの問題の調査を開始するのに適した方法は、CPU 使用率を理解することです。 **CPU 使用率**パフォーマンス ツールは、C++、C#/Visual Basic、および JavaScript のアプリでコードを実行するのにかかった CPU 時間と割合を示します。 
 
-この記事で紹介するプロファイリング ツール、[パフォーマンス プロファイラー](../profiling/profiling-feature-tour.md)を使用するには Windows 7 以降が必要です。
+**CPU 使用率**ツールは、開かれた状態の Visual Studio プロジェクトまたはインストール済みの Microsoft Store アプリで実行することができます。または、実行中のアプリまたはプロセスにアタッチすることもできます。 このツールは、ローカルまたはリモートのコンピューターで実行することも、シミュレーターやエミュレーターで実行することもできます。 詳細については、「[デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」を参照してください。 
+
+**CPU 使用率**ツールは、デバッグを使用して、または使用せずに実行することができます。 デバッガーで、CPU プロファイルをオン/オフにして、CPU 使用率の関数ごとの内訳を確認することができます。 たとえばブレークポイントなどで、実行が一時停止したときに、CPU 使用率の結果を表示できます。  
+
+次の手順では、Visual Studio **パフォーマンス プロファイラー**を使用してデバッガーなしで **CPU 使用率**ツールを使用する方法を示します。 例では、ローカル コンピューターでリリース ビルドを使用しています。 リリース ビルドでは、実際のアプリ パフォーマンスの最適なビューが提供されます。 デバッグ ビルドを使用して CPU 使用率を分析するには、[パフォーマンス プロファイリングのビギナーズ ガイド](../profiling/beginners-guide-to-performance-profiling.md)を参照してください。
+
+通常、ローカル コンピューターでは、インストールされているアプリの実行が最適にレプリケートされます。 Windows Phone アプリの場合には、デバイスからのデータを直接収集すると最も正確なデータが得られます。 リモート デバイスからデータを収集するには、リモート デスクトップ接続を介さずに、デバイス上で直接アプリを実行します。 
+
+>[!NOTE]
+>[パフォーマンス プロファイラー](../profiling/profiling-feature-tour.md)を使用するには、Windows 7 以降が必要です。
   
 ##  <a name="collect-cpu-usage-data"></a>CPU 使用率のデータの収集  
   
-1. Visual Studio で、ソリューション構成を **[リリース]** に設定して配置ターゲットを選択します。  
+1. Visual Studio プロジェクトで、ソリューション構成を **[リリース]** に設定し、配置ターゲットとして **[ローカル コンピューター]** を選択します。  
   
-    ![リリースとローカル コンピューターの選択](../profiling/media/cpuuse_selectreleaselocalmachine.png "CPUUSE_SelectReleaseLocalMachine")  
+    ![[リリース] と [ローカル コンピューター] の選択](../profiling/media/cpuuse_selectreleaselocalmachine.png "[リリース] と [ローカル コンピューター] の選択")  
   
-   -   アプリを **[リリース]** モードで実行すると、アプリの実際のパフォーマンスをよりよく把握できます。  
+1. **[デバッグ]** > **[パフォーマンス プロファイラー]** の順に選択します。  
   
-   -   アプリをローカル コンピューターで実行すると、インストールされているアプリの実行に最も近い状態で再現できます。  
+1. **[使用可能なツール]** の下で、**[CPU 使用率]** を選択し、**[開始]** を選択します。  
   
-   -   リモート デバイスからデータを収集している場合は、アプリはリモート デスクトップ接続を使用しないで、デバイス上で直接実行してください。  
+    ![[CPU 使用率] の選択](../profiling/media/cpuuse_lib_choosecpuusage.png "[CPU 使用率] の選択")  
   
-   -   Windows Phone アプリの場合には、**[デバイス]** からのデータを直接収集すると最も正確なデータが得られます。  
+4. アプリが起動すると、診断セッションが開始され、CPU 使用率データが表示されます。 データの収集が完了したら、**[コレクションの停止]** を選択します。  
   
-2. **[デバッグ]** メニューの **[パフォーマンス プロファイラー]** を選びます。  
-  
-3. **[CPU 使用率]**、**[開始]** を選択します。  
-  
-    ![CPU 使用率の選択](../profiling/media/cpuuse_lib_choosecpuusage.png "CPUUSE_LIB_ChooseCpuUsage")  
-  
-4. アプリが起動したら、**[最大数を取得]** をクリックします。 出力の表示後に約 1 秒待ってから、**[非同期の最大数の取得]** を選択します。 ボタンのクリック間隔を空けると、診断レポートにおいてボタン クリックのルーチンを分離しやすくなります。  
-  
-5. 2 番目の出力行が表示された後、パフォーマンスと診断ハブで **[コレクションの停止]** をクリックします。  
-  
-   ![CpuUsage データ コレクションの停止](../profiling/media/cpu_use_wt_stopcollection.png "CPU_USE_WT_StopCollection")  
+   ![CPU 使用率データの収集の停止](../profiling/media/cpu_use_wt_stopcollection.png "CPU 使用率データの収集の停止")  
   
    CPU 使用率ツールがデータを分析してレポートを表示します。  
   
-   ![CpuUsage レポート](../profiling/media/cpu_use_wt_report.png "CPU_USE_WT_Report")  
+   ![CPU 使用率レポート](../profiling/media/cpu_use_wt_report.png "CPU 使用率レポート")  
   
+
 ## <a name="analyze-the-cpu-usage-report"></a>CPU 使用率レポートの分析  
   
-###  <a name="BKMK_The_CPU_Usage_call_tree"></a> CPU 使用率コール ツリー  
- コール ツリー情報を理解するには、 `GetMaxNumberButton_Click` セグメントを再度選択し、コール ツリーの詳細を確認します。  
+診断レポートは、**合計 CPU** の高い順に並べ替えられます。 並べ替え順序または並べ替え列を変更するには、列ヘッダーを選択します。 表示するスレッドを選択または選択解除するには、**[フィルター]** ドロップダウンを使用します。特定のスレッドまたはノードを検索するには、**[検索]** ボックスを使用します。 
+
+###  <a name="BKMK_Call_tree_data_columns"></a> CPU 使用率データの列  
+
+|||  
+|-|-|  
+|**合計 CPU [ユニット、%]**|![合計 % のデータ演算式](../profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> 選択した時間範囲において、関数の呼び出し、および関数が呼び出した関数で使用された CPU 時間 (ミリ秒) と割合です。 これは、特定の時間範囲におけるアプリの合計 CPU アクティビティと、利用可能な合計 CPU とを比較する **CPU 使用率**タイムライン グラフとは異なります。|  
+|**セルフ CPU [ユニット、%]**|![自己 % 演算式](../profiling/media/cpu_use_wt_selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> 選択した時間範囲において、関数の呼び出し (関数が呼び出した関数を除く) で使用された CPU 時間 (ミリ秒) と使用率 (パーセンテージ) です。|  
+|**モジュール**|関数を含むモジュールの名前です。   
+  
+###  <a name="BKMK_The_CPU_Usage_call_tree"></a> CPU 使用率コール ツリー 
+
+コール ツリーを表示するには、レポートの親ノードを選択します。 **[CPU 使用率]** ページが開き、**呼び出し元/呼び出し先**ビューが表示されます。 **[現在のビュー]** ドロップダウンで **[コール ツリー]** を選択します。  
   
 ####  <a name="BKMK_Call_tree_structure"></a> コール ツリーの構造  
- ![GetMaxNumberButton&#95;Click コール ツリー](../profiling/media/cpu_use_wt_getmaxnumbercalltree_annotated.png "CPU_USE_WT_GetMaxNumberCallTree_annotated")  
+
+ ![コール ツリーの構造](../profiling/media/cpu_use_wt_getmaxnumbercalltree_annotated.png "コール ツリーの構造")  
   
 |||  
 |-|-|  
 |![手順 1](../profiling/media/procguid_1.png "ProcGuid_1")|CPU 使用率コール ツリーのトップ レベルのノードは擬似ノードです。|  
-|![手順 2](../profiling/media/procguid_2.png "ProcGuid_2")|ほとんどのアプリでは、 **[外部コードの表示]** オプションをオフにすると、セカンド レベルのノードは **[外部コード]** ノードとなります。このノードに含まれるシステムおよびフレームワーク コードは、アプリの開始と停止、UI の描画、スレッド スケジュールの制御、およびアプリへの他の低レベル サービスの提供を行います。|  
+|![手順 2](../profiling/media/procguid_2.png "ProcGuid_2")|ほとんどのアプリでは、**[外部コードの表示]** オプションが無効になっていると、2 番目のレベルのノードが、**[外部コード]** ノードになります。 ノードには、アプリの開始と停止、UI の描画、スレッドの制御、およびアプリへの他の低レベル サービスの提供を行うシステムとフレームワーク コードが含まれています。|  
 |![手順 3](../profiling/media/procguid_3.png "ProcGuid_3")|セカンド レベル ノードの子はユーザー コード メソッドおよび非同期ルーチンで、セカンド レベル システムとフレームワーク コードによって呼び出される、または作成されます。|  
-|![手順 4](../profiling/media/procguid_4.png "ProcGuid_4")|メソッドの子ノードには、親メソッドの呼び出しのみのデータが含まれます。 **[外部コードの表示]** がオフのとき、アプリ メソッドには **[外部コード]** ノードが含まれる場合もあります。|  
+|![手順 4](../profiling/media/procguid_4.png "ProcGuid_4")|メソッドの子ノードには、親メソッドを呼び出すためだけのデータが含まれます。 **[外部コードの表示]** がオフのとき、アプリ メソッドには **[外部コード]** ノードが含まれる場合もあります。|  
   
 ####  <a name="BKMK_External_Code"></a> 外部コード  
- 外部コードは、作成したコードによって実行されるシステムおよびフレームワーク コンポーネント内の関数です。 外部コードには、アプリの開始と停止、UI の描画、スレッドの制御、およびアプリへの他の低レベル サービスの提供を行う関数が含まれます。 外部コードを確認することはほとんどないため、CPU 使用率コール ツリーはユーザー メソッドの外部関数を 1 つの **[外部コード]** ノードにまとめます。  
+
+ コードによって実行されるシステムおよびフレームワークの関数は、*外部コード*と呼ばれます。 外部コード関数は、アプリの開始と停止、UI の描画、スレッドの制御、およびアプリへの他の低レベル サービスの提供を行います。 外部コードを確認することはほとんどないため、CPU 使用率コール ツリーはユーザー メソッドの外部関数を 1 つの **[外部コード]** ノードにまとめます。  
   
- 外部コードのコール パスを表示する場合、 **[フィルター ビュー]** リストから **[外部コードの表示]** をクリックし、 **[適用]** をクリックします。  
+ 外部コードの呼び出しパスを表示するには、診断レポートのメイン ページで、**[フィルター]** ドロップダウンから **[外部コードの表示]** を選択し、**[適用]** を選択します。 **[CPU 使用率]** ページの **[コール ツリー]** ビューで外部コードの呼び出しが展開されます。  
   
- ![[フィルター表示]、[外部コードの表示] の順に選択](../profiling/media/cpu_use_wt_filterview.png "CPU_USE_WT_FilterView")  
+ ![外部コードの表示](../profiling/media/cpu_use_wt_filterview.png "外部コードの表示")  
   
- 多くの外部コードの呼び出しチェーンは複雑な入れ子になっているため、関数名列の幅は、一部の大型コンピューター モニターを除いてディスプレイの幅に収まりきらない可能性があります。 その場合、関数名は **[...]** と表示されます。  
+ 多くの外部コードの呼び出しチェーンは複雑な入れ子になっているため、チェーンの幅が **[関数名]** 列の表示幅に収まりきらない可能性があります。 その場合、関数名が **...** として表示されます。  
   
- ![コール ツリーの入れ子式の外部コード](../profiling/media/cpu_use_wt_showexternalcodetoowide.png "CPU_USE_WT_ShowExternalCodeTooWide")  
+ ![コール ツリーの入れ子になった外部コード](../profiling/media/cpu_use_wt_showexternalcodetoowide.png "コール ツリーの入れ子になった外部コード")  
   
- 検索ボックスを使って目的のノードを探した後、水平スクロール バーを使ってデータを表示させます。  
+ 探している関数名を検索するには、検索ボックスを使用します。 選択した行をポイントするか、水平スクロール バーを使用してデータを表示します。  
   
- ![入れ子式の外部コードの検索](../profiling/media/cpu_use_wt_showexternalcodetoowide_found.png "CPU_USE_WT_ShowExternalCodeTooWide_Found")  
-  
-###  <a name="BKMK_Call_tree_data_columns"></a> コール ツリー データの列  
-  
-|||  
-|-|-|  
-|**合計 CPU (%)**|![合計 % のデータ演算式](../profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> 選択した時間範囲におけるアプリの CPU アクティビティのうち、関数の呼び出し、および関数が呼び出した関数が使用した割合です。 これは、特定の時間範囲におけるアプリの合計アクティビティと、利用可能な合計 CPU 能力とを比較する **[CPU 使用率]** タイムライン グラフとは異なります。|  
-|**セルフ CPU (%)**|![自己 % 演算式](../profiling/media/cpu_use_wt_selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> 選択した時間範囲におけるアプリの CPU アクティビティのうち、関数の呼び出しが使用した割合です。ただし、関数から呼び出された関数のアクティビティは除きます。|  
-|**合計 CPU (ミリ秒)**|選択した時間範囲内で、関数への呼び出しおよび関数が呼び出した関数によって使用されたミリ秒です。|  
-|**セルフ CPU (ミリ秒)**|選択した時間範囲内で、関数への呼び出しおよび関数が呼び出した関数によって使用されたミリ秒です。ただし、関数が呼び出した関数のアクティビティは除きます。|  
-|**モジュール**|関数が含まれるモジュールの名前です。あるいは、[外部コード] ノード内の関数が含まれるモジュールの数です。|  
+ ![入れ子になった外部コードの検索](../profiling/media/cpu_use_wt_showexternalcodetoowide_found.png "入れ子になった外部コードの検索")  
   
 ###  <a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a> CPU 使用率コール ツリー内の非同期関数  
- コンパイラが非同期メソッドを検出すると、メソッドの実行を制御するために非表示のクラスを作成します。 概念的には、クラスとはコンパイラによって生成された関数のリストを含んだステート マシンです。これらの関数は、元のメソッドの操作を非同期で呼び出したり、それを正しく実行するのに必要なコールバック、スケジューラ、反復子を呼び出したりします。 元のメソッドが親メソッドによって呼び出されると、ランタイムは親の実行コンテキストからメソッドを削除し、アプリの実行を制御するシステムとフレームワーク コードのコンテキストにある非表示のクラスのメソッドを実行します。 非同期のメソッドは、多くの場合、1 つ以上の異なるスレッドで実行されます (必ずそうなるわけではありません)。 このコードは、CPU 使用率コール ツリーで、ツリーのトップ ノードのすぐ下にある **[外部コード]** ノードの子として表示されます。  
+
+ コンパイラが非同期メソッドを検出すると、メソッドの実行を制御するために非表示のクラスを作成します。 概念的に、クラスはステート マシンです。 クラスには、元のメソッドを非同期に呼び出すコンパイラにより生成された関数と、それらを実行するために必要なコールバック、スケジューラ、反復子があります。 親メソッドによって元のメソッドが呼び出されると、コンパイラは親の実行コンテキストからメソッドを削除し、アプリの実行を制御するシステムとフレームワーク コードのコンテキストにある非表示のクラスのメソッドを実行します。 非同期のメソッドは、多くの場合、1 つ以上の異なるスレッドで実行されます (必ずそうなるわけではありません)。 このコードは、**CPU 使用率**コール ツリーで、ツリーのトップ ノードのすぐ下にある **[外部コード]** ノードの子として表示されます。  
+
+次の例では、**[外部コード]** の下にある最初の 2 つのノードは、ステート マシン クラスのコンパイラ生成メソッドです。 3 番目のノードは、元のメソッドへの呼び出しです。 
   
- これをこの例で表示するには、タイムラインで `GetMaxNumberAsyncButton_Click` セグメントを再度選択します。  
+![非同期ノード](media/cpu_use_wt_getmaxnumberasync_selected.png "非同期ノード")  
+
+生成されたメソッドを展開して、詳細を表示します。
+
+![展開された非同期ノード](media/cpu_use_wt_getmaxnumberasync_expandedcalltree.png "展開された非同期ノード")  
+
+- `MainPage::GetMaxNumberAsyncButton_Click` は単に、タスクの値のリストを管理し、結果の最大値を計算し、出力を表示します。
   
- ![GetMaxNumberAsyncButton&#95;Click のレポート選択](../profiling/media/cpu_use_wt_getmaxnumberasync_selected.png "CPU_USE_WT_GetMaxNumberAsync_Selected")  
+- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext` は、 `GetNumberAsync`の呼び出しをラップする 48 個のタスクをスケジュールして起動するために必要なアクティビティを表示します。
   
- **[外部コード]** の下にある最初の 2 つのノードは、ステート マシン クラスのコンパイラ生成メソッドです。 3 つ目は、元のメソッドへの呼び出しです。 生成されたメソッドを展開すると詳細が表示されます。  
-  
- ![展開された GetMaxNumberAsyncButton&#95;Click コール ツリー](../profiling/media/cpu_use_wt_getmaxnumberasync_expandedcalltree.png "CPU_USE_WT_GetMaxNumberAsync_ExpandedCallTree")  
-  
--   `MainPage::GetMaxNumberAsyncButton_Click` の機能は非常にわずかで、タスクの値のリストを管理し、結果の最大値を計算し、出力を表示するに過ぎません。  
-  
--   `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext` は、 `GetNumberAsync`の呼び出しをラップする 48 個のタスクをスケジュールして起動するために必要なアクティビティを表示します。  
-  
--   `MainPage::<GetNumberAsync>b__b` は `GetNumber`を呼び出すタスクのアクティビティを表示します。
+- `MainPage::<GetNumberAsync>b__b` は `GetNumber`を呼び出すタスクのアクティビティを表示します。

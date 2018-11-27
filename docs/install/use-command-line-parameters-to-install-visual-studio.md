@@ -2,7 +2,7 @@
 title: コマンド ライン パラメーターを使用して Visual Studio をインストールする
 description: コマンド ライン パラメーターを使用して、Visual Studio のインストールを制御またはカスタマイズする方法を説明します。
 ms.custom: ''
-ms.date: 05/07/2018
+ms.date: 11/14/2018
 ms.technology: vs-acquisition
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -16,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 051935a2c7022af3c6811e90a89697a08f52fa9a
-ms.sourcegitcommit: 12d6398c02e818de4fbcb4371bae9e5db6cf9509
+ms.openlocfilehash: e52d61c1226e131c9d989a70f7c8e6432d8f3733
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050366"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51768515"
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする
 
@@ -55,6 +55,7 @@ ms.locfileid: "50050366"
 | `update` | インストールされている製品を更新します。 |
 | `repair` | インストールされている製品を修復します。 |
 | `uninstall` | インストールされている製品をアンインストールします。 |
+| `export` | **15.9 の新機能**: インストールの選択をインストール構成ファイルにエクスポートします。 |
 
 | **インストール オプション** | **説明** |
 | ----------------------- | --------------- |
@@ -74,6 +75,7 @@ ms.locfileid: "50050366"
 | `--nickname <name>` | **省略可能**: インストールされている製品に割り当てるニックネームを定義します。 ニックネームは 10 文字を超えることはできません。  |
 | `--productKey` | **省略可能**: インストールされる製品に使用するプロダクト キーを定義します。 `xxxxx-xxxxx-xxxxx-xxxxx-xxxxx` または `xxxxxxxxxxxxxxxxxxxxxxxxx` のいずれかの形式の英数字 25 文字で構成されます。 |
 | `--help, --?, -h, -?` | このページのオフライン バージョンを表示します。 |
+| `--config <path>` | **省略可能**および **15.9 の新機能**: インストールまたは変更の操作中に、以前に保存したインストール構成ファイルに基づいて、追加するワークロードおよびコンポーネントを決定します。 この操作は追加式で、ワークロードやコンポーネントがファイル内に存在しない場合、削除されることはありません。 また、製品に適用されない項目は追加されません。 エクスポート操作中に、インストール構成ファイルの保存場所を決定します。 |
 
 > 注: 複数のワークロードとコンポーネントを指定する場合、項目ごとに `--add` または `--remove` コマンド ライン スイッチを繰り返す必要があります。
 

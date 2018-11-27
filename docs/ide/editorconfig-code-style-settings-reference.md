@@ -8,7 +8,7 @@ dev_langs:
 helpviewer_keywords:
 - coding conventions [EditorConfig]
 - EditorConfig coding conventions
-- language conventions [EditorConfig]
+- language code style rules [EditorConfig]
 - formatting conventions [EditorConfig]
 author: kuhlenh
 ms.author: gewarren
@@ -18,12 +18,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 237651c67cd2578b2b2a2e4ffade3f4c6d180d78
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: a54a3d6b967e7652c25e24922d7bd3b49141cc17
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50967546"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51769754"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig の .NET コーディング規則の設定
 
@@ -35,7 +35,7 @@ Visual Studio 2017 [EditorConfig](../ide/create-portable-custom-editor-options.m
 
 サポートされている .NET コーディング規則には次の 3 つのカテゴリがあります。
 
-- [言語規則](#language-conventions)
+- [言語コード スタイル](#language-code-styles)
 
    C# または Visual Basic 言語に関するルール。 たとえば、変数の定義時の `var` または明示的な型の使用や、式形式メンバーの優先に関するルールを指定できます。
 
@@ -47,13 +47,13 @@ Visual Studio 2017 [EditorConfig](../ide/create-portable-custom-editor-options.m
 
    コード要素の名前付けに関するルール。 たとえば、`async` メソッドは "Async" で終わる必要があるなどと指定できます。
 
-## <a name="language-conventions"></a>言語規則
+## <a name="language-code-styles"></a>言語コード スタイル
 
-言語規則のルールには次の形式があります。
+言語コード スタイルのルールには次の形式があります。
 
 `options_name = false|true : none|silent|suggestion|warning|error`
 
-各言語規則のルールでは、**true** (このスタイルを優先する) または **false** (このスタイルを優先しない)、および**重要度**を指定する必要があります。 重要度は、そのスタイルの適用レベルを指定します。
+各言語コード スタイルのルールでは、**true** (このスタイルを優先する) または **false** (このスタイルを優先しない)、および**重要度**を指定する必要があります。 重要度は、そのスタイルの適用レベルを指定します。
 
 次の表に、指定できる重要度の値とその効果をリストします。
 
@@ -65,7 +65,7 @@ Visual Studio 2017 [EditorConfig](../ide/create-portable-custom-editor-options.m
 `warning` | このスタイル ルールに違反した場合、コンパイラの警告が表示されます。
 `error` | このスタイル ルールに違反した場合、コンパイラ エラーが表示されます。
 
-次のリストに、使用できる言語規則のルールを示します。
+次のリストに、使用できる言語コード スタイル設定を示します。
 
 - .NET コード スタイルの設定
     - ["This."と "Me." 修飾子](#this_and_me)
@@ -130,7 +130,7 @@ Visual Studio 2017 [EditorConfig](../ide/create-portable-custom-editor-options.m
 
 このセクションのスタイル ルールは、C# および Visual Basic の両方に適用されます。 優先するプログラミング言語のコード例を表示するには、ブラウザー ウィンドウの右上隅にあるドロップダウンの **[言語]** メニューでそれを選択します。
 
-#### <a name="this_and_me"></a>"This." 修飾子 と "Me." 修飾子
+#### <a name="this_and_me"></a>"This." 修飾子 と "Me."  修飾子
 
 このスタイル ルール (ルール ID IDE0003 および IDE0009) は、フィールド、プロパティ、メソッド、またはイベントに適用できます。 **true** の値は、C# では `this.`、Visual Basic では `Me.` をコード記号の前に付けることを意味します。 **false** の値は、`this.` や `Me.` をコード要素の前に_付けない_ ことを意味します。
 
@@ -2244,7 +2244,7 @@ dotnet_naming_symbols.constant_fields.applicable_accessibilities  = *
 dotnet_naming_symbols.constant_fields.required_modifiers          = const
 
 ###############################
-# C# Coding Conventions       #
+# C# Code Style Rules         #
 ###############################
 
 [*.cs]
@@ -2261,7 +2261,7 @@ csharp_style_expression_bodied_properties = true:none
 csharp_style_expression_bodied_indexers = true:none
 csharp_style_expression_bodied_accessors = true:none
 
-# Pattern matching preferences
+# Pattern-matching preferences
 csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 
@@ -2314,9 +2314,9 @@ csharp_space_between_method_call_empty_parameter_list_parentheses = false
 csharp_preserve_single_line_statements = true
 csharp_preserve_single_line_blocks = true
 
-###############################
-# VB Coding Conventions       #
-###############################
+##################################
+# Visual Basic Code Style Rules  #
+##################################
 
 [*.vb]
 # Modifier preferences
