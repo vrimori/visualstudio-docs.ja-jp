@@ -25,14 +25,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4604932084289919a86ba09516b8d2c237f44cd9
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 33a09fe01157e0e3f5493568437c1499f2831bdb
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51296269"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257291"
 ---
-# <a name="view-dlls-and-executables-in-the-modules-window"></a>[モジュール] ウィンドウで、Dll と実行可能ファイルを表示します。
+# <a name="view-dlls-and-executables-in-the-modules-window-c-c-visual-basic-f"></a>[モジュール] ウィンドウで、Dll と実行可能ファイルを表示 (C#、C++、Visual Basic、 F#)
  
 Visual Studio がデバッグ中に、**モジュール** ウィンドウの一覧し、Dll と実行可能ファイルに関する情報が表示されます (*.exe*ファイル)、アプリで使用します。 
 

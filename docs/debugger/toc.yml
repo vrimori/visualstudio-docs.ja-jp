@@ -11,9 +11,9 @@ items:
   items:
   - name: デバッガーでのはじめに
     href: debugger-feature-tour.md
-  - name: 管理対象アプリをデバッグする
+  - name: C# または Visual Basic アプリをデバッグする
     href: quickstart-debug-with-managed.md
-  - name: ネイティブ アプリをデバッグする
+  - name: C++ アプリをデバッグする
     href: quickstart-debug-with-cplusplus.md
   - name: ASP.NET アプリをデバッグする
     href: quickstart-debug-aspnet.md
@@ -25,7 +25,7 @@ items:
     href: ../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md
   - name: ライブ Azure アプリをデバッグする
     href: debug-live-azure-applications.md
-  - name: マネージド コードおよびネイティブ コードをデバッグする
+  - name: C# と C++ コードをデバッグする
     href: how-to-debug-managed-and-native-code.md
   - name: 以前のアプリの状態を検査する
     href: view-historical-application-state.md
@@ -105,7 +105,7 @@ items:
       items:
       - name: エディット コンティニュを使用する (C#)
         href: how-to-use-edit-and-continue-csharp.md
-      - name: サポートされているコード変更 (C#)
+      - name: サポートされているコード変更
         href: supported-code-changes-csharp.md
     - name: エディット コンティニュ (Visual Basic)
       href: edit-and-continue-visual-basic.md
@@ -413,7 +413,7 @@ items:
           href: debugging-preparation-windows-forms-applications.md
         - name: 'デバッグの準備 : Windows サービス'
           href: debugging-preparation-windows-services.md
-      - name: 出力ウィンドウの診断メッセージ
+      - name: 出力ウィンドウにメッセージを送信する
         href: diagnostic-messages-in-the-output-window.md
       - name: マネージド コードのアサーション
         href: assertions-in-managed-code.md
@@ -836,9 +836,9 @@ items:
   items:
   - name: Visual Studio のデバッガーの新機能
     href: what-s-new-for-the-debugger-in-visual-studio.md
-ms.openlocfilehash: a765e04da6e5d03c47a17e3b9d1642aec182c1f7
-ms.sourcegitcommit: a34b7d4fdb3872865fcf98ba24a0fced58532adc
+ms.openlocfilehash: 29484ea5dc8ae51635465810c13fdf7d28399589
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51561687"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257408"

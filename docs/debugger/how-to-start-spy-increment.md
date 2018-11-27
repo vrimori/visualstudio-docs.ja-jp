@@ -1,7 +1,7 @@
 ---
-title: '方法: spy++ を起動 |Microsoft ドキュメント'
+title: '方法: spy++ を起動 |Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 11/12/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,35 +12,35 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 064a78f9665d2a700a328979b8de169733c09d93
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 5e2e5ffabbb560165bd19bb3d52b940a5cc9e858
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31473859"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257164"
 ---
 # <a name="how-to-start-spy"></a>方法: Spy++ を起動する
-まず、spy++、コマンド プロンプトまたは Visual Studio からします。  
+開始できます spy++ コマンド プロンプトまたは Visual Studio から。  
   
- 開始すると spy++、するには、コンピューターに変更を加えるをクリックしてアクセス許可を確認するメッセージが表示されている場合**はい**です。  
+ 開始すると、spy++、コンピューターに変更するアクセス許可を要求するメッセージが表示されている場合**はい**します。  
   
 > [!NOTE]
->  Spy++ の 1 つだけのインスタンスを実行することができます。 別のインスタンスを実行しようとする場合、フォーカスを取得する現在実行中のインスタンスだけさせます。  
+>  Spy++ の 1 つだけのインスタンスを実行することができます。 2 番目のインスタンスを開始しようとする場合だけ、フォーカスを取得する現在実行中のインスタンスが発生します。  
   
-### <a name="to-start-spy-from-visual-studio"></a>Visual Studio から spy++ を起動するには  
+### <a name="start-spy-from-visual-studio"></a>Visual Studio から spy++ を起動します。  
   
--   **ツール** メニューのをクリックして**spy++** です。  
+**ツール**メニューの  **spy++** します。  
   
-     Spy++ で実行されるためいない個別に開始した後、Visual Studio を閉じることができます。  
+Spy++ が実行されるためいない、独立して開始した後は、Visual Studio を閉じることができます。  
   
-    > [!NOTE]
-    >  Spy++ でメッセージを記録する場合は、パフォーマンスが低下するオペレーティング システムをしまう可能性があります。  
+> [!NOTE]
+>  ログ メッセージを Spy++ では、オペレーティング システムのパフォーマンスが低下することがあります。  
   
-### <a name="to-start-spy-at-a-command-prompt"></a>Spy++ は、コマンド プロンプトを開始するには  
+### <a name="start-spy-at-a-command-prompt"></a>コマンド プロンプトで spy++ を起動します。  
   
-1.  コマンド プロンプト ウィンドウでは、spyxx.exe を含むフォルダーにディレクトリを変更します。 通常、このフォルダーのパスには.\\ *Visual Studio インストール フォルダー*\Common7\Tools\\です。  
+1.  コマンド プロンプト ウィンドウで、spyxx.exe を含むフォルダーにディレクトリを変更します。 通常、このフォルダーへのパスには.\\ *Visual Studio インストール フォルダー*\Common7\Tools\\します。  
   
-2.  型**spyxx.exe**し、ENTER キーを押します。  
+2.  入力**spyxx.exe**します。 
   
 ## <a name="see-also"></a>関連項目  
  [Spy++ の使用](../debugger/using-spy-increment.md)   

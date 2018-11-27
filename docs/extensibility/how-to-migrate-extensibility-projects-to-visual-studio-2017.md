@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 669f3625827d923a0951caa1bb0137d38c0daacc
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 195d63e5ddb8b8536c1d0c1c4197270f5b3aa508
+ms.sourcegitcommit: 331dbb12e11fcd7f5d15fab05f3c861e48126e43
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637498"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51826818"
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>方法: 機能拡張プロジェクトを Visual Studio 2017 に移行
 
@@ -63,7 +63,7 @@ Visual Studio のユーザーのインストールは、拡張機能を実行す
 * 確認`InstallationTarget`15.0 が含まれています。
 * (次の例で示す) のように、必要なインストール前提条件を追加します。
   * インストールの前提条件のコンポーネント Id のみを指定することをお勧めします。
-  * このドキュメントの最後のセクションを参照してください。[コンポーネント Id を識別する方法について](#finding-component-ids)します。
+  * このドキュメントの最後のセクションを参照してください。[コンポーネント Id を識別する方法について](#find-component-ids)します。
 
 例:
 

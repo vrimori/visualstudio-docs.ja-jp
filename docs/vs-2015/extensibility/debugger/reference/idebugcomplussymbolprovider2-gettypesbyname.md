@@ -16,12 +16,12 @@ ms.assetid: ef76b1a8-6910-48fe-b4af-d9045eefd23f
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 190945cb0d3b56310d5fe98ec3e2ec9fee4375a3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d3acf8d0e10ec2e19a951337782a4e2f22b6e7b3
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49884031"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51740613"
 ---
 # <a name="idebugcomplussymbolprovider2gettypesbyname"></a>IDebugComPlusSymbolProvider2::GetTypesByName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -60,7 +60,7 @@ int GetTypesByName(
  成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="remarks"></a>Remarks  
- 検索する名前、ジェネリック型の 'リスト\<int >' または' リスト\<int, int >' 'List' になります。 複数のモジュールで同じ名前の型が表示されない場合、`ppEnum`パラメーターはすべてのコピーが格納されます。 使用して[GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)と区別に基づいて、`guidModule`パラメーター。  
+ 検索する名前、ジェネリック型の 'リスト\<int >' または' リスト\<int, int >' 'List' になります。 複数のモジュールで同じ名前の型が表示されない場合、`ppEnum`パラメーターには、すべてのコピーにが含まれます。 使用して[GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)と区別に基づいて、`guidModule`パラメーター。  
   
 ## <a name="example"></a>例  
  次の例では、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)インターフェイス。  

@@ -21,17 +21,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4df9ae5c8b525ff75985ff7aff071d2b2e86e1cb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 035d66590c6b6087c56887a4eaa2b0538406f87b
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49926190"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257253"
 ---
 # <a name="expressions-in-the-visual-studio-debugger"></a>Visual Studio デバッガーで式
 Visual Studio デバッガーには式エバリュエーターという機能があり、 **[クイック ウォッチ]** ダイアログ ボックス、 **[ウォッチ]** ウィンドウ、または **[イミディエイト]** ウィンドウで式を入力するときに役立ちます。 式エバリュエーターは **[ブレークポイント]** ウィンドウなど、他のデバッガー機能でも使用できます。
   
- 以下の各セクションでは、各種言語での式について詳しく説明します。  
+ 次のセクションでは、Visual Studio でサポートされる言語の式の評価の制限事項について説明します。
   
 ## <a name="f-expressions-are-not-supported"></a>F# の式はサポートされていません。  
  F# の式は認識されません。 F# のコードをデバッグする場合は、デバッガー ウィンドウまたはダイアログ ボックスに式を入力する前に、式を C# の構文に変換する必要があります。 式を F# から C# に変換するときは、C# では等価をテストするのに `==` 演算子を使用しますが、F# では単一の `=`を使用することにご注意ください。  

@@ -11,16 +11,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 67207d653d7300ecc5d0a7ae7a85ddea1bc0d7e9
-ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
+ms.openlocfilehash: e947ec99ff0d63f413e00f5602035a7baa0bd708
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46542495"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51348339"
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio にサインイン
 
 Visual Studio の開発環境をカスタマイズし、最適化するには、IDE にサインインして個人アカウントを設定します。
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、「[Visual Studio for Mac にサインインする](/visualstudio/mac/signing-in)」を参照してください。
 
 ## <a name="why-should-i-sign-in-to-visual-studio"></a>Visual Studio にサインインする必要がある理由
 
@@ -68,3 +71,5 @@ Visual Studio を初めて起動すると、サインインして基本登録情
 
 * [Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)
 * [Visual Studio IDE の概要](../ide/visual-studio-ide.md)
+* [サインイン (Visual Studio for Mac)](/visualstudio/mac/signing-in)
+* [アクティブ化 (Visual Studio for Mac)](/visualstudio/mac/activation)

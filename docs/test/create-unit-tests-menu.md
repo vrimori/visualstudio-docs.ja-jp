@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c8f0f0aeab7256c15c423678de2cdc7e88b1eb2
-ms.sourcegitcommit: b9a32c3d94b19e7344f4872bc026efd3157cf220
+ms.openlocfilehash: 55b6af26064edc3eecb942b70aa2b4f5bc5307fd
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46135550"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296412"
 ---
 # <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>[単体テストの作成] コマンドを使用した単体テスト メソッド スタブの作成
 
@@ -62,11 +62,11 @@ Visual Studio では、任意のテスト フレームワークを使用して�
 
 ## <a name="when-should-i-use-this-feature"></a>この機能を使用するタイミング
 
-この機能は単体テストを作成する必要がある場合は必ず使用しますが、テスト カバレッジが少ないか、存在しておらず、ドキュメントがない既存のコードをテストする場合に特に使用します。 つまり、コード指定が制限されているか存在しない場合です。 コードの監視対象動作の特徴を示す[スマート単体テスト](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/19/introducing-smart-unit-tests.aspx)に似たアプローチが効果的に実装されます。
+この機能は単体テストを作成する必要がある場合は必ず使用しますが、テスト カバレッジが少ないか、存在しておらず、ドキュメントがない既存のコードをテストする場合に特に使用します。 つまり、コード指定が制限されているか存在しない場合です。 コードの監視対象動作の特徴を示す[スマート単体テスト](https://blogs.msdn.microsoft.com/devops/2014/11/19/introducing-smart-unit-tests/)に似たアプローチが効果的に実装されます。
 
 ただし、この機能は、開発者が一部のコードを記述し、それを使用して単体テストの規範をブートストラップする場合でも同様に適用されます。 コーディングのフロー内で、開発者はコードの特定部分の (テスト クラスとテスト プロジェクトが適切な) 単体テスト メソッド スタブをすばやく作成できます。
 
 ## <a name="see-also"></a>関連項目
 
-- ["単体テストの作成" をする単体テスト メソッド スタブの作成](https://blogs.msdn.microsoft.com/visualstudioalm/2015/03/06/creating-unit-test-method-stubs-with-create-unit-tests/)
+- ["単体テストの作成" をする単体テスト メソッド スタブの作成](https://blogs.msdn.microsoft.com/devops/2015/03/06/creating-unit-test-method-stubs-with-create-unit-tests/)
 - [単体テストのブログ投稿](https://blogs.msdn.microsoft.com/devops/?s=unit+testing)

@@ -20,18 +20,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3aa3aaa197f392d300e8787d582314846e789f47
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 2d3f6b271eb6b9b663e30953fa597fb7d8cec6ac
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38808793"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51348527"
 ---
 # <a name="how-to-create-and-edit-configurations"></a>方法 : 構成を作成および編集する
 
 ソリューションに対して、複数のビルド構成を作成することができます。 たとえば、問題を検出して修正するためにテスト担当者が使用できるデバッグ ビルドを構成できます。他にも、多様な顧客に配布できる多様な種類のビルドを構成できます。
 
-[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、[Visual Studio for Mac でのビルド構成の作成と編集](/visualstudio/mac/create-and-edit-configurations)に関するページを参照してください。
 
 ## <a name="create-build-configurations"></a>ビルド構成を作成する
 
@@ -127,3 +128,4 @@ ms.locfileid: "38808793"
 - [ビルド構成について](../ide/understanding-build-configurations.md)
 - [Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
 - [プロジェクトおよびソリューションのプロパティの管理](managing-project-and-solution-properties.md)
+- [ビルド構成の作成と編集 (Visual Studio for Mac)](/visualstudio/mac/create-and-edit-configurations)

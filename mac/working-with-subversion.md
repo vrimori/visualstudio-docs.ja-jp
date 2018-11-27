@@ -5,12 +5,12 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: 2400ED9C-6236-4C0A-A3AB-9D7CBE1F0CF4
-ms.openlocfilehash: 81c33d426989f9bab3216802aa4e815228e1e82a
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 7dcbd619fe0c1a0ab84a8667f5a781d006f80999
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224385"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295203"
 ---
 # <a name="working-with-subversion"></a>Subversion の使用
 
@@ -50,7 +50,10 @@ Visual Studio for Mac の**チェックアウト**機能の使用方法につい
 
 リモート リポジトリに対してファイルをコミットするには、[コミット] を押し、コミット メッセージを入力して、[コミット] ボタンで確認します。
 
-
 ![ファイルをコミットする](media/version-control-svnCommit.png)
 
 これにより、変更がリポジトリに送信され、すべての変更の新しいリビジョンが作成されます。
+
+## <a name="see-also"></a>関連項目
+
+- [Subversion リポジトリの設定](set-up-subversion-repository.md)

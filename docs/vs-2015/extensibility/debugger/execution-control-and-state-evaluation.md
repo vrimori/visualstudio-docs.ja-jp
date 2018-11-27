@@ -16,12 +16,12 @@ ms.assetid: 55adde38-1622-4b51-83cb-ce1b04c1ca7a
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 20c2737d233e90cba5813709b2c4cf8ac232105f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 9ca3dfd470a9f6d1440b730783d0f537289385ed
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49263199"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51773861"
 ---
 # <a name="execution-control-and-state-evaluation"></a>実行の制御と状態の評価
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]

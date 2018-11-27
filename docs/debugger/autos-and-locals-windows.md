@@ -16,27 +16,27 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 35fa37831ad79a55effe849f8605ae6b5d299d3a
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: b196d993e7091fd9d4b09fe3c228346e7421911e
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51349651"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257213"
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows"></a>[自動変数] と [ローカル] ウィンドウに変数を検査します。
 
-**[自動変数]** と**ローカル**windows は、デバッグ中に変数の値を表示します。 Windows はデバッグ セッション中にのみ使用できます。
+**[自動変数]** と**ローカル**windows は、デバッグ中に変数の値を表示します。 Windows はデバッグ セッション中にのみ使用できます。 **[自動変数]** ウィンドウには、現在のブレークポイントを使用する変数が表示されます。 **ローカル**ウィンドウには、現在の関数またはメソッドは、通常は、ローカル スコープで定義された変数が表示されます。 コードをデバッグしようとした初めての場合は、読み取りをする可能性があります[優れたC#Visual Studio を使用してコード](../debugger/write-better-code-with-visual-studio.md)と[超初心者向けのデバッグ](../debugger/debugging-absolute-beginners.md)にこの記事に進む前にします。
 
-**[自動変数]** ウィンドウには、現在のブレークポイントを使用する変数が表示されます。 **ローカル**ウィンドウには、現在の関数またはメソッドは、通常は、ローカル スコープで定義された変数が表示されます。
-
-開くには、 **[自動変数]** ウィンドウで、デバッグ中に、**デバッグ** > **Windows** > **[自動変数]**、またはキーを押します**Ctrl**+**Alt**+**V** > **A**します。
+ **[自動変数]** ウィンドウが使用できるC#、Visual Basic、C++、および Python コードでは、JavaScript ではなくまたはF#します。
+  
+開くには、 **[自動変数]** ウィンドウで、デバッグ中に、**デバッグ** > **Windows** > **[自動変数]**、またはキーを押します**Ctrl**+**Alt**+**V** > **A**します。  
 
 開くには、**ローカル**ウィンドウで、デバッグ中に、**デバッグ** > **Windows** > **ローカル**、またはキーを押します**Alt**+**4**します。
 
 基本的なデバッグの詳細が必要な場合は、次を参照してください。[デバッガーの概要](../debugger/getting-started-with-the-debugger.md)します。
 
 > [!NOTE]
-> このトピックでは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac では、次を参照してください。 [Visual studio for Mac のデータの視覚化](/visualstudio/mac/data-visualizations)します。
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac では、次を参照してください。 [Visual studio for Mac のデータの視覚化](/visualstudio/mac/data-visualizations)します。
 
 ## <a name="use-the-autos-and-locals-windows"></a>[自動変数] と [ローカル] ウィンドウを使用します。
 
@@ -73,9 +73,7 @@ ms.locfileid: "51349651"
 
 ![[デバッグの場所] ツールバー](../debugger/media/debuglocationtoolbar.png "デバッグの場所 ツールバー")
 
-## <a name="bkmk_whatvariables"></a> [自動変数] ウィンドウで変数
-
- **[自動変数]** ウィンドウが使用できるC#、Visual Basic、C++ コードと、しない場合は JavaScript 用またはF#します。
+## <a name="bkmk_whatvariables"></a> [自動変数] ウィンドウで変数 (C#、C++、Visual Basic、Python)
 
  別のコードの言語での異なる変数を表示する、 **[自動変数]** ウィンドウ。
 
@@ -147,13 +145,13 @@ private static int subtractVars(int i, int j)
 
 戻り値を表示する、`sumVars()`と`subtractVars()`メソッドの呼び出しで、[自動変数] ウィンドウ。
 
-1. `int x = sumVars(a, b) + subtractVars(c, d);` の行にブレークポイントを設定します。
-
-1. デバッグを開始し、実行がブレークポイントで一時停止したときに選択**ステップ オーバー**またはキーを押します**F10**します。 次の戻り値を表示する必要があります、 **[自動変数]** ウィンドウ。
-
-  ![[自動変数] は値を返すC# ](../debugger/media/autosreturnvaluecsharp2.png "戻り値を [自動変数]C#")
-
-## <a name="see-also"></a>関連項目
-
-- [デバッガー ウィンドウ](../debugger/debugger-windows.md)
-- [Visual studio for Mac のデータの視覚化](/visualstudio/mac/data-visualizations)
+1. `int x = sumVars(a, b) + subtractVars(c, d);` の行にブレークポイントを設定します。  
+   
+1. デバッグを開始し、実行がブレークポイントで一時停止したときに選択**ステップ オーバー**またはキーを押します**F10**します。 次の戻り値を表示する必要があります、 **[自動変数]** ウィンドウ。  
+   
+  ![[自動変数] は値を返すC# ](../debugger/media/autosreturnvaluecsharp2.png "戻り値を [自動変数]C#")  
+  
+## <a name="see-also"></a>関連項目  
+ [何をデバッグするとしますか。](../debugger/what-is-debugging.md)  
+ [優れたC#Visual Studio を使用するコード](../debugger/write-better-code-with-visual-studio.md)  
+ [最初に、デバッグについて](../debugger/debugger-feature-tour.md)[デバッガー ウィンドウ](../debugger/debugger-windows.md)

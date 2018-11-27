@@ -1,7 +1,7 @@
 ---
-title: プロジェクトの Python インタープリターと環境の選択
-description: Visual Studio プロジェクトで使用する Python 環境を割り当てる方法と、仮想環境の作成手順。
-ms.date: 06/27/2018
+title: プロジェクトの Python インタープリターと環境を選択する
+description: Anaconda や仮想環境など、Visual Studio プロジェクトに使用する Python 環境やインタープリターを選択する方法。
+ms.date: 11/08/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,16 +11,16 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e738eb52ce8cb7cef4090dd9812f6c421a7d11fd
-ms.sourcegitcommit: 40b6438b5acd7e59337a382c39ec711b9e99cc8a
+ms.openlocfilehash: 0bff5e81fbfda45908315091063833b31abbdd8c
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49101135"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349453"
 ---
-# <a name="how-to-assign-which-python-environment-is-used-for-a-project"></a>プロジェクトで使用される Python 環境を割り当てる方法
+# <a name="how-to-select-a-python-environment-for-a-project"></a>プロジェクトの Python 環境を選択する方法
 
-Python プロジェクトのすべてのコードは、特定の環境のコンテキスト内で実行されます。 また、Visual Studio では、デバッグ、インポートとメンバーの入力候補、構文チェック、環境を必要とするその他のタスクにもその環境を使用します。
+Python プロジェクトのすべてのコードは、グローバル Python 環境、Anaconda 環境、仮想環境、conda 環境など、特定の環境のコンテキスト内で実行されます。 また、Visual Studio では、デバッグ、インポートとメンバーの入力候補、構文チェックだけでなく、Python のバージョンやインストールされているパッケージ セットに固有の言語サービスを必要とするその他のタスクにもその環境が使用されます。
 
 Visual Studio のすべての新しい Python プロジェクトは、最初は既定のグローバル環境を使用するように構成されています。この環境は、**ソリューション エクスプローラー**の **[Python 環境]** ノードに表示されます。
 
@@ -42,7 +42,7 @@ Visual Studio のすべての新しい Python プロジェクトは、最初は�
 | --- | --- |
 | **仮想環境の追加** | プロジェクト内に新しい仮想環境を作成するプロセスを開始します。 「[仮想環境を作成する](#create-a-virtual-environment)」を参照してください。 |
 | **既存の仮想環境の追加** | 仮想環境が格納されているフォルダーを選択します。仮想環境は **[Python 環境]** の一覧に追加されますが、有効にはなりません。 「[既存の仮想環境をアクティブ化する](#activate-an-existing-virtual-environment)」をご覧ください。 |
-| **Conda 環境の作成** | 環境の名前を入力し、その基本インタープリターを指定する **[Python 環境]** *ウィンドウ*に切り替えます。 |
+| **Conda 環境の作成** | 環境の名前を入力し、その基本インタープリターを指定する **[Python 環境]** *ウィンドウ*に切り替えます。 「[conda 環境](managing-python-environments-in-visual-studio.md#conda-environments)」を参照してください。 |
 
 ## <a name="use-virtual-environments"></a>仮想環境を使用する
 

@@ -17,12 +17,12 @@ ms.assetid: 54a05920-5d13-4f67-962b-d1a7f013dff9
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b08312e308d8b6e0e2d10cb79f891ea8a2e718ec
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 58d5d3beba139d4a401cb4a23a20da5ad8dbdf16
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49928491"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51808311"
 ---
 # <a name="idebugobject2createalias"></a>IDebugObject2::CreateAlias
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -32,14 +32,14 @@ ms.locfileid: "49928491"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT CreateAlias(  
-   IDebugAlias** ppAlias  
+HRESULT CreateAlias(  
+   IDebugAlias** ppAlias  
 );  
 ```  
   
 ```csharp  
-int CreateAlias(  
-   out IDebugAlias ppAlias  
+int CreateAlias(  
+   out IDebugAlias ppAlias  
 );  
 ```  
   

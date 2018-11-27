@@ -18,12 +18,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ec65f2a35f0e28a8e9424497bcdfb11b1a02c84f
-ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
+ms.openlocfilehash: cbe8f1b9e0fc1fcc47a8d90e0033e8edb933e1aa
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46371083"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296074"
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>UI オートメーションを使用してコードをテストする
 
@@ -402,7 +402,7 @@ UI コントロールの特定のプロパティ値を取得および設定す�
 
 ### <a name="to-get-or-set-properties-from-ui-test-controls-directly"></a>UI テストのコントロールからプロパティを直接取得または設定するには
 
-[HtmlList](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.uitesting.htmlcontrols.htmllist.aspx) や [WinComboBox](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.uitesting.wincontrols.wincombobox.aspx) などの、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl>から派生するコントロールを使用して、プロパティ値を直接取得したり設定したりできます。 次のコードは、いくつかの例を示しています。
+[HtmlList](xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlList) や [WinComboBox](xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinComboBox) などの、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl>から派生するコントロールを使用して、プロパティ値を直接取得したり設定したりできます。 次のコードは、いくつかの例を示しています。
 
  ```csharp
  int i = myHtmlList.ItemCount;
@@ -443,7 +443,7 @@ UI コントロールの特定のプロパティ値を取得および設定す�
 
 - [ビルド プロセスでのテストの実行](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)
 
-- [方法: テスト エージェントを設定して、デスクトップと対話するテストを実行する](http://msdn.microsoft.com/Library/3a94dd07-6d17-402c-ae8f-7947143755c9)
+- [方法: テスト エージェントを設定して、デスクトップと対話するテストを実行する](https://msdn.microsoft.com/Library/3a94dd07-6d17-402c-ae8f-7947143755c9)
 
 **カスタム コントロールに対するサポートを追加する:** コード化された UI テスト フレームワークは使用可能な UI すべてをサポートしているわけではなく、テスト対象の UI をサポートしない場合もあります。 たとえば、Microsoft Excel の UI について、コード化された UI テストはすぐに作成できません。 しかし、コード化された UI テスト フレームワークの拡張性を活用すると、カスタム コントロールをサポートするようにすることができます。
 

@@ -9,12 +9,12 @@ ms.topic: article
 ms.workload: azure-vs
 ms.date: 08/01/2016
 ms.author: mlearned
-ms.openlocfilehash: f6404b15e8a7cd3f95ac63bbae6076ef62fcff06
-ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
+ms.openlocfilehash: b20a43181ad4d36377e61434b880b491543a6c47
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51003009"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51791606"
 ---
 # <a name="continuous-integration-in-azure-devops-services-using-azure-resource-group-deployment-projects"></a>Azure リソース グループ デプロイ プロジェクトを使用して Azure DevOps サービスでの継続的インテグレーション
 Azure テンプレートをデプロイするさまざまな段階にタスクを実行する: ビルド、テストでは、Azure へのコピー (「ステージング」とも呼ばれます) とテンプレートをデプロイします。 Azure DevOps サービス テンプレートをデプロイする 2 つのさまざまな方法はあります。 両方の方法は同じ結果を提供、そのため、ワークフローに最適なものを選択します。
@@ -131,7 +131,7 @@ Visual Studio によって提供されているテンプレートを使用する
 
 1. 2 つの新しいビルド ステップを追加する Azure DevOps サービス ビルド パイプラインを編集します。 ビルド パイプラインを選択、**ビルド定義**カテゴリ選択し、**編集**リンク。
    
-   ![ビルド定義を編集します。][12]
+   ![ビルド定義の編集][12]
 2. ビルド パイプラインを使用する新しいビルド ステップを追加、**ビルド ステップの追加.** を追加します。
    
    ![ビルド ステップを追加します。][13]

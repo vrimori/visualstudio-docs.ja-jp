@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン
+title: プロジェクトとソリューションのビルドおよびクリーン
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-compile
@@ -24,15 +24,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f4b0ef6eab346215631559e8c9cfb16ecac0a4bf
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c96a3b6699428b156a23ad643eb7958cb438b994
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31918531"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349271"
 ---
-# <a name="building-and-cleaning-projects-and-solutions-in-visual-studio"></a>Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン
+# <a name="build-and-clean-projects-and-solutions-in-visual-studio"></a>Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン
+
 このトピックの手順を使用して、ソリューション内のプロジェクトまたはプロジェクト項目のすべてまたは一部をビルド、リビルド、またはクリーンを行うことができます。 ステップ バイ ステップ チュートリアルについては、「[チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)」を参照してください。
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、[Visual Studio for Mac のプロジェクトとソリューションのビルドおよびクリーン](/visualstudio/mac/building-and-cleaning-projects-and-solutions)に関するページを参照してください。
 
 > [!NOTE]
 > ご使用の Visual Studio エディションの UI は、アクティブな設定によって、このトピックで説明する内容とは異なる場合があります。 設定を、たとえば、**[全般]** や **[Visual C++]** に変更するには、**[ツール]**、**[設定のインポートとエクスポート]**、**[すべての設定をリセット]** の順に選択します。
@@ -46,7 +50,7 @@ ms.locfileid: "31918531"
     -   **[ビルド]** または **[ソリューションのビルド]** を選択すると、最新のビルド以降に変更されたプロジェクト ファイルとコンポーネントのみがコンパイルされます。
 
         > [!NOTE]
-        >  ソリューションに複数のプロジェクトが含まれている場合は、**[ビルド]** コマンドが **[ソリューションのビルド]** になります。
+        > ソリューションに複数のプロジェクトが含まれている場合は、**[ビルド]** コマンドが **[ソリューションのビルド]** になります。
 
     -   **[ソリューションのビルド]** を選択すると、ソリューションが "クリーン" されてから、すべてのプロジェクト ファイルとコンポーネントがビルドされます。
 
@@ -118,3 +122,4 @@ ms.locfileid: "31918531"
 - [C/C++ ビルドのリファレンス](/cpp/build/reference/c-cpp-building-reference)
 - [Devenv コマンド ライン スイッチ](../ide/reference/devenv-command-line-switches.md)
 - [ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)
+- [プロジェクトとソリューションのビルドおよびクリーン (Visual Studio for Mac)](/visualstudio/mac/building-and-cleaning-projects-and-solutions)

@@ -14,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d892d89f06d47ffe33d57c27b211163fa9568a2d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 57d5149225668a9ef036798b384f41656d2c07e8
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31943700"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51348722"
 ---
 # <a name="accessibility-features-of-visual-studio"></a>Visual Studio のユーザー補助機能
 
@@ -38,11 +38,13 @@ Visual Studio は、Windows のユーザー補助機能およびユーティリ�
 
 -   メソッドおよびパラメーターのオート コンプリート
 
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、[Visual Studio for Mac のユーザー補助機能](/visualstudio/mac/accessibility)に関するページを参照してください。
+
 > [!IMPORTANT]
 > このセクションの情報は、米国内で Microsoft 製品のライセンスを取得したユーザーにだけ適用されます。 米国外でこの製品を入手した場合には、ソフトウェア パッケージに同梱の支社情報のカードを参照するか、[Microsoft サポートのお問い合わせページ](http://support.microsoft.com/ContactUs)にアクセスし、**[海外のマイクロソフト所在地]** リンク (ページの下部付近) をクリックします。 このページには、Microsoft サポート サービスの電話番号および住所の一覧が表示されます。 このセクションで説明されている製品およびサービスをその地域で利用できるかどうかについては、現地法人にお問い合わせください。 ユーザー補助についての情報が、日本語、フランス語など、他の言語で参照できます。
 
-
- 詳細については、次のトピックを参照してください。
+詳細については、次のトピックを参照してください。
 
 -   [方法: IDE アクセシビリティ オプションを設定する](../../ide/reference/how-to-set-ide-accessibility-options.md)
 

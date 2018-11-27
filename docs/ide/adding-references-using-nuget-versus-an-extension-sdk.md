@@ -9,16 +9,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3de51b0c984522810b174bdb1784420620ba037f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a895124effa8155ab2edb4652962b605926234d5
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49858479"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349479"
 ---
 # <a name="adding-references-using-nuget-versus-an-extension-sdk"></a>拡張 SDK と比較して NuGet を使用した参照の追加
 
-Visual Studio を対象とする NuGet 拡張機能、またはソフトウェア開発キット (SDK) を使用して、Visual Studio プロジェクト内で使用するためのパッケージを提供できます。 このトピックでは 2 つのメカニズムの類似点と相違点を説明し、特定のタスクにとって最善のメカニズムを選択しやすくなります。
+NuGet またはソフトウェア開発キット (SDK) を使用して、Visual Studio プロジェクト内で使用するためのパッケージを提供できます。 特定のタスクに最適なメカニズムを選択するには、この記事で説明する 2 つのメカニズムの類似点と相違点を参考にしてください。
 
 - NuGet は、オープン ソースのパッケージ管理システムであり、ライブラリをプロジェクトのソリューションに組み込むプロセスを簡略化します。 詳細については、[NuGet のドキュメント](/nuget)を参照してください。
 
@@ -27,7 +27,6 @@ Visual Studio を対象とする NuGet 拡張機能、またはソフトウェ�
 ## <a name="which-mechanism-should-i-use"></a>使用するメカニズムの決定
 
 次の表を使用して、SDK の参照機能と NuGet の参照機能を比較できます。
-
 
 | 機能 | SDK のサポート対象 | SDK に関するメモ | NuGet のサポート対象 | NuGet に関するメモ |
 | - | - | - |---------------| - |
@@ -71,3 +70,4 @@ Visual Studio を対象とする NuGet 拡張機能、またはソフトウェ�
 ## <a name="see-also"></a>関連項目
 
 - [プロジェクト内の参照の管理](../ide/managing-references-in-a-project.md)
+- [プロジェクト内の参照の管理 (Visual Studio for Mac)](/visualstudio/mac/managing-references-in-a-project)

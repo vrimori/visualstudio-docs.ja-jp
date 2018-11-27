@@ -17,12 +17,12 @@ ms.assetid: 33b3082b-a42e-488a-a1e4-dadf506f922c
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8efe7a75bdeed6016571a9b6e008eafe7fd0fbb2
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 48d440e92bda8dae1e1b37d0bb82718bcf0e1966
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49208937"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51757994"
 ---
 # <a name="idebugpropertycreateevent2"></a>IDebugPropertyCreateEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -51,7 +51,7 @@ IDebugPropertyCreateEvent2 : IUnknown
 ## <a name="remarks"></a>Remarks  
  デが、更新するにはこのイベントを SDM に送信できますプロパティに特定のドキュメントまたは関連付けられているスクリプトがある場合、**スクリプト ドキュメント**ウィンドウ、ドキュメントの名前に置き換えます。 SDM を呼び出します[GetExtendedInfo](../../../extensibility/debugger/reference/idebugproperty2-getextendedinfo.md)引数で`guidDocument`を取得する、`VARIANT`を含む、 [IUnknown](http://msdn.microsoft.com/library/e6b85472-e54b-4b8c-b19f-4454d6c05a8f)ポインター。 SDM を呼び出します[QueryInterface](http://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)を取得するには、このポインターを[IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)を更新するために使用するインターフェイス、**スクリプト ドキュメント**ウィンドウ。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

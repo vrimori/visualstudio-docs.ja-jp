@@ -15,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a8987354af4a0b62438cea3aab3f18f4def7bfa
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 818bbb38fab706dde2f4d36d5a534e0a351a6450
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49907041"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948895"
 ---
-# <a name="devenv-command-line-switches"></a>Devenv コマンド ライン スイッチ
+# <a name="devenv-command-line-switches"></a>Devenv コマンドライン スイッチ
 
 Devenv を使用すると、コマンド ラインから統合開発環境 (IDE: Integrated Development Environment) のさまざまなオプションを設定したり、プロジェクトをビルド、デバッグ、および配置したりすることができます。 これらのスイッチを使用して、スクリプトや .bat ファイル (夜間用のビルド スクリプトなど) から IDE を実行したり、特定の構成で IDE を起動したりします。
 
@@ -31,9 +31,9 @@ Devenv を使用すると、コマンド ラインから統合開発環境 (IDE:
 
 ## <a name="devenv-switch-syntax"></a>Devenv のスイッチの構文
 
-既定では、devenv コマンドは、devenv.com ユーティリティにスイッチを渡します。 devenv.com ユーティリティは標準のシステム ストリーム、たとえば `stdout` および `stderr` などを介して結果を出力します。 このユーティリティは出力をキャプチャする際に、txt ファイルなどの適切な入出力先を判断します。
+`devenv` で始まるコマンドは `devenv.com` ユーティリティによって処理されます。このユーティリティは、`stdout` や `stderr` のような標準のシステム ストリーム経由で出力を配信します。 このユーティリティは出力をキャプチャする際に、txt ファイルなどの適切な入出力先を判断します。
 
-一方、`devenv.exe` で始まるコマンドも同じスイッチを使うことができますが、devenv.com ユーティリティはバイパスされます。
+一方、`devenv.exe` で始まるコマンドも同じスイッチを使うことができますが、`devenv.com` ユーティリティはバイパスされます。 `devenv.exe` を使用すると、コンソールの出力表示が直接的に禁止されます。
 
 `devenv` スイッチの構文規則は、他の DOS コマンド ライン ユーティリティのものとよく似ています。 すべての `devenv` スイッチと引数に適用される構文規則は以下のとおりです。
 
@@ -45,7 +45,7 @@ Devenv を使用すると、コマンド ラインから統合開発環境 (IDE:
 
 - 最初の引数がソリューションでもプロジェクトでもないファイルの場合、そのファイルが IDE の新しいインスタンスで適切なエディターを使用して開かれます。
 
-- ソリューション ファイル名の代わりにプロジェクト ファイル名を入力すると、`devenv` コマンドは、プロジェクト フォルダーの親フォルダーで同じ名前が付いているソリューション ファイルを検索します。 たとえば、`devenv /build myproject1.vbproj` というコマンドは、親フォルダーで "myproject1.sln" という名前のソリューション ファイルを検索します。
+- ソリューション ファイル名の代わりにプロジェクト ファイル名を入力すると、`devenv` コマンドは、プロジェクト フォルダーの親フォルダーで同じ名前が付いているソリューション ファイルを検索します。 たとえば、`devenv myproject1.vbproj /build` というコマンドは、親フォルダーで "myproject1.sln" という名前のソリューション ファイルを検索します。
 
     > [!NOTE]
     > このプロジェクトを参照するソリューション ファイルは、親フォルダーの中に 1 つだけ置かれている必要があります。 親フォルダーにこのプロジェクトを参照するソリューション ファイルがない場合、また親フォルダーにこのソリューション ファイルが 2 つ以上ある場合は、一時ソリューション ファイルが作成されます。
@@ -78,12 +78,12 @@ Devenv を使用すると、コマンド ラインから統合開発環境 (IDE:
 
 |コマンド ライン スイッチ|説明|
 | - |-----------------|
-|[/?](../../ide/reference/q-devenv-exe.md)|Devenv のスイッチのヘルプを **[コマンド プロンプト]** ウィンドウ内に表示します。<br /><br /> **Devenv /?**|
-|[/Build](../../ide/reference/build-devenv-exe.md)|指定のソリューションの構成に従って、指定のソリューションまたはプロジェクトをビルドします。<br /><br /> **Devenv myproj.csproj /build**|
-|[/Clean](../../ide/reference/clean-devenv-exe.md)|ビルド コマンドによって作成されたすべてのファイルを、ソース ファイルに影響を与えずに削除します。<br /><br /> **Devenv myproj.csproj /clean**|
-|[/Deploy](../../ide/reference/deploy-devenv-exe.md)|ソリューションの構成に従って、ソリューションを配置に必要なファイルと共にビルドします。<br /><br /> **Devenv myproj.csproj /deploy**|
+|[/?](../../ide/reference/q-devenv-exe.md)|Devenv のスイッチのヘルプを **[コマンド プロンプト]** ウィンドウ内に表示します。<br /><br /> `devenv /?`|
+|[/Build](../../ide/reference/build-devenv-exe.md)|指定のソリューションの構成に従って、指定のソリューションまたはプロジェクトをビルドします。<br /><br /> `devenv myproj.csproj /build`|
+|[/Clean](../../ide/reference/clean-devenv-exe.md)|ビルド コマンドによって作成されたすべてのファイルを、ソース ファイルに影響を与えずに削除します。<br /><br /> `devenv myproj.csproj /clean`|
+|[/Deploy](../../ide/reference/deploy-devenv-exe.md)|ソリューションの構成に従って、ソリューションを配置に必要なファイルと共にビルドします。<br /><br /> `devenv myproj.csproj /deploy`|
 |[/Diff](../../ide/reference/diff.md)|2 つのファイルを比較します。 4 つのパラメーター、SourceFile、TargetFile、SourceDisplayName (省略可能)、および TargetDisplayName (省略可能) を受け取ります。|
-|[/Out](../../ide/reference/out-devenv-exe.md)|ビルド時のエラーを受け取るファイルを指定できます。<br /><br /> **Devenv myproj.csproj /build /out log.txt**|
+|[/Out](../../ide/reference/out-devenv-exe.md)|ビルド時のエラーを受け取るファイルを指定できます。<br /><br /> `devenv myproj.csproj /build /out log.txt`|
 |[/Project](../../ide/reference/project-devenv-exe.md)|ビルド、消去、または配置するプロジェクトを指定します。 このスイッチは、/build、/rebuild、/clean、または /deploy スイッチを指定した場合にだけ使用できます。|
 |[/ProjectConfig](../../ide/reference/projectconfig-devenv-exe.md)|ビルドまたは配置するプロジェクト構成を指定します。 このスイッチは、/project スイッチを指定した場合だけに使用できます。|
 |[/Rebuild](../../ide/reference/rebuild-devenv-exe.md)|指定のソリューションの構成に従って、指定のソリューションまたはプロジェクトを消去してからビルドします。|

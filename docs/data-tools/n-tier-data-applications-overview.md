@@ -15,12 +15,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4e386c052b43ee62ddde0516fa203298fe1babe5
-ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
+ms.openlocfilehash: 3f9cf8c6a75e5f2a517931bf0fd858ea8f8f860c
+ms.sourcegitcommit: c9a01c599ce19a5845605b3b28c0229fd0abb93f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37089031"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281746"
 ---
 # <a name="n-tier-data-applications-overview"></a>N 層データ アプリケーションの概要
 *N 層*データ アプリケーションはデータ アプリケーションは複数に分割された*層*します。 n 層アプリケーションは、"分散アプリケーション" および "多階層アプリケーション" とも呼ばれ、クライアントとサーバー間に分散された別個の層に処理を分離します。 データにアクセスするアプリケーションを開発する場合は、アプリケーションを構成する各種の層を明確に分離する必要があります。
@@ -64,7 +64,7 @@ Visual Studio には、開発者が n 層アプリケーションを作成する
 通常、中間層は、データ接続を使用してデータ層に接続します。 一般に、このデータ接続はデータ アクセス コンポーネントに格納されます。
 
 ## <a name="data-tier"></a>データ層
-*データ層*は基本的に、アプリケーションのデータを格納するサーバー (たとえば、サーバーを実行している[!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)])。
+*データ層*は基本的に、アプリケーションのデータを (たとえば、SQL Server を実行しているサーバー) に格納されているサーバー。
 
 次の図は、Visual Studio で使用できる機能および技術と、n 層アプリケーションのデータ層においてそれらが適合する位置を示しています。
 

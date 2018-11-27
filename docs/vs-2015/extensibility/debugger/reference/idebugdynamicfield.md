@@ -17,12 +17,12 @@ ms.assetid: caffbd95-7596-4714-84b1-b964e89a78bb
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 42f2cb6d6560488d344d48ec7cb5fd707578adc8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5dd9827a5262c95d6ef7520fb3ff2263a3934d24
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49180897"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51792568"
 ---
 # <a name="idebugdynamicfield"></a>IDebugDynamicField
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -44,7 +44,7 @@ IDebugDynamicField : IDebugField
 ## <a name="methods-in-vtable-order"></a>Vtable 順序メソッド  
  このインターフェイスから継承されたもの以外の任意のメソッドで提供されない`IDebugField`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

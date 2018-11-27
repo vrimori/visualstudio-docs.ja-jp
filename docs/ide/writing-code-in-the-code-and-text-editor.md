@@ -12,16 +12,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 397ed4ea94aa54c8f8d31fc6ff0d08da16a93479
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: 8be5d3692459c2c65d4243c831ef4de002828bb0
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42626982"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349076"
 ---
 # <a name="features-of-the-code-editor"></a>コード エディターの機能
 
 Visual Studio エディターには、コードとテキストの記述と管理を容易にする多数の機能が用意されています。 アウトラインを使用すると、個々のコード ブロックを展開したり折りたたんだりできます。 コードの詳細は、IntelliSense、**オブジェクト ブラウザー**、および呼び出し階層を使用して調べることができます。 コードを探すには、**[移動]**、**[定義へ移動]**、**[すべての参照の検索]** などの機能を使用します。 コード スニペットを使用してコード ブロックを挿入し、 **[使用法から生成]** などの機能を使用してコードを生成することもできます。 初めて Visual Studio エディターを使用する場合は、簡単な概要について「[コードを編集する](https://visualstudio.microsoft.com/vs/features/ide/)」をご覧ください。
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、「[ソース エディター (Visual Studio for Mac)](/visualstudio/mac/source-editor)」を参照してください。
 
 コードは、いくつかの方法で表示できます。 既定では、**ソリューション エクスプローラー**にファイルごとに整理されたコードが表示されます。 ウィンドウの下部にある **[クラス ビュー]** タブをクリックすれば、クラスごとに整理されたコードを表示することができます。
 
@@ -87,6 +90,7 @@ Visual Studio では、言語によって異なる機能がサポートされて
 
 ## <a name="see-also"></a>関連項目
 
+- [ソース エディター (Visual Studio for Mac)](/visualstudio/mac/source-editor)
 - [Visual Studio IDE](../ide/visual-studio-ide.md)
 - [Visual Studio での C++ の概要](../ide/getting-started-with-cpp-in-visual-studio.md)
 - [Visual Studio での C# および ASP.NET の概要](../ide/tutorial-csharp-aspnet-core.md)

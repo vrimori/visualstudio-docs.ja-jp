@@ -5,12 +5,12 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/15/2017
 ms.assetid: 2C4AAC2E-3B4A-4496-8BE0-1F5A7F81D1CA
-ms.openlocfilehash: eda5e78888a3d50c628033d9f4331ab3789b20c8
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: f90f5fca9d68ed00162fd746ddf291343c8d51f7
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43224451"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296347"
 ---
 # <a name="accessibility"></a>ユーザー補助
 
@@ -20,7 +20,7 @@ Visual Studio for Mac は、macOS の機能およびユーティリティに加�
 - エディター内のテキスト サイズ オプション
 - エディター内の色のカスタマイズ
 - キーボード ショートカットのカスタマイズ
-- メソッドおよびパラメーターのコード補完機能 
+- メソッドおよびパラメーターのコード補完機能
 
 macOS のユーザー補助機能の詳細については、[Apple 社の Web サイト](https://www.apple.com/accessibility/mac/)をご覧ください。
 
@@ -36,11 +36,10 @@ Visual Studio for Mac のユーザー補助機能は、既定では無効にな�
 
 3. **[Visual Studio を再起動]** ボタンを押し、ユーザー補助機能を有効にします。
 
-
-または、コマンド ラインを使用してユーザー補助機能を有効にすることもできます。 これを行うには、ターミナルで次のコマンドを入力します。 
+または、コマンド ラインを使用してユーザー補助機能を有効にすることもできます。 これを行うには、ターミナルで次のコマンドを入力します。
 
 ```bash
-defaults write com.microsoft.visual-studio com.monodevelop.AccessibilityEnabled 1 
+defaults write com.microsoft.visual-studio com.monodevelop.AccessibilityEnabled 1
 ```
 
 ユーザー補助機能を有効にした後、Visual Studio を再起動する必要があります。
@@ -49,12 +48,13 @@ defaults write com.microsoft.visual-studio com.monodevelop.AccessibilityEnabled 
 
 キーボード ナビゲーションを有効にするには、**[システム環境設定] > [キーボード] > [ショートカット]** のフル キーボード アクセス オプションを、**[すべてコントロール]** に設定します。
 
-  ![macOS の [システム環境設定] パネル](media/accessibility-image2.png)
+![macOS の [システム環境設定] パネル](media/accessibility-image2.png)
 
 フル キーボード アクセスの設定をオンにしたことで、四角形のフォーカスが表示されます。 以下のようにして、コントロールを選択できます。
+
 - Tab キーで次のコントロールに進む
 - Shift キーを押しながら Tab キーを押して前のコントロールに戻る
-- 方向キーでコントロールの間を矢印の方向に移動する 
+- 方向キーでコントロールの間を矢印の方向に移動する
 
 スペース バーを押すと、フォーカスされたコントロールがアクティブになります。
 
@@ -66,13 +66,17 @@ UI VoiceOver コマンドの間を移動するには、次のコマンドを使�
 
 - コントロール間で VoiceOver カーソルを移動: **Ctrl + Alt + 左方向キーまたは右方向キー**
 
-VoiceOver は、コントロールの名前、コントールに関するいくつかの詳細、およびそのコントロールで何ができるかを読み上げます。 
+   VoiceOver は、コントロールの名前、コントールに関するいくつかの詳細、およびそのコントロールで何ができるかを読み上げます。
 
 - グループやコントロール (例: Solution Pad、ツールボックスなどのパッド) を入力: **Ctrl + Alt + Shift + 下方向キー**
 
-一度コントロール内に入れば、**Ctrl + Alt + 方向キー**を使用して内部を移動できます。 
- 
+   一度コントロール内に入れば、**Ctrl + Alt + 方向キー**を使用して内部を移動できます。
+
 macOS の VoiceOver の使用方法に関する概要については、次のガイドをご覧ください。
 
 - [VoiceOver の概要](https://help.apple.com/voiceover/info/guide/10.12/)
 - [macOS の VoiceOver コマンド](http://lab.dotjay.com/notes/voiceover-commands/)
+
+## <a name="see-also"></a>関連項目
+
+- [Visual Studio のユーザー補助機能 (Windows)](/visualstudio/ide/reference/accessibility-features-of-visual-studio)

@@ -1,7 +1,7 @@
 ---
 title: Python プロジェクトのカスタム メニュー コマンドを定義する方法
 description: Visual Studio でプロジェクトとターゲット ファイルを編集して Python プロジェクトのコンテキスト メニューにカスタム コマンドを追加する方法を示します。 コマンドは、実行可能プログラム、スクリプト、モジュール、インライン コード スニペット、pip で呼び出すことができます。
-ms.date: 06/27/2018
+ms.date: 11/12/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 71d10e2a8c62f695460cb3b596acc10f01a6ca81
-ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
+ms.openlocfilehash: cce4400a4cecb3bb0937c3f4ce41ea148edcc49f
+ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008324"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607849"
 ---
 # <a name="define-custom-commands-for-python-projects"></a>Python プロジェクトのカスタム コマンドを定義する
 
@@ -356,7 +356,7 @@ Web プロジェクトの **[サーバーの起動]** および **[デバッグ 
 
 ### <a name="console-window-closes-immediately-after-command-is-run"></a>コマンド実行直後にコンソール ウィンドウが閉じる
 
-`ExecuteIn="consolepause"` の代わりに `ExecuteIn="console"` を使用します。
+`ExecuteIn="consolepause"` の代わりに `ExecuteIn="console"`を使用します。
 
 ### <a name="command-does-not-appear-on-the-menu"></a>コマンドがメニューに表示されない
 

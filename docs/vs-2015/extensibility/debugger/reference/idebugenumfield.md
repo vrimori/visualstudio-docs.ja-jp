@@ -17,12 +17,12 @@ ms.assetid: 42f685bf-0f39-47f4-98b0-6022efe2bf97
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f9bb567b5e08cbc08bd1bb15bf6713deeadab219
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6af5d77cd9aa622edafd144c885322768d3e4376
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49231739"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51740595"
 ---
 # <a name="idebugenumfield"></a>IDebugEnumField
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -54,7 +54,7 @@ IDebugEnumField : IDebugContainerField
 ## <a name="remarks"></a>Remarks  
  基になるシンボルの場所に実際にバインドされている[バインド](../../../extensibility/debugger/reference/idebugbinder-bind.md)します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

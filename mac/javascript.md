@@ -7,24 +7,24 @@ ms.date: 05/03/2018
 ms.topic: article
 ms.technology: vs-ide-general
 ms.assetid: 61432695-5B12-4257-B250-48D37EED106D
-ms.openlocfilehash: 6efc22f916973f292daa97bdd6b5129ac9311f04
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: a2f8e73ecd4ca1010dd25fe4031e73aa13727605
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48881073"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51294917"
 ---
 # <a name="javascript-support"></a>JavaScript サポート
 
-Visual Studio for Mac では、構文の強調表示、コードの書式設定、IntelliSense で JavaScript と TypeScript を利用できます。 
+Visual Studio for Mac では、構文の強調表示、コードの書式設定、IntelliSense で JavaScript と TypeScript を利用できます。
 
 ![TypeScript エディター サポート](https://msdnshared.blob.core.windows.net/media/2018/03/TypeScript-editor.gif)
 
-JavaScript のコード記述に関する詳細については、「[JavaScript コードの記述](https://docs.microsoft.com/scripting/javascript/writing-javascript-code)」ガイドを参照してください。
+JavaScript のコード記述に関する詳細については、「[JavaScript コードの記述](/scripting/javascript/writing-javascript-code)」ガイドを参照してください。
 
 ## <a name="adding-a-javascript-file"></a>JavaScript ファイルの追加
 
-JavaScript ファイルはほとんどの場合、**[新しいファイル]** ダイアログから ASP.NET Core プロジェクトに追加されます。 JavaScript ファイルを追加するには、プロジェクトを右クリックし、**[追加]、[新しいファイル]** の順に進みます。 
+JavaScript ファイルはほとんどの場合、**[新しいファイル]** ダイアログから ASP.NET Core プロジェクトに追加されます。 JavaScript ファイルを追加するには、プロジェクトを右クリックし、**[追加]、[新しいファイル]** の順に進みます。
 
 ![プロジェクトに新しいファイルを追加する](media/javascript-image1.png)
 
@@ -38,6 +38,12 @@ Visual Studio for Mac は [JavaScript 言語サービス](/visualstudio/ide/java
 
 Visual Studio for Mac の JavaScript IntelliSense は、型の推定、JSDoc、または TypeScript 宣言を基盤にすることができます。
 
-- **型の推定** - コードの前後関係からオブジェクトの型を割り出します。 詳細については、「[型推論に基づく IntelliSense](https://docs.microsoft.com/visualstudio/ide/javascript-intellisense#intellisense-based-on-type-inference)」の Visual Studio セクションを参照してください。
-- **JSDoc** - 型の推定では正しい型情報が与えられないことがあります。 そのような場合、型情報は [JSDoc](http://usejsdoc.org/about-getting-started.html) 注釈によって明示的に指定できます。 詳細については、「[JSDoc に基づく IntelliSense](https://docs.microsoft.com/visualstudio/ide/javascript-intellisense#intellisense-based-on-jsdoc)」の Visual Studio セクションを参照してください。
-- **TypeScript 宣言ファイル** - `.d.ts` ファイルを利用し、JavaScript IntelliSense の値が与えられます。 そのファイルに宣言されている型を JSDoc コメントで型として使用できます。 詳細については、「[TypeScript 宣言ファイルに基づく IntelliSense](https://docs.microsoft.com/visualstudio/ide/javascript-intellisense#intellisense-based-on-typescript-declaration-files)」の Visual Studio セクションを参照してください。 ![TypeScript 定義ファイルの追加](media/javascript-image3.png)
+- **型の推定** - コードの前後関係からオブジェクトの型を割り出します。 詳細については、「[型推論に基づく IntelliSense](/visualstudio/ide/javascript-intellisense#intellisense-based-on-type-inference)」の Visual Studio セクションを参照してください。
+- **JSDoc** - 型の推定では正しい型情報が与えられないことがあります。 そのような場合、型情報は [JSDoc](http://usejsdoc.org/about-getting-started.html) 注釈によって明示的に指定できます。 詳細については、「[JSDoc に基づく IntelliSense](/visualstudio/ide/javascript-intellisense#intellisense-based-on-jsdoc)」の Visual Studio セクションを参照してください。
+- **TypeScript 宣言ファイル** - `.d.ts` ファイルを利用し、JavaScript IntelliSense の値が与えられます。 そのファイルに宣言されている型を JSDoc コメントで型として使用できます。 詳細については、「[TypeScript 宣言ファイルに基づく IntelliSense](/visualstudio/ide/javascript-intellisense#intellisense-based-on-typescript-declaration-files)」の Visual Studio のセクションを参照してください。
+
+    ![TypeScript 定義ファイルの追加](media/javascript-image3.png)
+
+## <a name="see-also"></a>関連項目
+
+- [JavaScript IntelliSense (Windows の Visual Studio)](/visualstudio/ide/javascript-intellisense)

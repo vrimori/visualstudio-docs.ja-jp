@@ -15,12 +15,12 @@ ms.assetid: 4b0536dd-4f92-4ef2-9031-4548281f37aa
 caps.latest.revision: 20
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9c02d873e2ccb6062f94569d1231b47fc56624fd
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5dcb07c3c49b132cdf12c1a4973af3ebf04dfa74
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49293040"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51796780"
 ---
 # <a name="source-control-plug-in-api-functions"></a>ソース管理プラグインの API 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "49293040"
 |[SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)|ディレクトリおよびファイルをプロジェクトまたはソース管理下にあるプロジェクトの一覧を検証します。 各ディレクトリとファイル名が見つかりましたが、コールバック関数に渡されます。|  
 |[SccQueryChanges](../extensibility/sccquerychanges-function.md)|ファイルの一覧に加えられた名前の変更について説明します。 各ファイル名は、その状態の変更のコールバック関数に渡されます。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: scc.h  
   
  (環境の SDK で提供される一般的なにはフォルダーが含まれます、既定で *[ドライブ]* \Program Files\VSIP 8.0\EnvSDK\common\inc; サンプルでは、MSSCCI、VSIP フォルダーの中でも提供 *[ドライブ]* \ProgramFiles\VSIP 8.0\MSSCCI)。  

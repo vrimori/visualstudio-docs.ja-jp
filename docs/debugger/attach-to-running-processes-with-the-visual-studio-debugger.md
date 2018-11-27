@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bdd83cb8b2d20d3e3abcacbb69d50e1a68831ca4
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: af44fcfe553cd720461de3a4e16986d573785c2f
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49843263"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257343"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Visual Studio デバッガーで実行中のプロセスへのアタッチ
 ローカルまたはリモート コンピューターで実行中のプロセスに、Visual Studio デバッガーをアタッチできます。 プロセスが実行されると、選択**デバッグ** > **プロセスにアタッチ**またはキーを押します**Ctrl**+**Alt** +**P**使用して、Visual Studio で、**プロセスにアタッチ**プロセスにデバッガーをアタッチするためのダイアログ。
@@ -153,7 +153,7 @@ IIS に配置されている ASP.NET アプリケーションのデバッグに�
 
 C++ で記述されたコードにデバッガーをアタッチするには、コードが `DebuggableAttribute`を生成する必要があります。 [/ASSEMBLYDEBUG](/cpp/build/reference/assemblydebug-add-debuggableattribute) リンカー オプションを使ってリンクすると、これを自動的にコードに追加できます。
 
-クライアント側スクリプトのデバッグ、スクリプトのデバッグをする必要があります有効にする、ブラウザーで。 Chrome でクライアント側スクリプトをデバッグするには、次のように選択します。 **Webkit**として、コードの種類と、アプリの種類によっては、デバッグ モードでブラウザーを起動する必要があります (型`chrome.exe --remote-debugging-port=9222`コマンドラインから)。
+クライアント側スクリプトのデバッグ、スクリプトのデバッグをする必要があります有効にする、ブラウザーで。 Chrome でクライアント側スクリプトをデバッグするには、次のように選択します。 **Webkit**として、コードの種類と、アプリの種類によっては、Chrome のすべてのインスタンスを閉じて、デバッグ モードでブラウザーを起動する必要があります (型`chrome.exe --remote-debugging-port=9222`コマンドラインから)。
 
 Visual Studio で、アタッチする実行中のプロセスをすばやく選択するには、入力**Ctrl**+**Alt**+**P**の最初の文字を入力し、プロセスの名前。
 

@@ -16,12 +16,12 @@ ms.assetid: 557065bf-081f-4d57-8744-bae02b8a5a6e
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9340030c9dd2a1a69b50162dd4c5b29f9eb6a50d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 41ce079aef17811982ff99cff5a69229f83f0519
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49247261"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51799094"
 ---
 # <a name="enumerations-visual-studio-debugging"></a>列挙 (Visual Studio のデバッグ)
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -250,7 +250,7 @@ ms.locfileid: "49247261"
  [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md)  
  スレッドの状態を指定します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h、sh.h、または ee.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

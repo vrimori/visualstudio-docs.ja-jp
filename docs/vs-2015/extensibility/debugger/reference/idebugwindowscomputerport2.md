@@ -15,12 +15,12 @@ ms.assetid: 25f327b8-0303-4268-88d1-74df630436aa
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fb0b41f1a56058e005a6b047abb9d0d11a83def6
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: d51769c39a7a6b3b98ed0e07e541b6563913e052
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49254872"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51763144"
 ---
 # <a name="idebugwindowscomputerport2"></a>IDebugWindowsComputerPort2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -43,7 +43,7 @@ IDebugWindowsComputerPort2 : IUnknown
 |------------|-----------------|  
 |[GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md)|コンピューターに関する情報を取得、デバッガーで実行します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

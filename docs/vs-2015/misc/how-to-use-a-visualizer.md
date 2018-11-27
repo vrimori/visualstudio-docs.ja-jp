@@ -26,14 +26,14 @@ helpviewer_keywords:
 - visualizers, about visualizers
 ms.assetid: d2611385-0134-4387-8c5a-979fe625a462
 caps.latest.revision: 37
-ms.author: susanno
+ms.author: mikejo
 manager: douge
-ms.openlocfilehash: cdf4c9b3a2ea8dc1322a10799f7f7051b71e035c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: f50dba2f236127bd2e155ea13cb8646f18de0e92
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49306515"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51721919"
 ---
 # <a name="how-to-use-a-visualizer"></a>方法 : ビジュアライザーを使用する
 ビジュアライザーを使用して、変数またはオブジェクトの内容を、データ型にとって意味のある方法で表示できます。 ビジュアライザーを使用することができます**データヒント**、**ウォッチ**ウィンドウで、 **[自動変数]** ウィンドウで、または**ローカル**ウィンドウ。  

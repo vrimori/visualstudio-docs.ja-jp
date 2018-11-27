@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 220a7b7ca4fe9c6167f05ba78877994d9abe57e6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 173173e090f285fcaf6fc9d7c94ba85b692d68e2
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49854909"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948349"
 ---
 # <a name="introduce-a-local-variable-in-visual-studio"></a>Visual Studio でローカル変数を導入する
 

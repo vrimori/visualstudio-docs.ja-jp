@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 47ede5eebc4d7caf4fe1565c5d8b93b2524ed6ef
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 7f3b5fd2674d63fad6398eeaee082862c4cf6476
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49849360"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51809130"
 ---
 # <a name="interop-activity-designer"></a>Interop アクティビティ デザイナー
 
@@ -35,7 +35,7 @@ ms.locfileid: "49849360"
 
 C# プロジェクトの場合は、プロジェクトでプロジェクトを右クリックして、完全な .NET Framework 4 を使用する再ターゲットできます**ソリューション エクスプ ローラー**選択**プロパティ**します。 **アプリケーション**] タブで、[、 **NET Framework 4**オプション、**ターゲット フレームワーク**します。 選択**はい**この変更を確認します。
 
-VB プロジェクトの場合は、プロジェクトでプロジェクトを右クリックして、完全な .NET Framework 4 を使用する再ターゲットできます**ソリューション エクスプ ローラー**選択**プロパティ**します。 **コンパイル**タブをクリックし、**詳細コンパイル オプション**ボタン。 選択 **.Net Framework 4**から、**ターゲット フレームワーク リスト**、順にクリックします**OK**。 選択**はい**この変更を確認します。
+Visual Basic プロジェクトの場合は、プロジェクトでプロジェクトを右クリックして、完全な .NET Framework 4 を使用する再ターゲットできます**ソリューション エクスプ ローラー**選択**プロパティ**します。 **コンパイル**タブをクリックし、**詳細コンパイル オプション**ボタン。 選択 **.Net Framework 4**から、**ターゲット フレームワーク リスト**、順にクリックします**OK**。 選択**はい**この変更を確認します。
 
 **相互運用機能**からアクティビティ デザイナーをドラッグできる**ツールボックス**どこにも、アクティビティを通常配置など内に、ワークフロー デザイナー画面にドロップし、<xref:System.Activities.Statements.Sequence>します。 削除、**相互運用機能**アクティビティ デザイナーを作成、 <xref:System.Activities.Statements.Interop> 、既定値は、アクティビティ**DisplayName**相互運用機能の。 編集することができます、<xref:System.Activities.Activity.DisplayName%2A>のヘッダーに、**相互運用機能**アクティビティ デザイナー、または、 **DisplayName**プロパティ グリッドのボックスです。
 

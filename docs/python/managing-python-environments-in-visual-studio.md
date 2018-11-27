@@ -1,7 +1,7 @@
 ---
 title: Python 環境とインタープリターを管理する
 description: '[Python 環境] ウィンドウを使用して、グローバル環境、仮想環境、および conda 環境を管理し、Python インタープリターとパッケージをインストールし、環境を Visual Studio プロジェクトに割り当てます。'
-ms.date: 09/10/2018
+ms.date: 11/08/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,74 +11,38 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2c7706e635cc159b7ae85274d46c2be762926ccc
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: f69178fde2a0912d39c813028385f21f6ca87d7a
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45551264"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349362"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio で Python 環境を作成および管理する方法
 
 Python *環境*は、その中で Python コードを実行するコンテキストであり、グローバル環境、仮想環境、および conda 環境が含まれます。 1 つの環境は、インタープリター、ライブラリ (通常は Python 標準ライブラリ)、およびインストールされているパッケージのセットで構成されます。 これらのコンポーネントがすべて合わさって、有効な言語の構造と構文、アクセスできるオペレーティング システム機能、使用できるパッケージが決まります。
 
-Windows の Visual Studio では、この記事で説明する [**[Python 環境]**](#the-python-environments-window) ウィンドウで、これらの環境を管理し、新しいプロジェクトの既定値として 1 つの環境を選択します。 特定のプロジェクトに対して、既定ではなく、[特定の環境を選択](selecting-a-python-environment-for-a-project.md)することもできます。
+Windows 上の Visual Studio では、この記事で説明するように、**[Python 環境]** ウィンドウで環境を管理し、新しいプロジェクトの既定値として 1 つの環境を選択します。 環境の他の側面については、以下の記事を参照してください。
 
->[!NOTE]
->Visual Studio で Python を初めて使用される場合は、次の記事で必要な予備知識についてご確認ください。
->
->- [Visual Studio での Python の使用](overview-of-python-tools-for-visual-studio.md)
->- [Visual Studio での Python サポートのインストール](installing-python-support-in-visual-studio.md)
+- 特定のプロジェクトに対して、既定ではなく、[特定の環境を選択](selecting-a-python-environment-for-a-project.md)することができます。
 
-**[ファイル]** > **[開く]** > **[フォルダー]** コマンドを使用してフォルダーとしてのみ開かれた Python コードの環境は管理できないことにも注意してください。 Visual Studio の環境機能を使用するには、[既存のコードから Python プロジェクトを作成](quickstart-01-python-in-visual-studio-project-from-existing-code.md)します。
+- Python プロジェクトの仮想環境の作成と使用の詳細については、「[仮想環境を使用する](selecting-a-python-environment-for-a-project.md#use-virtual-environments)」を参照してください。
 
-環境にパッケージをインストールする場合は、[[パッケージ] タブのリファレンス](python-environments-window-tab-reference.md#packages-tab)を参照してください。
+- 環境にパッケージをインストールする場合は、[[パッケージ] タブのリファレンス](python-environments-window-tab-reference.md#packages-tab)を参照してください。
 
-## <a name="types-of-environments"></a>環境の種類
+- Python インタープリターをインストールする場合は、「[Python インタープリターのインストール](installing-python-interpreters.md)」を参照してください。 一般的に、主流の Python ディストリビューションのインストーラーをダウンロードして実行すると、Visual Studio でその新しいインストールが検出され、環境が **[Python 環境]** ウィンドウに表示され、プロジェクトに選択できるようになります。
 
-### <a name="global-environments"></a>グローバル環境
+Visual Studio で Python を初めて使用する場合は、以下の記事で一般的な背景を確認してください。
 
-各 Python インストール (Python 2.7、Python 3.6、Python 3.7、Anaconda 4.4.0 など。「[Python インタープリターのインストール](installing-python-interpreters.md)」を参照) で、独自のグローバル環境が保持されます。 各環境は、特定の Python インタープリター、その標準ライブラリ、および事前インストールされたパッケージのセットで構成されます。 グローバル環境にパッケージをインストールすると、グローバル環境を使用するすべてのプロジェクトでパッケージが使用できるようになります。 環境がファイル システムの保護領域にある場合 (*c:\program files* 内など)、パッケージをインストールするには管理者特権が必要です。
-
-グローバル環境は、コンピューター上のすべてのプロジェクトで使用できます。 Visual Studio では、1 つのグローバル環境を既定の環境として選択します。プロジェクトに対して別の環境を特に選ばない限り、すべてのプロジェクトでこれが使用されます。 詳細については、[プロジェクト用の環境の選択](selecting-a-python-environment-for-a-project.md)に関するページを参照してください。
-
-### <a name="virtual-environments"></a>仮想環境
-
-グローバル環境にインストールされたパッケージは、グローバル環境を使うすべてのプロジェクトで使用できるため、2 つのプロジェクトで、互換性のないパッケージや同じパッケージの異なるバージョンが必要な場合、競合が発生する可能性があります。 仮想環境では、このような競合を避けるために、グローバル環境のインタープリターと標準ライブラリを使用しながら、分離フォルダーで独自のパッケージ ストアを保持します。
-
-Visual Studio では、特定のプロジェクト用の仮想環境を作成可能で、これはプロジェクトのサブフォルダーに格納されます。 Visual Studio には、仮想環境から *requirements.txt* ファイルを生成し、他のコンピューターで環境を簡単に再作成するためのコマンドが用意されています。 詳しくは、「[仮想環境を使用する](selecting-a-python-environment-for-a-project.md#use-virtual-environments)」をご覧ください。
-
-### <a name="conda-environments"></a>conda 環境
-
-conda 環境は `conda` ツールを使用して作成される環境です。Visual Studio 2017 バージョン 15.7 以降では、統合 conda 管理が使用されます  (Anaconda または Miniconda が必要です。Anaconda は Visual Studio インストーラーを通して利用できるようになります。[インストール - Visual Studio 2017](installing-python-support-in-visual-studio.md#visual-studio-2017) に関するページを参照してください)。
+- [Visual Studio での Python の使用](overview-of-python-tools-for-visual-studio.md)
+- [Visual Studio での Python サポートのインストール](installing-python-support-in-visual-studio.md)
 
 > [!Note]
-> conda 環境で最適な結果を得るためには、conda 4.4.8 以降 (conda バージョンは Anaconda バージョンとは異なります) をご使用ください。 Visual Studio 2017 インストーラーから Anaconda 5.1 をインストールします。
-
-conda 環境が格納されている conda バージョンや、その他の情報を参照するには、Anaconda コマンド プロンプト (つまり、Anaconda がパス内に存在するコマンド プロンプト) で `conda info` を実行します。
-
-```cli
-conda info
-```
-
-conda 環境フォルダーは次のように表示されます。
-
-```output
-       envs directories : c:\anaconda3\envs
-                          C:\Users\user\AppData\Local\conda\conda\envs
-                          C:\Users\user\.conda\envs
-```
-
-conda 環境はプロジェクトと共に格納されないことから、グローバル環境と同じように機能します。 たとえば、conda 環境に新しいパッケージをインストールすると、その環境を使用するすべてのプロジェクトでパッケージが使用できるようになります。
-
-Visual Studio 2017 バージョン 15.6 以前の場合、conda 環境は、「[既存の環境を手動で識別する](#manually-identify-an-existing-environment)」に記載の説明に従って手動でポイントすることにより使用できます。
-
-Visual Studio 2017 バージョン 15.7 以降では、次のセクションに説明するように、conda 環境が自動的に検出され、**[Python 環境]** ウィンドウに表示されます。
+> **[ファイル]** > **[開く]** > **[フォルダー]** コマンドを使用してフォルダーとしてのみ開かれた Python コードの環境は管理できません。 Visual Studio の環境機能を使用するには、[既存のコードから Python プロジェクトを作成](quickstart-01-python-in-visual-studio-project-from-existing-code.md)します。
 
 ## <a name="the-python-environments-window"></a>[Python 環境] ウィンドウ
 
-> [!Note]
-> このセクションで示されているスクリーンショットは、Visual Studio 15.8 を表しています。 ご使用の Visual Studio のバージョンによっては、UI が異なる場合があります。
+*(このセクションで示されているスクリーンショットは、Visual Studio 15.8 を表しています。ご使用の Visual Studio のバージョンによっては、UI が異なる場合があります。)*
 
 Visual Studio が認識した環境が **[Python 環境]** ウィンドウに表示されます。 ウィンドウを開くには、次のいずれかの方法を使用します。
 
@@ -87,15 +51,15 @@ Visual Studio が認識した環境が **[Python 環境]** ウィンドウに表
 
     ![ソリューション エクスプローラーの [View All Python Environments (すべての Python 環境の表示)] コマンド](media/environments-view-all.png)
 
-いずれの場合も、**[Python 環境]** ウィンドウは**ソリューション エクスプローラー**の兄弟タブとして表示されます。
+いずれの場合も、**[Python 環境]** ウィンドウは**ソリューション エクスプローラー**と共に表示されます。
 
 ![[Python Environments (Python 環境)] ウィンドウ](media/environments-default-view.png)
 
-Visual Studio では、[PEP 514](https://www.python.org/dev/peps/pep-0514/) に従い、レジストリを使用してインストールされた環境を識別します。 一覧に想定した環境が見つからない場合は、「[既存の環境を手動で識別する](#manually-identify-an-existing-environment)」を参照してください。
+Visual Studio では、仮想環境と conda 環境 (「[環境の種類](#types-of-environments)」を参照してください) と共に、([PEP 514](https://www.python.org/dev/peps/pep-0514/) に従って) レジストリを使用してインストールされているグローバル環境が検索されます。 一覧に想定した環境が見つからない場合は、「[既存の環境を手動で識別する](#manually-identify-an-existing-environment)」を参照してください。
 
-一覧から環境を選択すると、**[概要]** タブにその環境用のさまざまなプロパティとコマンドが表示されます。たとえば、上の図では、インタープリターの場所が *C:\Python36-32* であることがわかります。 以下の環境の一覧のドロップダウン リストを使用して、**Package** や **IntelliSense** など異なるタブに切り替えることができます。 これらのタブの説明は、「[[Python 環境] ウィンドウ リファレンス](python-environments-window-tab-reference.md)」でご覧いただけます。
+一覧から環境を選択すると、Visual Studio の **[概要]** タブにはその環境のさまざまなプロパティとコマンドが表示されます。たとえば、上の図では、インタープリターの場所が *C:\Python36-32* であることがわかります。 以下の環境の一覧のドロップダウン リストを使用して、**Package** や **IntelliSense** など異なるタブに切り替えることができます。 これらのタブの説明は、「[[Python 環境] ウィンドウ リファレンス](python-environments-window-tab-reference.md)」でご覧いただけます。
 
-環境を選択しても、それがアクティブになることはありません。 この一覧で太字で表示されている既定の環境が、Visual Studio ですべての新しいプロジェクトに使用されている現在アクティブになっている環境です。 別の環境をアクティブにするには、**Make this environment the default for new project** (これを新しいプロジェクトに対する既定の環境にする) コマンドを使用します。 さまざまな環境を常にプロジェクトのコンテキスト内でアクティブにできます。 詳細については、[プロジェクト用の環境の選択](selecting-a-python-environment-for-a-project.md)に関するページを参照してください。
+環境を選択しても、どのプロジェクトとの関係も変わりません。 この一覧で太字で表示されている既定の環境は、Visual Studio ですべての新しいプロジェクトに使用されている環境です。 新しいプロジェクトに別の環境を使用するには、**[これを新しいプロジェクトに対する既定の環境にする]** コマンドを使用します。 プロジェクトのコンテキスト内では、特定の環境を常に選択できます。 詳細については、[プロジェクト用の環境の選択](selecting-a-python-environment-for-a-project.md)に関するページを参照してください。
 
 一覧表示されている各環境の右側に、その環境の**対話型**ウィンドウを開くコントロールがあります  (Visual Studio 2017 15.5 以前では、その環境の IntelliSense データベースを更新する別のコントロールが表示されます。 データベースの詳細については、「[[Python 環境] ウィンドウ タブ リファレンス](python-environments-window-tab-reference.md#intellisense-tab)」参照してください)。
 
@@ -122,25 +86,68 @@ Visual Studio では、[PEP 514](https://www.python.org/dev/peps/pep-0514/) に�
 >
 > ただし、ファイル システムを使用してインタープリターとその環境を手動で移動している場合、Visual Studio は新しい場所がわかりません。 詳細については、「[インタープリターの移動](installing-python-interpreters.md#move-an-interpreter)」を参照してください。
 
-## <a name="fix-or-delete-invalid-environments"></a>無効な環境を修正または削除する
+### <a name="types-of-environments"></a>環境の種類
 
-Visual Studio で環境のレジストリ エントリが検出されたものの、インタープリターへのパスが無効である場合、**[Python 環境]** ウィンドウに取り消し線の付いた名前が表示されます。
+Visual Studio は、グローバル環境、仮想環境、および conda 環境で動作します。
 
-![無効な環境を示す [Python 環境] ウィンドウ](media/environments-invalid-entry.png)
+#### <a name="global-environments"></a>グローバル環境
 
-保持する環境を修正するには、まず、そのインストーラーの**修復**プロセスを使用してみます。 たとえば、標準的な Python 3.x のインストーラーにはそのオプションが含まれます。
+各 Python インストール (Python 2.7、Python 3.6、Python 3.7、Anaconda 4.4.0 など。「[Python インタープリターのインストール](installing-python-interpreters.md)」を参照) で、独自の*グローバル環境*が保持されます。 各環境は、特定の Python インタープリター、その標準ライブラリ、プレインストールされたパッケージ セット、その環境がアクティブなときにインストールした追加のパッケージで構成されています。 グローバル環境にパッケージをインストールすると、グローバル環境を使用するすべてのプロジェクトでパッケージが使用できるようになります。 環境がファイル システムの保護領域にある場合 (*c:\program files* 内など)、パッケージをインストールするには管理者特権が必要です。
 
-修復オプションがない環境を修正する場合や、無効な環境を削除する場合は、次の手順を使用して直接レジストリを変更します。 Visual Studio では、レジストリの変更時に **[Python 環境]** ウィンドウが自動的に更新されます。
+グローバル環境は、コンピューター上のすべてのプロジェクトで使用できます。 Visual Studio では、1 つのグローバル環境を既定の環境として選択します。プロジェクトに対して別の環境を特に選ばない限り、すべてのプロジェクトでこれが使用されます。 詳細については、[プロジェクト用の環境の選択](selecting-a-python-environment-for-a-project.md)に関するページを参照してください。
 
-1. *regedit.exe* を実行します。
-1. **HKEY_LOCAL_MACHINE\SOFTWARE\Python** (32 ビットのインタープリターの場合)、または **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Python** (64 ビットのインタープリターの場合) に移動します。 IronPython の場合は、代わりに **IronPython** を検索します。
-1. **PythonCore** (CPython の場合) や **ContinuumAnalytics** (Anaconda の場合) など、ディストリビューションと一致するノードを展開します。 IronPython の場合は、バージョン番号のノードを展開します。
-1. **InstallPath** ノードの下の値を検査します。
+#### <a name="virtual-environments"></a>仮想環境
 
-    ![CPython の標準インストールのレジストリ エントリ](media/environments-registry-entries.png)
+グローバル環境での作業は簡単に始めることができますが、異なるプロジェクトのためにさまざまなパッケージがインストールされると、時間の経過と共に混乱が生じます。 このような混乱があると、既知のバージョンで、ビルド サーバーや Web サーバー上に設定した環境とまったく同じ種類の特定のパッケージ セットに対してアプリケーションを完全にテストすることが困難になります。 競合は、2 つのプロジェクトに互換性のないパッケージまたは同じパッケージの異なるバージョンが必要な場合にも発生します。
 
-    - コンピューター上にまだ環境が存在する場合は、**ExecutablePath** の値を正しい場所に変更します。 また、必要に応じて、**(Default)** と **WindowedExecutablePath** の値を修正します。
-    - コンピューター上に環境が既に存在せず、**[Python 環境]** ウィンドウから削除する場合は、上のイメージの **3.6** など、**InstallPath** の親ノードを削除します。
+このため、開発者は 1 つのプロジェクト用に*仮想環境*を作成することがよくあります。 仮想環境は、特定のインタープリターのコピーを含むプロジェクトのサブフォルダーです。 仮想環境をアクティブにすると、インストールするパッケージはその環境のサブフォルダーにのみインストールされます。 その環境内で Python プログラムを実行すると、そうした特定のパッケージに対してのみ実行されていることがわかります。
+
+Visual Studio には、プロジェクトの仮想環境を作成するための直接的なサポートが提供されています。 たとえば、*requirements.txt* を含むプロジェクトを開く場合、またはそのファイルを含むテンプレートからプロジェクトを作成する場合、Visual Studio では、自動的に仮想環境が作成され、それらの依存関係がインストールされるというメッセージが表示されます。
+
+開いているプロジェクト内には、いつでも新しい仮想環境を作成できます。 **ソリューション エクスプローラー**でプロジェクト ノードを展開し、**[Python 環境]** ノードを右クリックし、[仮想環境を追加] を選択します。 詳細については、「[仮想環境を作成する](selecting-a-python-environment-for-a-project.md#create-a-virtual-environment)」を参照してください。
+
+Visual Studio には、仮想環境から *requirements.txt* ファイルを生成し、他のコンピューターで環境を簡単に再作成するためのコマンドも用意されています。 詳しくは、「[仮想環境を使用する](selecting-a-python-environment-for-a-project.md#use-virtual-environments)」をご覧ください。
+
+#### <a name="conda-environments"></a>conda 環境
+
+conda 環境は `conda` ツールを使用して作成される環境です。Visual Studio 2017 バージョン 15.7 以降では、統合 conda 管理が使用されます  (Anaconda または Miniconda が必要です。Anaconda は Visual Studio インストーラーを通して利用できるようになります。[インストール - Visual Studio 2017](installing-python-support-in-visual-studio.md#visual-studio-2017) に関するページを参照してください)。
+
+1. **[Python 環境]** ウィンドウの **[+ conda 環境の作成]** を選択します。これにより、**[新しい conda 環境の作成]** タブが開きます。
+
+    ![新しい conda 環境のためのタブを作成する](media/environments-conda-1.png)
+
+1. **[名前]** フィールドに環境の名前を入力し、**[Python]** フィールドで基本的な Python インタープリターを選択し、**[作成]** を選択します。
+
+1. **[出力]** ウィンドウに新しい環境の進捗状況が表示され、環境が作成されると CLI に関する指示がいくつか表示されます。
+
+    ![conda 環境の正常な作成](media/environments-conda-2.png)
+
+1. Visual Studio 内では、[プロジェクト用の環境の選択](selecting-a-python-environment-for-a-project.md)に関するページの説明に従って、他の環境の場合と同様にプロジェクト用の conda 環境をアクティブにすることができます。
+
+1. 環境にパッケージをインストールするには、[[パッケージ] タブ](python-environments-window-tab-reference.md#packages-tab)を使用します。
+
+> [!Note]
+> conda 環境で最適な結果を得るためには、conda 4.4.8 以降 (conda バージョンは Anaconda バージョンとは異なります) をご使用ください。 Visual Studio 2017 インストーラーから Anaconda 5.1 をインストールします。
+
+conda 環境が格納されている conda バージョンや、その他の情報を参照するには、Anaconda コマンド プロンプト (つまり、Anaconda がパス内に存在するコマンド プロンプト) で `conda info` を実行します。
+
+```cli
+conda info
+```
+
+conda 環境フォルダーは次のように表示されます。
+
+```output
+       envs directories : c:\anaconda3\envs
+                          C:\Users\user\AppData\Local\conda\conda\envs
+                          C:\Users\user\.conda\envs
+```
+
+conda 環境はプロジェクトと共に格納されないことから、グローバル環境と同じように機能します。 たとえば、conda 環境に新しいパッケージをインストールすると、その環境を使用するすべてのプロジェクトでパッケージが使用できるようになります。
+
+Visual Studio 2017 バージョン 15.6 以前の場合、conda 環境は、「[既存の環境を手動で識別する](#manually-identify-an-existing-environment)」に記載の説明に従って手動でポイントすることにより使用できます。
+
+Visual Studio 2017 バージョン 15.7 以降では、次のセクションに説明するように、conda 環境が自動的に検出され、**[Python 環境]** ウィンドウに表示されます。
 
 ## <a name="manually-identify-an-existing-environment"></a>既存の環境を手動で識別する
 
@@ -164,23 +171,25 @@ Visual Studio で環境のレジストリ エントリが検出されたもの�
 
 1. 手動で識別した環境を削除する必要がある場合は、**[構成]** タブの **[削除]** コマンドを選択します。自動検出された環境ではこのオプションは提供されません。 詳細については、「[タブを構成する](python-environments-window-tab-reference.md#configure-tab)」を参照してください。
 
-## <a name="create-a-conda-environment"></a>conda 環境の作成
+## <a name="fix-or-delete-invalid-environments"></a>無効な環境を修正または削除する
 
-*Visual Studio 2017 バージョン 15.7 以降。*
+Visual Studio で環境のレジストリ エントリが検出されたものの、インタープリターへのパスが無効である場合、**[Python 環境]** ウィンドウに取り消し線の付いた名前が表示されます。
 
-1. **[Python 環境]** ウィンドウの **[+ conda 環境の作成]** を選択します。これにより、**[新しい conda 環境の作成]** タブが開きます。
+![無効な環境を示す [Python 環境] ウィンドウ](media/environments-invalid-entry.png)
 
-    ![新しい conda 環境のためのタブを作成する](media/environments-conda-1.png)
+保持する環境を修正するには、まず、そのインストーラーの**修復**プロセスを使用してみます。 たとえば、標準的な Python 3.x のインストーラーにはそのオプションが含まれます。
 
-1. **[名前]** フィールドに環境の名前を入力し、**[Python]** フィールドで基本的な Python インタープリターを選択し、**[作成]** を選択します。
+修復オプションがない環境を修正する場合や、無効な環境を削除する場合は、次の手順を使用して直接レジストリを変更します。 Visual Studio では、レジストリの変更時に **[Python 環境]** ウィンドウが自動的に更新されます。
 
-1. **[出力]** ウィンドウに新しい環境の進捗状況が表示され、環境が作成されると CLI に関する指示がいくつか表示されます。
+1. *regedit.exe* を実行します。
+1. **HKEY_LOCAL_MACHINE\SOFTWARE\Python** (32 ビットのインタープリターの場合)、または **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Python** (64 ビットのインタープリターの場合) に移動します。 IronPython の場合は、代わりに **IronPython** を検索します。
+1. **PythonCore** (CPython の場合) や **ContinuumAnalytics** (Anaconda の場合) など、ディストリビューションと一致するノードを展開します。 IronPython の場合は、バージョン番号のノードを展開します。
+1. **InstallPath** ノードの下の値を検査します。
 
-    ![conda 環境の正常な作成](media/environments-conda-2.png)
+    ![CPython の標準インストールのレジストリ エントリ](media/environments-registry-entries.png)
 
-1. Visual Studio 内では、[プロジェクト用の環境の選択](selecting-a-python-environment-for-a-project.md)に関するページの説明に従って、他の環境の場合と同様にプロジェクト用の conda 環境をアクティブにすることができます。
-
-1. 環境にパッケージをインストールするには、[[パッケージ] タブ](python-environments-window-tab-reference.md#packages-tab)を使用します。
+    - コンピューター上にまだ環境が存在する場合は、**ExecutablePath** の値を正しい場所に変更します。 また、必要に応じて、**(Default)** と **WindowedExecutablePath** の値を修正します。
+    - コンピューター上に環境が既に存在せず、**[Python 環境]** ウィンドウから削除する場合は、上のイメージの **3.6** など、**InstallPath** の親ノードを削除します。
 
 ## <a name="see-also"></a>関連項目
 

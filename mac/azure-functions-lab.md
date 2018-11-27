@@ -7,12 +7,12 @@ ms.date: 05/06/2018
 ms.topic: article
 ms.technology: vs-ide-install
 ms.assetid: 38FD2070-5151-482E-B0A9-993715128736
-ms.openlocfilehash: 80e6f3291f0f0fdc26883d8f98e90e296ee0c7c3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d6a0683405340d479fb3289540ffde2c5e7a4f78
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49919742"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296438"
 ---
 # <a name="tutorial-getting-started-with-azure-functions"></a>チュートリアル: Azure Functions の概要
 
@@ -44,12 +44,10 @@ ms.locfileid: "49919742"
 
     ![Azure Functions プロジェクトの名前付けと作成](media/azure-functions-lab-image2.png)
 
-5. **Solution Pad** でノードを展開します。 既定のプロジェクト テンプレートには、さまざまな Azure WebJobs パッケージと、Newtonsoft.Json パッケージへの NuGet 参照が含まれています。 
+5. **Solution Pad** でノードを展開します。 既定のプロジェクト テンプレートには、さまざまな Azure WebJobs パッケージと、Newtonsoft.Json パッケージへの NuGet 参照が含まれています。
 
-     次の 3 つのファイルもあります。  
-        - ホストのグローバル構成オプションを記述するための **host.json**  
-        - サービス設定を構成するための **local.settings.json**  
-        - プロジェクト テンプレートでは、既定の HttpTrigger も作成します。 このラボの目的上、プロジェクトから **HttpTrigger.cs** ファイルを削除する必要があります。  
+     次の 3 つのファイルもあります。- ホストのグローバル構成オプションを記述するための **host.json** - サービス設定を構成するための **local.settings.json**
+        - プロジェクト テンプレートでは、既定の HttpTrigger も作成します。 このラボの目的上、プロジェクトから **HttpTrigger.cs** ファイルを削除する必要があります。
 
     **local.settings.json** を開きます。 既定では、2 つの空の接続文字列設定が示されます。
 
@@ -58,7 +56,7 @@ ms.locfileid: "49919742"
 ## <a name="exercise-2-creating-an-azure-storage-account"></a>演習 2: Azure ストレージ アカウントの作成
 
 1. [https://portal.azure.com](https://portal.azure.com) で Azure アカウントにログオンします。
- 
+
 1. **[お気に入り]** セクションで、画面の左側にある **[ストレージ アカウント]** を選択します。
 
     ![ストレージ アカウント項目が表示されている、Azure Portal の [お気に入り] セクション](media/azure-functions-lab-image4.png)
@@ -121,8 +119,8 @@ ms.locfileid: "49919742"
         return x + y;
     }
     ```
-1. ここで、メソッドの定義を 1 つずつ説明していきます。 
-    
+1. ここで、メソッドの定義を 1 つずつ説明していきます。
+
     最初に表示されるのは **FunctionName** 属性で、このメソッドを Azure Function としてマークします。 この属性は関数のパブリック名を指定します。 属性名が、実際のメソッド名と一致する必要はありません。
 
     ![FunctionName 属性が強調表示されている新しい run メソッド](media/azure-functions-lab-image13.png)
@@ -157,7 +155,7 @@ ms.locfileid: "49919742"
 
     ![Azure Function API の URL](media/azure-functions-lab-image20.png)
 
-1. ブレークポイントはすぐにトリガーされます。 Web 要求が関数にルーティングされ、デバッグできるようになりました。 **x** 変数にポインタを合わせると、その値が表示されます。 
+1. ブレークポイントはすぐにトリガーされます。 Web 要求が関数にルーティングされ、デバッグできるようになりました。 **x** 変数にポインタを合わせると、その値が表示されます。
 
     ![トリガーされたブレークポイント](media/azure-functions-lab-image21.png)
 
@@ -306,7 +304,7 @@ ms.locfileid: "49919742"
 
 ## <a name="exercise-5-working-with-azure-storage-tables"></a>演習 5: Azure ストレージ テーブルの操作
 
-多くの場合、ビルドするサービスは、これまでビルドしたものよりはるかに複雑で、実行にはかなりの時間またはインフラストラクチャが必要になることがあります。 その場合、リソースが利用可能になったときに処理のためキューに入れられた要求を受け入れることが効果的な場合があります。これは Azure Functions でサポートされています。 それ以外の場合は、一元的にデータを格納します。 Azure Storage のテーブルで、この操作をすばやく行うことができます。 
+多くの場合、ビルドするサービスは、これまでビルドしたものよりはるかに複雑で、実行にはかなりの時間またはインフラストラクチャが必要になることがあります。 その場合、リソースが利用可能になったときに処理のためキューに入れられた要求を受け入れることが効果的な場合があります。これは Azure Functions でサポートされています。 それ以外の場合は、一元的にデータを格納します。 Azure Storage のテーブルで、この操作をすばやく行うことができます。
 
 1. 以下のクラスを **Add.cs** に追加します。 これは名前空間の中に記述すべきですが、ここでは既存のクラスの外に記述します。
 
@@ -332,7 +330,7 @@ ms.locfileid: "49919742"
         TraceWriter log)
     {
         log.Info($"Processing {x} + {y}");
-    
+
         return new TableRow()
         {
             PartitionKey = "sums",
@@ -353,7 +351,7 @@ ms.locfileid: "49919742"
 
 1. ブラウザーに戻り、同じ URL への要求を更新します。 この時点で、**Process** メソッドの後にエラーが表示されます。 これは、コードが、既に存在するパーティションと行キーの組み合わせを使用して、Azure Table Storage テーブルに行を追加しようとしているためです。
 
-    ``` 
+    ```
     System.Private.CoreLib: Exception while executing function: Process. Microsoft.Azure.WebJobs.Host: Error while handling parameter $return after function returned:. Microsoft.Azure.WebJobs.Host: The specified entity already exists.
     ```
 
@@ -387,7 +385,7 @@ ms.locfileid: "49919742"
 1. **Visual Studio for Mac** に戻り、デバッグ セッションを終了します。
 
 <!--
-1. Finally, let's take a look at what it's like to work with multiple input records. Rather than specify a specific **TableRow**, you can request an **IQueryable<TableRow>** using the same attributes, and the runtime will fill it with the appropriate resource you need. Add the code below to create a **List** function that lists all items that currently exist in the Azure table we've been working with. Also note that we're specifying that the MIME type of the response is **application/json**, so the runtime will automatically render as JSON. 
+1. Finally, let's take a look at what it's like to work with multiple input records. Rather than specify a specific **TableRow**, you can request an **IQueryable<TableRow>** using the same attributes, and the runtime will fill it with the appropriate resource you need. Add the code below to create a **List** function that lists all items that currently exist in the Azure table we've been working with. Also note that we're specifying that the MIME type of the response is **application/json**, so the runtime will automatically render as JSON.
 
     ```csharp
     [FunctionName("List")]

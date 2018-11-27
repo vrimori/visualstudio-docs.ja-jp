@@ -17,12 +17,12 @@ ms.assetid: 3cfed312-f532-4bce-84a5-1677c14567d7
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d78a77d45183272994d05c85fe79ad84759ecb23
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 1cc7c944fc65adcade14c43a7d158431e9d5578b
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49187461"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51736152"
 ---
 # <a name="idebugreference2"></a>IDebugReference2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -72,7 +72,7 @@ IDebugReference2 : IUnknown
   
  `IDebugProperty2`インターフェイスは、名前、種類、およびアドレスの値として考えることができます。 `IDebugReference2`、もう一方の一方、型と、アドレスとして考えることができます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

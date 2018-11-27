@@ -3,16 +3,16 @@ title: プレビュー リリースをインストールする
 description: Visual Studio for Mac の更新およびプレビュー リリースへのアクセスについて説明します。
 author: conceptdev
 ms.author: crdun
-ms.date: 05/06/2018
+ms.date: 11/06/2018
 ms.topic: article
 ms.technology: vs-ide-install
 ms.assetid: 0E1EF257-9DE4-4653-9DF4-805CE007A1A1
-ms.openlocfilehash: db90e2d4a1c6d80e579c125668b48c057595cc18
-ms.sourcegitcommit: 97204b85caadbcf14baeb6738710e287a196673e
+ms.openlocfilehash: 3496d9254436b1d89622dccc44df3c721093c585
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991537"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948765"
 ---
 # <a name="install-a-preview-release"></a>プレビュー リリースをインストールする
 

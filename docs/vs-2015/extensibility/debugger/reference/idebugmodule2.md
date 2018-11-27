@@ -17,12 +17,12 @@ ms.assetid: 24c2a126-f4ab-4891-8509-8ef99b994c08
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 941dee1c8cf9bdf3aaa4fe2f69ff7da95eac0f87
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 92e11532019caf5aa7af3c84f7222fdfabcfa45d
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49237212"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51768537"
 ---
 # <a name="idebugmodule2"></a>IDebugModule2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -56,7 +56,7 @@ IDebugModule2 : IUnknown
 ## <a name="remarks"></a>Remarks  
  モジュールの情報を表示できる、**モジュール**IDE のウィンドウ。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

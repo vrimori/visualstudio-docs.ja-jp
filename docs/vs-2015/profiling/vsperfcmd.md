@@ -17,15 +17,15 @@ helpviewer_keywords:
 - VSPerfCmd tool
 ms.assetid: 778bc105-7643-46c4-a338-f3620e31125a
 caps.latest.revision: 54
-author: mikejo5000
+author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1ddd7e2045086cce5fc58e2cd240a4d304d94e6b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: e8cd602a005026c8dec4bf5a309d6f04044b960d
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49214787"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51766666"
 ---
 # <a name="vsperfcmd"></a>VSPerfCmd
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -80,7 +80,7 @@ VSPerfCmd [/U] [/options]
 |------------|-----------------|  
 |[PF](../profiling/pf.md)[**:**_n_]|n 回目のページ フォールトごとにサンプリングします (既定=10)。|  
 |[Sys](../profiling/sys-vsperfcmd.md)[**:**_n_]|n 回目のシステム呼び出しごとにサンプリングします (既定=10)。|  
-|[タイマー](../profiling/timer.md)[**:**_n_]|n 回目のプロセッサ サイクルごとにサンプリングします (既定=10000000)。|  
+|[Timer](../profiling/timer.md)[**:**_n_]|n 回目のプロセッサ サイクルごとにサンプリングします (既定=10000000)。|  
   
 ## <a name="service-component-and-kernel-mode-device-options"></a>サービス コンポーネントとカーネル モード デバイスのオプション  
  次の管理オプションは、プロファイリング サービス コンポーネントまたはカーネル モード デバイス ドライバーに対応しています。 管理オプションはプロファイリング アクセス許可を設定し、プロファイリングされるサービスまたはデバイス ドライバーを制御します。  

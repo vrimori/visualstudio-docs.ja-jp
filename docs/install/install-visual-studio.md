@@ -19,16 +19,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6eba5c5dc2ec357d9aaf6a5e8f9cdef18102b8da
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 7c3ba26f014b09624b1a8fec88bed8a5aefa632b
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49856172"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349691"
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 のインストール
 
 ここでは、Visual Studio の新しいインストール方法について説明します。 最新バージョンでは、必要な機能だけを簡単に選んでインストールできるようになりました。 また、Visual Studio の最小フットプリントも減らしているため、以前よりもシステムへの影響が少なくなり、より迅速にインストールできます。
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、[Visual Studio for Mac のインストール](/visualstudio/mac/installation)に関するページを参照してください。
 
 このバージョンの他の新機能については、 [リリース ノート](/visualstudio/releasenotes/vs2017-relnotes)を参照してください。
 
@@ -149,4 +152,4 @@ Visual Studio のインストールをカスタマイズする際にワークロ
 * [Visual Studio 2017 のアンインストール](uninstall-visual-studio.md)
 * [Visual Studio 2017 のオフライン インストールを作成する](create-an-offline-installation-of-visual-studio.md)
 * [コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする](use-command-line-parameters-to-install-visual-studio.md)
-* [Visual Studio for Mac のセットアップとインストール](/visualstudio/mac/installation)
+* [Visual Studio for Mac をインストールする](/visualstudio/mac/installation)

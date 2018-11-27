@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で C# Equals および GetHashCode メソッドのオーバーライドを生成する
+title: C# の Equals および GetHashCode メソッドのオーバーライドを生成する
 ms.date: 01/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9af687eb4b39afdbe9fd34df1aa03f18ce243ef8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 5ec552e320b0c19c5c05e145fd9c5a4588f31b4c
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49903115"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295710"
 ---
 # <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>Visual Studio で Equals および GetHashCode メソッドのオーバーライドを生成する
 
@@ -36,17 +36,20 @@ ms.locfileid: "49903115"
 
 ## <a name="how-to"></a>方法
 
-1. 型宣言にカーソルを置きます。
+1. 型宣言の行のどこかにカーソルを置きます。
 
    ![強調表示されたコード](media/overrides-highlight-cs.png)
 
+   > [!TIP]
+   > 型名をダブルクリックして選択しないでください。ダブルクリックすると、メニュー オプションが利用できなくなります。 行のどこかにカーソルを置くだけです。
+
 1. 次に、以下のいずれかを実行します。
 
-   - **キーボード**
-      - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
-   - **マウス**
-      - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
-      - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
+   - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
+
+   - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
+
+   - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![ねじ回し](../media/screwdriver-icon.png) アイコンをクリックします。
 
    ![オーバーライド生成のプレビュー](media/overrides-preview-cs.png)
 
@@ -57,9 +60,9 @@ ms.locfileid: "49903115"
     ![[オーバーライドを生成する] ダイアログ](media/overrides-dialog-cs.png)
 
     > [!TIP]
-    > メンバーの一覧の下にあるチェックボックスを使って、このダイアログから演算子を生成することもできます。
+    > ダイアログの下部の近くにあるチェックボックスを使って、このダイアログから演算子を生成することもできます。
 
-   Equals と GetHashCode のオーバーライドが、既定の実装で生成されます。
+   `Equals` メソッドと `GetHashCode` メソッドは、既定の実装で生成されます。
 
    ![メソッド生成の結果](media/overrides-result-cs.png)
 
