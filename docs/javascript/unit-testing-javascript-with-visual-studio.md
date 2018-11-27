@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 678a37eec7643976e689cc027922ff481a0e005f
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 071f64c4239441d3c3fd2c111d1b912175e23316
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50219381"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51766535"
 ---
 # <a name="unit-testing-in-nodejs"></a>Node.js での単体テスト
 
@@ -33,7 +33,7 @@ Node.js Tools For Visual Studio を使用すると、いくつかの一般的な
 > [!WARNING]
 > Tape の内部的な問題のため、現在、Tape でテストを実行することはできません。 [PR #361](https://github.com/substack/tape/pull/361) がマージされている場合、問題は解決されているはずです。
 
-好みのフレームワークがサポートされていない場合、サポートの追加については「[単体テスト フレームワークのサポートを追加する](#addingFramework)」をご覧ください。 
+好みのフレームワークがサポートされていない場合、サポートの追加については「[単体テスト フレームワークのサポートを追加する](#addingFramework)」をご覧ください。
 
 ## <a name="write-unit-tests"></a>単体テストを作成する
 
@@ -129,7 +129,7 @@ Test execution time: 1.5731 Seconds
 ```
 
 > [!NOTE]
-> *vstest.console.exe* が見つからないことを示すエラーが発生する場合は、通常のコマンド プロンプトではなく開発者コマンド プロンプトを開いていることを確認してください。 
+> *vstest.console.exe* が見つからないことを示すエラーが発生する場合は、通常のコマンド プロンプトではなく開発者コマンド プロンプトを開いていることを確認してください。
 
 ## <a name="addingFramework"></a>単体テスト フレームワークのサポートを追加する
 
@@ -149,7 +149,7 @@ JavaScript を使って検出と実行のロジックを実装することで、
 使用可能なテスト フレームワークの検出は、Visual Studio の開始時に行われます。 Visual Studio の実行中にフレームワークを追加する場合は、Visual Studio を再起動してフレームワークが検出されるようにします。 ただし、実装を変更するときは再起動する必要はありません。
 
 ## <a name="unit-tests-in-other-project-types"></a>他のプロジェクト タイプでの単体テスト
-単体テストは、Node.js プロジェクトで記述することだけに限定されません。 TestFramework プロパティと TestRoot プロパティを任意の C# プロジェクトまたは VB プロジェクトに追加すると、これらのテストが列挙され、[テスト エクスプローラー] ウィンドウを使用してこれらを実行することができます。
+単体テストは、Node.js プロジェクトで記述することだけに限定されません。 TestFramework プロパティと TestRoot プロパティを任意の C# プロジェクトまたは Visual Basic プロジェクトに追加すると、これらのテストが列挙され、[テスト エクスプローラー] ウィンドウを使用してこれらを実行することができます。
 
 これを有効にするには、ソリューション エクスプローラーでプロジェクト ノードを右クリックし、**[プロジェクトのアンロード]**、**[プロジェクトの編集]** の順に選択します。 次に、プロジェクト ファイルで、次の 2 つの要素をプロパティ グループに追加します。
 

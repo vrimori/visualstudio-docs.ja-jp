@@ -1,4 +1,4 @@
----
+﻿---
 title: T4 パラメーター ディレクティブ
 ms.date: 11/04/2016
 ms.topic: reference

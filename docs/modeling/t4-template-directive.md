@@ -1,4 +1,4 @@
----
+﻿---
 title: T4 テンプレート ディレクティブ
 ms.date: 11/04/2016
 ms.topic: reference

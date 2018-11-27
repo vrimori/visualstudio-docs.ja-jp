@@ -5,16 +5,16 @@ ms.author: jaunger
 manager: evelynp
 ms.date: 01/04/2018
 ms.topic: Get-Started-Article
-description: Visual Studio サブスクリプションに含まれる Pluralsight トレーニング サブスクリプションについて説明します。
+description: 一部の Visual Studio サブスクリプションに含まれる Pluralsight トレーニング サブスクリプションについて説明します。
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 06acd50823b05e6b39cdf9cb41d2f4ec2d456c0d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a384769b5d2f643a215a1a0c136fc44fd7d45e42
+ms.sourcegitcommit: 331dbb12e11fcd7f5d15fab05f3c861e48126e43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49912007"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51826742"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Pluralsight トレーニング特典
 
@@ -79,13 +79,13 @@ ms.locfileid: "49912007"
 |         Visual Studio Professional (標準、年間クラウド)          | VL、Azure、リテール |   3 か月    | ×<sup>2</sup> |
 |              Visual Studio Test Professional (標準)              |    VL、リテール     |   3 か月    | ×<sup>2</sup> |
 |                      MSDN Platforms (標準)                       |    VL、リテール     |   3 か月    | ×<sup>2</sup> |
-|                     Visual Studio Dev Essentials                     |        N/A         |   3 か月    |       ×       |
+|                     Visual Studio Dev Essentials                     |        N/A         |   1 か月    |       ×       |
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) |       Azure       | 使用できません |       N/A       |
 |             Visual Studio Enterprise (NFR<sup>1</sup>)              |      プログラム      | 使用できません |       N/A       |
 
 <sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、BizSpark、MCT Software & Services Developer、MCT Software & Service、Microsoft Valued Professional (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、FTE、Imagine が含まれます。*
 
-<sup>2</sup>  *Pluralsight 特典は、個人に関連付けられた単一ユーザーのみが使用できます。一度サブスクライバーが特典を使用すると、特典はリセットされません。詳細については、以下のよく寄せられる質問を参照してください。Pluralsight サブスクリプションの有効期限が切れた後、3 つの学習分野のいずれかで 50 個の選ばれた Pluralsight コースに 12 か月間アクセスできます。*
+<sup>2</sup> *Pluralsight 特典は、個人に関連付けられた単一ユーザーのみが使用できます。  一度サブスクライバーが特典を使用すると、特典はリセットされません。 
 
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 
@@ -105,9 +105,7 @@ A: はい。Visual Studio サブスクライバーは、Pluralsight トレーニ
 
 
 ### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>Q: Pluralsight サブスクリプションがなくなるとどうなりますか。
-A: 無料の Pluralsight サブスクリプションの終了時には、2 つのオプションがあります。
-- クラウドでのアプリ開発、AI、機械学習およびデータ、クラウドでの DevOps の 3 つの主要領域のいずれかにある、50 の制限付きのコース セットに、12 か月間無料でアクセスできます (お持ちのサブスクリプションが対象かどうかを確認するには、[特典を受ける条件についての表](#eligibility)をご確認ください)。 有効期限後に無料アクセスしたい場合については、Pluralsight からの電子メールを確認してください。 それぞれの部分的なライブラリの下で[コース一覧](https://help.pluralsight.com/help/which-courses-are-included-with-the-visual-studio-benefit)をご確認いただけます。
-- Pluralsight から直接 10% 割引でサブスクリプションを購入した場合、全カタログを使用することが可能です。  詳細については、[Pluralsight](http://www.pluralsight.com) にお問い合わせください。
+A: Pluralsight 無料サブスクリプションの終了時、Pluralsight から直接、サブスクリプションを購入できます。  詳細については、[Pluralsight](http://www.pluralsight.com) にお問い合わせください。
 
 ### <a name="q-my-company-renews-their-visual-studio-subscription-through-an-enterprise-agreement-does-the-pluralsight-benefit-reset"></a>Q: 会社が Enterprise Agreement を使用して Visual Studio サブスクリプションを更新します。 Pluralsight 特典はリセットされますか?
 A: いいえ。  Pluralsight 特典は、個人に関連付けられた単一ユーザーのみが使用できます。  一度サブスクライバーが特典を使用すると、特典はリセットされません。  これは、小売店、クラウド、ボリューム ライセンス (VL) の購入など、すべての購入チャネルに当てはまります。
@@ -116,3 +114,6 @@ A: いいえ。  Pluralsight 特典は、個人に関連付けられた単一ユ
 -  [Pluralsight ヘルプ センター](https://help.pluralsight.com/help)は、Pluralsight コースの取得や Pluralsight Web サイトの使用をサポートします。
 -  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://visualstudio.microsoft.com/subscriptions/support/)にお問い合わせください。
 -  Visual Studio IDE、Azure DevOps Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。
+
+## <a name="next-steps"></a>次の手順
+アカウントを作成したら、トレーニングを開始できます。  [https://www.pluralsight.com](http://www.pluralsight.com) にアクセスし、ページの右上隅にある **[ログイン]** をタップして新しいコースを開始するか、既に進行中のコースに戻ります。 

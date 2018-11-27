@@ -2,48 +2,70 @@
 title: Visual Studio for Mac で問題を報告する
 description: Visual Studio for Mac を使用している間に経験した問題を指摘または報告する方法を説明します。
 ms.topic: troubleshooting
-author: conceptdev
-ms.author: crdun
-ms.date: 10/11/2018
+author: jmatthiesen
+ms.author: jomatthi
+ms.date: 11/16/2018
 ms.assetid: 1C7AC52E-754E-473F-A5B5-00C3A40DAACD
-ms.openlocfilehash: f02bd648f7e52a7ff82a2ab546f19e979eccf9e6
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 510bdac23b29289687441b8a82620a1cede7542b
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293615"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948830"
 ---
 # <a name="how-to-report-a-problem-in-visual-studio-for-mac"></a>Visual Studio for Mac に関する問題を報告する方法
 
-Visual Studio for Mac に問題が発生した場合は、Microsoft にお知らせください。 診断および修正を行うには、問題を以下のようにして [Developer Community](https://developercommunity.visualstudio.com/) に報告してください。
+Visual Studio for Mac に問題が発生した場合は、Microsoft にお知らせください。 診断および修正を行うには、問題を以下のようにして [Developer Community](https://developercommunity.visualstudio.com/spaces/41/index.html) に報告してください。
 
 ## <a name="how-to-report-a-problem"></a>問題を報告する方法
+
+Visual Studio for Mac に関する問題を報告する最良の方法は、Visual Studio for Mac からレポートを開始することです。 Visual Studio for Mac を使用して報告する場合、レポートに自動的に診断情報を含めることができます。 (クラッシュなどの理由により) Visual Studio for Mac を使用できない場合、[開発者コミュニティ](https://developercommunity.visualstudio.com/content/problem/post.html?space=41) サイトで直接、問題を報告できます。
 
 Visual Studio for Mac での問題を報告するには、メニュー バーから **[ヘルプ] > [問題を報告する]** を選択します。
 
 ![[問題の報告] リンク](media/report-problem-image1.png)
 
-ウェルカム ページにある **[問題を報告する]** リンクを使用することもできます。
+1. サインインしていない場合は、次のスクリーンショットに示されているように、ツールの右側にある **[サインイン]** を選びます。 画面に表示される手順に従ってサインインします。
 
-これで、**[問題の報告]** Web ページが表示されます。 このページを使用して、既存のすべての問題を表示し、同様の問題に投票し、他のユーザーが報告した問題の解決策を送信することができます。
+    ![[サインイン] ボタンのあるダイアログ](media/report-problem-image2.png)
 
-![[問題の報告] Web ページ](media/report-problem-image2.png)
+    サインイン時に、発生している問題を報告することができます。 投稿されたその他の問題に投票したり、コメントしたりすることもできます。
 
-Web ページの **[問題の報告]** ボタンを選択します。
+1. サインイン後に表示される **[Followed problems and solutions]\(問題と解決策\)** 画面で、報告された問題と解決策を確認できます。
 
-開発者コミュニティ アプリケーションにまだログインしていない場合は、次のページでログインするよう求められます。 **[同意する]** ボタンを選択すると、Microsoft アカウントの開発者コミュニティ アプリケーションが承認されます。
+    ![報告された問題の一覧](media/report-problem-image3.png)
 
-![[問題の報告] Web ページ](media/report-problem-image3.png)
+1. Visual Studio for Mac では、問題を検索したり、その問題が他のユーザーによって報告済みかどうかを確認したりするためのインターフェイスが提供されます。 誰かがそれを報告している場合、タイトルをクリックして "賛成票を投じ"、Microsoft に知らせることができます。
+   > [!NOTE]
+   > 検索するには、検索ボックスに検索語句を入力し、Enter キーをクリックするか、[検索] アイコンを押します。
 
-問題にわかりやすいタイトルを付け、役立つと思われる、その問題に関する追加情報を加えます。 問題を可能な限り速やかに理解して修正できるように、可能であれば、問題の再現手順をお知らせください。
+   ![類似問題を検索して投票する](media/report-problem-image4.png)
 
-![[問題の報告] Web ページ](media/report-problem-image4.png)
+1. 発生した問題が見つからない場合は、画面横にある **[新しい問題を報告する]** を選択します。
 
-## <a name="provide-a-suggestion"></a>提案を送信する
+   > [!NOTE]
+   > **[新しい問題を報告する]** ボタンは、開発者コミュニティの Visual Studio for Mac インターフェイスにのみ表示されます。 [Developer Community](https://developercommunity.visualstudio.com/) Web サイトで直接問題を報告することはできません。
 
-ウェルカム ページの **[提案を送信する]** リンクを使用して、[Visual Studio for Mac の [機能を提案] ページ](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)に移動します。 ここから新しい要求を追加したり、既存の要求に投票したりすることができます。
+1. 適切な Visual Studio for Mac チームに問題を転送できるように、報告には説明的なタイトルを付けてください。
+
+1. 可能であれば、問題を再現する手順など、さらに詳しい情報を記載します。
+
+   ![新しい問題を報告する](media/report-problem-image5.png)
+
+1. **[次へ]** を選択し、**[添付ファイルを含める]** タブに移動します。ここで、Microsoft に送信する現在の画面を取り込むことができます。 ログ ファイルを添付するには、![[ログの添付]](media/report-problem-attach-logs.png) アイコンをクリックします。あるいは、追加のスクリーンショットやその他のファイルを添付するには、![[ファイルの添付]](media/report-problem-attach-file.png) アイコンをクリックします。
+
+   ![Visual Studio for Mac の問題レポートにスクリーンショットを添付する](media/report-problem-image6.png)
+
+1. **[送信]** を選択し、イメージ ファイルやトレース ファイルと共にレポートを送信します。
+
+   収集されるデータについては、「[Data we collect](/visualstudio/ide/developer-community-privacy.md#data-we-collect)」(収集するデータ) を参照してください。
+
+## <a name="search-for-solutions-or-provide-feedback"></a>解決策を検索するかフィードバックを提供する
+
+Visual Studio for Mac を使って問題を報告することが望ましくない場合、またはできない場合は、[Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/) ページで既に問題が報告され、解決策が投稿されている可能性があります。
+
+レポートする問題はないが、機能を提案したい場合は、そのための場所も用意されています。 詳細については、「[Suggest a feature](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)」(機能を提案する) ページをご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
 - [Visual Studio で問題を報告する (Windows)](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)
-- [Visual Studio の機能を提案する](/visualstudio/ide/suggest-a-feature)

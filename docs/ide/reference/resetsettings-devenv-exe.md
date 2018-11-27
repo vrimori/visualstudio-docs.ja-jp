@@ -1,6 +1,6 @@
 ---
 title: -ResetSettings (devenv.exe)
-ms.date: 11/04/2016
+ms.date: 11/16/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,18 +14,21 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c3d3a6ef558b510cfde716716daf97a549fbba4
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 568a829ff10cbee535729361b7c95dd7db6814f5
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33703988"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948070"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 
 Visual Studio の既定の設定を復元し、Visual Studio IDE を自動的に起動します。 指定の *vssettings* ファイルに準じた設定にリセットすることもできます。
 
 既定の設定は、Visual Studio の初回起動時に選択したプロファイルによって決定されます。
+
+> [!TIP]
+> 統合開発環境 (IDE) を使用して設定をリセットする方法については、「[リセット設定](../synchronized-settings-in-visual-studio.md#reset-settings)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -53,7 +56,8 @@ Visual Studio に適用する *vssettings* ファイルの完全パスとファ�
 Devenv.exe /ResetSettings "C:\My Files\MySettings.vssettings"
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
+- [設定のリセット](../synchronized-settings-in-visual-studio.md#reset-settings)
 - [Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)
-- [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
+- [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)

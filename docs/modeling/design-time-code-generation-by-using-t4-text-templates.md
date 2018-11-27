@@ -1,4 +1,4 @@
----
+﻿---
 title: T4 テキスト テンプレートを使用したデザイン時コード生成
 ms.date: 11/04/2016
 ms.topic: conceptual

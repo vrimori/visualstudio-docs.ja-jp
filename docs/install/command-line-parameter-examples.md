@@ -1,7 +1,7 @@
 ---
 title: Visual Studio のインストールに使用するコマンド ライン パラメーターの例
 description: これらの例をカスタマイズして、Visual Studio の独自のコマンド ライン インストールを作成します。
-ms.date: 05/07/2018
+ms.date: 11/14/2018
 ms.technology: vs-acquisition
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7cd3c7a5b191ee74005eb79da0767223ca43de08
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: b40b228ce04a83622f739d22b15c9ab126aade3f
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49895486"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51803813"
 ---
 # <a name="command-line-parameter-examples-for-visual-studio-2017-installation"></a>Visual Studio 2017 のインストールに使用するコマンド ライン パラメーターの例
 
@@ -128,6 +128,39 @@ ms.locfileid: "49895486"
 * install パスのみを使用:
 
   `vs_enterprise.exe --add Microsoft.VisualStudio.Workload.CoreEditor --path install="C:\VS"`
+
+## <a name="using-export"></a>export の使用
+
+このコマンド ライン コマンドは、**15.9 の新機能**です。 詳細については、[コマンド ライン パラメーターを使用した Visual Studio のインストール](use-command-line-parameters-to-install-visual-studio.md)に関するページを参照してください。
+
+* export を使用して、インストールの選択内容を保存します。
+
+```cmd
+vs_enterprise.exe export --installPath "C:\VS" --config "C:\.vsconfig"
+```
+
+* export を使用して、ゼロからカスタムの選択内容を保存します。
+
+```cmd
+vs_enterprise.exe export --add Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended --config "C:\.vsconfig"
+```
+
+## <a name="using---config"></a>--config の使用
+
+このコマンド ライン パラメーターは、**15.9 の新機能**です。 詳細については、[コマンド ライン パラメーターを使用した Visual Studio のインストール](use-command-line-parameters-to-install-visual-studio.md)に関するページを参照してください。
+
+* --config を使用して、以前に保存したインストール構成ファイルからワークロードとコンポーネントをインストールします。
+
+```cmd
+vs_enterprise.exe --config "C:\.vsconfig" --installPath "C:\VS"
+```
+
+* --config を使用して、既存のインストールにワークロードとコンポーネントを追加します。
+
+```cmd
+vs_enterprise.exe modify --installPath "C:\VS" --config "C:\.vsconfig"
+```
+
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

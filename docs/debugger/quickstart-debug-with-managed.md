@@ -13,14 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ba06156a8fa44a61b489deba6104673e8fb08ce
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: e35d102a30ffc7b80d39f359542bbdc4c00feff6
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637524"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257187"
 ---
-# <a name="quickstart-debug-with-managed-code-using-the-visual-studio-debugger"></a>クイック スタート: Visual Studio デバッガーを使用してマネージド コードでデバッグする
+# <a name="quickstart-debug-with-c-or-visual-basic-using-the-visual-studio-debugger"></a>クイック スタート: Visual Studio デバッガーを使用して C# または Visual Basic でデバッグする
 
 Visual Studio デバッガーでは、アプリのデバッグに役立つ多くの強力な機能が提供されます。 このトピックでは、基本的な機能のいくつかを簡単に紹介します。
 
@@ -54,7 +54,7 @@ Visual Studio デバッガーでは、アプリのデバッグに役立つ多く
     End Module
     ```
 
-    を以下のコードで置き換えます。
+    を、次のコードで置換します。
 
     ```csharp
     class Program
