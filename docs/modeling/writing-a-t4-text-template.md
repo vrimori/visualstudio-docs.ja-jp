@@ -21,9 +21,9 @@ ms.lasthandoff: 11/02/2018
 ms.locfileid: "50967299"
 ---
 # <a name="writing-a-t4-text-template"></a>T4 テキスト テンプレートの作成
-テキスト テンプレートには、そのテンプレートから生成されるテキストが含まれます。 たとえば、web ページを作成するテンプレートが含まれて"\<html >..."と HTML ページの他のすべての標準的な部分です。 テンプレートに挿入が*コントロール ブロック*、プログラム コードのフラグメントであります。 コントロール ブロックはさまざまな値を提供すると共に、テキストの一部を条件付きにしたり、繰り返したりできるようにします。
+テキスト テンプレートには、そのテンプレートから生成されるテキストが含まれます。 たとえば、web ページを作成するテンプレートには、"\<html >..."と HTML ページの他のすべての標準的な部分が含まれています。 テンプレートに挿入されるプログラム コードのフラグメントが*コントロール ブロック* です。 コントロール ブロックはさまざまな値を提供すると共に、テキストの一部を条件付きにしたり、繰り返したりできるようにします。
 
- この構造によって、テンプレートの作成が簡単になります。生成されるファイルのプロトタイプを最初に作成しておき、結果を変化させるコントロール ブロックは徐々に挿入するという手法を利用できるためです。
+ この構造によって、テンプレートの作成が簡単になります。生成されるファイルのプロトタイプを最初に作成しておき、結果を変化させるコントロール ブロックを徐々に挿入するという手法を利用できるためです。
 
  テキスト テンプレートは次の要素から構成されます。
 
@@ -33,7 +33,7 @@ ms.locfileid: "50967299"
 
 -   **コントロール ブロック**-プログラム コードをテキストに変数の値を挿入し、テキストの条件付きまたは繰り返し部分を制御します。
 
-このトピックの例には、コピーしてテンプレート ファイル」の説明に従って[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)します。 テンプレート ファイルを編集した後、保存し、出力を調べます **.txt**ファイル。
+このトピックにおける例を試すには、[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)に記述されているそれらをテンプレート ファイルにコピーします。 テンプレート ファイルを編集した後、保存し、**.txt**ファイルの出力を調べます。
 
 ## <a name="directives"></a>ディレクティブ
  テキスト テンプレート ディレクティブは、変換コードと出力ファイルの生成方法に関する一般的な指示をテキスト テンプレート エンジンに与えます。
@@ -44,7 +44,7 @@ ms.locfileid: "50967299"
 <#@ output extension=".txt" #>
 ```
 
- ディレクティブの詳細については、次を参照してください。 [T4 テキスト テンプレート ディレクティブ](../modeling/t4-text-template-directives.md)します。
+ ディレクティブの詳細については、次を参照してください。 [T4 テキスト テンプレート ディレクティブ](../modeling/t4-text-template-directives.md)
 
 ## <a name="text-blocks"></a>テキスト ブロック
  テキスト ブロックのテキストは、出力ファイルに直接挿入されます。 テキスト ブロックに特別な書式指定はありません。 たとえば、次のテキスト テンプレートからは、"Hello" という単語を含むテキスト ファイルが生成されます。
@@ -126,7 +126,7 @@ This is hello number <#= i+1 #>: Hello!
 ```
 
 ### <a name="class-feature-control-blocks"></a>クラス機能コントロール ブロック
- クラス機能コントロール ブロックでは、メインの変換の対象から除外する、プロパティやメソッドなどのコードを定義します。 クラス機能ブロックは、ヘルパー関数でよく使用されます。  クラス機能ブロックは個別のファイルに配置できるように一般に、[に含まれる](#Include)1 つ以上のテキスト テンプレートでします。
+ クラス機能コントロール ブロックでは、メインの変換の対象から除外する、プロパティやメソッドなどのコードを定義します。 クラス機能ブロックは、ヘルパー関数でよく使用されます。  クラス機能ブロックは個別のファイルに配置できるように一般に、1 つ以上のテキスト テンプレート[が含まれ](#Include)ます。
 
  クラス機能コントロール ブロックは `<#+ ... #>` という記号で区切られます。
 
@@ -154,7 +154,7 @@ private int Square(int i)
 
  クラス機能は、それを記述するファイルの末尾に配置する必要があります。 ただし、`<#@include#>` を使用すると、`include` ディレクティブの後ろに標準ブロックとテキストが続く場合でも、クラス機能を含むファイルをインクルードすることができます。
 
- コントロール ブロックの詳細については、次を参照してください。[テキスト テンプレートのコントロール ブロック](../modeling/text-template-control-blocks.md)します。
+ コントロール ブロックの詳細については、次を参照してください。[テキスト テンプレートのコントロール ブロック](../modeling/text-template-control-blocks.md)
 
 ### <a name="class-feature-blocks-can-contain-text-blocks"></a>クラス機能ブロックにはテキスト ブロックを含めることができる
  テキストを生成するメソッドを記述できます。 次に例を示します。
@@ -176,12 +176,12 @@ private void WriteSquareLine(int i)
 #>
 ```
 
- テキストを生成するメソッドは、複数のテンプレートでインクルードできる独立したファイルに配置すると特に便利です。
+ テキストを生成するメソッドは、複数のテンプレートでインクルードできるように独立したファイルに配置すると特に便利です。
 
 ## <a name="using-external-definitions"></a>外部定義の使用
 
 ### <a name="assemblies"></a>アセンブリ
- テンプレートのコード ブロックでは、最もよく使用される .NET アセンブリ (System.dll など) で定義されている型を使用できます。 さらに、他の .NET アセンブリや独自のアセンブリを参照することもできます。 パス名、つまりアセンブリの厳密な名前を指定できます。
+ テンプレートのコード ブロックでは、最もよく使用される .NET アセンブリ (System.dll など) で定義されている型を使用できます。 さらに、他の .NET アセンブリや独自のアセンブリを参照することもできます。 パス名、つまりアセンブリの厳密な名前を指定します。
 
 ```
 <#@ assembly name="System.Xml" #>
@@ -193,9 +193,9 @@ private void WriteSquareLine(int i)
 <#@ assembly name="$(SolutionDir)library\MyAssembly.dll" #>
 ```
 
- Assembly ディレクティブ効果はありません、[前処理されたテキスト テンプレート](../modeling/run-time-text-generation-with-t4-text-templates.md)します。
+ assembly ディレクティブは、[前処理されたテキスト テンプレート](../modeling/run-time-text-generation-with-t4-text-templates.md)には効果はありません。
 
- 詳細については、次を参照してください。 [T4 アセンブリ ディレクティブ](../modeling/t4-assembly-directive.md)します。
+ 詳細については、次を参照してください。 [T4 アセンブリ ディレクティブ](../modeling/t4-assembly-directive.md)
 
 ### <a name="namespaces"></a>名前空間
  import ディレクティブは、C# での `using` 句または Visual Basic での `imports` 句と同じ働きをします。 これを使用すると、完全修飾名を使用せずにコードで型を参照できます。
@@ -206,9 +206,9 @@ private void WriteSquareLine(int i)
 
  `assembly` ディレクティブと `import` ディレクティブは、必要に応じていくつでも使用できます。 これらのディレクティブは、テキスト ブロックとコントロール ブロックの前に配置する必要があります。
 
- 詳細については、次を参照してください。 [T4 インポート ディレクティブ](../modeling/t4-import-directive.md)します。
+ 詳細については、次を参照してください。 [T4 インポート ディレクティブ](../modeling/t4-import-directive.md)
 
-### <a name="Include"></a> コードとテキストを含む
+### <a name="Include"></a>コードとテキストをインクルードする
  `include` ディレクティブを使用すると、別のテンプレート ファイルのテキストを挿入できます。 たとえば、次のディレクティブでは、`test.txt` のコンテンツが挿入されます。
 
 ```
@@ -217,33 +217,33 @@ private void WriteSquareLine(int i)
 
  インクルードされたコンテンツは、インクルード先のテキスト テンプレートに元から含まれていた場合とほとんど同じように処理されます。 ただし、include ディレクティブの後に通常のテキスト ブロックと標準コントロール ブロックが続く場合でも、クラス機能ブロック (`<#+...#>`) を含むファイルをインクルードすることができます。
 
- 詳細については、次を参照してください。 [T4 Include ディレクティブ](../modeling/t4-include-directive.md)します。
+ 詳細については、次を参照してください。 [T4 Include ディレクティブ](../modeling/t4-include-directive.md)
 
 ### <a name="utility-methods"></a>ユーティリティ メソッド
  `Write()` をはじめ、コントロール ブロックでいつでも使用できるメソッドがいくつかあります。 これには、出力のインデントに役立つメソッドや、エラーの報告に役立つメソッドが含まれます。
 
  独自のユーティリティ メソッドのセットを記述することもできます。
 
- 詳細については、次を参照してください。[テキスト テンプレートのユーティリティ メソッド](../modeling/text-template-utility-methods.md)します。
+ 詳細については、次を参照してください。[テキスト テンプレートのユーティリティ メソッド](../modeling/text-template-utility-methods.md)
 
 ## <a name="transforming-data-and-models"></a>データとモデルの変換
  テキスト テンプレートが最も役に立つのは、モデル、データベース、データ ファイルなどのソースのコンテンツに基づいてマテリアルを生成する場合です。 テンプレートによってデータが抽出され、その書式が再設定されます。 テンプレートのコレクションでは、このようなソースを複数のファイルに変換できます。
 
  ソース ファイルを読み取る方法はいくつかあります。
 
- **テキスト テンプレートでファイルを読み取る**します。 これは、テンプレートにデータを取り込む方法としては最も簡単です。
+ **テキスト テンプレートでファイルを読み取る。** これは、テンプレートにデータを取り込む方法としては最も簡単です。
 
 ```
 <#@ import namespace="System.IO" #>
 <# string fileContent = File.ReadAllText(@"C:\myData.txt"); ...
 ```
 
- **ナビゲート可能なモデルとしてファイルを読み込む**します。 より効果的な方法は、テキスト テンプレート コードでナビゲートできるモデルとしてデータを読み取ることです。 たとえば、XML ファイルを読み込み、XPath 式でそのファイル内をナビゲートできます。 使用することも[xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765) XML データを読み取ることが可能クラスのセットを作成します。
+ **ナビゲート可能なモデルとしてファイルを読み込む。** より効果的な方法は、テキスト テンプレート コードでナビゲートできるモデルとしてデータを読み取ることです。 たとえば、XML ファイルを読み込み、XPath 式でそのファイル内をナビゲートできます。 XML データを読み取ることが可能なクラスのセットを作成するために [xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765) を使用することもできます。
 
- **図またはフォームでモデル ファイルを編集します。** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 図または Windows フォームとして、モデルを編集するためのツールを提供します。 このため、生成されたアプリケーションのユーザーと、モデルについて効率的に話し合うことができます。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]では、モデルの構造を反映した、厳密に型指定されたクラスのセットも作成できます。 詳細については、次を参照してください。[ドメイン固有言語からコードを生成する](../modeling/generating-code-from-a-domain-specific-language.md)します。
+ **図またはフォームでモデル ファイルを編集する。** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] は、図または Windows フォームとして、モデルを編集するためのツールを提供します。 このため、生成されたアプリケーションのユーザーと、モデルについて効率的に話し合うことができます。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]では、モデルの構造を反映した、厳密に型指定されたクラスのセットも作成できます。 詳細については、次を参照してください。[ドメイン固有言語からコードを生成する](../modeling/generating-code-from-a-domain-specific-language.md)
 
 ### <a name="relative-file-paths-in-design-time-templates"></a>デザイン時テンプレートの相対ファイル パス
- [デザイン時テキスト テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)を使用して、テキスト テンプレートを基準とする場所でファイルを参照する場合は、`this.Host.ResolvePath()`します。 また、`hostspecific="true"` ディレクティブで `template` を設定する必要もあります。
+ [デザイン時テキスト テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)を使用して、テキスト テンプレートを基準とする場所でファイルを参照する場合は、`this.Host.ResolvePath()`を使います。 また、`hostspecific="true"` ディレクティブで `template` を設定する必要もあります。
 
 ```
 <#@ template hostspecific="true" language="C#" #>
@@ -257,16 +257,16 @@ Content of MyFile.txt is:
 <#= myFile #>
 ```
 
-ホストから提供される他のサービスを取得することもできます。 詳細については、次を参照してください。[にアクセスする Visual Studio またはテンプレートからのその他のホスト](/previous-versions/visualstudio/visual-studio-2010/gg604090\(v\=vs.100\))します。
+ホストから提供される他のサービスを取得することもできます。 詳細については、次を参照してください。[Visual Studio またはテンプレートからのその他のホストにアクセスする](/previous-versions/visualstudio/visual-studio-2010/gg604090\(v\=vs.100\))
 
 ### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>別の AppDomain で実行されるデザイン時テキスト テンプレート
 
- 認識しておく必要がある、[デザイン時テキスト テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)はメインのアプリケーションから分離した AppDomain で実行されます。 ほとんどの場合、これは重要ではありませんが、一部の複雑な状況で制限が生じることがあります。 たとえば、別のサービスからテンプレート内またはテンプレート外のデータを渡す場合、そのサービスでシリアル化可能な API を提供する必要があります。
+[デザイン時テキスト テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)はメインのアプリケーションから分離した AppDomain で実行されることを認識しておく必要があります。 ほとんどの場合、これは重要ではありませんが、一部の複雑な状況で制限が生じることがあります。 たとえば、別のサービスからテンプレート内またはテンプレート外のデータを渡す場合、そのサービスでシリアル化可能な API を提供する必要があります。
 
- (のそうでない、[実行時テキスト テンプレート](../modeling/run-time-text-generation-with-t4-text-templates.md)コードの残りの部分と共にコンパイルされるコードを提供します)。
+ (これは、[実行時テキスト テンプレート](../modeling/run-time-text-generation-with-t4-text-templates.md)にはあてはまりません。コードの残りの部分と一緒にコンパイルされるコードが提供されます。)
 
 ## <a name="editing-templates"></a>テンプレートの編集
- 拡張機能マネージャーのオンライン ギャラリーからは、専用のテキスト テンプレート エディターをダウンロードできます。 **ツール** メニューのをクリックして**拡張機能マネージャー**します。 クリックして**オンライン ギャラリー**、検索ツールを使用しているとします。
+ 拡張機能マネージャーのオンライン ギャラリーからは、専用のテキスト テンプレート エディターをダウンロードできます。 **ツール** メニューをクリックして **拡張機能マネージャー** をクリックします。 **オンライン ギャラリー** をクリックしたのち、検索ツールを使用します。
 
 ## <a name="related-topics"></a>関連トピック
 
@@ -274,7 +274,7 @@ Content of MyFile.txt is:
 |-|-|
 |テンプレートを作成する。|[T4 テキスト テンプレートの記述に関するガイドライン](../modeling/guidelines-for-writing-t4-text-templates.md)|
 |プログラム コードを使用してテキストを生成する。|[テキスト テンプレートの構造](../modeling/writing-a-t4-text-template.md)|
-|Visual Studio ソリューションでは、ファイルを生成します。|[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
-|Visual Studio の外部テキスト生成を実行します。|[TextTransform ユーティリティを使用したファイルの生成](../modeling/generating-files-with-the-texttransform-utility.md)|
+|Visual Studio ソリューションでは、ファイルを生成する。|[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
+|Visual Studio の外部テキスト生成を実行する。|[TextTransform ユーティリティを使用したファイルの生成](../modeling/generating-files-with-the-texttransform-utility.md)|
 |ドメイン固有言語の形式でデータを変換する。|[ドメイン固有言語からのコード生成](../modeling/generating-code-from-a-domain-specific-language.md)|
 |独自のデータ ソースを変換するためのディレクティブ プロセッサを作成する。|[T4 テキスト変換のカスタマイズ](../modeling/customizing-t4-text-transformation.md)|
