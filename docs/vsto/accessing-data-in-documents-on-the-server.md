@@ -11,17 +11,17 @@ dev_langs:
 helpviewer_keywords:
 - data [Office development in Visual Studio], accessing on server
 - data access [Office development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 3d894c033d466d84409c46a2d2849650bf32a119
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 70c00a9c0de4afd9f54062e1c2ffabcc2911a538
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49870303"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52305573"
 ---
 # <a name="access-data-in-documents-on-the-server"></a>サーバー上のドキュメントのデータにアクセス
   Microsoft Office Word または Microsoft Office Excel のオブジェクト モデルを使用することがなく、ドキュメント レベル カスタマイズ内のデータに対してプログラミングできます。 つまり、Excel がインストールされてまたは Word がないサーバー上のドキュメントに含まれているデータにアクセスすることができます。 サーバーのコード例については、(たとえば、[!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)]ページ)、ドキュメント内のデータをカスタマイズおよびカスタマイズされたドキュメントをエンドユーザーに送信できます。 エンド ユーザーでは、文書が開いたら、ソリューション アセンブリにデータ バインド コードは、ドキュメントにカスタマイズされたデータをバインドします。 ユーザー インターフェイスから、ドキュメント内のデータが区切られたため、可能です。 詳細については、次を参照してください。[ドキュメント レベルのカスタマイズでキャッシュされたデータ](../vsto/cached-data-in-document-level-customizations.md)します。  
