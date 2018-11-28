@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 59ece2ea879b8c79ebe002265d5d1eb6fd8ec82e
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: ff0446e81257cfc782fd1c7d34cde2b274ddde5e
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945989"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388937"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>"混合最小規則" 規則セット
 Microsoft 混合最小規則は、潜在的なセキュリティ ホールやアプリケーションのクラッシュなど、共通言語ランタイムをサポートする C++ プロジェクトの最も重大な問題に集中します。 共通言語ランタイムをサポートする C++ プロジェクトにカスタムの規則セットを作成する場合は、必ずこの規則セットを含める必要があります。
@@ -37,7 +37,7 @@ Microsoft 混合最小規則は、潜在的なセキュリティ ホールやア
 |[C6270](../code-quality/c6270.md)|Format 関数への Float 引数がない|
 |[C6271](../code-quality/c6271.md)|Format 関数への余分な引数|
 |[C6272](../code-quality/c6272.md)|Format 関数への Float でない引数|
-|[C6273](../code-quality/c6273.md)|Format 関数への整数でない引数|
+|[C6273](../code-quality/c6273.md)|Format 関数への整数以外の引数|
 |[C6274](../code-quality/c6274.md)|Format 関数への文字でない引数|
 |[C6276](../code-quality/c6276.md)|無効な文字列のキャスト|
 |[C6277](../code-quality/c6277.md)|無効な CreateProcess 呼び出し|
@@ -96,7 +96,7 @@ Microsoft 混合最小規則は、潜在的なセキュリティ ホールやア
 |[C28215](../code-quality/c28215.md)|typefix は、既に typefix のあるパラメーターには適用できません|
 |[C28216](../code-quality/c28216.md)|checkReturn 注釈は、特定の関数パラメーターの事後条件にのみ適用されます。|
 |[C28217](../code-quality/c28217.md)|関数について、注釈へのパラメーター数がファイルで検出されたものと一致しません|
-|[C28218](../code-quality/c28218.md)|関数パラメーターについて、注釈のパラメーターがファイルで検出されたものと一致しません|
+|[C28218](../code-quality/c28218.md)|関数のパラメーターの注釈のパラメーターと一致しませんファイルで検出されました。|
 |[C28219](../code-quality/c28219.md)|注釈 (注釈のパラメーター) には列挙型のメンバーが必要です|
 |[C28220](../code-quality/c28220.md)|注釈 (注釈のパラメーター) には整数式が必要です|
 |[C28221](../code-quality/c28221.md)|注釈のパラメーターには文字列式が必要です|

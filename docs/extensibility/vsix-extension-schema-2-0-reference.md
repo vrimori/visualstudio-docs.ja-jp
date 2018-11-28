@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3227b2f17932936e54c244f385a648c583677923
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e295bc8c09f41c4c1c77b216a9d91d0644d2d24e
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49831927"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388544"
 ---
 # <a name="vsix-extension-schema-20-reference"></a>VSIX 拡張機能スキーマ 2.0 リファレンス
 VSIX の配置マニフェスト ファイルでは、VSIX パッケージの内容について説明します。 ファイル形式は、スキーマによって管理されます。 このスキーマのバージョン 2.0 では、カスタムの型と属性の追加をサポートします。  マニフェストのスキーマは拡張可能です。 マニフェストのローダーでは、XML 要素とそれを認識しない属性は無視されます。  
@@ -130,7 +130,11 @@ VSIX の配置マニフェスト ファイルでは、VSIX パッケージの内
         -   1 つのバージョンと、指定されたバージョンのみ。  
   
         > [!IMPORTANT]
-        >  VSIX スキーマのバージョン 2.0 は、Visual Studio 2012 で導入されました。 このスキーマを使用するには、Visual Studio 2012 が必要か、後でコンピューターにインストールされたを使用する VSIXInstaller.exe その製品の一部であります。 Visual Studio 2012 またはそれ以降の VSIXInstaller がインストーラーの以降のバージョンを使用してのみ、Visual Studio の以前のバージョンを対象にすることができます。  
+        >  VSIX スキーマのバージョン 2.0 は、Visual Studio 2012 で導入されました。 このスキーマを使用するには、Visual Studio 2012 が必要か、後でコンピューターにインストールされたを使用する VSIXInstaller.exe その製品の一部であります。 Visual Studio 2012 またはそれ以降の VSIXInstaller がインストーラーの以降のバージョンを使用してのみ、Visual Studio の以前のバージョンを対象にすることができます。 
+        
+        Visual Studio 2017 バージョン番号をご覧[Visual Studio のビルド番号とリリース日](../install/visual-studio-build-numbers-and-release-dates.md)します。
+        
+        Visual Studio 2017 のリリースのバージョンを表現する場合、マイナー バージョンは必ず**0**します。 たとえば、Visual Studio 2017 バージョン 15.3.26730.0 は、[15.0.26730.0,16.0) として表現されなければなりません。 これは必要な Visual Studio 2017 バージョン番号。
   
     -   `AnyAttribute*` -`<InstallationTarget>`要素は、名前と値のペアのディクショナリとしての実行時に公開されている制約のない一連の属性を使用します。  
   
