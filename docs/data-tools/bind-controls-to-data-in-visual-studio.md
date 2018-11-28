@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのデータ コントロールをバインドします。
+title: データ コントロールをバインドします。
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,51 +15,54 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: ca43b4daea5c5bb95a0752eeae93814d234e9a62
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: c4e27f5ce9536e7128330ebe932709a9be408b7e
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49923018"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52305264"
 ---
-# <a name="bind-controls-to-data-in-visual-studio"></a>Visual Studio でのデータ コントロールをバインドします。
+# <a name="bind-controls-to-data-in-visual-studio"></a>Visual Studio でのデータへのコントロールのバインド
+
 データをコントロールにバインドすることで、アプリケーションのユーザーに対してデータを表示できます。 項目をドラッグして、これらのデータ バインド コントロールを作成することができます、**データソース**をデザイン画面または Visual Studio での画面のコントロールにウィンドウ。
 
- ここでは、データ バインディング コントロールを作成するために使用できるデータ ソースについて説明します。 また、データ バインディングに関連する一般的なタスクについても説明します。 データ バインド コントロールを作成する方法の詳細については、次を参照してください。 [Visual Studio でのデータにコントロールを Windows フォームのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)と[Visual Studio でのデータにコントロールをバインドする WPF](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)します。
+ここでは、データ バインディング コントロールを作成するために使用できるデータ ソースについて説明します。 また、データ バインディングに関連する一般的なタスクについても説明します。 データ バインド コントロールを作成する方法の詳細については、次を参照してください。 [Visual Studio でのデータにコントロールを Windows フォームのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)と[Visual Studio でのデータにコントロールをバインドする WPF](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)します。
 
 ## <a name="data-sources"></a>データ ソース
- データ バインディングのコンテキストでは、データ ソースは、ユーザー インターフェイスにバインドできるメモリ内のデータを表します。 実際には、データ ソースは、Entity Framework のクラス、データセット、.NET プロキシ オブジェクト、LINQ to SQL クラス、または任意の .NET オブジェクトまたはコレクションでカプセル化されたサービス エンドポイントをすることができます。 一部のデータ ソースから項目をドラッグしてデータ バインド コントロールを作成することを有効にする、**データソース**ウィンドウで、他のデータ ソースがないです。 サポートされるデータ ソースを次の表に示します。
 
+データ バインディングのコンテキストでは、データ ソースは、ユーザー インターフェイスにバインドできるメモリ内のデータを表します。 実際には、データ ソースは、Entity Framework のクラス、データセット、.NET プロキシ オブジェクト、LINQ to SQL クラス、または任意の .NET オブジェクトまたはコレクションでカプセル化されたサービス エンドポイントをすることができます。 一部のデータ ソースでは、[データ ソース]** ウィンドウから項目をドラッグすることによりデータ バインディング コントロールを作成できますが、その他のデータ ソースではできません。 サポートされるデータ ソースを次の表に示します。
 
-| データ ソース | ドラッグ アンド ドロップのサポート**Windows フォーム デザイナー** | ドラッグ アンド ドロップのサポート**WPF デザイナー** | ドラッグ アンド ドロップのサポート**Silverlight デザイナー** |
+| データ ソース | Windows フォーム デザイナー**でのドラッグ アンド ドロップのサポート | WPF デザイナー**でのドラッグ アンド ドロップのサポート | Silverlight デザイナー**でのドラッグ アンド ドロップのサポート |
 | - | - | - | - |
-| データセット | はい | [はい] | いいえ |
-| エンティティ データ モデル | [はい]<sup>1</sup> | はい | はい |
+| データセット | [はい] | [はい] | × |
+| エンティティ データ モデル | ○<sup>1</sup> | [はい] | [はい] |
 | LINQ to SQL クラス | ×<sup>2</sup> | ×<sup>2</sup> | ×<sup>2</sup> |
-| サービス (を含む[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、WCF サービス、および web サービス) | はい | [はい] | はい |
-| Object | はい | [はい] | はい |
-| SharePoint | はい | [はい] | はい |
+| サービス ([!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、WCF サービス、および Web サービスを含む) | [はい] | [はい] | [はい] |
+| Object | [はい] | [はい] | [はい] |
+| SharePoint | [はい] | [はい] | [はい] |
 
- 1. 使用して、モデルの生成、 **Entity Data Model**ウィザード、デザイナーにそれらのオブジェクトをドラッグします。
+1. 使用して、モデルの生成、 **Entity Data Model**ウィザード、デザイナーにそれらのオブジェクトをドラッグします。
 
- 2. LINQ to SQL クラスに表示されない、**データソース**ウィンドウ。 ただし、LINQ to SQL クラスに基づく新しいオブジェクト データ ソースを追加し、それらのオブジェクトをデザイナーにドラッグして、データ バインディング コントロールを作成できます。 詳細については、次を参照してください。[チュートリアル: LINQ to SQL クラス (O/r デザイナー) を作成する](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)します。
+2. LINQ to SQL クラスは、[データ ソース]** ウィンドウに表示されません。 ただし、LINQ to SQL クラスに基づく新しいオブジェクト データ ソースを追加し、それらのオブジェクトをデザイナーにドラッグして、データ バインディング コントロールを作成できます。 詳細については、次を参照してください。[チュートリアル: LINQ to SQL クラス (O/r デザイナー) を作成する](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)します。
 
 ## <a name="data-sources-window"></a>[データ ソース] ウィンドウ
- 内の項目としてデータ ソースがプロジェクトで使用できる、**データソース**ウィンドウ。 このウィンドウが表示される、またはからにアクセスできる、**ビュー**メニューで、フォームのデザイン サーフェイスは、プロジェクト内のアクティブなウィンドウ。 基になるデータにバインドされているコントロールを作成するには、このウィンドウから項目をドラッグすることができを右クリックし、データ ソースを構成することもできます。
 
- ![[データ ソース] ウィンドウ](../data-tools/media/raddata-data-sources-window.png)
+データ ソースは、[データ ソース]** ウィンドウ内の項目としてプロジェクトで利用できます。 フォームのデザイン サーフェイスは、プロジェクトのアクティブ ウィンドウまたは選択して開く (ときに、プロジェクトを開く) ことができる場合、このウィンドウが表示される**ビュー** > **その他の Windows**  >  **データ ソース**します。 基になるデータにバインドされているコントロールを作成するには、このウィンドウから項目をドラッグすることができを右クリックし、データ ソースを構成することもできます。
 
- 表示されるデータ型ごとに、**データソース**ウィンドウで、デザイナーに項目をドラッグするときに既定のコントロールが作成されました。 項目をドラッグする前に、**データソース**ウィンドウで、作成されるコントロールを変更することができます。 詳細については、次を参照してください。[設定、データ ソース ウィンドウからドラッグするときに作成されるコントロール](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)します。
+![[データ ソース] ウィンドウ](../data-tools/media/raddata-data-sources-window.png)
 
-## <a name="tasks-involved-in-binding-controls-to-data"></a>データをコントロールのバインドに関連するタスク
- 次の表に、いくつかの一覧にコントロールをデータにバインドする最も一般的なタスクを実行します。
+[データ ソース]** ウィンドウに表示されるデータ型ごとに、項目をデザイナーにドラッグしたときに既定のコントロールが作成されます。 項目をドラッグする前に、**データソース**ウィンドウで、作成されるコントロールを変更することができます。 詳細については、次を参照してください。[設定、データ ソース ウィンドウからドラッグするときに作成されるコントロール](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)します。
+
+## <a name="tasks-involved-in-binding-controls-to-data"></a>データへのコントロールのバインドに関連するタスク
+
+次の表に、いくつかの一覧にコントロールをデータにバインドする最も一般的なタスクを実行します。
 
 |タスク|詳細情報|
 |----------| - |
-|開く、**データソース**ウィンドウ。|デザイン画面を開き、エディター内**ビュー** > **データソース**します。|
-|データ ソースをプロジェクトに追加します。|[新しいデータ ソースの追加](../data-tools/add-new-data-sources.md)|
-|項目をドラッグしたときに作成されるコントロールの設定、**データソース**をデザイナーにウィンドウ。|[[データ ソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)|
-|内の項目に関連付けられているコントロールのリストを変更して、**データソース**ウィンドウ。|[[データ ソース] ウィンドウにカスタム コントロールを追加する](../data-tools/add-custom-controls-to-the-data-sources-window.md)|
+|[データ ソース]** ウィンドウを開く。|デザイン画面を開き、エディター内**ビュー** > **データソース**します。|
+|プロジェクトにデータ ソースを追加する。|[新しいデータ ソースの追加](../data-tools/add-new-data-sources.md)|
+|[データ ソース]** ウィンドウからデザイナーに項目をドラッグしたときに作成されるコントロールを設定する。|[[データ ソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)|
+|[データ ソース]** ウィンドウの項目に関連付けられるコントロールのリストを変更する。|[[データ ソース] ウィンドウにカスタム コントロールを追加する](../data-tools/add-custom-controls-to-the-data-sources-window.md)|
 |データ バインド コントロールを作成する。|[Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)<br /><br /> [Visual Studio でデータに WPF コントロールをバインドする](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)|
 |オブジェクトまたはコレクションにバインドします。|[Visual Studio でのオブジェクトのバインド](../data-tools/bind-objects-in-visual-studio.md)|
 |UI に表示されるデータをフィルター処理します。|[Windows フォーム アプリケーションのデータのフィルター処理および並べ替えを行う](../data-tools/filter-and-sort-data-in-a-windows-forms-application.md)|
@@ -68,4 +71,4 @@ ms.locfileid: "49923018"
 ## <a name="see-also"></a>関連項目
 
 - [.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)
-- [Windows フォーム データ バインディング](/dotnet/framework/winforms/windows-forms-data-binding)
+- [Windows フォームでのデータ バインディング](/dotnet/framework/winforms/windows-forms-data-binding)

@@ -20,12 +20,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: e23a023b3e37b9c4f3869bfa699ffee1f44caffa
-ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
-ms.translationtype: MT
+ms.openlocfilehash: fef30f836ab27cd7a67d85a04254be0018d5b33e
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750813"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388739"
 ---
 # <a name="handle-a-concurrency-exception"></a>コンカレンシー例外を処理する
 
@@ -45,7 +45,7 @@ ms.locfileid: "50750813"
 
 6. 別の値に同じレコードを変更、データセットを更新および発生している同時実行エラーが発生すると、データベースへの変更の書き込みを試行します。
 
-7. エラーをキャッチし、続行し、データベースを更新するかどうかを確認するように、レコードの異なるバージョンを表示または更新をキャンセルします。
+7. エラーをキャッチし、操作を継続してデータベースを更新するか、または更新をキャンセルするかを判断できるように、レコードの異なるバージョンを表示します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -64,9 +64,6 @@ ms.locfileid: "50750813"
     3. T-SQL スクリプトをクエリ エディターに貼り付けて選択し、 **Execute**ボタンをクリックします。
 
        しばらくすると、クエリの実行が完了し、Northwind データベースを作成します。
-
-> [!NOTE]
-> アクティブな設定または使用しているエディションによって、ヘルプの説明から、ダイアログ ボックスとメニュー コマンドが表示が異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
 
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する
 
@@ -88,7 +85,7 @@ ms.locfileid: "50750813"
 
 1. **データ**] メニューの [選択**新しいデータの追加ソース**します。
 
-   データ ソースの構成ウィザードが開きます。
+   データ ソース構成ウィザードが開きます。
 
 2. **データ ソースの種類を選択**画面で、**データベース**します。
 
@@ -109,7 +106,7 @@ ms.locfileid: "50750813"
 
 このセクションで作成、<xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType>をドラッグして、**顧客**から項目、**データ ソース**ウィンドウから、Windows フォームにします。
 
-1. **データ**] メニューの [選択 **[データ ソースの**を開く、**データ ソース] ウィンドウ**します。
+1. 開くには、**データ ソース**ウィンドウで、**データ** メニューの 選択**データ ソースの**します。
 
 2. **データソース**ウィンドウで、展開、 **NorthwindDataSet**ノード、および選択し、**顧客**テーブル。
 
@@ -121,7 +118,7 @@ ms.locfileid: "50750813"
 
 ## <a name="test-the-form"></a>フォームをテストします。
 
-これまで想定どおりに動作を確認するためのフォームをテストすることができますようになりました。
+フォームをテストして、ここまでの設定が期待どおりに動作することを確認します。
 
 1. 選択**F5**アプリケーションを実行します。
 
@@ -135,13 +132,13 @@ ms.locfileid: "50750813"
 
 アプリケーションでは、レコードの 3 つのバージョンと、ユーザーが表示されます。
 
-- データベースの現在のレコード
+- データベース内の現在のレコード。
 
 - データセットに読み込まれた元のレコード
 
-- データセットの変更の提案
+- データセット内の提案された変更。
 
-ユーザーに提案されたバージョンでは、データベースを上書きするか、または更新をキャンセルし、データベースから新しい値でデータセットを更新できます。
+ユーザーは、提案されたバージョンでデータベースを上書きするか、更新をキャンセルし、データベースから新しい値をデータセットに再読み込みできます。
 
 ### <a name="to-enable-the-handling-of-concurrency-errors"></a>コンカレンシー エラーを処理できるようにするには
 
@@ -170,11 +167,11 @@ ms.locfileid: "50750813"
    [!code-csharp[VbRaddataConcurrency#2](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_2.cs)]
    [!code-vb[VbRaddataConcurrency#2](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_2.vb)]
 
-### <a name="display-choices-to-the-user"></a>ユーザーに対する選択肢を表示します。
+### <a name="display-choices-to-the-user"></a>ユーザーに対する選択肢の表示
 
 上のコードにより `CreateMessage` プロシージャが呼び出され、ユーザーにエラー情報が表示されます。 このチュートリアルでは、ユーザーに異なるバージョンのレコードを表示するのにメッセージ ボックスを使用します。 これにより、ユーザーが変更で、レコードを上書きしたり、編集をキャンセルするかどうかを選択できます。 ユーザーがメッセージ ボックスのオプションを選択する (ボタンをクリックする) と、`ProcessDialogResult` メソッドに応答が渡されます。
 
-次のコードを追加して、メッセージを作成、**コード エディター**します。 次のコードは次の入力、`UpdateDatabase`メソッド。
+コード エディター**に次のコードを追加して、メッセージを作成します。 このコードは、`UpdateDatabase` メソッドの下に入力します。
 
 [!code-csharp[VbRaddataConcurrency#4](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_3.cs)]
 [!code-vb[VbRaddataConcurrency#4](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_3.vb)]
@@ -198,7 +195,7 @@ ms.locfileid: "50750813"
 
 3. **ビュー** ] メニューの [選択**サーバー エクスプ ローラー**します。
 
-4. **サーバー エクスプ ローラー**、接続、アプリケーションを使用して、順に展開を展開、**テーブル**ノード。
+4. サーバー エクスプローラー**で、アプリケーションで使用する接続を展開し、[テーブル]** ノードを展開します。
 
 5. 右クリックし、**顧客**テーブルし、**テーブル データの表示**します。
 

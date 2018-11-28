@@ -1,5 +1,5 @@
 ---
-title: '方法: ネイティブ フレームが呼び出し履歴 ウィンドウから不足とマネージ コードからステップ アウト |Microsoft ドキュメント'
+title: '方法: ネイティブ フレームが呼び出し履歴 ウィンドウから不足しているときに、マネージ コードからステップ |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -24,26 +24,28 @@ manager: douge
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e21d45cd65fc6bc6a66f2f7c698952f0cdd788b9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: e5c671f93e20da108a9fd1069a0950f52ef00da9
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31472943"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388570"
 ---
-# <a name="how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window"></a>方法 : ネイティブ フレームが [呼び出し履歴] ウィンドウに見つからないときにマネージ コードからステップ アウトする
-かどうか、コードがネイティブ フレームでは表示されませんが、**呼び出し履歴**ウィンドウで、マネージ コード外のステップは、予期しない結果を生成できます。 この問題を回避するには、代わりにブレークポイントを使用することができます**ステップ アウト**です。  
-  
+# <a name="how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window"></a>方法 : ネイティブ フレームが [呼び出し履歴] ウィンドウに見つからないときにマネージド コードからステップ アウトする
+
+[呼び出し履歴]** ウィンドウで表示されないネイティブ フレームがあるコードでは、マネージド コードからステップ アウトすると、予期しない結果になる場合があります。 代替手段として、ステップ アウト**ではなくブレークポイントを使用できます。
+
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
-  
-### <a name="to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-display"></a>呼び出し履歴にネイティブ フレームが表示されないときにマネージ コードからステップ アウトするには  
-  
-1.  ネイティブ コード内で、マネージ コードの呼び出し後に位置ブレークポイントを設定します。  
-  
-2.  **デバッグ**] メニューの [選択**続行**です。  
-  
-     マネージ呼び出しが完了すると、ネイティブ コードのブレークポイントで実行が停止します。  
-  
-## <a name="see-also"></a>関連項目  
- [方法 : [呼び出し履歴] ウィンドウを使用する](../debugger/how-to-use-the-call-stack-window.md)
+> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、次を参照してください。[設定にリセット](../ide/environment-settings.md#reset-settings)します。
+
+## <a name="step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-display"></a>呼び出し履歴にネイティブ フレームが表示されないときにマネージド コードからステップ アウトするには
+
+1.  ネイティブ コード内で、マネージド コードの呼び出し後に位置ブレークポイントを設定します。
+
+2.  [デバッグ] **メニューの [続行]** をクリックします。
+
+     マネージド呼び出しが完了すると、ネイティブ コードのブレークポイントで実行が停止します。
+
+## <a name="see-also"></a>関連項目
+
+- [方法 : [呼び出し履歴] ウィンドウを使用する](../debugger/how-to-use-the-call-stack-window.md)

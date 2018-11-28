@@ -16,20 +16,20 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: db8059cf34c2de9a52cda18dd09ce6040bf8d841
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 7de5cbfe7de8919143cd30517c18f9e5ad6ba598
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49937903"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52305248"
 ---
-# <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>複合データ バインディングをサポートする Windows フォーム ユーザー コントロールを作成します。
+# <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>複合データ バインディングをサポートする Windows フォーム ユーザー コントロールの作成
 
-Windows アプリケーションでフォームにデータを表示するときにから既存のコントロールを選択することができます、**ツールボックス**、またはアプリケーションが標準のコントロールで使用できない機能に必要な場合は、カスタム コントロールを作成できます。 このチュートリアルでは、<xref:System.ComponentModel.ComplexBindingPropertiesAttribute> を実装するコントロールを作成する方法を示します。 <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> を実装するコントロールには、データにバインドできる `DataSource` プロパティと `DataMember` プロパティが含まれます。 このようなコントロールは、<xref:System.Windows.Forms.DataGridView> や <xref:System.Windows.Forms.ListBox> に似ています。
+Windows アプリケーションのフォームにデータを表示する場合は、[ツールボックス]** から既存のコントロールを選択するか、またはアプリケーションが標準コントロールでは提供できない機能を必要とする場合は、カスタム コントロールを記述できます。 このチュートリアルでは、<xref:System.ComponentModel.ComplexBindingPropertiesAttribute> を実装するコントロールを作成する方法を示します。 <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> を実装するコントロールには、データにバインドできる `DataSource` プロパティと `DataMember` プロパティが含まれます。 このようなコントロールは、<xref:System.Windows.Forms.DataGridView> や <xref:System.Windows.Forms.ListBox> に似ています。
 
 コントロールの作成の詳細については、次を参照してください。 [Windows フォームの開発は、デザイン時にコントロール](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time)します。
 
-データ バインディングのシナリオで使用するためのコントロールを作成するときに、次のデータ バインディング属性のいずれかを実装する必要があります。
+データ バインディングのシナリオで使用するためのコントロールを作成するときは、次のいずれかのデータ バインディング属性を実装する必要があります。
 
 |データ バインディング属性の使用方法|
 | - |
@@ -41,9 +41,9 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 
-- 新規作成**Windows フォーム アプリケーション**します。
+- 新しい Windows フォーム アプリケーションを作成します。
 
-- 新しい追加**ユーザー コントロール**をプロジェクトにします。
+- 新しいユーザー コントロール**をプロジェクトに追加します。
 
 - ユーザー コントロールをビジュアルに設計します。
 
@@ -51,9 +51,9 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 - 使用してデータセットを作成、[データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)します。
 
-- 設定、**顧客**テーブルに、[データ ソース ウィンドウ](add-new-data-sources.md)新しい複雑なコントロールを使用します。
+- 設定、**顧客**テーブルに、[データ ソース ウィンドウ](add-new-data-sources.md#data-sources-window)新しい複雑なコントロールを使用します。
 
-- 新しいコントロールをドラッグしてから、追加、**データ ソース ウィンドウ**に**Form1**します。
+- [データ ソース] ウィンドウ**から Form1** に新しいコントロールをドラッグして追加します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -85,17 +85,17 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 1. プロジェクトに名前を**ComplexControlWalkthrough**を選び、 **OK**。
 
-    **ComplexControlWalkthrough**プロジェクトを作成するとに追加**ソリューション エクスプ ローラー**します。
+    ComplexControlWalkthrough **プロジェクトが作成されてソリューション エクスプローラー**に追加されます。
 
-## <a name="add-a-user-control-to-the-project"></a>ユーザー コントロールをプロジェクトに追加します。
+## <a name="add-a-user-control-to-the-project"></a>プロジェクトにユーザー コントロールを追加します。
 
 このチュートリアルから複雑なデータ バインド コントロールが作成されるため、**ユーザー コントロール**、追加、**ユーザー コントロール**をプロジェクトに項目。
 
-1. **プロジェクト**] メニューの [選択**ユーザー コントロールの追加**します。
+1. [プロジェクト] **メニューの [ユーザー コントロールの追加]** を選択します。
 
-1. 型**ComplexDataGridView**で、**名前**領域、およびクリック**追加**します。
+1. [ファイル名] **領域に「ComplexDataGridView」と入力し、[追加]** をクリックします。
 
-    **ComplexDataGridView**コントロールに追加されます**ソリューション エクスプ ローラー**、され、デザイナーが開きます。
+    ComplexDataGridView **コントロールが ソリューション エクスプローラー**に追加され、デザイナーが開きます。
 
 ## <a name="design-the-complexdatagridview-control"></a>ComplexDataGridView コントロールをデザインします。
 
@@ -103,9 +103,9 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 ## <a name="add-the-required-data-binding-attribute"></a>必要なデータ バインディング属性を追加します。
 
-実装する複雑なデータ バインディングをサポートするをコントロールには、 <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>:
+データ バインディングをサポートする複合コントロールには、<xref:System.ComponentModel.ComplexBindingPropertiesAttribute> を実装できます。
 
-1. スイッチ、 **ComplexDataGridView**コントロールをコード ビューにします。 (上、**ビュー**メニューの **コード**)。
+1. ComplexDataGridView** コントロールをコード ビューに切り替えます。 [表示] **メニューの [コード]** を選択します。
 
 1. `ComplexDataGridView` のコードを次のコードで置き換えます。
 
@@ -118,45 +118,45 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 使用して、**データ ソースの構成**データ ソースを作成するウィザードがに基づいて、 `Customers` Northwind サンプル データベース内のテーブル。
 
-1.  **[データ]** メニューの **[データ ソースの表示]** をクリックします。
+1.  開くには、**データ ソース**ウィンドウで、**データ**] メニューのをクリックして **[データ ソースの**します。
 
-2.  **データソース**ウィンドウで、**新しいデータ ソースの追加**を開始する、**データ ソースの構成**ウィザード。
+2.  [データ ソース] **ウィンドウで、[新しいデータ ソースの追加]** をクリックしてデータ ソース構成ウィザード**を起動します。
 
 3.  **[データソースの種類を選択]** ページで、 **[データベース]** をクリックし、 **[次へ]** をクリックします。
 
-4.  **データ接続の選択**ページは、次のいずれか。
+4.  [データ接続の選択]** ページで、次のいずれかの操作を行います。
 
     - Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。
 
-    - 選択**新しい接続**を起動する、**接続の追加/変更** ダイアログ ボックス。
+    - [新しい接続] **を選択して [接続の追加] または [接続の変更]** ダイアログ ボックスを表示します。
 
-5.  データベースにパスワードが必要な場合をクリックして、機密データを含めるオプションを選択**次**します。
+5.  データベースにパスワードが必要な場合は、該当するオプションを選択して重要情報を含め、[次へ]** をクリックします。
 
-6.  **接続文字列をアプリケーション構成ファイルに保存**] ページで [**次**します。
+6.  [アプリケーション構成ファイルに接続文字列を保存] **ページで、[次へ]** をクリックします。
 
-7.  **データベース オブジェクトの選択** ページで、展開、**テーブル**ノード。
+7.  [データベース オブジェクトの選択] **ページで、[テーブル]** ノードを展開します。
 
-8.  選択、`Customers`テーブル、およびクリックして**完了**。
+8.  `Customers` テーブルを選択し、[完了]** をクリックします。
 
-    **NorthwindDataSet**がプロジェクトに追加し、`Customers`テーブルに表示されます、**データ ソース**ウィンドウ。
+    プロジェクトに NorthwindDataSet **が追加され、[データ ソース]** ウィンドウに `Customers` テーブルが表示されます。
 
 ## <a name="set-the-customers-table-to-use-the-complexdatagridview-control"></a>ComplexDataGridView コントロールを使用して Customers テーブルを設定します。
 
-内で、**データソース**ウィンドウで、フォームに項目をドラッグする前に作成するコントロールを設定することができます。
+[データ ソース]** ウィンドウでは、フォームにコントロールをドラッグする前に作成するコントロールを設定できます。
 
-1. 開いている**Form1**デザイナー。
+1. デザイナーで Form1** を開きます。
 
-1. 展開、**顧客**内のノード、**データソース**ウィンドウ。
+1. [データ ソース] **ウィンドウの [Customers]** ノードを展開します。
 
-1. ドロップダウン矢印をクリックして、**顧客**ノード選択**カスタマイズ**します。
+1. [Customers] **ノードのドロップダウン矢印をクリックし、[カスタマイズ]** をクリックします。
 
-1. 選択、 **ComplexDataGridView**の一覧から**関連付けられたコントロール**で、**データ UI カスタマイズ オプション** ダイアログ ボックス。
+1. [データ UI カスタマイズ オプション] **ダイアログ ボックスの [関連付けられたコントロール]** の一覧の [ComplexDataGridView]** を選択します。
 
-1. ドロップダウン矢印をクリックして、`Customers`テーブル、および選択**ComplexDataGridView**コントロール リストから。
+1. `Customers` テーブルのドロップダウン矢印をクリックし、コントロール リストから ComplexDataGridView** を選択します。
 
 ## <a name="add-controls-to-the-form"></a>コントロールをフォームに追加します。
 
-項目をドラッグして、データ バインド コントロールを作成することができます、**データソース**ウィンドウから、フォームにします。 メインのドラッグ**顧客**ノードから、**データ ソース**ウィンドウから、フォームにします。 いることを確認、 **ComplexDataGridView**テーブルのデータを表示するコントロールを使用します。
+[データ ソース]** ウィンドウからフォームに項目をドラッグして、データ バインド コントロールを作成します。 [データ ソース] **ウィンドウからフォームにメインの [Customers]** ノードをドラッグします。 いることを確認、 **ComplexDataGridView**テーブルのデータを表示するコントロールを使用します。
 
 ## <a name="run-the-application"></a>アプリケーションの実行
 

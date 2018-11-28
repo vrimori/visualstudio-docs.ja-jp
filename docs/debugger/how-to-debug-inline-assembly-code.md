@@ -1,5 +1,5 @@
 ---
-title: '方法: インライン アセンブラー コードをデバッグ |Microsoft ドキュメント'
+title: '方法: インライン アセンブラー コードのデバッグ |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -21,27 +21,27 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d52f0d27c0ef63eff8c4cc2b36a9a35b2cbfcf8a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 88865df3dcf507cc9a6f6be13e7ab1ff55877c25
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31473720"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388313"
 ---
 # <a name="how-to-debug-inline-assembly-code"></a>方法 :インライン アセンブラー コードをデバッグする
+
 > [!NOTE]
->  使用している設定またはエディションによっては、ヘルプの記載と異なるダイアログ ボックスやメニュー コマンドが表示される場合があります。 設定を変更するには、[ツール] メニューの [設定のインポートとエクスポート] をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
-  
- デバッガーが 2 つのウィンドウをインライン アセンブラー コードをデバッグするためには、**逆アセンブル**ウィンドウおよび**登録**ウィンドウです。  
-  
-## <a name="procedure"></a>プロシージャ  
-  
-#### <a name="to-debug-inline-assembly-code"></a>インライン アセンブラー コードをデバッグするには  
-  
-1.  使用して、**逆アセンブル**アセンブリ命令を表示するウィンドウです。  
-  
-2.  使用して、**登録**レジスタの内容を表示するウィンドウです。  
-  
-## <a name="see-also"></a>関連項目  
- [デバッガーのセキュリティ](../debugger/debugger-security.md)   
- [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)
+> 使用している設定またはエディションによっては、ヘルプの記載と異なるダイアログ ボックスやメニュー コマンドが表示される場合があります。 設定を変更するには、[ツール] メニューの [設定のインポートとエクスポート] をクリックします。 詳細については、次を参照してください。[設定にリセット](../ide/environment-settings.md#reset-settings)します。
+
+インライン アセンブラー コードのデバッグ向けに、デバッガーには [逆アセンブリ] **ウィンドウと [レジスタ]** ウィンドウという 2 つのウィンドウが用意されています。
+
+## <a name="debug-inline-assembly-code"></a>インライン アセンブラー コードをデバッグする
+
+1.  アセンブリ命令を参照するには、[逆アセンブリ]** ウィンドウを使用します。
+
+2.  レジスタの内容を参照するには、[レジスタ]** ウィンドウを使用します。
+
+## <a name="see-also"></a>関連項目
+
+- [デバッガーのセキュリティ](../debugger/debugger-security.md)
+- [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)
