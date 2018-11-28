@@ -1,5 +1,5 @@
 ---
-title: 実行時にフォーム領域にアクセスします。
+title: 実行時にフォーム領域へのアクセスします。
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology: office-development
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - Inspectors [Office development in Visual Studio]
 - Explorers [Office development in Visual Studio]
 - form regions [Office development in Visual Studio], accessing at runtime
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c0cdea460b2a50819aff3c300b8510ffd577c8f6
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: f2c1f3e80f5ca4015a19b5eee7f2f4c673dcc615
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34262071"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52304481"
 ---
-# <a name="access-a-form-region-at-runtime"></a>実行時にフォーム領域にアクセスします。
+# <a name="access-a-form-region-at-runtime"></a>実行時にフォーム領域へのアクセスします。
 
 |対象|  
 |----------------|  
-|このトピックの情報は、次の種類のプロジェクトおよび Microsoft Office のバージョンにのみ適用されます。 詳細については、次を参照してください。 [Office アプリケーションおよびプロジェクトの種類で使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)します。<br /><br /> **プロジェクトの種類**<br /><br /> VSTO アドイン プロジェクト<br /><br /> **Microsoft Office のバージョン**<br /><br /> -   [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)]|  
+|このトピックの情報は、次の種類のプロジェクトおよび Microsoft Office のバージョンにのみ適用されます。 詳細については、次を参照してください。 [Office アプリケーションおよびプロジェクトの種類で使用できる機能](../vsto/features-available-by-office-application-and-project-type.md)します。<br /><br /> **プロジェクトの種類**<br /><br /> VSTO アドイン プロジェクト<br /><br /> **Microsoft Office のバージョン**<br /><br /> -   [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)]|  
 
- `Globals` クラスを使用すると、Outlook プロジェクトの任意の場所からフォーム領域にアクセスできます。 詳細については、`Globals`クラスを参照してください[Office プロジェクト内のオブジェクトへのアクセスをグローバル](../vsto/global-access-to-objects-in-office-projects.md)です。  
+ `Globals` クラスを使用すると、Outlook プロジェクトの任意の場所からフォーム領域にアクセスできます。 詳細については、`Globals`クラスを参照してください[Office プロジェクト内のオブジェクトへのアクセスをグローバル](../vsto/global-access-to-objects-in-office-projects.md)します。  
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
 
-## <a name="access-form-regions-that-appear-in-a-specific-outlook-inspector-window"></a>特定の Outlook インスペクター ウィンドウに表示されるフォーム領域のアクセス  
+## <a name="access-form-regions-that-appear-in-a-specific-outlook-inspector-window"></a>特定の Outlook インスペクター ウィンドウに表示されるフォーム領域をアクセス  
  特定の Outlook インスペクターに表示されるすべてのフォーム領域にアクセスするには、 `FormRegions` クラスの `Globals` プロパティを呼び出し、インスペクターを表す <xref:Microsoft.Office.Interop.Outlook.Inspector> オブジェクトを渡します。  
 
  次の例では、現在フォーカスが設定されているインスペクターに表示されるフォーム領域のコレクションを取得します。 この例では、次に、 `formRegion1` というコレクション内のフォーム領域にアクセスし、テキスト ボックス内のテキストを `Hello World`に設定します。  
@@ -61,7 +61,7 @@ ms.locfileid: "34262071"
 ## <a name="access-controls-on-a-form-region"></a>フォーム領域のアクセス制御  
  `Globals` クラスを使用してフォーム領域のコントロールにアクセスするには、それらのコントロールを、フォーム領域コード ファイルの外部にあるコードからアクセスできるようにする必要があります。  
 
-### <a name="form-regions-designed-in-the-form-region-designer"></a>フォーム領域のフォーム領域デザイナーでデザイン  
+### <a name="form-regions-designed-in-the-form-region-designer"></a>フォーム領域をフォーム領域デザイナーでデザイン  
  C# の場合は、アクセス対象にする各コントロールの修飾子を変更します。 この操作を行うには、フォーム領域デザイナーで各コントロールを選択し、 **[プロパティ]** ウィンドウで **Modifiers** プロパティを **Internal** または **public** に変更します。 たとえば、 **の** Modifier `textBox1` プロパティを **Internal**に変更すると、 `textBox1` と入力して `Globals.FormRegions.FormRegion1.textBox1`にアクセスできます。  
 
  Visual Basic の場合は、修飾子を変更する必要はありません。  
@@ -71,17 +71,17 @@ ms.locfileid: "34262071"
 
  フォーム領域コード ファイルの外部からコードにアクセスできるようにするには、フォーム領域コード ファイルに、そのコントロールを返すプロパティを作成します。  
 
- C# でのプロパティを作成する方法の詳細については、次を参照してください。[する方法: 宣言と読み取りを使用してプロパティの書き込み&#40;C&#35;プログラミング ガイド&#41;](/dotnet/csharp/programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties)です。  
+ プロパティを作成する方法の詳細についてのC#を参照してください[方法: 宣言および使用して読み取るプロパティの書き込み&#40;C&#35;プログラミング ガイド&#41;](/dotnet/csharp/programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties)します。  
 
- Visual Basic でのプロパティを作成する方法の詳細については、次を参照してください。[する方法: プロパティ (Visual Basic) を作成する](/dotnet/visual-basic/programming-guide/language-features/procedures/how-to-create-a-property)です。  
+ Visual Basic でプロパティを作成する方法の詳細については、次を参照してください。[方法: プロパティ (Visual Basic) を作成する](/dotnet/visual-basic/programming-guide/language-features/procedures/how-to-create-a-property)します。  
 
 ## <a name="see-also"></a>関連項目  
- [Outlook フォーム領域を作成するのには、ガイドライン](../vsto/guidelines-for-creating-outlook-form-regions.md)   
+ [Outlook フォーム領域を作成するためのガイドライン](../vsto/guidelines-for-creating-outlook-form-regions.md)   
  [チュートリアル: Outlook フォーム領域をデザインします。](../vsto/walkthrough-designing-an-outlook-form-region.md)   
  [方法: フォーム領域を Outlook アドイン プロジェクトに追加します。](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)   
- [Outlook フォーム領域のカスタム動作](../vsto/custom-actions-in-outlook-form-regions.md)   
+ [Outlook フォーム領域のカスタム アクション](../vsto/custom-actions-in-outlook-form-regions.md)   
  [フォーム領域を Outlook メッセージ クラスに関連付ける](../vsto/associating-a-form-region-with-an-outlook-message-class.md)   
  [チュートリアル: Outlook でデザインしたフォーム領域をインポートします。](../vsto/walkthrough-importing-a-form-region-that-is-designed-in-outlook.md)   
  [方法: Outlook フォーム領域が表示されないようにします。](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)   
  [Outlook フォーム領域を作成します。](../vsto/creating-outlook-form-regions.md)   
- [実行時にリボンにアクセスします。](../vsto/accessing-the-ribbon-at-run-time.md)  
+ [実行時にリボンへのアクセスします。](../vsto/accessing-the-ribbon-at-run-time.md)  
