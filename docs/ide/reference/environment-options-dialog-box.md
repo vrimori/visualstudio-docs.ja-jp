@@ -13,19 +13,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 45a7cef09937181fbf6c721b8c8eca73b6351742
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 61b2e6461fb80cfd12f76a6e96ac629ce640fa89
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49930545"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388768"
 ---
 # <a name="environment-options-dialog-box"></a>[環境] ([オプション] ダイアログ ボックス)
+
 **[オプション]** ダイアログ ボックスの **[環境]** フォルダーのページを使用すると、統合開発環境 (IDE) の特定の要素の表示方法と動作方法を設定できます。 メニュー バーで **[ツール]**、**[オプション]** を順にクリックし、次に **[環境]** をクリックすると、[環境] の各ページにアクセスできます。
-
-> [!NOTE]
-> アクティブな設定および使用している Visual Studio のエディションによっては、ヘルプの記載と異なるダイアログ ボックスやメニュー コマンドがコンピューターに表示される場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
-
 
 |使用方法の詳細については、以下の資料を参照してください。|解決方法については、|
 | - |---------|
@@ -45,6 +42,6 @@ ms.locfileid: "49930545"
 |タスクやタスク一覧のためのオプションの設定方法を調べます。|[[タスク一覧] ([オプション] ダイアログ ボックス - [環境])](../../ide/reference/task-list-environment-options-dialog-box.md)|
 |既定の [ホーム] ページや [検索] ページの変更、システム ソース エディターの変更、および Internet Explorer のオプションの設定を行います。|[[Web ブラウザー] ([オプション] ダイアログ ボックス - [環境])](../../ide/reference/web-browser-environment-options-dialog-box.md)|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [[オプション] ダイアログ ボックス](../../ide/reference/options-dialog-box-visual-studio.md)

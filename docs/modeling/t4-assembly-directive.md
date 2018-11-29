@@ -18,12 +18,12 @@ ms.locfileid: "49948643"
 ---
 # <a name="t4-assembly-directive"></a>T4 アセンブリ ディレクティブ
 
-Visual Studio のデザイン時テキスト テンプレートで、`assembly`ディレクティブが、テンプレート コードがその型を使用できるように、アセンブリを読み込みます。 効果は、Visual Studio プロジェクトにアセンブリ参照を追加することに似ています。
+Visual Studio のデザイン時テキスト テンプレートの中で、テンプレート コードがその型を使用できるように、`assembly`ディレクティブで、アセンブリを読み込みます。 その効果は、Visual Studio プロジェクトにアセンブリ参照を追加することに似ています。
 
  テキスト テンプレートの作成方法の一般的な概要については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)です。
 
 > [!NOTE]
->  実行時 (前処理された) テキスト テンプレートでは、`assembly` ディレクティブは不要です。 代わりに必要なアセンブリを追加、**参照**の Visual Studio プロジェクト。
+>  ランタイム (前処理された) テキスト テンプレートでは、`assembly` ディレクティブは不要です。 代わりに必要なアセンブリを Visual Studio プロジェクトの **参照** に追加します。
 
 ## <a name="using-the-assembly-directive"></a>assembly ディレクティブの使用
  ディレクティブの構文は次のとおりです。
@@ -55,7 +55,7 @@ Visual Studio のデザイン時テキスト テンプレートで、`assembly`�
 
 - `WindowsBase.dll`
 
-  カスタム ディレクティブを使用する場合は、ディレクティブ プロセッサによって追加のアセンブリが読み込まれます。 たとえば、ドメイン固有言語 (DSL) のテンプレートを作成した場合、次のアセンブリのアセンブリ ディレクティブを記述する必要はありません。
+  カスタム ディレクティブを使用する場合は、ディレクティブ プロセッサによって追加のアセンブリが読み込まれます。 たとえば、ドメイン固有言語 (DSL) のテンプレートを作成する場合、次のアセンブリのアセンブリ ディレクティブを記述する必要はありません。
 
 - `Microsoft.VisualStudio.Modeling.Sdk.1*.dll`
 
@@ -63,7 +63,7 @@ Visual Studio のデザイン時テキスト テンプレートで、`assembly`�
 
 - `Microsoft.VisualStudio.TextTemplating.Modeling.1*.dll`
 
-- DSL を含むアセンブリ
+- あなたの DSL を含むアセンブリ
 
 ## <a name="msbuild"></a> MSBuild および Visual Studio の両方でプロジェクト プロパティの使用
  $ (Solutiondir) などの visual Studio マクロは、MSBuild で機能しません。 ビルド コンピューターでテンプレートを変換する場合、代わりにプロジェクトのプロパティを使用する必要があります。
@@ -84,7 +84,7 @@ Visual Studio のデザイン時テキスト テンプレートで、`assembly`�
   </ItemGroup>
 ```
 
- これで、Visual Studio および MSBuild の両方で正しく変換できるテキスト テンプレートでプロジェクトのプロパティを使用できます。
+ これで、Visual Studio および MSBuild の両方で正しく変換されるテキスト テンプレートに、プロジェクトプロパティを使用できます。
 
 ```
 <#@ assembly name="$(myLibFolder)\MyLib.dll" #>

@@ -126,7 +126,7 @@ This is hello number <#= i+1 #>: Hello!
 ```
 
 ### <a name="class-feature-control-blocks"></a>クラス機能コントロール ブロック
- クラス機能コントロール ブロックでは、メインの変換の対象から除外する、プロパティやメソッドなどのコードを定義します。 クラス機能ブロックは、ヘルパー関数でよく使用されます。  クラス機能ブロックは個別のファイルに配置できるように一般に、[に含まれる](#Include)1 つ以上のテキスト テンプレートでします。
+ クラス機能コントロール ブロックでは、メインの変換の対象から除外する、プロパティやメソッドなどのコードを定義します。 クラス機能ブロックは、ヘルパー関数でよく使用されます。  クラス機能ブロックは個別のファイルに配置できるように一般に、1 つ以上のテキスト テンプレート[が含まれ](#Include)ます。
 
  クラス機能コントロール ブロックは `<#+ ... #>` という記号で区切られます。
 
@@ -176,12 +176,12 @@ private void WriteSquareLine(int i)
 #>
 ```
 
- テキストを生成するメソッドは、複数のテンプレートでインクルードできる独立したファイルに配置すると特に便利です。
+ テキストを生成するメソッドは、複数のテンプレートでインクルードできるように独立したファイルに配置すると特に便利です。
 
 ## <a name="using-external-definitions"></a>外部定義の使用
 
 ### <a name="assemblies"></a>アセンブリ
- テンプレートのコード ブロックでは、最もよく使用される .NET アセンブリ (System.dll など) で定義されている型を使用できます。 さらに、他の .NET アセンブリや独自のアセンブリを参照することもできます。 パス名、つまりアセンブリの厳密な名前を指定できます。
+ テンプレートのコード ブロックでは、最もよく使用される .NET アセンブリ (System.dll など) で定義されている型を使用できます。 さらに、他の .NET アセンブリや独自のアセンブリを参照することもできます。 パス名、つまりアセンブリの厳密な名前を指定します。
 
 ```
 <#@ assembly name="System.Xml" #>
@@ -193,7 +193,7 @@ private void WriteSquareLine(int i)
 <#@ assembly name="$(SolutionDir)library\MyAssembly.dll" #>
 ```
 
- Assembly ディレクティブ効果はありません、[前処理されたテキスト テンプレート](../modeling/run-time-text-generation-with-t4-text-templates.md)します。
+ assembly ディレクティブは、[前処理されたテキスト テンプレート](../modeling/run-time-text-generation-with-t4-text-templates.md)には効果はありません。
 
  詳細については、次を参照してください。 [T4 アセンブリ ディレクティブ](../modeling/t4-assembly-directive.md)します。
 
@@ -243,7 +243,7 @@ private void WriteSquareLine(int i)
  **図またはフォームでモデル ファイルを編集します。** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 図または Windows フォームとして、モデルを編集するためのツールを提供します。 このため、生成されたアプリケーションのユーザーと、モデルについて効率的に話し合うことができます。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]では、モデルの構造を反映した、厳密に型指定されたクラスのセットも作成できます。 詳細については、次を参照してください。[ドメイン固有言語からコードを生成する](../modeling/generating-code-from-a-domain-specific-language.md)します。
 
 ### <a name="relative-file-paths-in-design-time-templates"></a>デザイン時テンプレートの相対ファイル パス
- [デザイン時テキスト テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)を使用して、テキスト テンプレートを基準とする場所でファイルを参照する場合は、`this.Host.ResolvePath()`します。 また、`hostspecific="true"` ディレクティブで `template` を設定する必要もあります。
+ [デザイン時テキスト テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)を使用して、テキスト テンプレートを基準とする場所でファイルを参照する場合は、`this.Host.ResolvePath()`を使います。 また、`hostspecific="true"` ディレクティブで `template` を設定する必要もあります。
 
 ```
 <#@ template hostspecific="true" language="C#" #>
@@ -261,7 +261,7 @@ Content of MyFile.txt is:
 
 ### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>別の AppDomain で実行されるデザイン時テキスト テンプレート
 
- 認識しておく必要がある、[デザイン時テキスト テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)はメインのアプリケーションから分離した AppDomain で実行されます。 ほとんどの場合、これは重要ではありませんが、一部の複雑な状況で制限が生じることがあります。 たとえば、別のサービスからテンプレート内またはテンプレート外のデータを渡す場合、そのサービスでシリアル化可能な API を提供する必要があります。
+ [デザイン時テキスト テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)はメインのアプリケーションから分離した AppDomain で実行されることを認識しておく必要があります。 ほとんどの場合、これは重要ではありませんが、一部の複雑な状況で制限が生じることがあります。 たとえば、別のサービスからテンプレート内またはテンプレート外のデータを渡す場合、そのサービスでシリアル化可能な API を提供する必要があります。
 
  (のそうでない、[実行時テキスト テンプレート](../modeling/run-time-text-generation-with-t4-text-templates.md)コードの残りの部分と共にコンパイルされるコードを提供します)。
 
@@ -274,7 +274,7 @@ Content of MyFile.txt is:
 |-|-|
 |テンプレートを作成する。|[T4 テキスト テンプレートの記述に関するガイドライン](../modeling/guidelines-for-writing-t4-text-templates.md)|
 |プログラム コードを使用してテキストを生成する。|[テキスト テンプレートの構造](../modeling/writing-a-t4-text-template.md)|
-|Visual Studio ソリューションでは、ファイルを生成します。|[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
-|Visual Studio の外部テキスト生成を実行します。|[TextTransform ユーティリティを使用したファイルの生成](../modeling/generating-files-with-the-texttransform-utility.md)|
+|Visual Studio ソリューションでは、ファイルを生成する。|[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
+|Visual Studio の外部テキスト生成を実行する。|[TextTransform ユーティリティを使用したファイルの生成](../modeling/generating-files-with-the-texttransform-utility.md)|
 |ドメイン固有言語の形式でデータを変換する。|[ドメイン固有言語からのコード生成](../modeling/generating-code-from-a-domain-specific-language.md)|
 |独自のデータ ソースを変換するためのディレクティブ プロセッサを作成する。|[T4 テキスト変換のカスタマイズ](../modeling/customizing-t4-text-transformation.md)|

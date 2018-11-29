@@ -12,17 +12,17 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <addIn> element
 - addin element
 - <addin> element
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1d2ab0264452630892d492946462fbf9ad1639d0
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: bb2161cbc6633163ba8fba3f8eb678cb0ad72333
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34262383"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52304468"
 ---
 # <a name="ltaddingt-element-office-development-in-visual-studio"></a>&lt;addin&gt;要素 (Visual Studio での Office 開発)
   **Addin**の要素、`vstav3`名前空間には、Microsoft Office VSTO アドインおよび Visual Studio で開発したドキュメント レベルのカスタマイズに固有の情報が含まれています。  
@@ -52,28 +52,28 @@ ms.locfileid: "34262383"
 ```  
 
 ## <a name="elements-and-attributes"></a>要素と属性  
- **Addin**の要素、`vstav3`名前空間には、Office ソリューションと Microsoft Office アプリケーションに関する情報が含まれています。 この要素は、名前空間 `vstav3=urn:schemas-microsoft-com:vsta.v3`に存在する必要があります。 子要素もこの名前空間に存在する必要があります。  
+ **Addin**の要素、`vstav3`名前空間には、Office ソリューションと Microsoft Office アプリケーションに関する情報が含まれています。 この要素は、名前空間 `vstav3=urn:schemas-microsoft-com:vsta.v3`に属している必要があります。 子要素もこの名前空間に存在する必要があります。  
 
  `addin` 要素に属性はありません。  
 
  `addin` 要素には、次の子要素があります。  
 
 ### <a name="entrypoints"></a>entryPoints  
- 必須。 **EntryPoints**要素については、「 [ &#60;entryPoints&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md)です。  
+ 必須。 **EntryPoints**要素については、「 [ &#60;entryPoints&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md)します。  
 
-### <a name="update"></a>更新  
- 必須。 **更新**要素については、「 [&#60;更新&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/update-element-office-development-in-visual-studio.md)です。  
+### <a name="update"></a>update  
+ 必須。 **更新**要素については、「 [&#60;更新&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/update-element-office-development-in-visual-studio.md)します。  
 
 ### <a name="postactions"></a>postActions  
- 任意。 **PostActions**要素については、「 [ &#60;postActions&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/postactions-element-office-development-in-visual-studio.md)です。  
+ 任意。 **PostActions**要素については、「 [ &#60;postActions&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/postactions-element-office-development-in-visual-studio.md)します。  
 
 ### <a name="application"></a>アプリケーション  
- 必須。 **アプリケーション**要素については、「 [&#60;アプリケーション&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/application-element-office-development-in-visual-studio.md)です。  
+ 必須。 **アプリケーション**要素については、「 [&#60;アプリケーション&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/application-element-office-development-in-visual-studio.md)します。  
 
-## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズの例  
+## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズ例  
 
 ### <a name="description"></a>説明  
- 次のコード例を示しています、 **addin**ドキュメント レベルの Office ソリューションを使用して配置されている要素[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]です。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
+ 次のコード例を示しています、 **addin**ドキュメント レベルの Office ソリューションを使用して展開されている要素[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]します。 このコード例で示されている例の一部は、 [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)します。  
 
 ### <a name="code"></a>コード  
 
@@ -137,7 +137,7 @@ ms.locfileid: "34262383"
 ## <a name="vsto-add-in-example"></a>VSTO アドインの例  
 
 ### <a name="description"></a>説明  
- 次のコード例を示しています、 **addin**要素を使用して配置されているアプリケーション レベルの Office ソリューションで[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]です。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
+ 次のコード例を示しています、 **addin**要素を使用して展開されているアプリケーション レベルの Office ソリューションで[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]します。 このコード例で示されている例の一部は、 [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)します。  
 
 ### <a name="code"></a>コード  
 

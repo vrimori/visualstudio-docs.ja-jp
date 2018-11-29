@@ -1,5 +1,5 @@
 ---
-title: Visual Studio がデータ バインド コントロールのキャプションを作成する方法をカスタマイズする
+title: データ バインド コントロールのキャプションをカスタマイズします。
 ms.date: 11/03/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,16 +15,16 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 69e97efe6db8b06f476b7dc004e3b52a77701cb0
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
-ms.translationtype: MT
+ms.openlocfilehash: 11f7249f30b1866ca7c4aea4bbefa850a5353c0f
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36758421"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52305586"
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Visual Studio がデータ バインド コントロールのキャプションを作成する方法をカスタマイズする
 
-項目をドラッグすると、[データ ソース ウィンドウ](add-new-data-sources.md)デザイナーに、特別な配慮: キャプション ラベル内の列名は 2 つの読みやすい文字列に再設定、または複数の単語が見つかった連結して 1 つ。 設定によって、これらのラベルを作成、方法をカスタマイズすることができます、 **SmartCaptionExpression**、 **SmartCaptionReplacement**、および**SmartCaptionSuffix**値**HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data デザイナー**レジストリ キー。
+項目をドラッグすると、[データ ソース ウィンドウ](add-new-data-sources.md#data-sources-window)デザイナーに、特別な配慮: キャプション ラベル内の列名は 2 つの読みやすい文字列に再設定、または複数の単語が見つかった連結して 1 つ。 設定によって、これらのラベルを作成、方法をカスタマイズすることができます、 **SmartCaptionExpression**、 **SmartCaptionReplacement**、および**SmartCaptionSuffix**値**HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data デザイナー**レジストリ キー。
 
 > [!NOTE]
 > このレジストリ キーは、作成するまでには存在しません。
@@ -44,7 +44,7 @@ ms.locfileid: "36758421"
 |レジストリ項目|既定値|説明|
 |-------------------|-------------------|-----------------|
 |**SmartCaptionExpression**|**(\\\p{Ll}) (\\\p{Lu})&#124;_ +**|小文字の後に大文字の文字またはアンダー スコア文字と一致します。|
-|**SmartCaptionReplacement**|**$1 円 2**|**$1** 、式の最初のかっこ内の文字列表現を表す、 **$2** 2 つ目のかっこ内の文字列表現を表します。 置換は、最初に一致する、スペース、および 2 番目の一致。|
+|**SmartCaptionReplacement**|"$103"|**$1** 、式の最初のかっこ内の文字列表現を表す、 **$2** 2 つ目のかっこ内の文字列表現を表します。 置換は、最初に一致する、スペース、および 2 番目の一致。|
 |**SmartCaptionSuffix**|**:**|返される文字列に追加する文字を表します。 たとえば、キャプションが`Company Name`サフィックスになります `Company Name:`|
 
 > [!CAUTION]
@@ -60,25 +60,25 @@ ms.locfileid: "36758421"
 
 3.  展開、 **HKEY_CURRENT_USER** > **ソフトウェア** > **Microsoft** > **VisualStudio**ノード。
 
-7.  右クリックし、 **15.0**ノード、され、新しい作成**キー**という`Data Designers`します。
+4.  右クリックし、 **15.0**ノード、され、新しい作成**キー**という`Data Designers`します。
 
-8.  右クリックし、**データ デザイナー**ノード、3 つの新しい文字列値を作成。
+5.  右クリックし、**データ デザイナー**ノード、3 つの新しい文字列値を作成。
 
     - `SmartCaptionExpression`
     - `SmartCaptionReplacement`
     - `SmartCaptionSuffix`
 
-11. 右クリックし、 **SmartCaptionExpression**値、および選択**変更**します。
+6. 右クリックし、 **SmartCaptionExpression**値、および選択**変更**します。
 
-12. 必要な正規表現を入力、**データ ソース**に使用するウィンドウ。
+7. 必要な正規表現を入力、**データ ソース**に使用するウィンドウ。
 
-13. 右クリックし、 **SmartCaptionReplacement**値、および選択**変更**します。
+8. 右クリックし、 **SmartCaptionReplacement**値、および選択**変更**します。
 
-14. 置換を入力します。 正規表現に一致するパターンを表示する方法は、書式設定された文字列。
+9. 置換を入力します。 正規表現に一致するパターンを表示する方法は、書式設定された文字列。
 
-15. 右クリックし、 **SmartCaptionSuffix**値、および選択**変更**します。
+10. 右クリックし、 **SmartCaptionSuffix**値、および選択**変更**します。
 
-16. キャプションの最後に表示する任意の文字を入力します。
+11. キャプションの最後に表示する任意の文字を入力します。
 
     項目をドラッグする、次回、**データソース**ウィンドウ キャプション ラベルは作成に提供される新しいレジストリ値を使用します。
 
@@ -90,21 +90,21 @@ ms.locfileid: "36758421"
 
 3.  展開、 **HKEY_CURRENT_USER** > **ソフトウェア** > **Microsoft** > **VisualStudio**ノード。
 
-7.  右クリックし、 **15.0**ノード、され、新しい作成**キー**という`Data Designers`します。
+4.  右クリックし、 **15.0**ノード、され、新しい作成**キー**という`Data Designers`します。
 
-8.  右クリックし、**データ デザイナー**ノード、3 つの新しい文字列値を作成。
+5.  右クリックし、**データ デザイナー**ノード、3 つの新しい文字列値を作成。
 
     - `SmartCaptionExpression`
     - `SmartCaptionReplacement`
     - `SmartCaptionSuffix`
 
-11. 右クリックし、 **SmartCaptionExpression** 、アイテムを選択します**変更**します。
+6. 右クリックし、 **SmartCaptionExpression** 、アイテムを選択します**変更**します。
 
-12. 入力`(.*)`値。 文字列全体が照合されます。
+7. 入力`(.*)`値。 文字列全体が照合されます。
 
-13. 右クリックし、 **SmartCaptionReplacement** 、アイテムを選択します**変更**します。
+8. 右クリックし、 **SmartCaptionReplacement** 、アイテムを選択します**変更**します。
 
-14. 入力`$1`値。 これにより、文字列が文字列全体をできるように、これは変更されませんが、一致した値に置き換えられます。
+9. 入力`$1`値。 これにより、文字列が文字列全体をできるように、これは変更されませんが、一致した値に置き換えられます。
 
     項目をドラッグする、次回、**データソース**ウィンドウで、変更されずに、図表番号のラベルが作成されます。
 

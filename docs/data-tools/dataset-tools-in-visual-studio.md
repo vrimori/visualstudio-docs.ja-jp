@@ -1,6 +1,8 @@
 ---
-title: Visual Studio でのデータセット ツール
-ms.date: 11/04/2016
+title: データセットのツール
+ms.date: 11/21/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-data-tools
 ms.topic: conceptual
 f1_keywords:
 - vs.data.DataSet
@@ -45,25 +47,23 @@ ms.assetid: ee57f4f6-9fe1-4e0a-be9a-955c486ff427
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3b7dfe75b27108384312bc10d20cbc80084eaaf6
-ms.sourcegitcommit: 3a11feebad45a0dd4ac45efcbfdf172fce46e1de
-ms.translationtype: MT
+ms.openlocfilehash: 3a8a1ac0f2ac4e4b147fbe11dba8d88ccea4c255
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39582461"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52304988"
 ---
-# <a name="dataset-tools-in-visual-studio"></a>Visual Studio でのデータセット ツール
+# <a name="dataset-tools-in-visual-studio"></a>Visual Studio のデータセット ツール
 
 > [!NOTE]
 > データセットと関連するクラスは、アプリケーションがデータベースから切断されていても、メモリ内のデータを使用するアプリケーションを実現する 2000 年の初めから従来の .NET テクノロジが。 データを変更し、変更を元のデータベースに保持するユーザーを有効にするアプリケーションに特に便利です。 データセットの非常に効果的なテクノロジとなることがわかっていますが、新しい .NET アプリケーションが Entity Framework を使用することをお勧めします。 Entity Framework はオブジェクト モデルと表形式のデータを操作する方法がより自然を示しより単純なプログラミング インターフェイスがあります。
 
 A`DataSet`オブジェクトは基本的にミニ データベースであるメモリ内オブジェクトです。 含まれている`DataTable`、 `DataColumn`、および`DataRow`オブジェクトを格納し、開いている接続を管理することがなく 1 つまたは複数のデータベースからデータを変更します。 データセットは、更新プログラムを追跡し、アプリケーションが再接続されたときに、データベースに送信されるように、そのデータへの変更に関する情報を保持します。
 
-データセットと関連するクラスがで定義されている、 *System.Data* .NET Framework クラス ライブラリで名前空間。 作成して ADO.NET を使用してコードで動的にデータセットを変更します。 このセクションのドキュメントでは、Visual Studio のデザイナーを使用してデータセットを操作する方法を示します。 デザイナーを使用して作成されたデータセットで**TableAdapter**データベースと対話するオブジェクト。 プログラムで作成されたデータセットを使用して、 **DataAdapter**オブジェクト。 プログラムでデータセットを作成する方法の詳細については、次を参照してください。 [Dataadapter と Datareader](/dotnet/framework/data/adonet/dataadapters-and-datareaders)します。
+データセットと関連するクラスがで定義されている、 <xref:System.Data?displayProperty=fullName> .NET Framework クラス ライブラリで名前空間。 作成して ADO.NET を使用してコードで動的にデータセットを変更します。 このセクションのドキュメントでは、Visual Studio のデザイナーを使用してデータセットを操作する方法を示します。 デザイナーを使用して作成されたデータセットで**TableAdapter**データベースと対話するオブジェクト。 プログラムで作成されたデータセットを使用して、 **DataAdapter**オブジェクト。 プログラムでデータセットを作成する方法の詳細については、次を参照してください。 [Dataadapter と Datareader](/dotnet/framework/data/adonet/dataadapters-and-datareaders)します。
 
 使用してパフォーマンスを向上させるを通常取得場合は、アプリケーションは、追加すると、または削除するのみ、データベースからデータを読み取るし、しない更新プログラムを実行する必要があります、`DataReader`ジェネリックにデータを取得するオブジェクト`List`オブジェクトまたは別のコレクション オブジェクト。 データを表示する場合はデータにバインドするユーザー インターフェイスをコレクションにします。
 
@@ -71,7 +71,7 @@ A`DataSet`オブジェクトは基本的にミニ データベースであるメ
 
 Visual Studio には、データセットの操作を簡略化するツールが用意されています。 基本的なエンド ツー エンドのワークフローは次のとおりです。
 
-- 使用して、**データ ソース**ウィンドウを 1 つまたは複数のデータ ソースから新しいデータセットを作成します。 使用して、**データセット デザイナー**データセットを構成し、そのプロパティを設定します。 たとえば、含めるには、データ ソースからどのテーブルとそれぞれのテーブルから列を指定する必要があります。 データセットが必要とするメモリの量を節約するには、慎重に選択します。 詳細については、[データセットの作成と構成](../data-tools/create-and-configure-datasets-in-visual-studio.md)に関するページを参照してください。
+- 使用して、[データ ソース ウィンドウ](add-new-data-sources.md#data-sources-window)を 1 つまたは複数のデータ ソースから新しいデータセットを作成します。 使用して、**データセット デザイナー**データセットを構成し、そのプロパティを設定します。 たとえば、含めるには、データ ソースからどのテーブルとそれぞれのテーブルから列を指定する必要があります。 データセットが必要とするメモリの量を節約するには、慎重に選択します。 詳細については、[データセットの作成と構成](../data-tools/create-and-configure-datasets-in-visual-studio.md)に関するページを参照してください。
 
 - 外部キーが正しく処理されるように、テーブル間のリレーションシップを指定します。 詳細については、次を参照してください。 [Tableadapter を使用してデータセットを入力](../data-tools/fill-datasets-by-using-tableadapters.md)します。
 
