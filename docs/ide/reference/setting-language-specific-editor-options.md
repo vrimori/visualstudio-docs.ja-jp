@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fddf53101cf356772745462542bf4435a4ca4f4d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 9890b68b05f4cedbb1a95299b87f505daea902f9
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31945897"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389417"
 ---
 # <a name="setting-language-specific-editor-options"></a>言語固有のエディター オプションの設定
 
@@ -58,4 +58,4 @@ Visual Studio には、特定のプログラミング言語に適用するため
 
 - [エディターのカスタマイズ](../../ide/customizing-the-editor.md)
 - [EditorConfig で移植可能なカスタム エディター設定を作成する](../../ide/create-portable-custom-editor-options.md)
-- [Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)&mdash; 設定、キー バインド、およびその他の統合開発環境 (IDE: Integrated Development Environment) の機能をカスタマイズする方法を説明しているトピックへのリンクを提供します。
+- [Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)

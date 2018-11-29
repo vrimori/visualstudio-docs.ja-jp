@@ -13,21 +13,18 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cf1cde04a45df47627b8b8bf9a0fad7b9bef0c4
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: c4ffef0b1b76f453048ff20e3cbada0b8a591c65
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50673270"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388833"
 ---
 # <a name="options-text-editor-cc-view"></a>[オプション]、[テキスト エディター]、[C/C++]、[表示]
 
 これらのプロパティ ページを使用し、C または C++ でプログラムを記述する際のコード エディターの既定の動作を変更します。
 
 このプロパティ ページにアクセスするには、**[ツール]** > **[オプション]** を選択し、**[テキスト エディター]**、**[C/C++]** を展開してから、**[表示]** を選択します。
-
-> [!NOTE]
-> 次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
 
 ## <a name="code-squiggles"></a>コードの波線
 
@@ -49,7 +46,7 @@ ms.locfileid: "50673270"
 
 - **コメント タスクの列挙** - 開いているソース ファイルで VS トークンをスキャンし、[タスク一覧] ウィンドウで報告します。
 
-- **一致するトークンの強調表示** - カーソルが置かれている場所と一致する、囲んでいる中かっこまたは構文を強調表示します。 
+- **一致するトークンの強調表示** - カーソルが置かれている場所と一致する、囲んでいる中かっこまたは構文を強調表示します。
 
 ## <a name="outlining"></a>アウトライン
 

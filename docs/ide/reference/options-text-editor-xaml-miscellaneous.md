@@ -30,22 +30,20 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 4174191f9927679eb698e2e918a7bfa50f915a3e
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 30986c0f18a2cc272cb917be9ce24b2a335c0b4b
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50673221"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388635"
 ---
 # <a name="options-text-editor-xaml-miscellaneous"></a>[オプション]、[テキスト エディター]、[XAML]、[その他]
+
 **[その他]** プロパティ ページでは、XAML ドキュメントで要素と属性を書式設定する方法を指定します。 **[オプション]** ダイアログ ボックスを開くには、**[ツール]** メニューをクリックし、**[オプション]** をクリックします。 **[その他]** プロパティ ページにアクセスするには、**[テキスト エディター]** > **[XAML]** > **[その他]** ノードを展開します。
 
-> [!NOTE]
-> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
-
-
 ## <a name="auto-insert"></a>自動挿入
- タグと引用符が自動的に生成されるタイミングを制御するには、この設定を使用します。
+
+タグと引用符が自動的に生成されるタイミングを制御するには、この設定を使用します。
 
 |||
 |-|-|
@@ -55,7 +53,8 @@ ms.locfileid: "50673221"
 |**MarkupExtension のパラメーターを区切るコンマ**|マークアップ拡張に複数のパラメーターを入力したときに、コンマが生成されるかどうかを指定します。|
 
 ## <a name="errors-and-warnings"></a>エラーと警告
- エラーと警告が自動的に生成されるタイミングを制御するには、この設定を使用します。 詳細については、「[XAML のエラーと警告](../../designers/xaml-errors-warnings.md)」をご覧ください。
+
+エラーと警告が自動的に生成されるタイミングを制御するには、この設定を使用します。 詳細については、「[XAML のエラーと警告](../../designers/xaml-errors-warnings.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

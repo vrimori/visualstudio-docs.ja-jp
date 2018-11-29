@@ -33,19 +33,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 81ae8fd7cf7acb27fd528c306c0d6a57955c6fe8
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: 3009f32adeb70dd376d7116280de6e3e1b557e7a
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "50143386"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388925"
 ---
 # <a name="documents-environment-options-dialog-box"></a>[ドキュメント] ([オプション] ダイアログ ボックス - [環境])
 
 **[オプション]** ダイアログ ボックスのこのページを使用し、統合開発環境 (IDE) の文書表示を制御し、ドキュメントやファイルに対する外部変更を管理します。 このダイアログ ボックスにアクセスするには、**[ツール]** メニューの **[オプション]** をクリックし、**[環境]** ノードの **[ドキュメント]** を選択します。 **[ドキュメント]** が一覧に表示されない場合は、**[オプション]** ダイアログ ボックスの **[すべての設定を表示]** を選択します。
-
-> [!NOTE]
-> 使用している設定またはエディションによっては、ダイアログ ボックスで使用可能なオプションや、メニュー コマンドの名前や位置がヘルプに記載されている内容と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
 
 **保存済みの現在のドキュメント ウィンドウを再利用**
 

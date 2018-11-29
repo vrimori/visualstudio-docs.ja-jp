@@ -22,19 +22,16 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 160d008425cc1c82fb8be26e7a6be9b3be82e999
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 1e43d118a5fcfe00a8eb6eaa7f34a17ff1f6a4be
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49908432"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389216"
 ---
 # <a name="read-xml-data-into-a-dataset"></a>XML データのデータセットへの読み込み
 
 ADO.NET では、XML データを操作するための単純なメソッドを提供します。 このチュートリアルでは、データセットに XML データを読み込む Windows アプリケーションを作成します。 データセットが表示し、<xref:System.Windows.Forms.DataGridView>コントロール。 最後に、XML ファイルの内容に基づく XML スキーマは、テキスト ボックスに表示されます。
-
-> [!NOTE]
-> ダイアログ ボックスとメニュー コマンド、アクティブな設定またはエディションによって、ヘルプの記載を異なる場合がありますを表示するを使用しています。 設定を変更する、**ツール**メニューの **インポートおよびエクスポート設定**します。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
 
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する
 
@@ -54,7 +51,7 @@ ADO.NET では、XML データを操作するための単純なメソッドを�
 
 このチュートリアルでは、データセットに XML データの読み取りに重点を置いています、ため、XML ファイルの内容が提供されます。
 
-1. **プロジェクト**メニューの **新しい項目の追加**します。
+1. [プロジェクト] **メニューで [新しい項目の追加]** を選択します。
 
 2. 選択**XML ファイル**、ファイルに名前を**authors.xml**、し、**追加**します。
 
@@ -155,7 +152,7 @@ ADO.NET では、XML データを操作するための単純なメソッドを�
     |コントロール|プロパティ|設定|
     |-------------|--------------|-------------|
     |`TextBox1`|**Multiline**|`true`|
-    ||**ScrollBars**|**垂直方向**|
+    ||ScrollBars|**垂直方向**|
     |`Button1`|**Name**|`ReadXmlButton`|
     ||**[テキスト]**|`Read XML`|
     |`Button2`|**Name**|`ShowSchemaButton`|
@@ -202,7 +199,7 @@ ADO.NET では、XML データを操作するための単純なメソッドを�
 
      **コード エディター**で開き、`ShowSchemaButton_Click`イベント ハンドラー。
 
-3.  次のコードを貼り付け、`ShowSchemaButton_Click`イベント ハンドラー。
+3.  `ShowSchemaButton_Click` イベント ハンドラーに次のコードを貼り付けます。
 
      [!code-csharp[VbRaddataFillingAndExecuting#3](../data-tools/codesnippet/CSharp/read-xml-data-into-a-dataset_2.cs)]
      [!code-vb[VbRaddataFillingAndExecuting#3](../data-tools/codesnippet/VisualBasic/read-xml-data-into-a-dataset_2.vb)]
@@ -225,11 +222,11 @@ ADO.NET では、XML データを操作するための単純なメソッドを�
 
 このチュートリアルでは、データセット、XML ファイルを読み取るだけでなく XML ファイルの内容に基づくスキーマの作成の基本を説明します。 次に実行する可能性のあるいくつかのタスクを次に示します。
 
--   データセットと書き戻せる XML としてデータを編集します。 詳細については、「 <xref:System.Data.DataSet.WriteXml%2A> 」を参照してください。
+-   データセットと書き戻せる XML としてデータを編集します。 詳細については、「<xref:System.Data.DataSet.WriteXml%2A>」を参照してください。
 
 -   データセット内のデータを編集し、データベースに書き込みます。
 
 ## <a name="see-also"></a>関連項目
 
 - [Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)
-- [Visual Studio での XML ツール](../xml-tools/xml-tools-in-visual-studio.md)
+- [Visual Studio の XML ツール](../xml-tools/xml-tools-in-visual-studio.md)

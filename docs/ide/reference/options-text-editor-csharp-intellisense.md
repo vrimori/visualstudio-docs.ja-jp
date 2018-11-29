@@ -18,19 +18,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3ab871d07a8519fa6850ad3d1743a7cd1d0fa110
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 041b3c5d0a67d590bc409c21dd53d5d162b0a0b9
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50672486"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389258"
 ---
 # <a name="options-text-editor-c-intellisense"></a>[オプション]、[テキスト エディター]、[C#]、[IntelliSense]
 
 C# での IntelliSense の動作設定を変更するには、**[IntelliSense]** オプション ページを使用します。 このオプション ページにアクセスするには、**[ツール]** > **[オプション]** を選択し、さらに **[テキスト エディター]** > **[C#]** > **[IntelliSense]** の順に選択します。
-
-> [!NOTE]
-> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
 
 **[IntelliSense]** オプション ページには、以下のオプションがあります。
 
@@ -86,7 +83,7 @@ C# での IntelliSense の動作設定を変更するには、**[IntelliSense]**
 
 ## <a name="show-name-suggestions"></a>名前の提案を表示
 
-   最近選択したメンバーのオブジェクト名の自動補完を実行します。 
+最近選択したメンバーのオブジェクト名の自動補完を実行します。
 
 ## <a name="see-also"></a>関連項目
 
