@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f3009a3730a858707490d1f043d039b9f82ecb1
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 4d0ebbac34795255a48e1ec1c8ff72db829b30c3
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39177712"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388531"
 ---
 # <a name="how-to-display-urls-as-links-in-the-editor"></a>方法 : エディターで URL をリンクとして表示する
 
@@ -31,12 +31,7 @@ ms.locfileid: "39177712"
 
 -   **Ctrl** キーを押しながらリンクを**クリック**すると、示されている Web サイトが表示されます。 既定では、Web サイトは内部 Web ブラウザーに表示されます。
 
-> [!NOTE]
-> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
-
-## <a name="procedure"></a>プロシージャ
-
-### <a name="to-display-urls-as-links"></a>URL をリンクとして表示するには
+## <a name="display-urls-as-links"></a>URL をリンクとして表示する
 
 1.  **[ツール]** メニューの **[オプション]** をクリックします。
 

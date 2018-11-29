@@ -16,21 +16,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dbd3fe20377cd2aa4954e904fec50702cc9b7120
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: 09881462b0723dc1e601c908efeabc317ed70b69
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843992"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388950"
 ---
 # <a name="projects-and-solutions-page-options-dialog-box"></a>[プロジェクトおよびソリューション] ページの [オプション] ダイアログ ボックス
 
 プロジェクトおよびソリューションに関連する Visual Studio の動作を設定します。 これらのオプションにアクセスするには、**[ツール]**、**[オプション]** の順に選択し、**[プロジェクトおよびソリューション]** を展開し、**[全般]** をクリックします。
 
 プロジェクトおよびテンプレート フォルダーの既定のパスは、同じダイアログ ボックスの **[場所]** タブで設定します。
-
-> [!NOTE]
-> UI のオプションは、アクティブな設定またはエディションによっては、ここに記載されているものと異なる場合があります。 この記事は、**全般的な開発設定**を考慮して記述されています。 設定を表示または変更するには、**[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
 
 ## <a name="general-page"></a>[全般] ページ
 
