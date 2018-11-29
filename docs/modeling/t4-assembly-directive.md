@@ -44,7 +44,7 @@ Visual Studio のデザイン時テキスト テンプレートの中で、テ�
 <#@ assembly name="$(SolutionDir)\MyProject\bin\Debug\SomeLibrary.Dll" #>
 ```
 
- assembly ディレクティブは、前処理されたテキスト テンプレートでは無効です。 代わりで必要な参照を含める、**参照**Visual Studio プロジェクトのセクション。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)します。
+ assembly ディレクティブは、前処理されたテキスト テンプレートでは効果はありません。 代わりに、Visual Studio プロジェクトの**参照**セクションで必要な参照を含めます。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)
 
 ## <a name="standard-assemblies"></a>標準アセンブリ
  次のアセンブリは自動的に読み込まれるので、これらのアセンブリのアセンブリ ディレクティブを記述する必要はありません。
@@ -65,7 +65,7 @@ Visual Studio のデザイン時テキスト テンプレートの中で、テ�
 
 - あなたの DSL を含むアセンブリ
 
-## <a name="msbuild"></a> MSBuild および Visual Studio の両方でプロジェクト プロパティの使用
+## <a name="msbuild"></a>MSBuild および Visual Studio の両方でのプロジェクト プロパティの使用
  $ (Solutiondir) などの visual Studio マクロは、MSBuild で機能しません。 ビルド コンピューターでテンプレートを変換する場合、代わりにプロジェクトのプロパティを使用する必要があります。
 
  .csproj ファイルまたは .vbproj ファイルを編集してプロジェクトのプロパティを定義します。 この例では、`myLibFolder` という名前のプロパティを定義します。
