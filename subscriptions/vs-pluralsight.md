@@ -9,12 +9,12 @@ description: 一部の Visual Studio サブスクリプションに含まれる 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: a384769b5d2f643a215a1a0c136fc44fd7d45e42
-ms.sourcegitcommit: 331dbb12e11fcd7f5d15fab05f3c861e48126e43
+ms.openlocfilehash: c39b7e052f3e978530dbc093767fabde4172d8e2
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51826742"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389112"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Pluralsight トレーニング特典
 
@@ -39,11 +39,7 @@ ms.locfileid: "51826742"
    > [!div class="mx-imgBorder"]
    > ![Pluralsight 特典のアクティブ化](_img/vs-pluralsight/vs-pluralsight-activate.png)
 
-3. Visual Studio サブスクリプションに含まれる特典の Pluralsight ページにリダイレクトされます。  この例では、Visual Studio Dev Essentials メンバーシップで提供される特典をアクティブ化します。 **[特典の有効化]** をクリックします。
-   > [!div class="mx-imgBorder"]
-   > ![Pluralsight VSDE ランディング ページ](_img/vs-pluralsight/vs-pluralsight-vsde-landing.png)
-
-4. アクティブ化ページで次のようにします。
+3. Visual Studio サブスクリプションに含まれる特典の Pluralsight ページにリダイレクトされます。  
    - フォームで要求された連絡先情報を入力します
    - チェック ボックスをオンにして、使用条件とプライバシー ポリシーに同意します
    - **[I agree, activate benefit]\(特典のアクティブ化に同意します\)** をクリックします。
@@ -85,7 +81,7 @@ ms.locfileid: "51826742"
 
 <sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、BizSpark、MCT Software & Services Developer、MCT Software & Service、Microsoft Valued Professional (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、FTE、Imagine が含まれます。*
 
-<sup>2</sup> *Pluralsight 特典は、個人に関連付けられた単一ユーザーのみが使用できます。  一度サブスクライバーが特典を使用すると、特典はリセットされません。 
+<sup>2</sup>  *Pluralsight 特典は、個人に関連付けられた単一ユーザーのみが使用できます。一度サブスクライバーが特典を使用すると、特典はリセットされません。*
 
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 

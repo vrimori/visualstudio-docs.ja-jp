@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 568a829ff10cbee535729361b7c95dd7db6814f5
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.openlocfilehash: c8f826db0c619e1dfb5811aaf9d0c5ef40093c97
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948070"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388670"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 
@@ -28,7 +28,7 @@ Visual Studio の既定の設定を復元し、Visual Studio IDE を自動的に
 既定の設定は、Visual Studio の初回起動時に選択したプロファイルによって決定されます。
 
 > [!TIP]
-> 統合開発環境 (IDE) を使用して設定をリセットする方法については、「[リセット設定](../synchronized-settings-in-visual-studio.md#reset-settings)」を参照してください。
+> 統合開発環境 (IDE) を使用して設定をリセットする方法については、「[リセット設定](../environment-settings.md#reset-settings)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -58,6 +58,6 @@ Devenv.exe /ResetSettings "C:\My Files\MySettings.vssettings"
 
 ## <a name="see-also"></a>関連項目
 
-- [設定のリセット](../synchronized-settings-in-visual-studio.md#reset-settings)
+- [環境設定](../environment-settings.md)
 - [Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)
 - [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
