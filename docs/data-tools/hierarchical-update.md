@@ -23,18 +23,18 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 56b85f96815fca34330f57f6b653c497f21a835b
-ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
-ms.translationtype: MT
+ms.openlocfilehash: 52225ba4801fcee92b3f68fd6ec1cf7cc6c63086
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750800"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52305716"
 ---
 # <a name="hierarchical-update"></a>階層更新
 
 *階層更新*参照整合性を維持しながら、データベースに (2 つ以上の関連テーブルを含むデータセット) から更新されたデータの保存の処理を指します。 *参照整合性*の挿入、更新、および関連レコードを削除する動作を制御するデータベース内の制約によって定義される一貫性規則を参照します。 たとえば、その顧客の注文を作成するを許可する前に、顧客レコードの作成を強制する参照の整合性を勧めします。  データセットのリレーションシップの詳細については、次を参照してください。[データセットのリレーションシップ](../data-tools/relationships-in-datasets.md)します。
 
-階層更新機能を使用して、`TableAdapterManager`を管理する、`TableAdapter`型指定された dataset の s。 `TableAdapterManager`でないために、コンポーネントは、Visual Studio によって生成されたクラスの一部、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。 データ ソース ウィンドウから Windows フォームまたは WPF ページにテーブルをドラッグするとは、Visual Studio がフォームまたはページで、TableAdapterManager の型の変数を追加し、コンポーネント トレイにデザイナーで参照してください。 詳細については、`TableAdapterManager`クラスの TableAdapterManager リファレンスのセクションを参照してください[Tableadapter](../data-tools/create-and-configure-tableadapters.md)します。
+階層更新機能を使用して、`TableAdapterManager`を管理する、`TableAdapter`型指定された dataset の s。 `TableAdapterManager`でないために、コンポーネントは、Visual Studio によって生成されたクラスの一部、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。 テーブルをドラッグすると、**データソース**Windows フォームまたは WPF ページで、Visual Studio のウィンドウがフォームまたはページで、TableAdapterManager の型の変数を追加し、コンポーネント トレイにデザイナーで参照してください。 詳細については、`TableAdapterManager`クラスの TableAdapterManager リファレンスのセクションを参照してください[Tableadapter](../data-tools/create-and-configure-tableadapters.md)します。
 
 既定では、データセットは、外部キー制約を適用しないことを意味する「リレーションのみ、」として関連テーブルを処理します。 使用して、デザイン時にその設定を変更することができます、**データセット デザイナー**します。 2 つのテーブル間の関係の行を選択、**関係** ダイアログ ボックス。 ここで加えた変更が決定される方法、`TableAdapterManager`動作するときに元のデータベースに関連するテーブルに、変更も送信します。
 
@@ -52,7 +52,7 @@ ms.locfileid: "50750800"
 
 ## <a name="understand-foreign-key-constraints-cascading-updates-and-deletes"></a>Foreign key 制約、カスケード更新プログラム、および削除を理解します。
 
-どの foreign key 制約を理解することが重要と、生成されたデータセット コードで作成されたデータベースで連鎖動作します。
+生成されたデータセット コードで、データベースでの外部キー制約と連鎖動作がどのように作成されるかを理解することは重要です。
 
 既定では、データセットのデータ テーブルは、データベースでのリレーションシップと一致するリレーションシップ (<xref:System.Data.DataRelation>) が設定された状態で生成されます。 ただし、データセットでのリレーションシップは、外部キー制約としては生成されません。 <xref:System.Data.DataRelation>として構成されている**リレーションシップのみ**せず<xref:System.Data.ForeignKeyConstraint.UpdateRule%2A>または<xref:System.Data.ForeignKeyConstraint.DeleteRule%2A>有効にします。
 
@@ -60,12 +60,12 @@ ms.locfileid: "50750800"
 
 ## <a name="set-the-order-to-perform-updates"></a>更新プログラムを実行する順序を設定します。
 
-更新プログラムを実行する順序を設定するデータセットのすべてのテーブルで変更されたすべてのデータを保存する個々 の注文を挿入、更新、および削除したセットが必要です。 階層更新を有効にすると、挿入が最初に、実行し、更新、およびから削除します。 `TableAdapterManager`提供、`UpdateOrder`プロパティに最初に、更新プログラムを実行し、挿入、および削除できます。
+更新プログラムを実行する順序を設定するデータセットのすべてのテーブルで変更されたすべてのデータを保存する個々 の注文を挿入、更新、および削除したセットが必要です。 階層更新が有効な場合、まず挿入が実行され、次に更新、削除の順で実行されます。 `TableAdapterManager` には、更新、挿入、削除の順に実行できる `UpdateOrder` プロパティも用意されています。
 
 > [!NOTE]
 > 更新順序は、すべてが含まれているかを理解しておく必要があります。 つまり、更新プログラムが実行されると、挿入および削除の後は、データセット内のすべてのテーブルに対して実行されます。
 
-設定する、`UpdateOrder`から項目をドラッグした後、プロパティ、[データ ソース ウィンドウ](add-new-data-sources.md)、フォームに次のように選択します、`TableAdapterManager`コンポーネント トレイ、および設定して、`UpdateOrder`プロパティ、 **プロパティ。** ウィンドウ。
+設定する、`UpdateOrder`から項目をドラッグした後、プロパティ、[データ ソース ウィンドウ](add-new-data-sources.md#data-sources-window)、フォームに次のように選択します、`TableAdapterManager`コンポーネント トレイ、および設定して、`UpdateOrder`プロパティ、 **プロパティ。** ウィンドウ。
 
 ## <a name="create-a-backup-copy-of-a-dataset-before-performing-a-hierarchical-update"></a>階層更新を実行する前に、データセットのバックアップ コピーを作成します。
 
@@ -80,18 +80,18 @@ ms.locfileid: "50750800"
 
 データセットでの関連データ テーブルへの変更をデータベースに保存するには、`TableAdapterManager.UpdateAll` メソッドを呼び出し、関連テーブルが含まれるデータセットの名前を渡します。 たとえば、NorthwindDataset 内のすべてのテーブルの更新をバックエンドのデータベースに送信するには、`TableAdapterManager.UpdateAll(NorthwindDataset)` メソッドを実行します。
 
-項目を削除した後、**データ ソース**ウィンドウで、コードが自動的に追加する、`Form_Load`各テーブルを設定するイベント (、`TableAdapter.Fill`メソッド)。 コードにも追加、**保存**ボタン クリックしてイベントの<xref:System.Windows.Forms.BindingNavigator>データセットからデータベースにデータを保存する (、`TableAdapterManager.UpdateAll`メソッド)。
+**[データ ソース]** ウィンドウから項目をドロップすると、各テーブルにデータを読み込むコード (`TableAdapter.Fill` メソッド) が `Form_Load` イベントに自動的に追加されます。 <xref:System.Windows.Forms.BindingNavigator> の **[保存]** ボタン クリック イベントにも、データセットのデータをデータベースに保存するコード (`TableAdapterManager.UpdateAll` メソッド) が追加されます。
 
-生成された保存コードには、`CustomersBindingSource.EndEdit` メソッドを呼び出すコード行も含まれています。 具体的には、呼び出し、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>最初のメソッド<xref:System.Windows.Forms.BindingSource>フォームに追加されています。 つまり、このコードはからドラッグされる最初のテーブルの生成のみ、**データソース**ウィンドウから、フォームにします。 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 呼び出しは、現在編集中のデータ バインド コントロールで実行されている変更をコミットします。 そのため、データ バインド コントロールがまだ場合フォーカスをクリックして、**保存**ボタン、保留中のすべての編集コントロールは、実際の保存の前にコミットされたことで (、`TableAdapterManager.UpdateAll`メソッド)。
+生成された保存コードには、`CustomersBindingSource.EndEdit` メソッドを呼び出すコード行も含まれています。 具体的には、呼び出し、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>最初のメソッド<xref:System.Windows.Forms.BindingSource>フォームに追加されています。 つまり、このコードはからドラッグされる最初のテーブルの生成のみ、**データソース**ウィンドウから、フォームにします。 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 呼び出しは、現在編集中のデータ バインド コントロールで実行されている変更をコミットします。 したがって、あるデータ バインド コントロールにフォーカスがある状態で **[保存]** ボタンをクリックすると、実際の保存 (`TableAdapterManager.UpdateAll` メソッド) が実行される前に、そのコントロール内のすべての保留中の編集がコミットされます。
 
 > [!NOTE]
 > **データセット デザイナー**のみを追加、`BindingSource.EndEdit`がフォームにドロップされる最初のテーブルのコード。 したがって、フォーム上の各関連テーブルに対して、`BindingSource.EndEdit` メソッドを呼び出すコード行を手動で追加する必要があります。 つまり、このチュートリアルでも、`OrdersBindingSource.EndEdit` メソッドの呼び出しを追加する必要があります。
 
 ### <a name="to-update-the-code-to-commit-changes-to-the-related-tables-before-saving"></a>保存前に、関連テーブルへの変更をコミットするコードを更新するには
 
-1.  ダブルクリックして、**保存**ボタンを<xref:System.Windows.Forms.BindingNavigator>を開く**Form1**コード エディターで。
+1.  <xref:System.Windows.Forms.BindingNavigator> の **[保存]** ボタンをダブルクリックし、コード エディターで **Form1** を開きます。
 
-2.  `OrdersBindingSource.EndEdit` メソッドを呼び出す行の後に、`CustomersBindingSource.EndEdit` メソッドを呼び出すコード行を追加します。 コードでは、**保存**ボタン クリック イベント、次のようになります。
+2.  `OrdersBindingSource.EndEdit` メソッドを呼び出す行の後に、`CustomersBindingSource.EndEdit` メソッドを呼び出すコード行を追加します。 **[保存]** ボタン クリック イベントのコードは、次のようになります。
 
      [!code-vb[VSProDataOrcasHierarchicalUpdate#1](../data-tools/codesnippet/VisualBasic/hierarchical-update_1.vb)]
      [!code-csharp[VSProDataOrcasHierarchicalUpdate#1](../data-tools/codesnippet/CSharp/hierarchical-update_1.cs)]

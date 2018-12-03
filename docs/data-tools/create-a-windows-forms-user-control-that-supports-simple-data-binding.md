@@ -16,16 +16,16 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f5bffba1b2de64c142dd70990fb74429ad40269a
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
-ms.translationtype: MT
+ms.openlocfilehash: 673e510536ab866f3be90da630d3cfa261bb98c6
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50220096"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52305404"
 ---
-# <a name="create-a-windows-forms-user-control-that-supports-simple-data-binding"></a>単純データ バインディングをサポートする Windows フォーム ユーザー コントロールを作成します。
+# <a name="create-a-windows-forms-user-control-that-supports-simple-data-binding"></a>単純なデータ バインディングをサポートする Windows フォーム ユーザー コントロールの作成
 
-Windows アプリケーションでフォームにデータを表示するときにから既存のコントロールを選択することができます、**ツールボックス**、またはアプリケーションが標準のコントロールで使用できない機能に必要な場合は、カスタム コントロールを作成できます。 このチュートリアルでは、<xref:System.ComponentModel.DefaultBindingPropertyAttribute> を実装するコントロールを作成する方法を示します。 <xref:System.ComponentModel.DefaultBindingPropertyAttribute> を実装するコントロールには、データにバインドできるプロパティを 1 つ含めることができます。 このようなコントロールは、<xref:System.Windows.Forms.TextBox> や <xref:System.Windows.Forms.CheckBox> に似ています。
+Windows アプリケーションのフォームにデータを表示する場合は、**[ツールボックス]** から既存のコントロールを選択するか、またはアプリケーションが標準コントロールでは提供できない機能を必要とする場合は、カスタム コントロールを記述できます。 このチュートリアルでは、<xref:System.ComponentModel.DefaultBindingPropertyAttribute> を実装するコントロールを作成する方法を示します。 <xref:System.ComponentModel.DefaultBindingPropertyAttribute> を実装するコントロールには、データにバインドできるプロパティを 1 つ含めることができます。 このようなコントロールは、<xref:System.Windows.Forms.TextBox> や <xref:System.Windows.Forms.CheckBox> に似ています。
 
 コントロールの作成の詳細については、次を参照してください。[デザイン時に Windows フォーム コントロールの開発](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time)します。
 
@@ -41,9 +41,9 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 
--   新規作成**Windows フォーム アプリケーション**します。
+-   新しい **Windows フォーム アプリケーション**を作成します。
 
--   新しい追加**ユーザー コントロール**をプロジェクトにします。
+-   新しい**ユーザー コントロール**をプロジェクトに追加します。
 
 -   ユーザー コントロールをビジュアルに設計します。
 
@@ -51,7 +51,7 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 -   使用してデータセットを作成、**データ ソースの構成**ウィザード。
 
--   設定、 **Phone**内の列、**データソース**に新しいコントロールを使用するウィンドウ。
+-   **[データ ソース]** ウィンドウで **[Phone]** 列が新しいコントロールを使用するように設定します。
 
 -   フォームを作成して、新しいコントロールにデータを表示します。
 
@@ -73,7 +73,7 @@ Windows アプリケーションでフォームにデータを表示するとき
 
        しばらくすると、クエリの実行が完了し、Northwind データベースを作成します。
 
-## <a name="create-a-windows-forms-application"></a>Windows フォーム アプリケーションを作成します。
+## <a name="create-a-windows-forms-application"></a>Windows フォーム アプリケーションを作成する
 
 作成するには、まず、 **Windows フォーム アプリケーション**:
 
@@ -85,33 +85,33 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 4. プロジェクトに名前を**SimpleControlWalkthrough**を選び、 **OK**。
 
-     **SimpleControlWalkthrough**プロジェクトを作成するとに追加**ソリューション エクスプ ローラー**します。
+     **SimpleControlWalkthrough** プロジェクトが作成されて**ソリューション エクスプローラー**に追加されます。
 
-## <a name="add-a-user-control-to-the-project"></a>ユーザー コントロールをプロジェクトに追加します。
+## <a name="add-a-user-control-to-the-project"></a>プロジェクトにユーザー コントロールを追加する
 
 このチュートリアルから単純なデータ バインド可能なコントロールを作成、**ユーザー コントロール**します。 追加、**ユーザー コントロール**項目を**SimpleControlWalkthrough**プロジェクト。
 
-1.  **プロジェクト**] メニューの [選択**ユーザー コントロールの追加**します。
+1.  **[プロジェクト]** メニューの **[ユーザー コントロールの追加]** を選択します。
 
-2.  型**PhoneNumberBox**名 をクリックします**追加**します。
+2.  [ファイル名] 領域に「**PhoneNumberBox**」と入力し、**[追加]** をクリックします。
 
-     **PhoneNumberBox**コントロールに追加されます**ソリューション エクスプ ローラー**、され、デザイナーが開きます。
+     **PhoneNumberBox** コントロールが **ソリューション エクスプローラー**に追加され、デザイナーが開きます。
 
 ## <a name="design-the-phonenumberbox-control"></a>PhoneNumberBox コントロールをデザインします。
 
 このチュートリアルでは、既存<xref:System.Windows.Forms.MaskedTextBox>を作成する、 **PhoneNumberBox**コントロール。
 
-1.  ドラッグ、<xref:System.Windows.Forms.MaskedTextBox>から、**ツールボックス**ユーザー コントロールのデザイン サーフェイスにします。
+1.  **ツールボックス**からユーザー コントロールのデザイン サーフェイスに <xref:System.Windows.Forms.MaskedTextBox> をドラッグします。
 
-2.  スマート タグの選択、<xref:System.Windows.Forms.MaskedTextBox>だけにドラッグすると、および選択**マスクの設定**します。
+2.  ドラッグした <xref:System.Windows.Forms.MaskedTextBox> のスマート タグを選択し、**[マスクの設定]** を選択します。
 
-3.  選択**電話番号**で、**定型入力** ダイアログ ボックスをクリックします**ok**マスクを設定します。
+3.  **[定型入力]** ダイアログ ボックスで **[電話番号]** を選択し、**[OK]** をクリックしてマスクを設定します。
 
 ## <a name="add-the-required-data-binding-attribute"></a>必要なデータ バインディング属性を追加します。
 
-単純データ バインディングをサポートするをコントロールには実装、 <xref:System.ComponentModel.DefaultBindingPropertyAttribute>:
+データ バインディングをサポートする簡単なコントロールに対しては <xref:System.ComponentModel.DefaultBindingPropertyAttribute> を実装します。
 
-1.  スイッチ、 **PhoneNumberBox**コントロールをコード ビューにします。 (上、**ビュー** ] メニューの [選択**コード**)。
+1.  スイッチ、 **PhoneNumberBox**コントロールをコード ビューにします。 (**[表示]** メニューの **[コード]** を選択します。)
 
 2.  コードに置き換えます、 **PhoneNumberBox**次。
 
@@ -122,49 +122,49 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 ## <a name="create-a-data-source-from-your-database"></a>データベースからデータ ソースを作成します。
 
-このステップでは、**データ ソースの構成**データ ソースを作成するウィザードがに基づいて、 `Customers` Northwind サンプル データベース内のテーブル。 接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。 Northwind サンプル データベースのセットアップについては、次を参照してください。[方法: サンプル データベースをインストール](../data-tools/installing-database-systems-tools-and-samples.md)します。
+この手順では、**データ ソース構成**ウィザードを使用して、Northwind サンプル データベースの `Customers` テーブルに基づいてデータ ソースを作成します。 接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。 Northwind サンプル データベースのセットアップについては、次を参照してください。[方法: サンプル データベースをインストール](../data-tools/installing-database-systems-tools-and-samples.md)します。
 
-1.  **[データ]** メニューの **[データ ソースの表示]** をクリックします。
+1.  開くには、**データ ソース**ウィンドウで、**データ**] メニューのをクリックして **[データ ソースの**します。
 
-2.  **データソース**ウィンドウで、**新しいデータ ソースの追加**を開始する、**データ ソースの構成**ウィザード。
+2.  **[データ ソース]** ウィンドウで、**[新しいデータ ソースの追加]** をクリックして**データ ソース構成**ウィザードを起動します。
 
-3.  **データ ソースの種類を選択**] ページで、[**データベース**、順にクリックします**次**します。
+3.  **[データソースの種類を選択]** ページで、**[データベース]** を選択し、**[次へ]** をクリックします。
 
-4.  **データ接続の選択** ページで、次のいずれかを実行します。
+4.  **[データ接続の選択]** ページで、次のいずれかの操作を行います。
 
     -   Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。
 
-    -   選択**新しい接続**を起動する、**接続の追加/変更** ダイアログ ボックス。
+    -   **[新しい接続]** を選択して **[接続の追加] または [接続の変更]** ダイアログ ボックスを表示します。
 
-5.  データベースにパスワードが必要な場合をクリックして、機密データを含めるオプションを選択**次**します。
+5.  データベースにパスワードが必要な場合は、該当するオプションを選択して重要情報を含め、**[次へ]** をクリックします。
 
-6.  **接続文字列をアプリケーション構成ファイルに保存**] ページで [**次**します。
+6.  **[アプリケーション構成ファイルに接続文字列を保存]** ページで、**[次へ]** をクリックします。
 
-7.  **データベース オブジェクトの選択** ページで、展開、**テーブル**ノード。
+7.  **[データベース オブジェクトの選択]** ページで、**[テーブル]** ノードを展開します。
 
-8.  選択、`Customers`テーブル、およびクリックして**完了**。
+8.  `Customers` テーブルを選択し、**[完了]** をクリックします。
 
-     **NorthwindDataSet**がプロジェクトに追加し、`Customers`テーブルに表示されます、**データ ソース**ウィンドウ。
+     プロジェクトに **NorthwindDataSet** が追加され、**[データ ソース]** ウィンドウに `Customers` テーブルが表示されます。
 
 ## <a name="set-the-phone-column-to-use-the-phonenumberbox-control"></a>PhoneNumberBox コントロールを使用して、phone 列を設定します。
 
-内で、**データソース**ウィンドウで、フォームに項目をドラッグする前に作成するコントロールを設定することができます。
+**[データ ソース]** ウィンドウでは、フォームにコントロールをドラッグする前に作成するコントロールを設定できます。
 
-1.  開いている**Form1**デザイナー。
+1.  デザイナーで **Form1** を開きます。
 
-2.  展開、**顧客**内のノード、**データソース**ウィンドウ。
+2.  **[データ ソース]** ウィンドウの **[Customers]** ノードを展開します。
 
-3.  ドロップダウン矢印をクリックして、**顧客**ノード選択**詳細**コントロール リストから。
+3.  **[Customers]** ノードのドロップダウン矢印をクリックし、コントロール リストの **[Details]** を選択します。
 
-4.  ドロップダウン矢印をクリックして、**電話**列選択**カスタマイズ**します。
+4.  **[Phone]** 列のドロップダウン矢印をクリックし、**[Customize]** をクリックします。
 
-5.  選択、 **PhoneNumberBox**の一覧から**関連付けられたコントロール**で、**データ UI カスタマイズ オプション** ダイアログ ボックス。
+5.  **[データ UI カスタマイズ オプション]** ダイアログ ボックスの **[関連付けられたコントロール]** の一覧の **[PhoneNumberBox]** を選択します。
 
-6.  ドロップダウン矢印をクリックして、**電話**列選択**PhoneNumberBox**します。
+6.  **[Phone]** 列のドロップダウン矢印をクリックし、**[PhoneNumberBox]** をクリックします。
 
 ## <a name="add-controls-to-the-form"></a>コントロールをフォームに追加します。
 
-項目をドラッグして、データ バインド コントロールを作成することができます、**データソース**ウィンドウから、フォームにします。
+**[データ ソース]** ウィンドウからフォームに項目をドラッグして、データ バインド コントロールを作成します。
 
 フォーム上のデータ バインド コントロールを作成するには、メインをドラッグします**顧客**ノードから、**データ ソース**ウィンドウから、フォームにいることを確認し、 **PhoneNumberBox**コントロールが。データを表示するために使用、 **Phone**列。
 

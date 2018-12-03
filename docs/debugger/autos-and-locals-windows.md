@@ -1,7 +1,7 @@
 ---
-title: '[自動変数] と [ローカル] ウィンドウに変数の調査 |マイクロソフトのドキュメント'
+title: '[自動変数] と [ローカル] ウィンドウに変数の調査 |Microsoft Docs'
 ms.custom: H1Hack27Feb2017
-ms.date: 04/17/2018
+ms.date: 10/18/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b196d993e7091fd9d4b09fe3c228346e7421911e
-ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
-ms.translationtype: MT
+ms.openlocfilehash: 37843e6f84bf16efee4d149ed08a7ecb525d7574
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52257213"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388518"
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows"></a>[自動変数] と [ローカル] ウィンドウに変数を検査します。
 
@@ -33,7 +33,7 @@ ms.locfileid: "52257213"
 
 開くには、**ローカル**ウィンドウで、デバッグ中に、**デバッグ** > **Windows** > **ローカル**、またはキーを押します**Alt**+**4**します。
 
-基本的なデバッグの詳細が必要な場合は、次を参照してください。[デバッガーの概要](../debugger/getting-started-with-the-debugger.md)します。
+デバッグの基礎の詳細については、[デバッガーでの作業の開始](../debugger/getting-started-with-the-debugger.md)に関するページを参照してください。
 
 > [!NOTE]
 > このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac では、次を参照してください。 [Visual studio for Mac のデータの視覚化](/visualstudio/mac/data-visualizations)します。
@@ -54,7 +54,7 @@ ms.locfileid: "52257213"
 
 たとえば `a + b`のように、値に式を入力することもできます。 デバッガーは、正しい言語式であれば大部分を受け入れます。
 
-ネイティブの C++ コードでは、変数名のコンテキストを修飾しなければならない場合があります。 詳細については、次を参照してください。 [Context operator (C++)](../debugger/context-operator-cpp.md)します。
+ネイティブの C++ コードでは、変数名のコンテキストを修飾しなければならない場合があります。 詳細については、[コンテキスト演算子 (C++)](../debugger/context-operator-cpp.md) に関するページを参照してください。
 
 >[!CAUTION]
 >値と式を変更する前に、結果を理解することを確認します。 いくつか考えられる問題は次のとおりです。
@@ -77,7 +77,7 @@ ms.locfileid: "52257213"
 
  別のコードの言語での異なる変数を表示する、 **[自動変数]** ウィンドウ。
 
- - C#と Visual Basic の場合、 **[自動変数]** ウィンドウが現在または前の行に使用される変数が表示されます。 たとえば、C#または Visual Basic のコードは、次の 4 つの変数を宣言します。
+ - C# および Visual Basic では、**[自動変数]** ウィンドウに現在の行または前の行に使用されている変数がすべて表示されます。 たとえば、C#または Visual Basic のコードは、次の 4 つの変数を宣言します。
 
    ```csharp
        public static void Main()
@@ -152,6 +152,6 @@ private static int subtractVars(int i, int j)
   ![[自動変数] は値を返すC# ](../debugger/media/autosreturnvaluecsharp2.png "戻り値を [自動変数]C#")  
   
 ## <a name="see-also"></a>関連項目  
- [何をデバッグするとしますか。](../debugger/what-is-debugging.md)  
+ [デバッグとは](../debugger/what-is-debugging.md)  
  [優れたC#Visual Studio を使用するコード](../debugger/write-better-code-with-visual-studio.md)  
  [最初に、デバッグについて](../debugger/debugger-feature-tour.md)[デバッガー ウィンドウ](../debugger/debugger-windows.md)
