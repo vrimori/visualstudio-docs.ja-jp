@@ -85,9 +85,9 @@ string result = t4.ProcessTemplate("",
 ```
 
 ## <a name="passing-values-to-a-run-time-preprocessed-text-template"></a>ランタイム (前処理された) テキスト テンプレートに値を渡す
- 通常、使用する必要はありません、`<#@parameter#>`ディレクティブ実行時 (前処理された) テキスト テンプレートを使用します。 代わりに、追加のコンス トラクターまたはパラメーターの値を渡すときに経由する、生成されたコードの設定可能なプロパティを定義できます。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)します。
+ 通常、ランタイム (前処理された) テキスト テンプレートで `<#@parameter#>`ディレクティブを使用する必要はありません。 代わりに、生成されたコードに対して追加のコンストラクターや設定可能なプロパティを定義し、パラメーターの値を渡すことができます。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)
 
- ただし、使用する場合`<#@parameter>`実行時テンプレートできます値を渡してにセッションのディクショナリを使用しています。 例として、たとえばという名前の前処理済みテンプレートとして、ファイルを作成した`PreTextTemplate1`します。 テンプレートは、次のコードを使用して、プログラムで呼び出すことができます。
+ ただし、ランタイムテンプレートで `<#@parameter>` を使用する場合、`Session`ディクショナリを使用して渡すこともできます。 例として、 `PreTextTemplate1` という名前の前処理済みテンプレートとしてファイルを作成したとします。 テンプレートは、次のコードを使用して、プログラムで呼び出すことができます。
 
 ```csharp
 PreTextTemplate1 t = new PreTextTemplate1();
@@ -101,4 +101,4 @@ string resultText = t.TransformText();
 ## <a name="obtaining-arguments-from-texttemplateexe"></a>TextTemplate.exe から引数を取得します。
 
 > [!IMPORTANT]
->  `parameter`ディレクティブに設定された値を取得できません、`-a`のパラメーター、`TextTransform.exe`ユーティリティ。 これらの値を取得するには、次のように設定します。`hostSpecific="true"`で、`template`ディレクティブ、および使用`this.Host.ResolveParameterValue("","","argName")`します。
+>  `parameter`ディレクティブは、`TextTransform.exe`ユーティリティの`-a`のパラメーターで設定された値を取得できません。 これらの値を取得するには、`template`ディレクティブで、`hostSpecific="true"` を設定し、`this.Host.ResolveParameterValue("","","argName")` を使用します。
