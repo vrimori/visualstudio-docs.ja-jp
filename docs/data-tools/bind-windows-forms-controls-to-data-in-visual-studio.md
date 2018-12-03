@@ -1,5 +1,5 @@
 ---
-title: Windows フォーム コントロールを Visual Studio でのデータ バインドします。
+title: Windows フォーム コントロールをデータにバインドする
 ms.date: 11/03/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,37 +19,43 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4652d8dd3e9be582bc15c4644711accc06fd283f
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
-ms.translationtype: MT
+ms.openlocfilehash: 596475ed3a5e1cac535ca0cdf43980af44bd4bf1
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34845523"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52304637"
 ---
-# <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>Windows フォーム コントロールを Visual Studio でのデータ バインドします。
+# <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>Visual Studio でのデータへの Windows フォーム コントロールのバインド
+
 データを Windows フォームにバインドすることで、アプリケーションのユーザーに対してデータを表示できます。 これらのデータ バインド コントロールを作成するから項目をドラッグ、**データソース**Visual Studio での Windows フォーム デザイナー ウィンドウ。
 
 ![データ ソースのドラッグ操作](../data-tools/media/raddata-data-source-drag-operation.png)
+
+> [!TIP]
+> 場合、**データソース**ウィンドウが表示されないを選択して開くことができます**ビュー** > **その他の Windows** > **データ ソース**、またはキーを押して**Shift**+**Alt**+**D**します。 表示する Visual Studio で開くプロジェクトがあります、**データソース**ウィンドウ。
 
 項目をドラッグする前にバインドするコントロールの種類を設定できます。 自体、または個々 の列にテーブルを選択するかどうかに応じて異なる値が表示されます。  カスタム値を設定することもできます。 表については、**詳細**各列が個別のコントロールにバインドされていることを意味します。
 
 ![データ ソースを DataGridView にバインドします。](../data-tools/media/raddata-bind-data-source-to-datagridview.png)
 
 ## <a name="bindingsource-and-bindingnavigator-controls"></a>BindingSource と BindingNavigator コントロール
+
 <xref:System.Windows.Forms.BindingSource> コンポーネントは 2 つの目的で利用できます。 最初に、コントロールのデータをバインドするときに、抽象化レイヤーを提供します。 フォームのコントロールにバインドされます、<xref:System.Windows.Forms.BindingSource>データ ソースへの直接の代わりにコンポーネント。 また、オブジェクトのコレクションを管理できます。 <xref:System.Windows.Forms.BindingSource> に型を追加すると、その型の一覧が作成されます。
 
 <xref:System.Windows.Forms.BindingSource> コンポーネントの詳細については、次のトピックを参照してください。
 
--   [BindingSource コンポーネント](/dotnet/framework/winforms/controls/bindingsource-component)
+- [BindingSource コンポーネント](/dotnet/framework/winforms/controls/bindingsource-component)
 
--   [BindingSource コンポーネントの概要](/dotnet/framework/winforms/controls/bindingsource-component-overview)
+- [BindingSource コンポーネントの概要](/dotnet/framework/winforms/controls/bindingsource-component-overview)
 
--   [BindingSource コンポーネント アーキテクチャ](/dotnet/framework/winforms/controls/bindingsource-component-architecture)
+- [BindingSource コンポーネント アーキテクチャ](/dotnet/framework/winforms/controls/bindingsource-component-architecture)
 
 [BindingNavigator コントロール](/dotnet/framework/winforms/controls/bindingnavigator-control-windows-forms)Windows アプリケーションで表示されるデータを移動するためのユーザー インターフェイスを提供します。
 
 ## <a name="bind-to-data-in-a-datagridview-control"></a>DataGridView コントロールでデータをバインドします。
-[DataGridView コントロール](/dotnet/framework/winforms/controls/datagridview-control-overview-windows-forms)、テーブル全体がその 1 つのコントロールにバインドします。 ドラッグすると、 **DataGridView**レコードを移動するためのツール ストリップをフォームに (<xref:System.Windows.Forms.BindingNavigator>) も表示されます。 A[データセット](../data-tools/dataset-tools-in-visual-studio.md)、 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)、 <xref:System.Windows.Forms.BindingSource>、および<xref:System.Windows.Forms.BindingNavigator>コンポーネント トレイに表示されます。 次の図に、 [TableAdapterManager](https://msdn.microsoft.com/library/bb384426.aspx) Customers テーブルには、Orders テーブルにリレーションシップが含まれているためにも追加されます。 これらの変数が宣言されたすべての自動生成されたコード フォーム クラスのプライベート メンバーとして。 塗りつぶしの自動生成されたコード、 **DataGridView**にある、`Form_Load`イベント ハンドラー。 データベースを更新するデータを保存するためのコードにある、`Save`のイベント ハンドラー、 **BindingNavigator**します。 移動したり、必要に応じてこのコードを変更します。
+
+[DataGridView コントロール](/dotnet/framework/winforms/controls/datagridview-control-overview-windows-forms)、テーブル全体がその 1 つのコントロールにバインドします。 ドラッグすると、 **DataGridView**レコードを移動するためのツール ストリップをフォームに (<xref:System.Windows.Forms.BindingNavigator>) も表示されます。 [DataSet](../data-tools/dataset-tools-in-visual-studio.md)、[TableAdapter](../data-tools/create-and-configure-tableadapters.md)、<xref:System.Windows.Forms.BindingSource>、<xref:System.Windows.Forms.BindingNavigator> がコンポーネント トレイに表示されます。 次の図に、 [TableAdapterManager](https://msdn.microsoft.com/library/bb384426.aspx) Customers テーブルには、Orders テーブルにリレーションシップが含まれているためにも追加されます。 これらの変数が宣言されたすべての自動生成されたコード フォーム クラスのプライベート メンバーとして。 塗りつぶしの自動生成されたコード、 **DataGridView**にある、`Form_Load`イベント ハンドラー。 データベースを更新するデータを保存するためのコードにある、`Save`のイベント ハンドラー、 **BindingNavigator**します。 移動したり、必要に応じてこのコードを変更します。
 
 ![BindingNavigator を含む GridView](../data-tools/media/raddata-gridview-with-bindingnavigator.png)
 
@@ -62,6 +68,7 @@ ms.locfileid: "34845523"
 項目をドラッグすることも、**データ ソース**既にデータにコントロールをバインドするフォーム上のコントロールにウィンドウ。 データに既にバインドされているコントロールには、そのデータ バインドは、最も最近ドラッグされた項目にリセットがあります。 有効なドロップ ターゲットにするには、コントロールにから上にドラッグした項目の基になるデータ型を表示することは、**データソース**ウィンドウ。 などのデータ型を持つ項目のドラッグを有効ながない<xref:System.DateTime>上に、<xref:System.Windows.Forms.CheckBox>ため、<xref:System.Windows.Forms.CheckBox>日付を表示することはできません。
 
 ## <a name="bind-to-data-in-individual-controls"></a>個々 のコントロールでデータをバインドします。
+
 データ ソースをバインドすると**詳細**データセット内の各列は個別のコントロールにバインドします。
 
 ![詳細へのデータ ソースをバインドします。](../data-tools/media/raddata-bind-data-source-to-details.png)
@@ -77,5 +84,5 @@ ms.locfileid: "34845523"
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Studio でのデータをコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)
+- [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)
 - [Windows フォーム (.NET Framework) におけるデータ バインディング](/dotnet/framework/winforms/windows-forms-data-binding)

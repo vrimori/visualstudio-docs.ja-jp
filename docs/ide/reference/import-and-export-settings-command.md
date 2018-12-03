@@ -1,6 +1,6 @@
 ---
 title: '[設定のインポートとエクスポート] コマンド'
-ms.date: 11/04/2016
+ms.date: 11/21/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,15 +15,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4119abf74281e3c0dbb2b3d5f3ef472a0527a08f
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 8f212e5c5becb8cf2ae575510825a9c7c9034222
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704588"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388703"
 ---
 # <a name="import-and-export-settings-command"></a>[設定のインポートとエクスポート] コマンド
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の設定をインポート、エクスポート、またはリセットします。
+
+Visual Studio の設定をインポート、エクスポート、またはリセットします。
 
 ## <a name="syntax"></a>構文
 
@@ -32,21 +33,22 @@ Tools.ImportandExportSettings [/export:filename | /import:filename | /reset]
 ```
 
 ## <a name="switches"></a>スイッチ
- /export:`filename`
 
- 任意。 現在の設定を指定したファイルにエクスポートします。
+/export:`filename`
 
- /import:`filename`
+任意。 現在の設定を指定したファイルにエクスポートします。
 
- 任意。 設定を指定したファイルからインポートします。
+/import:`filename`
 
- /reset
+任意。 設定を指定したファイルからインポートします。
 
- 任意。 現在の設定をリセットします。
+/reset
+
+任意。 現在の設定をリセットします。
 
 ## <a name="remarks"></a>コメント
 
-スイッチを指定しないでこのコマンドを実行すると、**[設定のインポートとエクスポート]** ウィザードが開きます。 詳細については、「[同期された設定](../../ide/synchronized-settings-in-visual-studio.md)」を参照してください。
+スイッチを指定しないでこのコマンドを実行すると、**[設定のインポートとエクスポート]** ウィザードが開きます。 詳細については、[設定の同期](../synchronized-settings-in-visual-studio.md)と[環境設定](../environment-settings.md)に関するページを参照してください。
 
 ## <a name="example"></a>例
 
@@ -58,5 +60,7 @@ Tools.ImportandExportSettings /export:"c:\Files\MyFile.vssettings"
 
 ## <a name="see-also"></a>関連項目
 
+- [環境設定](../../ide/environment-settings.md)
+- [設定を同期する](../../ide/synchronized-settings-in-visual-studio.md)
 - [Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)
-- [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
+- [Visual Studio コマンド](../../ide/reference/visual-studio-commands.md)

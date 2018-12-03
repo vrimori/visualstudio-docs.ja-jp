@@ -19,12 +19,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 97d18ef8323eeb0781eb103eb8baa0c3fab0d63c
-ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
-ms.translationtype: MT
+ms.openlocfilehash: f9b4fad02b6b0d8324e13d4465f4602c16ce85ba
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750835"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52305053"
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>チュートリアル: トランザクションにデータを保存する
 
@@ -48,7 +48,7 @@ ms.locfileid: "50750835"
 
        しばらくすると、クエリの実行が完了し、Northwind データベースを作成します。
 
-## <a name="create-a-windows-forms-application"></a>Windows フォーム アプリケーションを作成します。
+## <a name="create-a-windows-forms-application"></a>Windows フォーム アプリケーションを作成する
 
 作成するには、まず、 **Windows フォーム アプリケーション**します。
 
@@ -60,15 +60,15 @@ ms.locfileid: "50750835"
 
 4. プロジェクトに名前を**SavingDataInATransactionWalkthrough**を選び、 **OK**。
 
-     **SavingDataInATransactionWalkthrough**プロジェクトが作成されに追加**ソリューション エクスプ ローラー**します。
+     **SavingDataInATransactionWalkthrough** プロジェクトが作成されて**ソリューション エクスプローラー**に追加されます。
 
 ## <a name="create-a-database-data-source"></a>データベースのデータ ソースを作成します。
 
 このステップでは、**データ ソース構成ウィザード**に基づいてデータ ソースを作成する、`Customers`と`Orders`Northwind サンプル データベース内のテーブル。
 
-1.  **データ**メニューの  **データ ソースの**します。
+1.  開くには、**データ ソース**ウィンドウで、**データ**メニューの  **データ ソースの**します。
 
-2.  **データソース**ウィンドウで、**新しいデータ ソースの追加**を開始する、**データ ソース構成ウィザード**します。
+2.  **[データ ソース]** ウィンドウで、**[新しいデータ ソースの追加]** をクリックして**データ ソース構成ウィザード**を起動します。
 
 3.  **データ ソースの種類を選択**画面で、**データベース**、し、**次**します。
 
@@ -78,7 +78,7 @@ ms.locfileid: "50750835"
 
          - または -
 
-    -   選択**新しい接続**を起動する、**接続の追加/変更** ダイアログ ボックスし、Northwind データベースへの接続を作成します。
+    -   **[新しい接続]** を選択して **[接続の追加] または [接続の変更]** ダイアログ ボックスを表示し、Northwind データベースへの接続を作成します。
 
 5.  データベースにパスワードが必要な場合は、機密データを含めるしを選択するオプションを選択**次**します。
 
@@ -88,15 +88,15 @@ ms.locfileid: "50750835"
 
 8.  選択、`Customers`と`Orders`テーブル、および選択**完了**します。
 
-     **NorthwindDataSet**プロジェクトに追加されて、`Customers`と`Orders`に表示されるテーブル、**データ ソース**ウィンドウ。
+     プロジェクトに **NorthwindDataSet** が追加され、**[データ ソース]** ウィンドウに `Customers` テーブルと `Orders` テーブルが表示されます。
 
 ## <a name="add-controls-to-the-form"></a>コントロールをフォームに追加します。
 
-項目をドラッグして、データ バインド コントロールを作成することができます、**データソース**ウィンドウから、フォームにします。
+**[データ ソース]** ウィンドウからフォームに項目をドラッグして、データ バインド コントロールを作成します。
 
 1. **データソース**ウィンドウで、展開、**顧客**ノード。
 
-2. メインのドラッグ**顧客**ノードから、**データ ソース**ウィンドウ**Form1**。
+2. **[データ ソース]** ウィンドウから **Form1** にメインの **[Customers]** ノードをドラッグします。
 
    レコード間をナビゲートするための <xref:System.Windows.Forms.DataGridView> コントロールとツール ストリップ (<xref:System.Windows.Forms.BindingNavigator>) がフォームに表示されます。 A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、 `CustomersTableAdapter`、 <xref:System.Windows.Forms.BindingSource>、および<xref:System.Windows.Forms.BindingNavigator>コンポーネント トレイに表示されます。
 
@@ -114,7 +114,7 @@ ms.locfileid: "50750835"
 
 2.  選択**System.Transactions** (上、 **.NET** ] タブ)、し、[ **[ok]** します。
 
-     参照を**System.Transactions**プロジェクトに追加されます。
+     **System.Transactions** への参照がプロジェクトに追加されます。
 
 ## <a name="modify-the-code-in-the-bindingnavigators-saveitem-button"></a>BindingNavigator の SaveItem ボタンのコードを変更します。
 
@@ -141,28 +141,28 @@ ms.locfileid: "50750835"
 
 ### <a name="to-delete-existing-orders"></a>既存の注文を削除するには
 
--   次の追加`DeleteOrders`メソッドを**Form1**:
+-   次の `DeleteOrders` メソッドを **Form1** に追加します。
 
      [!code-vb[VbRaddataSaving#5](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_2.vb)]
      [!code-csharp[VbRaddataSaving#5](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_2.cs)]
 
 ### <a name="to-delete-existing-customers"></a>既存の顧客を削除するには
 
--   次の追加`DeleteCustomers`メソッドを**Form1**:
+-   次の `DeleteCustomers` メソッドを **Form1** に追加します。
 
      [!code-vb[VbRaddataSaving#6](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_3.vb)]
      [!code-csharp[VbRaddataSaving#6](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_3.cs)]
 
 ### <a name="to-add-new-customers"></a>新規顧客を追加するには
 
--   次の追加`AddNewCustomers`メソッドを**Form1**:
+-   次の `AddNewCustomers` メソッドを **Form1** に追加します。
 
      [!code-vb[VbRaddataSaving#7](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_4.vb)]
      [!code-csharp[VbRaddataSaving#7](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_4.cs)]
 
 ### <a name="to-add-new-orders"></a>新規注文を追加するには
 
--   次の追加`AddNewOrders`メソッドを**Form1**:
+-   次の `AddNewOrders` メソッドを **Form1** に追加します。
 
      [!code-vb[VbRaddataSaving#8](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_5.vb)]
      [!code-csharp[VbRaddataSaving#8](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_5.cs)]
@@ -173,5 +173,5 @@ ms.locfileid: "50750835"
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: トランザクションを使用してデータを保存](../data-tools/save-data-by-using-a-transaction.md)
+- [方法 : トランザクションを使用してデータを保存する](../data-tools/save-data-by-using-a-transaction.md)
 - [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)

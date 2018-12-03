@@ -9,19 +9,23 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d2e42c31d7cbdb52e602eee4e424eb78ee89d77
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: d8f52061acff03a1339a9c7b7f3f8ff4901ec6a5
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51348697"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388726"
 ---
 # <a name="personalize-the-visual-studio-ide"></a>Visual Studio IDE のカスタマイズ
 
-ユーザー独自の開発スタイルと要件に最適なサポートを行うために Visual Studio をさまざまな方法でカスタマイズすることができます。 設定の多くは Visual Studio インスタンス間でローミングできます &mdash; [同期された設定](../ide/synchronized-settings-in-visual-studio.md)に関するページを参照してください。 このトピックでは、さまざまなカスタマイズ方法と、詳細情報の参照先について簡単に説明します。
+ユーザー独自の開発スタイルと要件に最適なサポートを行うために Visual Studio をさまざまな方法でカスタマイズすることができます。 設定の多くは Visual Studio インスタンス間でローミングできます &mdash; [同期された設定](../ide/synchronized-settings-in-visual-studio.md)に関するページを参照してください。 この記事では、さまざまなカスタマイズ方法と、詳細情報の参照先について簡単に説明します。
 
 > [!NOTE]
 > このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、[Visual Studio for Mac IDE のカスタマイズ](/visualstudio/mac/customizing-the-ide)に関するページを参照してください。
+
+## <a name="default-settings"></a>既定の設定
+
+開発の種類に合わせて Visual Studio を最適化する既定の一連の設定を選択できます。 詳細については、[環境設定](environment-settings.md)に関するページを参照してください。
 
 ## <a name="general-environment-options"></a>一般的な環境オプション
 
@@ -62,6 +66,7 @@ ms.locfileid: "51348697"
 
 ## <a name="see-also"></a>関連項目
 
+- [環境設定](environment-settings.md)
 - [Visual Studio IDE の概要](../ide/visual-studio-ide.md)
 - [クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)
 - [Visual Studio for Mac IDE のカスタマイズ](/visualstudio/mac/customizing-the-ide)

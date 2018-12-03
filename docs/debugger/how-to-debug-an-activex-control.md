@@ -1,5 +1,5 @@
 ---
-title: '方法: ActiveX コントロールのデバッグ |Microsoft ドキュメント'
+title: '方法: ActiveX コントロールのデバッグ |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -26,40 +26,42 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8892d83bb92198b9e8f1b7df1293a06f27d27716
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: d53c2601bc8c4490f9ca43a7e213a90d66b26aac
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31474428"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389294"
 ---
 # <a name="how-to-debug-an-activex-control"></a>方法 : ActiveX コントロールをデバッグする
+
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、[ツール] メニューの [設定のインポートとエクスポート] をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
-  
- ActiveX コントロールをデバッグするには、そのコントロールが実行されるコンテナー (実行可能ファイル) を指定する必要があります。  
-  
-### <a name="to-specify-a-container-for-the-debug-session"></a>デバッグ セッションのコンテナーを指定するには  
-  
-1.  ソリューション エクスプローラーでプロジェクトを選択します。  
-  
-2.  **ビュー** ] メニューの [選択**プロパティ ページ**です。  
-  
-3.  **プロジェクト プロパティ ページ** ダイアログ ボックスで、**構成プロパティ**フォルダー、および選択**デバッグ**です。  
-  
-4.  下にある、**デバッグ**カテゴリで、検索、**コマンド**プロパティです。  
-  
-5.  コンテナーのパス名を指定します。 たとえば、「C:\Program Files\Internet Explorer\IEXPLORE.EXE」のように指定します。  
-  
-6.  Internet Explorer をコンテナーとして指定する、アクティブ デスクトップを使用している場合は、入力`/new`で、**コマンド引数**ボックス。  
-  
-7.  **[OK]** をクリックします。  
-  
-     内のコンテナーを指定しない場合、**プロジェクト プロパティ ページ**ダイアログ ボックスで、デバッグを開始するときに、コンテナーを指定できます。 デバッグを開始する実行コマンドを選択すると、[デバッグ セッション ダイアログ ボックスの実行可能ファイル](../debugger/executable-for-debugging-session-dialog-box.md)が表示されます。 ダイアログ ボックスにコンテナーのパス名を指定します。  
-  
-## <a name="see-also"></a>関連項目  
- [ActiveX コントロール](/cpp/mfc/activex-controls)   
- [テスト コンテナーでイベントのプロパティとテスト](/cpp/mfc/testing-properties-and-events-with-test-container)   
- [COM および ActiveX のデバッグ](../debugger/com-and-activex-debugging.md)   
- [Visual Studio でのデバッグ](../debugger/index.md)  
- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
+> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、[ツール] メニューの [設定のインポートとエクスポート] をクリックします。 詳細については、次を参照してください。[設定にリセット](../ide/environment-settings.md#reset-settings)します。
+
+ActiveX コントロールをデバッグするには、そのコントロールが実行されるコンテナー (実行可能ファイル) を指定する必要があります。
+
+## <a name="to-specify-a-container-for-the-debug-session"></a>デバッグ セッションのコンテナーを指定するには
+
+1.  ソリューション エクスプローラーでプロジェクトを選択します。
+
+2.  **ビュー** ] メニューの [選択**プロパティ ページ**します。
+
+3.  **[プロジェクト プロパティ ページ]** ダイアログ ボックスで、**[構成プロパティ]** フォルダーを開き、**[デバッグ]** を選択します。
+
+4.  **[デバッグ]** カテゴリの **[コマンド]** プロパティを探します。
+
+5.  コンテナーのパス名を指定します。 たとえば、「C:\Program Files\Internet Explorer\IEXPLORE.EXE」のように指定します。
+
+6.  Internet Explorer をコンテナーとして指定し、アクティブ デスクトップを使用している場合は、**[コマンド引数]** ボックスに「`/new`」と入力します。
+
+7.  **[OK]** をクリックします。
+
+     **[プロジェクト プロパティ ページ]** ダイアログ ボックスでコンテナーを指定しなかった場合でも、デバッグを開始するときにコンテナーを指定できます。 実行コマンドを選択してデバッグを開始するときに、[[デバッグ セッションで実行可能] ダイアログ ボックス](../debugger/executable-for-debugging-session-dialog-box.md)が表示されます。 ダイアログ ボックスにコンテナーのパス名を指定します。
+
+## <a name="see-also"></a>参照
+
+- [ActiveX コントロール](/cpp/mfc/activex-controls)
+- [テスト コンテナーでのプロパティとイベントのテスト](/cpp/mfc/testing-properties-and-events-with-test-container)
+- [COM および ActiveX のデバッグ](../debugger/com-and-activex-debugging.md)
+- [Visual Studio でのデバッグ](../debugger/index.md)
+- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)

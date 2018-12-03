@@ -1,7 +1,7 @@
 ---
 title: デバッガーでシンボル (.pdb) ファイルとソース ファイルの指定 |Microsoft Docs
 ms.custom: H1Hack27Feb2017
-ms.date: 04/05/2018
+ms.date: 10/08/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c289da63a8fbc8469734e905c29edca1149e04c4
-ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
-ms.translationtype: MT
+ms.openlocfilehash: 35eb141850770a20b78020c57868a7fb2ff3bf90
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52257382"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389177"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio デバッガーでシンボル (.pdb) ファイルとソース ファイルの指定 (C#、C++、Visual Basic、 F#)
 
@@ -49,7 +49,7 @@ ms.locfileid: "52257382"
 
 シンボル ファイルは、ソース ファイル、および必要に応じてからそれらを取得するサーバーの場所も表示されます。
   
-デバッガーのみを読み込みます *.pdb*と正確に一致するファイル、 *.pdb*アプリのビルド時に作成されたファイル (つまり、元の *.pdb*ファイルまたはコピー)。 コード自体が変更されていない場合でも、アプリのレイアウトは変更できるので、正確な重複する必要があります。 詳細については、次を参照してください[は Visual Studio が必要な理由デバッガー シンボル ファイルと正確に一致するビルドされたバイナリのファイルですか?。](https://blogs.msdn.microsoft.com/jimgries/2007/07/06/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with/)
+デバッガーのみを読み込みます *.pdb*と正確に一致するファイル、 *.pdb*アプリのビルド時に作成されたファイル (つまり、元の *.pdb*ファイルまたはコピー)。 コード自体が変更されていない場合でも、アプリのレイアウトは変更できるので、正確な重複する必要があります。 詳細については、「[Why does Visual Studio require debugger symbol files to exactly match the binary files that they were built with?](https://blogs.msdn.microsoft.com/jimgries/2007/07/06/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with/)」 (ビルドに使用したバイナリ ファイルと完全に一致させるために、Visual Studio でデバッガー シンボル ファイルが必要な理由) を参照してください。
 
 > [!TIP]
 > Windows コードやサード パーティ製のコード、プロジェクトの呼び出しなど、プロジェクトのソース コードの外部のコードをデバッグするには、外部コードの場所を指定する必要があります *.pdb*ファイル (および必要に応じて、ソース ファイル) 正確に一致する必要がありますアプリでビルドします。 
@@ -139,7 +139,7 @@ Visual Studio IDE でプロジェクトをデバッグするときに、デバ�
   
 その他のシンボルのオプションを選択する**ツール** > **オプション** > **デバッグ** > **[全般]**(または**デバッグ** > **オプション** > **全般**)。  
 
-- **DLL のエクスポート (ネイティブのみ) を読み込む**  
+- **dll エクスポートの読み込み (ネイティブのみ)**  
   
   DLL の読み込みでは、C/C++ 用のテーブルをエクスポートします。 詳細については、次を参照してください。 [DLL エクスポート テーブル](#use-dumpbin-exports)します。 DLL エクスポート情報読み取るにはには、既定でオフには、エクスポート テーブルを読み込むためにのいくつかのオーバーヘッドが含まれます。 使用することも`dumpbin /exports`C/C++ ビルドのコマンドラインでします。  
   
@@ -149,14 +149,14 @@ Visual Studio IDE でプロジェクトをデバッグするときに、デバ�
   
   ![オプション&#47;デバッグ&#47;一般的な逆アセンブル オプション](../debugger/media/dbg_options_general_disassembly_checkbox.png "オプション&#47;デバッグ&#47;一般的な逆アセンブル オプション")  
   <a name="BKMK_Use_symbol_servers_to_find_symbol_files_not_on_your_local_machine"></a>
-- **ソース サーバー サポートを有効にします。**  
+- **ソース サーバー サポートを有効にする**  
   
   移行元サーバーを使用して、ローカル コンピューターでは、ソース コードが存在しない場合は、アプリをデバッグする際に、または *.pdb*ファイルがソース コードと一致しません。 移行元サーバーは、ファイルの要求を受け取り、ソース管理から、実際のファイルを返します。 という名前の DLL を使用して、移行元サーバーが実行される*srcsrv.dll*アプリの読み取りに *.pdb*ファイル。 *.Pdb*ファイルには、ソース コード リポジトリと、リポジトリからソース コードを取得するためのコマンドへのポインターが含まれています。 
   
   コマンドを制限することができますを*srcsrv.dll*アプリの実行できる *.pdb*という名前のファイルで許可されているコマンドの一覧を表示してファイル*srcsrv.ini*します。 場所、 *srcsrv.ini*と同じフォルダーにファイル*srcsrv.dll*と*devenv.exe*します。  
   
   >[!IMPORTANT]
-  >アプリの任意のコマンドを埋め込むことができます *.pdb*ファイルを実行するコマンドのみを配置するように、 *srcsrv.ini*ファイル。 ではなくコマンドを実行すると、 *srcsvr.ini*ファイルと、確認のダイアログ ボックスを表示します。 詳細については、「 [Security Warning: Debugger Must Execute Untrusted Command](../debugger/security-warning-debugger-must-execute-untrusted-command.md)」を参照してください。 
+  >アプリの任意のコマンドを埋め込むことができます *.pdb*ファイルを実行するコマンドのみを配置するように、 *srcsrv.ini*ファイル。 *srcsvr.ini* ファイルにないコマンドを実行しようとすると、確認のダイアログ ボックスが表示されます。 詳細については、「 [Security Warning: Debugger Must Execute Untrusted Command](../debugger/security-warning-debugger-must-execute-untrusted-command.md)」を参照してください。 
   >
   >コマンド パラメーターでは何も検証されないため、コマンドを信頼するときは注意してください。 たとえば、次の一覧を表示する*cmd.exe*で、 *srcsrv.ini*、悪意のあるユーザーにパラメーターを指定する場合があります*cmd.exe*したとしても危険です。  
   
@@ -176,13 +176,13 @@ Visual Studio IDE でプロジェクトをデバッグするときに、デバ�
   
   メイクファイルを使って C/C++ アプリケーションをビルドすると、指定すると **/ZI**または **/Zi**を使用せず **/Fd**、コンパイラでは、2 つ作成されます *.pdb*ファイル。  
   
-  - *VC\<x > .pdb*ここで、  *\<x >* など、Visual C のバージョンを表す*VC11.pdb* 
+  - *VC\<x>.pdb*。*\<x>* は Visual C++ のバージョン (*VC11.pdb* など) を表します。 
     
-    *VC\<x > .pdb*個々 のオブジェクト ファイルのすべてのデバッグ情報を格納し、プロジェクトのメイクファイルと同じディレクトリに存在するファイル。 オブジェクト ファイルが作成されるたびに、C/C++ コンパイラにデバッグ情報をマージする*VC\<x > .pdb*します。 などすべてのソース ファイルに共通のヘッダー ファイルが含まれている場合でもその *\<windows.h >*、これらのヘッダーの typedef はすべてのオブジェクト ファイルではなく、1 回だけ格納されます。 挿入された情報は、型情報が含まれていますが、関数定義などのシンボル情報は含まれません。  
+    *VC\<x > .pdb*個々 のオブジェクト ファイルのすべてのデバッグ情報を格納し、プロジェクトのメイクファイルと同じディレクトリに存在するファイル。 オブジェクト ファイルが作成されるたびに、C/C++ コンパイラにデバッグ情報をマージする*VC\<x > .pdb*します。 などすべてのソース ファイルに共通のヘッダー ファイルが含まれている場合でもその *\<windows.h >*、これらのヘッダーの typedef はすべてのオブジェクト ファイルではなく、1 回だけ格納されます。 挿入される情報には、型情報が含まれますが、関数定義などのシンボル情報は含まれません。  
   
   - *\<プロジェクト > .pdb* 
     
-    *\<プロジェクト > .pdb*ファイル、プロジェクトのすべてのデバッグ情報を格納する *.exe*ファイルを開きにある、 *\debug*サブディレクトリ。 *\<プロジェクト > .pdb*ファイルには、関数プロトタイプを含む、完全なデバッグ情報が含まれていますで検出された型情報だけでなく*VC\<x > .pdb*します。 
+    *\<プロジェクト > .pdb*ファイル、プロジェクトのすべてのデバッグ情報を格納する *.exe*ファイルを開きにある、 *\debug*サブディレクトリ。 *\<プロジェクト>.pdb* ファイルには、*VC\<x>.pdb* に含まれる型情報だけでなく、関数プロトタイプなどのあらゆるデバッグ情報が含まれます。 
   
   両方の*VC\<x > .pdb*と*\<プロジェクト > .pdb*ファイルは、増分更新を許可します。 リンカーへのパスを埋め込むことも、 *.pdb*内のファイル、 *.exe*または *.dll*ファイルを作成します。  
   
@@ -194,7 +194,7 @@ Visual Studio IDE でプロジェクトをデバッグするときに、デバ�
   
 ### <a name="net-framework-options"></a>.NET Framework のオプション 
   
-ビルド **/debug**を作成する、 *.pdb*ファイル。 **/debug:full** または **/debug:pdbonly**でアプリケーションをビルドできます。 **/debug:full** でビルドすると、デバッグできるコードが生成されます。 使用して作成 **/debug:pdbonly**生成 *.pdb*ファイルしますが、生成されません、`DebuggableAttribute`にデバッグ情報が使用可能な JIT コンパイラに指示します。 使用 **/debug:pdbonly**を生成する場合 *.pdb*リリース用のファイルをビルドするたくないです。 詳細については、次を参照してください。 [/debug (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option)または[/debug (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/debug)します。  
+ビルド **/debug**を作成する、 *.pdb*ファイル。 **/debug:full** または **/debug:pdbonly**でアプリケーションをビルドできます。 **/debug:full** でビルドすると、デバッグできるコードが生成されます。 **/debug:pdbonly** でビルドすると *.pdb* ファイルは生成されますが、JIT コンパイラにデバッグ情報が使用できることを示す `DebuggableAttribute` は生成されません。 デバッグが必要ないリリース ビルドで *.pdb* ファイルを生成する場合は、**/debug:pdbonly** を使用します。 詳細については、「[/debug (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option)」または「[/debug (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/debug)」を参照してください。  
   
 ### <a name="web-applications"></a>Web アプリケーション  
   
@@ -265,4 +265,4 @@ Visual Studio IDE でプロジェクトをデバッグするときに、デバ�
 ## <a name="see-also"></a>関連項目  
 [シンボル ファイルおよび Visual Studio のシンボルの設定を理解します。](https://blogs.msdn.microsoft.com/devops/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/)
 
-[.NET のリモート シンボル ローディングの変更では、Visual Studio 2012 および 2013](https://blogs.msdn.microsoft.com/devops/2013/10/16/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013/)
+[Visual Studio 2012 および 2013 における .NET のリモート シンボルの読み込みの変更](https://blogs.msdn.microsoft.com/devops/2013/10/16/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013/)

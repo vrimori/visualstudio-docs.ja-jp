@@ -58,7 +58,7 @@
 ###### [プライマリ連絡先の検索](find-primary-contact.md)
 #### [MPSA の場合](mpsa.md)
 #### [クラウド サブスクリプションの場合](cloud-admin.md)
-#### [オンボードのビデオ](https://channel9.msdn.com/Series/Visual-Studio-Subscriptions-Administration/Onboarding-your-organization-to-the-new-Visual-Studio-Subscription-Administration-Portal-and-setting)
+#### [オンボードのビデオ](https://youtu.be/plSu6fpi7UI)
 ### [管理ポータルの使用](using-admin-portal.md)
 #### [サブスクリプションを割り当てる](assign-license.md)
 #### [割り当ての電子メールを再送信する](resend-assignment-email.md)
