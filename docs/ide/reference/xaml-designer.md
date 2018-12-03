@@ -11,19 +11,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 16d0ed610843826f0eac77fc2ce95bcfca3df6e2
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 52691c0b49c74bd39fa97ec8d297ffb823ba705c
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31952288"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388362"
 ---
 # <a name="xaml-designer-options-page"></a>XAML デザイナーのオプション ページ
 
 **XAML デザイナー** のオプション ページを使用して、XAML ドキュメントでの要素と属性の書式設定方法を指定します。 このページを開くには、**[ツール]** メニューを選択し、**[オプション]** を選択します。 **[XAML デザイナー]** プロパティ ページにアクセスするには、**[XAML デザイナー]** ノードを選択します。 ドキュメントを開くと、XAML デザイナーの設定が適用されます。 そのため、設定を変更する場合、変更を確認するには、Visual Studio を閉じて、再度開く必要があります。
 
 > [!NOTE]
-> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
+> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[リセット設定](../environment-settings.md#reset-settings)」を参照してください。
 
 ## <a name="enable-xaml-designer"></a>XAML デザイナーの有効化
 

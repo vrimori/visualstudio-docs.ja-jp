@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: a3adcb961e3031180054706da9d43dd04dccdedf
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: c23a73302e5d4771b3372b8f4534b42806156da0
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51348644"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389618"
 ---
 # <a name="design-xaml-in-visual-studio"></a>Visual Studio で XAML をデザインする
 
@@ -48,7 +48,7 @@ Visual Studio と Blend for Visual Studio は自在に切り替えることが�
 
      ![ファイルの再読み込み操作](../designers/media/blendfilereload.png)
 
-- **レイアウトの同期と設定:** カスタム レイアウトを使用して、ツール ウィンドウのレイアウト変更を保存および適用できます。 同じ Microsoft アカウントでサインインすると、Visual Studio は Visual Studio と Blend for Visual Studio 双方の変更や基本設定をコンピューター間で同期します。 「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
+- **レイアウトの同期と設定:** カスタム レイアウトを使用して、ツール ウィンドウのレイアウト変更を保存および適用できます。 同じ Microsoft アカウントでサインインすると、Visual Studio は Visual Studio と Blend for Visual Studio 双方の変更や基本設定をコンピューター間で同期します。 [複数のコンピューター間での設定の同期](../ide/synchronized-settings-in-visual-studio.md)に関するページを参照してください。
 
 - **共通のソリューション エクスプローラー:** **ソリューション エクスプ ローラー**によって、プロジェクトやファイルが整理して表示されるだけでなく、プロジェクトやファイルに関連付けられているコマンドにすばやくアクセスできます。 ソリューション エクスプ ローラーを使用すると、大規模なエンタープライズ プロジェクトでの作業が容易になります。 「[ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)」をご覧ください。
 

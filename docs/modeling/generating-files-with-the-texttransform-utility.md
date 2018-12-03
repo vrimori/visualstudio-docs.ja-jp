@@ -24,11 +24,11 @@ ms.locfileid: "50967082"
 TextTransform.exe は、テキスト テンプレートを変換するために使用できるコマンド ライン ツールです。 TextTransform.exe を呼び出すときに、引数として、テキスト テンプレート ファイルの名前を指定します。 TextTransform.exe では、テキスト変換エンジンを呼び出し、テキスト テンプレートを処理します。 TextTransform.exe は通常、スクリプトから呼び出されます。ただし、Visual Studio あるいは、ビルド プロセスの中で、テキスト変換が実行されるため、通常、必須ではありません。
 
 > [!NOTE]
-> ビルド プロセスの一部としてテキスト変換を実行する場合は、MSBuild のテキスト変換タスクの使用を検討してください。 詳細については、次を参照してください。[ビルド プロセスでのコード生成](../modeling/code-generation-in-a-build-process.md) Visual Studio がインストールされているコンピューターでは、テキスト テンプレートを変換するアプリケーションあるいは Visual Studio 拡張機能を作成することもできます。 詳細については、次を参照してください。[カスタム ホストを使用してテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)
+> ビルド プロセスの一部としてテキスト変換を実行する場合は、MSBuild のテキスト変換タスクの使用を検討してください。 詳細については、次を参照してください。[ビルド プロセスでのコード生成](../modeling/code-generation-in-a-build-process.md)  Visual Studio がインストールされているコンピューターでは、テキスト テンプレートを変換するアプリケーションあるいは Visual Studio 拡張機能を作成することもできます。 詳細については、次を参照してください。[カスタム ホストを使用してテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)します。
 
  TextTransform.exe は、次のディレクトリにあります。
 
- Professional edition: 
+ Professional edition:
 
 **\Program files (x86) \Microsoft Visual Studio\2017\Professional\Common7\IDE**
 

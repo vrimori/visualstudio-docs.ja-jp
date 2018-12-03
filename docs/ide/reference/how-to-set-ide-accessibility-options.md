@@ -13,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c5d0149be4996f762373aae77d7535dbf8e02809
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: df94a57358edd9619b43bbcddb26d4e3485a1ab1
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49909797"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388427"
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>方法: IDE アクセシビリティ オプションを設定する
 
@@ -27,10 +27,10 @@ ms.locfileid: "49909797"
 
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] には、視力の弱い方に見やすい表示にしたり、動作に制限があっても入力しやすくするための機能が装備してあります。 たとえば、エディター内のテキストのサイズや色を変更する機能、ツール バーのテキストやボタンのサイズを変更する機能、入力する文字数を減らすためのメソッドやパラメーターのオート コンプリート機能などがあります。
 
- また、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] では、Dvorak 配列のキーボードがサポートされています。この配列では、最も使用頻度の高い文字が最も入力しやすい位置にあります。 また、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] で設定されている既定のショートカット キーをカスタマイズすることもできます。 詳細については、「[Visual Studio でのキーボード ショートカットの識別とカスタマイズ](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)」をご覧ください。
+また、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] では、Dvorak 配列のキーボードがサポートされています。この配列では、最も使用頻度の高い文字が最も入力しやすい位置にあります。 また、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] で設定されている既定のショートカット キーをカスタマイズすることもできます。 詳細については、「[Visual Studio でのキーボード ショートカットの識別とカスタマイズ](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)」をご覧ください。
 
 > [!NOTE]
-> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
+> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[リセット設定](../environment-settings.md#reset-settings)」を参照してください。
 
 ## <a name="editors-dialogs-and-tool-windows"></a>エディター、ダイアログ、ツール ウィンドウ
 

@@ -1,16 +1,13 @@
 ---
-title: '方法 : Visual Basic 開発者設定が適用されたビルド構成を管理する'
-ms.date: 11/04/2016
+title: Visual Basic 開発者設定を使用してビルド構成を管理する
+ms.date: 11/21/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-compile
 ms.topic: conceptual
 helpviewer_keywords:
-- Visual Studio, building with Visual Basic settings
-- MSBuild, debug build
 - advanced build configurations
-- building with Visual Basic developer settings
+- building with Visual Basic developer settings (Visual Studio)
 - debug builds
-- MSBuild, release build
 - release builds
 ms.assetid: eaea6e0b-6c61-4869-8d63-d372c745a23c
 author: gewarren
@@ -18,20 +15,20 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 987419e62d54b44a21a70f625e2a240bd7aecc21
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 90e00c544db2064f55d78de5dad00cc27105451e
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31946261"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388687"
 ---
 # <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>方法 : Visual Basic 開発者設定が適用されたビルド構成を管理する
 
-既定では、すべてのビルド構成の詳細オプションは Visual Studio 開発者設定が適用されて非表示になっています。 このトピックでは、これらの設定を手動で有効にする方法について説明します。
+既定では、Visual Studio 開発者設定が適用されると、すべてのビルド構成の詳細オプションが非表示になります。 この記事では、これらのビルド設定を手動で有効にする方法について説明します。
 
 ## <a name="enable-advanced-build-configurations"></a>ビルド構成の詳細を有効にする
 
-既定では、**[構成マネージャー]** ダイアログ ボックスおよび[プロジェクト デザイナー](..//ide/reference/application-page-project-designer-visual-basic.md)の **[構成]** 一覧と **[プラットフォーム]** 一覧を開くためのオプションは、Visual Basic 開発者設定によって非表示になっています。
+既定では、**[構成マネージャー]** ダイアログ ボックスおよび[プロジェクト デザイナー](../ide/reference/application-page-project-designer-visual-basic.md)の **[構成]** 一覧と **[プラットフォーム]** 一覧を開くためのオプションは、Visual Basic 開発者設定によって非表示になっています。
 
 1.  **[ツール]** メニューの **[オプション]** をクリックします。
 
@@ -50,3 +47,4 @@ ms.locfileid: "31946261"
 
 - [ビルド構成について](../ide/understanding-build-configurations.md)
 - [コンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)
+- [環境設定](../ide/environment-settings.md)

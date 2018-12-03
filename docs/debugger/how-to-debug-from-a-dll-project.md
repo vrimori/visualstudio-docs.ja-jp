@@ -1,7 +1,7 @@
 ---
 title: '方法: DLL プロジェクトからデバッグ |Microsoft Docs'
 ms.custom: ''
-ms.date: 05/24/2018
+ms.date: 10/10/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
@@ -20,18 +20,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b7b38ac26a07965dc5408c1da1c655a010b6a788
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+ms.openlocfilehash: e006bbd27acc0fa88cfee1b22cb435acba1e282e
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49266189"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388255"
 ---
-# <a name="how-to-debug-from-a-dll-project-in-visual-studio"></a>方法: Visual Studio で DLL プロジェクトからデバッグ
+# <a name="how-to-debug-from-a-dll-project-in-visual-studio-c-c-visual-basic-f"></a>方法: Visual Studio で DLL プロジェクトからデバッグ (C#、C++、Visual Basic、 F#)
 
 DLL プロジェクトをデバッグする方法の 1 つでは、DLL プロジェクトのプロパティで呼び出し元のアプリを指定します。 自体、DLL プロジェクトからデバッグを開始することができます。 このメソッドを使用するには、アプリは、構成するものと同じ場所に同じ DLL を呼び出す必要があります。 場合は、アプリを検索してさまざまなバージョンの DLL を読み込みます、そのバージョンには、ブレークポイントが含まれません。 その他の Dll のデバッグの方法では、次を参照してください。 [DLL のデバッグ プロジェクト](../debugger/debugging-dll-projects.md)します。
   
-マネージ DLL を呼び出すネイティブ アプリ、管理対象アプリが、ネイティブ DLL を呼び出す、または、DLL と呼び出し元のアプリの両方をデバッグできます。 詳細については、次を参照してください。[方法: 混合モードでデバッグ](../debugger/how-to-debug-in-mixed-mode.md)します。   
+マネージ DLL を呼び出すネイティブ アプリ、管理対象アプリが、ネイティブ DLL を呼び出す、または、DLL と呼び出し元のアプリの両方をデバッグできます。 詳細については、「[方法: 混合モードでデバッグする](../debugger/how-to-debug-in-mixed-mode.md)」を参照してください。   
 
 ネイティブおよびマネージ DLL プロジェクトでは、呼び出し元のアプリを指定するためのさまざまな設定があります。 
 
@@ -49,15 +49,15 @@ DLL プロジェクトをデバッグする方法の 1 つでは、DLL プロジ
    
    ![[プロパティ] ウィンドウをデバッグ](../debugger/media/dbg-debugging-properties-dll.png "デバッグのプロパティ ウィンドウ")  
    
-1. 必要なプログラム引数を追加、**コマンド引数**ボックス。  
+1. **[コマンド引数]** ボックスに、任意の必要なプログラム引数を追加します。  
    
 1. **[OK]** を選択します。
 
 ## <a name="specify-a-calling-app-in-a-managed-dll-project"></a>マネージ DLL プロジェクトで呼び出し元のアプリを指定します。  
   
-1. C# または Visual Basic DLL プロジェクトを選択**ソリューション エクスプ ローラー**します。 選択、**プロパティ**アイコン、キーを押して**Alt**+**」と入力**、または右クリックし、選択**プロパティ**します。
+1. 選択、C#または Visual Basic DLL プロジェクトの **ソリューション エクスプ ローラー**します。 選択、**プロパティ**アイコン、キーを押して**Alt**+**」と入力**、または右クリックし、選択**プロパティ**します。
    
-1. 確認、**構成**にウィンドウの上部にあるフィールドが設定されている**デバッグ**します。
+1. ウィンドウの上部にある **[構成]** フィールドが **[デバッグ]** に設定されていることを確認します。
    
 1. **開始アクション**:
    
@@ -69,7 +69,7 @@ DLL プロジェクトをデバッグする方法の 1 つでは、DLL プロジ
    
 1. 必要なコマンドライン引数を追加、**コマンドライン引数**または**アプリケーション引数**フィールド。
    
-   ![C# のデバッグ プロパティ ウィンドウ](../debugger/media/dbg-debugging-properties-dll-csharp.png "c# のデバッグ プロパティ ウィンドウ") 
+   ![C#[プロパティ] ウィンドウをデバッグ](../debugger/media/dbg-debugging-properties-dll-csharp.png " C#デバッグのプロパティ ウィンドウ") 
    
 1. 使用**ファイル** > **選択した項目の保存**または**Ctrl**+**S**変更を保存します。
 
@@ -84,7 +84,7 @@ DLL プロジェクトをデバッグする方法の 1 つでは、DLL プロジ
 デバッグしても、ブレークポイントがヒットしない場合、DLL を出力することを確認 (既定で、 *\<プロジェクト > \Debug*フォルダー) は、呼び出し元のアプリを呼び出している場所です。
   
 ## <a name="see-also"></a>関連項目  
- [DLL プロジェクトのデバッグ](../debugger/debugging-dll-projects.md)   
+ [DLL プロジェクトをデバッグする](../debugger/debugging-dll-projects.md)   
  [C# デバッグ構成のプロジェクト設定](../debugger/project-settings-for-csharp-debug-configurations.md)   
  [Visual Basic デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
  [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)
