@@ -20,7 +20,7 @@ ms.workload:
 - aspnet
 ms.openlocfilehash: 71b6cbc3f523b8f21b21b0e69b1d6e45e23acb0c
 ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49915348"
@@ -44,7 +44,7 @@ ms.locfileid: "49915348"
  > [!IMPORTANT]
  > 使用はお勧め以降 Windows Server 2008 R2 では、 [ApplicationPoolIdentity](/iis/manage/configuring-security/application-pool-identities)として各アプリケーション プールの id。
   
- [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスの名前は、デバッグ シナリオや IIS のバージョンによって異なります。 詳細については、「 [How to: Find the Name of the ASP.NET Process](../debugger/how-to-find-the-name-of-the-aspnet-process.md)」を参照してください。  
+ [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスの名前は、デバッグ シナリオや IIS のバージョンによって異なります。 詳細については、「[方法 : ASP.NET プロセスの名前を見つける](../debugger/how-to-find-the-name-of-the-aspnet-process.md)」を参照してください。  
   
  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスを実行しているユーザー アカウントは、IIS を実行しているサーバーの machine.config ファイルを編集することによって変更できます。 これを行うには、 **インターネット インフォメーション サービス (IIS) マネージャー**を使用するのが最善です。 詳細については、次を参照してください。[方法: 実行、ワーカー プロセス ユーザー アカウントで](../debugger/how-to-run-the-worker-process-under-a-user-account.md)します。  
   
