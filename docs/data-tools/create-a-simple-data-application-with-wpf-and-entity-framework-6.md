@@ -1,5 +1,5 @@
 ---
-title: WPF と Entity Framework 6 で単純なデータ アプリケーションを作成します。
+title: WPF と Entity Framework 6 を使用して単純なデータ アプリケーションを作成する
 ms.date: 08/22/2017
 ms.topic: conceptual
 dev_langs:
@@ -11,14 +11,14 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8909ef785bd721e5b07046329e4841cebc5ec24e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 5993256b41a07c4861ef2def58dc14d7fd849313
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49822073"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52305612"
 ---
-# <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>WPF と Entity Framework 6 で単純なデータ アプリケーションを作成します。
+# <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>WPF と Entity Framework 6 を使用して単純なデータ アプリケーションを作成する
 
 このチュートリアルでは、Visual Studio で基本的な「フォーム オーバー データ」アプリケーションを作成する方法を示します。 アプリでは、SQL Server LocalDB、Northwind データベース、Entity Framework 6、および Windows Presentation Foundation を使用します。 マスター/詳細ビューでは、基本的なデータ バインドを実行する方法を示し、ボタンを使ってカスタム バインドのナビゲーターが**Move Next**、 **Move Previous**、 **を先頭に移動**、**末尾に移動**、 **Update**と**削除**します。
 

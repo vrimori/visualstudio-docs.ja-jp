@@ -1,7 +1,7 @@
 ---
 title: マイ コードのみのユーザー コードのデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 05/18/2018
+ms.date: 10/22/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 0f0df097-bbaf-46ad-9ad1-ef5f40435079
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 854ce90f18b5df7d3e25b4b0949d76202e4f4a04
-ms.sourcegitcommit: 12d6398c02e818de4fbcb4371bae9e5db6cf9509
-ms.translationtype: MT
+ms.openlocfilehash: 01e36c528b71bb49b29265890ca6c48863f01be9
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050340"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389028"
 ---
 # <a name="debug-only-user-code-with-just-my-code"></a>マイ コードのみのユーザー コードのみのデバッグします。 
 
@@ -23,13 +23,13 @@ ms.locfileid: "50050340"
 
 .NET Framework、C++、および JavaScript のプロジェクトでマイ コードのみが異なる方法では動作します。
 
-##  <a name="BKMK_Enable_or_disable_Just_My_Code"></a> 有効にするか、マイ コードのみを無効にします。  
+##  <a name="BKMK_Enable_or_disable_Just_My_Code"></a>"マイ コードのみ" の有効/無効の切り替え  
 
 ほとんどのプログラミング言語では、マイ コードのみは既定で有効にします。 
 
 - 有効または Visual Studio で、マイ コードのみを無効にする**ツール** > **オプション**(または**デバッグ** > **オプション**) >**デバッグ** > **全般**をオンまたはオフ**マイ コードのみを有効にする**します。
   
- ![オプション] ダイアログ ボックスで [マイ コードのみを有効にする](../debugger/media/dbg_justmycode_options.png "マイ コードのみを有効にします。")  
+ ![オプション ダイアログ ボックスで マイ コードのみを有効にする](../debugger/media/dbg_justmycode_options.png "マイ コードのみを有効にします。")  
   
 > [!NOTE]
 > **マイ コードのみを有効にする**はすべての言語のすべての Visual Studio プロジェクトに適用されるグローバル設定です。  
@@ -56,7 +56,7 @@ ms.locfileid: "50050340"
 
 展開された外部のコード行をダブルクリックすると、**呼び出し履歴**ウィンドウには、ソース コード内で緑で呼び出し元のコード行が強調表示されます。 Dll または他のモジュールが見つからないか、読み込まれた場合、シンボルやソースが見つかりません。 ページを開くことがあります。
 
-##  <a name="BKMK__NET_Framework_Just_My_Code"></a>.NET framework マイ コードのみ 
+##  <a name="BKMK__NET_Framework_Just_My_Code"></a>.NET Framework での "マイ コードのみ" 
 
 マイ コードのみ、.NET Framework プロジェクトでシンボルを使用して (*.pdb*) ファイルとプログラム最適化をユーザーと非ユーザー コードを分類します。 .NET Framework デバッガーは、バイナリを最適化し、読み込まれていない考慮 *.pdb*非ユーザー コード ファイル。
   
@@ -81,7 +81,7 @@ ms.locfileid: "50050340"
   
 初回例外で、例外を有効にする場合は、ソース コード内で緑で呼び出し元のユーザー コード行が強調表示されます。 **呼び出し履歴**ウィンドウには、というラベルの注釈付きフレームが表示されます。 **[外部コード]** します。  
 
-##  <a name="BKMK_C___Just_My_Code"></a> C++ マイ コードのみ  
+##  <a name="BKMK_C___Just_My_Code"></a>C++ での "マイ コードのみ"  
   
 C++ では、マイ コードのみを有効にするのと同じです、 [(だけマイ コードのデバッグ)/JMC](/cpp/build/reference/jmc)コンパイラ スイッチ。
 
@@ -117,7 +117,7 @@ C++ では、マイ コードのみを有効にするのと同じです、 [(だ
  C++ のプロジェクトでは、関数を非ユーザー コードとしてオーバーしてステップを指定できます *\*.natstepfilter*ファイル。  
   
 - Visual Studio のすべてのローカル ユーザーの非ユーザー コードを指定するには、追加、 *.natstepfilter*ファイルを *%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers*フォルダー。  
-- 個々 のユーザーの非ユーザー コードを指定するには、追加、 *.natstepfilter*ファイルを *%USERPROFILE%\My documents \visual Studio 2017\Visualizers*フォルダー。  
+- 個々のユーザーの非ユーザー コードを指定するには、*%USERPROFILE%\My Documents\Visual Studio 2017\Visualizers* フォルダーに *.natstepfilter* ファイルを追加します。  
   
 A *.natstepfilter*ファイルは、この構文を使用して XML ファイル。  
   
@@ -140,7 +140,7 @@ A *.natstepfilter*ファイルは、この構文を使用して XML ファイル
 |要素|説明|  
 |-------------|-----------------|  
 |`Function`|必須。 1 つ以上の関数を非ユーザー関数として指定します。|  
-|`Name`|必須。 一致を照合する完全な関数名を指定する ECMA-262 書式の正規表現。 例えば:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> は、`MyNS::MyClass` のすべてのメソッドが非ユーザー コードと見なされることをデバッガーに知らせます。 一致照合では、大文字と小文字が区別されます。|  
+|`Name`|必須。 一致を照合する完全な関数名を指定する ECMA-262 書式の正規表現。 例:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> は、`MyNS::MyClass` のすべてのメソッドが非ユーザー コードと見なされることをデバッガーに知らせます。 一致照合では、大文字と小文字が区別されます。|  
 |`Module`|任意。 関数を含むモジュールへの完全パスを指定する ECMA-262 書式の正規表現。 一致では、大文字と小文字を区別しません。|  
 |`Action`|必須。 大文字と小文字が区別される以下のいずれかの値です。<br /><br /> `NoStepInto`  -関数をステップ オーバーするデバッガーに指示します。<br /> `StepInto`  -その他のオーバーライド、関数にステップ インをデバッガーに指示`NoStepInto`一致する関数。|  
   
@@ -148,8 +148,8 @@ A *.natstepfilter*ファイルは、この構文を使用して XML ファイル
 
 C++ プロジェクトでは、モジュール、ソース ファイル、および関数を指定することができます、**呼び出し履歴**でそれらを指定し、ウィンドウが非ユーザー コードとして扱います *\*.natjmc*ファイル。  
   
--   Visual Studio コンピューターのすべてのユーザーの非ユーザー コードを指定するには、追加、 *.natjmc*ファイルを *%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers*フォルダー。  
--   個々 のユーザーの非ユーザー コードを指定するには、追加、 *.natjmc*ファイルを *%USERPROFILE%\My documents \visual Studio 2017\Visualizers*フォルダー。  
+-   Visual Studio コンピューターのすべてのユーザーの非ユーザー コードを指定するには、*%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers* フォルダーに *.natjmc* ファイルを追加します。  
+-   個人のユーザーの非ユーザー コードを指定するには、*%USERPROFILE%\My Documents\Visual Studio 2017\Visualizers* フォルダーに *.natjmc* ファイルを追加します。  
 
 A *.natjmc*ファイルは、この構文を使用して XML ファイル。  
   
@@ -177,7 +177,7 @@ A *.natjmc*ファイルは、この構文を使用して XML ファイル。
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Name`|必須。 モジュールの完全パス。 Windows のワイルドカード文字を使用することができます`?`(0 個または 1 つの文字) と`*`(0 個以上の文字)。 例えば以下のようにします。<br /><br /> `<Module Name="?:\3rdParty\UtilLibs\*" />`<br /><br /> デバッガーのすべてのモジュールの処理に指示*\3rdParty\UtilLibs*外部コードとして任意のドライブにします。|  
+|`Name`|必須。 モジュールの完全パス。 Windows のワイルドカード文字を使用することができます`?`(0 個または 1 つの文字) と`*`(0 個以上の文字)。 たとえば、オブジェクトに適用された<br /><br /> `<Module Name="?:\3rdParty\UtilLibs\*" />`<br /><br /> では、ドライブの *\3rdParty\UtilLibs* 内のすべてのモジュールを外部コードとして扱うことをデバッガーに指示します。|  
 |`Company`|任意。 実行可能ファイルに埋め込まれているモジュールを発行する会社の名前。 この属性を使用して、モジュールのあいまいさを解消することができます。|  
   
  **File 要素の属性**  
@@ -194,9 +194,9 @@ A *.natjmc*ファイルは、この構文を使用して XML ファイル。
 |`Module`|任意。 関数を含むモジュールの名前または完全パス。 この属性を使用して、同じ名前の関数のあいまいさを解消することができます。|  
 |`ExceptionImplementation`|`true` に設定すると、この関数ではなく、例外をスローした関数が呼び出し履歴に表示されます。|  
   
-##  <a name="BKMK_JavaScript_Just_My_Code"></a> マイ コードのみの JavaScript  
+##  <a name="BKMK_JavaScript_Just_My_Code"></a>JavaScript での "マイ コードのみ"  
 
-<a name="BKMK_JS_User_and_non_user_code"></a> マイ コードのみを JavaScript では、以下のいずれかのコードを分類することによってステップ実行と呼び出し履歴の表示を制御します。  
+<a name="BKMK_JS_User_and_non_user_code"></a>JavaScript の "マイ コードのみ" では、以下のいずれかの方法でコードを分類することによって、ステップ実行と呼び出し履歴表示が制御されます。  
 
 |||  
 |-|-|  
@@ -218,7 +218,7 @@ JavaScript デバッガーはユーザーまたはこの順序でないユーザ
   
 分類の各手順で、前の手順はオーバーライドされます。 
 
-その他のすべてのコードとして分類**MyCode**します。  
+他のコードはすべて、**MyCode** として分類されます。  
 
 既定の分類を変更して、ユーザーまたは非ユーザー コードとして追加することで特定のファイルや Url を分類、 *.json*という名前のファイル*mycode.json* JavaScript プロジェクトのルート フォルダーにします。 参照してください[JavaScript マイ コードのみをカスタマイズ](#BKMK_JS_Customize_Just_My_Code)します。 
 
@@ -226,7 +226,7 @@ JavaScript デバッガーはユーザーまたはこの順序でないユーザ
 
 - 関数が非ユーザー コードでは場合、**デバッグ** > **ステップ イン**(または**F11**) と同様に動作**デバッグ** > **をステップ オーバーする**(または**F10**)。  
 - ステップが非ユーザーで開始する場合 (**LibraryCode**または**UnrelatedCode**)、コードがマイ コードのみが有効になっていない場合のように動作一時的にステップ インします。 ユーザー コードでは、マイ コードのみにステップ インとステップ実行を再度有効にします。  
-- 現在の実行コンテキストを離れることでユーザー コードのステップ結果、次のユーザーが実行されたコード行でデバッガーが停止します。 たとえば、コールバックの実行で**LibraryCode**コード、デバッガーは、ユーザー コードの次の行が実行されるまでを続行します。
+- 現在の実行コンテキストを離れることでユーザー コードのステップ結果、次のユーザーが実行されたコード行でデバッガーが停止します。 たとえば、コールバックが **LibraryCode** コードで実行されると、デバッガーはユーザー コードの次の行が実行されるまで続行されます。
 - **ステップ アウト**(または**Shift**+**F11**) ユーザー コードの次の行で停止します。 
 
 ユーザー コードがある場合は、終了、別のブレークポイントにヒットまたは、エラーがスローされるまでは引き続きデバッグします。 
@@ -242,7 +242,7 @@ JavaScript デバッガーはユーザーまたはこの順序でないユーザ
   
 初回例外、例外が有効になっていて、例外が発生します**LibraryCode**または**UnrelatedCode**:  
   
--   例外を処理すると、デバッガーは中断されません。  
+-   例外が処理される場合、デバッガーは中断されません。  
 -   例外が処理されない場合、デバッガーは中断します。  
   
 ###  <a name="BKMK_JS_Customize_Just_My_Code"></a> マイ コードのみの JavaScript をカスタマイズします。  
@@ -279,28 +279,28 @@ JavaScript デバッガーはユーザーまたはこの順序でないユーザ
   
  **Eval、Function、および ScriptBlock**  
   
- **Eval**、**関数**、および**ScriptBlock**キー値のペアを決定する方法を動的に生成されたコードの分類します。  
+ **Eval**、**Function**、および **ScriptBlock** のキーと値のペアで、動的に生成されたコードを分類する方法が決まります。  
   
 |||  
 |-|-|  
-|**評価版**|ホスト提供の `eval` 関数に文字列を渡すことで実行されるスクリプト。 既定では、Eval スクリプトとして分類**MyCode**します。|  
-|**Function**|`Function` コンストラクターに文字列を渡すことで実行されるスクリプト。 既定では、関数のスクリプトとして分類**LibraryCode**します。|  
-|**スクリプト ブロック**|`setTimeout`、`setImmediate`、または `setInterval` 関数に文字列を渡すことで実行されるスクリプト。 既定では、ScriptBlock スクリプトとして分類**UnrelatedCode**します。|  
+|**Eval**|ホスト提供の `eval` 関数に文字列を渡すことで実行されるスクリプト。 既定では、Eval スクリプトは **MyCode** として分類されます。|  
+|**Function**|`Function` コンストラクターに文字列を渡すことで実行されるスクリプト。 既定では、Function スクリプトは **LibraryCode** として分類されます。|  
+|**ScriptBlock**|`setTimeout`、`setImmediate`、または `setInterval` 関数に文字列を渡すことで実行されるスクリプト。 既定では、ScriptBlock スクリプトは **UnrelatedCode** として分類されます。|  
   
  以下のいずれかのキーワードに値を変更できます。  
   
--   `MyCode`  スクリプトとしては、分類**MyCode**します。  
--   `Library`  スクリプトとしては、分類**LibraryCode**します。  
--   `Unrelated`  スクリプトとしては、分類**UnrelatedCode**します。  
+-   `MyCode` では、スクリプトが **MyCode** として分類されます。  
+-   `Library` では、スクリプトが **LibraryCode** として分類されます。  
+-   `Unrelated` では、スクリプトが **UnrelatedCode** として分類されます。  
   
   **MyCode、Libraries、および Unrelated**  
   
- **MyCode**、**ライブラリ**、および**Unrelated**キー値のペアは、Url または分類を追加するファイルを指定します。  
+ **MyCode**、**Libraries**、および **Unrelated** のキーと値のペアでは、分類に含める URL またはファイルを指定します。  
   
 |||  
 |-|-|  
-|**MyCode**|配列の Url またはファイルとして分類される**MyCode**します。|  
-|**ライブラリ**|配列の Url またはファイルとして分類される**LibraryCode**します。|  
-|**関連付けられていません。**|配列の Url またはファイルとして分類される**UnrelatedCode**します。|  
+|**MyCode**|**MyCode** として分類される URL またはファイルの配列。|  
+|**Libraries**|**LibraryCode** として分類される URL またはファイルの配列。|  
+|**Unrelated**|**UnrelatedCode** として分類される URL またはファイルの配列。|  
   
  URL またはファイルの文字列は、1 つ以上を持つことができます`*`、0 個以上の文字に一致する文字。 `*` 正規表現として同じ`.*`します。

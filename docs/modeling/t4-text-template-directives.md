@@ -1,4 +1,4 @@
----
+﻿---
 title: T4 テキスト テンプレートのディレクティブ
 ms.date: 11/04/2016
 ms.topic: conceptual

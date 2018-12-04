@@ -2,7 +2,7 @@
 title: Visual Studio のヘルプを作成できるようにC#バグを使用したコード
 description: バグをより優れたコードを記述する方法を理解します。
 ms.custom: debug-experiments
-ms.date: 10/30/2018
+ms.date: 11/20/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 914b4332a715c86aab7e1fad7d901231cbfd40c5
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
-ms.translationtype: MT
+ms.openlocfilehash: 2c16cfdc8d554ce9bf556ea707f977989e1dab72
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948960"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389378"
 ---
-# <a name="write-better-c-code-using-visual-studio"></a>優れたC#Visual Studio を使用するコード
+# <a name="fix-bugs-by-writing-better-c-code-using-visual-studio"></a>適切に記述することでバグを修正C#Visual Studio を使用するコード
 
 コードをデバッグして、--かかることがあります、フラストレーション場合があります--タスク。 効果的にデバッグする方法については時間がかかります。 Visual Studio などの強力な IDE すると、ジョブがずっと容易になります。 IDE より迅速にコードをデバッグしてだけでなく、ですが、ヘルプのバグの減少より優れたコードを記述することができますが役立ちます。 この記事の目的は、コード アナライザーを使用するタイミングを知り、ときに、デバッガーを使用し、その他のツールを使用する場合に、デバッグのプロセスの全体像を提供すること。
 
@@ -42,7 +42,7 @@ ms.locfileid: "51948960"
 アプリを作成する Visual Studio を開き、選択**ファイル > 新しいプロジェクト**します。 **Visual C#** 、選択**Windows デスクトップ**または **.NET Core**、中央のペインの 、**コンソール アプリ**します。 ような名前を入力**Console_Parse_JSON**  をクリック**OK**します。 Visual Studio によってプロジェクトが作成されます。 貼り付け、[サンプル コード](#sample-code)にプロジェクトの*Program.cs*ファイル。
 
 > [!NOTE]
-> **[コンソール アプリケーション]** プロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 選択、 **.NET デスクトップ開発**または **.NET Core クロス プラットフォーム開発**ワークロードを選択し、**変更**します。
+> **[コンソール アプリケーション]** プロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 **[.NET デスクトップ開発]** または **[.NET Core クロスプラットフォームの開発]** ワークロードを選択し、**[変更]** を選択します。
 
 ## <a name="find-the-red-and-green-squiggles"></a>赤と緑の波線を確認してください。
 
@@ -113,17 +113,17 @@ item.totalpoints += users[i].points;
 
 赤い波線がすべての修正および解決--または少なくとも調査 - が場合緑の波線をすべて準備が完了したら、アプリをデバッガーを起動して実行します。
 
-キーを押して**F5** (**デバッグ > [デバッグ開始]**) または**デバッグの開始**ボタン![デバッグの開始](../debugger/media/dbg-tour-start-debugging.png "デバッグの開始")デバッグ ツールバー。
+**F5** キー (**[デバッグ] > [デバッグの開始]**) を押すか、またはデバッグ ツールバーの **[デバッグの開始]** ボタン ![デバッグの開始](../debugger/media/dbg-tour-start-debugging.png "デバッグの開始") を選択します。
 
 この時点では、サンプル アプリがスローされます、`SerializationException`例外 (ランタイム エラー)。 つまり、アプリは、シリアル化しようとするデータのチョークします。 デバッグ モード (デバッガーをアタッチ) でアプリを起動したため、デバッガーの例外ヘルパーは例外をスローし、役に立つエラー メッセージを提供するコードに移動します。
 
 ![SerializationException に発生します](../debugger/media/write-better-code-serialization-exception.png)
 
-エラー メッセージでは、するように指示する値`4o`を整数として解析できません。 そのため、この例で、データがわかってが正しくありません:`4o`べき`40`します。 ただし、実際のシナリオ (たとえば、web サービスから取得する) でデータの管理でないかどうかは、それについて実行して操作を行いますか? どのように解決すればこれでしょうか。
+エラー メッセージでは、するように指示する値`4o`を整数として解析できません。 そのため、この例で、データがわかってが正しくありません:`4o`べき`40`します。 ただし、実際のシナリオ (たとえば、web サービスから取得する) でデータの管理でないかどうかは、それについて実行して操作を行いますか? これをどのように解決すればよいでしょう。
 
 例外が発生したときに、いくつかの質問を依頼 (と回答) する必要があります。
 
-* この例外は、バグを修正するだけですか。 または、
+* この例外は、バグを修正するだけですか。 または
 
 * この例外をユーザーが発生する可能性のあるものですか。
 
@@ -277,7 +277,7 @@ Debug.Assert(users[0].points > 0);
 
 別の種類のバグには、アプリの実行速度が遅い、または過度のメモリを使用すると、非効率的なコードが含まれます。 通常、パフォーマンスの最適化は後で、アプリの開発では、何か。 ただし、行うことができますのパフォーマンスの問題を早い段階 (たとえば、表示、アプリの一部が低速に実行されている)、およびプロファイリング ツールを使用してアプリを早い段階でテストする必要があります。 プロファイリング ツール、CPU 使用率ツールとメモリ アナライザーなどの詳細については、次を参照してください。[プロファイリング ツールの紹介](../profiling/profiling-feature-tour.md)します。
 
-## <a name="sample-code"></a> サンプル コード
+## <a name="sample-code"></a>サンプル コード
 
 次のコードでは、Visual Studio IDE を使用して修正できるいくつかのバグを持っています。 ここで、アプリは、いくつかの操作、オブジェクトにデータを逆シリアル化し、新しいデータで単純なリストを更新していますから JSON データの取得をシミュレートする簡単なアプリです。
 
@@ -407,4 +407,4 @@ namespace Console_Parse_JSON_DotNetCore
 この記事では、回避およびコードで多くの一般的なバグを修正する方法と、デバッガーを使用する場合を説明しました。 次に、Visual Studio デバッガーを使用してバグを修正する方法の詳細について説明します。
 
 > [!div class="nextstepaction"]
-> [超初心者向けのデバッグ](../debugger/debugging-absolute-beginners.md)
+> [入門者向けのデバッグ](../debugger/debugging-absolute-beginners.md)

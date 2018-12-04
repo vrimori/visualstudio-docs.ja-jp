@@ -1,4 +1,4 @@
----
+﻿---
 title: T4 アセンブリ ディレクティブ
 ms.date: 11/04/2016
 ms.topic: reference
@@ -65,7 +65,7 @@ Visual Studio のデザイン時テキスト テンプレートの中で、テ�
 
 - あなたの DSL を含むアセンブリ
 
-## <a name="msbuild"></a>MSBuild および Visual Studio の両方でのプロジェクト プロパティの使用
+## <a name="msbuild"></a> MSBuild および Visual Studio の両方でのプロジェクト プロパティの使用
  $ (Solutiondir) などの visual Studio マクロは、MSBuild で機能しません。 ビルド コンピューターでテンプレートを変換する場合、代わりにプロジェクトのプロパティを使用する必要があります。
 
  .csproj ファイルまたは .vbproj ファイルを編集してプロジェクトのプロパティを定義します。 この例では、`myLibFolder` という名前のプロパティを定義します。

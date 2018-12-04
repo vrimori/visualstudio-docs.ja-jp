@@ -20,14 +20,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 96dc4277bfdc783d969a2e98fb93fcc5975e9ad7
-ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
-ms.translationtype: MT
+ms.openlocfilehash: c00740b31e5b9d7cc5678bfc248e673a57e59ccf
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607628"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52305313"
 ---
-# <a name="debug-dlls-in-visual-studio"></a>Visual Studio で Dll をデバッグします。
+# <a name="debug-dlls-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio で Dll をデバッグ (C#、C++、Visual Basic、 F#)
 
 DLL (ダイナミック リンク ライブラリ) は、コードとは、複数のアプリで使用できるデータを含むライブラリです。 作成、ビルド、構成するには、Visual Studio を使用して、Dll をデバッグできます。 
 
@@ -35,11 +35,11 @@ DLL (ダイナミック リンク ライブラリ) は、コードとは、複�
 
 次の Visual Studio プロジェクト テンプレートには、Dll を作成できます。
 
-- C#または Visual Basic クラス ライブラリ 
+- C#、Visual Basic、またはF#クラス ライブラリ 
 - C#または、Visual Basic Windows フォーム コントロール (WCF) ライブラリ 
 - C++ のダイナミック リンク ライブラリ (DLL)
 
-詳細については、次を参照してください。 [MFC のデバッグ手法](../debugger/mfc-debugging-techniques.md)します。
+詳細については、「[MFC のデバッグ技術](../debugger/mfc-debugging-techniques.md)」を参照してください。
 
 WCF ライブラリのデバッグは、クラス ライブラリのデバッグと似ています。 詳細については、次を参照してください。 [Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)します。  
 
@@ -50,9 +50,9 @@ WCF ライブラリのデバッグは、クラス ライブラリのデバッグ
 Visual Studio プロジェクト テンプレートを使用して、アプリを作成する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]デバッグとリリース ビルド構成の必要な設定を自動的に作成されます。 必要に応じて、これらの設定を変更できます。 詳細については、次の記事を参照してください。
 
 - [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)
-- [プロジェクトの設定のC#デバッグ構成](../debugger/project-settings-for-csharp-debug-configurations.md)
+- [C# デバッグ構成のプロジェクト設定](../debugger/project-settings-for-csharp-debug-configurations.md)
 - [Visual Basic デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
-- [方法: 構成セットのデバッグとリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)  
+- [方法: デバッグ構成とリリース構成を設定する](../debugger/how-to-set-debug-and-release-configurations.md)  
   
 ### <a name="set-c-debuggableattribute"></a>C++ DebuggableAttribute を設定します。
 
@@ -110,28 +110,27 @@ DLL を呼び出すアプリを指定できます。
   
 - アプリから、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]同じまたは別のソリューション、dll のプロジェクト。  
 - 既にデプロイされている既存のアプリとテストまたは実稼働コンピューターで実行されています。  
-- Web 上にあり、URL からアクセスします。  
+- Web に配置され、URL からアクセスするアプリケーション。  
 - DLL を埋め込む web ページで web アプリです。  
   
-
 呼び出し元のアプリから DLL をデバッグするには、次のことができます。  
   
 - 呼び出し元のアプリのプロジェクトを開き、選択してデバッグを開始**デバッグ** > **デバッグの開始**キーを押して**F5**します。  
 
   または  
 
-- 既に展開済みで、テストまたは実稼働コンピューター上で実行されているアプリにアタッチします。 Web サイトまたは web apps では、Dll のこのメソッドを使用します。 詳細については、次を参照してください。[方法: 実行中のプロセスにアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)します。  
+- 既に展開済みで、テストまたは実稼働コンピューター上で実行されているアプリにアタッチします。 Web サイトまたは web apps では、Dll のこのメソッドを使用します。 詳細については、「[方法: 実行中のプロセスにアタッチする](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)」を参照してください。  
   
 呼び出し元のアプリのデバッグを開始する前に、DLL で、ブレークポイントを設定します。 参照してください[ブレークポイントを使用して](../debugger/using-breakpoints.md)します。 DLL のブレークポイントにヒットしたときにすることができますコードをステップ実行、1 行ずつアクションを確認します。 詳細については、次を参照してください。[デバッガーでコード内を移動](../debugger/navigating-through-code-with-the-debugger.md)します。
   
-デバッグ中に、使用することができます、**モジュール**Dll を確認するウィンドウおよび *.exe*ファイルをアプリの読み込み。 開くには、**モジュール**ウィンドウで、デバッグ中に、**デバッグ** > **Windows** > **モジュール**します。 詳細については、次を参照してください。[方法: [モジュール] ウィンドウを使用して、](../debugger/how-to-use-the-modules-window.md)します。 
+デバッグ中に、使用することができます、**モジュール**Dll を確認するウィンドウおよび *.exe*ファイルをアプリの読み込み。 開くには、**モジュール**ウィンドウで、デバッグ中に、**デバッグ** > **Windows** > **モジュール**します。 詳細については、「[方法: [モジュール] ウィンドウを使用する](../debugger/how-to-use-the-modules-window.md)」を参照してください。 
 
 ###  <a name="vxtskdebuggingdllprojectstheimmediatewindow"></a> イミディ エイト ウィンドウを使用します。  
 
 使用することができます、**イミディ エイト**デザイン時に DLL の関数またはメソッドを評価するウィンドウ。 **イミディ エイト**ウィンドウは、呼び出し元のアプリの役割を果たします。 
 
 >[!NOTE]
->使用することができます、**イミディ エイト**ほとんどの種類のプロジェクトでは、デザイン時のウィンドウ。 現在 .NET Core、SQL、または web プロジェクトのことができます。
+>使用することができます、**イミディ エイト**ほとんどの種類のプロジェクトでは、デザイン時のウィンドウ。 SQL、web プロジェクト、またはスクリプトはサポートされません。
 
 たとえば、名前付きメソッドをテストする`Test`クラスで`Class1`:
 
@@ -153,21 +152,21 @@ DLL を呼び出すアプリを指定できます。
    
    結果の出力で、**イミディ エイト**ウィンドウ。  
    
-1. デバッグを続行することができます`Test`内にブレークポイントを配置してもう一度、関数を評価します。  
+1. `Test` の中にブレークポイントを配置し、関数を再び評価してデバッグを継続できます。  
    
-   ブレークポイントにヒットして、ステップ`Test`します。 実行が終了後`Test`デバッガーがデザイン モードに戻しますされます。
+   ブレークポイントにヒットして、ステップ`Test`します。 `Test` の実行が終了すると、デバッガーはデザイン モードに戻ります。
 
 ##  <a name="vxtskdebuggingdllprojectsmixedmodedebugging"></a> 混合モードのデバッグ  
 
-呼び出し元のアプリは、マネージまたはネイティブ コード内の DLL を記述できます。 マネージ DLL を呼び出すネイティブ アプリ、両方をデバッグする場合は、プロジェクトのプロパティで、マネージ コードとネイティブ デバッガーの両方を有効にすることができます。 実際のプロセスは、DLL プロジェクトまたは呼び出し元のアプリ プロジェクトからデバッグを開始するかどうかによって異なります。 詳細については、次を参照してください。[方法: 混合モードでデバッグ](../debugger/how-to-debug-in-mixed-mode.md)します。 
+呼び出し元のアプリは、マネージまたはネイティブ コード内の DLL を記述できます。 マネージ DLL を呼び出すネイティブ アプリ、両方をデバッグする場合は、プロジェクトのプロパティで、マネージ コードとネイティブ デバッガーの両方を有効にすることができます。 実際のプロセスは、DLL プロジェクトまたは呼び出し元のアプリ プロジェクトからデバッグを開始するかどうかによって異なります。 詳細については、「[方法: 混合モードでデバッグする](../debugger/how-to-debug-in-mixed-mode.md)」を参照してください。 
 
 マネージ呼び出し元プロジェクトからネイティブ DLL をデバッグすることもできます。 詳細については、次を参照してください。[マネージ コードとネイティブ コードをデバッグする方法について](how-to-debug-managed-and-native-code.md)します。 
 
 ## <a name="see-also"></a>関連項目  
- [マネージ コードをデバッグします。](../debugger/debugging-managed-code.md)   
- [C++ プロジェクトのビジュアルの種類](../debugger/debugging-preparation-visual-cpp-project-types.md)   
- [C#、 F#、および Visual Basic プロジェクトの種類](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
+ [マネージド コードのデバッグ](../debugger/debugging-managed-code.md)   
+ [Visual C++ プロジェクトの種類](../debugger/debugging-preparation-visual-cpp-project-types.md)   
+ [C#、F#、Visual Basic のプロジェクトの種類](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
  [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
- [プロジェクトの設定のC#デバッグ構成](../debugger/project-settings-for-csharp-debug-configurations.md)   
- [Visual Basic デバッグ構成のプロジェクトの設定](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
+ [C# デバッグ構成のプロジェクト設定](../debugger/project-settings-for-csharp-debug-configurations.md)   
+ [Visual Basic デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)

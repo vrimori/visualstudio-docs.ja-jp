@@ -1,7 +1,7 @@
 ---
 title: 呼び出し履歴のビジュアル マップを作成する |Microsoft Docs
 ms.custom: ''
-ms.date: 05/18/2017
+ms.date: 11/26/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
@@ -31,164 +31,137 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fe3471f7165cf48f62dee3ca657e78fbfafd273
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: ede973d96ffe21fb9406bb471400ffa8e2b69251
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49837400"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389579"
 ---
-# <a name="create-a-visual-map-of-the-call-stack-while-debugging-in-visual-studio-enterprise"></a>Visual Studio Enterprise でのデバッグ中に呼び出し履歴のビジュアル マップを作成します。
-デバッグ中に呼び出し履歴を視覚的にトレース コード マップを作成します。 コメントをマップに追加することでバグの発見に重点を置いてコードの動作を追跡できます。
+# <a name="create-a-visual-map-of-the-call-stack-while-debugging"></a>デバッグ中に呼び出し履歴のビジュアル マップを作成します。 
 
- 要件:
+デバッグ中に呼び出し履歴を視覚的にトレースするためのコード マップを作成します。 コメントをマップに追加することで、バグを見つけることに重点を置いてコードの動作を追跡できます。
 
--   [Visual Studio Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+チュートリアル、ビデオをご覧ください:[ビデオ: コード マップ デバッガーの統合 (チャネル 9) で視覚的にデバッグ](http://go.microsoft.com/fwlink/?LinkId=293418)
 
--   Visual c#、Visual Basic、C++、JavaScript、または x++ など、デバッグできるコード
+コマンドとコード マップで使用できる操作の詳細については、次を参照してください。[参照およびコード マップの再配置](../modeling/browse-and-rearrange-code-maps.md)します。
+
+>[!IMPORTANT]
+>作成することができますのみでコード マップを[Visual Studio Enterprise edition](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)します。
 
 コード マップの概要を次に示します。
 
  ![呼び出し履歴コード マップを使用したデバッグ](../debugger/media/debuggermap_overview.png "DebuggerMap_Overview")
 
- 参照トピック
+##  <a name="MapStack"></a>呼び出し履歴でマップを作成する
 
-- [ビデオ: は、コード マップ デバッガーの統合 (チャネル 9) で視覚的にデバッグします。](http://go.microsoft.com/fwlink/?LinkId=293418)
+1. Visual Studio Enterprise でC#、Visual Basic、C++、JavaScript、または x++ プロジェクトを選択してデバッグを開始**デバッグ** > **デバッグの開始**キーを押して**F5**.
+   
+1. アプリが中断モードになるか、関数にステップ イン、選択**デバッグ** > **コード マップ**、またはキーを押します**Ctrl**+**シフト**+**`**.
 
-- [呼び出し履歴でマップします。](#MapStack)
+   現在の呼び出し履歴は新しいコード マップ上にオレンジ色で表示されます。
 
-- [コードに関するメモを作成します。](#MakeNotes)
+   ![参照呼び出し履歴コード マップに](../debugger/media/debuggermap_seeundocallstack.png "DebuggerMap_SeeUndoCallStack")
 
-- [次の呼び出し履歴でマップを更新](#UpdateMap)
+コードはデバッグを続行するよう、更新プログラムを自動的にマップします。 マップ項目またはレイアウトを変更すると、任意の方法でコードに影響しません。 マップでの名前変更、移動、削除は自由に行うことができます。
 
-- [マップに関連するコードを追加します。](#AddRelatedCode)
+項目の詳細についてを取得するには、上にマウス ポインターを移動し、項目のツールヒントを確認します。 選択することも**凡例**で、ツールバーの各アイコンの意味について説明します。
 
-- [マップを使用してバグを見つける](#FindBugs)
+![コード マップの凡例](../debugger/media/debuggermap_showlegend.png "コード マップの凡例")
 
-- [Q &AMP; A](#QA)
+>[!NOTE]
+>メッセージ**の図は、以前のバージョンのコードに基づく可能性があります**最後に、マップを更新した後、コードを変更した可能性がありますがマップ、コードの上部にある意味します。 たとえば、マップ上の呼び出しがコードに存在しなくなった可能性があります。 メッセージを閉じてから、マップを再び更新する前にソリューションをリビルドしてみます。
 
-  コマンドとコード マップを使用する場合に使用できる操作の詳細については、次を参照してください。[参照およびコード マップの再配置](../modeling/browse-and-rearrange-code-maps.md)します。
+## <a name="map-external-code"></a>外部コードをマップします。
 
-##  <a name="MapStack"></a> 呼び出し履歴でマップします。
+既定では、ユーザー自身のコードだけがマップに表示されます。 マップ上の外部コードを参照してください。
+  
+- 右クリックし、**呼び出し履歴**ウィンドウと選択**外部コードの表示**:
+  
+  ![呼び出し履歴 ウィンドウを使用して外部コードの表示](../debugger/media/debuggermap_callstackmenu.png "DebuggerMap_CallStackMenu")
+- または、選択解除**マイ コードのみを有効にする**Visual Studio で**ツール**(または**デバッグ**) >**オプション** >  **デバッグ**:
+  
+  ![[オプション] ダイアログを使用して外部コードの表示](../debugger/media/debuggermap_debugoptions.png "DebuggerMap_DebugOptions")
 
-1.  デバッグを開始します。 (キーボード: **F5**)
+## <a name="control-the-maps-layout"></a>マップのレイアウトを制御します。
 
-2.  アプリが中断モードになるか、関数にステップ イン、選択**コード マップ**します。 (キーボード: **Ctrl** + **Shift** + **`**)
+マップのレイアウトを変更すると、任意の方法でコードに影響しません。 
 
-     ![呼び出し履歴のマッピングを開始するコード マップを選択](../debugger/media/debuggermap_choosecodemap.png "DebuggerMap_ChooseCodeMap")
+マップのレイアウトを制御するには、選択、**レイアウト**マップのツールバー メニュー。 
 
-     現在の呼び出し履歴は新しいコード マップ上にオレンジ色で表示されます。
+**レイアウト**ことができます メニュー。
 
-     ![参照呼び出し履歴コード マップに](../debugger/media/debuggermap_seeundocallstack.png "DebuggerMap_SeeUndoCallStack")
+-   既定のレイアウトを変更します。
+-   選択を解除して、マップを自動的に再配置されないように**デバッグ時に自動レイアウト**します。
+-   選択を解除して、項目を追加するときにできるだけのマップを再配置**インクリメンタル レイアウト**します。
 
-     デバッグを継続している間、マップは自動的に更新されます。 参照してください[次の呼び出し履歴でマップを更新](#UpdateMap)します。
+##  <a name="MakeNotes"></a>コードに関するコメントを追加する
 
-##  <a name="MakeNotes"></a> コードに関するメモを作成します。
- コードで何が起こっているかを追跡するためにコメントを追加します。 コメントで新しい行を追加するキーを押して**shift + return**します。
+コードで何が起こっているかを追跡するためにコメントを追加することができます。 
+
+コメントを追加するには、コード マップで右クリックして**編集** > **新しいコメント**コメントを入力します。 
+
+コメントで新しい行を追加するキーを押します。 **Shift**+**Enter**します。
 
  ![呼び出し履歴コード マップにコメントを追加](../debugger/media/debuggermap_addcomment.png "DebuggerMap_AddComment")
 
-##  <a name="UpdateMap"></a> 次の呼び出し履歴でマップを更新
- アプリを次のブレークポイントまで実行するか、関数にステップ インします。 マップに新しい呼び出し履歴が追加されます。
+##  <a name="UpdateMap"></a>次の呼び出し履歴でマップを更新する
 
- ![[次へ] のコール スタックで更新プログラムのコード マップ](../debugger/media/debuggermap_addclearcallstack.png "DebuggerMap_AddClearCallStack")
+関数に次のブレークポイントまたはステップにアプリを実行すると、マップは新しい呼び出し履歴を自動的に追加します。
 
-##  <a name="AddRelatedCode"></a> マップに関連するコードを追加します。
- 作成できたマップ - どのような横でしょうか。 Visual c# または Visual Basic で作業している場合は、フィールド、プロパティ、およびコードで何が起こっているかを追跡するために、他の方法などの項目を追加します。
+![[次へ] のコール スタックで更新プログラムのコード マップ](../debugger/media/debuggermap_addclearcallstack.png "DebuggerMap_AddClearCallStack")
 
- メソッドのコード定義を表示するには、そのメソッドをダブルクリックするか、そのメソッドのショートカット メニューを使用します。 (キーボード: マップとキーを押してでメソッドを選択**F12**)
+新しい呼び出し履歴を自動的に追加することから、マップを停止する次のように選択します。 ![Show 呼び出しスタックは、自動的にコード マップを](../debugger/media/debuggermap_automaticupdateicon.gif "Show コール スタックは、自動的にコード マップに")コード マップのツールバー。 マップは、既存の呼び出し履歴を強調表示が続行されます。 マップを現在の呼び出し履歴を手動で追加するには、キーを押して**Ctrl**+**Shift**+**`** します。 
 
- ![コード マップ上のメソッドのコード定義に移動して](../debugger/media/debuggermap_gotocodedefinition.png "DebuggerMap_GoToCodeDefinition")
+##  <a name="AddRelatedCode"></a>関連するコードをマップに追加する
 
- マップで追跡する項目を追加します。
+マップを取得したできたC#または Visual Basic では、フィールド、プロパティ、およびコードで何が起こっているかを追跡するために、他の方法などの項目を追加することができます。 
 
- ![呼び出し履歴コード マップ上のメソッドでフィールドを表示する](../debugger/media/debuggermap_showfields.png "DebuggerMap_ShowFields")
+、コード内のメソッドの定義に移動するには、マップでは、メソッドをダブルクリックまたは選択してキーを押して**F12**、右クリックし、選択または**定義へ移動**します。
 
-> [!NOTE]
->  既定では、マップに項目を追加すると、クラス、名前空間、アセンブリなどの親グループのノードも追加されます。 便利ですが、おくと、マップ単純な機能を使用してこの機能をオフに、**親を含める**マップのツールバー、またはキーを押してボタン**CTRL**項目を追加するとします。
+![コード マップ上のメソッドのコード定義に移動して](../debugger/media/debuggermap_gotocodedefinition.png "DebuggerMap_GoToCodeDefinition")
 
- ![呼び出し履歴コード マップのメソッドに関連するフィールドを](../debugger/media/debuggermap_showedfields.png "DebuggerMap_ShowedFields")
+マップに追跡し項目を追加するには、メソッドを右クリックし、追跡する項目を選択します。追加された最新の項目は緑色で表示されます。
 
- ここでは、同じフィールドを使用するメソッドを簡単に表示できます。 追加された最新の項目は緑色で表示されます。
+![呼び出し履歴コード マップのメソッドに関連するフィールドを](../debugger/media/debuggermap_showedfields.png "DebuggerMap_ShowedFields")
 
- コードのさらに多くの項目を表示するには、マップの作成を続けます。
+>[!NOTE]
+>既定では、マップに項目を追加すると、クラス、名前空間、アセンブリなどの親グループのノードも追加されます。 選択してこの機能をオンとオフにすることができます、**親を含める**ボタン コード マップ ツールバーで、またはキーを押して**Ctrl**項目を追加するときにします。
+
+![呼び出し履歴コード マップ上のメソッドでフィールドを表示する](../debugger/media/debuggermap_showfields.png "DebuggerMap_ShowFields")
+
+コードのさらに多くの項目を表示するには、マップの作成を続けます。
 
  ![フィールドを使用するメソッドを参照してください呼び出し履歴コード マップ](../debugger/media/debuggermap_findallreferences.png "DebuggerMap_FindAllReferences。")
 
  ![呼び出し履歴コード マップ上のフィールドを使用するメソッド](../debugger/media/debuggermap_foundallreferences.png "DebuggerMap_FoundAllReferences")
 
-##  <a name="FindBugs"></a> マップを使用してバグを見つける
- コードの視覚化はバグをよりすばやく見つけるために役立ちます。 たとえば、描画プログラムでバグを調査するいるとします。 直線を描画して元に戻そうとしても、別の直線を描画するまで何も起こりません。
+##  <a name="FindBugs"></a>マップを使用してバグを見つける
+ コードの視覚化はバグをよりすばやく見つけるために役立ちます。 たとえば、描画のアプリでのバグを調査するいるとします。 直線を描画して元に戻そうとしても、別の直線を描画するまで何も起こりません。
 
  そのため、`clear`、`undo`、および `Repaint` メソッドにブレークポイントを設定し、デバッグを開始して、次のようなマップを作成します。
 
  ![別の呼び出し履歴コード マップを追加](../debugger/media/debuggermap_addpaintobjectcallstack.png "DebuggerMap_AddPaintObjectCallStack")
 
- マップ上のすべてのユーザー ジェスチャーが、`Repaint` を除いて、`undo` を呼び出していることがわかります。 これは、理由を説明することがあります`undo`すぐに機能しません。
+ マップ上のすべてのユーザー ジェスチャーが、`Repaint` を除いて、`undo` を呼び出していることがわかります。 これが原因で `undo` がすぐに動作しない可能性があります。
 
- バグを修正してプログラムの実行を続けると、マップに `undo` から `Repaint` への新しい呼び出しが追加されます。
+ マップがから新しい呼び出しを追加してバグを修正するし、アプリの実行を続行すると、`undo`に`Repaint`:
 
  ![コード マップに新しいメソッドの呼び出しごとにスタックに追加](../debugger/media/debuggermap_addnewcallforrepaint.png "DebuggerMap_AddNewCallForRepaint")
 
-##  <a name="QA"></a> Q & A
+## <a name="share-the-map-with-others"></a>マップを他のユーザーと共有します。
 
-- **すべての呼び出しは、マップに表示されます。その理由を教えてください。**
+マップをエクスポートして他のユーザーを Microsoft Outlook に送信、ソリューションに保存するか、およびバージョン管理にチェックインできます。
 
-   既定では、ユーザー自身のコードだけがマップに表示されます。 外部コードを表示するで有効にする、**呼び出し履歴**ウィンドウ。
+共有する、またはマップを保存するには使用**共有**コード マップ ツールバーでします。 
 
-   ![呼び出し履歴 ウィンドウを使用して外部コードの表示](../debugger/media/debuggermap_callstackmenu.png "DebuggerMap_CallStackMenu")
-
-   オフにするか**マイ コードのみを有効にする**Visual studio のデバッグ オプション。
-
-   ![[オプション] ダイアログを使用して外部コードの表示](../debugger/media/debuggermap_debugoptions.png "DebuggerMap_DebugOptions")
-
-- **マップを変更するコードに影響しますか。**
-
-   マップを変更すると、任意の方法でコードに影響しません。 マップでの名前変更、移動、削除は自由に行うことができます。
-
-- **このメッセージの意味:「ダイアグラムは、コードの古いバージョンに基づく可能性があります」でしょうか。**
-
-   マップを最後に更新してからコードが変更されている可能性があります。 たとえば、マップ上の呼び出しがコードに存在しなくなった可能性があります。 メッセージを閉じてから、マップを再び更新する前にソリューションをリビルドしてみます。
-
-- **マップのレイアウトを制御する方法は?**
-
-   開く、**レイアウト**マップのツールバー メニュー。
-
-  -   既定のレイアウトを変更します。
-
-  -   オフにする、マップを自動的に再配置を停止する**デバッグ時に自動レイアウト**します。
-
-  -   項目を追加するときに、できるだけ少なくのマップを再配置、オフにする。**インクリメンタル レイアウト**します。
-
-- **マップを他のユーザーと共有できますか。**
-
-   マップをエクスポートし、Microsoft Outlook があれば、他のユーザーに送信できます。または、マップを独自のソリューションに保存し、Team Foundation バージョン管理にチェックインできます。
-
-   ![他のユーザーと共有呼び出し履歴コード マップ](../debugger/media/debuggermap_sharewithothers.png "DebuggerMap_ShareWithOthers")
-
-- **新しい呼び出し履歴を自動的に追加することから、マップを停止するにはどうすればよいですか。**
-
-   選択![ボタン&#45;Show コール スタックは、自動的にコード マップに](../debugger/media/debuggermap_automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon")マップのツールバー。 マップを現在の呼び出し履歴を手動で追加するには、キーを押して**Ctrl** + **Shift** + **`** します。
-
-   デバッグ中に、マップ上の既存の呼び出し履歴を強調表示、マップが続行されます。
-
-- **項目のアイコンと矢印の意味**
-
-   項目に関する詳細情報を取得するには、上にマウス ポインターを移動し、項目のツールヒントを確認します。 検索することも、**凡例**に各アイコンの意味について説明します。
-
-   ![呼び出し履歴のコード マップ上のアイコンの意味](../debugger/media/debuggermap_showlegend.png "DebuggerMap_ShowLegend")
-
-  参照トピック
-
-- [呼び出し履歴でマップします。](#MapStack)
-
-- [コードに関するメモを作成します。](#MakeNotes)
-
-- [次の呼び出し履歴でマップを更新](#UpdateMap)
-
-- [マップに関連するコードを追加します。](#AddRelatedCode)
-
-- [マップを使用してバグを見つける](#FindBugs)
+![他のユーザーと共有呼び出し履歴コード マップ](../debugger/media/debuggermap_sharewithothers.png "他のユーザーと共有呼び出し履歴コード マップ")
 
 ## <a name="see-also"></a>関連項目
- [ソリューション間の依存関係をマップする](../modeling/map-dependencies-across-your-solutions.md)[コード マップをアプリケーションのデバッグ](../modeling/use-code-maps-to-debug-your-applications.md)[検索潜在的な問題のコードを使用してマップ アナライザー](../modeling/find-potential-problems-using-code-map-analyzers.md) [参照およびコード マップの再配置](../modeling/browse-and-rearrange-code-maps.md)
+[ソリューション間の依存関係をマップする](../modeling/map-dependencies-across-your-solutions.md)
+
+[コード マップを使用してアプリケーションをデバッグする](../modeling/use-code-maps-to-debug-your-applications.md)
+
+[コード マップ アナライザーを使用して潜在的な問題を検索する](../modeling/find-potential-problems-using-code-map-analyzers.md)
+
+[コード マップの参照および再配置](../modeling/browse-and-rearrange-code-maps.md)

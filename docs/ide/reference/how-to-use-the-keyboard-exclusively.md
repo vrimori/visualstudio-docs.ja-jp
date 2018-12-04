@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 24a20abd4971f785261db4437a6e2f839717ab0d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 3b76e34ba77335c242c752c055e2560cc73141d2
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49818264"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388401"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>方法: キーボード主体で操作する
 
@@ -33,16 +33,15 @@ ms.locfileid: "49818264"
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] で提供されているさまざまな既定のショートカット キーの組み合わせを使うと、統合開発環境 (IDE) 内で移動やコーディングを簡単に行うことができます。 Visual Studio で使われるすべてのショートカット キーの一覧については、「[既定のキーボード ショートカット](../../ide/default-keyboard-shortcuts-in-visual-studio.md)」を参照してください。 他の Microsoft 製品で利用できるキーボード ショートカットについては、[http://www.microsoft.com/enable/products/keyboard.aspx](http://go.microsoft.com/fwlink/?LinkID=40400) をご覧ください。
 
 > [!NOTE]
-> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
-
+> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[リセット設定](../environment-settings.md#reset-settings)」を参照してください。
 
 ## <a name="toolbox-controls"></a>ツールボックス コントロール
 
- キーボードを使って、ツールボックスのコントロールをフォームまたはデザイナーに追加できます。
+キーボードを使って、ツールボックスのコントロールをフォームまたはデザイナーに追加できます。
 
-#### <a name="to-add-controls-from-the-toolbox-to-a-designer-from-the-keyboard"></a>キーボードを使ってツールボックスからデザイナーにコントロールを追加するには
+### <a name="to-add-controls-from-the-toolbox-to-a-designer-from-the-keyboard"></a>キーボードを使ってツールボックスからデザイナーにコントロールを追加するには
 
-1. メニュー バーで **[表示]**、**[ツールボックス]** の順に選択します。
+1. メニュー バーで **[表示]**、**[ツールボックス]** の順にクリックします。
 
 2. 現在の [ツールボックス] タブでセクション間を移動するには、Ctrl キーを押しながら上方向キーを押すか、Ctrl キーを押しながら下方向キーを押します。
 
@@ -56,9 +55,9 @@ ms.locfileid: "49818264"
 
  キーボードを使って、ダイアログ ボックスのオプション間を移動し、オプションの設定を変更できます。
 
-#### <a name="to-set-dialog-box-options-from-the-keyboard"></a>キーボードを使ってダイアログ ボックスのオプションを設定するには
+### <a name="to-set-dialog-box-options-from-the-keyboard"></a>キーボードを使ってダイアログ ボックスのオプションを設定するには
 
-1.  **Tab** キーまたは **Shift + Tab** キーを使って、ダイアログ ボックス内のコントロール間を上下に移動します。
+1.  **Tab** キーまたは **Shift** + **Tab** キーを使って、ダイアログ ボックス内のコントロール間を上下に移動します。
 
 2.  オプションの設定を変更するには:
 
@@ -76,13 +75,13 @@ ms.locfileid: "49818264"
 
  IDE では、キーボードを使って開いているツール ウィンドウやドキュメント ウィンドウ間を移動するための方法が複数用意されています。 また、キーボードを使って、ツール ウィンドウを別の場所に移動してドッキングすることもできます。
 
-#### <a name="to-navigate-among-windows-and-files-in-the-ide-from-the-keyboard"></a>キーボードを使って IDE 内のウィンドウ間およびファイル間を移動するには
+### <a name="to-navigate-among-windows-and-files-in-the-ide-from-the-keyboard"></a>キーボードを使って IDE 内のウィンドウ間およびファイル間を移動するには
 
 -   エディターまたはデザイナー内でファイル間を移動するには、Ctrl + Tab キーを押して、**[アクティブなファイル]** が選択された IDE ナビゲーターを表示します。 強調表示されているファイルに移動するには、Enter キーを押します。
 
 -   ドッキングされたツール ウィンドウ間を移動するには、Alt + F7 キーを押して、**[アクティブなツール ウィンドウ]** が選択された IDE ナビゲーターを表示します。 強調表示されているファイルに移動するには、Enter キーを押します。
 
-#### <a name="to-move-and-dock-tool-windows-from-the-keyboard"></a>キーボードを使ってツール ウィンドウを移動してドッキングするには
+### <a name="to-move-and-dock-tool-windows-from-the-keyboard"></a>キーボードを使ってツール ウィンドウを移動してドッキングするには
 
 1.  移動するツール ウィンドウに移動し、フォーカスを設定します。
 

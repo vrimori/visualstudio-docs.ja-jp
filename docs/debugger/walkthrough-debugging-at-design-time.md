@@ -1,7 +1,7 @@
 ---
-title: デザイン時に Visual Studio でのデバッグ |Microsoft Docs
+title: Visual Studio でデザイン時にデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2018
+ms.date: 11/21/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
@@ -17,85 +17,89 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 452b4045357db12c4b4cff1a5b6e27035cf85d82
-ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
-ms.translationtype: MT
+ms.openlocfilehash: 7a9dea23cfdd473d149989686ab0d7d30a4cc50d
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52257200"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388886"
 ---
 # <a name="debug-at-design-time-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio でデザイン時にデバッグ (C#、C++、Visual Basic、 F#)
 
-一部のシナリオでデザイン時のコードをデバッグすることがあります、アプリケーションの実行中の代わりに時刻します。 これを行うを使用して、**イミディ エイト**ウィンドウ。 データ バインド コードなどの他のコードと対話する XAML コードをデバッグする場合は、使用**デバッグ** > **プロセスにアタッチ**そのためにします。
-  
-### <a name="debug-at-design-time-using-the-immediate-window"></a>イミディ エイト ウィンドウを使用して、デザイン時にデバッグします。  
+アプリの中にではなく、デザイン時にコードをデバッグするには、実行されている、使用することができます、**イミディ エイト**ウィンドウ。 
 
-Visual Studio を使用する**イミディ エイト**ウィンドウで、アプリケーションが実行されていないときに、関数またはサブルーチンを実行します。 関数またはサブルーチンにブレークポイントが含まれているとき、適切なポイントで実行を中断します。 デバッガー ウィンドウを使用して、プログラムの状態を確認できます。 この機能は、デザイン時のデバッグと呼ばれます。  
+使用することができます、データ バインドのコードなど、XAML デザイナーからのアプリの背後にある XAML コードをデバッグする**デバッグ** > **プロセスにアタッチ**します。
+  
+## <a name="use-the-immediate-window"></a>イミディ エイト ウィンドウを使用します。  
 
-次の例は、Visual Basic では。 使用、**イミディ エイト**デザイン時にウィンドウでもサポートC#、C++、およびF#アプリケーション。
-  
-1.  次のコードを Visual Basic コンソール アプリケーションに貼り付けます。  
-  
-    ```vb  
-    Module Module1  
-  
-        Sub Main()  
-            MySub()  
-        End Sub  
-  
-        Function MyFunction() As Decimal  
-            Static i As Integer  
-            i = i + 1  
-            Dim s As String  
-  
-            s = "Add Breakpoint here"  
-            Return 4  
-        End Function  
-  
-        Sub MySub()  
-            MyFunction()  
-        End Sub  
-    End Module  
-    ```  
-  
-2.  `s="Add BreakPoint Here"` という行にブレークポイントを設定します。  
-  
-3.  開く、**イミディ エイト**ウィンドウ (**デバッグ** > **Windows** > **イミディ エイト**) では、次を入力し、ウィンドウ: `?MyFunction<enter>`  
-  
-4.  ブレークポイントにヒットしたことと、呼び出し履歴が正確であることを確認します。  
-  
-5.  **デバッグ** メニューのをクリックして**続行**、まだデザイン モードであることを確認します。  
-  
-6.  次の入力、**イミディ エイト**ウィンドウ。 `?MyFunction<enter>`  
-  
-7.  次の入力、**イミディ エイト**ウィンドウ。 `?MySub<enter>`  
-  
-8.  ブレークポイントにヒットし、静的変数の値を確認することを確認`i`で、**ローカル**ウィンドウ。 3 という値が表示されます。  
-  
-9. 呼び出し履歴が正確であることを確認します。  
-  
-10. **デバッグ** メニューのをクリックして**続行**、まだデザイン モードであることを確認します。  
+Visual Studio を使用する**イミディ エイト**ウィンドウで、アプリを実行することがなく、関数またはサブルーチンを実行します。 関数またはサブルーチンにブレークポイントが含まれる場合は、Visual Studio がブレークポイントで中断されます。 デバッガー ウィンドウを使用して、プログラムの状態を確認できます。 この機能は、*デザイン時のデバッグ*と呼ばれます。  
 
-## <a name="debug-at-design-time-from-the-xaml-designer"></a>XAML デザイナーのデザイン時にデバッグします。
+次の例は、Visual Basic では。 使用することも、**イミディ エイト**でデザイン時にウィンドウC#、 F#、および C++ アプリ。
 
-一部の宣言型データ バインディング シナリオでの XAML デザイナーからの背後にあるコードをデバッグすることができます。
+1. 空の Visual Basic コンソール アプリケーションには、次のコードを貼り付けます。  
+   
+   ```vb  
+   Module Module1
+   
+       Sub Main()
+           MySub()
+       End Sub
+   
+       Function MyFunction() As Decimal
+           Static i As Integer
+           i = i + 1
+           Return i
+       End Function
+   
+       Sub MySub()
+           MyFunction()
+   
+       End Sub
+   End Module
+   ```  
+   
+1. 行にブレークポイントを設定**End Function**します。  
+   
+1. 開く、**イミディ エイト**ウィンドウを選択して**デバッグ** > **Windows** > **イミディ エイト**します。 型`?MyFunction`ウィンドウ、およびキーを押します**Enter**します。   
+   
+   ブレークポイントがヒットし、値の**MyFunction**で、**ローカル**ウィンドウが**1**します。 アプリが中断モード中には、呼び出し履歴や他のデバッグ ウィンドウを調べることができます。 
+   
+1. 選択**続行**Visual Studio のツールバー。 アプリが終了し、 **1**で返される、**イミディ エイト**ウィンドウ。 デザイン モードのままでいることを確認します。  
+   
+1. 型`?MyFunction`で、**イミディ エイト**ウィンドウをもう一度、およびキーを押して**Enter**。 ブレークポイントがヒットし、値の**MyFunction**で、**ローカル**ウィンドウが**2**します。 
+   
+1. 選択することがなく**続行**、型`?MySub()`で、**イミディ エイト**ウィンドウ、およびキーを押します **」と入力**します。 ブレークポイントがヒットし、値の**MyFunction**で、**ローカル**ウィンドウが**3**します。 アプリが中断モード中には、アプリの状態を確認できます。 
+   
+1. **[続行]** を選択します。 ブレークポイントがヒットをもう一度、しの値**MyFunction**で、**ローカル**ウィンドウが**2**します。 **イミディ エイト**ウィンドウに返されます**式が評価された、値はありません**します。
+   
+1. 選択**続行**もう一度です。 アプリが終了し、 **2**で返される、**イミディ エイト**ウィンドウ。 デザイン モードのままであることを確認します。
+   
+1. 内容を消去する、**イミディ エイト**ウィンドウを右クリックし、ウィンドウの**すべてクリア**します。 
 
-1. プロジェクトで、追加など、新しい XAML ページでは、 *temp.xaml*します。 新しい XAML ページは空のままにします。 
+## <a name="attach-to-an-app-from-the-xaml-designer"></a>XAML デザイナーからアプリにアタッチします。
 
-1. ソリューションをコンパイルします。
+いくつか宣言型データ バインディングのシナリオで XAML デザイナーでの背後にあるコードをデバッグすることができます。
 
-1. 開いている*temp.xaml*、デザイナーが読み込まれます (*UwpSurface.exe*で UWP アプリの場合または*XDesProc.exe*) 後の手順に接続できるようにします。 
-
-1. Visual Studio の新しいインスタンスを開きます。 新しいインスタンスで開く、**プロセスにアタッチ** ダイアログ ボックス (**デバッグ** > **プロセスにアタッチ**)、設定、**にアタッチ**などの正しいコードの種類にフィールド**マネージ コード (CoreCLR)** または .NET のバージョンに基づいて、適切なコードの種類。 一覧から正しいデザイナー プロセスを選択して、**アタッチ**します。
-
-    UWP を対象とするプロジェクトがビルド 16299 またはデザイナー プロセスは、上記*UwpSurface.exe*します。 デザイナーのプロセスは、WPF や UWP の 16299 より前のバージョンでは、 *XDesProc.exe*します。
-
-1. プロセスにアタッチされている、間をプロジェクトに切り替えるをデバッグする分離コードを開いてブレークポイントを設定します。
-
-1. 最後に、データ バインディングを含む XAML コードを含むページを開きます。
-
-    たとえば、次の XAML は、デザイン時に、TextBlock のバインドの型コンバーターのコードでブレークポイントを設定でした。
-
+1. Visual Studio プロジェクトで、追加など、新しい XAML ページでは、 *temp.xaml*します。 新しい XAML ページは空のままにします。 
+   
+1. ソリューションをビルドします。
+   
+1. 開いている*temp.xaml*、XAML デザイナーが読み込まれます*XDesProc.exe*、または*UwpSurface.exe* UWP アプリでします。 
+   
+1. Visual Studio の新しいインスタンスを開きます。 新しいインスタンスで次のように選択します。**デバッグ** > **プロセスにアタッチ**します。 
+   
+1. **プロセスにアタッチ** ダイアログ ボックスで、処理するデザイナー、select、**選択可能なプロセス**一覧。
+   
+   UWP 用 Windows を対象とするプロジェクトがビルド 16299 またはデザイナー プロセスは、上記*UwpSurface.exe*します。 デザイナーのプロセスは、16299 より前の WPF や UWP のバージョン、 *XDesProc.exe*します。
+   
+1. 確認、**にアタッチ**フィールドがなどの .NET のバージョンの正しいコードの種類に設定されて**マネージ コード (CoreCLR)** します。 
+   
+1. 選択**アタッチ**します。
+   
+1. プロセスにアタッチされている、間、他の Visual Studio インスタンスに切り替えるし、アプリの背後にあるコードをデバッグするブレークポイントを設定します。
+   
+   たとえば、次の XAML は、デザイン時に、TextBlock のバインドの型コンバーターのコードでブレークポイントを設定でした。
+   
     ```xaml
     <TextBlock Text="{Binding title, ConverterParameter=lower, Converter={StaticResource StringFormatConverter}, Mode=TwoWay}"  />
     ```

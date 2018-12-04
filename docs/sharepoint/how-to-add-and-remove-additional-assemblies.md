@@ -32,7 +32,7 @@ ms.locfileid: "50219147"
  アセンブリに関連付けられているセーフ コントロールやクラス リソース ファイルを追加および変更することもできます。  
   
 ## <a name="add-additional-assemblies-safe-controls-and-class-resources"></a>追加のアセンブリ、セーフ コントロール、およびクラス リソースを追加します。  
- SharePoint ソリューション パッケージにアセンブリを追加できます。 サンドボックス ソリューションの追加アセンブリは、グローバル アセンブリ キャッシュに配置されますが、サンドボックス ソリューションの SharePoint プロジェクト項目はコンテンツ データベースに追加されます。 これらの追加アセンブリにセーフ コントロールやクラス リソースを追加することもできます。 安全なコントロールの詳細については、次を参照してください。 [Providing Packaging and Deployment Information in Project Items](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)またはで"SafeControl エントリの作成" [SharePoint Foundation の Web パーツを配置する](http://go.microsoft.com/fwlink/?LinkId=245505)します。  
+ SharePoint ソリューション パッケージにアセンブリを追加できます。 サンドボックス ソリューションの追加アセンブリは、グローバル アセンブリ キャッシュに配置されますが、サンドボックス ソリューションの SharePoint プロジェクト項目はコンテンツ データベースに追加されます。 これらの追加アセンブリにセーフ コントロールやクラス リソースを追加することもできます。 安全なコントロールの詳細については、次を参照してください。 [プロジェクト項目でのパッケージ化と配置の情報の提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)またはで"SafeControl エントリの作成" [SharePoint Foundation の Web パーツを配置する](http://go.microsoft.com/fwlink/?LinkId=245505)します。  
   
 #### <a name="to-add-an-existing-assembly"></a>既存のアセンブリを追加するには  
   
