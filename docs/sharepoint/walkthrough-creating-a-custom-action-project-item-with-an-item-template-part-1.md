@@ -430,7 +430,7 @@ ms.locfileid: "51296126"
     > [!NOTE]  
     >  場合、**スクリプト デバッグが無効**選択 ダイアログ ボックスが表示されたら、**はい**クリックしてプロジェクトのデバッグを続行します。  
   
-4.  **サイトの操作**] メニューの [選択**SharePoint デベロッパー センター**、ブラウザーが web サイトを開くことを確認します。 https://docs.microsoft.com/sharepoint/dev/、し、web ブラウザーを閉じます。  
+4.  **サイトの操作**] メニューの [選択**SharePoint デベロッパー センター**、ブラウザーが web サイトを開くことを確認します。 [https://docs.microsoft.com/sharepoint/dev/](https://docs.microsoft.com/sharepoint/dev/) 、し、web ブラウザーを閉じます。  
   
 ## <a name="clean-up-the-development-computer"></a>開発用コンピューターをクリーンアップします。
  プロジェクト項目のテストが終わったら、プロジェクト項目テンプレートを Visual Studio の実験用インスタンスから削除します。  
