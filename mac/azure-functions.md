@@ -140,7 +140,7 @@ local.settings.json に追加したすべての設定は、Azure の関数アプ
 ## <a name="available-function-templates"></a>使用可能な関数テンプレート
 
 - **GitHub トリガー** – GitHub リポジトリで発生するイベントに応答します。 詳しくは、[GitHub についての Azure Functions の記事](/azure/azure-functions/functions-create-github-webhook-triggered-function)をご覧ください。
-    - GitHub コメンター – この関数は、問題またはプル要求の GitHub webhook を受信してコメントを追加すると実行されます。
+    - GitHub コメンター – この関数は、問題または pull request の GitHub webhook を受信してコメントを追加すると実行されます。
     - GitHub WebHook – この関数は、GitHub webhook を受信すると実行されます。
 
 - **HTTP** – HTTP 要求を使って、コードの実行をトリガーします。 次の HTTP トリガーに対する明示的なテンプレートがあります。

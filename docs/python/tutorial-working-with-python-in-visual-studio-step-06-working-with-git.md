@@ -56,7 +56,7 @@ Visual Studio には、ローカルの Git リポジトリと、GitHub や Azure
 
 リモート Git リポジトリからプロジェクトを作成する方法のチュートリアルについては、「[クイック スタート: Visual Studio で Python コードのリポジトリを複製する](quickstart-03-python-in-visual-studio-project-from-repository.md)」をご覧ください。
 
-マージの競合、プル要求があるコードのレビュー、リベース、分岐間のチェリー ピック変更などの包括的なチュートリアルについては、[Git と Azure Repos の使用開始](/azure/devops/repos/git/gitquickstart?toc=/visualstudio/version-control/toc.json&bc=/azure/devops/repos/git/breadcrumb/vc/toc.json&view=vsts&tabs=visual-studio)に関する記事を参照してください。
+マージの競合、pull request があるコードのレビュー、リベース、分岐間のチェリー ピック変更などの包括的なチュートリアルについては、[Git と Azure Repos の使用開始](/azure/devops/repos/git/gitquickstart?toc=/visualstudio/version-control/toc.json&bc=/azure/devops/repos/git/breadcrumb/vc/toc.json&view=vsts&tabs=visual-studio)に関する記事を参照してください。
 
 ## <a name="tutorial-review"></a>チュートリアルのレビュー
 

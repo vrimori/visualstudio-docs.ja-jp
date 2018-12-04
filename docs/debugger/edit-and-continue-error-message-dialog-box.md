@@ -1,7 +1,7 @@
 ---
 title: エディット コンティニュのエラー メッセージ ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
-ms.date: 06/22/2018
+ms.date: 10/15/2018
 ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fd4fe31996a75c4b743f3dac12e7b945c912506
-ms.sourcegitcommit: c5e72875206b8c5737c29d5b1ec7b86eec747303
-ms.translationtype: MT
+ms.openlocfilehash: ba573a6b6bffdfeebf37c5f46f1f774d699a1131
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382793"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388709"
 ---
 # <a name="edit-and-continue-error-message"></a>エディット コンティニュのエラー メッセージ 
 
@@ -37,7 +37,7 @@ ms.locfileid: "49382793"
 -   最適化されたコードを編集しようとしています。 リリース ビルドからデバッグ ビルドに切り替える必要があります。
 -   実行されているときに、コードを編集しようとしての代わりに、デバッガーで一時停止中です。 お試しください[ブレークポイントを設定する](../debugger/using-breakpoints.md)、および一時停止中にコードを編集します。
 -   アンマネージ デバッグのみが有効にすると、マネージ コードを編集しようとしています。 エディット コンティニュを使用しない[混合モード デバッグ](../debugger/how-to-debug-in-mixed-mode.md)します。
--   コード変更を行うと、プログラミング言語でのエディット コンティニュでできません。 詳細については、の記事をご覧ください[コードの変更がサポートされているC# ](supported-code-changes-csharp.md)、 [Visual Basic エディット コンティニュで編集をサポートされていない](unsupported-edits-in-visual-basic-edit-and-continue.md)、および[C++コードの変更がサポートされている](supported-code-changes-cpp.md).
+-   コード変更を行うと、プログラミング言語でのエディット コンティニュでできません。 詳細については、の記事をご覧ください[コードの変更がサポートされているC# ](supported-code-changes-csharp.md)、 [Visual Basic エディット コンティニュで編集をサポートされていない](unsupported-edits-in-visual-basic-edit-and-continue.md)、および[C++コードの変更がサポートされている](supported-code-changes-cpp.md)。
 -   デバッグを開始する代わりに、接続しているアプリでコードを編集しようとして、**デバッグ**メニュー。  
 -   ワトソン博士のダンプ中にコードを編集しようとしています。デバッグ  
 -   ハンドルされない例外が発生した後にコードを編集しようとして、オプション**ハンドルされない例外でコール スタックをアンワインド**が選択されていません。  
@@ -49,5 +49,5 @@ ms.locfileid: "49382793"
   
 詳細については次を参照してください:
 - [C++ の編集と続行のブログを投稿します。](https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/)  
-- [サポートされるコードの変更 (C++)](../debugger/supported-code-changes-cpp.md)
+- [サポートされているコード変更 (C++)](../debugger/supported-code-changes-cpp.md)
 - [エディット コンティニュ](../debugger/edit-and-continue.md)
