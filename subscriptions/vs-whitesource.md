@@ -92,6 +92,6 @@ Click the green **Install** button if you are using Azure DevOps Services, or th
 
 ## <a name="support-resources"></a>サポート リソース
 
--  WhiteSource Bolt のヘルプが必要ですか。  https://www.whitesourcesoftware.com/vse_whitesource_bolt/ で WhiteSource Bolt の担当者とオンライン チャットしてください。
+-  WhiteSource Bolt のヘルプが必要ですか。  [https://www.whitesourcesoftware.com/vse_whitesource_bolt/](https://www.whitesourcesoftware.com/vse_whitesource_bolt/) で WhiteSource Bolt の担当者とオンライン チャットしてください。
 -  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://visualstudio.microsoft.com/subscriptions/support/)にお問い合わせください。
 -  Visual Studio IDE、Azure DevOps Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。
