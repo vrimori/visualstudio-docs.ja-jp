@@ -82,7 +82,7 @@ Cookiecutter のオプションは、**[ツール]** > **[オプション]** > *
 
 | オプション | 説明 |
 | --- | --- |
-| **推奨されるフィード URL** | 推奨されるテンプレート フィードの場所です。 URL またはローカル ファイルへのパスを指定できます。 マイクロソフトによって選別された既定のフィードを使用する場合は、URL を空のままにします。 フィードでは、改行で区切られたテンプレートの場所の単純なリストが提供されます。 選別されたフィードの変更を要求するには、[GitHub 上のソース](https://github.com/Microsoft/PTVS/blob/master/Python/Product/Cookiecutter/CookiecutterFeed.txt)に対してプル要求を行います。 |
+| **推奨されるフィード URL** | 推奨されるテンプレート フィードの場所です。 URL またはローカル ファイルへのパスを指定できます。 マイクロソフトによって選別された既定のフィードを使用する場合は、URL を空のままにします。 フィードでは、改行で区切られたテンプレートの場所の単純なリストが提供されます。 選別されたフィードの変更を要求するには、[GitHub 上のソース](https://github.com/Microsoft/PTVS/blob/master/Python/Product/Cookiecutter/CookiecutterFeed.txt)に対して pull request を行います。 |
 | **ヘルプの表示** | Cookiecutter ウィンドウの上部にヘルプ情報のバーを表示するかどうかを指定します。 |
 
 ## <a name="optimize-cookiecutter-templates-for-visual-studio"></a>Visual Studio 向けの Cookiecutter テンプレートの最適化

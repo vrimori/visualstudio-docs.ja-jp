@@ -20,7 +20,7 @@ ms.locfileid: "49916024"
 
 `import`ディレクティブにより、Visual Studio T4 テキスト テンプレートのコード ブロックにおいて、完全修飾名を指定せずに別の名前空間内の要素を参照を使用することができるようになります。 このディレクティブは、C# の `using` または、[!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)]の `imports` に相当します。
 
-T4 テキスト テンプレートの作成方法の一般的な概要については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)です。
+T4 テキスト テンプレートの作成方法の一般的な概要については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)
 
 ## <a name="using-the-import-directive"></a>import ディレクティブの使用
 

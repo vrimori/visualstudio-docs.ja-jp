@@ -25,7 +25,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 4b5711b90e2b160f48c05835ae833bfbe7cd29fe
 ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51730670"
@@ -125,7 +125,7 @@ SRCSRV (`srcsrv.dll`) プロトコルを実装するソース サーバーから
 **モジュールの読み込み (マネージドのみ) に JIT 最適化を抑制する**:  
 デバッガーをアタッチするとき、モジュールの読み込み中 (および JIT のコンパイル中) にマネージド コードの JIT 最適化を無効にします。 最適化を無効にした場合、一部の問題のデバッグは簡単になりますが、パフォーマンスは低下します。 [マイ コードのみ] を使用しているときに JIT 最適化を抑制すると、非ユーザー コードがユーザー コード ("マイ コード") として表示される可能性があります。 詳細については、次を参照してください。 [JIT の最適化とデバッグ](../debugger/jit-optimization-and-debugging.md)します。
 
-**ASP.NET (Chrome、Edge、および IE) の JavaScript のデバッグを有効にする**:  
+**ASP.NET (Chrome、Microsoft Edge、および IE) の JavaScript のデバッグを有効にする**:  
 ASP.NET アプリ用のスクリプト デバッガーを有効にします。 Chrome で初回使用時に、インストールされている Chrome の拡張機能を有効にするには、ブラウザーに署名する必要があります。 従来の動作に戻すには、このオプションを無効にします。
 
 **UWP JavaScript アプリ (試験段階) の Edge 開発者ツールを有効にする**:  

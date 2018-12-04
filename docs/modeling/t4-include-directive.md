@@ -93,7 +93,7 @@ void AnotherGenerateMessage(int n)
 #>
 ```
 
- **結果には、ファイル、MyTextTemplate.txt が生成されます。**
+ **生成されたファイル：MyTextTemplate.txt**
 
 ```
 Output message 1 (from top template).
@@ -107,7 +107,7 @@ Output message 5 (from top template).
        Output Message 7 (from AnotherGenerateMessage method).
 ```
 
-## <a name="msbuild"></a> MSBuild および Visual Studio でプロジェクト プロパティの使用
+## <a name="msbuild"></a>MSBuild および Visual Studio でのプロジェクト プロパティの使用
  include ディレクティブで $ (solutiondir) などの Visual Studio マクロを使用できますが、MSBuild では動作しません。 ビルド コンピューターでテンプレートを変換する場合、代わりにプロジェクトのプロパティを使用する必要があります。
 
  .csproj ファイルまたは .vbproj ファイルを編集してプロジェクトのプロパティを定義します。 この例では、`myIncludeFolder` という名前のプロパティを定義します。

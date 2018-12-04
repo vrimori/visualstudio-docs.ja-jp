@@ -192,7 +192,7 @@ IntelliSense は、コードの記述を支援する Visual Studio ツールで�
 
 ## <a name="run-the-application"></a>アプリケーションの実行
 
-1. デバッグ ツール バーで Edge や Chrome などのデバッグ ターゲットを選択します。
+1. デバッグ ツール バーで Microsoft Edge や Chrome などのデバッグ ターゲットを選択します。
 
     ![デバッグ ターゲットを選択する](../javascript/media/tutorial-nodejs-deploy-target.png)
 
