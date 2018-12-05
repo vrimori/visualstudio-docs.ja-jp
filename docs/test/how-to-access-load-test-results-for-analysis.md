@@ -16,18 +16,20 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: e2d857ccc22d6e824d32a5ae429295563bba334d
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 91e1b3c3a094e9bb510132d9160432a868fd559c
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39175674"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896446"
 ---
 # <a name="how-to-access-load-test-results-for-analysis"></a>方法 : ロード テストの結果にアクセスして分析する
 
 ロード テスト エディターからロード テストを実行すると、ロード テストの結果が自動的に開き、実行中のロード テストが**ロード テスト アナライザー**に表示されます。 コマンド ラインからロード テストを実行するとき、ロード テストの結果に手動でアクセスする必要があります。
 
 完了したロード テストの結果には、テスト対象コンピューターから定期的に収集されたパフォーマンス カウンター サンプルとエラー情報が含まれています。 パフォーマンス カウンター サンプルの多くは、ロード テストの実行中に収集されます。 収集されるパフォーマンス データの量は、テストの実行の長さ、サンプリング間隔、テスト対象コンピューターの数、収集されるカウンターの数、構成されているデータ コレクター、およびログ レベルによって異なります。 大規模なロード テストでは、収集されるパフォーマンス データ量が数ギガバイトになることも珍しくありません。 詳細については、「[テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)」を参照してください。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="to-access-a-load-test-result"></a>ロード テストの結果にアクセスするには
 

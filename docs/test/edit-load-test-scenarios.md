@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テスト シナリオの編集
+title: ロード テスト シナリオ
 ms.date: 10/03/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,18 +12,20 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 67398d5a4b2b33ace2d3ba3c74d63693861e586e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 865be7c7c6371f92f85d853a7dde045274fc5efb
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49837140"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896537"
 ---
 # <a name="edit-load-test-scenarios"></a>ロード テスト シナリオの編集
 
 ロード テスト *シナリオ*では、ロード パターン、テスト ミックス、ブラウザー ミックス、ネットワーク ミックスを指定します。 シナリオは、複雑で現実的なワークロードをシミュレートするテストを構成することができるため重要です。
 
 たとえば、何百人もの顧客が多様な接続速度、多様なブラウザーで同時にアクセスするインターネット フロントエンドを持つ電子商取引サイトをテストしているとします。 同じサイトには、製品を更新し、統計情報を表示するために従業員が内部で使用する管理機能が存在する可能性があります。 このような内部ユーザーは通常、同じブラウザーと高速な LAN 接続を使用してサイトにアクセスします。 このような 2 つの異なるグループのユーザーのプロパティを異なるシナリオにカプセル化することを考慮できます。 各シナリオには、仮想ユーザーの種類を含めることができます。 この例では、Web サイトの仮想顧客を表すロード テスト シナリオと、Web サイトの仮想内部ユーザーを表す別のロード テスト シナリオを作成できます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="scenario-components"></a>シナリオのコンポーネント
 

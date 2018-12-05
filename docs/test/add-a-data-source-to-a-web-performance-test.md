@@ -11,26 +11,28 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: bda1c548b4db5d7f94a1dd85befdff5645460b83
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 13d0f405b59b95df0edbcfc5e6f051c1f3140035
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295099"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896108"
 ---
 # <a name="add-a-data-source-to-a-web-performance-test"></a>Web パフォーマンス テストへのデータ ソースの追加
 
 データをバインドすると、同じテストに異なる複数の値を指定することができます (フォーム ポスト パラメーターに異なる複数の値を指定するなど)。
 
- ![Web パフォーマンス テストにデータをバインドする](../test/media/web_test_databinding_conceptual.png)
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
- サンプル ASP.NET アプリを使用します。 このサンプルでは、3 種類の *.aspx* ページ (既定ページ、Red ページ、Blue ページ) を使用します。 既定のページには、Red または Blue を選択するオプション ボタン コントロールと送信ボタンが表示されます。 他の 2 種類の *.aspx* ページは非常にシンプルです。 一方には Red という名前のラベルがあり、他方には Blue という名前のラベルがあります。 既定のページで送信ボタンをクリックすると、いずれかのページが表示されます。 [ColorWebApp](https://code.msdn.microsoft.com/Sample-ColorWebApp-76ff7506) サンプルをダウンロードするか、ご自身の Web アプリケーションの手順に従うことができます。
+![Web パフォーマンス テストにデータをバインドする](../test/media/web_test_databinding_conceptual.png)
 
- ![テストする Web アプリの実行](../test/media/web_test_databinding_runwebapp.png)
+サンプル ASP.NET アプリを使用します。 このサンプルでは、3 種類の *.aspx* ページ (既定ページ、Red ページ、Blue ページ) を使用します。 既定のページには、Red または Blue を選択するオプション ボタン コントロールと送信ボタンが表示されます。 他の 2 種類の *.aspx* ページは非常にシンプルです。 一方には Red という名前のラベルがあり、他方には Blue という名前のラベルがあります。 既定のページで送信ボタンをクリックすると、いずれかのページが表示されます。 [ColorWebApp](https://code.msdn.microsoft.com/Sample-ColorWebApp-76ff7506) サンプルをダウンロードするか、ご自身の Web アプリケーションの手順に従うことができます。
 
- ソリューションには、Web アプリケーションのページ間を移動する Web パフォーマンス テストも含める必要があります。
+![テストする Web アプリの実行](../test/media/web_test_databinding_runwebapp.png)
 
- ![Web パフォーマンス テストが含まれたソリューション](../test/media/web_test_databinding_solution.png)
+ソリューションには、Web アプリケーションのページ間を移動する Web パフォーマンス テストも含める必要があります。
+
+![Web パフォーマンス テストが含まれたソリューション](../test/media/web_test_databinding_solution.png)
 
 ## <a name="create-a-sql-database"></a>SQL データベースの作成
 

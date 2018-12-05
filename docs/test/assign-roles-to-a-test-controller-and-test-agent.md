@@ -14,24 +14,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 4f47fdad1b2f04a69b2a4bc1c3f6d1e6b60fa881
-ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
+ms.openlocfilehash: 021693266278bd705678c22d2c3f07e534901e5a
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46370732"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895341"
 ---
 # <a name="assign-roles-to-a-test-controller-and-test-agent"></a>ロールをテスト コントローラーとテスト エージェントに割り当てる
 
 このチュートリアルでは、Visual Studio で、テスト コントローラーとテスト エージェントを使用して、複数のコンピューターにテストを分散するテスト設定の作成および構成手順について説明します。 また、診断およびデータ アダプターをテスト設定に追加する方法についても説明します。
 
-このチュートリアルでは、次のタスクを行います。
-
--   テスト設定を作成する。
-
--   ロールをテスト コントローラーとテスト エージェントに割り当てる。
-
--   診断およびデータ アダプターをテスト設定に割り当てる。
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="prerequisites"></a>必須コンポーネント
 

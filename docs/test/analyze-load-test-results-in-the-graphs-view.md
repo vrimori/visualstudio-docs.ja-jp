@@ -17,16 +17,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 57c73a0da427141e4a8f94a51fa57ef7aa871019
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9c635d3a2c21d1ab84feca285c8cea8eb2aac68f
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49870056"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895081"
 ---
 # <a name="analyze-load-test-results-in-the-graphs-view-of-the-load-test-analyzer"></a>ロード テスト アナライザーのグラフ ビューでのテスト結果の分析
 
 ロード テストの結果は、複数のペインのデータとして表示されます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 テスト結果をグラフとして表示するには、**ロード テスト** ツール バーの **[グラフ]** をクリックします。 各グラフがパネルに表示され、ドロップダウン リストの先頭にグラフの名前が表示されます。 パネルに別のグラフを表示するには、一覧から別のグラフ名を選択します。
 
@@ -82,7 +84,6 @@ ms.locfileid: "49870056"
 |**グラフにカウンターを表示する:** グラフにカウンターを配置することにより、さまざまな種類のデータをロード テストの結果グラフに追加できます。|-   [方法: グラフにカウンターを追加および削除する](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)|
 |**グラフにズーム インする:** ロード テストを完了したら、ズーム バーを使用して、グラフの領域にズーム インしてスクロールできます。 ズーム インすると、ロード テストの実行中に生成されたデータをより詳細に確認できます。|-   [方法: グラフの領域にズーム インする](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)|
 |**グラフを並べて表示する:** ロード テストの結果グラフを複数のパターンで配置できます。 最大で 4 つのグラフを並べて表示できます。||
-|**グラフのパフォーマンス カウンター プロットの外観を変更する:** グラフのパフォーマンス カウンターのプロット ライン オプションは変更することができます。 これには、色と線のスタイルも含まれます。 また、パフォーマンス カウンターのプロットに使用する範囲を自動または手動のどちらで指定するかを指定できます。|-   [方法: グラフ作成カウンターのプロット オプションを指定する](../test/how-to-specify-plot-options-for-graphing-counters.md)|
 |**カスタム グラフを作成する:** ロード テストの結果に関する特定の情報を表示するグラフをデザインできます。 カスタム グラフをデザインするには、グラフで表示するロード テストのカウンターを指定します。|-   [方法: カスタム グラフを作成する](../test/how-to-create-custom-graphs-in-load-test-results.md)|
 |**グラフのパフォーマンス カウンター データをエクスポートする:** **グラフ** ビューが表示された状態で、**ロード テスト アナライザー** ツール バーの **[グラフ データを Excel にエクスポート]** ボタンを使用すると、グラフのデータを Microsoft Excel にエクスポートできます。||
 

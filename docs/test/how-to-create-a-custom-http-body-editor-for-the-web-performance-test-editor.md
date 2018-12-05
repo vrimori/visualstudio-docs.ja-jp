@@ -10,18 +10,20 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 338aade9ddef3c4ef571ea2a5bffc67064c81869
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0dc31bef7a7d2e91599cdc25be4f98445beda67f
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49862464"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896745"
 ---
 # <a name="how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor"></a>方法: Web パフォーマンス テスト エディターのカスタム HTTP ボディ エディターを作成する
 
 カスタム コンテンツ エディターを作成して、Web サービス要求 (たとえば、SOAP、REST、asmx、wcf、RIA、その他の種類の Web サービス要求など) の文字列ボディのコンテンツまたはバイナリ ボディのコンテンツを編集できます。
 
- 次の種類のエディターを実装できます。
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
+次の種類のエディターを実装できます。
 
 -   **文字列コンテンツ エディター** これは <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> インターフェイスを使用して実装されます。
 

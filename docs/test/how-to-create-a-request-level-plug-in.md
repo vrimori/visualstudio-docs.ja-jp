@@ -11,16 +11,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 749c4be37586401d48e9c4a11d8fc70b8ed44c44
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: cf94de633554cef495b0a9a023426ac49de75c76
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382036"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895276"
 ---
 # <a name="how-to-create-a-request-level-plug-in"></a>方法: 要求レベルのプラグインを作成する
 
 "*要求*" は、Web パフォーマンス テストを構成する宣言ステートメントです。 Web パフォーマンス テスト プラグインを使用すると、Web パフォーマンス テストの主要な宣言ステートメントとコードを分離し、そのコードを再利用できます。 プラグインを作成し、要求を含む Web パフォーマンス テストに追加するのと同じように、個々の要求にも追加できます。 カスタマイズされた "*要求プラグイン*" を使用すると、Web パフォーマンス テスト中の特定の要求の実行時にコードを呼び出すことができます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 すべての Web パフォーマンス テスト要求プラグインには、PreRequest メソッドと PostRequest メソッドがあります。 要求プラグインを特定の HTTP 要求にアタッチすると、その要求の発行前に PreRequest イベントが発生し、応答の受信後に PostRequest が起動します。
 
@@ -48,7 +50,7 @@ ms.locfileid: "39382036"
 
 6.  **[.NET]** タブをクリックします。スクロール ダウンし、**[Microsoft.VisualStudio.QualityTools.WebTestFramework]** を選択して、**[OK]** をクリックします。
 
-     **Microsoft.VisualStudio.QualityTools.WebTestFramework** への参照が**ソリューション エクスプローラー**の **[参照設定]** フォルダーに追加されます。
+     **Microsoft.VisualStudio.QualityTools.WebTestFramework** への参照が**ソリューション エクスプローラー**内の **[参照設定]** フォルダーに追加されます。
 
 7.  **ソリューション エクスプローラー**で、Web パフォーマンス テスト要求のテスト プラグインの追加先であるロード テストを含んでいる Web パフォーマンスとロード テスト プロジェクトの最上位ノードを右クリックします。 **[参照の追加]** をクリックします。
 

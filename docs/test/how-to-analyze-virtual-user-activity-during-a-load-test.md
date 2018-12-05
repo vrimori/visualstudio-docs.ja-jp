@@ -10,22 +10,24 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 00abfd827bf98d79e74ecbaf9a01efdc7761c3ee
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6737a5b12b9205e5d6ed3ddde6de89e820d92fce
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49881704"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895237"
 ---
 # <a name="how-to-analyze-what-virtual-users-are-doing-during-a-load-test-using-the-virtual-user-activity-chart"></a>方法: 仮想ユーザー アクティビティ チャートを使用してロード テスト中に仮想ユーザーが行っている操作を分析する
 
 **仮想ユーザー アクティビティ チャート**を使用して、ロード テストに関連付けられた仮想ユーザー アクティビティを表示します。 チャートの各行は、個別の仮想ユーザーを表します。 **仮想ユーザー アクティビティ チャート**には、各仮想ユーザーがテスト中に実行した処理が詳しく表示されます。 ユーザー アクティビティのパターンおよびロード パターンを把握し、失敗したテストまたは時間のかかったテストを関連付け、他の仮想ユーザー アクティビティで要求を確認できます。 **仮想ユーザー アクティビティ チャート**は、ロード テストの実行が完了した後にのみ使用できます。
 
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
 以下の手順は、**仮想ユーザー アクティビティ チャート**を表示する方法、特定のユーザー アクティビティを調べる方法、およびフィルター処理を使用する方法を示します。
 
 ## <a name="to-view-the-virtual-user-activity-chart-in-your-load-test-results"></a>仮想ユーザー アクティビティ チャートをロード テストの結果に表示するには
 
-1.  仮想ユーザー データを表示するには、まずロード テストに関連付けられた **[タイミングの詳細ストレージ]** プロパティの **[すべての個別詳細]** 設定を構成する必要があります。 そのうえで、ロード テストを実行します。 詳細については、「[方法: すべての詳細情報を収集するように構成して仮想ユーザー アクティビティ チャートを有効にする](../test/how-to-configure-load-tests-to-collect-full-details.md)」を参照してください。
+1.  仮想ユーザー データを表示するには、まずロード テストに関連付けられた **[タイミングの詳細ストレージ]** プロパティの **[すべての個別詳細]** 設定を構成する必要があります。 そのうえで、ロード テストを実行します。
 
 2.  ロード テストの実行後、テスト結果の概要ページが表示されます。 ツール バーの **[ユーザーの詳細]** を選択します。
 

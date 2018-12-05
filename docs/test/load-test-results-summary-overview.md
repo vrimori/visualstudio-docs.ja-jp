@@ -16,18 +16,20 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: fd184f292a063823b6513e7b6a1817e2477db303
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: ae70422ce3c88a3de6842f3f0946666b86ae559e
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380565"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895016"
 ---
 # <a name="load-test-results-summary-overview"></a>ロード テスト結果の概要
 
 ロード テストを実行した後、ロード テストの概要を表示して直ちにテスト結果を把握できます。 ロード テストの概要には、主要な結果がわかりやすい形式で簡潔にまとめられています。 ロード テストの概要を印刷することもできます。 これによって利害関係者に結果を伝えるのが容易になります。 前に実行したロード テストからロード テスト結果を開くと、ロード テストの概要が既定のビューになります。 詳細については、「[方法 : ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)」を参照してください。
 
- ![概要ビュー](../test/media/ltest_summaryview.png)
+![概要ビュー](../test/media/ltest_summaryview.png)
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="the-load-test-summary"></a>ロード テストの概要
 
@@ -127,7 +129,7 @@ ms.locfileid: "39380565"
 
 ## <a name="errors"></a>エラー
 
-このセクションには、ロード テストの実行中に発生したエラーの一覧があります。 エラーのタイプとサブタイプ、カウント、および最後のメッセージが表示されます。 エラーを選択すると、**[エラー]** テーブルが表示され、そのエラーの詳細を調べることができます。 詳細については、「[ロード テスト アナライザーのテーブル ビューでのロード テスト結果とエラーの分析](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)」と「[方法: カウンター パネルを使用してエラーを分析する](../test/how-to-analyze-errors-using-the-counters-panel.md)」を参照してください。
+このセクションには、ロード テストの実行中に発生したエラーの一覧があります。 エラーのタイプとサブタイプ、カウント、および最後のメッセージが表示されます。 エラーを選択すると、**[エラー]** テーブルが表示され、そのエラーの詳細を調べることができます。 詳細については、[テーブル ビューでのロード テスト結果とエラーの分析](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)に関するページを参照してください。
 
 > [!NOTE]
 > このセクションは、セクション タイトルの左側の矢印を選択して折りたたんだり展開したりできます。
