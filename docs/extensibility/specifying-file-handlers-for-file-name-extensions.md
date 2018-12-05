@@ -78,7 +78,7 @@ HKEY_CLASSES_ROOT\
          VisualStudio.vcproj.14.0 //new progid  
 ```  
   
- 古い ProgID がそれに関連付けられている動詞としている場合、これらの動詞はでも表示されます**プログラムから開く***製品名*ショートカット メニュー。  
+ 古い ProgID がそれに関連付けられている動詞としている場合、これらの動詞はでも表示されます **プログラムから開く** *製品名* ショートカット メニュー。  
   
 ## <a name="see-also"></a>関連項目  
  [ファイル名拡張子について](../extensibility/about-file-name-extensions.md)   
