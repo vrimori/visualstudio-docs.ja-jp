@@ -1,6 +1,7 @@
 ---
 title: サポートされている Roslyn パッケージ バージョンのマッピング
 ms.date: 11/02/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-sdk
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a8896818afddddd11012a5db4ee23f7ecb4b442
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: 18938ef7cdf0b1b0f7193c2f795a394837f92abb
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50967558"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896004"
 ---
 # <a name="net-compiler-platform-package-version-reference"></a>.NET コンパイラ プラットフォーム パッケージのバージョンのリファレンス
 
@@ -39,5 +40,5 @@ ms.locfileid: "50967558"
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET compiler Platform SDK](/dotnet/csharp/roslyn-sdk/)
+- [.NET Compiler Platform SDK](/dotnet/csharp/roslyn-sdk/)
 - [Roslyn アナライザーを概要します。](getting-started-with-roslyn-analyzers.md)

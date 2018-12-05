@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7cd96d61718972c82c6002888e123003530c019c
-ms.sourcegitcommit: 331dbb12e11fcd7f5d15fab05f3c861e48126e43
-ms.translationtype: MT
+ms.openlocfilehash: 8f0aa6cbe09f902ef69e1fd5cb3a2d9712cabf28
+ms.sourcegitcommit: d7f232a7596420e40ff8051d42cdf90203af4a74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51826662"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821449"
 ---
 # <a name="what-is-debugging"></a>デバッグとは
 
@@ -25,13 +25,13 @@ Visual Studio デバッガーは、強力なツールです。 など、いく�
 
 ## <a name="debugger-vs-debugging"></a>デバッガーとデバッグ
 
-用語*デバッグ*は非常に一般的なと、多くのさまざまなことを意味することができます。 単語の最もリテラルの使用法 で、コードからのバグの削除を意味します。 ここで、これを行う方法の多くがあります。 たとえば、入力ミスを探して、コードをスキャンして、またはコード アナライザーを使用して、デバッグする場合があります。 パフォーマンス プロファイラーを使用してコードをデバッグする場合があります。 またはを使用してデバッグする場合があります、*デバッガー*します。
+用語*デバッグ*多くのさまざまなことを意味することができますが、コードからバグを削除する最も文字どおり、ことを意味します。 ここで、これを行う方法の多くがあります。 たとえば、入力ミスを探して、コードをスキャンして、またはコード アナライザーを使用して、デバッグする場合があります。 パフォーマンス プロファイラーを使用してコードをデバッグする場合があります。 またはを使用してデバッグする場合があります、*デバッガー*します。
 
-デバッガーは、非常に特殊な開発者ツールです。 デバッガーは、実行中のアプリにアタッチされ、コードを検査することができます。 Visual Studio のデバッグ ドキュメントでは、これは通常「デバッグ」ということを意味します。
+デバッガーは、非常に特殊化された開発ツール、実行中のアプリにアタッチされ、コードを調査することができます。 Visual Studio のデバッグ ドキュメントでは、これは通常「デバッグ」ということを意味します。
 
 ## <a name="debug-mode-vs-running-your-app"></a>モードのアプリの実行とデバッグします。
 
-Visual Studio で初めてのアプリを実行するときに、緑色の矢印ボタンを押して開始可能性があります![デバッグの開始](../debugger/media/dbg-tour-start-debugging.png "デバッグの開始")ツールバー。 既定で、**デバッグ**値、左のドロップダウン リストに表示されます。 Visual Studio に慣れていない場合、アプリのデバッグが実行中に何かという印象のままにこのことができますをアプリがどの it は--が、これら 2 つの非常にさまざまなタスクは、根本的にします。
+Visual Studio で初めてのアプリを実行するときに、緑色の矢印ボタンを押して開始可能性があります![デバッグの開始](../debugger/media/dbg-tour-start-debugging.png "デバッグの開始")ツールバー (または**F5**)。 既定で、**デバッグ**値、左のドロップダウン リストに表示されます。 Visual Studio に慣れていない場合、アプリのデバッグが実行中に何かという印象のままにこのことができますをアプリがどの it は--が、これら 2 つの非常にさまざまなタスクは、根本的にします。
 
 ![デバッグ ビルドを選択します。](../debugger/media/what-is-debugging-debug-build.png)
 
@@ -52,4 +52,4 @@ A**デバッグ**値がデバッグ構成ことを示します。 アプリを�
 この記事では、いくつかの一般的なデバッグの概念を学びました。 次に、Visual Studio でデバッグする方法とバグでコードを作成する方法について学習を開始できます。 以下の記事で示すC#コード例についてが、概念は、Visual Studio でサポートされているすべての言語に適用されます。
 
 > [!div class="nextstepaction"]
-> [優れたC#Visual Studio を使用するコード](../debugger/write-better-code-with-visual-studio.md)
+> [より良い C# コードを書くことでバグを修正する](../debugger/write-better-code-with-visual-studio.md)

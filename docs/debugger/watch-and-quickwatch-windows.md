@@ -1,5 +1,5 @@
 ---
-title: Visual Studio での変数にウォッチを設定 |マイクロソフトのドキュメント
+title: Visual Studio での変数にウォッチを設定 |Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 10/11/2018
 ms.technology: vs-ide-debug
@@ -18,18 +18,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aa469b109e0e22e426d76f75be50309196c6a264
-ms.sourcegitcommit: 331dbb12e11fcd7f5d15fab05f3c861e48126e43
-ms.translationtype: MT
+ms.openlocfilehash: 944347f6afc371775afca1b58bae77271b60359c
+ms.sourcegitcommit: a811f6a194ccd40d844e74e618d847df87c85c16
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51826792"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52621644"
 ---
 # <a name="watch-variables-with-watch-windows-and-quickwatch"></a>ウォッチ ウィンドウと クイック ウォッチ変数なウォッチ 
 
 使用することができます、デバッグ中**ウォッチ**windows と **[クイック ウォッチ]** 変数と式をウォッチします。 Windows はデバッグ セッション中にのみ使用できます。
 
 **ウォッチ**windows は、デバッグ中に、一度にいくつかの変数を表示できます。 **[クイック ウォッチ]** ダイアログは、一度に 1 つの変数を表示し、デバッグを続行する前に閉じる必要があります。
+
+コードをデバッグしようとした初めての場合は、読み取りをする可能性があります[より適切に記述することでバグを修正C#コード](../debugger/write-better-code-with-visual-studio.md)と[超初心者向けのデバッグ](../debugger/debugging-absolute-beginners.md)にこの記事に進む前にします。
 
 ## <a name="observe-variables-with-a-watch-window"></a>ウォッチ ウィンドウで変数を観察します。
 
@@ -142,11 +144,11 @@ var1 = var2
 
 副作用の指定を防ぐために 1 つの方法では、関数の自動評価をオフにします。 **ツール** > **オプション** > **デバッグ** > **全般**の選択を解除**プロパティの評価とその他の暗黙的な関数呼び出しを有効にする**します。
 
-C#のみ、プロパティの評価または暗黙的な関数呼び出しが入っていないときに強制的に評価できますを追加して、 **ac**書式修飾子を変数に**名前**で、**ウォッチ**ウィンドウ。 参照してください[書式指定子 (C#)](../debugger/format-specifiers-in-csharp.md)します。
+C#のみ、プロパティの評価または暗黙的な関数呼び出しが入っていないときに強制的に評価できますを追加して、 **ac**書式修飾子を変数に**名前**で、**ウォッチ**ウィンドウ。 「[C# の書式指定子](../debugger/format-specifiers-in-csharp.md)」を参照してください。
 
 ## <a name="bkmk_objectIds"></a> オブジェクト Id を使用して、[ウォッチ] ウィンドウで (C#および Visual Basic)
 
-特定のオブジェクトの動作を確認することがあります。 たとえば、その変数がスコープ外になった後、ローカル変数で参照先オブジェクトを追跡したい場合があります。 C# Visual Basic では、オブジェクト Id は、参照型の特定のインスタンスを作成したりできますでそれらを使用して、**ウォッチ**ウィンドウおよびブレークポイントの条件でします。 オブジェクト ID では、サービスのデバッグ共通言語ランタイム (CLR) によって生成され、オブジェクトに関連付けられています。
+特定のオブジェクトの動作を確認することがあります。 たとえば、その変数がスコープ外になった後、ローカル変数で参照先オブジェクトを追跡したい場合があります。 C# と Visual Basic では、参照型の特定のインスタンスのオブジェクト ID を作成し、それらの ID を**ウォッチ** ウィンドウやブレークポイントの条件で使用できます。 オブジェクト ID は、共通言語ランタイム (CLR) のデバッグ サービスで生成されて、オブジェクトに関連付けられます。
 
 > [!NOTE]
 > オブジェクト Id は、ガベージ コレクションの対象からオブジェクトを防ぐことはできませんの弱い参照を作成します。 オブジェクト ID は、現在のデバッグ セッションでのみ有効です。
@@ -217,13 +219,13 @@ public class Program
 
 のみを表示する、**動的ビュー**オブジェクトは、追加、**動的**の動的オブジェクト名の後の書式指定子、**ウォッチ**ウィンドウ。
 
-- (C#)。 `ObjectName, dynamic`
-- Visual basic の場合。 `$dynamic, ObjectName`
+- C# の場合: `ObjectName, dynamic`
+- Visual Basic の場合: `$dynamic, ObjectName`
 
 >[!NOTE]
 >- C#内の値が自動的に再評価するデバッガー、**動的ビュー**次のコード行をステップ実行する場合。 
 >- Visual Basic のデバッガーを使用して追加の式を自動的に更新する、**動的ビュー**します。
->- メンバーを評価する、**動的ビュー**が[副作用](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\))します。 
+>- **動的ビュー**のメンバーを評価すると、[副作用](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\))が発生する場合があります。 
 
 **新しいウォッチを挿入するには、変数をキャスト動的オブジェクトをオブジェクトに。**
   
@@ -278,6 +280,6 @@ static void Main(string[] args)
 1. デバッグを続行します。 内の変数を観察できます、**ウォッチ**ウィンドウ。
 
 ## <a name="see-also"></a>関連項目
- [何をデバッグするとしますか。](../debugger/what-is-debugging.md)  
- [優れたC#Visual Studio を使用するコード](../debugger/write-better-code-with-visual-studio.md)  
+ [デバッグとは](../debugger/what-is-debugging.md)  
+ [より良い C# コードを書くことでバグを修正する](../debugger/write-better-code-with-visual-studio.md)  
  [最初に、デバッグについて](../debugger/debugger-feature-tour.md)[デバッガー ウィンドウ](../debugger/debugger-windows.md)

@@ -16,24 +16,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 37843e6f84bf16efee4d149ed08a7ecb525d7574
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
-ms.translationtype: HT
+ms.openlocfilehash: 7e94c520ca01a92b65ba05a4ff91aaa4c01e7b8d
+ms.sourcegitcommit: a811f6a194ccd40d844e74e618d847df87c85c16
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52388518"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52621472"
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows"></a>[自動変数] と [ローカル] ウィンドウに変数を検査します。
 
-**[自動変数]** と**ローカル**windows は、デバッグ中に変数の値を表示します。 Windows はデバッグ セッション中にのみ使用できます。 **[自動変数]** ウィンドウには、現在のブレークポイントを使用する変数が表示されます。 **ローカル**ウィンドウには、現在の関数またはメソッドは、通常は、ローカル スコープで定義された変数が表示されます。 コードをデバッグしようとした初めての場合は、読み取りをする可能性があります[優れたC#Visual Studio を使用してコード](../debugger/write-better-code-with-visual-studio.md)と[超初心者向けのデバッグ](../debugger/debugging-absolute-beginners.md)にこの記事に進む前にします。
+**[自動変数]** と**ローカル**windows は、デバッグ中に変数の値を表示します。 Windows はデバッグ セッション中にのみ使用できます。 **[自動変数]** ウィンドウには、現在のブレークポイントを使用する変数が表示されます。 **ローカル**ウィンドウには、現在の関数またはメソッドは、通常は、ローカル スコープで定義された変数が表示されます。 コードをデバッグしようとした初めての場合は、読み取りをする可能性があります[より適切に記述することでバグを修正C#コード](../debugger/write-better-code-with-visual-studio.md)と[超初心者向けのデバッグ](../debugger/debugging-absolute-beginners.md)にこの記事に進む前にします。
 
  **[自動変数]** ウィンドウが使用できるC#、Visual Basic、C++、および Python コードでは、JavaScript ではなくまたはF#します。
   
 開くには、 **[自動変数]** ウィンドウで、デバッグ中に、**デバッグ** > **Windows** > **[自動変数]**、またはキーを押します**Ctrl**+**Alt**+**V** > **A**します。  
 
 開くには、**ローカル**ウィンドウで、デバッグ中に、**デバッグ** > **Windows** > **ローカル**、またはキーを押します**Alt**+**4**します。
-
-デバッグの基礎の詳細については、[デバッガーでの作業の開始](../debugger/getting-started-with-the-debugger.md)に関するページを参照してください。
 
 > [!NOTE]
 > このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac では、次を参照してください。 [Visual studio for Mac のデータの視覚化](/visualstudio/mac/data-visualizations)します。
@@ -153,5 +151,5 @@ private static int subtractVars(int i, int j)
   
 ## <a name="see-also"></a>関連項目  
  [デバッグとは](../debugger/what-is-debugging.md)  
- [優れたC#Visual Studio を使用するコード](../debugger/write-better-code-with-visual-studio.md)  
+ [より良い C# コードを書くことでバグを修正する](../debugger/write-better-code-with-visual-studio.md)  
  [最初に、デバッグについて](../debugger/debugger-feature-tour.md)[デバッガー ウィンドウ](../debugger/debugger-windows.md)
