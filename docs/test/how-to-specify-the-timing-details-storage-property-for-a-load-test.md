@@ -11,16 +11,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 5d5e378e62f03208c620669fada783fc5fdfb1b1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e184db43fcaca96008f85daffdb9abdbc41df07b
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49842171"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895224"
 ---
 # <a name="how-to-specify-the-timing-details-storage-property-for-a-load-test-run-setting"></a>方法: ロード テストの実行設定の [タイミングの詳細ストレージ] プロパティを指定する
 
 **新しいロード テスト ウィザード**でロード テストを作成した後で、**ロード テスト エディター**を使用して、設定をテストのニーズおよび目標に合わせて変更できます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 **[プロパティ]** ウィンドウで、実行設定の **[タイミングの詳細ストレージ]** プロパティの値を編集することができます。 **[タイミングの詳細ストレージ]** プロパティは、次のいずれかのオプションに設定できます。
 

@@ -10,16 +10,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 8b38366a97351fae52ae82a4291ed13da996bf41
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 2f04912423dfdbd2baa7beab431871f814c044b0
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51296087"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895471"
 ---
 # <a name="how-to-create-a-test-setting-for-a-distributed-load-test"></a>方法: 配布されたロード テストのテスト設定を作成する
 
 ロード テストの*テスト設定*を構成し、テスト エージェントとテスト コントローラーを使用して複数のコンピューターにテストを分散できるようにします。 また、*診断データ アダプター*を使用するようにテストの設定を構成することもできます。これは、収集するデータの種類や、Visual Studio からロード テストを実行するときにテスト コンピューターに及ぼす影響を指定します。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 たとえば、ASP.NET プロファイラーの診断データ アダプターを使用して、コードのパフォーマンスの分析結果を収集できます。 また、診断データ アダプターを使用して、テスト コンピューター上での潜在的なボトルネックをシミュレートすることも、使用可能なシステム メモリを減らすこともできます。
 

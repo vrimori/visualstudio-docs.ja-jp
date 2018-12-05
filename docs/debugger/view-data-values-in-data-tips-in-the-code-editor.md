@@ -19,16 +19,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c473faf449176b38d4505675b1060618344db0d6
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
-ms.translationtype: HT
+ms.openlocfilehash: 4156ff8f81e7a011aeff0cf753af60bb3d6cd924
+ms.sourcegitcommit: a811f6a194ccd40d844e74e618d847df87c85c16
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52388161"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52621540"
 ---
 # <a name="view-data-values-in-datatips-in-the-code-editor"></a>データヒントで、コード エディターで値のデータ表示
 
-DataTips は、デバッグ中に、アプリでの変数に関する情報を表示する便利な方法です。 
+DataTips は、デバッグ中にプログラムの変数に関する情報を確認するときに便利です。 データヒントは、中断モードのときにのみ機能します。また、実行の現在のスコープ内にある変数に対してだけ使用できます。 コードをデバッグしようとした初めての場合は、読み取りをする可能性があります[より適切に記述することでバグを修正C#コード](../debugger/write-better-code-with-visual-studio.md)と[超初心者向けのデバッグ](../debugger/debugging-absolute-beginners.md)にこの記事に進む前にします。
 
 初めてデバッグする場合は、読み取りをする可能性があります[優れたC#Visual Studio を使用してコード](../debugger/write-better-code-with-visual-studio.md)と[超初心者向けのデバッグ](../debugger/debugging-absolute-beginners.md)この記事を読む前にします。
   
@@ -127,8 +127,8 @@ Datatip を透過的にデータヒントでその下にあるコードを参照
 
 ## <a name="see-also"></a>関連項目  
  [デバッグとは](../debugger/what-is-debugging.md)  
- [優れたC#Visual Studio を使用するコード](../debugger/write-better-code-with-visual-studio.md)  
- [デバッグの概要](../debugger/debugger-feature-tour.md)   
- [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)   
+ [より良い C# コードを書くことでバグを修正する](../debugger/write-better-code-with-visual-studio.md)  
+ [最初に、デバッグについて](../debugger/debugger-feature-tour.md)[デバッガーでのデータの表示](../debugger/viewing-data-in-the-debugger.md)   
  [ウォッチ ウィンドウと [クイック ウォッチ] ウィンドウ](../debugger/watch-and-quickwatch-windows.md)   
  [カスタム ビジュアライザーを作成する](../debugger/create-custom-visualizers-of-data.md)   
+

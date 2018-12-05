@@ -147,7 +147,7 @@ Dinner Now では、新しい要求を満たすためのコストを見積もる
 |**マップまたは図**|**表示される内容**|
 |-|-|
 |*コード マップ*<br /><br /> 参照トピック<br /><br /> - [ソリューション間の依存関係をマップします。](../modeling/map-dependencies-across-your-solutions.md)<br />- [参照およびコード マップを再配置](../modeling/browse-and-rearrange-code-maps.md)<br />- [DGML ファイルを編集してコード マップをカスタマイズします。](../modeling/customize-code-maps-by-editing-the-dgml-files.md)|コード内の依存関係とその他の関係。<br /><br /> たとえば、Dinner Now はまず、アセンブリのコード マップでアセンブリとその依存関係の概要を確認するとします。 そのとき、マップの詳細を表示してそれらのアセンブリの名前空間やクラスを調べることができます。<br /><br /> さらに、コードの特定の領域やその他の種類のリレーションシップを調べるためのマップを生成することもできます。 対象となる領域やリレーションシップを見つけて選択するにはソリューション エクスプローラーを使用します。|
-|*コード ベースのクラス図*<br /><br /> 「 [How to: Add Class Diagrams to Projects (Class Designer)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)」を参照してください。|コード内の既存のクラス。|
+|*コード ベースのクラス図*<br /><br /> 「[方法: プロジェクトにクラス ダイアグラムを追加する (クラス デザイナー)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)」を参照してください。|コード内の既存のクラス。|
 
  たとえば、開発者はコード マップを作成します。 新しいシナリオの影響を受ける領域に合わせてスコープを調整します。 次のマップでは、それらの領域が選択されて強調表示されています。
 
@@ -167,7 +167,7 @@ Dinner Now では、新しい要求を満たすためのコストを見積もる
 
 |**図**|**記述する内容**|
 |-|-|
-|*コード ベースのクラス図*<br /><br /> 「 [How to: Add Class Diagrams to Projects (Class Designer)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)」を参照してください。|コード内の既存のクラス。|
+|*コード ベースのクラス図*<br /><br /> 「[方法: プロジェクトにクラス ダイアグラムを追加する (クラス デザイナー)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)」を参照してください。|コード内の既存のクラス。|
 
 ### <a name="ValidatingCode"></a> コードと設計の一致の維持します。
  Dinner Now では、更新されたコードが設計と一致していることを確認する必要があります。 システムの機能のレイヤーを記述、これらのレイヤーをおよび関連付けのソリューションの成果物の間で許容される依存関係を指定する依存関係図を作成します。
@@ -332,7 +332,7 @@ Dinner Now と Lucerne は協力して、2 つのシステムを統合するの�
 |**図**|**記述する内容**|
 |-|-|
 |依存関係図|システムの論理アーキテクチャ。 依存関係の検証を使用して、コードが、設計と一致するかどうかを確認します。<br /><br /> 既存 dependencys または目的 dependencys を識別するために、コード マップを作成し、関連する項目をグループ化します。 依存関係図を作成するには、次を参照してください。<br /><br /> - [コードから依存関係図を作成します。](../modeling/create-layer-diagrams-from-your-code.md)<br />- [依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)|
-|クラス図 (コード ベース)|特定のプロジェクトに対するコード内の既存のクラス。<br /><br /> コード内の既存のクラスを視覚化して変更するには、クラス デザイナーを使用します。<br /><br /> 「 [How to: Add Class Diagrams to Projects (Class Designer)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)」を参照してください。|
+|クラス図 (コード ベース)|特定のプロジェクトに対するコード内の既存のクラス。<br /><br /> コード内の既存のクラスを視覚化して変更するには、クラス デザイナーを使用します。<br /><br /> 「[方法: プロジェクトにクラス ダイアグラムを追加する (クラス デザイナー)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)」を参照してください。|
 
 ### <a name="DefineClasses"></a> 型の用語集の定義: クラス図
  クラス図は、システムに参加するエンティティ、用語、または概念と、それらの関係を定義します。 たとえば、開発中にこれらの図を使用すると、各クラスの属性と操作を、実装の言語やスタイルに関係なく記述できます。

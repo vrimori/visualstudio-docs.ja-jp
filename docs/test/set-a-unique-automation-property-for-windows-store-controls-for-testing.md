@@ -9,16 +9,18 @@ manager: douge
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: c01633f4814326867d7c7e43e345f4faf052622f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 1cc8986c3101bb2048e0cd4ace739974031344ed
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49924981"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894782"
 ---
 # <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>テスト用に UWP コントロールの一意のオートメーション プロパティを設定する
 
 XAML ベースの UWP アプリケーション用のコード化された UI テストを実行する場合は、一意のオートメーション プロパティによって各コントロールを識別する必要があります。 アプリケーションで XAML コントロールの種類に基づいて固有のオートメーション プロパティを割り当てることができます。
+
+[!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
 ## <a name="static-xaml-definition"></a>静的な XAML 定義
 
@@ -43,7 +45,7 @@ XAML ファイルに定義されているコントロールに一意のオート
 コントロールの XAML で **AutomationProperties.AutomationId** を **ButtonX** に明示的に設定します。
 
 ```xaml
-<Button AutomationProperties.AutomationId="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />
+<Button AutomationProperties.AutomationId="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />
 ```
 
 コントロールの XAML で **AutomationProperties.Name** を **ButtonY** に明示的に設定します。

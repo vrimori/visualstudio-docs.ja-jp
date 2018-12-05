@@ -13,18 +13,20 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: e70c468a70d37d1d8e261844c004af785a68eb54
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9c7e85dcbd62c5f068ce3286145fec2ddddc7947
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49827936"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895692"
 ---
 # <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>方法: テスト コントローラーおよびテスト エージェントのタイムアウト期限を指定する
 
 テスト コントローラーもテスト エージェントも、相互の応答またはデータ ソースからの応答をどのくらいの時間待機するかを指定するいくつかのタイムアウト設定を持っています。この時間を超えると、失敗としてエラーになります。 特定の状況下では、トポロジや他の環境の問題の要件に合わせてタイムアウト値を編集しなければならない場合があります。 タイムアウト値を編集するには、以下の手順で説明されているように、テスト コントローラーまたはテスト エージェントと関連付けられている XML 構成ファイルを編集します。
 
- テスト コントローラーまたはテスト エージェントのさまざまなタイムアウト設定を編集するには、以下の構成ファイルを表のキー名と値を使用して変更します。
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
+テスト コントローラーまたはテスト エージェントのさまざまなタイムアウト設定を編集するには、以下の構成ファイルを表のキー名と値を使用して変更します。
 
 -   テスト コントローラー: *QTController.exe.config*
 

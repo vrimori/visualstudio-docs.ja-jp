@@ -87,11 +87,11 @@ ms.locfileid: "51295905"
 |プロパティ名|説明|  
 |-------------------|-----------------|  
 |配置競合の解決|配置するプロジェクト アイテムのプロパティが既にサーバー上にあるアイテムのプロパティと同じであった場合に実行される動作を指定します。 詳細については、「 [Troubleshooting SharePoint Packaging and Deployment](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)」を参照してください。|  
-|機能のプロパティ|フィーチャーが SharePoint に配置されるときに一緒に含まれる一連の値 (キー/値のペアとして格納されます) を指定します。 フィーチャーが配置されると、そのプロパティ値にコードでアクセスできるようになります。 詳細については、「 [Providing Packaging and Deployment Information in Project Items](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)」を参照してください。|  
-|フィーチャー レシーバー|プロジェクト項目の対象フィーチャーで特定のイベントが発生した場合に実行されるコードが用意されています。 詳細については、「 [Providing Packaging and Deployment Information in Project Items](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)」を参照してください。|  
+|機能のプロパティ|フィーチャーが SharePoint に配置されるときに一緒に含まれる一連の値 (キー/値のペアとして格納されます) を指定します。 フィーチャーが配置されると、そのプロパティ値にコードでアクセスできるようになります。 詳細については、「 [プロジェクト項目でのパッケージ化と配置の情報の提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)」を参照してください。|  
+|フィーチャー レシーバー|プロジェクト項目の対象フィーチャーで特定のイベントが発生した場合に実行されるコードが用意されています。 詳細については、「 [プロジェクト項目でのパッケージ化と配置の情報の提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)」を参照してください。|  
 |フォルダー名|SharePoint プロジェクト項目フォルダーの名前。|  
-|プロジェクト出力参照|プロジェクト項目の実行に必要な依存関係 (アセンブリなど) を指定します。 詳細については、「 [Providing Packaging and Deployment Information in Project Items](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)」を参照してください。|  
-|安全なコントロール エントリ|信頼関係のないユーザーが編集しても安全なコントロールを指定します。 詳細については、「 [Providing Packaging and Deployment Information in Project Items](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)」を参照してください。|  
+|プロジェクト出力参照|プロジェクト項目の実行に必要な依存関係 (アセンブリなど) を指定します。 詳細については、「 [プロジェクト項目でのパッケージ化と配置の情報の提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)」を参照してください。|  
+|安全なコントロール エントリ|信頼関係のないユーザーが編集しても安全なコントロールを指定します。 詳細については、「 [プロジェクト項目でのパッケージ化と配置の情報の提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)」を参照してください。|  
   
 ### <a name="project-item-file-properties"></a>プロジェクト項目ファイルのプロパティ
   

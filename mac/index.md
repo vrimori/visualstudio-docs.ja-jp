@@ -3,14 +3,14 @@ title: Visual Studio for Mac の概要
 description: この記事では Visual Studio for Mac の機能を紹介します
 author: conceptdev
 ms.author: crdun
-ms.date: 05/06/2018
+ms.date: 11/03/2018
 ms.assetid: 3A130EC1-DD8C-4125-9034-B08D7AF7EA65
-ms.openlocfilehash: b04b670be5c56811be2e6ee1ea9dad28677a35e7
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 10b27c26fcef622687b64f225dd04ae966f43cd5
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42625865"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895679"
 ---
 # <a name="introducing-visual-studio-for-mac"></a>Visual Studio for Mac の概要
 
@@ -26,9 +26,12 @@ Visual Studio for Mac は、モバイル、デスクトップ、Web アプリケ
 
 この記事では、Visual Studio for Mac の持つさまざまな面を概説し、クロスプラットフォーム アプリケーションを作成する場合に強力なツールとなる機能を紹介します。
 
+> [!TIP]
+> Visual Studio 2019 for Mac のプレビューがテストできるようになりました。 これらの[インストールの指示](install-preview.md)に従い、[IDE ツアー](ide-tour.md)を確認します。
+
 ## <a name="installation"></a>インストール
 
-[インストール](installation.md) ガイドの手順に従って Visual Studio for Mac をダウンロードしてインストールします。
+[インストール](install-preview.md) ガイドの手順に従って Visual Studio for Mac をダウンロードしてインストールします。
 
 ## <a name="language-support"></a>言語サポート
 
@@ -79,7 +82,7 @@ Android Designer の詳細については、[Designer の概要](https://develop
 
 ### <a name="ios"></a>iOS
 
-iOS Designer は Visual Studio for Mac と完全に統合されているので、.xib ファイルおよび Storyboard ファイルを視覚的に編集し、iOS、tvOS、および watchOS の UI と遷移を作成できます。ツールボックスとデザイン サーフェイス間でドラッグ アンド ドロップ機能を使用してユーザー インターフェイス全体を構築できるだけでなく、直感的な方法でイベントを処理できます。iOS Designer は、デザイン時のレンダリングにさらに役立つ[カスタム コントロール](https://developer.xamarin.com/guides/ios/user_interface/designer/ios_designable_controls_overview/)もサポートしています。
+iOS Designer は Visual Studio for Mac と完全に統合されているので、.xib およびストーリーボード ファイルを視覚的に編集し、iOS、tvOS、および watchOS の UI と遷移を作成できます。 ツールボックスとデザイン サーフェイス間でドラッグ アンド ドロップ機能を使用してユーザー インターフェイス全体を構築できるだけでなく、直感的な方法でイベントを処理できます。 iOS Designer は、デザイン時のレンダリングにさらに役立つ[カスタム コントロール](https://developer.xamarin.com/guides/ios/user_interface/designer/ios_designable_controls_overview/)もサポートしています。
 
 ![iOS Storyboard デザイナー](media/intro-image30.png)
 

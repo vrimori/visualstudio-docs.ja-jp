@@ -12,22 +12,24 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 85759cc5f9297ba2bb0706352d788ba619a8021c
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 12b01e8428c35874f4a913c846f57f89a02162c6
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380669"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894470"
 ---
 # <a name="how-to-create-a-web-service-test"></a>方法: Web サービス テストを作成する
 
 Web パフォーマンス テストを使用して、Web サービスをテストできます。 **[要求の挿入]** オプションおよび **[Web サービス要求の挿入]** オプションを使用すると、**Web パフォーマンス テスト エディター**にある個々の要求を Web サービス ページに移動するようにカスタマイズできます。 通常、Web アプリケーションでは、これらのページは表示されません。 そのため、これらのページへアクセスできるように要求をカスタマイズする必要があります。
 
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
 次の手順では、コマース スタート キットに含まれる Web サービスを使用します。 これは [ASP.NET コマース スタート キット](http://go.microsoft.com/fwlink/?LinkId=181469)からダウンロードできます。
 
- **必要条件**
+**必要条件**
 
--   Visual Studio Enterprise
+Visual Studio Enterprise
 
 ## <a name="to-test-a-web-service"></a>Web サービスをテストするには
 

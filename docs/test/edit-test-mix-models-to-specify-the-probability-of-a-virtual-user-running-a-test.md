@@ -11,16 +11,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ee123e474ad4b52b3debe6ad65bf6424388fe191
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: acb786a4182a79a4133e2d94000ab5f7693bade3
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49816017"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894665"
 ---
 # <a name="edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test"></a>テスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定する
 
 "*テスト ミックス モデル*" では、ロード テスト シナリオで仮想ユーザーが指定のテストを実行する確率を指定します。 これにより、より現実的なロードをシミュレートできます。 アプリケーションを通じて使用するワークフローを 1 つだけではなく複数設定することができ、エンド ユーザーがアプリケーションとやり取りする形態により近い状態を実現できます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="test-mix-model-options"></a>テスト ミックス モデルのオプション
 

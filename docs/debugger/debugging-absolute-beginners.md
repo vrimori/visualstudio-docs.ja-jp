@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fa998896ad4c67bcd9e10ee50b4939bdbf915330
-ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
+ms.openlocfilehash: 7f6b0855b18f12bd80ad17c5b544a95e5ee57de9
+ms.sourcegitcommit: d7f232a7596420e40ff8051d42cdf90203af4a74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52257369"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821371"
 ---
 # <a name="how-to-debug-for-absolute-beginners"></a>超初心者でもわかるデバッグ方法
 
@@ -244,7 +244,7 @@ Visual Studio では、コード行の左にある余白をクリックして、
 
     ![構文エラー](../debugger/media/beginners-no-definition.png)
 
-    各銀河を `GType` 型のオブジェクト (`MGType` プロパティを含みます) で設定しましたが、デバッガーは `theGalaxy` オブジェクトを `GType` 型のオブジェクトとして認識していません。 何が起こっているのでしょうか。 銀河の種類を設定しているコードを調べてみます。 そうすると、`GType` クラスには確かに `MyGType` のプロパティがありますが、どこかにおかしなところがあります。 `object` に関するエラー メッセージが手掛かりになります。言語インタープリターに対しては、種類は `GType` 型のオブジェクトではなく `object` 型のオブジェクトとして認識されています。
+    各銀河を `GType` 型のオブジェクト (`MyGType` プロパティを含みます) で設定しましたが、デバッガーは `theGalaxy` オブジェクトを `GType` 型のオブジェクトとして認識していません。 何が起こっているのでしょうか。 銀河の種類を設定しているコードを調べてみます。 そうすると、`GType` クラスには確かに `MyGType` のプロパティがありますが、どこかにおかしなところがあります。 `object` に関するエラー メッセージが手掛かりになります。言語インタープリターに対しては、種類は `GType` 型のオブジェクトではなく `object` 型のオブジェクトとして認識されています。
 
 1. 銀河の種類の設定に関するコードを調べると、`Galaxy` クラスの `GalaxyType` プロパティが、`GType` ではなく `object` として指定されていることがわかります。
 

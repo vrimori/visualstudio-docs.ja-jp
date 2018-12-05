@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でテスト設定を使用して診断情報を収集する
+title: テスト設定を使用して診断情報を収集する
 ms.date: 10/03/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 0b2d44d0fa50a4d733f62845d54116cceb2f2016
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 288d1ce5511d33a48006c97030d2b9c2f12ec88c
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49865350"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895211"
 ---
 # <a name="collect-diagnostic-information-using-test-settings"></a>テスト設定を使用して診断情報を収集する
 
@@ -32,6 +32,8 @@ ms.locfileid: "49865350"
 -   再現不可能なバグの特定に役立つ IntelliTrace データを収集する
 
 また、診断データ アダプターを使用して、テスト コンピューターの動作を変更することもできます。 たとえば、Visual Studio のテストの設定により、さまざまなネットワーク トポロジのボトルネックをエミュレートして、チームのアプリケーションのパフォーマンスを評価できます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="use-test-settings-with-visual-studio"></a>Visual Studio でテストの設定を使用する
 

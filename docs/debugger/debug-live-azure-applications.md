@@ -14,12 +14,12 @@ manager: douge
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: a2dfc759fbd42dd435133e223c72760ae5c274c3
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
-ms.translationtype: MT
+ms.openlocfilehash: b9162b1e0cc6b1e4e0a5292825dbdebfeff1ae5f
+ms.sourcegitcommit: d7f232a7596420e40ff8051d42cdf90203af4a74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39154464"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821423"
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>スナップショット デバッガーを使用して、ライブの ASP.NET Azure アプリをデバッグします。
 
@@ -34,9 +34,9 @@ ms.locfileid: "39154464"
 > * スナップ ポイントを設定し、スナップショットの表示
 > * ログポイントを設定します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
-* スナップショット デバッガーは、Visual Studio 2017 Enterprise バージョン 15.5 以降で使用できるのみ、 **ASP.NET および web 開発ワークロード**します。 ASP.NET Core, も必要があります、します。**NET Core 開発**ワークロードをインストールします。
+* スナップショット デバッガーは、Visual Studio 2017 Enterprise バージョン 15.5 以降で使用できるのみ、 **ASP.NET および web 開発ワークロード**します。 ASP.NET Core, も必要です、 **.NET Core 開発**ワークロードをインストールします。
 
     インストールされていない場合は、インストール[Visual Studio 2017 Enterprise バージョン 15.5](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)またはそれ以降。 以前の Visual Studio 2017 のインストールから更新する場合、Visual Studio インストーラーを実行しスナップショット デバッガーのコンポーネントを確認、 **ASP.NET および web 開発ワークロード**します。
 
@@ -84,7 +84,7 @@ ms.locfileid: "39154464"
     > [!TIP]
     > スナップショットを表示するときにステップすることはできませんが、異なるコード行で実行するコードに複数個のスナップ ポイントを配置することができます。 場合は、コード内の複数のスナップ ポイントにある場合は、スナップショット デバッガーにより同じエンド ユーザー セッションから、対応するスナップショットがあることを確認します。 スナップショット デバッガーは多くのユーザーがアプリのヒットがある場合でも、します。
 
-## <a name="take-a-snapshot"></a>スナップショットを取得します。
+## <a name="take-a-snapshot"></a>スナップショットを取得する
 
 スナップ ポイントがオンにすると、スナップ ポイントが配置されているコードの行が実行されるたびにスナップショットがキャプチャされます。 サーバー上の実際の要求によって、この実行可能性があります。 ヒットし、web サイトのブラウザー ビューに移動し、アクションを実行する、スナップ ポイントを強制的に、スナップ ポイントにヒットするが必要です。
 
@@ -104,7 +104,7 @@ ms.locfileid: "39154464"
 
 アプリへの複数のスナップ ポイントを追加しをオンにすることができます、**コレクションの更新**ボタンをクリックします。
 
-**ヘルプが必要ですか。** 参照してください、[既知の問題のトラブルシューティングと](../debugger/debug-live-azure-apps-troubleshooting.md)と[スナップショットのデバッグに関する FAQ](../debugger/debug-live-azure-apps-faq.md)ページ。
+**ヘルプが必要ですか?** 参照してください、[既知の問題のトラブルシューティングと](../debugger/debug-live-azure-apps-troubleshooting.md)と[スナップショットのデバッグに関する FAQ](../debugger/debug-live-azure-apps-faq.md)ページ。
 
 ## <a name="set-a-conditional-snappoint"></a>条件付きのスナップ ポイントを設定します。
 
@@ -114,7 +114,7 @@ ms.locfileid: "39154464"
 
 1. スナップ ポイント アイコン (白抜きの球) を右クリックし **設定**します。
 
-   ![設定を選択します。](../debugger/media/snapshot-snappoint-settings.png)
+   ![[設定] を選択する](../debugger/media/snapshot-snappoint-settings.png)
 
 1. スナップ ポイントの設定 ウィンドウで式を入力します。
 

@@ -15,20 +15,22 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 9f41e372f6c75e10ebf4d66fcd68eb4652b02f0f
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: c5b740329a1d0cdf9810401a1056ba901056a3af
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297597"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894535"
 ---
 # <a name="configure-ports-for-test-controllers-and-test-agents"></a>テスト コントローラーおよびテスト エージェント用のポートの構成
 
 テスト コントローラー、テスト エージェント、およびクライアントが使用する既定の着信ポートを変更できます。 テスト コントローラー、テスト エージェント、またはクライアントを他のソフトウェアと共に使用する際、ポート設定が競合していると、着信ポートの変更が必要になることがあります。 ポートを変更するもう 1 つの理由として、テスト コントローラーとクライアント間のファイアウォールの制限があります。 この場合、ファイアウォールを通過してテスト コントローラーがクライアントに結果を送信できるように、手動でポートを設定することができます。
 
- 次の図は、テスト コントローラー、テスト エージェント、およびクライアント間のコネクション ポイントを示しています。 ここでは、着信および発信接続に使用されるポートに加え、これらのポートで使用されるセキュリティ要件の詳細についても説明します。
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
- ![テスト コントローラーとTest Agentのポートとセキュリティ](../test/media/test-controller-agent-firewall.png)
+次の図は、テスト コントローラー、テスト エージェント、およびクライアント間のコネクション ポイントを示しています。 ここでは、着信および発信接続に使用されるポートに加え、これらのポートで使用されるセキュリティ要件の詳細についても説明します。
+
+![テスト コントローラーとTest Agentのポートとセキュリティ](../test/media/test-controller-agent-firewall.png)
 
 ## <a name="incoming-connections"></a>着信接続
 
