@@ -10,16 +10,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 3851b70f818c9cc601dbbdabce059e16fec747ee
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6525327e85d40b9b942e4e29a7d759a15598c824
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49909778"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895835"
 ---
 # <a name="how-to-create-a-recorder-plug-in"></a>方法: レコーダー プラグインを作成する
 
 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin> を使用すると、記録された Web パフォーマンス テストを変更できます。 変更は、**[Web パフォーマンス テスト レコーダー]** ツール バーの **[停止]** をクリックした後、テストが保存されて Web パフォーマンス テスト エディターで表示される前に行われます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 レコーダー プラグインを利用すると、動的パラメーターで独自のカスタム相関関係を実行できます。 組み込みの関連付け機能では、Web パフォーマンス テストによる Web 記録の動的パラメーターの検出が、完了時、または **Web パフォーマンス テスト エディター** ツール バーの **[動的パラメーターを Web テスト パラメーターに昇格]** の使用時に行われます。 しかし、組み込みの検出機能では、常にすべての動的パラメーターが検出できるわけではありません。 たとえば、セッション ID は検出されません。通常、このパラメーターは、5 ～ 30 分の間隔で変更される値を取得しています。 そのため、関連付けの処理を手動で行う必要があります。
 

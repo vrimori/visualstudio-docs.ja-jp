@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 095e986e46332b4bf548cb84188d9f0c35324bc3
-ms.sourcegitcommit: 20d1b9a5bf041bb28453501eb63bc0537a8e4f54
+ms.openlocfilehash: 2a2f75e1aee917a3f4cc9dc7feed15619c23f24e
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51645186"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895601"
 ---
 # <a name="fix-non-detectable-dynamic-parameters-in-a-web-performance-test"></a>Web パフォーマンス テストでの検出できない動的パラメーターの修正
 
@@ -30,6 +30,8 @@ Web サイトによっては、一部の Web 要求の処理に動的パラメ�
 -   クエリ文字列またはフォーム ポスト パラメーターとして設定される動的パラメーターの値。 これらの値は、Web パフォーマンス テストの記録後に、動的パラメーターの検出によって処理されます。
 
 一部の種類の動的パラメーターは検出されません。 動的な値はテストが実行されるたびに異なるため、検出されない動的パラメーターがあると、Web パフォーマンス テストが実行に失敗します。 これらのパラメーターを正しく処理するために、Web パフォーマンス テストの動的パラメーターに抽出規則を手動で追加することができます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="create-and-run-a-web-app-with-dynamic-parameters"></a>動的パラメーターを使用する Web アプリケーションを作成および実行する
 

@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 30a19e786894a9722e6843a5c1c69cdf1f038e58
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: e3c090fbcbc1a322574a5b0eca06ce917594348b
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297817"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896550"
 ---
 # <a name="configure-scenario-start-delays-in-load-tests"></a>ロード テストのシナリオ開始時刻の遅延を構成する
 
@@ -24,6 +24,8 @@ ms.locfileid: "36297817"
 たとえば、あるシナリオが作成を開始した項目を別のシナリオが使用する場合などに、**[開始時刻の遅延]** プロパティを使用することができます。 項目を使用する側のシナリオを遅延させて、項目を作成する側のシナリオがデータを作成できるようにします。
 
 また、このプロパティは、特定の時刻になったら、あるシナリオを実行する場合にも使用できます。 この場合、シナリオの開始を遅延させて、この状況をシミュレートします。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="specify-the-delay-start-time-of-a-scenario"></a>シナリオの開始時刻の遅延を指定する
 

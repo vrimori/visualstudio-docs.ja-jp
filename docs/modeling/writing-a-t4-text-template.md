@@ -208,7 +208,7 @@ private void WriteSquareLine(int i)
 
  詳細については、次を参照してください。 [T4 インポート ディレクティブ](../modeling/t4-import-directive.md)
 
-### <a name="Include"></a>コードとテキストをインクルードする
+### <a name="Include"></a> コードとテキストをインクルードする
  `include` ディレクティブを使用すると、別のテンプレート ファイルのテキストを挿入できます。 たとえば、次のディレクティブでは、`test.txt` のコンテンツが挿入されます。
 
 ```
@@ -217,7 +217,7 @@ private void WriteSquareLine(int i)
 
  インクルードされたコンテンツは、インクルード先のテキスト テンプレートに元から含まれていた場合とほとんど同じように処理されます。 ただし、include ディレクティブの後に通常のテキスト ブロックと標準コントロール ブロックが続く場合でも、クラス機能ブロック (`<#+...#>`) を含むファイルをインクルードすることができます。
 
- 詳細については、次を参照してください。 [T4 Include ディレクティブ](../modeling/t4-include-directive.md)
+  詳細については、次を参照してください。 [T4 Include ディレクティブ](../modeling/t4-include-directive.md)
 
 ### <a name="utility-methods"></a>ユーティリティ メソッド
  `Write()` をはじめ、コントロール ブロックでいつでも使用できるメソッドがいくつかあります。 これには、出力のインデントに役立つメソッドや、エラーの報告に役立つメソッドが含まれます。
@@ -240,7 +240,7 @@ private void WriteSquareLine(int i)
 
  **ナビゲート可能なモデルとしてファイルを読み込む。** より効果的な方法は、テキスト テンプレート コードでナビゲートできるモデルとしてデータを読み取ることです。 たとえば、XML ファイルを読み込み、XPath 式でそのファイル内をナビゲートできます。 XML データを読み取ることが可能なクラスのセットを作成するために [xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765) を使用することもできます。
 
- **図またはフォームでモデル ファイルを編集する。** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] は、図または Windows フォームとして、モデルを編集するためのツールを提供します。 このため、生成されたアプリケーションのユーザーと、モデルについて効率的に話し合うことができます。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]では、モデルの構造を反映した、厳密に型指定されたクラスのセットも作成できます。 詳細については、次を参照してください。[ドメイン固有言語からコードを生成する](../modeling/generating-code-from-a-domain-specific-language.md)
+ **図またはフォームでモデル ファイルを編集する。** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] は、図または Windows フォームとして、モデルを編集するためのツールを提供します。 このため、生成されたアプリケーションのユーザーと、モデルについて効率的に話し合うことができます。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]では、モデルの構造を反映した、厳密に型指定されたクラスのセットも作成できます。 詳細については、次を参照してください。[ドメイン固有言語からコードを生成する](../modeling/generating-code-from-a-domain-specific-language.md)します。
 
 ### <a name="relative-file-paths-in-design-time-templates"></a>デザイン時テンプレートの相対ファイル パス
  [デザイン時テキスト テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)を使用して、テキスト テンプレートを基準とする場所でファイルを参照する場合は、`this.Host.ResolvePath()`を使います。 また、`hostspecific="true"` ディレクティブで `template` を設定する必要もあります。

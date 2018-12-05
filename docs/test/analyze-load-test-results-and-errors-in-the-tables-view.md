@@ -23,16 +23,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: c2a0ccc4ee9f002a6c0f335aed590d3b8bb79a7c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: cab92c4daac6da81541771b534f4f1a6f9be159e
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49928673"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896628"
 ---
 # <a name="analyze-load-test-results-and-errors-in-the-tables-view-of-the-load-test-analyzer"></a>ロード テスト アナライザーのテーブル ビューでのロード テスト結果とエラーの分析
 
 ロード テストの実行結果を確認するときには、データの分析方法に応じて異なるペインを表示できます。 たとえば、データをグラフとして表示したり、時間の経過に伴うデータの変化を表示したりできます。また、データを詳細テーブルとして表示することもできます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 テーブル ビューに切り替えるには、**ロード テスト** ツール バーの **[テーブル]** を選択します。 表示するテーブルを切り替えるには、テーブル グリッドの上にあるツール バーの **[テーブル]** ドロップダウン リストを使用します。 テーブル ビューでは、一度に最大 4 つのテーブルを表示できます。 詳細については、このトピックの「[ロード テストのテーブルを並べて表示](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#tile-load-test-tables)」を参照してください。
 
@@ -41,14 +43,14 @@ ms.locfileid: "49928673"
 > [!NOTE]
 > **[末尾]** という名前の列は、ロード テストの実行中にのみ使用できます。 ロード テストが完了すると、使用できなくなります。
 
- ほとんどのテーブルでは、並べ替えを行うことができます。並べ替えるには、基準として使用する列のタイトルを選択します。 既定では、使用できる列の一部が表示されないテーブルがあります。 使用できる列がある場合は、それらをテーブルに追加できます。 列を追加するには、テーブルを右クリックし、**[列の追加と削除]** を選択します。
+ほとんどのテーブルでは、並べ替えを行うことができます。並べ替えるには、基準として使用する列のタイトルを選択します。 既定では、使用できる列の一部が表示されないテーブルがあります。 使用できる列がある場合は、それらをテーブルに追加できます。 列を追加するには、テーブルを右クリックし、**[列の追加と削除]** を選択します。
 
 > [!NOTE]
 > 表のデータは、さらに分析を行うために Excel など他のアプリケーションにコピーできます。
 
 ## <a name="the-load-test-tables"></a>ロード テストのテーブル
 
- 次の表は、ロード テストの実行結果の分析に使用できるテーブルの一覧です。
+次の表は、ロード テストの実行結果の分析に使用できるテーブルの一覧です。
 
 |テーブル名|説明|
 |-|-|

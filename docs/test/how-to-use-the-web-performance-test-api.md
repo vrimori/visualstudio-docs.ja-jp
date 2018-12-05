@@ -11,24 +11,25 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: cce61d9a56a0f8f79ec943b58fd4d1a1f88e8289
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 1f0fc5bdc5b17c13bfb0d4adf07a4a48347ce38b
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382306"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896459"
 ---
 # <a name="how-to-use-the-web-performance-test-api"></a>方法: Web パフォーマンス テスト API を使用する
 
 Web パフォーマンス テストのコードを記述できます。 Web パフォーマンス テスト API は、コード化された Web パフォーマンス テスト、Web パフォーマンス テスト プラグイン、要求プラグイン、要求、抽出規則、検証規則を作成するために使用します。 これらの種類を構成するクラスは、この API のコア クラスです。 この API の他の種類は、<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTest> オブジェクト、<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> オブジェクト、<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin> オブジェクト、<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequest> オブジェクト、<xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule> オブジェクト、および <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> オブジェクトの作成をサポートするために使用されます。 カスタマイズされた Web パフォーマンス テストを作成するには、<xref:Microsoft.VisualStudio.TestTools.WebTesting> 名前空間を使用します。
 
- また、Web パフォーマンス テスト API を使用して、プログラムにより宣言 Web パフォーマンス テストを作成および保存することもできます。 それを行うには、<xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTest> クラスと <xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTestSerializer> クラスを使用します。
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
+また、Web パフォーマンス テスト API を使用して、プログラムにより宣言 Web パフォーマンス テストを作成および保存することもできます。 それを行うには、<xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTest> クラスと <xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTestSerializer> クラスを使用します。
 
 > [!TIP]
 > オブジェクト ブラウザーを使用して、<xref:Microsoft.VisualStudio.TestTools.WebTesting> 名前空間を調べます。 Visual C# エディターおよび Visual Basic エディターの両方では、この名前空間のクラスを使用したコーディングの IntelliSense サポートを提供しています。
 
-
- ロード テスト用のプラグインを作成することもできます。 詳細については、「[方法 : ロード テスト API を使用する](../test/how-to-use-the-load-test-api.md)」および「[方法 : ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)」を参照してください。
+ロード テスト用のプラグインを作成することもできます。 詳細については、「[方法 : ロード テスト API を使用する](../test/how-to-use-the-load-test-api.md)」および「[方法 : ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)」を参照してください。
 
 ## <a name="to-use-the-webtesting-namespace"></a>WebTesting 名前空間を使用するには
 

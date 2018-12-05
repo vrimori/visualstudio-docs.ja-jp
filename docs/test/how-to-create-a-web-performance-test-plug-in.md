@@ -13,16 +13,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ad1dff59ed942c16f05176f3e26f0042234d4933
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 365b1be6dd3c383c42b08d2c480db7fad104c48f
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380167"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894522"
 ---
 # <a name="how-to-create-a-web-performance-test-plug-in"></a>方法: Web パフォーマンス テスト プラグインを作成する
 
 Web パフォーマンス テスト プラグインを使用すると、Web パフォーマンス テストの主要な宣言ステートメントとコードを分離し、そのコードを再利用できます。 カスタマイズされた Web パフォーマンス テスト プラグインには、Web パフォーマンス テストの実行時に一部のコードを呼び出す方法が用意されています。 Web パフォーマンス テスト プラグインは、テスト イテレーションごとに 1 回実行されます。 また、テスト プラグインで PreRequest メソッドまたは PostRequest メソッドをオーバーライドすると、これらの要求プラグインは各要求のそれぞれ前または後に実行されます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 カスタマイズされた Web パフォーマンス テスト プラグインは、<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> 基底クラスから独自のクラスを派生することによって作成できます。
 

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのコード化された UI テスト ログを使用したコード化された UI テストの分析
+title: コード化された UI テスト ログを使用したコード化された UI テストの分析
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -9,16 +9,18 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 7d743dd11b67c3883bad815b26234717f377ff57
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 9c31dd90981cf39f1de296b2c96d6064afc730b4
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295996"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896680"
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>コード化された UI テスト ログを使用したコード化された UI テストの分析
 
 コード化された UI テスト ログは、コード化された UI テストの実行に関する重要な情報にフィルターを適用して記録します。 問題をすばやくデバッグできるような形式で、ログが表示されます。
+
+[!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
 ## <a name="step-1-enable-logging"></a>手順 1: ログ記録を有効にする
 

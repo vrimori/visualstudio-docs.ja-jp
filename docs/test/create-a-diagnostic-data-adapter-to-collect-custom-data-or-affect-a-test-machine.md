@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: e0a7815b57fa49239a0895e6733a13c5c83e99e1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 788c5f24b2e3f965d93b645d024f29a6e0d6e7ea
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49860893"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52893846"
 ---
 # <a name="create-a-diagnostic-data-adapter-to-collect-custom-data-or-affect-a-test-machine"></a>診断データ アダプターを作成してカスタム データを収集する、またはテスト コンピューターに影響を与える
 
@@ -26,18 +26,17 @@ ms.locfileid: "49860893"
 
 Visual Studio からテストを実行する場合は、これらのテスト設定をアクティブとして設定する必要があります。 テスト設定の詳細については、「[テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)」を参照してください。
 
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
 ## <a name="tasks"></a>[タスク]
 
- 診断データ アダプターを作成するには、次のトピックを参照してください。
+診断データ アダプターを作成するには、次のトピックを参照してください。
 
 |[タスク]|関連するトピック|
 |-|-----------------------|
 |**診断データ アダプターを作成する:** クラス ライブラリを作成して診断データ アダプターを作成し、次に診断データ アダプターの API を使用して、目的の情報を収集したり、テストの実行に使用するテスト システムに影響を与えたりします。|-   [方法: 診断データ アダプターを作成する](../test/how-to-create-a-diagnostic-data-adapter.md)|
-|**カスタム診断データ アダプターをインストールする:** 自分または他のユーザーが作成した診断データ アダプターを適切なディレクトリにコピーすることにより、カスタム診断データ アダプターをインストールできます。|-   [方法: カスタム診断データ アダプターをインストールする](../test/how-to-install-a-custom-diagnostic-data-adapter.md)|
 |**テストの実行時に使用するカスタム診断データ アダプターを選択する:** テストの設定で使用する診断データ アダプターを選択することにより、テストの実行時に使用するアダプターを指定できます。|-   [テスト中の診断データの収集 (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)<br />-   [手動テストでの診断データの収集 (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)|
-|**診断データ アダプターによって実行するアクションを構成する:** 特定のテストの設定における診断データ アダプターのアクションを制御するための設定を構成できます。|-   [方法: 診断データ アダプター用のデータのカスタム エディターを作成する](../test/how-to-create-a-custom-editor-for-data-for-your-diagnostic-data-adapter.md)|
 
 ## <a name="see-also"></a>関連項目
 
-- [診断データ アダプター作成用のサンプル プロジェクト](../test/sample-project-for-creating-a-diagnostic-data-adapter.md)
 - [テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)

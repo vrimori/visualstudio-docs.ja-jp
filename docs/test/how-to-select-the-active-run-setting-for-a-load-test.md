@@ -10,16 +10,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: f5e7a56ff01e06c0d5046ab477ec78635f01f6c4
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 3bff9be24d5d1f615270bc80790a04e85e7cf25c
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39381912"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895328"
 ---
 # <a name="how-to-select-the-active-run-setting-for-a-load-test"></a>方法: ロード テストのアクティブな実行設定を選択する
 
 **新しいロード テスト** ウィザードでロード テストを作成した後で、**ロード テスト エディター**を使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ロード テストには、1 つ以上の*実行設定*を含めることができます。実行設定は、ロード テストの実行方法に影響を与えるプロパティのセットです。 実行設定は、**[プロパティ]** ウィンドウでカテゴリ別に整理されています。 ロード テストの実行時には、現在アクティブとして設定されている実行設定が使用されます。
 
@@ -31,8 +33,6 @@ ms.locfileid: "39381912"
 **ロード テスト エディター**で、アクティブな実行設定は "[Active]" というサフィックスで識別されます。
 
 ## <a name="select-the-active-run-setting"></a>アクティブな実行設定の選択
-
-### <a name="to-select-the-active-run-setting-in-a-load-test"></a>ロード テストでアクティブな実行設定を選択するには
 
 1.  ロード テストを開きます。
 

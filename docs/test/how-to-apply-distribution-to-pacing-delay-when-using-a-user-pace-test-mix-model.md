@@ -10,16 +10,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 20fa17054c3334566114c5baf9bc98a71025c225
-ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
+ms.openlocfilehash: 19634186e13574c322c2e9bcc636dda3a823b158
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39204077"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896194"
 ---
 # <a name="how-to-apply-distribution-to-pacing-delay-for-a-user-pace-test-mix-model"></a>方法: ユーザー ペースのテスト ミックス モデルに対する遅延のペースに分布を適用する
 
 **新しいロード テスト ウィザード**でロード テストを作成した後、ロード テスト エディターを使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 **[遅延のペースに分布を適用]** プロパティは、**[プロパティ]** ウィンドウを使用して設定します。 ロード テスト シナリオの各プロパティは後でロード テスト エディターを使用して変更します。
 

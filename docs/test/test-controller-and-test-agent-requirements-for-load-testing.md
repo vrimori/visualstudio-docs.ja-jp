@@ -11,16 +11,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: f29e43c66844f915d9d79de3819166905b083df2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ceb3ecde3941a12b7113ede04b5f7dda841c7816
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813987"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894730"
 ---
 # <a name="test-controller-and-test-agent-requirements-for-load-testing"></a>ロード テストのためのテスト コントローラーおよびテスト エージェントの要件
 
 単体テスト、Web パフォーマンス テスト、ロード テスト、手動テストなど、さまざまな種類のテストが Visual Studio に統合されています。 Visual Studio では、Visual Studio アプリケーション ライフサイクル管理ユーザーはテスト コントローラーと 1 つ以上のエージェントを使用して、リモート コンピューターでテストを実行することができます。 「[テスト エージェントをインストールして構成する](../test/lab-management/install-configure-test-agents.md)」を参照してください。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="hardware-and-software-requirements"></a>ハードウェア要件とソフトウェア要件
 

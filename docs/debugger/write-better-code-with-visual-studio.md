@@ -12,16 +12,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c16cfdc8d554ce9bf556ea707f977989e1dab72
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
-ms.translationtype: HT
+ms.openlocfilehash: e4cf3c7ae8b45f6d3410925977c2c67784b1ca6d
+ms.sourcegitcommit: a811f6a194ccd40d844e74e618d847df87c85c16
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389378"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52621592"
 ---
 # <a name="fix-bugs-by-writing-better-c-code-using-visual-studio"></a>適切に記述することでバグを修正C#Visual Studio を使用するコード
 
-コードをデバッグして、--かかることがあります、フラストレーション場合があります--タスク。 効果的にデバッグする方法については時間がかかります。 Visual Studio などの強力な IDE すると、ジョブがずっと容易になります。 IDE より迅速にコードをデバッグしてだけでなく、ですが、ヘルプのバグの減少より優れたコードを記述することができますが役立ちます。 この記事の目的は、コード アナライザーを使用するタイミングを知り、ときに、デバッガーを使用し、その他のツールを使用する場合に、デバッグのプロセスの全体像を提供すること。
+コードをデバッグして、--かかることがあります、フラストレーション場合があります--タスク。 実際には、デバッグする方法については時間がかかるが Visual Studio などの強力な IDE ことができます、ジョブを大幅に簡略化します。 IDE より迅速にコードをデバッグしてだけでなく、ですが、ヘルプのバグの減少より優れたコードを記述することができますが役立ちます。 この記事の目的は、コード アナライザーを使用するタイミングを知り、ときに、デバッガーを使用し、その他のツールを使用する場合に、デバッグのプロセスの全体像を提供すること。  
 
 この記事でこれは、デバッグ セッションは生産性を向上させる、IDE を活用することについて説明します。 などのいくつかのタスクでは、タッチと。
 

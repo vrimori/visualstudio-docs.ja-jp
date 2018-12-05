@@ -11,18 +11,20 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 88c1170f2740423ba59f43a16ea6990f279c1203
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: e894bb0b53240795ad2bf7505ba081dbf479989d
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176776"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896615"
 ---
 # <a name="how-to-add-additional-run-settings-to-a-load-test"></a>方法: ロード テストに追加の実行設定を追加する
 
 ロード テストの実行設定で、その他のさまざまな設定を行います。 こうした設定には、テストの継続時間、結果収集の詳細レベル、テストの実行時に収集されるカウンター セットなどがあります。 それぞれのロード テストに対して複数の実行設定を作成して保存しておき、テストの実行時には使用する特定の設定を選択できます。 **新しいロード テスト ウィザード**を使用してロード テストを作成するときに、初期の実行設定をロード テストに追加します。
 
- さまざまな条件でロード テストを実行できるように、別のプロパティ設定のロード テストにそれ以外の実行設定を追加できます。 たとえば、新しいテストの設定を追加して、異なるサンプリング レートを使用したり、より長い実行時間を指定することができます。 一度に使用できる実行設定は 1 つのみです。使用する実行設定を指定するには、その設定をアクティブにする必要があります。
+さまざまな条件でロード テストを実行できるように、別のプロパティ設定のロード テストにそれ以外の実行設定を追加できます。 たとえば、新しいテストの設定を追加して、異なるサンプリング レートを使用したり、より長い実行時間を指定することができます。 一度に使用できる実行設定は 1 つのみです。使用する実行設定を指定するには、その設定をアクティブにする必要があります。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="to-add-another-run-setting"></a>実行設定を追加するには
 
@@ -43,7 +45,7 @@ ms.locfileid: "39176776"
 6.  **[プロパティ ]** ウィンドウを使用して、実行設定を変更します。 たとえば、テストを 5 分間実行するには、実行の継続時間を **00:05:00** に変更します。
 
     > [!NOTE]
-    > 実行設定の各プロパティとその説明の一覧については、「[ロード テストの実行設定のプロパテ](../test/load-test-run-settings-properties.md)」を参照してください。
+    > 実行設定の各プロパティとその説明の一覧については、「[ロード テストの実行設定のプロパティ](../test/load-test-run-settings-properties.md)」を参照してください。
 
      追加した実行設定をアクティブに設定すると、これを使用することができます。 詳細については、「[方法: ロード テストのアクティブな実行設定を選択する](../test/how-to-select-the-active-run-setting-for-a-load-test.md)」を参照してください。
 

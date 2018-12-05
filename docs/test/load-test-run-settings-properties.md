@@ -1,5 +1,5 @@
 ---
-title: Visual Studio のロード テストの実行設定
+title: ロード テストの実行設定
 ms.date: 10/19/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,22 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: d0a3311c90638b3fd34b9d651b89af2bed07f421
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9b0123ba4e6f9565cc31f63a23bb0be0b5bee344
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49817399"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895497"
 ---
 # <a name="load-test-run-settings-properties"></a>ロード テストの実行設定のプロパティ
 
 ロード テストの実行設定は、テストの継続時間、結果収集の詳細レベル、テストの実行時に収集されるカウンター セットなど、さまざまな設定を決定します。 それぞれのロード テストに対して複数の実行設定を作成して保存しておき、テストの実行時には使用する特定の設定を選択できます。 **新しいロード テスト ウィザード**を使用してロード テストを作成するとき、初期実行設定がロード テストに追加されます。
 
- 次の表では、ロード テストの実行設定用のさまざまなプロパティについて説明します。 これらのプロパティを変更して、特定のロード テスト要件を満たすことができます。
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
- 詳細については、「[ロード テストの実行設定の構成](../test/configure-load-test-run-settings.md)」を参照してください。
+次の表では、ロード テストの実行設定用のさまざまなプロパティについて説明します。 これらのプロパティを変更して、特定のロード テスト要件を満たすことができます。
+
+詳細については、「[ロード テストの実行設定の構成](../test/configure-load-test-run-settings.md)」を参照してください。
 
 ## <a name="general-properties"></a>全般プロパティ
 
@@ -42,7 +44,7 @@ ms.locfileid: "49817399"
 |プロパティ|定義|
 |-|----------------|
 |**テスト ログの最大数**|ロード テストで保存するテスト ログの最大数を指定します。 テスト ログの最大数として入力した値に達すると、ロード テストでのログの収集が停止されます。 したがって、ログはテストの開始時には収集されますが、終了時には収集されません。 ロード テストは完了するまで継続されます。|
-|**完了したテストのログ頻度を保存**|テスト ログが書き込まれる頻度を指定します。 この数値は、入力したテストの数のうち 1 回がテスト ログに保存されることを示します。 たとえば、値 10 を入力すると、10 番目、20 番目、30 番目などのテストがテスト ログに書き込まれます。 値を 0 に設定した場合、テスト ログは保存されません。<br /><br /> 詳細については、[テスト ログの保存頻度を指定する方法](../test/how-to-specify-how-frequently-test-logs-are-saved.md)に関するページを参照してください。|
+|**完了したテストのログ頻度を保存**|テスト ログが書き込まれる頻度を指定します。 この数値は、入力したテストの数のうち 1 回がテスト ログに保存されることを示します。 たとえば、値 10 を入力すると、10 番目、20 番目、30 番目などのテストがテスト ログに書き込まれます。 値を 0 に設定した場合、テスト ログは保存されません。|
 |**テストの失敗時にログを保存**|ロード テストでテストが失敗した場合に、テスト ログを保存するかどうかを決定するブール値。 既定値は、`True` です。<br /><br /> 詳細については、[テスト ログにテストの失敗を記録するかどうかを指定する方法](../test/how-to-specify-if-test-failures-are-saved-to-test-logs.md)に関するページを参照してください。|
 
  詳細については、「[ロード テストのログ設定の変更](../test/modify-load-test-logging-settings.md)」を参照してください。

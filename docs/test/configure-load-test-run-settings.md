@@ -10,16 +10,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 2171912d3542049564f23ea69b06186cd1846943
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9c20a56ce2d78ab5ba3c3fdcde19af573a830fc5
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813863"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895627"
 ---
 # <a name="configure-load-test-run-settings"></a>ロード テストの実行設定の構成
 
 *実行設定*とは、ロード テストの実行方法に影響を与えるプロパティのセットです。 実行設定は、**[プロパティ]** ウィンドウでカテゴリ別に整理されています。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ロード テストでは複数の実行設定を使用できますが、1 回の実行でアクティブにできる実行設定は 1 つのみです。 その他の実行設定は、後続のテスト実行で使用するための代替設定をすばやく選択するために使用できます。
 

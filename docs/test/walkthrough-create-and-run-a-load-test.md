@@ -12,16 +12,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: cbe16b5e0b711783c9dfd12ab9a652fb4055fc36
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 649fe84b716355f5c7228e371fa88d80937f24af
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39381017"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895380"
 ---
 # <a name="walkthrough-create-and-run-a-load-test-that-contains-unit-tests"></a>チュートリアル: 単体テストを含むロード テストを作成して実行する
 
 このチュートリアルでは、単体テストを含むロード テストを作成します。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 このチュートリアルでは、Visual Studio Enterprise を使用してロード テストを作成および実行する手順を説明します。 ロード テストは、Web パフォーマンス テストおよび単体テストのコンテナーです。 ロード テストは、**新しいロード テスト ウィザード**を使用して作成します。
 

@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 2c2a5366a9772060a3e94de14b12f5d2ae62cbdf
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: dbff48696a7fe10266a2c72fc3a3d9fb0e9ba81d
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49949315"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896064"
 ---
 # <a name="how-to-create-a-visual-studio-add-in-for-the-web-performance-test-results-viewer"></a>方法: Web パフォーマンス テスト結果ビューアー用に Visual Studio アドインを作成する
 
@@ -28,7 +28,9 @@ ms.locfileid: "49949315"
 
 また、*%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies* フォルダーにある LoadTestPackage DLL に参照を追加する必要があります。
 
--   **Web パフォーマンス テスト結果ビューアー**の UI を拡張するには、Visual Studio アドインおよびユーザー コントロールを作成する必要があります。 次の手順では、アドインとユーザー コントロールの作成方法、および **Web パフォーマンス テスト結果ビューアー**の UI を拡張するのに必要なクラスを実装する方法について説明します。
+**Web パフォーマンス テスト結果ビューアー**の UI を拡張するには、Visual Studio アドインおよびユーザー コントロールを作成する必要があります。 次の手順では、アドインとユーザー コントロールの作成方法、および **Web パフォーマンス テスト結果ビューアー**の UI を拡張するのに必要なクラスを実装する方法について説明します。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="create-or-open-a-solution-that-contains-an-aspnet-web-application-and-a-web-performance-and-load-test-project"></a>ASP.NET Web アプリケーションおよび Web パフォーマンスとロード テストのプロジェクトが含まれるソリューションを作成するか開く
 

@@ -9,16 +9,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bc225862ee4b9fbc2c4c94aaab4f410719391ee7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 48c377a8a5c48db7e0726ab5d5cc238e6b83c71c
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49926593"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895289"
 ---
 # <a name="manage-test-controllers-and-test-agents"></a>テスト コントローラーとテスト エージェントの管理
 
 Visual Studio を使用してテストをリモートで実行する、複数のコンピューターにテストを配置する、またはロード テストを実行する場合は、テスト コントローラー、テスト エージェント、およびテストの設定ファイルを構成する必要があります。 このトピックでは、初めてテスト コントローラーとテスト エージェントをインストールおよび構成した後に、それらを管理する方法について説明します。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 Microsoft Test Manager を使用してラボ環境でテストを実行する場合、Microsoft Test Manager の **[ラボ センター]** の **[テスト コントローラー マネージャー]** を使用して、テスト コントローラーとそのエージェントを管理します。 このトピックは、テストの実行に Visual Studio を使用する場合にのみ該当します。
 

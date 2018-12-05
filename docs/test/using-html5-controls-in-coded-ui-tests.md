@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でコード化された UI テストで HTML5 コントロールを使用する
+title: コード化された UI テストでの HTML5 コントロールの使用
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -9,16 +9,18 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 418c0aa6660b01896252d04a711d4069da389f00
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a603a662c9007ab3ee0e66df0b23959bfdce83fb
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49914490"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896193"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>コード化された UI テストでの HTML5 コントロールの使用
 
 コード化された UI テストには、Internet Explorer 9 と Internet Explorer 10 に含まれる HTML5 コントロールの一部のサポートが含まれます。
+
+[!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
  **必要条件**
 
@@ -27,15 +29,14 @@ ms.locfileid: "49914490"
 > [!WARNING]
 > Internet Explorer 10 以前のバージョンでは、Internet Explorer プロセスより高い特権レベルでコード化された UI テストを実行できました。 Internet Explorer 10 でコード化された UI テストを実行するときは、コード化された UI テストと Internet Explorer のプロセスを同じ特権レベルで実行する必要があります。 これは、Internet Explorer 10 のよりセキュリティ レベルの高い AppContainer 機能によるものです。
 
-
 > [!WARNING]
 > Internet Explorer 10 でコード化された UI テストを作成した場合、そのテストは Internet Explorer 9 または Internet Explorer 8 を使用して実行できないことがあります。 これは、Internet Explorer 10 には、オーディオ、ビデオ、ProgressBar、スライダーなどの HTML5 コントロールが含まれているためです。 これらの HTML5 コントロールは、Internet Explorer 9 または Internet Explorer 8 で認識されません。 同様に、Internet Explorer 9 を使用するコード化された UI テストには、Internet Explorer 8 で認識されない HTML5 コントロールが含まれる場合があります。
 
-
 ## <a name="audio-control"></a>オーディオ コントロール
- **オーディオ コントロール:** HTML5 オーディオ コントロールに対するアクションが正しく記録され再生されます。
 
- ![HTML5 オーディオ コントロール](../test/media/codedui_html5_audio.png)
+**オーディオ コントロール:** HTML5 オーディオ コントロールに対するアクションが正しく記録され再生されます。
+
+![HTML5 オーディオ コントロール](../test/media/codedui_html5_audio.png)
 
 |アクション|記録中|生成されたコード|
 |-|---------------|-|

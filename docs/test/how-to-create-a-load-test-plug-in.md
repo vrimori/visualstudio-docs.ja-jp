@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ef21d270154025a52c603186ba959fad080e5bba
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: ce3e85965aa8823aa12102fff41401cf24eef6a7
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380539"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896732"
 ---
 # <a name="how-to-create-a-load-test-plug-in"></a>方法: ロード テスト プラグインを作成する
 
@@ -27,6 +27,8 @@ ms.locfileid: "39380539"
 
 > [!NOTE]
 > Web パフォーマンス テスト用のプラグインを作成することもできます。 詳細については、「[方法: Web パフォーマンス テスト プラグインを作成する](../test/how-to-create-a-web-performance-test-plug-in.md)」を参照してください。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="to-create-a-load-test-plug-in-by-using-visual-c"></a>Visual C# を使用してロード テスト プラグインを作成するには
 

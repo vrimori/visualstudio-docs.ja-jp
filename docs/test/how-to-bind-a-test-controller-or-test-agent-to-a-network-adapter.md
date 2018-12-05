@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 7ec26a9356c0136404f6fb9fe97e88b7b40ecf7f
-ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
+ms.openlocfilehash: 222fe589a0d4282531b9ee73d476678d54747e7b
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203964"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896052"
 ---
 # <a name="how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter"></a>ネットワーク アダプターに Test Controller または Test Agent をバインドする
 
@@ -30,6 +30,8 @@ ms.locfileid: "39203964"
 > **エラー 8110: 指定されたコントローラー コンピューターに接続できないか、コントローラー オブジェクトにアクセスできません**
 >
 > このエラーは、ネットワーク アダプターが複数あるコンピューターにテスト コントローラーをインストールしたことが原因で発生する場合があります。 エージェントのインストールには成功しており、テストを実行するまで問題が発覚しなかったということも考えられます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="bind-a-test-controller-to-a-specific-network-adapter"></a>特定のネットワーク アダプターへのテスト コントローラーのバインド
 
