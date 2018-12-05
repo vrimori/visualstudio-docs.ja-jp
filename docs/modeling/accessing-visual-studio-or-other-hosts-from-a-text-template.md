@@ -16,20 +16,20 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
 ms.locfileid: "31946518"
 ---
-# <a name="access-visual-studio-or-other-hosts-from-a-text-template"></a>テキスト テンプレートから Visual Studio またはその他のホストにアクセスします。
+# <a name="access-visual-studio-or-other-hosts-from-a-text-template"></a>テキスト テンプレートからの Visual Studio またはその他のホストへのアクセス
 
-テキスト テンプレートでは、メソッドとテンプレートを実行するホストによって公開されているプロパティを使用できます。 Visual Studio では、ホストの例を示します。
+テキスト テンプレートでは、メソッドとテンプレートを実行するホストによって公開されているプロパティを使用できます。 Visual Studio は、ホストの例のひとつです。
 
 > [!NOTE]
-> はなく、通常のテキスト テンプレートに、ホストのメソッドとプロパティを使用することができます*プリプロセス*テキスト テンプレートです。
+> 通常のテキスト テンプレートで、ホストのメソッドとプロパティを使用することができますが、*前処理*テキスト テンプレートではできません。
 
-## <a name="obtain-access-to-the-host"></a>ホストへのアクセスを取得します。
+## <a name="obtain-access-to-the-host"></a>ホストへのアクセスの取得
 
-ホストにアクセスするには、設定`hostspecific="true"`で、`template`ディレクティブです。 使用して`this.Host`、型を持つ<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>します。 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>型が使用できる、たとえば、ファイル名を解決して、エラーをログするメンバー。
+ホストにアクセスするには、`template`ディレクティブで、`hostspecific="true"`を設定します。 それにより、 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> 型を持つ`this.Host` が使用できるようになります。 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> 型は、たとえば、ファイル名の解決や、エラーをログするメンバーを持っており、使用できます。
 
 ### <a name="resolve-file-names"></a>ファイル名を解決するには
 
-テキスト テンプレートに関連するファイルの完全なパスを検索する`this.Host.ResolvePath()`です。
+テキスト テンプレートからのファイルの相対パスから完全なパスを検索するには、`this.Host.ResolvePath()` を使います。
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -43,9 +43,9 @@ Content of myFile is:
 <#= myFile #>
 ```
 
-### <a name="display-error-messages"></a>エラー メッセージを表示します。
+### <a name="display-error-messages"></a>エラー メッセージの表示
 
-この例は、テンプレートを変換するときにメッセージを記録します。 ホストが Visual Studio の場合は、エラーされるため、**エラー一覧**です。
+この例は、テンプレートを変換するときのメッセージを記録します。 ホストが Visual Studio の場合は、エラーは、**エラー一覧**に追加されます。
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -61,13 +61,13 @@ Content of myFile is:
 #>
 ```
 
-## <a name="use-the-visual-studio-api"></a>Visual Studio API を使用します。
+## <a name="use-the-visual-studio-api"></a>Visual Studio API の使用
 
-使用することができますが、テキスト テンプレートは、Visual Studio で実行している場合、`this.Host`サービスにアクセスする Visual Studio と任意のパッケージまたは読み込まれている拡張機能によって提供されます。
+テキスト テンプレートを、Visual Studio で実行している場合、 Visual Studio と任意のパッケージまたは読み込まれている拡張機能によって提供されるサービスにアクセスするために、`this.Host` を使用することができます。
 
-設定 hostspecific ="true"とキャスト`this.Host`に<xref:System.IServiceProvider>です。
+`hostspecific ="true"` を設定し、`this.Host` を <xref:System.IServiceProvider> にキャストします。
 
-この例では Visual Studio API を取得<xref:EnvDTE.DTE>、サービスとして。
+この例では Visual Studio API である <xref:EnvDTE.DTE> をサービスとして取得します。
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -81,6 +81,6 @@ Content of myFile is:
 Number of projects in this solution: <#=  dte.Solution.Projects.Count #>
 ```
 
-## <a name="use-hostspecific-with-template-inheritance"></a>テンプレートの継承を持つ hostSpecific を使用します。
+## <a name="use-hostspecific-with-template-inheritance"></a>テンプレートを継承をしている hostSpecific の使用
 
-指定`hostspecific="trueFromBase"`使用する場合は、`inherits`属性を指定したテンプレートから継承する場合と`hostspecific="true"`です。 ない場合は、する可能性があります、コンパイラの警告をプロパティ`Host`は 2 回宣言されています。
+`inherits`属性を使用し、`hostspecific="true"` を指定したテンプレートから継承する場合は、`hostspecific="trueFromBase"` を指定します。指定しなかった場合は、プロパティ `Host` が 2 回宣言されているというコンパイラ警告が出るでしょう。
