@@ -10,16 +10,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: b8eba85de98dd46a8ff6ad44154249598a489f5a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f657babf33c315be2760cf59f3ec57525643f70e
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49862100"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894574"
 ---
 # <a name="how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop"></a>方法: テスト エージェントを設定して、デスクトップと対話するテストを実行する
 
 デスクトップと対話する自動テストを実行する場合、エージェントをサービスではなくプロセスとして実行されるように設定する必要があります。 たとえば、テスト コントローラーとテスト エージェントを使用してコード化された UI テストをリモートで実行する場合、またはテストを実行してテストの実行時にビデオ記録をキャプチャする場合は、エージェントをプロセスとして実行されるように設定する必要があります。 Visual Studio を使用してテストの設定でエージェントをロールに割り当てる場合や、Microsoft Test Manager を使用して環境内でエージェントをロールに割り当てる場合は、デスクトップと対話する必要があるロールに割り当てられたすべてのエージェントの設定を変更する必要があります。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!WARNING]
 > Microsoft Test Manager を使用してラボ環境を設定する場合、テスト エージェントがインストールされます。 コード化された UI テストを実行できるようにロールの 1 つを構成する場合は、**環境の作成ウィザード**で指定できます。

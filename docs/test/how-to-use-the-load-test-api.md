@@ -12,16 +12,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 4dfb5c79f2423ba25f16edadd70ee879ca966356
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 3b35b74f7adca4ff794f4d0c78b5585551864c8f
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44282746"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894399"
 ---
 # <a name="how-to-use-the-load-test-api"></a>方法: ロード テスト API を使用する
 
 Visual Studio では、ロード テストの制御や拡張を行うことができるロード テスト プラグインがサポートされています。 ロード テスト プラグインは、<xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin> 名前空間にある <xref:Microsoft.VisualStudio.TestTools.LoadTesting> インターフェイスを実装するユーザー定義のクラスです。 ロード テスト プラグインを使用すると、カウンターやエラーしきい値に達した場合にロード テストを中止するなど、ロード テストのカスタム制御を行うことができます。 ユーザー定義のコードに対してロード テスト パラメーターの取得や設定を行うには、<xref:Microsoft.VisualStudio.TestTools.LoadTesting.LoadTest> クラスのプロパティを使用します。 ロード テストを実行するときに、通知用のデリゲートを割り当てるには、<xref:Microsoft.VisualStudio.TestTools.LoadTesting.LoadTest> クラスのイベントを使用します。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!TIP]
 > オブジェクト ブラウザーを使用して、<xref:Microsoft.VisualStudio.TestTools.LoadTesting> 名前空間を調べます。 Visual C# エディターおよび Visual Basic エディターの両方では、この名前空間のクラスを使用したコーディングの IntelliSense サポートを提供しています。
