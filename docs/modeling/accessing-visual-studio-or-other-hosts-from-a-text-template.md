@@ -65,7 +65,7 @@ Content of myFile is:
 
 テキスト テンプレートを、Visual Studio で実行している場合、 Visual Studio と任意のパッケージまたは読み込まれている拡張機能によって提供されるサービスにアクセスするために、`this.Host` を使用することができます。
 
-設定 hostspecific ="true"とキャスト`this.Host`に<xref:System.IServiceProvider>です。
+`hostspecific ="true"` を設定し、`this.Host` を <xref:System.IServiceProvider> にキャストします。
 
 この例では Visual Studio API である <xref:EnvDTE.DTE> をサービスとして取得します。
 
