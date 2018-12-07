@@ -1,5 +1,5 @@
----
-title: 'エスケープ シーケンスを使用してテンプレートからテンプレートを生成する方法'
+﻿---
+title: エスケープ シーケンスを使用してテンプレートからテンプレートを生成する方法
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:

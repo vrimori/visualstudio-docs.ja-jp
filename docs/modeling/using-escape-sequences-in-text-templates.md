@@ -1,4 +1,4 @@
----
+﻿---
 title: テキスト テンプレートでのエスケープ シーケンスの使用
 ms.date: 11/04/2016
 ms.topic: conceptual
