@@ -29,12 +29,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 43215d1827d8115e694134e75d03add48f16eb81
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 917a83a434dc27074b0d786f64fcdbdc5fd294d3
+ms.sourcegitcommit: 5c049194fa256b876ad303f491af11edd505756c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49859228"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53027394"
 ---
 # <a name="excel-solutions"></a>Excel ソリューション
   Visual Studio には、Microsoft Office Excel のドキュメント レベルのカスタマイズおよび VSTO アドインの作成に使用できるプロジェクト テンプレートが用意されています。 これらのソリューションを使用して、Excel の自動化、Excel の機能拡張、Excel のユーザー インターフェイス (UI) のカスタマイズを行うことができます。 ドキュメント レベルのカスタマイズと VSTO アドインの違いの詳細については、次の [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md) を参照してください。  
@@ -76,9 +76,7 @@ ms.locfileid: "49859228"
 
  Excel 用 VSTO アドイン プロジェクトを作成するには、Visual Studio の**新しいプロジェクト**ダイアログ ボックスで、 Excel ブックまたは Excel テンプレート プロジェクト テンプレートを使用します。 詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
 
- VSTO アドインが機能するしくみの概要については、次の [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md) を参照してください。  
-
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次の [Excel アドインから PowerPoint を自動化するには？](http://go.microsoft.com/fwlink/?LinkID=130300)を参照してください。  
+ VSTO アドインが機能するしくみの概要については、次の [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md) を参照してください。
 
 ### <a name="excel-add-in-programming-model"></a>Excel のアドイン プログラミング モデル  
  Excel VSTO アドイン プロジェクトを作成すると、 `ThisAddIn`と呼ばれる、ソリューションの基礎となるクラスが Visual Studio によって生成されます。 このクラスは、コードを記述するための開始点となり、Excel のオブジェクト モデルを VSTO アドインに公開します。  
