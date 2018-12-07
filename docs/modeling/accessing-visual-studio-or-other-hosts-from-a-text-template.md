@@ -1,4 +1,4 @@
----
+﻿---
 title: テキスト テンプレートから Visual Studio またはその他のホストへのアクセス
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -83,4 +83,4 @@ Number of projects in this solution: <#=  dte.Solution.Projects.Count #>
 
 ## <a name="use-hostspecific-with-template-inheritance"></a>テンプレートを継承をしている hostSpecific の使用
 
-`inherits`属性を使用し、`hostspecific="true"` を指定したテンプレートから継承する場合は、`hostspecific="trueFromBase"` を指定します。 指定しなかった場合は、プロパティ `Host` が 2 回宣言されているというコンパイラ警告が出るでしょう。
+`inherits`属性を使用し、`hostspecific="true"` を指定したテンプレートから継承する場合は、`hostspecific="trueFromBase"` を指定します。指定しなかった場合は、プロパティ `Host` が 2 回宣言されているというコンパイラ警告が出るでしょう。
