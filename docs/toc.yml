@@ -6,9 +6,9 @@ items:
   - name: Visual Studio 2017 について
     href: ide/visual-studio-ide.md
   - name: コード エディターについて
-    href: ide/quickstart-editor.md
+    href: get-started/tutorial-editor.md
   - name: プロジェクトとソリューションについて
-    href: ide/quickstart-projects-solutions.md
+    href: get-started/tutorial-projects-solutions.md
   - name: Visual Studio のその他の機能
     href: ide/advanced-feature-overview.md
   expanded: true
@@ -180,6 +180,8 @@ items:
         href: ide/creating-solutions-and-projects.md
       - name: プロジェクトの移植、移行、およびアップグレード
         href: porting/port-migrate-and-upgrade-visual-studio-projects.md
+      - name: Visual Studio 2019 プレビューでのプロジェクトの移植、移行、およびアップグレード
+        href: porting/port-migrate-upgrade-visual-studio-projects-2019.md
       - name: プロジェクトおよびソリューションのプロパティの管理
         href: ide/managing-project-and-solution-properties.md
       - name: プロジェクト内の参照の管理
@@ -243,6 +245,8 @@ items:
       items:
       - name: ビルドのカスタマイズとタスクのデバッグ
         href: ide/customize-build-and-debug-tasks-in-visual-studio.md
+    - name: プロジェクトまたはリポジトリへの接続
+      href: ide/connect-team-project.md
     - name: エディターを使用する
       href: ide/writing-code-in-the-code-and-text-editor.md
       items:
@@ -913,6 +917,8 @@ items:
       href: ide/reference/property-pages-javascript.md
     - name: '[プロパティ] ウィンドウ'
       href: ide/reference/properties-window.md
+    - name: チーム エクスプローラーのリファレンス
+      href: ide/reference/team-explorer-reference.md
     - name: ツールボックス
       href: ide/reference/toolbox.md
       items:
@@ -1127,9 +1133,9 @@ items:
     href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
   - name: ご意見
     href: ide/talk-to-us.md
-ms.openlocfilehash: 618c6a9660cc85a6ae675a17389462584669972b
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 82155ce10d1a70376ed79611b78745e440360097
+ms.sourcegitcommit: 5c049194fa256b876ad303f491af11edd505756c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895549"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53027446"
