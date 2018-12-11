@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c71161c85c1a532b8c7e188f23cb00e73f78b06c
-ms.sourcegitcommit: f61ad0e8babec8810295f039e67629f4bdebeef0
+ms.openlocfilehash: 5d0d51e1c5c3ba94363c2ce0377f3d1a5e22c582
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "52001218"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895848"
 ---
 # <a id="top"> </a> Azure 上の Visual Studio イメージ
 
@@ -32,15 +32,16 @@ ms.locfileid: "52001218"
 
 最新のメジャー バージョンである Visual Studio 2017 および Visual Studio 2015 のイメージは、Azure Marketplace で見つけることができます。 メジャー バージョンごとに、最初にリリースされた (RTW) バージョンと最新の更新バージョンを確認できます。 それぞれのバージョンに、Visual Studio Enterprise Edition と Visual Studio Community Edition があります。 これらのイメージは少なくとも毎月更新され、Visual Studio と Windows の最新の更新プログラムが組み込まれます。 イメージの名前は同じままですが、各イメージの説明には、インストールされる製品バージョンとイメージの "更新" 日が含まれます。
 
-| リリース バージョン                                              | エディション                     |     製品バージョン     |
-|:------------------------------------------------------------:|:----------------------------:|:-----------------------:|
-| Visual Studio 2017: 最新 (バージョン 15.9)                    |    Enterprise、Community     |      バージョン 15.9.0     |
-|         Visual Studio 2017: RTW                              |    Enterprise、Community     |      バージョン 15.0.18    |
-|   Visual Studio 2015: 最新 (Update 3)                      |    Enterprise、Community     |  バージョン 14.0.25431.01  |
-|         Visual Studio 2015: RTW                              |             なし             | (サービス有効期限切れ) |
+| リリース バージョン                                              | エディション                     |     製品バージョン      |
+|:------------------------------------------------------------:|:----------------------------:|:------------------------:|
+|   Visual Studio 2019: Preview (Preview 1)                   |           エンタープライズ         | バージョン 16.0.0 Preview 1 |
+| Visual Studio 2017: 最新 (バージョン 15.9)                    |    Enterprise、Community     |      バージョン 15.9.0      |
+|         Visual Studio 2017: RTW                              |    Enterprise、Community     |      バージョン 15.0.18     |
+|   Visual Studio 2015: 最新 (Update 3)                      |    Enterprise、Community     |  バージョン 14.0.25431.01   |
+|         Visual Studio 2015: RTW                              |             なし             | (サービス有効期限切れ)  |
 
 > [!NOTE]
-> Microsoft のサービス ポリシーに従って、Visual Studio 2015 の最初にリリースされた (RTW) バージョンは、サービスの有効期限が切れています。 Visual Studio 2015 製品ラインに提供されるバージョンとして残っているのは Visual Studio 2015 Update 3 だけです。  また、Visual Studio 2017 バージョン 15.9 のリリース以降、バージョン 15.9 のプレビューを含む '最新プレビュー' のイメージが廃止されました。
+> Microsoft のサービス ポリシーに従って、Visual Studio 2015 の最初にリリースされた (RTW) バージョンは、サービスの有効期限が切れています。 Visual Studio 2015 製品ラインに提供されるバージョンとして残っているのは Visual Studio 2015 Update 3 だけです。
 
 詳細については、[Visual Studio サービス ポリシー](/visualstudio/productinfo/vs-servicing-vs)に関する説明を参照してください。
 

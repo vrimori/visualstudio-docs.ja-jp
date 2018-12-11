@@ -23,7 +23,7 @@ ms.author: gewarren
 manager: ghogen
 ms.openlocfilehash: 4f3dbfad8655b8594301b8da7ce1dda050119206
 ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/29/2018
 ms.locfileid: "50220379"
@@ -248,7 +248,7 @@ ms.locfileid: "50220379"
   
 1.  作成するため、デザイナーで、`Window_Loaded`イベント ハンドラーを読み取るテキストをダブルクリックします: **MainWindow**します。  
   
-2.  イベント ハンドラーを次のコードで置き換えます。 交換することを確認、 *localhost*開発用コンピューター上のローカル ホスト アドレスでこのコードでのアドレス。  
+2.   イベント ハンドラーを次のコードで置き換えます。 交換することを確認、 *localhost*開発用コンピューター上のローカル ホスト アドレスでこのコードでのアドレス。  
   
      [!code-csharp[Data_WPFWCF#2](../snippets/csharp/VS_Snippets_ProTools/data_wpfwcf/cs/adventureworkssaleseditor/mainwindow.xaml.cs#2)]
      [!code-vb[Data_WPFWCF#2](../snippets/visualbasic/VS_Snippets_ProTools/data_wpfwcf/vb/adventureworkssaleseditor/mainwindow.xaml.vb#2)]  

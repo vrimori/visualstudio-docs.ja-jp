@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で特定のイベントを待機するようにコード化された UI テストを設定する
+title: 特定のイベントを待機するようにコード化された UI テストを設定する
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -9,54 +9,55 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c8a88980869d6eb7f8b30c4e1197f373f1895d52
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: d1f077269ddfd736aa98b78c64c81170037853eb
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295125"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894769"
 ---
 # <a name="make-coded-ui-tests-wait-for-specific-events-during-playback"></a>再生中に特定のイベントを待機するようにコード化された UI テストを設定する
 
 コード化された UI テストの再生では、テストに対して指示することで、ウィンドウの表示やプログレス バーの非表示などの特定のイベントが発生するまで待機することができます。 これを実行するには、次の表で説明されているように、該当する UITestControl.WaitForControlXXX() メソッドを使用します。 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A> メソッドで有効化されるコントロールを待機するコード化された UI テストの例については、「[チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)」を参照してください。
 
- **必要条件**
+[!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
- Visual Studio Enterprise
+**必要条件**
+
+Visual Studio Enterprise
 
 > [!TIP]
 > またコード化された UI テスト エディターで操作の前に遅延を追加することもできます。 詳細については、「[方法: コード化された UI テスト エディターを使用して UI アクションの前に遅延を挿入する](editing-coded-ui-tests-using-the-coded-ui-test-editor.md#insert-a-delay-before-a-ui-action)」をご覧ください。
 
+**UITestControl.WaitForControlXXX() メソッド**
 
- **UITestControl.WaitForControlXXX() メソッド**
+<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlReady%2A>
 
- <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlReady%2A>
+コントロールでマウスおよびキーボード入力を受け入れる準備が整うまで待機します。 エンジンは、すべての操作についてこの API を暗黙的に呼び出してコントロールの準備が整うまで待機し、その後、なんらかの操作を実行します。 ただし、複雑なシナリオでは、明示的に呼び出すことが必要になる場合があります。
 
- コントロールでマウスおよびキーボード入力を受け入れる準備が整うまで待機します。 エンジンは、すべての操作についてこの API を暗黙的に呼び出してコントロールの準備が整うまで待機し、その後、なんらかの操作を実行します。 ただし、複雑なシナリオでは、明示的に呼び出すことが必要になる場合があります。
+<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A>
 
- <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A>
+サーバーを呼び出すことでウィザードが入力の非同期の検証を実行するときに、コントロールが有効化されるまで待機します。 たとえば、このメソッドを使用してウィザードの **[次へ]** ボタンが有効化されるまで待機します。 このメソッドの使用例については、「[チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)」をご覧ください。
 
- サーバーを呼び出すことでウィザードが入力の非同期の検証を実行するときに、コントロールが有効化されるまで待機します。 たとえば、このメソッドを使用してウィザードの **[次へ]** ボタンが有効化されるまで待機します。 このメソッドの使用例については、「[チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)」をご覧ください。
+<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlExist%2A>
 
- <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlExist%2A>
+コントロールが UI に表示されるまで待機します。 たとえば、アプリケーションでパラメーターの検証が行われた後にエラー ダイアログの表示を必要とする場合などです。 検証にかかる時間はさまざまです。 このメソッドを使用してエラー ダイアログ ボックスを待機することができます。
 
- コントロールが UI に表示されるまで待機します。 たとえば、アプリケーションでパラメーターの検証が行われた後にエラー ダイアログの表示を必要とする場合などです。 検証にかかる時間はさまざまです。 このメソッドを使用してエラー ダイアログ ボックスを待機することができます。
+<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlNotExist%2A>
 
- <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlNotExist%2A>
+コントロールが UI から非表示になるまで待機します。 たとえば、プログレス バーが表示されなくなるまで待機する場合などです。
 
- コントロールが UI から非表示になるまで待機します。 たとえば、プログレス バーが表示されなくなるまで待機する場合などです。
+<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlPropertyEqual%2A>
 
- <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlPropertyEqual%2A>
+指定されたコントロールのプロパティが指定された値になるまで待機します。 たとえば、ステータス テキストが**完了**になるまで待機します。
 
- 指定されたコントロールのプロパティが指定された値になるまで待機します。 たとえば、ステータス テキストが**完了**になるまで待機します。
+<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlPropertyNotEqual%2A>
 
- <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlPropertyNotEqual%2A>
+指定されたコントロールのプロパティが指定された値の逆になるまで待機します。 たとえば、編集ボックスが読み取り専用ではなくなる、つまり、編集可能になるまで待機します。
 
- 指定されたコントロールのプロパティが指定された値の逆になるまで待機します。 たとえば、編集ボックスが読み取り専用ではなくなる、つまり、編集可能になるまで待機します。
+<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlCondition%2A>
 
- <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlCondition%2A>
-
- 指定された述語で `true` が返されるまで待機します。 これは、指定されたコントロールでの複合的な待機操作 (OR 条件など) で使用できます。 たとえば、次のコードに示されているように、ステータス テキストが **Succeeded** または **Failed** になるまで待機する場合があります。
+指定された述語で `true` が返されるまで待機します。 これは、指定されたコントロールでの複合的な待機操作 (OR 条件など) で使用できます。 たとえば、次のコードに示されているように、ステータス テキストが **Succeeded** または **Failed** になるまで待機する場合があります。
 
 ```csharp
 

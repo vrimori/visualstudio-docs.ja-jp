@@ -12,16 +12,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 945bbe8377d51974bdfb09b762e415da3004346b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9740d26ef99c10bb9ec84afa23b998f6e1467f40
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49821839"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895263"
 ---
 # <a name="how-to-view-web-page-response-time-in-a-load-test-using-the-load-test-analyzer"></a>方法: ロード テスト アナライザーを使用してロード テストにおける Web ページ応答時間を表示する
 
 各 Web ページの読み込みにかかる時間は*応答時間*と呼ばれています。 Web パフォーマンス テストを作成する際に、Web ページ要求ごとに応答時間の目標を Web パフォーマンス テストに設定できます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ロード テストで Web パフォーマンス テストをストレス下で実行する場合は、ページごとに次の情報を分析できます。
 
@@ -36,8 +38,6 @@ ms.locfileid: "49821839"
 -   グラフ ビューでの Web ページ応答時間の分析
 
 ## <a name="view-response-time-data-in-a-table"></a>応答時間データを表形式で表示する
-
-### <a name="to-view-response-time-data-in-a-table"></a>応答時間データを表形式で表示するには
 
 1. **ロード テスト アナライザー**のツール バーの **[テーブル]** を選択し、テーブル グリッドが表示されるようにします。
 
@@ -70,7 +70,7 @@ ms.locfileid: "49821839"
 
 応答時間データをグラフ表示して、ロード テスト中の時間の経過に伴う変化を確認することもできます。 これは、ロード パターンがテストの実行ごとに増える場合、たとえば、ステップ ロード パターンを使用する場合に便利です。 詳細については、「[ロード パターンを編集して仮想ユーザー アクティビティをモデル化する](../test/edit-load-patterns-to-model-virtual-user-activities.md)」を参照してください。
 
-### <a name="to-view-response-time-data-in-a-graph"></a>応答時間データをグラフ表示するには
+応答時間データをグラフ表示するには:
 
 1. **ロード テスト アナライザー**のツール バーの **[グラフ]** をクリックし、グラフが表示されるようにします。
 

@@ -11,16 +11,20 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 8829644e34c169f8992959013f70d453a70d41b8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: fc54324f2c5bc91dba64aa35b125bbdc12ca1a45
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49834287"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895029"
 ---
 # <a name="report-load-tests-results-for-test-comparisons-or-trend-analysis"></a>テストの比較または傾向分析のためにロード テストの結果レポートを作成する
 
-複数のテスト結果に基づいて、Microsoft Excel のロード テスト レポートを生成することができます。 次の 2 種類のロード テスト レポートを作成できます。
+複数のテスト結果に基づいて、Microsoft Excel のロード テスト レポートを生成することができます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
+次の 2 種類のロード テスト レポートを作成できます。
 
 - 比較の実行 &mdash; このレポートは実際には 2 つのレポートに分かれており、表と横棒グラフを使用した比較データが横に並べて表示されます。
 
@@ -33,7 +37,7 @@ ms.locfileid: "49834287"
 さらに、関係者がデータベースに接続しなくてもレポートを表示できるように、スプレッドシート ファイルを関係者と共有することができます。
 
 > [!NOTE]
-> ロード テストにコメントを追加すると、Excel レポートに表示されます。 詳細については、「[方法: 完了したロード テストの分析中にコメントを追加する](../test/how-to-add-comments-on-a-completed-load-test.md)」を参照してください。
+> ロード テストにコメントを追加すると、Excel レポートに表示されます。
 
 ## <a name="tasks"></a>[タスク]
 

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テストに仮想ユーザー アクティビティ チャートを使用する
+title: ロード テストに仮想ユーザー アクティビティ チャートを使用する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 19d2a50eba8850b3950e951da58800aed77931ad
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 8e4584d386cb61aaf7809c8bb5ab748e49543c7e
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295801"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895926"
 ---
 # <a name="walkthrough-using-the-virtual-user-activity-chart-to-isolate-issues"></a>チュートリアル: 仮想ユーザー アクティビティ チャートを使用した問題の特定
 
@@ -24,17 +24,7 @@ ms.locfileid: "51295801"
 
 仮想ユーザー アクティビティ チャートを使用すると、ロード テストに関連付けられた仮想ユーザー アクティビティを視覚化できます。 チャートの各行は、個別の仮想ユーザーを表します。 仮想ユーザー アクティビティ チャートには、各仮想ユーザーがテスト中に実行した処理が詳しく表示されます。 これにより、ユーザー アクティビティのパターンを確認することによってパフォーマンスの問題を特定できるほか、パターンの読み込み、失敗したテストまたは実行速度の遅いテストの関連付け、他の仮想ユーザー アクティビティによる要求の表示を実行できます。 仮想ユーザー アクティビティ チャートは、ロード テストの実行が完了した後にのみ使用できます。
 
-このチュートリアルでは、次のタスクを行います。
-
--   仮想ユーザー アクティビティ チャートに関連する次のツールの使用方法について説明します。
-
-    -   **[期間にズーム]** ツールを使用して、分析するチャート上の特定の期間を指定します。
-
-    -   **[詳細の凡例]** パネルと **[フィルター結果]** パネルを使用してフィルターをチャートに適用して、問題の特定に役立てます。
-
--   仮想ユーザー アクティビティ チャートを使用して、特定の仮想ユーザーで発生したエラーを分析し、問題のあるエラーの種類の詳細を参照します。
-
-詳細については、「[詳細ビューでの仮想ユーザー アクティビティの分析](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)」をご覧ください。
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -47,8 +37,6 @@ ms.locfileid: "51295801"
     -   [ロード テストの作成および実行](/azure/devops/test/load-test/run-performance-tests-app-before-release#create-a-load-test)
 
 ## <a name="open-the-colorwebapp-solution-created-in-the-previous-walkthroughs"></a>前のチュートリアルで作成した ColorWebApp ソリューションを開く
-
-### <a name="open-the-solution"></a>ソリューションを開く
 
 1.  Visual Studio を起動します。
 

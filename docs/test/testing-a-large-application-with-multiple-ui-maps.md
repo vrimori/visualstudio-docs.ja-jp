@@ -1,5 +1,5 @@
 ---
-title: Visual Studio の複数の UI マップでの大規模アプリケーションのテスト
+title: 複数の UI マップで大規模アプリケーションをテストする
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -12,26 +12,28 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0072d04ed8f31b492e0ee792717b8975478c8c99
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: dfc1cf44cb92ab58b50284f0398178c8f96f2a2e
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49891025"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895133"
 ---
 # <a name="test-a-large-application-with-multiple-ui-maps"></a>複数の UI マップで大規模アプリケーションをテストする
 
 このトピックでは、複数の UI マップを使って大規模なアプリケーションをテストする際に、コード化された UI テストを使用する方法を説明します。
 
- **必要条件**
+[!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
+
+**必要条件**
 
 - Visual Studio Enterprise
 
-  新しいコード化された UI テストを作成すると、Visual Studio テスト フレームワークによってテスト用のコードが生成されます。既定では、このコードは <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> クラスに生成されます。 コード化された UI テストを記録する方法の詳細については、「[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md)」および「[コード化された UI テストの構造](../test/anatomy-of-a-coded-ui-test.md)」を参照してください。
+新しいコード化された UI テストを作成すると、Visual Studio テスト フレームワークによってテスト用のコードが生成されます。既定では、このコードは <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> クラスに生成されます。 コード化された UI テストを記録する方法の詳細については、「[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md)」および「[コード化された UI テストの構造](../test/anatomy-of-a-coded-ui-test.md)」を参照してください。
 
-  UI マップに対して生成されるコードには、テストで操作する各オブジェクトに対応するクラスが含まれます。 生成されるメソッドごとに、そのメソッドに固有のメソッド パラメーターのコンパニオン クラスが生成されます。 アプリケーションで多数のオブジェクト、ページ、フォーム、およびコントロールが使用されていると、UI マップがかなりの大きさになる場合があります。 また、複数のテスト担当者で作業する場合、単一の大きな UI マップ ファイルでは、アプリケーションを扱いきれなくなります。
+UI マップに対して生成されるコードには、テストで操作する各オブジェクトに対応するクラスが含まれます。 生成されるメソッドごとに、そのメソッドに固有のメソッド パラメーターのコンパニオン クラスが生成されます。 アプリケーションで多数のオブジェクト、ページ、フォーム、およびコントロールが使用されていると、UI マップがかなりの大きさになる場合があります。 また、複数のテスト担当者で作業する場合、単一の大きな UI マップ ファイルでは、アプリケーションを扱いきれなくなります。
 
-  複数の UI マップ ファイルを使用すると、次のような利点があります。
+複数の UI マップ ファイルを使用すると、次のような利点があります。
 
 - 各マップを、アプリケーションの論理的なサブセットに関連付けることができます。 このようにすると、変更を管理しやすくなります。
 

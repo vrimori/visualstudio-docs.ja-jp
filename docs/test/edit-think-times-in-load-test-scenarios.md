@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テストの待ち時間
+title: ロード テストの待ち時間
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +12,24 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 8f8f90eb341112cd700d45b6b7c7d100cad2a024
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 236b6dffa3885928b48b7d6ea044f2494e7d7b28
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39175983"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895913"
 ---
 # <a name="edit-think-times-to-simulate-website-human-interaction-delays-in-load-tests-scenarios"></a>待ち時間を編集してロード テスト シナリオにおける Web サイトでの対話操作の遅延をシミュレートする
 
 待ち時間は、Web サイトとの対話と次の対話の間にユーザーを待機させる動作をシミュレートするために使用されます。 待ち時間は、Web パフォーマンス テストにおける要求から次の要求までの間と、ロード テスト シナリオにおけるテスト イテレーションから次のイテレーションまでの間に発生します。 ロード テストで待ち時間を使用すると、ロード シミュレーションをより正確に作成する上で役立ちます。 ロード テストで待ち時間が使用されるか無視されるかは変更できます。 **ロード テスト エディター**で、ロード テストで待ち時間を使用するかどうかを変更します。
 
- *待ち動作のプロファイル*は、ロード テストのシナリオに適用される設定です。 この設定は、個々の Web パフォーマンス テストに保存される待ち時間をロード テストで使用するかどうかを決定します。 一部の Web パフォーマンス テストでは待ち時間を使用し、その他の Web サイトでは使用しない場合、それらの Web パフォーマンス テストを異なるシナリオに配置する必要があります。 シナリオの詳細については、「[ロード テスト シナリオの編集](../test/edit-load-test-scenarios.md)」を参照してください。
+*待ち動作のプロファイル*は、ロード テストのシナリオに適用される設定です。 この設定は、個々の Web パフォーマンス テストに保存される待ち時間をロード テストで使用するかどうかを決定します。 一部の Web パフォーマンス テストでは待ち時間を使用し、その他の Web サイトでは使用しない場合、それらの Web パフォーマンス テストを異なるシナリオに配置する必要があります。 シナリオの詳細については、「[ロード テスト シナリオの編集](../test/edit-load-test-scenarios.md)」を参照してください。
 
- 最初に、**新しいロード テスト ウィザード**を使用してロード テストを作成するときに、ロード テストで待ち時間を使用するかどうかを設定します。 詳細については、「[ロード テスト シナリオの編集](../test/edit-load-test-scenarios.md)」を参照してください。
+最初に、**新しいロード テスト ウィザード**を使用してロード テストを作成するときに、ロード テストで待ち時間を使用するかどうかを設定します。 詳細については、「[ロード テスト シナリオの編集](../test/edit-load-test-scenarios.md)」を参照してください。
 
- 以下では、**待ち動作のプロファイル**のオプションについて説明します。
+以下では、**待ち動作のプロファイル**のオプションについて説明します。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 **Off**
 

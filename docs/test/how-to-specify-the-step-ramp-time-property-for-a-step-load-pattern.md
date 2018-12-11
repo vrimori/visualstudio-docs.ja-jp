@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テストのステップ ロード パターンの [ステップごとの傾斜増加時間]
+title: ロード テストのステップ ロード パターンの [ステップごとの傾斜増加時間]
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,23 +10,25 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 1596c96662870118b8fa721f89b8a9ef1c6b831f
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 81373e30498ad02f4007e096cfbc6a7cff953402
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39381534"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895720"
 ---
 # <a name="how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern"></a>方法: ステップ ロード パターンの "ステップごとの傾斜増加時間" プロパティを指定する
 
 **新しいロード テスト** ウィザードでロード テストを作成した後で、**ロード テスト エディター**を使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。 詳細については、「[チュートリアル: ロード テストの作成および実行](../test/walkthrough-create-and-run-a-load-test.md)」を参照してください。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
 > ロード テスト シナリオの各プロパティとその説明の一覧については、「[ロード テスト シナリオのプロパティ](../test/load-test-scenario-properties.md)」を参照してください。
 
 **[ステップごとの傾斜増加時間]** プロパティを **[プロパティ]** ウィンドウで設定します。 **ロード テスト エディター**でロード テスト シナリオのプロパティを編集します。
 
-**[ステップごとの傾斜増加時間]** プロパティは、ステップ ロード パターンのみで使用します。 詳細については、「[ロード パターンを編集して仮想ユーザー アクティビティをモデル化](../test/edit-load-patterns-to-model-virtual-user-activities.md)」を参照してください。
+**[ステップごとの傾斜増加時間]** プロパティは、ステップ ロード パターンのみで使用します。 詳細については、「[ロード パターンを編集して仮想ユーザー アクティビティをモデル化する](../test/edit-load-patterns-to-model-virtual-user-activities.md)」を参照してください。
 
 ステップ ロード パターンは、ロード テストを実行するときにサーバーの負荷を増加するために使用します。これにより、ユーザー ロードが増加するにつれてパフォーマンスがどのように変化するかが確認できます。 たとえば、ユーザー ロードが 2,000 人に増加したときにサーバーがどのように動作するかを確認するには、次のプロパティでステップ ロード パターンを使用して 10 時間のロード テストを実行します。
 
@@ -58,7 +60,7 @@ ms.locfileid: "39381534"
 3.  **[ステップ ロード パターン]** ノードを選択します。
 
     > [!NOTE]
-    > シナリオのロード パターンは、ステップ ロード パターンである必要があります。 そうでない場合は、ロード パターンにより現在シナリオに関連付けられているロード パターンのタイプが表示されます。 詳細については、「[ロード パターンを編集して仮想ユーザー アクティビティをモデル化](../test/edit-load-patterns-to-model-virtual-user-activities.md)」を参照してください。
+    > シナリオのロード パターンは、ステップ ロード パターンである必要があります。 そうでない場合は、ロード パターンにより現在シナリオに関連付けられているロード パターンのタイプが表示されます。 詳細については、「[ロード パターンを編集して仮想ユーザー アクティビティをモデル化する](../test/edit-load-patterns-to-model-virtual-user-activities.md)」を参照してください。
 
 4.  **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックします。
 
