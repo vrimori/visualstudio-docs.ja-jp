@@ -48,7 +48,7 @@ ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: d980fd2367545eb5c824bacc507d9ced9aa2d723
 ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51765955"
@@ -178,7 +178,7 @@ ms.locfileid: "51765955"
   
 2. デバッグを開始し、ブレークポイントで実行が停止したら、 **[ローカル]** ウィンドウで対象のブレークポイントを見つけて右クリックし、 **[オブジェクト ID の作成]** を選択します。  
   
-    **$** ウィンドウに、 **[ローカル]** ウィンドウでブレークポイントを設定することで、呼び出し元の関数が返す命令または行で実行を中断できます。 これが、オブジェクト ID です。  
+     **$** ウィンドウに、 **[ローカル]** ウィンドウでブレークポイントを設定することで、呼び出し元の関数が返す命令または行で実行を中断できます。 これが、オブジェクト ID です。  
   
 3. オブジェクトがコレクションに追加されるときなど、調査が必要となるポイントに、新しい条件付きブレークポイントを追加します。  
   

@@ -11,16 +11,20 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 51ccfcc6750be7f24acd88c07fa53537f43cdfab
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 7eda8336c45d0e0d90441ce918845d111976aaf4
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49861918"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896563"
 ---
 # <a name="how-to-create-load-test-performance-reports-using-microsoft-excel"></a>方法: Microsoft Excel を使用してロード テスト パフォーマンス レポートを作成する
 
-複数のテスト結果に基づいて、Microsoft Excel のロード テスト レポートを生成することができます。 次の 2 種類のロード テスト レポートを作成できます。
+複数のテスト結果に基づいて、Microsoft Excel のロード テスト レポートを生成することができます。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
+次の 2 種類のロード テスト レポートを作成できます。
 
 -   **比較の実行** 表と横棒グラフを使用して 2 つのロード テストの結果のデータを比較したレポートのセットが作成されます。
 
@@ -45,7 +49,7 @@ ms.locfileid: "49861918"
 Excel レポートを生成するには、**ロード テスト アナライザー**のツール バーの **[Excel レポートの作成]** ボタンを使用するか、Excel で **Office** リボンの **[ロード テスト]** タブで **[ロード テスト レポート]** オプションを使用します。
 
 > [!NOTE]
-> ロード テストにコメントを追加すると、Excel レポートに表示されます。 詳細については、「[方法: 完了したロード テストの分析中にコメントを追加する](../test/how-to-add-comments-on-a-completed-load-test.md)」を参照してください。
+> ロード テストにコメントを追加すると、Excel レポートに表示されます。
 
 ## <a name="to-generate-load-test-comparison-reports-using-excel"></a>Excel を使用してロード テスト比較レポートを生成するには
 

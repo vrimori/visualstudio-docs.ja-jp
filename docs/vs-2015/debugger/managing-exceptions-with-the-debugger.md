@@ -40,7 +40,7 @@ ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: bdb648e7a29b3ed5d9a444e203ddbdcd6b0e73dc
 ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51769995"
@@ -96,7 +96,7 @@ ms.locfileid: "51769995"
    }  
    ```  
   
-    **try/catch** で **[例外設定]** のチェック ボックスをオンにした場合、このコードをデバッガーで実行すると、 `throw` 行で実行が中断されます。 実行は続行することができます。 コンソールには、次の行が両方とも表示される必要があります。  
+     **try/catch** で **[例外設定]** のチェック ボックスをオンにした場合、このコードをデバッガーで実行すると、 `throw` 行で実行が中断されます。 実行は続行することができます。 コンソールには、次の行が両方とも表示される必要があります。  
   
    ```  
    caught exception  

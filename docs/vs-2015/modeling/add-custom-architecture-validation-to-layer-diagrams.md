@@ -16,7 +16,7 @@ ms.author: gewarren
 manager: douge
 ms.openlocfilehash: 9748f2f7b43426f7f981d027400f097b260bf23d
 ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51817517"
@@ -120,7 +120,7 @@ Visual Studio では、ユーザーはプロジェクトのソース コード�
     > [!NOTE]
     >  メソッドは特定の状況においてのみ呼び出され、ブレークポイントは自動的には動作しません。 詳細については、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。  
   
-8.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]のメイン インスタンスまたは別のコンピューターに拡張機能をインストールするには、 **bin\*** ディレクトリで **bin** ファイルを探します。 このファイルを、VSIX をインストールするコンピューターにコピーします。 Windows エクスプローラーで、VSIX ファイルをダブルクリックします。 これは Windows 8 のエクスプローラーです。  
+8.   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]のメイン インスタンスまたは別のコンピューターに拡張機能をインストールするには、 **bin\*** ディレクトリで **bin** ファイルを探します。 このファイルを、VSIX をインストールするコンピューターにコピーします。 Windows エクスプローラーで、VSIX ファイルをダブルクリックします。 これは Windows 8 のエクスプローラーです。  
   
      拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
   

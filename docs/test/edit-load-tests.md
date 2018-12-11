@@ -11,23 +11,26 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: f4c29f3b98440c9e8462083a24012944157b848b
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: cb39ea39261d5b359437b2c31ec963bab8df01fe
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178414"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895393"
 ---
 # <a name="edit-load-tests"></a>ロード テストを編集する
 
 ロード テストでは、Web のパフォーマンス テストまたは単体テストを実行し、たくさんのユーザーが 1 台のサーバーに同時にアクセスする状況をシミュレーションします。 ロード テストにより、アプリケーションのストレスおよびパフォーマンスのデータを利用できるようになります。 ロード テストは、ユーザーのロードやネットワークの種類など、さまざまなロード条件をエミュレートするように構成できます。
 
-> [!NOTE]
-> ロード テストは、Visual Studio 2017 Enterprise Edition でのみ利用できます。
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ロード テストは、*シナリオ*、*カウンター セット*、*実行設定*によって定義されます。 次の図では、[シナリオ](../test/edit-load-test-scenarios.md)、[カウンター セット](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)、[実行設定](../test/load-test-run-settings-properties.md)の違いを確認できます。
 
 ![ロード テストのアーキテクチャ](../test/media/load_test_editor.png)
+
+## <a name="software-requirements"></a>ソフトウェア要件
+
+Web パフォーマンスとロード テスト プロジェクトは、Visual Studio Enterprise Edition でのみ利用できます。
 
 ## <a name="edit-load-test-scenario-settings"></a>ロード テスト シナリオ設定を編集する
 

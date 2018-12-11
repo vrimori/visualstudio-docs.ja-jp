@@ -16,14 +16,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 23978b13808054bfcf8ef3c809307e4f6cf37b43
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 2894039fc963ef089d0a1551d8b8afc7713edd4f
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52388622"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894548"
 ---
-# <a name="how-to-change-fonts-and-colors-for-the-editor"></a>方法: エディターのフォントと色を変更する
+# <a name="how-to-change-fonts-and-colors-for-the-editor-in-visual-studio-2017"></a>方法: Visual Studio 2017 でエディターのフォントと色を変更する
 
 コード エディターでは、さまざまなテキスト**表示項目**に対して既定のフォント フェイスを変更したり、フォント サイズを調整したり、前景色と背景色を変更したりできます。 フォントの設定を変更するときは、次のことにご注意ください。
 

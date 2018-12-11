@@ -1,16 +1,17 @@
 ---
 title: Visual Studio for Mac ツアー
 description: Visual Studio for Mac は、iOS、Android、Mac、Xamarin.Forms 用に、ASP.NET Core Web サイトや Xamarin プロジェクトなどの .NET アプリケーションを macOS 上で構築する統合開発環境 (IDE) として利用できます。
+zone_pivot_groups: mac-ide-version
 author: conceptdev
 ms.author: crdun
-ms.date: 05/06/2018
+ms.date: 11/03/2018
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
-ms.openlocfilehash: 37c4f6c50cc5deaee1decf6fcfae5eda211018b2
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: e1787f6d396121263d91633a4ee6d4dd8ed2c35f
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295684"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895796"
 ---
 # <a name="visual-studio-for-mac-tour"></a>Visual Studio for Mac ツアー
 
@@ -24,7 +25,25 @@ Visual Studio for Mac のユーザー エクスペリエンス (UX) は Windows 
 
 Visual Studio for Mac は、アプリケーションのファイルと設定の管理、アプリケーション ノードの作成、およびデバッグのセクションに分かれています。
 
-## <a name="welcome-screen"></a>ようこそ画面
+::: zone pivot="vsmac2019"
+
+## <a name="visual-studio-for-mac-2019-start-window"></a>Visual Studio for Mac 2019 のスタート ウィンドウ
+
+> [!TIP]
+> Visual Studio 2019 for Mac プレビューを[ダウンロードして](install-preview.md)テストできるようになりました。
+
+Visual Studio for Mac 2019 プレビューを起動すると、新規ユーザーにはサインイン ウィンドウが表示されます。 ご自分の Microsoft アカウントでサインインして、有料ライセンス (ある場合) をアクティブ化するか、Azure サブスクリプションにリンクします。 **[スキップ]** を押して、後で **[Visual Studio] > [サインイン]** メニュー項目を使用してサインインすることができます。
+
+![Microsoft アカウントにサインインする](media/ide-tour-2019-start-signin.png)
+
+サインインしたユーザーには、新しい_スタート ウィンドウ_が表示されます。このウィンドウには、最近使用したプロジェクトの一覧と、既存のプロジェクトを開いたり、新しいプロジェクトを作成するためのボタンが表示されます。
+
+![最近使用したプロジェクトから選択するか、新しいものを作成する](media/ide-tour-2019-start-projects.png)
+
+::: zone-end
+::: zone pivot="vsmac2017"
+
+## <a name="welcome-screen-in-visual-studio-for-mac-2017"></a>Visual Studio for Mac 2017 のようこそ画面
 
 Visual Studio for Mac を起動すると、*ようこそ画面*が表示されます。
 
@@ -36,6 +55,8 @@ Visual Studio for Mac を起動すると、*ようこそ画面*が表示され�
 - **はじめに** - Visual Studio for Mac を初めて使用する開発者に役立つトピックにすばやくアクセスできます。
 - **最近のソリューション** - 最近開いたソリューションにすばやくアクセスできます。また、プロジェクトを開いたり作成したりできる便利なボタンも表示されます。
 - **開発者向け情報** - Microsoft 開発者向けの最新情報を提供するニュース フィードです。
+
+::: zone-end
 
 ## <a name="solutions-and-projects"></a>ソリューションおよびプロジェクト
 

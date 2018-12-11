@@ -26,7 +26,7 @@ ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: c5177d7bd43a0bc1ba29778ba99cc891fd9f739b
 ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51792386"
@@ -109,7 +109,7 @@ DLL を作成するテンプレートは次のとおりです。
   
 - DLL プロジェクトからデバッグできます。 詳細については、「 [How to: Debug from a DLL Project](../debugger/how-to-debug-from-a-dll-project.md)」を参照してください。  
   
-- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **イミディエイト** ウィンドウを開いて、プログラムが読み込んだ DLL を確認できます。 この場合、 **イミディエイト** ウィンドウは、アプリケーションの役割をします。  
+-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **イミディエイト** ウィンドウを開いて、プログラムが読み込んだ DLL を確認できます。 この場合、 **イミディエイト** ウィンドウは、アプリケーションの役割をします。  
   
   呼び出し元のアプリケーションのデバッグを始める前に、通常はクラス ライブラリ内にブレークポイントを設定します。 詳細については、「 [Breakpoints and Tracepoints](http://msdn.microsoft.com/en-us/fe4eedc1-71aa-4928-962f-0912c334d583)」を参照してください。 ブレークポイントにヒットした場合は、コードのステップ実行により、1 行ずつアクションを確認して問題を特定できます。 詳細については、「 [Code Stepping Overview](http://msdn.microsoft.com/en-us/8791dac9-64d1-4bb9-b59e-8d59af1833f9)」を参照してください。  
   
