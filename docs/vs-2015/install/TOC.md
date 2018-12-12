@@ -12,5 +12,3 @@
 ## [方法: 評価版の Visual Studio からアップグレードする](how-to-upgrade-from-a-trial-edition-of-visual-studio.md)
 ## [方法: Visual Studio プロダクト キーを検索する](how-to-locate-the-visual-studio-product-key.md)
 ## [Visual Studio のライフサイクル ポリシーの例外](visual-studio-lifecycle-policy-exceptions.md)
-# [Visual Studio 2017 のインストール](install-visual-studio-15-preview-5.md)
-## [Visual Studio 2017 の変更](modify-visual-studio-15-preview-5.md)

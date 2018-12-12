@@ -1,5 +1,6 @@
 ---
 title: テキスト テンプレートから Visual Studio またはその他のホストへのアクセス
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
@@ -9,16 +10,16 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 657abba976e0f0d167651943289296d340981e62
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 9bb7bce5cb047018540599c9488fa4471dad2d1c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31946518"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059299"
 ---
 # <a name="access-visual-studio-or-other-hosts-from-a-text-template"></a>テキスト テンプレートからの Visual Studio またはその他のホストへのアクセス
 
-テキスト テンプレートでは、メソッドとテンプレートを実行するホストによって公開されているプロパティを使用できます。 Visual Studio は、ホストの例のひとつです。
+テキスト テンプレートでは、メソッドと、テンプレートを実行するホストによって公開されているプロパティを使用できます。 Visual Studio は、ホストの例のひとつです。
 
 > [!NOTE]
 > 通常のテキスト テンプレートで、ホストのメソッドとプロパティを使用することができますが、*前処理*テキスト テンプレートではできません。

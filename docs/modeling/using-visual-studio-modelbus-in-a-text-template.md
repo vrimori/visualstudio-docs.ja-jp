@@ -1,5 +1,5 @@
 ---
-title: テキスト テンプレートでの Visual Studio ModelBus の使用
+title: ModelBus を使用して、テキスト テンプレートで
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: fe25385d49e5553a6e9d4309dd0bb0d12a294a5c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 8aed2920e7be177fdbccc9b71796e58cf103e846
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49883978"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057595"
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>テキスト テンプレートでの Visual Studio ModelBus の使用
 Visual Studio ModelBus 参照を含むモデルを読み取るテキスト テンプレートを記述する場合は、ターゲットのモデルへのアクセスに参照を解決する可能性があります。 その場合は、テキスト テンプレートと参照先のドメイン固有言語 (Dsl) を調整する必要があります。

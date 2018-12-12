@@ -1,5 +1,6 @@
 ---
 title: Visual Studio ドキュメント
+titleSuffix: ''
 description: Visual Studio がさまざまなプログラミング言語を使用したアプリの開発にどのように役立つかについて説明します。
 ms.date: 01/01/2018
 layout: LandingPage
@@ -10,12 +11,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: e4378cad8706648a6412fcce649077ca479dfb67
-ms.sourcegitcommit: 5c049194fa256b876ad303f491af11edd505756c
+ms.openlocfilehash: b9b3c4417506fc08f4fa048b051d0406a460cbb8
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/07/2018
-ms.locfileid: "53027277"
+ms.locfileid: "53060026"
 ---
 # <a name="visual-studio-documentation"></a>Visual Studio ドキュメント
 
