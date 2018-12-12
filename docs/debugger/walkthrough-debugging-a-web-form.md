@@ -1,6 +1,6 @@
 ---
-title: 'チュートリアル: Web フォームのデバッグ |Microsoft Docs'
-ms.custom: ''
+title: Web フォームのデバッグ |Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -24,20 +24,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 67eba0d7a439583d8486f8937693a63e65dca0d6
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: d28ebc797715614aefaf7206f170157d4f4485f2
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389605"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055155"
 ---
-# <a name="walkthrough-debugging-a-web-form"></a>チュートリアル : Web フォームのデバッグ
+# <a name="walkthrough-debugging-a-web-form"></a>チュートリアル: Web フォームのデバッグ
 このチュートリアルでは、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーション (Web フォーム) をデバッグする方法について説明します。 実行の開始と終了の方法、ブレークポイントの設定方法、および**ウォッチ** ウィンドウでの変数の確認方法についても説明します。
 
 > [!NOTE]
 > このチュートリアルを完了するには、サーバー コンピューターに対する管理者特権が必要です。 既定では、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] プロセス (aspnet_wp.exe または w3wp.exe) は、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] プロセスとして実行されます。 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] をデバッグするには、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] が実行されているコンピューターに対する管理者特権が必要です。 詳細については、「 [System Requirements](../debugger/aspnet-debugging-system-requirements.md)」をご覧ください。
 
-使用している設定またはエディションによっては、ヘルプの記載と異なるダイアログ ボックスやメニュー コマンドが表示される場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、次を参照してください。[設定にリセット](../ide/environment-settings.md#reset-settings)します。
+使用している設定またはエディションによっては、ヘルプの記載と異なるダイアログ ボックスやメニュー コマンドが表示される場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[リセット設定](../ide/environment-settings.md#reset-settings)」を参照してください。
 
 ## <a name="to-create-the-web-form"></a>Web フォームを作成するには
 
@@ -69,7 +69,7 @@ ms.locfileid: "52389605"
 
 11. ドロップしたボタン コントロールをダブルクリックします。
 
-     これで、コード ページが表示されます。C# の場合は Default.aspx.cs、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] の場合は Default.aspx.vb です。 `Button1_Click` 関数の場所にカーソルがあります。
+     コード ページが表示されます。C# の場合は default.aspx.vb の場合は Default.aspx.cs[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]します。 `Button1_Click` 関数の場所にカーソルがあります。
 
 12. `Button1_Click` 関数に次のコードを追加します。
 

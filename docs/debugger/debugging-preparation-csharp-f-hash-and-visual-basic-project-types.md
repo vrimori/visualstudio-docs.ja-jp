@@ -1,6 +1,6 @@
 ---
-title: 'デバッグの準備: c#、f#、および Visual Basic プロジェクトの種類 |Microsoft ドキュメント'
-ms.custom: ''
+title: デバッグの準備C#、 F#、および VB プロジェクト |Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -22,17 +22,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d590a186f5198feea6a89320897d9d4fa5c4481
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 67833f3b4387c0606c3ce1f0b99cac50f0c0b501
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31479217"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063449"
 ---
-# <a name="debugging-preparation-c-f-and-visual-basic-project-types"></a>デバッグの準備: プロジェクトの種類が C#、F#、および Visual Basic のプロジェクト
+# <a name="debugging-preparation-c-f-and-visual-basic-project-types"></a>デバッグの準備:C#、F#、および Visual Basic のプロジェクト
 ここでは、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロジェクト テンプレートで作成した C#、F#、および [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のプロジェクトをデバッグする方法について説明します。  
   
- 出力として Dll を作成するプロジェクトの種類に分類された注[DLL プロジェクトのデバッグ](../debugger/debugging-dll-projects.md)一般的な機能を共有しているためです。  
+ 出力として Dll を作成するプロジェクトの種類に分類された注[DLL プロジェクトのデバッグ](../debugger/debugging-dll-projects.md)共有している一般的な機能のため。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [プロパティの推奨設定](../debugger/managed-debugging-recommended-property-settings.md)  
@@ -51,8 +51,8 @@ ms.locfileid: "31479217"
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)  
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーでプログラムをデバッグするために必要な準備および設定について説明します。  
   
- [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)  
- マネージ コードで記述されたアプリケーションのデバッグに関する一般的な問題と手法について説明します。  
+ [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)  
+ マネージド コードで記述されたアプリケーションのデバッグに関する一般的な問題と手法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)

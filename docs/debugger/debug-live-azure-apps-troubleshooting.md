@@ -1,5 +1,6 @@
 ---
-title: スナップショットのデバッグのトラブルシューティングと既知の問題 |Microsoft Docs
+title: スナップショット デバッグのトラブルシューティング |Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/07/2017
 ms.technology: vs-ide-debug
 ms.topic: troubleshooting
@@ -11,18 +12,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d5b5eeefe2bbed542ef18689fd7e16073174bd3
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
-ms.translationtype: MT
+ms.openlocfilehash: 82d8a310b86d5dc3c776243293a91f176025f897
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44284108"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059828"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Visual Studio でスナップショットのデバッグのトラブルシューティングと既知の問題
 
 この記事で説明されている手順を実行しても問題が解決しない場合にお問い合わせsnaphelp@microsoft.comします。
 
-## <a name="issue-snappoint-does-not-turn-on"></a>問題: スナップ ポイントを有効にしません
+## <a name="issue-snappoint-does-not-turn-on"></a>問題:スナップ ポイントを有効にしません
 
 警告アイコンを表示する場合![スナップ ポイントの警告アイコン](../debugger/media/snapshot-troubleshooting-snappoint-warning-icon.png "スナップ ポイントの警告アイコン")正規のスナップ ポイントのアイコンの代わりに、スナップ ポイントを使用し、スナップ ポイントがオンになっていません。
 
@@ -32,7 +33,7 @@ ms.locfileid: "44284108"
 
 1. 構築し、app.isua1 のデプロイに使用されたソース コードの同じバージョンであることを確認します。 展開に適切なシンボルを読み込んでいることを確認します。 これを行うには、表示、**モジュール**ウィンドウを選択し、スナップショットのデバッグ中にシンボル ファイルの列が .pdb ファイルをデバッグしているモジュールのアンロードの表示を確認します。 スナップショット デバッガーは、自動的にダウンロードして、デプロイ用のシンボルの使用を試みます。
 
-## <a name="issue-symbols-do-not-load-when-i-open-a-snapshot"></a>問題: スナップショットを開くときにシンボルが読み込まれない
+## <a name="issue-symbols-do-not-load-when-i-open-a-snapshot"></a>問題:スナップショットを開くと、シンボルが読み込まれない
 
 次のウィンドウが表示、シンボルが読み込まれませんでした。
 
@@ -48,14 +49,14 @@ ms.locfileid: "44284108"
 
 - または、組織では、シンボル サーバーを使用してまたは別のパスにシンボルを削除は、シンボルの設定を使用して、展開に適切なシンボルを読み込みます。
 
-## <a name="issue-i-cannot-see-the-attach-snapshot-debugger-option-in-the-cloud-explorer"></a>問題: クラウド エクスプ ローラーで「スナップショット デバッガーのアタッチ」オプションが表示できません。
+## <a name="issue-i-cannot-see-the-attach-snapshot-debugger-option-in-the-cloud-explorer"></a>問題:クラウド エクスプ ローラーで、「スナップショット デバッガーのアタッチ」オプションを表示できません。
 
 次の手順を実行します。
 
 - スナップショット デバッガーのコンポーネントがインストールされていることを確認します。 Visual Studio インストーラーを開き、確認、**スナップショット デバッガー** Azure ワークロードにコンポーネント。
 - アプリがサポートされていることを確認します。 現時点では、ASP.NET だけ (4.6.1+) し、Azure App Services にデプロイされた ASP.NET Core (2.0 以降) のアプリがサポートされます。
 
-## <a name="issue-i-only-see-throttled-snapshots-in-the-diagnostic-tools"></a>問題: しか表示診断ツールでのスナップショットの調整
+## <a name="issue-i-only-see-throttled-snapshots-in-the-diagnostic-tools"></a>問題:診断ツールでのスナップショットの調整のみ表示します。
 
 ![調整されるスナップ ポイント](../debugger/media/snapshot-troubleshooting-throttled-snapshots.png "スナップ ポイントのスロットル")
 
