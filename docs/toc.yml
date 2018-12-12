@@ -4,7 +4,7 @@ items:
 - name: 概要
   items:
   - name: Visual Studio 2017 について
-    href: ide/visual-studio-ide.md
+    href: get-started/visual-studio-ide.md
   - name: コード エディターについて
     href: get-started/tutorial-editor.md
   - name: プロジェクトとソリューションについて
@@ -81,7 +81,7 @@ items:
         href: install/tools-for-managing-visual-studio-instances.md
     - name: サブスクリプションを管理する
       items:
-      - name: Visual Studio サブスクリプション管理者の概要
+      - name: 'Visual Studio サブスクリプション: 管理者の概要'
         href: /visualstudio/subscriptions/admin-responsibilities
     - name: ヘルプ ビューアー の管理者ガイド
       href: ide/help-viewer-administrator-guide.md
@@ -130,9 +130,9 @@ items:
   items:
   - name: Visual Studio のオリエンテーション
     href: ide/quickstart-ide-orientation.md
-  - name: 'C++: コンソール アプリの作成'
+  - name: 'C++: コンソール アプリを作成する'
     href: ide/getting-started-with-cpp-in-visual-studio.md
-  - name: 'Python: Web アプリの作成'
+  - name: Python:Web アプリの作成
     href: ide/quickstart-python.md
   - name: 'Node.js: Web アプリの作成'
     href: ide/quickstart-nodejs.md
@@ -142,9 +142,9 @@ items:
     href: ide/quickstart-aspnet-core.md
   - name: 'C#: UWP アプリの作成'
     href: ide/quickstart-uwp-csharp.md
-  - name: 'C#: コンソール アプリの作成'
+  - name: 'C#: コンソール アプリを作成する'
     href: ide/quickstart-csharp-console.md
-  - name: 'Visual Basic: コンソール アプリの作成'
+  - name: 'Visual Basic: コンソール アプリを作成する'
     href: ide/quickstart-visual-basic-console.md
 - name: チュートリアル
   items:
@@ -160,7 +160,7 @@ items:
     items:
     - name: 'C#: Web アプリの作成'
       href: ide/tutorial-csharp-aspnet-core.md
-    - name: 'C#: コンソール アプリの作成'
+    - name: 'C#: コンソール アプリを作成する'
       href: ide/tutorial-csharp-console.md
   - name: Visual Studio での Visual Basic
     href: ide/tutorial-visual-basic-console.md
@@ -523,65 +523,65 @@ items:
         - name: 'チュートリアル 1: ピクチャ ビューアーの作成 (C#)'
           href: ide/tutorial-1-create-a-picture-viewer.md
           items:
-          - name: '手順 1: Windows フォーム アプリケーション プロジェクトの作成'
+          - name: '手順 1: Windows フォーム アプリケーション プロジェクトを作成する'
             href: ide/step-1-create-a-windows-forms-application-project.md
-          - name: '手順 2: プログラムの実行'
+          - name: '手順 2: プログラムを実行する'
             href: ide/step-2-run-your-program.md
-          - name: '手順 3: フォームのプロパティの設定'
+          - name: '手順 3: フォームのプロパティを設定する'
             href: ide/step-3-set-your-form-properties.md
-          - name: '手順 4: TableLayoutPanel コントロールを使用したフォームのレイアウトの設定'
+          - name: '手順 4: TableLayoutPanel コントロールを使用してフォームのレイアウトを設定する'
             href: ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md
-          - name: '手順 5: フォームへのコントロールの追加'
+          - name: '手順 5: フォームにコントロールを追加する'
             href: ide/step-5-add-controls-to-your-form.md
-          - name: '手順 6: ボタン コントロールの名前の設定'
+          - name: '手順 6: ボタン コントロールの名前を設定する'
             href: ide/step-6-name-your-button-controls.md
-          - name: '手順 7: フォームへのダイアログ コンポーネントの追加'
+          - name: '手順 7: フォームにダイアログ コンポーネントを追加する'
             href: ide/step-7-add-dialog-components-to-your-form.md
-          - name: '手順 8: [Show a Picture] ボタンのイベント ハンドラーのコードの記述'
+          - name: '手順 8: [Show a picture] ボタンのイベント ハンドラーのコードを記述する'
             href: ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md
-          - name: '手順 9: レビュー、コメントの追加、およびコードのテスト'
+          - name: '手順 9: コードのレビュー、コメント追加、およびテスト'
             href: ide/step-9-review-comment-and-test-your-code.md
-          - name: '手順 10: その他のボタンおよびチェック ボックスに対するコードの記述'
+          - name: '手順 10: その他のボタンとチェック ボックスのコードを記述する'
             href: ide/step-10-write-code-for-additional-buttons-and-a-check-box.md
-          - name: '手順 11: プログラムの実行とその他の機能の使用'
+          - name: '手順 11: プログラムを実行し、その他の機能を試す'
             href: ide/step-11-run-your-program-and-try-other-features.md
         - name: 'チュートリアル 2: 制限時間ありの計算クイズの作成 (C#)'
           href: ide/tutorial-2-create-a-timed-math-quiz.md
           items:
-          - name: '手順 1: プロジェクトの作成とフォームへのラベルの追加'
+          - name: '手順 1: プロジェクトを作成し、フォームにラベルを追加する'
             href: ide/step-1-create-a-project-and-add-labels-to-your-form.md
-          - name: '手順 2: ランダムな加算問題の作成'
+          - name: '手順 2: ランダムな加算問題を作成する'
             href: ide/step-2-create-a-random-addition-problem.md
-          - name: '手順 3: カウントダウン タイマーの追加'
+          - name: '手順 3: カウントダウン タイマーを追加する'
             href: ide/step-3-add-a-countdown-timer.md
-          - name: '手順 4: CheckTheAnswer() メソッドの追加'
+          - name: '手順 4: CheckTheAnswer() メソッドを追加する'
             href: ide/step-4-add-the-checktheanswer-parens-method.md
-          - name: '手順 5: NumericUpDown コントロールの Enter イベント ハンドラーの追加'
+          - name: '手順 5: NumericUpDown コントロールの Enter イベント ハンドラーを追加する'
             href: ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md
-          - name: '手順 6: 減算問題の追加'
+          - name: '手順 6: 減算問題を追加する'
             href: ide/step-6-add-a-subtraction-problem.md
-          - name: '手順 7: 乗算問題と除算問題の追加'
+          - name: '手順 7: 乗算問題と除算問題を追加する'
             href: ide/step-7-add-multiplication-and-division-problems.md
-          - name: '手順 8: クイズのカスタマイズ'
+          - name: '手順 8: クイズをカスタマイズする'
             href: ide/step-8-customize-the-quiz.md
         - name: 'チュートリアル 3: 絵合わせゲームの作成 (C#)'
           href: ide/tutorial-3-create-a-matching-game.md
           items:
-          - name: '手順 1: プロジェクトの作成とフォームへのテーブルの追加'
+          - name: '手順 1: プロジェクトを作成し、フォームにテーブルを追加する'
             href: ide/step-1-create-a-project-and-add-a-table-to-your-form.md
-          - name: '手順 2: Random オブジェクトおよびアイコンのリストの追加'
+          - name: '手順 2: Random オブジェクトおよびアイコンのリストを追加する'
             href: ide/step-2-add-a-random-object-and-a-list-of-icons.md
-          - name: '手順 3: 各ラベルへのランダムなアイコンの割り当て'
+          - name: '手順 3: 各ラベルにランダムなアイコンを割り当てる'
             href: ide/step-3-assign-a-random-icon-to-each-label.md
-          - name: '手順 4: 各ラベルへの Click イベント ハンドラーの追加'
+          - name: '手順 4: 各ラベルに Click イベント ハンドラーを追加する'
             href: ide/step-4-add-a-click-event-handler-to-each-label.md
-          - name: '手順 5: ラベルの参照の追加'
+          - name: '手順 5: ラベルの参照を追加する'
             href: ide/step-5-add-label-references.md
-          - name: '手順 6: タイマーの追加'
+          - name: '手順 6: タイマーを追加する'
             href: ide/step-6-add-a-timer.md
-          - name: '手順 7: ペアの表示の維持'
+          - name: '手順 7: ペアの表示を維持する'
             href: ide/step-7-keep-pairs-visible.md
-          - name: '手順 8: プレーヤーが勝利したかどうかを確認するメソッドの追加'
+          - name: '手順 8: プレーヤーが勝利したかどうかを確認するメソッドを追加する'
             href: ide/step-8-add-a-method-to-verify-whether-the-player-won.md
           - name: '手順 9: その他の機能を試す'
             href: ide/step-9-try-other-features.md
@@ -592,7 +592,7 @@ items:
   - name: コンパイルとビルド
     href: ide/compiling-and-building-in-visual-studio.md
     items:
-    - name: 'チュートリアル: アプリケーションをビルドする'
+    - name: 'チュートリアル: アプリケーションを構築する'
       href: ide/walkthrough-building-an-application.md
     - name: プロジェクトとソリューションをビルドおよびクリーンする
       href: ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md
@@ -660,7 +660,7 @@ items:
   - name: IDE をカスタマイズする
     href: ide/personalizing-the-visual-studio-ide.md
     items:
-    - name: 'クイック スタート: テーマとテキストの色をカスタマイズする'
+    - name: 'クイック スタート: テーマとテキストの色のカスタマイズ'
       href: ide/quickstart-personalize-the-ide.md
     - name: 環境設定
       href: ide/environment-settings.md
@@ -1133,9 +1133,9 @@ items:
     href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
   - name: ご意見
     href: ide/talk-to-us.md
-ms.openlocfilehash: 82155ce10d1a70376ed79611b78745e440360097
-ms.sourcegitcommit: 5c049194fa256b876ad303f491af11edd505756c
+ms.openlocfilehash: 26d86461928e5494d4c0d8686cdf279847f29342
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53027446"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160076"
