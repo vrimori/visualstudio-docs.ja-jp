@@ -3,19 +3,19 @@ title: Visual Studio for Mac をインストールする
 description: Visual Studio for Mac とクロスプラット フォーム開発に必要なその他のコンポーネントをインストールする手順について説明します。
 author: conceptdev
 ms.author: crdun
-ms.date: 05/06/2018
+ms.date: 11/03/2018
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
-ms.openlocfilehash: 5ad3154390494c3d949ceba1cc84ded87d33a3fd
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 2a179b5d02a3c50e6942a660e845edd546037d86
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51294995"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896485"
 ---
 # <a name="set-up-and-install-visual-studio-for-mac"></a>Visual Studio for Mac の設定とインストール
 
-## <a name="setup"></a>セットアップ
+## <a name="requirements"></a>必要条件
 
 ネイティブのクロスプラットフォーム アプリの開発を始めるには、Visual Studio for Mac をダウンロードするときに、インストールして準備時にセットアップする必要があるものがいくつかあります。
 
@@ -24,6 +24,9 @@ Visual Studio で iOS を使用するには、以下が必要です。
 * macOS Sierra 10.12 以降が搭載された Mac
 * Xcode 8.3 以降。 通常は最新の安定バージョンをお勧めします。
 * Apple ID。 Apple ID をまだ持っていない場合は、 https://appleid.apple.com で新しい ID を作成できます。 Xcode をインストールしてサインインするには、Apple ID を持っている必要があります。
+
+> [!TIP]
+> Visual Studio 2019 for Mac プレビューがテスト[できるようになりました](install-preview.md)。
 
 ## <a name="install"></a>インストール
 

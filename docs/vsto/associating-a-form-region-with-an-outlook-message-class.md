@@ -13,17 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - FormRegionMessageClassAttribute
 - form regions [Office development in Visual Studio], message classes
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0e28653749b19c9f53bd8e43e245fd8dcb20aa31
-ms.sourcegitcommit: 12d6398c02e818de4fbcb4371bae9e5db6cf9509
+ms.openlocfilehash: b9614a0feab70dd97cfd64861737c8b42dd146b7
+ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050263"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248034"
 ---
 # <a name="associate-a-form-region-with-an-outlook-message-class"></a>フォーム領域を Outlook メッセージ クラスに関連付ける
   Microsoft Office Outlook アイテム フォーム領域を各項目のメッセージ クラスに関連付けることによって、フォーム領域を表示するを指定することができます。 たとえば、メール アイテムの下部にフォーム領域を追加する場合は、フォーム領域を関連付けることができます、 `IPM.Note` message クラス。  
@@ -48,7 +48,7 @@ ms.locfileid: "50050263"
  カスタム メッセージ クラスの名前を指定することもできます。 カスタム メッセージ クラスは、Outlook で定義したカスタムのフォームを識別します。  
   
 > [!NOTE]  
->  置換およびすべて置換フォーム領域では、新しいカスタム メッセージ クラス名を指定できます。 既存のカスタム フォームのメッセージ クラス名を使用する必要はありません。 カスタム メッセージ クラスの名前は一意である必要があります。 名前が一意であることを確認する方法の 1 つは、次のような名前付け規則を使用する: \< *StandardMessageClassName*>.\<*会社*>.\<*MessageClassName*> (例: `IPM.Note.Contoso.MyMessageClass`)。  
+>  置換およびすべて置換フォーム領域では、新しいカスタム メッセージ クラス名を指定できます。 既存のカスタム フォームのメッセージ クラス名を使用する必要はありません。 カスタム メッセージ クラスの名前は一意である必要があります。 名前が一意であることを確認する方法の 1 つは、次のような名前付け規則を使用します。\<*StandardMessageClassName*>.\<*会社*>.\<*MessageClassName*> (例: `IPM.Note.Contoso.MyMessageClass`)。  
   
 ## <a name="associate-a-form-region-with-an-outlook-message-class"></a>フォーム領域を Outlook メッセージ クラスに関連付ける  
  関連付けるメッセージ クラスのフォーム領域の 2 つの方法はあります。  
@@ -60,19 +60,19 @@ ms.locfileid: "50050263"
 ### <a name="use-the-new-outlook-form-region-wizard"></a>新しい Outlook フォーム領域ウィザードの使用  
  最後のページで、**新しい Outlook フォーム領域**ウィザードの標準のメッセージ クラスを選択し、フォーム領域に関連付けるカスタム メッセージ クラスの名前を入力することができます。  
   
- 標準のメッセージ クラスは全体のフォームまたはフォームの既定のページを置換するフォーム領域が設計されている場合に使用できません。 フォームに新しいページを追加するか、フォームの下部に追加されるフォームに対してのみ、標準のメッセージ クラス名を指定できます。 詳細については、次を参照してください。[方法: フォーム領域を Outlook アドイン プロジェクトに追加](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)します。  
+ 標準のメッセージ クラスは全体のフォームまたはフォームの既定のページを置換するフォーム領域が設計されている場合に使用できません。 フォームに新しいページを追加するか、フォームの下部に追加されるフォームに対してのみ、標準のメッセージ クラス名を指定できます。 詳細については、「[方法 :フォーム領域を Outlook アドイン プロジェクトに追加](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)します。  
   
  1 つまたは複数のカスタム メッセージ クラスを含めるでその名前を入力、**カスタム メッセージ クラスは、このフォーム領域を表示するか。** ボックス。  
   
  入力した名前は、次のガイドラインに準拠する必要があります。  
   
-- メッセージの完全修飾クラス名を使用して (例:"IPM します。Note.Contoso")。  
+- メッセージの完全修飾クラス名を使用して (例。"IPM します。Note.Contoso")。  
   
 - セミコロンを使用して、複数のメッセージ クラス名を区切ります。  
   
 - "IPM など、標準の Outlook メッセージ クラスが含まれていません。注"または"IPM します。Contact"です。 "IPM などのカスタム メッセージ クラスのみを含めます。Note.Contoso"。  
   
-- 単独では、基本メッセージ クラスを指定しない (例:"IPM")。  
+- 単独では、基本メッセージ クラスを指定しない (例。"IPM")。  
   
 - 各メッセージ クラス名の 256 文字をを超えてはなりません。  
   
@@ -93,13 +93,13 @@ ms.locfileid: "50050263"
   
  属性は、次のガイドラインに準拠する必要があります。  
   
-- カスタム メッセージ クラスに、メッセージの完全修飾クラス名を使用します (例:"IPM します。Note.Contoso")。  
+- カスタム メッセージ クラスに、メッセージの完全修飾クラス名を使用します (例。"IPM します。Note.Contoso")。  
   
-- 単独では、基本メッセージ クラスを指定しない (例:"IPM")。  
+- 単独では、基本メッセージ クラスを指定しない (例。"IPM")。  
   
 - 各メッセージ クラス名の 256 文字をを超えてはなりません。  
   
-- フォーム領域全体のフォームまたはフォームの既定のページを置き換える場合は、標準のメッセージ クラスの名前を含めないでください。 フォームに新しいページを追加するか、フォームの下部に追加されるフォームに対してのみ、標準のメッセージ クラス名を指定できます。 詳細については、次を参照してください。[方法: フォーム領域を Outlook アドイン プロジェクトに追加](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)します。  
+- フォーム領域全体のフォームまたはフォームの既定のページを置き換える場合は、標準のメッセージ クラスの名前を含めないでください。 フォームに新しいページを追加するか、フォームの下部に追加されるフォームに対してのみ、標準のメッセージ クラス名を指定できます。 詳細については、「[方法 :フォーム領域を Outlook アドイン プロジェクトに追加](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)します。  
   
   Visual Studio は、プロジェクトをビルドするときに、メッセージのクラス名の形式を検証します。  
   

@@ -1,6 +1,6 @@
 ---
-title: Visual Studio のデバッガーでプロセスを実行中にアタッチ |Microsoft Docs
-ms.custom: H1Hack27Feb2017
+title: デバッガーで実行中のプロセスのアタッチ |Microsoft Docs
+ms.custom: seodec18
 ms.date: 09/27/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fd1ceb341ac613eef3e26f3599ee137161545a85
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 07ed9670795e11b0d98b3703445450b468a93aa8
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389190"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068462"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Visual Studio デバッガーで実行中のプロセスへのアタッチ
 ローカルまたはリモート コンピューターで実行中のプロセスに、Visual Studio デバッガーをアタッチできます。 プロセスが実行されると、選択**デバッグ** > **プロセスにアタッチ**またはキーを押します**Ctrl**+**Alt** +**P**使用して、Visual Studio で、**プロセスにアタッチ**プロセスにデバッガーをアタッチするためのダイアログ。

@@ -34,7 +34,7 @@ ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: f1e7a1ea69da1cafa38ae2a7bfa4551d3d40a8d4
 ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51745119"
@@ -167,7 +167,7 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
   
 ###  <a name="BKMK_Taking_memory_snapshots"></a> メモリのスナップショットの取得  
   
-1. [CMemoryState](http://msdn.microsoft.com/en-us/8fade6e9-c6fb-4b2a-8565-184a912d26d2) オブジェクトを作成し、 [CMemoryState::Checkpoint](http://msdn.microsoft.com/library/b2d80fea-3d21-457e-816d-b035909bf21a) メンバー関数を呼び出します。 これにより、メモリの最初のスナップショットが作成されます。  
+1.  [CMemoryState](http://msdn.microsoft.com/en-us/8fade6e9-c6fb-4b2a-8565-184a912d26d2) オブジェクトを作成し、 [CMemoryState::Checkpoint](http://msdn.microsoft.com/library/b2d80fea-3d21-457e-816d-b035909bf21a) メンバー関数を呼び出します。 これにより、メモリの最初のスナップショットが作成されます。  
   
 2. プログラムでメモリの割り当てと解放が行われた後、別の `CMemoryState` オブジェクトを作成し、このオブジェクトの `Checkpoint` を呼び出します。 これにより、メモリ状態の 2 番目のスナップショットが取得されます。  
   

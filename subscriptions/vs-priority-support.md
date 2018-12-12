@@ -1,26 +1,24 @@
 ---
-title: Visual Studio サブスクリプションの優先サポート特典 | Microsoft Docs
+title: Visual Studio Subscription の開発者コミュニティ特典 | Microsoft Docs
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
-ms.date: 05/07/2018
+ms.date: 12/04/2018
 ms.topic: Get-Started-Article
-description: Visual Studio サブスクリプションに含まれる優先サポート特典について説明します。
+description: Visual Studio サブスクリプションに含まれる開発者コミュニティ特典について説明します。
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: e58b316d0fc26ec4c01e50c23e3cdc7b0632b72c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 7eb168f8163d75e01ac688439780fd7d65df3506
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49866741"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896654"
 ---
-# <a name="priority-support-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの優先サポート
+# <a name="developer-community-support-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの開発者コミュニティのサポート
 
-優先サポート特典は、さまざまなサポート コミュニティ フォーラムへのアクセスを提供します。ここで既存の投稿を検索したり、新しく質問したりすることができます。  質問に対して 2 日以内にコミュニティから回答がない場合、マイクロソフトのサポート チームが回答します。
-
-選択した Visual Studio サブスクリプションのサブスクライバーは、さまざまなトピックをカバーする多数のフォーラムを通じて、優先サポートを受けることができます。  フォーラムに直接移動するには、以下のリンクのいずれかをクリックします。  
+開発者コミュニティ特典は、さまざまなサポート コミュニティ フォーラムへのアクセスを提供します。ここで既存の投稿を検索したり、新しく質問したりすることができます。 フォーラムに直接移動するには、以下のリンクのいずれかをクリックします。  
 
 ## <a name="included-forums"></a>含まれるフォーラム
 

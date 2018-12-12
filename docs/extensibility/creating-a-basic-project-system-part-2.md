@@ -288,13 +288,13 @@ ZipProjects:
   
 1.  *SimpleProjectNode.cs*ファイルで、削除、`AddFileFromTemplate`メソッド。  
   
-2.  *\\Templates\Projects\ConsoleApp\SimpleProject.myproj*を探し、ファイル、 \<RootNamespace > プロパティ $safeprojectname$ にその値を変更します。  
+2.   *\\Templates\Projects\ConsoleApp\SimpleProject.myproj*を探し、ファイル、 \<RootNamespace > プロパティ $safeprojectname$ にその値を変更します。  
   
     ```  
     <RootNamespace>$safeprojectname$</RootNamespace>  
     ```  
   
-3.  *\\Templates\Projects\SimpleProject\Program.cs*ファイルで、ファイルの内容を次のコードに置き換えます。  
+3.   *\\Templates\Projects\SimpleProject\Program.cs*ファイルで、ファイルの内容を次のコードに置き換えます。  
   
     ```  
     using System;  

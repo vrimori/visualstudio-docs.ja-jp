@@ -10,16 +10,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: b12588b4e2c22a638193b7f1b0bc48e5f7dab6b7
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 36176ce14b51af1cf692b6b04d862882a48d7e4e
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39379807"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895198"
 ---
 # <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>方法: Visual Studio でテストの設定を使用してロード テスト用の ASP.NET プロファイラーを構成する
 
 ASP.NET プロファイラー診断データ アダプターを使用して、ASP.NET プロファイラー情報を収集できます。 この診断データ アダプターは、ASP.NET アプリケーションのパフォーマンス データを収集します。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
 > この診断データ アダプターは、Microsoft Test Manager を使用して実行されるテストには使用できません。 ASP.NET プロファイラー診断アダプターは、Visual Studio Enterprise を必要とする Web サイトのみを利用したロード テストで使用できます。
@@ -31,13 +33,9 @@ ASP.NET プロファイラー診断データ アダプターを使用すると�
 
 詳細については、「[方法: 配布されたロード テストのテスト設定を作成する](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)」を参照してください。
 
-次の手順では、ASP.NET プロファイラーの診断データ アダプターを構成する方法を説明します。
-
-## <a name="to-configure-the-aspnet-profiler-for-your-test-settings"></a>テストの設定に対して ASP.NET プロファイラーを構成するには
+## <a name="configure-the-aspnet-profiler-for-your-test-settings"></a>テストの設定に対して ASP.NET プロファイラーを構成する
 
 この手順を実行する前に、Visual Studio からテストの設定を開き、**[データと診断]** ページを選択する必要があります。
-
-### <a name="to-configure-the-aspnet-profiler-for-your-test-settings"></a>テストの設定に対して ASP.NET プロファイラーを構成するには
 
 1.  ASP.NET プロファイラーのデータの収集に使用するロールを選択します。
 

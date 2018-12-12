@@ -15,17 +15,17 @@ helpviewer_keywords:
 - add-ins [Office development in Visual Studio], calling code from other solutions
 - interoperability [Office development in Visual Studio]
 - calling code from VBA
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7849f0df8f7e2f29c34b129dbf8e684424711b44
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9290fcdd705f6f38b4b7e91e46d5b635f1e309ff
+ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49904649"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248099"
 ---
 # <a name="call-code-in-vsto-add-ins-from-other-office-solutions"></a>他の Office ソリューションから VSTO アドイン内のコードを呼び出す
   VSTO アドイン内のオブジェクトは、他の Microsoft Office ソリューションを含む、他のソリューションに公開できます。 このことは、VSTO アドインが他のソリューションで使用可能なサービスを含む場合に便利です。 たとえば、この場合は、Web サービスから受け取る財務データについて計算を実行する Microsoft Office Excel の VSTO アドインである場合は、その他のソリューションは実行時に Excel VSTO アドインを呼び出すことによってこれらの計算を実行できます。  
@@ -77,7 +77,7 @@ ms.locfileid: "49904649"
   
    -   インターフェイスを定義するプロジェクトで、 **[COM の相互運用機能に登録]** プロパティを設定します。 このプロパティは、事前バインディングを使用して VSTO アドインを呼び出せるにクライアントを有効にする場合にのみ必要です。  
   
-   次のコード例は、他のソリューションによって呼び出し可能な `AddInUtilities` メソッドを持つ、 `ImportData` クラスを示します。 大きなチュートリアルのコンテキストでこのコードを表示するには、次を参照してください。[チュートリアル: VBA から VSTO アドイン内のコードを呼び出す](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)します。  
+   次のコード例は、他のソリューションによって呼び出し可能な `AddInUtilities` メソッドを持つ、 `ImportData` クラスを示します。 大きなチュートリアルのコンテキストでこのコードを表示するには、次を参照してください。[チュートリアル。VSTO アドイン内のコードを VBA から呼び出す](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)します。  
   
    [!code-csharp[Trin_AddInInteropWalkthrough #3](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs#3)]
    [!code-vb[Trin_AddInInteropWalkthrough#3](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb#3)]  
@@ -95,7 +95,7 @@ ms.locfileid: "49904649"
  Office ソリューションにおけるスレッドの使用に関する詳細については、次を参照してください。[のスレッドの Office でサポート](../vsto/threading-support-in-office.md)します。  
   
 ### <a name="override-the-requestcomaddinautomationservice-method"></a>RequestComAddInAutomationService メソッドをオーバーライドします。  
- 次のコード例は、VSTO アドイン内の <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> クラスで `ThisAddIn` をオーバーライドする方法を示します。 この例ではという名前のクラスが定義されている`AddInUtilities`他のソリューションに公開します。 大きなチュートリアルのコンテキストでこのコードを表示するには、次を参照してください。[チュートリアル: VBA から VSTO アドイン内のコードを呼び出す](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)します。  
+ 次のコード例は、VSTO アドイン内の <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> クラスで `ThisAddIn` をオーバーライドする方法を示します。 この例ではという名前のクラスが定義されている`AddInUtilities`他のソリューションに公開します。 大きなチュートリアルのコンテキストでこのコードを表示するには、次を参照してください。[チュートリアル。VSTO アドイン内のコードを VBA から呼び出す](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)します。  
   
  [!code-csharp[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs#1)]
  [!code-vb[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb#1)]  
@@ -114,7 +114,7 @@ ms.locfileid: "49904649"
    COMAddIn.Object プロパティの戻り値を使用する方法は VBA クライアントと非 VBA クライアントで異なります。 アウト プロセス クライアントの場合、可能性のある競合状態を避けるために追加のコードが必要です。  
   
 ### <a name="access-objects-from-vba-solutions"></a>VBA ソリューションからオブジェクトにアクセス  
- 次のコード例では、VSTO アドインによって公開されるメソッドを呼び出す VBA を使用する方法を示します。 この VBA マクロは、という名前のメソッドを呼び出す`ImportData`という名前は、VSTO アドインで定義されている**ExcelImportData**します。 大きなチュートリアルのコンテキストでこのコードを表示するには、次を参照してください。[チュートリアル: VBA から VSTO アドイン内のコードを呼び出す](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)します。  
+ 次のコード例では、VSTO アドインによって公開されるメソッドを呼び出す VBA を使用する方法を示します。 この VBA マクロは、という名前のメソッドを呼び出す`ImportData`という名前は、VSTO アドインで定義されている**ExcelImportData**します。 大きなチュートリアルのコンテキストでこのコードを表示するには、次を参照してください。[チュートリアル。VSTO アドイン内のコードを VBA から呼び出す](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)します。  
   
 ```vb
 Sub CallVSTOMethod()  
@@ -147,9 +147,9 @@ utilities.ImportData();
   
 ## <a name="see-also"></a>関連項目  
  [VSTO アドインをプログラミングします。](../vsto/programming-vsto-add-ins.md)   
- [チュートリアル: は、VSTO アドインのコードを VBA から呼び出す](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)   
+ [チュートリアル: VBA から VSTO アドイン内のコードを呼び出す](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)   
  [Office ソリューションを開発します。](../vsto/developing-office-solutions.md)   
- [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
+ [方法: Visual Studio での Office プロジェクトを作成します。](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)   
  [機能拡張インターフェイスによる UI 機能をカスタマイズします。](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md)  
   

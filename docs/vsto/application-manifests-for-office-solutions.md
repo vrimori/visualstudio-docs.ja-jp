@@ -10,17 +10,17 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - application manifests [Office development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: df388fb346c43f173ec1f96e3869088d7ce5b9dc
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 9665be31a59de33713f981889bc8cb8a8cb55eea
+ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744939"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248177"
 ---
 # <a name="application-manifests-for-office-solutions"></a>Office ソリューション用アプリケーション マニフェスト
   アプリケーション マニフェストは、Microsoft Office ソリューションに読み込まれるアセンブリについて記述した XML ファイルです。 Visual Studio での Office 開発ツールを使用して、[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]アプリケーション マニフェスト スキーマで定義されている、 [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)参照。  
@@ -93,7 +93,7 @@ ms.locfileid: "50744939"
 |[&#60;vstoRuntime&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/vstoruntime-element-office-development-in-visual-studio.md)|必須。 Office ソリューションでサポートされる、Visual Studio Tools for Office ランタイムの特定のバージョンを記述します。|**release**<br /><br /> **version**<br /><br /> **supportUrl**|  
   
 ## <a name="remarks"></a>Remarks  
- Office ソリューションのアプリケーション マニフェストと配置マニフェストは、手動で編集できます。 その後、アプリケーションを再署名する必要があり、配置が、マニフェストの生成および編集ツールを使用してマニフェスト (*mage.exe*と*mageui.exe*)。 詳細については、次を参照してください。[方法: アプリケーション マニフェストと配置マニフェストに再署名](/visualstudio/deployment/how-to-re-sign-application-and-deployment-manifests)します。  
+ Office ソリューションのアプリケーション マニフェストと配置マニフェストは、手動で編集できます。 その後、アプリケーションを再署名する必要があり、配置が、マニフェストの生成および編集ツールを使用してマニフェスト (*mage.exe*と*mageui.exe*)。 詳細については、「[方法 :アプリケーション マニフェストと配置マニフェストに再署名](/visualstudio/deployment/how-to-re-sign-application-and-deployment-manifests)します。  
   
 ## <a name="file-location"></a>ファイルの場所  
  アプリケーション マニフェストは単一のバージョンのソリューションに特有のものです。 このため、アプリケーション マニフェストは、配置マニフェストとは別の場所に格納する必要があります。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] は、バージョン固有のファイルを、発行フォルダーの *Application Files* サブディレクトリ内にある、関連するバージョンにちなんだ名前のサブディレクトリに格納します。  

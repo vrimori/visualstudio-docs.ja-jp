@@ -29,7 +29,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 1bb41fbf0fc4a41a5cf45d68f6453f2ef6ebdd6c
 ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
-ms.translationtype: MT
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/29/2018
 ms.locfileid: "50219940"
@@ -158,7 +158,7 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
 
 ###  <a name="BKMK_Taking_memory_snapshots"></a> メモリのスナップショットの取得  
 
-1. [CMemoryState](/previous-versions/visualstudio/visual-studio-2010/2ads32e2(v=vs.100)) オブジェクトを作成し、 [CMemoryState::Checkpoint](/cpp/mfc/reference/cmemorystate-structure#checkpoint) メンバー関数を呼び出します。 これにより、メモリの最初のスナップショットが作成されます。  
+1.  [CMemoryState](/previous-versions/visualstudio/visual-studio-2010/2ads32e2(v=vs.100)) オブジェクトを作成し、 [CMemoryState::Checkpoint](/cpp/mfc/reference/cmemorystate-structure#checkpoint) メンバー関数を呼び出します。 これにより、メモリの最初のスナップショットが作成されます。  
 
 2. プログラムでメモリの割り当てと解放が行われた後、別の `CMemoryState` オブジェクトを作成し、このオブジェクトの `Checkpoint` を呼び出します。 これにより、メモリ状態の 2 番目のスナップショットが取得されます。  
 

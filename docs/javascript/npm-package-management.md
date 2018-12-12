@@ -1,7 +1,7 @@
 ---
-title: Visual Studio で npm パッケージを管理する
+title: npm パッケージを管理する
 description: Visual Studio では、Node.js パッケージ マネージャー (npm) を利用してパッケージを管理できます。
-ms.custom: ''
+ms.custom: seodec18
 ms.date: 06/06/2018
 ms.technology: vs-nodejs
 ms.topic: conceptual
@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 571cc9048b9f932c0ff344637c144d0a6d649887
-ms.sourcegitcommit: b544e2157ac20866baf158eef9cfed3e3f1d68b9
+ms.openlocfilehash: 297bad186c7f3412e56a5a59f65b82ab9cd35a03
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39388398"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049654"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Visual Studio で npm パッケージを管理する
 

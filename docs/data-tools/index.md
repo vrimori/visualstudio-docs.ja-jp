@@ -1,21 +1,21 @@
 ---
+title: データ ソリューションを開発する
+description: .NET Framework ツール、SQL Server Data Tools、Azure Data Lake、Azure HDInsight、Azure Stream Analytics などの、Visual Studio でデータ ソリューションを開発するためのさまざまなツールについて説明します。
 layout: LandingPage
 ms.date: 01/01/2018
 author: gewarren
 ms.author: gewarren
-title: Visual Studio でデータ ツールを使用してデータ ソリューションを開発する
-description: Visual Studio のデータ ソリューション用ツールについて説明します。
 ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.topic: landing-page
 ms.workload:
 - data-storage
-ms.openlocfilehash: bb2a5c33f0cdfe75f6e2bf6713ab92e36b588986
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 866737bc91615663df59856b8d06b457ad47c15f
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49948409"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159686"
 ---
 # <a name="use-data-tools-in-visual-studio-to-develop-data-solutions"></a>Visual Studio でデータ ツールを使用してデータ ソリューションを開発する
 
@@ -116,7 +116,6 @@ Visual Studio でデータ ツールを使用して、SQL Server、Azure Data La
 
 ---
 
-<hr>
 <h2>参照</h2>
 
 <ul class="panelContent cardsW">
@@ -126,7 +125,7 @@ Visual Studio でデータ ツールを使用して、SQL Server、Azure Data La
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <p><Accessing data in Visual Studio></p>
+                        <p><Access data in Visual Studio></p>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でテスト設定を使用してテスト中に画面と音声の記録を含める
+title: テスト中の画面と音声を記録する
 ms.date: 10/03/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: c213d7f7119b2c7310212f61c140177ef7c84c76
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: 1470ab88cb21a7a80fa46f57f944ec5df21d544f
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44321074"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894414"
 ---
 # <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>方法: テスト設定を使用してテスト中に画面と音声の記録を含める
 
@@ -25,6 +25,8 @@ Visual Studio の構成エディターから、テストを実行しているユ
 > 画面と音声の記録では、複数のモニター構成はサポートされていません。
 
 画面と音声のレコーダーは、手動テストまたは自動テストで使用できます。 たとえば、コード化された UI テストをリモートで実行する場合、コード化された UI テストを実行するときにそのテストを確認するためにデスクトップを記録できます。 画面と音声の記録をリモートでキャプチャする方法については、「[方法: Test Agent を設定して、デスクトップと対話するテストを実行する](../test/how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop.md)」を参照してください。
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="to-configure-screen-and-voice-recording-for-your-test-settings"></a>テストの設定に対して画面と音声の記録を構成するには
 

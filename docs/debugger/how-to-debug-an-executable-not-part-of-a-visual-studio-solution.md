@@ -1,6 +1,7 @@
 ---
-title: '方法: Visual Studio ソリューションに含まれていないアプリのデバッグ |Microsoft Docs'
-ms.custom: ''
+title: Visual Studio ソリューションに含まれていないアプリをデバッグします。
+titleSuffix: ''
+ms.custom: seodec18
 ms.date: 11/19/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -20,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 993af0d15245ef6391f2c9c4eb0e755e24920fe3
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 8c408ca42f82c0419c6570068e2a83e97f2371e9
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52388583"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066614"
 ---
 # <a name="debug-an-app-that-isnt-part-of-a-visual-studio-solution-c-c-visual-basic-f"></a>Visual Studio ソリューションに含まれていないアプリのデバッグ (C++、 C#、Visual Basic、 F#)
 

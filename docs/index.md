@@ -2,14 +2,16 @@
 layout: HubPage
 hide_bc: true
 title: Visual Studio のドキュメント | Microsoft Docs
+titleSuffix: ''
 description: Visual Studio 2017 を使って、アプリケーション、サービス、ツールを、任意の言語で、特定のプラットフォームやデバイス向けに開発する方法について説明します。
 ms.topic: hub-page
-ms.openlocfilehash: 961d9f46d78b23fa976b3a8cdc774d219445c8b1
-ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
+ms.custom: seodec18
+ms.openlocfilehash: b509f5d34596f3db46d20157fd3ce1fd2cec3d7c
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51000284"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160102"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -89,7 +91,7 @@ ms.locfileid: "51000284"
                                             <div class="cardText">
                                                 <h3>Visual Studio の使用方法を学ぶ</h3>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="ide/visual-studio-ide.md"><img height="60" width="60" src="https://docs.microsoft.com/media/common/i_overview.svg" alt="Guided tour icon" />ガイド ツアーを開始する</a></li>
+                                                    <li><a class="barLink" href="get-started/visual-studio-ide.md"><img height="60" width="60" src="https://docs.microsoft.com/media/common/i_overview.svg" alt="Guided tour icon" />ガイド ツアーを開始する</a></li>
                                                     <li><a class="barLink" href="ide/index-writing-code.md"><img height="60" width="60" src="https://docs.microsoft.com/media/common/i_code-edit.svg" alt="Pencil icon" />コードを作成して編集する</a></li>
                                                     <li><a class="barLink" href="ide/compiling-and-building-in-visual-studio.md"><img height="60" width="60" src="https://docs.microsoft.com/media/common/i_build.svg" alt="Crane icon" />コードをビルドする</a></li>
                                                     <li><a class="barLink" href="debugger/getting-started-with-the-debugger.md"><img height="60" width="60" src="https://docs.microsoft.com/media/common/i_debug.svg" alt="Debug icon" />コードをデバッグする</a></li>

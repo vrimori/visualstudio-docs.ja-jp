@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で Web パフォーマンスとロード テスト プロジェクトを作成する
+title: Web パフォーマンスとロード テストのプロジェクトの作成
 ms.date: 03/14/2018
 ms.topic: quickstart
 helpviewer_keywords:
@@ -9,19 +9,22 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 515c5d4c1bd09d65ae23d3d1af2f3183607c6b53
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: 30e67768b502228ba8cba5acd813ec829624a822
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44320957"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057575"
 ---
 # <a name="quickstart-create-a-load-test-project"></a>クイック スタート: ロード テスト プロジェクトを作成する
 
 この 10 分間のクイック スタートでは、Visual Studio で Web パフォーマンスとロード テスト プロジェクトを作成し、実行する方法を学習します。 ロード テストでは、Web のパフォーマンス テスト (単体テスト) を実行し、たくさんのユーザーが 1 台のサーバーに同時にアクセスする状況をシミュレーションします。
 
-> [!IMPORTANT]
-> Web パフォーマンスとロード テスト プロジェクトは、Visual Studio 2017 Enterprise Edition でのみ利用できます。
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
+## <a name="software-requirements"></a>ソフトウェア要件
+
+Web パフォーマンスとロード テスト プロジェクトは、Visual Studio Enterprise Edition でのみ利用できます。
 
 ## <a name="install-the-load-testing-component"></a>ロード テスト コンポーネントをインストールする
 

@@ -1,5 +1,6 @@
 ---
 title: Visual Studio 2017 の高度な機能
+titleSuffix: ''
 ms.date: 06/01/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -9,16 +10,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 778d52d738af318dd21fa58a115dd053b44fa3a8
-ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
+ms.openlocfilehash: bd351ef1bf6b1e5eee16451e554d6cae94c60127
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863651"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159400"
 ---
 # <a name="features-of-visual-studio-2017"></a>Visual Studio 2017 の機能
 
-Visual Studio の基礎については、「[Visual Studio IDE の概要](../ide/visual-studio-ide.md)」の記事で説明しています。 この記事では、経験を積んだ開発者または Visual Studio を使い慣れている開発者に適した機能について説明します。
+Visual Studio の基礎については、「[Visual Studio IDE の概要](../get-started/visual-studio-ide.md)」の記事で説明しています。 この記事では、経験を積んだ開発者または Visual Studio を使い慣れている開発者に適した機能について説明します。
 
 ## <a name="modular-installation"></a>モジュール式インストール
 
@@ -126,5 +127,5 @@ Visual Studio の拡張について詳しくは、「[Visual Studio IDE を機�
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Studio IDE の概要](../ide/visual-studio-ide.md)
+- [Visual Studio IDE の概要](../get-started/visual-studio-ide.md)
 - [Visual Studio 2017 の新機能](../ide/whats-new-in-visual-studio.md)

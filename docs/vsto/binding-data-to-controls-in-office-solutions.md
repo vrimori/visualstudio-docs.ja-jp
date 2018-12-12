@@ -16,17 +16,17 @@ helpviewer_keywords:
 - data binding, controls
 - Office applications [Office development in Visual Studio], data binding
 - controls, data binding
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f329680d4e469d5009c8659e7a2047c87f906105
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 5b5d7a52e4f8b9e6c9741d3b62bc18b2d4cb66f7
+ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744871"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248021"
 ---
 # <a name="bind-data-to-controls-in-office-solutions"></a>Office ソリューションでのコントロールにデータをバインドします。
   Microsoft Office Word 文書または Microsoft Office Excel ワークシート上の Windows フォーム コントロールや *ホスト コントロール* を、データ ソースにバインドできます。この場合、コントロールには自動的にデータが表示されます。 アプリケーション レベルのプロジェクトとドキュメント レベルのプロジェクトの両方で、コントロールにデータをバインドできます。  
@@ -37,7 +37,7 @@ ms.locfileid: "50744871"
   
  Windows フォーム コントロールとホスト コントロールはいずれも Windows フォームのデータ バインディング モデルを使用します。このモデルでは、データセットやデータ テーブルなどのデータ ソースに対して *単純データ バインディング* と *複合データ バインディング* の両方がサポートされます。 Windows フォームでのデータ バインディング モデルについては、次を参照してください。[データ連結と Windows フォーム](/dotnet/framework/winforms/data-binding-and-windows-forms)します。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。 [Excel でデータベースの操作を使用するデータを操作する方法でしょうか。](http://go.microsoft.com/fwlink/?LinkID=130287)します。  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:。Excel でデータベースのデータを使用しますか。](http://go.microsoft.com/fwlink/?LinkID=130287).  
   
 ## <a name="simple-data-binding"></a>単純データ バインディング  
  単純データ バインディングは、コントロール プロパティが、データ テーブル内の値など、単一のデータ要素にバインドされる場合に存在します。 たとえば、 <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールは、データセット内のフィールドにバインドできる <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> プロパティを持ちます。 データセット内のフィールドが変更されると、名前付き範囲内の値も変更されます。 <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールを除くすべてのホスト コントロールが、単純データ バインディングをサポートしています。 <xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールはコレクションであるため、データ バインディングをサポートしません。  
@@ -49,7 +49,7 @@ ms.locfileid: "50744871"
  [!code-vb[Trin_BindableComponent#4](../vsto/codesnippet/VisualBasic/Trin_BindableComponent/Sheet1.vb#4)]
  [!code-csharp[Trin_BindableComponent#4](../vsto/codesnippet/CSharp/Trin_BindableComponent/Sheet1.cs#4)]  
   
- 単純データ バインディングを示すチュートリアルでは、次を参照してください[チュートリアル: ドキュメント レベルのプロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)のドキュメント レベルのプロジェクトと[チュートリアル: VSTO アドイン プロジェクトでの単純データ バインディング。](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md) VSTO アドイン プロジェクト。  
+ 単純データ バインディングを示すチュートリアルでは、次を参照してください。[チュートリアル。ドキュメント レベルのプロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)のドキュメント レベルのプロジェクトと[チュートリアル。VSTO アドイン プロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)VSTO アドイン プロジェクト。  
   
 ## <a name="complex-data-binding"></a>複合データ バインディング  
  複合データ バインディングは、コントロール プロパティが、データ テーブル内の複数の列など、複数のデータ要素にバインドされる場合に存在します。 Excel の <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールは、複合データ バインディングをサポートする唯一のホスト コントロールです。 ただし、複合データ バインディングをサポートする Windows フォーム コントロールが数多くあります (<xref:System.Windows.Forms.DataGridView> コントロールなど)。  
@@ -61,7 +61,7 @@ ms.locfileid: "50744871"
  [!code-csharp[Trin_ExcelListObject#18](../vsto/codesnippet/CSharp/Trin_ExcelListObject/Trin_ExcelListObject.cs#18)]
  [!code-vb[Trin_ExcelListObject#18](../vsto/codesnippet/VisualBasic/Trin_ExcelListObject/Sheet1.vb#18)]  
   
- 複合データ バインディングを示すチュートリアルでは、次を参照してください[チュートリアル: ドキュメント レベルのプロジェクトで複合データ バインディング](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)のドキュメント レベルのプロジェクトと[チュートリアル: VSTO アドイン プロジェクトで複雑なデータ バインディング。](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md) VSTO アドイン プロジェクト。  
+ 複合データ バインディングを示すチュートリアルでは、次を参照してください。[チュートリアル。ドキュメント レベルのプロジェクトで複合データ バインディング](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)のドキュメント レベルのプロジェクトと[チュートリアル。VSTO アドイン プロジェクトで複雑なデータ バインディング](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)VSTO アドイン プロジェクト。  
   
 ## <a name="display-data-in-documents-and-workbooks"></a>文書やブックにデータを表示します。  
  ドキュメント レベルのプロジェクトでは、Windows フォームで使用する場合と同じように **[データ ソース]** ウィンドウを使用して、文書やブックにデータ バインド コントロールを簡単に追加できます。 使用しての詳細については、**データソース**ウィンドウを参照してください[Visual Studio でのデータにコントロールを Windows フォームのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)と[新しいデータ ソースを追加](../data-tools/add-new-data-sources.md)。  
@@ -82,9 +82,9 @@ ms.locfileid: "50744871"
   
 -   [方法: オブジェクトからのデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-objects.md)  
   
--   [方法: データ サービスからドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-services.md)  
+-   [方法: サービスからデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-services.md)  
   
--   [方法: ワークシート内のデータベース レコードをスクロール](../vsto/how-to-scroll-through-database-records-in-a-worksheet.md)  
+-   [方法: ワークシート内のデータベース レコードをスクロールします。](../vsto/how-to-scroll-through-database-records-in-a-worksheet.md)  
   
 ### <a name="bind-data-in-vsto-add-in-projects"></a>VSTO アドイン プロジェクトでのデータをバインドします。  
  VSTO アドイン プロジェクトでは、実行時にのみコントロールを追加できます。 次のトピックでは、実行時にデータ バインディングの例を示しています。  
@@ -100,12 +100,12 @@ ms.locfileid: "50744871"
   
  <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールを使用して複合データ バインディングを実行するときは、メモリ内データ ソースを明示的に更新する必要はありません。 この場合には、コードを追加しなくても、メモリ内データ ソースに変更が自動的に送信されます。  
   
- 詳細については、次を参照してください。[方法: ホスト コントロールからのデータでデータ ソースを更新](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)します。  
+ 詳細については、「[方法 :ホスト コントロールからのデータでデータ ソースを更新](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [Excel でデータベースの操作を使用するデータを操作する方法](http://go.microsoft.com/fwlink/?LinkID=130287)   
+ [操作を方法します。Excel でデータベースのデータを使用しますか。](http://go.microsoft.com/fwlink/?LinkID=130287)   
  [データ連結と Windows フォーム](/dotnet/framework/winforms/data-binding-and-windows-forms)   
- [方法: Windows フォームに単純バインド コントロールの作成](/dotnet/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form)   
+ [方法: Windows フォームに単純バインド コントロールを作成します。](/dotnet/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form)   
  [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
  [データをデータベースに保存します。](../data-tools/save-data-back-to-the-database.md)    
  [TableAdapter を使用してデータを更新します。](../data-tools/update-data-by-using-a-tableadapter.md)    

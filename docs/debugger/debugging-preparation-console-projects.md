@@ -1,6 +1,6 @@
 ---
-title: 'デバッグの準備: コンソール プロジェクト |Microsoft Docs'
-ms.custom: ''
+title: コンソール プロジェクトをデバッグするための準備 |Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: reference
@@ -19,14 +19,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 29c54c4bfdeb0341270d78ce677b6085d6f159a2
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: 55c588bfffbf11d4abd26fbae1490cf0039373c3
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52305183"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057082"
 ---
-# <a name="debugging-preparation-console-projects-c-c-visual-basic-f"></a>デバッグの準備: コンソール プロジェクト (C#、C++、Visual Basic、 F#)
+# <a name="debugging-preparation-console-projects-c-c-visual-basic-f"></a>デバッグの準備:コンソール プロジェクト (C#、C++、Visual Basic、 F#)
 
 コンソール プロジェクトのデバッグの準備は Windows プロジェクトのデバッグの準備に似ていますが、次の点を考慮する必要があります。 詳細については、次を参照してください。 [Windows フォーム アプリケーション](../debugger/debugging-preparation-windows-forms-applications.md)、および[デバッグの準備: Windows フォーム アプリケーション (.NET)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/sez9z95a(v=vs.100))します。 コンソール アプリケーションはどれも類似しているため、このトピックでは次のプロジェクトの種類について説明します。  
   

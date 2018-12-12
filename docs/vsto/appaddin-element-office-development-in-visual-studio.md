@@ -1,5 +1,6 @@
 ---
 title: '&lt;appAddin&gt;要素 (Visual Studio での Office 開発)'
+titleSuffix: ''
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology: office-development
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 572de1a3fccf9b66000d82e14f7895ab5cf0029f
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: 3160f153bb6775cf5b2541abf4f75069c818f82b
+ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304873"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248073"
 ---
 # <a name="ltappaddingt-element-office-development-in-visual-studio"></a>&lt;appAddin&gt;要素 (Visual Studio での Office 開発)
   **AppAddin**の要素、`vstov4`名前空間は、VSTO アドインのカスタマイズに固有の情報を格納します。  
@@ -45,7 +46,7 @@ ms.locfileid: "52304873"
   
 |属性|説明|  
 |---------------|-----------------|  
-|**アプリケーション**|必須。 Microsoft Office アプリケーションを指定します。 この値は、Excel、InfoPath、Outlook、PowerPoint、Project、Visio、Word のいずれか 1 つになります。|  
+|**アプリケーション**|必須。 Microsoft Office アプリケーションを指定します。 値は次のいずれかになります。Excel、InfoPath、Outlook、PowerPoint、Project、Visio、または Word。|  
 |**LoadBehavior**|任意。 既定で、 **loadBehavior**はこの値を設定で有効にします。 デバッグする場合は、この値を 2 に設定して VSTO アドインを無効にできます。 詳細については、LoadBehavior の値」というタイトルの表を参照してください。 [VSTO アドインのレジストリ エントリ](../vsto/registry-entries-for-vsto-add-ins.md)します。|  
 |**キー名**|必須。 この値は、アプリケーションが VSTO アドインを読み込むのに使用するレジストリ キーの名前です。 詳細については、次を参照してください。 [VSTO アドインのレジストリ エントリ](../vsto/registry-entries-for-vsto-add-ins.md)します。|  
   
