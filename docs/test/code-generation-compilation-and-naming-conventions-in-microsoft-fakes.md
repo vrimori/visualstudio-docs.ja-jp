@@ -1,5 +1,5 @@
 ---
-title: Microsoft Fakes におけるコード生成、コンパイル、および名前付け規則 (Visual Studio の場合)
+title: Microsoft Fakes におけるコード生成、コンパイル、および名前付け規則
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 65b00ab033feb9f057be195afe28b0416f44f95e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 7af8fc49896549fd553c8262b04e9d02f76f06e9
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49926021"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058312"
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Microsoft Fakes におけるコード生成、コンパイル、および名前付け規則
 
@@ -136,7 +136,7 @@ Fakes フレームワークは、生成されるすべてのアセンブリに�
 [assembly: InternalsVisibleTo("FileSystem.Fakes, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e92decb949446f688ab9f6973436c535bf50acd1fd580495aae3f875aa4e4f663ca77908c63b7f0996977cb98fcfdb35e05aa2c842002703cad835473caac5ef14107e3a7fae01120a96558785f48319f66daabc862872b2c53f5ac11fa335c0165e202b4c011334c7bc8f4c4e570cf255190f4e3e2cbc9137ca57cb687947bc")]
 ```
 
-*.fakes* ファイルの `Fakes`\\`Compilation` 要素に、`KeyFile` 属性値として代替キーを含む *.snk* ファイルへの完全パスを指定して、shim が適用されたアセンブリ用に作成したキーなどの別の公開キーを Fakes アセンブリに指定することができます。 例:
+*.fakes* ファイルの `Fakes`\\`Compilation` 要素に、`KeyFile` 属性値として代替キーを含む *.snk* ファイルへの完全パスを指定して、shim が適用されたアセンブリ用に作成したキーなどの別の公開キーを Fakes アセンブリに指定することができます。 次に例を示します。
 
 ```xml
 <-- FileSystem.Fakes.fakes -->

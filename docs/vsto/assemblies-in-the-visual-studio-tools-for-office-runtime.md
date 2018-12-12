@@ -1,5 +1,6 @@
 ---
 title: Visual Studio Tools for Office ランタイムのアセンブリ
+titleSuffix: ''
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology: office-development
@@ -10,17 +11,17 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - Visual Studio Tools for Office runtime, assemblies
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 550963966b45ed2d8024b36735f17ff24b6701fc
-ms.sourcegitcommit: 12d6398c02e818de4fbcb4371bae9e5db6cf9509
+ms.openlocfilehash: 66ee95d4f102ac4206a9ed55a1fc97fc251c4f9c
+ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050210"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248117"
 ---
 # <a name="assemblies-in-the-visual-studio-tools-for-office-runtime"></a>Visual Studio Tools for Office ランタイムのアセンブリ
   Office プロジェクトを作成すると、Visual Studio によって、そのプロジェクト タイプとプロジェクトの対象 .NET Framework に使用する [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] アセンブリの参照が自動的に追加されます。 .NET Framework 3.5、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]、 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]の Office 拡張機能にさまざまなアセンブリがあります。 Office 拡張機能の詳細については、次を参照してください。 [Visual Studio Tools for Office runtime の概要](../vsto/visual-studio-tools-for-office-runtime-overview.md)します。  
@@ -30,7 +31,7 @@ ms.locfileid: "50050210"
   
 |[アセンブリ名]|説明|  
 |-------------------|-----------------|  
-|Microsoft.Office.Tools.Common.dll|次の型を提供します。<br /><br /> リボンのカスタマイズとスマート タグを作成する型。 **注:** でスマート タグが非推奨と[!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]と[!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]します。<br />ドキュメント レベルのカスタマイズと VSTO アドインのカスタム作業ウィンドウで、操作ウィンドウを作成するための型。|  
+|Microsoft.Office.Tools.Common.dll|次の型を提供します。<br /><br /> リボンのカスタマイズとスマート タグを作成する型。 **注:**    スマート タグは、[!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)] および [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)] で非推奨とされます。<br />ドキュメント レベルのカスタマイズと VSTO アドインのカスタム作業ウィンドウで、操作ウィンドウを作成するための型。|  
 |Microsoft.Office.Tools.Excel.dll|Excel プロジェクトのホスト項目とホスト コントロールを表すインターフェイスとサポートする型を提供します。 詳細については、次の[拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)参照してください。|  
 |Microsoft.Office.Tools.Outlook.dll|Outlook VSTO アドインでカスタム フォーム領域の作成に使用できる型を提供します。|  
 |Microsoft.Office.Tools.Word.dll|Word プロジェクトのホスト項目とホスト コントロールを表すインターフェイスとサポートする型を提供します。 詳細については、次を参照してください。[拡張オブジェクトを使用して Word の自動化](../vsto/automating-word-by-using-extended-objects.md)します。|  
@@ -53,7 +54,7 @@ ms.locfileid: "50050210"
   
 |[アセンブリ名]|説明|  
 |-------------------|-----------------|  
-|Microsoft.Office.Tools.Common.v9.0.dll|次の型を提供します。<br /><br /> -Microsoft.Office.Tools.AddIn の基本クラス、VSTO アドイン。<br />リボンのカスタマイズとスマート タグを作成するためのクラスです。 **注:** でスマート タグが非推奨と[!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]と[!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]します。<br />ドキュメント レベルのカスタマイズと VSTO アドインにおけるカスタム作業ウィンドウで、操作ウィンドウを作成するためのクラス。|  
+|Microsoft.Office.Tools.Common.v9.0.dll|次の型を提供します。<br /><br /> -Microsoft.Office.Tools.AddIn の基本クラス、VSTO アドイン。<br />リボンのカスタマイズとスマート タグを作成するためのクラスです。 **注:**    スマート タグは、[!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)] および [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)] で非推奨とされます。<br />ドキュメント レベルのカスタマイズと VSTO アドインにおけるカスタム作業ウィンドウで、操作ウィンドウを作成するためのクラス。|  
 |Microsoft.Office.Tools.Excel.v9.0.dll|Excel ソリューションのホスト項目とホスト コントロールを提供します。 詳細については、次の[拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)参照してください。|  
 |Microsoft.Office.Tools.Outlook.v9.0.dll|Outlook VSTO アドインでカスタム フォーム領域の作成に使用できるクラスを提供します。|  
 |Microsoft.Office.Tools.Word.v9.0.dll|Word ソリューションのホスト項目とホスト コントロールを提供します。 詳細については、次を参照してください。[拡張オブジェクトを使用して Word の自動化](../vsto/automating-word-by-using-extended-objects.md)します。|  

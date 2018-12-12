@@ -18,17 +18,17 @@ helpviewer_keywords:
 - automating Excel
 - host items [Office development in Visual Studio], Excel
 - controls [Office development in Visual Studio], Excel host controls
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d50751b00a1a713a9f8848bdbebaaff1463c45c0
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 0a74c5a62cc2e14615db8dd17c9a34a7e54178e7
+ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744913"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248047"
 ---
 # <a name="automate-excel-by-using-extended-objects"></a>拡張オブジェクトを使用して Excel を自動化します。
   Visual Studio で Excel ソリューションを作成する場合、ソリューションで *ホスト項目* および *ホスト コントロール*を使用できます。 これらのオブジェクトは、Excel オブジェクト モデル (つまり Excel のプライマリ相互運用機能アセンブリによって公開されるオブジェクト モデル) 内にある、 <xref:Microsoft.Office.Interop.Excel.Worksheet> や <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトなど、よく使用される特定のオブジェクトを拡張したオブジェクトです。 これらの拡張オブジェクトは、基になる Excel オブジェクトと同じように動作しますが、新しいイベントやデータ バインディング機能など、基のオブジェクトにはない機能が追加されています。  
@@ -64,16 +64,16 @@ ms.locfileid: "50744913"
 -   [XmlMappedRange コントロール](../vsto/xmlmappedrange-control.md)  
   
 ## <a name="see-also"></a>関連項目  
- [方法: 塗りつぶし ListObject コントロール データ](../vsto/how-to-fill-listobject-controls-with-data.md)   
- [方法: ワークシートに Chart コントロールを追加](../vsto/how-to-add-chart-controls-to-worksheets.md)   
- [方法: ワークシートに ListObject コントロールを追加](../vsto/how-to-add-listobject-controls-to-worksheets.md)   
- [方法: ワークシートに NamedRange コントロールを追加](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
- [方法: ワークシートに XMLMappedRange コントロールを追加](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)   
- [方法: NamedRange コントロールをサイズ変更](../vsto/how-to-resize-namedrange-controls.md)   
- [方法: ListObject コントロールをサイズ変更](../vsto/how-to-resize-listobject-controls.md)   
- [方法: ListObject コントロールに新しい行が追加されたときにデータの検証](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md)   
- [方法: データへのマップ ListObject 列](../vsto/how-to-map-listobject-columns-to-data.md)   
- [チュートリアル: プログラム NamedRange コントロールのイベント](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)   
+ [方法: データに ListObject コントロールを塗りつぶす](../vsto/how-to-fill-listobject-controls-with-data.md)   
+ [方法: ワークシートに Chart コントロールを追加します。](../vsto/how-to-add-chart-controls-to-worksheets.md)   
+ [方法: ワークシートに ListObject コントロールを追加します。](../vsto/how-to-add-listobject-controls-to-worksheets.md)   
+ [方法: ワークシートに NamedRange コントロールを追加します。](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
+ [方法: ワークシートに XMLMappedRange コントロールを追加します。](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)   
+ [方法: NamedRange コントロールをサイズ変更します。](../vsto/how-to-resize-namedrange-controls.md)   
+ [方法: ListObject コントロールをサイズ変更します。](../vsto/how-to-resize-listobject-controls.md)   
+ [方法: ListObject コントロールに新しい行が追加されたときにデータを検証します。](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md)   
+ [方法: データに ListObject 列をマップします。](../vsto/how-to-map-listobject-columns-to-data.md)   
+ [チュートリアル: NamedRange コントロールのイベントのプログラム](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)   
  [Word 文書と Excel ブックを実行時に VSTO アドインで拡張します。](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   

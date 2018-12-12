@@ -1,5 +1,5 @@
 ---
-title: Visual Studio のヒントとテクニック | Microsoft ドキュメント
+title: ヒントし、テクニック |Microsoft Docs
 ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
@@ -14,12 +14,12 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1e640aa6676cec22bd9b124727be0cbe88c5c6cb
-ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
-ms.translationtype: MT
+ms.openlocfilehash: b067302576dd83d88853a517f66e1c19186e3a78
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51000111"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051157"
 ---
 # <a name="tips-and-tricks-for-visual-studio"></a>Visual Studio のヒントとテクニック
 
@@ -144,9 +144,9 @@ Visual Studio では、このトピックのショートカットを使用して
 
 ##  <a name="BKMK_ALM"></a>アプリケーション ライフサイクル管理
 
-「[キーボード ショートカット: Visual Studio Online、TFS Web ポータル、およびチーム エクスプローラー](/azure/devops/project/navigation/keyboard-shortcuts?view=vsts)」を参照してください。
+参照してください[キーボード ショートカット。Visual Studio Online、TFS web ポータル、およびチーム エクスプ ローラー](/azure/devops/project/navigation/keyboard-shortcuts?view=vsts)します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Studio ブログ](http://blogs.msdn.com/b/visualstudio)
 - [Visual Studio のヒントとテクニックに関するブログ](http://blogs.msdn.com/b/zainnab)

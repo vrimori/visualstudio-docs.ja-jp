@@ -12,17 +12,17 @@ helpviewer_keywords:
 - data caching [Office development in Visual Studio], about caching data
 - data [Office development in Visual Studio], caching
 - data caching [Office development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2d106209accb5c67d6b9ab24a15aa7edd79d11be
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: b46fa8b0138eff03757a7bd7828053cee039090f
+ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49846890"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248125"
 ---
 # <a name="cache-data"></a>キャッシュ データ
   データは、オフライン、または Microsoft Office Word または Microsoft Office Excel を開くことがなくアクセスできるように、ドキュメント レベル カスタマイズ内のデータ オブジェクトをキャッシュできます。 オブジェクトをキャッシュするには、オブジェクトのデータ型を特定の要件を満たす必要があります。 .NET Framework の多くの一般的なデータ型など、これらの要件を満たしている<xref:System.String>、 <xref:System.Data.DataSet>、および<xref:System.Data.DataTable>します。  
@@ -31,9 +31,9 @@ ms.locfileid: "49846890"
   
  データ キャッシュにオブジェクトを追加する 2 つの方法はあります。  
   
-- ソリューションのビルド時に、データ キャッシュにオブジェクトを追加するには、適用、<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute>オブジェクトの宣言する属性します。 詳細については、次を参照してください。[方法: オフラインか、サーバーで使用するデータをキャッシュ](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)します。  
+- ソリューションのビルド時に、データ キャッシュにオブジェクトを追加するには、適用、<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute>オブジェクトの宣言する属性します。 詳細については、「[方法 :オフラインか、サーバーで使用するデータをキャッシュ](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)します。  
   
-- 実行時にデータ キャッシュにオブジェクトをプログラムで追加するには、使用、`StartCaching`メソッドのホスト項目など、`ThisDocument`または`ThisWorkbook`クラス。 詳細については、次を参照してください。[方法: Office ドキュメント内のデータ ソースをプログラムでキャッシュ](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)します。  
+- 実行時にデータ キャッシュにオブジェクトをプログラムで追加するには、使用、`StartCaching`メソッドのホスト項目など、`ThisDocument`または`ThisWorkbook`クラス。 詳細については、「[方法 :Office ドキュメント内のデータ ソースをプログラムでキャッシュ](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)します。  
   
   データ キャッシュにオブジェクトを追加した後は、アクセスして、Word または Excel を起動せず、キャッシュされたデータを変更することができます。 詳細については、次を参照してください。[サーバー上のドキュメント内のデータ アクセス](../vsto/accessing-data-in-documents-on-the-server.md)します。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "49846890"
 ## <a name="persist-changes-to-cached-data-in-password-protected-documents"></a>パスワードで保護されたドキュメントでキャッシュされたデータへの変更を永続化します。  
  パスワードで保護されているドキュメント内のデータ オブジェクトをキャッシュする場合、キャッシュされたデータへの変更は保存されません。 2 つのメソッドをオーバーライドすることで、キャッシュされたデータに変更を保存できます。 ドキュメントが保存されると、保護を一時的に削除するこれらのメソッドをオーバーライドし、保存した後に保護を再度適用操作が完了しました。  
   
- 詳細については、次を参照してください。[方法: パスワードで保護されたドキュメント内のデータをキャッシュ](../vsto/how-to-cache-data-in-a-password-protected-document.md)します。  
+ 詳細については、「[方法 :パスワードで保護されたドキュメント内のデータをキャッシュ](../vsto/how-to-cache-data-in-a-password-protected-document.md)します。  
   
 ## <a name="prevent-data-loss-when-adding-null-values-to-the-data-cache"></a>Null 値をデータ キャッシュに追加するときにデータ損失を防止します。  
  キャッシュされたオブジェクトのすべて必要があります以外に初期化するオブジェクトをデータ キャッシュに追加するときに**null**値、ドキュメントを保存して閉じる前にします。 任意のキャッシュされたオブジェクトがある場合、 **null**値、ドキュメントを保存して閉じられたときに、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]データ キャッシュから削除するすべてのキャッシュされたオブジェクトに自動的にします。  
@@ -87,9 +87,9 @@ ms.locfileid: "49846890"
  持つオブジェクトを追加する場合、 **null**値を使用して、データ キャッシュを<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute>属性、デザイン時に使用することができます、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>ドキュメントが開かれる前に、キャッシュされたデータを初期化するためにクラスがオブジェクトします。 これは、Word または Excel ドキュメントをエンドユーザーが開く前にインストールされていないサーバー上のキャッシュされたデータの初期化に使用する場合に便利です。 詳細については、次を参照してください。[サーバー上のドキュメント内のデータ アクセス](../vsto/accessing-data-in-documents-on-the-server.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [方法: オフラインか、サーバーで使用するデータをキャッシュ](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)   
- [方法: Office ドキュメント内のデータ ソースをプログラムでキャッシュ](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)   
- [方法: パスワードで保護されたドキュメント内のデータのキャッシュ](../vsto/how-to-cache-data-in-a-password-protected-document.md)   
+ [方法: オフラインか、サーバーで使用するデータをキャッシュします。](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)   
+ [方法: Office ドキュメント内のデータ ソースをプログラムでキャッシュします。](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)   
+ [方法: パスワードで保護されたドキュメント内のキャッシュ データ](../vsto/how-to-cache-data-in-a-password-protected-document.md)   
  [チュートリアル: キャッシュされたデータセットを使用したマスター/詳細関係を作成します。](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md)  
   
   

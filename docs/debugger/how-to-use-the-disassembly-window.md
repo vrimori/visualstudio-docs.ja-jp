@@ -1,6 +1,6 @@
 ---
-title: In the Debugger in Visual Studio の逆アセンブリ コードの表示 |Microsoft Docs
-ms.custom: H1Hack27Feb2017
+title: デバッガーでの逆アセンブリ コードの表示 |Microsoft Docs
+ms.custom: seodec18
 ms.date: 10/30/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e9cf75915b3ca17df1ee9e2ef41040147c146ea8
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: c35432bdd01b9b79c2afaa266d8078caf04bd62b
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52387670"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063837"
 ---
 # <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio デバッガーでの逆アセンブリ コードの表示 (C#、C++、Visual Basic、 F#)
 
@@ -64,7 +64,7 @@ ms.locfileid: "52387670"
 開くには、**逆アセンブル**デバッグ中に、ウィンドウ**Windows** > **逆アセンブル**またはキーを押します**Alt** + **8**します。
 
 > [!NOTE]
-> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、次を参照してください。[設定にリセット](../ide/environment-settings.md#reset-settings)します。
+> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[リセット設定](../ide/environment-settings.md#reset-settings)」を参照してください。
 
 右クリック オプションの情報をオンまたはオフ、**逆アセンブリ**ウィンドウで、設定や、ショートカット メニューで目的のオプションをオフにします。
 
@@ -74,4 +74,4 @@ ms.locfileid: "52387670"
 
 * [ページ単位の上下移動 (メモリ内での)](../debugger/how-to-page-up-or-down-in-memory.md)
 * [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)
-* [方法: [レジスタ] ウィンドウを使用する](../debugger/how-to-use-the-registers-window.md)
+* [方法: [レジスタ] ウィンドウを使用します。](../debugger/how-to-use-the-registers-window.md)

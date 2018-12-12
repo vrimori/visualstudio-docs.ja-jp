@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でコード カバレッジ分析をカスタマイズする
+title: コード カバレッジ分析のカスタマイズ
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 52e2465a1e0a25e852073dc39a8aee18a6b47d7e
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 09af57ca64524dafa506d57d486e9385a4c35a93
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295360"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054942"
 ---
 # <a name="customize-code-coverage-analysis"></a>コード カバレッジ分析のカスタマイズ
 
@@ -105,7 +105,7 @@ Include ノードと Exclude ノードでは、正規表現を使用できます
 
 すべての一致で、大文字と小文字が区別されます。
 
-例:
+次に例を示します。
 
 ```xml
 <ModulePaths>
@@ -137,7 +137,7 @@ Include ノードと Exclude ノードでは、正規表現を使用できます
 
 - **Attribute** - 特定の属性のアタッチ先の要素と一致します。 属性の完全名を指定し、名前の末尾に "Attribute" を含めます。
 
-- **Function** - 完全修飾名でプロシージャ、関数、またはメソッドに一致します。 関数名を一致させるには、正規表現が、名前空間、クラス名、メソッド名、およびパラメーター リストを含む関数の完全修飾名と一致する必要があります。 例:
+- **Function** - 完全修飾名でプロシージャ、関数、またはメソッドに一致します。 関数名を一致させるには、正規表現が、名前空間、クラス名、メソッド名、およびパラメーター リストを含む関数の完全修飾名と一致する必要があります。 次に例を示します。
 
    ```csharp
    Fabrikam.Math.LocalMath.SquareRoot(double);
