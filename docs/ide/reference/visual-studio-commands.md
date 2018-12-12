@@ -1,5 +1,5 @@
 ---
-title: Visual Studio コマンド
+title: コマンド
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -14,32 +14,32 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7344a1051385b57f92720e9ca671e6aeb1ec46b5
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: da258aab0a9c4e100591bf33abff710b1cf54f53
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49879012"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063462"
 ---
 # <a name="visual-studio-commands"></a>Visual Studio コマンド
+
 Visual Studio のコマンドを使用すると、 **[コマンド]** ウィンドウ、 **[イミディエイト]** ウィンドウ、または **[検索]** ボックスからコマンドを呼び出すことができます。 どちらに入力する場合でも、後続の操作が検索またはデバッグではなく、コマンドであることを示す不等号 (`>`) を使用します。
 
- コマンドの一覧とその構文は、 **[オプション]** ダイアログ ボックスの [環境] の下の [キーボード] で確認できます。
+コマンドの一覧とその構文は、 **[オプション]** ダイアログ ボックスの [環境] の下の [キーボード] で確認できます。
 
- Visual Studio のコマンドのエスケープ文字はキャレット (^) 文字です。これは、その直後の文字が制御文字としてではなくリテラル文字として解釈されることを意味します。 したがって、引用符 (")、スペース、先頭のスラッシュ、カレット、その他の任意のリテラル文字をパラメーターまたはスイッチの値に直接埋め込むことができます。ただし、スイッチ名には埋め込むことができません。 たとえば、オブジェクトに適用された
+Visual Studio のコマンドのエスケープ文字はキャレット (^) 文字です。これは、その直後の文字が制御文字としてではなくリテラル文字として解釈されることを意味します。 したがって、引用符 (")、スペース、先頭のスラッシュ、カレット、その他の任意のリテラル文字をパラメーターまたはスイッチの値に直接埋め込むことができます。ただし、スイッチ名には埋め込むことができません。 たとえば、オブジェクトに適用された
 
 ```
 >Edit.Find ^^t /regex
 ```
 
- カレットは、引用符の前後のどちらに置かれた場合でも同じ働きをします。 行の最後の文字がカレットの場合は無視されます。
+カレットは、引用符の前後のどちらに置かれた場合でも同じ働きをします。 行の最後の文字がカレットの場合は無視されます。
 
- IDE のローカライズ版では、IDE のネイティブ言語または英語のどちらでもコマンド名を入力できます。 たとえば、フランス語版 IDE では、「 `File.NewFile` 」または「 `Fichier.NouveauFichier` 」と入力して同じコマンドを実行できます。
+IDE のローカライズ版では、IDE のネイティブ言語または英語のどちらでもコマンド名を入力できます。 たとえば、フランス語版 IDE では、「 `File.NewFile` 」または「 `Fichier.NouveauFichier` 」と入力して同じコマンドを実行できます。
 
- 多くのコマンドにエイリアスがあります。 コマンド エイリアスの一覧については、「 [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)」を参照してください。
+多くのコマンドにエイリアスがあります。 コマンド エイリアスの一覧については、「 [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)」を参照してください。
 
- 次のコマンドは、引数またはスイッチを受け取ります。
-
+次のコマンドは、引数またはスイッチを受け取ります。
 
 | コマンド名 | 説明 |
 | - | - |

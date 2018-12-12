@@ -11,12 +11,12 @@ author: gewarren
 ms.author: gewarren
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.openlocfilehash: c80ee0791c1c073c82681e59e124c5c45b378a07
-ms.sourcegitcommit: e2373d40ca9829cee63519152a97172763471e21
+ms.openlocfilehash: 5c87831c468ce105bccaaad26e826aae6f0b46bc
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "34335708"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160050"
 ---
 # <a name="f1-help"></a>F1 キー ヘルプ
 
@@ -28,7 +28,7 @@ ms.locfileid: "34335708"
 
 ## <a name="useful-links"></a>役に立つリンク
 
-- Visual Studio の全般的な情報については、「[Visual Studio の概要](../../ide/visual-studio-ide.md)」を参照してください。
+- Visual Studio の全般的な情報については、「[Visual Studio の概要](../../get-started/visual-studio-ide.md)」を参照してください。
 - Visual Studio テキスト エディターのヘルプについては、[コード エディターの使用](../../ide/writing-code-in-the-code-and-text-editor.md)に関するページを参照してください。
 - C# のヘルプについては、「[C# のガイド](/dotnet/csharp/index)」を参照してください。
 - Visual Basic のヘルプについては、「[Visual Basic のガイド](/dotnet/visual-basic/)」を参照してください。

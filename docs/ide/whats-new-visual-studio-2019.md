@@ -1,10 +1,11 @@
 ---
 title: Visual Studio 2019 Preview の新機能
+titleSuffix: ''
 description: Visual Studio 2019 のプレビュー リリースの新機能について説明します。
-ms.custom: ''
 ms.date: 12/04/2018
 ms.prod: visual-studio-dev16
 ms.technology: vs-acquisition
+ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
 - VS.StartPage.WhatsNew
@@ -16,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 838065d01e67f230d37ee318231371707117ec07
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 06e3966703d95f897706eec8c46c2cd78fda859f
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52897244"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159751"
 ---
 # <a name="what39s-new-in-visual-studio-2019-preview"></a>Visual Studio 2019 Preview の新機能
 
@@ -86,7 +87,7 @@ Visual Studio 2019 を開いてまず気付くことは、新しいスタート 
 
 ### <a name="manage-pull-requests-prs-from-the-ide"></a>IDE からのプル要求 (PR) の管理
 
-ダウンロードして Visual Studio 2019 Preview で使用できる新しい拡張機能を導入しました。 この新しい拡張機能を使用すると、Visual Studio IDE [(統合開発環境)](../ide/visual-studio-ide.md) を離れることなく、チームからのプル要求を確認、実行、さらにはデバッグすることもできます。 現在、コードは Azure Repos でサポートされていますが、GitHub までサポートを拡大しており、全体的なエクスペリエンスを向上します。
+ダウンロードして Visual Studio 2019 Preview で使用できる新しい拡張機能を導入しました。 この新しい拡張機能を使用すると、Visual Studio IDE [(統合開発環境)](../get-started/visual-studio-ide.md) を離れることなく、チームからのプル要求を確認、実行、さらにはデバッグすることもできます。 現在、コードは Azure Repos でサポートされていますが、GitHub までサポートを拡大しており、全体的なエクスペリエンスを向上します。
 
 今すぐ作業を開始するには、[Visual Studio 用のプル要求](https://aka.ms/pr4vs)拡張機能を Visual Studio Marketplace からダウンロードします。
 
