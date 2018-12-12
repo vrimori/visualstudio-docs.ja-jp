@@ -25,7 +25,7 @@ Visual Studio SDK (ソフトウェア開発キット) は、Visual Studio セッ
 
 VS SDK を Visual Studio のインストールに含めるには、ワークロードタブの**その他のツールセット**の下にある**Visual Studio 拡張機能の開発**ワークロードをインストールします。 このワークロードは、Visual Studio SDK と必要な前提条件をインストールします。 **インストールの詳細**ビューから、コンポーネントをオンまたはオフすることによって、インストールをさらにチューニングできます。
   
-## <a name="install-the-visual-studio-sdk-after-installing-visual-studio"></a>Visual Studio をインストールした後で、Visual Studio SDK をインストールする。
+## <a name="install-the-visual-studio-sdk-after-installing-visual-studio"></a>Visual Studio をインストールした後で、Visual Studio SDK をインストールする
 
 Visual Studio のインストールが完了した後、Visual Studio SDK をインストールするには、Visual Studio インストーラーを再実行し、**Visual Studio 拡張機能の開発**ワークロードを選択します。  
   
@@ -35,8 +35,8 @@ Visual Studio のインストールが完了した後、Visual Studio SDK をイ
 
 ![拡張機能の開発をインストール](../extensibility/media/install-extension-development.png "拡張機能の開発のインストール")  
   
-## <a name="install-the-visual-studio-sdk-from-the-command-line"></a>コマンドラインから Visual Studio SDK をインストール。
+## <a name="install-the-visual-studio-sdk-from-the-command-line"></a>コマンドラインから Visual Studio SDK をインストールする
 
- どのVisual Studio のワークロードやコンポーネントと同様に、 **Visual Studio 拡張機能の開発**ワークロード (ID: Microsoft.VisualStudio.Workload.VisualStudioExtension) をコマンドラインからインストールできます。 適切なコマンド ライン スイッチとワークロードまたはコンポーネントの識別子を特定する方法について一般的な手順の詳細については **[コマンド ライン パラメーターを使用して、Visual Studio をインストールする](../install/use-command-line-parameters-to-install-visual-studio.md)** を参照してください。
+ Visual Studio のワークロードやコンポーネントと同様に、 **Visual Studio 拡張機能の開発**ワークロード (ID: Microsoft.VisualStudio.Workload.VisualStudioExtension) をコマンドラインからインストールできます。 適切なコマンド ライン スイッチとワークロードまたはコンポーネントの識別子を特定する方法についての一般的な手順の詳細については **[コマンド ライン パラメーターを使用して、Visual Studio をインストールする](../install/use-command-line-parameters-to-install-visual-studio.md)** を参照してください。
   
  インストールされているVisual Studio のバージョンに一致する Visual Studio インストーラーを使用する必要があることに注意してください。 たとえば、Visual Studio Enterprise がコンピューターにインストールしてある場合は、Visual Studio Enterprise インストーラー(*vs_enterprise.exe*)を実行する必要があります 。
