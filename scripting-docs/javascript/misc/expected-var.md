@@ -1,5 +1,5 @@
 ---
-title: 予想 &#39; var &#39; |Microsoft ドキュメント
+title: 'var' が必要です |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
 ms.locfileid: "24633242"
 ---
-# <a name="expected-39var39"></a>予想 &#39; var &#39;
+# <a name="expected-39var39"></a>'var' が必要です
 予期された ' var' (ERRnoVar 1034))  
   
  必要なときに、var キーワードを追加できませんでした。  
