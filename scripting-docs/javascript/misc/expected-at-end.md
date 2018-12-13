@@ -1,5 +1,5 @@
 ---
-title: 予想&#39; @end &#39; |Microsoft Docs
+title:  '@end' が必要です。 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49857979"
 ---
-# <a name="expected-39end39"></a>必要です。&#39;@end&#39;
+# <a name="expected-39end39"></a> '@end' が必要です。
 条件付きでコンパイルされたコードのブロックを作成しようとしましたが、含まれていません、 <strong>@end</strong>最後のステートメント。 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 内でそれらを囲むことで、ステートメントを条件付きコンパイルが、 <strong>@if/ @end</strong>ブロックします。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
