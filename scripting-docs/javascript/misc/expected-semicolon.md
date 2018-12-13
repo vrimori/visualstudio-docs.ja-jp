@@ -1,5 +1,5 @@
 ---
-title: 予想 &#39; です。&#39; |Microsoft ドキュメント
+title: ';' が必要です |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
 ms.locfileid: "24632792"
 ---
-# <a name="expected-3939"></a>予想 &#39; です。&#39;です。
+# <a name="expected-3939"></a>';' が必要です
 行では、1 つ以上のステートメントを配置しようとしていますが、でしたいないをセミコロンで区切ります。 セミコロンはステートメントを終了に使用されます。 単一行では、いくつかのステートメントを配置できますが、1 つずつをセミコロンで区切る必要があります。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
