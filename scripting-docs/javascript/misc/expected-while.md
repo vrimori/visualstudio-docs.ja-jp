@@ -1,5 +1,5 @@
 ---
-title: '予想 &#39;いるときに; (& a) #39; |Microsoft ドキュメント'
+title: 'while' が必要です |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
 ms.locfileid: "24633032"
 ---
-# <a name="expected-39while39"></a>予想 &#39;いるときに; (& a) #39;
+# <a name="expected-39while39"></a>'while' が必要です
 含まれなかった、`while`条件、`do...while`ループします。 A**は**ステートメントの対応する必要があります`while`コード ブロックの終わりをテストします。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
