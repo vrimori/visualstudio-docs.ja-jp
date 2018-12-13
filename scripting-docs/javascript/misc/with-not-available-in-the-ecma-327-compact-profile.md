@@ -1,5 +1,5 @@
 ---
-title: '&#39; と &#39;ECMA 327 Compact Profile では使用できない |Microsoft ドキュメント'
+title: 'with' は ECMA 327 Compact Profile では使用できません |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
 ms.locfileid: "24633292"
 ---
-# <a name="39with39-not-available-in-the-ecma-327-compact-profile"></a>&#39; と &#39;ECMA 327 Compact Profile では使用できません。
+# <a name="39with39-not-available-in-the-ecma-327-compact-profile"></a>'with' は ECMA 327 Compact Profile では使用できません
 ' with' は ECMA 327 Compact Profile (ErrWithNotInCP では使用できません。  
   
  使用することはできません、Compact Profile でキーワードを使用します。  
