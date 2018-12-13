@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 34c263479be170b9f108c4cbc095be737f0b2b22
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a44dfd224324ba641e70e0cfe6ded87f88fe6765
+ms.sourcegitcommit: 8cdc6e2ad2341f34bd6b02859a7c975daa0c9320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49936050"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53307708"
 ---
 # <a name="create-a-windows-forms-toolbox-control"></a>Windows フォーム ツールボックス コントロールを作成します。
 Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フォーム ツールボックス コントロールの項目テンプレートが自動的に追加するコントロールを作成できます。、**ツールボックス**、拡張機能がインストールされている場合。 このトピックでは、他のユーザーに配布できる単純なカウンター コントロールを作成するテンプレートを使用する方法を示します。  
@@ -77,16 +77,16 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
 3.  次のパブリック プロパティの宣言を作成します。  
   
     ```csharp  
-    public int Value {  
+    public int Value {  
         get { return currentValue; }   
     }  
   
-    public string Message {  
+    public string Message {  
         get { return displayText; }  
         set { displayText = value; }  
     }  
   
-    public bool ShowReset {  
+    public bool ShowReset {  
         get { return btnReset.Visible; }  
         set { btnReset.Visible = value; }  
     }  
@@ -98,7 +98,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
 4.  次のコードを配置、`Load`コントロールのイベント。  
   
     ```csharp  
-    private void Counter_Load(object sender, EventArgs e)  
+    private void Counter_Load(object sender, EventArgs e)  
     {  
         currentValue = 0;  
         label1.Text = Message + Value;  
@@ -111,7 +111,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
 5.  カウンターをインクリメントする次のパブリック メソッドを作成します。  
   
     ```csharp  
-    public void Increment()  
+    public void Increment()  
     {  
         currentValue++;  
         label1.Text = displayText + Value;  
@@ -123,7 +123,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
 6.  宣言を追加、`Incremented`コントロール クラスにイベント。  
   
     ```csharp  
-    public event EventHandler Incremented;  
+    public event EventHandler Incremented;  
     ```  
   
      呼び出し元は、カウンターの値の変更に応答するには、このイベントにハンドラーを追加することができます。  
@@ -131,7 +131,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
 7.  ダブルクリックしてデザイン ビューに戻る、**リセット**を生成するボタン、`btnReset_Click`イベント ハンドラーをクリックし、次の例に示すように入力します。  
   
     ```csharp  
-    private void btnReset_Click(object sender, EventArgs e)  
+    private void btnReset_Click(object sender, EventArgs e)  
     {  
         currentValue = 0;  
         label1.Text = displayText + Value;  
@@ -145,7 +145,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
     ```csharp  
     [ProvideToolboxControl("General", false)]  
-    public partial class Counter : UserControl  
+    public partial class Counter : UserControl  
     ```  
   
 ### <a name="test-the-control"></a>コントロールをテストします。  
@@ -190,7 +190,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
      フォームを開きます。 `Counter`コントロールは、次のテキストを表示します。  
   
-     **数: 0**  
+     **カウント:0**  
   
 14. **[テスト]** をクリックします。  
   
@@ -209,7 +209,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
      カウンターをリセットする**0**します。  
   
 ## <a name="next-steps"></a>次の手順  
- ビルドする場合は、**ツールボックス**コントロール、Visual Studio がという名前のファイルを作成する*ProjectName.vsix*で、 <em>\bin\debug\*プロジェクトのフォルダー。コントロールを配置するには、*.vsix をアップロードして</em>ファイルは、ネットワークまたは Web サイトにします。 ユーザーが開いたとき、 *.vsix*ファイル、コントロールがインストールされ、Visual Studio に追加**ツールボックス**ユーザーのコンピューターにします。 または、アップロード、 *.vsix*ファイルを[Visual Studio ギャラリー](http://go.microsoft.com/fwlink/?LinkID=123847) Web サイトのユーザーがで参照して検索できるように、**ツール** >  **拡張機能と更新**ダイアログ。  
+ 作成する場合、**ツールボックス**コントロール、Visual Studio がという名前のファイルを作成する*ProjectName.vsix*プロジェクトの \bin\debug\ フォルダーにします。 アップロードすることで、制御を展開することができます、 *.vsix*ファイルは、ネットワークまたは Web サイトにします。 ユーザーが開いたとき、 *.vsix*ファイル、コントロールがインストールされ、Visual Studio に追加**ツールボックス**ユーザーのコンピューターにします。 または、アップロード、 *.vsix*ファイルを[Visual Studio Marketplace](http://go.microsoft.com/fwlink/?LinkID=123847)ユーザーがで参照して検索できるように、**ツール** >  **拡張機能と更新**ダイアログ。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio の他の部分を拡張します。](../extensibility/extending-other-parts-of-visual-studio.md)   
