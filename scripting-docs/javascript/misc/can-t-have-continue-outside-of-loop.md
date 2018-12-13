@@ -1,5 +1,5 @@
 ---
-title: '&#39; が t &#39; 続行 &#39;です。ループの外 |Microsoft ドキュメント'
+title: 'continue' をループの外に設定できません。 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,8 +27,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
 ms.locfileid: "24633302"
 ---
-# <a name="can39t-have-39continue39-outside-of-loop"></a>&#39; が t &#39; 続行 &#39;です。ループの外
-使用しようとする、**続行**ステートメント、ループの外にあります。 **続行**ステートメントは a: の本体内でのみ使用できます  
+# <a name="can39t-have-39continue39-outside-of-loop"></a>'continue' をループの外に設定できません。
+使用しようとする、**continue**ステートメント、ループの外にあります。 **continue**ステートメントは a: の本体内でのみ使用できます  
   
 -   `do-while`ループ  
   
