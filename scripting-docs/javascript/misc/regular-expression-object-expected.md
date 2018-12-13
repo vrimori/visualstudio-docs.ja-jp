@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/10/2018
 ms.locfileid: "44280314"
 ---
-# <a name="regular-expression-object-expected"></a>Regular Expression オブジェクトが必要です。
+# <a name="regular-expression-object-expected"></a>正規表現オブジェクトが必要です。
 呼び出そうとしたか、 **RegExp.prototype.toString**または**RegExp.prototype.valueOf**メソッド以外の型のオブジェクトを`RegExp`します。 呼び出し元のオブジェクト型でなければなりません`RegExp`します。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
