@@ -1,5 +1,5 @@
 ---
-title: 割り当てることはできません&#39;この&#39;|Microsoft Docs
+title: 'this' に割り当てることはできません。|Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49856653"
 ---
-# <a name="cannot-assign-to-39this39"></a>割り当てることはできません&#39;これ&#39;
+# <a name="cannot-assign-to-39this39"></a>'this' に割り当てることはできません。
 値を代入しようとしています。**この**します。 **この**は、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]キーワードのいずれかを参照します。
 
 - 現在、メソッドを実行するオブジェクト
