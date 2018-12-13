@@ -1,5 +1,5 @@
 ---
-title: '必要です (& m); #39]&#39; |Microsoft ドキュメント'
+title: ']'が必要です |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
 ms.locfileid: "24632752"
 ---
-# <a name="expected-3939"></a>必要です (& m); #39]&#39;です。
+# <a name="expected-3939"></a>']'が必要です。
 配列の要素への参照が行われたが、右角かっこが含まれていません。 配列の要素を指す任意の式には、両方を開くと、終わりかっこを含める必要があります。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
