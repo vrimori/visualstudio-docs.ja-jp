@@ -1,4 +1,4 @@
----
+﻿---
 title: 'continue' をループの外に設定できません。 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 01/18/2017
@@ -34,21 +34,21 @@ ms.locfileid: "24633302"
   
 -   `while`ループ  
   
--   **ために**ループ  
+-   **for**ループ  
   
--   **用に/** ループします。  
+-   **for/in** ループ  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   確認、**続行**a: の本体内でステートメントが表示されます  
+-   **continue**ステートメントが以下の本文の中に現れることを確認してください：  
   
     -   `do-while`ループ  
   
     -   `while`ループ  
   
-    -   **ために**ループ  
+    -   **for**ループ  
   
-    -   **用に/** ループします。  
+    -   **for/in** ループ  
   
 ## <a name="see-also"></a>関連項目  
  [continue ステートメント](../../javascript/reference/continue-statement-javascript.md)   
