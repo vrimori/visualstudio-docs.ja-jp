@@ -1,5 +1,5 @@
 ---
-title: 予想&#39;@&#39; |Microsoft Docs
+title: '@' が必要です |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49856848"
 ---
-# <a name="expected-3939"></a>予想&#39;@&#39;
+# <a name="expected-3939"></a>'@' が必要です
 使用して条件付きコンパイル ステートメントで使用する変数を作成しようとしています。、`@set`ステートメントでは、配置しませんでしたが、アット マーク"**@**"変数名の前にします。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
