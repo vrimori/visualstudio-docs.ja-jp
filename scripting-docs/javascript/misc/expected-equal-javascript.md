@@ -1,5 +1,5 @@
 ---
-title: 予想&#39;=&#39; (JavaScript) |Microsoft Docs
+title: '=' が必要です。(JavaScript) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49909998"
 ---
-# <a name="expected-3939-javascript"></a>予想&#39;=&#39; (JavaScript)
+# <a name="expected-3939-javascript"></a>'=' が必要です。 (JavaScript)
 条件付きコンパイル ステートメントを使用する変数を作成しようとしましたが、変数とそれに割り当てる値の間の等号 (=) を配置しませんでした。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
