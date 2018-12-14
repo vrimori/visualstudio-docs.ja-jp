@@ -40,7 +40,7 @@ ms.locfileid: "49856653"
 
 ## <a name="to-correct-this-error"></a>このエラーを解決するには
 
-- 割り当てるしないで**この**します。 プロパティまたはオブジェクトのインスタンスのメソッドにアクセスするには、ドット演算子を使用して (例: **circle.radius**)。
+- **this**に割り当てないでください。 プロパティまたはオブジェクトのインスタンスのメソッドにアクセスするには、ドット演算子(例: **circle.radius**)を使用してます 。
 
   > [!NOTE]
   > ユーザーが作成した変数の名前を付けられません**この**; は、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]予約語。
