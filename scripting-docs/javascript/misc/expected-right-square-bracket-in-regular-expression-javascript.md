@@ -1,5 +1,5 @@
 ---
-title: 予想&#39;]&#39;で正規表現 (JavaScript) |Microsoft Docs
+title: 正規表現の中に &#39;]&#39; が必要です (JavaScript) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/10/2018
 ms.locfileid: "44283718"
 ---
-# <a name="expected-3939-in-regular-expression-javascript"></a>予想&#39;]&#39;で正規表現 (JavaScript)
+# <a name="expected-3939-in-regular-expression-javascript"></a>正規表現の中に&#39;]&#39;が必要です (JavaScript)
 正規表現の一致では、文字クラスを作成しようとしましたが、右角かっこが含まれていません。 個々 のリテラル文字の組み合わせは、角かっこ内に配置して文字クラスに組み立てられることができます。 文字クラスでは、含まれている任意の 1 文字と一致します。 たとえば、/[abc]"a"、"b"、文字のいずれかと一致する/または"c"です。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
