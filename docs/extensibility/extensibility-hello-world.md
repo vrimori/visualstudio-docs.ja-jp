@@ -32,30 +32,30 @@ ms.locfileid: "51349466"
 ![Hello World コマンド](media/hello-world-say-hello-world.png)
 
 > [!NOTE]
-> この記事では、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac では、次をの [Visual Studio for Mac での拡張機能のチュートリアル](/visualstudio/mac/extending-visual-studio-mac-walkthrough) を参照してください。
+> この記事は、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac では、次の [Visual Studio for Mac での拡張機能のチュートリアル](/visualstudio/mac/extending-visual-studio-mac-walkthrough) を参照してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 開始する前に、 必要なVSIX のテンプレートとサンプル コードを含む**Visual Studio 拡張機能の開発**ワークロードがインストールされていることを確認してください。 
 
 > [!NOTE]
-> Visual Studio 機能拡張プロジェクトを作成するにはVisual Studio の任意のエディション(Community、Professional、または Enterprise)を使用することができます。
+> Visual Studio 機能拡張プロジェクトを作成するには、Visual Studio の任意のエディション(Community、Professional、または Enterprise)を使用することができます。
 
-## <a name="create-an-extensibility-project"></a>機能拡張プロジェクトを作成
+## <a name="create-an-extensibility-project"></a>機能拡張プロジェクトの作成
 
 手順 1. **ファイル** メニューから**新しいプロジェクト**をクリックします。 画面の下部には、プロジェクトの名前を入力します。
 
-手順 2. メニューの**Visual C#** をクリックして、 **Extensibility**をクリックして、 **VSIX プロジェクト**をクリック。
+手順 2. メニューの **Visual C#** をクリックし、 **Extensibility** をクリックし、 次に **VSIX プロジェクト** をクリックします。
 
 ![新しいプロジェクト](media/hello-world-new-project.png)
 
 はじめに *Getting Started* ページといくつかのサンプル リソースが表示されます。
 
-このチュートリアルを終了した後に再開する必要がある場合、 **スタート ページ**の**最近**セクションでHelloWorld プロジェクトを見つけられます。
+このチュートリアルを終了した後に再開する必要がある場合、 **スタート ページ** の **最近** セクションで HelloWorld プロジェクトを見つけられます。
 
-## <a name="add-a-custom-command"></a>カスタム コマンドを追加
+## <a name="add-a-custom-command"></a>カスタム コマンドの追加
 
-手順 1. マニフェストファイルを選択した場合、インスタンス、メタデータ、説明、およびバージョンのどのようなオプションが変更可能か確認できます。
+手順 1. マニフェストファイルを選択した場合、インスタンス、メタデータ、説明、およびバージョンのどのオプションが変更可能か確認できます。
 
 手順 2. (ソリューションではなく) プロジェクトを右クリックします。 コンテキスト メニューで**追加**をクリックして、**新しい項目**をクリックします。
 
