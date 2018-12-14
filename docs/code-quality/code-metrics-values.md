@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのコード メトリックスを計算します。
+title: コード メトリックスを計算します。
 ms.date: 11/02/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f70c9f27857c7879262735965e272526aaea892
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: b56db0d54e198e0d6d25b19db528ac979a3d44b4
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50966701"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056773"
 ---
 # <a name="code-metrics-values"></a>コード メトリックス値
 

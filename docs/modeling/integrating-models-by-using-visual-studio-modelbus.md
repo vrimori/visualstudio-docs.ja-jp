@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Modelbus によるモデルの統合
+title: Modelbus によるモデルの統合
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
@@ -9,22 +9,23 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: aa38b1f0039f65ad7ce1e5476e5f28032c92812e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e72814b34790dd133f09e0fb16c594e12ea8147c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49894665"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064598"
 ---
 # <a name="integrating-models-by-using-visual-studio-modelbus"></a>Visual Studio Modelbus によるモデルの統合
+
 Visual Studio ModelBus はモデルにモデル間、およびその他のツールからリンクを作成するためのメソッドを提供します。 たとえば、ドメイン固有言語 (DSL) モデルと UML モデルをリンクする可能性があります。 DSL の統合セットを作成できます。
 
- ModelBus により、モデルまたはモデル内の特定の要素への一意の参照を作成できます。 この参照は、たとえば、別のモデル内の要素など、モデルの外に保存できます。 後で何らかのツールにおいて要素へのアクセスを取得する必要が生じると、モデル バス インフラストラクチャは適切なモデルを読み込み、要素を返します。 必要があれば、モデルをユーザーに表示できます。 ファイルが以前の場所でアクセスできない場合、ModelBus はユーザーにファイルを見つけるように求めます。 ユーザーがファイルを見つけると、ModelBus はそのファイルへのすべての参照を解決します。
+ModelBus により、モデルまたはモデル内の特定の要素への一意の参照を作成できます。 この参照は、たとえば、別のモデル内の要素など、モデルの外に保存できます。 後で何らかのツールにおいて要素へのアクセスを取得する必要が生じると、モデル バス インフラストラクチャは適切なモデルを読み込み、要素を返します。 必要があれば、モデルをユーザーに表示できます。 ファイルが以前の場所でアクセスできない場合、ModelBus はユーザーにファイルを見つけるように求めます。 ユーザーがファイルを見つけると、ModelBus はそのファイルへのすべての参照を解決します。
 
 > [!NOTE]
->  ModelBus の現在の Visual Studio 実装では、同じ Visual Studio ソリューション内の項目が、リンクされたモデルにあります。
+> ModelBus の現在の Visual Studio 実装では、同じ Visual Studio ソリューション内の項目が、リンクされたモデルにあります。
 
- 追加情報とサンプル コードについては、以下を参照してください。
+追加情報とサンプル コードについては、以下を参照してください。
 
 -   [方法: ドラッグ アンド ドロップ ハンドラーを追加する](../modeling/how-to-add-a-drag-and-drop-handler.md)
 
@@ -65,10 +66,11 @@ Visual Studio ModelBus はモデルにモデル間、およびその他のツー
 
    フォルダー `ModelBusAdapters\bin\*` には、`Dsl` プロジェクトと `ModelBusAdapters` プロジェクトによりビルドされるアセンブリが含まれます。 この DSL を別の DSL から参照するには、これらのアセンブリをインポートする必要があります。
 
-### <a name="making-sure-that-elements-can-be-referenced"></a>要素が参照可能であることの確認
- Visual Studio ModelBus アダプターは、既定を識別するために、要素の guid を使用します。 したがって、これらの ID はモデル ファイル内に保持される必要があります。
+### <a name="ensure-that-elements-can-be-referenced"></a>要素を参照できることを確認します。
 
-##### <a name="to-ensure-that-element-ids-are-persisted"></a>要素 ID が保持されることを確認するには
+Visual Studio ModelBus アダプターは、既定を識別するために、要素の guid を使用します。 したがって、これらの ID はモデル ファイル内に保持される必要があります。
+
+要素に Id は永続化されます。
 
 1. DslDefinition.dsl を開きます。
 
@@ -85,11 +87,12 @@ Visual Studio ModelBus はモデルにモデル間、およびその他のツー
 -   `ResolveElementReference` をオーバーライドし、モデル バス参照から正しい要素を特定します。
 
 ## <a name="editRef"></a> 別の DSL から DSL にアクセスします。
- DSL のドメイン プロパティにモデル バス参照を保存し、それらを使用するカスタム コードを作成できます。 ユーザーがモデル ファイルとその中の要素を選択することにより、モデル バス参照を作成可能にすることもできます。
 
- 別の DSL への参照を使用する DSL を有効にする必要があります最初に、*コンシューマー*モデル バス参照の。
+DSL のドメイン プロパティにモデル バス参照を保存し、それらを使用するカスタム コードを作成できます。 ユーザーがモデル ファイルとその中の要素を選択することにより、モデル バス参照を作成可能にすることもできます。
 
-#### <a name="to-enable-a-dsl-to-consume-references-to-an-exposed-dsl"></a>DSL が公開されている DSL への参照を利用可能にするには
+別の DSL への参照を使用する DSL を有効にする必要があります最初に、*コンシューマー*モデル バス参照の。
+
+### <a name="to-enable-a-dsl-to-consume-references-to-an-exposed-dsl"></a>DSL が公開されている DSL への参照を利用可能にするには
 
 1.  DSL 定義図で図の主な部分を右クリックし、 **Modelbus の有効化**します。
 
@@ -107,7 +110,7 @@ Visual Studio ModelBus はモデルにモデル間、およびその他のツー
 
     2.  **Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.11.0.dll**
 
-#### <a name="to-store-a-model-bus-reference-in-a-domain-property"></a>モデル バス参照をドメイン プロパティに保存するには
+### <a name="to-store-a-model-bus-reference-in-a-domain-property"></a>モデル バス参照をドメイン プロパティに保存するには
 
 1. 利用する DSL の DSL 定義で、ドメイン クラスにドメイン プロパティを追加し、その名前を設定します。
 
@@ -117,7 +120,7 @@ Visual Studio ModelBus はモデルにモデル間、およびその他のツー
 
    ユーザーが特殊な ModelBus 参照エディターを使用してプロパティを設定可能にすることができます。 このエディターの 2 つのバージョンまたは*ピッカー:* いずれかにより、ユーザーがモデル ファイルを選択して、その他により、ユーザーがモデル ファイルと、モデル内の要素を選択します。
 
-#### <a name="to-allow-the-user-to-set-a-model-bus-reference-in-a-domain-property"></a>ユーザーがモデル バス参照をドメイン プロパティに設定可能にするには
+### <a name="to-allow-the-user-to-set-a-model-bus-reference-in-a-domain-property"></a>ユーザーがモデル バス参照をドメイン プロパティに設定可能にするには
 
 1.  ドメイン プロパティを右クリックし、をクリックし、**編集 ModelBusReference 固有プロパティ**します。 ダイアログ ボックスが開きます。 これは、*モデル バス ピッカー*します。
 
@@ -134,7 +137,7 @@ Visual Studio ModelBus はモデルにモデル間、およびその他のツー
 
 6.  Company.FamilyTree.Person などのターゲット型の一覧を指定した場合、DSL プロジェクトにアセンブリ参照を追加して、ターゲット DSL の DLL (たとえば、Company.FamilyTree.Dsl.dll) を参照する必要があります。
 
-#### <a name="to-test-a-model-bus-reference"></a>モデル バス参照をテストするには
+### <a name="to-test-a-model-bus-reference"></a>モデル バス参照をテストするには
 
 1.  公開される DSL と利用する DSL の両方をビルドします。
 
@@ -156,19 +159,21 @@ Visual Studio ModelBus はモデルにモデル間、およびその他のツー
      モデル バス参照の要素固有の種類を指定した場合、ピッカーではモデル内の項目を選択することもできます。
 
 ## <a name="creating-references-in-program-code"></a>プログラム コード中の参照の作成
- モデルまたは要素への参照をモデル内に保存する場合、`ModelBusReference` を作成します。 `ModelBusReference` にはモデル参照と要素参照の 2 種類があります。
 
- モデルの参照を作成するには、インスタンス、およびファイル名または Visual Studio のプロジェクト項目モデルのうち、モデルは、DSL の AdapterManager 必要があります。
+モデルまたは要素への参照をモデル内に保存する場合、`ModelBusReference` を作成します。 `ModelBusReference` にはモデル参照と要素参照の 2 種類があります。
 
- 要素参照を作成するには、モデル ファイルと参照する要素のアダプターが必要です。
+モデルの参照を作成するには、インスタンス、およびファイル名または Visual Studio のプロジェクト項目モデルのうち、モデルは、DSL の AdapterManager 必要があります。
+
+要素参照を作成するには、モデル ファイルと参照する要素のアダプターが必要です。
 
 > [!NOTE]
->  Visual Studio ModelBus を同じ Visual Studio ソリューションでのみ項目への参照を作成できます。
+> Visual Studio ModelBus を同じ Visual Studio ソリューションでのみ項目への参照を作成できます。
 
 ### <a name="import-the-exposed-dsl-assemblies"></a>公開されている DSL アセンブリのインポート
- 利用するプロジェクトで、DSL へのプロジェクト参照と公開されている DSL の ModelBusAdapter アセンブリを追加します。
 
- たとえば、ModelBus References を MusicLibrary DSL の要素に保存するとします。 ModelBus References は FamilyTree DSL の要素を参照します。 MusicLibrary ソリューションの `Dsl` プロジェクトで、References ノードに次のアセンブリへの参照を追加します。
+利用するプロジェクトで、DSL へのプロジェクト参照と公開されている DSL の ModelBusAdapter アセンブリを追加します。
+
+たとえば、ModelBus References を MusicLibrary DSL の要素に保存するとします。 ModelBus References は FamilyTree DSL の要素を参照します。 MusicLibrary ソリューションの `Dsl` プロジェクトで、References ノードに次のアセンブリへの参照を追加します。
 
 - Fabrikam.FamilyTree.Dsl.dll - 公開されている DSL。
 
@@ -192,12 +197,13 @@ using System.Linq;
 ```
 
 ### <a name="to-create-a-reference-to-a-model"></a>モデルへの参照を作成するには
- モデル参照を作成するには、公開されている DSL の AdapterManager にアクセスし、それを使用してモデルへの参照を作成します。 ファイル パスまたは `EnvDTE.ProjectItem` のどちらかを指定できます。
 
- AdapterManager から、Adapter を取得し、モデル内の個々の要素にアクセスできます。
+モデル参照を作成するには、公開されている DSL の AdapterManager にアクセスし、それを使用してモデルへの参照を作成します。 ファイル パスまたは `EnvDTE.ProjectItem` のどちらかを指定できます。
+
+AdapterManager から、Adapter を取得し、モデル内の個々の要素にアクセスできます。
 
 > [!NOTE]
->  操作を終了したら、Adapter を破棄する必要があります。 そのための最も便利な方法は、`using` ステートメントの使用です。 次に例を示します。
+> 操作を終了したら、Adapter を破棄する必要があります。 そのための最も便利な方法は、`using` ステートメントの使用です。 次に例を示します。
 
 ```csharp
 // The file path of a model instance of the FamilyTree DSL:
@@ -232,7 +238,7 @@ using (FamilyTreeAdapter adapter =
 } // Dispose adapter
 ```
 
- 後で `modelReference` を使用可能にする場合、外部型 `ModelBusReference` を持つドメイン プロパティに保存できます。
+後で `modelReference` を使用可能にする場合、外部型 `ModelBusReference` を持つドメイン プロパティに保存できます。
 
 ```csharp
 using Transaction t = this.Store.TransactionManager
@@ -243,10 +249,11 @@ using Transaction t = this.Store.TransactionManager
 }
 ```
 
- ユーザーがこのドメイン プロパティを編集可能にするには、Editor 属性のパラメーターとして `ModelReferenceEditor` を使用します。 詳細については、次を参照してください。[の参照を編集するユーザーを許可する](#editRef)します。
+ユーザーがこのドメイン プロパティを編集可能にするには、Editor 属性のパラメーターとして `ModelReferenceEditor` を使用します。 詳細については、次を参照してください。[の参照を編集するユーザーを許可する](#editRef)します。
 
 ### <a name="to-create-a-reference-to-an-element"></a>要素への参照を作成するには
- モデル用に作成したアダプターは参照の作成と解決のために使用できます。
+
+モデル用に作成したアダプターは参照の作成と解決のために使用できます。
 
 ```csharp
 // person is an element in the FamilyTree model:
@@ -254,12 +261,13 @@ ModelBusReference personReference =
   adapter.GetElementReference(person);
 ```
 
- 後で `elementReference` を使用可能にする場合、外部型 `ModelBusReference` を持つドメイン プロパティに保存できます。 ユーザーがそれを編集可能にするには、Editor 属性のパラメーターとして `ModelElementReferenceEditor` を使用します。 詳細については、次を参照してください。[の参照を編集するユーザーを許可する](#editRef)します。
+後で `elementReference` を使用可能にする場合、外部型 `ModelBusReference` を持つドメイン プロパティに保存できます。 ユーザーがそれを編集可能にするには、Editor 属性のパラメーターとして `ModelElementReferenceEditor` を使用します。 詳細については、次を参照してください。[の参照を編集するユーザーを許可する](#editRef)します。
 
 ### <a name="resolving-references"></a>参照の解決
- `ModelBusReference` (MBR) がある場合、モデルまたはモデルが参照するモデル要素を取得できます。 要素が図またはその他の表示に示されている場合、表示を開き、要素を選択できます。
 
- MBR からアダプターを作成できます。 アダプターから、モデルのルートを取得できます。 モデル内の特定の要素を参照する MBR を解決することもできます。
+`ModelBusReference` (MBR) がある場合、モデルまたはモデルが参照するモデル要素を取得できます。 要素が図またはその他の表示に示されている場合、表示を開き、要素を選択できます。
+
+MBR からアダプターを作成できます。 アダプターから、モデルのルートを取得できます。 モデル内の特定の要素を参照する MBR を解決することもできます。
 
 ```csharp
 using Microsoft.VisualStudio.Modeling.Integration; ...
@@ -295,7 +303,7 @@ using (FamilyTreeAdapter adapter =
 } // Dispose the adapter.
 ```
 
-##### <a name="to-resolve-modelbus-references-in-a-text-template"></a>テキスト テンプレート内の ModelBus References を解決するには
+#### <a name="to-resolve-modelbus-references-in-a-text-template"></a>テキスト テンプレート内の ModelBus References を解決するには
 
 1. アクセスする DSL には、テキスト テンプレートによるアクセスのために構成された ModelBus Adapter が含まれている必要があります。 詳細については、次を参照してください。 [DSL へのアクセスを提供する](#provide)します。
 
@@ -338,7 +346,8 @@ using (FamilyTreeAdapter adapter =
    詳細とチュートリアルは、次を参照してください[テキスト テンプレートでの Visual Studio ModelBus の使用。](../modeling/using-visual-studio-modelbus-in-a-text-template.md)
 
 ## <a name="serializing-a-modelbusreference"></a>ModelBusReference のシリアル化
- `ModelBusReference` (MBR) を文字列形式で保存する場合、次のようにシリアル化することができます。
+
+`ModelBusReference` (MBR) を文字列形式で保存する場合、次のようにシリアル化することができます。
 
 ```csharp
 string serialized = modelBus.SerializeReference(elementReference);
@@ -347,12 +356,13 @@ ModelBusReference elementReferenceRestored =
     modelBus.DeserializeReference(serialized, null);
 ```
 
- この方法でシリアル化される MBR はコンテキストに依存しません。 単純なファイルベースのモデル バス アダプターを使用している場合、MBR には絶対ファイル パスが含まれます。 これはインスタンス モデル ファイルが絶対に移動しない場合は十分です。 ただし、モデル ファイルは、Visual Studio プロジェクト内の項目を通常になります。 ユーザーはプロジェクト全体をファイル システムの異なる場所へ移動できると期待しています。 ユーザーはプロジェクトをソース管理の下に維持し、異なるコンピューターで開くこともできると期待しています。 したがって、パス名はファイルを含むプロジェクトの場所を基準とする相対値としてシリアル化する必要があります。
+この方法でシリアル化される MBR はコンテキストに依存しません。 単純なファイルベースのモデル バス アダプターを使用している場合、MBR には絶対ファイル パスが含まれます。 これはインスタンス モデル ファイルが絶対に移動しない場合は十分です。 ただし、モデル ファイルは、Visual Studio プロジェクト内の項目を通常になります。 ユーザーはプロジェクト全体をファイル システムの異なる場所へ移動できると期待しています。 ユーザーはプロジェクトをソース管理の下に維持し、異なるコンピューターで開くこともできると期待しています。 したがって、パス名はファイルを含むプロジェクトの場所を基準とする相対値としてシリアル化する必要があります。
 
 ### <a name="serializing-relative-to-a-specified-file-path"></a>指定されたファイル パスを基準とする相対シリアル化
- `ModelBusReference` には、相対シリアル化の基準となるファイル パスなどの情報を含めることが可能なディクショナリである `ReferenceContext` が含まれています。
 
- パス相対シリアル化を実行するには、次の操作を実行します。
+`ModelBusReference` には、相対シリアル化の基準となるファイル パスなどの情報を含めることが可能なディクショナリである `ReferenceContext` が含まれています。
+
+パス相対シリアル化を実行するには、次の操作を実行します。
 
 ```csharp
 elementReference.ReferenceContext.Add(
@@ -361,7 +371,7 @@ elementReference.ReferenceContext.Add(
 string serialized = modelBus.SerializeReference(elementReference);
 ```
 
- 次の文字列から参照を取得するには
+次の文字列から参照を取得するには
 
 ```csharp
 ReferenceContext context = new ReferenceContext();
@@ -469,11 +479,12 @@ private const string INVALID_REF_FORMAT =
 ```
 
 ## <a name="actions-performed-by-the-modelbus-extension"></a>ModelBus 拡張機能により実行されるアクション
- 次の情報は必須ではありませんが、ModelBus を広く使用する場合に有用な場合があります。
 
- ModelBus 拡張機能は DSL ソリューションで次の変更を加えます。
+次の情報は必須ではありませんが、ModelBus を広く使用する場合に有用な場合があります。
 
- DSL 定義図を右クリックするとクリックして**Modelbus の有効化**、し、 **、ModelBus を使用するには、この DSL を有効にする**:
+ModelBus 拡張機能は DSL ソリューションで次の変更を加えます。
+
+DSL 定義図を右クリックするとクリックして**Modelbus の有効化**、し、 **、ModelBus を使用するには、この DSL を有効にする**:
 
 - 参照が追加、DSL プロジェクトで**Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0.dll**
 
@@ -483,7 +494,7 @@ private const string INVALID_REF_FORMAT =
 
 - 新しいテンプレート ファイルを追加すると、 **Dsl\GeneratedCode\ModelBusReferencesSerialization.tt**します。
 
-  Modelbusreference ドメイン プロパティの型を設定し、しプロパティを右クリックしてをクリックして**を有効にする ModelBusReference 固有プロパティ**:
+Modelbusreference ドメイン プロパティの型を設定し、しプロパティを右クリックしてをクリックして**を有効にする ModelBusReference 固有プロパティ**:
 
 - ドメイン プロパティにいくつかの CLR 属性が追加されます。 それらはプロパティ ウィンドウの Custom Attributes フィールドで確認できます。 **Dsl\GeneratedCode\DomainClasses.cs**、プロパティ宣言で属性を確認できます。
 
@@ -499,7 +510,7 @@ private const string INVALID_REF_FORMAT =
     ("Choose a model file", "Target model|*.target")]
   ```
 
-  DSL 定義図では、右クリックしたときにをクリックして**ModelBus の有効化**、選び**この DSL を ModelBus に公開**:
+DSL 定義図では、右クリックしたときにをクリックして**ModelBus の有効化**、選び**この DSL を ModelBus に公開**:
 
 - ソリューションに新しいプロジェクト `ModelBusAdapter` が追加されます。
 

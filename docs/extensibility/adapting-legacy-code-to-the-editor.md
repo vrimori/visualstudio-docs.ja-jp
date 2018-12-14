@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2b7e7052ab2d92e7518a57ad5587c29eabf550f3
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: e04ae5484b6c1fd5bcc56154c6cec23334e7ef8d
+ms.sourcegitcommit: 8cdc6e2ad2341f34bd6b02859a7c975daa0c9320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078601"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53307792"
 ---
 # <a name="adapt-legacy-code-to-the-editor"></a>エディターにレガシ コードを改変します。
 Visual Studio エディターには、既存のコード コンポーネントからアクセスできる多くの機能があります。 次の手順では、非 MEF コンポーネント、エディターの機能を使用する、VSPackage などを調整する方法を示します。 アダプターを使用して、マネージ コードとアンマネージの両方のコードで、エディターのサービスを取得する方法についても説明します。  
@@ -97,7 +97,7 @@ VsLocalCreateInstance(CLSID_VsTextBuffer, NULL, CLSCTX_INPROC_SERVER, IID_IVsTex
   
 ### <a name="to-get-an-ivxtextbuffer"></a>IVxTextBuffer を取得するには  
   
-1.  IVx のインターフェイスの定義は、 *VSEditor.h*ファイル、 *\..\VisualStudioIntegration\Common\Inc\\*の Visual Studio SDK インストールのフォルダー。  
+1.  IVx の定義\*インターフェイスは、 *VSEditor.h*ファイル、 *\..\VisualStudioIntegration\Common\Inc\\* Visual Studio のフォルダーSDK をインストールします。  
   
 2.  次のコードを使用してテキスト バッファーをインスタンス化、`IVsUserData->GetData()`メソッド。 次のコードで`pData`へのポインター、`IVsUserData`オブジェクト。  
   

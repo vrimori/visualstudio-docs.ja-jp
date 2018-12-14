@@ -1,5 +1,5 @@
 ---
-title: 予想&#39;-&#39; |Microsoft Docs
+title: '&#39;-&#39;が必要です |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/10/2018
 ms.locfileid: "44283276"
 ---
-# <a name="expected-39-39"></a>予想&#39;-&#39;
+# <a name="expected-39-39"></a>&#39;-&#39;が必要です
 正規表現をリテラルには、作成しようとしましたが、スラッシュ (/) の 1 つ含まれていません。 文字列リテラルが二重引用符内の文字として書き込まれると同様、正規表現リテラルは、スラッシュ (/) 文字のペア内の文字として表現されます。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  

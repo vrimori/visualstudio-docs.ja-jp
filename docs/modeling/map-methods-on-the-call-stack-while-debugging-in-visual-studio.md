@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でデバッグを行うときの呼び出し履歴に対するメソッドのマップ
+title: デバッグを行うときの呼び出し履歴に対するメソッドのマップ
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
@@ -30,15 +30,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e1d0139463f468ed6d909658bb143412dc122020
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c4597f1352e02033c55fcdced126e184f854b463
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49856185"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067399"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Visual Studio でデバッグを行うときの呼び出し履歴に対するメソッドのマップ
-デバッグ中に呼び出し履歴を視覚的にトレース コード マップを作成します。 コメントをマップに追加することでバグの発見に重点を置いてコードの動作を追跡できます。
+デバッグ中に呼び出し履歴を視覚的にトレースするためのコード マップを作成します。 コメントをマップに追加することでバグの発見に重点を置いてコードの動作を追跡できます。
 
  ![コード マップの呼び出し履歴を使用したデバッグ](../debugger/media/debuggermap_overview.png)
 
@@ -66,7 +66,7 @@ ms.locfileid: "49856185"
 
   コマンドとコード マップを使用する場合に使用できる操作の詳細については、次を参照してください。[参照およびコード マップの再配置](../modeling/browse-and-rearrange-code-maps.md)します。
 
-## <a name="MapStack"></a> 呼び出し履歴でマップします。
+## <a name="MapStack"></a>呼び出し履歴でマップを作成する
 
 1.  デバッグを開始します。 (キーボード: **F5**)
 
@@ -80,17 +80,17 @@ ms.locfileid: "49856185"
 
      デバッグを継続している間、マップは自動的に更新されます。 参照してください[次の呼び出し履歴でマップを更新](#UpdateMap)します。
 
-## <a name="MakeNotes"></a> コードに関するメモを作成します。
+## <a name="MakeNotes"></a>コードに関するコメントを追加する
  コードで何が起こっているかを追跡するためにコメントを追加します。 コメントで新しい行を追加するキーを押して**shift + return**します。
 
  ![コード マップの呼び出し履歴にコメントを追加](../debugger/media/debuggermap_addcomment.png)
 
-## <a name="UpdateMap"></a> 次の呼び出し履歴でマップを更新
+## <a name="UpdateMap"></a>次の呼び出し履歴でマップを更新する
  アプリを次のブレークポイントまで実行するか、関数にステップ インします。 マップに新しい呼び出し履歴が追加されます。
 
  ![次の呼び出し履歴でコード マップを更新](../debugger/media/debuggermap_addclearcallstack.png)
 
-## <a name="AddRelatedCode"></a> マップに関連するコードを追加します。
+## <a name="AddRelatedCode"></a>関連するコードをマップに追加する
  作成できたマップ - どのような横でしょうか。 C# または Visual Basic で作業している場合は、フィールド、プロパティ、およびコードで何が起こっているかを追跡するために、他の方法などの項目を追加します。
 
  メソッドのコード定義を表示するには、そのメソッドをダブルクリックするか、そのメソッドのショートカット メニューを使用します。 (キーボード: マップとキーを押してでメソッドを選択**F12**)
@@ -114,14 +114,14 @@ ms.locfileid: "49856185"
 
  ![呼び出し履歴コード マップのフィールドを使用するメソッド](../debugger/media/debuggermap_foundallreferences.png)
 
-## <a name="FindBugs"></a> マップを使用してバグを見つける
+## <a name="FindBugs"></a>マップを使用してバグを見つける
  コードの視覚化はバグをよりすばやく見つけるために役立ちます。 たとえば、描画プログラムでバグを調査するいるとします。 直線を描画して元に戻そうとしても、別の直線を描画するまで何も起こりません。
 
  そのため、`clear`、`undo`、および `Repaint` メソッドにブレークポイントを設定し、デバッグを開始して、次のようなマップを作成します。
 
  ![コード マップに別の呼び出し履歴を追加](../debugger/media/debuggermap_addpaintobjectcallstack.png)
 
- マップ上のすべてのユーザー ジェスチャーが、`Repaint` を除いて、`undo` を呼び出していることがわかります。 これは、理由を説明することがあります`undo`すぐに機能しません。
+ マップ上のすべてのユーザー ジェスチャーが、`Repaint` を除いて、`undo` を呼び出していることがわかります。 これが原因で `undo` がすぐに動作しない可能性があります。
 
  バグを修正してプログラムの実行を続けると、マップに `undo` から `Repaint` への新しい呼び出しが追加されます。
 

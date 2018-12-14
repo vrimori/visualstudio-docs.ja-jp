@@ -1,5 +1,5 @@
 ---
-title: '&#39;返す&#39;関数の外側でステートメント |Microsoft Docs'
+title: '&#39;return&#39;ステートメントが関数の外にあります |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49846519"
 ---
-# <a name="39return39-statement-outside-of-function"></a>&#39;返す&#39;関数の外側でステートメント
+# <a name="39return39-statement-outside-of-function"></a>&#39;return&#39;ステートメントが関数の外にあります
 使用した、`return`コードのグローバル スコープ内のステートメント。 `return`ステートメントは、関数の本体でのみ表示する必要があります。  
   
  持つ関数を呼び出す、`()`演算子は、式です。 すべての式の値であります。`return`関数によって返される値を指定するステートメントを使用します。 一般的な形式です。  
