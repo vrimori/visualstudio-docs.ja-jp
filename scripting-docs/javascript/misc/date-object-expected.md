@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49947642"
 ---
-# <a name="date-object-expected"></a>データ オブジェクトが必要です。
+# <a name="date-object-expected"></a>Date オブジェクトが必要です。
 呼び出そうとしたか、 **Date.prototype.toString**または**Date.prototype.valueOf**メソッド以外の型のオブジェクトを`Date`します。 呼び出し元のオブジェクト型でなければなりません`Date`します。 例えば:  
   
 ```JavaScript  

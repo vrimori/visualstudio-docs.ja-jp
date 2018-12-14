@@ -1,5 +1,5 @@
 ---
-title: 列挙子オブジェクトが必要です |Microsoft Docs
+title: Enumerator オブジェクトが必要です |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49935849"
 ---
-# <a name="enumerator-object-expected"></a>列挙子オブジェクトが必要です。
+# <a name="enumerator-object-expected"></a>Enumerator オブジェクトが必要です
 呼び出そうとしたか、 **Enumerator.prototype.atEnd、Enumerator.prototype.item、Enumerator.prototype.moveFirst、** または**Enumerator.prototype.moveNext**他の型のオブジェクトのメソッド`Enumerator`します。 呼び出し元のオブジェクト型でなければなりません`Enumerator`します。 この規則に違反するコードの例を次に示します。  
   
 ```JavaScript  
