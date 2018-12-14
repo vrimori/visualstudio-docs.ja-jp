@@ -511,7 +511,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 [ProvideMenuResource("MyPackage.ctmenu", 1, IconMappingFilename="IconMappings.csv")]  
 ```  
   
- **IconMappingFilename**が相対パスか、暗黙的にルート (上記の例) のように $PackageFolder$ または絶対パスは、次のように、環境変数が定義されているディレクトリを明示的にルートと *@"%UserProfile%\dir1\dir2\MyMappingFile.csv」*。  
+ **IconMappingFilename**が相対パスか、暗黙的にルート (上記の例) のように $PackageFolder$ または絶対パスは、次のように、環境変数が定義されているディレクトリを明示的にルートと *@%UserProfile%\dir1\dir2\MyMappingFile.csv」*。  
   
 ## <a name="how-do-i-port-a-project-system"></a>プロジェクト システムを移植する方法は?  
  **プロジェクトの ImageMonikers を指定する方法**  
