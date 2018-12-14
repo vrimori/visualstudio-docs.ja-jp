@@ -1,5 +1,5 @@
----
-title: '&#39; が t &#39; 続行 &#39;です。ループの外 |Microsoft ドキュメント'
+﻿---
+title: 'continue' をループの外に設定できません。 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,28 +27,28 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
 ms.locfileid: "24633302"
 ---
-# <a name="can39t-have-39continue39-outside-of-loop"></a>&#39; が t &#39; 続行 &#39;です。ループの外
-使用しようとする、**続行**ステートメント、ループの外にあります。 **続行**ステートメントは a: の本体内でのみ使用できます  
+# <a name="can39t-have-39continue39-outside-of-loop"></a>'continue' をループの外に設定できません。
+使用しようとする、**continue**ステートメント、ループの外にあります。 **continue**ステートメントは a: の本体内でのみ使用できます  
   
 -   `do-while`ループ  
   
 -   `while`ループ  
   
--   **ために**ループ  
+-   **for**ループ  
   
--   **用に/** ループします。  
+-   **for/in** ループ  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   確認、**続行**a: の本体内でステートメントが表示されます  
+-   **continue**ステートメントが以下の本文の中に現れることを確認してください：  
   
     -   `do-while`ループ  
   
     -   `while`ループ  
   
-    -   **ために**ループ  
+    -   **for**ループ  
   
-    -   **用に/** ループします。  
+    -   **for/in** ループ  
   
 ## <a name="see-also"></a>関連項目  
  [continue ステートメント](../../javascript/reference/continue-statement-javascript.md)   

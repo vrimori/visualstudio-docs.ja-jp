@@ -1,5 +1,5 @@
 ---
-title: 予想&#39;(&#39; (JavaScript) |Microsoft Docs
+title: '(' が必要です (JavaScript) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49942284"
 ---
-# <a name="expected-3939-javascript"></a>予想&#39;(&#39; (JavaScript)
+# <a name="expected-3939-javascript"></a>'(' が必要です (JavaScript)
 かっこのセット内の式を囲みますしようとしましたが、始めかっこが含まれていません。 一部の式は、かっこと右かっこのセット内で囲む必要があります。 次の例では、かっこの使用に注意してください。  
   
 ```JavaScript  

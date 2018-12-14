@@ -1,5 +1,5 @@
 ---
-title: 予想 &#39; catch &#39; |Microsoft ドキュメント
+title: 'catch' が必要です |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
 ms.locfileid: "24633792"
 ---
-# <a name="expected-39catch39"></a>予想 &#39; catch &#39;
+# <a name="expected-39catch39"></a>'catch' が必要です
 例外処理を使用した**を再試行してください**ブロックしますが、関連付けられている書き込めませんでした**キャッチ**ステートメントです。 例外処理メカニズムでは、内側に失敗し、例外が発生するときに実行する必要がありますしないコードと共に、コードに記述する必要があります、**再試行**ブロックします。 内から例外がスローされます、**を再試行してください**ブロックを使用して、**スロー**ステートメントでは、外部キャッチし、**を再試行してください**と 1 つ以上のブロック**をキャッチ**ステートメントです。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
