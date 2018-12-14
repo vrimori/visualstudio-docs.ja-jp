@@ -1,4 +1,4 @@
----
+﻿---
 title: 'return' ステートメントが関数の外にあります  |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017

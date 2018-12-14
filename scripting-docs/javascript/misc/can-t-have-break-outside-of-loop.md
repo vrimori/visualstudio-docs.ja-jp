@@ -1,4 +1,4 @@
----
+﻿---
 title: 'break' をループの外に設定できません |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017

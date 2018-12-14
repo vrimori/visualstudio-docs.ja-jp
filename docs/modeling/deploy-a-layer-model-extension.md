@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: feae82f3909be5816e025de21200acda20933d63
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 98697642135627173c5a6f31e90bf1dd1d0caeaf
+ms.sourcegitcommit: 8cdc6e2ad2341f34bd6b02859a7c975daa0c9320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49874619"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53307753"
 ---
 # <a name="deploy-a-layer-model-extension"></a>レイヤー モデル拡張機能の配置
 
@@ -49,7 +49,7 @@ Team Foundation Server のサーバーに通常 Visual Studio をインストー
 
 ### <a name="to-install-your-layer-extension-on-a-team-foundation-server-server"></a>Team Foundation Server サーバーで、レイヤーの拡張機能をインストールするには
 
-1.  コピー、 **.vsix**開発用コンピューターからファイルを Team Foundation Server (TFS) のコンピューターにします。
+1.  コピーします。*vsix*開発用コンピューターからファイルを Team Foundation Server (TFS) のコンピューターにします。
 
      VSIX ファイルを次のいずれかの場所に置きます。
 

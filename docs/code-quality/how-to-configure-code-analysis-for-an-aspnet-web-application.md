@@ -1,5 +1,5 @@
 ---
-title: '方法: Visual Studio での ASP.NET Web アプリケーションのコード分析を構成します。'
+title: ASP.NET Web アプリのコード分析を構成します。
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: c924a866f1bb34f41664fbf62e372b77f4d2620e
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 8b2776399e776e34126c3c000332aa267682b88f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178238"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065314"
 ---
 # <a name="how-to-configure-code-analysis-for-an-aspnet-web-application"></a>方法: ASP.NET Web アプリケーション用にコード分析を構成する
 

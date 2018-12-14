@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でマネージ コードのカスタム コード分析チェックイン ポリシーを実装します。
+title: マネージド コード用のカスタム コード分析チェックイン ポリシーの実装
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 47973228fbb4d2c7380e4b20537aaf301ed937db
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: 4c39ef2c70108eabb3c3d87dc7ab5af17dccd9f8
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44321100"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049867"
 ---
 # <a name="implement-custom-code-analysis-check-in-policies-for-managed-code"></a>マネージド コード用のカスタム コード分析チェックイン ポリシーを実装する
 

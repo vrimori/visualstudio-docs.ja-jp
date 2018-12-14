@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio SDK のインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 07/12/2018
@@ -31,7 +31,7 @@ Visual Studio のインストールが完了した後、Visual Studio SDK をイ
   
 ## <a name="install-the-visual-studio-sdk-from-a-solution"></a>ソリューションから Visual Studio SDK をインストールします。
 
- 先にVS SDK をインストールせずに拡張機能プロジェクトを含むソリューションを開いた場合には、**Visual Studio 拡張機能の開発**ワークロードをインストールするための**見つからない機能のインストール**ダイアログが表示されます。
+先にVS SDK をインストールせずに拡張機能プロジェクトを含むソリューションを開いた場合には、**Visual Studio 拡張機能の開発**ワークロードをインストールするための**見つからない機能のインストール**ダイアログが表示されます。
 
 ![拡張機能の開発をインストール](../extensibility/media/install-extension-development.png "拡張機能の開発のインストール")  
   
@@ -39,4 +39,4 @@ Visual Studio のインストールが完了した後、Visual Studio SDK をイ
 
  Visual Studio のワークロードやコンポーネントと同様に、 **Visual Studio 拡張機能の開発**ワークロード (ID: Microsoft.VisualStudio.Workload.VisualStudioExtension) をコマンドラインからインストールできます。 適切なコマンド ライン スイッチとワークロードまたはコンポーネントの識別子を特定する方法についての一般的な手順の詳細については **[コマンド ライン パラメーターを使用して、Visual Studio をインストールする](../install/use-command-line-parameters-to-install-visual-studio.md)** を参照してください。
   
- インストールされているVisual Studio のバージョンに一致する Visual Studio インストーラーを使用する必要があることに注意してください。 たとえば、Visual Studio Enterprise がコンピューターにインストールしてある場合は、Visual Studio Enterprise インストーラー(*vs_enterprise.exe*)を実行する必要があります 。
+インストールされているVisual Studio のバージョンに一致する Visual Studio インストーラーを使用する必要があることに注意してください。 たとえば、Visual Studio Enterprise がコンピューターにインストールしてある場合は、Visual Studio Enterprise インストーラー(*vs_enterprise.exe*)を実行する必要があります 。

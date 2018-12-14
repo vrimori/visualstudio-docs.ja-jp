@@ -1,5 +1,5 @@
 ---
-title: Visual Studio での設計向けの新機能
+title: 設計は新機能
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ee3c602dfc89aeafbfb82ae50771abc7ce66937e
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: ebe304cafa5e8ed4eae287750aeb8e2db02fbc31
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50966939"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062284"
 ---
 # <a name="whats-new-for-design-in-visual-studio"></a>Visual Studio での設計向けの新機能
 
@@ -40,7 +40,7 @@ ms.locfileid: "50966939"
 
 表示、ソリューションの現在のコード分析の結果ですぐに、変更の影響、ダイアグラムを保存するたびにします。 不要「依存関係の検証」コマンドの完了を待機する必要はありません。
 
-詳細については、次を参照してください。[このブログの投稿](https://blogs.msdn.microsoft.com/devops/2016/10/07/live-architecture-dependency-validation-in-visual-studio-15-preview-5/)します。
+詳細については、[このブログの投稿](https://blogs.msdn.microsoft.com/devops/2016/10/07/live-architecture-dependency-validation-in-visual-studio-15-preview-5/)を参照してください。
 
 ## <a name="uml-designers-have-been-removed"></a>UML デザイナー向けが削除されました
 
@@ -61,7 +61,7 @@ UML デザイナーは、このバージョンの Visual Studio Enterprise か�
 
 UML デザイナー向けの重要なユーザーの場合は、UML のニーズに代替のツールを決定するときに、Visual Studio 2015 またはそれ以前のバージョンを使用することもできます。
 
-詳細については、次を参照してください。[このブログの投稿](https://blogs.msdn.microsoft.com/devops/2016/10/14/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/)します。
+詳細については、[このブログの投稿](https://blogs.msdn.microsoft.com/devops/2016/10/14/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/)を参照してください。
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
@@ -71,7 +71,7 @@ Visual Studio 2017 は、いくつかのエディションで使用できます�
 
 |**機能**|**Enterprise edition**|**Professional edition**|**Community エディション**|
 |-|-|-|-|
-|**コード マップ**|はい|のみコード マップの読み取りをサポートするには、フィルタ リングのコード マップ、新しいジェネリック ノードを追加して、選択範囲から新しいの有向グラフを作成します。|-|
-|**依存関係図**|はい|のみ依存関係図の読み取りをサポートします。|のみ依存関係図の読み取りをサポートします。|
-|**グラフの directed** (DGML ダイアグラム)|はい|[はい]|はい|
-|**コード クローン**|はい|-|-|
+|**コード マップ**|[はい]|のみコード マップの読み取りをサポートするには、フィルタ リングのコード マップ、新しいジェネリック ノードを追加して、選択範囲から新しいの有向グラフを作成します。|-|
+|**依存関係図**|[はい]|のみ依存関係図の読み取りをサポートします。|のみ依存関係図の読み取りをサポートします。|
+|**グラフの directed** (DGML ダイアグラム)|[はい]|[はい]|[はい]|
+|**コード クローン**|[はい]|-|-|
