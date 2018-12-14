@@ -43,7 +43,7 @@ ms.locfileid: "49856653"
 - **this**に割り当てないでください。 プロパティまたはオブジェクトのインスタンスのメソッドにアクセスするには、ドット演算子(例: **circle.radius**)を使用してます 。
 
   > [!NOTE]
-  > ユーザーが作成した変数の名前を付けられません**この**; は、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]予約語。
+  > ユーザーが作成した変数には**this**を指定することはできません。**this**; は、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]予約語。
 
 ## <a name="see-also"></a>関連項目
 
