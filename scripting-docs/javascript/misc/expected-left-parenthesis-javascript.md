@@ -1,4 +1,4 @@
----
+﻿---
 title: '(' が必要です (JavaScript) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
