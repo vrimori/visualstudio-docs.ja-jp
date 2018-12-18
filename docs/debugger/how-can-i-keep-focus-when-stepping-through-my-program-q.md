@@ -1,6 +1,6 @@
 ---
-title: プログラムのステップ実行時にフォーカスを保持するには | Microsoft Docs
-ms.custom: ''
+title: アプリのステップ実行時にフォーカスを保持 |Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -22,21 +22,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 509e169c7ede0d96882fa2c97eaf7b2c6eb78afb
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
-ms.translationtype: MT
+ms.openlocfilehash: d140617aed2e6d5310587ec9388b107404398a95
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44280910"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064512"
 ---
-# <a name="how-can-i-keep-focus-when-stepping-through-my-program"></a>プログラムのステップ実行時にフォーカスを保持するには
+# <a name="how-can-i-keep-focus-when-stepping-through-my-app"></a>アプリのステップ実行時にフォーカスを保持する方法するでしょうか。
 ## <a name="description"></a>説明  
  プログラムで、ウィンドウのアクティブ化が正しく動作しません。 デバッガーでプログラムをステップ実行すると、プログラムがフォーカスを保持できないため、問題を再現できなくなります。 どのようにすればフォーカスを保持できますか。  
   
 ## <a name="solution"></a>ソリューション  
- コンピューターがもう 1 台ある場合は、リモート デバッグを行います。 リモート コンピューター上でプログラムを操作し、ホスト上でデバッガーを実行します。 詳細については、次を参照してください。[方法: リモート コンピューターを選択して](/previous-versions/visualstudio/visual-studio-2010/w8wtw2f3(v=vs.100))します。  
+ コンピューターがもう 1 台ある場合は、リモート デバッグを行います。 リモート コンピューター上でプログラムを操作し、ホスト上でデバッガーを実行します。 詳細については、「[方法 :リモート コンピューターを選択する](/previous-versions/visualstudio/visual-studio-2010/w8wtw2f3(v=vs.100))」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [ネイティブ コードのデバッグに関する Faq](../debugger/debugging-native-code-faqs.md)   
- [実行中のプロセスをアタッチします。](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
+## <a name="see-also"></a>参照  
+ [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)   
+ [実行中のプロセスにアタッチする](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

@@ -1,6 +1,6 @@
 ---
-title: C++ アクセス違反をデバッグする方法は? | Microsoft Docs
-ms.custom: ''
+title: C++ のアクセス違反をデバッグ |Microsoft Docs
+ms.custom: seodec18
 ms.date: 05/23/2017
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -20,14 +20,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b131ba4acf761a11aa9f39807d1db3202b021c9d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 6f463f4e14e5be90422f73b299cb927a54fcfcef
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31475351"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067263"
 ---
-# <a name="how-can-i-debug-a-c-access-violation"></a>C++ アクセス違反をデバッグする方法は?
+# <a name="how-can-i-debug-a-c-access-violation"></a>C++ へのアクセス違反をデバッグする方法は?
 ## <a name="problem-description"></a>問題の説明  
  プログラムでアクセス違反が発生します。 どのようにデバッグしたらいいのでしょうか。  
   
@@ -69,7 +69,7 @@ int main() {
   
  ![AccessViolationCPlus](../debugger/media/accessviolationcplus.png "AccessViolationCPlus")  
   
- ポインターがアクセス違反を引き起こした理由を特定できない場合、コードをトレースして、問題の原因となったポインターが正しく割り当てられているかどうかを確認します。  場合は、パラメーターとして渡される、正しく、渡され、誤ってを作成していないことを確認する、[コピーの浅い](http://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy)です。 値が変更されないことされている意図せずどこかに、プログラムでは、プログラムで別の場所で変更されていないかどうかを確認する対象のポインターに対してデータ ブレークポイントを作成して、確認します。 データ ブレークポイントの詳細については、 [Using Breakpoints](../debugger/using-breakpoints.md)のデータ ブレークポイントのセクションを参照してください。  
+ ポインターがアクセス違反を引き起こした理由を特定できない場合、コードをトレースして、問題の原因となったポインターが正しく割り当てられているかどうかを確認します。  パラメーターとして渡される場合は、正常に渡され、誤って[簡易コピー](http://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy)を作成していないことを確認します。 次に、問題のポインターに対してデータ ブレークポイントを作成し、プログラム内の別の場所で変更されていないことを確認することにより、値がプログラム内のどこかで意図せずに変更されていないことを検証します。 データ ブレークポイントの詳細については、 [Using Breakpoints](../debugger/using-breakpoints.md)のデータ ブレークポイントのセクションを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)

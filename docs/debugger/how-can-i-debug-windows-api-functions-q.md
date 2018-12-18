@@ -1,6 +1,6 @@
 ---
-title: Windows API 関数をデバッグするには | Microsoft Docs
-ms.custom: ''
+title: Windows API 関数のデバッグ |Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -23,19 +23,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7cc765c6da62973469280e97759fbab566ca6f37
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
-ms.translationtype: MT
+ms.openlocfilehash: 2959e5580cc227f18dbd84f88f83fbd5690aa7f4
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44281677"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065074"
 ---
 # <a name="how-can-i-debug-windows-api-functions"></a>Windows API 関数をデバッグするには
 NT シンボルを読み込んだ状態で Windows API 関数をデバッグするには、次の手順を実行する必要があります。  
   
 ### <a name="to-set-a-breakpoint-on-a-windows-api-function-with-nt-symbols-loaded"></a>NT シンボルを読み込んだ状態で Windows API 関数にブレークポイントを設定するには  
   
--   関数の名前と、関数が存在する DLL の名前を入力します。 32 ビット コードでは、関数名の装飾形式を使用します。 ブレークポイントを設定する**MessageBeep**、たとえば、次を入力する必要があります。  
+-   関数の名前と、関数が存在する DLL の名前を入力します。 32 ビット コードでは、関数名の装飾形式を使用します。 たとえば、**MessageBeep** にブレークポイントを設定するには、次のように入力します。  
   
     ```cpp
     {,,USER32.DLL}_MessageBeep@4  
@@ -43,6 +43,6 @@ NT シンボルを読み込んだ状態で Windows API 関数をデバッグす�
   
      装飾名を取得するには、次を参照してください。[装飾名の確認](https://msdn.microsoft.com/library/f79e2717-a4db-4d12-a689-69830cce2be0)します。  
   
-## <a name="see-also"></a>関連項目  
- [ネイティブ コードのデバッグに関する Faq](../debugger/debugging-native-code-faqs.md)   
+## <a name="see-also"></a>参照  
+ [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

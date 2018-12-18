@@ -1,6 +1,8 @@
 ---
-title: C# または VB プロジェクトを Visual Studio でのリモート デバッグ |Microsoft Docs
-ms.custom: remotedebugging
+title: リモート デバッグ、C#または VB プロジェクト |Microsoft Docs
+ms.custom:
+- remotedebugging"=
+- seodec18
 ms.date: 08/14/2017
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d6bd68f5e94e04cab01dcb7bafd7dcc3cf3c17d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 82873b29a173209739497087a4dfe5b293123e2c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49936125"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055661"
 ---
 # <a name="remote-debugging-a-c-or-visual-basic-project-in-visual-studio"></a>リモート Visual Studio で c# または Visual Basic プロジェクトのデバッグ
 別のコンピューターに展開されている Visual Studio アプリケーションをデバッグするには、インストールし、アプリをデプロイしたコンピューターでリモート ツールを実行、Visual Studio からリモート コンピューターに接続するプロジェクトを構成し、アプリを実行します。
@@ -39,14 +41,14 @@ ms.locfileid: "49936125"
 > [!NOTE]
 > プロキシを介して接続されている 2 台のコンピューター間でのデバッグはサポートされていません。 国の間での高待機時間またはダイヤルアップ、インターネットなどの低帯域幅接続経由またはインターネット経由でのデバッグは使用しないでと失敗は、ある非常に遅く。
   
-## <a name="download-and-install-the-remote-tools"></a>ダウンロードして、リモート ツールのインストール
+## <a name="download-and-install-the-remote-tools"></a>リモート ツールのダウンロードおよびインストール
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
 > [!TIP]
 > 一部のシナリオでは、ファイル共有からリモート デバッガーを実行する最も効率的なができます。 詳細については、次を参照してください。[ファイル共有からリモート デバッガーを実行](../debugger/remote-debugging.md#fileshare_msvsmon)します。
   
-## <a name="BKMK_setup"></a> リモート デバッガーを設定します。
+## <a name="BKMK_setup"></a> リモート デバッガーのセットアップ
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
@@ -56,7 +58,7 @@ ms.locfileid: "49936125"
 ## <a name="remote_csharp"></a> プロジェクトのリモート デバッグ
 デバッガーでは、Visual C# または Visual Basic のデスクトップ アプリケーションをリモート コンピューターに配置できませんが、次のようにリモートからそれらのデスクトップ アプリケーションをデバッグすることはできます。 次の手順では、という名前のコンピューターでデバッグする場合を前提と**MJO DL**の次の図に示すようにします。
   
-1. という名前の WPF プロジェクトの作成**MyWpf**します。  
+1. **MyWpf** という名前の WPF プロジェクトを作成します。  
   
 2. ブレークポイントをコード内の達しやすい任意の箇所に設定します。  
   
@@ -64,19 +66,19 @@ ms.locfileid: "49936125"
   
 3. ソリューション エクスプ ローラーでプロジェクトを右クリックし、選択**プロパティ**します。  
   
-4. **プロパティ**ページで、選択、**デバッグ**タブ。  
+4. **[プロパティ]** ページで、**[デバッグ]** タブをクリックします。  
   
     ![RemoteDebuggerCSharp](../debugger/media/remotedebuggercsharp.png "RemoteDebuggerCSharp")  
   
-5. 確認、**作業ディレクトリ**テキスト ボックスが空です。  
+5. **[作業ディレクトリ]** テキスト ボックスが空であることを確認してください。  
   
 6. 選択**リモート コンピューターの使用**、および種類**MJO-DL:4022**テキスト ボックスにします。 (4022 は、リモート デバッガー ウィンドウに表示されるポート番号です。 ポート番号をインクリメントで Visual Studio の各バージョン 2)。
   
-7. 必ず**ネイティブ コードのデバッグを有効にする**が選択されていません。  
+7. **[ネイティブ コードのデバッグを有効にする]** がオフであることを確認します。  
   
 8. プロジェクトをビルドします。  
   
-9. 同じパスであるリモート コンピューター上のフォルダーを作成、**デバッグ**Visual Studio コンピューター上のフォルダー: **\<ソース パス > \MyWPF\MyWPF\bin\Debug**します。  
+9. Visual Studio コンピューター上の **Debug** フォルダー (**\<ソース パス>\MyWPF\MyWPF\bin\Debug**) と同じパスのフォルダーをリモート コンピューター上に作成します。  
   
 10. 上で作成した実行可能ファイルを、Visual Studio コンピューターから、リモート コンピューター上の新しく作成したフォルダーにコピーします。
   
@@ -89,28 +91,28 @@ ms.locfileid: "49936125"
   
      ![RemoteDebuggerWindow](../debugger/media/remotedebuggerwindow.png "RemoteDebuggerWindow")  
   
-12. Visual Studio でデバッグを開始 (**デバッグ > [デバッグ開始]**、または**F5**)。  
+12. Visual Studio でデバッグを開始します (**[デバッグ] > [デバッグの開始]**、または **F5** キー)。  
   
 13. メッセージが表示されたら、リモート マシンに接続するネットワーク資格情報を入力します。  
   
      必要な資格情報は、ネットワークのセキュリティ構成によって異なります。 たとえば、ドメインのコンピューターで、ドメイン名とパスワードを入力できます。 非ドメイン コンピューターで、可能性がありますを入力する、マシン名と有効なユーザー アカウント名では、このような<strong>MJO-DL\name@something.com</strong>、正しいパスワードと共にします。
 
-     WPF アプリケーションのメイン ウィンドウが、リモート コンピューター上で開かれていることがわかります。
+     WPF アプリケーションのメイン ウィンドウがリモート コンピューター上で開いていることを確認できるはずです。
   
 14. 必要に応じては、ブレークポイントにヒットするアクションを実行します。 ブレークポイントがアクティブになっていることを確認できるはずです。 いない場合は、アプリケーションのシンボルが読み込まれていません。 Retry、およびシンボルの読み込みについての情報を取得しでそれらのトラブルシューティング方法がうまくいかない場合[Understanding シンボル ファイルおよび Visual Studio のシンボルの設定](https://blogs.msdn.microsoft.com/devops/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/)します。
   
 15. Visual Studio コンピューターで、実行がブレークポイントで停止したことを確認できるはずです。
   
-    アプリケーションで使用する必要があるすべての非コード ファイルがある場合は、Visual Studio プロジェクトに追加する必要があります。 追加ファイル用のプロジェクト フォルダーの作成 (で、**ソリューション エクスプ ローラー**、 をクリックして**追加 > 新しいフォルダー**)。 フォルダーにファイルを追加して (で、**ソリューション エクスプ ローラー**、] をクリックして**追加 > [既存項目の**のファイルを選択します)。 **プロパティ**ファイルごとに ページで、設定**出力ディレクトリにコピー**に**常にコピー**します。
+    アプリケーションで使用する必要があるすべての非コード ファイルがある場合は、Visual Studio プロジェクトに追加する必要があります。 追加のファイル用のプロジェクト フォルダーを作成します (**ソリューション エクスプローラー**で、**[追加] > [新しいフォルダー]** をクリックします)。 次にファイルをそのフォルダーに追加します (**ソリューション エクスプローラー**で、**[追加] > [既存の項目]** の順にクリックしてからファイルを選択します)。 ファイルごとの **[プロパティ]** ページで、**[出力ディレクトリにコピー]** を **[常にコピーする]** に設定します。
 
 ## <a name="set-up-debugging-with-remote-symbols"></a>リモート シンボルを使用したデバッグのセットアップ 
 
 [!INCLUDE [remote-debugger-symbols](../debugger/includes/remote-debugger-symbols.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
- [リモート デバッグ用の Windows ファイアウォールを構成します。](../debugger/configure-the-windows-firewall-for-remote-debugging.md)   
+ [Windows ファイアウォールをリモート デバッグ用に構成する](../debugger/configure-the-windows-firewall-for-remote-debugging.md)   
  [Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md)   
  [リモートの IIS コンピューター上の ASP.NET のリモート デバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)

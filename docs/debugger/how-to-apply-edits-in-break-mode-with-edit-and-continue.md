@@ -1,6 +1,6 @@
 ---
-title: '方法: エディット中断モードで編集を適用して続行 |Microsoft Docs'
-ms.custom: ''
+title: エディット コンティニュの中断モードで編集を適用 |Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -24,14 +24,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f45b2a64e7602d038a12f436019a8f99e352aa26
-ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
-ms.translationtype: MT
+ms.openlocfilehash: 51a69414a8b61368cbb492494187567554f98e4c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52257073"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063727"
 ---
-# <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>方法: エディット中断モードで編集を適用し、続行 (Visual Basic)
+# <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>方法:編集と中断モードで編集を適用し、続行 (Visual Basic)
 エディット コンティニュを使用すると、中断モードでコードを編集した後、コードを停止したり再起動したりせずにデバッグを継続できます。  
   
 デバッグ中にエディット コンティニュの使用に関する制限については、次を参照してください[サポートされているコードの変更 (C#および Visual Basic](../debugger/supported-code-changes-csharp.md)]。
@@ -40,13 +40,13 @@ ms.locfileid: "52257073"
   
 1.  以下のいずれかの操作を行って中断モードに入ります。  
   
-    -   コードでブレークポイントを設定し、選択**デバッグの開始**から、**デバッグ**メニューとアプリケーション、ブレークポイントにヒットするまで待ちます。  
+    -   コードにブレークポイントを設定した後、**[デバッグ]** メニューの **[デバッグ開始]** をクリックし、アプリケーションがブレークポイントにヒットするのを待ちます。  
   
          - または -  
   
-    -   デバッグを開始し、**すべて中断**から、**デバッグ**メニュー。  
+    -   デバッグを開始し、**[デバッグ]** メニューの **[すべて中断]** をクリックします。  
   
-         - または -  
+         または  
   
     -   例外が発生したときに選択**編集を有効にする**上、**例外処理アシスタント**します。  
   
@@ -57,10 +57,10 @@ ms.locfileid: "52257073"
     > [!NOTE]
     >  エディット コンティニュで許可されないコード変更を行おうとすると、編集部分の下に紫の波線が表示され、タスク一覧にタスクが表示されます。 この場合、無効なコード変更を元に戻さない限り、コードの実行を続行できません。  
   
-3.  **デバッグ** メニューのをクリックして**続行**実行を再開します。  
+3.  **[デバッグ]** メニューの **[続行]** をクリックして、コードの実行を再開します。  
   
      適用した編集がプロジェクトに取り込まれた状態でコードが実行されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サポートされているコード変更 (c# および Visual Basic](../debugger/supported-code-changes-csharp.md)   
  [エディット コンティニュ (Visual Basic)](../debugger/edit-and-continue-visual-basic.md)

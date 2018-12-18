@@ -1,6 +1,6 @@
 ---
-title: '方法: Visual Studio の展開時に、プロダクト キーを自動的に適用 |Microsoft Docs'
-ms.custom: ''
+title: 方法:Visual Studio 2015 をデプロイするときに、プロダクト キーを自動的に適用 |Microsoft Docs
+titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
@@ -14,53 +14,53 @@ caps.latest.revision: 11
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 5b2a8bf9a6bd2644e91104ef9a4cd631c490feee
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: HT
+ms.openlocfilehash: 32f8845790168aae784f3659f54c89e000681a15
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51751385"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050228"
 ---
 # <a name="how-to-automatically-apply-product-keys-when-deploying-visual-studio"></a>方法: Visual Studio の展開時にプロダクト キーを自動的に適用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio 2017 の最新ドキュメントについては、次を参照してください。 [Visual Studio の展開時に、プロダクト キーを自動的に適用](/visualstudio/install/automatically-apply-product-keys-when-deploying-visual-studio)します。
 
-Visual Studio 2015 の展開を自動化するために使用するスクリプトの一部として、プログラム的にプロダクト キーを適用することができます。 プロダクト キーは、Visual Studio のインストール中またはインストール完了後に、プログラム的にデバイスで設定できます。  
-  
-## <a name="apply-the-license-during-installation"></a>インストール中にライセンスを適用する  
- Visual Studio のセットアップ プロセス中にプロダクト キーを適用するには、/ProductKey パラメーターを使用します。 既にエンドユーザーにライセンスが付与されている状態で Visual Studio をインストールする場合は、このセットアップ パラメーターを /Silent パラメーターとともに使用できます。 /ProductKey パラメーターを使用するには、コマンド プロンプトを開きます。 セットアップ プログラム (vs_enterprise.exe や vs_professional.exe など) を実行し、ダッシュが含まれていないプロダクト キー (25 文字) を指定して /ProductKey パラメーターを設定します。  
-  
- 以下に例として、プロダクト キー AAAAABBBBBCCCCCDDDDDEEEEEEE を指定して Visual Studio 2015 Enterprise をインストールする場合のコマンドを示します。  
-  
- `vs_enterprise.exe [any other setup parameters] /ProductKey AAAAABBBBBCCCCCDDDDDDEEEEEE`  
-  
-## <a name="apply-the-license-after-installation"></a>インストール後にライセンスを適用する  
- ターゲット コンピューターにある storePID.exe ユーティリティをサイレント モードで使用して、インストールされているバージョンの Visual Studio をプロダクト キーでアクティブにすることができます。 StorePID.exe はユーティリティ プログラムで Visual Studio と共にインストールされる**\<ドライブ >:\\\Program Files (x86) \Microsoft Visual Studio 14.0\Common7\IDE\StorePID.exe**します。  
-  
- System Center エージェントまたは管理者特権でのコマンド プロンプトのいずれかを使用することにより、昇格された特権で storePID.exe を実行します。その際、プロダクト キー (ダッシュを含む) と Microsoft 製品コード (MPC) を後ろに付けます。 プロダクト キーには、絶対にダッシュ (-) を含めないください。  
-  
- `StorePID.exe [product key including the dashes] [MPC]`  
-  
- 以下に例として、プロダクト キー「AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE」を指定して、MPC が 07060 の Visual Studio 2015 Enterprise をインストールする場合のコマンド ラインを示します。  
-  
- `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\StorePID.exe AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE 07060`  
-  
- 次の表に、Visual Studio の各エディションの MPC コードを一覧します。  
-  
-|Visual Studio エディション|MPC|  
-|---------------------------|---------|  
-|Visual Studio Enterprise 2015|07060|  
-|Visual Studio Professional 2015|07062|  
-|Visual Studio Test Professional 2015|07066|  
-|Visual Studio Ultimate 2013|06181|  
-|Visual Studio Premium 2013|06191|  
-|Visual Studio Professional 2013|06177|  
-|Visual Studio Test Professional 2013|06194|  
-  
- プロダクト キーの取得方法の詳細については、「 [How to: Locate the Visual Studio Product Key](../install/how-to-locate-the-visual-studio-product-key.md)」を参照してください。  
-  
- StorePID.exe が正常にプロダクト キーを適用した場合は 0 を返します。 エラーが検出された場合は、1 ～ 6 の範囲の数値を返します。  
-  
-## <a name="see-also"></a>関連項目  
+Visual Studio 2015 の配置を自動化するために使用されるスクリプトの一部として、プログラム的にプロダクト キーを適用することができます。 プロダクト キーは、Visual Studio のインストール中またはインストール完了後に、プログラム的にデバイスで設定できます。
+
+## <a name="apply-the-license-during-installation"></a>インストール中にライセンスを適用する
+ Visual Studio のセットアップ プロセス中にプロダクト キーを適用するには、/ProductKey パラメーターを使用します。 既にエンドユーザーにライセンスが付与されている状態で Visual Studio をインストールする場合は、このセットアップ パラメーターを /Silent パラメーターとともに使用できます。 /ProductKey パラメーターを使用するには、コマンド プロンプトを開きます。 セットアップ プログラム (vs_enterprise.exe や vs_professional.exe など) を実行し、ダッシュが含まれていないプロダクト キー (25 文字) を指定して /ProductKey パラメーターを設定します。
+
+ 以下に例として、プロダクト キー AAAAABBBBBCCCCCDDDDDEEEEEEE を指定して Visual Studio 2015 Enterprise をインストールする場合のコマンドを示します。
+
+ `vs_enterprise.exe [any other setup parameters] /ProductKey AAAAABBBBBCCCCCDDDDDDEEEEEE`
+
+## <a name="apply-the-license-after-installation"></a>インストール後にライセンスを適用する
+ ターゲット コンピューターにある storePID.exe ユーティリティをサイレント モードで使用して、インストールされているバージョンの Visual Studio をプロダクト キーでアクティブにすることができます。 StorePID.exe はユーティリティ プログラムで、Visual Studio で以下にインストールされます。**\<ドライブ>:\\\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\StorePID.exe**
+
+ System Center エージェントまたは管理者特権でのコマンド プロンプトのいずれかを使用することにより、昇格された特権で storePID.exe を実行します。その際、プロダクト キー (ダッシュを含む) と Microsoft 製品コード (MPC) を後ろに付けます。 プロダクト キーには、絶対にダッシュ (-) を含めないください。
+
+ `StorePID.exe [product key including the dashes] [MPC]`
+
+ 以下に例として、プロダクト キー「AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE」を指定して、MPC が 07060 の Visual Studio 2015 Enterprise をインストールする場合のコマンド ラインを示します。
+
+ `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\StorePID.exe AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE 07060`
+
+ 次の表に、Visual Studio の各エディションの MPC コードを一覧します。
+
+|Visual Studio エディション|MPC|
+|---------------------------|---------|
+|Visual Studio Enterprise 2015|07060|
+|Visual Studio Professional 2015|07062|
+|Visual Studio Test Professional 2015|07066|
+|Visual Studio Ultimate 2013|06181|
+|Visual Studio Premium 2013|06191|
+|Visual Studio Professional 2013|06177|
+|Visual Studio Test Professional 2013|06194|
+
+ プロダクト キーの取得の詳細についてを参照してください[方法。Visual Studio プロダクト キーを検索](../install/how-to-locate-the-visual-studio-product-key.md)します。
+
+ StorePID.exe が正常にプロダクト キーを適用した場合は 0 を返します。 エラーが検出された場合は、1 ～ 6 の範囲の数値を返します。
+
+## <a name="see-also"></a>参照
  [Visual Studio のインストール](../install/install-visual-studio-2015.md)

@@ -1,6 +1,6 @@
 ---
-title: デバッガーは、ソース コードまたは逆アセンブルを表示できません |Microsoft ドキュメント
-ms.custom: ''
+title: デバッガーは、ソース コードまたは逆アセンブルを表示できません。
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 313a0e9e5727d776eaeb13f1c4cef8cf3d8d3bb9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: ea95a2bb4c29f8a23fd597173a10a838baca051c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31472699"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063967"
 ---
 # <a name="debugger-cannot-display-source-code-or-disassembly"></a>[デバッガーは、ソース コードまたは逆アセンブリを表示できません] ダイアログ ボックス
 このエラーには、次のメッセージが表示されます。  
@@ -31,12 +31,12 @@ ms.locfileid: "31472699"
   
  このエラー メッセージは、次のいくつかの理由によって発生します。  
   
--   逆アセンブリをサポートしない言語のデバッグ中に、ソース コードがない場所にあるブレークポイントにヒットした可能性があります。 開く、**ブレークポイント** ウィンドウで、ブレークポイントを見つけて削除ことです。  
+-   逆アセンブリをサポートしない言語のデバッグ中に、ソース コードがない場所にあるブレークポイントにヒットした可能性があります。 開く、**ブレークポイント**ウィンドウで、ブレークポイントを見つけて削除します。  
   
--   スクリプトをデバッグしている場合は、プログラムにスレッドが存在しないときにブレークポイントにヒットした可能性があります。 選択**ステップ**または**続行**から、**デバッグ** メニューのデバッグを再開します。  
+-   スクリプトをデバッグしている場合は、プログラムにスレッドが存在しないときにブレークポイントにヒットした可能性があります。 **[デバッグ]** メニューの **[ステップ]** または **[続行]** をクリックしてデバッグを再開します。  
   
 -   セキュリティ上の考慮から、デバッガーが、スタック、スレッド、レジスタ、またはその他のコンテキスト情報をデバッグ中のプログラムから読み取れない可能性があります。 これは、Web アプリケーションをデバッグしていて、仮想ディレクトリの適切なアクセス権がない場合によく発生します。 仮想ディレクトリのセキュリティを匿名に設定して再試行します。  
   
-## <a name="see-also"></a>関連項目  
- [Visual Studio でデバッグ](../debugger/index.md)[デバッガーの機能のツアー](../debugger/debugger-feature-tour.md)   
+## <a name="see-also"></a>参照  
+ [Visual Studio でのデバッグ](../debugger/index.md)[デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
  [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)

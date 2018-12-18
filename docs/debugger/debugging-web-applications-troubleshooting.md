@@ -1,6 +1,6 @@
 ---
-title: 'Web アプリケーションのデバッグ: トラブルシューティング |Microsoft ドキュメント'
-ms.custom: ''
+title: トラブルシューティング - web アプリのデバッグ |Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -19,22 +19,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3720dccfd6118aaacd122ea254618d0ce226cf8d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: b5f931a9942a89ae56836b5fbe91473b9dc9f568
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31470856"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063996"
 ---
-# <a name="debugging-web-applications-troubleshooting"></a>Web アプリケーションのデバッグ : トラブルシューティング
+# <a name="debugging-web-applications-troubleshooting"></a>Web アプリケーションのデバッグ:トラブルシューティング
 ここでは、エラーを解決するための一般的な手順について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法 : IIS のプロパティ設定を確認する](../debugger/how-to-verify-iis-property-settings.md)  
+ [方法: IIS のプロパティ設定を確認する](../debugger/how-to-verify-iis-property-settings.md)  
  デバッグするために IIS のプロパティを正しく設定する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Web アプリケーションのデバッグ : エラーおよびトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
+ [Web アプリケーションのデバッグ: エラーとトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
  トラブル シューティングとエラーの解決方法について説明します。  
   
  [Web アプリケーションとスクリプトのデバッグ](../debugger/debugging-web-applications-and-script.md)  

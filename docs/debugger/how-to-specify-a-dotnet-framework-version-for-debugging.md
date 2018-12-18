@@ -1,6 +1,6 @@
 ---
-title: '方法: デバッグで .NET Framework のバージョンの指定 |Microsoft Docs'
-ms.custom: ''
+title: デバッグで .NET Framework のバージョンの指定 |Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -18,14 +18,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15792a8ecbc538bdbf5516d480abde4903fbd8d3
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: 86289c9a93a0bb9e0f7756443d79f4a1a6dd38a6
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304885"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056009"
 ---
-# <a name="how-to-specify-a-net-framework-version-for-debugging-c-visual-basic-f"></a>方法: デバッグで .NET Framework のバージョンを指定 (C#、Visual Basic、 F#)
+# <a name="how-to-specify-a-net-framework-version-for-debugging-c-visual-basic-f"></a>方法:デバッグで .NET Framework のバージョンを指定 (C#、Visual Basic、 F#)
 
 Visual Studio デバッガーは、古いバージョンの Microsoft デバッグをサポートしている[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]と現在のバージョン。 Visual Studio からアプリケーションを起動すると、デバッグしているアプリケーションの [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] バージョンは正しく識別されます。 ただし場合は、アプリケーションは既に実行してデバッグを開始を使用して**にアタッチ**、デバッガーは常にできないことがありますの以前のバージョンを識別するために、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。 この場合、次のようなエラー メッセージが出力されます。  
 
@@ -47,7 +47,7 @@ The debugger has made an incorrect assumption about the [!INCLUDE[dnprdnshort](.
   
 3. **レジストリ エディター**で、[HKEY_LOCAL_MACHINE] フォルダーを開きます。  
   
-4. HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine\\{449EC4CC-30D2-4032-9256-EE18EB41B62B} に移動します。  
+4. 移動。HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine\\{449ec4cc-30d2-4032-9256-ee18eb41b62b}  
   
     このキーが存在しない場合、HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine を右クリックし、**[新しいキー]** をクリックします。 新しいキーの名前`{449EC4CC-30D2-4032-9256-EE18EB41B62B}`します。  
   
@@ -57,7 +57,7 @@ The debugger has made an incorrect assumption about the [!INCLUDE[dnprdnshort](.
   
 6. **[CLRVersionForDebugging]** をダブルクリックします。  
   
-7. **[文字列の編集]** ボックスの **[値]** ボックスに、.NET Framework のバージョン番号を入力します。 たとえば、「V1.1.4322」などです。  
+7. **[文字列の編集]** ボックスの **[値]** ボックスに、.NET Framework のバージョン番号を入力します。 次に例を示します。V1.1.4322  
   
 8. **[OK]** をクリックします。  
   

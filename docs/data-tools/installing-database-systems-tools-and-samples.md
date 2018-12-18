@@ -1,5 +1,5 @@
 ---
-title: Visual Studio データベースの互換性
+title: データベースの互換性
 ms.date: 09/06/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6cb532ee53e61842eb9f36ae0ecd437ef8fe0e0f
-ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
-ms.translationtype: MT
+ms.openlocfilehash: ddb950fd916df6ff514e13435765b118e1e579dd
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37089196"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049561"
 ---
-# <a name="compatible-database-systems-for-visual-studio"></a>Visual Studio の互換性のあるデータベース システム
+# <a name="compatible-database-systems-for-visual-studio"></a>Visual Studio 向けの互換性のあるデータベース システム
 
 Visual Studio でのデータに接続されたアプリケーションを開発するには、通常、ローカル開発用コンピューター、データベース システムをインストールし、アプリケーションとデータベースに展開、運用環境の準備ができたら。 Visual Studio では、コンピューターに SQL Server Express LocalDB をインストールの一部として、**データ ストレージと処理**ワークロード。 LocalDB インスタンスは、迅速かつ簡単にデータに接続されたアプリケーションを開発するために便利です。
 
@@ -58,4 +58,4 @@ Firebird は、オープン ソースの SQL データベースのシステム�
 ## <a name="see-also"></a>関連項目
 
 - [Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)
-- [バージョンとエディションの SQL Server とそのコンポーネントを確認する方法](http://support.microsoft.com/kb/321185)
+- [SQL Server とそのコンポーネントのバージョンとエディションを確認する方法](http://support.microsoft.com/kb/321185)

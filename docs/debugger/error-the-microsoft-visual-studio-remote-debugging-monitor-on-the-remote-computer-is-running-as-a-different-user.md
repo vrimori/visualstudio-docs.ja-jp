@@ -1,6 +1,7 @@
 ---
-title: 'エラー: 別のユーザーとして、Microsoft Visual Studio リモート デバッグ モニター、リモート コンピューターでが実行されている |Microsoft ドキュメント'
-ms.custom: ''
+title: エラー :リモート コンピューター上の Microsoft Visual Studio リモート デバッグ モニターは、別のユーザーで実行しています。
+titleSuffix: ''
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: troubleshooting
@@ -21,14 +22,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e2bdc731b65a8d451b6882914e8bed1abca2139b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 1cb477cf852d0e07bf14f344b3dc27b20a56de59
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31482023"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067734"
 ---
-# <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user"></a>エラー : リモート コンピューター上の Microsoft Visual Studio リモート デバッグ モニターは、別のユーザーで実行しています。
+# <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user"></a>エラー :リモート コンピューター上の Microsoft Visual Studio リモート デバッグ モニターは、別のユーザーで実行しています。
 リモート デバッグを行おうとすると、次のエラー メッセージが表示される場合があります。  
   
  リモート コンピューター上の Microsoft Visual Studio リモート デバッグ モニターは、別のユーザーで実行しています。  
@@ -37,11 +38,11 @@ ms.locfileid: "31482023"
  このメッセージは、認証なしモードでのデバッグ中に、msvsmon を起動したユーザーが Visual Studio を実行中のユーザーと一致しない場合に発生します。  
   
 ## <a name="solution"></a>ソリューション  
- 最も安全で適切な解決策は、Visual Studio と同じユーザー アカウントでリモート デバッグ モニター (msvsmon.exe) を実行することです。 他のアカウントでリモート デバッグ モニターを実行することができますができない場合、**任意のユーザーにデバッグを許可する**、リモート デバッグ モニターで選択したオプション**オプション** ダイアログ ボックス。  
+ 最も安全で適切な解決策は、Visual Studio と同じユーザー アカウントでリモート デバッグ モニター (msvsmon.exe) を実行することです。 これができない場合は、リモート デバッグ モニターの **[オプション]** ダイアログ ボックスの **[すべてのユーザーにデバッグを許可する]** をオンにして他のアカウントでリモート デバッグ モニターを実行します。  
   
 > [!CAUTION]
->  他のユーザーに接続する許可を与えると、誤ったリモート デバッグ セッションに接続してしまう可能性があります。 デバッグ**認証なし**モードがセキュリティで保護することはありませんし、注意して使用する必要があります。
+>  他のユーザーに接続する許可を与えると、誤ったリモート デバッグ セッションに接続してしまう可能性があります。 **認証なし**モードでのデバッグは決して安全ではなく、使用には注意が必要です。
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)   
  [Remote Debugging](../debugger/remote-debugging.md)

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio での entity Framework ツール
+title: Entity Framework のツール
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1b06b573-84aa-4458-b3f5-e238df47bf45
@@ -10,21 +10,22 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: bbffe18b108beb230a77da38df99a7100e542a27
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 14a0e5b6b746356e38dfc71c26f53ced5a470e34
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49819096"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066804"
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio での entity Framework ツール
+
 Entity Framework とは、.NET 開発者は、ドメイン固有オブジェクトを使用してリレーショナル データを操作できるオブジェクト リレーショナル マッピング テクノロジです。 開発者が通常記述しなければならないデータアクセス コードの多くが不要になります。 Entity Framework は、.NET アプリケーションの新しいテクノロジをモデリング推奨オブジェクト リレーショナル マッピング (ORM です)。
 
-Entity Framework ツールは、Entity Framework (EF) アプリケーションを構築するために設計されています。 Entity Framework の完全なドキュメントについてはこちら: [EF Core と EF 6](/ef/)します。
+Entity Framework ツールは、Entity Framework (EF) アプリケーションを構築するために設計されています。 Entity Framework の完全なドキュメントは、ここでは。[EF Core と EF 6](/ef/)します。
 
 Entity Framework のツールで作成できます、*概念モデル*既存のデータベースのグラフィカルに視覚化し、概念モデルを編集します。 また、グラフィカルな概念モデルを作成し、そのモデルをサポートするデータベースを生成することもできます。 いずれの場合も、基になるデータベースの変更時には、モデルを自動的に更新できるだけではなく、アプリケーションのオブジェクトレイヤー コードも自動生成できます。 データベースの生成とオブジェクトレイヤー コードの生成はカスタマイズ可能です。
 
-一部として、Entity Framework ツールがインストールされている、**データ ストレージと処理**Visual Studio インストーラーにワークロード。 個々 のコンポーネントとしてインストールすることも、 **Sdk、ライブラリ、およびフレームワーク**カテゴリ。
+一部として、Entity Framework ツールがインストールされている、**データ ストレージと処理**Visual Studio インストーラーにワークロード。 下にある個々 のコンポーネントとしてインストールすることも、 **Sdk、ライブラリ、およびフレームワーク**カテゴリ。
 
 Visual Studio で Entity Framework のツールを構成する特定のツールを次に示します。
 
@@ -37,7 +38,7 @@ Visual Studio で Entity Framework のツールを構成する特定のツール
 - 使用することができます、**モデルの更新ウィザード**を基になるデータベースの変更を行ったときに、概念モデル、ストレージ モデル、およびマッピングを更新します。
 
   > [!NOTE]
-  >  Visual Studio 2010 以降では、Entity Framework ツールがサポートしない[!INCLUDE[ss2k](../data-tools/includes/ss2k_md.md)]します。
+  > Visual Studio 2010 以降では、Entity Framework ツールがサポートしない[!INCLUDE[ss2k](../data-tools/includes/ss2k_md.md)]します。
 
 ツールを生成または変更、 *.edmx*ファイル。 これは、 *.edmx*ファイルには、概念モデル、ストレージ モデル、およびそれらの間のマッピングについて説明する情報が含まれています。 詳細については、次を参照してください。 [EDMX](https://docs.microsoft.com/ef/ef6/)します。
 
@@ -45,7 +46,7 @@ Visual Studio で Entity Framework のツールを構成する特定のツール
 
 ## <a name="related-topics"></a>関連トピック
 
-| タイトル | 説明 |
+| Title | 説明 |
 | - | - |
 | [ADO.NET Entity Framework](/dotnet/framework/data/adonet/ef/index) | 使用する方法について説明します[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]ツールが[!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)]アプリケーションを作成します。 |
 | [Entity Data Model](/dotnet/framework/data/adonet/entity-data-model) | 上に構築されたアプリケーションによって使用されるデータを操作するための情報とリンクを示します[!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)]します。 |

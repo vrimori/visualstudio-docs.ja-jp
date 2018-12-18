@@ -1,6 +1,6 @@
 ---
-title: Visual Studio デバッガーでブレークポイントをトラブルシューティングする |Microsoft Docs
-ms.custom: ''
+title: デバッガーでブレークポイントをトラブルシューティングする |Microsoft Docs
+ms.custom: seodec18
 ms.date: 01/23/2018
 ms.technology: vs-ide-debug
 ms.topic: troubleshooting
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b285fd77c7e1ee25e6c82fc3f8c0ce48b4429e8b
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
-ms.translationtype: MT
+ms.openlocfilehash: e27d9dee1713b8d9e748ad13d75d809f2057f24a
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39155400"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052852"
 ---
 # <a name="troubleshoot-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでブレークポイントをトラブルシューティングします。
 
@@ -24,7 +24,7 @@ ms.locfileid: "39155400"
 
 次の 2 つのセクションでは、著名な警告とその解決方法について説明します。 
 
-### <a name="no-symbols-have-been-loaded-for-this-document"></a>「シンボルが読み込まれていないこのドキュメントの」 
+### <a name="no-symbols-have-been-loaded-for-this-document"></a>"このドキュメントのシンボルが読み込まれていません" 
 
 移動して、**モジュール**ウィンドウ (**デバッグ** > **Windows** > **モジュール**) し、モジュールかどうかを確認読み込まれます。  
 * モジュールが読み込まれている場合は、確認、**シンボルの状態**シンボルが読み込まれているかどうかを表示する列。 

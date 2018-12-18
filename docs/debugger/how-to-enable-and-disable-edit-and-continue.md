@@ -1,6 +1,6 @@
 ---
-title: '方法: 有効にして、エディット コンティニュを無効にする (C#、VB、C++) |Microsoft Docs'
-ms.custom: ''
+title: 方法:有効にして、エディット コンティニュを無効にする |Microsoft Docs
+ms.custom: seodec18
 ms.date: 10/04/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -27,16 +27,16 @@ manager: douge
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: f0bf354f64be9c03a64beadcffdd7ff1138218df
-ms.sourcegitcommit: c5e72875206b8c5737c29d5b1ec7b86eec747303
-ms.translationtype: MT
+ms.openlocfilehash: 0b5fbc7ee0f2d85c72ccda75bc2e8531419d52e3
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382749"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051388"
 ---
-# <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>方法: 有効にして、エディット コンティニュを無効にする (C#、VB、C++)
+# <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>方法:有効にして、エディット コンティニュを無効にする (C#、VB、C++)
 
-無効にするか、有効にする**エディット コンティニュ**Visual Studio で**オプション**デザイン時にダイアログ ボックス。 **エディット コンティニュ**デバッグでのみ動作を構築します。 詳細については、次を参照してください。[エディット コンティニュ](../debugger/edit-and-continue.md)します。 
+無効にするか、有効にする**エディット コンティニュ**Visual Studio で**オプション**デザイン時にダイアログ ボックス。 **エディット コンティニュ**はデバッグ ビルドでのみ動作します。 詳細については、「[エディット コンティニュ](../debugger/edit-and-continue.md)」を参照してください。 
   
 ネイティブの c++**エディット コンティニュ**を使用する必要があります、`/INCREMENTAL`オプション。 C++ では、機能要件の詳細については、この参照してください[ブログの投稿](https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/)と[エディット コンティニュ (Visual C)](../debugger/edit-and-continue-visual-cpp.md)します。
   
@@ -50,11 +50,11 @@ ms.locfileid: "49382749"
     >  IntelliTrace が有効になっている場合に、IntelliTrace イベントと呼び出し情報の両方を収集すると、エディット コンティニュが無効になります。 詳細については、次を参照してください。 [IntelliTrace](../debugger/intellitrace.md)します。
     
 1.  C++ コードのことを確認します**を有効にするネイティブ エディット コンティニュ**を選択すると、し、追加のオプションを設定します。
-    - **変更を適用 (ネイティブのみ) をコンティニュに**  
+    - **[コンティニュに変更を適用する (ネイティブのみ)]**  
       
       選択した場合、Visual Studio は自動的にコンパイルし、中断状態からデバッグを続行する場合は、コードの変更を適用します。 それ以外の場合を使用して変更を適用できます**デバッグ** > **コード変更を適用**します。  
       
-    - **古いコード (ネイティブのみ) に関する警告を表示します。**  
+    - **[古いコードの警告を表示する (ネイティブのみ)]**  
       
       選択した場合、古いコードに関する警告を示します。 
   

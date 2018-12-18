@@ -1,6 +1,6 @@
 ---
-title: 'Web アプリケーションのデバッグ: エラーおよびトラブルシューティング |Microsoft ドキュメント'
-ms.custom: ''
+title: Web アプリ - エラーのデバッグとトラブルシューティング
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -28,34 +28,34 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 81d9ba4a2e37124f8d8b3641a129d09da1728118
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: b089e3d095131e998729dc5d7a270d859673b2c7
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31471519"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053652"
 ---
-# <a name="debugging-web-applications-errors-and-troubleshooting"></a>Web アプリケーションのデバッグ : エラーおよびトラブルシューティング
+# <a name="debugging-web-applications-errors-and-troubleshooting"></a>Web アプリケーションのデバッグ: エラーとトラブルシューティング
 Web アプリケーションのデバッグを試行した場合に、次のエラーが発生することがあります。  
   
 -   [トラブルシューティング](../debugger/debugging-web-applications-troubleshooting.md)  
   
--   [エラー : サイトは IP アドレスを使用しています](../debugger/error-site-uses-ip-address.md)  
+-   [エラー: サイトは IP アドレスを使用しています](../debugger/error-site-uses-ip-address.md)  
   
--   [エラー: IIS 管理サービスが応答しないため、セキュリティ チェックに失敗しました。](../debugger/error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md)  
+-   [エラー: IIS 管理サービスが応答しないため、セキュリティ チェックに失敗しました](../debugger/error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md)  
   
--   [エラー: ASP .NET がインストールされていません。](../debugger/error-aspnet-not-installed.md)  
+-   [エラー: ASP.NET がインストールされていません](../debugger/error-aspnet-not-installed.md)  
   
--   [エラー: Windows 統合認証が無効になっているため、デバッグに失敗しました。](../debugger/error-debugging-failed-because-integrated-windows-authentication-is-not-enabled.md)  
+-   [エラー: Windows 統合認証が無効になっているため、デバッグに失敗しました](../debugger/error-debugging-failed-because-integrated-windows-authentication-is-not-enabled.md)  
   
--   [エラー : Web サーバーは正しく構成されていません](../debugger/error-the-web-server-is-not-configured-correctly.md)  
+-   [エラー: Web サーバーは正しく構成されていません](../debugger/error-the-web-server-is-not-configured-correctly.md)  
   
 -   [エラー: Web サーバーが制限され、デバッグの有効化に必要な DEBUG 動詞をブロックしています](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)  
   
--   [エラー: Web サービスのデバッグ中にタイムアウトになりました。](../debugger/error-timeout-while-debugging-web-services.md)  
+-   [エラー: Web サービスのデバッグ中にタイムアウトになりました](../debugger/error-timeout-while-debugging-web-services.md)  
   
 -   [エラー: Web サーバーでデバッグを開始できません](../debugger/error-unable-to-start-debugging-on-the-web-server.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [Web アプリケーションとスクリプトのデバッグ](../debugger/debugging-web-applications-and-script.md)

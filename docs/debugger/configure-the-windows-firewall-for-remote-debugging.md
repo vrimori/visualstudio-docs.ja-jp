@@ -1,6 +1,5 @@
 ---
 title: リモート デバッグ用の Windows ファイアウォールの構成 |Microsoft Docs
-ms.custom: ''
 ms.date: 10/31/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -10,18 +9,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d4e4ccc09d8919260b1634fd02790c1bf5b10636
-ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
-ms.translationtype: HT
+ms.openlocfilehash: da505c6193dd7d05cc10a8e7cec8383f8ee3adfc
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750937"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058598"
 ---
 # <a name="configure-windows-firewall-for-remote-debugging"></a>リモート デバッグ用の Windows ファイアウォールを構成します。
 
 Windows ファイアウォールによって保護されて、ネットワーク上のリモート デバッグを許可するようにファイアウォールを構成する必要があります。 Visual Studio とリモート デバッグ ツールがインストールまたはスタートアップ中に適切なファイアウォール ポートを開くしようが、する可能性がありますもポートを開くか、手動でアプリを許可する必要があります。 
 
-このトピックでは、Windows 10、8 または 8.1、および 7 でのリモート デバッグを有効にするのには、Windows ファイアウォールを構成する方法を説明します。Windows Server 2012 R2、2012、および 2008 R2 コンピューターを選択します。 Visual Studio とリモート コンピューターは、同じオペレーティング システムが実行されている必要はありません。 たとえば、Visual Studio コンピューターが Windows 10 を実行でき、リモート コンピューターが Windows Server 2012 R2 を実行できます。      
+このトピックでは、Windows 10、8 または 8.1、および 7 でのリモート デバッグを有効にするのには、Windows ファイアウォールを構成する方法を説明します。Windows Server 2012 R2、2012、および 2008 R2 コンピューターを選択します。 Visual Studio とリモート コンピューターは、同じオペレーティング システムが実行されている必要はありません。 たとえば Visual Studio コンピューターで Windows 10 を実行し、リモート コンピューターで Windows Server 2012 R2 を実行することができます。      
   
 >[!NOTE]
 >別のオペレーティング システムと Windows の以前のバージョンの Windows ファイアウォールの構成手順は若干異なります。 Windows 8 または 8.1、Windows 10 および Windows Server 2012 の設定が、word を使用して*アプリ*Windows 7 および Windows Server 2008 は、word を使用して、*プログラム*します。  
@@ -56,23 +55,23 @@ Visual Studio とリモート デバッガーをインストールまたはス�
 
 |**ポート**|**着信/発信**|**プロトコル**|**説明**|   
 |-|-|-|-|
-|4022|着信|TCP|For VS 2017。 Visual Studio バージョンごとに 2 ポート数単位です。 詳細については、次を参照してください。 [Visual Studio リモート デバッガーのポート割り当て](../debugger/remote-debugger-port-assignments.md)します。|  
-|4023|着信|TCP|For VS 2017。 Visual Studio バージョンごとに 2 ポート数単位です。 このポートはのみに使用されるリモート デバッグ、リモート デバッガーの 64 ビット版から 32 ビット プロセスです。 詳細については、次を参照してください。 [Visual Studio リモート デバッガーのポート割り当て](../debugger/remote-debugger-port-assignments.md)します。| 
+|4022|着信|TCP|VS 2017 の場合。 Visual Studio バージョンごとに 2 ポート数単位です。 詳しくは、「[Visual Studio remote debugger port assignments](../debugger/remote-debugger-port-assignments.md)」(Visual Studio リモート デバッガーのポートの割り当て) をご覧ください。|  
+|4023|着信|TCP|VS 2017 の場合。 Visual Studio バージョンごとに 2 ポート数単位です。 このポートはのみに使用されるリモート デバッグ、リモート デバッガーの 64 ビット版から 32 ビット プロセスです。 詳しくは、「[Visual Studio remote debugger port assignments](../debugger/remote-debugger-port-assignments.md)」(Visual Studio リモート デバッガーのポートの割り当て) をご覧ください。| 
 |3702|発信|UDP|(省略可能)リモート デバッガー探索に必要です。|    
   
 選択した場合**マネージ互換モードを使用して****ツール** > **オプション** > **デバッグ**を開きますこれらの追加のリモート デバッガー ポート。 マネージ互換モードのデバッガーには、レガシ、Visual Studio 2010 バージョンのデバッガーができるようにします。 
 
 |**ポート**|**着信/発信**|**プロトコル**|**説明**|  
 |-|-|-|-|  
-|135、139、445|発信|TCP|必須。|  
-|137、138|発信|UDP|必須。|  
+|135、139、445|発信|TCP|必須です。|  
+|137、138|発信|UDP|必須です。|  
 
 ドメイン ポリシーでは、ネットワーク通信を IPSec 経由で実行する必要がある場合は、Visual Studio とリモート コンピューターの両方で追加のポートを開く必要があります。 リモートの IIS web サーバーでデバッグするには、リモート コンピューター上のポート 80 を開きます。
 
 |**ポート**|**着信/発信**|**プロトコル**|**説明**|  
 |-|-|-|-|  
 |500、4500|発信|UDP|ドメイン ポリシーで、ネットワーク通信を IPSec 経由で実行する必要がある場合は、必須。|  
-|80|発信|TCP|Web サーバーのデバッグに必要です。|
+|80|発信|TCP|Web サーバーのデバッグに必要。|
 
 Windows ファイアウォール経由の特定のアプリを許可するのを参照してください。 [Windows ファイアウォール経由のリモート デバッグ構成](#configure-remote-debugging-through-windows-firewall)します。 
 
