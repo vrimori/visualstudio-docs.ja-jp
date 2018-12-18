@@ -1,6 +1,6 @@
 ---
-title: '方法: COM クライアントとサーバーが RPC デバッグを使用してデバッグ |Microsoft ドキュメント'
-ms.custom: ''
+title: COM クライアントおよびサーバーの RPC デバッグを使用したデバッグ |Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -27,25 +27,25 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1404d81502aaa0579c20511f3eecafa86607df0d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 6c5a6b2dc47e1d0e6c52df3cc77fc5b90f4d75e3
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31473739"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049024"
 ---
-# <a name="how-to-debug-com-clients-and-servers-using-rpc-debugging"></a>方法 : RPC デバッグを使用して COM クライアントおよびサーバーをデバッグする
+# <a name="how-to-debug-com-clients-and-servers-using-rpc-debugging"></a>方法: RPC デバッグを使用して COM クライアントおよびサーバーをデバッグする
 リモート プロシージャ コール (RPC: Remote Procedure Call) デバッグを使用して、COM クライアント/サーバー アプリケーションをデバッグできます。 このデバッグを行うには、あらかじめ RPC デバッグを有効にする必要があります。 RPC デバッグを有効にすると、ステップ実行でクライアントからサーバーを呼び出すときに、デバッガーがサーバーにアタッチし、コードのデバッグができるようになります。 デバッガーをアタッチすることにより、クライアントおよびサーバーのどちらのプロセスでも、デバッガーのすべての機能を使用できます。  
   
 ### <a name="to-enable-rpc-debugging"></a>RPC デバッグを有効にするには  
   
 1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **オプション** ダイアログ ボックスをクリックして、**デバッグ**フォルダーです。  
+2.  **[オプション]** ダイアログ ボックスで、**[デバッグ]** フォルダーをクリックします。  
   
-3.  クリックして、**ネイティブ**ページ。  
+3.  **[ネイティブ]** ページをクリックします。  
   
-4.  選択、 **RPC デバッグ**チェック ボックスをオンします。  
+4.  **[RPC デバッグ]** チェック ボックスをオンにします。  
   
     > [!NOTE]
     >  RPC 呼び出しをデバッグするには、管理者またはパワー ユーザーの権限が必要です。  
@@ -53,6 +53,6 @@ ms.locfileid: "31473739"
     > [!NOTE]
     >  Microsoft Windows Vista が実行されているリモート サーバーへの RPC ステップ実行は、そのリモート サーバーにネイティブ デバッガーがアタッチされている場合のみ機能します。 それ以外の場合、エラー メッセージが表示されることなく RPC 呼び出しが失敗します。 何らかの方法で RPC 呼び出しに成功したとしても、RPC 呼び出しへのステップ インは正常に機能しません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [COM サーバーおよび COM コンテナーのデバッグ](../debugger/com-server-and-container-debugging.md)  
- [Visual Studio でデバッグ](../debugger/index.md)[デバッガーの機能のツアー](../debugger/debugger-feature-tour.md)
+ [Visual Studio でのデバッグ](../debugger/index.md)[デバッガー機能ツアー](../debugger/debugger-feature-tour.md)

@@ -1,6 +1,8 @@
 ---
-title: リモートの IIS コンピューター上の ASP.NET のリモート デバッグ |Microsoft Docs
-ms.custom: remotedebugging
+title: IIS コンピューター上の ASP.NET のリモート デバッグ
+ms.custom:
+- remotedebugging
+- seodec18
 ms.date: 05/21/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 1a13488f632e3cf1f244449b2a7a4dbfd7869428
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: HT
+ms.openlocfilehash: 336f34c1229e07eb3734f9d278070e5994957d16
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49826509"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065560"
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>リモートの IIS コンピューター上の ASP.NET のリモート デバッグ
 IIS に配置されている ASP.NET アプリケーションをデバッグするには、インストールし、アプリをデプロイしたコンピューターでリモート ツールを実行して Visual Studio から、実行中のアプリにアタッチします。
@@ -30,7 +32,7 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 これらの手順は、これらのサーバー構成でテストされています。
 * Windows Server 2012 R2 と IIS 8 (Windows Server 2008 R2 の server 手順は異なります)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 リモート デバッガーは、Windows Server の Windows Server 2008 Service Pack 2 以降でサポートされます。 要件の完全な一覧を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)します。
 
@@ -47,7 +49,7 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 
 ## <a name="create-the-aspnet-452-application-on-the-visual-studio-computer"></a>ASP.NET 4.5.2 を作成する Visual Studio コンピューターでアプリケーション
   
-1. MVC の ASP.NET アプリケーションを新規作成します。 (**ファイル > 新規 > プロジェクト**を選択し、 <strong>Visual C# > Web > ASP.NET Web アプリケーション。**ASP.NET 4.5.2 で</strong>テンプレート セクション**MVC**します。 確認します**Docker サポートを有効にする**が選択されていないことと**認証**に設定されている**認証なし**します。 プロジェクトに名前を**MyASPApp**)。
+1. MVC の ASP.NET アプリケーションを新規作成します。 (**ファイル > 新規 > プロジェクト**を選択し、 <strong>Visual C# > Web > ASP.NET Web アプリケーション。[ASP.NET 4.5.2 テンプレート] セクションで、 [MVC]</strong>を選択します。 確認します**Docker サポートを有効にする**が選択されていないことと**認証**に設定されている**認証なし**します。 プロジェクトに名前を**MyASPApp**)。
 
 2. HomeController.cs ファイルを開き、 `About()` メソッドにブレークポイントを設定します。
 
@@ -70,7 +72,7 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 
 詳細な情報を IIS に ASP.NET をインストールする場合は、「 [IIS 8.0 を使用して ASP.NET 3.5 および ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)します。
 
-1. サーバー マネージャーの左側のウィンドウで次のように選択します。 **IIS**します。 サーバーを右クリックして**インターネット インフォメーション サービス (IIS) マネージャー**します。
+1. サーバー マネージャーの左側のウィンドウで次のように選択します。 **IIS**します。 サーバーを右クリックして **[インターネット インフォメーション サービス (IIS) マネージャー]** を選択します。
 
 1. Web Platform Installer (WebPI) を使用して ASP.NET 4.5 をインストールする (Windows Server 2012 R2 で、サーバー ノードから次のように選択します**Web プラットフォームの新しいコンポーネントの取得**、ASP.NET の検索)。
 
@@ -79,9 +81,9 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
     > [!NOTE]
     > Windows Server 2008 R2 を使用している場合は、代わりにこのコマンドを使用して ASP.NET 4 をインストールします。
 
-     **C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -ir**
+     **C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe ir**
 
-2. システムの再起動 (実行または**net stop was/y**続けて**net start w3svc**システム パスに変更を適用するコマンド プロンプトから)。
+2. システムを再起動します (または、コマンド プロンプトから **net stop was /y** の後に続けて **net start w3svc** を実行して、システム PATH への変更を適用します)。
 
 ## <a name="choose-a-deployment-option"></a>デプロイ オプションを選択します。
 
@@ -102,15 +104,15 @@ IIS にアプリをデプロイする必要があります問題が解決する�
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/install-web-deploy-with-hosting-server.md)]
 
-### <a name="create-the-publish-settings-file-in-iis-on-windows-server"></a>Windows Server 上の IIS での発行設定ファイルを作成します。
+### <a name="create-the-publish-settings-file-in-iis-on-windows-server"></a>Windows Server 上の IIS に発行設定ファイルを作成する
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/create-publish-settings-iis.md)]
 
-### <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio で発行設定をインポートおよび展開
+### <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio で発行設定をインポートして配置する
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
 
-アプリが正常がデプロイした後、自動的に開始する必要があります。 Visual Studio からアプリが起動しない場合は、IIS でアプリを起動します。
+アプリが正常に配置されたら、自動的に起動されます。 Visual Studio からアプリが起動しない場合は、IIS でアプリを起動します。
 
 1. **設定**ダイアログ ボックスをクリックしてデバッグを有効にする **[次へ]**、選択、**デバッグ**構成を選び、**追加ファイルを削除移行先**下、**ファイル発行**オプション。
 
@@ -127,7 +129,7 @@ IIS にアプリをデプロイする必要があります問題が解決する�
 
 1. Windows エクスプ ローラーを開き、新しいフォルダーを作成**C:\Publish**、ASP.NET プロジェクトを後でデプロイされます。
 
-2. 開くことがまだ開いていない場合、**インターネット インフォメーション サービス (IIS) マネージャー**します。 (サーバー マネージャーの左側のウィンドウで次のように選択します。 **IIS**します。 サーバーを右クリックして**インターネット インフォメーション サービス (IIS) マネージャー**)。
+2. 開くことがまだ開いていない場合、**インターネット インフォメーション サービス (IIS) マネージャー**します。 (サーバー マネージャーの左側のウィンドウで次のように選択します。 **IIS**します。 サーバーを右クリックして **[インターネット インフォメーション サービス (IIS) マネージャー]** を選択します。)
 
 3. **接続**で左側のウィンドウに移動**サイト**します。
 
@@ -183,10 +185,10 @@ IIS にアプリをデプロイする必要があります問題が解決する�
 2. Visual Studio で、次のようにクリックします。**デバッグ > プロセスにアタッチ**(Ctrl + Alt + P)。
 
     > [!TIP]
-    > Visual Studio 2017 を使用して、以前にアタッチした同じプロセスに再アタッチできる**デバッグ > プロセスに再アタッチしています.**(Shift + Alt + P)。 
+    > Visual Studio 2017 を使用して、以前にアタッチした同じプロセスに再アタッチできる**デバッグ > プロセスに再アタッチしています.** Shift + Alt + P 
 
-3. 修飾子のフィールドに設定**\<リモート コンピューター名 >: 4022**します。
-4. クリックして**更新**します。
+3. [修飾子] フィールドを「**\<リモート コンピューター名>:4022**」に設定します。
+4. **[最新の情報に更新]** をクリックします。
     **[選択可能なプロセス]** ウィンドウにプロセスがいくつか表示されます。
 
     すべてのプロセスが表示されない場合は、(ポートが必要です)、リモート コンピューター名ではなく IP アドレスを使用してください。 使用することができます`ipconfig`IPv4 アドレスを取得するコマンド ラインでします。
@@ -196,16 +198,16 @@ IIS にアプリをデプロイする必要があります問題が解決する�
 
     ![RemoteDBG_AttachToProcess](../debugger/media/remotedbg_attachtoprocess.png "RemoteDBG_AttachToProcess")
 
-7. クリックして**アタッチ**
+7. **[アタッチ]** をクリックします
 
-8. リモート コンピューターの Web サイトを開きます。 ブラウザーに移動します。 **http://\<リモート コンピューター名 >** します。
+8. リモート コンピューターの Web サイトを開きます。 ブラウザーで、**http://\<リモート コンピューター名>** に移動します。
     
     ASP.NET の Web ページが表示されるはずです。
 9. 実行中の ASP.NET アプリケーションでリンクをクリックして、**について**ページ。
 
     Visual Studio で、ブレークポイントにヒットするはずです。
 
-## <a name="bkmk_openports"></a> トラブルシューティング: Windows Server で必要なポートを開く
+## <a name="bkmk_openports">トラブルシューティング</a>Windows Server で必要なポートを開く
 
 ほとんどの設定では、ASP.NET とリモート デバッガーのインストールに必要なポートが開かれます。 ただし、ポートが開いていることを確認する必要があります。
 

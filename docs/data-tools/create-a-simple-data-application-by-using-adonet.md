@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で ADO.NET を使用して単純なデータ アプリケーションを作成します。
+title: ADO.NET を使用した単純なデータ アプリケーションの作成
 ms.date: 08/23/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,21 +13,21 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5bcdd9120088663e469070c31962dfacc97bce0a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 75043a1716cca0c727eb0530cd63ca715a60424b
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49891012"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064873"
 ---
-# <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET を使用して単純なデータ アプリケーションを作成します。
+# <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET を使用した単純なデータ アプリケーションの作成
 
-データベース内のデータを操作するアプリケーションを作成するときに、接続文字列の定義、データの挿入、ストアド プロシージャを実行しているなどの基本的なタスクを実行します。 このトピックでは、Visual c# または Visual Basic および ADO.NET を使用して単純な Windows フォームの「フォーム オーバー データ」アプリケーションからデータベースと対話する方法を検出できます。  すべての .NET データ テクノロジ: LINQ to SQL、および Entity Framework のデータセットを含む-最終的にこの記事で示したものとよく似ている手順を実行します。
+データベースのデータを処理するアプリケーションの作成では、接続文字列の定義、データの挿入、ストアド プロシージャの実行などの基本的なタスクを実行します。 このトピックでは、Visual c# または Visual Basic および ADO.NET を使用して単純な Windows フォームの「フォーム オーバー データ」アプリケーションからデータベースと対話する方法を検出できます。  すべての .NET データ テクノロジ: LINQ to SQL、および Entity Framework のデータセットを含む-最終的にこの記事で示したものとよく似ている手順を実行します。
 
 この記事では、高速の方法で、データベースからデータを取得する簡単な方法を示します。 を、アプリケーションが自明でない方法でデータを変更し、データベースを更新する必要がある場合は、Entity Framework を使用して、基になるデータの変更をユーザー インターフェイス コントロールを自動的に同期へのデータ バインディングを使用してを検討してください。
 
 > [!IMPORTANT]
-> コードをシンプルにするには、実稼働可能な例外処理は含まれない。
+> コードをシンプルにするため、運用環境で使用する例外処理は含まれていません。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -35,7 +35,7 @@ ms.locfileid: "49891012"
 
 -   Visual Studio
 
--   SQL Server Express LocalDB です。 SQL Server Express LocalDB をお持ちでない場合からをインストール、 [SQL Server Express のダウンロード ページ](https://www.microsoft.com/sql-server/sql-server-editions-express)します。
+-   SQL Server Express LocalDB。 SQL Server Express LocalDB をお持ちでない場合からをインストール、 [SQL Server Express のダウンロード ページ](https://www.microsoft.com/sql-server/sql-server-editions-express)します。
 
 このトピックでする Visual Studio IDE の基本的な機能を使い慣れているとできる Windows フォーム アプリケーションを作成と仮定ボタンと、フォームの他のコントロールを配置するプロジェクトにフォーム コントロール、およびコードの単純なイベントのプロパティの設定を追加します。 完了することをお勧め、これらのタスクを慣れていない場合、 [Visual c# および Visual Basic の概要](../ide/getting-started-with-visual-csharp-and-visual-basic.md)トピックでこのチュートリアルを開始する前にします。
 
@@ -61,15 +61,15 @@ ms.locfileid: "49891012"
 
 7. T-SQL スクリプトをクエリ エディターに貼り付けて選択し、 **Execute**ボタンをクリックします。
 
-     しばらくすると、クエリの実行が完了し、データベース オブジェクトを作成します。 データベースには、2 つのテーブルが含まれています: 顧客と注文です。 これらのテーブル データを含まない初期状態で、作成するアプリケーションを実行するときにデータを追加することができます。 データベースには、次の 4 つのシンプルなストアド プロシージャも含まれています。
+     しばらくすると、クエリの実行が完了し、データベース オブジェクトを作成します。 データベースには、2 つのテーブルが含まれています。顧客と注文です。 これらのテーブル データを含まない初期状態で、作成するアプリケーションを実行するときにデータを追加することができます。 データベースには、次の 4 つのシンプルなストアド プロシージャも含まれています。
 
 ## <a name="create-the-forms-and-add-controls"></a>フォームを作成してコントロールを追加する
 
-1. Windows フォーム アプリケーションでは、プロジェクトを作成し、名前を**SimpleDataApp**します。
+1. Windows フォーム アプリケーションのプロジェクトを作成し、**SimpleDataApp** という名前を付けます。
 
-    Visual Studio プロジェクトとという名前の空の Windows フォームを含む、複数のファイル作成**Form1**します。
+    Visual Studio は、**Form1** という名前の空の Windows フォームを含めた、いくつかのファイルとプロジェクトを作成します。
 
-2. 3 つの形式を持つように、2 つの Windows フォームをプロジェクトに追加し、次の名前を付けるし。
+2. 2 つの Windows フォームをプロジェクトに追加し、合計 3 つのフォームに次の名前を付けます。
 
    -   **ナビゲーション**
 
@@ -146,11 +146,11 @@ ms.locfileid: "49891012"
 
 ### <a name="navigation-form"></a>Navigation フォーム
 
-Navigation フォームはアプリケーションを実行すると開きます。 **アカウントを追加**NewCustomer フォームを開きます。 **Fill またはキャンセル オーダー** FillOrCancel フォームを開きます。 **終了**ボタンは、アプリケーションを閉じます。
+Navigation フォームはアプリケーションを実行すると開きます。 **[Add an account]** ボタンは NewCustomer フォームを開きます。 **[Fill or cancel orders]** ボタンは FillOrCancel フォームを開きます。 **[Exit]** ボタンは、アプリケーションを閉じます。
 
 #### <a name="make-the-navigation-form-the-startup-form"></a>Navigation フォームをスタートアップ フォームに設定
 
-C# を使用している場合**ソリューション エクスプ ローラー**オープン**Program.cs**、し、変更、`Application.Run`この行。 `Application.Run(new Navigation());`
+C# を使用している場合、**ソリューション エクスプローラー**で **Program.cs** を開き、`Application.Run` の行を `Application.Run(new Navigation());` に変更します。
 
 Visual Basic の場合に使用する場合**ソリューション エクスプ ローラー**、オープン、**プロパティ**ウィンドウで、**アプリケーション**、タブを選び**SimpleDataApp.Navigation**で、**スタートアップ フォーム**一覧。
 
@@ -231,7 +231,7 @@ FillOrCancel フォームのロジックを完了するには、次の手順に�
 
 ## <a name="test-your-application"></a>アプリケーションをテストする
 
-選択、 **F5**キーをビルドおよび各クリック イベント ハンドラーのコードを記述した後、アプリケーションをテストし、コーディングを完了した後、します。
+各クリック イベント ハンドラーをコードし、コードの記述を完了した後、**F5** キーを押してアプリケーションのビルドとテストを実行します。
 
 ## <a name="see-also"></a>関連項目
 

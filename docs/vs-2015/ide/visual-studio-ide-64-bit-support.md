@@ -1,5 +1,5 @@
 ---
-title: Visual Studio IDE の 64 ビット サポート | Microsoft Docs
+title: 64 ビット サポート |Microsoft Docs
 ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
@@ -18,41 +18,38 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 89ccc29b35c7495857d54c5baa4ea6b0667ae5fa
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+ms.openlocfilehash: 7a1dfdbfe286043a6e0010687b4ef9a7f178eb2b
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49259780"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062678"
 ---
 # <a name="visual-studio-ide-64-bit-support"></a>Visual Studio IDE の 64 ビット サポート
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] では、64 ビット プラットフォームを含む、さまざまなプラットフォーム向けにアプリケーションを設定できます。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] での 64 ビット プラットフォームのサポートについて詳しくは、「[64 ビット アプリケーション](http://msdn.microsoft.com/library/fd4026bc-2c3d-4b27-86dc-ec5e96018181)」を参照してください。  
-  
-## <a name="deploying-a-64-bit-application"></a>64 ビット アプリケーションの配置  
- 次のトピックでは、64 ビット アプリケーションの配置について説明しています。  
-  
--   [64 ビット アプリケーションの配置のための必要条件](../deployment/deploying-prerequisites-for-64-bit-applications.md)  
-  
--   [方法: 64 ビット プラットフォーム用の Windows インストーラーを作成する](http://msdn.microsoft.com/en-us/232bfc64-f99a-4cc6-9806-ba70bb9a09ff)  
-  
-## <a name="configuring-projects-as-64-bit-applications"></a>プロジェクトを 64 ビット アプリケーションとして構成  
- 次のトピックでは、64 ビット アプリケーションにビルドするプロジェクトの構成について説明しています。  
-  
--   [方法 : プロジェクトを構成して対象プラットフォームを設定する](../ide/how-to-configure-projects-to-target-platforms.md)  
-  
-## <a name="debugging-a-64-bit-application"></a>64 ビット アプリケーションのデバッグ  
- [!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)] を 64 ビット Windows オペレーティング システムで実行している場合、エディット コンティニュは機能しません。 次のトピックでは、64 ビット アプリケーションのデバッグについて説明しています。  
-  
--   [方法: 64 ビット プラットフォームでデバッグする](http://msdn.microsoft.com/en-us/27495e23-a624-46fb-996f-043d0a816dd5)  
-  
--   [64 ビット アプリケーションをデバッグする](../debugger/debug-64-bit-applications.md)  
-  
--   [ダンプ ファイルの使用](../debugger/using-dump-files.md)  
-  
-## <a name="see-also"></a>関連項目  
- [方法 : プロジェクトを構成して対象プラットフォームを設定する](../ide/how-to-configure-projects-to-target-platforms.md)
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] では、64 ビット プラットフォームを含む、さまざまなプラットフォーム向けにアプリケーションを設定できます。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] での 64 ビット プラットフォームのサポートについて詳しくは、「[64 ビット アプリケーション](http://msdn.microsoft.com/library/fd4026bc-2c3d-4b27-86dc-ec5e96018181)」を参照してください。
 
+## <a name="deploying-a-64-bit-application"></a>64 ビット アプリケーションの配置
+ 次のトピックでは、64 ビット アプリケーションの配置について説明しています。
 
+-   [64 ビット アプリケーションの配置のための必要条件](../deployment/deploying-prerequisites-for-64-bit-applications.md)
 
+-   [方法: 64 ビット プラットフォーム用の Windows インストーラーを作成します。](http://msdn.microsoft.com/en-us/232bfc64-f99a-4cc6-9806-ba70bb9a09ff)
+
+## <a name="configuring-projects-as-64-bit-applications"></a>プロジェクトを 64 ビット アプリケーションとして構成
+ 次のトピックでは、64 ビット アプリケーションにビルドするプロジェクトの構成について説明しています。
+
+-   [方法: プロジェクトを構成して対象プラットフォームを設定する](../ide/how-to-configure-projects-to-target-platforms.md)
+
+## <a name="debugging-a-64-bit-application"></a>64 ビット アプリケーションのデバッグ
+ [!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)] を 64 ビット Windows オペレーティング システムで実行している場合、エディット コンティニュは機能しません。 次のトピックでは、64 ビット アプリケーションのデバッグについて説明しています。
+
+-   [方法: 64 ビット プラットフォームでのデバッグします。](http://msdn.microsoft.com/en-us/27495e23-a624-46fb-996f-043d0a816dd5)
+
+-   [64 ビット アプリケーションをデバッグする](../debugger/debug-64-bit-applications.md)
+
+-   [ダンプ ファイルの使用](../debugger/using-dump-files.md)
+
+## <a name="see-also"></a>参照
+ [方法: プロジェクトを構成して対象プラットフォームを設定する](../ide/how-to-configure-projects-to-target-platforms.md)

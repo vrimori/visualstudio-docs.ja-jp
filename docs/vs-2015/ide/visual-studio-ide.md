@@ -1,6 +1,6 @@
 ---
-title: Visual Studio IDE | Microsoft Docs
-ms.custom: ''
+title: Visual Studio 2015 |Microsoft Docs
+titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
@@ -12,26 +12,26 @@ caps.latest.revision: 36
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 327de2e75b089e7ba836837c3c29c0d92d9ad864
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: c6bd4e34e25add01de6e6e54c2439c2ca80ccf33
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49852714"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062484"
 ---
 # <a name="visual-studio-ide"></a>Visual Studio IDE
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 Microsoft Visual Studio 2015 は、ソフトウェアを作成するための一連のツールです。このツールを使用して、計画の段階、UI 設計、コーディング、テスト、デバッグ、コードの品質やパフォーマンスの分析、カスタマーへの配置、使用率に関するテレメトリーの収集などを実行できます。 これらのツールは、できるだけシームレスに連携するよう設計されており、すべて Visual Studio 統合開発環境 (IDE) を通して公開されています。
 
-Visual Studio を使用すると、さまざまなアプリケーションを作成できます。モバイル クライアント向けの単純なストア アプリやゲームから、企業やデータ センターに提供するような大規模で複雑なシステムなどです。 次のように作成できます。
+Visual Studio を使用すると、さまざまなアプリケーションを作成できます。モバイル クライアント向けの単純なストア アプリやゲームから、企業やデータ センターに提供するような大規模で複雑なシステムなどです。 作成できるもの:
 
-- だけでなく、Windows 上で実行するアプリおよびゲームも Android および iOS。
+- Windows だけでなく、Android と iOS でも動作するアプリおよびゲーム。
 
-- ASP.NET、JQuery、AngularJS、およびその他の一般的なフレームワークに基づいて web サイトと web サービス。
+- ASP.NET、JQuery、AngularJS、その他の一般的なフレームワークをベースとした Web サイトおよび Web サービス。
 
-- プラットフォームと Azure、Office、Sharepoint、Hololens、Kinect、および、モ ノのインターネットに例をいくつかの名前を付けるさまざまなデバイス用アプリケーション。
+- さまざまなプラットフォームやデバイス向けのアプリケーション。Azure、Office、Sharepoint、Hololens、Kinect、モノのインターネットなどはほんの一例です。
 
-- ゲームや Xbox など、DirectX を使用して、Windows デバイスのさまざまなグラフィックを多用するアプリケーション。
+- DirectX を使用するさまざまな Windows デバイス (Xbox など) 向けのゲームおよびグラフィックを集中的に使用するアプリケーション。
 
 既定では、Visual Studio は C#、C、C++、JavaScript、F#、Visual Basic のサポートを提供します。 Visual Studio は、Unity ( [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) 拡張機能を介して) および Apache Cordova ( [Visual Studio Tools for Apache Cordova](http://msdn.microsoft.com/library/db446f2c-6ba4-4c76-aac5-4c66f43b8c42)を介して) などのサードパーティ製アプリケーションと密接に連携および統合しています。 特殊なタスクを実行するカスタム ツールを作成することで、Visual Studio を独自に拡張できます。
 
@@ -42,7 +42,7 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
 ## <a name="visual-studio-setup"></a>Visual Studio のセットアップ
  「 [Visual Studio のエディション](http://www.visualstudio.com/products/visual-studio-with-msdn-overview-vs)」で、自分に適した Visual Studio のエディションを判別できます。
 
- Visual Studio 2015 は、「 [Visual Studio のダウンロード](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)」からダウンロードしてインストールできます。 インストール プロセスの詳細を知る必要がある場合は、次を参照してください。 [Visual Studio 2015 をインストールする](../install/install-visual-studio-2015.md)します。
+ Visual Studio 2015 は、「 [Visual Studio のダウンロード](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)」からダウンロードしてインストールできます。 インストール プロセスの詳細については、「[Visual Studio 2015 のインストール](../install/install-visual-studio-2015.md)」を参照してください。
 
 ## <a name="ide-basics"></a>IDE の基本
  次の図は、プロジェクトが開かれている Visual Studio IDE、プロジェクト ファイル内を移動するためのソリューション エクスプローラー ウィンドウ、ソース管理と作業項目トラッキングを移動するためのチーム エクスプローラー ウィンドウを示しています。 示されているタイトル バーの機能については、以下で詳しく説明します。
@@ -62,7 +62,7 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
 
  !["新しいプロジェクト" のクイック起動結果](../ide/media/productivity-quicklaunch.png "Productivity_QuickLaunch")
 
- MSDN は、技術情報に関する Microsoft Web サイトです。今まさに、MSDN でこのページをお読みになっています。 Visual Studio で **F1** キーを押すと、アクティブ ウィンドウに関する MSDN のヘルプ ページに移動できます。 また、コード エディターで **F1** キーを押すと、現行のカーソル位置の API またはキーワードについての MSDN ヘルプ ページに移動できます。 たとえば、c# ファイル内にどこか、またはの末尾にキャレットを置き、`System.String`宣言、およびキーを押して**F1**の MSDN ヘルプ ページに移動する<xref:System.String>。
+ MSDN は、技術情報に関する Microsoft Web サイトです。今まさに、MSDN でこのページをお読みになっています。 Visual Studio で **F1** キーを押すと、アクティブ ウィンドウに関する MSDN のヘルプ ページに移動できます。 また、コード エディターで **F1** キーを押すと、現行のカーソル位置の API またはキーワードについての MSDN ヘルプ ページに移動できます。 たとえば、C# ファイルで、`System.String` 宣言の途中か末尾にカーソルを置いて **F1** キーを押すと、<xref:System.String> の MSDN ヘルプ ページに移動します。
 
 ### <a name="giving-feedback"></a>フィードバックの提供
  Visual Studio では、いつでもフィードバックを簡単に提供できます。 **[クイック起動]** の横にあるタイトル バーのフィードバック アイコンをクリックして、 **[問題の報告]** または **[提案事項の送信]** をクリックします。 Visual Studio のプレリリース版にも、 **[この製品を評価する]** オプションが用意されています。 これらのすべてのコメントを拝見し、製品向上のための参考にさせていただきます。 詳細については、「 [Talk to Us](../ide/talk-to-us.md)」を参照してください。
@@ -114,7 +114,7 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
 
  ![コード エディターの GreetingsConsoleApp.cpp](../ide/media/c-ide-editorlinenumberswordwrapon.png "c++ IDE_EditorLineNumbersWordWrapOn")
 
- テキスト エディターには、生産性の向上に役立つ多くの機能との高度な対話性があります (望む場合)。これによって、より質の高いコードをより早く作成できます。 機能は言語によって異なり、機能をオンまたはオフにするためにそれらを使用する必要はありません (クイック起動で「エディター」を入力)。一般的な生産性向上機能として、次のものがあります。
+ テキスト エディターには、生産性の向上に役立つ多くの機能との高度な対話性があります (望む場合)。これによって、より質の高いコードをより早く作成できます。 言語によって異なり、機能と、いずれかが (クイック起動で「エディター」の種類) を使用して機能を有効または無効にする必要はありません。一般的な生産性機能を次に示します。
 
 1. [Refactoring](../ide/refactoring-in-visual-studio.md) 。これには、変数の名前をインテリジェントに変更する、選んだコード行を別個の関数に移動する、コードを他の場所に移動する、関数パラメーターを並べ替える、などの操作が含まれます。
 
@@ -146,7 +146,7 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
 
 プロジェクトをビルドするということは、ソース コードをコンパイルし、実行可能ファイルの生成に必要な手順すべてを実行することを意味します。 ビルド操作は言語によって異なっており、通常の Web サイトはまったくビルドは行っていません。 プロジェクトの種類に関係なく、[ビルド] メニューはこれらのコマンドの標準の場所です。 一度のキー入力でコードをコンパイルして実行するには、F5 キーを押します。 どのコンパイラも、IDE によって完全に構成可能です。 [ビルド] ツールバーでは、プログラムのデバッグ バージョンをビルドするかどうかを指定できます。デバッグ バージョンでは、記号と追加エラー チェックが有効になり、デバッガーでのブレークポイントとシングル ステップ、リリース ビルド (最終的にお客様に渡すもの) がサポートされます。 他のビルド設定や、他の多くの設定をプロジェクトのプロパティ ページで構成できます。 ソリューション エクスプローラーでプロジェクト ノードを右クリックし、[プロパティ] を選択します。 コマンド ラインからビルドを実行することもできます。
 
-エラーまたは成功のメッセージを含め、ビルドからの出力が表示される、**出力**ウィンドウ。 **エラー一覧**ビルド エラーに関する詳細な情報が表示されます。
+ビルドからの出力 (エラー メッセージや成功メッセージを含む) が **[出力]** ウィンドウに表示されます。 **エラー一覧**ビルド エラーに関する詳細な情報が表示されます。
 
 ## <a name="debugging-your-code"></a>コードのデバッグ
  Visual Studio の最新のデバッガーを使用すると、ローカル プロジェクトで実行されるコード、リモート デバイスで実行されるコード、エミュレーターで実行されるコード (Android や Windows Phone のコードなど) をデバッグできます。 一度に 1 つのステートメントのコードをステップスルーでき、変数を調べることができます。マルチスレッド アプリケーションをステップスルーでき、指定された条件が true の場合のみヒットするブレークポイントを設定できます。 このすべては、コード エディター自体で構成できます。したがって、コードのコンテキストを離れる必要はありません。
@@ -162,7 +162,7 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
  詳細については、「 [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)」を参照してください。
 
 ## <a name="testing-your-code"></a>コードのテスト
- Visual Studio には、マネージ コード (.NET) の単体テスト フレームワークとネイティブ C++ の単体テスト フレームワークが含まれています。 単体テストを作成するには、単にテスト プロジェクトをソリューションに追加し、テストを作成し、そのテストを [テスト エクスプローラー] ウィンドウから実行します。 詳しくは、「[コードの単体テストUnit Test Your Code](../test/unit-test-your-code.md)」をご覧ください。
+ Visual Studio には、マネージド コード (.NET) の単体テスト フレームワークとネイティブ C++ の単体テスト フレームワークが含まれています。 単体テストを作成するには、単にテスト プロジェクトをソリューションに追加し、テストを作成し、そのテストを [テスト エクスプローラー] ウィンドウから実行します。 詳しくは、「[コードの単体テストUnit Test Your Code](../test/unit-test-your-code.md)」をご覧ください。
 
  ![単体テスト エクスプローラー](../ide/media/ute-failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")
 
@@ -206,10 +206,10 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
 |[Visual Studio のサンプル](../ide/visual-studio-samples.md)|[Microsoft Help Viewer](../ide/microsoft-help-viewer.md)|
 |[アプリケーションのグローバライズとローカライズ](../ide/globalizing-and-localizing-applications.md)|[UI リファレンス](../ide/reference/general-user-interface-elements-visual-studio.md)|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Visual Studio 2015 をインストールします。](../install/install-visual-studio-2015.md)
-- [コードを編集します。](https://www.visualstudio.com/features/ide-vs)
+- [Visual Studio 2015 のインストール](../install/install-visual-studio-2015.md)
+- [コードの編集](https://www.visualstudio.com/features/ide-vs)
 - [Visual Studio 2015 の新機能](../what-s-new-in-visual-studio-2015.md)
 - [Visual Studio プロジェクトの移植、移行、およびアップグレード](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)
 - [ご意見](../ide/talk-to-us.md)
