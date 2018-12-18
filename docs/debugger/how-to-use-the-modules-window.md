@@ -1,6 +1,7 @@
 ---
-title: '[モジュール] ウィンドウでの Dll と実行可能ファイルの表示 |Microsoft Docs'
-ms.custom: H1Hack27Feb2017
+title: Dll と実行可能ファイルを表示します。
+titleSuffix: Visual Studio Modules window
+ms.custom: seodec18
 ms.date: 11/04/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -25,12 +26,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 33a09fe01157e0e3f5493568437c1499f2831bdb
-ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
-ms.translationtype: MT
+ms.openlocfilehash: 2702eb38e895f5fa9021fae754ae1e4a9325cf18
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52257291"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066783"
 ---
 # <a name="view-dlls-and-executables-in-the-modules-window-c-c-visual-basic-f"></a>[モジュール] ウィンドウで、Dll と実行可能ファイルを表示 (C#、C++、Visual Basic、 F#)
  
@@ -43,13 +44,13 @@ Visual Studio がデバッグ中に、**モジュール** ウィンドウの一�
 
 デバッグ中にモジュール ウィンドウを開き、選択**デバッグ** > **Windows** > **モジュール**します。 
   
-既定で、**モジュール**ウィンドウは、読み込み順序でモジュールを並べ替えます。 ウィンドウの任意の列を並べ替えるには、列の上部にあるヘッダーを選択します。  
+既定では、**[モジュール]** ウィンドウには、モジュールが読み込み順に表示されます。 ウィンドウの任意の列を並べ替えるには、列の上部にあるヘッダーを選択します。  
   
 ## <a name="load-symbols"></a>シンボルの読み込み  
 
 **シンボルの状態**内の列、**モジュール**モジュールでは、デバッグ シンボルが読み込まれるウィンドウに表示されます。 状態の場合**シンボルの読み込みをスキップ**、**見つからないか、PDB ファイルを開くことはできません**、または**包含/除外の設定で無効にする読み込み**シンボルを手動で読み込むことができます。 詳細については、シンボルの読み込みとは、次を参照してください。[シンボル (.pdb) ファイルとソース ファイルを指定](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)します。
 
-**手動でシンボルを読み込めません。**  
+**シンボルを手動で読み込むには:**  
 
 1. **モジュール**ウィンドウで、右クリック、モジュールのシンボルが読み込まれていません。 
    
@@ -63,7 +64,7 @@ Visual Studio がデバッグ中に、**モジュール** ウィンドウの一�
 
 **シンボルの読み込み動作の設定を変更するには。**  
 
-1. **モジュール**ウィンドウで、任意のモジュールを右クリックします。  
+1. **[モジュール]** ウィンドウで、任意のモジュールを右クリックします。  
    
 1. 選択**シンボルの設定**します。  
   
@@ -73,11 +74,11 @@ Visual Studio がデバッグ中に、**モジュール** ウィンドウの一�
   
 **シンボルの読み込みモジュールの特定の動作を変更するには。**  
 
-1.  **モジュール**ウィンドウで、モジュールを右クリックします。  
+1.  **[モジュール]** ウィンドウで、モジュールを右クリックします。  
 
 1.  右クリック メニューで選択または選択解除**常にロード自動的**します。 変更は、次のデバッグ セッションで反映されます。  
   
 ## <a name="see-also"></a>関連項目  
  [実行の中断](/previous-versions/visualstudio/visual-studio-2010/7z9se2d8(v=vs.100))   
- [デバッガーでのデータの表示](../debugger/viewing-data-in-the-debugger.md)   
- [シンボル (.pdb) ファイルとソース ファイルを指定します。](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
+ [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)   
+ [シンボル (.pdb) とソース ファイルの指定](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

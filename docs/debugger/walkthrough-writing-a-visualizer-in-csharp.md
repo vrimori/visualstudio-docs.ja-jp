@@ -1,6 +1,6 @@
 ---
-title: 'チュートリアル: ビジュアライザーを記述する (C#) |Microsoft Docs'
-ms.custom: ''
+title: ビジュアライザーを記述C#|Microsoft Docs
+ms.custom: seodec18
 ms.date: 08/01/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -15,18 +15,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6de9ed60fd4c4dc0290fc1f4b5a73415bea79dec
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 872f1a899bf9731dd86d5d9c14e5639c2a4630aa
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52388453"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059666"
 ---
-# <a name="walkthrough-writing-a-visualizer-in-c"></a>チュートリアル : C# でビジュアライザーを記述する #
+# <a name="walkthrough-writing-a-visualizer-in-c"></a>チュートリアル: C# でビジュアライザーを記述する #
 このチュートリアルでは、C# を使用して簡単なビジュアライザーを作成する方法を説明します。 このチュートリアルで作成するビジュアライザーは、Windows フォーム メッセージ ボックスを使用して文字列の内容を表示します。 この簡単な文字列ビジュアライザーは、それ自体ではそれほど役に立ちませんが、他のデータ型を表示する、より役に立つビジュアライザーを作成するために必要な基本手順として使用できます。
 
 > [!NOTE]
-> 使用している設定またはエディションによっては、ヘルプの記載と異なるダイアログ ボックスやメニュー コマンドが表示される場合があります。 設定を変更するには、**[ツール]** メニューに移動して **[設定のインポートとエクスポート]** を選びます。 詳細については、次を参照してください。[設定にリセット](../ide/environment-settings.md#reset-settings)します。
+> 使用している設定またはエディションによっては、ヘルプの記載と異なるダイアログ ボックスやメニュー コマンドが表示される場合があります。 設定を変更するには、**[ツール]** メニューに移動して **[設定のインポートとエクスポート]** を選びます。 詳細については、「[リセット設定](../ide/environment-settings.md#reset-settings)」を参照してください。
 
 ビジュアライザー コードは、デバッガーによって読み取られる DLL に配置する必要があります。 このため、最初の手順として、DLL のクラス ライブラリ プロジェクトを作成します。
 
@@ -222,7 +222,7 @@ ms.locfileid: "52388453"
 
    テストは成功です。 これで、最初のビジュアライザーの作成とテストが完了しました。
 
-   作成したビジュアライザーをテスト ハーネスから呼び出すのではなく、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で使用する場合は、ビジュアライザーをインストールする必要があります。 詳細については、次を参照してください。[方法: ビジュアライザーをインストール](../debugger/how-to-install-a-visualizer.md)します。
+   作成したビジュアライザーをテスト ハーネスから呼び出すのではなく、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で使用する場合は、ビジュアライザーをインストールする必要があります。 詳細については、「[方法 :ビジュアライザーをインストールする](../debugger/how-to-install-a-visualizer.md)」をご覧ください。
 
 ## <a name="create-a-visualizer-using-the-visualizer-item-template"></a>ビジュアライザー項目テンプレートを使用して、ビジュアライザーを作成します。
 
@@ -261,5 +261,5 @@ ms.locfileid: "52388453"
 ## <a name="see-also"></a>関連項目
 
 - [ビジュアライザーのアーキテクチャ](../debugger/visualizer-architecture.md)
-- [方法 : ビジュアライザーをインストールする](../debugger/how-to-install-a-visualizer.md)
+- [方法: ビジュアライザーをインストールする](../debugger/how-to-install-a-visualizer.md)
 - [カスタム ビジュアライザーを作成する](../debugger/create-custom-visualizers-of-data.md)

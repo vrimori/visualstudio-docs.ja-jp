@@ -1,6 +1,6 @@
 ---
-title: Visual Studio デバッガーでの例外の管理 |Microsoft Docs
-ms.custom: ''
+title: デバッガーでの例外の管理 |Microsoft Docs
+ms.custom: seodec18
 ms.date: 10/09/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -34,12 +34,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f19bbbfbde9a111c6edea112b7250fca934ac7f7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: HT
+ms.openlocfilehash: 02c7fbfca9a63ac736972ebea01a854e24f90188
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49881691"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057919"
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>Visual Studio のデバッガーでの例外を管理します。
 
@@ -47,7 +47,7 @@ ms.locfileid: "49881691"
 
 最も重要な例外に応答するハンドラーを提供します。 常に実行を中断する一部の例外のデバッガーを構成する方法についても説明します。
 
-デバッガー、例外が発生する例外メッセージが書き込まれます、**出力**ウィンドウ。 次の実行を壊す可能性がある場合します。
+例外が発生すると、**[出力]** ウィンドウに例外メッセージが書き込まれます。 次の実行を壊す可能性がある場合します。
 
 - 処理されない例外がスローされます。
 - デバッガーを構成するには任意のハンドラーが呼び出される前に実行を中断します。
@@ -59,7 +59,7 @@ ms.locfileid: "49881691"
 <!-- Two consecutive notes are intentional here...-->
 
 > [!NOTE]
-> Visual Basic アプリケーションで、デバッガーでは On Error 形式のエラー ハンドラーを使用する場合でも、すべてのエラーを例外として管理します。
+> Visual Basic アプリケーションのデバッガーでは、すべてのエラーが例外として管理されます。On Error 形式のエラー ハンドラーを使用している場合でもそうです。
 
 ## <a name="tell-the-debugger-to-break-when-an-exception-is-thrown"></a>例外がスローされたときに中断するようにデバッガー
 
@@ -74,7 +74,7 @@ ms.locfileid: "49881691"
 
 例外を選択した場合、**例外設定**ウィンドウで、それを処理するかどうかに関係なく、例外がスローされた場所に、デバッガーの実行が中断されます。 これで、例外には、初回例外が呼び出されます。 例として、いくつかのシナリオを以下に示します。
 
-- 次の c# コンソール アプリケーションでは、Main メソッドがスローされます、 **AccessViolationException**内で、`try/catch`ブロックします。
+- 次の C# コンソール アプリケーションで、Main メソッドは `try/catch` ブロック内で **AccessViolationException** をスローします。
 
   ```csharp
   static void Main(string[] args)
@@ -101,7 +101,7 @@ ms.locfileid: "49881691"
 
   表示されませんが、`here`行。
 
-- C# コンソール アプリケーションでは、2 つのメソッドを持つクラスを使用してクラス ライブラリを参照します。 1 つのメソッドは、例外をスローし、2 番目のメソッドが同じ例外をスローしますが、その処理を行いません、それを処理します。
+- AC#コンソール アプリケーションは、2 つのメソッドを持つクラスを使用してクラス ライブラリを参照します。 1 つのメソッドは、例外をスローし、2 番目のメソッドが同じ例外をスローしますが、その処理を行いません、それを処理します。
 
   ```csharp
   public class Class1
@@ -160,7 +160,7 @@ ASP.NET web アプリケーションが HTTP 500 ステータス コードに変
 
 ![ユーザーの中断&#45;ハンドルされない例外](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")
 
-## <a name="add-and-delete-exceptions"></a>追加して、例外を削除
+## <a name="add-and-delete-exceptions"></a>例外を追加および削除する
 
 例外は追加および削除することができます。 例外の種類カテゴリからを削除する、例外を選択し、選択、**を一覧から選択されている例外を削除**ボタン (マイナス記号) を**例外設定**ツールバー。 例外を右クリックし、選択することがありますまたは**削除**ショートカット メニューから。 例外を削除していますと同じ効果がオフの場合、例外がスローされたときに、デバッガーが中断しないことであります。
 
@@ -181,9 +181,9 @@ ASP.NET web アプリケーションが HTTP 500 ステータス コードに変
 GPU メモリ アクセス例外を JavaScript ランタイム例外をまたは Win32 例外というカテゴリに例外を追加するには、エラー コードと説明を含めます。
 
 > [!TIP]
-> スペルを確認してください。 **例外設定**ウィンドウでは、追加された例外の存在を確認します。 入力した場合は、その**Sytem.UriTemplateMatchException**、その例外のエントリを取得します (ではなく**System.UriTemplateMatchException**)。
+> スペルを確認してください。 **[例外設定]** ウィンドウでは、追加された例外の存在について確認が行われません。 したがって、「**Sytem.UriTemplateMatchException**」と入力した場合は、その例外のエントリ (**System.UriTemplateMatchException** のエントリではなく) が表示されます。
 
-例外設定は、特定のソリューションに適用されるように、ソリューションの .suo ファイルに保存されます。 ソリューション全体で特定の例外の設定を再利用することはできません。 これで、追加された例外のみが保持されます。削除された例外はありません。 閉じる、例外を追加して、ソリューションを再度、例外は削除されません。 しかし、例外を削除してから、ソリューションをいったん閉じて、再度開いた場合、例外は再表示されます。
+例外の設定はソリューションの .suo ファイルに保持され、特定のソリューションに適用されます。 複数のソリューションの間で、特定の例外設定を再利用することはできません。 これで、追加された例外のみが保持されます。削除された例外はありません。 閉じる、例外を追加して、ソリューションを再度、例外は削除されません。 しかし、例外を削除してから、ソリューションをいったん閉じて、再度開いた場合、例外は再表示されます。
 
 **[例外設定]** ウィンドウでは、C# の汎用的な例外タイプをサポートしていますが、Visual Basic の汎用的な例外タイプはサポートしていません。 `MyNamespace.GenericException<T>`のような例外が発生したときに実行が中断されるようにするには、例外を **[MyNamespace.GenericException`1]** として追加する必要があります。 つまり、このコードのような例外を作成した場合。
 
@@ -224,7 +224,7 @@ public class GenericException<T> : Exception
 ## <a name="see-also"></a>関連項目
 
 [例外後の実行の継続](../debugger/continuing-execution-after-an-exception.md)<br/>
-[方法 : 例外の後にシステム コードを調べる](../debugger/how-to-examine-system-code-after-an-exception.md)<br/>
-[方法 : ネイティブ ランタイム チェックを使用する](../debugger/how-to-use-native-run-time-checks.md)<br/>
-[C ランタイム ライブラリなしのランタイム チェックを使用します。](../debugger/using-run-time-checks-without-the-c-run-time-library.md)<br/>
-[チュートリアル: Visual Studio を使用してデバッグする方法を学習します。](../debugger/getting-started-with-the-debugger.md)
+[方法: 例外の後にシステム コードを調べる](../debugger/how-to-examine-system-code-after-an-exception.md)<br/>
+[方法: ネイティブ ランタイム チェックを使用する](../debugger/how-to-use-native-run-time-checks.md)<br/>
+[C ランタイム ライブラリなしのランタイム チェックを使用する](../debugger/using-run-time-checks-without-the-c-run-time-library.md)<br/>
+[チュートリアル: Visual Studio を使用したデバッグについて理解する](../debugger/getting-started-with-the-debugger.md)

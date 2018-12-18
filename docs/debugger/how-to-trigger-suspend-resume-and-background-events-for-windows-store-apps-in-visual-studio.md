@@ -1,6 +1,6 @@
 ---
-title: トリガーする方法を中断、再開、および UWP アプリのデバッグ中にバック グラウンド イベント |Microsoft Docs
-ms.custom: ''
+title: トリガーの中断、再開、および UWP のデバッグ中にバック グラウンド イベント |Microsoft Docs
+ms.custom: seodec18
 ms.date: 01/16/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -16,19 +16,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 510c79a4d225e250d4c832155da15b61c8c5b055
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
-ms.translationtype: MT
+ms.openlocfilehash: 8d467d19a55d47ccfa231bef2b473fa5be405921
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44280013"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054662"
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>トリガーする方法を中断、再開、および Visual Studio で UWP アプリのデバッグ中にバック グラウンド イベント
 デバッグが行われていないときは、Windows の **プロセス継続時間管理** (PLM) によってアプリの実行状態 (ユーザー アクションに応じたアプリの開始、中断、再開、および終了) とデバイスの状態が管理されます。 デバッグが行われているとき、これらのアクティブ化イベントは Windows によって無効にされます。 このトピックでは、デバッガーでこれらのイベントを発生させる方法について説明します。  
   
  このトピックでは、 **バックグラウンド タスク**をデバッグする方法についても説明します。 バックグラウンド タスクは、アプリが実行されていない場合でもバックグラウンド プロセスで特定の操作を行うことを可能にします。 デバッガーを使用してアプリをデバッグ モードに変更した後、UI の起動なしでバックグラウンド タスクを開始してデバッグできます。  
   
- プロセス継続時間管理とバック グラウンド タスクの詳細については、次を参照してください。 [Launching, resuming, とマルチタスク](/windows/uwp/launch-resume/index)します。  
+ プロセス継続時間管理とバックグラウンド タスクの詳細については、「 [Launching, resuming, and multitasking](/windows/uwp/launch-resume/index)」を参照してください。  
   
 ##  <a name="BKMK_Trigger_Process_Lifecycle_Management_events"></a> プロセス継続時間管理イベントを発生させる  
  Windows では、ユーザーが他のアプリに切り替えた場合、または Windows が低電力状態に入った場合にアプリを中断できます。 `Suspending` イベントに応答して、関連するアプリとユーザー データを永続ストレージに保存し、リソースを解放できます。 **中断** 状態から再開されたアプリは **実行** 状態に入り、中断状態に入った時点の状態から実行を続行します。 `Resuming` イベントに応答してアプリの状態を復元するか更新し、リソースを再要求できます。  
@@ -48,7 +48,7 @@ ms.locfileid: "44280013"
      **[Suspend and terminate]** (中断して終了) は、アプリを閉じ、デバッグ セッションを終了します。  
   
 ##  <a name="BKMK_Trigger_background_tasks"></a> バックグラウンド タスクをトリガーする  
- すべてのアプリは、アプリが実行されていない場合でも特定のシステム イベントに応答するためのバックグラウンド タスクを登録できます。 バックグラウンド タスクは、UI を直接更新するコードは実行できません。代わりに、タイルの更新、バッジの更新、およびトースト通知を使用して、ユーザーに情報を表示します。 詳細については、次を参照してください[バック グラウンド タスクを使用してアプリをサポートしている。](https://msdn.microsoft.com/library/4c7bb148-eb1f-4640-865e-41f627a46e8e)  
+ すべてのアプリは、アプリが実行されていない場合でも特定のシステム イベントに応答するためのバックグラウンド タスクを登録できます。 バックグラウンド タスクは、UI を直接更新するコードは実行できません。代わりに、タイルの更新、バッジの更新、およびトースト通知を使用して、ユーザーに情報を表示します。 詳細については、「 [Supporting your app with background tasks](https://msdn.microsoft.com/library/4c7bb148-eb1f-4640-865e-41f627a46e8e)」を参照してください。  
   
  アプリのバックグラウンド タスクを開始するイベントをデバッガーからトリガーできます。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "44280013"
  アプリをデバッガーに読み込んだら、前の各手順を使用できます。  
   
 ##  <a name="BKMK_Diagnosing_background_task_activation_errors"></a> バックグラウンド タスクのアクティブ化エラーの診断  
- バック グラウンド インフラストラクチャ用の Windows イベント ビューアーで診断ログには、診断やバック グラウンド タスク エラーのトラブルシューティングに使用できる詳細な情報が含まれています。 このログを表示するには:  
+ バックグラウンド インフラストラクチャ用の Windows イベント ビューアーの診断ログには、バックグラウンド タスク エラーの診断とトラブルシューティングを行うために使用できる詳細情報が含まれています。 このログを表示するには:  
   
 1.  イベント ビューアー アプリケーションを開きます。  
   
@@ -109,8 +109,8 @@ ms.locfileid: "44280013"
   
 4.  **診断** ログを選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio での UWP アプリのテスト](../test/testing-store-apps-with-visual-studio.md)   
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
- [アプリケーションのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)   
- [起動する、再開、およびマルチタス キング](/windows/uwp/launch-resume/index)
+ [アプリケーションのライフサイクル](/windows/uwp/launch-resume/app-lifecycle)   
+ [Launching, resuming, and multitasking](/windows/uwp/launch-resume/index)

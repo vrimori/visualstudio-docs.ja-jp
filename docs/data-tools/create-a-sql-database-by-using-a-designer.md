@@ -1,5 +1,6 @@
 ---
 title: データベース ファイルを作成し、テーブル デザイナーを使用して、
+description: Visual Studio でテーブル デザイナーを使用して、データベースにテーブルと外部キーを追加する方法を説明するチュートリアル。 グラフィカル インターフェイスを使用してデータを追加する方法も示します。
 ms.date: 11/03/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +15,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9e2b138a536f22608c357f56b6856d91965ff906
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: c071daeaa1ffe10aa9de995b375e33b76b358da7
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52305326"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159868"
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>データベースを作成し、Visual Studio でのテーブルの追加
 
@@ -29,9 +30,9 @@ Visual Studio を使用して作成し、SQL Server Express LocalDB にローカ
 
 このチュートリアルを完了する、省略可能な必要**データ ストレージと処理**ワークロードを Visual Studio でインストールします。 これをインストールするには、開く**Visual Studio インストーラー**を選択し、**ワークロード**タブ。**Web & クラウド**、選択**データ ストレージと処理**します。 選択、**変更**ワークロードを Visual Studio に追加するボタンをクリックします。
 
-## <a name="create-a-project-and-a-local-database-file"></a>プロジェクトとローカル データベース ファイルの作成。
+## <a name="create-a-project-and-a-local-database-file"></a>プロジェクトとローカル データベース ファイルを作成する
 
-1. SampleDatabaseWalkthrough** という名前の Windows フォーム プロジェクトを作成します。
+1. **SampleDatabaseWalkthrough** という名前の Windows フォーム プロジェクトを作成します。
 
 2. メニュー バーで選択**プロジェクト** > **新しい項目の追加**します。
 
@@ -41,13 +42,13 @@ Visual Studio を使用して作成し、SQL Server Express LocalDB にローカ
 
 4. データベースの名前**SampleDatabase**を選び、**追加**ボタンをクリックします。
 
-### <a name="to-add-a-data-source"></a>データ ソースを追加するには
+### <a name="add-a-data-source"></a>データ ソースを追加する
 
 1. 場合、**データ ソース**キーを押して開くウィンドウが開いていないことが**Shift**+**Alt**+**D**または選択**ビュー** > **その他の Windows** > **データソース**メニュー バーでします。
 
 1. **データ ソース**ウィンドウで、**新しいデータ ソースの追加**リンク。
 
-   データ ソース構成**ウィザードが開きます。
+   **データ ソース構成ウィザード**が開きます。
 
 1. **データ ソースの種類を選択**ページで、選択**データベース**選び、**次**します。
 
@@ -59,25 +60,25 @@ Visual Studio を使用して作成し、SQL Server Express LocalDB にローカ
 
 1. 1 つ、**データベース オブジェクトの選択** ページで、すべてのオブジェクトにはが含まれていない、データベースを示すメッセージが表示されます。 **[完了]** を選択します。
 
-### <a name="to-view-properties-of-the-data-connection"></a>データ接続のプロパティを表示するには
+### <a name="view-properties-of-the-data-connection"></a>データ接続のプロパティを表示
 
 接続文字列を表示することができます、 *SampleDatabase.mdf*データ接続のプロパティ ウィンドウを開いてファイル。
 
--   Visual Studio で、次のように選択します。**ビュー** > **SQL Server オブジェクト エクスプ ローラー**そのウィンドウが開いていない場合。 展開して [プロパティ] ウィンドウを開き、**データ接続**ノードのショートカット メニューを開き、 *SampleDatabase.mdf*を選択し、**プロパティ**します。
+- Visual Studio で、次のように選択します。**ビュー** > **SQL Server オブジェクト エクスプ ローラー**そのウィンドウが開いていない場合。 展開して [プロパティ] ウィンドウを開き、**データ接続**ノードのショートカット メニューを開き、 *SampleDatabase.mdf*を選択し、**プロパティ**します。
 
--   または、選択**ビュー** > **サーバー エクスプ ローラー**、そのウィンドウが開いていない場合。 展開して [プロパティ] ウィンドウを開き、**データ接続**ノード。 ショートカット メニューを開き*SampleDatabase.mdf*、し、**プロパティ**します。
+- または、選択**ビュー** > **サーバー エクスプ ローラー**、そのウィンドウが開いていない場合。 展開して [プロパティ] ウィンドウを開き、**データ接続**ノード。 ショートカット メニューを開き*SampleDatabase.mdf*、し、**プロパティ**します。
 
 ## <a name="create-tables-and-keys-by-using-table-designer"></a>テーブル デザイナーを使用してテーブルおよびキーを作成します。
 
 このセクションでは、2 つのテーブル、テーブルごとに、およびサンプル データのいくつかの行の主キーを作成します。 1 つのテーブル内のレコードが他のテーブル内のレコードに対応させる方法を指定する外部キーを作成することもあります。
 
-### <a name="to-create-the-customers-table"></a>Customers テーブルを作成するには
+### <a name="create-the-customers-table"></a>Customers テーブルを作成します。
 
 1. **サーバー エクスプ ローラー**または**SQL Server オブジェクト エクスプ ローラー**、展開、**データ接続**ノードの順に展開し、 **SampleDatabase.mdf**ノード。
 
 2. ショートカット メニューを開き**テーブル**、し、**新しいテーブルの追加**します。
 
-     [テーブル デザイナー]** は、作成しているテーブルの 1 つの列を表す、1 つの既定の行のグリッドを開いて表示します。 行をグリッドに追加することによって、テーブルに列を追加します。
+     **[テーブル デザイナー]** は、作成しているテーブルの 1 つの列を表す、1 つの既定の行のグリッドを開いて表示します。 行をグリッドに追加することによって、テーブルに列を追加します。
 
 3. グリッドで、次のエントリのそれぞれに行を追加します。
 
@@ -108,7 +109,7 @@ Visual Studio を使用して作成し、SQL Server Express LocalDB にローカ
 
     変更はローカル データベース ファイルに保存されます。
 
-### <a name="to-create-the-orders-table"></a>Orders テーブルを作成するには
+### <a name="create-the-orders-table"></a>Orders テーブルを作成します。
 
 1. 別のテーブルを追加し、次の表の各エントリの行を追加します。
 
@@ -133,13 +134,13 @@ Visual Studio を使用して作成し、SQL Server Express LocalDB にローカ
 
     変更はローカル データベース ファイルに保存されます。
 
-### <a name="to-create-a-foreign-key"></a>外部キーを作成するには
+### <a name="create-a-foreign-key"></a>外部キーを作成します。
 
 1. グリッドの右側のコンテキスト ペインでショートカット メニューを開き、**外部キー**、し、**新しい外部キーを追加**、次の図します。
 
      ![テーブル デザイナーでの外部キーの追加](../data-tools/media/foreignkey.png)
 
-2. 表示されるテキスト ボックスで、ToTable **を Customers** に置換します。
+2. 表示されるテキスト ボックスで、**ToTable** を **Customers** に置換します。
 
 3. T-SQL ペインで、次の例と一致する最後の行を更新します。
 
@@ -170,7 +171,7 @@ Visual Studio を使用して作成し、SQL Server Express LocalDB にローカ
 6. いくつかの注文のデータを追加します。
 
     > [!IMPORTANT]
-    > すべての注文 ID および注文数量が整数であり、各顧客 ID が、Customers テーブルの CustomerID 列で指定した値と一致することを確認します。
+    > すべての注文 ID および注文数量が整数であり、各顧客 ID が、Customers テーブルの **CustomerID** 列で指定した値と一致することを確認します。
 
 7. メニュー バーで選択**ファイル** > **すべて保存**します。
 

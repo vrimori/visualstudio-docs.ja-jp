@@ -1,6 +1,6 @@
 ---
-title: どのような&#39;Visual Studio 2015 の新 |Microsoft Docs
-ms.custom: ''
+title: Visual Studio 2015 の新機能 | Microsoft Docs
+titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
@@ -17,14 +17,14 @@ caps.latest.revision: 364
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ab9d2536b3f92b62233a2ae05b79a722696136e4
-ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
-ms.translationtype: MT
+ms.openlocfilehash: f1d2b37a988f0078149228cce808397f9fb915d1
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51000259"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062439"
 ---
-# <a name="what39s-new-in-visual-studio-2015"></a>どのような&#39;s Visual Studio 2015 の新機能
+# <a name="what39s-new-in-visual-studio-2015"></a>Visual Studio 2015 の新機能
 [!INCLUDE[vs2017banner](./includes/vs2017banner.md)]
 
 Visual Studio 2015 へようこそ。これは開発者用の生産性ツール、クラウド サービス、および拡張機能の統合されたスイートであり、お客様およびチームが、Web、Windows ストア、デスクトップ、Android および iOS 用のアプリやゲームを作成できるようにするものです。
@@ -84,7 +84,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
 #### <a name="the-net-framework"></a>.NET Framework
  Microsoft [!INCLUDE[net_v46](./includes/net-v46-md.md)] では、約 150 の API が新たに提供され、50 の API が更新されて、これまで以上に多くのシナリオに対応できるようになっています。 たとえば、さらに多くのコレクションで <xref:System.Collections.Generic.IReadOnlyCollection%601> が実装され、使いやすさの点で向上しています。 さらに前述の ASP.NET 5 では、最新のクラウド ベース アプリをビルドするための .NET プラットフォームがすっきりとした形で提供されています。
 
- .NET Framework をターゲットとして C# で書かれた Windows ストア アプリで、.NET Native を利用できるようになり、アプリを IL ではなくネイティブ コードにコンパイルすることが可能になりました。また、[!INCLUDE[net_v46](./includes/net-v46-md.md)] には 64 ビット Just-In-Time (JIT) コンパイラーである RyuJIT も追加されています。
+ .NET Framework をターゲットとして C# で書かれた Windows ストア アプリで、.NET Native を利用できるようになり、アプリを IL ではなくネイティブ コードにコンパイルすることが可能になりました。また、 [!INCLUDE[net_v46](./includes/net-v46-md.md)] には 64 ビット Just-In-Time (JIT) コンパイラーである RyuJIT も追加されています。
 
  C# および VB の新しいコンパイラー ("Roslyn") では、コンパイル時間が大幅に短縮されており、総合的なコード分析 API が提供されています。 Visual Studio 2015 では、Roslyn を利用することにより、インラインのリネーム、アナライザー、その場で修正する機能など、さらに多くのリファクタリング機能が提供されています。
 
@@ -144,7 +144,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
  次に示すのは、コードに対して異なる種類の診断および分析を実行する新しいツールまたは機能強化されたツールです。
 
 ### <a name="perftips"></a>パフォーマンスのヒント
- パフォーマンスのヒントはデバッグ中のメソッドの実行時間を表示し、プロファイラーを呼び出すことなくボトルネックをすばやく見つけることができるようになります。 開始するには、「 [PerfTips: Performance Information at-a-glance while Debugging with Visual Studio](http://blogs.msdn.com/b/visualstudioalm/archive/2014/08/18/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio.aspx)」を参照してください
+ パフォーマンスのヒントはデバッグ中のメソッドの実行時間を表示し、プロファイラーを呼び出すことなくボトルネックをすばやく見つけることができるようになります。 最初に、次を参照してください[PerfTips:。パフォーマンス情報 - ひとめで Visual Studio のデバッグ](http://blogs.msdn.com/b/visualstudioalm/archive/2014/08/18/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio.aspx)
 
 ### <a name="error-list"></a>エラー一覧
  エラー一覧はあらゆる列のフィルター処理をサポートするようになりました。 また入力時の C# または Visual Basic ソリューション全体におけるエラー、警告、コード分析を、コードの変更によって大量の警告が発生したとしてもライブで表示します。 新しいエラー一覧は既存の使用方法と後方互換性があります。 詳細については、「 [Error List Window](./ide/reference/error-list-window.md)」を参照してください。
@@ -160,13 +160,13 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
 ## <a name="enjoy-these-additional-ide-improvements"></a>その他の IDE の強化された機能の活用
 
 ### <a name="synchronized-settings-roaming-settings"></a>同期された設定 (ローミング設定)
- Visual Studio 2013 には、テキスト エディター、ショートカット キー、テーマ & フォント & 色、スタートアップ、および環境エイリアスなどの最も一般的に構成されている設定のいくつかに対して、同期された設定が導入されています。  Visual Studio 2015 では、さらに多くの設定を同期し、Professional、Enterprise、Express SKU、Blend などの Visual Studio ファミリのアプリケーション間で設定を同期するように、この機能が改良されています。 Visual Studio 2013 で使用したアカウントで Visual Studio 2015 に初めてサインインすると、Visual Studio 2013 から適用された同期された設定が表示されます。 "Sync"を入力して、設定にアクセスする**クイック起動**に移動または**ツール > オプション > 環境 > の同期された設定**します。
+ Visual Studio 2013 には、テキスト エディター、ショートカット キー、テーマ & フォント & 色、スタートアップ、および環境エイリアスなどの最も一般的に構成されている設定のいくつかに対して、同期された設定が導入されています。  Visual Studio 2015 では、さらに多くの設定を同期し、Professional、Enterprise、Express SKU、Blend などの Visual Studio ファミリのアプリケーション間で設定を同期するように、この機能が改良されています。 Visual Studio 2013 で使用したアカウントで Visual Studio 2015 に初めてサインインすると、Visual Studio 2013 から適用された同期された設定が表示されます。 設定にアクセスするには、**[クイック起動]** に「sync」と入力するか、**[ツール] > [オプション] > [環境] > [同期された設定]** に移動します。
 
 ### <a name="automatic-extension-updates"></a>拡張機能の自動更新
  インストールされている Visual Studio の拡張機能は、Visual Studio ギャラリーで新しいバージョンが使用可能なときに、自動的に更新されるようになりました。 拡張機能の自動更新をカスタマイズする方法の詳細については、「 [Visual Studio の拡張機能を検索および使用する](./ide/finding-and-using-visual-studio-extensions.md) 」を参照してください。
 
 ### <a name="title-case-menus"></a>メニューの先頭文字の大文字指定
- お客様の声に基づいて調整されました。 Visual Studio のメニューは再び既定で先頭文字が大文字に指定されます。 ただし、すべて大文字のスタイルを希望する場合を設定できますがの起動時にまたは、**ツール > オプション > 全般**プロパティ ページ。
+ お客様の声に基づいて調整されました。 Visual Studio のメニューは再び既定で先頭文字が大文字に指定されます。 ただし、すべて大文字のスタイルを希望する場合は、起動時または **[ツール] > [オプション] > [全般]** プロパティ ページで設定できます。
 
  ![Visual Studio 2015 タイトル ケース メイン メニュー コマンド](./ide/media/vs2015-mainmenu.png "VS2015_MainMenu")
 
@@ -183,18 +183,18 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
 ### <a name="notification-hub"></a>通知ハブ
  スキャンを簡単にするために、通知ハブの UI が効率化されています。 パフォーマンスの問題、レンダリングの問題、クラッシュなどの通知の種類が追加され、Visual Studio に通知の表示停止を指示できるようになりました。 詳しくは、「[Visual Studio の通知](./ide/visual-studio-notifications.md)」をご覧ください。
 
-### <a name="codelens-find-what-happened-to-your-code-enterprise-and-professional-editions-only"></a>CodeLens: コードに何が起こったかを検索します (Enterprise Edition と Professional Edition のみ)。
+### <a name="codelens-find-what-happened-to-your-code-enterprise-and-professional-editions-only"></a>CodeLens検索 (Enterprise および Professional エディションのみ)、コードの変更点
  エディターを離れずにコードに関する情報を検索できるため、自分の作業に専念できます。 Visual Studio Team Services (VSTS) または Team Foundation Server (TFS) に格納されているコードについて、作業項目、バグ、コード レビューなどの変更やその他の履歴を確認できます。
 
  Visual Studio Enterprise と Visual Studio Professional で、次の操作を実行できるようになりました。
 
 - Visual Studio エディターでコード ファイル全体の履歴を取得する。
 
-   ![CodeLens: コード ファイルの詳細を取得する](./ide/media/codelensfilelevel.png "CodeLensFileLevel")
+   ![CodeLensコード ファイルの詳細を取得](./ide/media/codelensfilelevel.png "CodeLensFileLevel")
 
 - コードを変更したユーザーを示すグラフを表示する。 これは、チームでの変更のパターンを見つけて影響を評価するために役立ちます。
 
-   ![CodeLens: コードの変更履歴をグラフで表示](./ide/media/codelens.png "CodeLens")
+   ![CodeLensグラフとしてコードの変更履歴を参照してください](./ide/media/codelens.png "CodeLens")
 
 - コードの最終変更日時を簡単に分かるようにする。
 
@@ -235,7 +235,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
 
   「 [Map dependencies across your solutions](./modeling/map-dependencies-across-your-solutions.md)」を参照してください。
 
-  **その他の設計とモデリングこのリリースで変更します。**
+  **このリリースでの設計とモデリングに関する他の変更:**
 
 - **レイヤー図**。 クラス ビューとオブジェクト ブラウザーを使用してこれらの図を更新できます。 ソフトウェア設計要件を満たすには、レイヤー図を使用してソフトウェアの必要な依存関係を記述します。 これらの制約を満たしていないコードを探し、この基準で将来のコードを検証することにより、コードをこの設計と一致させます。
 
@@ -268,8 +268,9 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
 
  まずは、前述の手順に従って問題点、改善点の報告をお送りください。 その後にポップアップ表示されるダイアログで、フィードバックに既定のタグを付けるか、または独自のタグを作成してタグ付けすることができます。 タグを付けるなら、フィードバックを該当する機能のチームに転送する際に助けになります。 **[カテゴリの選択]** ドロップダウン リストで、報告する問題に該当するオプションを選択した後、問題を再現する手順に従ってください。 Visual Studio を使用してフィードバックを報告する方法についての詳細な手順も利用できます。 詳細については、次を参照してください。[スマイルの指示を送信する Visual Studio](http://msdn.microsoft.com/library/5cc9b67a-54d0-41b0-aa8f-80dff4475a6b)します。
 
-## <a name="see-also"></a>関連項目
-* [Apache Cordova によるクロスプラット フォーム アプリを構築します。](http://msdn.microsoft.com/library/34d3c1be-22b3-4812-97fb-10b4e8ad2134)
+## <a name="see-also"></a>参照
+
+* [Apache Cordova を使ったクロスプラットフォーム アプリをビルドする](http://msdn.microsoft.com/library/34d3c1be-22b3-4812-97fb-10b4e8ad2134)
 * [Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する](./cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md)
 * [Visual C++ を使ったクロスプラットフォーム モバイル アプリをビルドする](./misc/build-cross-platform-mobile-apps-with-visual-cpp.md)
 * [IntelliTest でのコードの単体テストの生成](./test/generate-unit-tests-for-your-code-with-intellitest.md)

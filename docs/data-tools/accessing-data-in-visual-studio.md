@@ -16,12 +16,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 463bc06bb023e973ac6fe62f5f92a3d9067b2841
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
-ms.translationtype: MT
+ms.openlocfilehash: e31eeaf3061968cfa916d2ec5a0d0e522b9f6ebb
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44280598"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159530"
 ---
 # <a name="access-data-in-visual-studio"></a>Visual Studio でのデータへのアクセス
 
@@ -37,32 +37,35 @@ JavaScript、Python、PHP、Ruby、または C++ でのアプリケーション�
 
 **Microsoft Azure**
 
-||||
-|-|-|-|
-|SQL Database|Azure Cosmos DB|ストレージ (blob、テーブル、キュー、ファイル)|
-|SQL Data Warehouse|SQL Server Stretch Database|StorSimple|
-
-その他
+- SQL Database
+- Azure Cosmos DB
+- ストレージ (blob、テーブル、キュー、ファイル)
+- SQL Data Warehouse
+- SQL Server Stretch Database
+- StorSimple
+- その他
 
 **SQL**
 
-||||
-|-|-|-|
-|SQL Server 2005-2016 Express LocalDB など|Firebird|MariaDB|
-|MySQL|Oracle|PostgreSQL|
-|SQLite|||
-
-その他
+- SQL Server 2005-2016 (Express、LocalDB を含む)
+- Firebird
+- MariaDB
+- MySQL
+- Oracle
+- PostgreSQL
+- SQLite
+- その他
 
 **NoSQL**
 
-||||
-|-|-|-|
-|Apache Cassandra|CouchDB|MongoDB|
-|NDatabase|OrientDB|RavenDB|
-|VelocityDB|||
-
-その他
+- Apache Cassandra
+- CouchDB
+- MongoDB
+- NDatabase
+- OrientDB |
+- RavenDB
+- VelocityDB
+- その他
 
 多くのデータベース ベンダーやサード パーティは、NuGet パッケージによって Visual Studio の統合をサポートします。 Nuget.org または Visual Studio で NuGet パッケージ マネージャーを通じて、オファリングを調べることができます (**ツール** > **NuGet パッケージ マネージャー** > **NuGet の管理ソリューションのパッケージの**)。 他のデータベース製品は、拡張機能として、Visual Studio と統合します。 移動して、Visual Studio Marketplace でのこれらの製品を参照する**ツール**、**拡張機能と更新**し選択**オンライン**の左側のウィンドウで、ダイアログ ボックス。 詳細については、次を参照してください。 [for Visual Studio の互換性のあるデータベース システム](../data-tools/installing-database-systems-tools-and-samples.md)します。
 
@@ -73,7 +76,7 @@ JavaScript、Python、PHP、Ruby、または C++ でのアプリケーション�
 
 .NET Core で含む、すべての .NET データ アクセスは、ADO.NET、任意の種類のデータ ソース、リレーショナルと非リレーショナルの両方にアクセスするためのインターフェイスを定義する一連のクラスに基づきます。 Visual Studio がいくつかのツールと、データベースに接続するための ADO.NET を使用するデザイナーがデータを操作およびユーザーにデータを表示します。 このセクションのドキュメントでは、これらのツールを使用する方法について説明します。 コマンドの ADO.NET オブジェクトに対して直接プログラムすることもできます。 ADO.NET の Api を直接呼び出すことの詳細については、次を参照してください。 [ADO.NET](/dotnet/framework/data/adonet/index)します。
 
-データ アクセスのドキュメントが ASP.NET に関連する、次を参照してください。[データを扱う](http://www.asp.net/web-forms/overview/presenting-and-managing-data)ASP.NET サイト。 ASP.NET MVC で Entity Framework の使用に関するチュートリアルについては、次を参照してください。 [Entity Framework 6 Code First MVC 5 の使用の概要](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)します。
+データ アクセスのドキュメントが ASP.NET に関連する、次を参照してください。[データを扱う](https://www.asp.net/web-forms/overview/presenting-and-managing-data)ASP.NET サイト。 ASP.NET MVC で Entity Framework の使用に関するチュートリアルについては、次を参照してください。 [Entity Framework 6 Code First MVC 5 の使用の概要](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)します。
 
 C# または Visual Basic でのユニバーサル Windows プラットフォーム (UWP) アプリでは、Microsoft Azure SDK for .NET を使用して、Azure Storage と他の Azure サービスにアクセスします。 Windows.Web.HttpClient クラスは、任意の RESTful サービスとの通信を使用できます。 詳細については、次を参照してください。 [Windows.Web.Http を使用して HTTP サーバーに接続する方法](https://msdn.microsoft.com/library/windows/apps/dn469430.aspx)します。
 
@@ -103,9 +106,9 @@ SQL Server に接続する C++ アプリケーションを使用する必要が�
 
 REST サービスを使用する C++ プログラムで使用できる、 [C++ REST SDK](https://github.com/Microsoft/cpprestsdk)します。
 
-Microsoft Azure Storage を使用する C++ プログラムで使用できる、 [Microsoft Azure Storage クライアント](http://www.nuget.org/packages/wastorage)します。
+Microsoft Azure Storage を使用する C++ プログラムで使用できる、 [Microsoft Azure Storage クライアント](https://www.nuget.org/packages/Microsoft.Azure.Storage.CPP)します。
 
-データ モデリング&mdash;Visual Studio は C++ の ORM レイヤーを提供できません。 [ODB](http://www.codesynthesis.com/products/odb/) C++ の人気のあるオープン ソースの ORM が。
+データ モデリング&mdash;Visual Studio は C++ の ORM レイヤーを提供できません。 [ODB](https://www.codesynthesis.com/products/odb/) C++ の人気のあるオープン ソースの ORM が。
 
 C++ アプリからデータベースへの接続に関する詳細についてを参照してください。 [C++ 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-cpp.md)します。 従来の Visual C のデータ アクセス テクノロジの詳細については、次を参照してください。[データ アクセス](/cpp/data/data-access-in-cpp)します。
 
@@ -131,11 +134,11 @@ C++ アプリからデータベースへの接続に関する詳細について�
 
 [SQL Server Data Tools](/sql/ssdt/download-sql-server-data-tools-ssdt)&mdash;をデザイン、探索、テスト、およびデータに接続されたアプリケーションとデータベースのデプロイを簡略化するツールについて説明します。
 
-[ADO.NET](/dotnet/framework/data/adonet/index)&mdash;ADO.NET のアーキテクチャと、ADO.NET のクラスを使用してアプリケーション データを管理し、データ ソースおよび XML と対話する方法について説明します。
+[ADO.NET](/dotnet/framework/data/adonet/index) &mdash; ADO.NET のアーキテクチャについて説明します。また、ADO.NET のクラスを使用してアプリケーション データを管理し、データ ソースおよび XML と対話する方法についても説明します。
 
 [ADO.NET Entity Framework](https://docs.microsoft.com/ef/ef6/)&mdash;開発者がリレーショナル データベースに対して直接の代わりに、概念モデルに対してプログラムを許可するデータ アプリケーションを作成する方法について説明します。
 
-[WCF Data Services 4.5](/dotnet/framework/data/wcf/index)&mdash;を使用する方法について説明します[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]を実装する web またはイントラネット上のデータ サービスを展開する、 [Open Data Protocol (OData)](http://go.microsoft.com/fwlink/?LinkID=182204)します。
+[WCF Data Services 4.5](/dotnet/framework/data/wcf/index)&mdash;を使用する方法について説明します[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]を実装する web またはイントラネット上のデータ サービスを展開する、 [Open Data Protocol (OData)](https://www.odata.org/)します。
 
 [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)&mdash;Office ソリューションでデータを操作する方法を説明するトピックへのリンクが含まれています。 スキーマ指向プログラミング、データ キャッシュ、およびサーバー側データ アクセスに関する説明が含まれます。
 

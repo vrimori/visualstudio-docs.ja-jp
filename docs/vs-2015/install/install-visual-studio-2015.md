@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 2015 のインストール |Microsoft Docs
-ms.custom: ''
+title: Visual Studio 2015 のインストール | Microsoft Docs
+titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
@@ -23,18 +23,18 @@ caps.latest.revision: 183
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 2552af00acdcb490c5f54f642fdfcdc3588d22e0
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.openlocfilehash: 761264d80c04f0e2ce13a365071f56739d6961a2
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51789994"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055168"
 ---
-# <a name="install-visual-studio-2015"></a>Visual Studio 2015 をインストールします。
+# <a name="install-visual-studio-2015"></a>Visual Studio 2015 のインストール
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このページには、インストールするのに役立つ詳細な情報が含まれています。 **Visual Studio 2015**、開発者の生産性向上ツールの統合スイートです。 [機能](https://www.visualstudio.com/news/vs2015-vs.aspx)、 [エディション](http://go.microsoft.com/fwlink/?LinkID=242142)、 [システム要件](https://www.visualstudio.com/products/visual-studio-2015-compatibility-vs)、 [ダウンロード](http://go.microsoft.com/fwlink/?LinkId=517106)などの情報にすばやくアクセスできるリンクも記載しています。
+このページには、開発者用の生産性ツールの統合されたスイートである、**Visual Studio 2015** をインストールする際に役立つ詳細情報が含まれています。 [機能](https://www.visualstudio.com/news/vs2015-vs.aspx)、 [エディション](http://go.microsoft.com/fwlink/?LinkID=242142)、 [システム要件](https://www.visualstudio.com/products/visual-studio-2015-compatibility-vs)、 [ダウンロード](http://go.microsoft.com/fwlink/?LinkId=517106)などの情報にすばやくアクセスできるリンクも記載しています。
 
 ## <a name="quick-links"></a>クイック リンク
 
@@ -42,14 +42,14 @@ ms.locfileid: "51789994"
 
 |||
 |------------------|----------------|
-|![Visual Studio のダウンロード](../install/media/downloads.png "ダウンロード") |**ダウンロード**: Visual Studio 2015 をインストールするには、製品の実行可能ファイルからダウンロードできます、 [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015) (サブスクリプションが必要) ページ、またはボックス化された製品のインストール メディアを使用します。 [現在または以前のバージョンの Visual Studio をダウンロードする方法についての詳細は](https://www.visualstudio.com/vs/older-downloads/)します。|
-|![機能の詳細について](../install/media/features.png "機能") |**機能**: Visual Studio 2015 の機能に関する詳細については、リリース ノートを参照してください[RTM](https://www.visualstudio.com/news/vs2015-vs)、 [Update 1](https://www.visualstudio.com/news/vs2015-update1-vs)、 [Update 2](https://www.visualstudio.com/news/vs2015-update2-vs)、および[。更新プログラム 3](https://www.visualstudio.com/news/releasenotes/vs2015-update3-vs)します。|
-|![各 SKU で新機能については](../install/media/sku.png "Sku") |**Sku**: Visual Studio 2015 の各エディションで使用可能な新機能についてを参照してください、 [Visual Studio 製品の比較](http://go.microsoft.com/fwlink/?LinkID=242142)ページ。|
-|![システム要件を表示](../install/media/system-requirements.png "システム要件") |**システム要件**: Visual Studio 2015 の各エディションのシステム要件を表示するを参照してください。、 [Visual Studio 2015 の互換性](https://www.visualstudio.com/products/visual-studio-2015-compatibility-vs)ページ。|
-|![プロダクト キーを検索](../install/media/product-keys.png "プロダクト キー") |**プロダクト キー**: プロダクト キーを検索するを参照してください、[方法: Visual Studio プロダクト キーを検索](../install/how-to-locate-the-visual-studio-product-key.md)トピック。|
-|![ライセンスをお探し](../install/media/licensing.png "ライセンス") |**ライセンス**: 個人または企業のお客様の両方のライセンス オプションについて確認するを参照してください、 [Visual Studio と MSDN のライセンス](https://www.microsoft.com/download/details.aspx?id=13350)ホワイト ペーパー。|
+|![Visual Studio のダウンロード](../install/media/downloads.png "ダウンロード") |**ダウンロード**Visual Studio 2015 をインストールするには、製品の実行可能ファイルからダウンロードできます、 [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015) (サブスクリプションが必要) ページ、またはボックス化された製品のインストール メディアを使用します。 [現在または以前のバージョンの Visual Studio をダウンロードする方法についての詳細は](https://www.visualstudio.com/vs/older-downloads/)します。|
+|![機能の詳細について](../install/media/features.png "機能") |**機能**Visual Studio 2015 の機能に関する詳細については、リリース ノートを参照してください。 [RTM](https://www.visualstudio.com/news/vs2015-vs)、 [Update 1](https://www.visualstudio.com/news/vs2015-update1-vs)、 [Update 2](https://www.visualstudio.com/news/vs2015-update2-vs)、および[Update 3](https://www.visualstudio.com/news/releasenotes/vs2015-update3-vs)します。|
+|![各 SKU で新機能については](../install/media/sku.png "Sku") |**SKU**:Visual Studio 2015 の各エディションに用意されている提供物については、「[Visual Studio 製品の比較](http://go.microsoft.com/fwlink/?LinkID=242142)」ページを参照してください。|
+|![システム要件を表示](../install/media/system-requirements.png "システム要件") |**システム要件**:Visual Studio 2015 の各エディションのシステム要件については、「[Visual Studio 2015 の互換性](https://www.visualstudio.com/products/visual-studio-2015-compatibility-vs)」ページを参照してください。|
+|![プロダクト キーを検索](../install/media/product-keys.png "プロダクト キー") |**プロダクト キー**プロダクト キーを検索するを参照してください、[方法。Visual Studio プロダクト キーを検索](../install/how-to-locate-the-visual-studio-product-key.md)トピック。|
+|![ライセンスをお探し](../install/media/licensing.png "ライセンス") |**ライセンス**:個人または企業のお客様の両方のライセンス オプションについては、「[Visual Studio と MSDN のライセンス](https://www.microsoft.com/download/details.aspx?id=13350)」ホワイト ペーパーを参照してください。|
 
-##  <a name="custom"></a> 既定値とします。カスタム セットアップ
+##  <a name="custom"></a> 既定値とカスタム セットアップ
  Visual Studio 2015 をインストールするときに、日常的に使用するコンポーネントを含めたり除外したりできます。 一般的に、既定のインストールはカスタム インストールよりサイズが小さく、インストールにかかる時間も短くなります。 また、以前のバージョンで既定でインストールされていたコンポーネントの多数が、このバージョンでは、明示的に選択する必要があるカスタム コンポーネントと見なされるようになりました。
 
  ![Visual Studio 2015 のセットアップ ダイアログ](../ide/media/vs2015-setup-screen.png "VS2015_Setup_screen")
@@ -65,8 +65,8 @@ ms.locfileid: "51789994"
 |------------------|----------------|
 |**更新**|Visual Studio 2015 更新プログラム 3|
 |**プログラミング言語**|Visual C++<br />Visual F#<br />Python Tools for Visual Studio|
-|**Windows および Web 開発**|ClickOnce 発行ツール<br />LightSwitch<br />Microsoft Office Developer Tools<br />Microsoft SQL Server Data Tools<br /> Microsoft Web Developer Tools<br />PowerShell Tools for Visual Studio (サード パーティの)<br />Silverlight 開発キット<br />ユニバーサル Windows アプリ開発ツール<br />Windows 10 のツールおよび SDK<br />Windows 8.1 および Windows Phone 8.0/8.1 ツール<br />Windows 8.1 のツールおよび SDK|
-|**クロス プラットフォーム モバイル開発**|C#/.NET (Xamarin)<br />HTML/JavaScript (Apache Cordova)<br />iOS/Android 向け Visual C++ モバイル開発<br />Clang with Microsoft CodeGen|
+|**Windows 開発および Web 開発**|ClickOnce 発行ツール<br />LightSwitch<br />Microsoft Office Developer Tools<br />Microsoft SQL Server Data Tools<br /> Microsoft Web Developer Tools<br />PowerShell Tools for Visual Studio (サード パーティの)<br />Silverlight 開発キット<br />ユニバーサル Windows アプリ開発ツール<br />Windows 10 のツールおよび SDK<br />Windows 8.1 および Windows Phone 8.0/8.1 ツール<br />Windows 8.1 のツールおよび SDK|
+|**クロス プラットフォームのモバイル開発**|C#/.NET (Xamarin)<br />HTML/JavaScript (Apache Cordova)<br />iOS/Android 向け Visual C++ モバイル開発<br />Clang with Microsoft CodeGen|
 |**一般的なツールとソフトウェア開発キット**|Android Native Development Kit (サード パーティの)<br /> Android SDK [サード パーティ]<br />Android SDK セットアップ Api (サード パーティの)<br />Apache Ant (サード パーティの)<br /> Java SE Development Kit (サード パーティの)<br /> Joyent Node.js (サード パーティの)|
 |**一般的なツール**|Git for Windows (サード パーティの)<br />Visual Studio 向け GitHub 拡張 (サード パーティの)<br /> Visual Studio 機能拡張ツール|
 
@@ -74,7 +74,7 @@ ms.locfileid: "51789994"
  インストール メディア (Dvd) を使用してから、Visual Studio サブスクリプションのサービスを使用して、Visual Studio をインストールすることができます、 [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015)から web インストーラーをダウンロードすることによって、web サイト、 [Visual Studioダウンロード](http://go.microsoft.com/fwlink/?LinkId=517106)web サイト、またはオフライン インストール レイアウトを作成して (を参照してください、[の作成、オフライン インストールの Visual Studio](../install/create-an-offline-installation-of-visual-studio.md)の詳細 ページ)。
 
 > [!IMPORTANT]
->  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]をインストールするには、管理者の資格情報が必要です。 ただしインストール後、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の使用には不要です。
+>  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]をインストールするには、管理者の資格情報が必要です。 ただしインストール後、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の使用には不要です。
 
  Visual Studio のすべてをインストールするには、ローカル管理者アカウントの次の特権が有効になっている必要があります。
 
@@ -108,13 +108,13 @@ ms.locfileid: "51789994"
  デプロイする方法については[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、ネットワーク経由で、次を参照してください。、 [Visual Studio 管理者ガイド](../install/visual-studio-administrator-guide.md)します。
 
 ###  <a name="BKMK_Virtualized"></a> 仮想化環境で Visual Studio のインストール
- **Hyper-v の概要に関するビデオの問題**
+ **Hyper-V に関するビデオの問題**
 
  Hyper-V が有効であり、アクセラレータ機能を使用するグラフィックス アダプターが搭載されている Windows Server 2008 R2 を実行すると、システムの速度が低下することがあります。
 
- 詳細については、Microsoft Web サイトの「 [Video performance may decrease when a Windows Server 2008 or Windows Server 2008 R2 based computer has the Hyper-V role enabled and an accelerated display adapter installed (Windows Server 2008 または Windows Server 2008 R2 ベースのコンピューターで Hyper-V の役割を有効にし、アクセラレータ機能を使用するディスプレイ アダプターをインストールしたときに、ビデオ パフォーマンスが低下する場合がある)](http://go.microsoft.com/fwlink/?LinkID=231084)」を参照してください。
+ 詳細については、Microsoft web サイトで、次のページを参照してください。[ビデオのパフォーマンスが低下する場合、Windows Server 2008 または Windows Server 2008 の R2 ベースのコンピューターが、HYPER-V の役割を有効にし、インストールされている高速化されたディスプレイ アダプター](http://go.microsoft.com/fwlink/?LinkID=231084)します。
 
- **HYPER-V によるデバイスのエミュレート**
+ **Hyper-V によるデバイスのエミュレート**
 
  仮想化を使わずに Visual Studio 2015 を実際のハードウェアにインストールする場合、Hyper-V を使用して Windows デバイスと Android デバイスのエミュレーションを有効にする機能を選択できます。 HYPER-V にインストールすると、Windows デバイスまたは Android デバイスをエミュレートできなくなります。 これは、エミュレーター自体が仮想マシンであり、現時点では別の VM の内部で VM をホストすることができないためです。 回避策として、アプリケーションを直接デプロイおよびデバッグできる実際の Windows デバイスまたは Android デバイスを用意することができます。
 
@@ -138,7 +138,7 @@ ms.locfileid: "51789994"
 
 2. **[Microsoft ヘルプ ビューア―]** の **[コンテンツの管理]** タブで、ヘルプ コンテンツのインストール ソースを選択します。
 
-3. 特定のヘルプ コレクションを探している場合は、名前やキーワードを入力、**検索**テキスト ボックス、およびキーを押します**Enter**します。
+3. 特定のヘルプ コレクションを検索する場合は、**[検索]** ボックスに名前やキーワードを入力し、**Enter** キーを押します。
 
 4. 必要なヘルプ コレクションの横で、 **[追加]** または **[削除]** リンクをクリックします。
 
@@ -146,8 +146,8 @@ ms.locfileid: "51789994"
 
    インストールまたはオフラインのヘルプをデプロイする方法の詳細については、次を参照してください。、[ヘルプ ビューアーの管理者ガイド](../ide/help-viewer-administrator-guide.md)します。
 
-##  <a name="serviceReleases"></a> サービス リリースと製品の更新プログラムの確認
- すべての拡張機能に互換性があるためには、以前のバージョンからアップグレードすると、Visual Studio は自動的に拡張機能をアップグレードしません。 拡張機能を再インストールする必要があります、 [Visual Studio ギャラリー](http://go.microsoft.com/fwlink/?LinkId=178891)またはソフトウェア発行者から。
+##  <a name="serviceReleases"></a> サービス リリースと製品の更新プログラムのチェック
+ すべての拡張機能に互換性があるわけではないので、以前のバージョンからアップグレードするときに、Visual Studio は拡張機能を自動的にアップグレードしません。 拡張機能を再インストールする必要があります、 [Visual Studio ギャラリー](http://go.microsoft.com/fwlink/?LinkId=178891)またはソフトウェア発行者から。
 
 #### <a name="to-automatically-check-for-service-releases"></a>サービス リリースを自動的に確認するには
 
@@ -198,6 +198,6 @@ ms.locfileid: "51789994"
 |[Visual Studio Image Library](../designers/the-visual-studio-image-library.md)|Visual Studio アプリケーションで使用できるグラフィックスをインストールする方法について説明します。|
 |[Get Started Developing with Visual Studio](../ide/get-started-developing-with-visual-studio.md)|情報と Visual Studio をより効果的に使用するのに役立つリンクが含まれています。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Studio へのサインイン](../ide/signing-in-to-visual-studio.md)

@@ -1,6 +1,6 @@
 ---
-title: 'デバッグの準備: Visual C プロジェクトの種類 |Microsoft Docs'
-ms.custom: ''
+title: C++ プロジェクトをデバッグするための準備 |Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -20,14 +20,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3d1c183ab4816803f9c1c2ce8ee60373d1e50bf
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: HT
+ms.openlocfilehash: c39acdef217d2b858645073cb96da4952c91df5a
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49864102"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066315"
 ---
-# <a name="debugging-preparation-visual-c-project-types"></a>デバッグの準備 : Visual C++ のプロジェクト
+# <a name="debugging-preparation-visual-c-project-types"></a>デバッグの準備:Visual C++ プロジェクトの種類
 ここでは、[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] プロジェクト テンプレートで作成された基本的なプロジェクトの種類をデバッグする方法について説明します。  
   
  出力として Dll を作成するプロジェクトの種類に分類された注[DLL プロジェクトのデバッグ](../debugger/debugging-dll-projects.md)共有している一般的な機能のため。  
@@ -50,13 +50,13 @@ ms.locfileid: "49864102"
   
 |プロパティ名|設定|  
 |-------------------|-------------|  
-|**Optimization**|設定**無効 (/0 d)。** 最適化されたコードは、生成された命令がソース コードと直接対応していないため、デバッグが困難です。 プログラムが最適化されたコードにだけ現れるバグを発見した場合は、この設定を有効しますが、コードに示すように、**逆アセンブル**ウィンドウは、ソースに表示される内容が一致しないがあります最適化されたソースから生成windows とします。 また、ステップなどの他の機能が正常に動作しない場合もあります。|  
+|**Optimization**|**[無効 (/0d)]** に設定します。 最適化されたコードは、生成された命令がソース コードと直接対応していないため、デバッグが困難です。 プログラムで、最適化されたコード内だけに現れるバグが見つかった場合は、この設定を有効にできます。**[逆アセンブル]** ウィンドウに表示されるコードは最適化されたソースから生成されているため、ソース ウィンドウに表示されるコードとは一致しない可能性があります。 また、ステップなどの他の機能が正常に動作しない場合もあります。|  
   
 ### <a name="configuration-properties-124-linker-124-debugging-node"></a>構成プロパティ&#124;リンカー&#124;デバッグ ノード  
   
 |プロパティ名|設定|  
 |-------------------|-------------|  
-|**デバッグ情報を生成します。**|常にこのオプションを設定する必要があります**はい (/debug)** デバッグ シンボルとデバッグに必要なファイルを作成します。 アプリケーションを稼働するときは、このオプションをオフに設定できます。|  
+|**デバッグ情報の生成**|このオプションは、デバッグ シンボルとデバッグに必要なファイルを作成するために常に **[はい (/DEBUG)]** に設定する必要があります。 アプリケーションを稼働するときは、このオプションをオフに設定できます。|  
   
  [このトピックの内容](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)  
   
@@ -71,48 +71,48 @@ ms.locfileid: "49864102"
   
 1.  Visual Studio でプロジェクトを開きます。  
   
-2.  **デバッグ**] メニューの [選択**開始**します。  
+2.  **[デバッグ]** メニューの **[開始]** を選びます。  
   
 3.  説明した手法を使用してデバッグ[デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)します。  
   
 ###  <a name="BKMK_To_manually_set_a_Debug_configuration"></a> デバッグ構成を手動で設定するには  
   
-1. **ビュー**  メニューのをクリックして**プロパティ ページ**します。  
+1. **[表示]** メニューの **[プロパティ ページ]** をクリックします。  
   
-2. をクリックして、**構成プロパティ**開くことになっていないノード  
+2. **[構成プロパティ]** ノードが開いていない場合は、ノードをクリックして開きます。  
   
-3. 選択**全般**の値を設定し、**出力**行**デバッグ**。  
+3. **[全般]** をクリックし、**[出力]** 行の値を **[デバッグ]** に設定します。  
   
-4. 開く、 **C/C++** ノード、および選択**全般**します。  
+4. **[C/C++]** ノードを開き、**[全般]** をクリックします。  
   
-    **デバッグ**すると、コンパイラによって生成されるデバッグ情報の種類を指定する行。 選択した可能性があります値を含める**プログラム データベース (/Zi)** または**編集と続行 (/ZI) 用のプログラム データベース**します。  
+    **[デバッグ]** 行で、コンパイラで生成するデバッグ情報の種類を指定します。 選択できる値は、**[プログラム データベース (/Zi)]**、**[エディット コンティニュ用プログラム データベース (/ZI)]** などです。  
   
-5. 選択**最適化**、し、**最適化**行で、**無効 (/0 d)** ドロップダウン リストから。  
+5. **[最適化]** をクリックし、**[最適化]** 行で、ドロップダウン リストの **[無効 (/0d)]** をクリックします。  
   
     最適化されたコードは、生成された命令がソース コードと直接対応していないため、デバッグが困難です。 プログラムで、最適化されたコード内だけに現れるバグが見つかった場合は、この設定を有効にできます。[逆アセンブル] ウィンドウに表示されるコードは最適化されたソースから生成されているため、ソース ウィンドウに表示されるコードとは一致しない可能性があります。 ステップ実行などの機能で、ブレークポイントや実行ポイントが正しく表示されない場合があります。  
   
-6. 開く、**リンカー**ノード、および選択**デバッグ**します。 最初の**生成**行で、**はい (/debug)** ドロップダウン リストから。 デバッグ時には、必ずこのオプションを設定する必要があります。  
+6. **[リンカー]** ノードを開き、**[デバッグ]** をクリックします。 最初の **[デバッグ情報の生成]** 行で、ドロップダウン リストの **[はい (/DEBUG)]** をクリックします。 デバッグ時には、必ずこのオプションを設定する必要があります。  
   
    詳細については、次を参照してください。[C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)します。  
   
    [このトピックの内容](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Windows_Forms_Applications___NET_"></a> Windows フォーム アプリケーション (.NET)  
- **Windows フォーム アプリケーション (.NET)** テンプレートを作成、 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] Windows フォーム アプリケーションです。 詳細については、「 [How to: Create a Windows Application Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))」を参照してください。  
+ **Windows フォーム アプリケーション (.NET)** テンプレートを使用して [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] Windows フォーム アプリケーションを作成できます。 詳細については、「[方法 :Windows アプリケーション プロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))」を参照してください。  
   
  この種のアプリケーションを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でデバッグする作業は、マネージド Windows フォーム アプリケーションのデバッグ作業に似ています。  
   
- プロジェクト テンプレートを使用して Windows フォーム プロジェクトを作成する場合、デバッグ構成とリリース構成に必要な設定は [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって自動的に作成されます。 かどうか、必要に応じて変更できますでこれらの設定、 **\<プロジェクト名 > プロパティ ページ** ダイアログ ボックス。 詳細については、次を参照してください。[デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)します。  
+ プロジェクト テンプレートを使用して Windows フォーム プロジェクトを作成する場合、デバッグ構成とリリース構成に必要な設定は [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって自動的に作成されます。 必要に応じて、これらの設定を **[\<プロジェクト名> プロパティ ページ]** ダイアログ ボックスで変更できます。 詳細については、[デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)に関するページを参照してください。  
   
  詳細については、次を参照してください。 [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)します。  
   
- Windows フォーム アプリケーションをデバッグするもう 1 つの方法では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の外部でアプリケーションを起動してアタッチします。 詳細については、次を参照してください。[実行中のプログラムまたは複数のプログラムへのアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)します。  
+ Windows フォーム アプリケーションをデバッグするもう 1 つの方法では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の外部でアプリケーションを起動してアタッチします。 詳細については、「[実行中のプログラムまたは複数のプログラムへのアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)」を参照してください。  
   
  [このトピックの内容](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)   
  [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
  [実行中のプログラムまたは複数のプログラムへのアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
  [デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)   
- [方法: Windows アプリケーション プロジェクトを作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))
+ [方法: Windows アプリケーション プロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))
