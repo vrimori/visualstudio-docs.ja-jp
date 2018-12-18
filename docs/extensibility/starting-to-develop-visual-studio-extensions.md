@@ -26,7 +26,7 @@ ms.locfileid: "51349664"
 Visual Studio 拡張機能を初めて作成する場合に、いくつかの疑問をもたれるかもしれません。 ここでは、最も一般的なものの一部を一覧にしています。 探している情報が見つからない場合は、フィードバック ボタンを使用して (画面の下部にある **このページは役に立ちましたか?** ) お探しの情報を問い合わせてください。
 
 > [!NOTE]
-> この記事では、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac では、次を参照してください。 [Visual Studio for Mac の拡張](/visualstudio/mac/extending-visual-studio-mac)します。
+> この記事は、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac には、次の [Visual Studio for Mac の拡張](/visualstudio/mac/extending-visual-studio-mac) を参照してください。
 
 ## <a name="what-software-do-i-need-to-develop-visual-studio-extensions"></a>Visual Studio 拡張機能を開発するために必要なソフトウェアは何ですか？
 
@@ -52,7 +52,7 @@ Visual Studio 拡張機能を開発するために Visual Studio だけでなく
 
 -   [メニューとコマンドの拡張](../extensibility/extending-menus-and-commands.md): Visual Studio メニューおよびツールバーに独自の項目を追加します。 Visual Studio の新機能または独自の外部ヘルパー アプリケーションの起動に使用できます。 メニュー項目のカスタム ショートカットを指定することもできます。
 
--   [拡張とカスタマイズ ツール Windows](../extensibility/extending-and-customizing-tool-windows.md): 既存のツール ウィンドウを拡張または独自のツール ウィンドウを作成します。 新しいプロパティを追加するなど、**プロパティ**、またはその他の機能を追加する新しいツール ウィンドウを作成できます。
+-   [拡張とカスタマイズ ツール Windows](../extensibility/extending-and-customizing-tool-windows.md): 既存のツール ウィンドウを拡張または独自のツール ウィンドウを作成します。 たとえば複数のプロパティを持つものに新しいプロパティを追加したり、追加機能を追加した新しいツール ウィンドウを作成したりできます。****
 
 -   [エディターと言語サービスの拡張機能](../extensibility/editor-and-language-service-extensions.md): Visual Studio の言語に対して IntelliSense が提供する独自のカスタマイズを追加するか、新しいプログラミング言語のサポートを作成します。 新しいステートメント入力候補、提案、および新しいクイックヒントのツールチップ表示を作成することができます。 電球アイコンから、新しいプログラミング言語をサポートするためにリファクタリングの提案を追加したり、コード修正プログラムを追加したりすることができます。
 
@@ -66,7 +66,7 @@ Visual Studio 拡張機能を開発するために Visual Studio だけでなく
 
 -   [Visual Studio の分離シェル](../extensibility/visual-studio-isolated-shell.md)
 
-##  <a name="BKMK_ProjectTemplate"></a> VSSDK によってどのようなプロジェクト テンプレートが提供されますか。
+##  <a name="BKMK_ProjectTemplate"></a> VSSDK によってどのようなプロジェクト テンプレートが提供されますか？
  2 つの主な種類の拡張機能は、VSPackage および MEF 拡張機能です。 一般に、VSPackage 拡張機能はコマンド、ツール ウィンドウ、およびプロジェクトを拡張する場合に使用されます。 MEF 拡張機能は、拡張、または Visual Studio エディターのカスタマイズに使用されます。
 
  Visual c# および Visual Basic の拡張機能の場合、VSSDK には、メニュー コマンド、ツール ウィンドウおよびエディターの拡張機能を作成する新しい項目テンプレートと共に使用できる空の VSIX プロジェクト テンプレートが用意されています。 パッケージ プロジェクト テンプレート、コード スニペット、およびその他の成果物を他のユーザーに配布するために、このテンプレートを使用することもできます。
