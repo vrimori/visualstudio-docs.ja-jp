@@ -1,6 +1,6 @@
 ---
-title: Visual Studio から UWP アプリの展開 |Microsoft Docs
-ms.custom: ''
+title: UWP アプリのデプロイ |Microsoft Docs
+ms.custom: seodec18
 ms.date: 01/16/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 974236f005219caa217f8b1b495eb807ab2f6ee0
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.openlocfilehash: d8006fb0ddcab4ab3eeee1616632d2dc513428ba
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51726310"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056812"
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Visual Studio から UWP アプリを展開する
 
@@ -29,7 +29,7 @@ Visual Studio の配置機能は、ビルドし、ターゲット デバイス�
 
 - ターゲットがリモート デバイスの場合、Visual Studio は必要なファイルをリモート コンピューターにコピーしてから、そのデバイス上でアプリを登録します。
 
-使用して Visual Studio からアプリをデバッグするときに、展開は自動、**デバッグの開始**オプション (キーボード: F5) または**デバッグなしで開始**オプション (キーボード: ctrl キーを押しながら f5 キー)。 アプリを手動で配置することも可能です。 次のシナリオでは、手動の配置は有効です。
+アプリのデバッグを、Visual Studio から [デバッグの開始]** オプション (キーボード:F5 キーを押して)、または**デバッグなしで開始**オプション (キーボード。CTRL + F5 アプリを手動で配置することも可能です。 次のシナリオでは、手動の配置は有効です。
 
 - ローカル コンピューターまたはリモート コンピューターで行う臨時のテスト。
 
@@ -115,8 +115,8 @@ Windows 10 のリモート デバイスで有効にする必要があります[�
 
 - JavaScript およびデバッグ プロパティ ページで、 **[アプリケーションの起動]** の値を **[はい]** に設定します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [リモート配置オプションの詳細](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)
+- [高度なリモート配置オプション](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)
 - [インストールされているアプリケーション パッケージをデバッグする](../debugger/debug-installed-app-package.md)
 - [Visual Studio からアプリを実行](../debugger/run-store-apps-from-visual-studio.md)
