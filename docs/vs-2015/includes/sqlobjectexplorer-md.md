@@ -1,2 +1,0 @@
-> [!NOTE]
->  [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]から SQL Server データベースに接続できます**SQL Server オブジェクト エクスプ ローラー**または**データ接続**ノード**サーバー エクスプ ローラー**します。 **SQL Server オブジェクト エクスプ ローラー**は SQL Server Management Studio と似たビューを提供します。 このエクスプ ローラーを開くメニュー バーから、次のように選択します。**ビュー**、 **SQL Server オブジェクト エクスプ ローラー**します。 詳細については、次を参照してください。[接続されているデータベース開発](http://go.microsoft.com/fwlink/?LinkId=233646)します。
