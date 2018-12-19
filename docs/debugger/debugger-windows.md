@@ -1,6 +1,6 @@
 ---
-title: Visual Studio での Windows のデバッガー |Microsoft Docs
-ms.custom: H1Hack27Feb2017
+title: デバッガー ウィンドウ |Microsoft Docs
+ms.custom: seodec18
 ms.date: 04/25/2017
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ebf9896626a26d1462c2f1d8639722b28ef1e1ea
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
-ms.translationtype: MT
+ms.openlocfilehash: 05d3cd5cd56010e62b6ca50a76e726cb7998070b
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178307"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065153"
 ---
 # <a name="learn-about-debugger-windows-in-visual-studio"></a>Visual Studio で Windows をデバッガーについて説明します
 
-プログラムのデバッグ中に、ほとんどのデバッガー ウィンドウを開くことができます。 デバッガー ウィンドウの一覧を表示するには、ブレークポイントを設定し、デバッグを開始します。 ブレークポイント、実行を停止しがヒットしたら、クリックして**デバッグ > Windows**します。
+プログラムのデバッグ中に、ほとんどのデバッガー ウィンドウを開くことができます。 デバッガー ウィンドウの一覧を表示するには、ブレークポイントを設定し、デバッグを開始します。 ブレークポイントにヒットしたら、実行を停止し、**[デバッグ] > [ウィンドウ]** をクリックします。
 
 ||||
 |-|-|-|
@@ -31,24 +31,24 @@ ms.locfileid: "39178307"
 |クイック ウォッチ|Shift + F9|[ウォッチ ウィンドウと [クイック ウォッチ] ウィンドウ](../debugger/watch-and-quickwatch-windows.md)|
 |Autos|Ctrl + Alt + V、A|[[自動変数] ウィンドウと [ローカル] ウィンドウ](../debugger/autos-and-locals-windows.md)|
 |ローカル|Ctrl + Alt + V、L|[[自動変数] ウィンドウと [ローカル] ウィンドウ](../debugger/autos-and-locals-windows.md)|
-|呼び出し履歴|Ctrl + Alt + C|[方法 : [呼び出し履歴] ウィンドウを使用する](../debugger/how-to-use-the-call-stack-window.md)|
+|呼び出し履歴|Ctrl + Alt + C|[方法: [呼び出し履歴] ウィンドウを使用する](../debugger/how-to-use-the-call-stack-window.md)|
 |イミディエイト|Ctrl + Alt + I|[イミディエイト ウィンドウ](../ide/reference/immediate-window.md)|
 |並列スタック|Ctrl + Shift + D、S|[[並列スタック] ウィンドウの使用](../debugger/using-the-parallel-stacks-window.md)|
-|並列ウォッチ|Ctrl + Shift + D、(1、2、3、4)|[取得マルチ スレッド アプリケーションのデバッグを開始](../debugger/get-started-debugging-multithreaded-apps.md)|
+|並列ウォッチ|Ctrl + Shift + D、(1、2、3、4)|[マルチ スレッド アプリケーションのデバッグの開始](../debugger/get-started-debugging-multithreaded-apps.md)|
 |スレッド|Ctrl + Alt + H|[[スレッド] ウィンドウを使用したデバッグします。](../debugger/how-to-use-the-threads-window.md)|
-|モジュール|Ctrl + Alt + U|[方法 : [モジュール] ウィンドウを使用する](../debugger/how-to-use-the-modules-window.md)|
-|GPU スレッド|-|[方法: GPU スレッド ウィンドウを使用する](../debugger/how-to-use-the-gpu-threads-window.md)|
+|モジュール|Ctrl + Alt + U|[方法: [モジュール] ウィンドウを使用します。](../debugger/how-to-use-the-modules-window.md)|
+|GPU スレッド|-|[方法: [GPU スレッド] ウィンドウを使用する](../debugger/how-to-use-the-gpu-threads-window.md)|
 |[タスク]|Ctrl + Shift + D、K|[[タスク] ウィンドウの使用](../debugger/using-the-tasks-window.md)|
 |Python 対話形式デバッグ|Shift + Alt + I|[Python の対話型 REPL](../python/python-interactive-repl-in-visual-studio.md)|
-|JavaScript コンソール|Ctrl + Alt + V、C|[クイック スタート: JavaScript をデバッグします。](../debugger/quickstart-debug-javascript-using-the-console.md)|
+|JavaScript コンソール|Ctrl + Alt + V、C|[クイック スタート:JavaScript をデバッグします。](../debugger/quickstart-debug-javascript-using-the-console.md)|
 |DOM Explorer|Ctrl + Alt + V、D|[DOM Explorer を使用したレイアウトのデバッグ](../debugger/debug-layout-using-dom-explorer.md)|
 |ライブ ビジュアル ツリー|-|[デバッグ中にXAML のプロパティを調べる](../debugger/inspect-xaml-properties-while-debugging.md)|
 |ライブ プロパティ エクスプローラー|-|[デバッグ中にXAML のプロパティを調べる](../debugger/inspect-xaml-properties-while-debugging.md)|
 |プロセス|Ctrl + Alt + Z|[スレッドとプロセスの操作](../debugger/debug-threads-and-processes.md)|
 |メモリ|Ctrl + Alt + M、(1、2、3、4)|[[メモリ] ウィンドウ](../debugger/memory-windows.md)|
-|逆アセンブリ|Ctrl + Alt + D|[方法 : [逆アセンブル] ウィンドウを使用する](../debugger/how-to-use-the-disassembly-window.md)|
-|レジスタ|Ctrl + Alt + G|[方法: [レジスタ] ウィンドウを使用する](../debugger/how-to-use-the-registers-window.md)|
+|逆アセンブリ|Ctrl + Alt + D|[方法: 逆アセンブル ウィンドウを使用します。](../debugger/how-to-use-the-disassembly-window.md)|
+|レジスタ|Ctrl + Alt + G|[方法: [レジスタ] ウィンドウを使用します。](../debugger/how-to-use-the-registers-window.md)|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)
