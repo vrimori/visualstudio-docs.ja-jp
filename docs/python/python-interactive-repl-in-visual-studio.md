@@ -1,6 +1,6 @@
 ---
 title: Python Interactive ウィンドウ (REPL)
-description: コードを迅速に開発するために Visual Studio で Python コード用の対話型ウィンドウ (REPL) を使う方法について説明します。
+description: Visual Studio で Python コードを迅速に開発するために対話型ウィンドウ (REPL) を使用します。
 ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -8,15 +8,16 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8146e43a51e4d1634cbba78d789a3ef8cff99f95
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 3c3a3a6cd3694a0affa6ca1d5cfabac58b124ec9
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50219927"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055716"
 ---
 # <a name="work-with-the-python-interactive-window"></a>Python 対話型ウィンドウの使用
 
@@ -35,7 +36,7 @@ Visual Studio では、複数の Python REPL モードから選ぶことがで�
 
 この記事では、REPL の**標準**モードと**デバッグ** モードについて説明します。 IPython モードについて詳しくは、[IPython REPL の使用](interactive-repl-ipython.md)に関するページをご覧ください。
 
-**Ctrl**+**Enter** などのエディターとの対話を含む、例を使用した詳細なチュートリアルについては、[「チュートリアル」の「手順 3: 対話型 REPL ウィンドウを使用する」](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)をご覧ください。 
+**Ctrl**+**Enter** などのエディターとのやりとりを含む、例を使用した詳細なチュートリアルについては、チュートリアルの「[手順 3: 対話型 REPL ウィンドウを使用する](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)」を参照してください。 
 
 |   |   |
 |---|---|

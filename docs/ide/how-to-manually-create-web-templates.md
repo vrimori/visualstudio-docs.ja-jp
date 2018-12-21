@@ -1,5 +1,5 @@
 ---
-title: Visual Studio の Web テンプレートを作成する
+title: Web テンプレートを作成する
 ms.date: 01/02/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -12,14 +12,14 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 4ec63f231698bfa4c5a1360d21908aa2a4e2649e
-ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
+ms.openlocfilehash: cff4fda5113cdbacba2d9389e360707f49ba595b
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607459"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063669"
 ---
-# <a name="how-to-manually-create-web-templates"></a>方法: Web テンプレートを手動で作成する
+# <a name="how-to-manually-create-web-templates"></a>方法:Web テンプレートを手動で作成する
 
 Web テンプレートの作成方法は、他の種類のテンプレートを作成する場合と異なります。 Web プロジェクト テンプレートは **[新しい Web サイトの追加]** ダイアログ ボックスに表示され、Web プロジェクトの項目はプログラミング言語によって分類されるので、*vstemplate* ファイルではテンプレートを Web テンプレートとして指定し、プログラミング言語を示す必要があります。
 
@@ -43,7 +43,7 @@ Web テンプレートの作成方法は、他の種類のテンプレートを�
    - CSharp
    - VisualBasic
 
-     例:
+     次に例を示します。
 
      ```xml
      <TemplateData>

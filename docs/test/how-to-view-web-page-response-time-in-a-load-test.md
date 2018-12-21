@@ -1,5 +1,5 @@
 ---
-title: Visual Studio のロード テストのページ応答時間
+title: ロード テストのページ応答時間
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 9740d26ef99c10bb9ec84afa23b998f6e1467f40
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 73ba296be1c001415746145c7bcf4d13c8b25053
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895263"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068096"
 ---
 # <a name="how-to-view-web-page-response-time-in-a-load-test-using-the-load-test-analyzer"></a>方法: ロード テスト アナライザーを使用してロード テストにおける Web ページ応答時間を表示する
 
@@ -61,7 +61,7 @@ ms.locfileid: "52895263"
    |**Max**|ページの最大応答時間。<br /><br /> 既定では、このデータは収集されません。 このデータを収集するには、**ロード テスト エディター**の **[実行設定]** ノードで、変更する実行設定ノードを選択します。 **[プロパティ]** ウィンドウの **[タイミング詳細のストレージ]** プロパティで、**[AllIndividualDetails]** を選択します。|
    |**標準偏差**|既定では、標準偏差データは収集されません。 このデータを収集するには、**ロード テスト エディター**の **[実行設定]** ノードで、変更する実行設定ノードを選択します。 **[プロパティ]** ウィンドウの **[タイミング詳細のストレージ]** プロパティで、**[AllIndividualDetails]** を選択します。|
    |**ページ時間**|Web ページに対して行われたすべての要求の平均応答時間。|
-   |**目標**|ページ時間の目標。 これはページに対する定数です。 **注:** [ページ時間の目標] が表示されるのは、Web パフォーマンス テストの要求に目標が定義されている場合のみです。|
+   |**目標**|ページ時間の目標。 これはページに対する定数です。 **注:**[ページ時間の目標] が表示されるのは、Web パフォーマンス テストの要求に目標が定義されている場合のみです。|
    |**目標に達成している %**|Web ページに対して行われた要求のうち応答時間の目標を達成した要求の割合。|
 
    詳細については、[テーブル ビューでのロード テスト結果とエラーの分析](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)に関するページを参照してください。
@@ -96,5 +96,5 @@ ms.locfileid: "52895263"
 ## <a name="see-also"></a>関連項目
 
 - [テーブル ビューでのロード テスト結果とエラーの分析](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)
-- [方法 : ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)
+- [方法: ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)
 - [ロード テストの結果の分析](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

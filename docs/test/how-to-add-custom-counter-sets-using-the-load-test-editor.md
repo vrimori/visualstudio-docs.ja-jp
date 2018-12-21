@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テスト用にカスタム カウンター セットを追加する
+title: ロード テスト用にカスタム カウンター セットを追加する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 76ba63b1ca84a09294226ad8c4924df9b1fbb321
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 7f916e469453d41321dd30404be6c0a6e4f5e56f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52894691"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051485"
 ---
 # <a name="how-to-add-custom-counter-sets-using-the-load-test-editor"></a>方法: ロード テスト エディターを使用してカスタム カウンター セットを追加する
 
@@ -43,7 +43,7 @@ ms.locfileid: "52894691"
     > [!NOTE]
     > カウンター セットには、**Custom1** のような既定の名前が付けられます。 名前は **[プロパティ]** ウィンドウを使用して変更できます。 **F4** キーを押して **[プロパティ]** ウィンドウを表示します。
 
-4.  カウンターをカスタム カウンター セットに追加するには、新しいカウンター セットを右クリックし、**[カウンターの追加]** を選択します。 カウンターを追加する方法の詳細については、「[方法: カウンターをカウンター セットに追加する](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md)」を参照してください。
+4.  カウンターをカスタム カウンター セットに追加するには、新しいカウンター セットを右クリックし、**[カウンターの追加]** を選択します。 カウンターを追加する方法の詳細については、「[方法:カウンターをカウンター セットに追加する](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md)」を参照してください。
 
     > [!NOTE]
     > カスタム カウンター セットも追加できます。追加するには、既存のカウンター セットを右クリックし、[コピー] を選択して、カウンター セット ノードに貼り付けます。 コピーされた追加のカウンターで不要になったものは削除できます。 新しいカウンター セットの名前は、**[プロパティ]** ウィンドウを使用して変更できます。

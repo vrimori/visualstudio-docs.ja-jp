@@ -1,5 +1,5 @@
 ---
-title: '方法: Visual Studio で使用するフォントと色を変更する'
+title: フォントと色を変更する
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -13,21 +13,21 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 047ec49b48d955591d89cd9c392d72381c57b84e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ccb7e762c15b99492bda03d5300af398552cfd01
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31942170"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067642"
 ---
 # <a name="how-to-change-fonts-and-colors-in-visual-studio"></a>方法: Visual Studio で使用するフォントと色を変更する
 
 Visual Studio の中にある IDE のフレームおよびツール ウィンドウの色を、複数の方法でカスタマイズできます。
 
 > [!TIP]
-> コード エディターの色を変更する方法については、「[方法 : エディターで使用するフォントのフォント フェイス、サイズ、色を変更する](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)」を参照してください。
+> コード エディターの色を変更する方法の詳細については、「[How to: Change fonts and colors in the editor](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)」(方法: エディターのフォントと色を変更する) を参照してください。
 
-## <a name="change-the-color-theme-of-the-ide"></a>IDE の配色テーマを変更する
+## <a name="change-the-color-theme-of-the-ide"></a>IDE の配色テーマの変更
 
 1. メニュー バーの **[ツール]**  >  **[オプション]** の順にクリックします。
 
@@ -70,4 +70,4 @@ IDE 内にあるすべてのウィンドウとダイアログ ボックスに関
 ## <a name="see-also"></a>関連項目
 
 - [Visual Studio のユーザー補助機能](../ide/reference/accessibility-features-of-visual-studio.md)
-- [方法 : エディターで使用するフォントのフォント フェイス、サイズ、色を変更する](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
+- [方法: Change fonts and colors in the editor](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)」(方法: エディターのフォントと色を変更する) を参照してください。

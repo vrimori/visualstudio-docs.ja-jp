@@ -1,5 +1,6 @@
 ---
-title: Python の概要のチュートリアル、手順 5、パッケージをインストールする
+title: Visual Studio での Python チュートリアル、手順 5、パッケージのインストール
+titleSuffix: ''
 description: Visual Studio での Python 機能の中核となるチュートリアルの手順 5 では、Python 環境でパッケージを管理するための Visual Studio の機能について説明します。
 ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
@@ -8,19 +9,20 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 82cb54eb64d0864ba3b1d326d68f7303d3f2d882
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 81dccdb276596e96e1a7064f796afa43de79f032
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50220509"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067289"
 ---
 # <a name="step-5-install-packages-in-your-python-environment"></a>手順 5: Python 環境へのパッケージのインストール
 
-**前の手順: [デバッガーでコードを実行する](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)**
+**前の手順:[デバッガーでコードを実行する](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)**
 
 Python 開発者コミュニティは、ユーザーが独自のプロジェクトに組み込むことのできる便利なパッケージを何千も作成してきました。 Visual Studio には、Python 環境内のパッケージを管理するための UI が用意されています。
 

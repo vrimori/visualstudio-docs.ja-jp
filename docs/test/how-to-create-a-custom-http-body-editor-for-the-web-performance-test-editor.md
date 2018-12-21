@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で Web パフォーマンス テスト エディターのカスタム HTTP ボディ エディターを作成する
+title: Web パフォーマンス テスト エディターのカスタム HTTP ボディ エディターを作成する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 0dc31bef7a7d2e91599cdc25be4f98445beda67f
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 83ed50b5f242f5a869e1c0a69bf6a0674bdf4d69
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52896745"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068410"
 ---
 # <a name="how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor"></a>方法: Web パフォーマンス テスト エディターのカスタム HTTP ボディ エディターを作成する
 

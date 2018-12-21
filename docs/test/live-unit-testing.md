@@ -1,5 +1,5 @@
 ---
-title: Visual Studio の Live Unit Testing
+title: Live Unit Testing
 ms.date: 2017-03-07
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -11,12 +11,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6e0bd322b200fba3bf41f99c4119cbe287ce2967
-ms.sourcegitcommit: a6734c4d76dae3d21b55b10f3bc618dfa6b62dea
+ms.openlocfilehash: 7be078044454ebf5d6b3a6d99a60fff66ab1f69b
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42626795"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066211"
 ---
 # <a name="live-unit-testing-with-visual-studio-2017"></a>Visual Studio 2017 での Live Unit Testing
 
@@ -81,7 +81,7 @@ Live Unit Testing を構成するには、Visual Studio の最上位メニュー
 - 保持されたデータを格納するディレクトリ。
 
 - 保持されたデータをすべて削除できるようにする。 これは、Live Unit Testing で予測不能なまたは予期しない動作が発生している場合に便利です。この状態は、保持されたデータが破損していることを表しています。
-   
+
 - テスト ケースがタイムアウトするまでの時間 (既定値は 30 秒)。
 
 - Live Unit Testing が作成するテスト プロセスの最大数。
@@ -202,5 +202,4 @@ Live Unit Testing でのカバレッジのレポートからメソッド、ク�
 - [コード テスト ツール](https://visualstudio.microsoft.com/vs/testing-tools/)
 - [Live Unit Testing のブログ](https://go.microsoft.com/fwlink/?linkid=842514)
 - [ライブ単体テストに関する FAQ](live-unit-testing-faq.md)
-- [Channel 9 ビデオ: Visual Studio 2017 での Live Unit Testing](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105)
-
+- [Channel 9 ビデオ: Visual Studio 2017 の Live Unit Testing](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105)

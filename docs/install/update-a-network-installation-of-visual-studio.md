@@ -1,8 +1,9 @@
 ---
-title: Visual Studio のネットワーク ベース インストールを更新する
+title: ネットワーク ベース インストールを更新する
 description: --layout コマンドを実行して Visual Studio のネットワークベース インストールを更新する方法について説明します
 ms.date: 08/14/2017
 ms.technology: vs-acquisition
+ms.custom: seodec18
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +15,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 29b9efc68d3cf094873ba5dc5ccd3844eb01209a
-ms.sourcegitcommit: 6b092e7d466377f06913d49d183dbbdca16730f0
+ms.openlocfilehash: 736f8dc9c79faa5c81055296c9fbf534c512f6fa
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43138829"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159491"
 ---
-# <a name="update-a-network-based-installation-of-visual-studio"></a>Visual Studio のネットワーク ベース インストールを更新する
+# <a name="update-a-network-based-installation-of-visual-studio-2017"></a>Visual Studio 2017 のネットワーク ベース インストールを更新する
 
 ネットワーク インストール レイアウトを Visual Studio の最新のインストール ポイントとして使用できるように、また、クライアント ワークステーションに既に配置されているインストールを保持するために、最新の製品の更新プログラムを使って Visual Studio のネットワーク インストール レイアウトを更新できます。
 

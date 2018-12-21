@@ -1,6 +1,6 @@
 ---
 title: プロジェクトの Python インタープリターと環境を選択する
-description: Anaconda や仮想環境など、Visual Studio プロジェクトに使用する Python 環境やインタープリターを選択する方法。
+description: Anaconda や仮想環境を含む Python 環境を具体的に選択して、特定のプロジェクトに適用することができます。
 ms.date: 11/08/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -8,15 +8,16 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0bff5e81fbfda45908315091063833b31abbdd8c
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: c7ed10b25c17958fffbe0abab09973515fb43958
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51349453"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062536"
 ---
 # <a name="how-to-select-a-python-environment-for-a-project"></a>プロジェクトの Python 環境を選択する方法
 
@@ -114,7 +115,7 @@ Visual Studio 内で、パッケージ (および依存関係) は [Python Packa
 また、現在 Visual Studio では、`conda` を使用して conda 環境にパッケージをインストールする操作はサポートされていません。 代わりにコマンド ラインから `conda` を使用してください。
 
 > [!Tip]
-> pip がパッケージのインストールに失敗する一般的な状況は、パッケージの *\*.pyd* ファイルにネイティブ コンポーネントのソース コードが含まれる場合です。 必要なバージョンの Visual Studio がインストールされていない場合、pip はこれらのコンポーネントをコンパイルできません。 このような状況では、"**エラー: vcvarsall.bat が見つかりません**" というエラー メッセージが表示されます。 多くの場合、`easy_install` を使用してコンパイル済みのバイナリをダウンロードでき、Python の古いバージョンに適したコンパイラを [https://aka.ms/VCPython27](https://aka.ms/VCPython27) からダウンロードできます。 詳しくは、Python Tools チーム ブログの「[How to deal with the pain of "unable to find vcvarsallbat"](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/11/unable-to-find-vcvarsall-bat/)」("vcvarsallbat が見つからない" という問題への対処方法) をご覧ください。
+> pip がパッケージのインストールに失敗する一般的な状況は、パッケージの *\*.pyd* ファイルにネイティブ コンポーネントのソース コードが含まれる場合です。 必要なバージョンの Visual Studio がインストールされていない場合、pip はこれらのコンポーネントをコンパイルできません。 このような状況では、"**エラー:vcvarsall.bat が見つかりません**" というエラー メッセージが表示されます。 多くの場合、`easy_install` を使用してコンパイル済みのバイナリをダウンロードでき、Python の古いバージョンに適したコンパイラを [https://aka.ms/VCPython27](https://aka.ms/VCPython27) からダウンロードできます。 詳しくは、Python Tools チーム ブログの「[How to deal with the pain of "unable to find vcvarsallbat"](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/11/unable-to-find-vcvarsall-bat/)」("vcvarsallbat が見つからない" という問題への対処方法) をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

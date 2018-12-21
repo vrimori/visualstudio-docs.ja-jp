@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テスト用のカスタム コードおよびカスタム プラグインの作成
+title: ロード テスト用のカスタム コードおよびカスタム プラグインの作成
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ed7b588d597626348b4c148c10dad165649b0468
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: e138445989477fe4ead6fde0dc000430626c2638
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895757"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062746"
 ---
 # <a name="create-custom-code-and-plug-ins-for-load-tests"></a>ロード テスト用のカスタム コードおよびカスタム プラグインの作成
 
@@ -30,10 +30,10 @@ ms.locfileid: "52895757"
 
 |[タスク]|関連するトピック|
 |-|-----------------------|
-|**ロード テスト用のカスタム プラグインを作成する**: ロード テスト API を使用してカスタム プラグインを作成し、ロード テストのテスト機能を拡張できます。|-   [方法: ロード テスト API を使用する](../test/how-to-use-the-load-test-api.md)<br />-   [方法: ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)|
-|**Web パフォーマンス テスト用のカスタム プラグインを作成する:** Web パフォーマンス テスト API を使用してカスタム プラグインを作成し、Web パフォーマンス テスト (要求レベルのテストを含む) のテスト機能を拡張できます。 Web サービス テストを作成することもできます。<br /><br /> さらに、Web パフォーマンス テストの記録後、Web パフォーマンス テスト結果ビューアーに表示する前にこのパフォーマンス テストを変更できる Web レコーダー プラグインを作成できます。|-   [方法: Web パフォーマンス テスト API を使用する](../test/how-to-use-the-web-performance-test-api.md)<br />-   [方法: Web パフォーマンス テスト プラグインを作成する](../test/how-to-create-a-web-performance-test-plug-in.md)<br />-   [方法: 要求レベルのプラグインを作成する](../test/how-to-create-a-request-level-plug-in.md)<br />-   [方法: Web サービス テストを作成する](../test/how-to-create-a-web-service-test.md)<br />-   [方法: レコーダー プラグインを作成する](../test/how-to-create-a-recorder-plug-in.md)|
-|**UI 機能を Web パフォーマンス テスト結果ビューアーに追加する:** Visual Studio アドインを使用すると、Web パフォーマンス テスト結果ビューアーにさらに UI 機能を追加できます。|-   [方法: Web パフォーマンス テスト結果ビューアー用に Visual Studio アドインを作成する](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)|
-|**カスタム HTTP ボディ エディターを作成する:** Web サービスからのバイナリまたは文字列 http XML 形式の応答を編集するためのカスタム エディターを作成できます。|-   [方法: Web パフォーマンス テスト エディターのカスタム HTTP ボディ エディターを作成する](../test/how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor.md)|
+|**ロード テスト用のカスタム プラグインを作成する**:ロード テスト API を使用してカスタム プラグインを作成し、ロード テストのテスト機能を拡張できます。|-   [方法:ロード テスト API を使用する](../test/how-to-use-the-load-test-api.md)<br />-   [方法:ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)|
+|**Web パフォーマンス テスト用のカスタム プラグインを作成する:** Web パフォーマンス テスト API を使用してカスタム プラグインを作成し、Web パフォーマンス テスト (要求レベルのテストを含む) のテスト機能を拡張できます。 Web サービス テストを作成することもできます。<br /><br /> さらに、Web パフォーマンス テストの記録後、Web パフォーマンス テスト結果ビューアーに表示する前にこのパフォーマンス テストを変更できる Web レコーダー プラグインを作成できます。|-   [方法:Web パフォーマンス テスト API を使用する](../test/how-to-use-the-web-performance-test-api.md)<br />-   [方法:Web パフォーマンス テスト プラグインを作成する](../test/how-to-create-a-web-performance-test-plug-in.md)<br />-   [方法:要求レベルのプラグインを作成する](../test/how-to-create-a-request-level-plug-in.md)<br />-   [方法:Web サービス テストを作成する](../test/how-to-create-a-web-service-test.md)<br />-   [方法:レコーダー プラグインを作成する](../test/how-to-create-a-recorder-plug-in.md)|
+|**UI 機能を Web パフォーマンス テスト結果ビューアーに追加する:** Visual Studio アドインを使用すると、Web パフォーマンス テスト結果ビューアーにさらに UI 機能を追加できます。|-   [方法:Web パフォーマンス テスト結果ビューアー用に Visual Studio アドインを作成する](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)|
+|**カスタム HTTP ボディ エディターを作成する:** Web サービスからのバイナリまたは文字列 http XML 形式の応答を編集するためのカスタム エディターを作成できます。|-   [方法:Web パフォーマンス テスト エディターのカスタム HTTP ボディ エディターを作成する](../test/how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor.md)|
 
 ## <a name="reference"></a>参照
 

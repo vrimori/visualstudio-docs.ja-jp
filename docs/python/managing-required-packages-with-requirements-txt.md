@@ -1,5 +1,5 @@
 ---
-title: requirements.txt ファイルを使用したパッケージ要件の管理
+title: requirements.txt ファイルでパッケージ依存関係を管理する
 description: requirements.txt ファイルは、プロジェクトの依存関係を示すものです。 requirements.txt ファイルを含むプロジェクトを受信した場合は、これらの依存関係を 1 つの手順で簡単にインストールできます。
 ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
@@ -8,19 +8,20 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 49f87ff5836188d6fefb80feac94b27902de7968
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 1f6fefdeac06d28229b99a79f432f82ed844d950
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50218442"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066179"
 ---
 # <a name="manage-required-packages-with-requirementstxt"></a>requirements.txt での必須パッケージの管理
 
-プロジェクトを他のユーザーと共有するか、ビルド システムを使用するか、または環境を復元する必要がある任意の場所へのプロジェクトのコピーを計画する場合は、プロジェクトで必要な外部パッケージを指定する必要があります。 推奨されるアプローチとしては、依存パッケージの必要なバージョンをインストールする pip のためのコマンド リストを含む [requirements.txt ファイル](http://pip.readthedocs.org/en/latest/user_guide.html#requirements-files) (readthedocs.org) を使います。 最も一般的なコマンドは `pip freeze > requirements.txt` で、環境の現在のパッケージ リストを *requirements.txt* に記録します。
+プロジェクトを他のユーザーと共有するか、ビルド システムを使用するか、または環境を復元する必要がある任意の場所へのプロジェクトのコピーを計画する場合は、プロジェクトで必要な外部パッケージを指定する必要があります。 推奨されるアプローチとしては、依存パッケージの必要なバージョンをインストールする pip のためのコマンド リストを含む [requirements.txt ファイル](https://pip.readthedocs.org/en/latest/user_guide.html#requirements-files) (readthedocs.org) を使います。 最も一般的なコマンドは `pip freeze > requirements.txt` で、環境の現在のパッケージ リストを *requirements.txt* に記録します。
 
 技術的には、任意のファイル名を使って要件を追跡できますが (パッケージをインストールするときに `-r <full path to file>` を使用する)、Visual Studio では *requirements.txt* に対する固有のサポートが用意されています。
 

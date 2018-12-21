@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テスト結果のグラフにズーム インする
+title: ロード テスト結果のグラフにズーム インする
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: aa5f6b3c5f4069a0b62fa6433c8ecef527558a0d
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 558d6429c5d92f833e81074fe928436ab6e7f30e
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895887"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064894"
 ---
-# <a name="how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results"></a>方法: ロード テスト結果でグラフの領域にズーム インする
+# <a name="how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results"></a>方法:ロード テスト結果でグラフの領域にズーム インする
 
 ロード テストを完了したら、ズーム バーを使用して、グラフの領域にズーム インしてスクロールできます。 ズーム インすると、ロード テストの実行中に生成されたデータをより詳細に確認できます。
 
@@ -59,7 +59,7 @@ ms.locfileid: "52895887"
 
      \- または
 
-     前に実行したロード テストの詳細を表示します。 詳細については、「[方法 : ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)」を参照してください。
+     前に実行したロード テストの詳細を表示します。 詳細については、「[方法 :ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)」を参照してください。
 
 3.  グラフが表示されない場合は、**[グラフ]** を選択します。
 

@@ -1,5 +1,5 @@
 ---
-title: Web パフォーマンス テスト結果ビューアー用に Visual Studio アドインを作成する
+title: Web パフォーマンス テスト結果ビューアー用のアドインを作成する
 ms.date: 10/20/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: dbff48696a7fe10266a2c72fc3a3d9fb0e9ba81d
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 6672bd1e38dee5b27d350b9d2e12626cef122115
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52896064"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068342"
 ---
 # <a name="how-to-create-a-visual-studio-add-in-for-the-web-performance-test-results-viewer"></a>方法: Web パフォーマンス テスト結果ビューアー用に Visual Studio アドインを作成する
 
@@ -39,7 +39,7 @@ ms.locfileid: "52896064"
 テストの対象として、ASP.NET Web アプリケーションおよび Web パフォーマンスとロード テストのプロジェクト (ASP.NET Web アプリケーション用の 1 つ以上の Web パフォーマンス テストを備えたプロジェクト) が含まれている非稼動ソリューションを作成するか開きます。
 
 > [!NOTE]
-> ASP.NET Web アプリケーションの作成と、Web パフォーマンス テストを備えた Web パフォーマンスとロード テストのプロジェクトの作成を行うには、「[方法 : Web サービス テストを作成する](../test/how-to-create-a-web-service-test.md)」および「[コード化された Web パフォーマンス テストの生成と実行](../test/generate-and-run-a-coded-web-performance-test.md)」の手順に従ってください。
+> ASP.NET Web アプリケーションの作成と、Web パフォーマンス テストを備えた Web パフォーマンスとロード テストのプロジェクトの作成を行うには、[Web サービス テストの作成方法](../test/how-to-create-a-web-service-test.md)に関するページと[コード化された Web パフォーマンス テストの生成と実行](../test/generate-and-run-a-coded-web-performance-test.md)に関するページを参照してください。
 
 ## <a name="create-a-visual-studio-add-in"></a>Visual Studio アドインの作成
 

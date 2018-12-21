@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でローカル変数を導入する
+title: ローカル変数の導入
 ms.date: 01/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 173173e090f285fcaf6fc9d7c94ba85b692d68e2
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.openlocfilehash: 108477845bb79d5ed13cb3ebdf3121e4960455a6
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948349"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068083"
 ---
 # <a name="introduce-a-local-variable-in-visual-studio"></a>Visual Studio でローカル変数を導入する
 
@@ -24,7 +24,7 @@ ms.locfileid: "51948349"
 
 - Visual Basic
 
-**機能:** 既存の式を置換するローカル変数をすぐに生成できます。
+**概要:** 既存の式を置換するローカル変数をすぐに生成できます。
 
 **条件:** ローカル変数内で使用されていれば、後で簡単に再利用できるコードがあるとき。
 

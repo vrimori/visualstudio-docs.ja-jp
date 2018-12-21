@@ -1,5 +1,6 @@
 ---
 title: Visual Studio Community 2017 のワークロード ID とコンポーネント ID
+titleSuffix: ''
 description: ワークロード ID とコンポーネント ID を使用して、コマンドラインを使用して Visual Studio をインストールするか、VSIX マニフェストで依存関係として指定します。
 keywords: ''
 author: TerryGLee
@@ -17,12 +18,12 @@ ms.prod: visual-studio-dev15
 ms.assetid: 58494fc3-12de-4761-bd4a-74b54f72bfb3
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bf5e1487910156dfd547ae563451bd2f2d428d9
-ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
+ms.openlocfilehash: c5573f5501c4723ed6eede9bba82ebc7fdf31730
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607966"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063277"
 ---
 # <a name="visual-studio-community-2017-component-directory"></a>Visual Studio Community 2017 のコンポーネント ディレクトリ
 
@@ -35,7 +36,7 @@ ms.locfileid: "51607966"
 * 選択した場合は、**推奨**コンポーネントと**オプション** コンポーネントもインストールできます。
 * どのワークロードにも関連付けられていない追加のコンポーネントの一覧を示したセクションも追加しました。
 
-VSIX マニフェストで依存関係を設定するときは、コンポーネント ID のみを指定する必要があります。 このページの表を使用して、コンポーネントの最小の依存関係を確認してください。 シナリオによって、1 つのワークロードの 1 つのコンポーネントだけを指定する場合もあれば、 1 つのワークロードの複数のコンポーネントを指定したり、複数のワークロードの複数のコンポーネントを指定したりする場合もあります。 詳しくは、「[How to: Migrate Extensibility Projects to Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)」 (機能拡張プロジェクトを Visual Studio 2017 に移行する方法) をご覧ください。
+VSIX マニフェストで依存関係を設定するときは、コンポーネント ID のみを指定する必要があります。 このページの表を使用して、コンポーネントの最小の依存関係を確認してください。 シナリオによって、1 つのワークロードの 1 つのコンポーネントだけを指定する場合もあれば、 1 つのワークロードの複数のコンポーネントを指定したり、複数のワークロードの複数のコンポーネントを指定したりする場合もあります。 詳細については、「[方法:機能拡張プロジェクトの Visual Studio 2017 への移行](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)に関するページを参照してください。
 
 これらの ID の使用方法の詳細については、「[Use Command-Line Parameters to Install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md)」(コマンドライン パラメーターを使用して Visual Studio 2017 をインストールする) をご覧ください。 その他の製品のワークロードとコンポーネント ID の一覧については、「[Visual Studio 2017 Workload and Component IDs](workload-and-component-ids.md)」(Visual Studio 2017 のワークロード ID とコンポーネント ID) をご覧ください。
 
@@ -150,7 +151,7 @@ Microsoft.VisualStudio.Component.Wcf.Tooling | Windows Communication Foundation 
 
 **ID:** Microsoft.VisualStudio.Workload.Data
 
-**説明:** SQL Server、Azure Data Lake、または Hadoop を使用してデータ ソリューションの接続、開発、テストを行います。
+**説明:** SQL Server、Azure Data Lake、Hadoop を使用してデータ ソリューションの接続、開発、テストを行います。
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
@@ -211,7 +212,7 @@ Microsoft.VisualStudio.Component.FSharp.Desktop | F# デスクトップ言語の
 
 **ID:** Microsoft.VisualStudio.Workload.DataScience
 
-**説明:** Python、R、F# など、データ サイエンス アプリケーションを作成するための言語とツール。
+**説明:** データ サイエンス アプリケーションを作成するための言語とツール (Python、R、F# が含まれます)。
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
@@ -331,7 +332,7 @@ Microsoft.VisualStudio.ComponentGroup.WebToolsExtensions | ASP.NET と Web 開�
 
 **ID:** Microsoft.VisualStudio.Workload.ManagedGame
 
-**説明:** 高機能なクロスプラットフォーム開発環境である Unity を使用して、2D と 3D のゲームを作成します。
+**説明:** 強力なクロスプラットフォーム開発環境である Unity を使って、2D および 3D ゲームを作成します。
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
@@ -409,12 +410,12 @@ Microsoft.VisualStudio.Component.Windows10SDK.10240 | Windows 10 SDK (10.0.10240
 Microsoft.VisualStudio.Component.Windows10SDK.10586 | Windows 10 SDK (10.0.10586.0) | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.14393 | Windows 10 SDK (10.0.14393.0) | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.15063.Desktop | デスクトップ用 Windows 10 SDK (10.0.15063.0) C++ [x86 および x64] | 15.6.27406.0 | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | UWP 用 Windows 10 SDK (10.0.15063.0): C#、VB、JS | 15.6.27406.0 | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | UWP 用 Windows 10 SDK (10.0.15063.0): C++ | 15.6.27406.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | UWP 用 Windows 10 SDK (10.0.15063.0):C#、VB、JS | 15.6.27406.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | UWP 用 Windows 10 SDK (10.0.15063.0):C++ | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop | デスクトップ用 Windows 10 SDK (10.0.16299.0) C++ [x86 および x64] | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop.arm | デスクトップ用 Windows 10 SDK (10.0.16299.0) C++ [ARM および ARM64] | 15.6.27406.0 | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | UWP 用 Windows 10 SDK (10.0.16299.0): C#、VB、JS | 15.6.27406.0 | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | UWP 用 Windows 10 SDK (10.0.16299.0): C++ | 15.6.27406.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | UWP 用 Windows 10 SDK (10.0.16299.0):C#、VB、JS | 15.6.27406.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | UWP 用 Windows 10 SDK (10.0.16299.0):C++ | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Windows81SDK | Windows 8.1 SDK | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.WinXP | C++ に関する Windows XP サポート | 15.8.27924.0 | Optional
 Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | Windows 8.1 SDK と UCRT SDK | 15.6.27406.0 | Optional
@@ -426,7 +427,7 @@ Microsoft.VisualStudio.ComponentGroup.Windows10SDK.16299 | Windows 10 SDK (10.0.
 
 **ID:** Microsoft.VisualStudio.Workload.NativeGame
 
-**説明:** C++ を最大限に活用して、DirectX、Unreal、Cocos2d を利用した本格的なゲームをビルドします。
+**説明:** C++ を最大限に活用して、DirectX、Unreal、Cocos2d を利用するプロフェッショナルなゲームを構築します。
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
@@ -469,12 +470,12 @@ Microsoft.VisualStudio.Component.Windows10SDK.10240 | Windows 10 SDK (10.0.10240
 Microsoft.VisualStudio.Component.Windows10SDK.10586 | Windows 10 SDK (10.0.10586.0) | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.14393 | Windows 10 SDK (10.0.14393.0) | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.15063.Desktop | デスクトップ用 Windows 10 SDK (10.0.15063.0) C++ [x86 および x64] | 15.6.27406.0 | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | UWP 用 Windows 10 SDK (10.0.15063.0): C#、VB、JS | 15.6.27406.0 | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | UWP 用 Windows 10 SDK (10.0.15063.0): C++ | 15.6.27406.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | UWP 用 Windows 10 SDK (10.0.15063.0):C#、VB、JS | 15.6.27406.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | UWP 用 Windows 10 SDK (10.0.15063.0):C++ | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop | デスクトップ用 Windows 10 SDK (10.0.16299.0) C++ [x86 および x64] | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop.arm | デスクトップ用 Windows 10 SDK (10.0.16299.0) C++ [ARM および ARM64] | 15.6.27406.0 | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | UWP 用 Windows 10 SDK (10.0.16299.0): C#、VB、JS | 15.6.27406.0 | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | UWP 用 Windows 10 SDK (10.0.16299.0): C++ | 15.6.27406.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | UWP 用 Windows 10 SDK (10.0.16299.0):C#、VB、JS | 15.6.27406.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | UWP 用 Windows 10 SDK (10.0.16299.0):C++ | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Windows81SDK | Windows 8.1 SDK | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | Windows 8.1 SDK と UCRT SDK | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.ComponentGroup.Windows10SDK.15063 | Windows 10 SDK (10.0.15063.0) | 15.8.27825.0 | Optional
@@ -484,7 +485,7 @@ Microsoft.VisualStudio.ComponentGroup.Windows10SDK.16299 | Windows 10 SDK (10.0.
 
 **ID:** Microsoft.VisualStudio.Workload.NativeMobile
 
-**説明:** C++ を使用して iOS、Android、または Windows 向けのクロスプラットフォーム アプリケーションをビルドします。
+**説明:** iOS、Android、Windows 向けのクロスプラットフォーム アプリケーションを、C++ を使って構築します。
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
@@ -515,7 +516,7 @@ Component.MDD.IOS | C++ iOS 開発ツール | 15.0.26621.2 | Optional
 
 **ID:** Microsoft.VisualStudio.Workload.NetCoreTools
 
-**説明:** .NET Core、ASP.NET Core、HTML、JavaScript、Containers (Docker サポートを含む) を使用して、クロスプラットフォーム アプリケーションをビルドします。
+**説明:**.NET Core、ASP.NET Core、HTML/JavaScript、コンテナー (Docker サポートなど) を使用して、クロスプラットフォーム アプリケーションをビルドします。
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
@@ -583,7 +584,7 @@ Microsoft.VisualStudio.ComponentGroup.IISDevelopment | 開発時の IIS サポ�
 
 **ID:** Microsoft.VisualStudio.Workload.NetCrossPlat
 
-**説明:** Xamarin を使用して iOS、Android、または Windows 向けのクロスプラットフォーム アプリケーションをビルドします。
+**説明:** iOS、Android、Windows 向けのクロスプラットフォーム アプリケーションを、Xamarin を使って構築します。
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
@@ -625,7 +626,7 @@ Microsoft.VisualStudio.ComponentGroup.UWP.Xamarin | Xamarin 用ユニバーサ�
 
 **ID:** Microsoft.VisualStudio.Workload.NetWeb
 
-**説明:** ASP.NET、ASP.NET Core、HTML/JavaScript、Containers (Docker サポートを含む) を使用して、Web アプリケーションをビルドします。
+**説明:** ASP.NET、ASP.NET Core、HTML/JavaScript、コンテナー (Docker サポートなど) を使用して、Web アプリケーションをビルドします。
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
@@ -713,7 +714,7 @@ Microsoft.VisualStudio.Web.Mvc4.ComponentGroup | ASP.NET MVC 4 | 15.6.27406.0 | 
 
 **ID:** Microsoft.VisualStudio.Workload.Node
 
-**説明:** Node.js (非同期イベント ドリブン JavaScript ランタイム) を使用してスケーラブルなネットワーク アプリケーションをビルドします。 
+**説明:** Node.js (非同期、イベント ドリブン JavaScript ランタイム) を使用してスケーラブルなネットワーク アプリケーションをビルドします。 
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
@@ -935,12 +936,12 @@ Microsoft.VisualStudio.Component.Windows10SDK.10240 | Windows 10 SDK (10.0.10240
 Microsoft.VisualStudio.Component.Windows10SDK.10586 | Windows 10 SDK (10.0.10586.0) | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.14393 | Windows 10 SDK (10.0.14393.0) | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.15063.Desktop | デスクトップ用 Windows 10 SDK (10.0.15063.0) C++ [x86 および x64] | 15.6.27406.0 | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | UWP 用 Windows 10 SDK (10.0.15063.0): C#、VB、JS | 15.6.27406.0 | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | UWP 用 Windows 10 SDK (10.0.15063.0): C++ | 15.6.27406.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | UWP 用 Windows 10 SDK (10.0.15063.0):C#、VB、JS | 15.6.27406.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | UWP 用 Windows 10 SDK (10.0.15063.0):C++ | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop | デスクトップ用 Windows 10 SDK (10.0.16299.0) C++ [x86 および x64] | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop.arm | デスクトップ用 Windows 10 SDK (10.0.16299.0) C++ [ARM および ARM64] | 15.6.27406.0 | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | UWP 用 Windows 10 SDK (10.0.16299.0): C#、VB、JS | 15.6.27406.0 | Optional
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | UWP 用 Windows 10 SDK (10.0.16299.0): C++ | 15.6.27406.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | UWP 用 Windows 10 SDK (10.0.16299.0):C#、VB、JS | 15.6.27406.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | UWP 用 Windows 10 SDK (10.0.16299.0):C++ | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.17763 | Windows 10 SDK (10.0.17763.0) | 15.9.28218.60 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.IpOverUsb | USB デバイスの接続 | 15.7.27625.0 | Optional
 Microsoft.VisualStudio.ComponentGroup.UWP.VC | C++ ユニバーサル Windows プラットフォーム ツール | 15.9.28107.0 | Optional
@@ -951,7 +952,7 @@ Microsoft.VisualStudio.ComponentGroup.Windows10SDK.16299 | Windows 10 SDK (10.0.
 
 **ID:** Microsoft.VisualStudio.Workload.VisualStudioExtension
 
-**説明:** Visual Studio 用のアドオンや拡張機能 (新しいコマンド、コード アナライザー、ツール ウィンドウを含む) を作成します。
+**説明:** Visual Studio 用のアドオンや拡張機能 (新しいコマンド、コード アナライザー、ツール ウィンドウを含みます) を作成します。
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 

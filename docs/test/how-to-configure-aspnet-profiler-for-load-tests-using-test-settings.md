@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テスト用の ASP.NET プロファイラーを構成する
+title: ロード テスト用の ASP.NET プロファイラーを構成する
 ms.date: 10/13/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 36176ce14b51af1cf692b6b04d862882a48d7e4e
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 197a6c4a743f5f30e060950413b7e2214fb91b36
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895198"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068423"
 ---
 # <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>方法: Visual Studio でテストの設定を使用してロード テスト用の ASP.NET プロファイラーを構成する
 
@@ -31,7 +31,7 @@ ASP.NET プロファイラー診断データ アダプターを使用すると�
 > [!NOTE]
 > ASP.NET プロファイラー診断データ アダプターは、インターネット インフォメーション サービス (IIS) プロセスをプロファイルします。 そのため、開発用 Web サーバーに対しては機能しません。 ロード テスト内で Web サイトをプロファイルするには、IIS が実行されているコンピューターにテスト エージェントをインストールする必要があります。 テスト エージェントはロードを生成しませんが、収集のみを目的としたエージェントとなります。 詳細については、[テスト エージェントのインストールと構成](../test/lab-management/install-configure-test-agents.md)に関するページを参照してください。
 
-詳細については、「[方法: 配布されたロード テストのテスト設定を作成する](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)」を参照してください。
+詳細については、「[方法 :配布されたロード テストのテスト設定を作成する](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)」を参照してください。
 
 ## <a name="configure-the-aspnet-profiler-for-your-test-settings"></a>テストの設定に対して ASP.NET プロファイラーを構成する
 

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio の IntelliTrace データ
+title: Intellitrace データ
 ms.date: 10/13/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 8501f141c2fdf60a57daecda33a3ff7436a16a5d
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: cad52f39fc45e5561e2a87f12c804cb0d445d96a
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52894639"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064758"
 ---
-# <a name="how-to-collect-intellitrace-data-to-help-debug-difficult-issues"></a>方法: 困難な問題をデバッグするのに役立つ IntelliTrace データを収集する
+# <a name="how-to-collect-intellitrace-data-to-help-debug-difficult-issues"></a>方法:困難な問題をデバッグするのに役立つ IntelliTrace データを収集する
 
 Visual Studio では、特定の診断トレース情報を収集するように IntelliTrace の診断データ アダプターを構成できます。 テストではこのアダプターを使用できます。またテストではアプリケーションの重要な診断イベントを収集できます。これを使用して開発者はコードを追跡し、バグの原因を見つけることができます。 IntelliTrace の診断データ アダプターは、手動テストでも自動テストでも使用できます。
 
@@ -75,7 +75,7 @@ IntelliTrace ファイルに収集されたデータによって、コードの�
 
 5.  **[全般]** タブを選択します。重要な診断イベントを記録する場合に **[IntelliTrace イベントのみ]** を選択すると、テスト時のパフォーマンスへの影響を最小限に抑えられます。
 
-     - または -
+     または
 
      診断イベントと、呼び出し情報を示すメソッド レベルのトレースを記録する場合は、**[IntelliTrace イベントと呼び出し情報]** を選択します。 このレベルのトレースは、テストの実行時のパフォーマンスに影響を与えます。
 

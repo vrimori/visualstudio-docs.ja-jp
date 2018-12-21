@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テストの実行設定にコンテキスト パラメーターを追加する
+title: ロード テストの実行設定にコンテキスト パラメーターを追加する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: c351079f0a29176ded3172d6e0e26893a1163354
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: cefa93a6f65b4b84b4ece5a4eb428d909dd0596d
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52894106"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53048494"
 ---
 # <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>方法: ロード テストの実行設定にコンテキスト パラメーターを追加する
 
@@ -38,9 +38,9 @@ Webserver1 コンテキスト パラメーターの値を `http://CorporateStagi
 
 また、別々のロード テストの実行設定に同じ名前を使用して、コンテキスト パラメーターにさまざまな値を割り当てることにより、さまざまな環境を使用してロード テストを実行できます。
 
-- Corporate Staging Web Server の実行設定: `WebServer1=http://CorporateStagingWebServer` という名前のコンテキスト パラメーター
+- Corporate Staging Web Server の実行設定:`WebServer1=http://CorporateStagingWebServer` という名前のコンテキスト パラメーター
 
-- Corporate Production Web Server の実行設定: `WebServer1=http://CorporateProductionWebServer` という名前のコンテキスト パラメーター
+- Corporate Production Web Server の実行設定:`WebServer1=http://CorporateProductionWebServer` という名前のコンテキスト パラメーター
 
   **コマンド ラインからの実行設定の変更**
 
@@ -62,7 +62,7 @@ Webserver1 コンテキスト パラメーターの値を `http://CorporateStagi
 
      新しいコンテキスト パラメーターが、ロード テスト ツリーの **[実行設定]** フォルダーの **[コンテキスト パラメーター]** フォルダーに追加されます。
 
-     - または -
+     または
 
      実行設定に **[コンテキスト パラメーター]** フォルダーが既に含まれている場合は、それを右クリックして **[コンテキスト パラメーターの追加]** を選択します。
 

@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: Visual Studio で構成ファイルを使用し、データ ソースを定義する'
+title: 'チュートリアル: データ ソースを定義するための構成ファイルの使用'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 64d01fd3551ee94cef178cb840742721db58a360
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d329e1aedb5b81c2be2d52614e4c540ecb8ef8aa
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49821618"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066994"
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>チュートリアル: データ ソースを定義するための構成ファイルの使用
 
@@ -198,7 +198,7 @@ ms.locfileid: "49821618"
 
 3. `Number` データ型を使用して、`MyDataTable` に `Arg1` と `Arg2` という名前の 2 つのフィールドを作成します。
 
-4. `Arg1` と `Arg2` の値がそれぞれ (10,50)、(3,2)、(6,0)、(0,8)、(12312,1000) となる 5 つのエンティティを `MyDataTable` に追加します。
+4. 5 つのエンティティを `MyDataTable` に追加します。`Arg1` と `Arg2` の値は、それぞれ(10,50)、(3,2)、(6,0)、(0,8)、(12312,1000) となるようにします。
 
 5. データベースを保存して閉じます。
 
@@ -212,7 +212,7 @@ ms.locfileid: "49821618"
 
 3. `Sheet1` に 2 つの列ヘッダーを作成し、`Val1` と `Val2` という名前を付けます。
 
-4. `Val1` と `Val2` の値がそれぞれ (1,1)、(2,2)、(3,3)、(4,4)、(5,0) となる 5 つのエンティティを `Sheet1` に追加します。
+4. 5 つのエンティティを `Sheet1` に追加します。`Val1` と `Val2` の値は、それぞれ(1,1)、(2,2)、(3,3)、(4,4)、(5,0) となるようにします。
 
 5. スプレッドシートを保存して閉じます。
 

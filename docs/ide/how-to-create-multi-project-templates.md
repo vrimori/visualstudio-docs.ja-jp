@@ -1,5 +1,5 @@
 ---
-title: Visual Studio の複数プロジェクトのテンプレートを作成する
+title: 複数プロジェクトのテンプレートを作成する
 ms.date: 01/02/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -11,14 +11,14 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 24002512ec891866839ad3bd33590c3dfe966e99
-ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
+ms.openlocfilehash: f53fa69f9fafd1dd3686a80fb367c2bc0b99a013
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38978386"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049666"
 ---
-# <a name="how-to-create-multi-project-templates"></a>方法 : 複数プロジェクトのテンプレートを作成する
+# <a name="how-to-create-multi-project-templates"></a>方法: 複数プロジェクトのテンプレートを作成する
 
 複数プロジェクトのテンプレートは、2 つ以上のプロジェクトのコンテナーとして機能します。 複数プロジェクトのテンプレートに基づくプロジェクトが **[新しいプロジェクト]** ダイアログ ボックスで作成されると、テンプレート内のすべてのプロジェクトがソリューションに追加されます。
 
@@ -55,7 +55,7 @@ ms.locfileid: "38978386"
         xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     ```
 
-- **TemplateContent** 要素には、含まれるプロジェクトの *vstemplate* ファイルへのパスを定義する 1 つ以上の **ProjectTemplateLink** 要素を持つ **ProjectCollection** 要素が含まれます。 例:
+- **TemplateContent** 要素には、含まれるプロジェクトの *vstemplate* ファイルへのパスを定義する 1 つ以上の **ProjectTemplateLink** 要素を持つ **ProjectCollection** 要素が含まれます。 次に例を示します。
 
     ```xml
     <TemplateContent>

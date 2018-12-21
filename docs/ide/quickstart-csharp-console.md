@@ -1,10 +1,11 @@
 ---
-title: 'クイック スタート: Visual Studio を使用して初めての C# コンソール アプリを作成する'
+title: Visual Studio を使用して初めての C# コンソール アプリを作成する
+titleSuffix: ''
 description: Visual Studio で C# を使用して、シンプルな Hello World コンソール アプリを作成する方法について、ステップ バイ ステップで説明します。
-ms.custom: ''
 ms.date: 09/21/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
+ms.custom: seodec18
 ms.topic: quickstart
 ms.devlang: vb
 author: TerryGLee
@@ -14,12 +15,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: ee40aadd3287018e52910ad6b4a4000db6bcce8a
-ms.sourcegitcommit: 6672a1e9d135d7e5cca3cceea07c6fe5a0871475
+ms.openlocfilehash: a1d7b165466f686549273394c204e4ab31c06b46
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47443416"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53158607"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>クイック スタート: Visual Studio を使用して初めての C# コンソール アプリを作成する
 

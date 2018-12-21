@@ -1,7 +1,7 @@
 ---
 title: アプリのメモリ使用量を測定する
 description: デバッガーに統合された診断ツールを使用したデバッグ中に、メモリ リークおよび非効率的なメモリを見つけます。
-ms.custom: mvc
+ms.custom: seodec18
 ms.date: 04/25/2017
 ms.technology: vs-ide-debug
 ms.topic: tutorial
@@ -10,14 +10,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eeacfb15b02c19ea4a166fbc8511aab644d41ea5
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 622f35ccbe29130dea3b35b96373da0c8b39e0b7
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49861411"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052078"
 ---
-# <a name="profile-memory-usage-in-visual-studio"></a>Visual Studio でのメモリ使用のプロファイリング
+# <a name="measure-memory-usage-in-visual-studio"></a>Visual Studio でのメモリ使用量の測定
 デバッガーに統合された**メモリ使用量**診断ツールを使用したデバッグ中に、メモリ リークおよび非効率的なメモリを見つけます。 メモリ使用量ツールを使うと、マネージド メモリ ヒープとネイティブ メモリ ヒープの 1 つまたは複数の "*スナップショット*" を取得して、オブジェクト型のメモリ使用量への影響を理解するのに役立てることができます。 .NET アプリ、ネイティブ アプリ、または混在モード (.NET とネイティブ) アプリのスナップショットを収集できます。  
   
  次の図は、**[診断ツール]** ウィンドウ (Visual Studio 2015 Update 1 以降で利用可能) を示しています。  
@@ -168,7 +168,7 @@ ms.locfileid: "49861411"
 
  [デバッグ中に CPU とメモリを分析する](https://blogs.msdn.microsoft.com/visualstudio/2016/02/15/analyze-cpu-memory-while-debugging/)  
   
- [Visual C++ ブログ: Visual C++ 2015 でのメモリ プロファイル](https://blogs.msdn.microsoft.com/vcblog/2015/10/21/memory-profiling-in-visual-c-2015/)  
+ [Visual C++ ブログ:Visual C++ 2015 のメモリ プロファイル](https://blogs.msdn.microsoft.com/vcblog/2015/10/21/memory-profiling-in-visual-c-2015/)  
 
 ## <a name="next-steps"></a>次の手順
 

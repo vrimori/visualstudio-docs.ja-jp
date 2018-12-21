@@ -1,5 +1,6 @@
 ---
-title: Windows 上の Visual Studio での Python サポートの概要
+title: Windows 上の Visual Studio の Python サポート
+titleSuffix: ''
 description: Windows 上で最高の Python IDE である Visual Studio の Python 機能 (Python Tools for Visual Studio (PTVS) とも呼ばれます) の概要について説明します
 ms.date: 11/19/2018
 ms.prod: visual-studio-dev15
@@ -8,15 +9,16 @@ ms.topic: overview
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: fba2c426db3269a1f9bef3a0759bd6ffaa7f447e
-ms.sourcegitcommit: f61ad0e8babec8810295f039e67629f4bdebeef0
+ms.openlocfilehash: cec872f5df927bae3caf20f35d4bcd8f8e7460b3
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "52001335"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068540"
 ---
 # <a name="work-with-python-in-visual-studio-on-windows"></a>Windows 上の Visual Studio での Python の使用
 
@@ -43,9 +45,9 @@ Visual Studio の **[Python 環境]** ウィンドウ (以下の図では横幅�
 
 詳細情報
 
-- ビデオ (2 分 35 秒): [Python 環境の管理](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=qrDmN4LWE_8305918567)
-- ドキュメント: [Python 環境を管理する](managing-python-environments-in-visual-studio.md)
-- ドキュメント: [Python 環境のリファレンス](python-environments-window-tab-reference.md)
+- ビデオ (2 分 35 秒):[Python 環境を管理する](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=qrDmN4LWE_8305918567)
+- ドキュメント:[Python 環境を管理する](managing-python-environments-in-visual-studio.md)
+- ドキュメント:[Python 環境のリファレンス](python-environments-window-tab-reference.md)
 
 ## <a name="rich-editing-intellisense-and-code-comprehension"></a>豊富な編集、IntelliSense、コード読解
 
@@ -55,12 +57,12 @@ Visual Studio には、構文の色分け、すべてのコードとライブラ
 
 詳細情報
 
-- ビデオ (2 分 30 秒): [Python コードの編集](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=r2iQH5LWE_4605918567)
-- ドキュメント: [Python コードの編集](editing-python-code-in-visual-studio.md)
-- ドキュメント: [コードの書式設定](formatting-python-code.md)
-- ドキュメント: [コードのリファクタリング](refactoring-python-code.md)
-- ドキュメント: [リンターの使用](linting-python-code.md)
-- 一般的な Visual Studio 機能のドキュメント: [コード エディターの機能](../ide/writing-code-in-the-code-and-text-editor.md)
+- ビデオ (2 分 30 秒):[Python コードの編集](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=r2iQH5LWE_4605918567)
+- ドキュメント:[Python コードの編集](editing-python-code-in-visual-studio.md)
+- ドキュメント:[コードの書式設定](formatting-python-code.md)
+- ドキュメント:[コードのリファクタリング](refactoring-python-code.md)
+- ドキュメント:[リンターの使用](linting-python-code.md)
+- 一般的な Visual Studio 機能のドキュメント:[コード エディターの機能](../ide/writing-code-in-the-code-and-text-editor.md)
 
 ## <a name="interactive-window"></a>対話型ウィンドウ
 
@@ -74,9 +76,9 @@ Visual Studio は、インライン プロット、.NET、Windows Presentation F
 
 詳細情報
 
-- ビデオ (2 分 22 秒): [Python の対話型ウィンドウ](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=gJYKY5LWE_4605918567)
-- ドキュメント: [対話型ウィンドウ](python-interactive-repl-in-visual-studio.md)
-- ドキュメント: [Visual Studio の IPython](interactive-repl-ipython.md)
+- ビデオ (2 分 22 秒):[Python Interactive ウィンドウ](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=gJYKY5LWE_4605918567)
+- ドキュメント:[対話型ウィンドウ](python-interactive-repl-in-visual-studio.md)
+- ドキュメント:[Visual Studio の IPython](interactive-repl-ipython.md)
 
 ## <a name="project-system-and-project-and-item-templates"></a>プロジェクト システム、プロジェクト テンプレート、項目テンプレート
 
@@ -90,12 +92,12 @@ Visual Studio は、時間と共に複雑になるプロジェクトを管理す
 
 詳細情報
 
-- ドキュメント: [Python プロジェクトの管理](managing-python-projects-in-visual-studio.md)
-- ドキュメント: [項目テンプレートのリファレンス](python-item-templates.md)
-- ドキュメント: [Python プロジェクト テンプレート](managing-python-projects-in-visual-studio.md#project-templates)
-- ドキュメント: [C++ と Python の使用](working-with-c-cpp-python-in-visual-studio.md)
-- 一般的な Visual Studio 機能のドキュメント: [プロジェクト テンプレートと項目テンプレート](../ide/creating-project-and-item-templates.md#visual-studio-templates)
-- 一般的な Visual Studio 機能のドキュメント: [Visual Studio のソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)
+- ドキュメント:[Python プロジェクトの管理](managing-python-projects-in-visual-studio.md)
+- ドキュメント:[項目テンプレートのリファレンス](python-item-templates.md)
+- ドキュメント:[Python プロジェクト テンプレート](managing-python-projects-in-visual-studio.md#project-templates)
+- ドキュメント:[C++ と Python の使用](working-with-c-cpp-python-in-visual-studio.md)
+- 一般的な Visual Studio 機能のドキュメント:[プロジェクト テンプレートと項目テンプレート](../ide/creating-project-and-item-templates.md#visual-studio-templates)
+- 一般的な Visual Studio 機能のドキュメント:[Visual Studio のソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)
 
 ## <a name="full-featured-debugging"></a>フル機能のデバッグ
 
@@ -105,11 +107,11 @@ Visual Studio の長所の 1 つは強力なデバッガーです。 特に Pyth
 
 詳細情報
 
-- ビデオ (3 分 32 秒):[Python のデバッグ](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=Ep5dp5LWE_3805918567)
-- ドキュメント: [Python のデバッグ](debugging-python-in-visual-studio.md)
-- ドキュメント: [Python と C++ の混合モード デバッグ](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)
-- ドキュメント: [Linux 上のリモート デバッグ](debugging-python-code-on-remote-linux-machines.md)
-- 一般的な Visual Studio 機能のドキュメント: [Visual Studio デバッガーの機能ツアー](../debugger/debugger-feature-tour.md)
+- ビデオ:[Python のデバッグ (3 分 32 秒)](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=Ep5dp5LWE_3805918567)
+- ドキュメント:[Python のデバッグ](debugging-python-in-visual-studio.md)
+- ドキュメント:[Python と C++ の混合モード デバッグ](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)
+- ドキュメント:[Linux 上のリモート デバッグ](debugging-python-code-on-remote-linux-machines.md)
+- 一般的な Visual Studio 機能のドキュメント:[Visual Studio デバッガーの機能ツアー](../debugger/debugger-feature-tour.md)
 
 ## <a name="profiling-tools-with-comprehensive-reporting"></a>包括的なレポートを備えたプロファイリング ツール
 
@@ -119,9 +121,9 @@ Visual Studio の長所の 1 つは強力なデバッガーです。 特に Pyth
 
 詳細情報
 
-- ビデオ (3 分 00 秒): [Python のプロファイリング](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=s6FoC6LWE_1005918567)
-- ドキュメント: [Python のプロファイリング ツール](profiling-python-code-in-visual-studio.md)
-- 一般的な Visual Studio 機能のドキュメント: [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md) (Visual Studio のプロファイリング機能の一部は、Python では使用できません)。
+- ビデオ:[Python のプロファイリング (3 分 00 秒)](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=s6FoC6LWE_1005918567)
+- ドキュメント:[Python のプロファイリング ツール](profiling-python-code-in-visual-studio.md)
+- 一般的な Visual Studio 機能のドキュメント:[プロファイリング機能ツアー](../profiling/profiling-feature-tour.md) (Visual Studio のプロファイリング機能の一部は、Python では使用できません)。
 
 ## <a name="unit-testing-tools"></a>単体テスト ツール
 
@@ -131,9 +133,9 @@ Visual Studio **テスト エクスプローラー**でテストを検出、実�
 
 詳細情報
 
-- ビデオ (2 分 31 秒): [Python のテスト](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=hb46k6LWE_405918567)
-- ドキュメント: [Python 用の単体テスト ツール](unit-testing-python-in-visual-studio.md)
-- 一般的な Visual Studio 機能のドキュメント: [コードの単体テスト](../test/unit-test-your-code.md)
+- ビデオ:[Python のテスト (2 分 31 秒)](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=hb46k6LWE_405918567)
+- ドキュメント:[Python 用の単体テスト ツール](unit-testing-python-in-visual-studio.md)
+- 一般的な Visual Studio 機能のドキュメント:[コードの単体テスト](../test/unit-test-your-code.md)。
 
 ## <a name="azure-sdk-for-python"></a>Azure SDK for Python
 
@@ -145,7 +147,7 @@ Python ワークロードに含まれる Azure SDK for Python を使うと、Win
 
 |   |   |
 |---|---|
-| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | <ul><li>[Python によるプログラミングの入門](https://mva.microsoft.com/en-US/training-courses/introduction-to-programming-with-python-8360?l=lqhuMxFz_8904984382)</li><li>[Python の初心者向け: 文字列と関数](https://mva.microsoft.com/en-US/training-courses/python-beginner-strings-and-functions-18015)</li><li>[Python の基礎: リストとループ](https://mva.microsoft.com/en-US/training-courses/python-fundamentals-lists-and-loops-18019)</li><li>[よく寄せられる質問](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121)</li></ul> |
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | <ul><li>[Python によるプログラミングの入門](https://mva.microsoft.com/en-US/training-courses/introduction-to-programming-with-python-8360?l=lqhuMxFz_8904984382)</li><li>[Python 初心者:文字列と関数](https://mva.microsoft.com/en-US/training-courses/python-beginner-strings-and-functions-18015)</li><li>[Python の基礎:リストとループ](https://mva.microsoft.com/en-US/training-courses/python-fundamentals-lists-and-loops-18019)</li><li>[よく寄せられる質問](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121)</li></ul> |
 
 ## <a name="questions-and-answers"></a>質問と回答
 

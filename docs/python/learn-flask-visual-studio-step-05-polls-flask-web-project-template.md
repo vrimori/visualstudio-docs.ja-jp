@@ -1,5 +1,6 @@
 ---
-title: チュートリアル - Visual Studio での Flask の詳細情報、手順 5
+title: Visual Studio での Flask 学習チュートリアル、手順 5、ポーリング プロジェクト テンプレート
+titleSuffix: ''
 description: Visual Studio プロジェクトのコンテキストにおける Flask の基本のチュートリアルです。具体的には、Polls Flask Web プロジェクトと Polls Flask/Jade Web プロジェクト テンプレートの機能について取り上げます。
 ms.date: 09/04/2018
 ms.prod: visual-studio-dev15
@@ -8,19 +9,20 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: bf6c9299f994ba1f5272c68724171fb42e85a679
-ms.sourcegitcommit: 1abb9cf4c3ccb90e3481ea8079272c98aad12875
+ms.openlocfilehash: a29e222df2a8443e9d5210c0382125cdc65a814f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50143204"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066000"
 ---
 # <a name="step-5-use-the-polls-flask-web-project-template"></a>手順 5: ポーリング Flask Web プロジェクト テンプレートを使用する
 
-**前の手順: [完全な Flask Web プロジェクト テンプレートを使用する](learn-flask-visual-studio-step-04-full-flask-project-template.md)**
+**前の手順:[完全な Flask Web プロジェクト テンプレートを使用する](learn-flask-visual-studio-step-04-full-flask-project-template.md)**
 
 Visual Studio の "Flask Web プロジェクト" テンプレートについて理解したので、3 つ目の Flask テンプレートである "Polls Flask Web プロジェクト" について見てみましょう。これは同じコード ベースに基づいて構築されています。
 
@@ -34,7 +36,7 @@ Visual Studio の "Flask Web プロジェクト" テンプレートについて�
 
 Visual Studio は、同じアプリを生成しますが、Jinja テンプレート エンジンに Jade 拡張子を使用する "Polls Flask/Jade Web プロジェクト" テンプレートも提供します。 詳細については、「[Step 4 - The Flask/Jade Web Project template](learn-flask-visual-studio-step-04-full-flask-project-template.md#the-flaskjade-web-project-template)」 (手順 4 - Flask/Jade Web プロジェクト テンプレート) を参照してください。
 
-## <a name="step-5-1-create-the-project"></a>手順 5-1: プロジェクトの作成
+## <a name="step-5-1-create-the-project"></a>手順 5-1:プロジェクトの作成
 
 1. Visual Studio で、**ソリューション エクスプローラー**に移動し、本チュートリアルの前述の手順で作成した **LearningFlask** ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** の順に選択します。 (または、新しいソリューションを使用する場合は、代わりに **[ファイル]** > **[新規]** > **[プロジェクト]** の順に選択します)。
 
@@ -74,7 +76,7 @@ Visual Studio は、同じアプリを生成しますが、Jinja テンプレー
 
 前述のように、 Visual Studio で他のプロジェクト テンプレートを確認したことがある場合は、"Polls Flask Web プロジェクト" テンプレート (および "Polls Flask/Jade Web プロジェクト" テンプレート) から作成されたプロジェクトの多くの部分は見慣れているはずです。 この記事の追加手順では、データ モデルや追加のビューなど、より重要な変更や追加についてまとめています。
 
-## <a name="step-5-2-understand-the-data-models"></a>手順 5-2: データ モデルを理解する
+## <a name="step-5-2-understand-the-data-models"></a>手順 5-2:データ モデルを理解する
 
 このアプリのデータ モデルは、*models/\_\_init\_\_.py* で定義されている Poll および Choice という名前の Python クラスです。 Poll は質問を表し、Choice インスタンスのコレクションはそれに対する使用可能な回答を表します。 Poll では、(すべての選択に対する) 投票の合計数と、ビューの生成に使用される統計を計算するメソッドも保持されます。
 
@@ -110,7 +112,7 @@ class Choice(object):
 
 これらのデータ モデルは、アプリのビューをさまざまな種類のバッキング データ ストア (次の手順で説明します) に対して動作できるようにする汎用の抽象化です。
 
-## <a name="step-5-3-understand-the-backing-data-stores"></a>手順 5-3: バッキング データ ストアを理解する
+## <a name="step-5-3-understand-the-backing-data-stores"></a>手順 5-3:バッキング データ ストアを理解する
 
 "Polls Flask Web プロジェクト" テンプレートによって作成されたアプリは、メモリ、Azure テーブル ストレージ、または Mongo DB データベースのデータ ストアに対して実行できます。
 
@@ -232,11 +234,11 @@ def seed():
 
 この処理が完了すると、`seed` メソッドの `redirect('/')` ステートメントにより、ホーム ページに戻ります。 `repository.get_polls` でデータ オブジェクトが返されるようになったため、*templates\index.html* の条件タグはポーリングを含むテーブルをレンダリングするようになります。
 
-### <a name="question-how-does-one-add-new-polls-to-the-app"></a>質問: アプリに新しいポーリングを追加するにはどうすればよいですか。
+### <a name="question-how-does-one-add-new-polls-to-the-app"></a>質問:アプリに新しいポーリングを追加するにはどうすればよいですか。
 
-回答: プロジェクト テンプレートによって提供されるアプリには、ポーリングを追加または編集するための機能が含まれていません。 *models\samples.json* を変更して、新しい初期化データを作成することはできますが、これを行うことは、データ ストアがリセットされることを意味します。 編集機能を実装するには、メソッドを使用して `Repository` クラス インターフェイスを拡張して必要な `Choice` および `Poll`のインスタンスを作成してから、これらのメソッドを使用する追加ページに UI を実装します。
+回答:プロジェクト テンプレートによって提供されるアプリには、ポーリングを追加または編集するための機能が含まれていません。 *models\samples.json* を変更して、新しい初期化データを作成することはできますが、これを行うことは、データ ストアがリセットされることを意味します。 編集機能を実装するには、メソッドを使用して `Repository` クラス インターフェイスを拡張して必要な `Choice` および `Poll`のインスタンスを作成してから、これらのメソッドを使用する追加ページに UI を実装します。
 
-## <a name="step-5-4-understand-the-poll-detail-and-results-views"></a>手順 5-4: ポーリングの詳細と結果ビューを理解する
+## <a name="step-5-4-understand-the-poll-detail-and-results-views"></a>手順 5-4:ポーリングの詳細と結果ビューを理解する
 
 "Polls Flask Web プロジェクト" テンプレートおよび "Polls Flask/Jade Web プロジェクト" テンプレートで生成されるビュー ([詳細] ページや [連絡先] ページのビューなど) のほとんどは、このチュートリアルで使用した "Flask Web プロジェクト" (または "Flask/Jade Web プロジェクト") テンプレートによって作成されるビューとよく似ています。 前のセクションでは、初期化ボタンまたはポーリングの一覧のいずれかを示すため、ホーム ページがどのように実装されるかについても学習しました。
 
@@ -346,7 +348,7 @@ def results(key):
 ## <a name="next-steps"></a>次の手順
 
 > [!Note]
-> このチュートリアルの途中で Visual Studio ソリューションをソース コード管理にコミットした場合は、もう 1 つのコミットを実行することをお勧めします。 ソリューションは、GitHub [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask) のチュートリアル ソース コードと一致するようにします。
+> このチュートリアルの途中で Visual Studio ソリューションをソース コード管理にコミットした場合は、もう 1 つのコミットを実行することをお勧めします。 ソリューションは、GitHub:[Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask) のチュートリアル ソース コードと一致するようにします。
 
 Visual Studio で "Blank Flask Web プロジェクト"、"Flask[/Jade] Web プロジェクト"、"Polls Flask[/Jade] Web プロジェクト" の各テンプレートを全体的に確認しました。 Flask のすべての基本 (ビュー、テンプレート、ルーティングの使用など) を学習し、バッキング データ ストアの使用方法について確認しました。 これで、必要なビューとモデルがある独自の Web アプリの使用を開始できるようになったはずです。
 

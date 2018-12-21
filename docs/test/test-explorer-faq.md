@@ -1,5 +1,5 @@
 ---
-title: Visual Studio テスト エクスプローラーに関する FAQ
+title: テスト エクスプローラーに関する FAQ
 ms.date: 11/07/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: douge
-ms.openlocfilehash: 49df84c5e852cfc282b6d679faf621669cf08148
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 59c4cd06ee6c698ceb62803fb43b611daa298512
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51296340"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055265"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio テスト エクスプローラーに関する FAQ
 
@@ -122,8 +122,8 @@ Visual Studio 2019 では、前にパブリックとしてマークされてい�
 
 最近の UWP テスト プロジェクトでは、テスト アプリを識別するためのパフォーマンスを向上させるため、テスト プラットフォームのビルド プロパティを指定します。 Visual Studio バージョン 15.7 より前に初期化された UWP テスト プロジェクトがある場合は、**[出力]** > **[テスト]** でこのエラーが表示される場合があります。
 
-**System.AggregateException: 1 つ以上のエラーが発生しました。 ---> System.InvalidOperationException: Microsoft.VisualStudio.TestWindow.Controller.TestContainerProvider <GetTestContainerAsync>d__61.MoveNext()** で次の TestContainer が見つかりませんでした {}
-  
+**System.AggregateException: 1 つまたは複数のエラーが発生しました。 ---> System.InvalidOperationException:次の TestContainer が {} Microsoft.VisualStudio.TestWindow.Controller.TestContainerProvider <GetTestContainerAsync>d__61.MoveNext()** で見つかりませんでした
+
 このエラーを修復するには:
 
 - 次のコードを使用して、テスト プロジェクトのビルド プロパティを更新します。

@@ -1,5 +1,6 @@
 ---
-title: チュートリアル - Visual Studio での Flask の詳細情報、手順 3
+title: Visual Studio での Flask 学習チュートリアル、手順 3、静的ファイルとページ
+titleSuffix: ''
 description: Visual Studio プロジェクトのコンテキストにおける Flask の基本のチュートリアルです。具体的には、静的ファイルを提供する方法、アプリにページを追加する方法、およびテンプレートの継承を使用する方法を示します。
 ms.date: 09/04/2018
 ms.prod: visual-studio-dev15
@@ -8,19 +9,20 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6cdc8e3658b02c7c4371181d6c0e5723d0a3537c
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 906c44ca3b1d0771202e78910870d38f9d4fb995
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43775757"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065026"
 ---
 # <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>手順 3: 静的ファイルを提供し、ページを追加し、テンプレート継承を使用する
 
-**前の手順: [ビューおよびページ テンプレートを使用して Flask アプリを作成する](learn-flask-visual-studio-step-02-create-app.md)**
+**前の手順:[ビューおよびページ テンプレートを使用して Flask アプリを作成する](learn-flask-visual-studio-step-02-create-app.md)**
 
 このチュートリアルの前の手順では、自己完結型 HTML の単一のページを使って最小限の Flask アプリを作成する方法を学びました。 ただし、最新の Web アプリは通常、多数のページで構成されており、CSS や JavaScript ファイルなどの共有リソースを活用して、一貫したスタイル設定や動作を提供します。
 
@@ -32,7 +34,7 @@ ms.locfileid: "43775757"
 > - アプリに追加ページを付け加える (手順 3-3)
 > - テンプレートの継承を使用して、複数のページで使用されるヘッダーとナビゲーション バーを作成する (手順 3-4)
 
-## <a name="step-3-1-become-familiar-with-item-templates"></a>手順 3-1: 項目テンプレートを理解する
+## <a name="step-3-1-become-familiar-with-item-templates"></a>手順 3-1:項目テンプレートを理解する
 
 Flask アプリを開発する場合、通常、より多くの Python、HTML、CSS、および JavaScript ファイルを追加します。 Visual Studio では、(デプロイに必要になる可能性がある *web.config* のような他のファイルだけでなく) ファイルの種類ごとに、すぐに使用できる便利な[項目テンプレート](python-item-templates.md)を提供しています。
 
@@ -42,11 +44,11 @@ Flask アプリを開発する場合、通常、より多くの Python、HTML、
 
 テンプレートを使用するには、目的のテンプレートを選択して、ファイルの名前を指定し、**[OK]** をクリックします。 この方法で項目を追加すると、Visual Studio プロジェクトに自動的にファイルを追加して、ソース管理への変更にマーク付けされます。
 
-### <a name="question-how-does-visual-studio-know-which-item-templates-to-offer"></a>質問: Visual Studio では、提供する項目テンプレートをどのように把握していますか。
+### <a name="question-how-does-visual-studio-know-which-item-templates-to-offer"></a>質問:Visual Studio では、提供する項目テンプレートをどのように把握していますか。
 
-回答: Visual Studio プロジェクト ファイル (*.pyproj*) には、Python プロジェクトとしてマーク付けするプロジェクト タイプ識別子が含まれます。 Visual Studio は、このタイプ識別子を使用して、プロジェクト タイプに適合する項目テンプレートのみを表示します。 このように、Visual Studio では、多数のプロジェクト タイプに対応する豊富な項目テンプレート セットを提供でき、項目テンプレートを毎回分類して調べる必要はありません。
+回答:Visual Studio プロジェクト ファイル (*.pyproj*) には、Python プロジェクトとしてマーク付けするプロジェクト タイプ識別子が含まれます。 Visual Studio は、このタイプ識別子を使用して、プロジェクト タイプに適合する項目テンプレートのみを表示します。 このように、Visual Studio では、多数のプロジェクト タイプに対応する豊富な項目テンプレート セットを提供でき、項目テンプレートを毎回分類して調べる必要はありません。
 
-## <a name="step-3-2-serve-static-files-from-your-app"></a>手順 3-2: アプリからの静的ファイルを提供する
+## <a name="step-3-2-serve-static-files-from-your-app"></a>手順 3-2:アプリからの静的ファイルを提供する
 
 Python を使って構築された Web アプリ (任意のフレームワークを使用する) では、Python ファイルは常に Web ホストのサーバー上で実行され、ユーザーのコンピューターに送信されることはありません。 しかし、CSS や JavaScript などの他のファイルは、これらのファイルが要求されたときに、ホスト サーバーから単純にそのまま配信されるように、ブラウザーで排他的に使用されます。 このようなファイルは "静的" ファイルと呼ばれ、Flask では、コードを記述しなくても自動的にこれらのファイルを配信できます。 たとえば、HTML ファイル内では、プロジェクトでの相対パスを使用するだけで静的ファイルを参照できます。 この手順の最初のセクションでは、既存のページ テンプレートに CSS ファイルを追加します。
 
@@ -113,15 +115,15 @@ Flask で提供されている `serve_static_file` という名前の関数を�
 
 1. アプリを実行して /api/data エンドポイントに移動し、静的ファイルが返されることを確認します。 完了したら、アプリを停止します。
 
-### <a name="question-are-there-any-conventions-for-organizing-static-files"></a>質問: 静的ファイルを編成するにあたって、何らかの規則はありますか。
+### <a name="question-are-there-any-conventions-for-organizing-static-files"></a>質問:静的ファイルを編成するにあたって、何らかの規則はありますか。
 
-回答: *static* フォルダーには、他の CSS、JavaScript、HTML ファイルを自由に追加できます。 静的ファイルを編成する一般的な方法は、*fonts*、*scripts*、*content* (スタイルシートとその他のファイル用) という名前のサブフォルダーを作成することです。
+回答:*static* フォルダーには、他の CSS、JavaScript、HTML ファイルを自由に追加できます。 静的ファイルを編成する一般的な方法は、*fonts*、*scripts*、*content* (スタイルシートとその他のファイル用) という名前のサブフォルダーを作成することです。
 
-### <a name="question-how-do-i-handle-url-variables-and-query-parameters-in-an-api"></a>質問: API では URL 変数とクエリ パラメーターをどのように処理すればよいですか。
+### <a name="question-how-do-i-handle-url-variables-and-query-parameters-in-an-api"></a>質問:API では URL 変数とクエリ パラメーターをどのように処理すればよいですか。
 
-回答: 手順 1-4 の「[質問: Flask は変数の URL ルートとクエリ パラメーターをどのように処理しますか](learn-flask-visual-studio-step-01-project-solution.md#qa-url-variables)」に対する回答をご覧ください。
+回答:「[質問:Flask は変数の URL ルートとクエリ パラメーターをどのように処理しますか?](learn-flask-visual-studio-step-01-project-solution.md#qa-url-variables)」については、手順 1-4 の回答をご覧ください。
 
-## <a name="step-3-3-add-a-page-to-the-app"></a>手順 3-3: アプリにページを追加する
+## <a name="step-3-3-add-a-page-to-the-app"></a>手順 3-3:アプリにページを追加する
 
 アプリに別のページを追加することには、次のような意味があります。
 
@@ -172,11 +174,11 @@ Flask で提供されている `serve_static_file` という名前の関数を�
 
 1. プロジェクトを実行して結果を確認し、ページ間の移動をチェックします。 終わったらアプリを停止します。
 
-### <a name="question-does-the-name-of-a-page-function-matter-to-flask"></a>質問: Flask ではページ関数の名前は重要ですか。
+### <a name="question-does-the-name-of-a-page-function-matter-to-flask"></a>質問:Flask ではページ関数の名前は重要ですか。
 
-回答: いいえ。Flask が関数を呼び出して応答を生成するための URL を決定する `@app.route` デコレーターなので、重要ではありません。 通常は関数名をルートと同じにしますが、一致させる必要はありません。
+回答:いいえ。Flask が関数を呼び出して応答を生成するための URL を決定する `@app.route` デコレーターなので、重要ではありません。 通常は関数名をルートと同じにしますが、一致させる必要はありません。
 
-## <a name="step-3-4-use-template-inheritance-to-create-a-header-and-nav-bar"></a>手順 3-4: テンプレートの継承を使ってヘッダーとナビゲーション バーを作成する
+## <a name="step-3-4-use-template-inheritance-to-create-a-header-and-nav-bar"></a>手順 3-4:テンプレートの継承を使ってヘッダーとナビゲーション バーを作成する
 
 最新の Web アプリでは通常、各ページに明示的なナビゲーション リンクを保持するのではなく、最も重要なページ リング、ポップアップ メニューなどを提供するブランド ヘッダーとナビゲーション バーを使用します。 しかし、ヘッダーとナビゲーション バーをすべてのページで確実に同じにするために、各ページ テンプレートで同じコードを繰り返したくはありません。 代わりに、すべてのページの共通部分を 1 つの場所に定義します。
 
@@ -288,4 +290,4 @@ Flask のテンプレート システム (既定では Jinja) では、複数の
 - [Azure App Service への Web アプリの展開](publishing-python-web-applications-to-azure-from-visual-studio.md)
 - 制御フローなど、Jinja テンプレートの他の機能については、[Jinja Template Designer のドキュメント](http://jinja.pocoo.org/docs/2.10/templates) (jinja.pocoo.org) をご覧ください
 - `url_for` の使用方法について詳しくは、Flask アプリケーション オブジェクトのドキュメント (flask.pocoo.org) で [url_for](http://flask.pocoo.org/docs/1.0/api/?highlight=url_for#flask.url_for) をご覧ください
-- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)
+- GitHub のチュートリアルのソース コード:[Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)

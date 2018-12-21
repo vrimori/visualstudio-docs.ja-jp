@@ -1,5 +1,5 @@
 ---
-title: '方法: Visual Studio でロード テスト結果をリポジトリから削除する'
+title: 方法:ロード テスト結果をリポジトリから削除する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: b76e9b79e32ce8c7adf3fb9082e21f25406f7a28
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: e2a7df778ff506c76513af6e6fe926a193f6a18e
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895419"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065275"
 ---
-# <a name="how-to-delete-load-test-results-from-a-repository"></a>方法: ロード テスト結果をリポジトリから削除する
+# <a name="how-to-delete-load-test-results-from-a-repository"></a>方法:ロード テスト結果をリポジトリから削除する
 
 ロード テストを実行すると、実行中に収集された情報がロード テストの結果リポジトリに保存されます。 ロード テストの結果リポジトリには、パフォーマンス カウンター データとエラー情報が含まれています。 詳細については、「[ロード テストの結果リポジトリ内のロード テスト結果の管理](../test/manage-load-test-results-in-the-load-test-results-repository.md)」を参照してください。
 

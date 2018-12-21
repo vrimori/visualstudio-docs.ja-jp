@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テスト結果の概要
+title: ロード テスト結果の概要
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,16 +16,16 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ae70422ce3c88a3de6842f3f0946666b86ae559e
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 3f5187aabeb0c8e2ef81b0c6b6883b96590d7005
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895016"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062610"
 ---
 # <a name="load-test-results-summary-overview"></a>ロード テスト結果の概要
 
-ロード テストを実行した後、ロード テストの概要を表示して直ちにテスト結果を把握できます。 ロード テストの概要には、主要な結果がわかりやすい形式で簡潔にまとめられています。 ロード テストの概要を印刷することもできます。 これによって利害関係者に結果を伝えるのが容易になります。 前に実行したロード テストからロード テスト結果を開くと、ロード テストの概要が既定のビューになります。 詳細については、「[方法 : ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)」を参照してください。
+ロード テストを実行した後、ロード テストの概要を表示して直ちにテスト結果を把握できます。 ロード テストの概要には、主要な結果がわかりやすい形式で簡潔にまとめられています。 ロード テストの概要を印刷することもできます。 これによって利害関係者に結果を伝えるのが容易になります。 前に実行したロード テストからロード テスト結果を開くと、ロード テストの概要が既定のビューになります。 詳細については、「[方法 :ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)」を参照してください。
 
 ![概要ビュー](../test/media/ltest_summaryview.png)
 
@@ -39,11 +39,11 @@ ms.locfileid: "52895016"
 
 - 全体の結果
 
-- 基本統計: 低速ページ トップ 5
+- 基本統計:低速ページ トップ 5
 
-- 基本統計: 低速テスト トップ 5
+- 基本統計:低速テスト トップ 5
 
-- 基本統計: 低速 SQL 操作 トップ 5
+- 基本統計:低速 SQL 操作トップ 5
 
     > [!NOTE]
     > SQL 操作のセクションは、ロード テストで SQL トレースを有効にした場合のみ表示されます。
@@ -70,19 +70,19 @@ ms.locfileid: "52895016"
 
 このセクションには、1 秒あたりの要求数、失敗した要求の総数、平均応答時間、平均ページ時間など、テスト結果の概要が表示されます。
 
-## <a name="key-statistic-top-5-slowest-pages"></a>基本統計: 低速ページ トップ 5
+## <a name="key-statistic-top-5-slowest-pages"></a>基本統計:低速ページ トップ 5
 
-このセクションには、ロード テストで表示速度が遅かったページ上位 5 件が表示されます。 各ページについて、URL と平均ページ読み込み時間が表示されます。 ページは降順に一覧されます。 ページの URL を選択すると、**[ページ]** テーブルが表示され、そのページの詳細を調べることができます。 詳細については、[Web ページ応答を表示する方法](../test/how-to-view-web-page-response-time-in-a-load-test.md)に関するページを参照してください。
+このセクションには、ロード テストで表示速度が遅かったページ上位 5 件が表示されます。 各ページについて、URL と平均ページ読み込み時間が表示されます。 ページは降順に一覧されます。 ページの URL を選択すると、**[ページ]** テーブルが表示され、そのページの詳細を調べることができます。 詳細については、「[方法 :Web ページ応答を表示する](../test/how-to-view-web-page-response-time-in-a-load-test.md)」を参照してください。
 
 **95% ページ時間 (秒)** のパーセンタイル値は、ページの 95% が完了している時間を秒で示します。
 
-## <a name="key-statistic-top-5-slowest-tests"></a>基本統計: 低速テスト トップ 5
+## <a name="key-statistic-top-5-slowest-tests"></a>基本統計:低速テスト トップ 5
 
 このセクションには、ロード テストで実行速度が遅かったテスト上位 5 件が表示されます。 各テストについて、テスト名と平均テスト時間が表示されます。 テストは降順に一覧されます。 テストの名前を選択すると、**[テスト]** テーブルが表示され、そのテストの詳細を調べることができます。 詳細については、[テーブル ビューでのロード テスト結果とエラーの分析](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)に関するページを参照してください。
 
 **95% テスト時間 (秒)** のパーセンタイル値は、テストの 95% が完了している時間を秒で示します。
 
-## <a name="key-statistic-top-5-slowest-sql-operations"></a>基本統計: 低速 SQL 操作トップ 5
+## <a name="key-statistic-top-5-slowest-sql-operations"></a>基本統計:低速 SQL 操作トップ 5
 
 ロード テストで SQL トレースを有効にした場合は、このセクションにロード テストで処理速度が遅かったクエリ上位 5 件が表示されます。 各テストについて、操作の名前と実行時間が表示されます。 期間はマイクロ秒 (SQL Server 2005) またはミリ秒 (SQL Server 2000 以前のバージョン) で表示されます。 テストは期間別に降順に一覧表示されます。 操作の名前を選択すると、**[SQL トレース]** テーブルが表示され、その操作の詳細を調べることができます。 詳細については、「[[SQL トレース データ] テーブル](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-sql-trace-data-table)」を参照してください。
 
@@ -95,7 +95,7 @@ ms.locfileid: "52895016"
 
 ## <a name="page-results"></a>ページ結果
 
-このセクションには、ロード テストに含まれる Web ページの一覧があります。 URL、シナリオ、テストの名前、平均ページ時間、およびカウントが表示されます。 ページの URL を選択すると、**[ページ]** テーブルが表示され、そのページの詳細を調べることができます。 詳細については、[Web ページ応答を表示する方法](../test/how-to-view-web-page-response-time-in-a-load-test.md)に関するページを参照してください。
+このセクションには、ロード テストに含まれる Web ページの一覧があります。 URL、シナリオ、テストの名前、平均ページ時間、およびカウントが表示されます。 ページの URL を選択すると、**[ページ]** テーブルが表示され、そのページの詳細を調べることができます。 詳細については、「[方法 :Web ページ応答を表示する](../test/how-to-view-web-page-response-time-in-a-load-test.md)」を参照してください。
 
 > [!NOTE]
 > このセクションは、セクション タイトルの左側の矢印を選択して折りたたんだり展開したりできます。

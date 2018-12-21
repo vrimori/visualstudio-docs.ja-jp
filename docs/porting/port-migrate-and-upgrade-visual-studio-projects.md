@@ -19,12 +19,12 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: 0c082540632be14f7ddce94cb64ef41f03b1e1f7
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: a8161fd7534554da0ad45b3aa2b985a68dd9e49d
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51349544"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067062"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio-2017"></a>Visual Studio 2017 のプロジェクトの移行とアップグレードのリファレンス
 
@@ -62,10 +62,10 @@ ms.locfileid: "51349544"
 | SharePoint 2010 | SharePoint ソリューション プロジェクトを Visual Studio 2017 で開くと、SharePoint 2013 または SharePoint 2016 にアップグレードされます。 アップグレードのためには、".NET デスクトップ開発" ワークロードを Visual Studio 2017 にインストールする必要があります。<br/><br/>SharePoint プロジェクトのアップグレード方法について詳しくは、「[SharePoint 2013 へのアップグレード](https://technet.microsoft.com/library/cc303420.aspx)」、「[SharePoint Server 2013 でワークフローを更新する](https://technet.microsoft.com/library/dn133867.aspx)」、および「[データベース接続アップグレード用の SharePoint Server 2016 ファームを作成する](https://technet.microsoft.com/library/cc263026(v=office.16).aspx)」をご覧ください。 |
 | SharePoint 2016 | Office Developer Tools Preview 2 で作成された SharePoint アドイン プロジェクトを Visual Studio 2017 で開くことはできません。 この制限を回避するには、csproj vbproj ファイルで、`MinimumVisualStudioVersion` を 12.0 に、`MinimumOfficeToolsVersion` を 12.2 に更新する必要があります。 |
 | Silverlight | Silverlight プロジェクトは Visual Studio 2017 ではサポートされていません。 Silverlight アプリケーションを維持するには、引き続き Visual Studio 2015 を使用してください。 |
-| SQL Server Reporting Services および SQL Server Analysis Services (SSRS、SSDT、SSAS、MSAS) | これらのプロジェクトの種類は、Visual Studio ギャラリーの 2 つの拡張機能である [Microsoft Analysis Services Modeling Projects](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) と [Microsoft Reporting Services Projects](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio) でサポートされています。 Visual Studio 2017 のデータの保存と処理のワークロードには SSDT のサポートも含まれます。 |
+| SQL Server Reporting Services および SQL Server Analysis Services (SSRS、SSDT、SSAS、MSAS) | これらのプロジェクト タイプのサポートは、Visual Studio ギャラリーの次の 2 つの拡張機能を通じて提供されます。[Microsoft Analysis Services Modeling Projects](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) と [Microsoft Reporting Services Projects](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)。 Visual Studio 2017 のデータの保存と処理のワークロードには SSDT のサポートも含まれます。 |
 | SQL Server Integration Services (SSIS) | Visual Studio 2017 のサポートは、SQL Server Data Tools (SSDT) から使用できます。 詳細については、[SQL Server Integration Services のブログ](https://blogs.msdn.microsoft.com/ssis/2017/08/23/ssis-designer-is-now-available-for-visual-studio-2017/)をご覧ください。 |
 | Visual C++ | Visual Studio 2017 を使用して、Visual Studio 2010 以降の Visual Studio で作成されたプロジェクトを操作できます。 プロジェクトを初めて開いたときに、最新のコンパイラとツールセットにアップグレードするか、元のプロジェクトを引き続き使用するかを選択できます。 元のプロジェクトを引き続き使用することを選択した場合、Visual Studio 2017 はプロジェクト ファイルを変更せず、以前の Visual Studio のインストールのツールセットを使用してプロジェクトをビルドします。 元のオプションを維持すると、必要に応じて、Visual Studio の元のバージョンでプロジェクトを開くことができます。 詳細については、「[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](/cpp/porting/use-native-multi-targeting)」を参照してください。 |
-| Visual Studio 拡張性/VSIX | MinimumVersion 14.0 以前のプロジェクトは、MinimumVersion 15.0 を宣言するように更新されます。この宣言により、前のバージョンの Visual Studio でプロジェクトを開けなくなります。 前のバージョンでプロジェクトを開くには、MinimumVersion を `$(VisualStudioVersion)` に設定します。 「[How to: Migrate Extensibility Projects to Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)」 (方法: 機能拡張プロジェクトの Visual Studio 2017 への移行) も参照してください。 |
+| Visual Studio 拡張性/VSIX | MinimumVersion 14.0 以前のプロジェクトは、MinimumVersion 15.0 を宣言するように更新されます。この宣言により、前のバージョンの Visual Studio でプロジェクトを開けなくなります。 前のバージョンでプロジェクトを開くには、MinimumVersion を `$(VisualStudioVersion)` に設定します。 「[方法: 機能拡張プロジェクトの Visual Studio 2017 への移行](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)に関するページも参照してください。 |
 | Visual Studio Lab Management | Microsoft Test Manager または Visual Studio 2010 SP1 以降を利用し、これらのバージョンで差制された環境を開くことができます。 ただし、Visual Studio 2010 SP1 の場合、環境を作成するには、使用している Microsoft Test Manager のバージョンが Team Foundation Server のバージョンと一致する必要があります。 |
 | Visual Studio Tools for Apache Cordova | プロジェクトは Visual Studio 2017 で開くことができますが、下位互換性はありません。 Visual Studio 2015 からプロジェクトを開くと、プロジェクトを変更するように求められます。 この変更により、`taco.json` ファイルの代わりにツールセットを利用し、Cordova ライブラリのバージョン、そのプラットフォームとプラグイン、そのノード/npm 依存関係を管理するようにプロジェクトがアップグレードされます。 詳細については、[移行ガイド](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/first-steps/migrate-from-visual-studio-2015)を参照してください。 |
 | Web 配置 (wdproj) | 発行プロファイルのサポートが追加されたことで、Visual Studio 2012 では Web 配置プロジェクトのサポートが削除されました。 Visual Studio 2017 には等価なものがないため、そのようなプロジェクトの自動移行パスはありません。 そこで、[StackOverflow](https://stackoverflow.com/a/12061065/1203388) に説明されているように、テキスト エディターで wdproj ファイルを開き、pubxml (発行プロファイル) ファイルに任意のカスタマイズをコピーおよび貼り付けます。 [Web サイトおよび Web 配置プロジェクトに関する計画](https://blogs.msdn.microsoft.com/webdev/2012/08/06/plans-regarding-website-projects-and-web-deployment-projects/)に関するページも参照してください。 |
@@ -95,7 +95,13 @@ Visual Studio の各新規バージョンでは、一般に、バージョンが
 
 このコンテキストでの必然的な疑問は、新しい `ToolsVersion` 値にプロジェクトを手動で更新または移行する必要があるかどうかということです。 そのような変更は不要であり、行うと、修正するにはプロジェクトの再ビルドが必要な多くのエラーと警告が発生する可能性があります。 さらに、将来 Visual Studio が特定の `ToolsVersion` をサポートしなくなった場合、プロジェクトを開くと、`ToolsVersion` の値を変更する必要があるため、プロジェクト移行プロセスが開始されます。 そのような場合、その特定のプロジェクトの種類のサブシステムは、変更が必要なものを正確に知っており、この記事で前述したように自動的にこれらの変更を行うことができます。
 
+# <a name="next-steps"></a>次の手順
+
 詳しくは、次の記事をご覧ください。
 
 - [ToolsVersion ガイダンス](../msbuild/msbuild-toolset-toolsversion.md)
 - [フレームワーク対象設定機能ガイダンス](../ide/visual-studio-multi-targeting-overview.md)
+
+## <a name="see-also"></a>関連項目
+
+[Visual Studio 2019 Preview のプロジェクトの移行とアップグレードのリファレンス](port-migrate-upgrade-visual-studio-projects-2019.md)

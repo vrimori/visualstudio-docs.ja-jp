@@ -1,5 +1,5 @@
 ---
-title: Microsoft Excel を使用して Visual Studio ロード テスト パフォーマンス レポートを作成する
+title: Microsoft Excel を使用してロード テスト パフォーマンス レポートを作成する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 7eda8336c45d0e0d90441ce918845d111976aaf4
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 5f276702aef4bf062d7da3e921965e674d5ec738
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52896563"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064997"
 ---
-# <a name="how-to-create-load-test-performance-reports-using-microsoft-excel"></a>方法: Microsoft Excel を使用してロード テスト パフォーマンス レポートを作成する
+# <a name="how-to-create-load-test-performance-reports-using-microsoft-excel"></a>方法:Microsoft Excel を使用してロード テスト パフォーマンス レポートを作成する
 
 複数のテスト結果に基づいて、Microsoft Excel のロード テスト レポートを生成することができます。
 
@@ -31,7 +31,7 @@ ms.locfileid: "52896563"
 -   **傾向** 複数のロード テストの結果に基づく傾向分析を生成できます。 結果は折れ線グラフで表示されますが、データをピボットテーブルで表示することもできます。
 
 > [!TIP]
-> また、概要ビュー、グラフ ビュー、およびテーブル ビューのデータをコピー アンド ペーストすることにより、Microsoft Word レポートを手動で作成できます。 「[方法: Microsoft Word を使用してロード テスト パフォーマンス レポートを手動で作成する](../test/how-to-manually-create-a-load-test-performance-report-using-microsoft-word.md)」を参照してください。
+> また、概要ビュー、グラフ ビュー、およびテーブル ビューのデータをコピー アンド ペーストすることにより、Microsoft Word レポートを手動で作成できます。 「[方法:Microsoft Word を使用してロード テスト パフォーマンス レポートを手動で作成する](../test/how-to-manually-create-a-load-test-performance-report-using-microsoft-word.md)」を参照してください。
 
 どちらのレポートも、関係者とパフォーマンス データを共有し、システム全体のパフォーマンスおよび正常性が改善しているか悪化しているかを伝えるために使用できます。
 

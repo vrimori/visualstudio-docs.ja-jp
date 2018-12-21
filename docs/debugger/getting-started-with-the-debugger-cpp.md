@@ -1,6 +1,6 @@
 ---
 title: Visual Studio デバッガーを使用した C++ のデバッグについて理解する
-ms.description: Learn how to start the Visual Studio debugger, step through code, and inspect data.
+description: Visual Studio デバッガーを起動し、コードをステップ実行し、データを検査する方法について説明します。
 ms.custom: debug-experiment
 ms.date: 08/01/2018
 ms.technology: vs-ide-debug
@@ -15,14 +15,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 56ef97401a87f39e9c3bfd3138ee3a26646064c6
-ms.sourcegitcommit: d7f232a7596420e40ff8051d42cdf90203af4a74
+ms.openlocfilehash: f3578955d72dcb223baeb022a199fb274c0cc659
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52825954"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065249"
 ---
-# <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>チュートリアル: Visual Studio を使用した C++ のデバッグについて理解する
+# <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>チュートリアル:Visual Studio を使用した C++ のデバッグについて理解する
 
 この記事では、ステップ バイ ステップのチュートリアルで Visual Studio デバッガーの機能を紹介します。 デバッガー機能の概要を確認したい場合は、[デバッガー機能のツアー](../debugger/debugger-feature-tour.md)に関するページを参照してください。 "*ご自分のアプリをデバッグする*" 場合、通常、それはデバッガーをアタッチした状態でご自分のアプリケーションを実行することを意味します。 これを行う場合、デバッガーには、ご自分のコードが実行されている間にそのコードによって何が行われているのかを確認するためのさまざまな方法が用意されています。 ご自分のコードをステップ実行して変数内に格納されている値を確認したり、変数に対してウォッチ式を設定して値が変わるタイミングを確認したり、コードの実行パスを調べたり、コードの分岐が実行されているかどうかを確認したりできます。 コードのデバッグを試みるのが今回初めてである場合は、この記事を先に進む前に[超初心者向けのデバッグ方法](../debugger/debugging-absolute-beginners.md)に関するページを参照することをお勧めします。
 
@@ -313,7 +313,7 @@ ms.locfileid: "52825954"
 
     コード行をダブルクリックすることで、ソース コードに移動できます。また、それによって、デバッガーで検査されている現在のスコープを変更することもできます。 このアクションを行っても、デバッガーは前に進みません。
 
-    **[呼び出し履歴]** ウィンドウから右クリック メニューを使用して他の操作を行うこともできます。 たとえば、指定した関数にブレークポイントを挿入したり、**[カーソル行の前まで実行]** を使用してデバッガーを進めたり、ソース コードの調査を開始したりできます。 詳細については、[呼び出し履歴を調べる方法](../debugger/how-to-use-the-call-stack-window.md)に関するページを参照してください。
+    **[呼び出し履歴]** ウィンドウから右クリック メニューを使用して他の操作を行うこともできます。 たとえば、指定した関数にブレークポイントを挿入したり、**[カーソル行の前まで実行]** を使用してデバッガーを進めたり、ソース コードの調査を開始したりできます。 詳細については、「[方法 :呼び出し履歴を調べる](../debugger/how-to-use-the-call-stack-window.md)」を参照してください。
 
 ## <a name="change-the-execution-flow"></a>実行フローを変更する
 

@@ -1,7 +1,8 @@
 ---
-title: Visual Studio 2017 の削除 | Microsoft Docs
+title: Visual Studio の削除
+titleSuffix: ''
 description: コンピューターから Visual Studio を完全に削除する詳細な手順を説明します。
-ms.custom: ''
+ms.custom: seodec18
 ms.date: 09/12/2017
 ms.technology: vs-acquisition
 ms.prod: visual-studio-dev15
@@ -21,14 +22,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e72482dce3df2ceaa5d5131838ce08b13a05cd90
-ms.sourcegitcommit: c5e72875206b8c5737c29d5b1ec7b86eec747303
+ms.openlocfilehash: fb3f86c59f205137dc3b72c8f0beff69f4d95a99
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382767"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159660"
 ---
-# <a name="remove-visual-studio"></a>Visual Studio の削除
+# <a name="remove-visual-studio-2017"></a>Visual Studio 2017 の削除
 
 致命的なエラーが発生して Visual Studio の修復またはアンインストールができない場合は、`InstallCleanup.exe` ツールを実行して Visual Studio 2017 以降のすべてのインストール済みインスタンスのインストール ファイルと製品情報を削除することができます。 このツールの実行は修復またはアンインストールに失敗した場合の最終手段として行ってください。その他の Visual Studio のインストールやその他の製品の機能がアンインストールされ、後で修復が必要になる場合があります。
 

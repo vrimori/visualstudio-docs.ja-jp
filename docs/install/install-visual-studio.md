@@ -1,7 +1,8 @@
 ---
-title: Visual Studio 2017 のインストール | Microsoft Docs
+title: Visual Studio のインストール
+titleSuffix: ''
 description: Visual Studio をインストールする方法について、ステップ バイ ステップで説明します。
-ms.custom: ''
+ms.custom: seodec18
 ms.date: 05/07/2018
 ms.technology: vs-acquisition
 ms.prod: visual-studio-dev15
@@ -19,12 +20,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c3ba26f014b09624b1a8fec88bed8a5aefa632b
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: 9160a5ebca6efe2cca48a2b8832a51fab3c6ca5a
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51349691"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159738"
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 のインストール
 
@@ -125,7 +126,7 @@ Visual Studio のインストールをカスタマイズする際にワークロ
 
 ## <a name="step-7---change-the-installation-location-optional"></a>手順 7 - インストール場所の変更 (省略可能)
 
-**15.7 の新機能**: システム ドライブ上の Visual Studio のインストール フットプリントを小さくできるようになりました。 ダウンロード キャッシュ、共有コンポーネント、SDK、およびツールを別のドライブに移動して、Visual Studio を最速で実行できるドライブで維持できます。
+**15.7 の新機能**:システム ドライブ上の Visual Studio のインストール占有領域を小さくできるようになりました。 ダウンロード キャッシュ、共有コンポーネント、SDK、およびツールを別のドライブに移動して、Visual Studio を最速で実行できるドライブで維持できます。
 
   ![Visual Studio 2017 - インストール場所を変更する](media/installation-options-by-location.png "インストール場所を変更する")
 

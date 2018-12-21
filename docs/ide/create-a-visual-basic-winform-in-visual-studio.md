@@ -1,7 +1,6 @@
 ---
-title: Visual Studio で Visual Basic を使用して Windows フォーム アプリを作成する
+title: Visual Basic を使用して Windows フォーム アプリを作成する
 description: Visual Studio で Visual Basic を使用して Windows フォーム アプリを作成する方法の詳細な手順を説明します。
-ms.custom: ''
 ms.date: 12/04/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
@@ -14,12 +13,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 0468a3ee546659d8079d98f49b196819c44afbd1
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 81b44e7053b820e625b5ad61d6e537c95cbf9c03
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39381661"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159634"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>Visual Studio で Visual Basic を使用して Windows フォーム アプリを作成する
 
@@ -104,5 +103,5 @@ Visual Basic プロジェクト テンプレートを選択し、ファイルに
 
 ## <a name="see-also"></a>関連項目
 
-* [クイックスタート: Visual Studio で Visual Basic を使用してコンソール アプリを作成する](quickstart-visual-basic-console.md)
+* [クイック スタート:Visual Studio で Visual Basic を使用してコンソール アプリを作成する](quickstart-visual-basic-console.md)
 * [Visual Basic IntelliSense について](visual-basic-specific-intellisense.md)

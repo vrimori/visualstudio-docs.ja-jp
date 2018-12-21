@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テスト プラグインを作成する
+title: ロード テスト プラグインを作成する
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,19 +14,19 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ce3e85965aa8823aa12102fff41401cf24eef6a7
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: c106eeda8ad3fd1f9293d6f7c3c7df1a8b48767b
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52896732"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064719"
 ---
-# <a name="how-to-create-a-load-test-plug-in"></a>方法: ロード テスト プラグインを作成する
+# <a name="how-to-create-a-load-test-plug-in"></a>方法:ロード テスト プラグインを作成する
 
 ロード テスト プラグインを作成すると、ロード テストを実行するときに、さまざまな時間にコードを実行できます。 プラグインを作成して、ロード テストの組み込みの機能を拡張または変更します。 たとえば、ロード テスト プラグインのコードを作成して、ロード テストの実行中にロード テストのパターンを設定または変更できます。 これを行うには、<xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin> インターフェイスを継承するクラスを作成する必要があります。 このクラスは、このインターフェイスの <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin.Initialize*> メソッドを実装する必要があります。 詳細については、「<xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin>」を参照してください。
 
 > [!NOTE]
-> Web パフォーマンス テスト用のプラグインを作成することもできます。 詳細については、「[方法: Web パフォーマンス テスト プラグインを作成する](../test/how-to-create-a-web-performance-test-plug-in.md)」を参照してください。
+> Web パフォーマンス テスト用のプラグインを作成することもできます。 詳細については、「[方法 :Web パフォーマンス テスト プラグインを作成する](../test/how-to-create-a-web-performance-test-plug-in.md)
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "52896732"
 
 2.  ロード テストをテスト プロジェクトに追加して、Web パフォーマンス テストを実行するように構成します。
 
-     ロード テストを作成する方法の詳細については、「[Quickstart: Create a load test project](../test/quickstart-create-a-load-test-project.md)」(クイックスタート: ロード テスト プロジェクトを作成する) を参照してください。
+     詳細については、「[クイック スタート:ロード テスト プロジェクトを作成する](../test/quickstart-create-a-load-test-project.md)」を参照してください。
 
 3.  **ソリューション エクスプローラー**で、ソリューションを右クリックし、**[追加]** を選択して、**[新しいプロジェクト]** を選択します。
 
@@ -94,7 +94,7 @@ ms.locfileid: "52896732"
     > [!WARNING]
     > プラグインを使用する Web パフォーマンス テストまたはロード テストを実行すると、次のようなエラー メッセージが表示されることがあります。
     >
-    > **要求に失敗しました: \<plug-in> イベントの例外: ファイルまたはアセンブリ '\<"Plug-in name".dll file>, Version=\<n.n.n.n>, Culture=neutral, PublicKeyToken=null' またはその依存関係の 1 つが読み込めませんでした。指定されたファイルが見つかりません。**
+    > **要求に失敗しました:\<plug-in> イベントの例外:ファイルまたはアセンブリ '\<"Plug-in name".dll file>, Version=\<n.n.n.n>, Culture=neutral, PublicKeyToken=null' またはその依存関係の 1 つが読み込めませんでした。指定されたファイルが見つかりません。**
     >
     > この問題が発生するのは、いずれかのプラグインのコードを変更して、新しい DLL バージョン **(Version=0.0.0.0)** を作成したのに、プラグインが元のプラグイン バージョンを参照したままになっている場合です。 この問題を解決するには、次の手順を実行します。
     >

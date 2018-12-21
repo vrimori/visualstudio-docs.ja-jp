@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で Web パフォーマンス テストのレコーダー プラグインを作成する
+title: Web パフォーマンス テストのレコーダー プラグインを作成する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 6525327e85d40b9b942e4e29a7d759a15598c824
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 822c5cc1b657e6b5ada886ef7f10219a42df723a
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895835"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064628"
 ---
-# <a name="how-to-create-a-recorder-plug-in"></a>方法: レコーダー プラグインを作成する
+# <a name="how-to-create-a-recorder-plug-in"></a>方法:レコーダー プラグインを作成する
 
 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin> を使用すると、記録された Web パフォーマンス テストを変更できます。 変更は、**[Web パフォーマンス テスト レコーダー]** ツール バーの **[停止]** をクリックした後、テストが保存されて Web パフォーマンス テスト エディターで表示される前に行われます。
 
@@ -111,7 +111,7 @@ ms.locfileid: "52895835"
     > [!WARNING]
     > プラグインを使用する Web パフォーマンス テストまたはロード テストを実行すると、次のようなエラー メッセージが表示されることがあります。
     >
-    > **要求に失敗しました: \<plug-in> イベントの例外: ファイルまたはアセンブリ '\<"Plug-in name".dll file>, Version=\<n.n.n.n>, Culture=neutral, PublicKeyToken=null' またはその依存関係の 1 つが読み込めませんでした。指定されたファイルが見つかりません。**
+    > **要求に失敗しました:\<plug-in> イベントの例外:ファイルまたはアセンブリ '\<"Plug-in name".dll file>, Version=\<n.n.n.n>, Culture=neutral, PublicKeyToken=null' またはその依存関係の 1 つが読み込めませんでした。指定されたファイルが見つかりません。**
     >
     > この問題が発生するのは、いずれかのプラグインのコードを変更して、新しい DLL バージョン **(Version=0.0.0.0)** を作成したのに、プラグインが元のプラグイン バージョンを参照したままになっている場合です。 この問題を解決するには、次の手順を実行します。
     >

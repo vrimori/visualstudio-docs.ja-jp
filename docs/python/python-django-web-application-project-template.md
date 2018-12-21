@@ -1,6 +1,6 @@
 ---
 title: Python 用 Django Web プロジェクト テンプレート
-description: Django フレームワークを使って Python で書かれた Web アプリケーション用の Visual Studio テンプレートの概要です。
+description: Visual Studio では、Python で Django Web アプリケーションを短期間で作成するための包括的なテンプレートを提供します。
 ms.date: 11/12/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -8,15 +8,16 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1e00fd7df429b219589e1e49ddbc5ccadca5e032
-ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
+ms.openlocfilehash: c1aba68ad8cde6aebbc881e61937dc53037b58c5
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607433"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066523"
 ---
 # <a name="django-web-project-template"></a>Django Web プロジェクト テンプレート
 
@@ -50,19 +51,19 @@ Django 管理コンソールには、**[プロジェクト]** メニューのさ
 
 - **[Django シェルを開く]**: モデルを操作できるアプリケーション コンテキストでシェルを起動します。
 
-    ![コンソール](media/template-django-console-shell.png)
+    ![[Django シェルを開く] コマンドの結果](media/template-django-console-shell.png)
 
 - **[Django Sync DB]**: `manage.py syncdb` を**対話型**ウィンドウで実行します。
 
-    ![コンソール](media/template-django-console-sync-db.png)
+    ![[Django Sync DB] コマンドの結果](media/template-django-console-sync-db.png)
 
 - **[静的ファイルの収集]**: `manage.py collectstatic --noinput` を実行して、*settings.py* の `STATIC_ROOT` で指定されたパスにすべての統計ファイルをコピーします。
 
-    ![コンソール](media/template-django-console-collect-static.png)
+    ![[静的ファイルの収集] コマンドの結果](media/template-django-console-collect-static.png)
 
 - **[検証]**: *settings.py* の `INSTALLED_APPS` で指定されたインストール済みのモデルで検証エラーをレポートする `manage.py validate` を実行します。
 
-    ![コンソール](media/template-django-console-validate.png)
+    ![[検証] コマンドの結果](media/template-django-console-validate.png)
 
 ## <a name="see-also"></a>関連項目
 

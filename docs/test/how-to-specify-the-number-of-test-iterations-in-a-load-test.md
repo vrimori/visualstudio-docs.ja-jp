@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でテストの実行設定にテスト イテレーションの数を指定する
+title: ロード テストの実行設定にテスト イテレーションの数を指定する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,16 +11,16 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: bba6ddfa9162583d687f6638c9b75e178556132b
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: e250096a99cfc272cd23b58bf0f7b70eeb3a7c9d
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52894795"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059841"
 ---
-# <a name="how-to-specify-the-number-of-test-iterations-in-a-load-test-run-setting"></a>方法: ロード テストの実行設定にテスト イテレーションの数を指定する
+# <a name="how-to-specify-the-number-of-test-iterations-in-a-load-test-run-setting"></a>方法:ロード テストの実行設定にテスト イテレーションの数を指定する
 
-**新しいロード テスト** ウィザードでロード テストを作成した後で、**ロード テスト エディター**を使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。 詳細については、「[チュートリアル: ロード テストの作成および実行](../test/walkthrough-create-and-run-a-load-test.md)」を参照してください。
+**新しいロード テスト** ウィザードでロード テストを作成した後で、**ロード テスト エディター**を使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。 詳細については、[ロード テストの作成および実行のチュートリアル](../test/walkthrough-create-and-run-a-load-test.md)を参照してください。
 
 **[プロパティ]** ウィンドウの実行設定値の **[テスト イテレーション]** プロパティを編集するには、**ロード テスト エディター**を使用します。 **[テスト イテレーション]** プロパティでは、**ロード テスト エディター**を使用して、ロード テストのあらゆるシナリオで実行するすべての Web パフォーマンス テストと単体テストのイテレーションの回数を指定します。
 

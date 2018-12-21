@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で型に合わせてファイル名を変更する
+title: 型に合わせてファイル名を変更する
 ms.date: 01/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8407e89d9e28c501358877df9c244175ca8155c8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: bfc1a88091fa30bceea15a3f8e1b78df5cc7a87c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49942323"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054788"
 ---
 # <a name="sync-a-type-to-a-filename-or-a-filename-to-a-type-refactoring"></a>型からファイル名への同期またはファイル名から型への同期リファクタリング
 
@@ -56,11 +56,11 @@ ms.locfileid: "49942323"
 
    型またはファイルの名前が変更されます。
 
-   - C#: 次の例では、ファイル **MyClass.cs** が型名と一致する **MyNewClass.cs** に名前を変更されました。
+   - C#: 次の例で、ファイル **MyClass.cs** は型名と一致する **MyNewClass.cs** に名前が変更されました。
 
        ![インラインの結果 C#](media/synctype-result-cs.png)
 
-   - Visual Basic: 次の例では、ファイル **Employee.vb** が型名と一致する **Person.vb** に名前を変更されました。
+   - Visual Basic: 次の例で、ファイル **Employee.vb** は型名と一致する **Person.vb** に名前が変更されました。
 
        ![インラインの結果 Visual Basic](media/synctype-result-vb.png)
 

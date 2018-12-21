@@ -1,5 +1,6 @@
 ---
-title: Visual Studio 2017 のワークロード ID とコンポーネント ID
+title: Visual Studio のワークロードとコンポーネント ID
+titleSuffix: ''
 description: ワークロード ID とコンポーネント ID を使用して、コマンドラインを使用して Visual Studio をインストールするか、VSIX マニフェストで依存関係として指定します。
 keywords: ''
 author: TerryGLee
@@ -13,16 +14,17 @@ helpviewer_keywords:
 - install Visual Studio, administrator guide
 ms.service: ''
 ms.technology: vs-acquisition
+ms.custom: seodec18
 ms.prod: visual-studio-dev15
 ms.assetid: 34e19ef1-abfb-44fd-aad2-33c5d7874482
 ms.workload:
 - multiple
-ms.openlocfilehash: 96332b767f2bc44561358880c392cb6d96db297b
-ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
+ms.openlocfilehash: 3b88d563ca5a3fa2114c6bff31cf01b2956e69a3
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607472"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159478"
 ---
 # <a name="visual-studio-2017-workload-and-component-ids"></a>Visual Studio 2017 のワークロード ID とコンポーネント ID
 
@@ -43,7 +45,7 @@ ms.locfileid: "51607472"
 | [Visual&nbsp;Studio Test&nbsp;Professional&nbsp;2017](workload-component-id-vs-test-professional.md) | Microsoft.VisualStudio.Product.TestProfessional | Visual Studio Test Professional 2017 |
 | [Visual&nbsp;Studio Feedback&nbsp;Client&nbsp;2017](workload-component-id-vs-feedback-client.md) | Microsoft.VisualStudio.Product.FeedbackClient | Visual Studio Feedback Client 2017 |
 
-これらの一覧を使用する方法について詳しくは、「[コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする](use-command-line-parameters-to-install-visual-studio.md)」および「[How to: Migrate Extensibility Projects to Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)」(機能拡張プロジェクトを Visual Studio 2017 に移行する方法) をご覧ください。
+これらの ID の使用方法の詳細については、「[Use Command-Line Parameters to Install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md)」(コマンドライン パラメーターを使用して Visual Studio 2017 をインストールする) ページと「[方法:機能拡張プロジェクトを Visual Studio 2017 に移行](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)」ページを参照してください。
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

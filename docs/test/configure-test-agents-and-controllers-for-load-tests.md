@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テストのためのテスト エージェントおよびテスト コントローラーの構成
+title: ロード テストのためのテスト エージェントおよびテスト コントローラーの構成
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 363aac5bc07b49670cb35f5f1080f7835e7c4701
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 1f33859522ff42fc85c31261527f17ea0f765199
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895640"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068018"
 ---
 # <a name="configure-test-agents-and-test-controllers-for-running-load-tests"></a>ロード テストを実行するためのテスト エージェントおよびテスト コントローラーの構成
 
@@ -39,21 +39,21 @@ Visual Studio では、物理または仮想マシンを使用して、アプリ
 
 - 追加テスト エージェントをテスト コントローラーに追加することで、負荷生成の規模を拡大できます。
 
-- クライアント、テスト コントローラー、およびテスト エージェント ソフトウェアを、同じコンピューターにも異なるコンピューターにもインストールできる柔軟性があります。 例:
+- クライアント、テスト コントローラー、およびテスト エージェント ソフトウェアを、同じコンピューターにも異なるコンピューターにもインストールできる柔軟性があります。 次に例を示します。
 
    **ローカル構成:**
 
-  - Machine1: Visual Studio、コントローラー エージェント
+  - Machine1:Visual Studio、コントローラー エージェント
 
     ![コントローラーおよびエージェントを使用したローカル コンピューター](./media/load-test-configa.png)
 
     **一般的なリモート構成:**
 
-  - Machine1 および Machine2: Visual Studio (複数のテスト担当者が同じコントローラーを使用可能)
+  - Machine1 および 2:Visual Studio (複数のテスト担当者が同じコントローラーを使用可能)。
 
-  - Machine3: コントローラー (エージェントもインストールされている場合あり)
+  - Machine3:コントローラー (エージェントもインストールされている場合あり)。
 
-  - Machine4-n: Machine3 のコントローラーに関連付けられているエージェント
+  - Machine4-n:Machine3 のコントローラーに関連付けられているエージェント。
 
     ![コントローラーおよびエージェントを使用したリモート コンピューター](./media/load-test-configb.png)
 

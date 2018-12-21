@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で一時変数をその値と置き換える
+title: 一時変数をその値と置き換える
 ms.date: 01/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: fb6fc6888e33b2cc0d210e9cb1e1aababe304f2a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a6fea50f3cceb907cb014d29bb46988ab07dad6c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49916765"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066864"
 ---
 # <a name="inline-a-temporary-variable-refactoring"></a>一時変数のインライン化リファクタリング
 
@@ -27,7 +27,7 @@ ms.locfileid: "49916765"
 
 - Visual Basic
 
-**機能:** 一時変数を削除し、代わりにその値に置換できます。
+**概要:** 一時変数を削除し、代わりにその値に置換できます。
 
 **条件:** 一時変数の使用により、コードの理解が困難になったとき。
 

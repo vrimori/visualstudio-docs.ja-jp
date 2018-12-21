@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で抽象クラスを実装する
+title: 抽象クラスの実装
 ms.date: 01/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4da74a60741ac33143efd7aecf0a4275185b6d3b
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: dfa2c6692ddcef9e41454bf902580f354c32f861
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51294697"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53047604"
 ---
 # <a name="implement-an-abstract-class-in-visual-studio"></a>Visual Studio で抽象クラスを実装する
 
@@ -28,7 +28,7 @@ ms.locfileid: "51294697"
 
 **条件:** 抽象クラスから継承したいとき。
 
-**理由:** すべての抽象メンバーは 1 つずつ 手動で実装できますが、この機能ではすべてのメソッド シグネチャが自動的に生成されます。
+**理由:** すべての抽象メンバーは 1 つずつ手動で実装できますが、この機能ではすべてのメソッド シグネチャが自動的に生成されます。
 
 ## <a name="how-to"></a>方法
 

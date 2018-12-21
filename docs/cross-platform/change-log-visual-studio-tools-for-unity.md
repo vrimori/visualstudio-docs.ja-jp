@@ -1,24 +1,60 @@
 ---
 title: 変更ログ (Visual Studio Tools for Unity、Windows) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/06/2018
+ms.date: 11/28/2018
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
-author: TerryGLee
-ms.author: tglee
+author: therealjohn
+ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: da2e91e15572a9904115926447523d8dba23a36a
-ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
+ms.openlocfilehash: 4db1d1d5340465b2e977a651eea2e6ad592c22e0
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51000727"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068381"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>変更ログ (Visual Studio Tools for Unity、Windows)
 Visual Studio Tools for Unity の変更ログです。
+
+## <a name="3903"></a>3.9.0.3
+ リリース日: 2018 年 11 月 28 日
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **統合:**
+
+    -   最初のプロジェクト内にあるスクリプトの追加または削除時の、プロジェクトの再読み込みと IntelliSense の問題が修正されました。
+
+## <a name="3902"></a>3.9.0.2
+ リリース日: 2018 年 11 月 19 日
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **デバッガー:**
+
+    -   Unity のデバッガー エンジンとの通信に使用されるライブラリでのデッドロックを修正しました。このバグによって、特に [Unity にアタッチ] を選択した場合やゲームを再起動したときに、Visual Studio または Unity がフリーズしていました。
+
+## <a name="3901"></a>3.9.0.1
+ リリース日: 2018 年 11 月 15 日
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **統合:**
+
+    -   別のデフォルト エディターが選択されたときの Unity プラグイン アクティベーションを修正しました。
+
+## <a name="3900"></a>3.9.0.0
+ リリース日: 2018 年 11 月 13 日
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **プロジェクトの生成:**
+
+    -   Unity により修正された Unity パフォーマンス バグの回避策がロールバックされました。
 
 ## <a name="3807"></a>3.8.0.7
  リリース日: 2018 年 9 月 20 日
@@ -27,7 +63,7 @@ Visual Studio Tools for Unity の変更ログです。
 
 -   **デバッガー:**
 
-    -   Unity のデバッガー エンジンとの通信に使用されるライブラリでのデッドロックを修正しました。このバグによって、特に [Unity にアタッチ] を選択した場合やゲームを再起動したときに、Visual Studio または Unity がフリーズしていました。
+    -   (以前のバージョン 3.9.0.2 からの移植) Unity のデバッガー エンジンとの通信に使用されるライブラリでのデッドロックを修正しました。このバグによって、特に [Unity にアタッチ] を選択した場合やゲームを再起動したときに、Visual Studio または Unity がフリーズしていました。
 
 ## <a name="3806"></a>3.8.0.6
  リリース日: 2018 年 8 月 27 日
@@ -71,7 +107,7 @@ Visual Studio Tools for Unity の変更ログです。
 
 -   **プロジェクトの生成:**
 
-    -   Unity により修正された Unity パフォーマンス バグの回避策がロールバックされました。
+    -   (以前のバージョン 3.9.0.0 からの移植) Unity により修正された Unity パフォーマンス バグの回避策がロールバックされました。
 
 ## <a name="3802"></a>3.8.0.2
  リリース日: 2018 年 7 月 7 日
@@ -634,7 +670,7 @@ Visual Studio Tools for Unity の変更ログです。
 
 -   Windows ストア アプリの UnityEngine アセンブリおよび UnityEditor のアセンブリへの参照を修正しました。
 
--   デバッガーでのステップ実行時のエラー (ステップを実行できない、一般例外) を修正しました。
+-   デバッガーでステップ実行するときの次のエラーを修正しました。Unable to step, general exception. (ステップ実行できません。一般例外です。)
 
 -   Visual Studio 2015 でのヒット カウント ブレークポイントを修正しました。
 
@@ -1105,21 +1141,21 @@ Visual Studio Tools for Unity の変更ログです。
 
 -   バグ「UVS-48: 二重引用符をタイプするとエラーが発生してすべての機能 (コード補完、構文の強調表示など) が中断されることがある」を修正しました。
 
--   バグ「UVS-46: Visual Studio のエラー一覧をクリックすると、スクリプト ファイル (UnityScript) が重複して開かれる」を修正しました。
+-   バグ「UVS-46:Visual Studio のエラー一覧をクリックすると、スクリプト ファイル (UnityScript) が重複して開かれる」を修正しました。
 
--   バグ「UVS-42: VS 2012 でステータス バーの Unity 接続のロゴがマウス イベントを処理しない」を修正しました。
+-   バグ「UVS-42:VS 2012 でステータス バーの Unity 接続のロゴがマウス イベントを処理しない」を修正しました。
 
--   バグ「UVS-44: VS 2012 でクイック MonoBehaviour の Ctrl+ Shift + Q を使用できない」を修正しました。
+-   バグ「UVS-44:VS 2012 でクイック MonoBehaviour の Ctrl+ Shift + Q を使用できない」を修正しました。
 
--   バグ「UVS-40: VS2012 の [ダーク] テーマで、ウィンドウがアクティブでないときに Unity プロジェクト エクスプローラーで選択したアイテムが読みにくい」を修正しました。
+-   バグ「UVS-40:VS2012 の [ダーク] テーマで、ウィンドウがアクティブでないときに Unity プロジェクト エクスプローラーで選択したアイテムが読みにくい」を修正しました。
 
--   バグ「UVS-39: エスケープされた文字列のトークン化の問題」を修正しました。
+-   バグ「UVS-39:エスケープされた文字列のトークン化の問題」を修正しました。
 
--   バグ「UVS-35: 変数を検査する際にオブジェクトに対して ToString が呼び出される」を修正しました。
+-   バグ「UVS-35:変数を検査する際にオブジェクトに対して ToString が呼び出される」を修正しました。
 
--   バグ「UVS-27: VS2012 で、シンボルへ移動ウィンドウが [ダーク] テーマと一致しない」を修正しました。
+-   バグ「UVS-27:VS2012 で、シンボルへ移動ウィンドウが [ダーク] テーマと一致しない」を修正しました。
 
--   バグ「UVS-11: コルーチンでのローカル」を修正しました。
+-   バグ「UVS-11:コルーチンでのローカル」を修正しました。
 
 ## <a name="1100---beta-release"></a>1.1.0.0 - ベータ リリース
  リリース日: 2013 年 3 月 9 日
@@ -1225,9 +1261,9 @@ Visual Studio Tools for Unity の変更ログです。
 
 -   式の評価のために読み込まれたアセンブリから型を検索する方法を修正しました。
 
--   バグ「UVS-21: Unity オブジェクトへの割り当てを評価しても効果が出ない」を修正しました。
+-   バグ「UVS-21:Unity オブジェクトへの割り当てを評価しても効果が出ない」を修正しました。
 
--   バグ「UVS-21: Unity Math API へのメソッドの呼び出しを評価すると、無効なポインターが発生する」を修正しました。
+-   バグ「UVS-21:Unity Math API へのメソッドの呼び出しを評価すると、無効なポインターが発生する」を修正しました。
 
 ## <a name="1080"></a>1.0.8.0
  リリース日: 2012 年 9 月 26 日

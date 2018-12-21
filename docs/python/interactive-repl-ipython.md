@@ -8,15 +8,16 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b5429ccc963923a049d54ad3fbaa409586c0f772
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 84e93d06e294ef11cc345eb4c443845421a8f834
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50219251"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067804"
 ---
 # <a name="use-ipython-in-the-interactive-window"></a>対話型ウィンドウで IPython を使用する
 
@@ -79,9 +80,9 @@ Visual Studio の IPython モードの**対話型**ウィンドウは、対話�
 
 8. **対話型**ウィンドウ以外にグラフを表示するには、**[デバッグ]** > **[デバッグなしで開始]** コマンドを使用してコードを実行します。
 
-IPython には、システム シェルのエスケープ、変数の代入、出力のキャプチャなどの便利な機能が多数あります。詳細については、[IPython のドキュメント](http://ipython.org/documentation.html)を参照してください。
+IPython には、システム シェルのエスケープ、変数の代入、出力のキャプチャなどの便利な機能が多数あります。詳細については、[IPython のドキュメント](https://ipython.org/documentation.html)を参照してください。
 
-### <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 - Jupyter をインストールせずに簡単に使用するには、無料の [Azure Notebooks ホスト サービス](https://notebooks.azure.com/)を試してください。ノートブックを保存し、他のユーザーと共有することができます。
 

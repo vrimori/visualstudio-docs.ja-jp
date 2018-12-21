@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で Web パフォーマンス テストにデータ ソースを追加する
+title: Web パフォーマンス テストへのデータ ソースの追加
 ms.date: 10/03/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 13d0f405b59b95df0edbcfc5e6f051c1f3140035
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 6d2ae95883884909641541e0efe6e4efbc7fe06a
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52896108"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065208"
 ---
 # <a name="add-a-data-source-to-a-web-performance-test"></a>Web パフォーマンス テストへのデータ ソースの追加
 
@@ -124,7 +124,7 @@ ms.locfileid: "52896108"
 
 ## <a name="q--a"></a>Q & A
 
-### <a name="q-what-databases-can-i-use-as-a-data-source"></a>Q: データ ソースとして使用できるのはどのようなデータベースですか。
+### <a name="q-what-databases-can-i-use-as-a-data-source"></a>Q:データ ソースとして使用できるのはどのようなデータベースですか。
 
 **A:** 次のデータベースを使用できます。
 
@@ -140,9 +140,9 @@ ms.locfileid: "52896108"
 
 - Oracle 7.3、8i、9i、10g
 
-### <a name="q-how-do-i-use-a-comma-separated-value-csv-text-file-as-a-data-source"></a>Q: コンマ区切り値 (CSV) テキスト ファイルをデータ ソースとして使用するにはどうすればよいですか。
+### <a name="q-how-do-i-use-a-comma-separated-value-csv-text-file-as-a-data-source"></a>Q:コンマ区切り値 (CSV) テキスト ファイルをデータ ソースとして使用するにはどうすればよいですか。
 
-**A:** 次の手順を実行します。
+**A:** 次の手順に従います。
 
 1. プロジェクトのデータベース成果物を整理するフォルダーを作成し、項目を追加します。
 
@@ -164,7 +164,7 @@ ms.locfileid: "52896108"
 
      ![名前を入力して CSV ファイルを選択する](../test/media/web_test_databinding_adddatasourcedialog.png)
 
-### <a name="q-what-if-my-existing-csv-file-does-not-contain-column-headers"></a>Q: 既存の CSV ファイルに列見出しが含まれていない場合は、どうすればよいですか。
+### <a name="q-what-if-my-existing-csv-file-does-not-contain-column-headers"></a>Q:既存の CSV ファイルに列見出しが含まれていない場合は、どうすればよいですか。
 
 **A:** 列見出しを追加できない場合は、スキーマ記述ファイルを使用して CSV ファイルをデータベースとして扱うことができます。
 
@@ -215,9 +215,9 @@ ms.locfileid: "52896108"
 
      ![テストに追加されたデータ ソース](../test/media/web_test_databinding_adddatasourcecolortext7.png)
 
-### <a name="q-how-do-i-use-an-xml-file-as-a-data-source"></a>Q: XML ファイルをデータ ソースとして使うにはどうすればよいですか。
+### <a name="q-how-do-i-use-an-xml-file-as-a-data-source"></a>Q:XML ファイルをデータ ソースとして使うにはどうすればよいですか。
 
-**A:** できます。
+**A:** はい。
 
 1. プロジェクトのデータベース成果物を整理するフォルダーを作成し、項目を追加します。
 
@@ -247,7 +247,7 @@ ms.locfileid: "52896108"
 
      ![名前を入力して XML ファイルを選択する](../test/media/web_test_databinding_adddatasourcedialogxml.png)
 
-### <a name="q-can-i-add-data-binding-to-a-web-service-request-that-uses-soap"></a>Q: SOAP を使用する Web サービス要求にデータ バインディングを追加できますか。
+### <a name="q-can-i-add-data-binding-to-a-web-service-request-that-uses-soap"></a>Q:SOAP を使用する Web サービス要求にデータ バインディングを追加できますか。
 
 **A:** はい。ただし SOAP XML を手動で変更する必要があります。
 

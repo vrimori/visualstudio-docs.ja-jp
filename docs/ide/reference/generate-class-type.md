@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でクラスまたは型を生成する
+title: クラスまたは型の生成
 ms.date: 01/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: f7b8733e6c2a1464b5ea9c07c9c9109064183a6c
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 4f7d722669ddf51715b21ddaf1f253fb0668dfaa
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51296282"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065475"
 ---
 # <a name="generate-a-class-or-type-in-visual-studio"></a>Visual Studio でクラスまたは型を生成する
 
@@ -29,7 +29,7 @@ ms.locfileid: "51296282"
 
 - Visual Basic
 
-**機能:** クラスまたは型のコードをすぐに生成できます。
+**概要:** クラスまたは型のコードをすぐに生成できます。
 
 **条件:** 新しいクラスまたは型を導入し、自動的に適切に宣言したいとき。
 

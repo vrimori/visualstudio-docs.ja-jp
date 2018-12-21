@@ -1,5 +1,5 @@
 ---
-title: '方法: Visual Studio でロード テストの実行設定のサンプル速度を指定する'
+title: '方法: ロード テストの実行設定のサンプル速度を指定する'
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: a672e5a61006ed9764497bd115ba2bd98f91f6cd
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: b022b4648931bf0e403df589d37cb086fb2a9c2c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52896784"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053050"
 ---
 # <a name="how-to-specify-the-sample-rate-for-a-load-test-run-setting"></a>方法: ロード テストの実行設定のサンプル速度を指定する
 
@@ -25,7 +25,7 @@ ms.locfileid: "52896784"
 
 **[プロパティ]** ウィンドウの実行設定の **[サンプル速度]** プロパティ値を編集するには、**ロード テスト エディター**を使用します。 実行設定の各プロパティとその説明の一覧については、「[ロード テストの実行設定のプロパティ](../test/load-test-run-settings-properties.md)」を参照してください。
 
-ロード テストの長さに基づいて、ロード テストの実行設定の **[サンプル速度]** プロパティに適切な値を選択します。 既定値 (5 秒) のようにサンプル速度が小さいと、ロード テスト結果のデータベースに必要な容量が増えます。 長いロード テストでは、サンプル速度を増加すると、収集するデータ量を減らすことができます。 詳細については、「[方法: ロード テストの実行設定のサンプル速度を指定する](../test/how-to-specify-the-sample-rate-for-a-load-test.md)」を参照してください。
+ロード テストの長さに基づいて、ロード テストの実行設定の **[サンプル速度]** プロパティに適切な値を選択します。 既定値 (5 秒) のようにサンプル速度が小さいと、ロード テスト結果のデータベースに必要な容量が増えます。 長いロード テストでは、サンプル速度を増加すると、収集するデータ量を減らすことができます。 詳細については、「[方法 :ロード テストの実行設定のサンプル速度を指定する](../test/how-to-specify-the-sample-rate-for-a-load-test.md)」を参照してください。
 
 以下は、サンプル速度のガイドラインです。
 

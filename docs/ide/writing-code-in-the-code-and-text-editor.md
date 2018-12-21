@@ -1,5 +1,5 @@
 ---
-title: Visual Studio のコード エディター機能
+title: コード エディターの機能
 ms.date: 02/23/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8be5d3692459c2c65d4243c831ef4de002828bb0
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: ca203b0c27906d1f861689953ca55280f73fa894
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51349076"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160115"
 ---
 # <a name="features-of-the-code-editor"></a>コード エディターの機能
 
@@ -60,8 +60,8 @@ Visual Studio では、言語によって異なる機能がサポートされて
 |選択した行でのタブ化解除|先頭のタブを空白に変換します。 ファイル内のすべての空白をタブに変換 (または、すべてのタブを空白に変換) する場合は、 `Edit.ConvertSpacesToTabs` 、 `Edit.ConvertTabsToSpaces` comm、s. これらのコマンドは、Visual Studio のメニューには表示されませんが、**クイック アクセス** ウィンドウまたはコマンド ウィンドウから呼び出すことができます。|
 |[大文字に変換]|選択範囲内のすべての文字を大文字に変更します。範囲が選択されていない場合は、カーソル位置の文字をまたは大文字に変更します。|
 |小文字に変換|選択範囲内のすべての文字を小文字に変更します。範囲が選択されていない場合は、カーソル位置の文字をまたは小文字に変更します。|
-|選択した行を上へ移動|選択した行を 1 行上に移動します。 ショートカット: **Alt** + **↑** キー。|
-|選択した行を下へ移動|選択した行を 1 行下に移動します。 ショートカット: **Alt** + **↓** キー。|
+|選択した行を上へ移動|選択した行を 1 行上に移動します。 ショートカット:**Alt**+**上方向キー**。|
+|選択した行を下へ移動|選択した行を 1 行下に移動します。 ショートカット:**Alt**+**下矢印**。|
 |左右スペースの削除|現在の行の末尾にあるタブまたは空白を削除します。|
 |スペースの表示|空白を中黒、タブを矢印として表示します。 ファイルの末尾は四角形の記号として表示されます。 **[ツール]** > **[オプション]** > **[テキスト エディター]** > **[すべての言語]** > **[右端での折り返し]** > **[右端の折り返しの記号を表示する]** が選択されている場合は、その記号も表示されます。|
 |[右端で折り返す]|ドキュメント内のすべての行が見えるように、コード ウィンドウ内に収めます。 [右端で折り返す] を無効にするには、**テキスト エディターの [すべての言語]** (**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[すべての言語]**) の設定を使用します。|
@@ -91,7 +91,7 @@ Visual Studio では、言語によって異なる機能がサポートされて
 ## <a name="see-also"></a>関連項目
 
 - [ソース エディター (Visual Studio for Mac)](/visualstudio/mac/source-editor)
-- [Visual Studio IDE](../ide/visual-studio-ide.md)
+- [Visual Studio IDE](../get-started/visual-studio-ide.md)
 - [Visual Studio での C++ の概要](../ide/getting-started-with-cpp-in-visual-studio.md)
 - [Visual Studio での C# および ASP.NET の概要](../ide/tutorial-csharp-aspnet-core.md)
 - [Visual Studio での Python の概要](../ide/quickstart-python.md)
