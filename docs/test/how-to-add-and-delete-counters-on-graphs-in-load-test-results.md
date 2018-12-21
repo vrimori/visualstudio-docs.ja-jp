@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テスト結果のグラフにカウンターを追加および削除する
+title: ロード テスト結果のグラフにカウンターを追加および削除する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 21fa28e9ff149bcf117e3bde5d553a2cf641c04a
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: c4cb68370a743381a13b88c8a5fdc7d61700cb17
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52896524"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049951"
 ---
 # <a name="how-to-add-and-delete-counters-on-graphs-in-load-test-results"></a>方法: ロード テスト結果のグラフにカウンターを追加および削除する
 
@@ -30,7 +30,7 @@ ms.locfileid: "52896524"
 
 **パフォーマンス カウンターのサンプリング間隔に関する考慮事項**
 
-ロード テストの長さに基づいて、ロード テストの実行設定の **[サンプル速度]** プロパティの値を選択します。 既定値 (5 秒) のようにサンプル速度が小さいと、ロード テスト結果のデータベースに必要な容量が増えます。 長いロード テストでは、サンプル速度を増加すると、収集するデータ量を減らすことができます。 詳細については、「[方法: サンプル速度を指定する](../test/how-to-specify-the-sample-rate-for-a-load-test.md)」をご覧ください。
+ロード テストの長さに基づいて、ロード テストの実行設定の **[サンプル速度]** プロパティの値を選択します。 既定値 (5 秒) のようにサンプル速度が小さいと、ロード テスト結果のデータベースに必要な容量が増えます。 長いロード テストでは、サンプル速度を増加すると、収集するデータ量を減らすことができます。 詳細については、「[方法 :サンプル速度を指定する](../test/how-to-specify-the-sample-rate-for-a-load-test.md)」を参照してください。
 
 以下は、サンプル速度のガイドラインです。
 
@@ -49,7 +49,7 @@ ms.locfileid: "52896524"
 
 ロード テストの結果リポジトリでタイミングの詳細データを格納するために必要なディスク容量が、長時間実行されるロード テストで特に大きくなります。 また、ロード テストの終わりにこのデータをロード テストの結果リポジトリに格納するのに時間がかかります。これは、ロード テストの実行が完了するまでデータがロード テスト エージェントに格納されるためです。 ロード テストが完了すると、データはリポジトリに格納されます。 既定では、**[タイミングの詳細ストレージ]** プロパティは有効になっています。 これがテスト環境で問題になる場合は、**[タイミングの詳細ストレージ]** を **[なし]** に設定します。
 
-詳細については、「[方法: [タイミングの詳細ストレージ] プロパティを指定する](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)」をご覧ください。
+詳細については、「[方法 :[タイミングの詳細ストレージ] プロパティを指定する](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)」を参照してください。
 
 ## <a name="to-display-a-particular-performance-counter-on-a-load-test-graph"></a>特定のパフォーマンス カウンターをロード テストのグラフに表示するには
 

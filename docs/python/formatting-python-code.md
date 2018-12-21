@@ -1,6 +1,6 @@
 ---
-title: Python コードの書式設定
-description: 間隔、ステートメント、折り返し、コメントなど、Visual Studio で Python コードの書式を自動的に再設定する方法について説明します。
+title: Python コードの書式を設定する
+description: Visual Studio では、間隔、ステートメント、折り返し、コメントなど、Python コードの書式を自動的に再設定できます。
 ms.date: 10/28/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -8,15 +8,16 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b0ce6b5db57b4f6140fb164391ebf5c07e623baf
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 452dc1104147e5b29dd38790cbfa726ad0de7b1f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50219550"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052194"
 ---
 # <a name="format-python-code"></a>Python コードの書式を設定する
 
@@ -29,7 +30,7 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 
 ![Visual Studio の Python の [書式設定] オプション](media/options-editor-formatting.png)
 
-[書式設定] オプションは、既定で [PEP 8 スタイル ガイド](http://www.python.org/dev/peps/pep-0008/)のスーパーセットと一致するように設定されています。 **[全般]** タブでは、どのような場合に書式設定を適用するかを指定します。この記事では、他の 3 つのタブについて説明します。
+[書式設定] オプションは、既定で [PEP 8 スタイル ガイド](https://www.python.org/dev/peps/pep-0008/)のスーパーセットと一致するように設定されています。 **[全般]** タブでは、どのような場合に書式設定を適用するかを指定します。この記事では、他の 3 つのタブについて説明します。
 
 [Visual Studio の Python のサポート](installing-python-support-in-visual-studio.md)で、**[編集]**  >  **[詳細設定]** メニューに [**[コメントを段落幅に合わせる]**](#fill-comment-paragraph-command) という便利なコマンドも追加されています。これについても後で説明します。
 

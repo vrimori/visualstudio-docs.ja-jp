@@ -1,5 +1,5 @@
 ---
-title: Visual Studio の既存のプロジェクトと項目テンプレートを更新する
+title: 既存のプロジェクト項目テンプレートの更新
 ms.date: 01/02/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -12,14 +12,14 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: ddc360e6146678730d1844e4762ac3f6112a97d3
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 52f24f76ff217b694a1e5d2b510d16b0911d2fda
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34572567"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061469"
 ---
-# <a name="how-to-update-existing-templates"></a>方法: 既存のテンプレートを更新する
+# <a name="how-to-update-existing-templates"></a>方法:既存のテンプレートを更新する
 
 テンプレートを作成し、複数のファイルを *.zip* ファイルに圧縮した後で、テンプレートを変更できます。 それには、テンプレートのファイルを手動で変更するか、テンプレートに基づいてプロジェクトから新しいテンプレートをエクスポートします。
 

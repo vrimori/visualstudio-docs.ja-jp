@@ -1,5 +1,6 @@
 ---
-title: チュートリアル - Visual Studio での Flask の詳細情報、手順 4
+title: Visual Studio での Flask 学習チュートリアル、手順 4、Web プロジェクト テンプレート
+titleSuffix: ''
 description: Visual Studio プロジェクトのコンテキストにおける Flask の基本のチュートリアルです。具体的には、Flask Web プロジェクトと Flask/Jade Web プロジェクト テンプレートの機能について取り上げます。
 ms.date: 09/04/2018
 ms.prod: visual-studio-dev15
@@ -8,19 +9,20 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6e9171b7f44a51380fd086798b4ab9c50fa98729
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: c072d1187abf463cc2f185946f7e238bb091a534
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43775959"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051702"
 ---
 # <a name="step-4-use-the-full-flask-web-project-template"></a>手順 4: 完全な Flask Web プロジェクト テンプレートを使用する
 
-**前の手順: [静的ファイルを提供し、ページを追加し、テンプレート継承を使用する](learn-flask-visual-studio-step-03-serve-static-files-add-pages.md)**
+**前の手順:[静的ファイルを提供し、ページを追加し、テンプレート継承を使用する](learn-flask-visual-studio-step-03-serve-static-files-add-pages.md)**
 
 Visual Studio の "空の Flask App プロジェクト" テンプレート上にアプリを構築して、Flask の基本を確認したので、"Flask Web プロジェクト" テンプレートで作成されるより完全なアプリを簡単に理解できるようになりました。
 
@@ -33,7 +35,7 @@ Visual Studio の "空の Flask App プロジェクト" テンプレート上に
 
 この記事は、"Flask/Jade Web プロジェクト" テンプレートにも該当します。このテンプレートからは、Jinja の代わりに Jade テンプレート エンジンを利用し、"Flask Web プロジェクト" のアプリと同じアプリが作られます。 この記事の終わりには追加詳細を記載しています。
 
-## <a name="step-4-1-create-a-project-from-the-template"></a>手順 4-1: テンプレートからプロジェクトを作成する
+## <a name="step-4-1-create-a-project-from-the-template"></a>手順 4-1:テンプレートからプロジェクトを作成する
 
 1. Visual Studio で、**ソリューション エクスプローラー**に移動し、本チュートリアルの前述の手順で作成した **LearningFlask** ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** の順に選択します。 (または、新しいソリューションを使用する場合は、代わりに **[ファイル]** > **[新規]** > **[プロジェクト]** の順に選択します)。
 
@@ -74,9 +76,9 @@ Visual Studio の "空の Flask App プロジェクト" テンプレート上に
   - *static* フォルダーには、*content* (CSS ファイル)、*fonts* (フォント ファイル)、*scripts* (JavaScript ファイル) という名前のサブフォルダーが含まれています。
   - *templates* フォルダーには、*layout.html* 基本テンプレートと共に、*layout.html* を拡張するページのための *about.html*、*contact.html*、*index.html* が含まれています。
 
-### <a name="question-is-it-possible-to-share-a-virtual-environment-between-visual-studio-projects"></a>質問: Visual Studio プロジェクト間で仮想環境を共有することは可能ですか。
+### <a name="question-is-it-possible-to-share-a-virtual-environment-between-visual-studio-projects"></a>質問:Visual Studio プロジェクト間で仮想環境を共有することは可能ですか。
 
-回答: はい。ただし、異なるプロジェクトは時間の経過と共に異なるパッケージを使用する傾向があるため、共有した仮想環境には、使用するすべてのプロジェクトに対応するすべてのパッケージを含む必要があることを認識したうえで、共有してください。
+回答:はい。ただし、異なるプロジェクトは時間の経過と共に異なるパッケージを使用する傾向があるため、共有した仮想環境には、使用するすべてのプロジェクトに対応するすべてのパッケージを含む必要があることを認識したうえで、共有してください。
 
 それでもやはり、既存の仮想環境を使用するには、次の手順を実行します。
 
@@ -84,7 +86,7 @@ Visual Studio の "空の Flask App プロジェクト" テンプレート上に
 1. **ソリューション エクスプローラー**で、**[Python 環境]** ノードを右クリックして、**[既存の仮想環境を追加する]** を選択します。
 1. 仮想環境を含むフォルダーに移動して選択し、 **[OK]** をクリックします。
 
-## <a name="step-4-2-understand-the-views-and-page-templates-created-by-the-project-template"></a>手順 4 2: プロジェクト テンプレートによって作成されたビューとページ テンプレートを理解する
+## <a name="step-4-2-understand-the-views-and-page-templates-created-by-the-project-template"></a>手順 4-2:プロジェクト テンプレートによって作成されたビューとページ テンプレートを理解する
 
 プロジェクトを実行したときに確認すると、アプリには、[ホーム]、[About]\(詳細\)、[連絡先] という 3 つのビューが含まれています。 これらのビューに対応するコードは、*FlaskWeb/views.py* フォルダーにあります。 テンプレートに値を与えるために、各ビューの関数はテンプレートのパスと引数の変数一覧を利用して `flask.render_template` を呼び出します。 たとえば、[バージョン情報] ページは `about` 関数によって処理されます (そのデコレーターによって URL ルーティングが与えられます)。
 
@@ -235,4 +237,4 @@ Jinja と Jade の構文をいろいろ試し、自分にとって何が最適�
 
 - [最初の Flask アプリの作成、パート 4 - フォームと汎用ビュー](https://docs.djangoproject.com/en/2.0/intro/tutorial04/) (docs.djangoproject.com)
 - [GitHub の Jade (ドキュメント)](https://github.com/liuliqiang/pyjade) (github.com)
-- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)
+- GitHub のチュートリアルのソース コード:[Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)

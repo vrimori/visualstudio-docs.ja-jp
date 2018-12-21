@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テストの仮想ユーザー アクティビティを分析する
+title: ロード テストの仮想ユーザー アクティビティを分析する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 6737a5b12b9205e5d6ed3ddde6de89e820d92fce
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 0cac452a7fa4799c986df0f182643ed1b94afbe6
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895237"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059523"
 ---
-# <a name="how-to-analyze-what-virtual-users-are-doing-during-a-load-test-using-the-virtual-user-activity-chart"></a>方法: 仮想ユーザー アクティビティ チャートを使用してロード テスト中に仮想ユーザーが行っている操作を分析する
+# <a name="how-to-analyze-what-virtual-users-are-doing-during-a-load-test-using-the-virtual-user-activity-chart"></a>方法:仮想ユーザー アクティビティ チャートを使用してロード テスト中に仮想ユーザーが行っている操作を分析する
 
 **仮想ユーザー アクティビティ チャート**を使用して、ロード テストに関連付けられた仮想ユーザー アクティビティを表示します。 チャートの各行は、個別の仮想ユーザーを表します。 **仮想ユーザー アクティビティ チャート**には、各仮想ユーザーがテスト中に実行した処理が詳しく表示されます。 ユーザー アクティビティのパターンおよびロード パターンを把握し、失敗したテストまたは時間のかかったテストを関連付け、他の仮想ユーザー アクティビティで要求を確認できます。 **仮想ユーザー アクティビティ チャート**は、ロード テストの実行が完了した後にのみ使用できます。
 

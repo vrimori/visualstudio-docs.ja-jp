@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テストに実行設定を追加する
+title: ロード テストへの実行設定の追加
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: e894bb0b53240795ad2bf7505ba081dbf479989d
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 439120b80350081e1770ccce619d51b92673feef
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52896615"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53048055"
 ---
 # <a name="how-to-add-additional-run-settings-to-a-load-test"></a>方法: ロード テストに追加の実行設定を追加する
 
@@ -47,7 +47,7 @@ ms.locfileid: "52896615"
     > [!NOTE]
     > 実行設定の各プロパティとその説明の一覧については、「[ロード テストの実行設定のプロパティ](../test/load-test-run-settings-properties.md)」を参照してください。
 
-     追加した実行設定をアクティブに設定すると、これを使用することができます。 詳細については、「[方法: ロード テストのアクティブな実行設定を選択する](../test/how-to-select-the-active-run-setting-for-a-load-test.md)」を参照してください。
+     追加した実行設定をアクティブに設定すると、これを使用することができます。 詳細については、「[方法 :ロード テストのアクティブな実行設定を選択する](../test/how-to-select-the-active-run-setting-for-a-load-test.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: C++ と Python の使用
+title: Python 用の C++ 拡張機能の記述
 description: 混合モードのデバッグなど、Visual Studio、CPython、PyBind11 を使用して Python 用の C++ 拡張機能を作成するチュートリアルです。
 ms.date: 11/19/2018
 ms.prod: visual-studio-dev15
@@ -8,15 +8,16 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 237d3dcbe3f6413d2a68f25af3ac6eb6357e3bf8
-ms.sourcegitcommit: f61ad0e8babec8810295f039e67629f4bdebeef0
+ms.openlocfilehash: 437cd7f926465b4a9c4986f0eeb4b30e53936895
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "52001309"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053478"
 ---
 # <a name="create-a-c-extension-for-python"></a>Python 用 C++ 拡張機能の作成
 
@@ -135,7 +136,7 @@ Python インタープリターの機能を拡張するため、およびオペ�
     > プロジェクトのプロパティに [C/C++] タブが表示されない場合は、C/C++ ソース ファイルとして識別されるファイルがプロジェクトに含まれないためです。 このような条件は、*.c* または *.cpp* 拡張子を付けずにソース ファイルを作成すると発生する可能性があります。 たとえば、前の [新しい項目] ダイアログで、つい `module.cpp` ではなく `module.coo` と入力してしまった場合、Visual Studio はファイルを作成しますが、ファイルの種類を "C/C++ コード" に設定しないので、C/C++ のプロパティ タブがアクティブになりません。このような識別の誤処理は、ファイル名を `.cpp` に変更しても解決しません。 ファイルの種類を正しく設定するには、**ソリューション エクスプローラー**でファイルを右クリックして **[プロパティ]** を選び、**[ファイルの種類]** を **[C/C++ コード]** に設定します。
 
     > [!Warning]
-    > デバッグ構成の場合でも **[C/C++]** > **[コード生成]** > **[ランタイム ライブラリ]** のオプションを常に **マルチスレッド DLL (/MD)** に設定します。これは、この設定がデバッグ以外の Python バイナリのビルドに使用されるためです。 **マルチスレッド デバッグ DLL (/MDd)** オプションを設定すると、**デバッグ**構成をビルドするときに、"**C1189: Py_LIMITED_API は Py_DEBUG、Py_TRACE_REFS、Py_REF_DEBUG と互換性がありません**" というエラーが表示されます。 さらに、ビルド エラーを避けるために `Py_LIMITED_API` を削除すると、モジュールをインポートしようとしたときに Python がクラッシュします (後で説明しますが、クラッシュは DLL の`PyModule_Create` の呼び出し内で発生し、出力メッセージは "**Fatal Python error: PyThreadState_Get: no current thread (Python 致命的エラー: PyThreadState_Get: 現在のスレッドがありません)**" です)。
+    > デバッグ構成の場合でも **[C/C++]** > **[コード生成]** > **[ランタイム ライブラリ]** のオプションを常に **マルチスレッド DLL (/MD)** に設定します。これは、この設定がデバッグ以外の Python バイナリのビルドに使用されるためです。 **マルチスレッド デバッグ DLL (/MDd)** オプションを設定する場合、**デバッグ**構成をビルドすると、エラー "**C1189:Py_LIMITED_API は、Py_DEBUG、Py_TRACE_REFS、Py_REF_DEBUG に対応していません**" が生成されます。 さらに、ビルド エラーを避けるために `Py_LIMITED_API` を削除すると、モジュールをインポートしようとしたときに Python がクラッシュします (後で説明しますが、クラッシュは DLL の `PyModule_Create` の呼び出し内で発生し、出力メッセージは "**Fatal Python error: PyThreadState_Get: no current thread**" (Python 致命的なエラー: PyThreadState_Get: 現在のスレッドがありません) です)。
     >
     > /MDd オプションは Python デバッグ バイナリ (*python_d.exe* など) のビルドに使われますが、拡張 DLL に対して選ぶと、やはり `Py_LIMITED_API` のビルド エラーになります。
 
@@ -265,7 +266,7 @@ Python 2.7 を使用している場合は、代わりに python.org で [C や C
 
 C++ モジュールは、次の理由でコンパイルに失敗する場合があります。
 
-- *Python.h* が見つからない (**E1696: ソース ファイル "Python.h" を開けません** や **C1083: インクルード ファイルを開けません: "Python.h": このようなファイルまたはディレクトリはありません**): プロジェクトのプロパティの **[C/C++]** > **[全般]** > **[追加のインクルード ディレクトリ]** のパスが Python インストールの *include* フォルダーに設定されていることを確認してください。 「[C++ のコア プロジェクトを作成する](#create-the-core-c-projects)」の手順 6 をご覧ください。
+- *Python.h* が見つかりません (**E1696: ソース ファイル "Python.h" を開くことができませんでした** かつ/または **C1083: インクルード ファイル "Python.h" を開くことができません: ファイルまたはディレクトリが存在しません**): プロジェクトのプロパティの **[C/C++]** > **[全般]** > **[追加のインクルード ディレクトリ]** のパスが、Python インストールの *include* フォルダーをポイントしていることを確認します。 「[C++ のコア プロジェクトを作成する](#create-the-core-c-projects)」の手順 6 をご覧ください。
 
 - Python ライブラリが見つかりません: プロジェクトのプロパティの **[リンカー]** > **[全般]** > **[追加のライブラリ ディレクトリ]** のパスが、Python インストールの *libs* フォルダーを指していることを確認します。 「[C++ のコア プロジェクトを作成する](#create-the-core-c-projects)」の手順 6 をご覧ください。
 
@@ -404,7 +405,7 @@ Visual Studio では、Python と C++ コードを一緒にデバッグするこ
 | --- | --- | --- | --- | --- |
 | CPython 用の C/C++ 拡張モジュール | 1991 | 標準ライブラリ | [広範なドキュメントとチュートリアル](https://docs.python.org/3/c-api/)。 総合的な制御。 | コンパイル、移植性、参照の管理。 C についての深い知識。 |
 | [PyBind11](https://github.com/pybind/pybind11) (C++ 向けに推奨) | 2015 |  | 既存の C++ コードの Python バインディングを作成するためのヘッダーのみの軽量ライブラリ。 依存関係はわずか。 PyPy 互換性。 | 新しく、未完成な部分あり。 C++ 11 の機能を多用。 対応しているコンパイラが少ない (Visual Studio は含まれる)。 |
-| Cython (C に推奨) | 2007 | [gevent](http://www.gevent.org/)、[kivy](https://kivy.org/) | Python に似ている。 非常に完成されている。 高パフォーマンス。 | コンパイル、新しい構文、新しいツールチェーン。 |
+| Cython (C に推奨) | 2007 | [gevent](https://www.gevent.org/)、[kivy](https://kivy.org/) | Python に似ている。 非常に完成されている。 高パフォーマンス。 | コンパイル、新しい構文、新しいツールチェーン。 |
 | [Boost.Python](https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html) | 2002 | | ほぼすべての C++ コンパイラで動作。 | ライブラリ スイートが大きくて複雑。使用していないコンパイラの回避策が多く含まれる。 |
 | ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | コンパイルがなく、広く利用可能。 | C 構造体のアクセスや変更が煩雑で、エラーを起こしやすい。 |
 | SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 多くの言語のバインドを一度に生成。 | Python が唯一のターゲットである場合、過剰なオーバーヘッド。 |

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio をインストールまたは使用するときのネットワーク関連のエラーのトラブルシューティング
+title: ネットワーク エラーまたはプロキシ エラーをトラブルシューティングする
 description: ファイアウォールまたはプロキシ サーバーの内側で Visual Studio をインストールし使用するときに発生する可能性があるネットワークまたはプロキシに関連するエラーの解決策を探します。
 ms.custom: ''
 ms.date: 02/12/2018
@@ -18,18 +18,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 28c92fdc09320effcb8603c42edcfca152f71248
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: d344682f948421bf6d02ff14d41fa26fec1c3f32
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50672315"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53047617"
 ---
 # <a name="troubleshooting-network-related-errors-when-you-install-or-use-visual-studio"></a>Visual Studio をインストールまたは使用するときのネットワーク関連のエラーのトラブルシューティング
 
 ファイアウォールまたはプロキシ サーバーの内側で Visual Studio をインストールし使用するときに発生する可能性があるネットワークまたはプロキシに関連する最も代表的なエラーの解決策を紹介します。
 
-## <a name="error-proxy-authorization-required"></a>エラー: "プロキシ認証を要求するエラー"
+## <a name="error-proxy-authorization-required"></a>エラー :"プロキシ認証を要求するエラー"
 
 このエラーは通常、ユーザーがプロキシ サーバーを経由してインターネットに接続し、Visual Studio が一部のネットワーク リソースに対して行った呼び出しをプロキシ サーバーがブロックしたときに発生します。
 
@@ -71,11 +71,11 @@ ms.locfileid: "50672315"
 
 - 「[How to connect through an authenticated Web Proxy](https://blogs.msdn.microsoft.com/rido/2010/05/06/how-to-connect-to-tfs-through-authenticated-web-proxy/)」 (認証された Web プロキシを通して接続する方法) ブログ投稿に含まれる手順に従うこともできます。プロキシを使用するためのコードを追加する方法が説明されています。
 
-## <a name="error-the-underlying-connection-was-closed"></a>エラー: "接続が切断されました"
+## <a name="error-the-underlying-connection-was-closed"></a>エラー :"基になる接続がサーバーによって閉じられました"
 
 ファイアウォールが設定されたプライベート ネットワークで Visual Studio を使用する場合、Visual Studio を一部のネットワーク リソースに接続できない可能性があります。 これらのリソースには、サインインとライセンス取得のための Azure DevOps Services、NuGet、および Azure サービスが含まれます。 Visual Studio でこれらのリソースのいずれかに接続できない場合は、次のエラー メッセージが表示されることがあります。
 
-  **基になる接続が閉じられました: 送信時に、予期しないエラーが発生しました**
+  **基になる接続がサーバーによって閉じられました:送信時、予期しないエラーが発生しました**
 
 Visual Studio ではトランスポート層セキュリティ (TLS) 1.2 プロトコルを使用して、ネットワーク リソースに接続します。 Visual Studio で TLS 1.2 を使用している場合、一部のプライベート ネットワーク上のセキュリティ アプライアンスによって特定のサーバー接続がブロックされます。
 

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio のプロジェクトと項目テンプレートに名前パラメーターを追加する
+title: プロジェクトと項目テンプレートに名前パラメーターを追加する
 ms.date: 01/02/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -11,14 +11,14 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 26802b7b5293fd43eb1546290560c5300c360003
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7dbc27762319538053ecee5d7566d86c998db852
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31945936"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062471"
 ---
-# <a name="how-to-substitute-parameters-in-a-template"></a>方法 : テンプレート内のパラメーターを置き換える
+# <a name="how-to-substitute-parameters-in-a-template"></a>方法:テンプレート内のパラメーターを置き換える
 
 テンプレート パラメーターを使うと、テンプレートからファイルを作成するときに、クラス名や名前空間などの識別子を置き換えることができます。 既存のテンプレートにテンプレート パラメーターを追加することも、テンプレート パラメーターで独自のテンプレートを作成することもできます。
 
@@ -28,7 +28,7 @@ ms.locfileid: "31945936"
 
 ## <a name="to-use-a-parameter-to-replace-the-namespace-name"></a>パラメーターを使って名前空間の名前を置き換えるには
 
-1. テンプレートの 1 つ以上のコード ファイルにパラメーターを挿入します。 例:
+1. テンプレートの 1 つ以上のコード ファイルにパラメーターを挿入します。 次に例を示します。
 
     ```csharp
     namespace $safeprojectname$

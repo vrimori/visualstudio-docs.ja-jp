@@ -1,5 +1,5 @@
 ---
-title: Visual Studio での型の定義の表示
+title: 型の定義の表示
 ms.date: 01/10/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 529486e39db57228feb703817eea44fab9399c85
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: e7b159eb48e995fa0bca6ea86299d09c1a10cf27
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34745764"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062083"
 ---
 # <a name="view-type-and-member-definitions"></a>型とメンバーの定義の表示
 
@@ -52,7 +52,7 @@ Visual Studio 2017 バージョン 15.4 の場合、マウスを使用すると�
 
 ポップアップ ウィンドウから別の定義を表示する場合は、ポップアップの上に表示される円と矢印を使ってナビゲートできる階層リンク パスを開始します。
 
-詳細については、「[方法: [定義をここに表示] を使用してコードを表示および編集する (Alt + F12)](how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)」を参照してください。
+詳細については、「[方法 :[定義をここに表示] を使用してコードを表示および編集する (Alt + F12)](how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)」を参照してください。
 
 ## <a name="view-metadata-as-source-code-c"></a>ソース コードとしてのメタデータの表示 (C#)
 
