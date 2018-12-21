@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で XML ドキュメントのコメントを挿入する
+title: XML ドキュメントのコメントを挿入する
 ms.date: 01/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -9,14 +9,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e3c38e46a5c73d1f8018f56f76b971939ba8c316
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 04ee7c992fc67e0025bd2481d392a38806d51ed9
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31945429"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063475"
 ---
-# <a name="how-to-insert-xml-comments-for-documentation-generation"></a>方法: ドキュメント生成のための XML コメントを挿入する
+# <a name="how-to-insert-xml-comments-for-documentation-generation"></a>方法:ドキュメント生成のための XML コメントを挿入する
 
 Visual Studio では、クラスやメソッドなどのコード要素を文書化しやすいように、標準的な XML ドキュメント コメント構造を自動的に生成できます。 コンパイル時に、ドキュメントのコメントを含む XML ファイルを生成できます。 コンパイラによって生成された XML ファイルは、.NET アセンブリと共に配布できます。これにより、Visual Studio や他の IDE で、IntelliSense を使って型やメンバーに関する概要情報を表示できます。 さらに、[DocFX](https://dotnet.github.io/docfx/) や [Sandcastle](https://www.microsoft.com/download/details.aspx?id=10526) のようなツールを使用して XML ファイルを実行し、API リファレンスの Web サイトを生成することができます。
 

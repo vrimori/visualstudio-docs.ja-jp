@@ -1,7 +1,7 @@
 ---
-title: IntelliTrace を使用して以前のアプリケーション状態を参照する
-ms.description: Learn how to take snapshots, and view snapshots with IntelliTrace step-back
-ms.custom: mvc
+title: IntelliTrace を使用して以前のアプリ状態を参照する
+description: スナップショットの作成方法、および IntelliTrace ステップ バックを使用したスナップショットの表示方法について説明します
+ms.custom: seodec18
 ms.date: 09/19/2018
 ms.technology: vs-ide-debug
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d43e1a04570d68ce69f283cde264280fc24865a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ba1ab23fead36cfabc8b2754535e8b10de981987
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49846864"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060146"
 ---
 # <a name="inspect-previous-app-states-using-intellitrace-step-back-in-visual-studio"></a>Visual Studio の IntelliTrace のステップ バックを使用して以前のアプリケーション状態を調べる
 
@@ -96,9 +96,9 @@ IntelliTrace のステップ バックは、Visual Studio Enterprise 2017 バー
 
 IntelliTrace のイベント限定モードでは、デバッガーのステップ実行とブレークポイントでデバッグ履歴を有効にできます。 ただし、IntelliTrace はウィンドウが開いている場合の **[ローカル]** および **[自動変数]** ウィンドウのデータしかキャプチャしません。そしてキャプチャされるのは、展開されて表示されているもののみです。 イベント限定モードでは、多くの場合、変数の完全なビューと複合オブジェクトがありません。 また、**[ウォッチ]** ウィンドウでの式の評価とデータの参照はサポートされていません。 
 
-イベントおよびスナップショット モードでは、IntelliTrace は複合オブジェクトを含むアプリケーションのプロセスのスナップショット全体をキャプチャします。 コード行では、ブレークポイントで停止したのと同じ状態で同じ情報が表示されます (これは以前情報を開いたかどうかには関係しません)。 スナップショットを参照するとき、式の評価もサポートされます。  
+イベントおよびスナップショット モードでは、IntelliTrace は複合オブジェクトを含むアプリケーションのプロセスのスナップショット全体をキャプチャします。 コード行では、ブレークポイントで停止したのと同じ状態で同じ情報が表示されます (これは以前情報を開いたかどうかには関係しません)。 スナップショットを参照するとき、式の評価もサポートされます。  
 
-#### <a name="what-is-the-performance-impact-of-this-feature"></a>この機能はパフォーマンスにどのような影響を与えますか? 
+#### <a name="what-is-the-performance-impact-of-this-feature"></a>この機能はパフォーマンスにどのような影響を与えますか? 
 
 ステップ実行がパフォーマンス全体に与える影響は、アプリケーションによって異なります。 スナップショットの作成にかかるオーバーヘッドは、約 30 ミリ秒です。 スナップショットが作成されると、アプリのプロセスがフォークされ、フォークされたコピーが中断されます。 スナップショットを参照するとき、Visual Studio はプロセスのフォークされたコピーにアタッチされています。 Visual Studio は各スナップショットで、ページ テーブルのみをコピーし、ページをコピー オン ライトとして設定します。 関連付けられているスナップショットがあるデバッガーのステップ間でヒープのオブジェクトが変わる場合、該当するページ テーブルがコピーされるので、メモリのコストはわずかになります。 Visual Studio がスナップショットを作成するのに十分なメモリがないと判断した場合、作成されません。
  
@@ -112,7 +112,7 @@ IntelliTrace のイベント限定モードでは、デバッガーのステッ�
   * または、次のようにします。 
     1. Visual Studio インストーラーからデスクトップ (x86、x64) コンポーネント用の VC++ 2015.3 v140 ツールセットをインストールします。
     2. 対象アプリケーションをビルドします。
-    3. コマンド ラインで editbin ツールを使って、ターゲット実行可能ファイルの `Largeaddressaware` フラグを設定します。 たとえば、(パスのアップデート後) "C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise\VC\Tools\MSVC\14.12.25718\bin\Hostx86\x86\editbin.exe" /Largeaddressaware "C:\Path\To\Application\app.exe" のコマンドを使用します。
+    3. コマンド ラインで editbin ツールを使って、ターゲット実行可能ファイルの `Largeaddressaware` フラグを設定します。 たとえば、(パスのアップデート後) 次のコマンドを使用します。"C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise\VC\Tools\MSVC\14.12.25718\bin\Hostx86\x86\editbin.exe" /Largeaddressaware "C:\Path\To\Application\app.exe"
     4. デバッグを開始するには、**F5** キーを押します。 これで、デバッガーのステップ実行とブレークポイントでスナップショットが作成されるようになります。
 
        > [!Note]

@@ -1,5 +1,6 @@
 ---
-title: Python の概要のチュートリアル、手順 6、Git との連携
+title: Visual Studio の Python のチュートリアルの手順 6、Git の操作
+titleSuffix: ''
 description: Visual Studio の Python の中核となるチュートリアルの手順 6 では、Visual Studio の Git 関連の機能について説明しています。
 ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
@@ -8,19 +9,20 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e958046bb5574cb1a9b9799482fa3c96c203b013
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 6c23a1d9835b7b065f24536c89a8f0befb03717c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50219407"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054477"
 ---
 # <a name="step-6-work-with-git"></a>手順 6: Git の操作
 
-**前の手順: [パッケージのインストールと Python 環境の管理](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)**
+**前の手順: [パッケージのインストールと、Python 環境の管理](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)**
 
 Visual Studio には、ローカルの Git リポジトリと、GitHub や Azure Repos などのサービス上のリモート リポジトリを直接統合できます。 この統合には、リポジトリの複製、変更のコミット、分岐の管理が含まれます。
 
@@ -54,7 +56,7 @@ Visual Studio には、ローカルの Git リポジトリと、GitHub や Azure
 
 ## <a name="go-deeper"></a>詳しい説明
 
-リモート Git リポジトリからプロジェクトを作成する方法のチュートリアルについては、「[クイック スタート: Visual Studio で Python コードのリポジトリを複製する](quickstart-03-python-in-visual-studio-project-from-repository.md)」をご覧ください。
+リモート Git リポジトリからプロジェクトを作成する方法の短いチュートリアルについては、「[クイック スタート: Visual Studio で Python コードのリポジトリを複製する](quickstart-03-python-in-visual-studio-project-from-repository.md)」を参照してください。
 
 マージの競合、pull request があるコードのレビュー、リベース、分岐間のチェリー ピック変更などの包括的なチュートリアルについては、[Git と Azure Repos の使用開始](/azure/devops/repos/git/gitquickstart?toc=/visualstudio/version-control/toc.json&bc=/azure/devops/repos/git/breadcrumb/vc/toc.json&view=vsts&tabs=visual-studio)に関する記事を参照してください。
 

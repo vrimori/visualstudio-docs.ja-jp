@@ -1,5 +1,6 @@
 ---
-title: チュートリアル - Visual Studio での Django の詳細情報、手順 4
+title: Visual Studio での Django 学習チュートリアル、手順 4、Web プロジェクト テンプレート
+titleSuffix: ''
 description: Visual Studio プロジェクトのコンテキストにおける Django の基本のチュートリアルです。具体的には、Django Web プロジェクト テンプレートによって提供される機能について取り上げます。
 ms.date: 11/19/2018
 ms.prod: visual-studio-dev15
@@ -8,19 +9,20 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f087086343623d0a8e698821902a5cf92598061e
-ms.sourcegitcommit: f61ad0e8babec8810295f039e67629f4bdebeef0
+ms.openlocfilehash: 865a0368933fa0a66728afaead6677cbeca84834
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "52001205"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065462"
 ---
 # <a name="step-4-use-the-full-django-web-project-template"></a>手順 4: Django Web プロジェクト テンプレートを使用する
 
-**前の手順: [静的ファイルを提供し、ページを追加し、テンプレート継承を使用する](learn-django-in-visual-studio-step-03-serve-static-files-and-add-pages.md)**
+**前の手順:[静的ファイルを提供し、ページを追加し、テンプレート継承を使用する](learn-django-in-visual-studio-step-03-serve-static-files-and-add-pages.md)**
 
 Visual Studio の "空の Django Web プロジェクト" テンプレート上にアプリを構築して、Django の基本を確認したので、"Django Web プロジェクト" テンプレートで作成されるより完全なアプリを簡単に理解できるようになりました。
 
@@ -33,7 +35,7 @@ Visual Studio の "空の Django Web プロジェクト" テンプレート上�
 
 また、テンプレートでは、手順 5 で取り上げる基本認証も提供されます。
 
-## <a name="step-4-1-create-a-project-from-the-template"></a>手順 4-1: テンプレートからプロジェクトを作成する
+## <a name="step-4-1-create-a-project-from-the-template"></a>手順 4-1:テンプレートからプロジェクトを作成する
 
 1. Visual Studio で、**ソリューション エクスプローラー**に移動して、このチュートリアルで以前に作成した **LearningDjango** ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** を選択します  (または、新しいソリューションを使用する場合は、代わりに **[ファイル]** > **[新規]** > **[プロジェクト]** の順に選択します)。
 
@@ -75,9 +77,9 @@ Visual Studio の "空の Django Web プロジェクト" テンプレート上�
 - *app* フォルダーには、ビュー、モデル、テスト、フォーム、テンプレート、静的ファイルなど、すべてのアプリ ファイルが含まれています (手順 4-2 を参照). 通常は、より区別しやすいアプリ名を使用するために、このフォルダー名を変更します。
 - *DjangoWeb* (Django プロジェクト) フォルダーには、一般的な Django プロジェクト ファイルである *\_\_init\_\_.py*、*settings.py*、*urls.py*、*wsgi.py* が含まれています。 プロジェクト テンプレートを使用することで、*settings.py* は既にアプリおよびデータベース ファイル用に構成されており、*urls.py* は既にログイン フォームを含むすべてのアプリ ページへのルートを使って構成されています。
 
-### <a name="question-is-it-possible-to-share-a-virtual-environment-between-visual-studio-projects"></a>質問: Visual Studio プロジェクト間で仮想環境を共有することは可能ですか。
+### <a name="question-is-it-possible-to-share-a-virtual-environment-between-visual-studio-projects"></a>質問:Visual Studio プロジェクト間で仮想環境を共有することは可能ですか。
 
-回答: はい。ただし、異なるプロジェクトは時間の経過と共に異なるパッケージを使用する傾向があるため、共有した仮想環境には、使用するすべてのプロジェクトに対応するすべてのパッケージを含む必要があることを認識したうえで、共有してください。
+回答:はい。ただし、異なるプロジェクトは時間の経過と共に異なるパッケージを使用する傾向があるため、共有した仮想環境には、使用するすべてのプロジェクトに対応するすべてのパッケージを含む必要があることを認識したうえで、共有してください。
 
 それでもやはり、既存の仮想環境を使用するには、次の手順を実行します。
 
@@ -85,7 +87,7 @@ Visual Studio の "空の Django Web プロジェクト" テンプレート上�
 1. **ソリューション エクスプローラー**で、**[Python 環境]** ノードを右クリックして、**[既存の仮想環境を追加する]** を選択します。
 1. 仮想環境を含むフォルダーに移動して選択し、 **[OK]** をクリックします。
 
-## <a name="step-4-2-understand-the-views-and-page-templates-created-by-the-project-template"></a>手順 4 2: プロジェクト テンプレートによって作成されたビューとページ テンプレートを理解する
+## <a name="step-4-2-understand-the-views-and-page-templates-created-by-the-project-template"></a>手順 4-2:プロジェクト テンプレートによって作成されたビューとページ テンプレートを理解する
 
 プロジェクトを実行したときに確認すると、アプリには、[ホーム]、[About]\(詳細\)、[連絡先] という 3 つのビューが含まれています。 これらのビューに対応するコードは、*app/views* フォルダーにあります。 各ビューの関数では単に、テンプレートおよび単純なディクショナリ オブジェクトへのパスを使って、`django.shortcuts.render` を呼び出しています。 たとえば、[About]\(詳細\) ページは、`about` 関数で処理されています。
 
@@ -163,11 +165,11 @@ def about(request):
 
 また、*templates/app* フォルダーには、`{% include %}` を使用して *layout.html* に組み込まれる *loginpartial.html* と、4 番目のページである *login.html* もあります。 これらのテンプレート ファイルについては、手順 5 の認証に関するセクションで取り上げます。
 
-### <a name="question-can--block--and--endblock--be-indented-in-the-django-page-template"></a>質問: {% block %} と {% endblock %} は Django ページ テンプレートでインデントできますか。
+### <a name="question-can--block--and--endblock--be-indented-in-the-django-page-template"></a>質問:{% block %} と {% endblock %} は Django ページ テンプレートでインデントできますか。
 
-回答: はい。多くの場合、適切な親要素の中にこれらのタグを配置する目的で、ブロック タグをインデントしても、Django ページ テンプレートは有効です。 タグの配置場所が明確にわかるように、これらのタグは Visual Studio プロジェクト テンプレートで生成されたページ テンプレートではインデントされません。
+回答:はい。多くの場合、適切な親要素の中にこれらのタグを配置する目的で、ブロック タグをインデントしても、Django ページ テンプレートは有効です。 タグの配置場所が明確にわかるように、これらのタグは Visual Studio プロジェクト テンプレートで生成されたページ テンプレートではインデントされません。
 
-## <a name="step-4-3-understand-the-url-routing-created-by-the-template"></a>手順 4-3: テンプレートによって作成された URL ルーティングを理解する
+## <a name="step-4-3-understand-the-url-routing-created-by-the-template"></a>手順 4-3:テンプレートによって作成された URL ルーティングを理解する
 
 "Django Web プロジェクト" テンプレートで作成された Django プロジェクトの *urls.py* ファイルには、次のコードが含まれています。
 
@@ -206,9 +208,9 @@ urlpatterns = [
 
 最初の 3 つの URL パターンは、アプリの *views.py* ファイルにある `home`、`contact`、`about` ビューに直接マップされます。 一方、パターン `^login/$` および `^logout$` では、アプリ定義のビューではなく、組み込みの Django ビューを使用します。 また、`url` メソッドの呼び出しには、ビューをカスタマイズするための追加のデータが含まれます。 手順 5 では、これらの呼び出しについて確認します。
 
-### <a name="question-in-the-project-i-created-why-does-the-about-url-pattern-uses-about-instead-of-about-as-shown-here"></a>質問: 作成したプロジェクトでは、どうして "about" の URL パターンに、このページで示されている '^about$' ではなく '^about' を使用するのですか。
+### <a name="question-in-the-project-i-created-why-does-the-about-url-pattern-uses-about-instead-of-about-as-shown-here"></a>質問:作成したプロジェクトでは、どうして "about" の URL パターンに、このページで示されている '^about$' ではなく '^about' を使用するのですか。
 
-回答: 正規表現の末尾の '$' の欠如は、多くのバージョンのプロジェクト テンプレートでの単純なミスです。 URL パターンは "about" という名前のページでは完全に問題なく動作しますが、末尾の '$' が無い場合、URL パターンは "about=django"、"about09876", "aboutoflaughter" などの URL にも適合します。 "about" "*だけ*" に適合する URL パターンを作成するために、このページでは末尾の '$' が示されています。
+回答:正規表現の末尾の '$' の欠如は、多くのバージョンのプロジェクト テンプレートでの単純なミスです。 URL パターンは "about" という名前のページでは完全に問題なく動作しますが、末尾の '$' が無い場合、URL パターンは "about=django"、"about09876", "aboutoflaughter" などの URL にも適合します。 "about" "*だけ*" に適合する URL パターンを作成するために、このページでは末尾の '$' が示されています。
 
 ## <a name="next-steps"></a>次の手順
 
@@ -219,4 +221,4 @@ urlpatterns = [
 
 - [Azure App Service への Web アプリの展開](publishing-python-web-applications-to-azure-from-visual-studio.md)
 - [最初の Django アプリの作成、パート 4 - フォームと汎用ビュー](https://docs.djangoproject.com/en/2.0/intro/tutorial04/) (docs.djangoproject.com)
-- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)
+- GitHub のチュートリアルのソース コード:[Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)

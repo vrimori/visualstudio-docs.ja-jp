@@ -1,6 +1,6 @@
 ---
-title: Visual Studio で UWP アプリのネットワーク使用量を分析する | Microsoft Docs
-ms.custom: H1Hack27Feb2017
+title: UWP アプリのネットワーク使用量を分析する
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 03b5a669c0977aa35ef6943af3fa6afe6dda2aaa
-ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
+ms.openlocfilehash: 06546e3d36e0568c27e4160342ad271a026b7b9e
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51220789"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062245"
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>UWP アプリのネットワーク使用量を分析する
 Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http API](/uwp/api/windows.web.http) を使用して実行されたネットワーク操作についてのデータを収集します。 そのデータを分析すると、アクセスや認証の問題、不適切なキャッシュの使用、表示やダウンロードの低パフォーマンスなどの問題を解決するのに役立ちます。  
@@ -74,7 +74,7 @@ Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http A
   
 ## <a name="see-also"></a>関連項目  
  [デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)  
- [Visual Studio ブログ: Visual Studio のネットワーク インスペクターの紹介](http://go.microsoft.com/fwlink/?LinkId=535022)   
- [Channel 9 ビデオ: Visual Studio 診断ツール - 新しいネットワーク プロファイラー](https://channel9.msdn.com/Series/ConnectOn-Demand/206)  
+ [Visual Studio ブログ:Visual Studio のネットワーク インスペクターの紹介](http://go.microsoft.com/fwlink/?LinkId=535022)   
+ [Channel 9 ビデオ:Visual Studio 診断ツール - 新しいネットワーク プロファイラー](https://channel9.msdn.com/Series/ConnectOn-Demand/206)  
  [Visual Studio のプロファイル](../profiling/index.md)  
  [プロファイル ツールの概要](../profiling/profiling-feature-tour.md)

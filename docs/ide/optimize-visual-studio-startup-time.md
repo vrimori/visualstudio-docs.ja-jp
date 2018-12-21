@@ -1,5 +1,5 @@
 ---
-title: Visual Studio の起動時間の短縮
+title: 起動時間の改善
 ms.date: 11/15/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 20f56af789a84ef73c66e0cd50c87ec48a6212a4
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: cccdf9cae50d886f5e44fa7bb403bdd4d38ad535
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49884057"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067681"
 ---
 # <a name="optimize-visual-studio-startup-time"></a>Visual Studio の起動時間の最適化
 
@@ -59,7 +59,7 @@ Visual Studio で起動の遅延が検出されると、ポップアップ メ�
 
 3. 次の 3 つのオプションのいずれかを選択します。
 
-   - **既定の動作を使用する:** ツール ウィンドウの既定の動作。 このオプションを選択したままにすると、起動時のパフォーマンスは向上しません。
+   - **既定動作を使用します:** ツール ウィンドウの既定の動作。 このオプションを選択したままにすると、起動時のパフォーマンスは向上しません。
 
    - **起動時にウィンドウを表示しない:** Visual Studio を開いたときに、指定したツール ウィンドウが常に閉じられます。前のセッションで開いたままの場合でも同じです。 ツール ウィンドウは、必要なときに対応するメニューから開くことができます。
 

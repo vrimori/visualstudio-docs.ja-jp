@@ -1,22 +1,23 @@
 ---
 title: リモート Linux コンピューターでの Python コードのデバッグ
-description: 必要な構成手順、セキュリティ、トラブルシューティングなど、Visual Studio を使ってリモート Linux コンピューターで動作する Python コードをデバッグする方法について説明します。
-ms.date: 10/15/2018
+description: 必要な構成手順、セキュリティ、トラブルシューティングなど、Visual Studio を使ってリモート Linux コンピューターで動作する Python コードをデバッグします。
+ms.date: 12/06/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 654ac9cfd466cfdd6486ea5aa9e658495d5704fe
-ms.sourcegitcommit: e680e8ac675f003ebcc8f8c86e27f54ff38da662
+ms.openlocfilehash: 4c14fb14a8941895fab473952908e6aefa2e2f14
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356770"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067947"
 ---
 # <a name="remotely-debug-python-code-on-linux"></a>Linux 上で Python コードをリモートでデバッグする
 
@@ -26,7 +27,7 @@ ptvsd を使用する場合、デバッグ対象の Python コードは Visual S
 
 |   |   |
 |---|---|
-| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | リモート デバッグの概要については、Visual Studio 2015 と 2017 の両方に該当する「[Deep Dive: Cross-Platform Remote Debugging](https://youtu.be/y1Qq7BrV6Cc)」 (詳細情報: クロスプラットフォームのリモート デバッグ) (youtube.com、6 分 22 秒) をご覧ください。 |
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | リモート デバッグの概要については、「[Deep Dive:Cross-platform remote debugging](https://youtu.be/y1Qq7BrV6Cc)」(Deep Dive: クロスプラットフォーム リモート デバッグ) (youtube.com、6 分 22 秒) をご覧ください。Visual Studio 2015 および 2017 の両方に適用できる内容です。 |
 
 ## <a name="set-up-a-linux-computer"></a>Linux コンピューターを設定する
 
@@ -106,7 +107,7 @@ Azure VM のファイアウォール ルールの作成の詳細については�
 
 1. Visual Studio はデバッグ モードに切り替わり、スクリプトは引き続きリモート コンピューターで実行され、通常の[デバッグ](debugging-python-in-visual-studio.md)機能もすべて使用できます。 たとえば、`if guess < number:` 行のブレークポイントを設定し、リモート コンピューターに切り替え、別の推測を入力します。 その後、ローカル コンピューターの Visual Studio はそのブレークポイントで停止し、ローカル変数などが表示されます。
 
-    ![ブレークポイントにヒットした状態](media/remote-debugging-breakpoint-hit.png)
+    ![Visual Studio でブレーク ポイントにヒットしたときにデバッグを一時停止する](media/remote-debugging-breakpoint-hit.png)
 
 1. デバッグを停止すると、Visual Studio はプログラムからデタッチされますが、リモート コンピューターでは実行が継続されます。 また、ptvsd もデバッガーのアタッチを引き続きリッスンするので、いつでもプロセスに再アタッチできます。
 
@@ -121,8 +122,8 @@ Azure VM のファイアウォール ルールの作成の詳細については�
 
     | Visual Studio のバージョン | Python ツール/ptvsd のバージョン |
     | --- | --- |
-    | 2017 15.8 | 4.1.1a9 (レガシ デバッガー: 3.2.1.0) |
-    | 2017 15.7 | 4.1.1a1 (レガシ デバッガー: 3.2.1.0) |
+    | 2017 15.8 | 4.1.1a9 (レガシ デバッガー:3.2.1.0) |
+    | 2017 15.7 | 4.1.1a1 (レガシ デバッガー:3.2.1.0) |
     | 2017 15.4、15.5、15.6 | 3.2.1.0 |
     | 2017 15.3 | 3.2.0 |
     | 2017 15.2 | 3.1.0 |

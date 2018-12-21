@@ -1,23 +1,24 @@
 ---
-title: IIS 用に Python Web アプリを構成する
+title: IIS 用に Python Web アプリを構築する
 description: Windows 仮想マシンから IIS を使用して実行される Python Web アプリを構築する方法を説明します。
-ms.date: 10/10/2018
+ms.date: 12/06/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 4452eca221a772c2f0fd519df533e35468f3ecd8
-ms.sourcegitcommit: 551f13774e8bb0eb47cbd973745628a956e866aa
+ms.openlocfilehash: 8de69c64cac5c841867f5d993395e5ab380625eb
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49459564"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062905"
 ---
 # <a name="configure-python-web-apps-for-iis"></a>IIS 用に Python Web アプリを構築する
 
@@ -113,14 +114,14 @@ FastCGI は、要求レベルで動作するインターフェイスです。 II
         <add key="WSGI_HANDLER" value="app.wsgi_app()"/>
         ```
 
-    - **Flask**: `WSGI_HANDLER` 値を `<project_name>.app` に変更します。`<project_name>` はプロジェクトの名前に一致します。 *runserver.py* の `from <project_name> import app` ステートメントを見ると、正確な識別子が見つかります。 たとえば、プロジェクトの名前が "FlaskAzurePublishExample" の場合、エントリは次のように表示されます。
+    - **Flask**:`WSGI_HANDLER` 値を `<project_name>.app` に変更します。`<project_name>` はプロジェクトの名前に一致します。 *runserver.py* の `from <project_name> import app` ステートメントを見ると、正確な識別子が見つかります。 たとえば、プロジェクトの名前が "FlaskAzurePublishExample" の場合、エントリは次のように表示されます。
 
         ```xml
         <!-- Flask apps only: change the project name to match your app -->
         <add key="WSGI_HANDLER" value="flask_iis_example.app"/>
         ```
 
-    - **Django**: Django プロジェクトの *web.config* には 2 つの変更が必要です。 最初に、`WSGI_HANDLER` 値を `django.core.wsgi.get_wsgi_application()` に変更します (オブジェクトは *wsgi.py* ファイル内にあります)。
+    - **Django**:Django プロジェクトの *web.config* には 2 つの変更が必要です。 最初に、`WSGI_HANDLER` 値を `django.core.wsgi.get_wsgi_application()` に変更します (オブジェクトは *wsgi.py* ファイル内にあります)。
 
         ```xml
         <!-- Django apps only -->
@@ -133,7 +134,7 @@ FastCGI は、要求レベルで動作するインターフェイスです。 II
         <add key="DJANGO_SETTINGS_MODULE" value="django_iis_example.settings" />
         ```
 
-1. **Django アプリのみ**: Django プロジェクトの *settings.py* ファイルで、次に示すように、'vspython-test-02.azurewebsites.net' を自分の URL と置き換えて、サイト URL ドメインまたは IP アドレスを `ALLOWED_HOSTS` に追加します。このとき、もちろん '1.2.3.4' はご使用の URL または IP アドレスに置き換えます。
+1. **Django アプリのみ**:Django プロジェクトの *settings.py* ファイルで、次に示すように、'vspython-test-02.azurewebsites.net' を自分の URL と置き換えて、サイト URL ドメインまたは IP アドレスを `ALLOWED_HOSTS` に追加します。このとき、もちろん '1.2.3.4' はご使用の URL または IP アドレスに置き換えます。
 
     ```python
     # Change the URL or IP address to your specific site

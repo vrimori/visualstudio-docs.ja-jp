@@ -1,5 +1,5 @@
 ---
-title: Visual Studio IDE の 64 ビット サポート
+title: 64 ビット サポート
 ms.date: 02/21/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 27553fe0fdac8378f8d4b1158902394f0704880c
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: fa48de77bdf5ba283068f3dfcc492a76ae3576c0
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32425739"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063342"
 ---
 # <a name="visual-studio-ide-64-bit-support"></a>Visual Studio IDE の 64 ビット サポート
 
@@ -30,7 +30,7 @@ Visual Studio では、64 ビット プラットフォームを含む、さま�
 
 ## <a name="configure-projects-as-64-bit-applications"></a>プロジェクトを 64 ビット アプリケーションとして構成
 
-「[方法: プロジェクトを構成して対象プラットフォームを設定する](../ide/how-to-configure-projects-to-target-platforms.md)」では、64 ビット アプリケーションとしてビルドされるようにプロジェクトを構成する方法について説明しています。
+[方法: プロジェクトを構成して対象プラットフォームを設定する](../ide/how-to-configure-projects-to-target-platforms.md)では、64 ビット アプリケーションとしてビルドされるようにプロジェクトを構成する方法について説明しています。
 
 ## <a name="debug-a-64-bit-application"></a>64 ビット アプリケーションのデバッグ
 

@@ -1,5 +1,5 @@
 ---
-title: '概要: Visual Studio の機能を提案する'
+title: 機能を提案する
 description: 開発者コミュニティにはどのような提案があるのか、提案する方法、Visual Studio のロードマップで提案がどのように Microsoft に使用されるのかについて説明します
 ms.date: 11/15/2018
 ms.prod: visual-studio-dev15
@@ -10,24 +10,24 @@ ms.author: seiyer
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 04d76dcb09db27ed3ac63ba0dd6cc8fc60588f0f
-ms.sourcegitcommit: 331dbb12e11fcd7f5d15fab05f3c861e48126e43
+ms.openlocfilehash: 541d8968ea71844d89903b9e4f146e86a15737e2
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51826701"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160037"
 ---
 # <a name="overview-suggest-a-feature"></a>概要: 機能を提案する
 
 現在、[Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com)上では問題を報告する機能を利用できますが、これと並んで機能を提案するための新しいエクスペリエンスが導入されました。 これは、Visual Studio の開発ワークフローと直接交流することができる、新しい便利な方法です。
 
-これまで、Visual Studio のユーザーは User Voice フォーラムを使って新しい機能のアイデアを提案していました。 開発者コミュニティの "*機能の提案*" エクスペリエンスを使用すると、すべてのフィードバックを User Voice フォーラムから Visual Studio 製品チームと直接交流できる 1 つのプラットフォームに移行することができます。  
+これまで、Visual Studio のユーザーは User Voice フォーラムを使って新しい機能のアイデアを提案していました。 開発者コミュニティの "*機能の提案*" エクスペリエンスを使用すると、すべてのフィードバックを User Voice フォーラムから Visual Studio 製品チームと直接交流できる 1 つのプラットフォームに移行することができます。
 
 アイデアの最初のセットが User Voice フォーラムから開発者コミュニティに移行されました。 移行は、コミュニティへのフィードバックの影響と、製品ロードマップの優先順位に基づいて行われました。 移行されるはずの機能が見落とされていると思った場合は、遠慮なく開発者コミュニティに追加してください。
 
 ## <a name="votes"></a>投票
 
-User Voice の投票システムは、開発者コミュニティの投票とは異なる方法で動作します。 開発者コミュニティの投票数の整合性を保ち、投票の歪みを避けるために、User Voice での投票数は、各機能の提案の横にあるタグとして目立つように表示されます。 強化された開発者コミュニティで提案への投票を続けていくと、新しい投票数は User Voice での投票数とは別々に表示されます。  
+User Voice の投票システムは、開発者コミュニティの投票とは異なる方法で動作します。 開発者コミュニティの投票数の整合性を保ち、投票の歪みを避けるために、User Voice での投票数は、各機能の提案の横にあるタグとして目立つように表示されます。 強化された開発者コミュニティで提案への投票を続けていくと、新しい投票数は User Voice での投票数とは別々に表示されます。
 
 ## <a name="user-voice"></a>User Voice
 
@@ -77,7 +77,7 @@ User Voice のサイトは読み取り専用になりました。必要に応じ
 
 - - -
 
-![開発者コミュニティの提案の [終了 - 情報が不十分] 状態](../ide/media/SuggestStates/ClosedNotEnoughInfo.jpg) 
+![開発者コミュニティの提案の [終了 - 情報が不十分] 状態](../ide/media/SuggestStates/ClosedNotEnoughInfo.jpg)
 
 **[終了 - 情報が不十分]** は、いくつかの試みの後でも、機能の提案を十分に理解するために必要な情報が得られなかったことを示します。 この段階ではさらなるアクションを実行することができないため、新しい機能の提案を終了する必要があります。
 

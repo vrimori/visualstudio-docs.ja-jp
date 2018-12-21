@@ -1,5 +1,5 @@
 ---
-title: '方法: Visual Studio でメニューおよびツール バーをカスタマイズする'
+title: メニューおよびツール バーをカスタマイズする
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -29,12 +29,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e9cab18be65d29b6cdd22b8948d2e89f75c4fe9
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: bb58d0a20e8764e7cefe013458476ddcd41ac416
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34745950"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049693"
 ---
 # <a name="how-to-customize-menus-and-toolbars-in-visual-studio"></a>方法: Visual Studio でメニューおよびツール バーをカスタマイズする
 
@@ -81,7 +81,7 @@ Visual Studio は、メニュー バーでツール バーやメニューを追�
         また、ツール バーの左端をドラッグして、メイン ドッキング領域内の任意の場所に移動することもできます。
 
         > [!NOTE]
-        > ツール バーの操作性とアクセシビリティを向上させる方法の詳細については、「[方法: IDE アクセシビリティ オプションを設定する](../ide/reference/how-to-set-ide-accessibility-options.md)」を参照してください。
+        > ツール バーの操作性とアクセシビリティを向上させる方法の詳細については、「[方法:IDE アクセシビリティ オプションを設定する](../ide/reference/how-to-set-ide-accessibility-options.md)」を参照してください。
 
 ## <a name="customizing_menu">メニューまたはツール バーをカスタマイズする</a>
 

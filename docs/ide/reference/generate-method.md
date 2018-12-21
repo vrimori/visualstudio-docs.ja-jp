@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でメソッドを生成する
+title: メソッドを生成する
 ms.date: 01/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d6d7d17810e53de80bfecff697e960613dc06a6
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 1e5cf156c6c17e8a9bf1fb9f40f75c1e72b7be94
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295853"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057179"
 ---
 # <a name="generate-a-method-in-visual-studio"></a>Visual Studio でメソッドを生成する
 
@@ -24,7 +24,7 @@ ms.locfileid: "51295853"
 
 - Visual Basic
 
-**概要:** クラスにメソッドをすぐに追加できます。
+**機能:** クラスにメソッドをすぐに追加できます。
 
 **条件:** 新しいメソッドを導入し、自動的に適切に宣言したいとき。
 

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テストで Web キャッシュ データを使用する仮想ユーザーの割合を指定する
+title: ロード テストで Web キャッシュ データを使用する仮想ユーザーの割合を指定する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 1178cd08bf8d12b4fba61e858ca5631d103292c2
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 2195b99658d05e9e73a86cf723fcb8e9d4f36bd4
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895575"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060240"
 ---
-# <a name="how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data"></a>方法: Web キャッシュ データを使用する仮想ユーザーの割合を指定する
+# <a name="how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data"></a>方法:Web キャッシュ データを使用する仮想ユーザーの割合を指定する
 
 **新しいロード テスト** ウィザードでロード テストを作成した後で、**ロード テスト エディター**を使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。 ロード テスト シナリオの各プロパティとその説明の一覧については、「[ロード テスト シナリオのプロパティ](../test/load-test-scenario-properties.md)」を参照してください。
 
@@ -51,7 +51,7 @@ ms.locfileid: "52895575"
 ## <a name="see-also"></a>関連項目
 
 - [ロード テスト シナリオの編集](../test/edit-load-test-scenarios.md)
-- [チュートリアル: ロード テストの作成と実行](../test/walkthrough-create-and-run-a-load-test.md)
+- [チュートリアル: ロード テストの作成および実行](../test/walkthrough-create-and-run-a-load-test.md)
 - [テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)
 - [ロード テスト シナリオのプロパティ](../test/load-test-scenario-properties.md)
 - [ロード パターンを編集して、仮想ユーザー アクティビティをモデル化する](../test/edit-load-patterns-to-model-virtual-user-activities.md)

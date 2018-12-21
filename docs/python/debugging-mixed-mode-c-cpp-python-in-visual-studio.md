@@ -1,6 +1,6 @@
 ---
 title: Python の混合モードのデバッグ
-description: 環境間のステップ実行、値の表示、式の評価など、Visual Studio で C++ と Python を同時にデバッグする方法について説明します。
+description: 環境間のステップ実行、値の表示、式の評価など、Visual Studio で C++ と Python を同時にデバッグします。
 ms.date: 11/12/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -8,15 +8,16 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2038f681578c3410b8b4dc1fe67552064e0e2d93
-ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
+ms.openlocfilehash: 42d413ab8d96ccd5533afe99cffb2c05c8ac7d6f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607836"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052236"
 ---
 # <a name="debug-python-and-c-together"></a>Python と C++ を同時にデバッグする
 
@@ -35,11 +36,11 @@ Visual Studio インストーラーの **Python 開発**ワークロードで **
 - Python のオブジェクト表現をネイティブ フレームに表示する機能 (逆も可能)
 - Python プロジェクトまたは C++ プロジェクトのコンテキスト内でのデバッグ
 
-![混合モードのデバッグ](media/mixed-mode-debugging.png)
+![Visual Studio での Python の混合モードのデバッグ](media/mixed-mode-debugging.png)
 
 |   |   |
 |---|---|
-| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Visual Studio でのネイティブ C モジュールのビルド、テスト、およびデバッグの概要については、「[Deep Dive: Create Native Modules](https://youtu.be/D9RlT06a1EI)」 (詳細情報: ネイティブ モジュールを作成する) (youtube.com、9 分 9 秒) をご覧ください。 ビデオは、Visual Studio 2015 と 2017 の両方に適用されます。 |
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Visual Studio でのネイティブ C モジュールのビルド、テスト、デバッグの概要については、「[Deep Dive: Create Native Modules](https://youtu.be/D9RlT06a1EI)」 (詳細情報: ネイティブ モジュールを作成する) (youtube.com、9 分 9 秒) をご覧ください。 ビデオは、Visual Studio 2015 と 2017 の両方に適用されます。 |
 
 ## <a name="enable-mixed-mode-debugging-in-a-python-project"></a>Python プロジェクトでの混合モード デバッグの有効化
 
@@ -96,7 +97,7 @@ Visual Studio の以前のすべてのバージョンでは、混合モードの
 
 **[呼び出し履歴]** ウィンドウには、ネイティブと Python のスタック フレームの両方が、2 つの間の遷移情報を挟んで交互に表示されます。
 
-![結合された呼び出し履歴](media/mixed-mode-debugging-call-stack.png)
+![結合された呼び出し履歴と混合モード デバッグ](media/mixed-mode-debugging-call-stack.png)
 
 **[ツール]** > **[オプション]** > **[デバッグ]** > **[全般]** > **[マイ コードのみを有効にする]** オプションが設定されている場合、遷移情報は **[外部コード]** として表示され、遷移の方向は示されません。
 
@@ -110,11 +111,11 @@ Visual Studio の以前のすべてのバージョンでは、混合モードの
 
 ネイティブ (C または C++) フレームがアクティブのときは、そのローカル変数がデバッガーの **[ローカル]** ウィンドウに表示されます。 ネイティブの Python 拡張モジュールでは、これらの変数の多くは `PyObject` 型 (`_object` の typedef) であり、いくつかがその他の基本的な Python 型です (下の一覧を参照してください)。 混合モードのデバッグでは、これらの値は、**[Python ビュー]** というラベルが付いた追加の子ノードに表示されます。 このノードを展開すると、変数の Python 表現が表示されます。これは、同じオブジェクトを参照しているローカル変数が Python フレームに存在している場合に表示されるものと同じです。 このノードの子は編集可能です。
 
-![Python ビュー](media/mixed-mode-debugging-python-view.png)
+![[ローカル] ウィンドウの Python ビュー](media/mixed-mode-debugging-python-view.png)
 
 この機能を無効にするには、**[ローカル]** ウィンドウ内を右クリックし、**[Python]** > **[Python ビュー ノードを表示]** メニュー オプションを切り替えます。
 
-![Python ビューの有効化](media/mixed-mode-debugging-enable-python-view.png)
+![[ローカル] ウィンドウの Python ビューを有効にする](media/mixed-mode-debugging-enable-python-view.png)
 
 **[Python ビュー]** ノードを表示する C 型 (有効な場合):
 
@@ -143,11 +144,11 @@ Visual Studio の以前のすべてのバージョンでは、混合モードの
 
 前のセクションと似ていますが、Python フレームがアクティブのときに、ネイティブ値を **[ローカル]** ウィンドウに表示する **[C++ ビュー]** を有効にできます。 この機能は既定では有効になっていないため、**[ローカル]** ウィンドウ内を右クリックし、**[Python]** > **[C++ ビュー ノードを表示]** メニュー オプションを切り替えることで有効にします。
 
-![C++ ビューの有効化](media/mixed-mode-debugging-enable-cpp-view.png)
+![[ローカル] ウィンドウの C++ ビューを有効にする](media/mixed-mode-debugging-enable-cpp-view.png)
 
 **[C++ ビュー]** ノードでは、値の基になる C/C++ 構造体の表現が提供されます (これはネイティブ フレームに表示されるものと同じです)。 たとえば、Python の長整数型の `_longobject` インスタンス (その `PyLongObject` は typedef です) が表示され、カスタム作成されたネイティブ クラスの型の推測が試行されます。 このノードの子は編集可能です。
 
-![C++ ビュー](media/mixed-mode-debugging-cpp-view.png)
+![[ローカル] ウィンドウの C++ ビュー](media/mixed-mode-debugging-cpp-view.png)
 
 オブジェクトの子フィールドが `PyObject` 型であるか、サポートされているその他の型のいずれかである場合は、**[Python ビュー]** ノードが表示され (表示が有効な場合)、リンクが Python に直接公開されていないオブジェクト グラフに移動することができます。
 
@@ -169,9 +170,9 @@ static int FobObject_init(FobObject* self, PyObject* args, PyObject* kwds) {
 
 - サポートされていない機能: 条件付きブレークポイント、**Debug Interactive** ウィンドウ、プラットフォーム間のリモート デバッグ。
 - **イミディエイト** ウィンドウ: 使用できますが、その機能はサブセットに制限され、ここに記載されている制限もすべて適用されます。
-- サポートされている Python のバージョン: CPython 2.7 と 3.3+ のみ。
-- Visual Studio Shell: Visual Studio Shell で Python を使用する場合 (たとえば、統合インストーラーを使用してインストールした場合)、Visual Studio では C++ プロジェクトを開くことができません。また、C++ ファイルの編集方法は、基本的なテキスト エディターでの編集と同様です。 ただし、C/C++ のデバッグと混合モードでのデバッグは Shell で完全にサポートされ、ソース コード、ネイティブ コードのステップ イン、およびデバッガー ウィンドウでの C++ 式の評価を実行できます。
-- オブジェクトの表示と展開: デバッガー ツールの **[ローカル]** ウィンドウと **[ウォッチ]** ウィンドウに Python オブジェクトを表示するとき、混合モードのデバッガーでは、オブジェクトの構造のみが表示されます。 プロパティの自動評価や計算される属性の表示は行われません。 コレクションでは、組み込みコレクション型 (`tuple`、`list`、`dict`、`set`) の要素のみを表示します。 カスタム コレクション型は、組み込みコレクション型から継承される場合を除き、コレクションとして視覚化されません。
+- サポートされている Python のバージョン:CPython 2.7 と 3.3+ のみ。
+- Visual Studio Shell:Visual Studio Shell で Python を使用する場合 (たとえば、統合インストーラーを使用してインストールした場合)、Visual Studio では C++ プロジェクトを開くことができません。また、C++ ファイルの編集方法は、基本的なテキスト エディターでの編集と同様です。 ただし、C/C++ のデバッグと混合モードでのデバッグは Shell で完全にサポートされ、ソース コード、ネイティブ コードのステップ イン、およびデバッガー ウィンドウでの C++ 式の評価を実行できます。
+- オブジェクトの表示と展開:デバッガー ツールの **[ローカル]** ウィンドウと **[ウォッチ]** ウィンドウに Python オブジェクトを表示するとき、混合モードのデバッガーでは、オブジェクトの構造のみが表示されます。 プロパティの自動評価や計算される属性の表示は行われません。 コレクションでは、組み込みコレクション型 (`tuple`、`list`、`dict`、`set`) の要素のみを表示します。 カスタム コレクション型は、組み込みコレクション型から継承される場合を除き、コレクションとして視覚化されません。
 - 式の評価: 下記を参照してください。
 
 ### <a name="expression-evaluation"></a>式の評価

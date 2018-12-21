@@ -1,7 +1,7 @@
 ---
 title: アプリの CPU 使用率を測定する
 description: デバッガーに統合された診断ツールを使用して、アプリケーションでの CPU パフォーマンスの問題を分析します。
-ms.custom: mvc
+ms.custom: seodec18
 ms.date: 02/27/2017
 ms.technology: vs-ide-debug
 ms.topic: tutorial
@@ -18,14 +18,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 966697652e969c3d6de9f3c17f52f88e84c89bb8
-ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
+ms.openlocfilehash: 46837bb68854f0f5dbb5c799d405c37431f6c379
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51220678"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065763"
 ---
-# <a name="profile-application-performance-in-visual-studio"></a>Visual Studio でのアプリケーション パフォーマンスのプロファイリング
+# <a name="measure-application-performance-by-analyzing-cpu-usage"></a>CPU 使用率を分析することでアプリケーションのパフォーマンスを測定する
 Visual Studio プロファイリング ツールを使用して、アプリケーションでパフォーマンスの問題を分析することができます。 このガイドでは、診断ツールの **[CPU 使用率]** タブを使用し、アプリのパフォーマンス データを取得する方法について説明します。 診断ツールは Visual Studio の .NET 開発 (ASP.NET を含む) とネイティブ/C++ 開発で利用できます。
   
 デバッガーが一時停止すると、**CPU 使用率**ツールは、アプリケーションで実行されている関数に関する情報を収集します。 このツールは、作業を実行していた関数を一覧表示し、サンプリング セッションの特定のセグメントに焦点を当てるために使用できるタイムライン グラフを提供します。
@@ -46,7 +46,7 @@ Windows 7 以降ではデバッガーなしでプロファイル ツールを使
 > * CPU 使用率のデータの収集
 > * CPU 使用率データの分析
   
-## <a name="step-1-collect-profiling-data"></a>手順 1: プロファイル データを収集する 
+## <a name="step-1-collect-profiling-data"></a>手順 1: プロファイリング データの収集 
   
 1.  Visual Studio でデバッグするプロジェクトを開き、CPU 使用率を調べるポイントでアプリのブレークポイントを設定します。
 
@@ -97,7 +97,7 @@ Windows 7 以降ではデバッガーなしでプロファイル ツールを使
 
      この時点で、データの分析を開始できます。
 
-## <a name="step-2-analyze-cpu-usage-data"></a>手順 2: CPU 使用率データを分析する
+## <a name="step-2-analyze-cpu-usage-data"></a>手順 2: CPU 使用率データの分析
 
 データの分析では、最初に CPU 使用率で関数の一覧を調べて最も多くの作業を行っている関数を特定し、それから個々の作業を詳しく調べることをお勧めします。
 

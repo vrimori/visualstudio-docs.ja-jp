@@ -1,5 +1,6 @@
 ---
 title: Visual Studio IDE のツアー
+titleSuffix: ''
 ms.date: 07/12/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -9,14 +10,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dbf969e6e9a37179621cad52243418a2d0536f1a
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 7864a85e676e76dda593580d58036c4429fa43c7
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42627109"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159569"
 ---
-# <a name="quickstart-first-look-at-the-visual-studio-ide"></a>クイックスタート: Visual Studio IDE の表示の紹介
+# <a name="quickstart-first-look-at-the-visual-studio-ide"></a>クイック スタート: Visual Studio IDE の表示の紹介
 
 この 5 - 10 分程度の Visual Studio 統合開発環境 (IDE) の紹介では、ウィンドウやメニューなどの UI 機能の一部を説明します。
 
@@ -105,13 +106,13 @@ Visual Studio の使用中に問題が発生した場合、または製品の改
 ユーザー インターフェイスに慣れるため、Visual Studio の機能をいくつか確認しました。 下記に従って、さらに試してみてください。
 
 > [!div class="nextstepaction"]
-> [コード エディターについて学習する](../ide/quickstart-editor.md)
+> [コード エディターについて学習する](../get-started/tutorial-editor.md)
 
 > [!div class="nextstepaction"]
-> [プロジェクトとソリューションについて学習する](../ide/quickstart-projects-solutions.md)
+> [プロジェクトとソリューションについて学習する](../get-started/tutorial-projects-solutions.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Studio IDE の概要](../ide/visual-studio-ide.md)
+- [Visual Studio IDE の概要](../get-started/visual-studio-ide.md)
 - [Visual Studio 2017 のその他の機能](../ide/advanced-feature-overview.md)
 - [テーマとフォントの色を変更する](../ide/quickstart-personalize-the-ide.md)

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テストを作成して実行する
+title: ロード テストの作成および実行
 ms.date: 10/01/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 649fe84b716355f5c7228e371fa88d80937f24af
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: a5782985406d9b2daa53c1fd6ecefb3f31cc0104
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895380"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055771"
 ---
 # <a name="walkthrough-create-and-run-a-load-test-that-contains-unit-tests"></a>チュートリアル: 単体テストを含むロード テストを作成して実行する
 
@@ -37,7 +37,7 @@ ms.locfileid: "52895380"
 
 -   ロード テストを実行します。
 
--   「[チュートリアル: マネージド コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)」に記載されている手順を実行して、いくつかの単体テストのある Web パフォーマンス テストとロード テストのプロジェクトを含む、簡単な C# クラス ライブラリを作成します。
+-   「[チュートリアル: マネージド コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)」に記載されている手順を行って、いくつかの単体テストのある Web パフォーマンスとロード テストのプロジェクトを含む、シンプルな C# クラス ライブラリを作成します。
 
 ## <a name="create-a-load-test-containing-unit-tests-using-the-new-load-test-wizard"></a>新しいロード テスト ウィザードを使用した、単体テストを含むロード テストの作成
 

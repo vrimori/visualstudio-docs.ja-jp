@@ -1,6 +1,6 @@
 ---
 title: Python コードのデバッグ
-description: ブレークポイントの設定、ステップ実行、値の検査、例外の確認、対話型ウィンドウでのデバッグなど、特に Python コードについての Visual Studio でのデバッグ機能のチュートリアルです。
+description: Visual Studio には、ブレークポイントの設定、ステップ実行、値の検査、例外の確認、対話型ウィンドウでのデバッグなど、Python コード用の高度なデバッグ機能が用意されています。
 ms.date: 10/10/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -8,15 +8,16 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 52869de661d9818252b68271c089f6b04a0b9f00
-ms.sourcegitcommit: 40b6438b5acd7e59337a382c39ec711b9e99cc8a
+ms.openlocfilehash: 0e4cc2ff43b59fff0aac70d9cc13a0a00662e209
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49101161"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068436"
 ---
 # <a name="debug-your-python-code"></a>Python コードのデバッグ
 
@@ -54,7 +55,7 @@ Visual Studio は、実行中のプロセスへのアタッチ、**ウォッチ*
 
 ブレークポイントを設定すると、マークしたポイントでコードの実行が停止するので、プログラムの状態を確認することができます。 ブレークポイントを設定するには、コード エディターの左端の余白をクリックするか、コード行を右クリックして **[ブレークポイント]** > **[ブレークポイントの挿入]** を選択します。 ブレークポイントが設定された行には赤い点が表示されます。
 
-![Visual Studio でのブレークポイント](media/debugging-breakpoints.png)
+![Visual Studio に表示されるブレークポイント](media/debugging-breakpoints.png)
 
 赤い点をクリックするか、コード行を右クリックして **[ブレークポイント]** > **[ブレークポイントの削除]** を選択すると、ブレークポイントが削除されます。 **[ブレークポイント]** > **[ブレークポイントの無効化]** コマンドを使用して、ブレークポイントを削除せずに無効にすることもできます。
 
@@ -87,27 +88,27 @@ Visual Studio は、実行中のプロセスへのアタッチ、**ウォッチ*
 
 **データヒント**を使用して値を表示するには、エディター内で変数の上にマウスを合わせます。 値をクリックして変更することができます。
 
-![デバッガーのデータヒント](media/debugging-quick-tips.png)
+![Visual Studio デバッガーに表示されるデータヒント](media/debugging-quick-tips.png)
 
 **自動変数**ウィンドウ (**[デバッグ]**  >  **[ウィンドウ]**  >  **[自動変数]**) には、現在のステートメントに近い変数と式が表示されます。 値を編集するには、値列をダブルクリックするか、値列を選択して **F2** キーを押します。
 
-![デバッガーの自動変数ウィンドウ](media/debugging-autos-window.png)
+![Visual Studio デバッガーに表示される自動変数ウィンドウ](media/debugging-autos-window.png)
 
 **ローカル** ウィンドウ (**[デバッグ]**  >  **[ウィンドウ]**  >  **[ローカル]**) には、現在のスコープ内のすべての変数が表示されます。この値も編集できます。
 
-![デバッガーのローカル ウィンドウ](media/debugging-locals-window.png)
+![Visual Studio デバッガーに表示されるローカル ウィンドウ](media/debugging-locals-window.png)
 
 **自動変数**ウィンドウと**ローカル** ウィンドウの使用方法について詳しくは、「[[自動変数] と [ローカル] ウィンドウで変数を検査](../debugger/autos-and-locals-windows.md)」を参照してください。
 
 **ウォッチ** ウィンドウ (**[デバッグ]**  >  **[ウィンドウ]**  >  **[ウォッチ]** >   **[ウォッチ 1 ～ 4]**) では、任意の Python 式を入力して結果を表示できます。 式は、ステップごとに再評価されます。
 
-![デバッガーのウォッチ ウィンドウ](media/debugging-watch-window.png)
+![Visual Studio デバッガーに表示されるウォッチ ウィンドウ](media/debugging-watch-window.png)
 
 **ウォッチ** ウィンドウの使用方法について詳しくは、「[Setting a Watch on Variables using the Watch and QuickWatch Windows](../debugger/watch-and-quickwatch-windows.md)」 (ウォッチ ウィンドウとクイック ウォッチ ウィンドウを使用して変数のウォッチ ポイントを設定する) を参照してください。
 
 文字列値 (ここでは、`str`、`unicode`、`bytes` および `bytearray` はすべて文字列と見なします) を検査する際、値の右側に虫眼鏡のアイコンが表示されます。 このアイコンをクリックすると、ポップアップ ダイアログに引用符なしの文字列値が表示されます。テキストは改行およびスクロールされるので、長い文字列の場合に便利です。 さらに、このアイコンのドロップダウン矢印を選択すると、プレーン テキスト、HTML、XML、または JSON のビジュアライザーを選択できます。
 
-![文字列のビジュアライザー](media/debugging-string-visualizers.png)
+![Visual Studio デバッガーの文字列のビジュアライザー](media/debugging-string-visualizers.png)
 
 HTML、XML、JSON のビジュアライザーは別のポップアップ ウィンドウに表示されます。構文が強調表示され、ツリー ビューで表示されます。
 
@@ -115,13 +116,13 @@ HTML、XML、JSON のビジュアライザーは別のポップアップ ウィ�
 
 プログラムのデバッグ中にエラーが発生し、そのエラーの例外ハンドラーがない場合、デバッガーは例外の発生ポイントで中断します。
 
-![例外のポップアップ](media/debugging-exception-popup.png)
+![Visual Studio デバッガーの例外のポップアップ](media/debugging-exception-popup.png)
 
 ここで、呼び出し履歴を含めたプログラムの状態を検査することができます。 ただし、コードのステップ実行を試みると、例外は、処理されるかプログラムが終了するまでスローされ続けます。
 
 **[デバッグ]**  >  **[ウィンドウ]**  >  **[例外設定]** メニュー コマンドを選択すると、ウィンドウが開き、**[Python Exceptions (Python 例外)]** を展開することができます。
 
-![例外ウィンドウ](media/debugging-exception-settings.png)
+![Visual Studio デバッガーの例外ウィンドウ](media/debugging-exception-settings.png)
 
 各例外のチェックボックスは、その例外が発生したときに "*常に*" デバッガーを中断するかどうかを制御します。 特定の例外で中断する頻度を増やすには、該当するチェックボックスをオンにします。
 
@@ -133,7 +134,7 @@ HTML、XML、JSON のビジュアライザーは別のポップアップ ウィ�
 
 既定では、デバッガーは標準的な Python ランチャーを使用してプログラムを起動します。コマンドライン引数も、特別なパスや条件も使用しません。 スタートアップ オプションはプロジェクトのデバッグ プロパティで変更することができます。デバッグ プロパティにアクセスするには、**ソリューション エクスプローラー**でプロジェクトを右クリックし、**[プロパティ]** を選択して、**[デバッグ]** タブを選択します。
 
-![プロジェクトのデバッグ プロパティ](media/debugging-project-properties.png)
+![Visual Studio デバッガーのプロジェクトのデバッグ プロパティ](media/debugging-project-properties.png)
 
 ### <a name="launch-mode-options"></a>起動モードのオプション
 

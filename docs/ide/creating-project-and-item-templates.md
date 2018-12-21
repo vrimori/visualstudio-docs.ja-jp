@@ -1,5 +1,5 @@
 ---
-title: プロジェクトとファイルの Visual Studio テンプレート
+title: プロジェクトとファイルのテンプレート
 ms.date: 01/02/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 62e51a5a03011874acc723eaf159e3f7130d1340
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 04aa647d378e956c7a2394b7c3fc2a187a7c5963
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34573259"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049284"
 ---
 # <a name="project-and-item-templates"></a>プロジェクト テンプレートと項目テンプレート
 
@@ -29,7 +29,7 @@ Visual Studio では、複数の定義済みのプロジェクト テンプレ�
 
 これらのテンプレートは、ユーザーがプロジェクトの作成を開始したり、既存プロジェクトを拡張したりするための開始点を提供します。 プロジェクト テンプレートには、特定の種類のプロジェクトで必要になるファイルが用意されており、標準のアセンブリ参照が含まれています。また、ここで既定のプロパティとコンパイラ オプションが設定されます。 項目テンプレートの複雑さは、特定のファイル拡張子を持つ 1 つの空のファイルから、スタブ コードを含む複数のソース コード ファイル、デザイナー情報ファイル、埋め込みリソースまで、さまざまです。
 
-**[新しいプロジェクト]** ダイアログ ボックスと **[新しい項目の追加]** ダイアログ ボックスでインストール済みテンプレートを使用したり、独自のテンプレートを作成したり、コミュニティで作成されたテンプレートをダウンロードして使用したりできます。 詳細については、「[方法: プロジェクト テンプレートを作成する](../ide/how-to-create-project-templates.md)」および「[方法: 項目テンプレートを作成する](../ide/how-to-create-item-templates.md)」を参照してください。
+**[新しいプロジェクト]** ダイアログ ボックスと **[新しい項目の追加]** ダイアログ ボックスでインストール済みテンプレートを使用したり、独自のテンプレートを作成したり、コミュニティで作成されたテンプレートをダウンロードして使用したりできます。 詳細については、「[方法 :プロジェクト テンプレートを作成する](../ide/how-to-create-project-templates.md)」と「[方法: 項目テンプレートを作成する](../ide/how-to-create-item-templates.md)」を参照してください。
 
 ## <a name="contents-of-a-template"></a>テンプレートの内容
 
@@ -45,7 +45,7 @@ Visual Studio では、複数の定義済みのプロジェクト テンプレ�
 
 - 項目テンプレートは、**[新しい項目の追加]** ダイアログ ボックスに表示されます。
 
-テンプレート フォルダーについては、「[方法: テンプレートを配置して整理する](../ide/how-to-locate-and-organize-project-and-item-templates.md)」を参照してください。
+テンプレート フォルダーの詳細については、「[方法:テンプレートを配置して整理する](../ide/how-to-locate-and-organize-project-and-item-templates.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

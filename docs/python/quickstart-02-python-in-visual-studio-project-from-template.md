@@ -1,22 +1,23 @@
 ---
 title: クイック スタート - テンプレートを使用して Python プロジェクトを作成する
 description: このクイック スタートでは、基本的な Flask アプリ用の組み込みテンプレートを使用し、Python 向けの Visual Studio プロジェクトを作成します。
-ms.date: 09/04/2018
+ms.date: 12/06/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: quickstart
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b9f361ba73f8fd1d3963ca39a90ac01ba9effe6f
-ms.sourcegitcommit: 9ea4b62163ad6be556e088da1e2a355f31366f39
+ms.openlocfilehash: c36fc6e10b196c3da4ba58ff047adab62345fa6f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43996003"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066026"
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>クイック スタート: Visual Studio のテンプレートから Python プロジェクトを作成する
 
@@ -76,22 +77,22 @@ ms.locfileid: "43996003"
 
 1. **[デバッグ]** > **[デバッグなしで開始]** を選択し、アプリを実行してブラウザーで `localhost:5555` を開きます。
 
-**質問: Visual Studio には他にどのような Python テンプレートがありますか。**
+**質問:Visual Studio には他にどのような Python テンプレートがありますか。**
 
-**回答**: Python ワークロードをインストールすると、Visual Studio にはさまざまなプロジェクト テンプレートが用意されます。[Flask、Bottle、Django Web フレームワーク](../python/python-web-application-project-templates.md)、Azure クラウド サービス、さまざまな機械学習シナリオのためのテンプレートなどがあります。Python アプリを含む既存のフォルダー構造からプロジェクトを作成するテンプレートまであります。 テンプレートには、**Python** 言語ノードとその子ノードを選択することで、**[ファイル]** > **[新規]** > **[プロジェクト]** ダイアログからアクセスできます。
+**回答:** Python ワークロードをインストールすると、Visual Studio にはさまざまなプロジェクト テンプレートが用意されます。[Flask、Bottle、Django Web フレームワーク](../python/python-web-application-project-templates.md)、Azure クラウド サービス、さまざまな機械学習シナリオのためのテンプレートなどがあります。Python アプリを含む既存のフォルダー構造からプロジェクトを作成するテンプレートまであります。 テンプレートには、**Python** 言語ノードとその子ノードを選択することで、**[ファイル]** > **[新規]** > **[プロジェクト]** ダイアログからアクセスできます。
 
 Visual Studio は、Python クラス、Python パッケージ、Python 単体テスト、*web.config* ファイルなどを簡単に作成するためのさまざまなファイルや "*項目テンプレート*" も備えています。 Python プロジェクトを開いているとき、**[プロジェクト]** > **[新しい項目の追加]** メニュー コマンドから項目テンプレートにアクセスできます。 [項目テンプレート](python-item-templates.md)のリファレンスを参照してください。
 
 プロジェクトを開始するときやファイルを作成するとき、テンプレートを使用すると時間が大幅に節約されます。さまざまなアプリの種類やコードの構造について学習するための優れた方法でもあります。 さまざまなテンプレートからプロジェクトや項目を数分で作成できるということは、そのように作成したものでできることを知る上で便利なことです。
 
-**質問: Cookiecutter テンプレートも使用できますか。**
+**質問:Cookiecutter テンプレートも使用できますか。**
 
-**回答:** はい。 実際のところ、Visual Studio は Cookiecutter と直接統合できます。これについては、「[クイック スタート: Cookiecutter テンプレートからプロジェクトを作成する](../python/quickstart-04-python-in-visual-studio-project-from-cookiecutter.md)」で学習できます。
+**回答:** はい。 実際のところ、Visual Studio は Cookiecutter と直接統合できます。これについては、「[クイック スタート:Cookiecutter テンプレートからプロジェクトを作成する](../python/quickstart-04-python-in-visual-studio-project-from-cookiecutter.md)」で学習できます。
 
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [チュートリアル: Visual Studio での Python の使用](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
+> [チュートリアル:Visual Studio での Python の使用](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>関連項目
 

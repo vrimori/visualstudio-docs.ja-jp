@@ -1,7 +1,7 @@
 ---
 title: Python 環境とインタープリターを管理する
 description: '[Python 環境] ウィンドウを使用して、グローバル環境、仮想環境、および conda 環境を管理し、Python インタープリターとパッケージをインストールし、環境を Visual Studio プロジェクトに割り当てます。'
-ms.date: 11/08/2018
+ms.date: 12/07/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f69178fde2a0912d39c813028385f21f6ca87d7a
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: 887776b3a3f1275b97b2abee26c4613d8aad39fc
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51349362"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063215"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio で Python 環境を作成および管理する方法
 
@@ -57,7 +57,9 @@ Visual Studio が認識した環境が **[Python 環境]** ウィンドウに表
 
 Visual Studio では、仮想環境と conda 環境 (「[環境の種類](#types-of-environments)」を参照してください) と共に、([PEP 514](https://www.python.org/dev/peps/pep-0514/) に従って) レジストリを使用してインストールされているグローバル環境が検索されます。 一覧に想定した環境が見つからない場合は、「[既存の環境を手動で識別する](#manually-identify-an-existing-environment)」を参照してください。
 
-一覧から環境を選択すると、Visual Studio の **[概要]** タブにはその環境のさまざまなプロパティとコマンドが表示されます。たとえば、上の図では、インタープリターの場所が *C:\Python36-32* であることがわかります。 以下の環境の一覧のドロップダウン リストを使用して、**Package** や **IntelliSense** など異なるタブに切り替えることができます。 これらのタブの説明は、「[[Python 環境] ウィンドウ リファレンス](python-environments-window-tab-reference.md)」でご覧いただけます。
+一覧から環境を選択すると、Visual Studio の **[概要]** タブにはその環境のさまざまなプロパティとコマンドが表示されます。たとえば、上の図では、インタープリターの場所が *C:\Python36-32* であることがわかります。 **[概要]** タブの一番下にある 4 つのコマンドを実行すると、いずれの場合も、コマンド プロンプトが開き、インタープリターが実行されます。 詳細については、[[環境] ウィンドウ タブ リファレンスの [概要]](python-environments-window-tab-reference.md#overview-tab) に関するページを参照してください。
+
+以下の環境の一覧のドロップダウン リストを使用して、**Package** や **IntelliSense** など異なるタブに切り替えることができます。 これらのタブの説明は、「[[Python 環境] ウィンドウ タブ リファレンス](python-environments-window-tab-reference.md)」でもご覧いただけます。
 
 環境を選択しても、どのプロジェクトとの関係も変わりません。 この一覧で太字で表示されている既定の環境は、Visual Studio ですべての新しいプロジェクトに使用されている環境です。 新しいプロジェクトに別の環境を使用するには、**[これを新しいプロジェクトに対する既定の環境にする]** コマンドを使用します。 プロジェクトのコンテキスト内では、特定の環境を常に選択できます。 詳細については、[プロジェクト用の環境の選択](selecting-a-python-environment-for-a-project.md)に関するページを参照してください。
 

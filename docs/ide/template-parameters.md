@@ -1,5 +1,5 @@
 ---
-title: Visual Studio のプロジェクト テンプレートと項目テンプレートのパラメーター
+title: プロジェクト テンプレートと項目テンプレートのパラメーター
 ms.date: 01/02/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 4c76eaf68f63b4f3b8a5713d0b206b395ee7c9f1
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: bd566988d7546bed72f6ae3ea2c5c6f3159054f4
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178635"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067675"
 ---
 # <a name="template-parameters"></a>テンプレート パラメーター
 
@@ -25,7 +25,7 @@ ms.locfileid: "39178635"
 
 ## <a name="declaring-and-enabling-template-parameters"></a>テンプレート パラメーターの宣言と有効化
 
-テンプレート パラメーターは、$*parameter*$ という形式で宣言されます。 例:
+テンプレート パラメーターは、$*parameter*$ という形式で宣言されます。 次に例を示します。
 
 - $safeprojectname$
 
@@ -74,7 +74,7 @@ ms.locfileid: "39178635"
 
 パラメーター置換時に使われる既定の予約済みテンプレート パラメーターの他に、独自のテンプレート パラメーターと値を指定できます。 詳細については、「[CustomParameters 要素 (Visual Studio テンプレート)](../extensibility/customparameters-element-visual-studio-templates.md)」を参照してください。
 
-## <a name="example-use-the-project-name-for-a-file-name"></a>例: ファイル名に対するプロジェクト名の使用
+## <a name="example-use-the-project-name-for-a-file-name"></a>例:ファイル名に対するプロジェクト名の使用
 
 `TargetFileName` 属性でパラメーターを使うことにより、プロジェクト項目に対して変数ファイル名を指定できます。
 
@@ -91,7 +91,7 @@ ms.locfileid: "39178635"
 </TemplateContent>
 ```
 
-## <a name="example-use-the-safe-project-name-for-the-namespace-name"></a>例: 名前空間名に対する安全なプロジェクト名の使用
+## <a name="example-use-the-safe-project-name-for-the-namespace-name"></a>例:名前空間名に対する安全なプロジェクト名の使用
 
 C# クラス ファイルの名前空間に対して安全なプロジェクト名を使うには、次の構文を使います。
 

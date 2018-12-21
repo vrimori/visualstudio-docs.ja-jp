@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Devenv コマンド ライン スイッチ
+title: Devenv コマンド ライン スイッチ
 ms.date: 02/28/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 818bbb38fab706dde2f4d36d5a534e0a351a6450
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.openlocfilehash: 3bf255a0e4eb622cb81718ddfc30d5b568bad2c2
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948895"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063397"
 ---
 # <a name="devenv-command-line-switches"></a>Devenv コマンドライン スイッチ
 
@@ -82,7 +82,7 @@ Devenv を使用すると、コマンド ラインから統合開発環境 (IDE:
 |[/Build](../../ide/reference/build-devenv-exe.md)|指定のソリューションの構成に従って、指定のソリューションまたはプロジェクトをビルドします。<br /><br /> `devenv myproj.csproj /build`|
 |[/Clean](../../ide/reference/clean-devenv-exe.md)|ビルド コマンドによって作成されたすべてのファイルを、ソース ファイルに影響を与えずに削除します。<br /><br /> `devenv myproj.csproj /clean`|
 |[/Deploy](../../ide/reference/deploy-devenv-exe.md)|ソリューションの構成に従って、ソリューションを配置に必要なファイルと共にビルドします。<br /><br /> `devenv myproj.csproj /deploy`|
-|[/Diff](../../ide/reference/diff.md)|2 つのファイルを比較します。 4 つのパラメーター、SourceFile、TargetFile、SourceDisplayName (省略可能)、および TargetDisplayName (省略可能) を受け取ります。|
+|[/Diff](../../ide/reference/diff.md)|2 つのファイルを比較します。 4 つのパラメーター、SourceFile、TargetFile、SourceDisplayName (省略可能)、TargetDisplayName (省略可能) を受け取ります。|
 |[/Out](../../ide/reference/out-devenv-exe.md)|ビルド時のエラーを受け取るファイルを指定できます。<br /><br /> `devenv myproj.csproj /build /out log.txt`|
 |[/Project](../../ide/reference/project-devenv-exe.md)|ビルド、消去、または配置するプロジェクトを指定します。 このスイッチは、/build、/rebuild、/clean、または /deploy スイッチを指定した場合にだけ使用できます。|
 |[/ProjectConfig](../../ide/reference/projectconfig-devenv-exe.md)|ビルドまたは配置するプロジェクト構成を指定します。 このスイッチは、/project スイッチを指定した場合だけに使用できます。|

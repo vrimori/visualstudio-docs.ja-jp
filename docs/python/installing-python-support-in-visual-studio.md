@@ -1,22 +1,23 @@
 ---
-title: Python サポートのインストール
+title: Python サポートをインストールする
 description: Visual Studio 2017、2015、2013、2012、2010 で Python Tools for Visual Studio (PTVS) をインストールする方法と、オプションやインストールの場所。
-ms.date: 10/09/2018
+ms.date: 12/06/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5e7479a8d121eeb518d5ba39c9eb1444af64a788
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: e306bffe8f2cd59332f367822cd90b54b44b7635
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51349022"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063756"
 ---
 # <a name="how-to-install-python-support-in-visual-studio-on-windows"></a>Windows に Visual Studio の Python サポートをインストールする方法
 
@@ -59,7 +60,7 @@ Visual Studio 用の Python サポート (Python Tools for Visual Studio (PTVS) 
 
     | オプション | 説明 |
     | --- | --- |
-    | Python ディストリビューション | 使用する予定の Python 2、Python 3、Anaconda2、および Anaconda3 ディストリビューションの 32 ビットおよび 64 ビットのバリアントを任意の組み合わせで選択します。 それぞれには、ディストリビューションのインタープリター、ランタイム、およびライブラリが含まれます。 Anaconda とは、具体的には、さまざまな事前インストール パッケージを含むオープンなデータ サイエンス プラットフォームです。 (ディストリビューションを追加または削除する場合には、Visual Studio インストーラーへはいつでも戻ることができます。)**注**: Visual Studio インストーラー以外で配布をインストールした場合、ここで対応するオプションを確認する必要はありません。 Visual Studio は、既存の Python インストールを自動的に検出します。 「[[Python 環境] ウィンドウ](managing-python-environments-in-visual-studio.md#the-python-environments-window)」を参照してください。 また、インストーラーに表示されているものよりも新しいバージョンの Python を利用できる場合は、そのバージョンを個別にインストールすれば Visual Studio によって検出されます。 |
+    | Python ディストリビューション | 使用する予定の Python 2、Python 3、Anaconda2、および Anaconda3 ディストリビューションの 32 ビットおよび 64 ビットのバリアントを任意の組み合わせで選択します。 それぞれには、ディストリビューションのインタープリター、ランタイム、およびライブラリが含まれます。 Anaconda とは、具体的には、さまざまな事前インストール パッケージを含むオープンなデータ サイエンス プラットフォームです。 (ディストリビューションを追加または削除する場合には、Visual Studio インストーラーへはいつでも戻ることができます。)**注**:Visual Studio インストーラー以外で配布をインストールした場合、ここで対応するオプションを確認する必要はありません。 Visual Studio は、既存の Python インストールを自動的に検出します。 「[[Python 環境] ウィンドウ](managing-python-environments-in-visual-studio.md#the-python-environments-window)」を参照してください。 また、インストーラーに表示されているものよりも新しいバージョンの Python を利用できる場合は、そのバージョンを個別にインストールすれば Visual Studio によって検出されます。 |
     | **Cookiecutter テンプレートのサポート** | テンプレートの検出、テンプレート オプションの入力、プロジェクトとファイルの作成を行うための Cookiecutter グラフィカル UI をインストールできます。 「[Cookiecutter 拡張機能の使用](using-python-cookiecutter-templates.md)」を参照してください。 |
     | **Python Web サポート** | HTML、CSS、および JavaScript の編集をサポートする Web 開発用ツールを、Bottle、Flask、および Django フレームワークを使用するプロジェクトのテンプレートと共にインストールします。 「[Python Web プロジェクト テンプレート](python-web-application-project-templates.md)」を参照してください。 |
     | **Python IoT サポート** | Python を使用した、Windows IoT Core 開発がサポートされます。 |
@@ -82,7 +83,7 @@ Visual Studio で Python をインストールしたか、実行したときに�
 - Visual Studio インストーラーの [**[修復]**](../install/repair-visual-studio.md) オプションを使用します。
 - Windows で **[設定]** > **[アプリと機能]** の順に選択し、Python を修復するか、再インストールします。
 
-**エラー例**: 対話プロセスを開始できない: System.ComponentModel.Win32Exception (0x80004005): Unknown error (0xc0000135) at Microsoft.PythonTools.Repl.PythonInteractiveEvaluator.d__43.MoveNext().
+**エラー例**:対話型プロセスを開始できなかった:System.ComponentModel.Win32Exception (0x80004005):Microsoft.PythonTools.Repl.PythonInteractiveEvaluator.d__43.MoveNext() で原因不明のエラー (0xc0000135)。
 
 ## <a name="visual-studio-2015"></a>Visual Studio 2015
 
@@ -100,9 +101,9 @@ Visual Studio で Python をインストールしたか、実行したときに�
 
 1. 使用している Visual Studio のバージョンに適した Python Tools for Visual Studio のバージョンをインストールします。
 
-    - Visual Studio 2013: [PTVS 2.2 for Visual Studio 2013](https://github.com/Microsoft/PTVS/releases/v2.2)。 このプロセスのショートカットが、Visual Studio 2013 の **[ファイル]** > **[新しいプロジェクト]** ダイアログにあります。
-    - Visual Studio 2012: [PTVS 2.1 for Visual Studio 2012](https://pytools.codeplex.com/downloads/get/920478)
-    - Visual Studio 2010: [PTVS 2.1 for Visual Studio 2010](https://pytools.codeplex.com/downloads/get/920479)
+    - Visual Studio 2013:[Visual Studio 2013 には PTVS 2.2](https://github.com/Microsoft/PTVS/releases/v2.2)。 このプロセスのショートカットが、Visual Studio 2013 の **[ファイル]** > **[新しいプロジェクト]** ダイアログにあります。
+    - Visual Studio 2012:[Visual Studio 2012 には PTVS 2.1](https://pytools.codeplex.com/downloads/get/920478)
+    - Visual Studio 2010:[Visual Studio 2010 には PTVS 2.1](https://pytools.codeplex.com/downloads/get/920479)
 
 1. [任意の Python インタープリターをインストールします](installing-python-interpreters.md)。 インタープリターは既にインストールされているが、Visual Studio によって自動的に検出されない場合は、「[既存の環境を手動で識別する](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)」を参照してください。
 
@@ -116,10 +117,10 @@ Visual Studio 2015 以前のインストール パスを次に示します。
 
 - 32 ビット:
   - パス: *%Program Files(x86)%\Microsoft Visual Studio \<VS_ver>\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\\<PTVS_ver>*
-  - パスのレジストリの場所: **HKEY_LOCAL_MACHINE\Software\Microsoft\PythonTools\\<VS_ver>\InstallDir**
+  - パスのレジストリの場所:**HKEY_LOCAL_MACHINE\Software\Microsoft\PythonTools\\<VS_ver>\InstallDir**
 - 64 ビット:
   - パス: *%Program Files%\Microsoft Visual Studio \<VS_ver>\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\\<PTVS_ver>*
-  - パスのレジストリの場所: **HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\PythonTools\\<VS_ver>\InstallDir**
+  - パスのレジストリの場所:**HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\PythonTools\\<VS_ver>\InstallDir**
 
 それぞれの文字について以下に説明します。
 

@@ -1,5 +1,6 @@
 ---
 title: Visual Studio Team Explorer 2017 のワークロードとコンポーネント ID
+titleSuffix: ''
 description: Visual Studio のワークロードとコンポーネント ID を使用して、あらゆる側面からテストを行う担当者向けの統合テスト ツールを提供します
 keywords: ''
 author: TerryGLee
@@ -17,12 +18,12 @@ ms.prod: visual-studio-dev15
 ms.assetid: c6ef9a3b-d13d-49b4-9faa-51fa06b21e1f
 ms.workload:
 - multiple
-ms.openlocfilehash: 57d34c8ea2c79c9d9444e553d37da353e4e3ece3
-ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
+ms.openlocfilehash: 7b54e0f73f4f0d504df3757ffc881b2282fc9471
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607446"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066107"
 ---
 # <a name="visual-studio-team-explorer-2017-component-directory"></a>Visual Studio Team Explorer 2017 のコンポーネント ディレクトリ
 
@@ -35,7 +36,7 @@ ms.locfileid: "51607446"
 * 選択した場合は、**推奨**コンポーネントと**オプション** コンポーネントもインストールできます。
 * どのワークロードにも関連付けられていない追加のコンポーネントの一覧を示したセクションも追加しました。
 
-VSIX マニフェストで依存関係を設定するときは、コンポーネント ID のみを指定する必要があります。 このページの表を使用して、コンポーネントの最小の依存関係を確認してください。 シナリオによって、1 つのワークロードの 1 つのコンポーネントだけを指定する場合もあれば、 1 つのワークロードの複数のコンポーネントを指定したり、複数のワークロードの複数のコンポーネントを指定したりする場合もあります。 詳しくは、「[How to: Migrate Extensibility Projects to Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)」 (機能拡張プロジェクトを Visual Studio 2017 に移行する方法) をご覧ください。
+VSIX マニフェストで依存関係を設定するときは、コンポーネント ID のみを指定する必要があります。 このページの表を使用して、コンポーネントの最小の依存関係を確認してください。 シナリオによって、1 つのワークロードの 1 つのコンポーネントだけを指定する場合もあれば、 1 つのワークロードの複数のコンポーネントを指定したり、複数のワークロードの複数のコンポーネントを指定したりする場合もあります。 詳細については、「[方法:機能拡張プロジェクトの Visual Studio 2017 への移行](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)に関するページを参照してください。
 
 これらの ID の使用方法の詳細については、「[Use Command-Line Parameters to Install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md)」(コマンドライン パラメーターを使用して Visual Studio 2017 をインストールする) をご覧ください。 その他の製品のワークロードとコンポーネント ID の一覧については、「[Visual Studio 2017 Workload and Component IDs](workload-and-component-ids.md)」(Visual Studio 2017 のワークロード ID とコンポーネント ID) をご覧ください。
 

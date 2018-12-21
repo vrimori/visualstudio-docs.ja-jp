@@ -8,16 +8,17 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: cae15da8b6a59587037171ae982ee77d2cce2861
-ms.sourcegitcommit: 551f13774e8bb0eb47cbd973745628a956e866aa
+ms.openlocfilehash: 083deb7b836bfae0b0c1352430ffb6ed4080c3dc
+ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49459960"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248206"
 ---
 # <a name="publishing-to-azure-app-service-on-windows"></a>Windows 上の Azure App Service への発行
 
@@ -80,7 +81,7 @@ Azure への発行には、ターゲット App Service が必要です。 この
 
 Visual Studio 2017 から Azure App Service に発行すると、プロジェクト内のファイルのみがサーバーにコピーされます。 したがって、必要なファイルを作成して、サーバー環境を構成する必要があります。
 
-1. Visual Studio の**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]、[新しい項目]* を選択します。表示されるダイアログ ボックスで、[Azure web.config (Fast CGI)] テンプレートを選択し、[OK] を選択します。 これによりプロジェクト ルートに `web.config` ファイルが作成されます。
+1. Visual Studio の**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]、[新しい項目]** の順に選択します。表示されるダイアログ ボックスで、[Azure web.config (Fast CGI)] テンプレートを選択し、[OK] を選択します。 これによりプロジェクト ルートに `web.config` ファイルが作成されます。
 
 1. `web.config` の `PythonHandler` エントリを変更して、パスがサーバー上の Python インストールと一致するようにします (詳細については、[IIS 構成リファレンス](https://www.iis.net/configreference) (iis.net) に関するページを参照してください)。 たとえば、Python 3.6.1 x64 の場合、エントリは次のように表示されます。
 
@@ -103,14 +104,14 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
         <add key="WSGI_HANDLER" value="app.wsgi_app()"/>
         ```
 
-    - **Flask**: `WSGI_HANDLER` 値を `<project_name>.app` に変更します。`<project_name>` はプロジェクトの名前に一致します。 `runserver.py` の `from <project_name> import app` ステートメントを見ると、正確な識別子が見つかります。 たとえば、プロジェクトの名前が "FlaskAzurePublishExample" の場合、エントリは次のように表示されます。
+    - **Flask**:`WSGI_HANDLER` 値を `<project_name>.app` に変更します。`<project_name>` はプロジェクトの名前に一致します。 `runserver.py` の `from <project_name> import app` ステートメントを見ると、正確な識別子が見つかります。 たとえば、プロジェクトの名前が "FlaskAzurePublishExample" の場合、エントリは次のように表示されます。
 
         ```xml
         <!-- Flask apps only: change the project name to match your app -->
         <add key="WSGI_HANDLER" value="FlaskAzurePublishExample.app"/>
         ```
 
-    - **Django**: Django プロジェクトの `web.config` には 2 つの変更が必要です。 最初に、`WSGI_HANDLER` 値を `django.core.wsgi.get_wsgi_application()` に変更します (オブジェクトは `wsgi.py` ファイル内にあります)。
+    - **Django**:Django プロジェクトの `web.config` には 2 つの変更が必要です。 最初に、`WSGI_HANDLER` 値を `django.core.wsgi.get_wsgi_application()` に変更します (オブジェクトは `wsgi.py` ファイル内にあります)。
 
         ```xml
         <!-- Django apps only -->
@@ -123,7 +124,7 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
         <add key="DJANGO_SETTINGS_MODULE" value="DjangoAzurePublishExample.settings" />
         ```
 
-1. **Django アプリのみ**: Django プロジェクトの `settings.py` ファイルで、次に示すように、'vspython-test-02.azurewebsites.net' を自分の URL と置き換えて、サイト URL ドメインを `ALLOWED_HOSTS` に追加します。
+1. **Django アプリのみ**:Django プロジェクトの `settings.py` ファイルで、次に示すように、'vspython-test-02.azurewebsites.net' を自分の URL と置き換えて、サイト URL ドメインを `ALLOWED_HOSTS` に追加します。
 
     ```python
     # Change the URL to your specific site
@@ -184,7 +185,7 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
 ## <a name="publishing-to-app-service---visual-studio-2015"></a>App Service への発行 - Visual Studio 2015
 
 > [!Note]
-> このプロセスの短いビデオについては、「[Visual Studio Python Tutorial: Building a Website](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6)」(Visual Studio Python チュートリアル: Web サイトの構築) (youtube.com、3 分 10 秒) をご覧ください。
+> このプロセスの短いビデオについては、「[Visual Studio Python tutorial: Building a website](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6)」 (Visual Studio Python チュートリアル: Web サイトの構築) (youtube.com、3 分 10 秒) をご覧ください。
 
 1. **ソリューション エクスプローラー**で、プロジェクトを右クリックして、**[発行]** を選びます。
 

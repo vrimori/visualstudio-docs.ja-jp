@@ -1,5 +1,6 @@
 ---
-title: Python の概要のチュートリアル、手順 1、プロジェクトを作成する
+title: Visual Studio での Python チュートリアル、手順 1、プロジェクトの作成
+titleSuffix: ''
 description: 前提条件や新しい Python プロジェクトの作成など、Visual Studio での Python 機能の中核となるチュートリアルの概要と手順 1。
 ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
@@ -8,15 +9,16 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2eb9871aeda7134f6d488b7efe55c5ec149677a5
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 1aaf0c0258d502693b771cad66f9347dd60f80e8
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50220083"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049854"
 ---
 # <a name="tutorial-work-with-python-in-visual-studio"></a>チュートリアル: Visual Studio での Python の使用
 
@@ -24,17 +26,17 @@ Python は、信頼性と柔軟性に優れ、簡単に学ぶことができ、�
 
 Visual Studio は、Python 言語の最上のサポートを提供しています。 このチュートリアルに従って操作すると、以下の作業を実行できます。
 
-- [手順 0: インストール](tutorial-working-with-python-in-visual-studio-step-00-installation.md)
-- [手順 1: Python プロジェクトの作成 (この記事)](#step-1-create-a-new-python-project)
-- [手順 2: 動作中の Visual Studio IntelliSense を確認するためのコードの記述と実行](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)
-- [手順 3: 対話型 REPL ウィンドウでの追加のコードの作成](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)
-- [手順 4: 完成したプログラムの Visual Studio デバッガーでの実行](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
-- [手順 5: パッケージのインストールと Python 環境の管理](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
-- [手順 6: Git の操作](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)
+- [手順 0:インストール](tutorial-working-with-python-in-visual-studio-step-00-installation.md)
+- [手順 1:Python プロジェクトの作成 (この記事)](#step-1-create-a-new-python-project)
+- [手順 2:動作中の Visual Studio IntelliSense を確認するためのコードの記述と実行](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)
+- [手順 3:対話型 REPL ウィンドウでの追加のコードの作成](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)
+- [手順 4:完成したプログラムの Visual Studio デバッガーでの実行](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
+- [手順 5:パッケージのインストールと、Python 環境の管理](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
+- [手順 6:Git の操作](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)
 
 [!INCLUDE[tutorial-prereqs](includes/tutorial-prereqs.md)]
 
-## <a name="step-1-create-a-new-python-project"></a>手順 1: 新しい Python プロジェクトの作成
+## <a name="step-1-create-a-new-python-project"></a>手順 1: 新しい Python プロジェクトを作成する
 
 *プロジェクト*とは、ソース コード、リソース、構成など、1 つのアプリケーションを生成する、1 つのまとまりとなるすべてのファイルの、Visual Studio での管理方法です。 プロジェクトでは、すべてのプロジェクト ファイル間の関係や、複数のプロジェクト間で共有されている外部リソースが形式化され、維持されます。 これにより、アドホック フォルダー、スクリプト、テキスト ファイル、またはユーザーの頭の中で単にプロジェクトの関係を管理するよりも、プロジェクトで、アプリケーションを楽に拡張し大きくすることができます。
 

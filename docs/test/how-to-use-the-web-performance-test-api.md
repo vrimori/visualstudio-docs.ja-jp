@@ -1,5 +1,5 @@
 ---
-title: Visual Studio の Web パフォーマンス テスト API
+title: Web パフォーマンス テスト API
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 1f0fc5bdc5b17c13bfb0d4adf07a4a48347ce38b
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: eacdcf65619909c052f786a8b22b61b4d48292d9
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52896459"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064499"
 ---
-# <a name="how-to-use-the-web-performance-test-api"></a>方法: Web パフォーマンス テスト API を使用する
+# <a name="how-to-use-the-web-performance-test-api"></a>方法:Web パフォーマンス テスト API を使用する
 
 Web パフォーマンス テストのコードを記述できます。 Web パフォーマンス テスト API は、コード化された Web パフォーマンス テスト、Web パフォーマンス テスト プラグイン、要求プラグイン、要求、抽出規則、検証規則を作成するために使用します。 これらの種類を構成するクラスは、この API のコア クラスです。 この API の他の種類は、<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTest> オブジェクト、<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> オブジェクト、<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin> オブジェクト、<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequest> オブジェクト、<xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule> オブジェクト、および <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> オブジェクトの作成をサポートするために使用されます。 カスタマイズされた Web パフォーマンス テストを作成するには、<xref:Microsoft.VisualStudio.TestTools.WebTesting> 名前空間を使用します。
 
@@ -29,7 +29,7 @@ Web パフォーマンス テストのコードを記述できます。 Web パ�
 > [!TIP]
 > オブジェクト ブラウザーを使用して、<xref:Microsoft.VisualStudio.TestTools.WebTesting> 名前空間を調べます。 Visual C# エディターおよび Visual Basic エディターの両方では、この名前空間のクラスを使用したコーディングの IntelliSense サポートを提供しています。
 
-ロード テスト用のプラグインを作成することもできます。 詳細については、「[方法 : ロード テスト API を使用する](../test/how-to-use-the-load-test-api.md)」および「[方法 : ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)」を参照してください。
+ロード テスト用のプラグインを作成することもできます。 詳細については、「[方法 :ロード テスト API を使用する](../test/how-to-use-the-load-test-api.md)と[方法:ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)。
 
 ## <a name="to-use-the-webtesting-namespace"></a>WebTesting 名前空間を使用するには
 
@@ -64,7 +64,7 @@ Web パフォーマンス テストのコードを記述できます。 Web パ�
 
 9. Web パフォーマンス テストを実行します。
 
-     <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> の実装例については、「[方法: Web パフォーマンス テスト プラグインを作成する](../test/how-to-create-a-web-performance-test-plug-in.md)」を参照してください。
+     たとえば、<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> の実装については、「[方法:Web パフォーマンス テスト プラグインを作成する](../test/how-to-create-a-web-performance-test-plug-in.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テスト シナリオで使用するテスト エージェントを指定する
+title: ロード テスト シナリオで使用するテスト エージェントを指定する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 1d153e3ab237e87764b8805c91f4e4c4e5512c60
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: db7c901dd081155fe7341433f700f60de415a153
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895185"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061018"
 ---
-# <a name="how-to-specify-test-agents-to-use-in-load-test-scenarios"></a>方法: ロード テスト シナリオで使用するテスト エージェントを指定する
+# <a name="how-to-specify-test-agents-to-use-in-load-test-scenarios"></a>方法:ロード テスト シナリオで使用するテスト エージェントを指定する
 
 **新しいロード テスト ウィザード**でロード テストを作成した後、**ロード テスト エディター**を使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。
 
@@ -69,6 +69,6 @@ ms.locfileid: "52895185"
 ## <a name="see-also"></a>関連項目
 
 - [ロード テスト シナリオの編集](../test/edit-load-test-scenarios.md)
-- [チュートリアル: ロード テストの作成と実行](../test/walkthrough-create-and-run-a-load-test.md)
+- [チュートリアル: ロード テストの作成および実行](../test/walkthrough-create-and-run-a-load-test.md)
 - [テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)
 - [ロード テスト シナリオのプロパティ](../test/load-test-scenario-properties.md)

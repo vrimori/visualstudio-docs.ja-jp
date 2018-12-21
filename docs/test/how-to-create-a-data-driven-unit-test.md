@@ -1,5 +1,5 @@
 ---
-title: '方法: Visual Studio でデータ ドリブン単体テストを作成する'
+title: '方法: データ ドリブン単体テストを作成する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -16,12 +16,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: a05729efcc475fa99026d99abc24d09c2511a2b7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 4806003d7a533e2f3e9523f877f6e002e8d15b5b
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49939255"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067451"
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>方法: データ ドリブン単体テストを作成する
 
@@ -126,7 +126,7 @@ DataSource 属性には 3 つのコンストラクターがあります。
 
  1 つのパラメーターを持つコンストラクターは、ソリューションの *app.config* ファイルに格納されている接続情報を使用します。 *dataSourceSettingsName* は、接続情報を指定する構成ファイル内の Xml 要素の名前です。
 
- *app.config* ファイルを使用すると、単体テスト自体に変更を加えずに、データ ソースの場所を変更できます。 *app.config* ファイルの作成と使用方法については、「[チュートリアル : データ ソースを定義するための構成ファイルの使用](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)」を参照してください。
+ *app.config* ファイルを使用すると、単体テスト自体に変更を加えずに、データ ソースの場所を変更できます。 *app.config* ファイルの作成および使用方法の詳細については、「[チュートリアル: データ ソースを定義するための構成ファイルの使用](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)」を参照してください
 
 ```csharp
 [DataSource(connectionString, tableName)]

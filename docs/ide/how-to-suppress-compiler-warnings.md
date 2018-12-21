@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でプロジェクトと NuGet パッケージのコンパイラの警告を非表示にする
+title: プロジェクトと NuGet パッケージのコンパイラの警告を非表示にする
 ms.date: 01/24/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-compile
@@ -9,16 +9,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e3a84dff28b174676ff6fe74bf5420863afcc83
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6f805ce50a94304651aca6dd1379fbbf2f5ecc7b
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31948562"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060366"
 ---
-# <a name="how-to-suppress-compiler-warnings"></a>方法: コンパイラの警告を非表示にする
+# <a name="how-to-suppress-compiler-warnings"></a>方法:コンパイラ警告の非表示
 
-1 つまたは複数の種類のコンパイラの警告を除外して、ビルド ログをまとめることができます。 たとえば、ビルド ログの詳細さを**標準**、**詳細**、または**診断**に設定したときに生成される出力の一部だけを確認できます。 詳細さについて詳しくは「[方法: ビルド ログ ファイルを表示、保存、および構成する](../ide/how-to-view-save-and-configure-build-log-files.md)」をご覧ください。
+1 つまたは複数の種類のコンパイラの警告を除外して、ビルド ログをまとめることができます。 たとえば、ビルド ログの詳細さを**標準**、**詳細**、または**診断**に設定したときに生成される出力の一部だけを確認できます。 詳細さについて詳しくは、「[方法:ビルド ログ ファイルを表示、保存、および構成する](../ide/how-to-view-save-and-configure-build-log-files.md)」をご覧ください。
 
 ## <a name="suppress-specific-warnings-for-visual-c-or-f"></a>Visual C# または F# の特定の警告を非表示にする #
 
@@ -88,7 +88,7 @@ C++ プロジェクトの特定の警告を非表示にするには、**[構成�
     ```
 
    > [!NOTE]
-   > 既定では、.NET Core プロジェクトにはビルド構成プロパティ グループは含まれません。 .NET Core プロジェクトで警告を非表示にするには、手動でビルド構成セクションをファイルに追加します。 例:
+   > 既定では、.NET Core プロジェクトにはビルド構成プロパティ グループは含まれません。 .NET Core プロジェクトで警告を非表示にするには、手動でビルド構成セクションをファイルに追加します。 次に例を示します。
    >
    > ```xml
    > <Project Sdk="Microsoft.NET.Sdk">
@@ -133,6 +133,6 @@ C++ プロジェクトの特定の警告を非表示にするには、**[構成�
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)
+- [チュートリアル: アプリケーションを構築する](../ide/walkthrough-building-an-application.md)
 - [方法: ビルド ログ ファイルを表示、保存、および構成する](../ide/how-to-view-save-and-configure-build-log-files.md)
 - [コンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)

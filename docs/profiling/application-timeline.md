@@ -1,6 +1,6 @@
 ---
-title: Visual Studio での XAML アプリのリソース消費量の分析 | Microsoft Docs
-ms.custom: H1Hack27Feb2017
+title: XAML アプリでリソース消費量を分析する
+ms.custom: seodec18
 ms.date: 11/01/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 971d8eff11d28eda884066407b03f3f6addb43ad
-ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
+ms.openlocfilehash: 32368b280faf7b87aa128865cf169c7675a58c95
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51220958"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059179"
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>リソース消費量と UI スレッド アクティビティを分析する (XAML)
 
@@ -124,7 +124,7 @@ ms.locfileid: "51220958"
   
 ## <a name="see-also"></a>関連項目
 
-- [WPF チーム ブログ: WPF アプリケーション用の新しい UI パフォーマンス分析ツール](https://blogs.msdn.microsoft.com/wpf/2015/01/16/new-ui-performance-analysis-tool-for-wpf-applications/)  
+- [WPF チーム ブログ:WPF アプリケーション用の新しい UI パフォーマンス分析ツール](https://blogs.msdn.microsoft.com/wpf/2015/01/16/new-ui-performance-analysis-tool-for-wpf-applications/)  
 - [C++、C#、または Visual Basic を使った UWP アプリのパフォーマンスのベスト プラクティス](/previous-versions/windows/apps/hh750313\(v\=win.10\))
 - [WPF アプリケーションのパフォーマンスの最適化](/dotnet/framework/wpf/advanced/optimizing-wpf-application-performance)  
 - [Visual Studio のプロファイル](../profiling/index.md)  

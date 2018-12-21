@@ -1,5 +1,6 @@
 ---
-title: チュートリアル - Visual Studio での Django の詳細情報、手順 2
+title: Visual Studio 手順 2 のビューおよびページ テンプレートでは、Django のチュートリアルについて説明します。
+titleSuffix: ''
 description: Visual Studio プロジェクトのコンテキストにおける Django の基本のチュートリアルです。具体的には、アプリの作成およびビューとテンプレートの使用に関する手順について取り上げます。
 ms.date: 11/19/2018
 ms.prod: visual-studio-dev15
@@ -8,15 +9,16 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 404df36ab28e422e081df7d7cdf4831f8c2f64a0
-ms.sourcegitcommit: f61ad0e8babec8810295f039e67629f4bdebeef0
+ms.openlocfilehash: dade4ee20aec654a32fac6904cca121c2ea726e6
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "52001283"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058546"
 ---
 # <a name="step-2-create-a-django-app-with-views-and-page-templates"></a>手順 2: ビューおよびページ テンプレートを使用して Django アプリを作成する
 
@@ -38,9 +40,9 @@ Django アプリは、特定の目的のために関連ファイルのセット�
 
 通常、Django アプリは、標準的なファイル セットから始まります。 次に示すように、Visual Studio では Django プロジェクト内にある Django アプリを初期化する項目テンプレートを提供しています。また、同様の目的を果たす統合メニュー コマンドもあります。
 
-- テンプレート: **ソリューション エクスプローラー**で、プロジェクトを右クリックして、**[追加]** > **[新しい項目]** の順に選択します。 **[新しい項目の追加]** ダイアログで、**Django 1.9 アプリ** テンプレートを選択し、**[名前]** フィールドにアプリ名を指定して、**[OK]** を選択します。
+- テンプレート: **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しい項目]** を選択します。 **[新しい項目の追加]** ダイアログで、**Django 1.9 アプリ** テンプレートを選択し、**[名前]** フィールドにアプリ名を指定して、**[OK]** を選択します。
 
-- 統合コマンド: **ソリューション エクスプローラー**で、プロジェクトを右クリックして、**[追加]** > **[Django アプリ]** の順に選択します。 このコマンドでは、名前の入力を要求して、Django 1.9 アプリを作成します。
+- 統合されたコマンド: **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[Django アプリ]** を選択します。 このコマンドでは、名前の入力を要求して、Django 1.9 アプリを作成します。
 
     ![Django アプリを追加するためのメニュー コマンド](media/django/step02-add-django-app-command.png)
 
@@ -251,9 +253,9 @@ Django ページ テンプレートは、`{{ content }}` 内と同様に、`{{` 
 
 1. ソース管理への変更をコミットし、必要に応じて[手順 2-2](#commit-to-source-control) の説明に従って、リモート リポジトリを更新します。
 
-### <a name="question-do-page-templates-have-to-be-in-a-separate-file"></a>質問: ページ テンプレートを別個のファイルにする必要はありますか。
+### <a name="question-do-page-templates-have-to-be-in-a-separate-file"></a>質問: ページ テンプレートを別のファイルにする必要はありますか。
 
-回答: 多くの場合、テンプレートは別個の HTML ファイルになっていますが、インライン テンプレートも使用できます。 ただし、マークアップとコード間の明確な分離を維持するために、別個のファイルを使用することが推奨されています。
+回答: 通常、テンプレートは別の HTML ファイルで保持されていますが、インライン テンプレートも使用できます。 ただし、マークアップとコード間の明確な分離を維持するために、別個のファイルを使用することが推奨されています。
 
 ### <a name="question-must-templates-use-the-html-file-extension"></a>質問: テンプレートには、.html ファイルの拡張子を使用する必要がありますか。
 
@@ -279,4 +281,4 @@ Django ページ テンプレートは、`{{ content }}` 内と同様に、`{{` 
 - [最初の Django アプリの作成、パート 1 - ビュー](https://docs.djangoproject.com/en/2.0/intro/tutorial01/#write-your-first-view) (docs.djangoproject.com)
 - インクルードと継承など Django テンプレートの詳細な機能について、「[The Django template language](https://docs.djangoproject.com/en/2.0/ref/templates/language/)」(Django テンプレート言語) (docs.djangoproject.com) を確認する
 - [inLearning での正規表現のトレーニング](https://www.linkedin.com/learning/topics/regular-expressions) (LinkedIn)
-- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)
+- GitHub のチュートリアルのソース コード:[Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)

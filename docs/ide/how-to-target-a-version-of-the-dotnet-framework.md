@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で .NET Framework のターゲット バージョンを指定する
+title: 対象とする .NET Framework のバージョン
 ms.date: 02/06/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -12,19 +12,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 36599475e743259d8cf09d24172a633b54b09693
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 3673d3c57a33d99c3c26dd22cd5c2b7b8959e7d6
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752308"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059471"
 ---
-# <a name="how-to-target-a-version-of-the-net-framework"></a>方法: .NET Framework のターゲット バージョンを指定する
+# <a name="how-to-target-a-version-of-the-net-framework"></a>方法:.NET Framework のバージョンをターゲットにする
 
 このドキュメントでは、プロジェクトを作成するときに特定のバージョンの .NET Framework を対象とする方法と、既存の Visual Basic、C#、または Visual F# プロジェクトの中で対象のバージョンを変更する方法を説明します。
 
 > [!IMPORTANT]
-> C++ プロジェクトのターゲット バージョンを変更する方法については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)」を参照してください。
+> C++ プロジェクトのターゲット バージョンを変更する方法については、「[方法:ターゲット フレームワークおよびプラットフォームのツールセットを変更する](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)」を参照してください。
 
 ## <a name="to-target-a-version-when-you-create-a-project"></a>プロジェクト作成時にバージョンを対象として設定するには
 
@@ -46,7 +46,7 @@ ms.locfileid: "34752308"
 
 次の手順で、Visual Basic、C#、または Visual F# プロジェクトの対象とする .NET Framework バージョンを変更できます。
 
-C++ プロジェクトのターゲット バージョンを変更する方法については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)」を参照してください。
+C++ プロジェクトのターゲット バージョンを変更する方法については、「[方法:ターゲット フレームワークおよびプラットフォームのツールセットを変更する](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)」を参照してください。
 
 1. **ソリューション エクスプローラー**で、変更するプロジェクトのショートカット メニューを開き、**[プロパティ]** を選択します。
 

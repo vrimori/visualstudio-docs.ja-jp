@@ -1,5 +1,6 @@
 ---
-title: チュートリアル - Visual Studio での Django の詳細情報、手順 6
+title: Visual Studio での Django チュートリアル手順 6、ポーリング プロジェクト テンプレート
+titleSuffix: ''
 description: Visual Studio プロジェクトのコンテキストにおける Django の基本のチュートリアルです。具体的には、管理者用のカスタマイズなど、ポーリング Django Web プロジェクト テンプレートの機能について取り上げます。
 ms.date: 11/19/2018
 ms.prod: visual-studio-dev15
@@ -8,19 +9,20 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 94c858a847e0e5029a989a6939a2094ed3792903
-ms.sourcegitcommit: f61ad0e8babec8810295f039e67629f4bdebeef0
+ms.openlocfilehash: ecc0637495b484ae06cb0f18e45ba329c7fa3407
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "52001257"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062497"
 ---
 # <a name="step-6-use-the-polls-django-web-project-template"></a>手順 6: ポーリング Django Web プロジェクト テンプレートを使用する
 
-**前の手順: [Django でユーザーを認証する](learn-django-in-visual-studio-step-05-django-authentication.md)**
+**前の手順:[Django でユーザーを認証する](learn-django-in-visual-studio-step-05-django-authentication.md)**
 
 Visual Studio の "Django Web Project" テンプレートについて理解したので、3 つ目の Django テンプレートである "ポーリング Django Web プロジェクト" について見てみましょう。これは同じコード ベースに基づいて構築されており、データベースの使用例がわかるテンプレートです。
 
@@ -35,7 +37,7 @@ Visual Studio の "Django Web Project" テンプレートについて理解し�
 
 このテンプレートを使用して作成されるプロジェクトは、Django ドキュメントの「[Writing your first Django app](https://docs.djangoproject.com/en/2.0/intro/tutorial01/)」(最初の Django アプリを作成する) チュートリアルに従った場合のプロジェクトと似ています。この Web アプリは、ユーザーが投票を表示し、投票することができるパブリック サイトと、投票を管理できる管理インターフェイスから構成されています。 以下のセクションで説明するように、"Django Web プロジェクト" テンプレートと同じ認証システムを使用し、Django モデルを実装してデータベースをより活用しています。
 
-## <a name="step-6-1-create-the-project-and-initialize-the-database"></a>手順 6-1: プロジェクトを作成し、データベースを初期化する
+## <a name="step-6-1-create-the-project-and-initialize-the-database"></a>手順 6-1:プロジェクトを作成し、データベースを初期化する
 
 1. Visual Studio で、**ソリューション エクスプローラー**に移動して、このチュートリアルで以前に作成した **LearningDjango** ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** を選択します  (または、新しいソリューションを使用する場合は、代わりに **[ファイル]** > **[新規]** > **[プロジェクト]** の順に選択します)。
 
@@ -67,7 +69,7 @@ Visual Studio の "Django Web Project" テンプレートについて理解し�
 
 前述のように、 Visual Studio で他のプロジェクト テンプレートを確認したことがある場合は、"ポーリング Django Web プロジェクト" テンプレートから作成されたプロジェクトの多くの部分は見慣れているはずです。 この記事の追加手順では、データ モデルや追加のビューなど、より重要な変更や追加についてまとめています。
 
-### <a name="question-what-does-the-django-migrate-command-do"></a>質問: [Django 移行] は何を実行するコマンドですか
+### <a name="question-what-does-the-django-migrate-command-do"></a>質問:[Django 移行] は何を実行するコマンドですか
 
 回答: **[Django 移行]** コマンドは、具体的には `manage.py migrate` コマンドを実行します。これは、以前に実行されたことがないスクリプトが *app/migrations* フォルダー内にあれば実行するコマンドです。 この例では、そのフォルダー内の *0001_initial.py* スクリプトが実行され、データベース内の必要なスキーマが設定されます。
 
@@ -75,7 +77,7 @@ Visual Studio の "Django Web Project" テンプレートについて理解し�
 
 移行は、この記事で後述する手順 6-3 で使用します。
 
-## <a name="step-6-2-understand-data-models"></a>手順 6-2: データ モデルを理解する
+## <a name="step-6-2-understand-data-models"></a>手順 6-2:データ モデルを理解する
 
 このアプリのモデルである Poll と Choice は、*app/models.py* で定義されています。 各モデルは `django.db.models.Model` から派生し、`CharField` や `IntegerField` のような `models` クラスのメソッドを使用してモデル内のフィールドを定義する Python クラスです (これらのフィールドはデータベースの列にマップされます)。
 
@@ -158,11 +160,11 @@ def seed(request):
 
 ![シードされたデータベースを使用したポーリング Django Web プロジェクト アプリ](media/django/step06-app-with-seeded-database.png)
 
-### <a name="question-is-it-possible-to-initialize-the-database-using-the-django-administrative-utility"></a>質問: Django 管理ユーティリティを使用してデータベースを初期化することはできますか
+### <a name="question-is-it-possible-to-initialize-the-database-using-the-django-administrative-utility"></a>質問:Django 管理ユーティリティを使用してデータベースを初期化することはできますか
 
-回答: はい。[django-admin loaddata コマンド](https://docs.djangoproject.com/en/1.9/ref/django-admin/#loaddata)を使用して、アプリのシード処理ページと同じタスクを実行できます。 完成した Web アプリ上で作業する場合は、2 つの方法を組み合わせて使用することができます。コマンド ラインからデータベースを初期化してから、ハードコーディングしたファイルに頼らずに他の任意の JSON に送信できる API にこのシード ページを変換するという方法です。
+回答:はい。[django-admin loaddata コマンド](https://docs.djangoproject.com/en/1.9/ref/django-admin/#loaddata)を使用して、アプリのシード処理ページと同じタスクを実行できます。 完成した Web アプリ上で作業する場合は、2 つの方法を組み合わせて使用することができます。コマンド ラインからデータベースを初期化してから、ハードコーディングしたファイルに頼らずに他の任意の JSON に送信できる API にこのシード ページを変換するという方法です。
 
-## <a name="step-6-3-use-migrations"></a>手順 6-3: 移行を使用する
+## <a name="step-6-3-use-migrations"></a>手順 6-3:移行を使用する
 
 プロジェクトの作成後に (Visual Studio のコンテキスト メニューを使用して) `manage.py makemigrations` コマンドを実行した場合、Django によってファイル *app/migrations/0001_initial.py* が作成されます。 このファイルには、初期データベース テーブルを作成するスクリプトが含まれています。
 
@@ -190,23 +192,23 @@ Django では、移行コマンドの実行時に必要な移行が適用され�
 
 全体的に見ると、Django の移行機能があれば、データベース スキーマを手動で管理する必要がないことがわかります。 モデルを変更し、移行スクリプトを生成し、移行コマンドを使用して適用するだけで済みます。
 
-### <a name="question-what-happens-if-i-forget-to-run-the-migrate-command-after-making-changes-to-models"></a>質問: モデルを変更した後で移行コマンドを実行し忘れた場合はどうなりますか
+### <a name="question-what-happens-if-i-forget-to-run-the-migrate-command-after-making-changes-to-models"></a>質問:モデルを変更した後で移行コマンドを実行し忘れた場合はどうなりますか
 
-回答: モデルがデータベースの内容と一致しない場合、実行時に適切な例外がスローされ、Django は失敗します。 たとえば、前のセクションで示したモデルの変更を移行し忘れた場合、**no such column: app_poll.author** というエラーが表示されます。
+回答:モデルがデータベースの内容と一致しない場合、実行時に適切な例外がスローされ、Django は失敗します。 たとえば、前のセクションで示したモデルの変更を移行し忘れた場合、**no such column: app_poll.author** というエラーが表示されます。
 
-![モデルの変更が移行されなかったときに表示されるエラー](media/django/step06-exception-when-forgetting-to-migrate.png)である必要があります。
+![モデルの変更が移行されなかったときに表示されるエラー](media/django/step06-exception-when-forgetting-to-migrate.png).
 
-### <a name="question-why-doesnt-solution-explorer-show-newly-generated-scripts-after-running-django-make-migrations"></a>質問: [Django で移行を実行する] を実行した後、ソリューション エクスプローラーに新しく生成されたスクリプトが表示されないのはなぜですか
+### <a name="question-why-doesnt-solution-explorer-show-newly-generated-scripts-after-running-django-make-migrations"></a>質問:[Django で移行を実行する] を実行した後、ソリューション エクスプローラーに新しく生成されたスクリプトが表示されないのはなぜですか
 
-回答: 新しく生成されたスクリプトは *app/migrations* フォルダーにあり、**[Django 移行]** コマンドを実行すると適用されますが、Visual Studio プロジェクトに追加されていないので、自動的には**ソリューション エクスプローラー**に表示されません。 表示するには、まず **[プロジェクト]** > **[すべてのファイルを表示]** メニュー コマンドまたは次の図で示されているツール バーのボタンを選択します。 このコマンドを実行すると、**ソリューション エクスプローラー**にプロジェクト フォルダー内のすべてのファイルが表示されます。そのプロジェクトに追加されていない項目には、輪郭が点線のアイコンが使用されます。 追加するファイルを右クリックし、**[プロジェクトに含める]** を選択します。こうすると、次回のコミットでソース管理にも含まれます。
+回答:新しく生成されたスクリプトは *app/migrations* フォルダーにあり、**[Django 移行]** コマンドを実行すると適用されますが、Visual Studio プロジェクトに追加されていないので、自動的には**ソリューション エクスプローラー**に表示されません。 表示するには、まず **[プロジェクト]** > **[すべてのファイルを表示]** メニュー コマンドまたは次の図で示されているツール バーのボタンを選択します。 このコマンドを実行すると、**ソリューション エクスプローラー**にプロジェクト フォルダー内のすべてのファイルが表示されます。そのプロジェクトに追加されていない項目には、輪郭が点線のアイコンが使用されます。 追加するファイルを右クリックし、**[プロジェクトに含める]** を選択します。こうすると、次回のコミットでソース管理にも含まれます。
 
 ![ソリューション エクスプローラーの [プロジェクトに含める] コマンド](media/django/step06-include-migrations-script-in-project.png)
 
-### <a name="question-can-i-see-what-migrations-would-be-applied-before-running-the-migrate-command"></a>質問: 移行コマンドを実行する前に、どのような移行が適用されるかを確認できますか
+### <a name="question-can-i-see-what-migrations-would-be-applied-before-running-the-migrate-command"></a>質問:移行コマンドを実行する前に、どのような移行が適用されるかを確認できますか
 
-回答: はい。[django-admin showmigrations コマンド](https://docs.djangoproject.com/en/2.0/ref/django-admin/#showmigrations)を使用してください。
+回答:はい。[django-admin showmigrations コマンド](https://docs.djangoproject.com/en/2.0/ref/django-admin/#showmigrations)を使用してください。
 
-## <a name="step-6-4-understand-the-views-and-page-templates-created-by-the-project-template"></a>手順 6-4: プロジェクト テンプレートによって作成されたビューとページ テンプレートを理解する
+## <a name="step-6-4-understand-the-views-and-page-templates-created-by-the-project-template"></a>手順 6-4:プロジェクト テンプレートによって作成されたビューとページ テンプレートを理解する
 
 "ポーリング Django Web プロジェクト" テンプレートで生成されるビュー ([詳細] ページや [連絡先] ページのビューなど) のほとんどは、このチュートリアルで使用した "Django Web プロジェクト" テンプレートによって作成されるビューとよく似ています。 ポーリング アプリの違いは、ホーム ページでモデルを利用している点と、投票を実行し、投票結果を表示するためのページがいくつか追加されている点です。
 
@@ -321,7 +323,7 @@ def vote(request, poll_id):
 
 この例では、ビューには他のページのような固有の対応するテンプレートがありません。 代わりに、選択された投票を検証し、(誰かが "vote/1a2b3c" のような URL を入力した場合に備えて) 投票が存在しない場合に 404 を表示します。 次に、投票した選択肢がその投票で有効であることを確認します。 有効でない場合、`except` ブロックはエラー メッセージが記載された詳細ページを改めて表示します。 選択肢が有効な場合、ビューに投票が集計され、結果ページにリダイレクトされます。
 
-## <a name="step-6-5-create-a-custom-administration-interface"></a>手順 6-5: カスタム管理インターフェイスを作成する
+## <a name="step-6-5-create-a-custom-administration-interface"></a>手順 6-5:カスタム管理インターフェイスを作成する
 
 "ポーリング Django Web プロジェクト" テンプレートの最後の部分は、この記事の手順 6-1 で説明したように、既定の Django 管理インターフェイスのカスタム拡張です。 ユーザーとグループの管理用に既定のインターフェイスが用意されていますが、それ以上の機能はありません。 ポーリング プロジェクト テンプレートでは、投票も管理できる機能を追加しています。
 
@@ -362,7 +364,7 @@ admin.site.register(Poll, PollAdmin)
 ## <a name="next-steps"></a>次の手順
 
 > [!Note]
-> このチュートリアルの途中で Visual Studio ソリューションをソース コード管理にコミットした場合は、もう 1 つのコミットを実行することをお勧めします。 ソリューションは、GitHub [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django) のチュートリアル ソース コードと一致するようにします。
+> このチュートリアルの途中で Visual Studio ソリューションをソース コード管理にコミットした場合は、もう 1 つのコミットを実行することをお勧めします。 ソリューションは、GitHub ([Microsoft/python-sample-vs-learn-django](https://github.com/Microsoft/python-sample-vs-learning-django)) のチュートリアル ソース コードと一致するようにします。
 
 Visual Studio で "空の Django Web プロジェクト"、"Django Web プロジェクト"、"ポーリング Django Web プロジェクト" の各テンプレートを全体的に確認しました。 ビューとテンプレートの使用方法など、Django のすべての基本を学習し、ルーティング、認証、データベース モデルの使用方法を確認しました。 これで、必要なビューとモデルがある独自の Web アプリを作成できるようになったはずです。
 

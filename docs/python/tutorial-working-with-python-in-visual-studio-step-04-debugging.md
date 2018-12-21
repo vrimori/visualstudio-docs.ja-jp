@@ -1,5 +1,6 @@
 ---
-title: Python の概要のチュートリアル、手順 4、デバッグ
+title: Visual Studio の Python のチュートリアルの手順 4、デバッグ
+titleSuffix: ''
 description: Visual Studio での Python 機能の中核となるチュートリアルの手順 4 では、デバッガーで Python コードを実行する方法について説明します。
 ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
@@ -8,19 +9,20 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 312db1642fac00cb122aee5cf8c4309675520b5e
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 5facce6eff378586ece01b5774089e76058615f9
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50220135"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060421"
 ---
 # <a name="step-4-run-code-in-the-debugger"></a>手順 4: デバッガーでコードを実行する
 
-**前の手順: [対話型 REPL ウィンドウを使用する](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)**
+**前の手順:[対話型 REPL ウィンドウを使用する](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)**
 
 Visual Studio は、プロジェクト管理、豊富な編集機能、**対話型**ウィンドウに加え、Python コードの完全なデバッグ機能も提供しています。 デバッガーでは、ループのすべてのイテレーションを含め、コードをステップ実行できます。 また、特定の条件に当てはまるとき、プログラムを一時停止することもできます。 デバッガーによって任意の時点でプログラムが一時停止された場合、プログラム全体の状態を確認して変数の値を変更できます。 そのような操作は、プログラムのバグを追跡するために必須です。また、プログラムの正確なフローを理解するのに、非常に便利です。
 

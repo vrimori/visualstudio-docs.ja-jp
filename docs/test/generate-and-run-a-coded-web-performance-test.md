@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのコード化された Web パフォーマンス テスト
+title: コード化された Web パフォーマンス テスト
 ms.date: 10/03/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 76b2e7eebf66bb4a9c2564ca30a72a7b17dbdcfc
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 8a4e1ea45b8fe3ae0e33064973fcf1bc3517598e
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895510"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067843"
 ---
 # <a name="generate-and-run-a-coded-web-performance-test"></a>コード化された Web パフォーマンス テストの生成と実行
 
@@ -86,17 +86,17 @@ Web パフォーマンス テストは、Web アプリ内を移動すること�
 
 ## <a name="qa"></a>Q&A
 
-### <a name="q-can-i-run-more-than-one-test-at-a-time"></a>Q: 同時に複数のテストを実行できますか。
+### <a name="q-can-i-run-more-than-one-test-at-a-time"></a>Q:同時に複数のテストを実行できますか。
  **A:** はい。**ソリューション エクスプローラー**でコンテキスト メニューを使用してください。
 
-### <a name="q-should-i-add-a-data-source-before-or-after-i-generate-a-coded-test"></a>Q: データ ソースは、コード化されたテストを生成する前か後のどちらに追加すべきでしょうか。
- **A:** [データ ソース](../test/add-a-data-source-to-a-web-performance-test.md)は、コード化されたテストを生成する前に追加する方が簡単です。こうすると、コードが自動的に生成されます。
+### <a name="q-should-i-add-a-data-source-before-or-after-i-generate-a-coded-test"></a>Q:データ ソースは、コード化されたテストを生成する前か後のどちらに追加すべきでしょうか。
+ **A:**[データ ソース](../test/add-a-data-source-to-a-web-performance-test.md)は、コード化されたテストを生成する前に追加する方が簡単です。こうすると、コードが自動的に生成されます。
 
  データ ソースが含まれるコード化されたテストを実行すると、次のエラー メッセージが表示されることがあります。
 
- **エージェント \<コンピューター名> でテスト \<テスト名> を実行できません: オブジェクト参照がオブジェクトのインスタンスに設定されていません。**
+ **Could not run test \<Test Name> on agent \<Computer Name>: (エージェント <Computer Name> 上でテスト <Test Name> を実行できませんでした:)オブジェクト参照がオブジェクトのインスタンスに設定されていません。**
 
  これは、テスト クラスに対して DataSourceAttribute が定義されていても、対応する DataBindingAttribute がない場合に発生します。 このエラーを解決するには、適切な DataBindingAttribute を追加して削除するか、コード内でコメント アウトします。
 
-### <a name="q-should-i-add-validation-and-extraction-rules-before-or-after-i-generate-a-coded-test"></a>Q: 検証規則および抽出規則は、コード化されたテストを生成する前か後のどちらに追加すべきでしょうか。
+### <a name="q-should-i-add-validation-and-extraction-rules-before-or-after-i-generate-a-coded-test"></a>Q:検証規則および抽出規則は、コード化されたテストを生成する前か後のどちらに追加すべきでしょうか。
  **A:** 検証規則および抽出規則は、コード化されたテストを生成する前に追加する方が簡単です。ただし検証目的の場合は[コード化された UI テスト](../test/use-ui-automation-to-test-your-code.md)を使用することをお勧めします。

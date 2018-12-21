@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのコンパイルとビルド
+title: コンパイルとビルド
 ms.date: 07/14/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-compile
@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d2ad9e3e6644f3f0ffc2d4fbf163968f16065f3
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: 7681ad9cd109dbc8da266721d9d8382d3552eda6
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51349134"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062594"
 ---
 # <a name="compile-and-build-in-visual-studio"></a>Visual Studio でのコンパイルとビルド
 
@@ -26,7 +26,7 @@ ms.locfileid: "51349134"
 
 コードを何度もビルドすることによって、構文の誤り、キーワードのスペルミス、型の不一致などのコンパイル時エラーをすばやく特定できます。 また、コードのデバッグ バージョンをビルドして実行することにより、ロジック エラーやセマンティック エラーなどの実行時エラーを検出して修正できます。
 
-ビルドの成功とは、アプリケーションのソース コードの構文が正しいことと、ライブラリやアセンブリなどのコンポーネントへの静的参照をすべて解決できることの確認です。 アプリケーション実行可能ファイルが生成されます。[デバッグ環境](../debugger/index.md)だけでなく、手動と自動のさまざまなテストを通して[コードの品質を検証](../test/improve-code-quality.md)して、正しく機能することをテストできます。 アプリケーションのテストが完了したら、リリース バージョンをコンパイルしてユーザーにリリースします。 このプロセスの入門資料については、「[チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)」を参照してください。
+ビルドの成功とは、アプリケーションのソース コードの構文が正しいことと、ライブラリやアセンブリなどのコンポーネントへの静的参照をすべて解決できることの確認です。 アプリケーション実行可能ファイルが生成されます。[デバッグ環境](../debugger/index.md)だけでなく、手動と自動のさまざまなテストを通して[コードの品質を検証](../test/improve-code-quality.md)して、正しく機能することをテストできます。 アプリケーションのテストが完了したら、リリース バージョンをコンパイルしてユーザーにリリースします。 このプロセスの入門資料については、「[チュートリアル:アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)」を参照してください。
 
 Visual Studio IDE、MSBuild コマンド ライン ツール、Azure Pipelines のいずれかの方法を使用して、アプリケーションをビルドすることができます。
 
@@ -45,7 +45,7 @@ Visual Studio IDE、MSBuild コマンド ライン ツール、Azure Pipelines �
 
 Visual Studio でプロジェクトを作成すると、そのプロジェクトとプロジェクトが属するソリューションのための、既定のビルド構成が作成されます。  この構成は、ソリューションとプロジェクトをどのようにビルドして配置するかを定義するものです。 このうち、プロジェクト構成はターゲット プラットフォーム (たとえば Windows または Linux) とビルドの種類 (たとえばデバッグまたはリリース) ごとに固有です。 これらの構成は自由に編集でき、必要に応じて独自の構成を作成することもできます。
 
-IDE の中でのビルド方法の入門資料については、「[チュートリアル: アプリケーションをビルドする](walkthrough-building-an-application.md)」を参照してください。
+IDE の中でのビルド方法の入門資料については、「[チュートリアル:アプリケーションをビルドする](walkthrough-building-an-application.md)」を参照してください。
 
 次に、「[Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](building-and-cleaning-projects-and-solutions-in-visual-studio.md)」を参照して、このプロセスに関してどのようなカスタマイズが可能かを把握してください。 カスタマイズの例としては、[出力ディレクトリの変更](how-to-change-the-build-output-directory.md)、[カスタム ビルド イベントの指定](specifying-custom-build-events-in-visual-studio.md)、[プロジェクト依存関係の管理](how-to-create-and-remove-project-dependencies.md)、[ビルド ログ ファイルの管理](how-to-view-save-and-configure-build-log-files.md)、[コンパイラ警告の抑制](how-to-suppress-compiler-warnings.md)などがあります。
 

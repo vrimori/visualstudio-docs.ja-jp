@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でフィールド、プロパティ、またはローカル変数を生成する
+title: フィールド、プロパティ、ローカル変数の生成
 ms.date: 01/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 60472c83738351ebc46a96e9d53bc4ae3015c514
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: d3cd886e4ed08bbe4dbeea1b177dc4dd22502d99
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51296230"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064035"
 ---
 # <a name="generate-a-field-property-or-local-variable-in-visual-studio"></a>Visual Studio でフィールド、プロパティ、またはローカル変数を生成する
 
@@ -24,7 +24,7 @@ ms.locfileid: "51296230"
 
 - Visual Basic
 
-**機能:** まだ宣言されていないフィールド、プロパティ、またはローカルのコードをすぐに生成できます。
+**概要:** まだ宣言されていないフィールド、プロパティ、またはローカルのコードをすぐに生成できます。
 
 **条件:** 入力中に新しいフィールド、プロパティ、またはローカルを導入して、自動的に適切に宣言したいとき。
 

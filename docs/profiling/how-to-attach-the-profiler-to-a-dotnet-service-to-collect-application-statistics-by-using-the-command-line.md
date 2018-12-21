@@ -1,6 +1,6 @@
 ---
-title: '方法: コマンド ラインを使用してプロファイラーを .NET サービスにアタッチし、アプリケーションの統計情報を収集する | Microsoft Docs'
-ms.custom: ''
+title: プロファイラーを .NET サービスにアタッチし、アプリケーションの統計情報を収集する
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5202e84c4ca5d1d42ec6987f59cd60dd98a0582b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 7347824b56a6bcf4a12f8f8bd8bf4d5389280d1b
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49934963"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067506"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-application-statistics-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーを .NET サービスにアタッチし、アプリケーションの統計情報を収集する
 この記事では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイル ツールのコマンド ライン ツールを使用して、プロファイラーを .NET Framework サービスにアタッチし、サンプリング メソッドによってパフォーマンスに関する統計情報を収集する方法について説明します。  
@@ -116,7 +116,7 @@ ms.locfileid: "49934963"
 
     -   サービスを停止します。  
 
-         - または -  
+         または  
 
     -   **VSPerfCmd /detach** と入力します  
 

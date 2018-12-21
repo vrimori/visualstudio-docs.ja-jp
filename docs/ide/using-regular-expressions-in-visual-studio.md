@@ -1,5 +1,5 @@
 ---
-title: Visual Studio での正規表現の使用
+title: '[正規表現を使用する]'
 ms.date: 03/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -18,12 +18,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bef854fd04ce8ac2ddf6fe834b3bede0f371eefe
-ms.sourcegitcommit: 12d6398c02e818de4fbcb4371bae9e5db6cf9509
+ms.openlocfilehash: 40983e4180db9530983217d581b898806dd85d27
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050301"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063799"
 ---
 # <a name="use-regular-expressions-in-visual-studio"></a>Visual Studio での正規表現の使用
 
@@ -41,7 +41,7 @@ Visual Studio は、テキストの検索と置換をするときに、[.NET Fra
 
 |目的|正規表現|例|
 |-------------|----------------|-------------|
-|(改行を除く) 任意の 1 文字に一致します。|である必要があります。|`a.o` は、"around" の "aro" および "about" の "abo" には一致しますが、"across" の "acro" には一致しません。|
+|(改行を除く) 任意の 1 文字に一致します。|.|`a.o` は、"around" の "aro" および "about" の "abo" には一致しますが、"across" の "acro" には一致しません。|
 |直前の正規表現の 0 回以上の繰り返しに一致します (一致する文字列の長さを最大限にします)。|*|`a*r` は、"rack" の中の "r"、"ark" の中の "ar"、"aardvark" の中の "aar" に一致します。|
 |0 回以上の任意の文字に一致します (ワイルドカード *)|.*|`c.*e` は、"racket" の中の "cke"、"comment" の中の "comme"、"code" の中の "code" に一致します。|
 |直前の正規表現の 1 回以上の繰り返しに一致します (一致する文字列の長さを最大限にします)。|+|`e.+d` は、"feeder" の中の "eed" に一致しますが、"ed" には一致しません。|

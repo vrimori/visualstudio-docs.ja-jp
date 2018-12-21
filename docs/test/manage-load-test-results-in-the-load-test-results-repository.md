@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テスト結果の管理
+title: ロード テストの結果の管理
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: fc0dff5f9e2c647d153cf1c38bb33802b47151d6
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 0b2d030f375f67608fc6cf34ae108fed2ba54f5d
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895458"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067117"
 ---
 # <a name="manage-load-test-results-in-the-load-test-results-repository"></a>ロード テストの結果リポジトリ内のロード テスト結果の管理
 
@@ -47,10 +47,10 @@ Visual Studio Enterprise には、テクノロジに基づいて一般的なパ�
 
 |[タスク]|関連するトピック|
 |-|-----------------------|
-|**ロード テストの結果リポジトリの設定:** SQL データベースに、ロード テストの結果リポジトリを設定できます。 **注:**  ロード テスト リポジトリは、テスト コントローラーをインストールするときに作成することもできます。 詳細については、「[テスト エージェントをインストールして構成する](../test/lab-management/install-configure-test-agents.md)」を参照してください。||
-|**結果リポジトリの選択と表示:** 特定の結果リポジトリを選択できます。 結果ストアはローカルの結果ストアに限定されていません。 多くの場合、ロード テストは複数のリモート エージェント コンピューターで実行されます。 エージェントまたはローカル コンピューターからのテスト結果は、ロード テストの結果ストアを作成した SQL サーバーのいずれかに保存できます。 いずれの場合も、**[テスト コントローラーの管理]** ウィンドウを使用して、ロード テストの結果を保存する場所を指定する必要があります。|-   [方法 : ロード テストの結果リポジトリを選択する](../test/how-to-select-a-load-test-results-repository.md)<br />-   [方法 : ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)|
-|**リポジトリからロード テストの結果を削除:** **[ロード テストの結果を開いて管理]** ダイアログ ボックスを使用して、**ロード テスト エディター**からロード テストの結果を削除できます。|-   [方法: ロード テスト結果をリポジトリから削除する](../test/how-to-delete-load-test-results-from-a-repository.md)|
-|**リポジトリへの結果のインポートおよびリポジトリからの結果のエクスポート:** **ロード テスト エディター**で、ロード テストの結果をインポートおよびエクスポートすることができます。|-   [方法: ロード テスト結果をリポジトリにインポートする](../test/how-to-import-load-test-results-into-a-repository.md)<br />-   [方法: ロード テスト結果をリポジトリからエクスポートする](../test/how-to-export-load-test-results-from-a-repository.md)|
+|**ロード テストの結果リポジトリを設定する:** SQL データベース上にロード テストの結果リポジトリを設定できます。 **注:** ロード テスト リポジトリはテスト コントローラーをインストールするときに作成することもできます。 詳細については、[テスト エージェントのインストールと構成](../test/lab-management/install-configure-test-agents.md)に関するページを参照してください。||
+|**結果リポジトリの選択と表示:** 特定の結果リポジトリを選択できます。 結果ストアはローカルの結果ストアに限定されていません。 多くの場合、ロード テストは複数のリモート エージェント コンピューターで実行されます。 エージェントまたはローカル コンピューターからのテスト結果は、ロード テストの結果ストアを作成した SQL サーバーのいずれかに保存できます。 いずれの場合も、**[テスト コントローラーの管理]** ウィンドウを使用して、ロード テストの結果を保存する場所を指定する必要があります。|-   [方法: ロード テストの結果リポジトリを選択する](../test/how-to-select-a-load-test-results-repository.md)<br />-   [方法: ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)|
+|**ロード テストの結果をリポジトリから削除する:** ロード テストの結果を**ロード テスト エディター**から削除するには、**[ロード テストの結果を開いて管理]** ダイアログ ボックスを使用します。|-   [方法: ロード テスト結果をリポジトリから削除する](../test/how-to-delete-load-test-results-from-a-repository.md)|
+|**エクスポート結果をリポジトリにインポートする:** ロード テストの結果は、**ロード テスト エディター**からインポートおよびエクスポートできます。|-   [方法: ロード テスト結果をリポジトリにインポートする](../test/how-to-import-load-test-results-into-a-repository.md)<br />-   [方法: ロード テスト結果をリポジトリからエクスポートする](../test/how-to-export-load-test-results-from-a-repository.md)|
 
 ## <a name="related-tasks"></a>関連するタスク
 
@@ -61,4 +61,4 @@ Visual Studio Enterprise には、テクノロジに基づいて一般的なパ�
 ## <a name="see-also"></a>関連項目
 
 - [ロード テストの結果の分析](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
-- [方法 : ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)
+- [方法: ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : Visual Studio でロード テストの結果リポジトリを選択する'
+title: 方法:ロード テストの結果リポジトリを選択する
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,14 +17,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 6c3627b55fa7b4b60193d31fc96be803301ce4c9
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 169020d61cee1ae109a302eede0a9beb133fe82f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895653"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059974"
 ---
-# <a name="how-to-select-a-load-test-results-repository"></a>方法 : ロード テストの結果リポジトリを選択する
+# <a name="how-to-select-a-load-test-results-repository"></a>方法:ロード テストの結果リポジトリを選択する
 
 結果ストアはローカルの結果ストアに限定されていません。 多くの場合、ロード テストは複数のリモート エージェント コンピューターで実行されます。 エージェントをコントローラーと共に使用すると、単一のコンピューターを使用した場合と比較して、よりシミュレートされたロードを生成できます。 詳細については、「[テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)」を参照してください。
 

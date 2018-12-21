@@ -1,5 +1,5 @@
 ---
-title: Visual Studio での UWP アプリ用の単体テストの作成および実行
+title: UWP アプリに対する単体テストの作成と実行
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -14,12 +14,12 @@ manager: douge
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: d4640616b12a07c475503d45f9297c1bbf663f91
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 66a107fbd738bc26fdf608223ff43f958754e3ae
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44284121"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065301"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-uwp-apps"></a>チュートリアル: UWP アプリ用の単体テストの作成および実行
 

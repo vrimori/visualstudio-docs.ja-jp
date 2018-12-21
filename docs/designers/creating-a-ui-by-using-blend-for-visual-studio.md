@@ -1,5 +1,6 @@
 ---
-title: Blend for Visual Studio を使用して UI を作成する
+title: UI の作成 - Blend for Visual Studio
+titleSuffix: ''
 ms.date: 07/17/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
@@ -11,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0cd1d8ab718575977e9f65ed55bfc6c3185d1642
-ms.sourcegitcommit: 522ba712c0d625e51352506146b0556414681964
+ms.openlocfilehash: 76743674ef4e92f2ad52be108c1dafb8d942676c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37890144"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059867"
 ---
 # <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>Blend for Visual Studio を使用して UI を作成する
 
@@ -46,7 +47,7 @@ Blend for Visual Studio の **[ツール]** パネルは、アプリケーショ
 |![アセット ツール](../designers/media/b1_5.png)|**アセット ツール** **[アセット]** パネルにアクセスし、ライブラリから最近使用したアセットを表示します。|![吹き出し E](../designers/media/b5_label_e.png)|**テキスト コントロール**|
 |||![吹き出し F](../designers/media/b5_label_f.png)|**コモン コントロール**|
 
-**短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [ツール バー](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4)。
+**短いビデオを見る:**![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [ツール バー](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4)。
 
 ## <a name="tour-of-the-assets-panel"></a>[アセット] パネルのツアー
 
@@ -115,7 +116,7 @@ Blend for Visual Studio の **[ツール]** パネルは、アプリケーショ
 |![吹き出し 16](../designers/media/b5_label_16.png)|**グラデーション スライダー** グラデーション ブラシが選択されている場合にのみ表示されます。|
 |![詳細設定プロパティの表示](../designers/media/d50027a1-6824-4ad8-8b4e-558b0756dcf8.png)|**詳細設定プロパティの表示** 使用頻度が低いプロパティのカテゴリを表示します。|
 
-**短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [[プロパティ] パネル](https://www.youtube.com/watch?v=HCqQfiobdag&list=PLBDF977B2F1DAB358&index=7)。
+**短いビデオを見る:**![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [[プロパティ] パネル](https://www.youtube.com/watch?v=HCqQfiobdag&list=PLBDF977B2F1DAB358&index=7)。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テスト用のしきい値規則を追加する
+title: ロード テスト用のしきい値規則を追加する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: cddc0b9ca470fa43b00ec08b3b6316704df41e91
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: ac4b542c7f9b557ad04ead05422f8c89cd4f909c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52896329"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063371"
 ---
-# <a name="how-to-add-a-threshold-rule-using-the-load-test-editor"></a>方法: ロード テスト エディターを使用してしきい値規則を追加する
+# <a name="how-to-add-a-threshold-rule-using-the-load-test-editor"></a>方法:ロード テスト エディターを使用してしきい値規則を追加する
 
 ロード テストのしきい値規則は、パフォーマンス カウンターの値を定数値または別のパフォーマンス カウンターの値と比較します。
 
@@ -38,7 +38,7 @@ ms.locfileid: "52896329"
 
      **[しきい値規則の追加]** ダイアログ ボックスが表示されます。
 
-5.  **[定数の比較]** および **[カウンターの比較]** の 2 種類の規則から選択します。 適切な種類を選択し、値を設定します。
+5.  2 種類の規則、**定数の比較**と**カウンターの比較**のいずれかを選択できます。 適切な種類を選択し、値を設定します。
 
     > [!NOTE]
     > **[しきい値を超えたときに警告]** プロパティは、しきい値を上回ると問題であることを示す場合は **True** に、しきい値を下回ると問題であることを示す場合は **False** に設定します。

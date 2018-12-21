@@ -1,8 +1,10 @@
 ---
 title: Visual Studio インスタンスの検出および管理用のツール
+titleSuffix: ''
 description: クライアント コンピューター上の Visual Studio のインストールを検出して管理するために使用できるツールについて説明します。
 ms.date: 08/14/2017
 ms.technology: vs-acquisition
+ms.custom: seodec18
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 160d0f283542445335496e3cbb7b98955df02b05
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 909ea85a68652467e3288e1e3f8f8e2d4e0df5b7
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50672614"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53158568"
 ---
 # <a name="tools-for-detecting-and-managing-visual-studio-instances"></a>Visual Studio インスタンスの検出および管理用のツール
 
@@ -30,8 +32,8 @@ ms.locfileid: "50672614"
 クライアント コンピューターにインストールされている Visual Studio インスタンスを検出して管理するために役立つ複数のツールが用意されています。
 
 * [VSWhere](https://github.com/microsoft/vswhere): Visual Studio に組み込まれているか、個別のディストリビューションで使用可能な実行可能ファイルです。特定のコンピューター上のすべての Visual Studio インスタンスの場所を見つけるのに役立ちます。
-* [VSSetup.PowerShell](https://github.com/microsoft/vssetup.powershell): セットアップ構成 API を使用して Visual Studio のインストール済みインスタンスを識別する PowerShell スクリプトです。
-* [VS-Setup-Samples](https://github.com/microsoft/vs-setup-samples): セットアップ構成 API を使用して既存のインストールを照会する方法を示す C# と C++ のサンプルです。
+* [VSSetup.PowerShell](https://github.com/microsoft/vssetup.powershell):セットアップ構成 API を使用して Visual Studio のインストール済みインスタンスを識別する PowerShell スクリプトです。
+* [VS-Setup-Samples](https://github.com/microsoft/vs-setup-samples):セットアップ構成 API を使用して既存のインストールを照会する方法を示す C# と C++ のサンプルです。
 
 さらに、[セットアップ構成 API](<xref:Microsoft.VisualStudio.Setup.Configuration>) は、Visual Studio インスタンスを問い合わせるために独自のユーティリティを構築する開発者向けのインターフェイスを提供します。
 
@@ -46,7 +48,6 @@ C:\Program Files (x86)\Microsoft Visual Studio\Installer> vswhere.exe -legacy -p
 >[!TIP]
 >Visual Studio 2017 のインストールの詳細については、[Heath Stewart のブログ記事](https://blogs.msdn.microsoft.com/heaths/tag/vs2017/)を参照してください。
 
-
 ## <a name="editing-the-registry-for-a-visual-studio-instance"></a>Visual Studio インスタンスのレジストリの編集
 
 Visual Studio 2017 ではレジストリ設定はプライベートな場所に保存されているため、同じバージョンの Visual Studio の複数のインスタンスを side-by-side で同じコンピューターで使用できます。
@@ -56,7 +57,7 @@ Visual Studio 2017 ではレジストリ設定はプライベートな場所に�
 1. Visual Studio 2017 で開いているインスタンスがある場合は、閉じてください。
 2. `regedit.exe` を起動します。
 3. `HKEY_LOCAL_MACHINE` ノードを選択します。
-4. レジストリ エディターのメイン メニューから **[ファイル] -> [ハイブの読み込み...]** を選択して、**AppData\Local** フォルダーに保存されているプライベート レジストリ ファイルを選択します。 例:
+4. レジストリ エディターのメイン メニューから **[ファイル] -> [ハイブの読み込み...]** を選択して、**AppData\Local** フォルダーに保存されているプライベート レジストリ ファイルを選択します。 次に例を示します。
    ```
    %localappdata%\Microsoft\VisualStudio\<config>\privateregistry.bin
    ```
