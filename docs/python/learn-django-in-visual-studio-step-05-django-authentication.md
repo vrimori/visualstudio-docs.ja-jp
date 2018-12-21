@@ -1,5 +1,6 @@
 ---
-title: チュートリアル - Visual Studio での Django の詳細情報、手順 5
+title: Visual Studio での Django 学習チュートリアル、手順 5、認証
+titleSuffix: ''
 description: Visual Studio プロジェクトのコンテキストにおける Django の基本のチュートリアルです。具体的には、Django Web プロジェクト テンプレートによって提供される認証機能について取り上げます。
 ms.date: 11/19/2018
 ms.prod: visual-studio-dev15
@@ -8,19 +9,20 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: cb195e971612124ace53d8eb33b5c3563cd19a12
-ms.sourcegitcommit: f61ad0e8babec8810295f039e67629f4bdebeef0
+ms.openlocfilehash: 77cc7816a1a05e3b6a883416225717679dd5661b
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "52001231"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064074"
 ---
 # <a name="step-5-authenticate-users-in-django"></a>手順 5: Django でユーザーを認証する
 
-**前の手順: [完全な Django Web プロジェクト テンプレートを使用する](learn-django-in-visual-studio-step-04-full-django-project-template.md)**
+**前の手順:[Django Web プロジェクト テンプレートを使用する](learn-django-in-visual-studio-step-04-full-django-project-template.md)**
 
 認証は Web アプリ共通のニーズであるため、"Django Web プロジェクト" テンプレートには基本認証フローが含まれています  (このチュートリアルの手順 6. で説明する "ポーリング Django Web プロジェクト" テンプレートにも、同じフローが含まれています)。いずれかの Django プロジェクト テンプレートを使用する場合、Visual Studio には Django プロジェクトの *settings.py* での認証に必要なすべてのモジュールが含まれています。
 
@@ -29,7 +31,7 @@ ms.locfileid: "52001231"
 > [!div class="checklist"]
 > - Visual Studio テンプレートで提供される認証フローの使用方法 (手順 5-1)
 
-## <a name="step-5-1-use-the-authentication-flow"></a>手順 5-1: 認証フローを使用する
+## <a name="step-5-1-use-the-authentication-flow"></a>手順 5-1:認証フローを使用する
 
 次の手順では、認証フローを利用して、プロジェクトの関連する部分について説明します。
 
@@ -204,9 +206,9 @@ ms.locfileid: "52001231"
 
 1. すべて完了したら、サーバーを停止し、もう一度ソース管理に変更をコミットします。
 
-### <a name="question-what-is-the-purpose-of-the--csrftoken--tag-that-appears-in-the-form-elements"></a>質問: \<form\> 要素に表示される {% csrf_token %} タグの目的は何ですか。
+### <a name="question-what-is-the-purpose-of-the--csrftoken--tag-that-appears-in-the-form-elements"></a>質問:\<form\> 要素に表示される {% csrf_token %} タグの目的は何ですか。
 
-回答: `{% csrf_token %}` タグには Django の組み込みの[クロスサイト リクエスト フォージェリ (csrf) 保護](https://docs.djangoproject.com/en/2.0/ref/csrf/) (Django docs) が含まれています。 このタグは通常、フォームなどの POST、PUT、または DELETE 要求のメソッドに関連する任意の要素に追加します。 その後、テンプレートのレンダリング関数 (`render`) により、必要な保護が挿入されます。
+回答:`{% csrf_token %}` タグには Django の組み込みの[クロスサイト リクエスト フォージェリ (csrf) 保護](https://docs.djangoproject.com/en/2.0/ref/csrf/) (Django docs) が含まれています。 このタグは通常、フォームなどの POST、PUT、または DELETE 要求のメソッドに関連する任意の要素に追加します。 その後、テンプレートのレンダリング関数 (`render`) により、必要な保護が挿入されます。
 
 ## <a name="next-steps"></a>次の手順
 
@@ -216,4 +218,4 @@ ms.locfileid: "52001231"
 ## <a name="go-deeper"></a>詳しい説明
 
 - [Django でのユーザー認証](https://docs.djangoproject.com/en/2.0/topics/auth/) (docs.djangoproject.com)
-- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)
+- GitHub のチュートリアルのソース コード:[Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)

@@ -1,22 +1,23 @@
 ---
 title: クイック スタート - Python コードのリポジトリを複製する
 description: このクイック スタートでは、Visual Studio チーム エクスプローラーを使用して Python Koans リポジトリを複製することで、Visual Studio で Python プロジェクトを作成します。
-ms.date: 09/04/2018
+ms.date: 12/06/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: quickstart
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a4b01cc775c32bc602699aa2753482f184661079
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 871a5f620cc90db5064562461336fdeac38ba757
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44281690"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068394"
 ---
 # <a name="quickstart-clone-a-repository-of-python-code-in-visual-studio"></a>クイック スタート: Visual Studio で Python コードのリポジトリを複製する
 
@@ -57,7 +58,7 @@ ms.locfileid: "44281690"
 
 1. **Ctrl** + **F5** キーを押すか、**[デバッグ]** > **[デバッグなしで開始]** の順に選択し、プログラムを実行します。 *koans.txt* の **FileNotFoundError** が表示される場合、前の手順の説明に従って作業ディレクトリの設定を再確認します。
 
-1. プログラムが正常に実行されると、*python3/koans/about_asserts.py* の 17 行にアサーション エラーが表示されます。 これが意図的です。ユーザーが意図的なエラーをすべて修正することにより、プログラムでは、Python にそれが通知されるよう設計されています。 (詳細は、Python Koans にインスピレーションを与えた [Ruby Koans](http://rubykoans.com/) を参照してください。)
+1. プログラムが正常に実行されると、*python3/koans/about_asserts.py* の 17 行にアサーション エラーが表示されます。 これが意図的です。ユーザーが意図的なエラーをすべて修正することにより、プログラムでは、Python にそれが通知されるよう設計されています。 (詳細は、Python Koans にインスピレーションを与えた [Ruby Koans](https://rubykoans.com/) を参照してください。)
 
     ![Python Koans プログラムからの最初の出力](media/koans-output.png)
 

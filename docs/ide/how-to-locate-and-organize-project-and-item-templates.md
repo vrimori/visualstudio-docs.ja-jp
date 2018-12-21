@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でテンプレートを整理する
+title: テンプレートの整理
 ms.date: 01/02/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -13,14 +13,14 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 65d4940e7a7969fe28fe115ec7ef42cfdc645c9a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c6bca61dd88b164fcae2b2ccb7e2a98086bf102b
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31948731"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066289"
 ---
-# <a name="how-to-locate-and-organize-project-and-item-templates"></a>方法: プロジェクト テンプレートと項目テンプレートを配置して整理する
+# <a name="how-to-locate-and-organize-project-and-item-templates"></a>方法:プロジェクト テンプレートと項目テンプレートを配置して整理する
 
 テンプレートを **[新しいプロジェクト]** ダイアログ ボックスや **[新しい項目の追加]** ダイアログ ボックスに表示するためには、Visual Studio が認識する場所にテンプレート ファイルを配置する必要があります。 ユーザー テンプレートの場所にカスタム サブカテゴリを作成することも可能で、カテゴリは **[新しいプロジェクト]** ダイアログ ボックスと **[新しい項目の追加]** ダイアログ ボックスに表示されます。
 

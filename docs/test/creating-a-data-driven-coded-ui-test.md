@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でデータ ドリブンのコード化された UI テストを作成する
+title: データ ドリブンのコード化された UI テストの作成
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c23d8149d6946464eef1a465ea952e6102d65086
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 92bbeb34733332b2bada3955dda2058d63460fec
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52896142"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068488"
 ---
 # <a name="create-a-data-driven-coded-ui-test"></a>データ ドリブンのコード化された UI テストの作成
 
@@ -65,7 +65,7 @@ ms.locfileid: "52896142"
    }
    ```
 
-5. `AddNumbers()` メソッドを使用して、テストが実行されていることを確認します。 前に示したテスト メソッドにカーソルを置き、コンテキスト メニューを開き、**[テストの実行]** を選択します。 (キーボード ショートカット: **Ctrl** + **R**、**T**)。
+5. `AddNumbers()` メソッドを使用して、テストが実行されていることを確認します。 前に示したテスト メソッドにカーソルを置き、コンテキスト メニューを開き、**[テストの実行]** を選択します。 (キーボード ショートカット:**Ctrl**+**R**、**T**)。
 
     テストの合格または失敗を示すテスト結果が、**[テスト エクスプローラー]** ウィンドウに表示されます。 [テスト エクスプローラー] ウィンドウを開くには、**[テスト]** メニューの **[Windows]** を選択し、**[テスト エクスプローラー]** を選択します。
 
@@ -94,7 +94,7 @@ ms.locfileid: "52896142"
    }
    ```
 
-9. `ValidateSum()` メソッドを使用して、テストが実行されていることを確認します。 前に示したテスト メソッドにカーソルを置き、コンテキスト メニューを開き、**[テストの実行]** を選択します。 (キーボード ショートカット: **Ctrl** + **R**、**T**)。
+9. `ValidateSum()` メソッドを使用して、テストが実行されていることを確認します。 前に示したテスト メソッドにカーソルを置き、コンテキスト メニューを開き、**[テストの実行]** を選択します。 (キーボード ショートカット:**Ctrl**+**R**、**T**)。
 
      この時点では、すべてのパラメーター値はそのメソッドに定数として定義されます。 次に、テストがデータ ドリブンになるようにデータ セットを作成してみます。
 
@@ -230,9 +230,9 @@ ms.locfileid: "52896142"
 
      `[DataSource("System.Data.SqlClient", "Data Source=.\\sqlexpress;Initial Catalog=tempdb;Integrated Security=True", "Data", DataAccessMethod.Sequential), TestMethod]`
 
-### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>Q: UIMap.Designer ファイルでコードを変更できないのはなぜですか?
+### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>Q:UIMap.Designer ファイルでコードを変更できないのはなぜですか?
 
-**A**: *UIMapDesigner.cs* ファイルでコードを変更しても、[UIMap - コード化された UI テスト ビルダー] を使用してコードを生成するたびに変更が上書きされます。 このサンプルも含めてほとんどの場合、テストでデータ ソースを使用できるようにするためのコード変更は、テストのソース コード ファイル (*CodedUITest1.cs*) に対して行うことができます。
+**A:***UIMapDesigner.cs* ファイルでコードを変更しても、[UIMap - コード化された UI テスト ビルダー] を使用してコードを生成するたびに変更が上書きされます。 このサンプルも含めてほとんどの場合、テストでデータ ソースを使用できるようにするためのコード変更は、テストのソース コード ファイル (*CodedUITest1.cs*) に対して行うことができます。
 
 記録されたメソッドを変更する必要がある場合は、メソッドを *UIMap.cs* ファイルにコピーし、メソッド名を変更する必要があります。 *UIMap.cs* ファイルを使用すると、*UIMapDesigner.cs* ファイルのメソッドやプロパティをオーバーライドできます。 Coded *UITest.cs* ファイルの元のメソッドへの参照を削除し、変更したメソッド名に置き換える必要があります。
 

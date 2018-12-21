@@ -1,6 +1,7 @@
 ---
-title: チュートリアル - Visual Studio での Flask の詳細情報、手順 1
-description: Visual Studio プロジェクトのコンテキストでの Flask の基礎に関するチュートリアルです。
+title: Visual Studio での Flask 学習チュートリアル、手順 1、Flask 基本
+titleSuffix: ''
+description: Visual Studio プロジェクトにおける Flask の基本のチュートリアル。前提条件、Git、仮想環境など。
 ms.date: 09/04/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -8,17 +9,18 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9865e8e6faaac7b0c3af28532223ea2d5c9f7c01
-ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
+ms.openlocfilehash: 0603c1b8dcabc37631c7a52e11cfa964331010d8
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029067"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066640"
 ---
-# <a name="tutorial-get-started-with-the-flask-web-framework-in-visual-studio"></a>チュートリアル: Visual Studio での Flask Web フレームワークの概要
+# <a name="tutorial-get-started-with-the-flask-web-framework-in-visual-studio"></a>チュートリアル:Visual Studio での Flask Web フレームワークの概要
 
 [Flask](http://flask.pocoo.org/) は Web アプリケーション用の軽量 Python フレームワークであり、URL のルーティングとページのレンダリングの基礎を提供します。
 
@@ -48,7 +50,7 @@ Flask プロジェクト テンプレートは Python Tools for Visual Studio �
 
 現在、Visual Studio for Mac では Python 開発はサポートされていません。 Mac および Linux では、[Visual Studio Code で Python 拡張](https://code.visualstudio.com/docs/python/python-tutorial)を使用します。
 
-## <a name="step-1-1-create-a-visual-studio-project-and-solution"></a>手順 1-1: Visual Studio プロジェクトとソリューションを作成する
+## <a name="step-1-1-create-a-visual-studio-project-and-solution"></a>手順 1-1:Visual Studio プロジェクトとソリューションを作成する
 
 1. Visual Studio で、**[ファイル]** > **[新規]** > **[プロジェクト]** の順に選択し、"Flask" を検索して、**[Blank Flask Web プロジェクト]** テンプレートを選択します  (テンプレートは、左側の一覧の **[Python]** > **[Web]** にもあります)。
 
@@ -59,8 +61,8 @@ Flask プロジェクト テンプレートは Python Tools for Visual Studio �
     - **名前**: Visual Studio プロジェクトの名前を「**BasicProject**」に設定します。 この名前は Flask プロジェクトにも使用されます。
     - **場所**: Visual Studio ソリューションとプロジェクトを作成する場所を指定します。
     - **ソリューション名**: このチュートリアルでは複数プロジェクトのコンテナーとしてのソリューションに適した「**LearningFlask**」に設定します。
-    - **ソリューションのディレクトリを作成**: オンのままにします (既定)。
-    - **新しい Git リポジトリの作成**: ソリューションの作成時に Visual Studio でローカルの Git リポジトリが作成されるように、このオプション (既定ではオフ) をオンにします。 このオプションが表示されない場合は、Visual Studio 2017 インストーラーを実行し、**[コード ツール]** の **[個別のコンポーネント]** タブで **Windows 用 Git** および **Visual Studio 用 GitHub 拡張機能**を追加します。
+    - **ソリューションのディレクトリを作成**:オンのままにします (既定)。
+    - **新しい Git リポジトリを作成**:ソリューションの作成時に Visual Studio でローカルの Git リポジトリが作成されるように、このオプション (既定ではオフ) をオンにします。 このオプションが表示されない場合は、Visual Studio 2017 インストーラーを実行し、**[コード ツール]** の **[個別のコンポーネント]** タブで **Windows 用 Git** および **Visual Studio 用 GitHub 拡張機能**を追加します。
 
 1. しばらくすると、Visual Studio に (次に示すように) "**このプロジェクトには外部パッケージが必要です**" というダイアログが表示されます。 テンプレートには、最新の Flask 1.x パッケージを参照する *requirements.txt* ファイルが含まれているため、このダイアログが表示されます  (正確な依存関係を確認するには **[必要なパッケージを表示]** を選択します)。
 
@@ -68,7 +70,7 @@ Flask プロジェクト テンプレートは Python Tools for Visual Studio �
 
 1. オプション **[I will install them myself]\(自分でインストールする\)** を選択します。 仮想環境を簡単に作成し、ソース管理から除外されていることを確認します  (環境はいつでも *requirements.txt* から作成できます)。
 
-## <a name="step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository"></a>手順 1-2: Git コントロールを確認し、リモート リポジトリに発行する
+## <a name="step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository"></a>手順 1-2:Git コントロールを確認し、リモート リポジトリに発行する
 
 **[新しいプロジェクト]** ダイアログで **[新しい Git リポジトリの作成]** を選択したため、作成プロセスが完了するとすぐに、プロジェクトは既にローカル ソース管理にコミットされています。 この手順では、Visual Studio の Git コントロールと、ソース管理を操作する **[チーム エクスプローラー]** ウィンドウについて理解します。
 
@@ -102,17 +104,17 @@ Flask プロジェクト テンプレートは Python Tools for Visual Studio �
 > [!Tip]
 > **[チーム エクスプローラー]** 内をすばやく移動するには、ヘッダー (上の図では "**変更**" または "**プッシュ**" と表示されています) を選択して、使用可能なページのポップアップ メニューを表示します。
 
-### <a name="question-what-are-some-advantages-of-using-source-control-from-the-beginning-of-a-project"></a>質問: プロジェクトの最初からソース管理を使用する利点は何ですか?
+### <a name="question-what-are-some-advantages-of-using-source-control-from-the-beginning-of-a-project"></a>質問:プロジェクトの最初からソース管理を使用する利点は何ですか?
 
-回答: まず、ソース管理を最初から使用すると、リモート リポジトリも使用する場合は特に、プロジェクトの定期的なオフサイト バックアップが提供されます。 ローカル ファイル システムだけでプロジェクトを保持するのとは異なり、ソース管理では完全な変更履歴も提供されるので、1 つのファイルまたはプロジェクト全体を以前の状態に簡単に戻すことができます。 変更履歴は回帰 (テスト不合格) の原因の特定に役立ちます。 さらに、ソース管理は上書きを管理し、競合の解決を提供するので、複数の人がプロジェクトを作業している場合に重要です。 最後に、基本的にオートメーションの 1 つの形式であるソース管理は、ビルド、テスト、リリース管理の自動化も可能にします。 プロジェクトで DevOps を使用する際のまさに最初の手順であり、使用開始の障壁はかなり低いので、最初からソース管理を使用しない理由はありません。
+回答:まず、ソース管理を最初から使用すると、リモート リポジトリも使用する場合は特に、プロジェクトの定期的なオフサイト バックアップが提供されます。 ローカル ファイル システムだけでプロジェクトを保持するのとは異なり、ソース管理では完全な変更履歴も提供されるので、1 つのファイルまたはプロジェクト全体を以前の状態に簡単に戻すことができます。 変更履歴は回帰 (テスト不合格) の原因の特定に役立ちます。 さらに、ソース管理は上書きを管理し、競合の解決を提供するので、複数の人がプロジェクトを作業している場合に重要です。 最後に、基本的にオートメーションの 1 つの形式であるソース管理は、ビルド、テスト、リリース管理の自動化も可能にします。 プロジェクトで DevOps を使用する際のまさに最初の手順であり、使用開始の障壁はかなり低いので、最初からソース管理を使用しない理由はありません。
 
-オートメーションとしてのソース管理について詳しくは、MSDN マガジンの記事「[The Source of Truth: The Role of Repositories in DevOps](https://msdn.microsoft.com/magazine/mt763232)」(信頼できる情報源: DevOps でのリポジトリの役割) をご覧ください。この記事はモバイル アプリ用に記述されていますが、Web アプリにも適用されます。
+オートメーションとしてのソース管理について詳しくは、MSDN マガジンの記事「[The Source of Truth:The Role of Repositories in DevOps](https://msdn.microsoft.com/magazine/mt763232)」 (信頼できる情報源: DevOps でのリポジトリの役割) をご覧ください。この記事はモバイル アプリ向けに記述されていますが、Web アプリにも適用されます。
 
-### <a name="question-can-i-prevent-visual-studio-from-auto-committing-a-new-project"></a>質問: Visual Studio が新しいプロジェクトを自動コミットしないようにすることはできますか?
+### <a name="question-can-i-prevent-visual-studio-from-auto-committing-a-new-project"></a>質問:Visual Studio が新しいプロジェクトを自動コミットしないようにすることはできますか?
 
-回答: はい。 自動コミットを無効にするには、**[チーム エクスプローラー]** の **[設定]** ページに移動し、**[Git]** > **[グローバル設定]** を選択し、**[Commit changes after merge by default]\(既定では、マージ後に変更をコミット\)** というラベルの付いたオプションをオフにしてから **[更新]** を選択します。
+回答:はい。 自動コミットを無効にするには、**[チーム エクスプローラー]** の **[設定]** ページに移動し、**[Git]** > **[グローバル設定]** を選択し、**[Commit changes after merge by default]\(既定では、マージ後に変更をコミット\)** というラベルの付いたオプションをオフにしてから **[更新]** を選択します。
 
-## <a name="step-1-3-create-the-virtual-environment-and-exclude-it-from-source-control"></a>手順 1-3: 仮想環境を作成し、ソース管理から除外する
+## <a name="step-1-3-create-the-virtual-environment-and-exclude-it-from-source-control"></a>手順 1-3:仮想環境を作成し、ソース管理から除外する
 
 プロジェクトのソース管理を構成したら、プロジェクトに必要な Flask パッケージの仮想環境を作成できます。 その後、**[チーム エクスプローラー]** を使用して、環境のフォルダーをソース管理から除外できます。
 
@@ -140,17 +142,17 @@ Flask プロジェクト テンプレートは Python Tools for Visual Studio �
 
 1. コミット メッセージを入力し、**[すべてコミット]** を選択してから、必要に応じてコミットをリモート リポジトリにプッシュします。
 
-### <a name="question-why-do-i-want-to-create-a-virtual-environment"></a>質問: 仮想環境を作成する理由は何ですか?
+### <a name="question-why-do-i-want-to-create-a-virtual-environment"></a>質問:仮想環境を作成する理由は何ですか?
 
-回答: 仮想環境は、アプリの正確な依存関係を特定する優れた方法です。 このような特定により、グローバル Python 環境内での競合が回避され、テストとコラボレーションの両方が支援されます。 長い時間をかけて、アプリを開発するときに、多くの役立つ Python パッケージを必ず取り込むことになります。 プロジェクトに固有の仮想環境にパッケージを保持することで、ソース管理に含まれている、環境を説明するプロジェクトの *requirements.txt* ファイルを簡単に更新できます。 プロジェクトがビルド サーバー、展開サーバー、その他の開発用コンピューターなどの他のコンピューターにコピーされると、*requirements.txt* だけを使用して環境を簡単に作成し直すことができます (そのため、環境をソース管理する必要はありません)。 詳しくは、「[仮想環境を使用する](selecting-a-python-environment-for-a-project.md#use-virtual-environments)」をご覧ください。
+回答:仮想環境は、アプリの正確な依存関係を特定する優れた方法です。 このような特定により、グローバル Python 環境内での競合が回避され、テストとコラボレーションの両方が支援されます。 長い時間をかけて、アプリを開発するときに、多くの役立つ Python パッケージを必ず取り込むことになります。 プロジェクトに固有の仮想環境にパッケージを保持することで、ソース管理に含まれている、環境を説明するプロジェクトの *requirements.txt* ファイルを簡単に更新できます。 プロジェクトがビルド サーバー、展開サーバー、その他の開発用コンピューターなどの他のコンピューターにコピーされると、*requirements.txt* だけを使用して環境を簡単に作成し直すことができます (そのため、環境をソース管理する必要はありません)。 詳しくは、「[仮想環境を使用する](selecting-a-python-environment-for-a-project.md#use-virtual-environments)」をご覧ください。
 
-### <a name="question-how-do-i-remove-a-virtual-environment-thats-already-committed-to-source-control"></a>質問: ソース管理に既にコミットされている仮想環境を削除するにはどうすればよいですか?
+### <a name="question-how-do-i-remove-a-virtual-environment-thats-already-committed-to-source-control"></a>質問:ソース管理に既にコミットされている仮想環境を削除するにはどうすればよいですか?
 
-回答: 最初に、*.gitignore* ファイルを編集してフォルダーを除外します。末尾にコメント `# Python Tools for Visual Studio (PTVS)` があるセクションを探し、`/BasicProject/env` などの仮想環境のフォルダー用の新しい行を追加します  (Visual Studio ではファイルが**ソリューション エクスプローラー**に表示されないので、**[ファイル]** > **[開く]** > **[ファイル]** メニュー コマンドを使用して直接開きます。 **[チーム エクスプローラー]** からファイルを開くこともできます。**[設定]** ページで、**[リポジトリ設定]** を選択し、**[無視および属性ファイル]** セクションに移動し、**.gitignore** の横の **[編集]** リンクを選択します)。
+回答:最初に、*.gitignore* ファイルを編集してフォルダーを除外します。末尾にコメント `# Python Tools for Visual Studio (PTVS)` があるセクションを探し、`/BasicProject/env` などの仮想環境のフォルダー用の新しい行を追加します。 (Visual Studio ではファイルが**ソリューション エクスプローラー**に表示されないので、**[ファイル]** > **[開く]** > **[ファイル]** メニュー コマンドを使用して直接開きます。 **[チーム エクスプローラー]** からファイルを開くこともできます。**[設定]** ページで、**[リポジトリ設定]** を選択し、**[無視および属性ファイル]** セクションに移動し、**.gitignore** の横の **[編集]** リンクを選択します)。
 
 次に、コマンド ウィンドウを開き、*env* などの仮想環境のフォルダーを含む *BasicProject* のようなフォルダーに移動し、`git rm -r env` を実行します。 さらに、コマンドラインからこれらの変更をコミットするか (`git commit -m 'Remove venv'`)、**[チーム エクスプローラー]** の **[変更]** ページからコミットします。
 
-## <a name="step-1-4-examine-the-boilerplate-code"></a>手順 1-4: 定型コードを確認する
+## <a name="step-1-4-examine-the-boilerplate-code"></a>手順 1-4:定型コードを確認する
 
 1. プロジェクトの作成が完了すると、**ソリューション エクスプローラー**にソリューションとプロジェクトが表示されますが、プロジェクトに含まれるファイルは *app.py* と *requirements.txt* の 2 つだけです。
 
@@ -190,13 +192,13 @@ Flask プロジェクト テンプレートは Python Tools for Visual Studio �
         return "Hello World!"
     ```
 
-### <a name="question-what-is-the-purpose-of-the-name-argument-to-the-flask-class"></a>質問: Flask クラスに対する __name__ 引数の目的は何ですか?
+### <a name="question-what-is-the-purpose-of-the-name-argument-to-the-flask-class"></a>質問:Flask クラスに対する __name__ 引数の目的は何ですか?
 
-回答: この引数はアプリのモジュールまたはパッケージの名前であり、アプリに属するテンプレート、静的ファイル、他のリソースを検索する場所を Flask に指示します。 1 つのモジュールに含まれているアプリの場合、`__name__` は常に適切な値です。 また、デバッグ情報を必要とする拡張機能にも重要です。 詳細およびその他の引数については、[Flask のクラスのドキュメント](http://flask.pocoo.org/docs/1.0/api/#flask.Flask) (flask.pocoo.org) をご覧ください。
+回答:この引数はアプリのモジュールまたはパッケージの名前であり、アプリに属するテンプレート、静的ファイル、他のリソースを検索する場所を Flask に指示します。 1 つのモジュールに含まれているアプリの場合、`__name__` は常に適切な値です。 また、デバッグ情報を必要とする拡張機能にも重要です。 詳細およびその他の引数については、[Flask のクラスのドキュメント](http://flask.pocoo.org/docs/1.0/api/#flask.Flask) (flask.pocoo.org) をご覧ください。
 
-### <a name="question-can-a-function-have-more-than-one-route-decorator"></a>質問: 1 つの関数で複数のルート デコレーターを使用できますか?
+### <a name="question-can-a-function-have-more-than-one-route-decorator"></a>質問:1 つの関数で複数のルート デコレーターを使用できますか?
 
-回答: はい。同じ関数が複数のルートを提供している場合、必要なだけいくつでもデコレーターを使用できます。 たとえば、"/" と "/hello" の両方に対して `hello` 関数を使用するには、次のようなコードを使用します。
+回答:はい。同じ関数が複数のルートを提供している場合、必要なだけいくつでもデコレーターを使用できます。 たとえば、"/" と "/hello" の両方に対して `hello` 関数を使用するには、次のようなコードを使用します。
 
 ```python
 @app.route('/')
@@ -208,9 +210,9 @@ def hello():
 
 <a name="qa-url-variables"></a>
 
-### <a name="question-how-does-flask-work-with-variable-url-routes-and-query-parameters"></a>質問: Flask は変数の URL ルートとクエリ パラメーターをどのように処理しますか?
+### <a name="question-how-does-flask-work-with-variable-url-routes-and-query-parameters"></a>質問:Flask は変数の URL ルートとクエリ パラメーターをどのように処理しますか?
 
-応答: ルートでは、変数を `<variable_name>` でマークします。Flask は、名前付き引数を使用して変数を関数に渡します。 変数が URL パスまたはクエリ パラメーターに含まれていてもかまいません。 たとえば、`'/hello/<name>` という形式のルートでは、関数に対する `name` という名前の文字列引数が生成されます。ルート内で `?message=<msg>` を使用すると、"message=" クエリ パラメーターの値が解析され、`msg` として関数に渡されます。
+回答:ルートでは、変数を `<variable_name>` でマークします。Flask は、名前付き引数を使用して変数を関数に渡します。 変数が URL パスまたはクエリ パラメーターに含まれていてもかまいません。 たとえば、`'/hello/<name>` という形式のルートでは、関数に対する `name` という名前の文字列引数が生成されます。ルート内で `?message=<msg>` を使用すると、"message=" クエリ パラメーターの値が解析され、`msg` として関数に渡されます。
 
 ```python
 @app.route('/hello/<name>?message=<msg>')
@@ -222,11 +224,11 @@ def hello(name, msg):
 
 クエリ パラメーターも `request.args` プロパティを通じて (具体的には `request.args.get` メソッド) 使用できます。 詳しくは、Flask のドキュメントで [Request オブジェクト](http://flask.pocoo.org/docs/1.0/quickstart/#the-request-object)に関する説明をご覧ください。
 
-### <a name="question-can-visual-studio-generate-a-requirementstxt-file-from-a-virtual-environment-after-i-install-other-packages"></a>質問: Visual Studio では、他のパッケージをインストールした後に仮想環境から requirements.txt ファイルを生成できますか?
+### <a name="question-can-visual-studio-generate-a-requirementstxt-file-from-a-virtual-environment-after-i-install-other-packages"></a>質問:Visual Studio では、他のパッケージをインストールした後に仮想環境から requirements.txt ファイルを生成できますか?
 
-回答: はい。 **[Python 環境]** ノードを展開し、仮想環境を右クリックして、**[requirements.txt を生成]** を選択します。 環境を変更するときにこのコマンドを定期的に使用し、その環境に依存するその他のコード変更と共に *requirements.txt* に対する変更をソース管理にコミットすることをお勧めします。 ビルド サーバーに継続的インテグレーションを設定する場合は、環境を変更するたびに、ファイルを生成し、変更をコミットする必要があります。
+回答:はい。 **[Python 環境]** ノードを展開し、仮想環境を右クリックして、**[requirements.txt を生成]** を選択します。 環境を変更するときにこのコマンドを定期的に使用し、その環境に依存するその他のコード変更と共に *requirements.txt* に対する変更をソース管理にコミットすることをお勧めします。 ビルド サーバーに継続的インテグレーションを設定する場合は、環境を変更するたびに、ファイルを生成し、変更をコミットする必要があります。
 
-## <a name="step-1-5-run-the-project"></a>手順 1-5: プロジェクトを実行する
+## <a name="step-1-5-run-the-project"></a>手順 1-5:プロジェクトを実行する
 
 1. Visual Studio で、**[デバッグ]** > **[デバッグの開始]** (**F5** キー) を選択するか、ツール バーの **[Web サーバー]** を使用します (表示されるブラウザーは異なる可能性があります)。
 
@@ -240,9 +242,9 @@ def hello(name, msg):
 
 1. 完了したら、コンソール ウィンドウを閉じるか Visual Studio の **[デバッグ]** > **[デバッグの停止]** を使用してサーバーを停止します。
 
-### <a name="question-whats-the-difference-between-using-the-debug-menu-commands-and-the-server-commands-on-the-projects-python-submenu"></a>質問: [デバッグ] メニュー コマンドとプロジェクトの Python サブメニュー上のサーバー コマンドの使用にはどのような違いがありますか?
+### <a name="question-whats-the-difference-between-using-the-debug-menu-commands-and-the-server-commands-on-the-projects-python-submenu"></a>質問:[デバッグ] メニュー コマンドとプロジェクトの Python サブメニュー上のサーバー コマンドの使用にはどのような違いがありますか?
 
-回答: **[デバッグ]** メニュー コマンドとツール バー ボタンに加えて、プロジェクトのコンテキスト メニューの **[Python]** > **[Run server]\(サーバーの実行\)** または **[Python]** > **[Run debug server]\(デバッグ サーバーの実行\)** を使用してサーバーを起動することもできます。 どちらのコマンドも、実行中のサーバーのローカル URL (localhost:port) を表示するコンソール ウィンドウを開きます。 ただし、その URL を使用してブラウザーを手動で開く必要があり、デバッグ サーバーを実行しても、Visual Studio デバッガーは自動的に起動しません。 **[デバッグ]** > **[プロセスにアタッチ]** を使用して、必要に応じてデバッガーを実行中のプロセスに後でアタッチできます。
+回答:**[デバッグ]** メニュー コマンドとツール バー ボタンに加えて、プロジェクトのコンテキスト メニューの **[Python]** > **[Run server]\(サーバーの実行\)** または **[Python]** > **[Run debug server]\(デバッグ サーバーの実行\)** を使用してサーバーを起動することもできます。 どちらのコマンドも、実行中のサーバーのローカル URL (localhost:port) を表示するコンソール ウィンドウを開きます。 ただし、その URL を使用してブラウザーを手動で開く必要があり、デバッグ サーバーを実行しても、Visual Studio デバッガーは自動的に起動しません。 **[デバッグ]** > **[プロセスにアタッチ]** を使用して、必要に応じてデバッガーを実行中のプロセスに後でアタッチできます。
 
 ## <a name="next-steps"></a>次の手順
 
@@ -254,4 +256,4 @@ def hello(name, msg):
 ## <a name="go-deeper"></a>詳しい説明
 
 - [Flask クイック スタート](http://flask.pocoo.org/docs/1.0/quickstart/)(flask.pocoo.org)
-- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)
+- GitHub のチュートリアルのソース コード:[Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)

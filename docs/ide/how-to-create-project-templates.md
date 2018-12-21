@@ -1,5 +1,5 @@
 ---
-title: Visual Studio のプロジェクト テンプレートを作成する
+title: プロジェクト テンプレートを作成する
 ms.date: 01/02/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 05ba1dcd5328b80d8fa5526336cf027995abf7dc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 5cb90ea6f1e404d65ac3c375f49e77dd02c6711c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49903726"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066916"
 ---
 # <a name="how-to-create-project-templates"></a>方法: プロジェクト テンプレートを作成する
 
@@ -42,11 +42,11 @@ ms.locfileid: "49903726"
    プロジェクトが *.zip* ファイルにエクスポートされて、指定した出力場所に置かれます。また、選択した場合は、Visual Studio にインポートされます。
 
 >[!NOTE]
-> **[新しいプロジェクト]** ダイアログ ボックスでテンプレートを探すには、**[インストール済み]** を展開し、*.vstemplate* ファイルの `ProjectType` 要素に対応するカテゴリを展開します。 たとえば、`<ProjectType>CSharp</ProjectType>` を含む *.vstemplate* ファイルは、既定では **[インストール済み]** > **[Visual C#]** に表示されます。 プロジェクトの種類のディレクトリにフォルダーを作成して、テンプレートの *.zip* ファイルを格納するだけで、プロジェクトの種類のサブディレクトリにテンプレートを整理できます。 詳細については、「[方法: プロジェクト テンプレートと項目テンプレートを配置して整理する](../ide/how-to-locate-and-organize-project-and-item-templates.md)」を参照してください。
+> **[新しいプロジェクト]** ダイアログ ボックスでテンプレートを探すには、**[インストール済み]** を展開し、*.vstemplate* ファイルの `ProjectType` 要素に対応するカテゴリを展開します。 たとえば、`<ProjectType>CSharp</ProjectType>` を含む *.vstemplate* ファイルは、既定では **[インストール済み]** > **[Visual C#]** に表示されます。 プロジェクトの種類のディレクトリにフォルダーを作成して、テンプレートの *.zip* ファイルを格納するだけで、プロジェクトの種類のサブディレクトリにテンプレートを整理できます。 詳細については、「[方法 :テンプレートを配置して整理する](../ide/how-to-locate-and-organize-project-and-item-templates.md)」を参照してください。
 
 ## <a name="other-ways-to-create-project-templates"></a>プロジェクト テンプレートを作成する他の方法
 
-プロジェクトを構成するファイルをフォルダーにまとめ、適切なメタデータを指定して *.vstemplate* XML ファイルを作成することにより、手動でプロジェクト テンプレートを作成できます。 詳細については、「[方法: Web テンプレートを手動で作成する](../ide/how-to-manually-create-web-templates.md)」を参照してください。
+プロジェクトを構成するファイルをフォルダーにまとめ、適切なメタデータを指定して *.vstemplate* XML ファイルを作成することにより、手動でプロジェクト テンプレートを作成できます。 詳細については、「[方法 :Web テンプレートを手動で作成する](../ide/how-to-manually-create-web-templates.md)」を参照してください。
 
 Visual Studio SDK がインストールされている場合は、**VSIX プロジェクト** テンプレートを使うことで、完成したテンプレートを配置用に VSIX ファイルにラップすることができます。 詳細については、「[Getting started with the VSIX project template](../extensibility/getting-started-with-the-vsix-project-template.md)」(VSIX プロジェクト テンプレートの概要) を参照してください。
 

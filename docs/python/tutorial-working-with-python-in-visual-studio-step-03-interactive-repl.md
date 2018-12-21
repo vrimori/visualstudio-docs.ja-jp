@@ -1,5 +1,6 @@
 ---
-title: Python の概要のチュートリアル、手順 3、対話型 REPL
+title: Visual Studio での Python チュートリアル、手順 3、対話型 REPL
+titleSuffix: ''
 description: Visual Studio での Python 機能の中核となるチュートリアルの手順 3 では、Python の対話型 REPL ウィンドウについて説明します。
 ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
@@ -8,19 +9,20 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 504192e81af94413e61d4ad1252ab11bf97b8a38
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 7f237dde510ad9fd65416ae7521ebeed705781c2
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50219589"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066120"
 ---
 # <a name="step-3-use-the-interactive-repl-window"></a>手順 3: 対話型 REPL ウィンドウを使用する
 
-**前の手順: [コードを記述して実行する](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)**
+**前の手順:[コードを記述して実行する](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)**
 
 Visual Studio の Python 用 **対話型**ウィンドウによって機能豊富な REPL (読み取り、評価、出力ループ) エクスペリエンスが実現され、通常の編集、ビルド、デバッグのサイクルが大幅に短縮されます。 **対話型**ウィンドウは、Python のコマンド ラインの REPL エクスペリエンスのすべての機能を提供します。 これは、コマンド ラインからでは面倒な、Visual Studio エディターのソース ファイルでのコード交換も容易にします。
 

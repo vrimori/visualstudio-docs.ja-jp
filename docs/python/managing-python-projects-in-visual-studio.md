@@ -1,6 +1,6 @@
 ---
 title: Python アプリケーション プロジェクトの管理
-description: Visual Studio のプロジェクトの目的、Python コードのプロジェクトの作成および管理方法、Python で使用できるさまざまなプロジェクト テンプレート。
+description: Visual Studio のプロジェクトでは、ファイル間の依存関係とアプリケーションの関係の複雑さが管理されます。
 ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -8,15 +8,16 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9f5612aa166f81bf1f42983989db5bdf5422a7ef
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 6b0d31905cd0dfb835275d6fd0bbe8f153253b56
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50220470"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068287"
 ---
 # <a name="python-projects-in-visual-studio"></a>Visual Studio の Python プロジェクト
 
@@ -38,7 +39,7 @@ Visual Studio には、多数のアプリケーション構造を短時間で設
 |   |   |
 |---|---|
 | ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Python プロジェクトの概要に関する[ビデオを見る (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Getting-Python-Code-iLAv23LWE_3905918567) (2 分 17 秒)。 |
-| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | また、「[Deep Dive: Use source control with Python projects](https://youtu.be/Aq8eqApnugM)」(Deep Dive: Python プロジェクトでのソース管理の使用) (youtube.com、8 分 55 秒) もご覧ください。 |
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | また、「[Deep Dive:Use source control with Python projects](https://youtu.be/Aq8eqApnugM)」(Deep Dive: Python プロジェクトでのソース管理の使用) (youtube.com、8 分 55 秒) もご覧ください。 |
 
 ## <a name="add-files-assign-a-startup-file-and-set-environments"></a>ファイルの追加、スタートアップ ファイルの割り当て、環境の設定
 
@@ -92,7 +93,7 @@ Visual Studio には、新規に、または既存のコードから、Python �
 
 ## <a name="linked-files"></a>リンク ファイル
 
-リンク ファイルは、プロジェクトに取り込まれますが、通常はアプリケーションのプロジェクト フォルダーの外部に存在するファイルです。 **ソリューション エクスプローラー**では、通常のファイルにショートカットがオーバーレイされたアイコンで示されます。![リンクのあるファイル アイコン](media/projects-linked-file-icon.png)
+リンク ファイルは、プロジェクトに取り込まれますが、通常はアプリケーションのプロジェクト フォルダーの外部に存在するファイルです。 **ソリューション エクスプローラー**では、通常のファイルにショートカットがオーバーレイされたアイコンで示されます。![リンク ファイルのアイコン](media/projects-linked-file-icon.png)
 
 リンクのあるファイルは、`<Compile Include="...">` 要素を使って *.pyproj* ファイルで指定されます。 リンク ファイルは、ディレクトリ構造外の相対パスを使う場合は暗黙的になり、**ソリューション エクスプローラー**内のパスを使う場合は明示的となります。
 

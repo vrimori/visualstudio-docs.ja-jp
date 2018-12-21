@@ -1,6 +1,6 @@
 ---
 title: Python 用 Azure クラウド サービス プロジェクト テンプレート
-description: 役割の展開、依存関係、トラブルシューティングなど、Python で記述された Azure クラウド サービス用の Visual Studio テンプレートの概要です。
+description: Visual Studio には、役割の展開、依存関係、トラブルシューティングなど、Python で記述された Azure クラウド サービス用のテンプレートが用意されています。
 ms.date: 11/12/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -8,22 +8,23 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 1bcb8123ace6f4671f2127ba80377ef88891bdc8
-ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
+ms.openlocfilehash: 5eafbf0b24e464e81447c0677d53096032343580
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607732"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068527"
 ---
 # <a name="azure-cloud-service-projects-for-python"></a>Python 用 Azure クラウド サービス プロジェクト
 
 Visual Studio は、Python を使用して Azure Cloud Services の作成に使用できるテンプレートを提供しています。
 
-[クラウド サービス](https://docs.microsoft.com/azure/cloud-services/)は、任意の数の *worker ロール*と *Web ロール*から構成され、それぞれが概念的に独立したタスクを実行しますが、規模拡張の必要に応じて仮想マシン間で個別にレプリケートできます。 Web ロールでは、フロントエンド Web アプリケーションのホスティングが提供されます。 Python が接続されている場合、WSGI をサポートする任意の Web フレームワークを使用して、このようなアプリケーションを作成できます ([Web プロジェクト テンプレート](python-web-application-project-templates.md)でサポート)。 worker ロールは、ユーザーと直接対話しない長時間実行されるプロセスを意図しています。 通常は、[`pip install azure`](http://pypi.org/project/azure) でインストールされる "azure" パッケージ内のパッケージを利用します。
+[クラウド サービス](https://docs.microsoft.com/azure/cloud-services/)は、任意の数の *worker ロール*と *Web ロール*から構成され、それぞれが概念的に独立したタスクを実行しますが、規模拡張の必要に応じて仮想マシン間で個別にレプリケートできます。 Web ロールでは、フロントエンド Web アプリケーションのホスティングが提供されます。 Python が接続されている場合、WSGI をサポートする任意の Web フレームワークを使用して、このようなアプリケーションを作成できます ([Web プロジェクト テンプレート](python-web-application-project-templates.md)でサポート)。 worker ロールは、ユーザーと直接対話しない長時間実行されるプロセスを意図しています。 通常は、[`pip install azure`](https://pypi.org/project/azure) でインストールされる "azure" パッケージ内のパッケージを利用します。
 
 この記事では、Visual Studio 2017 のプロジェクト テンプレートとその他のサポートについて詳しく説明します (以前のバージョンも同様ですが、いくつかの違いがあります)。 Python からの Azure の操作について詳しくは、[Azure Python デベロッパー センター](https://docs.microsoft.com/python/azure/?view=azure-python)をご覧ください。
 

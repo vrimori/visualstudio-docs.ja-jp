@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でスタブを使用して単体テストのためにアプリケーションを分離する
+title: スタブを使用して単体テストのためにアプリケーションを分離する
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -12,12 +12,12 @@ author: gewarren
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 9ee4fbcec25bdfa454f4c009f4d676a5291b7289
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 2bf3441deef786a210b970fe9daaa7b30388d46e
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382569"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065533"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>スタブを使用して単体テストでアプリケーションの各部分を相互に分離する
 
@@ -220,7 +220,7 @@ End Class
 
 ### <a name="verify-parameter-values"></a>パラメーター値を検証する
 
-自分のコンポーネントが他のコンポーネントを呼び出すときに、適切な値が渡されることを検証できます。 スタブ内にアサーションを配置するか、値を保存して、テストの本体で検証できます。 例:
+自分のコンポーネントが他のコンポーネントを呼び出すときに、適切な値が渡されることを検証できます。 スタブ内にアサーションを配置するか、値を保存して、テストの本体で検証できます。 次に例を示します。
 
 ```csharp
 [TestClass]

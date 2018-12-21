@@ -1,8 +1,9 @@
 ---
-title: Visual Studio 2017 でインストールの場所を選択する
-description: ダウンロード キャッシュ、共有コンポーネント、SDK、ツールの場所を異なるドライブに変更することによって、ご利用のシステム ドライブのインストール占有領域を減らす方法について説明します。
+title: インストールの場所を選択する
+description: ダウンロード キャッシュ、共有コンポーネント、SDK、ツールの場所を異なるドライブに変更することによって、ご利用のシステム ドライブの Visual Studio インストール占有領域を減らす方法について説明します。
 ms.date: 11/07/2018
 ms.technology: vs-acquisition
+ms.custom: seodec18
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,16 +16,16 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ed3b54674c24e3becf62e7568be127344104de0f
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 2acefee22976e061b3feff83b00891037a0f2bbd
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295034"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159842"
 ---
 # <a name="select-the-installation-locations-in-visual-studio-2017"></a>Visual Studio 2017 でインストールの場所を選択する
 
-**15.7 の新機能**: 一部のファイル用の場所を変更することで、ご利用のシステム ドライブ上の Visual Studio のインストール占有領域を減らせるようになりました。 具体的には、ダウンロード キャッシュ、共有コンポーネント、SDK、およびツールのファイルに異なる場所を使用できます。
+**15.7 の新機能**:一部のファイル用の場所を変更することで、ご利用のシステム ドライブ上の Visual Studio のインストール占有領域を減らせるようになりました。 具体的には、ダウンロード キャッシュ、共有コンポーネント、SDK、およびツールのファイルに異なる場所を使用できます。
 
    > [!NOTE]
    > 一部のツールと SDK では、インストールできる場所に関するルールが異なります。 これらのツールおよび SDK は、お客様が別の場所を選択した場合でも、ご利用のシステム ドライブにインストールされます。

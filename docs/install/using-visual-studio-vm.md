@@ -1,8 +1,10 @@
 ---
 title: Azure 仮想マシンでの Visual Studio の使用
+titleSuffix: ''
 description: Azure 仮想マシンで Visual Studio を使用する方法を説明します
 ms.date: 09/12/2018
 ms.technology: vs-acquisition
+ms.custom: seodec18
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d0d51e1c5c3ba94363c2ce0377f3d1a5e22c582
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: fc3ceb0caa8e5b8e135c2fad3bbab28c51773ae6
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895848"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159972"
 ---
 # <a id="top"> </a> Azure 上の Visual Studio イメージ
 
@@ -34,11 +36,11 @@ ms.locfileid: "52895848"
 
 | リリース バージョン                                              | エディション                     |     製品バージョン      |
 |:------------------------------------------------------------:|:----------------------------:|:------------------------:|
-|   Visual Studio 2019: Preview (Preview 1)                   |           エンタープライズ         | バージョン 16.0.0 Preview 1 |
-| Visual Studio 2017: 最新 (バージョン 15.9)                    |    Enterprise、Community     |      バージョン 15.9.0      |
-|         Visual Studio 2017: RTW                              |    Enterprise、Community     |      バージョン 15.0.18     |
-|   Visual Studio 2015: 最新 (Update 3)                      |    Enterprise、Community     |  バージョン 14.0.25431.01   |
-|         Visual Studio 2015: RTW                              |             なし             | (サービス有効期限切れ)  |
+|   Visual Studio 2019:プレビュー (プレビュー 1 )                   |           エンタープライズ         | バージョン 16.0.0 Preview 1 |
+| Visual Studio 2017:最新 (バージョン 15.9)                    |    Enterprise、Community     |      バージョン 15.9.0      |
+|         Visual Studio 2017:RTW                              |    Enterprise、Community     |      バージョン 15.0.18     |
+|   Visual Studio 2015:最新 (更新プログラム 3)                      |    Enterprise、Community     |  バージョン 14.0.25431.01   |
+|         Visual Studio 2015:RTW                              |             なし             | (サービス有効期限切れ)  |
 
 > [!NOTE]
 > Microsoft のサービス ポリシーに従って、Visual Studio 2015 の最初にリリースされた (RTW) バージョンは、サービスの有効期限が切れています。 Visual Studio 2015 製品ラインに提供されるバージョンとして残っているのは Visual Studio 2015 Update 3 だけです。
@@ -99,7 +101,7 @@ Visual Studio は、Azure の "ライセンス持ち込み" モデルに従い�
 
 開発環境の範囲は広大であり、環境が複雑になるほどその構築にはコストがかかります。 環境の構成に関係なく、構成済みの VM を、将来使用するためやチームの他のメンバーのために "基本イメージ" として保存 (キャプチャ) できます。 その後は、新しい VM を起動するときに、Azure Marketplace イメージではなく基本イメージからプロビジョニングします。
 
-簡単なまとめ: システム準備ツール (Sysprep) を使用して実行中の VM をシャットダウンし、Azure Portal の UI を使用して、VM をイメージとして "*キャプチャ (図 1)*" します。 Azure は、イメージを含む `.vhd` ファイルをユーザーが選んだストレージ アカウントに保存します。 その後、新しいイメージはサブスクリプションのリソース一覧にイメージ リソースとして表示されます。
+簡単なまとめ:システム準備ツール (Sysprep) を使用して実行中の VM をシャットダウンし、Azure Portal の UI を使用して、VM をイメージとして "*キャプチャ (図 1)*" します。 Azure は、イメージを含む `.vhd` ファイルをユーザーが選んだストレージ アカウントに保存します。 その後、新しいイメージはサブスクリプションのリソース一覧にイメージ リソースとして表示されます。
 
 <img src="media/capture-vm.png" alt="Capture an image through the Azure portal’s UI" style="border:3px solid Silver; display: block; margin: auto;"><center>*(図 1) Azure Portal の UI を使ってイメージをキャプチャする。*</center>
 

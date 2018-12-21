@@ -1,5 +1,6 @@
 ---
-title: チュートリアル - Visual Studio での Django の詳細情報、手順 3
+title: Visual Studio での Django 学習チュートリアル、手順 3、静的ファイルとページ
+titleSuffix: ''
 description: Visual Studio プロジェクトのコンテキストにおける Django の基本のチュートリアルです。具体的には、静的ファイルを提供する方法、アプリにページを追加する方法、およびテンプレートの継承を使用する方法を示します。
 ms.date: 11/19/2018
 ms.prod: visual-studio-dev15
@@ -8,19 +9,20 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: bea209e2d7cf751c66f3e627311a2985c79f55c3
-ms.sourcegitcommit: f61ad0e8babec8810295f039e67629f4bdebeef0
+ms.openlocfilehash: cfde21f356e35366cfb80b029f918eed0364a7b5
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "52001296"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066081"
 ---
 # <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>手順 3: 静的ファイルを提供し、ページを追加し、テンプレート継承を使用する
 
-**前の手順: [ビューおよびページ テンプレートを使用して Django アプリを作成する](learn-django-in-visual-studio-step-02-create-an-app.md)**
+**前の手順:[ビューおよびページ テンプレートを使用して Django アプリを作成する](learn-django-in-visual-studio-step-02-create-an-app.md)**
 
 このチュートリアルの前の手順では、自己完結型 HTML の単一のページを使って最小限の Django アプリを作成する方法を学びました。 ただし、最新の Web アプリは通常、多数のページで構成されており、CSS や JavaScript ファイルなどの共有リソースを活用して、一貫したスタイル設定や動作を提供します。
 
@@ -32,7 +34,7 @@ ms.locfileid: "52001296"
 > - アプリに追加ページを付け加える (手順 3-3)
 > - テンプレートの継承を使用して、複数のページで使用されるヘッダーとナビゲーション バーを作成する (手順 3-4)
 
-## <a name="step-3-1-become-familiar-with-item-templates"></a>手順 3-1: 項目テンプレートを理解する
+## <a name="step-3-1-become-familiar-with-item-templates"></a>手順 3-1:項目テンプレートを理解する
 
 Django アプリを開発する場合、通常、より多くの Python、HTML、CSS、および JavaScript ファイルを追加します。 Visual Studio では、(デプロイに必要になる可能性がある *web.config* のような他のファイルだけでなく) ファイルの種類ごとに、すぐに使用できる便利な[項目テンプレート](python-item-templates.md)を提供しています。
 
@@ -42,11 +44,11 @@ Django アプリを開発する場合、通常、より多くの Python、HTML�
 
 テンプレートを使用するには、目的のテンプレートを選択して、ファイルの名前を指定し、**[OK]** をクリックします。 この方法で項目を追加すると、Visual Studio プロジェクトに自動的にファイルを追加して、ソース管理への変更にマーク付けされます。
 
-### <a name="question-how-does-visual-studio-know-which-item-templates-to-offer"></a>質問: Visual Studio では、提供する項目テンプレートをどのように把握していますか。
+### <a name="question-how-does-visual-studio-know-which-item-templates-to-offer"></a>質問:Visual Studio では、提供する項目テンプレートをどのように把握していますか。
 
-回答: Visual Studio プロジェクト ファイル (*.pyproj*) には、Python プロジェクトとしてマーク付けするプロジェクト タイプ識別子が含まれます。 Visual Studio は、このタイプ識別子を使用して、プロジェクト タイプに適合する項目テンプレートのみを表示します。 このように、Visual Studio では、多数のプロジェクト タイプに対応する豊富な項目テンプレート セットを提供でき、項目テンプレートを毎回分類して調べる必要はありません。
+回答:Visual Studio プロジェクト ファイル (*.pyproj*) には、Python プロジェクトとしてマーク付けするプロジェクト タイプ識別子が含まれます。 Visual Studio は、このタイプ識別子を使用して、プロジェクト タイプに適合する項目テンプレートのみを表示します。 このように、Visual Studio では、多数のプロジェクト タイプに対応する豊富な項目テンプレート セットを提供でき、項目テンプレートを毎回分類して調べる必要はありません。
 
-## <a name="step-3-2-serve-static-files-from-your-app"></a>手順 3-2: アプリからの静的ファイルを提供する
+## <a name="step-3-2-serve-static-files-from-your-app"></a>手順 3-2:アプリからの静的ファイルを提供する
 
 Python を使って構築された Web アプリ (任意のフレームワークを使用する) では、Python ファイルは常に Web ホストのサーバー上で実行され、ユーザーのコンピューターに送信されることはありません。 しかし、CSS や JavaScript などの他のファイルは、これらのファイルが要求されたときに、ホスト サーバーから単純にそのまま配信されるように、ブラウザーで排他的に使用されます。 このようなファイルは "静的" ファイルと呼ばれ、Django では、コードを記述しなくても自動的にこれらのファイルを配信できます。
 
@@ -95,15 +97,15 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
 1. プロジェクトを実行して、結果を確認します。 終わったらサーバーを停止し、([手順 2](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control) の説明にあるように) 必要に応じてソース管理に対する変更をコミットします。
 
-### <a name="question-what-is-the-purpose-of-the--load-staticfiles--tag"></a>質問: {% load staticfiles %} タグの目的は何ですか。
+### <a name="question-what-is-the-purpose-of-the--load-staticfiles--tag"></a>質問:{% load staticfiles %} タグの目的は何ですか。
 
-回答: `<head>` や `<body>` のような要素で静的ファイルを参照する前に、`{% load staticfiles %}` 行が必要です。 このセクションで示した例では、"staticfiles" はカスタム Django テンプレート タグ設定を参照します。これにより、`{% static %}` 構文を使って静的ファイルを参照できます。  `{% load staticfiles %}` がないと、アプリが実行されたときに例外が表示されます。
+回答:`<head>` や `<body>` のような要素で静的ファイルを参照する前に、`{% load staticfiles %}` 行が必要です。 このセクションで示した例では、"staticfiles" はカスタム Django テンプレート タグ設定を参照します。これにより、`{% static %}` 構文を使って静的ファイルを参照できます。  `{% load staticfiles %}` がないと、アプリが実行されたときに例外が表示されます。
 
-### <a name="question-are-there-any-conventions-for-organizing-static-files"></a>質問: 静的ファイルを編成するにあたって、何らかの規則はありますか。
+### <a name="question-are-there-any-conventions-for-organizing-static-files"></a>質問:静的ファイルを編成するにあたって、何らかの規則はありますか。
 
-回答: *static* フォルダーには、他の CSS、JavaScript、HTML ファイルを自由に追加できます。 静的ファイルを編成する一般的な方法は、*fonts*、*scripts*、*content* (スタイルシートとその他のファイル用) という名前のサブフォルダーを作成することです。 どの場合も、`{% static %}` 参照のファイルへの相対パスにこれらのフォルダーを必ず含めてください。
+回答:*static* フォルダーには、他の CSS、JavaScript、HTML ファイルを自由に追加できます。 静的ファイルを編成する一般的な方法は、*fonts*、*scripts*、*content* (スタイルシートとその他のファイル用) という名前のサブフォルダーを作成することです。 どの場合も、`{% static %}` 参照のファイルへの相対パスにこれらのフォルダーを必ず含めてください。
 
-## <a name="step-3-3-add-a-page-to-the-app"></a>手順 3-3: アプリにページを追加する
+## <a name="step-3-3-add-a-page-to-the-app"></a>手順 3-3:アプリにページを追加する
 
 アプリに別のページを追加することには、次のような意味があります。
 
@@ -164,13 +166,13 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
 1. プロジェクトを実行して結果を確認し、ページ間の移動をチェックします。 終わったら、サーバーを閉じます。
 
-### <a name="question-i-tried-using-index-for-the-link-to-the-home-page-but-it-didnt-work-why"></a>質問: ホーム ページへのリンクに "index" の使用を試みましたが、機能しませんでした。 なぜでしょうか。
+### <a name="question-i-tried-using-index-for-the-link-to-the-home-page-but-it-didnt-work-why"></a>質問:ホーム ページへのリンクに "index" の使用を試みましたが、機能しませんでした。 なぜでしょうか。
 
-回答: *views.py* のビュー関数が `index` という名前であっても、Django プロジェクトの *urls.py* ファイルにある URL ルーティング パターンは、文字列 "index" と一致する正規表現を含みません。 この文字列と一致させるには、パターン `^index$` に対応する別のエントリを追加する必要があります。
+回答:*views.py* のビュー関数が `index` という名前であっても、Django プロジェクトの *urls.py* ファイルにある URL ルーティング パターンは、文字列 "index" と一致する正規表現を含みません。 この文字列と一致させるには、パターン `^index$` に対応する別のエントリを追加する必要があります。
 
 次のセクションで示すように、ページ テンプレートで `{% url '<pattern_name>' %}` タグを使用して、パターンの*名前*を参照する方が優れた方法です。この場合、Django は状況に見合った URL を作成します。 たとえば、*about.html* の `<div><a href="home">Home</a></div>` を `<div><a href="{% url 'index' %}">Home</a></div>` に置き換えます。 *urls.py* にある最初の URL パターンは実際、(`name='index'` 引数の特性により) 'index' という名前になるため、ここでは 'index' の使用が有効です。 また、2 番目のパターンを参照するには、'home' を使用することもできます。
 
-## <a name="step-3-4-use-template-inheritance-to-create-a-header-and-nav-bar"></a>手順 3-4: テンプレートの継承を使ってヘッダーとナビゲーション バーを作成する
+## <a name="step-3-4-use-template-inheritance-to-create-a-header-and-nav-bar"></a>手順 3-4:テンプレートの継承を使ってヘッダーとナビゲーション バーを作成する
 
 最新の Web アプリでは通常、各ページに明示的なナビゲーション リンクを保持するのではなく、最も重要なページ リング、ポップアップ メニューなどを提供するブランド ヘッダーとナビゲーション バーを使用します。 しかし、ヘッダーとナビゲーション バーをすべてのページで確実に同じにするために、各ページ テンプレートで同じコードを繰り返したくはありません。 代わりに、すべてのページの共通部分を 1 つの場所に定義します。
 
@@ -283,4 +285,4 @@ Django のテンプレート システムでは、複数のテンプレート間
 - [最初の Django アプリの作成、パート 3 (ビュー)](https://docs.djangoproject.com/en/2.0/intro/tutorial03/) (docs.djangoproject.com)
 - 制御フローなど Django テンプレートの詳細な機能について、「[The Django template language](https://docs.djangoproject.com/en/2.0/ref/templates/language/)」(Django テンプレート言語) (docs.djangoproject.com) を確認する
 - `{% url %}` タグの使用に関する完全な詳細について、Django テンプレート リファレンスの「[Built-in template tags and filters](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/)」(組み込みのテンプレート タグとフィルター) (docs.djangoproject.com) にある [URL](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#url) を確認する
-- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)
+- GitHub のチュートリアルのソース コード:[Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)

@@ -1,5 +1,5 @@
 ---
-title: '方法: Web サイトのパフォーマンス データを収集する | Microsoft Docs'
+title: 方法:Web サイトのパフォーマンス データを収集する | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -19,14 +19,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bfe90b47086232650a38581bb2a8af1b534b8063
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a2d9cb832d8797eb4ebf16482f4bef02aa6644a3
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49835989"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064298"
 ---
-# <a name="how-to-collect-performance-data-for-a-web-site"></a>方法: Web サイトのパフォーマンス データを収集する
+# <a name="how-to-collect-performance-data-for-a-web-site"></a>方法:Web サイトのパフォーマンス データを収集する
 
 **パフォーマンス ウィザード** を使用して、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションのパフォーマンス データを収集できます。 Visual Studio で開かれた Web アプリケーションをプロファイリングすることも、ローカル コンピューターに置かれ、Visual Studio IDE で開かれていない [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web サイトをプロファイリングすることもできます。
 
@@ -79,11 +79,11 @@ ms.locfileid: "49835989"
 
 5. ウィザードの 3 番目のページの **[Web アプリケーションを実行する URL またはパス]** ボックスで、アプリケーションのホーム ページの URL を入力し、 **[次へ]** をクリックします。
 
-   - サーバー (IIS) ベースの Web サイトの場合は、**<http://localhost/MySite/default.aspx>** などの URL を入力します。 これにより、ローカル コンピューターの MySite のアプリケーション ルートで [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションがプロファイリングされ、そのサイトの default.aspx ページが Internet Explorer で起動されて、セッションが開始されます。
+   - サーバー (IIS) ベースの Web サイトの場合は、**<`http://localhost/MySite/default.aspx`>** などの URL を入力します。 これにより、ローカル コンピューターの MySite のアプリケーション ルートで [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションがプロファイリングされ、そのサイトの default.aspx ページが Internet Explorer で起動されて、セッションが開始されます。
 
-   - ファイル ベースの Web サイトの場合は、file///**c:\WebSites\MySite\default.aspx**のようなパスを入力します。 これにより、c:\webSites\MySite に置かれている [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションがプロファイリングされ、 http://localhost:nnnn/MySite/default.aspx ページが Internet Explorer で起動されて、セッションが開始されます。
+   - ファイル ベースの Web サイトの場合は、file///**c:\WebSites\MySite\default.aspx**のようなパスを入力します。 これにより、c:\webSites\MySite に置かれている [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションがプロファイリングされ、`http://localhost:nnnn/MySite/default.aspx` ページが Internet Explorer で起動されて、セッションが開始されます。
 
-   - 外部サイトで JavaScript データを収集する場合は、 http://www.contoso.com のような URL を入力します。
+   - 外部サイトで JavaScript データを収集する場合は、`http://www.contoso.com` のような URL を入力します。
 
      詳細については、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ターゲット バイナリのプロパティ ページを参照してください。
 

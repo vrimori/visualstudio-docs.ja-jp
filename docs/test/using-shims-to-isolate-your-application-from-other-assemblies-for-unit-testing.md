@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で shim を使用して単体テストのためにアプリケーションを分離する
+title: shim を使用して単体テストのためにアプリケーションを分離する
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: c1a6a15a5c5ba0eccfdab89461292fba484b5af3
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: b94852b15891566bdfc38dd3fd8de9e706f38737
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389070"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065611"
 ---
 # <a name="use-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing"></a>shim を使用して単体テストでアプリケーションを他のアセンブリから分離する
 
@@ -32,7 +32,7 @@ shim を使用して、ソリューションの一部ではないアセンブリ
 > [!NOTE]
 > .NET Standard プロジェクトはサポートされていません。
 
-## <a name="example-the-y2k-bug"></a>例: Y2K バグ
+## <a name="example-the-y2k-bug"></a>例:Y2K バグ
 
 2000 年 1 月 1 日に例外をスローするメソッドについて考えてみましょう。
 
@@ -93,7 +93,7 @@ public void Y2kCheckerTest() {
 
 ###  <a name="WriteShims"></a> shim を使用してテストを作成する
 
-テスト コード内で、フェイク メソッドに *detour* を挿入します。 例:
+テスト コード内で、フェイク メソッドに *detour* を挿入します。 次に例を示します。
 
 ```csharp
 [TestClass]
@@ -511,5 +511,5 @@ shim は、.NET 基本クラス ライブラリ **mscorlib** および **System*
 ## <a name="see-also"></a>関連項目
 
 - [Microsoft Fakes を使用したテストでコードを分離する](../test/isolating-code-under-test-with-microsoft-fakes.md)
-- [Peter Provost のブログ: Visual Studio 2012 の shim](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)
-- [1 時間 16 分の動画: Visual Studio 2012 で Fakes を利用し、テスト不可能なコードをテストする](http://go.microsoft.com/fwlink/?LinkId=261837)
+- [Peter Provost のブログ:Visual Studio 2012 shim](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)
+- [1 時間 16 分の動画:Visual Studio 2012 で Fakes を利用し、テスト不可能なコードをテストする](http://go.microsoft.com/fwlink/?LinkId=261837)

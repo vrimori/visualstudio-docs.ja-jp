@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f6b0855b18f12bd80ad17c5b544a95e5ee57de9
-ms.sourcegitcommit: d7f232a7596420e40ff8051d42cdf90203af4a74
+ms.openlocfilehash: 31b6812ec41aedd4e33eb0d043476365d3938767
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821371"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160024"
 ---
 # <a name="how-to-debug-for-absolute-beginners"></a>超初心者でもわかるデバッグ方法
 
@@ -82,7 +82,7 @@ Visual Studio では、コード行の左にある余白をクリックして、
 
     Visual Studio をまだインストールしていない場合は、 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)  ページに移動し、無料試用版をインストールしてください。
 
-    Visual Studio は既にインストールされていて、ワークロードだけをインストールする必要がある場合は、**[ツール]** > **[ツールと機能を取得]** の順にクリックします。 Visual Studio インストーラーが起動します。 **[.NET デスクトップ開発]** (または **[.NET Core クロスプラットフォームの開発]**) ワークロードを選択し、**[変更]** を選択します。
+    Visual Studio は既にインストールされていて、ワークロードだけをインストールする必要がある場合は、**[ツール]** > **[ツールと機能を取得]** の順にクリックします。 Visual Studio インストーラーが起動します。 **[.NET デスクトップ開発]** または **[.NET Core クロスプラットフォームの開発]** ワークロードを選択し、**[変更]** を選択します。
 
 1. Visual Studio を開いた後、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択します。
 

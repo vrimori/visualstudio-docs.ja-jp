@@ -1,9 +1,9 @@
 ---
-title: 'クイックスタート: Visual Studio で Visual Basic を使用して初めてコンソール アプリを作成する'
+title: Visual Basic を使用して初めてのコンソール アプリを作成する
 description: Visual Studio で Visual Basic を使用して、シンプルな Hello World コンソール アプリを作成する方法の詳細な手順を説明します。
-ms.custom: ''
 ms.date: 12/10/2017
 ms.prod: visual-studio-dev15
+ms.custom: seodec18
 ms.technology: vs-acquisition
 ms.topic: quickstart
 ms.devlang: vb
@@ -14,14 +14,14 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d75c178abdaae516b8694e9278d8df2007c2e1d
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 67a990b98b385cacab89bfa8270d8409f9e9aa5f
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42626591"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159608"
 ---
-# <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>クイックスタート: Visual Studio で Visual Basic を使用して初めてコンソール アプリを作成する
+# <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>クイック スタート: Visual Studio で Visual Basic を使用して初めてのコンソール アプリを作成する
 
 ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、コンソールで実行される簡単な Visual Basic アプリケーションを作成します。
 
