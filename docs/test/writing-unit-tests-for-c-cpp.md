@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で C/C++ 用の単体テストを作成する
+title: C/C++ 用の単体テストの記述
 ms.date: 10/09/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -9,12 +9,12 @@ manager: wpickett
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: e79b65628193c7b90a03b2e1141dfc45b6b0829f
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: e19eb3bb421a69c902d9a10f0cdb3c5ac2244a04
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48879227"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053745"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio で C/C++ 用の単体テストを作成する
 
@@ -73,7 +73,7 @@ Google Test アダプターと Boost.Test アダプターは、それぞれ、Vi
 ### <a name="write-test-methods"></a>テスト メソッドを作成する
 
 > [!NOTE]
-> ここでは、C/C++ の Microsoft 単体テスト フレームワークの構文を示します。 詳細については、「[Microsoft.VisualStudio.TestTools.CppUnitTestFramework API リファレンス](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)」をご覧ください。 Google Test については、[Google Test の入門](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)に関するドキュメントをご覧ください。 Boost.Test については、「[Boost Test Library: The Unit Test Framework](http://www.boost.org/doc/libs/1_46_0/libs/test/doc/html/utf.html)」(Boost Test ライブラリ: 単体テスト フレームワーク) をご覧ください。
+> ここでは、C/C++ の Microsoft 単体テスト フレームワークの構文を示します。 詳細については、「[Microsoft.VisualStudio.TestTools.CppUnitTestFramework API リファレンス](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)」を参照してください。 Google Test については、[Google Test の入門](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)に関するドキュメントをご覧ください。 Boost.Test については、「[Boost Test library: The unit test framework](http://www.boost.org/doc/libs/1_46_0/libs/test/doc/html/utf.html)」 (Boost Test ライブラリ: 単体テスト フレームワーク) を参照してください。
 
 テスト プロジェクトの *.cpp* ファイルには、テスト コード記述方法の例として、スタブ クラスとメソッドの定義が含まれます。 シグネチャで TEST_CLASS および TEST_METHOD マクロが使われていることに注意してください。これにより、**[テスト エクスプローラー]** ウィンドウでメソッドを見つけることができます。
 
@@ -119,7 +119,7 @@ TEST_METHOD(TestClassInit)
 
 ## <a name="use-codelens"></a>CodeLens を使用する
 
-**Visual Studio 2017 バージョン 15.7 Professional および Enterprise Edition のみ**: [CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md) を使用すると、コード エディターを離れることなく単体テストの状態を簡単に確認することができます。 次の中の任意の方法で、C++ 単体テスト プロジェクト用に CodeLens を初期化できます。
+**Visual Studio 2017 バージョン 15.7 Professional Edition および Enterprise Edition のみ**: [CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md) を使用すると、コード エディターを開いたままで単体テストの状態をすばやく確認できます。 次の中の任意の方法で、C++ 単体テスト プロジェクト用に CodeLens を初期化できます。
 
 - テスト プロジェクトまたはソリューションを編集してビルドします。
 - プロジェクトまたはソリューションをリビルドします。

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 拡張機能の検索と使用
+title: 拡張機能の検索と使用
 ms.date: 06/07/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -16,16 +16,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a5b562aa6fe4a64f92d66ad0a6fff0395e5314a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: cc67602db2d830283bb47fe7c3a9728d0d9fd799
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31950281"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067908"
 ---
 # <a name="find-and-use-visual-studio-extensions"></a>Visual Studio 拡張機能の検索と使用
 
-Visual Studio 拡張機能は、Visual Studio 内で実行されるコード パッケージで、Visual Studio の機能が追加または強化されます。 Visual Studio の拡張機能について詳しくは「 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)」をご覧ください。
+Visual Studio 拡張機能は、Visual Studio 内で実行されるコード パッケージで、Visual Studio の機能が追加または強化されます。 Visual Studio の拡張機能について詳しくは次を参照してください。[Visual Studio SDK](../extensibility/visual-studio-sdk.md)。
 
 **[拡張機能と更新プログラム]** ダイアログ ボックスを使用すると、Visual Studio の拡張機能やサンプルを Web サイトまたは他の場所から入手してインストールし、これらを有効化、無効化、更新、またはアンインストールすることができます。 **[ツール]、[拡張機能と更新プログラム]** の順に選択するか、**[クイック起動]** ウィンドウに「**拡張機能**」と入力してください。 ダイアログ ボックスには、インストールされているサンプルと拡張機能の更新プログラムも表示されます。 また、Web サイトから拡張機能をダウンロードしたり、他の開発者から入手したりすることもできます。
 

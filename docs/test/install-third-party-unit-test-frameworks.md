@@ -9,20 +9,22 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: ffd6b8c66f0575ec07e66ea2a138f2761b20cc7a
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 8acdeb17c9c45613d6a987d503deeaf63beecdaa
+ms.sourcegitcommit: 150fa6ec89ea2d086c0af9ababbaf6103a12eff1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39379639"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52954085"
 ---
-# <a name="install-third-party-unit-test-frameworks"></a>サードパーティ製の単体テスト フレームワークをインストールする
+# <a name="install-unit-test-frameworks"></a>単体テスト フレームワークのインストール
 
-Visual Studio テスト エクスプ ローラーは、エクスプ ローラーのアダプター インターフェイスを開発した単体テスト フレームワークを実行できます。 フレームワークのインストール プログラムは、バイナリをインストールし、サポートする言語の Visual Studio プロジェクト テンプレートを追加します。 テンプレートを使用してプロジェクトを作成する際、フレームワークはテスト エクスプ ローラーに登録されます。 Visual Studio ソリューションには異なるフレームワークを使用する単体テスト プロジェクトと、異なる言語を対象とした単体テスト プロジェクトを含めることができます。 テスト エクスプ ローラーはそれらすべてを実行します。
+Visual Studio テスト エクスプ ローラーは、エクスプ ローラーのアダプター インターフェイスを開発した単体テスト フレームワークを実行できます。 フレームワークのインストール プログラムは、バイナリをインストールし、サポートする言語の Visual Studio プロジェクト テンプレートを追加します。 テンプレートを使用してプロジェクトを作成する際、フレームワークはテスト エクスプ ローラーに登録されます。 Visual Studio ソリューションには異なるフレームワークを使用する単体テスト プロジェクトと、異なる言語を対象とした単体テスト プロジェクトを含めることができます。 テスト エクスプローラーではそれらがすべて実行されます。
 
-## <a name="acquire-third-party-frameworks"></a>サード パーティ製フレームワークを取得する
+[MSTest](getting-started-with-unit-testing.md) は Visual Studio が提供するテスト フレームワークであり、既定で Visual Studio と共にインストールされます。
 
-Visual Studio 拡張機能マネージャーを使用して、または Visual Studio Marketplace から、多くのサードパーティ製の単体テスト フレームワークをダウンロードしてインストールすることができます。 フレームワークは、フレームワークの Web サイトなどの他のサイトからダウンロードすることもできます。
+## <a name="acquire-frameworks"></a>フレームワークを取得する
+
+Visual Studio 拡張機能マネージャーを使用して、または [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) から、サードパーティ製の単体テスト フレームワークをダウンロードしてインストールすることができます。 フレームワークは、フレームワークの Web サイトなどの他のサイトからダウンロードすることもできます。
 
 ### <a name="install-from-visual-studio"></a>Visual Studio からインストールする
 
@@ -64,7 +66,7 @@ Visual Studio 拡張機能マネージャーを使用して、または Visual S
 
 1. **[ツール]** > **[NuGet Package Manager]** > **[Manage NuGet Packages for Solution...]** を選択して、ソリューション用の Nuget Package Manager を開きます。
 
-2. **[更新]** タブをクリックし、インストールされている NUnit または xUnit テスト アダプターを検索します。
+2. **[更新]** タブをクリックし、インストールされている MSTest、NUnit または xUnit テスト アダプターを検索します。
 
 3. 各テスト アダプターを選択し、ドロップダウン メニューから最新の安定したバージョンを選択します。
 

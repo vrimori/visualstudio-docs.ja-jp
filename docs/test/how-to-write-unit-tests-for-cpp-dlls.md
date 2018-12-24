@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で C++ DLL 用の単体テストを作成する
+title: C++ DLL 用の単体テストの記述
 ms.date: 11/04/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -9,26 +9,26 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 829882cf3504583a4e9dbc3532c900df26a921f2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 045f33c2afcb4f37f5ab81beb21e778edbdd1a61
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49862529"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056176"
 ---
 # <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>Visual Studio で C++ DLL 用の単体テストを作成する
 
  テストする関数をエクスポートするかどうかによって、DLL コードをテストする方法はいくつかあります。 次のいずれかの方法を選択してください。
 
- **DLL からエクスポートされた関数のみを単体テストで呼び出す:** 「[Visual Studio で C/C++ 用の単体テストを作成する](writing-unit-tests-for-c-cpp.md)」で説明されているように、別個のテスト プロジェクトを追加します。 このテスト プロジェクトで、DLL プロジェクトへの参照を追加します。
+ **単体テストは、DLL からエクスポートされた関数のみを呼び出します。**「[C/C++ 用の単体テストの記述](writing-unit-tests-for-c-cpp.md)」で説明されているように、別のテスト プロジェクトを追加します。 このテスト プロジェクトで、DLL プロジェクトへの参照を追加します。
 
  手順「[テスト プロジェクトからエクスポートされた関数を参照するには](#projectRef)」に移動します。
 
- **DLL は .exe ファイルとしてビルドされます。** 別個のテスト プロジェクトを追加します。 これを出力オブジェクト ファイルにリンクします。
+ **DLL は .exe ファイルとしてビルドされます。** 別のテスト プロジェクトを追加します。 これを出力オブジェクト ファイルにリンクします。
 
  手順「[テストをオブジェクトまたはライブラリ ファイルにリンクするには](#objectRef)」に移動します。
 
- **DLL からエクスポートされない非メンバー関数を単体テストで呼び出し、DLL はスタティック ライブラリとしてビルドできる:** *.lib* ファイルとしてコンパイルされるように、DLL プロジェクトを変更します。 テスト対象のプロジェクトを参照する、別のテスト プロジェクトを追加します。
+ **単体テストは DLL からエクスポートされない非メンバー関数を呼び出し、DLL はスタティック ライブラリとしてビルドできます。***.lib* ファイルとしてコンパイルされるように、DLL プロジェクトを変更します。 テスト対象のプロジェクトを参照する、別のテスト プロジェクトを追加します。
 
  この方法には、エクスポートされないメンバーをテストで使用できる一方で、独立したプロジェクトにテストが保持されるという利点があります。
 
