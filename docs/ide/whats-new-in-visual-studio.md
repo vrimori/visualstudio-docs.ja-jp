@@ -1,10 +1,11 @@
 ---
 title: Visual Studio 2017 の新機能
+titleSuffix: ''
 description: Visual Studio 2017 の新機能について説明します。
-ms.custom: ''
 ms.date: 12/04/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
+ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
 - VS.StartPage.WhatsNew
@@ -17,18 +18,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a007d6557fe7ebd533ee34fecc8b8c0315024edf
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: c490d15f27801dff6bb09f6356ad7c665b09c558
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895770"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160193"
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
 
 **[15.9 リリース](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017)の更新**
 
-以前のバージョンの Visual Studio からのアップグレードを検討していますか。 Visual Studio 2017 にはすべての開発、すべてのアプリ、すべてのプラットフォームにおいて、他に類を見ない生産性があります。 Visual Studio 2017 を利用し、Android、iOS、Windows、Linux、Web、クラウド向けのアプリを開発します。 短期間でプログラミングできて、デバッグや診断も簡単に行えます。テストを頻繁に行うことで、自信をもってリリースできます。 独自の拡張機能を開発することで Visual Studio を拡張し、カスタマイズすることもできます。 今回のリリースでは、バージョン管理を使用した、迅速で、効率的な共同作業が可能になりました。
+以前のバージョンの Visual Studio からのアップグレードを検討していますか。 Visual Studio 2017 でできること:すべての開発、すべてのアプリ、すべてのプラットフォームにおいて、他に類を見ない生産性を実現します。 Visual Studio 2017 を利用し、Android、iOS、Windows、Linux、Web、クラウド向けのアプリを開発します。 短期間でプログラミングできて、デバッグや診断も簡単に行えます。テストを頻繁に行うことで、自信をもってリリースできます。 独自の拡張機能を開発することで Visual Studio を拡張し、カスタマイズすることもできます。 今回のリリースでは、バージョン管理を使用した、迅速で、効率的な共同作業が可能になりました。
 
 以前のバージョンである Visual Studio 2015 以降に行われた主な変更点の要約を示します。
 
@@ -64,7 +65,7 @@ Visual Studio 2017 の最も重要な改善点と新機能について、その�
 
 * ワークロードを使用する代わりに、独自のコンポーネントを選択するには、 インストーラーから **[個別のコンポーネント]** タブを選択します。
 * また、Windows の言語オプションを変更することなく、言語パックをインストールする場合は、 インストーラーの **[言語パック]** タブを選択します。
-* **15.7 の新機能**: Visual Studio のインストール場所を変更したいですか? インストーラーの **[インストール オプション]** タブを選択します。
+* **15.7 の新機能**:Visual Studio のインストール場所を変更したいですか? インストーラーの **[インストール オプション]** タブを選択します。
 
 ステップ バイ ステップの手順を含む、新しいインストール エクスペリエンスの詳細については、[Visual Studio のインストール](../install/install-visual-studio.md)に関するページを参照してください。
 
@@ -106,11 +107,11 @@ Visual Studio の拡張機能の一覧を表示するには、**[ツール]**、
 
 [拡張機能マネージャーのローミング] を使用する場合、リストに次の 3 つの種類のアイコンが表示されます。
 
-* ![ローミング済みアイコン](../ide/media/vs2017ide-roamedicon.png) **_ローミング済み_**: ローミング リストにあり、このコンピューターにはインストールされていない拡張機能を示します。
+* ![ローミング済みアイコン](../ide/media/vs2017ide-roamedicon.png) **_ローミング済み_**:ローミング リストにあり、このコンピューターにはインストールされていない拡張機能を示します。
   (これらの拡張機能は、**[ダウンロード]** ボタンでインストールできます。)
-* ![ローミングおよびインストール済みアイコン](../ide/media/vs2017ide-roamedinstalledicon.png) **_ローミングおよびインストール済み_**: ローミング リストにあり、お使いの開発環境にインストールされているすべての拡張機能を示します。
+* ![ローミングおよびインストール済みアイコン](../ide/media/vs2017ide-roamedinstalledicon.png) **_ローミングおよびインストール済み_**:ローミング リストにあり、お使いの開発環境にインストールされているすべての拡張機能を示します。
   (ローミングしない場合は、**[ローミングの停止]** ボタンで削除することができます。)
-* ![インストール済みアイコン](../ide/media/vs2017ide-installedicon.png) **_インストール済み_**: この環境にインストールされ、ローミング リストにはないすべての拡張機能を示します。
+* ![インストール済みアイコン](../ide/media/vs2017ide-installedicon.png) **_インストール済み_**:この環境にインストールされ、ローミング リストにはないすべての拡張機能を示します。
   (**[ローミングの開始]** ボタンを使用して、拡張機能をローミング リストに追加できます。)
 
 サインイン中にダウンロードするすべての拡張機能が **[ローミングおよびインストール済み]** としてリストに追加されます。 拡張機能はローミング リストの一部となり、任意のコンピューターからアクセスできるようになります。
@@ -131,19 +132,19 @@ Visual Studio Enterprise 2017 では、ライブ単体テストを実行する�
 
 自動化されたテストの詳細については、[DevOps の 自動化テストの CI/CD パイプライン](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/04/20/set-up-a-cicd-pipeline-to-run-automated-tests-efficiently/)に関するブログ投稿をご覧ください。
 
-[Continuous Delivery Tools for Visual Studio (Visual Studio 用の継続的デリバリー ツール)](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) DevLabs 拡張の新機能の詳細については、「[Commit with confidence: Commit time code quality](https://blogs.msdn.microsoft.com/visualstudio/2017/08/21/committing-with-confidence-commit-time-code-quality-information-updated/)」 (自信を持ってコミットする: タイム コードの品質をコミットする) をご覧ください。
+[Continuous Delivery Tools for Visual Studio (Visual Studio 用の継続的デリバリー ツール)](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) DevLabs 拡張の新機能の詳細については、ブログ投稿「[Commit with confidence: Commit time code quality](https://blogs.msdn.microsoft.com/visualstudio/2017/08/21/committing-with-confidence-commit-time-code-quality-information-updated/)」 (自信を持ってコミットする: タイム コードの品質をコミットする) をご覧ください。
 
 ### <a name="visual-studio-ide-enhancements"></a>Visual Studio IDE の拡張機能
 
 #### <a name="multi-caret-editing"></a>マルチキャレットの編集
 
-**15.8 の新機能**: ファイル内の複数の場所の同時編集が簡単になりました。 まず、ファイル内の複数の場所で挿入ポイントと選択範囲を作成します。 次に、マルチ キャレット編集機能を使用し、複数の場所で同時に同じ編集を行うことができます。
+**15.8 の新機能**:ファイル内の複数の場所の同時編集が簡単になりました。 まず、ファイル内の複数の場所で挿入ポイントと選択範囲を作成します。 次に、マルチ キャレット編集機能を使用し、複数の場所で同時に同じ編集を行うことができます。
 
 詳細については、[[テキストの検索と置換]](finding-and-replacing-text.md) ページの [[マルチキャレット選択]](finding-and-replacing-text.md#multi-caret-selection) セクションをご覧ください。
 
 #### <a name="keep-keybinding-profiles-consistent"></a>キー バインド プロファイルの一貫性を維持する
 
-**15.8 の新機能**: 2 つの新しいキーボード プロファイル、Visual Studio Code と ReSharper (Visual Studio) を利用し、ツール間でキーバインドの一貫性を維持できるようになりました。 これらのスキームは、**[ツール]** > **[オプション]** > **[全般]** > **[キーボード]** および上部のドロップダウン メニューで見つけることができます。
+**15.8 の新機能**:2 つの新しいキーボード プロファイル、Visual Studio Code と ReSharper (Visual Studio) を利用し、ツール間でキーバインドの一貫性を維持できるようになりました。 これらのスキームは、**[ツール]** > **[オプション]** > **[全般]** > **[キーボード]** および上部のドロップダウン メニューで見つけることができます。
 
   ![Visual Studio Code と ReSharper の新しいキー バインド プロファイル](../ide/media/vs-keyboard-mappings-code-resharper.png)
 
@@ -172,7 +173,7 @@ Visual Studio でプロジェクトを操作する際に、コードを迅速に
 
 より確実に混乱なく A から B に移動できるようにナビゲーション エクスペリエンスを更新しました。
 
-* **15.4 の新機能**: **定義へ移動** (**Ctrl** + **クリック**または **F12**) &ndash; マウスを使っているユーザーは、**Ctrl** キーを押しながらメンバーをクリックすることで、メンバーの定義に簡単に移動することができます。 **Ctrl** キーを押しながらコード記号の上にマウスを置くと、下線が引かれ、リンクに変わります。 詳細については、「[Go To Definition and Peek Definition](../ide/go-to-and-peek-definition.md)」([定義へ移動] および [定義をここに表示]) を参照してください。
+* **15.4 の新機能**:**定義へ移動** (**Ctrl** + **クリック**または **F12**) &ndash; マウスを使っているユーザーは、**Ctrl** キーを押しながらメンバーをクリックすることで、メンバーの定義に簡単に移動することができます。 **Ctrl** キーを押しながらコード記号の上にマウスを置くと、下線が引かれ、リンクに変わります。 詳細については、「[Go To Definition and Peek Definition](../ide/go-to-and-peek-definition.md)」([定義へ移動] および [定義をここに表示]) を参照してください。
 
 * **実装に移動** (**Ctrl** + **F12**) &ndash; 任意の基本データ型やメンバーから各種実装に移動します。
 
@@ -216,7 +217,7 @@ Visual Studio には、C++ Core ガイドラインの配信、C++11 および C+
 
 #### <a name="snapshots-and-intellitrace-step-back"></a>スナップショットと IntelliTrace ステップ バック
 
-**15.5 の新機能**: IntelliTrace ステップ バックでは、ブレークポイントおよびデバッガー ステップ イベントごとにアプリケーションのスナップショットを自動的に取得します。 記録されたスナップショットにより、前のブレークポイントまたはステップに戻り、過去の時点でのアプリケーションの状態を確認できるようになります。 IntelliTrace ステップ バックでは、以前のアプリケーションの状態を確認したいが、デバッグの再開や必要なアプリ状態の再作成は必要でない場合に時間を節約できます。
+**15.5 の新機能**:IntelliTrace のステップ バックでは、ブレークポイントとデバッガー ステップ イベントごとにアプリケーションのスナップショットを自動作成します。 記録されたスナップショットにより、前のブレークポイントまたはステップに戻り、過去の時点でのアプリケーションの状態を確認できるようになります。 IntelliTrace ステップ バックでは、以前のアプリケーションの状態を確認したいが、デバッグの再開や必要なアプリ状態の再作成は必要でない場合に時間を節約できます。
 
 スナップショット間を移動して表示するには、**デバッグ** ツールバーの **[前に戻る]** ボタンと **[次へ進む]** ボタンを使用します。 これらのボタンを使用して、**[診断ツール]** ウィンドウの **[イベント]** タブに表示されるイベント間を移動します。 あるイベントに戻るまたは進むと、選択したイベントの過去のデバッグが自動的に有効になります。
 
@@ -245,7 +246,7 @@ Visual Studio には、C++ Core ガイドラインの配信、C++11 および C+
 
 ### <a name="debug-live-aspnet-apps-using-snappoints-and-logpoints-in-live-azure-applications"></a>ライブ Azure アプリケーションでスナップショットとログポイントを使用して、ライブ ASP.NET アプリをデバッグする
 
-**15.5 の新機能**: スナップショット デバッガーは、対象コードの実行時に実稼働アプリのスナップショットを取得します。 スナップショットを取得するようにデバッガーに指示するには、コードでスナップショットとログポイントを設定します。 デバッガーでは、実稼働アプリケーションのトラフィックに影響を与えることなく、問題を正確に確認できます。 スナップショット デバッガーは、実稼働環境で発生する問題の解決にかかる時間を大幅に短縮するのに役立ちます。
+**15.5 の新機能**:スナップショット デバッガーは、対象コードの実行時に実稼働アプリのスナップショットを取得します。 スナップショットを取得するようにデバッガーに指示するには、コードでスナップショットとログポイントを設定します。 デバッガーでは、実稼働アプリケーションのトラフィックに影響を与えることなく、問題を正確に確認できます。 スナップショット デバッガーは、実稼働環境で発生する問題の解決にかかる時間を大幅に短縮するのに役立ちます。
 
 スナップショット コレクションは、Azure App Service で実行されている次の Web アプリで利用できます。
 
@@ -264,7 +265,7 @@ Visual Studio には、C++ Core ガイドラインの配信、C++11 および C+
 
 希望する開発言語を &mdash;C#、Visual Basic、C++ または JavaScript の中から&mdash;選び、Windows 10 デバイスを対象とするユニバーサル Windows プラットフォーム アプリを作成します。 Visual Studio 2017 には、各言語の UWP アプリ テンプレートが用意されており、すべてのデバイスを対象とした単一のプロジェクトを作成できます。 作業が終わったら、アプリ パッケージを生成し、Visual Studio 内から Microsoft Store に提出できます。これで、すべての Windows 10 デバイスのユーザーにアプリが公開されます。
 
-**15.5 の新機能**: Visual Studio 2017 バージョン 15.5 では、Windows 10 Fall Creators Update SDK (10.0.16299.0) の最適なサポートが提供されます。 また、Windows 10 Fall Creators Update により、UWP 開発者のための数多くの機能が強化されます。 最も大きな変更点をいくつか以下に示します。 
+**15.5 の新機能**:Visual Studio 2017 バージョン 15.5 では、Windows 10 Fall Creators Update SDK (10.0.16299.0) の最適なサポートが提供されます。 また、Windows 10 Fall Creators Update により、UWP 開発者のための数多くの機能が強化されます。 最も大きな変更点をいくつか以下に示します。 
 
 * **.NET Standard 2.0 のサポート**<br/>Windows 10 Fall Creators Update は、アプリ配置を効率化するだけでなく、.NET Standard 2.0 サポートを提供する Windows 10 の最初のリリースとなります。 実際には、[.NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/) は、すべての .NET プラットフォームで実装できる基本クラス ライブラリの参照実装です。 .NET Standard の目的は、.NET 開発者が作業用に選択したすべての .NET プラットフォームでコードをできるだけ簡単に共有できるようにすることです。
 * **UWP と Win32 の両方に長所**<br/>[デスクトップ ブリッジ](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)を使用して Windows 10 プラットフォームを改善しました。これにより、現在のフォーカスが UWP、WPF、Windows Forms、または Xamarin のいずれにあるかに関係なく、すべての .NET 開発者は Windows 10 を改善することができます。 Visual Studio 2017 バージョン 15.5 の新しいアプリ パッケージング プロジェクト タイプを使用することで、UWP プロジェクトの場合と同じように、WPF または Windows Forms プロジェクトの Windows アプリケーション パッケージを作成できます。 アプリをパッケージ化すると、Windows 10 アプリ配置のすべての利点が得られ、Microsoft Store (コンシューマー アプリケーションの場合) または Microsoft Store for Business と Education を通じて配布することができます。 パッケージ化されたアプリは完全な UWP API 画面とデスクトップ上の Win32 API の両方にアクセスできるため、WPF および Windows Forms アプリケーションを UWP API および Windows 10 の機能で段階的に最新化できるようになりました。 さらに、すべての Win32 機能を使用して、デスクトップ上で点灯する UWP アプリケーションに Win32 コンポーネントを含めることができます。
@@ -281,25 +282,25 @@ UWP の詳細については、「[ユニバーサル Windows プラットフォ
 
 ### <a name="entitlements-editor"></a>権利エディター
 
-**15.3 の新機能**: iOS 開発で必要になることから、スタンドアロンの権利エディターを追加しました。 使いやすい UI で簡単に閲覧できます。 *entitlements.plist* ファイルをダブルクリックすると起動します。
+**15.3 の新機能**:iOS 開発で必要になることから、スタンドアロンの権利エディターを追加しました。 使いやすい UI で簡単に閲覧できます。 *entitlements.plist* ファイルをダブルクリックすると起動します。
 
 ![Xamarin のエンタイトルメント エディター](../ide/media/xamarin-entitlements-editor.png)
 
 ### <a name="visual-studio-tools-for-xamarin"></a>Xamarin 用の Visual Studio ツール
 
-**15.4 の新機能**: Xamarin Live では、開発者は iOS および Android デバイスで直接、アプリの継続的な展開、テスト、デバッグができます。 Xamarin Live Player (&mdash;App Store または Google Play で利用可能&mdash;) をダウンロードした後、デバイスを Visual Studio とペアリングすることで、モバイル アプリの構築方法を一変させることができます。 この機能は、Visual Studio に含まれるようになりました。**[ツール]** > **[オプション]** > **[Xamarin]** > **[Other] \(その他)** > **[Xamarin Live Player を有効にする]** で有効にすることができます。
+**15.4 の新機能**:Xamarin Live では、開発者は iOS および Android デバイスで直接、アプリを継続的に展開、テストおよびデバッグできます。 Xamarin Live Player (&mdash;App Store または Google Play で利用可能&mdash;) をダウンロードした後、デバイスを Visual Studio とペアリングすることで、モバイル アプリの構築方法を一変させることができます。 この機能は、Visual Studio に含まれるようになりました。**[ツール]** > **[オプション]** > **[Xamarin]** > **[Other] \(その他)** > **[Xamarin Live Player を有効にする]** で有効にすることができます。
 
 ![Xamarin Live Player のペアリング、展開、ライブ エディット モードのアニメーション](../ide/media/xamarinliveplayer.gif)
 
 ### <a name="support-for-google-android-emulator"></a>Google Android Emulator のサポート
 
-**15.8 の新機能**: Hyper-V を使用するとき、Google の Android エミュレーターを、Hyper-V 仮想マシン、Docker ツール、HoloLens エミュレーターなど、Hyper-V ベースの他のテクノロジと並行して利用できるようになりました。 (この機能を利用するには、Windows 10 の 2018 年 4 月以降の更新プログラムが必要です。)
+**15.8 の新機能**:Hyper-V を使用するとき、Google の Android エミュレーターを、Hyper-V 仮想マシン、Docker ツール、HoloLens エミュレーターなど、Hyper-V ベースの他のテクノロジと並行して利用できるようになりました。 (この機能を利用するには、Windows 10 の 2018 年 4 月以降の更新プログラムが必要です。)
 
 ![Hyper-V テクノロジの Google Android Emulator](../ide/media/xamarin-hyperv-android-emulator.png)
 
 #### <a name="xamarinandroid-designer-split-view-editor"></a>Xamarin.Android Designer 分割ビュー エディター
 
-**15.8 の新機能**: デザイナーにとっての Xamarin.Android の使い勝手が大幅に改善されました。 ハイライトは、レイアウトを同時に作成、編集、プレビューできる新しい分割ビュー エディターです。
+**15.8 の新機能**:デザイナーにとっての Xamarin.Android の使い勝手が大幅に改善されました。 ハイライトは、レイアウトを同時に作成、編集、プレビューできる新しい分割ビュー エディターです。
 
 ![Xamarin.Android Designer 分割ビュー エディター](../ide/media/android-designer-split-view.png)
 
@@ -307,7 +308,7 @@ UWP の詳細については、「[ユニバーサル Windows プラットフォ
 
 ### <a name="visual-studio-app-center"></a>Visual Studio アプリ センター
 
-**15.5 の新機能**: Visual Studio App Center (Android、iOS、macOS、Windows アプリで現在一般公開されています) には、自動化されたビルド、クラウドの実際のデバイスでのテスト、ベータ テスターとアプリ ストアへの配布、クラッシュと分析データによる実際の使用状況の監視など、アプリのライフサイクルを管理するために必要なすべてのものがあります。 Objective-C、Swift、Java、C#、Xamarin、React Native で作成されたアプリはすべての機能でサポートされます。
+**15.5 の新機能**:Visual Studio App Center (Android、iOS、macOS、Windows アプリで現在一般公開されています) には、自動化されたビルド、クラウドの実際のデバイスでのテスト、ベータ テスターとアプリ ストアへの配布、クラッシュと分析データによる実際の使用状況の監視など、アプリのライフサイクルを管理するために必要なすべてのものがあります。 Objective-C、Swift、Java、C#、Xamarin、React Native で作成されたアプリはすべての機能でサポートされます。
 
   ![Visual Studio App Center のテスト環境](../ide/media/app-center-test-env.png)
 
@@ -338,7 +339,7 @@ Visual Studio 2017 のすべてのエディションに付属:
 
 Docker 対応にもなりました。
 
-**15.3 の新機能**: Visual Studio 2017 バージョン 15.3 は .NET Core 2.0 開発に対応しています。 .NET Core 2.0 を使用するには、.NET Core 2.0 SDK を別にダウンロードし、インストールする必要があります。
+**15.3 の新機能**:Visual Studio 2017 バージョン 15.3 は .NET Core 2.0 開発に対応しています。 .NET Core 2.0 を使用するには、.NET Core 2.0 SDK を別にダウンロードし、インストールする必要があります。
 
 詳細については、「[.NET Core ガイド](/dotnet/core/index)」ページを参照してください。
 
@@ -354,7 +355,7 @@ Docker 対応にもなりました。
 
 ### <a name="visual-studio-tools-for-ai"></a>Visual Studio Tools for AI
 
-**15.5 の新機能**: Visual Studio の生産性機能を使用して、今日の AI 革新を高速化します。 組み込みコード エディターの構文強調表示、IntelliSense、テキスト自動書式設定などの機能を使用します。 ローカル変数とモデルに対してステップ実行デバッグを使用して、ローカル環境でディープ ラーニング アプリケーションを対話的にテストできます。
+**15.5 の新機能**:Visual Studio の生産性機能を使って今日の AI 革新を高速化します。 組み込みコード エディターの構文強調表示、IntelliSense、テキスト自動書式設定などの機能を使用します。 ローカル変数とモデルに対してステップ実行デバッグを使用して、ローカル環境でディープ ラーニング アプリケーションを対話的にテストできます。
 
   ![ディープ ラーニング IDE](../ai/media/about/ide.png)
 

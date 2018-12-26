@@ -1,4 +1,4 @@
----
+﻿---
 title: Hello World の拡張機能のチュートリアル |Microsoft Docs
 ms.custom: ''
 ms.date: 07/10/2017
@@ -32,7 +32,7 @@ ms.locfileid: "51349466"
 ![Hello World コマンド](media/hello-world-say-hello-world.png)
 
 > [!NOTE]
-> この記事は、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac では、次の [Visual Studio for Mac での拡張機能のチュートリアル](/visualstudio/mac/extending-visual-studio-mac-walkthrough) を参照してください。
+> この記事は、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac では、次の[Visual Studio for Mac での拡張機能のチュートリアル](/visualstudio/mac/extending-visual-studio-mac-walkthrough) を参照してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -45,7 +45,7 @@ ms.locfileid: "51349466"
 
 手順 1. **ファイル** メニューから**新しいプロジェクト**をクリックします。 画面の下部には、プロジェクトの名前を入力します。
 
-手順 2. メニューの **Visual C#** をクリックし、 **Extensibility** をクリックし、 次に **VSIX プロジェクト** をクリックします。
+手順 2. メニューの **Visual C#** をクリックし、 **Extensibility**をクリックし、 次に **VSIX プロジェクト**をクリックします。
 
 ![新しいプロジェクト](media/hello-world-new-project.png)
 

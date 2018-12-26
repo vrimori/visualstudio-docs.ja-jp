@@ -1,5 +1,5 @@
 ---
-title: Visual Studio の Web パフォーマンス テストで検出できない動的パラメーターを修正する
+title: Web パフォーマンス テストでの検出できない動的パラメーターの修正
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 2a2f75e1aee917a3f4cc9dc7feed15619c23f24e
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 54f0b23da975738cf1dd33e03ef577efbfc2be38
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895601"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063782"
 ---
 # <a name="fix-non-detectable-dynamic-parameters-in-a-web-performance-test"></a>Web パフォーマンス テストでの検出できない動的パラメーターの修正
 
@@ -251,7 +251,7 @@ Web サイトによっては、一部の Web 要求の処理に動的パラメ�
 
 ## <a name="qa"></a>Q&A
 
-### <a name="q-can-i-re-run-dynamic-parameter-detection-if-my-web-app-gets-modified"></a>Q: Web アプリケーションが変更された場合は、動的パラメーターの検出を再実行できますか。
+### <a name="q-can-i-re-run-dynamic-parameter-detection-if-my-web-app-gets-modified"></a>Q:Web アプリケーションが変更された場合は、動的パラメーターの検出を再実行できますか。
 
  **A:** はい。次の手順を使用してください。
 
@@ -265,6 +265,6 @@ Web サイトによっては、一部の Web 要求の処理に動的パラメ�
 
 2.  自動的に関連付ける動的パラメーターの横にあるチェック ボックスをオンまたはオフにします。 既定では、すべての動的パラメーターがオンになっています。
 
-### <a name="q-do-i-need-to-configure-visual-studio-to-detect-dynamic-parameters"></a>Q: 動的パラメーターが検出されるように Visual Studio を構成する必要はありますか。
+### <a name="q-do-i-need-to-configure-visual-studio-to-detect-dynamic-parameters"></a>Q:動的パラメーターが検出されるように Visual Studio を構成する必要はありますか。
 
  **A:** Visual Studio の既定の構成では、Web パフォーマンス テストの記録時に動的パラメーターが検出されます。 ただし、動的パラメーターを検出しないように Visual Studio のオプションが構成されている場合や、テストする Web アプリケーションが追加の動的パラメーターで変更される場合は、Web パフォーマンス テスト エディターで動的パラメーターの検出を実行できます。
