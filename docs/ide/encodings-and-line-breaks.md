@@ -1,5 +1,5 @@
 ---
-title: Visual Studio のエンコーディングと改行文字
+title: エンコーディングと改行文字
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -19,26 +19,26 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d6a07dceb796ad697653657c27ab3ff16b3433ac
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 7acf048b112a88b73c614e8c383722c6e2adb051
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117096"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052010"
 ---
 # <a name="encodings-and-line-endings"></a>エンコーディングと行の終わり
 
 Visual Studio では、次の文字が改行として解釈されます。
 
-- CR LF: キャリッジ リターン文字とライン フィード文字 (Unicode 文字では 000D + 000A)
+- CR LF:キャリッジ リターン文字とライン フィード文字 (Unicode 文字では 000D + 000A)
 
-- LF: ライン フィード文字 (Unicode 文字では 000A)
+- LF:ライン フィード文字 (Unicode 文字では 000A)
 
-- NEL: 次行記号 (Unicode 文字では 0085)
+- NEL:次行記号 (Unicode 文字では 0085)
 
-- LS: 行区切り記号 (Unicode 文字では 2028)
+- LS:行区切り記号 (Unicode 文字では 2028)
 
-- PS: 段落区切り記号 (Unicode 文字では 2029)
+- PS:段落区切り記号 (Unicode 文字では 2029)
 
 他のアプリケーションからコピーされたテキストでは、元のエンコーディングと改行文字が保持されます。 たとえば、メモ帳からテキストをコピーし、Visual Studio でテキスト ファイルに貼り付けた場合、貼り付けたテキストの設定は、メモ帳で使用していた設定と同じになります。
 

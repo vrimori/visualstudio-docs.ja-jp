@@ -1,6 +1,6 @@
 ---
 title: Python 用 Web アプリケーション テンプレート
-description: デバッグの構成や Azure App Service への発行など、Bottle、Flask、および Django フレームワークを使って Python で書かれた Web アプリケーション用の Visual Studio テンプレートの概要です。
+description: Visual Studio には、Bottle、Flask、および Django フレームワークを使用する Python Web アプリケーション用のテンプレートが用意されています。サポートには、デバッグの構成や Azure App Service への発行が含まれています。
 ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -8,15 +8,16 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3245cd647f5da391bb0e36afc65d867137618808
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: 06513030b34f7ab3217210a931722d72a6368ab3
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51349337"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068329"
 ---
 # <a name="python-web-application-project-templates"></a>Python Web アプリケーション プロジェクト テンプレート
 
@@ -34,7 +35,7 @@ Python Web アプリを Azure にデプロイする方法については、「[A
 
 前述の汎用的な **Web プロジェクト** テンプレートは、空の Visual Studio プロジェクトのみを提供し、コードはなく Python プロジェクトであること以外に前提条件もありません。 **Azure クラウド サービス** テンプレートの詳細については、「[Python 用 Azure クラウド サービス プロジェクト](python-azure-cloud-service-project-template.md)」を参照してください。
 
-その他のテンプレートはすべて、Bottle、Flask、または Django の Web フレームワークに基づいており、次のセクションで説明する 3 つの一般的なグループに分類されます。 このようなテンプレートのいずれかで作成されたアプリには、アプリをローカルで実行およびデバッグするのに必要なコードが含まれています。 また、各テンプレートでは、実稼働 Web サーバーで使用するために必要な [WSGI アプリ オブジェクト](http://www.python.org/dev/peps/pep-3333/) (python.org) も用意されています。
+その他のテンプレートはすべて、Bottle、Flask、または Django の Web フレームワークに基づいており、次のセクションで説明する 3 つの一般的なグループに分類されます。 このようなテンプレートのいずれかで作成されたアプリには、アプリをローカルで実行およびデバッグするのに必要なコードが含まれています。 また、各テンプレートでは、実稼働 Web サーバーで使用するために必要な [WSGI アプリ オブジェクト](https://www.python.org/dev/peps/pep-3333/) (python.org) も用意されています。
 
 ### <a name="blank-group"></a>空白のグループ
 
@@ -44,7 +45,7 @@ Python Web アプリを Azure にデプロイする方法については、「[A
 | --- | --- |
 | **Blank Bottle Web プロジェクト** | *app.py* に対するホーム ページと、非常に短いインライン ページ テンプレートを使用して `/` にエコーする `/hello/<name>` ページとを備えた最小限のアプリを `<name>` 内に生成します。 |
 | **空の Django Web プロジェクト** | コア Django サイト構造を持つが Django アプリが含まれない Django プロジェクトを生成します。 詳細については、[Django テンプレート](python-django-web-application-project-template.md)に関する記事と [Django 手順 1](learn-django-in-visual-studio-step-01-project-and-solution.md)に関する記事を参照してください。 |
-| **Blank Flask Web プロジェクト** |  "Hello World!" を 1 つ使用した最小限のアプリを生成します。 ページの`/`します。 このアプリは、[クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json)に関する記事で詳細説明した手順を実行して得られた結果と類似しています。 [Flask の詳細情報の手順 1](learn-flask-visual-studio-step-01-project-solution.md) に関するページも参照してください。
+| **Blank Flask Web プロジェクト** |  "Hello World!" を 1 つ使用した最小限のアプリを生成します。 ページの`/`します。 このアプリは、「[クイック スタートVisual Studio を使用して初めての Python Web アプリを作成する](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json)」の詳細な手順に従った結果と似ています。 [Flask の詳細情報の手順 1](learn-flask-visual-studio-step-01-project-solution.md) に関するページも参照してください。
 
 ### <a name="web-group"></a>Web グループ
 
@@ -123,7 +124,7 @@ MSBuild 構文を使用して任意のプロジェクト プロパティまた�
 Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使用して作成するのが最適です。 アプリが作成されたら、[**[既存の Python コードから]**](managing-python-projects-in-visual-studio.md#create-a-project-from-existing-files) テンプレートを使用してインポートできます。 その後、**[汎用 Web プロジェクト]** カスタマイズを選択してオプションを構成します。 これらの設定は、Pyramid が `..\env` にある仮想環境にインストールされていることを想定しています。
 
 - **[デバッグ]** グループ:
-  - **[サーバー ポート]**: 6543 (または *.ini* ファイルで構成されているポート)
+  - **[サーバー ポート]**:6543 (または *.ini* ファイルで構成されているポート)
 
 - **[Run Server Command (サーバー コマンドの実行)]** グループ:
   - コマンド: `..\env\scripts\pserve-script.py` (スクリプト)

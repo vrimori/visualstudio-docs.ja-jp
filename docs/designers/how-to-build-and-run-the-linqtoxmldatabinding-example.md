@@ -1,5 +1,5 @@
 ---
-title: '方法 : LinqToXmlDataBinding という例をビルドして実行する'
+title: '方法: LinqToXmlDataBinding という例をビルドして実行する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
@@ -9,18 +9,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1164312d74259ad4f3a56750a487fb2578595cf0
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: 67d8bc9ece20867e96f0ae0ee6d6ceb9ad2e3952
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924162"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159777"
 ---
 # <a name="how-to-build-and-run-the-linqtoxmldatabinding-example"></a>方法: LinqToXmlDataBinding という例をビルドして実行する
 
 このトピックでは、LinqToXmlDataBinding という Visual Studio プロジェクトを作成してビルドする方法、および結果として生成される LinqToXmlDataBinding という Windows Presentation Foundation (WPF) プログラムの例を実行する方法について説明します。
 
-Visual Studio の詳細については、「[Visual Studio IDE の概要](../ide/visual-studio-ide.md)」を参照してください。
+Visual Studio の詳細については、「[Visual Studio IDE の概要](../get-started/visual-studio-ide.md)」を参照してください。
 
 ## <a name="create-and-populate-the-project"></a>プロジェクトの作成および設定
 
@@ -81,5 +81,5 @@ LinqToXmlDataBinding プログラムを使用すると、ユーザーは、組�
 ## <a name="see-also"></a>関連項目
 
 - [LINQ to XML を使用した WPF のデータ バインディングの例](../designers/wpf-data-binding-using-linq-to-xml-example.md)
-- [チュートリアル : LinqToXmlDataBinding の例](../designers/walkthrough-linqtoxmldatabinding-example.md)
-- [Visual Studio IDE の概要](../ide/visual-studio-ide.md)
+- [チュートリアル: LinqToXmlDataBinding の例](../designers/walkthrough-linqtoxmldatabinding-example.md)
+- [Visual Studio IDE の概要](../get-started/visual-studio-ide.md)

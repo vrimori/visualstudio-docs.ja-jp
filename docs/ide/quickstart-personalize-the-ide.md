@@ -1,5 +1,5 @@
 ---
-title: Visual Studio での配色テーマとフォントの設定
+title: 配色テーマとフォントを設定する
 ms.date: 11/20/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -9,14 +9,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d68bdf8ae879506e89aace7f3e176a862289a8bd
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 511c9d44e9aac49c0150be5a13651e5368e10eaf
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42626623"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159413"
 ---
-# <a name="quickstart-personalize-the-visual-studio-ide-and-editor"></a>クイックスタート: Visual Studio IDE とエディターのカスタマイズ
+# <a name="quickstart-personalize-the-visual-studio-ide-and-editor"></a>クイック スタート: Visual Studio IDE とエディターのカスタマイズ
 
 この 5 分から 10 分程度のクイックスタートでは、ダーク テーマを選択して、Visual Studio の配色テーマをカスタマイズします。 テキスト エディターで 2 つの異なる種類のテキスト用の色もカスタマイズします。
 
@@ -100,4 +100,4 @@ Visual Studio の色をカスタマイズするいくつかの方法について
 ## <a name="see-also"></a>関連項目
 
 - [エディターのカスタマイズ](../ide/customizing-the-editor.md)
-- [Visual Studio IDE の概要](../ide/visual-studio-ide.md)
+- [Visual Studio IDE の概要](../get-started/visual-studio-ide.md)

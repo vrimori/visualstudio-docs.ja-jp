@@ -1,5 +1,6 @@
 ---
-title: チュートリアル - Visual Studio での Flask の詳細情報、手順 2
+title: Visual Studio 手順 2 のビューとテンプレートでは、Flask のチュートリアルについて説明します
+titleSuffix: ''
 description: Visual Studio プロジェクトのコンテキストにおける Flask の基本のチュートリアルです。具体的には、アプリの作成およびビューとテンプレートの使用に関する手順について取り上げます。
 ms.date: 09/04/2018
 ms.prod: visual-studio-dev15
@@ -8,15 +9,16 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 92b34ed0abbef18473ab9ccf6b85c236111822f9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: cbdf9232bdff56fa2d244f8baeed2d070dcb37a9
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49812622"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052946"
 ---
 # <a name="step-2-create-a-flask-app-with-views-and-page-templates"></a>手順 2: ビューおよびページ テンプレートを使用して Flask アプリを作成する
 
@@ -194,9 +196,9 @@ ms.locfileid: "49812622"
 
 1. ソース管理への変更をコミットし、必要に応じて[手順 2-1](#commit-to-source-control) の説明に従って、リモート リポジトリを更新します。
 
-### <a name="question-do-page-templates-have-to-be-in-a-separate-file"></a>質問: ページ テンプレートを別個のファイルにする必要はありますか。
+### <a name="question-do-page-templates-have-to-be-in-a-separate-file"></a>質問: ページ テンプレートを別のファイルにする必要はありますか。
 
-回答: 多くの場合、テンプレートは別個の HTML ファイルになっていますが、インライン テンプレートも使用できます。 ただし、マークアップとコード間の明確な分離を維持するために、別個のファイルを使用することが推奨されています。
+回答: 通常、テンプレートは別の HTML ファイルで保持されていますが、インライン テンプレートも使用できます。 ただし、マークアップとコード間の明確な分離を維持するために、別個のファイルを使用することが推奨されています。
 
 ### <a name="question-must-templates-use-the-html-file-extension"></a>質問: テンプレートには、.html ファイルの拡張子を使用する必要がありますか。
 
@@ -220,4 +222,4 @@ ms.locfileid: "49812622"
 ## <a name="go-deeper"></a>詳しい説明
 
 - [Flask クイックスタート - レンダリング テンプレート](http://flask.pocoo.org/docs/1.0/quickstart/#rendering-templates) (flask.pocoo.org)
-- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)
+- GitHub のチュートリアルのソース コード:[Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)

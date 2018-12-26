@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 025adc3a99e2c5aabe2588852885e537553ddce6
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: a4ef6ebbbce03dce7105b49100c9c8f50c44e5e4
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50219277"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159803"
 ---
 # <a name="quickstart-create-your-first-python-web-app-using-visual-studio"></a>クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成する
 
@@ -44,13 +44,13 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
     ![新しく作成された空のプロジェクトが表示されているソリューション エクスプローラー](media/quickstart-python-01-empty-project.png)
 
-**質問: Visual Studio で Python アプリケーション用のプロジェクトを作成する利点は何ですか。**
+**質問:Visual Studio で Python アプリケーション用のプロジェクトを作成する利点は何ですか。**
 
-**回答**: 通常、Python アプリケーションはフォルダーとファイルのみを使って定義されますが、アプリケーションが大きくなり、おそらく自動生成されたファイル、Web アプリケーション用 JavaScript などが含まれるようになると、この単純な構造が面倒になる可能性があります。 Visual Studio のプロジェクトは、このような複雑さを管理するのに役立ちます。 プロジェクト (*.pyproj* ファイル) には、プロジェクトに関連付けられたすべてのソース ファイルとコンテンツ ファイルの識別、各ファイルのビルド情報の格納、ソース管理システムと統合するための情報の保持、論理コンポーネントへのアプリケーションの整理の補助などの機能があります。
+**回答**:通常、Python アプリケーションはフォルダーとファイルのみを使って定義されますが、アプリケーションが大きくなり、おそらく自動生成されたファイル、Web アプリケーション用 JavaScript などが含まれるようになると、このシンプルな構造が手間のかかるものになる可能性があります。 Visual Studio のプロジェクトは、このような複雑さを管理するのに役立ちます。 プロジェクト (*.pyproj* ファイル) には、プロジェクトに関連付けられたすべてのソース ファイルとコンテンツ ファイルの識別、各ファイルのビルド情報の格納、ソース管理システムと統合するための情報の保持、論理コンポーネントへのアプリケーションの整理の補助などの機能があります。
 
-**質問: ソリューション エクスプローラーに表示される "ソリューション" とは何ですか。**
+**質問:ソリューション エクスプローラーに表示される "ソリューション" とは何ですか。**
 
-**回答**: Visual Studio のソリューションとは、1 つまたは複数の関連プロジェクトを 1 つのグループとして管理できるコンテナーであり、プロジェクトに固有ではない構成設定が格納されます。 ソリューションの中のプロジェクトは互いに参照できます。プロジェクトを 1 つ (Python アプリ) 実行すると、2 つ目のプロジェクト (Python アプリで使用される C++ 拡張など) が自動的に作成されたりします。
+**回答**:Visual Studio のソリューションとは、1 つまたは複数の関連プロジェクトを 1 つのグループとして管理できるコンテナーであり、プロジェクトに固有ではない構成設定が格納されます。 ソリューションの中のプロジェクトは互いに参照できます。プロジェクトを 1 つ (Python アプリ) 実行すると、2 つ目のプロジェクト (Python アプリで使用される C++ 拡張など) が自動的に作成されたりします。
 
 ## <a name="install-the-flask-library"></a>Flask ライブラリをインストールする
 
@@ -62,22 +62,22 @@ Python の Web アプリは、ほぼ常に、Web 要求のルーティングや�
 
     ![既定の環境が表示されているソリューション エクスプローラー](media/quickstart-python-02-default-environment.png)
 
-1. 環境を右クリックして、**[Python パッケージのインストール]** を選択します。 このコマンドを選ぶと、**[Python 環境]** ウィンドウの [パッケージ] タブが開きます。
+1. 環境を右クリックして、**[Python パッケージのインストール]** を選択します。 このコマンドを選ぶと、**[Python 環境]** ウィンドウの **[パッケージ]** タブが開きます。
 
 1. 検索フィールドに "flask" と入力し、**[pip install flask from PyPI]\(PyPI から flask の pip インストール\)** を選択します。 管理者特権に関するすべてのプロンプトに同意し、Visual Studio の **[出力]** ウィンドウで進行状況を確認します。 (グローバル環境のパッケージ フォルダーが *C:\Program Files* のように保護された領域内にある場合は、昇格のプロンプトが表示されます)。
 
-    ![Flask ライブラリをインストールする](media/quickstart-python-03-install-package.png)
+    ![pip インストールを使用して Flask ライブラリをインストールする](media/quickstart-python-03-install-package.png)
 
 1. インストールが済むと、**ソリューション エクスプローラー**の環境にライブラリが表示されます。これは、Python コードでライブラリを使用できることを意味します。
 
-    ![Flask ライブラリがインストールされました](media/quickstart-python-04-package-installed.png)
+    ![ソリューション エクスプローラーのスクリーンショット。Flask ライブラリがインストールされています](media/quickstart-python-04-package-installed.png)
 
 > [!Note]
 > 開発者は通常、グローバル環境にライブラリをインストールするのではなく、特定のプロジェクトのライブラリをインストールする "仮想環境" を作成します。 Visual Studio のテンプレートによって通常、このオプションが与えられます。それについては、「[クイック スタート - Visual Studio のテンプレートから Python プロジェクトを作成する](../python/quickstart-02-python-in-visual-studio-project-from-template.md)」に説明があります。
 
-**質問: 利用できる他の Python パッケージの詳細はどこで確認できますか。**
+**質問:利用できる他の Python パッケージの詳細はどこで確認できますか。**
 
-**回答**: [Python Package Index](https://pypi.org/) を参照してください。
+**回答**:[Python Package Index](https://pypi.org/) を参照してください。
 
 ## <a name="add-a-code-file"></a>コード ファイルの追加
 
@@ -114,9 +114,9 @@ Python の Web アプリは、ほぼ常に、Web 要求のルーティングや�
 
 1. お気付きかもしれませんが、**[追加]、[新しい項目]** ダイアログ ボックスの順に選択すると、Python プロジェクトに追加できる他の種類のファイルがたくさん表示されます。Python クラス、Python パッケージ、Python 単体テスト、*web.config* ファイルなどです。 一般的に、項目テンプレートと呼ばれているこのようなテンプレートは、便利なボイラープレート コードで簡単にファイルを作成する優れた方法です。
 
-**質問: Flask の詳細はどこで確認できますか。**
+**質問:Flask の詳細はどこで確認できますか。**
 
-**回答**: Flask 文書を参照してください。まずは [Flask クイック スタート](http://flask.pocoo.org/docs/0.12/quickstart/#quickstart)からお読みください。
+**回答**:Flask 文書を参照してください。まずは [Flask クイック スタート](http://flask.pocoo.org/docs/0.12/quickstart/#quickstart)からお読みください。
 
 ## <a name="run-the-application"></a>アプリケーションの実行
 
@@ -138,9 +138,9 @@ Python の Web アプリは、ほぼ常に、Web 要求のルーティングや�
 
 6. コマンド ウィンドウを閉じてアプリを停止してから、ブラウザー ウィンドウを閉じます。
 
-**質問: デバッグなしで開始コマンドとデバッグの開始の違いとは何ですか。**
+**質問:デバッグなしで開始コマンドとデバッグの開始の違いとは何ですか。**
 
-**回答**: **デバッグの開始**を使用し、[Visual Studio デバッガー](../python/debugging-python-in-visual-studio.md)に関連してアプリを実行します。ブレークポイントを設定したり、変数を調べたり、コードを行ごとにステップ実行したりできます。 さまざまなフックがデバッグを可能にするため、デバッガーではアプリの実行が遅くなることがあります。 対照的に、**デバッグなしで開始**では、デバックという文脈なしで、コマンド ラインから実行したかのように、アプリが直接実行されます。また、ブラウザーが自動的に起動し、プロジェクト プロパティの **[デバッグ]** タブに指定されている URL に移動します。
+**回答**:**デバッグの開始**を使用し、[Visual Studio デバッガー](../python/debugging-python-in-visual-studio.md)に関連してアプリを実行します。ブレークポイントを設定したり、変数を調べたり、コードを行ごとにステップ実行したりできます。 さまざまなフックがデバッグを可能にするため、デバッガーではアプリの実行が遅くなることがあります。 対照的に、**デバッグなしで開始**では、デバックという文脈なしで、コマンド ラインから実行したかのように、アプリが直接実行されます。また、ブラウザーが自動的に起動し、プロジェクト プロパティの **[デバッグ]** タブに指定されている URL に移動します。
 
 ## <a name="next-steps"></a>次の手順
 
@@ -157,4 +157,4 @@ Visual Studio のその他の機能は下のリンクからご覧いただけま
 
 - [Visual Studio での Python Web アプリ テンプレート](../python/python-web-application-project-templates.md)について学習する
 - [Python のデバッグ](../python/debugging-python-in-visual-studio.md)について学習する
-- 全般的な [Visual Studio の IDE](../ide/visual-studio-ide.md) について学習する
+- 全般的な [Visual Studio の IDE](../get-started/visual-studio-ide.md) について学習する
