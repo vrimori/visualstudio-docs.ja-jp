@@ -22,17 +22,17 @@ ms.locfileid: "51349466"
 
 学習方法は以下の手順となります。
 
-* **[機能拡張プロジェクトを作成します。](#create-an-extensibility-project)**
-* **[カスタム コマンドを追加します。](#add-a-custom-command)**
-* **[ソース コードを変更します。](#modify-the-source-code)**
-* **[実行します。](#run-it)**
+* **[機能拡張プロジェクトの作成](#create-an-extensibility-project)**
+* **[カスタム コマンドの追加](#add-a-custom-command)**
+* **[ソース コードを変更](#modify-the-source-code)**
+* **[実行](#run-it)**
 
 この例で使用します (Visual C#)「と Hello World!」という名前のカスタム メニュー ボタンを追加するには 次に示します。
 
 ![Hello World コマンド](media/hello-world-say-hello-world.png)
 
 > [!NOTE]
-> この記事では、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac では、次を参照してください。[拡張機能のチュートリアルでは、Visual Studio for Mac](/visualstudio/mac/extending-visual-studio-mac-walkthrough)します。
+> この記事は、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac では、次の[Visual Studio for Mac での拡張機能のチュートリアル](/visualstudio/mac/extending-visual-studio-mac-walkthrough) を参照してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -43,13 +43,13 @@ ms.locfileid: "51349466"
 
 ## <a name="create-an-extensibility-project"></a>機能拡張プロジェクトの作成
 
-手順 1. **ファイル** メニューのをクリックして**新しいプロジェクト**します。 画面の下部には、プロジェクトの名前を入力します。
+手順 1. **ファイル** メニューから**新しいプロジェクト**をクリックします。 画面の下部には、プロジェクトの名前を入力します。
 
-手順 2. **テンプレート** メニューのをクリックして**Visual c#**、 をクリックして**拡張**、 をクリックし、 **VSIX プロジェクト**。
+手順 2. メニューの **Visual C#** をクリックし、 **Extensibility**をクリックし、 次に **VSIX プロジェクト**をクリックします。
 
 ![新しいプロジェクト](media/hello-world-new-project.png)
 
-はじめに ページといくつかのサンプル リソースがわかります。
+はじめに *Getting Started* ページといくつかのサンプル リソースが表示されます。
 
 このチュートリアルを終了した後に再開する必要がある場合、 **スタート ページ** の **最近** セクションで HelloWorld プロジェクトを見つけられます。
 
@@ -57,7 +57,7 @@ ms.locfileid: "51349466"
 
 手順 1. マニフェストファイルを選択した場合、インスタンス、メタデータ、説明、およびバージョンのどのオプションが変更可能か確認できます。
 
-手順 2. (ソリューションではなく) プロジェクトを右クリックします。 コンテキスト メニューで、次のようにクリックします。**追加**、 をクリックし、**新しい項目の**します。
+手順 2. (ソリューションではなく) プロジェクトを右クリックします。 コンテキスト メニューで**追加**をクリックして、**新しい項目**をクリックします。
 
 手順 3. **Extensibility**セクションを選択し、**Custom Command**をクリックします。
 
@@ -126,7 +126,7 @@ Visual Studioのタイトル バーには**実験的なインスタンス**と�
 
 ![実験的なインスタンスのタイトル バー](media/hello-world-exp-instance.png)
 
-手順 2. **ツール**のメニュー、**実験用インスタンス**、 をクリックして**Say Hello World!** します。
+手順 2. **実験的なインスタンス**の**ツール**メニューにある **Say Hello World!** をクリックします。
 
 ![最終的な結果](media/hello-world-final-result.png)
 
