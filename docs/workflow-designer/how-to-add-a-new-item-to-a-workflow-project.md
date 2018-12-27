@@ -1,5 +1,5 @@
 ---
-title: 'ワークフロー デザイナー - 方法: ワークフロー プロジェクトへ新しい項目の追加'
+title: ワークフロー デザイナー - 方法。ワークフロー プロジェクトに新しい項目を追加する
 ms.date: 06/25/2018
 ms.topic: conceptual
 ms.prod: visual-studio-dev15
@@ -10,14 +10,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dbed404f2cdd69446d8945fc9ff96703eccd161f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f0e5df48d1c96905c022a6737d58f75d6c548ccb
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49814234"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738690"
 ---
-# <a name="how-to-add-a-new-item-to-a-workflow-project"></a>方法: ワークフロー プロジェクトへ新しい項目の追加
+# <a name="how-to-add-a-new-item-to-a-workflow-project"></a>方法: ワークフロー プロジェクトへ新しい項目を追加します。
 
 ワークフロー プロジェクトを作成したら、ワークフロー アクティビティ、デザイナー、およびその他の一般的な Visual Studio 項目をプロジェクトに追加できます。
 
@@ -26,14 +26,14 @@ ms.locfileid: "49814234"
 
 | 名前 | 説明 |
 |-| - |
-| アクティビティ | 他のアクティビティで構成されるアクティビティ。 この項目を選択を選択するときに取得される、プロジェクトに同じ XAML ファイルを追加、**アクティビティ ライブラリ**新しいプロジェクトのテンプレート。 この手順の詳細については、次を参照してください。[方法: アクティビティ ライブラリを作成](../workflow-designer/how-to-create-an-activity-library.md)です。 |
-| アクティビティ デザイナー | アクティビティのデザイン時の操作をカスタマイズするデザイナー。 この項目を選択を選択するときに取得される、プロジェクトに同じファイルを追加、**アクティビティ デザイナー ライブラリ**新しいプロジェクトのテンプレート。 この手順の詳細については、次を参照してください。[方法: アクティビティ デザイナー ライブラリを作成](../workflow-designer/how-to-create-an-activity-designer-library.md)です。 |
+| アクティビティ | 他のアクティビティで構成されるアクティビティ。 この項目を選択を選択するときに取得される、プロジェクトに同じ XAML ファイルを追加、**アクティビティ ライブラリ**新しいプロジェクトのテンプレート。 この手順の詳細については、次を参照してください。[ワークフロー プロジェクトを作成する](creating-a-workflow-project.md)します。 |
+| アクティビティ デザイナー | アクティビティのデザイン時の操作をカスタマイズするデザイナー。 この項目を選択を選択するときに取得される、プロジェクトに同じファイルを追加、**アクティビティ デザイナー ライブラリ**新しいプロジェクトのテンプレート。 |
 | Code アクティビティ | コードに記述される実行ロジックを含むアクティビティ。 <xref:System.Activities.CodeActivity.Execute%2A> メソッドのオーバーライドを含むソース コード ファイルは既に自動的に生成されています。 |
-| WCF ワークフロー サービス | ワークフロー アクティビティを使用して作成された [!INCLUDE[indigo2](../workflow-designer/includes/indigo2_md.md)] サービス。 この項目を選択を選択するときに取得される、プロジェクトに同じファイルを追加、 **WCF ワークフロー サービス アプリケーション**新しいプロジェクトのテンプレート。 この手順の詳細については、次を参照してください。[方法: WCF ワークフロー サービス アプリケーションの作成](../workflow-designer/how-to-create-a-wcf-workflow-service-application.md)です。 |
+| WCF ワークフロー サービス | ワークフロー アクティビティを使用して作成された [!INCLUDE[indigo2](../workflow-designer/includes/indigo2_md.md)] サービス。 この項目を選択を選択するときに取得される、プロジェクトに同じファイルを追加、 **WCF ワークフロー サービス アプリケーション**新しいプロジェクトのテンプレート。 この手順の詳細については、次を参照してください。[方法。WCF ワークフロー サービス アプリケーションの作成](/visualstudio/workflow-designer/creating-a-workflow-project)です。 |
 
 ## <a name="to-add-a-new-item-to-a-workflow-project"></a>ワークフロー プロジェクトに新しい項目を追加するには
 
-1. **プロジェクト**メニューの **新しい項目の追加**します。
+1. **[プロジェクト]** メニューで **[新しい項目の追加]** を選択します。
 
    **[新しい項目の追加]** ダイアログ ボックスが開きます。
 

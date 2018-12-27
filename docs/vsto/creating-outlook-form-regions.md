@@ -14,17 +14,17 @@ helpviewer_keywords:
 - form regions [Office development in Visual Studio]
 - form regions [Office development in Visual Studio], creating
 - Outlook [Office development in Visual Studio], form regions
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d5d4aed381841d5f88209aefdcff641a2a821f01
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 77dcdecc766b253eb0cafb808bec8cb48294d6fa
+ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50673082"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53441731"
 ---
 # <a name="create-outlook-form-regions"></a>Outlook フォーム領域を作成します。
   フォーム領域を使用して、Microsoft Office Outlook フォームをカスタマイズできます。 Visual Studio には、フォーム領域のデザイン、開発、およびデバッグを簡単に行うことができる高度なツールが用意されています。  
@@ -79,7 +79,7 @@ ms.locfileid: "50673082"
 |Replacement|フォーム領域を Outlook フォームの既定のページに代わる新しいページとして追加します。|  
 |すべて置換|Outlook フォーム全体をフォーム領域に置き換えます。|  
   
- このウィザードでは、表示条件を指定し、拡張するフォームの種類を選択することもできます。 詳細については、次を参照してください。[方法: フォーム領域を Outlook アドイン プロジェクトに追加](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)します。  
+ このウィザードでは、表示条件を指定し、拡張するフォームの種類を選択することもできます。 詳細については、「[方法 :フォーム領域を Outlook アドイン プロジェクトに追加](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)します。  
   
  このウィザードで行った選択は、他のウィザード ページで使用できるオプションに影響します。 たとえば、選択した場合**Adjoining**または**個別**で、**新しい Outlook フォーム領域を作成** ページで、**タイトル**と**説明**フィールドが使用可能、**わかりやすいテキストを指定し、表示設定を選択します。** ページ。 これは、隣接または分離フォーム領域を表示するときに、Outlook ではこれらのフィールドを使用しないためです。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "50673082"
 ###  <a name="AddingExistingFormRegion"></a> 既存のフォーム領域をプロジェクトに追加します。  
  別の Outlook プロジェクトで使用した Outlook フォーム領域がある場合は、 **[既存項目の追加]** ダイアログ ボックスを使用して、そのフォーム領域を現在の Outlook VSTO アドイン プロジェクトで再利用できます。  
   
- 既存のフォーム領域コード ファイルがあります (*.vb*または *.cs*) Outlook Form Storage を追加することはできません (*.ofs*) ファイルを使用して、 **の既存項目の追加。**  ダイアログ ボックス。 ただし、Outlook Form Storage ファイルをインポートすることによって新しいフォーム領域を作成できます。 詳細については、次を参照してください。[方法: フォーム領域を Outlook アドイン プロジェクトに追加](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)します。  
+ 既存のフォーム領域コード ファイルがあります (*.vb*または *.cs*) Outlook Form Storage を追加することはできません (*.ofs*) ファイルを使用して、 **の既存項目の追加。**  ダイアログ ボックス。 ただし、Outlook Form Storage ファイルをインポートすることによって新しいフォーム領域を作成できます。 詳細については、「[方法 :フォーム領域を Outlook アドイン プロジェクトに追加](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)します。  
   
 ##  <a name="UsingFormRegionDesigner"></a> フォーム領域デザイナーを使用して、  
  フォーム領域デザイナーでは、フォーム領域のレイアウトと外観をデザインできます。 デザイナーの画面にマネージ コントロールをドラッグして、コントロールをダブルクリックすると、イベント ハンドラーを開きおよびでプロパティを設定、**プロパティ**ウィンドウ。  
@@ -136,7 +136,7 @@ ms.locfileid: "50673082"
   
  Visual Basic プロジェクトでイベントを処理するには、コード エディターの上部にあるメソッド名リストからイベントを選択します。  
   
- C# プロジェクトでイベントを処理するには、<xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> メソッドでコントロール イベントにサブスクライブします。 詳細については、次を参照してください。[方法: サブスクライブすると、イベント サブスクリプションの解除&#40;C&#35;プログラミング ガイド&#41;](/dotnet/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events)します。  
+ C# プロジェクトでイベントを処理するには、<xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> メソッドでコントロール イベントにサブスクライブします。 詳細については、「[方法 :サブスクライブして、イベント サブスクリプションの解除&#40;C&#35;プログラミング ガイド&#41;](/dotnet/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events)します。  
   
  フォーム領域のプロパティは、フォーム領域ファクトリ クラスの `InitializeManifest` メソッドで変更できます。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "50673082"
   
 |event|説明|  
 |-----------|-----------------|  
-|FormRegionInitializing|フォーム領域が初期化される前に発生します。 このイベント ハンドラーの状態をチェックして、Outlook がフォーム領域を表示する必要があるかどうかを判定できます。 詳細については、次を参照してください。[方法: フォーム領域が表示されないように Outlook](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)します。|  
+|FormRegionInitializing|フォーム領域が初期化される前に発生します。 このイベント ハンドラーの状態をチェックして、Outlook がフォーム領域を表示する必要があるかどうかを判定できます。 詳細については、「[方法 :Outlook フォーム領域が表示されないようにする](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)します。|  
 |FormRegionShowing|フォーム領域のインスタンスが作成されてから、フォーム領域が表示される前までの間に発生します。|  
 |FormRegionClosed|フォーム領域が閉じられる前に発生します。|  
   

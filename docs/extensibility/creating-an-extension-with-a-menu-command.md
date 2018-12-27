@@ -16,18 +16,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 539ab866056b97f7054dda1843870dcfdd4379d9
-ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
+ms.openlocfilehash: 358b61c5b09bfd9fb701bc44135101fe230dacce
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248138"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53739268"
 ---
 # <a name="create-an-extension-with-a-menu-command"></a>メニュー コマンドを使用して拡張機能を作成します。
 このチュートリアルでは、メモ帳を起動するメニュー コマンドを使用して拡張機能を作成する方法を示します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、"[Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)"を参照してください。  
   
 ## <a name="create-a-menu-command"></a>メニュー コマンドを作成します。  
   
@@ -126,4 +126,4 @@ ms.locfileid: "53248138"
   
 5. 拡張機能には、オプションとプロパティ ページとユーザー設定を追加します。[プロパティと、[プロパティ] ウィンドウの拡張](../extensibility/extending-properties-and-the-property-window.md)と[ユーザー設定と Ooptions 拡張](../extensibility/extending-user-settings-and-options.md)  
   
-   他の種類の拡張機能が、新しい種類のプロジェクトの作成などのもう少し作業が必要です ([プロジェクトの拡張](../extensibility/extending-projects.md))、エディターの新しい型を作成する ([を作成するカスタム エディターとデザイナー](../extensibility/creating-custom-editors-and-designers.md))、または実装する、分離のシェル拡張機能:[Visual Studio の分離シェル](../extensibility/visual-studio-isolated-shell.md)
+   他の種類の拡張機能が、新しい種類のプロジェクトの作成などのもう少し作業が必要です ([プロジェクトの拡張](../extensibility/extending-projects.md))、エディターの新しい型を作成する ([を作成するカスタム エディターとデザイナー](../extensibility/creating-custom-editors-and-designers.md))、または実装する、分離のシェル拡張機能:[Visual Studio の分離シェル](/visualstudio/extensibility/shell/visual-studio-isolated-shell)

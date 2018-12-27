@@ -11,26 +11,26 @@ dev_langs:
 helpviewer_keywords:
 - data [Office development in Visual Studio], walkthroughs
 - walkthroughs [Office development in Visual Studio], data
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 35dbc38bf4e0873e9f3fb0fc1bf5c0525e56a61e
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: b56e17ca04d4c712058e20bd4f644b80e47cd2f7
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672830"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647311"
 ---
 # <a name="data-in-office-solutions-walkthroughs"></a>Office ソリューションのチュートリアルにおけるデータ
   次のチュートリアルでは、ドキュメント レベルのカスタマイズと、Microsoft Office Word および Microsoft Office Excel 用の VSTO アドインで、データを操作する方法について説明します。  
   
 ## <a name="bind-controls-to-data"></a>データ コントロールをバインドします。  
- [チュートリアル: ドキュメント レベルのプロジェクトでの単純なデータ バインディング](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)  
+ [チュートリアル: ドキュメント レベルのプロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)  
  SQL Server データベースの 1 つのデータ フィールドを Excel のドキュメント レベルのカスタマイズ内の <xref:Microsoft.Office.Tools.Excel.NamedRange> にバインドする方法について説明します。  
   
- [チュートリアル: ドキュメント レベルのプロジェクトで複雑なデータ バインディング](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)  
+ [チュートリアル: ドキュメント レベルのプロジェクトで複合データ バインディング](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)  
  SQL Server データベースのテーブルをExcel のドキュメント レベルのカスタマイズ内の <xref:Microsoft.Office.Tools.Excel.ListObject> にバインドする方法について説明します。  
   
  [チュートリアル: VSTO アドイン プロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)  
@@ -39,13 +39,13 @@ ms.locfileid: "35672830"
  [チュートリアル: VSTO アドイン プロジェクトで複雑なデータ バインディング](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)  
  SQL Server データベースのテーブルを Excel 用の VSTO アドイン内の <xref:Microsoft.Office.Tools.Excel.ListObject> にバインドする方法について説明します。  
   
- [チュートリアル: Excel 操作ウィンドウ上のコントロールにデータをバインドします。](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)  
+ [チュートリアル: データを Excel の操作ウィンドウ上のコントロールにバインドします。](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)  
  データ ソースにバインドされるコントロールを Excel の操作ウィンドウに追加する方法について説明します。  
   
  [チュートリアル: Word の操作ウィンドウ上のコントロールにデータをバインドします。](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)  
  操作ウィンドウに配置されたコントロールをデータにバインドする方法について説明します。 このコントロールは、SQL Server データベースのテーブル間のマスター/詳細の関係を示します。  
   
- [チュートリアル: コンテンツ コントロールをカスタム XML 部分にバインドします。](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)  
+ [チュートリアル: カスタム XML 部分へのコンテンツ コントロールをバインドします。](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)  
  Word 文書内のコンテンツ コントロールを文書内に格納されている XML データにバインドする方法について説明します。  
   
 ## <a name="cache-data-in-document-level-solutions"></a>ドキュメント レベルのソリューション内のキャッシュ データ  
@@ -55,7 +55,7 @@ ms.locfileid: "35672830"
  [チュートリアル: サーバー上のブックにデータを挿入します。](../vsto/walkthrough-inserting-data-into-a-workbook-on-a-server.md)  
  Microsoft Office Excel を起動することなく、Excel ブックにキャッシュされているデータセットにデータを挿入する方法について説明します。  
   
- [チュートリアル: サーバー上のブックからのキャッシュされたデータを取得します。](../vsto/walkthrough-retrieving-cached-data-from-a-workbook-on-a-server.md)  
+ [チュートリアル: サーバー上のブックからキャッシュされたデータを取得します。](../vsto/walkthrough-retrieving-cached-data-from-a-workbook-on-a-server.md)  
  Microsoft Office Excel を起動することなく、Excel ブックにキャッシュされているデータセットからデータを取得する方法について説明します。  
   
  [チュートリアル: サーバー上のブックにキャッシュされたデータを変更します。](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md)  

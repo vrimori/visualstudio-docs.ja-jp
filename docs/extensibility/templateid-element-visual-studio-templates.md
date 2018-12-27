@@ -1,10 +1,9 @@
 ---
-title: TemplateID 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: TemplateID 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#TemplateID
 helpviewer_keywords:
@@ -16,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a7e431e603d0b2844431b5bffaedf7fa82bd7132
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eda4b3134d8e7e589c60ee8b8860042b7e0f1ff5
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31138747"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53560545"
 ---
 # <a name="templateid-element-visual-studio-templates"></a>TemplateID 要素 (Visual Studio テンプレート)
-別の項目テンプレートのグループに分類される項目テンプレートの識別子を指定、 [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)要素。  
+項目テンプレートでのグループに分類される項目テンプレートの識別子を指定します、 [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)要素。  
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -52,14 +51,14 @@ ms.locfileid: "31138747"
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートをカテゴリに分類し、 **[新しいプロジェクト]** ダイアログ ボックス、または **[新しい項目の追加]** ダイアログ ボックスでどのように表示させるかを定義します。|  
   
 ## <a name="text-value"></a>テキスト値  
- A`string`では、項目テンプレートのグループに分類される項目テンプレートの識別子を表す、`TemplateGroupID`要素。  
+ A`string`は、項目テンプレートでのグループに分類される項目テンプレートの識別子を表す、`TemplateGroupID`要素。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `TemplateID` は、省略可能な要素です。  
   
- .Vstemplate ファイルを省略した場合、`TemplateID`要素、[名前](../extensibility/name-element-visual-studio-templates.md)要素は、テンプレートの識別子として使用します。  
+ .Vstemplate ファイルを指定しない場合、`TemplateID`要素、[名前](../extensibility/name-element-visual-studio-templates.md)要素は、テンプレートの識別子として使用されます。  
   
- 値、`TemplateID`要素は、プロジェクト システム登録と共に使用 (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\11.0\Projects\\) に表示されるテンプレートをフィルター、**新しい項目の追加**ダイアログ ボックス。  
+ 値、`TemplateID`要素は、プロジェクト システムの登録と使用 (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\11.0\Projects\\) に表示されるフィルター テンプレートを**新しい項目の追加**ダイアログ ボックス。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   

@@ -1,6 +1,7 @@
 ---
 title: '&lt;ドキュメント&gt;要素 (Visual Studio での Office 開発)'
-ms.custom: ''
+titleSuffix: ''
+ms.custom: seodec18
 ms.date: 02/02/2017
 ms.technology:
 - office-development
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - document element
 - application manifests [Office development in Visual Studio], <document> element
 - <document> element
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 07d8172ec4e56352c2244aef02d947ac48833ab7
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 634a2aff43b19098629392fedbfbaef7549e8e6c
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34447336"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647063"
 ---
 # <a name="ltdocumentgt-element-office-development-in-visual-studio"></a>&lt;ドキュメント&gt;要素 (Visual Studio での Office 開発)
   `document`の要素、`vstov4`名前空間は、ドキュメント レベルのカスタマイズのカスタマイズに固有の情報を格納します。  
@@ -34,18 +35,18 @@ ms.locfileid: "34447336"
 ```  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
- ドキュメント レベルのカスタマイズでのみ必須です。 `document`要素は、`vstov4`名前空間。 `document`要素には、次の属性です。  
+ ドキュメント レベルのカスタマイズでのみ必須です。 `document` 要素は、 `vstov4` 名前空間内にあります。 `document` 要素には、次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`solutionId`|必須。 ドキュメント レベルのソリューションを一意に識別する、Visual Studio Tools for Office ランタイムで使用される GUID です。 この値は、_AssemblyLocation カスタム ドキュメント プロパティとして格納されます。 詳細については、次を参照してください。[カスタム ドキュメント プロパティの概要](../vsto/custom-document-properties-overview.md)です。|  
+|`solutionId`|必須。 ドキュメント レベルのソリューションを一意に識別する、Visual Studio Tools for Office ランタイムによって使用される GUID です。 この値は、カスタムのドキュメントの _AssemblyLocation プロパティとして格納されます。 詳細については、次を参照してください。[カスタム ドキュメント プロパティの概要](../vsto/custom-document-properties-overview.md)します。|  
   
- `document` 子要素がありません。  
+ `document` に子要素はありません。  
   
-## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズの例  
+## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズ例  
   
 ### <a name="description"></a>説明  
- 次のコード例を示しています、`document`要素を使用して展開のドキュメント レベルの Office ソリューションで[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]です。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
+ 次のコード例を示しています、`document`要素を使用して配置されるドキュメント レベルの Office ソリューション[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]します。 このコード例で示されている例の一部は、 [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)します。  
   
 ### <a name="code"></a>コード  
   

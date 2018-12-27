@@ -14,24 +14,24 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio], controls
 - controls [Office development in Visual Studio]
 - documents [Office development in Visual Studio], controls
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1d33c89973124e2bae8e34aca3fc99096ac02ef6
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 0c166ef848f3c9de321bf3451cccdf9c16cfb472
+ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34263138"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53441471"
 ---
 # <a name="controls-on-office-documents"></a>Office ドキュメントのコントロール
   Visual Studio の Office 開発ツールを使用し、Windows フォーム コントロールと *ホスト コントロール* を Word 文書と Excel ワークシートに追加できます。 ホスト コントロールは Word オブジェクト モデルと Excel オブジェクト モデルのさまざまなユーザー インターフェイス (UI) オブジェクトを拡張するオブジェクトです。  
   
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]  
   
- Excel または Word の VSTO アドイン プロジェクトを開発するときは、任意の開いている文書またはブック実行時にこれらのコントロールをプログラミングで追加できます。  
+ Excel または Word の VSTO アドイン プロジェクトを開発する場合は、開いているドキュメントや実行時にブックをプログラムによってこれらのコントロールを追加できます。  
   
  Excel または Word のドキュメントレベル プロジェクトを開発するとき、実行時にこれらのコントロールをプログラミングで追加できます。あるいは、Visual Studio デザイナーを使用し、設計時にプロジェクトの文書またはブックにこれらのコントロールを追加できます。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34263138"
  [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
  コードでホスト項目とホスト コントロールを使用するときに発生する可能性のある問題について説明します。  
   
- [Office ドキュメントの概要 Windows フォーム コントロール](../vsto/windows-forms-controls-on-office-documents-overview.md)  
+ [Office ドキュメントの概要での Windows フォーム コントロール](../vsto/windows-forms-controls-on-office-documents-overview.md)  
  Excel と Word の文書で Windows フォーム コントロールを使用する方法と Windows フォーム コントロールと Windows フォームの違いについて説明します。  
   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)  

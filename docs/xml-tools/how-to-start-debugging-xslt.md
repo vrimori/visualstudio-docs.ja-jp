@@ -1,5 +1,5 @@
 ---
-title: '方法 : XSLT のデバッグを開始する'
+title: '方法: XSLT のデバッグを開始します。'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-xml-tools
@@ -11,14 +11,14 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: e499aea3793e5c496930fe255133d51361e6f394
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 9e3251d83361623aea0c0a54a2752c97b06a66f8
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178349"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53561867"
 ---
-# <a name="how-to-start-debugging-xslt"></a>方法: XSLT のデバッグを開始
+# <a name="how-to-start-debugging-xslt"></a>方法: XSLT のデバッグを開始します。
 
 XSLT デバッガーを使用すると、XSLT スタイル シートや XSLT アプリケーションをデバッグすることができます。 デバッグの際には、コードのステップ イン、ステップ オーバー、またはステップ アウトを行って、コードを一度に 1 行ずつ実行できます。 コードのステップ実行機能を使用するためのコマンドは、XSLT デバッガーを使用する場合と、他の Visual Studio デバッガーを使用する場合とで変わりません。 デバッグを開始すると、XSLT デバッガーのウィンドウが開き、入力ドキュメントと XSLT 出力が表示されます。
 
@@ -94,4 +94,4 @@ namespace ConsoleApplication
 ## <a name="see-also"></a>関連項目
 
 - [チュートリアル: XSLT スタイル シートをデバッグします。](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)
-- [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)
+- [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)   

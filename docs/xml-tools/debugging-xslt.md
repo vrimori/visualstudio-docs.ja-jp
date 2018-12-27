@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 55c52d1ed054d5005a68f160e0b5442fbd02c3f1
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: b89fce53567e0d88827cf4ba68349a68c31bc560
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51348540"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684640"
 ---
 # <a name="debugging-xslt"></a>XSLT のデバッグ
 
@@ -32,5 +32,5 @@ Visual Studio デバッガーを使用して XSLT をデバッグすることが
 
 - [XSLT スタイル シートの編集](../xml-tools/editing-xslt-style-sheets.md)XML エディターを使用したスタイル シートの編集について説明します。
 - [XML データを使用する場合のセキュリティに関する考慮事項](../xml-tools/security-considerations-when-working-with-xml-data.md)XML エディターや XSLT デバッガーを使用する際に理解する必要があるセキュリティの問題について説明します。
-- [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)Visual Studio デバッガーが導入されています。
+- [Visual Studio でのデバッグ](../debugger/debugger-feature-tour.md)Visual Studio デバッガーが導入されています。
 - [XSLT 参照](https://msdn.microsoft.com/678bcd68-cbbb-4be5-9dd2-40f94488a1cf)XSLT 要素と関数の参照資料を提供します。

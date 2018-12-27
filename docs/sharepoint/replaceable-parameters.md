@@ -18,15 +18,15 @@ author: TerryGLee
 ms.author: tglee
 manager: douge
 ms.workload: office
-ms.openlocfilehash: e79442ea42583f326f9cb59360777269c399b7a0
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 1d1b606d4416da10c329a7421378ea979a2fa4cf
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49879299"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684692"
 ---
 # <a name="replaceable-parameters"></a>置き換え可能パラメーター
-  置き換え可能パラメーター、または*トークン*、実際の値は、デザイン時にわかっていない SharePoint のソリューション項目の値を指定するプロジェクト ファイル内で使用できます。 標準の関数と似ています[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]テンプレート トークンです。 詳細については、次を参照してください。[テンプレート パラメーター](/visualstudio/ide/template-parameters)します。  
+  置き換え可能パラメーター、または*トークン*、実際の値は、デザイン時にわかっていない SharePoint のソリューション項目の値を指定するプロジェクト ファイル内で使用できます。 標準の関数と似ています[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]テンプレート トークンです。 詳細については、次を参照してください。[テンプレート パラメーター](../ide/template-parameters.md)します。  
   
 ## <a name="token-format"></a>トークンの形式
  トークンの先頭し、ドル記号 ($) 文字で終了します。 デプロイに使用される任意のトークンが置き換え実際の値プロジェクトが SharePoint ソリューション パッケージにパッケージ化 (*.wsp*ファイル)。 たとえば、トークン **$SharePoint.Package.Name$** 「SharePoint パッケージのテスト」の文字列に解決する可能性があります。  
@@ -111,4 +111,3 @@ ms.locfileid: "49879299"
   
 ## <a name="see-also"></a>関連項目
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
-  

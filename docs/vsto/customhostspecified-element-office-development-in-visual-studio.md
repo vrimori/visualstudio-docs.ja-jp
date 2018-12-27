@@ -1,6 +1,7 @@
 ---
 title: '&lt;customHostSpecified&gt;要素 (Visual Studio での Office 開発)'
-ms.custom: ''
+titleSuffix: ''
+ms.custom: seodec18
 ms.date: 02/02/2017
 ms.technology:
 - office-development
@@ -12,20 +13,20 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <customHostSpecified> element
 - <customHostSpecified> element
 - customHostSpecified element
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d4eaf874a259251c35a6b01c08f544993092ff4d
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: f59433c2c7dfcdcea4ab6f5d7fd620542ea20dc1
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34264036"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648795"
 ---
 # <a name="ltcustomhostspecifiedgt-element-office-development-in-visual-studio"></a>&lt;customHostSpecified&gt;要素 (Visual Studio での Office 開発)
-  `customHostSpecified`要素は、このソリューションは、スタンドアロン アプリケーションではないことを示します。 Office ソリューションには、Microsoft Office アプリケーション内でホストされるコンポーネントが含まれます。  
+  `customHostSpecified`要素は、このソリューションは、スタンドアロン アプリケーションではないことを示します。 Office ソリューションには、Microsoft Office アプリケーション内でホストされているコンポーネントが含まれます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,14 +35,14 @@ ms.locfileid: "34264036"
 ```  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
- `customHostSpecified`要素は、Office ソリューションのために必要です。 この要素は、`co.v1`名前空間のカスタム ホスト内で展開されるコンポーネントがこの展開に含まれているを指定し、スタンドアロン アプリケーションではありません。  
+ `customHostSpecified`要素は Office ソリューションの必須です。 この要素は、`co.v1`名前空間にこの展開にカスタム ホストの内部で展開されるコンポーネントが格納されているし、スタンドアロン アプリケーションではありません。  
   
- この要素は、最初の子`<entrypoint>`アプリケーション マニフェスト内の要素。 他の子要素にすることは`<entrypoint>`要素または[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]のインストール時に検証エラーが発生します。  
+ この要素は、最初の子`<entrypoint>`アプリケーション マニフェスト内の要素。 必要がありますには、他の子要素`<entrypoint>`要素または[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]のインストール時に検証エラーが発生します。  
   
- この要素にはない属性や子要素です。  
+ この要素は、属性や子要素があります。  
   
 ## <a name="example"></a>例  
- 次のコード例を示しています、 `customHostSpecified` Office ソリューションに対するアプリケーション マニフェストの要素。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
+ 次のコード例を示しています、 `customHostSpecified` Office ソリューションに対するアプリケーション マニフェスト内の要素。 このコード例で示されている例の一部は、 [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)します。  
   
 ```xml
 <entryPoint>  

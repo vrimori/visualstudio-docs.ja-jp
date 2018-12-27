@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Office development in Visual Studio, about developing solutions
 - solutions [Office development in Visual Studio], developing
 - Office solutions [Office development in Visual Studio], developing
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a95c5f5767e227c35763cfaea1e3619093fffda3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ea6054ae0917413a4e862e5c6309492ce84deff2
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49833071"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648853"
 ---
 # <a name="develop-office-solutions"></a>Office ソリューションを開発します。
   Visual Studio の Office Developer Tools を使用してプロジェクトを設計し、プロジェクト ファイルを設定すると、コードとカスタム ユーザー インターフェイス (UI) の実装に集中できるようになります。  
@@ -63,15 +63,15 @@ ms.locfileid: "49833071"
 |[Office プロジェクトのユーザー補助機能](../vsto/accessibility-in-office-projects.md)|Office ソリューションで使用できるユーザー補助機能について説明します。|  
   
 ## <a name="see-also"></a>関連項目  
- [方法: を作成し、カスタム ドキュメント プロパティの変更](../vsto/how-to-create-and-modify-custom-document-properties.md)   
- [方法: ドキュメント プロパティに書き込み、読み取りと](../vsto/how-to-read-from-and-write-to-document-properties.md)   
- [方法: Office multilingual user Interface](../vsto/how-to-target-the-office-multilingual-user-interface.md)   
- [Excel 用の最初の VSTO アドインのチュートリアル: 作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-excel.md)   
- [チュートリアル: 初めての Excel 用ドキュメント レベルのカスタマイズを作成します。](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md)   
- [チュートリアル: は、初めて VSTO アドインを Outlook の作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)   
- [チュートリアル: は powerpoint の場合、最初の VSTO アドイン作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md)   
- [チュートリアル: が初めて VSTO アドイン プロジェクトの作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-project.md)   
- [チュートリアル: Word の最初の VSTO アドイン作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-word.md)   
- [チュートリアル: 初めての Word 用ドキュメント レベルのカスタマイズを作成します。](../vsto/walkthrough-creating-your-first-document-level-customization-for-word.md)  
+ [方法: 作成し、カスタム ドキュメント プロパティの変更](../vsto/how-to-create-and-modify-custom-document-properties.md)   
+ [方法: ドキュメント プロパティの読み書き](../vsto/how-to-read-from-and-write-to-document-properties.md)   
+ [方法: Office の multilingual user interface します。](../vsto/how-to-target-the-office-multilingual-user-interface.md)   
+ [チュートリアル: Excel 用の最初の VSTO アドインの作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-excel.md)   
+ [チュートリアル: 最初の Excel 用ドキュメント レベルのカスタマイズを作成します。](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md)   
+ [チュートリアル: 初めて VSTO アドイン Outlook の作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)   
+ [チュートリアル: Powerpoint の場合、最初の VSTO アドインの作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md)   
+ [チュートリアル: 初めて VSTO アドイン プロジェクトの作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-project.md)   
+ [チュートリアル: Word 用の最初の VSTO アドインの作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-word.md)   
+ [チュートリアル: 最初の Word 用ドキュメント レベルのカスタマイズを作成します。](../vsto/walkthrough-creating-your-first-document-level-customization-for-word.md)  
   
   

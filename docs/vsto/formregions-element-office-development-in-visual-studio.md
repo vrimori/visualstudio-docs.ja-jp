@@ -1,6 +1,7 @@
 ---
 title: '&lt;formRegions&gt;要素 (Visual Studio での Office 開発)'
-ms.custom: ''
+titleSuffix: ''
+ms.custom: seodec18
 ms.date: 02/02/2017
 ms.technology:
 - office-development
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - formRegions element
 - <formRegions> element
 - application manifests [Office development in Visual Studio], <formRegions> element
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b978ef47db6b8803b7730aef14173c3eb19b16e8
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 035c8a402c0b596b8a6e06d5e6c72e4ab34ebb4f
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671958"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647192"
 ---
 # <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;formRegions&gt;要素 (Visual Studio での Office 開発)
   `formRegions`の要素、`vstov4`名前空間には、VSTO アドインに関連付けられている Microsoft Office Outlook フォーム領域が含まれています。  

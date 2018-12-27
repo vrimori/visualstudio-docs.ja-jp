@@ -17,12 +17,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b5701044e20f2122199d9d0ca5558e453e6e5f72
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 84f17a71383b6f507b4ea274d8a5cf416ab5f55e
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49906027"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53739162"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Visual Studio SDK は Visual Studio の機能を拡張することや、Visual Studio に新しい機能を追加するのに役立ちます。 Visual Studio Marketplace では、あなたが作成した拡張機能を他のユーザーへ配布することができます。 Visual Studio を拡張する方法の一部を次に示します。  
@@ -78,8 +78,8 @@ Visual Studio SDK は Visual Studio の機能を拡張することや、Visual S
   
 ## <a name="see-also"></a>関連項目  
  [メニュー コマンドを使用して拡張機能を作成](../extensibility/creating-an-extension-with-a-menu-command.md)   
- [方法: 機能拡張プロジェクトを Visual Studio 2017 に移行](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)   
- [FAQ: アドインを VSPackage 拡張機能に変換](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)   
+ [方法: 機能拡張プロジェクトを Visual Studio 2017 に移行します。](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)   
+ [FAQ：アドインを VSPackage 拡張機能に変換します。](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)   
  [マネージ コード内の複数のスレッドを管理](../extensibility/managing-multiple-threads-in-managed-code.md)   
  [メニューとコマンドを拡張](../extensibility/extending-menus-and-commands.md)   
  [ツールバーにコマンドを追加](../extensibility/adding-commands-to-toolbars.md)   
@@ -92,7 +92,7 @@ Visual Studio SDK は Visual Studio の機能を拡張することや、Visual S
  [Visual Studio の他の部分の拡張](../extensibility/extending-other-parts-of-visual-studio.md)   
  [サービスの使用と提供](../extensibility/using-and-providing-services.md)   
  [Vspackage の管理](../extensibility/managing-vspackages.md)   
- [Visual Studio の分離シェル](../extensibility/visual-studio-isolated-shell.md)   
+ [Visual Studio の分離シェル](/visualstudio/extensibility/shell/visual-studio-isolated-shell)   
  [Visual Studio 拡張機能の出荷](../extensibility/shipping-visual-studio-extensions.md)   
  [Visual Studio SDK の内部](../extensibility/internals/inside-the-visual-studio-sdk.md)   
  [Visual Studio SDK のサポート](../extensibility/support-for-the-visual-studio-sdk.md)   

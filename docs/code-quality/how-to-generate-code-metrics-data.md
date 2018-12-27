@@ -13,18 +13,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e3f8d6f2df0b0d9ec6e3f9d8ead7fd1e08929f8e
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: 83ec85855e17f8798f55b01f043d47d7140278e7
+ms.sourcegitcommit: c7b16358a5d6f7ea1dd2f70a6ac2a8266efa9c15
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50966532"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53425774"
 ---
-# <a name="how-to-generate-code-metrics-data"></a>方法: コード メトリックス データの生成
+# <a name="how-to-generate-code-metrics-data"></a>方法: コード メトリックス データを生成します。
 
 1 つまたは複数のプロジェクトまたはソリューション全体のコード メトリックスの結果を生成することができます。 コード メトリックスは Visual Studio の対話型開発環境 (IDE) 内であり、さらに利用可能なC#およびコマンドラインでの Visual Basic プロジェクト。
 
-さらに、インストール、 [NuGet パッケージ](https://dotnet.myget.org/feed/roslyn-analyzers/package/nuget/Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.2-beta2-63202-01)4 つのコード メトリックスを含む[アナライザー](roslyn-analyzers-overview.md)ルール: CA1501、CA1502、CA1505、および CA1506 します。 既定では、これらの規則が無効になっていますが、それらから有効にすることができます**ソリューション エクスプ ローラー**または、[ルール セット](using-rule-sets-to-group-code-analysis-rules.md)ファイル。
+さらに、インストール、 [NuGet パッケージ](https://dotnet.myget.org/feed/roslyn-analyzers/package/nuget/Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.2-beta2-63202-01)4 つのコード メトリックスを含む[アナライザー](roslyn-analyzers-overview.md)規則。CA1501、CA1502、CA1505、および CA1506 します。 既定では、これらの規則が無効になっていますが、それらから有効にすることができます**ソリューション エクスプ ローラー**または、[ルール セット](using-rule-sets-to-group-code-analysis-rules.md)ファイル。
 
 ## <a name="visual-studio-ide-code-metrics"></a>Visual Studio IDE のコード メトリックス
 
@@ -68,7 +68,7 @@ ms.locfileid: "50966532"
    msbuild /m /v:m /p:Configuration=Release Metrics.csproj
    ```
 
-   実行可能ファイルという名前の*Metrics.exe*で生成される、*バイナリ*リポジトリのルート ディレクトリ。
+   実行可能ファイルという*Metrics.exe*で生成される、 *artifacts\bin*リポジトリのルート ディレクトリ。
 
    > [!TIP]
    > 構築する*Metrics.exe*で[レガシ モード](#legacy-mode)、次のコマンドを実行します。
@@ -79,7 +79,7 @@ ms.locfileid: "50966532"
 
 ### <a name="usage"></a>使用法
 
-実行する*Metrics.exe*ソリューションと、出力 XML ファイルを引数として、プロジェクトを指定します。 例えば:
+実行する*Metrics.exe*ソリューションと、出力 XML ファイルを引数として、プロジェクトを指定します。 例:
 
 ```shell
 C:\>Metrics.exe /project:ConsoleApp20.csproj /out:report.xml

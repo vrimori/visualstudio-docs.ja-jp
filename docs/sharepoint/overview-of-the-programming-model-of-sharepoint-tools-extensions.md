@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 82309d00d45ab6ac801297a55371cf9be5620440
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 8417600d379312304a05d0e4a1ddfc49637ae0e9
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49829483"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684916"
 ---
 # <a name="overview-of-the-programming-model-of-sharepoint-tools-extensions"></a>ツールの拡張機能を SharePoint のプログラミング モデルの概要
   Visual Studio で SharePoint ツールの拡張機能を作成する場合、SharePoint ツールによって公開される 1 つ以上の機能拡張インターフェイスを実装することから始めます。 ほとんどの場合、SharePoint ツールによって提供される他の型も使用して、拡張機能で機能を実装します。 一部のシナリオでは、Visual Studio および SharePoint によって提供される他のオブジェクト モデルに含まれる型も使用します。 これらのオブジェクト モデルのそれぞれの目的を理解し、それぞれ他の SharePoint ツールの拡張機能の作成に使用する方法を理解する必要があります。  
@@ -34,14 +34,14 @@ ms.locfileid: "49829483"
 
 |Interface|説明|  
 |---------------|-----------------|  
-|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider>|このインターフェイスは、新しい種類の SharePoint プロジェクト項目を定義する際に実装します。 例については、次を参照してください。[方法: SharePoint プロジェクト項目の種類定義](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)します。|  
-|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension>|このインターフェイスは、Visual Studio に既にインストールされている SharePoint プロジェクト項目の種類を拡張する場合に実装します。 例については、次を参照してください。[方法: SharePoint プロジェクト項目の拡張機能作成](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)です。|  
-|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension>|このインターフェイスは、SharePoint プロジェクトを拡張する場合に実装します。 例については、次を参照してください。[方法: SharePoint プロジェクト拡張機能作成](../sharepoint/how-to-create-a-sharepoint-project-extension.md)です。|  
-|<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep>|SharePoint プロジェクト項目を配置または取り消すときに実行できる新しい配置手順を定義するには、このインターフェイスを実装します。 例については、次を参照してください。[チュートリアル: SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)です。|  
-|<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>|既存のノードを拡張するには、このインターフェイスを実装、 **SharePoint 接続**内のノード、**サーバー エクスプ ローラー**ウィンドウ。 例については、次を参照してください。[方法: サーバー エクスプ ローラーでの SharePoint ノードを拡張](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)します。|  
-|<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider>|ノードの下の新しい型を定義するには、このインターフェイスを実装、 **SharePoint 接続**内のノード、**サーバー エクスプ ローラー**ウィンドウ。 例については、次を参照してください。[方法: サーバー エクスプ ローラーでの SharePoint ノードを拡張](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)します。|  
-|<xref:Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationRule>|カスタムのフィーチャー検証規則を定義するには、このインターフェイスを実装します。 例については、次を参照してください。[方法: SharePoint ソリューションの検証規則を使用したカスタムのフィーチャーとパッケージの作成](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)です。|  
-|<xref:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule>|カスタムのパッケージ検証規則を定義するには、このインターフェイスを実装します。 例については、次を参照してください。[方法: SharePoint ソリューションの検証規則を使用したカスタムのフィーチャーとパッケージの作成](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)です。|  
+|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider>|このインターフェイスは、新しい種類の SharePoint プロジェクト項目を定義する際に実装します。 例については、次を参照してください。[方法。SharePoint プロジェクト項目の種類定義](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)します。|  
+|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension>|このインターフェイスは、Visual Studio に既にインストールされている SharePoint プロジェクト項目の種類を拡張する場合に実装します。 例については、次を参照してください。[方法。SharePoint プロジェクト項目の拡張機能作成](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)です。|  
+|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension>|このインターフェイスは、SharePoint プロジェクトを拡張する場合に実装します。 例については、次を参照してください。[方法。SharePoint プロジェクト拡張機能作成](../sharepoint/how-to-create-a-sharepoint-project-extension.md)です。|  
+|<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep>|SharePoint プロジェクト項目を配置または取り消すときに実行できる新しい配置手順を定義するには、このインターフェイスを実装します。 例については、次を参照してください。[チュートリアル。SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)です。|  
+|<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>|既存のノードを拡張するには、このインターフェイスを実装、 **SharePoint 接続**内のノード、**サーバー エクスプ ローラー**ウィンドウ。 例については、次を参照してください。[方法。サーバー エクスプ ローラーでの SharePoint ノードを拡張](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)します。|  
+|<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider>|ノードの下の新しい型を定義するには、このインターフェイスを実装、 **SharePoint 接続**内のノード、**サーバー エクスプ ローラー**ウィンドウ。 例については、次を参照してください。[方法。サーバー エクスプ ローラーでの SharePoint ノードを拡張](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)します。|  
+|<xref:Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationRule>|カスタムのフィーチャー検証規則を定義するには、このインターフェイスを実装します。 例については、次を参照してください。[方法。SharePoint ソリューションの検証規則を使用したカスタムのフィーチャーとパッケージの作成](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)です。|  
+|<xref:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule>|カスタムのパッケージ検証規則を定義するには、このインターフェイスを実装します。 例については、次を参照してください。[方法。SharePoint ソリューションの検証規則を使用したカスタムのフィーチャーとパッケージの作成](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)です。|  
 
  SharePoint ツールの拡張機能を実装したら、拡張機能アセンブリを Visual Studio 拡張機能 (VSIX) のパッケージに配置し、Visual Studio が拡張機能を検出し、読み込むことができるようにする必要があります。 詳細については、次を参照してください。 [Visual Studio の SharePoint ツールの拡張機能を展開](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)します。  
 
@@ -69,7 +69,7 @@ ms.locfileid: "49829483"
 |<xref:Microsoft.VisualStudio.SharePoint.Explorer>|使用の下のノードを拡張する型が含まれています、 **SharePoint 接続**内のノード、**サーバー エクスプ ローラー**ウィンドウ、またはノードの新しい型を定義します。 詳細については、次を参照してください。[サーバー エクスプ ローラーで、SharePoint 接続 ノードを拡張](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)します。|  
 |<xref:Microsoft.VisualStudio.SharePoint.Features>|SharePoint プロジェクトのフィーチャーの定義にアクセスするために使用する型があります。|  
 |<xref:Microsoft.VisualStudio.SharePoint.Packages>|SharePoint ソリューションのパッケージ定義にアクセスするために使用する型があります。|  
-|<xref:Microsoft.VisualStudio.SharePoint.Validation>|SharePoint プロジェクトの機能およびパッケージ検証動作をカスタマイズするために使用する型があります。 詳細については、次を参照してください。[方法: SharePoint ソリューションの検証規則を使用したカスタムのフィーチャーとパッケージの作成](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)です。| 
+|<xref:Microsoft.VisualStudio.SharePoint.Validation>|SharePoint プロジェクトの機能およびパッケージ検証動作をカスタマイズするために使用する型があります。 詳細については、「[方法 :SharePoint ソリューションの検証規則を使用したカスタムのフィーチャーとパッケージの作成](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)です。| 
 
 #### <a name="microsoftvisualstudiosharepointcommandsdll"></a>Microsoft.VisualStudio.SharePoint.Commands.dll
 
@@ -97,7 +97,7 @@ ms.locfileid: "49829483"
 
  このオブジェクト モデルは、Visual Studio SDK に付属の一連のアセンブリで定義されています。 このオブジェクト モデルでは、メインのアセンブリのものが*Microsoft.VisualStudio.Shell.11.0.dll*、 *Microsoft.VisualStudio.Shell.Interop.dll*、および*Microsoft.visualstudio.ole.interop.dll が含まれます*します。  
 
- 統合オブジェクト モデルの詳細については、次を参照してください。[オートメーション モデルの概要](/visualstudio/extensibility/internals/automation-model-overview)と[Visual Studio SDK リファレンス](/visualstudio/extensibility/visual-studio-sdk-reference)します。  
+ 統合オブジェクト モデルの詳細については、次を参照してください。[オートメーション モデルの概要](../extensibility/internals/automation-model-overview.md)と[Visual Studio SDK リファレンス](../extensibility/visual-studio-sdk-reference.md)します。  
 
 ### <a name="sharepoint-object-models"></a>SharePoint オブジェクト モデル
  SharePoint ツールの拡張機能から SharePoint の API を使用して、SharePoint サイトに変更を加えたり、SharePoint サイトからデータを取得したりできます。 [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] および [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] には、オブジェクト モデルが 2 種類あります。サーバー オブジェクト モデルとクライアント オブジェクト モデルです。  
@@ -113,4 +113,3 @@ ms.locfileid: "49829483"
  [Visual Studio の SharePoint ツールを拡張します。](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)   
  [SharePoint オブジェクト モデルを呼び出す](../sharepoint/calling-into-the-sharepoint-object-models.md)   
  [SharePoint プロジェクト サービスを使用します。](../sharepoint/using-the-sharepoint-project-service.md)  
-

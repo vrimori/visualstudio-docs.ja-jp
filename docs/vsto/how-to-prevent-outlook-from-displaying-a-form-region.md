@@ -11,17 +11,17 @@ dev_langs:
 helpviewer_keywords:
 - form regions [Office development in Visual Studio], canceling display
 - canceling form region display
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1ec9f45b2055a7a56e067440d216482877da14c2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0aaeafe14f35092be30c982ebb758e40afedb8aa
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49949059"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647082"
 ---
 # <a name="how-to-prevent-outlook-from-displaying-a-form-region"></a>方法: Outlook フォーム領域が表示されないようにします。
   たくない特定の項目のフォーム領域を表示する Microsoft Office Outlook の状況である可能性があります。 たとえば、連絡先アイテムに会社の住所が含まれていない場合は、表示から、マップで、ビジネスの場所を表示するフォーム領域を防ぐことができます。  

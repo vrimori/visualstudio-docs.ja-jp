@@ -1,5 +1,5 @@
 ---
-title: '方法: Office プライマリ相互運用機能アセンブリ'
+title: '方法: Office プライマリ相互運用機能アセンブリをインストールします。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - primary interop assemblies [Office development in Visual Studio], installing
 - Office primary interop assemblies, installing
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: dd044c228e20bbdf169dda456cf24c3246b0ae34
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: bca78cc9387756c1abd4e6c11d3a549777c3f452
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35255669"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648588"
 ---
-# <a name="how-to-install-office-primary-interop-assemblies"></a>方法: Office プライマリ相互運用機能アセンブリ
+# <a name="how-to-install-office-primary-interop-assemblies"></a>方法: Office プライマリ相互運用機能アセンブリをインストールします。
   Microsoft Office のインストール時に、Office のプライマリ相互運用機能アセンブリ (PIA) をインストールします。  
   
 ## <a name="to-install-the-pias-when-you-install-office"></a>Office のインストール時に PIA をインストールするには  
@@ -37,9 +37,9 @@ ms.locfileid: "35255669"
   
 ## <a name="see-also"></a>関連項目  
  [Office プライマリ相互運用機能アセンブリ](../vsto/office-primary-interop-assemblies.md)   
- [方法: ターゲットの Office アプリケーション プライマリ相互運用機能アセンブリ](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
+ [方法: プライマリ相互運用機能アセンブリを利用して Office アプリケーションします。](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
  [方法: Office ソリューションを開発コンピューターを構成します。](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)   
- [方法: Visual Studio Tools for Office ランタイム再頒布可能パッケージのインストール](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)   
+ [方法: Visual Studio Tools for Office ランタイム再頒布可能パッケージのインストールします。](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)   
  [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)  
   

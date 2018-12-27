@@ -1,5 +1,5 @@
 ---
-title: 予想 &#39;}&#39; |Microsoft ドキュメント
+title: 予想 '}' |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,20 +20,20 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2273d0c98ba3d65bd7b9e855532ca5355d25af66
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 42e0c220466291f845209f22917d728dee3e553e
+ms.sourcegitcommit: 75e02ed88a1ace6e8265fd4e3a82a1bc78f3adca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24632822"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53348304"
 ---
-# <a name="expected-3939"></a>予想 &#39;}&#39;です。
-初期化子をオブジェクトまたは関数の本体、ループ、コードのブロックの終了をマークする右中かっこを含めるしていません。 このエラーの例としては、**の**のみ、左中かっこ、ループの本体でループします。  
+# <a name="expected-"></a>'}' が必要です。
+オブジェクト初期化子または関数本体、ループのコード ブロックの終了をマークする右中かっこを含めるしていません。 このエラーの例があります、**の**ループの本体をマークする左かっこのみをループします。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
 -   関数、ループ、ブロック、またはオブジェクト初期化子の終了をマークする右中かっこを追加します。  
   
 ## <a name="see-also"></a>関連項目  
- [Function オブジェクト](../../javascript/reference/function-object-javascript.md)   
+ [関数オブジェクト](../../javascript/reference/function-object-javascript.md)   
  [プログラム フローの制御](../../javascript/controlling-program-flow-javascript.md)

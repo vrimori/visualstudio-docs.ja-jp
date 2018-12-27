@@ -20,15 +20,15 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6922105fa66dbb5184aa7c991fe9b90278a9a052
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 86837d410b44c2508d50b1f630b43852b0fc8fea
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31919678"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738451"
 ---
 # <a name="code-analysis-for-cc-warnings"></a>C/C++ コードの警告に対応するコードの分析
-このセクションで発生したものを除く C/C++ コード分析の警告を一覧表示、 [C++ コア ガイドライン チェッカー](code-analysis-for-cpp-corecheck.md)です。 コード分析の詳細については、次を参照してください。 [/analyze (コード分析)](/cpp/build/reference/analyze-code-analysis)と[クイック スタート: c/c++ コード分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)です。
+このセクションで発生するものを除く、C/C++ コード分析警告を一覧表示、 [C++ Core ガイドライン チェッカー](code-analysis-for-cpp-corecheck.md)します。 コード分析の詳細については、次を参照してください。 [/analyze (コード分析)](/cpp/build/reference/analyze-code-analysis)と[クイック スタート。C/C++ のコード分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)します。
 
 ## <a name="see-also"></a>関連項目
- [コード分析を使用して、C と C++ コード品質の分析](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md) [SAL 注釈を使用して C/C++ のコード障害を減らす方法](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
+ [コード分析を使用して C/C++ のコード品質の分析](../code-quality/code-analysis-for-c-cpp-overview.md) [SAL 注釈を使用して C/C++ のコード障害を減らす](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)

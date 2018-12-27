@@ -1,5 +1,5 @@
 ---
-title: 'CA1502: メソッドの実装を複雑にしすぎないでください'
+title: CA1502:過剰な複雑さを回避します。
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
@@ -20,14 +20,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: bfa12a2a1ade8d32c5518660c46ce79bc997d776
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 969e16eae2d04ed1635e2d2bc9b496ed510a6074
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49819304"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53740326"
 ---
-# <a name="ca1502-avoid-excessive-complexity"></a>CA1502: メソッドの実装を複雑にしすぎないでください
+# <a name="ca1502-avoid-excessive-complexity"></a>CA1502:過剰な複雑さを回避します。
 
 |||
 |-|-|
@@ -50,7 +50,7 @@ ms.locfileid: "49819304"
 
 ルールは、サイクロマティック複雑度が 25 を超える場合、違反を報告します。
 
-コード メトリックに関する詳細については、[を測定する複雑さとマネージ コードの保守容易性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)、
+コード メトリックに関する詳細については、[を測定する複雑さとマネージ コードの保守容易性](../code-quality/code-metrics-values.md)、
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
 
@@ -104,8 +104,8 @@ ms.locfileid: "49819304"
 
 ## <a name="related-rules"></a>関連するルール
 
-[CA1501: 継承を使用しすぎないでください](../code-quality/ca1501-avoid-excessive-inheritance.md)
+[CA1501:過剰な継承を回避します。](../code-quality/ca1501-avoid-excessive-inheritance.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [マネージド コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)
+- [マネージド コードの複雑さと保守性の測定](../code-quality/code-metrics-values.md)

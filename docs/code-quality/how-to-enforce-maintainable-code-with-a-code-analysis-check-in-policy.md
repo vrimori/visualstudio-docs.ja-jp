@@ -1,5 +1,5 @@
 ---
-title: '方法: コード分析のチェックイン ポリシーを使用して保守が容易なコードを適用する'
+title: '方法: コード分析チェックイン ポリシーを保守しやすいコードを適用します。'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f0121efb2e226b2407eee7eea50354a80482b1cc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 060ca6482249e9b1e538b25977a1bdf5dfb97276
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49892092"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53739380"
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>方法: コード分析チェックイン ポリシーを保守しやすいコードを適用します。
 
@@ -47,13 +47,13 @@ Team foundation バージョン管理の管理者は、チェックイン ポリ
 
 2. 次の規則のチェック ボックスを選択します。
 
-   - 継承の深さ: **CA1501 AvoidExcessiveInheritance** -しきい値: 深さは 5 以上のレベルで警告が発生
+   - 継承の深さ:**CA1501 AvoidExcessiveInheritance** -しきい値。5 つを超えるレベルの深さで警告が発生
 
-   - 複雑さ: **CA1502 AvoidExcessiveComplexity** -しきい値: 25 以上の警告
+   - 複雑さ:**CA1502 AvoidExcessiveComplexity** -しきい値。25 を超えるで警告が発生
 
-   - 保守容易性指数: **CA1505 AvoidUnmaintainableCode** -しきい値: 20 未満で警告が発生
+   - 保守容易性指数。**CA1505 AvoidUnmaintainableCode** -しきい値。20 未満で警告が発生
 
-   - クラス結合度: **CA1506 AvoidExcessiveClassCoupling** -しきい値: クラスの 80 以上とメソッドの 30 以上で警告が発生
+   - クラス結合度:**CA1506 AvoidExcessiveClassCoupling** -しきい値。クラスの 80 以上とメソッドの 30 以上で警告が発生
 
      さらに、成功したビルドを防ぐために規則違反する場合は、選択、**警告をエラーとして扱う**ルールの説明の横にあるチェック ボックス。
 
@@ -62,4 +62,4 @@ Team foundation バージョン管理の管理者は、チェックイン ポリ
 ## <a name="see-also"></a>関連項目
 
 - [コード メトリックス値](../code-quality/code-metrics-values.md)
-- [作成とコード分析チェックイン ポリシーの使用](../code-quality/creating-and-using-code-analysis-check-in-policies.md)
+- [作成とコード分析チェックイン ポリシーの使用](../code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies.md)

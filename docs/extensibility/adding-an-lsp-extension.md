@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f2710693c7dae7c4238f9f31fbe8065d6864a19
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 4c583b9af65610340886794c03cb92be945b73d4
+ms.sourcegitcommit: c7b16358a5d6f7ea1dd2f70a6ac2a8266efa9c15
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50672965"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53425865"
 ---
 # <a name="add-a-language-server-protocol-extension"></a>言語サーバー プロトコルの拡張機能を追加します。
 
@@ -202,12 +202,12 @@ namespace MockLanguageExtension
             await StartAsync.InvokeAsync(this, EventArgs.Empty);
         }
 
-        public async Task OnServerInitializeFailedAsync(Exception e)
+        public Task OnServerInitializeFailedAsync(Exception e)
         {
             return Task.CompletedTask;
         }
 
-        public async Task OnServerInitializedAsync()
+        public Task OnServerInitializedAsync()
         {
             return Task.CompletedTask;
         }
@@ -242,8 +242,8 @@ VSIX マニフェスト デザイナーを開きに移動、**資産** タブ。
 
 ![MEF の資産を定義します。](media/lsp-define-asset.png)
 
-* **型**: [microsoft.visualstudio.mefcomponent]
-* **ソース**: 現在のソリューション内のプロジェクト
+* **型**:Microsoft.VisualStudio.MefComponent
+* **ソース**:現在のソリューション内のプロジェクト
 * **プロジェクト**: [プロジェクト]
 
 ### <a name="content-type-definition"></a>コンテンツ タイプの定義
@@ -293,7 +293,7 @@ LSP 言語のサーバーのサポートの追加の場合、Visual Studio で�
 
 LSP 言語サービス拡張機能への設定のサポートを追加する以下の手順に従います。
 
-1. JSON ファイルを追加 (たとえば、 *MockLanguageExtensionSettings.json*) 設定とその既定値を含むプロジェクト。 例えば:
+1. JSON ファイルを追加 (たとえば、 *MockLanguageExtensionSettings.json*) 設定とその既定値を含むプロジェクト。 例:
 
    ```json
    {
@@ -326,15 +326,15 @@ LSP 言語サービス拡張機能への設定のサポートを追加する以�
 
    ![vspackage の資産を編集します。](media/lsp-add-vspackage-asset.png)
 
-   * **型**: Microsoft.VisualStudio.VsPackage
-   * **ソース**: ファイル システム上のファイル
+   * **型**:Microsoft.VisualStudio.VsPackage
+   * **ソース**:ファイル システム上のファイルします。
    * **パス**: [へのパス、 *.pkgdef*ファイル]
 
 ### <a name="user-editing-of-settings-for-a-workspace"></a>ユーザーのワークスペースの設定の編集
 
 1. ユーザーは、サーバーを所有するファイルを含むワークスペースを開きます。
 2. ユーザーが内のファイルを追加、 *.vs*という名前のフォルダー *VSWorkspaceSettings.json*します。
-3. ユーザーは、線を追加、 *VSWorkspaceSettings.json*ファイルの設定、サーバーを提供します。 例えば:
+3. ユーザーは、線を追加、 *VSWorkspaceSettings.json*ファイルの設定、サーバーを提供します。 例:
 
    ```json
    {

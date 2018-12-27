@@ -1,6 +1,7 @@
 ---
 title: '&lt;entryPointsCollection&gt;要素 (Visual Studio での Office 開発)'
-ms.custom: ''
+titleSuffix: ''
+ms.custom: seodec18
 ms.date: 02/02/2017
 ms.technology:
 - office-development
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - <entryPointsCollection> element
 - application manifests [Office development in Visual Studio], <entryPointsCollection> element
 - entryPointsCollection element
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 119cff9135b2b65f09d265aed2af3a7e2d500d60
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: f9e9489127f4b82bbca3d76172445fdafd6ad84a
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34447906"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53646706"
 ---
 # <a name="ltentrypointscollectiongt-element-office-development-in-visual-studio"></a>&lt;entryPointsCollection&gt;要素 (Visual Studio での Office 開発)
   `entryPointsCollection` 名前空間の `vstav3` 要素は、Office ソリューションに関連付けられているすべての `entryPoints` 要素を格納します。  
@@ -50,12 +51,12 @@ ms.locfileid: "34447906"
  `entryPointsCollection` には、次の要素があります。  
   
 ### <a name="entrypoints"></a>entryPoints  
- 必須。 役割、`entryPoints`内の要素、`vstav3`で名前空間が定義されている[ &#60;entryPoints&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md)です。  
+ 必須。 ロール、`entryPoints`内の要素、`vstav3`で名前空間が定義されている[ &#60;entryPoints&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md)します。  
   
-## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズの例  
+## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズ例  
   
 ### <a name="description"></a>説明  
- 次のコード例では、 `entryPointsCollection` を使用して配置したドキュメント レベルのソリューションのアプリケーション マニフェストにある [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
+ 次のコード例では、 `entryPointsCollection` を使用して配置したドキュメント レベルのソリューションのアプリケーション マニフェストにある [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例で示されている例の一部は、 [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)します。  
   
 ### <a name="code"></a>コード  
   
@@ -101,7 +102,7 @@ ms.locfileid: "34447906"
 ## <a name="vsto-add-in-example"></a>VSTO アドインの例  
   
 ### <a name="description"></a>説明  
- 次のコード例では、 `entryPointsCollection` を使用して配置したアプリケーション レベルのソリューションのアプリケーション マニフェストにある [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
+ 次のコード例では、 `entryPointsCollection` を使用して配置したアプリケーション レベルのソリューションのアプリケーション マニフェストにある [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例で示されている例の一部は、 [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)します。  
   
 ### <a name="code"></a>コード  
   
@@ -123,7 +124,7 @@ ms.locfileid: "34447906"
 ## <a name="multi-project-deployment-example"></a>複数プロジェクトの配置例  
   
 ### <a name="description"></a>説明  
- 次のコード例では、2 つの Office ソリューションを使用した複数プロジェクトの配置でのアプリケーション マニフェストにある `entryPointsCollection` 要素を示しています。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
+ 次のコード例では、2 つの Office ソリューションを使用した複数プロジェクトの配置でのアプリケーション マニフェストにある `entryPointsCollection` 要素を示しています。 このコード例で示されている例の一部は、 [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)します。  
   
 ### <a name="code"></a>コード  
   

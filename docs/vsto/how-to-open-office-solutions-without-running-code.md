@@ -1,5 +1,5 @@
 ---
-title: '方法: コードを実行せず、Open Office ソリューション'
+title: '方法: コードを実行することがなく Office ソリューションを開く'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - assemblies [Office development in Visual Studio], bypassing
 - Office documents [Office development in Visual Studio, opening without running code
 - documents [Office development in Visual Studio], opening without running code
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f7ced7b38a4f32d96b397e7f9eebb1d40be03ae3
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 7684fd2d01d0151798c9e59c593e3e0c2acb95b1
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35254989"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53646907"
 ---
-# <a name="how-to-open-office-solutions-without-running-code"></a>方法: コードを実行せず、Open Office ソリューション
+# <a name="how-to-open-office-solutions-without-running-code"></a>方法: コードを実行することがなく Office ソリューションを開く
   マネージ コード拡張機能で作成された Microsoft Office ソリューションでは、エンドユーザーの Office アプリケーションのセキュリティ設定が [高] に設定されている場合でも実行されます。 これは、.NET アセンブリのコードのセキュリティは、Microsoft Office ではなく、Microsoft .NET Framework によって管理されるためです。  
   
  ただし、コードを実行せず、ドキュメントを開きたい場合もあります。 たとえば、ドキュメントを開くときに実行されるコードが、内容に変わる可能性がありますが、ドキュメントのコードを変更する前に表示する方法を更新します。 だれかが特定の情報を使用してドキュメントを送信する場合や、コードを実行し、場合によって、内容を変更したくないです。  

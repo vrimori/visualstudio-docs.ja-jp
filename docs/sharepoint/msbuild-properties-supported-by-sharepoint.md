@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1695a23ba9dddc27a37f23c714678fe6b779d328
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 55561d570605cfd5690fc0459444b2fbadeca51a
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672347"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684809"
 ---
 # <a name="msbuild-properties-supported-by-sharepoint"></a>SharePoint でサポートされる MsBuild プロパティ
   すべて[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]Microsoft.VisualStudio.SharePoint.targets ファイル、プロジェクト ファイル、またはプロジェクト ユーザー ファイルで定義されているプロパティを使用することができます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint プロジェクト。 一般的なだけでなく[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]プロパティは、プロジェクトでは、SharePoint によって提供される SharePoint プロジェクトに固有の追加のプロパティを定義します。  
@@ -57,5 +57,5 @@ ms.locfileid: "35672347"
 >  いずれかを使用することができます、[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]変数構文`$(` *propertyName* `)`または環境変数の構文`%` *propertyName* `%`プロパティを指定します。  
   
 ## <a name="see-also"></a>関連項目
- [MSBuild リファレンス](/visualstudio/msbuild/msbuild-reference)  
-  
+
+- [MSBuild リファレンス](../msbuild/msbuild-reference.md)  

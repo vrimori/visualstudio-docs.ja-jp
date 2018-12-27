@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Excel [Office development in Visual Studio], custom XML parts
 - custom XML parts [Office development in Visual Studio], adding
 - documents [Office development in Visual Studio], custom XML parts
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0472ad001dee595f1f8edb77d7a70f1eefb0c024
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 3f3e817e91c4a99f5a3aae6decdc500469c10b8f
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744864"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647558"
 ---
 # <a name="how-to-add-custom-xml-parts-to-document-level-customizations"></a>方法: ドキュメント レベルのカスタマイズにカスタム XML 部分を追加します。
   ドキュメント レベルのカスタマイズにカスタム XML 部分を作成すると、Microsoft Office Excel ブックまたは Microsoft Office Word 文書に XML データを格納できます。 詳細については、次を参照してください。[カスタム XML 部分の概要](../vsto/custom-xml-parts-overview.md)します。  
@@ -33,7 +33,7 @@ ms.locfileid: "50744864"
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
 > [!NOTE]  
->  Visual Studio では、Microsoft Office PowerPoint のドキュメント レベルのプロジェクトは提供していません。 VSTO アドインを使用して、PowerPoint プレゼンテーションにカスタム XML 部分を追加する方法の詳細については、次を参照してください。[方法: VSTO アドインを使用して、カスタム XML 部分をドキュメントに追加](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)します。  
+>  Visual Studio では、Microsoft Office PowerPoint のドキュメント レベルのプロジェクトは提供していません。 VSTO アドインを使用して、PowerPoint プレゼンテーションにカスタム XML 部分を追加する方法の詳細については、次を参照してください。[方法。VSTO アドインを使用して、カスタム XML 部分をドキュメントに追加](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)します。  
   
 ### <a name="to-add-a-custom-xml-part-to-an-excel-workbook"></a>カスタム XML 部分を Excel ブックに追加するには  
   
@@ -62,5 +62,5 @@ ms.locfileid: "50744864"
   
 ## <a name="see-also"></a>関連項目  
  [カスタム XML 部分の概要](../vsto/custom-xml-parts-overview.md)   
- [方法: VSTO アドインを使用して、カスタム XML 部分をドキュメントに追加](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)  
+ [方法: VSTO アドインを使用して、カスタム XML 部分をドキュメントに追加します。](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)  
   

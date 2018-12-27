@@ -11,17 +11,17 @@ dev_langs:
 helpviewer_keywords:
 - InfoPath [Office development in Visual Studio], Ribbon
 - Ribbon [Office development in Visual Studio], InfoPath
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f0a6a50ca1e84d9b1f5508cccbad24607f36b3f7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6e6bdffe8de45db600d6fc456dbc75b8369bd2d7
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49942063"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648740"
 ---
 # <a name="customize-a-ribbon-for-infopath"></a>InfoPath のリボンをカスタマイズします。
   Microsoft Office InfoPath でリボンをカスタマイズする場合、アプリケーションのどこにカスタム リボンを表示するかを検討する必要があります。 [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] では、次の 3 種類の InfoPath アプリケーション ウィンドウにリボンを表示できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "49942063"
   
 - [印刷プレビュー] ウィンドウ。  
   
-  **対象:** このトピックの情報は、InfoPath 2010 の VSTO アドインのプロジェクトに適用されます。 詳細については、次を参照してください。 [Office アプリケーションおよびプロジェクトの種類で使用できる機能](../vsto/features-available-by-office-application-and-project-type.md)します。  
+  **適用対象します。** このトピックの情報は、InfoPath 2010 の VSTO アドイン プロジェクトに適用されます。 詳細については、次を参照してください。 [Office アプリケーションおよびプロジェクトの種類で使用できる機能](../vsto/features-available-by-office-application-and-project-type.md)します。  
   
   ユーザーとデザイナーは、フォーム テンプレートをデザイン モードで開き、テンプレートの外観とレイアウトを変更します。 ユーザーは、フォーム テンプレートを基にしたフォームを開き、コンテンツを追加します。  
   

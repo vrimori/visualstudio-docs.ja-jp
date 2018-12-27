@@ -1,10 +1,9 @@
 ---
-title: WizardData 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: WizardData 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#WizardData
 helpviewer_keywords:
@@ -16,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6685c09e463b50f1fd856c65eadc09555a6dedb9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5a7f024c1ca9840b2dcde181d772bf18af99e603
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31140116"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53561292"
 ---
 # <a name="wizarddata-element-visual-studio-templates"></a>WizardData 要素 (Visual Studio テンプレート)
 カスタム XML を指定します  
@@ -56,15 +55,15 @@ ms.locfileid: "31140116"
 ## <a name="text-value"></a>テキスト値  
  テキスト値は省略可能です。  
   
- このテキストで指定されたカスタム ウィザードの拡張機能に渡すカスタム XML を指定する、 [WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)要素。  
+ このテキストで指定されたカスタム ウィザードの拡張機能に渡すカスタム XML を指定します、 [WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)要素。  
   
-## <a name="remarks"></a>コメント  
- 任意の XML は、この要素で指定できます。 XML として渡されますパラメーター、カスタム ウィザード拡張機能に、この要素の内容を使用する拡張機能を許可します。 このデータでは、検証は実行されません。  
+## <a name="remarks"></a>Remarks  
+ この要素では、任意の XML を指定できます。 XML はパラメーターとして、カスタム ウィザードの拡張機能をこの要素の内容を使用する拡張機能を許可します。 このデータの検証は行われません。  
   
- 内容、`WizardData`要素が渡されるパラメーターの文字列ディクショナリ内のパラメーターとしてが変更されないように、`IWizard.RunStarted`メソッドです。 パラメーターの名前は $WizardData$ です。  
+ 内容、`WizardData`要素内のパラメーターの文字列の辞書内のパラメーターとして、そのまま渡される、`IWizard.RunStarted`メソッド。 パラメーターの名前は $WizardData$。  
   
 ## <a name="example"></a>例  
- 次の例では、標準的なプロジェクト テンプレートのメタデータ、 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows アプリケーション。  
+ 次の例では、標準的なプロジェクト テンプレートのメタデータを[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]Windows アプリケーション。  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Item"  
@@ -101,4 +100,4 @@ ms.locfileid: "31140116"
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [WizardExtension 要素 (Visual Studio テンプレート)](../extensibility/wizardextension-element-visual-studio-templates.md)   
- [方法: プロジェクト テンプレートでウィザードを使用する](../extensibility/how-to-use-wizards-with-project-templates.md)
+ [方法: プロジェクト テンプレートにウィザードの使用](../extensibility/how-to-use-wizards-with-project-templates.md)
