@@ -1,4 +1,4 @@
----
+﻿---
 title: 正規表現の中に ')' が必要です (JavaScript) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/10/2018
 ms.locfileid: "44279129"
 ---
-# <a name="expected-3939-in-regular-expression-javascript"></a> 正規表現の中に ')' が必要です (JavaScript)
+# <a name="expected-3939-in-regular-expression-javascript"></a>正規表現の中に ')' が必要です (JavaScript)
 正規表現キャプチャ、アサーション、またはグループを作成しようとしましたが、終わりかっこが含まれていません。 かっこでは、正規表現でいくつかの目的があります。 主に、アサーション、またはパターンをグループ化によって 1 つの単位として、アイテムを処理できるようにする、サブ式のキャプチャに使用されます *、+、? などです。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
