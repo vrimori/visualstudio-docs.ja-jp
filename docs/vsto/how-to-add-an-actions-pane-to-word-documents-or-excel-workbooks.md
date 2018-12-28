@@ -1,5 +1,5 @@
 ---
-title: '方法: Word 文書に操作ウィンドウを追加したり、Excel ブック'
+title: '方法: Word 文書または Excel ブックに操作ウィンドウを追加します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - smart documents [Office development in Visual Studio], adding controls
 - actions panes [Office development in Visual Studio], creating in Word
 - actions panes [Office development in Visual Studio], adding controls
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f70511d0490032204789dc037a13847a10b5cbe6
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.openlocfilehash: 7c49fcf50046148ca01e2ce4eb5ebb204874d1d0
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948362"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648240"
 ---
 # <a name="how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks"></a>方法: Word 文書または Excel ブックに操作ウィンドウを追加する
   に Microsoft Office Word ドキュメントまたは Microsoft Excel ブックを操作ウィンドウを追加するには、Windows フォーム ユーザー コントロールをまず作成します。 次に、ユーザー コントロールを追加、<xref:Microsoft.Office.Tools.ActionsPane.Controls%2A>のプロパティ、`ThisDocument.ActionsPane`フィールド (Word) または`ThisWorkbook.ActionsPane`project のフィールド (Excel)。  
@@ -59,7 +59,7 @@ ms.locfileid: "51948362"
   
 6.  C# では、ボタン クリックのイベント ハンドラーを追加する必要があります。 このコードを配置することができます、`HelloControl`コンス トラクターの呼び出し後`InitializeComponent`します。  
   
-     イベント ハンドラーを作成する方法については、次を参照してください。[方法: Office プロジェクトでイベント ハンドラーを作成](../vsto/how-to-create-event-handlers-in-office-projects.md)です。  
+     イベント ハンドラーを作成する方法については、次を参照してください。[方法。Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)します。  
   
      [!code-csharp[Trin_VstcoreActionsPaneWord#13](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/HelloControl.cs#13)]  
   
@@ -81,7 +81,7 @@ ms.locfileid: "51948362"
 ## <a name="see-also"></a>関連項目  
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   
  [チュートリアル: 操作ウィンドウから文書にテキストを挿入します。](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)   
- [方法: アクション ペイン上のコントロールのレイアウトの管理](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
+ [方法: アクション ペイン上のコントロールのレイアウトを管理します。](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
  [チュートリアル: 操作ウィンドウから文書にテキストを挿入します。](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)  
   
   

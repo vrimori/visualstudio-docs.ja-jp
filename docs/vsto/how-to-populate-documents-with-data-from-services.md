@@ -1,5 +1,5 @@
 ---
-title: '方法: データ サービスからドキュメントに読み込む'
+title: '方法: サービスからデータをドキュメントに読み込む'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -12,27 +12,27 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], populating with data
 - Web services [Office development in Visual Studio], populating documents
 - data [Office development in Visual Studio], adding to documents
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4ac901b524818086d6dbf23b7b55487054170b3e
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: fe69a35fb7f11eb649a45cd2d2238d1fb8e17ad1
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36758543"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647037"
 ---
-# <a name="how-to-populate-documents-with-data-from-services"></a>方法: データ サービスからドキュメントに読み込む
+# <a name="how-to-populate-documents-with-data-from-services"></a>方法: サービスからデータをドキュメントに読み込む
 
 Microsoft Office のドキュメント レベルのプロジェクトでは、Windows フォーム プロジェクトと同じ方法でデータにアクセスできます。 同じツールとコードを使用してソリューションにデータを取り込むことができ、Windows フォーム コントロールを使用してデータを表示できます。 さらに、ホスト コントロールと呼ばれるコントロールを利用できます。これは、Microsoft Office Excel および Microsoft Office Word のネイティブ オブジェクトであり、イベントやデータ バインディング機能が強化されています。 詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)します。
 
 [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
-次の例は、デザイン時にドキュメントにデータ バインド コントロールを追加する方法を示しています。 VSTO アドインにおける実行時にデータ バインド コントロールを追加する方法の例は、次を参照してください。[チュートリアル: VSTO アドイン プロジェクトでサービスからのデータにバインド](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md)します。
+次の例は、デザイン時にドキュメントにデータ バインド コントロールを追加する方法を示しています。 VSTO アドインにおける実行時にデータ バインド コントロールを追加する方法の例は、次を参照してください。[チュートリアル。VSTO アドイン プロジェクトでサービスからのデータにバインド](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md)します。
 
-![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。 [How do i: 対話する web サービスと Microsoft Excel からでしょうか。](http://go.microsoft.com/fwlink/?LinkID=130284)します。
+![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:Microsoft Excel から web サービスと対話しますか。](http://go.microsoft.com/fwlink/?LinkID=130284)
 
 ## <a name="to-populate-a-document-level-project-with-data-from-a-web-service"></a>Web サービスからデータをドキュメント レベルのプロジェクトを設定するには
 
@@ -62,4 +62,4 @@ Microsoft Office のドキュメント レベルのプロジェクトでは、Wi
 - [方法: データベースからデータをワークシートに読み込む](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
 - [方法: オブジェクトからのデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-objects.md)
 - [方法: データベースからデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-a-database.md)
-- [方法: ホスト コントロールからのデータでデータ ソースを更新](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
+- [方法: ホスト コントロールからのデータでデータ ソースを更新します。](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)

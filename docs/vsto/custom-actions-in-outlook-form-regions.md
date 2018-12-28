@@ -11,17 +11,17 @@ dev_langs:
 helpviewer_keywords:
 - form regions [Office development in Visual Studio], custom actions
 - custom actions [Office development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4e2ad8e1c3b55d479cb031fe920e3027dbc1788c
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 6b19b65c387e4ffc59108be71c143f130b347551
+ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50671067"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53441661"
 ---
 # <a name="custom-actions-in-outlook-form-regions"></a>Outlook フォーム領域のカスタム アクション
   アクションは、Microsoft Office Outlook アイテムに応答するユーザーを有効にするボタンを表示します。 たとえば、メール アイテムに応答するユーザー クリックして、**応答**、**全員へ返信**、または**フォワード**アクション ボタン。 これらの各アクションは、新しいメール アイテムを作成し、元の項目からの情報を使用して項目のフィールドを入力します。  

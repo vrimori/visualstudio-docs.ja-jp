@@ -11,17 +11,17 @@ dev_langs:
 helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], tabs
 - built-in tabs [Office development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 30b4af116df218f3f778b9efa1e295fbadbad86a
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 3a219d4c5d7a57e73c63ec972ccb29724d616d1a
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35257268"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647337"
 ---
 # <a name="how-to-customize-a-built-in-tab"></a>方法: 組み込みタブをカスタマイズします。
   組み込みタブには、グループやコントロールを追加できます。組み込みタブは、Microsoft Office アプリケーションのリボンに用意されているタブです。 たとえば、**データ**タブは、Excel の組み込みタブ。 カスタム グループを作成すると、そのグループはタブの最後に表示されますが、タブ上のどこにでも移動できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "35257268"
 1.  リボン コード ファイルを右クリックして**ソリューション エクスプ ローラー**、 をクリックし、**ビュー デザイナー**します。  
   
     > [!NOTE]  
-    >  リボン コード ファイルが表示されない場合**ソリューション エクスプ ローラー**、追加する必要があります、**リボン項目**をプロジェクトにします。 参照してください[方法: リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)します。  
+    >  リボン コード ファイルが表示されない場合**ソリューション エクスプ ローラー**、追加する必要があります、**リボン項目**をプロジェクトにします。 「[方法:リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)します。  
   
 2.  リボン デザイナーでの任意のタブを右クリックし、をクリックし、**プロパティ**します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "35257268"
   
      コントロール ID は、Microsoft Office アプリケーションに組み込まれているタブ、グループ、コントロールを一意に識別する名前です。  
   
-     コントロール Id の一覧は、次を参照してください。 [Office 2010 ヘルプ ファイル: Office fluent ユーザー インターフェイスのコントロール id](http://go.microsoft.com/fwlink/?LinkID=181052)します。  
+     コントロール Id の一覧は、次を参照してください。 [Office 2010 ヘルプ ファイル。Office fluent ユーザー インターフェイスのコントロール id](http://go.microsoft.com/fwlink/?LinkID=181052)します。  
   
 5.  **Office リボン コントロール**のタブ、**ツールボックス**グループをタブにドラッグします。  
   
@@ -67,17 +67,17 @@ ms.locfileid: "35257268"
   
 4.  設定、 **OfficeId**プロパティを組み込みのグループのコントロール ID。  
   
-     コントロール Id の一覧は、次を参照してください。 [Office 2010 ヘルプ ファイル: Office fluent ユーザー インターフェイスのコントロール id](http://go.microsoft.com/fwlink/?LinkID=181052)します。  
+     コントロール Id の一覧は、次を参照してください。 [Office 2010 ヘルプ ファイル。Office fluent ユーザー インターフェイスのコントロール id](http://go.microsoft.com/fwlink/?LinkID=181052)します。  
   
 ## <a name="see-also"></a>関連項目  
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン デザイナー](../vsto/ribbon-designer.md)   
  [リボン XML](../vsto/ribbon-xml.md)   
  [チュートリアル: リボン デザイナーを使用してカスタム タブを作成します。](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
- [チュートリアル: リボン XML によるカスタム タブを作成します。](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)   
- [方法: リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)   
+ [チュートリアル: リボン XML を使用してカスタム タブを作成します。](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)   
+ [方法: リボンのカスタマイズの概要します。](../vsto/how-to-get-started-customizing-the-ribbon.md)   
  [方法: リボンのタブの位置を変更します。](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)   
- [方法: Backstage ビューにコントロールを追加](../vsto/how-to-add-controls-to-the-backstage-view.md)   
- [方法: アドインの表示は、ユーザー インターフェイス エラー](../vsto/how-to-show-add-in-user-interface-errors.md)  
+ [方法: Backstage ビューにコントロールを追加します。](../vsto/how-to-add-controls-to-the-backstage-view.md)   
+ [方法: アドイン ユーザー インターフェイス エラーを表示します。](../vsto/how-to-show-add-in-user-interface-errors.md)  
   
   

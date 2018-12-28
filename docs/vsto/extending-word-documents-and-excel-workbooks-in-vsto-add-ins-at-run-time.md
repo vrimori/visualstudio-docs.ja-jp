@@ -16,17 +16,17 @@ helpviewer_keywords:
 - application-level add-ins [Office development in Visual Studio], extending Excel workbooks
 - controls [Office development in Visual Studio], adding at run time
 - HasVstoObject method
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 424b2cf8a6461ed0d60a1c16555c49c0ed8a0136
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: eb1197d85f52c314eb9ec0a01ccd5069f9c43f39
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49895783"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647820"
 ---
 # <a name="extend-word-documents-and-excel-workbooks-in-vsto-add-ins-at-runtime"></a>Word 文書や実行時に VSTO のアドインの Excel ブックを拡張します。
   VSTO アドインを利用すれば、Word 文書と Excel ブックを次のようにカスタマイズできます。  
@@ -39,7 +39,7 @@ ms.locfileid: "49895783"
   
   この機能を使用するには、ドキュメントまたはブックを拡張する実行時にオブジェクトを生成します。  
   
-  **適用されます:** この記事の情報は、次のアプリケーションの VSTO アドイン プロジェクトに適用されます。 Excel および Word です。 詳細については、次を参照してください。 [Office アプリケーションおよびプロジェクトの種類で使用できる機能](../vsto/features-available-by-office-application-and-project-type.md)します。  
+  **適用対象します。** この記事の情報は、次のアプリケーション用の VSTO アドイン プロジェクトに適用されます。Excel および Word です。 詳細については、次を参照してください。 [Office アプリケーションおよびプロジェクトの種類で使用できる機能](../vsto/features-available-by-office-application-and-project-type.md)します。  
   
 ## <a name="generate-extended-objects-in-vsto-add-ins"></a>VSTO アドインで拡張されたオブジェクトを生成します。  
  *拡張オブジェクト* は Word または Excel オブジェクト モデルにネイティブで存在するオブジェクト ( *ネイティブ Office オブジェクト*) に機能を追加する Visual Studio Tools for Office Runtime が提供する種類のインスタンスです。 Word または Excel オブジェクトの拡張オブジェクトを生成するには`GetVstoObject` メソッドを使用します。 最初に呼び出したとき、`GetVstoObject`メソッドを指定した Word または Excel のオブジェクトを指定したオブジェクトを拡張する新しいオブジェクトが返されます。 このメソッドを呼び出し、同じ Word または Excel を指定するたびに、同じ拡張オブジェクトが返されます。  

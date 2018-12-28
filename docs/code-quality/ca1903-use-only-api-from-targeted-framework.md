@@ -1,5 +1,5 @@
 ---
-title: 'CA1903: 対象のフレームワークから API のみを使用します'
+title: CA1903:対象のフレームワークから API のみを使用します。
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
@@ -16,14 +16,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b1d42a74cfaf93ba0e8e5aec7e15c522d2e26b7a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ace24746aafa70c73bc87c55c197913136f1a7b1
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49822814"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738873"
 ---
-# <a name="ca1903-use-only-api-from-targeted-framework"></a>CA1903: 対象のフレームワークから API のみを使用します
+# <a name="ca1903-use-only-api-from-targeted-framework"></a>CA1903:対象のフレームワークから API のみを使用します。
 
 |||
 |-|-|
@@ -48,7 +48,7 @@ ms.locfileid: "49822814"
 |.NET Framework 3.5|.NET Framework 3.5 SP1|
 |.NET Framework 4|N/A|
 
- プロジェクトのターゲット フレームワークを変更するを参照してください。[特定の .NET Framework のバージョンを対象とする](../ide/targeting-a-specific-dotnet-framework-version.md)します。
+ プロジェクトのターゲット フレームワークを変更するを参照してください。[特定の .NET Framework のバージョンを対象とする](../ide/visual-studio-multi-targeting-overview.md)します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  サービス パックへの依存関係を削除するには、新しいメンバーまたは型のすべての使用状況を削除します。 これが意図的な依存関係の場合は、警告を抑制するか、または、このルールをオフにします。
@@ -69,4 +69,4 @@ ms.locfileid: "49822814"
 ## <a name="see-also"></a>関連項目
 
 - [Portability Warnings](../code-quality/portability-warnings.md)
-- [対象となる特定の .NET Framework バージョンの指定](../ide/targeting-a-specific-dotnet-framework-version.md)
+- [対象となる特定の .NET Framework バージョンの指定](../ide/visual-studio-multi-targeting-overview.md)

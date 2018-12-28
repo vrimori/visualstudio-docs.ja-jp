@@ -1,5 +1,5 @@
 ---
-title: '方法: ワークシートに ListObject コントロールを追加'
+title: '方法: ワークシートに ListObject コントロールを追加します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - ListObject control, adding to worksheets
 - controls [Office development in Visual Studio], adding to worksheets
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 402e7f80ea208d714b31bd61e25b352494310487
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ae6abd9791bfaa9ce0e7c15f1f6f66034a75c6c7
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49949254"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53646972"
 ---
-# <a name="how-to-add-listobject-controls-to-worksheets"></a>方法: ワークシートに ListObject コントロールを追加
+# <a name="how-to-add-listobject-controls-to-worksheets"></a>方法: ワークシートに ListObject コントロールを追加します。
   追加することができます<xref:Microsoft.Office.Tools.Excel.ListObject>およびドキュメント レベルのプロジェクトでの実行時のデザイン時に、Microsoft Office Excel ワークシートにコントロール。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
@@ -41,7 +41,7 @@ ms.locfileid: "49949254"
   詳細については<xref:Microsoft.Office.Tools.Excel.ListObject>コントロールを参照してください[ListObject コントロール](../vsto/listobject-control.md)します。  
   
 ##  <a name="designtime"></a> デザイン時に ListObject コントロールを追加します。  
- デザイン時にドキュメント レベルのプロジェクトのワークシートに <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールを追加する方法として、Excel から行う方法、Visual Studio の **ツールボックス**から行う方法、および **[データ ソース]** ウィンドウから行う方法があります。  
+ 追加するいくつかの方法がある<xref:Microsoft.Office.Tools.Excel.ListObject>コントロールをデザイン時にドキュメント レベル プロジェクト内のワークシート。Visual Studio からの Excel 内で**ツールボックス**との間、**データソース**ウィンドウ。  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
@@ -95,7 +95,7 @@ ms.locfileid: "49949254"
  [ListObject コントロール](../vsto/listobject-control.md)   
  [拡張オブジェクトを使用して Excel を自動化します。](../vsto/automating-excel-by-using-extended-objects.md)   
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
- [方法: ListObject コントロールをサイズ変更](../vsto/how-to-resize-listobject-controls.md)   
+ [方法: ListObject コントロールをサイズ変更します。](../vsto/how-to-resize-listobject-controls.md)   
  [Office ソリューションでのコントロールにデータをバインドします。](../vsto/binding-data-to-controls-in-office-solutions.md)   
  [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
   

@@ -11,17 +11,17 @@ dev_langs:
 helpviewer_keywords:
 - Office development in Visual Studio, deploying solutions
 - ClickOnce deployment [Office development in Visual Studio], deploying solutions
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e46a0bdc23ee16c4821d3da751d5a90aa62a14c3
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 8c690283eacabe56b18ef786bf4ab58fd03768e4
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50673069"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648782"
 ---
 # <a name="deploy-an-office-solution-by-using-clickonce"></a>ClickOnce を使用して Office ソリューションを配置します。
   ClickOnce を使用する場合は、少しの手順で Office ソリューションを配置できます。 更新プログラムを発行する場合は、ソリューションはそれらを自動的に検出してインストールします。 ただし、ClickOnce を使用する場合は、コンピューターのユーザーごとに、ソリューションを個別にインストールする必要があります。 Windows インストーラーを使用してそのため、検討 (*.msi*) 場合は、複数のユーザーは同じコンピューターにソリューションを実行します。  
@@ -262,7 +262,7 @@ ms.locfileid: "50673069"
 
 3.  開く、 **ExcelWorkbook.dll.manifest**メモ帳などのテキスト エディターでファイル。  
 
-4.  `</vstav3:update>` 要素の後に、次のコードを追加します。 クラス属性、`<vstav3:entryPoint>`要素を次の構文を使用して: *NamespaceName.ClassName*。 次の例では、名前空間名とクラス名は同じであるため、最終的にエントリ ポイント名は `FileCopyPDA.FileCopyPDA` になります。  
+4.  `</vstav3:update>` 要素の後に、次のコードを追加します。 クラス属性、`<vstav3:entryPoint>`要素、次の構文を使用します。*NamespaceName.ClassName*します。 次の例では、名前空間名とクラス名は同じであるため、最終的にエントリ ポイント名は `FileCopyPDA.FileCopyPDA` になります。  
 
     ```xml
     <vstav3:postActions>  
@@ -464,7 +464,7 @@ ms.locfileid: "50673069"
  [Office ソリューションをデプロイします。](../vsto/deploying-an-office-solution.md)   
  [Office ソリューションを発行します。](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
  [方法: ClickOnce を使用して、Office ソリューションを発行します。](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)   
- [方法: ClickOnce Office ソリューションのインストール](https://msdn.microsoft.com/14702f48-9161-4190-994c-78211fe18065)   
+ [方法: ClickOnce Office ソリューションをインストールします。](https://msdn.microsoft.com/14702f48-9161-4190-994c-78211fe18065)   
  [方法: ClickOnce を使用して SharePoint サーバーに、ドキュメント レベルの Office ソリューションを発行する.](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58)   
  [ClickOnce office ソリューション用のカスタム インストーラーを作成します。](https://msdn.microsoft.com/3e5887ed-155f-485d-b8f6-3c02c074085e)  
 

@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによって Outlook の連絡先にエントリを追加'
+title: '方法: プログラムによって Outlook の連絡先にエントリを追加します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -10,19 +10,19 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - contacts [Office development in Visual Studio], creating
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 690d3c71ab00d5d32f882529600a91769669a3b1
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: c94328600c2da262aed3c111b660fc4cd25be5d7
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35255253"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648401"
 ---
-# <a name="how-to-programmatically-add-an-entry-to-outlook-contacts"></a>方法: プログラムによって Outlook の連絡先にエントリを追加
+# <a name="how-to-programmatically-add-an-entry-to-outlook-contacts"></a>方法: プログラムによって Outlook の連絡先にエントリを追加します。
   この例では、新しい連絡先を作成し、新しい連絡先にデータを入力します。  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
@@ -33,8 +33,8 @@ ms.locfileid: "35255253"
   
 ## <a name="see-also"></a>関連項目  
  [連絡先項目を操作します。](../vsto/working-with-contact-items.md)   
- [方法: プログラムによって予定を作成](../vsto/how-to-programmatically-create-appointments.md)   
- [方法: プログラムによって Outlook の連絡先へのアクセス](../vsto/how-to-programmatically-access-outlook-contacts.md)   
- [方法: プログラムによって連絡先から電子メール アドレスを検索](../vsto/how-to-programmatically-search-for-an-e-mail-address-in-contacts.md)  
+ [方法: プログラムによって予定を作成します。](../vsto/how-to-programmatically-create-appointments.md)   
+ [方法: プログラムによって Outlook の連絡先へのアクセスします。](../vsto/how-to-programmatically-access-outlook-contacts.md)   
+ [方法: プログラムによって連絡先から電子メール アドレスを検索します。](../vsto/how-to-programmatically-search-for-an-e-mail-address-in-contacts.md)  
   
   

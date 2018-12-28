@@ -13,31 +13,31 @@ helpviewer_keywords:
 - deployment manifests [Office development in Visual Studio]
 - manifests [Office development in Visual Studio], deployment
 - Office development in Visual Studio, deployment manifests
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 41f0e6b484ae61d53913c51e3d51b123a5d054a2
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 4404b9469aef465a2a105d037b3474855ed3bb68
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34263491"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647166"
 ---
 # <a name="deployment-manifests-for-office-solutions"></a>Office ソリューション用配置マニフェストします。
-  配置マニフェストとは、Office ソリューションの配置設定を記述および現在のアプリケーションのバージョンを指定する XML ファイルです。  
+  配置マニフェストは、Office ソリューションの展開設定を記述およびアプリケーションの現在のバージョンを指定する XML ファイルです。  
   
- Visual Studio での Office 開発を使用して、[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]配置マニフェストのスキーマで定義されている、 [ClickOnce 配置マニフェスト](/visualstudio/deployment/clickonce-deployment-manifest)参照します。  
+ Visual Studio での Office 開発を使用して、[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]配置マニフェストのスキーマで定義されている、 [ClickOnce 配置マニフェスト](/visualstudio/deployment/clickonce-deployment-manifest)参照。  
   
-## <a name="remarks"></a>コメント  
- Office ソリューション用配置マニフェスト ファイルは、現在のバージョンとその他の展開設定を識別します。 アプリケーション マニフェストを参照し、ソリューションと、ソリューション内のすべてのファイル内の現在のバージョンについて説明します。  
+## <a name="remarks"></a>Remarks  
+ Office ソリューションの配置マニフェスト ファイルは、現在のバージョンとその他の展開設定を識別します。 アプリケーション マニフェストを参照し、ソリューションとソリューションのすべてのファイル内の現在のバージョンについて説明します。  
   
 ## <a name="file-name-syntax"></a>ファイル名の構文  
- 配置マニフェスト ファイルの名前で終わる必要があります、 *.vsto*拡張機能です。 これは標準が[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]配置マニフェスト ファイルの処理に Visual Studio Tools for Office ランタイムを有効にする拡張機能が異なります。  
+ 配置マニフェスト ファイルの名前で終わる必要があります、 *.vsto*拡張機能。 これは標準が[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]、配置マニフェスト ファイルを処理するために Visual Studio Tools for Office ランタイムを有効にする、拡張機能が異なります。  
   
 ## <a name="example"></a>例  
- 次のコード例では、Office ソリューション用の Visual Studio Tools の配置マニフェストを示しています。  
+ 次のコード例では、Visual Studio Tools for Office ソリューション用配置マニフェストを示しています。  
   
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  

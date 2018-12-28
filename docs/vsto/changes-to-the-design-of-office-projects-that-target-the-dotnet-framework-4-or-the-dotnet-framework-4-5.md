@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b200c5b0df5f150e0d34b351a3e36a8a986f3ed6
-ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
+ms.openlocfilehash: 7cf16e015c6c5e0f828d759e40dc8cc0eed7c050
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248245"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53739485"
 ---
 # <a name="changes-to-the-design-of-office-projects-that-target-the-net-framework-4-or-the-net-framework-45"></a>Office プロジェクトの設計を対象とする .NET Framework 4 または .NET Framework 4.5 に変更します。
   [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)]以降の Visual Studio では、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とする Office プロジェクトのデザインに対していくつかの変更が導入されました。 以前のバージョンの Visual Studio の Office プロジェクトに慣れている場合は、これらの変更内容を確認してから、.NET Framework 4.0 以降のこれらのバージョンを対象とする Office プロジェクトを開発してください。 既定では、Visual Studio 2013 以降を使用して作成したすべてのプロジェクトは、.NET Framework 4.0 以降が対象になります。  
@@ -35,7 +35,7 @@ ms.locfileid: "53248245"
   
 -   [.NET Framework 4 または .NET Framework 4.5 に移行する Excel および Word プロジェクトを更新します。](../vsto/updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
   
--   [.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトのリボンのカスタマイズを更新します。](../vsto/updating-ribbon-customizations-in-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
+-   [.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトのリボンのカスタマイズを更新します。](/visualstudio/vsto/update-ribbon-customizations-in-office-projects-to-migrate-to-dotnet-framework-4-or-4-5)  
   
 -   [.NET Framework 4 または .NET Framework 4.5 に移行する Outlook プロジェクトのフォーム領域を更新します。](../vsto/updating-form-regions-in-outlook-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "53248245"
 |---------------------|-----------------|  
 |<xref:System.Security.SecurityTransparentAttribute> が Office プロジェクトで使用またはサポートされなくなりました。|Visual Studio 2008 からアップグレードする Office プロジェクトの AssemblyInfo コード ファイルからこの属性を削除する必要があります。 詳細については、次を参照してください。 [、.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトの実行に変更が必要な](../vsto/required-changes-to-run-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)します。|  
 |**ExcelLocale1033Attribute**が不要になったために使用または Excel プロジェクトではサポートされています。|この属性を削除する必要があります、 *AssemblyInfo* Excel プロジェクトのコード ファイル。 詳細については、次を参照してください。[更新 Excel および Word プロジェクト、.NET Framework 4 または .NET Framework 4.5 に移行する](../vsto/updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)します。|  
-|**リボン (ビジュアルなデザイナー)** プロジェクト項目のプログラミング モデルが変更されました。|プロジェクトのすべてのリボン項目の分離コード ファイルを変更する必要があります。 実行時にリボン コントロールをインスタンス化、リボン イベントを処理またはリボン コンポーネントの位置をプログラムによって設定するすべてのコードを変更することも必要があります。 詳細については、次を参照してください。 [、.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトの更新プログラムのリボンのカスタマイズ](../vsto/updating-ribbon-customizations-in-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)します。|  
+|**リボン (ビジュアルなデザイナー)** プロジェクト項目のプログラミング モデルが変更されました。|プロジェクトのすべてのリボン項目の分離コード ファイルを変更する必要があります。 実行時にリボン コントロールをインスタンス化、リボン イベントを処理またはリボン コンポーネントの位置をプログラムによって設定するすべてのコードを変更することも必要があります。 詳細については、次を参照してください。 [、.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトの更新プログラムのリボンのカスタマイズ](/visualstudio/vsto/update-ribbon-customizations-in-office-projects-to-migrate-to-dotnet-framework-4-or-4-5)します。|  
 |Outlook フォーム領域のプログラミング モデルが変更されました。|プロジェクトとそのコードを実行時に特定のフォーム領域クラスをインスタンス化では、フォーム領域の分離コード ファイルを変更する必要があります。 詳細については、次を参照してください。 [、.NET Framework 4 または .NET Framework 4.5 に移行する Outlook プロジェクトのフォーム領域を更新](../vsto/updating-form-regions-in-outlook-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)します。|  
 |Excel プロジェクトと Word プロジェクトでのスマート タグのプログラミング モデルが変更されました。 スマート タグは、[!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)] および [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)] で非推奨とされます。|ソリューションでスマート タグを使用している場合は、プロジェクトをビルドするときにエラーが発生します。 [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]および [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)] ではスマート タグが非推奨とされているため、[!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] 以降でソリューションをテストおよびデバッグするには、タグを削除する必要があります。|  
 |`GetVstoObject` メソッドと `HasVstoObject` メソッドの構文が変更されました。|プライマリ相互運用機能アセンブリ (PIA) からネイティブ オブジェクトでこれらのメソッドにアクセスするときに、`Globals.Factory` オブジェクトをメソッドに渡す必要があります。または、プロジェクトの `Globals.Factory` プロパティによって返されるオブジェクトでこれらのメソッドにアクセスすることもできます。 詳細については、次を参照してください。[更新 Excel および Word プロジェクト、.NET Framework 4 または .NET Framework 4.5 に移行する](../vsto/updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)します。|  

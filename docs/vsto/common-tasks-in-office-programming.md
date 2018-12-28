@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Office development in Visual Studio, getting started
 - FAQs (frequently asked questions) [Office development in Visual Studio]
 - Office development in Visual Studio, frequently asked questions
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 085ed1a4f430be957d96991798458e411bc22992
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: ffdf53a6317f2b06ea550075c104f0528a35c5de
+ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50672809"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53441757"
 ---
 # <a name="common-tasks-in-office-programming"></a>Office プログラミングで一般的なタスク
   このトピックは、Visual Studio を使用した Office ソリューションのプログラミングに共通する質問のうち、次のカテゴリの質問に対する回答を簡単に見つけることができるように構成されています。  
@@ -47,35 +47,35 @@ ms.locfileid: "50672809"
   
 -   [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
--   [方法: アップグレードの Office ソリューション](https://msdn.microsoft.com/a269e539-b717-4680-a568-2152b070347e)します。  
+-   [方法: Office ソリューションをアップグレード](https://msdn.microsoft.com/a269e539-b717-4680-a568-2152b070347e)します。  
   
--   [方法: Office プライマリ相互運用機能アセンブリ](../vsto/how-to-install-office-primary-interop-assemblies.md)します。  
+-   [方法: Office プライマリ相互運用機能アセンブリをインストール](../vsto/how-to-install-office-primary-interop-assemblies.md)します。  
   
--   [方法: ターゲットの Office アプリケーション プライマリ相互運用機能アセンブリを介して](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)します。  
+-   [方法: Office アプリケーション プライマリ相互運用機能アセンブリを介して](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)します。  
   
 -   [方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)します。  
   
--   [方法: Open Office ソリューションのコードを実行することがなく](../vsto/how-to-open-office-solutions-without-running-code.md)します。  
+-   [方法: Office ソリューションを開くコードを実行することがなく](../vsto/how-to-open-office-solutions-without-running-code.md)します。  
   
 -   [方法: Office ソリューションの構成情報を設定](../vsto/how-to-set-up-configuration-information-for-an-office-solution.md)します。  
   
 -   [方法: リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
   
--   [方法: ユーザー インターフェイスのエラーを表示するアドイン](../vsto/how-to-show-add-in-user-interface-errors.md)します。  
+-   [方法: アドイン ユーザー インターフェイス エラーを表示](../vsto/how-to-show-add-in-user-interface-errors.md)します。  
   
 ##  <a name="ui"></a> ユーザー インターフェイスのカスタマイズ タスク  
   
 ### <a name="controls-on-documents-and-worksheets"></a>文書やワークシート上のコントロール  
   
--   [方法: Windows フォーム コントロールを Office ドキュメントに追加](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)します。  
+-   [方法: Office ドキュメントに Windows フォーム コントロールを追加](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)します。  
   
 -   [方法: ワークシートに NamedRange コントロールを追加](../vsto/how-to-add-namedrange-controls-to-worksheets.md)します。  
   
 -   [方法: ワークシートに ListObject コントロールを追加](../vsto/how-to-add-listobject-controls-to-worksheets.md)します。  
   
--   [方法: Windows フォーム コントロールを Office ドキュメントに追加](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)します。  
+-   [方法: Office ドキュメントに Windows フォーム コントロールを追加](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)します。  
   
--   [方法: コンテンツを追加するコントロールを Word 文書に](../vsto/how-to-add-content-controls-to-word-documents.md)します。  
+-   [方法: コンテンツの追加を Word 文書にコントロール](../vsto/how-to-add-content-controls-to-word-documents.md)します。  
   
 -   [方法: Word 文書に Bookmark コントロールを追加](../vsto/how-to-add-bookmark-controls-to-word-documents.md)します。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "50672809"
   
 -   [方法: Backstage ビューにコントロールを追加](../vsto/how-to-add-controls-to-the-backstage-view.md)します。  
   
--   [方法: リボンをリボン デザイナーからリボン XML にエクスポートする](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)。  
+-   [方法: リボン デザイナーからリボン XML にエクスポート](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)します。  
   
 ### <a name="outlook-form-regions"></a>Outlook フォーム領域  
   
@@ -113,7 +113,7 @@ ms.locfileid: "50672809"
   
 -   [方法: プログラムによってワークシートのセルに文字列を表示](../vsto/how-to-programmatically-display-a-string-in-a-worksheet-cell.md)します。  
   
--   [方法: プログラムによって新しいブックを作成](../vsto/how-to-programmatically-create-new-workbooks.md)です。  
+-   [方法: 新しいブックをプログラムで作成](../vsto/how-to-programmatically-create-new-workbooks.md)です。  
   
 -   [方法: プログラムによってブックを開く](../vsto/how-to-programmatically-open-workbooks.md)します。  
   
@@ -121,11 +121,11 @@ ms.locfileid: "50672809"
   
 -   [方法: プログラムによってブックを閉じる](../vsto/how-to-programmatically-close-workbooks.md)します。  
   
--   [方法: プログラムによって新しいワークシートをブックに追加](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)します。  
+-   [方法: プログラムで新しいワークシートをブックに追加](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)します。  
   
 -   [方法: プログラムによってワークシートを非表示に](../vsto/how-to-programmatically-hide-worksheets.md)します。  
   
--   [方法: プログラムによってブック内のワークシートを移動](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md)します。  
+-   [方法: ブック内のワークシートをプログラムによって移動](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md)します。  
   
 -   [方法: プログラムによってブックを保護](../vsto/how-to-programmatically-protect-workbooks.md)します。  
   
@@ -139,13 +139,13 @@ ms.locfileid: "50672809"
   
 -   [方法: プログラムによってワークシートを印刷する](../vsto/how-to-programmatically-print-worksheets.md)します。  
   
--   [方法: プログラムによって Excel の計算を実行](../vsto/how-to-programmatically-run-excel-calculations-programmatically.md)します。  
+-   [方法: Excel の計算をプログラムで実行](../vsto/how-to-programmatically-run-excel-calculations-programmatically.md)します。  
   
 -   [方法: プログラムによってワークシートのデータを並べ替える](../vsto/how-to-programmatically-sort-data-in-worksheets.md)します。  
   
 ##  <a name="word"></a> Word の自動化タスク  
   
--   [方法: プログラムによって新しい文書を作成](../vsto/how-to-programmatically-create-new-documents.md)です。  
+-   [方法: 新しい文書をプログラムで作成](../vsto/how-to-programmatically-create-new-documents.md)です。  
   
 -   [方法: プログラムによって既存文書を開く](../vsto/how-to-programmatically-open-existing-documents.md)します。  
   
@@ -159,13 +159,13 @@ ms.locfileid: "50672809"
   
 -   [方法: プログラムによって Word のドキュメント内の範囲をリセット](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md)します。  
   
--   [方法: プログラムによって文書内のテキストを書式設定](../vsto/how-to-programmatically-format-text-in-documents.md)します。  
+-   [方法: 文書内のテキストの書式をプログラムによって](../vsto/how-to-programmatically-format-text-in-documents.md)します。  
   
 -   [方法: Word 文書に XMLNode コントロールを追加](../vsto/how-to-add-xmlnode-controls-to-word-documents.md)します。  
   
--   [方法: プログラムによってブックマークのテキストを更新](../vsto/how-to-programmatically-update-bookmark-text.md)します。  
+-   [方法: ブックマークのテキストをプログラムによって更新](../vsto/how-to-programmatically-update-bookmark-text.md)します。  
   
--   [方法: プログラムによって検索し、文書内のテキストを置換](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)します。  
+-   [方法: プログラムを検索して、文書内のテキストを置換](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)します。  
   
 -   [方法: プログラムによってドキュメントを印刷](../vsto/how-to-programmatically-print-documents.md)します。  
   
@@ -183,13 +183,13 @@ ms.locfileid: "50672809"
   
 -   [方法: データベースからデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-a-database.md)します。  
   
--   [方法: データ サービスからドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-services.md)します。  
+-   [方法: サービスからデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-services.md)します。  
   
 -   [方法: オブジェクトからのデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-objects.md)します。  
   
 -   [方法: データベースからデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-a-database.md)します。  
   
--   [方法: データ サービスからドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-services.md)します。  
+-   [方法: サービスからデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-services.md)します。  
   
 -   [方法: ホスト コントロールからのデータでデータ ソースを更新](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)します。  
   
@@ -209,9 +209,9 @@ ms.locfileid: "50672809"
   
 ##  <a name="server"></a> サーバー側のドキュメント管理タスク  
   
--   [方法: ドキュメントからマネージ コード拡張機能を削除](../vsto/how-to-remove-managed-code-extensions-from-documents.md)します。  
+-   [方法: マネージ コード拡張をドキュメントから削除](../vsto/how-to-remove-managed-code-extensions-from-documents.md)します。  
   
--   [方法: アタッチ マネージ コードの拡張機能のドキュメントを](../vsto/how-to-attach-managed-code-extensions-to-documents.md)します。  
+-   [方法: マネージ コード拡張機能をドキュメントにアタッチ](../vsto/how-to-attach-managed-code-extensions-to-documents.md)します。  
   
 ##  <a name="security"></a> セキュリティ タスク  
   

@@ -1,5 +1,5 @@
 ---
-title: '方法: リボンのカスタマイズの概要'
+title: '方法: リボンのカスタマイズの概要します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], adding
 - Ribbon [Office development in Visual Studio], customizing
 - customizing the Ribbon, adding Ribbon to project
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7a4c7edbc78182908ea7bce9b91945bbbccdb54c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e52efc4cfd1252ff908785195df5c06b8bc90baa
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49838349"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647150"
 ---
-# <a name="how-to-get-started-customizing-the-ribbon"></a>方法: リボンのカスタマイズの概要
+# <a name="how-to-get-started-customizing-the-ribbon"></a>方法: リボンのカスタマイズの概要します。
   Microsoft Office アプリケーションのリボンをカスタマイズするには追加、**リボン (ビジュアル デザイナー)** または**リボン (XML)** を Office プロジェクトの項目。  
   
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]  
@@ -77,6 +77,6 @@ ms.locfileid: "49838349"
  [リボン デザイナー](../vsto/ribbon-designer.md)   
  [リボン XML](../vsto/ribbon-xml.md)   
  [チュートリアル: リボン デザイナーを使用してカスタム タブを作成します。](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
- [チュートリアル: リボン XML によるカスタム タブを作成します。](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)  
+ [チュートリアル: リボン XML を使用してカスタム タブを作成します。](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)  
   
   

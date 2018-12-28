@@ -15,17 +15,17 @@ helpviewer_keywords:
 - debugging [Office development in Visual Studio], Outlook projects
 - Office projects [Office development in Visual Studio], debugging
 - Outlook [Office development in Visual Studio], projects
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cc1774e57fafadafc7087bb498e0b77a90e96d85
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 6c7320ae6cbd0a6d7baa94835177d2a3a6f222cf
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672324"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647901"
 ---
 # <a name="debug-office-projects"></a>Office プロジェクトをデバッグします。
   Office プロジェクトのデバッグは、他の [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] プロジェクトに使用するのと同じ Microsoft [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Tools を使用して実行できます。 Office プロジェクトのデバッグ時には、ブレークポイントの挿入や[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] [ローカル] **ウィンドウでの変数の表示など、** デバッガーの機能も使用できます。 詳細については[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]デバッグ ツールを参照してください[Visual Studio でデバッグ](/visualstudio/debugger/debugging-in-visual-studio)します。  
@@ -79,7 +79,7 @@ ms.locfileid: "35672324"
  Word 97-2003 ドキュメントに基づく Word 文書プロジェクトをデバッグする (*/*.doc *) 形式では、信頼できるフォルダー一覧に、プロジェクト フォルダーを追加する必要があります。 これを行う方法の詳細については、次を参照してください。[ドキュメントに信頼を付与](../vsto/granting-trust-to-documents.md)します。  
   
 ## <a name="debug-disabled-add-ins"></a>デバッグには、アドインが無効になっています  
- Microsoft Office アプリケーションにより、予期しない動作をする VSTO アドインが無効にされる場合があります。 Microsoft Office アプリケーションは、起動するたびに問題のあるコードが読み込まれないようにするため、VSTO アドインを無効にします。 しかし、通常のデバッグ時に、予期しない動作が発生することはよくあります。 VSTO アドインを再度有効にする方法については、次を参照してください。[方法: 無効になっている VSTO アドインを再度有効にする](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)します。  
+ Microsoft Office アプリケーションにより、予期しない動作をする VSTO アドインが無効にされる場合があります。 Microsoft Office アプリケーションは、起動するたびに問題のあるコードが読み込まれないようにするため、VSTO アドインを無効にします。 しかし、通常のデバッグ時に、予期しない動作が発生することはよくあります。 VSTO アドインを再度有効にする方法については、次を参照してください。[方法。無効になっている VSTO アドインを再度有効にする](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)します。  
   
  Microsoft Office アプリケーションで VSTO アドインに適用される無効化には、ハードな無効化とソフトな無効化の 2 種類があります。  
   

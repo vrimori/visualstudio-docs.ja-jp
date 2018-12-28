@@ -1,6 +1,7 @@
 ---
 title: '方法: Visual Studio 内で Word 文書にスキーマを割り当てる'
-ms.custom: ''
+titleSuffix: ''
+ms.custom: seodec18
 ms.date: 02/02/2017
 ms.technology:
 - office-development
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - XML schemas [Office development in Visual Studio], mapping
 - mappings [Office development in Visual Studio], XML schemas to Word documents
 - Word [Office development in Visual Studio], mapping XML schemas
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e3bec0437fb9bcd55821e27b22b118430024f751
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: fb9d7831a3238766c12722ef3eb67729d9282b32
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35255432"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647279"
 ---
 # <a name="how-to-map-schemas-to-word-documents-inside-visual-studio"></a>方法: Visual Studio 内で Word 文書にスキーマを割り当てる
   **重要な**に関する Microsoft Word には、このトピックでまとめられている情報が提示の特典および個人や組織のユーザーは、米国およびその担当地域外部にあるまたはを使用しているユーザーの使用専用、または開発上で実行されるプログラム、Microsoft が特定の機能の実装を削除する場合、2010 年 1 月の前に、Microsoft によってライセンスされた Microsoft Word の製品に関連するカスタム XML から Microsoft Word です。 Microsoft Word に関するこの情報が読み取りまたは個人または組織、米国またはその区域を使用して、または、2010 年 1 月 10 日後に Microsoft によってライセンス供与された Microsoft Word の製品で実行されるプログラムの開発で使用しない可能性があります。;これらの製品では、その日付より前にライセンスまたは購入を米国外の使用ライセンスの製品と同じ動作はしません。  
@@ -40,7 +41,7 @@ ms.locfileid: "35255432"
 3.  リボンのクリックして、**開発者**タブ。  
   
     > [!NOTE]  
-    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、次を参照してください。[方法: リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
+    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、「[方法 :リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
   
 4.  **XML**グループで、**スキーマ**します。  
   

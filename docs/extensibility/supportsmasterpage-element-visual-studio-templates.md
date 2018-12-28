@@ -1,10 +1,9 @@
 ---
-title: SupportsMasterPage 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: SupportsMasterPage 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#SupportsMasterPage
 helpviewer_keywords:
@@ -16,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94d7db9c00e75b255f5cfe1486b45a5d9460faac
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8c3eb9a421e6a2678405bcedc95d835990c3a7d9
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31138435"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53561305"
 ---
 # <a name="supportsmasterpage-element-visual-studio-templates"></a>SupportsMasterPage 要素 (Visual Studio テンプレート)
-指定します、かどうかどうか、 **[マスター ページ**でチェック ボックスをオンになって、**新しい項目の追加**] ダイアログ ボックス。  
+指定します、かどうかどうか、**マスター ページの選択**のチェック ボックスをオンになって、**新しい項目の追加** ダイアログ ボックス。  
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -49,20 +48,20 @@ ms.locfileid: "31138435"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|テンプレートを分類しでの表示方法を定義するデータを指定します、**新しいプロジェクト**または**新しい項目の** ダイアログ ボックス。|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|テンプレートを分類し、定義でどのように表示するデータを指定します、**新しいプロジェクト**または**新しい項目の** ダイアログ ボックス。|  
   
 ## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- テキストはいずれかである必要があります`true`または`false`ことを示すかどうか、 **[マスター ページ**でチェック ボックスをオンになって、**新しい項目の追加**] ダイアログ ボックス。  
+ テキストがいずれかにする必要があります`true`または`false`ことを示すかどうか、**マスター ページの選択**のチェック ボックスをオンになって、**新しい項目の追加** ダイアログ ボックス。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `SupportsMasterPage` は、省略可能な要素です。 既定値は `false` です。  
   
  `SupportsMasterPage`要素は、Web 項目テンプレートの使用のみ。  
   
 ## <a name="example"></a>例  
- 次の例では、マスター ページのサポートが含まれる Web プロジェクトのメタデータを示しています。  
+ 次の例では、マスター ページのサポートが含まれる Web プロジェクトのメタデータを示します。  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Project"  

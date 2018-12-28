@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ef7078b09b1bf2382e1c91878995772d80bfa625
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9575020135846edc9cb86bd89ff72682500d8a9d
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49853962"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53739563"
 ---
 # <a name="troubleshooting-code-metrics-issues"></a>コード メトリックに関する問題のトラブルシューティング
 コード メトリックを収集するときに、次に示す問題が発生する場合があります。
@@ -30,4 +30,4 @@ ms.locfileid: "49853962"
 - 関数に switch (VB の場合は Select Case) ステートメントが含まれている。 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] と旧バージョンの間のコンパイラの相違点により、case のフォールスルーを含んでいる一部の switch ステートメントに対して、異なる MSIL コードが生成される場合があります。
 
 ## <a name="see-also"></a>関連項目
- [マネージド コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)
+ [マネージド コードの複雑さと保守性の測定](../code-quality/code-metrics-values.md)

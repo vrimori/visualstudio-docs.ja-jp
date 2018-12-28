@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9ebfc937ee5cf6025761bb9da5d5f6589caf77d1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0f8349cc71bf0541d726a47bf5b875724c89bcc6
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49901048"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738590"
 ---
 # <a name="add-command-line-switches"></a>コマンド ライン スイッチを追加します。
 VSPackage に適用されるコマンド ライン スイッチを追加するときに*devenv.exe*を実行します。 使用<xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute>スイッチとそのプロパティの名前を宣言します。 この例では、MySwitch スイッチがという名前の VSPackage のサブクラスの追加**AddCommandSwitchPackage**引数なしで、自動的に読み込まれる VSPackage とします。  
@@ -76,4 +76,4 @@ cmdline.GetOption("MySwitch", out isPresent, out optionValue);
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>   
  [Devenv コマンド ライン スイッチ](../ide/reference/devenv-command-line-switches.md)   
  [CreatePkgDef ユーティリティ](../extensibility/internals/createpkgdef-utility.md)   
- [.Pkgdef ファイル](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file.md)
+ [.Pkgdef ファイル](/visualstudio/extensibility/shell/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file)

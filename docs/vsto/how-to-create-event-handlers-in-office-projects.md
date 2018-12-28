@@ -1,5 +1,5 @@
 ---
-title: '方法: Office プロジェクトでのイベント ハンドラーの作成'
+title: '方法: Office プロジェクトでのイベント ハンドラーを作成します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - event handlers [Office development in Visual Studio]
 - Visual C# [Office development in Visual Studio], event handlers
 - events [Office development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8b7e55ee7f094ad104d9c8eb6ef3057621bcccee
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: be56b279750c71ab71f1337f6bc7b2038e1195fe
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35254245"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648601"
 ---
-# <a name="how-to-create-event-handlers-in-office-projects"></a>方法: Office プロジェクトでのイベント ハンドラーの作成
+# <a name="how-to-create-event-handlers-in-office-projects"></a>方法: Office プロジェクトでのイベント ハンドラーを作成します。
   Visual Basic および c# でイベント ハンドラーを作成するいくつかの方法はあります。 デザイン ビューでコントロールをダブルクリックして既定のコントロールのイベント ハンドラーを作成またはの [イベント] ペインを使用して、**プロパティ**ウィンドウ コントロールのすべてのイベント ハンドラーを作成します。 ただし、コード ビューでは、可能性がありますいないする場合、イベント ハンドラーを作成、デザイン ビューに切り替えます。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
@@ -45,7 +45,7 @@ ms.locfileid: "35254245"
   
 ### <a name="to-create-an-event-handler-in-c"></a>C# でイベント ハンドラーを作成するには  
   
-1.  内のイベントのデリゲートを作成、**スタートアップ**修飾イベント名の後にスペースを入力し、入力してクラスのイベント**+=** 後にスペースをします。 例えば:  
+1.  内のイベントのデリゲートを作成、**スタートアップ**修飾イベント名の後にスペースを入力し、入力してクラスのイベント**+=** 後にスペースをします。 例:  
   
      `this.<object name>.<event name> +=`  
   
@@ -55,7 +55,7 @@ ms.locfileid: "35254245"
   
 ## <a name="see-also"></a>関連項目  
  [Office ソリューションでコードを記述します。](../vsto/writing-code-in-office-solutions.md)   
- [チュートリアル: プログラム NamedRange コントロールのイベント](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)   
+ [チュートリアル: NamedRange コントロールのイベントのプログラム](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)   
  [Office ソリューションを構築します。](../vsto/building-office-solutions.md)  
   
   

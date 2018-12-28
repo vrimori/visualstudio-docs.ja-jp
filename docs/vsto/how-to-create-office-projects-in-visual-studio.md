@@ -1,6 +1,7 @@
 ---
-title: '方法: Visual Studio での Office プロジェクトの作成'
-ms.custom: ''
+title: '方法: Visual Studio での Office プロジェクトを作成します。'
+titleSuffix: ''
+ms.custom: seodec18
 ms.date: 02/02/2017
 ms.technology:
 - office-development
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - projects [Office development in Visual Studio], creating
 - document-level customizations [Office development in Visual Studio], creating
 - application-level add-ins [Office development in Visual Studio], creating projects
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6930ce085405c010e59e13adb8a3d380cff28d0e
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 90dc0903f1a653ab2402d5877ebd4f962ba8cbe1
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50672770"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647888"
 ---
-# <a name="how-to-create-office-projects-in-visual-studio"></a>方法: Visual Studio での Office プロジェクトの作成
+# <a name="how-to-create-office-projects-in-visual-studio"></a>方法: Visual Studio での Office プロジェクトを作成します。
   使用することができます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]VSTO アドインとドキュメント レベルの作成に Microsoft Office アプリケーション用のカスタマイズ。 これらの種類のプロジェクトの詳細については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)します。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  

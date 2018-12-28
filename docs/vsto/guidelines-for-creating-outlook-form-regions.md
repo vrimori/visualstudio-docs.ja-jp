@@ -11,17 +11,17 @@ dev_langs:
 helpviewer_keywords:
 - form regions [Office development in Visual Studio], guidelines
 - icons [Office development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 535ab0329412b261b06fb2d04daefe817299dbe9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d2a052cbad69f87c5b25005ff21959841af55f68
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49892013"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648756"
 ---
 # <a name="guidelines-to-create-outlook-form-regions"></a>Outlook フォーム領域を作成するためのガイドライン
   次に示す情報は、フォーム領域の最適化と、潜在的な問題の回避に役立ちます。  

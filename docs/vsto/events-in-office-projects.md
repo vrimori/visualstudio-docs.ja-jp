@@ -30,17 +30,17 @@ helpviewer_keywords:
 - Sheet1_Shutdown
 - events [Office development in Visual Studio]
 - ThisAddIn_Shutdown
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 85cbee61cde596831d06aa83af326cc0a0534f0f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 5ed18bdcf0f4a7ef6dbb8a358cbf11fd7b49e628
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49949683"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647649"
 ---
 # <a name="events-in-office-projects"></a>Office プロジェクト内のイベント
   各 Office プロジェクト テンプレートは、自動的に複数のイベント ハンドラーを生成します。 ドキュメント レベルのカスタマイズに使用するイベント ハンドラーは、VSTO アドイン用のイベント ハンドラーとは若干異なります。  
@@ -48,7 +48,7 @@ ms.locfileid: "49949683"
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
 ## <a name="document-level-projects"></a>ドキュメント レベルのプロジェクト  
- Visual Studio では、ドキュメント レベルのカスタマイズ内の新規または既存のドキュメントまたはワークシートの背後に生成されたコードを提供します。 このコードは 2 つの異なるイベントを発生させます。 **Startup** と **Shutdown**です。  
+ Visual Studio では、ドキュメント レベルのカスタマイズ内の新規または既存のドキュメントまたはワークシートの背後に生成されたコードを提供します。 このコードは、2 つの異なるイベントを発生させます。**スタートアップ**と**シャット ダウン**します。  
   
 ### <a name="startup-event"></a>Startup イベント  
  **Startup** イベントは、ドキュメントが実行中になり、アセンブリ内の初期化コードがすべて実行された後で、ホスト項目 (ドキュメント、ブックまたはワークシート) ごとに発生します。 これは、コードが実行されているクラスのコンストラクターで最後に実行されるイベントです。 ホスト項目の詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)します。  
@@ -157,7 +157,7 @@ ms.locfileid: "49949683"
   
 ## <a name="see-also"></a>関連項目  
  [Office ソリューションを開発します。](../vsto/developing-office-solutions.md)   
- [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
+ [方法: Visual Studio での Office プロジェクトを作成します。](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [プログラムのドキュメント レベルのカスタマイズ](../vsto/programming-document-level-customizations.md)   
  [VSTO アドインをプログラミングします。](../vsto/programming-vsto-add-ins.md)   
  [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)  

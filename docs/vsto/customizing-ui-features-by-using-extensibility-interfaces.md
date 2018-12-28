@@ -18,17 +18,17 @@ helpviewer_keywords:
 - FormRegionStartup interface
 - add-ins [Office development in Visual Studio], extensibility interfaces
 - extensibility interfaces [Office development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ec1f538515c8765629e812b8d7f4070476dd95ba
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 94ef77afa51e7cccb8f5aed18b1cf5ad0e1eaf1f
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50670846"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648892"
 ---
 # <a name="customize-ui-features-by-using-extensibility-interfaces"></a>機能拡張インターフェイスによる UI 機能をカスタマイズします。
   Visual Studio に含まれる Office 開発ツールは、VSTO アドインにおけるカスタム作業ウィンドウ、リボンのカスタマイズ、および Outlook フォーム領域の作成に使用可能な、多数の実装の詳細を処理するクラスとデザイナーを提供します。 ただし、特別な要件がある場合、各機能の *拡張インターフェイス* を自分で実装することもできます。  
@@ -47,7 +47,7 @@ ms.locfileid: "50670846"
   
 |Interface|説明|アプリケーション|  
 |---------------|-----------------|------------------|  
-|<xref:Microsoft.Office.Core.IRibbonExtensibility>|このインターフェイスを実装してリボン UI をカスタマイズします。 **注:** を追加することができます、**リボン (XML)** 、既定値を生成するプロジェクトに項目<xref:Microsoft.Office.Core.IRibbonExtensibility>VSTO アドインに実装します。 詳細については、「 [Ribbon XML](../vsto/ribbon-xml.md)」を参照してください。|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> InfoPath 2010<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> プロジェクト<br /><br /> Visio<br /><br /> Word|  
+|<xref:Microsoft.Office.Core.IRibbonExtensibility>|このインターフェイスを実装してリボン UI をカスタマイズします。 **注:** 追加することができます、**リボン (XML)** 、既定値を生成するプロジェクトに項目<xref:Microsoft.Office.Core.IRibbonExtensibility>VSTO アドインに実装します。 詳細については、「 [Ribbon XML](../vsto/ribbon-xml.md)」を参照してください。|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> InfoPath 2010<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> プロジェクト<br /><br /> Visio<br /><br /> Word|  
 |<xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>|このインターフェイスを実装してカスタム作業ウィンドウを作成します。|Excel<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Word|  
 |<xref:Microsoft.Office.Interop.Outlook.FormRegionStartup>|このインターフェイスを実装して Outlook フォーム領域を作成します。|Outlook|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "50670846"
  [VSTO アドインをプログラミングします。](../vsto/programming-vsto-add-ins.md)   
  [Office ソリューションを開発します。](../vsto/developing-office-solutions.md)   
  [他の Office ソリューションから VSTO アドイン内のコードを呼び出す](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)   
- [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
+ [方法: Visual Studio での Office プロジェクトを作成します。](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [VSTO アドインのアーキテクチャ](../vsto/architecture-of-vsto-add-ins.md)  
   
   

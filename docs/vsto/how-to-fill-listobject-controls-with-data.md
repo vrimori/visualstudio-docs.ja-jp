@@ -1,5 +1,5 @@
 ---
-title: '方法: 塗りつぶし ListObject コントロール データ'
+title: '方法: データに ListObject コントロールを塗りつぶす'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -15,24 +15,24 @@ helpviewer_keywords:
 - data [Office development in Visual Studio], adding to worksheets
 - data binding, ListObject controls
 - worksheets, populating with data
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e9e255d4099a90173b9dbc7ff6fd7b2225d0622d
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: cafaaebeea2a6fd5d4c750e89e90747da28b254d
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35255705"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53646690"
 ---
-# <a name="how-to-fill-listobject-controls-with-data"></a>方法: 塗りつぶし ListObject コントロール データ
+# <a name="how-to-fill-listobject-controls-with-data"></a>方法: データに ListObject コントロールを塗りつぶす
   データ バインディングを使用すると、ドキュメントにデータをすばやく追加できます。 リスト オブジェクトにデータをバインドした後、リスト オブジェクトを切断すると、データは表示されますが、データ ソースとのバインドは解除されます。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。 [How do i: 作成、SharePoint リストに接続されている Excel のリスト。](http://go.microsoft.com/fwlink/?LinkID=130263)します。  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:SharePoint リストに接続されている Excel でリストを作成しますか。](http://go.microsoft.com/fwlink/?LinkID=130263)  
   
 ### <a name="to-bind-data-to-a-listobject-control"></a>ListObject コントロールにデータをバインドするには  
   
@@ -41,7 +41,7 @@ ms.locfileid: "35255705"
      [!code-csharp[Trin_VstcoreHostControlsExcel#20](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet4.cs#20)]
      [!code-vb[Trin_VstcoreHostControlsExcel#20](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet4.vb#20)]  
   
-2.  `Startup` クラス (ドキュメント レベル プロジェクトの場合) または `Sheet1` クラス (アプリケーション レベル プロジェクトの場合) の `ThisAddIn` イベント ハンドラーにサンプルの列とデータを追加します。  
+2.  `Sheet1` クラス (ドキュメント レベル プロジェクトの場合) または `ThisAddIn` クラス (アプリケーション レベル プロジェクトの場合) の `Startup` イベント ハンドラーにサンプルの列とデータを追加します。  
   
      [!code-csharp[Trin_VstcoreHostControlsExcel#21](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet4.cs#21)]
      [!code-vb[Trin_VstcoreHostControlsExcel#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet4.vb#21)]  
@@ -58,18 +58,18 @@ ms.locfileid: "35255705"
      [!code-csharp[Trin_VstcoreHostControlsExcel#23](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet4.cs#23)]
      [!code-vb[Trin_VstcoreHostControlsExcel#23](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet4.vb#23)]  
   
-## <a name="compile-the-code"></a>コードをコンパイルします  
+## <a name="compile-the-code"></a>コードのコンパイル  
  このコード例では、このコードがあるワークシートに、 <xref:Microsoft.Office.Tools.Excel.ListObject> という名前の既存の `list1` があることを前提としています。  
   
 ## <a name="see-also"></a>関連項目  
  [Word 文書と Excel ブックを実行時に VSTO アドインで拡張します。](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   
- [方法: データへのマップ ListObject 列](../vsto/how-to-map-listobject-columns-to-data.md)   
+ [方法: データに ListObject 列をマップします。](../vsto/how-to-map-listobject-columns-to-data.md)   
  [拡張オブジェクトを使用して Excel を自動化します。](../vsto/automating-excel-by-using-extended-objects.md)   
  [ListObject コントロール](../vsto/listobject-control.md)   
  [Office ソリューションでのコントロールにデータをバインドします。](../vsto/binding-data-to-controls-in-office-solutions.md)   
  [方法: データベースからデータをワークシートに読み込む](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)   
- [方法: データ サービスからドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-services.md)  
+ [方法: サービスからデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-services.md)  
   
   

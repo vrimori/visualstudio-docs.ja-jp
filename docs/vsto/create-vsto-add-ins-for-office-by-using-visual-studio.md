@@ -1,6 +1,7 @@
 ---
 title: Visual Studio を使用して Office 用 VSTO アドインを作成する
-ms.custom: ''
+titleSuffix: ''
+ms.custom: seodec18
 ms.date: 02/02/2017
 ms.technology:
 - office-development
@@ -8,17 +9,17 @@ ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ab047953c1a19d444b4315b7dc605a1a990667df
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: ae35f11066ccb0bbd5e9fa36f137c8a77281463c
+ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50670873"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53441497"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Visual Studio を使用して Office 用 VSTO アドインを作成する
   Visual Studio の Microsoft Office Developer Tools を使用して、Office を拡張する .NET Framework アプリケーションを作成できます。 このようなアプリケーションは、 *Office ソリューション*とも呼ばれます。  
@@ -90,7 +91,7 @@ ms.locfileid: "50670873"
  Office プライマリ相互運用機能アセンブリ、マニフェスト、ユーザー インターフェイス要素、およびエラー メッセージに関する詳細情報へのリンクを提供します。  
   
  [マネージ参照&#40;Visual Studio での Office 開発&#41;](../vsto/managed-reference-office-development-in-visual-studio.md)  
- [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]を対象とする Office プロジェクトで使用される API の名前空間と型に関する情報へのリンクを示します。 名前空間と、.NET Framework 3.5 を対象とする Office プロジェクトで使用されている型に関する API リファレンス ドキュメントについて、Visual Studio 2008 ドキュメントのリファレンス セクションを参照してください: [2007 system マネージ参照](http://go.microsoft.com/fwlink/?LinkId=160658).  
+ [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]を対象とする Office プロジェクトで使用される API の名前空間と型に関する情報へのリンクを示します。 名前空間と Office プロジェクトで使用されている型に関する API リファレンス ドキュメントを対象とする、.NET Framework 3.5 では、Visual Studio 2008 ドキュメントのリファレンス セクションを参照してください。[2007 system マネージ参照](http://go.microsoft.com/fwlink/?LinkId=160658)します。  
   
  [アンマネージ API リファレンス&#40;Visual Studio での Office 開発&#41;](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)  
  Office アプリケーションでマネージド VSTO アドインのロードとアンロードなどの操作を実行するために使用できる COM インターフェイスに関する情報へのリンクを示します。  

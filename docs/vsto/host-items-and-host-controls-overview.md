@@ -34,17 +34,17 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio], host items
 - Word [Office development in Visual Studio], host controls
 - host controls [Office development in Visual Studio], deleting
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 48ce311a767d68ce1402961d2ddf4cf8b673637c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 4ff20a05b752ee16971e67cb8e12c838384523b9
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49937500"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647975"
 ---
 # <a name="host-items-and-host-controls-overview"></a>ホスト項目とホスト コントロールの概要
   ホスト項目とホスト コントロールは、Visual Studio の Office 開発ツールを使用して作成される Office ソリューションのプログラミング モデルを提供する助けとなる型です。 ホスト項目とホスト コントロールは、Microsoft Office Word および Microsoft Office Excel の COM ベースのオブジェクト モデルとの対話を、Windows フォーム コントロールなどのマネージド オブジェクトとの対話と似たものにします。  
@@ -131,21 +131,21 @@ ms.locfileid: "49937500"
   
   ホスト コントロールをドキュメントに追加する方法の詳細については、以下のトピックを参照してください:  
   
-- [方法: ワークシートに Chart コントロールを追加](../vsto/how-to-add-chart-controls-to-worksheets.md)  
+- [方法: ワークシートに Chart コントロールを追加します。](../vsto/how-to-add-chart-controls-to-worksheets.md)  
   
-- [方法: ワークシートに ListObject コントロールを追加](../vsto/how-to-add-listobject-controls-to-worksheets.md)  
+- [方法: ワークシートに ListObject コントロールを追加します。](../vsto/how-to-add-listobject-controls-to-worksheets.md)  
   
-- [方法: ワークシートに NamedRange コントロールを追加](../vsto/how-to-add-namedrange-controls-to-worksheets.md)  
+- [方法: ワークシートに NamedRange コントロールを追加します。](../vsto/how-to-add-namedrange-controls-to-worksheets.md)  
   
-- [方法: ワークシートに XMLMappedRange コントロールを追加](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)  
+- [方法: ワークシートに XMLMappedRange コントロールを追加します。](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)  
   
-- [方法: Word 文書に Bookmark コントロールを追加](../vsto/how-to-add-bookmark-controls-to-word-documents.md)  
+- [方法: Word 文書に Bookmark コントロールを追加します。](../vsto/how-to-add-bookmark-controls-to-word-documents.md)  
   
 - [方法: コンテンツの追加を Word 文書にコントロール](../vsto/how-to-add-content-controls-to-word-documents.md)  
   
-- [方法: Word 文書に XMLNode コントロールを追加](../vsto/how-to-add-xmlnode-controls-to-word-documents.md)  
+- [方法: Word 文書に XMLNode コントロールを追加します。](../vsto/how-to-add-xmlnode-controls-to-word-documents.md)  
   
-- [方法: Word 文書に XMLNodes コントロールを追加](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)  
+- [方法: Word 文書に XMLNodes コントロールを追加します。](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)  
   
 ### <a name="name-host-controls"></a>ホスト コントロールの名前  
  **ツールボックス** から文書にホスト コントロールをドラッグすると、コントロールには自動的にコントロールの型と末尾の増分番号で構成される名前が付けられます。 たとえば、ブックマークには **bookmark1**や **bookmark2**などの名前が付けられます。 Word または Excel のネイティブ機能を使用してコントロールを追加する場合は、コントロールの作成時に特定の名前を指定できます。 **[プロパティ]** ウィンドウで、 **[名前]** プロパティの値を変更してコントロールの名前を変更することもできます。  
@@ -166,7 +166,7 @@ ms.locfileid: "49937500"
 >  文書やワークシートの `Shutdown` イベント ハンドラーでは、コントロールをプログラムで削除しないでください。 `Shutdown` イベントが発生すると、UI 要素は使用できなくなります。 アプリケーションが終了する前にコントロールを削除する場合は、 `BeforeClose` や `BeforeSave`などの別のイベント ハンドラーにコードを追加してください。  
   
 ### <a name="program-against-host-control-events"></a>ホスト コントロールのイベントに対してプログラム  
- ホスト コントロールが Office オブジェクトを拡張する方法の 1 つに、イベントの追加が挙げられます。 たとえば、Excel の <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトと Word の <xref:Microsoft.Office.Interop.Word.Bookmark> オブジェクトはイベントを持ちませんが、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] では、プログラミング可能なイベントを追加することによってこれらのオブジェクトを拡張します。 Windows フォームのコントロールのイベントにアクセスするのと同じ方法で、これらのイベントにアクセスし、コーディングすることができます。Visual Basic ではイベント ドロップダウン リストを使用し、C# ではイベント プロパティ ページを使用します。 詳細については、次を参照してください。[チュートリアル: NamedRange コントロールのイベントに対してプログラム](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)します。  
+ ホスト コントロールが Office オブジェクトを拡張する方法の 1 つに、イベントの追加が挙げられます。 たとえば、Excel の <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトと Word の <xref:Microsoft.Office.Interop.Word.Bookmark> オブジェクトはイベントを持ちませんが、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] では、プログラミング可能なイベントを追加することによってこれらのオブジェクトを拡張します。 Windows フォームのコントロールのイベントにアクセスするのと同じ方法で、これらのイベントにアクセスし、コーディングすることができます。Visual Basic ではイベント ドロップダウン リストを使用し、C# ではイベント プロパティ ページを使用します。 詳細については、「[チュートリアル:NamedRange コントロールのイベントに対してプログラム](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)します。  
   
 > [!NOTE]  
 >  Excel の <xref:Microsoft.Office.Interop.Excel._Application.EnableEvents%2A> オブジェクトの <xref:Microsoft.Office.Interop.Excel.Application> プロパティを **false**と呼ばれるオブジェクトを拡張します。 このプロパティを **false** に設定すると、ホスト コントロールのイベントを含む、すべてのイベントが Excel で発生しなくなります。  

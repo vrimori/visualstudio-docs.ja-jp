@@ -1,5 +1,5 @@
----
-title: '{' が必要です |Microsoft ドキュメント'
+﻿---
+title: 予想 ' {' |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,19 +20,19 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5c72953f30ff80fcd48110afb74d628319863e99
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0e0127d551c6bf16c710e47d5f95c975522aca16
+ms.sourcegitcommit: 75e02ed88a1ace6e8265fd4e3a82a1bc78f3adca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24632772"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53348377"
 ---
-# <a name="expected-3939"></a>'{' が必要です
-関数本体の先頭を示す左中かっこを含まれていませんでした。 1 つの行がある場合でも、関数の本体を構成するコードは、左と右中かっこ内に格納する必要があります。 関数本体の中かっこの使用がループ内でより厳しいことに注意してください。  
+# <a name="expected-"></a>'{' が必要です。
+関数本体の先頭を示す左かっこを含まれていませんでした。 1 つの行がある場合でも、関数の本体を構成するコードは、左と右中かっこ内に含まれている必要があります。 関数本体の中かっこの使用がより厳密なループであることを確認します。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   関数本体の先頭を示す左中かっこを追加します。  
+-   関数本体の先頭を示す左かっこを追加します。  
   
 ## <a name="see-also"></a>関連項目  
  [Function オブジェクト](../../javascript/reference/function-object-javascript.md)

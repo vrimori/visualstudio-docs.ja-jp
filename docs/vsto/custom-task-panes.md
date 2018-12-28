@@ -23,17 +23,17 @@ helpviewer_keywords:
 - custom task panes [Office development in Visual Studio]
 - task panes [Office development in Visual Studio], about custom task panes
 - custom task panes [Office development in Visual Studio], about custom task panes
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e4e8384bc86bf59216c353b0f4610d3863445781
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 79384ac86afe15afda8e6c99e15a519e66302014
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49889764"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648269"
 ---
 # <a name="custom-task-panes"></a>カスタム作業ウィンドウ
   作業ウィンドウは、通常、Microsoft Office アプリケーションのウィンドウの一辺にドッキングされているユーザー インターフェイス ウィンドウです。 カスタム作業ウィンドウは、独自の作業ウィンドウを作成し、ユーザーがソリューションの各機能にアクセスする際に使い慣れたインターフェイスを利用できるようにするものです。 たとえば、インターフェイスにはドキュメントを変更するコードや、データ ソースのデータを表示するコードを実行するコントロールが含まれます。  
@@ -59,7 +59,7 @@ ms.locfileid: "49889764"
   
 2. そのユーザー コントロールを VSTO アドインの <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> オブジェクトに渡すことにより、カスタム作業ウィンドウをインスタンス化します。 このコレクションは、作業ウィンドウの外観を変更し、ユーザー イベントに応答するために使用できる新しい <xref:Microsoft.Office.Tools.CustomTaskPane> オブジェクトを返します。  
   
-   詳細については、次を参照してください。[方法: カスタム作業ウィンドウをアプリケーションに追加](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)します。  
+   詳細については、「[方法 :カスタム作業ウィンドウをアプリケーションに追加](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)します。  
   
 ### <a name="create-the-user-interface"></a>ユーザー インターフェイスを作成する  
  Visual Studio の Office 開発ツールを使用して作成されるすべてのカスタム作業ウィンドウには、<xref:System.Windows.Forms.UserControl> オブジェクトが含まれます。 このユーザー コントロールは、カスタム作業ウィンドウのユーザー インターフェイスを提供します。 デザイン時または実行時に、ユーザー コントロールを作成することができます。 デザイン時にユーザー コントロールを作成する場合は、Windows フォーム デザイナーを使用して、作業ウィンドウのユーザー インターフェイスを作成できます。  
@@ -86,7 +86,7 @@ ms.locfileid: "49889764"
 ## <a name="access-the-application-from-the-task-pane"></a>作業ウィンドウからアプリケーションへのアクセスします。  
  ユーザー コントロールからアプリケーションを自動化する場合、コード内の `Globals.ThisAddIn.Application` を使用して、オブジェクト モデルに直接アクセスできます。 静的な `Globals` クラスは、`ThisAddIn` オブジェクトへのアクセスを提供します。 このオブジェクトの `Application` フィールドは、アプリケーションのオブジェクト モデルへのエントリ ポイントです。  
   
- 詳細については、`Application`のフィールド、`ThisAddIn`オブジェクトを参照してください[プログラム VSTO アドイン](../vsto/programming-vsto-add-ins.md)します。カスタム作業ウィンドウからアプリケーションを自動化する方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: カスタム作業ウィンドウからのアプリケーションの自動](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)します。 詳細については、`Globals`クラスを参照してください[Office プロジェクト内のオブジェクトへのアクセスをグローバル](../vsto/global-access-to-objects-in-office-projects.md)します。  
+ 詳細については、`Application`のフィールド、`ThisAddIn`オブジェクトを参照してください[プログラム VSTO アドイン](../vsto/programming-vsto-add-ins.md)します。カスタム作業ウィンドウからアプリケーションを自動化する方法について説明するチュートリアルでは、次を参照してください。[チュートリアル。カスタム作業ウィンドウからのアプリケーションの自動](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)します。 詳細については、`Globals`クラスを参照してください[Office プロジェクト内のオブジェクトへのアクセスをグローバル](../vsto/global-access-to-objects-in-office-projects.md)します。  
   
 ## <a name="manage-the-user-interface-of-the-task-pane"></a>ユーザー インターフェイスの作業ウィンドウを管理します。  
  作業ウィンドウを作成した後に、<xref:Microsoft.Office.Tools.CustomTaskPane> オブジェクトのプロパティとイベントを使用して、作業ウィンドウのユーザー インターフェイスを制御したり、ユーザーが作業ウィンドウを変更したときに対応したりすることができます。  
@@ -96,7 +96,7 @@ ms.locfileid: "49889764"
   
  ユーザーは、いつでも作業ウィンドウをクリックして閉じることができます、**閉じます**作業ウィンドウの隅にあるボタン (X)。 ただし、ユーザーがもう一度、カスタム作業ウィンドウを開くための既定の方法はありません。 ユーザーがカスタム作業ウィンドウを閉じた場合、それを表示する方法を提供しない限り、そのユーザーはカスタム作業ウィンドウを再度表示することはできません。  
   
- VSTO アドインでカスタム作業ウィンドウを作成する場合は、ユーザーがクリックしてカスタム作業ウィンドウを表示したり非表示にできる UI 要素 (ボタンなど) も作成する必要があります。 リボンのカスタマイズをサポートする Microsoft Office アプリケーションでカスタム作業ウィンドウを作成する場合は、カスタム作業ウィンドウを表示したり非表示にしたりするボタンを持つコントロール グループをリボンに追加できます。 これを行う方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: リボン ボタンとカスタム作業ウィンドウを同期](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)します。  
+ VSTO アドインでカスタム作業ウィンドウを作成する場合は、ユーザーがクリックしてカスタム作業ウィンドウを表示したり非表示にできる UI 要素 (ボタンなど) も作成する必要があります。 リボンのカスタマイズをサポートする Microsoft Office アプリケーションでカスタム作業ウィンドウを作成する場合は、カスタム作業ウィンドウを表示したり非表示にしたりするボタンを持つコントロール グループをリボンに追加できます。 これを行う方法について説明するチュートリアルでは、次を参照してください。[チュートリアル。リボン ボタンとカスタム作業ウィンドウを同期](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)します。  
   
  リボンのカスタマイズをサポートしない Microsoft Office アプリケーションでカスタム作業ウィンドウを作成する場合は、カスタム作業ウィンドウを表示または非表示にする <xref:Microsoft.Office.Core.CommandBarButton> を追加できます。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "49889764"
   
 - [Word、InfoPath、および PowerPoint](#WordAndInfoPath)  
   
-  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[方法: Word の VSTO アドインでの作業ウィンドウの操作を管理しますか?](http://go.microsoft.com/fwlink/?LinkId=136781)します。  
+  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:Word VSTO アドインで作業ウィンドウを管理しますか。](http://go.microsoft.com/fwlink/?LinkId=136781)  
   
 ##  <a name="Outlook"></a> Outlook  
  Outlook 用のカスタム作業ウィンドウを作成するときには、カスタム作業ウィンドウが特定のエクスプローラーまたはインスペクター ウィンドウに関連付けられます。 エクスプ ローラーは、フォルダーの内容を表示するウィンドウおよびインスペクターは電子メール メッセージやタスクなどの項目を表示するウィンドウ。  
@@ -221,7 +221,7 @@ ms.locfileid: "49889764"
 -   [Microsoft.Office.Interop.PowerPoint.EApplication_Event.WindowDeactivate](/previous-versions/office/developer/office-2010/ff763093(v=office.14))
   
 ## <a name="see-also"></a>関連項目  
- [方法: カスタム作業ウィンドウをアプリケーションに追加](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)   
+ [方法: アプリケーションにカスタム作業ウィンドウを追加します。](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)   
  [チュートリアル: カスタム作業ウィンドウからアプリケーションを自動化します。](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)   
  [チュートリアル: リボン ボタンとカスタム作業ウィンドウを同期します。](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)   
  [チュートリアル: Outlook で電子メール メッセージと共にカスタム作業ウィンドウを表示します。](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'ワークフロー デザイナー - 方法: 引数デザイナーを使用'
+title: ワークフロー デザイナー - 方法。引数デザイナーを使用する
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.prod: visual-studio-dev15
@@ -13,14 +13,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 868fc13474e90be219cf1acebc00074641df142e
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 88d9d568a115680c545a32a0d5f533fcab51da1f
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36755523"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684601"
 ---
-# <a name="how-to-use-the-argument-designer"></a>引数デザイナーを使用する方法
+# <a name="how-to-use-the-argument-designer"></a>方法: 引数デザイナーを使用する
 
 .NET Framework の以前のバージョンと比較して、引数デザイナー簡単にデータを入出力アクティビティ フローを許可します。 デザイナーにアクセスする をクリックして、**引数**デザイン キャンバスの左下隅のボタンをクリックします。 デザイナーには、表形式で表示され、以外の各列見出しで並べ替えることができますを引数のリストが含まれています、**既定値**列。 各引数には、名前、方向 (入力、出力、入力/出力、またはプロパティ)、型、および既定の式の値 (存在する場合) が含まれます。 名前および既定の式の値は編集可能なテキスト フィールドで、型および方向はドロップダウンです。 詳細については、次を参照してください。[変数と引数 (.NET)](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)します。
 
@@ -37,5 +37,5 @@ ms.locfileid: "36755523"
 
 ## <a name="see-also"></a>関連項目
 
-- [ワークフロー デザイナーの使用](../workflow-designer/using-the-workflow-designer.md)
+- [ワークフロー デザイナーの使用](developing-applications-with-the-workflow-designer.md)
 - [変数と引数](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)

@@ -1,5 +1,5 @@
 ---
-title: '方法: 添付ドキュメントへのコードの拡張機能の管理'
+title: '方法: マネージ コード拡張機能をドキュメントにアタッチします。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - managed code extensions [Office development in Visual Studio], attaching
 - documents [Office development in Visual Studio], managed code extensions
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c6e39f27caf9d321bb83666d72114a9675091f03
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: aa7eda6dfed28ceebb9b400568463cc689993f1e
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35257044"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53646894"
 ---
-# <a name="how-to-attach-managed-code-extensions-to-documents"></a>方法: 添付ドキュメントへのコードの拡張機能の管理
+# <a name="how-to-attach-managed-code-extensions-to-documents"></a>方法: マネージ コード拡張機能をドキュメントにアタッチします。
   カスタマイズ アセンブリは、既存の Microsoft Office Word 文書または Microsoft Office Excel ブックにアタッチできます。 文書またはブックは、Microsoft Office プロジェクトと Visual Studio での開発ツールでサポートされている任意のファイル形式にできます。 詳細については、次を参照してください。[のドキュメント レベル カスタマイズのアーキテクチャ](../vsto/architecture-of-document-level-customizations.md)します。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
@@ -33,7 +33,7 @@ ms.locfileid: "35257044"
 > [!NOTE]  
 >  カスタマイズは、コードが、指定されたドキュメントがないコントロールを必要とする場合の読み込みに失敗します。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[アタッチの操作を実行または Word 文書から VSTO アセンブリをデタッチする方法でしょうか。](http://go.microsoft.com/fwlink/?LinkId=136782)します。  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:アタッチまたは Word 文書から VSTO アセンブリをデタッチしますか。](http://go.microsoft.com/fwlink/?LinkId=136782)  
   
 ### <a name="to-attach-managed-code-extensions-to-a-document"></a>マネージ コード拡張機能をドキュメントにアタッチするには  
   
@@ -55,6 +55,6 @@ ms.locfileid: "35257044"
   
 ## <a name="see-also"></a>関連項目  
  [ServerDocument クラスを使用してサーバー上のドキュメントを管理します。](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)   
- [方法: ドキュメントからマネージ コード拡張機能を削除](../vsto/how-to-remove-managed-code-extensions-from-documents.md)   
+ [方法: ドキュメントからのマネージ コード拡張機能を削除します。](../vsto/how-to-remove-managed-code-extensions-from-documents.md)   
  [Office ソリューションにおけるアプリケーションと配置マニフェスト](../vsto/application-and-deployment-manifests-in-office-solutions.md)  
   

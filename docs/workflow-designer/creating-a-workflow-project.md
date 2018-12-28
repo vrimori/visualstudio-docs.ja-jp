@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a4f8ed1effbc459bd2a17e3433738c1b461513b
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: cf7c9c5348e7a7c31fa7e1d65b7fa6047d05d565
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36755655"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53685706"
 ---
 # <a name="workflow-project-templates"></a>ワークフロー プロジェクト テンプレート
 
@@ -72,12 +72,12 @@ Visual Studio には、4 つの異なるワークフロー プロジェクト �
 
 選択した場合、**アクティビティ デザイナー ライブラリ**テンプレート、Visual Studio で XAML と分離コード実装ファイル、アクティビティ デザイナー定義を作成します。 ワークフロー デザイナーが開き、アクティビティ デザイナーのキャンバスが表示されます。 ドラッグ Windows Presentation Foundation (WPF) コントロールを**ツールボックス**カスタム アクティビティ デザイナーで使用するデザイン サーフェイスにします。
 
-カスタム アクティビティ デザイナーを実装する方法の例は、次を参照してください。[方法: カスタム アクティビティ デザイナーを作成](/dotnet/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer)です。
+カスタム アクティビティ デザイナーを実装する方法の例は、次を参照してください。[方法。カスタム アクティビティ デザイナーを作成](/dotnet/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer)です。
 
 > [!NOTE]
 > カスタム アクティビティと .NET Framework の既定の活動は、カスタム アクティビティ デザイナーを使用できます。
 
 ## <a name="see-also"></a>関連項目
 
-- [ワークフロー デザイナーを使用します。](../workflow-designer/using-the-workflow-designer.md)
+- [ワークフロー デザイナーを使用します。](developing-applications-with-the-workflow-designer.md)
 - [(.NET Framework) のワークフローを設計します。](/dotnet/framework/windows-workflow-foundation/designing-workflows)

@@ -1,5 +1,5 @@
 ---
-title: '方法: ショートカット メニュー コマンドを追加'
+title: '方法: ショートカット メニュー コマンドを追加します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -11,26 +11,26 @@ dev_langs:
 helpviewer_keywords:
 - Office menus, creating
 - Office development in Visual Studio, context menus
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9accca69c5d56461f07d21d25821c0f4181c8fbd
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 37c0c4c54fdb50f56d7d8f6920eedfd15491a6a7
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672675"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648430"
 ---
-# <a name="how-to-add-commands-to-shortcut-menus"></a>方法: ショートカット メニュー コマンドを追加
+# <a name="how-to-add-commands-to-shortcut-menus"></a>方法: ショートカット メニュー コマンドを追加します。
   このトピックでは、VSTO アドインを使用して Office アプリケーションのショートカット メニューにコマンドを追加する方法を示します。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
 ### <a name="to-add-commands-to-shortcut-menus-in-office"></a>Office のショートカット メニューにコマンドを追加するには  
   
-1.  **[リボン XML]** 項目をドキュメント レベルのプロジェクトまたは VSTO アドイン プロジェクトに追加します。 詳細については、次を参照してください。[方法: リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)します。 イン  
+1.  **[リボン XML]** 項目をドキュメント レベルのプロジェクトまたは VSTO アドイン プロジェクトに追加します。 詳細については、「[方法 :リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)します。 イン  
   
 2.  **ソリューション エクスプローラー**で、 **ThisAddin.cs** または **ThisAddin.vb**を選択します。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "35672675"
   
 7.  コード エディターで、ショートカット メニューとショートカット メニューに追加するコントロールを記述する XML を追加します。  
   
-     次の例では、ボタン、メニュー、および Gallery コントロールを Word ドキュメントのショートカット メニューに追加します。 このショートカット メニューのコントロール ID は、ContextMenuText です。 Office 2010 ショートカットのコントロールの完全な一覧については、ID を参照してください[Office 2010 ヘルプ ファイル: Office fluent ユーザー インターフェイスのコントロール id](http://go.microsoft.com/fwlink/?LinkID=181052)します。  
+     次の例では、ボタン、メニュー、および Gallery コントロールを Word ドキュメントのショートカット メニューに追加します。 このショートカット メニューのコントロール ID は、ContextMenuText です。 Office 2010 ショートカットのコントロールの完全な一覧については、ID を参照してください[Office 2010 ヘルプ ファイル。Office fluent ユーザー インターフェイスのコントロール id](http://go.microsoft.com/fwlink/?LinkID=181052)します。  
   
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>  
