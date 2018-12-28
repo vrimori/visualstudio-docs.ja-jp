@@ -22,17 +22,17 @@ helpviewer_keywords:
 - VBA [Office development in Visual Studio], about VBA and document-level customizations
 - managed code [Office development in Visual Studio], Visual Basic for Applications and
 - document-level customizations [Office development in Visual Studio], Visual Basic for Applications and
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2243a3e03ed84325523f62d77ae3cc6d20f83bbb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 2dc8a08d7d921c650c8332d3c363d16f5c414b1c
+ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49878077"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53441718"
 ---
 # <a name="combine-vba-and-document-level-customizations"></a>VBA とドキュメント レベルのカスタマイズを結合します。
   Microsoft Office Word または Microsoft Office Excel 用のドキュメント レベル カスタマイズの一部であるドキュメント内で Visual Basic for Applications (VBA) コードを使用できます。 カスタマイズ アセンブリからドキュメント内の VBA コードを呼び出したり、ドキュメント内の VBA コードがカスタマイズ アセンブリのコードを呼び出せるようにプロジェクトを構成したりすることができます。  
@@ -118,7 +118,7 @@ Globals.Sheet1.Application.Run("MyMacro", missing, missing, missing,
   
   3.  プロジェクトでホスト項目クラスの **ReferenceAssemblyFromVbaProject** プロパティを **True**に設定します。 これにより、カスタマイズ アセンブリのタイプ ライブラリがアセンブリに埋め込まれ、タイプ ライブラリへの参照がドキュメントの VBA プロジェクトに追加されます。  
   
-  詳細については、次を参照してください。[方法: Visual Basic プロジェクトでのコードを VBA に公開](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)と[方法: Visual C での vba コードに公開&#35;プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)します。  
+  詳細については、次を参照してください。[方法。Visual Basic プロジェクトでのコードを VBA に公開](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)と[方法。Visual C での vba コードに公開&#35;プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)します。  
   
   **EnableVbaCallers** および **ReferenceAssemblyFromVbaProject** プロパティは、設計時にのみ **[プロパティ]** ウィンドウで使用できます。実行時には使用できません。 プロパティを表示するには、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]でホスト項目のデザイナーを開きます。 これらのプロパティを設定すると、Visual Studio が実行される具体的なタスクの詳細については、次を参照してください。[ホスト項目プロパティによって実行されるタスク](#PropertyTasks)します。  
   
@@ -253,10 +253,10 @@ GetManagedClass(pdispInteropObject Object) As Object
 |カスタマイズ アセンブリの名前を変更した後、カスタマイズ アセンブリを呼び出す VBA コードが動作を停止する。|VBA コードに公開した後でカスタマイズ アセンブリの名前を変更すると、ドキュメントの VBA プロジェクトとカスタマイズ アセンブリの間のリンクが切れます。 この問題を解決するには、プロジェクトで **ReferenceFromVbaAssembly** プロパティを **False** に変更した後、 **True**に戻して、VBA コード内にある古いアセンブリ名への参照を新しいアセンブリ名に置き換えます。|  
   
 ## <a name="see-also"></a>関連項目  
- [方法: Visual Basic プロジェクトでのコードを VBA に公開](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)   
+ [方法: Visual Basic プロジェクトでのコードを VBA に公開します。](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)   
  [方法: Visual C での vba コードに公開&#35;プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)   
- [チュートリアル: VBA から Visual Basic プロジェクトでコードを呼び出します。](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)   
- [チュートリアル: Visual C での VBA からコードを呼び出す&#35;プロジェクト](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)   
+ [チュートリアル: Visual Basic プロジェクトでコードを VBA から呼び出す](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)   
+ [チュートリアル: コードを Visual C での VBA から呼び出す&#35;プロジェクト](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)   
  [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Visual Studio の比較で VBA および Office ソリューション](../vsto/vba-and-office-solutions-in-visual-studio-compared.md)   
  [プログラムのドキュメント レベルのカスタマイズ](../vsto/programming-document-level-customizations.md)  

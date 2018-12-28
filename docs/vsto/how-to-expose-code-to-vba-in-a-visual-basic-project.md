@@ -1,5 +1,5 @@
 ---
-title: '方法: Visual Basic プロジェクトでのコードを VBA に公開'
+title: '方法: Visual Basic プロジェクトでのコードを VBA に公開します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -14,24 +14,24 @@ helpviewer_keywords:
 - Visual Basic [Office development in Visual Studio], exposing code to VBA
 - exposing code to VBA
 - host items [Office development in Visual Studio], exposing code to VBA
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7e4bc9f4227c11f8e34838a2785b27da62a0a6b8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 43308e73d00f163b27a4dbe20dc9f0cbb656c4ba
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49839649"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648640"
 ---
-# <a name="how-to-expose-code-to-vba-in-a-visual-basic-project"></a>方法: Visual Basic プロジェクトでのコードを VBA に公開
+# <a name="how-to-expose-code-to-vba-in-a-visual-basic-project"></a>方法: Visual Basic プロジェクトでのコードを VBA に公開します。
   内のコードを公開することができます、[!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]相互作用するコードの 2 つの種類の場合、Visual basic for Applications (VBA) コード プロジェクトします。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- Visual Basic のプロセスは、Visual c# プロセスからは異なります。 詳細については、次を参照してください。[方法: Visual C での vba コードに公開&#35;プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)します。  
+ Visual Basic のプロセスは、Visual c# プロセスからは異なります。 詳細については、「[方法 :Visual C での vba コードに公開&#35;プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)します。  
   
  他のクラス内のコードよりも、ホスト項目クラスにコードの異なるプロセス。  
   
@@ -39,12 +39,12 @@ ms.locfileid: "49839649"
   
 - [ホスト項目クラスに含まれていないコードに公開します。](#NonHostItem)  
   
-  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[どの操作を呼び出す VSTO コード実行 VBA からでしょうか。](http://go.microsoft.com/fwlink/?LinkId=136757)します。  
+  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:VBA から VSTO コードを呼び出しますか。](http://go.microsoft.com/fwlink/?LinkId=136757)  
   
 ##  <a name="HostItemCode"></a> ホスト項目クラスにコードを公開します。  
  ホスト項目クラスの Visual Basic コードを呼び出す VBA コードを有効にするには設定、 **EnableVbaCallers**するホスト項目のプロパティ**True**します。  
   
- ホスト項目クラスのメソッドを公開し、VBA から呼び出す方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: VBA から Visual Basic プロジェクトでコードを呼び出す](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)します。 ホスト項目の詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)します。  
+ ホスト項目クラスのメソッドを公開し、VBA から呼び出す方法について説明するチュートリアルでは、次を参照してください。[チュートリアル。Visual Basic プロジェクトでコードを VBA から呼び出す](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)します。 ホスト項目の詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)します。  
   
 #### <a name="to-expose-code-in-a-host-item-to-vba"></a>コードを VBA にホスト項目に公開するには  
   
@@ -112,7 +112,7 @@ ms.locfileid: "49839649"
 7.  **[プロパティ]** ウィンドウで、 **ReferenceAssemblyFromVbaProject** プロパティを選択し、値を **True**に変更します。  
   
     > [!NOTE]  
-    >  かどうかは、ブックまたはドキュメントが含まれない VBA コード、またはドキュメント内の VBA コードが実行する信頼されていない場合は、設定すると、エラー メッセージが表示されるが、 **ReferenceAssemblyFromVbaProject**プロパティを**は True。**. これは、このような状況では、Visual Studio がドキュメントのVBA プロジェクトを変更できないためです。  
+    >  かどうかは、ブックまたはドキュメントが含まれない VBA コード、またはドキュメント内の VBA コードが実行する信頼されていない場合は、設定すると、エラー メッセージが表示されるが、 **ReferenceAssemblyFromVbaProject**プロパティを**は True**。 これは、このような状況では、Visual Studio がドキュメントのVBA プロジェクトを変更できないためです。  
   
 8.  表示されるメッセージで **[OK]** をクリックします。 このメッセージは、ブックまたはドキュメントに VBA コードを追加する場合からプロジェクトを実行しているを知らせる[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、VBA コードは失われます、次回プロジェクトをビルドします。 これは、プロジェクトをビルドするたびにビルド出力フォルダー内のドキュメントが上書きされるためです。  
   
@@ -121,10 +121,10 @@ ms.locfileid: "49839649"
 9. プロジェクトをビルドします。  
   
 ## <a name="see-also"></a>関連項目  
- [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
+ [方法: Visual Studio での Office プロジェクトを作成します。](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [VBA とドキュメント レベルのカスタマイズを結合します。](../vsto/combining-vba-and-document-level-customizations.md)   
- [チュートリアル: VBA から Visual Basic プロジェクトでコードを呼び出します。](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)   
+ [チュートリアル: Visual Basic プロジェクトでコードを VBA から呼び出す](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)   
  [方法: Visual C での vba コードに公開&#35;プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)  
   
   

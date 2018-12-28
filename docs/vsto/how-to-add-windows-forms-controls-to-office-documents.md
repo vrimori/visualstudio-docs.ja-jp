@@ -1,5 +1,5 @@
 ---
-title: '方法: Office ドキュメントへの Windows フォーム コントロールの追加'
+title: '方法: Office ドキュメントへの Windows フォーム コントロールを追加します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Windows Forms controls [Office development in Visual Studio], adding
 - controls [Office development in Visual Studio], Windows Forms controls
 - documents [Office development in Visual Studio], Windows Forms controls
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7b5a6246a79d2d1f910b6ca39ce290f6c325dbe6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 10fa7da3028c2d4706ec380bb4ceeae1d55b45af
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49892754"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647859"
 ---
-# <a name="how-to-add-windows-forms-controls-to-office-documents"></a>方法: Windows フォーム コントロールを Office ドキュメントに追加します。
+# <a name="how-to-add-windows-forms-controls-to-office-documents"></a>方法: Office ドキュメントへの Windows フォーム コントロールを追加します。
   Windows フォーム コントロールは、デザイン時にドキュメント レベルのプロジェクトの Microsoft Office Excel および Microsoft Office Word のドキュメントに追加できます。 ドキュメント レベルのカスタマイズと VSTO アドインで、実行時にコントロールを追加できます。たとえば、ユーザーがオプションの一覧から選択できるように、<xref:Microsoft.Office.Tools.Excel.Controls.ComboBox> コントロールをワークシートに追加できます。  
   
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]  
@@ -38,7 +38,7 @@ ms.locfileid: "49892754"
   
 - [VSTO アドインにおける実行時にコントロールを追加します。](#runtimeaddin)  
   
-  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[方法は、ドキュメントにコントロールを操作の追加画面実行時にしますか?](http://go.microsoft.com/fwlink/?LinkId=132782)します。  
+  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:実行時にドキュメントの画面にコントロールを追加しますか。](http://go.microsoft.com/fwlink/?LinkId=132782)  
   
 ##  <a name="designtime"></a> デザイン時にコントロールを追加します。  
  デザイン時にドキュメント レベルのプロジェクトの文書に Windows フォーム コントロールを追加する方法はいくつかあります。  
@@ -47,7 +47,7 @@ ms.locfileid: "49892754"
   
 ### <a name="to-drag-a-windows-forms-control-to-the-document"></a>Windows フォーム コントロールをドキュメントにドラッグするには  
   
-1.  Visual Studio で Excel ブック プロジェクトまたは Word 文書プロジェクトを作成するかまたは開き、ドキュメントがデザイナーに表示されるようにします。 プロジェクトの作成方法の詳細については、次を参照してください。[方法: Visual Studio でプロジェクトを作成する Office](../vsto/how-to-create-office-projects-in-visual-studio.md)します。  
+1.  Visual Studio で Excel ブック プロジェクトまたは Word 文書プロジェクトを作成するかまたは開き、ドキュメントがデザイナーに表示されるようにします。 プロジェクトの作成方法の詳細については、次を参照してください。[方法。Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
 2.  **コモン コントロール**のタブ、**ツールボックス**、追加するコントロールをクリックして、ドキュメントにドラッグします。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "49892754"
   
 ### <a name="to-draw-a-windows-forms-control-on-the-document"></a>Windows フォーム コントロールをドキュメントに描画するには  
   
-1.  Visual Studio で Excel ブック プロジェクトまたは Word 文書プロジェクトを作成するかまたは開き、ドキュメントがデザイナーに表示されるようにします。 プロジェクトの作成方法の詳細については、次を参照してください。[方法: Visual Studio でプロジェクトを作成する Office](../vsto/how-to-create-office-projects-in-visual-studio.md)します。  
+1.  Visual Studio で Excel ブック プロジェクトまたは Word 文書プロジェクトを作成するかまたは開き、ドキュメントがデザイナーに表示されるようにします。 プロジェクトの作成方法の詳細については、次を参照してください。[方法。Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
 2.  **コモン コントロール**のタブ、**ツールボックス**、追加するコントロールをクリックします。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "49892754"
   
 ### <a name="to-add-a-windows-forms-control-to-the-document-by-single-clicking-the-control"></a>シングルクリックで Windows フォーム コントロールをドキュメントに追加するには  
   
-1.  Visual Studio で Excel ブック プロジェクトまたは Word 文書プロジェクトを作成するかまたは開き、ドキュメントがデザイナーに表示されるようにします。 プロジェクトの作成方法の詳細については、次を参照してください。[方法: Visual Studio でプロジェクトを作成する Office](../vsto/how-to-create-office-projects-in-visual-studio.md)します。  
+1.  Visual Studio で Excel ブック プロジェクトまたは Word 文書プロジェクトを作成するかまたは開き、ドキュメントがデザイナーに表示されるようにします。 プロジェクトの作成方法の詳細については、次を参照してください。[方法。Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
 2.  **コモン コントロール**のタブ、**ツールボックス**、追加するコントロールをクリックします。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "49892754"
   
 ### <a name="to-add-a-windows-forms-control-to-the-document-by-double-clicking-the-control"></a>ダブルクリックで Windows フォーム コントロールをドキュメントに追加するには  
   
-1.  Visual Studio で Excel ブック プロジェクトまたは Word 文書プロジェクトを作成するかまたは開き、ドキュメントがデザイナーに表示されるようにします。 プロジェクトの作成方法の詳細については、次を参照してください。[方法: Visual Studio でプロジェクトを作成する Office](../vsto/how-to-create-office-projects-in-visual-studio.md)します。  
+1.  Visual Studio で Excel ブック プロジェクトまたは Word 文書プロジェクトを作成するかまたは開き、ドキュメントがデザイナーに表示されるようにします。 プロジェクトの作成方法の詳細については、次を参照してください。[方法。Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
 2.  **コモン コントロール**のタブ、**ツールボックス**、追加するコントロールをダブルクリックします。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "49892754"
   
 ### <a name="to-add-a-windows-forms-control-to-the-document-by-pressing-the-enter-key"></a>Enter キーを押して、ドキュメントに Windows フォーム コントロールを追加するには  
   
-1.  Visual Studio で Excel ブック プロジェクトまたは Word 文書プロジェクトを作成するかまたは開き、ドキュメントがデザイナーに表示されるようにします。 プロジェクトの作成方法の詳細については、次を参照してください。[方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
+1.  Visual Studio で Excel ブック プロジェクトまたは Word 文書プロジェクトを作成するかまたは開き、ドキュメントがデザイナーに表示されるようにします。 プロジェクトの作成方法の詳細については、次を参照してください。[方法。Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
 2.  **コモン コントロール**のタブ、**ツールボックス**、追加、およびキーを押してするコントロールをクリックして、 **」と入力**キー。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "49892754"
 ## <a name="see-also"></a>関連項目  
  [Office ドキュメントの概要での Windows フォーム コントロール](../vsto/windows-forms-controls-on-office-documents-overview.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   
- [方法: ワークシートのセル内のコントロールをサイズ変更](../vsto/how-to-resize-controls-within-worksheet-cells.md)   
+ [方法: ワークシートのセル内のコントロールをサイズ変更します。](../vsto/how-to-resize-controls-within-worksheet-cells.md)   
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
   

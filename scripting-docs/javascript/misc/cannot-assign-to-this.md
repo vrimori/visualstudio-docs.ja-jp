@@ -22,19 +22,19 @@ ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 47e55d39e85675b37d2ac9741d1207a9e81d369e
 ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49856653"
 ---
 # <a name="cannot-assign-to-39this39"></a>&#39;this&#39;に割り当てることはできません。
-値を代入しようとしています。**この**します。 **this**は、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]キーワードのいずれかを参照します。
+**this** に値を割り当てようとしました。 **this**は、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]キーワードのいずれかを参照します。
 
 - 現在、メソッドを実行するオブジェクト
 
 - 現在のメソッドはありません (または、メソッドが、他のオブジェクトに属していない) 場合は、グローバル オブジェクトです。
 
-メソッドは、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]オブジェクトを介して呼び出される関数。 メソッド内で、**この**キーワードによって、メソッドが呼び出されたオブジェクトへの参照は、(クラスのコンス トラクターを呼び出すことによって作成されたオブジェクトである、**new**演算子)。
+メソッドは、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]オブジェクトを介して呼び出される関数。 メソッド内で、**this**キーワードによって、メソッドが呼び出されたオブジェクトへの参照は、(クラスのコンス トラクターを呼び出すことによって作成されたオブジェクトである、**new**演算子)。
 
 メソッド内では、**this** を使用して現在のオブジェクトを参照できますが、**this** に新しい値を割り当てることはできません。
 
@@ -43,7 +43,7 @@ ms.locfileid: "49856653"
 - **this**に割り当てないでください。 プロパティまたはオブジェクトのインスタンスのメソッドにアクセスするには、ドット演算子(例: **circle.radius**)を使用してます 。
 
   > [!NOTE]
-  > ユーザーが作成した変数の名前を付けられません**この**; は、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]予約語。
+  > ユーザーが作成した変数には**this**を指定することはできません。this; は、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]予約語。
 
 ## <a name="see-also"></a>関連項目
 
