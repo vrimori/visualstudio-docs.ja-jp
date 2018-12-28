@@ -17,17 +17,17 @@ helpviewer_keywords:
 - objects [Office development in Visual Studio], Office object models
 - Excel object model
 - Office object models
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8ca93cae45eed272b683275896efcf83229ca9a3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: eb5b930df90f36395a22461ad0f26e82548afb6f
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49880794"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647526"
 ---
 # <a name="excel-object-model-overview"></a>Excel オブジェクト モデルの概要
   Microsoft Office Excel を使用するソリューションを開発するため、Excel オブジェクト モデルによって提供されるオブジェクトと対話することができます。 このトピックでは、特に重要なオブジェクトについて説明します。  
@@ -48,7 +48,7 @@ ms.locfileid: "49880794"
   
   ここでは、Excel オブジェクト モデルの概念について簡単に説明します。 全体の Excel オブジェクト モデルの詳細を説明できます資料については、次を参照してください。 [Excel オブジェクト モデルのドキュメントを使用して、](#ExcelOMDocumentation)します。  
   
-  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i: を使用してイベント ハンドラーで、Excel 2007 アドイン?](http://go.microsoft.com/fwlink/?LinkID=130291)、および[How do i: を使用して図形をバブル チャートを作成するには。excel しますか](http://go.microsoft.com/fwlink/?LinkID=130313)。  
+  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:Excel 2007 アドインでは、イベント ハンドラーを使用しますか。](http://go.microsoft.com/fwlink/?LinkID=130291)、および[How do i:バブル チャートを Excel で作成するのにには、図形を使用しますか。](http://go.microsoft.com/fwlink/?LinkID=130313)  
   
 ## <a name="access-objects-in-an-excel-project"></a>Excel プロジェクトでオブジェクトにアクセス  
  Excel の新しい VSTO アドイン プロジェクトを作成すると、Visual Studio は自動的に作成、 *ThisAddIn.vb*または*ThisAddIn.cs*コード ファイル。 `Me.Application` または `this.Application` を使用して、アプリケーション オブジェクトにアクセスすることができます。  
@@ -106,7 +106,7 @@ ms.locfileid: "49880794"
  Excel オブジェクト モデルに関する詳細については、Excel プライマリ相互運用機能アセンブリ (PIA) のリファレンスと、VBA オブジェクト モデルのリファレンスを参照してください。  
   
 ### <a name="primary-interop-assembly-reference"></a>プライマリ相互運用機能アセンブリのリファレンス  
- Excel PIA のリファレンス ドキュメントは、Excel のプライマリ相互運用機能アセンブリの種類について説明しています。 このドキュメントは、次の場所から使用可能な: [Excel 2010 プライマリ相互運用機能アセンブリ リファレンス](http://go.microsoft.com/fwlink/?LinkId=189585)します。  
+ Excel PIA のリファレンス ドキュメントは、Excel のプライマリ相互運用機能アセンブリの種類について説明しています。 このドキュメントは、次の場所から入手できます。[Excel 2010 プライマリ相互運用機能アセンブリ リファレンス](http://go.microsoft.com/fwlink/?LinkId=189585)します。  
   
  PIA のイベントの実装方法、PIA のクラスとインターフェイスの違いなど、Excel PIA の設計に関する詳細を参照してください[Office プライマリ相互運用機能アセンブリのクラスおよびインターフェイスの概要](http://go.microsoft.com/fwlink/?LinkId=189592)。  
   

@@ -1,10 +1,9 @@
 ---
-title: TemplateGroupID 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: TemplateGroupID 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#TemplateGroupID
 helpviewer_keywords:
@@ -16,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 91631975d48f6e7e13646c428cdd5b5473bbeed2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 68e89b0211c64dcee61507afc15c50bd8e5e85d2
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31144438"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53560655"
 ---
 # <a name="templategroupid-element-visual-studio-templates"></a>TemplateGroupID 要素 (Visual Studio テンプレート)
-項目テンプレートを表示するプロジェクトの種類を指定します。 この要素は重要なときに[ShowByDefault (Visual Studio テンプレート)](../extensibility/showbydefault-visual-studio-templates.md)に設定されている`false`です。 ときに[ShowByDefault (Visual Studio テンプレート)](../extensibility/showbydefault-visual-studio-templates.md)に設定されている`true`、項目テンプレートはすべてのプロジェクト タイプで使用できます。  
+項目テンプレートを表示するプロジェクトの種類を指定します。 この要素は、重要な場合に[ShowByDefault (Visual Studio テンプレート)](../extensibility/showbydefault-visual-studio-templates.md)に設定されている`false`します。 ときに[ShowByDefault (Visual Studio テンプレート)](../extensibility/showbydefault-visual-studio-templates.md)に設定されている`true`、項目テンプレートはすべてのプロジェクト タイプで使用できます。  
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -56,15 +55,15 @@ ms.locfileid: "31144438"
   
  このテキストは、項目テンプレートのカテゴリの識別子を指定します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `TemplateGroupID` は要素です。  
   
- 値、`TemplateGroupID`要素は、プロジェクト システム登録と共に使用 (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<バージョン番号 >* \Projects\\)テンプレートをフィルターに表示される、**新しい項目の追加** ダイアログ ボックス。  
+ 値、`TemplateGroupID`要素は、プロジェクト システムの登録と使用 (hkey_local_machine \software\microsoft\visualstudio\\*\<バージョン番号 >* \Projects\\)フィルター テンプレートに表示される、**新しい項目の追加** ダイアログ ボックス。  
   
 |Visual C++ の値|説明|  
 |------------------------|-------------|  
 |VC-Native|ネイティブ プロジェクトに使用されます。 プロジェクトの種類を特定できない場合は、これが既定値になります。|  
-|VC-Managed|マネージ (/clr) プロジェクトに使用されます|  
+|VC-Managed|マネージド (/clr) プロジェクトに使用されます|  
 |VC-Windows|Windows プラットフォーム (ネイティブ/マネージ/ストア) を対象とするすべてのプロジェクトに使用されます|  
 |WinRT-Native-UAP|Windows 10 ストア プロジェクトに使用されます|  
 |CodeSharing-Native|共有済みの項目のプロジェクトに使用されます|  

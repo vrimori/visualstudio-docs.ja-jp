@@ -1,5 +1,5 @@
 ---
-title: 'CA1505: メンテナンスできないコードを使用しないでください'
+title: CA1505:メンテナンスできないコードを避ける
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
@@ -16,14 +16,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9aae34f6e999bcf74fdfbae4597b22529863e34f
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 7678b0f6b435929c9e53a40062155842e273bbdc
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45546916"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53740313"
 ---
-# <a name="ca1505-avoid-unmaintainable-code"></a>CA1505: メンテナンスできないコードを使用しないでください
+# <a name="ca1505-avoid-unmaintainable-code"></a>CA1505:メンテナンスできないコードを避ける
 
 |||
 |-|-|
@@ -36,7 +36,7 @@ ms.locfileid: "45546916"
  型またはメソッドの保守容易性指数が低い値です。
 
 ## <a name="rule-description"></a>規則の説明
- 保守容易性指数は、次のメトリックを使用して計算されます。 行のコード、プログラムのボリューム、およびサイクロマティック複雑度。 プログラムのボリュームは、型または演算子とオペランドのコードの数に基づいているメソッドの理解の難しさの尺度です。 サイクロマティック複雑度は、型またはメソッドの構造上の複雑さの基準です。 コード メトリックに関する詳細については、[を測定する複雑さとマネージ コードの保守容易性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)します。
+ 保守容易性指数は、次のメトリックを使用して計算されます。 行のコード、プログラムのボリューム、およびサイクロマティック複雑度。 プログラムのボリュームは、型または演算子とオペランドのコードの数に基づいているメソッドの理解の難しさの尺度です。 サイクロマティック複雑度は、型またはメソッドの構造上の複雑さの基準です。 コード メトリックに関する詳細については、[を測定する複雑さとマネージ コードの保守容易性](../code-quality/code-metrics-values.md)します。
 
  保守性が低いインデックスことを示します型またはメソッドを維持するが困難な可能性が再設計に適した候補となります。
 
@@ -49,4 +49,4 @@ ms.locfileid: "45546916"
 ## <a name="see-also"></a>関連項目
 
 - [保守性の警告](../code-quality/maintainability-warnings.md)
-- [マネージド コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)
+- [マネージド コードの複雑さと保守性の測定](../code-quality/code-metrics-values.md)

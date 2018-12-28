@@ -1,5 +1,5 @@
 ---
-title: '方法: パスワードで保護されたドキュメント内のデータのキャッシュ'
+title: '方法: パスワードで保護されたドキュメント内のキャッシュ データ'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - data caching [Office development in Visual Studio], protected documents
 - datasets [Office development in Visual Studio], caching
 - data [Office development in Visual Studio], caching
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c15d3fee1728118df2701cc940dc288ae500942d
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 21e2b0501b96a1c04cee72487678b3e909440fb4
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35255344"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647292"
 ---
-# <a name="how-to-cache-data-in-a-password-protected-document"></a>方法: パスワードで保護されたドキュメント内のデータのキャッシュ
+# <a name="how-to-cache-data-in-a-password-protected-document"></a>方法: パスワードで保護されたドキュメント内のキャッシュ データ
   ドキュメントまたはパスワードで保護されているブック内のデータ キャッシュにデータを追加する場合、キャッシュされたデータへの変更は自動的に保存されません。 プロジェクト内の 2 つのメソッドをオーバーライドすることで、キャッシュされたデータに変更を保存できます。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
@@ -49,7 +49,7 @@ ms.locfileid: "35255344"
  [!code-csharp[Trin_CachedDataProtectedDocument#1](../vsto/codesnippet/CSharp/Trin_CachedDataProtectedDocument/ThisDocument.cs#1)]
  [!code-vb[Trin_CachedDataProtectedDocument#1](../vsto/codesnippet/VisualBasic/Trin_CachedDataProtectedDocument/ThisDocument.vb#1)]  
   
-### <a name="compile-the-code"></a>コードをコンパイルします  
+### <a name="compile-the-code"></a>コードのコンパイル  
  このコードを追加、`ThisDocument`プロジェクト内のクラス。 このコードがという名前のフィールドにパスワードを保存することを前提と`securelyStoredPassword`します。  
   
 ## <a name="cache-in-excel-workbooks"></a>Excel ブック内のキャッシュします。  
@@ -73,12 +73,12 @@ ms.locfileid: "35255344"
  [!code-vb[Trin_CachedDataProtectedWorkbook#1](../vsto/codesnippet/VisualBasic/Trin_CachedDataProtectedWorkbook/ThisWorkbook.vb#1)]
  [!code-csharp[Trin_CachedDataProtectedWorkbook#1](../vsto/codesnippet/CSharp/Trin_CachedDataProtectedWorkbook/ThisWorkbook.cs#1)]  
   
-### <a name="compile-the-code"></a>コードをコンパイルします  
+### <a name="compile-the-code"></a>コードのコンパイル  
  このコードを追加、`ThisWorkbook`プロジェクト内のクラス。 このコードがという名前のフィールドにパスワードを保存することを前提と`securelyStoredPassword`します。  
   
 ## <a name="see-also"></a>関連項目  
  [キャッシュ データ](../vsto/caching-data.md)   
- [方法: オフラインか、サーバーで使用するデータをキャッシュ](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)   
- [方法: Office ドキュメント内のデータ ソースをプログラムでキャッシュ](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)  
+ [方法: オフラインか、サーバーで使用するデータをキャッシュします。](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)   
+ [方法: Office ドキュメント内のデータ ソースをプログラムでキャッシュします。](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)  
   
   

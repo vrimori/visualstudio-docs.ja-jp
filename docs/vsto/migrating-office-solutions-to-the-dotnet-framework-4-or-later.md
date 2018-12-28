@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5059028b87818e34e44123dadde9851eee4200bd
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a7e281f65f58cc3fa10325574eb397d0aa20308e
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49906547"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53740012"
 ---
 # <a name="migrate-office-solutions-to-the-net-framework-4-or-later"></a>.NET Framework 4 またはそれ以降の Office ソリューションを移行します。
   Office プロジェクトのターゲット フレームワークを変更するかどうか、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]または後で、.NET Framework の以前のバージョンから追加の手順がありますソリューションを開発およびエンドユーザーのコンピューターで実行を続行するために必要です。 詳細については、次を参照してください。 [、.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトの実行に変更が必要な](../vsto/required-changes-to-run-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)します。  
@@ -31,7 +31,7 @@ ms.locfileid: "49906547"
   
 - [.NET Framework 4 または .NET Framework 4.5 に移行する Excel および Word プロジェクトを更新します。](../vsto/updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
   
-- [.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトのリボンのカスタマイズを更新します。](../vsto/updating-ribbon-customizations-in-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
+- [.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトのリボンのカスタマイズを更新します。](/visualstudio/vsto/update-ribbon-customizations-in-office-projects-to-migrate-to-dotnet-framework-4-or-4-5)  
   
 - [.NET Framework 4 または .NET Framework 4.5 に移行する Outlook プロジェクトのフォーム領域を更新します。](../vsto/updating-form-regions-in-outlook-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "49906547"
   
 ## <a name="see-also"></a>関連項目  
  [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
- [方法: .NET Framework のターゲット バージョンを指定する](../ide/how-to-target-a-version-of-the-dotnet-framework.md)   
+ [方法: ターゲット .NET Framework のバージョン](../ide/how-to-target-a-version-of-the-dotnet-framework.md)   
  [Office ソリューションのエラーをトラブルシューティングします。](../vsto/troubleshooting-errors-in-office-solutions.md)   
  [Office ソリューションのエラーのための追加サポート](../vsto/additional-support-for-errors-in-office-solutions.md)  
   

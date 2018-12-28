@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Office documents [Office development in Visual Studio], custom properties
 - _AssemblyLocation property
 - _AssemblyName property
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 23d0aa3b065a05b1c85b54e7889c4fe1bac4af7a
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 9fcd250f75e21d24409bb7b17764d9d18e7d6c7b
+ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50671522"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53441445"
 ---
 # <a name="custom-document-properties-overview"></a>カスタム ドキュメント プロパティの概要
 
-Visual Studio がプロジェクト内のドキュメントに 2 つのカスタム プロパティを追加するドキュメント レベルのプロジェクトをビルドすると: \_AssemblyLocation と\_AssemblyName。 文書を開くと、これらのカスタム ドキュメント プロパティを Microsoft Office アプリケーションによって確認されます。 ドキュメントに存在する場合、アプリケーションの読み込み、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]カスタマイズを開始します。 詳細については、次を参照してください。 [Visual Studio での Office のアーキテクチャ ソリューション](../vsto/architecture-of-office-solutions-in-visual-studio.md)します。
+ドキュメント レベルのプロジェクトをビルドするときに Visual Studio には、プロジェクト内のドキュメントに 2 つのカスタム プロパティが追加されます。\_AssemblyLocation と\_AssemblyName。 文書を開くと、これらのカスタム ドキュメント プロパティを Microsoft Office アプリケーションによって確認されます。 ドキュメントに存在する場合、アプリケーションの読み込み、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]カスタマイズを開始します。 詳細については、次を参照してください。 [Visual Studio での Office のアーキテクチャ ソリューション](../vsto/architecture-of-office-solutions-in-visual-studio.md)します。
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
@@ -59,4 +59,4 @@ Visual Studio がプロジェクト内のドキュメントに 2 つのカスタ
 - [ドキュメント レベルのカスタマイズのアーキテクチャ](../vsto/architecture-of-document-level-customizations.md)
 - [Office ソリューションにおけるアプリケーションと配置マニフェスト](../vsto/application-and-deployment-manifests-in-office-solutions.md)
 - [方法: ClickOnce を使用して、Office ソリューションを発行します。](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)
-- [方法: を作成し、カスタム ドキュメント プロパティの変更](../vsto/how-to-create-and-modify-custom-document-properties.md)
+- [方法: 作成し、カスタム ドキュメント プロパティの変更](../vsto/how-to-create-and-modify-custom-document-properties.md)

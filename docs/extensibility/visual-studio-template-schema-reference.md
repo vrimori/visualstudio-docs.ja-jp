@@ -2,9 +2,8 @@
 title: Visual Studio テンプレート スキーマ参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - VSTEMPLATE files
 - Visual Studio templates, schema
@@ -15,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 566a07af35181433b88d5c84ea461e2b7546fe4b
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: 0774cdbba791c62a5794c7f837d6ce6b32c49432
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586340"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53561828"
 ---
 # <a name="visual-studio-template-schema-reference"></a>Visual Studio テンプレート スキーマ参照
 このセクションの XML 要素に関する情報を格納する *.vstemplate*ファイルで、プロジェクト テンプレート、項目テンプレート、およびスタート キットのメタデータを格納するファイルします。
@@ -36,24 +35,24 @@ ms.locfileid: "39586340"
 |[CreateInPlace](../extensibility/createinplace-visual-studio-templates.md)|--|--|
 |[CreateNewFolder](../extensibility/createnewfolder-element-visual-studio-templates.md)|--|--|
 |[CustomDataSignature](../extensibility/customdatasignature-element-visual-studio-templates.md)|--|--|
-|[CustomParameter](../extensibility/customparameter-element-visual-studio-templates.md)|--|name<br /><br /> [値]|
+|[CustomParameter](../extensibility/customparameter-element-visual-studio-templates.md)|--|名前<br /><br /> [値]|
 |[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|CustomParameter|--|
 |[DefaultName](../extensibility/defaultname-element-visual-studio-templates.md)|--|--|
-|[説明](../extensibility/description-element-visual-studio-templates.md)|--|Package<br /><br /> ID|
+|[説明](../extensibility/description-element-visual-studio-templates.md)|--|パッケージ<br /><br /> ID|
 |[EnableEditOfLocationField](../extensibility/enableeditoflocationfield-element-visual-studio-templates.md)|--|--|
 |[EnableLocationBrowseButton](../extensibility/enablelocationbrowsebutton-element-visual-studio-templates.md)|--|--|
-|[フォルダー](../extensibility/folder-element-visual-studio-project-templates.md)|ProjectItem<br /><br /> フォルダー|name|
+|[フォルダー](../extensibility/folder-element-visual-studio-project-templates.md)|ProjectItem<br /><br /> フォルダー|名前|
 ||[非推奨]|--|
 |[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|--|--|
 |[非表示](../extensibility/hidden-element-visual-studio-templates.md)|--|--|
-|[アイコン](../extensibility/icon-element-visual-studio-templates.md)|--|Package<br /><br /> ID|
+|[アイコン](../extensibility/icon-element-visual-studio-templates.md)|--|パッケージ<br /><br /> ID|
 |[LocationField](../extensibility/locationfield-element-visual-studio-project-templates.md)|--|--|
 |[LocationFieldMRUPrefix](../extensibility/locationfieldmruprefix-element-visual-studio-templates.md)|--|--|
 |[MaxFrameworkVersion](../extensibility/maxframeworkversion-element-visual-studio-templates.md)|--|--|
-|[Name](../extensibility/name-element-visual-studio-templates.md)|--|Package<br /><br /> ID|
+|[Name](../extensibility/name-element-visual-studio-templates.md)|--|パッケージ<br /><br /> ID|
 |[NumberOfParentCategoriesToRollUp](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md)|--|--|
 |[PreviewImage](../extensibility/previewimage-element-visual-studio-templates.md)|--|--|
-|[Project](../extensibility/project-element-visual-studio-templates.md)|フォルダー<br /><br /> ProjectItem|ファイル<br /><br /> TargetFileName<br /><br /> ReplaceParameters|
+|[プロジェクト](../extensibility/project-element-visual-studio-templates.md)|フォルダー<br /><br /> ProjectItem|ファイル<br /><br /> TargetFileName<br /><br /> ReplaceParameters|
 |[ProjectCollection](../extensibility/projectcollection-element-visual-studio-templates.md)|ProjectTemplateLink<br /><br /> SolutionFolder|--|
 |[ProjectItem (項目テンプレート)](../extensibility/projectitem-element-visual-studio-item-templates.md)|--|SubType<br /><br /> CustomTool<br /><br /> ItemType<br /><br /> ReplaceParameters<br /><br /> TargetFileName|
 |[ProjectItem (プロジェクト テンプレート)](../extensibility/projectitem-element-visual-studio-project-templates.md)|--|TargetFileName<br /><br /> ReplaceParameters<br /><br /> OpenInEditor<br /><br /> OpenOrder<br /><br /> OpenInWebBrowser<br /><br /> OpenInHelpBrowser|
@@ -66,20 +65,20 @@ ms.locfileid: "39586340"
 |[参照](../extensibility/references-element-visual-studio-templates.md)|参照|--|
 |[RequiredFrameworkVersion](../extensibility/requiredframeworkversion-element-visual-studio-templates.md)|--|--|
 |[RequiredPlatformVersion](../extensibility/requiredplatformversion-element-visual-studio-templates.md)|--|Version|
-|[SDKReference](../extensibility/sdkreference-element-visual-studio-templates.md)|--|Package|
+|[SDKReference](../extensibility/sdkreference-element-visual-studio-templates.md)|--|パッケージ|
 |[ShowByDefault](../extensibility/showbydefault-visual-studio-templates.md)|--|--|
-|[SolutionFolder](../extensibility/solutionfolder-element-visual-studio-templates.md)|ProjectTemplateLink<br /><br /> SolutionFolder|name|
+|[SolutionFolder](../extensibility/solutionfolder-element-visual-studio-templates.md)|ProjectTemplateLink<br /><br /> SolutionFolder|名前|
 |[SortOrder](../extensibility/sortorder-element-visual-studio-templates.md)|--|--|
 |[SupportsCodeSeparation](../extensibility/supportscodeseparation-element-visual-studio-templates.md)|--|--|
 |[SupportsLanguageDropDown](../extensibility/supportslanguagedropdown-element-visual-studio-templates.md)|--|--|
 |[SupportsMasterPage](../extensibility/supportsmasterpage-element-visual-studio-templates.md)|--|--|
 |[TargetPlatformName](../extensibility/targetplatformname-element-visual-studio-templates.md)|RequiredPlatformVersion|--|
-|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|ProjectCollection<br /><br /> プロジェクト<br /><br /> 参照<br /><br /> ProjectItem<br /><br /> CustomParameters|[BuildOnLoad](../extensibility/buildprojectonload-visual-studio-templates.md)|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|name<br /><br /> 説明<br /><br /> アイコン<br /><br /> PreviewImage<br /><br /> ProjectType<br /><br /> ProjectSubType<br /><br /> TemplateID<br /><br /> TemplateGroupID<br /><br /> SortOrder<br /><br /> CreateNewFolder<br /><br /> DefaultName<br /><br /> ProvideDefaultName<br /><br /> PromptForSaveOnCreation<br /><br /> EnableLocationBrowseButton<br /><br /> EnableEditOfLocationField<br /><br /> 非表示<br /><br /> DisplayInParentCategories<br /><br /> LocationFieldMRUPrefix<br /><br /> NumberOfParentCategoriesToRollUp<br /><br /> CreateInPlace<br /><br /> BuildOnLoad<br /><br /> BuildProjectOnload<br /><br /> ShowByDefault<br /><br /> LocationField<br /><br /> SupportsMasterPage<br /><br /> SupportsCodeSeparation<br /><br /> SupportsLanguageDropDown<br /><br /> RequiredFrameworkVersion<br /><br /> FrameworkVersion<br /><br /> MaxFrameworkVersion<br /><br /> CustomDataSignature<br /><br /> TargetPlatformName|--|
+|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|ProjectCollection<br /><br /> プロジェクト<br /><br /> 参照<br /><br /> ProjectItem<br /><br /> CustomParameters|[BuildOnLoad](../extensibility/buildonload-visual-studio-templates.md)|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|名前<br /><br /> 説明<br /><br /> アイコン<br /><br /> PreviewImage<br /><br /> ProjectType<br /><br /> ProjectSubType<br /><br /> TemplateID<br /><br /> TemplateGroupID<br /><br /> SortOrder<br /><br /> CreateNewFolder<br /><br /> DefaultName<br /><br /> ProvideDefaultName<br /><br /> PromptForSaveOnCreation<br /><br /> EnableLocationBrowseButton<br /><br /> EnableEditOfLocationField<br /><br /> 非表示<br /><br /> DisplayInParentCategories<br /><br /> LocationFieldMRUPrefix<br /><br /> NumberOfParentCategoriesToRollUp<br /><br /> CreateInPlace<br /><br /> BuildOnLoad<br /><br /> BuildProjectOnload<br /><br /> ShowByDefault<br /><br /> LocationField<br /><br /> SupportsMasterPage<br /><br /> SupportsCodeSeparation<br /><br /> SupportsLanguageDropDown<br /><br /> RequiredFrameworkVersion<br /><br /> FrameworkVersion<br /><br /> MaxFrameworkVersion<br /><br /> CustomDataSignature<br /><br /> TargetPlatformName|--|
 |[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)|--|--|
 |[TemplateID](../extensibility/templateid-element-visual-studio-templates.md)|--|--|
 |[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|TemplateData<br /><br /> TemplateContent<br /><br /> WizardExtension<br /><br /> WizardData|型<br /><br /> Version|
-|[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|--|name|
+|[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|--|名前|
 |[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Assembly<br /><br /> FullClassName|--|
 
 ## <a name="see-also"></a>関連項目

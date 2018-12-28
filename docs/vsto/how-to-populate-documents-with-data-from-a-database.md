@@ -11,17 +11,17 @@ dev_langs:
 helpviewer_keywords:
 - documents, populating with data
 - data, adding to documents
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: af068fc9cdacc0f681232ee4c7424d67d77f3a11
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 71c2494a4c1b70e6bcf40b23062f70e91587f2e3
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36756802"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647392"
 ---
 # <a name="how-to-populate-documents-with-data-from-a-database"></a>方法: データベースからデータをドキュメントに読み込む
 
@@ -31,7 +31,7 @@ Microsoft Office のドキュメント レベルのプロジェクトでは、Wi
 
 [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
-次の例は、デザイナーを使用してドキュメント レベルのプロジェクトにデータ バインド コントロールを追加する方法を示しています。 実行時に VSTO アドイン プロジェクトでデータ バインド コントロールを追加する方法の例は、次を参照してください。[チュートリアル: VSTO アドイン プロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)します。
+次の例は、デザイナーを使用してドキュメント レベルのプロジェクトにデータ バインド コントロールを追加する方法を示しています。 実行時に VSTO アドイン プロジェクトでデータ バインド コントロールを追加する方法の例は、次を参照してください。[チュートリアル。VSTO アドイン プロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)します。
 
 ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。 [Word 2007 コンテンツへのデータのバインドは、Office system (3.0) の Visual Studio ツールの使用を制御](http://go.microsoft.com/fwlink/?LinkId=136785)します。
 
@@ -67,7 +67,7 @@ Microsoft Office のドキュメント レベルのプロジェクトでは、Wi
 
 -   <xref:System.Windows.Forms.BindingSource.MoveNext%2A> や <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> など、<xref:System.Windows.Forms.BindingSource> のメソッドを使用します。
 
-型指定されたデータセットと、データベースに更新プログラムを送信する方法については、次を参照してください。[方法: ホスト コントロールからのデータでデータ ソースを更新](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)します。
+型指定されたデータセットと、データベースに更新プログラムを送信する方法については、次を参照してください。[方法。ホスト コントロールからのデータでデータ ソースを更新](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)します。
 
 ## <a name="see-also"></a>関連項目
 
@@ -75,6 +75,6 @@ Microsoft Office のドキュメント レベルのプロジェクトでは、Wi
 - [新しいデータ ソースの追加](../data-tools/add-new-data-sources.md)
 - [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
 - [方法: オブジェクトからのデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-objects.md)
-- [方法: ホスト コントロールからのデータでデータ ソースを更新](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
+- [方法: ホスト コントロールからのデータでデータ ソースを更新します。](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
 - [Office ソリューションの概要でのローカル データベース ファイルを使用します。](../vsto/using-local-database-files-in-office-solutions-overview.md)
 - [BindingSource コンポーネントの概要](/dotnet/framework/winforms/controls/bindingsource-component-overview)

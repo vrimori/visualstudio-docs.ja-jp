@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 700b6c42cbdbf0a8b8c6f604a4c25f0042e2bffe
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: d0e956f1d86079bbeea20beb84201d0a92026b9a
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50966779"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684512"
 ---
 # <a name="create-uml-modeling-projects-and-diagrams"></a>UML モデリング プロジェクトおよびダイアグラムを作成する
 
@@ -31,4 +31,4 @@ Visual Studio 2015 での UML の使用方法の詳細についてを参照し�
 * [アプリのモデルを生成する](create-models-for-your-app.md)
 * [開発プロセス内でのモデルの使用](use-models-in-your-development-process.md)
 * [開発時のシステムの検証](validate-your-system-during-development.md)
-* [UML モデルと図の拡張](extend-uml-models-and-diagrams.md)
+* [UML モデルと図の拡張](create-uml-modeling-projects-and-diagrams.md)

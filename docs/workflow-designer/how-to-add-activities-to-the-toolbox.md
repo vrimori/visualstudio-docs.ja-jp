@@ -1,5 +1,5 @@
 ---
-title: 'ワークフロー デザイナー - 方法: ツールボックスにアクティビティを追加'
+title: ワークフロー デザイナー - 方法。ツール ボックスにアクティビティを追加する
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.prod: visual-studio-dev15
@@ -10,20 +10,20 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a009f36152163e3ac23b85deac4ea99f26092be9
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 1d542d55593ca492b624b1939c71bb389ac42ad3
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37118214"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684562"
 ---
-# <a name="how-to-add-activities-to-the-toolbox"></a>方法 : ツール ボックスにアクティビティを追加する
+# <a name="how-to-add-activities-to-the-toolbox"></a>方法: ツール ボックスにアクティビティを追加する
 
 アクティビティに追加できる、**ツールボックス**でいくつかの方法でソリューション。 アクティビティを現在のプロジェクト内から追加したり、別のプロジェクトや別のアセンブリから参照したりできます。
 
 ## <a name="to-add-an-activity-from-within-your-current-project"></a>現在のプロジェクト内からアクティビティを追加するには
 
-1.  現在のワークフロー プロジェクトに新しいカスタム アクティビティを追加します。 新しいカスタム活動項目をプロジェクトに追加する方法についての詳細については、次を参照してください。[方法: ワークフロー プロジェクトへ新しい項目を追加](../workflow-designer/how-to-add-a-new-item-to-a-workflow-project.md)します。
+1.  現在のワークフロー プロジェクトに新しいカスタム アクティビティを追加します。 新しいカスタム活動項目をプロジェクトに追加する方法についての詳細については、次を参照してください。[方法。ワークフロー プロジェクトへ新しい項目を追加](../workflow-designer/how-to-add-a-new-item-to-a-workflow-project.md)します。
 
 2.  カスタム ロジックをアクティビティに追加します。
 
@@ -62,4 +62,4 @@ ms.locfileid: "37118214"
 
 ## <a name="see-also"></a>関連項目
 
-- [ワークフロー デザイナーの使用](../workflow-designer/using-the-workflow-designer.md)
+- [ワークフロー デザイナーの使用](developing-applications-with-the-workflow-designer.md)

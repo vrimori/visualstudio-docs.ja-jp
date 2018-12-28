@@ -1,5 +1,5 @@
 ---
-title: '方法: Word 文書に XMLNodes コントロールを追加'
+title: '方法: Word 文書に XMLNodes コントロールを追加します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -11,26 +11,26 @@ dev_langs:
 helpviewer_keywords:
 - XMLNodes control, adding to documents
 - controls [Office development in Visual Studio], adding to documents
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ff7a1966c9107fcd2a60b14c21b6a2dfbda09033
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: b27753590ea84fac6029bea0919a1aeda90543fa
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35258071"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647137"
 ---
-# <a name="how-to-add-xmlnodes-controls-to-word-documents"></a>方法: Word 文書に XMLNodes コントロールを追加
+# <a name="how-to-add-xmlnodes-controls-to-word-documents"></a>方法: Word 文書に XMLNodes コントロールを追加します。
   **重要な**に関する Microsoft Word には、このトピックでまとめられている情報が提示の特典および個人や組織のユーザーは、米国およびその担当地域外部にあるまたはを使用しているユーザーの使用専用、または開発上で実行されるプログラム、Microsoft が特定の機能の実装を削除する場合、2010 年 1 月の前に、Microsoft によってライセンスされた Microsoft Word の製品に関連するカスタム XML から Microsoft Word です。 Microsoft Word に関するこの情報が読み取りまたは個人または組織、米国またはその区域を使用して、または、2010 年 1 月 10 日後に Microsoft によってライセンス供与された Microsoft Word の製品で実行されるプログラムの開発で使用しない可能性があります。;これらの製品では、その日付より前にライセンスまたは購入を米国外の使用ライセンスの製品と同じ動作はしません。  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
  Microsoft Office Word 文書に繰り返される XML スキーマ要素をマップすると、Visual Studio は自動的に追加、<xref:Microsoft.Office.Tools.Word.XMLNodes>コントロールをドキュメント。  
   
- XML スキーマ要素の非繰り返しのマッピングについては、次を参照してください。[方法: Word 文書にコントロールを追加 XMLNode](../vsto/how-to-add-xmlnode-controls-to-word-documents.md)します。  
+ XML スキーマ要素の非繰り返しのマッピングについては、次を参照してください。[方法。Word 文書に XMLNode コントロールを追加](../vsto/how-to-add-xmlnode-controls-to-word-documents.md)します。  
   
 > [!NOTE]  
 >  <xref:Microsoft.Office.Tools.Word.XMLNodes>コントロールはから使用できません、**ツールボックス**または**データ ソース**ウィンドウで、また、プログラムで作成します。  
@@ -42,7 +42,7 @@ ms.locfileid: "35258071"
 1.  リボンで、Visual Studio デザイナーで文書のクリックして、**開発者**タブ。  
   
     > [!NOTE]  
-    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、次を参照してください。[方法: リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
+    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、「[方法 :リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
   
 2.  **XML**グループで、**スキーマ**します。  
   

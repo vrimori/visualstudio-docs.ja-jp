@@ -2,9 +2,8 @@
 title: ProjectCollection 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#ProjectCollection
 helpviewer_keywords:
@@ -16,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c91c470a9478c7015972be66afe5f41174073047
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 9397fb9a6ab1cb4c117df111a10ab7613c500b84
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637001"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53562088"
 ---
 # <a name="projectcollection-element-visual-studio-templates"></a>ProjectCollection 要素 (Visual Studio テンプレート)
 複数プロジェクトのテンプレートの構成と内容を指定します。  
@@ -59,7 +58,7 @@ ms.locfileid: "39637001"
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートの内容を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- 複数プロジェクトのテンプレートは、2 つ以上のプロジェクトのコンテナーとして機能します。 `ProjectCollection`要素を使用して、テンプレートが含まれているプロジェクトを指定します。 複数プロジェクトのテンプレートの詳細については、次を参照してください。[方法: 複数プロジェクトのテンプレートを作成する](../ide/how-to-create-multi-project-templates.md)します。  
+ 複数プロジェクトのテンプレートは、2 つ以上のプロジェクトのコンテナーとして機能します。 `ProjectCollection`要素を使用して、テンプレートが含まれているプロジェクトを指定します。 複数プロジェクトのテンプレートの詳細については、次を参照してください。[方法。複数のプロジェクト テンプレートを作成する](../ide/how-to-create-multi-project-templates.md)します。  
   
 ## <a name="example"></a>例  
  この例は単純なマルチ プロジェクトのルート *.vstemplate*ファイル。 この例では、テンプレートには `My Windows Application` と `My Class Library` の 2 つのプロジェクトが含まれています。 `ProjectName` 要素の `ProjectTemplateLink` 属性は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] がこのプロジェクトに割り当てる名前を設定します。 場合、`ProjectName`属性が存在しないの名前、 *.vstemplate*ファイルは、プロジェクト名として使用します。  
@@ -89,4 +88,4 @@ ms.locfileid: "39637001"
 ## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [プロジェクトと項目テンプレートを作成します。](../ide/creating-project-and-item-templates.md)   
- [方法: 複数プロジェクトのテンプレートの作成](../ide/how-to-create-multi-project-templates.md)
+ [方法: 複数プロジェクトのテンプレートを作成します。](../ide/how-to-create-multi-project-templates.md)

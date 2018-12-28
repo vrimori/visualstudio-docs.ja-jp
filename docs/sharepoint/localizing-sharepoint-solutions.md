@@ -22,16 +22,16 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ba02d8811fc6633a55e06ae63c9399c70f59634f
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 3897efa937991b598f6aae1cf24781ab2ce26c37
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119847"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684744"
 ---
 # <a name="localize-sharepoint-solutions"></a>SharePoint ソリューションをローカライズします。
 
-  アプリケーションを世界中で使用できるように準備するプロセスをローカライズと呼びます。 ローカライズでは、リソースを特定のカルチャに翻訳します。 詳細については、次を参照してください。 [Globalizing and Localizing Applications](/visualstudio/ide/globalizing-and-localizing-applications)します。 このトピックでは、SharePoint ソリューションをローカライズする方法の概要について説明します。  
+  アプリケーションを世界中で使用できるように準備するプロセスをローカライズと呼びます。 ローカライズでは、リソースを特定のカルチャに翻訳します。 詳細については、次を参照してください。 [Globalizing and Localizing Applications](../ide/globalizing-and-localizing-applications.md)します。 このトピックでは、SharePoint ソリューションをローカライズする方法の概要について説明します。  
   
  ソリューションをローカライズするには、ハードコーディングされた文字列をコードから削除してリソース ファイルに抽出します。 リソース ファイルとは、 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]-ベースのファイルで、 *.resx*拡張機能。 リソース ファイルには、ソリューションで使用される文字列の翻訳されたバージョンが含まれています。 詳細については、次を参照してください。[アプリケーションのリソース](http://go.microsoft.com/fwlink/?LinkID=155844)します。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "37119847"
  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint アプリケーションでは、フィーチャー、ASPX ページ マークアップ、およびコードの 3 つの領域をローカライズするのが一般的です。 以降の説明では、SharePoint ソリューションをドイツ語と日本語にローカライズする場合を想定しています。 既定の言語は英語です。  
   
 ### <a name="localize-features"></a>機能をローカライズします。
- フィーチャーをローカライズするには、ハードコーディングされたフィーチャーのタイトルと説明を、ローカライズされたリソース ファイルに含まれている翻訳済みのタイトルと文字列を参照する式に置き換える必要があります。 この変更を行う、**フィーチャー デザイナー**で[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。 詳細については、次を参照してください。[方法: フィーチャーをローカライズ](../sharepoint/how-to-localize-a-feature.md)します。  
+ フィーチャーをローカライズするには、ハードコーディングされたフィーチャーのタイトルと説明を、ローカライズされたリソース ファイルに含まれている翻訳済みのタイトルと文字列を参照する式に置き換える必要があります。 この変更を行う、**フィーチャー デザイナー**で[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。 詳細については、「[方法 :フィーチャーをローカライズ](../sharepoint/how-to-localize-a-feature.md)します。  
   
  英語のフィーチャーをドイツ語と日本語にローカライズするには、プロジェクトに 3 つのリソース ファイル プロジェクト項目 (英語用、ドイツ語用、および日本語用) を追加します。 フィーチャー リソース ファイルは、ASPX マークアップやコードのローカライズには使用できません。これらにはまた別のリソース ファイルが必要です。  
   
@@ -91,7 +91,7 @@ $Resources:String ID
 <asp:<class> runat="server" Text="<%$Resources:<Resource File Name>, <String ID>%>" />  
 ```  
   
- 例えば:  
+ 例:  
   
 ```aspx-csharp  
 <asp:Button ID="btn1" runat="server" onclick="btn1_Click" Text="<%$Resources:Resource1,String7%>"></asp:Button>  
@@ -103,13 +103,13 @@ $Resources:String ID
 <asp:literal ID="<ID>" runat="server" Text="<%$Resources:<Resource File Name>, <String ID>%>" />  
 ```  
   
- 例えば:  
+ 例:  
   
 ```aspx-csharp  
 <asp:literal ID="Literal1" runat="server" Text="<%$Resources:Resource1, String9%>" />  
 ```  
   
- 詳細については、次を参照してください。[方法: ローカライズの ASPX マークアップ](../sharepoint/how-to-localize-aspx-markup.md)します。  
+ 詳細については、「[方法 :ASPX マークアップをローカライズ](../sharepoint/how-to-localize-aspx-markup.md)します。  
   
 ### <a name="localize-code"></a>コードをローカライズします。
  フィーチャーの文字列と [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] のマークアップに加えて、ソリューション コード内のメッセージ文字列やエラー文字列をローカライズする必要もあります。 ローカライズされた情報とエラー メッセージはサテライト アセンブリに格納されます。 サテライト アセンブリには、[!INCLUDE[TLA2#tla_ui](../sharepoint/includes/tla2sharptla-ui-md.md)] テキストや例外出力メッセージなど、ユーザーに表示される文字列が格納されます。  
@@ -126,7 +126,7 @@ $Resources:String ID
 HttpContext.GetGlobalResourceObject("<Resource File Name>", "<String ID>")  
 ```  
   
- 詳細については、次を参照してください。[方法: コードのローカライズ](../sharepoint/how-to-localize-code.md)します。  
+ 詳細については、「[方法 :コードのローカライズ](../sharepoint/how-to-localize-code.md)します。  
   
 #### <a name="web-part-code-localization"></a>Web パーツ コードのローカライズ
  Web パーツに含まれるカスタム プロパティ エディター機能には、ハードコーディングされた文字列を使用するコード属性 (WebDisplayName、Category、WebDescription など) が含まれています。 これらの属性の文字列値を置き換えるには、属性のクラスから派生する別のクラスを作成して、 それらのクラスで属性のプロパティを設定します。 属性のプロパティは基底クラスに依存します。 たとえば、WebDisplayName 属性のプロパティは DisplayNameValue で、WebDescription 属性のプロパティは DescriptionValue です。  
@@ -134,9 +134,8 @@ HttpContext.GetGlobalResourceObject("<Resource File Name>", "<String ID>")
  派生クラスで、リソース ファイルの文字列 ID と ResourceManager オブジェクトを参照してその文字列 ID のローカライズされた値を取得し、 その値をプロパティ エディターの属性に返します。  
   
 ## <a name="see-also"></a>関連項目
- [方法: フィーチャーをローカライズ](../sharepoint/how-to-localize-a-feature.md)   
- [方法: ASPX マークアップのローカライズ](../sharepoint/how-to-localize-aspx-markup.md)   
- [方法: コードのローカライズ](../sharepoint/how-to-localize-code.md)   
- [方法: リソース ファイルを追加](../sharepoint/how-to-add-a-resource-file.md)   
+ [方法: フィーチャーをローカライズします。](../sharepoint/how-to-localize-a-feature.md)   
+ [方法: ASPX マークアップをローカライズします。](../sharepoint/how-to-localize-aspx-markup.md)   
+ [方法: コードをローカライズします。](../sharepoint/how-to-localize-code.md)   
+ [方法: リソース ファイルを追加します。](../sharepoint/how-to-add-a-resource-file.md)   
  [方法: リソース ファイルを使用して、ローカライズされた名前、プロパティ、およびアクセス許可を指定するには](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)  
-  

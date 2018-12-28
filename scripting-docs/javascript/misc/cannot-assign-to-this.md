@@ -22,13 +22,13 @@ ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 47e55d39e85675b37d2ac9741d1207a9e81d369e
 ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49856653"
 ---
 # <a name="cannot-assign-to-39this39"></a>'this' に割り当てることはできません。
-値を代入しようとしています。**この**します。 **this**は、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]キーワードのいずれかを参照します。
+**this** に値を割り当てようとしました。 **this**は、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]キーワードのいずれかを参照します。
 
 - 現在、メソッドを実行するオブジェクト
 

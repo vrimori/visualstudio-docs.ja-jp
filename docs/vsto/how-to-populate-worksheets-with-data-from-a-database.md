@@ -12,17 +12,17 @@ helpviewer_keywords:
 - worksheets [Office development in Visual Studio], populating
 - databases [Office development in Visual Studio], populating worksheets
 - data [Office development in Visual Studio], adding to worksheets
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 25e73eaa3cdd0655a51711ddd30996915f984213
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
-ms.translationtype: MT
+ms.openlocfilehash: e63a95635c57c3fa344d7d9197436a2e0e744621
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36758470"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648192"
 ---
 # <a name="how-to-populate-worksheets-with-data-from-a-database"></a>方法: データベースからデータをワークシートに読み込む
 
@@ -30,9 +30,9 @@ Windows フォーム プロジェクトでのデータにアクセスするの�
 
 [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
-次の例は、デザイナーを使用してドキュメント レベルのプロジェクトにデータ バインド コントロールを追加する方法を示しています。 アプリケーション レベルのプロジェクトの実行時にデータ バインド コントロールを追加する方法の例は、次を参照してください。[チュートリアル: VSTO アドイン プロジェクトで複雑なデータ バインディング](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)します。
+次の例は、デザイナーを使用してドキュメント レベルのプロジェクトにデータ バインド コントロールを追加する方法を示しています。 アプリケーション レベルのプロジェクトの実行時にデータ バインド コントロールを追加する方法の例は、次を参照してください。[チュートリアル。VSTO アドイン プロジェクトで複雑なデータ バインディング](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)します。
 
-![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[を Excel ワークシートにデータの操作の転送を操作する方法でしょうか。](http://go.microsoft.com/fwlink/?LinkID=130277)、および[Excel でデータベースの操作を使用するデータを操作する方法でしょうか。](http://go.microsoft.com/fwlink/?LinkID=130287)します。
+![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:Excel のワークシートにデータを転送しますか。](http://go.microsoft.com/fwlink/?LinkID=130277)、および[How do i:Excel でデータベースのデータを使用しますか。](http://go.microsoft.com/fwlink/?LinkID=130287)
 
 ## <a name="add-a-data-bound-control-to-a-worksheet-at-design-time"></a>デザイン時にデータ バインド コントロールをワークシートに追加します。
 
@@ -70,7 +70,7 @@ Windows フォーム プロジェクトでのデータにアクセスするの�
 
 -   <xref:System.Windows.Forms.BindingSource.MoveNext%2A> や <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> など、<xref:System.Windows.Forms.BindingSource> のメソッドを使用します。
 
-型指定されたデータセットと、データベースに更新プログラムを送信する方法については、次を参照してください。[方法: ホスト コントロールからのデータでデータ ソースを更新](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)します。
+型指定されたデータセットと、データベースに更新プログラムを送信する方法については、次を参照してください。[方法。ホスト コントロールからのデータでデータ ソースを更新](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)します。
 
 ## <a name="see-also"></a>関連項目
 
@@ -79,7 +79,7 @@ Windows フォーム プロジェクトでのデータにアクセスするの�
 - [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
 - [方法: オブジェクトからのデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-objects.md)
 - [方法: データベースからデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-a-database.md)
-- [方法: データ サービスからドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-services.md)
-- [方法: ホスト コントロールからのデータでデータ ソースを更新](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
-- [Excel のワークシートにデータの操作の転送を操作する方法](http://go.microsoft.com/fwlink/?LinkID=130277)
-- [Excel でデータベースの操作を使用するデータを操作する方法](http://go.microsoft.com/fwlink/?LinkID=130287)
+- [方法: サービスからデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-services.md)
+- [方法: ホスト コントロールからのデータでデータ ソースを更新します。](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
+- [操作を方法します。Excel のワークシートにデータを転送します。](http://go.microsoft.com/fwlink/?LinkID=130277)
+- [操作を方法します。Excel でデータベースのデータを使用しますか。](http://go.microsoft.com/fwlink/?LinkID=130287)

@@ -15,16 +15,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eab54410c7eb1db9dfc0ac3b2c9b2f5df8b85eac
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4eae301ca32ef986c76203fd04e7bd6dc9302fec
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42634555"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53740180"
 ---
 # <a name="code-analysis-application-errors"></a>コード分析のアプリケーション エラー
 
-このセクションでは、マネージ コード分析ツールによって生成されるエラー メッセージの参照です。 に特定のエラー メッセージのヘルプを取得するには、でのエラー番号を入力、**探して**キーワードします。
+このセクションでは、マネージ コード分析ツールによって生成されるエラー メッセージの参照です。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -45,21 +45,20 @@ ms.locfileid: "42634555"
 |[CA0062](ca0062.md)|ルール '*RuleId*'規則セットで参照されている'*RuleSetName*' は見つかりませんでした。|
 |[CA0063](ca0063.md)|規則セット ファイルまたはその依存ルール セット ファイルのいずれかの読み込みに失敗しました。|
 |[CA0064](ca0064.md)|指定された規則セットに FxCop ルールが含まれていないために、分析は実行されません。|
-|[CA0065](ca0065.md)|サポートされていないメタデータ構造: 型 '*TypeName*'プロパティと同じ名前のフィールドの両方を含む'*PropertyFieldName*'|
+|[CA0065](ca0065.md)|サポートされていないメタデータ構造:型 '*TypeName*'プロパティと同じ名前のフィールドの両方を含む'*PropertyFieldName*'|
 |[CA0066](ca0066.md)|値 '*VersionID*' に提供される、 **/targetframeworkversion**認識されているバージョンではありません。|
 |[CA0067](ca0067.md)|ディレクトリが見つかりません。|
 |[CA0068](ca0068.md)|デバッグ ターゲット アセンブリの情報が見つかりませんでした *'AssemblyName'* します。|
-|[CA0069](ca0069.md)|別のプラットフォームを使用します。 *FrameworkVersion1*は見つかりませんでした。 使用して*FrameworkVersion2*代わりにします。 最良の分析結果は、適切な .NET Framework がインストールされていることを確認してください。|
+|[CA0069](ca0069.md)|別のプラットフォームを使用します。 *FrameworkVersion1*は見つかりませんでした。 使用して*FrameworkVersion2*代わりにします。 最良の分析結果の適切な .NET Framework がインストールされていることを確認します。|
 |[CA0070](ca0070.md)|アセンブリまたはセキュリティのアクセス許可のための型を読み込むことができません。|
 |[CA0501](ca0501.md)|レポート出力を読み取ることができません。|
 |[CA0502](ca0502.md)|サポートされていない言語です。|
-|[CA0503](ca0503.md)|プロパティが非推奨とされます。 優先するプロパティを使用します。|
+|[CA0503](ca0503.md)|プロパティが非推奨とされます。 置き換える方のプロパティを使用します。|
 |[CA0504](ca0504.md)|存在しないために、ルールのディレクトリは無視されました|
-|[CA0505](ca0505.md)|プロパティが非推奨とされます。 優先するプロパティを使用します。|
+|[CA0505](ca0505.md)|プロパティが非推奨とされます。 置き換える方のプロパティを使用します。|
 |[FxCopCmd エラー](fxcopcmd-errors.md)|マネージ コード分析エラー。|
 
 ## <a name="related-sections"></a>関連項目
 
 - [Code Analysis Policy Errors](../code-quality/code-analysis-policy-errors.md)
-- 
-  [マネージド コードの品質の分析](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)
+- [マネージド コードの品質の分析](../code-quality/code-analysis-for-managed-code-overview.md)

@@ -17,17 +17,17 @@ helpviewer_keywords:
 - Office projects [Office development in Visual Studio], features available
 - add-ins [Office development in Visual Studio]
 - form regions [Office development in Visual Studio], features available
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6fac14df471b0dfcda1d0bf4763158280211bc33
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: c495119dea17fa7d4a848c6e3d6f5b16128af378
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50672461"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648153"
 ---
 # <a name="features-available-by-office-application-and-project-type"></a>Office アプリケーションおよびプロジェクトの種類で使用できる機能
   Visual Studio には、次のように、Microsoft Office アプリケーションのさまざまなビジネス シナリオをサポートするプロジェクト テンプレートがいくつか用意されています。  
@@ -62,9 +62,9 @@ ms.locfileid: "50672461"
 |他の Microsoft Office ソリューションに VSTO アドイン内のオブジェクトを公開します。|VSTO アドイン プロジェクト。|[他の Office ソリューションから VSTO アドイン内のコードを呼び出す](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)|  
 |次のホスト コントロール:<br /><br /> -グラフ<br />-ListObject<br />-NamedRange<br />-コンテンツ コントロール<br />-ブックマーク|ドキュメントレベルのプロジェクト。<br /><br /> Word と Excel 用の VSTO アドイン プロジェクト。|[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)|  
 |次のホスト コントロール:<br /><br /> -XMLMappedRange<br />-XMLNode<br />-XMLNodes|ドキュメントレベルのプロジェクト。|[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)|  
-|複数プロジェクトの配置。|ドキュメントレベルのプロジェクト。<br /><br /> VSTO アドイン プロジェクト。|[チュートリアル: 単一の ClickOnce インストーラーで複数の Office ソリューションを展開します。](https://msdn.microsoft.com/051223c0-4082-4799-b78b-a4763a9def55)|  
+|複数プロジェクトの配置。|ドキュメントレベルのプロジェクト。<br /><br /> VSTO アドイン プロジェクト。|[チュートリアル: 単一の ClickOnce インストーラーで複数の Office ソリューションを配置します。](https://msdn.microsoft.com/051223c0-4082-4799-b78b-a4763a9def55)|  
 |Outlook フォーム領域。|Outlook 用の VSTO アドイン プロジェクト。|[Outlook フォーム領域を作成します。](../vsto/creating-outlook-form-regions.md)|  
-|配置後の動作。|ドキュメントレベルのプロジェクト。<br /><br /> VSTO アドイン プロジェクト。|[チュートリアル: ClickOnce のインストール後にドキュメントをエンドユーザーのコンピューターにコピーします。](https://msdn.microsoft.com/100090f7-bc63-4152-b3e1-19b48bc27466)|  
+|配置後の動作。|ドキュメントレベルのプロジェクト。<br /><br /> VSTO アドイン プロジェクト。|[チュートリアル: ClickOnce インストール後にドキュメントをエンドユーザーのコンピューターにコピーします。](https://msdn.microsoft.com/100090f7-bc63-4152-b3e1-19b48bc27466)|  
 |リボンのカスタマイズ。|ドキュメントレベルのプロジェクト。<br /><br /> 次のアプリケーション用の VSTO アドイン プロジェクト:<br /><br /> -Excel<br />-InfoPath (InfoPath 2013 と InfoPath 2010 のみ)<br />-Outlook<br />-PowerPoint<br />-プロジェクト<br />Visio<br />ワード|[リボンの概要](../vsto/ribbon-overview.md)|  
 |視覚的なドキュメント デザイナー。|ドキュメントレベルのプロジェクト。|[Visual Studio 環境における office プロジェクト](../vsto/office-projects-in-the-visual-studio-environment.md)|  
   

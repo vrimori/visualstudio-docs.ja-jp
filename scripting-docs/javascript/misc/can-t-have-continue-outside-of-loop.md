@@ -1,5 +1,5 @@
 ﻿---
-title: 'continue' をループの外に設定できません。 |Microsoft ドキュメント'
+title: ループの外 'の continue' を含めることはできません |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,35 +20,35 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8760eef1bb69f5f3ad18791dde8e25ce16776735
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 6d4939635b69cf5b49e36c7168dcf3c1a786821f
+ms.sourcegitcommit: 7ba97696d6d48de698210863183266af90c82af5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633302"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531246"
 ---
-# <a name="can39t-have-39continue39-outside-of-loop"></a>'continue' をループの外に設定できません。
-使用しようとする、**continue**ステートメント、ループの外にあります。 **continue**ステートメントは a: の本体内でのみ使用できます  
+# <a name="cant-have-continue-outside-of-loop"></a>'continue' をループの外に設定できません。
+使用しようとする、**続行**ループ外にあるステートメント。 **続行**ステートメント a: の本文内でのみ使用できます  
   
--   `do-while`ループ  
+-   `do-while` ループ  
   
--   `while`ループ  
+-   `while` ループ  
   
 -   **for**ループ  
   
--   **for/in** ループ  
+-   **for とで**ループします。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   **continue**ステートメントが以下の本文の中に現れることを確認してください：  
+-   必ず、**続行**a: の本体内のステートメントが表示されます  
   
-    -   `do-while`ループ  
+    -   `do-while` ループ  
   
-    -   `while`ループ  
+    -   `while` ループ  
   
     -   **for**ループ  
   
-    -   **for/in** ループ  
+    -   **for とで**ループします。  
   
 ## <a name="see-also"></a>関連項目  
  [continue ステートメント](../../javascript/reference/continue-statement-javascript.md)   

@@ -1,6 +1,7 @@
 ---
 title: '方法: Visual Studio 内でワークシートにスキーマを割り当てる'
-ms.custom: ''
+titleSuffix: ''
+ms.custom: seodec18
 ms.date: 02/02/2017
 ms.technology:
 - office-development
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - mappings [Office development in Visual Studio], XML schemas to Excel worksheets
 - Excel [Office development in Visual Studio], XML schemas
 - worksheets [Office development in Visual Studio], XML schemas
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8b95e24d151ef6bf8a0083d130c4e38f3f33d480
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 672acf2b33463ee5110dc537f14831a1c034380e
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35256046"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53646655"
 ---
 # <a name="how-to-map-schemas-to-worksheets-inside-visual-studio"></a>方法: Visual Studio 内でワークシートにスキーマを割り当てる
   ワークシートが Visual Studio で開いている間は、ワークシートに XML スキーマをマップできます。 ブックが Visual Studio の外部で開いているときに使用するのと同じ Microsoft Office Excel ツールを使用するとします。 Office プロジェクトは、前に、ワークシートにスキーマをマップするかどうか、または Excel ソリューションを作成した後に、同じオブジェクトを作成します。  
@@ -42,7 +43,7 @@ ms.locfileid: "35256046"
 3.  リボンの **[開発]** タブをクリックします。  
   
     > [!NOTE]  
-    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、次を参照してください。[方法: リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
+    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、「[方法 :リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
   
 4.  **XML**グループで、**ソース**します。  
   

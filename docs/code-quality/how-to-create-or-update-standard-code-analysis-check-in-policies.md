@@ -13,14 +13,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 99f0e665e00e614cfcf3f4e285e33345e31ab42b
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 9c4a7405dd94837d5e373470cd9181c18d913191
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283237"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53740076"
 ---
-# <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>方法: 標準のコード分析チェックイン ポリシーを作成または更新する
+# <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>方法: 作成または標準のコード分析チェックイン ポリシーの更新
 
 コード分析チェックイン ポリシーを使用して、Azure DevOps プロジェクト内のすべてのコード プロジェクトでコード分析を実行することを要求することができます。 コード分析を必要とすると、コード ベースにチェックインされているコードの品質を向上させることができます。
 
@@ -71,4 +71,4 @@ ms.locfileid: "44283237"
 
 ## <a name="see-also"></a>関連項目
 
-- [作成し、コード分析チェックイン ポリシーを使用して、](../code-quality/creating-and-using-code-analysis-check-in-policies.md)
+- [作成し、コード分析チェックイン ポリシーを使用して、](../code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies.md)

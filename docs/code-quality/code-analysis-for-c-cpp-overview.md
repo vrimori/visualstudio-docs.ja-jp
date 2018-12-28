@@ -23,12 +23,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f694d9cc397800249dd9b4acd86bf63d22ad93
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: a1aeb3cea738a08850762083929741c082d7ccb6
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44320710"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53739860"
 ---
 # <a name="code-analysis-for-cc-overview"></a>C と C++ の概要のコード分析
 
@@ -52,24 +52,24 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="pragma-support"></a>#pragma サポート
 
-使用することができます、`#pragma`ディレクティブは警告をエラーとして扱う; 有効または警告を無効にする個々 の行のコードの警告を非表示にします。 詳細については、次を参照してください。[方法: c/c++ プロジェクトのコード分析プロパティを設定](how-to-set-code-analysis-properties-for-c-cpp-projects.md)します。
+使用することができます、`#pragma`ディレクティブは警告をエラーとして扱う; 有効または警告を無効にする個々 の行のコードの警告を非表示にします。 詳細については、「[方法 :C と C++ プロジェクトのコード分析プロパティを設定](how-to-set-code-analysis-properties-for-c-cpp-projects.md)します。
 
 ## <a name="annotation-support"></a>注釈のサポート
 
-注釈には、コード分析の精度が向上します。 注釈は、関数のパラメーターの前と後の状態に関する追加情報を提供し、型を返します。 詳細については、次を参照してください[方法: _analysis_assume を使用して追加のコード情報の指定。](../code-quality/how-to-specify-additional-code-information-by-using-analysis-assume.md)
+注釈には、コード分析の精度が向上します。 注釈は、関数のパラメーターの前と後の状態に関する追加情報を提供し、型を返します。 詳細については、「[方法 :_Analysis_assume を使用してコードを追加情報を指定します。](../code-quality/how-to-specify-additional-code-information-by-using-analysis-assume.md)
 
 ## <a name="run-analysis-tool-as-part-of-check-in-policy"></a>分析ツールでは、チェックイン ポリシーの一部として実行します。
 
-すべて元のコードのチェックインが特定のポリシーを満たすことを要求する可能性があります。 具体的には、最新のローカル ビルドのステップとして分析が実行されているかどうかを確認します。 コード分析チェックイン ポリシーを有効にする方法の詳細については、次を参照してください[の作成とコード分析チェックイン ポリシーの使用。](../code-quality/creating-and-using-code-analysis-check-in-policies.md)
+すべて元のコードのチェックインが特定のポリシーを満たすことを要求する可能性があります。 具体的には、最新のローカル ビルドのステップとして分析が実行されているかどうかを確認します。 コード分析チェックイン ポリシーを有効にする方法の詳細については、次を参照してください[の作成とコード分析チェックイン ポリシーの使用。](../code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies.md)
 
 ## <a name="team-build-integration"></a>チーム ビルドの統合
 
-手順として、コード分析ツールを実行するビルド システムの統合機能を使用することができます、[!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]プロセスを構築します。 詳細については、次を参照してください。 [Azure パイプライン](/azure/devops/pipelines/index?view=vsts)します。
+手順として、コード分析ツールを実行するビルド システムの統合機能を使用することができます、[!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]プロセスを構築します。 詳細については、「[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [C/C++ 用のクイック スタート: コード分析](quick-start-code-analysis-for-c-cpp.md)
-- [チュートリアル: C/C++ コードを分析による障害の](walkthrough-analyzing-c-cpp-code-for-defects.md)
+- [クイック スタート:C/C++ のコード分析](quick-start-code-analysis-for-c-cpp.md)
+- [チュートリアル: C/C++ コードの分析による障害の](walkthrough-analyzing-c-cpp-code-for-defects.md)
 - [C/C++ コードの警告に対応するコードの分析](code-analysis-for-c-cpp-warnings.md)
 - [C++ Core ガイドライン チェッカーの使用](using-the-cpp-core-guidelines-checkers.md)
 - [C++ Core ガイドライン チェッカーの参照](code-analysis-for-cpp-corecheck.md)

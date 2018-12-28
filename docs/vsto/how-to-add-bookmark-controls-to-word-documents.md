@@ -1,5 +1,5 @@
 ---
-title: '方法: Word 文書に Bookmark コントロールを追加'
+title: '方法: Word 文書に Bookmark コントロールを追加します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - Bookmark control, adding to documents
 - Create Bookmark Control dialog box
 - controls [Office development in Visual Studio], adding to documents
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 33afb16b9862f418f4d661bb5432ea4bb3866f16
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0e58525d20efe17d24cd916b5e9eff79c7da59d7
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49878610"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647791"
 ---
-# <a name="how-to-add-bookmark-controls-to-word-documents"></a>方法: Word 文書に Bookmark コントロールを追加
+# <a name="how-to-add-bookmark-controls-to-word-documents"></a>方法: Word 文書に Bookmark コントロールを追加します。
   ドキュメント レベルのプロジェクトに追加することができます<xref:Microsoft.Office.Tools.Word.Bookmark>デザイン時または実行時に、プロジェクトのドキュメントにコントロール。 VSTO アドイン プロジェクトに追加することができます<xref:Microsoft.Office.Tools.Word.Bookmark>実行時に開いているドキュメントのコントロール。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
@@ -135,6 +135,6 @@ ms.locfileid: "49878610"
  [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
  [VSTO アドインをプログラミングします。](../vsto/programming-vsto-add-ins.md)   
  [プログラムのドキュメント レベルのカスタマイズ](../vsto/programming-document-level-customizations.md)   
- [方法: Bookmark コントロールのサイズを変更します。](../vsto/how-to-resize-bookmark-controls.md)  
+ [方法: ブックマーク コントロールをサイズ変更します。](../vsto/how-to-resize-bookmark-controls.md)  
   
   

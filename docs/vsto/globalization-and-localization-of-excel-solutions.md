@@ -10,17 +10,17 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - globalization [Office development in Visual Studio], configuring
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ade59e757778ac7858732f5bf9880b9f88eacd69
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 4a305a74d24b8480732fb2132bf6c25f4f4f3d7a
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567458"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53647780"
 ---
 # <a name="globalization-and-localization-of-excel-solutions"></a>Excel ソリューションのグローバリゼーションとローカリゼーション
   ここでは、Windows に英語以外の言語を設定しているコンピューターで実行される Microsoft Office Excel ソリューションにおいて、特に考慮が必要な事項について説明します。 Microsoft Office ソリューションのグローバリゼーションとローカリゼーションは、ほとんどの点で、Visual Studio を使用して他の種類のソリューションを作成する場合と同じです。 一般的な情報は、次を参照してください。 [Globalize とアプリケーションのローカライズ](/visualstudio/ide/globalizing-and-localizing-applications)します。  
@@ -39,7 +39,7 @@ ms.locfileid: "39567458"
   
  マネージド コードに渡されるデータや、マネージド コードによって処理されるデータに英語 (米国) の書式を使用した場合でも、Excel では、エンド ユーザーのロケール設定に従って、データが正確に解釈および表示されます。 Excel がデータを正確に書式設定できるのは、マネージド コードによってデータと共にロケール ID 1033 が渡されるからです。このロケール ID は、データが英語 (米国) の書式であることを示し、ユーザーのロケール設定に合わせてデータを再度書式設定する必要があることを示します。  
   
- たとえば、エンド ユーザーの地域オプションがドイツ語 (ドイツ) ロケールに設定されている場合、ユーザーは 2005 年 6 月 29 日という日付が 29.06.2005 として書式設定されると予測します。 ですが、ソリューションがこの日付を文字列として Excel に渡す場合は、英語 (米国) の書式に従って 6/29/2005 と書式設定する必要があります。 セルが日付セルとして書式設定されている場合、Excel はこの日付をドイツ語 (ドイツ) の書式で表示します。  
+ たとえば、エンド ユーザーがドイツ語 (ドイツ) ロケールに設定の地域のオプションを使用している場合、この方法を書式設定される日付の 2005 年 6 月 29 日が想定します。29.06.2005 します。 ただし、ソリューションは、日付を文字列として Excel に合格した場合は、英語 (米国) の形式に従って日付を書式設定する必要があります。6/29/2005。 セルが日付セルとして書式設定されている場合、Excel はこの日付をドイツ語 (ドイツ) の書式で表示します。  
   
 ### <a name="pass-other-locale-ids-to-the-excel-object-model"></a>Excel オブジェクト モデルを他のロケール Id を渡す  
  共通言語ランタイム (CLR) は、ロケールに依存するデータを受け入れる Excel オブジェクト モデルのすべてのメソッドとプロパティに対して、自動的にロケール ID 1033 を渡します。 どのオブジェクト モデルへの呼び出しでも、この動作を自動的に変更する方法はありません。 ただし、 <xref:System.Type.InvokeMember%2A> を使用してメソッドを呼び出し、メソッドの *culture* パラメーターにロケール ID を渡すことで、特定のメソッドに別のロケール ID を渡すことができます。  
@@ -80,7 +80,7 @@ Application.ActiveCell.Value2 = "05/12/04"
   
  同じコードを Visual Studio の Office 開発ツールを使用して作成したソリューションで使用し、COM 相互運用機能を通じて Excel に渡すと、日付の書式を en-US スタイルに設定した場合と同じ結果が得られます。  
   
- 例えば:  
+ 例:  
   
  [!code-vb[Trin_VstcoreCreatingExcel#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb#6)]
  [!code-csharp[Trin_VstcoreCreatingExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#6)]  
@@ -99,7 +99,7 @@ Application.ActiveCell.Value2 = "05/12/04"
  レガシ システムからエクスポートされたコンマ区切り値を含むファイル (CSV ファイル) などの外部データを開いたり使用したりするコードは、ファイルが en-US 以外の形式でエクスポートされると影響が出る場合があります。 データベースへのアクセスはすべての値がバイナリ形式なので影響を受けないと考えられますが、データベースで日付が文字列として保存されていたり、バイナリ形式を使用しない操作が実行されたりする場合は、この限りではありません。 また、Excel のデータを使用して SQL クエリを作成する場合、使用する関数によってはデータを en-US 形式にする必要があります。  
   
 ## <a name="see-also"></a>関連項目  
- [方法: Office multilingual user Interface](../vsto/how-to-target-the-office-multilingual-user-interface.md)   
+ [方法: Office の multilingual user interface します。](../vsto/how-to-target-the-office-multilingual-user-interface.md)   
  [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
   

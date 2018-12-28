@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c2cedf1a07307b8494e6a6b810e9590f347c9f1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 255f1b9f8a277f0d58437f8b0a8b1400a069c237
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49847384"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53561919"
 ---
 # <a name="debugger-user-interface-xslt"></a>デバッガー ユーザー インターフェイス (XSLT)
 
@@ -92,15 +92,15 @@ ms.locfileid: "49847384"
 
 -   ユーザー定義関数は使用できません。
 
-詳細については、次を参照してください。[方法: XPath 式を評価](../xml-tools/how-to-evaluate-an-xpath-expression.md)します。
+詳細については、「[方法 :XPath 式を評価](../xml-tools/how-to-evaluate-an-xpath-expression.md)します。
 
 ## <a name="disassembly-window"></a>[逆アセンブリ] ウィンドウ
  逆アセンブリ ウィンドウには、XSLT コンパイラによって生成されたアセンブリ コードが表示されます。 このウィンドウは、Visual Studio に備わる他の逆アセンブリ ウィンドウすべてと同じ方法で使用できます。
 
- 詳細については、[方法: [逆アセンブル] ウィンドウを使用して](../debugger/how-to-use-the-disassembly-window.md)します。
+ 詳細については、[方法。[逆アセンブル] ウィンドウを使用して](../debugger/how-to-use-the-disassembly-window.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 - [XSLT のデバッグ](../xml-tools/debugging-xslt.md)
-- [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)
+- [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)   
 - [Visual Studio の [自動変数] と [ローカル] ウィンドウで変数を検査します。](../debugger/autos-and-locals-windows.md)
