@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによってドキュメントにヘッダーとフッターを追加'
+title: '方法: プログラムでドキュメントにヘッダーとフッターを追加します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], adding headers
 - documents [Office development in Visual Studio], adding footers
 - footers, adding to documents
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cf8fd8d679760a6758ffb4afb71262a897845e87
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d6baf57f8b34f6dc591a8e1a131bd665671322e9
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49849909"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53803377"
 ---
-# <a name="how-to-programmatically-add-headers-and-footers-to-documents"></a>方法: プログラムによってドキュメントにヘッダーとフッターを追加
+# <a name="how-to-programmatically-add-headers-and-footers-to-documents"></a>方法: プログラムでドキュメントにヘッダーとフッターを追加します。
   文書のヘッダーおよびフッターにテキストを追加するには、<xref:Microsoft.Office.Interop.Word.Section> の <xref:Microsoft.Office.Interop.Word.Section.Headers%2A> プロパティおよび <xref:Microsoft.Office.Interop.Word.Section.Footers%2A> プロパティを使用します。 文書の各セクションには、次の 3 つのヘッダーとフッターが含まれています。  
   
 - <xref:Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary>  
@@ -73,7 +73,7 @@ ms.locfileid: "49849909"
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#116](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#116)]  
   
 ## <a name="see-also"></a>関連項目  
- [方法: プログラムによって新しいドキュメントの作成](../vsto/how-to-programmatically-create-new-documents.md)   
- [方法: プログラムによってドキュメント内の範囲を拡張](../vsto/how-to-programmatically-extend-ranges-in-documents.md)   
- [方法: プログラムによって文書で見つかった項目をループ](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)  
+ [方法: プログラムで新しいドキュメントを作成します。](../vsto/how-to-programmatically-create-new-documents.md)   
+ [方法: プログラムによってドキュメント内の範囲を拡張します。](../vsto/how-to-programmatically-extend-ranges-in-documents.md)   
+ [方法: プログラムによって文書で見つかった項目をループします。](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)  
    

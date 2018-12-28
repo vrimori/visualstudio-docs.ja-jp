@@ -1,5 +1,5 @@
 ---
-title: 予想 &#39; catch &#39; |Microsoft ドキュメント
+title: "'Catch' が必要です |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,22 +20,22 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e6cd1e57137d220ebcf3834070e36d8257e2dca7
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 244635605abafc5c0bd22c5203b105aa6e7dc669
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633792"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53801984"
 ---
-# <a name="expected-39catch39"></a>予想 &#39; catch &#39;
-例外処理を使用した**を再試行してください**ブロックしますが、関連付けられている書き込めませんでした**キャッチ**ステートメントです。 例外処理メカニズムでは、内側に失敗し、例外が発生するときに実行する必要がありますしないコードと共に、コードに記述する必要があります、**再試行**ブロックします。 内から例外がスローされます、**を再試行してください**ブロックを使用して、**スロー**ステートメントでは、外部キャッチし、**を再試行してください**と 1 つ以上のブロック**をキャッチ**ステートメントです。  
+# <a name="expected-catch"></a>catch が必要です。
+例外処理を使用した**お試しください**ブロックしますが、関連付けられているによって記述されていない**キャッチ**ステートメント。 例外処理メカニズムでは、例外が発生する場合に実行する必要がありますコードと共に、エラーがコード内でラップしている必要があります、**お試しください**ブロックします。 内から例外がスローされた、**を再試行してください**ブロックを使用して、**スロー**ステートメントでは、外部キャッチし、**お試しください**1 つまたは複数のブロック**をキャッチ**ステートメント。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   関連付けられた追加**キャッチ**ブロックします。  
+-   関連付けられている追加**キャッチ**ブロックします。  
   
--   使用してみて、**最後に**ブロックの代わりに、**キャッチ**ブロックします。  
+-   使用してください、**最後に**ブロックの代わりに、**キャッチ**ブロックします。  
   
 ## <a name="see-also"></a>関連項目  
- [try… catch... 最後にステートメント](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)   
+ [try… catch… finally ステートメント](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)   
  [Error オブジェクト](../../javascript/reference/error-object-javascript.md)

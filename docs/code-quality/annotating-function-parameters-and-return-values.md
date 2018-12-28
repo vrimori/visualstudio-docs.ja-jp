@@ -127,12 +127,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: ae4fcfa442f648126a93d1ec6a3b0d3c4fc7c981
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d60691836b38720cadeddfdf254d3646f9fa5479
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49924825"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53805108"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>関数パラメーターおよび戻り値の注釈設定
 この記事では、単純な関数のパラメーターの注釈の一般的な用途を説明します: スカラー、および構造体とクラスへのポインター、およびほとんどの種類のバッファー。  注釈の一般的な使用パターンについても説明します。 関数に関連する追加の注釈では、次を参照してください[関数の動作に注釈を付ける。](../code-quality/annotating-function-behavior.md)
@@ -218,7 +218,7 @@ ms.locfileid: "49924825"
 
      `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`
 
-     最大バッファー内に存在するすべての要素、つまり`s`前の状態が有効で、後の状態にします。  例えば:
+     最大バッファー内に存在するすべての要素、つまり`s`前の状態が有効で、後の状態にします。  例:
 
      `void *memcpy(_Out_writes_bytes_all_(s) char *p1,    _In_reads_bytes_(s) char *p2,    _In_ int s); void * wordcpy(_Out_writes_all_(s) DWORD *p1,     _In_reads_(s) DWORD *p2,    _In_ int s);`
 
@@ -246,7 +246,7 @@ ms.locfileid: "49924825"
 
      `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`
 
-     最大バッファー内に存在するすべての要素、つまり`s`前の状態が有効で、後の状態にします。  例えば:
+     最大バッファー内に存在するすべての要素、つまり`s`前の状態が有効で、後の状態にします。  例:
 
      `void *memcpy(_Out_writes_bytes_all_(s) char *p1,    _In_reads_bytes_(s) char *p2,    _In_ int s); void * wordcpy(_Out_writes_all_(s) DWORD *p1,     _In_reads_(s) DWORD *p2,    _In_ int s);`
 
@@ -483,7 +483,7 @@ ms.locfileid: "49924825"
 
 -   `_Struct_size_bytes_(size)`
 
-     構造体またはクラス宣言に適用されます。  指定されているバイト数でその型の有効なオブジェクトを宣言された型よりも大きいでことがあることを示します`size`します。  例えば:
+     構造体またはクラス宣言に適用されます。  指定されているバイト数でその型の有効なオブジェクトを宣言された型よりも大きいでことがあることを示します`size`します。  例:
 
      `typedef _Struct_size_bytes_(nSize) struct MyStruct {    size_t nSize;    ... };`
 
@@ -495,4 +495,12 @@ ms.locfileid: "49924825"
  [コード分析チームのブログ](http://go.microsoft.com/fwlink/?LinkId=251197)
 
 ## <a name="see-also"></a>関連項目
- [SAL 注釈を使用して C/C++ のコード障害を減らす](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md) [SAL を理解する](../code-quality/understanding-sal.md)[関数の動作に注釈を付ける](../code-quality/annotating-function-behavior.md)[構造体とクラスに注釈を付ける](../code-quality/annotating-structs-and-classes.md) [ロック動作に注釈を付ける](../code-quality/annotating-locking-behavior.md)[注釈を適用するタイミングと場所を指定する](../code-quality/specifying-when-and-where-an-annotation-applies.md)[組み込み関数](../code-quality/intrinsic-functions.md)[ベスト プラクティスと例](../code-quality/best-practices-and-examples-sal.md)
+
+- [SAL 注釈を使って C/C++ のコード障害を減らす方法](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
+- [SAL について](../code-quality/understanding-sal.md)
+- [関数の動作に注釈を付ける](../code-quality/annotating-function-behavior.md)
+- [構造体とクラスに注釈を付ける](../code-quality/annotating-structs-and-classes.md)
+- [ロック動作に注釈を付ける](../code-quality/annotating-locking-behavior.md)
+- [注釈を適用するタイミングと場所の指定](../code-quality/specifying-when-and-where-an-annotation-applies.md)
+- [組み込み関数](../code-quality/intrinsic-functions.md)
+- [ベスト プラクティスと例](../code-quality/best-practices-and-examples-sal.md)

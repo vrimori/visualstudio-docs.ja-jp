@@ -1,5 +1,5 @@
 ---
-title: オブジェクトは&#39;t は、このプロパティまたはメソッドをサポート |Microsoft ドキュメント
+title: オブジェクトは、このプロパティまたはメソッドをサポートしていません |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,14 +20,14 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9c87d7d1c23682d014924c5c9b948133d8391c72
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 893b8328affcd0a893840cefddba61a322db315c
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
-ms.locfileid: "24633412"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53801863"
 ---
-# <a name="object-doesn39t-support-this-property-or-method"></a>オブジェクトは&#39;t は、このプロパティまたはメソッドをサポート
+# <a name="object-doesnt-support-this-property-or-method"></a>オブジェクトは、このプロパティまたはメソッドをサポートしていません。
 このオブジェクトにはないプロパティまたはメソッドを指定しました。 すべてのオブジェクトが、すべてのプロパティとメソッドをサポートするわけではありません。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  

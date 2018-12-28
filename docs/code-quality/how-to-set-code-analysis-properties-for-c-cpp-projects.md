@@ -20,12 +20,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80dfd4901fdaaeff064ba18d80bfe3f69e08116c
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: a9de737604da898c42243895ed84e8962a8c656f
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53739901"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53803153"
 ---
 # <a name="how-to-set-code-analysis-properties-for-cc-projects"></a>方法: C と C++ プロジェクトのコード分析プロパティを設定します。
 コード分析ツールは、プロジェクトの各構成でコード分析を使用してルールを構成できます。 さらに、生成され、サード パーティ製ツールを使用して、プロジェクトに追加されたコードからの警告を抑制するコード分析を指示することができます。
@@ -52,4 +52,6 @@ ms.locfileid: "53739901"
  ルール セットを選択して、コード分析で適用する規則を選択できますが、プロジェクトにマネージ コードが含まれている場合、**この規則セットを実行**一覧。
 
 ## <a name="see-also"></a>関連項目
- [マネージ コードの品質の分析](../code-quality/code-analysis-for-managed-code-overview.md) [C/C++ の警告のコード分析](../code-quality/code-analysis-for-c-cpp-warnings.md)
+
+- [マネージド コードの品質の分析](../code-quality/code-analysis-for-managed-code-overview.md)
+- [C/C++ コードの警告に対応するコードの分析](../code-quality/code-analysis-for-c-cpp-warnings.md)

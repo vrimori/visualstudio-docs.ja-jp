@@ -1,5 +1,5 @@
 ---
-title: '&#39; と &#39;ECMA 327 Compact Profile では使用できない |Microsoft ドキュメント'
+title: "'with' は ECMA 327 Compact Profile では利用できません |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,16 +20,16 @@ caps.latest.revision: 2
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 68e9a9acebd0225c5bcb86573698dbd7d116e0d3
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 61546ac1dbc03184691e4e178070ecbd7c86cf75
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633292"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53801997"
 ---
-# <a name="39with39-not-available-in-the-ecma-327-compact-profile"></a>&#39; と &#39;ECMA 327 Compact Profile では使用できません。
-' with' は ECMA 327 Compact Profile (ErrWithNotInCP では使用できません。  
+# <a name="with-not-available-in-the-ecma-327-compact-profile"></a>'with' は ECMA 327 Compact Profile では使用できません
+' with' ECMA 327 Compact Profile (ErrWithNotInCP では使用できません。  
   
  使用することはできません、Compact Profile でキーワードを使用します。  
   
- 詳細については、キーワードで、次を参照してください。[ステートメントを使用して](../../javascript/reference/with-statement-javascript.md)です。
+ 詳細については、キーワードで、次を参照してください。[ステートメントで](../../javascript/reference/with-statement-javascript.md)します。
