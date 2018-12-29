@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e63a95635c57c3fa344d7d9197436a2e0e744621
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
-ms.translationtype: HT
+ms.openlocfilehash: 53267cdd429b9a4d8848026e460776359b55c023
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53648192"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53802875"
 ---
 # <a name="how-to-populate-worksheets-with-data-from-a-database"></a>方法: データベースからデータをワークシートに読み込む
 
@@ -56,7 +56,7 @@ Windows フォーム プロジェクトでのデータにアクセスするの�
 
 プロジェクトには、コントロールに加えて、データに関連する以下のオブジェクトも自動的に追加されます。
 
--   データベース内の接続したデータ テーブルをカプセル化する型指定されたデータセット。 詳細については、次を参照してください。 [Visual Studio でのデータセット ツール](/visualstudio/data-tools/dataset-tools-in-visual-studio)します。
+-   データベース内の接続したデータ テーブルをカプセル化する型指定されたデータセット。 詳細については、次を参照してください。 [Visual Studio でのデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)します。
 
 -   コントロールを型指定されたデータセットに接続する <xref:System.Windows.Forms.BindingSource>。 詳細については、次を参照してください。 [BindingSource コンポーネントの概要](/dotnet/framework/winforms/controls/bindingsource-component-overview)します。
 
