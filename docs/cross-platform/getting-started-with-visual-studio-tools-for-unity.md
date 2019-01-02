@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 9d924ee92258e348d5ffee1551fcde7707d711cf
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c22b9c25f95ea26f2cdaf5c2035fb7a373123241
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49855210"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684783"
 ---
 # <a name="get-started-with-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity の使用を開始する
 
@@ -47,7 +47,7 @@ Unity のインストールに含まれる Visual Studio のバージョンが�
 
 Visual Studio 2017 が既にインストールされている場合、または手動でインストールする場合は、Visual Studio インストーラーを実行します。
 
-1. [Visual Studio インストーラーをダウンロード](/visualstudio/install/install-visual-studio)します。既にインストールされている場合は、それを開きます。
+1. [Visual Studio インストーラーをダウンロード](../install/install-visual-studio.md)します。既にインストールされている場合は、それを開きます。
 
 1. **[変更]** をクリックします (既にインストールされている場合)。または、**[インストール]** をクリックして、目的のバージョンの Visual Studio をインストールします (新規インストール)。
 

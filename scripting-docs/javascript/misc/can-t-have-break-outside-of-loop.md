@@ -1,5 +1,5 @@
 ﻿---
-title: 'break' をループの外に設定できません |Microsoft Docs
+title: ループの外 'break' を含めることはできません |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,14 +20,14 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bb23f1bc3de087515cad9ba4910cf2ebaf640353
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ce142e07a47b73778ebae6b26452806b3a036d41
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49928556"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53802408"
 ---
-# <a name="can39t-have-39break39-outside-of-loop"></a>'break' をループの外に設定できません
+# <a name="cant-have-break-outside-of-loop"></a>'break' をループの外に設定できません。
 使用しようとする、 **break**ループ外にあるキーワード。 **Break**キーワードを使用して、ループの終了をまたは`switch`ステートメント。 ループの本体に埋め込む必要があります、または`switch`ステートメント。 ただし、**ラベル**break キーワードをフォローできます。  
   
 ```  

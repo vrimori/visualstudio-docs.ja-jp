@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3ec436383aa745ed033858724b4d4b2ff8b929c6
-ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
+ms.openlocfilehash: 7af96fd1973b32587a217a1cd57ef0d99b0cd626
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863921"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53803008"
 ---
 # <a name="add-a-submenu-to-a-menu"></a>メニューにサブメニューを追加します。
 このチュートリアルのデモ」に基づいて[Visual Studio のメニュー バーにメニューを追加](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)にサブメニューを追加する方法を表示することによって、 **TestMenu**メニュー。
@@ -31,7 +31,7 @@ ms.locfileid: "48863921"
  このチュートリアルでは、Visual Studio のメニュー バーのメニューにサブメニューを作成し、サブメニューで、新しいコマンドを配置します。 このチュートリアルでは、新しいコマンドも実装します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
- Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、"[Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)"を参照してください。
 
 ## <a name="add-a-submenu-to-a-menu"></a>メニューにサブメニューを追加します。
 
@@ -156,4 +156,6 @@ ms.locfileid: "48863921"
 5.  **TestMenu**  メニューのをクリックして**サブメニュー**順にクリックします**テスト サブ コマンド**します。 メッセージ ボックスが表示され、"テスト コマンド内で TestCommand.SubItemCallback()"のテキストを表示する必要があります。
 
 ## <a name="see-also"></a>関連項目
- [Visual Studio のメニュー バーにメニューを追加](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)[コマンド、メニューのおよびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)
+
+- [Visual Studio のメニュー バー メニューに追加します。](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)
+- [コマンド、メニューのおよびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)

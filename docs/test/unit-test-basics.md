@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dff6910f74b9a08a8064e4fb88828a21940c8ab9
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 2b56608a0d81be17fbd68ad7ccd0d5626a818376
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053170"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53740352"
 ---
 # <a name="unit-test-basics"></a>単体テストの基本
 
@@ -257,7 +257,7 @@ public void My_Test ()
 
 2.  **テスト エクスプローラー**でテスト メソッドを選択し、ショートカット メニューから **[選択したテストのデバッグ]** を選択します。
 
-[単体テストのデバッグ](../debugger/debugging-in-visual-studio.md)の詳細を確認してください。
+[単体テストのデバッグ](../debugger/debugger-feature-tour.md)の詳細を確認してください。
 
 **Q: TDD を使用している場合に、テストからコードを生成する方法を教えてください。**
 

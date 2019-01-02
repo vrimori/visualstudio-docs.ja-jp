@@ -44,7 +44,6 @@
 #### [Azure Advisory Chat](vs-azure-advisory-chat.md)
 #### [Azure コミュニティ](vs-azure-community.md)
 #### [テクニカル サポート](vs-tech-support.md)
-#### [開発者コミュニティのサポート](vs-priority-support.md)
 #### [コンシェルジェ サポート](vs-concierge-chat.md)
 ## サブスクリプションを管理する
 ### [管理者の責任](admin-responsibilities.md)

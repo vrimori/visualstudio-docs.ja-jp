@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 48bcfe8ca54236fc2134d431f5f6dd16d4b82a48
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 0623c3e0fdd0db0315e5fe719c9a81ec97e6a2c6
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060188"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53562101"
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio"></a>チュートリアル: Visual Studio での並列アプリケーションのデバッグ
 このチュートリアルでは、**[並列タスク]** ウィンドウと **[並列スタック]** ウィンドウを使用して並行アプリケーションをデバッグする方法について説明します。 これらのウィンドウでは、把握し、使用するコードの実行時の動作を検証できます。、[タスク並列ライブラリ (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)または[同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime)します。 このチュートリアルには、ブレークポイントが組み込まれたサンプル コードが用意されています。 ブレークポイントでコードの実行が中断されたら、**[並列タスク]** ウィンドウと **[並列スタック]** ウィンドウを使用してコードを調べます。  
@@ -298,7 +298,7 @@ ms.locfileid: "53060188"
   
 ## <a name="see-also"></a>参照  
  [マルチ スレッド アプリケーションのデバッグ](../debugger/walkthrough-debugging-a-parallel-application.md)   
- [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)   
+ [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)  
  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
  [並列プログラミング](/dotnet/standard/parallel-programming/index)   
  [コンカレンシー ランタイム](/cpp/parallel/concrt/concurrency-runtime)   

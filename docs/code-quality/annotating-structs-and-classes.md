@@ -26,12 +26,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: e4294284ff2911fd05cc771bf4deaad368e3c28b
-ms.sourcegitcommit: 95aedf723c6be5272c3c5a2911cb2bdec50e2148
+ms.openlocfilehash: a4fb171ec575fdcf85879ed62252c9d373283f62
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47228826"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53802632"
 ---
 # <a name="annotating-structs-and-classes"></a>構造体とクラスに注釈を付ける
 インバリアントのように動作する注釈を使用して構造体とクラスのメンバーに注釈を付けることができます: これらは true に、関数呼び出し、または関数の開始/終了パラメーターまたは結果の値として外側の構造体を含むと見なされます。
@@ -60,7 +60,7 @@ ms.locfileid: "47228826"
 
 -   `_Struct_size_bytes_(size)`
 
-     構造体またはクラスの宣言に適用されます。  指定されているバイト数でその型の有効なオブジェクトを宣言された型よりも大きいでことがあることを示します`size`します。  例えば:
+     構造体またはクラスの宣言に適用されます。  指定されているバイト数でその型の有効なオブジェクトを宣言された型よりも大きいでことがあることを示します`size`します。  例:
 
     ```cpp
 
@@ -79,4 +79,12 @@ ms.locfileid: "47228826"
     ```
 
 ## <a name="see-also"></a>関連項目
- [SAL 注釈を使用して C/C++ のコード障害を減らす](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md) [SAL を理解する](../code-quality/understanding-sal.md)[関数パラメーターと戻り値に注釈を付ける](../code-quality/annotating-function-parameters-and-return-values.md) [の関数の動作に注釈を付ける](../code-quality/annotating-function-behavior.md)[ロック動作に注釈を付ける](../code-quality/annotating-locking-behavior.md)[注釈を適用するタイミングと場所を指定する](../code-quality/specifying-when-and-where-an-annotation-applies.md)[組み込み関数](../code-quality/intrinsic-functions.md)[ベスト プラクティスと例](../code-quality/best-practices-and-examples-sal.md)
+
+- [SAL 注釈を使って C/C++ のコード障害を減らす方法](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
+- [SAL について](../code-quality/understanding-sal.md)
+- [関数パラメーターおよび戻り値の注釈設定](../code-quality/annotating-function-parameters-and-return-values.md)
+- [関数の動作に注釈を付ける](../code-quality/annotating-function-behavior.md)
+- [ロック動作に注釈を付ける](../code-quality/annotating-locking-behavior.md)
+- [注釈を適用するタイミングと場所の指定](../code-quality/specifying-when-and-where-an-annotation-applies.md)
+- [組み込み関数](../code-quality/intrinsic-functions.md)
+- [ベスト プラクティスと例](../code-quality/best-practices-and-examples-sal.md)

@@ -1,5 +1,5 @@
 ---
-title: '&#39; 既定 &#39;1 回のみで、&#39; スイッチ &#39;ステートメント |Microsoft ドキュメント'
+title: "'switch' ステートメントで 'default' は 1 回表示のみ |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,19 +20,19 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1e60dd1ce6b4102ab856cd3d45416175c7030e8d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: a4f254825e27793999932b772ac4bc2512908fae
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633102"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53803884"
 ---
-# <a name="39default39-can-only-appear-once-in-a-39switch39-statement"></a>&#39; 既定 &#39;1 回のみで、&#39; スイッチ &#39;ステートメント
-使用しようとする、**既定**switch ステートメント内で 2 回以上のステートメント。 既定の場合は、(フォール スルー ケースでは)、switch ステートメントの最後の case ステートメントでは常にします。  
+# <a name="default-can-only-appear-once-in-a-switch-statement"></a>'default' は 'switch' ステートメントのなかに、一度のみ表示できます。
+使用しようとする、**既定**switch ステートメント内で 2 回以上のステートメント。 既定のケースは、(フォールスルー ケースです)、switch ステートメントの最後の case ステートメントでは常にします。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   すべて削除余分な**既定**からステートメントの場合、`switch`ステートメント (、switch ステートメントのほとんどの 1 つの既定の case ステートメントで使用します)。  
+-   いずれかを削除する余分な**既定**からステートメントの場合、`switch`ステートメント (スイッチ ステートメントでほとんどの 1 つの既定の case ステートメントで使用します)。  
   
 ## <a name="see-also"></a>関連項目  
  [switch ステートメント](../../javascript/reference/switch-statement-javascript.md)   

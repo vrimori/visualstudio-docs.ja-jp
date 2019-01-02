@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c86b5ec3918526f461b39080967d5bc4a8a32e30
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: fd9aa8cc571ba58964346ca85a62b7ec311a744a
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079475"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53803663"
 ---
 # <a name="work-with-3d-assets-for-games-and-apps"></a>ゲームとアプリ用の 3D アセットを操作する
 
@@ -44,7 +44,7 @@ ms.locfileid: "39079475"
  グラフ ベースのシェーダー デザイン ツールである Visual Studio のシェーダー デザイナーを使用すると、HLSL プログラミングに関する知識がなくてもカスタムの視覚効果を作成できます。
 
 > [!NOTE]
-> DirectX プログラミングの開始方法について詳しくは、[DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633) に関するページをご覧ください。 DirectX ベースのアプリをデバッグする方法について詳しくは、「[グラフィックス診断 (DirectX グラフィックスのデバッグ)](../debugger/visual-studio-graphics-diagnostics.md)」をご覧ください。
+> DirectX プログラミングの開始方法について詳しくは、[DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633) に関するページをご覧ください。 DirectX ベースのアプリをデバッグする方法について詳しくは、「[グラフィックス診断 (DirectX グラフィックスのデバッグ)](../debugger/graphics/visual-studio-graphics-diagnostics.md)」をご覧ください。
 
 ## <a name="directx-version-compatibility"></a>DirectX のバージョンの互換性
  Visual Studio では、DirectX を使用して 2D アセットおよび 3D アセットをレンダリングします。 DirectX 11 のレンダラーと Windows Advanced Rasterization Platform (WARP) ソフトウェアのレンダラーのいずれかを選択できます。 DirectX 11 のレンダラーを使用すると、DirectX 11 および DirectX 10 の各 GPU 上でハードウェア アクセラレータによる高性能レンダリングを実行できます。 WARP レンダラーを使用すると、最新式のグラフィックス ハードウェアを搭載していないコンピューターからグラフィックス ハードウェアを内蔵しているコンピューターまで、多様な種類のコンピューターとアセットが確実に連動するようになります。 WARP について詳しくは、「[Windows Advanced Rasterization Platform (WARP) Guide](http://go.microsoft.com/fwlink/p/?LinkId=224634)」(Windows Advanced Rasterization Platform (WARP) ガイド) をご覧ください。

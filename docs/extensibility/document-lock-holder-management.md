@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9994111f5be4e71a63cfa24d719d736a20a11a3b
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: b27025418c903de0128a3eddea2aa0fab00aa9ea
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53739524"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53804459"
 ---
 # <a name="document-lock-holder-management"></a>ドキュメント ロック ホルダーの管理
 実行中の document テーブル (RDT) は、開いているドキュメントと、編集のロックがあるのカウントを保持します。 バック グラウンドで、ユーザーがドキュメント ウィンドウで、開いているドキュメントが表示される編集がプログラムを使用する際に、RDT のドキュメントで、編集のロックを配置できます。 この機能をグラフィカル ユーザー インターフェイスから複数のファイルを変更する、デザイナーによって使用されます。
@@ -36,11 +36,13 @@ ms.locfileid: "53739524"
 - ファイル"b"が、互換性のない方法で開いている場合は、"A"は、部分的に開くし、適切なエラー メッセージが表示のエディターに関連付けられているビューをさせることができます"A"の失敗、またはエディターでファイル"b"の試行開始させるかことができます。 互換性のないエディターでファイル"b"を閉じるし、"a"を使用してファイルを開いたりするユーザーに指示する必要がありますには、エラー メッセージ"A"のエディター。 実装することも、[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]メソッド<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable2.QueryCloseRunningDocument%2A>"b"のファイルを閉じるには、互換性のないエディターで開いているユーザーに確認します。 ユーザーが"b"、ファイルを開くファイルを閉じる場合の"a"エディター"A"が正常に続行されます。
 
 ## <a name="additional-document-edit-lock-considerations"></a>追加のドキュメントの編集のロックに関する考慮事項
- エディター"の A"はエディター"B"には、ドキュメントも保持している場合よりも、"b"のファイルのロックを編集、ドキュメントのある唯一のエディターはファイル"b"のロックを編集する場合は、異なる動作を取得します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、**クラス デザイナー**関連付けられたコード ファイルで、編集のロックを保持していないビジュアルなデザイナーの例を示します。 これは、ユーザーが、クラス図をデザイン ビューで開くし、同時に、関連付けられたコード ファイルを開く、ユーザーは、コード ファイルを変更しますが、変更を保存できない場合は、変更は失わクラス ダイアグラム (.cd) ファイルにもします。 場合、**クラス デザイナー**が専用のドキュメントでは、コード ファイルのロックを編集、ユーザーは求められませんコード ファイルを閉じるときに変更を保存します。 IDE には、ユーザーが閉じた後にのみ、変更を保存を求める、**クラス デザイナー**します。 両方のファイルには、保存された変更が反映されます。 どちらの場合、**クラス デザイナー**コード ファイルのエディターでは、ユーザーは、コード ファイルまたはフォームを閉じるときに保存するように求められますし、コード ファイルで、ドキュメント編集のロックを保持します。 その時点で、保存された変更は、フォームと、コード ファイルの両方に反映されます。 クラス ダイアグラムの詳細については、次を参照してください。[クラス ダイアグラム (クラス デザイナー) の使用](../ide/class-designer/working-with-class-diagrams.md)します。
+ エディター"の A"はエディター"B"には、ドキュメントも保持している場合よりも、"b"のファイルのロックを編集、ドキュメントのある唯一のエディターはファイル"b"のロックを編集する場合は、異なる動作を取得します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、**クラス デザイナー**関連付けられたコード ファイルで、編集のロックを保持していないビジュアルなデザイナーの例を示します。 これは、ユーザーが、クラス図をデザイン ビューで開くし、同時に、関連付けられたコード ファイルを開く、ユーザーは、コード ファイルを変更しますが、変更を保存できない場合は、変更は失わクラス ダイアグラム (.cd) ファイルにもします。 場合、**クラス デザイナー**が専用のドキュメントでは、コード ファイルのロックを編集、ユーザーは求められませんコード ファイルを閉じるときに変更を保存します。 IDE には、ユーザーが閉じた後にのみ、変更を保存を求める、**クラス デザイナー**します。 両方のファイルには、保存された変更が反映されます。 どちらの場合、**クラス デザイナー**コード ファイルのエディターでは、ユーザーは、コード ファイルまたはフォームを閉じるときに保存するように求められますし、コード ファイルで、ドキュメント編集のロックを保持します。 その時点で、保存された変更は、フォームと、コード ファイルの両方に反映されます。 クラス ダイアグラムの詳細については、次を参照してください。[クラス ダイアグラム (クラス デザイナー) の使用](../ide/class-designer/designing-and-viewing-classes-and-types.md)します。
 
  ドキュメントをエディター以外で、編集のロックを配置する場合は、する必要がありますを実装することに注意してください、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDocumentLockHolder>インターフェイス。
 
  何度も UI デザイナー コード ファイルをプログラムで変更するは、1 つ以上のファイルに変更を加えます。 このような場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell2.SaveItemsViaDlg%2A>メソッド処理の方法では、1 つまたは複数のドキュメントの保存、 **、次のものに変更を保存するか。**  ダイアログ ボックス。
 
 ## <a name="see-also"></a>関連項目
- [実行中の document テーブル](../extensibility/internals/running-document-table.md)[永続化と実行中のドキュメント テーブル](../extensibility/internals/persistence-and-the-running-document-table.md)
+
+- [実行中の document テーブル](../extensibility/internals/running-document-table.md)
+- [永続化と実行中のドキュメント テーブル](../extensibility/internals/persistence-and-the-running-document-table.md)

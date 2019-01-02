@@ -1,5 +1,5 @@
 ﻿---
-title: '@' が必要です |Microsoft Docs
+title: 予想 ' @' |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,19 +20,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f007129aa8da3ac49112fbc83b7abd31e4356c4f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 191402a9ba265e5acfb15d1931e260f6b366687e
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49856848"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53804553"
 ---
-# <a name="expected-3939"></a>'@' が必要です
+# <a name="expected-"></a>'@' が必要です。
 使用して条件付きコンパイル ステートメントで使用する変数を作成しようとしています。、`@set`ステートメントでは、配置しませんでしたが、アット マーク"**@**"変数名の前にします。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   追加するアット"**@**"変数名の直前。 例えば:  
+-   追加するアット"**@**"変数名の直前。 例:  
   
     ```JavaScript  
     @set @myvar = 1  

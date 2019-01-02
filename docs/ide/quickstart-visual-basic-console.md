@@ -14,12 +14,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 67a990b98b385cacab89bfa8270d8409f9e9aa5f
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: 9e93ea0c5f9d12b1a5a395b153bf3edbc5d26b9c
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53159608"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684471"
 ---
 # <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>クイック スタート: Visual Studio で Visual Basic を使用して初めてのコンソール アプリを作成する
 
@@ -91,4 +91,4 @@ IDE で **[Hello World]** ボタンをクリックした場合、デバッグ �
 このクイック スタートは完了しました。 Visual Basic と Visual Studio IDE について少しはご理解いただけたかと思います。 詳細については、引き続き以下のチュートリアルをご覧ください。
 
 > [!div class="nextstepaction"]
-> [Visual Studio の Visual Basic の概要](tutorial-visual-basic-console.md)
+> [Visual Studio の Visual Basic の概要](../get-started/visual-basic/tutorial-console.md)
