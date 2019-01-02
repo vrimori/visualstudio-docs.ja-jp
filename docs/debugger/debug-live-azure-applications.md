@@ -14,12 +14,12 @@ manager: douge
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: b7f98dccebe9db183c63c6f859ceb2234fdb1acf
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: d3dcc5390eac698f3c135c23d497073340bbd8b2
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056919"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648821"
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>スナップショット デバッガーを使用して、ライブの ASP.NET Azure アプリをデバッグします。
 
@@ -36,7 +36,7 @@ ms.locfileid: "53056919"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* スナップショット デバッガーは、Visual Studio 2017 Enterprise バージョン 15.5 以降で使用できるのみ、 **ASP.NET および web 開発ワークロード**します。 ASP.NET Core, も必要です、 **.NET Core 開発**ワークロードをインストールします。
+* スナップショット デバッガーは、Visual Studio 2017 Enterprise バージョン 15.5 以降で使用できるのみ、 **Azure 開発ワークロード**します。 (下、**個々 のコンポーネント** タブを下にあります**デバッグとテスト** > **スナップショット デバッガー**)。
 
     インストールされていない場合は、インストール[Visual Studio 2017 Enterprise バージョン 15.5](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)またはそれ以降。 以前の Visual Studio 2017 のインストールから更新する場合、Visual Studio インストーラーを実行しスナップショット デバッガーのコンポーネントを確認、 **ASP.NET および web 開発ワークロード**します。
 

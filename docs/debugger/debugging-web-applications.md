@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e649e5d795df537e48afe3dad738c73ee5b7b51
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
-ms.translationtype: MT
+ms.openlocfilehash: faafe243d5bf60e83d060334d8591bdb4cd9bbb3
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178918"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53561630"
 ---
 # <a name="debugging-web-applications"></a>Web アプリケーションのデバッグ
 ここでは、いくつかの種類の Web アプリケーションのデバッグ方法について説明します。  
@@ -38,9 +38,8 @@ ms.locfileid: "39178918"
  [ASP.NET アプリケーションをデバッグする](../debugger/how-to-enable-debugging-for-aspnet-applications.md)  
  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションのデバッグを有効にするために必要な手順について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Web アプリケーションとスクリプトのデバッグ](../debugger/debugging-web-applications-and-script.md)   
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   
- [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)   
- [Visual Studio でのデバッグ](../debugger/index.md)  
+ [デバッガーでのはじめ](../debugger/debugger-feature-tour.md) [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)

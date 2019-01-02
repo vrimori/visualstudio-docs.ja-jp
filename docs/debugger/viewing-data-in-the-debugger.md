@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 59e6c1879d5463682ee41d60e3928fce85c74a8d
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: c750e9e3152ae5efdf2e2ecf09034b6928fe9fa7
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52305144"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53561854"
 ---
 # <a name="create-custom-views-of-data-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでのデータのカスタム ビューを作成します。
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]デバッガーには、検査およびプログラムの状態を変更するための多くのツールが用意されています。 ほとんどのツールは、中断モードだけで機能します。
@@ -38,6 +38,5 @@ ms.locfileid: "52305144"
  ビジュアライザーを使用すると、わかりやすい方法でオブジェクトや変数の内容を表示できます。 Visual Studio デバッガー ビジュアライザーは虫眼鏡を使用して開くことができる別の windows を指します![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "ビジュアライザー アイコン")アイコン。 たとえば、HTML ビジュアライザーは、HTML 文字列は解釈され、ブラウザーで表示する方法を示します。 データヒントからビジュアライザーにアクセスできる、**ウォッチ**ウィンドウで、 **[自動変数]** ウィンドウで、および**ローカル**ウィンドウ。 **クイック ウォッチ**  ダイアログ ボックスには、ビジュアライザーも用意されています。 詳細については、「[Create Custom Visualizers](../debugger/create-custom-visualizers-of-data.md)」 (カスタム ビジュアライザーを作成する) を参照してください。
   
 ## <a name="see-also"></a>関連項目  
- [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)   
- [コマンド ウィンドウ](../ide/reference/command-window.md)   
+ [デバッガーでのはじめ](../debugger/debugger-feature-tour.md)[コマンド ウィンドウ](../ide/reference/command-window.md)   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)

@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d9c4b0996faf26279ff8018e0e072fd25a33d783
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 86e6aa0da41a16445b3e3328a1ee0bc84063dd52
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53063423"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53561724"
 ---
 # <a name="debug-at-design-time-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio でデザイン時にデバッグ (C#、C++、Visual Basic、 F#)
 
@@ -106,5 +106,4 @@ Visual Studio を使用する**イミディ エイト**ウィンドウで、ア�
    ページが読み込まれると、ブレークポイントにヒットします。
   
 ## <a name="see-also"></a>関連項目  
- [デバッガーのセキュリティ](../debugger/debugger-security.md)   
- [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)
+ [デバッガーでのはじめ](../debugger/debugger-feature-tour.md)[デバッガーのセキュリティ](../debugger/debugger-security.md)   

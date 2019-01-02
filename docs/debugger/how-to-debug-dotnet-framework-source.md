@@ -1,5 +1,5 @@
 ---
-title: '方法: デバッグの .NET Framework ソース |Microsoft Docs'
+title: '方法: .NET Framework のソースのデバッグ |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/19/2018
 ms.technology: vs-ide-debug
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 234d9979ea1a16b917111e2a8937ad71dd55224f
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: a627c2f0880aee9906e3478b268d688c59b7d090
+ms.sourcegitcommit: 6efb9378a82924cb133912d207c6da4bd5a0b9c2
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389281"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53443913"
 ---
-# <a name="how-to-debug-net-framework-source"></a>方法 : .NET Framework ソースをデバッグする
+# <a name="how-to-debug-net-framework-source"></a>方法: .NET Framework ソースをデバッグする
 
 .NET Framework のソースをデバッグするには、次の必要があります。
 
@@ -55,7 +55,7 @@ ms.locfileid: "52389281"
   
 ### <a name="to-load-symbols-from-the-modules-or-call-stack-windows"></a>モジュールまたは呼び出し履歴からシンボルを読み込む windows  
   
-1. デバッグ中に、選択して、ウィンドウを開きます**デバッグ** > **Windows** > **モジュール**または**呼び出し履歴**. 
+1. デバッグ中に、選択して、ウィンドウを開きます**デバッグ** > **Windows** > **モジュール**(またはキーを押します**Ctrl + Alt + U**)または**デバッグ** > **Windows** > **コール スタック**(**Ctrl + Alt + C**)。 
    
 1. 対象のシンボルが読み込まれていないモジュールを右クリックします。 **モジュール**ウィンドウで、シンボルの読み込みの状態は、**シンボル ステータス**列。 **呼び出し履歴**ウィンドウ、ステータスが、**フレームの状態**列、および、フレームが淡色表示されます。 
    
@@ -67,4 +67,4 @@ ms.locfileid: "52389281"
   
 ### <a name="see-also"></a>関連項目  
  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
- [シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
+ [シンボル (.pdb) とソース ファイルの指定](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

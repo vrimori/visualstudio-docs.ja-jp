@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bf1ca8fabf70f2d4fbe5920803773af07db0a99
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 4ee9d52f63f3158979f2f018ea44d5b68d6612c1
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389229"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53562335"
 ---
 # <a name="view-threads-and-tasks-in-the-parallel-stacks-window"></a>並列スタック ウィンドウのスレッドとタスクを表示します。
 
@@ -139,9 +139,8 @@ ms.locfileid: "52389229"
   
 ## <a name="see-also"></a>関連項目  
  [マルチ スレッド アプリケーションのデバッグの開始します。](../debugger/get-started-debugging-multithreaded-apps.md)   
- [チュートリアル: 並行アプリケーションをデバッグする](../debugger/walkthrough-debugging-a-parallel-application.md)   
- [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)   
- [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
+ [チュートリアル: 並列アプリケーションをデバッグします。](../debugger/walkthrough-debugging-a-parallel-application.md)   
+ [デバッガーでのはじめ](../debugger/debugger-feature-tour.md)[マネージ コードのデバッグ](../debugger/debugging-managed-code.md)   
  [並列プログラミング](/dotnet/standard/parallel-programming/index)   
  [[タスク] ウィンドウを使用する](../debugger/using-the-tasks-window.md)   
  [Task クラス](../extensibility/debugger/task-class-internal-members.md)

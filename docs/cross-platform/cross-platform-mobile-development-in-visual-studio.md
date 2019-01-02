@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: c28dcf247a9e0faaec13ddc4b3006cf6a93fda90
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: 5923e3106ad93608effe2604d4305cc0f3038a58
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46496143"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53802801"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio におけるクロス プラットフォーム モバイル開発
 
@@ -36,7 +36,7 @@ Visual Studio Tools for Xamarin を利用すれば、コードや UI を共有�
 |[Visual Studio のインストール](http://visualstudio.microsoft.com/products/visual-studio-community-vs) (VisualStudio.com)|
 |[Visual Studio での Xamarin について学習する](https://visualstudio.microsoft.com/xamarin/) (VisualStudio.com)|
 |[Xamarin モバイル アプリ開発ドキュメント](/xamarin/) |
-|[Xamarin アプリを使用した DevOps](../cross-platform/application-lifecycle-management-alm-with-xamarin-apps.md) |
+|[Xamarin アプリを使用した DevOps](/xamarin/tools/ci/devops/) |
 |[Visual Studio でのユニバーサル Windows アプリについて学習する](https://visualstudio.microsoft.com/vs/universal-windows-platform/) (VisualStudio.com)|
 |[Swift と C# との間の類似点について学習する](http://aka.ms/scposter) (download.microsoft.com)|
 
@@ -54,7 +54,7 @@ Visual Studio Tools for Xamarin を利用すれば、コードや UI を共有�
 
 #### <a name="design-one-set-of-pages-that-render-across-all-devices-by-using-xamarinforms"></a>すべてのデバイス用にレンダリングするページを 1 セット、Xamarin.Forms を使用してデザインする
 
- アプリのデザインの複雑さによっては、プロジェクト テンプレートの [ *Mobile Apps* ] グループにある **[Xamarin.Forms]** テンプレートを使用して作成することを検討します。 Xamarin.Forms は、Android、iOS、Windows 間で共有できる単一のユーザー インターフェイスを作成する UI ツールキットです。  Xamarin.Forms ソリューションをコンパイルすると、Android アプリ、iOS アプリ、Windows アプリが生成されます。 詳しくは、「[Xamarin によるモバイル開発の概要](../cross-platform/learn-about-mobile-development-with-xamarin.md)」および [Xamarin.Forms のドキュメント](/xamarin/xamarin-forms/)に関するページをご覧ください。
+ アプリのデザインの複雑さによっては、プロジェクト テンプレートの [ *Mobile Apps* ] グループにある **[Xamarin.Forms]** テンプレートを使用して作成することを検討します。 Xamarin.Forms は、Android、iOS、Windows 間で共有できる単一のユーザー インターフェイスを作成する UI ツールキットです。  Xamarin.Forms ソリューションをコンパイルすると、Android アプリ、iOS アプリ、Windows アプリが生成されます。 詳しくは、「[Xamarin によるモバイル開発の概要](/xamarin/cross-platform/get-started/introduction-to-mobile-development/)」および [Xamarin.Forms のドキュメント](/xamarin/xamarin-forms/)に関するページをご覧ください。
 
 ####  <a name="ShareHTML"></a> Android、iOS、および Windows アプリ間でコードを共有する
 

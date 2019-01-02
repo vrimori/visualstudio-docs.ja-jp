@@ -15,12 +15,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: a1d7b165466f686549273394c204e4ab31c06b46
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: a68909f602b0be0139cbbe98701012bb3af1ff30
+ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53158607"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53441536"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>クイック スタート: Visual Studio を使用して初めての C# コンソール アプリを作成する
 
@@ -99,4 +99,4 @@ C# プロジェクト テンプレートを選択し、プロジェクトに名�
 このクイック スタートは完了しました。 C# と Visual Studio IDE について、少しはご理解いただけたかと思います。 詳細については、引き続き以下のチュートリアルをご覧ください。
 
 > [!div class="nextstepaction"]
-> [Visual Studio での C# コンソール アプリの概要](tutorial-csharp-console.md)
+> [Visual Studio での C# コンソール アプリの概要](../get-started/csharp/tutorial-console.md)

@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 051f5ad7783271c2b0eea26bc3af5c0980f2c1fc
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: f16f9356f40aade9f0de3ade8f74606ce89be12e
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53068303"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53802580"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>方法: 診断データ アダプターを作成する
 
@@ -48,7 +48,7 @@ ms.locfileid: "53068303"
 
 テストの設定を作成するときに構成した情報に基づいてデータ ファイルを収集する診断データ アダプターを作成するには、次の手順に従って操作します。
 
-カスタムの構成エディターを含む、診断データ アダプター プロジェクトのサンプル全体については、「[診断データ アダプター作成用のサンプル プロジェクト](../test/sample-project-for-creating-a-diagnostic-data-adapter.md)」を参照してください。
+カスタムの構成エディターを含む、診断データ アダプター プロジェクトのサンプル全体については、「[診断データ アダプター作成用のサンプル プロジェクト](../test/quickstart-create-a-load-test-project.md)」を参照してください。
 
 ##  <a name="create-and-install-a-diagnostic-data-adapter"></a>診断データ アダプターを作成してインストールする
 
@@ -224,7 +224,7 @@ ms.locfileid: "53068303"
 
      これらのファイルは、テスト結果に添付されます。 これらのテスト結果からバグを作成する場合、または[!INCLUDE[mtrlong](../test/includes/mtrlong_md.md)]を使用する場合、ファイルはバグにも添付されます。
 
-     独自のエディターを使用してデータを収集し、テストの設定に使用する場合は、「[方法:診断データ アダプター用のデータのカスタム エディターを作成する](../test/how-to-create-a-custom-editor-for-data-for-your-diagnostic-data-adapter.md)」を参照してください。
+     独自のエディターを使用してデータを収集し、テストの設定に使用する場合は、「[方法:診断データ アダプター用のデータのカスタム エディターを作成する](../test/quickstart-create-a-load-test-project.md)」を参照してください。
 
 11. テストが終了したときに、ユーザーによるテストの設定の構成に基づいてログ ファイルを収集するには、*App.config* ファイルを作成し、ソリューションに追加する必要があります。 このファイルは次の形式で作成し、識別するために診断データ アダプターの URI が含まれる必要があります。 "Company/ProductName/Version" を実際の値に置き換えてください。
 
@@ -261,11 +261,11 @@ ms.locfileid: "53068303"
 
      テストの実行時に環境を使用するようにテストの設定を構成する方法の詳細については、[手動テストで診断データを収集する方法 (Azure Test Plans) ](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)に関するページを参照してください。
 
-     構成ファイルのインストールの詳細については、[カスタム診断データ アダプターをインストールする方法](../test/how-to-install-a-custom-diagnostic-data-adapter.md)に関するページを参照してください。
+     構成ファイルのインストールの詳細については、[カスタム診断データ アダプターをインストールする方法](../test/quickstart-create-a-load-test-project.md)に関するページを参照してください。
 
 12. ソリューションをビルドして、診断データ アダプターのアセンブリを作成します。
 
-13. カスタム エディターのインストールの詳細については、[カスタム診断データ アダプターをインストールする方法](../test/how-to-install-a-custom-diagnostic-data-adapter.md)に関するページを参照してください。
+13. カスタム エディターのインストールの詳細については、[カスタム診断データ アダプターをインストールする方法](../test/quickstart-create-a-load-test-project.md)に関するページを参照してください。
 
 14. テストの実行時に環境を使用するようにテストの設定を構成する方法の詳細については、[手動テストで診断データを収集する方法 (Azure Test Plans) ](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)に関するページを参照してください。
 
@@ -289,4 +289,4 @@ ms.locfileid: "53068303"
 - [テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)
 - [手動テストでの診断データの収集 (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
 - [テスト中の診断データの収集 (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)
-- [方法: 診断データ アダプター用のデータのカスタム エディターを作成する](../test/how-to-create-a-custom-editor-for-data-for-your-diagnostic-data-adapter.md)
+- [方法: 診断データ アダプター用のデータのカスタム エディターを作成する](../test/quickstart-create-a-load-test-project.md)

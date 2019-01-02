@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - uwp
 author: mikeblome
-ms.openlocfilehash: 4081fae86b41a9bf8b925bf84d403b3be6628294
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 1ff045cd571f24c57b3f735b0fdf68c58aaa23bb
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53068368"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53740050"
 ---
 # <a name="how-to-test-a-visual-c-dll"></a>Visual C++ DLL をテストする方法
 
@@ -22,7 +22,7 @@ ms.locfileid: "53068368"
 
  このトピックでは、開発の第一歩として単体テストを使用する方法を示します。 この方法ではまず、テスト対象のシステムの特定の動作を検証するテスト メソッドを作成し、テストに合格するコードを記述します。 後述する手順の順序を変更することにより、この方法を逆にして、テストするコードを最初に記述し、単体テストを作成することができます。
 
- このトピックでは、テストする単体テストと DLL に 1 つの Visual Studio ソリューションと個別のプロジェクトも作成します。 また、DLL プロジェクトに単体テストを直接含めることも、単体テストと DLL ごとに個別のソリューションを作成することもできます。 使用できる構造体のヒントについては、「[テスト エクスプローラーを使用した既存の C++ アプリケーションの単体テスト](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)」をご覧ください。
+ このトピックでは、テストする単体テストと DLL に 1 つの Visual Studio ソリューションと個別のプロジェクトも作成します。 また、DLL プロジェクトに単体テストを直接含めることも、単体テストと DLL ごとに個別のソリューションを作成することもできます。 使用できる構造体のヒントについては、「[テスト エクスプローラーを使用した既存の C++ アプリケーションの単体テスト](../test/how-to-use-microsoft-test-framework-for-cpp.md)」をご覧ください。
 
 ##  <a name="Create_the_solution_and_the_unit_test_project"></a> ソリューションと単体テスト プロジェクトを作成する
 
