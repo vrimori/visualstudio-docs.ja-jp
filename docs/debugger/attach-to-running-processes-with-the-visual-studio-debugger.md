@@ -29,19 +29,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 07ed9670795e11b0d98b3703445450b468a93aa8
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 499e1200f858530db0caad69d93bd4416f756405
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53068462"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53561643"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Visual Studio デバッガーで実行中のプロセスへのアタッチ
 ローカルまたはリモート コンピューターで実行中のプロセスに、Visual Studio デバッガーをアタッチできます。 プロセスが実行されると、選択**デバッグ** > **プロセスにアタッチ**またはキーを押します**Ctrl**+**Alt** +**P**使用して、Visual Studio で、**プロセスにアタッチ**プロセスにデバッガーをアタッチするためのダイアログ。
 
 使用することができます**プロセスにアタッチ**をローカルまたはリモート コンピューターで実行中のアプリをデバッグするには、同時に複数のプロセスをデバッグ、Visual Studio で作成されていないアプリをデバッグまたはで Visual Studio から開始していないすべてのアプリをデバッグしますデバッガーをアタッチします。 たとえば、デバッガーなしのアプリを実行するいるし、例外が発生すると、アプリを実行しているプロセスにデバッガーをアタッチし、デバッグを開始します。
 
-Visual Studio で基本的なデバッグ方法の詳細については、次を参照してください。[デバッガーの概要](../debugger/getting-started-with-the-debugger.md)します。
+Visual Studio で基本的なデバッグ方法の詳細については、次を参照してください。[デバッガーでのはじめ](../debugger/debugger-feature-tour.md)します。
 
 > [!TIP]
 > わからないを使用するかどうか**プロセスにアタッチ**デバッグ シナリオのでしょうか。 参照してください[デバッグ シナリオ共通](#BKMK_Scenarios)します。 
@@ -119,7 +119,7 @@ IIS に配置されている ASP.NET アプリケーションのデバッグに�
    - すべてのユーザー アカウントで実行されているプロセスを検索するには、選択、**プロセスのすべてのユーザーを表示する**チェック ボックスをオンします。
       
      >[!NOTE]
-     >信頼関係のないユーザー アカウントによって所有されているプロセスにアタッチしようとすると、セキュリティ警告の確認ダイアログ ボックスが表示されます。 詳細については、次を参照してください。[セキュリティ警告: 信頼されていないユーザーによって所有されているプロセスにアタッチするのは危険です。次の情報に関して疑わしい、または不明ながこのプロセスにアタッチしない](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)します。  
+     >信頼関係のないユーザー アカウントによって所有されているプロセスにアタッチしようとすると、セキュリティ警告の確認ダイアログ ボックスが表示されます。 詳細については、次を参照してください。[セキュリティ警告。信頼されていないユーザーによって所有されているプロセスにアタッチすると、危険なことができます。以下の情報に関して疑わしい点がある場合や、不明な場合は、このプロセスにアタッチしないでください](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)。  
       
 5. **にアタッチ**フィールドに、デバッグするコードの種類が表示されているかどうかを確認します。 既定の**自動**のほとんどの種類のアプリの動作を設定します。 
   
@@ -162,7 +162,7 @@ Visual Studio で、アタッチする実行中のプロセスをすばやく選
 |ASP.NET 4 のリモート デバッグまたは IIS サーバー上の 4.5|リモート ツールを使用し、**プロセスにアタッチします。**|*w3wp.exe*|参照してください[リモート リモート IIS コンピューター上の ASP.NET のデバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
 |ASP.NET Core、IIS サーバー上のリモート デバッグ|リモート ツールを使用し、**プロセスにアタッチします。**|*dotnet.exe*|アプリの展開を参照してください。 [Publish to IIS](https://docs.asp.net/en/latest/publishing/iis.html)します。 デバッグについては、次を参照してください[リモート IIS コンピューター上のリモート デバッグ ASP.NET Core。](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)|
 |サポートされているアプリの種類をローカルの IIS サーバー上のクライアント側スクリプトをデバッグします。 |使用**プロセスにアタッチします。**|*chrome.exe*、 *MicrosoftEdgeCP.exe*、または*iexplore.exe*|スクリプトのデバッグを有効にする必要があります。 Chrome、デバッグ モードで Chrome も実行する必要があります**Webkit コード**で、**にアタッチ**フィールド。|
-|ローカル コンピューター上の c#、Visual Basic、または C++ アプリをデバッグします。|いずれかを使用して、[標準デバッグ](../debugger/getting-started-with-the-debugger.md)または**プロセスにアタッチします。**|*\<appname > .exe*|ほとんどのシナリオで標準的なデバッグを使用していないと**プロセスにアタッチ**します。|
+|ローカル コンピューター上の c#、Visual Basic、または C++ アプリをデバッグします。|いずれかを使用して、[標準デバッグ](../debugger/debugger-feature-tour.md)または**プロセスにアタッチします。**|*\<appname > .exe*|ほとんどのシナリオで標準的なデバッグを使用していないと**プロセスにアタッチ**します。|
 |Windows デスクトップ アプリのリモート デバッグ|リモート ツール|N/A| 参照してください[c# または Visual Basic アプリのリモート デバッグ](../debugger/remote-debugging-csharp.md)または[C++ アプリのリモート デバッグ](../debugger/remote-debugging-cpp.md)|
 |デバッガーなしのアプリを起動した後、ローカル コンピューター上の ASP.NET アプリをデバッグします。|使用**プロセスにアタッチします。**|*iiexpress.exe*|これは、アプリをロードすると便利な可能性がありますより高速など (たとえば) プロファイリングを行う場合。 |
 |サーバー プロセスでその他のサポートされているアプリの種類をデバッグします。|サーバーがリモートの場合は、リモート ツールを使用し、**プロセスにアタッチします。**|*chrome.exe*、 *iexplore.exe*、または他のプロセス|必要に応じて、リソース モニターを使用して、プロセスを識別できるようにします。 「[Remote debugging](../debugger/remote-debugging.md)」(リモート デバッグ) を参照してください。|
