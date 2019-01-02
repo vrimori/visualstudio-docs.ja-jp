@@ -16,12 +16,12 @@ ms.assetid: ba237712-f8c4-4d13-854b-ab4a16afa309
 caps.latest.revision: 128
 ms.author: gewarren
 manager: crdun
-ms.openlocfilehash: 1898d437cb7d3f439e92b88a45e7b543e8bbd0f5
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: c25afa4447a77c6e8bdeb0abb502235fdba1e203
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058481"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53805147"
 ---
 # <a name="welcome-to-visual-studio-2015"></a>Visual Studio 2015 へようこそ
 [!INCLUDE[vs2017banner](includes/vs2017banner.md)]
@@ -61,7 +61,7 @@ Visual Studio へようこそ。 デバイスまたはデスクトップで機�
 
 2.  [Visual Studio での Apache Cordova](http://msdn.microsoft.com/library/db446f2c-6ba4-4c76-aac5-4c66f43b8c42):HTML、CSS、および JavaScript または Typescript の基本の共通コード
 
-3.  [Visual Studio Tools for Unity](./cross-platform/visual-studio-tools-for-unity.md)C# での 2d/3d ゲーム開発
+3.  [Visual Studio Tools for Unity](./cross-platform/visual-studio-tools-for-unity.md): C# での 2D/3D ゲーム開発
 
 4.  [クロスプラット フォーム開発用 C++](./cross-platform/visual-cpp-for-cross-platform-mobile-development.md):共有コード ライブラリと C++ でのアプリ
 
@@ -100,7 +100,7 @@ Visual Studio へようこそ。 デバイスまたはデスクトップで機�
 |||||
 |-|-|-|-|
 |[Visual Studio 2015 の新機能 ](./what-s-new-in-visual-studio-2015.md)|[Visual C# の新機能](http://msdn.microsoft.com/library/9f18dc26-27fa-4603-a639-b573f07a117b)|[.NET Framework 4.6 の新機能](http://msdn.microsoft.com/library/1d971dd7-10fc-4692-8dac-30ca308fc0fa)|[ALM の新機能](http://msdn.microsoft.com/en-us/54b98a53-6083-4303-869a-8063d8fae938)|
-|[C++ の新機能](http://msdn.microsoft.com/library/1cc09fad-85a2-43c2-b022-bb99f5fe0ad7)|[Visual Basic の新機能](http://msdn.microsoft.com/library/d7e97396-7f42-4873-a81c-4ebcc4b6ca02)|[JavaScript の新機能](~/E:/Repos/visualstudio-docs-pr/scripting-docs/javascript/what-s-new-in-javascript.md)||
+|[C++ の新機能](http://msdn.microsoft.com/library/1cc09fad-85a2-43c2-b022-bb99f5fe0ad7)|[Visual Basic の新機能](http://msdn.microsoft.com/library/d7e97396-7f42-4873-a81c-4ebcc4b6ca02)|[JavaScript の新機能](/visualstudio/scripting-docs/javascript/what-s-new-in-javascript)||
 |[Python](./python/getting-started-with-python.md)||||
 
 ## <a name="in-this-section"></a>このセクションの内容

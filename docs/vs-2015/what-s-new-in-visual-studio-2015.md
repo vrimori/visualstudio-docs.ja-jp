@@ -17,12 +17,12 @@ caps.latest.revision: 364
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f1d2b37a988f0078149228cce808397f9fb915d1
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 16c9a490970d6c41a5661f0755f09731ce2fba7e
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53062439"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53740274"
 ---
 # <a name="what39s-new-in-visual-studio-2015"></a>Visual Studio 2015 の新機能
 [!INCLUDE[vs2017banner](./includes/vs2017banner.md)]
@@ -137,7 +137,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
 -   **C++ / Android**。 [Visual C for Cross-platform Mobile Development](http://msdnstage.redmond.corp.microsoft.com/library/dn872463\(v=vs.140\).aspx) テンプレートを [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html) などのサード パーティ製ツールとともに使用して、Windows および Android のネイティブ アプリを作成します。
 
 ## <a name="debugging-and-diagnostics"></a>デバッグと診断
- デバッグの新機能については、「 [What’s New for the Debugger in Visual Studio 2015](./debugger/what’s-new-for-the-debugger-in-visual-studio-2015.md)」を参照してください。
+ デバッグの新機能については、「 [What’s New for the Debugger in Visual Studio 2015](/visualstudio/debugger/what-s-new-for-the-debugger-in-visual-studio-2015?view=vs-2015)」を参照してください。
 
  診断の新機能新機能については、次を参照してください。[プロファイリング ツールの新](./profiling/what-s-new-in-profiling-tools.md)します。
 

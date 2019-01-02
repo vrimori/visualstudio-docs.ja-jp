@@ -1,5 +1,5 @@
----
-title: ';' が必要です |Microsoft ドキュメント
+﻿---
+title: 必要です ';' |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,23 +20,23 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c54fbd2eb72f6e6401eca85f61b0651a3ead4900
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: eabe34fdcb4551fc8bc794b84875a10a32e5ec33
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24632792"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53804339"
 ---
-# <a name="expected-3939"></a>';' が必要です
-行では、1 つ以上のステートメントを配置しようとしていますが、でしたいないをセミコロンで区切ります。 セミコロンはステートメントを終了に使用されます。 単一行では、いくつかのステートメントを配置できますが、1 つずつをセミコロンで区切る必要があります。  
+# <a name="expected-"></a>';' が必要です。
+行に 1 つ以上のステートメントを配置しようとしましたが、でしたいないセミコロンで区切ります。 ステートメントを終了するには、セミコロンを使用します。 いくつかのステートメントは、1 行に配置できますが、それぞれをセミコロンで区切る必要があります。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   セミコロンで各ステートメントの末尾をマークします。  
+-   セミコロンで各ステートメントの終わりをマークします。  
   
--   関数呼び出しが正しくかっこを使用してください。  
+-   関数の呼び出しが正しくかっこを使用してください。  
   
--   ヘッダーのセミコロンを忘れましたいないことを確認、**の**ループします。  
+-   ヘッダーにセミコロンを忘れていませんかどうかを確認、**の**ループします。  
   
 ## <a name="see-also"></a>関連項目  
  [JavaScript コードの記述](../../javascript/writing-javascript-code.md)

@@ -11,7 +11,6 @@ f1_keywords:
 - vs.debug.file
 - vs.debug.breakpt.new
 - vs.debug.whenbreakpointishit
-- vs.debug.breakpt.choose
 - vs.debug.breakpt.location.address
 - vs.debug.breakpt.constraints
 - vs.debug.breakpoints.delete
@@ -36,12 +35,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 16bcb4bb12e852a8fa268998d0605b2ffc7471e5
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 092a9fce2c84506f36717808a7630391c7c1fc89
+ms.sourcegitcommit: c7b16358a5d6f7ea1dd2f70a6ac2a8266efa9c15
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53068449"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53425852"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでブレークポイントを使用します。
 ブレークポイントは、開発者のツールボックスで最も重要なデバッグ手法の 1 つです。 デバッガーの実行を一時停止したい場所にブレークポイントを設定するとします。 たとえば、コードの変数の状態を参照してください。 または、特定のブレークポイントで呼び出し履歴を確認する可能性があります。 コードのデバッグを試みるのが今回初めてである場合は、この記事を先に進む前に[超初心者向けのデバッグ方法](../debugger/debugging-absolute-beginners.md)に関するページを参照することをお勧めします。
@@ -61,7 +60,7 @@ C#コード、ブレークポイントおよび現在の実行の行が自動的
   
  ![ブレークポイントの実行が停止しました](../debugger/media/breakpointexecution.png "ブレークポイントの実行")  
   
- ブレークポイントでデバッガーが停止したら、変数の値と呼び出し履歴を含めて、アプリの現在の状態を確認できます。 呼び出し履歴の詳細については、「[How to: Use the Call Stack Window](../debugger/how-to-use-the-call-stack-window.md)」 (方法: [呼び出し履歴] ウィンドウの使用) を参照してください。  
+ ブレークポイントでデバッガーが停止したら、変数の値と呼び出し履歴を含めて、アプリの現在の状態を確認できます。 呼び出し履歴の詳細については、次を参照してください。[方法。[呼び出し履歴] ウィンドウを使用する](../debugger/how-to-use-the-call-stack-window.md)  
 
 - ブレークポイント表示が切り替わります。 クリックして、キーを押してできます**F9**、使用または**デバッグ** > **ブレークポイントの切り替え**を削除または再挿入します。
   
@@ -89,7 +88,7 @@ C#コード、ブレークポイントおよび現在の実行の行が自動的
 
 デバッガーは、命令で中断します。  
 
-呼び出し履歴の詳細については、「[How to: Use the Call Stack Window](../debugger/how-to-use-the-call-stack-window.md)」 (方法: [呼び出し履歴] ウィンドウの使用) を参照してください。 
+呼び出し履歴の詳細については、次を参照してください。[方法。[呼び出し履歴] ウィンドウを使用する](../debugger/how-to-use-the-call-stack-window.md) 
 
 視覚的にブレークポイントをトレースするコードが実行中に、次を参照してください。[デバッグ中に呼び出し履歴に対するメソッドのマップ](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)します。 
   
@@ -306,8 +305,9 @@ C#コード、ブレークポイントおよび現在の実行の行が自動的
 
 トレース ポイントがソース コードの左余白に赤い菱形で表示および**ブレークポイント**windows。 
   
-## <a name="see-also"></a>関連項目  
- [デバッグとは](../debugger/what-is-debugging.md)  
- [優れたC#Visual Studio を使用するコード](../debugger/write-better-code-with-visual-studio.md)  
- [デバッグの概要](../debugger/debugger-feature-tour.md)  
- [Visual Studio デバッガーでブレークポイントをトラブルシューティングします。](../debugger/troubleshooting-breakpoints.md)  
+## <a name="see-also"></a>関連項目
+
+- [デバッグとは](../debugger/what-is-debugging.md)
+- [優れたC#Visual Studio を使用するコード](../debugger/write-better-code-with-visual-studio.md)
+- [デバッグの概要](../debugger/debugger-feature-tour.md)
+- [Visual Studio デバッガーでブレークポイントをトラブルシューティングします。](../debugger/troubleshooting-breakpoints.md)

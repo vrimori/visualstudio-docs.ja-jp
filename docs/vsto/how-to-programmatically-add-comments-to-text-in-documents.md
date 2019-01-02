@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによって文書内のテキストにコメントを追加'
+title: '方法: プログラムによって文書内のテキストにコメントを追加します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - comments, adding to documents
 - documents [Office development in Visual Studio], adding comments
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ca0d15ee69bb58aae765c03c1233a78bfeeb119c
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: c5e7900f5316e64ef884d857bfc1448ac315fd19
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671922"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53804605"
 ---
-# <a name="how-to-programmatically-add-comments-to-text-in-documents"></a>方法: プログラムによって文書内のテキストにコメントを追加
+# <a name="how-to-programmatically-add-comments-to-text-in-documents"></a>方法: プログラムによって文書内のテキストにコメントを追加します。
   ドキュメント クラスのコメント プロパティは、Microsoft Office Word 文書にテキストの範囲にコメントを追加します。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
@@ -50,7 +50,7 @@ ms.locfileid: "35671922"
  Word によってコメントに追加されるユーザーの頭文字を変更するには、 <xref:Microsoft.Office.Interop.Word._Application.UserInitials%2A> プロパティを使用します。  
   
 ## <a name="see-also"></a>関連項目  
- [方法: プログラムによって文書からすべてのコメントを削除](../vsto/how-to-programmatically-remove-all-comments-from-documents.md)   
+ [方法: プログラムによって文書からすべてのコメントを削除します。](../vsto/how-to-programmatically-remove-all-comments-from-documents.md)   
  [Document ホスト項目](../vsto/document-host-item.md)  
   
   

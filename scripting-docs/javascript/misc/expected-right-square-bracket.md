@@ -1,5 +1,5 @@
----
-title: ']'が必要です |Microsoft ドキュメント'
+﻿---
+title: 予想 ']' |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,19 +20,19 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e31975b80764773f16eb4009322b712c06a4ff4f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 13eb537d7c32d1f0252a2500e04aa04be4ecef53
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24632752"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53804352"
 ---
-# <a name="expected-3939"></a>']'が必要です。
-配列の要素への参照が行われたが、右角かっこが含まれていません。 配列の要素を指す任意の式には、両方を開くと、終わりかっこを含める必要があります。  
+# <a name="expected-"></a>']' が必要です。
+配列要素への参照が行われたが、右角かっこが含まれていません。 配列の要素を参照する任意の式には、角かっこの開閉の両方を含める必要があります。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   配列の要素を参照する式に右角かっこを追加します。  
+-   配列の要素を参照する式には、右角かっこを追加します。  
   
 ## <a name="see-also"></a>関連項目  
  [配列の使用](../../javascript/advanced/using-arrays-javascript.md)   

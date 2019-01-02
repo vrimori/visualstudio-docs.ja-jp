@@ -26,12 +26,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2702eb38e895f5fa9021fae754ae1e4a9325cf18
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
-ms.translationtype: HT
+ms.openlocfilehash: ec90c7f797c8b25337a23a12321352ff487a12ca
+ms.sourcegitcommit: 6efb9378a82924cb133912d207c6da4bd5a0b9c2
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53066783"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53443926"
 ---
 # <a name="view-dlls-and-executables-in-the-modules-window-c-c-visual-basic-f"></a>[モジュール] ウィンドウで、Dll と実行可能ファイルを表示 (C#、C++、Visual Basic、 F#)
  
@@ -42,7 +42,7 @@ Visual Studio がデバッグ中に、**モジュール** ウィンドウの一�
   
 ## <a name="use-the-modules-window"></a>[モジュール] ウィンドウを使用します。
 
-デバッグ中にモジュール ウィンドウを開き、選択**デバッグ** > **Windows** > **モジュール**します。 
+デバッグ中にモジュール ウィンドウを開き、選択**デバッグ** > **Windows** > **モジュール**(またはキーを押します**Ctrl + Alt + U**). 
   
 既定では、**[モジュール]** ウィンドウには、モジュールが読み込み順に表示されます。 ウィンドウの任意の列を並べ替えるには、列の上部にあるヘッダーを選択します。  
   

@@ -13,12 +13,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 75043a1716cca0c727eb0530cd63ca715a60424b
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 1e82dd7fbae434ae129e90562aab91875bb4e28b
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53064873"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53740102"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET を使用した単純なデータ アプリケーションの作成
 
@@ -37,7 +37,7 @@ ms.locfileid: "53064873"
 
 -   SQL Server Express LocalDB。 SQL Server Express LocalDB をお持ちでない場合からをインストール、 [SQL Server Express のダウンロード ページ](https://www.microsoft.com/sql-server/sql-server-editions-express)します。
 
-このトピックでする Visual Studio IDE の基本的な機能を使い慣れているとできる Windows フォーム アプリケーションを作成と仮定ボタンと、フォームの他のコントロールを配置するプロジェクトにフォーム コントロール、およびコードの単純なイベントのプロパティの設定を追加します。 完了することをお勧め、これらのタスクを慣れていない場合、 [Visual c# および Visual Basic の概要](../ide/getting-started-with-visual-csharp-and-visual-basic.md)トピックでこのチュートリアルを開始する前にします。
+このトピックでする Visual Studio IDE の基本的な機能を使い慣れているとできる Windows フォーム アプリケーションを作成と仮定ボタンと、フォームの他のコントロールを配置するプロジェクトにフォーム コントロール、およびコードの単純なイベントのプロパティの設定を追加します。 完了することをお勧め、これらのタスクを慣れていない場合、 [Visual c# および Visual Basic の概要](../ide/quickstart-visual-basic-console.md)トピックでこのチュートリアルを開始する前にします。
 
 ## <a name="set-up-the-sample-database"></a>サンプル データベースを設定する
 

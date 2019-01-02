@@ -14,12 +14,12 @@ manager: douge
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: 66a107fbd738bc26fdf608223ff43f958754e3ae
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 87f7b724f2b7712e4318bc2bfbef4f06ee5ee9bb
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53065301"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53802486"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-uwp-apps"></a>チュートリアル: UWP アプリ用の単体テストの作成および実行
 
@@ -108,5 +108,5 @@ Visual Studio には、ユニバーサル Windows プラットフォーム (UWP)
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Studio での UWP アプリのテスト](../test/testing-store-apps-with-visual-studio.md)
+- [Visual Studio での UWP アプリのテスト](../test/unit-test-your-code.md)
 - [UWP アプリのビルドとテスト](/azure/devops/pipelines/apps/windows/universal?tabs=vsts)

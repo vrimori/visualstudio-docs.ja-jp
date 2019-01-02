@@ -10,16 +10,16 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: c89eed2f3e15259489ce43920b912db14ab862a6
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 1f0f37be96603ed5d1e53c5ef36ea011d636dcaa
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36235309"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53804852"
 ---
 # <a name="debug-r-in-visual-studio"></a>Visual Studio で R をデバッグする
 
-R Tools for Visual Studio (RTVS) は、Visual Studio の全デバッグ機能と統合されています (「[Feature Tour of the Visual Studio Debugger](../debugger/debugging-in-visual-studio.md)」(Visual Studio デバッガーの機能ツアー) を参照してください)。 このサポートには、ブレークポイント、実行中のプロセスへのアタッチ、変数の検査と監視、コール スタックの検査が含まれます。 この記事では、R および RTVS に固有のデバッグの機能について説明します。
+R Tools for Visual Studio (RTVS) は、Visual Studio の全デバッグ機能と統合されています (「[Feature Tour of the Visual Studio Debugger](/visualstudio/debugger/debugger-feature-tour)」(Visual Studio デバッガーの機能ツアー) を参照してください)。 このサポートには、ブレークポイント、実行中のプロセスへのアタッチ、変数の検査と監視、コール スタックの検査が含まれます。 この記事では、R および RTVS に固有のデバッグの機能について説明します。
 
 R プロジェクトのスタートアップ R ファイルに対するデバッガーの起動は、他のプロジェクト タイプと同じです。**[デバッグ]** の **[デバッグ開始]**、**F5** キー、またはデバッグ ツールバーの **[Source startup file]\(ソース スタートアップ ファイル\)** を使います。 
 

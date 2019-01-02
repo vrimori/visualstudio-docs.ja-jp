@@ -13,12 +13,12 @@ dev_langs:
 - CPP
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 406b3c24cf3c46b694afc8ab24c0ddca11b434ee
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: 182f020ee5ca8132eb19647fc9f24c834544ac2e
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53159998"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684354"
 ---
 # <a name="get-started-with-c-in-visual-studio"></a>Visual Studio での C++ の概要
 
@@ -156,5 +156,5 @@ HelloApp をデバッグして、コンソール ウィンドウに "Hello" と�
 ## <a name="see-also"></a>関連項目
 
 - [C++ デスクトップ開発のための Visual Studio IDE の使用](/cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development)
-- [チュートリアル: C# または Visual Basic による簡単なアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)
+- [チュートリアル: C# または Visual Basic による簡単なアプリケーションの作成](../get-started/csharp/tutorial-wpf.md)
 - [Visual Studio の生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)

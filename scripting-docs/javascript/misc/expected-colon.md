@@ -1,5 +1,5 @@
----
-title:  ':' が必要です。 |Microsoft ドキュメント'
+﻿---
+title: 予想 ':' |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,15 +20,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0c882c2da52de7a41c558f34f6912a0da1ad272a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 23b1bcc42db9daace5a57b56346f5abe58232173
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633272"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53802397"
 ---
-# <a name="expected-3939"></a> ':' が必要です。
-三項の条件演算子を使用して式を作成しようとしていますが、2 番目と 3 番目のオペランドの間にコロンが含まれていません。 3 項 (3 つのオペランド) 条件演算子は、2 番目 (true) と 3 番目 (false) の間にコロンを必要とオペランド。  
+# <a name="expected-"></a>':' が必要です。
+三項条件演算子を使用して式を作成しようとしましたが、2 番目と 3 番目のオペランドの間にコロンが含まれていません。 三項の (3 つのオペランド) 条件付き演算子には、2 番目 (true) と 3 番目 (false) の間にコロンが必要なオペランドです。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   

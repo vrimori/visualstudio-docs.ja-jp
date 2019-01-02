@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: fb9dbc94d06bbb260884a2379e2427969fec1031
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: 23ba016d95e96965637ca6742501b09b16a42707
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53159244"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684367"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>クイック スタート: Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する
 
@@ -127,7 +127,7 @@ Visual Studio を既にインストールしている場合は、最新のリリ
 詳細については、引き続き以下のチュートリアルをご覧ください。
 
 > [!div class="nextstepaction"]
-> [Visual Studio での C# および ASP.NET の概要](tutorial-csharp-aspnet-core.md)
+> [Visual Studio での C# および ASP.NET の概要](../get-started/csharp/tutorial-aspnet-core.md)
 
 ## <a name="see-also"></a>関連項目
 

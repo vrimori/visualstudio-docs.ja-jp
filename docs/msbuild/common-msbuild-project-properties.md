@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fe2c39fc08528886e143bd51eb1f33219b386807
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e8bc70a93bf96e34fd3ce2cd09f728b1bd450bf5
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49921718"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53803495"
 ---
 # <a name="common-msbuild-project-properties"></a>MSBuild プロジェクトの共通プロパティ
 次の表は、Visual Studio プロジェクト ファイルで定義される、または MSBuild に用意されている *.targets* ファイルに含まれている、使用頻度の高いプロパティを示しています。  
@@ -56,17 +56,17 @@ ms.locfileid: "49921718"
 | CscToolPath | [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] コンパイラ *csc.exe* のパスです。 |
 | CustomBeforeMicrosoftCommonTargets | 共通ターゲットのインポートの前に自動的にインポートされるプロジェクト ファイルまたは targets ファイルの名前です。 |
 | DebugSymbols | ビルド時にシンボルを生成するかどうかを示すブール値です。<br /><br /> コマンド ラインで **-p:DebugSymbols=false** と設定すると、プログラム データベース (*.pdb*) シンボル ファイルの生成が無効になります。 |
+| DebugType | 生成するデバッグ情報のレベルを定義します。 有効な値は "full"、"pdbonly"、および "none" です。 |
 | DefineConstants | 条件付きコンパイル定数を定義します。 次の構文に従い、シンボルと値のペアをセミコロン (;) で区切って指定します。<br /><br /> *symbol1 = value1 ; symbol2 = value2*<br /><br /> このプロパティは、`/define` コンパイラ スイッチに相当します。 |
 | DefineDebug | 定数 DEBUG を定義するかどうかを示すブール値です。 |
 | DefineTrace | 定数 TRACE を定義するかどうかを示すブール値です。 |
-| DebugType | 生成するデバッグ情報のレベルを定義します。 有効な値は "full"、"pdbonly"、および "none" です。 |
 | DelaySign | アセンブリに完全署名ではなく遅延署名するかどうかを示すブール値です。 |
 | Deterministic | コンパイラが同じ入力に対して同じアセンブリを生成するかどうかを指示するブール値。 このパラメーターは、*vbc.exe* および *csc.exe* コンパイラの `/deterministic` スイッチに相当します。 |
 | DisabledWarnings | 指定された警告の出力を抑制します。 警告 ID の数値だけを指定してください。 複数の警告を指定するときは、セミコロン (;) で区切ります。 このパラメーターは、*vbc.exe* コンパイラの `/nowarn` スイッチに相当します。 |
 | DisableFastUpToDateCheck | [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のみに適用されるブール値です。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ビルド マネージャーは、FastUpToDateCheck と呼ばれるプロセスを使用して、プロジェクトをリビルドして最新の状態にする必要があるかどうかを判断します。 この判断を行う機能としては、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] より、このプロセスの方が高速です。 DisableFastUpToDateCheck プロパティを `true` に設定すると、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ビルド マネージャーをバイパスし、プロジェクトが最新の状態かどうかを判断するために [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] を使用するように強制できます。 |
 | DocumentationFile | XML ドキュメント ファイルとして生成されるファイルの名前です。 この名前はファイル名のみを示し、パス情報は含んでいません。 |
 | ErrorReport | コンパイラ タスクで内部コンパイル エラーを報告するかどうかを指定します。 有効な値は "prompt"、"send"、または "none" です。 このプロパティは、`/errorreport` コンパイラ スイッチに相当します。 |
-| ExcludeDeploymentUrl | プロジェクト ファイルに次の要素が含まれている場合は、[GenerateDeploymentManifest タスク](../msbuild/generatedeploymentmanifest-task.md)によって、deploymentProvider タグが配置マニフェストに追加されます。<br /><br /> -   UpdateUrl<br />-   InstallUrl<br />-   PublishUrl<br /><br /> ただし、ExcludeDeploymentUrl を使用すると、上記の URL が指定されている場合でも、配置マニフェストに deploymentProvider タグが追加されないようにすることができます。 これを行うには、次のプロパティをプロジェクト ファイルに追加します。<br /><br /> `<ExcludeDeploymentUrl>true</ExcludeDeploymentUrl>` <br /><br />**注意:** ExcludeDeploymentUrl は [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE では公開されていないため、プロジェクト ファイルを手動で編集する方法でのみ設定できます。 このプロパティを設定しても、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内での発行には影響はありません。つまり、PublishUrl で指定された URL に deploymentProvider タグが追加されます。 |
+| ExcludeDeploymentUrl | プロジェクト ファイルに次の要素が含まれている場合は、[GenerateDeploymentManifest タスク](../msbuild/generatedeploymentmanifest-task.md)によって、deploymentProvider タグが配置マニフェストに追加されます。<br /><br /> -   UpdateUrl<br />-   InstallUrl<br />-   PublishUrl<br /><br /> ただし、ExcludeDeploymentUrl を使用すると、上記の URL が指定されている場合でも、配置マニフェストに deploymentProvider タグが追加されないようにすることができます。 これを行うには、次のプロパティをプロジェクト ファイルに追加します。<br /><br /> `<ExcludeDeploymentUrl>true</ExcludeDeploymentUrl>` <br /><br />**注:** ExcludeDeploymentUrl は [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE では公開されていないため、プロジェクト ファイルを手動で編集する方法でのみ設定できます。 このプロパティを設定しても、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内での発行には影響はありません。つまり、PublishUrl で指定された URL に deploymentProvider タグが追加されます。 |
 | FileAlignment | 出力ファイルでセクションをアラインするサイズをバイト単位で指定します。 有効値は 512、1024、2048、4096、および 8192 です。 このプロパティは、`/filealignment` コンパイラ スイッチに相当します。 |
 | FrameworkPathOverride | *mscorlib.dll* および *microsoft.visualbasic.dll* の位置を指定します。 このパラメーターは、*vbc.exe* コンパイラの `/sdkpath` スイッチに相当します。 |
 | GenerateDocumentation | (Visual Basic のみ) ビルドによってドキュメントを生成するかどうかを示すブール値パラメーターです。 `true` に設定すると、ビルドによってドキュメント情報が生成され、ビルド タスクが作成した実行可能ファイルまたはライブラリの名前と共に *.xml* ファイルに格納されます。 |

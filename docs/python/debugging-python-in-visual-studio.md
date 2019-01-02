@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0e4cc2ff43b59fff0aac70d9cc13a0a00662e209
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 64eafbffcf453832dd2ba764ef3396cb7129be89
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53068436"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53561750"
 ---
 # <a name="debug-your-python-code"></a>Python コードのデバッグ
 
@@ -84,7 +84,7 @@ Visual Studio は、実行中のプロセスへのアタッチ、**ウォッチ*
 
 ### <a name="inspect-and-modify-values"></a>値の検査および変更
 
-デバッガーで停止中に、変数の値を検査して変更することができます。 **ウォッチ** ウィンドウを使用して、個々の変数やカスタム式を監視することもできます。 (詳しくは[変数の検査](../debugger/getting-started-with-the-debugger.md#inspect-variables-with-the-autos-and-locals-windows)に関する記事を参照してください)。
+デバッガーで停止中に、変数の値を検査して変更することができます。 **ウォッチ** ウィンドウを使用して、個々の変数やカスタム式を監視することもできます。 (詳しくは[変数の検査](../debugger/debugger-feature-tour.md#inspect-variables-with-the-autos-and-locals-windows)に関する記事を参照してください)。
 
 **データヒント**を使用して値を表示するには、エディター内で変数の上にマウスを合わせます。 値をクリックして変更することができます。
 

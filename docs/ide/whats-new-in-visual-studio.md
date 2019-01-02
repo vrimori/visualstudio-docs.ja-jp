@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c490d15f27801dff6bb09f6356ad7c665b09c558
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: c06c77d2bc5a291b4dd2d624352a25abd29338b7
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160193"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53740398"
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
 
@@ -223,7 +223,7 @@ Visual Studio には、C++ Core ガイドラインの配信、C++11 および C+
 
 ![Visual Studio の新しい例外ヘルパー ダイアログ](../debugger/media/intellitrace-step-back-icons-description.png  "[前に戻る] ボタンと [次へ進む] ボタン")
 
-詳細については、「[IntelliTrace ステップ バックを使用してスナップショットを表示する](../debugger/how-to-use-intellitrace-step-back.md)」のページ参照してください。
+詳細については、「[IntelliTrace ステップ バックを使用してスナップショットを表示する](../debugger/view-historical-application-state.md)」のページ参照してください。
 
 ### <a name="containerization"></a>コンテナー詰め
 
@@ -278,7 +278,7 @@ UWP の詳細については、「[ユニバーサル Windows プラットフォ
 
 ".NET によるモバイル開発" ワークロードの一部として、C#、.NET、Visual Studio に詳しい開発者は Xamarin を利用し、Android、iOS、Windows のネイティブ アプリを開発できます。 開発者は、Android、iOS、および Windows デバイスでのリモート デバッグなど、モバイル アプリを Xamarin で開発する場合 &mdash; Objective-C または Java のようなネイティブのコーディング言語を習得しなくても、同じ機能と生産性を享受できます。
 
-詳細については、「[Visual Studio と Xamarin](../cross-platform/visual-studio-and-xamarin.md)」ページを参照してください。
+詳細については、「[Visual Studio と Xamarin](/xamarin/)」ページを参照してください。
 
 ### <a name="entitlements-editor"></a>権利エディター
 
@@ -366,7 +366,7 @@ Docker 対応にもなりました。
 Visual Studio 2017 は、より優れた開発を可能にする新機能で頻繁に更新されています。 現在、試験的プレビュー状態にある、特に重要な更新のいくつかをご紹介します。
 
 * **[Live Share](https://visualstudio.microsoft.com/services/live-share/)**。コードベースとそのコンテキストをチームメイトと共有し、Visual Studio 内で直接、双方向のインスタント コラボレーションができるようにする新しいツールです。 Live Share では自分が共有したプロジェクトをチームメイトがシームレスかつ安全に読み取り、移動、編集、デバッグすることができます。<br><br>詳細については、[Live Share の FAQ](/visualstudio/liveshare/faq) を参照してください。<br><br>
-* **[IntelliCode](https://visualstudio.microsoft.com/services/intellicode/)**。AI を使用してコンテキスト対応の優れた入力候補を提示したり、開発者のコードをチームのパターンとスタイルに誘導したり、見つけにくいコードの問題を検出したり、非常に重要な領域のコード レビューに注目したりすることでソフトウェア開発を拡張する新機能です。 <br><br>詳細については、[IntelliCode の FAQ](../ide/not-in-toc/intellicode-faq.md) を参照してください。
+* **[IntelliCode](https://visualstudio.microsoft.com/services/intellicode/)**。AI を使用してコンテキスト対応の優れた入力候補を提示したり、開発者のコードをチームのパターンとスタイルに誘導したり、見つけにくいコードの問題を検出したり、非常に重要な領域のコード レビューに注目したりすることでソフトウェア開発を拡張する新機能です。 <br><br>詳細については、[IntelliCode の FAQ](/visualstudio/intellicode/faq) を参照してください。
 
 Visual Studio 2017 のその他の機能について知りたい場合は、 [Visual Studio のロードマップ](/visualstudio/productinfo/vs2018-roadmap)のページを参照してください。
 

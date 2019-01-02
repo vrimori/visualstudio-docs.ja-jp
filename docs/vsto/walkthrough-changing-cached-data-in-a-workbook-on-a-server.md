@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f9f2ac3873bf59b30f8efa3e45d6cbdd0aebd4f6
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 30f2c8576aaf26d2cb643327fb989d90a8964552
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50672864"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53804378"
 ---
 # <a name="walkthrough-change-cached-data-in-a-workbook-on-a-server"></a>チュートリアル: サーバー上のブックにキャッシュされたデータを変更します。
   このチュートリアルを使用して起動することがなく、Microsoft Office Excel ブックにキャッシュされているデータセットを変更する方法について説明、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>クラス。
@@ -57,9 +57,9 @@ ms.locfileid: "50672864"
 
 -   Microsoft SQL Server または AdventureWorksLT サンプル データベースがアタッチされている Microsoft SQL Server Express の実行中のインスタンスへのアクセス。 AdventureWorksLT データベースをダウンロードすることができます、 [CodePlex web サイト](http://go.microsoft.com/fwlink/?linkid=87843)します。 データベースをアタッチする方法について詳しくは、次のトピックをご覧ください。
 
-    -   データベースをアタッチするには、SQL Server Management Studio または SQL Server Management Studio Express を使用して、参照してください。[方法: データベース (SQL Server Management Studio) をアタッチする](/sql/relational-databases/databases/attach-a-database)します。
+    -   データベースをアタッチするには、SQL Server Management Studio または SQL Server Management Studio Express を使用して、参照してください。[方法。データベース (SQL Server Management Studio) をアタッチする](/sql/relational-databases/databases/attach-a-database)します。
 
-    -   コマンドラインを使用してデータベースをアタッチする、次を参照してください。[方法: SQL Server Express データベース ファイルを添付](/previous-versions/sql/)。
+    -   コマンドラインを使用してデータベースをアタッチする、次を参照してください。[方法。SQL Server Express データベース ファイルを添付](/previous-versions/sql/)します。
 
 ## <a name="create-a-class-library-project-that-defines-a-dataset"></a>データセットを定義するクラス ライブラリ プロジェクトを作成します。
  Excel ブック プロジェクトと、コンソール アプリケーションで同じデータセットを使用するには、これらのプロジェクトの両方で参照されている別のアセンブリにデータセットを定義する必要があります。 このチュートリアルでは、クラス ライブラリ プロジェクトで、データセットを定義します。
@@ -89,7 +89,7 @@ ms.locfileid: "50672864"
 ## <a name="define-a-dataset-in-the-class-library-project"></a>クラス ライブラリ プロジェクトでデータセットを定義します。
  SQL Server 2005 用の AdventureWorksLT データベースからデータを含む型指定されたデータセットを定義します。 このチュートリアルの後半では、Excel ブック プロジェクトと、コンソール アプリケーション プロジェクトからこのデータセットを参照します。
 
- データセットが、*型指定された dataset* AdventureWorksLT データベースの Product テーブル内のデータを表します。 型指定されたデータセットの詳細については、次を参照してください。 [Visual Studio でのデータセット ツール](/visualstudio/data-tools/dataset-tools-in-visual-studio)します。
+ データセットが、*型指定された dataset* AdventureWorksLT データベースの Product テーブル内のデータを表します。 型指定されたデータセットの詳細については、次を参照してください。 [Visual Studio でのデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)します。
 
 ### <a name="to-define-a-typed-dataset-in-the-class-library-project"></a>クラス ライブラリ プロジェクトで指定されたデータセットを定義するには
 
