@@ -2,7 +2,6 @@
 title: デバッグを行うときの呼び出し履歴に対するメソッドのマップ
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
 ms.topic: conceptual
 f1_keywords:
 - vs.progression.debugwithcodemaps
@@ -30,12 +29,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c4597f1352e02033c55fcdced126e184f854b463
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: a238da745821da5c93cf953817305703786df805
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53067399"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53889242"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Visual Studio でデバッグを行うときの呼び出し履歴に対するメソッドのマップ
 デバッグ中に呼び出し履歴を視覚的にトレースするためのコード マップを作成します。 コメントをマップに追加することでバグの発見に重点を置いてコードの動作を追跡できます。
@@ -50,7 +49,7 @@ ms.locfileid: "53067399"
 
   参照トピック
 
-- [ビデオ: は、コード マップ デバッガーの統合 (チャネル 9) で視覚的にデバッグします。](http://go.microsoft.com/fwlink/?LinkId=293418)
+- [ビデオ:コード マップ デバッガーの統合 (チャネル 9) で視覚的にデバッグします。](http://go.microsoft.com/fwlink/?LinkId=293418)
 
 - [呼び出し履歴でマップします。](#MapStack)
 
@@ -68,9 +67,9 @@ ms.locfileid: "53067399"
 
 ## <a name="MapStack"></a>呼び出し履歴でマップを作成する
 
-1.  デバッグを開始します。 (キーボード: **F5**)
+1.  デバッグを開始します。 (キーボード。**F5 キーを押して**)
 
-2.  アプリが中断モードになるか、関数にステップ イン、選択**コード マップ**します。 (キーボード: **Ctrl** + **Shift** + **`**)
+2.  アプリが中断モードになるか、関数にステップ イン、選択**コード マップ**します。 (キーボード。**Ctrl キーを押し** + **Shift** + **`**)
 
      ![コード マップを選択して呼び出し履歴のマッピングを開始](../debugger/media/debuggermap_choosecodemap.png)
 
@@ -93,7 +92,7 @@ ms.locfileid: "53067399"
 ## <a name="AddRelatedCode"></a>関連するコードをマップに追加する
  作成できたマップ - どのような横でしょうか。 C# または Visual Basic で作業している場合は、フィールド、プロパティ、およびコードで何が起こっているかを追跡するために、他の方法などの項目を追加します。
 
- メソッドのコード定義を表示するには、そのメソッドをダブルクリックするか、そのメソッドのショートカット メニューを使用します。 (キーボード: マップとキーを押してでメソッドを選択**F12**)
+ メソッドのコード定義を表示するには、そのメソッドをダブルクリックするか、そのメソッドのショートカット メニューを使用します。 (キーボード。マップとキーを押してでメソッドを選択**F12**)
 
  ![コード マップのメソッドのコード定義に移動](../debugger/media/debuggermap_gotocodedefinition.png)
 
@@ -143,7 +142,7 @@ ms.locfileid: "53067399"
 
    マップを変更すると、任意の方法でコードに影響しません。 マップでの名前変更、移動、削除は自由に行うことができます。
 
-- **このメッセージの意味:「ダイアグラムは、コードの古いバージョンに基づく可能性があります」でしょうか。**
+- **このメッセージは何を意味します。「ダイアグラムは以前のバージョンのコードでベース可能性がありますか。」**
 
    マップを最後に更新してからコードが変更されている可能性があります。 たとえば、マップ上の呼び出しがコードに存在しなくなった可能性があります。 メッセージを閉じてから、マップを再び更新する前にソリューションをリビルドしてみます。
 

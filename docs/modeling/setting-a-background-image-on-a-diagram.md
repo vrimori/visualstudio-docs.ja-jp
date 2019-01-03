@@ -8,13 +8,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 82466360fd4f891d28e0218a540d27c803a39662
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 63243df353dc141363a3ebfdd61a5f90a2fe6258
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47858875"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53887868"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>ダイアグラムへの背景イメージの設定
 Visual Studio Visualization and Modeling SDK でカスタム コードを使用して、生成されたデザイナーの背景イメージを設定できます。
@@ -45,7 +44,7 @@ Visual Studio Visualization and Modeling SDK でカスタム コードを使用�
 
 11. Resources.Designer.cs が不足している場合は、Resources.resx ファイルをクリックします。 **ソリューション エクスプ ローラー**します。
 
-12. **プロパティ**ウィンドウで、設定、`Custom Tool`プロパティを`ResXFileCodeGenerator`します。
+12. **[プロパティ]** ウィンドウで、 `Custom Tool` プロパティを `ResXFileCodeGenerator`に設定します。
 
 13. **ソリューション エクスプ ローラー**、Dsl プロジェクトを右クリックし、 をポイント**追加**、 をクリック**新しいフォルダー**します。
 

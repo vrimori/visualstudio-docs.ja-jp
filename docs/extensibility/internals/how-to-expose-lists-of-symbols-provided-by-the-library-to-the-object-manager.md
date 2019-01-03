@@ -1,9 +1,6 @@
 ---
 title: オブジェクト マネージャーに提供されるシンボルのリストを公開 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - IVsSimpleLibrary2 interface, lists of symbols
@@ -17,14 +14,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 154ab307a77925bb2862a07310d2b044654bfdb0
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 679a743db707b7354fe104721ea8dd709e151217
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513147"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53827443"
 ---
-# <a name="how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager"></a>方法: オブジェクト マネージャーにライブラリによって提供されるシンボルのリストを公開
+# <a name="how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager"></a>方法: オブジェクト マネージャーにライブラリによって提供されるシンボルのリストを公開します。
 シンボル参照ツール、**クラス ビュー**、**オブジェクト ブラウザー**、**呼び出しブラウザー**と**シンボルの検索結果**を新しいデータの要求を渡す[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]オブジェクト マネージャー。 オブジェクト マネージャーは、適切なライブラリを検索し、シンボルの新しいリストを要求します。 ライブラリの応答を要求されたデータを提供することで、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]オブジェクト マネージャーを介して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2>インターフェイス。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]オブジェクト マネージャー メソッドを呼び出して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2>データを取得するインターフェイスを使用して設定またはシンボル参照ツールのビューを更新します。  
   
  ライブラリでは、ツールが呼び出され、ノードを展開すると、またはビューが更新されたとき、データの要求を取得することがあります。 シンボル参照ツールが初めて呼び出されると、オブジェクト マネージャーは、最上位レベルの一覧を提供するライブラリを要求します。 ユーザーは、一覧にノードを展開、ライブラリは、そのノードの下の子の一覧を提供します。 すべてのオブジェクト マネージャーの照会には、関心のある項目のインデックスが含まれています。 新しい一覧を表示するには、項目の数が、項目、その名前、アクセシビリティ、およびその他のプロパティの種類の一覧ではオブジェクト マネージャーを決定する必要があります。  
@@ -471,5 +468,5 @@ ms.locfileid: "39513147"
 ## <a name="see-also"></a>関連項目  
  [シンボル参照ツールをサポートします。](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
  [方法: オブジェクト マネージャーにライブラリを登録します。](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)   
- [方法: ライブラリでシンボルの識別](../../extensibility/internals/how-to-identify-symbols-in-a-library.md)   
+ [方法: ライブラリ内のシンボルを識別します。](../../extensibility/internals/how-to-identify-symbols-in-a-library.md)   
  [従来の言語サービス拡張機能](../../extensibility/internals/legacy-language-service-extensibility.md)

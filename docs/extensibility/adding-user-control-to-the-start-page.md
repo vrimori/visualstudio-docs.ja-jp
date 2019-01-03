@@ -1,9 +1,6 @@
 ---
 title: スタート ページにユーザー コントロールの追加 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - start page dll
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 96b280221ba7efdefd3023f015bd4075b8c03aaa
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 8218910c50c63e3cef8f8ad402967bd21fb0da5d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49910496"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53874694"
 ---
 # <a name="add-user-control-to-the-start-page"></a>スタート ページにユーザー コントロールを追加します。
 このチュートリアルでは、カスタム スタート ページへの DLL の参照を追加する方法を示します。 例では、ソリューションにユーザー コントロールを追加、ユーザー コントロールをビルドおよびスタート ページからビルドされたアセンブリを参照 *.xaml*ファイル。 新しいタブでは、基本的な Web ブラウザーとして機能するユーザー コントロールをホストします。  
@@ -110,7 +107,7 @@ ms.locfileid: "49910496"
 2.  SetButton_Click イベント ハンドラーで、次のように入力します。  
   
     ```csharp  
-    private void SetButton_Click(object sender, RoutedEventArgs e)  
+    private void SetButton_Click(object sender, RoutedEventArgs e)  
     {  
         try  
         {  

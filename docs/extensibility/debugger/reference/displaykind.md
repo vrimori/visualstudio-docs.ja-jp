@@ -1,9 +1,6 @@
 ---
-title: DisplayKind |Microsoft ドキュメント
-ms.custom: ''
+title: DisplayKind |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - DisplayKind enumeration
@@ -13,15 +10,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8890d8a949e59827b45d3a2933116294562023e1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fd75220c202d65c11ac695e4fa27e736595cbc86
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31109913"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53828879"
 ---
 # <a name="displaykind"></a>DisplayKind
-取得する情報の種類を表す有効な値を列挙、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクトをユーザーに表示します。  
+列挙から取得する情報の種類を表す有効な値、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクトし、ユーザーに表示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +43,7 @@ public enum enum_DisplayKind
   
 #### <a name="parameters"></a>パラメーター  
  DisplayKind_Value  
- フィールドの値です。  
+ フィールドの値。  
   
  DisplayKind_Name  
  フィールドの名前。  
@@ -54,12 +51,12 @@ public enum enum_DisplayKind
  DisplayKind_Type  
  フィールドの型。  
   
-## <a name="requirements"></a>要件  
- ヘッダー: Ee.h  
+## <a name="requirements"></a>必要条件  
+ ヘッダー:Ee.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   

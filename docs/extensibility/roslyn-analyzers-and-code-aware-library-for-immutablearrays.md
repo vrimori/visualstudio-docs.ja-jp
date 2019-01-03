@@ -1,9 +1,6 @@
 ---
 title: Roslyn アナライザーと ImmutableArrays 用コード認識ライブラリ |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
 author: gregvanl
@@ -11,12 +8,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e2af6141ae3b7a61805b2515f11f72f164389949
-ms.sourcegitcommit: d7f232a7596420e40ff8051d42cdf90203af4a74
+ms.openlocfilehash: c59fcaa44314c421f896ca5f64e0a2582faa5eb9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821384"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53833369"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Roslyn アナライザーと ImmutableArrays 用コード認識ライブラリ
 
@@ -301,7 +298,7 @@ private async Task<Document> ChangeToImmutableArrayEmpty(
 
 これでキーを押して**f5 キーを押して**を Visual Studio の 2 番目のインスタンスでアナライザーを実行します。 前に使用したコンソール プロジェクトを開きます。 場所は、新しいオブジェクトの作成式を表示する電球を表示する必要があります`ImmutableArray<int>`します。 キーを押す場合**Ctrl**+**します。** (ピリオド)、修正、コードが表示され、light bulb UI で、自動的に生成されたコードの違いにプレビューが表示されます。 Roslyn はこれを作成します。
 
-**Pro ヒント:** 、Visual Studio の 2 番目のインスタンスを起動して、コード修正に電球が表示されない場合、Visual Studio コンポーネント キャッシュをクリアする必要があります。 キャッシュをクリアする Visual Studio で Visual Studio は、最新コンポーネントを選択し、必要がありますので、コンポーネントを再度確認を強制します。 最初に、Visual Studio の 2 番目のインスタンスをシャット ダウンします。 次に、 **Windows エクスプ ローラー**に移動します *%LOCALAPPDATA%\Microsoft\VisualStudio\15.0Roslyn\\*します。 (「15.0」に、Visual Studio であるバージョンが変わります。) サブディレクトリを削除*ComponentModelCache*します。
+**Pro ヒントは:** Visual Studio の 2 番目のインスタンスを起動するコード修正に電球が表示されない場合は、Visual Studio コンポーネント キャッシュをクリアする必要があります。 キャッシュをクリアする Visual Studio で Visual Studio は、最新コンポーネントを選択し、必要がありますので、コンポーネントを再度確認を強制します。 最初に、Visual Studio の 2 番目のインスタンスをシャット ダウンします。 次に、 **Windows エクスプ ローラー**に移動します *%LOCALAPPDATA%\Microsoft\VisualStudio\15.0Roslyn\\*します。 (「15.0」に、Visual Studio であるバージョンが変わります。) サブディレクトリを削除*ComponentModelCache*します。
 
 ## <a name="talk-video-and-finish-code-project"></a>ビデオの説明し、コード プロジェクトの完了
 

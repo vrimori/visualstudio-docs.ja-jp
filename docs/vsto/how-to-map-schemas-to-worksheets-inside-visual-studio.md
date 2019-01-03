@@ -3,8 +3,6 @@ title: '方法: Visual Studio 内でワークシートにスキーマを割り�
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,12 +17,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 672acf2b33463ee5110dc537f14831a1c034380e
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: 1be044131ab7248e971e5030f0d35467773587e1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53646655"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53849930"
 ---
 # <a name="how-to-map-schemas-to-worksheets-inside-visual-studio"></a>方法: Visual Studio 内でワークシートにスキーマを割り当てる
   ワークシートが Visual Studio で開いている間は、ワークシートに XML スキーマをマップできます。 ブックが Visual Studio の外部で開いているときに使用するのと同じ Microsoft Office Excel ツールを使用するとします。 Office プロジェクトは、前に、ワークシートにスキーマをマップするかどうか、または Excel ソリューションを作成した後に、同じオブジェクトを作成します。  
@@ -70,5 +68,3 @@ ms.locfileid: "53646655"
 ## <a name="see-also"></a>関連項目  
  [方法: Visual Studio 内で Word 文書にスキーマを割り当てる](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)   
  [ドキュメント レベルのカスタマイズにおける XML スキーマとデータ](../vsto/xml-schemas-and-data-in-document-level-customizations.md)  
-  
-  

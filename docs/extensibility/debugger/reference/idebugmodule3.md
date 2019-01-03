@@ -1,9 +1,6 @@
 ---
-title: IDebugModule3 |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugModule3 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugModule3
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0b74063aa73db8258b2986ac1310d02e36027bf6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2f82b8031c9ca60d843aeb6c96ecf5095fbcfa4f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31118454"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53840977"
 ---
 # <a name="idebugmodule3"></a>IDebugModule3
 このインターフェイスは、シンボルと JustMyCode 状態の別の場所をサポートするモジュールを表します。  
@@ -32,30 +29,30 @@ IDebugModule3 : IDebugModule2
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- デバッグ エンジン (DE) は、シンボルの別の場所をサポートするために、JustMyCode 状態を操作して、このインターフェイスを実装 (を参照してください、 [Visual Studio デバッガーの用語集](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md)"JustMyCode"の定義で)。  
+ デバッグ エンジン (DE) JustMyCode 状態を使用してシンボルの別の場所をサポートするためには、このインターフェイスを実装する (を参照してください、 [Visual Studio デバッガーの用語集](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md)"JustMyCode"の定義については)。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- 呼び出し[GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md)このインターフェイスを返します。 DE 送信、 [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md)インターフェイスを使用して、セッション デバッグ マネージャー (SDM) を[イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)メソッドです。 呼び出しも、 [QueryInterface](/cpp/atl/queryinterface)上、 [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)インターフェイスは、このインターフェイスを返します。  
+ 呼び出し[GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md)このインターフェイスを返します。 DE 送信、 [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md)インターフェイスを使用してセッション デバッグ マネージャー (SDM)、[イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)メソッド。 呼び出しも、 [QueryInterface](/cpp/atl/queryinterface)上、 [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)インターフェイスは、このインターフェイスを返します。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
- メソッドだけでなく、 [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)インターフェイス、このインターフェイスは、次のメソッドを実装します。  
+ メソッドだけでなく、 [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)インターフェイスでは、このインターフェイスは、次のメソッドを実装します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)|シンボルとそれぞれのパスを検索した結果の検索パスの一覧を返します。|  
-|[LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md)|ロードして、現在のモジュールのシンボルを初期化します。|  
-|[IsUserCode](../../../extensibility/debugger/reference/idebugmodule3-isusercode.md)|返しますのモジュールがユーザー コードを表すかどうかを指定するフラグ。|  
+|[GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)|各パスの検索の結果とシンボルの検索パスの一覧を返します。|  
+|[LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md)|読み込みを現在のモジュールのシンボルを初期化します。|  
+|[IsUserCode](../../../extensibility/debugger/reference/idebugmodule3-isusercode.md)|モジュールがユーザー コードを表すかどうかを指定する返しますフラグ。|  
 |[SetJustMyCodeState](../../../extensibility/debugger/reference/idebugmodule3-setjustmycodestate.md)|見なすかどうか、モジュールがユーザー コードかどうかを指定します。|  
   
-## <a name="remarks"></a>コメント  
- Visual Studio は、このインターフェイスの一般的な消費者です。  
+## <a name="remarks"></a>Remarks  
+ Visual Studio では、このインターフェイスの一般的な消費者です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   

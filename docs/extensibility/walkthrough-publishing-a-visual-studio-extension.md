@@ -1,9 +1,6 @@
 ---
 title: 'チュートリアル: Visual Studio 拡張機能の発行 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing web controls
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae0b9d48e2a2292229b40e3aaf2a1c755e4c844e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0eef45253ff8d6aa0060c122c5003f8f239e73c5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49815742"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53852454"
 ---
 # <a name="walkthrough-publish-a-visual-studio-extension"></a>チュートリアル: Visual Studio 拡張機能を公開します。
 
@@ -27,13 +24,13 @@ ms.locfileid: "49815742"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
- このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。
+ このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、"[Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)"を参照してください。
 
 ## <a name="create-a-visual-studio-extension"></a>Visual Studio 拡張機能を作成します。
 
 この記事では、既定の VSPackage 拡張機能を使用してが、手順は拡張機能のすべての種類に対して無効です。
 
-1. C# という名前の VSPackage を作成`TestPublish`を持つメニュー コマンド。 詳細については、次を参照してください。[初めての拡張機能の作成: Hello World](../extensibility/extensibility-hello-world.md)します。
+1. C# という名前の VSPackage を作成`TestPublish`を持つメニュー コマンド。 詳細については、次を参照してください。[初めての拡張機能を作成します。Hello World](../extensibility/extensibility-hello-world.md)します。
 
 ## <a name="package-your-extension"></a>拡張機能をパッケージ化します。
 
@@ -71,9 +68,9 @@ ms.locfileid: "49815742"
 
 6. 拡張機能のアップロードに使用するパブリッシャーを選択します。 発行元を変更するには、左側に表示されている発行元の名前をクリックします。 をクリックして**新しい拡張機能**選択**Visual Studio**します。
 
-7. **1: 拡張機能のアップロード**、Visual Studio Marketplace に直接 VSIX ファイルをアップロードするか、独自の web サイトにリンクを追加することもできます。 この例では、拡張機能で*TestPublish.vsix*アップロードされます。 ドラッグ アンド、拡張機能を削除するかを使用して、**クリックして**ファイルを参照するリンク。 プロジェクトの \bin\Release フォルダーで、拡張機能を検索します。  **[続行]** をクリックします。
+7. **1。拡張機能のアップロード**、Visual Studio Marketplace に直接 VSIX ファイルをアップロードするか、独自の web サイトにリンクを追加することもできます。 この例では、拡張機能で*TestPublish.vsix*アップロードされます。 ドラッグ アンド、拡張機能を削除するかを使用して、**クリックして**ファイルを参照するリンク。 プロジェクトの \bin\Release フォルダーで、拡張機能を検索します。  **[続行]** をクリックします。
 
-8. **2: 拡張機能の詳細を提供**、一部のフィールドが自動設定から、 *source.extension.vsixmanifest*拡張機能からのファイル。 以下のそれぞれについて詳細を検索するには。
+8. **2。拡張機能の詳細を提供**、一部のフィールドが自動設定から、 *source.extension.vsixmanifest*拡張機能からのファイル。 以下のそれぞれについて詳細を検索するには。
 
     * **内部名**拡張機能の詳細ページの URL で使用されます。 例については、発行元名"myname"拡張機能を公開して、「my の拡張」となるように内部の名前を指定する結果の URL"marketplace.visualstudio\.com/items?itemName=myname.myextension"拡張機能の詳細ページです。
     
@@ -123,13 +120,13 @@ Marketplace では、アクセスし、発行元アカウントを管理する�
 
 3. 追加し、適切なレベルのアクセスを付与するユーザーの電子メール アドレスを指定することができますし、**ロールを選択**します。  次のオプションから選択できます。
 
-   * **作成者**: ユーザーから、拡張機能を公開できますが、表示ことはできません、または他のユーザーによって発行された拡張機能を管理します。
+   * **作成者**:ユーザー拡張機能の発行ことはできません表示したり他のユーザーによって発行された拡張機能を管理できます。
   
-   * **リーダー**: ユーザーから、拡張機能を表示できますが発行ことはできません、または拡張機能を管理します。
+   * **リーダー**:ユーザー表示拡張機能ことはできません発行したり拡張機能を管理できます。
   
-   * **共同作成者**: ユーザー発行し、拡張機能の管理ことはできませんパブリッシャーの設定を編集したり、アクセスを管理します。
+   * **共同作成者**:ユーザー発行し、拡張機能の管理ことはできませんパブリッシャーの設定を編集したりアクセスを管理できます。
   
-   * **所有者**: ユーザーが発行し、拡張機能の管理、パブリッシャーの設定を編集およびアクセスを管理します。
+   * **所有者**:ユーザーは、発行、拡張機能を管理し、パブリッシャーの設定を編集、およびアクセスを管理できます。
   
 ## <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Visual Studio Marketplace から拡張機能をインストールします。
 

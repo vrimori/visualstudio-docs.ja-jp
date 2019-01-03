@@ -1,9 +1,6 @@
 ---
 title: '方法: SharePoint コマンドの作成 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 89384a1bf095b27f97be46ae303148ab5f8c7d1f
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 7f83447bcceb010f5a479d61c250e703daa1aab1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117138"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53894851"
 ---
 # <a name="how-to-create-a-sharepoint-command"></a>方法: SharePoint コマンドを作成します。
   SharePoint ツール拡張機能で、サーバー オブジェクト モデルを使用する場合は、カスタムを作成する必要があります*SharePoint コマンド*API を呼び出します。 SharePoint コマンドは、サーバー オブジェクト モデルを直接呼び出すことがアセンブリに定義します。  
@@ -31,9 +28,9 @@ ms.locfileid: "37117138"
   
 1.  次の構成があるクラス ライブラリ プロジェクトを作成します。  
   
-    -   .NET Framework 3.5 を対象とします。 ターゲット フレームワークの選択の詳細については、次を参照してください。[方法: .NET Framework のバージョンを対象](../ide/how-to-target-a-version-of-the-dotnet-framework.md)します。  
+    -   .NET Framework 3.5 を対象とします。 ターゲット フレームワークの選択の詳細については、次を参照してください。[方法.NET Framework のターゲット バージョンを指定する](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。  
   
-    -   X64、AnyCPU の対象プラットフォーム。 既定では、クラス ライブラリ プロジェクトのターゲット プラットフォームには AnyCPU です。 ターゲット プラットフォームを選択する方法についての詳細については、次を参照してください。[方法: 構成 Projects to Target Platforms](../ide/how-to-configure-projects-to-target-platforms.md)します。  
+    -   X64、AnyCPU の対象プラットフォーム。 既定では、クラス ライブラリ プロジェクトのターゲット プラットフォームには AnyCPU です。 ターゲット プラットフォームを選択する方法についての詳細については、次を参照してください。[方法。プロジェクトのターゲット プラットフォームを構成](../ide/how-to-configure-projects-to-target-platforms.md)します。  
   
     > [!NOTE]  
     >  SharePoint コマンドは、.NET Framework 3.5 および SharePoint ツール拡張機能のターゲットをターゲットするため、SharePoint ツールの拡張機能を定義するのと同じプロジェクト内 SharePoint コマンドを実装することはできません、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]します。 別のプロジェクトで、拡張機能によって使用される任意の SharePoint コマンドを定義する必要があります。 詳細については、次を参照してください。 [Visual Studio の SharePoint ツールの拡張機能を展開](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)します。  
@@ -60,7 +57,7 @@ ms.locfileid: "37117138"
   
 4.  適用、<xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute>メソッドにします。 この属性は、このコマンドの一意の識別子を指定します。この識別子は、メソッド名と一致する必要はありません。  
   
-     SharePoint ツールの拡張機能から、コマンドを呼び出すときに、同じ一意の識別子を指定する必要があります。 詳細については、次を参照してください。[方法: SharePoint コマンドを実行](../sharepoint/how-to-execute-a-sharepoint-command.md)します。  
+     SharePoint ツールの拡張機能から、コマンドを呼び出すときに、同じ一意の識別子を指定する必要があります。 詳細については、「[方法 :SharePoint コマンドを実行](../sharepoint/how-to-execute-a-sharepoint-command.md)します。  
   
 ## <a name="example"></a>例  
  次のコード例は、識別子を持つ SharePoint コマンドを示します`Contoso.Commands.UpgradeSolution`します。 このコマンドは、デプロイ済みのソリューションにアップグレードするサーバー オブジェクト モデルでの Api を使用します。  
@@ -68,7 +65,7 @@ ms.locfileid: "37117138"
  [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs#5)]
  [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/sharepointcommands/commands.vb#5)]  
   
- 最初の暗黙的なだけでなく<xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext>パラメーターでは、このコマンドはまた、SharePoint サイトにアップグレードされる .wsp ファイルの完全なパスを含むカスタムの文字列パラメーターが。 例のコンテキストでは、このコードを表示するには、次を参照してください。[チュートリアル: SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)です。  
+ 最初の暗黙的なだけでなく<xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext>パラメーターでは、このコマンドはまた、SharePoint サイトにアップグレードされる .wsp ファイルの完全なパスを含むカスタムの文字列パラメーターが。 例のコンテキストでは、このコードを表示するには、次を参照してください。[チュートリアル。SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)です。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例では、次のアセンブリへの参照が必要です。  
@@ -82,6 +79,5 @@ ms.locfileid: "37117138"
   
 ## <a name="see-also"></a>関連項目
  [SharePoint オブジェクト モデルを呼び出す](../sharepoint/calling-into-the-sharepoint-object-models.md)   
- [方法: SharePoint コマンドを実行](../sharepoint/how-to-execute-a-sharepoint-command.md)   
- [チュートリアル: web パーツを表示するサーバー エクスプ ローラーの拡張します。](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  
-  
+ [方法: SharePoint コマンドを実行します。](../sharepoint/how-to-execute-a-sharepoint-command.md)   
+ [チュートリアル: Web パーツを表示するサーバー エクスプ ローラーを拡張します。](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  

@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: 従来の言語サービスの作成 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: 従来の言語サービスを作成する |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - language services [managed package framework], creating
@@ -13,14 +10,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 98f5da733866143212ee4386bdeb88b3d0a2340a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c7f60d580b79ebba03a8617e8bd797ec9d099971
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49865623"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53891960"
 ---
-# <a name="walkthrough-creating-a-legacy-language-service"></a>チュートリアル: 従来の言語サービスの作成
+# <a name="walkthrough-creating-a-legacy-language-service"></a>チュートリアル: 従来の言語サービスを作成します。
 マネージ パッケージ フレームワーク (MPF) 言語のクラスを使用してでの言語サービスを実装する[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]は簡単です。 言語サービス、言語サービス自体には、お使いの言語のパーサーをホストするために VSPackage が必要です。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  

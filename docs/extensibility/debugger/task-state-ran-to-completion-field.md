@@ -1,9 +1,6 @@
 ---
 title: TASK_STATE_RAN_TO_COMPLETION フィールド |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - TASK_STATE_RAN_TO_COMPLETION field, Task class [.NET Framework debug engines]
@@ -13,17 +10,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0ec080c5fd1fcb206daaab909b5e742245f9fe41
-ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
+ms.openlocfilehash: d4af0b4a2b3ef106aeb57e88440638d2b4a4c904
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39276388"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53830743"
 ---
 # <a name="taskstaterantocompletion-field"></a>TASK_STATE_RAN_TO_COMPLETION フィールド
 タスクの実行は正常に完了しました。  
   
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **名前空間:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
  **アセンブリ:** mscorlib (で*mscorlib.dll*)  
   

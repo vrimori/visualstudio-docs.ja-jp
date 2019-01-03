@@ -1,9 +1,6 @@
 ---
 title: 既定のコマンド、グループ、およびツールバーの配置 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - commands [Visual Studio], default groups
@@ -18,20 +15,20 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: da5716460c428098b2b6cc3bb78a51c3831201b2
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 8d4292ff0a3760c412d0c12961ad7b34ad18f607
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498231"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53850980"
 ---
 # <a name="default-command-group-and-toolbar-placement"></a>既定のコマンド、グループ、およびツールバーの配置
 製品の統一性と安定性は、UI は既定では、コマンドの特定のグループを表示し、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]コマンドとコマンドのグループの定義を提供します。 Vspackage は、標準のコマンドおよびコマンド グループにも使用できます。  
   
- コマンドの既定のグループが 3 つのカテゴリに分類されます。 IDE コマンド、コマンドの製品、およびエディター コマンド。  
+ コマンドの既定のグループは、3 つのカテゴリに分類されます。IDE コマンド、製品のコマンド、およびエディター コマンド。  
   
 ## <a name="default-ide-commands"></a>既定の IDE コマンド  
- 既定の IDE ツールバーには、コマンドに含まれているすべての製品と共有が含まれています。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。 など、汎用的なプロジェクトの操作に関連するコマンドが含まれます、**保存**コマンドと**項目の追加**コマンド。 Vspackage に追加またはこのツールバーで、1 つの例外から減算する必要がありますいない: かどうかには、製品または VSPackage は、新しいツール ウィンドウを追加し、ウィンドウで使用可能なツール ウィンドウの一覧に追加する必要があります、**ビュー**メニュー。 新しい製品や Vspackage は、独自のツールバーを追加できます。  
+ 既定の IDE ツールバーには、コマンドに含まれているすべての製品と共有が含まれています。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。 など、汎用的なプロジェクトの操作に関連するコマンドが含まれます、**保存**コマンドと**項目の追加**コマンド。 Vspackage を追加またはこのツールバーで、1 つの例外から減算する必要がありますいません。かどうかには、製品または VSPackage は、新しいツール ウィンドウを追加し、ウィンドウで使用可能なツール ウィンドウの一覧に追加する必要があります、**ビュー**メニュー。 新しい製品や Vspackage は、独自のツールバーを追加できます。  
   
 ## <a name="default-product-commands"></a>既定の製品コマンド  
  各製品には、重要なが含まれており、よく使用されるコマンドを独自の既定のツールバーを使用して IDE を提供できます。 ただし、既存のメニューおよびツールバーが可能な限りを使用して、必要に応じて、他のタスク固有のツールバーに追加し、最適なは。  

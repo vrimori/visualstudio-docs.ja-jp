@@ -1,9 +1,6 @@
 ---
-title: IDebugModOpt |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugModOpt |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - IDebugModOpt interface
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0477f8b3a39bd919a814828377228c5ccc02bd11
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7585a303c8f4a37567d64b0a27f7a8560c3135f3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31112396"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53851538"
 ---
 # <a name="idebugmodopt"></a>IDebugModOpt
 デバッグ オプションの修飾子を表します。  
@@ -33,15 +30,15 @@ IDebugModOpt : IUnknown
  取得した、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)クラスまたはメソッドを表すオブジェクト。  
   
 ## <a name="methods"></a>メソッド  
- このインターフェイスでは、次のメソッドを実装します。  
+ このインターフェイスは、次のメソッドを実装します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetModOpts](../../../extensibility/debugger/reference/idebugmodopt-getmodopts.md)|省略可能な修飾子の一覧を取得します。|  
+|[GetModOpts](../../../extensibility/debugger/reference/idebugmodopt-getmodopts.md)|オプションの修飾子の一覧を取得します。|  
   
-## <a name="requirements"></a>要件  
- ヘッダー: Sh.h  
+## <a name="requirements"></a>必要条件  
+ ヘッダー:Sh.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll

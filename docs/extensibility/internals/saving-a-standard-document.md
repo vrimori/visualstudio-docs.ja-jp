@@ -1,9 +1,6 @@
 ---
 title: 標準ドキュメントの保存 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], saving standard documents
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 251a9a7632a9d9615302cd3c5c1bf2a406529caf
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: b7f9b650c0d355d83137e302fc716f343d47b57d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49875607"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53868892"
 ---
 # <a name="saving-a-standard-document"></a>標準ドキュメントの保存
 環境では、保存、名前を付けて保存および すべて保存コマンドを処理します。 ユーザーが選択すると**保存**、**名前を付けて保存**、または**すべて保存**から、**ファイル**メニューまたはその結果、ソリューションを閉じる、 **すべて保存**、次の処理が行われます。  

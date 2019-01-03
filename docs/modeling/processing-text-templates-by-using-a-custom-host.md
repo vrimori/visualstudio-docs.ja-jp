@@ -11,13 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 87d9f5f489bffcc624ff758c89e5d3a230a68d01
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 12c443879ebbe142dde69a713d214c3b79b254ea
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859342"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53865441"
 ---
 # <a name="process-text-templates-by-using-a-custom-host"></a>カスタム ホストを使用してテキスト テンプレートを処理する
 
@@ -31,7 +30,7 @@ ms.locfileid: "47859342"
 >
 > 実行時のアプリケーションでは、前処理されたテキスト テンプレートの使用を検討してください。 を参照してください[T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)します。
 
-コンパイル時に決定されるテンプレートのセットをアプリケーションで使用する場合は、前処理されたテキスト テンプレートを使用する方が簡単です。 アプリケーションは、Visual Studio がインストールされていないコンピューターで実行される場合は、アプローチを使用することもできます。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)します。
+コンパイル時に決定されるテンプレートのセットをアプリケーションで使用する場合は、前処理されたテキスト テンプレートを使用する方が簡単です。 アプリケーションは、Visual Studio がインストールされていないコンピューターで実行される場合は、アプローチを使用することもできます。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)
 
 ## <a name="execute-a-text-template-in-your-application"></a>テキスト テンプレートをアプリケーションを実行します。
 

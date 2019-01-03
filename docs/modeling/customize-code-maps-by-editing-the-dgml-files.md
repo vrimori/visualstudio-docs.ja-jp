@@ -21,13 +21,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 21a32cf13f598c894ebc7841f5ef4a0af3af82ed
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: bb354e3cd9f418b9a4a93d1cb9781a372dc9fa72
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49878974"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53886086"
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>DGML ファイルを編集してコード マップをカスタマイズする
 
@@ -66,7 +65,7 @@ ms.locfileid: "49878974"
 
    - グループ コード要素とその子コード要素との間の `Category` リレーションシップを指定する `Contains` 属性
 
-     例えば:
+     例:
 
    ```xml
    <Links>
@@ -98,7 +97,7 @@ ms.locfileid: "49878974"
     Stroke="StrokeValue"
     ```
 
-     例えば:
+     例:
 
     ```xml
     <DirectedGraph Background="Green" xmlns="http://schemas.microsoft.com/vs/2009/dgml" >
@@ -268,7 +267,7 @@ ms.locfileid: "49878974"
 
 2. `<Style/>` 要素に、`<Condition/>` 属性を含む `Expression` 要素を追加して、ブール値を返す式を指定します。
 
-    例えば:
+    例:
 
    ```xml
    <Condition Expression="MyCategory"/>
@@ -609,7 +608,7 @@ ms.locfileid: "49878974"
 
       4.  使用して、`Label`でコード要素の表示テキストを指定する属性**参照へジャンプ**ショートカット メニュー。
 
-      例えば:
+      例:
 
    ```xml
    <Nodes>

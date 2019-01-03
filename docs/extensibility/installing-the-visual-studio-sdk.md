@@ -1,8 +1,6 @@
 ---
 title: Visual Studio SDK のインストール |Microsoft Docs
-ms.custom: ''
 ms.date: 07/12/2018
-ms.technology: vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: c730edb6-5099-4c16-85a8-08def09f1455
 author: gregvanl
@@ -10,12 +8,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8dceab38f543c58997092559bf9a840806e9b013
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 33ab695ca8165de97d1be9813ea9ab11449a1527
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498588"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53836271"
 ---
 # <a name="install-the-visual-studio-sdk"></a>Visual Studio SDK のインストール
 
@@ -37,6 +35,6 @@ Visual Studio のインストールが完了した後、Visual Studio SDK をイ
   
 ## <a name="install-the-visual-studio-sdk-from-the-command-line"></a>コマンドラインから Visual Studio SDK をインストールする
 
-Visual Studio のワークロードやコンポーネントと同様に、 **Visual Studio 拡張機能の開発**ワークロード (ID: Microsoft.VisualStudio.Workload.VisualStudioExtension) をコマンドラインからインストールできます。 適切なコマンド ライン スイッチとワークロードまたはコンポーネントの識別子を特定する方法についての一般的な手順の詳細については **[コマンド ライン パラメーターを使用して、Visual Studio をインストールする](../install/use-command-line-parameters-to-install-visual-studio.md)** を参照してください。
+ように、Visual Studio のワークロードやコンポーネントをインストールすることも、 **Visual Studio 拡張機能の開発**ワークロード (ID:Microsoft.VisualStudio.Workload.VisualStudioExtension) コマンドラインから。 適切なコマンド ライン スイッチとワークロードまたはコンポーネントの識別子を特定する方法についての一般的な手順の詳細については **[コマンド ライン パラメーターを使用して、Visual Studio をインストールする](../install/use-command-line-parameters-to-install-visual-studio.md)** を参照してください。
   
 インストールされているVisual Studio のバージョンに一致する Visual Studio インストーラーを使用する必要があることに注意してください。 たとえば、Visual Studio Enterprise がコンピューターにインストールしてある場合は、Visual Studio Enterprise インストーラー(*vs_enterprise.exe*)を実行する必要があります 。

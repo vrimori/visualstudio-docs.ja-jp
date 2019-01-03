@@ -1,9 +1,6 @@
 ---
 title: IDebugProcess3::GetHostingProcessLanguage |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugProcess3::GetHostingProcessLanguage
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5bbb00efe88bda530d7760baa690ce42cb278c3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ded6166b9eee894b2e1f55bfa2272cc537c460e0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49846929"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53854231"
 ---
 # <a name="idebugprocess3gethostingprocesslanguage"></a>IDebugProcess3::GetHostingProcessLanguage
 このメソッドが戻る、`GUID`セットとしてへの呼び出しでこのプロセスの言語を表す[SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)します。  
@@ -28,8 +25,8 @@ ms.locfileid: "49846929"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT GetHostingProcessLanguage(  
-   GUID* pguidLang  
+HRESULT GetHostingProcessLanguage(  
+   GUID* pguidLang  
 );  
 ```  
   

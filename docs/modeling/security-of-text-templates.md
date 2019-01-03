@@ -10,20 +10,19 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 71052a0d4120a74269f2aa05412230284271e574
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bb5ad4348d681a2b7bc59c588bb74e0a27813e73
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31947522"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53820813"
 ---
 # <a name="security-of-text-templates"></a>テキスト テンプレートのセキュリティ
-テキスト テンプレートでは、次のセキュリティに関する注意事項があります。
+テキスト テンプレートには、次のセキュリティの懸念事項があります。
 
 -   テキスト テンプレートは、任意のコードが挿入される点で脆弱です。
 
--   ホストがディレクティブ プロセッサの検索に使用するメカニズムが安全でない場合は、悪意のあるディレクティブ プロセッサを実行する可能性があります。
+-   ホストがディレクティブ プロセッサの検索に使用するメカニズムが安全でない場合は、悪意のあるディレクティブ プロセッサを実行できます。
 
 ## <a name="arbitrary-code"></a>任意のコード
  テンプレートを記述するときは、 \<## > タグ内にコードを配置します。 これにより、任意のコードをテキスト テンプレート内から実行できます。

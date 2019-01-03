@@ -1,9 +1,6 @@
 ---
 title: Visual Studio での office および SharePoint 開発
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -24,12 +21,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 38291b46f2f9fee83ba9af0ae553cecca5ee35f6
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 76043da9815becd6b5cb25a2117b4ff746d6d242
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50671704"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53898649"
 ---
 # <a name="office-and-sharepoint-development-in-visual-studio"></a>Visual Studio での office および SharePoint 開発
   ユーザーが [Office ストア](https://store.office.com/) または組織のカタログからダウンロードする軽量なアプリやアドインを作成するか、ユーザーがコンピューターにインストールする .NET Framework ベースのソリューションを作成することによって、Microsoft Office および SharePoint を拡張できます。  
@@ -109,5 +106,3 @@ ms.locfileid: "50671704"
 |--------|---------|  
 |SharePoint ソリューションを SharePoint アドインと比較する。|[SharePoint アドインが SharePoint ソリューションと比較](/sharepoint/dev/general-development/sharepoint-server-application-lifecycle-management)|  
 |SharePoint ソリューションを作成する。|[SharePoint ソリューションの作成](../sharepoint/create-sharepoint-solutions.md)|  
-  
-  

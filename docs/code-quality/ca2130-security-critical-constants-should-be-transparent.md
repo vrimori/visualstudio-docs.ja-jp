@@ -1,8 +1,7 @@
 ---
-title: 'CA2130: セキュリティ上重要な定数は透過的である必要がある'
+title: CA2130:セキュリティ上重要な定数は透過的である必要がある
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - CA2130
@@ -12,14 +11,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b0c3ebb69901f031e183d883319861c7e6ef75c2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 7e91ac642f0ead181378af78dc9d48434ae0f51b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49858188"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53881977"
 ---
-# <a name="ca2130-security-critical-constants-should-be-transparent"></a>CA2130: セキュリティ上重要な定数は透過的である必要がある
+# <a name="ca2130-security-critical-constants-should-be-transparent"></a>CA2130:セキュリティ上重要な定数は透過的である必要がある
 
 |||
 |-|-|

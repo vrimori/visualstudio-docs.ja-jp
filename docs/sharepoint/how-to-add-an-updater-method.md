@@ -1,13 +1,8 @@
 ---
 title: '方法: Updater メソッドの追加 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -22,14 +17,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a4d50180173673b4999c18b8980c682d79637bd3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 8a68ed8809b30444829dc09bb5c1fcb2386c4a92
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49951419"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53872519"
 ---
-# <a name="how-to-add-an-updater-method"></a>方法: Updater メソッドの追加
+# <a name="how-to-add-an-updater-method"></a>方法: Updater メソッドを追加します。
   ユーザーを作成して SharePoint の外部リストのビジネス データを更新できるように、 *Updater*メソッド。 詳細については、次を参照してください。[ビジネス データ接続モデルを設計する](../sharepoint/designing-a-business-data-connectivity-model.md)します。  
   
 ### <a name="to-create-an-updater-method"></a>Updater メソッドを作成するには  
@@ -48,7 +43,7 @@ ms.locfileid: "49951419"
   
    - メソッドの入力パラメーター。  
   
-   - パラメーターの型記述子。 既定で、Visual Studio は Finder メソッドの定義したエンティティ型記述子を使用して (例: にお問い合わせください)。  
+   - パラメーターの型記述子。 既定で、Visual Studio は Finder メソッドの定義したエンティティ型記述子を使用して (例。問い合わせてください)。  
   
    - メソッドのメソッドのインスタンス。  
   
@@ -71,13 +66,11 @@ ms.locfileid: "49951419"
   
 ## <a name="see-also"></a>関連項目
  [ビジネス データ接続モデルを設計します。](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
- [方法: 特定の Finder メソッドを追加](../sharepoint/how-to-add-a-specific-finder-method.md)   
- [方法: Creator メソッドを追加](../sharepoint/how-to-add-a-creator-method.md)   
- [方法: Updater メソッドの追加](../sharepoint/how-to-add-an-updater-method.md)   
- [方法: Deleter メソッドを追加](../sharepoint/how-to-add-a-deleter-method.md)   
+ [方法: Finder メソッドを追加します。](../sharepoint/how-to-add-a-finder-method.md)   
+ [方法: 特定の Finder メソッドを追加します。](../sharepoint/how-to-add-a-specific-finder-method.md)   
+ [方法: Creator メソッドを追加します。](../sharepoint/how-to-add-a-creator-method.md)   
+ [方法: Updater メソッドを追加します。](../sharepoint/how-to-add-an-updater-method.md)   
+ [方法: Deleter メソッドを追加します。](../sharepoint/how-to-add-a-deleter-method.md)   
  [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
- [方法: メソッドにパラメーターを追加](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
- [方法: メソッド インスタンスの定義](../sharepoint/how-to-define-a-method-instance.md)  
-  
- 
+ [方法: メソッドにパラメーターを追加します。](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
+ [方法: メソッド インスタンスを定義します。](../sharepoint/how-to-define-a-method-instance.md)  

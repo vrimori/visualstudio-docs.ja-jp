@@ -1,9 +1,6 @@
 ---
-title: IDebugPortRequest2 |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugPortRequest2 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugPortRequest2
@@ -15,15 +12,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f5af5ef2f4371350529d1e5fa60fb5ad1539aa87
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1a05f84d685ac33203461dfc1b0f515cb45f67c3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31114905"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53876930"
 ---
 # <a name="idebugportrequest2"></a>IDebugPortRequest2
-このインターフェイスでは、ポートについて説明します。 この説明を使用すると、ポートのサプライヤーにポートを追加します。  
+このインターフェイスには、ポートがについて説明します。 この説明は、ポートのサプライヤーにポートを追加に使用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,10 +29,10 @@ IDebugPortRequest2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- Visual Studio は、通常、ポート業者からのデバッグ ポートの取得中には、このインターフェイスを実装します。  
+ Visual Studio は、通常はポート サプライヤーからデバッグ ポートを取得する処理中には、このインターフェイスを実装します。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- このインターフェイスに渡される[AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md)デバッグ ポートを作成します。 呼び出し[GetPortRequest](../../../extensibility/debugger/reference/idebugport2-getportrequest.md)このインターフェイスは、最初の場所、ポートの作成に使用される、要求を表すを返します。  
+ このインターフェイスに渡される[AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md)デバッグ ポートを作成します。 呼び出し[GetPortRequest](../../../extensibility/debugger/reference/idebugport2-getportrequest.md)このインターフェイスは、最初に、ポートの作成に使用される要求を表すを返します。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
  次の表は、メソッドの`IDebugPortRequest2`します。  
@@ -44,15 +41,15 @@ IDebugPortRequest2 : IUnknown
 |------------|-----------------|  
 |[GetPortName](../../../extensibility/debugger/reference/idebugportrequest2-getportname.md)|作成するポートの名前を取得します。|  
   
-## <a name="remarks"></a>コメント  
- 通常、デバッグ エンジンは、ポート サプライヤーとは対話しませんし、このインターフェイスの使用はありません。  
+## <a name="remarks"></a>Remarks  
+ 通常、デバッグ エンジンは、ポート サプライヤーと対話しないし、このインターフェイスの使用はありません。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   

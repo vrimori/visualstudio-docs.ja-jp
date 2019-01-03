@@ -1,15 +1,10 @@
 ---
 title: '方法: 追加およびその他のアセンブリの削除 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.RAD.CustomAssembly
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -19,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4178f1ca5a437c52754199d26a6d39023193aaf8
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: e9653fe6ab79e3615ecb231d19dd9ee20133faf6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50219147"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53887011"
 ---
 # <a name="how-to-add-and-remove-additional-assemblies"></a>方法: 追加およびその他のアセンブリの削除
   SharePoint パッケージが機能またはデータについて他のアセンブリに依存している場合、そのアセンブリをソリューション パッケージ (.wsp) に追加できます。 パッケージをインストールする際は、カスタム アセンブリがインストールされているかどうかが、SharePoint サーバーによって確認されます。  
@@ -36,7 +31,7 @@ ms.locfileid: "50219147"
   
 #### <a name="to-add-an-existing-assembly"></a>既存のアセンブリを追加するには  
   
-1.  開く、**パッケージ デザイナー**します。 詳細については、次を参照してください。[方法: SharePoint ソリューション パッケージをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)します。  
+1.  開く、**パッケージ デザイナー**します。 詳細については、「[方法 :SharePoint ソリューション パッケージをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)します。  
   
 2.  選択、**詳細**タブ。  
   
@@ -52,7 +47,7 @@ ms.locfileid: "50219147"
   
 1.  開く、**パッケージ デザイナー**します。  
   
-     詳細については、次を参照してください。[方法: SharePoint ソリューション パッケージをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)します。  
+     詳細については、「[方法 :SharePoint ソリューション パッケージをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)します。  
   
 2.  選択、**詳細**タブ。  
   
@@ -89,7 +84,7 @@ ms.locfileid: "50219147"
   
 #### <a name="to-delete-an-existing-assembly"></a>既存のアセンブリを削除するには  
   
-1.  開く、**パッケージ デザイナー**します。 詳細については、次を参照してください。[方法: SharePoint ソリューション パッケージをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)します。  
+1.  開く、**パッケージ デザイナー**します。 詳細については、「[方法 :SharePoint ソリューション パッケージをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)します。  
   
 2.  選択、**詳細**タブ。  
   
@@ -115,6 +110,5 @@ ms.locfileid: "50219147"
   
 ## <a name="see-also"></a>関連項目
  [SharePoint の機能を作成します。](../sharepoint/creating-sharepoint-features.md)   
- [方法: SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)   
+ [方法: SharePoint フィーチャーをカスタマイズします。](../sharepoint/how-to-customize-a-sharepoint-feature.md)   
  [方法: 項目を SharePoint の機能を追加および削除](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)   
-  

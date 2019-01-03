@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによってブックからワークシートを削除'
-ms.custom: ''
+title: '方法: プログラムによってブックからワークシートを削除します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,14 +13,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 73c501d545f76012b63bde291001b38c214c3eb6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 7254ba703c0e25d37dd3582d4443a6bdf1653a96
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49950226"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53843386"
 ---
-# <a name="how-to-programmatically-delete-worksheets-from-workbooks"></a>方法: プログラムによってブックからワークシートを削除
+# <a name="how-to-programmatically-delete-worksheets-from-workbooks"></a>方法: プログラムによってブックからワークシートを削除します。
   ブック内の任意のワークシートを削除できます。 ワークシートを削除するには、Worksheet ホスト項目を使用するか、ブックの Sheets コレクションを使用してワークシートにアクセスします。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
@@ -39,7 +36,7 @@ ms.locfileid: "49950226"
 > - Excel 2010 ブック  
 > - Excel 2010 テンプレート  
 > 
->   他の種類のプロジェクトでこのタスクを実行する場合への参照を追加する必要があります、 **[microsoft.office.interop.excel]** アセンブリ、その後は、ブックを開くし、ワークシートを削除するアセンブリのクラスを使用する必要があります。 詳細については、次を参照してください。[方法: ターゲットの Office アプリケーション プライマリ相互運用機能アセンブリを介して](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)と[Excel 2010 プライマリ相互運用機能アセンブリ リファレンス](http://go.microsoft.com/fwlink/?LinkId=189585)します。  
+>   他の種類のプロジェクトでこのタスクを実行する場合への参照を追加する必要があります、 **[microsoft.office.interop.excel]** アセンブリ、その後は、ブックを開くし、ワークシートを削除するアセンブリのクラスを使用する必要があります。 詳細については、「[方法 :Office アプリケーション プライマリ相互運用機能アセンブリを介して](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)と[Excel 2010 プライマリ相互運用機能アセンブリ リファレンス](http://go.microsoft.com/fwlink/?LinkId=189585)します。  
   
 ### <a name="to-delete-a-worksheet-by-using-a-worksheet-host-item"></a>Worksheet ホスト項目を使用してワークシートを削除するには  
   
@@ -58,7 +55,7 @@ ms.locfileid: "49950226"
   次のコードのインデックス番号でシートを参照することによってブックからワークシートを削除します、**シート**コレクション。 このコードは、新しいワークシートがプログラミングによって作成されたことを前提としています。  
   
 > [!IMPORTANT]  
->  他の種類のプロジェクトでこのタスクを実行する場合への参照を追加する必要があります、 **[microsoft.office.interop.excel]** アセンブリ、その後は、ブックを開くし、ワークシートを削除するアセンブリのクラスを使用する必要があります。 詳細については、次を参照してください。[方法: ターゲットの Office アプリケーション プライマリ相互運用機能アセンブリを介して](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)と[Excel 2010 プライマリ相互運用機能アセンブリ リファレンス](http://go.microsoft.com/fwlink/?LinkId=189585)します。  
+>  他の種類のプロジェクトでこのタスクを実行する場合への参照を追加する必要があります、 **[microsoft.office.interop.excel]** アセンブリ、その後は、ブックを開くし、ワークシートを削除するアセンブリのクラスを使用する必要があります。 詳細については、「[方法 :Office アプリケーション プライマリ相互運用機能アセンブリを介して](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)と[Excel 2010 プライマリ相互運用機能アセンブリ リファレンス](http://go.microsoft.com/fwlink/?LinkId=189585)します。  
   
 ### <a name="to-delete-a-worksheet-by-using-the-sheets-collection-of-the-excel-workbook"></a>Excel ブックの Sheets コレクションを使用してワークシートを削除するには  
   
@@ -69,12 +66,10 @@ ms.locfileid: "49950226"
   
 ## <a name="see-also"></a>関連項目  
  [ワークシートを操作します。](../vsto/working-with-worksheets.md)   
- [方法: プログラムによってワークシートを非表示](../vsto/how-to-programmatically-hide-worksheets.md)   
- [方法: プログラムによってブック内のワークシートを移動](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md)   
+ [方法: プログラムによってワークシートを非表示します。](../vsto/how-to-programmatically-hide-worksheets.md)   
+ [方法: プログラムによってブック内のワークシートを移動します。](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md)   
  [方法: プログラムによってワークシートを選択します。](../vsto/how-to-programmatically-select-worksheets.md)   
- [方法: プログラムによってブックを新しいワークシートを追加](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)   
+ [方法: プログラムで新しいワークシートをブックに追加します。](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)   
  [Worksheet ホスト項目](../vsto/worksheet-host-item.md)   
  [Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)   
  [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
-  
-  

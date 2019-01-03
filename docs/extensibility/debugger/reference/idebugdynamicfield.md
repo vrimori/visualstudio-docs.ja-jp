@@ -1,9 +1,6 @@
 ---
-title: IDebugDynamicField |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugDynamicField |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugDynamicField
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 378107570f50369ae46c609b0fe2e5099d5adab6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8344417bdcb38ec29e183925cedc4da2338ab7a5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31105162"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53882430"
 ---
 # <a name="idebugdynamicfield"></a>IDebugDynamicField
 このインターフェイスは、変数の型を表します。  
@@ -32,21 +29,21 @@ IDebugDynamicField : IDebugField
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- このインターフェイスは、実行時に決定できる任意の型の基底クラスとしてシンボル プロバイダーによって実装されます。 これは、マネージ コード専用です。  
+ このインターフェイスは、シンボル プロバイダーによって実行時に判断できる任意の型の基本クラスとして実装されます。 これはマネージ コードのみです。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
  このインターフェイスより専門的なインターフェイスの派生元の基本クラスを表します。  
   
-## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
- このインターフェイスから継承されたもの以外の任意の方法で提供されない`IDebugField`です。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序メソッド  
+ このインターフェイスから継承されたもの以外の任意のメソッドで提供されない`IDebugField`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
- [シンボル プロバイダー インターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
+ [シンボルプロバイダーのインターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

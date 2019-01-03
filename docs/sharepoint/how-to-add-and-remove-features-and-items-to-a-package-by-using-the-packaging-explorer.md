@@ -1,15 +1,10 @@
 ---
 title: '方法: 追加およびパッケージング エクスプ ローラーを使用して機能およびパッケージにアイテムを削除する |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.RAD.PackagingExplorer
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -19,17 +14,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7875401dee07961d63de6c7b71a97e647c21a0b7
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: b1211b0bdc3625b915221cfafaa5377d371aaa25
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36755613"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53880862"
 ---
 # <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer"></a>方法: 追加およびパッケージング エクスプ ローラーを使用して、フィーチャーおよびパッケージに項目を削除
   SharePoint プロジェクト項目およびフィーチャーを配置するパッケージを構成するには、パッケージング エクスプ ローラーを使用できます。 .Wsp ファイル内では、SharePoint プロジェクト項目と機能を調整できます。  
   
- または、パッケージ デザイナーを使用して、表示し、再アクティブ化順序を変更する機能を要求することができます。 詳細については、次を参照してください。[方法: 追加すると、パッケージ デザイナーを使用して機能と、パッケージにアイテムを削除](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md)します。  
+ または、パッケージ デザイナーを使用して、表示し、再アクティブ化順序を変更する機能を要求することができます。 詳細については、「[方法 :追加して、パッケージ デザイナーを使用して機能と、パッケージにアイテムを削除](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md)します。  
   
 ## <a name="open-the-packaging-explorer"></a>パッケージング エクスプ ローラーを開く  
  Visual Studio ソリューションに少なくとも 1 つの SharePoint プロジェクトがある場合、パッケージ エクスプ ローラーを開く、次の手順を使用できます。 または、パッケージング エクスプ ローラーが自動的に開きますフィーチャーまたはパッケージ デザイナーを表示するとします。 すべての機能とパッケージ デザイナーが閉じた後もパッケージング エクスプ ローラーを閉じます。  
@@ -69,4 +64,3 @@ ms.locfileid: "36755613"
   
 ## <a name="see-also"></a>関連項目
  [パッケージ化し、SharePoint ソリューションのデプロイ](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
-  

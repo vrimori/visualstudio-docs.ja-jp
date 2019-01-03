@@ -1,9 +1,6 @@
 ---
 title: VSPackage を使用した拡張機能の作成 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: c0cc5e08-4897-44f2-8309-e3478f1f999e
 author: gregvanl
@@ -11,18 +8,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 50af15e1c15b5d0b6318c498923229778e8c0169
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 1060dda64fc402e69f7f87601a1643fbabed5507
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39500775"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53838412"
 ---
 # <a name="create-an-extension-with-a-vspackage"></a>VSPackage を使用した拡張機能を作成します。
 このチュートリアルでは、VSIX プロジェクトを作成し、VSPackage プロジェクト項目を追加する方法を示します。 メッセージ ボックスを表示するには、UI シェル サービスを取得するのに VSPackage を使用します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、"[Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)"を参照してください。  
   
 ## <a name="create-a-vspackage"></a>VSPackage を作成します。  
   
@@ -49,7 +46,7 @@ ms.locfileid: "39500775"
     public sealed class FirstPackage : Package  
     ```  
   
-2.  VSPackage が読み込まれていることを知らせるメッセージを追加してみましょう。 使用して、VSPackage の`Initialize()`メソッドには、Visual Studio を入手するため、サービス、VSPackage が配置された後のみです。 (サービスの取得の詳細については、次を参照してください[方法: サービスを取得](../extensibility/how-to-get-a-service.md)。)。置換、`Initialize()`メソッドの`FirstPackage`を取得するコードを含む、<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>サービスを取得、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>インターフェイス、および呼び出しその<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowMessageBox%2A>メソッド。  
+2.  VSPackage が読み込まれていることを知らせるメッセージを追加してみましょう。 使用して、VSPackage の`Initialize()`メソッドには、Visual Studio を入手するため、サービス、VSPackage が配置された後のみです。 (サービスの取得の詳細については、次を参照してください。[方法。サービスを取得](../extensibility/how-to-get-a-service.md))。置換、`Initialize()`メソッドの`FirstPackage`を取得するコードを含む、<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>サービスを取得、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>インターフェイス、および呼び出しその<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowMessageBox%2A>メソッド。  
   
     ```csharp  
     protected override void Initialize()  

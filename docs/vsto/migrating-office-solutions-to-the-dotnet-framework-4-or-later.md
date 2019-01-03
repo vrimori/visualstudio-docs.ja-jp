@@ -1,9 +1,6 @@
 ---
 title: .NET Framework 4 またはそれ以降の Office ソリューションを移行します。
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VST.Project.TargetFrameworkWarning
@@ -17,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a7e281f65f58cc3fa10325574eb397d0aa20308e
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: 88f417ef8835e0614a2bf13b3717f19e3718feaf
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53740012"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53845127"
 ---
 # <a name="migrate-office-solutions-to-the-net-framework-4-or-later"></a>.NET Framework 4 またはそれ以降の Office ソリューションを移行します。
   Office プロジェクトのターゲット フレームワークを変更するかどうか、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]または後で、.NET Framework の以前のバージョンから追加の手順がありますソリューションを開発およびエンドユーザーのコンピューターで実行を続行するために必要です。 詳細については、次を参照してください。 [、.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトの実行に変更が必要な](../vsto/required-changes-to-run-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)します。  
@@ -44,5 +41,3 @@ ms.locfileid: "53740012"
  [方法: ターゲット .NET Framework のバージョン](../ide/how-to-target-a-version-of-the-dotnet-framework.md)   
  [Office ソリューションのエラーをトラブルシューティングします。](../vsto/troubleshooting-errors-in-office-solutions.md)   
  [Office ソリューションのエラーのための追加サポート](../vsto/additional-support-for-errors-in-office-solutions.md)  
-  
-  

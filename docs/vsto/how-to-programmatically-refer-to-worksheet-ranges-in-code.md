@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによってコード内でワークシートの範囲を参照'
-ms.custom: ''
+title: '方法: コード内でワークシートの範囲をプログラムで参照してください。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,14 +15,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 608ce006ccc34330631da8d4c947405b027f1a1f
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: d1a9904140d08d3ddca63c70bc77f1db4dffb1d8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672782"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53851249"
 ---
-# <a name="how-to-programmatically-refer-to-worksheet-ranges-in-code"></a>方法: プログラムによってコード内でワークシートの範囲を参照
+# <a name="how-to-programmatically-refer-to-worksheet-ranges-in-code"></a>方法: コード内でワークシートの範囲をプログラムで参照してください。
   内容を参照する同様のプロセスを使用して、<xref:Microsoft.Office.Tools.Excel.NamedRange>コントロールまたはネイティブな Excel 範囲オブジェクト。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
@@ -52,13 +49,11 @@ ms.locfileid: "35672782"
   
 ## <a name="see-also"></a>関連項目  
  [範囲を操作します。](../vsto/working-with-ranges.md)   
- [方法: プログラムによってワークシートでスペル チェック](../vsto/how-to-programmatically-check-spelling-in-worksheets.md)   
- [方法: プログラムによってブック内の範囲にスタイルを適用](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
- [方法: プログラムによって自動的に増分するデータ範囲を入力](../vsto/how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data.md)   
- [方法: プログラムによってワークシートの範囲内のテキストの検索](../vsto/how-to-programmatically-search-for-text-in-worksheet-ranges.md)   
+ [方法: プログラムによってワークシートでスペルをチェックします。](../vsto/how-to-programmatically-check-spelling-in-worksheets.md)   
+ [方法: プログラムによってブック内の範囲にスタイルを適用します。](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
+ [方法: プログラムによって自動的に増分するデータ範囲を入力します。](../vsto/how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data.md)   
+ [方法: プログラムによってワークシートの範囲内のテキストを検索します。](../vsto/how-to-programmatically-search-for-text-in-worksheet-ranges.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)   
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
-  
-  

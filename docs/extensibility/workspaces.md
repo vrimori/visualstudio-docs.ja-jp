@@ -1,9 +1,6 @@
 ---
 title: Visual Studio のワークスペース |Microsoft Docs
-ms.custom: ''
 ms.date: 02/21/2018
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: 3489592a-dc0c-4cd3-9b08-cd367626980a
 author: vukelich
@@ -11,12 +8,12 @@ ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0230201677fd2422817ca1fbeab6679a424e5c05
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 406d55b773a586d5cb0128599e225dabbadf21d3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49865831"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53876904"
 ---
 # <a name="workspaces"></a>ワークスペース
 
@@ -63,7 +60,7 @@ Dispose が非同期に呼び出す必要があります、ワークスペース
 1. さらにすべてを含むワークスペースのルート ディレクトリを親します。
 1. ユーザーのディレクトリには、「グローバル設定」。
 
-結果のインスタンスである<xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings>します。 このオブジェクトは、特定の種類の設定を保持し、として格納されているキー名を設定するために照会できる`string`します。 <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings.GetProperty%2A>メソッドと<xref:Microsoft.VisualStudio.Workspace.Settings.WorkspaceSettingsExtensions>拡張メソッドが要求されている設定値の型を認識する呼び出し元を期待します。 ほとんどの設定ファイルとして永続化 _.json_多くの呼び出しで使用するファイル、 `string`、 `bool`、 `int`、およびそれらの型の配列。 オブジェクトの種類もサポートされます。 その場合、使用することができます`IWorkspaceSettings`自体の型引数として。 例えば:
+結果のインスタンスである<xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings>します。 このオブジェクトは、特定の種類の設定を保持し、として格納されているキー名を設定するために照会できる`string`します。 <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings.GetProperty%2A>メソッドと<xref:Microsoft.VisualStudio.Workspace.Settings.WorkspaceSettingsExtensions>拡張メソッドが要求されている設定値の型を認識する呼び出し元を期待します。 ほとんどの設定ファイルとして永続化 _.json_多くの呼び出しで使用するファイル、 `string`、 `bool`、 `int`、およびそれらの型の配列。 オブジェクトの種類もサポートされます。 その場合、使用することができます`IWorkspaceSettings`自体の型引数として。 例:
 
 ```json
 {
