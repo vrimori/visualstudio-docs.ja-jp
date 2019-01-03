@@ -8,13 +8,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: a46509fb55c3d99c3cb2920dd6088497f326ab08
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a8fc55493aab5a19a175b75b7b1d808e9fa156e9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49895497"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53877563"
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>アイコンまたはデコレーターの可視性の制御
 A*デコレーター*がアイコンか、ドメイン固有言語 (DSL) 内の図形に表示されるテキストの行。 デコレーターの表示を作成でき、モデル内のプロパティの状態によって非表示になります。 など、人を表す図形、個人の性別、子供の数に応じて表示されると、さまざまなアイコンがある可能性があります。
@@ -84,13 +83,13 @@ A*デコレーター*がアイコンか、ドメイン固有言語 (DSL) 内の�
 
 4.  クリックして**ソリューションのビルド**上、**ビルド**メニュー。
 
-5.  エラー レポートが表示されていたをダブルクリックします。"*YourClass*は定義を含んでいない GetDecoratorControlValue の..."。
+5.  エラー レポートが表示されていたをダブルクリックします。"*YourClass*は定義を含んでいない GetDecoratorControlValue の..."です。
 
      テキスト エディターは、Dsl\GeneratedCode\DomainClasses.cs でが開きます。 上記の強調表示されたエラーは、メソッドを追加することを要求するコメントです。
 
 6.  不足している名前空間、クラスおよびメソッドに注意してください。  たとえば、Company.FamilyTree.Person.GetDecoratorControlValue() です。
 
-7.  別個のコード ファイルでは、存在しないメソッドを含む部分クラス定義を作成します。 例えば:
+7.  別個のコード ファイルでは、存在しないメソッドを含む部分クラス定義を作成します。 例:
 
     ```
     namespace Company.FamilyTree

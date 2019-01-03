@@ -1,9 +1,6 @@
 ---
 title: Office ドキュメントでのダイナミック コントロールを永続化します。
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -21,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b77310f797db3eb031bc311f4fc68bc7fd6b4c56
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 570131dfdb3cb582ba6ee6c8a12fff2dfcc01e98
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37059295"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53894796"
 ---
 # <a name="persist-dynamic-controls-in-office-documents"></a>Office ドキュメントでのダイナミック コントロールを永続化します。
 
@@ -38,7 +35,7 @@ ms.locfileid: "37059295"
 
 ## <a name="persist-host-controls-in-the-document"></a>ドキュメント内のホスト コントロールを永続化します。
 
-ドキュメントを保存してから閉じるとき、すべてのダイナミック ホスト コントロールはドキュメントから削除されます。 基になるネイティブ Office オブジェクトのみが後に残ります。 たとえば、<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>ホスト コントロールになった、<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>します。 ネイティブ Office オブジェクトはホスト コントロールのイベントには接続されておらず、ホスト コントロールのデータ バインディング機能を持ちません。
+ドキュメントを保存してから閉じるとき、すべてのダイナミック ホスト コントロールはドキュメントから削除されます。 基になるネイティブ Office オブジェクトのみが後に残ります。 たとえば、 <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> ホスト コントロールは <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>になります。 ネイティブ Office オブジェクトはホスト コントロールのイベントには接続されておらず、ホスト コントロールのデータ バインディング機能を持ちません。
 
 ホスト コントロールの種類ごとに、ドキュメントに残されるネイティブ Office オブジェクトの一覧を次の表に示します。
 
@@ -56,7 +53,7 @@ ms.locfileid: "37059295"
 
 Word ホスト コントロールを再作成する、または<xref:Microsoft.Office.Tools.Excel.NamedRange>または<xref:Microsoft.Office.Tools.Excel.ListObject>ホスト コントロールを使用して、Excel、 `Add` \<*コントロール クラス*> のメソッド、<xref:Microsoft.Office.Tools.Excel.ControlCollection?displayProperty=fullName>または<xref:Microsoft.Office.Tools.Word.ControlCollection?displayProperty=fullName>オブジェクト。 ネイティブ Office オブジェクトのパラメーターを持つメソッドを使用します。
 
-作成する場合など、<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName>既存のネイティブからコントロールをホスト<xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>ドキュメントが開かれたときに使用して、<xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A>メソッドと、既存のパス<xref:Microsoft.Office.Interop.Excel.ListObject>します。 これを Excel のドキュメント レベルのプロジェクトで実行する方法を、次のコード例に示します。 このコードでは、 <xref:Microsoft.Office.Tools.Excel.ListObject> クラスの <xref:Microsoft.Office.Interop.Excel.ListObject> という名前の既存の `MyListObject` に基づいてダイナミック `Sheet1` を再作成します。
+たとえば、ドキュメントが開かれた時点で既存のネイティブ <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> から <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName> ホスト コントロールを作成するには、 <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A> メソッドを使用し、既存の <xref:Microsoft.Office.Interop.Excel.ListObject>を渡します。 これを Excel のドキュメント レベルのプロジェクトで実行する方法を、次のコード例に示します。 このコードでは、 <xref:Microsoft.Office.Tools.Excel.ListObject> クラスの <xref:Microsoft.Office.Interop.Excel.ListObject> という名前の既存の `MyListObject` に基づいてダイナミック `Sheet1` を再作成します。
 
 [!code-csharp[Trin_ExcelWorkbookDynamicControls#6](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/Sheet1.cs#6)]
 [!code-vb[Trin_ExcelWorkbookDynamicControls#6](../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/Sheet1.vb#6)]
@@ -89,18 +86,18 @@ VSTO アドインを使用してドキュメントに動的な Windows フォー
 
 #### <a name="remove-activex-wrappers-when-the-document-is-opened"></a>ドキュメントを開いたときに、ActiveX ラッパーを削除します。
 
-すべての ActiveX ラッパーを削除するには、呼び出し、`GetVstoObject`のホスト項目を生成するメソッドを<xref:Microsoft.Office.Interop.Word.Document>または<xref:Microsoft.Office.Interop.Excel.Workbook>新しく開かれたドキュメントを表します。 たとえば、Word 文書からすべての ActiveX ラッパーを削除するに呼び出すことができます、`GetVstoObject`のホスト項目を生成するメソッドを<xref:Microsoft.Office.Interop.Word.Document>オブジェクトのイベント ハンドラーに渡される、<xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen>イベント。
+すべての ActiveX ラッパーを削除するには、`GetVstoObject` メソッドを呼び出して、新しく開いたドキュメントを表す <xref:Microsoft.Office.Interop.Word.Document> または <xref:Microsoft.Office.Interop.Excel.Workbook> のためのホスト項目を生成します。 たとえば、Word 文書からすべての ActiveX ラッパーを削除するには、`GetVstoObject` メソッドを呼び出して <xref:Microsoft.Office.Interop.Word.Document> オブジェクトのためのホスト項目を生成し、そのオブジェクトを <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> イベントのイベント ハンドラーに渡します。
 
 この手順は、VSTO アドインがインストールされているコンピューターでのみドキュメントが開かれることがわかっている場合に便利です。 VSTO アドインをインストールしていない他のユーザーにドキュメントを渡す可能性がある場合は、代わりに、ドキュメントを閉じる前にコントロールを削除することを検討してください。
 
-次のコード例を呼び出す方法を示します、`GetVstoObject`メソッドのドキュメントを開いたときにします。
+ドキュメントが開かれたときに `GetVstoObject` メソッドを呼び出す方法を次のコード例に示します。
 
 [!code-vb[Trin_WordAddInDynamicControls#11](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#11)]
 [!code-csharp[Trin_WordAddInDynamicControls#11](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#11)]
 
 ただし、`GetVstoObject`メソッドが実行時に新しいホスト項目を生成するには、主に使用される、このメソッドが初めて呼び出された特定のドキュメントも、ドキュメントからすべての ActiveX ラッパーにクリアします。 使用する方法についての詳細、`GetVstoObject`メソッドを参照してください[拡張 Word 文書や Excel ブックを実行時に VSTO アドインで](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)します。
 
-ドキュメントを開いたときに、VSTO アドイン ダイナミック コントロールを作成する場合、VSTO アドインが既に呼び出し、`GetVstoObject`コントロールを作成するプロセスの一環としてのメソッド。 別の呼び出しを追加する必要はありません、`GetVstoObject`このシナリオでは、ActiveX ラッパーを削除する方法。
+ドキュメントを開いたときに、VSTO アドイン ダイナミック コントロールを作成する場合、VSTO アドインが既に呼び出し、`GetVstoObject`コントロールを作成するプロセスの一環としてのメソッド。 このシナリオでは、ActiveX ラッパーを削除するために `GetVstoObject` メソッドに対する別個の呼び出しを追加する必要はありません。
 
 #### <a name="remove-the-dynamic-controls-before-the-document-is-closed"></a>ダイナミック コントロールを削除して、ドキュメントを閉じる前に
 

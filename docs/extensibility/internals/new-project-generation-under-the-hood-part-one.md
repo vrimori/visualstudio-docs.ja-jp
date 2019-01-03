@@ -1,9 +1,6 @@
 ---
-title: '新しいプロジェクトの生成: 内部、パート 1 |Microsoft Docs'
-ms.custom: ''
+title: 新しいプロジェクトの生成:内部的には、パート 1 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio], new project dialog
@@ -14,14 +11,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f678e15a26a85245e22edd323008ab517ea1e39c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 8ca4ac8523185f1fe818ffa287ed9083b6618c04
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49907067"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53827651"
 ---
-# <a name="new-project-generation-under-the-hood-part-one"></a>新しいプロジェクトの生成: 内部、パート 1
+# <a name="new-project-generation-under-the-hood-part-one"></a>新しいプロジェクトの生成:内部的には、パート 1
 独自のプロジェクトの種類を作成する方法と考えるでしょうか。 新しいプロジェクトを作成すると実際にはどうなりますか不思議に思うでしょうか。 内部的には時間をかけてを実際に起こっているを確認しましょう。  
   
  Visual Studio を調整するいくつかのタスクがあります。  
@@ -124,7 +121,7 @@ devenv /installvstemplates
 -   並べ替え順序を変更することができます。  
   
 ##### <a name="finding-the-root-node-for-a-project-type"></a>プロジェクトの種類のルート ノードの検索  
- Visual Studio では、ProjectTemplates フォルダーはスキャン、ときに、すべての .zip ファイルを開き、.vstemplate ファイルを抽出します。 .Vstemplate ファイルでは、XML を使用して、アプリケーション テンプレートについて説明します。 詳細については、次を参照してください。[新しいプロジェクトの生成: 内部、パート 2](../../extensibility/internals/new-project-generation-under-the-hood-part-two.md)します。  
+ Visual Studio では、ProjectTemplates フォルダーはスキャン、ときに、すべての .zip ファイルを開き、.vstemplate ファイルを抽出します。 .Vstemplate ファイルでは、XML を使用して、アプリケーション テンプレートについて説明します。 詳細については、次を参照してください。[新しいプロジェクトの生成。内部的には、2 つのパート](../../extensibility/internals/new-project-generation-under-the-hood-part-two.md)します。  
   
  \<ProjectType > タグは、アプリケーションのプロジェクトの種類を決定します。 たとえば、\CSharp\SmartDevice\WindowsCE\1033\WindowsCE-EmptyProject.zip ファイルには、このタグを含む EmptyProject.vstemplate ファイルが含まれています。  
   
@@ -216,4 +213,4 @@ devenv /installvstemplates
     **MyProjectNode** Visual c# の Windows ノードのすぐ下に子ノードとして表示されます。  
   
 ## <a name="see-also"></a>関連項目  
- [新しいプロジェクトの生成: 内部、パート 2](../../extensibility/internals/new-project-generation-under-the-hood-part-two.md)
+ [新しいプロジェクトの生成:内部的には、パート 2](../../extensibility/internals/new-project-generation-under-the-hood-part-two.md)

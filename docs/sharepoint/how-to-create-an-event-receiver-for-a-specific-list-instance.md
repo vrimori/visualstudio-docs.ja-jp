@@ -1,9 +1,6 @@
 ---
 title: '方法: 特定のリスト インスタンスに対するイベント レシーバーを作成 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,14 +13,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 950eeec82d7b7c49f0bbd76b13114f80f023a6dd
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: a92b86d7e02487ff333fb8517086f9c6221d35ec
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119510"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53818863"
 ---
-# <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>方法: 特定のリスト インスタンスに対するイベント レシーバーを作成
+# <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>方法: 特定のリスト インスタンスに対するイベント レシーバーを作成します。
   リスト インスタンスのイベント レシーバーは、リスト定義の任意のインスタンスで発生するイベントに応答します。 イベント レシーバーのテンプレートでは、特定のリスト インスタンスのターゲットを有効にはない、特定のリスト インスタンス内のイベントに応答するリスト定義のスコープをイベント レシーバーを変更できます。  
   
  特定のリスト インスタンスを対象に、 *Elements.xml* 、イベント レシーバー置換`ListTemplateId`で`ListUrl`リスト インスタンスの URL を追加します。  
@@ -89,6 +86,5 @@ ms.locfileid: "37119510"
      イベント レシーバーでは、カスタム アナウンス リスト インスタンス内のイベントにのみ応答する、受信側が構成されているために、新しいお知らせをトリガーしません通知**TestAnnouncements**します。  
   
 ## <a name="see-also"></a>関連項目
- [方法: イベント レシーバーを作成](../sharepoint/how-to-create-an-event-receiver.md)   
- [SharePoint ソリューションを開発します。](../sharepoint/developing-sharepoint-solutions.md)  
-  
+ [方法: イベント レシーバーを作成します。](../sharepoint/how-to-create-an-event-receiver.md)   
+ [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  

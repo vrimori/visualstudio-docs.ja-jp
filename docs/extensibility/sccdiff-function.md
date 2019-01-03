@@ -1,9 +1,6 @@
 ---
 title: SccDiff 関数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - SccDiff
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 898c5b1b9de186a7ac704b4987fb090de5381f07
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 68f90e406a06069403b76749977c5546b10ed790
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49884772"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53872055"
 ---
 # <a name="sccdiff-function"></a>SccDiff 関数
 この関数が表示されます (または必要に応じてだけをチェック) (ローカル ディスク) 上の現在のファイルとその最後のチェックイン バージョンの違い、ソース管理システム。  

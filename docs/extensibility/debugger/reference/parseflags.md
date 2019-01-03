@@ -1,9 +1,6 @@
 ---
 title: PARSEFLAGS |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - PARSEFLAGS
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7192483b4f2ce88235fc5e8d48f1d51ef71b442f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 28459d2bd5aedb6a3735cf8dcc10ff082c325daa
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49913008"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53831405"
 ---
 # <a name="parseflags"></a>PARSEFLAGS
 式を解析する方法を指定します。  
@@ -28,7 +25,7 @@ ms.locfileid: "49913008"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-enum enum_PARSEFLAGS {   
+enum enum_PARSEFLAGS {   
    PARSE_EXPRESSION            = 0x0001,  
    PARSE_FUNCTION_AS_ADDRESS   = 0x0002,  
    PARSE_DESIGN_TIME_EXPR_EVAL = 0x1000  
@@ -37,7 +34,7 @@ typedef DWORD PARSEFLAGS;
 ```  
   
 ```csharp  
-public enum enum_PARSEFLAGS {   
+public enum enum_PARSEFLAGS {   
    PARSE_EXPRESSION            = 0x0001,  
    PARSE_FUNCTION_AS_ADDRESS   = 0x0002,  
    PARSE_DESIGN_TIME_EXPR_EVAL = 0x1000  
@@ -60,9 +57,9 @@ public enum enum_PARSEFLAGS {
 ## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   

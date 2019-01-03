@@ -1,9 +1,6 @@
 ---
 title: SharePoint ソリューションの開発 |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.Project.ProjectProperties
@@ -18,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 25a7402a8d0464152e9b1bdd9d2edcdc66824914
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: bc45f1420f073347153c6b7b8dd72cae44dd6b0f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295905"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53871058"
 ---
 # <a name="develop-sharepoint-solutions"></a>SharePoint ソリューションを開発します。
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] には、SharePoint サイトおよびサイト要素を作成するための SharePoint プロジェクトの種類のテンプレートがいくつか用意されています。 使用可能なプロジェクトの種類の一覧は、次を参照してください。 [SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)します。 次に、SharePoint プロジェクトの要素およびプロパティについて説明します。  
@@ -48,7 +45,7 @@ ms.locfileid: "51295905"
   
  コンテンツ タイプやリスト インスタンスなどのアイテムを SharePoint プロジェクトに追加すると、 **[Features]** ノード内のフィーチャーに追加されます。 新しいフィーチャーに追加されるか、既存のフィーチャーに追加されるかは、そのアイテムのスコープによって決まります。 新しい項目が既存のフィーチャーと同じスコープを持つ場合は、そのフィーチャーに追加されます。 それ以外の場合は、新しいフィーチャーに追加されます。  
   
- フィーチャーを手動で追加するには、そのフィーチャー ノードのショートカット メニューから **[フィーチャーの追加]** コマンドを実行します。 フィーチャーの内容は、フィーチャー デザイナーを使用して表示または変更することができます。 詳細については、次を参照してください。[方法: SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)します。  
+ フィーチャーを手動で追加するには、そのフィーチャー ノードのショートカット メニューから **[フィーチャーの追加]** コマンドを実行します。 フィーチャーの内容は、フィーチャー デザイナーを使用して表示または変更することができます。 詳細については、「[方法 :SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)します。  
   
  SharePoint プロジェクトに追加したフィーチャーは、 **ソリューション エクスプローラー** にノードとして表示され、"Feature*x*.feature" という既定の名前が付けられます ( *x* は一意の番号)。 SharePoint Server にフィーチャーが配置されると、SharePoint 管理者は SharePoint サイト ユーザーが使用できるようにそれをアクティブ化することができます。  
   
@@ -66,14 +63,14 @@ ms.locfileid: "51295905"
   
 |プロパティ名|説明|  
 |-------------------|-----------------|  
-|アクティブな配置構成|配置中に実行される一連の手順を指定します。 詳細については、次を参照してください。[方法: SharePoint の配置構成を編集](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)します。|  
+|アクティブな配置構成|配置中に実行される一連の手順を指定します。 詳細については、「[方法 :SharePoint の配置構成を編集](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)します。|  
 |アセンブリの配置先|*SharePoint アプリケーション アセンブリ* の場所を決定します。 アセンブリの場所として有効な値は、 *GlobalAssemblyCache* (既定値) または *WebApplication*です。<br /><br /> *Sandboxed Solution* プロパティが **true**に設定されている場合、このプロパティは無効です。|  
 |デバッグ後に自動取り消し|[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]のデバッグ モードでアプリケーションを実行した後、配置されたソリューションを SharePoint から自動的に取り消すかどうかを指定します。 オンにすると、デバッグ後に IDE がデザイン ビューに戻ると、ソリューションは取り消されます。 オフにすると、ソリューションは取り消されません。 詳細については、「 [ソリューションを取り消す](http://go.microsoft.com/fwlink/?LinkId=183819)」を参照してください。|  
-|構成の編集|プロジェクトに使用する配置の構成を指定します。 詳細については、次を参照してください。[方法: SharePoint の配置構成を編集](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)と[デプロイ、発行、および SharePoint ソリューション パッケージをアップグレード](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md)します。|  
+|構成の編集|プロジェクトに使用する配置の構成を指定します。 詳細については、「[方法 :SharePoint の配置構成を編集](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)と[デプロイ、発行、および SharePoint ソリューション パッケージをアップグレード](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md)します。|  
 |Script デバッグの代わりに Silverlight デバッグを有効にする|オンにすると、Silverlight デバッガーがデバッグ プロセスにアタッチされます。 オフにすると、スクリプト デバッガーがデバッグ プロセスにアタッチされます。 詳細については、「 [Silverlight デバッグの概要](http://go.microsoft.com/fwlink/?LinkId=179826)」を参照してください。|  
 |パッケージにアセンブリを含める|プロジェクト アセンブリをビルド時にパッケージ化するかどうかを指定します。|  
-|配置後コマンド ライン|SharePoint ソリューションを配置した後で実行するコマンドを指定します。 この行では、MSBuild 変数が解決されさえすれば、どのようなバッチ コマンドでも指定できます。 詳細については、「 [How to: Set SharePoint Deployment Commands](../sharepoint/how-to-set-sharepoint-deployment-commands.md)」を参照してください。|  
-|配置前コマンド ライン|SharePoint ソリューションを配置する前に実行するコマンドを指定します。 この行では、MSBuild 変数が解決されさえすれば、どのようなバッチ コマンドでも指定できます。 詳細については、「 [How to: Set SharePoint Deployment Commands](../sharepoint/how-to-set-sharepoint-deployment-commands.md)」を参照してください。|  
+|配置後コマンド ライン|SharePoint ソリューションを配置した後で実行するコマンドを指定します。 この行では、MSBuild 変数が解決されさえすれば、どのようなバッチ コマンドでも指定できます。 詳細については、「[方法 :SharePoint の配置コマンドを設定](../sharepoint/how-to-set-sharepoint-deployment-commands.md)します。|  
+|配置前コマンド ライン|SharePoint ソリューションを配置する前に実行するコマンドを指定します。 この行では、MSBuild 変数が解決されさえすれば、どのようなバッチ コマンドでも指定できます。 詳細については、「[方法 :SharePoint の配置コマンドを設定](../sharepoint/how-to-set-sharepoint-deployment-commands.md)します。|  
 |プロジェクト ファイル|プロジェクトのビルド、構成、およびその他の情報を含むファイルの名前です。|  
 |プロジェクト フォルダー|システム上のプロジェクト ファイルの場所。 システム テーブルは読み取り専用です。|  
 |Sandboxed Solution|プロジェクトを *サンドボックス ソリューション*( *ユーザー作成のソリューション*とも呼ばれる) として配置するかどうかを指定します。 サンドボックス ソリューションは必ずしも信頼できません。 値が **true** の場合、プロジェクトはサンドボックス ソリューションとして配置され、 **false** の場合、プロジェクトはファーム ソリューションとして配置されます。 詳細については、次のトピックを参照してください。 [Sandboxed Solution Considerations](../sharepoint/sandboxed-solution-considerations.md) および [Differences Between Sandboxed and Farm Solutions](../sharepoint/differences-between-sandboxed-and-farm-solutions.md).|  
@@ -104,7 +101,7 @@ ms.locfileid: "51295905"
 |配置場所|SharePoint サーバー上のファイルの完全修飾パス。 このパスは、[配置ルート] プロパティと [配置パス] プロパティで構成されます。|  
 |配置パス|Workflow1 など、SharePoint サーバー ファイル上のファイルの相対パス\\します。 ファイルの完全修飾パスは、 *Deployment Path* 値の末尾に *Deployment Root* 値を連結することによって作成されます。<br /><br /> 値を選択する*RootFile*の*展開の種類*プロパティの変更、 *Deployment Root*プロパティを\<{sharepointroot} >\\の完全修飾パスで結果として得られる、 \<{sharepointroot} > \Workflow1\\します。 詳細については、次を参照してください。[パッケージ化と SharePoint ソリューションの配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)します。|  
 |Deployment Root|文字列。 ファイルの配置先となる SharePoint Server 上のルート フォルダーです たとえば、 \<{sharepointroot} > \Template\Features\\\<FeatureName >\\します。<br /><br /> *Deployment Root* プロパティの値は、 *Deployment Type* の設定に依存します。|  
-|Deployment Type|ファイルの配置の種類です。 *Deployment Root* 値に依存します。 次のいずれかの値になります。<br /><br /> NoDeployment: *\<値なし >*<br /><br /> ElementManifest:  *\<{sharepointroot} > \Template\Features\\\<FeatureName >*\\<br /><br /> ElementFile:  *\<{sharepointroot} > \Template\Features\\\<FeatureName >\\*<br /><br /> TemplateFile:  *\<{sharepointroot} > \Template\\*<br /><br /> RootFile:  *\<{sharepointroot} >\\*<br /><br /> GlobalResource:  *\<{sharepointroot} > \Resources\\*<br /><br /> ClassResource:  *\<ClassResourcePath >\\*<br /><br /> 詳細については、「 <xref:Microsoft.VisualStudio.SharePoint.DeploymentType> 」を参照してください。|  
+|Deployment Type|ファイルの配置の種類です。 *Deployment Root* 値に依存します。 次のいずれかの値になります。<br /><br /> NoDeployment: *\<値なし >*<br /><br /> ElementManifest:*\<{Sharepointroot} > \Template\Features\\\<FeatureName >*\\<br /><br /> ElementFile:*\<{Sharepointroot} > \Template\Features\\\<FeatureName >\\*<br /><br /> TemplateFile:*\<{Sharepointroot} > \Template\\*<br /><br /> RootFile:*\<{Sharepointroot} >\\*<br /><br /> GlobalResource:*\<{Sharepointroot} > \Resources\\*<br /><br /> ClassResource:*\<ClassResourcePath >\\*<br /><br /> 詳細については、「 <xref:Microsoft.VisualStudio.SharePoint.DeploymentType> 」を参照してください。|  
 |ファイル名|項目ファイルの名前またはフォルダーの名前です。|  
 |完全パス|項目ファイルの場所です。 システム テーブルは読み取り専用です。|  
   
@@ -113,9 +110,9 @@ ms.locfileid: "51295905"
 |タイトル|説明|  
 |-----------|-----------------|  
 |[SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)|[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]で使用できる SharePoint プロジェクトおよびプロジェクト項目テンプレートについて説明します。|  
-|[方法: SharePoint プロジェクトに項目を追加する](../sharepoint/how-to-add-items-to-a-sharepoint-project.md)|新規または既存の項目を [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint プロジェクトに追加する方法を説明します。|  
-|[チュートリアル: SharePoint のサイト列、コンテンツの種類、および一覧を作成します。](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)|カスタム フィールド、コンテンツ タイプ、リスト定義、およびリスト インスタンスの作成手順について説明します。|  
-|[方法: イベント レシーバーを作成](../sharepoint/how-to-create-an-event-receiver.md)|作成したプロジェクトのイベント レシーバーを追加する方法について説明します[チュートリアル: SharePoint のサイト列、コンテンツの種類、および一覧を作成する](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)します。|  
+|[方法: SharePoint プロジェクトに項目を追加します。](../sharepoint/how-to-add-items-to-a-sharepoint-project.md)|新規または既存の項目を [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint プロジェクトに追加する方法を説明します。|  
+|[チュートリアル: For SharePoint のサイト列、コンテンツの種類、および一覧を作成します。](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)|カスタム フィールド、コンテンツ タイプ、リスト定義、およびリスト インスタンスの作成手順について説明します。|  
+|[方法: イベント レシーバーを作成します。](../sharepoint/how-to-create-an-event-receiver.md)|作成したプロジェクトのイベント レシーバーを追加する方法について説明します[チュートリアル。For SharePoint のサイト列、コンテンツの種類、および一覧の作成](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)です。|  
 |[SharePoint ワークフロー ソリューションを作成します。](../sharepoint/creating-sharepoint-workflow-solutions.md)|ワークフローの関連付けフォームおよびワークフローの開始フォームを含んだワークフロー プロジェクトの作成方法を説明します。|  
 |[SharePoint 用ページを作成します。](../sharepoint/creating-pages-for-sharepoint.md)|SharePoint で使用するページ (アプリケーション ページ、サイト ページ、マスター ページなど) の作成方法とページ レイアウトについて説明します。|  
 |[For SharePoint の web パーツを作成します。](../sharepoint/creating-web-parts-for-sharepoint.md)|ユーザーがブラウザーから SharePoint サイト ページのコンテンツ、外観、および動作を直接変更できるようにするコントロールを追加する方法について説明します。|  
@@ -136,5 +133,3 @@ ms.locfileid: "51295905"
  [サーバー エクスプ ローラーを使用した SharePoint 接続を参照します。](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)   
  [ビルドし、SharePoint ソリューションのデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)   
  [パッケージ化し、SharePoint ソリューションのデプロイ](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
-  
-  

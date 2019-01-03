@@ -1,9 +1,6 @@
 ---
 title: ASSEMBLYLOCRESOLUTION |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - ASSEMBLYLOCRESOLUTION
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03d05cf8c224a24d143feb3d22df4357d623d308
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a6b16a40b5e3d140de5b7dc2f666f81124ea2490
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49933210"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53819875"
 ---
 # <a name="assemblylocresolution"></a>ASSEMBLYLOCRESOLUTION
 アセンブリがある場所を指定します。  
@@ -28,21 +25,21 @@ ms.locfileid: "49933210"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-enum enum_ASSEMBLYLOCRESOLUTION {  
-   ALR_NAME      = 0x0,  
-   ALR_USERDIR   = 0x1,  
-   ALR_SHAREDDIR = 0x2,  
-   ALR_REMOTEDIR = 0x4,  
+enum enum_ASSEMBLYLOCRESOLUTION {  
+   ALR_NAME      = 0x0,  
+   ALR_USERDIR   = 0x1,  
+   ALR_SHAREDDIR = 0x2,  
+   ALR_REMOTEDIR = 0x4,  
 };  
-typedef DWORD ASSEMBLYLOCRESOLUTION;  
+typedef DWORD ASSEMBLYLOCRESOLUTION;  
 ```  
   
 ```csharp  
-public enum enum_ASSEMBLYLOCRESOLUTION {  
-   ALR_NAME      = 0x0,  
-   ALR_USERDIR   = 0x1,  
-   ALR_SHAREDDIR = 0x2,  
-   ALR_REMOTEDIR = 0x4,  
+public enum enum_ASSEMBLYLOCRESOLUTION {  
+   ALR_NAME      = 0x0,  
+   ALR_USERDIR   = 0x1,  
+   ALR_SHAREDDIR = 0x2,  
+   ALR_REMOTEDIR = 0x4,  
 };  
 ```  
   
@@ -67,9 +64,9 @@ public enum enum_ASSEMBLYLOCRESOLUTION {
 ## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   

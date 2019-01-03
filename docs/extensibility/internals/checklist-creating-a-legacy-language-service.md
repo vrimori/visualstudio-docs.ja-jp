@@ -1,9 +1,6 @@
 ---
-title: 'チェックリスト: 従来の言語サービスを作成する |Microsoft Docs'
-ms.custom: ''
+title: チェックリスト:従来の言語サービスを作成する |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - language services
@@ -14,14 +11,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ba21cf1830f389acbcd72d5e10a688f009871b25
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: a37909dd9648f6bac7e0b9bbbe8483244e6ed2b3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39510297"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53821115"
 ---
-# <a name="checklist-create-a-legacy-language-service"></a>チェックリスト: 従来の言語サービスを作成します。
+# <a name="checklist-create-a-legacy-language-service"></a>チェックリスト:従来の言語サービスを作成します。
 基本的な手順の言語サービスを作成するために行う必要がありますが、次のチェックリストにまとめたものです、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]のコア エディター。 言語サービスに統合する[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッグの式エバリュエーターを作成する必要があります。 詳細については、次を参照してください。 [CLR の式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)で、 [Visual Studio デバッガーの拡張性](../../extensibility/debugger/visual-studio-debugger-extensibility.md)します。  
   
 ## <a name="steps-to-create-a-language-service"></a>言語サービスを作成する手順  
@@ -112,7 +109,7 @@ ms.locfileid: "39510297"
   
 -   アウトライン  
   
-     アウトライン表示をサポートするためのいくつかのオプションがあります。 たとえば、サポート、**定義に折りたたむ**コマンド、エディター コントロールのアウトライン領域、またはクライアントによって制御された領域をサポートします。 詳細については、次を参照してください。[方法: 従来の言語サービスでのアウトラインの拡張のサポートを提供](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)します。  
+     アウトライン表示をサポートするためのいくつかのオプションがあります。 たとえば、サポート、**定義に折りたたむ**コマンド、エディター コントロールのアウトライン領域、またはクライアントによって制御された領域をサポートします。 詳細については、「[方法 :従来の言語サービスでのアウトラインの拡張のサポートを提供](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)します。  
   
 -   言語サービスの登録  
   

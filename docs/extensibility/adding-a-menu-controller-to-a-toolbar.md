@@ -1,9 +1,6 @@
 ---
 title: ツールバーにメニュー コント ローラーの追加 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - toolbars [Visual Studio], adding menu controllers
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 93bf6af51488b5609f24c5664dee040ea086c26c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 13a1fbd07498f77cde5004dc23df9a2edbfb2e92
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49867263"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53852993"
 ---
 # <a name="add-a-menu-controller-to-a-toolbar"></a>ツールバーにメニュー コント ローラーを追加します。
 このチュートリアルの[ツール ウィンドウにツールバーを追加](../extensibility/adding-a-toolbar-to-a-tool-window.md)チュートリアルとツール ウィンドウのツールバーにメニュー コント ローラーを追加する方法について説明します。 以下に示す手順も適用できますで作成したツールバーに、[ツールバーを追加](../extensibility/adding-a-toolbar.md)チュートリアル。  
@@ -30,7 +27,7 @@ ms.locfileid: "49867263"
  メニューにメニュー コント ローラーを表示できますが、ツールバーに最もよく使われます。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、"[Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)"を参照してください。  
   
 ## <a name="create-a-menu-controller"></a>メニュー コント ローラーを作成します。  
   
@@ -116,15 +113,15 @@ ms.locfileid: "49867263"
 1.  *TWTestCommandPackageGuids.cs*、既存のコマンド Id の後に、次の 3 つのメニュー項目のコマンド Id を追加します。  
   
     ```csharp  
-    public const int cmdidMCItem1 = 0x130;  
-    public const int cmdidMCItem2 = 0x131;  
-    public const int cmdidMCItem3 = 0x132;  
+    public const int cmdidMCItem1 = 0x130;  
+    public const int cmdidMCItem2 = 0x131;  
+    public const int cmdidMCItem3 = 0x132;  
     ```  
   
 2.  *TWTestCommand.cs*、上部にある次のコードを追加、`TWTestCommand`クラス。  
   
     ```csharp  
-    private int currentMCCommand; // The currently selected menu controller command  
+    private int currentMCCommand; // The currently selected menu controller command  
     ```  
   
 3.  TWTestCommand コンス トラクターの最後の呼び出しの後で、`AddCommand`メソッドでは、コマンドごとに同じハンドラーを使用してイベントをルーティングするコードを追加します。  
@@ -139,7 +136,7 @@ ms.locfileid: "49867263"
           EventHandler(OnMCItemClicked), cmdID);  
         mc.BeforeQueryStatus += new EventHandler(OnMCItemQueryStatus);  
         commandService.AddCommand(mc);  
-        // The first item is, by default, checked.   
+        // The first item is, by default, checked.   
         if (TWTestCommandPackageGuids.cmdidMCItem1 == i)  
         {  
             mc.Checked = true;  
@@ -151,7 +148,7 @@ ms.locfileid: "49867263"
 4.  イベント ハンドラーを追加、 **TWTestCommand**チェックとして選択したコマンドをマークするクラス。  
   
     ```csharp  
-    private void OnMCItemQueryStatus(object sender, EventArgs e)  
+    private void OnMCItemQueryStatus(object sender, EventArgs e)  
     {  
         OleMenuCommand mc = sender as OleMenuCommand;  
         if (null != mc)  
@@ -164,7 +161,7 @@ ms.locfileid: "49867263"
 5.  メニュー コント ローラー上のコマンドを選択すると、メッセージ ボックスを表示するイベント ハンドラーを追加します。  
   
     ```csharp  
-    private void OnMCItemClicked(object sender, EventArgs e)  
+    private void OnMCItemClicked(object sender, EventArgs e)  
     {  
         OleMenuCommand mc = sender as OleMenuCommand;  
         if (null != mc)  

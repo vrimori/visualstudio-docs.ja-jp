@@ -3,8 +3,6 @@ title: 全般的な参照 (Visual Studio での Office 開発)
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,12 +14,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: bdc279d72f6e088c1adc22a78d9864e1d595b764
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: ec7b021c1eddff17ccc5687ec3d16f765838d062
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53646852"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53933179"
 ---
 # <a name="general-reference-office-development-in-visual-studio"></a>全般的な参照 (Visual Studio での Office 開発)
   このセクションには、Visual Studio での Microsoft Office プロジェクトに関する技術的な詳細が含まれています。  
@@ -54,5 +52,3 @@ ms.locfileid: "53646852"
   
  [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)  
  Visual Studio を使用して Office プロジェクトの作成を開始する方法についての情報へのリンクを提供します。  
-  
-  

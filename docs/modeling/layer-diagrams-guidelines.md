@@ -1,5 +1,5 @@
 ---
-title: '依存関係図: ガイドライン'
+title: 依存関係図:ガイドライン
 ms.date: 09/28/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,17 +13,16 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: b7e282ed6aa93189ab15e608a5b3abe0c56411b9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f4a044481b1e359b2021b16da1f0b2b5aba8a872
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49863335"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53924424"
 ---
 # <a name="dependency-diagrams-guidelines"></a>依存関係図: ガイドライン
 
-作成、高レベルのアプリのアーキテクチャを記述*依存関係図*Visual Studio でします。 依存関係図を使用してコードを検証することで、コードがこの設計で一貫性のあることを確認します。 レイヤーの検証をビルド プロセスに含めることもできます。 参照してください[Channel 9 ビデオ: デザインと依存関係図の使用によるアーキテクチャの検証](http://go.microsoft.com/fwlink/?LinkID=252073)です。
+作成、高レベルのアプリのアーキテクチャを記述*依存関係図*Visual Studio でします。 依存関係図を使用してコードを検証することで、コードがこの設計で一貫性のあることを確認します。 レイヤーの検証をビルド プロセスに含めることもできます。 参照してください[Channel 9 ビデオ。設計し、依存関係図の使用によるアーキテクチャの検証](http://go.microsoft.com/fwlink/?LinkID=252073)です。
 
 この機能をサポートする Visual Studio のエディションを確認するを参照してください。 [Edition のサポート アーキテクチャとモデリング ツール](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)します。
 
@@ -32,7 +31,7 @@ ms.locfileid: "49863335"
 
 ## <a name="what-is-a-dependency-diagram"></a>依存関係図とは何ですか。
 
-従来のアーキテクチャ図のようには、依存関係図は、主要なコンポーネントや機能ユニットの設計とその依存関係を識別します。 ダイアグラムで、各ノードと呼ばれる、*レイヤー*、名前空間、プロジェクト、または他の成果物の論理グループを表します。 設計に必要な依存関係を描画できます。 従来のアーキテクチャ図とは異なり、ソース コード内の実際の依存関係が意図したとおりのものであることを検証できます。 [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] で定期的なビルドの検証パーツを作成すると、今後変更が繰り返されても、プログラム コードがシステムのアーキテクチャに準拠している状態を維持できます。 参照してください[依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)します。
+従来のアーキテクチャ図のようには、依存関係図は、主要なコンポーネントや機能ユニットの設計とその依存関係を識別します。 ダイアグラムで、各ノードと呼ばれる、*レイヤー*、名前空間、プロジェクト、または他の成果物の論理グループを表します。 設計に必要な依存関係を描画できます。 従来のアーキテクチャ図とは異なり、ソース コード内の実際の依存関係が意図したとおりのものであることを検証できます。 [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] で定期的なビルドの検証パーツを作成すると、今後変更が繰り返されても、プログラム コードがシステムのアーキテクチャに準拠している状態を維持できます。 参照してください[依存関係図。参照](../modeling/layer-diagrams-reference.md)します。
 
 ## <a name="how-to-design-or-update-your-app-with-dependency-diagrams"></a>設計または依存関係図を使用したアプリを更新する方法
 
@@ -125,7 +124,7 @@ ms.locfileid: "49863335"
 
 新規プロジェクトの開発を新たに開始する場合や、新規プロジェクトで新しい領域の設計を開始する場合、コードの開発前にレイヤーと依存関係を描画することで、主要なコンポーネントを把握できます。
 
--   **特定できるアーキテクチャ パターンを表示する**ダイアグラムでは、依存関係、可能な場合。 たとえば、デスクトップ アプリケーションを記述する依存関係図には、プレゼンテーション、ドメイン ロジック、およびデータ ストアなどのレイヤーがあります。 アプリケーション内で 1 つの機能をカバーする依存関係図には、モデル、ビュー、およびコント ローラーなどのレイヤーがあります。 このようなパターンの詳細については、次を参照してください。 [Patterns & Practices: アプリケーションのアーキテクチャ](http://go.microsoft.com/fwlink/?LinkId=145794)します。
+-   **特定できるアーキテクチャ パターンを表示する**ダイアグラムでは、依存関係、可能な場合。 たとえば、デスクトップ アプリケーションを記述する依存関係図には、プレゼンテーション、ドメイン ロジック、およびデータ ストアなどのレイヤーがあります。 アプリケーション内で 1 つの機能をカバーする依存関係図には、モデル、ビュー、およびコント ローラーなどのレイヤーがあります。 このようなパターンの詳細については、次を参照してください[Patterns & Practices:。アプリケーションのアーキテクチャ](http://go.microsoft.com/fwlink/?LinkId=145794)します。
 
 -   **各レイヤーのコード成果物を作成する**名前空間、クラス、またはコンポーネントなど。 これにより、コードの追跡やレイヤーへのコードのリンクが容易になります。 成果物を生成するごとに、すぐに適切なレイヤーにリンクさせてください。
 
@@ -176,5 +175,5 @@ ms.locfileid: "49863335"
 
 ## <a name="see-also"></a>関連項目
 
-- [依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)
+- [依存関係図:参照](../modeling/layer-diagrams-reference.md)
 - [コードからの依存関係図の作成](../modeling/create-layer-diagrams-from-your-code.md)

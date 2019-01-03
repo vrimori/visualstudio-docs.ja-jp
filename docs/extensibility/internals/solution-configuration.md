@@ -1,9 +1,6 @@
 ---
 title: ソリューションの構成 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - solution configurations
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: caf55b341cc34bb4101f27d2468f0da8e5cf6c96
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ec88e383c7ad0a74699f984691d337da7d6a2cac
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49875321"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53835034"
 ---
 # <a name="solution-configuration"></a>ソリューション構成
 ソリューション構成では、ソリューション レベルのプロパティを格納します。 動作を指示する、**開始**(F5) キーと**ビルド**コマンド。 既定では、これらのコマンドは、ビルドし、デバッグ構成を開始します。 どちらのコマンドは、ソリューション構成のコンテキストで実行します。 これは、ユーザーがどのようなアクティブなソリューションが、設定を使用して構成されているビルドの開始、f5 キーを予測できることを意味します。 環境は、ビルドおよび実行する際にプロジェクトではなく、ソリューションを最適化するために設計されています。  
@@ -52,7 +49,7 @@ ms.locfileid: "49875321"
   
    現在のソリューション構成でプロジェクトをビルドするかどうかを指定します。 プロジェクトの依存関係が含まれているにもかかわらず、ソリューション レベルのビルド コマンドを呼び出すときに、選択されていないプロジェクトはビルドされません。 プロジェクトをビルドするのには選択されていないはまだデバッグ、実行、パッケージ化、およびソリューションの展開に含まれます。  
   
-- 配置  
+- デプロイ  
   
    選択したソリューションのビルド構成とスタートまたは Deploy コマンドを使う場合にプロジェクトを配置するかどうかを指定します。 このフィールドのチェック ボックスを使用できるは、プロジェクトは、実装することによって展開をサポートしている場合になります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>インターフェイスをその<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2>オブジェクト。  
   

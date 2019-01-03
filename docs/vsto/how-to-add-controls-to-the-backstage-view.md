@@ -1,9 +1,6 @@
 ---
 title: '方法: Backstage ビューにコントロールを追加します。 '
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -23,12 +20,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9d33d88849400857914c1daebfcd9d04a373920d
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: 6500118f775f9dfab75b615f28fab9e166a0104a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53647124"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53924658"
 ---
 # <a name="how-to-add-controls-to-the-backstage-view"></a>方法: Backstage ビューにコントロールを追加します。
   リボン デザイナーを使用して、クリックすると表示されるメニューにコントロールを追加、**ファイル**タブ。コントロールに追加する、アプリケーションを実行すると、**ファイル**タブ表示という名前のグループ**アドイン**します。  
@@ -71,5 +68,3 @@ ms.locfileid: "53647124"
  [リボン XML](../vsto/ribbon-xml.md)   
  [方法: 開始するリボンをカスタマイズします。](../vsto/how-to-get-started-customizing-the-ribbon.md)   
  [チュートリアル: リボン デザイナーを使用してカスタム タブを作成します。](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)  
-  
-  

@@ -1,9 +1,6 @@
 ---
-title: IDebugGenericParamField |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugGenericParamField |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - IDebugGenericParamField interface
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4072908a8f6690e3d3b00d8c43690be62083242d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c42c9b19e52511097953cf658b3a5ce0decd5e4a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31114655"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53871613"
 ---
 # <a name="idebuggenericparamfield"></a>IDebugGenericParamField
 マネージ コードのジェネリック型のパラメーターを表します。  
@@ -30,10 +27,10 @@ IDebugGenericParamField : IDebugField
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- ジェネリックのサポートのために使用します。  
+ ジェネリックのサポートに使用されます。  
   
 ## <a name="methods"></a>メソッド  
- メソッドだけでなく、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイス、このインターフェイスは、次のメソッドを実装します。  
+ メソッドだけでなく、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイスでは、このインターフェイスは、次のメソッドを実装します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
@@ -44,9 +41,9 @@ IDebugGenericParamField : IDebugField
 |[GetNameOfFormalParam](../../../extensibility/debugger/reference/idebuggenericparamfield-getnameofformalparam.md)|このジェネリック パラメーターの名前を取得します。|  
 |[GetOwner](../../../extensibility/debugger/reference/idebuggenericparamfield-getowner.md)|このジェネリック パラメーターの型またはメソッドの所有者を取得します。|  
   
-## <a name="requirements"></a>要件  
- ヘッダー: Sh.h  
+## <a name="requirements"></a>必要条件  
+ ヘッダー:Sh.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll

@@ -1,8 +1,7 @@
 ---
-title: 'CA1018: 属性を AttributeUsageAttribute に設定します'
+title: CA1018:属性を AttributeUsageAttribute に設定します
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - CA1018
@@ -19,14 +18,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: a54dd39746364d6908f440ac77d7a2b8bbfdbcf6
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 0f88185882d8cddaf81caf95e2871918553b8eaa
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45547621"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53881988"
 ---
-# <a name="ca1018-mark-attributes-with-attributeusageattribute"></a>CA1018: 属性を AttributeUsageAttribute に設定します
+# <a name="ca1018-mark-attributes-with-attributeusageattribute"></a>CA1018:属性を AttributeUsageAttribute に設定します
 
 |||
 |-|-|
@@ -50,15 +49,15 @@ ms.locfileid: "45547621"
  メッセージを除外ではなく、この規則の違反を修正する必要があります。 属性が継承する場合でも<xref:System.AttributeUsageAttribute>属性は、コードのメンテナンスを簡素化するためにする必要があります。
 
 ## <a name="example"></a>例
- 次の例では、2 つの属性を定義します。 `BadCodeMaintainerAttribute` 正しくない省略、<xref:System.AttributeUsageAttribute>ステートメント、および`GoodCodeMaintainerAttribute`このセクションに記載されている属性を正しく実装します。 なおプロパティ`DeveloperName`デザイン規則に必要な[ca 1019: 属性引数にアクセサーを定義](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)完全を期すのために含まれています。
+ 次の例では、2 つの属性を定義します。 `BadCodeMaintainerAttribute` 正しくない省略、<xref:System.AttributeUsageAttribute>ステートメント、および`GoodCodeMaintainerAttribute`このセクションに記載されている属性を正しく実装します。 なお、プロパティ`DeveloperName`デザイン規則に必要な[ca 1019。属性引数にアクセサーを定義する](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)完全を期すのために含まれています。
 
  [!code-csharp[FxCop.Design.AttributeUsage#1](../code-quality/codesnippet/CSharp/ca1018-mark-attributes-with-attributeusageattribute_1.cs)]
  [!code-vb[FxCop.Design.AttributeUsage#1](../code-quality/codesnippet/VisualBasic/ca1018-mark-attributes-with-attributeusageattribute_1.vb)]
 
 ## <a name="related-rules"></a>関連するルール
- [CA1019: 属性引数にアクセサーを定義します](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
+ [CA 1019:属性引数にアクセサーを定義します](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
 
- [CA1813: シールされていない属性を使用しません](../code-quality/ca1813-avoid-unsealed-attributes.md)
+ [CA1813:シールされていない属性します。](../code-quality/ca1813-avoid-unsealed-attributes.md)
 
 ## <a name="see-also"></a>関連項目
 

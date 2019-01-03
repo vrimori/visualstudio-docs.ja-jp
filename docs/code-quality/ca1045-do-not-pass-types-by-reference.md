@@ -1,8 +1,7 @@
 ---
-title: 'CA1045: 型を参照によって渡しません'
+title: CA1045:型を参照によって渡しません
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - CA1045
@@ -16,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ee365dd36a3a88b896fe9ec6e2f676b4e29bf1e
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: b2516387f6de81eef2f68d521652aa85ce521aea
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45547842"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53839058"
 ---
-# <a name="ca1045-do-not-pass-types-by-reference"></a>CA1045: 型を参照によって渡しません
+# <a name="ca1045-do-not-pass-types-by-reference"></a>CA1045:型を参照によって渡しません
 
 |||
 |-|-|
@@ -89,4 +88,4 @@ Passing by return value:
 ```
 
 ## <a name="related-rules"></a>関連するルール
- [CA1021: out パラメーターを使用しません](../code-quality/ca1021-avoid-out-parameters.md)
+ [CA1021:Out パラメーターを避ける](../code-quality/ca1021-avoid-out-parameters.md)

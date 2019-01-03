@@ -1,9 +1,6 @@
 ---
 title: '方法: ファイル変更通知を抑制する |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - suppress file change notification
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 505827d25a7e6016403567c172ad094d072f1ef3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0d2ca702be87722d2d3197d5584811d77c62472b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49885825"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53874285"
 ---
 # <a name="how-to-suppress-file-change-notifications"></a>方法: ファイル変更通知を抑制します。
 メッセージ テキスト バッファーを表す物理ファイルが変更されたとき ダイアログ ボックスを表示します**次のものに変更を保存しますか?** これは、ファイル変更通知と呼ばれます。 多くの変更が使用する場合、ファイルに、ただし、このダイアログ ボックスを繰り返し表示することがすぐに面倒な場合。  
@@ -79,7 +76,7 @@ void CSuspendFileChanges::Suspend()
   
     CComPtr<IUnknown> srpDocData;  
     VSCOOKIE vscookie = VSCOOKIE_NIL;  
-    pRDT->FindAndLockDocument(RDT_NoLock, T2COLE(m_strMkDocument),    
+    pRDT->FindAndLockDocument(RDT_NoLock, T2COLE(m_strMkDocument),    
       NULL, NULL, &srpDocData, &vscookie);  
     if ( (vscookie == VSCOOKIE_NIL) || !srpDocData)  
         return;  

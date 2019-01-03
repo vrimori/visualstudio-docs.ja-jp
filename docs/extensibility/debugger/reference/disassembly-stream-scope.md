@@ -1,9 +1,6 @@
 ---
 title: DISASSEMBLY_STREAM_SCOPE |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - DISASSEMBLY_STREAM_SCOPE
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 860d563abd5922ecf0461ed5f03ffa231ba9450f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 57a8741720cda263a399088848fcaa1862a2ff4e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49831160"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53919204"
 ---
 # <a name="disassemblystreamscope"></a>DISASSEMBLY_STREAM_SCOPE
 [逆アセンブル] ストリームのスコープを指定します。  
@@ -28,7 +25,7 @@ ms.locfileid: "49831160"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-enum enum_DISASSEMBLY_STREAM_SCOPE {   
+enum enum_DISASSEMBLY_STREAM_SCOPE {   
    DSS_HUGE     = 0x10000000,  
    DSS_FUNCTION = 0x0001,  
    DSS_MODULE   = (DSS_HUGE) | 0x0002,  
@@ -38,7 +35,7 @@ typedef DWORD DISASSEMBLY_STREAM_SCOPE;
 ```  
   
 ```csharp  
-public enum enum_DISASSEMBLY_STREAM_SCOPE {   
+public enum enum_DISASSEMBLY_STREAM_SCOPE {   
    DSS_HUGE     = 0x10000000,  
    DSS_FUNCTION = 0x0001,  
    DSS_MODULE   = (DSS_HUGE) | 0x0002,  
@@ -67,9 +64,9 @@ public enum enum_DISASSEMBLY_STREAM_SCOPE {
 ## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   

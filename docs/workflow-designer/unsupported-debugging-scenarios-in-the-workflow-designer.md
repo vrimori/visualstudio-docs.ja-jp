@@ -3,25 +3,24 @@ title: ワークフロー デザイナーでサポートされていないデバ
 ms.date: 11/04/2016
 ms.topic: reference
 ms.prod: visual-studio-dev15
-ms.technology: vs-workflow-designer
 ms.assetid: 6adbe379-41d0-4681-9cd0-b91f187c3c2c
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 2b876df1b7d997f3999c119d02abd593a88e6d5e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 88fa196d5df085249282e595031bbde09ba071a7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31973071"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53858631"
 ---
 # <a name="unsupported-debugging-scenarios-in-the-workflow-designer"></a>ワークフロー デザイナーでサポートされていないデバッグ シナリオ
 
-.NET Framework 4 で、ワークフロー デザイナーは、多くの新機能を追加がまだサポートしていないいくつかのデバッグ シナリオがある場合。
+.NET Framework 4 では、ワークフロー デザイナーは、多くの新機能を追加しますが、まだがサポートされていないいくつかのデバッグ シナリオがあります。
 
-サポートされていないワークフロー デザイナーのデバッグ シナリオを次に示します。
+次に、サポートされていないワークフロー デザイナーのデバッグ シナリオを示します。
 
 -   コードを編集した後では実行を続行できません。
 
@@ -31,7 +30,7 @@ ms.locfileid: "31973071"
 
 -   デザイナーを使用せずにコード内に作成されたワークフローをデバッグするためにワークフロー デザイナーを使用することはできません。
 
--   .NET Framework 4 のデザイナーでは、以前のバージョンの Windows Workflow Foundation (WF) で作成したワークフローをデバッグできません。
+-   .NET Framework 4 のデザイナーでは、以前のバージョンの Windows Workflow Foundation (WF) で作成されたワークフローをデバッグできません。
 
 -   アクティビティまたは <xref:System.Activities.Statements.Flowchart> ノード間のリンクにブレークポイントを定義することはできません。
 
@@ -41,7 +40,7 @@ ms.locfileid: "31973071"
 
 -   ワークフローのブレークポイントを呼び出し履歴ウィンドウに設定することはできません。
 
--   デザイナーでブレークポイントを作成するときに、**行**と**文字**の設定、**新しいブレークポイント** ダイアログ ボックスは使用されません。
+-   デザイナーでブレークポイントを作成するときに、**行**と**文字**の設定、**新しいブレークポイント**ダイアログは使用されません。
 
 -   [ブレークポイント] ウィンドウまたはショートカット メニューは、ワークフローのデバッグで、次の列またはオプションをサポートしていません。
 

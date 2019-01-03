@@ -1,9 +1,6 @@
 ---
 title: カスタム カテゴリと 表示項目を実装する |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - font and color control [Visual Studio SDK], categories
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 850e4396c11cbd83f578304eed78a25042185a25
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 178cd43486a9553f70853c9df0e106ac3ece78f1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49894639"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53908437"
 ---
 # <a name="implement-custom-categories-and-display-items"></a>カスタム カテゴリを実装し、アイテムを表示
 VSPackage は、そのテキストの色とフォントの制御を提供できます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) でカスタム カテゴリとアイテムを表示します。
@@ -57,7 +54,7 @@ VSPackage は、そのテキストの色とフォントの制御を提供でき�
   |名前|型|データ|説明|
   |----------|----------|----------|-----------------|
   |カテゴリ|REG_SZ|GUID|カテゴリを識別するために作成された GUID。|
-  |Package|REG_SZ|GUID|カテゴリをサポートする VSPackage のサービスの GUID です。|
+  |パッケージ|REG_SZ|GUID|カテゴリをサポートする VSPackage のサービスの GUID です。|
 
   レジストリで指定されたサービスの実装を提供する必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>の対応するカテゴリ。
 
@@ -72,7 +69,7 @@ VSPackage は、そのテキストの色とフォントの制御を提供でき�
   |名前|型|データ|説明|
   |----------|----------|----------|-----------------|
   |カテゴリ|REG_SZ|GUID|グループを識別する GUID が作成されます。|
-  |Package|REG_SZ|GUID|カテゴリをサポートするサービスの GUID です。|
+  |パッケージ|REG_SZ|GUID|カテゴリをサポートするサービスの GUID です。|
 
   レジストリで指定されたサービスの実装を提供する必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup>の対応するグループ。
 
@@ -116,7 +113,7 @@ VSPackage は、そのテキストの色とフォントの制御を提供でき�
 
      IDE は次のユーザーの変更の適切なメソッドを呼び出し、**フォントおよび色**ページ。 たとえば、呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents.OnFontChanged%2A>メソッドが新しいフォントが選択されている場合。
 
-     - または -
+     または
 
 -   IDE の変更をポーリングします。
 
@@ -135,5 +132,5 @@ VSPackage は、そのテキストの色とフォントの制御を提供でき�
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider>
 - [テキストの色づけのフォントと色の情報を取得します。](../extensibility/getting-font-and-color-information-for-text-colorization.md)
 - [アクセスには、フォントおよび色の設定が格納されています。](../extensibility/accessing-stored-font-and-color-settings.md)
-- [方法: 組み込みのフォントおよび色スキームへのアクセス](../extensibility/how-to-access-the-built-in-fonts-and-color-scheme.md)
+- [方法: 組み込みのフォントおよび色スキームへをアクセスします。](../extensibility/how-to-access-the-built-in-fonts-and-color-scheme.md)
 - [フォントと色の概要](../extensibility/font-and-color-overview.md)

@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: ドキュメント レベルのプロジェクトでの単純なデータ バインディング'
-ms.custom: ''
+title: 'チュートリアル: ドキュメント レベルのプロジェクトでの単純データ バインディング'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,14 +16,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 25173e5c4d4aeb02045cf858ae1e093b7a04d2bb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a9967d830d72355f23173a7dfc6f1a95be073959
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49824381"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53895494"
 ---
-# <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>チュートリアル: ドキュメント レベルのプロジェクトでの単純なデータ バインディング
+# <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>チュートリアル: ドキュメント レベルのプロジェクトでの単純データ バインディング
   このチュートリアルでは、ドキュメント レベルのプロジェクトでのデータ バインディングの基本について説明します。 SQL Server データベースの 1 つのデータ フィールドは、Microsoft Office Excel で名前付き範囲にバインドされます。 このチュートリアルでは、テーブル内のすべてのレコードをスクロールするためのコントロールを追加する方法も示します。  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
@@ -57,7 +54,7 @@ ms.locfileid: "49824381"
   
 ### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1. 名前の Excel ブック プロジェクトを作成**マイの単純データ バインディング**、Visual Basic または c# を使用します。 必ず**新しい文書を作成**が選択されています。 詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
+1. 名前の Excel ブック プロジェクトを作成**マイの単純データ バインディング**、Visual Basic または c# を使用します。 必ず**新しい文書を作成**が選択されています。 詳細については、「[方法 :Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
    デザイナーで新しい Excel ブックを開き、**マイの単純データ バインディング**プロジェクトを**ソリューション エクスプ ローラー**します。  
   
@@ -188,15 +185,13 @@ ms.locfileid: "49824381"
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルでは、データベース内のフィールドに名前付き範囲のバインドの基本を説明します。 ここでは、次のタスクを行います。  
   
--   データをキャッシュにオフラインで使用できるようにします。 詳細については、次を参照してください。[方法: オフラインか、サーバーで使用するデータをキャッシュ](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)します。  
+-   データをキャッシュにオフラインで使用できるようにします。 詳細については、「[方法 :オフラインか、サーバーで使用するデータをキャッシュ](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)します。  
   
--   代わりに、テーブル内の複数の列にセルを 1 つのフィールドにバインドします。 詳細については、次を参照してください。[チュートリアル: ドキュメント レベルのプロジェクトで複合データ バインディング](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)します。  
+-   代わりに、テーブル内の複数の列にセルを 1 つのフィールドにバインドします。 詳細については、「[チュートリアル:ドキュメント レベルのプロジェクトで複合データ バインディング](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)します。  
   
--   使用して、<xref:System.Windows.Forms.BindingNavigator>コントロール、レコード間をスクロールします。 詳細については、次を参照してください。[方法: Windows フォーム BindingNavigator コントロールを使用してデータを移動](/dotnet/framework/winforms/controls/bindingnavigator-control-overview-windows-forms)します。  
+-   使用して、<xref:System.Windows.Forms.BindingNavigator>コントロール、レコード間をスクロールします。 詳細については、「[方法 :Windows フォーム BindingNavigator コントロールを使用してデータを移動](/dotnet/framework/winforms/controls/bindingnavigator-control-overview-windows-forms)します。  
   
 ## <a name="see-also"></a>関連項目  
  [Office ソリューションでのコントロールにデータをバインドします。](../vsto/binding-data-to-controls-in-office-solutions.md)   
  [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)   
- [チュートリアル: ドキュメント レベルのプロジェクトで複雑なデータ バインディング](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)  
-  
-  
+ [チュートリアル: ドキュメント レベルのプロジェクトで複合データ バインディング](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)  

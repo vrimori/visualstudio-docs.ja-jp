@@ -1,9 +1,6 @@
 ---
 title: カスタム エディターでドキュメント データとドキュメントの表示 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - document data and document view
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2076f1a6c96aea717470fa1e955e5b9786f7fcc5
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: d2af41600ed809259cd7512a7fc0a146047a37ad
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39639816"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53818876"
 ---
 # <a name="document-data-and-document-view-in-custom-editors"></a>ドキュメント データとカスタム エディターでドキュメント ビュー
 カスタム エディターは、2 つの部分で構成されています。 ドキュメントのデータ オブジェクトとドキュメント ビュー オブジェクト。 名前からわかるように、ドキュメント データ オブジェクトを表示するテキスト データを表します。 同様に、ドキュメント ビュー オブジェクト (または"view") は、ドキュメント データ オブジェクトを表示するための 1 つまたは複数の windows を表します。  
@@ -42,7 +39,7 @@ ms.locfileid: "39639816"
 ## <a name="see-also"></a>関連項目  
  [複数のドキュメント ビューをサポートします。](../extensibility/supporting-multiple-document-views.md)   
  [簡略化された埋め込み](../extensibility/simplified-embedding.md)   
- [方法: ビューをドキュメント データにアタッチ](../extensibility/how-to-attach-views-to-document-data.md)   
+ [方法: ドキュメント データへのビューをアタッチします。](../extensibility/how-to-attach-views-to-document-data.md)   
  [ドキュメント ロック ホルダーの管理](../extensibility/document-lock-holder-management.md)   
  [1 つと複数タブのビュー](../extensibility/single-and-multi-tab-views.md)   
  [標準のドキュメントを保存します。](../extensibility/internals/saving-a-standard-document.md)   

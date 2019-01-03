@@ -1,9 +1,6 @@
 ---
-title: レガシ言語サービスの概要 |Microsoft ドキュメント
-ms.custom: ''
+title: 従来の言語サービスの概要 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - language services [managed package framework], about language services
@@ -13,26 +10,26 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e8641a3e009cb5a7b61d8334b6dcb2440d186f4f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 29d98bd0e474a503b84cb21a1bca25cb2836a433
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31131750"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989601"
 ---
-# <a name="legacy-language-service-overview"></a>レガシ言語サービスの概要
-言語サービスが特定の実装できるエディターのサポートを提供[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]機能します。 Managed Package Framework (MPF) 言語のサービス クラスは、頻繁に使用される機能とその他の機能の部分的なサポートを完全にサポートを提供します。  
+# <a name="legacy-language-service-overview"></a>従来の言語サービスの概要
+言語サービスは、特定の実装することができますエディターのサポートを提供します。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]機能します。 マネージ パッケージ フレームワーク (MPF) 言語のサービス クラスは、頻繁に使用される機能とその他の機能の部分的なサポートについての完全なサポートを提供します。  
   
 ## <a name="fully-supported-features-in-the-mpf"></a>MPF で完全にサポートされる機能  
- MPF 言語サービス クラスは、次の機能をサポートします。  
+ MPF 言語サービスのクラスは、次の機能をサポートします。  
   
 -   構文の強調表示  
   
 -   アウトライン  
   
--   コードのブロックのコメントを付ける  
+-   コードのコメント ブロック  
   
--   中かっこの一致  
+-   かっこの一致  
   
 -   コード スニペット  
   
@@ -42,27 +39,27 @@ ms.locfileid: "31131750"
   
 -   IntelliSense クイック ヒント  
   
--   IntelliSense のメンバーの完了  
+-   IntelliSense メンバー入力候補  
   
 -   IntelliSense の単語補完  
   
 ## <a name="partially-supported-features-in-the-mpf"></a>MPF で部分的にサポートされる機能  
- MPF は、次の機能のみ部分的なサポートを提供します。 つまり、MPF によって呼び出されるメソッドを実装する必要があります。  
+ MPF は、次の機能のみ部分的にサポートを提供します。 つまり、MPF によって呼び出されるメソッドを実装する必要があります。  
   
 -   コードの再フォーマットします。 再フォーマットを実装するコードを入力します。  
   
 -   範囲の有効なコードを識別することによってブレークポイントを検証しています。 コードの範囲を識別するコードを入力します。  
   
--   デバッガーをサポートする **[自動変数]** 変数を表示するためのウィンドウ。 ウィンドウに表示するものを決定するコードを入力します。  
+-   デバッガーをサポートしている **[自動変数]** 変数を表示するためのウィンドウ。 ウィンドウに表示するアクションを決定するコードを入力します。  
   
--   サポートする、**ナビゲーション バー**クイック型およびメンバーの間で移動できるようにします。 実装しに含まれる一覧を設定するヘルパー クラスを返す、**ナビゲーション バー**コンボ ボックス。  
+-   サポートしている、**ナビゲーション バー**型とメンバー間ですばやく移動します。 実装しに含まれる一覧を設定するヘルパー クラスを返す、**ナビゲーション バー**コンボ ボックス。  
   
 ## <a name="implementation"></a>実装  
- 言語サービス自体と、対象の言語をサポートする言語サービスの機能を実装するいくつかの手順を完了する必要があります。 次の手順は、次のトピックで説明します。  
+ 言語サービス自体と、言語をサポートする言語サービスの機能を実装するいくつかの手順を完了する必要があります。 次の手順は、次のトピックについて説明します。  
   
--   [レガシ言語サービスを実装します。](../../extensibility/internals/implementing-a-legacy-language-service2.md)  
+-   [従来の言語サービスの実装](../../extensibility/internals/implementing-a-legacy-language-service2.md)  
   
--   [レガシ言語サービスを登録します。](../../extensibility/internals/registering-a-legacy-language-service1.md)  
+-   [従来の言語サービスの登録](../../extensibility/internals/registering-a-legacy-language-service1.md)  
   
 -   [従来の言語サービスでの構文の配色変更](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)  
   
@@ -84,7 +81,7 @@ ms.locfileid: "31131750"
   
 -   [従来の言語サービスでのメンバー補完](../../extensibility/internals/member-completion-in-a-legacy-language-service.md)  
   
--   [従来の言語サービスでのパラメーター ヒント](../../extensibility/internals/parameter-info-in-a-legacy-language-service2.md)  
+-   [従来の言語サービスのパラメーター ヒント](../../extensibility/internals/parameter-info-in-a-legacy-language-service2.md)  
   
 -   [従来の言語サービスのクイック ヒント](../../extensibility/internals/quick-info-in-a-legacy-language-service.md)  
   
@@ -93,5 +90,5 @@ ms.locfileid: "31131750"
 -   [従来の言語サービスでのブレークポイントの検証](../../extensibility/internals/validating-breakpoints-in-a-legacy-language-service.md)  
   
 ## <a name="see-also"></a>関連項目  
- [レガシ言語サービスを実装します。](../../extensibility/internals/implementing-a-legacy-language-service1.md)   
+ [従来の言語サービスを実装します。](../../extensibility/internals/implementing-a-legacy-language-service1.md)   
  [従来の言語サービスの機能拡張](../../extensibility/internals/legacy-language-service-extensibility.md)

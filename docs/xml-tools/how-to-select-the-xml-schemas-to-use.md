@@ -2,7 +2,6 @@
 title: '方法: 使用する XML スキーマを選択する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: d6fda3ef-d465-4788-8514-2f2d528d658c
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a04075c0625eb7b4dc899a4e183588b96eb7eadd
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d49181e598c8ac6c268d1efcece43bd574003f39
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49872240"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53824393"
 ---
 # <a name="how-to-select-the-xml-schemas-to-use"></a>方法: 使用する XML スキーマを選択します。
 
@@ -40,7 +39,7 @@ XML エディターでスキーマ キャッシュを提供する、 *%InstallDi
 
    - 表示されているスキーマを選択、 **XML スキーマ**ダイアログ ボックスで、をクリックして、**使用**列、および選択し**このスキーマを使用して、** します。
 
-     - または -
+     または
 
    - 一覧表示される複数のスキーマを選択、 **XML スキーマ**ダイアログ、右クリックして選択**このスキーマを使用して、** します。
 
@@ -58,7 +57,7 @@ XML エディターでスキーマ キャッシュを提供する、 *%InstallDi
 
 3.  スキーマ キャッシュに追加するスキーマを参照し、選択します。
 
-4.  クリックして**オープン**します。
+4.  **[開く]** をクリックします。
 
      スキーマに追加するスキーマのキャッシュし、は、**使用**列の値に設定されて**このスキーマを使用して、** します。
 

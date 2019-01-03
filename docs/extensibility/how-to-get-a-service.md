@@ -1,9 +1,6 @@
 ---
 title: '方法: サービスを取得 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - services, consuming
@@ -13,14 +10,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7b28f018ba92ad2ab8a266311ac2e71fd910440
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 635a02daf6f6501679cc2a38cd252b1e1ebec7a1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49951380"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53990030"
 ---
-# <a name="how-to-get-a-service"></a>方法: サービスを取得
+# <a name="how-to-get-a-service"></a>方法: サービスを取得します。
 多くの場合、さまざまな機能にアクセスする Visual Studio サービスを取得する必要があります。 一般に、Visual Studio service は、使用できる 1 つまたは複数のインターフェイスを提供します。 ほとんどのサービスは、VSPackage から取得できます。  
   
  派生したすべての VSPackage<xref:Microsoft.VisualStudio.Shell.Package>を正しく配置されていますが、任意のグローバル サービスを要求できます。 `Package`クラスが実装する<xref:System.IServiceProvider>から派生したすべての VSPackage`Package`サービス プロバイダーになります。  
@@ -42,7 +39,7 @@ ms.locfileid: "49951380"
   
    ```  
   
-    このコードは、SVsActivityLog サービスを取得しにキャスト、<xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog>インターフェイスで、アクティビティ ログに書き込むことができます。 例については、次を参照してください。[方法: アクティビティ ログを使用して、](../extensibility/how-to-use-the-activity-log.md)します。  
+    このコードは、SVsActivityLog サービスを取得しにキャスト、<xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog>インターフェイスで、アクティビティ ログに書き込むことができます。 例については、次を参照してください。[方法。アクティビティ ログを使用して、](../extensibility/how-to-use-the-activity-log.md)します。  
   
 4. プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
   
@@ -53,7 +50,7 @@ ms.locfileid: "49951380"
   
  静的な<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>メソッドが初めてから派生したすべての VSPackage に初期化される、キャッシュされたサービス プロバイダーに依存<xref:Microsoft.VisualStudio.Shell.Package>が配置されています。  
   
- VSPackage コンス トラクターが呼び出されたは、VSPackage を配置する前に、グローバル サービスは、VSPackage のコンス トラクター内から、通常は利用されません。 参照してください[方法: サービスのトラブルシューティング](../extensibility/how-to-troubleshoot-services.md)問題を回避します。  
+ VSPackage コンス トラクターが呼び出されたは、VSPackage を配置する前に、グローバル サービスは、VSPackage のコンス トラクター内から、通常は利用されません。 「[方法:サービスのトラブルシューティング](../extensibility/how-to-troubleshoot-services.md)問題を回避します。  
   
  ツール ウィンドウまたはその他の VSPackage ではない要素で、サービスを取得する方法の例を次に示します。  
   
@@ -70,7 +67,7 @@ if (log == null) return;
  DTE オブジェクトからサービスを取得する方法を次に示します。  
   
 ```csharp  
-// Start with the DTE object, for example:   
+// Start with the DTE object, for example:   
 // using EnvDTE;  
 // DTE dte = (DTE)GetService(typeof(DTE));  
   
@@ -86,6 +83,6 @@ if (sp != null)
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [方法: サービスを提供](../extensibility/how-to-provide-a-service.md)   
+ [方法: サービスを提供します。](../extensibility/how-to-provide-a-service.md)   
  [使用し、サービスを提供](../extensibility/using-and-providing-services.md)   
  [サービスの基本情報](../extensibility/internals/service-essentials.md)

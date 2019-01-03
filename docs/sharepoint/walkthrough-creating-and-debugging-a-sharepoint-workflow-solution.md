@@ -1,16 +1,11 @@
 ---
-title: 'チュートリアル: を作成して、SharePoint ワークフロー ソリューションのデバッグ |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: 作成して、SharePoint ワークフロー ソリューションのデバッグ |Microsoft Docs'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.Workflow.WorkflowConditions
 - VS.SharePointTools.Workflow.WorkflowList
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -21,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c254f6f3e044f938ed2749567d66ee7a313081e7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bfd1d1e434826a652525fb7e7151ecf0e8e13b75
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42626489"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53912991"
 ---
 # <a name="walkthrough-create-and-debug-a-sharepoint-workflow-solution"></a>チュートリアル: 作成し、SharePoint ワークフロー ソリューションのデバッグ
   このチュートリアルでは、基本的なシーケンシャル ワークフロー テンプレートを作成する方法を示します。 ワークフローは、ドキュメントが確認されたかどうかを判断する共有ドキュメント ライブラリのプロパティを確認します。 ドキュメントをレビューすると、ワークフローが終了します。  
@@ -127,7 +122,7 @@ ms.locfileid: "42626489"
      このページでは、ワークフローの開始を指定することができます。 既定では、ユーザー手動での開始時に、SharePoint またはワークフローが関連付けられている項目が作成されたときにいずれかのワークフローを開始します。  
   
 ## <a name="create-workflow-activities"></a>ワークフロー アクティビティを作成します。
- 1 つ以上のワークフローが含まれて*アクティビティ*を実行するアクションを表します。 ワークフロー デザイナーを使用すると、ワークフローのアクティビティを調整します。 この手順では、ワークフローに 2 つのアクティビティをいく予定: HandleExternalEventActivity と OnWorkFlowItemChanged です。 これらのアクティビティ内のドキュメントのレビュー状況の監視、 **Shared Documents**一覧  
+ 1 つ以上のワークフローが含まれて*アクティビティ*を実行するアクションを表します。 ワークフロー デザイナーを使用すると、ワークフローのアクティビティを調整します。 この手順では、ワークフローに、2 つのアクティビティを追加します。HandleExternalEventActivity と OnWorkFlowItemChanged です。 これらのアクティビティ内のドキュメントのレビュー状況の監視、 **Shared Documents**一覧  
   
 #### <a name="to-create-workflow-activities"></a>ワークフロー アクティビティを作成するには  
   
@@ -296,4 +291,3 @@ ms.locfileid: "42626489"
  [SharePoint ワークフロー ソリューションを作成します。](../sharepoint/creating-sharepoint-workflow-solutions.md)   
  [SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)   
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
-  

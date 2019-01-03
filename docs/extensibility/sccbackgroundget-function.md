@@ -1,9 +1,6 @@
 ---
 title: SccBackgroundGet 関数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - SccBackgroundGet
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 39550665c804aa971ba88ee76707bdd150f74ab0
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ae32f7b0c9eea907c830a3cc62e0e53e87803177
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49811790"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53826878"
 ---
 # <a name="sccbackgroundget-function"></a>SccBackgroundGet 関数
 この関数は、ソース管理から各指定されたファイルのユーザーの操作なしで取得します。  

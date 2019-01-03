@@ -1,9 +1,6 @@
 ---
-title: IDebugNoSymbolsEvent2 |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugNoSymbolsEvent2 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - IDebugNoSymbolsEvent2 interface
@@ -13,15 +10,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb7719ff66ac284d07da2ddfca25fe6898c93220
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 179d8a95bc54db90a98311626b34c3e17b68f7f0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31112409"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53873120"
 ---
 # <a name="idebugnosymbolsevent2"></a>IDebugNoSymbolsEvent2
-信号、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]デバッガーの UI をシンボルことができない、起動した実行可能ファイルのあるユーザーに警告します。  
+信号、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]デバッガーの UI をユーザーに警告シンボルが起動した実行可能ファイルを見つけることできませんでした。  
   
 ## <a name="syntax"></a>構文  
   
@@ -30,11 +27,11 @@ IDebugNoSymbolsEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- デバッグ エンジンによって実装され、によって消費されている、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]デバッガーの UI。  
+ デバッグ エンジンによって実装されで使用される、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]デバッガーの UI。  
   
-## <a name="requirements"></a>要件  
- ヘッダー: Msdbg.h  
+## <a name="requirements"></a>必要条件  
+ ヘッダー:Msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll

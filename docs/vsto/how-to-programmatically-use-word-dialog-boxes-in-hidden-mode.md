@@ -1,9 +1,6 @@
 ---
 title: '方法: プログラムによって Word のダイアログ ボックスを非表示モードでを使用して、'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d5b123f1b58e61dffc64b5df912092edfd3fbf53
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 0594bea01d8b6fb5cef993a2704beb658b513c48
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672811"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53819628"
 ---
 # <a name="how-to-programmatically-use-word-dialog-boxes-in-hidden-mode"></a>方法: プログラムによって Word のダイアログ ボックスを非表示モードでを使用して、
   ユーザーに表示することがなく、Microsoft Office Word の組み込みダイアログ ボックスを呼び出すことによって、1 つのメソッドの呼び出しで複雑な操作を実行できます。 使用してこれを行う、<xref:Microsoft.Office.Interop.Word.Dialog.Execute%2A>のメソッド、<xref:Microsoft.Office.Interop.Word.Dialog>呼び出さずにオブジェクト、<xref:Microsoft.Office.Interop.Word.Dialog.Display%2A>メソッド。  
@@ -47,5 +44,3 @@ ms.locfileid: "35672811"
  [Office ソリューションの遅延バインディング](../vsto/late-binding-in-office-solutions.md)   
  [リフレクション (C#)](/dotnet/csharp/programming-guide/concepts/reflection)  
  [リフレクション (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)  
-  
-  

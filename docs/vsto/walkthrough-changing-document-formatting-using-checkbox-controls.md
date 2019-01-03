@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: CheckBox コントロールを使用してドキュメントの書式設定を変更します。'
-ms.custom: ''
+title: 'チュートリアル: CheckBox コントロールを使用したドキュメント書式を変更します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,14 +16,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 86cf89f7853308e93c55e30deae17786fdb3e413
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6e33d7b683e55f570961d9f9f8f77ea1491db3f5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49863933"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53913870"
 ---
-# <a name="walkthrough-change-document-formatting-using-checkbox-controls"></a>チュートリアル: CheckBox コントロールを使用してドキュメントの書式設定を変更します。
+# <a name="walkthrough-change-document-formatting-using-checkbox-controls"></a>チュートリアル: CheckBox コントロールを使用したドキュメント書式を変更します。
   このチュートリアルでは、Microsoft Office Word のドキュメント レベルのカスタマイズでの Windows フォーム コントロールを使用して、テキストの書式設定を変更する方法を示します。  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
@@ -55,7 +52,7 @@ ms.locfileid: "49863933"
   
 1.  名前の Word 文書プロジェクトを作成**My Word の書式設定**します。 ウィザードで、次のように選択します。**新しい文書を作成**です。  
   
-     詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
+     詳細については、「[方法 :Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
      デザイナーで新しい Word 文書を開き、 **My Word の書式設定**プロジェクトを**ソリューション エクスプ ローラー**します。  
   
@@ -137,7 +134,7 @@ ms.locfileid: "49863933"
      [!code-vb[Trin_VstcoreProgrammingControlsWord#5](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#5)]
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#5](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#5)]  
   
-6.  C# でにあるテキスト ボックスのイベント ハンドラーを追加する必要があります、<xref:Microsoft.Office.Tools.Word.Document.Startup>イベント。 イベント ハンドラーを作成する方法については、次を参照してください。[方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)します。  
+6.  C# でにあるテキスト ボックスのイベント ハンドラーを追加する必要があります、<xref:Microsoft.Office.Tools.Word.Document.Startup>イベント。 イベント ハンドラーを作成する方法については、次を参照してください。[方法。Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)します。  
   
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#6)]  
   
@@ -155,9 +152,9 @@ ms.locfileid: "49863933"
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルでは、チェック ボックスを使用して、プログラムによって Word 文書の書式設定テキストの変更の基礎を説明します。 ここでは、次のタスクを行います。  
   
--   ボタンを使用して、テキスト ボックスに入力します。 詳細については、次を参照してください。[チュートリアル: ボタンを使用して、ドキュメント内のテキスト ボックスにテキストを表示](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)します。  
+-   ボタンを使用して、テキスト ボックスに入力します。 詳細については、「[チュートリアル:ボタンを使用して、ドキュメント内のテキスト ボックスにテキストを表示](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)します。  
   
--   オプション ボタンを使用してグラフのスタイルを選択する。 詳細については、次を参照してください。[チュートリアル: オプション ボタンを使用してドキュメントのグラフを更新](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)します。  
+-   オプション ボタンを使用してグラフのスタイルを選択する。 詳細については、「[チュートリアル:ラジオ ボタンを使用してドキュメントのグラフを更新](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)します。  
   
 
 ## <a name="see-also"></a>関連項目  
@@ -165,5 +162,3 @@ ms.locfileid: "49863933"
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)   
  [Office ドキュメントに Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
-  
-  

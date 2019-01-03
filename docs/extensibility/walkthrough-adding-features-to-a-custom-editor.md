@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: カスタム エディターの機能の追加 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: カスタム エディター機能の追加 |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - add features
@@ -13,21 +10,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7062f44fe119858e579a53325deca0ea04b46475
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ad57ead773e2daa8cc17937156e199cd7dddbbde
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49873020"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53850402"
 ---
-# <a name="walkthrough-add-features-to-a-custom-editor"></a>チュートリアル: カスタム エディターへの機能を追加します。
+# <a name="walkthrough-add-features-to-a-custom-editor"></a>チュートリアル: カスタム エディターに機能を追加します。
 カスタム エディターを作成した後より多くの機能を追加できます。  
   
 ## <a name="to-create-an-editor-for-a-vspackage"></a>VSPackage のエディターを作成するには  
   
 1.  カスタム エディターを作成するには、Visual Studio パッケージ プロジェクト テンプレートを使用します。  
   
-     詳細については、次を参照してください。[チュートリアル: カスタム エディターを作成する](../extensibility/walkthrough-creating-a-custom-editor.md)します。  
+     詳細については、「[チュートリアル:カスタム エディターを作成する](../extensibility/walkthrough-creating-a-custom-editor.md)します。  
   
 2.  エディター ビューを 1 つまたは複数のビューをサポートするかどうかを決定します。  
   
@@ -118,7 +115,7 @@ ms.locfileid: "49873020"
   
 12. 状況依存のヘルプのサポートを実装します。  
   
-     F1 ヘルプおよびダイナミック ヘルプ ウィンドウは、エディター内の項目のサポートを提供することができます。 詳細については、次を参照してください。[方法: エディターのコンテキストを提供](../extensibility/how-to-provide-context-for-editors.md)します。  
+     F1 ヘルプおよびダイナミック ヘルプ ウィンドウは、エディター内の項目のサポートを提供することができます。 詳細については、「[方法 :エディターのコンテキストを提供](../extensibility/how-to-provide-context-for-editors.md)します。  
   
 13. 実装することで、エディターからのオートメーション オブジェクト モデルを公開、`IDispatch`インターフェイス。  
   
@@ -157,4 +154,4 @@ ms.locfileid: "49873020"
   
 ## <a name="see-also"></a>関連項目  
  [オートメーション モデルに貢献します。](../extensibility/internals/contributing-to-the-automation-model.md)   
- [方法: エディターのコンテキストを提供](../extensibility/how-to-provide-context-for-editors.md)
+ [方法: エディターのコンテキストを提供します。](../extensibility/how-to-provide-context-for-editors.md)

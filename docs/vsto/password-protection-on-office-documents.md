@@ -1,9 +1,6 @@
 ---
 title: Office ドキュメントのパスワード保護
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 02deaccdd615bae0c948d50abdd41758dc701704
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 4603a6f5722279ccdaf057d30d3bc6e911c4c47e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671832"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53857002"
 ---
 # <a name="password-protection-on-office-documents"></a>Office ドキュメントのパスワード保護
   パスワードを知らない人によって開けませんように、Microsoft Office Word 文書と Microsoft Office Excel ブックにパスワードを設定することになります。 このオプションの名前は **[パスワード]** します。  
@@ -43,7 +40,5 @@ ms.locfileid: "35671832"
 ## <a name="see-also"></a>関連項目  
  [ドキュメント レベルのソリューションでドキュメントの保護](../vsto/document-protection-in-document-level-solutions.md)   
  [Information rights management とマネージ コード拡張機能の概要](../vsto/information-rights-management-and-managed-code-extensions-overview.md)   
- [方法: コードの制限されたアクセス許可を持つドキュメントの背後で実行を許可](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)   
+ [方法: 制限されたアクセス許可を持つドキュメントの背後で実行するコードを許可します。](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)   
  [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)  
-  
-  

@@ -1,13 +1,8 @@
 ---
 title: Web パーツまたはアプリケーション ページの再利用可能なコントロールの作成 |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -18,18 +13,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a621bb8c0f14cfb2c1869b98bb8bdbdd9c2d30bb
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 7d042c42bae59c6dbf92f0e381444cc011b40db0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36327275"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53842824"
 ---
 # <a name="create-reusable-controls-for-web-parts-or-application-pages"></a>Web パーツまたはアプリケーション ページの再利用可能なコントロールを作成します。
   Visual Studio では、アプリケーション ページと SharePoint で実行される Web パーツで使用できる、再利用可能なカスタム コントロールを作成できます。 これらのコントロールは、ユーザー コントロールと呼ばれます。 ユーザー コントロールは、ある種の複合コントロールは ASP.NET Web ページのように動作する、ユーザー コントロールに既存の Web サーバー コントロールとマークアップを追加し、コントロールのプロパティとメソッドを定義できます。 単位として施すの ASP.NET Web ページで、埋め込むことができます。  
   
 ## <a name="create-a-user-control"></a>ユーザー コントロールを作成します。
- ユーザー コントロールを作成するには、追加、**ユーザー コントロール**を**空の SharePoint プロジェクト**します。 詳細については、次を参照してください。[方法: SharePoint アプリケーション ページまたは web パーツのユーザー コントロールを作成](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md)です。  
+ ユーザー コントロールを作成するには、追加、**ユーザー コントロール**を**空の SharePoint プロジェクト**します。 詳細については、「[方法 :SharePoint アプリケーション ページまたは web パーツのユーザー コントロールを作成](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md)です。  
   
  追加すると、**ユーザー コントロール**項目、Visual Studio は、プロジェクトのフォルダーが作成され、フォルダーに複数のファイルを追加します。 各ファイルの説明を次の表に示します。  
   
@@ -65,5 +60,4 @@ ms.locfileid: "36327275"
   
 |タイトル|説明|  
 |-----------|-----------------|  
-|[方法: SharePoint アプリケーション ページまたは web パーツのユーザー コントロールの作成](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md)|アプリケーション ページと SharePoint で実行される Web パーツで使用できる、再利用可能なカスタム コントロールを作成する方法を示します。|  
-  
+|[方法: SharePoint アプリケーション ページまたは web パーツのユーザー コントロールを作成します。](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md)|アプリケーション ページと SharePoint で実行される Web パーツで使用できる、再利用可能なカスタム コントロールを作成する方法を示します。|  

@@ -8,13 +8,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 01b2b906d514d8fd9042c1046ea2481faee39499
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 75c50780a8ad48fdd4766576e3d6fe94a580b777
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49926684"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53869928"
 ---
 # <a name="creating-a-windows-forms-based-domain-specific-language"></a>Windows フォームに基づくドメイン固有言語の作成
 DSL 図を使用する代わりに、ドメイン固有言語 (DSL) モデルの状態を表示するのに Windows フォームを使用することができます。 ここでは、Visual Studio Visualization and Modeling SDK を使用して、DSL への Windows フォームのバインドを示します。
@@ -118,7 +117,7 @@ DSL 図を使用する代わりに、ドメイン固有言語 (DSL) モデルの
 
 1.  **データ** メニューの 選択**データ ソースの**します。
 
-     **データソース**ウィンドウが開きます。
+     **[データ ソース]** ウィンドウが開きます。
 
      選択**新しいデータ ソースの追加**します。 **データ ソース構成ウィザード**が開きます。
 

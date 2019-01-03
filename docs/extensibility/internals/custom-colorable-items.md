@@ -1,9 +1,6 @@
 ---
 title: カスタムの配色可能な項目 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - colorable items
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 037cd62bea7051e8341101a888bd428b7f78e828
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 5777c5bf6340ac25888bf4a8446c61a68757c6fb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49878805"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989753"
 ---
 # <a name="custom-colorable-items"></a>カスタムの配色可能な項目
 言語サービスの一部としてカスタムの配色可能な項目を実装することでの色分け、キーワードやコメントなどの種類の一覧をオーバーライドできます。  
@@ -72,4 +69,4 @@ ms.locfileid: "49878805"
  [構文のカスタム エディターで色分け表示](../../extensibility/syntax-coloring-in-custom-editors.md)   
  [構文の色分け、従来の言語サービス](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)   
  [実装の構文の色分け表示](../../extensibility/internals/implementing-syntax-coloring.md)   
- [方法: ビルトインの配色可能な項目を使用して、](../../extensibility/internals/how-to-use-built-in-colorable-items.md)
+ [方法: 組み込みの配色可能な項目を使用して、](../../extensibility/internals/how-to-use-built-in-colorable-items.md)

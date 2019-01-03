@@ -10,13 +10,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: ff9a548a675451b28d9b08db280dd3b35cf0a53c
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 3ea0446d53ad3cc74bd8af96e95fabada1098da5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39511106"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53929281"
 ---
 # <a name="override-and-extend-the-generated-classes"></a>オーバーライドし、生成されたクラスを拡張
 
@@ -92,6 +91,6 @@ Library.dsl、サンプルなどで、`CirculationBook`ドメイン クラスに
 
 図形の一部のイベントをサブスクライブすることができます。 たとえば、図形のマウス クリックのリッスンできます。 各オブジェクトのイベントをサブスクライブするコードを記述する必要があります。 InitializeInstanceResources() のオーバーライドでは、このコードを記述することができます。
 
-ShapeFields、デコレーターを図形の描画に使用するには、一部のイベントが生成されます。 例については、次を参照してください。[方法: シェイプまたはデコレーターに対するクリック](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)します。
+ShapeFields、デコレーターを図形の描画に使用するには、一部のイベントが生成されます。 例については、次を参照してください。[方法。シェイプまたはデコレーターに対するクリック](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)します。
 
 これらのイベントは、通常、トランザクション内では発生しません。 ストアに変更する場合は、トランザクションを作成する必要があります。

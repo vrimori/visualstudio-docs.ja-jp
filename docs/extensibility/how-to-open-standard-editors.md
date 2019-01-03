@@ -1,9 +1,6 @@
 ---
 title: '方法: 標準のエディターを開く |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], opening
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e740cdbb04a9b20ddb5a9d0465434333dd29264
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: fbc4c694dcaa39e61eef484f018204474e67dd7a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39639384"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53820346"
 ---
 # <a name="how-to-open-standard-editors"></a>方法: 標準のエディターを開く
 標準のエディターを開くと、ファイルのプロジェクトに固有のエディターを指定する代わりに、指定されたファイルの種類の標準エディターの特定の IDE を使用できます。  
@@ -55,6 +52,6 @@ ms.locfileid: "39639384"
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>   
  [開き、プロジェクト項目の保存](../extensibility/internals/opening-and-saving-project-items.md)   
- [方法: プロジェクトに固有のエディターを開く](../extensibility/how-to-open-project-specific-editors.md)   
+ [方法: 開いているプロジェクト固有のエディター](../extensibility/how-to-open-project-specific-editors.md)   
  [方法: 開いているドキュメントのエディターを開く](../extensibility/how-to-open-editors-for-open-documents.md)   
  [ファイルを開くコマンドを使用してファイルを表示します。](../extensibility/internals/displaying-files-by-using-the-open-file-command.md)

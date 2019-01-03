@@ -1,9 +1,6 @@
 ---
 title: '方法: プログラムによって Word の組み込みダイアログ ボックスを使用して、'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f5ee28b0296037b9b5490ca691a27d613c793228
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 38e9fd10171bcc5be20f061217ff85b85ae3b52d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672431"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53829064"
 ---
 # <a name="how-to-programmatically-use-built-in-dialog-boxes-in-word"></a>方法: プログラムによって Word の組み込みダイアログ ボックスを使用して、
   Microsoft Office Word を使用する場合は、ユーザーの入力 ダイアログ ボックスを表示する必要がある生じるです。 公開されている Word では、組み込みダイアログ ボックスを使用する方法をする可能性がありますも作成できますが、独自、<xref:Microsoft.Office.Interop.Word.Dialogs>のコレクション、<xref:Microsoft.Office.Interop.Word.Application>オブジェクト。 これにより、200 以上の列挙体で表される組み込みダイアログ ボックスにアクセスすることができます。  
@@ -55,5 +52,3 @@ ms.locfileid: "35672431"
  [Option strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)   
  [リフレクション (C#)](/dotnet/csharp/programming-guide/concepts/reflection)  
  [リフレクション (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)  
-  
-  

@@ -1,9 +1,6 @@
 ---
 title: コア エディター内で |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - core editor
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 37c62ebad5b5f119c9acf5b62b14db6743949c19
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 01756778c7937654339fe0fc41b752ed02659d3c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39500450"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53828525"
 ---
 # <a name="inside-the-core-editor"></a>コア エディター
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]のコア エディターは変更し、テキスト情報のクエリを実行できるいくつかのコンポーネントのセットです。 従来の API を使用して、コア エディターをカスタマイズしている場合は、エディター アダプター経由でルーティングされますが、これらのカスタマイズを使用する続行することがあります。 お勧め、ただし、API の新しいエディターに、カスタマイズを調整することです。  
@@ -47,7 +44,7 @@ ms.locfileid: "39500450"
  [従来の API でのテキスト バッファー イベント](../extensibility/text-buffer-events-in-the-legacy-api.md)  
  テキスト バッファー イベントの通知に使用されるインターフェイスの一覧を示します。  
   
- [方法: テキスト バッファー イベント、レガシ API の登録](../extensibility/how-to-register-for-text-buffer-events-with-the-legacy-api.md)  
+ [方法: 従来の API を使用したイベントのテキスト バッファーの登録します。](../extensibility/how-to-register-for-text-buffer-events-with-the-legacy-api.md)  
  テキスト バッファー イベントのことをお勧めする方法について説明します。  
   
  [テキスト マネージャーを使用して、グローバル設定を監視するには](../extensibility/using-the-text-manager-to-monitor-global-settings.md)  
@@ -75,8 +72,8 @@ ms.locfileid: "39500450"
  [テキスト マーカーを使用して、従来の API を使用しました。](../extensibility/using-text-markers-with-the-legacy-api.md)  
  テキスト マーカーとそのコア エディターでの使用方法の概念について説明し、アクセスし、テキスト マーカーの管理に使用されるインターフェイスを一覧表示します。  
   
- [方法: 標準のテキスト マーカーの追加](../extensibility/how-to-add-standard-text-markers.md)  
+ [方法: 標準のテキスト マーカーを追加します。](../extensibility/how-to-add-standard-text-markers.md)  
  テキスト マーカーを作成する方法と、ショートカット メニューにカスタム コマンドを追加する方法に関する手順について説明します。  
   
- [方法: カスタム テキスト マーカーの作成](../extensibility/how-to-create-custom-text-markers.md)  
+ [方法: カスタム テキスト マーカーを作成します。](../extensibility/how-to-create-custom-text-markers.md)  
  サービスとしてのマーカーの種類を指定する方法とカスタム テキスト マーカーを作成する方法の詳細手順について説明します。

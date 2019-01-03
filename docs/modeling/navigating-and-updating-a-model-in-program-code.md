@@ -10,13 +10,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 930d7ededf4a54aaf75516c59001eaccf38c210c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 436b327e090d11d6e0e54f1a908e3e871d2b846a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49896769"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53857122"
 ---
 # <a name="navigate-and-update-a-model-in-program-code"></a>プログラム コードのモデル内を移動し、モデルを更新する
 
@@ -86,7 +85,7 @@ ms.locfileid: "49896769"
 
  `foreach (ParentsHaveChildren link in ParentsHaveChildren.GetLinks(henry, edward)) { ... }`
 
- リンクにアクセスするためには、その他の方法もあります。 例えば:
+ リンクにアクセスするためには、その他の方法もあります。 例:
 
  `foreach (ParentsHaveChildren link in     ParentsHaveChildren.GetLinksToChildren(henry)) { ... }`
 
@@ -110,7 +109,7 @@ ms.locfileid: "49896769"
  `store.ElementDirectory.GetElement(elementId);`
 
 ##  <a name="metadata"></a> クラス情報にアクセスします。
- クラス、リレーションシップ、および DSL 定義の他の側面についての情報を取得することができます。 例えば:
+ クラス、リレーションシップ、および DSL 定義の他の側面についての情報を取得することができます。 例:
 
  `DomainClassInfo personClass = henry.GetDomainClass();`
 
@@ -192,7 +191,7 @@ using (Transaction t =
 
 - 対象のプロパティでは特に、新しい要素のプロパティを設定`IsName`DslDefinition に当てはまります。 このフラグは、その所有者内で一意に要素を識別するプロパティをマークします。 この場合、名前プロパティには、そのフラグがあります。
 
-- この DSL の DSL 定義は、ストアに読み込まれている必要があります。 メニュー コマンドなどの拡張機能を記述する場合は、通常これは既に true です。 その他の場合は、明示的に、ストアに、モデルを読み込むまたはを使用することができます<xref:Microsoft.VisualStudio.Modeling.Integration.ModelBus>を読み込みます。 詳細については、次を参照してください。[方法: プログラム コード内のファイルからモデルを開く](../modeling/how-to-open-a-model-from-file-in-program-code.md)します。
+- この DSL の DSL 定義は、ストアに読み込まれている必要があります。 メニュー コマンドなどの拡張機能を記述する場合は、通常これは既に true です。 その他の場合は、明示的に、ストアに、モデルを読み込むまたはを使用することができます<xref:Microsoft.VisualStudio.Modeling.Integration.ModelBus>を読み込みます。 詳細については、「[方法 :プログラム コード内のファイルからモデルを開く](../modeling/how-to-open-a-model-from-file-in-program-code.md)します。
 
   この方法で要素を作成するときに (DSL に図がある場合)、図形が自動的に作成します。 既定の図形、色、およびその他の機能と、自動的に割り当てられている場所に表示されます。 参照してください、関連付けられた図形が表示される場所と方法を制御する場合[要素とその図形を作成する](#merge)します。
 
@@ -201,13 +200,13 @@ using (Transaction t =
 
  リレーションシップのインスタンスを作成できる 3 つの方法はあります。 これら 3 つのメソッドのそれぞれは、同じ効果があります。
 
-- ソース ロール プレーヤーのプロパティを設定します。 例えば:
+- ソース ロール プレーヤーのプロパティを設定します。 例:
 
   -   `familyTree.People.Add(edward);`
 
   -   `edward.Parents.Add(henry);`
 
-- ターゲット ロール プレーヤーのプロパティを設定します。 例えば:
+- ターゲット ロール プレーヤーのプロパティを設定します。 例:
 
   -   `edward.familyTreeModel = familyTree;`
 
@@ -217,7 +216,7 @@ using (Transaction t =
 
        このロールの多重度が`0..*`ので、コレクションに追加します。
 
-- リレーションシップのインスタンスを明示的に作成します。 例えば:
+- リレーションシップのインスタンスを明示的に作成します。 例:
 
   -   `FamilyTreeHasPeople edwardLink = new FamilyTreeHasPeople(familyTreeModel, edward);`
 
@@ -475,7 +474,7 @@ partial class MyDiagram
  色と、このメソッドを使用したコネクタの公開されている他のプロパティを設定することもできます。
 
 ### <a name="use-transactions"></a>トランザクションを使用します。
- 図形、コネクタと図のサブタイプは<xref:Microsoft.VisualStudio.Modeling.ModelElement>とストアでライブします。 トランザクション内でのみに変更を行う必要がありますので。 詳細については、次を参照してください。[方法: モデルを更新するトランザクションを使用して](../modeling/how-to-use-transactions-to-update-the-model.md)します。
+ 図形、コネクタと図のサブタイプは<xref:Microsoft.VisualStudio.Modeling.ModelElement>とストアでライブします。 トランザクション内でのみに変更を行う必要がありますので。 詳細については、「[方法 :モデルを更新するトランザクションを使用して](../modeling/how-to-use-transactions-to-update-the-model.md)します。
 
 ##  <a name="docdata"></a> ドキュメント ビューとドキュメント データ
  ![標準タイプのクラス図](../modeling/media/dsldiagramsanddocs.png)
@@ -488,6 +487,6 @@ partial class MyDiagram
 - <xref:Microsoft.VisualStudio.Modeling.ModelElement>
 - [ドメイン固有言語における検証](../modeling/validation-in-a-domain-specific-language.md)
 - [ドメイン固有言語からのコード生成](../modeling/generating-code-from-a-domain-specific-language.md)
-- [方法: トランザクションを使用してモデルを更新する](../modeling/how-to-use-transactions-to-update-the-model.md)
+- [方法: トランザクションを使用してモデルを更新します。](../modeling/how-to-use-transactions-to-update-the-model.md)
 - [Visual Studio Modelbus によるモデルの統合](../modeling/integrating-models-by-using-visual-studio-modelbus.md)
 - [変更内容への対応および変更内容の反映](../modeling/responding-to-and-propagating-changes.md)

@@ -8,26 +8,25 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: bfe0cbdda1b3eaa7d1afc936c7dbba75df6da07b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a741a506338066dddbee2cdbfd701ad3bfb4c922
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31947168"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53929699"
 ---
 # <a name="controlling-color-line-style-and-other-shape-properties"></a>色、線のスタイル、およびその他のシェイプのプロパティの管理
-一部の図形のプロパティ色 '公開できる' - などは、リンクされている図形のドメイン プロパティにします。 他のユーザーは、直接制御する必要があります。
+いくつかのシェイプのプロパティとなど、色 '公開できる' - は、図形のドメイン プロパティ リンク。 他のユーザーは、直接制御する必要があります。
 
 ## <a name="exposing-a-property"></a>プロパティを公開します。
- いくつかの色などの図形のプロパティは、ドメイン プロパティの値にリンクすることができます。
+ いくつかの色などのシェイプのプロパティは、ドメイン プロパティの値にリンクできます。
 
- DSL 定義では、図形、コネクタまたはダイアグラムのクラスを選択します。 そのコンテキスト メニューで、次のように選択します。**公開追加**、塗りつぶしの色など、目的のプロパティを選択します。
+ DSL 定義では、図形、コネクタ、または図クラスを選択します。 そのコンテキスト メニューで、次のように選択します。**公開されている追加**、塗りつぶしの色など、目的のプロパティをクリックしてします。
 
- 図形には、今すぐプログラム コードやユーザーとして設定できるドメイン プロパティがあります。
+ 図形は、ドメイン プロパティまたはユーザーとしてプログラム コードで設定できるようになりました。
 
 ## <a name="dynamically-updating-an-exposed-property"></a>公開されたプロパティを動的に更新
- 通常、公開されているプロパティを別のプロパティに依存するようにします。 たとえば、ことができますが赤色に特定のドメインのプロパティは使用されるたびにするための図形が 0 未満です。 この依存関係を作成、[ルール](../modeling/rules-propagate-changes-within-the-model.md)です。 例えば:
+ 一般公開されているプロパティを別のプロパティに依存しないようにします。 たとえば、特定のドメイン プロパティが赤色にするための図形が 0 未満たい場合があります。 この依存関係を作成、[ルール](../modeling/rules-propagate-changes-within-the-model.md)します。 例:
 
 ```csharp
 using System;

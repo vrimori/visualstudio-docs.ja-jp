@@ -1,6 +1,5 @@
 ---
 title: Hello World の拡張機能のチュートリアル |Microsoft Docs
-ms.custom: ''
 ms.date: 07/10/2017
 ms.topic: conceptual
 ms.assetid: f74e1ad1-1ee5-4360-9bd5-d82467b884ca
@@ -9,14 +8,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e2122a98778372690990a75269be2f3087653678
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
-ms.translationtype: HT
+ms.openlocfilehash: 1e7d221526a0fc0214b57eff0c122e526fc09029
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51349466"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53827086"
 ---
-# <a name="create-your-first-extension-hello-world"></a>初めての拡張機能の作成: Hello World
+# <a name="create-your-first-extension-hello-world"></a>初めての拡張機能を作成します。Hello World
 
 この Hello World の例では、Visual Studio の初めての拡張機能の作成手順について説明します。 このチュートリアルでは、Visual Studio に新しいコマンドを追加する方法を示します。
 
@@ -126,7 +125,7 @@ Visual Studioのタイトル バーには**実験的なインスタンス**と�
 
 ![実験的なインスタンスのタイトル バー](media/hello-world-exp-instance.png)
 
-手順 2. **実験的なインスタンス**の**ツール**メニューにある **Say Hello World!** をクリックします。
+手順 2. **ツール**のメニュー、**実験用インスタンス**、 をクリックして**Say Hello World!** します。
 
 ![最終的な結果](media/hello-world-final-result.png)
 

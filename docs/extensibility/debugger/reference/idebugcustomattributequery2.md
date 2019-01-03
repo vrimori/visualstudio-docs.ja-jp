@@ -1,9 +1,6 @@
 ---
-title: IDebugCustomAttributeQuery2 |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugCustomAttributeQuery2 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugCustomAttributeQuery2
@@ -16,30 +13,30 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7efc14b3d2bad9111e12328c29960ef991e8a4f9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b5c71c8a8820a76eb0f3784aaf899f05f48a76e4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31107622"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53836375"
 ---
 # <a name="idebugcustomattributequery2"></a>IDebugCustomAttributeQuery2
-このフィールドのカスタム属性の存在を定義し、存在する場合は、属性情報を返します。  
+このフィールドのカスタム属性の存在を定義し、存在する場合は、属性の情報を返します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-IDebugCustomAttributeQuery2 : IDebugCustomAttributeQuery  
+IDebugCustomAttributeQuery2 : IDebugCustomAttributeQuery  
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
  シンボル プロバイダーを実装する同一のオブジェクトにこのインターフェイスを実装する[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)カスタム属性をサポートするためにします。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- 使用して[QueryInterface](/cpp/atl/queryinterface)からこのインターフェイスを取得、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイスです。  
+ 使用[QueryInterface](/cpp/atl/queryinterface)からこのインターフェイスを取得する、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイス。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
- 次の表のメソッドを示しています、 **IDebugCustomAttributeQuery**インターフェイスです。  
+ 次の表は、メソッドの**IDebugCustomAttributeQuery**インターフェイス。  
   
 |メソッド|説明|  
 |------------|-----------------|  
@@ -50,19 +47,19 @@ IDebugCustomAttributeQuery2 : IDebugCustomAttributeQuery
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[EnumCustomAttributes](../../../extensibility/debugger/reference/idebugcustomattributequery2-enumcustomattributes.md)|このフィールドに接続されているすべてのカスタム属性の列挙子を取得します。|  
+|[EnumCustomAttributes](../../../extensibility/debugger/reference/idebugcustomattributequery2-enumcustomattributes.md)|このフィールドにアタッチされているすべてのカスタム属性の列挙子を取得します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)メソッドは、このフィールドに対して定義されているすべてのカスタム属性の列挙子を返すことができます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
- [シンボル プロバイダー インターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
+ [シンボルプロバイダーのインターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

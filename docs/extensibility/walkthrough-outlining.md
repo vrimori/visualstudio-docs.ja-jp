@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: アウトライン |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: アウトライン | Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - outlining
@@ -13,24 +10,24 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 740ed444770a440b54fe61b0c8ec8189691fe9a1
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 7de78a60dd7de129eb2626e414ce6ec44bb20ce3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566931"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53827524"
 ---
 # <a name="walkthrough-outlining"></a>チュートリアル: アウトライン
 アウトラインの展開または折りたたみをするテキスト領域の種類を定義することでなどの言語ベースの機能を設定します。 言語サービスのコンテキストで領域を定義して独自ファイル名拡張子とコンテンツ タイプを定義し、または領域の定義をその型だけに適用するか、または領域の定義を ("text") などの既存のコンテンツ タイプに適用できます。 このチュートリアルでは、定義のアウトライン領域を表示する方法を示します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールしないでください。 Visual Studio のセットアップのオプション機能として含まれています。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
+ Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールしないでください。 Visual Studio のセットアップのオプション機能として含まれています。 また、後から VS SDK をインストールすることもできます。 詳細については、"[Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)"を参照してください。  
   
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) プロジェクトを作成します。  
   
 ### <a name="to-create-a-mef-project"></a>MEF プロジェクトを作成するには  
   
-1.  VSIX プロジェクトを作成する。 ソリューションの名前を`OutlineRegionTest`します。  
+1.  VSIX プロジェクトを作成する。 ソリューション `OutlineRegionTest`の名前を指定します。  
   
 2.  エディター分類子の項目テンプレートをプロジェクトに追加します。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能を作成する](../extensibility/creating-an-extension-with-an-editor-item-template.md)します。  
   
@@ -43,7 +40,7 @@ ms.locfileid: "39566931"
   
 ### <a name="to-implement-an-outlining-tagger"></a>アウトラインのタガーを実装するには  
   
-1.  クラス ファイルを追加し、名前`OutliningTagger`します。  
+1.  クラス ファイルを追加し、その名前を `OutliningTagger`にします。  
   
 2.  次の名前空間をインポートします。  
   
@@ -135,4 +132,4 @@ ms.locfileid: "39566931"
 4.  両方の角かっこを含むアウトライン領域が必要です。 始めかっこの左側にアウトライン領域を折りたたむにマイナス記号をクリックする必要があります。 ときに領域が折りたたまれている、省略記号 (*.*) 折りたたまれた領域とテキストを含むポップアップの左に表示する**ホバー テキスト**省略記号上にポインターを移動するときに表示する必要があります。  
   
 ## <a name="see-also"></a>関連項目  
- [チュートリアル: コンテンツの種類をファイル名拡張子にリンクします。](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+ [チュートリアル: コンテンツの種類をファイル名拡張子にリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

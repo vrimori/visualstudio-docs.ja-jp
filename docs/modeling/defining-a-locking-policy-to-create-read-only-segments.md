@@ -8,13 +8,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7f2a22a39b30d6a1910a95d5c30992bbd14dbc9a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: eb39e9d510d2da8a7e8b7ae9ac08ff655f334f2e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49828678"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53866492"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>ロック ポリシーの定義と読み取り専用セグメントの作成
 Visual Studio Visualization and Modeling SDK の不変性 API は、読み取りが変更されていないことができるように、ドメイン固有言語 (DSL) モデルの一部またはすべてをロックするプログラムを使用できます。 この読み取り専用オプションされる可能性があります、たとえば、ユーザーが仕事仲間の注釈を付け、DSL モデルを確認するように依頼できますが、元の変更を禁止することができますようにします。
@@ -115,7 +114,7 @@ public interface ILockingPolicy
 
  呼び出しが行われたときに、これらのメソッドが呼び出されますが`SetLocks()`ストア、パーティション、またはモデル要素にします。 各メソッドでロックの提案セットが提供されます。 提案のセットを返すことができます、または追加し、ロックを減算できます。
 
- 例えば:
+ 例:
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;

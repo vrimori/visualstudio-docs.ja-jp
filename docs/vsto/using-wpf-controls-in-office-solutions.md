@@ -1,9 +1,6 @@
 ---
 title: Office ソリューションで WPF コントロールを使用します。
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5419a715cbe255b5cfc31a113a00e3525d63d827
-ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
+ms.openlocfilehash: 49b4d2fd4a32b6d73e5fcdfc65850abcb2835856
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008204"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53822276"
 ---
 # <a name="use-wpf-controls-in-office-solutions"></a>Office ソリューションで WPF コントロールを使用します。
 
@@ -56,11 +53,11 @@ Office ソリューションの UI 要素に WPF コントロールを直接追�
 
 5.  操作ウィンドウ、フォーム領域、またはカスタム作業ウィンドウをプロジェクトに追加します。
 
-    -   フォーム領域を追加、 **Outlook フォーム領域**プロジェクト項目。 詳細については、次を参照してください。[方法: フォーム領域を Outlook アドイン プロジェクトに追加](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)します。
+    -   フォーム領域を追加、 **Outlook フォーム領域**プロジェクト項目。 詳細については、「[方法 :フォーム領域を Outlook アドイン プロジェクトに追加](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)します。
 
-    -   操作ウィンドウ、追加、**操作ウィンドウ コントロール**または**ユーザー コントロール**プロジェクト項目。 詳細については、次を参照してください。[方法: Word 文書に操作ウィンドウを追加したり、Excel ブック](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)と[方法: Word 文書に操作ウィンドウを追加したり、Excel ブック](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)します。
+    -   操作ウィンドウ、追加、**操作ウィンドウ コントロール**または**ユーザー コントロール**プロジェクト項目。 詳細については、「[方法 :Word 文書に操作ウィンドウを追加したり、Excel ブック](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)と[方法。Word 文書に操作ウィンドウを追加したり、Excel ブック](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)します。
 
-    -   カスタム作業ウィンドウは、追加、**ユーザー コントロール**プロジェクト項目。 詳細については、次を参照してください。[方法: カスタム作業ウィンドウをアプリケーションに追加](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)します。
+    -   カスタム作業ウィンドウは、追加、**ユーザー コントロール**プロジェクト項目。 詳細については、「[方法 :カスタム作業ウィンドウをアプリケーションに追加](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)します。
 
 6.  *ProjectName* **WPF ユーザー コントロール**のタブ、**ツールボックス**、操作ウィンドウ、フォーム領域、またはカスタム作業ウィンドウのデザイナーに WPF ユーザー コントロールをドラッグします。
 
@@ -113,7 +110,7 @@ Windows フォーム コントロールおよびフォーム上での WPF のホ
 
 Visual Studio でデザイン時に WPF コントロールを Windows フォーム コントロールおよびフォームに追加する方法の詳細については、以下のトピックを参照してください。
 
--   [チュートリアル: Windows フォームでデザイン時に新しい WPF コンテンツを作成します。](/dotnet/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time)
+-   [チュートリアル: デザイン時に Windows フォームで新しい WPF コンテンツを作成します。](/dotnet/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time)
 
 -   [チュートリアル: デザイン時に Windows フォームでの WPF コンテンツを配置します。](/dotnet/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time)
 
@@ -126,6 +123,6 @@ Visual Studio でデザイン時に WPF コントロールを Windows フォー�
 - [操作ウィンドウの概要](../vsto/actions-pane-overview.md)
 - [カスタム作業ウィンドウ](../vsto/custom-task-panes.md)
 - [Outlook フォーム領域を作成します。](../vsto/creating-outlook-form-regions.md)
-- [方法: Word 文書または Excel ブックに操作ウィンドウを追加する](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)
-- [方法: カスタム作業ウィンドウをアプリケーションに追加](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)
+- [方法: Word 文書または Excel ブックに操作ウィンドウを追加します。](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)
+- [方法: アプリケーションにカスタム作業ウィンドウを追加します。](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)
 - [方法: フォーム領域を Outlook アドイン プロジェクトに追加します。](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)

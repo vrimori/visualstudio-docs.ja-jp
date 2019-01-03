@@ -1,9 +1,6 @@
 ---
 title: Excel ソリューション
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -29,12 +26,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 64fac12a47a519496ecba3f31f3fd035ff2d9121
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: 38db6bf4c29694813b41a88b0d5d62a1672cd6b4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53647946"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53856855"
 ---
 # <a name="excel-solutions"></a>Excel ソリューション
   Visual Studio には、Microsoft Office Excel のドキュメント レベルのカスタマイズおよび VSTO アドインの作成に使用できるプロジェクト テンプレートが用意されています。 これらのソリューションを使用して、Excel の自動化、Excel の機能拡張、Excel のユーザー インターフェイス (UI) のカスタマイズを行うことができます。 ドキュメント レベルのカスタマイズと VSTO アドインの違いの詳細については、次の [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md) を参照してください。  
@@ -122,4 +119,3 @@ ms.locfileid: "53647946"
 | [チュートリアル: VSTO アドイン プロジェクトでの実行時にワークシートにコントロールを追加します。](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md) | VSTO アドインを使用して、 Windows フォームのボタン、 <xref:Microsoft.Office.Tools.Excel.NamedRange>、および<xref:Microsoft.Office.Tools.Excel.ListObject>を、実行時にワークシートへ追加する方法を示します。 |
 | [共同編集とアドインを理解します。](./understanding-coauthoring-and-addins.md) | 共同編集の対応するために、ソリューションを作成する必要がありますの調整について説明します。 |
 | [Office 開発における Excel 2010](http://go.microsoft.com/fwlink/?LinkId=199011) | Excel ソリューションの開発に関する記事およびリファレンス ドキュメントへのリンクを提供します。 Visual Studio を使用した Office 開発だけの情報ではありません。 |
-

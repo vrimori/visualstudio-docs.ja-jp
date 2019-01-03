@@ -2,19 +2,18 @@
 title: 'チュートリアル: XSLT 階層の使用'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-xml-tools
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 20223a18fa422facc7d7a0a74336402d6d391b0a
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 65af5f973f9440ac781a8af1042700cf89acee1c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34693446"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53834725"
 ---
-# <a name="walkthrough-use-xslt-hierarchy"></a>チュートリアル: を使用して XSLT 階層
+# <a name="walkthrough-use-xslt-hierarchy"></a>チュートリアル: XSLT 階層を使用します。
 
 XSLT 階層ツールは、多くの XML 開発タスクを簡素化します。 XSLT スタイル シートには、多くの場合 `includes` 命令および `imports` 命令が使用されています。 コンパイルはプリンシパル スタイル シートから開始されますが、XSLT スタイル シートのコンパイル結果としてエラーが表示された場合、プリンシパル スタイル シート以外のものがエラーの原因である可能性があります。 エラーを修正するか、スタイル シートを編集するには、インクルードまたはインポートされたスタイル シートへのアクセスが必要になる場合があります。 デバッガーでスタイル シートをステップ実行すると、インクルードまたはインポートされたスタイル シートが開かれる場合があり、1 つまたは複数のインクルードされたスタイル シートにブレークポイントを追加することができます。
 
@@ -105,11 +104,11 @@ XSLT 階層ツールが役立つ別のシナリオとして、ビルトイン �
     </xsl:stylesheet>
     ```
 
-4.  命令にブレークポイントを追加`<xsl:include href="xslincludefile.xsl" />`です。
+4.  命令にブレークポイントを追加`<xsl:include href="xslincludefile.xsl" />`します。
 
 5.  デバッグを開始します。
 
-6.  命令でデバッガーを停止するときに`<xsl:include href="xslincludefile.xsl" />`、キーを押して、**ステップ イン**ボタンをクリックします。 参照されるスタイル シートのデバッグを続行できます。 階層が表示され、デザイナーに正しいパスが示されます。
+6.  命令で、デバッガーを停止するときに`<xsl:include href="xslincludefile.xsl" />`、キーを押して、**ステップ イン**ボタンをクリックします。 参照されるスタイル シートのデバッグを続行できます。 階層が表示され、デザイナーに正しいパスが示されます。
 
 ## <a name="see-also"></a>関連項目
 

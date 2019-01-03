@@ -1,9 +1,6 @@
 ---
 title: 'チュートリアル: 項目テンプレートを使用したカスタム動作プロジェクト項目の作成、パート 2 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 helpviewer_keywords:
 - project items [SharePoint development in Visual Studio], creating template wizards
@@ -14,17 +11,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2c37ab6f42be8e363dcba8a3e2aa6ef78816bff0
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 4305fd980252515f126df2c1b3848c0676cd2079
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51296243"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53913937"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-2"></a>チュートリアル: 項目テンプレート、第 2 部でのカスタム動作プロジェクト項目を作成します。
   カスタム SharePoint プロジェクト項目の種類を定義し、Visual Studio で項目テンプレートに関連付ける、テンプレートのウィザードを提供する可能性がありますもします。 ウィザードを使用すると、プロジェクトにプロジェクト項目の新しいインスタンスを追加するのにテンプレートを使用するときに、ユーザーから情報を収集します。 収集した情報を使用して、プロジェクト項目を初期化できます。  
   
- このチュートリアルでは、」に示したカスタム動作プロジェクト項目に、ウィザードを追加[チュートリアル: 項目テンプレート、第 1 部でのカスタム動作プロジェクト項目の作成](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)です。 ウィザードが (その場所や、エンドユーザーが選択するときの移動先 URL) などのカスタム アクションに関する情報を収集するときに、ユーザーがカスタム動作プロジェクト項目を SharePoint プロジェクトに追加すると、この情報を追加します、 *Elements.xml*で新しいプロジェクト項目ファイル。  
+ このチュートリアルでは、」に示したカスタム動作プロジェクト項目に、ウィザードを追加[チュートリアル。カスタム動作プロジェクト項目を作成、項目テンプレート、第 1 部に](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)します。 ウィザードが (その場所や、エンドユーザーが選択するときの移動先 URL) などのカスタム アクションに関する情報を収集するときに、ユーザーがカスタム動作プロジェクト項目を SharePoint プロジェクトに追加すると、この情報を追加します、 *Elements.xml*で新しいプロジェクト項目ファイル。  
   
  このチュートリアルでは、次のタスクについて説明します。  
   
@@ -40,7 +37,7 @@ ms.locfileid: "51296243"
 >  サンプルをダウンロードする[Github](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.Activities)ワークフローのカスタム アクティビティを作成する方法を示すです。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルを実行する必要があります最初、CustomActionProjectItem ソリューション実行して作成した[チュートリアル: 項目テンプレート、第 1 部でのカスタム動作プロジェクト項目の作成](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)です。  
+ このチュートリアルを実行する必要があります最初、CustomActionProjectItem ソリューション実行して作成した[チュートリアル。カスタム動作プロジェクト項目を作成、項目テンプレート、第 1 部に](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)します。  
   
  また、このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
   
@@ -50,12 +47,12 @@ ms.locfileid: "51296243"
   
   次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
   
-- Visual Studio のプロジェクトおよび項目テンプレート用のウィザード。 詳細については、次を参照してください。[方法: プロジェクト テンプレートにウィザードの使用](../extensibility/how-to-use-wizards-with-project-templates.md)と<xref:Microsoft.VisualStudio.TemplateWizard.IWizard>インターフェイス。  
+- Visual Studio のプロジェクトおよび項目テンプレート用のウィザード。 詳細については、「[方法 :プロジェクト テンプレートにウィザードを使用して](../extensibility/how-to-use-wizards-with-project-templates.md)と<xref:Microsoft.VisualStudio.TemplateWizard.IWizard>インターフェイス。  
   
 - SharePoint のカスタム動作。 詳細については、次を参照してください。[カスタム アクション](http://go.microsoft.com/fwlink/?LinkId=177800)します。  
   
 ## <a name="create-the-wizard-project"></a>ウィザード プロジェクトを作成します。
- このチュートリアルを完了する、CustomActionProjectItem ソリューションで作成したプロジェクトを追加する必要があります[チュートリアル: 項目テンプレート、第 1 部でのカスタム動作プロジェクト項目の作成](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)です。 このプロジェクトで、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを実装し、ウィザードの UI を定義します。  
+ このチュートリアルを完了する、CustomActionProjectItem ソリューションで作成したプロジェクトを追加する必要があります[チュートリアル。カスタム動作プロジェクト項目を作成、項目テンプレート、第 1 部に](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)します。 このプロジェクトで、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを実装し、ウィザードの UI を定義します。  
   
 #### <a name="to-create-the-wizard-project"></a>ウィザード プロジェクトを作成するには  
   
@@ -82,7 +79,7 @@ ms.locfileid: "51296243"
   
 2.  **プロジェクト デザイナー**、ターゲット フレームワークが .NET Framework 4.5 に設定されていることを確認します。  
   
-     Visual c# プロジェクトの場合にこの値を設定することができます、**アプリケーション**タブ。Visual Basic のプロジェクトでこの値を設定することができます、**コンパイル**タブ。詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。  
+     Visual c# プロジェクトの場合にこの値を設定することができます、**アプリケーション**タブ。Visual Basic のプロジェクトでこの値を設定することができます、**コンパイル**タブ。詳細については、「[方法 :.NET Framework のターゲット バージョンを指定する](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。  
   
 3.  **ItemTemplateWizard**プロジェクトに、追加、**ウィンドウ (WPF)** 項目をプロジェクトにし、その項目を名前**WizardWindow**します。  
   
@@ -349,6 +346,5 @@ ms.locfileid: "51296243"
  [カスタム SharePoint プロジェクト項目の種類を定義します。](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [項目テンプレートとの SharePoint プロジェクト アイテムのプロジェクト テンプレートを作成します。](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   
  [Visual Studio テンプレート スキーマ参照](/visualstudio/extensibility/visual-studio-template-schema-reference)   
- [方法: プロジェクト テンプレートでウィザードを使用](../extensibility/how-to-use-wizards-with-project-templates.md)   
+ [方法: プロジェクト テンプレートにウィザードの使用](../extensibility/how-to-use-wizards-with-project-templates.md)   
  [カスタム アクションの既定の場所と Id](http://go.microsoft.com/fwlink/?LinkId=181964)  
-  

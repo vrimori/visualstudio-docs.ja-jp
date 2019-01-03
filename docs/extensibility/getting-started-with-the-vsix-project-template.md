@@ -1,9 +1,6 @@
 ---
 title: VSIX プロジェクト テンプレートの概要 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio SDK, VSIX project template
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 829ee38e5d22fbc38e47bdf9a2b9e7e9342957cd
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 374b9f447c27dea99d1897bde8ed218a7ffcc394
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49817055"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53841967"
 ---
 # <a name="get-started-with-the-vsix-project-template"></a>VSIX プロジェクト テンプレートを概要します。
 拡張機能を作成するか、パッケージの展開の既存の拡張機能は、VSIX プロジェクト テンプレートを使用できます。 VSIX プロジェクト テンプレートは、Visual Basic と Visual c# の両方のバージョンを備え、Visual Studio SDK の一部としてインストールされます。  
@@ -36,7 +33,7 @@ ms.locfileid: "49817055"
 
     2.  **[プロジェクト]** メニューの **[テンプレートのエクスポート]** をクリックします。 ウィザードの手順を実行します。  
 
-         A *.zip*でファイルが作成された *%USERPROFILE%\My Documents\Visual Studio\<バージョン > \My エクスポート テンプレート\\*。  
+         A *.zip*にファイルが作成 *%USERPROFILE%\My documents \visual Studio\<バージョン > \My Exported Templates\\*します。  
 
 2.  空の VSIX プロジェクトを作成します。  
 

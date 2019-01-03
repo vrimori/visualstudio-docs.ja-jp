@@ -1,9 +1,6 @@
 ---
 title: Visual Studio SDK の内部 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - roadmap, Visual Studio integration SDK
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e72c5033554310555005de17872ee83110768687
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: f356fe21f512ae1fabb51df3ab562b067a692665
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757043"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53821146"
 ---
 # <a name="inside-the-visual-studio-sdk"></a>Visual Studio SDK の内部
 ここでは、Visual Studio のアーキテクチャ、コンポーネント、サービス、スキーマ、ユーティリティ、およびなどを含む、Visual Studio 拡張機能に関する詳細な情報を示します。
@@ -31,13 +28,13 @@ ms.locfileid: "36757043"
  ![環境アーキテクチャ グラフィック](../../extensibility/internals/media/environment.gif "環境")Visual Studio のアーキテクチャのビューを汎用化
 
 ## <a name="vspackages"></a>VSPackages
- VSPackage は、UI 要素、サービス、プロジェクト、エディター、およびデザイナーで Visual Studio を構成および拡張するソフトウェア モジュールです。 Vspackage は、Visual Studio のサーバーの全体アーキテクチャ単位です。 詳細については、次を参照してください。 [Vspackage](../../extensibility/internals/vspackages.md)します。
+ VSPackage は、UI 要素、サービス、プロジェクト、エディター、およびデザイナーで Visual Studio を構成および拡張するソフトウェア モジュールです。 Vspackage は、Visual Studio のサーバーの全体アーキテクチャ単位です。 詳細については、「 [VSPackages](../../extensibility/internals/vspackages.md)」を参照してください。
 
 ## <a name="visual-studio-shell"></a>Visual Studio Shell
  Visual Studio shell は、基本的な機能を提供し、そのコンポーネント Vspackage および MEF 拡張機能間の相互通信をサポートします。 詳細については、次を参照してください。 [Visual Studio Shell](../../extensibility/internals/visual-studio-shell.md)します。
 
 ## <a name="user-experience-guidelines"></a>ユーザー エクスペリエンス ガイドライン
- Visual Studio の新機能の設計を計画している場合は、デザインと使いやすさのヒントについては、次のガイドラインを参照してくださいを行う必要があります: [Visual Studio ユーザー エクスペリエンス ガイドライン](../../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)します。
+ Visual Studio の新機能の設計を計画している場合は、デザインと使いやすさのヒントについては、次のガイドラインを参照してくださいを行う必要があります。[Visual Studio ユーザー エクスペリエンス ガイドライン](../../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)します。
 
 ## <a name="commands"></a>コマンド
  コマンドは、ドキュメントの印刷、ビューの更新、ファイルの新規作成などのタスクを実行する関数です。
@@ -103,7 +100,7 @@ ms.locfileid: "36757043"
  詳細については、次を参照してください。[プロジェクトに追加するとプロジェクト項目テンプレート](../../extensibility/internals/adding-project-and-project-item-templates.md)します。
 
 ## <a name="properties-and-options"></a>プロパティとオプション
- **プロパティ**ウィンドウには、1 つまたは複数選択した項目のプロパティが表示されます:[拡張プロパティ](../../extensibility/internals/extending-properties.md)オプション ページなど、特定のコンポーネントに関連するオプションのセットを含めることが、プログラミング言語または VSPackage:[オプションとオプション ページ](../../extensibility/internals/options-and-options-pages.md)します。 設定は、通常、UI 関連機能をインポートおよびエクスポートすることができます:[ユーザー設定のサポート](../../extensibility/internals/support-for-user-settings.md)します。
+ **プロパティ**ウィンドウが 1 つまたは複数選択した項目のプロパティを表示します。[プロパティの拡張](../../extensibility/internals/extending-properties.md)オプション ページには、プログラミング言語や VSPackage など、特定のコンポーネントに関連するオプションのセットが含まれています。[オプションとオプション ページ](../../extensibility/internals/options-and-options-pages.md)します。 設定は、通常、UI 関連機能をインポートおよびエクスポートすることができます。[ユーザー設定のサポート](../../extensibility/internals/support-for-user-settings.md)します。
 
 ## <a name="visual-studio-services"></a>Visual Studio サービス
  サービスは、特定のコンポーネントを使用するインターフェイスのセットを提供します。 Visual Studio では、一連の拡張機能を含め、すべてのコンポーネントで使用できるサービスを提供します。 たとえば、Visual Studio services には、ツール ウィンドウを表示または非表示に動的に、ヘルプ、ステータス バー、または UI イベントへのアクセスを有効にするが有効にします。 Visual Studio エディターには、エディターの拡張機能によってインポートできるサービスも提供します。 詳細については、次を参照してください。[を使用すると、サービスを提供する](../../extensibility/using-and-providing-services.md)します。

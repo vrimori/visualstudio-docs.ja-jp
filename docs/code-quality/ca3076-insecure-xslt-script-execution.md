@@ -1,22 +1,21 @@
 ---
-title: 'CA3076: 安全ではない XSLT スクリプトの実行'
+title: CA3076:安全ではない XSLT スクリプトの実行
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 74fe556d775e60dec5dde4528a1924e55ab4c2ed
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: d711aad69dbdf3295ca7b2962a2e2022bd259059
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45546393"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53891048"
 ---
-# <a name="ca3076-insecure-xslt-script-execution"></a>CA3076: 安全ではない XSLT スクリプトの実行
+# <a name="ca3076-insecure-xslt-script-execution"></a>CA3076:安全ではない XSLT スクリプトの実行
 
 |||
 |-|-|
@@ -31,7 +30,7 @@ ms.locfileid: "45546393"
 
 ## <a name="rule-description"></a>規則の説明
 
-**XSLT**は World Wide Web Consortium (W3C) 標準の XML データを変換するためです。 XSLT は通常、XML データを HTML、固定長のテキスト、コンマ区切りのテキスト、または別の XML 形式などの他の形式に変換するスタイル シートの書き込みに使用します。 既定では禁止になっていますが、プロジェクトに応じて有効にもできます。
+**XSLT** は、XML データを変換するための W3C (World Wide Web Consortium) 規格です。 XSLT は通常、XML データを HTML、固定長のテキスト、コンマ区切りのテキスト、または別の XML 形式などの他の形式に変換するスタイル シートの書き込みに使用します。 既定では禁止になっていますが、プロジェクトに応じて有効にもできます。
 
 攻撃にさらされないように、このルールはたびにトリガー、XslCompiledTransform します。<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> インスタンスを安全でない組み合わせを受け取る<xref:System.Xml.Xsl.XsltSettings>と<xref:System.Xml.XmlResolver>、悪意のあるスクリプトの処理をことができます。
 

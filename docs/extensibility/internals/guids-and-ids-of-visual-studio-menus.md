@@ -1,9 +1,6 @@
 ---
 title: Visual Studio のメニューの Guid および Id |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - visual studio menus
@@ -18,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b7c8af93604a7e8e33d7d21d26b85c59985b878
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 3c2990e7002a75dfb5868a4079d889c08e49c3c3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499940"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53906944"
 ---
 # <a name="guids-and-ids-of-visual-studio-menus"></a>メニューの Guid と Visual Studio の Id
 この記事では、メニューおよび Visual Studio のメニュー バーでのグループの GUID と ID の値を列挙します。 これらの値が定義されている *.vsct* Visual Studio SDK の一部としてインストールされているファイル。 詳細については、次を参照してください。 [IDE 定義コマンド、メニュー、およびグループ](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)します。  
@@ -59,7 +56,7 @@ ms.locfileid: "39499940"
 |ビルド|IDM_VS_MENU_BUILD|  
 |形式|IDM_VS_MENU_FORMAT|  
 |ツール|IDM_VS_MENU_TOOLS|  
-|ウィンドウ|IDM_VS_MENU_WINDOW|  
+|[Window]|IDM_VS_MENU_WINDOW|  
 |Addins|IDM_VS_MENU_ADDINS|  
 |コミュニティ|IDM_VS_MENU_COMMUNITY|  
 |ヘルプ|IDM_VS_MENU_HELP|  
@@ -181,7 +178,7 @@ ms.locfileid: "39499940"
  次の階層には、Visual Studio のメニュー バーのメニューに関連付けられているサブメニューが表示されます。 グループのみがその親としてのメニューを持てないためすべてサブメニューで開く必要があります降下グループから、メニューの代わりに、メニューから直接。 メニューのグループ、およびサブメニューの間のリレーションシップの詳細については、次を参照してください。[メニューにサブメニューを追加する](../../extensibility/adding-a-submenu-to-a-menu.md)します。  
   
 > [!NOTE]
->  Visual Studio のメニュー バーのメニューの名前は個別に表示されませんこの階層では次のように IDE では、グループの名前付け規則から推論できるため、: *IDG_VS_\<メニュー名\>_\<グループ名\>* します。  
+>  次のように IDE では、グループの名前付け規則から推論できるため、Visual Studio のメニュー バーのメニューの名前が個別にこの階層では表示されません。*IDG_VS_\<メニュー名\>_\<グループ名\>* します。  
   
 |[親グループ]|サブメニューで開く|子グループ|  
 |------------------|-------------|------------------|  

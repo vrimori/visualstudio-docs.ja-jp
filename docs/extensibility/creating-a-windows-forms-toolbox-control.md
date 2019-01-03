@@ -1,9 +1,6 @@
 ---
 title: ツールボックス コントロールをフォーム、Windows の作成 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - winforms
@@ -15,18 +12,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a44dfd224324ba641e70e0cfe6ded87f88fe6765
-ms.sourcegitcommit: 8cdc6e2ad2341f34bd6b02859a7c975daa0c9320
+ms.openlocfilehash: b84c554427d443d54d117b72cec5a423e10e7887
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53307708"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53872922"
 ---
 # <a name="create-a-windows-forms-toolbox-control"></a>Windows フォーム ツールボックス コントロールを作成します。
 Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フォーム ツールボックス コントロールの項目テンプレートが自動的に追加するコントロールを作成できます。、**ツールボックス**、拡張機能がインストールされている場合。 このトピックでは、他のユーザーに配布できる単純なカウンター コントロールを作成するテンプレートを使用する方法を示します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、"[Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)"を参照してください。  
   
 ## <a name="create-a-windows-forms-toolbox-control"></a>Windows フォーム ツールボックス コントロールを作成します。  
  Windows フォーム ツールボックス コントロール テンプレートは、未定義のユーザー コントロールを作成し、すべてのコントロールを追加するために必要な機能を提供、**ツールボックス**します。  
@@ -212,7 +209,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
  作成する場合、**ツールボックス**コントロール、Visual Studio がという名前のファイルを作成する*ProjectName.vsix*プロジェクトの \bin\debug\ フォルダーにします。 アップロードすることで、制御を展開することができます、 *.vsix*ファイルは、ネットワークまたは Web サイトにします。 ユーザーが開いたとき、 *.vsix*ファイル、コントロールがインストールされ、Visual Studio に追加**ツールボックス**ユーザーのコンピューターにします。 または、アップロード、 *.vsix*ファイルを[Visual Studio Marketplace](http://go.microsoft.com/fwlink/?LinkID=123847)ユーザーがで参照して検索できるように、**ツール** >  **拡張機能と更新**ダイアログ。  
   
 ## <a name="see-also"></a>関連項目  
- [Visual Studio の他の部分を拡張します。](../extensibility/extending-other-parts-of-visual-studio.md)   
+ [Visual Studio の他の部分の拡張](../extensibility/extending-other-parts-of-visual-studio.md)   
  [WPF ツールボックス コントロールを作成します。](../extensibility/creating-a-wpf-toolbox-control.md)   
- [Visual Studio の他の部分を拡張します。](../extensibility/extending-other-parts-of-visual-studio.md)   
+ [Visual Studio の他の部分の拡張](../extensibility/extending-other-parts-of-visual-studio.md)   
  [Windows フォーム コントロール開発の基礎](/dotnet/framework/winforms/controls/windows-forms-control-development-basics)

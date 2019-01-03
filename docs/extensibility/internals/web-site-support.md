@@ -1,9 +1,6 @@
 ---
-title: Web サイト サポート |Microsoft ドキュメント
-ms.custom: ''
+title: Web サイトのサポート |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - web site projects
@@ -13,31 +10,31 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d3da310c6695598eef36998cc562f6d477eff29
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 83e7cb983ec850c0efc9d22f1dd6458c71bcdcb2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31139852"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53824770"
 ---
-# <a name="web-site-support"></a>Web サイトのサポート
-Web サイト プロジェクト システムは、Web プロジェクトを作成するプロジェクト システムです。 Web プロジェクトは、Web アプリケーションを作成します。 Web サイト プロジェクトでは、コードが関連付けられている Web ページごとに 1 つの実行可能ファイルを生成します。 場合は/App_Code フォルダー内のソース コード ファイルから追加の実行可能ファイルが生成されます。  
+# <a name="web-site-support"></a>Web サイト サポート
+Web サイトのプロジェクト システムでは、Web プロジェクトを作成するプロジェクト システムです。 Web プロジェクトは、Web アプリケーションを作成します。 Web サイト プロジェクトでは、コードに関連付けられている各 Web ページの 1 つの実行可能ファイルを生成します。 場合は/App_Code フォルダー内のソース コード ファイルから追加の実行可能ファイルが生成されます。  
   
- Web サイト プロジェクト システムは、既存のプロジェクト システムにテンプレートおよび登録属性を追加することによって作成されます。 これらの属性のいずれかには、言語の IntelliSense プロバイダーが選択されます。 IntelliSense のプロバイダーの実装では、参照を処理し、スマート Web ページがキャッシュされていないことを要求するときに、言語コンパイラを呼び出します。  
+ Web サイト プロジェクト システムを作成するには、既存のプロジェクト システムへのテンプレートと登録属性を追加します。 これらの属性のいずれかの言語の IntelliSense のプロバイダーを選択します。 IntelliSense のプロバイダーの実装では、参照を処理し、キャッシュされていないスマート Web ページが要求されたときに、言語コンパイラを呼び出しています。  
   
- Web ページをコンパイルするために使用する言語コンパイラに登録する必要があります[!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)]です。 使用することができます、 [\<コンパイラ > 要素](/dotnet/framework/configure-apps/file-schema/compiler/compiler-element)次の例のように、コンパイラを登録する Web.config ファイルで。  
+ Web ページをコンパイルするために使用する言語コンパイラを登録する必要があります[!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)]します。 使用することができます、 [\<コンパイラ > 要素](/dotnet/framework/configure-apps/file-schema/compiler/compiler-element)次の例のように、コンパイラを登録する Web.config ファイルで。  
   
 ```  
-<system.codedom>  <compilers>    <compiler language="py;IronPython" extension=".py"       type="IronPython.CodeDom.PythonProvider, IronPython,       Version=1.0.2391.18146, Culture=neutral,       PublicKeyToken=b03f5f7f11d50a3a" />  </compilers></system.codedom>  
+<system.codedom>  <compilers>    <compiler language="py;IronPython" extension=".py"       type="IronPython.CodeDom.PythonProvider, IronPython,       Version=1.0.2391.18146, Culture=neutral,       PublicKeyToken=b03f5f7f11d50a3a" />  </compilers></system.codedom>  
 ```  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Web サイト サポートのテンプレート](../../extensibility/internals/web-site-support-templates.md)  
- 新しい Web サイト プロジェクトと関連付けられた項目の作成に使用できるテンプレートの一覧を表示します。  
+ 新しい Web サイト プロジェクトと関連付けられている項目の作成に使用できるテンプレートの一覧を表示します。  
   
  [Web サイト サポートの属性](../../extensibility/internals/web-site-support-attributes.md)  
- 表示する Web サイト プロジェクトを接続している登録属性[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]と[!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)]です。  
+ Web サイト プロジェクトを接続する登録属性を表示します。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]と[!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)]します。  
   
 ## <a name="related-sections"></a>関連項目  
  [Web プロジェクト](../../extensibility/internals/web-projects.md)  
- Web プロジェクト、Web サイト プロジェクトおよび Web アプリケーション プロジェクトの 2 種類の概要を示します。
+ Web プロジェクト、Web サイト プロジェクトと Web application projects の 2 種類の概要を示します。
