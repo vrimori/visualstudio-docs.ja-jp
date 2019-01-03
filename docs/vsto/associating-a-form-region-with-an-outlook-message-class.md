@@ -1,8 +1,6 @@
 ---
 title: フォーム領域を Outlook メッセージ クラスに関連付ける
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology: office-development
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +16,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b9614a0feab70dd97cfd64861737c8b42dd146b7
-ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
+ms.openlocfilehash: 5795931b5d964b6eb7a104338756066068f38510
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248034"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53923349"
 ---
 # <a name="associate-a-form-region-with-an-outlook-message-class"></a>フォーム領域を Outlook メッセージ クラスに関連付ける
   Microsoft Office Outlook アイテム フォーム領域を各項目のメッセージ クラスに関連付けることによって、フォーム領域を表示するを指定することができます。 たとえば、メール アイテムの下部にフォーム領域を追加する場合は、フォーム領域を関連付けることができます、 `IPM.Note` message クラス。  
@@ -113,5 +111,3 @@ ms.locfileid: "53248034"
  [Outlook フォーム領域を作成するためのガイドライン](../vsto/guidelines-for-creating-outlook-form-regions.md)   
  [フォームの名前とメッセージ クラスの概要](/office/vba/outlook/Concepts/Forms/form-name-and-message-class-overview)   
  [フォームとアイテムを連携させる方法](/office/vba/outlook/Concepts/Forms/how-outlook-forms-and-items-work-together)  
-  
-  

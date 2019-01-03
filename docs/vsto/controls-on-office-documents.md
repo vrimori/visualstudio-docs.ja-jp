@@ -1,9 +1,6 @@
 ---
 title: Office ドキュメントのコントロール
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,12 +16,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0c166ef848f3c9de321bf3451cccdf9c16cfb472
-ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
+ms.openlocfilehash: 0645c7cd3d030b553457abace8d7cdee07984011
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53441471"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53930597"
 ---
 # <a name="controls-on-office-documents"></a>Office ドキュメントのコントロール
   Visual Studio の Office 開発ツールを使用し、Windows フォーム コントロールと *ホスト コントロール* を Word 文書と Excel ワークシートに追加できます。 ホスト コントロールは Word オブジェクト モデルと Excel オブジェクト モデルのさまざまなユーザー インターフェイス (UI) オブジェクトを拡張するオブジェクトです。  
@@ -54,5 +51,3 @@ ms.locfileid: "53441471"
   
  [Office ソリューションでのコントロールにデータをバインドします。](../vsto/binding-data-to-controls-in-office-solutions.md)  
  データを Word と Excel の文書にバインディングすることで文書にデータを表示する方法について説明します。  
-  
-  

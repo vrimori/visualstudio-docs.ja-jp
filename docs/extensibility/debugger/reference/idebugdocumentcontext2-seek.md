@@ -1,9 +1,6 @@
 ---
 title: IDebugDocumentContext2::Seek |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugDocumentContext2::Seek
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 41db3997ef078976a9e419e014ae9717d2d3d019
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: db5c44d79882d887e8a852f3add491317dbf96fa
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49873540"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53895526"
 ---
 # <a name="idebugdocumentcontext2seek"></a>IDebugDocumentContext2::Seek
 ステートメントまたは行の番号を指定して、ドキュメントのコンテキストに移動します。  
@@ -28,14 +25,14 @@ ms.locfileid: "49873540"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT Seek(   
+HRESULT Seek(   
    int                      nCount,  
    IDebugDocumentContext2** ppDocContext  
 );  
 ```  
   
 ```cpp  
-int Seek(   
+int Seek(   
    int                        nCount,  
    out IDebugDocumentContext2 ppDocContext  
 );  

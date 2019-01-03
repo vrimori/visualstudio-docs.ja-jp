@@ -1,9 +1,6 @@
 ---
 title: SetWefProcessId メソッド
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -13,15 +10,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b426237816bfee53e7c3e50c19e29168b27e16e1
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 3ccce49992073f11245929bf7af0b966537bd079
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34693433"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53886151"
 ---
 # <a name="setwefprocessid-method"></a>SetWefProcessId メソッド
-  Web 拡張機能フレームワーク (WEF) のコンテンツを実行しているプロセス id を提供します。  
+  Web 拡張機能フレームワーク (WEF) コンテンツを実行しているプロセス id を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,9 +37,7 @@ HRESULT SetWefProcessId(
 ## <a name="return-value"></a>戻り値  
  メソッドが正常に完了したかどうかを示す HRESULT 値。  
   
-## <a name="remarks"></a>コメント  
- WEF コンテンツのプロセスの作成後は WEF コンテンツをすべて実行する前に、このメソッドを呼び出す必要があります。  
+## <a name="remarks"></a>Remarks  
+ WEF content のプロセスの作成後が WEF コンテンツを実行する前に、このメソッドを呼び出す必要があります。  
   
- WEF コンテンツ プロセスにデバッガーをアタッチする開発環境を設定する場合、環境は、このメソッドの実装でこの操作を実行する必要があります。  
-  
-  
+ 開発環境を WEF content のプロセスにデバッガーをアタッチする場合は、環境は、このメソッドの実装でこの操作を実行する必要があります。  

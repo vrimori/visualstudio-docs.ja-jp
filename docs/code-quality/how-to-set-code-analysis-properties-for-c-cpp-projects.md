@@ -1,8 +1,7 @@
 ---
-title: '方法: C と C++ プロジェクトのコード分析プロパティを設定します。'
+title: '方法: C/C++ プロジェクトのコード分析プロパティを設定する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.propertypages.native
@@ -20,14 +19,14 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9de737604da898c42243895ed84e8962a8c656f
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.openlocfilehash: 000b731bffe6b2fe02e34e98ebfd3ce8a21f5bd8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53803153"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53915631"
 ---
-# <a name="how-to-set-code-analysis-properties-for-cc-projects"></a>方法: C と C++ プロジェクトのコード分析プロパティを設定します。
+# <a name="how-to-set-code-analysis-properties-for-cc-projects"></a>方法: C/C++ プロジェクトのコード分析プロパティを設定する
 コード分析ツールは、プロジェクトの各構成でコード分析を使用してルールを構成できます。 さらに、生成され、サード パーティ製ツールを使用して、プロジェクトに追加されたコードからの警告を抑制するコード分析を指示することができます。
 
 ## <a name="code-analysis-property-page"></a>コード分析 プロパティ ページ

@@ -1,9 +1,6 @@
 ---
-title: '方法: ライブラリでシンボルの識別 |Microsoft Docs'
-ms.custom: ''
+title: '方法: ライブラリ内のシンボルの識別 |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - Call Browser tool, identifying symbols in the library
@@ -14,14 +11,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ff3f9ad93ddfb3b463d059fb2aba654ce48a501
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 3b62a9207a7a676d10152f8b66dccdcbd7060e8e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39510530"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53918993"
 ---
-# <a name="how-to-identify-symbols-in-a-library"></a>方法: ライブラリでシンボルの識別
+# <a name="how-to-identify-symbols-in-a-library"></a>方法: ライブラリ内のシンボルを識別します。
 シンボル参照ツールでは、シンボルの階層ビューを表示します。 シンボルは、名前空間、オブジェクト、クラス、クラスのメンバー、およびその他の言語要素を表します。  
   
  階層内の各シンボルをシンボル ライブラリによって渡されたナビゲーション情報で識別できます、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]次のインターフェイスを介してオブジェクト マネージャー。  
@@ -32,7 +29,7 @@ ms.locfileid: "39510530"
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumNavInfoNodes>。  
   
- 階層内の記号の場所は、シンボルを区別します。 これにより、特定のシンボルに移動する、シンボル参照ツールができます。 シンボルに一意な完全修飾パスは、場所を決定します。 パス内の各要素は、ノードです。 パスは、最上位のノードから始まり、特定のシンボルで終わります。 たとえば、M1 メソッドは、C1 クラスのメンバー、C1 が N1 の名前空間にある場合は、M1 メソッドの完全なパスは N1 です。C1 します。M1 します。 このパスには、3 つのノードが含まれています: N1、C1、M1 します。  
+ 階層内の記号の場所は、シンボルを区別します。 これにより、特定のシンボルに移動する、シンボル参照ツールができます。 シンボルに一意な完全修飾パスは、場所を決定します。 パス内の各要素は、ノードです。 パスは、最上位のノードから始まり、特定のシンボルで終わります。 たとえば、M1 メソッドは、C1 クラスのメンバー、C1 が N1 の名前空間にある場合は、M1 メソッドの完全なパスは N1 です。C1 します。M1 します。 このパスには、3 つのノードが含まれています。N1、C1、および M1 します。  
   
  ナビゲーション情報により、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]検索を選択すると、選択したシンボルに注意してください、階層にオブジェクトのマネージャー。 別に 1 つの参照ツールから移動することができます。 使用中に**オブジェクト ブラウザー**でシンボルを参照する、[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]プロジェクト、メソッドを右クリックし、開始できる、**呼び出しブラウザー**呼び出し先のメソッドを表示するツール。  
   
@@ -49,7 +46,7 @@ N1
   
 ```  
   
- この例での C2 クラスの既定のパスには、N1 + C2 です。 C2 のプレゼンテーションのパスには、C1 と「ベースおよびインターフェイス」のノードが含まれています: N1 + C1 +「ベースおよびインターフェイス」+ C2 します。  
+ この例での C2 クラスの既定のパスには、N1 + C2 です。 C2 のプレゼンテーション パスには、C1 と「ベースおよびインターフェイス」のノードが含まれます。N1 + C1 +「ベースおよびインターフェイス」+ C2 します。  
   
  プレゼンテーションのフォームはをオブジェクトの manager 呼び出しを取得する<xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A>メソッド。  
   
@@ -86,4 +83,4 @@ N1
 ## <a name="see-also"></a>関連項目  
  [シンボル参照ツールをサポートします。](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
  [方法: オブジェクト マネージャーにライブラリを登録します。](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)   
- [方法: オブジェクト マネージャーにライブラリによって提供されるシンボルのリストを公開](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)
+ [方法: オブジェクト マネージャーにライブラリによって提供されるシンボルのリストを公開します。](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)
