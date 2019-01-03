@@ -1,9 +1,6 @@
 ---
 title: Visual Studio SDK の Guid と定数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - constants, Visual Studio SDK
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fb77d090430a69953eb2a7e713fd7de26a772260
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: e0be911b312f5c3a6e54b0391c9ffe049fcaecb7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39500463"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53896299"
 ---
 # <a name="guids-and-constants-in-the-visual-studio-sdk"></a>Visual Studio SDK の Guid と定数
 <xref:Microsoft.VisualStudio.VSConstants>クラスは、選択した環境の Guid や定数へのアクセスを提供します。  

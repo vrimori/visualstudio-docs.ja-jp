@@ -10,19 +10,18 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 0a8af35d9edbb28c6b357149586fe7015858f4f0
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d71cb172929fd9d213c0f09be21c1a844acf4462
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49876530"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53892745"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>方法: シェイプまたはデコレーターに対するクリック操作を受け取る
 次の手順では、図形または、アイコン デコレーターに対するクリックする方法を説明します。 数回のクリックをインターセプトできるをダブルクリックしたにドラッグ、およびその他のジェスチャをし応答要素。
 
 ## <a name="to-intercept-clicks-on-shapes"></a>図形のクリックをインターセプトするには
- 生成されたコード ファイルから別のコード ファイルで、Dsl プロジェクトでは、shape クラスの部分クラス定義を作成します。 オーバーライド`OnDoubleClick()`または名前の先頭にある他の方法の 1 つ`On...`します。 例えば:
+ 生成されたコード ファイルから別のコード ファイルで、Dsl プロジェクトでは、shape クラスの部分クラス定義を作成します。 オーバーライド`OnDoubleClick()`または名前の先頭にある他の方法の 1 つ`On...`します。 例:
 
 ```csharp
 public partial class MyShape // change

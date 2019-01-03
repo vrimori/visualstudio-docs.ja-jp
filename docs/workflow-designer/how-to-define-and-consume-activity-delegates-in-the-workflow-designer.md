@@ -1,29 +1,28 @@
 ---
-title: 'ワークフロー デザイナー - 方法: 定義およびアクティビティ デリゲートの使用'
+title: ワークフロー デザイナー - 方法。定義およびアクティビティ デリゲートの使用
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.prod: visual-studio-dev15
-ms.technology: vs-workflow-designer
 ms.assetid: c68e42ad-3ec0-4c2d-b104-fe36c6d83b5e
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 32546f551972cf97779e0828d8c47c9c892d39bf
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 95aede6217bca263be7edd7440cc5e9bb23e25ab
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49916362"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53908463"
 ---
-# <a name="how-to-define-and-consume-activity-delegates-in-the-workflow-designer"></a>ワークフロー デザイナーでアクティビティ デリゲートを定義および使用する方法
+# <a name="how-to-define-and-consume-activity-delegates-in-the-workflow-designer"></a>方法: ワークフロー デザイナーでアクティビティ デリゲートを定義および使用する
 
 .NET framework 4.5 には用の既製のデザイナーが含まれています、<xref:System.Activities.Statements.InvokeDelegate>アクティビティ。 このデザイナーを使用すると、<xref:System.Activities.ActivityDelegate> や <xref:System.Activities.ActivityAction> など、<xref:System.Activities.ActivityFunc%601> から派生するアクティビティにデリゲートを割り当てることができます。
 
 ## <a name="define-an-activity-delegate"></a>アクティビティ デリゲートの定義
 
-1. Visual Studio で、次のように選択します。**ファイル** > **新規** > **プロジェクト**します。
+1. Visual Studio で、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択します。
 
 2. **新しいプロジェクト**ダイアログ ボックスで、**ワークフロー** 、左側のカテゴリを選び、**ワークフロー コンソール アプリケーション**プロジェクト テンプレート。 (必要な) 場合、プロジェクトの名前を指定し、をクリックして**Ok**します。
 

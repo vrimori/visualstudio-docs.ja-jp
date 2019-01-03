@@ -1,8 +1,7 @@
 ---
-title: 作成または標準のコード分析チェックイン ポリシーの更新
+title: 標準のコード分析チェックイン ポリシーを作成または更新する
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.policyeditor
@@ -13,14 +12,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c4a7405dd94837d5e373470cd9181c18d913191
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: 22a74926f4fd9136e15757eb6967d5eb56a8ecbf
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53740076"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53890340"
 ---
-# <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>方法: 作成または標準のコード分析チェックイン ポリシーの更新
+# <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>方法: 標準のコード分析チェックイン ポリシーを作成または更新する
 
 コード分析チェックイン ポリシーを使用して、Azure DevOps プロジェクト内のすべてのコード プロジェクトでコード分析を実行することを要求することができます。 コード分析を必要とすると、コード ベースにチェックインされているコードの品質を向上させることができます。
 

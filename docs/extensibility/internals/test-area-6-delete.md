@@ -1,9 +1,6 @@
 ---
-title: 'テスト領域 6: 削除 |Microsoft Docs'
-ms.custom: ''
+title: テスト領域 6:削除 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], deleting items
@@ -14,14 +11,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0ce67ded280fd87fbcabd72d7ca45f1af8568336
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 3fff473dbd4e3bc70f1b6308ed0d6b1129c95e2c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49888218"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53930110"
 ---
-# <a name="test-area-6-delete"></a>テスト領域 6: 削除
+# <a name="test-area-6-delete"></a>テスト領域 6:削除
 このソース管理プラグインのテストの領域では、削除の各操作について説明します。  
   
  ソース コントロールの応答で操作を削除する**ソリューション エクスプ ローラー**します。  

@@ -1,9 +1,6 @@
 ---
 title: BP_ERROR_RESOLUTION_INFO |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - BP_ERROR_RESOLUTION_INFO
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: eb2388d93c05500dc3c12bb5d57cd17293f5e16c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c8b866681df793e54293268e42e6e172126102aa
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49816794"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53906697"
 ---
 # <a name="bperrorresolutioninfo"></a>BP_ERROR_RESOLUTION_INFO
 場所、プログラム、およびスレッドなど、エラー ブレークポイントの解決方法について説明します。  
@@ -28,7 +25,7 @@ ms.locfileid: "49816794"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-typedef struct _BP_ERROR_RESOLUTION_INFO {   
+typedef struct _BP_ERROR_RESOLUTION_INFO {   
    BPERESI_FIELDS         dwFields;  
    BP_RESOLUTION_LOCATION bpResLocation;  
    IDebugProgram2*        pProgram;  
@@ -39,7 +36,7 @@ typedef struct _BP_ERROR_RESOLUTION_INFO {
 ```  
   
 ```csharp  
-public struct BP_ERROR_RESOLUTION_INFO {   
+public struct BP_ERROR_RESOLUTION_INFO {   
    public uint                   dwFields;  
    public BP_RESOLUTION_LOCATION bpResLocation;  
    public IDebugProgram2         pProgram;  
@@ -74,9 +71,9 @@ public struct BP_ERROR_RESOLUTION_INFO {
 ## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   

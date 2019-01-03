@@ -1,9 +1,6 @@
 ---
 title: 64 ビット デバッガー COM クラスの登録の移行 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/10/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: 45cfcee6-7a68-4d4f-b3f6-e2d8a0fa066a
 author: gregg-miskelly
@@ -11,12 +8,12 @@ ms.author: greggm
 manager: douge
 ms.workload:
 - greggm
-ms.openlocfilehash: 6c7578ddbdf84a1520a732fb64380bb53e5359f9
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 0b81d0dc38e4fb6c6bb14860634d41d85aa4dee9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637852"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53892119"
 ---
 # <a name="migrate-64-bit-debugger-com-class-registration"></a>64 ビット デバッガー COM クラスの登録を移行します。
 
@@ -28,7 +25,7 @@ COM に登録するデバッガー拡張機能を regsvr32、regasm を使用す
 
 管理されている、1 つを登録する msvsmon-def comclass ファイルの例と 1 つのネイティブ クラスを次に示します。
 
-ファイル名: *MyCompany.MyExample.msvsmon-comclass-def.json*
+ファイル名:*MyCompany.MyExample.msvsmon-comclass-def.json*
 
 ```json
 {

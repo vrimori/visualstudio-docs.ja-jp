@@ -11,13 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: ef7c49c514c9104ee4659db983b04c27036df889
-ms.sourcegitcommit: c9a01c599ce19a5845605b3b28c0229fd0abb93f
+ms.openlocfilehash: d5d4b4c50a02a92d150a87788e6dc307dd2f8e64
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281824"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53865519"
 ---
 # <a name="code-generation-in-a-build-process"></a>ビルド プロセスでのコード生成
 
@@ -249,11 +248,11 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 > [!NOTE]
 > `ResolveParameterValue` は、MSBuild を使用する場合に限り、`T4ParameterValues` からデータを取得します。 Visual Studio を使用してテンプレートを変換すると、パラメーターは既定値になります。
 
-##  <a name="msbuild"></a> プロジェクトのプロパティを使用して、アセンブリでディレクティブおよび include ディレクティブ
+##  <a name="msbuild"></a> assembly および include ディレクティブで、プロジェクトのプロパティを使用する
 
-などの visual Studio マクロ **$ (solutiondir)** MSBuild では動作しません。 その代わりに、プロジェクト プロパティを使用できます。
+Visual Studio のマクロ **$ (solutiondir)** などは、MSBuild では動作しません。 その代わりに、プロジェクト プロパティを使用できます。
 
-編集、 *.csproj*または *.vbproj*プロジェクト プロパティを定義するファイル。 この例は、という名前のプロパティを定義します**myLibFolder**:
+*.csproj*または *.vbproj* ファイルを編集して、プロジェクト プロパティを定義します。 次の例は、**myLibFolder**という名前のプロパティを定義します。
 
 ```xml
 <!-- Define a project property, myLibFolder: -->
@@ -284,7 +283,7 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 
 インクルード ファイル、または、テンプレートによって読み取られる他のファイルを更新する場合、Visual Studio は、ファイルを自動的に変換しません。 ビルドの一部としてテンプレートを変換するなら、すべてが最新の状態です。
 
-**その他のオプションがありますテキスト テンプレートを変換とは**
+**テキスト テンプレート変換には、その他のオプションがありますか。**
 
 - [TextTransform ユーティリティ](../modeling/generating-files-with-the-texttransform-utility.md)コマンドのスクリプトで使用することができます。 ほとんどの場合、MSBuild を使用しやすくなります。
 
@@ -296,5 +295,5 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 
 ## <a name="see-also"></a>関連項目
 
-- T4 MSbuild テンプレートでに優れたガイダンスがある *%programfiles (x86) %\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets*
+- T4 MSbuild テンプレートの優れたガイダンス *%programfiles (x86) %\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets*
 - [T4 テキスト テンプレートを作成します。](../modeling/writing-a-t4-text-template.md)

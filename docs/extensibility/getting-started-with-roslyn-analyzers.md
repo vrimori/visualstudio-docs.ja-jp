@@ -1,7 +1,6 @@
 ---
 title: Roslyn アナライザーの概要 |Microsoft Docs
 ms.date: 04/02/2018
-ms.technology: vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: 367c2ec8-3059-46a5-9d1c-57bead0419e7
 author: gregvanl
@@ -9,12 +8,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6077fb8a9f0db360389953ef6a7ed25c6d242247
-ms.sourcegitcommit: d7f232a7596420e40ff8051d42cdf90203af4a74
+ms.openlocfilehash: 591e09596c92476b7664b541d74344099d19ecb9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821293"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53874532"
 ---
 # <a name="get-started-with-roslyn-analyzers"></a>Roslyn アナライザーを概要します。
 
@@ -24,7 +23,7 @@ Visual Studio で、プロジェクト ベースのライブ コード アナラ
 
 [Roslyn のライブ コード アナライザーの概要とチュートリアル](https://msdn.microsoft.com/magazine/dn879356.aspx)
 
-[チュートリアルを解決するコードを追加しますアナライザーの問題に対してユーザーの修正を提供。](https://msdn.microsoft.com/magazine/dn904670.aspx)
+[チュートリアルのコード修正を追加します。アナライザーの問題に対してユーザーの修正を提供します。](https://msdn.microsoft.com/magazine/dn904670.aspx)
 
 [概要と現実の世界のアナライザーのチュートリアルを説明します。](https://channel9.msdn.com/events/Build/2015/3-725)
 

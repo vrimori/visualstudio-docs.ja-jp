@@ -1,9 +1,6 @@
 ---
-title: IDebugDynamicFieldCOMPlus |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugDynamicFieldCOMPlus |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - IDebugDynamicFieldCOMPlus interface
@@ -13,15 +10,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 15773a1133721996f95f29c8ab035f18f401cbeb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 36e74c223428855468103dc3e2c7475a054c88c7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31106150"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53895455"
 ---
 # <a name="idebugdynamicfieldcomplus"></a>IDebugDynamicFieldCOMPlus
-動的なフィールドを表す、 [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)オブジェクト。  
+動的フィールドを表す、 [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -30,16 +27,16 @@ IDebugDynamicFieldCOMPlus : IDebugDynamicField
 ```  
   
 ## <a name="methods"></a>メソッド  
- メソッドだけでなく、 [IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md)インターフェイス、このインターフェイスは、次のメソッドを実装します。  
+ メソッドだけでなく、 [IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md)インターフェイスでは、このインターフェイスは、次のメソッドを実装します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetTypeFromPrimitive](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromprimitive.md)|そのプリミティブ型を指定する型を取得します。|  
-|[GetTypeFromTypeDef](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromtypedef.md)|指定したトークンの種類を取得します。|  
+|[GetTypeFromPrimitive](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromprimitive.md)|プリミティブ型を指定する型を取得します。|  
+|[GetTypeFromTypeDef](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromtypedef.md)|そのトークンを指定する型を取得します。|  
   
-## <a name="requirements"></a>要件  
- ヘッダー: Sh.h  
+## <a name="requirements"></a>必要条件  
+ ヘッダー:Sh.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll

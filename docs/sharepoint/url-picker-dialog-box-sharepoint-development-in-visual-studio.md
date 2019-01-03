@@ -1,9 +1,6 @@
 ---
 title: URL ピッカー ダイアログ ボックス (Visual Studio での SharePoint 開発) |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.VWD.URLPicker
@@ -18,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 517058c99a6ec5a297b95324decbb2cfcbe04271
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ffeca5bf0149ce5a36e5abb77eab673e87f36dc7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49950759"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53925902"
 ---
 # <a name="url-picker-dialog-box-sharepoint-development-in-visual-studio"></a>URL ピッカー ダイアログ ボックス (Visual Studio での SharePoint 開発)
   URL ピッカー ダイアログ ボックスでは、SharePoint を実行しているローカル サーバー上には、マスター ページのファイルまたはイメージ ファイルは、プロジェクトまたは配置をなどのファイルを選択できます。  
@@ -46,7 +43,7 @@ ms.locfileid: "49950759"
   
   展開、 **Server** SharePoint を実行しているローカル サーバーに配置されているファイルを選択するノード。 いうような表示 ダイアログ ボックスで、これらのファイルは、次の条件を満たす必要があります。  
   
-- ファイルは次のマップされたフォルダーのいずれかである必要があります:**イメージ**、**レイアウト**、または**ControlTemplates**します。  
+- ファイルは、次のマップされたフォルダーのいずれかである必要があります。**イメージ**、**レイアウト**、または**ControlTemplates**します。  
   
 - ファイルは、SharePoint コンテンツ データベースに存在することはできません。  
   
@@ -62,4 +59,3 @@ ms.locfileid: "49950759"
  [For SharePoint アプリケーション ページを作成します。](../sharepoint/creating-application-pages-for-sharepoint.md)   
  [For SharePoint の web パーツを作成します。](../sharepoint/creating-web-parts-for-sharepoint.md)   
  [Web パーツまたはアプリケーション ページの再利用可能なコントロールを作成します。](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)   
-  

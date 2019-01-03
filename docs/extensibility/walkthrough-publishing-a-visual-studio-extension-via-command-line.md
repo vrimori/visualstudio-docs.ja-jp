@@ -1,9 +1,6 @@
 ---
 title: 'チュートリアル: コマンドラインを使用して、Visual Studio 拡張機能の発行 |Microsoft Docs'
-ms.custom: ''
 ms.date: 07/12/2018
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing extensions
@@ -14,14 +11,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8d95e2fbe36a73074b97f47f6714f1fc4aa8228c
-ms.sourcegitcommit: 12d6398c02e818de4fbcb4371bae9e5db6cf9509
+ms.openlocfilehash: cb35365220ade512defc180b06e46b95999dfa7b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050184"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53857216"
 ---
-# <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>チュートリアル: コマンドラインを使用して Visual Studio 拡張機能の発行
+# <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>チュートリアル: コマンドラインを使用して Visual Studio 拡張機能を公開
 
 このチュートリアルでは、Visual Studio 拡張機能を Visual Studio Marketplace に発行する方法、コマンドラインを使用します。 開発者が使用できる、拡張機能を Marketplace に追加すると、 [**拡張機能と更新**](../ide/finding-and-using-visual-studio-extensions.md)ダイアログを新規および更新された拡張機能の参照があります。
 
@@ -203,7 +200,7 @@ This is test extension.
 
 この場合は、既定の VSPackage の拡張機能は使用しますが、同じ手順は、すべての種類の拡張機能の有効です。
 
-1. メニュー コマンドが"TestPublish"という名前の c# で VSPackage を作成します。 詳細については、次を参照してください。[初めての拡張機能の作成: Hello World](../extensibility/extensibility-hello-world.md)します。
+1. メニュー コマンドが"TestPublish"という名前の c# で VSPackage を作成します。 詳細については、次を参照してください。[初めての拡張機能を作成します。Hello World](../extensibility/extensibility-hello-world.md)します。
 
 ### <a name="package-your-extension"></a>拡張機能をパッケージ化します。
 

@@ -1,8 +1,7 @@
 ---
-title: 'CA1501: 継承を使用しすぎないでください'
+title: CA1501:継承を使用しすぎないでください
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - CA1501
@@ -19,14 +18,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 0627d246fe9f9f72a95cded7daf8d2c94bf20b3a
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 030d1d520ef2feb1f7b530c55c609a1cd951893b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45546967"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53861070"
 ---
-# <a name="ca1501-avoid-excessive-inheritance"></a>CA1501: 継承を使用しすぎないでください
+# <a name="ca1501-avoid-excessive-inheritance"></a>CA1501:継承を使用しすぎないでください
 
 |||
 |-|-|

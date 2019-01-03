@@ -1,9 +1,6 @@
 ---
 title: THREADPROPERTIES |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - THREADPROPERTIES
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14db7869717a2edf1ac64be744ab1f6058455c1a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 554bc8171de759ce1c79e563bdccf093be31af04
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49845317"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53914706"
 ---
 # <a name="threadproperties"></a>THREADPROPERTIES
 スレッドのプロパティについて説明します。  
@@ -28,7 +25,7 @@ ms.locfileid: "49845317"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-typedef struct _tagTHREADPROPERTIES {   
+typedef struct _tagTHREADPROPERTIES {   
    THREADPROPERTY_FIELDS dwFields;  
    DWORD                 dwThreadId;  
    DWORD                 dwSuspendCount;  
@@ -40,7 +37,7 @@ typedef struct _tagTHREADPROPERTIES {
 ```  
   
 ```csharp  
-public struct THREADPROPERTIES {   
+public struct THREADPROPERTIES {   
    public uint   dwFields;  
    public uint   dwThreadId;  
    public uint   dwSuspendCount;  
@@ -79,9 +76,9 @@ public struct THREADPROPERTIES {
 ## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   

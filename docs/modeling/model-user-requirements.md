@@ -11,17 +11,16 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 4791566d3c37517c3c93e62e371bf4cbc9fc6604
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: 9101c6f264d3f4017581a6732e9b93f78e33215d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50966558"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53867015"
 ---
 # <a name="model-user-requirements"></a>ユーザー要件のモデリング
 
-Visual Studio を使用すると、ユーザーの目標達成を支援する際に、彼らのアクティビティやシステムが果たしている役割に関する図を描画することで、ユーザー ニーズを理解し、検討し、やり取りすることができます。 要求モデルとはこのような一連の図のことで、それぞれの図では、ユーザー ニーズの異なる側面に注目しています。 ビデオ デモについては、「 [ビジネス ドメインのモデリング](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)」を参照してください。
+Visual Studio を使用すると、ユーザーの目標達成を支援する際に、彼らのアクティビティやシステムが果たしている役割に関する図を描画することで、ユーザー ニーズを理解し、検討し、やり取りすることができます。 要求モデルとはこのような一連の図のことで、それぞれの図では、ユーザー ニーズの異なる側面に注目しています。 ビデオ デモについては、次を参照してください。[ビジネス ドメインのモデリング](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)します。
 
 どのバージョンの Visual Studio が各モデルの種類をサポートしているかについては、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
 
@@ -62,7 +61,7 @@ Visual Studio を使用すると、ユーザーの目標達成を支援する際
 
 ビジネス ルールとは、特定のユース ケースに関連付けられておらず、システム全体で認められる要求です。
 
-多くのビジネス ルールは、概念クラス間の関係に関する制約です。 これらを書き込める*静的なビジネス ルール*概念クラス図の関連するクラスに関連付けられたコメントとして。 例えば:
+多くのビジネス ルールは、概念クラス間の関係に関する制約です。 これらを書き込める*静的なビジネス ルール*概念クラス図の関連するクラスに関連付けられたコメントとして。 例:
 
 ![Order クラスにアタッチされたコメント内のルール](../modeling/media/uml_reqmcd2.png)
 

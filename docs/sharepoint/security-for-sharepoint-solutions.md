@@ -1,9 +1,6 @@
 ---
 title: SharePoint ソリューションのセキュリティ |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b014c3b4ada42982c41928ca17472e3f585af3ed
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ae284cd05e173f271bff3b0a3ef7d9cba3fadfc6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49878766"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53904904"
 ---
 # <a name="security-for-sharepoint-solutions"></a>SharePoint ソリューションのセキュリティ
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint アプリケーションのセキュリティを強化するために、次の機能が組み込まれています。
@@ -37,7 +34,7 @@ ms.locfileid: "49878766"
  AllowPartiallyTrustedCallers 属性は、システムのグローバル アセンブリ キャッシュに展開されていないすべての SharePoint ソリューションに追加されます ( [!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)])。 これには、サンド ボックス ソリューションまたは SharePoint アプリケーションの Bin ディレクトリにデプロイされたソリューションが含まれます。 詳細については、次を参照してください。 [Microsoft .NET Framework のバージョン 1 のセキュリティ変更](http://go.microsoft.com/fwlink/?LinkId=177515)と[SharePoint Foundation の Web パーツを配置する](http://go.microsoft.com/fwlink/?LinkId=177509)します。
 
 ## <a name="safe-against-script-property"></a>[スクリプト] プロパティに対して安全
- *スクリプト インジェクション*がコントロールまたは Web ページに悪意のあるコードを挿入します。 スクリプト インジェクションから SharePoint 2010 サイトを保護するため、共同作成者は表示または既定の Web パーツまたはそれらのプロパティを編集することはできません。 この動作は、SafeAgainstScript と呼ばれる SafeControl 属性によって制御されます。 [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)]、この属性を設定して、プロジェクト項目の**安全なコントロール エントリ**サブプロパティ**スクリプトに対して安全**します。 詳細については、次を参照してください。[プロジェクト項目でのパッケージと展開の情報を提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)と[方法: 安全なコントロールとしてマークが制御](../sharepoint/how-to-mark-controls-as-safe-controls.md)します。
+ *スクリプト インジェクション*がコントロールまたは Web ページに悪意のあるコードを挿入します。 スクリプト インジェクションから SharePoint 2010 サイトを保護するため、共同作成者は表示または既定の Web パーツまたはそれらのプロパティを編集することはできません。 この動作は、SafeAgainstScript と呼ばれる SafeControl 属性によって制御されます。 [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)]、この属性を設定して、プロジェクト項目の**安全なコントロール エントリ**サブプロパティ**スクリプトに対して安全**します。 詳細については、次を参照してください。[プロジェクト項目でのパッケージと展開の情報を提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)と[方法。安全なコントロールとしてマークが制御](../sharepoint/how-to-mark-controls-as-safe-controls.md)します。
 
 ## <a name="vista-and-windows-7-user-account-control"></a>Vista および Windows 7 のユーザー アカウント制御
  [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] [!INCLUDE[win7](../sharepoint/includes/win7-md.md)]ユーザー アカウント制御 (UAC) と呼ばれるセキュリティ機能を組み込むことです。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] および [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] のシステム上の [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] で SharePoint ソリューションを開発する場合は、UAC により、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] をシステム管理者として実行することが求められます。 **開始**メニュー、ショートカット メニューを開き[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、選び、**管理者として実行**します。
@@ -78,13 +75,13 @@ ms.locfileid: "49878766"
 
 -   [SharePoint Foundation での Web パーツをセキュリティで保護します。](http://go.microsoft.com/fwlink/?LinkId=177511)
 
--   [Web アプリケーション セキュリティの向上: 脅威と対策](http://go.microsoft.com/fwlink/?LinkID=140080)
+-   [Web アプリケーションのセキュリティを向上させるには。脅威と対策](http://go.microsoft.com/fwlink/?LinkID=140080)
 
 ### <a name="general-security"></a>一般的なセキュリティ
 
 -   [MSDN セキュリティ開発ライフ サイクル](http://go.microsoft.com/fwlink/?LinkID=147149)
 
--   [セキュリティで保護された ASP.NET アプリケーションの構築: 認証、承認、およびセキュリティで保護された通信](http://go.microsoft.com/fwlink/?LinkId=177494)
+-   [セキュリティで保護された ASP.NET アプリケーションの構築:認証、承認、およびセキュリティで保護された通信](http://go.microsoft.com/fwlink/?LinkId=177494)
 
 ## <a name="see-also"></a>関連項目
 

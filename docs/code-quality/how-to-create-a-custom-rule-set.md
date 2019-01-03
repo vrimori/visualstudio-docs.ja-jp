@@ -2,7 +2,6 @@
 title: カスタム コード分析ルール セットを作成します。
 ms.date: 11/02/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.addremoverulesets
@@ -13,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 061ceec7a513a0d4c92f06fad5ef730100dbfb8e
-ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
+ms.openlocfilehash: f2a0b2de9450fc2e9350371b08f4a3a9bf8d9c1b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51000217"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53929923"
 ---
 # <a name="customize-a-rule-set"></a>ルール セットをカスタマイズします。
 
@@ -72,7 +71,7 @@ ms.locfileid: "51000217"
 
 ### <a name="rule-precedence"></a>ルールの優先順位
 
-- 同じルールが一覧表示されている 2 つの場合または他にもさまざまな重大度レベルのルール セットで、コンパイラはエラーを生成します。 例えば:
+- 同じルールが一覧表示されている 2 つの場合または他にもさまざまな重大度レベルのルール セットで、コンパイラはエラーを生成します。 例:
 
    ```xml
    <RuleSet Name="Rules for ClassLibrary21" Description="Code analysis rules for ClassLibrary21.csproj." ToolsVersion="15.0">
@@ -85,9 +84,9 @@ ms.locfileid: "51000217"
 
 - 同じルールが一覧表示されている 2 つである場合または回以上のルール セットで、*同じ*重大度で次の警告を表示することがあります、**エラー一覧**:
 
-   **CA0063: 規則セット ファイルの読み込みに失敗しました '\[] .ruleset' またはその依存の規則のいずれかのファイルを設定します。ファイルは、ルール セットのスキーマに準拠していません。**
+   **CA0063:規則セット ファイルの読み込みに失敗しました '\[] .ruleset' またはその依存の規則のいずれかのファイルを設定します。ファイルは、ルール セットのスキーマに準拠していません。**
 
-- 規則セットには、子の規則使用して設定にはが含まれている場合、 **Include**タグ、および子と親規則セットの両方が同じルールを一覧表示が、別の重大度レベルの親規則セット内の重大度が優先されます。 例えば:
+- 規則セットには、子の規則使用して設定にはが含まれている場合、 **Include**タグ、および子と親規則セットの両方が同じルールを一覧表示が、別の重大度レベルの親規則セット内の重大度が優先されます。 例:
 
    ```xml
    <!-- Parent rule set -->
@@ -121,5 +120,5 @@ ms.locfileid: "51000217"
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: マネージド コード プロジェクトのコード分析を構成する](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)
+- [方法: マネージ コード プロジェクトのコード分析を構成します。](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)
 - [コード分析規則セットの参照](../code-quality/rule-set-reference.md)

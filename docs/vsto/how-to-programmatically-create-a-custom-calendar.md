@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによってカスタムの予定表を作成'
-ms.custom: ''
+title: '方法: カスタムの予定表をプログラムで作成します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,14 +14,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 15603c1b433df97138748b3446e23ac6c7f2c231
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6a35433913c0a96a35e1f1db4565ef544af4087f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42634909"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53877213"
 ---
-# <a name="how-to-programmatically-create-a-custom-calendar"></a>方法: プログラムによってカスタムの予定表を作成
+# <a name="how-to-programmatically-create-a-custom-calendar"></a>方法: カスタムの予定表をプログラムで作成します。
   この例は、という名前の新しい予定表フォルダを作成します。 **PersonalCalendar**、新しい予定アイテムを作成すると、予定表フォルダに追加します。 コードでは、予定表フォルダが表示されます。  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
@@ -34,7 +31,5 @@ ms.locfileid: "42634909"
   
 ## <a name="see-also"></a>関連項目  
  [予定表項目を操作します。](../vsto/working-with-calendar-items.md)   
- [方法: プログラムによって予定を作成](../vsto/how-to-programmatically-create-appointments.md)   
- [方法: プログラムによって会議出席依頼を作成](../vsto/how-to-programmatically-create-a-meeting-request.md)  
-  
-  
+ [方法: プログラムによって予定を作成します。](../vsto/how-to-programmatically-create-appointments.md)   
+ [方法: プログラムによって会議出席依頼を作成します。](../vsto/how-to-programmatically-create-a-meeting-request.md)  

@@ -1,9 +1,6 @@
 ---
-title: IDebugProcessQueryProperties |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugProcessQueryProperties |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - IDebugProcessQueryProperties
@@ -13,15 +10,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac071afd9f9ce7d45a05408aeec32117776832f2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b74b410e64cd6f57b828947d829461bc9d490776
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31116192"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53905492"
 ---
 # <a name="idebugprocessqueryproperties"></a>IDebugProcessQueryProperties
-このインターフェイスはによって実装される拡張機能インターフェイス[IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)実装します。 これにより、デバッグ プロセス環境に関する情報を取得する実行者できます。  
+このインターフェイスによって実装される拡張機能インターフェイスは、 [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)実装します。 これにより、デバッグ プロセス環境に関する情報を取得する実装者ができます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,18 +34,18 @@ IDebugProcessQueryProperties: IUnknown
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[QueryProperty](../../../extensibility/debugger/reference/idebugprocessqueryproperties-queryproperty.md)|プロパティの値を照会します。|  
+|[QueryProperty](../../../extensibility/debugger/reference/idebugprocessqueryproperties-queryproperty.md)|プロパティ値を照会します。|  
 |[QueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties-queryproperties.md)|プロパティの値を照会します。|  
   
-## <a name="remarks"></a>コメント  
- このインターフェイスは実装はほとんどありません。  
+## <a name="remarks"></a>Remarks  
+ このインターフェイスが実装されていることはほとんどありません。  
   
-## <a name="requirements"></a>要件  
- ヘッダー: Portpriv.h  
+## <a name="requirements"></a>必要条件  
+ ヘッダー:Portpriv.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   

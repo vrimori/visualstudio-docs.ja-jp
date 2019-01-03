@@ -1,9 +1,6 @@
 ---
 title: サイド バイ サイドで配置のファイル名拡張子を登録する |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - file extensions, registering for side-by-side
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1aa553b5370f637f5a779bbdff432319ce3e0bf4
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 1c6d867d1ab28cd2cfe3d8c01fe6818d13c6dc74
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39638480"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53907736"
 ---
 # <a name="register-file-name-extensions-for-side-by-side-deployments"></a>サイド バイ サイドで配置のファイル名拡張子を登録します。
 サイド バイ サイドで環境にデプロイされている Vspackage に、ファイルを関連付ける適切なバージョンのファイル名拡張子を登録する必要があります[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 登録により、ユーザーが、プロジェクトを開き、プロジェクト項目ファイルの適切なバージョンをバージョン固有のファイル名拡張子を使用する場合を除き、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。  
@@ -38,4 +35,4 @@ ms.locfileid: "39638480"
   
 ## <a name="related-sections"></a>関連項目  
  [Visual Studio の複数のバージョンをサポートします。](../extensibility/supporting-multiple-versions-of-visual-studio.md)  
- 複数のバージョンの関連する問題について説明します[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]や VSPackage に開発およびエンドユーザーへのデプロイ中にします。
+ 開発中やエンド ユーザーへの配置中に発生する、複数のバージョンの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] や VSPackage に関連する問題について説明します。

@@ -3,7 +3,6 @@ title: ワークフロー デザイナーのシェルの機能
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.prod: visual-studio-dev15
-ms.technology: vs-workflow-designer
 f1_keywords:
 - WFDShellFeatures.UI
 ms.assetid: 14bfe312-9592-408e-92ce-e98585ad16e7
@@ -12,16 +11,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d881a6c6e14983fd8537d8e78066ef9479b9633
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 2aaac9c6148aee2b39d0231f7b893bcfaf89e301
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757210"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53880677"
 ---
 # <a name="workflow-designer-shell-features"></a>ワークフロー デザイナーのシェルの機能
 
-ワークフロー デザイナーは、次の 3 つの主要な UI 領域で構成されます。 デザイナーの画面、その上の階層リンク バー、およびその下のシェルです。 階層リンク バーは画面の上部に位置し、現在のルート アクティビティの先祖の一覧を表示するために使用されます。 詳細については、次を参照してください。[方法: 階層リンク ナビゲーション](../workflow-designer/how-to-use-breadcrumb-navigation.md)します。 デザイナー画面は画面の中央に位置し、ワークフローを作成するために使用されます。 シェルは画面の下部に位置しており、ここには、現在のビューを管理するためのさまざまなボタンが含まれています。
+ワークフロー デザイナーは、次の 3 つの主要な UI 領域で構成されます。 デザイナーの画面、その上の階層リンク バー、およびその下のシェルです。 階層リンク バーは画面の上部に位置し、現在のルート アクティビティの先祖の一覧を表示するために使用されます。 詳細については、「[方法 :階層リンク ナビゲーションを使用して、](../workflow-designer/how-to-use-breadcrumb-navigation.md)します。 デザイナー画面は画面の中央に位置し、ワークフローを作成するために使用されます。 シェルは画面の下部に位置しており、ここには、現在のビューを管理するためのさまざまなボタンが含まれています。
 
 ## <a name="shell-features"></a>シェルの機能
  シェルのバーの右側にあるボタンを使用して、ワークフローのズームインとズームアウト、画面のサイズに合わせたワークフローの内容の調整、および概要マップの表示/非表示の切り替えを行うことができます。 ワークフローのズームインとズームアウトは、キーボード ショートカットでも実行できます。Ctrl キーを押しながら、+ キーを押すとズームインし、- キーを押すとズームアウトします。

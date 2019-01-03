@@ -1,9 +1,6 @@
 ---
-title: IDebugEngine2 |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugEngine2 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugEngine2
@@ -15,15 +12,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e2cfe7e2f54b45ecfe8fdb34943b87818a13feab
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 384d6179f2e8a8c9252e4c631a97d8e429330f96
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31113095"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53914224"
 ---
 # <a name="idebugengine2"></a>IDebugEngine2
-このインターフェイスは、デバッグ エンジン (DE) を表します。 設定され、例外をクリアするブレークポイントの作成から、デバッグ セッションでのさまざまな側面を管理に使用されます。  
+このインターフェイスは、デバッグ エンジン (DE) を表します。 設定され、例外をオフにするとブレークポイントの作成からデバッグ セッションのさまざまな側面を管理に使用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,36 +29,36 @@ IDebugEngine2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- このインターフェイスは、プログラムのデバッグを管理するカスタム DE によって実装されます。 デによってこのインターフェイスを実装する必要があります。  
+ このインターフェイスは、プログラムのデバッグを管理するカスタム DE によって実装されます。 このインターフェイスは、DE で実装する必要があります。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- このインターフェイスは、セッションのデバッグ マネージャー例外を管理する、ブレークポイントを作成、デによって送信された同期イベントに応答してなど、デバッグ セッションを管理するには、(SDM) によって呼び出されます。  
+ このインターフェイスは、セッション デバッグ マネージャーの例外の管理、ブレークポイントを作成、デにより送信された同期イベントに応答してなど、デバッグ セッションを管理するには、(SDM) によって呼び出されます。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
  次の表は、メソッドの`IDebugEngine2`します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[EnumPrograms](../../../extensibility/debugger/reference/idebugengine2-enumprograms.md)|列挙子、DE では、デバッグされているすべてのプログラムを作成します。|  
-|[添付](../../../extensibility/debugger/reference/idebugengine2-attach.md)|プログラムに、DE をアタッチします。|  
+|[EnumPrograms](../../../extensibility/debugger/reference/idebugengine2-enumprograms.md)|ドイツでは、デバッグされているすべてのプログラムの列挙子を作成します。|  
+|[添付](../../../extensibility/debugger/reference/idebugengine2-attach.md)|プログラムを DE にアタッチします。|  
 |[CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md)|デに保留中のブレークポイントを作成します。|  
 |[SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)|デが特定の例外を処理する方法を指定します。|  
-|[RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md)|不要になったデバッグ エンジンによって処理されるように、指定された例外を削除します。|  
-|[RemoveAllSetExceptions](../../../extensibility/debugger/reference/idebugengine2-removeallsetexceptions.md)|IDE が特定のランタイム アーキテクチャまたは言語の設定で例外の一覧を削除します。|  
+|[RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md)|不要になったデバッグ エンジンによって処理されるように指定された例外を削除します。|  
+|[RemoveAllSetExceptions](../../../extensibility/debugger/reference/idebugengine2-removeallsetexceptions.md)|例外は、IDE が特定のランタイム アーキテクチャまたは言語の設定の一覧を削除します。|  
 |[GetEngineID](../../../extensibility/debugger/reference/idebugengine2-getengineid.md)|デの GUID を取得します。|  
-|[DestroyProgram](../../../extensibility/debugger/reference/idebugengine2-destroyprogram.md)|指定されたプログラムが正しく終了になっていると、DE がプログラムへのすべての参照をクリーンアップしてプログラムを送信する必要がある、DE 破棄イベントを通知します。|  
-|[ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md)|以前に送信した、DE によって、SDM を同期のデバッグ イベントが受信され、処理を示すために SDM によって呼び出されます。|  
-|[setlocale、_wsetlocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md)|デのロケールを設定します。|  
+|[DestroyProgram](../../../extensibility/debugger/reference/idebugengine2-destroyprogram.md)|指定されたプログラムが正しく終了になっていると、DE がプログラムへのすべての参照をクリーンアップし、プログラムを送信する必要があります DE 破棄イベントを通知します。|  
+|[ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md)|これまで、SDM を DE によって送信、同期デバッグ イベントが受信され、処理を示す SDM によって呼び出されます。|  
+|[SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md)|デのロケールを設定します。|  
 |[SetRegistryRoot](../../../extensibility/debugger/reference/idebugengine2-setregistryroot.md)|現在、DE が使用してレジストリ ルートを設定します。|  
 |[SetMetric](../../../extensibility/debugger/reference/idebugengine2-setmetric.md)|メトリックを設定します。|  
-|[CauseBreak](../../../extensibility/debugger/reference/idebugengine2-causebreak.md)|この DE によってデバッグされているすべてのプログラムが次回の試行を実行するとき、スレッドの 1 つの実行を停止することを要求します。|  
+|[CauseBreak](../../../extensibility/debugger/reference/idebugengine2-causebreak.md)|この DE によってデバッグされているすべてのプログラムが次回実行しようとすると、スレッドの 1 つの実行を停止することを要求します。|  
   
-## <a name="requirements"></a>要件  
- ヘッダー: Msdbg.h  
+## <a name="requirements"></a>必要条件  
+ ヘッダー:Msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   

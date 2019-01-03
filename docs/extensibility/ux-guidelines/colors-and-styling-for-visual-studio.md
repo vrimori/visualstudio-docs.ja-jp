@@ -1,9 +1,6 @@
 ---
 title: Visual Studio の色とスタイル |Microsoft Docs
-ms.custom: ''
 ms.date: 07/31/2017
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: 0e384ea1-4d9e-4307-8884-6e183900732c
 author: gregvanl
@@ -11,12 +8,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5d8285ad08a9ad83ecd137223459a6b29cb7ae69
-ms.sourcegitcommit: a34b7d4fdb3872865fcf98ba24a0fced58532adc
+ms.openlocfilehash: 12555b48550d252ce125ac437c1e30d5ae22fae9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51561713"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53914609"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Visual Studio の色とスタイル
 
@@ -82,7 +79,7 @@ Visual Studio のソース コードには、トークンの名前と各テー�
 
 ### <a name="user-customizable-colors"></a>ユーザーがカスタマイズできる色
 
-参照:[エンドユーザーの色を公開します。](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)
+参照トピック[エンドユーザーの色を公開します。](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)
 
 場合によっては、コード エディターまたはデザイン画面を作成する場合と同様に、UI をカスタマイズするには、エンドユーザーを許可するされます。 カスタマイズ可能な UI コンポーネントがある、**フォントおよび色**のセクション、**ツール&gt;オプション**ダイアログ ボックスで、ユーザーが、前景色、背景色、またはその両方を変更する選択できます。
 
@@ -287,7 +284,7 @@ Windows では、画面上のより明確に表示される要素を行うテキ
 
 ### <a name="system-color-set"></a>システム カラー セット
 
-ある表[WPF チーム ブログ: SystemColors 参照](https://blogs.msdn.microsoft.com/wpf/2010/11/30/systemcolors-reference/)のシステム色の名前、および対応する色合いがテーマごとに表示される完全なセットを示します。
+ある表[WPF チーム ブログ。SystemColors 参照](https://blogs.msdn.microsoft.com/wpf/2010/11/30/systemcolors-reference/)のシステム色の名前、および対応する色合いがテーマごとに表示される完全なセットを示します。
 
 Ui、色のセットを制限するこれを適用するときに *「標準」のテーマで存在していた微妙な詳細情報が失われることが必要ですが*します。 ツール ウィンドウ内の領域を区別するために使用されるグレー色が微妙には、UI の例を次に示します。 ハイ コントラスト モードで表示される同じウィンドウと組み合わせると、すべての背景は同じ色合いをこれらの領域の枠線は単独で境界線で示されますを確認できます。
 
@@ -365,7 +362,7 @@ VSPackage では、フォントと色カスタム カテゴリを制御でき、
 | 名前 | 型 | データ | 説明 |
 | --- | --- | --- | --- |
 | カテゴリ | REG_SZ | GUID | カテゴリを識別するために作成された GUID |
-| Package | REG_SZ | GUID | カテゴリをサポートする VSPackage のサービスの GUID |
+| パッケージ | REG_SZ | GUID | カテゴリをサポートする VSPackage のサービスの GUID |
 
  レジストリで指定されたサービスの実装を提供する必要があります[IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults)の対応するカテゴリ。
 
@@ -378,7 +375,7 @@ VSPackage では、フォントと色カスタム カテゴリを制御でき、
 | 名前 | 型 | データ | 説明 |
 |--- | --- | --- | --- |
 | カテゴリ | REG_SZ | GUID | カテゴリを識別するために作成された GUID |
-| Package | REG_SZ | GUID | カテゴリをサポートする VSPackage のサービスの GUID |
+| パッケージ | REG_SZ | GUID | カテゴリをサポートする VSPackage のサービスの GUID |
 
 レジストリで指定されたサービスの実装を提供する必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup>の対応するグループ。
 

@@ -1,9 +1,6 @@
 ---
 title: TaskScheduler クラスの内部メンバー |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - TaskScheduler class [.NET Framework debug engines]
@@ -14,17 +11,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 97b7531a60f72405d41a5a72c391ba8da91958dc
-ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
+ms.openlocfilehash: c86b71e836c49d12c0ec0aceb3a20bf0b38e367a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39276313"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53853880"
 ---
 # <a name="taskscheduler-class---internal-members"></a>TaskScheduler クラスの内部メンバー
 この記事の内部メンバーを説明します、<xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>する際に役立つクラスがカスタムのデバッガーを実装します。 このクラスの詳細については、次を参照してください。、<xref:System.Threading.Tasks.TaskScheduler>参照資料です。  
   
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **名前空間:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
  **アセンブリ:** mscorlib (で*mscorlib.dll*)  
   

@@ -1,9 +1,6 @@
 ---
 title: 従来の言語サービスの開発 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - vs.vsip.LangServWiz.langtoks
@@ -19,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d92c07742dcc4433aa96071d655f58d938a1f80
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: c6bcf4c6993a37ec58d288d2c31f7c4cc3ecab9b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39497831"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53845790"
 ---
 # <a name="develop-a-legacy-language-service"></a>従来の言語サービスを開発します。
 このセクションにリンクする際に役立つトピックへは、従来の言語サービスを作成します。  
@@ -50,7 +47,7 @@ ms.locfileid: "39497831"
  [デバッグのための言語サービスのサポート](../../extensibility/internals/language-service-support-for-debugging.md)  
  言語サービスが、デバッガーをサポートする機能を提供する方法について説明します。  
   
- [チェックリスト: 従来の言語サービスを作成します。](../../extensibility/internals/checklist-creating-a-legacy-language-service.md)  
+ [チェックリスト:従来の言語サービスを作成します。](../../extensibility/internals/checklist-creating-a-legacy-language-service.md)  
  作成すると、コア エディターの言語サービスを統合する手順について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
@@ -63,7 +60,7 @@ ms.locfileid: "39497831"
  [従来の言語サービスのパラメーター ヒント](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md)  
  オーバー ロードされた関数とメソッドのメソッドのヒントを提供する方法について説明します。  
   
- [方法: 非表示のテキストを提供する従来の言語サービスでのサポート](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)  
+ [方法: 従来の言語サービスで非表示のテキストのサポートを提供します。](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)  
  非表示のテキスト領域の目的について説明し、非表示のテキスト領域を実装する方法について説明します。  
   
  [方法: 従来の言語サービスでのアウトラインの拡張のサポートを提供します。](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)  

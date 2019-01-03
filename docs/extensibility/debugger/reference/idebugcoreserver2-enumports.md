@@ -1,9 +1,6 @@
 ---
 title: IDebugCoreServer2::EnumPorts |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugCoreServer2::EnumPorts
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd974f625f011819b8360ddcd327cffec602dac0
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9873177dd5dcc618fe25c59b16f37ca29ce1ae58
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49926073"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53900213"
 ---
 # <a name="idebugcoreserver2enumports"></a>IDebugCoreServer2::EnumPorts
 すべての利用可能なポートの一覧を取得します。  
@@ -28,14 +25,14 @@ ms.locfileid: "49926073"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT EnumPorts(   
-   IEnumDebugPorts2** ppEnum  
+HRESULT EnumPorts(   
+   IEnumDebugPorts2** ppEnum  
 );  
 ```  
   
 ```csharp  
-int EnumPorts(   
-   out IEnumDebugPorts2 ppEnum  
+int EnumPorts(   
+   out IEnumDebugPorts2 ppEnum  
 );  
 ```  
   

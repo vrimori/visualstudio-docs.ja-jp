@@ -1,9 +1,6 @@
 ---
 title: ServerDocument クラスを使用してサーバー上のドキュメントを管理します。
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e983f4cf1b90150113fcfa33702d85bb41a30924
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: bcaebef3edcdf742bc56915d0209f3f61ee63df8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49939138"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53903251"
 ---
 # <a name="manage-documents-on-a-server-by-using-the-serverdocument-class"></a>ServerDocument クラスを使用してサーバー上のドキュメントを管理します。
   使用することができます、`ServerDocument`クラス、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Microsoft Office Word および Microsoft Office Excel がインストールされていない場合でも、ドキュメント レベルのカスタマイズのさまざまな側面を管理します。 実行できる管理タスクは以下のとおりです。  
@@ -61,13 +58,12 @@ ms.locfileid: "49939138"
 |タスク|使用するメンバー|  
 |----------|-------------------|  
 |ドキュメントがドキュメント レベルのカスタマイズの一部であるかどうかを確認する。|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.GetCustomizationVersion%2A> メソッド。|  
-|プログラムによって実行時にドキュメントにカスタマイズをアタッチします。<br /><br /> 詳細については、次を参照してください[方法: 添付ドキュメントへのコードの拡張機能の管理。](../vsto/how-to-attach-managed-code-extensions-to-documents.md)|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> メソッドの 1 つ。|  
-|プログラムによって実行時にドキュメントからカスタマイズを削除する。<br /><br /> 詳細については、次を参照してください。[方法: ドキュメントからマネージ コード拡張機能を削除](../vsto/how-to-remove-managed-code-extensions-from-documents.md)します。|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A> メソッド。|  
+|プログラムによって実行時にドキュメントにカスタマイズをアタッチします。<br /><br /> 詳細については、「[方法 :マネージ コード拡張機能をドキュメントにアタッチします。](../vsto/how-to-attach-managed-code-extensions-to-documents.md)|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> メソッドの 1 つ。|  
+|プログラムによって実行時にドキュメントからカスタマイズを削除する。<br /><br /> 詳細については、「[方法 :マネージ コード拡張機能を文書から削除](../vsto/how-to-remove-managed-code-extensions-from-documents.md)します。|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A> メソッド。|  
 |ドキュメントに関連付けられている配置マニフェストの URL を取得する。|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.DeploymentManifestUrl%2A> プロパティ。|  
   
 ## <a name="see-also"></a>関連項目  
- [方法: 添付ドキュメントへのコードの拡張機能の管理](../vsto/how-to-attach-managed-code-extensions-to-documents.md)   
- [方法: ドキュメントからマネージ コード拡張機能を削除](../vsto/how-to-remove-managed-code-extensions-from-documents.md)   
+ [方法: マネージ コード拡張機能をドキュメントにアタッチします。](../vsto/how-to-attach-managed-code-extensions-to-documents.md)   
+ [方法: ドキュメントからのマネージ コード拡張機能を削除します。](../vsto/how-to-remove-managed-code-extensions-from-documents.md)   
  [Visual Studio のツール for Office runtime の概要](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
  [キャッシュ データ](../vsto/caching-data.md)  
-  

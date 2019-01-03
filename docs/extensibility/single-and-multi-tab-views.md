@@ -1,9 +1,6 @@
 ---
-title: 単一サブネットおよびマルチ タブのビュー |Microsoft ドキュメント
-ms.custom: ''
+title: 1 つと複数タブのビュー |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - single and multi-tab views
@@ -13,52 +10,52 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 23feeaee14e6a149ad385c9f5e4a0c4b41be1e86
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 54486835fd2e5ee511e1ccdaa1fa179bbf23d7cb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31142985"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53913244"
 ---
-# <a name="single-and-multi-tab-views"></a>単一サブネットおよびマルチ タブのビュー
-エディターには、さまざまな種類のビューを作成できます。 1 つの例は、コード エディター ウィンドウ、フォーム デザイナーは別です。  
+# <a name="single-and-multi-tab-views"></a>単一タブと複数タブのビュー
+エディターでは、さまざまな種類のビューを作成できます。 1 つの例は、コード エディター ウィンドウで、もう 1 つは、フォーム デザイナー。  
   
- 複数のタブのビューは、複数のタブのあるビューです。 たとえば、HTML エディターが下部にある 2 つのタブを持つ:**デザイン**と**ソース**、各論理ビューです。 デザイン ビューでは、web ページで構成された HTML が表示されますが、他の表示された web ページが表示されます。  
+ マルチタブのビューは、複数のタブのあるビューです。 たとえば、2 つのタブの下部に HTML エディター。**デザイン**と**ソース**、それぞれ論理ビューが表示されます。 デザイン ビューでは、web ページを構成する HTML が表示されます、他に、表示された web ページが表示されます。  
   
 ## <a name="accessing-physical-views"></a>物理ビューへのアクセス  
- 物理ビューは、それぞれが表すコードまたはフォームなど、バッファー内のデータの表示ドキュメント ビュー オブジェクトをホストします。 同様に、各ドキュメント ビュー オブジェクトは、物理的なビュー (物理的な表示文字列と呼ばれるもので識別される) と通常、1 つの論理ビューです。  
+ 物理ビューは、コードやフォームなど、バッファー内のデータのビューを表す各ドキュメント ビュー オブジェクトをホストします。 したがって、各ドキュメント ビュー オブジェクトは、(物理ビューが表示文字列と呼ばれるものによって識別される) 物理ビュー、および一般的に 1 つの論理ビューをが。  
   
- 場合によっては、ただし、物理ビューを持つ 2 つ以上の論理ビューあります。 いくつかの例には、サイド バイ サイドのビューでの分割ウィンドウを持つエディターまたは GUI/デザイン ビューと、コードの分離--フォーム ビューを持つフォーム デザイナーです。  
+ 場合によっては、ただし、物理ビューで保持できる 2 つ以上の論理ビュー。 いくつかの例とサイド バイ サイドでのビュー、分割ウィンドウのエディターまたは GUI/デザイン ビューとコードの分離--フォーム ビューを持つフォーム デザイナーです。  
   
- アクセスの使用可能な物理ビューがすべて、エディターを有効にするには、エディター ファクトリを作成できるドキュメント ビュー オブジェクトの種類ごとに一意の物理的な表示文字列を作成する必要があります。 たとえば、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]エディター ファクトリ オブジェクトを作成できますドキュメント ビューのコード ウィンドウ、フォーム デザイナー ウィンドウです。  
+ 使用可能な物理ビューのすべてにアクセスする、エディターを有効にするには、エディター ファクトリを作成できるドキュメント ビュー オブジェクトの種類ごとに一意の物理的な表示文字列を作成する必要があります。 たとえば、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]エディター ファクトリ作成ドキュメント コード ウィンドウ、フォーム デザイナー ウィンドウのオブジェクトを表示できます。  
   
-## <a name="creating-multi-tabbed-views"></a>複数のタブのビューを作成します。  
- ドキュメント ビュー オブジェクトは、物理ビューは一意の文字列を物理ビューに関連付けられている必要があります、さまざまな方法でデータの表示を有効にする物理ビュー内の複数のタブを配置することができます。 このマルチタブの構成では、すべてのタブが、同じ物理ビュー文字列に関連付けられていますが、それぞれのタブが別の論理ビューの GUID を指定します。  
+## <a name="creating-multi-tabbed-views"></a>マルチタブのビューを作成します。  
+ ドキュメント ビュー オブジェクトは、一意の物理的な表示文字列を使用して、物理ビューを関連付ける必要がある、ただし、さまざまな方法でデータの表示を有効にする物理ビュー内の複数のタブを配置できます。 このマルチタブの構成ですべてのタブは、同じ物理ビューが表示文字列に関連付けられますが、各タブには、別の論理ビュー GUID が与えられます。  
   
- エディターの複数のタブのビューを作成するには、実装、<xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView>インターフェイスし、別の論理ビュー GUID に関連付ける (<xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID>) を作成する各タブにします。  
+ エディターの複数のタブのビューを作成するには、実装、<xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView>インターフェイスし、別の論理ビュー GUID を関連付ける (<xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID>) を作成する各タブにします。  
   
- Visual Studio HTML エディターは、マルチ タブのビューのエディターの例を示します。 **デザイン**と**ソース**タブです。 これを有効にするを別の論理ビューがそれぞれのタブに関連付けられて`LOGICALVIEWID_TextView`の**デザイン** タブと`LOGICALVIEWID_Code`の**ソース**タブです。  
+ Visual Studio の HTML エディターは、複数のタブ ビューを使用して、エディターの例を示します。 **デザイン**と**ソース**タブ。 これを有効にする別の論理ビューは、各タブでは、関連付けられている`LOGICALVIEWID_TextView`の**デザイン** タブと`LOGICALVIEWID_Code`の**ソース**タブ。  
   
- 適切な論理ビューを指定すると、フォームのデザイン、コードを編集またはコードのデバッグなどの特定の目的に対応するビューを VSPackage にアクセスできます。 ただし、NULL 文字列で、windows のいずれかの識別する必要があります、これは、プライマリの論理ビューに対応する必要があります (`LOGVIEWID_Primary`)。  
+ 適切な論理ビューを指定すると、フォームのデザイン、コードの編集、コードのデバッグなどの特定の目的に対応するビューを VSPackage にアクセスできます。 ただし、NULL 文字列で、windows のいずれかを識別する必要があります、これは、プライマリの論理ビューに対応する必要があります (`LOGVIEWID_Primary`)。  
   
- 次の表は、論理ビューを使用できる値とその使用法を示します。  
+ 次の表は、使用可能な論理ビューの値とその使用を示します。  
   
 |LOGVIEWID GUID|推奨される使用|  
 |--------------------|---------------------|  
-|`LOGVIEWID_Primary`|エディター ファクトリの既定/プライマリ ビュー。<br /><br /> すべてのエディター ファクトリは、この値をサポートする必要があります。 このビューでは、その物理ビュー文字列として NULL 文字列を使用する必要があります。 少なくとも 1 つの論理ビューは、この値に設定する必要があります。|  
-|`LOGVIEWID_Debugging`|ビューをデバッグします。 通常、`LOGVIEWID_Debugging`として同じビューにマップ`LOGVIEWID_Code`です。|  
-|`LOGVIEWID_Code`|ビューを起動、**コードの表示**コマンド。|  
-|`LOGVIEWID_Designer`|ビューを起動、**フォームの表示**コマンド。|  
-|`LOGVIEWID_TextView`|テキスト エディターのビュー。 これは、ビューを返す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>からアクセスできる<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>です。|  
+|`LOGVIEWID_Primary`|エディター ファクトリの既定/プライマリ ビュー。<br /><br /> すべてのエディター ファクトリは、この値をサポートする必要があります。 このビューでは、その物理ビュー文字列として、NULL 文字列を使用する必要があります。 少なくとも 1 つの論理ビューは、この値に設定する必要があります。|  
+|`LOGVIEWID_Debugging`|ビューをデバッグします。 通常、`LOGVIEWID_Debugging`として同じビューに対応する`LOGVIEWID_Code`します。|  
+|`LOGVIEWID_Code`|ビューが起動して、**コードの表示**コマンド。|  
+|`LOGVIEWID_Designer`|ビューが起動して、**ビュー フォーム**コマンド。|  
+|`LOGVIEWID_TextView`|テキスト エディターのビュー。 これは、ビューを返す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>からアクセスできる<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>します。|  
 |`LOGVIEWID_UserChooseView`|使用するビューを選択するユーザーに求めます。|  
-|`LOGVIEWID_ProjectSpecificEditor`|によって渡される、**ファイルを開く** ダイアログ ボックス<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.OpenItem%2A><br /><br /> ユーザーは、「(プロジェクトの既定エディター)」エントリを選択するとします。|  
+|`LOGVIEWID_ProjectSpecificEditor`|によって渡される、**プログラムから開く** ダイアログ ボックス<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.OpenItem%2A><br /><br /> ときに、ユーザーは、「(プロジェクトの既定エディター)」のエントリを選択します。|  
   
- 論理ビューの Guid は、拡張は、VSPackage で定義されている論理ビューの Guid のみを使用できます。  
+ 論理ビューの Guid は拡張可能な VSPackage で定義されている論理ビューの Guid のみを使用できます。  
   
- シャット ダウンでは、Visual Studio は、エディター ファクトリと、ソリューションを再度開いたとき、ドキュメント ウィンドウを開き直すために使用できるように、ドキュメント ウィンドウに関連付けられている物理ビュー文字列の GUID を保持します。 ソリューションが閉じられたときに開いているウィンドウのみが、ソリューション (.suo) ファイルに保存されます。 これらの値に対応して、`VSFPROPID_guidEditorType`と`VSFPROPID_pszPhysicalView`で渡される値、`propid`内のパラメーター、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>メソッドです。  
+ シャット ダウン時、Visual Studio には、ソリューションを再度開いたときに、ドキュメント ウィンドウを開き直すために使用できるように、ドキュメント ウィンドウに関連付けられている文字列の物理的な表示エディター ファクトリの GUID が保持されます。 ソリューションが閉じられたときに開いているウィンドウのみが、ソリューション (.suo) ファイルに保存されます。 これらの値に対応して、`VSFPROPID_guidEditorType`と`VSFPROPID_pszPhysicalView`で渡される値、`propid`パラメーター、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>メソッド。  
   
 ## <a name="example"></a>例  
- この例を示していますが、どのように<xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID.TextView>オブジェクトを実装するビューへのアクセスに使用`IVsCodeWindow`です。 ここで、<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShellOpenDocument>サービスは呼び出しに使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A>と要求`LOGVIEWID_TextView`、ウィンドウ フレームへのポインターの取得元。 ドキュメント ビュー オブジェクトへのポインターが呼び出すことによって取得<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>の値を指定して`VSFPROPID_DocView`です。 ドキュメント ビュー オブジェクトから`QueryInterface`が呼び出されると`IVsCodeWindow`です。 ここでは、予想されますをテキスト エディターが返され、ドキュメント ビュー オブジェクト返されます。 これで、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>メソッドは、コード ウィンドウです。  
+ このスニペットを示していますが、どのように<xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID.TextView>オブジェクトが実装するビューにアクセスするために使用`IVsCodeWindow`します。 ここで、<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShellOpenDocument>サービス呼び出しを使用して<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A>と要求`LOGVIEWID_TextView`、ウィンドウ フレームへのポインターを取得します。 ドキュメント ビューのオブジェクトへのポインターが呼び出すことによって取得<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>の値を指定して`VSFPROPID_DocView`します。 ドキュメント ビュー オブジェクトから`QueryInterface`が呼び出されると`IVsCodeWindow`します。 期待は、テキスト エディターが返されで、ドキュメント ビュー オブジェクトが返されるためにここでは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>メソッドはコード ウィンドウです。  
   
 ```cpp  
 HRESULT CFindTool::GotoFileLocation(const WCHAR * szFile, long iLine, long iStart, long iLen)  
@@ -116,6 +113,6 @@ Error:
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [複数のドキュメント ビューをサポートします。](../extensibility/supporting-multiple-document-views.md)   
- [方法: 添付ドキュメント データへのビュー](../extensibility/how-to-attach-views-to-document-data.md)   
+ [複数のドキュメント ビューのサポート](../extensibility/supporting-multiple-document-views.md)   
+ [方法: ドキュメント データをビューをアタッチします。](../extensibility/how-to-attach-views-to-document-data.md)   
  [カスタム エディターとデザイナーの作成](../extensibility/creating-custom-editors-and-designers.md)

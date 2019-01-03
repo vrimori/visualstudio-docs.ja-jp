@@ -1,9 +1,6 @@
 ---
-title: '方法: ワークシート内のデータベース レコードをスクロール'
-ms.custom: ''
+title: '方法: ワークシート内のデータベース レコードをスクロールします。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,17 +15,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7e9ffaffdefda98e3e074467fcd4df8cacce91b4
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 1459ee941a8cb88d102e14ccfc7f128796c4c333
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672883"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53897471"
 ---
-# <a name="how-to-scroll-through-database-records-in-a-worksheet"></a>方法: ワークシート内のデータベース レコードをスクロール
+# <a name="how-to-scroll-through-database-records-in-a-worksheet"></a>方法: ワークシート内のデータベース レコードをスクロールします。
   次の手順では、デザイナーを使用して、エンドユーザーがすべてのレコードをスクロールできるようにするコントロールでの Microsoft Office Excel ワークシートで、データベース テーブルから 1 つのフィールドを表示する方法を示します。  
   
- ドキュメント レベルのプロジェクトでのみ、デザイナーを使用することができます。 ただし、コントロールを追加し、実行時にプログラムでデータにバインドすることができますも。 詳細については、次を参照してください。[チュートリアル: VSTO アドイン プロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)します。  
+ ドキュメント レベルのプロジェクトでのみ、デザイナーを使用することができます。 ただし、コントロールを追加し、実行時にプログラムでデータにバインドすることができますも。 詳細については、「[チュートリアル:VSTO アドイン プロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)します。  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
@@ -48,5 +45,3 @@ ms.locfileid: "35672883"
   
 ## <a name="see-also"></a>関連項目  
  [Office ソリューションでのコントロールにデータをバインドします。](../vsto/binding-data-to-controls-in-office-solutions.md)  
-  
-  

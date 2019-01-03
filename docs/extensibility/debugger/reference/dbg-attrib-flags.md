@@ -1,9 +1,6 @@
 ---
-title: DBG_ATTRIB_FLAGS |Microsoft ドキュメント
-ms.custom: ''
+title: DBG_ATTRIB_FLAGS |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - DBG_ATTRIB_FLAGS
@@ -15,15 +12,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 774bef7a3f28c973c9569544556d3033ede0093d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2df250545963ad29a609ebe9202c554f646eef74
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31107739"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53840045"
 ---
 # <a name="dbgattribflags"></a>DBG_ATTRIB_FLAGS
-さまざまな属性について説明します、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)または[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)インターフェイスです。 メンバー、 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)構造体。  
+さまざまな属性について説明します、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)または[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)インターフェイス。 メンバー、 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)構造体。  
   
 ## <a name="syntax"></a>構文  
   
@@ -176,10 +173,10 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
  参照またはプロパティが子を持つことを示します。  
   
  DBG_ATTRIB_OBJ_HAS_ID  
- このオブジェクトの ID が作成されていることを示します。  
+ このオブジェクトの ID が作成されたことを示します。  
   
  DBG_ATTRIB_OBJ_CAN_HAVE_ID  
- このオブジェクトの ID を作成することを示します。  
+ このオブジェクトの ID を作成できることを示します。  
   
  DBG_ATTRIB_VALUE_READONLY  
  値が読み取り専用であることを示します。  
@@ -191,13 +188,13 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
  評価に副作用があったことを示します。  
   
  DBG_ATTRIB_OVERLOADED_CONTAINER  
- このプロパティが実際にオーバー ロードのコンテナーを示します。  
+ このプロパティは、オーバー ロードのコンテナーでは実際にことを示します。  
   
  DBG_ATTRIB_VALUE_BOOLEAN  
  示します値`DEBUG_PROPERTY_INFO::bstrValue`はブール値。  
   
  DBG_ATTRIB_VALUE_BOOLEAN_TRUE  
- 示します値`DEBUG_PROPERTY_INFO::bstrValue`はブール値と`TRUE`です。  
+ 示します値`DEBUG_PROPERTY_INFO::bstrValue`はブール値と`TRUE`します。  
   
  DBG_ATTRIB_VALUE_INVALID  
  `DEBUG_PROPERTY_INFO::bstrValue` 内の値が無効であることを示します。  
@@ -209,16 +206,16 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
  示します値`DEBUG_PROPERTY_INFO::bstrValue`自動拡張がされている可能性があります。  
   
  DBG_ATTRIB_VALUE_TIMEOUT  
- 評価がタイムアウトになったことを示します。  
+ 評価がタイムアウトを示します。  
   
  DBG_ATTRIB_VALUE_RAW_STRING  
  示します値`DEBUG_PROPERTY_INFO::bstrValue`未加工の文字列で表すことができます。  
   
  DBG_ATTRIB_VALUE_CUSTOM_VIEWER  
- このプロパティに関連付けられている、少なくとも 1 つのカスタム ビューアーがあることを示します。  
+ このプロパティに関連付けられている少なくとも 1 つのカスタム ビューアーがあることを示します。  
   
  DBG_ATTRIB_ACCESS_NONE  
- どちらを持つオブジェクトを示す`public`、`private`も`protected`アクセスと入力します。  
+ どちらを持つオブジェクトを示す`public`、`private`も`protected`へのアクセスを入力します。  
   
  DBG_ATTRIB_ACCESS_PUBLIC  
  パブリック アクセスを持つオブジェクトであることを示します。  
@@ -233,7 +230,7 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
  最終的なアクセスを持つオブジェクトであることを示します。  
   
  DBG_ATTRIB_ACCESS_ALL  
- アクセスの属性を抽出するマスク`DBG_ATTRIB_FLAGS`です。  
+ アクセス属性を抽出するマスク`DBG_ATTRIB_FLAGS`します。  
   
  DBG_ATTRIB_STORAGE_NONE  
  指定されたストレージ型がないことを示します。  
@@ -245,10 +242,10 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
  静的ストレージであることを示します。  
   
  DBG_ATTRIB_STORAGE_REGISTER  
- レジスタの記憶域を示します。  
+ レジスタのストレージを示します。  
   
  DBG_ATTRIB_STORAGE_ALL  
- 記憶域の属性を抽出するマスク`DBG_ATTRIB_FLAGS`です。  
+ 記憶域の属性を抽出するマスク`DBG_ATTRIB_FLAGS`します。  
   
  DBG_ATTRIB_TYPE_NONE  
  型修飾子がないことを示します。  
@@ -266,10 +263,10 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
  オブジェクトの型が volatile であることを示します。  
   
  DBG_ATTRIB_TYPE_ALL  
- 型の属性を抽出するマスク`DBG_ATTRIB_FLAGS`です。  
+ 型の属性を抽出するマスク`DBG_ATTRIB_FLAGS`します。  
   
  DBG_ATTRIB_DATA  
- このオブジェクトがデータ フィールドであることを示します。  
+ このオブジェクトは、データ フィールドであることを示します。  
   
  DBG_ATTRIB_METHOD  
  このオブジェクトがメソッドであることを示します。  
@@ -278,10 +275,10 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
  このオブジェクトがプロパティであることを示します。  
   
  DBG_ATTRIB_CLASS  
- このオブジェクトが、クラスであることを示します。  
+ このオブジェクトがクラスであることを示します。  
   
  DBG_ATTRIB_BASECLASS  
- このオブジェクトが、基底クラスであることを示します。  
+ このオブジェクトは、基底クラスであることを示します。  
   
  DBG_ATTRIB_INTERFACE  
  このオブジェクトがインターフェイスであることを示します。  
@@ -290,29 +287,29 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
  このオブジェクトが内部クラスであることを示します。  
   
  DBG_ATTRIB_MOSTDERIVED  
- このオブジェクトがあることを示します '*最も多く派生*' です。 用語"*最も多く派生*"オブジェクトの実際の型とその参照の型ではありません。  
+ このオブジェクトがあることを示します '*最も多く派生*'。 用語"*最も多く派生*"オブジェクトの実際の型とその参照の型ではありません。  
   
  DBG_ATTRIB_CHILD_ALL  
- マスクを示す`DBG_ATTRIB_DATA`を通じて`DBG_ATTRIB_MOSTDERIVED`です。  
+ マスクを示します`DBG_ATTRIB_DATA`を通じて`DBG_ATTRIB_MOSTDERIVED`します。  
   
  DBG_ATTRIB_MULTI_CUSTOM_VIEWERS  
  オブジェクトに関連付けられている複数のカスタム ビューアーがあることを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  この列挙体の値は、c# のアセンブリに実際に定義されていません。 代わりに、ソース ファイルに定義をコピーする必要があります。  
+>  この列挙体の値は c# のアセンブリに実際に定義されていません。 代わりに、ソース ファイルに定義をコピーする必要があります。  
   
- これらのフラグはへの引数として渡されるときに、オブジェクトの子オブジェクトをフィルター処理にも使用[EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)です。 値は、ビットごとと組み合わせること`OR`です。  
+ これらのフラグは、引数として渡されるときに、オブジェクトの子オブジェクトをフィルター処理にも使用[EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)します。 ビットごとの値を組み合わせることができます`OR`します。  
   
  `DBG_ATTRIB_VALUE_CUSTOM_VIEWER`フラグを示す値を[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]を取得する、 [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)からインターフェイス、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)インターフェイスと呼び出し[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)カスタム ビューアーの一覧についてはします。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   

@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: c# または Visual Basic を使用して、SDK の作成 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: C# または Visual Basic を使用して SDK の作成 |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: ef96a249-5eef-402a-a8d5-d74cb49239bd
 author: gregvanl
@@ -11,14 +8,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c65f827af864a32bb13a90a0ba9818467298527
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 13e95988ee67431686472b2bdb0e548c03201b7d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49835158"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53921654"
 ---
-# <a name="walkthrough-create-an-sdk-using-c-or-visual-basic"></a>チュートリアル: c# または Visual Basic を使用して SDK を作成します。
+# <a name="walkthrough-create-an-sdk-using-c-or-visual-basic"></a>チュートリアル: C# または Visual Basic を使用して、SDK を作成します。
 このチュートリアルでは、Visual c# を使用して単純な数値演算ライブラリの SDK を作成し、SDK と Visual Studio Extension (VSIX) パッケージ化する方法を学習します。 次の手順を完了します。  
   
 -   [SimpleMath Windows ランタイム コンポーネントを作成するには](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createClassLibrary)  
@@ -136,7 +133,7 @@ ms.locfileid: "49835158"
   
 22. **ソリューション エクスプ ローラー**、選択**SimpleMath.winmd**します。  
   
-23. メニュー バーで、**ビュー** > **プロパティ**(キーボード: 選択、 **F4**キー)。  
+23. メニュー バーで、**ビュー** > **プロパティ**(キーボード。選択、 **F4**キー)。  
   
 24. **プロパティ**ウィンドウで、変更、**ビルド アクション**プロパティを**コンテンツ**、し、変更、 **VSIX に含める**プロパティ**True**します。  
   
@@ -242,6 +239,6 @@ ms.locfileid: "49835158"
     作成し、拡張機能 SDK を使用できました。  
   
 ## <a name="see-also"></a>関連項目  
- [チュートリアル: C++ を使用して SDK を作成します。](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)   
- [チュートリアル: JavaScript を使用して SDK を作成します。](../extensibility/walkthrough-creating-an-sdk-using-javascript.md)   
+ [チュートリアル: C++ を使用して、SDK を作成します。](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)   
+ [チュートリアル: JavaScript を使用して、SDK を作成します。](../extensibility/walkthrough-creating-an-sdk-using-javascript.md)   
  [ソフトウェア開発キットを作成します。](../extensibility/creating-a-software-development-kit.md)

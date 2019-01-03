@@ -1,9 +1,6 @@
 ---
 title: '方法: エラーのマーカーの実装 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - error markers
@@ -13,14 +10,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: eb6e511fa899680338831f3bc8e2a411f2126006
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 2e074a5e293d5b76f19abd97354b10becd603c5b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49861164"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53931503"
 ---
-# <a name="how-to-implement-error-markers"></a>方法: エラーのマーカーの実装
+# <a name="how-to-implement-error-markers"></a>方法: エラーのマーカーを実装します。
 エラーのマーカー (または赤色の波下線) は、テキスト エディターのカスタマイズを実装するが最も難しいです。 ただし、VSPackage のユーザーに提供する利点は、提供するコストを上回るまでことができます。 エラーのマーカーは、微妙、言語のパーサーが波線または波状の赤い線で正しくないと判断されるテキストをマークします。 このインジケーターには、不適切なコードを視覚的に表示することでプログラマが役立ちます。  
   
  テキスト マーカーを使用すると、赤い波線を実装します。 原則として、言語サービスに赤い波線がバッファーに追加テキスト、バック グラウンド パスとして、アイドル時、またはバック グラウンド スレッドでします。  
@@ -29,11 +26,11 @@ ms.locfileid: "49861164"
   
 1. 赤い波線を配置するテキストを選択します。  
   
-2. 型のマーカーを作成`MARKER_CODESENSE_ERROR`です。 詳細については、次を参照してください。[方法: 標準のテキスト マーカーを追加](../extensibility/how-to-add-standard-text-markers.md)します。  
+2. 型のマーカーを作成`MARKER_CODESENSE_ERROR`です。 詳細については、「[方法 :標準のテキスト マーカーを追加](../extensibility/how-to-add-standard-text-markers.md)します。  
   
 3. その後、渡す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>インターフェイス ポインター。  
   
-   このプロセスでは、特定のマーカーにツールヒントのテキストまたは特別なコンテキスト メニューを作成することもできます。 詳細については、次を参照してください。[方法: 標準のテキスト マーカーを追加](../extensibility/how-to-add-standard-text-markers.md)します。  
+   このプロセスでは、特定のマーカーにツールヒントのテキストまたは特別なコンテキスト メニューを作成することもできます。 詳細については、「[方法 :標準のテキスト マーカーを追加](../extensibility/how-to-add-standard-text-markers.md)します。  
   
    エラーのマーカーを表示する前に、次のオブジェクトが必要です。  
   
@@ -58,6 +55,6 @@ ms.locfileid: "49861164"
   
 ## <a name="see-also"></a>関連項目  
  [テキスト マーカーを使用して、従来の API を使用しました。](../extensibility/using-text-markers-with-the-legacy-api.md)   
- [方法: 標準のテキスト マーカーの追加](../extensibility/how-to-add-standard-text-markers.md)   
- [方法: カスタム テキスト マーカーの作成](../extensibility/how-to-create-custom-text-markers.md)   
- [方法: テキスト マーカーを使用](../extensibility/how-to-use-text-markers.md)
+ [方法: 標準のテキスト マーカーを追加します。](../extensibility/how-to-add-standard-text-markers.md)   
+ [方法: カスタム テキスト マーカーを作成します。](../extensibility/how-to-create-custom-text-markers.md)   
+ [方法: テキスト マーカーを使用します。](../extensibility/how-to-use-text-markers.md)
