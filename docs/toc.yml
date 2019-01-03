@@ -1,6 +1,6 @@
 items:
 - name: Visual Studio ドキュメント
-  href: ide/index.md
+  href: ide/index.yml
 - name: 概要
   items:
   - name: Visual Studio 2017 について
@@ -38,7 +38,7 @@ items:
   - name: Visual Studio 2017 の変更
     href: install/modify-visual-studio.md
   - name: ヘルプ ビューアーのインストール
-    href: ide/microsoft-help-viewer-installation.md
+    href: help-viewer/installation.md
   - name: Visual Studio を修復します
     href: install/repair-visual-studio.md
   - name: Visual Studio のアンインストール
@@ -84,12 +84,12 @@ items:
       - name: 'Visual Studio サブスクリプション: 管理者の概要'
         href: /visualstudio/subscriptions/admin-responsibilities
     - name: ヘルプ ビューアー の管理者ガイド
-      href: ide/help-viewer-administrator-guide.md
+      href: help-viewer/administrator-guide.md
       items:
       - name: ヘルプ コンテンツ マネージャーのコマンド ライン引数
-        href: ide/command-line-arguments-for-the-help-content-manager.md
+        href: help-viewer/command-line-arguments.md
       - name: ヘルプ コンテンツ マネージャーのオーバーライド
-        href: ide/help-content-manager-overrides.md
+        href: help-viewer/behavior-overrides.md
     - name: 参照
       items:
       - name: Visual Studio のワークロードとコンポーネント ID
@@ -140,32 +140,24 @@ items:
     href: ide/quickstart-fsharp.md
   - name: 'C#: Web アプリの作成'
     href: ide/quickstart-aspnet-core.md
-  - name: 'C#: UWP アプリの作成'
-    href: ide/quickstart-uwp-csharp.md
   - name: 'C#: コンソール アプリを作成する'
     href: ide/quickstart-csharp-console.md
   - name: 'Visual Basic: コンソール アプリを作成する'
     href: ide/quickstart-visual-basic-console.md
 - name: チュートリアル
   items:
-  - name: Visual Studio での C++...
-    href: /cpp/build/vscpp-step-0-installation
-  - name: Visual Studio での Python
-    href: python/tutorial-working-with-python-in-visual-studio-step-01-create-project.md
-  - name: Visual Studio での R...
-    href: rtvs/getting-started-with-r.md
-  - name: Visual Studio での Node.js
-    href: javascript/tutorial-nodejs.md
-  - name: Visual Studio での C#
-    items:
-    - name: 'C#: Web アプリの作成'
-      href: ide/tutorial-csharp-aspnet-core.md
-    - name: 'C#: コンソール アプリを作成する'
-      href: ide/tutorial-csharp-console.md
-  - name: Visual Studio での Visual Basic
-    href: ide/tutorial-visual-basic-console.md
-  - name: Visual Studio でのデバッグ
-    href: debugger/getting-started-with-the-debugger.md?context=visualstudio/default&contextView=vs-2017
+  - name: C#
+    href: get-started/csharp/
+  - name: F#
+    href: /dotnet/fsharp/
+  - name: Visual Basic
+    href: get-started/visual-basic/
+  - name: C++
+    href: /cpp/get-started/tutorials/
+  - name: Python
+    href: python/
+  - name: Node.js
+    href: javascript/
 - name: 使い方ガイド
   items:
   - name: 開発
@@ -517,7 +509,7 @@ items:
     - name: 追加のチュートリアル
       items:
       - name: C# または Visual Basic を使用した WPF アプリの作成
-        href: ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md
+        href: /visualstudio/get-started/csharp/tutorial-wpf
       - name: Windows フォーム アプリケーションのチュートリアル
         items:
         - name: 'チュートリアル 1: ピクチャ ビューアーの作成 (C#)'
@@ -785,8 +777,8 @@ items:
           href: ide/reference/quick-launch-environment-options-dialog-box.md
         - name: '[環境] - [スタートアップ]'
           href: ide/reference/startup-environment-options-dialog-box.md
-        - name: '[環境] - [同期された設定]'
-          href: ide/reference/synchronized-settings-environment-options-dialog-box.md
+        - name: '[環境] - [アカウント]'
+          href: ide/reference/accounts-environment-options-dialog-box.md
         - name: '[環境] - [タブとウィンドウ]'
           href: ide/reference/tabs-and-windows-environment-options-dialog-box.md
         - name: '[環境] - [タスク一覧]'
@@ -1057,28 +1049,28 @@ items:
     - name: Windows 情報保護 (WIP)
       href: ide/exempt-visual-studio-from-wip.md
   - name: Microsoft ヘルプ ビューアー
-    href: ide/microsoft-help-viewer.md
+    href: help-viewer/overview.md
     items:
     - name: ローカル コンテンツのインストールと管理
-      href: ide/install-and-manage-local-content.md
+      href: help-viewer/install-manage-local-content.md
     - name: ヘルプ ビューアーでのトピックの検索
       items:
       - name: インデックスでトピックを検索する
-        href: ide/how-to-find-topics-in-the-index.md
+        href: help-viewer/find-topics-index.md
       - name: 目次でトピックを検索する
-        href: ide/how-to-find-topics-in-the-table-of-contents.md
+        href: help-viewer/find-topics-toc.md
       - name: トピックを検索する
-        href: ide/how-to-search-for-topics.md
+        href: help-viewer/find-topics.md
         items:
         - name: 検索式の論理演算子と高度な演算子
-          href: ide/logical-operators-in-search-expressions.md
+          href: help-viewer/logical-operators-search-expressions.md
     - name: ヘルプ ビューアーのカスタマイズ
-      href: ide/customize-the-help-viewer.md
-    - name: ヘルプ ビューアーのユーザー補助機能
-      href: ide/accessibility-features-of-the-help-viewer.md
+      href: help-viewer/customize.md
+    - name: ユーザー補助機能
+      href: help-viewer/accessibility-features.md
       items:
-      - name: ショートカット キー (ヘルプ ビューアー)
-        href: ide/shortcut-keys-help-viewer.md
+      - name: ショートカット キー
+        href: help-viewer/shortcut-keys.md
   - name: Dotfuscator Community Edition (CE)
     href: ide/dotfuscator/index.md
     items:
@@ -1120,9 +1112,10 @@ items:
       href: ide/developer-community-privacy.md
   - name: Visual Studio で問題を報告する方法
     href: ide/how-to-report-a-problem-with-visual-studio-2017.md
-  - name: '概要: 問題を報告する'
-    href: ide/report-a-problem.md
-  - name: '概要: 機能を提案する'
+    items:
+    - name: 問題の状態の報告とよくあるご質問
+      href: ide/report-a-problem.md
+  - name: Visual Studio の機能を提案する
     href: ide/suggest-a-feature.md
   - name: カスタマー エクスペリエンス向上プログラム
     href: ide/visual-studio-experience-improvement-program.md
@@ -1133,9 +1126,9 @@ items:
     href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
   - name: ご意見
     href: ide/talk-to-us.md
-ms.openlocfilehash: 26d86461928e5494d4c0d8686cdf279847f29342
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: 65504b4cf7bfd126edceacfdcfd1cc71e725e8ca
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160076"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53740423"

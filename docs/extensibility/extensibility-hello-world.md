@@ -11,7 +11,7 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: e2122a98778372690990a75269be2f3087653678
 ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/09/2018
 ms.locfileid: "51349466"
@@ -27,7 +27,7 @@ ms.locfileid: "51349466"
 * **[ソース コードを変更](#modify-the-source-code)**
 * **[実行](#run-it)**
 
-この例ではVisual C#を使用して次に示すような「Say Hello World!」という名前のカスタム メニュー ボタンを追加します。
+この例ではVisual C#を使用して次に示すような「Say Hello World!」という名前のカスタム メニュー ボタンを追加します。 次に示します。
 
 ![Hello World コマンド](media/hello-world-say-hello-world.png)
 

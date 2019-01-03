@@ -5,7 +5,7 @@ items:
   href: installing-the-visual-studio-sdk.md
 - name: Visual Studio 拡張機能の開発を始める
   href: starting-to-develop-visual-studio-extensions.md
-- name: '初めての拡張機能の作成: Hello World'
+- name: 初めての拡張機能の作成:Hello World
   href: extensibility-hello-world.md
 - name: Visual Studio 2017 SDK の新機能
   href: what-s-new-in-the-visual-studio-2017-sdk.md
@@ -129,7 +129,7 @@ items:
       href: walkthrough-linking-a-content-type-to-a-file-name-extension.md
     - name: 'チュートリアル: 余白のグリフの作成'
       href: walkthrough-creating-a-margin-glyph.md
-    - name: 'チュートリアル: テキスト ビューのカスタマイズ'
+    - name: 'チュートリアル: チュートリアル: テキスト ビューのカスタマイズ'
       href: walkthrough-customizing-the-text-view.md
     - name: 'チュートリアル: ビューの表示要素、コマンド、設定 (垂直グリッド ガイド) の作成'
       href: walkthrough-creating-a-view-adornment-commands-and-settings-column-guides.md
@@ -231,8 +231,10 @@ items:
       href: assembly-element-visual-studio-templates.md
     - name: Assembly 要素 (Visual Studio テンプレート ウィザード拡張)
       href: assembly-element-visual-studio-template-wizard-extension.md
-    - name: BuildProjectOnLoad (Visual Studio テンプレート)
-      href: buildprojectonload-visual-studio-templates.md
+    - name: BuildOnLoad 属性と要素 (Visual Studio テンプレート)
+      href: buildonload-visual-studio-templates.md
+    - name: BuildProjectOnload 要素 (Visual Studio テンプレート)
+      href: buildprojectonload-element-visual-studio-templates.md
     - name: CreateInPlace (Visual Studio テンプレート)
       href: createinplace-visual-studio-templates.md
     - name: CreateNewFolder 要素 (Visual Studio テンプレート)
@@ -295,6 +297,10 @@ items:
       href: references-element-visual-studio-templates.md
     - name: RequiredFrameworkVersion 要素 (Visual Studio テンプレート)
       href: requiredframeworkversion-element-visual-studio-templates.md
+    - name: RequiredPlatformVersion 要素 (Visual Studio テンプレート)
+      href: requiredplatformversion-element-visual-studio-templates.md
+    - name: SDKReference 要素 (Visual Studio テンプレート)
+      href: sdkreference-element-visual-studio-templates.md
     - name: ShowByDefault (Visual Studio テンプレート)
       href: showbydefault-visual-studio-templates.md
     - name: SolutionFolder 要素 (Visual Studio テンプレート)
@@ -307,6 +313,8 @@ items:
       href: supportslanguagedropdown-element-visual-studio-templates.md
     - name: SupportsMasterPage 要素 (Visual Studio テンプレート)
       href: supportsmasterpage-element-visual-studio-templates.md
+    - name: TargetPlatformName 要素 (Visual Studio テンプレート)
+      href: targetplatformname-element-visual-studio-templates.md
     - name: TemplateContent 要素 (Visual Studio テンプレート)
       href: templatecontent-element-visual-studio-templates.md
     - name: TemplateData 要素 (Visual Studio テンプレート)
@@ -321,14 +329,6 @@ items:
       href: wizarddata-element-visual-studio-templates.md
     - name: WizardExtension 要素 (Visual Studio テンプレート)
       href: wizardextension-element-visual-studio-templates.md
-    - name: BuildProjectOnload 要素 (Visual Studio テンプレート)
-      href: buildprojectonload-element-visual-studio-templates.md
-    - name: RequiredPlatformVersion 要素 (Visual Studio テンプレート)
-      href: requiredplatformversion-element-visual-studio-templates.md
-    - name: SDKReference 要素 (Visual Studio テンプレート)
-      href: sdkreference-element-visual-studio-templates.md
-    - name: TargetPlatformName 要素 (Visual Studio テンプレート)
-      href: targetplatformname-element-visual-studio-templates.md
   - name: Visual Studio テンプレート マニフェスト スキーマ参照
     href: visual-studio-template-manifest-schema-reference.md
 - name: ユーザー設定とオプションの拡張
@@ -743,9 +743,9 @@ items:
     href: roslyn-analyzers-and-code-aware-library-for-immutablearrays.md
   - name: Roslyn パッケージ バージョンのリファレンス
     href: roslyn-version-support.md
-ms.openlocfilehash: 9416d9557265e9a5a84d115badaaa1882228b4f2
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: f16722f3f0b684b3923f2dfa5b30c06e79d0a90b
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50967494"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53562361"
