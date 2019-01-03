@@ -10,12 +10,12 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 05ffd249be3d7734979f3a131a3a10423b76cb9d
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 343b992520cddce66a4e4930244738d5b56246b1
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35667016"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53804080"
 ---
 # <a name="work-with-r-in-visual-studio"></a>Visual Studio での R の使用
 
@@ -43,7 +43,7 @@ Visual Studio で R を使用するには、次の手順を実行します。
 | [対話型ウィンドウ](interactive-repl-for-r-in-visual-studio.md) | R で完全な REPL エクスペリエンスを実現でき、対話型ウィンドウでソース ファイルのコードを簡単に実行可能です。 | N/A |
 | [データの視覚化](visualizing-data-with-r-in-visual-studio.md) | プロットは R を使用する上で不可欠な部分であるため、RTVS では独立した複数のプロット ウィンドウを利用できます。各ウィンドウには、履歴とウィンドウ間のプロットの移動機能が備わっています。 プロットはビットマップ ファイルと PDF ファイルに保存でき、またビットマップやメタファイルとしてクリップボードにコピーすることもできます。  | N/A |
 | [Variable Explorer](variable-explorer.md) | 並べ替え可能なテーブルを表示する機能と CSV へのエクスポート機能を備えており、グローバル スコープ内やパッケージ固有のスコープ内の変数を調査できます。 | N/A |
-| [フル機能のデバッグ](debugging-r-in-visual-studio.md) | 対話型ウィンドウとの統合などがあります。 | [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md) |
+| [フル機能のデバッグ](debugging-r-in-visual-studio.md) | 対話型ウィンドウとの統合などがあります。 | [Visual Studio でのデバッグ](/visualstudio/debugger/debugger-feature-tour) |
 
 「[よく寄せられる質問](faq.md)」もご覧ください。
 
@@ -53,8 +53,8 @@ Visual Studio で R を使用するには、次の手順を実行します。
 
 ## <a name="send-us-your-feedback"></a>フィードバックをお寄せください。
 
-1. **Github の問題**: RTVS チームへ問い合わせる場合は、[GitHub 上で問題を報告する](https://github.com/Microsoft/RTVS/issues)か、**[R Tools]** > **[フィードバック]** メニューを使用して行ってください。
+1. **GitHub の問題**:RTVS チームへ問い合わせる場合は、[GitHub 上で問題を報告する](https://github.com/Microsoft/RTVS/issues)か、**[R Tools]** > **[フィードバック]** メニューを使用して行ってください。
 
-1. **気に入った機能の報告や問題点、改善点の報告**: **[R Tools]** > **[フィードバック]** メニューから、フィードバックの送信と、問題の診断に役立つ RTVS ログ ファイルの添付を素早く行えます  (ログは、個別に送信できるように *%temp%/RTVSlogs.zip* に書き込まれています)。**[ヘルプ]** > **[フィードバック]** > **[設定]** メニュー コマンドから、またはインストール中に [Visual Studio telemetry]\(Visual Studio テレメトリ\) をオフにした場合は、ログ機能が無効になります。
+1. **気に入った機能の報告や問題点、改善点の報告**:**[R Tools]** > **[フィードバック]** メニューから、フィードバックの送信と、問題の診断に役立つ RTVS ログ ファイルの添付を素早く行えます  (ログは、個別に送信できるように *%temp%/RTVSlogs.zip* に書き込まれています)。**[ヘルプ]** > **[フィードバック]** > **[設定]** メニュー コマンドから、またはインストール中に [Visual Studio telemetry]\(Visual Studio テレメトリ\) をオフにした場合は、ログ機能が無効になります。
 
-1. **電子メール**: チーム (*rtvsuserfeedback (at) microsoft.com*) 宛にフィードバックを直接送信できます。
+1. **電子メール**:チーム (*rtvsuserfeedback (at) microsoft.com*) 宛にフィードバックを直接送信できます。
