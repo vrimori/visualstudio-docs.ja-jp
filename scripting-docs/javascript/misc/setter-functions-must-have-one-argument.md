@@ -1,4 +1,4 @@
----
+﻿---
 title: Setter 関数が 1 つの引数を持つ必要があります |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/18/2017
