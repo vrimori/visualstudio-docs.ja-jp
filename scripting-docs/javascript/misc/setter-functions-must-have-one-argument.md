@@ -1,5 +1,5 @@
 ---
-title: セッター関数が 1 つの引数を持つ必要があります |Microsoft ドキュメント
+title: Setter 関数が 1 つの引数を持つ必要があります |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -28,6 +28,6 @@ ms.lasthandoff: 10/27/2017
 ms.locfileid: "24632712"
 ---
 # <a name="setter-functions-must-have-one-argument"></a>セッター関数には 1 つの引数が必要です
-1051: セッター関数が 1 つの引数を持つ必要があります  
+1051: Setter 関数が 1 つの引数を持つ必要があります  
   
  Setter 関数の引数を 1 つだけが必要です。
