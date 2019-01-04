@@ -1,9 +1,6 @@
 ---
-title: '方法: ビルトインの配色可能な項目を使用して、|Microsoft Docs'
-ms.custom: ''
+title: '方法: 組み込みの配色可能な項目を使用して、|Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - colorable items
@@ -14,19 +11,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b537c28f34faff1eff0502642236413f2ade2da1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f0884ecd265522b2b0f2a222e12cb01c34c7e8c3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49942167"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53947297"
 ---
-# <a name="how-to-use-built-in-colorable-items"></a>方法: ビルトインの配色可能な項目を使用して、
+# <a name="how-to-use-built-in-colorable-items"></a>方法: 組み込みの配色可能な項目を使用して、
 組み込みの配色可能な項目を使用する前にする必要があります最初に通知する、統合開発環境 (IDE) ここで可能性のあるカスタム独自配色可能な項目を提供していない<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems>オブジェクト。 言語サービスのレジストリ エントリを設定して行います。  
   
 ## <a name="to-use-built-in-colorable-items"></a>組み込みの配色可能な項目を使用するには  
   
-1. **HKEY_LOCAL_MACHINE\VisualStudio\\< X.Y > \Languages\Language サービス\\< 言語名\>**、 \<X.Y > のバージョンが[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]と\<言語名 > は、名前と呼ばれる、レジストリ エントリの DWORD 値を作成、使用する言語の**RequestStockColors**。  
+1. **HKEY_LOCAL_MACHINE\VisualStudio\\< X.Y > \Languages\Language サービス\\< 言語名\>** ここで、 \<X.Y > のバージョンは、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]と\<言語名 > 名前を指定します、言語の作成という DWORD レジストリ エントリ値**RequestStockColors**します。  
   
 2. 設定、 **RequestStockColors**レジストリ エントリの値を*1*します。  
   
