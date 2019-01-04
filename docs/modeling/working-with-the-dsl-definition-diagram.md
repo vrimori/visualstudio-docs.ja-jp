@@ -17,13 +17,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: d7e052f64e931769b1fedde7e184bfeefa43a77d
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: 2c95d1a096d2b7d90292711ae53117321e54746b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50967403"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53888427"
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>DSL 定義図の使用
 ダイアグラムを[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]定義は、ドメイン固有言語を定義するための重要なツールです。 ドメイン モデルに要素を追加し、図で関係を定義し、図のレイアウトを読みやすいように変更できます。
@@ -70,7 +69,7 @@ ms.locfileid: "50967403"
  継承やリレーションシップ ツリーを分割するには、それらを表示するドメイン クラス定義を右クリックし、をクリックして**ツリーの分割**します。 定義要素はプレースホルダー要素になり、継承ツリーやリレーションシップ ツリーと共に、定義ドメイン クラスがパーティションの下部に表示されます。
 
 ### <a name="show-as-class"></a>[Show As Class] (クラスとして表示)
- ドメイン リレーションシップに派生リレーションシップ、か、その他のドメイン リレーションシップ埋め込みまたは参照リレーションシップがある場合クラスとしてのリレーションシップを表示、リレーションシップを右クリックし、をクリックして**クラスとして表示します**。 リレーションシップが表示されます、**ドメイン プロパティ**コンパートメントし、継承やリレーションシップ ツリーが表示されます。
+ ドメイン リレーションシップに派生リレーションシップ、か、その他のドメイン リレーションシップ埋め込みまたは参照リレーションシップがある場合クラスとしてのリレーションシップを表示、リレーションシップを右クリックし、をクリックして**クラスとして表示します。**. リレーションシップが表示されます、**ドメイン プロパティ**コンパートメントし、継承やリレーションシップ ツリーが表示されます。
 
 ## <a name="see-also"></a>関連項目
 

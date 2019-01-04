@@ -1,9 +1,6 @@
 ---
 title: 基本的なプロジェクト システムの作成、パート 2 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - writing a project system
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f5a059562db2409dca8eca1fb53c007059456b9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d54e8833389d110efdcefd8d437645ef5824d8f6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49928114"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53967775"
 ---
 # <a name="create-a-basic-project-system-part-2"></a>基本的なプロジェクト システム、第 2 部を作成します。
 このシリーズでは、最初のチュートリアル[基本的なプロジェクト システム、第 1 部作成](../extensibility/creating-a-basic-project-system-part-1.md)、基本的なプロジェクト システムを作成する方法を示しています。 このチュートリアルでは、Visual Studio テンプレート、プロパティ ページでは、その他の機能を追加して、基本的なプロジェクト システムに基づいています。 この 1 つを開始する前に、最初のチュートリアルを完了する必要があります。  
@@ -187,9 +184,9 @@ ZipProjects:
   
 1. Visual Studio SDK 実験用インスタンスをリセットします。  
   
-    [!INCLUDE[win7](../debugger/includes/win7_md.md)]: で、**開始**] メニューの [検索、 **Microsoft Visual Studio または Microsoft Visual Studio SDK/Tools**フォルダー、および選択**Microsoft Visual Studio 実験をリセットインスタンス**します。  
+     [!INCLUDE[win7](../debugger/includes/win7_md.md)]:**開始**] メニューの [検索、 **Microsoft Visual Studio または Microsoft Visual Studio SDK/Tools**フォルダー、および選択**MicrosoftVisualStudio実験用インスタンスのリセット**.  
   
-    以降のバージョンの Windows 上: で、**開始**画面で「 **Microsoft Visual Studio をリセット\<バージョン > 実験用インスタンス**します。  
+    以降のバージョンの Windows では。**開始**画面で「 **Microsoft Visual Studio をリセット\<バージョン > 実験用インスタンス**します。  
   
 2. コマンド プロンプト ウィンドウが表示されます。 単語が表示されたら**任意のキーを押して続行**、 をクリックして**ENTER**します。 ウィンドウを閉じた後は、Visual Studio を開きます。  
   

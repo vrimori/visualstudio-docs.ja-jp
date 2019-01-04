@@ -1,9 +1,6 @@
 ---
 title: 設計および Office ソリューションの作成
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,12 +15,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4803cbb515c680ce0d004cb2f9c1f5ee730bc588
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: b1911feec92e802fb8534623c903bb6461832bf2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53648808"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53935990"
 ---
 # <a name="design-and-create-office-solutions"></a>設計および Office ソリューションの作成
   Visual Studio には、さまざまな種類の Office ソリューションの作成に使用できるプロジェクト テンプレートが用意されています。 ここでは、プロジェクト テンプレートについて説明し、Office プロジェクトを作成するためのガイダンスを示します。 プロジェクトを作成した後、コードやユーザー インターフェイスのカスタマイズを実装する方法については、次を参照してください。 [Office の開発ソリューション](../vsto/developing-office-solutions.md)します。  
@@ -108,5 +105,3 @@ ms.locfileid: "53648808"
  [Office プログラミングで一般的なタスク](../vsto/common-tasks-in-office-programming.md)   
  [Office ソリューションを開発します。](../vsto/developing-office-solutions.md)   
  [Visual Studio での Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)  
-  
-  

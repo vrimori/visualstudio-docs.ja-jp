@@ -1,9 +1,6 @@
 ---
 title: IManagedAddin インターフェイス
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ddede8542cda7499a9781c19a6baf1c58acfd125
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: b0e754502e3bee2a1e35dda7feb19bc4906f42e6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49839545"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53859056"
 ---
 # <a name="imanagedaddin-interface"></a>IManagedAddin インターフェイス
   読み込むコンポーネントを作成するには、その IManagedAddin インターフェイスを実装では、VSTO アドインを管理します。このインターフェイスは、2007 Microsoft Office system に追加された機能です。  
@@ -73,7 +70,7 @@ interface IManagedAddin : IUnknown
   
 4. アプリケーションによって [IManagedAddin::Load](../vsto/imanagedaddin-load.md) メソッドが呼び出され、 `Manifest` エントリの値に渡されます。  
   
-5. [IManagedAddin::Load](../vsto/imanagedaddin-load.md) メソッドによって、読み込む VSTO アドイン用のアプリケーション ドメインやセキュリティ ポリシーの構成など、VSTO アドイン読み込みに必要なタスクが実行されます。  
+5.  [IManagedAddin::Load](../vsto/imanagedaddin-load.md) メソッドによって、読み込む VSTO アドイン用のアプリケーション ドメインやセキュリティ ポリシーの構成など、VSTO アドイン読み込みに必要なタスクが実行されます。  
   
    Microsoft Office アプリケーションを検出して読み込むに使用するキーが VSTO アドインを管理対象レジストリの詳細についてを参照してください[VSTO アドインのレジストリ エントリ](../vsto/registry-entries-for-vsto-add-ins.md)します。  
   
@@ -89,5 +86,3 @@ interface IManagedAddin : IUnknown
   
 ## <a name="see-also"></a>関連項目  
  [アンマネージ API リファレンス&#40;Visual Studio での Office 開発&#41;](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)  
-  
-  

@@ -1,9 +1,6 @@
 ---
-title: '方法: ListObject コントロールをサイズ変更'
-ms.custom: ''
+title: '方法: ListObject コントロールをサイズ変更します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,14 +13,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 3608399613063a0fa572fe4de12b77187f8b4b41
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e655305400915f1ac97a042ac1cca26e52a05ec5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49811504"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53909685"
 ---
-# <a name="how-to-resize-listobject-controls"></a>方法: ListObject コントロールをサイズ変更
+# <a name="how-to-resize-listobject-controls"></a>方法: ListObject コントロールをサイズ変更します。
   <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールのサイズは Microsoft Office Excel ブックにコントロールを追加するときに設定しますが、後でサイズを変更することもできます。 たとえば、2 列のリストを 3 列のリストに変更できます。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
@@ -40,7 +37,7 @@ ms.locfileid: "49811504"
   
   詳細については<xref:Microsoft.Office.Tools.Excel.ListObject>コントロールを参照してください[ListObject コントロール](../vsto/listobject-control.md)します。  
   
-  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[実行時にデータ バインド リスト オブジェクトに列を操作の追加の操作方法?](http://go.microsoft.com/fwlink/?LinkID=130318)します。  
+  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:。実行時にデータ バインド リスト オブジェクトには、列を追加しますか。](http://go.microsoft.com/fwlink/?LinkID=130318).  
   
 ##  <a name="designtime"></a> デザイン時に ListObject コントロールのサイズを変更します。  
  リストのサイズを変更するには、サイズ変更ハンドルのいずれかをクリックしてドラッグでき、また **[リストのサイズ変更]** ダイアログ ボックスでそのサイズを再定義することもできます。  
@@ -74,7 +71,7 @@ ms.locfileid: "49811504"
      [!code-vb[Trin_VstcoreHostControlsExcel#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#7)]  
   
 ##  <a name="runtimeaddin"></a> VSTO アドイン プロジェクト内で実行時の ListObject のサイズを変更します。  
- サイズを変更することができます、<xref:Microsoft.Office.Tools.Excel.ListObject>実行時に、開いているワークシートにコントロール。 詳細を追加する方法については、 <xref:Microsoft.Office.Tools.Excel.ListObject> VSTO アドインを使用してワークシートにコントロールを参照してください[方法: ワークシートにコントロールを追加 ListObject](../vsto/how-to-add-listobject-controls-to-worksheets.md)。  
+ サイズを変更することができます、<xref:Microsoft.Office.Tools.Excel.ListObject>実行時に、開いているワークシートにコントロール。 詳細を追加する方法については、 <xref:Microsoft.Office.Tools.Excel.ListObject> VSTO アドインを使用してワークシートにコントロールを参照してください[方法。ワークシートに ListObject コントロールを追加](../vsto/how-to-add-listobject-controls-to-worksheets.md)します。  
   
 ### <a name="to-resize-a-list-object-programmatically"></a>リスト オブジェクトのサイズをプログラムで変更するには  
   
@@ -95,8 +92,6 @@ ms.locfileid: "49811504"
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [拡張オブジェクトを使用して Excel を自動化します。](../vsto/automating-excel-by-using-extended-objects.md)   
  [ListObject コントロール](../vsto/listobject-control.md)   
- [方法: ワークシートに ListObject コントロールを追加](../vsto/how-to-add-listobject-controls-to-worksheets.md)   
- [方法: Bookmark コントロールのサイズを変更します。](../vsto/how-to-resize-bookmark-controls.md)   
- [方法: NamedRange コントロールをサイズ変更](../vsto/how-to-resize-namedrange-controls.md)  
-  
-  
+ [方法: ワークシートに ListObject コントロールを追加します。](../vsto/how-to-add-listobject-controls-to-worksheets.md)   
+ [方法: ブックマーク コントロールをサイズ変更します。](../vsto/how-to-resize-bookmark-controls.md)   
+ [方法: NamedRange コントロールをサイズ変更します。](../vsto/how-to-resize-namedrange-controls.md)  

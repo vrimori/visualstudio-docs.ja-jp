@@ -1,8 +1,6 @@
 ---
 title: 実行時に Office ドキュメントにコントロールを追加します。
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology: office-development
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 dev_langs:
@@ -25,12 +23,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2ad16bc414e6d67b563240bcd2bceb15e9c34e97
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: be96a6967657a79d1e3bed9336ebb530accba2a0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52305638"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53842789"
 ---
 # <a name="add-controls-to-office-documents-at-runtime"></a>実行時に Office ドキュメントにコントロールを追加します。
   コントロールは、Microsoft Office Word 文書と実行時に Microsoft Office Excel ブックを追加することができます。 実行時にも削除できます。 コントロールを追加または削除時に呼び出される*ダイナミック コントロール*します。  
@@ -45,7 +43,7 @@ ms.locfileid: "52305638"
 
 - [Windows フォーム コントロールをドキュメントに追加](#WindowsForms)します。  
 
-  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[方法は、ドキュメントにコントロールを操作の追加画面実行時にしますか?](http://go.microsoft.com/fwlink/?LinkId=132782)します。  
+  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:。実行時にドキュメントの画面にコントロールを追加しますか。](http://go.microsoft.com/fwlink/?LinkId=132782).  
 
 ##  <a name="ControlsCollection"></a> コントロールのコレクションを使用して実行時にコントロールを管理します。  
  追加、取得、または実行時にコントロールを削除してのヘルパー メソッドを使用して、<xref:Microsoft.Office.Tools.Excel.ControlCollection>と<xref:Microsoft.Office.Tools.Word.ControlCollection>オブジェクト。  
@@ -82,15 +80,15 @@ ms.locfileid: "52305638"
 ##  <a name="HostControls"></a> ホスト コントロールをドキュメントに追加します。  
  ホスト コントロールをプログラムでドキュメントに追加するには、そのコントロールを一意に識別する名前を指定し、ドキュメント上にコントロールを追加する場所を指定する必要があります。 具体的な手順については、次のトピックを参照してください。  
 
-- [方法: ワークシートに ListObject コントロールを追加](../vsto/how-to-add-listobject-controls-to-worksheets.md)  
+- [方法: ワークシートに ListObject コントロールを追加します。](../vsto/how-to-add-listobject-controls-to-worksheets.md)  
 
-- [方法: ワークシートに NamedRange コントロールを追加](../vsto/how-to-add-namedrange-controls-to-worksheets.md)  
+- [方法: ワークシートに NamedRange コントロールを追加します。](../vsto/how-to-add-namedrange-controls-to-worksheets.md)  
 
-- [方法: ワークシートに Chart コントロールを追加](../vsto/how-to-add-chart-controls-to-worksheets.md)  
+- [方法: ワークシートに Chart コントロールを追加します。](../vsto/how-to-add-chart-controls-to-worksheets.md)  
 
 - [方法: コンテンツの追加を Word 文書にコントロール](../vsto/how-to-add-content-controls-to-word-documents.md)  
 
-- [方法: Word 文書に Bookmark コントロールを追加](../vsto/how-to-add-bookmark-controls-to-word-documents.md)  
+- [方法: Word 文書に Bookmark コントロールを追加します。](../vsto/how-to-add-bookmark-controls-to-word-documents.md)  
 
   ホスト コントロールの詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)します。  
 
@@ -144,10 +142,10 @@ ms.locfileid: "52305638"
 ## <a name="see-also"></a>関連項目  
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [Office ドキュメントでのダイナミック コントロールを永続化します。](../vsto/persisting-dynamic-controls-in-office-documents.md)   
- [方法: ワークシートに ListObject コントロールを追加](../vsto/how-to-add-listobject-controls-to-worksheets.md)   
- [方法: ワークシートに NamedRange コントロールを追加](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
- [方法: ワークシートに Chart コントロールを追加](../vsto/how-to-add-chart-controls-to-worksheets.md)   
- [方法: Word 文書にコンテンツ コントロールを追加](../vsto/how-to-add-content-controls-to-word-documents.md)   
- [方法: Word 文書に Bookmark コントロールを追加](../vsto/how-to-add-bookmark-controls-to-word-documents.md)   
+ [方法: ワークシートに ListObject コントロールを追加します。](../vsto/how-to-add-listobject-controls-to-worksheets.md)   
+ [方法: ワークシートに NamedRange コントロールを追加します。](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
+ [方法: ワークシートに Chart コントロールを追加します。](../vsto/how-to-add-chart-controls-to-worksheets.md)   
+ [方法: コンテンツ コントロールを Word 文書に追加します。](../vsto/how-to-add-content-controls-to-word-documents.md)   
+ [方法: Word 文書に Bookmark コントロールを追加します。](../vsto/how-to-add-bookmark-controls-to-word-documents.md)   
  [Office ドキュメントの概要での Windows フォーム コントロール](../vsto/windows-forms-controls-on-office-documents-overview.md)   
- [方法: Windows フォーム コントロールを Office ドキュメントに追加します。](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
+ [方法: Office ドキュメントへの Windows フォーム コントロールを追加します。](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   

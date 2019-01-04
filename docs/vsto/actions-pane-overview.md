@@ -1,8 +1,6 @@
 ---
 title: 操作ウィンドウの概要
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology: office-development
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +16,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e8c7136c1f97f531600799f3aede30170813cf0a
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: de9e6a7f148612716cee55b5a21a26f1bcf04d9b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52305677"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53821128"
 ---
 # <a name="actions-pane-overview"></a>操作ウィンドウの概要
   操作ウィンドウは、カスタマイズ可能な**ドキュメント アクション**特定の Microsoft Office Word ドキュメントまたは Microsoft Office Excel ブックに関連付けられている作業ウィンドウ。 [操作] ウィンドウがなどの他の組み込み作業ウィンドウと Office 作業ウィンドウ内でホストされる、 **XML ソース**Excel での作業ウィンドウ、または**スタイルと書式**Word 作業ウィンドウ。 操作ウィンドウのユーザー インターフェイスは、Windows フォーム コントロールまたは WPF コントロールを使用してデザインできます。
@@ -35,7 +33,7 @@ ms.locfileid: "52305677"
 > [!NOTE]  
 >  カスタム作業ウィンドウは、操作ウィンドウとは異なります。 カスタム作業ウィンドウは、特定のドキュメントではなく、アプリケーションに関連付けられます。 カスタム作業ウィンドウは、一部の Microsoft Office アプリケーション向けの VSTO アドインで作成できます。 詳細については、次を参照してください。[カスタム作業ウィンドウ](../vsto/custom-task-panes.md)します。  
 
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。 [Excel 操作ウィンドウ内の操作の使用の WPF コントロールの操作方法?](http://go.microsoft.com/fwlink/?LinkId=132763)します。
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:。Excel の操作ウィンドウ内での WPF コントロールを使用しますか。](http://go.microsoft.com/fwlink/?LinkId=132763).
 
 ## <a name="display-the-actions-pane"></a>操作ウィンドウを表示します。  
  操作ウィンドウは、<xref:Microsoft.Office.Tools.ActionsPane> クラスによって表されます。 ドキュメント レベルのプロジェクトを作成するとき、`ThisWorkbook` クラス (Excel の場合) または `ThisDocument` クラス (Word の場合) の `ActionsPane` フィールドをプロジェクトで使用することで、このクラスのインスタンスをコードで使用できます。 操作ウィンドウを表示するには、`ActionsPane` フィールドの <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> プロパティに Windows フォーム コントロールを追加します。 `actions` という名前のコントロールを操作ウィンドウに追加するコード例を次に示します。  
@@ -57,7 +55,7 @@ ms.locfileid: "52305677"
 
 3. カスタム ユーザー コントロールのインスタンスを、プロジェクトの `ThisWorkbook` クラス (Excel の場合) または `ThisDocument` クラス (Word の場合) の `ActionsPane` フィールドに含まれるコントロールに追加します。  
 
-   このプロセスの詳細を示す例については、次を参照してください。[方法: Word 文書に操作ウィンドウを追加したり、Excel ブック](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)します。  
+   このプロセスの詳細を示す例については、次を参照してください。[方法。Word 文書に操作ウィンドウを追加したり、Excel ブック](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)します。  
 
 ## <a name="hide-the-actions-pane"></a>[操作] ウィンドウを非表示にします。  
  <xref:Microsoft.Office.Tools.ActionsPane> クラスには <xref:Microsoft.Office.Tools.ActionsPane.Hide%2A> メソッドと <xref:Microsoft.Office.Tools.ActionsPane.Visible%2A> プロパティがありますが、<xref:Microsoft.Office.Tools.ActionsPane> クラス自体のメンバーを使用して、ユーザー インターフェイスから操作ウィンドウを削除することはできません。 呼び出す、<xref:Microsoft.Office.Tools.ActionsPane.Hide%2A>メソッドまたはの設定、<xref:Microsoft.Office.Tools.ActionsPane.Visible%2A>プロパティを**false** ; 操作ウィンドウ上のコントロールのみを非表示にタスク ウィンドウで、非表示になりません。  
@@ -94,20 +92,20 @@ ms.locfileid: "52305677"
 2.  **表示/非表示**グループで、、**ドキュメント アクション**トグル ボタンをクリックします。  
 
 ## <a name="program-actions-pane-events"></a>プログラムの操作ウィンドウのイベント  
- 操作ウィンドウに複数のユーザー コントロールを追加し、ドキュメント上のイベントに応答するコードを作成して、ユーザー コントロールを表示したり非表示にしたりすることができます。 XML スキーマ要素をドキュメントにマップした場合は、XML 要素の 1 つにカーソルが置かれた時点で、操作ウィンドウに特定のユーザー コントロールを表示するようにできます。 詳細については、次を参照してください。[方法: Visual Studio 内で Word 文書にスキーマを割り当てる](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)と[方法: Visual Studio 内でワークシートにスキーマを割り当てる](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)します。  
+ 操作ウィンドウに複数のユーザー コントロールを追加し、ドキュメント上のイベントに応答するコードを作成して、ユーザー コントロールを表示したり非表示にしたりすることができます。 XML スキーマ要素をドキュメントにマップした場合は、XML 要素の 1 つにカーソルが置かれた時点で、操作ウィンドウに特定のユーザー コントロールを表示するようにできます。 詳細については、「[方法 :Visual Studio 内で Word 文書にスキーマを割り当てる](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)と[方法。Visual Studio 内でワークシートにスキーマを割り当てる](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)します。  
 
- また、ホスト コントロール、アプリケーション、またはドキュメント イベントなど、任意のオブジェクトのイベントに応答するコードを作成することもできます。 詳細については、次を参照してください。[チュートリアル: NamedRange コントロールのイベントに対してプログラム](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)します。  
+ また、ホスト コントロール、アプリケーション、またはドキュメント イベントなど、任意のオブジェクトのイベントに応答するコードを作成することもできます。 詳細については、「[チュートリアル:NamedRange コントロールのイベントに対してプログラム](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)します。  
 
 ## <a name="bind-data-to-controls-on-the-actions-pane"></a>操作ウィンドウ上のコントロールにデータをバインドします。  
  操作ウィンドウのコントロールは、Windows フォームのコントロールと同じデータ バインディング機能を備えています。 データセット、型指定されたデータセット、XML などのデータ ソースに、コントロールをバインドできます。 詳細については、次を参照してください。[データ連結と Windows フォーム](/dotnet/framework/winforms/data-binding-and-windows-forms)します。  
 
- 操作ウィンドウのコントロールとドキュメントのコントロールは、同じデータセットにバインドできます。 たとえば、操作ウィンドウのコントロールとワークシートのコントロール間でマスター/詳細関係を作成できます。 詳細については、次を参照してください。[チュートリアル: Excel 操作ウィンドウ上のコントロールにデータをバインド](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)します。  
+ 操作ウィンドウのコントロールとドキュメントのコントロールは、同じデータセットにバインドできます。 たとえば、操作ウィンドウのコントロールとワークシートのコントロール間でマスター/詳細関係を作成できます。 詳細については、「[チュートリアル:Excel の操作ウィンドウ上のコントロールにデータをバインド](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)します。  
 
 ## <a name="validate-data-in-actions-pane-controls"></a>操作ウィンドウ コントロールでデータを検証します。  
  操作ウィンドウ上のコントロールの <xref:System.Windows.Forms.Control.Validating> イベント ハンドラーでメッセージ ボックスを表示する場合、フォーカスがコントロールからメッセージ ボックスに移った時点で 2 度目のイベントが発生することがあります。 この問題を回避するには、<xref:System.Windows.Forms.ErrorProvider> コントロールを使用して検証エラー メッセージを表示するようにします。  
 
 ## <a name="user-control-stacking-order"></a>ユーザー コントロールの積み重ね順  
- 複数のユーザー コントロールを使用している場合は、垂直方向または水平方向のどちらにドッキングされるかにかかわらず、操作ウィンドウにユーザー コントロールを正しく積み重ねるコードを作成できます。 操作ウィンドウにユーザー コントロールを積み重ねる順序は、<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> プロパティの <xref:Microsoft.Office.Tools.StackStyle> 列挙体を使用して設定できます。 詳細については、次を参照してください[方法: アクション ペイン上のコントロールのレイアウトの管理。](../vsto/how-to-manage-control-layout-on-actions-panes.md)  
+ 複数のユーザー コントロールを使用している場合は、垂直方向または水平方向のどちらにドッキングされるかにかかわらず、操作ウィンドウにユーザー コントロールを正しく積み重ねるコードを作成できます。 操作ウィンドウにユーザー コントロールを積み重ねる順序は、<xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> プロパティの <xref:Microsoft.Office.Tools.StackStyle> 列挙体を使用して設定できます。 詳細については、「[方法 :アクション ペイン上のコントロールのレイアウトを管理します。](../vsto/how-to-manage-control-layout-on-actions-panes.md)  
 
  <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> プロパティでは、次の <xref:Microsoft.Office.Tools.StackStyle> 列挙値を使用できます。  
 
@@ -125,7 +123,7 @@ ms.locfileid: "52305677"
  [!code-vb[Trin_VstcoreActionsPaneExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#10)]  
 
 ## <a name="anchor-controls"></a>コントロールを固定  
- ユーザーには、実行時に操作ウィンドウがサイズ変更、コントロールが操作ウィンドウにサイズ変更できます。 Windows フォーム コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティを使用すると、コントロールを操作ウィンドウに固定できます。 同じように、Windows フォーム コントロールをユーザー コントロールに固定することもできます。 詳細については、次を参照してください。[方法: Windows フォーム上のコントロールを固定](/dotnet/framework/winforms/controls/how-to-anchor-controls-on-windows-forms)します。  
+ ユーザーには、実行時に操作ウィンドウがサイズ変更、コントロールが操作ウィンドウにサイズ変更できます。 Windows フォーム コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティを使用すると、コントロールを操作ウィンドウに固定できます。 同じように、Windows フォーム コントロールをユーザー コントロールに固定することもできます。 詳細については、「[方法 :Windows フォーム上のコントロールを固定](/dotnet/framework/winforms/controls/how-to-anchor-controls-on-windows-forms)します。  
 
 ## <a name="resize-the-actions-pane"></a>[操作] ウィンドウのサイズを変更します。  
  <xref:Microsoft.Office.Tools.ActionsPane> は作業ウィンドウに埋め込まれているため、<xref:Microsoft.Office.Tools.ActionsPane> のサイズを直接変更することはできません。 ただし、作業ウィンドウを表す <xref:Microsoft.Office.Core.CommandBar> の <xref:Microsoft.Office.Core.CommandBar.Width%2A> プロパティを設定すると、プログラムによって作業ウィンドウの幅を変更できます。 作業ウィンドウの高さは、作業ウィンドウが水平にドッキングされている場合、または浮動している場合に変更できます。  
@@ -144,7 +142,7 @@ ms.locfileid: "52305677"
  [!code-vb[Trin_VstcoreActionsPaneWord#100](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#100)]  
 
 > [!NOTE]  
->  エンド ユーザーは、作業ウィンドウの位置を手動でいつでも変更できます。 プログラムで指定した位置に作業ウィンドウを常にドッキングしておくことはできません。 ただし、向きの変更を確認し、操作ウィンドウ上のコントロールが正しい方向で積み重ねられるようにすることは可能です。 詳細については、次を参照してください。[方法: アクション ペイン上のコントロールのレイアウトを管理](../vsto/how-to-manage-control-layout-on-actions-panes.md)します。  
+>  エンド ユーザーは、作業ウィンドウの位置を手動でいつでも変更できます。 プログラムで指定した位置に作業ウィンドウを常にドッキングしておくことはできません。 ただし、向きの変更を確認し、操作ウィンドウ上のコントロールが正しい方向で積み重ねられるようにすることは可能です。 詳細については、「[方法 :アクション ペイン上のコントロールのレイアウトを管理](../vsto/how-to-manage-control-layout-on-actions-panes.md)します。  
 
  設定、<xref:Microsoft.Office.Tools.ActionsPane.Top%2A>と<xref:Microsoft.Office.Tools.ActionsPane.Left%2A>のプロパティ、<xref:Microsoft.Office.Tools.ActionsPane>の位置を変更しないため、<xref:Microsoft.Office.Tools.ActionsPane>オブジェクトが作業ウィンドウに埋め込まれています。  
 
@@ -157,9 +155,9 @@ ms.locfileid: "52305677"
  [Office ソリューションで WPF コントロールを使用します。](../vsto/using-wpf-controls-in-office-solutions.md)   
  [Office UI のカスタマイズ](../vsto/office-ui-customization.md)   
  [Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)   
- [方法: Word 文書に操作ウィンドウを追加したり、Excel ブック](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
+ [方法: Word 文書または Excel ブックに操作ウィンドウを追加します。](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
  [チュートリアル: 操作ウィンドウから文書にテキストを挿入します。](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)   
  [チュートリアル: Word の操作ウィンドウ上のコントロールにデータをバインドします。](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)   
- [チュートリアル: Excel 操作ウィンドウ上のコントロールにデータをバインドします。](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)   
- [方法: アクション ペイン上のコントロールのレイアウトの管理](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
+ [チュートリアル: データを Excel の操作ウィンドウ上のコントロールにバインドします。](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)   
+ [方法: アクション ペイン上のコントロールのレイアウトを管理します。](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
  [チュートリアル: 操作ウィンドウから文書にテキストを挿入します。](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)  

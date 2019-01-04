@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: リボン XML によるカスタム タブを作成します。'
-ms.custom: ''
+title: 'チュートリアル: リボン XML を使用してカスタム タブを作成します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -20,14 +17,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 45e35b7cf97a6b9a1f310149817f8e79956a47aa
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: dda5c2721d9932afd20c0b02f4a82bbbde7116ae
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38808925"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53955228"
 ---
-# <a name="walkthrough-create-a-custom-tab-by-using-ribbon-xml"></a>チュートリアル: リボン XML によるカスタム タブを作成します。
+# <a name="walkthrough-create-a-custom-tab-by-using-ribbon-xml"></a>チュートリアル: リボン XML を使用してカスタム タブを作成します。
   このチュートリアルを使用してカスタム リボン タブを作成する方法について説明、**リボン (XML)** 項目。  
   
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]  
@@ -41,7 +38,7 @@ ms.locfileid: "38808925"
 > [!NOTE]  
 >  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -55,7 +52,7 @@ ms.locfileid: "38808925"
   
 1.  作成、 **Word アドイン**という名前のプロジェクト**MyRibbonAddIn**します。  
   
-     詳細については、次を参照してください。[方法: Visual Studio でプロジェクトを作成する Office](../vsto/how-to-create-office-projects-in-visual-studio.md)します。  
+     詳細については、「[方法 :Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 表示されます、 **ThisAddIn.cs**または**ThisAddIn.vb**コード ファイルのほか、 **MyRibbonAddIn**プロジェクトを**ソリューション エクスプ ローラー**します。  
   
@@ -110,7 +107,7 @@ ms.locfileid: "38808925"
   
 1.  **ソリューション エクスプ ローラー**を右クリックして**MyRibbon.cs**または**MyRibbon.vb**、 をクリックし、**オープン**します。  
   
-2.  先頭に次のコードを追加、 **MyRibbon.cs**または**MyRibbon.vb**ファイル。 このコードによって、<xref:Microsoft.Office.Interop.Word> 名前空間のエイリアスが作成されます。  
+2.  先頭に次のコードを追加、 **MyRibbon.cs**または**MyRibbon.vb**ファイル。  このコードによって、<xref:Microsoft.Office.Interop.Word> 名前空間のエイリアスが作成されます。  
   
      [!code-csharp[Trin_RibbonButtons#1](../vsto/codesnippet/CSharp/Trin_RibbonButtons/MyRibbon.cs#1)]
      [!code-vb[Trin_RibbonButtons#1](../vsto/codesnippet/VisualBasic/Trin_RibbonButtons/MyRibbon.vb#1)]  
@@ -155,11 +152,9 @@ ms.locfileid: "38808925"
   
 -   カスタム操作ウィンドウを作成する。 詳細については、次を参照してください。[操作ウィンドウの概要](../vsto/actions-pane-overview.md)します。  
   
--   Outlook フォーム領域を使用して Microsoft Office Outlook の UI をカスタマイズする。 詳細については、次を参照してください。[チュートリアル: Outlook フォーム領域をデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)します。  
+-   Outlook フォーム領域を使用して Microsoft Office Outlook の UI をカスタマイズする。 詳細については、「[チュートリアル:Outlook フォーム領域をデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン XML](../vsto/ribbon-xml.md)   
  [チュートリアル: リボン デザイナーを使用してカスタム タブを作成します。](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)  
-  
-  

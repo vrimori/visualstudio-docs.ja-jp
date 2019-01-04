@@ -1,9 +1,6 @@
 ---
-title: '方法: ドキュメント プロパティに書き込み、読み取りと'
-ms.custom: ''
+title: '方法: ドキュメント プロパティの読み書き'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,17 +15,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: de9ae85156f9d272901893c74c5d2c9729a0a3dd
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 43c74a206ecbe544a6ccb32448104e17a48aaee6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49924229"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53825423"
 ---
-# <a name="how-to-read-from-and-write-to-document-properties"></a>方法: ドキュメント プロパティに書き込み、読み取りと
+# <a name="how-to-read-from-and-write-to-document-properties"></a>方法: ドキュメント プロパティの読み書き
   ドキュメント プロパティをドキュメントと共に保存できます。 Office アプリケーションには、作成者、タイトル、件名など、多数の組み込みプロパティが用意されています。 このトピックでは、Microsoft Office Excel および Microsoft Office Word でドキュメント プロパティを設定する方法について説明します。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[操作へのアクセスを行う方法と、Microsoft Word でカスタム ドキュメント プロパティを操作しますか?](http://go.microsoft.com/fwlink/?LinkId=136772)します。  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:。アクセスし、Microsoft Word のカスタム ドキュメント プロパティを操作しますか。](http://go.microsoft.com/fwlink/?LinkId=136772).  
   
  [!INCLUDE[appliesto_docprops](../vsto/includes/appliesto-docprops-md.md)]  
   
@@ -86,6 +83,4 @@ ms.locfileid: "49924229"
 ## <a name="see-also"></a>関連項目  
  [VSTO アドインをプログラミングします。](../vsto/programming-vsto-add-ins.md)   
  [プログラムのドキュメント レベルのカスタマイズ](../vsto/programming-document-level-customizations.md)   
- [方法: を作成し、カスタム ドキュメント プロパティの変更](../vsto/how-to-create-and-modify-custom-document-properties.md)  
-  
-  
+ [方法: 作成し、カスタム ドキュメント プロパティの変更](../vsto/how-to-create-and-modify-custom-document-properties.md)  
