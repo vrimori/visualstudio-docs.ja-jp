@@ -1,8 +1,6 @@
 ---
 title: 実行時にリボンへのアクセスします。
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology: office-development
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +15,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9a20297ee0d60173cbd0513f3d34e12f12388bdb
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: 85002184620d9ca76890a98eeb8ef522772c5879
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304624"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989491"
 ---
 # <a name="access-the-ribbon-at-runtime"></a>実行時にリボンへのアクセスします。
   リボンを表示、非表示、変更するコードを作成し、ユーザーがカスタム作業ウィンドウ、アクション ウィンドウ、または Outlook フォーム領域のコントロールからそのコードを実行できるようにすることができます。  

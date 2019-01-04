@@ -14,13 +14,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: f138f1f809ae5a81aa97c571a147c679bacaa3b2
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: aeeacdd9fc52f26a14930f0756be463ac4f87eec
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50967234"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53943773"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>方法: ドメイン固有言語ソリューションを作成する
 ドメイン固有言語 (DSL) を作成するには、特殊な Visual Studio ソリューションを使用します。
@@ -71,7 +70,7 @@ ms.locfileid: "50967234"
 
    -   完全にインストールされていない以前の実験的な Dsl で、ファイル名拡張子を使用した場合ことができますをオフにすることを使用して、**実験用インスタンスをリセット**ツールで、Visual Studio SDK メニューで見つかります。
 
-   -   このファイルの拡張機能を使用する別の Visual Studio Extension がコンピューターに完全にインストールされている場合は、アンインストールを検討してください。 **ツール** メニューのをクリックして**拡張機能マネージャー**します。
+   -   このファイルの拡張機能を使用する別の Visual Studio Extension がコンピューターに完全にインストールされている場合は、アンインストールを検討してください。 **ツール** メニューをクリックして **拡張機能マネージャー** をクリックします。
 
 4. 検査、および必要に応じて調整、ウィザードの残りのページのフィールド。 設定に満足したら、クリックして**完了**します。 設定の詳細については、次を参照してください。 [DSL デザイナーのウィザード ページ](#settings)します。
 
@@ -108,7 +107,7 @@ DSL を作成する次のようなテンプレートを選択します。 別の
 
      \- または -
 
--   このファイルの拡張機能を使用して、Visual Studio 拡張機能がコンピューターに完全にインストールされている場合をアンインストールします。 **ツール** メニューのをクリックして**拡張機能マネージャー**します。
+-   このファイルの拡張機能を使用して、Visual Studio 拡張機能がコンピューターに完全にインストールされている場合をアンインストールします。 **ツール** メニューをクリックして **拡張機能マネージャー** をクリックします。
 
 ### <a name="product-settings-page"></a>製品の設定 ページ
  **新しいドメイン固有言語が含まれている製品の名前は何ですか。**

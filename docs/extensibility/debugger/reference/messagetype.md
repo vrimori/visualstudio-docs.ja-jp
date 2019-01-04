@@ -1,9 +1,6 @@
 ---
 title: MESSAGETYPE |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - MESSAGETYPE
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 66c254b56d5f7755a3578814ad5f3de7898f2f88
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 2a1e99b480c5aeaf0137ecd2f50c8b8436fc137d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49872227"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53944860"
 ---
 # <a name="messagetype"></a>MESSAGETYPE
 メッセージの種類と理由を指定します。  
@@ -28,7 +25,7 @@ ms.locfileid: "49872227"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-enum enum_MESSAGETYPE {   
+enum enum_MESSAGETYPE {   
    MT_OUTPUTSTRING      = 0x0000001,  
    MT_MESSAGEBOX        = 0x00000002,  
    MT_TYPE_MASK         = 0x000000FF,  
@@ -40,7 +37,7 @@ typedef DWORD MESSAGETYPE;
 ```  
   
 ```csharp  
-public enum enum_MESSAGETYPE {   
+public enum enum_MESSAGETYPE {   
    MT_OUTPUTSTRING      = 0x0000001,  
    MT_MESSAGEBOX        = 0x00000002,  
    MT_TYPE_MASK         = 0x000000FF,  
@@ -77,9 +74,9 @@ public enum enum_MESSAGETYPE {
 ## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   

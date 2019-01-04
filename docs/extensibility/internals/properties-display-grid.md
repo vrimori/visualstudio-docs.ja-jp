@@ -1,9 +1,6 @@
 ---
 title: プロパティ グリッドの表示 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - properties [Visual Studio SDK], grid
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 52bda19b6b4acf02b70963ab52431334d2f1f1fc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 26dfbf505229ef3994f91e6f4af5eaf56b4d0d2a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49836672"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53949564"
 ---
 # <a name="properties-display-grid"></a>プロパティ表示グリッド
 **プロパティ**ウィンドウには、グリッド内のフィールドが表示されます。 左側の列には、プロパティの名前が含まれています。右側の列には、プロパティ値が含まれています。  

@@ -1,9 +1,6 @@
 ---
 title: ツールバーの追加 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - toolbars [Visual Studio], adding to IDE
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a2888ab6fade4893389af23ff456a63ffc5fbc40
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 6fa301a146dec9e7ee9b2f7edcaa6480e6bf5fef
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39151986"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53934743"
 ---
 # <a name="add-a-toolbar"></a>ツールバーを追加します。
 このチュートリアルでは、Visual Studio IDE にツールバーを追加する方法を示します。  
@@ -30,8 +27,8 @@ ms.locfileid: "39151986"
   
  メニューの詳細については、次を参照してください。[コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)します。  
   
-## <a name="prerequisites"></a>前提条件  
- Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
+## <a name="prerequisites"></a>必須コンポーネント  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、"[Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)"を参照してください。  
   
 ## <a name="create-an-extension-with-a-toolbar"></a>ツールバーと拡張機能を作成します。  
  という名前の VSIX プロジェクトを作成する`IDEToolbar`します。 という名前のメニュー コマンド項目テンプレートを追加**ToolbarTestCommand**します。 これを行う方法については、次を参照してください。[メニュー コマンドを使用して拡張機能を作成する](../extensibility/creating-an-extension-with-a-menu-command.md)します。  

@@ -10,17 +10,16 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 0216fab44ddc52c2d01c27365449377fb899e1a6
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 5db3772b782af666023f39fd833e18ba2092c176
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859654"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989151"
 ---
 # <a name="creating-custom-t4-text-template-directive-processors"></a>カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成
 
-*テキスト テンプレート変換プロセス*は、*テキスト テンプレート*ファイルとして入力し、テキスト ファイルを出力として生成します。 *テキスト テンプレート変換エンジン*コントロール、プロセスと、エンジンは、テキスト テンプレート変換ホストおよび 1 つまたは複数のテキスト テンプレートと対話する*ディレクティブ プロセッサ*を完了する、プロセスです。 詳細については、次を参照してください。 [、テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)します。
+*テキスト テンプレート変換プロセス*は、*テキスト テンプレート*ファイルとして入力し、テキスト ファイルを出力として生成します。 *テキスト テンプレート変換エンジン*コントロール、プロセスと、エンジンは、テキスト テンプレート変換ホストおよび 1 つまたは複数のテキスト テンプレートと対話する*ディレクティブ プロセッサ*を完了する、プロセスです。 詳細については、次を参照してください。 [テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)です。
 
 カスタム ディレクティブ プロセッサを作成するには、<xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> または <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> を継承するクラスを作成します。
 
@@ -64,9 +63,9 @@ ProcessDirective() に対するすべての呼び出し後に、テンプレー�
 
 -   `string GetClassCodeForProcessingRun()` -メソッド、プロパティ、およびテンプレート コードで使用できるその他の宣言のコードを返します。 これを行う最も簡単な方法では、c# または Visual Basic コードを含む文字列を作成します。 ディレクティブ プロセッサを任意の CLR 言語を使用するテンプレートから呼び出すことができるように、CodeDom ツリーとして、ステートメントを作成し、テンプレートで使用する言語でツリーをシリアル化の結果を返すできます。
 
--   詳細については、次を参照してください。[チュートリアル: カスタム ディレクティブ プロセッサの作成](../modeling/walkthrough-creating-a-custom-directive-processor.md)です。
+-   詳細については、「[チュートリアル:カスタム ディレクティブ プロセッサを作成する](../modeling/walkthrough-creating-a-custom-directive-processor.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 - [カスタム ディレクティブ プロセッサの展開](../modeling/deploying-a-custom-directive-processor.md)カスタム ディレクティブ プロセッサを登録する方法について説明します。
-- [チュートリアル: カスタム ディレクティブ プロセッサを作成する](../modeling/walkthrough-creating-a-custom-directive-processor.md)カスタム ディレクティブ プロセッサを作成する方法、登録およびディレクティブ プロセッサをテストする方法と、出力ファイルを HTML として書式設定する方法について説明します。
+- [チュートリアル: カスタム ディレクティブ プロセッサを作成](../modeling/walkthrough-creating-a-custom-directive-processor.md)カスタム ディレクティブ プロセッサを作成する方法、登録およびディレクティブ プロセッサをテストする方法と、出力ファイルを HTML として書式設定する方法について説明します。

@@ -1,9 +1,6 @@
 ---
 title: フォントと色の概要 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], font and color
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: adf5877ae9b01666491e5d10522ba52b58b2d917
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 84d1d409c86f018cb0c661a6a6bb36ccc1911d11
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49845226"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53966499"
 ---
 # <a name="font-and-color-overview"></a>フォントと色の概要
 このトピックでは説明のテキストのフォントと色の設定、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です。 カテゴリとアイテムの表示の概念も導入されていて、Vspackage とコア エディターのテキスト属性を使用する方法について説明します。  
@@ -66,7 +63,7 @@ ms.locfileid: "49845226"
   
 - フォントと色の表示項目を管理するための簡略化された手法です。  
   
-   詳細については、次のトピックを参照してください。 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> および <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem>.  
+   詳細については、次のトピックを参照してください。 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> および <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem>  
   
 - 適切に定義された、最適化された色づけのメカニズムです。  
   
@@ -74,7 +71,7 @@ ms.locfileid: "49845226"
   
 - 両方の機能を使用して、組み込みの表示項目から、**テキスト EditorCategory**とそれらを拡張します。  
   
-   詳細については、次を参照してください。[方法: ビルトインの配色可能な項目を使用して、](../extensibility/internals/how-to-use-built-in-colorable-items.md)と[カスタム装飾が可能なアイテム](../extensibility/internals/custom-colorable-items.md)します。  
+   詳細については、「[方法 :組み込みの配色可能な項目を使用して、](../extensibility/internals/how-to-use-built-in-colorable-items.md)と[カスタム装飾が可能なアイテム](../extensibility/internals/custom-colorable-items.md)します。  
   
 - 現在の状態の両方の組み込みとカスタムの永続化を自動で項目を表示する、**テキスト エディター**カテゴリ。  
   

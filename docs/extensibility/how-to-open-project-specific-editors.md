@@ -1,9 +1,6 @@
 ---
 title: '方法: プロジェクトに固有のエディターを開く |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - project types, opening a project-specific editor
@@ -15,14 +12,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 45967d2312a7693130126612c7fd052c54e17ce2
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 96f760163fcbe80e53cca78f7d554563ff6b7225
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39636676"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53934415"
 ---
-# <a name="how-to-open-project-specific-editors"></a>方法: プロジェクトに固有のエディターを開く
+# <a name="how-to-open-project-specific-editors"></a>方法: 開いているプロジェクト固有のエディター
 プロジェクトで開かれている項目のファイルは本質的に、そのプロジェクトの特定のエディターにバインドする場合、プロジェクトは、プロジェクトに固有のエディターを使用してファイルを開く必要があります。 ファイルは、エディターを選択するため、IDE のメカニズムには委任できません。 たとえば、標準のビットマップ エディターを使用する代わりには、プロジェクトに一意のファイルの情報を認識する特定のビットマップ エディターを指定するのにこのプロジェクト固有のエディター オプションを使用できます。  
   
  IDE の呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A>メソッドによって、特定のプロジェクト ファイルを開く必要がありますかを決定します。 詳細については、次を参照してください。[ファイルを開くコマンドを使用してファイルを表示](../extensibility/internals/displaying-files-by-using-the-open-file-command.md)します。 次のガイドラインを使用して実装する、`OpenItem`メソッドに、プロジェクトをプロジェクトに固有のエディターを使用してファイルを開きます。  

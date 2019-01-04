@@ -1,9 +1,6 @@
 ---
 title: '方法: ソース管理プラグインのインストール |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - installation [Visual Studio SDK], source control plug-ins
@@ -14,14 +11,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3487c796661a8194b9c920f43bae9df87f1ba57d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: b1e7e60819b9ac10308be26a1f3ea3243cc71c34
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49950265"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53990504"
 ---
-# <a name="how-to-install-a-source-control-plug-in"></a>方法: ソース管理プラグインのインストール
+# <a name="how-to-install-a-source-control-plug-in"></a>方法: ソース管理プラグインのインストールします。
 ソース管理プラグインを作成するには、3 つの手順が含まれます。  
 
 1. このドキュメントのソース管理プラグイン API リファレンスのセクションで定義された関数では、DLL を作成します。  
@@ -83,7 +80,7 @@ ms.locfileid: "49950265"
 
     このエントリの名前が (同じ SCCServerName エントリに指定された値)、プロバイダーのユーザーが判読できる名前と値が、もう一度、手順 1. で作成されたサブキー。 パターンは、 **HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\InstalledSCCProviders\\<display name>** = *ソフトウェア\\< 会社名\> \\< 製品名\>* します。  
 
-    例えば:  
+    例:  
 
    |レジストリ エントリの例|サンプル値|  
    |---------------------------|------------------|  
