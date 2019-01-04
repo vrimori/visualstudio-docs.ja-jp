@@ -1,9 +1,6 @@
 ---
 title: '方法: SharePoint プロジェクトのショートカット メニュー項目の追加 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,17 +14,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9a2fbc9d71684bc44e01a1d53f5d53f35c8d7311
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: ba38984b5c49dbf834286414e61734fe46069876
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757573"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53964138"
 ---
-# <a name="how-to-add-a-shortcut-menu-item-to-sharepoint-projects"></a>方法: SharePoint プロジェクトのショートカット メニュー項目の追加
+# <a name="how-to-add-a-shortcut-menu-item-to-sharepoint-projects"></a>方法: SharePoint プロジェクトのショートカット メニュー項目を追加します。
   SharePoint プロジェクトのショートカット メニュー項目を追加できます。 プロジェクト ノードを右クリックしたときに、メニュー項目が表示されます**ソリューション エクスプ ローラー**します。  
   
- 次の手順では、プロジェクトの拡張機能を既に作成したことを前提としています。 詳細については、次を参照してください。[方法: SharePoint プロジェクト拡張機能作成](../sharepoint/how-to-create-a-sharepoint-project-extension.md)です。  
+ 次の手順では、プロジェクトの拡張機能を既に作成したことを前提としています。 詳細については、「[方法 :SharePoint プロジェクト拡張機能作成](../sharepoint/how-to-create-a-sharepoint-project-extension.md)です。  
   
 ### <a name="to-add-a-shortcut-menu-item-to-sharepoint-projects"></a>ショートカット メニュー項目を SharePoint プロジェクトに追加するには  
   
@@ -43,7 +40,7 @@ ms.locfileid: "36757573"
  [!code-csharp[SPExtensibility.ProjectExtension.Menu#1](../sharepoint/codesnippet/CSharp/projectmenu/extension/projectitemextensionmenu.cs#1)]
  [!code-vb[SPExtensibility.ProjectExtension.Menu#1](../sharepoint/codesnippet/VisualBasic/projectmenu/extension/projectitemextensionmenu.vb#1)]  
   
-## <a name="compile-the-code"></a>コードをコンパイルします  
+## <a name="compile-the-code"></a>コードのコンパイル  
  この例では、次のアセンブリへの参照を含むクラス ライブラリ プロジェクトが必要です。  
   
 -   Microsoft.VisualStudio.SharePoint
@@ -55,6 +52,5 @@ ms.locfileid: "36757573"
   
 ## <a name="see-also"></a>関連項目
  [SharePoint プロジェクトを拡張します。](../sharepoint/extending-sharepoint-projects.md)   
- [方法: SharePoint プロジェクト拡張機能の作成](../sharepoint/how-to-create-a-sharepoint-project-extension.md)   
- [方法: SharePoint プロジェクトにプロパティを追加](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)  
-  
+ [方法: SharePoint プロジェクト拡張機能を作成します。](../sharepoint/how-to-create-a-sharepoint-project-extension.md)   
+ [方法: SharePoint プロジェクトにプロパティを追加します。](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)  

@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cb5e20697e5dc5364fbcbac7a1d3052790a123a2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 1866f718cbcb4f1d3641e7b9f514a951ccd73662
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49872656"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53802619"
 ---
 # <a name="0x2x4x-msaa-variants"></a>0x/2x/4x MSAA バリアント
 すべてのレンダー ターゲットおよびスワップ チェーン上で multi-sample anti-aliasing (MSAA) の設定をオーバーライドします。  
@@ -30,7 +30,7 @@ ms.locfileid: "49872656"
 > [!NOTE]
 >  ご利用のハードウェアでは、MSAA をすべての形式で完全にサポートしていないことがあります。 いずれかのバリアントで、対処できないハードウェアの制限に直面した場合は、パフォーマンスのサマリー テーブルの該当する列が空白になり、エラー メッセージが生成されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  これらのバリアントは、レンダー ターゲットを作成する `ID3DDevice::CreateTexture2D` への呼び出しが行われるときに sample count および sample-quality 引数をオーバーライドします。 具体的には、以下の場合にこれらのパラメーターがオーバーライドされます。  
   
 - `D3D11_TEXTURE2D_DESC` で渡される`pDesc` オブジェクトがレンダー ターゲットを記述する場合。つまり  
@@ -45,7 +45,7 @@ ms.locfileid: "49872656"
   
 - デバイスは、要求されたレンダー ターゲット形式 (D3D11_TEXTURE2D_DESC::Format member) に対して、要求された sample count (0、2、または 4) および sample quality (0) を、`ID3D11Device::CheckMultisampleQualityLevels` で定義されているとおりにサポートします。  
   
-  D3D11_TEXTURE2D_DESC::BindFlags メンバーが D3D_BIND_SHADER_RESOUCE または D3D11_BIND_UNORDERED_ACCESS フラグを設定した場合、2 つのバージョンのテクスチャが作成されます。最初のバージョンは、レンダー ターゲットとして使用するためにフラグがクリアされています。もうひとつのバージョンは非 MSAA テクスチャであり、最初のバージョンのリゾルブ バッファーとして機能するよう、フラグがそのまま保持されています。 MSAA テクスチャをシェーダー リソースとして使用すること、または非順序アクセスに対して使用することは妥当ではない (たとえば、MSAA テクスチャで機能するシェーダーは、非 MSAA テクスチャを予期しているため間違った結果が生成される) と思われるため、このしくみは必要です。 バリアントがセカンダリ非 MSAA テクスチャを作成すると、MSAA レンダー ターゲットがデバイス コンテキストから設定解除されるたびに、コンテキストが非 MSAA テクスチャに解決されます。 同様に、MSAA レンダー ターゲットをシェーダー リソースとしてバインドしなければならない場合、または非順序アクセス ビューで使用する場合は、解決された非 MSAA テクスチャが代わりにバインドされます。  
+  D3D11_TEXTURE2D_DESC::BindFlags メンバーが D3D_BIND_SHADER_RESOURCE または D3D11_BIND_UNORDERED_ACCESS フラグを設定した場合、2 つのバージョンのテクスチャが作成されます。最初のバージョンは、レンダー ターゲットとして使用するためにフラグがクリアされています。もう 1 つのバージョンは非 MSAA テクスチャであり、最初のバージョンのリゾルブ バッファーとして機能するよう、フラグがそのまま保持されています。 MSAA テクスチャをシェーダー リソースとして使用すること、または非順序アクセスに対して使用することは妥当ではない (たとえば、MSAA テクスチャで機能するシェーダーは、非 MSAA テクスチャを予期しているため間違った結果が生成される) と思われるため、このしくみは必要です。 バリアントがセカンダリ非 MSAA テクスチャを作成すると、MSAA レンダー ターゲットがデバイス コンテキストから設定解除されるたびに、コンテキストが非 MSAA テクスチャに解決されます。 同様に、MSAA レンダー ターゲットをシェーダー リソースとしてバインドしなければならない場合、または順序指定されていないアクセス ビューで使用する場合は、解決された非 MSAA テクスチャが代わりにバインドされます。  
   
   また、これらのバリアントは `IDXGIFactory::CreateSwapChain`、`IDXGIFactory2::CreateSwapChainForHwnd`、`IDXGIFactory2::CreateSwapChainForCoreWindow`、`IDXGIFactory2::CreateSwapChainForComposition`、および `ID3D11CreateDeviceAndSwapChain` を使用して作成したすべてのスワップ チェーン上の MSAA 設定をオーバーライドします。  
   

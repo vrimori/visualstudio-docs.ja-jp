@@ -1,8 +1,7 @@
 ---
-title: 'CA2000: スコープが失われる前にオブジェクトを破棄します'
+title: CA2000:スコープを失う前にオブジェクトを破棄
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - CA2000
@@ -20,14 +19,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 041cade3d1c65a40826920b94adf012aa9a4b021
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 0d6aa3574e71cf64e01d083171e8bb477da02265
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45549869"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53951132"
 ---
-# <a name="ca2000-dispose-objects-before-losing-scope"></a>CA2000: スコープが失われる前にオブジェクトを破棄します
+# <a name="ca2000-dispose-objects-before-losing-scope"></a>CA2000:スコープを失う前にオブジェクトを破棄
 
 |||
 |-|-|
@@ -53,7 +52,7 @@ ms.locfileid: "45549869"
 
 - 破棄可能オブジェクトのメンバーは、using ステートメントのコンストラクターでは初期化できません。
 
-- 1 つの例外ハンドラーによってのみ保護された入れ子のコンストラクター。 たとえば、オブジェクトに適用された
+- 1 つの例外ハンドラーによってのみ保護された入れ子のコンストラクター。 例えば以下のようにします。
 
     ```csharp
     using (StreamReader sr = new StreamReader(new FileStream("C:\myfile.txt", FileMode.Create)))
@@ -70,7 +69,7 @@ ms.locfileid: "45549869"
 ## <a name="related-rules"></a>関連するルール
  [CA2213: 破棄可能なフィールドは破棄されなければなりません](../code-quality/ca2213-disposable-fields-should-be-disposed.md)
 
- [CA2202: オブジェクトを複数回破棄しません](../code-quality/ca2202-do-not-dispose-objects-multiple-times.md)
+ [CA 2202:オブジェクトを複数回破棄しません](../code-quality/ca2202-do-not-dispose-objects-multiple-times.md)
 
 ## <a name="example"></a>例
 

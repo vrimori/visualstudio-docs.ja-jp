@@ -1,9 +1,6 @@
 ---
-title: ユーザー設定ストアへの書き込み |Microsoft ドキュメント
-ms.custom: ''
+title: ユーザー設定ストアへの書き込み |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: efd27f00-7fe5-45f8-9b97-371af732be97
 author: gregvanl
@@ -11,42 +8,42 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e205fa8850bdd5ee664f66c6d6bb7bf86195bfd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2d5fe8e9689448644315306e74deaa394f15c1a8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31145413"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53830233"
 ---
 # <a name="writing-to-the-user-settings-store"></a>ユーザー設定ストアへの書き込み
-ユーザー設定でのような書き込み可能な設定、**ツール/オプション**ダイアログ、プロパティ ウィンドウ、およびその他の特定のダイアログ ボックス。 Visual Studio 拡張機能は、これらを使用少量のデータを格納するのにことがあります。 このチュートリアルでは、ユーザー設定ストアへの書き込みから読み取りを外部ツールとしてメモ帳を Visual Studio に追加する方法を示します。  
+ユーザーの設定は、書き込み可能の設定で使用されているように、**ツール/オプション**ダイアログ、[プロパティ] ウィンドウ、およびその他の特定のダイアログ ボックス。 Visual Studio 拡張機能は、これらを使用少量のデータを格納するのにことがあります。 このチュートリアルでは、ユーザー設定ストアへの書き込みから読み取りによって、外部ツールとして Visual Studio をメモ帳を追加する方法を示します。  
   
-### <a name="backing-up-your-user-settings"></a>自分のユーザー設定のバックアップ  
+### <a name="backing-up-your-user-settings"></a>お客様のユーザー設定のバックアップ  
   
-1.  デバッグし、手順を繰り返して可能となるように、外部ツールの設定をリセットする必要があります。 これを行うには、必要に応じてそれらを復元できるように、元の設定を保存する必要があります。  
+1.  デバッグし、手順を使用できるように、外部ツールの設定をリセットする必要があります。 これを行うには、必要に応じてに復元できるように、元の設定を保存する必要があります。  
   
 2.  Regedit.exe を開きます。  
   
-3.  HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External ツールに移動\\です。  
+3.  HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External ツールに移動します\\します。  
   
     > [!NOTE]
-    >  \14.0Exp\ といない \14.0 を含むキーで検索するかどうかを確認\\です。 Visual Studio の実験用インスタンスを実行すると、ユーザーの設定は、レジストリ ハイブ"14.0Exp"でです。  
+    >  \14.0Exp\ といない \14.0 を含むキーを検索するかどうかを確認\\します。 Visual Studio の実験用インスタンスを実行すると、ユーザーの設定はレジストリ ハイブ"14.0Exp"では。  
   
-4.  \External Tools\ サブキーを右クリックし、をクリックして**エクスポート**です。 確認して**選択されたブランチ**が選択されています。  
+4.  \External Tools\ のサブキーを右クリックし、をクリックし、**エクスポート**します。 必ず**選択されたブランチ**が選択されています。  
   
 5.  結果として得られる外部 Tools.reg ファイルを保存します。  
   
-6.  後で、外部ツールの設定をリセットするには、HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External tools \ のレジストリ キーを選択し、をクリックして**削除**コンテキスト メニューの します。  
+6.  その後、外部ツールの設定をリセットするには、HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External tools \ のレジストリ キーを選択し、をクリックして**削除**コンテキスト メニュー。  
   
-7.  ときに、**キーの削除の確認** ダイアログ ボックスが表示されたら、をクリックして**はい**です。  
+7.  ときに、**キーの削除の確認** ダイアログ ボックスが表示されたら、をクリックして**はい**します。  
   
-8.  以前に保存した外部 Tools.reg ファイルを右クリックし、をクリックして**で開く**、クリックして**レジストリ エディター**です。  
+8.  以前に保存する外部 Tools.reg ファイルを右クリックし、をクリックして**プログラムから開く**、 をクリックし、**レジストリ エディター**します。  
   
 ## <a name="writing-to-the-user-settings-store"></a>ユーザー設定ストアへの書き込み  
   
-1.  UserSettingsStoreExtension をという名前の VSIX プロジェクトを作成し、UserSettingsStoreCommand をという名前のカスタム コマンドを追加します。 カスタム コマンドを作成する方法の詳細については、次を参照してください[メニュー コマンドを使用して、拡張機能の作成。](../extensibility/creating-an-extension-with-a-menu-command.md)  
+1.  UserSettingsStoreExtension をという名前の VSIX プロジェクトを作成し、UserSettingsStoreCommand をという名前のカスタム コマンドを追加します。 カスタム コマンドを作成する方法の詳細については、次を参照してください[メニュー コマンドを使用して拡張機能の作成。](../extensibility/creating-an-extension-with-a-menu-command.md)  
   
-2.  次のコードを追加、UserSettingsStoreCommand.cs でステートメントを使用します。  
+2.  UserSettingsStoreCommand.cs で、次のコードを追加ステートメントを使用します。  
   
     ```csharp  
     using System.Collections.Generic;  
@@ -54,7 +51,7 @@ ms.locfileid: "31145413"
     using Microsoft.VisualStudio.Shell.Settings;  
     ```  
   
-3.  MenuItemCallback では、メソッドの本体を削除し、設定を保存、次のようにユーザーを取得します。  
+3.  MenuItemCallback では、メソッドの本体を削除し、設定の保存、次のようにユーザーを取得します。  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -64,7 +61,7 @@ ms.locfileid: "31145413"
     }  
     ```  
   
-4.  メモ帳は、外部ツールとして既に設定されているかどうかを調べるようになりました。 ToolCmd 設定は、次のように"Notepad"をかどうかを決定するすべての外部ツールを反復処理する必要があります。  
+4.  メモ帳は、外部ツールとして既に設定されているかどうかを調べるようになりました。 ToolCmd 設定が"Notepad"を次のようがあるかどうかを判断するすべての外部ツールを反復処理する必要があります。  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -88,7 +85,7 @@ ms.locfileid: "31145413"
   
     ```  
   
-5.  メモ帳が外部ツールとして設定されていない場合は、よう設定します。  
+5.  メモ帳が外部のツールとして設定されていない場合は、次のように設定します。  
   
     ```vb  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -124,10 +121,10 @@ ms.locfileid: "31145413"
     }  
     ```  
   
-6.  コードをテストします。 追加するメモ帳、外部ツールとしてロールバックしなければならない、レジストリをもう一度実行する前にので注意してください。  
+6.  コードをテストします。 ロールバックしなければならない、レジストリをもう一度実行する前にように、外部のツールとしてメモ帳を追加、ことに注意してください。  
   
 7.  コードをビルドし、デバッグを開始します。  
   
-8.  **ツール** メニューのをクリックして**呼び出す UserSettingsStoreCommand**です。 メモ帳に追加されます、**ツール**メニュー。  
+8.  **ツール** メニューのをクリックして**呼び出す UserSettingsStoreCommand**します。 これをメモ帳に追加されます、**ツール**メニュー。  
   
-9. これで、メモ帳をツールに表示されます]/[オプション] メニューの [クリックして**メモ帳**メモ帳のインスタンスを表示する必要があります。
+9. ツールで、メモ帳を表示する必要があります]/[オプション] メニューの [クリックして**メモ帳**メモ帳のインスタンスを起動する必要があります。

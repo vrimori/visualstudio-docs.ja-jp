@@ -1,22 +1,20 @@
 ---
 title: '方法: AsyncPackage を使用して、バック グラウンドで Vspackage を読み込む |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.technology: vs-ide-sdk
 ms.assetid: dedf0173-197e-4258-ae5a-807eb3abc952
 author: gregvanl
 ms.author: gregvanl
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1afd0199401159ace6ccc34bf3f32aa564cf195f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 32fb275cc788722df7085e64d25ded88de127381
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49828521"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53922930"
 ---
-# <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>方法: バック グラウンドで Vspackage を読み込む AsyncPackage を使用
+# <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>方法: AsyncPackage を使用して、バック グラウンドで Vspackage を読み込む
 読み込みと初期化 VS パッケージは、ディスク I/O 結果ことができます。 このような I/O が UI スレッドで発生した場合、応答性の問題になることができます。 これに対処すると、Visual Studio 2015 が導入された、<xref:Microsoft.VisualStudio.Shell.AsyncPackage>バック グラウンド スレッドでのパッケージの読み込みができるようにするクラス。  
   
 ## <a name="create-an-asyncpackage"></a>Asyncpackage からを作成します。  
@@ -49,7 +47,7 @@ ms.locfileid: "49828521"
   
 4. 非同期初期化作業を行う場合は、オーバーライド<xref:Microsoft.VisualStudio.Shell.AsyncPackage.InitializeAsync%2A>します。 削除、 `Initialize()` VSIX のテンプレートによって提供されるメソッド。 (、`Initialize()`メソッド**AsyncPackage**がシールされている)。 いずれかを使用することができます、<xref:Microsoft.VisualStudio.Shell.AsyncPackage.AddService%2A>非同期のサービスをパッケージに追加する方法。  
   
-    注: 呼び出す`base.InitializeAsync()`にソース コードを変更することができます。  
+    注:呼び出す`base.InitializeAsync()`、ソース コードを変更することができます。  
   
    ```csharp  
    await base.InitializeAsync(cancellationToken, progress);  
@@ -57,9 +55,9 @@ ms.locfileid: "49828521"
   
 5. 非同期初期化コードから Rpc (リモート プロシージャ コール) が作成されないように注意する必要があります (で**InitializeAsync**)。 これらを呼び出すときに発生することが<xref:Microsoft.VisualStudio.Shell.Package.GetService%2A>直接的または間接的にします。  使用して負荷が同期が必要なときは、UI スレッドをブロック<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory>します。 既定のブロックしているモデルには、Rpc が無効にします。 つまりする場合は、非同期タスクから RPC を使用しようとすると、するデッドロックが発生、UI スレッドが、パッケージを読み込むを待つ自体の場合。 ようなものを使用して必要な場合は、UI スレッドにコードをマーシャ リングする一般的な方法が**結合可能なタスク ファクトリ**の<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>または RPC を使用しないその他のいくつかのメカニズムです。  使用しない**ThreadHelper.Generic.Invoke**または一般的に、UI スレッドへの取得を待機している呼び出し元のスレッドをブロックします。  
   
-    注: を使用しないように**GetService**または**QueryService**で、`InitializeAsync`メソッド。 使用する場合は、まず、UI スレッドに切り替える必要があります。 使用する方法が<xref:Microsoft.VisualStudio.Shell.AsyncServiceProvider.GetServiceAsync%2A>から、 **AsyncPackage** (にキャストすることによって<xref:Microsoft.VisualStudio.Shell.Interop.IAsyncServiceProvider>)。  
+    注:使用しないように**GetService**または**QueryService**で、`InitializeAsync`メソッド。 使用する場合は、まず、UI スレッドに切り替える必要があります。 使用する方法が<xref:Microsoft.VisualStudio.Shell.AsyncServiceProvider.GetServiceAsync%2A>から、 **AsyncPackage** (にキャストすることによって<xref:Microsoft.VisualStudio.Shell.Interop.IAsyncServiceProvider>)。  
   
-   C#: asyncpackage からを作成します。  
+   C#: AsyncPackage を作成します。  
   
 ```csharp  
 [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]       
@@ -79,7 +77,7 @@ public sealed class TestPackage : AsyncPackage
   
 1.  必ず削除してください、`Initialize`オーバーライドは、パッケージにする必要があります。  
   
-2.  デッドロックを回避する: 可能性があります、コードで Rpc を非表示します。 バック グラウンド スレッドに実行するようになりました。 確認、RPC を行う場合 (たとえば、 **GetService**)、いずれか (1) スイッチをメイン スレッドにする必要がある、または (2) を使用した場合は、1 つの API の非同期バージョンが存在する (たとえば、 **GetServiceAsync**).  
+2.  デッドロックを回避するには。可能性があります、コードで Rpc を非表示します。 バック グラウンド スレッドに実行するようになりました。 確認、RPC を行う場合 (たとえば、 **GetService**)、いずれか (1) スイッチをメイン スレッドにする必要がある、または (2) を使用した場合は、1 つの API の非同期バージョンが存在する (たとえば、 **GetServiceAsync**).  
   
 3.  頻度が高すぎるのスレッド間で切り替えないでください。 読み込み時間を短縮するバック グラウンド スレッドで実行できる作業をローカライズしてみてください。  
   
@@ -105,4 +103,3 @@ using Microsoft.VisualStudio.Shell.Interop;
 IAsyncServiceProvider asyncServiceProvider = Package.GetService(typeof(SAsyncServiceProvider)) as IAsyncServiceProvider;   
 IMyTestService testService = await asyncServiceProvider.GetServiceAsync(typeof(SMyTestService)) as IMyTestService;  
 ```
-  

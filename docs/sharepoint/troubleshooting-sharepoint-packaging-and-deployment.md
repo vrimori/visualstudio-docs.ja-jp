@@ -1,9 +1,6 @@
 ---
 title: Troubleshooting SharePoint Packaging and Deployment |Microsoft Docs
-ms.custom: ''
 ms.date: 02/22/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VSTO.WorkflowDeployment.Troubleshooting
@@ -26,12 +23,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 46cd388079db9d7869bcae733c6baef33c07a212
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.openlocfilehash: a12e24ea0db662931651feb3031ec0da71926f24
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53805134"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53878706"
 ---
 # <a name="troubleshoot-sharepoint-packaging-and-deployment"></a>SharePoint のパッケージ化とデプロイをトラブルシューティングします。
   このトピックでは、SharePoint ソリューションをパッケージ化および配置するときに発生する可能性があるさまざまな問題について説明します。

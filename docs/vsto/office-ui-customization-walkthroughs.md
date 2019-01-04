@@ -1,9 +1,6 @@
 ---
 title: Office UI のカスタマイズのチュートリアル
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 93a945278d2565bb98706e9303bc662a78cd00ee
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: a9632fb12ec5567f527c0a5368af5645a91cddeb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672859"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53826586"
 ---
 # <a name="office-ui-customization-walkthroughs"></a>Office UI のカスタマイズのチュートリアル
   次に示すチュートリアルでは、ドキュメント レベルのカスタマイズと VSTO アドインを使用して、Microsoft Office アプリケーションのユーザー インターフェイス (UI) をカスタマイズする方法について説明します。  
@@ -35,7 +32,7 @@ ms.locfileid: "35672859"
  [チュートリアル: Word の操作ウィンドウ上のコントロールにデータをバインドします。](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)  
  Word の操作ウィンドウに配置されたコントロールをデータにバインドする方法について説明します。 このコントロールは、SQL Server データベースのテーブル間のマスター/詳細の関係を示します。  
   
- [チュートリアル: Excel 操作ウィンドウ上のコントロールにデータをバインドします。](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)  
+ [チュートリアル: データを Excel の操作ウィンドウ上のコントロールにバインドします。](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)  
  データ ソースにバインドされるコントロールを Excel の操作ウィンドウに追加する方法について説明します。  
   
 ## <a name="custom-task-pane-walkthroughs"></a>カスタム作業ウィンドウのチュートリアル  
@@ -55,20 +52,20 @@ ms.locfileid: "35672859"
  [チュートリアル: 実行時にリボン上のコントロールを更新します。](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)  
  Office アプリケーションにリボンを読み込んだ後に、リボン オブジェクト モデルを使用してリボン上のコントロールを更新する方法について説明します。  
   
- [チュートリアル: リボン XML によるカスタム タブを作成します。](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)  
+ [チュートリアル: リボン XML を使用してカスタム タブを作成します。](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)  
  リボン デザイナーの代わりにリボン XML を使用して、カスタムのリボン タブを作成する方法について説明します。  
   
 ## <a name="controls-on-word-documents"></a>Word 文書上のコントロール  
  [チュートリアル: VSTO アドインで実行時にドキュメントにコントロールを追加します。](../vsto/walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in.md)  
  VSTO アドインを使用して文書にコントロールを追加する方法について説明します。  
   
- [チュートリアル: CheckBox コントロールを使用してドキュメントの書式設定を変更します。](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)  
+ [チュートリアル: CheckBox コントロールを使用したドキュメント書式を変更します。](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)  
  ドキュメント レベルのカスタマイズでチェック ボックスを使用して、Word 文書の書式を変更する方法について説明します。  
   
- [チュートリアル: ボタンを使用して文書内のテキスト ボックスでテキストを表示します。](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)  
+ [チュートリアル: ボタンを使用して文書内のテキスト ボックスにテキストを表示](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)  
  Word 文書でボタンとテキスト ボックスを使用する方法について説明します。  
   
- [チュートリアル: オプション ボタンを使用してドキュメントのグラフを更新します。](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)  
+ [チュートリアル: ラジオ ボタンを使用してドキュメントのグラフを更新します。](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)  
  ドキュメント レベルのカスタマイズでオプション ボタンを使用して、Word 文書のグラフ スタイルを変更する方法について説明します。  
   
 ## <a name="controls-on-excel-worksheets"></a>Excel ワークシート上のコントロール  
@@ -78,10 +75,10 @@ ms.locfileid: "35672859"
  [チュートリアル: CheckBox コントロールを使用してワークシートの書式設定を変更します。](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md)  
  Excel ワークシートでチェック ボックスを使用して書式を変更する操作の基本について説明します。  
   
- [チュートリアル: ボタンを使用してワークシート内のテキスト ボックスでテキストを表示します。](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)  
+ [チュートリアル: ボタンを使用してワークシート内のテキスト ボックスにテキストを表示](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)  
  Excel ワークシートでボタンやテキスト ボックスを使用する操作の基本について説明します。  
   
- [チュートリアル: オプション ボタンを使用してワークシートのグラフを更新します。](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md)  
+ [チュートリアル: ラジオ ボタンを使用してワークシートのグラフを更新します。](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md)  
  Excel ワークシートに配置したオプション ボタンを使用して、グラフのスタイルを変更する操作の基本について説明します。  
   
 ## <a name="see-also"></a>関連項目  
@@ -92,5 +89,3 @@ ms.locfileid: "35672859"
  [開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Office プログラミングで一般的なタスク](../vsto/common-tasks-in-office-programming.md)   
  [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)  
-  
-  

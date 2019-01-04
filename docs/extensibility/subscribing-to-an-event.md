@@ -1,9 +1,6 @@
 ---
-title: イベントのサブスクライブ |Microsoft ドキュメント
-ms.custom: ''
+title: イベントのサブスクライブ |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - running document table (RDT), responding to events
@@ -14,30 +11,30 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 41ed19cb31924e90ef9326aad5c8cad117996793
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5dbb3c9db722ff335fd8dddadfffed57457d23ef
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31141904"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53916927"
 ---
 # <a name="subscribing-to-an-event"></a>イベントのサブスクライブ
-このチュートリアルでは、実行中のドキュメント テーブル (RDT) 内のイベントに応答するツール ウィンドウを作成する方法について説明します。 ツール ウィンドウを実装するユーザー コントロールをホストする<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>です。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>メソッドは、イベントに、インターフェイスを接続します。  
+このチュートリアルでは、実行中のドキュメント テーブル (RDT) 内のイベントに応答するツール ウィンドウを作成する方法について説明します。 ツール ウィンドウを実装するユーザー コントロールをホストする<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>します。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>メソッドは、イベントに、インターフェイスを接続します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
-## <a name="subscribing-to-rdt-events"></a>RDT イベントにサブスクライブします。  
+## <a name="subscribing-to-rdt-events"></a>RDT のイベントにサブスクライブします。  
   
 #### <a name="to-create-an-extension-with-a-tool-window"></a>ツール ウィンドウで、拡張機能を作成するには  
   
-1.  という名前のプロジェクトを作成する**RDTExplorer** VSIX テンプレートを使用して、という名前のカスタム ツール ウィンドウの項目テンプレートの追加**RDTExplorerWindow**です。  
+1.  という名前のプロジェクトを作成する**RDTExplorer** VSIX のテンプレートを使用して、という名前のカスタム ツール ウィンドウの項目テンプレートを追加**RDTExplorerWindow**します。  
   
-     ツール ウィンドウで、拡張機能の作成の詳細については、次を参照してください。[ツール ウィンドウで、拡張機能の作成](../extensibility/creating-an-extension-with-a-tool-window.md)です。  
+     ツール ウィンドウで拡張機能の作成の詳細については、次を参照してください。[ツール ウィンドウで、拡張機能を作成する](../extensibility/creating-an-extension-with-a-tool-window.md)します。  
   
-#### <a name="to-subscribe-to-rdt-events"></a>RDT イベントをサブスクライブするには  
+#### <a name="to-subscribe-to-rdt-events"></a>RDT のイベントをサブスクライブするには  
   
-1.  RDTExplorerWindowControl.xaml ファイルを開き、という名前のボタンを削除`button1`です。 追加、<xref:System.Windows.Forms.ListBox>を制御し、既定の名前をそのまま使用します。 グリッド要素は、次のようになります。  
+1.  RDTExplorerWindowControl.xaml ファイルを開き、という名前のボタンを削除`button1`します。 追加、<xref:System.Windows.Forms.ListBox>を制御し、既定の名前をそのまま使用します。 このようグリッド要素になります。  
   
     ```xml  
     <Grid>  
@@ -48,7 +45,7 @@ ms.locfileid: "31141904"
     </Grid>  
     ```  
   
-2.  コード ビューで、RDTExplorerWindow.cs ファイルを開きます。 次の追加、ファイルの先頭にステートメントを使用します。  
+2.  コード ビューで RDTExplorerWindow.cs ファイルを開きます。 次の追加、ファイルの先頭にステートメントを使用します。  
   
     ```csharp  
     using Microsoft.VisualStudio;  
@@ -56,32 +53,32 @@ ms.locfileid: "31141904"
     using Microsoft.VisualStudio.Shell.Interop;  
     ```  
   
-3.  変更、`RDTExplorerWindow`ためクラスから派生するだけでなくを<xref:Microsoft.VisualStudio.Shell.ToolWindowPane>を実装するクラス、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>インターフェイスです。  
+3.  変更、`RDTExplorerWindow`ためクラスから派生するだけでなくを<xref:Microsoft.VisualStudio.Shell.ToolWindowPane>クラスは実装、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>インターフェイス。  
   
     ```csharp  
     public class RDTExplorerWindow : ToolWindowPane, IVsRunningDocTableEvents  
     {. . .}  
     ```  
   
-4.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> を実装します。  
+4.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>を実装します。  
   
-    -   インターフェイスを実装します。 IVsRunningDocTableEvents 名の上にカーソルを置きます。 左側の余白に電球が表示されます。 電球の右側の矢印をクリックし、選択**インターフェイスの実装**です。  
+    -   インターフェイスを実装します。 IVsRunningDocTableEvents 名にカーソルを置きます。 左の余白に電球が表示されます。 電球の右側の下矢印をクリックして選択します**インターフェイスの実装**します。  
   
-5.  インターフェイス内の各メソッドで行を置き換えます。`throw new NotImplementedException();`に置き換えます。  
+5.  インターフェイスの各メソッドでは、行を置き換えます`throw new NotImplementedException();`この。  
   
     ```csharp  
     return VSConstants.S_OK;  
     ```  
   
-6.  RDTExplorerWindow クラスに cookie のフィールドを追加します。  
+6.  RDTExplorerWindow クラスには、cookie フィールドを追加します。  
   
     ```csharp  
     private uint rdtCookie;   
     ```  
   
-     によって返されるクッキーを保持してこの、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>メソッドです。  
+     これは、によって返されるクッキー、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>メソッド。  
   
-7.  RDT イベントを登録する RDTExplorerWindow の Initialize() メソッドをオーバーライドします。 コンス トラクターではなく、ToolWindowPane の Initialize() メソッドでサービスを常に取得する必要があります。  
+7.  RDT のイベントを登録する RDTExplorerWindow の Initialize() メソッドをオーバーライドします。 サービスは、コンス トラクターではなく、ToolWindowPane の Initialize() メソッドで常に表示されます。  
   
     ```csharp  
     protected override void Initialize()  
@@ -92,7 +89,7 @@ ms.locfileid: "31141904"
     }  
     ```  
   
-     <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>を取得するサービスが呼び出される、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable>インターフェイスです。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A> RDT イベントを実装するオブジェクトに接続<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>、ここでは、RDTExplorer オブジェクト。  
+     <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>サービスを呼び出して取得する<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable>インターフェイス。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>メソッド RDT イベントを実装するオブジェクトには接続<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>、ここでは、RDTExplorer オブジェクト。  
   
 8.  RDTExplorerWindow の Dispose() メソッドを更新します。  
   
@@ -108,9 +105,9 @@ ms.locfileid: "31141904"
     }  
     ```  
   
-     <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnadviseRunningDocTableEvents%2A>メソッド間の接続を削除する`RDTExplorer`RDT イベント通知します。  
+     <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnadviseRunningDocTableEvents%2A>メソッド間の接続を削除する`RDTExplorer`と RDT のイベント通知。  
   
-9. 本文に次の行を追加、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnBeforeLastDocumentUnlock%2A>ハンドラー、直前に、`return`ステートメントです。  
+9. 本文に次の行を追加、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnBeforeLastDocumentUnlock%2A>ハンドラー、直前に、`return`ステートメント。  
   
     ```csharp  
     public int OnBeforeLastDocumentUnlock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)  
@@ -120,7 +117,7 @@ ms.locfileid: "31141904"
     }  
     ```  
   
-10. 本文に同じような行を追加、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterFirstDocumentLock%2A>ハンドラーと、リスト ボックスに表示する他のイベントにします。  
+10. 本体に似た行を追加、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterFirstDocumentLock%2A>ハンドラーと、リスト ボックスに表示する他のイベントにします。  
   
     ```csharp  
     public int OnAfterFirstDocumentLock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)  
@@ -134,8 +131,8 @@ ms.locfileid: "31141904"
   
 12. 開く、 **RDTExplorerWindow** (**ビュー/その他の Windows/RDTExplorerWindow**)。  
   
-     **RDTExplorerWindow**空のイベント一覧のウィンドウが開きます。  
+     **RDTExplorerWindow**空のイベントのリストを持つウィンドウを開きます。  
   
 13. 開くか、ソリューションを作成します。  
   
-     として`OnBeforeLastDocument`と`OnAfterFirstDocument`イベントが発生した、イベントの一覧が表示されますの各イベントの通知です。
+     として`OnBeforeLastDocument`と`OnAfterFirstDocument`イベントが発生した、イベントの一覧が表示されますの各イベントの通知。

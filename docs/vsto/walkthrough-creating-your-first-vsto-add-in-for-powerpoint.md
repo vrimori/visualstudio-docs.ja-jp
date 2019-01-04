@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: は powerpoint の場合、最初の VSTO アドイン作成します。'
-ms.custom: ''
+title: 'チュートリアル: Powerpoint の場合、最初の VSTO アドインの作成します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,14 +15,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cea6e61a1afd734ca0ae52a704a2d881371f5817
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9c9bef0c76f0c01c620670bf67882fd90e2e1ba3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49882593"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53875499"
 ---
-# <a name="walkthrough-create-your-first-vsto-add-in-for-powerpoint"></a>チュートリアル: は powerpoint の場合、最初の VSTO アドイン作成します。
+# <a name="walkthrough-create-your-first-vsto-add-in-for-powerpoint"></a>チュートリアル: Powerpoint の場合、最初の VSTO アドインの作成します。
   このチュートリアルでは、Microsoft Office PowerPoint の VSTO アドインを作成する方法を示します。 この種のソリューションに作成した機能は、どのプレゼンテーションが開いているかにかかわらず、アプリケーション自体に対して使用できます。 詳細については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)します。  
   
  [!INCLUDE[appliesto_pptallapp](../vsto/includes/appliesto-pptallapp-md.md)]  
@@ -139,5 +136,3 @@ ms.locfileid: "49882593"
  [Office ソリューションを構築します。](../vsto/building-office-solutions.md)   
  [Office ソリューションをデプロイします。](../vsto/deploying-an-office-solution.md)   
  [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)  
-  
-  

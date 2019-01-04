@@ -1,9 +1,6 @@
 ---
 title: '方法: SharePoint ソリューション パッケージをカスタマイズ |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.RAD.PackageDesignerAdvanced
@@ -13,8 +10,6 @@ f1_keywords:
 dev_langs:
 - VB
 - CSharp
-- VB
-- CSharp
 helpviewer_keywords:
 - SharePoint development in Visual Studio, packages
 author: TerryGLee
@@ -22,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: fd1ebe9e49a0b3e26d090fdbbdbbe4dd37c0344a
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 85140f8d85c90d2b58df10a63f50c117e10eb8bd
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119886"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53835397"
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package"></a>方法: SharePoint ソリューション パッケージをカスタマイズします。
   パッケージ デザイナーを使用して作成およびパッケージをカスタマイズすることができます (*.wsp*)。 たとえば、SharePoint プロジェクト項目と機能の追加、Web サーバーが、ソリューションを展開するときにリセットし、配置サーバーの種類を設定するかどうかを指定できます。  
@@ -47,7 +42,7 @@ ms.locfileid: "37119886"
   
 #### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>ソリューション エクスプ ローラーを使用してパッケージのマニフェスト ファイルを表示するには  
   
-1.  **ソリューション エクスプ ローラー**、選択**すべてのファイル**します。  
+1.  **ソリューション エクスプローラー**で、**[すべてのファイルを表示]** をクリックします。  
   
 2.  パッケージを展開し、Package.package を展開し、開きます、 *Package.Template.xml*ファイル。  
   
@@ -94,4 +89,3 @@ ms.locfileid: "37119886"
   
 ## <a name="see-also"></a>関連項目
  [パッケージ化し、SharePoint ソリューションのデプロイ](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
-  

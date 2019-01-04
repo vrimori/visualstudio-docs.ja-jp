@@ -1,9 +1,6 @@
 ---
-title: IDebugThread2 |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugThread2 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugThread2
@@ -15,15 +12,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d93744e55a3e516a131e772fd2df09da5ec23168
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 834b2a85f62c8c533b57402dad55c92b3b0ad5dc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31121327"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53855547"
 ---
 # <a name="idebugthread2"></a>IDebugThread2
-このインターフェイスは、プログラムで実行中のスレッドを表します。  
+このインターフェイスは、プログラムで実行されているスレッドを表します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,12 +29,12 @@ IDebugThread2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- デバッグ エンジン (DE) では、1 つのプログラムの実行のスレッドを表すためには、このインターフェイスを実装します。  
+ デバッグ エンジン (DE) は、1 つのプログラム実行のスレッドを表すためには、このインターフェイスを実装します。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
  呼び出す[GetThread](../../../extensibility/debugger/reference/idebugstackframe2-getthread.md)現在アクティブなスレッドを表す、このインターフェイスを取得します。  
   
- このインターフェイスはブレークポイント要求を作成するのには使用も (を参照してください[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md))。  
+ このインターフェイスはブレークポイント要求の作成にも使用されます (を参照してください[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md))。  
   
  このインターフェイスは、ブレークポイントがバインドまたはエラーを解決するときにも返されます (を参照してください[BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)と[BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md))。  
   
@@ -47,28 +44,28 @@ IDebugThread2 : IUnknown
 |メソッド|説明|  
 |------------|-----------------|  
 |[EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)|このスレッドのスタック フレームの一覧を取得します。|  
-|[getName](../../../extensibility/debugger/reference/idebugthread2-getname.md)|スレッドの名前を取得します。|  
+|[GetName](../../../extensibility/debugger/reference/idebugthread2-getname.md)|スレッドの名前を取得します。|  
 |[SetThreadName](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md)|スレッドの名前を設定します。|  
 |[GetProgram](../../../extensibility/debugger/reference/idebugthread2-getprogram.md)|スレッドが実行されているプログラムを取得します。|  
-|[CanSetNextStatement](../../../extensibility/debugger/reference/idebugthread2-cansetnextstatement.md)|特定のスタック フレームとコードのコンテキストに、次のステートメントを設定できるかどうかを決定します。|  
-|[SetNextStatement](../../../extensibility/debugger/reference/idebugthread2-setnextstatement.md)|次のステートメントを特定のスタック フレームとコードのコンテキストに設定します。|  
+|[CanSetNextStatement](../../../extensibility/debugger/reference/idebugthread2-cansetnextstatement.md)|次のステートメントを特定のスタック フレームとコードのコンテキストに設定できるかどうかを判断します。|  
+|[SetNextStatement](../../../extensibility/debugger/reference/idebugthread2-setnextstatement.md)|特定のスタック フレームとコードのコンテキストには、次のステートメントを設定します。|  
 |[GetThreadId](../../../extensibility/debugger/reference/idebugthread2-getthreadid.md)|システムのスレッド識別子を取得します。|  
 |[Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md)|スレッドを中断します。|  
 |[Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)|スレッドを再開します。|  
 |[GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)|スレッドを記述するプロパティを取得します。|  
 |[GetLogicalThread](../../../extensibility/debugger/reference/idebugthread2-getlogicalthread.md)|この物理スレッドに関連付けられている論理スレッドを取得します。|  
   
-## <a name="remarks"></a>コメント  
- 1 つの物理スレッドが 1 つ以上に、複数のプログラムで実行できるため、`IDebugThread2`複数のプログラムからは、同じ物理スレッドを表すことができます。  
+## <a name="remarks"></a>Remarks  
+ 1 つの物理スレッドが 1 つ以上複数のプログラムで実行できるため、 `IDebugThread2` 1 つ以上のプログラムからは、同じ物理スレッドを表すことができます。  
   
- 呼び出して、イベントが送信ブレークポイントまたは例外が発生したときに[イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)です。 このメソッドの引数の 1 つは、`IDebugThread2`現在のスレッドを表すインターフェイス。 [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)の取得に使用、 [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)の現在のスタック フレームのインターフェイスです。  
+ 呼び出すことによって、イベントが送信ブレークポイントまたは例外が発生したときに[イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)します。 このメソッドの引数の 1 つは、`IDebugThread2`現在のスレッドを表すインターフェイス。 [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)を取得するために使用、 [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)現在のスタック フレームのインターフェイス。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   

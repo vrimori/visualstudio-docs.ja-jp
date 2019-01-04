@@ -1,9 +1,7 @@
 ---
 title: Folder 要素 (Visual Studio プロジェクト テンプレート) |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#Folder
@@ -15,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b4fca64abf91105e0363ecd67ea5244c533996f3
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: aacda209865ee9e7d9eae48a93be7e23f16c26ec
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39497176"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53912731"
 ---
 # <a name="folder-element-visual-studio-project-templates"></a>Folder 要素 (Visual Studio プロジェクト テンプレート)
 プロジェクトに追加されるフォルダーを指定します。  
@@ -60,14 +58,14 @@ ms.locfileid: "39497176"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[Project](../extensibility/project-element-visual-studio-templates.md)|省略可能な子要素の[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)します。|  
+|[プロジェクト](../extensibility/project-element-visual-studio-templates.md)|省略可能な子要素の[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)します。|  
   
 ## <a name="remarks"></a>Remarks  
  `Folder` 省略可能な子の`Project`します。  
   
  テンプレート内のフォルダーにプロジェクト項目を整理するのにには、次の方法のいずれかを使用できます。  
   
--   テンプレート フォルダーに含める *.zip*ファイルを開き、プロジェクトに追加、 *.vstemplate*ファイル内のファイルへのパスを指定することによって、`ProjectItem`なしで、要素`Folder`要素。 これは、推奨される方法です。 例えば:  
+-   テンプレート フォルダーに含める *.zip*ファイルを開き、プロジェクトに追加、 *.vstemplate*ファイル内のファイルへのパスを指定することによって、`ProjectItem`なしで、要素`Folder`要素。 これは、推奨される方法です。 例:  
   
      `...`  
   
@@ -77,7 +75,7 @@ ms.locfileid: "39497176"
   
      `...`  
   
--   テンプレート フォルダーに含める *.zip*ファイルを開き、プロジェクトに追加、 *.vstemplate*ファイルと`Folder`要素。 例えば:  
+-   テンプレート フォルダーに含める *.zip*ファイルを開き、プロジェクトに追加、 *.vstemplate*ファイルと`Folder`要素。 例:  
   
      `...`  
   
@@ -91,7 +89,7 @@ ms.locfileid: "39497176"
   
      `...`  
   
--   テンプレートのフォルダーを含めないでください *.zip*ファイルしますが、使用してフォルダーを追加、`TargetFileName`の属性、`ProjectItem`要素。 例えば:  
+-   テンプレートのフォルダーを含めないでください *.zip*ファイルしますが、使用してフォルダーを追加、`TargetFileName`の属性、`ProjectItem`要素。 例:  
   
      `...`  
   

@@ -1,9 +1,6 @@
 ---
 title: Visual Studio の SharePoint ツールの拡張機能の配置 |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c3bf20f945c40dd963820b1bf3f4032a2dd517ca
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 02e72a2991b5061459533cab9a3fbf213baa6b94
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295970"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53880823"
 ---
 # <a name="deploy-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio の SharePoint ツールの拡張機能をデプロイします。
 
@@ -52,11 +49,11 @@ VSIX パッケージの作成および展開することの詳細については
 
 操作することがありますもその他のプロジェクトで特定の種類の拡張機能。
 
--   拡張機能で使用される任意の SharePoint コマンドを実装するクラス ライブラリ プロジェクト。 このシナリオを実証するチュートリアルでは、次を参照してください。[チュートリアル: サーバー エクスプ ローラー web パーツを表示する拡張](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)します。
+-   拡張機能で使用される任意の SharePoint コマンドを実装するクラス ライブラリ プロジェクト。 このシナリオを実証するチュートリアルでは、次を参照してください。[チュートリアル。Web パーツを表示するサーバー エクスプ ローラーを拡張](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)します。
 
--   プロジェクト テンプレートまたは項目テンプレート プロジェクトを拡張機能は、SharePoint プロジェクト項目の新しい型を定義している場合、プロジェクト テンプレート、または項目テンプレートを作成します。 このシナリオを実証するチュートリアルでは、次を参照してください。[チュートリアル: 項目テンプレート、第 1 部でのカスタム動作プロジェクト項目の作成](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)です。
+-   プロジェクト テンプレートまたは項目テンプレート プロジェクトを拡張機能は、SharePoint プロジェクト項目の新しい型を定義している場合、プロジェクト テンプレート、または項目テンプレートを作成します。 このシナリオを実証するチュートリアルでは、次を参照してください。[チュートリアル。カスタム動作プロジェクト項目を作成、項目テンプレート、第 1 部に](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)します。
 
--   拡張機能には、テンプレートが含まれている場合、プロジェクト テンプレート、または項目テンプレートのカスタム ウィザードを実装するクラス ライブラリ プロジェクト。 このシナリオを実証するチュートリアルでは、次を参照してください。[チュートリアル: 項目テンプレート、第 2 部でのカスタム動作プロジェクト項目の作成](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)です。
+-   拡張機能には、テンプレートが含まれている場合、プロジェクト テンプレート、または項目テンプレートのカスタム ウィザードを実装するクラス ライブラリ プロジェクト。 このシナリオを実証するチュートリアルでは、次を参照してください。[チュートリアル。カスタム動作プロジェクト項目を作成、項目テンプレート、第 2 部に](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)します。
 
 同じ Visual Studio ソリューション内のすべてのプロジェクトを含めると場合、は、クラス ライブラリ プロジェクトのビルド出力を含める に、VSIX プロジェクトの source.extension.vsixmanifest ファイルを変更できます。
 
@@ -218,10 +215,10 @@ VSIX パッケージの作成および展開することの詳細については
 
 |拡張機能の種類|関連するチュートリアル|
 |--------------------|--------------------------|
-|拡張機能アセンブリのみを含む拡張機能|[チュートリアル: SharePoint プロジェクト項目の種類を拡張します。](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md)<br /><br /> [チュートリアル: SharePoint プロジェクト拡張機能を作成します。](../sharepoint/walkthrough-creating-a-sharepoint-project-extension.md)<br /><br /> [チュートリアル: は、サーバー エクスプ ローラー拡張機能では、SharePoint クライアント オブジェクト モデルを呼び出す](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)|
-|SharePoint コマンドを含む拡張機能|[チュートリアル: SharePoint プロジェクトのカスタム配置手順を作成します。](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)<br /><br /> [チュートリアル: web パーツを表示するサーバー エクスプ ローラーの拡張します。](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)<br /><br /> [チュートリアル: プロジェクト テンプレート、第 2 部でのサイト列プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)|
-|Visual Studio テンプレートを含む拡張機能|[チュートリアル: 項目テンプレート、第 1 部でのカスタム動作プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)<br /><br /> [チュートリアル: プロジェクト テンプレート、第 1 部でのサイト列プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)|
-|テンプレート ウィザードを含む拡張機能|[チュートリアル: 項目テンプレート、第 2 部でのカスタム動作プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)<br /><br /> [チュートリアル: プロジェクト テンプレート、第 2 部でのサイト列プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)|
+|拡張機能アセンブリのみを含む拡張機能|[チュートリアル: SharePoint プロジェクト項目の種類を拡張します。](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md)<br /><br /> [チュートリアル: SharePoint プロジェクト拡張機能を作成します。](../sharepoint/walkthrough-creating-a-sharepoint-project-extension.md)<br /><br /> [チュートリアル: サーバー エクスプ ローラー拡張機能では、SharePoint クライアント オブジェクト モデルを呼び出す](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)|
+|SharePoint コマンドを含む拡張機能|[チュートリアル: SharePoint プロジェクトのカスタム配置手順を作成します。](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)<br /><br /> [チュートリアル: Web パーツを表示するサーバー エクスプ ローラーを拡張します。](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)<br /><br /> [チュートリアル: プロジェクト テンプレート、第 2 部でサイト列プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)|
+|Visual Studio テンプレートを含む拡張機能|[チュートリアル: 項目テンプレート、第 1 部でのカスタム動作プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)<br /><br /> [チュートリアル: プロジェクト テンプレート、第 1 部でサイト列プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)|
+|テンプレート ウィザードを含む拡張機能|[チュートリアル: 項目テンプレート、第 2 部でのカスタム動作プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)<br /><br /> [チュートリアル: プロジェクト テンプレート、第 2 部でサイト列プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)|
 
 ## <a name="create-vsix-packages-manually"></a>VSIX パッケージを手動で作成します。
 

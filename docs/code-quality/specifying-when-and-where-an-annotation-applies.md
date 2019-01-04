@@ -2,7 +2,6 @@
 title: 注釈を適用するタイミングと場所の指定
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
 - _Group_
@@ -15,12 +14,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bc4d00d8c6b1f6b876700066d93b552b7fe5996
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.openlocfilehash: 4ebdc8592d26c124f98ff9d390e173b6675f09d9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53803832"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53863304"
 ---
 # <a name="specifying-when-and-where-an-annotation-applies"></a>注釈を適用するタイミングと場所の指定
 注釈が条件付きの場合、アナライザーを指定するには、その他の注釈が必要です。  たとえば、関数に同期または非同期にできる変数がある場合、関数は次のましょう。同期の場合は、常に最終的に成功しますが、非同期の場合、エラーを報告場合、それがすぐに成功することはできません。 関数は同期的に呼び出されると、結果の値をチェックはない値をコード アナライザー返されませんが、これはからです。  ただし、関数を非同期的に呼び出すし、関数の結果はチェックされません、重大なエラーが発生する可能性があります。 この例で使用することが状況、`_When_`注釈: この記事の後半で説明されている、チェックを有効にします。

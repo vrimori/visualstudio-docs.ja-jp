@@ -1,9 +1,6 @@
 ---
 title: 特定のコマンドで使用されるビットフラグ |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, bitflags used by specific commands
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 39451e8d404e586d77de31b97db6b8dd81bdc18b
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 403b9649feb24ca06cb24762f1b0cf484bed0612
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39152115"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53875421"
 ---
 # <a name="bitflags-used-by-specific-commands"></a>特定のコマンドで使用されるビットフラグ
 1 つの値で 1 つ以上のビットを設定して、さまざまなソース管理プラグイン API の関数の動作を変更できます。 これらの値は、ビットフラグと呼ばれます。 ソース管理プラグイン API によって使用されるビットフラグのさまざまな詳細についてはここでは、それらを使用する関数によってグループ化します。  
@@ -37,7 +34,7 @@ ms.locfileid: "39152115"
 |----------|-----------|-----------------|  
 |`SCC_FILETYPE_AUTO`|0x00|ソース管理プラグインは、ファイルがテキストかバイナリかどうかを自動的に検出するために必要です。|  
 |`SCC_FILETYPE_TEXT`|0x01|ファイルの種類は、テキストです。|  
-|`SCC_FILETYPE_BINARY`|0x04|ファイルの種類はバイナリです。 **注:** `SCC_FILETYPE_TEXT`と`SCC_FILETYPE_BINARY`フラグが相互に排他的です。   1 つだけ、またはどちらも設定します。|  
+|`SCC_FILETYPE_BINARY`|0x04|ファイルの種類はバイナリです。 **注:** `SCC_FILETYPE_TEXT`と`SCC_FILETYPE_BINARY`フラグが相互に排他的です。 1 つだけ、またはどちらも設定します。|  
 |`SCC_ADD_STORELATEST`|0x02|最新のバージョンのみ (デルタではありません) を格納します。|  
   
 ## <a name="diff-flags"></a>Diff フラグ  
@@ -46,7 +43,7 @@ ms.locfileid: "39152115"
 |フラグ|値|説明|  
 |----------|-----------|-----------------|  
 |`SCC_DIFF_IGNORECASE`|0x0002|大文字小文字の違いを無視します。|  
-|`SCC_DIFF_IGNORESPACE`|0x0004|空白の相違を無視します。 **注:** 、`SCC_DIFF_IGNORECASE`と`SCC_DIFF_IGNORESPACE`フラグは省略可能なビットフラグします。|  
+|`SCC_DIFF_IGNORESPACE`|0x0004|空白の相違を無視します。 **注:**`SCC_DIFF_IGNORECASE`と`SCC_DIFF_IGNORESPACE`フラグは省略可能なビットフラグします。|  
 |`SCC_DIFF_QD_CONTENTS`|0x0010|ファイルの内容全体を比較することによって QD します。|  
 |`SCC_DIFF_QD_CHECKSUM`|0x0020|チェックサムによって QD します。|  
 |`SCC_DIFF_QD_TIME`|0x0040|ファイルの日付/時刻スタンプによって QD します。|  
@@ -81,8 +78,8 @@ ms.locfileid: "39152115"
   
 |フラグ|値|説明|  
 |----------|-----------|-----------------|  
-|`SCC_GET_ALL`|0x00000001L|IDE のディレクトリを渡すことは、ファイルではありません。 これらのディレクトリ内のすべてのファイルを取得します。|  
-|`SCC_GET_RECURSIVE`|0x00000002L|IDE がディレクトリを渡す: これらのディレクトリとそのすべてのサブディレクトリを取得します。|  
+|`SCC_GET_ALL`|0x00000001L|IDE は、ディレクトリ、ファイルではなく渡すことは。これらのディレクトリ内のすべてのファイルを取得します。|  
+|`SCC_GET_RECURSIVE`|0x00000002L|IDE では、ディレクトリを渡します。これらのディレクトリとそのすべてのサブディレクトリを取得します。|  
   
 ## <a name="noption-values"></a>nOption 値  
  これらのフラグを使って、 [SccSetOption](../extensibility/sccsetoption-function.md)で、`nOption`パラメーター。  

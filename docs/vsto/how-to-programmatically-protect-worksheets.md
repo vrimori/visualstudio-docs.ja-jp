@@ -1,9 +1,6 @@
 ---
 title: '方法: プログラムによってワークシートを保護します。'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 819a1f4e07397720d806d887408b9e45aeda9ea5
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: dce13f8ec89f57b595f1147d99325004e89275e5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49867183"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53936933"
 ---
 # <a name="how-to-programmatically-protect-worksheets"></a>方法: プログラムによってワークシートを保護します。
   Microsoft Office Excel の保護機能を使用すると、ユーザーやコードがワークシート内のオブジェクトを編集できないようにすることができます。 既定では、保護を有効にすると、すべてのセルがロックされます。  
@@ -70,12 +67,10 @@ ms.locfileid: "49867183"
   
 ## <a name="see-also"></a>関連項目  
  [ワークシートを操作します。](../vsto/working-with-worksheets.md)   
- [方法: プログラムによってワークシートの保護を解除](../vsto/how-to-programmatically-remove-protection-from-worksheets.md)   
- [方法: プログラムによってブックを保護](../vsto/how-to-programmatically-protect-workbooks.md)   
- [方法: プログラムによってワークシートを非表示](../vsto/how-to-programmatically-hide-worksheets.md)   
+ [方法: プログラムによってワークシートの保護を解除します。](../vsto/how-to-programmatically-remove-protection-from-worksheets.md)   
+ [方法: プログラムによってブックを保護します。](../vsto/how-to-programmatically-protect-workbooks.md)   
+ [方法: プログラムによってワークシートを非表示します。](../vsto/how-to-programmatically-hide-worksheets.md)   
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [Worksheet ホスト項目](../vsto/worksheet-host-item.md)   
  [Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
-  
-  

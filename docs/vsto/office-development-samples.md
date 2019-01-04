@@ -1,9 +1,6 @@
 ---
 title: Office 開発のサンプル
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,17 +12,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a082137632399bee10ba2f4f91d00f153e9fe625
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: df2b8cebd7e4d907546b9cdf9aae50b29e5717d6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672742"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53964534"
 ---
 # <a name="office-development-samples"></a>Office 開発のサンプル
   Visual Studio には、Microsoft Office 開発者ツールを使用して Office ソリューションを作成する方法を示すサンプル アプリケーションが含まれています。 これらのサンプルのコードでは、Office ソリューションのビルドに使用される構文、構造体、および手法を示します。  
   
- 最新のサンプルでは、次を参照してください。 [MSDN デベロッパー サンプル: コードから学習](http://go.microsoft.com/fwlink/?LinkID=248199)、Microsoft web サイト。  
+ 最新のサンプルでは、次を参照してください。 [MSDN デベロッパー サンプル。コードから学習](http://go.microsoft.com/fwlink/?LinkID=248199)Microsoft web サイト。  
   
  [!INCLUDE[note_security_multiplesample](../vsto/includes/note-security-multiplesample-md.md)]  
   
@@ -44,7 +41,5 @@ ms.locfileid: "35672742"
 |VBA および VSTO の相互運用性サンプル|ブック内の Visual Basic for Applications (VBA) コードから Excel 用のドキュメント レベルのカスタマイズ内のメソッドを呼び出す方法を示します。<br /><br /> このサンプルは、オンラインでのみ使用できます。|  
   
 ## <a name="see-also"></a>関連項目  
- [MSDN デベロッパー サンプル: サンプル コードから学ぶ](http://go.microsoft.com/fwlink/?LinkID=248199)   
+ [MSDN デベロッパー サンプル:サンプル コードから学ぶ](http://go.microsoft.com/fwlink/?LinkID=248199)   
  [Office プログラミングで一般的なタスク](../vsto/common-tasks-in-office-programming.md)  
-  
-  

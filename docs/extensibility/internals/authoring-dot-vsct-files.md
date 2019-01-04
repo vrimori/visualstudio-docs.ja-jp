@@ -1,9 +1,6 @@
 ---
 title: 作成します。Vsct ファイル |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, manual authoring
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26a5353531d997ad40b913b5ee223614d6517c55
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 3b39cd97bca9ee88628d064f917686d2a7f45aaa
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49917818"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53945263"
 ---
 # <a name="author-vsct-files"></a>.Vsct ファイルの作成者
 このドキュメントを作成する方法を示しています、 *.vsct* Visual Studio 統合開発環境 (IDE) にメニュー項目、ツールバー、およびその他のユーザー インターフェイス (UI) 要素を追加するファイル。 次の手順を使用していない Visual Studio パッケージ (VSPackage) を UI 要素を追加すると、 *.vsct*ファイル。  
@@ -26,14 +23,14 @@ ms.locfileid: "49917818"
  新しいプロジェクトにはお勧めしますが生成されるため、Visual Studio パッケージ テンプレートを使用すること、 *.vsct*メニュー コマンド、ツール ウィンドウ、またはカスタム エディターの必須の要素が既に選択内容に応じてファイル. これを変更することができます *.vsct* VSPackage の要件を満たすファイル。 詳細を変更する方法については、 *.vsct*ファイルの例を参照してください[メニューとコマンドの拡張](../../extensibility/extending-menus-and-commands.md)します。  
   
 ## <a name="author-the-file"></a>ファイルを作成します  
- 作成者、 *.vsct*ファイルでこれらのフェーズ: ファイルとリソースの構造を作成、UI 要素を宣言、IDE では、UI 要素を配置、および任意の特殊な動作を追加します。  
+ 作成者、 *.vsct*次のフェーズでのファイル。ファイルとリソースの構造を作成、UI 要素を宣言、IDE では、UI 要素を配置、および任意の特殊な動作を追加します。  
   
 ### <a name="file-structure"></a>ファイルの構造  
  基本的な構造を *.vsct*ファイルは、 [CommandTable](../../extensibility/commandtable-element.md)ルート要素を含む、[コマンド](../../extensibility/commands-element.md)要素と[シンボル](../../extensibility/symbols-element.md)要素。  
   
 #### <a name="to-create-the-file-structure"></a>ファイル構造を作成するには  
   
-1.  追加、 *.vsct*ファイルを次の手順に従って、プロジェクト[方法: .vsct ファイルを作成](../../extensibility/internals/how-to-create-a-dot-vsct-file.md)です。  
+1.  追加、 *.vsct*ファイルを次の手順に従って、プロジェクト[方法.Vsct ファイルを作成](../../extensibility/internals/how-to-create-a-dot-vsct-file.md)です。  
   
 2. 必要な名前空間を追加、`CommandTable`要素は、次の例に示すようにします。  
   
@@ -54,9 +51,9 @@ ms.locfileid: "49917818"
   
 1. 上部にある、`CommandTable`要素、1 つ追加`Extern`要素を設定し、参照する外部のファイルごとに、`href`属性をファイルの名前にします。 Visual Studio のリソースにアクセスする次のヘッダー ファイルを参照することができます。  
   
-   -   *Stdidcmd.h*: Visual Studio によって公開されるすべてのコマンド用の Id を定義します。  
+   -   *Stdidcmd.h*:Visual Studio によって公開されるすべてのコマンドの Id を定義します。  
   
-   -   *Vsshlids.h*: Visual Studio のメニューのコマンド Id が含まれています。  
+   -   *Vsshlids.h*:Visual Studio のメニューのコマンド Id が含まれています。  
   
 2. パッケージが Visual Studio によって、または他のパッケージで定義されている任意のコマンドを呼び出す場合は、追加、`UsedCommands`要素の後に、`Commands`要素。 この要素で設定を[UsedCommand](../../extensibility/usedcommand-element.md)各コマンドを呼び出すが、パッケージの一部ではないです。 設定、`guid`と`id`の属性、`UsedCommand`要素を呼び出すコマンドの GUID と ID の値。 
 
@@ -239,6 +236,6 @@ ms.locfileid: "49917818"
    メニュー コント ローラーは、その横にある矢印の付いたボタンです。 矢印をクリックすると、リストが開きます。 UI には、メニュー コント ローラーを追加するには、作成、`Menu`要素その`type`属性を`MenuController`または`MenuControllerLatched`、目的の動作によって異なります。 親として設定 メニュー コント ローラーを設定する、`Group`要素。 メニュー コント ローラーは、そのグループのすべての子をそのドロップダウン リストに表示されます。  
   
 ## <a name="see-also"></a>関連項目  
- [メニューとコマンドを拡張します。](../../extensibility/extending-menus-and-commands.md)   
+ [メニューとコマンドを拡張](../../extensibility/extending-menus-and-commands.md)   
  [Visual Studio コマンド テーブル (.vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
  [VSCT XML スキーマ リファレンス](../../extensibility/vsct-xml-schema-reference.md)

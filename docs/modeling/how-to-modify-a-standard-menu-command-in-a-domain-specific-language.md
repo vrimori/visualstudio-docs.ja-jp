@@ -11,20 +11,19 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 6aa827781cb8ea78aa5df79f8cb839a6f3548e11
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: bc7eedfbdf725333a5cd6d3cdd3d683437d1979c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50967052"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53870191"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>方法: ドメイン固有言語における標準のメニュー コマンドを修正する
 
 DSL で自動的に定義される標準コマンドのいくつかの動作を変更できます。 たとえば、変更する可能性があります**切り取り**機密情報を除外することです。 そのためには、コマンド セット クラス内でメソッドをオーバーライドします。 これらのクラスは DslPackage プロジェクト内の CommandSet.cs ファイルで定義され、<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> から派生します。
 
 > [!NOTE]
-> 独自のメニュー コマンドを作成する場合を参照してください。[方法: ショートカット メニューにコマンドを追加](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)します。
+> 独自のメニュー コマンドを作成する場合を参照してください。[方法。ショートカット メニューにコマンドを追加](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)します。
 
 ## <a name="what-commands-can-you-modify"></a>変更可能なコマンド
 
@@ -57,7 +56,7 @@ DSL で自動的に定義される標準コマンドのいくつかの動作を�
 
 2.  **DslPackage**、という名前のフォルダーを作成する**カスタム コード**します。 このフォルダーの作成という名前の新しいクラス ファイル`CommandSet.cs`します。
 
-3.  新しいファイル内に、生成された部分クラスと同じ名前空間および名前を持つ部分宣言を記述します。 例えば:
+3.  新しいファイル内に、生成された部分クラスと同じ名前空間および名前を持つ部分宣言を記述します。 例:
 
     ```csharp
     using System;
@@ -71,7 +70,7 @@ DSL で自動的に定義される標準コマンドのいくつかの動作を�
 
 ## <a name="override-the-command-methods"></a>コマンド メソッドのオーバーライド
 
-ほとんどのコマンドは、2 つの関連付けられているメソッドを持つ: などの名前を持つメソッド`ProcessOnStatus`... コマンドを表示して有効にするかどうかを決定します。 このメソッドはユーザーが図を右クリックするたびに呼び出され、すばやく実行し、何の変更も生じません。 `ProcessOnMenu`... ユーザーが、コマンドをクリックし、コマンドの関数を実行するときに呼び出されます。 これらのメソッドの一方または両方をオーバーライドする場合があります。
+ほとんどのコマンドでは、2 つの関連付けられているメソッドがあります。などの名前を持つメソッド`ProcessOnStatus`... コマンドを表示して有効にするかどうかを決定します。 このメソッドはユーザーが図を右クリックするたびに呼び出され、すばやく実行し、何の変更も生じません。 `ProcessOnMenu`... ユーザーが、コマンドをクリックし、コマンドの関数を実行するときに呼び出されます。 これらのメソッドの一方または両方をオーバーライドする場合があります。
 
 ### <a name="to-change-when-the-command-appears-on-a-menu"></a>メニュー上にコマンドが表示されるタイミングを変更するには
 
@@ -148,7 +147,7 @@ protected override void ProcessOnMenuDeleteCommand()
 
 - <xref:System.ComponentModel.Design.MenuCommand>
 - [ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)
-- [方法: ショートカット メニューにコマンドを追加する](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)
+- [方法: ショートカット メニューにコマンドを追加します。](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)
 - [VSPackage でユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 - [VSCT XML スキーマ リファレンス](../extensibility/vsct-xml-schema-reference.md)

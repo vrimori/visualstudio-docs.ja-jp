@@ -1,9 +1,6 @@
 ---
 title: VSIX 拡張機能スキーマ 2.0 リファレンス |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - vsix
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e295bc8c09f41c4c1c77b216a9d91d0644d2d24e
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 6f9019ca281dd86ef4665e8f6590798d4dfbd917
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52388544"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53914667"
 ---
 # <a name="vsix-extension-schema-20-reference"></a>VSIX 拡張機能スキーマ 2.0 リファレンス
 VSIX の配置マニフェスト ファイルでは、VSIX パッケージの内容について説明します。 ファイル形式は、スキーマによって管理されます。 このスキーマのバージョン 2.0 では、カスタムの型と属性の追加をサポートします。  マニフェストのスキーマは拡張可能です。 マニフェストのローダーでは、XML 要素とそれを認識しない属性は無視されます。  
@@ -48,9 +45,9 @@ VSIX の配置マニフェスト ファイルでは、VSIX パッケージの内
   
 -   `<Identity>` -このパッケージの id 情報を定義して、次の属性が含まれています。  
   
-    -   `Id` -この属性は、その作成者によって選択されたパッケージの一意の ID である必要があります。 名前を修飾する必要がある同様の CLR 型は名前空間内: Company.Product.Feature.Name します。 `Id`属性は 100 文字に制限されます。  
+    -   `Id` -この属性は、その作成者によって選択されたパッケージの一意の ID である必要があります。 名前には、CLR 型は名前空間内と同じ方法を修飾する必要があります。Company.Product.Feature.Name します。 `Id`属性は 100 文字に制限されます。  
   
-    -   `Version` -このパッケージとそのコンテンツのバージョンを定義します。 この属性が CLR アセンブリのバージョン管理の形式に従います: Major.Minor.Build.Revision (1.2.40308.00)。 高いバージョン番号を使用してパッケージを使用して、パッケージに更新プログラムを見なされ、既存のインストールされているバージョンをインストールできます。  
+    -   `Version` -このパッケージとそのコンテンツのバージョンを定義します。 この属性は、CLR アセンブリのバージョン管理形式を次に示します。Major.Minor.Build.Revision (1.2.40308.00)。 高いバージョン番号を使用してパッケージを使用して、パッケージに更新プログラムを見なされ、既存のインストールされているバージョンをインストールできます。  
   
     -   `Language` -この属性は、パッケージの既定の言語であり、このマニフェスト内のテキスト形式のデータに対応しています。 この属性は規則に従って CLR ロケール コード、リソース アセンブリの例: en、米国、en、fr。 指定できます`neutral`はどのバージョンの Visual Studio で実行される言語に依存しない拡張機能を宣言します。 既定値は `neutral` です。  
   
@@ -97,7 +94,7 @@ VSIX の配置マニフェスト ファイルでは、VSIX パッケージの内
   
 -   `<InstallationTarget>` -この要素は、VSIX インストーラーが、パッケージをインストールする場所を制御します。 場合の値、`Scope`属性が"ProductExtension"パッケージは、SKU は、拡張機能には、その可用性を提供するには、その内容の一部としてマニフェスト ファイルがインストールをターゲットする必要があります。 `<InstallationTarget>`要素には、次属性の場合に、`Scope`属性が、明示的な既定値"ProductExtension"。  
   
-    -   `Id` -この属性は、パッケージを識別します。  属性が名前空間の規則に従います: Company.Product.Feature.Name します。 `Id`属性は、英数字のみを含めることができ、100 文字に制限されます。 予期される値:  
+    -   `Id` -この属性は、パッケージを識別します。  属性は、名前空間の規則を次に示します。Company.Product.Feature.Name します。 `Id`属性は、英数字のみを含めることができ、100 文字に制限されます。 予期される値:  
   
         -   Microsoft.VisualStudio.IntegratedShell  
   
@@ -143,7 +140,7 @@ VSIX の配置マニフェスト ファイルでは、VSIX パッケージの内
   
 -   `<Dependency>` 要素のこの子要素では、次の属性があります。  
   
-    -   `Id` -この属性は、依存パッケージの一意の ID を指定する必要があります。 この id 値に一致する必要があります、`<Metadata><Identity>Id`このパッケージが依存するパッケージの属性です。 `Id`属性が名前空間の規則に従います: Company.Product.Feature.Name します。 この属性は、英数字のみを含めることができ、100 文字に制限されています。  
+    -   `Id` -この属性は、依存パッケージの一意の ID を指定する必要があります。 この id 値に一致する必要があります、`<Metadata><Identity>Id`このパッケージが依存するパッケージの属性です。 `Id`属性が名前空間の規則に従います。Company.Product.Feature.Name します。 この属性は、英数字のみを含めることができ、100 文字に制限されています。  
   
     -   `Version` -この属性は、この SKU の最小値と最大のサポート対象バージョンのバージョンの範囲を指定します。 パッケージは、サポートされている Sku のバージョンについて詳しく説明ことができます。 バージョン範囲の表記は、[12.0, 13.0]、場所。  
   

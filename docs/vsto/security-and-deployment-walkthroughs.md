@@ -1,9 +1,6 @@
 ---
 title: セキュリティと配置のチュートリアル
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,18 +15,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 25a306300b1f5bf477a5435be58aca71ba5d70de
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: e0ce327c620531a1ba5f9a21ccbfd3aeef1c1fa8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50671288"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53986246"
 ---
 # <a name="security-and-deployment-walkthroughs"></a>セキュリティと配置のチュートリアル
   次のトピックでは、実行するには、ソリューションを許可するセキュリティ ポリシーを設定する方法と、Office ソリューションをデプロイする方法を示します。  
   
 ## <a name="security-topics"></a>セキュリティに関するトピック  
- [方法: Office ソリューションに署名](../vsto/how-to-sign-office-solutions.md)  
+ [方法: Office ソリューションに署名します。](../vsto/how-to-sign-office-solutions.md)  
  証明書を使用してソリューションに信頼を付与する方法について説明します。  
   
  [方法: 信頼のリストのセキュリティを構成します。](../vsto/how-to-configure-inclusion-list-security.md)  
@@ -42,19 +39,19 @@ ms.locfileid: "50671288"
  [方法: ClickOnce を使用して SharePoint サーバーに、ドキュメント レベルの Office ソリューションを発行する.](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58)  
  SharePoint サーバーに展開する手順をについて説明します。  
   
- [方法: ClickOnce Office ソリューションのインストール](https://msdn.microsoft.com/14702f48-9161-4190-994c-78211fe18065)  
+ [方法: ClickOnce Office ソリューションをインストールします。](https://msdn.microsoft.com/14702f48-9161-4190-994c-78211fe18065)  
  発行プロセス中に生成されるセットアップ プログラムを実行して Office ソリューションをインストールするための手順を示します配置マニフェスト ファイル。または、カスタマイズされたドキュメントまたはブックを開きます。  
   
- [方法: Office ソリューションを実行するためにエンド ユーザー コンピューターの前提条件のインストール](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)  
+ [方法: Office ソリューションを実行するためにエンド ユーザー コンピューターの前提条件をインストールします。](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)  
  ソリューションのコンポーネントのインストール前に、前提条件をチェックするセットアップ プログラムを作成する方法について説明します。  
   
  [方法: Office ソリューションの配置の IIS を準備します。](https://msdn.microsoft.com/f62bce70-81d4-4f8b-86e6-2f2afec5d9b4)  
  配置マニフェストに Microsoft インターネット インフォメーション サービス (IIS) の MIME の種類を構成する方法について説明します。  
   
- [方法: 更新プログラムは、Office ソリューションを展開](https://msdn.microsoft.com/be96db53-b6ea-46ab-b8d9-b76b098b3b13)  
+ [方法: Office ソリューションのデプロイを更新します。](https://msdn.microsoft.com/be96db53-b6ea-46ab-b8d9-b76b098b3b13)  
  使用して Office ソリューションを更新する方法について説明します、**発行ウィザード**します。  
   
- [方法: Office ソリューションのインストール パスを変更](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd)  
+ [方法: Office ソリューションのインストール パスを変更します。](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd)  
  Office ソリューションのインストール パスを変更する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
@@ -78,5 +75,3 @@ ms.locfileid: "50671288"
   
 ## <a name="see-also"></a>関連項目  
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)  
-  
-  

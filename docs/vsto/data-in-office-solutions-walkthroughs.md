@@ -1,9 +1,6 @@
 ---
 title: Office ソリューションのチュートリアルにおけるデータ
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,12 +13,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b56e17ca04d4c712058e20bd4f644b80e47cd2f7
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: aff3712e9c2c3fdf68e575abf6c3a3bdafafcf53
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53647311"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53829035"
 ---
 # <a name="data-in-office-solutions-walkthroughs"></a>Office ソリューションのチュートリアルにおけるデータ
   次のチュートリアルでは、ドキュメント レベルのカスタマイズと、Microsoft Office Word および Microsoft Office Excel 用の VSTO アドインで、データを操作する方法について説明します。  
@@ -70,5 +67,3 @@ ms.locfileid: "53647311"
  [開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Office プログラミングで一般的なタスク](../vsto/common-tasks-in-office-programming.md)   
  [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)  
-  
-  

@@ -1,9 +1,6 @@
 ---
 title: ListObject コントロール
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VST.Toolbox.List
@@ -21,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2fe8191acc2bab7fbcfa2f21ef203f6057535a75
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 0c488cafabcdffc3bfa56ee59ea4ca163c9d9dd0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672758"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53945185"
 ---
 # <a name="listobject-control"></a>ListObject コントロール
   <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールは、イベントを公開するリストであり、データにバインドすることができます。 ワークシートにリストを追加すると、ユーザーが Microsoft Office Excel オブジェクト モデルを走査する必要なく、直接、プログラムできる <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールが Visual Studio により作成されます。  
@@ -34,7 +31,7 @@ ms.locfileid: "35672758"
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
 ## <a name="create-the-control"></a>コントロールを作成します。  
- ドキュメント レベルのプロジェクトでは、デザイン時または実行時に、ワークシートに <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールを追加できます。 VSTO アドイン プロジェクトに追加することができます<xref:Microsoft.Office.Tools.Excel.ListObject>実行時にのみのワークシートにコントロール。 詳細については、次を参照してください。[方法: ワークシートにコントロールを追加 ListObject](../vsto/how-to-add-listobject-controls-to-worksheets.md)します。  
+ ドキュメント レベルのプロジェクトでは、デザイン時または実行時に、ワークシートに <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールを追加できます。 VSTO アドイン プロジェクトに追加することができます<xref:Microsoft.Office.Tools.Excel.ListObject>実行時にのみのワークシートにコントロール。 詳細については、「[方法 :ワークシートに ListObject コントロールを追加](../vsto/how-to-add-listobject-controls-to-worksheets.md)します。  
   
 > [!NOTE]  
 >  既定では、動的に作成されたリスト オブジェクトは、ワークシートを閉じる際に、ホスト コントロールとしてワークシートに残りません。 詳細については、次を参照してください。[実行時に Office ドキュメントにコントロールを追加](../vsto/adding-controls-to-office-documents-at-run-time.md)します。  
@@ -49,7 +46,7 @@ ms.locfileid: "35672758"
   
  データは <xref:Microsoft.Office.Tools.Excel.ListObject>とは分離されているため、データの追加と削除は、 <xref:Microsoft.Office.Tools.Excel.ListObject>から直接的にではなく、バインドされたデータセットを介して行う必要があります。 バインドされたデータセット内のデータが任意のメカニズムにより更新された場合に、 <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールが変更を自動的に反映します。 詳細については、次を参照してください。 [Office ソリューションでのコントロールにデータをバインド](../vsto/binding-data-to-controls-in-office-solutions.md)します。  
   
- <xref:Microsoft.Office.Tools.Excel.ListObject> をデータ ソースにバインドすれば、 <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールにすぐにデータを設定することができます。 データにバインドされた <xref:Microsoft.Office.Tools.Excel.ListObject>のデータを編集すると、データ ソースでも自動的に変更されます。 <xref:Microsoft.Office.Tools.Excel.ListObject> にデータを設定し、ユーザーがデータ ソースを変更せずに <xref:Microsoft.Office.Tools.Excel.ListObject> のデータを変更できるようにする場合、 <xref:Microsoft.Office.Tools.Excel.ListObject.Disconnect%2A> メソッドを使用してデータ ソースから <xref:Microsoft.Office.Tools.Excel.ListObject> をデタッチすることができます。 詳細については、次を参照してください。[方法: データ入力の ListObject コントロール](../vsto/how-to-fill-listobject-controls-with-data.md)します。  
+ <xref:Microsoft.Office.Tools.Excel.ListObject> をデータ ソースにバインドすれば、 <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールにすぐにデータを設定することができます。 データにバインドされた <xref:Microsoft.Office.Tools.Excel.ListObject>のデータを編集すると、データ ソースでも自動的に変更されます。 <xref:Microsoft.Office.Tools.Excel.ListObject> にデータを設定し、ユーザーがデータ ソースを変更せずに <xref:Microsoft.Office.Tools.Excel.ListObject> のデータを変更できるようにする場合、 <xref:Microsoft.Office.Tools.Excel.ListObject.Disconnect%2A> メソッドを使用してデータ ソースから <xref:Microsoft.Office.Tools.Excel.ListObject> をデタッチすることができます。 詳細については、「[方法 :データに ListObject コントロールを塗りつぶす](../vsto/how-to-fill-listobject-controls-with-data.md)します。  
   
 > [!NOTE]  
 >  重複する <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールでは、データ バインディングはサポートされません。  
@@ -58,7 +55,7 @@ ms.locfileid: "35672758"
  まずコントロールをバインドしてから <xref:Microsoft.Office.Tools.Excel.ListObject> を呼び出してデータセットにデータを設定する場合、データにバインドされた <xref:System.Data.DataSet.ReadXml%2A> コントロールに XML ファイルから読み込むときに時間がかかる傾向があります。 パフォーマンスを向上させるには、コントロールをバインドする前に <xref:System.Data.DataSet.ReadXml%2A> を呼び出します。  
   
 ### <a name="disconnect-listobject-controls-from-the-data-source"></a>データ ソースから ListObject コントロールを切断します。  
- データ ソースにバインドして <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールにデータを設定した後に、リスト オブジェクトのデータに加えられた変更がデータ ソースに影響しないように、そのデータソースから切断することができます。 詳細については、次を参照してください。[方法: データ入力の ListObject コントロール](../vsto/how-to-fill-listobject-controls-with-data.md)します。  
+ データ ソースにバインドして <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールにデータを設定した後に、リスト オブジェクトのデータに加えられた変更がデータ ソースに影響しないように、そのデータソースから切断することができます。 詳細については、「[方法 :データに ListObject コントロールを塗りつぶす](../vsto/how-to-fill-listobject-controls-with-data.md)します。  
   
 ### <a name="restore-column-and-row-order"></a>列と行の順序を復元します。  
  デザイン時にドキュメントに追加された <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールにデータをバインドする場合、ブックを保存するたびに Visual Studio は列と行の順序を追跡し続けます。 ユーザーが移動した場合、<xref:Microsoft.Office.Tools.Excel.ListObject>実行時に行または列新しい順序には、次に、ブックを開くときは保持されます、<xref:Microsoft.Office.Tools.Excel.ListObject>コントロールがもう一度データ ソースにバインドします。  
@@ -72,7 +69,7 @@ ms.locfileid: "35672758"
  手動で追加またはデータにバインドされた列を削除することはできません<xref:Microsoft.Office.Tools.Excel.ListObject>実行時のコントロール。 エンドユーザーが列を削除しようとするはすぐに復元し、追加された列は削除されます。 そのため、データにバインドされた <xref:Microsoft.Office.Tools.Excel.ListObject> でユーザーがこれらの操作を実行できない理由を説明するコードを記述しておくことは重要です。 Visual Studio では、データ バインディングに関連する <xref:Microsoft.Office.Tools.Excel.ListObject> の複数のイベントが提供されます。 たとえば、 <xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored> イベントを使用すると、ユーザーが削除しようとしたデータは削除できず、復元されたことを示す警告をユーザーに表示できます。  
   
 ## <a name="add-and-remove-rows-at-runtime"></a>追加し、実行時に行の削除  
- データ ソースで新しい行の追加が許可されており、読み取り専用ではない場合、データにバインドされた <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールの行を手動で追加したり削除したりすることができます。 <xref:Microsoft.Office.Tools.Excel.ListObject.BeforeAddDataBoundRow> などのイベントに対してコードを記述してデータを検証することができます。 詳細については、次を参照してください。[方法: ListObject コントロールに新しい行が追加されたときにデータを検証](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md)です。  
+ データ ソースで新しい行の追加が許可されており、読み取り専用ではない場合、データにバインドされた <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールの行を手動で追加したり削除したりすることができます。 <xref:Microsoft.Office.Tools.Excel.ListObject.BeforeAddDataBoundRow> などのイベントに対してコードを記述してデータを検証することができます。 詳細については、「[方法 :ListObject コントロールに新しい行が追加されたときにデータを検証](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md)です。  
   
  リスト オブジェクトのデータ ソースとの関係が原因で、日常的にエラーが発生することがあります。 たとえば、 <xref:Microsoft.Office.Tools.Excel.ListObject>で表示する列をマップできますが、null 値を許容できないフィールドなどの制限がある列を省略する場合、行が作成されるたびにエラーが発生します。 <xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow> イベントのイベント ハンドラーで、失われた値を追加するコードを記述することができます。  
   
@@ -112,11 +109,11 @@ ms.locfileid: "35672758"
   
 ## <a name="see-also"></a>関連項目  
  [拡張オブジェクトを使用して Excel を自動化します。](../vsto/automating-excel-by-using-extended-objects.md)   
- [方法: ワークシートに ListObject コントロールを追加](../vsto/how-to-add-listobject-controls-to-worksheets.md)   
- [方法: ListObject コントロールをサイズ変更](../vsto/how-to-resize-listobject-controls.md)   
- [方法: ListObject コントロールに新しい行が追加されたときにデータの検証](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md)   
- [方法: データへのマップ ListObject 列](../vsto/how-to-map-listobject-columns-to-data.md)   
- [方法: 塗りつぶし ListObject コントロール データ](../vsto/how-to-fill-listobject-controls-with-data.md)   
+ [方法: ワークシートに ListObject コントロールを追加します。](../vsto/how-to-add-listobject-controls-to-worksheets.md)   
+ [方法: ListObject コントロールをサイズ変更します。](../vsto/how-to-resize-listobject-controls.md)   
+ [方法: ListObject コントロールに新しい行が追加されたときにデータを検証します。](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md)   
+ [方法: データに ListObject 列をマップします。](../vsto/how-to-map-listobject-columns-to-data.md)   
+ [方法: データに ListObject コントロールを塗りつぶす](../vsto/how-to-fill-listobject-controls-with-data.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
  [Office ソリューションでのコントロールにデータをバインドします。](../vsto/binding-data-to-controls-in-office-solutions.md)   
  [Word 文書と Excel ブックを実行時に VSTO アドインで拡張します。](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
@@ -124,5 +121,3 @@ ms.locfileid: "35672758"
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   
  [方法: データベースからデータをワークシートに読み込む](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)   
  [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
-  
-  

@@ -1,9 +1,6 @@
 ---
 title: 項目を追加、新しい項目の追加 ダイアログ ボックス |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - Add New Item dialog box, adding items
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b98e696def519cea6d3644d0ef3a48bc82c19136
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d447090585a2314899bb2d6246c6fb450a9e767d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49812583"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53956050"
 ---
 # <a name="add-items-to-the-add-new-item-dialog-box"></a>新しい項目の追加 ダイアログ ボックスに項目の追加
 項目を追加するプロセス、**新しい項目の追加**レジストリ キー ダイアログ ボックスを起動します。 次のレジストリ エントリのように、 **AddItemTemplates**セクションには、どの項目で利用できるように、ディレクトリの名前とパスが含まれています、**新しい項目の追加** ダイアログ ボックスが配置されます。  

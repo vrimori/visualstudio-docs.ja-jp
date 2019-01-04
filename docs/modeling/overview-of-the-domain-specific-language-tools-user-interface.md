@@ -12,13 +12,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: d54ba969e06f3bd951556f8d8f347977419fc015
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: 8b6ea7865bdf9a6fcf3b57f7a463fab83cbbf75b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50966493"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53934571"
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>ドメイン固有言語ツールのユーザー インターフェイスの概要
 まず、Visual Studio では、ドメイン固有言語ツール (DSL ツール) ソリューションを開く、ときにユーザー インターフェイスが次の図のようになります。

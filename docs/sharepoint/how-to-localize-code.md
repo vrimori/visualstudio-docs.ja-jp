@@ -1,13 +1,8 @@
 ---
 title: '方法: コードのローカライズ |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -18,14 +13,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d170906a66ffaaa0e73d4d7d236c8f41290abe55
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 9f45ef99210ccf5e6caa22e4aef6ba303aa6a6b2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119791"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53990793"
 ---
-# <a name="how-to-localize-code"></a>方法: コードのローカライズ
+# <a name="how-to-localize-code"></a>方法: コードをローカライズします。
   ローカライズされていないコードでは、ハードコーディングされた文字列値が使用されています。 コードの文字列をローカライズするには、それらを <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> の呼び出しに置き換えます。このメソッドは、ローカライズされたリソースを参照します。  
   
 ## <a name="localize-code"></a>コードをローカライズします。  
@@ -75,7 +70,6 @@ ms.locfileid: "37119791"
   
 ## <a name="see-also"></a>関連項目
  [SharePoint ソリューションをローカライズします。](../sharepoint/localizing-sharepoint-solutions.md)   
- [方法: フィーチャーをローカライズ](../sharepoint/how-to-localize-a-feature.md)   
- [方法: ASPX マークアップのローカライズ](../sharepoint/how-to-localize-aspx-markup.md)   
- [方法: リソース ファイルを追加](../sharepoint/how-to-add-a-resource-file.md)  
-
+ [方法: フィーチャーをローカライズします。](../sharepoint/how-to-localize-a-feature.md)   
+ [方法: ASPX マークアップをローカライズします。](../sharepoint/how-to-localize-aspx-markup.md)   
+ [方法: リソース ファイルを追加します。](../sharepoint/how-to-add-a-resource-file.md)  

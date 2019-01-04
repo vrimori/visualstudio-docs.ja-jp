@@ -2,7 +2,6 @@
 title: XML エディターの IntelliSense 機能
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 2b26f214-cc3a-46bf-b260-14eb8e599182
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 78a9711a623abe2f7a37cb03be628c2b60723359
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 36350123135142e84adff0c3189ba81e31ebf6b2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49886384"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53986207"
 ---
 # <a name="xml-editor-intellisense-features"></a>XML エディターの IntelliSense 機能
 
@@ -45,7 +44,7 @@ XML エディターでは、Visual Studio で提供されている他の言語�
 
 -   特定の名前付きテンプレートのパラメーター名。
 
-詳細については、次を参照してください。[チュートリアル: XSLT IntelliSense の使用](../xml-tools/walkthrough-using-xslt-intellisense.md)トピック。
+詳細については、「[チュートリアル:XSLT IntelliSense を使用して](../xml-tools/walkthrough-using-xslt-intellisense.md)トピック。
 
 ## <a name="auto-completion"></a>オート コンプリート
  XML エディターでは、必要な XML 構文が自動的に入力されるため、XML の編集も容易になっています。 たとえば、次の開始タグを入力します。

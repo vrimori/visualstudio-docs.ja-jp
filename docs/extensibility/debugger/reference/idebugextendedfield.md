@@ -1,9 +1,6 @@
 ---
-title: IDebugExtendedField |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugExtendedField |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - IDebugExtendedField interface
@@ -13,15 +10,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: eedb327e19d012c653a9a5411c0ba7f1924cb369
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a503ff99542215ba5922feb860fc04cd047ce287
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31116426"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53869675"
 ---
 # <a name="idebugextendedfield"></a>IDebugExtendedField
-マネージ コードのジェネリックをサポートするために使用されるフィールドの型を拡張します。  
+マネージ コードのジェネリックをサポートするために使用できるフィールドの型を拡張します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -30,16 +27,16 @@ IDebugExtendedField : IDebugField
 ```  
   
 ## <a name="methods"></a>メソッド  
- メソッドだけでなく、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイス、このインターフェイスは、次のメソッドを実装します。  
+ メソッドだけでなく、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイスでは、このインターフェイスは、次のメソッドを実装します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
 |[GetExtendedKind](../../../extensibility/debugger/reference/idebugextendedfield-getextendedkind.md)|指定した拡張フィールドの種類を取得します。|  
-|[IsClosedType](../../../extensibility/debugger/reference/idebugextendedfield-isclosedtype.md)|フィールドがクローズ型を表すかどうかを判断します。|  
+|[IsClosedType](../../../extensibility/debugger/reference/idebugextendedfield-isclosedtype.md)|フィールドがクローズ型を表すかどうかを決定します。|  
   
-## <a name="requirements"></a>要件  
- ヘッダー: Sh.h  
+## <a name="requirements"></a>必要条件  
+ ヘッダー:Sh.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll

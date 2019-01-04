@@ -8,13 +8,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 01a2b4863736b22e08cf2075e6402d836e9cc671
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ca540b8ada32eac3afb6fcc4cb8d8da7204052b4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49926801"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53915427"
 ---
 # <a name="invoking-text-transformation-in-a-vs-extension"></a>VS 拡張機能内でのテキスト変換の呼び出し
 メニュー コマンドなどの Visual Studio 拡張機能を記述しているかどうかまたは[ドメイン固有言語](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)、テキスト テンプレートを変換するテキスト テンプレート サービスを使用することができます。 <xref:Microsoft.VisualStudio.TextTemplating.VSHost.STextTemplating> サービスを取得し、<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating> にキャストします。
@@ -135,8 +134,8 @@ Sample text.
  <xref:System.MarshalByRefObject> から派生したパラメーター クラスを使用して、テキスト テンプレートの外部に値を渡すことができます。
 
 ## <a name="related-topics"></a>関連トピック
- 前処理されたテキスト テンプレートからテキストを生成する: 呼び出す、`TransformText()`生成されたクラスのメソッド。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)します。
+ 前処理されたテキスト テンプレートからテキストを生成するには生成されたクラスの `TransformText()` メソッドを呼び出します。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)
 
- Visual Studio 拡張機能の範囲外でテキストを生成する: カスタム ホストを定義します。 詳細については、次を参照してください。[カスタム ホストを使用してテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)します。
+ Visual Studio 拡張機能の範囲外でテキストを生成するには。カスタム ホストを定義します。 詳細については、次を参照してください。[カスタム ホストを使用してテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)します。
 
- コンパイルして実行できるは後でソース コードを生成する: 呼び出す、`t4.PreprocessTemplate()`メソッドの<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating>します。
+ 後でコンパイルして実行できるソース コードを生成するには`t4.PreprocessTemplate()` の <xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating> メソッドを呼び出します。

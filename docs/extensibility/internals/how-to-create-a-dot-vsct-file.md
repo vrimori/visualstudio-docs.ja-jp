@@ -1,9 +1,6 @@
 ---
-title: '方法: を作成します。Vsct ファイル |Microsoft Docs'
-ms.custom: ''
+title: '方法: 作成します。Vsct ファイル |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, creating
@@ -13,14 +10,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 612ad5668ebb1033ef07dcad1fc07030d78e1643
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 51c1f286e23ed192970118d47981a60a2fbd76eb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49921211"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53885331"
 ---
-# <a name="how-to-create-a-vsct-file"></a>方法: .vsct ファイルを作成  
+# <a name="how-to-create-a-vsct-file"></a>方法: .Vsct ファイルを作成します。  
   
 XML ベースの Visual Studio コマンド テーブル構成を作成するいくつかの方法があります (*.vsct*) ファイル。  
   

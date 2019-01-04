@@ -1,6 +1,5 @@
 ---
 title: Visual Studio テンプレート マニフェスト スキーマ リファレンス |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: bc7d0a81-0df5-41a9-a912-1b30e5da1d13
@@ -9,17 +8,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 38581d7c7dd788fef481676283fdc96c8abc96ba
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: 8306eb62317807913aa0d23e19b6fb5adc4dfa53
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586313"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53961956"
 ---
 # <a name="visual-studio-template-manifest-schema-reference"></a>Visual Studio テンプレート マニフェスト スキーマ リファレンス
 このスキーマは、Visual Studio テンプレート マニフェストの形式を示します (*.vstman*) Visual Studio プロジェクトや項目テンプレートに生成されるファイル。 スキーマには、場所と、テンプレートに関するその他の関連情報も説明します。  
   
- : ため、個別の項目とプロジェクト テンプレートのディレクトリがある、マニフェストが項目とプロジェクト テンプレートが混在していることはありません。  
+ :個別の項目とプロジェクト テンプレートのディレクトリがあるため、マニフェストは項目とプロジェクト テンプレートが混在していることはありません。  
   
 > [!IMPORTANT]
 >  このマニフェストは、Visual Studio 2017 以降使用できます。  
@@ -29,9 +28,9 @@ ms.locfileid: "39586313"
   
 ### <a name="attributes"></a>属性  
   
--   **バージョン**: テンプレート マニフェストのバージョンを表す文字列。 必須。  
+-   **バージョン**:テンプレート マニフェストのバージョンを表す文字列。 必須。  
   
--   **ロケール**: ロケールまたはテンプレート マニフェストのロケールを表す文字列。 ロケールの値は、すべてのテンプレートに適用されます。 ロケールごとに個別のマニフェストを使用する必要があります。 任意。  
+-   **ロケール**:ロケールまたはテンプレート マニフェストのロケールを表す文字列。 ロケールの値は、すべてのテンプレートに適用されます。 ロケールごとに個別のマニフェストを使用する必要があります。 任意。  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -46,13 +45,13 @@ ms.locfileid: "39586313"
  テンプレートのコンテナーはマニフェストの要素です。 マニフェストが、定義テンプレートごとに 1 つのテンプレート コンテナー。  
   
 ### <a name="attributes"></a>属性  
- **VSTemplateType**: テンプレートの種類を指定する文字列値 (`"Project"`、 `"Item"`、または`"ProjectGroup"`)。 必須  
+ **VSTemplateType**:テンプレートの種類を指定する文字列値 (`"Project"`、 `"Item"`、または`"ProjectGroup"`)。 必須  
   
 ### <a name="child-elements"></a>子要素  
   
--   **RelativePathOnDisk**: ディスク上のテンプレート ファイルの相対パス。 この場所に示すようにテンプレートのツリーで、テンプレートの位置を定義することも、**新しいプロジェクト**または**新しい項目の**ダイアログ。 テンプレートのディレクトリと個々 のファイルとしてデプロイされている場合は、このパスは、テンプレート ファイルを含むディレクトリを参照します。 テンプレートのデプロイとしての *.zip*ファイルでは、このパスはパスを指定する必要があります、 *.zip*ファイル。  
+-   **RelativePathOnDisk**:ディスク上のテンプレート ファイルの相対パス。 この場所に示すようにテンプレートのツリーで、テンプレートの位置を定義することも、**新しいプロジェクト**または**新しい項目の**ダイアログ。 テンプレートのディレクトリと個々 のファイルとしてデプロイされている場合は、このパスは、テンプレート ファイルを含むディレクトリを参照します。 テンプレートのデプロイとしての *.zip*ファイルでは、このパスはパスを指定する必要があります、 *.zip*ファイル。  
   
--   * * VSTemplateHeader: A [TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)ヘッダーを説明する要素。  
+-   * * VSTemplateHeader:A [TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)ヘッダーを説明する要素。  
   
 ### <a name="parent-element"></a>親要素  
  **VSTemplateManifest**  
@@ -67,13 +66,13 @@ ms.locfileid: "39586313"
   
 ### <a name="child-elements"></a>子要素  
   
--   **RelativePath**: テンプレートのパス。 すべてのマニフェストの 1 つ目が優先されますので、パスごとに 1 つだけのエントリがかかることがあります。  
+-   **RelativePath**:テンプレートのパス。 すべてのマニフェストの 1 つ目が優先されますので、パスごとに 1 つだけのエントリがかかることがあります。  
   
--   **LocalizedName**: A **NameDescriptionIcon**ローカライズされた名前を指定する要素。 任意。  
+-   **LocalizedName**:A **NameDescriptionIcon**ローカライズされた名前を指定する要素。 任意。  
   
--   **SortOrder**: 並べ替え順序を指定する文字列。 任意。  
+-   **SortOrder**:並べ替え順序を指定する文字列。 任意。  
   
--   **ParentFolderOverrideName**: オーバーライドされた親フォルダーの名前。 任意。 この要素には、**名前**属性には、名前を指定する文字列値です。  
+-   **ParentFolderOverrideName**:オーバーライドされた親フォルダーの名前。 任意。 この要素には、**名前**属性には、名前を指定する文字列値です。  
   
 ### <a name="parent-element"></a>親要素  
  **VSTemplateManifest**  
@@ -83,9 +82,9 @@ ms.locfileid: "39586313"
   
 ### <a name="attributes"></a>属性  
   
--   **パッケージ**: パッケージを指定する文字列値。 任意。  
+-   **パッケージ**:パッケージを指定する文字列値。 任意。  
   
--   **ID**: ID を指定する文字列値 任意。  
+-   **ID**:ID を指定する文字列値 任意。  
   
 ### <a name="child-elements"></a>子要素  
  なし。  

@@ -1,9 +1,6 @@
 ---
 title: FIELD_INFO_FIELDS |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - FIELD_INFO_FIELDS
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78ea2148290402f2a8e5c08474de125fc52bca47
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 7e48ac549001ed8a6ef363540cf50affb0e7b605
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49936512"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53902507"
 ---
 # <a name="fieldinfofields"></a>FIELD_INFO_FIELDS
 取得するには、どのような情報を指定します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
@@ -28,7 +25,7 @@ ms.locfileid: "49936512"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-enum enum_FIELD_INFO_FIELDS {   
+enum enum_FIELD_INFO_FIELDS {   
    FIF_FULLNAME  = 0x0001,  
    FIF_NAME      = 0x0002,  
    FIF_TYPE      = 0x0004,  
@@ -73,9 +70,9 @@ public enum enum_FIELD_INFO_FIELDS {
 ## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   

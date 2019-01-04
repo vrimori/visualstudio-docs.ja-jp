@@ -10,13 +10,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 76e7b9433fe76464e7af385081ac3577d53919e1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 42f1f99cd8d5d8bc214b3a7ccde571d2a45a7d4a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813898"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53987341"
 ---
 # <a name="customizing-the-properties-window"></a>プロパティ ウィンドウのカスタマイズ
 Visual Studio で、ドメイン固有言語 (DSL) では、[プロパティ] ウィンドウの動作と外観をカスタマイズできます。 DSL 定義では、各ドメイン クラスのドメインのプロパティを定義します。 既定では、図またはモデル エクスプ ローラーで、クラスのインスタンスを選択するとすべてのドメイン プロパティが [プロパティ] ウィンドウに表示されます。 これにより、ドメイン プロパティの値を編集するダイアグラムで図形のフィールドにマップするがいない場合でもできます。
@@ -24,7 +23,7 @@ Visual Studio で、ドメイン固有言語 (DSL) では、[プロパティ] �
 ## <a name="names-descriptions-and-categories"></a>名前、説明、およびカテゴリ
  **名前と表示名**します。 ドメイン プロパティの定義では、プロパティの表示名は、[プロパティ] ウィンドウで実行時に表示される名前です。 これに対し、名前は、プロパティを更新するプログラム コードを記述するときに使用されます。 名前は、適切な CLR の英数字名をする必要がありますが、表示名にスペースを含めることができます。
 
- DSL 定義で、プロパティの名前を設定するとその表示名は自動的に名前のコピーに設定します。 "FuelGauge"など、pascal 形式の大文字と小文字名を記述する場合、表示名が自動的にスペースを含める:「燃料計」。 ただし、別の値を表示名を明示的に設定できます。
+ DSL 定義で、プロパティの名前を設定するとその表示名は自動的に名前のコピーに設定します。 "FuelGauge"など、pascal 形式の大文字と小文字名を記述する場合、表示名は自動的にスペースを含めます。「燃料計」。 ただし、別の値を表示名を明示的に設定できます。
 
  **説明**です。 ドメイン プロパティの説明は、2 つの場所が表示されます。
 
@@ -41,7 +40,7 @@ Visual Studio で、ドメイン固有言語 (DSL) では、[プロパティ] �
 
  図形に公開することができます、 **FillColor**、 **OutlineColor**、 **TextColor**、 **OutlineDashStyle**、 **OutlineThickness**と**FillGradientMode**プロパティ。 コネクタで公開することができます、**色**`,`**TextColor**、 **DashStyle**、および**太さ**プロパティ。 ダイアグラムで公開することができます、 **FillColor**と**TextColor**プロパティ。
 
-## <a name="forwarding-displaying-properties-of-related-elements"></a>転送: 関連要素のプロパティを表示します。
+## <a name="forwarding-displaying-properties-of-related-elements"></a>転送するには。関連する要素のプロパティを表示します。
  DSL のユーザーは、モデル内の要素を選択するときに、[プロパティ] ウィンドウでその要素のプロパティが表示されます。 ただし、指定された関連する要素のプロパティを表示することもできます。 これは、連携する要素のグループを定義している場合に便利です。 たとえば、主な要素と省略可能なプラグインの要素を定義する可能性があります。 主な要素を図形にマップされますがない場合は、すべてのプロパティを参照してくださいか 1 つの要素上にいるかのように便利です。
 
  この効果の名前は*プロパティ転送*、いくつかのケースでは自動的に実行するとします。 それ以外の場合は、プロパティのドメイン型記述子を定義することで転送を実現できます。
@@ -181,7 +180,7 @@ Visual Studio で、ドメイン固有言語 (DSL) では、[プロパティ] �
 > [!NOTE]
 >  内の別のコード ファイルにコードを追加、 **Dsl**プロジェクト。
 
- 例えば:
+ 例:
 
 ```csharp
 internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
@@ -218,7 +217,7 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
 (typeof(MyTypeConverter))]
 ```
 
- <xref:System.ComponentModel.TypeConverter> から派生するクラスを定義します。 別のファイルにコードを追加、 **Dsl**プロジェクト。 例えば:
+ <xref:System.ComponentModel.TypeConverter> から派生するクラスを定義します。 別のファイルにコードを追加、 **Dsl**プロジェクト。 例:
 
 ```csharp
 /// <summary>

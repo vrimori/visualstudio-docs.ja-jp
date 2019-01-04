@@ -2,7 +2,6 @@
 title: SAL について
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
 author: mikeblome
@@ -10,12 +9,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: a219590c20e2ec2bb77cc3ffa59bb6249cc52dfc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 56d416ce154f071804beb9b47d2623f2acee15af
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49917551"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53889921"
 ---
 # <a name="understanding-sal"></a>SAL について
 
@@ -43,7 +42,7 @@ void * memcpy(
 この関数の動作とわかりますか。 関数が実装されているかと呼ばれる、特定のプロパティをプログラムの正確性を確実に維持する必要があります。 この例のなどの宣言を見るだけでは何かがわかりません。 、SAL 注釈のないドキュメントやコードのコメントに依存する必要があります。 ここでの MSDN ドキュメントは、`memcpy`といいます。
 
 > "コピーは、src を取引先のバイト数をカウントします。 ソースとコピー先 memcpy の動作は未定義です。 Memmove を使用して、重複する領域を処理します。
-> **セキュリティに関する注意:** サイズまたはソース バッファーより大きいコピー先のバッファーが同じであることを確認してください。 詳細についてを参照してバッファー オーバーランの回避します。"
+> **セキュリティに関する注意:** コピー先のバッファーが、ソース バッファーと同じサイズ、または大きいサイズであることを確認してください。 詳細についてを参照してバッファー オーバーランの回避します。"
 
 ドキュメントには、いくつかプログラムの正確性を確実に特定のプロパティを維持するために、コードが提案する情報のビットにはが含まれています。
 
@@ -239,7 +238,7 @@ void OutOptCaller()
 
 Visual Studio コード分析は、この関数をチェックする前に null を検証します`pInt`が逆参照される場合に`pInt`を返す前に、関数によってバッファーが初期化されている NULL でないです。
 
-### <a name="example-the-inout-annotation"></a>例: \_Inout\_注釈
+### <a name="example-the-inout-annotation"></a>例:\_Inout\_注釈
 
 `_Inout_` 関数によって変更されるポインター パラメーターの注釈に使用されます。 ポインターは、呼び出しの前に有効な初期化データを指す必要がありますされ、変わる場合でもが必要も有効な値を返された場合。 注釈は、関数の読み取りし、書き込みを 1 つの要素のバッファーに自由に可能性があることを指定します。 呼び出し元は、バッファーを提供し、初期化する必要があります。
 
@@ -270,7 +269,7 @@ void BadInOutCaller()
 
 Visual Studio コード分析は、呼び出し元が初期化されたバッファーに NULL 以外のポインターを渡すことを検証します。 `pInt`、する前に返された場合に、`pInt`も null でないバッファーが初期化されます。
 
-### <a name="example-the-inoutopt-annotation"></a>例: \_Inout\_opt\_注釈
+### <a name="example-the-inoutopt-annotation"></a>例:\_Inout\_opt\_注釈
 
 `_Inout_opt_` 同じ`_Inout_`, 点が、入力パラメーターが NULL にできるし、この関数がそのため、確認する必要があります。
 
@@ -299,7 +298,7 @@ void InOutOptCaller()
 
 Visual Studio コード分析は、この関数は、バッファーにアクセスする前に、null チェックを検証します。`pInt`がを返す前に、関数によってバッファーが初期化されている NULL でないです。
 
-### <a name="example-the-outptr-annotation"></a>例: \_Outptr\_注釈
+### <a name="example-the-outptr-annotation"></a>例:\_Outptr\_注釈
 
 `_Outptr_` ポインターを返すためのものがパラメーターの注釈に使用されます。  パラメーター自体が null の場合、することはできず、呼び出された関数では、NULL 以外のポインターを返しますが初期化されたデータを指すポインター。
 
@@ -329,7 +328,7 @@ void OutPtrCaller()
 
 Visual Studio コード分析は、呼び出し元が NULL 以外のポインターを渡すことを検証します`*pInt`を返す前に、関数によってバッファーが初期化されているとします。
 
-### <a name="example-the-outptropt-annotation"></a>例: \_Outptr\_opt\_注釈
+### <a name="example-the-outptropt-annotation"></a>例:\_Outptr\_opt\_注釈
 
 `_Outptr_opt_` 同じ`_Outptr_`パラメーターが省略可能なことを除いて、-、呼び出し元が NULL ポインターでパラメーターに渡すことができます。
 

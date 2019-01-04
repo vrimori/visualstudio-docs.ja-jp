@@ -1,6 +1,5 @@
 ---
 title: 名前を要素 (Visual Studio テンプレート) |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 66e23b99c715f59a0c7a817c379e6cf06001c285
-ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
+ms.openlocfilehash: ca61a572ee923b5f9fa3f3999554d36057f4dd91
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53561201"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53925486"
 ---
 # <a name="name-element-visual-studio-templates"></a>Name 要素 (Visual Studio テンプレート)
 表示されるテンプレートの名前を指定します、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  

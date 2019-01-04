@@ -1,9 +1,6 @@
 ---
 title: '方法: Visual Studio 2015 への機能拡張プロジェクトの移行 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio SDK, upgrading
@@ -13,14 +10,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 09b8950a05c4e4181209190af17eb0d6ccdb35ba
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 456661c06934063041f06c36c20eee72d52c5b4a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39639709"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53915336"
 ---
-# <a name="how-to-migrate-extensibility-projects-to-visual-studio-2015"></a>方法: 機能拡張プロジェクトを Visual Studio 2015 に移行
+# <a name="how-to-migrate-extensibility-projects-to-visual-studio-2015"></a>方法: 機能拡張プロジェクトを Visual Studio 2015 に移行します。
 次に、拡張機能をアップグレードする方法を示します。  
   
 > [!IMPORTANT]
@@ -42,13 +39,13 @@ ms.locfileid: "39639709"
   
 ### <a name="to-update-an-extensibility-project-to-nuget-vs-sdk-reference-assemblies"></a>VS SDK の NuGet 参照アセンブリを拡張機能プロジェクトを更新するには  
   
-1.  VS SDK 参照アセンブリがプロジェクトのニーズを決定します。  **ソリューション エクスプ ローラー**、プロジェクトの展開**参照**ノードとプロジェクトの参照の一覧を確認してください。  VS SDK の参照アセンブリは、プレフィックスが**Microsoft.VisualStudio**名 (例: Microsoft.VisualStudio.Shell.14.0)。  
+1.  VS SDK 参照アセンブリがプロジェクトのニーズを決定します。  **ソリューション エクスプ ローラー**、プロジェクトの展開**参照**ノードとプロジェクトの参照の一覧を確認してください。  VS SDK の参照アセンブリは、プレフィックスが**Microsoft.VisualStudio**名 (例。Microsoft.VisualStudio.Shell.14.0)。  
   
 2.  VS SDK の参照アセンブリを選択し、右クリックして選択してプロジェクトから削除**削除**します。  
   
 3.  VS SDK の参照アセンブリの NuGet のバージョンを追加します。  **ソリューション エクスプ ローラーの参照**ノードを開いて、 **NuGet パッケージの管理**ダイアログ。  このダイアログ ボックスの詳細については、表示[パッケージ マネージャー UI](/NuGet/Tools/Package-Manager-UI)します。 VS SDK の参照アセンブリが で公開されている[nuget.org](http://www.nuget.org)によって[VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility)します。  
   
-4.  使用して**nuget.org**として、**パッケージ ソース**、必要な参照アセンブリに一致する NuGet パッケージ名の検索 (例: Microsoft.VisualStudio.Shell.14.0) でインストールし、プロジェクトです。  NuGet は、初期のアセンブリの依存関係を満たすために複数の参照アセンブリを追加する可能性があります。  
+4.  使用して**nuget.org**として、**パッケージ ソース**、必要な参照アセンブリに一致する NuGet パッケージ名の検索 (例。Microsoft.VisualStudio.Shell.14.0)、プロジェクトにインストールします。  NuGet は、初期のアセンブリの依存関係を満たすために複数の参照アセンブリを追加する可能性があります。  
   
      VS SDK をインストールして VS SDK のすべての参照アセンブリが一度に追加できる場合は、[メタ パッケージ](http://www.nuget.org/packages/VSSDK_Reference_Assemblies)します。  
   

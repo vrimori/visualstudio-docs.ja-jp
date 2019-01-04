@@ -1,9 +1,6 @@
 ---
 title: テンプレート ディレクトリの説明 (します。Vsdir) ファイル |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - .vsdir files
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 67e2cf5dcb898614750aecd7e4fe997fbde0b5cc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 4ff1c9d1557722b31a4375c3189b788968c2b198
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49938436"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53925210"
 ---
 # <a name="template-directory-description-vsdir-files"></a>テンプレート ディレクトリの説明 (.Vsdir) ファイル
 テンプレート ディレクトリの説明 (.vsdir) ファイルは、統合開発環境 (IDE) に、フォルダー、ウィザードの .vsz ファイル、およびダイアログ ボックスで、プロジェクトに関連付けられているテンプレート ファイルを表示できるテキスト ファイルです。 内容には、ファイルまたはフォルダーごとに 1 つのレコードが含まれます。 複数のフォルダー、ウィザード、またはテンプレート ファイルを記述する 1 つだけ .vsdir ファイルが用意されています一般に、参照先の場所ですべての .vsdir ファイルがマージされます。  
@@ -44,13 +41,13 @@ SourceFile.cpp|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#122|110|#123|0|0|0|#124
 | - | - |
 | 相対パス名 (RelPathName) | HeaderFile.h または MyWizard.vsz など、フォルダー、テンプレート、または .vsz ファイルの名前。 このフィールドは、フォルダーを表すために使用される名前を指定できますも。 |
 | {clsidPackage} | VSPackage のサテライトのダイナミック リンク ライブラリ (DLL) のリソース上で LocalizedName、説明、IconResourceId、SuggestedBaseName などのローカライズされた文字列にアクセスできるようにする VSPackage の GUID です。 DLLPath が指定されていない場合、IconResourceId が適用されます。 **注:** リソース識別子を 1 つ以上の前のフィールドがない限り、このフィールドは省略可能です。 このフィールドは、通常は、空白のそれぞれのテキストをローカライズしないサードパーティのウィザードを使用した対応する .vsdir ファイルです。 |
-| LocalizedName | テンプレート ファイルまたはウィザードのローカライズされた名前。 このフィールドには、文字列または"#ResID"形式のリソース識別子を指定できます。 この名前が表示されます、**新しい項目の追加** ダイアログ ボックス。 **注:** かどうか LocalizedName は、リソース識別子、{clsidpackage} が必要です。 |
+| LocalizedName | テンプレート ファイルまたはウィザードのローカライズされた名前。 このフィールドには、文字列または"#ResID"形式のリソース識別子を指定できます。 この名前が表示されます、**新しい項目の追加** ダイアログ ボックス。 **注:** LocalizedName がリソース識別子である場合は、{clsidpackage} が必要です。 |
 | SortPriority | このテンプレート ファイルまたはウィザードの相対的な優先順位を表す整数。 たとえば、この項目が 1 の値を持つ場合し、この項目は他のアイテムで、値 1 と 2 つ以上の並べ替え値を持つすべての項目の前の横に表示されます。<br /><br /> 並べ替えの優先順位は、同じディレクトリ内の項目に対して相対的です。 同じディレクトリに 1 つ以上の .vsdir ファイルが可能性があります。 その場合、すべての項目<em>.</em>そのディレクトリ内の vsdir ファイルがマージされます。 同じ優先順位を持つアイテムは、表示名の大文字の辞書式順序で表示されます。 `_wcsicmp`関数を使用して、アイテムを注文します。<br /><br /> .Vsdir ファイルで説明していない項目には、.vsdir ファイルに表示されている最高の優先順位番号より大きい優先順位番号が含まれます。 これらのアイテムは、名前に関係なく、表示される一覧の最後にことになります。 |
 | 説明 | テンプレート ファイルまたはウィザードのローカライズされた説明。 このフィールドには、文字列または"#ResID"形式のリソース識別子を指定できます。 この文字列に表示されます、**新しいプロジェクト**または**新しい項目の追加**ダイアログ ボックスの項目が選択されているとします。 |
 | DLLPath または {clsidPackage} | テンプレート ファイルまたはウィザードのアイコンを読み込むために使用します。 アイコンは、IconResourceId を使用して、.dll または .exe ファイルからリソースとして読み込まれます。 完全なパスを使用するか、VSPackage の GUID を使用して、.dll または .exe ファイルを識別できます。 DLL は、VSPackage の実装は、アイコン (いないサテライト DLL) の読み込みに使用されます。 |
 | IconResourceId | DLL または VSPackage の実装を表示するアイコンを指定する DLL のリソース識別子です。 |
 | フラグ (<xref:Microsoft.VisualStudio.Shell.Interop.__VSDIRFLAGS>) | 無効または有効にするために使用、**名前**と**場所**フィールドに、**新しい項目の追加** ダイアログ ボックス。 値、**フラグ**フィールドは必須のビット フラグの組み合わせの 10 進数に相当します。<br /><br /> ユーザーが項目を選択すると、**新規** タブで、プロジェクトを決定するかどうか、名前フィールドと 場所 フィールドはときに表示される、**新しい項目の追加** ダイアログ ボックスが最初に表示されます。 項目、.vsdir ファイルを使って制御できますのみ、項目が選択されているときに無効になっていると、フィールドが有効にするかどうか。 |
-| SuggestedBaseName | ファイル、ウィザード、またはテンプレートの既定の名前を表します。 このフィールドは、文字列または"#ResID"形式のリソース識別子です。 IDE では、この値を使用して、項目の既定の名前を提供します。 この基本値は、MyFile21.asp などの一意な名前に整数値が付加されます。<br /><br /> 前の一覧に、説明、DLLPath、IconResourceId、フラグ、および SuggestedBaseNumber がテンプレートおよびウィザードのファイルにのみ適用されます。 これらのフィールドは、フォルダーには適用されません。 この事実が BscPrjProjectItems ファイル内のコードに示すよう、 \<EnvSDK > \BscPrj\BscPrj\BscPrjProjectItems レジストリ キー。 このファイルには、レコードごとに 4 つのフィールド (フォルダーごとに 1 つ) 3 つのレコードが含まれています: RelPathName、{clsidpackage}、LocalizedName、および SortPriority します。<br /><br /> `General&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#110&#124;100`<br /><br /> `Source_Files&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#111&#124;110`<br /><br /> `Env&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#112&#124;120` |
+| SuggestedBaseName | ファイル、ウィザード、またはテンプレートの既定の名前を表します。 このフィールドは、文字列または"#ResID"形式のリソース識別子です。 IDE では、この値を使用して、項目の既定の名前を提供します。 この基本値は、MyFile21.asp などの一意な名前に整数値が付加されます。<br /><br /> 前の一覧に、説明、DLLPath、IconResourceId、フラグ、および SuggestedBaseNumber がテンプレートおよびウィザードのファイルにのみ適用されます。 これらのフィールドは、フォルダーには適用されません。 この事実が BscPrjProjectItems ファイル内のコードに示すよう、 \<EnvSDK > \BscPrj\BscPrj\BscPrjProjectItems レジストリ キー。 このファイルには、レコードごとに 4 つのフィールド (フォルダーごとに 1 つ) 3 つのレコードが含まれています。RelPathName、{clsidpackage}、LocalizedName、および SortPriority します。<br /><br /> `General&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#110&#124;100`<br /><br /> `Source_Files&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#111&#124;110`<br /><br /> `Env&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#112&#124;120` |
 
  ウィザード ファイルを作成するときに、次の問題を考慮する必要もあります。  
 

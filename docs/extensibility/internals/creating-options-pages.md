@@ -1,9 +1,6 @@
 ---
 title: オプション ページの作成 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - managed package framework, creating Tools Options pages
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 236d9a0be82885bdf8040c97601429279e74dd15
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 879d094051efd6a64af1c43cb96be71fbc67f5ca
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49949644"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53820638"
 ---
 # <a name="create-options-pages"></a>[オプション] ページを作成します。
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Managed package framework から派生したクラス<xref:Microsoft.VisualStudio.Shell.DialogPage>拡張、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を追加して IDE**オプション**ページの下で、**ツール**メニュー。  
@@ -86,5 +83,5 @@ ms.locfileid: "49949644"
  [!code-vb[UI_UserSettings_ToolsOptionPages#08](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_3.vb)]  
   
 ## <a name="see-also"></a>関連項目  
- [ユーザー設定とオプションを拡張します。](../../extensibility/extending-user-settings-and-options.md)   
+ [ユーザー設定とオプションの拡張](../../extensibility/extending-user-settings-and-options.md)   
  [[オプション] ページのオートメーションをサポートします。](../../extensibility/internals/automation-support-for-options-pages.md)

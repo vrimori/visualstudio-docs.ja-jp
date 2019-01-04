@@ -1,9 +1,6 @@
 ---
-title: メニューとツールバーのコマンドを最適化する |Microsoft ドキュメント
-ms.custom: ''
+title: メニューとツールバーのコマンドの最適化 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - commands [Visual Studio], menus
@@ -17,22 +14,22 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 92072668f96a69a0dc5ff78839b54fa7ecc656bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9e3f6f5a2bfe65943784d052e7835f5023fed2e3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31130730"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53900828"
 ---
-# <a name="optimizing-menu-and-toolbar-commands"></a>メニューとツールバーのコマンドを最適化します。
-Vspackage とそれに対応するコマンドへの追加[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]過密状態 UI が発生する可能性があります。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] UI コマンド混乱を最小限に抑える方法を提供します。  
+# <a name="optimizing-menu-and-toolbar-commands"></a>メニュー、ツール バー コマンドの最適化
+Vspackage とそれに対応するコマンドに追加[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]いっぱいになった UI があります。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] UI コマンドの混乱を最小限に抑える方法を提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [コマンドを使用可能にする](../../extensibility/internals/making-commands-available.md)  
- 増やしを最小限に抑えるための一般的なガイドラインを提供、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] UI Vspackage を追加するとします。  
+ 大将を最小限に抑えるための一般的なガイドラインを提供します、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] UI Vspackage を追加するとします。  
   
- [配置ガイドライン](../../extensibility/internals/command-placement-guidelines.md)  
- コマンド セットのサイズに従って、VSPackage を実装するためには、特定のガイドラインを提供します。  
+ [配置のガイドライン](../../extensibility/internals/command-placement-guidelines.md)  
+ コマンド セットのサイズに応じて、VSPackage を実装するためには、特定のガイドラインを提供します。  
   
 ## <a name="related-sections"></a>関連項目  
  [コマンド、メニュー、およびツール バー](../../extensibility/internals/commands-menus-and-toolbars.md)  

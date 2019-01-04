@@ -1,9 +1,6 @@
 ---
 title: メニュー項目にバインドのキーボード ショートカット |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - keyboard command
@@ -17,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 66436f31a0c2f3b895b4f12a5fb352eddf685632
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: d319dfdf1203870ecc1b80787522a56d6f37b5e2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50219641"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53940376"
 ---
 # <a name="bind-keyboard-shortcuts-to-menu-items"></a>キーボード ショートカットをメニュー項目にバインドします。
 カスタム メニュー コマンドをキーボード ショートカットをバインドするだけにエントリを追加、 *.vsct*パッケージのファイル。 このトピックでは、カスタム ボタン、メニュー項目、またはツールバーのコマンドをキーボード ショートカットをマップする方法と、既定のエディターのキーボード マッピングを適用またはカスタム エディターに制限する方法について説明します。  

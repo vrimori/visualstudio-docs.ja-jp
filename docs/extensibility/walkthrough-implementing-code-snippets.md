@@ -1,9 +1,6 @@
 ---
 title: 'チュートリアル: コード スニペットの実装 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: adbc5382-d170-441c-9fd0-80faa1816478
 author: gregvanl
@@ -11,14 +8,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd4a22dc63f0304cc8afa98e35c5f7afd6cac011
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 4866f028851fadbee9f8ab5dbd6d4dc50015a728
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49921994"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53902189"
 ---
-# <a name="walkthrough-implement-code-snippets"></a>チュートリアル: 実装のコード スニペット
+# <a name="walkthrough-implement-code-snippets"></a>チュートリアル: コード スニペットを実装します。
 コード スニペットを作成し、拡張機能のユーザーが、独自のコードを追加できるようにエディター拡張機能に含めることができます。  
   
  コード スニペットは、コードまたはその他のファイルに組み込むことのできるテキストの一部です。 特定のプログラミング言語では、登録されているすべてのスニペットを表示する、**ツール** メニューのをクリックして**コード スニペット マネージャー**します。 スニペットは、先を右クリックして、ファイルのスニペットを挿入するスニペットの挿入 をクリックしてまたは**ブロックの挿入**スニペットを見つけて、ダブルクリックします。 キーを押します**タブ**または**Shift**+**タブ**スニペットの関連する部分を変更し、キーを押します **」と入力**または**Esc**をそのまま使用します。 詳細については、次を参照してください。[コード スニペット](../ide/code-snippets.md)します。  
@@ -33,10 +30,10 @@ ms.locfileid: "49921994"
   
 3. スニペットの展開を実装します。  
   
-   このチュートリアルに基づいて[チュートリアル: ステートメント入力候補を表示](../extensibility/walkthrough-displaying-statement-completion.md)します。  
+   このチュートリアルに基づいて[チュートリアル。ステートメント入力候補を表示](../extensibility/walkthrough-displaying-statement-completion.md)します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールしないでください。 Visual Studio のセットアップのオプション機能として含まれています。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
+ Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールしないでください。 Visual Studio のセットアップのオプション機能として含まれています。 また、後から VS SDK をインストールすることもできます。 詳細については、"[Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)"を参照してください。  
   
 ## <a name="create-and-register-code-snippets"></a>作成し、コード スニペットの登録  
  通常、コード スニペットは、登録済みの言語サービスに関連付けられます。 ただし、実装する必要はありません、<xref:Microsoft.VisualStudio.Package.LanguageService>コード スニペットを登録します。 代わりに、スニペット インデックス ファイルの GUID を指定するだけですとで同じ GUID を使用して、<xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute>プロジェクトに追加します。  
@@ -112,7 +109,7 @@ ms.locfileid: "49921994"
   
 ### <a name="to-register-code-snippets-for-a-specific-guid"></a>特定の GUID のコード スニペットを登録するには  
   
-1.  開く、 **CompletionTest**プロジェクト。 このプロジェクトを作成する方法については、次を参照してください。[チュートリアル: ステートメント入力候補を表示](../extensibility/walkthrough-displaying-statement-completion.md)します。  
+1.  開く、 **CompletionTest**プロジェクト。 このプロジェクトを作成する方法については、次を参照してください。[チュートリアル。ステートメント入力候補を表示](../extensibility/walkthrough-displaying-statement-completion.md)します。  
   
 2.  プロジェクトで、次のアセンブリへの参照を追加します。  
   

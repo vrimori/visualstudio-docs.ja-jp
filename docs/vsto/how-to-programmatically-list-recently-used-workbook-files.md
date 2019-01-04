@@ -1,9 +1,6 @@
 ---
 title: '方法: 最近使用ブック ファイルをプログラムで一覧表示'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d3e909ad3e1509689d953e0ad6c6b8346ff97f91
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 850dc26b9a5f270b3806d9623795535d34cf8f4b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35257590"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989634"
 ---
 # <a name="how-to-programmatically-list-recently-used-workbook-files"></a>方法: 最近使用ブック ファイルをプログラムで一覧表示
   <xref:Microsoft.Office.Interop.Excel._Application.RecentFiles%2A>プロパティは、最近使用したファイルの Microsoft Office Excel リストに表示されるすべてのファイルの名前を含むコレクションを返します。 リストの長さは、保持する、ユーザーが選択したファイルの数によって異なります。 範囲内で結果を表示することができます。  
@@ -41,5 +38,3 @@ ms.locfileid: "35257590"
  [ブックを操作します。](../vsto/working-with-workbooks.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
-  
-  

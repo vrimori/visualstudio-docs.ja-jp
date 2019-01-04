@@ -1,9 +1,6 @@
 ---
-title: ソース コントロールの設計に関する決定事項 |Microsoft ドキュメント
-ms.custom: ''
+title: ソース コントロールの設計上の決定 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], design decisions
@@ -13,29 +10,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b0385d5feb7baf7fe60e253616c8db0f326932e9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dd1ffa27a8dfa7c1d98e7242d71f7cfe83c319d4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31131315"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53883186"
 ---
-# <a name="source-control-design-decisions"></a>ソース コントロールの設計に関する決定事項
-ソース管理を実装する場合は、プロジェクトの次の設計に関する決定事項を考慮してください。  
+# <a name="source-control-design-decisions"></a>ソース管理のデザインの方針
+ソース管理を実装する場合は、プロジェクトの次の設計に関する決定事項を検討してください。  
   
-## <a name="will-information-be-shared-or-private"></a>情報は共有またはプライベートになりますか。  
- 最も重要な設計上の決定を行うことはどのような情報が共有できるとはプライベートです。 などのプロジェクトのファイルの一覧を共有するが、このファイルのリスト内で一部のユーザーするプライベート ファイルがあります。 コンパイラの設定を共有することもスタートアップ プロジェクトには一般にプライベートです。 設定は、純粋な共有、共有、上書きを使ってまたは純粋なプライベートです。 仕様では、プライベートなアイテムのソリューション ユーザー オプション (.suo) ファイルなどはチェックされませんに[!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)]です。 .Suo ファイルを作成するなど、特定のプライベート ファイルなどのプライベート ファイルにプライベートな情報を格納することを確認する、です。 Visual c# csproj.user ファイルまたはです。 Visual basic の vbproj.user ファイル。  
+## <a name="will-information-be-shared-or-private"></a>情報は共有またはプライベートか。  
+ 最も重要な設計の決定を行うことは、どのような情報が共有できるとはプライベートです。 たとえば、プロジェクトのファイルの一覧を共有するが、このファイルのリスト内で一部のユーザーがファイルをプライベートにする可能性があります。 コンパイラの設定を共有することも、スタートアップ プロジェクトは通常プライベートです。 設定は、純粋な共有、上書きを共有またはプライベートのみです。 仕様では、プライベートなアイテムなど、ソリューション ユーザー オプション (.suo) ファイルはチェックされませんに[!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)]します。 .Suo ファイル、または特定のプライベート ファイルを作成する例などのプライベート ファイルでプライベートな情報を保管してください、。 csproj.user ファイル Visual c# または。 Visual basic の vbproj.user ファイル。  
   
- この決定は、包括的ながあり、項目間の単位で行われたことができます。  
+ この決定は、包括的な -アイテムごとに行んだことができます。  
   
-## <a name="will-the-project-include-special-files"></a>プロジェクトには特別なファイルが含まれますか。  
- 他の重要な設計の意思決定は、プロジェクトの構造が特別なファイルを使用するかどうかです。 特別なファイルは、表示されるは、ソリューション エクスプ ローラーと、チェックインおよびチェック アウト ダイアログ ボックスにあるファイルを基になる隠しファイルです。 特別なファイルを使用する場合は、次のガイドラインに従います。  
+## <a name="will-the-project-include-special-files"></a>プロジェクトで特別なファイルが含まれますか。  
+ もう 1 つの重要な設計上の決定は、プロジェクトの構造が特別なファイルを使用するかどうかです。 特別なファイルは、表示されるは、ソリューション エクスプ ローラーと、チェックインとチェック アウト ダイアログ ボックスにあるファイルを基になるファイルを非表示です。 特別なファイルを使用する場合は、次のガイドラインに従います。  
   
-1.  プロジェクトのルート ノードに特別なファイルを関連付けない-は、プロジェクト ファイル自体です。 プロジェクト ファイルは、1 つのファイルである必要があります。  
+1.  プロジェクトのルート ノードを特別なファイルを関連付けないでください-これは、プロジェクト ファイル自体。 プロジェクト ファイルは、1 つのファイルである必要があります。  
   
-2.  特別なファイルを追加、削除、またはプロジェクトでは、適切な名前を変更するときに<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2>は特殊なファイルを示すフラグを設定してイベントを発生する必要があります。 これらのイベントは、適切な呼び出しプロジェクトへの応答で、環境によって呼び出される<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>メソッドです。  
+2.  特別なファイルを追加、削除、または適切なプロジェクトで名前を変更するときに<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2>ファイルは、特殊なファイルを示すフラグを設定してイベントを発生する必要があります。 これらのイベントは、応答を呼び出し、適切なプロジェクトで、環境によって呼び出される<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>メソッド。  
   
-3.  プロジェクトまたはエディターが呼び出されると<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A>ファイルの場合、そのファイルに関連付けられている特別なファイルに自動的にチェック アウトされていません。親ファイルと共にで特別なファイルを渡します。 環境内で渡されるすべてのファイルの間のリレーションシップを検出し、チェック アウト UI で特別なファイルを適切に表示しません。  
+3.  プロジェクトまたはエディターを呼び出すと<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A>ファイルの場合、そのファイルに関連付けられている特別なファイルに自動的にチェック アウトされていません。親ファイルと共にで特別なファイルを渡します。 環境に渡されるすべてのファイル間のリレーションシップを検出し、チェック アウトの UI で、特殊なファイルを適切に非表示にします。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A>   

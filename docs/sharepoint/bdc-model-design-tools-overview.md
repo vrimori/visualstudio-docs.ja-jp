@@ -1,17 +1,12 @@
 ---
 title: BDC モデルのデザイン ツールの概要 |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.BDC.Method_Details
 - VS.SharePointTools.BDC.Explorer
 - VS.SharePointTools.BDC.Diagram
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -28,12 +23,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6c5a799a245d2149161809977446d0c005dbe293
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e4b2a094d33088adb9aa3fc2c0fba953030c781b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49914503"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53923336"
 ---
 # <a name="bdc-model-design-tools-overview"></a>BDC モデルのデザイン ツールの概要
   ビジネス データ接続 (BDC) モデルを設計するには、BDC デザイナーを使用して、 **BDC メソッドの詳細**ウィンドウ、および**BDC エクスプ ローラー**。  
@@ -76,20 +71,18 @@ ms.locfileid: "49914503"
 > [!NOTE]  
 >  元の型記述子への変更は、その型記述子のコピーには影響しません。  
   
- 詳細については、次を参照してください。[方法: パラメーターの型記述子を定義](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)します。  
+ 詳細については、「[方法 :パラメーターの型記述子を定義](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)します。  
   
 ## <a name="see-also"></a>関連項目
- [方法: BDC モデルの作成](../sharepoint/how-to-create-a-bdc-model.md)   
+ [方法: BDC モデルを作成します。](../sharepoint/how-to-create-a-bdc-model.md)   
  [方法: エンティティ モデルを追加します。](../sharepoint/how-to-add-an-entity-to-a-model.md)   
- [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
- [方法: 特定の Finder メソッドを追加](../sharepoint/how-to-add-a-specific-finder-method.md)   
- [方法: Creator メソッドを追加](../sharepoint/how-to-add-a-creator-method.md)   
- [方法: Deleter メソッドを追加](../sharepoint/how-to-add-a-deleter-method.md)   
- [方法: Updater メソッドの追加](../sharepoint/how-to-add-an-updater-method.md)   
+ [方法: Finder メソッドを追加します。](../sharepoint/how-to-add-a-finder-method.md)   
+ [方法: 特定の Finder メソッドを追加します。](../sharepoint/how-to-add-a-specific-finder-method.md)   
+ [方法: Creator メソッドを追加します。](../sharepoint/how-to-add-a-creator-method.md)   
+ [方法: Deleter メソッドを追加します。](../sharepoint/how-to-add-a-deleter-method.md)   
+ [方法: Updater メソッドを追加します。](../sharepoint/how-to-add-an-updater-method.md)   
  [エンティティ間のアソシエーションを作成します。](../sharepoint/creating-an-association-between-entities.md)   
- [チュートリアル: sharepoint ビジネス データを使用して外部リストを作成します。](../sharepoint/walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md)   
+ [チュートリアル: ビジネス データを使用して SharePoint に外部リストを作成します。](../sharepoint/walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md)   
  [SharePoint ビジネス データを統合します。](../sharepoint/integrating-business-data-into-sharepoint.md)   
  [ビジネス データ接続モデルの作成](../sharepoint/creating-a-business-data-connectivity-model.md)   
  [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)  
-  
- 

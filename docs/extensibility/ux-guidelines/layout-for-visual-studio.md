@@ -1,9 +1,6 @@
 ---
 title: Visual Studio のレイアウト |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: c19e3022-047c-43b6-a046-a82717efed4f
 author: gregvanl
@@ -11,12 +8,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 638cfc29ed2aa05a8576a2244b81f0625453076d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e82ed0f65a8546cc16decce84c3cca01237694d0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49816698"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53898753"
 ---
 # <a name="layout-for-visual-studio"></a>Visual Studio のレイアウト
 Visual Studio のダイアログ ボックスの大半は[ユーティリティ ダイアログのレイアウト](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout)、そのに従って標準のダイアログ ボックスは、unthemed [Windows デスクトップ ダイアログのレイアウトの原則](/windows/desktop/uxguide/win-dialog-box)します。 Visual Studio の UI の更新を移動するとき、目立つのダイアログ ボックスの一部に製品を定義するとエクスペリエンスを確立する新しい設計になっています。 これら[テーマが適用されたダイアログのレイアウト](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout)テーマの外観を与えます。  
@@ -38,11 +35,11 @@ Visual Studio のダイアログ ボックスの大半は[ユーティリティ 
   
  ![コントロール上のラベルのダイアログの間隔](../../extensibility/ux-guidelines/media/0801-a_utilityspacingabove.png "0801 a_UtilitySpacingAbove")  
   
- **図 a 08.01: コントロールの上にラベルを持つユーティリティ ダイアログに関するガイドラインの間隔**  
+ **図 a 08.01:コントロールの上のラベルが付いたユーティリティに関するダイアログ ボックスの間隔のガイドライン**  
   
  ![コントロールの左のラベルのダイアログの間隔](../../extensibility/ux-guidelines/media/0801-b_utilityspacingleft.png "0801 b_UtilitySpacingLeft")  
   
- **図の 08.01 b: コントロールの左にラベルが付いたユーティリティ ダイアログに関するガイドラインの間隔**  
+ **図の 08.01 b:コントロールの左にラベルが付いたユーティリティに関するダイアログ ボックスの間隔のガイドライン**  
   
 ### <a name="layout-details"></a>レイアウトの詳細  
   
@@ -68,7 +65,7 @@ Visual Studio のダイアログ ボックスの大半は[ユーティリティ 
   
   ![基本的なボタンの配置](../../extensibility/ux-guidelines/media/0801-c_buttonalign.png "0801 c_ButtonAlign")  
   
-  **図 08.01-c: 基本的なボタンの配置**  
+  **図 08.01-c:基本的なボタンの配置**  
   
 #### <a name="labels"></a>ラベル  
   
@@ -85,14 +82,14 @@ Visual Studio のダイアログ ボックスの大半は[ユーティリティ 
   
  ![コントロール間の距離をお勧めします](../../extensibility/ux-guidelines/media/0801-d_controldistance.png "0801 d_ControlDistance")  
   
- **コントロール間の距離に関する推奨事項を図 08.01-d:**  
+ **図 08.01-d:コントロール間の距離に関する推奨事項**  
   
 #### <a name="control-indentation"></a>コントロールのインデント  
  コントロールは入れ子になったときに、ラベルは、通常、コントロールを上記の左端と水平方向に内部のコントロールを配置します。  
   
  ![コントロールの配置を入れ子になった](../../extensibility/ux-guidelines/media/0801-e_controlalign.png "0801 e_ControlAlign")  
   
- **図 08.01-e: 入れ子になったコントロールの配置**  
+ **図 08.01-e:入れ子になったコントロールの配置**  
   
 #### <a name="control-width"></a>コントロールの幅  
  テキスト ボックスまたは他の同様のコントロールの幅は、フィールドの平均入力より長くする必要があります。 平均の英語版の word には、5 つの文字です。 たとえば、長いパス名を必要とするテキスト ボックスを水平方向のレイアウトが許可されている限りにするプラットフォームの名前は長最長を入力できますが、必ずのドロップダウン リストを中にします。  
@@ -114,11 +111,11 @@ Visual Studio のダイアログ ボックスの大半は[ユーティリティ 
   
   ![水平方向の [ok] と [キャンセル] ボタン](../../extensibility/ux-guidelines/media/0801-f_horizokcan.png "0801 f_HorizOKCan")  
   
-  **図 08.01-f: を持つ水平方向の [ok]/[キャンセル] ボタンの垂直方向の内部**  
+  **図の 08.01 f:垂直内部水平方向の [ok]/[キャンセル] ボタン**  
   
   ![垂直方向の [ok] と [キャンセル] ボタン](../../extensibility/ux-guidelines/media/0801-g_vertokcan.png "0801 g_VertOKCan")  
   
-  **図の 08.01 g: 垂直方向の [ok]/[キャンセル] を水平方向の内部ボタン。**  
+  **図の 08.01 g:垂直方向の [ok]/[キャンセル] で内部横並びのボタン**  
   
 #### <a name="browse-button"></a>[参照...]ボタン  
  **[参照...]** ボタンのテキスト ボックスに続く必要があります「参照…」省略記号を含む、完全に現れます。 容量が厳しいかが複数ある **[参照...]** 画面で、ボタンのボタンは、省略記号を削減できます。  
@@ -143,19 +140,19 @@ Visual Studio のダイアログ ボックスの大半は[ユーティリティ 
 ### <a name="themed-dialog-layout-examples"></a>テーマが適用されたダイアログのレイアウトの例  
  ![テーマが適用されたダイアログのレイアウト](../../extensibility/ux-guidelines/media/0801-h_themeddialog.png "0801 h_ThemedDialog")  
   
- **図の 08.01 h: テーマが適用されたダイアログ**  
+ **図の 08.01 h:テーマが適用されたダイアログ**  
   
  ![テーマが適用されたダイアログのディメンション](../../extensibility/ux-guidelines/media/0801-i_themeddialogdimensions.png "0801 i_ThemedDialogDimensions")  
   
- **図の 08.01 i: テーマが適用されたダイアログのディメンション**  
+ **図の 08.01 i:テーマが適用されたダイアログのディメンション**  
   
  ![テーマが適用されたダイアログのフォント](../../extensibility/ux-guidelines/media/0801-j_themeddialogfonts.png "0801 j_ThemedDialogFonts")  
   
- **図の 08.01 j: テーマが適用されたダイアログのフォント**  
+ **図の 08.01 j:テーマが適用されたダイアログのフォント**  
   
  ![テーマが適用されたダイアログの色](../../extensibility/ux-guidelines/media/0801-k_themeddialogcolors.png "0801 k_ThemedDialogColors")  
   
- **図の 08.01 k: テーマが適用されたダイアログの色**  
+ **図の 08.01 k:テーマが適用されたダイアログの色**  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio のアプリケーション パターン](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md)   

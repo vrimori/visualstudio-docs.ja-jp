@@ -1,9 +1,6 @@
 ---
 title: SccEnumChangedFiles 関数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - SccEnumChangedFiles
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c0284dd268621fddeaa9322c9a3cc17de7a3e71
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 708f8aeff15511a7c1ab877391e0f4ee8449480e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49811622"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53942269"
 ---
 # <a name="sccenumchangedfiles-function"></a>SccEnumChangedFiles 関数
 ローカル ファイルの一覧を指定するには、この関数は、どのファイルとは異なるソース コードの管理データベースに対応するバージョンを決定します。  

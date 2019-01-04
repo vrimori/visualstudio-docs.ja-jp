@@ -1,9 +1,6 @@
 ---
 title: METADATA_ADDRESS_LOCAL |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - METADATA_ADDRESS_LOCAL
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca9a6b1fac3627020363c92db8a2f05e5b5900ff
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 85c763eb9455966f576344a0116cf4a42df0ee18
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49846604"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53940876"
 ---
 # <a name="metadataaddresslocal"></a>METADATA_ADDRESS_LOCAL
 この構造体は、(通常関数またはメソッド) のスコープ内でローカル変数のアドレスを表します。  
@@ -70,9 +67,9 @@ if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal !=
 ## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   

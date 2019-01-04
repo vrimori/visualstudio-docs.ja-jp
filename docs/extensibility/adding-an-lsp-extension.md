@@ -1,9 +1,6 @@
 ---
 title: 言語サーバー プロトコルの拡張機能の追加 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/14/2017
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: 52f12785-1c51-4c2c-8228-c8e10316cd83
 author: gregvanl
@@ -11,12 +8,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4c583b9af65610340886794c03cb92be945b73d4
-ms.sourcegitcommit: c7b16358a5d6f7ea1dd2f70a6ac2a8266efa9c15
+ms.openlocfilehash: ad112d34c8f23a7738137f148f00a38a27335424
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53425865"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53966561"
 ---
 # <a name="add-a-language-server-protocol-extension"></a>言語サーバー プロトコルの拡張機能を追加します。
 
@@ -313,12 +310,19 @@ LSP 言語サービス拡張機能への設定のサポートを追加する以�
       }
    }
    ```
+
 4. .Pkgdef ファイルをプロジェクトに追加する (新しいテキスト ファイルを追加して、.pkgdef ファイル拡張子を変更)。 Pkgdef ファイルには、この情報を含める必要があります。
 
    ```xml
     [$RootKey$\OpenFolder\Settings\VSWorkspaceSettings\[settings-name]]
     @="$PackageFolder$\[settings-file-name].json"
    ```
+
+    サンプル:
+    ```xml
+    [$RootKey$\OpenFolder\Settings\VSWorkspaceSettings\MockLanguageExtension]
+    @="$PackageFolder$\MockLanguageExtensionSettings.json"
+    ```
 
 5. .Pkgdef ファイルを右クリックし、選択**プロパティ**します。 変更、**ビルド**アクションを**コンテンツ**と**VSIX に含める**プロパティを true にします。
 

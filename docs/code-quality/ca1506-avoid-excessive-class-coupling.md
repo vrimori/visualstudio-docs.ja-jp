@@ -1,8 +1,7 @@
 ---
-title: CA1506:過剰なクラスの結合を避ける
+title: CA1506:クラス結合度を大きくしすぎないでください
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - AvoidExcessiveClassCoupling
@@ -16,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d4c36d824fcfe698f8eb7a75b1111ccec03f4064
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: aa8d2e85ebacdedfde9d6731ff3e24a557de3e13
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53740300"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53988557"
 ---
-# <a name="ca1506-avoid-excessive-class-coupling"></a>CA1506:過剰なクラスの結合を避ける
+# <a name="ca1506-avoid-excessive-class-coupling"></a>CA1506:クラス結合度を大きくしすぎないでください
 
 |||
 |-|-|

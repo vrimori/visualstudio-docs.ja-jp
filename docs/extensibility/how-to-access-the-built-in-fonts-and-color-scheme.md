@@ -1,9 +1,6 @@
 ---
 title: '方法: 組み込みのフォントおよび色スキームへのアクセス |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - fonts, accessing built-in
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 295f6d26d086914bf75d5744ca47594dfefb6591
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f1e579ab9e42ffd7448e3c0dbe62766c058e6f01
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49911253"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53874603"
 ---
 # <a name="how-to-access-the-built-in-fonts-and-color-ccheme"></a>方法: 組み込みのフォントをアクセスし、ccheme の色
 Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウに関連付けられているフォントおよび色のスキームがあります。 このスキームを通じてアクセスできる、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インターフェイス。
@@ -61,7 +58,7 @@ Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウ�
     |名前|型|データ|説明|
     |----------|----------|----------|-----------------|
     |カテゴリ|REG_SZ|GUID|ストック フォントおよびカラー スキームを格納しているカテゴリを識別する任意の GUID。|
-    |Package|REG_SZ|GUID|{F5E7E71D-1401-11D1-883B-0000F87579D2}<br /><br /> この GUID は、既定のフォントと色の構成を使用して、すべての Vspackage によって使用されます。|
+    |パッケージ|REG_SZ|GUID|{F5E7E71D-1401-11D1-883B-0000F87579D2}<br /><br /> この GUID は、既定のフォントと色の構成を使用して、すべての Vspackage によって使用されます。|
     |NameID|REG_DWORD|ID|VSPackage のローカライズ可能なカテゴリ名のリソース ID。|
     |ToolWindowPackage|REG_SZ|GUID|VSPackage の実装の GUID、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インターフェイス。|
 

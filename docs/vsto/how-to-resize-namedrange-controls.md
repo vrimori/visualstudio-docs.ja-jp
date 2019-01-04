@@ -1,9 +1,6 @@
 ---
-title: '方法: NamedRange コントロールをサイズ変更'
-ms.custom: ''
+title: '方法: NamedRange コントロールをサイズ変更します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,14 +14,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6d785aba9d08f71aa8530bc2edd015f497caafef
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: ac274e6e7e9a7e263e17dc03fa1c5c857f02864f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671891"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989764"
 ---
-# <a name="how-to-resize-namedrange-controls"></a>方法: NamedRange コントロールをサイズ変更
+# <a name="how-to-resize-namedrange-controls"></a>方法: NamedRange コントロールをサイズ変更します。
   <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールのサイズは Microsoft Office Excel ドキュメントにコントロールを追加するときに設定できますが、後でサイズの変更が必要になる場合があります。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
@@ -77,7 +74,7 @@ ms.locfileid: "35671891"
      [!code-vb[Trin_VstcoreHostControlsExcel#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#5)]  
   
 ##  <a name="runtimeaddin"></a> VSTO アドイン プロジェクトでの実行時に NamedRange コントロールをサイズ変更します。  
- サイズを変更することができます、<xref:Microsoft.Office.Tools.Excel.NamedRange>実行時に、開いているワークシートにコントロール。 詳細を追加する方法については、 <xref:Microsoft.Office.Tools.Excel.NamedRange> VSTO アドインを使用してワークシートにコントロールを参照してください[方法: ワークシートにコントロールを追加 NamedRange](../vsto/how-to-add-namedrange-controls-to-worksheets.md)します。  
+ サイズを変更することができます、<xref:Microsoft.Office.Tools.Excel.NamedRange>実行時に、開いているワークシートにコントロール。 詳細を追加する方法については、 <xref:Microsoft.Office.Tools.Excel.NamedRange> VSTO アドインを使用してワークシートにコントロールを参照してください[方法。ワークシートに NamedRange コントロールを追加](../vsto/how-to-add-namedrange-controls-to-worksheets.md)します。  
   
 ### <a name="to-resize-a-named-range-programmatically"></a>名前付き範囲のサイズをプログラムで変更するには  
   
@@ -98,8 +95,6 @@ ms.locfileid: "35671891"
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [拡張オブジェクトを使用して Excel を自動化します。](../vsto/automating-excel-by-using-extended-objects.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)   
- [方法: ワークシートに NamedRange コントロールを追加](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
- [方法: Bookmark コントロールのサイズを変更します。](../vsto/how-to-resize-bookmark-controls.md)   
- [方法: ListObject コントロールをサイズ変更](../vsto/how-to-resize-listobject-controls.md)  
-  
-  
+ [方法: ワークシートに NamedRange コントロールを追加します。](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
+ [方法: ブックマーク コントロールをサイズ変更します。](../vsto/how-to-resize-bookmark-controls.md)   
+ [方法: ListObject コントロールをサイズ変更します。](../vsto/how-to-resize-listobject-controls.md)  

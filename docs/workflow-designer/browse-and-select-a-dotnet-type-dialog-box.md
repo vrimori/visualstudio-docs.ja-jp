@@ -3,7 +3,6 @@ title: ワークフロー デザイナーで参照し、.NET の種類 ダイア
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.prod: visual-studio-dev15
-ms.technology: vs-workflow-designer
 f1_keywords:
 - TypeBrowser.UI
 - ActivityTypeResolver.UI
@@ -13,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 686969c233f50dd1df743590206966183be48da9
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 016dbb410aeade96d99d3ac27473e15ccc4b824c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513199"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53915219"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>[.NET 型の参照と選択] ダイアログ ボックス
 
@@ -65,7 +64,7 @@ ms.locfileid: "39513199"
 
 型の一覧、**型名**検索する文字を入力すると、短いボックスを取得します。 Fullyqualified 名前が入力した文字列で始まる型のみまたは短い名前が入力した文字列で始まる型は、フィルター処理された一覧に表示されます。
 
-例えば:
+例:
 
 1.  入力**操作**と一致する<xref:System.OperationCanceledException>なく<xref:System.InvalidOperationException>します。 <xref:System.InvalidOperationException> と一致するためには、「System.I」または「Invalid」と入力します。
 

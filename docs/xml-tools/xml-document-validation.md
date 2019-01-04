@@ -2,7 +2,6 @@
 title: XML エディターで XML ドキュメントの検証
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: abb353bd-6c4a-4978-b03b-a8c245bbfb55
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 04b2e821abbbc7a24ce5b77b7374de617852cf2a
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: eaf0ee4a039586e1f35883a2ce7a16f356f322b5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34693839"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53899731"
 ---
 # <a name="xml-document-validation"></a>XML ドキュメントの検証
 
@@ -23,7 +22,7 @@ XML エディターは、ユーザーが入力するときに XML 1.0 の構文�
 
  検証で使用されるスキーマの検索は、コンパイル済みのスキーマの `targetNamespace` と、要素の xmlns 宣言とを照合して行われます。 コンパイル済みのスキーマが読み込まれる場所を、優先度の高い順に次に示します。
 
--   指定されたファイル名から、**スキーマ**ドキュメントのフィールド**プロパティ**ウィンドウです。
+-   指定されたファイル名から、**スキーマ**ドキュメントのフィールド**プロパティ**ウィンドウ。
 
 -   インラインのスキーマまたは DTD。
 
@@ -40,10 +39,10 @@ XML エディターは、ユーザーが入力するときに XML 1.0 の構文�
 -   スキーマ キャッシュ ディレクトリ内にあるスキーマ。
 
 ## <a name="xslt-files"></a>XSLT ファイル
- XSLT ファイルを編集するとき、*置かれている xslt.xsd*スキーマ キャッシュ内にあるファイルが検証に使用されます。 検証エラーは、青色の波下線で表示されます。 XSLT コンパイラによるエラーは、赤色の波下線で示されます。
+ XSLT ファイルを編集するときに、*置かれている xslt.xsd*スキーマ キャッシュ内にファイルが検証に使用されます。 検証エラーは、青色の波下線で表示されます。 XSLT コンパイラによるエラーは、赤色の波下線で示されます。
 
 ## <a name="xml-schema-xsd-files"></a>XML スキーマ (XSD) ファイル
- XML スキーマ ファイルを編集するとき、*置かれている xsdschema.xsd*スキーマ キャッシュ内にあるファイルが検証に使用されます。 検証エラーは、青色の波下線で表示されます。 コンパイル エラーも赤色の波下線で示されます。
+ XML スキーマ ファイルを編集するときに、*置かれている xsdschema.xsd*スキーマ キャッシュ内にファイルが検証に使用されます。 検証エラーは、青色の波下線で表示されます。 コンパイル エラーも赤色の波下線で示されます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,9 +1,6 @@
 ---
-title: IEnumDebugAddresses::Reset |Microsoft ドキュメント
-ms.custom: ''
+title: IEnumDebugAddresses::Reset |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IEnumDebugAddresses::Reset
@@ -15,15 +12,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0a7cd9b20dc550db8f2543fe7e214885c0544333
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 241b1aa3ea0496580182665f44405e9e98776e6a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31119433"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53861878"
 ---
 # <a name="ienumdebugaddressesreset"></a>IEnumDebugAddresses::Reset
-このメソッドは、最初の要素に列挙体をリセットします。  
+このメソッドは、最初の要素を列挙型をリセットします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,10 +36,10 @@ int Reset();
  なし  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドが呼び出された後、次の呼び出し[次](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md)列挙体の最初の要素を返します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドが呼び出された後、次回の呼び出し[次](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md)列挙体の最初の要素を返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)   

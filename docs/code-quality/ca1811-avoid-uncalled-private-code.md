@@ -1,8 +1,7 @@
 ---
-title: 'CA1811: 呼び出されていないプライベート コードを使用しません'
+title: CA1811:呼び出されていないプライベート コードを使用しません
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - AvoidUncalledPrivateCode
@@ -16,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b8c71c7dc549c980be8ae7a2241629774f32150
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e40ea8d8168d557374e509a3e93b263ef1fe5724
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49822974"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53986779"
 ---
-# <a name="ca1811-avoid-uncalled-private-code"></a>CA1811: 呼び出されていないプライベート コードを使用しません
+# <a name="ca1811-avoid-uncalled-private-code"></a>CA1811:呼び出されていないプライベート コードを使用しません
 
 |||
 |-|-|
@@ -55,8 +54,8 @@ ms.locfileid: "49822974"
  このルールから警告を抑制しても安全です。
 
 ## <a name="related-rules"></a>関連するルール
- [CA1812: インスタンス化されていない内部クラスを使用しないでください](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
+ [CA1812:インスタンス化されていない内部クラスを回避します。](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
 
- [CA1801: 使用されていないパラメーターをレビューします](../code-quality/ca1801-review-unused-parameters.md)
+ [CA 1801:未使用のパラメーターをレビューします](../code-quality/ca1801-review-unused-parameters.md)
 
- [CA1804: 使用されていないローカルを削除します](../code-quality/ca1804-remove-unused-locals.md)
+ [CA 1804:使用されていないローカルを削除します](../code-quality/ca1804-remove-unused-locals.md)

@@ -1,9 +1,6 @@
 ---
 title: オートメーション モデルに貢献する |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - automation [Visual Studio SDK]
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5d56b446914ae7345ccb0d393db8f17fc7f82c47
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 6db9cd21b56fb4d31a97fea9f16541377a8de1f3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513186"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53952603"
 ---
 # <a name="contribute-to-the-automation-model"></a>オートメーション モデルに貢献します。
 Visual Studio は、環境をカスタマイズするためのオートメーション インターフェイスのセットを提供します。 オートメーション モデルは、エンドユーザーは Visual Studio のアドインと拡張機能を作成するオブジェクト モデルです。  
@@ -49,7 +46,7 @@ Visual Studio は、環境をカスタマイズするためのオートメーシ
  [コードのオートメーションを提供します。](../../extensibility/internals/providing-automation-for-code.md)  
  コードのオートメーション モデルを作成する必要がないことについて説明します。 ただし、このトピックの「コード モデルに洞察力に富んだ情報を提供するリンクが提供されます。  
   
- [方法: Windows のオートメーションの提供](../../extensibility/internals/how-to-provide-automation-for-windows.md)  
+ [方法: Windows のオートメーションを提供します。](../../extensibility/internals/how-to-provide-automation-for-windows.md)  
  オートメーションを提供することことをお勧め、ウィンドウでオートメーション オブジェクトを使用できるようにして、環境に既に既製のオートメーション オブジェクトを提供しないときに説明します。 ツール ウィンドウおよびドキュメント ウィンドウのための自動化について説明します。  
   
  [オートメーション モデルを使用します。](../../extensibility/internals/using-the-automation-model.md)  
@@ -61,4 +58,3 @@ Visual Studio は、環境をカスタマイズするためのオートメーシ
 ## <a name="reference"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>  
  VSPackage が、DTE オートメーション オブジェクト モデルに参加する方法を示すコード サンプルを提供します。 パラメーター、戻り値、および選択した注釈の一覧を表示します。  
-  

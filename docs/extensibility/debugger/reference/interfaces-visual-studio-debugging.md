@@ -1,9 +1,6 @@
 ---
-title: インターフェイス (Visual Studio のデバッグ) |Microsoft ドキュメント
-ms.custom: ''
+title: インターフェイス (Visual Studio のデバッグ) |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], interfaces
@@ -13,29 +10,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f5523b28d84b3fd490b2e83823462d4166e7332
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a25e66f6ee86ed0241efceae084d0e8e7abc3488
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31124644"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53889045"
 ---
 # <a name="interfaces-visual-studio-debugging"></a>インターフェイス (Visual Studio のデバッグ)
-Vtable 順序のインターフェイスのページの内容のテーブル内の各インターフェイスでメソッドをアルファベット順に一覧表示されます。  
+メソッドは、下の目次や Vtable 順序でインターフェイスのページ テーブル内の各インターフェイスでアルファベット順に一覧表示されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)  
- デバッグ エンジンで使用するインターフェイスをについて説明します。  
+ デバッグ エンジンで使用されるインターフェイスをについて説明します。  
   
  [式の評価のインターフェイス](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)  
  中断モード中に呼び出し履歴内の式を評価するインターフェイスについて説明します。  
   
  [シンボルプロバイダーのインターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)  
- 識別子の種類を関連付けるシンボル プロバイダーを実装するインターフェイスについて説明します。  
+ 関連付ける型識別子をシンボル プロバイダーを実装するインターフェイスについて説明します。  
   
 ## <a name="related-sections"></a>関連項目  
  [API リファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)  
- インターフェイス、列挙子、およびの構造体のドキュメントが含まれています、 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] SDK のデバッグします。  
+ インターフェイス、列挙子、および構造体のドキュメントが含まれています、 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] SDK のデバッグします。  
   
 ## <a name="see-also"></a>関連項目  
  [API リファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

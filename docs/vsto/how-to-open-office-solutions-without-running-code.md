@@ -1,9 +1,6 @@
 ---
 title: '方法: コードを実行することがなく Office ソリューションを開く'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -21,12 +18,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7684fd2d01d0151798c9e59c593e3e0c2acb95b1
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: 59cee99ad603ec1a03f8beffd36b82d4b83ed308
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53646907"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53930107"
 ---
 # <a name="how-to-open-office-solutions-without-running-code"></a>方法: コードを実行することがなく Office ソリューションを開く
   マネージ コード拡張機能で作成された Microsoft Office ソリューションでは、エンドユーザーの Office アプリケーションのセキュリティ設定が [高] に設定されている場合でも実行されます。 これは、.NET アセンブリのコードのセキュリティは、Microsoft Office ではなく、Microsoft .NET Framework によって管理されるためです。  
@@ -57,5 +54,3 @@ ms.locfileid: "53646907"
  [Office ソリューションをデプロイします。](../vsto/deploying-an-office-solution.md)   
  [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Office ソリューションにおけるアプリケーションと配置マニフェスト](../vsto/application-and-deployment-manifests-in-office-solutions.md)  
-  
-  

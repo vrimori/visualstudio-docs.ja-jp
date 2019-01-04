@@ -1,15 +1,10 @@
 ---
 title: '方法: エンティティ モデルを追加する |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - EntityTool
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -22,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 72dbebd8ff9b2e7bf7b001d540158656271c0556
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 347728ac4f096359f06ca7823adfcd1b25ff527a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757718"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53964035"
 ---
 # <a name="how-to-add-an-entity-to-a-model"></a>方法: エンティティ モデルを追加します。
   エンティティを作成するには、Visual Studio からエンティティ コントロールを追加**ツールボックス**ビジネス データ接続 (BDC) をデザイナーにします。  
@@ -53,10 +48,8 @@ ms.locfileid: "36757718"
      [!code-vb[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/VisualBasic/sp_bdc_entity_data_class/bdcmodel1/contact.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
- [方法: Creator メソッドを追加](../sharepoint/how-to-add-a-creator-method.md)   
- [方法: Deleter メソッドを追加](../sharepoint/how-to-add-a-deleter-method.md)   
- [方法: Updater メソッドの追加](../sharepoint/how-to-add-an-updater-method.md)   
- [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
- [方法: 特定の Finder メソッドを追加](../sharepoint/how-to-add-a-specific-finder-method.md)  
-  
- 
+ [方法: Creator メソッドを追加します。](../sharepoint/how-to-add-a-creator-method.md)   
+ [方法: Deleter メソッドを追加します。](../sharepoint/how-to-add-a-deleter-method.md)   
+ [方法: Updater メソッドを追加します。](../sharepoint/how-to-add-an-updater-method.md)   
+ [方法: Finder メソッドを追加します。](../sharepoint/how-to-add-a-finder-method.md)   
+ [方法: 特定の Finder メソッドを追加します。](../sharepoint/how-to-add-a-specific-finder-method.md)  

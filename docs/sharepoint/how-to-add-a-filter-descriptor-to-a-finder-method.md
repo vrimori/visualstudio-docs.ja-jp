@@ -1,13 +1,8 @@
 ---
 title: '方法: Finder メソッドにフィルター記述子の追加 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -20,21 +15,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 63374f4d96c86ea3eafbd4c6fa3fbe3d1f5a5899
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: bf1909f6c57ed82ba5afcfd30f6586e9bd4d6d14
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36755600"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53877771"
 ---
-# <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>方法: Finder メソッドにフィルター記述子の追加
+# <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>方法: Finder メソッドにフィルター記述子を追加します。
   フィルター記述子には、実行する前に、メソッドに値を渡すためのモデルのコンシューマーが有効にします。 詳細については、次を参照してください。[ビジネス データ接続モデルを設計する](../sharepoint/designing-a-business-data-connectivity-model.md)します。  
   
  1 つの一般的なシナリオは、SharePoint 内のユーザーがいくつかの条件に一致する外部コンテンツ タイプのインスタンスを取得することです。 Finder メソッドにフィルター記述子を追加することで、このシナリオをサポートできます。  
   
 ### <a name="to-add-a-filter-descriptor-to-a-finder-method"></a>Finder メソッドにフィルター記述子を追加するには  
   
-1.  **BDC メソッドの詳細**ウィンドウで、Finder メソッドのノードを展開、展開、**パラメーター**ノード、し、入力パラメーターを追加します。 詳細については、次を参照してください。[方法: メソッドにパラメーターを追加](../sharepoint/how-to-add-a-parameter-to-a-method.md)します。  
+1.  **BDC メソッドの詳細**ウィンドウで、Finder メソッドのノードを展開、展開、**パラメーター**ノード、し、入力パラメーターを追加します。 詳細については、「[方法 :メソッドにパラメーターを追加](../sharepoint/how-to-add-a-parameter-to-a-method.md)します。  
   
 2.  **メソッドの詳細**ウィンドウで、パラメーターの型記述子を選択します。  
   
@@ -73,11 +68,9 @@ ms.locfileid: "36755600"
      [!code-vb[SP_BDC#11](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#11)]  
   
 ## <a name="see-also"></a>関連項目
- [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
- [方法: 特定の Finder メソッドを追加](../sharepoint/how-to-add-a-specific-finder-method.md)   
- [方法: メソッドにパラメーターを追加](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
- [方法: パラメーターの型記述子を定義](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
+ [方法: Finder メソッドを追加します。](../sharepoint/how-to-add-a-finder-method.md)   
+ [方法: 特定の Finder メソッドを追加します。](../sharepoint/how-to-add-a-specific-finder-method.md)   
+ [方法: メソッドにパラメーターを追加します。](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
+ [方法: パラメーターの型記述子を定義します。](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
  [ビジネス データ接続モデルを設計します。](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [SharePoint にビジネス データの統合](../sharepoint/integrating-business-data-into-sharepoint.md)  
-  
-  

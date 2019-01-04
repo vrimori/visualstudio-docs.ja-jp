@@ -1,9 +1,6 @@
 ---
 title: 関連サービスとインターフェイス (ソース管理 VSPackage) |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - source control packages, interfaces
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e68c7c0101661ae9afffa7e9e12e8e4faa44fc7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c312b6d89812a76f5fc8135eb18f02f0afedc5ec
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49940490"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53940626"
 ---
 # <a name="related-services-and-interfaces-source-control-vspackage"></a>関連サービスとインターフェイス (ソース管理 VSPackage)
 このセクションでは、ソース管理 VSPackage に関連するインターフェイスすべて一覧表示、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]します。 ソース管理 VSPackage では、これらのインターフェイスの一部を実装し、他のユーザーを使用してソース管理のタスクを実現します。  
@@ -33,9 +30,9 @@ ms.locfileid: "49940490"
   
  インターフェイスは次のとおりです。  
   
--   必要です。 適切なエンティティ (プロジェクトのソース管理 VSPackage、ソース コントロールのスタブ) インターフェイスを実装する必要があります。  
+-   必須:適切なエンティティ (プロジェクトのソース管理 VSPackage、ソース コントロールのスタブ) インターフェイスを実装する必要があります。  
   
--   推奨: エンティティはこのインターフェイスを実装する必要があります。それ以外の場合、ソース コントロールの機能が制限される可能性があります。  
+-   お勧めします。エンティティは、このインターフェイスを実装する必要があります。それ以外の場合、ソース コントロールの機能が制限される可能性があります。  
   
 -   省略可能: エンティティ インターフェイスを実装できますこの豊富な機能を提供します。  
   

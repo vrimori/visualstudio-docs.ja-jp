@@ -8,13 +8,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 260a1fdb78f1a9acf72a9789f12d7024cafe0c93
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 90385b233e859bf1cdd8ea1617b94efe58ec4cbf
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859199"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53876394"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>方法: ドラッグ アンド ドロップ ハンドラーを追加する
 
@@ -70,7 +69,7 @@ using System.Linq;
 
 -   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> -このメソッドは、図形または図に、ユーザーがダブルクリックしたときに呼び出されます。
 
-     詳細については、次を参照してください。[方法: シェイプまたはデコレーターに対するクリック](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)します。
+     詳細については、「[方法 :シェイプまたはデコレーターに対するクリック](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)します。
 
 `IsAcceptableDropItem(e)` を定義してドラッグした項目が受け入れられるかどうかを決定し、ProcessDragDropItem(e) を定義して項目がドロップされたときにモデルを更新します。 これらのメソッドは、最初にイベント引数から項目を抽出する必要があります。 その方法については、次を参照してください。[ドラッグした項目への参照を取得する方法](#extracting)します。
 
@@ -322,7 +321,7 @@ MEF (Managed Extensibility Framework) を使用して、最小構成でインス
     }  }  }
     ```
 
-## <a name="using-mouse-actions-dragging-compartment-items"></a>マウス アクションの使用: コンパートメント項目のドラッグ
+## <a name="using-mouse-actions-dragging-compartment-items"></a>マウス アクションの使用。コンパートメント項目のドラッグ
 
 図形のフィールドでマウス アクションを受け取るハンドラーを記述することができます。 次の例では、コンパートメント内の項目をマウスでドラッグして順序を変更するユーザーことができます。
 

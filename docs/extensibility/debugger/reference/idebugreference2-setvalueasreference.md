@@ -1,9 +1,6 @@
 ---
 title: IDebugReference2::SetValueAsReference |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugReference2::SetValueAsReference
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 96245b7089ddef7d465d01203ca8b540c618b05f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6d24cd6658fd4c971e2592a8b05b1593a1090784
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49820253"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53922777"
 ---
 # <a name="idebugreference2setvalueasreference"></a>IDebugReference2::SetValueAsReference
 別の参照からの参照の値を設定します。 将来使用するために予約されています。  
@@ -28,7 +25,7 @@ ms.locfileid: "49820253"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT SetValueAsReference (   
+HRESULT SetValueAsReference (   
    IDebugReference2** rgpArgs,  
    DWORD              dwArgCount,  
    IDebugReference2*  pValue,  
@@ -37,7 +34,7 @@ HRESULT SetValueAsReference (
 ```  
   
 ```cpp  
-int SetValueAsReference (   
+int SetValueAsReference (   
    IDebugReference2[] rgpArgs,  
    uint               dwArgCount,  
    IDebugReference2   pValue,  

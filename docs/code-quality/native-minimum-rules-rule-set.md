@@ -2,7 +2,6 @@
 title: "\"ネイティブ最小規則\" 規則セット"
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 2d898bc4-fba5-472e-8f09-b0c6b511c5a3
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9149276064b76a08705b70883bb3c2e136e23334
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: cd988bae2f9fd2776785202a1e632735f989f7ab
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389015"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53845487"
 ---
 # <a name="native-minimum-rules-rule-set"></a>"ネイティブ最小規則" 規則セット
 Microsoft ネイティブ最小規則は、潜在的なセキュリティ ホールやアプリケーションのクラッシュなど、ネイティブ コードの最も重大な問題に集中します。 ネイティブ プロジェクトにカスタムの規則セットを作成する場合は、必ずこの規則セットを含める必要があります。
@@ -37,7 +36,7 @@ Microsoft ネイティブ最小規則は、潜在的なセキュリティ ホー
 |[C6270](../code-quality/c6270.md)|Format 関数への Float 引数がない|
 |[C6271](../code-quality/c6271.md)|Format 関数への余分な引数|
 |[C6272](../code-quality/c6272.md)|Format 関数への Float でない引数|
-|[C6273](../code-quality/c6273.md)|Format 関数への整数以外の引数|
+|[C6273](../code-quality/c6273.md)|Format 関数への整数でない引数|
 |[C6274](../code-quality/c6274.md)|Format 関数への文字でない引数|
 |[C6276](../code-quality/c6276.md)|無効な文字列のキャスト|
 |[C6277](../code-quality/c6277.md)|無効な CreateProcess 呼び出し|
@@ -70,7 +69,7 @@ Microsoft ネイティブ最小規則は、潜在的なセキュリティ ホー
 |[C6518](../code-quality/c6518.md)|書き込み可能でないバッファーでの書き込み可能サイズ|
 |[C6522](../code-quality/c6522.md)|無効なサイズの文字列型|
 |[C6525](../code-quality/c6525.md)|無効なサイズの到達不能な場所の文字列|
-|[C6527](../code-quality/c6527.md)|無効な注釈です: 'NeedsRelease' プロパティは、void 型の値では使用できません|
+|[C6527](../code-quality/c6527.md)|無効な注釈。'NeedsRelease' プロパティを void 型の値に対して使用することはできません。|
 |[C6530](../code-quality/c6530.md)|認識されない書式指定文字列スタイル|
 |[C6540](../code-quality/c6540.md)|この関数で属性注釈を使用すると、既存の __declspec 注釈がすべて無効となります|
 |[C6551](../code-quality/c6551.md)|無効なサイズ指定です: 式が解析可能ではありません|
@@ -145,16 +144,16 @@ Microsoft ネイティブ最小規則は、潜在的なセキュリティ ホー
 |[C28282](../code-quality/c28282.md)|書式指定文字列は、前提条件の中に存在する必要があります|
 |[C28285](../code-quality/c28285.md)|関数について、パラメーターに構文エラーがあります|
 |[C28286](../code-quality/c28286.md)|関数について、構文エラーが最後の近くにあります|
-|[C28287](../code-quality/c28287.md)|関数について、構文エラーで\_で\_() 注釈 (認識できないパラメーター名)|
-|[C28288](../code-quality/c28288.md)|関数について、構文エラーで\_で\_() 注釈 (無効なパラメーター名)|
-|[C28289](../code-quality/c28289.md)|関数について: ReadableTo または WritableTo には、パラメーターとして limit-spec がありませんでした|
+|[C28287](../code-quality/c28287.md)|関数について、\_At\_() 注釈 (認識されないパラメーター名) に構文エラーがあります|
+|[C28288](../code-quality/c28288.md)|関数について、\_At\_() 注釈 (無効のパラメーター名) に構文エラーがあります|
+|[C28289](../code-quality/c28289.md)|関数の場合。ReadableTo または WritableTo では、パラメーターとして limit-spec がなかった|
 |[C28290](../code-quality/c28290.md)|関数の注釈は、実際のパラメーターの数より多い外部参照を含みます|
 |[C28291](../code-quality/c28291.md)|deref レベル 0 での post null/notnull は、関数に対して意味がありません。|
 |[C28300](../code-quality/c28300.md)|演算子に対する互換性のない型の、式のオペランドです|
 |[C28301](../code-quality/c28301.md)|関数の最初の宣言に対して注釈がありません。|
-|[C28302](../code-quality/c28302.md)|余分な\_Deref\_演算子が注釈に見つかりました。|
-|[C28303](../code-quality/c28303.md)|あいまいな\_Deref\_演算子が注釈に見つかりました。|
-|[C28304](../code-quality/c28304.md)|不適切に\_Notref\_トークンに適用される演算子が見つかりました。|
+|[C28302](../code-quality/c28302.md)|余分な \_Deref\_ 演算子が注釈に見つかりました。|
+|[C28303](../code-quality/c28303.md)|あいまいな \_Deref\_ 演算子が注釈に見つかりました。|
+|[C28304](../code-quality/c28304.md)|不適切に設定された \_Notref\_ 演算子がトークンに適用されました。|
 |[C28305](../code-quality/c28305.md)|トークンの解析中にエラーが発生しました。|
 |[C28350](../code-quality/c28350.md)|注釈には、条件付きで適用できない状況の説明が表示されます。|
 |[C28351](../code-quality/c28351.md)|注釈には、動的な値 (変数) が使用できない条件が記述されています。|

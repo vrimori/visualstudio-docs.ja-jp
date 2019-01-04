@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによって Word 文書にテキストを挿入'
-ms.custom: ''
+title: '方法: プログラムによって Word 文書にテキストを挿入します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,14 +16,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a602f50e9d3c439fc450c286923341dafff1e116
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 8d5a0382726e6fc481001f4afc7820875e436594
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49881665"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53828918"
 ---
-# <a name="how-to-programmatically-insert-text-into-word-documents"></a>方法: プログラムによって Word 文書にテキストを挿入
+# <a name="how-to-programmatically-insert-text-into-word-documents"></a>方法: プログラムによって Word 文書にテキストを挿入します。
   Microsoft Office Word の文書にテキストを挿入するには、主に次の 3 つの方法があります。  
   
 -   範囲内にテキストを挿入する。  
@@ -129,8 +126,6 @@ ms.locfileid: "49881665"
    [!code-csharp[Trin_VstcoreWordAutomation#56](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#56)]  
   
 ## <a name="see-also"></a>関連項目  
- [方法: プログラムによって文書内のテキストを書式設定](../vsto/how-to-programmatically-format-text-in-documents.md)   
+ [方法: プログラムによって文書でテキストの書式設定](../vsto/how-to-programmatically-format-text-in-documents.md)   
  [方法: プログラムで定義し、ドキュメントで範囲を選択します](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   
- [方法: プログラムによってドキュメント内の範囲を拡張](../vsto/how-to-programmatically-extend-ranges-in-documents.md)  
-  
-  
+ [方法: プログラムによってドキュメント内の範囲を拡張します。](../vsto/how-to-programmatically-extend-ranges-in-documents.md)  

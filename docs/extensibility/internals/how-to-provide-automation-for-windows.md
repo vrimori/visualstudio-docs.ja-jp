@@ -1,9 +1,6 @@
 ---
 title: '方法: Windows のオートメーションの提供 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - automation [Visual Studio SDK], tool windows
@@ -14,14 +11,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9158ac7d133d30ae5fbca0281cbc55138e041f6
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: eb5fe307cd477f1c1a30b402cce05850a1a35ae1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39510739"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53841240"
 ---
-# <a name="how-to-provide-automation-for-windows"></a>方法: windows 向けのオートメーションの提供
+# <a name="how-to-provide-automation-for-windows"></a>方法: Windows 向けのオートメーションを提供します。
 ドキュメントとツール ウィンドウのための自動化を行うことができます。 オートメーション オブジェクトをウィンドウで使用できるようにして、環境が存在しないときに、オートメーションが勧めを提供するタスクの一覧は、既製のオートメーション オブジェクトを提供します。
 
 ## <a name="automation-for-tool-windows"></a>ツール ウィンドウのための自動化

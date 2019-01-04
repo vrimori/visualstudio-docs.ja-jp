@@ -1,9 +1,6 @@
 ---
 title: BP_RESOLUTION_LOCATION |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - BP_RESOLUTION_LOCATION
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0dda42a65824b8fdb93ec8561f3affb59ee5d166
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 61d58e827ba35dc9ee55ea0c2a96ceb8c0ad966e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49926125"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53954514"
 ---
 # <a name="bpresolutionlocation"></a>BP_RESOLUTION_LOCATION
 ブレークポイント解像度の位置の構造を指定します。  
@@ -62,21 +59,21 @@ public struct BP_RESOLUTION_LOCATION {
  [C++ のみ]プレース ホルダー。  
   
  `unionmember1`  
- [C# のみ]解釈する方法については、「解説」を参照してください。  
+ [C#のみ]解釈する方法については、「解説」を参照してください。  
   
  `unionmember2`  
- [C# のみ]解釈する方法については、「解説」を参照してください。  
+ [C#のみ]解釈する方法については、「解説」を参照してください。  
   
  `unionmember3`  
- [C# のみ]解釈する方法については、「解説」を参照してください。  
+ [C#のみ]解釈する方法については、「解説」を参照してください。  
   
  `unionmember4`  
- [C# のみ]解釈する方法については、「解説」を参照してください。  
+ [C#のみ]解釈する方法については、「解説」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
  この構造体のメンバーである、 [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)と[BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)構造体。  
   
- [C# のみ]`unionmemberX`メンバーは、次の表に従って解釈されます。 左の列を確認、`bpType`間で各を決定する値、`unionmemberX`マーシャ リングおよびメンバーを表します、`unionmemberX`それに応じて。 C# では、この構造を解釈する方法の例を参照してください。  
+ [C#のみ]`unionmemberX`メンバーは、次の表に従って解釈されます。 左の列を確認、`bpType`間で各を決定する値、`unionmemberX`マーシャ リングおよびメンバーを表します、`unionmemberX`それに応じて。 C# では、この構造を解釈する方法の例を参照してください。  
   
 |`bpLocationType`|`unionmember1`|`unionmember2`|`unionmember3`|`unionmember4`|  
 |----------------------|--------------------|--------------------|--------------------|--------------------|  
@@ -116,9 +113,9 @@ namespace MyPackage
 ## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   

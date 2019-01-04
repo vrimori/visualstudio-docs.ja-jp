@@ -1,9 +1,6 @@
 ---
 title: 言語サービスとエディターの拡張機能の概要 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extensions
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8b5fa8d0dbe011ef6b960c03d7d95aa776de6933
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c971f753656ad876ba3a2401ddd2033f02cbac0a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49901321"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53831759"
 ---
 # <a name="get-started-with-language-service-and-editor-extensions"></a>言語サービスとエディターの拡張機能を概要します。
 エディター拡張機能を使用して、独自のプログラミング言語または任意のコンテンツ タイプをアウトライン表示、かっこの照合、IntelliSense、および電球などの言語サービスの機能を追加することができます。 テキストの色指定、余白、表示要素、および他のビジュアル要素など、Visual Studio エディターの動作と外観をカスタマイズすることもできます。 また、独自の種類のコンテンツを定義して、コンテンツが表示されるテキスト ビューの動作と外観を指定できます。  
@@ -85,9 +82,9 @@ ms.locfileid: "49901321"
   
  作成することもエディター MEF コンポーネント Visual Studio パッケージの拡張機能から。 詳細については、次のチュートリアルを参照してください。  
   
--   [チュートリアル: エディター拡張機能でシェル コマンドを使用します。](../extensibility/walkthrough-using-a-shell-command-with-an-editor-extension.md)  
+-   [チュートリアル: エディター拡張機能でシェル コマンドの使用](../extensibility/walkthrough-using-a-shell-command-with-an-editor-extension.md)  
   
--   [チュートリアル: エディター拡張機能とショートカット キーの使用](../extensibility/walkthrough-using-a-shortcut-key-with-an-editor-extension.md)  
+-   [チュートリアル: エディター拡張機能でショートカット キーの使用](../extensibility/walkthrough-using-a-shortcut-key-with-an-editor-extension.md)  
   
 ## <a name="see-also"></a>関連項目  
  [言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)

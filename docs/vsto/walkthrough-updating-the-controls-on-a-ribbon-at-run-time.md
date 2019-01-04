@@ -1,9 +1,6 @@
 ---
 title: 'チュートリアル: 実行時にリボン上のコントロールを更新します。'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -20,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 40072b1dcd6b24f552a3c87c8241ea4498229053
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: cd318be64bb15f72a0bd0147e2b14e79301fb7d6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389151"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53926952"
 ---
 # <a name="walkthrough-update-the-controls-on-a-ribbon-at-runtime"></a>チュートリアル: 実行時にリボン上のコントロールを更新します。
 
@@ -68,7 +65,7 @@ ms.locfileid: "52389151"
 
 3.  プロジェクトを既定のプロジェクト ディレクトリに保存します。
 
-     詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。
+     詳細については、「[方法 :Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。
 
 ## <a name="design-a-custom-ribbon-group"></a>カスタム リボン グループを設計します。
 
@@ -294,7 +291,7 @@ Office UI をカスタマイズする方法の詳細については、次のト�
 
 -   ドキュメント レベルのカスタマイズにコンテキスト ベースの UI を追加する。 詳細については、次を参照してください。[操作ウィンドウの概要](../vsto/actions-pane-overview.md)します。
 
--   標準またはカスタムの Microsoft Office Outlook フォームを拡張する。 詳細については、次を参照してください。[チュートリアル: Outlook フォーム領域をデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)します。
+-   標準またはカスタムの Microsoft Office Outlook フォームを拡張する。 詳細については、「[チュートリアル:Outlook フォーム領域をデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)します。
 
 -   Outlook にカスタム作業ウィンドウを追加する。 詳細については、次を参照してください。[カスタム作業ウィンドウ](../vsto/custom-task-panes.md)します。
 
@@ -303,13 +300,13 @@ Office UI をカスタマイズする方法の詳細については、次のト�
 - [実行時にリボンへのアクセスします。](../vsto/accessing-the-ribbon-at-run-time.md)
 - [リボンの概要](../vsto/ribbon-overview.md)
 - [統合言語クエリ (LINQ)](/dotnet/csharp/linq/index)
-- [方法: リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)
+- [方法: リボンのカスタマイズの概要します。](../vsto/how-to-get-started-customizing-the-ribbon.md)
 - [リボン デザイナー](../vsto/ribbon-designer.md)
 - [チュートリアル: リボン デザイナーを使用してカスタム タブを作成します。](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)
 - [リボン オブジェクト モデルの概要](../vsto/ribbon-object-model-overview.md)
 - [Outlook のリボンをカスタマイズします。](../vsto/customizing-a-ribbon-for-outlook.md)
 - [方法: リボンのタブの位置を変更します。](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)
 - [方法: 組み込みタブをカスタマイズします。](../vsto/how-to-customize-a-built-in-tab.md)
-- [方法: Backstage ビューにコントロールを追加](../vsto/how-to-add-controls-to-the-backstage-view.md)
-- [方法: リボン デザイナーからリボン XML にエクスポート](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)
-- [方法: アドインの表示は、ユーザー インターフェイス エラー](../vsto/how-to-show-add-in-user-interface-errors.md)
+- [方法: Backstage ビューにコントロールを追加します。](../vsto/how-to-add-controls-to-the-backstage-view.md)
+- [方法: リボン デザイナーからリボン XML にエクスポートします。](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)
+- [方法: アドイン ユーザー インターフェイス エラーを表示します。](../vsto/how-to-show-add-in-user-interface-errors.md)

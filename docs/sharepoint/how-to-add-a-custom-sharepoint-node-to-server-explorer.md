@@ -1,9 +1,6 @@
 ---
 title: '方法: サーバー エクスプ ローラーにカスタム SharePoint ノードの追加 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,14 +13,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: bb0ba7f09ae564a794792ad6f7a60f53f6f6422e
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: bc648abd1d8981bd5c64782bd094e40d507b4142
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36755642"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53937664"
 ---
-# <a name="how-to-add-a-custom-sharepoint-node-to-server-explorer"></a>方法: サーバー エクスプ ローラーにカスタム SharePoint ノードを追加
+# <a name="how-to-add-a-custom-sharepoint-node-to-server-explorer"></a>方法: サーバー エクスプ ローラーにカスタム SharePoint ノードを追加します。
   カスタム ノードを追加することができます、 **SharePoint 接続**ノード**サーバー エクスプ ローラー**します。 表示されていないその他の SharePoint コンポーネントを表示する場合に便利ですが**サーバー エクスプ ローラー**既定。 詳細については、次を参照してください。[サーバー エクスプ ローラーで、SharePoint 接続 ノードを拡張](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)します。  
   
  カスタム ノードを追加するには、まず新しいノードを定義するクラスを作成します。 次の既存のノードの子として、ノードを追加する拡張機能を作成します。  
@@ -61,15 +58,15 @@ ms.locfileid: "36755642"
   
 1.  ノードの定義と同じプロジェクトを実装するクラスを作成、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>インターフェイス。  
   
-2.  追加、<xref:System.ComponentModel.Composition.ExportAttribute>属性をクラス。 この属性により、Visual Studio を検出して読み込む、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>実装します。 渡す、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>属性コンス トラクターの型。  
+2.  クラスに <xref:System.ComponentModel.Composition.ExportAttribute> 属性を追加します。 この属性により、Visual Studio を検出して読み込む、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>実装します。 渡す、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>属性コンス トラクターの型。  
   
-3.  追加、<xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute>属性をクラス。 ノードの拡張機能では、この属性は、拡張するノードの型の文字列識別子を指定します。  
+3.  クラスに <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute> 属性を追加します。 ノードの拡張機能では、この属性は、拡張するノードの型の文字列識別子を指定します。  
   
      Visual Studio によって提供される組み込みのノードの種類を指定するには、属性コンス トラクターに次の列挙値のいずれかを渡します。  
   
-    -   <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes>: ノード、またはその他のすべての親ノードでサイトのサイト接続ノード (サイトの Url を表示するノード) を指定するこれらの値使用**サーバー エクスプ ローラー**します。  
+    -   <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes>:これらのサイト接続ノード (サイトの Url を表示するノード) を指定する値のサイト ノード、または他のすべての親ノードを使用して**サーバー エクスプ ローラー**します。  
   
-    -   <xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes>: リスト、フィールド、またはコンテンツの種類を表すノードなどの SharePoint サイト上の個々 のコンポーネントを表す組み込みのノードのいずれかを指定するのに、これらの値を使用します。  
+    -   <xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes>:これらの値を使用すると、リスト、フィールド、またはコンテンツの種類を表すノードなどの SharePoint サイト上の個々 のコンポーネントを表す組み込みのノードのいずれかを指定します。  
   
 4.  実装で、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension.Initialize%2A>メソッドは、ハンドル、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested>のイベント、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType>パラメーター。  
   
@@ -100,7 +97,5 @@ ms.locfileid: "36755642"
   
 ## <a name="see-also"></a>関連項目
  [サーバー エクスプ ローラーで、SharePoint 接続 ノードを拡張します。](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
- [方法: サーバー エクスプ ローラーでの SharePoint ノードを拡張](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)   
- [チュートリアル: web パーツを表示するサーバー エクスプ ローラーの拡張します。](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  
-  
-  
+ [方法: サーバー エクスプ ローラーでの SharePoint ノードを拡張します。](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)   
+ [チュートリアル: Web パーツを表示するサーバー エクスプ ローラーを拡張します。](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  

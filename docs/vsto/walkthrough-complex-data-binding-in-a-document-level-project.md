@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: ドキュメント レベルのプロジェクトで複雑なデータ バインディング'
-ms.custom: ''
+title: 'チュートリアル: ドキュメント レベルのプロジェクトで複合データ バインディング'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,14 +15,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6886908f01ceaeb36ed83ba0970ef250873d69c2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 5030db198ab253a417e770ec7dc022a99cfafbd8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49841885"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53964060"
 ---
-# <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>チュートリアル: ドキュメント レベルのプロジェクトで複雑なデータ バインディング
+# <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>チュートリアル: ドキュメント レベルのプロジェクトで複合データ バインディング
   このチュートリアルでは、ドキュメント レベルのプロジェクトで複合データ バインディングの基本について説明します。 Microsoft Office Excel ワークシート内で複数のセルは、Northwind SQL Server データベース内のフィールドにバインドできます。  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
@@ -58,7 +55,7 @@ ms.locfileid: "49841885"
   
 1.  名前の Excel ブック プロジェクトを作成**マイの複合データ バインディング**します。 ウィザードで、次のように選択します。**新しい文書を作成**です。  
   
-     詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+     詳細については、「[方法 :Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
      デザイナーで新しい Excel ブックを開き、**マイの複合データ バインディング**プロジェクトを**ソリューション エクスプ ローラー**します。  
   
@@ -181,7 +178,7 @@ ms.locfileid: "49841885"
   
 2. 空の行で、次の情報を追加します。  
   
-   |EmployeeID|LastName|FirstName|Title|  
+   |EmployeeID|LastName|FirstName|タイトル|  
    |----------------|--------------|---------------|-----------|  
    |10|Ito|Shu|営業マネージャー|  
   
@@ -220,15 +217,13 @@ ms.locfileid: "49841885"
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルでは、データベース内のテーブルをリスト オブジェクトにバインドの基本を説明します。 ここでは、次のタスクを行います。  
   
--   データをキャッシュにオフラインで使用できるようにします。 詳細については、次を参照してください。[方法: オフラインか、サーバーで使用するデータをキャッシュ](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)します。  
+-   データをキャッシュにオフラインで使用できるようにします。 詳細については、「[方法 :オフラインか、サーバーで使用するデータをキャッシュ](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)します。  
   
 -   ソリューションをデプロイします。 詳細については、次を参照してください。 [Office ソリューションを配置](../vsto/deploying-an-office-solution.md)します。  
   
--   フィールドとテーブル間のマスター/詳細関係を作成します。 詳細については、次を参照してください。[チュートリアル: キャッシュされたデータセットを使用してマスター/詳細関係を作成して](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md)します。  
+-   フィールドとテーブル間のマスター/詳細関係を作成します。 詳細については、「[チュートリアル:キャッシュされたデータセットを使用してマスター/詳細関係を作成して](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [Office ソリューションでのコントロールにデータをバインドします。](../vsto/binding-data-to-controls-in-office-solutions.md)   
  [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)   
- [チュートリアル: ドキュメント レベルのプロジェクトでの単純なデータ バインディング](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)  
-  
-  
+ [チュートリアル: ドキュメント レベルのプロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)  

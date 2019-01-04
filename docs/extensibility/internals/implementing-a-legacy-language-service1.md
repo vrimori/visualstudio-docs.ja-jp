@@ -1,9 +1,6 @@
 ---
-title: レガシ言語 Service1 を実装する |Microsoft ドキュメント
-ms.custom: ''
+title: レガシ言語の Service1 を実装する |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - language services, managed
@@ -13,39 +10,39 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0486b8ad035d64f542d48f1e304413780958d90c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d3218a8cf1c61fb9b88520702a953f2288e19b3c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31129336"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53855888"
 ---
-# <a name="implementing-a-legacy-language-service"></a>レガシ言語サービスを実装します。
-構文の強調表示、かっこの照合、および IntelliSense 入力候補など、さまざまな機能をサポートする従来の言語サービスを実装するのにマネージ パッケージ フレームワーク (MPF) 内のクラスを使用できます。  
+# <a name="implementing-a-legacy-language-service"></a>従来の言語サービスを実装します。
+構文の強調表示、かっこの一致、および IntelliSense の入力候補など、さまざまな機能をサポートする従来の言語サービスを実装するために、マネージ パッケージ フレームワーク (MPF) クラスを使用できます。  
   
- レガシ言語サービスは、VSPackage の一部として実装されますが、MEF 拡張機能を使用する言語サービスの機能を実装する新しい方法です。 言語サービスを実装する新しい方法の詳細についてを参照してください。[エディターおよび言語サービス拡張](../../extensibility/editor-and-language-service-extensions.md)です。  
+ 従来の言語サービスは、VSPackage の一部として実装されますが、言語サービスの機能を実装する新しい方法は MEF 拡張機能を使用します。 言語サービスを実装する新しい方法の詳細についてを参照してください。[エディターと言語サービス拡張](../../extensibility/editor-and-language-service-extensions.md)します。  
   
 > [!NOTE]
->  エディターを使用して、新しい API できるだけ早く開始することをお勧めします。 言語サービスのパフォーマンスを向上させる、エディターの新機能を活用できます。  
+>  新しいエディターの API をできるだけ早く使用を開始することをお勧めします。 言語サービスのパフォーマンスを向上させる、エディターの新機能を活用することができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [従来の言語サービスの概要](../../extensibility/internals/legacy-language-service-overview.md)  
  MPF でサポートされている言語サービスの機能の概要。  
   
- [レガシ言語サービスを実装します。](../../extensibility/internals/implementing-a-legacy-language-service2.md)  
- MPF を使用して、言語サービスを実装するための要件について説明します。  
+ [従来の言語サービスの実装](../../extensibility/internals/implementing-a-legacy-language-service2.md)  
+ MPF を使用して、言語サービスを実装するために必要なものについて説明します。  
   
- [レガシ言語サービスを登録します。](../../extensibility/internals/registering-a-legacy-language-service1.md)  
- 使用した MPF ベースの言語サービスを登録するために必要な手順について説明します[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
+ [従来の言語サービスの登録](../../extensibility/internals/registering-a-legacy-language-service1.md)  
+ MPF ベースの言語サービスを登録するために必要な手順について説明します[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。  
   
  [従来の言語サービスのパーサーとスキャナー](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)  
  MPF を使用して、言語サービスのすべての機能を実装するために必要な 2 つのパーサーをについて説明します。  
   
- [チュートリアル: 従来の言語サービスの作成](../../extensibility/internals/walkthrough-creating-a-legacy-language-service.md)  
- VSPackage に MPF 言語サービスを実装するために必要な基本的な手順を提供します。  
+ [チュートリアル: 従来の言語サービスを作成します。](../../extensibility/internals/walkthrough-creating-a-legacy-language-service.md)  
+ VSPackage で、MPF 言語サービスを実装するために必要な基本的な手順を示します。  
   
- [チュートリアル: インストールされているコード スニペットの一覧の取得 (従来の実装)](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)  
+ [チュートリアル: インストールされているコード スニペット (従来の実装) の一覧を取得します。](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)  
  インストールされているコード スニペットの一覧を取得する方法を示します。  
   
- [レガシ言語サービス機能](../../extensibility/internals/legacy-language-service-features1.md)  
- 必要な作業 MPF を使用して、言語サービスのすべての機能を実装する詳細トピックへのリンクを提供します。
+ [従来の言語サービスの特徴](../../extensibility/internals/legacy-language-service-features1.md)  
+ MPF を使用して、言語サービスのすべての機能を実装するために行う必要がある内容が詳しくトピックへのリンクを提供します。

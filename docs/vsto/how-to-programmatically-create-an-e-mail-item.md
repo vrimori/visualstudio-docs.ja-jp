@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによって電子メール アイテムを作成'
-ms.custom: ''
+title: '方法: プログラムによって電子メール アイテムを作成します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,14 +14,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 28b6b1dac69199ff7431eacbe05d8a17a1734763
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: e5b665a5ed281cafaf19017d2cf65a6ab1dd80b9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35256599"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53869721"
 ---
-# <a name="how-to-programmatically-create-an-email-item"></a>方法: プログラムによって電子メール アイテムを作成
+# <a name="how-to-programmatically-create-an-email-item"></a>方法: プログラムによって電子メール アイテムを作成します。
   この例では、Microsoft Office Outlook で電子メール メッセージを作成します。  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
@@ -35,5 +32,3 @@ ms.locfileid: "35256599"
 ## <a name="see-also"></a>関連項目  
  [メールの項目を操作します。](../vsto/working-with-mail-items.md)   
  [VSTO アドインのプログラミングを始める](../vsto/getting-started-programming-vsto-add-ins.md)  
-  
-  

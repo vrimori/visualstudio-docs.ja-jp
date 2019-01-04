@@ -1,9 +1,6 @@
 ---
 title: SafeControl 要素 |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: aded7f246d961bd3f956611ff092dfdcf8b68564
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: a56936ed867cdadfb938b9804fbcaeb2560e6d86
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119422"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53864139"
 ---
 # <a name="safecontrol-element"></a>SafeControl 要素
   ASPX コントロールまたは SharePoint サイトのいずれかの ASPX ページにアクセスするすべてのユーザーに対してセキュリティで保護されたとして指定されている Web パーツを表します。  
@@ -47,7 +44,7 @@ ms.locfileid: "37119422"
 |**IsSafe**|省略可能な**xs:boolean**属性。<br /><br /> ASPX コントロールまたは Web パーツが信頼されていないユーザーにアクセスするセキュリティで保護されたかどうかを指定します。|  
 |**IsSafeAgainstScript**|省略可能な**xs:boolean**属性。<br /><br /> 信頼されていないユーザーを表示したり、ASPX コントロールまたは Web パーツのプロパティの編集にかどうかを指定します。|  
 |**Name**|省略可能な**xs:string**属性。<br /><br /> このコレクション内の安全なコントロール エントリの名前。|  
-|**名前空間**|省略可能な**xs:string**属性。<br /><br /> ASPX コントロールまたは Web パーツの名前空間。|  
+|**Namespace**|省略可能な**xs:string**属性。<br /><br /> ASPX コントロールまたは Web パーツの名前空間。|  
 |**TypeName**|省略可能な**xs:string**属性。<br /><br /> ASPX コントロールまたは Web パーツの型名。|  
   
 ### <a name="child-elements"></a>子要素
@@ -66,7 +63,7 @@ ms.locfileid: "37119422"
   
 |||  
 |-|-|  
-|**名前空間**|http<nolink>://schemas.microsoft.com/VisualStudio/<br>SharePointProjectItemModel SharePointTools/2010/|  
+|**Namespace**|http<nolink>://schemas.microsoft.com/VisualStudio/<br>SharePointProjectItemModel SharePointTools/2010/|  
 |**スキーマ名**|SharePoint プロジェクト項目のスキーマ|  
 |**ファイルの検証**|ProjectItemModelSchema.xsd|  
 |**空にすることができます。**|いいえ|  
@@ -74,4 +71,3 @@ ms.locfileid: "37119422"
 ## <a name="see-also"></a>関連項目
  [SharePoint プロジェクト項目スキーマのリファレンス](../sharepoint/sharepoint-project-item-schema-reference.md)   
  [プロジェクト項目でパッケージ化と配置の情報を提供します。](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)  
-  

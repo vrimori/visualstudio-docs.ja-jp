@@ -1,9 +1,6 @@
 ---
 title: For SharePoint のサイト列、コンテンツの種類、およびリストの作成 |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.ListDesigner.ContentTypeSetting
@@ -21,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a9a5340b7fc5b36da7fe2a46175571a569fdf38e
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 805500b9f12e227e95add02ca0180b658b85d1cf
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36325747"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53931948"
 ---
 # <a name="create-site-columns-content-types-and-lists-for-sharepoint"></a>For SharePoint のサイト列、コンテンツの種類、およびリストを作成します。
   Visual Studio には、さまざまな基本的な SharePoint アイテムの数などのプロジェクト項目テンプレートが用意されています*一覧*と*コンテンツの種類*、どちらのサイト内の列を組み込むことができます (または*フィールド*)。 コンテンツ タイプおよびリスト用の新しいデザイナーは、これらの項目をより簡単に作成します。  
@@ -49,9 +46,7 @@ ms.locfileid: "36325747"
   
 |タイトル|説明|  
 |-----------|-----------------|  
-|[チュートリアル: SharePoint のサイト列、コンテンツの種類、および一覧を作成します。](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)|カスタム コンテンツ タイプで使用されるサイト内の列を作成する方法を示します。 コンテンツの種類は、カスタム リストで使用されます。|  
+|[チュートリアル: For SharePoint のサイト列、コンテンツの種類、および一覧を作成します。](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)|カスタム コンテンツ タイプで使用されるサイト内の列を作成する方法を示します。 コンテンツの種類は、カスタム リストで使用されます。|  
   
 ## <a name="see-also"></a>関連項目
  [SharePoint 2010 で開発を開始します。](http://go.microsoft.com/fwlink/?LinkId=225000)  
-  
- 

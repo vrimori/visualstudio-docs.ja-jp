@@ -10,13 +10,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: e1fd3b1cd19efa9032b7b92576a489e3b17373db
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 01aee6de65f1ddc0db16b0ebe527fb3d4d5480ad
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49919341"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53958814"
 ---
 # <a name="develop-tests-from-a-model"></a>モデルからテストを開発する
 システムとそのコンポーネントのテストを編成する際に、要件モデルとアーキテクチャ モデルを使用できます。 こうすることで、ユーザーやその他の利害関係者にとって重要な要求をテストしやすくなり、要求が変更された場合にすばやくテストを更新することができます。 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を使用した場合、モデルとテストの間のリンクを維持することもできます。
@@ -52,7 +51,7 @@ ms.locfileid: "49919341"
 
     -   開発計画により、別の側面を実装する前にユース ケースの 1 つの側面を実装した場合、開発の進捗に合わせて、テストを個別に有効にすることができます。
 
--   テストを設計するときに、事後条件が満たされたかどうかを判断するコードやスクリプトから、選択したテスト データを切り離してください。 たとえばシンプルな算術関数のテストの場合、Input 4; verify that the output is 2 などになります。 代わりに、Choose an input; multiply the output by itself, verify that the result is the original input などのスクリプトを設計します。 このスタイルを使うと、テストの本体を変更することなく、テストの入力を変更できます。
+-   テストを設計するときに、事後条件が満たされたかどうかを判断するコードやスクリプトから、選択したテスト データを切り離してください。 たとえば、単純な算術関数のテストは次のようになります。入力 4 です。出力が 2 であることを確認します。 代わりに、としてスクリプトを設計します。入力を選択します。単独で、出力を乗算し、結果が元の入力であることを確認します。 このスタイルを使うと、テストの本体を変更することなく、テストの入力を変更できます。
 
 #### <a name="linking-tests-to-use-cases"></a>ユース ケースへのテストのリンク
  使用する場合[!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]を設計およびテストを実行するには、要件、ユース ケース、またはユーザー ストーリーの作業項目の下でテストを整理することができます。 モデル内のユース ケースを、このような作業項目にリンクできます。 これにより、要求の変更を迅速に追跡してテストすることができます。また、各ユース ケースの進捗も追跡しやすくなります。

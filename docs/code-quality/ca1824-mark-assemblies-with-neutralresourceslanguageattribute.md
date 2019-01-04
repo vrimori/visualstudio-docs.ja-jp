@@ -1,8 +1,7 @@
 ---
-title: 'CA1824: アセンブリを NeutralResourcesLanguageAttribute に設定します'
+title: CA1824:アセンブリを NeutralResourcesLanguageAttribute に設定します
 ms.date: 03/29/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - CA1824
@@ -16,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: beaef23dd5b3047d1d65b90fdd984dfdedd7e145
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: db780257c83c42f97500a83f1843332cae0ecea3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31916388"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53825177"
 ---
-# <a name="ca1824-mark-assemblies-with-neutralresourceslanguageattribute"></a>CA1824: アセンブリを NeutralResourcesLanguageAttribute に設定します
+# <a name="ca1824-mark-assemblies-with-neutralresourceslanguageattribute"></a>CA1824:アセンブリを NeutralResourcesLanguageAttribute に設定します
 
 |||
 |-|-|
@@ -34,14 +33,14 @@ ms.locfileid: "31916388"
 
 ## <a name="cause"></a>原因
 
-アセンブリに含まれる、 **ResX**-リソースのベースがありません、<xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName>を適用します。
+アセンブリに含まれる、 **ResX**-ベースのリソースがありません、<xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName>を適用します。
 
 ## <a name="rule-description"></a>規則の説明
 
-<xref:System.Resources.NeutralResourcesLanguageAttribute>属性は、アプリの既定のカルチャのリソース マネージャーを通知します。 既定のカルチャのリソースがアプリのメインのアセンブリに埋め込まれている場合と<xref:System.Resources.ResourceManager>既定のカルチャと同じカルチャに属しているリソースを取得するが、<xref:System.Resources.ResourceManager>メイン アセンブリにあるリソースを自動的に使用サテライト アセンブリを検索して代わりにはいます。 これにより、通常のアセンブリのプローブをバイパスする、読み込んで、ワーキング セットを減らすことができますの最初のリソースに対する検索のパフォーマンスが向上します。
+<xref:System.Resources.NeutralResourcesLanguageAttribute>属性が、アプリの既定のカルチャのリソース マネージャーに通知します。 既定のカルチャのリソースが、アプリのメイン アセンブリに埋め込まれている場合と<xref:System.Resources.ResourceManager>既定のカルチャと同じカルチャに属しているリソースを取得する必要があります、<xref:System.Resources.ResourceManager>メイン アセンブリに配置されているリソースを自動的に使用されます代わりに、サテライト アセンブリを検索しています。 これは、通常のアセンブリのプローブをバイパスする、最初のリソースを読み込み、および、ワーキング セットを減らすことができますのルックアップのパフォーマンスが向上します。
 
 > [!TIP]
-> 参照してください[パッケージ化とリソースを配置](/dotnet/framework/resources/packaging-and-deploying-resources-in-desktop-apps)プロセスを<xref:System.Resources.ResourceManager>リソース ファイルを探すために使用します。
+> 参照してください[パッケージ化とリソースのデプロイ](/dotnet/framework/resources/packaging-and-deploying-resources-in-desktop-apps)プロセスを<xref:System.Resources.ResourceManager>リソース ファイルを探すために使用します。
 
 ## <a name="fix-violations"></a>違反を修正します。
 
@@ -49,12 +48,12 @@ ms.locfileid: "31916388"
 
 ### <a name="to-specify-the-neutral-language-for-resources"></a>ニュートラル言語リソースを指定するには
 
-1. **ソリューション エクスプ ローラー**、プロジェクトを右クリックし、**プロパティ**です。
+1. **ソリューション エクスプ ローラー**、プロジェクトを右クリックし、**プロパティ**します。
 
-2. 選択、**アプリケーション**、タブをクリックし**アセンブリ情報**です。
+2. 選択、**アプリケーション**、タブを選び**アセンブリ情報**します。
 
    > [!NOTE]
-   > プロジェクトが .NET 標準または .NET Core プロジェクトの場合は、選択、**パッケージ**タブです。
+   > プロジェクトが .NET Standard または .NET Core プロジェクトの場合は、選択、**パッケージ**タブ。
 
 3. 言語を選択して、**ニュートラル言語**または**アセンブリのニュートラル言語**ドロップダウン リスト。
 
@@ -67,6 +66,6 @@ ms.locfileid: "31916388"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
-- [デスクトップ アプリケーション (.NET) でのリソース](/dotnet/framework/resources/)
+- [デスクトップ アプリ (.NET) でのリソース](/dotnet/framework/resources/)
 - [Ca 1703 - リソース文字列正しく入力されなければなりません](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
-- [Ca 1701 - リソースの文字列の複合語では、大文字と小文字が正しく区別する必要があります。](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+- [CA1701 - リソース文字列の複合語では、大文字と小文字が正しく区別する必要があります。](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)

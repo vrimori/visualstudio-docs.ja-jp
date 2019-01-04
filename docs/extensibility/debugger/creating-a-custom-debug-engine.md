@@ -1,9 +1,6 @@
 ---
 title: デバッグ エンジンのカスタムの作成 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, implementing
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ece2b480890054526552ad3aeea4f3bd1a437f74
-ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
+ms.openlocfilehash: fe3d22bc271366ba307510ea4b61ad6a1093c99d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203681"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53852704"
 ---
 # <a name="create-a-custom-debug-engine"></a>カスタム デバッグ エンジンを作成します。
 デバッグ エンジン (DE) は、特定のランタイム アーキテクチャのデバッグを許可するコンポーネントです。 通常は実行時環境ごとに 1 つだけ DE 実装です。  
@@ -61,7 +58,7 @@ ms.locfileid: "39203681"
  [デバッガー イベントを呼び出す](../../extensibility/debugger/calling-debugger-events.md)  
  デバッグ セッションで発生するイベントの呼び出しの順序について説明します。  
   
- [方法: カスタム デバッグ エンジンをデバッグ](../../extensibility/debugger/how-to-debug-a-custom-debug-engine.md)  
+ [方法: カスタム デバッグ エンジンをデバッグします。](../../extensibility/debugger/how-to-debug-a-custom-debug-engine.md)  
  カスタム DE をデバッグする方法について説明します。  
   
 ## <a name="see-also"></a>関連項目  

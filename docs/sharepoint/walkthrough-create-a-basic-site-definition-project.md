@@ -1,13 +1,8 @@
 ---
 title: 'チュートリアル: 基本的なサイト定義プロジェクトの作成 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -18,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8a9a879db7c1d24dbfd8312dbc75d9b0bbaa8803
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 7e09124e3204240f188c65e10865bbf221e15358
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49844418"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53958892"
 ---
 # <a name="walkthrough-create-a-basic-site-definition-project"></a>チュートリアル: 基本的なサイト定義プロジェクトを作成します。
   このチュートリアルでは、一部のコントロールに視覚的 Web パーツを含む基本的なサイト定義を作成する方法を示します。 わかりやすくする、作成した視覚的 Web パーツにはいくつかのコントロールがあります。 ただし、多くの機能を含むより高度な SharePoint サイト定義を作成できます。  
@@ -187,6 +182,5 @@ ms.locfileid: "49844418"
      ボタンの右側にあるラベルのテキストが表示されます。  
   
 ## <a name="see-also"></a>関連項目
- [方法: イベント レシーバーを作成](../sharepoint/how-to-create-an-event-receiver.md)   
+ [方法: イベント レシーバーを作成します。](../sharepoint/how-to-create-an-event-receiver.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
-  

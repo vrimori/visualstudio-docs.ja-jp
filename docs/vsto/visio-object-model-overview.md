@@ -1,9 +1,6 @@
 ---
 title: Visio オブジェクト モデルの概要
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -20,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 872665a9af220e1b86a3d053254880e3ababa6cd
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 040144b1e18e216ef8ceadbd218cd42ccf7c40f1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50671405"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53848468"
 ---
 # <a name="visio-object-model-overview"></a>Visio オブジェクト モデルの概要
   Visio オブジェクト モデルと対話することにより、Microsoft Office Visio 用の Office ソリューションを開発できます。 このオブジェクト モデルは、Visio のプライマリ相互運用機能アセンブリで提供されるクラスとインターフェイスで構成されています。それらは `Microsoft.Office.Interop.Visio` 名前空間の中で定義されています。  
@@ -83,5 +80,3 @@ ms.locfileid: "50671405"
  [Visio ソリューション](../vsto/visio-solutions.md)   
  [Visio 図面の操作します。](../vsto/working-with-visio-documents.md)   
  [Visio 図形を操作します。](../vsto/working-with-visio-shapes.md)  
-  
-  

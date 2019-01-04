@@ -1,9 +1,8 @@
 ---
-title: 'ワークフロー デザイナー - 方法: 式エディターを使用'
+title: ワークフロー デザイナー - 方法。式エディターを使用する
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.prod: visual-studio-dev15
-ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Presentation.View.ExpressionTextBox.UI
 ms.assetid: b5f961dd-6dda-41a9-9cae-0383d479ef3d
@@ -12,14 +11,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c1f2ab9cad6f54b8d1106fd68eb017434cf5cfef
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 63fca3051ce50f728cf83976f6ef6a5204ad35b8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36756144"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53956245"
 ---
-# <a name="how-to-use-the-expression-editor"></a>式エディターを使用する方法
+# <a name="how-to-use-the-expression-editor"></a>方法: 式エディターを使用する
 
 式エディターは、多くのワークフロー アクティビティで入力し、式の評価に使用するワークフロー デザイナー コントロールです。 式エディターは、編集、IntelliSense など、エクスペリエンスの色付け、本格的な IDE を提供します。 パラメーター情報、他の機能の 1 つのエラーの波線。 コンパイラは、入力された後に、式を検証します。 式が無効な場合は、エラー アイコンが表示されます。 として、エディターを開くことも、**式エディター**  ダイアログ ボックス。
 

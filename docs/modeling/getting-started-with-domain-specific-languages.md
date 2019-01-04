@@ -8,22 +8,21 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 89723d09fdd6362cdc301f1fa551b7c062639df0
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: 81f5d1004d359ce9ac3ab6f56d5a8d84f51273f8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50967325"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53872399"
 ---
 # <a name="get-started-with-domain-specific-languages"></a>ドメイン固有言語の概要
 
 このトピックを定義すると、Visual Studio Modeling SDK で作成したドメイン固有言語 (DSL) を使用して基本的な概念について説明します。
 
 > [!NOTE]
-> Visual Studio 2017 では、テキスト テンプレート変換の SDK と Visual Studio Modeling SDK が自動的にインストール Visual Studio の特定の機能をインストールするときにします。 詳細については、次を参照してください。[このブログの投稿](https://blogs.msdn.microsoft.com/devops/2016/12/12/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)します。
+> Visual Studio 2017 では、Visual Studio の特定の機能をインストールするときに、テキスト テンプレート変換の SDK と Visual Studio Modeling SDK が自動的にインストールされます。 詳細については、[このブログの投稿](https://blogs.msdn.microsoft.com/devops/2016/12/12/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)を参照してください。
 
-作業することをお勧めの Dsl に慣れていない場合、 **DSL ツール ラボ**、このサイトで入手できます: [Visualizaton and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128)
+作業することをお勧めの Dsl に慣れていない場合、 **DSL ツール ラボ**、このサイトで入手できます。[Visualizaton and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128)
 
 ## <a name="what-can-you-do-with-a-domain-specific-language"></a>ドメイン固有言語では、何をことができますか。
 
@@ -154,7 +153,7 @@ DSL 定義では、モデルのダイアグラムの表示方法を指定でき�
 
 ### <a name="the-api-of-your-dsl"></a>DSL の API
 
-DSL では、API を使用すると、読み取りし、更新は、DSL のインスタンスであるモデルを生成します。 API の 1 つのアプリケーションでは、モデルからテキスト ファイルを生成します。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)します。
+DSL では、API を使用すると、読み取りし、更新は、DSL のインスタンスであるモデルを生成します。 API の 1 つのアプリケーションでは、モデルからテキスト ファイルを生成します。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md) テンプレートの構文の詳細については、次を参照してください。
 
 デバッグのソリューションでは、拡張子が".tt"テンプレート ファイルを開きます。 これらのサンプルでは、モデルからテキストを生成し、DSL の API をテストできるようにする方法を示します。 記述された、サンプルの 1 つ[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]でその他の[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]します。
 
@@ -386,7 +385,7 @@ DSL 定義では、保存、変更のたびに次のようにクリックしま�
 ## <a name="validation-and-commands"></a>検証とコマンド
  検証制約を追加することで、さらに、この DSL を開発できます。 これらの制約は、モデルが適切な状態であることを確認するメソッドを定義することができます。 たとえば、定義できることを確認するための制約にお子様の生年月日はその親の場合よりも後。 検証機能では、DSL ユーザーのいずれかの制約に違反するモデルを保存しようとすると、警告が表示されます。 詳細については、次を参照してください。[ドメイン固有言語における検証](../modeling/validation-in-a-domain-specific-language.md)です。
 
- ユーザーが呼び出すことができるメニュー コマンドを定義することもできます。 コマンドは、モデルを変更できます。 Visual Studio での他のモデルと外部リソースも操作できます。 詳細については、次を参照してください。[方法: 標準メニュー コマンドを変更](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)します。
+ ユーザーが呼び出すことができるメニュー コマンドを定義することもできます。 コマンドは、モデルを変更できます。 Visual Studio での他のモデルと外部リソースも操作できます。 詳細については、「[方法 :標準メニュー コマンドを修正](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)します。
 
 ## <a name="deploying-the-dsl"></a>DSL を展開します。
  ドメイン固有言語を使用するには、他のユーザーを許可するのには、Visual Studio Extension (VSIX) ファイルを配布します。 DSL ソリューションをビルドするときに作成されます。

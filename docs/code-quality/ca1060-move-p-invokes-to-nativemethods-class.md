@@ -1,8 +1,7 @@
 ---
-title: 'CA1060: P-Invoke を NativeMethods クラスに移動します'
+title: CA1060:P-Invoke を NativeMethods クラスに移動します
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - MovePInvokesToNativeMethodsClass
@@ -19,14 +18,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: bf3e3f01eb6decb1ac2705655675455485bceb5b
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: e1dc9cf738e74390ea1867966d20f4246d0b1f8c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45551952"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53874233"
 ---
-# <a name="ca1060-move-pinvokes-to-nativemethods-class"></a>CA1060: P/Invoke を NativeMethods クラスに移動します
+# <a name="ca1060-move-pinvokes-to-nativemethods-class"></a>CA1060:P/Invoke を NativeMethods クラスに移動します
 
 |||
 |-|-|
@@ -94,7 +93,7 @@ ms.locfileid: "45551952"
 ## <a name="unsafenativemethods-example"></a>UnsafeNativeMethods の例
 
 ### <a name="description"></a>説明
- という名前のクラスでは P/invoke メソッドを安全に呼び出すし、副作用を引き起こす可能性を含める必要があります**UnsafeNativeMethods**します。 これらのメソッドは、これらは、ユーザーに意図せずになっていることを確認する厳密にチェックする必要があります。 ルール[CA2118: レビュー SuppressUnmanagedCodeSecurityAttribute の使用法](../code-quality/ca2118-review-suppressunmanagedcodesecurityattribute-usage.md)これを支援できます。 代わりに要求されるもう 1 つのアクセスを許可するメソッドが代わりに、あります**UnmanagedCode**に使用するとします。
+ という名前のクラスでは P/invoke メソッドを安全に呼び出すし、副作用を引き起こす可能性を含める必要があります**UnsafeNativeMethods**します。 これらのメソッドは、これらは、ユーザーに意図せずになっていることを確認する厳密にチェックする必要があります。 ルール[CA2118:SuppressUnmanagedCodeSecurityAttribute の使用法の確認](../code-quality/ca2118-review-suppressunmanagedcodesecurityattribute-usage.md)これを支援できます。 代わりに要求されるもう 1 つのアクセスを許可するメソッドが代わりに、あります**UnmanagedCode**に使用するとします。
 
  次の例は、 **Cursor.Hide**をラップするメソッド、 **ShowCursor** user32.dll から関数。
 

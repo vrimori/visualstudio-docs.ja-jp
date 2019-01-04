@@ -1,9 +1,6 @@
 ---
 title: IDebugCoreServer3::DiagnoseWebDebuggingError |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugCoreServer3::DiagnoseWebDebuggingError
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b450af1437f9522509913d34976e648da31b91fb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 1ba22bb5f8f20446b87236a4784b02e7ad2eb41e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49843341"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53990754"
 ---
 # <a name="idebugcoreserver3diagnosewebdebuggingerror"></a>IDebugCoreServer3::DiagnoseWebDebuggingError
 Auto-attach できなかった理由を特定する試行が失敗しました。  
@@ -28,14 +25,14 @@ Auto-attach できなかった理由を特定する試行が失敗しました�
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT DiagnoseWebDebuggingError(  
-   LPCWSTR pszUrl  
+HRESULT DiagnoseWebDebuggingError(  
+   LPCWSTR pszUrl  
 );  
 ```  
   
 ```csharp  
-int DiagnoseWebDebuggingError(  
-   string pszUrl  
+int DiagnoseWebDebuggingError(  
+   string pszUrl  
 );  
 ```  
   

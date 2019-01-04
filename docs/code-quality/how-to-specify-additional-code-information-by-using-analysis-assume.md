@@ -1,8 +1,7 @@
 ---
-title: '方法: _Analysis_assume を使用してコードを追加情報を指定'
+title: '方法: _Analysis_assume を使用して追加のコード情報を指定する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
 - _Analysis_assume
@@ -14,27 +13,27 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: ce8102bbc790019490c4dc2a2ccbfab7d8c33981
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 17e25ace1da6cad9fcdc129b6c6f517c39c9c103
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32031528"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53845080"
 ---
-# <a name="how-to-specify-additional-code-information-by-using-analysisassume"></a>方法: _Analysis_assume を使用してコードを追加情報を指定
-C/C++ コード分析処理に役立つは警告を軽減するため、コード分析ツールへのヒントを提供できます。 追加情報を提供するには、次の関数を使用します。
+# <a name="how-to-specify-additional-code-information-by-using-analysisassume"></a>方法: _Analysis_assume を使用して追加のコード情報を指定する
+C/C++ コード分析のプロセスを支援し、警告を減らすは、コード分析ツールへのヒントを指定できます。 追加情報を提供するには、次の関数を使用します。
 
  `_Analysis_assume(`  `expr`  `)`
 
- `expr` -任意の式を true に評価されると見なされます。
+ `expr` -任意の式は true と評価されると見なされます。
 
- コード分析ツールでは、式で表される条件は true、関数が表示され、式が変更されるまで、たとえば、変数への代入が true のまま、ポイントではことを前提としています。
+ コード分析ツールでは、関数が表示され、式が変更されるまで、たとえば、変数への代入によってが true の時点で、式で表される条件のことを前提としています。
 
 > [!NOTE]
->  `_Analysis_assume` コードの最適化に影響しません。 コード分析ツールの外部`_Analysis_assume`no-op として定義されます。
+>  `_Analysis_assume` コードの最適化には影響しません。 コード分析ツールでは、外部`_Analysis_assume`操作なしとして定義されます。
 
 ## <a name="example"></a>例
- 次のコードでは`_Analysis_assume`コード分析警告を解決する[C6388](../code-quality/c6388.md):
+ 次のコードでは`_Analysis_assume`コード分析の警告を解決する[C6388](../code-quality/c6388.md):
 
 ```
 #include<windows.h>

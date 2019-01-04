@@ -10,13 +10,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 806e0984ce0309ff071e595725615034a7d42f09
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 364e39744f403e83847d983e02843bf538bf5c57
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49882523"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53856866"
 ---
 # <a name="accessing-models-from-text-templates"></a>テキスト テンプレートからモデルへのアクセス
 テキスト テンプレートを使用すると、レポート ファイル、ソース コード ファイル、およびその他のドメイン固有言語モデルを基にテキスト ファイルを作成できます。 テキスト テンプレートの基本については、次を参照してください。[コードの生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)します。 テキスト テンプレートは、DSL をデバッグするときは、実験モードで動作し、DSL が配置されているコンピューターにも機能します。
@@ -143,7 +142,7 @@ For Each element As ExampleElement In Me.WorkModel.Elements
 
  ファイルを読み込むには、最も効果的な方法は、Visual Studio ModelBus を使用してします。 一般的なシナリオで、テキスト テンプレートは、通常の方法で最初のモデルを読み込む、DSL に固有のディレクティブを使用します。 そのモデルには、別のモデルへの ModelBus 参照が含まれます。 ModelBus を使用して、参照されているモデルを開き、特定の要素にアクセスすることができます。 詳細については、次を参照してください。[テキスト テンプレートで Visual Studio ModelBus を使用して](../modeling/using-visual-studio-modelbus-in-a-text-template.md)します。
 
- あまり一般的なシナリオでは、ファイル名のみがあるモデル ファイルを開く可能性があり、これで、現在の Visual Studio プロジェクトではない可能性があります。 この場合で説明した手法を使用してファイルを開く[方法: プログラム コード内のファイルからモデルを開く](../modeling/how-to-open-a-model-from-file-in-program-code.md)します。
+ あまり一般的なシナリオでは、ファイル名のみがあるモデル ファイルを開く可能性があり、これで、現在の Visual Studio プロジェクトではない可能性があります。 この場合で説明した手法を使用してファイルを開く[方法。プログラム コード内のファイルからモデルを開く](../modeling/how-to-open-a-model-from-file-in-program-code.md)します。
 
 ## <a name="generating-multiple-files-from-a-template"></a>テンプレートから複数のファイルを生成します。
  いくつかのファイル - を生成する場合など、モデルでは、各要素に対して個別のファイルを生成するがあるいくつかの可能なアプローチです。 既定では、1 つのファイルは、各テンプレート ファイルから生成されます。

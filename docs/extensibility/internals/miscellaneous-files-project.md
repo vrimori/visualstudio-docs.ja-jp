@@ -1,9 +1,6 @@
 ---
-title: その他のファイル プロジェクト |Microsoft ドキュメント
-ms.custom: ''
+title: その他のファイル プロジェクト |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - files, adding existing files to solutions
@@ -16,33 +13,33 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a637b37590a0aaf321a4e04896b2cbe12c29691f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 281213751cb25a05e8298ee35ba43453d48ed250
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31129978"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53853110"
 ---
 # <a name="miscellaneous-files-project"></a>その他のファイル プロジェクト
-ユーザーは、プロジェクト項目を開く、IDE は、ソリューション内のすべてのプロジェクトのメンバーではないすべての項目をその他のファイル プロジェクトに割り当てます。  
+ユーザーは、プロジェクト項目が開いたら、IDE はソリューション内のすべてのプロジェクトのメンバーではないすべての項目をその他のファイル プロジェクトに割り当てます。  
   
- プロジェクトでは、どのエディターを使用して、ユーザーがプロジェクト項目を開くときに決定する重要な役割を果たします。 プロジェクトを設計すると、プロジェクト固有のエディターまたは標準のエディターを使用して特定のファイルを開きます。  
+ プロジェクトでは、どのエディターを使用するは、ユーザーがプロジェクト項目を開いたときに決定する際の重要な役割を果たします。 プロジェクトを設計すると、プロジェクト固有のエディターまたは標準のエディターを使用して特定のファイルを開きます。  
   
- プロジェクト固有のエディターは、通常、ユーザーが特別な知識があること、またはプロジェクトからの特別なインターフェイスを使用する必要があります。 詳細については、次を参照してください。[する方法: 開いているプロジェクトに固有のエディター](../../extensibility/how-to-open-project-specific-editors.md)です。  
+ プロジェクト固有のエディターは、通常、ユーザーが特別な知識があるか、プロジェクトからの特別なインターフェイスを使用する必要があります。 詳細については、「[方法 :プロジェクトに固有のエディターを開く](../../extensibility/how-to-open-project-specific-editors.md)します。  
   
- 標準のエディターでは、すべてのプロジェクトで特定の拡張機能の任意のファイルを開くことができます。 ユーザーになど、一部の標準的なエディターをカスタマイズする、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プロジェクト用のテキスト エディターが、まだ、パブリックの文字を保持します。 標準のエディターを使用して作成される、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>メソッドです。  
+ 標準エディターでは、すべてのプロジェクトで特定の拡張機能の任意のファイルを開くことができます。 ユーザーがなど、一部の標準エディターをカスタマイズすることができます、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プロジェクト用のテキスト エディターは、パブリックの文字を保持します。 標準のエディターを使用して作成された、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>メソッド。  
   
- ソリューション内のプロジェクトが応答しないためのプロジェクト項目を開くことができますが、IDE は、ファイルを開くその他のファイル プロジェクトという特殊なプロジェクトを提供します。  
+ ソリューション内のプロジェクトが返されないプロジェクト項目を開くことができますが、IDE は、任意のファイルを開き、その他のファイル プロジェクトと呼ばれる特別なプロジェクトを提供します。  
   
- この特殊なプロジェクトは、プロジェクトのコンテキストの外部ファイルのオープンを提供します。 処理中に、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A>メソッド、その他のファイル プロジェクトの応答が非常に低い優先順位。 そのため、その他のファイルはプロジェクト ファイルを開くことができる任意の優先順位の高いプロジェクトに生成では常にします。  
+ この特別なプロジェクトは、プロジェクトのコンテキストの外部のファイルを開くのために提供します。 処理中に、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A>メソッド、その他のファイル プロジェクトは常に非常に低い優先順位が応答します。 そのため、その他のファイルはプロジェクト ファイルを開くことができる任意の優先順位の高いプロジェクトに生成では常にします。  
   
- その他のファイル プロジェクトには、ユーザーを明示的に作成では不要、**新しいプロジェクト** ダイアログ ボックス。 また、その他のファイル プロジェクトはプロジェクトのメンバーの一覧を完全に管理しません。 省略可能な機能を使用して各ユーザーの最近使用したファイルの一覧を記録します。  
+ その他のファイル プロジェクトには、それを明示的に作成するユーザーは不要、**新しいプロジェクト** ダイアログ ボックス。 また、その他のファイル プロジェクトはプロジェクトのメンバーの一覧を完全に管理しません。 各ユーザーの最近使用したファイルの一覧を記録するのにオプションの機能を使用します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument>   
  <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY>   
- [方法: プロジェクトに固有のエディターを開く](../../extensibility/how-to-open-project-specific-editors.md)   
+ [方法: 開いているプロジェクト固有のエディター](../../extensibility/how-to-open-project-specific-editors.md)   
  [方法: 標準のエディターを開く](../../extensibility/how-to-open-standard-editors.md)   
  [プロジェクトとプロジェクト項目テンプレートを追加します。](../../extensibility/internals/adding-project-and-project-item-templates.md)   
  [プロジェクト テンプレートとプロジェクト項目テンプレートの追加](../../extensibility/internals/adding-project-and-project-item-templates.md)

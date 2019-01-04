@@ -1,9 +1,6 @@
 ---
 title: SccGetEvents 関数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - SccGetEvents
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 981b3c9b0a03abfa13fedc7c62e77f02a425b248
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 4f575162d6c5079a1233302186ae904241cb8673
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49896992"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53942230"
 ---
 # <a name="sccgetevents-function"></a>SccGetEvents 関数
 この関数は、キューに置かれた状態のイベントを取得します。  
@@ -44,7 +41,7 @@ SCCRTN SccGetEvents (
  [入力、出力]ソース管理プラグインが (最大 _MAX_PATH 文字) 返されたファイル名を格納するバッファー。  
   
  lpStatus  
- で [チェック アウト]ステータス コードが返されます (を参照してください[ファイルのステータス コード](../extensibility/file-status-code-enumerator.md)使用可能な値の)。  
+ [入力、出力]ステータス コードを返します (を参照してください[状態コードをファイル](../extensibility/file-status-code-enumerator.md)使用可能な値)。  
   
  pnEventsRemaining  
  [入力、出力]この呼び出しの後にキューに残ってエントリの数を返します。 呼び出し元を呼び出すことがこの数値が大きい場合、 [SccQueryInfo](../extensibility/sccqueryinfo-function.md)情報を一度にすべてを取得します。  

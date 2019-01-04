@@ -1,9 +1,6 @@
 ---
 title: 'チュートリアル: コンテンツ コントロールを使用してテンプレートを作成します。'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e597f13d2627a8b3e40aa65926d1c990be839c38
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0ad53a4e3e834959cbc37d2063a5dd2d1b0d7f6c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49833188"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53931987"
 ---
 # <a name="walkthrough-create-a-template-by-using-content-controls"></a>チュートリアル: コンテンツ コントロールを使用してテンプレートを作成します。
   このチュートリアルでは、コンテンツ コントロールを使用して、Microsoft Office Word テンプレートで構造化された再利用可能なコンテンツを作成するための、ドキュメント レベルのカスタマイズを作成する方法について説明します。  
@@ -59,7 +56,7 @@ ms.locfileid: "49833188"
   
 ### <a name="to-create-a-new-word-template-project"></a>新しい Word テンプレート プロジェクトを作成するには  
   
-1.  名前の Word テンプレート プロジェクトを作成**MyBuildingBlockTemplate**します。 ウィザードで、ソリューション内に新しいドキュメントを作成します。 詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
+1.  名前の Word テンプレート プロジェクトを作成**MyBuildingBlockTemplate**します。 ウィザードで、ソリューション内に新しいドキュメントを作成します。 詳細については、「[方法 :Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] デザイナーで新しい Word テンプレートを開き、追加、 **MyBuildingBlockTemplate**プロジェクトを**ソリューション エクスプ ローラー**します。  
   
@@ -86,7 +83,7 @@ ms.locfileid: "49833188"
 5. リボンの **[開発]** タブをクリックします。  
   
    > [!NOTE]  
-   >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、次を参照してください。[方法: リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
+   >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、「[方法 :リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
   
 6. **コントロール**グループで、、**テキスト**ボタン![PlainTextContentControl](../vsto/media/plaintextcontrol.gif "PlainTextContentControl") を追加する<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>最初のセルにします。  
   
@@ -235,15 +232,13 @@ ms.locfileid: "49833188"
 ## <a name="next-steps"></a>次の手順  
  コンテンツ コントロールの使用方法の詳細については、次の各トピックを参照してください。  
   
--   コンテンツ コントロールを、文書に埋め込まれている XML の一部 (「カスタム XML 部分」とも呼ばれます) にバインドします。 詳細については、次を参照してください。[チュートリアル: カスタム XML 部分にコンテンツ コントロールをバインド](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)します。  
+-   コンテンツ コントロールを、文書に埋め込まれている XML の一部 (「カスタム XML 部分」とも呼ばれます) にバインドします。 詳細については、「[チュートリアル:カスタム XML 部分にコンテンツ コントロールをバインド](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [拡張オブジェクトを使用して Word を自動化します。](../vsto/automating-word-by-using-extended-objects.md)   
  [コンテンツ コントロール](../vsto/content-controls.md)   
- [方法: Word 文書にコンテンツ コントロールを追加](../vsto/how-to-add-content-controls-to-word-documents.md)   
- [方法: コンテンツ コントロールを使用してドキュメントを保護する.](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)   
+ [方法: コンテンツ コントロールを Word 文書に追加します。](../vsto/how-to-add-content-controls-to-word-documents.md)   
+ [方法: コンテンツ コントロールを使用してドキュメントを保護する. します。](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)   
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)  
-  
-  

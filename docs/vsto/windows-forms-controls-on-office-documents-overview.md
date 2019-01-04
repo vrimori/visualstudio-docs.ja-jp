@@ -1,9 +1,6 @@
 ---
 title: Office ドキュメントの概要での Windows フォーム コントロール
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -30,17 +27,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 51c671a583e4e96b51ae6627de1fce738696fe22
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 48778074587e5cf6e4a51ff2386a437e9c3922d7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49892781"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53902494"
 ---
 # <a name="windows-forms-controls-on-office-documents-overview"></a>Office ドキュメントの概要での Windows フォーム コントロール
   Windows フォーム コントロールは、データを入力または操作するときにユーザーが取り扱うオブジェクトです。 Microsoft Office Excel および Microsoft Office Word のドキュメント レベルのプロジェクトで、プロジェクトで、デザイン時にドキュメントまたはブックに Windows フォーム コントロールを追加できますかプログラムで、実行時にこれらのコントロールを追加することができます。 プログラムで、任意の開いているドキュメントまたは VSTO アドインで実行時にワークシートに、Excel または Word のこれらのコントロールを追加することができます。  
   
- 詳細については、次を参照してください。[方法: Office ドキュメントにコントロールを Windows フォームの追加](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)します。  
+ 詳細については、「[方法 :Office ドキュメントに Windows フォーム コントロールを追加](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)します。  
   
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]  
   
@@ -121,7 +118,7 @@ ms.locfileid: "49892781"
  ユーザーがデザイン モードでブックを開くとなど特定の条件では、コードは読み込まれず、ビットマップのみが表示されます。 また、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] がインストールされていないコンピューターでユーザーがブックを開く場合、コントロールを読み込むためのカスタマイズは実行できず、コントロールのビットマップのみが表示されます。 個人情報が誤って公開されないようにするため、ブックを保存して別のユーザーに送信する前に、必ず個人情報をブックのコントロールから削除する必要があります。  
   
 ### <a name="match-control-size-to-cell-size-on-an-excel-worksheet"></a>Excel ワークシートのセルのサイズに一致するコントロールのサイズ  
- 親のセルのサイズが変更されたときに、自動的にサイズ変更されるようにコントロールを設定することができます。 詳細については、次を参照してください。[方法: ワークシートのセル内のコントロールをサイズ変更](../vsto/how-to-resize-controls-within-worksheet-cells.md)します。  
+ 親のセルのサイズが変更されたときに、自動的にサイズ変更されるようにコントロールを設定することができます。 詳細については、「[方法 :ワークシートのセル内のコントロールをサイズ変更](../vsto/how-to-resize-controls-within-worksheet-cells.md)します。  
   
 ### <a name="add-components-that-are-shared-by-all-worksheets"></a>すべてのワークシートによって共有されるコンポーネントを追加します。  
  <xref:System.Data.DataSet>などすべてのワークシート間で共有するコンポーネントを、ワークシートではなくブックのデザイナーに追加することができます。 このコンポーネントは、コンポーネント トレイに表示されます。  
@@ -155,15 +152,13 @@ ms.locfileid: "49892781"
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   
  [Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)   
  [Office ドキュメントに Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)   
- [方法: Windows フォーム コントロールを Office ドキュメントに追加します。](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
- [方法: ワークシートのセル内のコントロールをサイズ変更](../vsto/how-to-resize-controls-within-worksheet-cells.md)   
+ [方法: Office ドキュメントへの Windows フォーム コントロールを追加します。](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
+ [方法: ワークシートのセル内のコントロールをサイズ変更します。](../vsto/how-to-resize-controls-within-worksheet-cells.md)   
  [方法: 印刷時にワークシートのコントロールを非表示にします。](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)   
  [チュートリアル: CheckBox コントロールを使用してワークシートの書式設定を変更します。](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md)   
- [チュートリアル: CheckBox コントロールを使用してドキュメントの書式設定を変更します。](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)   
- [チュートリアル: ボタンを使用してワークシート内のテキスト ボックスでテキストを表示します。](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)   
- [チュートリアル: ボタンを使用して文書内のテキスト ボックスでテキストを表示します。](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)   
+ [チュートリアル: CheckBox コントロールを使用したドキュメント書式を変更します。](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)   
+ [チュートリアル: ボタンを使用してワークシート内のテキスト ボックスにテキストを表示](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)   
+ [チュートリアル: ボタンを使用して文書内のテキスト ボックスにテキストを表示](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)   
  [Office ドキュメントに Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)   
- [チュートリアル: オプション ボタンを使用してドキュメントのグラフを更新します。](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)   
- [チュートリアル: オプション ボタンを使用してワークシートのグラフを更新します。](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md)  
-  
-  
+ [チュートリアル: ラジオ ボタンを使用してドキュメントのグラフを更新します。](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)   
+ [チュートリアル: ラジオ ボタンを使用してワークシートのグラフを更新します。](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md)  

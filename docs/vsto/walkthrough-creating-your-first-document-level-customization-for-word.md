@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: 初めての Word 用ドキュメント レベルのカスタマイズを作成します。'
-ms.custom: ''
+title: 'チュートリアル: 最初の Word 用ドキュメント レベルのカスタマイズを作成します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,14 +14,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1c5c25163a49e51b0759e57318d6119edec97983
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 8aff32bbbbc396651079d16449e9746760c4541e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49928816"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53856439"
 ---
-# <a name="walkthrough-create-your-first-document-level-customization-for-word"></a>チュートリアル: 初めての Word 用ドキュメント レベルのカスタマイズを作成します。
+# <a name="walkthrough-create-your-first-document-level-customization-for-word"></a>チュートリアル: 最初の Word 用ドキュメント レベルのカスタマイズを作成します。
   この入門編のチュートリアルでは、Microsoft Office Word 用のドキュメント レベルのカスタマイズを作成する方法について説明します。 この種のソリューションで作成した機能は、特定の文書が開いている場合にのみ使用可能です。 ドキュメント レベルのカスタマイズでは、文書が開いたときに新しいリボン タブを表示するなどの、アプリケーション全体の変更を行うことはできません。  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
@@ -145,17 +142,17 @@ ms.locfileid: "49928816"
   
 -   ドキュメント レベルのカスタマイズで実行できる一般的なプログラミング タスク:[ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)します。  
   
--   Word 用ドキュメント レベルのカスタマイズに固有のプログラミング タスク: [Word ソリューション](../vsto/word-solutions.md)します。  
+-   Word 用ドキュメント レベルのカスタマイズに固有のプログラミング タスク:[Word ソリューション](../vsto/word-solutions.md)します。  
   
--   Word のオブジェクト モデルを使用して: [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)します。  
+-   Word のオブジェクト モデルを使用します。[Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)します。  
   
--   Word の UI のカスタマイズなどによってリボンにカスタム タブの追加や独自の作業ウィンドウの作成: [Office UI のカスタマイズ](../vsto/office-ui-customization.md)します。  
+-   Word の UI のリボンにカスタム タブを追加するか、独自の作業ウィンドウの作成のカスタマイズ。[Office UI のカスタマイズ](../vsto/office-ui-customization.md)します。  
   
 -   Visual Studio での Office ソリューションで提供される拡張 Word のオブジェクトを使用して、Word オブジェクト モデル (たとえば、ドキュメント上でマネージ コントロールをホストしていると Windows フォーム データを使用して Word コントロールをデータにバインドを使用してで不可能なタスクを実行するにはバインド モデル):[拡張オブジェクトを使用して Word の自動化](../vsto/automating-word-by-using-extended-objects.md)します。  
   
--   ビルドとデバッグの Word 用ドキュメント レベルのカスタマイズ:[ビルドの Office ソリューション](../vsto/building-office-solutions.md)します。  
+-   ビルドして、Word のドキュメント レベルのカスタマイズをデバッグします。[Office ソリューションの構築](../vsto/building-office-solutions.md)します。  
   
--   Word 用ドキュメント レベル カスタマイズの配置: [Office ソリューションを配置](../vsto/deploying-an-office-solution.md)します。  
+-   Word 用ドキュメント レベルのカスタマイズを展開するには。[Office ソリューションを配置](../vsto/deploying-an-office-solution.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
@@ -167,5 +164,3 @@ ms.locfileid: "49928816"
  [Office ソリューションを構築します。](../vsto/building-office-solutions.md)   
  [Office ソリューションをデプロイします。](../vsto/deploying-an-office-solution.md)   
  [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)  
-  
-  

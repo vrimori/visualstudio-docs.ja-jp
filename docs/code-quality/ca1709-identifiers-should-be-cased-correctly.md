@@ -1,8 +1,7 @@
 ---
-title: 'CA1709: 識別子では、大文字と小文字が正しく区別されなければなりません'
+title: CA1709:識別子では、大文字と小文字が正しく区別されなければなりません
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - IdentifiersShouldBeCasedCorrectly
@@ -16,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e1422b409ba27b56adead768c6272f955e75000
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e954b3e3d346775d87cfcc8bb46bddca2b16056a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49891350"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53881728"
 ---
-# <a name="ca1709-identifiers-should-be-cased-correctly"></a>CA1709: 識別子では、大文字と小文字が正しく区別されなければなりません
+# <a name="ca1709-identifiers-should-be-cased-correctly"></a>CA1709:識別子では、大文字と小文字が正しく区別されなければなりません
 
 |||
 |-|-|
@@ -50,7 +49,7 @@ ms.locfileid: "49891350"
 
  このルールは、名は大文字と小文字の単語に分割し、2 文字の単語を"In"などの一般的な 2 文字の単語または"My"の一覧を確認します。 一致が見つからない場合、単語は頭字語と見なされます。 さらに、このルールでは、名前には、いずれかの行に 4 つの大文字または名前の最後の行に 3 つの大文字が含まれている場合、頭字語が前提としています。
 
- 慣例により、2 文字の頭字語はすべて大文字を使用して、3 文字以上の頭字語は pascal 形式を使用して大文字小文字の区別します。 この名前付け規則を使用して、次の例: 'DB'、'CR'、'Cpa' および 'Ecma'。 次の例では、規則に違反: 'Io'、'XML' および 'DoD' と、非パラメーター名、'xp' および 'cpl'。
+ 慣例により、2 文字の頭字語はすべて大文字を使用して、3 文字以上の頭字語は pascal 形式を使用して大文字小文字の区別します。 次の例では、この名前付け規則を使用します。'DB'、'CR'、'Cpa' および 'Ecma'。 次の例では、規則に違反します。'Io'、'XML' および 'DoD' と、非パラメーター名、'xp' および 'cpl'。
 
  'ID' は、この規則の違反が発生する特殊なケースです。 'Id' は、頭字語ではありませんが、'id' の省略形です。
 
@@ -60,7 +59,7 @@ ms.locfileid: "49891350"
 ## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  名前付けの規則がある場合、または識別子は、適切な名前、たとえば、企業やテクノロジの名を表している場合、この警告を抑制しても安全です。
 
- 特定の用語、略語、および頭字語を追加することも、コード分析カスタム辞書にします。 ユーザー辞書に指定された語句では、この規則の違反は発生しません。 詳細については、次を参照してください[方法: コード分析辞書をカスタマイズする。](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
+ 特定の用語、略語、および頭字語を追加することも、コード分析カスタム辞書にします。 ユーザー辞書に指定された語句では、この規則の違反は発生しません。 詳細については、「[方法 :コード分析辞書をカスタマイズします。](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
 
 ## <a name="related-rules"></a>関連するルール
- [CA1708: 識別子は、大文字と小文字の区別以外にも相違していなければなりません](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+ [CA1708:識別子は、ケース以外で相違させる必要があります。](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)

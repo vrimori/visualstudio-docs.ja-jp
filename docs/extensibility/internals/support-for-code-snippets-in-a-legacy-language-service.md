@@ -1,9 +1,6 @@
 ---
 title: 従来の言語サービスでのコード スニペットのサポート |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - snippets, supporting in language services
@@ -15,19 +12,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a7ad314e5a160ae280b33586fb7dfe1b42ec470f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f5437f511eda582f2de7b28cc35716b0148df254
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49858109"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53852954"
 ---
 # <a name="support-for-code-snippets-in-a-legacy-language-service"></a>従来の言語サービスでのコード スニペットのサポート
 コード スニペットは、ソース ファイルに挿入するコードの一部です。 スニペット自体とは、一連のフィールドの XML ベースのテンプレートです。 これらのフィールドには、スニペットが挿入され、スニペットを挿入するコンテキストに応じて異なる値を持つことができますが強調表示されます。 スニペットの挿入後にすぐに、言語サービスは、スニペットを書式設定できます。  
   
  TAB キーを使用してナビゲートするスニペットのフィールドを許可する特別な編集モードでは、スニペットが挿入されます。 フィールドには、IntelliSense スタイルのドロップダウン メニューをサポートできます。 ユーザーを入力してください、または ESC キーを入力して、ソース ファイルにスニペットをコミットします。 スニペットの詳細については、次を参照してください[コード スニペット](../../ide/code-snippets.md)します。  
   
- 従来の言語サービスは、VSPackage の一部として実装されますが、言語サービスの機能を実装する新しい方法は MEF 拡張機能を使用します。 詳細については、次を参照してください。[チュートリアル: コード スニペットを実装する](../../extensibility/walkthrough-implementing-code-snippets.md)します。  
+ 従来の言語サービスは、VSPackage の一部として実装されますが、言語サービスの機能を実装する新しい方法は MEF 拡張機能を使用します。 詳細については、次を参照してください。[チュートリアル。コード スニペットを実装する](../../extensibility/walkthrough-implementing-code-snippets.md)します。  
   
 > [!NOTE]
 >  新しいエディターの API をできるだけ早く使用を開始することをお勧めします。 言語サービスのパフォーマンスを向上させる、エディターの新機能を活用することができます。  
@@ -51,7 +48,7 @@ ms.locfileid: "49858109"
 ### <a name="installing-the-snippet-files"></a>スニペット ファイルをインストールします。  
  言語のすべてのスニペットは、ファイルごとに 1 つスニペット テンプレート通常、XML ファイルにテンプレートとして格納されます。 コード スニペットのテンプレートを使用する XML スキーマの詳細については、「[コード スニペット スキーマ リファレンス](../../ide/code-snippets-schema-reference.md)します。 各スニペット テンプレートは、言語 ID で識別されます。 この言語の ID レジストリで指定され、に、`Language`の属性、\<コード > テンプレートのタグ。  
   
- 通常は、スニペット テンプレート ファイルが格納される 2 つの場所: 1)、言語がインストールされていると、2) のユーザーのフォルダー。 これらの場所はレジストリに追加、これを Visual Studio**コード スニペット マネージャー**スニペットを見つけることができます。 ユーザーのフォルダーには、ユーザーによって作成されたスニペットを格納します。  
+ 通常は、スニペット テンプレート ファイルが格納される 2 つの場所があります。お使いの言語がインストールされている 1) および 2) のユーザーのフォルダー。 これらの場所はレジストリに追加、これを Visual Studio**コード スニペット マネージャー**スニペットを見つけることができます。 ユーザーのフォルダーには、ユーザーによって作成されたスニペットを格納します。  
   
  次のようなインストールされているスニペット テンプレート ファイルの一般的なフォルダー レイアウト: *[InstallRoot]*\\ *[TestLanguage]* \Snippets\\ *[LCID]* \Snippets します。  
   
@@ -223,7 +220,7 @@ ms.locfileid: "49858109"
 ### <a name="inserting-a-code-snippet-by-using-a-shortcut"></a>ショートカットを使用してコード スニペットの挿入  
  入力候補一覧から、ショートカットの実装は、メニュー コマンドを実装するよりもはるかに複雑です。 まず、IntelliSense の単語補完リストにスニペットのショートカットを追加する必要があります。 スニペットのショートカット名が入力候補の結果として挿入されたときを検出する必要があります。 最後に、スニペットのタイトルとショートカット名を使用してパスを取得してその情報を渡す、<xref:Microsoft.VisualStudio.Package.ExpansionProvider.InsertNamedExpansion%2A>メソッドを<xref:Microsoft.VisualStudio.Package.ExpansionProvider>メソッド。  
   
- スニペットのショートカットを単語の入力候補一覧に追加するを追加、<xref:Microsoft.VisualStudio.Package.Declarations>オブジェクト、<xref:Microsoft.VisualStudio.Package.AuthoringScope>クラス。 スニペット名としてのショートカット キーを確認することを確認する必要があります。 例については、次を参照してください。[チュートリアル:、のインストールされているコード スニペットの一覧 (従来の実装) を取得する](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)します。  
+ スニペットのショートカットを単語の入力候補一覧に追加するを追加、<xref:Microsoft.VisualStudio.Package.Declarations>オブジェクト、<xref:Microsoft.VisualStudio.Package.AuthoringScope>クラス。 スニペット名としてのショートカット キーを確認することを確認する必要があります。 例については、次を参照してください。[チュートリアル。コード スニペット (従来の実装) がインストールされている一覧の取得](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)します。  
   
  内のコード スニペットのショートカットの挿入を検出することができます、<xref:Microsoft.VisualStudio.Package.Declarations.OnAutoComplete%2A>のメソッド、<xref:Microsoft.VisualStudio.Package.Declarations>クラス。 ソース ファイルには、スニペット名が既に挿入されている、ために、拡張が挿入されたときに削除する必要があります。 <xref:Microsoft.VisualStudio.Package.ExpansionProvider.InsertNamedExpansion%2A>メソッドは、スニペットの挿入ポイントを説明する範囲を受け取ります。 その名前は、スニペットに置き換え、スパンには、ソース ファイルの全体のスニペット名が含まれている場合。  
   
@@ -338,7 +335,7 @@ namespace TestLanguagePackage
   
 4. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnAfterInsertion%2A>  
   
-   言語サービスのインストールされているコード スニペットの一覧の取得の詳細については、次を参照してください。[チュートリアル:、のインストールされているコード スニペットの一覧 (従来の実装) を取得する](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)します。  
+   言語サービスのインストールされているコード スニペットの一覧の取得の詳細については、次を参照してください。[チュートリアル。コード スニペット (従来の実装) がインストールされている一覧の取得](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)します。  
   
 ## <a name="implementing-the-expansionfunction-class"></a>ExpansionFunction クラスを実装します。  
  拡張する機能は、スニペット テンプレートに埋め込まれているし、フィールドに配置することの 1 つまたは複数の値を返す名前付きの機能です。 で、言語サービスの拡張機能をサポートするためには、からクラスを派生する必要があります、<xref:Microsoft.VisualStudio.Package.ExpansionFunction>クラスし、実装、<xref:Microsoft.VisualStudio.Package.ExpansionFunction.GetCurrentValue%2A>メソッド。 オーバーライドする必要がありますし、<xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionFunction%2A>メソッド、<xref:Microsoft.VisualStudio.Package.LanguageService>のバージョンの新しいインスタンスを返すために、<xref:Microsoft.VisualStudio.Package.ExpansionFunction>各拡張機能をサポートするためのクラス。 オーバーライドする必要がある拡張機能を使用できる値のリストをサポートする場合、<xref:Microsoft.VisualStudio.Package.ExpansionFunction.GetIntellisenseList%2A>メソッドで、<xref:Microsoft.VisualStudio.Package.ExpansionFunction>クラスをそれらの値の一覧を返します。  
@@ -395,4 +392,4 @@ namespace TestLanguagePackage
  [従来の言語サービスの機能](../../extensibility/internals/legacy-language-service-features1.md)   
  [従来の言語サービスを登録します。](../../extensibility/internals/registering-a-legacy-language-service1.md)   
  [コード スニペット](../../ide/code-snippets.md)   
- [チュートリアル: インストールされているコード スニペットの一覧の取得 (従来の実装)](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)
+ [チュートリアル: インストールされているコード スニペット (従来の実装) の一覧を取得します。](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)

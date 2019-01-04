@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f66d3fdcd400be9356776647b0ead118e83d7108
-ms.sourcegitcommit: c5e72875206b8c5737c29d5b1ec7b86eec747303
-ms.translationtype: MT
+ms.openlocfilehash: c6bd9685a5ea9bc2e6e0dc94f7fbff395fab523e
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382748"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53562062"
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Visual studio Just-In-Time デバッガーを使用してデバッグします。
 
@@ -36,13 +36,13 @@ ms.locfileid: "49382748"
 
 時にだけ、Visual Studio からデバッグを構成する**ツール** > **オプション**(または**デバッグ** > **のオプション**)ダイアログ ボックス。 
 
-**有効または無効にするジャスト イン タイムのデバッグします。**
+**Just-In-Time デバッグの有効/無効を切り替えるには:** 
 
 1. **ツール**または**デバッグ**メニューの **オプション** > **デバッグ** >  **ジャストイン タイム**します。
 
    ![有効にするか、JIT デバッグを無効にする](../debugger/media/dbg-jit-enable-or-disable.png "を有効にするか、JIT デバッグを無効にします。")
 
-1. **コードの種類の有効にする Just-In-Time デバッグを**ボックスに、時にのみをデバッグするデバッグするコードの種類を選択:**マネージ**、**ネイティブ**、や**スクリプト**します。
+1. **コードの種類の有効にする Just-In-Time デバッグを**ボックスに、時にのみをデバッグするデバッグするコードの種類を選択します。**マネージ**、**ネイティブ**、や**スクリプト**します。
    
 1. **[OK]** を選択します。
 
@@ -52,7 +52,7 @@ ms.locfileid: "49382748"
 
 Visual Studio がコンピューターからアンインストールされた後でも、Just-In-Time デバッグが有効になっている場合があります。 Visual Studio がインストールされていない場合は、時にのみ Windows レジストリを編集してデバッグを無効にすることができます。
 
-**時にのみ、レジストリを編集してデバッグを無効にします。**
+**レジストリを編集して Just-In-Time デバッグを無効にするには:** 
 
 1.  Windows から**開始**メニュー、実行、**レジストリ エディター** (*regedit.exe*)。
 
@@ -60,7 +60,7 @@ Visual Studio がコンピューターからアンインストールされた後
 
     -   **Hkey_local_machine \software\microsoft\\します。NETFramework\DbgManagedDebugger**
 
-    -   **Hkey_local_machine \software\microsoft\windows NT\CurrentVersion\AeDebug\Debugger**
+    -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug\Debugger**
 
     ![レジストリ キーの JIT](../debugger/media/dbg-jit-registry.png "JIT レジストリ キー")
 
@@ -90,13 +90,13 @@ Visual Studio がコンピューターからアンインストールされた後
     </configuration>
     ```
     
--  C++ Windows フォーム アプリケーションでも設定`DebuggableAttribute`に`true`で、 *.config*ファイルまたはコード。 使用してコンパイルする場合[/Zi](/cpp/build/reference/z7-zi-zi-debug-information-format)されず[/Og](/cpp/build/reference/og-global-optimizations)コンパイラでは、この属性を設定できます。 最適化されていないリリース ビルドをデバッグする場合は、ただし、する必要があります設定`DebuggableAttribute`アプリの次の行を追加することで*AssemblyInfo.cpp*ファイル。
+-  C++ Windows フォーム アプリケーションでも設定`DebuggableAttribute`に`true`で、 *.config*ファイルまたはコード。 [/Zi](/cpp/build/reference/z7-zi-zi-debug-information-format) を使用し、[/Og](/cpp/build/reference/og-global-optimizations) は使用しないでコンパイルすると、コンパイラによってこの属性が設定されます。 最適化されていないリリース ビルドをデバッグする場合は、ただし、する必要があります設定`DebuggableAttribute`アプリの次の行を追加することで*AssemblyInfo.cpp*ファイル。
 
    ```cpp
    [assembly:System::Diagnostics::DebuggableAttribute(true, true)];
    ```
    
-   詳細については、「 <xref:System.Diagnostics.DebuggableAttribute> 」を参照してください。
+   詳細については、「<xref:System.Diagnostics.DebuggableAttribute>」を参照してください。
 
 ## <a name="BKMK_Using_JIT"></a>ジャスト イン タイムを使用して、デバッグ
  この例では、時にのみアプリがエラーをスローするときにデバッグについて説明します。
@@ -107,7 +107,7 @@ Visual Studio がコンピューターからアンインストールされた後
 
 この例では、することになります、C#をスローする Visual Studio でコンソール アプリを[NullReferenceException](/dotnet/api/system.nullreferenceexception)します。
 
-1. Visual Studio で、作成、C#コンソール アプリ (**ファイル** > **新規** > **プロジェクト** > **Visual C#**   > **コンソール アプリケーション**) という名前の*ThrowsNullException*します。 Visual Studio でプロジェクトを作成する方法の詳細については、次を参照してください。[チュートリアル: 単純なアプリケーション作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)です。
+1. Visual Studio で、作成、C#コンソール アプリ (**ファイル** > **新規** > **プロジェクト** > **Visual C#**   > **コンソール アプリケーション**) という名前の*ThrowsNullException*します。 Visual Studio でプロジェクトを作成する方法の詳細については、次を参照してください。[チュートリアル。シンプルなアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)
    
 1. Visual Studio でプロジェクトを開いたら、開く、 *Program.cs*ファイル。 Main() メソッドをコンソールには行を表示し、NullReferenceException をスローし、次のコードに置き換えます。
    
@@ -124,7 +124,7 @@ Visual Studio がコンピューターからアンインストールされた後
    >[!NOTE]
    >- 選択**デバッグ**完全なデバッグ エクスペリエンスを構成します。 
    >- 選択した場合[リリース](../debugger/how-to-set-debug-and-release-configurations.md)構成では、オフにする必要があります[マイ コードのみ](../debugger/just-my-code.md)この手順を実行します。 **ツール** > **オプション** > **デバッグ**、選択を解除**マイ コードのみを有効にする**します。
-   ビルド構成の詳細については、次を参照してください。[ビルド構成について](../ide/understanding-build-configurations.md)します。
+   ビルド構成の詳細については、「[ビルド構成について](../ide/understanding-build-configurations.md)」を参照してください。
    
 1. ビルドされたアプリを開いて*ThrowsNullException.exe*で、C#プロジェクト フォルダー (*...\ThrowsNullException\ThrowsNullException\bin\Debug*または *...\ThrowsNullException\ThrowsNullException\bin\Release*)。 
    
@@ -161,7 +161,7 @@ Visual Studio がコンピューターからアンインストールされた後
 
   - **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Windows エラーの報告**
     
-  - (64 ビット コンピューター) 用: **HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows\Windows エラーの報告**
+  - (64 ビット コンピューターの場合)。**HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows\Windows エラーの報告**
   
   詳細については、次を参照してください。[します。WER 設定](https://docs.microsoft.com/windows/desktop/wer/wer-settings)します。
   
@@ -172,23 +172,23 @@ Visual Studio がコンピューターからアンインストールされた後
   
   - **Hkey_local_machine \software\microsoft\windows NT\CurrentVersion\AeDebug**
     
-  - (64 ビット コンピューター) 用: **HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug**
+  - (64 ビット コンピューターの場合)。**HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug**
 
 ジャスト イン タイムの中に次のエラー メッセージを表示する場合がありますのデバッグします。
 
-- **クラッシュ プロセスにアタッチできません。指定したプログラムは、Windows または MS-DOS プログラムではできません。**
+- **クラッシュ プロセスにアタッチできません。指定されたプログラムは、Windows または MS-DOS プログラムではありません。**
 
     デバッガーは、別のユーザーで実行されているプロセスにアタッチしようとしました。
 
     Visual Studio で、この問題を回避するには、開く**デバッグ** > **プロセスにアタッチ**、デバッグするプロセスを検索し、**選択可能なプロセス**リスト。 プロセスの名前がわからない場合にプロセス ID の検索、 **Visual Studio Just-In-Time デバッガー**ダイアログ。 プロセスの選択、**選択可能なプロセス**一覧**アタッチ**します。 選択**いいえ**Just ポイントイン タイムを消去するデバッガー ダイアログ。
 
-- **ユーザーがログオンしていないために、デバッガーを開始できませんでした。**
+- **ログオンしているユーザーがいないため、デバッガーを開始できませんでした。**
 
     時刻でだけを表示するユーザーのセッションが存在しないために、コンソールにログオンしているユーザーがいないダイアログをデバッグします。
 
     この問題を解決するには、コンピューターにログオンします。
 
-- **クラスが登録されていません。**
+- **クラスは登録されていません。**
 
     デバッガーは、登録されていない、おそらくインストールの問題が原因 COM クラスを作成しようとしました。
 
@@ -196,6 +196,6 @@ Visual Studio がコンピューターからアンインストールされた後
 
 ## <a name="see-also"></a>関連項目
 - [デバッガーのセキュリティ](../debugger/debugger-security.md)
-- [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)
+- [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)
 - [オプション、デバッグ、ジャスト イン タイム ダイアログ ボックス](../debugger/just-in-time-debugging-options-dialog-box.md)
-- [セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするには危険が伴います。以下の情報に関して疑わしい点がある場合や、不明な場合は、このプロセスにアタッチしないでください。](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)
+- [セキュリティ警告信頼されていないユーザーによって所有されているプロセスにアタッチすると、危険なことができます。以下の情報に関して疑わしい点がある場合や、不明な場合は、このプロセスにアタッチしないでください。](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)

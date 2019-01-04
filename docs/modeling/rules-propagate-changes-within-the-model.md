@@ -11,13 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 8f506b71240024206523821080cdf958660aa963
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 70bacc7e181c27efd14b613c20af29e850db321a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49865974"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53925551"
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>規則によって変更内容がモデル内に反映される
 1 つの要素から Visualization and Modeling SDK (VMSDK) の間の変更を伝達するストア ルールを作成することができます。 ストア内の任意の要素を変更する場合は、ルールは、通常、最も外側のトランザクションがコミットされたときに実行される予定です。 要素の追加や削除などのイベントのさまざまな種類のルールの種類があります。 ルールは、特定の種類の要素、図形、またはダイアグラムをアタッチできます。 多くの組み込み機能がルールによって定義されます。 など、規則では、モデルが変更されたときに、ダイアグラムが更新されることを確認します。 独自のルールを追加することで、ドメイン固有言語をカスタマイズできます。
@@ -134,7 +133,7 @@ namespace ExampleNamespace
   | 基底クラス | トリガー |
   |-|-|
   | <xref:Microsoft.VisualStudio.Modeling.AddRule> | 要素、リンク、または図形が追加されます。<br /><br /> これを使用して、新しい要素だけでなく、新しいリレーションシップを検出します。 |
-  | <xref:Microsoft.VisualStudio.Modeling.ChangeRule> | ドメイン プロパティの値を変更します。 このメソッドの引数は、新旧の値を提供します。<br /><br /> 図形は、このルールがトリガーされたときに、組み込み`AbsoluteBounds`プロパティの変更、図形が移動された場合。<br /><br /> 多くの場合、オーバーライドする方が便利です`OnValueChanged`または`OnValueChanging`プロパティ ハンドラーでします。 変更の前後にすぐに、これらのメソッドは呼び出されます。 これに対し、ルールは、トランザクションの最後に通常実行されます。 詳細については、次を参照してください。[ドメイン プロパティ値変更ハンドラー](../modeling/domain-property-value-change-handlers.md)します。 **注:** のリンクを作成または削除されたときは、このルールはトリガーされません。 代わりに、書き込み、`AddRule`と`DeleteRule`ドメイン リレーションシップ。 |
+  | <xref:Microsoft.VisualStudio.Modeling.ChangeRule> | ドメイン プロパティの値を変更します。 このメソッドの引数は、新旧の値を提供します。<br /><br /> 図形は、このルールがトリガーされたときに、組み込み`AbsoluteBounds`プロパティの変更、図形が移動された場合。<br /><br /> 多くの場合、オーバーライドする方が便利です`OnValueChanged`または`OnValueChanging`プロパティ ハンドラーでします。 変更の前後にすぐに、これらのメソッドは呼び出されます。 これに対し、ルールは、トランザクションの最後に通常実行されます。 詳細については、次を参照してください。[ドメイン プロパティ値変更ハンドラー](../modeling/domain-property-value-change-handlers.md)します。 **注:** このルールは、リンクを作成または削除されたときに発生しません。 代わりに、書き込み、`AddRule`と`DeleteRule`ドメイン リレーションシップ。 |
   | <xref:Microsoft.VisualStudio.Modeling.DeletingRule> | 要素またはリンクが削除しようとトリガーされます。 ModelElement.IsDeleting プロパティは、トランザクションが終了するまでは。 |
   | <xref:Microsoft.VisualStudio.Modeling.DeleteRule> | 要素またはリンクが削除されたときに実行されます。 その他のすべてのルールが実行されたら、DeletingRules を含むルールが実行されます。 ModelElement.IsDeleting が false になり、ModelElement.IsDeleted は true。 後続の元に戻すには、要素は、実際に削除されませんをメモリからが Store.ElementDirectory から削除されます。 |
   | <xref:Microsoft.VisualStudio.Modeling.MoveRule> | 要素は、別に 1 つのストアのパーティションから移動されます。<br /><br /> (図形の位置をグラフィカルにこの関係はしないことに注意してください)。 |

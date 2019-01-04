@@ -1,17 +1,12 @@
 ---
-title: 'チュートリアル: サイト列、コンテンツの種類、および SharePoint のリストの作成 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: サイト列、コンテンツの種類、および SharePoint のリストを作成する |Microsoft Docs'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.ListDesigner.GeneralMessageHelp
 - Microsoft.VisualStudio.SharePoint.Designers.ListDesigner.ViewModels.ListViewModel.SortingAndGrouping
 - VS.SharePointTools.ListDesigner.SortingGrouping
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -24,14 +19,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2fb78f5c40a04bb69d2f95d7f872b05e3d501113
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9bd2673ec63c9476217e13fad40f2316fcdf1886
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49900125"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53852532"
 ---
-# <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>チュートリアル: SharePoint のサイト列、コンテンツの種類、および一覧を作成します。
+# <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>チュートリアル: For SharePoint のサイト列、コンテンツの種類、および一覧を作成します。
   次の手順は、カスタムの SharePoint サイト列を作成する方法を示します: または*フィールド*— サイト内の列を使用するコンテンツの種類とします。 新しいコンテンツ タイプを使用するリストを作成する方法も示します。  
   
  このチュートリアルでは、次のタスクについて説明します。  
@@ -95,7 +90,7 @@ ms.locfileid: "49900125"
     </Field>  
     ```  
   
-4.  同じ手順を使用して 2 つのサイト列をプロジェクトに追加:**患者 ID** (型 ="Integer") と**医師名前**(種類 ="Text")。 そのグループの値を設定**クリニック サイト列**します。  
+4.  同じ手順を使用して、プロジェクトに 2 つのサイト列を追加します。**患者の ID** (種類 ="Integer") と**医師名前**(種類 ="Text")。 そのグループの値を設定**クリニック サイト列**します。  
   
 ## <a name="create-a-custom-content-type"></a>カスタム コンテンツ タイプを作成します。
  次に、コンテンツの種類を作成-連絡先のコンテンツ タイプに基づいて-前の手順で作成したサイト内の列が含まれます。 既存のコンテンツ タイプのコンテンツの種類を基盤として基本コンテンツの種類が、新しいコンテンツ タイプで使用するためにいくつかのサイト列を提供するための時間を節約できます。  
@@ -116,7 +111,7 @@ ms.locfileid: "49900125"
   
      これを行うと、以前に定義したサイト内の列だけでなくの Contact コンテンツ タイプの場合は、その他の役立つ可能性のあるサイト列にアクセスできます。  
   
-6.  コンテンツ型の後にデザイナーが表示されたらで、**列** タブで、3 つのサイトの以前に定義した列の追加:**患者名**、**患者 ID**、および**医師名前**します。 これらの列を追加するには、[サイト列] ボックスで、最初のリスト ボックスを選択します。**表示名**、一度に 1 つの一覧でサイト内の各列を選択します。  
+6.  コンテンツ型の後にデザイナーが表示されたらで、**列** タブで、3 つのサイトの以前に定義した列を追加します。**患者名**、**患者 ID**、および**医師名前**します。 これらの列を追加するには、[サイト列] ボックスで、最初のリスト ボックスを選択します。**表示名**、一度に 1 つの一覧でサイト内の各列を選択します。  
   
     > [!TIP]  
     >  迅速に、サイト内の列を選択するには、列の名前の最初の数文字を入力して一覧をフィルター処理します。  
@@ -229,7 +224,6 @@ ms.locfileid: "49900125"
 ## <a name="see-also"></a>関連項目
  [For SharePoint のサイト列、コンテンツの種類、およびリストを作成します。](../sharepoint/creating-site-columns-content-types-and-lists-for-sharepoint.md)   
  [SharePoint ソリューションを開発します。](../sharepoint/developing-sharepoint-solutions.md)   
- [方法: カスタム フィールド タイプの作成](http://go.microsoft.com/fwlink/?LinkId=192079)   
+ [方法: カスタム フィールド タイプを作成します。](http://go.microsoft.com/fwlink/?LinkId=192079)   
  [コンテンツの種類](http://go.microsoft.com/fwlink/?LinkId=192080)   
  [列](http://go.microsoft.com/fwlink/?LinkId=192081)  
-  

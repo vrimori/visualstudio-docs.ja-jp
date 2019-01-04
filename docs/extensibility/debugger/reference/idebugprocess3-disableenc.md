@@ -1,9 +1,6 @@
 ---
 title: IDebugProcess3::DisableENC |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugProcess3::DisableENC
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bc769e7386777dbf59dadbbe93b53bc9cac01ce0
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c8d440783dbd6112e6f9918cd22388b4b8efbff0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49875867"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53921192"
 ---
 # <a name="idebugprocess3disableenc"></a>IDebugProcess3::DisableENC
 このメソッドに明示的に無効にします。 エディット コンティニュでこのプロセス (およびすべてのプログラムが含まれています)。 カスタム ポート サプライヤーが常に返す必要があります`E_NOTIMPL`します。  
@@ -28,8 +25,8 @@ ms.locfileid: "49875867"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT DisableENC(  
-   EncUnavailableReason reason  
+HRESULT DisableENC(  
+   EncUnavailableReason reason  
 );  
 ```  
   

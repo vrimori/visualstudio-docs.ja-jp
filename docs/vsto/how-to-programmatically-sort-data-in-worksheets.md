@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによってワークシートのデータの並べ替え'
-ms.custom: ''
+title: '方法: プログラムによってワークシートのデータを並べ替え'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,14 +15,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 179cf5fab5a1b2690cb4b46160f7a5c3342fe7bc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d895f7ba8e192361ea262263af053da868a21e65
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49914217"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53960590"
 ---
-# <a name="how-to-programmatically-sort-data-in-worksheets"></a>方法: プログラムによってワークシートのデータの並べ替え
+# <a name="how-to-programmatically-sort-data-in-worksheets"></a>方法: プログラムによってワークシートのデータを並べ替え
   実行時にワークシートの範囲およびリストに含まれているデータを並べ替えることができます。 次のコードは、複数の列で構成される `Fruits` という名前の範囲を、最初の列のデータを基に並べ替え、次に 2 番目の列のデータを基に並べ替えます。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
@@ -66,11 +63,9 @@ ms.locfileid: "49914217"
   
 ## <a name="see-also"></a>関連項目  
  [ワークシートを操作します。](../vsto/working-with-worksheets.md)   
- [方法: プログラムによって自動的に増分するデータ範囲を入力](../vsto/how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data.md)   
- [方法: プログラムによってコード内でワークシートの範囲を参照](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)   
- [方法: プログラムによってブック内の範囲にスタイルを適用](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
+ [方法: プログラムによって自動的に増分するデータ範囲を入力します。](../vsto/how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data.md)   
+ [方法: コード内でワークシートの範囲をプログラムで参照してください。](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)   
+ [方法: プログラムによってブック内の範囲にスタイルを適用します。](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)   
  [ListObject コントロール](../vsto/listobject-control.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
-  
-  

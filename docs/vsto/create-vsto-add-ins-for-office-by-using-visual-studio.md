@@ -3,8 +3,6 @@ title: Visual Studio を使用して Office 用 VSTO アドインを作成する
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -14,12 +12,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ae35f11066ccb0bbd5e9fa36f137c8a77281463c
-ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
+ms.openlocfilehash: 7708bc32e240f5976f1a7b6b9f9a1afb4c950743
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53441497"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53942659"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Visual Studio を使用して Office 用 VSTO アドインを作成する
   Visual Studio の Microsoft Office Developer Tools を使用して、Office を拡張する .NET Framework アプリケーションを作成できます。 このようなアプリケーションは、 *Office ソリューション*とも呼ばれます。  
@@ -114,5 +112,3 @@ ms.locfileid: "53441497"
   
  [Visual Studio での .NET framework プログラミング](/previous-versions/visualstudio/visual-studio-2010/k1s94fta(v=vs.100))  
  Visual Basic および Visual C# での .NET Framework を使用したアプリケーション開発について説明します。  
-  
-  

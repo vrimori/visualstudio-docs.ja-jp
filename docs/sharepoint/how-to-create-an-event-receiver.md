@@ -1,9 +1,6 @@
 ---
 title: '方法: イベント レシーバーの作成 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.SPE.EventReceiver
@@ -20,24 +17,24 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: dd4528a47215254684be51400329b05c3998bbab
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9a9f18bb4399e52c6afbac9b20a7b16d04a39843
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42635149"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53861573"
 ---
-# <a name="how-to-create-an-event-receiver"></a>方法: イベント レシーバーを作成
+# <a name="how-to-create-an-event-receiver"></a>方法: イベント レシーバーを作成します。
   作成して*イベント レシーバー*、リストなどの SharePoint アイテムまたはリスト項目と、ユーザーが対話するときに応答することができます。 たとえば、ユーザーがカレンダーを変更したり、連絡先リストから名前を削除、イベント レシーバー内でコードをトリガーできます。 このトピックでは、リスト インスタンスには、イベント レシーバーを追加する方法を確認できます。
 
- 次の手順を完了する必要がありますインストールした[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]サポート対象エディションの Windows および SharePoint とします。 この例では、SharePoint プロジェクトが必要とするためもする必要がありますの手順を完了、トピックの「[チュートリアル: SharePoint のサイト列、コンテンツの種類、および一覧を作成する](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)します。
+ 次の手順を完了する必要がありますインストールした[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]サポート対象エディションの Windows および SharePoint とします。 この例では、SharePoint プロジェクトが必要とするためもする必要がありますの手順を完了、トピックの「[チュートリアル。For SharePoint のサイト列、コンテンツの種類、および一覧の作成](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)です。
 
 ## <a name="adding-an-event-receiver"></a>イベント レシーバーの追加
- 作成したプロジェクト[チュートリアル: SharePoint のサイト列、コンテンツの種類、および一覧を作成する](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)カスタムのサイト列、カスタム リスト、およびコンテンツの種類が含まれています。 次の手順では、リストなどの SharePoint アイテムで発生するイベントを処理する方法を表示するリスト インスタンスに単純なイベント ハンドラー (イベント レシーバー) を追加することでこのプロジェクトを展開します。
+ 作成したプロジェクト[チュートリアル。For SharePoint のサイト列、コンテンツの種類、および一覧の作成](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)カスタムのサイト列、カスタム リスト、およびコンテンツの種類が含まれています。 次の手順では、リストなどの SharePoint アイテムで発生するイベントを処理する方法を表示するリスト インスタンスに単純なイベント ハンドラー (イベント レシーバー) を追加することでこのプロジェクトを展開します。
 
 #### <a name="to-add-an-event-receiver-to-the-list-instance"></a>リスト インスタンスには、イベント レシーバーを追加するには
 
-1.  作成したプロジェクトを開く[チュートリアル: SharePoint のサイト列、コンテンツの種類、および一覧を作成する](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)します。
+1.  作成したプロジェクトを開く[チュートリアル。For SharePoint のサイト列、コンテンツの種類、および一覧の作成](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)です。
 
 2.  **ソリューション エクスプ ローラー**、名前は、SharePoint プロジェクト ノードを選択**クリニック**します。
 

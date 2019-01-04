@@ -1,9 +1,6 @@
 ---
 title: エンティティ間のアソシエーションを作成する |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.BDC.Association_Dialog
@@ -24,18 +21,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 22ac00ac48f4fe907e4fb4215992b49227f39961
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 134b477cdc199d85c983633a2a5996d113420443
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36325464"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53842980"
 ---
 # <a name="create-an-association-between-entities"></a>エンティティ間のアソシエーションを作成します。
   関連付けを作成して、ビジネス データ接続 (BDC) モデルのエンティティ間のリレーションシップを定義することができます。 Visual Studio では、各関連付けについての情報をモデルのコンシューマーに提供するメソッドを生成します。 これらのメソッドは、SharePoint web パーツ、リスト、またはユーザー インターフェイス (UI) でデータ間の関係を表示するカスタム アプリケーションで使用できます。  
   
 ## <a name="create-an-association"></a>関連付けを作成します。
- 選択して、アソシエーションを作成、**アソシエーション**Visual Studio でのコントロール**ツールボックス**、最初のエンティティ (ソース エンティティと呼ばれます) を選択し、別のエンティティを選択し (と呼ばれる、転送先エンティティの場合)。 関連付けの詳細を定義することができます、**関連付けエディター**します。 詳細については、次を参照してください。[方法: エンティティ間のアソシエーションを作成する](../sharepoint/how-to-create-an-association-between-entities.md)します。  
+ 選択して、アソシエーションを作成、**アソシエーション**Visual Studio でのコントロール**ツールボックス**、最初のエンティティ (ソース エンティティと呼ばれます) を選択し、別のエンティティを選択し (と呼ばれる、転送先エンティティの場合)。 関連付けの詳細を定義することができます、**関連付けエディター**します。 詳細については、「[方法 :エンティティ間のアソシエーションを作成する](../sharepoint/how-to-create-an-association-between-entities.md)します。  
   
 ## <a name="association-methods"></a>関連付けメソッド
  SharePoint ビジネス データ web パーツなどのアプリケーションでは、エンティティのサービス クラスでメソッドを呼び出して、関連付けを使用します。 選択して、エンティティのサービス クラスにメソッドを追加することができます、**関連付けエディター**します。  
@@ -81,6 +78,4 @@ ms.locfileid: "36325464"
   
 ## <a name="see-also"></a>関連項目
  [ビジネス データ接続モデルを設計します。](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [方法: エンティティ間のアソシエーションの作成](../sharepoint/how-to-create-an-association-between-entities.md)  
-  
- 
+ [方法: エンティティ間のアソシエーションを作成します。](../sharepoint/how-to-create-an-association-between-entities.md)  

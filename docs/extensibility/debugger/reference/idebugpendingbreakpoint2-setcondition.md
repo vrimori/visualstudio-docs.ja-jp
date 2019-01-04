@@ -1,9 +1,6 @@
 ---
 title: IDebugPendingBreakpoint2::SetCondition |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugPendingBreakpoint2::SetCondition
@@ -16,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ebf6e77292543fe9eebd8f08cf2fd25ef48c7e77
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 68f39c76a00e21f6c484c56d632bd69bdeffbc9d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49886618"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53876615"
 ---
 # <a name="idebugpendingbreakpoint2setcondition"></a>IDebugPendingBreakpoint2::SetCondition
 設定または保留中のブレークポイントに関連付けられている条件を変更します。  
@@ -29,13 +26,13 @@ ms.locfileid: "49886618"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT SetCondition(   
+HRESULT SetCondition(   
    BP_CONDITION bpCondition  
 );  
 ```  
   
 ```csharp  
-int SetCondition(   
+int SetCondition(   
    BP_CONDITION bpCondition  
 );  
 ```  

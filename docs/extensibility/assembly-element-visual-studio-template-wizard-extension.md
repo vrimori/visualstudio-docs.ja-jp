@@ -1,6 +1,5 @@
 ---
 title: Assembly 要素 (Visual Studio テンプレート ウィザード拡張) |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 829ba0fd25494affb2a8bf7e59c31361cbc9dc4b
-ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
+ms.openlocfilehash: 07b01c993bb9a20dcb836a67bc2a9e8d78135adb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53562023"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53828187"
 ---
 # <a name="assembly-element-visual-studio-template-wizard-extension"></a>Assembly 要素 (Visual Studio テンプレート ウィザード拡張)
 名前または実装するアセンブリの厳密な名前を指定します、`IWizard`インターフェイス。  
@@ -61,7 +60,7 @@ ms.locfileid: "53562023"
 ## <a name="example"></a>例  
  次の例では、標準的なプロジェクト テンプレートのメタデータを[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]Windows アプリケーション。  
   
-```  
+```xml
 <VSTemplate Version="3.0.0" Type="Item"  
     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  
     <TemplateData>  
@@ -87,9 +86,10 @@ ms.locfileid: "53562023"
         <FullClassName>MyWizard.CustomWizard</FullClassName>  
     </WizardExtension>  
 </VSTemplate>  
-```  
+```
   
-## <a name="see-also"></a>関連項目  
- [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [プロジェクトと項目テンプレートを作成します。](../ide/creating-project-and-item-templates.md)   
- [方法: プロジェクト テンプレートにウィザードの使用](../extensibility/how-to-use-wizards-with-project-templates.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)
+- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+- [方法: プロジェクト テンプレートにウィザードの使用](../extensibility/how-to-use-wizards-with-project-templates.md)

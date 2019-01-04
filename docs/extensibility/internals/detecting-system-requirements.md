@@ -1,9 +1,6 @@
 ---
 title: システム要件の検出 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - setup, VSPackages
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a794391001934164e52bdd73d940cb73ff3b5f3b
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 27fcfa7d7ad7b098bb28a3afee301444c48a46e3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39500083"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53892404"
 ---
 # <a name="detect-system-requirements"></a>システム要件を検出します。
 Visual Studio がインストールされていない場合、VSPackage は機能できません。 Microsoft Windows インストーラーを使用して、VSPackage のインストールを管理する場合は、Visual Studio がインストールされているかどうかを検出するインストーラーを構成できます。 など、システムの他の要件を確認して、特定のバージョンの Windows または特定の容量の RAM を構成することもできます。  
@@ -46,7 +43,7 @@ Visual Studio がインストールされていない場合、VSPackage は機�
 |Visual Studio 2015 Shell (統合シェルと分離)|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell|  
   
 ## <a name="detect-when-visual-studio-is-running"></a>Visual Studio が実行されていることを検出します。  
- VSPackage は、VSPackage のインストール時に Visual Studio が実行されている場合、正しく登録できません。 インストーラーは、Visual Studio が実行されているときに検出され、プログラムのインストールを拒否しする必要があります。 Windows インストーラーではテーブルのエントリを使用して、このような検出を有効にできます。 代わりに、カスタムの動作を次のように作成する必要があります使用して、`EnumProcesses`を検出する関数、 *devenv.exe*処理、および起動条件のために使用されるインストーラー プロパティを設定し、か、またはダイアログ ボックスの条件付きで表示。ユーザーを Visual Studio を閉じるように求められます。  
+ VSPackage は、VSPackage のインストール時に Visual Studio が実行されている場合、正しく登録できません。 インストーラーは、Visual Studio が実行されているときに検出され、プログラムのインストールを拒否しする必要があります。 Windows インストーラーではテーブルのエントリを使用して、このような検出を有効にできます。 代わりに、ようカスタムの動作を作成する必要があります。使用して、`EnumProcesses`を検出する関数、 *devenv.exe*処理、および起動条件で使用または条件付きで Visual Studio を終了するよう求めるダイアログ ボックスを表示するインストーラー プロパティを設定するか。  
   
 ## <a name="see-also"></a>関連項目  
  [Windows インストーラーによる Vspackage をインストールします。](../../extensibility/internals/installing-vspackages-with-windows-installer.md)

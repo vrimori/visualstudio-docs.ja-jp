@@ -1,22 +1,19 @@
 ---
 title: Visual Studio で診断拡張機能 UI が遅延 |Microsoft Docs
-ms.custom: ''
 ms.date: 01/26/2018
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 author: PooyaZv
 ms.author: pozandev
 manager: douge
 ms.workload: multiple
-ms.openlocfilehash: 1bf5dba23622c5dc3d964bdac19fec210aa60b1e
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 1bd09827899000e4f3d1f65fae27da969bcbc107
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39639196"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53887712"
 ---
-# <a name="how-to-diagnose-ui-delays-caused-by-extensions"></a>方法: UI の診断拡張機能によって遅延が発生
+# <a name="how-to-diagnose-ui-delays-caused-by-extensions"></a>方法: 拡張機能による診断 UI の遅延
 
 UI が応答しなくなった、リーフからベースの方向に、Visual Studio は、UI スレッドのコール スタックを調査します。 Visual Studio では、コール スタック フレームがインストールされ有効になっている拡張機能の一部であるモジュールに属していることを判断した場合、通知が表示されます。
 

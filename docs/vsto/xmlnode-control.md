@@ -1,9 +1,6 @@
 ---
 title: XMLNode コントロール
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cd047814f11b5fddad868bd65b84deba369facd5
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: f83d829ac5067d751cc035ac83c0fb3397178658
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35258890"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53927442"
 ---
 # <a name="xmlnode-control"></a>XMLNode コントロール
   **重要な**に関する Microsoft Word には、このトピックでまとめられている情報が提示の特典および個人や組織のユーザーは、米国およびその担当地域外部にあるまたはを使用しているユーザーの使用専用、または開発上で実行されるプログラム、Microsoft が特定の機能の実装を削除する場合、2010 年 1 月の前に、Microsoft によってライセンスされた Microsoft Word の製品に関連するカスタム XML から Microsoft Word です。 Microsoft Word に関するこの情報が読み取りまたは個人または組織、米国またはその区域を使用して、または、2010 年 1 月 10 日後に Microsoft によってライセンス供与された Microsoft Word の製品で実行されるプログラムの開発で使用しない可能性があります。;これらの製品では、その日付より前にライセンスまたは購入を米国外の使用ライセンスの製品と同じ動作はしません。  
@@ -32,7 +29,7 @@ ms.locfileid: "35258890"
  <xref:Microsoft.Office.Tools.Word.XMLNode>コントロールを Word で要素のマッピングを削除することによってのみ削除できます。  
   
 ## <a name="bind-data-to-the-control"></a>データをコントロールにバインドします。  
- <xref:Microsoft.Office.Tools.Word.XMLNode>コントロールは、単純データ バインディングをサポートしています。 XML ノードは、使用してデータ ソースにバインドする必要があります、<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>プロパティ。 バインドされたデータセット内のデータが更新された場合、<xref:Microsoft.Office.Tools.Word.XMLNode>コントロールが変更を反映します。  
+ <xref:Microsoft.Office.Tools.Word.XMLNode>コントロールは、単純データ バインディングをサポートしています。 XML ノードは、使用してデータ ソースにバインドする必要があります、<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>プロパティ。 バインドされたデータセット内のデータが更新されると、 <xref:Microsoft.Office.Tools.Word.XMLNode> コントロールがその変更を反映させます。  
   
 ## <a name="formatting"></a>書式設定  
  適用できる書式設定、<xref:Microsoft.Office.Interop.Word.XMLNode>オブジェクトに適用できる、<xref:Microsoft.Office.Tools.Word.XMLNode>コントロール。 これには、フォント、下線のスタイル、およびスタイルの文字が含まれます。  
@@ -84,8 +81,6 @@ ms.locfileid: "35258890"
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [拡張オブジェクトを使用して Word を自動化します。](../vsto/automating-word-by-using-extended-objects.md)   
  [XMLNodes コントロール](../vsto/xmlnodes-control.md)   
- [方法: Word 文書に XMLNode コントロールを追加](../vsto/how-to-add-xmlnode-controls-to-word-documents.md)   
+ [方法: Word 文書に XMLNode コントロールを追加します。](../vsto/how-to-add-xmlnode-controls-to-word-documents.md)   
  [方法: Visual Studio 内で Word 文書にスキーマを割り当てる](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)   
  [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
-  
-  

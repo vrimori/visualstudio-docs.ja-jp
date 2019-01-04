@@ -1,9 +1,6 @@
 ---
 title: IDebugBinder::GetFunctionObject |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugBinder::GetFunctionObject
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32529033107d01bb8715dad80c3202d7307c931a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6ed1a94fbd9abba9482d13d00e8c5c000063b276
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49880066"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53921070"
 ---
 # <a name="idebugbindergetfunctionobject"></a>IDebugBinder::GetFunctionObject
 このメソッドは、取得、 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)関数のパラメーターを作成するために使用するオブジェクト。  
@@ -28,7 +25,7 @@ ms.locfileid: "49880066"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT GetFunctionObject(   
+HRESULT GetFunctionObject(   
    IDebugFunctionObject **ppFunction  
 );  
 ```  

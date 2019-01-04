@@ -2,7 +2,6 @@
 title: コード分析規則セット エディターを使用して、
 ms.date: 04/04/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.ruleseteditor
@@ -12,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bdd80031530049b204c0befc445c1416aa08b43e
-ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
+ms.openlocfilehash: 548f50b3d348c520ed7746b7dc3d123ffeb4c6aa
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51000817"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53826037"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>コード分析規則セット エディターを使用して、
 
@@ -74,7 +73,7 @@ ms.locfileid: "51000817"
 |**ID**|ルールの識別子。|
 |**カテゴリ**|規則セットのメンバーシップ、に加えてコード分析規則もカテゴリでグループ化されます。 詳細については、次を参照してください。[コード分析警告](../code-quality/code-analysis-for-managed-code-warnings.md)します。|
 |**Name**|ルールのタイトル。|
-|**名前空間**|ルールの名前空間。|
+|**Namespace**|ルールの名前空間。|
 |**ターゲットの種類**|ルールについて、ネイティブが、管理、またはデータベースのコードでかどうかを示します。|
 |**動作**|コード分析の実行で、ルールに違反した場合に実行されるアクション。 編集することができます、**アクション**フィールド。|
 |**ソース規則セット**|規則セットをルールが含まれています。|

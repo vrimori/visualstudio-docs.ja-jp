@@ -18,36 +18,38 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d6bf265b2e3761ba1fd929e72e29f4c2c47cd449
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
-ms.translationtype: MT
+ms.openlocfilehash: a7cf4f2b30079a76012acfe972ea0de0b9e0ea78
+ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079557"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53592834"
 ---
-# <a name="how-to-specify-a-start-menu-name-for-a-clickonce-application"></a>方法: ClickOnce アプリケーションのスタート メニューの名前を指定します。
-オンラインまたはオフラインで利用できる [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションがインストールされると、**スタート**メニューおよび**プログラムの追加と削除** の一覧にエントリが追加されます。 既定では、表示される名前はアプリケーション アセンブリの名前と同じですが、**発行オプション** のダイアログ ボックスで**製品名**を設定することで表示名を変更することがきます。  
+# <a name="how-to-specify-a-start-menu-name-for-a-clickonce-application"></a>方法: ClickOnce アプリケーションのスタート メニューの名前を指定する
+ときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]オンラインとオフラインの両方のアプリケーションがインストールされている、エントリを追加する、**開始**メニューおよび**プログラム追加と削除**一覧。 表示名では、既定では、アプリケーション アセンブリの名前と同じ、表示名を設定して変更することができますが、**製品名**で、**発行オプション** ダイアログ ボックス。  
 
  **製品名**に表示される、 *publish.htm*ページは、インストールされているオフライン アプリケーション内のエントリの名前をことが、**開始** メニューともなりますに表示される名前**を追加または削除プログラム**します。  
 
  **発行元名**に表示されます、 *publish.htm*ページ上部**製品名**、オフライン アプリケーションのインストールされている場合も可能になりますを含む、アプリケーションのフォルダーの名前とアイコン、**開始**メニュー。  
-**製品名**と**パブリッシャー名**のプロパティは、**プロジェクト デザイナー**の**発行**ページにある**発行オプション** ダイアログ ボックスで設定することができます。
- **製品名**と**パブリッシャー名**のプロパティは、**プロジェクト デザイナー**の**発行**ページにある**発行オプション** ダイアログ ボックスで設定することができます。  
+
+ スタート メニュー ショートカットまたはアプリ参照が作成される *%appdata%\Microsoft\Windows\Start menu \programs\\< 発行者名\>* します。 ショートカットまたはアプリの参照は、製品名と同じ名前を持ちます。
+  
+ 設定することができます、**製品名**と**パブリッシャー名**プロパティで、**発行オプション**] ダイアログ ボックス、[、**発行**ページ**プロジェクト デザイナー**します。  
 
 ### <a name="to-specify-a-start-menu-name"></a>スタート メニューの名前を指定するには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1.  **ソリューション エクスプローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-2.  **発行**タブをクリックします。  
+2.  **[発行]** タブをクリックします。  
   
-3.  **オプション**ボタンをクリックして、**発行オプション** ダイアログ ボックスを開きます。  
+3.  をクリックして、**オプション**ボタンをクリックする、**発行オプション** ダイアログ ボックス。  
   
-4.  **説明**をクリックします。  
+4.  クリックして**説明**します。  
   
-5.  **発行オプション** ダイアログ ボックスで、**製品名**に表示する名前を入力します。  
+5.  **発行オプション** ダイアログ ボックスに表示する名前を入力**製品名**します。  
   
-6.  必要に応じて、**パブリッシャー名**にパブリッシャー名を入力します。  
+6.  パブリッシャー名を入力する必要に応じて、**パブリッシャー名**します。  
   
 ## <a name="see-also"></a>関連項目  
- [ClickOnce アプリケーションを発行します。](../deployment/publishing-clickonce-applications.md)   
- [方法: 発行ウィザードを使用して ClickOnce アプリケーションの発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+ [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
+ [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

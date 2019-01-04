@@ -1,13 +1,8 @@
 ---
 title: For SharePoint のサイト定義の作成 |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -18,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0e43cfa7c9fa78722639053c572280cbaad912bf
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 66e3566b7bfabb7ec2049632937beaa697246403
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36325343"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53868327"
 ---
 # <a name="create-site-definitions-for-sharepoint"></a>SharePoint のサイト定義を作成します。
   SharePoint サイト定義プロジェクト[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]を作成することができます、*サイト定義*、新しい SharePoint サイトの基盤として機能します。 だけでなく、これらの定義は、SharePoint サイトも既定の内容と機能の動作と外観を決定します。 定義では、事前構成済みのリスト、コンテンツの種類、イベント レシーバー、イメージ、およびその他のアイテムを配置できます。 SharePoint には、たとえば、ブログなどのいくつかのサイト定義が含まれます。 ブログ サイト定義に基づいてサイトを作成するときに、サイトには、リスト、Web パーツ、およびブログ サイトを必要とするその他の項目が含まれています。  
@@ -51,8 +46,8 @@ ms.locfileid: "36325343"
   
 |タイトル|説明|  
 |-----------|-----------------|  
-|[チュートリアル: 基本サイト定義プロジェクトの作成](../sharepoint/walkthrough-create-a-basic-site-definition-project.md)|基本的なサイト定義プロジェクトの作成を追って[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。|  
-|[方法: カスタム サイト定義と構成を作成](http://go.microsoft.com/fwlink/?LinkId=183309)|既存のサイト定義をコピーして、コピーを変更し、SharePoint でカスタム サイト定義を作成する方法について説明します。|  
+|[チュートリアル: 基本的なサイト定義プロジェクトを作成します。](../sharepoint/walkthrough-create-a-basic-site-definition-project.md)|基本的なサイト定義プロジェクトの作成を追って[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。|  
+|[方法: カスタム サイト定義と構成を作成します。](http://go.microsoft.com/fwlink/?LinkId=183309)|既存のサイト定義をコピーして、コピーを変更し、SharePoint でカスタム サイト定義を作成する方法について説明します。|  
 |[*WebTemp.xml*](http://go.microsoft.com/fwlink/?LinkId=183310)|使用可能なサイト定義を指定する元のファイルについて説明します、**テンプレートの選択**のセクション、**新しい SharePoint サイト**ページ。|  
 |[SharePoint ソリューションをローカライズします。](../sharepoint/localizing-sharepoint-solutions.md)|グローバルに使用できる、SharePoint ソリューションを準備する方法について説明します。|  
 |[For SharePoint の web パーツを作成します。](../sharepoint/creating-web-parts-for-sharepoint.md)|ユーザーが変更できる SharePoint ページの部分を作成する方法について説明します。|  
@@ -64,6 +59,4 @@ ms.locfileid: "36325343"
 |[Windows SharePoint Services でのプログラミング](http://go.microsoft.com/fwlink/?LinkId=178729)|提供されているマネージ オブジェクト モデルを使用する方法について説明します[!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)]します。|  
   
 ## <a name="see-also"></a>関連項目
- [SharePoint ソリューションを開発します。](../sharepoint/developing-sharepoint-solutions.md)  
-  
- 
+ [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  

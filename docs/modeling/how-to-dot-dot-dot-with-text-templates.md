@@ -8,13 +8,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 20dbc5223ddb053355fa5e8076ae66badee688a4
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 7a29f9c8813950cda5907b7f0f96141d00d562fe
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49883075"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53887764"
 ---
 # <a name="how-to--with-text-templates"></a>方法: テキスト テンプレートを使用する
 Visual Studio でテキスト テンプレートでは、あらゆる種類のテキストを生成するのに便利な方法を提供します。 テキスト テンプレートを使用すると、実行時に、アプリケーションの一部として、デザイン時、プロジェクト コードの一部を生成するのにテキストを生成します。 このトピックでは、最も頻繁にまとめたものです"How do I..."よく寄せられる 質問します。
@@ -33,7 +32,7 @@ Visual Studio でテキスト テンプレートでは、あらゆる種類の�
 ### <a name="generate-files-at-run-time-passing-data-into-the-template"></a>テンプレートにデータを渡して、実行時にファイルを生成します。
  実行時に、アプリケーションは、標準のテキストとデータの組み合わせを含むレポートなどのテキスト ファイルを生成します。 何百もの書き込みを回避したい`write`ステートメント。
 
--   ランタイム テキスト テンプレートをプロジェクトに追加します。 このテンプレートでは、インスタンス化し、使用してテキストを生成することができるコードでクラスを作成します。 データは、コンス トラクターのパラメーターを渡すことができます。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)します。
+-   ランタイム テキスト テンプレートをプロジェクトに追加します。 このテンプレートでは、インスタンス化し、使用してテキストを生成することができるコードでクラスを作成します。 データは、コンス トラクターのパラメーターを渡すことができます。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)
 
 -   実行時にのみ使用可能なテンプレートから生成する場合は、標準のテキスト テンプレートを使用できます。 Visual Studio 拡張機能を作成する場合は、テキスト テンプレート サービスを呼び出すことができます。 詳細については、次を参照してください。 [VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)します。 他のコンテキストで、テキスト テンプレート エンジンを使用することができます。 詳細については、「 <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> 」を参照してください。
 
@@ -49,9 +48,9 @@ Visual Studio でテキスト テンプレートでは、あらゆる種類の�
 ### <a name="invoke-methods-from-a-template"></a>テンプレートからメソッドを呼び出し
  メソッド、既に存在する場合など、標準で[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]クラス。
 
-- 使用して、 \<#@assembly#> ディレクティブは、アセンブリをロードして使用する\<#@import#> 名前空間のコンテキストを設定します。 詳細については、次を参照してください。 [T4 インポート ディレクティブ](../modeling/t4-import-directive.md)します。
+- 使用して、 \<#@assembly#> ディレクティブは、アセンブリをロードして使用する\<#@import#> 名前空間のコンテキストを設定します。 詳細については、次を参照してください。 [T4 インポート ディレクティブ](../modeling/t4-import-directive.md)
 
-   頻繁に同じアセンブリのセットを使用して、ディレクティブをインポートすると、ディレクティブ プロセッサの作成を検討してください。 各テンプレートでは、アセンブリとモデル ファイルを読み込むし、名前空間のコンテキストを設定できますが、ディレクティブ プロセッサを呼び出すことができます。 詳細については、次を参照してください。[カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)です。
+   頻繁に同じアセンブリのセットを使用して、ディレクティブをインポートすると、ディレクティブ プロセッサの作成を検討してください。 各テンプレートでは、アセンブリとモデル ファイルを読み込むし、名前空間のコンテキストを設定できますが、ディレクティブ プロセッサを呼び出すことができます。 詳細については、次を参照してください。[カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)
 
   場合は、メソッドは、自分で作成しています。
 
@@ -68,18 +67,18 @@ Visual Studio でテキスト テンプレートでは、あらゆる種類の�
 ### <a name="generate-many-files-from-one-model-schema"></a>1 つのモデル スキーマから多数のファイルを生成します。
  多くの場合、ファイルを生成するには、同じ XML またはデータベース スキーマを持つモデルから: 場合
 
--   ディレクティブ プロセッサを書き込むことを検討します。 これにより、アセンブリの複数のステートメントを置換して、1 つのカスタム ディレクティブでは、各テンプレート内のステートメントをインポートすることができます。 ディレクティブ プロセッサは読み込みし、モデル ファイルを解析できます。 詳細については、次を参照してください。[カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)です。
+-   ディレクティブ プロセッサを書き込むことを検討します。 これにより、アセンブリの複数のステートメントを置換して、1 つのカスタム ディレクティブでは、各テンプレート内のステートメントをインポートすることができます。 ディレクティブ プロセッサは読み込みし、モデル ファイルを解析できます。 詳細については、次を参照してください。[カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)
 
 ### <a name="generate-files-from-a-complex-model"></a>複雑なモデルからファイルを生成します。
 
--   ドメイン固有言語 (DSL) を表すモデルを作成することを検討してください。 これによって、テンプレートの記述が簡単型と、モデル内の要素の名前を反映するプロパティを使用するためです。 ファイルを解析するか、XML ノードを移動する必要はありません。 例えば:
+-   ドメイン固有言語 (DSL) を表すモデルを作成することを検討してください。 これによって、テンプレートの記述が簡単型と、モデル内の要素の名前を反映するプロパティを使用するためです。 ファイルを解析するか、XML ノードを移動する必要はありません。 例:
 
      `foreach (Book book in this.Library) { ... }`
 
      詳細については、次を参照してください。[ドメイン固有言語の概要](../modeling/getting-started-with-domain-specific-languages.md)と[ドメイン固有言語からコードを生成する](../modeling/generating-code-from-a-domain-specific-language.md)します。
 
 ### <a name="get-data-from-visual-studio"></a>Visual Studio からのデータを取得します。
- Visual Studio で、セットによって提供されるサービスを使用する、`hostSpecific`属性と負荷、`EnvDTE`アセンブリ。 例えば:
+ Visual Studio で、セットによって提供されるサービスを使用する、`hostSpecific`属性と負荷、`EnvDTE`アセンブリ。 例:
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -95,7 +94,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 
 ### <a name="execute-text-templates-in-the-build-process"></a>ビルド プロセスでテキスト テンプレートを実行します。
 
--   詳細については、次を参照してください。[ビルド プロセスでのコード生成](../modeling/code-generation-in-a-build-process.md)します。
+-   詳細については、次を参照してください。[ビルド プロセスでのコード生成](../modeling/code-generation-in-a-build-process.md) 
 
 ## <a name="more-general-questions"></a>一般的な質問
 

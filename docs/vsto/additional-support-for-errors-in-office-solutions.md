@@ -1,8 +1,6 @@
 ---
 title: Office ソリューションのエラーのための追加サポート
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology: office-development
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
@@ -59,12 +57,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4706360581749fbc6e84f3250324bad3663e7a9a
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: 9181b74da09f87d1c19805995b527b9fbd56c52f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304455"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53946293"
 ---
 # <a name="additional-support-for-errors-in-office-solutions"></a>Office ソリューションのエラーのための追加サポート
   Visual Studio で Office ソリューションを作成するときに発生する問題に対する回答を検索するのに役立つ、次のリソースを使用することができます。  
@@ -93,5 +91,3 @@ ms.locfileid: "52304455"
  [Office ソリューションのセキュリティをトラブルシューティングします。](../vsto/troubleshooting-office-solution-security.md)   
  [Office ソリューションのデプロイをトラブルシューティングします。](../vsto/troubleshooting-office-solution-deployment.md)   
  [Office ソリューションを開発するための他のリソース](../vsto/additional-resources-for-developing-office-solutions.md)  
-  
-  

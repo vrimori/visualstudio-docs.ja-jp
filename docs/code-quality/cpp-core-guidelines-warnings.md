@@ -7,15 +7,14 @@ author: mblome
 ms.author: mblome
 manager: wpickett
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086a977ce5ef69da94316fd708b42b79623d596c
-ms.sourcegitcommit: 1abb9cf4c3ccb90e3481ea8079272c98aad12875
+ms.openlocfilehash: 59a26be52614baf5a8cca48f855f19432ff2af3b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50143269"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53926279"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>C++ Core ガイドライン チェッカーの使用
 
@@ -62,11 +61,11 @@ int main()
 
 この例では、C++ Core Check の規則を検索する警告のいくつかを示します。
 
-- C26494 はルール Type.5: 常にオブジェクトを初期化します。
+- C26494 は、規則 Type.5 です。常にオブジェクトを初期化します。
 
-- C26485 はルール Bounds.3: 配列からポインターへの減退しません。
+- C26485 は、規則 Bounds.3 です。配列とポインター減退がありません。
 
-- C26481 はルール Bounds.1: ポインター演算を使用しないでください。 代わりに、`span` を使用してください。
+- C26481 は、規則 Bounds.1 です。ポインターの算術演算を使用しないでください。 代わりに、`span` を使用してください。
 
 C++ Core Check のコード分析ルールセットはインストールされている、このコードをコンパイルすると、最初の 2 つの警告は、出力が、3 つ目の抑制を有効になっている場合。 コード例からのビルド出力を次に示します。
 

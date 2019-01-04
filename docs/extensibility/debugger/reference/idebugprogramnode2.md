@@ -1,9 +1,6 @@
 ---
-title: IDebugProgramNode2 |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugProgramNode2 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugProgramNode2
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a1fd14fb79d410aa20392af42e43004f46dfec73
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 15d811cb01f7d5201f8cc1d7f64795c0197cf99c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31121015"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53848062"
 ---
 # <a name="idebugprogramnode2"></a>IDebugProgramNode2
 このインターフェイスは、デバッグ可能なプログラムを表します。  
@@ -32,10 +29,10 @@ IDebugProgramNode2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- デバッグ エンジン (DE) やカスタム ポートのサプライヤーは、デバッグ可能なプログラムを表すためには、このインターフェイスを実装します。 このインターフェイスは、同じオブジェクトを実装するには実装通常、 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)インターフェイスです。 このインターフェイスに登録されて[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]を呼び出して[PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)です。  
+ デバッグ エンジン (DE) やカスタム ポート サプライヤーは、デバッグ可能なプログラムを表すためには、このインターフェイスを実装します。 このインターフェイスが実装する同一のオブジェクトに通常実装、 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)インターフェイス。 このインターフェイスに登録されて[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]呼び出して[PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)します。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- 呼び出す[GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)をこのインターフェイスを返します。 カスタム ポートのサプライヤーを呼び出すことによってこのインターフェイスの受信[AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)です。 呼び出すことによってこのインターフェイスを受信する、DE[アタッチ](../../../extensibility/debugger/reference/idebugengine2-attach.md)です。  
+ 呼び出す[GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)をこのインターフェイスを返します。 呼び出すことによってこのインターフェイスを受信カスタム ポート サプライヤー [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)します。 呼び出すことによってこのインターフェイスを受け取る、DE[アタッチ](../../../extensibility/debugger/reference/idebugengine2-attach.md)します。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
  次の表は、メソッドの`IDebugProgramNode2`します。  
@@ -43,22 +40,22 @@ IDebugProgramNode2 : IUnknown
 |メソッド|説明|  
 |------------|-----------------|  
 |[GetProgramName](../../../extensibility/debugger/reference/idebugprogramnode2-getprogramname.md)|プログラムの名前を取得します。|  
-|[GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md)|プログラムをホストしているプロセスの名前を取得します。|  
-|[GetHostPid](../../../extensibility/debugger/reference/idebugprogramnode2-gethostpid.md)|プログラムをホストしているプロセスのシステム プロセス識別子を取得します。|  
-|[GetHostMachineName_V7](../../../extensibility/debugger/reference/idebugprogramnode2-gethostmachinename-v7.md)|推奨されなくなりました。 使用しないでください。|  
-|[Attach_V7](../../../extensibility/debugger/reference/idebugprogramnode2-attach-v7.md)|推奨されなくなりました。 使用しないでください。 参照してください、 [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md)別のアプローチのインターフェイスです。|  
+|[GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md)|プログラムをホストするプロセスの名前を取得します。|  
+|[GetHostPid](../../../extensibility/debugger/reference/idebugprogramnode2-gethostpid.md)|プログラムをホストするプロセスのシステム プロセス識別子を取得します。|  
+|[GetHostMachineName_V7](../../../extensibility/debugger/reference/idebugprogramnode2-gethostmachinename-v7.md)|非推奨とされます。 使用しないでください。|  
+|[Attach_V7](../../../extensibility/debugger/reference/idebugprogramnode2-attach-v7.md)|非推奨とされます。 使用しないでください。 参照してください、 [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md)別のアプローチのインターフェイス。|  
 |[GetEngineInfo](../../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md)|このプログラムを実行している DE の識別子と名前を取得します。|  
-|[DetachDebugger_V7](../../../extensibility/debugger/reference/idebugprogramnode2-detachdebugger-v7.md)|推奨されなくなりました。 使用しないでください。|  
+|[DetachDebugger_V7](../../../extensibility/debugger/reference/idebugprogramnode2-detachdebugger-v7.md)|非推奨とされます。 使用しないでください。|  
   
-## <a name="remarks"></a>コメント  
- 通常、セッションのデバッグ マネージャー (SDM) を呼び出します[GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)このインターフェイスを取得します。  
+## <a name="remarks"></a>Remarks  
+ セッション デバッグ マネージャー (SDM) を呼び出す通常[GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)このインターフェイスを取得します。  
   
-## <a name="requirements"></a>要件  
- ヘッダー: Msdbg.h  
+## <a name="requirements"></a>必要条件  
+ ヘッダー:Msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   

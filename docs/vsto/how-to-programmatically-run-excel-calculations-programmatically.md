@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによって Excel の計算を実行'
-ms.custom: ''
+title: '方法: Excel の計算をプログラムで実行します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,14 +15,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0dabde287d71736ab49f35acf968300bccee0d12
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 82e2cbd2f3e74e50c7ff01f6943fdb62e11f1525
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671850"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53821062"
 ---
-# <a name="how-to-programmatically-run-excel-calculations"></a>方法: プログラムによって Excel の計算を実行  
+# <a name="how-to-programmatically-run-excel-calculations"></a>方法: Excel の計算をプログラムで実行します。  
   計算を実行する同様のプロセスを使用して、<xref:Microsoft.Office.Tools.Excel.NamedRange>コントロールまたはネイティブな Excel 範囲オブジェクト。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
@@ -63,5 +60,3 @@ ms.locfileid: "35671850"
  [範囲を操作します。](../vsto/working-with-ranges.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
-  
-  

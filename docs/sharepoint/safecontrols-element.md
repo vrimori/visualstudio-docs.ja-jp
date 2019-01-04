@@ -1,9 +1,6 @@
 ---
 title: SafeControls 要素 |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: fe8b3c026b7386d89ef04d0a966eccad425f1629
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: e08b414858db389e507dc9395d218807c9530db6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119897"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53875969"
 ---
 # <a name="safecontrols-element"></a>SafeControls 要素
   ASPX のコレクションを制御し、として指定されている Web パーツを SharePoint サイトのいずれかの ASPX ページにアクセスするすべてのユーザーに対してセキュリティで保護します。  
@@ -58,7 +55,7 @@ ms.locfileid: "37119897"
   
 |||  
 |-|-|  
-|**名前空間**|http<nolink>://schemas.microsoft.com/VisualStudio/<br>SharePointProjectItemModel SharePointTools/2010/|  
+|**Namespace**|http<nolink>://schemas.microsoft.com/VisualStudio/<br>SharePointProjectItemModel SharePointTools/2010/|  
 |**スキーマ名**|SharePoint プロジェクト項目のスキーマ|  
 |**ファイルの検証**|ProjectItemModelSchema.xsd|  
 |**空にすることができます。**|いいえ|  
@@ -66,4 +63,3 @@ ms.locfileid: "37119897"
 ## <a name="see-also"></a>関連項目
  [SharePoint プロジェクト項目スキーマのリファレンス](../sharepoint/sharepoint-project-item-schema-reference.md)   
  [プロジェクト項目でパッケージ化と配置の情報を提供します。](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)  
-  

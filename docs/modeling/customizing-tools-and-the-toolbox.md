@@ -14,13 +14,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 3b0acab24dbb7ff1313e62e91b17bf87190dbb99
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: 705b70fd0ee71f7ea0670f64aadcbff7bc686721
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50967442"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53919600"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>ツールおよびツールボックスのカスタマイズ
 
@@ -71,15 +70,15 @@ DSL エクスプローラーのこの部分で、次の操作を実行できま�
 
 3.  設定、**ツールボックス アイコン**プロパティを 16 x 16 ビットマップを参照してください。
 
-     新しいアイコンを定義する場合は、ソリューション エクスプ ローラーでビットマップ ファイルを作成、 **dsl \resources**フォルダー。 次のプロパティ値があります:**ビルド アクション** = **コンテンツ**;**出力ディレクトリにコピー** = **コピーしない**します。
+     新しいアイコンを定義する場合は、ソリューション エクスプ ローラーでビットマップ ファイルを作成、 **dsl \resources**フォルダー。 ファイルには、次のプロパティ値が必要です。**ビルド アクション** = **コンテンツ**;**出力ディレクトリにコピー** = **コピーしない**します。
 
-4.  **要素ツール:** 設定、**クラス**図形にマップされる具象ドメイン クラスを参照するツールのプロパティ。
+4.  **要素ツール。** 設定、**クラス**図形にマップされる具象ドメイン クラスを参照するツールのプロパティ。
 
-     **コネクタ ツール:** 設定、**接続ビルダー**ドロップダウン リストで提供されている項目のいずれかのツールのプロパティ。 接続ビルダーは、コネクタをドメイン リレーションシップにマップすると、自動的に作成されます。 最近、コネクタを作成した場合、通常、関連する接続ビルダーを選択しています。
+     **コネクタ ツール。** 設定、**接続ビルダー**ドロップダウン リストで提供されている項目のいずれかのツールのプロパティ。 接続ビルダーは、コネクタをドメイン リレーションシップにマップすると、自動的に作成されます。 最近、コネクタを作成した場合、通常、関連する接続ビルダーを選択しています。
 
 5.  DSL をテストするには、f5 キーまたは CTRL + F5 キーを押して、Visual Studio の実験用インスタンスのサンプル モデル ファイルを開きます。 ツールボックスに新しいツールが表示されます。 それを図の上にドラッグし、新しい要素が作成されることを確認します。
 
-     ツールが表示されない場合は、実験用の Visual Studio を停止します。 Windows で**開始**] メニューの [実行 **、Microsoft Visual Studio 2010 実験用インスタンスをリセット**します。 **ビルド** メニューのをクリックして**ソリューションのリビルド**します。 再度 DSL をテストします。
+     ツールが表示されない場合は、実験用の Visual Studio を停止します。 Windows で**開始**] メニューの [実行 **、Microsoft Visual Studio 2010 実験用インスタンスをリセット**します。 **[ビルド]** メニューで、**[ソリューションのリビルド]** をクリックします。 再度 DSL をテストします。
 
 ## <a name="customizing"></a> 要素ツールのカスタマイズ
  既定では、ツールは指定されたクラスの単一インスタンスを作成しますが、次の 2 つの方法で変更できます。
@@ -238,6 +237,6 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
 - [要素作成処理および要素移動処理のカスタマイズ](../modeling/customizing-element-creation-and-movement.md)
 - [コピー動作のカスタマイズ](../modeling/customizing-copy-behavior.md)
-- [方法: ドラッグ アンド ドロップ ハンドラーを追加する](../modeling/how-to-add-a-drag-and-drop-handler.md)
+- [方法: ドラッグ アンド ドロップ ハンドラーを追加します。](../modeling/how-to-add-a-drag-and-drop-handler.md)
 - [プログラム コードにおけるモデル内の移動およびモデルの更新](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [回路図のサンプル DSL](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)

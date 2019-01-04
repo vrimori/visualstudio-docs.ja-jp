@@ -1,9 +1,6 @@
 ---
 title: '方法: 元に戻すスタックをクリア |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - clear undo stack
@@ -13,14 +10,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a1575093ee78fec887c9fbedcfc29339f86f2e7
-ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
+ms.openlocfilehash: 14cf2af71f492dc4a82f6d8d9cf05fadcb0dcda2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46370485"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53827548"
 ---
-# <a name="how-to-clear-the-undo-stack"></a>方法: 元に戻すスタックをクリア
+# <a name="how-to-clear-the-undo-stack"></a>方法: 元に戻すスタックをクリアします。
 次の手順では、元に戻すスタックをクリアする方法について説明します。  
   
 ## <a name="to-clear-the-undo-stack"></a>元に戻すスタックをクリアするには  

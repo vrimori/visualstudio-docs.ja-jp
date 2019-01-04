@@ -1,9 +1,6 @@
 ---
 title: Office 開発のサンプルとチュートリアル
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -23,12 +20,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 925886683b274ddff704771d4939c2112003bb58
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 989536860500e092a36addc74eedc4759c959160
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672867"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53909789"
 ---
 # <a name="office-development-samples-and-walkthroughs"></a>Office 開発のサンプルとチュートリアル
   このセクションには、Microsoft Office ソリューションの構築に使用されるサンプル アプリケーション、コード例、そして、構文、構造、および技法について説明した、詳細なチュートリアルが含まれています。  
@@ -60,5 +57,3 @@ ms.locfileid: "35672867"
 |[Office プログラミングで一般的なタスク](../vsto/common-tasks-in-office-programming.md)|Visual Studio の Office 開発を使用したプログラミングについてよく寄せられる質問の一覧と、一般的な問題の解決に役立つトピックへのリンクを示します。|  
 |[設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)|Microsoft Office ソリューションの作成方法に関する情報、およびソリューション内のアセンブリの役割に関する情報へのリンクを示します。|  
 |[操作ウィンドウの概要](../vsto/actions-pane-overview.md)|操作ウィンドウと呼ばれるドキュメント レベルの作業ウィンドウの概要を示します。|  
-  
-  

@@ -1,5 +1,5 @@
 ---
-title: カスタム プロパティを依存関係のダイアグラムに追加します。
+title: 依存関係図へのカスタム プロパティの追加
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,45 +10,44 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 368d1a794f51d827aa62cc913039edda59ae7ae6
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 407db46519872d8f1c4e6eba79ddd5ca84610d70
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33864191"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53892239"
 ---
-# <a name="add-custom-properties-to-dependency-diagrams"></a>カスタム プロパティを依存関係のダイアグラムに追加します。
+# <a name="add-custom-properties-to-dependency-diagrams"></a>依存関係図へのカスタム プロパティの追加
 
-依存関係図の拡張機能のコードを記述するときに、依存関係図の要素と値を格納できます。 値は、図が保存され、再び開かれたときに保持されます。 これらのプロパティに表示することもできます、**プロパティ**ウィンドウのユーザーが表示して編集できるようにします。 たとえば、ユーザーが各レイヤーに正規表現を指定できるようにすることや、各レイヤーのクラスの名前がユーザーが指定したパターンに準拠していることを確認するための検証コードをユーザーが記述できるようにすることができます。
+依存関係図の拡張機能のコードを記述するときは、依存関係図の任意の要素と共に値を格納できます。 値は、図が保存され、再び開かれたときに保持されます。 これらのプロパティに表示することもできます、**プロパティ**ウィンドウ ユーザーが表示して編集できるようにします。 たとえば、ユーザーが各レイヤーに正規表現を指定できるようにすることや、各レイヤーのクラスの名前がユーザーが指定したパターンに準拠していることを確認するための検証コードをユーザーが記述できるようにすることができます。
 
 ## <a name="non-visible-properties"></a>非表示のプロパティ
 
-だけの場合、依存関係ダイアグラム内の要素の値をアタッチするコード、MEF コンポーネントを定義する必要はありません。 `Properties` には <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement> という名前のディクショナリがあります。 マーシャリング可能な値を任意のレイヤー要素のディクショナリに単純に追加します。 これらは、依存関係ダイアグラムの一部として保存されます。 詳細については、次を参照してください。[移動し、更新プログラムは、プログラム コード内のモデルをレイヤー](../modeling/navigate-and-update-layer-models-in-program-code.md)です。
+依存関係図の任意の要素に値をアタッチするコードがたい場合は、MEF コンポーネントを定義する必要はありません。 `Properties` には <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement> という名前のディクショナリがあります。 マーシャリング可能な値を任意のレイヤー要素のディクショナリに単純に追加します。 これらは、依存関係図の一部として保存されます。 詳細については、次を参照してください。[への移動と更新プログラムは、プログラム コードでモデルをレイヤー](../modeling/navigate-and-update-layer-models-in-program-code.md)します。
 
 ## <a name="editable-properties"></a>編集可能なプロパティ
 
 **最初の準備**
 
 > [!IMPORTANT]
-> プロパティの表示をするためには、レイヤーのプロパティを表示する各コンピューターで、次の変更を行います。
+> プロパティを表示するには、するには、レイヤーのプロパティを表示する各コンピューターで、次の変更を行います。
 >
-> 1. メモ帳を使用して実行**管理者として実行**です。 開いている *%ProgramFiles%\Microsoft Visual Studio [バージョン] \Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest*です。
-> 2. 内部、**コンテンツ**要素を追加します。
+> 1. メモ帳を使用して実行**管理者として実行**します。 開いている *%ProgramFiles%\Microsoft Visual Studio [バージョン] \Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest*します。
+> 2. 内で、**コンテンツ**要素を追加します。
 >
 >     ```xml
 >     <MefComponent>Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.Provider.dll</MefComponent>
 >     ```
-> 3. 下にある、 **Visual Studio Tools** 、Visual Studio アプリケーション スタート メニューの開いているセクション**開発者コマンド プロンプト**です。 次のように入力します。
+> 3. で、 **Visual Studio Tools**開いている Visual Studio アプリケーション スタート メニューのセクション**開発者コマンド プロンプト**します。 次のように入力します。
 >
 >      `devenv /rootSuffix /updateConfiguration`
 >
 >      `devenv /rootSuffix Exp /updateConfiguration`
 > 4. Visual Studio を再起動します。
 
-**コードが VSIX プロジェクトに確認してください。**
+**コードが VSIX プロジェクトで確認します。**
 
-プロパティがコマンド、ジェスチャ、または検証プロジェクトの一部である場合は、何も追加する必要はありません。 カスタム プロパティのコードは、MEF コンポーネントとして定義された Visual Studio 機能拡張プロジェクトで定義する必要があります。 詳細については、次を参照してください。[コマンドおよびジェスチャを図に追加の依存関係](../modeling/add-commands-and-gestures-to-layer-diagrams.md)または[カスタム アーキテクチャ検証を図に追加の依存関係](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)です。
+プロパティがコマンド、ジェスチャ、または検証プロジェクトの一部の場合は、何も追加する必要はありません。 カスタム プロパティのコードは、MEF コンポーネントとして定義された Visual Studio 機能拡張プロジェクトで定義する必要があります。 詳細については、次を参照してください。[依存関係図にコマンドおよびジェスチャを追加](../modeling/add-commands-and-gestures-to-layer-diagrams.md)または[依存関係図へのカスタム アーキテクチャ検証の追加](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)します。
 
 **カスタム プロパティを定義します。**
 

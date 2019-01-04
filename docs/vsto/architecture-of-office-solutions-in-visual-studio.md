@@ -1,9 +1,7 @@
 ---
 title: Visual Studio での Office ソリューションのアーキテクチャ
 titleSuffix: ''
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology: office-development
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +16,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0b5916ca091d7479b76c21aff914811d090f6667
-ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
+ms.openlocfilehash: c5fd58f487aa7323450f1236f9ac39ef11769bdc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53247901"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53837983"
 ---
 # <a name="architecture-of-office-solutions-in-visual-studio"></a>Visual Studio での Office ソリューションのアーキテクチャ
   このセクションのトピックでは、Visual Studio の作業で Office Developer Tools を使用してソリューションを作成する方法について紹介します。  
@@ -59,5 +57,3 @@ ms.locfileid: "53247901"
   
  [全般的な参照&#40;Visual Studio での Office 開発&#41;](../vsto/general-reference-office-development-in-visual-studio.md)  
  Office プロジェクトのユーザー インターフェイス要素、Office プロジェクトのアプリケーション マニフェストと展開マニフェスト、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]の API に関する情報のリンクを提供します。  
-  
-  

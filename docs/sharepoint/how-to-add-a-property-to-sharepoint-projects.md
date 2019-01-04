@@ -1,9 +1,6 @@
 ---
 title: '方法: SharePoint プロジェクトにプロパティを追加 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,17 +14,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c956da1df5507d2efecb3ff72f034d54fb377eb5
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: b1b8b56fde8c3d84f887dd90dc50574c60c297cb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49898415"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53950473"
 ---
-# <a name="how-to-add-a-property-to-sharepoint-projects"></a>方法: SharePoint プロジェクトにプロパティを追加
+# <a name="how-to-add-a-property-to-sharepoint-projects"></a>方法: SharePoint プロジェクトにプロパティを追加します。
   プロジェクトの拡張機能を使用すると、任意の SharePoint プロジェクトにプロパティを追加します。 プロパティを表示する、**プロパティ**ウィンドウで、プロジェクトを選択すると**ソリューション エクスプ ローラー**します。  
   
- 次の手順では、プロジェクトの拡張機能を既に作成したことを前提としています。 詳細については、次を参照してください。[方法: SharePoint プロジェクト拡張機能作成](../sharepoint/how-to-create-a-sharepoint-project-extension.md)です。  
+ 次の手順では、プロジェクトの拡張機能を既に作成したことを前提としています。 詳細については、「[方法 :SharePoint プロジェクト拡張機能作成](../sharepoint/how-to-create-a-sharepoint-project-extension.md)です。  
   
 ### <a name="to-add-a-property-to-a-sharepoint-project"></a>SharePoint プロジェクトにプロパティを追加するには  
   
@@ -57,15 +54,15 @@ ms.locfileid: "49898415"
 ### <a name="specify-the-behavior-of-custom-properties"></a>カスタム プロパティの動作を指定します。  
  カスタム プロパティの表示し、動作を定義することができます、**プロパティ**ウィンドウからの属性を適用することで、<xref:System.ComponentModel>プロパティ定義に名前空間。 次の属性には、多くのシナリオがあります。  
   
--   <xref:System.ComponentModel.DisplayNameAttribute>: に表示されるプロパティの名前を指定します、**プロパティ**ウィンドウ。  
+-   <xref:System.ComponentModel.DisplayNameAttribute>:表示されるプロパティの名前を指定します、**プロパティ**ウィンドウ。  
   
--   <xref:System.ComponentModel.DescriptionAttribute>: の下部に表示される説明文字列を指定します、**プロパティ**、プロパティが選択されている場合は、ウィンドウ。  
+-   <xref:System.ComponentModel.DescriptionAttribute>:下に表示される説明文字列を指定します、**プロパティ**プロパティが選択されている場合は、ウィンドウ。  
   
--   <xref:System.ComponentModel.DefaultValueAttribute>: プロパティの既定値を指定します。  
+-   <xref:System.ComponentModel.DefaultValueAttribute>:プロパティの既定値を指定します。  
   
--   <xref:System.ComponentModel.TypeConverterAttribute>: カスタムの変換との間に表示される文字列を指定します、**プロパティ**ウィンドウと非文字列プロパティの値。  
+-   <xref:System.ComponentModel.TypeConverterAttribute>:カスタムの変換との間に表示される文字列を指定します、**プロパティ**ウィンドウと非文字列プロパティの値。  
   
--   <xref:System.ComponentModel.EditorAttribute>: 使用して、プロパティを変更するカスタム エディターを指定します。  
+-   <xref:System.ComponentModel.EditorAttribute>:使用して、プロパティを変更するカスタム エディターを指定します。  
   
 ## <a name="compile-the-code"></a>コードのコンパイル  
  この例では、次のアセンブリへの参照が必要です。  
@@ -85,8 +82,6 @@ ms.locfileid: "49898415"
   
 ## <a name="see-also"></a>関連項目
  [SharePoint プロジェクトを拡張します。](../sharepoint/extending-sharepoint-projects.md)   
- [方法: SharePoint プロジェクト拡張機能の作成](../sharepoint/how-to-create-a-sharepoint-project-extension.md)   
- [方法: SharePoint プロジェクトのショートカット メニュー項目の追加](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md)   
+ [方法: SharePoint プロジェクト拡張機能を作成します。](../sharepoint/how-to-create-a-sharepoint-project-extension.md)   
+ [方法: SharePoint プロジェクトのショートカット メニュー項目を追加します。](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md)   
  [SharePoint プロジェクト システムを拡張します。](../sharepoint/extending-the-sharepoint-project-system.md)  
-  
-  

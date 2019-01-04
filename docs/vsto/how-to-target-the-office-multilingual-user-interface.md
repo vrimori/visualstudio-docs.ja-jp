@@ -1,9 +1,6 @@
 ---
-title: '方法: Office の多言語ユーザー インターフェイス ターゲット'
-ms.custom: ''
+title: '方法: Office の multilingual user interface します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -20,29 +17,27 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1b917479598b73f71a0f3092c874276a700717d6
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: e911563406e0cfdeff613f70a5059da34c4b66df
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34262034"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53872282"
 ---
-# <a name="how-to-target-the-office-multilingual-user-interface"></a>方法: Office の多言語ユーザー インターフェイス ターゲット
-  Multilingual User Interface (MUI) は、エンドユーザーのユーザー インターフェイス (UI) の言語を変更する機能を提供する Microsoft Office 機能です。 たとえば、英語の UI で作業している、エンドユーザーは、スペイン語に、UI の言語を変更できます。  
+# <a name="how-to-target-the-office-multilingual-user-interface"></a>方法: Office の multilingual user interface します。
+  Multilingual User Interface (MUI) は、ユーザー インターフェイス (UI) の言語を変更する機能をエンドユーザーに提供する Microsoft Office の機能です。 たとえば、英語の UI で作業している、エンドユーザーは、スペイン語に UI の言語を変更できます。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- Office の多くの言語を使用するユーザー、アプリケーションを使用する場合は、自動的に UI (ユーザーにインストールされている正しいリソースがある場合)、ユーザーのコンピューターで Office で使用されている言語と一致する文字列の言語を変更するコードを追加できます。  
+ Office の多くの言語を使用するユーザー、アプリケーションを使用する場合は、自動的に (ユーザーにインストールされている適切なリソースがある場合)、ユーザーのコンピューターに Office で使用されている言語に一致するように、UI 文字列の言語を変更するコードを追加できます。  
   
-## <a name="to-check-the-current-office-ui-setting"></a>Office UI の現在の設定を確認するには  
+## <a name="to-check-the-current-office-ui-setting"></a>現在の Office UI の設定を確認するには  
   
-1.  使用して、<xref:System.Threading.Thread.CurrentUICulture%2A>現在のスレッドのプロパティです。 ユーザーのコンピューターで現在実行されている Office のバージョンで使用する言語に合わせての UI 文字列の言語を設定します。  
+1.  使用して、<xref:System.Threading.Thread.CurrentUICulture%2A>現在のスレッドのプロパティ。 現在、ユーザーのコンピューターで実行されている Office のバージョンによって使用される言語に一致するように、UI 文字列の言語を設定します。  
   
      [!code-vb[Trin_VstcoreCreatingExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb#10)]
      [!code-csharp[Trin_VstcoreCreatingExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#10)]  
   
 ## <a name="see-also"></a>関連項目  
- [方法: プライマリ相互運用機能アセンブリをターゲットの Office アプリケーション](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
+ [方法: プライマリ相互運用機能アセンブリを利用して Office アプリケーションします。](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
  [Office ソリューションの遅延バインディング](../vsto/late-binding-in-office-solutions.md)  
-  
-  

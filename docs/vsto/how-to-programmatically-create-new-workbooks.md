@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによって新しいブックを作成'
-ms.custom: ''
+title: '方法: プログラムによって新しいブックを作成します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,14 +13,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7e1da9ff331a4376a6ff242dca4382832ee4e85f
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 5e68b2c955c2e44fb9f721850be2fa4dac9cf875
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35257109"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53958278"
 ---
-# <a name="how-to-programmatically-create-new-workbooks"></a>方法: プログラムによって新しいブックを作成
+# <a name="how-to-programmatically-create-new-workbooks"></a>方法: プログラムによって新しいブックを作成します。
   プログラムによって作成される新しいブックは、<xref:Microsoft.Office.Tools.Excel.Workbook> ホスト項目ではなく、ネイティブな <xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトです。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
@@ -32,7 +29,7 @@ ms.locfileid: "35257109"
   
 ## <a name="to-create-a-new-workbook"></a>新しいブックを作成するには  
   
-1.  <xref:Microsoft.Office.Interop.Excel.Workbooks> コレクションの <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> メソッドを使用します。  
+1.  <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> コレクションの <xref:Microsoft.Office.Interop.Excel.Workbooks> メソッドを使用します。  
   
      [!code-csharp[Trin_VstcoreExcelAutomation#1](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#1)]
      [!code-vb[Trin_VstcoreExcelAutomation#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#1)]  
@@ -45,10 +42,8 @@ ms.locfileid: "35257109"
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   
  [ブックを操作します。](../vsto/working-with-workbooks.md)   
  [方法: プログラムによってブックを開く](../vsto/how-to-programmatically-open-workbooks.md)   
- [方法: プログラムによってブックを保存](../vsto/how-to-programmatically-save-workbooks.md)   
+ [方法: プログラムによってブックを保存します。](../vsto/how-to-programmatically-save-workbooks.md)   
  [方法: プログラムによってブックを閉じる](../vsto/how-to-programmatically-close-workbooks.md)   
  [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)   
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)  
-  
-  

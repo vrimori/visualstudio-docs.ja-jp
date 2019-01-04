@@ -1,8 +1,7 @@
 ---
-title: CA1903:対象のフレームワークから API のみを使用します。
+title: CA1903:対象のフレームワークから API のみを使用します
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - UseOnlyAPIFromTargetedFramework
@@ -16,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ace24746aafa70c73bc87c55c197913136f1a7b1
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: 0eb85029cb9c3c419b88a31be88d8e1cfbd16142
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738873"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53908984"
 ---
-# <a name="ca1903-use-only-api-from-targeted-framework"></a>CA1903:対象のフレームワークから API のみを使用します。
+# <a name="ca1903-use-only-api-from-targeted-framework"></a>CA1903:対象のフレームワークから API のみを使用します
 
 |||
 |-|-|

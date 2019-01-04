@@ -2,7 +2,6 @@
 title: XML スキーマ デザイナーで、スタート ビューからワークスペースにノードを追加します。
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 3fc7af94-dcb8-4226-a577-43f03664388b
 author: gewarren
@@ -10,27 +9,27 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d66e9c8817bfb170c6eaf77b5d6153d0559ff8d4
-ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
+ms.openlocfilehash: 1adf06d6f9a356fc31ead5ffb22f795c3da21033
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34548675"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53964391"
 ---
-# <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>方法: スタート ビューからワークスペースにノードを追加
+# <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>方法: スタート ビューからワークスペースにノードを追加します。
 
-このトピックにグローバル ノードを追加する方法について説明、 [XML スキーマ デザイナーのワークスぺース](../xml-tools/xml-schema-designer-workspace.md)から、[スタート ビュー](../xml-tools/start-view.md)です。
+このトピックでは、グローバル ノードを追加する方法を説明します、 [XML スキーマ デザイナーのワークスペース](../xml-tools/xml-schema-designer-workspace.md)から、[スタート ビュー](../xml-tools/start-view.md)します。
 
 ## <a name="to-add-nodes-to-the-workspace-from-the-start-view"></a>スタート ビューからワークスペースにノードを追加するには
 
-1.  手順に従います[する方法: を作成し、XSD スキーマ ファイルを編集](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)です。
+1.  次の手順では、[方法。作成し、XSD スキーマ ファイルを編集する](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)します。
 
-2.  XML エディター内を右クリックし **ビュー デザイナー**です。
+2.  XML エディターで右クリックして**ビュー デザイナー**します。
 
      スタート ビューが表示されます。
 
-     **スキーマ セットの詳細**セクションが含まれている 2 つ (**2**)**グローバル複合型**です。
+     **スキーマ セットの詳細**セクションがありますには、2 つ (**2**)**グローバル複合型**します。
 
-3.  をクリックして、**追加**の右側にあるリンク、**グローバル複合型**見出し。
+3.  をクリックして、**追加**の右側へのリンク、**グローバル複合型**見出し。
 
      `USAddress` 複合型ノードおよび `PurchaseOrderType` 複合型ノードがグラフ ビューのデザイン サーフェイスに表示されます。

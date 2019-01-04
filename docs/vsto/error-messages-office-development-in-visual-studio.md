@@ -3,8 +3,6 @@ title: エラー メッセージ (Visual Studio での Office 開発)
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,12 +14,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7894de0c688ffccd227e2d6f5c73cfae24679d85
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: b790bd1311dc4fdc460b5f7f533d25319efd72f8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53646881"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53866151"
 ---
 # <a name="error-messages-office-development-in-visual-studio"></a>エラー メッセージ (Visual Studio での Office 開発)
   エラー メッセージの各トピックでは、考えられるエラーの原因と、問題解決のために考えられる解決方法または代替手段を示します。  
@@ -35,5 +33,3 @@ ms.locfileid: "53646881"
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio での office および SharePoint 開発](../vsto/office-and-sharepoint-development-in-visual-studio.md)  
-  
-  

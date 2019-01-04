@@ -1,9 +1,6 @@
 ---
 title: Creating a Settings Category |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - profile settings, creating categories
@@ -13,23 +10,23 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 66667b97ef10d6b07bef3e8c1c3b19842a07482e
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 4653883dbb9d82fd23d5188a2a247db0ec6b69cd
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52388665"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53935620"
 ---
 # <a name="create-a-settings-category"></a>設定カテゴリを作成します。
 
-このチュートリアルでは、Visual Studio の設定のカテゴリを作成し、使用する値を保存し、値の設定ファイルから復元します。 設定のカテゴリは「カスタム設定ポイント」; として表示される関連するプロパティのグループです。つまりのチェック ボックスと、**インポートおよびエクスポート設定**ウィザード。 (で検索することができます、**ツール**メニュー)。設定の保存や、カテゴリとして復元し、個々 の設定は、ウィザードに表示されません。 詳細については、次を参照してください。[環境設定](../ide/environment-settings.md)します。
+このチュートリアルでは、Visual Studio の設定のカテゴリを作成し、使用する値を保存し、値の設定ファイルから復元します。 設定のカテゴリは「カスタム設定ポイント」; として表示される関連するプロパティのグループです。つまりのチェック ボックスと、**インポートおよびエクスポート設定**ウィザード。 (で検索することができます、**ツール**メニュー)。設定の保存や、カテゴリとして復元し、個々 の設定は、ウィザードに表示されません。 詳細については、[環境設定](../ide/environment-settings.md)に関するページを参照してください。
 
 派生することによって設定のカテゴリを作成する、<xref:Microsoft.VisualStudio.Shell.DialogPage>クラス。
 
 このチュートリアルを開始するの最初のセクションを完了する必要がありますまず[オプション ページを作成](../extensibility/creating-an-options-page.md)です。 結果として得られるオプションのプロパティ グリッドを確認し、カテゴリのプロパティを変更できます。 プロパティのカテゴリの設定ファイルを保存した後は、プロパティ値を格納する方法を参照してください。 ファイルを確認します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
- Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、"[Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)"を参照してください。
 
 ## <a name="create-a-settings-category"></a>設定カテゴリを作成します。
  このセクションでは、カスタム設定ポイントを使用して保存し、設定カテゴリの値を復元します。
@@ -101,7 +98,7 @@ ms.locfileid: "52388665"
 
 4.  値を変更**OptionFloat** 3.1416 へと**OptionInteger** 12 にします。 **[OK]** をクリックします。
 
-5.  **ツール** メニューのをクリックして**インポートおよびエクスポート設定**します。
+5.  **[ツール]** メニューの **[設定のインポートとエクスポート]** を選択します。
 
      **インポートおよびエクスポート設定**ウィザードが表示されます。
 
@@ -121,7 +118,7 @@ ms.locfileid: "52388665"
 
      **エクスポートの完了**の設定が正常にエクスポートされたページに表示します。
 
-10. **ファイル**メニューで、**オープン**、 をクリックし、**ファイル**。 検索*MySettings.vssettings*を開きます。
+10. **ファイル**メニューで、**オープン**、をクリックし、ファイル。 検索*MySettings.vssettings*を開きます。
 
      (、Guid は異なります)、ファイルの次のセクションでエクスポートしたプロパティのカテゴリが表示されます。
 

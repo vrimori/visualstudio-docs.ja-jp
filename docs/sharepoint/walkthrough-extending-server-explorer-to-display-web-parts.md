@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: Web パーツを表示するサーバー エクスプ ローラーの拡張 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: Web パーツを表示するサーバー エクスプ ローラーを拡張 |Microsoft Docs'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,14 +15,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6d32f76965c0dbef359e54bda114221e460a9bfd
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: acee9055fc250f158e05945f0db30c9ffb0fee14
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51296386"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53957898"
 ---
-# <a name="walkthrough-extend-server-explorer-to-display-web-parts"></a>チュートリアル: web パーツを表示するサーバー エクスプ ローラーの拡張します。
+# <a name="walkthrough-extend-server-explorer-to-display-web-parts"></a>チュートリアル: Web パーツを表示するサーバー エクスプ ローラーを拡張します。
   Visual Studio で使用することができます、 **SharePoint 接続**のノード**サーバー エクスプ ローラー** SharePoint サイトにコンポーネントを表示します。 ただし、**サーバー エクスプ ローラー**一部のコンポーネントが既定では表示されません。 このチュートリアルで拡張します**サーバー エクスプ ローラー** SharePoint サイトが接続されている各 Web パーツ ギャラリーで表示するようです。  
   
  このチュートリアルでは、次のタスクについて説明します。  
@@ -43,7 +40,7 @@ ms.locfileid: "51296386"
 -   デバッグと、拡張機能をテストします。  
   
 > [!NOTE]  
->  For SharePoint サーバー オブジェクト モデルではなく、クライアント オブジェクト モデルを使用するこのチュートリアルの代替バージョンを参照してください。[チュートリアル: サーバー エクスプ ローラー拡張機能では、SharePoint クライアント オブジェクト モデルを呼び出す](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)します。  
+>  For SharePoint サーバー オブジェクト モデルではなく、クライアント オブジェクト モデルを使用するこのチュートリアルの代替バージョンを参照してください。[チュートリアル。サーバー エクスプ ローラー拡張機能では、SharePoint クライアント オブジェクト モデルを呼び出す](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
@@ -374,7 +371,6 @@ ms.locfileid: "51296386"
   
 ## <a name="see-also"></a>関連項目
  [サーバー エクスプ ローラーで、SharePoint 接続 ノードを拡張します。](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
- [チュートリアル: は、サーバー エクスプ ローラー拡張機能では、SharePoint クライアント オブジェクト モデルを呼び出す](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)   
+ [チュートリアル: サーバー エクスプ ローラー拡張機能では、SharePoint クライアント オブジェクト モデルを呼び出す](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)   
  [アイコン用イメージ エディター](/cpp/windows/image-editor-for-icons)   
  [アイコンまたはその他のイメージの作成&#40;アイコン用イメージ エディター&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
-  

@@ -1,9 +1,6 @@
 ---
-title: IDebugAlias |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugAlias |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugAlias
@@ -15,18 +12,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f77e62b2dc36bb03b2145361cdea7dd9e65b2d32
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 47e9912a0c46588fe6cf0c16aea3388400960851
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31102900"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53954725"
 ---
 # <a name="idebugalias"></a>IDebugAlias
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
+>  Visual Studio 2015 での式エバリュエーターの実装には、この方法は非推奨とされます。 CLR 式エバリュエーターの実装方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
   
- 変数の数値のエイリアスを表します。 エイリアスは、変数の別の名前だけです。  
+ 変数の数値のエイリアスを表します。 エイリアスは、単に別の変数名です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,33 +32,33 @@ IDebugAlias : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- 式エバリュエーター (EE) では、変数の数値の別名をサポートするには、このインターフェイスを実装します。  
+ 式エバリュエーター (EE) は、変数の数値の別名をサポートするには、このインターフェイスを実装します。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md)特定のオブジェクトの別名を作成します。 別名を使用して検索[FindAlias](../../../extensibility/debugger/reference/idebugbinder3-findalias.md)または[GetAllAliases](../../../extensibility/debugger/reference/idebugbinder3-getallaliases.md)です。  
+ [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md)特定のオブジェクトの別名を作成します。 別名を検索するには、使用[FindAlias](../../../extensibility/debugger/reference/idebugbinder3-findalias.md)または[GetAllAliases](../../../extensibility/debugger/reference/idebugbinder3-getallaliases.md)します。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
- 次のメソッドが定義されている、`IDebugAlias`インターフェイスです。  
+ 次のメソッドが定義されている、`IDebugAlias`インターフェイス。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetObject](../../../extensibility/debugger/reference/idebugalias-getobject.md)|このエイリアスを参照するオブジェクトを取得します。|  
-|[getName](../../../extensibility/debugger/reference/idebugalias-getname.md)|エイリアス名を取得します。|  
-|[GetICorDebugValue](../../../extensibility/debugger/reference/idebugalias-geticordebugvalue.md)|取得、`ICorDebugValue`へのアクセスを提供するインターフェイスのマネージ コードについては、このオブジェクト (マネージ コードのみ) はします。|  
-|[Dispose](../../../extensibility/debugger/reference/idebugalias-dispose.md)|この使用されていないとエイリアスをマークします。|  
+|[GetObject](../../../extensibility/debugger/reference/idebugalias-getobject.md)|このエイリアスが参照するオブジェクトを取得します。|  
+|[GetName](../../../extensibility/debugger/reference/idebugalias-getname.md)|エイリアス名を取得します。|  
+|[GetICorDebugValue](../../../extensibility/debugger/reference/idebugalias-geticordebugvalue.md)|取得、`ICorDebugValue`へのアクセスを提供するインターフェイスのマネージ コードについてはこのオブジェクト (マネージ コードのみ)。|  
+|[Dispose](../../../extensibility/debugger/reference/idebugalias-dispose.md)|このエイリアスとして使用されていないをマークします。|  
   
-## <a name="remarks"></a>コメント  
- エイリアスは、後に # 文字、1001 # などで文字列形式の 10 進数です。  
+## <a name="remarks"></a>Remarks  
+ エイリアスは、後に、1001 #、# 文字の文字列形式の 10 進数です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: ee.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
- [式の評価インターフェイス](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)   
+ [式の評価のインターフェイス](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)   
  [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md)   
  [FindAlias](../../../extensibility/debugger/reference/idebugbinder3-findalias.md)   
  [GetAllAliases](../../../extensibility/debugger/reference/idebugbinder3-getallaliases.md)

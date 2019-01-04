@@ -10,13 +10,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: a49d9998aa319e66c22baa345864bc473f733c87
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 165798341f08afd3b55e8f6b8092457f022a0634
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49816703"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53960038"
 ---
 # <a name="customizing-and-extending-a-domain-specific-language"></a>ドメイン固有言語のカスタマイズおよび拡張
 Visual Studio のモデリングと視覚エフェクト SDK (VMSDK) は、いくつかのレベルをモデリング ツールを定義することができますを提供します。
@@ -57,13 +56,13 @@ Visual Studio のモデリングと視覚エフェクト SDK (VMSDK) は、い�
 |図形のレイアウトと外観をコピーし、ドラッグ アンド ドロップが保持されます。|シェイプとコネクタを追加、コピーする`ElementGroupPrototype`します。 オーバーライドする最も便利なメソッドは `ElementOperations.CreateElementGroupPrototype()`<br /><br /> 参照してください[コピー動作のカスタマイズ](../modeling/customizing-copy-behavior.md)します。|
 |現在のカーソル位置など、選択した場所に図形を貼り付けます。|オーバーライド`ClipboardCommandSet.ProcessOnCopy()`の場所に固有のバージョンを使用する`ElementOperations.Merge().`を参照してください[コピー動作のカスタマイズ](../modeling/customizing-copy-behavior.md)します。|
 |貼り付け時にその他のリンクを作成します。|Override ClipboardCommandSet.ProcessOnPasteCommand()|
-|ドラッグを有効にして、この図は、その他の Dsl と Windows から要素を削除します。|参照してください[方法: ドラッグ アンド ドロップ ハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)|
+|ドラッグを有効にして、この図は、その他の Dsl と Windows から要素を削除します。|「[方法:ドラッグ アンド ドロップ ハンドラーを追加します。](../modeling/how-to-add-a-drag-and-drop-handler.md)|
 |親をドラッグした場合とは、図形やポートなどの子の図形にドラッグしたりするためのツールを許可します。|ターゲット オブジェクト クラスの親にドロップされたオブジェクトを転送するには、要素マージ ディレクティブを定義します。 参照してください[要素の作成と移動をカスタマイズする](../modeling/customizing-element-creation-and-movement.md)します。|
 |図形またはその他のリンクを図形にドラッグするツールを許可するか、作成されたオブジェクト。 たとえば、リンクすることが項目上にドロップされるコメントを許可するには、です。|ターゲット ドメイン クラスに要素マージ ディレクティブを定義し、生成するリンクを定義します。 複雑な場合は、カスタム コードを追加することができます。 参照してください[要素の作成と移動をカスタマイズする](../modeling/customizing-element-creation-and-movement.md)します。|
 |1 つのツールを使用して要素のグループを作成します。 たとえば、固定ポートのセットを持つコンポーネント。|ToolboxHelper.cs 内のツールボックスの初期化メソッドをオーバーライドします。 要素グループ プロトタイプ (EGP) が、要素とそのリレーションシップ リンクを含むを作成します。 参照してください[ツールおよびツールボックスのカスタマイズ](../modeling/customizing-tools-and-the-toolbox.md)します。<br /><br /> EGP にプリンシパルとポート図形を含めるか、EGP がインスタンス化されるときに、ポート シェイプを配置する BoundsRules を定義します。 参照してください[BoundsRules によってシェイプの位置とサイズが制限](../modeling/boundsrules-constrain-shape-location-and-size.md)します。|
 |1 つの接続ツールを使用して、複数の種類のリレーションシップのインスタンスを作成します。|リンク接続ディレクティブ (LCD) をツールによって呼び出される接続ビルダーに追加します。 Lcd では、2 つの要素の型からリレーションシップの種類を決定します。 この要素の状態に依存性を高めるには、カスタム コードを追加することができます。 参照してください[ツールおよびツールボックスのカスタマイズ](../modeling/customizing-tools-and-the-toolbox.md)します。|
 |固定ツール - ユーザーは、連続して多くの図形またはコネクタを作成する任意のツールをダブルクリックすることができます。|DSL エクスプ ローラーで選択、`Editor`ノード。 [プロパティ] ウィンドウで次のように設定します。**ツールボックス アイテムの固定を使用して**します。|
-|メニュー コマンドを定義します。|参照してください[方法: 標準メニュー コマンドを修正](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)|
+|メニュー コマンドを定義します。|「[方法:標準メニュー コマンドを修正します。](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)|
 |検証規則を使って、モデルを制限します。|参照してください[ドメイン固有言語における検証](../modeling/validation-in-a-domain-specific-language.md)|
 |DSL からコード、構成ファイル、またはドキュメントを生成します。|[ドメイン固有言語からのコード生成](../modeling/generating-code-from-a-domain-specific-language.md)|
 |モデルを保存する方法をカスタマイズするファイル。|参照してください[ファイル格納処理および XML シリアル化をカスタマイズします。](../modeling/customizing-file-storage-and-xml-serialization.md)|

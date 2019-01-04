@@ -1,9 +1,6 @@
 ---
 title: VSPackage のセットアップ シナリオ |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, deployment considerations
@@ -12,12 +9,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c194588de8dfa8746bb79a8d86bff005d90e7550
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: 6bacb7a8226ac9f82987eede32b9df18a103270a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46495935"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53932945"
 ---
 # <a name="vspackage-setup-scenarios"></a>VSPackage のセットアップ シナリオ
 
@@ -39,7 +36,7 @@ ms.locfileid: "46495935"
 
 VSPackage を登録するレジストリ値を使用するなど、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]が別々 に保存するコンポーネントのいずれかの Visual Studio で、VSPackage を登録するために使用します。 共有ファイルまたはレジストリ値は、まだ別のコンポーネントに移動します。
 
-## <a name="scenario-1-shared-vspackage"></a>シナリオ 1: 共有 VSPackage
+## <a name="scenario-1-shared-vspackage"></a>シナリオ 1:共有 VSPackage
 
 このシナリオでは、(Visual Studio の複数のバージョンをサポートする 1 つのバイナリは、Windows インストーラー パッケージに付属しています共有 VSPackage で。 各バージョンの Visual Studio に登録すると、ユーザーが選択可能な機能によって制御されます。 機能を個別に割り当てると、各コンポーネント選択できるように個別にインストールまたはアンインストール、異なるバージョンに VSPackage を統合するコントロールにユーザーを配置することも意味[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。 (を参照してください[Windows インストーラーの機能](/windows/desktop/Msi/windows-installer-features)Windows インストーラー パッケージで機能の使い方の詳細についてはします)。
 
@@ -50,7 +47,7 @@ VSPackage を登録するレジストリ値を使用するなど、[!INCLUDE[vsi
 > [!NOTE]
 > 機能の表示の列を 0 に設定します。 非表示にします。 1 などの低レベルの列値によりは常にインストールするようになります。 詳細については、次を参照してください。 [INSTALLLEVEL プロパティ](/windows/desktop/Msi/installlevel)と[機能テーブル](/windows/desktop/Msi/feature-table)します。
 
-## <a name="scenario-2-shared-vspackage-update"></a>シナリオ 2: 共有 vs パッケージ更新
+## <a name="scenario-2-shared-vspackage-update"></a>シナリオ 2:共有 VSPackage の更新
 
 このシナリオでは、シナリオ 1 で、VSPackage のインストーラーの更新バージョンが付属しています。 便宜上、更新プログラムは、Visual Studio のサポートを追加しますが、でしたも単純なセキュリティ更新プログラムをするか、またはバグ修正のサービス パック。 新しいコンポーネントをインストールするための Windows インストーラーの規則では、システムに既に変更されていないコンポーネントが再コピーしないことが必要です。 この場合は、バージョン 1.0 が既に存在すると、システムは Comp_MyVSPackage.dll 更新されたコンポーネントを上書きし、Comp_VS2005_Reg そのコンポーネントの新機能 Feat_VS2005 を追加することもできます。
 
@@ -61,7 +58,7 @@ VSPackage を登録するレジストリ値を使用するなど、[!INCLUDE[vsi
 
 このシナリオは、マイナー アップグレード用の Windows インストーラーのサポートの活用、新しい VSPackage インストーラーを表示します。 ユーザーが単純にバージョン 1.1 をインストールし、バージョン 1.0 をアップグレードします。 ただし、バージョンは 1.0 システムにする必要はありません。 同じインストーラーは、バージョン 1.0 のないシステムでバージョン 1.1 がインストールされます。 この方法でマイナー アップグレードを提供することの利点は、ことは、アップグレードのインストーラーと完全な製品インストーラーの開発の作業を経由する必要はありません。 1 つのインストーラーは、両方のジョブです。 セキュリティ修正プログラムまたはサービス パックが代わりに Windows インストーラーの修正プログラムの利点を活かす。 詳細については、次を参照してください。[パッチとアップグレード](/windows/desktop/Msi/patching-and-upgrades)します。
 
-## <a name="scenario-3-side-by-side-vspackage"></a>シナリオ 3: サイド バイ サイド vs パッケージ
+## <a name="scenario-3-side-by-side-vspackage"></a>シナリオ 3:サイド バイ サイド vs パッケージ
 
 このシナリオでは、2 つの VSPackage インストーラー-Visual Studio .NET 2003 と Visual Studio のバージョンごとに 1 つ。 各インストーラーには、並列でまたはプライベート、VSPackage (具体的には構築および特定のバージョンの Visual Studio 用にインストールされているもの) がインストールされます。 各 VSPackage は、独自のコンポーネントです。 その結果、それぞれ個別に処理されると修正プログラムやメンテナンスを解放します。 VSPackage の DLL は、バージョン固有ではこれであるため、DLL と同じコンポーネントにその登録情報を含めるも安全です。
 
@@ -69,7 +66,7 @@ VSPackage を登録するレジストリ値を使用するなど、[!INCLUDE[vsi
 
 各インストーラーには、2 つのインストーラーの間で共有されるコードも含まれています。 共有コードが共通の場所にインストールされている、両方の .msi ファイルのインストールはインストール共有コード 1 回だけ。 2 番目のインストーラーは、だけでは、コンポーネントの参照カウントをインクリメントします。 参照カウントを確実に、Vspackage のいずれかをアンインストールする場合は、共有コードは、その他の VSPackage の保ちます。 2 つ目の VSPackage をもアンインストールする場合は、共有コードは削除されます。
 
-## <a name="scenario-4-side-by-side-vspackage-update"></a>シナリオ 4: サイド バイ サイド vs パッケージ更新プログラム
+## <a name="scenario-4-side-by-side-vspackage-update"></a>シナリオ 4:サイド バイ サイド vs パッケージ更新プログラム
 
 このシナリオでは、セキュリティの脆弱性から Visual Studio の VSPackage を検出しましたし、更新プログラムを発行する必要があります。 シナリオ 2 のように更新プログラムの既存のインストールを新しい場所に既にのセキュリティ修正プログラム、インストールをデプロイできるだけでなく、セキュリティの修正プログラムが含まれている新しい .msi ファイルを作成できます。
 

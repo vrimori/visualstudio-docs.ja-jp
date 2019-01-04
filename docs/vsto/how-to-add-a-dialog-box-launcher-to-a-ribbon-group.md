@@ -1,9 +1,6 @@
 ---
 title: '方法: リボン グループにダイアログ ボックス起動ツールを追加します。'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,12 +13,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f6ec94b8fc170f195b00a6c093605860c97048ed
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: 8b7cc0f9cc789f7cccb49dc2c5b827f7cf604813
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53648698"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53846205"
 ---
 # <a name="how-to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>方法: リボン グループにダイアログ ボックス起動ツールを追加します。
   ダイアログ ボックス起動ツールは、リボン上の任意のグループに追加できます。 ダイアログ ボックス起動ツールは、グループ内にある小さなアイコンです。 ユーザーは、関連するダイアログ ボックスまたはグループに関連するその他のオプションを提供する作業ウィンドウを開くには、このアイコンをクリックします。  
@@ -55,5 +52,3 @@ ms.locfileid: "53648698"
  [チュートリアル: リボン デザイナーを使用してカスタム タブを作成します。](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
  [チュートリアル: 実行時にリボン上のコントロールを更新します。](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)   
  [チュートリアル: リボン XML を使用してカスタム タブを作成します。](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)  
-  
-  

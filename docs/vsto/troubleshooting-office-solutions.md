@@ -1,9 +1,6 @@
 ---
 title: Office ソリューションをトラブルシューティングします。
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9c2997e199699bbae30e5ea02c9be400eb8250fc
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 8bc018e104ff06671f1012b1e2e1db4eaa62587e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671885"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53926555"
 ---
 # <a name="troubleshoot-office-solutions"></a>Office ソリューションをトラブルシューティングします。
   このセクションには、Visual Studio で Office 開発ツールを使用してソリューションを作成するときに発生する可能性がある一般的な問題を解決するためのヒントを記載します。  
@@ -52,5 +49,3 @@ ms.locfileid: "35671885"
   
  [Office プログラミングで一般的なタスク](../vsto/common-tasks-in-office-programming.md)  
  Office ソリューションのプログラミングについてよく寄せられる質問と、一般的な問題の解決に役立つトピックへのリンクを一覧します。  
-  
-  

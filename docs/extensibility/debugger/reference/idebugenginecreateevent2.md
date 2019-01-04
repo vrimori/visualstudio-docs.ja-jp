@@ -1,9 +1,6 @@
 ---
-title: IDebugEngineCreateEvent2 |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugEngineCreateEvent2 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugEngineCreateEvent2
@@ -15,15 +12,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c10522a869ff279c81e06aca53c3d06b453cdff6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: accf18a72969d160d9b4469d9f0e6f4d843a5c70
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31111850"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53963163"
 ---
 # <a name="idebugenginecreateevent2"></a>IDebugEngineCreateEvent2
-デバッグ エンジン (DE) は、デのインスタンスが作成されるときに、セッション デバッグ マネージャー (SDM) をこのインターフェイスを送信します。  
+デバッグ エンジン (DE) では、DE のインスタンスが作成されたときに、このインターフェイスをセッション デバッグ マネージャー (SDM) に送信します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,10 +29,10 @@ IDebugEngineCreateEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- DE、通常の運用の一環としてこのインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このインターフェイスと同じオブジェクトのインターフェイスを実装する必要があります (、SDM を使用して、`QueryInterface`にアクセスするメソッド、`IDebugEvent2`インターフェイス)。  
+ デが通常の操作の一部としてこのインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このインターフェイスと同じオブジェクトでインターフェイスを実装する必要があります (、SDM を使用して、`QueryInterface`メソッドにアクセスする、`IDebugEvent2`インターフェイス)。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- デは、作成し、DE がインスタンス化されたときに、このイベント オブジェクトを送信します。 使用して、イベントが送信される、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)は、デバッグ中のプログラムに添付するときに、SDM によって指定されたコールバック関数。  
+ デは作成し、DE がインスタンス化されたときに、このイベント オブジェクトを送信します。 使用して、イベントが送信される、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)デバッグ中のプログラムに添付するときに、SDM によって指定されたコールバック関数。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
  次の表は、メソッドの`IDebugEngineCreateEvent2`します。  
@@ -44,12 +41,12 @@ IDebugEngineCreateEvent2 : IUnknown
 |------------|-----------------|  
 |[GetEngine](../../../extensibility/debugger/reference/idebugenginecreateevent2-getengine.md)|新しく作成されたデバッグ エンジン (DE) を表すオブジェクトを取得します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   

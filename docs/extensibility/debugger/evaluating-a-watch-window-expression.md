@@ -1,9 +1,6 @@
 ---
 title: ウォッチ ウィンドウ式の評価 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - Watch window expressions
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 47e875f4d288c896ace377e2844192aa5c3be275
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: b0f83be579b4be36cc2ed0b702b473c55c2196c9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39232104"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53822704"
 ---
 # <a name="evaluate-a-watch-window-expression"></a>[ウォッチ] ウィンドウの式を評価します。
 > [!IMPORTANT]
@@ -45,7 +42,7 @@ ms.locfileid: "39232104"
 7.  Visual Studio 呼び出し[GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)ウォッチ リストに表示される式の値を取得します。  
   
 ## <a name="parse-then-evaluate"></a>解析し、評価  
- 式の評価プロセスが 2 つのステップに分割する複雑な式の解析は、それを評価するよりもかなり長くかかることが、: 1) 式を解析し、2) 解析された式を評価します。 これにより、評価は回数だけ出現できますが、式が 1 回だけを解析する必要があります。 EE から中間の解析された式が返される、 [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)順番にカプセル化され、として DE から返されるオブジェクトを[IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md)オブジェクト。 `IDebugExpression`オブジェクトをすべて評価の延期、`IDebugParsedExpression`オブジェクト。  
+ 複雑な式の解析は、それを評価するよりもかなり長くかかることが、式の評価プロセスが 2 つの手順に分割されます。1)、式を解析および 2) は、解析された式を評価します。 これにより、評価は回数だけ出現できますが、式が 1 回だけを解析する必要があります。 EE から中間の解析された式が返される、 [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)順番にカプセル化され、として DE から返されるオブジェクトを[IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md)オブジェクト。 `IDebugExpression`オブジェクトをすべて評価の延期、`IDebugParsedExpression`オブジェクト。  
   
 > [!NOTE]
 >  Visual Studio を前提としています。 この場合でも、この 2 段階のプロセスに準拠する、EE の必要はありません。EE は解析し、同じ手順で評価と[EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)が呼び出されます (これは、MyCEE サンプルのしくみなど)。 場合は、言語には、複雑な式を形成できます、評価手順から解析の手順を分離したい場合があります。 Visual Studio デバッガーでのパフォーマンスを向上これには、多くのウォッチ式の場合に表示します。  

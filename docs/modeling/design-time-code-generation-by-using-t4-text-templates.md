@@ -16,13 +16,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: a41b86068f9f7aedbe10635bf859818c0b468789
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: 8e2ba4e158b6c012c05d29c988e9611d25f58e63
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50967455"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53861982"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 テキスト テンプレートを使用したデザイン時コード生成
 デザイン時 T4 テキスト テンプレートでは、Visual Studio プロジェクトでプログラム コードやその他のファイルを生成できます。通常、*モデル*のデータに従って生成されるコードが異なるようにテンプレートを記述します。モデルは、アプリケーションの要件に関する重要な情報を含むファイルまたはデータベースです。
@@ -270,7 +269,7 @@ ms.locfileid: "50967455"
  `this.Host` (VB の場合は `Me.Host`) の型は、`Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost` です。
 
 ### <a name="getting-data-from-visual-studio"></a>Visual Studio からのデータの取得
- Visual Studio で提供されるサービスを使用するには、`hostSpecific`属性を設定し、`EnvDTE` アセンブリをロードします。`GetCOMService()` 拡張メソッドが含まれている `Microsoft.VisualStudio.TextTemplating` をインポートし、その後、IServiceProvider.GetCOMService() を使用して、DTE などのサービスにアクセスできます。次に例を示します。
+ Visual Studio で提供されるサービスを使用するには、`hostSpecific`属性を設定し、`EnvDTE` アセンブリをロードします。 インポート`Microsoft.VisualStudio.TextTemplating`が含まれています、`GetCOMService()`拡張メソッド。  その後、IServiceProvider.GetCOMService() を使用して、DTE などのサービスにアクセスできます。 次に例を示します。
 
 ```src
 <#@ template hostspecific="true" language="C#" #>
@@ -291,7 +290,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 ## <a name="Regenerating"></a> コードの自動再生成
  通常、1 つの入力モデルから Visual Studio ソリューションにより複数のファイルが生成されます。 各ファイルはそれぞれ対応するテンプレートから生成されますが、すべてのテンプレートは同じモデルを参照しています。
 
- ソース モデルが変更された場合は、ソリューションのすべてのテンプレートを再度実行する必要があります。 これを手動で実施するには、**ビルド**メニューの**すべてのテンプレートの変換**を選択します。
+ ソース モデルが変更された場合は、ソリューションのすべてのテンプレートを再度実行する必要があります。 これを手動では、次のように選択します。**すべてのテンプレートの変換**上、**ビルド**メニュー。
 
  Visual Studio Modeling SDK をインストールする場合、すべてのテンプレートのビルドを実行するたびに自動的に変換されることができます。 そのためには、プロジェクト ファイル (.csproj または .vbproj) をテキスト エディターで編集し、ファイルの末尾付近の、他の `<import>` ステートメントよりも後に次のコード行を追加します。
 
@@ -364,7 +363,7 @@ Warning("A warning message");
 |-|-|
 |補助的な関数、インクルード ファイル、外部データなどを使用したコードを組み合わせて、より高度なテキスト テンプレートを作成し、デバッグする。|[T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)|
 |実行時にテンプレートからドキュメントを生成する。|[T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)|
-|Visual Studio の外部テキスト生成を実行します。|[TextTransform ユーティリティを使用したファイルの生成](../modeling/generating-files-with-the-texttransform-utility.md)|
+|Visual Studio の外部テキスト生成を実行する。|[TextTransform ユーティリティを使用したファイルの生成](../modeling/generating-files-with-the-texttransform-utility.md)|
 |ドメイン固有言語の形式でデータを変換する。|[ドメイン固有言語からのコード生成](../modeling/generating-code-from-a-domain-specific-language.md)|
 |独自のデータ ソースを変換するためのディレクティブ プロセッサを作成する。|[T4 テキスト変換のカスタマイズ](../modeling/customizing-t4-text-transformation.md)|
 

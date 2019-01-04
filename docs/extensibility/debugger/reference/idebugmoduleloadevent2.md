@@ -1,9 +1,6 @@
 ---
-title: IDebugModuleLoadEvent2 |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugModuleLoadEvent2 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugModuleLoadEvent2
@@ -15,15 +12,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 45136b122010ba632b31841662cd554ff7c6255d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cfa4a39488fac7ab420e7e8ad61c2f1fb044a7aa
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115763"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53907775"
 ---
 # <a name="idebugmoduleloadevent2"></a>IDebugModuleLoadEvent2
-このインターフェイスは、モジュールがロードまたはアンロードされるときに、セッション デバッグ マネージャー (SDM) に、デバッグ エンジン (DE) によって送信されます。  
+このインターフェイスは、モジュールがロードまたはアンロードされるときにデバッグ エンジン (DE) によって、セッション デバッグ マネージャー (SDM) に送信されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,27 +29,27 @@ IDebugModuleLoadEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- デでは、モジュールがロードまたはアンロードされたことをレポートには、このインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このインターフェイスと同じオブジェクトのインターフェイスを実装する必要があります。 SDM を使用して[QueryInterface](/cpp/atl/queryinterface)にアクセスする、`IDebugEvent2`インターフェイスです。  
+ デでは、モジュールがロードまたはアンロードされたことをレポートには、このインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このインターフェイスと同じオブジェクトでインターフェイスを実装する必要があります。 SDM を使用して[QueryInterface](/cpp/atl/queryinterface)にアクセスする、`IDebugEvent2`インターフェイス。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- デは、作成し、モジュールがロードまたはアンロードされたレポートにこのイベント オブジェクトを送信します。 使用して、イベントが送信される、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)は、デバッグ中のプログラムに関連付けられている場合、SDM によって指定されたコールバック関数。  
+ デでは、作成し、モジュールがロードまたはアンロードされたレポートにこのイベント オブジェクトを送信します。 使用して、イベントが送信される、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)デバッグ中のプログラムにアタッチされているときに、SDM によって指定されたコールバック関数。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
  次の表は、メソッドの`IDebugModuleLoadEvent2`します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetModule](../../../extensibility/debugger/reference/idebugmoduleloadevent2-getmodule.md)|されているモジュールを取得ロードまたはアンロードします。|  
+|[GetModule](../../../extensibility/debugger/reference/idebugmoduleloadevent2-getmodule.md)|取得されているモジュール読み込みまたはアンロードします。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  Visual Studio では、このイベントを使用して、**モジュール**ウィンドウを最新の状態。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   

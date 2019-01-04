@@ -1,9 +1,6 @@
 ---
 title: Office ソリューションをデプロイします。
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -26,12 +23,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2a479f5318e232f748853dad8a41f9623f202d46
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: 890f237f576025743ff17a2e924ab38dec74e923
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53648575"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53866070"
 ---
 # <a name="deploy-an-office-solution"></a>Office ソリューションをデプロイします。
   ClickOnce または Windows インストーラーを使用して、Office ソリューションを配置できます。 ClickOnce を使用すると、ソリューションを配置および更新するために必要な手順の数を減らすことができます。 Windows インストーラーを使用する場合は、ユーザーがソリューションをインストールする際に、ソリューションをどのようにインストールするか、およびセットアップ プログラムがどのページを表示するかを制御できます。  
@@ -50,5 +47,3 @@ ms.locfileid: "53648575"
  [ClickOnce を使用して Office ソリューションを配置します。](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
  [Windows インストーラーを使用して Office ソリューションを配置します。](../vsto/deploying-an-office-solution-by-using-windows-installer.md)   
  [Office ソリューションのデプロイをトラブルシューティングします。](../vsto/troubleshooting-office-solution-deployment.md)  
-  
-  

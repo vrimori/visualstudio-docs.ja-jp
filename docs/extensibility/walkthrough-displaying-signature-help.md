@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: シグネチャ ヘルプの表示 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: シグニチャ ヘルプの表示 |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - signature help/parameter info
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cc260fe45bf4c6cf801718c2f4c3bbaa98842dd6
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 796b15b603ee314425d895279f6abff8e9d7e713
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498906"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53986727"
 ---
 # <a name="walkthrough-display-signature-help"></a>チュートリアル: シグネチャ ヘルプを表示します。
 シグネチャ ヘルプ (とも呼ばれます*パラメーター ヒント*)、ユーザーがパラメーター リストの開始文字 (通常、開きかっこを入力) を入力すると、ツールヒントに、メソッドのシグネチャを表示します。 パラメーターとパラメーターの区切り記号 (コンマ) を入力すると、次のパラメーターを太字で表示するツールヒントが更新されます。 シグネチャ ヘルプを定義で、次の方法: 言語サービスのコンテキストで、独自のファイル名拡張子とコンテンツの種類を定義し、その型シグネチャ ヘルプを表示または既存のコンテンツ タイプ (たとえば、"text") のシグネチャ ヘルプを表示します。 このチュートリアルでは、「テキスト」コンテンツ タイプのシグネチャ ヘルプを表示する方法を示します。  
@@ -28,13 +25,13 @@ ms.locfileid: "39498906"
  このチュートリアルでは、ハード コーディングされた一連の識別子のシグネチャ ヘルプを設定する方法を示します。 完全な実装で言語がそのコンテンツを提供する責任を負います。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールしないでください。 Visual Studio のセットアップのオプション機能として含まれています。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
+ Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールしないでください。 Visual Studio のセットアップのオプション機能として含まれています。 また、後から VS SDK をインストールすることもできます。 詳細については、"[Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)"を参照してください。  
   
 ## <a name="creating-a-mef-project"></a>MEF プロジェクトを作成します。  
   
 #### <a name="to-create-a-mef-project"></a>MEF プロジェクトを作成するには  
   
-1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を`SignatureHelpTest`します。  
+1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューション `SignatureHelpTest`の名前を指定します。  
   
 2.  エディター分類子の項目テンプレートをプロジェクトに追加します。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能を作成する](../extensibility/creating-an-extension-with-an-editor-item-template.md)します。  
   
@@ -57,7 +54,7 @@ ms.locfileid: "39498906"
   
 #### <a name="to-implement-the-signature-help-signatures-and-parameters"></a>シグネチャ ヘルプの署名とパラメーターを実装するには  
   
-1.  クラス ファイルを追加し、名前`SignatureHelpSource`します。  
+1.  クラス ファイルを追加し、その名前を `SignatureHelpSource`にします。  
   
 2.  次の imports を追加します。  
   
@@ -248,4 +245,4 @@ ms.locfileid: "39498906"
 4.  かっこを入力すると後の 2 つの署名の一覧を表示するツールヒントが表示されます、`add()`メソッド。  
   
 ## <a name="see-also"></a>関連項目  
- [チュートリアル: コンテンツの種類をファイル名拡張子にリンクします。](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+ [チュートリアル: コンテンツの種類をファイル名拡張子にリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

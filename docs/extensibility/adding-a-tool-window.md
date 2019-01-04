@@ -1,9 +1,6 @@
 ---
 title: ツール ウィンドウの追加 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 550e483ec2a8cd4b4126e4c0838dc8d2870af59c
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 6c3e4c896a4460ebdfa7b88e25b24e698b325c84
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39151932"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53967551"
 ---
 # <a name="add-a-tool-window"></a>ツール ウィンドウを追加します。
 このチュートリアルでは、ツール ウィンドウを作成し、次の方法で Visual Studio に統合する方法について説明します。  
@@ -34,8 +31,8 @@ ms.locfileid: "39151932"
   
 -   ツール ウィンドウの既定の位置を設定します。  
   
-## <a name="prerequisites"></a>前提条件  
- Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
+## <a name="prerequisites"></a>必須コンポーネント  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、"[Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)"を参照してください。  
   
 ## <a name="create-a-tool-window"></a>ツール ウィンドウを作成します。  
   

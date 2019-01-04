@@ -1,13 +1,8 @@
 ---
 title: ビルドと SharePoint ソリューションのデバッグ |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -18,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 82733a8d3e908e82ad8f841857aa70374495e556
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 0ab8fe8b7a6a26e855e603a2f2969c894ff7da50
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283536"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53987195"
 ---
 # <a name="build-and-debug-sharepoint-solutions"></a>ビルドし、SharePoint ソリューションのデバッグ
   ビルドと SharePoint ソリューションのデバッグはビルドと他の種類のプロジェクトのデバッグと同じ一般に、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。 このセクションのトピックでは、いくつかある相違点について説明します。  
@@ -39,7 +34,7 @@ ms.locfileid: "44283536"
 |パッケージの中間ファイル。|*\<プロジェクト名 > \pkgobj\debug*または *\<ProjectName > \pkgobj\release*|  
   
 ## <a name="build-sharepoint-solutions"></a>SharePoint ソリューションをビルドします。
- SharePoint ソリューションをビルドするには、インストールされている SharePoint サーバーの正しいバージョンが、開発用コンピューターに必要です。 それ以外の場合、SharePoint ソリューションの構築は、その他の種類のプロジェクトをビルドする場合と同じ[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。 詳細については、次を参照してください。[方法: ビルドの SharePoint ソリューション](../sharepoint/how-to-build-sharepoint-solutions.md)します。  
+ SharePoint ソリューションをビルドするには、インストールされている SharePoint サーバーの正しいバージョンが、開発用コンピューターに必要です。 それ以外の場合、SharePoint ソリューションの構築は、その他の種類のプロジェクトをビルドする場合と同じ[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。 詳細については、「[方法 :SharePoint ソリューションをビルド](../sharepoint/how-to-build-sharepoint-solutions.md)します。  
   
 ## <a name="debug-and-test-sharepoint-solutions"></a>デバッグし、SharePoint ソリューションのテスト
  デバッグをする前に[!include[vsprvs](../sharepoint/includes/vsprvs-md.md)]コピー、 *.wsp* SharePoint サーバーにパッケージがサイトと Web スコープの機能をアクティブにし、場合によっては、プロジェクトを開始します。 それ以外の場合は、プロジェクトを手動で開く必要があります。 詳細については、次を参照してください。[のトラブルシューティングを行う SharePoint ソリューション](../sharepoint/troubleshooting-sharepoint-solutions.md)と[デバッグの SharePoint ソリューション](../sharepoint/debugging-sharepoint-solutions.md)します。  
@@ -57,5 +52,3 @@ ms.locfileid: "44283536"
  [SharePoint ソリューションを開発します。](../sharepoint/developing-sharepoint-solutions.md)   
  [サーバー エクスプ ローラーを使用した SharePoint 接続を参照します。](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)   
  [パッケージ化し、SharePoint ソリューションのデプロイ](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
-  
- 

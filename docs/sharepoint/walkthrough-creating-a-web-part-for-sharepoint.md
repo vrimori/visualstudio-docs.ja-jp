@@ -1,13 +1,8 @@
 ---
-title: 'チュートリアル: SharePoint の Web パーツの作成 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: For SharePoint Web パーツの作成 |Microsoft Docs'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -19,14 +14,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 09b9299c6428ef63ccf71220fc3cb599e9e3b5a9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 5f2c851659d09cc118f8f54b6e82bb3b806d7e34
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49872409"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53944286"
 ---
-# <a name="walkthrough-create-a-web-part-for-sharepoint"></a>チュートリアル: SharePoint の web パーツを作成します。
+# <a name="walkthrough-create-a-web-part-for-sharepoint"></a>チュートリアル: For SharePoint の web パーツを作成します。
 
 Web パーツを使用すると、ブラウザーから SharePoint サイト ページのコンテンツ、外観、および動作を直接変更できます。 このチュートリアルを使用して Web パーツを作成する方法を示します、 **Web パーツ**Visual Studio 2010 での項目テンプレート。
 
@@ -222,6 +217,6 @@ Web パーツ動詞メニューに表示される項目をクリックすると�
 ## <a name="see-also"></a>関連項目
 
 [For SharePoint の web パーツを作成します。](../sharepoint/creating-web-parts-for-sharepoint.md)  
-[方法: SharePoint web パーツの作成](../sharepoint/how-to-create-a-sharepoint-web-part.md)  
+[方法: SharePoint web パーツを作成します。](../sharepoint/how-to-create-a-sharepoint-web-part.md)  
 [方法: デザイナーを使用して、SharePoint web パーツを作成します。](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)  
-[チュートリアル: SharePoint のデザイナーを使用して web パーツを作成します。](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)
+[チュートリアル: デザイナーを使用して、SharePoint の web パーツを作成します。](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)

@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによって文書内のテキストを書式設定'
-ms.custom: ''
+title: '方法: プログラムによって文書でテキストの書式設定'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,14 +14,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: baf6f49b0347aa4a770b4f7a47c7fa8195d5ede5
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 2e0cc5c9e42d3de2b0b5ed34664639b70b31abb3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35257411"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53835277"
 ---
-# <a name="how-to-programmatically-format-text-in-documents"></a>方法: プログラムによって文書内のテキストを書式設定
+# <a name="how-to-programmatically-format-text-in-documents"></a>方法: プログラムによって文書でテキストの書式設定
   <xref:Microsoft.Office.Interop.Word.Range> オブジェクトを使用することにより、Microsoft Office Word 文書のテキストの書式を設定できます。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
@@ -51,7 +48,5 @@ ms.locfileid: "35257411"
   
 ## <a name="see-also"></a>関連項目  
  [方法: プログラムで定義し、ドキュメントで範囲を選択します](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   
- [方法: プログラムによって Word 文書にテキストを挿入](../vsto/how-to-programmatically-insert-text-into-word-documents.md)   
- [方法: プログラムによって検索し、文書内のテキストを置換](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)  
-  
-  
+ [方法: プログラムによって Word 文書にテキストを挿入します。](../vsto/how-to-programmatically-insert-text-into-word-documents.md)   
+ [方法: プログラムを検索して、文書内のテキストを置換](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)  

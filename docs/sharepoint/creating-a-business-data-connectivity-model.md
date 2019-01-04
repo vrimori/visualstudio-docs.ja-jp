@@ -1,13 +1,8 @@
 ---
 title: ビジネス データ接続モデルの作成 |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -20,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 68940d6e48f1f3a3e51017e1cc838976735de104
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 2a1feefe5bc338460f359dd6c1a25b50bddf67ba
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49930207"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53957486"
 ---
 # <a name="create-a-business-data-connectivity-model"></a>ビジネス データ接続モデルを作成します。
   ビジネス データ接続 (BDC) モデルを作成したり、Visual Studio を使用して、既存の BDC モデルをカスタマイズすることができます。 各 SharePoint プロジェクトには、モデルの 1 つだけ含めることができます。 詳細については、次を参照してください。 [SharePoint ビジネス データを統合](../sharepoint/integrating-business-data-into-sharepoint.md)します。  
@@ -45,7 +40,7 @@ ms.locfileid: "49930207"
 |モデル定義ファイル|エンティティ、メソッド、基幹業務 (LOB) システム オブジェクト、およびその他のモデルを記述するメタデータを定義する XML が含まれています。<br /><br /> BDC デザイナーを使用してこのファイルのメタデータを修正**BDC エクスプ ローラー**、 **BDC メソッドの詳細**ウィンドウ、および**プロパティ**ウィンドウ。|  
 |エンティティ サービス コード ファイル|取得、更新、および既定のエンティティのインスタンスを削除するメソッドが含まれています。|  
   
- エンティティのプロパティを定義するには、エンティティのコード ファイルを編集します。 詳細については、次を参照してください。[方法: エンティティ モデルを追加する](../sharepoint/how-to-add-an-entity-to-a-model.md)します。  
+ エンティティのプロパティを定義するには、エンティティのコード ファイルを編集します。 詳細については、「[方法 :エンティティ モデルを追加する](../sharepoint/how-to-add-an-entity-to-a-model.md)します。  
   
  取得、更新、およびエンティティのインスタンスを削除、エンティティ サービス コード ファイルにコードを追加します。 詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)します。  
   
@@ -61,7 +56,7 @@ ms.locfileid: "49930207"
   
 - パッケージ化し、既存のモデルを複数の SharePoint サーバー ファームに展開します。  
   
-  どちらの場合は、インポートするモデルで定義されている LOB システムには影響せず、期待どおりに機能し続けます。 既存のモデルを SharePoint プロジェクトを追加する Visual Studio を使用して、**既存項目の追加** ダイアログ ボックス。 詳細については、次を参照してください。[方法: SharePoint プロジェクトに既存の BDC モデル ファイルを追加](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)します。  
+  どちらの場合は、インポートするモデルで定義されている LOB システムには影響せず、期待どおりに機能し続けます。 既存のモデルを SharePoint プロジェクトを追加する Visual Studio を使用して、**既存項目の追加** ダイアログ ボックス。 詳細については、「[方法 :既存の BDC モデル ファイルを SharePoint プロジェクトに追加](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)します。  
   
   .NET Framework アセンブリの型の LOB システムをインポートしたモデルに追加するにはでオプションを選択して、**追加の .NET アセンブリの LobSystem**します。 これにより、カスタム コードを記述し、デザイナーを使用して、インポートしたモデルのメタデータを定義することができます。  
   
@@ -69,9 +64,7 @@ ms.locfileid: "49930207"
   
 |タイトル|説明|  
 |-----------|-----------------|  
-|[方法: BDC モデルの作成](../sharepoint/how-to-create-a-bdc-model.md)|新しい BDC モデルを作成する方法を示します。|  
-|[方法: SharePoint プロジェクトに既存の BDC モデル ファイルを追加](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)|SharePoint プロジェクトに既存のモデルをインポートする方法を示します。|  
+|[方法: BDC モデルを作成します。](../sharepoint/how-to-create-a-bdc-model.md)|新しい BDC モデルを作成する方法を示します。|  
+|[方法: SharePoint プロジェクトに既存の BDC モデル ファイルを追加します。](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)|SharePoint プロジェクトに既存のモデルをインポートする方法を示します。|  
 |[方法: リソース ファイルを使用して、ローカライズされた名前、プロパティ、およびアクセス許可を指定するには](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)|Web パーツまたは Web ページで、モデルが使用されるときに、モデルのメタデータとマージする文字列を提供する方法について説明します。|  
 |[方法: BDC 機能にカスタム アセンブリを含める](../sharepoint/how-to-include-a-custom-assembly-in-a-bdc-feature.md)|この機能にカスタム アセンブリを含める方法を示します。|  
-  
- 

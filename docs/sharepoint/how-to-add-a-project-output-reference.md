@@ -1,13 +1,8 @@
 ---
 title: '方法: プロジェクト出力参照の追加 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -19,14 +14,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 47b6a3d164bbe1ddcda6d131275427fb1f815198
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 4e7c93b0c23d14c2b129d165cd3a8d701ace8ea1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36755478"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53897295"
 ---
-# <a name="how-to-add-a-project-output-reference"></a>方法: プロジェクト出力参照を追加
+# <a name="how-to-add-a-project-output-reference"></a>方法: プロジェクト出力参照を追加します。
   SharePoint 以外のプロジェクト アセンブリ (または Silverlight プロジェクトの .xap ファイル) を SharePoint に展開するには、それらをプロジェクト出力参照として追加します。  
   
  このプロセスは、2 つのプロジェクト間ソリューション ビルドの依存関係を作成します。 SharePoint プロジェクトをビルドおよび配置する前に、プロジェクト出力参照に関連付けられているプロジェクトが構築されます。  
@@ -47,7 +42,5 @@ ms.locfileid: "36755478"
   
 ## <a name="see-also"></a>関連項目
  [プロジェクト項目でパッケージ化と配置の情報を提供します。](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
- [方法: 安全なコントロールとしてマークを制御](../sharepoint/how-to-mark-controls-as-safe-controls.md)   
+ [方法: 安全なコントロールとしてマーク コントロール](../sharepoint/how-to-mark-controls-as-safe-controls.md)   
  [パッケージ化し、SharePoint ソリューションのデプロイ](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
-  
-  

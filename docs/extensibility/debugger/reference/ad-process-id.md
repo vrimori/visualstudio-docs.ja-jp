@@ -1,9 +1,6 @@
 ---
 title: AD_PROCESS_ID |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - AD_PROCESS_ID
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9634d16a89670b92e616e4bd6b878f41166aea2b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 5e805b11168dd1936b116a8873d61e333bee37f1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49833877"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53853399"
 ---
 # <a name="adprocessid"></a>AD_PROCESS_ID
 システム ID または GUID 可能性のあるプロセス ID を指定します。  
@@ -31,9 +28,9 @@ ms.locfileid: "49833877"
 typedef struct _AD_PROCESS_ID {  
    AD_PROCESS_ID_TYPE ProcessIdType;  
    union {  
-      DWORD dwProcessId;   
-      GUID  guidProcessId;   
-      DWORD dwUnused;   
+      DWORD dwProcessId;   
+      GUID  guidProcessId;   
+      DWORD dwUnused;   
    } ProcessId;  
 } AD_PROCESS_ID;  
 ```  
@@ -41,9 +38,9 @@ typedef struct _AD_PROCESS_ID {
 ```csharp  
 public struct AD_PROCESS_ID {  
    AD_PROCESS_ID_TYPE ProcessIdType;  
-   DWORD              dwProcessId;   
-   GUID               guidProcessId;   
-   DWORD              dwUnused;   
+   DWORD              dwProcessId;   
+   GUID               guidProcessId;   
+   DWORD              dwUnused;   
 };  
 ```  
   
@@ -80,9 +77,9 @@ public struct AD_PROCESS_ID {
 ## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   

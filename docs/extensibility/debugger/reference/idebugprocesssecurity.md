@@ -1,9 +1,6 @@
 ---
-title: IDebugProcessSecurity |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugProcessSecurity |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - IDebugProcessSecurity interface
@@ -13,15 +10,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6e78baf34a3ecb6d5b40162b424c11a104617669
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7e34a93e73bd1c4c9b5e70f89d318c2db6a84f2b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31116254"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53967957"
 ---
 # <a name="idebugprocesssecurity"></a>IDebugProcessSecurity
-`IDebugProcessSecurity` ユーザーに警告する、プロセスにアタッチされている安全なポート業者によって実装されます。  
+`IDebugProcessSecurity` 安全なプロセスにアタッチがユーザーに警告するポートのサプライヤーによって実装されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,21 +31,21 @@ IDebugProcessSecurity : IUnknown
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetUserName](../../../extensibility/debugger/reference/idebugprocesssecurity-getusername.md)|ポートのサプライヤーからユーザー名を取得します。|  
-|[QueryCanSafelyAttach](../../../extensibility/debugger/reference/idebugprocesssecurity-querycansafelyattach.md)|デバッグ プロセスにアタッチされている安全にユーザーに通知します。|  
+|[GetUserName](../../../extensibility/debugger/reference/idebugprocesssecurity-getusername.md)|ポート サプライヤーからユーザー名を取得します。|  
+|[QueryCanSafelyAttach](../../../extensibility/debugger/reference/idebugprocesssecurity-querycansafelyattach.md)|ユーザーに警告する、デバッグ プロセスにアタッチする安全ではありません。|  
   
-## <a name="remarks"></a>コメント  
- 警告を表示し、アタッチするプロセスと見なされます。 安全でない場合、キャンセルするユーザーを許可するには、このインターフェイスを実装します。  
+## <a name="remarks"></a>Remarks  
+ 警告が表示し、ユーザーが接続しているプロセスは、安全でない考慮できる場合はキャンセルできるようにするには、このインターフェイスを実装します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [ポート](../../../extensibility/debugger/ports.md)   
- [ポートの仕入先](../../../extensibility/debugger/port-suppliers.md)   
+ [ポート サプライヤー](../../../extensibility/debugger/port-suppliers.md)   
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

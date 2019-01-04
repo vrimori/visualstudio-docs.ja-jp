@@ -1,9 +1,6 @@
 ---
-title: IDebugExpressionEvaluator |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugExpressionEvaluator |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugExpressionEvaluator
@@ -15,16 +12,16 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d5a4b7061b5de50162bd04e033a983987ab4f35f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b5b66c13b202e4f0b4838565f4ee5816f0dbdeb5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31117463"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53846361"
 ---
 # <a name="idebugexpressionevaluator"></a>IDebugExpressionEvaluator
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
+>  Visual Studio 2015 での式エバリュエーターの実装には、この方法は非推奨とされます。 CLR 式エバリュエーターの実装方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
   
  このインターフェイスは、式エバリュエーターを表します。  
   
@@ -38,33 +35,33 @@ IDebugExpressionEvaluator : IUnknown
  式エバリュエーターでは、このインターフェイスを実装する必要があります。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- このインターフェイスを取得するには、を通じて、式エバリュエーターをインスタンス化、`CoCreateInstance`エバリュエーターのクラス ID (CLSID) を使用してメソッドです。 この例を参照してください。  
+ このインターフェイスを取得するには、を通じて、式エバリュエーターをインスタンス化、`CoCreateInstance`エバリュエーターのクラス ID (CLSID) を使用してメソッド。 例を参照してください。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
  次の表は、メソッドの`IDebugExpressionEvaluator`します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[解析](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)|式の文字列を解析された式に変換します。|  
+|[Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)|式の文字列を解析された式に変換します。|  
 |[GetMethodProperty](../../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md)|ローカル変数、引数、およびメソッドの他のプロパティを取得します。|  
 |[GetMethodLocationProperty](../../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodlocationproperty.md)|メモリ アドレスには、メソッドの場所とオフセットを変換します。|  
-|[setlocale、_wsetlocale](../../../extensibility/debugger/reference/idebugexpressionevaluator-setlocale.md)|印刷可能な結果の作成に使用する言語を決定します。|  
-|[SetRegistryRoot](../../../extensibility/debugger/reference/idebugexpressionevaluator-setregistryroot.md)|レジストリ ルートを設定します。 サイド バイ サイドのデバッグに使用します。|  
+|[SetLocale](../../../extensibility/debugger/reference/idebugexpressionevaluator-setlocale.md)|印刷可能な結果の作成に使用する言語を決定します。|  
+|[SetRegistryRoot](../../../extensibility/debugger/reference/idebugexpressionevaluator-setregistryroot.md)|レジストリ ルートを設定します。 サイド バイ サイドでのデバッグに使用します。|  
   
-## <a name="remarks"></a>コメント  
- 一般的な状況で、デバッグ エンジン (DE) インスタンスを作成、式エバリュエーター (EE) への呼び出しの結果として[ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)です。 デがレジストリから EE の CLSID を取得、DE には、言語および使用したい EE の仕入先が認識している、ため (、[をデバッグ用の SDK ヘルパー](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)関数、`GetEEMetric`取得に役立ちます)。  
+## <a name="remarks"></a>Remarks  
+ デバッグ エンジン (DE) は一般的な状況で、呼び出しの結果として、式エバリュエーター (EE) をインスタンス化[ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)します。 デがレジストリから EE の CLSID を取得、DE、言語として使用する EE の仕入先を知っている、ため (、[デバッグ用の SDK ヘルパー](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)関数、 `GetEEMetric`、この検索に役立ちます)。  
   
- EE はインスタンス化した後、DE を呼び出す[解析](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)に式を解析し、保存、 [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md)オブジェクト。 その後への呼び出し[EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)式を評価します。  
+ EE がインスタンス化された後、DE を呼び出す[解析](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)式を解析し、保存、 [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md)オブジェクト。 その後、呼び出しを[EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)式を評価します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: ee.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="example"></a>例  
- この例では、ソース コードでシンボル プロバイダーとアドレスを指定された式エバリュエーターをインスタンス化する方法を示します。 この例では、`GetEEMetric`から、[をデバッグ用の SDK ヘルパー](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)ライブラリ、dbgmetric.lib です。  
+ この例では、ソース コードでシンボル プロバイダーとアドレスを指定された式エバリュエーターをインスタンス化する方法を示します。 この例の関数の場合、`GetEEMetric`から、[デバッグ用の SDK ヘルパー](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)ライブラリ、dbgmetric.lib します。  
   
 ```cpp  
 IDebugExpressionEvaluator GetExpressionEvaluator(IDebugSymbolProvider pSymbolProvider,  
@@ -106,7 +103,7 @@ IDebugExpressionEvaluator GetExpressionEvaluator(IDebugSymbolProvider pSymbolPro
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [式の評価インターフェイス](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)   
+ [式の評価のインターフェイス](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)   
  [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)   
  [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md)   
  [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)   

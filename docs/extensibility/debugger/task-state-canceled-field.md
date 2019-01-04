@@ -1,9 +1,6 @@
 ---
 title: TASK_STATE_CANCELED フィールド |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - TASK_STATE_CANCELED field, Task class [.NET Framework debug engines]
@@ -13,17 +10,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a934a70028f392a2a851c11c1b7bc9005dc4a38c
-ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
+ms.openlocfilehash: 9070b2bfd9e5134b02ffcde34025b8a46b0d3687
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39276781"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53941220"
 ---
 # <a name="taskstatecanceled-field"></a>TASK_STATE_CANCELED フィールド
 実行中の状態に達したか、またはその取り消しの確認、例外なく完了する前に、タスクが取り消されました。  
   
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **名前空間:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
  **アセンブリ:** mscorlib (mscorlib.dll 内)  
   

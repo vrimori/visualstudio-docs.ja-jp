@@ -10,18 +10,17 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 490c9c3fe5724373072b2857eb0ce3da7905b172
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a0b540eb6f8e8c09845e069275a0a901c2809806
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813324"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53886372"
 ---
 # <a name="understanding-the-dsl-code"></a>DSL コードについて
 ドメイン固有言語 (DSL) ソリューションには、読み取りし、Visual Studio で DSL のインスタンスの更新に使用できる API が生成されます。 この API は、DSL 定義から生成されるコード中に定義されます。 このトピックでは生成される API を説明します。
 
-## <a name="the-example-solution-component-diagrams"></a>ソリューション例: コンポーネント図
+## <a name="the-example-solution-component-diagrams"></a>ソリューションの例:コンポーネント図
  このトピックの例のほとんどのソースでは、ソリューションを作成するから DSL を作成、**コンポーネント モデル**ソリューション テンプレート。 これは、新しい DSL ソリューションを作成するときに表示される標準のテンプレートの 1 つです。
 
 > [!NOTE]
@@ -66,11 +65,11 @@ ms.locfileid: "49813324"
 
  `ConnectionBuilders.cs`
 
- 接続ビルダーはリレーションシップを作成するクラスです。 これは接続ツールの裏にあるコードです。 このファイルは各接続ツールに対するクラスのペアを含みます。 名前は、ドメイン リレーションシップと接続ツールの名前から派生されます:*リレーションシップ*ビルダー、および*ConnectorTool*ConnectAction します。
+ 接続ビルダーはリレーションシップを作成するクラスです。 これは接続ツールの裏にあるコードです。 このファイルは各接続ツールに対するクラスのペアを含みます。 名前は、ドメイン リレーションシップと接続ツールの名前から派生されます。*リレーションシップ*ビルダー、および*ConnectorTool*ConnectAction します。
 
  (コンポーネント ソリューションの例で、接続ビルダーの 1 つは ConnectionBuilder という名前ですが、ドメイン リレーションシップは Connection という名前なので、これは偶然の一致です)
 
- リレーションシップを作成、*リレーションシップ*`Builder.Connect()`メソッド。 既定のバージョンは、ソースとターゲットのモデル要素が受け入れ可能であることを検証し、リレーションシップをインスタンス化します。 例えば:
+ リレーションシップを作成、*リレーションシップ*`Builder.Connect()`メソッド。 既定のバージョンは、ソースとターゲットのモデル要素が受け入れ可能であることを検証し、リレーションシップをインスタンス化します。 例:
 
  `CommentReferencesSubject(sourceAccepted, targetAccepted);`
 

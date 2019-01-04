@@ -1,8 +1,7 @@
 ---
-title: 'CA2201: 予約された例外の種類を発生させません'
+title: CA2201:予約された例外の種類を発生させません
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - DoNotRaiseReservedExceptionTypes
@@ -16,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 763c8656507f8a1d9c1f59bd548469c338aeb012
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 9b8eff3ac514e82e16327bfb873ed5fa2e9ccfba
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45547520"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53911940"
 ---
-# <a name="ca2201-do-not-raise-reserved-exception-types"></a>CA2201: 予約された例外の種類を発生させません
+# <a name="ca2201-do-not-raise-reserved-exception-types"></a>CA2201:予約された例外の種類を発生させません
 
 |||
 |-|-|
@@ -94,4 +93,4 @@ ms.locfileid: "45547520"
 
 ## <a name="related-rules"></a>関連するルール
 
-- [CA1031: 一般的な例外の種類はキャッチしません](../code-quality/ca1031-do-not-catch-general-exception-types.md)
+- [CA 1031:一般的な例外の種類はキャッチしません](../code-quality/ca1031-do-not-catch-general-exception-types.md)

@@ -8,13 +8,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5b8b70e1446894d93aa29024dada76af29b818eb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 4374f188e0d67e6ce66ad2979b16de959e14d083
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49889634"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53895754"
 ---
 # <a name="update-shapes-and-connectors-to-reflect-the-model"></a>シェイプおよびコネクタを更新してモデルに反映する
 
@@ -86,7 +85,7 @@ DSL 定義で、シェイプ クラスを右クリックして**公開されて�
 
 ## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>OnChildConfigured を使用して、図形のプロパティを初期化するには
 
-図形のプロパティは、最初に設定を作成、上書き`OnChildConfigured()`で図のクラスの部分定義。 図のクラスは、DSL 定義で指定し、生成されたコードが**Dsl\Generated Code\Diagram.cs**します。 例えば:
+図形のプロパティは、最初に設定を作成、上書き`OnChildConfigured()`で図のクラスの部分定義。 図のクラスは、DSL 定義で指定し、生成されたコードが**Dsl\Generated Code\Diagram.cs**します。 例:
 
 ```csharp
 partial class MyLanguageDiagram

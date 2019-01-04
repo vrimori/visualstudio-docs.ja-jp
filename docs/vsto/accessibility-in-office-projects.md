@@ -1,8 +1,6 @@
 ---
 title: Office プロジェクトのユーザー補助機能
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology: office-development
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 dev_langs:
@@ -18,19 +16,20 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 97f96e5a79a6e98bb6367d9c00975e3e6288385a
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.openlocfilehash: 32d44c33192d9d4e4fdcf1b8db8cb47102a1df61
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53803812"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53833327"
 ---
 # <a name="accessibility-in-office-projects"></a>Office プロジェクトのユーザー補助機能
-  Microsoft Visual Studio と Microsoft Office には、標準のユーザー補助の要件を満たすカスタム ソリューションを構築するための多くのユーザー補助機能が含まれます。 Microsoft では、Web 上のユーザー補助のガイドラインを公開します。 詳細については、次を参照してください。、[アクセシビリティ web サイト](http://go.microsoft.com/fwlink/?LinkID=37113)します。
 
- ほとんどの場合は、Visual Studio での Office プロジェクトには、ユーザー補助の標準や公開プロパティ、ソリューションにアクセスできるようにするために設定できますが満たしています。 ただし、ユーザー補助機能が制限されている一部の機能があります。
+Microsoft Visual Studio と Microsoft Office には、標準のユーザー補助の要件を満たすカスタム ソリューションを構築するための多くのユーザー補助機能が含まれます。 Microsoft では、Web 上のユーザー補助のガイドラインを公開します。 詳細については、次を参照してください。、[アクセシビリティ web サイト](http://go.microsoft.com/fwlink/?LinkID=37113)します。
 
- [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
+ほとんどの場合は、Visual Studio での Office プロジェクトには、ユーザー補助の標準や公開プロパティ、ソリューションにアクセスできるようにするために設定できますが満たしています。 ただし、ユーザー補助機能が制限されている一部の機能があります。
+
+[!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
 ## <a name="accessibility-at-design-time"></a>デザイン時のユーザー補助
 

@@ -1,9 +1,6 @@
 ---
 title: 言語サービスとエディターの拡張ポイント |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extension points
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2df3de4bfba0510cf3c8a5474a363a5ec579a79f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d99916c31e35f7494a402ff4c5d1a7b182a0c52d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49927750"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53907963"
 ---
 # <a name="language-service-and-editor-extension-points"></a>言語サービスとエディターの拡張ポイント
 エディターでは、ほとんどの言語サービスの機能を含む、Managed Extensibility Framework (MEF) コンポーネント パーツとして拡張する拡張ポイントを提供します。 これらには、主要な拡張機能ポイントのカテゴリです。  
@@ -273,7 +270,7 @@ internal IEditorFormatMapService FormatMapService { get; set; }
 - <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>: 表示要素に関連付けられています。  
   
   > [!NOTE]
-  >  例については、 <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>、HighlightWordTag 定義を参照してください。[チュートリアル: テキストの強調表示](../extensibility/walkthrough-highlighting-text.md)します。  
+  >  例については、 <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>、HighlightWordTag 定義を参照してください。[チュートリアル。テキストの強調表示](../extensibility/walkthrough-highlighting-text.md)します。  
   
 - <xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>: に関連付けられたリージョン展開またはアウトラインで折りたたまれていることができます。  
   
@@ -319,7 +316,7 @@ internal class HighlightWordFormatDefinition : MarkerFormatDefinition
  タグには、この形式の定義を適用するには、クラス (表示名ではなく) の name 属性で設定した名前を参照します。  
   
 > [!NOTE]
->  例については、 <xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition>、HighlightWordFormatDefinition クラスを参照してください。[チュートリアル: テキストの強調表示](../extensibility/walkthrough-highlighting-text.md)します。  
+>  例については、 <xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition>、HighlightWordFormatDefinition クラスを参照してください。[チュートリアル。テキストの強調表示](../extensibility/walkthrough-highlighting-text.md)します。  
   
 ## <a name="extend-adornments"></a>表示要素を拡張します。  
  修飾は、テキスト ビューに表示されるテキストを追加できるかをテキスト自体を表示する視覚効果を定義します。 任意の型として、独自の表示要素を定義する<xref:System.Windows.UIElement>します。  
@@ -328,7 +325,7 @@ internal class HighlightWordFormatDefinition : MarkerFormatDefinition
   
 - <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: 表示要素の名前。  
   
-- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: その他の装飾層に対して表示要素の順序付けします。 クラスは、 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedAdornmentLayers> 4 つの既定の層を定義します。 選択、アウトライン、カレット、およびテキスト。  
+- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: その他の装飾層に対して表示要素の順序付けします。 クラスは、 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedAdornmentLayers> 4 つの既定の層を定義します。選択、アウトライン、カレット、およびテキスト。  
   
   次の例では、装飾層定義のエクスポート属性を示します。  
   
@@ -546,7 +543,7 @@ internal class TestCompletionSourceProvider : ICompletionSourceProvider
   
  IntelliSense のソースの実装の詳細については、次のチュートリアルを参照してください。  
   
- [チュートリアル: 表示クイック ヒント](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)  
+ [チュートリアル: クイック ヒントを表示します。](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)  
   
  [チュートリアル: シグネチャ ヘルプを表示します。](../extensibility/walkthrough-displaying-signature-help.md)  
   
@@ -573,4 +570,4 @@ internal class TestIntellisenseControllerProvider : IIntellisenseControllerProvi
   
  IntelliSense のコント ローラーの使用に関する詳細については、次のチュートリアルを参照してください。  
   
- [チュートリアル: 表示クイック ヒント](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)
+ [チュートリアル: クイック ヒントを表示します。](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)
