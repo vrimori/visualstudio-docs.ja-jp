@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによって文書で見つかった項目をループ'
-ms.custom: ''
+title: '方法: プログラムによって文書で見つかった項目をループします。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,14 +14,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f36ddfa182d1a0440ca733b19c34a27b245007fc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 2a04cf49d1414ae1cedf2d157237e53883182eb7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49848060"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53961843"
 ---
-# <a name="how-to-programmatically-loop-through-found-items-in-documents"></a>方法: プログラムによって文書で見つかった項目をループ
+# <a name="how-to-programmatically-loop-through-found-items-in-documents"></a>方法: プログラムによって文書で見つかった項目をループします。
   <xref:Microsoft.Office.Interop.Word.Find>クラスには、<xref:Microsoft.Office.Interop.Word.Find.Found%2A>を返すプロパティ**true**検索対象の項目が見つかるたびにします。 <xref:Microsoft.Office.Interop.Word.Range> メソッドを使用して、 <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> 内で見つかったすべてのインスタンスをループできます。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
@@ -75,9 +72,7 @@ ms.locfileid: "49848060"
   
 ## <a name="see-also"></a>関連項目  
  [方法: プログラムを検索して、rext ドキュメント内の置換](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)   
- [方法: プログラムによって Word の検索オプションを設定](../vsto/how-to-programmatically-set-search-options-in-word.md)   
+ [方法: プログラムによって Word の検索オプションを設定します。](../vsto/how-to-programmatically-set-search-options-in-word.md)   
  [方法: プログラムで定義し、ドキュメントで範囲を選択します](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   
- [方法: プログラムによって検索後に選択内容を復元](../vsto/how-to-programmatically-restore-selections-after-searches.md)   
+ [方法: プログラムによって検索後に選択内容を復元します。](../vsto/how-to-programmatically-restore-selections-after-searches.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
-  
-  

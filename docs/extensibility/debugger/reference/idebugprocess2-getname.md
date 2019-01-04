@@ -1,9 +1,6 @@
 ---
 title: IDebugProcess2::GetName |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugProcess2::GetName
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 06b4d22a0d15a3e600afa286abd1b86756c61c85
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 8ae9fc5608a6dbb6aeb493ee5937b15aa346b636
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49926281"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53960525"
 ---
 # <a name="idebugprocess2getname"></a>IDebugProcess2::GetName
 タイトル、フレンドリ名、またはプロセスのファイル名を取得します。  
@@ -28,16 +25,16 @@ ms.locfileid: "49926281"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT GetName(   
-   GETNAME_TYPE  gnType,  
-   BSTR*         pbstrName  
+HRESULT GetName(   
+   GETNAME_TYPE  gnType,  
+   BSTR*         pbstrName  
 );  
 ```  
   
 ```csharp  
-int GetName(   
-   enum_GETNAME_TYPE  gnType,  
-   out string         pbstrName  
+int GetName(   
+   enum_GETNAME_TYPE  gnType,  
+   out string         pbstrName  
 );  
 ```  
   

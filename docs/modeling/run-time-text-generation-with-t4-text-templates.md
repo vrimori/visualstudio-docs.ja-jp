@@ -16,13 +16,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: dde7b368297979e53d4ee09b75961652749d3321
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: bfbb0affe6c159f27a2568d5da35bcb98e80cdeb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380744"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53939928"
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>T4 テキスト テンプレートを使用した実行時テキスト生成
 
@@ -300,7 +299,7 @@ include ディレクティブは、テンプレート ファイルまたはイ�
 
 抽象クラスになりうる基底クラス テンプレートを記述することで、実行時テンプレート間でコンテンツを共有することができます。 `<@#template#>` ディレクティブの `inherits` パラメーターを使用して、別のランタイム テンプレート クラスを参照します。
 
-#### <a name="inheritance-pattern-fragments-in-base-methods"></a>継承パターン: 基底メソッドのフラグメント
+#### <a name="inheritance-pattern-fragments-in-base-methods"></a>継承パターン:基本メソッドのフラグメント
 
 次の例で使用されるパターンでは、次の点に注意してください。
 
@@ -355,7 +354,7 @@ begin 1
 end 1
 ```
 
-#### <a name="inheritance-pattern-text-in-base-body"></a>継承パターン: 基底本体内のテキスト
+#### <a name="inheritance-pattern-text-in-base-body"></a>継承パターン:基本の本文内のテキスト
 
 テンプレートの継承を使用する別の方法は、基底テンプレートの中で大きなテキスト定義することです。 派生テンプレートは、ベースのコンテンツに適合したデータと テキスト フラグメントを提供します。
 
@@ -431,7 +430,7 @@ End material for DerivedTemplate1.
 
 ## <a name="related-topics"></a>関連トピック
 
-デザイン時テンプレート: アプリケーションの一部になるコードを生成するテンプレートを使用する場合は次を参照してください。[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
+デザイン時テンプレート:アプリケーションの一部になるコードを生成するテンプレートを使用する場合を参照してください[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)します。
 
 ランタイム テンプレートは、コンパイル時にテンプレートおよびその内容を決定し、任意のアプリケーションで使用できます。 実行時に変更される、テンプレートからテキストを生成する Visual Studio 拡張機能を作成したい場合は、次を参照してください。 [VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)
 

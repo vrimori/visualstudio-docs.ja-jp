@@ -1,9 +1,6 @@
 ---
 title: 言語サービスのコンテキストを提供するレガシ API を使用して |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - language service context
@@ -13,17 +10,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 67ff7d911ef0cdd3debd920ac85e9e3265a619e3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a75ea45216e49aecaac452c1d92ff5a98dd7015c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49909959"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53940259"
 ---
 # <a name="provide-a-language-service-context-by-using-the-legacy-api"></a>従来の API を使用して、言語サービスのコンテキストを提供します。
 2 つのオプションを使用してユーザー コンテキストを提供する言語サービスがある、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]のコア エディター: テキスト マーカーのコンテキストを指定するか、すべてのユーザー コンテキストを提供します。 それぞれの違いが記載されています。  
   
- 独自のエディターに接続されている言語サービスにコンテキストを提供する詳細については、次を参照してください。[方法: エディターのコンテキストを提供](../extensibility/how-to-provide-context-for-editors.md)します。  
+ 独自のエディターに接続されている言語サービスにコンテキストを提供する詳細については、次を参照してください。[方法。エディターのコンテキストを提供](../extensibility/how-to-provide-context-for-editors.md)します。  
   
 ## <a name="provide-text-marker-context-to-the-editor"></a>エディターにテキスト マーカー コンテキストを提供します。  
  テキスト マーカーで示されるコンパイラ エラーのコンテキストを提供する、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターには、実装、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider>インターフェイス。 このシナリオでは、言語サービスは、カーソルがテキスト マーカーに場合にのみにコンテキストを提供します。 これにより、エディターでカーソルをキーワードを提供する、**ダイナミック ヘルプ**属性を持たないウィンドウ。  

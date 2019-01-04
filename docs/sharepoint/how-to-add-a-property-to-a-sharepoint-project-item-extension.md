@@ -1,9 +1,6 @@
 ---
-title: '方法: SharePoint プロジェクト項目の拡張機能にプロパティを追加 |Microsoft Docs'
-ms.custom: ''
+title: '方法: プロパティの SharePoint プロジェクト項目の拡張機能を追加する |Microsoft Docs'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,17 +14,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1af848f432183153707b2debfed563f3a00d4156
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 424e6d6295b0a9af1ec5d155353f766d4ba17689
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36758100"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53950187"
 ---
-# <a name="how-to-add-a-property-to-a-sharepoint-project-item-extension"></a>方法: SharePoint プロジェクト項目の拡張機能にプロパティを追加
+# <a name="how-to-add-a-property-to-a-sharepoint-project-item-extension"></a>方法: SharePoint プロジェクト項目の拡張機能にプロパティを追加します。
   プロジェクト項目の拡張機能を使用して、Visual Studio で既にインストールされている SharePoint プロジェクト アイテムにプロパティを追加することができます。 プロパティを表示する、**プロパティ**ウィンドウで、プロジェクト項目を選択すると**ソリューション エクスプ ローラー**します。  
   
- 次の手順では、プロジェクト項目の拡張機能を既に作成したことを前提としています。 詳細については、次を参照してください。[方法: SharePoint プロジェクト項目の拡張機能作成](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)です。  
+ 次の手順では、プロジェクト項目の拡張機能を既に作成したことを前提としています。 詳細については、「[方法 :SharePoint プロジェクト項目の拡張機能を作成する](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)します。  
   
 ### <a name="to-add-a-property-to-a-project-item-extension"></a>プロジェクト項目の拡張機能にプロパティを追加するには  
   
@@ -51,17 +48,17 @@ ms.locfileid: "36758100"
 ### <a name="specify-the-behavior-of-custom-properties"></a>カスタム プロパティの動作を指定します。  
  カスタム プロパティの表示し、動作を定義することができます、**プロパティ**ウィンドウからの属性を適用することで、<xref:System.ComponentModel>プロパティ定義に名前空間。 次の属性には、多くのシナリオがあります。  
   
--   <xref:System.ComponentModel.DisplayNameAttribute>: に表示されるプロパティの名前を指定します、**プロパティ**ウィンドウ。  
+-   <xref:System.ComponentModel.DisplayNameAttribute>:表示されるプロパティの名前を指定します、**プロパティ**ウィンドウ。  
   
--   <xref:System.ComponentModel.DescriptionAttribute>: の下部に表示される説明文字列を指定します、**プロパティ**、プロパティが選択されている場合は、ウィンドウ。  
+-   <xref:System.ComponentModel.DescriptionAttribute>:下に表示される説明文字列を指定します、**プロパティ**プロパティが選択されている場合は、ウィンドウ。  
   
--   <xref:System.ComponentModel.DefaultValueAttribute>: プロパティの既定値を指定します。  
+-   <xref:System.ComponentModel.DefaultValueAttribute>:プロパティの既定値を指定します。  
   
--   <xref:System.ComponentModel.TypeConverterAttribute>: カスタムの変換との間に表示される文字列を指定します、**プロパティ**ウィンドウと非文字列プロパティの値。  
+-   <xref:System.ComponentModel.TypeConverterAttribute>:カスタムの変換との間に表示される文字列を指定します、**プロパティ**ウィンドウと非文字列プロパティの値。  
   
--   <xref:System.ComponentModel.EditorAttribute>: 使用して、プロパティを変更するカスタム エディターを指定します。  
+-   <xref:System.ComponentModel.EditorAttribute>:使用して、プロパティを変更するカスタム エディターを指定します。  
   
-## <a name="compile-the-code"></a>コードをコンパイルします  
+## <a name="compile-the-code"></a>コードのコンパイル  
  これらの例では、次のアセンブリへの参照を含むクラス ライブラリ プロジェクトが必要です。  
   
 -   Microsoft.VisualStudio.SharePoint  
@@ -72,9 +69,7 @@ ms.locfileid: "36758100"
  拡張機能を展開するには、作成、[!include[vsprvs](../sharepoint/includes/vsprvs-md.md)]アセンブリおよびその他の拡張機能を配布するファイルの拡張機能 (VSIX) にパッケージ化します。 詳細については、次を参照してください。 [Visual Studio の SharePoint ツールの拡張機能を展開](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)します。  
   
 ## <a name="see-also"></a>関連項目
- [方法: SharePoint プロジェクト項目の拡張機能の作成](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)   
- [方法: SharePoint プロジェクト項目の拡張機能のショートカット メニュー項目の追加](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-sharepoint-project-item-extension.md)   
+ [方法: SharePoint プロジェクト項目の拡張機能を作成します。](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)   
+ [方法: SharePoint プロジェクト項目の拡張機能のショートカット メニュー項目を追加します。](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-sharepoint-project-item-extension.md)   
  [SharePoint プロジェクト項目を拡張します。](../sharepoint/extending-sharepoint-project-items.md)   
  [チュートリアル: SharePoint プロジェクト項目の種類を拡張します。](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md)  
-  
-  

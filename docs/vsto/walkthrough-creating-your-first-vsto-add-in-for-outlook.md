@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: は、初めて VSTO アドインを Outlook の作成します。'
-ms.custom: ''
+title: 'チュートリアル: 初めて VSTO アドイン Outlook の作成します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,14 +15,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: fc0f2e7cc7dc40dc305f7860223b5d4acf19a573
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: fbb5c938d6dbd269732b49584fc4e3831e869b0e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49950964"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53962546"
 ---
-# <a name="walkthrough-create-your-first-vsto-add-in-for-outlook"></a>チュートリアル: は、初めて VSTO アドインを Outlook の作成します。
+# <a name="walkthrough-create-your-first-vsto-add-in-for-outlook"></a>チュートリアル: 初めて VSTO アドイン Outlook の作成します。
   このチュートリアルでは、Microsoft Office Outlook 用の VSTO アドインを作成する方法について説明します。 この種のソリューションに作成した機能は、どの Outlook 項目が開いているかにかかわらず、アプリケーション自体に対して使用できます。 詳細については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)します。  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
@@ -145,5 +142,3 @@ ms.locfileid: "49950964"
  [Office ソリューションを構築します。](../vsto/building-office-solutions.md)   
  [Office ソリューションをデプロイします。](../vsto/deploying-an-office-solution.md)   
  [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)  
-  
-  

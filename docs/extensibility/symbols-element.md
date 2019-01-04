@@ -1,9 +1,6 @@
 ---
 title: 要素のシンボル |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - Symbols element (VSCT XML schema)
@@ -14,17 +11,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4186f53ec84c44b97acbc3a59d663404a52dd255
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: aeeaff19eb0eb479cdb7faa441c2cde8f60f52d0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49856734"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53965896"
 ---
 # <a name="symbols-element"></a>Symbols 要素
 Guid およびその他の VSCT 要素で使用される Id を定義します。 アンマネージ コードは、この情報通常は、ヘッダー ファイルで指定されている[Extern 要素](../extensibility/extern-element.md)します。 マネージ コードがこの情報を定義するシンボルの要素の子要素。  
   
- 既存の .cto ファイルから .vsct ファイルを作成する場合、シンボルがシンボル要素の子として生成されます。 詳細については、次を参照してください。[方法: を作成します。既存の Vsct ファイルです。Cto ファイル](../extensibility/internals/how-to-create-a-dot-vsct-file.md#how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file)します。  
+ 既存の .cto ファイルから .vsct ファイルを作成する場合、シンボルがシンボル要素の子として生成されます。 詳細については、「[方法 :作成します。既存の Vsct ファイルです。Cto ファイル](../extensibility/internals/how-to-create-a-dot-vsct-file.md#how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file)します。  
   
  Symbols 要素と混同しないで、[定義要素](../extensibility/define-element.md)、プリプロセッサによって使用される名前と値のペアを定義します。  
   
