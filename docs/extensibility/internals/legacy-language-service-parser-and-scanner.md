@@ -1,9 +1,6 @@
 ---
 title: 従来の言語サービス パーサーとスキャナー |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - parsers, language services [managed package framework]
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d4ca98b5e4f991e795af95e479fa57a38ca2b57a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: daca7b7d49bcd9aa817f26ad485ec35394f50aff
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49912047"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53941850"
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>従来の言語サービスのパーサーとスキャナー
 パーサーは、言語サービスの中核です。 マネージ パッケージ フレームワーク (MPF) 言語のクラスには、表示されているコードに関する情報を選択する言語のパーサーが必要です。 パーサーは、テキストを構文トークンに分割し、し、それらのトークンの種類と機能を識別します。  
@@ -116,7 +113,7 @@ namespace MyNamespace
 12. 完成です。  
   
 ### <a name="summary"></a>まとめ  
- 中かっこの一致操作では、通常、言語要素のペアを単純に制限されます。 3 要素に一致するようより複雑な要素 ("`if(...)`「,」`{`「と」`}`"、または"`else`「,」`{`「と」`}`")、単語補完操作の一環として強調表示されることができます。 たとえば、"else"という単語が完了すると、一致する"`if`"ステートメントを強調表示されます。 一連があった場合`if` / `else if`中かっこの一致するものと同じメカニズムを使用して、それらのすべてのステートメントを強調表示でした。 <xref:Microsoft.VisualStudio.Package.Source>基本クラスは、次のように、このサポート既に: スキャナーはトークンのトリガーの値を返す必要があります<xref:Microsoft.VisualStudio.Package.TokenTriggers>トリガー値と組み合わせると<xref:Microsoft.VisualStudio.Package.TokenTriggers>トークンでカーソル位置の前にします。  
+ 中かっこの一致操作では、通常、言語要素のペアを単純に制限されます。 3 要素に一致するようより複雑な要素 ("`if(...)`「,」`{`「と」`}`"、または"`else`「,」`{`「と」`}`")、単語補完操作の一環として強調表示されることができます。 たとえば、"else"という単語が完了すると、一致する"`if`"ステートメントを強調表示されます。 一連があった場合`if` / `else if`中かっこの一致するものと同じメカニズムを使用して、それらのすべてのステートメントを強調表示でした。 <xref:Microsoft.VisualStudio.Package.Source>基本クラスは、次のように、このサポート既に。スキャナーがトークンのトリガーの値を返す必要があります<xref:Microsoft.VisualStudio.Package.TokenTriggers>トリガー値と組み合わせると<xref:Microsoft.VisualStudio.Package.TokenTriggers>カーソル位置の前にあるトークンです。  
   
  詳細については、次を参照してください。[従来の言語サービスでかっこの照合](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md)します。  
   

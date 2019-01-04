@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: ワークフローへのアプリケーション ページの追加 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: ワークフローにアプリケーション ページの追加 |Microsoft Docs'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,15 +15,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4bdb01e5cbb45b9986e61a99e18b5984e92d37dd
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: cb0dfa7212cae1dd4e7c62f71f423c0f8fd275d9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49866897"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53938200"
 ---
-# <a name="walkthrough-add-an-application-page-to-a-workflow"></a>チュートリアル: ワークフローへのアプリケーション ページを追加します。
-  このチュートリアルでは、ワークフローから派生したワークフロー プロジェクトにデータを表示するアプリケーション ページを追加する方法を示します。 トピックで説明されているプロジェクトを基に、[チュートリアル: 関連付けと開始フォームでワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)します。
+# <a name="walkthrough-add-an-application-page-to-a-workflow"></a>チュートリアル: ワークフローにアプリケーション ページを追加します。
+  このチュートリアルでは、ワークフローから派生したワークフロー プロジェクトにデータを表示するアプリケーション ページを追加する方法を示します。 トピックで説明されているプロジェクトを基に、[チュートリアル。ワークフロー関連付けフォームと開始フォームを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)します。
 
  このチュートリアルでは、次のタスクについて説明します。
 
@@ -45,14 +42,14 @@ ms.locfileid: "49866897"
 
 -   Visual Studio
 
--   トピック内のプロジェクトを完了する必要も[チュートリアル: 関連付けと開始フォームでワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)します。
+-   トピック内のプロジェクトを完了する必要もが[チュートリアル。ワークフロー関連付けフォームと開始フォームを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)します。
 
 ## <a name="ammend-the-workflow-code"></a>追記ワークフロー コード
  最初に、経費報告書の金額に結果列の値を設定するワークフローのコード行を追加します。 この値は、経費レポートの集計計算の後で使用されます。
 
 #### <a name="to-set-the-value-of-the-outcome-column-in-the-workflow"></a>ワークフローの結果列の値を設定するには
 
-1.  トピックから完成したプロジェクトを読み込む[チュートリアル: 関連付けと開始フォームを持つワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)に[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。
+1.  トピックから完成したプロジェクトを読み込む[チュートリアル。関連付けと開始フォームを持つワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)に[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。
 
 2.  コードを開きます*Workflow1.cs*または*Workflow1.vb* (使用するプログラミング言語) によって異なります。
 
@@ -352,7 +349,7 @@ ms.locfileid: "49866897"
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: 関連付けフォームと開始フォームとワークフローを作成します。](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)
-- [方法: アプリケーション ページを作成](../sharepoint/how-to-create-an-application-page.md)
+- [チュートリアル: ワークフロー関連付けフォームと開始フォームを作成します。](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)
+- [方法: アプリケーション ページを作成します。](../sharepoint/how-to-create-an-application-page.md)
 - [For SharePoint アプリケーション ページを作成します。](../sharepoint/creating-application-pages-for-sharepoint.md)
 - [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)

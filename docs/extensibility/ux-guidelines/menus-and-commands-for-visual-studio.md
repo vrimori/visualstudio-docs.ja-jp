@@ -1,9 +1,6 @@
 ---
 title: Visual Studio のメニューとコマンド |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: 0a1ed675-2bd1-4603-ba3a-f40dfb5cfb69
 author: gregvanl
@@ -11,12 +8,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f5686f96ce0125cac98ca08582e8407c4e1e926
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: bddedab69583c8ec4ff809810e049a4aff2046ee
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49937955"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53933800"
 ---
 # <a name="menus-and-commands-for-visual-studio"></a>Visual Studio のメニューとコマンド
 ## <a name="command-usage"></a>コマンドの使用方法  
@@ -284,7 +281,7 @@ ms.locfileid: "49937955"
   
 - **どの修飾子キーを使用するかを判断する Windows のガイドラインに従います。** Ctrl キーの組み合わせを使用して、ドキュメント全体に適用されるコマンドなどの大規模な影響を与えるコマンド。 拡張または標準のショートカット キーの操作を補完するコマンドには、Shift キーの組み合わせを使用します。 Ctrl + alt キーの組み合わせを使用しないでください。  
   
-- **余分なショートカットを削除します。** レガシ機能がある場合は、アクセス キーが同じコマンドにすばやくアクセスを提供する場合は、極端な infrequency (よりも 10 倍 CEIP データからが少ない) または中程度 infrequency を (CEIP データから 100 回よりも少なくなります) で使用されるショートカットを削除することを検討してください。 例: alt キーを押し、H、C のヘルプ/コンテンツが開きます。  
+- **余分なショートカットを削除します。** レガシ機能がある場合は、アクセス キーが同じコマンドにすばやくアクセスを提供する場合は、極端な infrequency (よりも 10 倍 CEIP データからが少ない) または中程度 infrequency を (CEIP データから 100 回よりも少なくなります) で使用されるショートカットを削除することを検討してください。 例:Alt キーを押し、H、C には、ヘルプ/コンテンツが開きます。  
   
   ショートカットの可用性をチェックする簡単な方法はありません。 ショートカットを追加する場合は、次の手順に従います。  
   

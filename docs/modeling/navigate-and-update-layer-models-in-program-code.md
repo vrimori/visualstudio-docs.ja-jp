@@ -11,17 +11,16 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 8ca10b8504dc4383ad6251e3819c14b7102d32d3
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: eea76a607490bda244597e22e25246b39c2c537d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566740"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53948655"
 ---
 # <a name="navigate-and-update-layer-models-in-program-code"></a>プログラム コードでレイヤー モデル内を移動し、レイヤー モデルを更新する
 
-この記事では、要素と移動し、プログラム コードを使用して更新できるレイヤー モデルの関係について説明します。 ユーザーの観点から依存関係図の詳細については、次を参照してください。[依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)と[依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)します。
+この記事では、要素と移動し、プログラム コードを使用して更新できるレイヤー モデルの関係について説明します。 ユーザーの観点から依存関係図の詳細については、次を参照してください。[依存関係図。参照](../modeling/layer-diagrams-reference.md)と[依存関係図。ガイドライン](../modeling/layer-diagrams-guidelines.md)します。
 
 <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer>このトピックで説明されているモデルがより一般的なファサード<xref:Microsoft.VisualStudio.GraphModel>モデル。 作成する場合、[メニュー コマンドまたはジェスチャ拡張](../modeling/add-commands-and-gestures-to-layer-diagrams.md)を使用して、`Layer`モデル。 作成する場合、[レイヤー検証拡張機能](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)を使用する方が簡単、`GraphModel`します。
 
@@ -136,5 +135,5 @@ public void ... (...)
 - [依存関係図にコマンドおよびジェスチャを追加する](../modeling/add-commands-and-gestures-to-layer-diagrams.md)
 - [カスタム アーキテクチャ検証を依存関係図に追加する](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)
 - [依存関係図へのカスタム プロパティの追加](../modeling/add-custom-properties-to-layer-diagrams.md)
-- [依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)
-- [依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)
+- [依存関係図:参照](../modeling/layer-diagrams-reference.md)
+- [依存関係図:ガイドライン](../modeling/layer-diagrams-guidelines.md)

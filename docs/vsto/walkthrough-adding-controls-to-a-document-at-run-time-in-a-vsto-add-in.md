@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: VSTO アドインで実行時にドキュメントにコントロールを追加します。'
-ms.custom: ''
+title: 'チュートリアル: VSTO アドインにおける実行時のドキュメントにコントロールを追加します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,17 +15,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 774e26388f5eb25fb0a16dee05557c6bf34a0ff0
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 085860294955e1049d05cf38abea636bc2eb8672
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49951588"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53954897"
 ---
-# <a name="walkthrough-add-controls-to-a-document-at-runtime-in-a-vsto-add-in"></a>チュートリアル: VSTO アドインで実行時にドキュメントにコントロールを追加します。
+# <a name="walkthrough-add-controls-to-a-document-at-runtime-in-a-vsto-add-in"></a>チュートリアル: VSTO アドインにおける実行時のドキュメントにコントロールを追加します。
   VSTO アドインを使用して、開いている Microsoft Office Word 文書にコントロールを追加できます。 このチュートリアルは、リボンを使用してユーザーを追加できるようにする方法を示します、<xref:Microsoft.Office.Tools.Word.Controls.Button>または<xref:Microsoft.Office.Tools.Word.RichTextContentControl>ドキュメントにします。  
 
- **対象:** このトピックの情報は、Word 2010 の VSTO アドインのプロジェクトに適用されます。 詳細については、「[Office アプリケーションおよびプロジェクトの種類別の使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)」を参照してください。  
+ **適用対象します。** このトピックの情報は、Word 2010 の VSTO アドイン プロジェクトに適用されます。 詳細については、「[Office アプリケーションおよびプロジェクトの種類別の使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)」を参照してください。  
 
  このチュートリアルでは、次の作業について説明します。  
 
@@ -54,7 +51,7 @@ ms.locfileid: "49951588"
 
 ### <a name="to-create-a-new-word-vsto-add-in-project"></a>新しい Word VSTO アドイン プロジェクトを作成するには  
 
-1.  名前で Word 用 VSTO アドイン プロジェクトを作成**WordDynamicControls**します。 詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
+1.  名前で Word 用 VSTO アドイン プロジェクトを作成**WordDynamicControls**します。 詳細については、「[方法 :Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
 
 2.  **Microsoft.Office.Tools.Word.v4.0.Utilities.dll** アセンブリへの参照を追加します。 この参照は、このチュートリアルの後半でプログラムを使用して Windows フォーム コントロールをドキュメントに追加するのに必要です。  
 
@@ -187,13 +184,12 @@ ms.locfileid: "49951588"
 
 -   このサンプルは実行時にドキュメントを他の多くの種類のコントロールを追加し、ドキュメントを再び開くときにコントロールを再作成する方法については、Word アドイン動的コントロールのサンプルでを参照してください[Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)。  
 
--   Excel 用 VSTO アドインを使用してワークシートにコントロールを追加する方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: VSTO アドイン プロジェクトでの実行時にワークシートにコントロールを追加](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md)します。  
+-   Excel 用 VSTO アドインを使用してワークシートにコントロールを追加する方法について説明するチュートリアルでは、次を参照してください。[チュートリアル。VSTO アドイン プロジェクトでの実行時にワークシートにコントロールを追加](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md)します。  
 
 ## <a name="see-also"></a>関連項目  
  [Word ソリューション](../vsto/word-solutions.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   
  [Office ドキュメントでのダイナミック コントロールを永続化します。](../vsto/persisting-dynamic-controls-in-office-documents.md)   
- [方法: Windows フォーム コントロールを Office ドキュメントに追加します。](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
- [方法: Word 文書にコンテンツ コントロールを追加](../vsto/how-to-add-content-controls-to-word-documents.md)   
+ [方法: Office ドキュメントへの Windows フォーム コントロールを追加します。](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
+ [方法: コンテンツ コントロールを Word 文書に追加します。](../vsto/how-to-add-content-controls-to-word-documents.md)   
  [Word 文書と Excel ブックを実行時に VSTO アドインで拡張します。](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)  
-

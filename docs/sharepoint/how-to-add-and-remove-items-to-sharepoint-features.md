@@ -1,15 +1,10 @@
 ---
 title: '方法: 項目を SharePoint の機能を追加および削除 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.RAD.FeatureDesigner
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -19,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2ead6b7ba57afa2adeabbbe04bc27583b2ad1593
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0a820f506154a72b797963996b39e7ec225fac31
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49854833"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53964018"
 ---
 # <a name="how-to-add-and-remove-items-to-sharepoint-features"></a>方法: 項目を SharePoint の機能を追加および削除
   SharePoint ソリューションを作成するときに、Visual Studio は、機能に既定の SharePoint プロジェクト項目を追加します。 、展開前に追加し、SharePoint の機能を変更する SharePoint プロジェクト項目を削除することができます。  
@@ -35,7 +30,7 @@ ms.locfileid: "49854833"
   
 1. フィーチャー デザイナーを開きます。  
   
-    詳細については、次を参照してください。[方法: SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)します。  
+    詳細については、「[方法 :SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)します。  
   
 2. 1 つまたは複数の項目を追加、**ソリューション内の項目**の一覧を表示、**フィーチャー内の項目**次の手順の 1 つ以上を実行することによってリスト。  
   
@@ -60,4 +55,3 @@ ms.locfileid: "49854833"
 ## <a name="see-also"></a>関連項目
  [SharePoint の機能を作成します。](../sharepoint/creating-sharepoint-features.md)   
  [パッケージ化し、SharePoint ソリューションのデプロイ](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
-  

@@ -1,9 +1,6 @@
 ---
 title: ClickOnce を使用して Office ソリューションを配置します。
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,12 +13,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 31e0ccb271c985a4c521762883fead2c0a1d8775
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.openlocfilehash: 448cd7ccd2c56ab9d7d7117c01f6c7f455aa53f4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53803118"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53946842"
 ---
 # <a name="deploy-an-office-solution-by-using-clickonce"></a>ClickOnce を使用して Office ソリューションを配置します。
   ClickOnce を使用する場合は、少しの手順で Office ソリューションを配置できます。 更新プログラムを発行する場合は、ソリューションはそれらを自動的に検出してインストールします。 ただし、ClickOnce を使用する場合は、コンピューターのユーザーごとに、ソリューションを個別にインストールする必要があります。 Windows インストーラーを使用してそのため、検討 (*.msi*) 場合は、複数のユーザーは同じコンピューターにソリューションを実行します。

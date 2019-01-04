@@ -1,9 +1,6 @@
 ---
 title: どのような&#39;ソース管理の新 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [Visual Studio SDK], source control
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: eb63f8654db4e7bb17cbd0e46f5592b88eb2fcac
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c373e061ba7aa057babccd178354f4577b2c74fc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49843005"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53937971"
 ---
 # <a name="what39s-new-in-source-control"></a>どのような&#39;s ソース管理の新機能
 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]深く統合ソース制御ソリューションをソース管理 VSPackage を実装することによって行うことができます。 このセクションでは、ソース管理 Vspackage の機能について説明し、実装の手順の概要を説明します。  

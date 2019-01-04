@@ -1,8 +1,7 @@
 ---
-title: 'CA1403: Auto 配置の型を COM 参照可能にすることはできません'
+title: CA1403:Auto 配置の型を COM 参照可能にすることはできません
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - AutoLayoutTypesShouldNotBeComVisible
@@ -19,14 +18,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: d84fdd4f352a823614832cc8d5d1b9e57c7a9dfb
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 1f713ac012509dd36d483ca354630e125066360b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37058075"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53954540"
 ---
-# <a name="ca1403-auto-layout-types-should-not-be-com-visible"></a>CA1403: Auto 配置の型を COM 参照可能にすることはできません
+# <a name="ca1403-auto-layout-types-should-not-be-com-visible"></a>CA1403:Auto 配置の型を COM 参照可能にすることはできません
 
 |||
 |-|-|
@@ -62,7 +61,7 @@ ms.locfileid: "37058075"
 
 ## <a name="related-rules"></a>関連するルール
 
-[CA1408: AutoDual ClassInterfaceType を使用しないでください](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)
+[CA 1408:AutoDual ClassInterfaceType を使用します。](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)
 
 ## <a name="see-also"></a>関連項目
 

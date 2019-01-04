@@ -1,9 +1,6 @@
 ---
 title: 拡張とカスタマイズ ツール Windows |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - user interfaces, essentials
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c11485e830d1b7bcef851a50225e15f351e64f3e
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 4c942076f10aa39994c2a809f994b9725831d67b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637485"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53949837"
 ---
 # <a name="extend-and-customize-tool-windows"></a>拡張し、カスタマイズ ツール ウィンドウ
 Visual Studio には、windows アプリ、およびツール ウィンドウ、ドキュメント ウィンドウ、ダイアログ ウィンドウなどのさまざまな種類が用意されています。 などの他のウィンドウ、**プロパティ**ウィンドウで、**出力**ウィンドウ、および**タスク一覧**ウィンドウで、ツール ウィンドウの種類します。  
@@ -37,11 +34,11 @@ Visual Studio には、windows アプリ、およびツール ウィンドウ、
   
  ツール ウィンドウは、ドッキング、フローティング、またはドキュメント フレームのタブ付けが可能です。 ツール ウィンドウの枠は IDE によって提供され、サイズ、位置、ドッキング状態と、その他の永続的なプロパティを制御するために使用します。 ツール ウィンドウのペインには、内容が表示されます。 既定のサイズと位置はツール ウィンドウを最初に開くときにのみ適用されます。その後、ツール ウィンドウの状態は保持されます。  
   
- ツール ウィンドウのペインでは、WPF ユーザー コントロールをホストして、ツールバーをサポートすることができます。 オーバーライドすることができます、<xref:Microsoft.VisualStudio.Shell.WindowPane.Window%2A>プロパティがホストされるコントロールのハンドルを返します。  
+ ツール ウィンドウのペインでは、WPF ユーザー コントロールをホストして、ツールバーをサポートすることができます。 <xref:Microsoft.VisualStudio.Shell.WindowPane.Window%2A> プロパティをオーバーライドして、ホストされるコントロールのハンドルを返すことができます。  
   
- ツール ウィンドウには、さまざまな機能を追加できます。 たとえば、ツールバーを追加することができます:[ツール ウィンドウにツールバーを追加](../extensibility/adding-a-toolbar-to-a-tool-window.md)またはショートカット メニュー:[ツール ウィンドウのショートカット メニューを追加する](../extensibility/adding-a-shortcut-menu-in-a-tool-window.md)します。 ツール ウィンドウ内の項目を検索できる検索コントロールを追加することができます:[ツール ウィンドウに追加の検索](../extensibility/adding-search-to-a-tool-window.md)します。  
+ ツール ウィンドウには、さまざまな機能を追加できます。 たとえば、ツールバーを追加することができます。[ツール ウィンドウにツールバーを追加](../extensibility/adding-a-toolbar-to-a-tool-window.md)またはショートカット メニュー。[ツール ウィンドウのショートカット メニューを追加する](../extensibility/adding-a-shortcut-menu-in-a-tool-window.md)します。 ツール ウィンドウ内の項目を検索できる検索コントロールを追加することができます。[検索ツール ウィンドウを追加](../extensibility/adding-search-to-a-tool-window.md)します。  
   
- ツール ウィンドウのイベントにサブスクライブすることができます:[イベントにサブスクライブする](../extensibility/subscribing-to-an-event.md)します。  
+ ツール ウィンドウのイベントにサブスクライブすることができます。[イベントにサブスクライブする](../extensibility/subscribing-to-an-event.md)します。  
   
 ## <a name="extend-existing-tool-windows"></a>既存のツール ウィンドウを拡張します。  
  ツール ウィンドウに関する情報を追加するには、新しい**オプション**ページと、新しい設定で、**プロパティ** ページへの書き込み、**タスク一覧**と**出力** windows。 詳細については、次を参照してください。[拡張プロパティ、タスク一覧、出力、およびオプションの windows](../extensibility/extending-the-properties-task-list-output-and-options-windows.md)と[拡張プロパティ、タスク一覧、出力、およびオプションの windows](../extensibility/extending-the-properties-task-list-output-and-options-windows.md)します。  

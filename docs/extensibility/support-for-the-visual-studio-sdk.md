@@ -1,9 +1,6 @@
 ---
 title: Visual Studio SDK のサポート |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio SDK, support options
@@ -17,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0fe2d5bbc2e06bcfa7bc7f47d6aaebbbdc9b1261
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: 5f1f54d43c02d02aa2967eaead2de75a664619c0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46495519"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53959275"
 ---
 # <a name="support-for-the-visual-studio-sdk"></a>Visual Studio SDK のサポート
 さまざまなサポート オプション、Visual Studio 統合開発環境 (IDE) を拡張する方法についての質問をお持ちのお客様に利用できます。  
@@ -43,7 +40,7 @@ ms.locfileid: "46495519"
   
 ### <a name="visual-studio-sdk-samples"></a>Visual Studio SDK のサンプル
 
-Github の VS SDK 拡張機能のオープン ソースの例が見つかります[Visual Studio のサンプル](https://github.com/Microsoft/VSSDK-Extensibility-Samples)します。 この GitHub リポジトリには、Visual Studio のさまざまな拡張機能を示すサンプルが含まれています。
+GitHub の[Visual Studio のサンプル](https://github.com/Microsoft/VSSDK-Extensibility-Samples)で VS SDK 拡張機能のオープン ソースの例を検索できます。 この GitHub リポジトリには、Visual Studio のさまざまな拡張機能を示すサンプルが含まれています。
 
 ## <a name="included-support"></a>対象のサポート  
   
