@@ -1,9 +1,6 @@
 ---
 title: '方法: SharePoint コマンドを実行します |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,14 +12,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ce195dd34c7c0b509f9de4cbe2cfd14d9a477f87
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: d6e529420db8261e87c856e2fc80ef436bbc3e73
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119916"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53953119"
 ---
-# <a name="how-to-execute-a-sharepoint-command"></a>方法: SharePoint コマンドを実行
+# <a name="how-to-execute-a-sharepoint-command"></a>方法: SharePoint コマンドを実行します。
   SharePoint ツール拡張機能で、サーバー オブジェクト モデルを使用する場合は、カスタムを作成する必要があります*SharePoint コマンド*API を呼び出します。 コマンドを定義し、SharePoint ツール拡張機能で、デプロイ後、拡張機能は、SharePoint サーバー オブジェクト モデルを呼び出すコマンドを実行できます。 コマンドを実行するには、ExecuteCommand メソッドのいずれかの操作を使用して、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection>オブジェクト。  
   
  SharePoint コマンドの目的に関する詳細については、次を参照してください。[の SharePoint オブジェクト モデルを呼び出す](../sharepoint/calling-into-the-sharepoint-object-models.md)します。  
@@ -55,12 +52,12 @@ ms.locfileid: "37119916"
     |コマンドは、2 つのパラメーターと戻り値にします。|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
   
 ## <a name="example"></a>例  
- 次のコード例は、使用する方法を示します、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>オーバー ロードを呼び出す、`Contoso.Commands.UpgradeSolution`で説明されているコマンド[方法: SharePoint コマンドを作成する](../sharepoint/how-to-create-a-sharepoint-command.md)します。  
+ 次のコード例は、使用する方法を示します、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>オーバー ロードを呼び出す、`Contoso.Commands.UpgradeSolution`で説明されているコマンド[方法。SharePoint コマンドを作成する](../sharepoint/how-to-create-a-sharepoint-command.md)します。  
   
  [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#6](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/upgradestep.cs#6)]
  [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#6](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/upgradestep.vb#6)]  
   
- `Execute`この例に示すようにメソッドの実装は、<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A>のメソッド、<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep>インターフェイスでカスタムの配置手順。 例のコンテキストでは、このコードを表示するには、次を参照してください。[チュートリアル: SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)です。  
+ `Execute`この例に示すようにメソッドの実装は、<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A>のメソッド、<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep>インターフェイスでカスタムの配置手順。 例のコンテキストでは、このコードを表示するには、次を参照してください。[チュートリアル。SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)です。  
   
  次の詳細への呼び出しに注意してください、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>メソッド。  
   
@@ -70,11 +67,10 @@ ms.locfileid: "37119916"
   
 -   コードは、暗黙的な渡さない<xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext>パラメーターをコマンド。 このパラメーターに渡されるコマンドは、自動的に SharePoint プロジェクト システムの拡張機能またはの拡張機能から、コマンドを呼び出すときに、 **SharePoint 接続**ノード**サーバー エクスプ ローラー**. 他の種類のソリューション、プロジェクト テンプレートのウィザードを実装するように、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard>インターフェイスでは、このパラメーターは**null**します。  
   
-## <a name="compile-the-code"></a>コードをコンパイルします  
+## <a name="compile-the-code"></a>コードのコンパイル  
  この例では、Microsoft.VisualStudio.SharePoint アセンブリへの参照が必要です。  
   
 ## <a name="see-also"></a>関連項目
  [SharePoint オブジェクト モデルを呼び出す](../sharepoint/calling-into-the-sharepoint-object-models.md)   
  [方法: SharePoint コマンドを作成します。](../sharepoint/how-to-create-a-sharepoint-command.md)   
- [チュートリアル: web パーツを表示するサーバー エクスプ ローラーの拡張します。](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  
-  
+ [チュートリアル: Web パーツを表示するサーバー エクスプ ローラーを拡張します。](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  

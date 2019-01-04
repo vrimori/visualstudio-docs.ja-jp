@@ -1,9 +1,6 @@
 ---
 title: '方法: 無効になっている VSTO アドインを再度有効にします。'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VST.Warning.DisabledAddIn
@@ -19,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c81e44b548f4d1139810780731741a489e624047
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: adcfab22ea9f6acc9c75f59fa17127cab348fc37
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35673227"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53939399"
 ---
 # <a name="how-to-re-enable-a-vsto-add-in-that-has-been-disabled"></a>方法: 無効になっている VSTO アドインを再度有効にします。
   Microsoft Office アプリケーションにより、予期しない動作をする VSTO アドインが無効にされる場合があります。 VSTO アドインをデバッグする際に、アプリケーションが VSTO アドインを読み込まない場合は、アプリケーションにより VSTO アドインがハードに無効化、またはソフトに無効化されている可能性があります。  
@@ -80,5 +77,3 @@ ms.locfileid: "35673227"
  [Office ソリューションを構築します。](../vsto/building-office-solutions.md)   
  [Office プロジェクトをデバッグします。](../vsto/debugging-office-projects.md)   
  [VSTO アドインをプログラミングします。](../vsto/programming-vsto-add-ins.md)  
-  
-  

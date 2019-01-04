@@ -22,18 +22,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eba1f156589babb9a3bec38982bd27b7c17a83c8
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
-ms.translationtype: MT
+ms.openlocfilehash: 8d8339d494845b5babe18835647868cad4c3323a
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39180192"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53561971"
 ---
 # <a name="debugging-native-code"></a>ネイティブ コードのデバッグ
-ここでは、ネイティブ アプリケーションのデバッグ時に発生する一般的な問題や共通のデバッグ技術について説明します。 ここでは高レベルの手法について説明します。 Visual Studio デバッガーの使用のしくみを参照してください。[デバッガーのロードマップ](../debugger/getting-started-with-the-debugger.md)します。  
+ここでは、ネイティブ アプリケーションのデバッグ時に発生する一般的な問題や共通のデバッグ技術について説明します。 ここでは高レベルの手法について説明します。 Visual Studio デバッガーの使用のしくみを参照してください。[デバッガーでのはじめ](../debugger/debugger-feature-tour.md))。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法 : 最適化されたコードをデバッグする](../debugger/how-to-debug-optimized-code.md)  
+ [方法: 最適化されたコードをデバッグする](../debugger/how-to-debug-optimized-code.md)  
  最適化されたコードのデバッグに関するヒント、特に、最適化する前のプログラムをデバッグするのが望ましい理由、デバッグ構成とリリース構成の既定の最適化設定、および最適化されたコードにだけ現れるバグを検出するためのヒント (デバッグ ビルド構成で最適化をオンにする) を示します。  
   
  [DebugBreak と __debugbreak](../debugger/debugbreak-and-debugbreak.md)  
@@ -42,7 +42,7 @@ ms.locfileid: "39180192"
  [C/C++ アサーション](../debugger/c-cpp-assertions.md)  
  アサート ステートメントとそのしくみや利点 (論理エラーのキャッチ、演算結果のチェック、およびエラー条件のテスト)、`_DEBUG` との相互作用、および [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でサポートされるアサーションの種類について説明します。  
   
- [方法 :インライン アセンブラー コードをデバッグする](../debugger/how-to-debug-inline-assembly-code.md)  
+ [方法: インライン アセンブラー コードをデバッグする](../debugger/how-to-debug-inline-assembly-code.md)  
  [逆アセンブリ] ウィンドウを使ってアセンブリ命令を表示する方法および [レジスタ] ウィンドウを使ってレジスタの内容を表示する方法について簡単に説明し、これらのウィンドウに関するトピックへのリンクを提供します。  
   
  [MFC のデバッグ技術](../debugger/mfc-debugging-techniques.md)  
@@ -57,11 +57,11 @@ ms.locfileid: "39180192"
  [COM および ActiveX のデバッグ](../debugger/com-and-activex-debugging.md)  
  COM や ActiveX のデバッグに使用できるツールなど、COM アプリケーションや ActiveX アプリケーションのデバッグに関連した情報を提供します。  
   
- [方法 : 挿入されたコードをデバッグする](../debugger/how-to-debug-injected-code.md)  
+ [方法: 挿入されたコードをデバッグする](../debugger/how-to-debug-injected-code.md)  
  属性を使用するコードのデバッグについてのガイダンスを提供します。 ソースの注釈を表示する方法、挿入されたコードを表示する方法、現在の実行ポイントにある逆アセンブリ コードを表示する方法などを説明します。  
   
- [チュートリアル: 並行アプリケーションのデバッグ](../debugger/walkthrough-debugging-a-parallel-application.md)  
- 使用する方法について説明します、**並列タスク**と**並列スタック**ツール ウィンドウを並行アプリケーションをデバッグします。  
+ [チュートリアル: 並列アプリケーションのデバッグ](../debugger/walkthrough-debugging-a-parallel-application.md)  
+ **[並列タスク]** ツール ウィンドウと **[並列スタック]** ツール ウィンドウを使用して並行アプリケーションをデバッグする方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
  [Visual C++ プロジェクトの種類](../debugger/debugging-preparation-visual-cpp-project-types.md)  
@@ -72,6 +72,6 @@ ms.locfileid: "39180192"
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)  
  デバッグに関連するドキュメントのより広範囲なリンクを提供します。 デバッガーの新機能、設定と準備、ブレークポイント、例外の処理、エディット コンティニュ、マネージド コードのデバッグ、ネイティブ コードのデバッグ、SQL のデバッグ、ユーザー インターフェイス リファレンスなどの情報へのリンクを提供します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)  
  [Visual Studio でのデバッグ](../debugger/index.md)[デバッガー機能ツアー](../debugger/debugger-feature-tour.md)

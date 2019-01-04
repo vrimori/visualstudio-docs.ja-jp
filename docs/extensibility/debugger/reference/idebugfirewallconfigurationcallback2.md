@@ -1,9 +1,6 @@
 ---
-title: IDebugFirewallConfigurationCallback2 |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugFirewallConfigurationCallback2 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - IDebugFirewallConfigurationCallback2 interface
@@ -13,15 +10,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1981d16141ed44ccbac0d2e05ae058451f0dff5b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0348f1414224a3b9d092b5d7c1623de9720c9e34
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31110866"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53960827"
 ---
 # <a name="idebugfirewallconfigurationcallback2"></a>IDebugFirewallConfigurationCallback2
-DCOM を使用するように依頼するデバッグ エンジンを有効に、 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] UI をファイアウォールをリモート デバッグするブロックはしないことを確認してください。  
+要求に DCOM を使用するデバッグ エンジンを有効、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]ファイアウォールをリモート デバッグするブロックはしないことを確認するための UI。  
   
 ## <a name="syntax"></a>構文  
   
@@ -30,18 +27,18 @@ IDebugFirewallConfigurationCallback2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- セッションのデバッグ マネージャーのポート オブジェクトによって実装されます。  
+ セッション デバッグ マネージャーのポート オブジェクトによって実装されます。  
   
 ## <a name="methods"></a>メソッド  
  次の表は、メソッドの`IDebugFirewallConfigurationCallback2`します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[EnsureDCOMUnblocked](../../../extensibility/debugger/reference/idebugfirewallconfigurationcallback2-ensuredcomunblocked.md)|ファイアウォールをブロックしないことのリモート デバッグを要求します。|  
+|[EnsureDCOMUnblocked](../../../extensibility/debugger/reference/idebugfirewallconfigurationcallback2-ensuredcomunblocked.md)|ファイアウォール ブロックされていないことのリモート デバッグを要求します。|  
   
-## <a name="requirements"></a>要件  
- ヘッダー: Msdbg.h  
+## <a name="requirements"></a>必要条件  
+ ヘッダー:Msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll

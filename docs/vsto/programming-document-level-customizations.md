@@ -1,9 +1,6 @@
 ---
 title: プログラムのドキュメント レベルのカスタマイズ
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - Sheet3
@@ -30,12 +27,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d9c7fa658c24caa65b3c955002ffeeaff6573c55
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9d559e358e50295368f68ad02ebb7532353a98b6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49812232"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53925447"
 ---
 # <a name="program-document-level-customizations"></a>プログラムのドキュメント レベルのカスタマイズ
   ドキュメント レベルのカスタマイズを使用して、Microsoft Office Word または Microsoft Office Excel を拡張する場合に、次のタスクを実行できます。  
@@ -149,7 +146,7 @@ Globals.ThisDocument.Save();
   
 - リボン上の組み込みタブにカスタム グループを追加します。  
   
-   詳細については、次を参照してください。[方法: 組み込みタブをカスタマイズする](../vsto/how-to-customize-a-built-in-tab.md)します。  
+   詳細については、「[方法 :組み込みタブをカスタマイズする](../vsto/how-to-customize-a-built-in-tab.md)します。  
   
   UI の Microsoft Office アプリケーションのカスタマイズに関する詳細については、次を参照してください。 [Office UI のカスタマイズ](../vsto/office-ui-customization.md)します。  
   
@@ -175,5 +172,3 @@ Globals.ThisDocument.Save();
  [VBA とドキュメント レベルのカスタマイズを結合します。](../vsto/combining-vba-and-document-level-customizations.md)   
  [ServerDocument クラスを使用してサーバー上のドキュメントを管理します。](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)   
  [Office ソリューションでコードを記述します。](../vsto/writing-code-in-office-solutions.md)  
-  
-  

@@ -1,13 +1,10 @@
 ---
-title: '方法: ネイティブ コードのスレッド名を設定 |Microsoft ドキュメント'
+title: '方法: ネイティブ コードのスレッド名を設定 |Microsoft Docs'
 ms.custom: ''
-ms.date: 04/27/2017
+ms.date: 12/17/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
-- CSharp
-- VB
-- FSharp
 - C++
 helpviewer_keywords:
 - debugging [C++], threads
@@ -21,21 +18,43 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b751451f1362c0ba82871b99b0dbb10434282b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 9226e009936d0a644a5a6fcfcaba57bc3af25d7d
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31480031"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53803099"
 ---
-# <a name="how-to-set-a-thread-name-in-native-code"></a>方法 : ネイティブ コードのスレッド名を設定する
-スレッド名の設定は、Visual Studio のどのエディションでも実行できます。 スレッドの名前を付け、内のスレッドを追跡するために便利です、**スレッド**ウィンドウです。
+# <a name="how-to-set-a-thread-name-in-native-code"></a>方法: ネイティブ コードのスレッド名を設定する
+スレッド名の設定は、Visual Studio のどのエディションでも実行できます。 スレッド名を設定すると、**[スレッド]** ウィンドウでスレッドを追跡する際に役立ちます。
 
-プログラムにスレッド名を設定するには、次のコード例のように、 `SetThreadName` 関数を使用します。 スレッド名はスレッドにコピーされるため、 `threadName` パラメーターのメモリは解放できます。  
-  
-## <a name="example"></a>例  
-  
-```C++  
+## <a name="set-a-thread-name"></a>スレッド名を設定します。
+
+`SetThreadName`関数は設定および実行中のコードにデバッガーがアタッチされている場合は、スレッドを表示するために役立ちます。 Visual Studio 2017 バージョン 15.6 以降、使える、 [SetThreadDescription](https://docs.microsoft.com/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreaddescription)関数を設定し、スレッド名を表示します。
+
+```C++
+#include <windows.h>
+#include <processthreadsapi.h>
+
+int main()
+{
+    HRESULT r;
+    r = SetThreadDescription(
+        GetCurrentThread(),
+        L"ThisIsMyThreadName!"
+    );
+
+    return 0;
+}
+```
+
+## <a name="set-a-thread-name-using-setthreadname"></a>SetThreadName を使用してスレッド名を設定します。
+
+プログラムのスレッド名を設定するには、使用の`SetThreadName`関数は、次のコード例に示すようにします。 スレッド名はスレッドにコピーされるため、 `threadName` パラメーターのメモリは解放できます。  このメソッドは、例外ベースのメソッドの使用時に、デバッガーがアタッチされている場合にのみ機能例外ベースのアプローチを使用します。 ダンプやパフォーマンス分析ツールでは、このメソッドを使用して設定したスレッド名を利用できません。
+
+次のコード例は、使用する方法を示しています`SetThreadName`:。
+
+```C++
 //  
 // Usage: SetThreadName ((DWORD)-1, "MainThread");  
 //  
@@ -65,10 +84,9 @@ void SetThreadName(DWORD dwThreadID, const char* threadName) {
     }  
 #pragma warning(pop)  
 }  
-  
 ```  
-  
-## <a name="see-also"></a>関連項目  
- [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [デバッガーでのデータの表示](../debugger/viewing-data-in-the-debugger.md)   
- [方法 : マネージ コードのスレッド名を設定する](../debugger/how-to-set-a-thread-name-in-managed-code.md)
+
+## <a name="see-also"></a>参照  
+ [マルチスレッド アプリケーションのデバッグ](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+ [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)   
+ [方法: マネージド コードのスレッド名を設定する](../debugger/how-to-set-a-thread-name-in-managed-code.md)

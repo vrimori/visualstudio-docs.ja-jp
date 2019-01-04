@@ -14,29 +14,27 @@ caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 99a2da342afa22f18841556de5e7ca290b13d42a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.openlocfilehash: 8063c9ff07fc3c8159ea897b0120a1b8a538fa4a
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51761668"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53802447"
 ---
 # <a name="profiling-aspnet-load-tests"></a>ASP.NET ロード テストのプロファイリング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-ASP.NET Web サイト プロジェクトに対して実行する自動 [!INCLUDE[TCMext](../includes/tcmext-md.md)] Web テストからプロファイル データを収集できます。 収集できるのは、サンプリング データと階層相互作用データです。 詳細については、次のトピックを参照してください。  
-  
- [(NIB) 方法: Web パフォーマンス テスト エディターから Web アプリケーションのパフォーマンス セッションを実行する](http://msdn.microsoft.com/en-us/d14e0a27-33cc-4e4e-8792-fe03e50d51e1)  
-  
- [方法: Visual Studio でテストの設定を使用してロード テスト用の ASP.NET プロファイラーを構成する](~/E:/Repos/visualstudio-docs-pr/docs/test/how-to-configure-aspnet-profiler-for-load-tests-using-test-settings.md)  
-  
- [Microsoft Visual Studio を使用したシステム テストの実行](http://msdn.microsoft.com/library/19fae5c4-5798-4c4c-b531-3e8f901b1130)  
-  
-## <a name="see-also"></a>関連項目  
- [サンプリング データ値について](../profiling/understanding-sampling-data-values.md)   
- [パフォーマンス規則を使用したデータの分析](../profiling/using-performance-rules-to-analyze-data.md)   
- [サンプリング メソッドのデータ ビュー](../profiling/profiler-sampling-method-data-views.md)   
- [階層相互作用のビュー](../profiling/tier-interactions-view.md)
+ASP.NET Web サイト プロジェクトに対して実行する自動 [!INCLUDE[TCMext](../includes/tcmext-md.md)] Web テストからプロファイル データを収集できます。 収集できるのは、サンプリング データと階層相互作用データです。 詳細については、次のトピックを参照してください。
 
+ [方法: Web アプリケーションを Web パフォーマンス テスト エディターからのパフォーマンス セッションを実行します。](/previous-versions/ff356203(v=vs.100))
 
+ [方法: Visual Studio でテストの設定を使用してロード テスト用の ASP.NET プロファイラーを構成する](/visualstudio/test/how-to-configure-aspnet-profiler-for-load-tests-using-test-settings?view=vs-2015)
 
+ [Microsoft Visual Studio を使用したシステム テストの実行](http://msdn.microsoft.com/library/19fae5c4-5798-4c4c-b531-3e8f901b1130)
+
+## <a name="see-also"></a>参照
+
+- [サンプリング データ値について](../profiling/understanding-sampling-data-values.md)
+- [パフォーマンス規則を使用したデータの分析](../profiling/using-performance-rules-to-analyze-data.md)
+- [サンプリング メソッドのデータ ビュー](../profiling/profiler-sampling-method-data-views.md)
+- [階層相互作用のビュー](../profiling/tier-interactions-view.md)

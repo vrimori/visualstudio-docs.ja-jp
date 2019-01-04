@@ -1,6 +1,5 @@
 ---
 title: ビジュアルの C++ プロジェクト機能拡張
-ms.custom: ''
 ms.date: 09/12/2018
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
@@ -11,12 +10,12 @@ ms.author: corob
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 913ad2e785fcdb2067f89d0d4de2b250db40468b
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: 0eccf13f38799c1d35b7fe4226fa02ec1a291b0c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51349677"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53986987"
 ---
 # <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Visual Studio の C++ プロジェクト システムの機能拡張とツールセットの統合
 
@@ -36,19 +35,19 @@ ms.locfileid: "51349677"
 
 - `$(ApplicationType)`
 
-   例: Windows ストア、Android、Linux
+   次に例を示します。Windows ストア、Android、Linux
 
 - `$(ApplicationTypeRevision)`
 
    これは、必要があります形式 major.minor[.build[.revision の有効なバージョン文字列、]。
 
-   例: 1.0、10.0.0.0
+   次に例を示します。1.0、10.0.0.0
 
 - `$(Platform)`
 
    ビルドのアーキテクチャでは、歴史的な理由から"Platform"という名前です。
 
-   例: Win32、x86、x64、ARM   
+   次に例を示します。Win32、x86、x64、ARM   
 
 - `$(PlatformToolset)`
 
@@ -481,10 +480,10 @@ CPS は、コンテキストの種類の他の値をサポートしています�
 
 | 属性 | 説明 |
 |------------| - |
-| `generic` | すべてのプロパティがカテゴリの見出しの下の 1 つのページに表示されます。<br/>ルールが表示されていることができます`Project`と`PropertySheet`、コンテキストがない`File`します。<br/><br/> 例: `$(VCTargetsPath)` \\ *1033*\\*general.xml* |
-| `tool` | カテゴリは、サブページとして表示されます。<br/>このルールはすべてのコンテキストで表示できます: `Project`、`PropertySheet`と`File`します。<br/>プロジェクトに項目がある場合にのみ、ルールがプロジェクトのプロパティに表示される、`ItemType`で定義されている`Rule.DataSource`にルールの名前が含まれていなければ、`ProjectTools`項目グループ。<br/><br/>例: `$(VCTargetsPath)` \\ *1033*\\*clang.xml* |
-| `debugger` | [デバッグ] ページの一部として、ページが表示されます。<br/>カテゴリは現在は無視されます。<br/>ルールの名前はデバッグ ランチャー MEF オブジェクトの一致する必要があります`ExportDebugger`属性。<br/><br/>例: `$(VCTargetsPath)` \\ *1033*\\*デバッガー\_ローカル\_windows.xml* |
-| *custom* | カスタム テンプレートです。 テンプレートの名前に一致する必要があります、`ExportPropertyPageUIFactoryProvider`の属性、 `PropertyPageUIFactoryProvider` MEF オブジェクト。 参照してください**Microsoft.VisualStudio.ProjectSystem.Designers.Properties.IPropertyPageUIFactoryProvider**します。<br/><br/> 例: `$(VCTargetsPath)` \\ *1033*\\*userMacros.xml* |
+| `generic` | すべてのプロパティがカテゴリの見出しの下の 1 つのページに表示されます。<br/>ルールが表示されていることができます`Project`と`PropertySheet`、コンテキストがない`File`します。<br/><br/> 例:`$(VCTargetsPath)`\\*1033*\\*general.xml* |
+| `tool` | カテゴリは、サブページとして表示されます。<br/>このルールはすべてのコンテキストで表示できます: `Project`、`PropertySheet`と`File`します。<br/>プロジェクトに項目がある場合にのみ、ルールがプロジェクトのプロパティに表示される、`ItemType`で定義されている`Rule.DataSource`にルールの名前が含まれていなければ、`ProjectTools`項目グループ。<br/><br/>例:`$(VCTargetsPath)`\\*1033*\\*clang.xml* |
+| `debugger` | [デバッグ] ページの一部として、ページが表示されます。<br/>カテゴリは現在は無視されます。<br/>ルールの名前はデバッグ ランチャー MEF オブジェクトの一致する必要があります`ExportDebugger`属性。<br/><br/>例:`$(VCTargetsPath)`\\*1033*\\*デバッガー\_ローカル\_windows.xml* |
+| *custom* | カスタム テンプレートです。 テンプレートの名前に一致する必要があります、`ExportPropertyPageUIFactoryProvider`の属性、 `PropertyPageUIFactoryProvider` MEF オブジェクト。 参照してください**Microsoft.VisualStudio.ProjectSystem.Designers.Properties.IPropertyPageUIFactoryProvider**します。<br/><br/> 例:`$(VCTargetsPath)`\\*1033*\\*userMacros.xml* |
 
 ルールは、プロパティ グリッド ベースのテンプレートのいずれかを使用している場合は、そのプロパティのこれらの拡張ポイントを使用できます。
 
@@ -530,7 +529,7 @@ CPS は、コンテキストの種類の他の値をサポートしています�
 </ItemGroup>
 ```
 
-例: `$(VCTargetsPath)` \\ *BuildCustomizations*\\*masm.xml*
+例:`$(VCTargetsPath)`\\*BuildCustomizations*\\*masm.xml*
 
 ### <a name="debuggers"></a>デバッガー
 
@@ -542,7 +541,7 @@ Visual Studio でデバッグ サービスでは、デバッグ エンジンの�
 
 実装する必要があります、デバッグ セッションのデバッグ エンジンとその他のプロパティを指定するを[デバッグ ランチャー](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDebugLaunchProvider.md) 、MEF コンポーネントを追加し、`debugger`ルール。 例については、次を参照してください。、 `$(VCTargetsPath)` \\1033\\デバッガー\_ローカル\_windows.xml ファイル。
 
-### <a name="deploy"></a>配置
+### <a name="deploy"></a>デプロイ
 
 .vcxproj プロジェクトの Visual Studio プロジェクト システムの機能拡張を使用して、[プロバイダーのデプロイ](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDeployProvider.md)します。
 

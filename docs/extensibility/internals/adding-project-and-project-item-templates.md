@@ -1,9 +1,6 @@
 ---
 title: プロジェクトを追加して、プロジェクト項目テンプレート |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], adding
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: db53ddce3161097347760026aea16a51f8098519
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: c89f38c98047a8fab57317c491c051474995f472
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499635"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53963658"
 ---
 # <a name="add-project-and-project-item-templates"></a>プロジェクトとプロジェクト項目テンプレートを追加します。
 独自のプロジェクトの種類を作成するときに標準を使用して新しいプロジェクトとプロジェクト アイテムを追加するためのサポートを提供する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) ダイアログ ボックス。 次のトピックでは、プロジェクトとプロジェクト アイテムを追加するためのさまざまな手法について説明します。  
@@ -53,7 +50,7 @@ ms.locfileid: "39499635"
  拡張に使用されるオブジェクトの Catid をリスト[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]、 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]、および[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]プロジェクト システム。  
   
 ## <a name="related-sections"></a>関連項目  
- [方法: プロジェクトに固有のエディターを開く](../../extensibility/how-to-open-project-specific-editors.md)  
+ [方法: 開いているプロジェクト固有のエディター](../../extensibility/how-to-open-project-specific-editors.md)  
  プロジェクトの特定のエディターに本質的にバインドされている項目を開くための手順について説明します。  
   
  [方法: 標準のエディターを開く](../../extensibility/how-to-open-standard-editors.md)  
