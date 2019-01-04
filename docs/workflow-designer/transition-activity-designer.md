@@ -3,7 +3,6 @@ title: ワークフロー デザイナーの Transition アクティビティ �
 ms.date: 11/04/2016
 ms.topic: reference
 ms.prod: visual-studio-dev15
-ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Statements.Transition.UI
 ms.assetid: f6e8b5cc-7fb8-4699-9703-f3c9fc7cc316
@@ -12,12 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 6855cf3361b573d20e9b51590168ab94c9cd500b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d60962fbe53184767095735cd460d6eb1eb969fd
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49880768"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53963987"
 ---
 # <a name="transition-activity-designer"></a>Transition アクティビティ デザイナー
 
@@ -34,7 +33,7 @@ Transition アクティビティ デザイナーを使用すると、2 つの状
 |プロパティ名|必須|使用方法|
 |-|--------------|-|
 |<xref:System.Activities.Statements.Transition.DisplayName%2A>|False|<xref:System.Activities.Statements.Transition> アクティビティ デザイナーの表示名を指定します。 既定値は**T1**します。 値は、プロパティ グリッド、展開された Transition デザイナーのヘッダー、および展開された Transition デザイナー内のアクション セクションのヘッダーで編集できます。 <xref:System.Activities.Activity.DisplayName%2A> は、ワークフロー デザイナーの上部に表示される階層リンク バーで使用されます。<br /><br /> <xref:System.Activities.Activity.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|
-|<xref:System.Activities.Statements.Transition.Condition%2A>|False|存在する場合に評価される式を指定します。 **True**前に、先の状態に制御が渡されます。 この条件は、プロパティ グリッドおよび展開された Transition デザイナーで編集できます。 共有遷移に含まれる複数の条件は、Transition デザイナーに表示される順に評価されます。 **注:** されている場合、<xref:System.Activities.Statements.Transition.Condition%2A>に評価される、切り替え効果の**False** (に評価されるすべての共有トリガー遷移の条件または**False**)、移行は行われませんすべての遷移状態からのすべてのトリガーを再スケジュールされます。 このチュートリアルでは、条件の構成方法 (推定値が正しいか間違っているかを判断する特定のアクションが用意されています) により、この状況は発生しません。|
+|<xref:System.Activities.Statements.Transition.Condition%2A>|False|存在する場合に評価される式を指定します。 **True**前に、先の状態に制御が渡されます。 この条件は、プロパティ グリッドおよび展開された Transition デザイナーで編集できます。 共有遷移に含まれる複数の条件は、Transition デザイナーに表示される順に評価されます。 **注:** されている場合、<xref:System.Activities.Statements.Transition.Condition%2A>に評価される、切り替え効果の**False** (に評価されるすべての共有トリガー遷移の条件または**False**)、遷移は行われず、すべてのすべてのトリガー、状態から遷移を再スケジュールされます。 このチュートリアルでは、条件の構成方法 (推定値が正しいか間違っているかを判断する特定のアクションが用意されています) により、この状況は発生しません。|
 |**ソース**|True|この遷移の発生元の状態を示します。 元の状態の名前をクリックすると、デザイナー ビューはその状態の展開ビューに切り替わります。 この値は、遷移が作成されていて、変更できない場合に設定されます。|
 |<xref:System.Activities.Statements.Transition.Trigger%2A>|False|完了時に遷移を開始するアクティビティを指定します。 このアクティビティを設定するからアクティビティをドラッグ、**ツールボックス**にドロップし、**トリガー**遷移のセクション。|
 |<xref:System.Activities.Statements.Transition.Action%2A>|False|トリガー アクティビティが完了したときに実行されるアクティビティを指定します、<xref:System.Activities.Statements.Transition.Condition%2A>がある場合に評価される**true**します。 このアクティビティは、元の状態の <xref:System.Activities.Statements.State.Exit%2A> アクティビティ (存在する場合) が実行された後、遷移先の状態に遷移するときに実行されます。 アクティビティをドラッグして、この値を設定することができます、transition デザイナーが展開されている場合、**ツールボックス**にドロップし、**アクション**遷移のセクション。 1 つの遷移に対して複数のアクションが存在する場合があります。 遷移内に複数のアクションがある場合は、アクションに表示される上向き矢印または下向き矢印をクリックすることで、個々のアクションの展開と折りたたみ、および並べ替えを実行できます。|

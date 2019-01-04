@@ -1,9 +1,6 @@
 ---
 title: プロジェクトのタイプの基本情報 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - project types [Visual Studio SDK]
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7daf114bb31019a499bc17e287df923107ee1a1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 630557cbc4bd9720337bf8e5f2988ffcf3d7c6eb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49891571"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53952778"
 ---
 # <a name="project-type-essentials"></a>プロジェクト タイプの基本情報
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] などの言語のいくつかのプロジェクトの種類が含まれている[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]または[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] また、独自のプロジェクトの種類を作成してできます。  
@@ -55,7 +52,7 @@ ms.locfileid: "49891571"
   
 - プロジェクトの種類は、一連のインターフェイスを実装する vspackage オブジェクト[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]が必要です。 を使用する c# プロジェクトの種類を開発する場合、Managed Package Framework プロジェクトのクラスはするのに必要なインターフェイスを実装し、その実装を継承することができます。 詳細については、次を参照してください。 [Managed Package Framework を使用して、プロジェクトの種類 (c#) を実装する](../../extensibility/internals/using-the-managed-package-framework-to-implement-a-project-type-csharp.md)します。  
   
-- C++ の開発者にとっては、HierUtil ライブラリのクラスは、同様の方法で動作します。 詳細については、次を参照してください。[ビルド内にありません: プロジェクトの種類 (C++) を実装する HierUtil7 プロジェクト クラスを使用して](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346)します。  
+- C++ の開発者にとっては、HierUtil ライブラリのクラスは、同様の方法で動作します。 詳細については、次を参照してください。[ビルド内にありません。HierUtil7 プロジェクト クラスを使用して、プロジェクトの種類 (C++) を実装する](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346)します。  
   
 - プロジェクトの種類には、.exe または .dll アセンブリにビルドされる一般的なソース コード ファイル以外のデータをサポートできます。 たとえば、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]データベース プロジェクトがディスクに格納されているスクリプトとクエリのファイルへの参照を含めるし、コマンドを追加**ソリューション エクスプ ローラー**を実行するスクリプトと、データベースが、プロジェクトに対するクエリ実行をサポートしていません動作を構築します。 詳細については、次を参照してください。[とプロジェクト項目の保存](../../extensibility/internals/opening-and-saving-project-items.md)します。  
   

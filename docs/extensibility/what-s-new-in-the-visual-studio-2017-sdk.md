@@ -1,9 +1,6 @@
 ---
 title: どのような&#39;、Visual Studio 2017 SDK の新 |Microsoft Docs
-ms.custom: ''
 ms.date: 10/31/2017
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: 9efcf0a3-dbde-4cab-8ed3-425826a48b2e
 author: gregvanl
@@ -11,12 +8,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6f2a003bc19764aa07262552d3f0cc41316835b6
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 88e68ae7e6a88d1acd88016819eb4634962ef101
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566909"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53952210"
 ---
 # <a name="what39s-new-in-the-visual-studio-2017-sdk"></a>どのような&#39;s、Visual Studio 2017 SDK の新機能
 
@@ -41,7 +38,7 @@ Visual Studio 2017 の新しい軽量インストールをサポートするた�
 
 ## <a name="migrate-extensibility-project-to-visual-studio-2017"></a>拡張機能プロジェクトを Visual Studio 2017 に移行します。
 
-Visual Studio 2017 の機能拡張プロジェクトと独自の VSIX マニフェストを更新する方法については、次を参照してください。[方法: 機能拡張プロジェクトを Visual Studio 2017 に移行](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)します。
+Visual Studio 2017 の機能拡張プロジェクトと独自の VSIX マニフェストを更新する方法については、次を参照してください。[方法。機能拡張プロジェクトを Visual Studio 2017 に移行](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)します。
 
 ## <a name="custom-project-and-item-templates"></a>カスタム プロジェクトと項目テンプレート
 
@@ -49,4 +46,4 @@ Visual Studio 2017 以降、カスタム プロジェクトと項目テンプレ
 
 ## <a name="updated-extension-performance-guidelines"></a>更新された拡張機能のパフォーマンスに関するガイドライン
 
-新しいがある[方法: 拡張機能のパフォーマンス診断](how-to-diagnose-extension-performance.md)記事[管理 Vspackage](managing-vspackages.md)を検出し、Visual Studio 拡張機能への影響を分析する方法について説明起動とソリューション読み込み時間。
+新しい[方法。拡張機能のパフォーマンス診断](how-to-diagnose-extension-performance.md)下記事[管理 Vspackage](managing-vspackages.md)を検出し、Visual Studio 拡張機能への影響を分析する方法について説明起動とソリューション読み込み時間。

@@ -1,9 +1,6 @@
 ---
 title: CODE_PATH |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - CODE_PATH
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a9618d28aeadaa85d97e9018fdf57ee8952ac3fd
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ddd361366e901f94555fabfb5fcd76beb1628819
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49920262"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53943938"
 ---
 # <a name="codepath"></a>CODE_PATH
 メソッドまたは関数呼び出しをについて説明します。  
@@ -28,7 +25,7 @@ ms.locfileid: "49920262"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-typedef struct tagCODE_PATH {   
+typedef struct tagCODE_PATH {   
    BSTR                bstrName;  
    IDebugCodeContext2* pCode;  
 } CODE_PATH;  
@@ -54,9 +51,9 @@ public struct CODE_PATH {
 ## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   

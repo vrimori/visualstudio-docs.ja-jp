@@ -8,13 +8,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 2f5b8948d94c64d84b33714a4b432a46bfb73b59
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 55452088ff947cb92888018aa8d3d262483e0fb9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49931546"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53938187"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL の MSI および VSIX 配置
 自分のコンピューターまたは他のコンピューターでは、ドメイン固有言語をインストールできます。 Visual Studio は、ターゲット コンピューターに既にインストールする必要があります。
@@ -24,7 +23,7 @@ ms.locfileid: "49931546"
 
 |メソッド|利点|
 |-|-|
-|VSX (Visual Studio 拡張機能)|非常に簡単にデプロイ: コピーし、実行、 **.vsix** DslPackage プロジェクトからのファイル。<br /><br /> 詳細については、次を参照してください。[をインストールすると、VSX を使用して DSL をアンインストール](#Installing)します。|
+|VSX (Visual Studio 拡張機能)|非常に簡単にデプロイします。コピーを実行、 **.vsix** DslPackage プロジェクトからのファイル。<br /><br /> 詳細については、次を参照してください。[をインストールすると、VSX を使用して DSL をアンインストール](#Installing)します。|
 |MSI (インストーラー ファイル)|-DSL のファイルをダブルクリックして Visual Studio を開くことを許可します。<br />-対象のコンピューターで DSL のファイルの種類のアイコンに関連付けます。<br />-DSL のファイルの種類 XSD (XML スキーマ) に関連付けます。 これにより、ファイルが Visual Studio に読み込まれると、警告を回避できます。<br /><br /> MSI を作成するソリューションには、セットアップ プロジェクトを追加する必要があります。<br /><br /> 詳細については、次を参照してください。 [MSI ファイルを使用して DSL を展開する](#msi)します。|
 
 ## <a name="Installing"></a> インストールして、VSX を使用して DSL をアンインストールします。
@@ -54,7 +53,7 @@ ms.locfileid: "49931546"
 
 #### <a name="to-uninstall-a-dsl-that-was-installed-by-using-vsx"></a>VSX を使用して、インストールされている DSL をアンインストールするには
 
-1. **ツール** メニューのをクリックして**拡張機能マネージャー**します。
+1. **ツール** メニューをクリックして **拡張機能マネージャー** をクリックします。
 
 2. **[インストール済みの拡張機能]** を展開します。
 

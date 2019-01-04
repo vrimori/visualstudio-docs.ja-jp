@@ -1,9 +1,6 @@
 ---
 title: Microsoft ヘルプ ビューアー SDK |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: 620d7dcd-d462-475e-a449-fbfa06ff12c5
 author: gregvanl
@@ -11,12 +8,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: af324b141815813aec9eaadfcd9982689fdeb467
-ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
+ms.openlocfilehash: 0a4ec2f9fa5fbd6e0fbbdd57bf6de6f2c9dfb0fa
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51000348"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53987052"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft ヘルプ ビューアー SDK
 
@@ -142,7 +139,7 @@ ContosoTopic4.htm、という名前の新しい XHTML ドキュメントを作�
 
 4.  コード スニペットを追加します。  `<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`
 
-5.  コード言語固有のテキストの追加:`<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />`なお`devLangnu=`他の言語を入力することができます。 たとえば、 `devLangnu="Fortran"` Fortran を表示するとき DisplayLanguage のコード スニペット Fortran を =
+5.  コード言語固有のテキストを追加します。`<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />` なお`devLangnu=`他の言語を入力することができます。 たとえば、 `devLangnu="Fortran"` Fortran を表示するとき DisplayLanguage のコード スニペット Fortran を =
 
 6.  ページのリンクを追加します。 `<a href="ms-xhelp://?Id=ContosoTopic1">Main Topic</a>`
 
@@ -283,15 +280,15 @@ F1 フロー ダイアグラム:
 
 ヘルプ ビューアーの既定のヘルプ コンテンツ ソースをオンライン (ブラウザーで起動) を設定するとします。
 
--   Visual Studio パートナー (VSP) 機能は、F1 プロパティ バッグ (プロパティ バッグ prefix.keyword と、レジストリで見つかったプリフィックスの online の URL) に値を出力: F1 VSP URL + パラメーターをブラウザーに送信します。
+-   Visual Studio パートナー (VSP) 機能は、F1 プロパティ バッグ (プロパティ バッグ prefix.keyword と、レジストリで見つかったプリフィックスの online の URL) に値を出力します。F1 は、VSP URL + パラメーターをブラウザーに送信します。
 
--   Visual Studio の機能 (言語のエディター、Visual Studio の特定のメニュー項目など): F1 は、Visual Studio の URL をブラウザーに送信します。
+-   Visual Studio の機能 (言語のエディター、Visual Studio の特定のメニュー項目など)。F1 は、Visual Studio の URL をブラウザーに送信します。
 
 ヘルプ ビューアーの既定のヘルプ コンテンツ ソースをローカルのヘルプ (ヘルプ ビューアーで起動) を設定すると。
 
--   F1 プロパティ バッグとローカル ストアのインデックス間のキーワードの一致する VSP 機能 (プロパティ バッグ prefix.keyword は、ローカル ストアのインデックス内で見つかった値を =): F1 ヘルプ ビューアーでトピックを表示します。
+-   F1 プロパティ バッグとローカル ストアのインデックス間のキーワードの一致する VSP 機能 (プロパティ バッグ prefix.keyword は、ローカル ストアのインデックス内で見つかった値を =)。F1 は、ヘルプ ビューアーでトピックを表示します。
 
--   Visual Studio の機能 (Visual Studio の機能から生成されたプロパティ バッグをオーバーライドする VSP のオプションはありません): F1 ヘルプ ビューアーでの Visual Studio のトピックを表示します。
+-   Visual Studio の機能 (Visual Studio の機能から生成されたプロパティ バッグをオーバーライドする VSP のオプションはありません)。F1 は、ヘルプ ビューアーでの Visual Studio のトピックを表示します。
 
 ヘルプ コンテンツの仕入先の F1 フォールバックを有効にするのには、次のレジストリ値を設定します。 フォールバックの F1 ヘルプ ビューアーがオンラインでの F1 ヘルプ コンテンツを検索する設定を仕入先のコンテンツをローカル ユーザーのハード ドライブにインストールを意味します。 場合でも、オンライン ヘルプの既定の設定は、ローカル ヘルプ コンテンツのヘルプ ビューアーになります。
 
@@ -325,7 +322,7 @@ F1 フロー ダイアグラム:
 
 **解析する基本のネイティブ Namespace**
 
-ネイティブのベース名前空間の解析を有効にするレジストリに新しい DWORD して追加の名前: BaseNativeNamespaces 1 (をサポートする、カタログ キー) の下にその値を設定します。  たとえば、Visual Studio のカタログを使用する場合は、パスにキーを追加できます。
+ベースのネイティブ名前空間の解析を有効にするには、レジストリの名前で新しい DWORD を追加します。BaseNativeNamespaces 1 (をサポートする、カタログ キー) の下にその値を設定します。  たとえば、Visual Studio のカタログを使用する場合は、パスにキーを追加できます。
 
 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15
 
@@ -343,7 +340,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudi
 
 次のレジストリ キーと値を追加します。
 
-HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Dynamic ヘルプ キー: 小売価格でのデバッグ出力を表示します [はい]。
+HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Dynamic ヘルプ キー。小売価格でデバッグ出力を表示します。うん
 
 [ヘルプ] メニュー項目で、IDE で「ヘルプ コンテキストのデバッグ」を選択します。
 
@@ -374,7 +371,7 @@ Visual Studio のリリースには、Visual Studio パートナーの統合シ�
 
 ブランド パッケージは、ヘルプ ビューアーを格納している製品によってインストールされます。  Visual Studio 製品。
 
--   フォールバック ブランド パッケージ (Branding_\<ロケール > .mshc)、ヘルプ ビューアー 2.3 アプリのルートにインストールされている (例: C:\Program Files (x86) \Microsoft Help Viewer\v2.3) によって、ヘルプ ビューアー言語パック。  これはパッケージをブランド化のいずれかの製品がインストールされていない場合に使用されます (コンテンツがインストールされていない) か、インストールされているブランド パッケージが壊れています。  Visual Studio の要素 (ロゴとフィードバック) には、アプリケーション ルートのフォールバック ブランド パッケージを使用する場合は無視されます。
+-   フォールバック ブランド パッケージ (Branding_\<ロケール > .mshc) は、ヘルプ ビューアー 2.3 アプリのルートにインストールされます (例。C:\Program Files (x86) \Microsoft Help Viewer\v2.3) によって、ヘルプ ビューアー言語パック。  これはパッケージをブランド化のいずれかの製品がインストールされていない場合に使用されます (コンテンツがインストールされていない) か、インストールされているブランド パッケージが壊れています。  Visual Studio の要素 (ロゴとフィードバック) には、アプリケーション ルートのフォールバック ブランド パッケージを使用する場合は無視されます。
 
 -   コンテンツ パッケージ サービスから Visual Studio コンテンツがインストールされている、ブランド パッケージは (最初の時間のコンテンツのインストール シナリオ) にもインストールされます。  ブランド パッケージの更新プログラムがある場合は、次のコンテンツの更新または追加のパッケージのインストール操作が発生したときに更新プログラムがインストールします。
 
@@ -445,7 +442,7 @@ Branding.xml ファイルが一貫してトピックが含まれている場合�
 | ExpandText | Expand |
 | CollapseText | 折りたたむ |
 | 機能: | **CodeSnippet** |
-| 使用: | コード スニペットのコントロールのテキスト。  注:「改行」領域でのコード スニペットのコンテンツは、スペースに変更されます。 |
+| 使用: | コード スニペットのコントロールのテキスト。  メモ:「改行」領域でのコード スニペットのコンテンツは、スペースに変更されます。 |
 | **要素** | **[値]** |
 | CopyToClipboard | クリップボードにコピー |
 | ViewColorizedText | 色付きテキストで表示 |
@@ -615,7 +612,7 @@ Visual Studio コンテンツには、Visual Studio ロゴおよびその他の�
 
 注: 次の実装の例で扱った、ブランド パッケージ。 これが、必要な Visual Studio のコンテンツの表示要素とコンテンツの動作を取得するためには、重要です。
 
-HelpContentSetup.msha ファイルのサンプル: (「コンテンツは、名前の 1 を設定」を置換し、"コンテンツ セット name 2" など、ファイル名)。
+HelpContentSetup.msha ファイルのサンプル:(「コンテンツは、名前の 1 を設定」を置換し、"コンテンツ セット name 2" など、ファイル名)。
 
 ```html
 <html>
@@ -725,11 +722,11 @@ Visual Studio のコンテンツ ストアを作成します。 統合シェル�
 
 - HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15
 
-   キー: LocationPath 文字列の値: C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15\
+   重要:LocationPath 文字列値。C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15\
 
 - HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15\en-US
 
-   キー: CatalogName 文字列の値:[!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]ドキュメント
+   重要:カタログ名の文字列値。[!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] ドキュメント
 
 **プロジェクトの作成**
 
@@ -796,7 +793,7 @@ Visual Studio のコンテンツ ストアを作成します。 統合シェル�
 
 7. 次のレジストリ キーを追加します。
 
-    HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15Key: LocationPath 文字列値。
+    HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15Key:LocationPath 文字列値。
 
     ISO シェル。
 
@@ -806,7 +803,7 @@ Visual Studio のコンテンツ ストアを作成します。 統合シェル�
 
     C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15en-米国
 
-    キー: CatalogName 文字列の値:[!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]ドキュメント。 ISO シェルでは、これは、カタログの名前です。
+    重要:カタログ名の文字列値。[!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] ドキュメントです。 ISO シェルでは、これは、カタログの名前です。
 
 8. (Cabs または MSHC および MSHA) コンテンツをローカル フォルダーにコピーします。
 

@@ -1,9 +1,6 @@
 ---
-title: IEnumDebugFields |Microsoft ドキュメント
-ms.custom: ''
+title: IEnumDebugFields |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IEnumDebugFields
@@ -15,15 +12,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a475d7e163cd146a0fd200c1bcac2f3a572ef9e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e71e9e8f0d326e37184568d316f34cbbc34950f3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31124213"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53942308"
 ---
 # <a name="ienumdebugfields"></a>IEnumDebugFields
-このインターフェイスを実装するオブジェクトのコレクションを表します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイスです。  
+このインターフェイスを実装するオブジェクトのコレクションを表します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,33 +29,33 @@ IEnumDebugFields : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- このインターフェイスは、シンボル プロバイダーを実装するオブジェクトのセットを指定する、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイスです。 存在するための標準の COM 列挙ではないことに注意してください、 [GetCount](../../../extensibility/debugger/reference/ienumdebugfields-getcount.md)メソッドです。  
+ このインターフェイスを実装するオブジェクトのセットを指定するシンボル プロバイダーによって実装されます、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイス。 存在するための標準 COM 列挙型ではないことに注意してください、 [GetCount](../../../extensibility/debugger/reference/ienumdebugfields-getcount.md)メソッド。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- このインターフェイスは、によって返される[GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md)と[GetNamespacesUsedAtAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getnamespacesusedataddress.md)です。  
+ このインターフェイスは、によって返される[GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md)と[GetNamespacesUsedAtAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getnamespacesusedataddress.md)します。  
   
-## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+## <a name="methods-in-vtable-order"></a>Vtable 順序メソッド  
  このインターフェイスは、次のメソッドを実装します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[次へ](../../../extensibility/debugger/reference/ienumdebugfields-next.md)|次のセットを取得[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)列挙体からのオブジェクト。|  
+|[Next](../../../extensibility/debugger/reference/ienumdebugfields-next.md)|次のセットを取得します。 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)列挙体からのオブジェクト。|  
 |[Skip](../../../extensibility/debugger/reference/ienumdebugfields-skip.md)|指定されたエントリ数をスキップします。|  
-|[リセット](../../../extensibility/debugger/reference/ienumdebugfields-reset.md)|最初のエントリを列挙型をリセットします。|  
-|[複製](../../../extensibility/debugger/reference/ienumdebugfields-clone.md)|現在の列挙型のコピーを取得します。|  
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugfields-getcount.md)|列挙体のエントリの数を取得します。|  
+|[Reset](../../../extensibility/debugger/reference/ienumdebugfields-reset.md)|最初のエントリを列挙型をリセットします。|  
+|[Clone](../../../extensibility/debugger/reference/ienumdebugfields-clone.md)|現在の列挙体のコピーを取得します。|  
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugfields-getcount.md)|列挙内のエントリの数を取得します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
- [シンボル プロバイダー インターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
+ [シンボルプロバイダーのインターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md)   
  [GetNamespacesUsedAtAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getnamespacesusedataddress.md)

@@ -1,9 +1,6 @@
 ---
 title: 'チュートリアル: 操作ウィンドウから文書にテキストを挿入します。'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b3b9683c5f41b81d529ad6f3347b54131f32f011
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.openlocfilehash: 4e868f8639aa8803e1ba9631bf46929bc917be3f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948726"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53943091"
 ---
 # <a name="walkthrough-insert-text-into-a-document-from-an-actions-pane"></a>チュートリアル: 操作ウィンドウから文書にテキストを挿入します。
   このチュートリアルでは、Microsoft Office Word ドキュメントで、[操作] ウィンドウを作成する方法を示します。 [操作] ウィンドウには、入力を収集し、文書にテキストを送信する 2 つのコントロールが含まれています。  
@@ -51,7 +48,7 @@ ms.locfileid: "51948726"
   
 ### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1.  名前の Word 文書プロジェクトを作成**マイ基本的な操作 ウィンドウ**します。 ウィザードで、次のように選択します。**新しい文書を作成**です。 詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
+1.  名前の Word 文書プロジェクトを作成**マイ基本的な操作 ウィンドウ**します。 ウィザードで、次のように選択します。**新しい文書を作成**です。 詳細については、「[方法 :Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
      デザイナーで新しい Word 文書を開き、**マイ基本的な操作 ウィンドウ**プロジェクトを**ソリューション エクスプ ローラー**します。  
   
@@ -66,7 +63,7 @@ ms.locfileid: "51948726"
   
     **Name**  
   
-    **アドレス**  
+    **Address**  
   
     **これは、Word の基本的な操作ウィンドウの例です。**  
   
@@ -133,7 +130,7 @@ ms.locfileid: "51948726"
     |プロパティ|[値]|  
     |--------------|-----------|  
     |**Name**|**addText**|  
-    |**[テキスト]**|**[挿入]**|  
+    |**Text**|**[挿入]**|  
   
 ## <a name="add-code-to-insert-text-into-the-document"></a>文書にテキストを挿入するコードを追加します。  
  操作ウィンドウで、適切なにテキスト ボックスからテキストを挿入するコードを記述<xref:Microsoft.Office.Tools.Word.Bookmark>ドキュメント内のコントロール。 使用することができます、`Globals`操作ウィンドウ上のコントロールから、ドキュメント上のコントロールにアクセスするクラス。 詳細については、次を参照してください。 [Office プロジェクト内のオブジェクトへのアクセスをグローバル](../vsto/global-access-to-objects-in-office-projects.md)します。  
@@ -145,7 +142,7 @@ ms.locfileid: "51948726"
      [!code-csharp[Trin_VstcoreActionsPaneWord#8](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/InsertTextControl.cs#8)]
      [!code-vb[Trin_VstcoreActionsPaneWord#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/InsertTextControl.vb#8)]  
   
-2.  C# では、ボタン クリックのイベント ハンドラーを追加する必要があります。 このコードを配置することができます、`InsertTextControl`コンス トラクターの呼び出し後`InitializeComponent`します。 イベント ハンドラーの作成方法の詳細については、次を参照してください。[方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)します。  
+2.  C# では、ボタン クリックのイベント ハンドラーを追加する必要があります。 このコードを配置することができます、`InsertTextControl`コンス トラクターの呼び出し後`InitializeComponent`します。 イベント ハンドラーの作成方法の詳細については、次を参照してください。[方法。Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)します。  
   
      [!code-csharp[Trin_VstcoreActionsPaneWord#9](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/InsertTextControl.cs#9)]  
   
@@ -178,15 +175,13 @@ ms.locfileid: "51948726"
 ## <a name="next-steps"></a>次の手順  
  ここでは、次のタスクを行います。  
   
--   Excel で操作ウィンドウを作成します。 詳細については、次を参照してください。[方法: Excel ブックに操作ウィンドウを追加する](/previous-versions/visualstudio/visual-studio-2010/e3zbk0hz(v=vs.100))します。  
+-   Excel で操作ウィンドウを作成します。 詳細については、「[方法 :Excel ブックに操作ウィンドウを追加する](/previous-versions/visualstudio/visual-studio-2010/e3zbk0hz(v=vs.100))します。  
   
--   データを操作ウィンドウ上のコントロールにバインドします。 詳細については、次を参照してください。[チュートリアル: Word の操作ウィンドウ上のコントロールにデータをバインド](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)します。  
+-   データを操作ウィンドウ上のコントロールにバインドします。 詳細については、「[チュートリアル:Word の操作ウィンドウ上のコントロールにデータをバインド](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   
- [方法: Word 文書に操作ウィンドウを追加したり、Excel ブック](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
+ [方法: Word 文書または Excel ブックに操作ウィンドウを追加します。](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
  [方法: Excel ブックに操作ウィンドウを追加します。](/previous-versions/visualstudio/visual-studio-2010/e3zbk0hz(v=vs.100))   
- [方法: アクション ペイン上のコントロールのレイアウトの管理](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
+ [方法: アクション ペイン上のコントロールのレイアウトを管理します。](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
  [Bookmark コントロール](../vsto/bookmark-control.md)  
-  
-  
