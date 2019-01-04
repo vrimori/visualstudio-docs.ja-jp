@@ -1,9 +1,6 @@
 ---
 title: 'チュートリアル: キャッシュされたデータセットを使用したマスター/詳細関係を作成します。'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9d877eae119c922939ea61007a845e5bd7049076
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c75ee922694e80b5ba70e4743d397cdf465169e8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49933158"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53823650"
 ---
 # <a name="walkthrough-create-a-master-detail-relation-using-a-cached-dataset"></a>チュートリアル: キャッシュされたデータセットを使用したマスター/詳細関係を作成します。
   このチュートリアルでは、ワークシートで、マスター/詳細関係を作成して、ソリューションをオフラインで使用できるように、データのキャッシュを示します。  
@@ -57,7 +54,7 @@ ms.locfileid: "49933158"
   
 ### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1. 名前の Excel ブック プロジェクトを作成**マイ マスター/詳細**、Visual Basic または c# を使用します。 必ず**新しい文書を作成**が選択されています。 詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+1. 名前の Excel ブック プロジェクトを作成**マイ マスター/詳細**、Visual Basic または c# を使用します。 必ず**新しい文書を作成**が選択されています。 詳細については、「[方法 :Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
    デザイナーで新しい Excel ブックを開き、**マイ Master-detail**プロジェクトを**ソリューション エクスプ ローラー**します。  
   
@@ -196,5 +193,3 @@ ms.locfileid: "49933158"
  [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)   
  [キャッシュ データ](../vsto/caching-data.md)   
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)  
-  
-  

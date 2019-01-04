@@ -1,13 +1,8 @@
 ---
 title: '方法: パラメーターの型記述子の定義 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -20,14 +15,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ec2b0173838446c770f3323aacefebabc195c48b
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 15b8a9dff10c88ce46ecfa5565eb9f411ce59798
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51294982"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53953158"
 ---
-# <a name="how-to-define-the-type-descriptor-of-a-parameter"></a>方法: パラメーターの型記述子を定義
+# <a name="how-to-define-the-type-descriptor-of-a-parameter"></a>方法: パラメーターの型記述子を定義します。
   型記述子には、パラメーターのデータ型を表すプロパティが含まれています。 型記述子では、フィールド、エンティティ、またはエンティティのコレクションを定義できます。 詳細については、次を参照してください。 [TypeDescriptor](/previous-versions/office/developer/sharepoint-2007/ms543392\(v\=office.12\))します。  
   
 ### <a name="to-define-the-type-descriptor-of-a-parameter"></a>パラメーターの型記述子を定義するには  
@@ -42,7 +37,7 @@ ms.locfileid: "51294982"
   
 ### <a name="to-define-a-field"></a>フィールドを定義するには  
   
-1.  **プロパティ**ウィンドウで、設定、**名前**エンティティを表す型のフィールドの名前に、型記述子のプロパティ (例: **FirstName**)。  
+1.  **プロパティ**ウィンドウで、設定、**名前**エンティティを表す型のフィールドの名前に、型記述子のプロパティ (例。**FirstName**)。  
   
 2.  横のリストで、 **TypeName**プロパティ、適切なデータ型を選択して (たとえば、 **Int32**)。  
   
@@ -50,7 +45,7 @@ ms.locfileid: "51294982"
   
 ### <a name="to-define-an-entity"></a>エンティティを定義するには  
   
-1.  **プロパティ**ウィンドウで、設定、**名前**プロパティをエンティティを表す名前 (例:**にお問い合わせください**)。  
+1.  **プロパティ**ウィンドウで、設定、**名前**プロパティをエンティティを表す名前 (例。**連絡先**)。  
   
 2.  設定、 **TypeName**プロパティをエンティティを表す型の完全修飾名。 この型は、プロジェクト内のクラスにすることも、ソリューションで参照されているアセンブリで定義されている型にすることも、BDC オブジェクト モデルで定義されている型にすることもできます。  
   
@@ -88,7 +83,7 @@ ms.locfileid: "51294982"
   
 2. メニュー バーで、**ビュー**、**プロパティ ウィンドウ**します。  
   
-3. **プロパティ**ウィンドウで、設定、**名前**プロパティをエンティティを表す名前 (例:**連絡先**)。  
+3. **プロパティ**ウィンドウで、設定、**名前**プロパティをエンティティを表す名前 (例。**連絡先**)。  
   
 4. 設定、 **IsCollection**プロパティを**True**します。 これは、この型記述子がエンティティのコレクションであることを表します。  
   
@@ -125,7 +120,6 @@ ms.locfileid: "51294982"
 ## <a name="see-also"></a>関連項目
  [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
  [方法: エンティティ モデルを追加します。](../sharepoint/how-to-add-an-entity-to-a-model.md)   
- [方法: メソッドにパラメーターを追加](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
- [方法: メソッド インスタンスの定義](../sharepoint/how-to-define-a-method-instance.md)   
+ [方法: メソッドにパラメーターを追加します。](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
+ [方法: メソッド インスタンスを定義します。](../sharepoint/how-to-define-a-method-instance.md)   
  [ビジネス データ接続モデルを設計します。](../sharepoint/designing-a-business-data-connectivity-model.md)  
-  

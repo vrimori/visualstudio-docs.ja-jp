@@ -1,9 +1,6 @@
 ---
 title: IDebugProgramEngines2::EnumPossibleEngines |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugProgramEngines2::EnumPossibleEngines
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f5977e7dbac34e247838efe1e8d0036e60f0416
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: b3ebf30c4152e03a72626b96cfd51b0341494ccb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49887673"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53891386"
 ---
 # <a name="idebugprogramengines2enumpossibleengines"></a>IDebugProgramEngines2::EnumPossibleEngines
 すべての使用可能なデバッグ エンジン (DE) このプログラムをデバッグできるの Guid を返します。  
@@ -28,7 +25,7 @@ ms.locfileid: "49887673"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT EnumPossibleEngines(   
+HRESULT EnumPossibleEngines(   
    DWORD  celtBuffer,  
    GUID*  rgguidEngines,  
    DWORD* pceltEngines  
@@ -36,7 +33,7 @@ HRESULT EnumPossibleEngines(
 ```  
   
 ```csharp  
-int EnumPossibleEngines(   
+int EnumPossibleEngines(   
    uint      celtBuffer,  
    GUID[]    rgguidEngines,  
    ref DWORD pceltEngines  
@@ -54,7 +51,7 @@ int EnumPossibleEngines(
  [out]返される DE Guid の実際の数を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 [C++] を返します`HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)`または [c#] 0x8007007A バッファーが十分な大きさでない場合。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 [C++] を返します`HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)`または [C#] 0x8007007A バッファーが十分な大きさでない場合。  
   
 ## <a name="remarks"></a>Remarks  
  エンジンの数は判断をするために 1 回このメソッドを呼び出す、`celtBuffer`パラメーター 0 に設定し、`rgguidEngines`パラメーターが null の値に設定します。 返されます。 `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` (0x8007007A C# の場合)、および`pceltEngines`パラメーターが必要なバッファーのサイズを返します。  

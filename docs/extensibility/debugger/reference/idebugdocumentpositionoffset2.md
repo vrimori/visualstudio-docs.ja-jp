@@ -1,9 +1,6 @@
 ---
-title: IDebugDocumentPositionOffset2 |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugDocumentPositionOffset2 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - IDebugDocumentPositionOffset2 interface
@@ -13,15 +10,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f08b278d75068351d6d65511f74209c7208024cf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eeedd1038b577be8a0e0cac46359cf0b05f0dc70
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31106878"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53948288"
 ---
 # <a name="idebugdocumentpositionoffset2"></a>IDebugDocumentPositionOffset2
-ソース ファイル内の文字オフセットとしての位置を表します。  
+文字のオフセットとしてソース ファイル内の位置を表します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,15 +36,15 @@ IDebugDocumentPositionOffset2 : IUnknown
 |------------|-----------------|  
 |[GetRange](../../../extensibility/debugger/reference/idebugdocumentpositionoffset2-getrange.md)|現在のドキュメントの位置の範囲を取得します。|  
   
-## <a name="remarks"></a>コメント  
- 同じ情報が返されます。 [GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)が`char`ドキュメントの先頭から数分オフセットします。 これにより、その上に存在します、ディスク、つまり、通常返される行と列の情報ではなく、文字の 1 次元の配列と同じように、ドキュメントが表示されます。  
+## <a name="remarks"></a>Remarks  
+ 同じ情報が返されます[GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)が`char`ドキュメントの先頭からのオフセットします。 これによりは存在して、ディスクには、通常返される行と列の情報ではなく、文字の 1 次元配列と同様に、ドキュメントを表示します。  
   
-## <a name="requirements"></a>要件  
- ヘッダー: Msdbg.h  
+## <a name="requirements"></a>必要条件  
+ ヘッダー:Msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)

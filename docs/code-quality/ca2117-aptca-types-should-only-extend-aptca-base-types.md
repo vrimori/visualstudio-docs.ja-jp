@@ -1,8 +1,7 @@
 ---
-title: 'CA2117: APTCA 型は APTCA 基本型のみを拡張することができます'
+title: CA2117:APTCA 型は APTCA 基本型のみを拡張することができます
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - CA2117
@@ -16,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8dac5acc0b7c7fff02862853bfd996362f80d1cc
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: bc2086038187093397d53e80b1a26f2006c32c80
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45547501"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53873354"
 ---
-# <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117: APTCA 型は APTCA 基本型のみを拡張することができます
+# <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117:APTCA 型は APTCA 基本型のみを拡張することができます
 
 |||
 |-|-|
@@ -88,7 +87,7 @@ Meet at the sunny meadow 2/22/2003 12:00:00 AM!
 
 ## <a name="related-rules"></a>関連するルール
 
-[CA2116: APTCA メソッドは APTCA メソッドのみを呼び出すことができます](../code-quality/ca2116-aptca-methods-should-only-call-aptca-methods.md)
+[CA2116:APTCA メソッドは APTCA メソッドのみを呼び出す必要があります。](../code-quality/ca2116-aptca-methods-should-only-call-aptca-methods.md)
 
 ## <a name="see-also"></a>関連項目
 

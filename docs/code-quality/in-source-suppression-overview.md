@@ -2,7 +2,6 @@
 title: コード分析の警告を抑制します。
 ms.date: 08/03/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
 - source suppression, code analysis
@@ -16,12 +15,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e90de7acf13ca28a20a35aa3ad3e70f58780279
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: d72697a8969983d83445808b75c63bc8657ecf1f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513047"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53932880"
 ---
 # <a name="suppress-code-analysis-warnings"></a>コード分析の警告を抑制します。
 
@@ -85,11 +84,11 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 レベルでコード分析の警告が抑制されます、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>属性を適用します。 たとえば、アセンブリ、モジュール、型、メンバー、またはパラメーターのレベルで属性を適用できます。 この目的は、違反が発生する抑制については、コードに密に結合します。
 
-抑制の一般的な形式には、ルールのカテゴリと、ルール名の省略可能な人間が判読できる形式を格納して、ルールの識別子が含まれています。 例えば:
+抑制の一般的な形式には、ルールのカテゴリと、ルール名の省略可能な人間が判読できる形式を格納して、ルールの識別子が含まれています。 例:
 
 `[SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]`
 
-ソース内抑制のメタデータを最小限に抑えるための厳密なパフォーマンス上の理由がある場合は、ルール名を省略できます。 ルール カテゴリとそのルールの ID 構成規則を十分に一意の識別子。 例えば:
+ソース内抑制のメタデータを最小限に抑えるための厳密なパフォーマンス上の理由がある場合は、ルール名を省略できます。 ルール カテゴリとそのルールの ID 構成規則を十分に一意の識別子。 例:
 
 `[SuppressMessage("Microsoft.Design", "CA1039")]`
 
@@ -140,7 +139,7 @@ public class Animal
 
 マネージ コード コンパイラと一部のサード パーティ製ツールは、迅速なコードの開発を促進するためのコードを生成します。 ソース ファイルに表示されるコンパイラによって生成されたコードがでマークされたは、通常、`GeneratedCodeAttribute`属性。
 
-コード分析の警告と生成されたコードのエラーを抑制するかどうかを選択できます。 このような警告とエラーを抑制する方法については、次を参照してください。[方法: 生成されたコードの警告を抑制する](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md)します。
+コード分析の警告と生成されたコードのエラーを抑制するかどうかを選択できます。 このような警告とエラーを抑制する方法については、次を参照してください。[方法。生成されたコードの警告を抑制する](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md)します。
 
 > [!NOTE]
 > コード分析を無視`GeneratedCodeAttribute`アセンブリ全体または 1 つのパラメーターのいずれかに適用されます。

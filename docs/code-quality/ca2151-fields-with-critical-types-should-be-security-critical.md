@@ -1,8 +1,7 @@
 ---
-title: 'CA2151: クリティカル型のフィールドはセキュリティ クリティカルである必要があります'
+title: CA2151:クリティカル型のフィールドはセキュリティ クリティカルである必要があります
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 09db9d25-7d58-4725-a252-4a07baadf046
 author: gewarren
@@ -10,14 +9,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 14df76b363f4df5d09b06436765b5f0c66ad2c5d
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 279e3d134af967467f195f155373bba725b031e0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45551898"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53895221"
 ---
-# <a name="ca2151-fields-with-critical-types-should-be-security-critical"></a>CA2151: クリティカル型のフィールドはセキュリティ クリティカルである必要があります
+# <a name="ca2151-fields-with-critical-types-should-be-security-critical"></a>CA2151:クリティカル型のフィールドはセキュリティ クリティカルである必要があります
 
 |||
 |-|-|
@@ -28,7 +27,7 @@ ms.locfileid: "45551898"
 
 ## <a name="cause"></a>原因
 
-透過的セキュリティ フィールドまたはセーフ クリティカル フィールドが宣言されました。 その型は、セキュリティ クリティカルとして指定されています。 例えば:
+透過的セキュリティ フィールドまたはセーフ クリティカル フィールドが宣言されました。 その型は、セキュリティ クリティカルとして指定されています。 例:
 
 ```csharp
 [assembly: AllowPartiallyTrustedCallers]

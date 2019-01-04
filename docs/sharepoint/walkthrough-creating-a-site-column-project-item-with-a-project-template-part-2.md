@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: プロジェクト テンプレートを使用したサイト列プロジェクト項目の作成、パート 2 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: プロジェクト テンプレートを使用して、サイト列プロジェクト項目を作成、パート 2 |Microsoft Docs'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 helpviewer_keywords:
 - project items [SharePoint development in Visual Studio], creating template wizards
@@ -14,17 +11,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d4512dc15d394cdf2442d8bfcf440ccb31623a29
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f5f9f2bbad380302d2a13b4352b2c9a7a54797e5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49942076"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53829908"
 ---
-# <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>チュートリアル: プロジェクト テンプレート、第 2 部でのサイト列プロジェクト項目を作成します。
+# <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>チュートリアル: プロジェクト テンプレート、第 2 部でサイト列プロジェクト項目を作成します。
   SharePoint プロジェクト項目のカスタム種類を定義し、Visual Studio でその種類をプロジェクト テンプレートと関連付けてから、テンプレート用のウィザードを用意することもできます。 ウィザードを使用すると、ユーザーがテンプレートを使用してプロジェクト項目を含む新しいプロジェクトを作成するときに、ユーザーから情報を収集できます。 収集した情報を使用して、プロジェクト項目を初期化できます。  
   
- このチュートリアルでは、」に示した Site Column プロジェクト テンプレートにウィザードを追加[チュートリアル: プロジェクト テンプレート、第 1 部でサイト列プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)します。 ウィザードが (その基本型とグループ) など、サイト内の列に関する情報を収集およびにこの情報を追加します。 ユーザーが Site Column プロジェクトを作成するとき、 *Elements.xml*で新しいプロジェクト ファイル。  
+ このチュートリアルでは、」に示した Site Column プロジェクト テンプレートにウィザードを追加[チュートリアル。プロジェクト テンプレートを使用して、サイト列プロジェクト項目を作成、パート 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)します。 ウィザードが (その基本型とグループ) など、サイト内の列に関する情報を収集およびにこの情報を追加します。 ユーザーが Site Column プロジェクトを作成するとき、 *Elements.xml*で新しいプロジェクト ファイル。  
   
  このチュートリアルでは、次のタスクについて説明します。  
   
@@ -44,7 +41,7 @@ ms.locfileid: "49942076"
 > 一連のサンプル ワークフローは、次を参照してください。 [SharePoint workflow のサンプル](https://docs.microsoft.com/sharepoint/dev/general-development/sharepoint-workflow-samples)します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルを実行する必要がありますまず SiteColumnProjectItem ソリューション実行して作成した[チュートリアル: プロジェクト テンプレート、第 1 部でサイト列プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)します。  
+ このチュートリアルを実行する必要がありますまず SiteColumnProjectItem ソリューション実行して作成した[チュートリアル。プロジェクト テンプレートを使用して、サイト列プロジェクト項目を作成、パート 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)します。  
   
  また、このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
   
@@ -54,7 +51,7 @@ ms.locfileid: "49942076"
   
   次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
   
-- Visual Studio のプロジェクトおよび項目テンプレート用のウィザード。 詳細については、次を参照してください。[方法: プロジェクト テンプレートにウィザードの使用](../extensibility/how-to-use-wizards-with-project-templates.md)と<xref:Microsoft.VisualStudio.TemplateWizard.IWizard>インターフェイス。  
+- Visual Studio のプロジェクトおよび項目テンプレート用のウィザード。 詳細については、「[方法 :プロジェクト テンプレートにウィザードを使用して](../extensibility/how-to-use-wizards-with-project-templates.md)と<xref:Microsoft.VisualStudio.TemplateWizard.IWizard>インターフェイス。  
   
 - SharePoint のサイト内の列。 詳細については、次を参照してください。[列](http://go.microsoft.com/fwlink/?LinkId=183547)します。  
   
@@ -70,7 +67,7 @@ ms.locfileid: "49942076"
 |SharePoint コマンド|これらは、ウィザードの実行中にローカル SharePoint サイトへの呼び出しを行うためにウィザード データ モデルによって使用されるメソッドです。 SharePoint コマンドは .NET Framework 3.5 をターゲットとする必要があるため、これらのコマンドは他のウィザード コードとは異なるアセンブリに実装されます。|  
   
 ## <a name="create-the-projects"></a>プロジェクトを作成します。
- このチュートリアルを完了するにはいくつかのプロジェクトで作成した SiteColumnProjectItem ソリューションに追加する必要があります[チュートリアル: プロジェクト テンプレート、第 1 部でサイト列プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md):  
+ このチュートリアルを完了するにはいくつかのプロジェクトで作成した SiteColumnProjectItem ソリューションに追加する必要があります[チュートリアル。プロジェクト テンプレート、第 1 部でサイト列プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md):  
   
 - WPF プロジェクト。 このプロジェクトで、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを実装し、ウィザードの UI を定義します。  
   
@@ -119,7 +116,7 @@ ms.locfileid: "49942076"
   
 3.  ターゲット フレームワークが .NET Framework 4.5 Client Profile ではなく .NET Framework 4.5 に設定されていることを確認します。  
   
-     詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。  
+     詳細については、「[方法 :.NET Framework のターゲット バージョンを指定する](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。  
   
 4.  ショートカット メニューを開き、 **ProjectTemplateWizard**プロジェクトで、選択**追加**を選び、**新しい項目の**します。  
   
@@ -163,7 +160,7 @@ ms.locfileid: "49942076"
   
 13. Visual Basic プロジェクトを開発している場合は、プロジェクトにインポート ProjectTemplateWizard 名前空間を使用して、**プロジェクト デザイナー**します。  
   
-     詳細については、次を参照してください。[方法: インポートされた名前空間を追加または&#40;Visual Basic&#41;](../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md)します。  
+     詳細については、「[方法 :追加またはインポートされた名前空間を削除する&#40;Visual Basic&#41;](../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md)します。  
   
 #### <a name="to-configure-the-sharepointcommands-project"></a>SharePointcommands プロジェクトを構成するには
   
@@ -323,7 +320,7 @@ ms.locfileid: "49942076"
 1.  メニュー バーで、**[ビルド]** > **[ソリューションのビルド]** の順にクリックします。  
   
 ## <a name="removing-the-keysnk-file-from-the-project-template"></a>プロジェクト テンプレートから key.snk ファイルを削除します。
- [チュートリアル: プロジェクト テンプレート、第 1 部でサイト列プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)、作成したプロジェクト テンプレートには、各 Site Column プロジェクト インスタンスに署名するために使用される key.snk ファイルが含まれています。 ウィザードでプロジェクトごとに新しい key.snk ファイルが生成されるようになったため、この key.snk ファイルはもう必要ありません。 プロジェクト テンプレートから key.snk ファイルを削除し、このファイルへの参照を削除します。  
+ [チュートリアル。プロジェクト テンプレート、第 1 部でサイト列プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)、作成したプロジェクト テンプレートには、各 Site Column プロジェクト インスタンスに署名するために使用される key.snk ファイルが含まれています。 ウィザードでプロジェクトごとに新しい key.snk ファイルが生成されるようになったため、この key.snk ファイルはもう必要ありません。 プロジェクト テンプレートから key.snk ファイルを削除し、このファイルへの参照を削除します。  
   
 #### <a name="to-remove-the-keysnk-file-from-the-project-template"></a>プロジェクト テンプレートから key.snk ファイルを削除するには  
   
@@ -542,9 +539,8 @@ ms.locfileid: "49942076"
      デプロイする方法については[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、拡張機能を参照してください[Visual Studio 拡張機能の配布](/visualstudio/extensibility/shipping-visual-studio-extensions)します。  
   
 ## <a name="see-also"></a>関連項目
- [チュートリアル: プロジェクト テンプレート、第 1 部でのサイト列プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)   
+ [チュートリアル: プロジェクト テンプレート、第 1 部でサイト列プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)   
  [カスタム SharePoint プロジェクト項目の種類を定義します。](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [SharePoint プロジェクト項目の項目テンプレートとプロジェクト テンプレートを作成します。](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   
  [Visual Studio テンプレート スキーマ参照](/visualstudio/extensibility/visual-studio-template-schema-reference)   
- [方法: プロジェクト テンプレートでウィザードを使用する](../extensibility/how-to-use-wizards-with-project-templates.md)  
-  
+ [方法: プロジェクト テンプレートにウィザードの使用](../extensibility/how-to-use-wizards-with-project-templates.md)  

@@ -1,13 +1,8 @@
 ---
 title: 'チュートリアル: プロジェクト タスク リスト定義の配置 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -17,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0e0a0338f14ecdea36c5a5678a42a76ae234bb6d
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 3df4f161eddc5d10b77887b99d93be2204821c24
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44280364"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53826625"
 ---
 # <a name="walkthrough-deploy-a-project-task-list-definition"></a>チュートリアル: プロジェクト タスク リスト定義を展開します。
 
@@ -143,7 +138,7 @@ SharePoint プロジェクトを作成するときに Visual Studio でパッケ
 
 Visual Studio メニュー バーで、**ビルド** > **ソリューションの配置**します。
 
-Visual Studio、IIS アプリケーション プールのリサイクル、以前のバージョンのソリューションを取り消します、ソリューション パッケージのコピー (*.wsp*) を SharePoint にファイルを開き、その機能をアクティブにします。 SharePoint でソリューションを使えるようになりました。 展開の構成手順の詳細については、次を参照してください。[方法: SharePoint の配置構成を編集](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)します。
+Visual Studio、IIS アプリケーション プールのリサイクル、以前のバージョンのソリューションを取り消します、ソリューション パッケージのコピー (*.wsp*) を SharePoint にファイルを開き、その機能をアクティブにします。 SharePoint でソリューションを使えるようになりました。 展開の構成手順の詳細については、次を参照してください。[方法。SharePoint の配置構成を編集](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)します。
 
 ### <a name="to-deploy-the-project-task-list-to-a-remote-system"></a>リモート システムにプロジェクトのタスクの一覧を展開するには
 
@@ -173,9 +168,9 @@ Visual Studio、IIS アプリケーション プールのリサイクル、以�
 
 カスタマイズし、次のトピックからの SharePoint ソリューションをデプロイする方法の詳細を確認できます。
 
-- [チュートリアル: SharePoint のサイト列、コンテンツの種類、および一覧を作成します。](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)
+- [チュートリアル: For SharePoint のサイト列、コンテンツの種類、および一覧を作成します。](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)
 
-- [方法: イベント レシーバーを作成](../sharepoint/how-to-create-an-event-receiver.md)
+- [方法: イベント レシーバーを作成します。](../sharepoint/how-to-create-an-event-receiver.md)
 
 - [SharePoint Server 2010 用の Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=217684)
 

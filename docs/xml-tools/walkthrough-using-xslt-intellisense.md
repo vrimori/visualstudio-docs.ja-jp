@@ -2,7 +2,6 @@
 title: 'チュートリアル: XSLT IntelliSense の使用'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 079d95ac-2eaf-4ae1-9cd3-2c81a961a942
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 86a71a70296a3b4e49f2cf7c596a7f71063c8297
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 1cbd8c7d49719ad1b3d04d9336f222b45a0b33d8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34693524"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53894403"
 ---
 # <a name="walkthrough-using-xslt-intellisense"></a>チュートリアル: XSLT IntelliSense の使用
 
@@ -47,7 +46,7 @@ ms.locfileid: "34693524"
     </xsl:stylesheet>
     ```
 
-2.  後にカーソルを置き、`<xsl:template name="msg23" match="msg23">`とキーを押します**Enter**です。 その後、次の `xsl:call-template` 要素を入力します。
+2.  後にカーソルを置き`<xsl:template name="msg23" match="msg23">`キーを押します**Enter**します。 その後、次の `xsl:call-template` 要素を入力します。
 
     ```xml
     <xsl:call-template name="localized-message">
@@ -56,7 +55,7 @@ ms.locfileid: "34693524"
 
      入力中、`name=""` 要素の `xsl:call-template` 属性にテンプレート名の一覧が表示されます。
 
-3.  後にカーソルを置き、`<xsl:call-template name="localized-message">`とキーを押します**Enter**です。 その後、次の `xsl:with-param` 要素を入力します。
+3.  後にカーソルを置き`<xsl:call-template name="localized-message">`キーを押します**Enter**します。 その後、次の `xsl:with-param` 要素を入力します。
 
     ```xml
     <xsl:with-param name="msgcode">msg23</xsl:with-param>
@@ -113,7 +112,7 @@ ms.locfileid: "34693524"
     </xsl:stylesheet>
     ```
 
-2.  後にカーソルを置き、`<xsl:apply-templates select="phone" />`とキーを押します**Enter**です。 その後、次の `xsl: apply-templates` 要素を入力します。
+2.  後にカーソルを置き`<xsl:apply-templates select="phone" />`キーを押します**Enter**します。 その後、次の `xsl: apply-templates` 要素を入力します。
 
     ```xml
     <xsl:apply-templates select="phone"  mode="accountNumber">
@@ -154,7 +153,7 @@ ms.locfileid: "34693524"
     </xsl:stylesheet>
     ```
 
-2.  後にカーソルを置き、`<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:alt="http://www.w3.org/1999/XSL/Transform-alternate" version="1.0">`とキーを押します**Enter**です。 その後、次の `xsl:namespace-alias` 要素を入力します。
+2.  後にカーソルを置き`<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:alt="http://www.w3.org/1999/XSL/Transform-alternate" version="1.0">`キーを押します**Enter**します。 その後、次の `xsl:namespace-alias` 要素を入力します。
 
     ```xml
     <xsl:namespace-alias stylesheet-prefix="alt" result-prefix="xsl"/>

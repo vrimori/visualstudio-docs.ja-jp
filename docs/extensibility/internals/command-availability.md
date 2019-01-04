@@ -1,8 +1,6 @@
 ---
 title: コマンドの可用性 |Microsoft Docs
 ms.date: 03/22/2018
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - commands, context
@@ -13,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 98250763f504bc7d142f15e559334f296a2e026b
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 7ac9a172ee2cb7a117a1d9b63c4f1fef9f631952
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39511135"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53915871"
 ---
 # <a name="command-availability"></a>利用可能なコマンド
 
@@ -28,19 +26,19 @@ Visual Studio のコンテキストでは、コマンドが使用可能な判断
 
 次のコマンドのコンテキストは、最も一般的です。
 
-- IDE: IDE で提供されるコマンドは、常に、使用できます。
+- IDE:IDE で提供されるコマンドは常に使用できます。
 
-- VSPackage: Vspackage を定義できますとコマンド表示または非表示にします。
+- VSPackage:Vspackage では、表示または非表示にするコマンドが場合を定義できます。
 
-- プロジェクト: プロジェクトのコマンドは、現在選択されているプロジェクトに対してのみ表示されます。
+- プロジェクト:プロジェクトのコマンドは、現在選択されているプロジェクトに対してのみ表示されます。
 
-- エディター: 1 つだけのエディターを有効にする時間。 アクティブなエディターからのコマンドを利用できます。 エディターは、言語サービスと密接に連携します。 言語サービスでは、関連付けられているエディターのコンテキストでは、そのコマンドを処理する必要があります。
+- エディター:一度にアクティブにできるエディターの 1 つだけです。 アクティブなエディターからのコマンドを利用できます。 エディターは、言語サービスと密接に連携します。 言語サービスでは、関連付けられているエディターのコンテキストでは、そのコマンドを処理する必要があります。
 
-- ファイルの種類: エディターでは、複数の種類のファイルを読み込むことができます。 使用可能なコマンドは、ファイルの種類に応じて変更できます。
+- ファイルの種類:エディターでは、1 つ以上の種類のファイルを読み込むことができます。 使用可能なコマンドは、ファイルの種類に応じて変更できます。
 
-- アクティブなウィンドウ: 最後のアクティブなドキュメント ウィンドウは、キー バインドのユーザー インターフェイス (UI) のコンテキストを設定します。 ただし、内部 web ブラウザーのようなキー バインドのテーブルのあるツール ウィンドウでは、UI コンテキストが設定もできます。 HTML エディターなどの複数タブ付きドキュメント ウィンドウ、各タブは別のコマンド コンテキストの GUID を持っています。 常にで使用できるツール ウィンドウは、登録後、**ビュー**メニュー。
+- アクティブなウィンドウ:最後のアクティブなドキュメント ウィンドウは、キー バインドのユーザー インターフェイス (UI) のコンテキストを設定します。 ただし、内部 web ブラウザーのようなキー バインドのテーブルのあるツール ウィンドウでは、UI コンテキストが設定もできます。 HTML エディターなどの複数タブ付きドキュメント ウィンドウ、各タブは別のコマンド コンテキストの GUID を持っています。 常にで使用できるツール ウィンドウは、登録後、**ビュー**メニュー。
 
-- UI コンテキスト: UI コンテキストがの値によって識別される、<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT>クラス、たとえば、<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionBuilding_guid>ソリューションが構築されるときにまたは<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.Debugging_guid>デバッガーがアクティブな場合。 同時にアクティブにできる複数の UI コンテキストです。
+- UI コンテキスト:UI コンテキストがの値によって識別される、<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT>クラス、たとえば、<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionBuilding_guid>ソリューションが構築されるときにまたは<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.Debugging_guid>デバッガーがアクティブな場合。 同時にアクティブにできる複数の UI コンテキストです。
 
 ## <a name="define-custom-context-guids"></a>カスタム コンテキストの Guid を定義します。
 

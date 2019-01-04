@@ -11,13 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: ef7c49c514c9104ee4659db983b04c27036df889
-ms.sourcegitcommit: c9a01c599ce19a5845605b3b28c0229fd0abb93f
+ms.openlocfilehash: d5d4b4c50a02a92d150a87788e6dc307dd2f8e64
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281824"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53865519"
 ---
 # <a name="code-generation-in-a-build-process"></a>ビルド プロセスでのコード生成
 
@@ -253,7 +252,7 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 
 Visual Studio のマクロ **$ (solutiondir)** などは、MSBuild では動作しません。 その代わりに、プロジェクト プロパティを使用できます。
 
-*.csproj*または *.vbproj* ファイルを編集して、プロジェクト プロパティを定義します。 次の例は、**myLibFolder** という名前のプロパティを定義します。
+*.csproj*または *.vbproj* ファイルを編集して、プロジェクト プロパティを定義します。 次の例は、**myLibFolder**という名前のプロパティを定義します。
 
 ```xml
 <!-- Define a project property, myLibFolder: -->

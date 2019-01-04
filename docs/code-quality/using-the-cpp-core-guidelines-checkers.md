@@ -8,13 +8,12 @@ manager: wpickett
 dev_langs:
 - CPP
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
-ms.openlocfilehash: 6595e8990dece15e88e07a6c8eefabd3f543bbb7
-ms.sourcegitcommit: 1abb9cf4c3ccb90e3481ea8079272c98aad12875
+ms.openlocfilehash: 2ed89e5210a3b8201f612887f2346b57e03cef20
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50143464"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53820239"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>C++ Core ガイドライン チェッカーの使用
 C++ Core ガイドラインは、ガイドライン、ルール、および C++ 専門家とデザイナーで作成された C++ のコーディングについてのベスト プラクティスの移植可能なセットです。 Visual Studio では、c++ のコード分析ツールの一部としてこれらのルールのサブセットがサポートされています。 Core ガイドラインのチェッカーが Visual Studio 2017 では、既定でインストールされ[Visual Studio 2015 用の NuGet パッケージとして利用可能な](#vs2015_corecheck)します。
@@ -55,11 +54,11 @@ int main()
 
 この例では、C++ Core Check の規則を検索する警告のいくつかを示します。
 
-- C26494 はルール Type.5: 常にオブジェクトを初期化します。
+- C26494 は、規則 Type.5 です。常にオブジェクトを初期化します。
 
-- C26485 はルール Bounds.3: 配列からポインターへの減退しません。
+- C26485 は、規則 Bounds.3 です。配列とポインター減退がありません。
 
-- C26481 はルール Bounds.1: ポインター演算を使用しないでください。 代わりに、`span` を使用してください。
+- C26481 は、規則 Bounds.1 です。ポインターの算術演算を使用しないでください。 代わりに、`span` を使用してください。
 
 C++ Core Check のコード分析ルールセットはインストールされている、このコードをコンパイルすると、最初の 2 つの警告は、出力が、3 つ目の抑制を有効になっている場合。 コード例からのビルド出力を次に示します。
 

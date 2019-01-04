@@ -1,8 +1,6 @@
 ---
 title: 実行時にフォーム領域へのアクセスします。
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology: office-development
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +15,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f2c1f3e80f5ca4015a19b5eee7f2f4c673dcc615
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: 82f613711d1d95b271bd0d1ca558b193a1aa90cb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304481"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53875434"
 ---
 # <a name="access-a-form-region-at-runtime"></a>実行時にフォーム領域へのアクセスします。
 
@@ -71,9 +69,9 @@ ms.locfileid: "52304481"
 
  フォーム領域コード ファイルの外部からコードにアクセスできるようにするには、フォーム領域コード ファイルに、そのコントロールを返すプロパティを作成します。  
 
- プロパティを作成する方法の詳細についてのC#を参照してください[方法: 宣言および使用して読み取るプロパティの書き込み&#40;C&#35;プログラミング ガイド&#41;](/dotnet/csharp/programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties)します。  
+ C# でのプロパティを作成する方法の詳細については、次を参照してください。[方法。宣言し、プロパティの読み取りを使用して書き込み&#40;C&#35;プログラミング ガイド&#41;](/dotnet/csharp/programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties)します。  
 
- Visual Basic でプロパティを作成する方法の詳細については、次を参照してください。[方法: プロパティ (Visual Basic) を作成する](/dotnet/visual-basic/programming-guide/language-features/procedures/how-to-create-a-property)します。  
+ Visual Basic でプロパティを作成する方法の詳細については、次を参照してください。[方法。プロパティ (Visual Basic) を作成する](/dotnet/visual-basic/programming-guide/language-features/procedures/how-to-create-a-property)します。  
 
 ## <a name="see-also"></a>関連項目  
  [Outlook フォーム領域を作成するためのガイドライン](../vsto/guidelines-for-creating-outlook-form-regions.md)   

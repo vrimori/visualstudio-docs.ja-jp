@@ -1,8 +1,7 @@
 ---
-title: '方法 : XML スキーマから XML スニペットを生成する'
+title: '方法: XML スキーマから XML スニペットを生成する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 2c128d2a-aaa6-4814-aa95-e07056afe338
 author: gewarren
@@ -10,16 +9,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ac437bbbe876d81acc917f011a3051c9c264b6a
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: 31e1805a38d51315c4f0753f363334d1df37ece6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34477679"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53864726"
 ---
-# <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>方法: XML スキーマから XML スニペットを生成
+# <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>方法: XML スキーマから XML スニペットを生成します。
 
-XML エディターは、XML スキーマ定義言語 (XSD) スキーマから XML スニペットを生成する機能を備えています。 たとえば、要素名の横に配置する一方、XML ファイルを作成して、キーを押します**タブ**要素にその要素のスキーマ情報から生成された XML データを格納します。
+XML エディターは、XML スキーマ定義言語 (XSD) スキーマから XML スニペットを生成する機能を備えています。 たとえば、要素名の横に配置する一方、XML ファイルを作成して、キーを押して**タブ**要素にその要素のスキーマ情報から生成された XML データを格納します。
 
 この機能は、要素に対してのみ使用できます。 次の規則も適用されます。
 
@@ -45,20 +44,20 @@ XML エディターは、XML スキーマ定義言語 (XSD) スキーマから X
 
 ## <a name="example"></a>例
 
- このセクションの手順では、スキーマから生成される XML スニペット機能は、XML エディターの使用方法を示します。
+ このセクションの手順では、スキーマ生成の XML スニペット機能の XML エディターを使用する方法を示します。
 
 > [!NOTE]
 > この手順を開始する前に、スキーマ ファイルをローカル コンピューターに保存してください。
 
-### <a name="to-create-a-new-xml-file-and-associate-it-with-an-xml-schema"></a>新しい XML ファイルを作成し、XML スキーマに関連付ける
+### <a name="to-create-a-new-xml-file-and-associate-it-with-an-xml-schema"></a>新しい XML ファイルを作成し、XML スキーマを関連付ける
 
-1.  **ファイル** メニューのをポイント**新規**、 をクリック**ファイル**です。
+1.  **ファイル**メニューで、**新規**、 をクリック**ファイル**します。
 
-2.  選択**XML ファイル**で、**テンプレート**ペインをクリック**開く**です。
+2.  選択**XML ファイル**で、**テンプレート**ウィンドウをクリックします**オープン**します。
 
      エディターに新しいファイルが開きます。 ファイルには既定の XML 宣言 `<?xml version="1.0" encoding="utf-8">` が含まれています。
 
-3.  ドキュメントのプロパティ ウィンドウで、参照ボタンをクリックします (**.**) で、**スキーマ**フィールドです。
+3.  ドキュメントのプロパティ ウィンドウで、参照 ボタンをクリックします (**.。**) で、**スキーマ**フィールド。
 
      **XSD スキーマ** ダイアログ ボックスが表示されます。
 
@@ -66,11 +65,11 @@ XML エディターは、XML スキーマ定義言語 (XSD) スキーマから X
 
      **XSD スキーマを開く** ダイアログ ボックスが表示されます。
 
-5.  スキーマ ファイルを選択し、クリックして**開く**です。
+5.  スキーマ ファイルを選択し、クリックして**オープン**します。
 
 6.  **[OK]** をクリックします。
 
-     これで XML スキーマが XML ドキュメントに関連付けられています。
+     XML スキーマが XML ドキュメントに関連付けられています。
 
 ### <a name="to-generate-an-xml-snippet"></a>XML スニペットを生成するには
 
@@ -80,13 +79,13 @@ XML エディターは、XML スキーマ定義言語 (XSD) スキーマから X
 
      **!--** コメントを追加します。
 
-     **!DOCTYPE**ドキュメント型を追加します。
+     **!DOCTYPE**ドキュメントの種類を追加します。
 
      **?** 処理命令を追加します。
 
      **連絡先**ルート要素を追加します。
 
-3.  選択**連絡先**キーを押して、メンバー リストから**Enter**です。
+3.  選択**連絡先**メンバーの一覧とキーを押してから **」と入力**します。
 
      エディターには開始タグ `<Contact` が追加され、要素名の後にカーソルが置かれます。
 
@@ -143,7 +142,7 @@ XML エディターは、XML スキーマ定義言語 (XSD) スキーマから X
 
 ### <a name="output"></a>出力
 
- `Contact` 要素に関連付けられているスキーマ情報に基づいて生成された XML データを次に示します。 項目としてマーク`bold`XML スニペットに編集可能なフィールドを指定します。
+ `Contact` 要素に関連付けられているスキーマ情報に基づいて生成された XML データを次に示します。 としてマークされた項目`bold`の XML スニペットの編集可能なフィールドを指定します。
 
 ```xml
 <Contact>
@@ -159,4 +158,4 @@ XML エディターは、XML スキーマ定義言語 (XSD) スキーマから X
 ## <a name="see-also"></a>関連項目
 
 - [XML スニペット](../xml-tools/xml-snippets.md)
-- [方法: 使用する XML スニペット](../xml-tools/how-to-use-xml-snippets.md)
+- [方法: XML スニペットを使用します。](../xml-tools/how-to-use-xml-snippets.md)

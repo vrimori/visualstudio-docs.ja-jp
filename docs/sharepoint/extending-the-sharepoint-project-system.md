@@ -1,9 +1,6 @@
 ---
 title: SharePoint プロジェクト システムの拡張 |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 028e7aab10ae1ee1de452e69c8148dac099039d0
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 51449003457ecd09e7dca7bc579d652c94a592e2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36326788"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53891113"
 ---
 # <a name="extend-the-sharepoint-project-system"></a>SharePoint プロジェクト システムを拡張します。
   SharePoint ソリューションを作成するには、Visual Studio のプロジェクト テンプレートと項目テンプレートのセットを使用します。 これらのテンプレートは、多くの開発シナ リオの要件を満たすが、場合によっては、必要な機能を提供しないを検出する可能性があります。 このような場合は、SharePoint プロジェクト システムを拡張することができます。  
@@ -60,5 +57,3 @@ ms.locfileid: "36326788"
  [SharePoint プロジェクト システムの種類とその他の Visual Studio プロジェクトの種類間の変換します。](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md)   
  [Visual Studio の SharePoint ツールを拡張します。](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)   
  [SharePoint ツール拡張機能におけるプログラミングに関する概念および特徴](../sharepoint/programming-concepts-and-features-for-sharepoint-tools-extensions.md)  
-  
-  

@@ -1,9 +1,6 @@
 ---
-title: 'FAQ: アドインを VSPackage 拡張機能に変換する |Microsoft Docs'
-ms.custom: ''
+title: FAQ:アドインを VSPackage 拡張機能に変換する |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: 3a01d333-6e31-423f-ae06-5091a4fcb7a9
 author: gregvanl
@@ -11,14 +8,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56088e45af5ed45b3a303ffc99679e77b51f56ae
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9623ec6fd2fed89dbe541d6088f7366d38bc0636
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49826519"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53879148"
 ---
-# <a name="faq-converting-add-ins-to-vspackage-extensions"></a>FAQ: アドインを VSPackage 拡張機能に変換します。
+# <a name="faq-converting-add-ins-to-vspackage-extensions"></a>FAQ:アドインを VSPackage 拡張機能に変換します。
 現在、アドインは非推奨とされます。 新しい Visual Studio 拡張機能をするためには、VSIX 拡張機能を作成する必要があります。 VSIX 拡張機能に Visual Studio アドインを変換する方法についてよく寄せられる質問に対する回答を示します。  
   
 > [!WARNING]
@@ -32,7 +29,7 @@ ms.locfileid: "49826519"
 >  詳細については、次を参照してください。 [VSPackage でアドイン コードを実行する方法でしょうか。](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_RunAddin)以下。  
   
 ## <a name="what-software-do-i-need-to-develop-vsix-extensions"></a>VSIX 拡張機能を開発する必要があるソフトウェアをでしょうか。  
- Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、"[Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)"を参照してください。  
   
 ## <a name="wheres-the-extension-documentation"></a>拡張機能のドキュメントにはどこですか。  
  始まり[Visual Studio 拡張機能の開発を始める](../extensibility/starting-to-develop-visual-studio-extensions.md)します。 Msdn VSSDK 拡張機能の開発に関するその他の記事では、以下のいずれかです。  
@@ -53,7 +50,7 @@ ms.locfileid: "49826519"
   
      Visual Studio の 2 番目のインスタンスが表示されます。 この 2 番目のインスタンスは実験用インスタンスと呼ばれます。コードの記述に使用する Visual Studio のインスタンスとは設定が異なることがあります。 実験用インスタンスを初めて実行するときには、VS Online にサインインしてテーマとプロファイルを指定するよう求められます。  
   
-     **ツール** メニュー (に実験用インスタンス) という名前のボタンを表示する必要があります**マイ コマンド名**します。 このボタンを選択すると、メッセージが表示されます:**内 TestVSPackagePackage.MenuItemCallback()** します。  
+     **ツール** メニュー (に実験用インスタンス) という名前のボタンを表示する必要があります**マイ コマンド名**します。 このボタンを選択すると、メッセージが表示されます。**TestVSPackagePackage.MenuItemCallback() 内**します。  
   
 ##  <a name="BKMK_RunAddin"></a> VSPackage でアドイン コードを実行する方法はありますか  
  通常、アドイン コードは次の 2 つの方法のどちらかで実行します。  

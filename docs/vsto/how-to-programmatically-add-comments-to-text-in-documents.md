@@ -1,9 +1,6 @@
 ---
 title: '方法: プログラムによって文書内のテキストにコメントを追加します。'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,12 +13,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c5e7900f5316e64ef884d857bfc1448ac315fd19
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.openlocfilehash: 677f0ba2cf02f4dd62759ea5f125c91290dc0762
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53804605"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53857028"
 ---
 # <a name="how-to-programmatically-add-comments-to-text-in-documents"></a>方法: プログラムによって文書内のテキストにコメントを追加します。
   ドキュメント クラスのコメント プロパティは、Microsoft Office Word 文書にテキストの範囲にコメントを追加します。  
@@ -52,5 +49,3 @@ ms.locfileid: "53804605"
 ## <a name="see-also"></a>関連項目  
  [方法: プログラムによって文書からすべてのコメントを削除します。](../vsto/how-to-programmatically-remove-all-comments-from-documents.md)   
  [Document ホスト項目](../vsto/document-host-item.md)  
-  
-  

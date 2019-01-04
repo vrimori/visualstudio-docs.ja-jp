@@ -1,9 +1,6 @@
 ---
 title: .NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトの実行に必要な変更
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 78a46fbffdbf849ab9f9584b72c520d5aa1d3624
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 819a3f1c0ea4541bee55dca2402cac6dbf9848cc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50670794"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53917619"
 ---
 # <a name="required-changes-to-run-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトの実行に必要な変更
   Office プロジェクトのターゲット フレームワークを変更するかどうか、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]または後で、.NET Framework の以前のバージョンから行う必要があります、開発用コンピューターとエンドユーザーのコンピューターにソリューションを実行できるようにするには、次のタスク。  
@@ -67,12 +64,10 @@ ms.locfileid: "50670794"
 ## <a name="update-the-prerequisites-for-deployment"></a>更新の展開の前提条件  
  Office プロジェクトの再ターゲット[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]、後で更新することも必要がありますも、対応する .NET Framework の前提条件、**の前提条件** ダイアログ ボックス。 そうしない場合は、ClickOnce 配置または InstallShield Limited Edition プロジェクトが以前のバージョンの .NET Framework をチェックし、インストールします。  
   
- エンドユーザーのコンピューターに展開の前提条件の更新に関する詳細については、次を参照してください。[方法: Office ソリューションを実行するためにエンド ユーザー コンピューターの前提条件をインストール](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)します。  
+ エンドユーザーのコンピューターに展開の前提条件の更新に関する詳細については、次を参照してください。[方法。Office ソリューションを実行するためにエンド ユーザー コンピューターの前提条件をインストール](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)します。  
   
 ## <a name="reinstall-solutions-on-end-user-computers"></a>エンドユーザーのコンピューターにソリューションを再インストールします。  
  ClickOnce を使用して .NET Framework 3.5 を対象とする Office ソリューションを配置してから、プロジェクトの対象を [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に変更した場合、エンド ユーザーはソリューションをアンインストールし、再発行後のソリューションを再インストールする必要があります。 対象が変更されたソリューションを再発行するエンドユーザーのコンピューターで、ソリューションが更新された場合は、エンドユーザーが表示されます、<xref:System.Runtime.InteropServices.COMException>更新したソリューションを実行したときにします。  
   
 ## <a name="see-also"></a>関連項目  
  [.NET Framework 4 またはそれ以降の Office ソリューションを移行します。](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)  
-  
-  

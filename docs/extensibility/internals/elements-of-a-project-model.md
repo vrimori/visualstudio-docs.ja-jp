@@ -1,9 +1,6 @@
 ---
 title: プロジェクト モデルの要素 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], implementation considerations
@@ -15,17 +12,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9eab0627184ac887aacfdfb2f275f0e8d9d30df7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ee628d56094026b588c76451c143158000636a5c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49912657"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53962611"
 ---
 # <a name="elements-of-a-project-model"></a>プロジェクト モデルの要素
 インターフェイスと実装のすべてのプロジェクトの[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]基本的な構造を共有: プロジェクトの種類のプロジェクト モデル。 VSPackage を開発するには、プロジェクト モデルを取得するでは、設計上の決定に従っているし、IDE によって提供されるグローバルの機能と連携するオブジェクトを作成します。 プロジェクト項目を保存する方法を制御する、たとえば、制御できない通知ファイルを維持する必要があります。 ユーザーが開いているプロジェクト項目にフォーカスが移るし、選択**保存**上、**ファイル**メニューで、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]メニュー バーで、プロジェクトの種類コードする必要があります、IDE からコマンドをインターセプト、ファイルを保持してとファイルが不要になった変更されたことを IDE に戻るには、通知を送信します。  
   
- VSPackage は、IDE インターフェイスへのアクセスを提供するサービスを介して、IDE と対話します。 たとえば、特定のサービスにするモニターとルート コマンドやプロジェクトで行った選択のコンテキスト情報を提供します。 VSPackage のために必要なすべてのグローバル IDE 機能は、サービスによって提供されます。 サービスの詳細については、次を参照してください。[方法: サービスを取得](../../extensibility/how-to-get-a-service.md)します。  
+ VSPackage は、IDE インターフェイスへのアクセスを提供するサービスを介して、IDE と対話します。 たとえば、特定のサービスにするモニターとルート コマンドやプロジェクトで行った選択のコンテキスト情報を提供します。 VSPackage のために必要なすべてのグローバル IDE 機能は、サービスによって提供されます。 サービスの詳細については、次を参照してください。[方法。サービスを取得](../../extensibility/how-to-get-a-service.md)します。  
   
  その他の実装の考慮事項:  
   
@@ -45,9 +42,9 @@ ms.locfileid: "49912657"
   プロジェクトのコマンドをサポートし、したがってを実装する必要があります、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>コマンド コンテキスト Guid によるコマンドのルーティングに参加するインターフェイス。  
   
 ## <a name="see-also"></a>関連項目  
- [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   
+ [チェックリスト:新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   
  [HierUtil7 プロジェクト クラスを使用して、プロジェクトの種類 (C++) を実装するには](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346)   
  [プロジェクト モデルのコア コンポーネント](../../extensibility/internals/project-model-core-components.md)   
  [プロジェクト ファクトリを使用してプロジェクトのインスタンスを作成します。](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)   
- [方法: サービスを取得](../../extensibility/how-to-get-a-service.md)   
+ [方法: サービスを取得します。](../../extensibility/how-to-get-a-service.md)   
  [プロジェクトの種類を作成します。](../../extensibility/internals/creating-project-types.md)

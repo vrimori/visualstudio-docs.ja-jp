@@ -1,9 +1,6 @@
 ---
-title: レガシ言語サービス Features2 |Microsoft ドキュメント
-ms.custom: ''
+title: 従来の言語サービスの特徴 2 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], code development aides
@@ -13,20 +10,20 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b807f5f776690e86cb44334c1822a8facd6ec824
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dc86bda0bb0e9acf8c9ebb3fd248afd0fca4023c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31130743"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53861489"
 ---
-# <a name="legacy-language-service-features"></a>レガシ言語サービス機能
-次のトピックには、使用できる従来の言語サービス機能の一部が一覧表示します。  
+# <a name="legacy-language-service-features"></a>従来の言語サービスの機能
+次のトピックでは、使用できる従来の言語サービスの機能のいくつかを示します。  
   
- レガシ言語サービスは、VSPackage の一部として実装されますが、MEF 拡張機能を使用する言語サービスの機能を実装する新しい方法です。 言語サービスを実装する新しい方法の詳細についてを参照してください。[エディターおよび言語サービス拡張](../../extensibility/editor-and-language-service-extensions.md)です。  
+ 従来の言語サービスは、VSPackage の一部として実装されますが、言語サービスの機能を実装する新しい方法は MEF 拡張機能を使用します。 言語サービスを実装する新しい方法の詳細についてを参照してください。[エディターと言語サービス拡張](../../extensibility/editor-and-language-service-extensions.md)します。  
   
 > [!NOTE]
->  エディターを使用して、新しい API できるだけ早く開始することをお勧めします。 言語サービスのパフォーマンスを向上させる、エディターの新機能を活用できます。  
+>  新しいエディターの API をできるだけ早く使用を開始することをお勧めします。 言語サービスのパフォーマンスを向上させる、エディターの新機能を活用することができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [従来の言語サービスでの構文の色分け表示](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)  
@@ -35,16 +32,16 @@ ms.locfileid: "31130743"
  [従来の言語サービスの自動書式](../../extensibility/internals/automatic-formatting-in-a-legacy-language-service.md)  
  オート フォーマットを実装する方法について説明します。  
   
- [従来の言語サービスでのパラメーター ヒント](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md)  
+ [従来の言語サービスのパラメーター ヒント](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md)  
  IntelliSense のパラメーター ヒントを実装する方法について説明します。  
   
  [従来の言語サービスでのステートメント入力補完](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md)  
- IntelliSense のステートメントの一覧およびコンプリート リストのメンバーを実装する方法について説明します。  
+ IntelliSense のステートメントの一覧とメンバー入力候補一覧を実装する方法について説明します。  
   
  [従来の言語サービスでのアウトラインと隠し文字](../../extensibility/internals/outlining-and-hidden-text-in-a-legacy-language-service.md)  
- アウトライン表示または非表示のテキストを実装する方法について説明します。  
+ アウトラインまたは非表示のテキストを実装する方法について説明します。  
   
- [方法: 従来の言語サービスでのアウトラインの拡張サポートの提供](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)  
- 一部のデバッガーのサポートを実装する手順について説明します。  
+ [方法: 従来の言語サービスでのアウトラインの拡張のサポートを提供します。](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)  
+ 一部のデバッガーのサポートを実装する手順について説明します.  
   
 ## <a name="related-sections"></a>関連項目

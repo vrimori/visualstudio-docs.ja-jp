@@ -1,9 +1,6 @@
 ---
-title: プロジェクトのアーキテクチャの種類 |Microsoft ドキュメント
-ms.custom: ''
+title: プロジェクトの種類のアーキテクチャ |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], architecture
@@ -13,32 +10,32 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e6ef7fe6fbf4a8899606dca35c10745e68e3cbfa
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fea8273c1db662d5184d1afb71b5cd39789d6794
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31130610"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53929307"
 ---
-# <a name="project-types-architecture"></a>プロジェクトの種類のアーキテクチャ
-このセクションには、プロジェクトの種類のアーキテクチャに関する詳細情報が含まれています。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
+# <a name="project-types-architecture"></a>プロジェクト タイプのアーキテクチャ
+このセクションには、プロジェクトの種類のアーキテクチャに関する詳細情報が含まれています。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [プロジェクト モデルの要素](../../extensibility/internals/elements-of-a-project-model.md)  
  プロジェクトの種類が使用できるサービスとインターフェイスを実装する必要がある必要がありますを一覧表示します。  
   
  [プロジェクト モデルのコア コンポーネント](../../extensibility/internals/project-model-core-components.md)  
- プロジェクトの種類を実装する必要があり、必要に応じて、追加機能を提供するために実装できますインターフェイスについて説明します。  
+ プロジェクトの種類を実装する必要があり、必要に応じて、追加機能を提供する実装できるインターフェイスについて説明します。  
   
  [プロジェクト タイプを作成する状況](../../extensibility/internals/when-to-create-project-types.md)  
- プロジェクトを作成する場合を判断するのに役立ちますを入力し、別の使用と[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]同じ目標を達成するには、Vspackage およびエディターなどの機能を拡張します。  
+ プロジェクトを作成する必要がある場合を判断するのに役立ちますを入力し、別の使用と[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]同じ目標を達成するには、Vspackage およびエディターなどの機能を拡張します。  
   
  [階層と選択](../../extensibility/internals/hierarchies-and-selection.md)  
- について説明する方法[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]階層と選択コンテキストを使用して、一貫性がありシンプルなユーザー エクスペリエンスを提供します。  
+ 説明方法[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]階層と選択コンテキストを使用して、簡略化された一貫したユーザー エクスペリエンスを提供します。  
   
 ## <a name="related-sections"></a>関連項目  
  [プロジェクト サブタイプ](../../extensibility/internals/project-subtypes.md)  
- プロジェクトのサブタイプを使用のプロジェクト システムの動作をカスタマイズする方法について説明します[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]と[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]です。  
+ プロジェクト サブタイプを使用のプロジェクト システムの動作をカスタマイズする方法について説明します。[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]と[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]します。  
   
  [プロジェクト タイプ](../../extensibility/internals/project-types.md)  
- 基本的なビルド ブロックでプロジェクトの概要を示します、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です。 プロジェクトがビルドとコードのコンパイルを制御する方法を説明する追加のトピックへのリンクが提供されます。
+ 基本ビルディング ブロックとしてプロジェクトの概要、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です。 プロジェクトがビルドとコードのコンパイルを制御する方法を説明する追加のトピックへのリンクが提供されます。

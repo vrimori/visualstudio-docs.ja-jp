@@ -1,9 +1,6 @@
 ---
 title: GetValidCompatibleFramework 関数
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -13,12 +10,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b93e0de5f1d8c1d4e93189e7bfee36d44db19319
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: 30a116993535e3b99b4e91edf07752c00a020859
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53648879"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53835488"
 ---
 # <a name="getvalidcompatibleframework-function"></a>GetValidCompatibleFramework 関数
   この API は、オフィスのインフラストラクチャをサポートしているし、コードから直接使用するものではありません。  
@@ -41,4 +38,3 @@ HRESULT WINAPI GetValidCompatibleFramework(
 
 ## <a name="return-value"></a>戻り値  
  返します、関数が成功したかどうかは**S_OK**します。 関数が失敗した場合、エラー コードを返します。  
-

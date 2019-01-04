@@ -1,9 +1,6 @@
 ---
 title: Office UI のカスタマイズ
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 48c7fe1948231f88aba8309d6d06186848d32455
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f776fc7972272804adaf6fe4af8f7e3f3c0edc53
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49836769"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53924828"
 ---
 # <a name="office-ui-customization"></a>Office UI のカスタマイズ
   Microsoft Office アプリケーションのユーザー インターフェイス (UI) は、Visual Studio の  Office Developer Tools を使用してカスタマイズできます。 以下のトピックでは、カスタマイズできる UI 機能について説明します。  
@@ -96,7 +93,7 @@ ms.locfileid: "49836769"
  詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)と[Windows フォームでコントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)します。  
   
 ##  <a name="Shortcut"></a> ショートカット メニュー  
- ドキュメント ウィンドウやアプリケーション ウィンドウを右クリックすると、ショートカット メニューが表示されます。 ユーザーがドキュメント、ブック、またはホスト コントロールを右クリックするなど、イベントが発生した後に表示されるようにショートカット メニューを設定することができます。 ショートカット メニューには、さまざまなメニュー コマンドやコントロールを追加できます。 ショートカット メニューを作成するには、XML を使用します。 追加する場合、**リボン (XML)** 項目、Office プロジェクトには、ショートカット メニューを作成するリボン XML ファイルに XML を追加できます。 XML を使用して、ショートカット メニューを作成する方法の詳細については、次を参照してください。[方法: ショートカット メニュー コマンドを追加](../vsto/how-to-add-commands-to-shortcut-menus.md)します。  
+ ドキュメント ウィンドウやアプリケーション ウィンドウを右クリックすると、ショートカット メニューが表示されます。 ユーザーがドキュメント、ブック、またはホスト コントロールを右クリックするなど、イベントが発生した後に表示されるようにショートカット メニューを設定することができます。 ショートカット メニューには、さまざまなメニュー コマンドやコントロールを追加できます。 ショートカット メニューを作成するには、XML を使用します。 追加する場合、**リボン (XML)** 項目、Office プロジェクトには、ショートカット メニューを作成するリボン XML ファイルに XML を追加できます。 XML を使用して、ショートカット メニューを作成する方法の詳細については、次を参照してください。[方法。ショートカット メニュー コマンドを追加](../vsto/how-to-add-commands-to-shortcut-menus.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [リボンの概要](../vsto/ribbon-overview.md)   
@@ -106,7 +103,5 @@ ms.locfileid: "49836769"
  [カスタム作業ウィンドウ](../vsto/custom-task-panes.md)   
  [Office ソリューションで WPF コントロールを使用します。](../vsto/using-wpf-controls-in-office-solutions.md)   
  [方法: リボンの [開発] タブを表示します。](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)   
- [方法: アドインの表示は、ユーザー インターフェイス エラー](../vsto/how-to-show-add-in-user-interface-errors.md)   
+ [方法: アドイン ユーザー インターフェイス エラーを表示します。](../vsto/how-to-show-add-in-user-interface-errors.md)   
  [チュートリアル: Windows フォームを使用してデータを収集します。](../vsto/walkthrough-collecting-data-using-a-windows-form.md)  
-  
-  

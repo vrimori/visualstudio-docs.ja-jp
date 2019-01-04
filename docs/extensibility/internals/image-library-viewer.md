@@ -1,6 +1,5 @@
 ---
 title: イメージ ライブラリ ビューアー |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 9d9c7fbb-ebae-4b20-9dd8-3c9070c0d0d1
@@ -9,12 +8,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7808c4485a00c080a8a5b260a6472d81bfb7fd44
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: b0ec0995068cafe277c95bd125f91d2d1d3df16b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49816833"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53968671"
 ---
 # <a name="image-library-viewer"></a>イメージ ライブラリ ビューア
 Visual Studio Image Library ビューアー ツールは、読み込みおよびユーザーが Visual Studio と同じ方法で操作できるように、イメージのマニフェストを検索できます。 ユーザーは、バック グラウンド、サイズ、DPI、ハイ コントラスト、およびその他の設定を変更できます。 このツールは、各イメージ マニフェストの読み込み情報を表示し、イメージ マニフェスト内の各イメージのソース情報を表示します。 このツールは、場合に便利です。  
@@ -132,7 +131,7 @@ Visual Studio Image Library ビューアー ツールは、読み込みおよび
 |-|-|  
 |**属性**|**定義**|  
 |URI|[必須]イメージを読み込むことを定義する URI。 次のいずれかを指定できます。<br /><br /> は、 [Pack URI](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)アプリケーションを使用して:///オーソリティ<br /><br /> -絶対コンポーネント リソース参照<br /><br /> -ネイティブ リソースを含むファイルへのパス|  
-|背景|[省略可能]背景が使用するものでは、ソースの種類にどのようなことを示します。<br /><br /> 次のいずれかを指定できます。<br /><br /> - *Light*: 明るい背景では、ソースを使用できます。<br /><br /> - *濃い*: ソースは、暗い背景で使用できます。<br /><br /> - *ハイコントラスト*: ハイ コントラスト モードで任意のバック グラウンドでは、ソースを使用できます。<br /><br /> - *HighContrastLight*: ハイ コントラスト モードのライト バック グラウンドでは、ソースを使用できます。<br /><br /> -*HighContrastDark*: ソースは、ハイ コントラスト モードで暗い背景で使用できます。<br /><br /> 場合、**バック グラウンド**属性を省略すると、ソースは、任意の背景で使用できます。<br /><br /> 場合**バック グラウンド**は*Light*、*濃い*、 *HighContrastLight*、または*HighContrastDark*、ソースの色を反転ことはありません。 場合**バック グラウンド**を省略するかに設定*ハイコントラスト*、ソースの色の反転は、イメージのによって制御される**AllowColorInversion**属性。|  
+|背景|[省略可能]背景が使用するものでは、ソースの種類にどのようなことを示します。<br /><br /> 次のいずれかを指定できます。<br /><br /> - *Light*:ソースは、明るい背景で使用できます。<br /><br /> - *濃い*:ソースは、暗い背景で使用できます。<br /><br /> - *ハイコントラスト*:ソースは、ハイ コントラスト モードで、色の背景で使用できます。<br /><br /> - *HighContrastLight*:ソースは、ハイ コントラスト モードで明るい背景で使用できます。<br /><br /> -*HighContrastDark*:ソースは、ハイ コントラスト モードで暗い背景で使用できます。<br /><br /> 場合、**バック グラウンド**属性を省略すると、ソースは、任意の背景で使用できます。<br /><br /> 場合**バック グラウンド**は*Light*、*濃い*、 *HighContrastLight*、または*HighContrastDark*、ソースの色を反転ことはありません。 場合**バック グラウンド**を省略するかに設定*ハイコントラスト*、ソースの色の反転は、イメージのによって制御される**AllowColorInversion**属性。|  
   
  A\<ソース > 要素は省略可能な次のサブ要素の 1 つだけであることができます。  
   
@@ -225,7 +224,7 @@ Visual Studio Image Library ビューアー ツールは、読み込みおよび
   
 ## <a name="notes"></a>メモ  
   
--   既定では、このツールは Visual Studio のインストール ディレクトリに存在するいくつかのイメージのマニフェストにプルします。 モニカーをパブリックに使用できるは 1 つだけが、 **Microsoft.VisualStudio.ImageCatalog**マニフェストします。 GUID: ae27a6b0-e345-4288-96df-5eaf394ee369 (は**いない**カスタム マニフェストにこの GUID を上書き) の種類: KnownMonikers  
+-   既定では、このツールは Visual Studio のインストール ディレクトリに存在するいくつかのイメージのマニフェストにプルします。 モニカーをパブリックに使用できるは 1 つだけが、 **Microsoft.VisualStudio.ImageCatalog**マニフェストします。 GUID: ae27a6b0-e345-4288-96df-5eaf394ee369 (は**いない**カスタム マニフェストにこの GUID を上書き) の種類。KnownMonikers  
   
 -   ツールは、アプリケーションが、実際に表示するのに数秒がかかる場合がありますのでが見つかると、すべてのイメージ マニフェストを読み込むの起動時にしようとします。 低速または応答も、マニフェストの読み込み中にられます可能性があります。  
   

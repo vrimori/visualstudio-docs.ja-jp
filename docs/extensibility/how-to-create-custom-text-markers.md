@@ -1,9 +1,6 @@
 ---
 title: '方法: カスタム テキスト マーカーの作成 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - custom text markers
@@ -13,14 +10,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ac2ad16c0e6a3e0a6c76e15ff6860838fa349c2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 1c8389788504a49bc9a4962c89ed47500a1dc7da
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49893105"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53965221"
 ---
-# <a name="how-to-create-custom-text-markers"></a>方法: カスタム テキスト マーカーの作成
+# <a name="how-to-create-custom-text-markers"></a>方法: カスタム テキスト マーカーを作成します。
 強調したり、コードを整理するカスタム テキスト マーカーを作成する場合は、以下の手順を実行する必要があります。  
   
 - その他のツールがアクセスできるように、新しいテキスト マーカーを登録します。  
@@ -29,7 +26,7 @@ ms.locfileid: "49893105"
   
 - 他のプロセスで使用できるサービスを作成するテキスト マーカーを使用します。  
   
-  コードの領域にテキスト マーカーを適用する方法の詳細については、次を参照してください。[方法: テキスト マーカーを使用して](../extensibility/how-to-use-text-markers.md)します。  
+  コードの領域にテキスト マーカーを適用する方法の詳細については、次を参照してください。[方法。テキスト マーカーを使用して](../extensibility/how-to-use-text-markers.md)します。  
   
 ## <a name="to-register-a-custom-marker"></a>カスタム マーカーを登録するには  
   
@@ -54,7 +51,7 @@ ms.locfileid: "49893105"
   
    -   DisplayName  
   
-   -   Package  
+   -   パッケージ  
   
    -   `Default` REG_SZ 型の省略可能なエントリです。 設定すると、エントリの値は、便利な識別情報、たとえば「カスタム テキスト マーカー」を含む文字列です。  
   
@@ -92,6 +89,6 @@ ms.locfileid: "49893105"
   
 ## <a name="see-also"></a>関連項目  
  [テキスト マーカーを使用して、従来の API を使用しました。](../extensibility/using-text-markers-with-the-legacy-api.md)   
- [方法: 標準のテキスト マーカーの追加](../extensibility/how-to-add-standard-text-markers.md)   
- [方法: エラーのマーカーの実装](../extensibility/how-to-implement-error-markers.md)   
- [方法: テキスト マーカーを使用](../extensibility/how-to-use-text-markers.md)
+ [方法: 標準のテキスト マーカーを追加します。](../extensibility/how-to-add-standard-text-markers.md)   
+ [方法: エラーのマーカーを実装します。](../extensibility/how-to-implement-error-markers.md)   
+ [方法: テキスト マーカーを使用します。](../extensibility/how-to-use-text-markers.md)

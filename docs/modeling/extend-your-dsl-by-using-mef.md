@@ -8,13 +8,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 0127bac6ca74be626f9ce22fb60ad5258ae6c3c9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6e6c790677ea49ad784e7ff5d48326a1d5e216ad
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49822126"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53986168"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF による DSL の拡張
 
@@ -249,7 +248,7 @@ namespace MyMefExtension
 
 ジェスチャ ハンドラーは、内で任意の場所、または Visual Studio の外部からの図にドラッグしたオブジェクトを扱うことができます。 次の例は、Windows エクスプ ローラーから対象のファイルを図にドラッグできますを示しています。 ファイル名を格納している要素を作成します。
 
-他の DSL モデルおよび UML モデルからの障壁に対処するためのハンドラーを記述することができます。 詳細については、次を参照してください。[方法: ドラッグ アンド ドロップ ハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)します。
+他の DSL モデルおよび UML モデルからの障壁に対処するためのハンドラーを記述することができます。 詳細については、「[方法 :ドラッグ アンド ドロップ ハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)します。
 
 ```csharp
 using System.ComponentModel.Composition;
@@ -378,5 +377,5 @@ namespace MefExtension
 
 - [Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)
 - [MEF (Managed Extensibility Framework)](/dotnet/framework/mef/index)
-- [方法: ドラッグ アンド ドロップ ハンドラーを追加する](../modeling/how-to-add-a-drag-and-drop-handler.md)
+- [方法: ドラッグ アンド ドロップ ハンドラーを追加します。](../modeling/how-to-add-a-drag-and-drop-handler.md)
 - [ドメイン固有言語における検証](../modeling/validation-in-a-domain-specific-language.md)

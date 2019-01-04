@@ -1,9 +1,6 @@
 ---
-title: TEXT_DOC_ATTR_2 |Microsoft ドキュメント
-ms.custom: ''
+title: TEXT_DOC_ATTR_2 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - TEXT_DOC_ATTR_2
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c877b1e42110defe717395cc78cc76acae00b934
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7d74bbfa4fb89baf01c5fb3d49a0767c67b800ce
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31133542"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53872727"
 ---
 # <a name="textdocattr2"></a>TEXT_DOC_ATTR_2
 ドキュメントの属性について説明します。  
@@ -40,19 +37,19 @@ public const uint TEXT_DOC_ATTR_READONLY_2 = 0x00000001;
  TEXT_DOC_ATTR_READONLY_2  
  文書が読み取り専用であることを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  アセンブリの C# の場合、この値が実際に定義されていません。 代わりに、ソース ファイルに定義をコピーする必要があります。  
+>  C# のアセンブリに、この値が実際に定義されていません。 代わりに、ソース ファイルに定義をコピーする必要があります。  
   
- 引数として渡される、 [onUpdateDocumentAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatedocumentattributes.md)メソッドです。  
+ 引数として渡される、 [onUpdateDocumentAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatedocumentattributes.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   

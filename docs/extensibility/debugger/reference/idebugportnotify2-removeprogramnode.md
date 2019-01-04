@@ -1,9 +1,6 @@
 ---
 title: IDebugPortNotify2::RemoveProgramNode |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugPortNotify2::RemoveProgramNode
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b1e56af8e5abe649a83c61d8404d1df80310485b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d837d349f17c78d3140f9516b1950a3415e30b89
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49875581"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53879109"
 ---
 # <a name="idebugportnotify2removeprogramnode"></a>IDebugPortNotify2::RemoveProgramNode
 実行されているポートからデバッグできるプログラムを登録解除します。  
@@ -28,13 +25,13 @@ ms.locfileid: "49875581"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT RemoveProgramNode(   
+HRESULT RemoveProgramNode(   
    IDebugProgramNode2* pProgramNode  
 );  
 ```  
   
 ```csharp  
-int RemoveProgramNode(   
+int RemoveProgramNode(   
    IDebugProgramNode2 pProgramNode  
 );  
 ```  

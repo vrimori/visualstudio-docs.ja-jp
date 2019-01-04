@@ -8,13 +8,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 8aed2920e7be177fdbccc9b71796e58cf103e846
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 69884d3dd52f2aaab04dac8f32f18d286f5929af
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057595"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53828239"
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>テキスト テンプレートでの Visual Studio ModelBus の使用
 Visual Studio ModelBus 参照を含むモデルを読み取るテキスト テンプレートを記述する場合は、ターゲットのモデルへのアクセスに参照を解決する可能性があります。 その場合は、テキスト テンプレートと参照先のドメイン固有言語 (Dsl) を調整する必要があります。
@@ -181,7 +180,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
 2. DSL 定義図で、上部近くない図の空白部分を右クリックし、順にクリックします**Modelbus の有効化**します。
 
-   -   表示されない場合**Modelbus の有効化**、ダウンロードして、VMSDK ModelBus 拡張機能をインストールする必要があります。 VMSDK サイトで探す: [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579)します。
+   -   表示されない場合**Modelbus の有効化**、ダウンロードして、VMSDK ModelBus 拡張機能をインストールする必要があります。 VMSDK サイトで探します。[Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579)します。
 
 3. **Modelbus の有効化**ダイアログ ボックスで、**この DSL を ModelBus に公開**、 をクリックし、 **OK**。
 
@@ -211,7 +210,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
     `<MefComponent>|T4ModelBusAdapter|</MefComponent>`
 
-7. `T4ModelBusAdapter`プロジェクトへの参照の追加: **Microsoft.VisualStudio.TextTemplating.Modeling.11.0**
+7. `T4ModelBusAdapter`プロジェクトへの参照を追加します。**Microsoft.VisualStudio.TextTemplating.Modeling.11.0**
 
 8. T4ModelBusAdapter\AdapterManager.tt を開きます。
 

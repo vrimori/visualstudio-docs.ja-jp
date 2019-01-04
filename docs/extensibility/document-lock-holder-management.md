@@ -1,9 +1,6 @@
 ---
 title: ドキュメントのロック所有者の管理 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - document locking
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b27025418c903de0128a3eddea2aa0fab00aa9ea
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.openlocfilehash: f2f2da0e351f8444ef9966b00551b941830dda3a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53804459"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53986441"
 ---
 # <a name="document-lock-holder-management"></a>ドキュメント ロック ホルダーの管理
 実行中の document テーブル (RDT) は、開いているドキュメントと、編集のロックがあるのカウントを保持します。 バック グラウンドで、ユーザーがドキュメント ウィンドウで、開いているドキュメントが表示される編集がプログラムを使用する際に、RDT のドキュメントで、編集のロックを配置できます。 この機能をグラフィカル ユーザー インターフェイスから複数のファイルを変更する、デザイナーによって使用されます。

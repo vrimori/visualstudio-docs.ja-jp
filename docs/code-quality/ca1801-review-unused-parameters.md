@@ -1,8 +1,7 @@
 ---
-title: 'CA1801: 使用されていないパラメーターをレビューします'
+title: CA1801:使用されていないパラメーターの確認
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - AvoidUnusedParameters
@@ -17,14 +16,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c5f288b57a377c69bf159f9e92ccc575f983083
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0b7fdbf4d842218b8a06146c777a1e468459d140
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49948214"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53921005"
 ---
-# <a name="ca1801-review-unused-parameters"></a>CA1801: 使用されていないパラメーターをレビューします
+# <a name="ca1801-review-unused-parameters"></a>CA1801:使用されていないパラメーターの確認
 
 |||
 |-|-|
@@ -65,8 +64,8 @@ ms.locfileid: "49948214"
  [!code-csharp[FxCop.Usage.ReviewUnusedParameters#1](../code-quality/codesnippet/CSharp/ca1801-review-unused-parameters_1.cs)]
 
 ## <a name="related-rules"></a>関連するルール
- [CA1811: 呼び出されていないプライベート コードを使用しません](../code-quality/ca1811-avoid-uncalled-private-code.md)
+ [CA1811:呼び出されていないプライベート コードを避ける](../code-quality/ca1811-avoid-uncalled-private-code.md)
 
- [CA1812: インスタンス化されていない内部クラスを使用しないでください](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
+ [CA1812:インスタンス化されていない内部クラスを回避します。](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
 
- [CA1804: 使用されていないローカルを削除します](../code-quality/ca1804-remove-unused-locals.md)
+ [CA 1804:使用されていないローカルを削除します](../code-quality/ca1804-remove-unused-locals.md)

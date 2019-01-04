@@ -1,9 +1,6 @@
 ---
-title: プロジェクトのサブタイプ プロパティとメソッドを拡張 |Microsoft ドキュメント
-ms.custom: ''
+title: プロジェクト サブタイプによってプロパティとメソッドの拡張 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - project subtypes, extended methods
@@ -14,42 +11,42 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 23510ffbb42e0c0c37c07e0ee80ae15f99e5df00
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e325e7cb352592903d869c158e72b766a657ff08
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31132092"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53873406"
 ---
-# <a name="properties-and-methods-extended-by-project-subtypes"></a>プロパティとプロジェクトのサブタイプによって拡張メソッド
-プロジェクトのサブタイプでは、多数の基本プロジェクトのアグリゲーターとして構成するために、プロジェクトの動作を決定するための電力があります。 このセクションでは、いくつかの拡張またはプロジェクトのサブタイプで変更できる機能をまとめたものです。  
+# <a name="properties-and-methods-extended-by-project-subtypes"></a>プロジェクト サブタイプによって拡張されるプロパティとメソッド
+プロジェクト サブタイプが、多くの基本プロジェクトのアグリゲーターとして構成するために、プロジェクトの動作を制御する能力です。 このセクションでは、いくつかのプロジェクト サブタイプによって変更または拡張が可能な機能をまとめたものです。  
   
-## <a name="features-gained-by-aggregation"></a>集計によって得られる機能  
- 次の表は、多くの集計の基本プロジェクトをオーバーライドするプロジェクトのサブタイプをできるようにするメソッドをまとめたものです。  
+## <a name="features-gained-by-aggregation"></a>集計によって得られた機能  
+ 次の表は、集計により、プロジェクトのサブタイプ基本プロジェクト内でオーバーライドするメソッドの多くをまとめたものです。  
   
-|集計によってオーバーライドされたメソッド|プロジェクトのサブタイプ|  
+|集計によってオーバーライドされたメソッド|プロジェクト サブタイプ|  
 |---------------------------------------|---------------------|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>:<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetGuidProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetGuidProperty%2A>|有効にするプロジェクトのサブタイプ<br /><br /> キャプションとプロジェクト ノードのアイコンを変更します。<br />プロジェクトを完全に上書き`Browse`オブジェクト。<br />-プロジェクトの名前を変更できるかどうかを制御します。<br />並べ替え順序を制御します。<br />ダイナミック ヘルプのユーザー コンテキストを制御します。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>:<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.GetItemContext%2A>|デザイナーおよびエディターにどのようなコンテキストのサービスが提供されるを制御するプロジェクトのサブタイプを有効にします。|  
-|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>:<br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A><br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A>|有効にするプロジェクトのサブタイプ<br /><br /> -プロジェクト コマンドのコマンド ルーティングに参加します。<br />-追加、削除、またはプロジェクトのアンビエント コマンドとソリューション エクスプ ローラーのアクティブなコマンドの両方を無効にします。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>|により、プロジェクトのサブタイプでユーザーに表示される内容をフィルター処理する、**新しい項目の追加** ダイアログ ボックス。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGeneratorFactory>|有効にするプロジェクトのサブタイプ<br /><br /> -ファイル拡張子を指定された既定のジェネレーターを決定します。<br />-人間の判読できるジェネレーターの名前を COM オブジェクトにマップします。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>:<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetGuidProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetGuidProperty%2A>|有効にするプロジェクト サブタイプ<br /><br /> キャプションとプロジェクト ノードのアイコンを変更します。<br />プロジェクトを完全にオーバーライド`Browse`オブジェクト。<br />-プロジェクトの名前を変更できるかどうかを制御します。<br />並べ替え順序を制御します。<br />ダイナミック ヘルプのユーザー コンテキストを制御します。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>:<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.GetItemContext%2A>|どのようなコンテキストのサービスを提供するデザイナーとエディターを制御するためのプロジェクト サブタイプを有効にします。|  
+|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>:<br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A><br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A>|有効にするプロジェクト サブタイプ<br /><br /> -プロジェクトのコマンドのコマンドのルーティングに参加します。<br />追加、削除、またはアンビエント コマンドのプロジェクトとソリューション エクスプ ローラーのアクティブなコマンドの両方を無効にします。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>|プロジェクトのサブタイプをで表示されるユーザーをフィルター処理できるように、**新しい項目の追加** ダイアログ ボックス。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGeneratorFactory>|有効にするプロジェクト サブタイプ<br /><br /> ファイル拡張子を指定された既定のジェネレーターを決定します。<br />-COM オブジェクトへの読み取り可能な人間のジェネレーターの名前をマップします。|  
   
-## <a name="properties-used-by-project-subtypes"></a>プロジェクトのサブタイプで使用されるプロパティ  
- 環境と基本プロジェクト システムはからプロパティを使用できます<xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID>と<xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID2>列挙体をプロジェクト システムのさまざまな機能を制御するプロジェクトのサブタイプを有効にする次の表で詳しく説明します。  
+## <a name="properties-used-by-project-subtypes"></a>プロジェクト サブタイプによって使用されるプロパティ  
+ 環境と基本プロジェクト システムからプロパティを使用できます<xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID>と<xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID2>列挙型のプロジェクト システムのさまざまな機能を制御するためのプロジェクト サブタイプを有効にする次の表で詳しく説明します。  
   
-|VSHPROPID プロパティ|プロジェクトのサブタイプ|  
+|VSHPROPID プロパティ|プロジェクト サブタイプ|  
 |------------------------|---------------------|  
-|`AddItemTemplatesGuid`|により、プロジェクトのサブタイプの内容を制御する、**項目の追加** ダイアログ ボックス。 プロジェクトのサブタイプできますテンプレート ディレクトリの新しい仕様を提供、新しい種類のアイテムの追加、既存の項目を削除および基本プロジェクトのアイテムのサブセットを再編成**項目の追加** ダイアログ ボックス。|  
-|`PropertyPagesCLSIDList`|追加または構成に依存しないプロパティ ページを削除するプロジェクトのサブタイプを使用できます。|  
-|`CfgPropertyPagesCLSIDList`|プロジェクトのサブタイプを追加または削除の構成に依存するプロパティ ページを使用できます。|  
-|`ExtObjectCATID`|オブジェクトを提供オートメーション エクステンダー プロジェクトまたはプロジェクト項目エクステンダーの CATID を知ることによってプロジェクトのサブタイプを使用できます。 たとえば、プロジェクトのサブタイプを提供できますカスタム`Project.Extender("<subtype>")`オブジェクト。|  
-|`BrowseObjectCATID`|により、プロジェクトのサブタイプのオートメーション エクステンダーを提供する、`Browse`エクステンダーの CATID を知ることによってオブジェクト。 プロジェクトのサブタイプがへの追加のプロパティを追加するなど、<xref:EnvDTE.Project.Properties%2A>コレクション。|  
-|`CfgBrowseObjectCATID`|オートメーション エクステンダー プロジェクト構成の参照オブジェクトを指定するプロジェクトのサブタイプを使用できます。 プロジェクトのサブタイプがへの追加のプロパティを追加するなど、<xref:EnvDTE.Configuration.Properties%2A>コレクション。|  
-|`CfgExtObjectCATID`|オートメーション エクステンダー構成オブジェクトを指定するプロジェクトのサブタイプを使用できます。|  
+|`AddItemTemplatesGuid`|内容を制御するためのプロジェクト サブタイプを許可、**項目の追加** ダイアログ ボックス。 プロジェクト サブタイプできますテンプレート ディレクトリの新しい仕様を提供する、新しい種類の項目を追加、既存の項目を削除および基本プロジェクトのアイテムのサブセットを再構成**項目の追加** ダイアログ ボックス。|  
+|`PropertyPagesCLSIDList`|プロジェクト サブタイプを追加または削除の構成に依存しないプロパティ ページを使用できます。|  
+|`CfgPropertyPagesCLSIDList`|プロジェクト サブタイプを追加または削除の構成に依存するプロパティ ページを使用できます。|  
+|`ExtObjectCATID`|プロジェクトのサブタイプが提供するオートメーション エクステンダー プロジェクトまたはプロジェクト項目オブジェクト エクステンダーの CATID を理解していることを許可します。 たとえば、プロジェクトのサブタイプがカスタムを提供できます`Project.Extender("<subtype>")`オブジェクト。|  
+|`BrowseObjectCATID`|により、プロジェクトのサブタイプのオートメーション エクステンダーを提供する、 `Browse` Extender の CATID を知ることによってオブジェクト。 プロジェクト サブタイプがへの追加のプロパティを追加するなど、<xref:EnvDTE.Project.Properties%2A>コレクション。|  
+|`CfgBrowseObjectCATID`|オートメーション エクステンダー プロジェクト構成の参照オブジェクトを指定するプロジェクトのサブタイプを使用できます。 プロジェクト サブタイプがへの追加のプロパティを追加するなど、<xref:EnvDTE.Configuration.Properties%2A>コレクション。|  
+|`CfgExtObjectCATID`|構成オブジェクトのオートメーション エクステンダーを提供するプロジェクトのサブタイプを使用できます。|  
 |`DefaultPlatformName`|プロジェクトの構成オブジェクトのプラットフォーム名を特定のプロジェクト サブタイプを使用できます。|  
   
- 基本のプロジェクトでは、上記のプロパティの既定の実装を提供します。 呼び出すことで、これらの基本プロジェクト取得`QueryInterface`の<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>最も外側のプロジェクト サブタイプになり、結果のプロパティの実装をオーバーライドするプロジェクトのサブタイプ。  
+ 基本のプロジェクトでは、上記のプロパティの既定の実装を提供します。 基本プロジェクトが呼び出すことで、これらを取得`QueryInterface`の<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>最も外側のプロジェクト サブタイプでプロットできます。 つまり、プロパティの実装をオーバーライドするプロジェクトのサブタイプ。  
   
 ## <a name="see-also"></a>関連項目  
  [プロジェクト サブタイプのデザイン](../../extensibility/internals/project-subtypes-design.md)

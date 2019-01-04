@@ -1,8 +1,7 @@
 ---
-title: 'CA1302: ロケール特有の文字列をハードコードしません'
+title: CA1302:ロケール特有の文字列をハードコードしません
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - DoNotHardcodeLocaleSpecificStrings
@@ -19,14 +18,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e56c57343ae61709b6d5875c865857a7475363fd
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: b05f1aa31a38ff4f8e707d53d062abe3d10617fd
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45550493"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53827729"
 ---
-# <a name="ca1302-do-not-hardcode-locale-specific-strings"></a>CA1302: ロケール特有の文字列をハードコードしません
+# <a name="ca1302-do-not-hardcode-locale-specific-strings"></a>CA1302:ロケール特有の文字列をハードコードしません
 
 |||
 |-|-|
@@ -56,4 +55,4 @@ ms.locfileid: "45550493"
  [!code-vb[FxCop.Globalization.HardcodedLocaleStrings#1](../code-quality/codesnippet/VisualBasic/ca1302-do-not-hardcode-locale-specific-strings_1.vb)]
 
 ## <a name="related-rules"></a>関連するルール
- [CA1303: ローカライズされたパラメーターとしてリテラルを渡さないでください](../code-quality/ca1303-do-not-pass-literals-as-localized-parameters.md)
+ [CA 1303:ローカライズされたパラメーターとしてリテラルを渡さないでください。](../code-quality/ca1303-do-not-pass-literals-as-localized-parameters.md)

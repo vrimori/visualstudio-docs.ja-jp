@@ -1,9 +1,6 @@
 ---
 title: Visual Studio のイメージとアイコン |Microsoft Docs
-ms.custom: ''
 ms.date: 04/26/2017
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
 author: gregvanl
@@ -11,12 +8,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 901e6612cec87df0d43c20d34a139b8a578f4f0a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 512b2fe20e1c057c2bac73975a29eff0cc3df8d4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49949399"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53880703"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Visual Studio のイメージとアイコン
 ##  <a name="BKMK_ImageUseInVisualStudio"></a> Visual Studio でのイメージの使用  
@@ -26,7 +23,7 @@ ms.locfileid: "49949399"
   
 -   **アイコン**します。 コマンド、階層、テンプレート、および具合に表示される小さいイメージ。 Visual Studio で使用される既定のアイコン サイズは、16 x 16 PNG です。 イメージのサービスによって自動的に生成されたアイコンの HDPI サポートを XAML 形式を生成します。  
   
-     **注:** ] メニューの [システムのイメージが使用されますが、ため、すべてのコマンドのアイコンは作成しないでください。 参照してください[Visual Studio のメニューとコマンド](../../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md)コマンドがアイコンを取得するかどうかを確認します。  
+     **注:** イメージは、メニューで使用されますが、すべてのコマンドのアイコンを作成しないでください。 参照してください[Visual Studio のメニューとコマンド](../../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md)コマンドがアイコンを取得するかどうかを確認します。  
   
 -   **縮小表示します。** 新しいプロジェクト ダイアログなどのダイアログ ボックスの プレビュー 領域で使用されるイメージ。  
   

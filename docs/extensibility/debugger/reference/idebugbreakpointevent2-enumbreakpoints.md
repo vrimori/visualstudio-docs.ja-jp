@@ -1,9 +1,6 @@
 ---
-title: IDebugBreakpointEvent2::EnumBreakpoints |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugBreakpointEvent2::EnumBreakpoints |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugBreakpointEvent2:::EnumBreakpoints
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6015d9251d5e9cf26220d069a26a742cde89ad3d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bd7f82a50e8a0d4b17ec63204248ccb88544ba6c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31100989"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53868842"
 ---
 # <a name="idebugbreakpointevent2enumbreakpoints"></a>IDebugBreakpointEvent2::EnumBreakpoints
 現在のコードの場所で発生したすべてのブレークポイントの列挙子を作成します。  
@@ -44,10 +41,10 @@ int EnumBreakpoints(
  [out]返します、 [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md)コードの現在の場所に関連付けられているすべてのブレークポイントを列挙するオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 特定の場所にないすべてのブレークポイントは、特定の時点で発生させることが (たとえば、ブレークポイントの条件では起動しませんその条件が満たされるまで)。  
+## <a name="remarks"></a>Remarks  
+ 特定の時刻に特定の場所ですべてのブレークポイントを発生可能性があります (たとえば、ブレークポイントの条件は発生しませんその条件が満たされるまで)。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)   

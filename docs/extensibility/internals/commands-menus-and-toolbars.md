@@ -1,9 +1,6 @@
 ---
 title: コマンド、メニューのおよびツールバー |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - menus [Visual Studio SDK], commands
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a8bd6716b40816ae625dcdb32fb62237aa543fd
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ceda4339c02e73f02ebd78094a145f53bc7fbb82
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49928429"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53887738"
 ---
 # <a name="commands-menus-and-toolbars"></a>コマンド、メニューのおよびツールバー
 メニューとツールバーは、ユーザーが、VSPackage のコマンドにアクセスします。 コマンドは、ドキュメントの印刷、ビューの更新、ファイルの新規作成などのタスクを実行する関数です。 メニューとツール バーは、ユーザーにコマンドをグラフィカルに表示する便利な方法です。 通常、関連するコマンドは、同じメニューやツール バーにまとめられます。  
@@ -31,7 +28,7 @@ ms.locfileid: "49928429"
   
 - コマンドを作成するときは、コマンド用のイベント ハンドラーも作成する必要があります。 イベント ハンドラーでは、コマンドをいつ表示または有効にするかを決定し、コマンドのテキストを変更し、アクティブ化したときにコマンドが適切に応答する (「ルーティングする」) ようにすることができます。 ほとんどの場合、IDE では <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> インターフェイスを使用してコマンドを処理します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ではコマンドは階層形式でルーティングし、ローカルの選択に基づいて最も内側のコマンド コンテキストから開始し、グローバルの選択に基づいて最も外側のコンテキストに進みます。 メイン メニューに追加したコマンドは、すぐにスクリプトに利用できます。 詳細については、次を参照してください。 [Menucommand とします。OleMenuCommands](../../extensibility/menucommands-vs-olemenucommands.md)と[コンテキスト オブジェクトの選択](../../extensibility/internals/selection-context-objects.md)します。  
   
-  新しいメニューおよびツールバーを定義する必要がありますで記述したそれらを Visual Studio コマンド テーブル (*.vsct*) ファイル。 Visual Studio パッケージ テンプレートは、どのようなコマンド、ツールバー、およびテンプレートの選択されているエディターをサポートするために必要な要素と共に、このファイルを作成します。 または、書き込める独自 *.vsct*ファイルをここで説明されている XML スキーマを使用して: [VSCT XML スキーマ リファレンス](../../extensibility/vsct-xml-schema-reference.md)します。  
+  新しいメニューおよびツールバーを定義する必要がありますで記述したそれらを Visual Studio コマンド テーブル (*.vsct*) ファイル。 Visual Studio パッケージ テンプレートは、どのようなコマンド、ツールバー、およびテンプレートの選択されているエディターをサポートするために必要な要素と共に、このファイルを作成します。 または、書き込める独自 *.vsct*ここで説明されている XML スキーマを使用して、ファイルします。[VSCT XML スキーマ リファレンス](../../extensibility/vsct-xml-schema-reference.md)します。  
   
   操作の詳細については *.vsct*ファイルを参照してください[Visual Studio コマンド テーブル (.vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)します。  
   

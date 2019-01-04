@@ -2,19 +2,18 @@
 title: "\"ネイティブ推奨規則\" 規則セット"
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7aab8c5796a111d90c29e7fa656749adcdf124bd
-ms.sourcegitcommit: d705e015cb525bfa87a0b93e93376c3956ec2707
+ms.openlocfilehash: 12e9e271e0fd6881ae19581a1678f131719c4b34
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43225127"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53882803"
 ---
 # <a name="native-recommended-rules-rule-set"></a>"ネイティブ推奨規則" 規則セット
 
@@ -60,7 +59,7 @@ ms.locfileid: "43225127"
 |[C6270](../code-quality/c6270.md)|Format 関数への Float 引数がない|
 |[C6271](../code-quality/c6271.md)|Format 関数への余分な引数|
 |[C6272](../code-quality/c6272.md)|Format 関数への Float でない引数|
-|[C6273](../code-quality/c6273.md)|Format 関数への整数以外の引数|
+|[C6273](../code-quality/c6273.md)|Format 関数への整数でない引数|
 |[C6274](../code-quality/c6274.md)|Format 関数への文字でない引数|
 |[C6276](../code-quality/c6276.md)|無効な文字列のキャスト|
 |[C6277](../code-quality/c6277.md)|無効な CreateProcess 呼び出し|
@@ -127,7 +126,7 @@ ms.locfileid: "43225127"
 |[C6518](../code-quality/c6518.md)|書き込み可能でないバッファーでの書き込み可能サイズ|
 |[C6522](../code-quality/c6522.md)|無効なサイズの文字列型|
 |[C6525](../code-quality/c6525.md)|無効なサイズの到達不能な場所の文字列|
-|[C6527](../code-quality/c6527.md)|無効な注釈です: 'NeedsRelease' プロパティは、void 型の値では使用できません|
+|[C6527](../code-quality/c6527.md)|無効な注釈。'NeedsRelease' プロパティを void 型の値に対して使用することはできません。|
 |[C6530](../code-quality/c6530.md)|認識されない書式指定文字列スタイル|
 |[C6540](../code-quality/c6540.md)|この関数で属性注釈を使用すると、既存の __declspec 注釈がすべて無効となります|
 |[C6551](../code-quality/c6551.md)|無効なサイズ指定です: 式が解析可能ではありません|
@@ -147,7 +146,7 @@ ms.locfileid: "43225127"
 |[C26115](../code-quality/c26115.md)|ロックの解放の失敗|
 |[C26116](../code-quality/c26116.md)|取得またはロックを保持するために失敗|
 |[C26117](../code-quality/c26117.md)|保持されていないロックを解放します。|
-|[C26140](../code-quality/c26140.md)|同時実行 SAL 注釈のエラーです。|
+|[C26140](../code-quality/c26140.md)|コンカレンシー SAL 注釈のエラーです|
 |[C26441](../code-quality/c26441.md)|NO_UNNAMED_GUARDS|
 |[C26444](../code-quality/c26444.md)|NO_UNNAMED_RAII_OBJECTS|
 |[C26498](../code-quality/c26498.md)|USE_CONSTEXPR_FOR_FUNCTIONCALL|
@@ -228,16 +227,16 @@ ms.locfileid: "43225127"
 |[C28282](../code-quality/c28282.md)|書式指定文字列は、前提条件の中に存在する必要があります|
 |[C28285](../code-quality/c28285.md)|関数について、パラメーターに構文エラーがあります|
 |[C28286](../code-quality/c28286.md)|関数について、構文エラーが最後の近くにあります|
-|[C28287](../code-quality/c28287.md)|関数について、構文エラーで\_で\_() 注釈 (認識できないパラメーター名)|
-|[C28288](../code-quality/c28288.md)|関数について、構文エラーで\_で\_() 注釈 (無効なパラメーター名)|
-|[C28289](../code-quality/c28289.md)|関数について: ReadableTo または WritableTo には、パラメーターとして limit-spec がありませんでした|
+|[C28287](../code-quality/c28287.md)|関数について、\_At\_() 注釈 (認識されないパラメーター名) に構文エラーがあります|
+|[C28288](../code-quality/c28288.md)|関数について、\_At\_() 注釈 (無効のパラメーター名) に構文エラーがあります|
+|[C28289](../code-quality/c28289.md)|関数の場合。ReadableTo または WritableTo では、パラメーターとして limit-spec がなかった|
 |[C28290](../code-quality/c28290.md)|関数の注釈は、実際のパラメーターの数より多い外部参照を含みます|
 |[C28291](../code-quality/c28291.md)|deref レベル 0 での post null/notnull は、関数に対して意味がありません。|
 |[C28300](../code-quality/c28300.md)|演算子に対する互換性のない型の、式のオペランドです|
 |[C28301](../code-quality/c28301.md)|関数の最初の宣言に対して注釈がありません。|
-|[C28302](../code-quality/c28302.md)|余分な\_Deref\_演算子が注釈に見つかりました。|
-|[C28303](../code-quality/c28303.md)|あいまいな\_Deref\_演算子が注釈に見つかりました。|
-|[C28304](../code-quality/c28304.md)|不適切に\_Notref\_トークンに適用される演算子が見つかりました。|
+|[C28302](../code-quality/c28302.md)|余分な \_Deref\_ 演算子が注釈に見つかりました。|
+|[C28303](../code-quality/c28303.md)|あいまいな \_Deref\_ 演算子が注釈に見つかりました。|
+|[C28304](../code-quality/c28304.md)|不適切に設定された \_Notref\_ 演算子がトークンに適用されました。|
 |[C28305](../code-quality/c28305.md)|トークンの解析中にエラーが発生しました。|
 |[C28306](../code-quality/c28306.md)|パラメーターの注釈には使用されなくなりました|
 |[C28307](../code-quality/c28307.md)|パラメーターの注釈には使用されなくなりました|

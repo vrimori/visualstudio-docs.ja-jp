@@ -1,9 +1,6 @@
 ---
 title: プログラムの起動 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, launching
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4ab4432eed95fd042bd35d34b6a42d3cd036fcf2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: fb403e9df8b159162d5160e3927acb40cc775ff3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49858369"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53862154"
 ---
 # <a name="launch-a-program"></a>プログラムを起動します。
 プログラムをデバッグする必要のあるユーザーがキーを押して**F5** IDE からデバッガーを実行します。 これには、一連の最終的に接続されている、または接続されているプログラムに次のようにさらにデバッグ エンジン (DE) への接続を IDE のイベントが開始されます。  
@@ -28,7 +25,7 @@ ms.locfileid: "49858369"
   
 2. デが指定されている場合、DE、プログラムを起動するオペレーティング システムを呼び出します。 プログラムを起動するには、結果として、プログラムの実行時環境が読み込まれます。 たとえば、プログラムが MSIL で書き込まれた場合、プログラムを実行する共通言語ランタイムが呼び出されます。  
   
-    - または -  
+    または  
   
     デが指定されていない場合、ポートは、これにより、プログラムの実行時の環境を読み込むと、プログラムを起動するオペレーティング システムを呼び出します。  
   

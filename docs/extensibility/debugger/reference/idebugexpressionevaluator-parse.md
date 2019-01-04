@@ -1,9 +1,6 @@
 ---
 title: IDebugExpressionEvaluator::Parse |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugExpressionEvaluator::Parse
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e348666514ea13a901a4c0be0a680ed4f83f688
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ebd8518a6fd2048de0d5204dcede8943f4da62e1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49815132"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53922195"
 ---
 # <a name="idebugexpressionevaluatorparse"></a>IDebugExpressionEvaluator::Parse
 このメソッドは、式の文字列を解析された式に変換します。  
@@ -28,7 +25,7 @@ ms.locfileid: "49815132"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT Parse(   
+HRESULT Parse(   
    LPCOLESTR                upstrExpression,  
    PARSEFLAGS               dwFlags,  
    UINT                     nRadix,  

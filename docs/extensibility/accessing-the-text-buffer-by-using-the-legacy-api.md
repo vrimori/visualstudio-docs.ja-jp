@@ -1,9 +1,6 @@
 ---
 title: レガシ API を使用して、テキスト バッファーへのアクセス |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - text buffers
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3347fc2fd03a2eb6b466145672d3aebb77ad71a6
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: ba58811c800501b5397465192ffbdec4c80160a7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078015"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53915008"
 ---
 # <a name="access-the-text-buffer-by-using-the-legacy-api"></a>従来の API を使用してテキスト バッファーへのアクセスします。
 テキストがテキスト ストリームとファイルの永続性の管理を担当します。 バッファーの読み取りまたは書き込みの他の形式、バッファーとすべての通常の通信は Unicode を使用して実行します。 従来の Api では、テキスト バッファーは、バッファー内の文字の位置を識別するためにも、1 部または 2 次元座標系に使用できます。  

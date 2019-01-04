@@ -1,9 +1,6 @@
 ---
 title: Visual Studio 内での Office 機能を使用します。
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,31 +14,29 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6a1db785b4758236c4a50e694d868cecc269324a
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: d1bcb827f068dd8c6577fed50e67d866ebba4886
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34767508"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53934623"
 ---
 # <a name="use-office-functionality-inside-of-visual-studio"></a>Visual Studio 内での Office 機能を使用します。
-  ドキュメント レベルのプロジェクトを作成するときに、ドキュメントと関連付けられたアプリケーション内でホストされる Visual Studio の設計およびドキュメントを直接操作することができます。 Microsoft Office アプリケーションが Visual Studio で開きますがある場合は、通常予想どおりに動作します。 アプリケーションの機能の一部が異なるか、アクセスできません。  
+  ドキュメント レベルのプロジェクトを作成するときに、ドキュメントと関連付けられているアプリケーション内でホストされる Visual Studio の設計およびドキュメントを直接操作することができます。 Microsoft Office が Visual Studio で開いているアプリケーションがある場合は、期待どおりに一般的に動作します。 ただし、アプリケーションの機能の一部は異なる、またはアクセスできません。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
-## <a name="document-protection"></a>ドキュメント保護  
- Microsoft Office Word および Microsoft Office Excel 文書、プロジェクトで使用できる保護機能を提供します。 ただし、文書が Visual Studio で開いているときに、ドキュメントの保護が有効である場合、できなくなるするデザインを変更します。 詳細については、次を参照してください。[ドキュメント レベルのソリューションでの保護を文書化](../vsto/document-protection-in-document-level-solutions.md)です。  
+## <a name="document-protection"></a>ドキュメントの保護  
+ Microsoft Office Word および Microsoft Office Excel は、ドキュメント、プロジェクトで使用できる保護機能を提供します。 ただし場合は、文書が Visual Studio で開いているときに、ドキュメントの保護を有効になっている、できなくなることがするからデザインを変更します。 詳細については、次を参照してください。[文書の保護をドキュメント レベルのソリューションで](../vsto/document-protection-in-document-level-solutions.md)します。  
   
-## <a name="information-rights-management"></a>Information rights management  
- Information Rights Management (IRM) は、Microsoft Office Word および Microsoft Office Excel で使用できます。 IRM は、承認されていないユーザーを表示したり、機密情報を変更することを防止するのに役立ちます。 ただし、IRM 防ぐこともできます、コードを実行します。 詳細については、次を参照してください。 [Information rights management とマネージ コード拡張機能の概要](../vsto/information-rights-management-and-managed-code-extensions-overview.md)です。  
+## <a name="information-rights-management"></a>Rights management の情報  
+ Information Rights Management (IRM) は、Microsoft Office Word および Microsoft Office Excel で使用できます。 IRM を使用する承認されていないユーザーからの参照や機密情報を変更できます。 ただし、IRM が実行されないコードもようにすることができます。 詳細については、次を参照してください。 [Information rights management とマネージ コード拡張機能の概要](../vsto/information-rights-management-and-managed-code-extensions-overview.md)します。  
   
 ## <a name="password-protection"></a>パスワード保護  
- Microsoft Office Word 文書と Microsoft Office Excel ブックは、パスワードを知らない人に開けませんされるように設定できます。 パスワード保護は、Word および Excel での処理が異なります、開発プロセスに影響を与えることができます。 詳細については、次を参照してください。 [Office ドキュメントのパスワード保護](../vsto/password-protection-on-office-documents.md)です。  
+ Microsoft Office Word 文書や Microsoft Office Excel ブックは、パスワードを知らない人によって開けませんように設定できます。 パスワード保護は、Word と Excel を異なる方法で処理され、開発プロセスに影響を与えることができます。 詳細については、次を参照してください。 [Office ドキュメントのパスワード保護](../vsto/password-protection-on-office-documents.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [ドキュメント レベルのソリューションでドキュメントの保護](../vsto/document-protection-in-document-level-solutions.md)   
  [Information rights management とマネージ コード拡張機能の概要](../vsto/information-rights-management-and-managed-code-extensions-overview.md)   
  [Office ドキュメントのパスワード保護](../vsto/password-protection-on-office-documents.md)   
- [方法: コードを実行しなくても開いて Office ソリューション](../vsto/how-to-open-office-solutions-without-running-code.md)  
-  
-  
+ [方法: コードを実行することがなく Office ソリューションを開く](../vsto/how-to-open-office-solutions-without-running-code.md)  

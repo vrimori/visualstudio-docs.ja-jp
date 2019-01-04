@@ -1,9 +1,6 @@
 ---
 title: 従来の言語サービスにおけるかっこの一致 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - brace matching
@@ -14,19 +11,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d7564d76485fc60486a581de71a0497a1dc3e4a7
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 5f1c69a280e84a3c444c371bef5c99c7a3c17506
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512748"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53910036"
 ---
 # <a name="brace-matching-in-a-legacy-language-service"></a>従来の言語サービスにおけるかっこの一致
 かっこの一致には、かっこと中かっこなどに同時発生する必要がある言語要素を追跡する開発者は、役立ちます。 右中かっこを入力すると、開発者は、左中かっこが強調表示されます。  
   
  2 つまたは 3 つに同時発生と呼ばれる要素のペアと 3 要素を照合することができます。 3 要素は、次の 3 つの同時発生要素のセットです。 C# の場合は、たとえばで、`foreach`ステートメントは、3 つの要素をフォーム: `foreach()`、 `{`、および`}`します。 右中かっこを入力すると、次の 3 つのすべての要素が強調表示されます。  
   
- 従来の言語サービスは、VSPackage の一部として実装されますが、言語サービスの機能を実装する新しい方法は MEF 拡張機能を使用します。 かっこの一致を実装する新しい方法の詳細についてを参照してください。[チュートリアル: 対応するかっこの表示](../../extensibility/walkthrough-displaying-matching-braces.md)します。  
+ 従来の言語サービスは、VSPackage の一部として実装されますが、言語サービスの機能を実装する新しい方法は MEF 拡張機能を使用します。 かっこの一致を実装する新しい方法の詳細についてを参照してください。[チュートリアル。対応するかっこ表示](../../extensibility/walkthrough-displaying-matching-braces.md)します。  
   
 > [!NOTE]
 >  新しいエディターの API をできるだけ早く使用を開始することをお勧めします。 言語サービスのパフォーマンスを向上させる、エディターの新機能を活用することができます。  

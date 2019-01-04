@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによって Outlook の連絡先を削除'
-ms.custom: ''
+title: '方法: プログラムによって Outlook の連絡先を削除します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,14 +13,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1ada08de2259554c8371170214a1e00c2d928774
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 5309b0ae8710d28dbdbb2a45ad1a4620d068a4d7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35257171"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53924905"
 ---
-# <a name="how-to-programmatically-delete-outlook-contacts"></a>方法: プログラムによって Outlook の連絡先を削除
+# <a name="how-to-programmatically-delete-outlook-contacts"></a>方法: プログラムによって Outlook の連絡先を削除します。
   この例では、連絡先を 1 件削除します。 この例では、"Armando Pinto" という名前の連絡先が **[Contacts]** フォルダーに存在することを前提にしています。  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
@@ -34,7 +31,5 @@ ms.locfileid: "35257171"
   
 ## <a name="see-also"></a>関連項目  
  [連絡先項目を操作します。](../vsto/working-with-contact-items.md)   
- [方法: プログラムによって特定の連絡先の検索](../vsto/how-to-programmatically-search-for-a-specific-contact.md)   
- [方法: プログラムによって Outlook の連絡先へのアクセス](../vsto/how-to-programmatically-access-outlook-contacts.md)  
-  
-  
+ [方法: プログラムによって特定の連絡先を検索します。](../vsto/how-to-programmatically-search-for-a-specific-contact.md)   
+ [方法: プログラムによって Outlook の連絡先へのアクセスします。](../vsto/how-to-programmatically-access-outlook-contacts.md)  

@@ -1,8 +1,7 @@
 ---
-title: 'CA1009: イベント ハンドラーを正しく宣言します'
+title: CA1009:イベント ハンドラーを正しく宣言します
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - CA1009
@@ -20,14 +19,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 7697b394396f729133b7cb6a7f3c0501c5c45202
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: b56f93a1ea4afbe3c9fd590df937fe56a155b044
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45547397"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53987655"
 ---
-# <a name="ca1009-declare-event-handlers-correctly"></a>CA1009: イベント ハンドラーを正しく宣言します
+# <a name="ca1009-declare-event-handlers-correctly"></a>CA1009:イベント ハンドラーを正しく宣言します
 
 |||
 |-|-|
@@ -58,7 +57,7 @@ ms.locfileid: "45547397"
  [!code-vb[FxCop.Design.EventsTwoParams#1](../code-quality/codesnippet/VisualBasic/ca1009-declare-event-handlers-correctly_1.vb)]
 
 ## <a name="related-rules"></a>関連するルール
- [CA2109: 表示するイベント ハンドラーをレビューします](../code-quality/ca2109-review-visible-event-handlers.md)
+ [CA 2109:表示するイベント ハンドラーをレビューします](../code-quality/ca2109-review-visible-event-handlers.md)
 
 ## <a name="see-also"></a>関連項目
 

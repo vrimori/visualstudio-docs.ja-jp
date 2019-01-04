@@ -1,8 +1,7 @@
 ---
-title: 'CA2109: 表示するイベント ハンドラーをレビューします'
+title: CA2109:表示するイベント ハンドラーを確認します
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - CA2109
@@ -16,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4df271f5427d005ef94c4c09d6c0a1eb05c850b0
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: d234fe466395b5267c18eae9aa14d855d58abe2a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45548876"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53860846"
 ---
-# <a name="ca2109-review-visible-event-handlers"></a>CA2109: 表示するイベント ハンドラーをレビューします
+# <a name="ca2109-review-visible-event-handlers"></a>CA2109:表示するイベント ハンドラーを確認します
 
 |||
 |-|-|

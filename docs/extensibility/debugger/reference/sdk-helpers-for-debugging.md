@@ -1,9 +1,6 @@
 ---
 title: デバッグ用の SDK ヘルパー |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - dbgmetric.lib
@@ -17,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d352e22b95540cfc1901eb214c2d5180b6024f27
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6655b96ed51cd7cce5e94ce96cedf97517f1872a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49821527"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53942412"
 ---
 # <a name="sdk-helpers-for-debugging"></a>デバッグ用の SDK ヘルパー
 これらの関数と宣言は、C++ でのデバッグ エンジン、式エバリュエーターでは、およびシンボル プロバイダーを実装するためのグローバルなヘルパー関数です。  
@@ -160,7 +157,7 @@ HRESULT EnumMetricSections(
 ## <a name="metric-definitions"></a>メトリック定義  
  これらの定義は、定義済みのメトリック名は使用できます。 名前はさまざまなレジストリ キーと値の名前とワイド文字の文字列として定義されているがすべてに対応します。 たとえば、 `extern LPCWSTR metrictypeEngine`。  
   
-|定義済みのメトリックの種類|説明: の基本キー.|  
+|定義済みのメトリックの種類|説明:基本のキーをしています.|  
 |-----------------------------|---------------------------------------|  
 |metrictypeEngine|すべてのデバッグ エンジンのメトリック。|  
 |metrictypePortSupplier|すべてのポート サプライヤー メトリック。|  
@@ -179,7 +176,7 @@ HRESULT EnumMetricSections(
 |metricDataBP|データの変更のブレークポイントの設定のサポートを示す 0 以外の値に設定します。|  
 |metricDisassembly|[逆アセンブル] 一覧の運用環境のサポートを示すために 0 以外の値を設定します。|  
 |metricDumpWriting|ダンプの書き込み (ダンプの出力デバイスへのメモリ) のサポートを示す 0 以外の値に設定します。|  
-|metricENC|エディット コンティニュのサポートを示すために 0 以外の値を設定します。 **注:** カスタム デバッグ エンジンはこれを設定する必要がありますしないまたは 0 に設定常にする必要があります。|  
+|metricENC|エディット コンティニュのサポートを示すために 0 以外の値を設定します。 **注:** カスタム デバッグ エンジンでは、これを設定する必要がありますしないか、0 に設定常にする必要があります。|  
 |metricExceptions|例外のサポートを示す 0 以外の値に設定します。|  
 |metricFunctionBP|名前付きブレークポイント (を特定の関数名が呼び出されたときに中断するブレークポイント) のサポートを示す 0 以外の値に設定します。|  
 |metricHitCountBP|「ポイントをヒット」ブレークポイント (一定回数がヒットされている後にのみトリガーされるブレークポイント) の設定のサポートを示す 0 以外の値に設定します。|  
@@ -194,7 +191,7 @@ HRESULT EnumMetricSections(
 |metricAlwaysLoadProgramProviderLocal|0 以外にすることを示すプログラム プロバイダーは常に読み込まれたローカルに設定します。|  
 |metricEngineCanWatchProcess|これを設定を示すプログラム プロバイダーではなくプロセス イベント デバッグ エンジンの監視は、0 以外の値。|  
 |metricRemoteDebugging|これ 0 以外に設定をリモート デバッグのサポートを示します。|  
-|metricEncUseNativeBuilder|この設定を示す、編集と続行マネージャー使用すること、デバッグ エンジンの encbuild.dll エディット コンティニュ用にビルドするには 0 以外の値。 **注:** カスタム デバッグ エンジンはこれを設定する必要がありますしないまたは 0 に設定常にする必要があります。|  
+|metricEncUseNativeBuilder|この設定を示す、編集と続行マネージャー使用すること、デバッグ エンジンの encbuild.dll エディット コンティニュ用にビルドするには 0 以外の値。 **注:** カスタム デバッグ エンジンでは、これを設定する必要がありますしないか、0 に設定常にする必要があります。|  
 |metricLoadUnderWOW64|これ 0 以外に設定を示す、64 ビット プロセスをデバッグするときに、WOW の下で、デバッグ対象プロセスで、デバッグ エンジンを読み込む必要があります。それ以外の場合、デバッグ エンジンは、(WOW64 の下で実行されている) を Visual Studio のプロセスに読み込まれます。|  
 |metricLoadProgramProviderUnderWOW64|これ 0 以外に設定; WOW の下で、64 ビット プロセスをデバッグするときに、プログラムのプロバイダーがデバッグ対象プロセスに読み込まれたをするにはそれ以外の場合、Visual Studio のプロセスで読み込まれます。|  
 |metricStopOnExceptionCrossingManagedBoundary|これ 0 以外に設定を示すマネージ/アンマネージ コードの境界を越えて、未処理の例外がスローされた場合、プロセスを停止します。|  
@@ -266,7 +263,7 @@ HRESULT EnumMetricSections(
 |-----------------|-----------------|  
 |*[レジストリ キー]*|`HKEY_CURRENT_USER` または `HKEY_LOCAL_MACHINE`。|  
 |*[バージョン root]*|Visual Studio のバージョン (たとえば、 `7.0`、 `7.1`、または`8.0`)。 ただし、このルート変更することもを使用して、 **/rootsuffix**に切り替える**devenv.exe**します。 VSIP、この修飾子は通常**Exp**バージョン ルートである場合は、たとえば 8.0Exp のため、します。|  
-|*[メトリックの root]*|いずれかになります`AD7Metrics`または`AD7Metrics(Debug)`dbgmetric.lib のデバッグ バージョンを使用するかどうかに応じて、します。 **注:** デバッグとリリースの違いがある場合、この名前付け規則に従う必要があります dbgmetric.lib を使用すると、かどうかのバージョンをレジストリに反映する必要があります。|  
+|*[メトリックの root]*|いずれかになります`AD7Metrics`または`AD7Metrics(Debug)`dbgmetric.lib のデバッグ バージョンを使用するかどうかに応じて、します。 **注:** この名前付け規則をデバッグとリリースの違いがある場合に従う必要があります dbgmetric.lib を使用すると、かどうかのバージョンをレジストリに反映する必要があります。|  
 |*[メトリックの種類]*|書き込まれるメトリックの種類: `Engine`、 `ExpressionEvaluator`、`SymbolProvider`など。これらすべてとして dbgmetric.h のように定義されます`metricTypeXXXX`ここで、`XXXX`は特定の種類の名前です。|  
 |*[メトリック]*|メトリックを設定するには値を代入するエントリの名前。 メトリックの実際の組織は、メトリックの種類によって異なります。|  
 |*[メトリックの値]*|メトリックに割り当てられた値。 型の値 (文字列、数値など) が必要では、メトリックに依存します。|  

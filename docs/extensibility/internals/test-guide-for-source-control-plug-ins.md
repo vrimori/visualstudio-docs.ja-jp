@@ -1,9 +1,6 @@
 ---
 title: テスト ソース管理プラグインのガイド |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - plug-ins, source control
@@ -17,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8df70ef5fcaffb7fe2e06df5b6d47e526ff5162f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 03ddcde26ffeb50db045295a39fa444059cf59bb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49828261"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53827901"
 ---
 # <a name="test-guide-for-source-control-plug-ins"></a>ソース管理プラグイン向けのテスト ガイド
 このセクションでは、ソース管理プラグインをテストするためのガイダンスを提供します。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。 同様の問題となる可能性がより複雑な領域の一部、最も一般的なテスト領域の広範な概要が表示されます。 この概要はテスト_ケースを網羅するものではありません。  
@@ -40,7 +37,7 @@ ms.locfileid: "49828261"
  いずれかのプロジェクトで使用できる型[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ソース管理の統合をサポートする (たとえば、 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]、 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]、または[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)])。  
   
  Web プロジェクト  
- Web プロジェクトの 4 つの種類があります。 ファイル システム、ローカル IIS、リモートのサイトおよび FTP です。  
+ Web プロジェクトの 4 つの種類があります。ファイル システム、ローカル IIS、リモートのサイトおよび FTP です。  
   
 - ファイル システムのプロジェクトは、ローカル パスに作成されますが、インターネット インフォメーション サービス (IIS) には、UNC パスを使用して内部的にアクセスし、クライアント プロジェクトと同様に、IDE 内からソース管理下に置くことができますをインストールする必要はありません。  
   
@@ -58,55 +55,55 @@ ms.locfileid: "49828261"
   
 ## <a name="test-areas-covered-in-this-section"></a>このセクションで説明するテスト区分  
   
--   [テスト領域 1: ソース管理への追加とオープン](../../extensibility/internals/test-area-1-add-to-open-from-source-control.md)  
+-   [テスト領域 1:ソース管理から開く/を追加します。](../../extensibility/internals/test-area-1-add-to-open-from-source-control.md)  
   
-    -   ケース 1 a: ソリューションをソース管理に追加します。  
+    -   ケース 1 a:ソリューションをソース管理に追加します。  
   
-    -   ケース 1 b: ソース管理からソリューションを開く  
+    -   ケース 1 b:ソース管理からソリューションを開く  
   
-    -   ケース 1 c: ソース管理からソリューションを追加  
+    -   ケース 1 c:ソース管理からソリューションを追加します。  
   
--   [テスト領域 2: ソース管理からの取得](../../extensibility/internals/test-area-2-get-from-source-control.md)  
+-   [テスト領域 2:ソース管理から取得します。](../../extensibility/internals/test-area-2-get-from-source-control.md)  
   
--   [テスト領域 3: チェックアウトとチェックアウトの取り消し](../../extensibility/internals/test-area-3-check-out-undo-checkout.md)  
+-   [テスト領域 3:チェック アウト/チェック アウトの取り消し](../../extensibility/internals/test-area-3-check-out-undo-checkout.md)  
   
-    -   ケース 3: チェック アウト/チェック アウトの取り消し  
+    -   ケース 3:チェック アウト/チェック アウトの取り消し  
   
-    -   ケース 3 a: チェック アウト  
+    -   ケース 3 a:チェックアウト  
   
-    -   ケース 3 b: チェック アウトの切断  
+    -   ケース 3 b:切断されたチェック アウト  
   
-    -   ケース 3 c: クエリの編集/クエリの保存 (QEQS)  
+    -   ケース 3 c:保存 (QEQS) クエリの編集/クエリ  
   
-    -   サイレント チェック アウトの 3d の場合:  
+    -   3d の場合します。サイレント チェック アウト  
   
-    -   ケース 3 e: チェック アウトの取り消し  
+    -   ケース 3 e:チェック アウトを取り消し  
   
--   [テスト領域 4: チェックイン](../../extensibility/internals/test-area-4-check-in.md)  
+-   [テスト領域 4:チェックイン](../../extensibility/internals/test-area-4-check-in.md)  
   
-    -   ケース 4 a: 項目の変更  
+    -   ケース 4 a:変更された項目  
   
-    -   ケース 4 b: ファイルを追加します。  
+    -   ケース 4 b:ファイルを追加します。  
   
-    -   ケース 4 c: プロジェクトの追加  
+    -   ケース 4 c:プロジェクトの追加  
   
--   [テスト領域 5: ソース管理の変更](../../extensibility/internals/test-area-5-change-source-control.md)  
+-   [テスト領域 5:ソース管理の変更](../../extensibility/internals/test-area-5-change-source-control.md)  
   
-    -   ケース 5 a: バインド  
+    -   ケース 5 a:バインド  
   
-    -   ケース 5 b: バインド解除  
+    -   ケース 5 b:バインド解除します。  
   
-    -   ケース 5 c: 再バインド  
+    -   ケース 5 c:再バインドします。  
   
--   [テスト領域 6: 削除](../../extensibility/internals/test-area-6-delete.md)  
+-   [テスト領域 6:Delete](../../extensibility/internals/test-area-6-delete.md)  
   
--   [テスト領域 7: 共有](../../extensibility/internals/test-area-7-share.md)  
+-   [テスト領域 7:共有](../../extensibility/internals/test-area-7-share.md)  
   
--   [テスト領域 8: プラグインの切り替え](../../extensibility/internals/test-area-8-plug-in-switching.md)  
+-   [テスト領域 8:プラグインの切り替え](../../extensibility/internals/test-area-8-plug-in-switching.md)  
   
-    -   8 a の場合: 自動変更  
+    -   大文字と小文字の 8 a:自動の変更  
   
-    -   場合は 8 b: ソリューションに基づく変更  
+    -   大文字と小文字の 8 b:ソリューションに基づく変更  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン](../../extensibility/source-control-plug-ins.md)

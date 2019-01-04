@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによって Visio 図面を保存'
-ms.custom: ''
+title: '方法: プログラムによって Visio 図面を保存します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,14 +13,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a9f065a32fc26d372b97a31eb70836451b31fa00
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: cd49be6f7ab4e87f0592470e1c5af6039a5f56aa
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50670729"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53865623"
 ---
-# <a name="how-to-programmatically-save-visio-documents"></a>方法: プログラムによって Visio 図面を保存
+# <a name="how-to-programmatically-save-visio-documents"></a>方法: プログラムによって Visio 図面を保存します。
   Microsoft Office Visio 図面を保存するには、次のようないくつかの方法があります。  
   
 - 既存の図面に変更を保存する。  
@@ -80,9 +77,7 @@ ms.locfileid: "50670729"
 ## <a name="see-also"></a>関連項目  
  [Visio ソリューション](../vsto/visio-solutions.md)   
  [Visio オブジェクト モデルの概要](../vsto/visio-object-model-overview.md)   
- [方法: プログラムによって新しい Visio 図面を作成](../vsto/how-to-programmatically-create-new-visio-documents.md)   
+ [方法: プログラムによって新しい Visio 図面を作成します。](../vsto/how-to-programmatically-create-new-visio-documents.md)   
  [方法: プログラムによって Visio 図面を開く](../vsto/how-to-programmatically-open-visio-documents.md)   
  [方法: プログラムによって Visio 図面を閉じる](../vsto/how-to-programmatically-close-visio-documents.md)   
  [方法: プログラムによって Visio 図面を印刷します。](../vsto/how-to-programmatically-print-visio-documents.md)  
-  
-  

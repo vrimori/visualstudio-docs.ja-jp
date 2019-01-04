@@ -1,9 +1,6 @@
 ---
 title: 基本的なプロジェクト システムを作成するには、パート 1 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - writing a project system
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9d7d48a7aae98da574747da2df32c9368ab930aa
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 43ba49107c1f3b2ab72db024b8dbfd01d8eab857
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49887554"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53832555"
 ---
 # <a name="create-a-basic-project-system-part-1"></a>基本的なプロジェクト システム、第 1 部を作成します。
 Visual Studio では、プロジェクトは、開発者は、ソース コード ファイルおよびその他の資産の分類に使用するコンテナーです。 プロジェクトがソリューション内の子として表示されます、**ソリューション エクスプ ローラー**します。 プロジェクトでは、整理、ビルド、デバッグ、およびソース コードをデプロイおよび Web サービス、データベース、およびその他のリソースへの参照を作成できます。  
@@ -59,7 +56,7 @@ Visual Studio では、プロジェクトは、開発者は、ソース コー�
 -   基本的なテンプレート パラメーターの置換を実装します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、"[Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)"を参照してください。  
   
  ソース コードをダウンロードすることも必要があります、[プロジェクト用 Managed Package Framework](https://github.com/tunnelvisionlabs/MPFProj10)します。 作成しようとするソリューションにアクセスできる場所にファイルを抽出します。  
   
@@ -71,7 +68,7 @@ Visual Studio では、プロジェクトは、開発者は、ソース コー�
   
 ### <a name="to-create-a-basic-project-template"></a>基本的なプロジェクト テンプレートを作成するには  
   
-1. 3 つのフォルダーを他のいずれかと、プロジェクトに追加: *Templates\Projects\SimpleProject*します。 (で**ソリューション エクスプ ローラー**を右クリックし、 **SimpleProject**プロジェクト ノードをポイントして、**追加**、 をクリックし、**新しいフォルダー**します。 フォルダーの名前*テンプレート*します。 *テンプレート*フォルダー、という名前のフォルダーを追加*プロジェクト*します。 *プロジェクト*フォルダー、という名前のフォルダーを追加*SimpleProject*)。  
+1. 3 つのフォルダーを他のいずれかと、プロジェクトに追加します。*Templates\Projects\SimpleProject*します。 (で**ソリューション エクスプ ローラー**を右クリックし、 **SimpleProject**プロジェクト ノードをポイントして、**追加**、 をクリックし、**新しいフォルダー**します。 フォルダーの名前*テンプレート*します。 *テンプレート*フォルダー、という名前のフォルダーを追加*プロジェクト*します。 *プロジェクト*フォルダー、という名前のフォルダーを追加*SimpleProject*)。  
   
 2. *Templates\Projects\SimpleProject*フォルダー、という名前のアイコンとして使用するビットマップ イメージ ファイルを追加*SimpleProject.ico*します。 クリックすると**追加**、アイコン エディターが開きます。  
   
@@ -559,7 +556,7 @@ Templates
      $NameSpace$ と $className$ のテンプレート パラメーターに新しい値がないことに注意してください。 次のセクションで、テンプレート パラメーターの置換を実装する方法を学習します。  
   
 ## <a name="substitute-template-parameters"></a>テンプレートのパラメーターを置き換える  
- 前のセクションで登録したプロジェクト テンプレートで Visual Studio を使用して、`ProvideProjectFactory`属性。 テンプレート フォルダーのパスをこの方法で登録をオーバーライドし、展開する基本的なテンプレート パラメーターの置換を有効にすることができます、`ProjectNode.AddFileFromTemplate`クラス。 詳細については、次を参照してください。[新しいプロジェクトの生成: 内部、パート 2](../extensibility/internals/new-project-generation-under-the-hood-part-two.md)します。  
+ 前のセクションで登録したプロジェクト テンプレートで Visual Studio を使用して、`ProvideProjectFactory`属性。 テンプレート フォルダーのパスをこの方法で登録をオーバーライドし、展開する基本的なテンプレート パラメーターの置換を有効にすることができます、`ProjectNode.AddFileFromTemplate`クラス。 詳細については、次を参照してください。[新しいプロジェクトの生成。内部的には、2 つのパート](../extensibility/internals/new-project-generation-under-the-hood-part-two.md)します。  
   
  交換用のコードを追加、`AddFileFromTemplate`クラス。  
   

@@ -1,9 +1,6 @@
 ---
 title: '方法: ステータス バーの更新 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - update status bar
@@ -13,14 +10,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7f7d52ad8dc75f8e8bd313794b44c231522cde7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 554b0c46074c4ffc1860250a0e9dfd8d2bb24b60
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49829938"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53874165"
 ---
-# <a name="how-to-update-the-status-bar"></a>方法: ステータス バーの更新
+# <a name="how-to-update-the-status-bar"></a>方法: ステータス バーを更新します。
 **ステータス バー**状態テキストの行または評価指標の 1 つまたは複数を含む多くのアプリケーション ウィンドウの下部にあるコントロール バーがあります。  
   
 ## <a name="to-update-the-status-bar"></a>ステータス バーを更新するには  

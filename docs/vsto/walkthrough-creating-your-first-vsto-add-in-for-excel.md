@@ -1,9 +1,6 @@
 ---
-title: 'Excel 用の最初の VSTO アドインのチュートリアル: 作成します。'
-ms.custom: ''
+title: 'チュートリアル: Excel 用の最初の VSTO アドインの作成します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,14 +15,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6a9b7540a42dbaf7b7079793158d33d761199720
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f803db23d868aa553ef4c1cd898428b64e998c3b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49949904"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53831889"
 ---
-# <a name="walkthrough-create-your-first-vsto-add-in-for-excel"></a>Excel 用の最初の VSTO アドインのチュートリアル: 作成します。
+# <a name="walkthrough-create-your-first-vsto-add-in-for-excel"></a>チュートリアル: Excel 用の最初の VSTO アドインの作成します。
   この入門チュートリアルでは、Microsoft Office Excel 用のアプリケーション レベルのアドインを作成する方法について説明します。 この種のソリューションに作成した機能は、どのブックが開いているかにかかわらず、アプリケーション自体に対して使用できます。  
   
  [!INCLUDE[appliesto_xlallapp](../vsto/includes/appliesto-xlallapp-md.md)]  
@@ -121,17 +118,17 @@ ms.locfileid: "49949904"
 ## <a name="next-steps"></a>次の手順  
  これで Excel 用の基本的な VSTO アドインが作成されました。VSTO アドインの開発方法の詳細について、以下のトピックを参照してください。  
   
--   VSTO アドインで実行できる一般的なプログラミング タスク:[プログラム VSTO アドイン](../vsto/programming-vsto-add-ins.md)します。  
+-   VSTO アドインで実行できる一般的なプログラミング タスク:[VSTO アドインをプログラム](../vsto/programming-vsto-add-ins.md)します。  
   
--   Excel VSTO アドインに固有のプログラミング タスク: [Excel ソリューション](../vsto/excel-solutions.md)します。  
+-   Excel VSTO アドインに固有のタスクをプログラミングします。[Excel ソリューション](../vsto/excel-solutions.md)します。  
   
--   Excel のオブジェクト モデルの使用: [Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)します。  
+-   Excel のオブジェクト モデルを使用します。[Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)します。  
   
--   Excel のユーザー インターフェイス (UI) のカスタマイズなどによってリボンにカスタム タブの追加や独自のカスタム作業ウィンドウの作成: [Office UI のカスタマイズ](../vsto/office-ui-customization.md)します。  
+-   たとえば、リボンにカスタム タブを追加するか、独自のカスタム作業ウィンドウの作成、Excel のユーザー インターフェイス (UI) のカスタマイズ。[Office UI のカスタマイズ](../vsto/office-ui-customization.md)します。  
   
--   ビルドと Excel 用 VSTO アドインをデバッグ:[ビルドの Office ソリューション](../vsto/building-office-solutions.md)します。  
+-   ビルドと Excel 用 VSTO アドインをデバッグする:[Office ソリューションの構築](../vsto/building-office-solutions.md)します。  
   
--   Excel 用 VSTO アドインの配置: [Office ソリューションを配置](../vsto/deploying-an-office-solution.md)します。  
+-   Excel 用 VSTO アドインを配置します。[Office ソリューションを配置](../vsto/deploying-an-office-solution.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
@@ -142,5 +139,3 @@ ms.locfileid: "49949904"
  [Office ソリューションを構築します。](../vsto/building-office-solutions.md)   
  [Office ソリューションをデプロイします。](../vsto/deploying-an-office-solution.md)   
  [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)  
-  
-  

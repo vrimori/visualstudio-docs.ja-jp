@@ -1,9 +1,6 @@
 ---
 title: ドキュメントの読み込みの遅延 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: fb07b8e2-a4e3-4cb0-b04f-8eb11c491f35
 author: gregvanl
@@ -11,12 +8,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03ca02010586711fa1a9af463f2fde5d0f4963a5
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 27edc56516293ff6502f0708a02faa7bae1e3719
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39500369"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53940363"
 ---
 # <a name="delayed-document-loading"></a>ドキュメントの読み込みの遅延
 ユーザーは、Visual Studio ソリューションを再度開き、ときに関連付けられているドキュメントのほとんどはすぐに読み込まれません。 ドキュメント ウィンドウ フレームが初期化保留中の状態で作成され、(スタブ フレームと呼ばれます) のプレース ホルダーのドキュメントが実行されているドキュメント テーブル (RDT) に配置されます。  
@@ -59,7 +56,7 @@ For Visual Studio 全体のメモリ使用量を増やすことができます�
 - サブスクライブする場合は、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterAttributeChange%2A>します。  
   
 
- 次の例は架空のドキュメントへのアクセスのシナリオ: A Visual Studio 拡張機能が開いているドキュメントに関する情報を表示する、編集のロック カウントとドキュメントのデータについて何かのインスタンス。 RDT を使用して、ドキュメントに列挙<xref:Microsoft.VisualStudio.Shell.Interop.IEnumRunningDocuments>、呼び出して<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A>ドキュメントごとに、編集のロック カウントとドキュメント データを取得するためにします。 ドキュメントが、初期化保留中の状態にある場合、ドキュメント データを要求が不必要に初期化されます。  
+ 次の例では、仮想的なドキュメントへのアクセスのシナリオを示します。拡張機能が開いているドキュメントに関する情報を表示する Visual Studio、インスタンスの編集をロック カウントとドキュメントのデータについて何か。 RDT を使用して、ドキュメントに列挙<xref:Microsoft.VisualStudio.Shell.Interop.IEnumRunningDocuments>、呼び出して<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A>ドキュメントごとに、編集のロック カウントとドキュメント データを取得するためにします。 ドキュメントが、初期化保留中の状態にある場合、ドキュメント データを要求が不必要に初期化されます。  
   
  ドキュメントへのアクセスのより効率的な方法は、使用する<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentEditLockCount%2A>編集のロック カウントを取得し、使用して<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A>ドキュメントが初期化されているかどうかを判断します。 フラグが含まれない場合<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4>、ドキュメントは既に初期化されていると、ドキュメント データを要求し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentData%2A>不要な初期化は行われません。 フラグが含まれる場合<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4>、拡張機能では、ドキュメントが初期化されるまでドキュメント データを要求しないようにする必要があります。 この初期化で検出できる、`OnAfterAttributeChange(Ex)`イベント ハンドラー。  
   

@@ -1,9 +1,6 @@
 ---
 title: Visual Studio のツール for Office runtime の概要
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -29,15 +26,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b169242b9828f47f1ecfb87ebf02a9f86234699f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: bdae6b7f08ec442d7bca0b0aa3b46b8825385767
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49836997"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53878784"
 ---
 # <a name="visual-studio-tools-for-office-runtime-overview"></a>Visual Studio のツール for Office runtime の概要
-  Visual Studio で Microsoft Office developer tools を使用して作成されたソリューションを実行するには、するには、エンドユーザーのコンピューターに、Visual Studio 2010 Tools for Office ランタイムをインストールする必要があります。 詳細については、次を参照してください。[方法: Visual Studio Tools for Office ランタイム再頒布可能パッケージをインストール](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)します。 Visual Studio 2010 Tools for Office ランタイムは、2 つの主要なコンポーネントで構成されます。  
+  Visual Studio で Microsoft Office developer tools を使用して作成されたソリューションを実行するには、するには、エンドユーザーのコンピューターに、Visual Studio 2010 Tools for Office ランタイムをインストールする必要があります。 詳細については、「[方法 :Visual Studio Tools for Office ランタイム再頒布可能パッケージをインストール](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)します。 Visual Studio 2010 Tools for Office ランタイムは、2 つの主要なコンポーネントで構成されます。  
   
 - .NET Framework 用の Office 拡張機能。 これらのコンポーネントは、ソリューションと Microsoft Office アプリケーションの間の通信レイヤーとなるマネージド アセンブリです。 詳細については、次を参照してください。 [.NET Framework 用の Office 拡張機能を理解する](#officeextensions)します。  
   
@@ -124,7 +121,5 @@ ms.locfileid: "49836997"
  [Visual Studio での Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)   
  [ドキュメント レベルのカスタマイズのアーキテクチャ](../vsto/architecture-of-document-level-customizations.md)   
  [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)   
- [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
+ [方法: Visual Studio での Office プロジェクトを作成します。](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [アップグレードし、Office ソリューションの移行](../vsto/upgrading-and-migrating-office-solutions.md)  
-  
-  

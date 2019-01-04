@@ -1,9 +1,6 @@
 ---
-title: プロジェクトのサブタイプの初期化シーケンス |Microsoft ドキュメント
-ms.custom: ''
+title: プロジェクト サブタイプの初期化シーケンス |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - project subtypes, initialization sequence
@@ -13,42 +10,42 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fe7e7a574d04ec9a49252e32e0fbb8b5685778aa
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7773d13c973579aaa82324c63e324e78d62a6e8d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31131614"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53868629"
 ---
-# <a name="initialization-sequence-of-project-subtypes"></a>プロジェクトのサブタイプの初期化シーケンス
-環境の基本プロジェクト ファクトリの実装を呼び出すことによって、プロジェクトを構築する<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>です。 環境では、プロジェクト ファイルの拡張子のプロジェクト型 GUID の一覧が空でないことが判断した場合のプロジェクト サブタイプの構築を開始します。 プロジェクト ファイルの拡張子とプロジェクト GUID を指定するかどうか、プロジェクト、[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]または[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]プロジェクトの種類。 .Vbproj ファイルの拡張機能など、{F184B08F-C81C-45F6-A57F-5ABD9991F28F} を識別し、[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]プロジェクト。
+# <a name="initialization-sequence-of-project-subtypes"></a>プロジェクト サブタイプの初期化シーケンス
+環境の基本プロジェクト ファクトリの実装を呼び出すことでプロジェクトを構築する<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>します。 環境では、プロジェクト ファイルの拡張子のプロジェクト型 GUID の一覧が空でないことが判断した場合、プロジェクトのサブタイプの構築が開始されます。 プロジェクト ファイルの拡張子とプロジェクト GUID を指定するかどうか、プロジェクトを[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]または[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]プロジェクトの種類。 拡張子 .vbproj などと {F184B08F-C81C-45F6-A57F-5ABD9991F28F} 識別、[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]プロジェクト。
 
-## <a name="environments-initialization-of-project-subtypes"></a>プロジェクトのサブタイプの環境の初期化
+## <a name="environments-initialization-of-project-subtypes"></a>プロジェクト サブタイプの環境の初期化
  次の手順では、複数のプロジェクト サブタイプごとに集計されたプロジェクト システムの初期化順序について説明します。
 
-1.  環境は、基本プロジェクトを呼び出します<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>、集計のプロジェクトの種類の Guid のリストがないことが検出されたプロジェクトは、そのプロジェクト ファイルを解析中に`null`です。 プロジェクトでは、直接そのプロジェクトの作成を停止します。
+1.  環境が、基本プロジェクトを呼び出します<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>、集約プロジェクト型 Guid のリストがないことが検出されたプロジェクトは、そのプロジェクト ファイルを解析中に`null`します。 プロジェクトでは、直接そのプロジェクトの作成は中止します。
 
-2.  プロジェクトの呼び出し`QueryService`で<xref:Microsoft.VisualStudio.Shell.Interop.SVsCreateAggregateProject>の環境の実装を使用してプロジェクトのサブタイプを作成するサービスを<xref:Microsoft.VisualStudio.Shell.Interop.IVsCreateAggregateProject.CreateAggregateProject%2A>メソッドです。 このメソッド内で、環境での実装を再帰的な関数呼び出しが行わ<xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A>、<xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.SetInnerProject%2A>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.InitializeForOuter%2A>メソッドは、プロジェクトは、リスト中に、最も外側にあるプロジェクトのサブタイプで始まる Guid の型します。
+2.  プロジェクト呼び出し`QueryService`で<xref:Microsoft.VisualStudio.Shell.Interop.SVsCreateAggregateProject>の環境の実装を使用してプロジェクト サブタイプを作成するサービス、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCreateAggregateProject.CreateAggregateProject%2A>メソッド。 このメソッド内では、環境、再帰関数呼び出しの実装を<xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A>、<xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.SetInnerProject%2A>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.InitializeForOuter%2A>プロジェクトは、リスト中は、メソッドは最も外側にあるプロジェクトのサブタイプで始まる Guid を入力します。
 
-     次の例は、初期化手順を詳しく説明します。
+     次に、初期化の手順について説明します。
 
-    1.  環境の実装、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCreateAggregateProject.CreateAggregateProject%2A>メソッドの呼び出し、`HrCreateInnerProj`次の関数の宣言とメソッド。
+    1.  環境の実装、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCreateAggregateProject.CreateAggregateProject%2A>メソッドの呼び出し、`HrCreateInnerProj`メソッドと次の関数宣言。
 
          <CodeContentPlaceHolder>0</CodeContentPlaceHolder>
 
-         この関数が呼び出されたとき、最初には、最も外側のプロジェクト サブタイプのパラメーター`pOuter`と`pOwner`として渡された`null`関数は、最も外側にあるプロジェクトのサブタイプを設定および`IUnknown`に`pOuter`です。
+         この関数が呼び出されたとき、最初に、最も外側にあるプロジェクトのサブタイプのパラメーター`pOuter`と`pOwner`として渡される`null`関数は、最も外側のプロジェクト サブタイプの設定と`IUnknown`に`pOuter`します。
 
-    2.  次に、環境を呼び出す`HrCreateInnerProj`一覧に 2 つ目のプロジェクト タイプ GUID を持つ関数です。 この GUID での集計のシーケンスの基本プロジェクトに向かってステップ実行 2 つ目の内部のプロジェクト サブタイプに対応しています。
+    2.  次に、環境を呼び出す`HrCreateInnerProj`リストの 2 つ目のプロジェクト型 GUID を持つ関数です。 この GUID は、集計順番ベースのプロジェクトへステップ実行 2 つ目の内部プロジェクト サブタイプに対応します。
 
-    3.  `pOuter`を指すようになりましたが、`IUnknown`の最も外側のプロジェクト サブタイプのおよび`HrCreateInnerProj`の実装を呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A>の実装への呼び出しを続けて<xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.SetInnerProject%2A>です。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A>制御を渡すメソッド`IUnknown`の最も外側のプロジェクト サブタイプの`pOuter`します。 所有されているプロジェクト (内部プロジェクトのサブタイプ) では、ここに、その集計プロジェクト オブジェクトを作成する必要があります。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.SetInnerProject%2A>メソッドの実装へのポインターを渡す、`IUnknown`集計されている内部のプロジェクトのです。 これら 2 つの方法が集約オブジェクトを作成し、実装をそれ自体に参照カウントを保持するプロジェクトのサブタイプが終わらないことを確認する COM 集計規則に従う必要があります。
+    3.  `pOuter`が現在指して、`IUnknown`の最も外側のプロジェクト サブタイプ、および`HrCreateInnerProj`の実装を呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A>の実装への呼び出し後に<xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.SetInnerProject%2A>します。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A>制御を渡すメソッド`IUnknown`最も外側にあるプロジェクトのサブタイプの`pOuter`します。 所有プロジェクト (内部のプロジェクト サブタイプ) は、ここで、その集計プロジェクト オブジェクトを作成する必要があります。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.SetInnerProject%2A>メソッドの実装へのポインターを渡す、`IUnknown`集計される内部のプロジェクトの。 これら 2 つのメソッドは、集約オブジェクトを作成し、実装は、プロジェクトのサブタイプは、自体への参照カウントを保持しているは終了しないようにする COM 集計の規則に従う必要があります。
 
-    4.  `HrCreateInnerProj` 実装を呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A>です。 このメソッドでは、プロジェクトのサブタイプは、初期化作業を行います。 ソリューションのイベントを登録することができます、たとえば、<xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.InitializeForOuter%2A>です。
+    4.  `HrCreateInnerProj` 実装を呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProjectFactory.PreCreateForOuter%2A>します。 このメソッドは、プロジェクトのサブタイプはその初期化作業を行います。 ソリューションのイベントを登録することができます、たとえば、<xref:Microsoft.VisualStudio.Shell.Interop.IVsAggregatableProject.InitializeForOuter%2A>します。
 
-    5.  `HrCreateInnerProj` リスト内の最後 GUID (基本プロジェクト) に到達するまで再帰的に呼び出されます。 これらの呼び出しごとに、c、d から手順が繰り返されます。 `pOuter` 最も外側にあるプロジェクトのサブタイプを指す`IUnknown`集計の各レベル。
+    5.  `HrCreateInnerProj` 一覧で最後の GUID (ベースのプロジェクト) に達するまで再帰的に呼び出されます。 これらの呼び出しごとに、c、d から手順が繰り返されます。 `pOuter` 最も外側にあるプロジェクトのサブタイプが指す`IUnknown`集計の各レベル。
 
 ## <a name="example"></a>例
 
-次の例のおおよその表記でプログラムによるプロセスの詳細、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCreateAggregateProject.CreateAggregateProject%2A>メソッドは、環境によって実装されます。 コードは単なる例です。コンパイルするものではありませんし、わかりやすくするために削除されたすべてのエラー チェックします。
+次の例のおおよその表記でプログラムによるプロセスの詳細、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCreateAggregateProject.CreateAggregateProject%2A>メソッドとして、環境によって実装されます。 コードはほんの一例です。コンパイルするものではありませんし、わかりやすくするために削除されたすべてのエラー チェックします。
 
 ```cpp
 HRESULT CreateAggregateProject

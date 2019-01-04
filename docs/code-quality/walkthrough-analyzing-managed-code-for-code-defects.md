@@ -2,7 +2,6 @@
 title: コードをマネージ コードの欠陥のチュートリアルの分析 |Microsoft Docs
 ms.date: 01/29/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis [Visual Studio]
@@ -12,14 +11,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 49c122e5cf22e9290f6dab1d45539887c68c01bd
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: fd24485d02d20bf4ab1b5def30e34b8d14a71cb3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117720"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53955254"
 ---
-# <a name="walkthrough-analyzing-managed-code-for-code-defects"></a>チュートリアル: コードの分析のマネージ コードを欠陥します。
+# <a name="walkthrough-analyzing-managed-code-for-code-defects"></a>チュートリアル: コードの欠陥のマネージ コードの分析
 
 このチュートリアルでは、コード分析ツールを使用してマネージ プロジェクトのコードの不具合を分析します。
 
@@ -87,53 +86,53 @@ ms.locfileid: "37117720"
 
     選択した開発者のプロファイルによってをポイントする必要があります**その他の Windows**で、**ビュー** ] メニューの [選び、**エラー一覧**。
 
-1. **ソリューション エクスプ ローラー**、選択**すべてのファイル**します。
+1. **ソリューション エクスプローラー**で、**[すべてのファイルを表示]** をクリックします。
 
 1. [プロパティ] ノードを展開し、開きます、 *AssemblyInfo.cs*ファイル。
 
 1. 警告を修正するのに、次のヒントを使用します。
 
-   [Ca 1014: アセンブリに CLSCompliantAttribute をマークする](../code-quality/ca1014-mark-assemblies-with-clscompliantattribute.md): Microsoft.Design: 'demo' は、CLSCompliantAttribute でマークする必要があり、その値を true にする必要があります。
+   [CA 1014:アセンブリに CLSCompliantAttribute](../code-quality/ca1014-mark-assemblies-with-clscompliantattribute.md):Microsoft.Design: 'demo' は、CLSCompliantAttribute でマークする必要があり、その値を true にする必要があります。
 
    1. コードを追加`using System;`AssemblyInfo.cs ファイルにします。
 
    1. 次に、コードを追加`[assembly: CLSCompliant(true)]`AssemblyInfo.cs ファイルの末尾にします。
 
-   [Ca 1032: 標準例外コンス トラクターを実装する](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft.Design: このクラスに次のコンス トラクターを追加しますパブリック demo(String)。
+   [CA 1032:標準例外コンス トラクターを実装](../code-quality/ca1032-implement-standard-exception-constructors.md):Microsoft.Design:このクラスに次のコンス トラクターを追加しますパブリック demo(String)。
 
    1. コンス トラクターを追加`public demo (String s) : base(s) { }`クラスに`demo`します。
 
-   [Ca 1032: 標準例外コンス トラクターを実装する](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft.Design: このクラスに次のコンス トラクターを追加しますパブリックのデモ (String, 例外)。
+   [CA 1032:標準例外コンス トラクターを実装](../code-quality/ca1032-implement-standard-exception-constructors.md):Microsoft.Design:このクラスに次のコンス トラクターを追加しますパブリックのデモ (String, 例外)。
 
    1. コンス トラクターを追加`public demo (String s, Exception e) : base(s, e) { }`クラスに`demo`します。
 
-   [Ca 1032: 標準例外コンス トラクターを実装する](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft.Design: このクラスに次のコンス トラクターを追加しますデモ (SerializationInfo, StreamingContext) を保護。
+   [CA 1032:標準例外コンス トラクターを実装](../code-quality/ca1032-implement-standard-exception-constructors.md):Microsoft.Design:このクラスに次のコンス トラクターを追加しますデモ (SerializationInfo, StreamingContext) の保護。
 
    1. コードを追加`using System.Runtime.Serialization;`Class1.cs ファイルの先頭にします。
 
    1. 次に、コンス トラクターを追加します。 `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { } to the class demo.`
 
-   [Ca 1032: 標準例外コンス トラクターを実装する](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft.Design: このクラスに次のコンス トラクターを追加しますパブリック demo()。
+   [CA 1032:標準例外コンス トラクターを実装](../code-quality/ca1032-implement-standard-exception-constructors.md):Microsoft.Design:このクラスに次のコンス トラクターを追加しますパブリック demo()。
 
    1. コンス トラクターを追加`public demo () : base() { }`クラスに`demo`**します。**
 
-   [Ca 1709: 識別子を正しく使い分ける](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Microsoft.Naming: 'TestCode' に変更することによって空間' プログラム名' の大文字と小文字を修正します。
+   [CA 1709:識別子では、大文字と小文字が正しく区別する必要があります](../code-quality/ca1709-identifiers-should-be-cased-correctly.md):Microsoft.Naming:'TestCode' に変更することによって空間' プログラム名' の大文字と小文字を修正します。
 
    1. 名前空間の大文字と小文字を変更する`testCode`に`TestCode`します。
 
-   [Ca 1709: 識別子を正しく使い分ける](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Microsoft.Naming:"Demo"に変更することによって、型名 'demo' の大文字と小文字を修正します。
+   [CA 1709:識別子では、大文字と小文字が正しく区別する必要があります](../code-quality/ca1709-identifiers-should-be-cased-correctly.md):Microsoft.Naming:型名 'demo' の大文字と小文字を修正するには、"Demo"に変更すること。
 
    1. メンバーの名前を変更`Demo`します。
 
-   [Ca 1709: 識別子を正しく使い分ける](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Microsoft.Naming: 'Item' に変更することによって、メンバー名 'item' の大文字と小文字を修正します。
+   [CA 1709:識別子では、大文字と小文字が正しく区別する必要があります](../code-quality/ca1709-identifiers-should-be-cased-correctly.md):Microsoft.Naming:'Item' に変更することによって、メンバー名 'item' の大文字と小文字を修正します。
 
    1. メンバーの名前を変更`Item`します。
 
-   [1710: 識別子は正しいサフィックスをいなければなりません](../code-quality/ca1710-identifiers-should-have-correct-suffix.md): Microsoft.Naming: 名前の変更 'testCode.demo' を 'Exception' で終了します。
+   [CA1710:識別子は正しいサフィックスを含むこと](../code-quality/ca1710-identifiers-should-have-correct-suffix.md):Microsoft.Naming:'Exception' の末尾に 'testCode.demo' の名前を変更します。
 
    1. クラスとそのコンス トラクターの名前を変更`DemoException`します。
 
-   [Ca 2210: アセンブリが有効な厳密な名前](../code-quality/ca2210-assemblies-should-have-valid-strong-names.md): 'CodeAnalysisManagedDemo' を厳密な名前のキーで署名します。
+   [CA 2210:アセンブリが有効な厳密な名前](../code-quality/ca2210-assemblies-should-have-valid-strong-names.md):'CodeAnalysisManagedDemo' は、厳密な名前のキーで署名します。
 
    1. **プロジェクト**] メニューの [選択**CodeAnalysisManagedDemo プロパティ**します。
 
@@ -153,7 +152,7 @@ ms.locfileid: "37117720"
 
    1. **ファイル**] メニューの [選択**選択した項目の保存**、プロパティ ページを閉じます。
 
-   [Ca 2237: ISerializable 型を SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md): Microsoft.Usage: この型が ISerializable を実装している 'デモ' を入力する [Serializable] 属性を追加します。
+   [CA 2237:ISerializable 型を SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md):Microsoft.Usage:この型が ISerializable を実装している 'デモ' を入力する [Serializable] 属性を追加します。
 
    1. 追加、`[Serializable ()]`属性をクラス`demo`します。
 

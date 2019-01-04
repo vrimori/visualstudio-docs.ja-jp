@@ -2,7 +2,6 @@
 title: アナライザーの規則セット
 ms.date: 07/20/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
 - analyzers, rule sets
@@ -12,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7df084a81de2afc522fc3b82141cf8c5c59205ca
-ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
+ms.openlocfilehash: 514f264186047c044e5db1b944cd62d517588e80
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39204518"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53885224"
 ---
 # <a name="rule-sets-for-roslyn-analyzers"></a>Roslyn アナライザーの規則セットします。
 
@@ -56,7 +55,7 @@ Roslyn アナライザーを従来の"FxCop"静的コード分析から移行す
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET コンパイラ プラットフォームのアナライザーの概要](roslyn-analyzers-overview.md)
+- [.NET Compiler Platform アナライザーの概要](roslyn-analyzers-overview.md)
 - [.NET コンパイラ プラットフォームのアナライザーをインストールします。](install-roslyn-analyzers.md)
 - [構成し、Roslyn アナライザーの規則を使用](use-roslyn-analyzers.md)
 - [コード分析規則のグループに規則を使用を設定します。](using-rule-sets-to-group-code-analysis-rules.md)

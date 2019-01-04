@@ -1,15 +1,10 @@
 ---
-title: '方法: 追加およびマップされたフォルダーの削除 |Microsoft Docs'
-ms.custom: ''
+title: '方法: 追加し、マップされたフォルダーの削除 |Microsoft Docs'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.Project.MappedFolder
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -20,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: fe9868a9909dbb78bf510f18584472520948d6f9
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 302b161620961b3b89a616bf4dc998c7a5745456
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757649"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53823929"
 ---
 # <a name="how-to-add-and-remove-mapped-folders"></a>方法: 追加して、マップされたフォルダーを削除します。
   イメージとレイアウトが深くファイル階層の埋め込まれたなどいくつかに、SharePoint では、フォルダーを使用します。 これらのフォルダーは、それらにより簡単にアクセスする SharePoint プロジェクトにマップできます。 マップされたフォルダーは、SharePoint サーバーのインストール内のファイルの物理的な場所に対応する SharePoint プロジェクトのフォルダーです。  
@@ -84,5 +79,4 @@ ms.locfileid: "36757649"
 3.  プロジェクトからマップされたフォルダーを削除するには、ショートカット メニューを開き、選択**削除**、選択し、 **ok**削除の確認 ダイアログ ボックスでボタンをクリックします。  
   
 ## <a name="see-also"></a>関連項目
- [SharePoint ソリューションを開発します。](../sharepoint/developing-sharepoint-solutions.md)  
-  
+ [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  

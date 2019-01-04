@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: オプション ボタンを使用してドキュメントのグラフを更新します。'
-ms.custom: ''
+title: 'チュートリアル: ラジオ ボタンを使用してドキュメントのグラフを更新します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,14 +13,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5e82c50c83a8824b4570779034b0480aa0615a30
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a16a9bffef76d904349f36e7cd2705ef89b13832
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49904675"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53943237"
 ---
-# <a name="walkthrough-update-a-chart-in-a-document-using-radio-buttons"></a>チュートリアル: オプション ボタンを使用してドキュメントのグラフを更新します。
+# <a name="walkthrough-update-a-chart-in-a-document-using-radio-buttons"></a>チュートリアル: ラジオ ボタンを使用してドキュメントのグラフを更新します。
   このチュートリアルでは、Microsoft Office Word のドキュメント レベルのカスタマイズでオプション ボタンを使用して、文書上でグラフのスタイルを選択するオプションをユーザーに提供する方法を示します。  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
@@ -52,7 +49,7 @@ ms.locfileid: "49904675"
   
 ### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1.  名前の Word 文書プロジェクトを作成**My Chart Options**します。 ウィザードで、次のように選択します。**新しい文書を作成**です。 詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
+1.  名前の Word 文書プロジェクトを作成**My Chart Options**します。 ウィザードで、次のように選択します。**新しい文書を作成**です。 詳細については、「[方法 :Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
      デザイナーで新しい Word 文書を開き、 **My Chart Options**プロジェクトを**ソリューション エクスプ ローラー**します。  
   
@@ -76,7 +73,7 @@ ms.locfileid: "49904675"
   
 6.  **レイアウト**のタブ、**オブジェクトの書式設定**ダイアログ ボックスで、**正方形** をクリック**OK**。  
   
-## <a name="add-a-user-control-to-the-project"></a>ユーザー コントロールをプロジェクトに追加します。  
+## <a name="add-a-user-control-to-the-project"></a>プロジェクトにユーザー コントロールを追加する  
  文書のオプション ボタンは、既定では 1 つしか指定できないようになっています。 オプション ボタンをユーザー コントロールに追加し、選択を制御するためのコードを記述することによって、オプション ボタンを機能させることができます。  
   
 ### <a name="to-add-a-user-control"></a>ユーザー コントロールを追加するには  
@@ -96,28 +93,28 @@ ms.locfileid: "49904675"
     |プロパティ|[値]|  
     |--------------|-----------|  
     |**Name**|**付いた円柱グラフ**|  
-    |**[テキスト]**|**縦棒グラフ**|  
+    |**Text**|**縦棒グラフ**|  
   
 3.  1 秒あたりの追加**ラジオ ボタン**ユーザーを制御して、次のプロパティを変更します。  
   
     |プロパティ|[値]|  
     |--------------|-----------|  
     |**Name**|**barChart**|  
-    |**[テキスト]**|**横棒グラフ**|  
+    |**Text**|**横棒グラフ**|  
   
 4.  3 つ目の追加**ラジオ ボタン**ユーザーを制御して、次のプロパティを変更します。  
   
     |プロパティ|[値]|  
     |--------------|-----------|  
     |**Name**|**です折れ線グラフ**|  
-    |**[テキスト]**|**折れ線グラフ**|  
+    |**Text**|**折れ線グラフ**|  
   
 5.  4 番目の追加**ラジオ ボタン**ユーザーを制御して、次のプロパティを変更します。  
   
     |プロパティ|[値]|  
     |--------------|-----------|  
     |**Name**|**areaBlockChart**|  
-    |**[テキスト]**|**領域ブロックのグラフ**|  
+    |**Text**|**領域ブロックのグラフ**|  
   
 ## <a name="add-references"></a>参照の追加  
  ドキュメントのユーザー コントロールからグラフにアクセスするへの参照をいる必要があります、`Microsoft.Office.Interop.Graph`プロジェクト内のアセンブリ。  
@@ -164,7 +161,7 @@ ms.locfileid: "49904675"
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#13](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#13)]
      [!code-vb[Trin_VstcoreProgrammingControlsWord#13](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#13)]  
   
-5.  C# では、オプション ボタンに対してイベント ハンドラーを追加する必要があります。 このコードを、`ChartOptions` への呼び出しの後で `InitializeComponent` コンストラクターに追加できます。 イベント ハンドラーの作成方法の詳細については、次を参照してください。[方法: Office プロジェクトでイベント ハンドラーを作成](../vsto/how-to-create-event-handlers-in-office-projects.md)です。  
+5.  C# では、オプション ボタンに対してイベント ハンドラーを追加する必要があります。 このコードを、`ChartOptions` への呼び出しの後で `InitializeComponent` コンストラクターに追加できます。 イベント ハンドラーの作成方法の詳細については、次を参照してください。[方法。Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)します。  
   
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#14](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#14)]  
   
@@ -211,13 +208,11 @@ ms.locfileid: "49904675"
 ## <a name="next-steps"></a>次の手順  
  ここでは、次のタスクを行います。  
   
--   ボタンを使用してテキスト ボックスへデータを挿入する。 詳細については、次を参照してください。[チュートリアル: ボタンを使用して、ドキュメント内のテキスト ボックスにテキストを表示](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)します。  
+-   ボタンを使用してテキスト ボックスへデータを挿入する。 詳細については、「[チュートリアル:ボタンを使用して、ドキュメント内のテキスト ボックスにテキストを表示](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)します。  
   
--   コンボ ボックスからスタイルを選択して書式を変更する。 詳細については、次を参照してください。[チュートリアル: CheckBox コントロールを使用して書式設定の変更ドキュメント](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)します。  
+-   コンボ ボックスからスタイルを選択して書式を変更する。 詳細については、「[チュートリアル:CheckBox コントロールを使用して書式設定の変更ドキュメント](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [Word を使用したチュートリアル](../vsto/walkthroughs-using-word.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
  [Office ドキュメントに Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
-  
-  

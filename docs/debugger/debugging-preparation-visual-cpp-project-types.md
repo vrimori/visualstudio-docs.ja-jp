@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c39acdef217d2b858645073cb96da4952c91df5a
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
-ms.translationtype: MTE95
+ms.openlocfilehash: f8d31881bed3e40db5080d642c0d3043ef2da704
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53066315"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53562036"
 ---
 # <a name="debugging-preparation-visual-c-project-types"></a>デバッグの準備:Visual C++ プロジェクトの種類
 ここでは、[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] プロジェクト テンプレートで作成された基本的なプロジェクトの種類をデバッグする方法について説明します。  
@@ -73,7 +73,7 @@ ms.locfileid: "53066315"
   
 2.  **[デバッグ]** メニューの **[開始]** を選びます。  
   
-3.  説明した手法を使用してデバッグ[デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)します。  
+3.  説明した手法を使用してデバッグ[デバッガーでのはじめ](../debugger/debugger-feature-tour.md)します。  
   
 ###  <a name="BKMK_To_manually_set_a_Debug_configuration"></a> デバッグ構成を手動で設定するには  
   
@@ -111,7 +111,7 @@ ms.locfileid: "53066315"
  [このトピックの内容](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)  
   
 ## <a name="see-also"></a>参照  
- [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)   
+ [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)   
  [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
  [実行中のプログラムまたは複数のプログラムへのアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
  [デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)   

@@ -1,9 +1,6 @@
 ---
 title: Office プライマリ相互運用機能アセンブリ
-ms.custom: ''
 ms.date: 09/20/2018
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b44352996c1f6cf343f8100abb4f75814765c22a
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: f83a2b61a80616fdcdb8b48c7501b4fa47f0b99c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50672991"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53926737"
 ---
 # <a name="office-primary-interop-assemblies"></a>Office プライマリ相互運用機能アセンブリ
 
@@ -82,7 +79,7 @@ Office PIA は、 Office ソリューションを実行するエンド ユーザ
 
 Visual Studio の各 Office プロジェクト テンプレートは、単一の Microsoft Office アプリケーションと連動するようになっています。 複数の Microsoft Office アプリケーションの機能を使用したり、Visual Studio 内にプロジェクトが含まれないアプリケーションやコンポーネントの機能を使用したりするには、必要な PIA への参照を追加しなければなりません。  
   
-ほとんどの場合は、Visual Studio でインストールされる Pia への参照を追加する必要があります、`%ProgramFiles%\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\`ディレクトリ。 これらのバージョンのアセンブリが表示される、 **Framework**のタブ、**参照マネージャー**  ダイアログ ボックス。 詳細については、次を参照してください。[方法: ターゲットの Office アプリケーション プライマリ相互運用機能アセンブリを介して](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)します。  
+ほとんどの場合は、Visual Studio でインストールされる Pia への参照を追加する必要があります、`%ProgramFiles%\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\`ディレクトリ。 これらのバージョンのアセンブリが表示される、 **Framework**のタブ、**参照マネージャー**  ダイアログ ボックス。 詳細については、「[方法 :Office アプリケーション プライマリ相互運用機能アセンブリを介して](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)します。  
   
 グローバル アセンブリ キャッシュに PIA をインストールして登録すると、これらのバージョンのアセンブリは、 **[参照マネージャー]** ダイアログ ボックスの **[COM]** タブに表示されます。 これらのバージョンのアセンブリを使用すると開発上の問題が発生するため、これらのアセンブリに参照を追加することは避ける必要があります。 たとえば、異なるバージョンの PIA がグローバル アセンブリ キャッシュに登録されている場合、 **[参照マネージャー]** ダイアログ ボックスの **[COM]** タブで別のバージョンのアセンブリを指定しても、プロジェクトは最後に登録されたバージョンのアセンブリにバインドします。  
   
@@ -113,7 +110,7 @@ Visual Studio の各 Office プロジェクト テンプレートは、単一の
 |Microsoft Publisher 14.0 Object Library<br /><br /> Microsoft Publisher 15.0 Object Library|Microsoft.Office.Interop.Publisher.dll|  
 |Microsoft SharePointDesigner 14.0 Web Object Reference Library|Microsoft.Office.Interop.SharePointDesigner.dll|  
 |Microsoft SharePointDesigner 14.0 Page Object Reference Library|Microsoft.Office.Interop.SharePointDesignerPage.dll|  
-|Microsoft スマート タグ 2.0 のタイプ ライブラリ**注:** でスマート タグが非推奨と[!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]と[!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]します。|Microsoft.Office.Interop.SmartTag.dll|  
+|Microsoft のスマート タグ 2.0 のタイプ ライブラリ**に注意してください。** スマート タグは、[!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)] および [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)] で非推奨とされます。|Microsoft.Office.Interop.SmartTag.dll|  
 |Microsoft Visio 14.0 Type Library<br /><br /> Microsoft Visio 15.0 Type Library|Microsoft.Office.Interop.Visio.dll|  
 |Microsoft Visio 14.0 Save As Web Type Library<br /><br /> Microsoft Visio 15.0 Save As Web Type Library|Microsoft.Office.Interop.Visio.SaveAsWeb.dll|  
 |Microsoft Visio 14.0 Drawing Control Type Library<br /><br /> Microsoft Visio 15.0 Drawing Control Type Library|Microsoft.Office.Interop.VisOcx.dll|  
@@ -126,11 +123,11 @@ Visual Studio の各 Office プロジェクト テンプレートは、単一の
 
 たとえば、 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] アセンブリを参照するソリューションが、同じプライマリ相互運用機能アセンブリの [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] バージョンがあるコンピューターで実行されると、バインド リダイレクト アセンブリによって、そのプライマリ相互運用機能アセンブリの [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] バージョンを読み込むように [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] ランタイムに指示されます。 
 
-詳細については、次を参照してください。[方法: 有効にすると、自動バインド リダイレクトを無効にする](/dotnet/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection)します。  
+詳細については、「[方法 :有効にして、自動バインド リダイレクトを無効にする](/dotnet/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection)します。  
   
 ## <a name="see-also"></a>関連項目  
 
-- [方法: ターゲットの Office アプリケーション プライマリ相互運用機能アセンブリ](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
+- [方法: プライマリ相互運用機能アセンブリを利用して Office アプリケーションします。](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
 - [Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)   
 - [InfoPath ソリューション](../vsto/infopath-solutions.md)   
 - [Outlook オブジェクト モデルの概要](../vsto/outlook-object-model-overview.md)   
@@ -139,5 +136,3 @@ Visual Studio の各 Office プロジェクト テンプレートは、単一の
 - [Visio オブジェクト モデルの概要](../vsto/visio-object-model-overview.md)   
 - [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)   
 - [全般的な参照&#40;Visual Studio での Office 開発&#41;](../vsto/general-reference-office-development-in-visual-studio.md)  
-  
-  

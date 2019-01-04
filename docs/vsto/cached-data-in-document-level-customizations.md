@@ -1,9 +1,6 @@
 ---
 title: ドキュメント レベルのカスタマイズでキャッシュされたデータ
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -21,12 +18,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c17c24dda11ea210c190a31197b783036357f2de
-ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
+ms.openlocfilehash: 25cfbeba37be0d11e05b4524f5e683cfa798da6e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248297"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53964651"
 ---
 # <a name="cached-data-in-document-level-customizations"></a>ドキュメント レベルのカスタマイズでキャッシュされたデータ
   ドキュメント レベルのカスタマイズの主な目的は、Office ドキュメントのビューからデータを分離します。 データは、数値やテキストなど、ドキュメントに格納されている情報を指します。 ビューは、ユーザー インターフェイスおよび Microsoft Office Word および Microsoft Office Excel のオブジェクト モデルを指します。  
@@ -66,5 +63,3 @@ ms.locfileid: "53248297"
 ## <a name="see-also"></a>関連項目  
  [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)   
  [Visual Studio での Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)  
-  
-  

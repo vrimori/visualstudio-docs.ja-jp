@@ -3,7 +3,6 @@ title: ワークフロー デザイナーの Receive アクティビティ デ�
 ms.date: 11/04/2016
 ms.topic: reference
 ms.prod: visual-studio-dev15
-ms.technology: vs-workflow-designer
 f1_keywords:
 - System.ServiceModel.Activities.Receive.UI
 ms.assetid: f58d3c70-944d-4bb4-90a7-e68c103caddc
@@ -12,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eb48c19befc3cf2c155248cfc33c01eedd16ce26
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 86c2d67d3922679096a3b3980a928a234515b78e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49950096"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53858997"
 ---
 # <a name="receive-activity-designer"></a>Receive アクティビティ デザイナー
 
@@ -47,7 +46,7 @@ ms.locfileid: "49950096"
 | <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A> | False | サービス コントラクトの名前を指定します。 このプロパティは、サービス操作を個々のサービス コントラクトにグループ化するために使用します。 同じ <xref:System.ServiceModel.Activities.Receive> を持つすべての <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A> アクティビティは、同じサービス コントラクト (WSDL ポートの種類) にグループ化されます。 既定値は、最上位レベル (ルート) アクティビティの完全修飾 CLR 名です。 |
 | <xref:System.ServiceModel.Activities.Receive.Content%2A> | False | 受信するメッセージまたはパラメーターの内容を指定します。 <xref:System.ServiceModel.Activities.ReceiveMessageContent> アクティビティまたは <xref:System.ServiceModel.Activities.ReceiveParametersContent> アクティビティを指定できます。 このプロパティの横にある省略記号ボタンを選択して編集、**コンテンツ**フィールドにプロパティ グリッドまたはをクリックすると、**定義しています.** ボタンの横にある、**コンテンツ**のラベルを**受信**アクティビティ デザイナー画面。 両方を表示、**コンテンツ定義**ダイアログ。 このボックスを使用する方法の詳細については、次を参照してください。、[コンテンツ定義 ダイアログ ボックス](../workflow-designer/content-definition-dialog-box.md)トピック。 |
 | <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> | False | <xref:System.ServiceModel.Activities.Receive> オブジェクトを持つワークフローのサービス操作における <xref:System.ServiceModel.MessageQuerySet> アクティビティ間の相関関係を指定します。 横にある省略記号ボタンをクリックして、<xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A>プロパティを開く [プロパティ] グリッドで、 **[CorrelatesOn の定義**] ダイアログ ボックス。 このダイアログ ボックスの使用に関する詳細については、次を参照してください。、[コンテンツ定義 ダイアログ ボックス](../workflow-designer/content-definition-dialog-box.md)トピック。 |
-| <xref:System.ServiceModel.Activities.Receive.CorrelatesWith%2A> | False | 適切なワークフロー インスタンスにメッセージをルーティングするために使用される <xref:System.ServiceModel.Activities.CorrelationHandle> を指定します。<br /><br /> 横にある省略記号ボタンをクリックして、<xref:System.ServiceModel.Activities.Receive.CorrelatesWith%2A>プロパティを開く プロパティ グリッドで、**式エディター**  ダイアログ ボックス。 このダイアログ ボックスの使用に関する詳細については、次を参照してください。、[方法: 式エディターを使用して](../workflow-designer/how-to-use-the-expression-editor.md)トピック。 |
+| <xref:System.ServiceModel.Activities.Receive.CorrelatesWith%2A> | False | 適切なワークフロー インスタンスにメッセージをルーティングするために使用される <xref:System.ServiceModel.Activities.CorrelationHandle> を指定します。<br /><br /> 横にある省略記号ボタンをクリックして、<xref:System.ServiceModel.Activities.Receive.CorrelatesWith%2A>プロパティを開く プロパティ グリッドで、**式エディター**  ダイアログ ボックス。 このダイアログ ボックスの使用に関する詳細については、次を参照してください。、[方法。式エディターを使用して](../workflow-designer/how-to-use-the-expression-editor.md)トピック。 |
 | <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> | False | ワークフロー内のこの <xref:System.ServiceModel.Activities.CorrelationInitializer> アクティビティを構成する複数の <xref:System.ServiceModel.Activities.CorrelationHandle> オブジェクトを初期化する <xref:System.ServiceModel.Activities.Receive> オブジェクトのコレクションを指定します。 横にある省略記号ボタンをクリックして、<xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>プロパティを開く [プロパティ] グリッドで、 **[関連付け初期化子**] ダイアログ ボックス。 詳細については、このボックスを使用して、次を参照してください。、[関連付け初期化子の追加 ダイアログ ボックス](../workflow-designer/add-correlationinitializers-dialog-box.md)トピック。 |
 | <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> | False | メッセージが既存のワークフロー インスタンスと関連付けられていない場合に、新しいワークフロー インスタンスを作成して、このメッセージを処理するかどうかを決定する値を指定します。 値が設定されている場合**true**メッセージが既存のワークフロー インスタンスに関連付けられていない場合は、メッセージを処理する新しいワークフロー インスタンスが作成されます。 |
 | <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> | False | この <xref:System.ServiceModel.Activities.Receive> アクティビティによって実装されるサービス操作の既知の型のコレクションを指定します。 このプロパティは、<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> に設定された <xref:System.Runtime.Serialization.DataContractSerializer> プロパティと共に使用する必要があり、 <xref:System.Xml.Serialization.XmlSerializer> が使用されている場合は無視されます。<br /><br /> 横にある省略記号ボタンを選択して、 **KnownTypes**プロパティ グリッドでフィールド、**型コレクション エディター**  ダイアログ ボックスの関連する型を追加できます。 詳細については、このボックスを使用して、次を参照してください。、[型コレクション エディター ダイアログ ボックス](../workflow-designer/type-collection-editor-dialog-box.md)トピック。 |

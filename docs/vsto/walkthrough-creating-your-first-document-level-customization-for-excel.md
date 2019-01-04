@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: 初めての Excel 用ドキュメント レベルのカスタマイズを作成します。'
-ms.custom: ''
+title: 'チュートリアル: 最初の Excel 用ドキュメント レベルのカスタマイズを作成します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,14 +14,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ce16e3c2aca99acf6de9a7ce74c0c2ff46c0dcbb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 70e82a8b126f5292cd8efe1420c59af90ca59c3d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49849035"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53955319"
 ---
-# <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>チュートリアル: 初めての Excel 用ドキュメント レベルのカスタマイズを作成します。
+# <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>チュートリアル: 最初の Excel 用ドキュメント レベルのカスタマイズを作成します。
   この入門編のチュートリアルでは、Microsoft Office Excel 用のドキュメント レベルのカスタマイズを作成する方法について説明します。 この種のソリューションで作成した機能は、特定のブックが開いている場合にのみ使用可能です。 ドキュメント レベルのカスタマイズでは、ブックが開いたときに新しいリボン タブを表示するなどの、アプリケーション全体の変更を行うことはできません。  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
@@ -157,17 +154,17 @@ ms.locfileid: "49849035"
   
 -   ドキュメント レベルのカスタマイズで実行できる一般的なプログラミング タスク:[ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)します。  
   
--   Excel のドキュメント レベルのカスタマイズに固有のプログラミング タスク: [Excel ソリューション](../vsto/excel-solutions.md)します。  
+-   Excel のドキュメント レベルのカスタマイズに固有のプログラミング タスク:[Excel ソリューション](../vsto/excel-solutions.md)します。  
   
--   Excel のオブジェクト モデルの使用: [Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)します。  
+-   Excel のオブジェクト モデルを使用します。[Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)します。  
   
--   Excel の UI のカスタマイズなどによってリボンにカスタム タブの追加や独自の作業ウィンドウの作成: [Office UI のカスタマイズ](../vsto/office-ui-customization.md)します。  
+-   Excel の UI のリボンにカスタム タブを追加するか、独自の作業ウィンドウの作成のカスタマイズ。[Office UI のカスタマイズ](../vsto/office-ui-customization.md)します。  
   
--   Visual Studio での Office 開発ツールによって提供される拡張 Excel のオブジェクトを使用して、Excel オブジェクト モデル (たとえば、ドキュメント上でマネージ コントロールをホストしていると Windows フォームを使用して Excel コントロールをデータにバインドを使用してで不可能なタスクを実行するにはデータ バインディング モデル):[拡張オブジェクトを使用して Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)します。  
+-   Visual Studio での Office 開発ツールによって提供される拡張 Excel のオブジェクトを使用して、Excel オブジェクト モデル (たとえば、ドキュメント上でマネージ コントロールをホストしていると Windows フォームを使用して Excel コントロールをデータにバインドを使用してで不可能なタスクを実行するにはデータ バインディング モデル):[拡張オブジェクトを使用して Excel を自動化](../vsto/automating-excel-by-using-extended-objects.md)します。  
   
--   ビルドとデバッグの Excel のドキュメント レベルのカスタマイズ:[ビルドの Office ソリューション](../vsto/building-office-solutions.md)します。  
+-   ビルドして、Excel のドキュメント レベルのカスタマイズをデバッグします。[Office ソリューションの構築](../vsto/building-office-solutions.md)します。  
   
--   Excel 用ドキュメント レベル カスタマイズの配置: [Office ソリューションを配置](../vsto/deploying-an-office-solution.md)します。  
+-   Excel 用ドキュメント レベル カスタマイズの配置。[Office ソリューションを配置](../vsto/deploying-an-office-solution.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
@@ -179,5 +176,3 @@ ms.locfileid: "49849035"
  [Office ソリューションを構築します。](../vsto/building-office-solutions.md)   
  [Office ソリューションをデプロイします。](../vsto/deploying-an-office-solution.md)   
  [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)  
-  
-  

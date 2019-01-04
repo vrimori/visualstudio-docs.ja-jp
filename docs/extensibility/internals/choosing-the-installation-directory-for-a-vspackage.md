@@ -1,9 +1,6 @@
 ---
 title: VSPackage のインストール ディレクトリの選択 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, installation directory
@@ -13,24 +10,24 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4e32f2581e4980feebbbecb3cc8e7aa98bfeb670
-ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
+ms.openlocfilehash: df13749a16ad107c864fa1dcf1b3e0f4e7cbed41
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46370953"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53926295"
 ---
 # <a name="choose-the-installation-directory-for-a-vspackage"></a>VSPackage のインストール ディレクトリを選択します。
 VSPackage とそのサポート ファイルは、ユーザーのファイル システム上にある必要があります。 場所は、VSPackage の管理または非管理対象、サイド バイ サイド バージョン管理スキームとユーザーの選択かどうかによって異なります。  
   
 ## <a name="unmanaged-vspackages"></a>アンマネージ Vspackage  
- アンマネージ VSPackage は、任意の場所にインストール可能な COM サーバーです。 その登録情報は、その場所を正確に反映する必要があります。 インストーラーのユーザー インターフェイス (UI) では、サブディレクトリとして既定の場所を指定する必要があります、 `ProgramFilesFolder` Windows インストーラー プロパティの値。 例えば:  
+ アンマネージ VSPackage は、任意の場所にインストール可能な COM サーバーです。 その登録情報は、その場所を正確に反映する必要があります。 インストーラーのユーザー インターフェイス (UI) では、サブディレクトリとして既定の場所を指定する必要があります、 `ProgramFilesFolder` Windows インストーラー プロパティの値。 例:  
   
 *&lt;ProgramFilesFolder&gt;\\&lt;MyCompany&gt;\\&lt;MyVSPackageProduct&gt;\V1.0\\*
   
  小規模なブート パーティションを保持するユーザーに対応する既定のディレクトリを変更し、別のボリューム上のアプリケーションやツールをインストールするユーザーを許可する必要があります。  
   
- を、サイド バイ サイドでパターンがバージョン管理 VSPackage を使用する場合は、さまざまなバージョンを格納するサブディレクトリを使用できます。 例えば:
+ を、サイド バイ サイドでパターンがバージョン管理 VSPackage を使用する場合は、さまざまなバージョンを格納するサブディレクトリを使用できます。 例:
 
  *&lt;ProgramFilesFolder&gt;\\&lt;MyCompany&gt;\\&lt;MyVSPackageProduct&gt;\\V1.0\\2002\\*
   
@@ -65,5 +62,5 @@ VSPackage DLL にリソースが含まれている場合、 **SatelliteDll\DllNa
   
 ## <a name="see-also"></a>関連項目  
  [共有およびバージョン管理 Vspackage を選択します。](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)   
- [Vspackage を管理します。](../../extensibility/managing-vspackages.md)   
+ [Vspackage の管理](../../extensibility/managing-vspackages.md)   
  [パッケージの登録を管理します。](https://msdn.microsoft.com/library/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)

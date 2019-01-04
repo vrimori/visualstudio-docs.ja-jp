@@ -2,7 +2,6 @@
 title: '方法: XSD スキーマに基づいて XML ドキュメントを作成する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 193b195f-e918-4c79-a1a1-8096a1433bde
 author: gewarren
@@ -10,16 +9,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d3da2e6b5b0c9ea2701524c0fb2fde1e1313687
-ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
+ms.openlocfilehash: d675695b3d3e054d14e481c8c41ae06de5af5600
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549091"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53820200"
 ---
-# <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>方法: XSD スキーマに基づいて XML ドキュメントの作成
+# <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>方法: XSD スキーマに基づいて XML ドキュメントを作成します。
 
-**サンプル XML の生成**機能には、XML スキーマ (XSD) ファイルに基づいてサンプルの XML ファイルが生成されます。
+**サンプル XML の生成**機能には、XML スキーマ (XSD) ファイルに基づくサンプル XML ファイルが生成されます。
 
  このオプションは、次のようなシナリオで使用できます。
 
@@ -43,11 +42,11 @@ ms.locfileid: "34549091"
 
 ## <a name="to-generate-an-xml-instance-document-based-on-the-xsd-file"></a>XSD ファイルに基づいて XML インスタンス ドキュメントを生成するには
 
-1.  手順に従います[する方法: を作成し、XSD スキーマ ファイルを編集](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)です。
+1.  次の手順では、[方法。作成し、XSD スキーマ ファイルを編集する](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)します。
 
-2.  [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)を右クリックし、`PurchaseOrder`グローバル要素。 選択**サンプル XML の生成**です。
+2.  [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)を右クリックし、`PurchaseOrder`グローバル要素。 選択**サンプル XML の生成**します。
 
-     このオプションは、PurchaseOrder を選択するとします。*xml*次のサンプル XML コンテンツを持つファイルが生成され、XML エディターで開かれます。
+     このオプションは、PurchaseOrder を選択するとします。*xml*次のサンプル XML コンテンツを含むファイルが生成され、XML エディターで開きます。
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -78,4 +77,4 @@ ms.locfileid: "34549091"
 
 ## <a name="see-also"></a>関連項目
 
-- [XML データの操作](../xml-tools/working-with-xml-data.md)
+- [XML データの使用](../xml-tools/working-with-xml-data.md)

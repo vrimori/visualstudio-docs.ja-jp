@@ -1,9 +1,6 @@
 ---
 title: Visual Studio ツールバーの Guid および Id |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - visual studio groups
@@ -19,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6982835b9d3b6259a47439dbe7b1b9252edc3dbe
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 054f4f19d24f2751a560a3d86eae7294aa2bd7dc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499007"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53850902"
 ---
 # <a name="guids-and-ids-of-visual-studio-toolbars"></a>ツールバーの Guid と Visual Studio の Id
 このトピックでは、Visual Studio 統合開発環境 (IDE) に含まれているツールバーの GUID と ID の値を列挙し、含まれているグループのします。 これらの値が定義されている *.vsct* Visual Studio SDK の一部としてインストールされているファイル。 詳細については、次を参照してください。 [IDE 定義コマンド、メニュー、およびグループ](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)します。  
@@ -64,7 +61,7 @@ ms.locfileid: "39499007"
   
 ### <a name="standard-toolbar-groups"></a>標準ツールバーのグループ  
   
-|name|ID|  
+|名前|ID|  
 |----------|--------|  
 |保存/開く|IDG_VS_TOOLSB_SAVEOPEN|  
 |切り取り/コピー|IDG_VS_TOOLSB_CUTCOPY|  
@@ -78,14 +75,14 @@ ms.locfileid: "39499007"
   
 ### <a name="build-toolbar-groups"></a>ツールバーのグループを作成します。  
   
-|name|ID|  
+|名前|ID|  
 |----------|--------|  
 |ビルドのバー|IDG_VS_BUILDBAR|  
 |キャンセル|IDG_VS_BUILD_CANCEL|  
   
 ### <a name="text-editor-toolbar-groups"></a>テキスト エディター ツールバーのグループ  
   
-|name|ID|  
+|名前|ID|  
 |----------|--------|  
 |完了|IDM_VS_TOOL_TEXTEDITOR|  
 |Indent|IDG_VS_EDITTOOLBAR_INDENT|  
@@ -94,7 +91,7 @@ ms.locfileid: "39499007"
   
 ### <a name="debug-toolbar-groups"></a>デバッグ ツールバーのグループ  
   
-|name|ID|  
+|名前|ID|  
 |----------|--------|  
 |実行|IDM_DEBUG_TOOLBAR|  
 |ステップ実行|IDG_DEBUG_TOOLBAR_STEPPING|  
@@ -103,7 +100,7 @@ ms.locfileid: "39499007"
   
 ### <a name="debug-location-toolbar-groups"></a>デバッグの場所 ツールバーのグループ  
   
-|name|ID|  
+|名前|ID|  
 |----------|--------|  
 |デバッグの場所|IDG_DEBUG_CONTEXT_TOOLBAR|  
   

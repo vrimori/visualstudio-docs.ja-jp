@@ -1,13 +1,8 @@
 ---
 title: '方法: モジュールを使用して、ファイルを含める |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -18,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5c5152221e5e58504ba84e0ad0f31511b4d93aa0
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: d0cfe558c21a941ed5cc16eccef2e014acfbcdb7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119382"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53923497"
 ---
 # <a name="how-to-include-files-by-using-a-module"></a>方法: モジュールを使用して、ファイルを含める
   *モジュール*(と混同しないように[!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]モジュール) は、SharePoint にマスターの ASPX ページなどのファイル、テキスト ファイル、またはイメージをデプロイするためのコンテナーです。  
@@ -58,7 +53,7 @@ ms.locfileid: "37119382"
   
      ファイルをプロジェクトに追加すると、モジュールの Elements.xml ファイルにエントリが自動的に追加します。 指定されているプロジェクトのルート ディレクトリに対する相対の SharePoint サーバーにファイルをコピー、プロジェクトを配置するときに、**ファイル**要素の**Url**属性など、`Url="Module1/New Folder/SomeFile.doc`します。 別のフォルダーに移動するかファイルの配置場所を変更する場合は、**ソリューション エクスプ ローラー**変更またはその**Url**設定します。  
   
-8.  ドキュメント ライブラリに表示するすべてのファイルの追加、`Type="GhostableInLibrary"`属性内のエントリを*Elements.xml*します。 たとえば、オブジェクトに適用された  
+8.  ドキュメント ライブラリに表示するすべてのファイルの追加、`Type="GhostableInLibrary"`属性内のエントリを*Elements.xml*します。 例えば以下のようにします。  
   
     ```xml  
     <File Path="Module1\Some Folder\SomePage.aspx" Url="Module1/Some Folder/SomePage.aspx" Type="GhostableInLibrary" />  
@@ -71,4 +66,3 @@ ms.locfileid: "37119382"
 ## <a name="see-also"></a>関連項目
  [パッケージ化し、SharePoint ソリューションのデプロイ](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
-  

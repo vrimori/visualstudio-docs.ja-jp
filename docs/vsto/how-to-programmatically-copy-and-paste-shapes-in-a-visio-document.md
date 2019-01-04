@@ -1,9 +1,6 @@
 ---
 title: '方法: プログラムによってコピーして、Visio 図面に図形を貼り付けます'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e0028b11899e05adde1dd1b5483b71d2c48101db
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: a7994d605d22b38b64219a384e5afb0b002ff755
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50671496"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53856489"
 ---
 # <a name="how-to-programmatically-copy-and-paste-shapes-in-a-visio-document"></a>方法: プログラムによってコピーして、Visio 図面に図形を貼り付けます
   プログラムを使用してドキュメントの 1 つのページ上の図形をコピーし、同じドキュメント内の新しいページに貼り付けることができます。 貼り付け先として、既定の場所 (アクティブ ウィンドウの中央)、または元のページと同じ座標位置を選択できます。  
@@ -52,6 +49,4 @@ ms.locfileid: "50671496"
  [Visio ソリューション](../vsto/visio-solutions.md)   
  [Visio オブジェクト モデルの概要](../vsto/visio-object-model-overview.md)   
  [Visio 図形を操作します。](../vsto/working-with-visio-shapes.md)   
- [方法: プログラムによって Visio 図面に図形を追加](../vsto/how-to-programmatically-add-shapes-to-a-visio-document.md)  
-  
-  
+ [方法: プログラムによって Visio 図面に図形を追加します。](../vsto/how-to-programmatically-add-shapes-to-a-visio-document.md)  

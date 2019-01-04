@@ -1,13 +1,8 @@
 ---
 title: SharePoint にビジネス データの統合 |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -24,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e75367844a3a62e044a98f9d52c567fcfca3590e
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 194f2e0c88a0cbce9ef34f77246cf7969066833e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119917"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53934441"
 ---
 # <a name="integrate-business-data-into-sharepoint"></a>SharePoint ビジネス データを統合します。
   ビジネス データは、SharePoint に統合できます。 ビジネス データがなどのバック エンド サーバーのアプリケーションから取得できます[!INCLUDE[TLA#tla_sqlsvr](../sharepoint/includes/tlasharptla-sqlsvr-md.md)]Siebel、および SAP、または Web サービス。 ユーザーは、表示、追加、更新、または外部リストまたは SharePoint のビジネス データ Web パーツを使用してビジネス データを削除できます。  ユーザーは、Microsoft Outlook などの Microsoft Office アプリケーションでこのデータをオフラインにもアクセスできます。 詳細については、次を参照してください。[場所できますする外部データの表示](http://go.microsoft.com/fwlink/?LinkId=169295)します。  
@@ -61,4 +56,3 @@ ms.locfileid: "37119917"
 |[ビジネス データ接続モデルを作成します。](../sharepoint/creating-a-business-data-connectivity-model.md)|方法、新しいモデルを作成または sharepoint サイトからエクスポートしたモデルのインポートを示しています。|  
 |[ビジネス データ接続モデルを設計します。](../sharepoint/designing-a-business-data-connectivity-model.md)|Visual Studio デザイン ツールを使用してモデルの要素をデザインする方法について説明します。|  
 |[Vs の SharePoint Designer を使用する場合。BCS を使用して visual Studio 開発ソリューション](http://go.microsoft.com/fwlink/?LinkID=183448)|Visual Studio を使用して、または SharePoint デザイナーを使用して、bdc モデルを作成するかどうかを判断します。|  
-  

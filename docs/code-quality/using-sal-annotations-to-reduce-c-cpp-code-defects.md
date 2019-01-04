@@ -2,7 +2,6 @@
 title: SAL 注釈を使って C/C++ のコード障害を減らす方法
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
 - annotations
@@ -14,33 +13,33 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92a48bca7afb59fa83e489c6f5cd96d115d8c872
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 973fcaf1a5c49332223f169cdb668526552cfe12
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31921712"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53954333"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>SAL 注釈を使って C/C++ のコード障害を減らす方法
-SAL は、Microsoft ソース コード注釈言語です。 ソース コード注釈を使用すると、することができます、目的としたコードの背後にある明示的なです。 また、これらの注釈には、偽陽性および偽陰性の数が少ないと、コードをより正確には、分析に自動のスタティック分析ツールが有効にします。
+SAL は、Microsoft ソース コード注釈言語です。 ソース コードの注釈を使用して行うことができます、目的とした、コードの背後にある明示的です。 また、これらの注釈には、偽陽性および偽陰性の数が少ないでコードをより正確に分析する自動化された静的分析ツールが有効にします。
 
- ドキュメントのこのセクションの記事 SAL の側面について説明するには、SAL 構文のリファレンスを提供およびその使用方法の例を示します。
+ ドキュメントのこのセクションの記事 SAL の側面について説明するには、SAL の構文のリファレンスを提供およびその使用方法の例を示します。
 
 -   [SAL について](../code-quality/understanding-sal.md)
 
-     情報とコアの SAL 注釈を示す例を示します。
+     情報と、コアの SAL 注釈を示す例を示します。
 
 -   [関数パラメーターおよび戻り値の注釈設定](../code-quality/annotating-function-parameters-and-return-values.md)
 
-     関数と関数のパラメーターの SAL 注釈の一覧を示します。
+     関数および関数パラメーターの SAL 注釈の一覧を表示します。
 
 -   [関数の動作に注釈を付ける](../code-quality/annotating-function-behavior.md)
 
-     関数と関数の動作の SAL 注釈の一覧を示します。
+     関数と関数の動作の SAL 注釈の一覧を表示します。
 
 -   [構造体とクラスに注釈を付ける](../code-quality/annotating-structs-and-classes.md)
 
-     構造体とクラスの SAL 注釈の一覧を示します。
+     構造体とクラスの SAL 注釈の一覧を表示します。
 
 -   [ロック動作に注釈を付ける](../code-quality/annotating-locking-behavior.md)
 
@@ -48,11 +47,11 @@ SAL は、Microsoft ソース コード注釈言語です。 ソース コード
 
 -   [注釈を適用するタイミングと場所の指定](../code-quality/specifying-when-and-where-an-annotation-applies.md)
 
-     条件またはその他の SAL 注釈のスコープ (配置) を指定の SAL 注釈の一覧を示します。
+     条件またはその他の SAL 注釈のスコープ (配置) を指定する SAL 注釈の一覧を表示します。
 
 -   [組み込み関数](../code-quality/intrinsic-functions.md)
 
-     組み込みの SAL 注釈の一覧を示します。
+     組み込みの SAL 注釈の一覧を表示します。
 
 -   [ベスト プラクティスと例](../code-quality/best-practices-and-examples-sal.md)
 
@@ -62,4 +61,4 @@ SAL は、Microsoft ソース コード注釈言語です。 ソース コード
  [コード分析チームのブログ](http://go.microsoft.com/fwlink/?LinkId=251197)
 
 ## <a name="see-also"></a>関連項目
- [SAL 2.0 の Windows ドライバー注釈](http://go.microsoft.com/fwlink/?LinkId=250979)
+ [SAL 2.0 Annotations for Windows Drivers](http://go.microsoft.com/fwlink/?LinkId=250979)

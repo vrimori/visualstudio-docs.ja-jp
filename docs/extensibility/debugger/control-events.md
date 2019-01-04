@@ -1,9 +1,6 @@
 ---
 title: コントロールのイベント |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], events
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7a2da9f3e91eb803d292f1ab789f8133558db049
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e1a9fda07e49df71790419e487b3906799433a2f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49913307"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53820479"
 ---
 # <a name="control-events"></a>コントロールのイベント
 プログラムの制御された実行中にイベントを送信する必要があります。 使用してすべてのイベントが送信される、 [IDebugEvent2](../../extensibility/debugger/reference/idebugevent2.md)インターフェイスを実装することを必要とする属性、 [IDebugEvent2::GetAttributes](../../extensibility/debugger/reference/idebugevent2-getattributes.md)メソッド。  

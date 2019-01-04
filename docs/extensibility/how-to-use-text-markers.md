@@ -1,9 +1,6 @@
 ---
 title: '方法: テキスト マーカーを使用して |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - using text markers
@@ -13,14 +10,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a3b766e4eacc04bbf4d4a8e4c022484d452954f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 825f567098d86a0f643de84eef395e5404d3b0f5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49820877"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53895702"
 ---
-# <a name="how-to-use-text-markers"></a>方法: テキスト マーカーを使用
+# <a name="how-to-use-text-markers"></a>方法: テキスト マーカーを使用します。
 テキスト マーカーは、編集に適用できる、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>オブジェクト。  
   
 ## <a name="procedures"></a>手順  
@@ -57,6 +54,6 @@ ms.locfileid: "49820877"
   
 ## <a name="see-also"></a>関連項目  
  [テキスト マーカーを使用して、従来の API を使用しました。](../extensibility/using-text-markers-with-the-legacy-api.md)   
- [方法: 標準のテキスト マーカーの追加](../extensibility/how-to-add-standard-text-markers.md)   
- [方法: カスタム テキスト マーカーの作成](../extensibility/how-to-create-custom-text-markers.md)   
- [方法: エラーのマーカーの実装](../extensibility/how-to-implement-error-markers.md)
+ [方法: 標準のテキスト マーカーを追加します。](../extensibility/how-to-add-standard-text-markers.md)   
+ [方法: カスタム テキスト マーカーを作成します。](../extensibility/how-to-create-custom-text-markers.md)   
+ [方法: エラーのマーカーを実装します。](../extensibility/how-to-implement-error-markers.md)

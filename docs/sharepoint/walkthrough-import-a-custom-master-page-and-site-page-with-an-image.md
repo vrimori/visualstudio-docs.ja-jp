@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: カスタム マスター ページのインポートし、サイトのページ イメージ |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: カスタム マスター ページをインポートし、サイトのページ イメージ |Microsoft Docs'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 45f1ded9cf6eca3715c5050f93aa24630a1bc4e1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f7901bfea334ff3d9ad6d197bf64b3f1a87961a9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49890992"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53904154"
 ---
 # <a name="walkthrough-import-a-custom-master-page-and-site-page-with-an-image"></a>チュートリアル: カスタム マスター ページとサイトのページにイメージをインポートします。
   このチュートリアルの SharePoint カスタム マスター ページとサイトのページにイメージがインポートする方法、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint プロジェクト。  
@@ -179,10 +176,9 @@ ms.locfileid: "49890992"
 
 7. 展開済みのアイテムを表示する SharePoint サイトを開きます。  
 
-   ファイルをインポートする別の方法[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]それらのモジュールにファイルを追加する SharePoint は、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [方法: マスター ページまたはテーマをインポート](../sharepoint/how-to-import-a-master-page-or-theme.md)と[モジュールを使用してファイルをソリューションに含める](../sharepoint/using-modules-to-include-files-in-the-solution.md)します。  
+   ファイルをインポートする別の方法[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]それらのモジュールにファイルを追加する SharePoint は、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [操作方法：マスター ページまたはテーマをインポート](../sharepoint/how-to-import-a-master-page-or-theme.md)と[モジュールを使用してファイルをソリューションに含める](../sharepoint/using-modules-to-include-files-in-the-solution.md)します。  
 
 ## <a name="see-also"></a>関連項目
  [既存の SharePoint サイトからのアイテムのインポート](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)   
  [SharePoint ソリューションを開発します。](../sharepoint/developing-sharepoint-solutions.md)   
  [Web パーツまたはアプリケーション ページの再利用可能なコントロールを作成します。](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)  
-

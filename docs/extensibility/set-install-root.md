@@ -1,9 +1,6 @@
 ---
-title: VSIX v3 と拡張機能フォルダー外にインストールする |Microsoft ドキュメント
-ms.custom: ''
+title: VSIX v3 で拡張機能フォルダー外でのインストール |Microsoft Docs
 ms.date: 11/09/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: 913c3745-8aa9-4260-886e-a05aecfb2225
 author: gregvanl
@@ -11,16 +8,16 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8476b300974d66efc60f647c897ec6892191e7fa
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 847ce9bc55e93f292ffdfe6f237e8c39eeac9fd4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31136784"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53968499"
 ---
-# <a name="installing-outside-the-extensions-folder"></a>拡張機能フォルダー外にインストールします。
+# <a name="installing-outside-the-extensions-folder"></a>拡張機能フォルダー外でのインストール
 
-Visual Studio 2017 と VSIX v3 以降 (バージョン 3)、今すぐに対するサポートが拡張機能フォルダーの外部で資産を拡張機能をインストールします。 現時点では、次の場所は、([INSTALLDIR] は、Visual Studio のインスタンスのインストール ディレクトリにマッピング) の有効なインストール場所として有効になっているは。
+Visual Studio 2017 と VSIX v3 以降 (バージョン 3)、拡張機能フォルダーの外部で資産を拡張機能をインストールするためのサポートを開始しました。 現時点では、次の場所は、([INSTALLDIR] は、Visual Studio インスタンスのインストール ディレクトリにマップ) の有効なインストール場所として有効になっているは。
 
 * [INSTALLDIR] \MSBuild
 * [INSTALLDIR] \Xml\Schemas
@@ -30,19 +27,19 @@ Visual Studio 2017 と VSIX v3 以降 (バージョン 3)、今すぐに対す�
 * [INSTALLDIR] \Common7\IDE\RemoteDebugger
 * [INSTALLDIR] \Common7\IDE\VC\VCTargets
 
->**注:** VSIX 形式、VS インストール フォルダー構造の外部のインストールはできません。
+>**注:** VSIX 形式では、VS のインストール フォルダーの構造の外にインストールできません。
 
-これらのディレクトリへのインストールをサポートするために VSIX を「インスタンスごとに、コンピューターごと」インストールする必要があります。 これは、extension.vsixmanifest の各デザイナーで"all users"チェック ボックスをオンに有効にすることができます。
+これらのディレクトリへのインストールをサポートするために、VSIX を「インスタンスごとのコンピューターごとの」インストールする必要があります。 これは、extension.vsixmanifest デザイナーで「すべてのユーザー」のチェック ボックスをオンに有効にすることができます。
 
-![すべてのユーザーを確認します。](media/check-all-users.png)
+![すべてのユーザーを確認してください。](media/check-all-users.png)
 
-## <a name="how-to-set-the-installroot"></a>として「installroot」を設定する方法
+## <a name="how-to-set-the-installroot"></a>InstallRoot を設定する方法
 
-インストール ディレクトリを設定するに使用することができます、**プロパティ**Visual Studio のウィンドウ。 たとえば、設定、`InstallRoot`上記の場所のいずれかへの参照をプロジェクトのプロパティ。
+インストール ディレクトリを設定するには、使用することができます、**プロパティ**Visual Studio のウィンドウ。 たとえば、設定、`InstallRoot`上の場所のいずれかへの参照をプロジェクトのプロパティ。
 
 ![ルートのプロパティをインストールします。](media/install-root-properties.png)
 
-これには、対応にいくつかのメタデータが追加`ProjectReference`VSIX プロジェクトの .csproj ファイル内のプロパティ。
+これは、いくつかのメタデータが、対応する追加されます`ProjectReference`VSIX プロジェクトの .csproj ファイル内のプロパティ。
 
 ```xml
  <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
@@ -52,15 +49,15 @@ Visual Studio 2017 と VSIX v3 以降 (バージョン 3)、今すぐに対す�
  </ProjectReference>
 ```
 
->**注:** したい場合、.csproj ファイルを直接、編集することができます。
+>**注:** たい場合は、.csproj ファイルを直接編集できます。
 
-## <a name="how-to-set-a-subpath-under-the-installroot"></a>として「installroot」下サブパスを設定する方法
+## <a name="how-to-set-a-subpath-under-the-installroot"></a>InstallRoot、下のサブパスを設定する方法
 
-下にサブ パスにインストールするかかどうか、 `InstallRoot`、できるように設定して、`VsixSubPath`プロパティと同じように、`InstallRoot`プロパティです。 たとえばにインストールする場合、プロジェクト参照の出力を選びました ' [INSTALLDIR]\MSBuild\MyCompany\MySDK\1.0' です。 そのために簡単にプロパティ デザイナーを使用。
+下のサブパスをインストールするかかどうか、 `InstallRoot`、設定によって行うことができます、`VsixSubPath`プロパティと同様、`InstallRoot`プロパティ。 たとえばをインストールする、プロジェクト参照の出力する ' [INSTALLDIR]\MSBuild\MyCompany\MySDK\1.0'。 次のように簡単にプロパティ デザイナーを使用しました。
 
 ![セットのサブパス](media/set-subpath.png)
 
-.Csproj の対応する変更は、次のようになります。
+対応する .csproj 変更は、次のようになります。
 
 ```xml
 <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
@@ -73,4 +70,4 @@ Visual Studio 2017 と VSIX v3 以降 (バージョン 3)、今すぐに対す�
 
 ## <a name="extra-information"></a>追加情報
 
-プロジェクト参照単にプロパティ デザイナー変更が適用します。設定することができます、`InstallRoot`も、プロジェクト内で項目のメタデータ (上記と同じ方法を使用)。
+プロパティのデザイナーの変更; プロジェクトの参照だけに適用されます。設定することができます、`InstallRoot`もプロジェクト内の項目のメタデータ (上記で説明したのと同じ方法を使用)。

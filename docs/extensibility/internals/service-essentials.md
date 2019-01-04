@@ -1,9 +1,6 @@
 ---
 title: Essentials のサービス |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - services, essentials
@@ -13,17 +10,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26bfa7ce51249adc883415d09689ed390b7dfabc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 3428deeaf0e9cdc2aa926f5b1ff17b5030540f2b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49934406"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53867278"
 ---
 # <a name="service-essentials"></a>サービスの基本情報
 サービスは、2 つの Vspackage の間のコントラクトです。 1 つの VSPackage では、別の VSPackage を使用するためのインターフェイスの特定のセットを提供します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 自体は、その他の Vspackage にサービスを提供する Vspackage のコレクションです。  
   
- たとえば、SVsActivityLog サービスを使用すると、アクティビティ ログへの書き込みに使用できる、IVsActivityLog インターフェイスを取得します。 詳細については、次を参照してください。[方法: アクティビティ ログを使用して、](../../extensibility/how-to-use-the-activity-log.md)します。  
+ たとえば、SVsActivityLog サービスを使用すると、アクティビティ ログへの書き込みに使用できる、IVsActivityLog インターフェイスを取得します。 詳細については、「[方法 :アクティビティ ログを使用して、](../../extensibility/how-to-use-the-activity-log.md)します。  
   
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 登録されていないいくつかの組み込みサービスを提供します。 Vspackage では、サービスのオーバーライドを提供することで、組み込みやその他のサービスを置き換えることができます。 1 つのサービスのオーバーライドは、すべてのサービスに許可されます。  
   
@@ -39,7 +36,7 @@ ms.locfileid: "49934406"
   
 - サービス、またはサービスの上書きがオンデマンドで読み込まれる、別の VSPackage に提供するサービスを要求すると、サービス プロバイダーが読み込まれます。  
   
-- サービス プロバイダーをオンデマンドの読み込みをサポートするには、グローバル サービスを登録します[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。 詳細については、次を参照してください。[方法: サービスを提供](../../extensibility/how-to-provide-a-service.md)します。  
+- サービス プロバイダーをオンデマンドの読み込みをサポートするには、グローバル サービスを登録します[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。 詳細については、「[方法 :サービスを提供](../../extensibility/how-to-provide-a-service.md)します。  
   
 - サービスを取得した後を使用して、 [QueryInterface](/cpp/atl/queryinterface) (アンマネージ コード) やなどの目的のインターフェイスを取得するキャスト (マネージ コード)。  
   
@@ -63,7 +60,7 @@ ms.locfileid: "49934406"
   
 ## <a name="use-getglobalservice"></a>GetGlobalService を使用します。  
   
-場合によっては、ツール ウィンドウからサービスを取得するサービスを認識しませんが、サービス プロバイダーをコンテナーに配置されているか、またはしない配置されているコンテナーを制御したり必要があります。 たとえば、コントロール内からアクティビティ ログに書き込む可能性があります。 これらおよびその他のシナリオの詳細については、次を参照してください。[方法: サービスのトラブルシューティングを行う](../../extensibility/how-to-troubleshoot-services.md)します。  
+場合によっては、ツール ウィンドウからサービスを取得するサービスを認識しませんが、サービス プロバイダーをコンテナーに配置されているか、またはしない配置されているコンテナーを制御したり必要があります。 たとえば、コントロール内からアクティビティ ログに書き込む可能性があります。 これらおよびその他のシナリオの詳細については、次を参照してください。[方法。サービスのトラブルシューティング](../../extensibility/how-to-troubleshoot-services.md)します。  
   
 ほとんどの Visual Studio サービスを取得するには、静的で<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>メソッド。  
   
@@ -92,7 +89,7 @@ ms.locfileid: "49934406"
     End If
     ```  
     
-    このコードは、SVsActivityLog サービスを取得し、アクティビティ ログへの書き込みに使用できる IVsActivityLog インターフェイスにキャストされます。 例については、次を参照してください。[方法: アクティビティ ログを使用して、](../../extensibility/how-to-use-the-activity-log.md)します。  
+    このコードは、SVsActivityLog サービスを取得し、アクティビティ ログへの書き込みに使用できる IVsActivityLog インターフェイスにキャストされます。 例については、次を参照してください。[方法。アクティビティ ログを使用して、](../../extensibility/how-to-use-the-activity-log.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [利用可能なサービスの一覧](../../extensibility/internals/list-of-available-services.md)   

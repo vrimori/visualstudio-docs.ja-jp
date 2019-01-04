@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ad584ac350038ced460b42a4e63d2b140d8396d6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 9d34d3a54947799e41fca20200e0fb6a5305146f
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49912969"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53685007"
 ---
 # <a name="using-saved-intellitrace-data"></a>保存された IntelliTrace データの使用
 IntelliTrace ログ (.iTrace) ファイルからデバッグを開始するときに、アプリケーションの実行においての特定のポイントに移動します。 このファイルには、アプリの実行中に IntelliTrace によって記録された、パフォーマンス イベント、例外、スレッド、テスト ステップ、モジュール、およびその他のシステム情報が格納されています。
@@ -39,7 +39,7 @@ IntelliTrace ログ (.iTrace) ファイルからデバッグを開始すると�
     |----------------|-------------|
     |Visual Studio Enterprise Edition (ただし、Professional または Community Edition を除く) での IntelliTrace セッション|[IntelliTrace の機能](../debugger/intellitrace-features.md)|
     |Microsoft Test Manager のテスト セッション。 これにより、.iTrace ファイルが Team Foundation Server の作業項目にアタッチされます。|[手動テストでの複数の診断データの収集](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)|
-    |配置で実行されている ASP.NET Web アプリおよび SharePoint アプリケーションのための、単独で、または System Center 2012 R2 Operations Manager と連携して動作する Microsoft Monitoring Agent|-   [配置後の問題を診断します。](../debugger/diagnose-problems-after-deployment.md)<br />-   [System Center 2012 R2 Operations Manager の新機能](http://technet.microsoft.com/library/dn249700.aspx)|
+    |配置で実行されている ASP.NET Web アプリおよび SharePoint アプリケーションのための、単独で、または System Center 2012 R2 Operations Manager と連携して動作する Microsoft Monitoring Agent|-   [配置後の問題の診断](../debugger/diagnose-problems-after-deployment.md)<br />-   [System Center 2012 R2 Operations Manager の新機能](http://technet.microsoft.com/library/dn249700.aspx)|
 
 ##  <a name="GetStarted"></a> 実行する操作
 
@@ -54,13 +54,13 @@ IntelliTrace ログ (.iTrace) ファイルからデバッグを開始すると�
 
 -   Visual Studio の外部で .iTrace ファイルをダブルクリックするか、Visual Studio 内からファイルを開きます。
 
-     \- または -
+     \- または
 
 -   .iTrace ファイルが Team Foundation Server の作業項目にアタッチされている場合は、作業項目の次の手順に従います。
 
     -   **[すべてのリンク]** の下で .iTrace ファイルを見つけます。 そのファイルを開きます。
 
-         \- または -
+         \- または
 
     -   **[ステップの再現]** の **[IntelliTrace]** リンクを選択します。
 
@@ -110,7 +110,7 @@ IntelliTrace ログ (.iTrace) ファイルからデバッグを開始すると�
 
 3.  その呼び出しを展開して、その時点で記録された、入れ子になったすべての呼び出しとパラメーター値を確認します。
 
-     (キーボード: 入れ子になった呼び出しを表示または非表示にするには、 **右矢印** キーまたは **左矢印** キーをそれぞれ押します。 入れ子になった呼び出しのパラメーター値を表示または非表示にするには、 **スペース** キーを押します。)
+     キーボードキーを押すと、入れ子になった呼び出しを非表示、 **→**または**←**キーをそれぞれします。 入れ子になった呼び出しのパラメーター値を表示または非表示にするには、 **スペース** キーを押します。)
 
      その呼び出しからデバッグを開始します。
 
@@ -161,7 +161,7 @@ IntelliTrace ログ (.iTrace) ファイルからデバッグを開始すると�
 
 1. SharePoint 相関 ID をソースからコピーします。
 
-    例えば:
+    次に例を示します。
 
     ![IntelliTrace &#45; SharePoint エラー&#45;相関 ID](../debugger/media/sharepointerror_intellitrace.png "SharePointError_IntelliTrace")
 
@@ -207,7 +207,7 @@ IntelliTrace ログ (.iTrace) ファイルからデバッグを開始すると�
 
     ![IntelliTrace ログ&#45;SharePoint 未処理の例外](../debugger/media/sharepointunhandledexceptions_intellitrace.png "SharePointUnhandledExceptions_IntelliTrace")
 
-   チュートリアルについては、次を参照してください。[チュートリアル: IntelliTrace を使用した、SharePoint アプリケーションのデバッグ](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md)します。 エージェントのレコードが表示されるデータの種類の[IntelliTrace 機能](../debugger/intellitrace-features.md)します。
+   チュートリアルについては、次を参照してください。[チュートリアル。IntelliTrace を使用して SharePoint アプリケーションのデバッグ](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md)します。 エージェントのレコードが表示されるデータの種類の[IntelliTrace 機能](../debugger/intellitrace-features.md)します。
 
 ###  <a name="ThreadsList"></a> スレッド一覧
  ターゲット プロセスで実行されたスレッドの記録を確認します。 選択されているスレッドの最初の有効な IntelliTrace イベントからデバッグを開始できます。
@@ -225,7 +225,7 @@ IntelliTrace ログ (.iTrace) ファイルからデバッグを開始すると�
 |**列**|**内容**|
 |----------------|-------------------|
 |**ID**|スレッド ID 番号|
-|**Name**|スレッド名。 として表示される名前のないスレッド"\<名なし >"。|
+|**Name**|スレッド名。 名前のないスレッドは "\<No Name>" として表示されます。|
 |**開始時刻**|スレッドが作成された時刻|
 |**終了時刻**|スレッドが完了した時刻|
 
@@ -258,7 +258,7 @@ IntelliTrace ログ (.iTrace) ファイルからデバッグを開始すると�
 |----------------|-------------------|
 |**モジュール名**|モジュール ファイル名|
 |**モジュール パス**|モジュールが読み込まれたディスクの場所|
-|**モジュール ID**|バージョン固有で一致するシンボル (PDB) ファイルに貢献するモジュールの一意の識別子。 「 [Finding symbol (.pdb) files and source files](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)」を参照してください。|
+|**モジュール ID**|バージョン固有で一致するシンボル (PDB) ファイルに貢献するモジュールの一意の識別子。 「 [Finding symbol (.pdb) files and source files](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」を参照してください。|
 
 ### <a name="where-can-i-get-more-information"></a>情報の入手方法
  [IntelliTrace スタンドアロン コレクターを使用する](../debugger/using-the-intellitrace-stand-alone-collector.md)
@@ -273,4 +273,4 @@ IntelliTrace ログ (.iTrace) ファイルからデバッグを開始すると�
  [Visual Studio Debugger](http://go.microsoft.com/fwlink/?LinkId=262263)
 
 #### <a name="guidance"></a>ガイダンス
- [Visual Studio 2012 - 第 6 章による継続的デリバリーのためのテスト: テスト ツールボックス](http://go.microsoft.com/fwlink/?LinkID=255203)
+ [Visual Studio 2012 - 第 6 章による継続的デリバリーのテスト。テスト ツールボックス](http://go.microsoft.com/fwlink/?LinkID=255203)

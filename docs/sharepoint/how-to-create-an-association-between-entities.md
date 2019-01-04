@@ -1,15 +1,10 @@
 ---
 title: '方法: エンティティ間のアソシエーションの作成 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - AssociationGroupTool
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -26,14 +21,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 51527092332f1fa82019f1abf9251a8b44aedf06
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: eaaa3f86cc0751b0b80d61555a69aa6bfecda2f0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119462"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53878248"
 ---
-# <a name="how-to-create-an-association-between-entities"></a>方法: エンティティ間のアソシエーションの作成
+# <a name="how-to-create-an-association-between-entities"></a>方法: エンティティ間のアソシエーションを作成します。
   関連付けを作成して、ビジネス データ接続 (BDC) モデルのエンティティ間のリレーションシップを定義することができます。 Visual Studio では、各関連付けについての情報をモデルのコンシューマーに提供するメソッドを生成します。 これらのメソッドは、SharePoint web パーツ、リスト、またはユーザー インターフェイス (UI) でデータ間の関係を表示するカスタム アプリケーションで使用できます。  
   
  2 つの種類のアソシエーションを作成するには、BDC デザイナーに: 外部キーに基づくアソシエーションおよび外部キーを使用しないアソシエーション。 詳細については、次を参照してください。[エンティティ間のアソシエーションを作成する](../sharepoint/creating-an-association-between-entities.md)します。  
@@ -69,14 +64,13 @@ ms.locfileid: "37119462"
 ## <a name="see-also"></a>関連項目
  [エンティティ間のアソシエーションを作成します。](../sharepoint/creating-an-association-between-entities.md)   
  [ビジネス データ接続モデルを設計します。](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
- [方法: 特定の Finder メソッドを追加](../sharepoint/how-to-add-a-specific-finder-method.md)   
- [方法: Creator メソッドを追加](../sharepoint/how-to-add-a-creator-method.md)   
- [方法: Deleter メソッドを追加](../sharepoint/how-to-add-a-deleter-method.md)   
- [方法: Updater メソッドの追加](../sharepoint/how-to-add-an-updater-method.md)   
+ [方法: Finder メソッドを追加します。](../sharepoint/how-to-add-a-finder-method.md)   
+ [方法: 特定の Finder メソッドを追加します。](../sharepoint/how-to-add-a-specific-finder-method.md)   
+ [方法: Creator メソッドを追加します。](../sharepoint/how-to-add-a-creator-method.md)   
+ [方法: Deleter メソッドを追加します。](../sharepoint/how-to-add-a-deleter-method.md)   
+ [方法: Updater メソッドを追加します。](../sharepoint/how-to-add-an-updater-method.md)   
  [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
- [方法: メソッドにパラメーターを追加](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
- [方法: メソッド インスタンスの定義](../sharepoint/how-to-define-a-method-instance.md)   
- [方法: パラメーターの型記述子を定義](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
- [チュートリアル: sharepoint ビジネス データを使用して外部リストを作成します。](../sharepoint/walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md)  
-  
+ [方法: メソッドにパラメーターを追加します。](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
+ [方法: メソッド インスタンスを定義します。](../sharepoint/how-to-define-a-method-instance.md)   
+ [方法: パラメーターの型記述子を定義します。](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
+ [チュートリアル: ビジネス データを使用して SharePoint に外部リストを作成します。](../sharepoint/walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md)  

@@ -1,15 +1,10 @@
 ---
 title: '方法: 追加して、パッケージ デザイナーを使用して機能と、パッケージにアイテムを削除 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.RAD.PackageDesignerDesign
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -19,17 +14,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 60a1de6a499b033f99844280c3d2aa73b6ed8ba6
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 5b28db9329debba9e46606d0f57117e4f01a8f26
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51294969"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53906918"
 ---
 # <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer"></a>方法: 追加して、パッケージ デザイナーを使用して機能と、パッケージにアイテムを削除
   SharePoint ソリューションを作成するときに、Visual Studio は、ソリューション内のパッケージに既定の SharePoint 機能を追加します。 最終的な配置は、前に追加し、SharePoint プロジェクト アイテムと SharePoint のパッケージを変更する機能を削除できます。  
   
- または、パッケージング エクスプ ローラーを使用して、追加し、SharePoint プロジェクト項目を削除することができます。 表示また、パッケージ (.wsp) に格納される機能、SharePoint プロジェクト アイテムの階層を変更することができます。 詳細については、次を参照してください。[方法: 追加およびパッケージング エクスプ ローラーを使用して、フィーチャーおよびパッケージに項目を削除](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md)します。  
+ または、パッケージング エクスプ ローラーを使用して、追加し、SharePoint プロジェクト項目を削除することができます。 表示また、パッケージ (.wsp) に格納される機能、SharePoint プロジェクト アイテムの階層を変更することができます。 詳細については、「[方法 :追加およびパッケージング エクスプ ローラーを使用して、フィーチャーおよびパッケージに項目を削除](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md)します。  
   
 ## <a name="add-features-to-a-sharepoint-package"></a>SharePoint パッケージに機能を追加します。  
  パッケージ デザイナーを使用すると、SharePoint のパッケージに機能を追加します。  
@@ -38,7 +33,7 @@ ms.locfileid: "51294969"
   
 1. 開く、**パッケージ デザイナー**します。  
   
-    詳細については、次を参照してください。[方法: SharePoint ソリューション パッケージをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)します。  
+    詳細については、「[方法 :SharePoint ソリューション パッケージをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)します。  
   
 2. 1 つ以上の次の手順を実行することによって、1 つまたは複数の SharePoint 機能を追加します。  
   
@@ -65,4 +60,3 @@ ms.locfileid: "51294969"
  [SharePoint ソリューション パッケージを作成します。](../sharepoint/creating-sharepoint-solution-packages.md)   
  [方法: SharePoint ソリューション パッケージをカスタマイズします。](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)  
  [方法: パッケージを作成します。](https://msdn.microsoft.com/b24be45c-e91d-49bb-afb0-7b265404214b)  
-  

@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: C++ を使用して、SDK の作成 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: C++ を使用して SDK の作成 |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: 36ea793b-3832-41a1-b906-69e680ad5e1d
 author: gregvanl
@@ -11,14 +8,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6311526df299da860c829520a2087ecc8d786600
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 2a0db4f34315f9e0eb4a5627cdc286a43a904a34
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49930645"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53917606"
 ---
-# <a name="walkthrough-create-an-sdk-using-c"></a>チュートリアル: C++ を使用して SDK を作成します。
+# <a name="walkthrough-create-an-sdk-using-c"></a>チュートリアル: C++ を使用して、SDK を作成します。
 このチュートリアルでは、ネイティブ C++ 数値演算ライブラリを SDK パッケージとして、Visual Studio Extension (VSIX)、SDK を作成し、それを使用して、アプリを作成する方法を示します。 このチュートリアルは、次の手順に分かれています。  
   
 -   [ネイティブと Windows ランタイム ライブラリを作成するには](../extensibility/walkthrough-creating-an-sdk-using-cpp.md#createClassLibrary)  
@@ -112,7 +109,7 @@ ms.locfileid: "49930645"
   
     [!code-xml[CreatingAnSDKUsingCpp#7](../extensibility/codesnippet/XML/walkthrough-creating-an-sdk-using-cpp_7.xml)]  
   
-12. メニュー バーで、**ビュー** > **その他の Windows** > **プロパティ ウィンドウ**(キーボード: 選択、 **F4**キー)。  
+12. メニュー バーで、**ビュー** > **その他の Windows** > **プロパティ ウィンドウ**(キーボード。選択、 **F4**キー)。  
   
 13. **ソリューション エクスプ ローラー**を選択、 **NativeMathWRT.winmd**ファイル。 **プロパティ**ウィンドウで、変更、**ビルド アクション**プロパティを**コンテンツ**、し、変更、 **VSIX に含める**プロパティ**True**します。  
   
@@ -177,5 +174,5 @@ ms.locfileid: "49930645"
 ## <a name="next-steps"></a>次の手順  
   
 ## <a name="see-also"></a>関連項目  
- [チュートリアル: c# または Visual Basic を使用して SDK を作成します。](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md)   
+ [チュートリアル: C# または Visual Basic を使用して、SDK を作成します。](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md)   
  [ソフトウェア開発キットを作成します。](../extensibility/creating-a-software-development-kit.md)

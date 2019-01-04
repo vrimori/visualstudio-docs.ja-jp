@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによってブックを保護'
-ms.custom: ''
+title: '方法: プログラムによってブックを保護します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -20,19 +17,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8999bb1e30958897f9b7732ab393650320ec77b1
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: b41eed7ee8b20cc807ada75ee0a4c1ccd1519fc6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35671910"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53900776"
 ---
-# <a name="how-to-programmatically-protect-workbooks"></a>方法: プログラムによってブックを保護
+# <a name="how-to-programmatically-protect-workbooks"></a>方法: プログラムによってブックを保護します。
   ユーザーできませんを追加またはワークシートを削除してもプログラムによってブックの保護を解除できるように、Microsoft Office Excel ブックを保護することができます。 パスワードを指定して必要に応じてを (そのためユーザーは、のシートを移動することはできません) を保護するには、構造を選択し、保護されているブックのウィンドウを使用するかを指定するかどうかを指定できます。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- ブックの保護では、ユーザーがセルの編集は停止しません。 データを保護するには、ワークシートを保護する必要があります。 詳細については、次を参照してください。[方法: プログラムによってワークシートを保護](../vsto/how-to-programmatically-protect-worksheets.md)します。  
+ ブックの保護では、ユーザーがセルの編集は停止しません。 データを保護するには、ワークシートを保護する必要があります。 詳細については、「[方法 :プログラムによってワークシートを保護](../vsto/how-to-programmatically-protect-worksheets.md)します。  
   
  次のコード例では、ユーザーから取得したパスワードを格納するのに変数を使用します。  
   
@@ -71,7 +68,5 @@ ms.locfileid: "35671910"
 ## <a name="see-also"></a>関連項目  
  [ブックを操作します。](../vsto/working-with-workbooks.md)   
  [方法: プログラムによってワークシートを保護します。](../vsto/how-to-programmatically-protect-worksheets.md)   
- [方法: プログラムによってワークシートを非表示](../vsto/how-to-programmatically-hide-worksheets.md)   
+ [方法: プログラムによってワークシートを非表示します。](../vsto/how-to-programmatically-hide-worksheets.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
-  
-  

@@ -1,9 +1,6 @@
 ---
 title: 従来の言語サービスでのナビゲーション バーのサポート |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - Navigation bar, supporting in language services [managed package framework]
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e3ca2b29ca942287180df45629c40a4f38e7a573
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a9fc9d4339978f84b02a5c922c06139031924bf4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49918156"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53868814"
 ---
 # <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>従来の言語サービスでのナビゲーション バーのサポート
 エディター ビューの上部にあるナビゲーション バーでは、ファイル内の型とメンバーを表示します。 種類は左ドロップダウンで表示され、メンバーを表示する右のドロップダウン リスト。 ユーザーは、型を選択する型の最初の行にキャレットが配置されます。 ユーザーがメンバーと、メンバーの定義にカーソルが配置されます。 ドロップダウン ボックスのキャレットの現在の場所を反映するように更新されます。  

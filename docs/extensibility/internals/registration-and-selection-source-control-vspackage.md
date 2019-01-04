@@ -1,9 +1,6 @@
 ---
 title: 登録と選択 (ソース管理 VSPackage) |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - registration, source control packages
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d601aeca3864e47da77fd6418f4cfd3a5db1623
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d549ab4af45a2571b2d20d47215109f57b3f3384
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49834879"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53930714"
 ---
 # <a name="registration-and-selection-source-control-vspackage"></a>登録と選択 (ソース管理 VSPackage)
 公開するために VSPackage を登録する必要があるソース管理、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。 1 つ以上のソース管理 VSPackage が登録されている場合、ユーザーは、どの VSPackage を読み込む適切なタイミングでを選択できます。 参照してください[Vspackage](../../extensibility/internals/vspackages.md) Vspackage とそれらを登録する方法の詳細についてはします。  
@@ -34,11 +31,11 @@ ms.locfileid: "49834879"
 ### <a name="registry-entries"></a>レジストリ エントリ  
  ソース管理のパッケージには、次の 3 つのプライベート Guid が必要があります。  
   
-- パッケージ GUID: これは、メイン ソース コントロールの実装 (このセクションでは ID_Package と呼ばれます) を含むパッケージの GUID です。  
+- パッケージ GUID:これは、メイン ソース コントロールの実装 (このセクションでは ID_Package と呼ばれます) を含むパッケージの GUID です。  
   
-- ソース コントロールの GUID。 これにソース管理 VSPackage の使用、Visual Studio のソース コントロールのスタブを登録する guid し、コマンド UI コンテキスト GUID としても使用されます。 ソース管理サービスの GUID は GUID のソース管理下で登録されています。 例では、ソース コントロールの GUID は ID_SccProvider と呼ばれます。  
+- ソース コントロールの GUID。ソース管理 VSPackage の使用、Visual Studio のソース コントロールのスタブを登録する GUID は、このコマンド UI コンテキスト GUID としても使用されます。 ソース管理サービスの GUID は GUID のソース管理下で登録されています。 例では、ソース コントロールの GUID は ID_SccProvider と呼ばれます。  
   
-- ソース コントロール サービス GUID: これは、プライベート サービス (このセクションでは SID_SccPkgService と呼ばれます)、Visual Studio で使用される GUID。 さらに、ソース管理パッケージは、Vspackage、ツール ウィンドウの他の Guid を定義する必要があります。  
+- ソース管理サービス GUID:これは、プライベート サービス (このセクションでは SID_SccPkgService と呼ばれます)、Visual Studio で使用される GUID です。 さらに、ソース管理パッケージは、Vspackage、ツール ウィンドウの他の Guid を定義する必要があります。  
   
   次のレジストリ エントリは、ソース管理 VSPackage によって行う必要があります。  
   

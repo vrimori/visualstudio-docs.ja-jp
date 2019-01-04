@@ -1,9 +1,6 @@
 ---
 title: プライベート ギャラリー |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - VSIX galleries, private
@@ -14,17 +11,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e91b3ecec969ab6a717598d8dfb77e674890216a
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: f1be2f2327ac48f46894f66d35f6a392608b6177
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39638584"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53897775"
 ---
 # <a name="private-galleries"></a>プライベート ギャラリー
 コントロール、テンプレート、および投稿することで開発したツールを共有することができます、*プライベート ギャラリー*次のように、組織のイントラネット上。  
   
--   イントラネット上で適切に構成されている中央の場所 (リポジトリ) にフィード Atom (RSS) を作成します。 詳細については、次を参照してください。[方法: Atom プライベート ギャラリーのフィードを作成](../extensibility/how-to-create-an-atom-feed-for-a-private-gallery.md)です。  
+-   イントラネット上で適切に構成されている中央の場所 (リポジトリ) にフィード Atom (RSS) を作成します。 詳細については、「[方法 :Atom プライベート ギャラリーのフィードを作成](../extensibility/how-to-create-an-atom-feed-for-a-private-gallery.md)です。  
   
 -   配布、 *.pkgdef*ファイルをプライベート ギャラリーについて説明します。 プライベート ギャラリーを同時に多くのコンピューターに接続する管理者のためには、この構成をお勧めします。  
   
@@ -54,7 +51,7 @@ ms.locfileid: "39638584"
   
 ```  
 [$RootKey$\ExtensionManager\Repositories\{UniqueGUID}]  
-@={URI}  (REG_SZ)  
+@={URI}  (REG_SZ)  
 Disabled=0 | 1 (DWORD)  
 Priority=0 (highest priority) ... MaxInt (lowest priority) (DWORD) (uint)  
 Protocol=Atom|Sharepoint (REG_SZ)  
@@ -64,7 +61,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
   
 ```  
   
- 詳細については、次を参照してください。[方法: レジストリ設定を使用してプライベート ギャラリーを管理](../extensibility/how-to-manage-a-private-gallery-by-using-registry-settings.md)します。  
+ 詳細については、「[方法 :レジストリ設定を使用してプライベート ギャラリーを管理](../extensibility/how-to-manage-a-private-gallery-by-using-registry-settings.md)します。  
   
 ## <a name="install-extensions-from-a-private-gallery"></a>プライベート ギャラリーから拡張機能をインストールします。  
  検索してプライベート ギャラリーから Visual Studio 拡張機能をインストールできます**拡張機能と更新**します。 次の手順を使用して、という名前のプライベート ギャラリー`My Gallery`します。  

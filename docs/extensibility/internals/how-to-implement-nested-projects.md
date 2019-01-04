@@ -1,9 +1,6 @@
 ---
 title: '方法: 入れ子になったプロジェクトの実施 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - nested projects, implementing
@@ -14,14 +11,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bee3b5bebb8067ecc4bd1115f46d4b668b114c50
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: d22d67d81776f83683e11d1ca613a9138137e75c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512901"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53945810"
 ---
-# <a name="how-to-implement-nested-projects"></a>方法: 入れ子になったプロジェクトの実装
+# <a name="how-to-implement-nested-projects"></a>方法: 入れ子になったプロジェクトを実装します。
 
 入れ子になったプロジェクトの種類を作成するときに、いくつかの追加の手順を実装する必要があります。 親プロジェクトは、その入れ子になった (子) プロジェクトをソリューションに含まれている同様の役割の一部に対して実行します。 親プロジェクトは、ソリューションのようなプロジェクトのコンテナーです。 具体的には、入れ子になったプロジェクトの階層を構築する親プロジェクトおよびソリューションによって発生する必要がありますのあるいくつかのイベントがあります。 入れ子になったプロジェクトを作成するための次のプロセスでは、これらのイベントがについて説明します。
 
@@ -91,6 +88,6 @@ ms.locfileid: "39512901"
 
 - [新しい項目の追加 ダイアログ ボックスに項目の追加](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
 - [プロジェクトと項目テンプレートを登録します。](../../extensibility/internals/registering-project-and-item-templates.md)
-- [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)
+- [チェックリスト:新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [コンテキスト パラメーター](../../extensibility/internals/context-parameters.md)
 - [ウィザード (.vsz) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)

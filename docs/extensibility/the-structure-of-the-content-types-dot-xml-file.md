@@ -1,9 +1,6 @@
 ---
 title: '[Content_types] .xml ファイルの構造 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - content_types
@@ -16,18 +13,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 538a518d1186dc50a9e5e89635af0a07c2542041
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: dd4ed2783ba3b56004037338452722f3ea0f8ddc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49893274"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53909896"
 ---
 # <a name="the-structure-of-the-contenttypesxml-file"></a>[Content_types] .xml ファイルの構造
 VSIX パッケージ内のコンテンツの種類についてを説明します。 Visual Studio は、パッケージをインストールする [Content_Types] .xml ファイルを使用しますが、ファイル自体はインストールされません。  
   
 > [!NOTE]
->  [Content_Types] .xml ファイルの種類の一部は、このトピックでは VSIX パッケージで使用されている [Content_Type] .xml ファイルにのみ適用されますが、 *Open Packaging Conventions (OPC)* 標準。 詳細については、次を参照してください。 [OPC: A 新しい標準のパッケージ化、データ](http://go.microsoft.com/fwlink/?LinkID=148207)MSDN Web サイト。  
+>  [Content_Types] .xml ファイルの種類の一部は、このトピックでは VSIX パッケージで使用されている [Content_Type] .xml ファイルにのみ適用されますが、 *Open Packaging Conventions (OPC)* 標準。 詳細については、次を参照してください[OPC:。新しい標準のパッケージ化、データを](http://go.microsoft.com/fwlink/?LinkID=148207)MSDN Web サイト。  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
  次のセクションでは、ルート要素とその属性と子要素について説明します。  
@@ -105,4 +102,4 @@ VSIX パッケージ内のコンテンツの種類についてを説明します
 ## <a name="see-also"></a>関連項目  
  [VSIX パッケージの構造](../extensibility/anatomy-of-a-vsix-package.md)   
  [VSIX 拡張機能スキーマ 1.0 リファレンス](https://msdn.microsoft.com/library/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)   
- [OPC: データをパッケージ化するための新しい標準](http://go.microsoft.com/fwlink/?LinkID=148207)
+ [OPC:データをパッケージ化するための新しい標準](http://go.microsoft.com/fwlink/?LinkID=148207)

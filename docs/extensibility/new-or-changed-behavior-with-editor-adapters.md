@@ -1,9 +1,6 @@
 ---
 title: アダプターのエディターで新しいまたは変更された動作 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - adapter behavior
@@ -13,17 +10,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b2b32eeb110240cabfec5d81cc862611a0d32fe2
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: d32cad965c4165a8f81e9b880121bb54ab1738b7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39639235"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53901611"
 ---
 # <a name="new-or-changed-behavior-with-editor-adapters"></a>エディターのアダプターを搭載した新規または変更された動作
 以前のバージョンの Visual Studio コア エディターと照らして記述されたコードを更新する、新しい API を使用するのではなく、エディターのアダプター (または shim) を使用する場合は、エディターのアダプターの動作に次の相違点の注意する必要があります。に関しては、前のコア エディター。  
   
-## <a name="features"></a>フィーチャー  
+## <a name="features"></a>機能  
   
 ### <a name="use-setsite"></a>SetSite() を使用します。  
  呼び出す必要があります<xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite.SetSite%2A>テキスト バッファーのテキストのビューを作成し、それらの他の操作を実行する前に、コード ウィンドウ。 ただし、これを使用する場合は必要はありません、<xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>ため、それを作成するこのサービスの`Create()`メソッド自体を呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.SetSite%2A>します。  

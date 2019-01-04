@@ -12,13 +12,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 2181e9f89fc8d859bfda9a29de6af8726ae5aef3
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: cf200620036c41fe4ed975fa6ff60bd1438b7d88
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50967429"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53821042"
 ---
 # <a name="customizing-element-creation-and-movement"></a>要素作成処理および要素移動処理のカスタマイズ
 
@@ -75,7 +74,7 @@ EMD は、埋め込みリレーションシップを定義するときに自動�
 >
 > 新しい要素または新しいリレーションシップが常に処理される、カスタム コードを確認する場合は、定義することを検討してください、`AddRule`埋め込みリレーションシップに対して、`DeleteRule`要素のドメイン クラス。 詳細については、次を参照してください。[ルール反映されるまで変更内で、モデル](../modeling/rules-propagate-changes-within-the-model.md)します。
 
-## <a name="example-defining-an-emd-without-custom-code"></a>例: カスタム コードなし EMD を定義します。
+## <a name="example-defining-an-emd-without-custom-code"></a>例:カスタム コードなし EMD を定義します。
 
 次の例では、既存の図形には、ツールボックスからドラッグして、同時に要素とコネクタを作成できます。 例では、DSL 定義に EMD を追加します。 この変更では、前にユーザーは、図に、既存の図形の上にないツールをドラッグできます。
 
@@ -91,7 +90,7 @@ EMD は、埋め込みリレーションシップを定義するときに自動�
 
    1.  **DSL エクスプ ローラー**、展開**ドメイン クラス**します。 右クリックして`ExampleElement` をクリックし、**新しい要素マージ ディレクティブの追加**します。
 
-   2.  必ず、 **DSL の詳細**新しい EMD の詳細を表示することは、ウィンドウが開いて。 (メニュー:**ビュー**、**他の Windows**、 **DSL の詳細**)。
+   2.  必ず、 **DSL の詳細**新しい EMD の詳細を表示することは、ウィンドウが開いて。 (メニュー。**表示**、**他の Windows**、 **DSL の詳細**)。
 
 3. 設定、**クラスのインデックス作成**DSL 詳細 ウィンドウの上にマージできる要素のクラスを定義する`ExampleElement`オブジェクト。
 
@@ -145,7 +144,7 @@ EMD は、埋め込みリレーションシップを定義するときに自動�
 
      使用して、EMD を明示的に呼び出す場合、新しい要素を作成するカスタム コードを記述する、`ElementOperations.Merge`メソッド。 これにより、コードが、その他の操作と同様に、モデルに新しい要素をリンクすることを確認します。 詳細については、次を参照してください。[コピー動作のカスタマイズ](../modeling/customizing-copy-behavior.md)します。
 
-## <a name="example-adding-custom-accept-code-to-an-emd"></a>例: EMD へのカスタム受け入れコードの追加
+## <a name="example-adding-custom-accept-code-to-an-emd"></a>例:EMD にカスタム受け入れコードを追加します。
 
 EMD にカスタム コードを追加することより複雑な結合の動作を定義できます。 この簡単な例では、ユーザーが要素の固定数よりも多く、ダイアグラムに追加できなくなります。 例では、既定の埋め込みリレーションシップに付属している EMD を変更します。
 
@@ -161,7 +160,7 @@ EMD にカスタム コードを追加することより複雑な結合の動作
 
 4.  ソリューションをリビルドします。 生成されたコードは、モデルから更新されるため、通常よりも長くかかります。
 
-     報告されるのと同様に、ビルド エラーが表示されます:「Company.ElementMergeSample.ExampleElement は定義を含んでいない CanMergeExampleElement の...」
+     報告されるのと同様に、ビルド エラーになります。「Company.ElementMergeSample.ExampleElement は定義を含んでいない CanMergeExampleElement の...」
 
      メソッドを実装する必要があります`CanMergeExampleElement`します。
 
@@ -208,7 +207,7 @@ EMD にカスタム コードを追加することより複雑な結合の動作
 
     3.  モデルに複数の 4 つの要素を追加する方法はこれらのいずれか使用できないことを確認します。 これは、要素マージ ディレクティブを使用するためです。
 
-## <a name="example-adding-custom-merge-code-to-an-emd"></a>例: EMD にカスタムのマージのコードを追加します。
+## <a name="example-adding-custom-merge-code-to-an-emd"></a>例:EMD にカスタムのマージのコードを追加します。
 
 カスタム マージのコードでは、ユーザーがツールをドラッグまたは要素に貼り付けますときの動作を定義できます。 カスタム マージを定義する 2 つの方法はあります。
 
@@ -232,7 +231,7 @@ EMD にカスタム コードを追加することより複雑な結合の動作
 
 5.  内容を調べる**Dsl\Generated Files\DomainClasses.cs**します。 という名前のメソッドを検索`MergeRelate`の内容を調べる。 独自のバージョンを作成するのに役立ちます。
 
-6.  新しいコード ファイルでは、受信側のクラスの部分クラスを記述し、オーバーライド、`MergeRelate`メソッド。 基本メソッドを呼び出してに注意してください。 例えば:
+6.  新しいコード ファイルでは、受信側のクラスの部分クラスを記述し、オーバーライド、`MergeRelate`メソッド。 基本メソッドを呼び出してに注意してください。 例:
 
     ```csharp
     partial class ExampleModel

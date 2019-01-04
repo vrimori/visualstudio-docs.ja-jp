@@ -1,13 +1,8 @@
 ---
 title: '方法: Specificfinder メソッドの追加 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -22,21 +17,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8005728d29c38e32d55f01e42d2666c69112b3f3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 163badc38ba4037729e29d013c98e0b733c9eaf9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49886490"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53913466"
 ---
-# <a name="how-to-add-a-specific-finder-method"></a>方法: 特定の Finder メソッドを追加
+# <a name="how-to-add-a-specific-finder-method"></a>方法: 特定の Finder メソッドを追加します。
   作成して、1 つのエンティティ インスタンスを返すことができます、 *Specificfinder*メソッド。 ビジネス データ接続 (BDC) サービスは、ユーザーがビジネス データ web パーツまたは外部の一覧でエンティティを選択すると Specificfinder メソッドを実行します。 詳細については、次を参照してください。[ビジネス データ接続モデルを設計する](../sharepoint/designing-a-business-data-connectivity-model.md)します。  
   
 ### <a name="to-create-a-specific-finder-method"></a>特定の Finder メソッドを作成するには
   
 1. **BDC デザイナー**エンティティを選択します。  
   
-    エンティティを追加する方法については、 **BDC デザイナー** Visual Studio で、次を参照してください。[方法: エンティティ モデルを追加する](../sharepoint/how-to-add-an-entity-to-a-model.md)します。  
+    エンティティを追加する方法については、 **BDC デザイナー** Visual Studio で、次を参照してください。[方法。エンティティ モデルを追加する](../sharepoint/how-to-add-an-entity-to-a-model.md)します。  
   
 2. メニュー バーで、**ビュー** > **その他の Windows**、 **BDC メソッドの詳細**します。  
   
@@ -60,7 +55,7 @@ ms.locfileid: "49886490"
   
 4. Visual Studio を開き**プロパティ**ウィンドウ。  
   
-5. エンティティ型記述子として戻り値パラメーターの型記述子を構成します。 エンティティ型記述子を作成する方法については、次を参照してください。[方法: パラメーターの型記述子を定義](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)します。  
+5. エンティティ型記述子として戻り値パラメーターの型記述子を構成します。 エンティティ型記述子を作成する方法については、次を参照してください。[方法。パラメーターの型記述子を定義](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)します。  
   
    > [!NOTE]  
    >  Finder メソッドをエンティティに追加した場合、この手順を実行する必要はありません。 Visual Studio では、Finder メソッドで定義した型記述子を使用します。  
@@ -92,11 +87,10 @@ ms.locfileid: "49886490"
   
 ## <a name="see-also"></a>関連項目
  [ビジネス データ接続モデルを設計します。](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
- [方法: Creator メソッドを追加](../sharepoint/how-to-add-a-creator-method.md)   
- [方法: Deleter メソッドを追加](../sharepoint/how-to-add-a-deleter-method.md)   
- [方法: Updater メソッドの追加](../sharepoint/how-to-add-an-updater-method.md)   
+ [方法: Finder メソッドを追加します。](../sharepoint/how-to-add-a-finder-method.md)   
+ [方法: Creator メソッドを追加します。](../sharepoint/how-to-add-a-creator-method.md)   
+ [方法: Deleter メソッドを追加します。](../sharepoint/how-to-add-a-deleter-method.md)   
+ [方法: Updater メソッドを追加します。](../sharepoint/how-to-add-an-updater-method.md)   
  [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
- [方法: メソッドにパラメーターを追加](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
- [方法: メソッド インスタンスの定義](../sharepoint/how-to-define-a-method-instance.md)  
-  
+ [方法: メソッドにパラメーターを追加します。](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
+ [方法: メソッド インスタンスを定義します。](../sharepoint/how-to-define-a-method-instance.md)  

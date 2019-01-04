@@ -1,9 +1,6 @@
 ---
 title: ソース管理プラグインの概要 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, getting started
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2f1eb4f76616f6a5f6791cbcd1b8a5770d1dcabb
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 829bf676a407fd166eda252cb4e6e2fbdb93fa41
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498101"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53854504"
 ---
 # <a name="get-started-with-source-control-plug-ins"></a>ソース管理プラグインを概要します。
 ソース管理プラグインを作成するには、ソース コントロールのプラグイン API で定義された関数を実装する DLL を作成する必要があり、次の DLL の登録を[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ソース コードのバージョン管理に使用できるようにします。  
@@ -27,7 +24,7 @@ ms.locfileid: "39498101"
  ソース管理プラグイン API (バージョン 1.1、1.2、および 1.3) の 3 つのバージョンでは、ソース管理プラグインを使用できます。ここに記載されているソース コントロールのプラグイン API はバージョン 1.3 です。 これは、デザインは、ソース管理プラグインと完全に互換性がバージョン 1.1 および 1.2 をサポートします。 [新機能についてはソース管理プラグイン API バージョン 1.3](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-3.md)セクションで、ソース管理プラグイン API の最新バージョンでサポートされる新機能について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: ソース管理プラグインのインストール](../../extensibility/internals/how-to-install-a-source-control-plug-in.md)  
+ [方法: ソース管理プラグインのインストールします。](../../extensibility/internals/how-to-install-a-source-control-plug-in.md)  
  ソース管理 DLL を接続するために必要なレジストリ エントリを作成する方法について説明します。  
   
  [ソース管理プラグイン API バージョン 1.3 の新機能新機能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-3.md)  

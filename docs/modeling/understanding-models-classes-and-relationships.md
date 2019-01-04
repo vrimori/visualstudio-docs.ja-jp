@@ -10,13 +10,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 74172b6e7f03d7e3baef329f053fc4a83ee6ae28
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: 749c75af9056bc50689c47ca9ef8de037dfd71e5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50967390"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53908645"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>モデル、クラス、およびリレーションシップについて
 ドメイン固有言語 (DSL) は、作成した場合、カスタム プログラム コードと共に、DSL 定義ファイルによって定義されます。 DSL ソリューションのプログラム コードのほとんどは、このファイルから生成されます。
@@ -54,9 +53,9 @@ ms.locfileid: "50967390"
 
  ![埋め込みリレーションシップと参照リレーションシップ](../modeling/media/music_classes.png)
 
- 図 4 つのドメイン クラスを示しています: 音楽、アルバム、アーティスト、曲。 ドメイン クラスは、名前やタイトルなどのドメイン プロパティを定義します。 インスタンス モデルでは、これらのプロパティの一部の値は、ダイアグラムに表示されます。
+ 図は、4 つのドメイン クラスを示しています。音楽、アルバム、アーティスト、曲。 ドメイン クラスは、名前やタイトルなどのドメイン プロパティを定義します。 インスタンス モデルでは、これらのプロパティの一部の値は、ダイアグラムに表示されます。
 
- クラス間ではドメイン リレーションシップ: MusicHasAlbums、MusicHasArtists、AlbumbHasSongs、および artistappearedonalbums です。 リレーションシップがある 1..1 などの多重度 0.. *。 など、すべての曲を AlbumHasSongs リレーションシップにより 1 つだけのアルバムに関連する必要があります。 すべてのアルバムの曲の任意の数を持つことができます。
+ クラス間ドメイン リレーションシップには。MusicHasAlbums、MusicHasArtists、AlbumbHasSongs、および artistappearedonalbums です。 リレーションシップがある 1..1 などの多重度 0.. *。 など、すべての曲を AlbumHasSongs リレーションシップにより 1 つだけのアルバムに関連する必要があります。 すべてのアルバムの曲の任意の数を持つことができます。
 
 ### <a name="rearranging-the-dsl-definition-diagram"></a>DSL 定義図の並べ替え
  この図で同様のアルバムは DSL 定義図に、ドメイン クラスが複数回を表示できることに注意してください。 常に 1 つの主なビューがあるし、いくつかあります*参照*ビュー。

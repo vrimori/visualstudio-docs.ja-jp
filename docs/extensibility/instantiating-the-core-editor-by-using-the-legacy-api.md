@@ -1,9 +1,6 @@
 ---
 title: レガシ API を使用して、コア エディターをインスタンス化する |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - instantiating editor
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 59642b934f82990ce50f6dabaa38a97f34575997
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 14583d242c260e4b0f1a754d53faf35b645be666
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49941569"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53838165"
 ---
 # <a name="instantiate-the-core-editor-by-using-the-legacy-api"></a>従来の API を使用して、コア エディターをインスタンス化します。
 エディターはテキストの挿入、削除、コピー、および貼り付けなどの関数を編集します。 これらの関数のテキストの色分け表示、インデント、および IntelliSense ステートメント入力候補などの言語サービスによって提供される関数が集約されます。  
@@ -65,7 +62,7 @@ ms.locfileid: "49941569"
   
  場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>メソッドは、テキスト エディターと同じコマンドの GUID を返します、コア エディターのインスタンスがショートカット キーに自動的に既定値に取得します。  
   
- 一般的な情報は、次を参照してください。[チュートリアル: エディターのコアを作成し、エディター ファイルの種類を登録する](../extensibility/walkthrough-creating-a-core-editor-and-registering-an-editor-file-type.md)します。  
+ 一般的な情報は、次を参照してください。[チュートリアル。エディターを作成するには、コアとエディター ファイルの種類を登録する](../extensibility/walkthrough-creating-a-core-editor-and-registering-an-editor-file-type.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [コア エディター](../extensibility/inside-the-core-editor.md)   

@@ -1,9 +1,6 @@
 ---
 title: Word 文書と Excel ブックを実行時に VSTO アドインで拡張します。
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -21,12 +18,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: eb1197d85f52c314eb9ec0a01ccd5069f9c43f39
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: a93923525ce1a3c1a3396963f05b2f0335a8f635
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53647820"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53909192"
 ---
 # <a name="extend-word-documents-and-excel-workbooks-in-vsto-add-ins-at-runtime"></a>Word 文書や実行時に VSTO のアドインの Excel ブックを拡張します。
   VSTO アドインを利用すれば、Word 文書と Excel ブックを次のようにカスタマイズできます。  
@@ -128,5 +125,3 @@ ms.locfileid: "53647820"
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)  
-  
-  

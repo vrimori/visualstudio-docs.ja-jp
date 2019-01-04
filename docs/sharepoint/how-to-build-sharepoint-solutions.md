@@ -1,9 +1,6 @@
 ---
 title: '方法: SharePoint ソリューションの構築 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,16 +14,16 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 22fda2415cfb9847c006a0bb4a0d0de576beb073
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: d7c6b0b3a3e99c5c62713d1fdc12952ea421d8c5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36756075"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53928908"
 ---
-# <a name="how-to-build-sharepoint-solutions"></a>方法: SharePoint ソリューションのビルド
+# <a name="how-to-build-sharepoint-solutions"></a>方法: SharePoint ソリューションをビルドします。
 
-ビルド、SharePoint ソリューションが Visual Studio での他のアプリケーションを構築すると同じです。 アプリケーションの構築に関する詳細については、次を参照してください。[コンパイルし、Visual Studio でビルド](../ide/compiling-and-building-in-visual-studio.md)します。 SharePoint ソリューションに固有のいくつかの考慮事項の詳細については、次を参照してください。[方法: デプロイと、SharePoint ソリューションをローカル SharePoint サイトに発行](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md)します。
+ビルド、SharePoint ソリューションが Visual Studio での他のアプリケーションを構築すると同じです。 アプリケーションの構築に関する詳細については、次を参照してください。[コンパイルし、Visual Studio でビルド](../ide/compiling-and-building-in-visual-studio.md)します。 SharePoint ソリューションに固有のいくつかの考慮事項の詳細については、次を参照してください。[方法。展開し、SharePoint ソリューションをローカル SharePoint サイトにパブリッシュ](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md)します。
 
 ## <a name="to-build-sharepoint-solutions"></a>SharePoint ソリューションを構築するには
 
@@ -38,4 +35,4 @@ ms.locfileid: "36756075"
 
 ## <a name="see-also"></a>関連項目
 
-- [ビルドし、SharePoint ソリューションのデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)

@@ -1,9 +1,6 @@
 ---
-title: ユーザー インターフェイスの更新 |Microsoft ドキュメント
-ms.custom: ''
+title: ユーザー インターフェイスの更新 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - user interfaces, updating
@@ -14,17 +11,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6b3bc8c4b87aefe62cbd27e64fc426ddb7abf96e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f4cbc2deb6f292bf188109bcf8e012f7925cdea8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31139157"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53887985"
 ---
 # <a name="updating-the-user-interface"></a>ユーザー インターフェイスの更新
 コマンドを実装した後は、新しいコマンドの状態で、ユーザー インターフェイスを更新するコードを追加できます。  
   
- 一般的な Win32 アプリケーションでコマンド セットを継続的にポーリングしてユーザーを閲覧して、個々 のコマンドの状態を調整することができます。 ただし、ため、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]シェルは、Vspackage の無制限の数をホストできる、マネージ コードと COM の間の相互運用機能アセンブリ間で特にポーリングの応答性が低下する可能性広範なポーリング  
+ 一般的な Win32 アプリケーションでコマンド セットを継続的にポーリングすることができ、ユーザーがそれらを閲覧している個々 のコマンドの状態を調整することができます。 ただし、ため、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]シェルは、Vspackage の無制限の数をホストできる、広範なポーリング応答性、特にマネージ コードと COM の間の相互運用機能アセンブリの間でポーリングが低下する可能性  
   
 ### <a name="to-update-the-ui"></a>UI を更新するには  
   
@@ -47,11 +44,11 @@ ms.locfileid: "31139157"
   
         ```  
   
-         場合のパラメーター、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A>ゼロ以外 (`TRUE`)、同期的に、すぐに更新プログラムが実行されます。 0 を渡すことをお勧め (`FALSE`) 良好なパフォーマンスを維持するためにこのパラメーターにします。 キャッシュを回避する場合は、適用、 `DontCache` .vsct ファイルで、コマンドを作成する場合にフラグを設定します。 それにもかかわらず、フラグは慎重に使用して、またはパフォーマンスが低下する可能性があります。 コマンドのフラグの詳細については、次を参照してください。、[コマンド フラグ要素](../extensibility/command-flag-element.md)ドキュメント。  
+         場合のパラメーター、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A> 0 以外の場合 (`TRUE`)、同期的に、すぐに更新プログラムが実行されます。 0 を渡すことをお勧めします。 (`FALSE`) 良好なパフォーマンスを維持するためには、このパラメーターにします。 キャッシュしないようにする場合は、適用、 `DontCache` .vsct ファイルで、コマンドを作成するときにフラグを設定します。 ただし、フラグは慎重に使用して、またはパフォーマンスが低下する可能性があります。 コマンドのフラグの詳細については、次を参照してください。、 [Command Flag 要素](../extensibility/command-flag-element.md)ドキュメント。  
   
-    -   Vspackage では、ウィンドウで、インプレース アクティブ化モデルを使用して ActiveX コントロールをホストする、使いやすい場合があります、<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager.UpdateUI%2A>メソッドです。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A>メソッドで、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>インターフェイスおよび<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager.UpdateUI%2A>メソッドで、<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager>インターフェイスが機能的に同等です。 両方が、再度すべてのコマンドの状態をクエリするための環境があります。 通常、更新プログラムはすぐに実行されません。 代わりに、更新プログラムは、アイドル時間まで延期します。 シェルは、良好なパフォーマンスを維持するためにコマンドの状態をキャッシュします。 キャッシュを回避する場合は、適用、 `DontCache` .vsct ファイルで、コマンドを作成する場合にフラグを設定します。 ただし、慎重に使用して、フラグのため、パフォーマンスが低下する可能性があります。  
+    -   Vspackage では、ウィンドウで、インプレース アクティブ化モデルを使用して ActiveX コントロールをホストする、便利な場合があります、<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager.UpdateUI%2A>メソッド。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A>メソッドで、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>インターフェイスと<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager.UpdateUI%2A>メソッドで、<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager>インターフェイスが機能的に同等です。 両方には、すべてのコマンドの状態を再クエリするための環境が発生します。 通常、更新プログラムはすぐに実行されません。 代わりに、更新プログラムは、アイドル時間まで延期します。 シェルでは、良好なパフォーマンスを維持するためにコマンドの状態をキャッシュします。 キャッシュしないようにする場合は、適用、 `DontCache` .vsct ファイルで、コマンドを作成するときにフラグを設定します。 ただし、慎重に使用して、フラグのため、パフォーマンスが低下する可能性があります。  
   
-         取得することに注意してください、<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager>インターフェイスを呼び出して、`QueryInterface`メソッドを<xref:Microsoft.VisualStudio.Shell.Interop.IOleComponentUIManager>からインターフェイスを取得して、オブジェクト、または、<xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager>サービス。  
+         取得することに注意してください、<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager>インターフェイスを呼び出すことによって、`QueryInterface`メソッドを<xref:Microsoft.VisualStudio.Shell.Interop.IOleComponentUIManager>オブジェクトまたはからインターフェイスを取得して、<xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager>サービス。  
   
 ## <a name="see-also"></a>関連項目  
  [Vspackage がユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   

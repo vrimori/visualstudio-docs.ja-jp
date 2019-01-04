@@ -10,21 +10,20 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 104a74a38099286675a742ce9eea367d9eeabe84
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 449fb0c12b11163ba0ceca981e66a7da0c399e1c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31944389"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53950200"
 ---
 # <a name="boundsrules-constrain-shape-location-and-size"></a>BoundsRules によってシェイプの位置とサイズが制限される
 
-A*境界ルール*図形の位置とサイズの制限を定義するクラスです。 図形または角また図形のユーザーがドラッグするときに繰り返し呼び出されるメソッドを提供します。
+A*境界ルール*は図形の位置とサイズの制限を定義するクラスです。 ユーザーが、図形またはコーナーまたは図形の辺のドラッグ中に繰り返し呼び出されるメソッドを提供します。
 
-次の例では、固定サイズを水平方向または垂直のバーにするのには、次の四角形を制約します。 ドラッグすると、ユーザー、角また、高さの 2 つの許可されている構成と幅のアウトラインが反転します。
+次の例では、四角形にすると、水平方向または垂直方向のいずれかの固定のサイズのバーを制約します。 ユーザーがドラッグ角または横、高さの 2 つの許可されている構成と幅のアウトラインが反転します。
 
-境界のルールがから派生したクラス<xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules>です。 ルールのインスタンスは、図形で作成されます。
+境界ルール クラスから派生<xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules>します。 ルールのインスタンスは、図形で作成されます。
 
 ```csharp
 using Microsoft.VisualStudio.Modeling.Diagrams; ...

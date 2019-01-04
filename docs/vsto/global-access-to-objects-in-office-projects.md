@@ -1,9 +1,6 @@
 ---
 title: Office プロジェクト内のオブジェクトへのグローバル アクセス
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -33,12 +30,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e01519600747a486fd2e719c720329a6423dd002
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: 843eba9cceefb2360ed24284a80f4359d092fd89
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53648947"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53909074"
 ---
 # <a name="global-access-to-objects-in-office-projects"></a>Office プロジェクト内のオブジェクトへのグローバル アクセス
   Office プロジェクトを作成すると、Visual Studio は自動的に `Globals` という名前のクラスをプロジェクトに生成します。 `Globals` クラスを使用して、プロジェクト内の任意のコードから実行時に異なる複数のプロジェクト項目にアクセスすることができます。  
@@ -87,5 +84,3 @@ ms.locfileid: "53648947"
  [Workbook ホスト項目](../vsto/workbook-host-item.md)   
  [Worksheet ホスト項目](../vsto/worksheet-host-item.md)   
  [Office ソリューションでコードを記述します。](../vsto/writing-code-in-office-solutions.md)  
-  
-  

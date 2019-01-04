@@ -2,7 +2,6 @@
 title: Roslyn アナライザーのインストール
 ms.date: 08/03/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, managed code
@@ -13,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: aa0805b3cffe5a44ae2c6198c6ca2682ceca9f95
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d828fbf2bce435c067b6bc1cc66ce379f3304988
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49865408"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53929459"
 ---
 # <a name="install-net-compiler-platform-analyzers"></a>.NET コンパイラ プラットフォームのアナライザーをインストールします。
 
@@ -71,9 +70,9 @@ Visual Studio 2017 には、.NET コンパイラ プラットフォームのコ�
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [Visual Studio で Roslyn アナライザーを使用します。](../code-quality/use-roslyn-analyzers.md)
+> [Visual Studio で Roslyn アナライザーを使用する](../code-quality/use-roslyn-analyzers.md)
 
 ## <a name="see-also"></a>関連項目
 
 - [Visual Studio で Roslyn アナライザーの概要](../code-quality/roslyn-analyzers-overview.md)
-- [FxCop アナライザーをインストールします。](../code-quality/install-fxcop-analyzers.md)
+- [FxCop アナライザーのインストール](../code-quality/install-fxcop-analyzers.md)

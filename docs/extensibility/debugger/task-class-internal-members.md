@@ -1,9 +1,6 @@
 ---
 title: Task クラス - 内部メンバー |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, Task class [.NET Framework]
@@ -14,17 +11,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9e9bbf6bbf42b8008850b540a59fa2b5d75b199
-ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
+ms.openlocfilehash: 34c8da8d661dcb0a8096576617403209a0a70c56
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39276765"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53872792"
 ---
 # <a name="task-class---internal-members"></a>タスク クラスの内部メンバー
 この記事の内部メンバーを説明します、<xref:System.Threading.Tasks.Task?displayProperty=fullName>する際に役立つクラスがカスタムのデバッガーを実装します。 このクラスの詳細については、次を参照してください。、<xref:System.Threading.Tasks.Task>参照資料です。  
   
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **名前空間:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
  **アセンブリ:** mscorlib (で*mscorlib.dll*)  
   
@@ -52,7 +49,7 @@ ms.locfileid: "39276765"
   
 ### <a name="fields"></a>フィールド  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[m_action](../../extensibility/debugger/m-action-field.md)|実行するコードを表すデリゲート、<xref:System.Threading.Tasks.Task>オブジェクト。|  
 |[m_contingentProperties](../../extensibility/debugger/m-contingentproperties-field.md)|その他のプロパティを格納、<xref:System.Threading.Tasks.Task>オブジェクト。|  

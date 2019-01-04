@@ -1,9 +1,6 @@
 ---
 title: エディターのインポート |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - services
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8ede17217dbac62bcc0086e6f4e5afca0cf9e0a0
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: cffc59c0bcaed2797b5f2548a47c067d04da56ba
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637215"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53893932"
 ---
 # <a name="editor-imports"></a>エディターのインポート
 エディター サービス、ファクトリ、およびコア エディターをさまざまな種類のアクセスの拡張機能を提供するブローカーの数値をインポートすることができます。 たとえば、インポート、<xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>を提供するために、<xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator>の特定のコンテンツ タイプ。 (このナビゲーターは、テキスト バッファーにさまざまな検索を実行します。)  
@@ -49,9 +46,9 @@ internal IEditorOptionsFactoryService m_editorOptions = null;
   
  [チュートリアル: テキスト ビューをカスタマイズします。](../extensibility/walkthrough-customizing-the-text-view.md)  
   
- [チュートリアル: 強調表示のテキスト](../extensibility/walkthrough-highlighting-text.md)  
+ [チュートリアル: テキストを強調表示します。](../extensibility/walkthrough-highlighting-text.md)  
   
- [チュートリアル: 表示クイック ヒント](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)  
+ [チュートリアル: クイック ヒントを表示します。](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)  
   
  [チュートリアル: シグネチャ ヘルプを表示します。](../extensibility/walkthrough-displaying-signature-help.md)  
   
@@ -67,7 +64,7 @@ internal IEditorOptionsFactoryService m_editorOptions = null;
 internal SVsServiceProvider ServiceProvider = null;   
 ```  
   
- 参照してください[チュートリアル: エディター拡張機能から DTE オブジェクトにアクセス](../extensibility/walkthrough-accessing-the-dte-object-from-an-editor-extension.md)詳細についてはします。  
+ 「[チュートリアル:エディター拡張機能から DTE オブジェクトにアクセス](../extensibility/walkthrough-accessing-the-dte-object-from-an-editor-extension.md)詳細についてはします。  
   
 ## <a name="services"></a>Services  
  エディター サービスは、サービスを提供し、複数のコンポーネント間で共有される通常の 1 つのエンティティです。  

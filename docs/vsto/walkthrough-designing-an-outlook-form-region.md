@@ -1,9 +1,6 @@
 ---
 title: 'チュートリアル: Outlook フォーム領域をデザインします。'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 693261bb6894681b613ad0db2f0b3c116109a782
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c7c14b7702acff281ab32483930559b5fe521044
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813688"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53942373"
 ---
 # <a name="walkthrough-design-an-outlook-form-region"></a>チュートリアル: Outlook フォーム領域をデザインします。
   カスタム フォーム領域は、標準またはカスタムの Microsoft Office Outlook フォームを拡張します。 このチュートリアルでは、連絡先アイテムのインスペクター ウィンドウに新しいページとして表示するカスタム フォーム領域をデザインします。 このフォーム領域では、アドレス情報を Windows Live Local Search の Web サイトに送信することによって、連絡先に設定された個々の住所の地図を表示します。 フォーム領域については、次を参照してください。[作成の Outlook フォーム領域](../vsto/creating-outlook-form-regions.md)します。  
@@ -49,7 +46,7 @@ ms.locfileid: "49813688"
   
 - [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)] または [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)]。  
   
-  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")このトピックのビデオ版について、次を参照してください。[ビデオ方法: Outlook フォーム領域をデザイン](http://go.microsoft.com/fwlink/?LinkID=140824)します。  
+  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")このトピックのビデオ版について、次を参照してください。[ビデオ方法。Outlook フォーム領域をデザイン](http://go.microsoft.com/fwlink/?LinkID=140824)します。  
   
 ## <a name="create-a-new-outlook-vsto-add-in-project"></a>新しい Outlook VSTO アドイン プロジェクトを作成します。  
  まず、基本的な VSTO アドイン プロジェクトを作成します。  
@@ -62,7 +59,7 @@ ms.locfileid: "49813688"
   
 3.  プロジェクトを任意のディレクトリに保存します。  
   
-     詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
+     詳細については、「[方法 :Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
 ## <a name="add-a-form-region-to-the-outlook-vsto-add-in-project"></a>フォーム領域を Outlook VSTO アドイン プロジェクトに追加します。  
  Outlook VSTO アドイン ソリューションには、1 つ以上の Outlook フォーム領域アイテムを格納できます。 使用して、プロジェクトにフォーム領域アイテムを追加、**新しい Outlook フォーム領域**ウィザード。  
@@ -182,5 +179,3 @@ ms.locfileid: "49813688"
  [フォーム領域を Outlook メッセージ クラスに関連付ける](../vsto/associating-a-form-region-with-an-outlook-message-class.md)   
  [Outlook フォーム領域のカスタム アクション](../vsto/custom-actions-in-outlook-form-regions.md)   
  [方法: Outlook フォーム領域が表示されないようにします。](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)  
-  
-  

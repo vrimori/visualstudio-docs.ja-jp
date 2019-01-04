@@ -10,13 +10,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5988876bc1cdc7d186efb60d7d3875f9946bfc7d
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: c0f69d660a1693e42662a82a2a19ce790725fb43
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50967520"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53869256"
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl ファイル
 
@@ -97,9 +96,9 @@ DslDefinition.dsl ファイルでは、モニカーを使用して特定の項�
 
 モニカー システムでは、XML ツリー内で兄弟関係にあるクラスには、識別可能な名前を使用する必要があります。 このため、たとえば同名のクラスが 2 つ含まれているドメイン固有言語定義を保存しようとすると、検証エラーが発生します。 後で DslDefinition.dsl ファイルを正しく再読み込みできるようにするため、DslDefinition.dsl ファイルを保存する前に必ず重複名エラーなどを訂正してください。
 
-それぞれの型に固有のモニカーがあります (DomainClassMoniker、DomainRelationshipMoniker など)。
+それぞれの種類は、モニカーの独自の型を持ちます。DomainClassMoniker、DomainRelationshipMoniker、しにします。
 
-## <a name="types"></a>型
+## <a name="types"></a>種類
 
 Types セクションでは、DslDefinition.dsl ファイルにプロパティの型として含まれているすべての型が指定されます。 これらの型は、外部型 (System.String など) と列挙型に分類されます。
 
@@ -228,7 +227,7 @@ Types セクションでは、DslDefinition.dsl ファイルにプロパティ�
 
 各リレーションシップにはソース ロールとターゲット ロールが含まれています。これらのロールの属性を次に示します。
 
--   `RolePlayer` 属性は、リンクされたインスタンス (ソースは OutPort、ターゲットは InPort) のドメイン クラスを参照します。
+-   `RolePlayer`属性は、リンクされたインスタンスのドメイン クラスを参照します。ソース、ターゲットの InPort outPort します。
 
 -   `Multiplicity` 属性には、ZeroMany、ZeroOne、One、および OneMany という 4 つの値を指定できます。 この属性は、1 つのロール プレーヤーに関連付けることができるこのリレーションシップのリンクの数を示します。
 
@@ -467,7 +466,7 @@ A **DomainPropertyMoniker**属性は、データが参照するプロパティ�
 
 (Connection リレーションシップには、要素と属性の名前を指定する独自の XML クラス データがあります。)
 
-場合、 **OmitElement**属性の設定を true に、リレーションシップ ロール名を省略すると、2 つのクラスは、複数のリレーションシップを持つ場合は、あいまいでないし、シリアル化されたファイルで省略しています。 例えば:
+場合、 **OmitElement**属性の設定を true に、リレーションシップ ロール名を省略すると、2 つのクラスは、複数のリレーションシップを持つ場合は、あいまいでないし、シリアル化されたファイルで省略しています。 例:
 
 ```
 <component name="Component3">

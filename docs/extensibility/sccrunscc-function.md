@@ -1,9 +1,6 @@
 ---
 title: SccRunScc 関数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - SccRunScc
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 40c9ced01c16315840194e770a05ba34df4a9321
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 1f9798f280d271299037c001e71f9c9f5ed1940f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49920795"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53956475"
 ---
 # <a name="sccrunscc-function"></a>SccRunScc 関数
 この関数は、ソース コントロール管理ツールを呼び出します。  
@@ -67,10 +64,10 @@ SCCRTN SccRunScc(
   
  この関数は、カウントと、現在選択されているファイルのファイル名の配列で呼び出されます。 管理インターフェイス内のファイルを事前に選択するファイルの一覧を使用できる管理ツールがサポートする場合それ以外の場合、一覧を無視できます。  
   
- ユーザーが選択すると、この関数が呼び出される通常の**起動\<ソース管理サーバー >** から、**ファイル** -> **ソース管理**メニュー。 これは、**起動**メニュー オプションを常に無効になっているか、レジストリ エントリを設定しても非表示します。 参照してください[方法: ソース管理のプラグインをインストール](../extensibility/internals/how-to-install-a-source-control-plug-in.md)詳細についてはします。 場合にのみ、この関数が呼び出されます[SccInitialize](../extensibility/sccinitialize-function.md)を返します、`SCC_CAP_RUNSCC`機能ビット (を参照してください[機能フラグ](../extensibility/capability-flags.md)詳細についてはこれと他の機能のビットで)。  
+ ユーザーが選択すると、この関数が呼び出される通常の**起動\<ソース管理サーバー >** から、**ファイル** -> **ソース管理**メニュー。 これは、**起動**メニュー オプションを常に無効になっているか、レジストリ エントリを設定しても非表示します。 「[方法:ソース管理のプラグインをインストール](../extensibility/internals/how-to-install-a-source-control-plug-in.md)詳細についてはします。 場合にのみ、この関数が呼び出されます[SccInitialize](../extensibility/sccinitialize-function.md)を返します、`SCC_CAP_RUNSCC`機能ビット (を参照してください[機能フラグ](../extensibility/capability-flags.md)詳細についてはこれと他の機能のビットで)。  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
- [方法: ソース管理プラグインのインストール](../extensibility/internals/how-to-install-a-source-control-plug-in.md)   
+ [方法: ソース管理プラグインのインストールします。](../extensibility/internals/how-to-install-a-source-control-plug-in.md)   
  [機能フラグ](../extensibility/capability-flags.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)

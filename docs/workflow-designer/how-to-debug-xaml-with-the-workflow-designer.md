@@ -3,19 +3,18 @@ title: ワークフロー デザイナー - 方法。ワークフロー デザ�
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.prod: visual-studio-dev15
-ms.technology: vs-workflow-designer
 ms.assetid: d9305dbc-af62-4bdd-b03f-c54e3fe9ecc7
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: a486183b9f8c2f8a41b888d32cbc4113d25e51c8
-ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
+ms.openlocfilehash: 03556c00a6b43e7bbab308bf1acbb1501582a118
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53684627"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53823485"
 ---
 # <a name="how-to-debug-xaml-with-the-workflow-designer"></a>方法: ワークフロー デザイナーを使用して XAML をデバッグする
 

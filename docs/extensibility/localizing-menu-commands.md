@@ -1,9 +1,6 @@
 ---
 title: メニュー コマンドのローカライズ |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - localize
@@ -18,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c8eb9e566f4f5916961a95a1c61f8fdcbb689f1e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 27c12228de5a49d0b61cc61e5c1233343430b686
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49876218"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53934058"
 ---
 # <a name="localize-menu-commands"></a>メニュー コマンドをローカライズします。
 ローカライズされたを作成してメニューやツールバーのローカライズされたテキストを行うことができます *.vsct*ファイルし、ローカライズ *.resx*に組み込むこと、VSPackage とし、プロジェクト ファイルの更新ファイル、変更します。  
@@ -157,6 +154,6 @@ ms.locfileid: "49876218"
      これは、メイン アセンブリでは、および各言語のリソース アセンブリを作成します。 展開プロセスをローカライズする方法の詳細については、次を参照してください[ローカライズ VSIX パッケージ。](../extensibility/localizing-vsix-packages.md)  
   
 ## <a name="see-also"></a>関連項目  
- [メニューとコマンドを拡張します。](../extensibility/extending-menus-and-commands.md)   
+ [メニューとコマンドを拡張](../extensibility/extending-menus-and-commands.md)   
  [Menucommand とOleMenuCommands](../extensibility/menucommands-vs-olemenucommands.md)   
  [グローバル化およびアプリケーションのローカライズ](../ide/globalizing-and-localizing-applications.md)

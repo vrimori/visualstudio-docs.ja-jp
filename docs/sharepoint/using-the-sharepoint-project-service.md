@@ -1,9 +1,6 @@
 ---
 title: SharePoint プロジェクト サービスの使用 |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,17 +13,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a5d4c2950754ebbef2920720cf784084b2968a82
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: a8416d38629c8970e9cc90e0d873138970b16258
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295060"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53875820"
 ---
 # <a name="use-the-sharepoint-project-service"></a>SharePoint プロジェクト サービスを使用します。
   SharePoint プロジェクト システムには、そのプロジェクト システムに関係するタスクを実行するために使用できるプロジェクト サービスが含まれています。 プロジェクト サービスは <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> オブジェクトです。  
   
- SharePoint プロジェクト サービスは、SharePoint ツールのどの拡張機能からでもアクセスできます。 また、アドインや VSPackage など、他の種類の Visual Studio 拡張機能の中でもアクセスできます。 詳細については、次を参照してください。[方法: SharePoint プロジェクト サービスを取得](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md)します。  
+ SharePoint プロジェクト サービスは、SharePoint ツールのどの拡張機能からでもアクセスできます。 また、アドインや VSPackage など、他の種類の Visual Studio 拡張機能の中でもアクセスできます。 詳細については、「[方法 :SharePoint プロジェクト サービスを取得](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md)します。  
   
 ## <a name="project-service-features"></a>プロジェクト サービスの機能
  次の表に、SharePoint プロジェクト サービスを使用して実行できるタスクと、各タスクを実行するために使用する <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> メソッドまたはプロパティの一覧を示します。  
@@ -47,8 +44,7 @@ ms.locfileid: "51295060"
   
 ## <a name="see-also"></a>関連項目
  [SharePoint プロジェクト システムの種類とその他の Visual Studio プロジェクトの種類間の変換します。](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md)   
- [方法: SharePoint プロジェクト サービスを取得](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md)   
+ [方法: SharePoint プロジェクト サービスを取得します。](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md)   
  [Visual Studio の SharePoint ツールを拡張します。](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)   
  [ツールの拡張機能を SharePoint のプログラミング モデルの概要](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)   
- [方法: DTE オブジェクトからサービスを取得する](https://msdn.microsoft.com/library/bb166401.aspx)  
-  
+ [方法: DTE オブジェクトからサービスを取得します。](https://msdn.microsoft.com/library/bb166401.aspx)  

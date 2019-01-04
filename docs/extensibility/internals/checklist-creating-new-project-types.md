@@ -1,9 +1,6 @@
 ---
-title: 'チェックリスト: 新しいプロジェクトの種類を作成する |Microsoft Docs'
-ms.custom: ''
+title: チェックリスト:新しいプロジェクトの種類を作成する |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], creating new types
@@ -14,19 +11,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3da952e22515b48f06fdc50b34b2eb49f5709cc2
-ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
+ms.openlocfilehash: edd4c0a1bf4b6cbc76c2bc4bdbc597efd348799c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46370576"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53861586"
 ---
-# <a name="checklist-create-new-project-types"></a>チェックリスト: 新しいプロジェクトの種類を作成します。
+# <a name="checklist-create-new-project-types"></a>チェックリスト:新しいプロジェクトの種類を作成します。
 新しいプロジェクトの種類を作成するいくつかのタスクを完了する必要があります。 次のチェックリストでは、これらのタスクのガイドを提供します。  
   
 1.  新しいプロジェクトの種類の機能を設計します。 詳細については、次を参照してください。[プロジェクトの種類の設計に関する決定事項](../../extensibility/internals/project-type-design-decisions.md)します。  
   
-2.  どのエディターをコード要素とその他のプロジェクト要素の使用を決定します。 コアまたは標準のエディターを使用するか作成して、プロジェクト固有のエディターを使用することができます。 詳細については、次を参照してください。[カスタム エディターとデザイナーを作成する](../../extensibility/creating-custom-editors-and-designers.md)と[方法: プロジェクトに固有のエディターを開く](../../extensibility/how-to-open-project-specific-editors.md)します。  
+2.  どのエディターをコード要素とその他のプロジェクト要素の使用を決定します。 コアまたは標準のエディターを使用するか作成して、プロジェクト固有のエディターを使用することができます。 詳細については、次を参照してください。[カスタム エディターとデザイナーを作成する](../../extensibility/creating-custom-editors-and-designers.md)と[方法。プロジェクトに固有のエディターを開く](../../extensibility/how-to-open-project-specific-editors.md)します。  
   
 3.  プロジェクト項目を持つへの参加のレベルを決定する、**クラス ビュー**と**オブジェクト ブラウザー**します。 詳細については、次を参照してください。[シンボル参照ツールのサポート](../../extensibility/internals/supporting-symbol-browsing-tools.md)します。  
   
@@ -56,7 +53,7 @@ ms.locfileid: "46370576"
   
 6.  テスト、デバッグ、およびプロジェクトの種類を開始します。  
   
-7.  プロジェクトを表示、**プロジェクト**のタブ、**参照の追加** ダイアログ ボックスを設定して`VARIANT_TRUE`の値として`VSHPROPID_ShowProjInSolutionPage`します。 詳細については、<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> および <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> を参照してください。  
+7.  プロジェクトを表示、**プロジェクト**のタブ、**参照の追加** ダイアログ ボックスを設定して`VARIANT_TRUE`の値として`VSHPROPID_ShowProjInSolutionPage`します。 詳細については、次のトピックを参照してください。 <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> および <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>  
   
 8.  Microsoft インストーラーの作成 (*.msi*)、Vspackage のインストール用のファイル。 詳細については、次を参照してください。 [Windows インストーラーによる Vspackage のインストール](../../extensibility/internals/installing-vspackages-with-windows-installer.md)、[プロジェクトの種類を登録](../../extensibility/internals/registering-a-project-type.md)、および[Vspackage](../../extensibility/internals/vspackages.md)します。  
   

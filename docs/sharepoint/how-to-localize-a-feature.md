@@ -1,13 +1,8 @@
 ---
 title: '方法: フィーチャーをローカライズ |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -18,14 +13,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c143016aaec81c65c118923ff9513bb4607353dc
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 165eee357c001720af132236a8577f259efa4f24
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119495"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53887679"
 ---
-# <a name="how-to-localize-a-feature"></a>方法: フィーチャーをローカライズ
+# <a name="how-to-localize-a-feature"></a>方法: フィーチャーをローカライズします。
   機能のタイトルと説明は、既定では、ハード コーディングされた文字列値を使用します。 フィーチャーのタイトルと説明をローカライズするには、ローカライズされたリソースを参照する式で、文字列を置き換えます。  
   
 ## <a name="localize-a-feature"></a>フィーチャーをローカライズします。  
@@ -64,7 +59,6 @@ ms.locfileid: "37119495"
   
 ## <a name="see-also"></a>関連項目
  [SharePoint ソリューションをローカライズします。](../sharepoint/localizing-sharepoint-solutions.md)   
- [方法: リソース ファイルを追加](../sharepoint/how-to-add-a-resource-file.md)   
- [方法: ASPX マークアップのローカライズ](../sharepoint/how-to-localize-aspx-markup.md)   
- [方法: コードのローカライズ](../sharepoint/how-to-localize-code.md)  
-  
+ [方法: リソース ファイルを追加します。](../sharepoint/how-to-add-a-resource-file.md)   
+ [方法: ASPX マークアップをローカライズします。](../sharepoint/how-to-localize-aspx-markup.md)   
+ [方法: コードをローカライズします。](../sharepoint/how-to-localize-code.md)  

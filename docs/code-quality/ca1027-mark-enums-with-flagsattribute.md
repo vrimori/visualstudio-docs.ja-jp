@@ -1,8 +1,7 @@
 ---
-title: 'CA1027: FlagsAttribute で列挙値をマークします'
+title: CA1027:列挙型を FlagsAttribute に設定します
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - MarkEnumsWithFlags
@@ -16,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 33dd5d3e4774084ca6b78708a0e617ca87df8ff2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9a559c20cd45ae39210421b647e8efd6c0928ade
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49885643"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53882105"
 ---
-# <a name="ca1027-mark-enums-with-flagsattribute"></a>CA1027: FlagsAttribute で列挙値をマークします
+# <a name="ca1027-mark-enums-with-flagsattribute"></a>CA1027:列挙型を FlagsAttribute に設定します
 
 |||
 |-|-|
@@ -47,12 +46,12 @@ ms.locfileid: "49885643"
  列挙値を結合できるしたくない場合は、この規則による警告を抑制します。
 
 ## <a name="example"></a>例
- 次の例では、`DaysEnumNeedsFlags`が列挙体を使用するための要件を満たす<xref:System.FlagsAttribute>、ことはありません。 `ColorEnumShouldNotHaveFlag`列挙体が 2 の累乗である値はありませんが、正しくないを指定します<xref:System.FlagsAttribute>します。 ルールに違反する[CA2217: FlagsAttribute で列挙をマークしない](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)します。
+ 次の例では、`DaysEnumNeedsFlags`が列挙体を使用するための要件を満たす<xref:System.FlagsAttribute>、ことはありません。 `ColorEnumShouldNotHaveFlag`列挙体が 2 の累乗である値はありませんが、正しくないを指定します<xref:System.FlagsAttribute>します。 ルールに違反する[CA2217:FlagsAttribute で列挙をマークしない](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)します。
 
  [!code-csharp[FxCop.Design.EnumFlags#1](../code-quality/codesnippet/CSharp/ca1027-mark-enums-with-flagsattribute_1.cs)]
 
 ## <a name="related-rules"></a>関連するルール
- [CA2217: enums を FlagsAttribute に設定しません](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+ [CA2217:FlagsAttribute で列挙をマークしないでください。](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
 ## <a name="see-also"></a>関連項目
  <xref:System.FlagsAttribute?displayProperty=fullName>

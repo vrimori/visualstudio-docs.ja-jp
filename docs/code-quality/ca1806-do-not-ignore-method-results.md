@@ -1,8 +1,7 @@
 ---
-title: 'CA1806: メソッドの結果を無視しない'
+title: CA1806:メソッドの結果を無視しない
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - CA1806
@@ -18,14 +17,14 @@ dev_langs:
 - CSharp
 - VB
 manager: douge
-ms.openlocfilehash: ebbad9eb48a448aa756f580ade794ba70eb25611
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 865c4d26758021b0f0200f7834d02cd34f22bc8a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45546839"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53954199"
 ---
-# <a name="ca1806-do-not-ignore-method-results"></a>CA1806: メソッドの結果を無視しない
+# <a name="ca1806-do-not-ignore-method-results"></a>CA1806:メソッドの結果を無視しない
 
 |||
 |-|-|
@@ -55,7 +54,7 @@ HRESULT またはエラー コードを無視すると、エラー条件で予�
 
  メソッド A が B、メソッドを呼び出しますが、B メソッドから返される新しい文字列インスタンスを使用しないかどうか。 インスタンスを引数として別のメソッドに渡す、変数に代入します。 または、必要ない場合は、呼び出しを削除します。
 
- - または -
+ または
 
  またはエラー コードをメソッド A、B のメソッドを呼び出しますが、HRESULT を使用しない場合、メソッドを返します。 条件付きステートメントで、結果を使用して、結果を変数に代入または別のメソッドに引数として渡します。
 

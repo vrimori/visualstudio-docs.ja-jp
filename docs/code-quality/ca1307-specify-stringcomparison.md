@@ -1,8 +1,7 @@
 ---
-title: 'CA1307: StringComparison の指定'
+title: CA1307:StringComparison の指定
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
 - CA1307
@@ -16,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 67f0d5152dcdef5ffa3abb76d92e68fd99f9b637
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: e1a4ac50cd189368bcc59aaff6b02b6f4b639a6b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45550415"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53908932"
 ---
-# <a name="ca1307-specify-stringcomparison"></a>CA1307: StringComparison の指定
+# <a name="ca1307-specify-stringcomparison"></a>CA1307:StringComparison の指定
 
 |||
 |-|-|
@@ -49,4 +48,4 @@ ms.locfileid: "45550415"
 ## <a name="see-also"></a>関連項目
 
 - [グローバリゼーションに関する警告](../code-quality/globalization-warnings.md)
-- [CA1309: 順序を示す StringComparison を使用します](../code-quality/ca1309-use-ordinal-stringcomparison.md)
+- [CA1309:StringComparison を使用します](../code-quality/ca1309-use-ordinal-stringcomparison.md)

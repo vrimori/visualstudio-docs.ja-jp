@@ -2,7 +2,6 @@
 title: '[書式設定] ([オプション] ダイアログ ボックス - [テキスト エディター] - [XML])'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-xml-tools
 ms.topic: reference
 ms.assetid: bb539b3a-027c-4b2f-906e-403e0e22ba8d
 author: gewarren
@@ -10,29 +9,29 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f92ced5ca5ac007969a06cec7f253617ee293e3
-ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
+ms.openlocfilehash: 05ddfcb0613dac08fb6e4323062f87475bd8f0d1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34548792"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53938593"
 ---
 # <a name="formatting-xml-text-editor-options-dialog-box"></a>書式設定すると、XML、テキスト エディターのオプション ダイアログ ボックス
 
-このダイアログ ボックスでは、XML エディターの書式設定を指定することができます。 アクセスすることができます、**オプション**からダイアログ ボックス、**ツール**メニュー。
+このダイアログ ボックスでは、XML エディターの書式設定を指定することができます。 アクセスできる、**オプション** ダイアログ ボックスから、**ツール**メニュー。
 
 > [!NOTE]
-> 選択すると、これらの設定は使用可能な**テキスト エディター**フォルダー、 **XML**フォルダー、し、**書式設定**オプションを**のオプション**  ダイアログ ボックス。
+> 選択すると、これらの設定は使用可能な**テキスト エディター**フォルダー、 **XML**フォルダーをクリックし、**書式設定**オプションを**のオプション**  ダイアログ ボックス。
 
 ## <a name="attributes"></a>属性
- **手動による属性の書式を保持します。**
+ **手動による属性の書式設定を保持する**
 
  属性の書式は再設定されません。 既定値です。
 
 > [!NOTE]
 > 属性が複数行にわたっている場合、エディターは親要素のインデントに対応するように属性の各行にインデントを設定します。
 
- **独自の行の属性を揃える**
+ **独自の行の属性を整列します。**
 
  最初の属性のインデントに対応するように、2 番目およびそれ以降の行頭を揃えて配置します。 XML テキストで属性がどのように並べられるかについて例を次に示します。
 
@@ -48,7 +47,7 @@ ms.locfileid: "34548792"
 
  クリップボードから貼り付ける XML テキストの書式を再設定します。
 
- **終了タグの完了時に**
+ **終了タグの完成時**
 
  終了タグが完了したときに要素の書式を再設定します。
 

@@ -1,9 +1,6 @@
 ---
-title: ソリューション |Microsoft ドキュメント
-ms.custom: ''
+title: ソリューション |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - solutions, VSPackages
@@ -14,19 +11,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d04b64eaec14fb91e76cf1d5edc6c7151b0008b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 14c2a5f9d5c9d2a3a7a3425ee34f8e895a856052
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31129711"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53869480"
 ---
 # <a name="solutions"></a>ソリューション
-ソリューションは、連携するアプリケーションを作成する 1 つまたは複数のプロジェクトのグループです。 ソリューションに関連するプロジェクトとステータスの詳細については、2 つのソリューション ファイル、テキスト ベースのソリューション (.sln) ファイルおよびバイナリのソリューション ユーザー オプション (.suo) ファイルに格納されます。  
+ソリューションは、連携してアプリケーションを作成する 1 つまたは複数のプロジェクトのグループです。 ソリューションに関連するプロジェクトとステータス情報は、2 つのソリューション ファイル、テキスト ベースのソリューション (.sln) ファイルおよびバイナリ ソリューション ユーザー オプション (.suo) ファイルに格納されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [概要](../../extensibility/internals/solutions-overview.md)  
- ソリューション、およびソリューションを開いたときに発生するプロセスに含まれるソリューション ファイルの種類について説明します。  
+ ソリューションとソリューションを開いたときに発生するプロセスに含まれるソリューション ファイルの種類について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
  [ソリューション (.Sln) ファイル](../../extensibility/internals/solution-dot-sln-file.md)  

@@ -8,13 +8,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: e9f4c77f06e1a899cd6490479802ef300bea4256
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: 4e3f767eeb6ed79aed3281cbe88b1eb1fe46738d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50966454"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53847489"
 ---
 # <a name="working-with-domain-specific-language-solutions"></a>ドメイン固有言語ソリューションの使用
 ドメイン固有言語 (DSL) は、Visual Studio ソリューションを使用して作成されます。 このセクション設定し、ソリューションをカスタマイズする方法の詳細については。

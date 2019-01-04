@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによってドキュメントを保存'
-ms.custom: ''
+title: '方法: プログラムによってドキュメントを保存します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,14 +13,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e794a995d1e978cf5aae8d1b6ec9c1711436af73
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 99a50ec83d69217d123d11aa83ff02600b82108c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49883478"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53821595"
 ---
-# <a name="how-to-programmatically-save-documents"></a>方法: プログラムによってドキュメントを保存
+# <a name="how-to-programmatically-save-documents"></a>方法: プログラムによってドキュメントを保存します。
   Microsoft Office Word 文書を保存するいくつかの方法はあります。 ドキュメントを保存するには、ドキュメントの名前を変更することがなく、または新しい名前を持つ文書を保存することができます。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
@@ -93,5 +90,3 @@ ms.locfileid: "49883478"
  [方法: プログラムによって既存文書を開く](../vsto/how-to-programmatically-open-existing-documents.md)   
  [Document ホスト項目](../vsto/document-host-item.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
-  
-  

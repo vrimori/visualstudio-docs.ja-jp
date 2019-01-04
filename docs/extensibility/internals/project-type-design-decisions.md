@@ -1,9 +1,6 @@
 ---
 title: プロジェクトの種類の設計上の決定 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - project types, project file persistence
@@ -16,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3bd6d2188b46093c5bfe18f9cabe985a953c000f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 01bebdb26b4a3b89d9f9814c9428107d2cef6b9e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49869484"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53898597"
 ---
 # <a name="project-type-design-decisions"></a>プロジェクト タイプのデザインの方針
 新しいプロジェクトの種類を作成する前に、プロジェクトの種類に関するいくつかの設計上の決定を行う必要があります。 使用して、プロジェクトに含まれる項目、プロジェクト ファイルの保存方法、およびどのようなコミットメント モデルの種類を決定する必要があります。  
@@ -60,7 +57,7 @@ ms.locfileid: "49869484"
  トランザクション モードを使用してデータ オブジェクトが開かれると、変更はメモリに一時的な場所に保存され、ユーザーが手動でファイルの保存を選択するまではコミットされません。 その時点では、すべての変更はまとめて行う必要があります。 または変更は行われません。  
   
 ## <a name="see-also"></a>関連項目  
- [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   
+ [チェックリスト:新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   
  [開くと、プロジェクト項目の保存](../../extensibility/internals/opening-and-saving-project-items.md)   
  [プロジェクトの永続化](../../extensibility/internals/project-persistence.md)   
  [プロジェクト モデルの要素](../../extensibility/internals/elements-of-a-project-model.md)   

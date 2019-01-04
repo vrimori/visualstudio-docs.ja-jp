@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによって Word のドキュメント内の範囲をリセット'
-ms.custom: ''
+title: '方法: プログラムによって Word のドキュメント内の範囲をリセットします。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,14 +13,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0da42b0e6ad6f8761e474292532728beb3987c57
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 7cb0b4ec52d948b321733a56f14ebc51a9cbb42f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672366"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53821731"
 ---
-# <a name="how-to-programmatically-reset-ranges-in-word-documents"></a>方法: プログラムによって Word のドキュメント内の範囲をリセット
+# <a name="how-to-programmatically-reset-ranges-in-word-documents"></a>方法: プログラムによって Word のドキュメント内の範囲をリセットします。
   <xref:Microsoft.Office.Interop.Word.Range.SetRange%2A> メソッドを使用して、Microsoft Office の Word 文書で既存の範囲のサイズを変更します。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
@@ -66,9 +63,7 @@ ms.locfileid: "35672366"
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#42](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#42)]  
   
 ## <a name="see-also"></a>関連項目  
- [方法: プログラムによってドキュメント内の範囲を拡張](../vsto/how-to-programmatically-extend-ranges-in-documents.md)   
+ [方法: プログラムによってドキュメント内の範囲を拡張します。](../vsto/how-to-programmatically-extend-ranges-in-documents.md)   
  [方法: プログラムで定義し、ドキュメントで範囲を選択します](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   
  [方法: 範囲の先頭と末尾の文字をプログラムで取得します。](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)   
- [方法: プログラムによって範囲またはドキュメント内の選択を折りたたむ](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)  
-  
-  
+ [方法: プログラムまたはドキュメント内の選択範囲を折りたたむ](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)  

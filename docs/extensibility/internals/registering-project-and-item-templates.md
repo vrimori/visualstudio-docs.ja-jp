@@ -1,9 +1,6 @@
 ---
 title: プロジェクトと項目テンプレートの登録 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], adding items
@@ -17,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fea06b4e36b35266f39dc07d58a29c1b53310b57
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9bf60283dd56268ff7b47b5f0e81ebb23ee28197
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49934601"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53930623"
 ---
 # <a name="registering-project-and-item-templates"></a>プロジェクトと項目テンプレートの登録
 プロジェクトの種類には、そのプロジェクトとプロジェクト項目テンプレートが配置されるディレクトリを登録する必要があります。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 表示するものを決定する、プロジェクトの種類に関連付けられている登録情報を使用して、**新しいプロジェクトの追加**と**新しい項目の追加** ダイアログ ボックス。  
@@ -44,7 +41,7 @@ ms.locfileid: "49934601"
 |----------|----------|-----------------|  
 |@|REG_SZ|この種類のプロジェクトの既定の名前。|  
 |DisplayName|REG_SZ|パッケージ サテライト DLL から取得する名前のリソース ID が登録されます。|  
-|Package|REG_SZ|パッケージの下に登録されているパッケージのクラス ID。|  
+|パッケージ|REG_SZ|パッケージの下に登録されているパッケージのクラス ID。|  
 |ProjectTemplatesDir|REG_SZ|プロジェクト テンプレート ファイルの既定のパス。 プロジェクト テンプレート ファイルがによって表示される、**新しいプロジェクト**テンプレート。|  
 
 ### <a name="registering-item-templates"></a>項目テンプレートを登録します。  

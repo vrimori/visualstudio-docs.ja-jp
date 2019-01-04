@@ -1,9 +1,6 @@
 ---
 title: カスタム エディターとデザイナーを作成する |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - designers [Visual Studio SDK]
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 05eeae4901af8780927e0ce0577b385ee9ffa371
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 2c3f7a4b3f3219be4a4e3a40a0bb792b34599ce0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49950903"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53946998"
 ---
 # <a name="create-custom-editors-and-designers"></a>カスタム エディターとデザイナーを作成します。
 Visual Studio 統合開発環境 (IDE) では、さまざまな種類のエディターをホストできます。  
@@ -76,7 +73,7 @@ Visual Studio 統合開発環境 (IDE) では、さまざまな種類のエデ�
  [チュートリアル: カスタム エディターを作成します。](../extensibility/walkthrough-creating-a-custom-editor.md)  
  カスタム エディターを作成する方法について説明します。  
   
- [チュートリアル: カスタム エディターへの機能を追加します。](../extensibility/walkthrough-adding-features-to-a-custom-editor.md)  
+ [チュートリアル: カスタム エディターに機能を追加します。](../extensibility/walkthrough-adding-features-to-a-custom-editor.md)  
  カスタム エディターに機能を追加する方法について説明します。  
   
  [デザイナーの初期化とメタデータの構成](../extensibility/designer-initialization-and-metadata-configuration.md)  

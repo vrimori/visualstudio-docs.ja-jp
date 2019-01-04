@@ -1,9 +1,6 @@
 ---
-title: プロジェクト システムを拡張するためのコマンドの IDE 定義 |Microsoft ドキュメント
-ms.custom: ''
+title: プロジェクト システムを拡張するための IDE 定義コマンド |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - commands, project systems
@@ -14,28 +11,28 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4941f5d842f311f078594ee9a9deef02219ea05d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0e3dc6a30dedebd8a5bc25c53e86aff4d3315ff8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31132016"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53990871"
 ---
-# <a name="ide-defined-commands-for-extending-project-systems"></a>プロジェクト システムを拡張するための IDE 定義のコマンド
-プロジェクト システムを拡張する場合は、コマンドを使用してコマンドによって提供されるグループ、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE です。  
+# <a name="ide-defined-commands-for-extending-project-systems"></a>プロジェクト システムを拡張するための IDE 定義コマンド
+プロジェクト システムを拡張する場合は、コマンドを使用して、コマンドによって提供されるグループ、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE。  
   
- 次のセクションはプロジェクト システムを拡張するために特に役立ちますコマンド項目を一覧表示します。  
+ 次のセクションでは、プロジェクト システムを拡張する場合に特に役立ちますコマンド項目を一覧表示します。  
   
 ## <a name="command-menus"></a>コマンド メニュー  
- 次の表は、プロジェクトのエクステンダーを呼び出す高レベルのコマンドを配置するための場所は便利コマンド メニューを示します。  
+ 次の表では、プロジェクトのエクステンダーを呼び出す高レベルのコマンドを配置するための便利な場所であるコマンド メニューを示します。  
   
 |コマンド メニュー|説明|  
 |------------------|-----------------|  
-|IDM_VS_MENU_PROJECT|**プロジェクト**トップレベルのメニュー。|  
+|IDM_VS_MENU_PROJECT|**プロジェクト**の最上位メニュー。|  
 |IDM_VS_TOOL_PROJWIN|**ソリューション エクスプ ローラー**ツールバー。|  
   
 ## <a name="shortcut-menus"></a>ショートカット メニュー  
- 次の表に、ショートカット メニューで、単一のノードが選択したときに適用される、**ソリューション エクスプ ローラー**で選択した複数の同種がある場合や、**ソリューション エクスプ ローラー**、ときに選択したすべてのノードでは、同じ型です。  
+ 次の表に、ショートカット メニューで、1 つのノードが選択されているときに適用される、**ソリューション エクスプ ローラー**、または複数が同種で選択されている場合、**ソリューション エクスプ ローラー**、ときに選択したすべてのノードでは、同じ型です。  
   
 |ショートカット メニュー|説明|  
 |-------------------|-----------------|  
@@ -43,34 +40,34 @@ ms.locfileid: "31132016"
 |<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_ITEMNODE>|ファイルが選択されている場合に適用されます。|  
 |<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_FOLDERNODE>|フォルダーが選択されている場合に適用されます。|  
 |IDM_VS_CTXT_WEBREFFOLDER|Web 参照フォルダーが選択されている場合に適用されます。|  
-|<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_REFERENCEROOT>|「参照」と呼ばれる参照ルート ノードが選択されている場合に適用されます。|  
+|<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_REFERENCEROOT>|「参照」と呼ばれるリファレンスのルート ノードが選択されている場合に適用されます。|  
 |<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_REFERENCE>|参照ノードが選択されている場合に適用されます。アセンブリ、COM、およびプロジェクトの参照のみが含まれます。 Web 参照は含まれません。|  
   
- 次の表に、ときに使用されるショートカット メニューの選択内容、**ソリューション エクスプ ローラー**にまたがる複数の階層  
+ 次の表は、ときに適用するショートカット メニューの選択内容、**ソリューション エクスプ ローラー**複数の階層にまたがる  
   
 |ショートカット メニュー|説明|  
 |-------------------|-----------------|  
-|IDM_VS_CTXT_XPROJ_SLNPROJ|現在の選択範囲には、ソリューション ノードとプロジェクトのルート ノードが含まれている場合に適用されます。|  
+|IDM_VS_CTXT_XPROJ_SLNPROJ|現在の選択範囲には、ソリューション ノード、プロジェクトのルート ノードが含まれている場合に適用されます。|  
 |IDM_VS_CTXT_XPROJ_SLNITEM|現在の選択範囲には、ソリューション ノードとプロジェクト項目が含まれている場合に適用されます。|  
 |IDM_VS_CTXT_XPROJ_MULTIPROJ|現在の選択は、複数のルート プロジェクト ノードのみで構成される場合に適用されます。|  
-|IDM_VS_CTXT_XPROJ_PROJITEM|現在の選択範囲には、プロジェクトのルート ノードとプロジェクト アイテムの組み合わせが含まれている場合に適用されます。 さらに、選択範囲には、ソリューション ノードがあります。|  
-|IDM_VS_CTXT_XPROJ_MULTIITEM|現在の選択範囲には、ソリューションでは、複数のプロジェクトからプロジェクト項目が含まれている場合、または同じプロジェクト内のさまざまな種類の項目が選択されているときに適用されます。|  
+|IDM_VS_CTXT_XPROJ_PROJITEM|現在の選択範囲には、さまざまなプロジェクトのルート ノード、およびプロジェクト項目が含まれている場合に適用されます。 さらに、選択範囲には、ソリューション ノードを含めることができます。|  
+|IDM_VS_CTXT_XPROJ_MULTIITEM|ソリューションでは、複数のプロジェクトからプロジェクト項目が現在の選択範囲に含まれている場合、または同じプロジェクト内のさまざまな種類の項目が選択されているときに適用されます。|  
   
 ## <a name="command-groups"></a>コマンド グループ  
- 次の表は、プロジェクトを拡張して、を介してアクセス可能なときに使用できるコマンド グループ、<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_PROJNODE>ショートカット メニュー。  
+ 次の表は、プロジェクトに拡張してを介してアクセス可能なときに使用できるコマンド グループ、<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_PROJNODE>ショートカット メニュー。  
   
 |コマンド グループ|説明|  
 |-------------------|-----------------|  
-|IDG_VS_CTXT_PROJECT_BUILD|ビルド、再構築、およびプロジェクトを配置するためのコマンド。|  
+|IDG_VS_CTXT_PROJECT_BUILD|ビルド、リビルド、およびプロジェクトを配置するためのコマンド。|  
 |IDG_VS_CTXT_COMPILELINK|コンパイルとリンク、プロジェクト用のコマンド。|  
 |IDG_VS_CTXT_PROJECT_CONFIG|プロジェクト構成を設定し、ビルドの順序コマンド。|  
-|IDG_VS_CTXT_PROJECT_ADD|項目をプロジェクトに追加されるコマンド。|  
+|IDG_VS_CTXT_PROJECT_ADD|プロジェクトに項目を追加するコマンド。|  
 |IDG_VS_CTXT_PROJECT_START|F5 キーに関連付けられているスタートアップ プロジェクトを設定するコマンド。|  
-|IDG_VS_CTXT_PROJECT_SAVE|プロジェクト項目の保存用のコマンド。|  
+|IDG_VS_CTXT_PROJECT_SAVE|プロジェクト項目を保存するためのコマンド。|  
 |IDG_VS_CTXT_PROJECT_DEBUG|デバッグ用のコマンド。|  
-|IDG_VS_CTXT_PROJECT_SCC|ソース管理用のコマンド。|  
-|IDG_VS_CTXT_PROJECT_TRANSFER|切り取り、コマンドでは、コピーし、貼り付けの操作です。|  
-|IDG_VS_CTXT_PROJECT_PROPERTIES|アクセスを提供するコマンド、**プロジェクト プロパティ** ダイアログ ボックス。|  
+|IDG_VS_CTXT_PROJECT_SCC|ソース管理用コマンド。|  
+|IDG_VS_CTXT_PROJECT_TRANSFER|切り取り、用のコマンドは、コピーおよび貼り付け操作。|  
+|IDG_VS_CTXT_PROJECT_PROPERTIES|コマンドへのアクセスを提供する、**プロジェクト プロパティ** ダイアログ ボックス。|  
   
 ## <a name="see-also"></a>関連項目  
  [Vspackage がユーザー インターフェイス要素を追加する方法](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)   

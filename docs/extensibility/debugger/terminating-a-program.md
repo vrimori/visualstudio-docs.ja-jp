@@ -1,9 +1,6 @@
 ---
 title: プログラムの終了 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - programs, termination events
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 29eb65f222a94816086e5b24b2579cbee0e48001
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 28be8f34602a3a175c40d630463686f0ca99c919
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49846253"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53958853"
 ---
 # <a name="terminating-a-program"></a>プログラムの終了
 次のセクションでは、1 つのスレッドで 1 つのプログラムの終了について説明します。  

@@ -11,20 +11,19 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 21ef658d3eebe23fba228517700b3804f89a7842
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 1a94819b23b404634434ca3d9cdb210dc8e1dce7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49878844"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53840766"
 ---
-# <a name="walkthrough-create-a-custom-text-template-host"></a>チュートリアル: カスタム テキスト テンプレート ホストを作成する
+# <a name="walkthrough-create-a-custom-text-template-host"></a>チュートリアル: カスタム テキスト テンプレート ホストを作成します。
 
-A*テキスト テンプレート*<em>ホスト</em>できる環境を提供します、*テキスト テンプレート変換エンジン*を実行します。 ホストは、エンジンとファイル システムとの対話を管理します。 エンジンまたは*ディレクティブ プロセッサ*ファイルが必要なまたはアセンブリは、ホストからリソースを要求することができます。 ホストは、要求されたリソースをディレクトリとグローバル アセンブリ キャッシュ内で探すことができます。 詳細については、次を参照してください。 [、テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)します。
+A*テキスト テンプレート*<em>ホスト</em>できる環境を提供します、*テキスト テンプレート変換エンジン*を実行します。 ホストは、エンジンとファイル システムとの対話を管理します。 エンジンまたは*ディレクティブ プロセッサ*ファイルが必要なまたはアセンブリは、ホストからリソースを要求することができます。 ホストは、要求されたリソースをディレクトリとグローバル アセンブリ キャッシュ内で探すことができます。 詳細については、次を参照してください。 [テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)です。
 
 使用するかどうか、カスタム ホストを書き込むことができます、*テキスト テンプレート変換*から Visual Studio の外部またはカスタム ツールにその機能を統合する機能。 カスタム ホストを作成するには、<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> を継承するクラスを作成する必要があります。 個々のメソッドの説明については、「<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>」を参照してください。
 
@@ -718,7 +717,7 @@ A*テキスト テンプレート*<em>ホスト</em>できる環境を提供し�
 
 4. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]のみ、開く、**プロジェクト** メニューをクリック**CustomHost のプロパティ**です。 **スタートアップ オブジェクト**一覧で、 **customhost.program**します。
 
-5. **ファイル** メニューのをクリックして**すべて保存**します。
+5. **[ファイル]** メニューの **[すべてを保存]** をクリックします。
 
 6. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
@@ -821,7 +820,7 @@ A*テキスト テンプレート*<em>ホスト</em>できる環境を提供し�
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、基本的な変換機能をサポートするテキスト テンプレート変換ホストを作成しました。 ホストの機能を拡張して、カスタム ディレクティブ プロセッサまたは生成されたディレクティブ プロセッサを呼び出すテキスト テンプレートをサポートすることもできます。 詳細については、次を参照してください。[チュートリアル: 生成されたディレクティブ プロセッサにホストに接続する](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)します。
+このチュートリアルでは、基本的な変換機能をサポートするテキスト テンプレート変換ホストを作成しました。 ホストの機能を拡張して、カスタム ディレクティブ プロセッサまたは生成されたディレクティブ プロセッサを呼び出すテキスト テンプレートをサポートすることもできます。 詳細については、「[チュートリアル:生成済みディレクティブ プロセッサをホストに接続する](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)します。
 
 ## <a name="see-also"></a>関連項目
 

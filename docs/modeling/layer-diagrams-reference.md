@@ -21,13 +21,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 1ef2d68cb0f8e3d6904bdf3f3ebbab321649c3e1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a883b82da76fff2fc4b298de7263320c069a501b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49920931"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53948395"
 ---
 # <a name="dependency-diagrams-reference"></a>依存関係図: リファレンス
 
@@ -50,7 +49,7 @@ Visual Studio で使用することができます、*依存関係図*システ�
 
 -   チェックイン操作とビルド操作による検証を追加することによって、必要とされるアーキテクチャをコードの開発中および保守中に補強する。
 
-このトピックでは、依存関係図で使用できる要素について説明します。 作成し依存関係図を描画、表示する方法については詳細な[依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)します。 レイヤー パターンの詳細については、次を参照してください。、 [Patterns & Practices サイト](http://go.microsoft.com/fwlink/?LinkId=145794)します。
+このトピックでは、依存関係図で使用できる要素について説明します。 作成し依存関係図を描画、表示する方法については詳細な[依存関係図。ガイドライン](../modeling/layer-diagrams-guidelines.md)します。 レイヤー パターンの詳細については、次を参照してください。、 [Patterns & Practices サイト](http://go.microsoft.com/fwlink/?LinkId=145794)します。
 
 ## <a name="reading-dependency-diagrams"></a>依存関係図の解説
 
@@ -78,7 +77,7 @@ Visual Studio で使用することができます、*依存関係図*システ�
 
 レイヤーと成果物のリンクの詳細については、次のドキュメントを参照してください。
 
--   [依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)
+-   [依存関係図:ガイドライン](../modeling/layer-diagrams-guidelines.md)
 
 -   [コードからの依存関係図の作成](../modeling/create-layer-diagrams-from-your-code.md)
 
@@ -95,7 +94,7 @@ Visual Studio で使用することができます、*依存関係図*システ�
 |-|-|
 |**カテゴリ**|クラス、名前空間、ソース ファイルなどの成果物の種類|
 |**レイヤー**|成果物にリンクしているレイヤー|
-|**検証をサポート**|場合**True**、レイヤー検証プロセスでは、プロジェクトがこの要素との間の依存関係に準拠していることを確認できます。<br /><br /> 場合**False**、リンクは、レイヤー検証プロセスに関与しません。<br /><br /> 詳細については、次を参照してください。[依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)します。|
+|**検証をサポート**|場合**True**、レイヤー検証プロセスでは、プロジェクトがこの要素との間の依存関係に準拠していることを確認できます。<br /><br /> 場合**False**、リンクは、レイヤー検証プロセスに関与しません。<br /><br /> 詳細については、次を参照してください。[依存関係図。ガイドライン](../modeling/layer-diagrams-guidelines.md)します。|
 |**識別子**|リンクされた成果物への参照|
 
 ## <a name="see-also"></a>関連項目

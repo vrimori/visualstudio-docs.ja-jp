@@ -12,13 +12,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 0417507323a627753bc62e50b424c37b547d4dad
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: 21899be482e47152e8ca60d78535f49613f52ede
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50967481"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53946043"
 ---
 # <a name="add-a-tracking-property-to-a-domain-specific-language-definition"></a>ドメイン固有言語の定義に追跡プロパティを追加する
 
@@ -719,7 +718,7 @@ XML シリアル化のカスタムの読み込み後の動作をサポートす�
 
 次の手順は、ビルドに実行する DSL デザイナーの新しいインスタンスは[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]追跡プロパティが正しく動作していることを確認できるようにします。
 
-1. **ビルド** メニューのをクリックして**ソリューションのリビルド**します。
+1. **[ビルド]** メニューで、**[ソリューションのリビルド]** をクリックします。
 
 2. **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。
 
@@ -762,4 +761,4 @@ XML シリアル化のカスタムの読み込み後の動作をサポートす�
 - <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor>
 - <xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>
 - [方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)
-- [方法: ドメイン固有言語ソリューションを作成する](../modeling/how-to-create-a-domain-specific-language-solution.md)
+- [方法: ドメイン固有言語ソリューションを作成します。](../modeling/how-to-create-a-domain-specific-language-solution.md)

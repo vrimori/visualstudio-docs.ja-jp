@@ -1,9 +1,6 @@
 ---
-title: SccGetVersion 関数 |Microsoft ドキュメント
-ms.custom: ''
+title: SccGetVersion 関数 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - SccGetVersion
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 70beb89f13d2f752f3adb0f25e2b370fa272171a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b997f3724dc3d1bb0f9155f3b575fef3ce9f2802
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31136446"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53879628"
 ---
 # <a name="sccgetversion-function"></a>SccGetVersion 関数
 この関数は、ソース管理プラグインでサポートされているソース管理プラグイン API のバージョン番号を取得します。  
@@ -35,15 +32,15 @@ LONG SccGetVersion(void);
  なし。  
   
 ## <a name="return-value"></a>戻り値  
- A`LONG`をサポートされているソース管理プラグイン API のバージョン番号を含むデータ型。  
+ A`LONG`サポートされているソース管理プラグイン API のバージョン番号を含むデータ型。  
   
 |WORD|説明|  
 |----------|-----------------|  
-|ください|メジャー バージョン|  
-|LOWORD|マイナー バージョン|  
+|HIWORD|メジャー バージョン|  
+|LOWORD マクロ|マイナー バージョン|  
   
-## <a name="remarks"></a>コメント  
- たとえば、ソース管理プラグインは、ソース管理プラグイン API のバージョン 1.3 をサポートする場合、この関数は 0x0103 に返します。  
+## <a name="remarks"></a>Remarks  
+ ソース管理プラグインは、ソース管理プラグイン API のバージョン 1.3 をサポートする場合など、この関数では、0x0103 に返します。  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

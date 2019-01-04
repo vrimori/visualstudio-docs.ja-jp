@@ -1,9 +1,6 @@
 ---
 title: (Visual Studio のデバッグ) API リファレンス |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], API reference
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 97d5aa6fc92457557493005389d129993d38e099
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0172f9412bff791ae2446d6cffcd9d302c7c3ef8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49839441"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53923628"
 ---
 # <a name="api-reference-visual-studio-debugging"></a>API 参照 (Visual Studio のデバッグ)
 リファレンス セクションには、API、構文と、API のすべての要素の使用法を示すガイドの概念の概要とコード例のアソートメントが含まれています。 すべての参照は、カテゴリでアルファベット順に一覧表示されます。  

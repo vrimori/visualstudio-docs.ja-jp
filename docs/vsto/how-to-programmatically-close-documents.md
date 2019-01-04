@@ -1,9 +1,6 @@
 ---
 title: '方法: プログラムによって文書を閉じる'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9a846aded5d24f84fdaeac79a1bad6c61a3f5570
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 7aa33ff010b85d2916c60875297709588534947d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35257775"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53930228"
 ---
 # <a name="how-to-programmatically-close-documents"></a>方法: プログラムによって文書を閉じる
   作業中の文書を閉じたり、文書を指定して閉じたりすることができます。  
@@ -43,7 +40,7 @@ ms.locfileid: "35257775"
   
 ### <a name="to-close-the-active-document-in-a-vsto-add-in"></a>VSTO アドインで作業中の文書を閉じるには  
   
-1.  <xref:Microsoft.Office.Interop.Word._Document.Close%2A> プロパティの <xref:Microsoft.Office.Interop.Word._Application.ActiveDocument%2A> メソッドを呼び出して、作業中の文書を閉じます。 次のコード例を使用するには、プロジェクトの `ThisAddIn` クラスからコードを実行します。  
+1.  <xref:Microsoft.Office.Interop.Word._Document.Close%2A> プロパティの <xref:Microsoft.Office.Interop.Word._Application.ActiveDocument%2A> メソッドを呼び出して、作業中の文書を閉じます。 次のコード例を使用するには、プロジェクトの `ThisAddIn` クラスから実行します。  
   
     > [!NOTE]  
     >  この例では、変更内容を保存したりユーザーにメッセージを表示したりせずに文書を閉じるために、 <xref:Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges> パラメーターに *F:Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges* 値を渡します。  
@@ -66,8 +63,7 @@ ms.locfileid: "35257775"
   
 ## <a name="see-also"></a>関連項目  
  [方法: プログラムによって既存文書を開く](../vsto/how-to-programmatically-open-existing-documents.md)   
- [方法: プログラムによってドキュメントを保存](../vsto/how-to-programmatically-save-documents.md)   
+ [方法: プログラムによってドキュメントを保存します。](../vsto/how-to-programmatically-save-documents.md)   
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
-  

@@ -2,7 +2,6 @@
 title: C++ Core ガイドライン チェッカーの参照
 ms.date: 03/22/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-code-analysis
 ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
@@ -12,16 +11,16 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c11386dcd742e64737a4b06f2db9f55145f535d7
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: d6824041d362c0dda584c59998090e85f38d35a8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053387"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53959484"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>C++ Core ガイドライン チェッカーの参照
 
-このセクションでは、C++ Core ガイドライン チェッカーの警告を一覧表示します。 コード分析の詳細については、次を参照してください。 [/analyze (コード分析)](/cpp/build/reference/analyze-code-analysis)と[クイック スタート: c/c++ のコード分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)します。
+このセクションでは、C++ Core ガイドライン チェッカーの警告を一覧表示します。 コード分析の詳細については、次を参照してください。 [/analyze (コード分析)](/cpp/build/reference/analyze-code-analysis)と[クイック スタート。C/C++ のコード分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)します。
 
 > [!NOTE]
 > いくつかの警告が 1 つ以上のグループに属しているし、すべての警告の完全なリファレンス トピックがあります。
@@ -67,7 +66,7 @@ ms.locfileid: "53053387"
 [C26481 NO_POINTER_ARITHMETIC](C26481.md)ポインターの算術演算を使用しないでください。 代わりに span を使用します。 参照してください[C++ Core ガイドライン Bounds.1](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)します。
 
 [C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md).
-式 'expr %': 配列ポインターへの減退からなし。 参照してください[C++ Core ガイドライン Bounds.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)します。
+式 'expr %':ポインターへの減退配列がありません。 参照してください[C++ Core ガイドライン Bounds.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)します。
 
 ## <a name="uniquepointer-group"></a>UNIQUE_POINTER Group
 
@@ -97,23 +96,23 @@ ms.locfileid: "53053387"
 
 [C26427 NO_GLOBAL_INIT_EXTERNS](C26427.md)グローバル初期化子 'シンボル %' の extern オブジェクトにアクセスします。 参照してください[C++ Core Guidelines I.22](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#i22-avoid-complex-initialization-of-global-objects)します。
 
-[C26444 NO_UNNAMED_RAII_OBJECTS](c26444.md)無名のカスタムの構築と破棄を持つオブジェクトを避けてください。 参照してください[ES.84: (しようとしないでください) 名前のないローカル変数を宣言](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)します。
+[C26444 NO_UNNAMED_RAII_OBJECTS](c26444.md)無名のカスタムの構築と破棄を持つオブジェクトを避けてください。 参照してください[ES.84:(しようとしないでください) 名前のないローカル変数を宣言](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)します。
 
 ## <a name="class-group"></a>クラスのグループ
 
 [C26432 DEFINE_OR_DELETE_SPECIAL_OPS](C26432.md)定義型 'シンボル %' で、既定の操作を削除するかを定義またはそのすべてを削除します。 参照してください[C++ Core Guidelines C.21](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c21-if-you-define-or-delete-any-default-operation-define-or-delete-them-all)します。
 
-[C26433 OVERRIDE_EXPLICITLY](c26433.md)関数 'シンボル %' を 'override' とマークする必要があります。 参照してください[C.128: 仮想関数が正確に 1 つのオーバーライドでは仮想、または最後に指定する必要があります](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c128-virtual-functions-should-specify-exactly-one-of-virtual-override-or-final)します。
+[C26433 OVERRIDE_EXPLICITLY](c26433.md)関数 'シンボル %' を 'override' とマークする必要があります。 参照してください[C.128:仮想関数が正確に 1 つのオーバーライドでは仮想、または最後に指定する必要があります](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c128-virtual-functions-should-specify-exactly-one-of-virtual-override-or-final)します。
 
 [C26434 DONT_HIDE_METHODS](C26434.md)関数 '%symbol_1% 'が 'symbol_2%' の非仮想関数を非表示にします。 参照してください[C++ Core Guidelines C.128](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c128-virtual-functions-should-specify-exactly-one-of-virtual-override-or-final)します。
 
-[C26435 SINGLE_VIRTUAL_SPECIFICATION](c26435.md)関数 'シンボル %' は 'virtual'、'override' または 'final' の 1 つだけを指定する必要があります。 参照してください[C.128: 仮想関数が正確に 1 つのオーバーライドでは仮想、または最後に指定する必要があります](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)します。
+[C26435 SINGLE_VIRTUAL_SPECIFICATION](c26435.md)関数 'シンボル %' は 'virtual'、'override' または 'final' の 1 つだけを指定する必要があります。 参照してください[C.128:仮想関数が正確に 1 つのオーバーライドでは仮想、または最後に指定する必要があります](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)します。
 
 
 [C26436 NEED_VIRTUAL_DTOR](C26436.md)かパブリック仮想または保護された非仮想デストラクターの型 '% のシンボル %' で仮想関数が必要です。 参照してください[C++ Core Guidelines C.35](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c35-a-base-class-destructor-should-be-either-public-and-virtual-or-protected-and-nonvirtual)します。
 
 
-[C26443 NO_EXPLICIT_DTOR_OVERRIDE](c26443.md)オーバーライド デストラクターでは、明示的な 'オーバーライド' または '仮想' 指定子は使用しないでください。 参照してください[C.128: 仮想関数が正確に 1 つのオーバーライドでは仮想、または最後に指定する必要があります](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)します。
+[C26443 NO_EXPLICIT_DTOR_OVERRIDE](c26443.md)オーバーライド デストラクターでは、明示的な 'オーバーライド' または '仮想' 指定子は使用しないでください。 参照してください[C.128:仮想関数が正確に 1 つのオーバーライドでは仮想、または最後に指定する必要があります](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)します。
 
 
 ## <a name="type-group"></a>種類のグループ
@@ -131,7 +130,7 @@ ms.locfileid: "53053387"
 [C26440 DECLARE_NOEXCEPT](C26440.md) 'シンボル %' 関数を宣言する`noexcept`します。 参照してください[C++ Core Guidelines F.6](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f6-if-your-function-may-not-throw-declare-it-noexcept)します。
 
 [C26447 DONT_THROW_IN_NOEXCEPT](c26447.md)関数が宣言されて**noexcept**が例外をスローする可能性がある関数を呼び出しています。
-参照してください[C++ Core Guidelines: F.6: 場合は、関数はスローされませんが、宣言 noexcept](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f6-if-your-function-may-not-throw-declare-it-noexcept)します。
+参照してください[C++ Core Guidelines:F.6:場合、関数はスローされませんが、宣言 noexcept](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f6-if-your-function-may-not-throw-declare-it-noexcept)します。
 
 ## <a name="concurrency-group"></a>同時実行のグループ
 
@@ -141,7 +140,7 @@ ms.locfileid: "53053387"
 
 [C26460 USE_CONST_REFERENCE_ARGUMENTS](c26460.md)関数 '% 関数 %' の参照引数 '引数 %' としてマークできます`const`します。 参照してください[C++ コア ガイドライン con.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-ref)します。
 
-[C26461 USE_CONST_POINTER_ARGUMENTS](c26461.md): 関数 '% 関数 %' のポインター引数 '引数 %' へのポインターとしてマークできます`const`します。 参照してください[C++ コア ガイドライン con.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-ref)します。
+[C26461 USE_CONST_POINTER_ARGUMENTS](c26461.md):関数 '% 関数 %' のポインター引数 '引数 %' へのポインターとしてマークできます`const`します。 参照してください[C++ コア ガイドライン con.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-ref)します。
 
 [C26462 USE_CONST_POINTER_FOR_VARIABLE](c26462.md) '% 変数 %' が指す値が 1 回だけ割り当てへのポインターとしてマーク`const`します。 参照してください[C++ コア ガイドライン con.4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction)します。
 
@@ -185,7 +184,7 @@ ms.locfileid: "53053387"
 
 ## <a name="bounds-group"></a>境界グループ
 
-[C26446 USE_GSL_AT](c26446.md)使用したい`gsl::at()`添字演算子の代わりにします。 参照してください[C++ Core Guidelines: Bounds.4: 標準ライブラリ関数と境界チェックではない型を使用しない](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)します。
+[C26446 USE_GSL_AT](c26446.md)使用したい`gsl::at()`添字演算子の代わりにします。 参照してください[C++ Core Guidelines:Bounds.4:標準ライブラリ関数と境界チェックではない型を使用しない](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)します。
 
 [C26481 NO_POINTER_ARITHMETIC](C26481.md).
 ポインターの算術演算を使用しないでください。 代わりに span を使用します。 参照してください[C++ Core ガイドライン Bounds.1](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
@@ -194,19 +193,19 @@ ms.locfileid: "53053387"
 
 [C26483 STATIC_INDEX_OUT_OF_RANGE](c26483.md)値 %value% の値が範囲外 (0 の場合、バインドされた %) の変数 '% 変数 %' です。 配列の境界内にある定数式を使用して配列にインデックスのみ。 参照してください[C++ Core ガイドライン Bounds.2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
 
-[C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md)式 'expr %': 配列ポインターへの減退からなし。 参照してください[C++ Core ガイドライン Bounds.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
+[C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md) 'expr %' の式。ポインターへの減退配列がありません。 参照してください[C++ Core ガイドライン Bounds.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
 
 ## <a name="gsl-group"></a>GSL グループ
 
 [C26445 NO_SPAN_REF](c26445.md)への参照を`gsl::span`または`std::string_view`有効期間の問題の兆候である可能性があります。
-参照してください[C++ Core ガイドライン GSL.view: ビュー](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views)
+参照してください[C++ Core ガイドライン GSL.view:表示モード](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views)
 
-[C26446 USE_GSL_AT](c26446.md)使用したい`gsl::at()`添字演算子の代わりにします。 参照してください[C++ Core Guidelines: Bounds.4: 標準ライブラリ関数と境界チェックではない型を使用しない](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)します。
+[C26446 USE_GSL_AT](c26446.md)使用したい`gsl::at()`添字演算子の代わりにします。 参照してください[C++ Core Guidelines:Bounds.4:標準ライブラリ関数と境界チェックではない型を使用しない](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)します。
 
-[C26448 USE_GSL_FINALLY](c26448.md)を使用してください`gsl::finally`場合、最後のアクションが対象としています。 参照してください[C++ Core Guidelines: GSL.util: ユーティリティ](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-utilities)します。
+[C26448 USE_GSL_FINALLY](c26448.md)を使用してください`gsl::finally`場合、最後のアクションが対象としています。 参照してください[C++ Core Guidelines:GSL.util:ユーティリティ](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-utilities)します。
 
 [C26449 NO_SPAN_FROM_TEMPORARY](c26449.md) 
- `gsl::span`または`std::string_view`テンポラリから作成は無効になるときにテンポラリが無効になります。 参照してください[C++ Core Guidelines: GSL.view: ビュー](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views)します。
+ `gsl::span`または`std::string_view`テンポラリから作成は無効になるときにテンポラリが無効になります。 参照してください[C++ Core Guidelines:GSL.view:ビュー](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views)します。
 
 
 ## <a name="deprecated-warnings"></a>非推奨の警告

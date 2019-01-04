@@ -1,9 +1,6 @@
 ---
 title: カスタム パラメーター |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - wizards, custom parameters
@@ -14,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 101076eb863294fe84ffed26d308f67110b90a33
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: c8c243490a88010031bad91d6b45fe5645d21e6e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499453"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53826362"
 ---
 # <a name="custom-parameters"></a>カスタム パラメーター
 カスタム パラメーターは、ウィザードが開始した後に、ウィザードの操作を制御します。 関連 *.vsz*ファイルを統合開発環境 (IDE) でパッケージ化され、ウィザードが開始されると、文字列の配列として、ウィザードに渡されるユーザー定義のパラメーターの配列を提供します。 ウィザードは、文字列の配列を解析し、情報を使用して、ウィザードの実際の操作を制御します。 この方法で、ウィザードがの内容に応じて機能をカスタマイズできます、 *.vsz*ファイル。  

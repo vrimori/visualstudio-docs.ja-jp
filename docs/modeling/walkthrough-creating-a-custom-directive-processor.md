@@ -11,18 +11,17 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: c430dad62686e49d9ce07fdff9a3665b0ea519a4
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 44eb71a4bbb209453ee7deef6adf3b10c561e8af
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49930324"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53951827"
 ---
-# <a name="walkthrough-create-a-custom-directive-processor"></a>チュートリアル: カスタム ディレクティブ プロセッサを作成する
+# <a name="walkthrough-create-a-custom-directive-processor"></a>チュートリアル: カスタム ディレクティブ プロセッサを作成します。
 
 *ディレクティブ プロセッサ*コードを追加することで機能、*生成された変換クラス*します。 呼び出す場合、*ディレクティブ*から、*テキスト テンプレート*、テキスト テンプレートに記述するコードの残りの部分は、ディレクティブが提供する機能を利用できます。
 
@@ -603,7 +602,7 @@ End Property
 
 4. Visual Basic の場合のみ、開く、**プロジェクト** メニューをクリックします**CustomDP プロパティ**します。 **アプリケーション**] タブの [**ルート名前空間**、既定値を削除`CustomDP`します。
 
-5. **ファイル** メニューのをクリックして**すべて保存**します。
+5. **[ファイル]** メニューの **[すべてを保存]** をクリックします。
 
 6. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 

@@ -1,9 +1,6 @@
 ---
 title: IWefDebuggingSupport インターフェイス
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -13,15 +10,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 351fb69b99393a10518168f4f9b01efe1f9efaa7
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 73aff964cfb66d33e308aef6448fc0f0b1b27c09
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34572674"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53901020"
 ---
 # <a name="iwefdebuggingsupport-interface"></a>IWefDebuggingSupport インターフェイス
-  Office 用アプリのデバッグを容易にするために、Visual Studio などのデバッグ環境によって実装されます。 Word や Excel など、Office アプリケーションでは、Visual Studio からこのインターフェイスを取得し、デバッグ セッション中に特定の時点で、インターフェイスのメソッドを呼び出します。  
+  Office 用アプリのデバッグを容易に、Visual Studio などのデバッグ環境で実装されます。 Word や Excel など、Office アプリケーションでは、Visual Studio からこのインターフェイスを取得し、デバッグ セッション中に特定の時点で、インターフェイスのメソッドを呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,9 +39,7 @@ interface IWefDebuggingSupport : IUnknown
 ## <a name="methods"></a>メソッド  
  IWefDebuggingSupport インターフェイスを定義するメソッドを次の表に示します。  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
-|[GetAutoInsertExtensions メソッド](../vsto/getautoinsertextensions-method.md)|デバッグ中に自動的に挿入するのには、Office 用のアプリに関する情報を取得します。|  
-|[SetWefProcessId メソッド](../vsto/setwefprocessid-method.md)|Web 拡張機能フレームワーク (WEF) のコンテンツを実行しているプロセス id を提供します。|  
-  
-  
+|[GetAutoInsertExtensions メソッド](../vsto/getautoinsertextensions-method.md)|デバッグ中に自動的に挿入される Office 用アプリに関する情報を取得します。|  
+|[SetWefProcessId メソッド](../vsto/setwefprocessid-method.md)|Web 拡張機能フレームワーク (WEF) コンテンツを実行しているプロセス id を提供します。|  

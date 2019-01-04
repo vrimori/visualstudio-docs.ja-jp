@@ -1,13 +1,8 @@
 ---
 title: パッケージ化と SharePoint ソリューションの配置 |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -19,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6c5993f09581faf6e3cedb4c71598ea26b16b699
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c1213d4dd2cdd347fe1d29f594fa7614df50b1e6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49863270"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53849020"
 ---
 # <a name="package-and-deploy-sharepoint-solutions"></a>パッケージ化し、SharePoint ソリューションのデプロイ
   通常、ソリューション パッケージ (.wsp) ファイルを使用して、SharePoint サーバーに SharePoint ソリューションをデプロイします。 Visual Studio を使用して機能に、SharePoint プロジェクト アイテムを整理して、SharePoint の機能を展開するパッケージを作成することができます。  
@@ -40,9 +35,9 @@ ms.locfileid: "49863270"
 -   [SharePoint ソリューション内のファイルを展開します。](#DeployingFiles)  
   
 ## <a name="create-features-and-packages"></a>フィーチャーとパッケージを作成します。
- Visual Studio を使用すると、グループに関連する SharePoint 要素、*機能*します。 たとえば、連絡先リスト定義の機能では、リスト インスタンスと、リスト定義を含めることができます。 配置用に 1 つの機能には、これら 2 つの要素を組み合わせることができます。 機能の詳細については、次を参照してください。[ビルディング ブロック: 機能](http://go.microsoft.com/fwlink/?LinkID=169183)します。  
+ Visual Studio を使用すると、グループに関連する SharePoint 要素、*機能*します。 たとえば、連絡先リスト定義の機能では、リスト インスタンスと、リスト定義を含めることができます。 配置用に 1 つの機能には、これら 2 つの要素を組み合わせることができます。 機能の詳細については、次を参照してください。[ビルディング ブロック。機能](http://go.microsoft.com/fwlink/?LinkID=169183)します。  
   
- 次に、SharePoint ソリューション パッケージを作成することができます (*.wsp*) 複数の機能をバンドルするサイトの定義、アセンブリ、およびその他のファイルにファイルを配置する SharePoint に必要な形式で、ファイルを保存する 1 つのパッケージサーバー。 詳細については、次を参照してください。[ビルディング ブロック: ソリューション](http://go.microsoft.com/fwlink/?LinkID=169186)します。  
+ 次に、SharePoint ソリューション パッケージを作成することができます (*.wsp*) 複数の機能をバンドルするサイトの定義、アセンブリ、およびその他のファイルにファイルを配置する SharePoint に必要な形式で、ファイルを保存する 1 つのパッケージサーバー。 詳細については、次を参照してください。[ビルディング ブロック。ソリューション](http://go.microsoft.com/fwlink/?LinkID=169186)します。  
   
 ## <a name="feature-and-packaging-tool-support"></a>機能およびパッケージ化ツールのサポート
  Visual Studio での SharePoint 開発ツールを使用して、すばやく機能と展開が容易にソリューション パッケージに SharePoint ファイルを整理することができます。 フィーチャーとソリューションのパッケージを構成するのには、次のツールを使用できます。  
@@ -81,9 +76,9 @@ ms.locfileid: "49863270"
   
   Visual Studio での SharePoint 開発ツールでは、ソリューション パッケージの形式が正しく確保しやすく、検証規則があります。 さらに、ルールを確認する、 *.wsp*ソリューション ファイルを正常にデプロイおよび SharePoint サーバーでアクティブ化します。 機能の詳細については、XML スキーマは、次を参照してください。[機能スキーマ](http://go.microsoft.com/fwlink/?LinkID=169192)します。  
   
-  SharePoint プロジェクト システムには、カスタムのフィーチャーとパッケージ検証規則を追加できます。 詳細については、次を参照してください。[方法: SharePoint ソリューションの検証規則を使用したカスタムのフィーチャーとパッケージの作成](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)です。  
+  SharePoint プロジェクト システムには、カスタムのフィーチャーとパッケージ検証規則を追加できます。 詳細については、「[方法 :SharePoint ソリューションの検証規則を使用したカスタムのフィーチャーとパッケージの作成](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)です。  
   
-  パッケージング エクスプ ローラーの詳細については、次を参照してください。[方法: 追加およびパッケージング エクスプ ローラーを使用して、フィーチャーおよびパッケージに項目を削除](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md)します。  
+  パッケージング エクスプ ローラーの詳細については、次を参照してください。[方法。追加およびパッケージング エクスプ ローラーを使用して、フィーチャーおよびパッケージに項目を削除](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md)します。  
   
 ### <a name="solution-explorer"></a>ソリューション エクスプローラー
  ソリューション エクスプ ローラーを使用して、移動し、SharePoint プロジェクトのファイルを開くことができます。 ソリューション エクスプ ローラーで、コンテキスト メニューを使用して、機能、フィーチャー イベント レシーバーを追加して、フィーチャーのリソース。 さらに、機能と展開のパッケージを構成するには、フィーチャー デザイナーとパッケージ デザイナーを開くことができます。  
@@ -109,4 +104,3 @@ ms.locfileid: "49863270"
 ## <a name="see-also"></a>関連項目
  [SharePoint ソリューションを開発します。](../sharepoint/developing-sharepoint-solutions.md)   
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
-  

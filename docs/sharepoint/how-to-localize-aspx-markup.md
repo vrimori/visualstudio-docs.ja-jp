@@ -1,13 +1,8 @@
 ---
 title: '方法: ASPX マークアップのローカライズ |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -18,14 +13,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 68e74f743c1c00bb940a89039e4fd5cfcf8e63e4
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 0a646c84df5f6da318e8c21f6a55ac7a852a1af0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119551"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53959866"
 ---
-# <a name="how-to-localize-aspx-markup"></a>方法: ASPX マークアップのローカライズ
+# <a name="how-to-localize-aspx-markup"></a>方法: ASPX マークアップをローカライズします。
   [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] (.aspx) ページは、通常のハード コーディングされた文字列値を使用します。 これらの文字列をローカライズするには、それらをローカライズされたリソースを参照する式に置き換えます。  
   
 ## <a name="localize-aspx-markup"></a>ASPX マークアップをローカライズします。  
@@ -81,7 +76,6 @@ ms.locfileid: "37119551"
   
 ## <a name="see-also"></a>関連項目
  [SharePoint ソリューションをローカライズします。](../sharepoint/localizing-sharepoint-solutions.md)   
- [方法: フィーチャーをローカライズ](../sharepoint/how-to-localize-a-feature.md)   
- [方法: リソース ファイルを追加](../sharepoint/how-to-add-a-resource-file.md)   
- [方法: コードのローカライズ](../sharepoint/how-to-localize-code.md)  
-  
+ [方法: フィーチャーをローカライズします。](../sharepoint/how-to-localize-a-feature.md)   
+ [方法: リソース ファイルを追加します。](../sharepoint/how-to-add-a-resource-file.md)   
+ [方法: コードをローカライズします。](../sharepoint/how-to-localize-code.md)  

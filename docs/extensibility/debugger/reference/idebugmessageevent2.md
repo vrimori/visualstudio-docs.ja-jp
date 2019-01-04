@@ -1,9 +1,6 @@
 ---
-title: IDebugMessageEvent2 |Microsoft ドキュメント
-ms.custom: ''
+title: IDebugMessageEvent2 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugMessageEvent2
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d0cb1f270d3d3ae77c43ea89fba5b7483e80412
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 62ead34f06d474875539ebd4e274cfcd51db4e22
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31116176"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53860976"
 ---
 # <a name="idebugmessageevent2"></a>IDebugMessageEvent2
 このインターフェイスは、ユーザーからの応答を必要とする Visual Studio にメッセージを送信するデバッグ エンジン (DE) によって使用されます。  
@@ -32,34 +29,34 @@ IDebugMessageEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- デでは、ユーザーからの応答を必要とする Visual Studio にメッセージを送信するには、このインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このインターフェイスと同じオブジェクトのインターフェイスを実装する必要があります。 SDM を使用して[QueryInterface](/cpp/atl/queryinterface)にアクセスする、`IDebugEvent2`インターフェイスです。  
+ デでは、ユーザーの応答を必要とする Visual Studio にメッセージを送信するには、このインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このインターフェイスと同じオブジェクトでインターフェイスを実装する必要があります。 SDM を使用して[QueryInterface](/cpp/atl/queryinterface)にアクセスする、`IDebugEvent2`インターフェイス。  
   
- このインターフェイスの実装での Visual Studio の呼び出しを通信する必要があります[SetResponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md)デにします。 たとえば、DE のメッセージのスレッドの処理に投稿されたメッセージでこれ行うやこのインターフェイスを実装するオブジェクトでした、DE への参照を保持にコールバックする、DE に渡される応答に`IDebugMessageEvent2::SetResponse`です。  
+ このインターフェイスの実装での Visual Studio の呼び出しを通信する必要があります[SetResponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md) DE にします。 DE のメッセージの処理スレッドに投稿されたメッセージを表示できますなど、このインターフェイスを実装するオブジェクトはでした、DE への参照を保持しに渡される応答と共に、DE にコールバック`IDebugMessageEvent2::SetResponse`します。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- デを作成し、応答を要求するユーザーにメッセージを表示するには、このイベント オブジェクトを送信します。 使用して、イベントが送信される、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)は、デバッグ中のプログラムに関連付けられている場合、SDM によって指定されたコールバック関数。  
+ デは作成し、応答を要求するユーザーにメッセージを表示するには、このイベント オブジェクトを送信します。 使用して、イベントが送信される、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)デバッグ中のプログラムにアタッチされているときに、SDM によって指定されたコールバック関数。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
  次の表は、メソッドの`IDebugMessageEvent2`します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md)|表示されるメッセージを取得します。|  
+|[GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md)|表示するメッセージを取得します。|  
 |[SetResponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md)|メッセージ ボックスから存在する場合、応答を設定します。|  
   
-## <a name="remarks"></a>コメント  
- 特定のメッセージのユーザーから特定の応答が必要な場合、デはこのインターフェイスを使用します。 など、DE では、リモートでプログラムにアタッチしようとすると、後、「アクセス拒否」メッセージを取得、デ メッセージを送信この特定の Visual Studio に、`IDebugMessageEvent2`イベント、メッセージ ボックス スタイル`MB_RETRYCANCEL`です。 これにより、ユーザーが再試行するか、アタッチ操作をキャンセルできます。  
+## <a name="remarks"></a>Remarks  
+ デは、特定のメッセージのユーザーから特定の応答が必要な場合に、このインターフェイスを使用します。 たとえば、プログラムをリモートで接続を試行した後、「アクセス拒否」メッセージを取得する、DE 場合、DE この特定のメッセージに送信で Visual Studio、`IDebugMessageEvent2`イベント、メッセージ ボックスのスタイルを`MB_RETRYCANCEL`します。 これにより、再試行またはアタッチ操作をキャンセルするユーザー。  
   
- デでは、このメッセージの Win32 関数の規則に従うによって処理される方法を指定します`MessageBox`(を参照してください[AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox)詳細)。  
+ デでは、このメッセージの Win32 関数の規則に従うによって処理される方法を指定します`MessageBox`(を参照してください[AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox)詳細については)。  
   
  使用して、 [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)インターフェイス ユーザーからの応答を必要としない Visual Studio にメッセージを送信します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間:Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ:Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   

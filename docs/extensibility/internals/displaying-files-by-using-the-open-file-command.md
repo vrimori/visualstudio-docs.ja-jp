@@ -1,9 +1,6 @@
 ---
 title: ファイルを開くコマンドを使用してファイルの表示 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - project types, supporting Open File command
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 425433c3d67e654398fde1609b3f9c4d54e63648
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 59ff5d938c21c6344d1979fbfca94e8acb791db6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498726"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53964664"
 ---
 # <a name="display-files-by-using-the-open-file-command"></a>ファイルを開くコマンドを使用してファイルを表示します。
 次の手順では、IDE を処理する方法について説明します、**ファイルを開く**コマンドで使用される、**ファイル**でメニュー [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]。 また、プロジェクトがこのコマンドから発信された通話に応答する方法も説明します。  
@@ -52,10 +49,10 @@ ms.locfileid: "39498726"
   
 4.  IDE は、プロジェクト ファイルを開くかを決定しますとすぐに呼び出して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A>そのプロジェクトでのメソッド。  
   
-5.  プロジェクトには、プロジェクト固有のエディターまたは標準のエディターを使用してファイルを開くオプションがあります。 詳細については、次を参照してください。[方法: プロジェクトに固有のエディターを開く](../../extensibility/how-to-open-project-specific-editors.md)と[方法: 標準のエディターを開く](../../extensibility/how-to-open-standard-editors.md)、それぞれします。  
+5.  プロジェクトには、プロジェクト固有のエディターまたは標準のエディターを使用してファイルを開くオプションがあります。 詳細については、「[方法 :プロジェクトに固有のエディターを開く](../../extensibility/how-to-open-project-specific-editors.md)と[方法。標準のエディターを開く](../../extensibility/how-to-open-standard-editors.md)、それぞれします。  
   
 ## <a name="see-also"></a>関連項目  
  [プログラムから開くコマンドを使用してファイルを表示します。](../../extensibility/internals/displaying-files-by-using-the-open-with-command.md)   
  [開き、プロジェクト項目の保存](../../extensibility/internals/opening-and-saving-project-items.md)   
- [方法: プロジェクトに固有のエディターを開く](../../extensibility/how-to-open-project-specific-editors.md)   
+ [方法: 開いているプロジェクト固有のエディター](../../extensibility/how-to-open-project-specific-editors.md)   
  [方法: 標準のエディターを開く](../../extensibility/how-to-open-standard-editors.md)

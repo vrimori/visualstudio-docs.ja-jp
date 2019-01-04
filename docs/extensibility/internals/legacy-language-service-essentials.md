@@ -1,9 +1,6 @@
 ---
 title: 従来の言語サービスの基本情報 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - languages, integrating into Visual Studio
@@ -16,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 344a7949c5058237d8599d69ea3b234e9a6e8e72
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 79ecbd971315c004a9be40221a6950afb5856823
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49850178"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53847205"
 ---
 # <a name="legacy-language-service-essentials"></a>従来の言語サービスの基本情報
 Visual Studio のプログラミング言語に統合する言語サービスを提供する必要があります。 このトピックでは、従来の言語サービスで使用できる機能について説明します。  
@@ -50,4 +47,3 @@ Visual Studio のプログラミング言語に統合する言語サービスを
 |-----------------------| - |
 | 式エバリュエーター | では、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]に表示されるデバッガーのブレークポイントの検証の式のリストを指定して、 **[自動変数]** デバッグ ウィンドウ。<br /><br /> 詳細については、次を参照してください。[をデバッグ用の言語サービスのサポート](../../extensibility/internals/language-service-support-for-debugging.md)します。 |
 | シンボル参照ツール | サポート**オブジェクト ブラウザー**、**クラス ビュー**、**呼び出しブラウザー**、および**シンボルの検索結果**します。 |
-

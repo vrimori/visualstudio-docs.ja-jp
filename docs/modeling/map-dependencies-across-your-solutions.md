@@ -17,13 +17,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-modeling
-ms.openlocfilehash: 51b03ce504b2fe8f588cf3e360882f97d61664f8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 084518e27924c714b2e1ca7982389fb93ff274cc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49896942"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53861625"
 ---
 # <a name="map-dependencies-with-code-maps"></a>コード マップで依存関係をマッピングします。
 
@@ -187,7 +186,7 @@ Visual Studio 2017 では、コード マップを作成するに最初にイン
 
    コードには表示されませんがメンバーを表示するには、マップで、をクリックして、**子の再フェッチ**アイコン![子の再フェッチ アイコン](../modeling/media/dependencygraph_deletednodesicon.png)グループの左上隅にあります。
 
-6. マップ上の項目に関連する項目をさらに表示するには、1 つを選択し、コード マップ ツールバーで **[関連表示]** を選択して、マップに追加する関連項目の種類を選択します。 または、1 つまたは複数の項目を選択、ショートカット メニューを開いて、および選択し、**表示**マップに追加する関連項目の種類のオプション。 例えば:
+6. マップ上の項目に関連する項目をさらに表示するには、1 つを選択し、コード マップ ツールバーで **[関連表示]** を選択して、マップに追加する関連項目の種類を選択します。 または、1 つまたは複数の項目を選択、ショートカット メニューを開いて、および選択し、**表示**マップに追加する関連項目の種類のオプション。 例:
 
     **アセンブリ**の場合、次のように選択します。
 
@@ -240,7 +239,7 @@ Visual Studio 2017 では、コード マップを作成するに最初にイン
 
 ## <a name="see-also"></a>関連項目
 
-- [ビデオ: Visual Studio 2015 コード マップを使用したコードの設計を理解する](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)]
+- [ビデオ:Visual Studio 2015 コード マップを使用したコードの設計を理解する](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)]
 - [コード マップを使用してアプリケーションをデバッグする](../modeling/use-code-maps-to-debug-your-applications.md)
 - [デバッグ中の、呼び出し履歴に関するメソッドのマッピング](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)
 - [コード マップ アナライザーを使用して潜在的な問題を検索する](../modeling/find-potential-problems-using-code-map-analyzers.md)
