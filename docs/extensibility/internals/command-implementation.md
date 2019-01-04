@@ -1,9 +1,6 @@
 ---
 title: コマンドの実装 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - commands, implementation
@@ -13,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f002e660b2c3b745e4a7ea67f715b613b96bd0a
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: ea4240ddf84dc1b475adcf81fe80471c9d1bc2b9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39510440"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53965422"
 ---
 # <a name="command-implementation"></a>コマンドの実装
 VSPackage のコマンドを実装するには、次のタスクを実行する必要があります。  
@@ -70,17 +67,17 @@ if ( null != mcs )
   
 -   かどうかには、いずれかのメソッドの実装は、GUID と、コマンドの両方を認識し、メソッドは、すべてのコマンドのコマンド フラグ フィールドを設定する必要があります (で、`prgCmds`パラメーター)、次を使用して<xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF>フラグ。  
   
-    -   `OLECMDF_SUPPORTED`: このコマンドはサポートされます。  
+    -   `OLECMDF_SUPPORTED`:コマンドがサポートされています。  
   
-    -   `OLECMDF_INVISIBLE`: このコマンドは表示されません。  
+    -   `OLECMDF_INVISIBLE`:コマンドは表示されません。  
   
-    -   `OLECMDF_LATCHED`: このコマンドは、がオンにし、をオンになっているが表示されます。  
+    -   `OLECMDF_LATCHED`:このコマンドがオンにしをオンになっているが表示されます。  
   
-    -   `OLECMDF_ENABLED`: このコマンドは有効です。  
+    -   `OLECMDF_ENABLED`:コマンドが有効になっているとします。  
   
-    -   `OLECMDF_DEFHIDEONCTXTMENU`: このコマンドは、ショートカット メニューに表示される場合、非表示にする必要があります。  
+    -   `OLECMDF_DEFHIDEONCTXTMENU`:コマンドは、ショートカット メニューに表示される場合、非表示にする必要があります。  
   
-    -   `OLECMDF_NINCHED`: このコマンドはメニュー コント ローラーで、が有効でないが、そのドロップダウン メニューからリストが空でないとは引き続き使用できます。 (このフラグはあまり使用されません。)  
+    -   `OLECMDF_NINCHED`:コマンドがメニュー コント ローラーが有効でないが、そのドロップダウン メニューからリストが空でないとは引き続き使用できます。 (このフラグはあまり使用されません。)  
   
 -   コマンドが定義されている場合、 *.vsct*ファイルと、`TextChanges`フラグは、次のパラメーターを設定します。  
   

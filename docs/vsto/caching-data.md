@@ -1,9 +1,6 @@
 ---
 title: キャッシュ データ
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,12 +14,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b46fa8b0138eff03757a7bd7828053cee039090f
-ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
+ms.openlocfilehash: 66113dae824397f46829a539a016f452cedc0383
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248125"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53967256"
 ---
 # <a name="cache-data"></a>キャッシュ データ
   データは、オフライン、または Microsoft Office Word または Microsoft Office Excel を開くことがなくアクセスできるように、ドキュメント レベル カスタマイズ内のデータ オブジェクトをキャッシュできます。 オブジェクトをキャッシュするには、オブジェクトのデータ型を特定の要件を満たす必要があります。 .NET Framework の多くの一般的なデータ型など、これらの要件を満たしている<xref:System.String>、 <xref:System.Data.DataSet>、および<xref:System.Data.DataTable>します。  
@@ -91,5 +88,3 @@ ms.locfileid: "53248125"
  [方法: Office ドキュメント内のデータ ソースをプログラムでキャッシュします。](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)   
  [方法: パスワードで保護されたドキュメント内のキャッシュ データ](../vsto/how-to-cache-data-in-a-password-protected-document.md)   
  [チュートリアル: キャッシュされたデータセットを使用したマスター/詳細関係を作成します。](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md)  
-  
-  

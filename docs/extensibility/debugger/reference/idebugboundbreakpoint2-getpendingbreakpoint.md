@@ -1,9 +1,6 @@
 ---
 title: IDebugBoundBreakpoint2::GetPendingBreakpoint |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - IDebugBoundBreakpoint2::GetPendingBreakpoint
@@ -16,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ed136217f9f5c7cffc72ba03562d308723ef5029
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 08842083f1cf78e0e0315f7576fcd7bf0d992457
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49867781"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53938962"
 ---
 # <a name="idebugboundbreakpoint2getpendingbreakpoint"></a>IDebugBoundBreakpoint2::GetPendingBreakpoint
 指定されたバインドされたブレークポイントの作成元となる保留中のブレークポイントを取得します。  
@@ -29,13 +26,13 @@ ms.locfileid: "49867781"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT GetPendingBreakpoint(   
+HRESULT GetPendingBreakpoint(   
    IDebugPendingBreakpoint2** ppPendingBreakpoint  
 );  
 ```  
   
 ```csharp  
-int GetPendingBreakpoint(   
+int GetPendingBreakpoint(   
    out IDebugPendingBreakpoint2 ppPendingBreakpoint  
 );  
 ```  
