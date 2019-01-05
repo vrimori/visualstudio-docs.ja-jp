@@ -1,9 +1,6 @@
 ---
 title: '方法: 作成し、カスタム ドキュメント プロパティの変更'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,12 +14,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 71ff5c37eee21092e186e50547cf9c0b72f1b20e
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: 0a3dd497bc2c63c58e6072cd48f58cba071ea4f4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53646510"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53891590"
 ---
 # <a name="how-to-create-and-modify-custom-document-properties"></a>方法: 作成し、カスタム ドキュメント プロパティの変更
   上記の Microsoft Office アプリケーションは、ドキュメントで保存される組み込みのプロパティを提供します。 さらに、ドキュメントで保存する追加情報がある場合は、カスタム ドキュメント プロパティを作成し、変更することができます。  
@@ -33,7 +30,7 @@ ms.locfileid: "53646510"
   
  次の例は、Excel のドキュメント レベルのカスタマイズでカスタム プロパティを追加し、値を割り当てる方法を示します。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:アクセスし、Microsoft Word のカスタム ドキュメント プロパティを操作しますか。](http://go.microsoft.com/fwlink/?LinkId=136772)  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:。アクセスし、Microsoft Word のカスタム ドキュメント プロパティを操作しますか。](http://go.microsoft.com/fwlink/?LinkId=136772).  
   
 ## <a name="example"></a>例  
  [!code-vb[Trin_VstcoreProgramming#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/ThisWorkbook.vb#6)]
@@ -46,5 +43,3 @@ ms.locfileid: "53646510"
  [VSTO アドインをプログラミングします。](../vsto/programming-vsto-add-ins.md)   
  [プログラムのドキュメント レベルのカスタマイズ](../vsto/programming-document-level-customizations.md)   
  [方法: ドキュメント プロパティの読み書き](../vsto/how-to-read-from-and-write-to-document-properties.md)  
-  
-  

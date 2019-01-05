@@ -1,9 +1,6 @@
 ---
 title: リボン デザイナー
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - Designer_Microsoft.VisualStudio.Tools.Office.Ribbon.Design.RibbonDesigner
@@ -29,12 +26,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 160cde8b4a2e6034cb9c5ced7c6a13d57c1b546c
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.openlocfilehash: 7179de49f80bee847077a7f247cc11dee855be80
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53804800"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53928868"
 ---
 # <a name="ribbon-designer"></a>リボン デザイナー
   リボン デザイナーは、ビジュアルなデザイン キャンバスです。 リボン デザイナーを使用すると、Microsoft Office アプリケーションのリボンにカスタム タブ、グループ、およびコントロールを追加します。
@@ -52,7 +49,7 @@ ms.locfileid: "53804800"
 > [!NOTE]
 >  リボン デザイナーでは行うことのできないタスクがあります。 これらのタスクとそれらを実現する方法の詳細については、次を参照してください。[リボンの概要](../vsto/ribbon-overview.md)します。
 
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:リボン デザイナーを使用して、Outlook でリボンをカスタマイズしますか。](http://go.microsoft.com/fwlink/?LinkID=130312)
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:。リボン デザイナーを使用して、Outlook でリボンをカスタマイズしますか。](http://go.microsoft.com/fwlink/?LinkID=130312).
 
 ## <a name="add-a-ribbon-visual-designer-item-to-a-project"></a>リボン (ビジュアル デザイナー) 項目をプロジェクトに追加します。
  リボン デザイナーを使用するには、新しい追加**リボン (ビジュアル デザイナー)** 項目をプロジェクトにします。 詳細については、「[方法 :リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)します。

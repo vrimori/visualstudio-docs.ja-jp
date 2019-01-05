@@ -1,9 +1,6 @@
 ---
 title: Excel オブジェクト モデルの概要
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -22,12 +19,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: eb5b930df90f36395a22461ad0f26e82548afb6f
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: 45ac85d47ace9c4ce1d954dff51ca4545d2cab35
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53647526"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53821770"
 ---
 # <a name="excel-object-model-overview"></a>Excel オブジェクト モデルの概要
   Microsoft Office Excel を使用するソリューションを開発するため、Excel オブジェクト モデルによって提供されるオブジェクトと対話することができます。 このトピックでは、特に重要なオブジェクトについて説明します。  
@@ -48,7 +45,7 @@ ms.locfileid: "53647526"
   
   ここでは、Excel オブジェクト モデルの概念について簡単に説明します。 全体の Excel オブジェクト モデルの詳細を説明できます資料については、次を参照してください。 [Excel オブジェクト モデルのドキュメントを使用して、](#ExcelOMDocumentation)します。  
   
-  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:Excel 2007 アドインでは、イベント ハンドラーを使用しますか。](http://go.microsoft.com/fwlink/?LinkID=130291)、および[How do i:バブル チャートを Excel で作成するのにには、図形を使用しますか。](http://go.microsoft.com/fwlink/?LinkID=130313)  
+  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:。Excel 2007 アドインでは、イベント ハンドラーを使用しますか。](http://go.microsoft.com/fwlink/?LinkID=130291)、および[How do i:バブル チャートを Excel で作成するのにには、図形を使用しますか。](http://go.microsoft.com/fwlink/?LinkID=130313).  
   
 ## <a name="access-objects-in-an-excel-project"></a>Excel プロジェクトでオブジェクトにアクセス  
  Excel の新しい VSTO アドイン プロジェクトを作成すると、Visual Studio は自動的に作成、 *ThisAddIn.vb*または*ThisAddIn.cs*コード ファイル。 `Me.Application` または `this.Application` を使用して、アプリケーション オブジェクトにアクセスすることができます。  
@@ -123,5 +120,3 @@ ms.locfileid: "53647526"
 |[範囲を操作します。](../vsto/working-with-ranges.md)|範囲を使用して一般的なタスクを実行する方法を示す例を提供します。|  
 |[ワークシートを操作します。](../vsto/working-with-worksheets.md)|ワークシートを使用して一般的なタスクを実行する方法を示す例を提供します。|  
 |[ブックを操作します。](../vsto/working-with-workbooks.md)|ブックを使用して一般的なタスクを実行する方法を示す例を提供します。|  
-  
-  

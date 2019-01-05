@@ -1,9 +1,6 @@
 ---
 title: '方法: データに ListObject 列をマップします。'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +13,19 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 64c098fe1c1d4695feb9addd8e5161175dc09dc9
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: 508a0fa8df58e70eb216f722ee96395c7a9c21ad
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53646839"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53899984"
 ---
 # <a name="how-to-map-listobject-columns-to-data"></a>方法: データに ListObject 列をマップします。
   <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールを <xref:System.Data.DataTable>にバインドするとき、リストの中のすべての列を表示しなくてもよい場合や、データにバインドされていない特定の列が含まれている場合があります。 <xref:Microsoft.Office.Tools.Excel.ListObject> メソッドを呼び出すと、 <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> に表示する列をマップできます。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:SharePoint リストに接続されている Excel でリストを作成しますか。](http://go.microsoft.com/fwlink/?LinkID=130263)  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:。SharePoint リストに接続されている Excel でリストを作成しますか。](http://go.microsoft.com/fwlink/?LinkID=130263).  
   
 ## <a name="map-columns"></a>列のマップ  
   
@@ -69,5 +66,3 @@ ms.locfileid: "53646839"
  [方法: データに ListObject コントロールを塗りつぶす](../vsto/how-to-fill-listobject-controls-with-data.md)   
  [拡張オブジェクトを使用して Excel を自動化します。](../vsto/automating-excel-by-using-extended-objects.md)   
  [ListObject コントロール](../vsto/listobject-control.md)  
-  
-  
