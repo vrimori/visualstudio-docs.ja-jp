@@ -178,8 +178,7 @@
 #### [Windows サービス](debugging-preparation-windows-services.md)
 ### [方法: 部分的に信頼されたアプリケーションをデバッグする](how-to-debug-a-partial-trust-application.md)
 ### [出力ウィンドウの診断メッセージ](diagnostic-messages-in-the-output-window.md)
-### 
-  [マネージド コードのアサーション](assertions-in-managed-code.md)
+### [マネージド コードのアサーション](assertions-in-managed-code.md)
 ### [Visual Basic の Stop ステートメント](stop-statements-in-visual-basic.md)
 ### [チュートリアル: Windows フォームのデバッグ](walkthrough-debugging-a-windows-form.md)
 ### [方法: 方法 : OnStart メソッドをデバッグする](how-to-debug-the-onstart-method.md)
