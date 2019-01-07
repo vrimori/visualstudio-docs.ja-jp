@@ -1,9 +1,6 @@
 ---
 title: 通知と進行状況 for Visual Studio |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: f0ef65e9-0f1f-45f4-9f25-6e2398691168
 author: gregvanl
@@ -11,12 +8,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: aee6e5656142d0597ff6101da5e2e5f690f8fcc5
-ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
+ms.openlocfilehash: 1c0241a16caec1fd25b3ccd177042af3be90a6b9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863953"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53942672"
 ---
 # <a name="notifications-and-progress-for-visual-studio"></a>通知と Visual Studio の進行状況
 ##  <a name="BKMK_NotificationSystems"></a> 通知システム  
@@ -50,8 +47,8 @@ ms.locfileid: "48863953"
 |[進行状況インジケーター](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_NotSysProgressIndicators)|(有限または無限)、進行状況を報告する必要がある場合に使用します。 これは、さまざまな進行状況インジケーターの種類とそれぞれの使用状況を特定します。 参照してください[進行状況のインジケーター](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_ProgressIndicators)します。||  
 |[Visual Studio の通知ウィンドウ](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_VSNotificationsToolWindow)|通知ウィンドウが公開されている拡張可能ではありません。 ただし、さまざまなライセンスを Visual Studio またはパッケージに更新プログラムの情報を通知と重要な問題など、Visual Studio に関するメッセージを通信するために使用されます。|その他の種類の通知を使用しないでください。|  
 |[エラー一覧](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_ErrorList)|問題は、問題 (エラー/警告/情報) を持つユーザーの現在開いているソリューションに直接関係している場合は、アクション、コードを実行する必要があります。<br /><br /> これに含まれます、たとえば。<br /><br /> コンパイラのメッセージ (エラー/警告/情報)<br /><br /> コードのコード分析/診断メッセージ<br /><br /> -メッセージを構築します。<br /><br /> プロジェクトまたはソリューション ファイルに関連する問題に適したものは、最初、ソリューション エクスプ ローラーを示す値を検討してください。|ユーザーの開いているソリューションのコードへの関係がない項目を使用しないでください。|  
-|エディターの通知: 電球|開いているファイルに存在する問題を解決するための修正プログラムがある場合に使用します。<br /><br /> 電球がオンデマンドで、リファクタリングなどのユーザーのコードに作成されますが、その場合は「通知のスタイル」は表示されませんが、クイック アクションをホストするためも使用する必要があります。|開いているファイルへの関係を持たない項目は使用しないでください。|  
-|エディターの通知: 波線|問題が開かれているコード (たとえば、エラーの赤の波線) の特定のスパンとユーザーに警告を使用します。|開いているコードの特定の範囲に関連していない項目は使用しないでください。|  
+|エディターの通知:電球|開いているファイルに存在する問題を解決するための修正プログラムがある場合に使用します。<br /><br /> 電球がオンデマンドで、リファクタリングなどのユーザーのコードに作成されますが、その場合は「通知のスタイル」は表示されませんが、クイック アクションをホストするためも使用する必要があります。|開いているファイルへの関係を持たない項目は使用しないでください。|  
+|エディターの通知:波線|問題が開かれているコード (たとえば、エラーの赤の波線) の特定のスパンとユーザーに警告を使用します。|開いているコードの特定の範囲に関連していない項目は使用しないでください。|  
 |[埋め込まれたステータス バー](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_EmbeddedStatusBars)|使用すると、コンテンツまたは特定のツール ウィンドウ、ドキュメント ウィンドウまたはダイアログ ウィンドウのコンテキスト内のプロセスに関連する状態を提供します。|一般的な製品の通知、プロセス、または特定のウィンドウ内で、コンテンツへの関係を持たない項目を使用しないでください。|  
 |[Windows トレイ通知](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_WindowsTray)|アウト プロセスのプロセスに対して通知を画面またはコンパニオン アプリケーションを使用します。|IDE に関連する通知を使用しないでください。|  
 |[通知バブル](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_NotificationBubbles)|リモート プロセスの通知したり、変更を使用して**外**の IDE。|プロセスのユーザーに通知するための手段として使用しないでください**内**IDE。|  
@@ -250,7 +247,7 @@ ms.locfileid: "48863953"
   
  ![インラインの進行状況メッセージング](../../extensibility/ux-guidelines/media/0903-09_inlinetext.png "0903 09_InlineText")  
   
- **サーバー エクスプ ローラーのインライン テキスト: 更新しています.**  
+ **サーバー エクスプ ローラーのインライン テキスト:更新しています.**  
   
 ##### <a name="tool-windows"></a>ツール ウィンドウ  
  グローバルの進行状況の表示は、ツールバーのすぐ下に配置されている、不確定な進行状況バーで表されます。  
@@ -259,7 +256,7 @@ ms.locfileid: "48863953"
   
  **チーム エクスプ ローラーのグローバル不確定な進行状況バー**  
   
-##### <a name="dialogs"></a>ダイアログ ボックス  
+##### <a name="dialogs"></a>ダイアログ  
  ダイアログ ボックスには、進行状況ローダーの種類のいずれかを含めることができます。 進行状況の指標でくメッセージングとペアになっているだけでなく複数レベルの細分化された表現とサブ プロセスに進行状況の表示と組み合わせます。  
   
  ![複数の進行状況インジケーターの種類を持つダイアログ](../../extensibility/ux-guidelines/media/0903-11_dialog.png "0903 11_Dialog")  
@@ -331,11 +328,11 @@ ms.locfileid: "48863953"
   
 -   **アイコン:** これは、任意のアイコンを追加することの警告アイコンなど、情報バーを表示したいです。  
   
--   **テキスト:** シナリオ/状況ユーザーを説明するテキストでは、テキスト内のリンクと共には追加できますが必要な場合。 簡潔なテキストを保持してください。  
+-   **テキスト:** 必要な場合は状況シナリオ/ユーザーを説明するテキストが、テキスト内のリンクと共にでは追加できます。 簡潔なテキストを保持してください。  
   
--   **アクション:** リンクやボタンは、情報バーで、ユーザーが実行できるアクションのこのセクションを含める必要があります。  
+-   **アクション:** このセクションには、リンクや、情報バーで、ユーザーが実行できるアクションのボタンを含める必要があります。  
   
--   **[閉じる] ボタン:** 右側には、最後のセクションは閉じるボタンを持つことができます。  
+-   **閉じるボタンをクリックします。** 右側には、最後のセクションでは、閉じるボタンを持つことができます。  
   
 #### <a name="creating-a-standard-infobar-in-managed-code"></a>マネージ コードで標準的な情報バーを作成します。  
  InfoBarModel クラスは、情報バーのデータ ソースの作成に使用できます。 これら 4 つのコンス トラクターのいずれかを使用します。  
@@ -485,7 +482,7 @@ public interface IVsInfoBarUIEvents
   
  ![フィールドのラベルが"Required"検証](../../extensibility/ux-guidelines/media/0905-02_fieldvalidationrequired.png "0905 02_FieldValidationRequired")  
   
- コントロールの状態が判断できる*に入力された無効なコンテンツ*別のコントロールにフォーカスを移動するときか、または、ユーザーが [OK] のコミット ボタンをクリックしたときまたはユーザーがドキュメントまたはフォームを保存するときにします。  
+ コントロールの状態が判断できる*に入力された無効なコンテンツ*別のコントロールにフォーカスを移動するときか、または、ユーザーが [OK] のコミット] ボタンをクリックしたときまたはユーザーがドキュメントまたはフォームを保存するときにします。  
   
  無効なコンテンツの状態が確認された場合、コントロールの内部または同様の横にアイコンが表示されます。 アイコンまたはコントロールのいずれかのポインターを合わせると、エラーを説明するツールヒントが表示されます。 さらに、1 ピクセルの枠線が無効な状態を作成しているコントロールの周囲に表示されます。  
   

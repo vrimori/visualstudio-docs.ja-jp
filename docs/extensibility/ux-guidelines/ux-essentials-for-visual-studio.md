@@ -1,9 +1,6 @@
 ---
 title: Visual Studio 用の UX Essentials |Microsoft Docs
-ms.custom: ''
 ms.date: 04/26/2017
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 ms.assetid: a793cf7a-f230-43ce-88d0-fa5d6f1aa9c7
 author: gregvanl
@@ -11,12 +8,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 37d2942e64a4c964ad696d1eb2c0d4bf3c777b87
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6cd0824d245e835159e3887ce7286b2e55876ba3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49848593"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53874872"
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Visual Studio の UX の基本情報
 ## <a name="best-practices"></a>ベスト プラクティス  
@@ -63,7 +60,7 @@ ms.locfileid: "49848593"
  - 最初のダイアログの高さをする必要があります**700 ピクセルより小さい**、96 dpi で IDE のフレームの最小解像度内に収まるようにします。
   
 ### <a name="high-density-displays"></a>高密度が表示されます。  
- Visual Studio の UI は、すべての DPI スケール変換、ボックスから Windows をサポートする要素で問題なく動作する必要があります: 150%、200%、250% です。  
+ Visual Studio の UI は、Windows の状態でサポートされるすべての DPI スケール ファクターに適しています機能する必要があります。150%、200%、250% の場合は。  
   
 ## <a name="anti-patterns"></a>アンチ パターン  
  Visual Studio には、以下のガイドラインとベスト プラクティスは、UI の多くの例が含まれています。 一貫性を保つために、開発者は、多くの場合、製品 UI の設計パターンが構築していることに似ていますから借用します。 これは、リリースするという私たちのドライブのユーザーとの対話およびビジュアル デザインの一貫性を利用するは場合によっては優先順位付けの参加を解除またはスケジュールの制約のためのガイドラインに準拠しないいくつかの詳細と機能の有効なアプローチです。 このような場合は、たくないチームがこれらの「アンチ パターン」のいずれかのコピーを Visual Studio 環境内で不適切なまたは非整合な UI が急増するためです。  
@@ -79,7 +76,7 @@ ms.locfileid: "49848593"
 #### <a name="anti-pattern-solution"></a>ソリューションのアンチ パターン  
  ユーザーがアクションを開始するとすぐに、およびタスクが完了する前に、構成が必要な領域の横に重大な停止アイコンをすぐに配置します。  
   
-#### <a name="example-manifest-designer-declarations"></a>例: マニフェスト デザイナーの宣言  
+#### <a name="example-manifest-designer-declarations"></a>例:マニフェスト デザイナーの宣言  
  一覧に宣言を追加すると、すぐには、ユーザーが必要なプロパティを設定するまで引き続き発生するエラー状態で配置します。  
   
  この場合、アラートに使用されるアイコンが含まれているためにその他の問題がありますが、"&times;"アイコンの横にある共通の削除 アイコンを使用することはできませんので。 その結果、UI より不恰好コントロールを削除 ボタンを使用します。  
@@ -120,15 +117,15 @@ Visual Studio 内でのアンチ パターンは、UI を破棄する前に説�
 ### <a name="using-command-bars-for-settings"></a>コマンド バーを使用して、設定  
  **図 A**このアンチ パターンを表します。 コマンドは、単に適用されるコマンド ボタンの下に設定します。 このスケッチの場合は、[デバッグ開始] 以外のコマンドがあります: などのブラウザー、デバッグなしで開始、およびステップ インでビュー-選択した設定を尊重します。  
 
-  ![図 a: がコマンド バーのアンチ パターン](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti-パターン-FigureA")<br />図 a: コマンド バーのアンチ パターン
+  ![図 a:コマンド バーのアンチ パターン](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti-パターン-FigureA")<br />図 a:コマンド バーのアンチ パターン
   
  ようにが少し向上の望ましくないが、ツールバーでこの種類の設定を配置する**図 B**します。分割ボタン領域が少なくなると改善をドロップダウン リストではそのため、中に両方の設計もを使用しているツールバーがありません。 実際にコマンドを昇格します。  
  
- ![図 b: より高度ですが、まだコマンド バーのアンチ パターン](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti-パターン-FigureB")<br />図 b: 向上ですが、まだコマンド バーのアンチ パターン
+ ![図 b:良い、ですが、コマンド バーのアンチ パターンまだ](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti-パターン-FigureB")<br />図 b:良い、でも、コマンド バーのアンチ パターン
  
   示すように、適切なアプローチで**図 C**設定は、一連のコマンドに関連付けられます。 設定されているグローバル設定がないとだけ、4 つのコマンドを切り替えしています。 これは、ツールバーのコマンドの許容可能な場合だけです。 
 
- ![図 c: Visual Studio のコマンド バーのパターンの使用を修正する](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-パターン-FigureC")<br />Visual Studio のコマンド バーのパターンの図の c: 正しい使用します。
+ ![図 c:Visual Studio のコマンド バーのパターンの使用を修正](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-パターン-FigureC")<br />図 c:Visual Studio のコマンド バーのパターンの正しい使用
    
 ### <a name="control-anti-patterns"></a>コントロールのアンチ パターン  
  いくつかのアンチ パターンは、単に不適切な使用方法またはコントロールまたはコントロールのグループのプレゼンテーションです。  
@@ -156,7 +153,7 @@ Visual Studio 内でのアンチ パターンは、UI を破棄する前に説�
   
    ![色のサービスを無視し、「詳細」のハイパーリンクを使用して、Visual Studio のアンチ パターンが。](../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102 j_HyperlinkIncorrect")<br />色のサービスを無視し、「詳細」のハイパーリンクを使用して、Visual Studio のアンチ パターンが。  
   
-   **ソリューションの向上:** リンクをクリックして、ユーザーを求めるは質問が発生します。  
+   **優れた解決方法:** リンクをクリックして、ユーザーを求めるは質問をもたらします。  
   
 -   Windows Azure サービスのしくみ  
   
@@ -165,6 +162,6 @@ Visual Studio 内でのアンチ パターンは、UI を破棄する前に説�
 #### <a name="using-click-here-for-links"></a>「ここをクリックしてください」リンクを使用してください。  
  ハイパーリンクを自己記述型にする必要があります。 「ここをクリックして」を使用するアンチ パターンまたは任意のようなバリエーションをお勧めします。  
   
- **不良:** 「新しいプロジェクトを作成する方法についてはここでクリックして」
+ **正しくありません。** ここをクリックして新しいプロジェクトを作成する方法についてはします。
   
- **Good:** 「は作成方法は、新しいプロジェクトをでしょうか」。
+ **よし：**「は作成方法は、新しいプロジェクトをでしょうか。」
