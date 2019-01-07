@@ -1,9 +1,6 @@
 ---
 title: SccDirDiff 関数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-sdk
 ms.topic: conceptual
 f1_keywords:
 - SccDirDiff
@@ -15,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2eea561b82b06d44dfbc787172e7ae063b421e2f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: b335feeeb1f2b67bb36fb31b0f6966e8a4c3ea93
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49929791"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53956856"
 ---
 # <a name="sccdirdiff-function"></a>SccDirDiff 関数
 この関数は、クライアントのディスク上の現在のローカル ディレクトリとソース管理下にある対応するプロジェクトの違いを表示します。  
@@ -48,7 +45,7 @@ SCCRTN SccDirDiff(
  [in]視覚的な違いを表示するか、ローカル ディレクトリへの完全修飾パス。  
   
  dwFlags  
- [in]コマンドのフラグ (「解説」を参照してください セクション)。  
+ [in]コマンドのフラグ (「解説」を参照してください] セクション)。  
   
  pvOptions  
  [in]ソース管理プラグインに固有のオプション。  

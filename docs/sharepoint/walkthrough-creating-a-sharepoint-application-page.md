@@ -1,13 +1,8 @@
 ---
 title: 'チュートリアル: SharePoint アプリケーション ページの作成 |Microsoft Docs'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -18,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 52ff6b3431ac3f87c85eefcf728cfe4c4875f884
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 22f53a59119ed10055decdd5c055edf378838c72
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42634788"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53867840"
 ---
 # <a name="walkthrough-create-a-sharepoint-application-page"></a>チュートリアル: SharePoint アプリケーション ページを作成します。
  
@@ -78,7 +73,7 @@ ms.locfileid: "42634788"
 
 アプリケーション ページ項目を使用すると、デザイナーで ASP.NET コントロールをアプリケーション ページに追加できます。 このデザイナーは、Visual Web Developer で使用するデザイナーと同じです。 ラベル、ラジオ ボタン リスト、およびテーブルを追加、**ソース**デザイナーの表示し、標準の ASP.NET ページをデザインするときと同じように、プロパティを設定します。
 
-1. メニュー バーで、**ビュー** > **ツールボックス**します。
+1. メニュー バーで **[表示]**、**[ツールボックス]** の順にクリックします。
 
 2. 標準的なノードで、**ツールボックス**、次の手順のいずれかを実行します。
 
@@ -158,5 +153,5 @@ Visual Web Designer を使用して、SharePoint ページの内容をデザイ�
 
 ## <a name="see-also"></a>関連項目
 
-[方法: アプリケーション ページを作成](../sharepoint/how-to-create-an-application-page.md)  
+[方法: アプリケーション ページを作成します。](../sharepoint/how-to-create-an-application-page.md)  
 [アプリケーション _layouts ページ型](http://go.microsoft.com/fwlink/?LinkID=169274)
