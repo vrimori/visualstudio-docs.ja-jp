@@ -2,7 +2,6 @@
 title: '[クラス ビュー] ウィンドウとオブジェクト ブラウザーのアイコン'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - icons, in Object Browser
@@ -18,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ff94e67291bff8dc00d3fa63976f283da485f6a
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 29d39c210a14934ba50ace92692bee944b6b75c0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34745790"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53844393"
 ---
 # <a name="class-view-and-object-browser-icons"></a>[クラス ビュー] ウィンドウとオブジェクト ブラウザーのアイコン
 

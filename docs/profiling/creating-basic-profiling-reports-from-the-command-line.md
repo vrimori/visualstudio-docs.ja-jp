@@ -1,8 +1,6 @@
 ---
 title: コマンド ラインからの基本的なプロファイリング レポートの作成 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 6d73e21e-c04e-48ea-91cc-e517a5f2cd3f
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d6b076023f725ac037ae5863bc8955e6952285ac
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 2ee2494ffaf8dce2c62564a866c73bb3663e1813
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34764908"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53841120"
 ---
 # <a name="create-basic-profiling-reports-from-the-command-line"></a>コマンド ラインから基本的なプロファイリング レポートを作成する
 この記事では、.*vsp* プロファイル データ ファイルまたは .*vsps* プロファイル データ ファイルからコンマ区切り値 (.*csv*) レポートを生成する基本的な VSPerfReport コマンドについて説明します。 すべてのレポート オプションの詳細については、「[VSPerfReport](../profiling/vsperfreport.md)」を参照してください。  
@@ -46,7 +44,7 @@ ms.locfileid: "34764908"
 |**Line**|プロファイル データがソース コード行別に一覧表示されます。|-   [サンプリング データ](../profiling/lines-view-sampling-data.md)<br />-   [.NET メモリ サンプリング データ](../profiling/lines-view-dotnet-memory-sampling-data.md)<br />-   [競合データ](../profiling/lines-view-contention-data.md)|  
 |**Header**|プロファイル データ ファイルのヘッダー情報です。|ファイルによって異なります。|  
 |**マーク**|プロファイル実行中に収集されたプロファイル マークが表示されます。|-   [マーク ビュー](../profiling/marks-view.md)|  
-|**モジュール**|モジュールのプロファイル データが一覧表示されます。|-   [サンプリング データ](../profiling/modules-view-sampling-data.md)<br />-   [インストルメンテーション データ](../profiling/modules-view-instrumentation-data.md)<br />-   [.NET メモリ サンプリング データ](../profiling/modules-view-dotnet-memory-sampling-data.md)<br />-   [.NET メモリ インストルメンテーション データ](../profiling/modules-view-dotnet-memory-instrumentation-data.md)<br />-   [競合データ](../profiling/modules-view-contention-data.md)|  
+|**Module**|モジュールのプロファイル データが一覧表示されます。|-   [サンプリング データ](../profiling/modules-view-sampling-data.md)<br />-   [インストルメンテーション データ](../profiling/modules-view-instrumentation-data.md)<br />-   [.NET メモリ サンプリング データ](../profiling/modules-view-dotnet-memory-sampling-data.md)<br />-   [.NET メモリ インストルメンテーション データ](../profiling/modules-view-dotnet-memory-instrumentation-data.md)<br />-   [競合データ](../profiling/modules-view-contention-data.md)|  
 |**Process**|プロセスのプロファイル データが一覧表示されます。|-   [プロセス ビュー](../profiling/process-view.md)<br />-   [競合データ](../profiling/process-view-contention-data.md)|  
 |**スレッド**|スレッドのプロファイル データが一覧表示されます。|-   [プロセス ビュー](../profiling/process-view.md)|  
 |**Type**|割り当てプロファイル データが種類別に一覧表示されます。|-   [割り当て ビュー](../profiling/dotnet-memory-allocations-view.md)|  

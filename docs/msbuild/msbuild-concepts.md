@@ -1,8 +1,6 @@
 ---
 title: MSBuild の概念 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, concepts
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 961f7df72476293c101ceeacbafbb31c1084fb20
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 1aaaf8dfae7ed0fd3626779fa1ba33e795d9f1d8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49892883"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53913505"
 ---
 # <a name="msbuild-concepts"></a>MSBuild の概念
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は、ビルド プラットフォームでソフトウェアを構築する方法を制御するために使用できる基本的な XML スキーマを提供します。 ビルド内のコンポーネントとその構築方法を指定するには、MSBuild の「プロパティ、アイテム、タスク、ターゲット」を使用します。  
@@ -36,4 +34,3 @@ ms.locfileid: "49892883"
 | [チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md) | MSBuild のビルド ブロックについて説明し、Visual Studio 統合開発環境 (IDE) を閉じずに MSBuild プロジェクトを記述、操作、およびデバッグする方法について説明します。 |
 | [MSBuild リファレンス](../msbuild/msbuild-reference.md) | リファレンス情報を示すドキュメントへのリンクを提供します。 |
 | [MSBuild](../msbuild/msbuild.md) | プロジェクト ファイルの XML スキーマの概要を説明し、ソフトウェアを構築するプロセスを制御する方法を示します。 |
-
