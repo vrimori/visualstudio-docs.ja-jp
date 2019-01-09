@@ -5,8 +5,7 @@ ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tgt-pltfrm-cross-plat
+ms.technology: tgt-pltfrm-cross-plat
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
@@ -14,12 +13,12 @@ caps.latest.revision: 14
 author: conceptdev
 ms.author: crdun
 manager: ghogen
-ms.openlocfilehash: f21a5491d1b0e23bff90ce0105b81eb6291ac7e5
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.openlocfilehash: e23608f3fbbb14bd6d8f8c0494cb1ae2784358fa
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51807194"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53837970"
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>変更ログ (Visual Studio Tools for Unity)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -126,7 +125,7 @@ Visual Studio Tools for Unity の変更ログです。
 
 -   Windows ストア アプリの UnityEngine アセンブリおよび UnityEditor のアセンブリへの参照を修正しました。
 
--   デバッガーでのステップ実行時のエラー (ステップを実行できない、一般例外) を修正しました。
+-   デバッガーでステップ実行するときの次のエラーを修正しました。Unable to step, general exception. (ステップ実行できません。一般例外です。)
 
 -   Visual Studio 2015 でのヒット カウント ブレークポイントを修正しました。
 
@@ -597,21 +596,21 @@ Visual Studio Tools for Unity の変更ログです。
 
 -   バグ「UVS-48: 二重引用符をタイプするとエラーが発生してすべての機能 (コード補完、構文の強調表示など) が中断されることがある」を修正しました。
 
--   バグ「UVS-46: Visual Studio のエラー一覧をクリックすると、スクリプト ファイル (UnityScript) が重複して開かれる」を修正しました。
+-   バグ「UVS-46:Visual Studio のエラー一覧をクリックすると、スクリプト ファイル (UnityScript) が重複して開かれる」を修正しました。
 
--   バグ「UVS-42: VS 2012 でステータス バーの Unity 接続のロゴがマウス イベントを処理しない」を修正しました。
+-   バグ「UVS-42:VS 2012 でステータス バーの Unity 接続のロゴがマウス イベントを処理しない」を修正しました。
 
--   バグ「UVS-44: VS 2012 でクイック MonoBehaviour の Ctrl+ Shift + Q を使用できない」を修正しました。
+-   バグ「UVS-44:VS 2012 でクイック MonoBehaviour の Ctrl+ Shift + Q を使用できない」を修正しました。
 
--   バグ「UVS-40: VS2012 の [ダーク] テーマで、ウィンドウがアクティブでないときに Unity プロジェクト エクスプローラーで選択したアイテムが読みにくい」を修正しました。
+-   バグ「UVS-40:VS2012 の [ダーク] テーマで、ウィンドウがアクティブでないときに Unity プロジェクト エクスプローラーで選択したアイテムが読みにくい」を修正しました。
 
--   バグ「UVS-39: エスケープされた文字列のトークン化の問題」を修正しました。
+-   バグ「UVS-39:エスケープされた文字列のトークン化の問題」を修正しました。
 
--   バグ「UVS-35: 変数を検査する際にオブジェクトに対して ToString が呼び出される」を修正しました。
+-   バグ「UVS-35:変数を検査する際にオブジェクトに対して ToString が呼び出される」を修正しました。
 
--   バグ「UVS-27: VS2012 で、シンボルへ移動ウィンドウが [ダーク] テーマと一致しない」を修正しました。
+-   バグ「UVS-27:VS2012 で、シンボルへ移動ウィンドウが [ダーク] テーマと一致しない」を修正しました。
 
--   バグ「UVS-11: コルーチンでのローカル」を修正しました。
+-   バグ「UVS-11:コルーチンでのローカル」を修正しました。
 
 ## <a name="11--beta-release"></a>1.1 – ベータ リリース
  リリース: 2014 年 10 月 9 日
@@ -717,9 +716,9 @@ Visual Studio Tools for Unity の変更ログです。
 
 -   式の評価のために読み込まれたアセンブリから型を検索する方法を修正しました。
 
--   バグ「UVS-21: Unity オブジェクトへの割り当てを評価しても効果が出ない」を修正しました。
+-   バグ「UVS-21:Unity オブジェクトへの割り当てを評価しても効果が出ない」を修正しました。
 
--   バグ「UVS-21: Unity Math API へのメソッドの呼び出しを評価すると、無効なポインターが発生する」を修正しました。
+-   バグ「UVS-21:Unity Math API へのメソッドの呼び出しを評価すると、無効なポインターが発生する」を修正しました。
 
 ## <a name="108"></a>1.0.8
  リリース: 2012 年 9 月 26 日
@@ -818,4 +817,3 @@ Visual Studio Tools for Unity の変更ログです。
 
 ## <a name="10--initial-release"></a>1.0 - 初期リリース
  リリース: 2012 年 8 月 22 日
-

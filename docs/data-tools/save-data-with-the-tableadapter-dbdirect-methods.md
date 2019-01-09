@@ -15,15 +15,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: ef1860274c9234774b8af42525a0215d9468a858
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: 88590c49938ef61344a1092dffb42565a81755d1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304576"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53920142"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect メソッドを使用してデータを保存する
 
@@ -75,7 +74,7 @@ ms.locfileid: "52304576"
 
 ## <a name="create-a-data-source-from-your-database"></a>データベースからデータ ソースを作成します。
 
-この手順では、**データ ソース構成ウィザード**を使用して、Northwind サンプル データベースの `Region` テーブルに基づいてデータ ソースを作成します。 接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。 Northwind サンプル データベースの設定の詳細については、次を参照してください。[方法: サンプル データベースをインストール](../data-tools/installing-database-systems-tools-and-samples.md)します。
+この手順では、**データ ソース構成ウィザード**を使用して、Northwind サンプル データベースの `Region` テーブルに基づいてデータ ソースを作成します。 接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。 Northwind サンプル データベースの設定の詳細については、次を参照してください。[方法。サンプル データベースをインストール](../data-tools/installing-database-systems-tools-and-samples.md)します。
 
 ### <a name="to-create-the-data-source"></a>データ ソースを作成するには
 

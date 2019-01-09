@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerCallback::OnFunctionExit |Microsoft ドキュメント
+title: IActiveScriptProfilerCallback::OnFunctionExit |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -16,19 +16,19 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 57a3343c7e3747c48a4c43a1c1ac17fe6502aee3
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: fb3f71e9a8a383e2362bacb17698f4eec58f464e
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724692"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54092205"
 ---
 # <a name="iactivescriptprofilercallbackonfunctionexit"></a>IActiveScriptProfilerCallback::OnFunctionExit
-オブジェクト、スクリプト エンジンで関数の実行が完了を呼び出すことがないことにドキュメント オブジェクト モデル (DOM) の呼び出しをプロファイラーに通知します。  
+オブジェクト、スクリプト エンジン関数の実行が完了するを呼び出すことが呼び出しではありません、ドキュメント オブジェクト モデル (DOM) に、プロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT OnFunctionExit(  
     [in] PROFILER_TOKEN scriptId,   
     [in] PROFILER_TOKEN functionId);  
@@ -36,7 +36,7 @@ HRESULT OnFunctionExit(
   
 #### <a name="parameters"></a>パラメーター  
  `scriptId`  
- [in]一部は、関数は、スクリプトの一意の ID。 この ID は、スクリプト エンジンによって割り当てられます。  
+ [in]スクリプトの一部では、関数の一意の ID。 この ID は、スクリプト エンジンによって割り当てられます。  
   
  `functionId`  
  [in]関数の一意の ID。 この ID は、スクリプト エンジンによって割り当てられます。  
@@ -44,8 +44,8 @@ HRESULT OnFunctionExit(
 ## <a name="return-value"></a>戻り値  
  このメソッドの戻り値は、スクリプト エンジンによって無視されます。  
   
-## <a name="remarks"></a>コメント  
- スクリプト エンジンを呼び出し、DOM の呼び出し、 [IActiveScriptProfilerCallback2::OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)の代わりに`IActiveScriptProfilerCallback::OnFunctionExit`です。 これは DOM の一意のメソッドおよびプロパティの数が多いため、します。  
+## <a name="remarks"></a>Remarks  
+ スクリプト エンジンの呼び出し、DOM 呼び出し[IActiveScriptProfilerCallback2::OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)の代わりに`IActiveScriptProfilerCallback::OnFunctionExit`します。 これは一意のメソッドと DOM のプロパティの数が多いためです。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptProfilerCallback::OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)   

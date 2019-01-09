@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::QueryAlive |Microsoft ドキュメント
+title: IRemoteDebugApplication::QueryAlive |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3f938ad30562cd1131e8a50077106002d33cea2b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 87c1bab34ed9988a1fb20e87a2b54401be2a5381
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729452"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54090676"
 ---
 # <a name="iremotedebugapplicationqueryalive"></a>IRemoteDebugApplication::QueryAlive
-アプリケーションが応答してかどうかを示します。  
+アプリケーションが応答性の高いかどうかを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT QueryAlive();  
 ```  
   
@@ -40,14 +40,14 @@ HRESULT QueryAlive();
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、アプリケーションが応答してかどうかを示します。 このメソッドの実装を常に返します`S_OK`です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、アプリケーションが応答性の高いかどうかを示します。 このメソッドの実装を常に返します`S_OK`します。  
   
- アプリケーションのプロセスが突然終了した場合、COM は、このメソッドの呼び出しをマーシャ リングのプロキシからエラーを返します。  
+ アプリケーション プロセスが予期せず終了した場合、COM は、このメソッド呼び出しのマーシャ リング プロキシからエラーを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IRemoteDebugApplication インターフェイス](../../winscript/reference/iremotedebugapplication-interface.md)

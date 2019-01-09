@@ -2,7 +2,6 @@
 title: ファイルをコピーする場所の指定 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b4154f7b3a148968347b39911b9a7e9c28830eac
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: ab842ce4f66684bf167d3cf627ce8cde82c5ea7c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53068316"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53830376"
 ---
 # <a name="how-to-specify-where-visual-studio-copies-the-files"></a>方法: Visual Studio がファイルをコピーする場所を指定する
 ClickOnce を使用してアプリケーションを発行する場合、`Publish Location` プロパティによってアプリケーション ファイルとマニフェストが配置される場所が指定されます。 これには、ファイル パスまたは FTP サーバーへのパスを指定できます。  
@@ -34,7 +33,7 @@ ClickOnce を使用してアプリケーションを発行する場合、`Publis
   
 ### <a name="to-specify-a-publishing-location"></a>発行場所を指定するには  
   
-1. **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1. **ソリューション エクスプローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2. **[発行]** タブをクリックします。  
   

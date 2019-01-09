@@ -15,15 +15,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 471b62c35cbe7098d52e9cbeb08be29cd39c7d58
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
-ms.translationtype: MT
+ms.openlocfilehash: ecedfce45ab30d70138511ab0c87206bb35a2148
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39180426"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53919470"
 ---
 # <a name="troubleshoot-service-references"></a>サービス参照をトラブルシューティングする
 
@@ -49,7 +48,7 @@ ms.locfileid: "39180426"
 
 ## <a name="error-accessing-a-service-over-a-remote-desktop"></a>リモート デスクトップ経由でサービスへのアクセス エラー
 
-ユーザーがアクセスするときに、リモート デスクトップ接続と、ユーザーを Web でホストされる WCF サービスには、管理者のアクセス許可がありません、NTLM 認証が使用されます。 ユーザーが次のエラー メッセージを受け取ることがあります、ユーザーは、管理者のアクセス許可を持っていない場合:"HTTP 要求はクライアントの認証方式 'Anonymous' で承認されていません。 サーバーから受信した認証ヘッダーが 'NTLM'。"
+ユーザーがアクセスするときに、リモート デスクトップ接続と、ユーザーを Web でホストされる WCF サービスには、管理者のアクセス許可がありません、NTLM 認証が使用されます。 ユーザーが管理者のアクセス許可を持たない場合、ユーザーは、次のエラー メッセージを受信可能性があります。"HTTP 要求はクライアントの認証方式 'Anonymous' で承認されていません。 サーバーから受信した認証ヘッダーが 'NTLM'。"
 
 このエラーを修復するには:
 
@@ -84,7 +83,7 @@ ms.locfileid: "39180426"
 
 4.  WCF サービス プロジェクトを読み込みます。
 
-5.  **Configuration Manager**ダイアログ ボックスで、セット、**アクティブ ソリューション構成**に**デバッグ**します。 詳細については、「[方法 : 構成を作成および編集する](../ide/how-to-create-and-edit-configurations.md)」を参照してください。
+5.  **Configuration Manager**ダイアログ ボックスで、セット、**アクティブ ソリューション構成**に**デバッグ**します。 詳細については、「[方法 :構成を作成および編集する](../ide/how-to-create-and-edit-configurations.md)」を参照してください。
 
 6.  **ソリューション エクスプ ローラー**、WCF サービス プロジェクトを選択します。
 
@@ -96,7 +95,7 @@ ms.locfileid: "39180426"
 
 このエラーを修正するのには、RSS フィードを無効にします。
 
-1.  Internet Explorer で、上、**ツール** メニューのをクリックして**インターネット オプション**します。
+1.  Internet Explorer で、**[ツール] メニューの** [インターネット オプション] をクリックします。
 
 2.  **コンテンツ**] タブで、**フィード**セクションで、[**設定**します。
 

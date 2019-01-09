@@ -1,8 +1,6 @@
 ---
-title: Idialoadcallback::restrictregistryaccess |Microsoft ドキュメント
-ms.custom: ''
+title: Idialoadcallback::restrictregistryaccess |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,15 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b3f98a39b96acca7019125e5198a8be729c5fd23
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 337656c89148d921544bb55264e1b3d6ed8a72c9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31468188"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53844237"
 ---
 # <a name="idialoadcallbackrestrictregistryaccess"></a>IDiaLoadCallback::RestrictRegistryAccess
-シンボル検索パスを検索するレジストリのクエリを使用できるかどうかを決定します。  
+シンボルの検索パスを検索するレジストリのクエリを使用できるかどうかを決定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,10 +29,10 @@ HRESULT RestrictRegistryAccess();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="remarks"></a>コメント  
- すべてのコード以外のリターン`S_OK`により、シンボル検索パスのレジストリを照会します。  
+ すべてのコード以外のリターン`S_OK`シンボル検索パスのレジストリを照会できないようにします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

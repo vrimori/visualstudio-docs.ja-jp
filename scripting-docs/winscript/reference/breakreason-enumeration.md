@@ -1,5 +1,5 @@
 ---
-title: BREAKREASON 列挙型 |Microsoft ドキュメント
+title: BREAKREASON 列挙型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bf1baa8b627df50db33cbd86302ce06e80c1cf34
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: d5c0dc03d8d24014e28ecf9510fa3d5faa21dba2
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24641022"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54096799"
 ---
 # <a name="breakreason-enumeration"></a>BREAKREASON 列挙型
 中断の原因を示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 typedef enum tagBREAKREASON {  
    BREAKREASON_STEP,  
    BREAKREASON_BREAKPOINT,  
@@ -47,13 +47,13 @@ typedef enum tagBREAKREASON {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|BREAKREASON_STEP|言語エンジンがステップ実行モードです。|  
+|BREAKREASON_STEP|言語エンジンは、ステップ実行モードです。|  
 |BREAKREASON_BREAKPOINT|言語エンジンには、明示的なブレークポイントが発生しました。|  
-|BREAKREASON_DEBUGGER_BLOCK|言語エンジンには、別のスレッドでデバッガー ブロックが発生しました。|  
-|BREAKREASON_HOST_INITIATED|ホストは、中断を要求します。|  
-|BREAKREASON_LANGUAGE_INITIATED|言語エンジンは、中断を要求します。|  
-|BREAKREASON_DEBUGGER_HALT|IDE、デバッガーは、中断を要求しました。|  
-|BREAKREASON_ERROR|中断の原因の実行エラー。|  
+|BREAKREASON_DEBUGGER_BLOCK|言語エンジンには、別のスレッドでデバッガーのブロックが発生しました。|  
+|BREAKREASON_HOST_INITIATED|ホストでは、中断を要求しました。|  
+|BREAKREASON_LANGUAGE_INITIATED|言語エンジンでは、中断を要求しました。|  
+|BREAKREASON_DEBUGGER_HALT|デバッガー IDE では、中断を要求しました。|  
+|BREAKREASON_ERROR|実行エラーには、中断が発生します。|  
 |BREAKREASON_JIT|JIT デバッグ スタートアップによって発生します。|  
   
 ## <a name="see-also"></a>関連項目  

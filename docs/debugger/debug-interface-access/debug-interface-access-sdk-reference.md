@@ -1,8 +1,6 @@
 ---
-title: Debug Interface Access SDK リファレンス |Microsoft ドキュメント
-ms.custom: ''
+title: Debug Interface Access SDK 参照 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,29 +14,29 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 147051074bafef92b46ba3d82a83810f20f38fa5
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 2f5cf77194d711baef2663d1c735ff2299d8997e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31468706"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53842870"
 ---
 # <a name="debug-interface-access-sdk-reference"></a>Debug Interface Access SDK 参照
-すべてのインターフェイスとサポートする列挙体と DIA SDK 内の構造体への完全な参照。  
+すべてのインターフェイスとサポートの列挙体と DIA SDK 内の構造体への完全な参照。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)  
- DIA SDK によって提供されるインターフェイスのすべてに完全な参照です。  
+ すべて DIA SDK によって提供されるインターフェイスの完全なリファレンスです。  
   
  [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)  
- すべての列挙体と構造体、インターフェイスで必要な完全なリファレンス。  
+ すべての列挙体と構造体、インターフェイスで必要な完全なリファレンスです。  
   
  [定数 (Debug Interface Access SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)  
- 多数の文字列とそのインターフェイスで使用できるラベルについて説明します。  
+ さまざまな文字列とそのインターフェイスで使用できるラベルをについて説明します。  
   
 ## <a name="related-sections"></a>関連項目  
  [シンボルとシンボル タグ](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)  
- シンボルと型を識別する方法を説明します。  
+ シンボルの概要と型を識別する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Debug Interface Access SDK](../../debugger/debug-interface-access/debug-interface-access-sdk.md)

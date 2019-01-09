@@ -1,8 +1,6 @@
 ---
-title: UWP アプリのリフレッシュ |Microsoft ドキュメント
-ms.custom: ''
+title: UWP アプリの更新 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -20,16 +18,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: a45564f34fe0167821febb511a023c01f7c38358
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 43f232157ef9237ba9d401f473ab0db1b1260f40
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31476281"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53828724"
 ---
-# <a name="refresh-a-uwp-app-in-visual-studio"></a>Visual Studio での UWP アプリをリフレッシュします。
+# <a name="refresh-a-uwp-app-in-visual-studio"></a>Visual Studio で UWP アプリを更新します。
   
- をデバッグしているし、JavaScript を使用して、を選択して、UWP アプリを更新中に、コードに変更を行うことができます、 **Windows アプリケーションの更新**のボタンでは、**デバッグ**ツールバー。 このボタンを選択すると、デバッガーを停止したり再起動したりせずにアプリが再度読み込まれます。 更新機能によって、HTML、CSS、および JavaScript コードを変更し、その結果をすばやく確認できます。 この機能は UWP アプリをサポートします。  
+ 選択して、JavaScript を使用して UWP アプリを更新して、デバッグ中に、コードに変更を行うことができます、**更新の Windows アプリ**のボタンでは、**デバッグ**ツールバー。 このボタンを選択すると、デバッガーを停止したり再起動したりせずにアプリが再度読み込まれます。 更新機能によって、HTML、CSS、および JavaScript コードを変更し、その結果をすばやく確認できます。 この機能は UWP アプリをサポートします。  
   
  更新では、アプリの状態は保持されません。また、アプリに対する次の変更は反映されません。  
   
@@ -56,11 +54,11 @@ ms.locfileid: "31476281"
   
 4.  Visual Studio に切り替えます  
   
-5.  UWP アプリのホーム ページの HTML の一部を編集します。
+5.  UWP アプリのホーム ページで、HTML の一部を編集します。
   
-7.  クリックして、 **Windows アプリケーションの更新** ボタン、次のように表示されている:![アプリの Windows の更新ボタン](../debugger/media/js_refresh.png "JS_Refresh")です。 (または F4 キーを押します)。  
+7.  [Windows アプリケーションの更新] **ボタン (**) をクリックします![Windows アプリのボタンを更新](../debugger/media/js_refresh.png "JS_Refresh")します。 (または F4 キーを押します)。  
   
-8.  アプリに切り替えます。 アプリが再度読み込まれ、更新された HTML がアプリを表示するために使用します。
+8.  アプリに切り替えます。 アプリが再度読み込まれ、更新された HTML は、アプリを表示するために使用します。
   
-## <a name="see-also"></a>関連項目  
- [クイック スタート: HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)
+## <a name="see-also"></a>「  
+ [クイック スタート:HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)

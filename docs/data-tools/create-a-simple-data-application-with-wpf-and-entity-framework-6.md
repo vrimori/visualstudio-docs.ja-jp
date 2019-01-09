@@ -8,15 +8,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5993256b41a07c4861ef2def58dc14d7fd849313
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: 4fa897ff92cb6956bef59dfcb7a860b24d0d8bae
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52305612"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53885745"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>WPF と Entity Framework 6 を使用して単純なデータ アプリケーションを作成する
 
@@ -355,7 +354,7 @@ Visual Studio によって生成される既定の配置は、アプリケーシ
 
 Windows フォーム アプリケーションでは、データベース内の行を移動したりする基本的な CRUD 操作を行うのためのボタンを持つ BindingNavigator オブジェクトを取得します。 WPF には、BindingNavigator は示しませんが、簡単に作成できます。 ボタンを水平方向の StackPanel 内で使用する実行し、ボタンの背後にあるコード内のメソッドにバインドされているコマンドを関連付けます。
 
-コマンド ロジックを 4 つの部分があります: (1)、コマンド、(2)、バインド、(3)、ボタン、および分離コードでは、(4)、コマンド ハンドラー。
+これには、コマンド ロジックを 4 つの部分があります。(1)、コマンド、(2)、バインド、(3)、ボタン、および分離コードでは、(4)、コマンド ハンドラー。
 
 ### <a name="add-commands-bindings-and-buttons-in-xaml"></a>XAML でのコマンド、バインディング、およびボタンを追加します。
 

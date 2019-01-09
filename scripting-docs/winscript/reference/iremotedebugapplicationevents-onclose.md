@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationEvents::OnClose |Microsoft ドキュメント
+title: IRemoteDebugApplicationEvents::OnClose |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b1bd38c08e1e15cbf0e5e9fdfd60c5ead128dbad
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 7ad44e0db3c125239b7f877bc856edd0e861d51a
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728832"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54095538"
 ---
 # <a name="iremotedebugapplicationeventsonclose"></a>IRemoteDebugApplicationEvents::OnClose
-アプリケーション終了イベントを処理します。  
+アプリケーションの終了イベントを処理します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT OnClose();  
 ```  
   
@@ -40,11 +40,11 @@ HRESULT OnClose();
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このメソッドは、アプリケーションの終了イベントを処理します。  
   
 ## <a name="see-also"></a>関連項目  

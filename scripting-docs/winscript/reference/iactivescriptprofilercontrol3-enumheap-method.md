@@ -1,5 +1,5 @@
 ---
-title: Iactivescriptprofilercontrol 3::enumheap メソッド |Microsoft ドキュメント
+title: Iactivescriptprofilercontrol 3::enumheap メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -12,27 +12,27 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7d6fc79a9d6d35e35181c3505e07af2d9a1962c2
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 25e81a4aa631c142d4444c0578742f68001a108d
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724562"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54097020"
 ---
 # <a name="iactivescriptprofilercontrol3enumheap-method"></a>IActiveScriptProfilerControl3::EnumHeap メソッド
-インターフェイスを返します ([IActiveScriptProfilerHeapEnum インターフェイス](../../winscript/reference/iactivescriptprofilerheapenum-interface.md)) を使用して、関連付けられているスクリプト エンジンのコンテキストで GC ヒープのオブジェクトを反復処理をすることができます。  
+インターフェイスを返します ([IActiveScriptProfilerHeapEnum インターフェイス](../../winscript/reference/iactivescriptprofilerheapenum-interface.md))、関連付けられているスクリプト エンジンのコンテキストで GC ヒープ オブジェクトを反復処理に使用できます。  
   
- デバッグ モードまたはリリース モードでこのメソッドを呼び出すことができます。 このメソッドは、UI スレッドがアイドル状態のときに呼び出す必要があります。 メソッドが呼び出された後の操作に対して実行してくださいありませんを除く、スクリプト エンジン[iactivescriptprofilerheapenum::next メソッド](../../winscript/reference/iactivescriptprofilerheapenum-next-method.md)まで[iactivescriptprofilerheapenum::next メソッド](../../winscript/reference/iactivescriptprofilerheapenum-next-method.md)S_FALSE を返しますまたは、 [IActiveScriptProfilerHeapEnum インターフェイス](../../winscript/reference/iactivescriptprofilerheapenum-interface.md)インターフェイス ポインターを解放します。  
+ デバッグ モードまたはリリース モードでこのメソッドを呼び出すことができます。 このメソッドは、UI スレッドがアイドル状態のときに呼び出す必要があります。 以外のスクリプト エンジンに対して演算を実行していないメソッドが呼び出された後[iactivescriptprofilerheapenum::next メソッド](../../winscript/reference/iactivescriptprofilerheapenum-next-method.md)まで[iactivescriptprofilerheapenum::next メソッド](../../winscript/reference/iactivescriptprofilerheapenum-next-method.md)S_FALSE を返すまたは[IActiveScriptProfilerHeapEnum インターフェイス](../../winscript/reference/iactivescriptprofilerheapenum-interface.md)インターフェイス ポインターを解放します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT EnumHeap([out] IActiveScriptProfilerHeapEnum** ppEnum);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
  ppEnum  
- [out]返します、 [IActiveScriptProfilerHeapEnum インターフェイス](../../winscript/reference/iactivescriptprofilerheapenum-interface.md)です。  
+ [out]返します、 [IActiveScriptProfilerHeapEnum インターフェイス](../../winscript/reference/iactivescriptprofilerheapenum-interface.md)します。  
   
 ## <a name="return-value"></a>戻り値  
  HRESULT。

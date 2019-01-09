@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression::Start |Microsoft ドキュメント
+title: IDebugExpression::Start |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 14d293649e3a6a87c7f594e244378dc2a7e15ac6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 2c0d7b809f18407bfeb3de59c9cbb6e6e26911ad
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727602"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54093341"
 ---
 # <a name="idebugexpressionstart"></a>IDebugExpression::Start
 式の評価を開始します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT Start(  
    IDebugExpressionCallBack*  pdecb  
 );  
@@ -38,16 +38,16 @@ HRESULT Start(
   
 #### <a name="parameters"></a>パラメーター  
  `pdecb`  
- [in]式の評価が完了したことを示すのコールバック。 このパラメーターが場合`NULL`イベントが発生しないと、クライアントを使用して式の状態をポーリングする必要があります、`QueryIsComplete`です。  
+ [in]式の評価が完了したことを示すためのコールバック。 このパラメーターが場合`NULL`イベントが発生しないと、クライアントを使用して式の状態をポーリングする必要があります、`QueryIsComplete`します。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このメソッドは、式の評価を開始します。  
   
 ## <a name="see-also"></a>関連項目  

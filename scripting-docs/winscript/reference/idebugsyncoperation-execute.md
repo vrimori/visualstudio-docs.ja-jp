@@ -1,5 +1,5 @@
 ---
-title: IDebugSyncOperation::Execute |Microsoft ドキュメント
+title: IDebugSyncOperation::Execute |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 69e07c646bfa176f5e2dc07539f301a8ef5c5273
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: d8c10973bddef45321b9942afef05a696010433f
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24726952"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54090221"
 ---
 # <a name="idebugsyncoperationexecute"></a>IDebugSyncOperation::Execute
 同期的に、操作を実行し、返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT Execute(  
    IUnknown**  ppunkResult  
 );  
@@ -43,13 +43,13 @@ HRESULT Execute(
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
-|`E_ABORT`|呼び出して、操作が中止されました、`IDebugSyncOperation::InProgressAbort`メソッドです。|  
+|`E_ABORT`|呼び出して、操作が中止されました、`IDebugSyncOperation::InProgressAbort`メソッド。|  
   
-## <a name="remarks"></a>コメント  
- 対象のスレッドの呼び出しでプロセスをデバッグ マネージャー、`Execute`メソッド同期的に処理します。  
+## <a name="remarks"></a>Remarks  
+ ターゲット スレッドの呼び出しで、プロセス デバッグ マネージャー、`Execute`メソッド同期的にします。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugSyncOperation インターフェイス](../../winscript/reference/idebugsyncoperation-interface.md)

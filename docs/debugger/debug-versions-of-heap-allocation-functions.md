@@ -1,8 +1,6 @@
 ---
 title: ヒープ割り当て関数のデバッグ バージョン |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.crt
@@ -25,12 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 12b997b2aeb2b34305eafc2dc478460d9f450677
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: f7df6a0ebc161d794a39e9e16b3b73abe42c6ec7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49941469"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53862410"
 ---
 # <a name="debug-versions-of-heap-allocation-functions"></a>デバッグ バージョンのヒープ割り当て関数
 C ランタイム ライブラリには、デバッグ バージョンの特殊なヒープ割り当て関数があります。 これらの関数は、リリース バージョンの関数名の末尾に "_dbg" を追加した名前になっています。 ここでは、CRT 関数のリリース バージョンと _dbg バージョンとの相違点について、`malloc` と `_malloc_dbg` を例にして説明します。  
@@ -49,5 +47,5 @@ C ランタイム ライブラリには、デバッグ バージョンの特殊�
   
   _DEBUG が定義されていないと呼び出しを`malloc`が影響を受けません、呼び出し`_malloc_dbg`に解決される`malloc`の定義[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc)は無視され、ソース ファイルの情報に関連する、割り当て要求が指定されていません。 `malloc` にはブロック型を指定するパラメーターがないため、`_CLIENT_BLOCK` 型への割り当て要求は標準の割り当てとして扱われます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [CRT のデバッグ技術](../debugger/crt-debugging-techniques.md)

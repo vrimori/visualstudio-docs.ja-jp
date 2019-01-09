@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - workbooks, closing
 - Excel [Office development in Visual Studio], closing workbooks
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f0e9cb0402894bc09ff287db1ee42001ee005678
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 01f188af2ae96cf8622f3614da493891e3dbabe4
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53893196"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54093146"
 ---
 # <a name="how-to-programmatically-close-workbooks"></a>方法: プログラムによってブックを閉じる
   作業中のブックを閉じたり、ブックを指定して閉じたりすることができます。  

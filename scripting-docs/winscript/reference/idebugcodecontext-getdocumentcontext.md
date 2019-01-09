@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext::GetDocumentContext |Microsoft ドキュメント
+title: IDebugCodeContext::GetDocumentContext |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 098d57a5ff0ba14b1dd493ad772eee595a10ec9a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: e69ecf79c369b0ac99f0a598681e1a02a5dd21b0
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725652"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54096539"
 ---
 # <a name="idebugcodecontextgetdocumentcontext"></a>IDebugCodeContext::GetDocumentContext
-このコードのコンテキストに関連付けられているドキュメントのコンテキストを返します。  
+このコードのコンテキストに関連付けられているドキュメント コンテキストを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetDocumentContext(  
    IDebugDocumentContext**  ppsc  
 );  
@@ -38,17 +38,17 @@ HRESULT GetDocumentContext(
   
 #### <a name="parameters"></a>パラメーター  
  `ppsc`  
- [out]このコードのコンテキストに関連付けられているドキュメントのコンテキスト。  
+ [out]このコードのコンテキストに関連付けられているドキュメント コンテキスト。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- テキスト ドキュメント、文字位置の範囲は、ステートメント全体のテキストを含める必要があります。 これにより、デバッガー IDE を現在のソース ステートメントを強調表示することができます。  
+## <a name="remarks"></a>Remarks  
+ テキスト ドキュメント、文字位置の範囲は、ステートメント全体のテキストを含める必要があります。 これにより、デバッガーを現在のソース ステートメントを強調表示の IDE です。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugCodeContext インターフェイス](../../winscript/reference/idebugcodecontext-interface.md)

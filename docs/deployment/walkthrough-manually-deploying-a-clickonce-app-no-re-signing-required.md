@@ -1,8 +1,6 @@
 ---
-title: 'チュートリアル: 手動で再署名が要求されるされないブランド情報を保持する ClickOnce アプリケーションの配置 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: 手動で再署名が要求されるされないブランド情報を保持する ClickOnce アプリケーションの展開 |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -24,20 +22,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 91f552ce30030abeae6af0d63763625e711d32e2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: c2a44ec16fb88f031701ffbdd08ca972486684a3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49875100"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53898152"
 ---
-# <a name="walkthrough-manually-deploy-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information"></a>チュートリアル: 再署名不要ブランド情報を保持する ClickOnce アプリケーションを手動で展開します。
+# <a name="walkthrough-manually-deploy-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information"></a>チュートリアル: 手動で再署名が不要な ClickOnce アプリケーションをデプロイして、商標を保持
 作成するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションと、それを発行する顧客に渡すを展開し、顧客は、配置マニフェストを更新して再署名に従来しました。 ほとんどの場合に推奨される方法ですが、.NET Framework 3.5 を使用すると、作成[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]新しい配置マニフェストを再生成することがなく、顧客によって展開できる展開します。 詳細については、次を参照してください。[再署名なしのテストと実稼働サーバーの展開の ClickOnce アプリケーション](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md)します。  
   
  作成するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションと、それを発行する顧客に渡すと展開、アプリケーション、お客様のブランド化を使用できますまたはブランド化を維持することができます。 たとえば、アプリケーションが独自のアプリケーションを 1 つである場合は、ブランド化を保持するためにする可能性があります。 場合は、アプリケーションは、顧客ごとにカスタマイズされた高、お客様のブランド化を使用する場合があります。 .NET Framework 3.5 では、展開するには、組織にアプリケーションに付与するとするブランド化を保持するために、パブリッシャー情報、およびセキュリティの署名を使用できます。 詳細については、次を参照してください。[作成の ClickOnce アプリケーションをデプロイする他のユーザーの](../deployment/creating-clickonce-applications-for-others-to-deploy.md)します。  
   
 > [!NOTE]
->  このチュートリアルでデプロイ手動で作成するかを使用して、コマンド ライン ツール*Mage.exe*またはグラフィカルなツールで*MageUI.exe*します。 手動でデプロイの詳細については、次を参照してください。[チュートリアル: ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。  
+>  このチュートリアルでデプロイ手動で作成するかを使用して、コマンド ライン ツール*Mage.exe*またはグラフィカルなツールで*MageUI.exe*します。 手動でデプロイの詳細については、次を参照してください。[チュートリアル。ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルの手順を実行するには、次のものが必要。  

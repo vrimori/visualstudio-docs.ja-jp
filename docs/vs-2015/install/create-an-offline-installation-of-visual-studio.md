@@ -5,8 +5,7 @@ ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-install
+ms.technology: vs-ide-install
 ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 22
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 0ac8f1c1d631e4d5f682fea5e1841e3914241d14
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 78a737c953446773c8788875d1924ce21f64f599
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055239"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53964706"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Visual Studio のオフライン インストールを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -91,5 +90,5 @@ Visual Studio 2017 の最新ドキュメントについては、次を参照し�
 |        ロシア語        | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x419 |
 |        トルコ語        | http://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x41F |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
  [Visual Studio のインストール]()

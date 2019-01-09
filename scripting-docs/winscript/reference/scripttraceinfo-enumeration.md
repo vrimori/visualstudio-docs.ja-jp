@@ -1,5 +1,5 @@
 ---
-title: SCRIPTTRACEINFO 列挙型 |Microsoft ドキュメント
+title: SCRIPTTRACEINFO 列挙型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -12,19 +12,19 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cc1902b290a8024679cef12d503e94de4923defb
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 866f507b4d107c8f395be6588a85f67ea6bb45c9
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24733992"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54086750"
 ---
 # <a name="scripttraceinfo-enumeration"></a>SCRIPTTRACEINFO 列挙型
-トレースしているスクリプト イベントを表します。 使用される、 [iactivescriptsitetraceinfo::sendscripttraceinfo メソッド](../../winscript/reference/iactivescriptsitetraceinfo-sendscripttraceinfo-method.md)です。  
+トレースしているスクリプト イベントを表します。 使用される、 [iactivescriptsitetraceinfo::sendscripttraceinfo メソッド](../../winscript/reference/iactivescriptsitetraceinfo-sendscripttraceinfo-method.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 typedef enum tagSCRIPTTRACEINFO {      SCRIPTTRACEINFO_SCRIPTSTART = 0,      SCRIPTTRACEINFO_SCRIPTEND   = 1,      SCRIPTTRACEINFO_COMCALLSTART    = 2,      SCRIPTTRACEINFO_COMCALLEND  = 3,      SCRIPTTRACEINFO_CREATEOBJSTART  = 4,      SCRIPTTRACEINFO_CREATEOBJEND    = 5,      SCRIPTTRACEINFO_GETOBJSTART = 6,      SCRIPTTRACEINFO_GETOBJEND   = 7,  } SCRIPTTRACEINFO ;  
 ```  
   
@@ -32,11 +32,11 @@ typedef enum tagSCRIPTTRACEINFO {      SCRIPTTRACEINFO_SCRIPTSTART = 0,      SCR
   
 |||  
 |-|-|  
-|SCRIPTTRACEINFO_SCRIPTSTART|スクリプトの開始時刻です。|  
-|SCRIPTTRACEINFO_SCRIPTEND|スクリプトの終了。|  
+|SCRIPTTRACEINFO_SCRIPTSTART|スクリプトの開始。|  
+|SCRIPTTRACEINFO_SCRIPTEND|スクリプトの最後。|  
 |SCRIPTTRACEINFO_COMCALLSTART|COM の呼び出しの開始。|  
 |SCRIPTTRACEINFO_COMCALLEND|COM の呼び出しの終了。|  
 |SCRIPTTRACEINFO_CREATEOBJSTART|オブジェクトの作成の開始。|  
 |SCRIPTTRACEINFO_CREATEOBJEND|オブジェクトの作成の終了。|  
-|SCRIPTTRACEINFO_GETOBJSTART|GetObject 呼び出しの開始。|  
-|SCRIPTTRACEINFO_GETOBJEND|GetObject 呼び出しの終了。|
+|SCRIPTTRACEINFO_GETOBJSTART|GetObject の呼び出しの開始。|  
+|SCRIPTTRACEINFO_GETOBJEND|GetObject の呼び出しの終了。|

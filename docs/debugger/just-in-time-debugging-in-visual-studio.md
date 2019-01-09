@@ -1,8 +1,6 @@
 ---
 title: 単にデバッガーを無効にする |Microsoft Docs
-ms.custom: ''
 ms.date: 05/23/18
-ms.technology: vs-ide-debug
 ms.topic: troubleshooting
 helpviewer_keywords:
 - debugging [Visual Studio], Just-In-Time
@@ -13,14 +11,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 147e16bab14a6a038622804cf9c57e5fdc92bf02
-ms.sourcegitcommit: c5e72875206b8c5737c29d5b1ec7b86eec747303
+ms.openlocfilehash: f946c44039407ac413fb0b49234a8590025e12d3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382780"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53959788"
 ---
-# <a name="disable-the-just-in-time-debugger"></a>単にデバッガーを無効にします。 
+# <a name="disable-the-just-in-time-debugger"></a>Just-In-Time デバッガーを無効にする 
 
 Just-In-Time デバッガー ダイアログ ボックスは、アプリが実行中にエラーが発生したときに開くし、アプリが継続するを防ぐ可能性があります。 
 
@@ -34,7 +32,7 @@ Visual Studio インストールを持っていない場合は、時間で Just 
 
 - Web アプリを実行しようとしている場合は、スクリプトのデバッグを無効にします。
   
-  Windows で**コントロール パネルの ** > **ネットワークとインターネット** > **インターネット オプション**、**無効にするスクリプト デバッグ (Internet Explorer)** と**スクリプトのデバッグ (その他) を無効にする**します。 正確な手順と設定は、Windows と、ブラウザーのバージョンによって異なります。
+  Windows で**コントロール パネルの**  > **ネットワークとインターネット** > **インターネット オプション**、**無効にするスクリプト デバッグ (Internet Explorer)** と**スクリプトのデバッグ (その他) を無効にする**します。 正確な手順と設定は、Windows と、ブラウザーのバージョンによって異なります。
   
   ![インターネット オプションの JIT](../debugger/media/jitinternetoptions.png "JIT インターネット オプション")
   
@@ -46,4 +44,3 @@ Visual Studio インストールを持っていない場合は、時間で Just 
 時間内でデバッグを無効にした後、アプリでは、エラーを処理し、通常どおりに実行することができます。 
 
 アプリには、まだハンドルされないエラーがある場合、エラー メッセージが表示することがあります。 またはアプリがクラッシュまたはハング可能性があります。 エラーが修正されるまで、アプリが正常に実行できません。 アプリの所有者に連絡し、その修正を依頼しようとすることができます。
-

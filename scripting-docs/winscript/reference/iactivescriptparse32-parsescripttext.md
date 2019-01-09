@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptParse32::ParseScriptText |Microsoft ドキュメント
+title: IActiveScriptParse32::ParseScriptText |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.assetid: f33e454c-69d8-4cab-9150-d1e7fd04786d
 caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: af1e3b6723b402263359719695aa1f57432c76e2
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 782c1d7bd2dd4c0708418ffd3e69c339dd993fde
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724822"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54094602"
 ---
 # <a name="iactivescriptparse32parsescripttext"></a>IActiveScriptParse32::ParseScriptText
 指定したコード スクリプトレットを解析することで、宣言を名前空間に追加し、必要に応じてコードを評価します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT ParseScriptText(  
     LPCOLESTR pstrCode,              // address of scriptlet text  
     LPCOLESTR pstrItemName,          // address of item name  
@@ -48,7 +48,7 @@ HRESULT ParseScriptText(
 |`ulStartingLineNumber`|[入力] 解析が開始される行を指定するゼロから始まる値。|  
 |`dwFlags`|[入力] スクリプトレットに関連付けられるフラグ。 次の値の組み合わせが可能です。|  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-------------|  
 |SCRIPTTEXT_ISEXPRESSION|計算式とステートメントの区別は重要ですが、スクリプト言語で文法的にあいまいな場合、このフラグは、スクリプトレットがステートメント (またはステートメントの列挙) としてではなく式として解釈されることを指定します。 どちらであるかスクリプトレット テキストの構文から正しく判断できない場合、既定ではステートメントとして解釈されます。|  
 |SCRIPTTEXT_ISPERSISTENT|スクリプト エンジンが保存される場合 (`IPersist*::Save` の呼び出しなどにより)、または初期化状態に戻すことでリセットされる場合、この呼び出し中に追加されたコードを保存する必要があることを指定します。|  
@@ -72,14 +72,14 @@ HRESULT ParseScriptText(
 |`E_UNEXPECTED`|呼び出しは不要でした (スクリプト エンジンが未初期化または終了状態である場合や、SCRIPTTEXT_ISEXPRESSION フラグが設定されていてスクリプト エンジンが初期化状態である場合など)。|  
 |`OLESCRIPT_E_SYNTAX`|指定されていない構文エラーがスクリプトレットで発生しました。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  スクリプト エンジンが初期化状態である場合、コードは実際にはこの呼び出し中に評価されません。コードはキューに入れられ、スクリプト エンジンが起動状態に移行 (を経過) すると実行されます。 コードの実行が初期化状態では許可されないため、初期化状態のときに SCRIPTTEXT_ISEXPRESSION フラグを設定してこのメソッドを呼び出すと、エラーになります。  
   
- スクリプトレットは、スクリプト言語で許可されている限り、式でもステートメントの列挙でも、その他のものでもかまいません。 このメソッドは HTML の評価に使用するなど、\<スクリプト > タグが実行されるスクリプトの状態にコンパイルするだけではなく、HTML ページが構築されるようにステートメントを許可します。  
+ スクリプトレットは、スクリプト言語で許可されている限り、式でもステートメントの列挙でも、その他のものでもかまいません。 HTML の評価でこのメソッドを使用するなど、\<スクリプト > タグが実行されるだけにスクリプトの状態へのコンパイルではなく、HTML ページが構築されるようにステートメントを許可します。  
   
  このメソッドに渡されるコードは、コードとして有効であり完結している必要があります。 たとえば VBScript では、このメソッドを Sub Function(x) で 1 回呼び出し、`End Sub` でもう 1 回呼び出すことは無効です。 パーサーは、このメソッドの 2 回目の呼び出しがあるため、サブルーチンの完了を待たずに、解析エラーを生成します。サブルーチンの宣言が開始したが完了しなかったためです。  
   
- スクリプトの状態の詳細についてを参照してください、スクリプト エンジンの状態の[Windows スクリプト エンジン](../../winscript/windows-script-engines.md)です。  
+ スクリプトの状態の詳細については、のスクリプト エンジンの状態を参照してください[Windows スクリプト エンジン](../../winscript/windows-script-engines.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptParse32](../../winscript/reference/iactivescriptparse32.md)

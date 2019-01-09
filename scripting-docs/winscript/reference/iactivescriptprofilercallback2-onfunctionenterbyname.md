@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerCallback2::OnFunctionEnterByName |Microsoft ドキュメント
+title: IActiveScriptProfilerCallback2::OnFunctionEnterByName |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,19 +14,19 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ea74d9e9e00485c86d26bb01c486992f85ffeb8f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 40c527881c45a935344aa5444d7397ccdb6d99e4
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724492"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54092496"
 ---
 # <a name="iactivescriptprofilercallback2onfunctionenterbyname"></a>IActiveScriptProfilerCallback2::OnFunctionEnterByName
-スクリプト エンジンが、ドキュメント オブジェクト モデル (DOM) の関数呼び出しを実行する予定のプロファイラーのオブジェクトに通知します。  
+プロファイラー オブジェクトをドキュメント オブジェクト モデル (DOM) の関数呼び出しを実行しようとして、スクリプト エンジンに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT OnFunctionEnterByName(  
     [in] [string] const WCHAR *pwszFunctionName,  
     [in] PROFILER_SCRIPT_TYPE scriptType);  
@@ -34,16 +34,16 @@ HRESULT OnFunctionEnterByName(
   
 #### <a name="parameters"></a>パラメーター  
  `pwszFunctionName`  
- [in]スクリプト エンジンを実行する予定の関数の名前。  
+ [in]スクリプト エンジンが実行しようとする関数の名前。  
   
  `scriptType`  
- [in]関数の型。 有効な値の詳細については、次を参照してください。 [PROFILER_SCRIPT_TYPE 列挙型](../../winscript/reference/profiler-script-type-enumeration.md)です。  
+ [in]関数の型。 有効な値の説明については、次を参照してください。 [PROFILER_SCRIPT_TYPE 列挙型](../../winscript/reference/profiler-script-type-enumeration.md)します。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドの戻り値は、スクリプト エンジンによって無視されます。  
   
-## <a name="remarks"></a>コメント  
- DOM の呼び出しのため、スクリプト エンジンでは呼び出す代わりにこのメソッドを呼び出します[IActiveScriptProfilerCallback::OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)です。 これは DOM の一意のメソッドおよびプロパティの数が多いため、します。  
+## <a name="remarks"></a>Remarks  
+ DOM の呼び出しは、スクリプト エンジンは呼び出す代わりに、このメソッドを呼び出します。 [IActiveScriptProfilerCallback::OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)します。 これは一意のメソッドと DOM のプロパティの数が多いためです。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptProfilerCallback2::OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)   

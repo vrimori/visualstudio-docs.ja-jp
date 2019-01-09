@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText::GetText |Microsoft ドキュメント
+title: IDebugDocumentText::GetText |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5a1006304974fab4959ad6313ffdc26793cdd345
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 77cc255bcd04754cbfde4638b67a85f6fdc0a922
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728082"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54091989"
 ---
 # <a name="idebugdocumenttextgettext"></a>IDebugDocumentText::GetText
-文字または文字位置の範囲に関連付けられた文字属性を取得します。  
+文字または文字位置の範囲に関連付けられている文字の属性を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetText(  
    ULONG              cCharacterPosition,  
    WCHAR*             pcharText,  
@@ -42,16 +42,16 @@ HRESULT GetText(
   
 #### <a name="parameters"></a>パラメーター  
  `cCharacterPosition`  
- [in]位置の文字範囲の位置を開始します。  
+ [in]開始文字位置の範囲の位置。  
   
  `pcharText`  
- [入力、出力].文字のテキスト バッファー。 バッファーを保持するのに十分な大きさにする必要があります`cMaxChars`文字です。 このパラメーターが NULL の場合、メソッドは、文字を返しません。  
+ [入力、出力]文字のテキスト バッファー。 バッファーを保持するために十分な大きさにする必要があります`cMaxChars`文字。 このパラメーターが NULL の場合、メソッドは文字を返しません。  
   
  `pstaTextAttr`  
- [入力、出力].文字属性バッファーです。 バッファーを保持するのに十分な大きさにする必要があります`cMaxChars`文字です。 このパラメーターが NULL の場合、メソッドは、属性を返しません。  
+ [入力、出力]文字の属性のバッファー。 バッファーを保持するために十分な大きさにする必要があります`cMaxChars`文字。 このパラメーターが NULL の場合、メソッドは、属性を返しません。  
   
  `pcNumChars`  
- [入力、出力].文字/属性の数が返されます。 このパラメーターは、このメソッドを呼び出す前に 0 に設定する必要があります。  
+ [入力、出力]文字/属性の数が返されます。 このパラメーターは、このメソッドを呼び出す前にゼロに設定する必要があります。  
   
  `cMaxChars`  
  [in]位置の文字範囲の文字数。 返される文字の最大数を指定します。  
@@ -59,12 +59,12 @@ HRESULT GetText(
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、文字または文字位置の範囲に関連付けられた文字属性を取得します。 位置の文字範囲は、文字位置と文字数で指定されます。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、文字または文字位置の範囲に関連付けられている文字の属性を取得します。 文字位置の範囲は、文字位置と文字数で指定されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugDocumentText インターフェイス](../../winscript/reference/idebugdocumenttext-interface.md)   

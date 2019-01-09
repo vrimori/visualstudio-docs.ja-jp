@@ -19,19 +19,18 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: d128216f84228c9cd4946f9a38c6c1b7845f92f1
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
-ms.translationtype: MT
+ms.openlocfilehash: aaf566c211cd79657b67a5af72d53c718cd2507a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117239"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53951460"
 ---
 # <a name="turn-off-constraints-while-filling-a-dataset"></a>データセットの読み込み中に制約をオフにする
 
-データセットに制約 (外部キー制約) などが含まれている場合、データセットに対して実行される操作の順序に関連するエラーを発行できます。 親レコードの制約に違反してエラーが発生することができますが、関連読み込み前に子レコードの読み込み。 子レコードを読み込むとすぐに制約は、関連する親レコードをチェックし、エラーを発生させます。
+データセットに制約 (外部キー制約) などが含まれている場合、データセットに対して実行される操作の順序に関連するエラーを発行できます。 親レコードの制約に違反してエラーが発生することができますが、関連読み込み前に子レコードの読み込み。 子レコードを読み込んだ直後に、関連する親があるかどうかが制約でチェックされ、エラーが生成されます。
 
 一時的に制約を中断する機構がない場合は、レコードを子テーブルに読み込もうとするたびにエラーが生成されます。 データセットのすべての制約を中断する別の方法として、<xref:System.Data.DataRow.BeginEdit%2A> プロパティおよび <xref:System.Data.DataRow.EndEdit%2A> プロパティを使用できます。
 
@@ -47,9 +46,9 @@ ms.locfileid: "37117239"
 
 ## <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>データセット デザイナーを使って更新制約を中断するには
 
-1.  データセットを開き、**データセット デザイナー**します。 詳細については、次を参照してください。[チュートリアル: データセット デザイナーでデータセットを作成する](walkthrough-creating-a-dataset-with-the-dataset-designer.md)します。
+1.  データセット デザイナー**でデータセットを開きます。 詳細については、「[チュートリアル:データセット デザイナーでデータセットを作成する](walkthrough-creating-a-dataset-with-the-dataset-designer.md)します。
 
-2.  **プロパティ**ウィンドウで、設定、<xref:System.Data.DataSet.EnforceConstraints%2A>プロパティを`false`します。
+2.  **[プロパティ]** ウィンドウで、 <xref:System.Data.DataSet.EnforceConstraints%2A> プロパティを `false`に設定します。
 
 ## <a name="see-also"></a>関連項目
 

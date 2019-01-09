@@ -1,5 +1,5 @@
 ---
-title: IEnumJsStackFrames インターフェイス |Microsoft ドキュメント
+title: IEnumJsStackFrames インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -12,19 +12,19 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 12583f73c9f3977371ebd193716f2513fc0befc4
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: c26470e02f6c7e5d8911df7e743bce0cb0e560bb
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727322"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54087881"
 ---
 # <a name="ienumjsstackframes-interface"></a>IEnumJsStackFrames インターフェイス
 JavaScript の jscript9diag.dll でスタック アンワインドが可能になるようにデバッガーによって実装されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 IEnumJsStackFrames : public IUnknown;  
 ```  
   
@@ -37,7 +37,7 @@ IEnumJsStackFrames : public IUnknown;
 |[IEnumJsStackFrames::Next メソッド](../../winscript/reference/ienumjsstackframes-next-method.md)|指定した数のフレームを取得します。|  
 |[IEnumJsStackFrames::Reset メソッド](../../winscript/reference/ienumjsstackframes-reset-method.md)|スタック フレームを最初の要素の前の位置にリセットします。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** jscript9diag.h です  
   
 ## <a name="see-also"></a>関連項目  

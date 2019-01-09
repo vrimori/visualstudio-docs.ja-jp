@@ -1,5 +1,5 @@
 ---
-title: IMachineDebugManagerCookie::EnumApplications |Microsoft ドキュメント
+title: IMachineDebugManagerCookie::EnumApplications |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 927457fca1972148798b543dceefa19e107f45d6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 09065e210e8919d149a221399aae854acc455bc0
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728592"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54087675"
 ---
 # <a name="imachinedebugmanagercookieenumapplications"></a>IMachineDebugManagerCookie::EnumApplications
-現在実行されているアプリケーションの一覧の列挙子を返します。  
+現在の実行中のアプリケーション一覧の列挙子を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT EnumApplications(  
    IEnumRemoteDebugApplications**  ppeda  
 );  
@@ -38,17 +38,17 @@ HRESULT EnumApplications(
   
 #### <a name="parameters"></a>パラメーター  
  `ppeda`  
- [out]現在実行されているアプリケーションの一覧を含む列挙子。  
+ [out]アプリケーションを実行中の現在の一覧を格納している列挙子。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、現在実行されているアプリケーションの一覧の列挙子を返します。 デバッガー IDE では、このメソッドを使用して、表示し、デバッグの目的でアプリケーションをアタッチします。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、現在の実行中のアプリケーション一覧の列挙子を返します。 デバッガー IDE では、このメソッドを使用して表示し、デバッグ目的でアプリケーションをアタッチします。  
   
 ## <a name="see-also"></a>関連項目  
  [IMachineDebugManagerCookie インターフェイス](../../winscript/reference/imachinedebugmanagercookie-interface.md)

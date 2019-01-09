@@ -1,5 +1,5 @@
 ---
-title: Iactivescriptsitetraceinfo::sendscripttraceinfo メソッド |Microsoft ドキュメント
+title: Iactivescriptsitetraceinfo::sendscripttraceinfo メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -12,19 +12,19 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5290cc6a92be7c8bc99e4715c77bfe6f8f6abb53
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0f08a5cb0e7bd297dede85190ac694185e2fd795
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724842"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54091625"
 ---
 # <a name="iactivescriptsitetraceinfosendscripttraceinfo-method"></a>IActiveScriptSiteTraceInfo::SendScriptTraceInfo メソッド
 イベントの種類、コンテキスト、およびスクリプト ステートメントを含むトレース情報を送信します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT SendScriptTraceInfo(     [in] SCRIPTTRACEINFO stiEventType,     [in] GUID guidContextID,     [in] DWORD dwScriptContextCookie,     [in] LONG lScriptStatementStart,     [in] LONG lScriptStatementEnd,     [in] DWORD64 dwReserved );   
 ```  
   
@@ -42,7 +42,7 @@ HRESULT SendScriptTraceInfo(     [in] SCRIPTTRACEINFO stiEventType,     [in] GUI
  スクリプト ステートメントの開始位置。  
   
  `lScriptStatementEnd`  
- スクリプトのステートメントの最後の位置。  
+ スクリプト ステートメントの最後の位置。  
   
  `dwReserved`  
  予約済み。

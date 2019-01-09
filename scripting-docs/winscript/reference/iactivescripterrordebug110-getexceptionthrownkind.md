@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptErrorDebug110::GetExceptionThrownKind |Microsoft ドキュメント
+title: IActiveScriptErrorDebug110::GetExceptionThrownKind |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8306b1d4ff68fe9eec00d47d8c702278e89fc37b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: ce3a164f3ee4d81ca849db7c4745948ffe17d56e
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724392"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54097189"
 ---
 # <a name="iactivescripterrordebug110getexceptionthrownkind"></a>IActiveScriptErrorDebug110::GetExceptionThrownKind
 スローされた例外の種類を示す値を返します。  
@@ -29,7 +29,7 @@ ms.locfileid: "24724392"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetExceptionThrownKind(  
    SCRIPT_ERROR_DEBUG_EXCEPTION_THROWN_KIND*  pExceptionKind  
 );  
@@ -37,12 +37,12 @@ HRESULT GetExceptionThrownKind(
   
 #### <a name="parameters"></a>パラメーター  
  `pExceptionKind`  
- [out]によって表されます (たとえば、初回または処理されない)、スローされる例外の種類、 [SCRIPT_ERROR_DEBUG_EXCEPTION_THROWN_KIND 列挙型](../../winscript/reference/script-error-debug-exception-thrown-kind-enumeration.md)列挙値。  
+ [out]によって表される (たとえば、初回るまたはハンドルされない)、スローされる例外の種類、 [SCRIPT_ERROR_DEBUG_EXCEPTION_THROWN_KIND 列挙型](../../winscript/reference/script-error-debug-exception-thrown-kind-enumeration.md)列挙値。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
