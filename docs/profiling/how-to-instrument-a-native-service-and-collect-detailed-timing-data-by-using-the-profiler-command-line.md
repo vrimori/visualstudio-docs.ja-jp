@@ -1,8 +1,6 @@
 ---
 title: '方法: プロファイラーのコマンド ラインを使用してネイティブ サービスをインストルメントし、詳細なタイミング データを収集する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: dfe58b39-63f8-4a87-ab3a-2b5b14faa8d0
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b561e7d3be7bcbd3f71c81043e352482f0a04f6
-ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
+ms.openlocfilehash: 9a4b01cb5543da45733be05c24b8b09209107b68
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53592470"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53966626"
 ---
 # <a name="how-to-instrument-a-native-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line"></a>方法: プロファイラーのコマンド ラインを使用してネイティブ サービスをインストルメントし、詳細なタイミング データを収集する
 この記事では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイル ツールのコマンド ライン ツールを使用してネイティブ (C/C++) サービスをインストルメント化し、詳細なタイミング データを収集する方法について説明します。  

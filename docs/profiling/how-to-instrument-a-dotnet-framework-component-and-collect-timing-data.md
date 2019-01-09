@@ -1,8 +1,6 @@
 ---
 title: '方法: コマンド ラインからプロファイラーを使用してスタンドアロンの .NET Framework コンポーネントをインストルメント化し、タイミング データを収集する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: b7dcc27b-45c6-4302-9552-6fa5b1e94b56
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 975e9a177f5d9c7423b4c84823464e1a7cc5ad84
-ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
+ms.openlocfilehash: 8aa9e998be5f4a888428f19db7951f9ab7e2e972
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53592581"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53841847"
 ---
 # <a name="how-to-instrument-a-stand-alone-net-framework-component-and-collect-timing-data-with-the-profiler-from-the-command-line"></a>方法: コマンド ラインからプロファイラーを使用してスタンドアロンの .NET Framework コンポーネントをインストルメントし、タイミング データを収集する
 ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイル ツールのコマンド ライン ツールを使用して、.*exe* や .*dll*ファイルなどの .NET Framework コンポーネントをインストルメント化し、詳細なタイミング データを収集する方法について説明します。  

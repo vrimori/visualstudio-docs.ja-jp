@@ -2,7 +2,6 @@
 title: プロファイラーを .NET サービスにアタッチし、コンカレンシー データを収集する
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: ffbdfe37-8325-44be-bd36-2c8aab2dec7b
 author: mikejo5000
@@ -10,12 +9,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10b19bc522163660d71ab2e6e16bb2d02e84afd1
-ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
+ms.openlocfilehash: 74c75b24bdea0554d291f33935517d3baac428d6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53592548"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53837577"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-concurrency-data-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーを .NET サービスにアタッチし、コンカレンシー データを収集する
 この記事では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイル ツールのコマンド ライン ツールを使用して、プロファイラーを [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] サービスにアタッチし、サンプリング メソッドによってプロセス データとスレッド コンカレンシー データを収集する方法について説明します。  
@@ -99,7 +98,7 @@ ms.locfileid: "53592548"
   
     -   サービスを停止します。  
   
-         または  
+         - または -  
   
     -   **VSPerfCmd /detach** と入力します  
   

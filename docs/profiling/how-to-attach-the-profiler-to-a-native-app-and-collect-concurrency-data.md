@@ -2,7 +2,6 @@
 title: プロファイラーをネイティブ アプリケーションにアタッチし、コンカレンシー データを収集する
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 12d3e0f3-4b74-4e66-8fbf-8ac99bd4f91c
 author: mikejo5000
@@ -10,12 +9,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce12c390de68a4554bd18686e7db0de28b9820ee
-ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
+ms.openlocfilehash: 25fc7e10ea9d75eead063434803bd529b3d8fccf
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53592847"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53836076"
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-stand-alone-application-and-collect-concurrency-data-by-using-the-command-line"></a>方法: コマンド ラインを使用してスタンドアロンのネイティブ アプリケーションにプロファイラーをアタッチし、コンカレンシー データを収集する
 この記事では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイル ツールのコマンド ライン ツールを使用して、実行中のスタンドアロンのネイティブ (C/C++) アプリケーションにプロファイラーをアタッチし、スレッド競合データを収集する方法について説明します。  

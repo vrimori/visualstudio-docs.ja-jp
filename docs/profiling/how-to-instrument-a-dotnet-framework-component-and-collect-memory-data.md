@@ -1,8 +1,6 @@
 ---
 title: '方法: プロファイラーのコマンド ラインを使用してスタンドアロンの .NET Framework コンポーネントをインストルメントし、メモリ データを収集する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: d09cc46a-70f5-48f9-aa24-89913e67b359
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 860caedef22221bb815732ab76e319fd409bb3cb
-ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
+ms.openlocfilehash: c9bed8b40e1ce601515a92f1f55a62d54cfb7d30
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53592730"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53917463"
 ---
 # <a name="how-to-instrument-a-stand-alone-net-framework-component-and-collect-memory-data-with-the-profiler-by-using-the-command-line"></a>方法: プロファイラーのコマンド ラインを使用してスタンドアロンの .NET Framework コンポーネントをインストルメントし、メモリ データを収集する
 この記事では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイル ツールのコマンド ライン ツールを使用して、スタンドアロン アプリケーションの .NET Framework コンポーネント (.exe ファイル、.dll ファイルなど) をインストルメント化し、プロファイラーを使用してメモリ情報を収集する方法について説明します。  

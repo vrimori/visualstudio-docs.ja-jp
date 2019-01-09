@@ -1,8 +1,6 @@
 ---
-title: IDiaSymbol::get_isVirtualInheritance |Microsoft ドキュメント
-ms.custom: ''
+title: IDiaSymbol::get_isVirtualInheritance |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -12,15 +10,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c10757f1077e67422799f8f3a477dc3c1675c868
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: b8cdb798f565ef18107f1000b23473c120b9e9a7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31462874"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53956611"
 ---
 # <a name="idiasymbolgetisvirtualinheritance"></a>IDiaSymbol::get_isVirtualInheritance
-指定するかどうか、`this`仮想継承を持つデータ メンバーを指すポインターです。  
+指定するかどうか、`this`仮想継承を持つデータ メンバーを指すポインター。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,10 +29,10 @@ HRESULT get_isVirtualInheritance(
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ポインター、`BOOL`を指定するかどうか、`this`仮想継承を持つデータ メンバーを指すポインターです。  
+ [out]ポインターを`BOOL`を指定するかどうか、`this`仮想継承を持つデータ メンバーを指すポインター。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

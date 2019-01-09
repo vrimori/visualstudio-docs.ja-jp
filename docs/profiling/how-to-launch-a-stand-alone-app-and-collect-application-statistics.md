@@ -1,8 +1,6 @@
 ---
 title: '方法: コマンド ラインを使用してプロファイラーによってスタンドアロン アプリケーションを起動し、アプリケーション統計情報を収集する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 52dcee2b-f178-4a76-bddc-e36c50bfcb78
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ea9027f6589c7d7993aab1652fd89117239940a
-ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
+ms.openlocfilehash: 3fb8f3ca57ce189dc0bcecff5c755860f219a7ad
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53592912"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53926646"
 ---
 # <a name="how-to-launch-a-stand-alone-application-with-the-profiler-and-collect-application-statistics-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーでスタンドアロン アプリケーションを起動し、アプリケーション統計情報を収集する
 ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのコマンド ライン ツールを使用してスタンドアロン (クライアント) アプリケーションを起動し、サンプリング メソッドによってパフォーマンスに関する統計情報を収集する方法について説明します。  
@@ -98,7 +96,7 @@ ms.locfileid: "53592912"
 
     -   対象アプリケーションを終了します。  
 
-         または  
+         - または -  
 
     -   **VSPerfCmd /detach** と入力します  
 

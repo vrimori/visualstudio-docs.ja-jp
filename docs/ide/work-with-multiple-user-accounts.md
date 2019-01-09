@@ -2,19 +2,18 @@
 title: 複数のユーザー アカウントを使って作業する
 ms.date: 12/10/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e623734cbe2aedee962e9f1b139ac1d50d473072
-ms.sourcegitcommit: 75e02ed88a1ace6e8265fd4e3a82a1bc78f3adca
+ms.openlocfilehash: d74351e891b3bac4fe96e7e5b2ca9e46c412ca72
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53348243"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53920525"
 ---
 # <a name="work-with-multiple-user-accounts"></a>複数のユーザー アカウントを使って作業する
 

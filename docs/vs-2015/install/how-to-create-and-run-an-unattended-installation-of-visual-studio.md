@@ -1,12 +1,11 @@
 ---
-title: 方法:作成し、無人インストールの実行 |Microsoft Docs
+title: '方法: 作成し、無人インストールの実行 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-install
+ms.technology: vs-ide-install
 ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
@@ -17,14 +16,14 @@ caps.latest.revision: 44
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: bc1a6ba1a36dd7514257fcbb8ba4c26ca1ee6116
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 0045ff701947f834bd38dfff7c90b7388e9353b7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53065520"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53951931"
 ---
-# <a name="how-to-create-and-run-an-unattended-installation-of-visual-studio"></a>方法:作成し、Visual Studio の無人インストールの実行
+# <a name="how-to-create-and-run-an-unattended-installation-of-visual-studio"></a>方法: 作成し、Visual Studio の無人インストールの実行
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のインストール アプリケーションは、DVD などのメディアの代わりに、イントラネット経由での無人インストール (つまり、カスタマイズしたサイレント インストール) として実行できます。 このトピックでは、準備する方法を説明します[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]この種のネットワーク共有からインストールします。
@@ -178,7 +177,7 @@ ms.locfileid: "53065520"
 
 2.  プロダクト キーを入力します。
 
-     (詳細については、次を参照してください。、[方法。Visual Studio プロダクト キーを検索](../install/how-to-locate-the-visual-studio-product-key.md)、[方法。Visual Studio の展開時に、プロダクト キーを自動的に適用](../install/how-to-automatically-apply-product-keys-when-deploying-visual-studio.md)トピックです)。
+     詳細については、「[方法:Visual Studio プロダクト キーを検索](../install/how-to-locate-the-visual-studio-product-key.md)、[方法。Visual Studio の展開時に、プロダクト キーを自動的に適用](../install/how-to-automatically-apply-product-keys-when-deploying-visual-studio.md)トピックです)。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
  [Visual Studio のインストール](../install/install-visual-studio-2015.md)

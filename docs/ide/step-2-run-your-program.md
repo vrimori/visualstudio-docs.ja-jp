@@ -1,9 +1,7 @@
 ---
 title: '手順 2: プログラムを実行する'
-ms.custom: ''
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 9a8fe90e-c97b-4e98-b6c8-0c6b3962c49d
 author: TerryGLee
@@ -11,12 +9,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 13983379dec4ec998172d0d11e0a7810c8cf02c0
-ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
+ms.openlocfilehash: d20e17d8d953e083d878530aa971c714db72241f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53561682"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53835725"
 ---
 # <a name="step-2-run-your-program"></a>手順 2: プログラムを実行する
 新しいソリューションを作成すると、実際には実行するプログラムが作成されます。 まだ実行される処理は少なく、タイトル バーに **Form1** と表示された空のウィンドウを表示するだけのプログラムですが、 もうおわかりのように実行することはできます。

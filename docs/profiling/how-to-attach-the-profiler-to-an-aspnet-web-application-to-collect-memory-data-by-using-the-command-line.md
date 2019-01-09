@@ -2,7 +2,6 @@
 title: プロファイラーを ASP.NET アプリにアタッチし、メモリ データを収集する
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: d608f85a-41ae-4ca7-85e6-b96624dbc83c
 author: mikejo5000
@@ -10,12 +9,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: dd601612071c2d310986692c3242c4232da328a1
-ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
+ms.openlocfilehash: 57a4e969cc0e5a80499e58d0429cec8ff60fc2fc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53592743"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53828083"
 ---
 # <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーを ASP.NET Web アプリケーションにアタッチし、メモリ データを収集する
 この記事では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイル ツールのコマンド ライン ツールを使用して、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションにプロファイラーをアタッチし、.NET Framework のメモリ割り当ての数とサイズに関するデータを収集する方法について説明します。 .NET Framework メモリ オブジェクトの有効期間に関するデータも収集できます。  
@@ -109,7 +108,7 @@ ms.locfileid: "53592743"
 
    - 「**VSPerfCmd** [/detach](../profiling/detach.md)」と入力します  
 
-      または  
+      - または -  
 
    - [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスを終了します。 型:  
 

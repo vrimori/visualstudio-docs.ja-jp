@@ -3,7 +3,6 @@ title: Visual Studio プロファイラー API リファレンス (ネイティ�
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - performance tools, API
@@ -14,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: debb3c0d2fcbb9f1568acd7ae0f09fc6d1d099fb
-ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
+ms.openlocfilehash: e0926c80954c83dd1c0c1a72e7c693e8ea266713
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53592769"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53945026"
 ---
 # <a name="visual-studio-profiler-api-reference-native"></a>Visual Studio プロファイラー API リファレンス (ネイティブ)
 Visual Studio プロファイラー API を使用すると、収集データの量をプログラムで制御したり、タイムスタンプとプロファイルの両方のマークをプロファイル時に挿入したりできます。 ネイティブ API を使用するには、*VSPerf.h* ヘッダー ファイルをインクルードし、*VSPerf.lib* をプロジェクトに追加する必要があります。  

@@ -2,7 +2,6 @@
 title: VB のプロジェクト設定の構成のデバッグ |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vbProjectPropertiesDebug
@@ -24,12 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d70ec195418b46a022ca73d6ac3656de8e652f06
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 200d09c77c7ff4c22ed51b4cc93ec724d30dd17b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059692"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53878498"
 ---
 # <a name="project-settings-for-a-visual-basic-debug-configuration"></a>Visual Basic デバッグ構成のプロジェクト設定
 「[デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)」で説明されているように、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] のデバッグ構成に対するプロジェクト設定は **[プロパティ ページ]** ウィンドウで変更できます。 次の表は、**[プロパティ ページ]** ウィンドウのデバッガー関連の設定の場所を示しています。  
@@ -58,5 +57,5 @@ ms.locfileid: "53059692"
 | **定数 DEBUG の定義** | このシンボルを定義すると、[Debug クラス](/dotnet/api/system.diagnostics.debug)の出力関数の条件付きコンパイルが可能になります。 このシンボルを定義すると、Debug クラスのメソッドは[出力ウィンドウ](../ide/reference/output-window.md)に出力を生成します。 このシンボルを定義しない場合、Debug クラスのメソッドはコンパイルされず、出力も生成されません。 このシンボルは、デバッグ バージョンに定義します。リリース バージョンには定義しません。 リリース バージョンにこのシンボルを定義すると、不要なコードのためにプログラムの実行速度が低下します。 |
 | **定数 TRACE の定義** | このシンボルを定義すると、[Trace クラス](/dotnet/api/system.diagnostics.trace)の出力関数の条件付きコンパイルが可能になります。 このシンボルを定義すると、Trace クラスのメソッドは[出力ウィンドウ](../ide/reference/output-window.md)に出力を生成します。 このシンボルを定義しない場合、Trace クラスのメソッドはコンパイルされず、出力も生成されません。 このシンボルは、既定で、デバッグ バージョンとリリース バージョンの両方に定義されます。 |
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)

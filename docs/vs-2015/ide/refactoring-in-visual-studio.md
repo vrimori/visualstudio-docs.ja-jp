@@ -5,8 +5,7 @@ ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f0181ee8-9b46-45f7-b86e-316e3de024b9
@@ -14,12 +13,12 @@ caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b0d5abaa326559956ffa534ac2ed70f4a0aaaf1a
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: d4b581162455daf36546604cc72c35c0612abde4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052933"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53841704"
 ---
 # <a name="refactoring-in-visual-studio"></a>Visual Studio でのリファクタリング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,5 +47,5 @@ ms.locfileid: "53052933"
 ### <a name="refactoring-in-f"></a>リファクタリング [F#]
  F# のリファクタリングのサポートは、サード パーティ製の Visual Studio 拡張機能の [Visual F# Power Tool](https://visualstudiogallery.msdn.microsoft.com/136b942e-9f2c-4c0b-8bac-86d774189cff) で提供されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
  [Visual Studio IDE](../ide/visual-studio-ide.md) [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)
