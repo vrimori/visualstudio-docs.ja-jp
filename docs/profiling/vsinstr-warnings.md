@@ -1,8 +1,6 @@
 ---
 title: VSInstr の警告 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - instrumentation, VSInstr tool
@@ -16,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a306276e015d06fe3becf297d0bb5834f640a1a7
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 716cf80a9b93f5a018c31af0d36d3212a858f3b2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34571647"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53888596"
 ---
 # <a name="vsinstr-warnings"></a>VSInstr の警告
 次の表に、*VSInstr.exe* ツールで発行される警告をリストします。 NOWARN オプションに警告番号を指定することで、警告を非表示にできます。  
@@ -40,7 +38,7 @@ ms.locfileid: "34571647"
 |**VSP2009**|\<name> でセキュリティ属性を設定できません。 エラー コード \<error number><br /><br /> この警告は、ユーザーが WRITE_DAC アクセス許可を持っていない場合に発生します。 インストルメンテーション プロセス中に、プロファイラーはバイナリの元の DACL を保持しようとします。 元のバイナリは新しいバイナリと置き換えられるため、元のバイナリの DACL をコピーして新しいバイナリに適用する必要があります。 ユーザーが新しいバイナリに対する WRITE_DAC アクセス許可を持たない場合、この操作は失敗することがあります。|  
 |**VSP2010**|-INCLUDE/-EXCLUDE オプションにより、関数はインストルメンテーション用に特別に選択されていません|  
 |**VSP2011**|Include/Exclude funcspec \<name> は、どの関数とも一致しません|  
-|**VSP2012**|コード カバレッジ用にインストルメント化可能なコードがイメージに含まれていません。<br /><br /> プロファイラーでは、次のようなコードはインストルメント化されません。<br /><br /> -   静的な CRT 関数<br />-   NonUserCodeAttribute の属性付きマネージ メソッド<br />-   DebuggerHiddenAttribute の属性付きマネージ メソッド<br />-   MASM ブロック<br /><br /> この警告は、このフィルターを適用した後にコードが残らない場合に生成されます。|  
+|**VSP2012**|コード カバレッジ用にインストルメント化可能なコードがイメージに含まれていません。<br /><br /> プロファイラーでは、次のようなコードはインストルメント化されません。<br /><br /> -   静的な CRT 関数<br />-   NonUserCodeAttribute の属性付きマネージド メソッド<br />-   DebuggerHiddenAttribute の属性付きマネージド メソッド<br />-   MASM ブロック<br /><br /> この警告は、このフィルターを適用した後にコードが残らない場合に生成されます。|  
 |**VSP2013**|このイメージをインストルメント化するには、32 ビット プロセスとして実行する必要があります。 CLR ヘッダー フラグは、これを反映するように更新されました。<br /><br /> プロファイラーは、64 ビット オペレーティング システムが WOW64 エミュレーターで 32 ビット プロセスを開けるように、バイナリを変更します。 ライブラリ (DLL) の場合、既存の 64 ビット プロセスに読み込まれたときに失敗する場合があります。 この警告はユーザーに依存関係を知らせるものです。|  
 |**VSP2014**|結果となるインストルメント化されたイメージは無効であり、実行されない可能性があります。<br /><br /> このメッセージは、インストルメント化された最終的なアセンブリに無効な PE ヘッダーがある場合に発生します。|  
   

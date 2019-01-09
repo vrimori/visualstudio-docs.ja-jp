@@ -1,8 +1,6 @@
 ---
-title: 同時実行ビジュアライザー SDK | Microsoft Docs
-ms.custom: ''
+title: コンカレンシー ビジュアライザー SDK | Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.cv.sdk.about
@@ -12,28 +10,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c02959f30f89b8f7c79527026404099a4452a827
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: a9898037e7dc6beae5d984856ff5c12b74183049
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34691187"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53884971"
 ---
-# <a name="concurrency-visualizer-sdk"></a>同時実行ビジュアライザー SDK
-同時実行ビジュアライザー SDK を使用してソース コードをインストルメント化し、同時実行ビジュアライザーに追加情報を表示することができます。 コードでフェーズとイベントに追加データを関連付けることができます。 このような追加の視覚化機能のことを*マーカー*と呼びます。  入門用のチュートリアルについては、「[Introducing the Concurrency Visualizer SDK](http://go.microsoft.com/fwlink/?LinkId=235405)」 (同時実行ビジュアライザー SDK の概要) を参照してください。  
+# <a name="concurrency-visualizer-sdk"></a>コンカレンシー ビジュアライザー SDK
+コンカレンシー ビジュアライザー SDK を使用してソース コードをインストルメント化し、コンカレンシー ビジュアライザーに追加情報を表示することができます。 コードでフェーズとイベントに追加データを関連付けることができます。 このような追加の視覚化機能のことを*マーカー*と呼びます。  入門用のチュートリアルについては、「[Introducing the Concurrency Visualizer SDK](http://go.microsoft.com/fwlink/?LinkId=235405)」(コンカレンシー ビジュアライザー SDK の概要) を参照してください。  
   
 ## <a name="properties"></a>プロパティ  
  フラグ、スパン、およびメッセージにはそれぞれ、カテゴリおよび重要度という 2 つのプロパティがあります。 [[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスで、これらのプロパティを使用して、表示されるマーカーのセットをフィルター処理することができます。 また、これらのプロパティはマーカーの視覚表示に影響します。 たとえば、フラグのサイズを使用して重要度を表します。 また、色を使用してカテゴリを示します。  
   
 ## <a name="basic-usage"></a>基本的な使用方法  
- 同時実行ビジュアライザーは、マーカーの生成に使用できる既定のプロバイダーを示します。 プロバイダーは同時実行ビジュアライザーと共に既に登録されており、UI にマーカーを表示するためにユーザー側で行う必要がある操作はありません。  
+ コンカレンシー ビジュアライザーは、マーカーの生成に使用できる既定のプロバイダーを示します。 プロバイダーはコンカレンシー ビジュアライザーと共に既に登録されており、UI にマーカーを表示するためにユーザー側で行う必要がある操作はありません。  
   
 ### <a name="c-and-visual-basic"></a>C# および Visual Basic  
- C#、Visual Basic、および他のマネージ コードでは、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers> を呼び出して既定のプロバイダーを使います。 マーカー生成用の 4 つの関数、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteFlag%2A>、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.EnterSpan%2A>、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteMessage%2A>、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteAlert%2A> が公開されます。 プロパティで既定を使用するかどうかに応じて、これらの関数には複数のオーバーロードがあります。  最も単純なオーバーロードは、イベントの説明を指定する文字列パラメーターのみを受け取ります。 説明は同時実行ビジュアライザーのレポートに表示されます。  
+ C#、Visual Basic、および他のマネージド コードでは、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers> を呼び出して既定のプロバイダーを使います。 マーカー生成用の 4 つの関数、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteFlag%2A>、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.EnterSpan%2A>、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteMessage%2A>、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteAlert%2A> が公開されます。 プロパティで既定を使用するかどうかに応じて、これらの関数には複数のオーバーロードがあります。  最も単純なオーバーロードは、イベントの説明を指定する文字列パラメーターのみを受け取ります。 説明はコンカレンシー ビジュアライザーのレポートに表示されます。  
   
 ##### <a name="to-add-sdk-support-to-a-c-or-visual-basic-project"></a>C# または Visual Basic のプロジェクトに SDK のサポートを追加するには  
   
-1.  メニュー バーで、**[分析]**、**[同時実行ビジュアライザー]**、**[プロジェクトへの SDK の追加]** の順に選択します。  
+1.  メニュー バーで、**[分析]**、**[コンカレンシー ビジュアライザー]**、**[プロジェクトへの SDK の追加]** の順に選択します。  
   
 2.  SDK にアクセスするプロジェクトを選択し、**[選択したプロジェクトに SDK を追加]** ボタンを選択します。  
   
@@ -52,7 +50,7 @@ ms.locfileid: "34691187"
   
 ##### <a name="to-add-sdk-support-to-a-c-or-c-project"></a>C++ または C のプロジェクトに SDK のサポートを追加するには  
   
-1.  メニュー バーで、**[分析]**、**[同時実行ビジュアライザー]**、**[プロジェクトへの SDK の追加]** の順に選択します。  
+1.  メニュー バーで、**[分析]**、**[コンカレンシー ビジュアライザー]**、**[プロジェクトへの SDK の追加]** の順に選択します。  
   
 2.  SDK にアクセスするプロジェクトを選択し、**[選択したプロジェクトに SDK を追加]** ボタンを選択します。  
   
@@ -74,13 +72,13 @@ ms.locfileid: "34691187"
     ```  
   
 ## <a name="custom-usage"></a>カスタムの使用方法  
- 高度なシナリオの場合、同時実行ビジュアライザー SDK はより詳細に制御します。  より高度なシナリオには、2 つの主な概念 (マーカー プロバイダーとマーカー シリーズ) が関連付けられています。 マーカー プロバイダーはさまざまな ETW プロバイダー (それぞれ異なる GUID を持つ) です。 マーカー シリーズは、1 つのプロバイダーによって生成されるイベントのシリアル チャネルです。 マーカー プロバイダーによって生成されるイベントを整理する場合に使用できます。  
+ 高度なシナリオの場合、コンカレンシー ビジュアライザー SDK はより詳細に制御します。  より高度なシナリオには、2 つの主な概念 (マーカー プロバイダーとマーカー シリーズ) が関連付けられています。 マーカー プロバイダーはさまざまな ETW プロバイダー (それぞれ異なる GUID を持つ) です。 マーカー シリーズは、1 つのプロバイダーによって生成されるイベントのシリアル チャネルです。 マーカー プロバイダーによって生成されるイベントを整理する場合に使用できます。  
   
 #### <a name="to-use-a-new-marker-provider-in-a-c-or-visual-basic-project"></a>C# または Visual Basic プロジェクトで新しいマーカー プロバイダーを使用するには  
   
 1.  <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerWriter> オブジェクトを作成します。  コンストラクターは GUID を受け取ります。  
   
-2.  プロバイダーを登録するには、同時実行ビジュアライザーの [[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスを開きます。  **[マーカー]** タブを選択してから、**[新しいプロバイダーを追加します]** ボタンを選択します。 [[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスで、プロバイダーの作成に使用された GUID と、プロバイダーの説明を入力します。  
+2.  プロバイダーを登録するには、コンカレンシー ビジュアライザーの [[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスを開きます。  **[マーカー]** タブを選択してから、**[新しいプロバイダーを追加します]** ボタンを選択します。 [[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスで、プロバイダーの作成に使用された GUID と、プロバイダーの説明を入力します。  
   
 #### <a name="to-use-a-new-marker-provider-in-a-c-or-c-project"></a>C# または C プロジェクトで新しいマーカー プロバイダーを使用するには  
   
@@ -125,7 +123,7 @@ ms.locfileid: "34691187"
   
 |Title|説明|  
 |-----------|-----------------|  
-|[C++ ライブラリ リファレンス](../profiling/cpp-library-reference.md)|C++ の同時実行ビジュアライザー API について説明します。|  
-|[C ライブラリ リファレンス](../profiling/c-library-reference.md)|C の同時実行ビジュアライザー API について説明します。|  
-|<xref:Microsoft.ConcurrencyVisualizer.Instrumentation>|マネージ コードの同時実行ビジュアライザー API について説明します。|  
-|[同時実行ビジュアライザー](../profiling/concurrency-visualizer.md)|同時実行メソッドを使用して生成され、スレッド実行データを含む、プロファイル データ ファイルのビューとレポートに関するリファレンス情報。|
+|[C++ ライブラリ リファレンス](../profiling/cpp-library-reference.md)|C++ のコンカレンシー ビジュアライザー API について説明します。|  
+|[C ライブラリ リファレンス](../profiling/c-library-reference.md)|C のコンカレンシー ビジュアライザー API について説明します。|  
+|<xref:Microsoft.ConcurrencyVisualizer.Instrumentation>|マネージド コードのコンカレンシー ビジュアライザー API について説明します。|  
+|[コンカレンシー ビジュアライザー](../profiling/concurrency-visualizer.md)|コンカレンシー メソッドを使用して生成され、スレッド実行データを含む、プロファイリング データ ファイルのビューとレポートに関するリファレンス情報。|

@@ -2,7 +2,6 @@
 title: '[クイック起動] ([オプション] ダイアログ ボックス - [環境])'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.QuickLaunch
@@ -16,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aa33123a813739eeec9678f8393925d1ba12ba3a
-ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
+ms.openlocfilehash: c3dca4a9eb34a950fe571db4da8c9c30d7f2a08b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53684536"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53893514"
 ---
 # <a name="quick-launch-environment-options-dialog-box"></a>[クイック起動] ([オプション] ダイアログ ボックス - [環境])
 
@@ -51,6 +50,6 @@ Visual Studio をインストールすると、**クイック起動**は既定�
 
 **クイック起動**の使用に関する最新のヒントとテクニックについては、「[The Visual Studio Blog](http://go.microsoft.com/fwlink/?LinkId=236054)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)
