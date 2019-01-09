@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationNode::SetDocumentProvider |Microsoft ドキュメント
+title: IDebugApplicationNode::SetDocumentProvider |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 95c80bf04c129b2410b97b2e01861a1007457239
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 135f5603513905fdc00aa7d720b9d8cc6703cb0f
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725472"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54096162"
 ---
 # <a name="idebugapplicationnodesetdocumentprovider"></a>IDebugApplicationNode::SetDocumentProvider
-このアプリケーション ノードのドキュメント プロバイダーを設定します。  
+このアプリケーションのノードのドキュメント プロバイダーを設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT SetDocumentProvider(  
    IDebugDocumentProvider*  pddp  
 );  
@@ -38,17 +38,17 @@ HRESULT SetDocumentProvider(
   
 #### <a name="parameters"></a>パラメーター  
  `pddp`  
- [in]このアプリケーション ノードのドキュメント プロバイダー。  
+ [in]このアプリケーションのノードのドキュメント プロバイダー。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、このアプリケーション ノードのドキュメント プロバイダーを設定します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、このアプリケーションのノードのドキュメント プロバイダーを設定します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugApplicationNode インターフェイス](../../winscript/reference/idebugapplicationnode-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerControl2::PrepareProfilerStop |Microsoft ドキュメント
+title: IActiveScriptProfilerControl2::PrepareProfilerStop |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,19 +14,19 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 78078cd874be1d7d3d169be2d3d70e65866be3fd
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 086ec8b4a126c65162638afde4d8081269757e1c
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724522"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54089519"
 ---
 # <a name="iactivescriptprofilercontrol2prepareprofilerstop"></a>IActiveScriptProfilerControl2::PrepareProfilerStop
-適用可能なすべてのスクリプト エンジンでプロファイリングを停止しようとしていることをプロファイラーに通知します。 このメソッドを使用する場合、完全な呼び出し履歴を取得できます[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]が実行されているは、プロファイリングを停止するとします。  
+該当するすべてのスクリプト エンジンのプロファイリングを停止することをプロファイラーに通知します。 このメソッドを使用する場合、完全な呼び出し履歴を取得できます[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]が実行されているは、プロファイリングを停止するとします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT PrepareProfilerStop();  
 ```  
   
@@ -40,11 +40,11 @@ HRESULT PrepareProfilerStop();
 |------------------|-------------|  
 |`S_OK`|メソッドが成功しました。|  
 |`E_FAIL`|プロファイリングを開始できませんでした。|  
-|`S_FALSE`|スクリプトが実行されていないときに、プロファイリングが停止されました。|  
-|`ACTIVPROF_E_PROFILER_ABSENT`|プロファイリングすることは無効です。|  
+|`S_FALSE`|スクリプトが実行されていない場合、プロファイリングが停止しました。|  
+|`ACTIVPROF_E_PROFILER_ABSENT`|プロファイルが有効になっていません。|  
   
-## <a name="remarks"></a>コメント  
- 呼び出す`IActiveScriptProfilerControl2::PrepareProfilerStop`関数の呼び出し履歴内のイベントが送信されることを確認します。 このメソッドには、現在のタブ上にある任意のスクリプト エンジンでプロファイリングを停止する前に呼び出されます。スクリプト エンジンで任意のメソッドを呼び出すことができます。  
+## <a name="remarks"></a>Remarks  
+ 呼び出す`IActiveScriptProfilerControl2::PrepareProfilerStop`により、呼び出し履歴内の関数のイベントが送信されます。 このメソッドは、現在のタブ上にある任意のスクリプティング エンジンのプロファイリングを停止する前に呼び出す必要があります。メソッドは、任意のスクリプティング エンジンに対して呼び出すことができます。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptProfilerControl2::CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md)   

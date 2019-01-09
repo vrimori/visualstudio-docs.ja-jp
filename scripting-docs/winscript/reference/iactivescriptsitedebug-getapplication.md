@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteDebug::GetApplication |Microsoft ドキュメント
+title: IActiveScriptSiteDebug::GetApplication |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e33bf254d2e688451f1b69a3b3eb1b676a9e9b1a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: a485a7195f64754bc28d0c1905d30d6f22747c31
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724762"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54090117"
 ---
 # <a name="iactivescriptsitedebuggetapplication"></a>IActiveScriptSiteDebug::GetApplication
-このスクリプトのサイトに関連付けられているデバッグ アプリケーションのオブジェクトを返します。  
+このスクリプトのサイトに関連付けられたデバッグ アプリケーション オブジェクトを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetApplication(  
    IDebugApplication**  ppda  
 );  
@@ -38,18 +38,18 @@ HRESULT GetApplication(
   
 #### <a name="parameters"></a>パラメーター  
  `ppda`  
- [out]スクリプトのサイトに関連付けられているデバッグ アプリケーションのオブジェクトへのポインター。  
+ [out]スクリプト サイトに関連付けられたデバッグ アプリケーション オブジェクトへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
-|`E_NOTIMPL`|ホストによって直接サポートされないデバッグします。|  
+|`E_NOTIMPL`|ホストでは、デバッグを直接はサポートはありません。|  
   
-## <a name="remarks"></a>コメント  
- `GetApplication`メソッドは、各スクリプトが所属するアプリケーション オブジェクトを定義するスマート ホスト方法を提供します。 含む、アプリケーションを取得しを使用するには、このメソッドを呼び出すべきではスクリプト エンジン`IProcessDebugManager::GetDefaultApplication`これが失敗した場合。  
+## <a name="remarks"></a>Remarks  
+ `GetApplication`メソッドは、各スクリプトが所属するアプリケーション オブジェクトを定義するスマート ホスト方法を提供します。 含むアプリケーションを取得しには、このメソッドを呼び出すスクリプト エンジンを試みる必要がある`IProcessDebugManager::GetDefaultApplication`これが失敗した場合。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptSiteDebug インターフェイス](../../winscript/reference/iactivescriptsitedebug-interface.md)   

@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationThread::SetNextStatement |Microsoft ドキュメント
+title: IRemoteDebugApplicationThread::SetNextStatement |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fb23fa643f9a2333e17239a74d0da2f75e1ea791
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: f79fa7114892e378c51a9cccf51ac6804c4adabf
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729152"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54096383"
 ---
 # <a name="iremotedebugapplicationthreadsetnextstatement"></a>IRemoteDebugApplicationThread::SetNextStatement
-強制的に実行の実行を指定したフレームのコンテキストで、指定したコードのコンテキストにできるだけ近い続行します。  
+特定のフレームのコンテキストで指定したコードのコンテキストにできるだけ近い、引き続き強制的に実行します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT SetNextStatement(  
    IDebugStackFrame*   pStackFrame,  
    IDebugCodeContext*  pCodeContext  
@@ -39,20 +39,20 @@ HRESULT SetNextStatement(
   
 #### <a name="parameters"></a>パラメーター  
  `pStackFrame`  
- [in]スタック フレーム オブジェクト。 この引数には、NULL の場合、現在のスタック フレームを使用する必要がありますを意味する可能性があります。  
+ [in]スタック フレーム オブジェクト。 この引数には、null の場合、現在のスタック フレームを使用することを意味する可能性があります。  
   
  `pCodeContext`  
- [in]コードのコンテキスト。 この引数には、NULL の場合、現在、コードのコンテキストを使用する必要がありますを意味する可能性があります。  
+ [in]コード コンテキスト。 この引数には、null の場合、現在のコード コンテキストを使用することを意味する可能性があります。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、実行を継続によって指定されたコードのコンテキストにできるだけ近い`pCodeContext`で指定されたフレームのコンテキストで`pStackFrame`です。 これらの引数のいずれかの可能性があります`NULL`、現在のフレームまたはコンテキストを表します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、実行を継続によって指定されたコードのコンテキストにできるだけ近い`pCodeContext`で指定されたフレームのコンテキストで`pStackFrame`します。 これらの引数のいずれかの可能性があります`NULL`、現在のフレームまたはコンテキストを表します。  
   
 ## <a name="see-also"></a>関連項目  
  [IRemoteDebugApplicationThread インターフェイス](../../winscript/reference/iremotedebugapplicationthread-interface.md)

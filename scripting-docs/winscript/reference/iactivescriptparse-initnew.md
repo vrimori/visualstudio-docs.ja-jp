@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptParse::InitNew |Microsoft ドキュメント
+title: Iactivescriptparse::initnew |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,27 +18,27 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e34094bcc25c0316fa670f570d8b2664acc0ba78
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: f0998bea50d7839f93111aa6b116934fae35bfa3
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724482"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54089987"
 ---
 # <a name="iactivescriptparseinitnew"></a>IActiveScriptParse::InitNew
 スクリプト エンジンを初期化します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT InitNew(void);  
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 返します`S_OK`成功した場合、または`E_FAIL`の初期化中にエラーが発生した場合。  
+ 返します`S_OK`成功した場合、または`E_FAIL`初期化中にエラーが発生した場合。  
   
-## <a name="remarks"></a>コメント  
- スクリプト エンジンを使用することができます、前に、次のメソッドのいずれかを呼び出さなければなりません: `IPersist*::Load`、 `IPersist*::InitNew`、または`IActiveScriptParse::InitNew`です。 このメソッドのセマンティクスは次と同じ`IPersistStreamInit::InitNew`点で、この方法では、スクリプト エンジンでそれ自体を初期化するために、します。 両方の呼び出しは無効ではないことに注意`IPersist*::InitNew`または`IActiveScriptParse::InitNew`と`IPersist*::Load`でもなく、呼び出しは無効`IPersist*::InitNew`、 `IActiveScriptParse::InitNew`、または`IPersist*::Load`も複数回です。  
+## <a name="remarks"></a>Remarks  
+ スクリプト エンジンを使用するには、次のいずれかのという必要があります: `IPersist*::Load`、 `IPersist*::InitNew`、または`IActiveScriptParse::InitNew`します。 このメソッドのセマンティクスは次のと同じ`IPersistStreamInit::InitNew`、ことで、このメソッド自体を初期化するためにスクリプト エンジンに指示します。 両方を呼び出すはしないことに注意してください。`IPersist*::InitNew`または`IActiveScriptParse::InitNew`と`IPersist*::Load`、もには、呼び出す`IPersist*::InitNew`、 `IActiveScriptParse::InitNew`、または`IPersist*::Load`2 回以上。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptParse](../../winscript/reference/iactivescriptparse.md)

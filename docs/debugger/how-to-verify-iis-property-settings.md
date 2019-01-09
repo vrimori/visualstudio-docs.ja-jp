@@ -1,8 +1,6 @@
 ---
 title: '方法: IIS のプロパティ設定を確認します |。Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -21,23 +19,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f98796a7fd9546c8377eefcc4ad25fb90e549544
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: b2bfc72fbae9383b54a31f2252ab60b101903a4e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389488"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53926886"
 ---
-# <a name="how-to-verify-iis-property-settings"></a>方法 : IIS のプロパティ設定を確認する
+# <a name="how-to-verify-iis-property-settings"></a>方法: IIS のプロパティ設定を確認する
 
 IIS 管理ツールで、Web アプリケーションのプロパティを設定できます。 これらのプロパティは、実行するアプリケーションに合わせて正しく設定する必要があります。そのため、トラブルシューティングのときに、多くの場合、設定を確認することが必要になります。
 
 > [!NOTE]
-> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、次を参照してください。[設定にリセット](../ide/environment-settings.md#reset-settings)します。
+> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[リセット設定](../ide/environment-settings.md#reset-settings)」を参照してください。
 
 ## <a name="to-check-iis-settings-for-the-web-application"></a>Web アプリケーションの IIS 設定をチェックするには
 
-1. **[管理ツール]** ウィンドウを開くには、**[スタート]** メニューの **[プログラム]** をポイントし、次に **[管理ツール]** をクリックします。 **[管理ツール]** が **[プログラム]** メニューに表示されないときは、**[コントロール パネル]** を検索します。
+1. 管理ツール** ウィンドウを開きます。**開始**メニューで、**プログラム**、 をクリックし、**管理ツール**。 **[管理ツール]** が **[プログラム]** メニューに表示されないときは、**[コントロール パネル]** を検索します。
 
    -   Windows 2000 では、**[インターネット サービス マネージャー]** を選択します。
 
@@ -61,7 +59,7 @@ IIS 管理ツールで、Web アプリケーションのプロパティを設定
 
    3.  **[OK]** をクリックして **[認証方法]** ダイアログ ボックスを閉じます。
 
-5. ATL Server アプリケーションの場合は、DEBUG の動詞が ISAPI 拡張機能に関連付けられていることを確認してください。 詳細については、次を参照してください。[方法: 拡張機能とデバッグ動詞を関連付ける](https://msdn.microsoft.com/library/50d261d3-4bd4-41c0-b44e-3591086f121e)します。
+5. ATL Server アプリケーションの場合は、DEBUG の動詞が ISAPI 拡張機能に関連付けられていることを確認してください。 詳細については、「[方法 :拡張機能と DEBUG 動詞を関連付ける](https://msdn.microsoft.com/library/50d261d3-4bd4-41c0-b44e-3591086f121e)します。
 
 6. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションの場合、アプリケーションの仮想フォルダーに、**インターネット インフォメーション サービス (IIS) マネージャー**、**インターネット サービス マネージャー**、または**インターネット インフォメーション サービス**で設定されたアプリケーション名があることを確認します。
 

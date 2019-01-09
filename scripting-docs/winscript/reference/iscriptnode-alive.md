@@ -1,5 +1,5 @@
 ---
-title: IScriptNode::Alive |Microsoft ドキュメント
+title: IScriptNode::Alive |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0631690cbd961273175cf8dfbe35550980d4994d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 23f0e804cbbbe6683b89f7b629b9677c7b92c64f
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728662"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54089558"
 ---
 # <a name="iscriptnodealive"></a>IScriptNode::Alive
-オブジェクトがアクティブであるかどうかを示します。  
+オブジェクトがまだアクティブかどうかを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT Alive();  
 ```  
   
@@ -40,12 +40,12 @@ HRESULT Alive();
 ## <a name="return-value"></a>戻り値  
  `HRESULT`。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|スクリプトのノードはアクティブです。|  
   
-## <a name="remarks"></a>コメント  
- オブジェクトがアクティブでない場合、コンポーネント オブジェクト モデル (COM) は、このメソッドの呼び出しをマーシャ リングのプロキシからエラーを返します。  
+## <a name="remarks"></a>Remarks  
+ オブジェクトがアクティブでない場合、コンポーネント オブジェクト モデル (COM) は、このメソッド呼び出しのマーシャ リング プロキシからエラーを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IScriptNode インターフェイス](../../winscript/reference/iscriptnode-interface.md)

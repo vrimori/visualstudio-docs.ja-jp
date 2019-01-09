@@ -2,7 +2,6 @@
 title: 失敗した回数、関数を呼び出すときにどの呼び出しを見つける |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.functions
@@ -29,12 +28,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fec492a8cba6ac61cc18a3ff0b68abbe734413d
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 8f1d7c491b864fb8791a5fbd527859edafbd54b9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53064693"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53909139"
 ---
 # <a name="when-calling-a-function-hundreds-of-times-how-do-i-know-which-call-failed"></a>ある関数が何回も呼び出される場合、どの呼び出しでエラーが発生するのかを調べるには
 ## <a name="problem-description"></a>問題の説明  
@@ -49,7 +48,7 @@ CnvtV(int) (no condition) when hit count is equal to 1000 (currently 101)
   
  この関数は、101 回目の呼び出しで失敗したことがわかります。 ヒット カウントを 101 にしてブレークポイントを設定し直し、プログラムを再び実行します。すると、エラーの原因となった `CnvtV` 呼び出しのところでプログラムが停止します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)   
  [ブレークポイントの設定](https://msdn.microsoft.com/library/fe4eedc1-71aa-4928-962f-0912c334d583)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

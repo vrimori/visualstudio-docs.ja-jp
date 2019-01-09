@@ -2,7 +2,6 @@
 title: デバッガーでブレークポイントを使用する |Microsoft Docs
 ms.custom: seodec18
 ms.date: 10/15/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpointswin
@@ -35,12 +34,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 092a9fce2c84506f36717808a7630391c7c1fc89
-ms.sourcegitcommit: c7b16358a5d6f7ea1dd2f70a6ac2a8266efa9c15
+ms.openlocfilehash: 37e3ec71123cd03c8b5b431d8b8dd6042a610bad
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53425852"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53934558"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでブレークポイントを使用します。
 ブレークポイントは、開発者のツールボックスで最も重要なデバッグ手法の 1 つです。 デバッガーの実行を一時停止したい場所にブレークポイントを設定するとします。 たとえば、コードの変数の状態を参照してください。 または、特定のブレークポイントで呼び出し履歴を確認する可能性があります。 コードのデバッグを試みるのが今回初めてである場合は、この記事を先に進む前に[超初心者向けのデバッグ方法](../debugger/debugging-absolute-beginners.md)に関するページを参照することをお勧めします。

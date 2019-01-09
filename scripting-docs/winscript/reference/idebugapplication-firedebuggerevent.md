@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::FireDebuggerEvent |Microsoft ドキュメント
+title: IDebugApplication::FireDebuggerEvent |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c4cb02390602b6b93b8c233f245ede395833d67e
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 4f78522d885a65ddc8bfb056654aaf559c90d36e
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725452"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54092184"
 ---
 # <a name="idebugapplicationfiredebuggerevent"></a>IDebugApplication::FireDebuggerEvent
-デバッガーの一般的なイベントを発生させる`IApplicationDebugger`インターフェイスです。  
+デバッガーの一般的なイベントが発生した`IApplicationDebugger`インターフェイス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT FireDebuggerEvent(  
    REFGUID    riid,  
    IUnknown*  punk  
@@ -39,25 +39,25 @@ HRESULT FireDebuggerEvent(
   
 #### <a name="parameters"></a>パラメーター  
  `riid`  
- [in]オブジェクトの GUID です。  
+ [in]オブジェクトの GUID。  
   
  `punk`  
- [in]デバッガーに渡すイベント オブジェクトです。  
+ [in]デバッガーに渡すイベント オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
 |`E_NOTIMPL`|メソッドは現在実装されていません。|  
   
-## <a name="remarks"></a>コメント  
- GUID のセマンティクスと`IUnknown`が全面的に定義されているアプリケーション/デバッガーです。  
+## <a name="remarks"></a>Remarks  
+ GUID のセマンティクスと`IUnknown`が全面的に定義されているアプリケーションやデバッガー。  
   
- この方法により、デバッガー モデルのカスタム拡張機能現在実装されていません。  
+ この方法により、デバッガーのモデルのカスタム拡張機能現在実装されていません。  
   
- このメソッドにより`IApplicationDebugger::onDebuggerEvent`呼び出せるようにします。  
+ このメソッドにより`IApplicationDebugger::onDebuggerEvent`呼び出されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugApplication インターフェイス](../../winscript/reference/idebugapplication-interface.md)   

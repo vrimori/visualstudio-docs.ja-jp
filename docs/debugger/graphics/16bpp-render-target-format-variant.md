@@ -1,8 +1,6 @@
 ---
 title: 16 bpp レンダリング ターゲット フォーマット バリアント |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 24b22ad9-5ad0-4161-809a-9b518eb924bf
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f9c72abaaf1a799316686c77b127952f1fe4f689
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: ab58cbcd6644d540b7db2efb1cad59e5d80f8530
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49832891"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53986662"
 ---
 # <a name="16-bpp-render-target-format-variant"></a>16 bpp レンダリング ターゲット フォーマット バリアント
 すべてのレンダー ターゲットおよびバック バッファーに対して、ピクセル形式を DXGI_FORMAT_B5G6R5_UNORM に設定します。  
@@ -47,7 +45,7 @@ ms.locfileid: "49832891"
 
    並べて表示されるレンダリング手法を使用する GPU アーキテクチャでは、16 bpp フレーム バッファーの形式を使用して大幅なパフォーマンス上の利点を確認できます。 この機能強化は、フレームバッファーのより大きい領域が各タイルのフレームのローカル バッファー キャッシュ内に収まるのでです。 タイル型のレンダリング アーキテクチャは、携帯電話機やタブレット コンピューターの GPU で使用されています。これらの市場以外で使用されることはほとんどありません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  レンダー ターゲット形式は、レンダー ターゲットを作成する `ID3D11Device::CreateTexture2D` への呼び出しのたびに、DXGI_FORMAT_B5G6R5_UNORM にリセットされます。 具体的には、pDesc で渡される D3D11_TEXTURE2D_DESC オブジェクトがレンダー ターゲットを記述するときに、この形式はオーバーライドされます。つまり、  
   
 -   BindFlags メンバーは、D3D11_BIND_REDNER_TARGET フラグを設定します。  

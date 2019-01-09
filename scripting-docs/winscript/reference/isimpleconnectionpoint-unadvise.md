@@ -1,5 +1,5 @@
 ---
-title: ISimpleConnectionPoint::Unadvise |Microsoft ドキュメント
+title: ISimpleConnectionPoint::Unadvise |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7f926f206bb8a27e6265fd147909a5adb13c3543
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 83fdf8f6a6e9378d328a9df61b1561a1ae747ae8
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24733902"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54089269"
 ---
 # <a name="isimpleconnectionpointunadvise"></a>ISimpleConnectionPoint::Unadvise
-以前にを介して確立アドバイザリ コネクションを終了する`ISimpleConnectionPoint::Advise`です。  
+以前に確立したアドバイザリ コネクションを終了`ISimpleConnectionPoint::Advise`します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT Unadvise(  
    DWORD  dwCookie  
 );  
@@ -38,17 +38,17 @@ HRESULT Unadvise(
   
 #### <a name="parameters"></a>パラメーター  
  `dwCookie`  
- [in]終了するかから返される接続のトークン`ISimpleConnectionPoint::Advise`です。  
+ [in]終了から返されるへの接続トークン`ISimpleConnectionPoint::Advise`します。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- アドバイザリ コネクションが終了すると、接続ポイントの呼び出し、`Release`中に、接続の保存されているポインターをメソッド、`ISimpleConnectionPoint::Advise`メソッドです。 呼び出す、反転、`AddRef`中で実行された、`ISimpleConnectionPoint::Advise`接続ポイントは、アドバイズ シンクから呼び出されると`QueryInterface`です。  
+## <a name="remarks"></a>Remarks  
+ アドバイザリ コネクションを終了すると、接続ポイントの呼び出し、`Release`中に、接続の保存されたポインターをメソッド、`ISimpleConnectionPoint::Advise`メソッド。 呼び出す直前に、`AddRef`中で実行された、`ISimpleConnectionPoint::Advise`接続ポイントが、アドバイズ シンクを呼び出したときに`QueryInterface`します。  
   
 ## <a name="see-also"></a>関連項目  
  [ISimpleConnectionPoint インターフェイス](../../winscript/reference/isimpleconnectionpoint-interface.md)

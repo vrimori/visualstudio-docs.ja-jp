@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteDebug::GetRootApplicationNode |Microsoft ドキュメント
+title: Iactivescriptsitedebug::getrootapplicationnode |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: abcb7c307513e513f3ba4d3a64d34f1e07e60d74
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 40c837d5ee2e8b75bfe7603370d61385a67080cc
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724722"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54088518"
 ---
 # <a name="iactivescriptsitedebuggetrootapplicationnode"></a>IActiveScriptSiteDebug::GetRootApplicationNode
-スクリプトでは、ドキュメントを追加するか、アプリケーション ノードを取得します。  
+スクリプト ドキュメントを追加する必要がありますアプリケーション ノードを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetRootApplicationNode(  
    IDebugApplicationNode**  ppdanRoot  
 );  
@@ -38,17 +38,17 @@ HRESULT GetRootApplicationNode(
   
 #### <a name="parameters"></a>パラメーター  
  `ppdanRoot`  
- [out]スクリプト ドキュメントを保持するデバッグ アプリケーション ノード。 指定できます`NULL`です。  
+ [out]スクリプト ドキュメントを保持するデバッグ アプリケーション ノード。 `NULL` の可能性があります。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、スクリプト ドキュメントを追加する対象のアプリケーション ノードを返します。 メソッドが返すことができます`NULL`の`ppdanRoot`場合はスクリプト ドキュメントを最上位レベルにする必要があります。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、スクリプト ドキュメントの追加をアプリケーションのノードを返します。 メソッドが返すことができます`NULL`の`ppdanRoot`場合スクリプト ドキュメントを最上位レベルにする必要があります。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptSiteDebug インターフェイス](../../winscript/reference/iactivescriptsitedebug-interface.md)

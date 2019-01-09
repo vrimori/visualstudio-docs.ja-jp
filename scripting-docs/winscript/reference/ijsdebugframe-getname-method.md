@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugframe::getname メソッド |Microsoft ドキュメント
+title: Ijsdebugframe::getname メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -16,19 +16,19 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 34bb58444a30926ac558ca63a3a7ffff4ed5ca50
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 6fdf708c833bff4501718a12d009441db90b363b
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727622"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54097462"
 ---
 # <a name="ijsdebugframegetname-method"></a>IJsDebugFrame::GetName メソッド
 スタック フレームのユーザー フレンドリ名を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetName(  
    BSTR *pName  
 );  
@@ -40,7 +40,7 @@ HRESULT GetName(
   
 ## <a name="return-value"></a>戻り値  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** jscript9diag.h です  
   
 ## <a name="see-also"></a>関連項目  

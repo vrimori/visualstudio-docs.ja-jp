@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_framepointerpresent |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 283674d2bccc81d409db59df04631240e78000cc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 40464f1c9628fca9a7cd3a0d911c32efef9666a3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49846214"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53959145"
 ---
 # <a name="idiasymbolgetframepointerpresent"></a>IDiaSymbol::get_framePointerPresent
 フレーム ポインターが存在するかどうかを指定するフラグを取得します。 使用する場合、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)に設定されている`SymTagFunction`します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49846214"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_framePointerPresent(   
+HRESULT get_framePointerPresent(   
    BOOL* pRetVal  
 );  
 ```  
@@ -42,14 +40,14 @@ HRESULT get_framePointerPresent(
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>必要条件  
- ヘッダー: Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー:dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia100.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

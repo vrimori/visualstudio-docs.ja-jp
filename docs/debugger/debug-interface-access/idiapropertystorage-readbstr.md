@@ -1,8 +1,6 @@
 ---
 title: IDiaPropertyStorage::ReadBSTR |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 47272cbfc572d85af631edb6d33cf6a0c6f4b20d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 52964bd2b8e915d45be46346c18422af18ddd71d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49909069"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53948223"
 ---
 # <a name="idiapropertystoragereadbstr"></a>IDiaPropertyStorage::ReadBSTR
 読み取り`BSTR`プロパティ セット内の値。  
@@ -27,7 +25,7 @@ ms.locfileid: "49909069"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT ReadBSTR (   
+HRESULT ReadBSTR (   
    PROPID id,  
    BSTR*  pValue  
 );  
@@ -43,8 +41,8 @@ HRESULT ReadBSTR (
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`。 それ以外の場合はエラー コードを返します。 返します`E_INVALIDARG`型のプロパティがない場合`BSTR`します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  A `BSTR` 0 で終わるワイド文字列としての Windows によって定義されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

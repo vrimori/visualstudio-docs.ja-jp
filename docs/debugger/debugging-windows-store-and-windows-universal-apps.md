@@ -2,7 +2,6 @@
 title: UWP アプリのデバッグ |Microsoft Docs
 ms.custom: seodec18
 ms.date: 01/17/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -14,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 14761da614ddcd36e8ca9bcec2a686f125ab53bd
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 58f271bd1d4e0a7a15d1f08fe89b1ef252bdefd4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53064022"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53902202"
 ---
 # <a name="debug-universal-windows-apps-uwp-in-visual-studio"></a>Visual Studio でのユニバーサル Windows アプリ (UWP) のデバッグします。
 
@@ -33,5 +32,5 @@ Visual Studio デバッガーでは、UWP アプリのデバッグを完全に�
 |UWP アプリに ContentPrefetcher クラスの影響を分析します。|[UWP アプリ用コンテンツをプリフェッチします。](../debugger/prefetch-content-for-windows-store-apps.md)|
 
   
-## <a name="see-also"></a>参照  
- [静的コード分析によるコード品質の分析](../test/analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)
+## <a name="see-also"></a>「  
+ [静的コード分析によるコード品質の分析](/visualstudio/code-quality/code-analysis-for-managed-code-overview)

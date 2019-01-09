@@ -1,5 +1,5 @@
 ---
-title: IApplicationDebuggerUI::BringDocumentToTop |Microsoft ドキュメント
+title: IApplicationDebuggerUI::BringDocumentToTop |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 57b76f44eeeaad1946d40435c770b0687b82fd17
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 5c77c87011c539e02f92aa2aedfdcd7659466d37
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725312"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54096253"
 ---
 # <a name="iapplicationdebuggeruibringdocumenttotop"></a>IApplicationDebuggerUI::BringDocumentToTop
-デバッガーでは、最上位に指定されたデバッグ ドキュメントを含むウィンドウのユーザー インターフェイスを表示します。  
+デバッガーで最上位に指定されたデバッグ ドキュメントを含むウィンドウにユーザー インターフェイスを表示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT BringDocumentToTop(  
    IDebugDocumentText*  pddt  
 );  
@@ -38,18 +38,18 @@ HRESULT BringDocumentToTop(
   
 #### <a name="parameters"></a>パラメーター  
  `pddt`  
- [in]デバッガーのユーザー インターフェイスで最上位に表示するドキュメントをデバッグします。  
+ [in]デバッガー ユーザー インターフェイスの先頭に配置するドキュメントをデバッグします。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
 |`E_INVALIDARG`|ドキュメントが不明です。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、ユーザー インターフェイスに、デバッガー内で最上位に指定されたデバッグ ドキュメントを含むウィンドウを表示します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、ユーザー インターフェイスをデバッガーで最上位に指定されたデバッグ ドキュメントを含むウィンドウに表示します。  
   
 ## <a name="see-also"></a>関連項目  
  [IApplicationDebuggerUI インターフェイス](../../winscript/reference/iapplicationdebuggerui-interface.md)

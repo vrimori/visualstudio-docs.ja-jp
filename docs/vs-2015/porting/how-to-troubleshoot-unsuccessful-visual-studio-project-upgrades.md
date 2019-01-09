@@ -1,12 +1,11 @@
 ---
-title: 方法:失敗したプロジェクトのアップグレードのトラブルシューティング |Microsoft Docs
+title: '方法: 失敗したプロジェクトのアップグレードのトラブルシューティング |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
@@ -23,14 +22,14 @@ caps.latest.revision: 31
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 6b50bbaaf7e5b018709f3cf0dece3c0ae38410f8
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 2e21feda11ef4d3405fa1488740fefe7c7238dc5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53064797"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53942019"
 ---
-# <a name="how-to-troubleshoot-unsuccessful-visual-studio-project-upgrades"></a>方法:失敗した Visual Studio プロジェクトのアップグレードをトラブルシューティングします。
+# <a name="how-to-troubleshoot-unsuccessful-visual-studio-project-upgrades"></a>方法: 失敗した Visual Studio プロジェクトのアップグレードをトラブルシューティングします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio が、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の旧バージョンで作成したプロジェクトを完全には変換できない場合があります。 以下のセクションで説明するヒントで、特定の問題が解決しない場合は、詳細については、technet を検索する場合がありますできる[Wiki:開発ポータル](http://go.microsoft.com/fwlink/?LinkId=254808)します。
@@ -61,5 +60,5 @@ Visual Studio が、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の旧バージ
 
    アップグレードされた [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] バージョンでプロジェクトを実行する場合は、そのプロジェクトの参照を更新し、参照を呼び出す `Imports` ステートメントまたは `Using` ステートメントも更新する必要があります。 プロジェクトが IDE で読み込まれる場合は、**ソリューション エクスプローラー**または **[参照マネージャー]** ダイアログ ボックスを使用して参照を更新できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
  [/アップグレード (devenv.exe)](../ide/reference/upgrade-devenv-exe.md) [ASP.NET 4 に変換します。](http://msdn.microsoft.com/library/790147c6-36c1-41b5-a52d-30b9ccd2bd10)

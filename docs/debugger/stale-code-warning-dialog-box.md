@@ -1,8 +1,6 @@
 ---
 title: 古いコードの警告 ダイアログ ボックス |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.ENC.stalecode
@@ -22,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a2f7f1817b562b555a8ac026e165712bb81f912
-ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
-ms.translationtype: HT
+ms.openlocfilehash: 82731ba2c22c18b880e8a035712280eb5e5afe68
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53684731"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53877459"
 ---
 # <a name="stale-code-warning-dialog-box"></a>[古いコードの警告] ダイアログ ボックス
 
@@ -37,7 +35,7 @@ ms.locfileid: "53684731"
 
 このチェック ボックスをオンにすると、以後エディット コンティニュは、このダイアログ ボックスを表示せずにコード変更を適用します。 この警告がまた表示されるようにするには、**[オプション]** ダイアログ ボックスで、**[デバッグ]** フォルダーを開き、**[エディット コンティニュ]** ページをクリックし、**[古いコードの警告を表示する]** をオンにします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [サポートされているコード変更 (C++)](supported-code-changes-cpp.md)
 - [[エディット コンティニュ] ([オプション] ダイアログ ボックス - [デバッグ])](edit-and-continue.md)

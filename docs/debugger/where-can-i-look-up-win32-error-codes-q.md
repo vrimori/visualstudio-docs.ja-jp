@@ -1,8 +1,6 @@
 ---
 title: Win32 のエラー コードを調べるには | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vc.errors
@@ -20,21 +18,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ecddd2a8ca87d4c86b3cdf776fcf2e475efb8836
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
-ms.translationtype: MT
+ms.openlocfilehash: d2ce767465262533e1122a58bb4c51dd6caf0c5f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37056925"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53874274"
 ---
 # <a name="where-can-i-look-up-win32-error-codes"></a>Win32 のエラー コードを調べるには
 WINERROR.H には、Win32 API 関数のエラー コード定義が含まれています。このファイルは、既定のインストールでは INCLUDE ディレクトリにあります。  
   
- エラー コードを調べるコードを入力して、**ウォッチ**ウィンドウまたは**クイック ウォッチ**  ダイアログ ボックス。 例えば:  
+ エラー コードを検索するには、[ウォッチ] **ウィンドウまたは [クイック ウォッチ]** ダイアログ ボックスに、検索対象のコードを入力します。 次に例を示します。  
   
 `0x80000004,hr` 
 
   
-## <a name="see-also"></a>関連項目  
- [ネイティブ コードのデバッグに関する Faq](../debugger/debugging-native-code-faqs.md)   
+## <a name="see-also"></a>「  
+ [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

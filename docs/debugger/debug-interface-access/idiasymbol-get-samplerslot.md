@@ -1,8 +1,6 @@
 ---
-title: IDiaSymbol::get_samplerSlot |Microsoft ドキュメント
-ms.custom: ''
+title: IDiaSymbol::get_samplerSlot |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -12,15 +10,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c51cce25c6bf4ec12c981a0a342a56451eff416
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: f48731c7c7abdcd0eb36f24b8d49eead0247cbf7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31469218"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53985710"
 ---
 # <a name="idiasymbolgetsamplerslot"></a>IDiaSymbol::get_samplerSlot
-サンプラー スロットを取得します。  
+サンプラーのスロットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,10 +29,10 @@ HRESULT get_samplerSlot(
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ポインター、`DWORD`サンプラー スロットを保持します。  
+ [out]ポインター、`DWORD`サンプラー スロットを保持しています。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

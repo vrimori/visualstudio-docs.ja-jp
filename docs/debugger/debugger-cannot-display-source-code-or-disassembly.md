@@ -2,7 +2,6 @@
 title: デバッガーは、ソース コードまたは逆アセンブルを表示できません。
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -17,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ea95a2bb4c29f8a23fd597173a10a838baca051c
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 2aee62651d6517444eb33aef272a212e5a12f55e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53063967"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53944377"
 ---
 # <a name="debugger-cannot-display-source-code-or-disassembly"></a>[デバッガーは、ソース コードまたは逆アセンブリを表示できません] ダイアログ ボックス
 このエラーには、次のメッセージが表示されます。  
@@ -37,6 +36,6 @@ ms.locfileid: "53063967"
   
 -   セキュリティ上の考慮から、デバッガーが、スタック、スレッド、レジスタ、またはその他のコンテキスト情報をデバッグ中のプログラムから読み取れない可能性があります。 これは、Web アプリケーションをデバッグしていて、仮想ディレクトリの適切なアクセス権がない場合によく発生します。 仮想ディレクトリのセキュリティを匿名に設定して再試行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [Visual Studio でのデバッグ](../debugger/index.md)[デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
  [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)

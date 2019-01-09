@@ -1,8 +1,6 @@
 ---
 title: BC テクスチャ圧縮バリアント |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 2d0f5305-585b-4b01-bc9a-7a32d6e991da
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 919191ec29ad45a8385d32b82de99d44fcdaa2ea
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 8149c6d544d6967b454c7c307e01bdfa3f3afbfa
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49922446"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53986428"
 ---
 # <a name="bc-texture-compression-variant"></a>BC テクスチャ圧縮バリアント
 B8G8R8X8、B8G8R8A8、または R8G8B8A8 のバリエーションであるピクセル形式を持つテクスチャで、ブロック圧縮を有効にします。  
@@ -25,7 +23,7 @@ B8G8R8X8、B8G8R8A8、または R8G8B8A8 のバリエーションであるピク
   
  対象のテクスチャがブロックベースの圧縮に適していて、完全な色の忠実性が必要ない場合は、ブロック圧縮形式を使用してメモリの使用量を減らし、帯域幅の使用を減らすことを検討します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  ソース テクスチャを作成する `ID3DDevice::CreateTexture2D` への呼び出しのたびに、ブロックベースの圧縮形式を使用してテクスチャを圧縮します。 具体的には、以下の場合にテクスチャが圧縮されます。  
   
 - `D3D11_TEXTURE2D_DESC` で渡される`pDesc` オブジェクトが、不変のシェーダー リソースを記述する場合、つまり  
@@ -62,5 +60,5 @@ B8G8R8X8、B8G8R8A8、または R8G8B8A8 のバリエーションであるピク
 ## <a name="example"></a>例  
  このバリアントは、`CreateTexture2D` への呼び出しを行う前に、実行時にテクスチャをブロック圧縮します。 実行コードについては、このアプローチは推奨されません。圧縮されていないテクスチャはより多くのディスク容量を使用し、ブロックベースの圧縮では大量のコンピューティング リソースをエンコードする必要があり、追加のステップによってアプリケーションのロード時間が非常に長くなることがあるためです。 代わりに、イメージ エディタ、またはビルド パイプラインの一部であるイメージ プロセッサを使用して、テクスチャをオフラインで圧縮することを推奨しています。 これらのアプローチではディスク容量の要件が減り、アプリケーションのランタイム オーバーヘッドが排除され、処理時間に余裕があるため、最適なイメージ品質を保持することができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [ハーフ/クォーター テクスチャ ディメンション バリアント](half-quarter-texture-dimensions-variant.md)

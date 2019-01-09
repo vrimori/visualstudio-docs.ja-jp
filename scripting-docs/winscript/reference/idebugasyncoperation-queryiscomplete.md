@@ -1,5 +1,5 @@
 ---
-title: IDebugAsyncOperation::QueryIsComplete |Microsoft ドキュメント
+title: IDebugAsyncOperation::QueryIsComplete |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e985697e425ec4966f2260792a9698fa50b4c98d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 90d054eb6f7e98a604815c559bee4e326b19692d
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725662"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54092938"
 ---
 # <a name="idebugasyncoperationqueryiscomplete"></a>IDebugAsyncOperation::QueryIsComplete
-デバッグ操作が完了したかどうかを判断します。  
+デバッグ操作が完了したかどうかを決定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT QueryIsComplete();  
 ```  
   
@@ -40,12 +40,12 @@ HRESULT QueryIsComplete();
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|操作が完了しました。|  
 |`S_FALSE`|操作は完了しません。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このメソッドは、デバッグ操作が完了したかどうかを判断します。  
   
 ## <a name="see-also"></a>関連項目  

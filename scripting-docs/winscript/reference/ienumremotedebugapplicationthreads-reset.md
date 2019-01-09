@@ -1,5 +1,5 @@
 ---
-title: IEnumRemoteDebugApplicationThreads::Reset |Microsoft ドキュメント
+title: IEnumRemoteDebugApplicationThreads::Reset |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b218b04781f8836b7c2f99d71d20716404777a69
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 8e53c92f0b53f380d2a854e40a68888e3b7c6297
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728022"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54097605"
 ---
 # <a name="ienumremotedebugapplicationthreadsreset"></a>IEnumRemoteDebugApplicationThreads::Reset
-列挙のシーケンスを先頭にリセットします。  
+先頭に、列挙体シーケンスをリセットします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT Reset();  
 ```  
   
@@ -40,12 +40,12 @@ HRESULT Reset();
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、列挙のシーケンスを先頭にリセットします。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、先頭に、列挙体シーケンスをリセットします。  
   
 ## <a name="see-also"></a>関連項目  
  [IEnumRemoteDebugApplicationThreads インターフェイス](../../winscript/reference/ienumremotedebugapplicationthreads-interface.md)

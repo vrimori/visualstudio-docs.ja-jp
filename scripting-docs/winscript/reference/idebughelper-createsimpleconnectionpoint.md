@@ -1,5 +1,5 @@
 ---
-title: IDebugHelper::CreateSimpleConnectionPoint |Microsoft ドキュメント
+title: IDebugHelper::CreateSimpleConnectionPoint |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fcc598fa97d47a564ddb12aaa0480e42b6601118
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 6b478f425b1aaf284bc7af744f5ac99f9be7fe8c
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727812"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54097072"
 ---
 # <a name="idebughelpercreatesimpleconnectionpoint"></a>IDebugHelper::CreateSimpleConnectionPoint
 ラップするイベント インターフェイスを返します、指定された`IDispatch`オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT CreateSimpleConnectionPoint(  
    IDispatch*                pdisp  
    ISimpleConnectionPoint**  ppscp  
@@ -42,16 +42,16 @@ HRESULT CreateSimpleConnectionPoint(
  [in]`IDispatch`ラップするオブジェクト。  
   
  `ppscp`  
- [out]イベント インターフェイスをラップする`pdisp`です。  
+ [out]イベント インターフェイスをラップする`pdisp`します。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ラップするイベント インターフェイスを返します、指定された`IDispatch`(を参照してください[ISimpleConnectionPoint インターフェイス](../../winscript/reference/isimpleconnectionpoint-interface.md))。  
   
 ## <a name="see-also"></a>関連項目  

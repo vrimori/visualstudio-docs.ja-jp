@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHost::GetPathName |Microsoft ドキュメント
+title: IDebugDocumentHost::GetPathName |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 42fffa160a1f5b55dc9ba0287c2fdf3073e27e0d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 5c33844ade2367ffeb7690306a5febbabde2f016
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24726672"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54096032"
 ---
 # <a name="idebugdocumenthostgetpathname"></a>IDebugDocumentHost::GetPathName
-ドキュメントのソース ファイルの完全パスとファイル名を返します。  
+ドキュメントのソース ファイルの完全なパスとファイル名を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetPathName(  
    BSTR*  pbstrLongName,  
    BOOL*  pfIsOriginalFile  
@@ -39,7 +39,7 @@ HRESULT GetPathName(
   
 #### <a name="parameters"></a>パラメーター  
  `pbstrLongName`  
- [out]長い形式の名前を含む文字列。  
+ [out]長い名前を含む文字列。  
   
  `pfIsOriginalFile`  
  [out]フラグが true の場合`pbstrLongName`それ以外の場合は false、ドキュメントの元のファイルを参照します。  
@@ -47,13 +47,13 @@ HRESULT GetPathName(
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
-|`E_FAIL`|ソース ファイルを作成または決定できません。|  
+|`E_FAIL`|ソース ファイルがありませんを作成または確認できます。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、ドキュメントのソース ファイルの完全パスとファイル名を返します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、ドキュメントのソース ファイルの完全なパスとファイル名を返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugDocumentHost インターフェイス](../../winscript/reference/idebugdocumenthost-interface.md)

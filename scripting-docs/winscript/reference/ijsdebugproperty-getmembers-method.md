@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugproperty::getmembers メソッド |Microsoft ドキュメント
+title: Ijsdebugproperty::getmembers メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -16,19 +16,19 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 066db431f27eca01fab63d10d0396575b3895527
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 351862f488aceb5fd3e9176cc4676e70b197d803
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728432"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54087028"
 ---
 # <a name="ijsdebugpropertygetmembers-method"></a>IJsDebugProperty::GetMembers メソッド
 このオブジェクトのメンバーを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetMembers(  
    JS_PROPERTY_MEMBERS members,  
    IJsEnumDebugProperty **ppEnum  
@@ -44,7 +44,7 @@ HRESULT GetMembers(
   
 ## <a name="return-value"></a>戻り値  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** jscript9diag.h です  
   
 ## <a name="see-also"></a>関連項目  

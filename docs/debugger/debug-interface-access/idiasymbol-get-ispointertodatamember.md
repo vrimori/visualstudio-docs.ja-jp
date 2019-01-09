@@ -1,8 +1,6 @@
 ---
-title: IDiaSymbol::get_isPointerToDataMember |Microsoft ドキュメント
-ms.custom: ''
+title: IDiaSymbol::get_isPointerToDataMember |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fec840ac0669c5a882b5c1de9a9e582c3a06a1f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: b8511b74c55eebb420c04cdc782c8725133c90eb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31463027"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53871409"
 ---
 # <a name="idiasymbolgetispointertodatamember"></a>IDiaSymbol::get_isPointerToDataMember
 このシンボルがデータ メンバーへのポインターであるかどうかを指定します。  
@@ -31,10 +29,10 @@ HRESULT get_isPointerToDataMember(
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ポインター、`BOOL`シンボルは、データ メンバーへのポインターであるかどうかを指定します。  
+ [out]ポインターを`BOOL`シンボルは、データ メンバーへのポインターであるかどうかを指定します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

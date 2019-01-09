@@ -1,8 +1,6 @@
 ---
 title: Just-In-Time デバッガーを使用したデバッグ |Microsoft Docs
-ms.custom: ''
 ms.date: 09/24/18
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Visual Studio], Just-In-Time
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c6bd9685a5ea9bc2e6e0dc94f7fbff395fab523e
-ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
-ms.translationtype: HT
+ms.openlocfilehash: fbdf32377db26cdb3696187248bd9b8becb8de24
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53562062"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53831551"
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Visual studio Just-In-Time デバッガーを使用してデバッグします。
 
@@ -107,7 +105,7 @@ Visual Studio がコンピューターからアンインストールされた後
 
 この例では、することになります、C#をスローする Visual Studio でコンソール アプリを[NullReferenceException](/dotnet/api/system.nullreferenceexception)します。
 
-1. Visual Studio で、作成、C#コンソール アプリ (**ファイル** > **新規** > **プロジェクト** > **Visual C#**   > **コンソール アプリケーション**) という名前の*ThrowsNullException*します。 Visual Studio でプロジェクトを作成する方法の詳細については、次を参照してください。[チュートリアル。シンプルなアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)
+1. Visual Studio で、作成、C#コンソール アプリ (**ファイル** > **新規** > **プロジェクト** > **Visual C#**   > **コンソール アプリケーション**) という名前の*ThrowsNullException*します。 Visual Studio でプロジェクトを作成する方法の詳細については、次を参照してください。[チュートリアル。シンプルなアプリケーションの作成](/visualstudio/get-started/csharp/tutorial-wpf)
    
 1. Visual Studio でプロジェクトを開いたら、開く、 *Program.cs*ファイル。 Main() メソッドをコンソールには行を表示し、NullReferenceException をスローし、次のコードに置き換えます。
    
@@ -198,4 +196,4 @@ Visual Studio がコンピューターからアンインストールされた後
 - [デバッガーのセキュリティ](../debugger/debugger-security.md)
 - [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)
 - [オプション、デバッグ、ジャスト イン タイム ダイアログ ボックス](../debugger/just-in-time-debugging-options-dialog-box.md)
-- [セキュリティ警告信頼されていないユーザーによって所有されているプロセスにアタッチすると、危険なことができます。以下の情報に関して疑わしい点がある場合や、不明な場合は、このプロセスにアタッチしないでください。](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)
+- [セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするには危険が伴います。以下の情報に関して疑わしい点がある場合や、不明な場合は、このプロセスにアタッチしないでください。](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)

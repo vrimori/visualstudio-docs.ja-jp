@@ -5,8 +5,7 @@ ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 59
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a1ea4c51f617d6128018ba23cbf564996cccf1a3
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 95d7f9c542bccfd5f78b0aafef276147e8534257
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057254"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53847637"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio の既定のキーボード ショートカット
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -1164,5 +1163,5 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 |XsdDesigner.ShowGraphView|Ctrl + 数字 3|
 |XsdDesigner.ShowStartView|Ctrl + 数字 1|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
  [アイコン用イメージ エディター](http://msdn.microsoft.com/library/586d2b8b-0348-4883-a85d-1ff0ddbf14dd) [IntelliSense の使用](../ide/using-intellisense.md)

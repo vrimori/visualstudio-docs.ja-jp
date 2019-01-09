@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSite::GetDocVersionString |Microsoft ドキュメント
+title: IActiveScriptSite::GetDocVersionString |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b4b009c9eb40b2935a5b1aeca0d551819462bafc
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: a451f4883373978772643e11fe22feb9122be30e
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724542"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54097215"
 ---
 # <a name="iactivescriptsitegetdocversionstring"></a>IActiveScriptSite::GetDocVersionString
-現在のドキュメントのバージョンを一意に識別するホスト定義の文字列を取得します。 (メモ帳で編集されている HTML ページの場合) のようにスクリプトを Windows のスコープ外に関連するドキュメントを変更した場合、スクリプト エンジンで保存できますこのと共に強制的に再コンパイル次に、スクリプトが読み込まれるとき、永続化された状態。  
+現在のドキュメントのバージョンを一意に識別するホスト定義の文字列を取得します。 (メモ帳で編集されている HTML ページの大文字と小文字) のように Windows スクリプトのスコープ外関連のドキュメントを変更した場合は、スクリプト エンジン保存できますこのと共に強制的に再コンパイル、スクリプトが読み込まれる、次回の永続化された状態。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetDocVersionString(  
     BSTR *pbstrVersionString  // address of document version string  
 );  
@@ -43,8 +43,8 @@ HRESULT GetDocVersionString(
 ## <a name="return-value"></a>戻り値  
  返します`S_OK`成功した場合、または`E_NOTIMPL`場合、このメソッドはサポートされていません。  
   
-## <a name="remarks"></a>コメント  
- 場合`E_NOTIMPL`返されるか、スクリプト エンジンがスクリプトがドキュメントとの同期を想定する必要があります。  
+## <a name="remarks"></a>Remarks  
+ 場合`E_NOTIMPL`返されるか、スクリプト エンジンでは、スクリプトは、ドキュメントとの同期にすると想定する必要があります。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)

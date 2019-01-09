@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptStats::GetStatEx |Microsoft ドキュメント
+title: IActiveScriptStats::GetStatEx |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5cb8adf27811f3046de7b447e537443ef129a8c3
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 824546b64323f7fb88c4ec016f8420169afa665c
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725092"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54097332"
 ---
 # <a name="iactivescriptstatsgetstatex"></a>IActiveScriptStats::GetStatEx
-カスタム スクリプトの統計情報を返します。  
+カスタム スクリプトの統計を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetStatEx(  
    REFGUID  guid,  
    ULONG*   pluHi,  
@@ -40,23 +40,23 @@ HRESULT GetStatEx(
   
 #### <a name="parameters"></a>パラメーター  
  `guid`  
- [in]返される統計情報を指定します。 セマンティクスの統計情報は、特定に対応する GUID 全体が定義されているエンジンです。  
+ [in]返される統計情報を指定します。 セマンティクスの統計情報に対応する特定の GUID 全体が定義されているエンジン。  
   
  `pluHi`  
- [out]統計情報を表す 64 ビット符号なし整数の上位 32 ビットです。  
+ [out]統計情報を表す 64 ビット符号なし整数の上位 32 ビット。  
   
  `pluLo`  
- [out]統計情報を表す 64 ビット符号なし整数の下位 32 ビットです。  
+ [out]統計情報を表す 64 ビット符号なし整数の下位 32 ビット。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
-|`E_NOTIMPL`|メソッドは実装されていません。|  
+|`E_NOTIMPL`|メソッドが実装されていません。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このメソッドは、カスタム ホストに意味のある統計情報を返すカスタム スクリプト エンジンを使用します。  
   
 > [!NOTE]

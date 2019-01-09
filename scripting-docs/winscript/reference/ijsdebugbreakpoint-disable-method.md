@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugbreakpoint::disable メソッド |Microsoft ドキュメント
+title: Ijsdebugbreakpoint::disable メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -16,28 +16,28 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c53ff133fb07d256d00668e499e5996ac650230f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 873f5d285a877e04076859b0230589ced705078b
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727842"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54094212"
 ---
 # <a name="ijsdebugbreakpointdisable-method"></a>IJsDebugBreakPoint::Disable メソッド
 ブレークポイントを無効にします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT Disable(void);  
 ```  
   
 ## <a name="return-value"></a>戻り値  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  削除されたブレークポイントで呼び出された場合は E_UNEXPECTED を返します。 既に無効になっているブレークポイントで呼び出された場合は S_FALSE を返します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** jscript9diag.h です  
   
 ## <a name="see-also"></a>関連項目  

@@ -1,8 +1,6 @@
 ---
-title: スレッドのプロパティ ダイアログ ボックス |Microsoft ドキュメント
-ms.custom: ''
+title: スレッドのプロパティ ダイアログ ボックス |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - Spy++, thread properties
@@ -13,34 +11,34 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c6c64db60f7e8a7b8cc7f00157bf33ac38732416
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 30f45bf4ef30ead2740cad45101f6eed6d7c2a1e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31476417"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53985999"
 ---
 # <a name="thread-properties-dialog-box"></a>[スレッド プロパティ] ダイアログ ボックス
-特定のスレッドの詳細をこのダイアログ ボックスの確認を使用します。 このダイアログ ボックスを表示するには、フォーカスを移動、[スレッド ビュー](../debugger/threads-view.md)ウィンドウ、または開く[メッセージ ビュー](../debugger/messages-view.md)メッセージに展開します。 ツリーで、スレッドの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  
+詳細については、特定のスレッドはこのダイアログ ボックスの検索を使用します。 このダイアログ ボックスを表示するには、フォーカスを移動、[スレッド ビュー](../debugger/threads-view.md)ウィンドウ、またはオープン[メッセージ ビュー](../debugger/messages-view.md)メッセージを展開します。 ツリーで、スレッドの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  
   
- **全般**タブは表示のみのタブです。 Windows 98、Windows 95 のオペレーティング システムでは、このタブの変更済みバージョンが表示されます。  
+ **全般** タブは、のみ タブが表示されます。 Windows 98 および Windows 95 のオペレーティング システムでは、このタブの変更済みバージョンが表示されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [[全般] タブ ([スレッド プロパティ] ダイアログ ボックス)](../debugger/general-tab-thread-properties-dialog-box.md)  
- このダイアログ ボックスを使用して、選択したスレッドについて詳しく調べます。  
+ 選択したスレッドの詳細を確認するには、このダイアログ ボックスを使用します。  
   
 ## <a name="related-sections"></a>関連項目  
  [[スレッド検索] ダイアログ ボックス](../debugger/thread-search-dialog-box.md)  
  スレッド ビューで特定のスレッドのノードを検索するために使用します。  
   
  [Spy++ リファレンス](../debugger/spy-increment-reference.md)  
- 各 spy++ メニューおよびダイアログ ボックスについて説明するセクションが含まれます。  
+ 各 spy++ メニューおよびダイアログ ボックスについて説明するセクションが含まれています。  
   
  [スレッド ビューでスレッドを検索](../debugger/how-to-search-for-a-thread-in-threads-view.md)  
  スレッド ビューで特定のスレッドを検索する方法について説明します。  
   
  [スレッド ビュー](../debugger/threads-view.md)  
- アクティブなスレッドのツリー ビューを表示します。  
+ アクティブなスレッドのツリー ビューが表示されます。  
   
  [Spy++ ビュー](../debugger/spy-increment-views.md)  
  Windows、メッセージ、プロセス、およびスレッドの spy++ ツリー ビューについて説明します。  

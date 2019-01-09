@@ -1,5 +1,5 @@
 ---
-title: SCRIPT_ERROR_DEBUG_EXCEPTION_THROWN_KIND 列挙型 |Microsoft ドキュメント
+title: SCRIPT_ERROR_DEBUG_EXCEPTION_THROWN_KIND 列挙型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -12,28 +12,28 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6fe5b308ea75956d9e5826b4daadaef3a823141f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 997c5149467591a7612e6ff10b0efcc3efbc91bf
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24734152"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54087803"
 ---
 # <a name="scripterrordebugexceptionthrownkind-enumeration"></a>SCRIPT_ERROR_DEBUG_EXCEPTION_THROWN_KIND 列挙型
-スローされた例外の種類を示します。 この列挙体を使って、 [IActiveScriptErrorDebug110::GetExceptionThrownKind](../../winscript/reference/iactivescripterrordebug110-getexceptionthrownkind.md)メソッドです。  
+スローされた例外の種類を示します。 この列挙体を使って、 [IActiveScriptErrorDebug110::GetExceptionThrownKind](../../winscript/reference/iactivescripterrordebug110-getexceptionthrownkind.md)メソッド。  
   
 > [!IMPORTANT]
 >  これらの定数は、PDM Version 11.0 以降によって実装されます。 activdbg100.h にあります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 typedef SCRIPT_ERROR_DEBUG_EXCEPTION_THROWN_KIND  
 ```  
   
 ## <a name="members"></a>メンバー  
   
-|メンバー|値|説明|  
+|メンバー|[値]|説明|  
 |------------|-----------|-----------------|  
 |ETK_FIRST_CHANCE|0x00000000|例外は初回例外です。|  
 |ETK_USER_UNHANDLED|0x00000001|例外は、ユーザー コードでハンドルされません。|  

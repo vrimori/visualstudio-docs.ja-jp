@@ -13,15 +13,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 33981ac76d8c502d56571a112ee8cd1e0c11dce0
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: 3d80bd31b7a0979be664ca712f01b4a71f043786
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304585"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53952986"
 ---
 # <a name="connect-to-data-in-an-access-database-windows-forms"></a>Access データベース内のデータへの接続 (Windows フォーム)
 
@@ -45,7 +44,7 @@ Access データベースに接続することができます (いずれか、 *
 
 3.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]** をクリックします。
 
-     データ ソース構成**ウィザードが開きます。
+     **データ ソース構成ウィザード**が開きます。
 
 4.  選択**データベース**上、**データ ソースの種類を選択**ページ、し、 **次へ**。
 
@@ -96,7 +95,7 @@ Access データベースに接続することができます (いずれか、 *
 
 3.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]** をクリックします。
 
-     データ ソース構成**ウィザードが開きます。
+     **データ ソース構成ウィザード**が開きます。
 
 4.  選択**データベース**上、**データ ソースの種類を選択**ページ、し、 **次へ**。
 

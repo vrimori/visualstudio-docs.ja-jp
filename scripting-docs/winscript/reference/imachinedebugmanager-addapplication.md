@@ -1,5 +1,5 @@
 ---
-title: IMachineDebugManager::AddApplication |Microsoft ドキュメント
+title: IMachineDebugManager::AddApplication |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 77c31084ccc24a6bace18f009eb8372a4f68a428
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: e056a62ac498c0b4061ed0982189de9747832ccc
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728792"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54087075"
 ---
 # <a name="imachinedebugmanageraddapplication"></a>IMachineDebugManager::AddApplication
-実行にアプリケーションを追加するアプリケーションの一覧です。  
+実行中にアプリケーションを追加します。 アプリケーションの一覧。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT AddApplication(  
    IRemoteDebugApplication*  pda,  
    DWORD*                    pdwAppCookie  
@@ -39,20 +39,20 @@ HRESULT AddApplication(
   
 #### <a name="parameters"></a>パラメーター  
  `pda`  
- [in]アプリケーションの実行中にアプリケーションの一覧です。  
+ [in]アプリケーションを実行するアプリケーションの一覧。  
   
  `pdwAppCookie`  
- [out]アプリケーションをマシン デバッグ マネージャーから削除するために使用する cookie です。  
+ [out]マシン デバッグ マネージャーから、アプリケーションを削除するために使用されるクッキー。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、プロセスのデバッグ マネージャーされるたびに`IProcessDebugManager::AddApplication`と呼びます。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、プロセス デバッグ マネージャーたびに`IProcessDebugManager::AddApplication`が呼び出されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IMachineDebugManager インターフェイス](../../winscript/reference/imachinedebugmanager-interface.md)   

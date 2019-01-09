@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::SetSignature |Microsoft ドキュメント
+title: IScriptEntry::SetSignature |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c9ff480f8e5c3192a7e2b355d39825cc3a084370
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 660f667d3542ff2cb9a7e96444d98b3082218a2a
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729342"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54089506"
 ---
 # <a name="iscriptentrysetsignature"></a>IScriptEntry::SetSignature
-型の情報を設定、`IScriptEntry`関数オブジェクト。  
+セットの情報を入力する、`IScriptEntry`関数オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT SetSignature(  
    ITypeInfo          *pti  
    ULONG              iMethod  
@@ -47,12 +47,12 @@ HRESULT SetSignature(
 ## <a name="return-value"></a>戻り値  
  `HRESULT`。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- 使用して型情報を設定する`IScriptEntry::SetSignature`または[IScriptNode::CreateChildHandler](../../winscript/reference/iscriptnode-createchildhandler.md)です。 型情報は、関数の内部表現に基づくエントリによっても生成できます。  
+## <a name="remarks"></a>Remarks  
+ 使用して型情報を設定する`IScriptEntry::SetSignature`または[IScriptNode::CreateChildHandler](../../winscript/reference/iscriptnode-createchildhandler.md)します。 関数の内部表現に基づくエントリによって、型情報を生成こともできます。  
   
 ## <a name="see-also"></a>関連項目  
  [IScriptEntry インターフェイス](../../winscript/reference/iscriptentry-interface.md)

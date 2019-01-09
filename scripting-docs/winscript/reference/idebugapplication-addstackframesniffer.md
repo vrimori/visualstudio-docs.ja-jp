@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::AddStackFrameSniffer |Microsoft ドキュメント
+title: IDebugApplication::AddStackFrameSniffer |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 89faa6481bd5e5934ae2d3b85a0bade83949633a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 4fa444573e418de1a59219eb48b09e64b08d859a
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725562"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54089896"
 ---
 # <a name="idebugapplicationaddstackframesniffer"></a>IDebugApplication::AddStackFrameSniffer
 このアプリケーションには、スタック フレームの列挙子のプロバイダーを追加します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT AddStackFrameSniffer(  
    IDebugStackFrameSniffer*  pdsfs,  
    DWORD*                    pdwCookie  
@@ -39,20 +39,20 @@ HRESULT AddStackFrameSniffer(
   
 #### <a name="parameters"></a>パラメーター  
  `pdsfs`  
- [in]このアプリケーションに追加するスタック フレーム列挙子のプロバイダーです。  
+ [in]このアプリケーションに追加するスタック フレーム列挙子プロバイダー。  
   
  `pdwCookie`  
- [out]このスタック フレームの列挙子プロバイダー アプリケーションから削除するために使用する cookie です。  
+ [out]アプリケーションからこのスタック フレームの列挙子プロバイダーを削除するために使用されるクッキー。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- 言語エンジンの呼び出しをデバッガーのスタック フレームを公開するには、このメソッドは通常は、他のエンティティのスタック フレームを公開する可能性があります。  
+## <a name="remarks"></a>Remarks  
+ 言語エンジンは、通常、デバッガーへのスタック フレームを公開するには、このメソッドを呼び出す、他のエンティティのスタック フレームを公開することができます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugApplication インターフェイス](../../winscript/reference/idebugapplication-interface.md)   

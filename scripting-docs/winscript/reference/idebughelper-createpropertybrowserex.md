@@ -1,5 +1,5 @@
 ---
-title: IDebugHelper::CreatePropertyBrowserEx |Microsoft ドキュメント
+title: IDebugHelper::CreatePropertyBrowserEx |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f9bc219ea5c2ff9ff2860d36cd475985d825ae59
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: c3590fe05ef82f094dd5706f9f527b247d95eda8
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727572"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54097735"
 ---
 # <a name="idebughelpercreatepropertybrowserex"></a>IDebugHelper::CreatePropertyBrowserEx
-バリアント型をラップして、文字列へのバリアント型の値または VARTYPE 型のカスタム変換できるように、プロパティ ブラウザーを返します。  
+バリアントをラップし、VARIANT 値または VARTYPE 型の文字列にカスタムの変換では、プロパティ ブラウザーを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT CreatePropertyBrowserEx(  
    VARIANT*                  pvar,  
    LPCOLESTR                 bstrName,  
@@ -42,10 +42,10 @@ HRESULT CreatePropertyBrowserEx(
   
 #### <a name="parameters"></a>パラメーター  
  `pvar`  
- [in]参照するルート バリアント。  
+ [in]参照するルートのバリアント。  
   
  `bstrName`  
- [in]ルートを指定する名前。  
+ [in]ルートに付ける名前。  
   
  `pdat`  
  [in]プロパティを要求するスレッドします。 このパラメーターが NULL の場合は、マーシャ リングは実行されません。  
@@ -59,12 +59,12 @@ HRESULT CreatePropertyBrowserEx(
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、バリアント型をラップして、文字列へのバリアント型の値または VARTYPE 型のカスタム変換できるように、プロパティ ブラウザーを返します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、バリアント型をラップし、VARIANT 値または VARTYPE 型の文字列にカスタムの変換では、プロパティ ブラウザーを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugHelper::CreatePropertyBrowser](../../winscript/reference/idebughelper-createpropertybrowser.md)   

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteDebug::OnScriptErrorDebug |Microsoft ドキュメント
+title: IActiveScriptSiteDebug::OnScriptErrorDebug |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3a669d435d84295b22af4298936babf8439eaefa
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 5680d22ffa5ec648afaced5e98f651e35758f929
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724992"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54092119"
 ---
 # <a name="iactivescriptsitedebugonscripterrordebug"></a>IActiveScriptSiteDebug::OnScriptErrorDebug
 により、スマート ホストは実行時エラーを処理する方法を決定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT OnScriptErrorDebug(  
    IActiveScriptErrorDebug*  pErrorDebug,  
    BOOL*                     pfEnterDebugger,  
@@ -40,22 +40,22 @@ HRESULT OnScriptErrorDebug(
   
 #### <a name="parameters"></a>パラメーター  
  `pErrorDebug`  
- [in]実行時エラーが発生しました。  
+ [in]発生した実行時エラー  
   
  `pfEnterDebugger`  
- [out]JIT デバッグを行うには、デバッガーに、エラーを渡すかどうかを示すフラグします。  
+ [out]JIT デバッグを実行するデバッガーに、エラーを渡すかどうかを示すフラグします。  
   
  `pfCallOnScriptErrorWhenContinuing`  
- [out]呼び出すかどうかを示すフラグ`IActiveScriptSite::OnScriptError`ときは、ユーザーがデバッグなしで続行します。  
+ [out]呼び出すかどうかを示すフラグ`IActiveScriptSite::OnScriptError`ユーザーがデバッグなしで続行するとします。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは `HRESULT` を返します。 使用可能な値などが、次の表の値に限定されていません。  
+ このメソッドは `HRESULT` を返します。 使用可能な値などが、次の表の値に限定されません。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  スマート ホストは、このメソッドを使用して、実行時エラーを処理する方法を決定できます。  
   
 ## <a name="see-also"></a>関連項目  

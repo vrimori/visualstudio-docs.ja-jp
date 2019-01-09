@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::FIsAutoJitDebugEnabled |Microsoft ドキュメント
+title: IDebugApplication::FIsAutoJitDebugEnabled |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 268a10cc829e2d217bb9a90b355405dd8f3b15b6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: b06d223d76ed741eef6b379ace6b522248ded2e1
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725182"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54090546"
 ---
 # <a name="idebugapplicationfisautojitdebugenabled"></a>IDebugApplication::FIsAutoJitDebugEnabled
-・ イン タイム (JIT) のデバッガーが自動デバッグ ダム ホストに登録されているかどうかを判断します。  
+ジャストイン タイム (JIT) デバッガーが自動デバッグ ダム ホストに登録されているかどうかを決定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 BOOL FIsAutoJitDebugEnabled();  
 ```  
   
@@ -38,10 +38,10 @@ BOOL FIsAutoJitDebugEnabled();
  このメソッドには、パラメーターはありません。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが返すかどうかは、メソッドが成功し、JIT デバッガーが自動デバッグ ダム ホストに登録されている、`TRUE`です。 返しますそれ以外の場合、`FALSE`です。  
+ メソッドが返すかどうかは、メソッドが成功し、JIT デバッガーが自動デバッグ ダム ホストに登録されている、`TRUE`します。 返しますそれ以外の場合、`FALSE`します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、JIT デバッガーが自動デバッグ ダム ホストに登録されている場合を判断します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、JIT デバッガーが自動デバッグ ダム ホストに登録されている場合を決定します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugApplication インターフェイス](../../winscript/reference/idebugapplication-interface.md)

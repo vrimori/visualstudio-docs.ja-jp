@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSite::GetItemInfo |Microsoft ドキュメント
+title: Iactivescriptsite::getiteminfo |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ccb898c14571d1f1fd1fcae7cb0b9a6d322f2754
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: f4dc6515d64406870ca10f003d7cea515c49b7d8
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725422"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54095889"
 ---
 # <a name="iactivescriptsitegetiteminfo"></a>IActiveScriptSite::GetItemInfo
-により、スクリプト エンジンを使用して追加の項目に関する情報を取得する、 [IActiveScript::AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md)メソッドです。  
+により、スクリプト エンジンを使用して追加の項目に関する情報を取得する、 [iactivescript::addnameditem](../../winscript/reference/iactivescript-addnameditem.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetItemInfo(  
     LPCOLESTR pstrName,     // address of item name  
     DWORD dwReturnMask,     // bit mask for information retrieval  
@@ -41,21 +41,21 @@ HRESULT GetItemInfo(
   
 #### <a name="parameters"></a>パラメーター  
  `pstrName`  
- [in]指定されている、項目に関連付けられている名前、 [IActiveScript::AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md)メソッドです。  
+ [in]指定されている、項目に関連付けられた名前、 [iactivescript::addnameditem](../../winscript/reference/iactivescript-addnameditem.md)メソッド。  
   
  `dwReturnMask`  
- [in]どのような項目に関する情報が返される必要がありますを指定するビット マスクです。 スクリプト エンジンは最小限の考えられる情報を要求する必要があります戻り値パラメーターの一部 (たとえば、 `ITypeInfo`) の読み込みまたは生成に時間がかかることができます。 次の値の組み合わせが可能です。  
+ [in]項目に関する情報を返す必要がありますを指定するビット マスクです。 スクリプト エンジンは最小限の情報を要求する必要があります、戻り値パラメーターの一部 (たとえば、 `ITypeInfo`) の読み込みまたは生成に時間がかかることができます。 次の値の組み合わせになります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-------------|  
-|SCRIPTINFO_IUNKNOWN|返します、`IUnknown`この項目のインターフェイスです。|  
-|SCRIPTINFO_ITYPEINFO|返します、`ITypeInfo`この項目のインターフェイスです。|  
+|される SCRIPTINFO_IUNKNOWN|返します、`IUnknown`この項目のインターフェイス。|  
+|SCRIPTINFO_ITYPEINFO|返します、`ITypeInfo`この項目のインターフェイス。|  
   
  `ppunkItem`  
- [out]ポインターを受け取る変数のアドレス、`IUnknown`指定したアイテムに関連付けられているインターフェイス。 スクリプト エンジンが使用できる、`IUnknown::QueryInterface`を取得するメソッド、`IDispatch`アイテムに対するインターフェイスです。 場合、このパラメーターは NULL を受け取ります`dwReturnMask`SCRIPTINFO_IUNKNOWN 値は含まれません。 また、受信 NULL、項目の名前に関連付けられたオブジェクトが存在しない場合このメカニズムは SCRIPTITEM_CODEONLY は、フラグ設定で、名前付きの項目が追加されたときに、単純なクラスを作成するために使用、 [IActiveScript::AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md)メソッドです。  
+ [out]ポインターを受け取る変数のアドレス、`IUnknown`特定の項目に関連付けられているインターフェイス。 スクリプト エンジンを使用できる、`IUnknown::QueryInterface`メソッドを取得する、`IDispatch`の項目のインターフェイス。 場合、このパラメーターは NULL を受け取ります`dwReturnMask`される SCRIPTINFO_IUNKNOWN 値は含まれません。 NULL を受信、項目の名前に関連付けられているオブジェクトが存在しない場合も、このメカニズムは SCRIPTITEM_CODEONLY フラグ設定で名前付きの項目が追加されたときに、単純なクラスを作成するために使用、 [iactivescript::addnameditem](../../winscript/reference/iactivescript-addnameditem.md)メソッド。  
   
  `ppTypeInfo`  
- [out]ポインターを受け取る変数のアドレス、`ITypeInfo`アイテムに関連付けられているインターフェイス。 場合、このパラメーターは NULL を受け取ります`dwReturnMask`SCRIPTINFO_ITYPEINFO 値を含まない型情報がこの項目を使用できない場合またはします。 型情報が利用できない場合は、オブジェクトは、イベントをソースことはできません名のバインドを実現する必要があります、`IDispatch::GetIDsOfNames`メソッドです。 なお、`ITypeInfo`オブジェクトでサポートされる複数のインターフェイスとイベント インターフェイスを取得するインターフェイスに、項目のコクラス (TKIND_COCLASS) について説明します。 アイテムをサポートしている場合、 `IProvideMultipleTypeInfo` 、インターフェイス、`ITypeInfo`取得インターフェイスは、インデックス 0 と同じ`ITypeInfo`を取得するを使用して、`IProvideMultipleTypeInfo::GetInfoOfIndex`メソッドです。  
+ [out]ポインターを受け取る変数のアドレス、`ITypeInfo`アイテムに関連付けられているインターフェイス。 場合、このパラメーターは NULL を受け取ります`dwReturnMask`SCRIPTINFO_ITYPEINFO の値を含まない型情報がこの項目を使用できない場合またはします。 型情報が利用できない場合は、オブジェクトは、イベント ソースことはできません名のバインドを実現する必要があります、`IDispatch::GetIDsOfNames`メソッド。 なお、`ITypeInfo`オブジェクトは、複数のインターフェイスとイベント インターフェイスをサポート可能性がありますので、インターフェイスの取得は、項目のコクラス (TKIND_COCLASS) について説明します。 項目がサポートしている場合、`IProvideMultipleTypeInfo`インターフェイス、`ITypeInfo`取得インターフェイスは、インデックス 0 の場合と同じ`ITypeInfo`を使用して取得すると、`IProvideMultipleTypeInfo::GetInfoOfIndex`メソッド。  
   
 ## <a name="return-value"></a>戻り値  
  次のいずれかの値を返します。  
@@ -67,8 +67,8 @@ HRESULT GetItemInfo(
 |`E_POINTER`|無効なポインターが指定されました。|  
 |`TYPE_E_ELEMENTNOTFOUND`|指定した名前の項目は見つかりませんでした。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドによって示される情報のみを取得、`dwReturnMask`パラメーターです。 これによりパフォーマンスが向上します。 たとえば場合、`ITypeInfo`インターフェイスは、アイテムには必要ありません、単に指定されていないで`dwReturnMask`です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドによって示される情報のみを取得、`dwReturnMask`パラメーターの場合パフォーマンスが向上します。 たとえば場合、`ITypeInfo`インターフェイス項目は必要ありません、単に指定されていないで`dwReturnMask`します。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)
