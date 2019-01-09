@@ -1,5 +1,5 @@
 ---
-title: IScriptScriptlet::getsimpleeventname |Microsoft ドキュメント
+title: IScriptScriptlet:。:Getsimpleeventname |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2ec90d2ebdf58f60ba88b90a38830b5df329dead
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 01d20df26f2f3f1d2e7735fed5292b29da528ace
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24733692"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54093270"
 ---
-# <a name="iscriptscriptlet-getsimpleeventname"></a>IScriptScriptlet::GetSimpleEventName
-スクリプトレットに関連付けられている単純なイベント名を返します。 これは、任意の空白文字を含まない単一ワード名です。  
+# <a name="iscriptscriptlet-getsimpleeventname"></a>IScriptScriptlet:。:Getsimpleeventname
+スクリプトレットに関連付けられている単純なイベント名を返します。 任意の空白文字を含まない 1 単語の名前です。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetSimpleEventName(  
    BSTR               *pbstr  
 );  
@@ -38,16 +38,16 @@ HRESULT GetSimpleEventName(
   
 #### <a name="parameters"></a>パラメーター  
  `pbstr`  
- [out]関連付けられている単純なイベント名を格納しているバッファー、`IScriptScriptlet`オブジェクト。  
+ [out]関連付けられている単純なイベント名を含むバッファー、`IScriptScriptlet`オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
  `HRESULT`。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [IScriptScriptlet インターフェイス](../../winscript/reference/iscriptscriptlet-interface.md)

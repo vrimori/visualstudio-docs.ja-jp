@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::HandleBreakPoint |Microsoft ドキュメント
+title: IDebugApplication::HandleBreakPoint |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 16b05533c566cb90529766d81fb7197dbc284664
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0478d0154ee79c1781885b94ae342e421e61e5e1
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24726142"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54095369"
 ---
 # <a name="idebugapplicationhandlebreakpoint"></a>IDebugApplication::HandleBreakPoint
-現在のスレッドをブロックして、デバッガーの IDE に、ブレークポイントの通知を送信します。  
+現在のスレッドをブロックして、デバッガー IDE にブレークポイントの通知を送信します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT HandleBreakPoint(  
    BREAKREASON         br,  
    BREAKRESUMEACTION*  pbra  
@@ -47,17 +47,17 @@ HRESULT HandleBreakPoint(
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- 言語エンジンは、ブレークポイントをヒットするスレッドのコンテキストでこのメソッドを呼び出します。 このメソッドは、現在のスレッドをブロックし、IDE デバッガーにブレークポイント通知を送信します。 デバッガーは、アプリケーションを再開するとき、`pbra`パラメーターが取るべき操作を指定します。  
+## <a name="remarks"></a>Remarks  
+ 言語エンジンは、ブレークポイントをヒットするスレッドのコンテキストでこのメソッドを呼び出します。 このメソッドは、現在のスレッドをブロックし、デバッガー IDE にブレークポイント通知を送信します。 デバッガーは、アプリケーションを再開するとき、`pbra`パラメーターを実行するには、どのようなアクションを指定します。  
   
 > [!NOTE]
->  言語エンジンは、フレームまたは、ブレークポイント中の式を評価スタックの列挙などのタスクを実行するスレッドから呼び出すことができます。  
+>  言語エンジンは、フレームまたは、ブレークポイント中の式を評価スタックの列挙などのタスクを実行するスレッドによって呼び出される可能性があります。  
   
- このメソッドにより`IApplicationDebugger::onHandleBreakPoint`呼び出せるようにします。  
+ このメソッドにより`IApplicationDebugger::onHandleBreakPoint`呼び出されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugApplication インターフェイス](../../winscript/reference/idebugapplication-interface.md)   
