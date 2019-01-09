@@ -3,7 +3,6 @@ title: 'クイック スタート: 既存のコードから Python プロジェ�
 description: このクイック スタートでは、便利なテンプレートを利用し、既存のフォルダーから Python の Visual Studio プロジェクトを作成します。
 ms.date: 12/06/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-python
 ms.topic: quickstart
 author: kraigb
 ms.author: kraigb
@@ -12,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9cded32adb57b84c01710c8a47491901d50b7bd1
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: e26768c3e18fb12ca97e2875dec6ab84cb0344ac
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53065327"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53965508"
 ---
 # <a name="quickstart-create-a-python-project-from-existing-code"></a>クイック スタート: 既存のコードから Python プロジェクトを作成する
 
@@ -33,7 +32,7 @@ ms.locfileid: "53065327"
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [チュートリアル:Visual Studio での Python の使用](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
+> [チュートリアル: Visual Studio での Python の使用](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>関連項目
 

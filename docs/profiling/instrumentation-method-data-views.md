@@ -1,8 +1,6 @@
 ---
 title: インストルメンテーション メソッドのデータ ビュー | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - profiling tools,instrumentation method views
@@ -13,18 +11,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d1582560611a5c47e3b5e24767d9a2b9c03f5a9
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 266f342253fd19098f9d889faa10f6df1bf38c78
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34263914"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53932247"
 ---
 # <a name="instrumentation-method-data-views"></a>インストルメンテーション メソッドのデータ ビュー
 ここでは、インストルメンテーション メソッドを使用して生成されたプロファイラー データ ファイルのビューとレポートに関するリファレンス情報を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [概要ビュー](../profiling/summary-view-instrumentation-data.md)  
+ [概要 ビュー](../profiling/summary-view-instrumentation-data.md)  
  処理に最も時間を要した関数および最も多くの個別作業を実行した関数が一覧表示されます。  
   
  [コール ツリー ビュー](../profiling/call-tree-view-instrumentation-data.md)  
@@ -36,7 +34,7 @@ ms.locfileid: "34263914"
  [呼び出し元/呼び出し先ビュー - インストルメンテーション データ](../profiling/caller-callee-view-instrumentation-data.md)  
  選択した関数の親関数と子関数のプロファイル データが表示されます。  
   
- [関数 ビュー](../profiling/functions-view-instrumentation-data.md)  
+ [関数ビュー](../profiling/functions-view-instrumentation-data.md)  
  プロファイル データが関数別に一覧表示されます。  
   
 ## <a name="reference"></a>参照  

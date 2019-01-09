@@ -2,7 +2,6 @@
 title: 参照の近くに変数宣言を移動する
 ms.date: 01/26/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
@@ -11,12 +10,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9bc661331ee03af6d34caeae847b717db1f21fc5
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 86a0ffb984cc18c1269630c25bfca3646ef17451
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53065343"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53907191"
 ---
 # <a name="move-declaration-near-reference-refactoring"></a>参照の近くへの宣言の移動リファクタリング
 

@@ -3,7 +3,6 @@ title: Azure App Service に Python アプリを発行する
 description: Python アプリを Azure App Service に発行する場合のオプション (Git デプロイ、Linux 用コンテナー、IIS へのデプロイなど)。
 ms.date: 12/06/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
@@ -13,12 +12,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 1c8c48eaa777da973f0a4b21d826bbab384b4536
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: ea5a4d53302d19d11da819cac94bb620df3dab6f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53066692"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53965750"
 ---
 # <a name="publish-to-azure-app-service"></a>Azure App Service に発行する
 
