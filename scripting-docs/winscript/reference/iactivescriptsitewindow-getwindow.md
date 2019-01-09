@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteWindow::GetWindow |Microsoft ドキュメント
+title: IActiveScriptSiteWindow::GetWindow |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b3257ac5632a2f3d713b6329a9a1eeebc4415851
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 268a54ccdcbd70ed159758720db0735f16d81492
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724902"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54097397"
 ---
 # <a name="iactivescriptsitewindowgetwindow"></a>IActiveScriptSiteWindow::GetWindow
-スクリプト エンジンを表示する必要がありますがポップアップ ウィンドウの所有者として機能するウィンドウへのハンドルを取得します。  
+スクリプト エンジンを表示する必要がある、ポップアップ ウィンドウの所有者として機能できるウィンドウのハンドルを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetWindow(  
     HWND *phwnd  // address of variable for window handle  
 );  
@@ -38,13 +38,13 @@ HRESULT GetWindow(
   
 #### <a name="parameters"></a>パラメーター  
  `phwnd`  
- [out]ウィンドウ ハンドルを受け取る変数のアドレスです。  
+ [out]ウィンドウ ハンドルを受け取る変数のアドレス。  
   
 ## <a name="return-value"></a>戻り値  
- 返します`S_OK`成功した場合、または`E_FAIL`場合はエラーが発生しました。  
+ 返します`S_OK`成功した場合、または`E_FAIL`場合は、エラーが発生しました。  
   
-## <a name="remarks"></a>コメント  
- このメソッドがに似ていますが、`IOleWindow::GetWindow`メソッドです。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、`IOleWindow::GetWindow`メソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptSiteWindow](../../winscript/reference/iactivescriptsitewindow.md)

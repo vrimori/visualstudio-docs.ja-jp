@@ -1,5 +1,5 @@
 ---
-title: SCRIPTTHREADID 定数 |Microsoft ドキュメント
+title: SCRIPTTHREADID 定数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,32 +18,32 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dc692716115ea0c205b1cfd982b189fffd54a9ac
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 27852f97cf0a78919b10043c64b1c5a7cc7d3ec5
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24734192"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54097813"
 ---
 # <a name="scriptthreadid-constants"></a>SCRIPTTHREADID 定数
 スレッドの種類を指定するために使用します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 typedef DWORD SCRIPTTHREADID;  
 ```  
   
 ## <a name="constants"></a>定数  
   
-|定数|値|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-------------|  
 |SCRIPTTHREADID_CURRENT|0xFFFFFFFD|現在実行中のスレッド。|  
-|SCRIPTTHREADID_BASE|0xFFFFFFFE|基本スレッドです。つまりをスクリプト エンジンのスレッドがインスタンス化されます。|  
+|SCRIPTTHREADID_BASE|0xFFFFFFFE|基本スレッドです。つまり、これで、スクリプト エンジンのスレッドがインスタンス化されました。|  
 |SCRIPTTHREADID_ALL|0 xffffffff|すべてのスレッド。|  
   
-## <a name="remarks"></a>コメント  
- `SCRIPTTHREADID`によって型が使用される`IActiveScript::GetCurrentScriptThreadID`、 `IActiveScript::GetScriptThreadID`、 `IActiveScript::GetScriptThreadState`、および`IActiveScript::InterruptScriptThread`、定数でのみ使用できますが、`IActiveScript::GetScriptThreadState`と`IActiveScript::InterruptScriptThread`です。  
+## <a name="remarks"></a>Remarks  
+ `SCRIPTTHREADID`型によって使用されます`IActiveScript::GetCurrentScriptThreadID`、 `IActiveScript::GetScriptThreadID`、 `IActiveScript::GetScriptThreadState`、および`IActiveScript::InterruptScriptThread`、定数でのみ使用できますが、`IActiveScript::GetScriptThreadState`と`IActiveScript::InterruptScriptThread`します。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScript::GetCurrentScriptThreadID](../../winscript/reference/iactivescript-getcurrentscriptthreadid.md)   
