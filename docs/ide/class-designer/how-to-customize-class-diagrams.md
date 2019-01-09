@@ -2,7 +2,6 @@
 title: '方法: クラス ダイアグラムをカスタマイズする (クラス デザイナー)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - class diagrams, customizing
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 79279c4450e8dbf325ce8b64879ad2cb9569455e
-ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
+ms.openlocfilehash: 4ac0ff3943d1209b0442c29785408c70b55cef43
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53684432"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53882933"
 ---
 # <a name="how-to-customize-class-diagrams"></a>方法: クラス ダイアグラムをカスタマイズする
 
