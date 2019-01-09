@@ -16,14 +16,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d8ce82bea823307e02b719fbfae43fe0697aca65
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: 94c27fe4616ffcf541602cc8ab61bbaa26ddbb18
+ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34844639"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53593003"
 ---
-# <a name="how-to-specify-pre--and-post-instrument-commands"></a>方法: インストルメント化前のコマンドおよびインストルメント化後のコマンドを指定する
+# <a name="how-to-specify-pre--and-post-instrument-commands"></a>方法: インストルメント前のコマンドおよびインストルメント後のコマンドを指定する
 
 パフォーマンス セッションのバイナリがインストルメント化される前か後に実行されるコマンドを指定できます。 コマンド ラインから発行できるコマンドはすべて、インストルメント化前のイベントまたはインストルメント化後のイベントとして指定できます。 たとえば、バイナリのインストルメント化後に実行されるバッチ ファイルで、厳密な名前キーを持つアセンブリの再署名を自動化するコマンドを指定できます。
 
@@ -31,21 +31,7 @@ ms.locfileid: "34844639"
 
 コマンドが実行される作業ディレクトリは、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] を実行しているオペレーティング システムと、プロファイリング対象アプリケーションの対象プラットフォームによって異なります。
 
- **32 ビット コンピューター**
-
-32 ビット コンピューターでの既定のプロファイリング ツール ディレクトリは、*ドライブ\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools* です。
-
-**64 ビット コンピューター**
-
-64 ビット コンピューターでは、プロファイリングするアプリケーションのターゲット プラットフォームに応じてパスを指定します。
-
-- 32 ビット アプリケーションの場合、既定のプロファイリング ツール ディレクトリは以下のとおりです。
-
-     *ドライブ\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Performance Tools*
-
-- 64 ビット アプリケーションの場合、既定のプロファイリング ツール ディレクトリは以下のとおりです。
-
-     *ドライブ\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Performance Tools\x64*
+プロファイル ツールへのパスを取得するには、[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)に関する記事をご覧ください。
 
 ## <a name="to-specify-pre-instrument-commands"></a>インストルメント化前のコマンドを指定するには
 

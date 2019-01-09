@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: db4b47582d03a7f040850dd69e61d5fee2b80020
-ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
+ms.openlocfilehash: 8dbb5daff9db064cedcfaa6713f5c31a72f961af
+ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34815257"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53592431"
 ---
 # <a name="walkthrough-command-line-profiling-using-sampling"></a>チュートリアル: サンプリングを使ったコマンド ライン プロファイリング
 
@@ -43,7 +43,7 @@ ms.locfileid: "34815257"
 サンプリングとは 1 つのプロファイリング方式で、対象のプロセスを定期的にポーリングしてアクティブな関数を識別します。 結果のデータからは、プロセスがサンプリングされたときに対象の関数が呼び出し履歴の一番上に配置されていた回数がわかります。
 
 > [!NOTE]
-> プロファイリング ツールのコマンド ライン ツールは、Visual Studio インストール ディレクトリの *\Team Tools\Performance Tools* サブディレクトリにあります。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にそのパスを追加するか、コマンド自体にこのパスを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。 PeopleTrax は 32 ビット アプリケーションです。
+>  プロファイル ツールへのパスを取得するには、[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)に関する記事をご覧ください。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。  
 
 ### <a name="to-profile-the-peopletrax-application-by-using-the-sampling-method"></a>サンプリング メソッドを使用して PeopleTrax アプリケーションのプロファイリングを行うには
 

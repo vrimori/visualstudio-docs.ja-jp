@@ -10,12 +10,12 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 2dd23b87bc3d362f7d198cdd0e5d63e0ebac26d5
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 91204ea5b4303b38397d90761fd9648159174dd4
+ms.sourcegitcommit: 75e02ed88a1ace6e8265fd4e3a82a1bc78f3adca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35667055"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53348399"
 ---
 # <a name="welcome-to-r-tools-for-visual-studio"></a>R Tools for Visual Studio へようこそ
 
@@ -29,7 +29,7 @@ R Tools for Visual Studio (RTVS) をインストールいただきありがと�
 - [R Tools for Visual Studio のインストール方法](installing-r-tools-for-visual-studio.md)
 - [GitHub でバグと機能に関する要望を送信および参照する](https://github.com/Microsoft/RTVS/issues)
 - [ソース コードを探究と貢献](https://github.com/Microsoft/RTVS/blob/master/LICENSE)
-- Github を使用して (推奨) フィードバックを送信するには、Visual Studio で **[R Tools] > [フィードバック]** メニューを使用してください。
+- GitHub を使用して (推奨) フィードバックを送信するには、Visual Studio で **[R Tools] > [フィードバック]** メニューを使用します。
 
 ## <a name="microsoft-r-distributions"></a>Microsoft R の配布
 

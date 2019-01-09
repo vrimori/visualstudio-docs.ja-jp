@@ -1,9 +1,10 @@
 ---
 title: Visual Studio にサインイン
-ms.custom: ''
-ms.date: 11/16/2017
+titleSuffix: ''
+ms.custom: seodec18
+ms.date: 12/10/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
+ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: b9531c25-e4cf-43ae-b331-a9f31a8cd171
 author: TerryGLee
@@ -11,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c7568583ac9239e168760000f0712ca7dcc4c33f
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: 2e72205708ca5114c5757e9d122230af7af13d94
+ms.sourcegitcommit: 75e02ed88a1ace6e8265fd4e3a82a1bc78f3adca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53159855"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53348382"
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio にサインイン
 
@@ -27,7 +28,7 @@ Visual Studio の開発環境をカスタマイズし、最適化するには、
 
 ## <a name="why-should-i-sign-in-to-visual-studio"></a>Visual Studio にサインインする必要がある理由
 
-サインインすると、Visual Studio エクスペリエンスが強化されます。 たとえば、数例を挙げると、サインイン後にデバイス全体の設定を同期したり、評価期間を延長したり、Azure サービスに自動的に接続したりできます。
+サインインすると、Visual Studio エクスペリエンスが強化されます。 たとえば、数例を挙げると、サインイン後にデバイス全体の[設定を同期](synchronized-settings-in-visual-studio.md)したり、評価期間を延長したり、Azure サービスに自動的に接続したりできます。
 
 期待できる内容とサイン後に行うことができる内容の完全なリストを以下に示します。
 

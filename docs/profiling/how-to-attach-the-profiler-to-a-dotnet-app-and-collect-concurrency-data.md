@@ -10,18 +10,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: dfaab7ef38cd87180f6d97e1db45e2c2d5d16946
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: e680cc5e7d3130100f0627241b02fc07ccea440c
+ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055090"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53593042"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-concurrency-data-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーをスタンドアロンの .NET Framework アプリケーションにアタッチし、コンカレンシー データを収集する
 この記事では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイル ツールのコマンド ライン ツールを使用して、実行中の .NET Framework のスタンドアロン (クライアント) アプリケーションにプロファイラーをアタッチし、プロセスとスレッドのコンカレンシー データを収集する方法について説明します。  
   
 > [!NOTE]
->  プロファイル ツールのコマンドライン ツールは、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] インストール ディレクトリの *\Team Tools\Performance Tools* サブディレクトリにあります。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。  
+>  プロファイル ツールへのパスを取得するには、「[チュートリアル:プロファイラー API の使用](../profiling/walkthrough-using-profiler-apis.md)」をご覧ください。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。  
   
  プロファイラーをアプリケーションにアタッチしている間はデータ収集を一時停止し、完了後に再開できます。 プロファイル セッションを終了するには、アプリケーションへのプロファイラーのアタッチを解除し、プロファイラーを明示的に終了する必要があります。  
   

@@ -10,14 +10,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: eafd91fe97a4e4ceb33b9dc315b8b9d9014d27ef
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0ebca2945995a0f404c506c0e26ee1b1012d4dfa
+ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49914698"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53592873"
 ---
-# <a name="how-to-instrument-a-net-framework-service-and-collect-memory-data-by-using-the-profiler-command-line"></a>方法: プロファイラーのコマンド ラインを使用して .NET Framework サービスをインストルメント化し、メモリ データを収集する
+# <a name="how-to-instrument-a-net-framework-service-and-collect-memory-data-by-using-the-profiler-command-line"></a>方法: プロファイラーのコマンド ラインを使用して .NET Framework サービスをインストルメントし、メモリ データを収集する
 この記事では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイル ツールのコマンド ライン ツールを使用して [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] サービスをインストルメント化し、メモリ使用量データを収集する方法について説明します。 メモリ割り当てデータを収集することも、メモリ割り当てデータとオブジェクト有効期間データの両方を収集することもできます。  
 
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "49914698"
 > [!NOTE]
 >  コンピューターの起動後にサービスを再起動できない場合、インストルメンテーション メソッドを使用してサービスをプロファイリングすることはできません。このようなサービスが起動されるのは、オペレーティング システムの起動時です。  
 > 
->  プロファイル ツールのコマンドライン ツールは、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] インストール ディレクトリの *\Team Tools\Performance Tools* サブディレクトリにあります。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。  
+>  プロファイル ツールへのパスを取得するには、[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)に関する記事をご覧ください。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 
 
 ## <a name="start-the-profiling-session"></a>プロファイル セッションの開始  
  [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] サービスからパフォーマンス データを収集するには、[VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) ツールを使用して適切な環境変数を初期化し、[VSInstr.exe](../profiling/vsinstr.md) ツールを使用してサービス バイナリ ファイルのインストルメントされたコピーを作成します。  

@@ -18,12 +18,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 27a9da182a2e4db76db0b5221178dfa6dc371723
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 768824995bcc0c99cc4c6ad400888e056619b6b7
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49942999"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53561669"
 ---
 # <a name="immediate-window"></a>イミディエイト ウィンドウ
 **[イミディエイト]** ウィンドウは、式のデバックと評価、ステートメントの実行、変数値の出力などのために使用します。 このモードでは、デバッグ時に、開発言語で評価または実行される式を入力できます。 **[イミディエイト]** ウィンドウを表示するには、編集用にプロジェクトを開いて、**[デバッグ]** メニューの **[ウィンドウ]** をポイントし、**[イミディエイト]** をクリックするか、Ctrl キーと Alt キーを押しながら I キーを押します。
@@ -76,7 +76,7 @@ ms.locfileid: "49942999"
 
     **[イミディエイト]** ウィンドウで `MyFunction` が実行され、`4` と表示されます。
 
-関数またはサブルーチンにブレークポイントが含まれているとき、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] は適切なポイントで実行を中断します。 デバッガー ウィンドウを使用して、プログラムの状態を確認できます。 詳細については、「[チュートリアル: デザイン時のデバッグ](../../debugger/walkthrough-debugging-at-design-time.md)」を参照してください。
+関数またはサブルーチンにブレークポイントが含まれているとき、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] は適切なポイントで実行を中断します。 デバッガー ウィンドウを使用して、プログラムの状態を確認できます。 詳細については、「[チュートリアル:デザイン時のデバッグ](../../debugger/walkthrough-debugging-at-design-time.md)」をご覧ください。
 
 デザイン時の式の評価は、実行時環境の起動を必要とするプロジェクトの種類 ([!INCLUDE[trprVSTOshort](../../ide/reference/includes/trprvstoshort_md.md)] プロジェクト、Web プロジェクト、スマート デバイス プロジェクト、SQL プロジェクトなど) には使用できません。
 
@@ -128,8 +128,7 @@ ms.locfileid: "49942999"
 
 - [デバッガーでのコード間の移動](../../debugger/navigating-through-code-with-the-debugger.md)
 - [コマンド ウィンドウ](../../ide/reference/command-window.md)
-- [Visual Studio でのデバッグ](../../debugger/debugging-in-visual-studio.md)
-- [デバッガーの基本事項](../../debugger/getting-started-with-the-debugger.md)
+- [デバッガーでのはじめに](../../debugger/debugger-feature-tour.md)   
 - [チュートリアル: デザイン時のデバッグ](../../debugger/walkthrough-debugging-at-design-time.md)
 - [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
 - [Visual Studio での正規表現の使用](../../ide/using-regular-expressions-in-visual-studio.md)

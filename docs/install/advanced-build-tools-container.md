@@ -12,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e1c79051627bd59ae48b0ad88411a94f4cb36c78
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: 408c66d87dbc932e09e1d5744ab5595672a00534
+ms.sourcegitcommit: 8cdc6e2ad2341f34bd6b02859a7c975daa0c9320
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53159816"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53307633"
 ---
 # <a name="advanced-example-for-containers"></a>コンテナーの高度な例
 
@@ -28,7 +28,7 @@ ms.locfileid: "53159816"
 > [!NOTE]
 > コンテナーのインストーラーの起動に既知の問題がある、microsoft/windowsservercore:10.0.14393.1593 またはそれに基づくイメージに Visual Studio をインストールすることはできません。 詳細については、[既知の問題](build-tools-container-issues.md)に関するページを参照してください。
 
-次の例では、Build Tools 2017 の最新リリースをダウンロードします。 後でコンテナーにインストールできる古いバージョンの Build Tools を利用したい場合は、最初にレイアウトを[作成](create-an-offline-installation-of-visual-studio.md)して[維持](update-a-network-installation-of-visual-studio.md)する必要があります。
+次の例では、Build Tools 2017 の最新リリースをダウンロードします。 後でコンテナーにインストールできる以前のバージョンの Build Tools を利用したい場合は、最初にレイアウトを[作成](create-an-offline-installation-of-visual-studio.md)して[維持](update-a-network-installation-of-visual-studio.md)する必要があります。
 
 ## <a name="install-script"></a>インストール スクリプト
 
@@ -91,6 +91,10 @@ ENTRYPOINT C:\BuildTools\Common7\Tools\VsDevCmd.bat &&
 # Default to PowerShell if no other command specified.
 CMD ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
 ```
+   > [!WARNING]
+   > Visual Studio 2017 バージョン 15.8 以前 (すべての製品) は、mcr<span></span>.microsoft\.com\/windows\/servercore:1809 以降には適切にインストールされません。 エラーは表示されません。
+   >
+   > 詳しくは、「[コンテナーの既知の問題](build-tools-container-issues.md)」をご覧ください。
 
 次のコマンドを実行して、現在の作業ディレクトリでイメージをビルドします。
 

@@ -1,43 +1,49 @@
 ---
 title: 機能を提案する
 description: 開発者コミュニティにはどのような提案があるのか、提案する方法、Visual Studio のロードマップで提案がどのように Microsoft に使用されるのかについて説明します
-ms.date: 11/15/2018
+ms.date: 12/17/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
+ms.technology: vs-ide-general
 ms.topic: conceptual
 author: seaniyer
 ms.author: seiyer
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 541d8968ea71844d89903b9e4f146e86a15737e2
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: 6c92c2d67419b82b11dfb65898d44e0da7901818
+ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160037"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53592457"
 ---
 # <a name="overview-suggest-a-feature"></a>概要: 機能を提案する
 
 現在、[Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com)上では問題を報告する機能を利用できますが、これと並んで機能を提案するための新しいエクスペリエンスが導入されました。 これは、Visual Studio の開発ワークフローと直接交流することができる、新しい便利な方法です。
 
-これまで、Visual Studio のユーザーは User Voice フォーラムを使って新しい機能のアイデアを提案していました。 開発者コミュニティの "*機能の提案*" エクスペリエンスを使用すると、すべてのフィードバックを User Voice フォーラムから Visual Studio 製品チームと直接交流できる 1 つのプラットフォームに移行することができます。
+![開発者コミュニティの [機能を提案する] ボタン](media/suggest-a-feature/suggest-feature-button.png)
+
+Visual Studio のメイン ウィンドウの右上にある **[フィードバックの提供]** アイコンから **[提案の送信]** を選択して、Visual Studio から直接機能の提案を開始することもできます。
+
+![Visual Studio の [提案の送信] メニュー](media/suggest-a-feature/provide-suggestion.png)
+
+**[提案の送信]** を選択すると、[開発者コミュニティ](https://developercommunity.visualstudio.com)に移動するので、そこで提案を入力できます。
+
+## <a name="user-voice"></a>User Voice
+
+これまで、Visual Studio ユーザーは User Voice で新しい機能のアイデアを提案していました。 開発者コミュニティに *[機能を提案する]* 機能を追加することで、Visual Studio 製品チームに対するすべてのフィードバックが一箇所にまとめられました。
+
+User Voice サイトは読み取り専用になっています。 コンテキストが必要な場合に戻って見ることはできますが、すべての新しい機能提案は開発者コミュニティで送信する必要があります。
 
 アイデアの最初のセットが User Voice フォーラムから開発者コミュニティに移行されました。 移行は、コミュニティへのフィードバックの影響と、製品ロードマップの優先順位に基づいて行われました。 移行されるはずの機能が見落とされていると思った場合は、遠慮なく開発者コミュニティに追加してください。
 
 ## <a name="votes"></a>投票
 
-User Voice の投票システムは、開発者コミュニティの投票とは異なる方法で動作します。 開発者コミュニティの投票数の整合性を保ち、投票の歪みを避けるために、User Voice での投票数は、各機能の提案の横にあるタグとして目立つように表示されます。 強化された開発者コミュニティで提案への投票を続けていくと、新しい投票数は User Voice での投票数とは別々に表示されます。
-
-## <a name="user-voice"></a>User Voice
-
-User Voice のサイトは読み取り専用になりました。必要に応じてコンテキストを復習することができます。 新しい機能の提案は、すべて開発者コミュニティに送信する必要があります。
+開発者コミュニティの投票システムは、User Voice とは異なります。 開発者コミュニティの投票数の整合性を保ち、投票の歪みを避けるために、User Voice での投票数は、各機能の提案の横にあるタグとして目立つように表示されます。 強化された開発者コミュニティで提案への投票を続けていくと、新しい投票数は User Voice での投票数とは別々に表示されます。
 
 ## <a name="suggestion-status"></a>提案の状態
 
-機能の提案を送信すると、自分の提案がライフサイクル内のどの位置にあるのかが状態によって示されます。 フィードバックが検討されワークフローに沿って移動されると、それに対応する状態がタグ付けされます。
-
-機能の提案に関連付けられるさまざまな状態を、その意味の説明とカラー インジケーターと共に次の一覧に示します。
+機能の提案を送信すると、自分の提案がライフサイクル内のどの位置にあるのかが状態によって示されます。 フィードバックが検討されワークフローに沿って移動されると、それに対応する状態がタグ付けされます。 機能の提案に関連付けられるさまざまな状態を、その意味の説明とカラー インジケーターと共に次の一覧に示します。
 
 ![開発者コミュニティの提案の [新規] 状態](../ide/media/SuggestStates/New.jpg)
 
@@ -122,3 +128,7 @@ User Voice の投票システムは、開発者コミュニティの投票とは
 Microsoft は、お客様からの機能の提案に耳を傾け、お客様に価値のあるエクスペリエンスを提供するためのアクションを実行することに尽力しています。 提案に関するアクションは、広範なコミュニティに対する影響に基づいて優先順位が付けられます。 すべての提案に個別に応じることはできませんが、お客様のフィードバックが必ず適切なチームに届けられ、慎重に評価されるようにします。
 
 応答時間は、お客様のフィードバックの状態によって異なります。 このドキュメント内の状態に関する説明を確認し、応答時間について把握してください。
+
+## <a name="see-also"></a>関連項目
+
+- [開発者コミュニティの [機能を提案する] 機能の概要 (Visual Studio ブログ)](https://blogs.msdn.microsoft.com/visualstudio/2018/10/09/introducing-suggest-a-feature-in-developer-community/?utm_source=vs_developer_news&utm_medium=referral)

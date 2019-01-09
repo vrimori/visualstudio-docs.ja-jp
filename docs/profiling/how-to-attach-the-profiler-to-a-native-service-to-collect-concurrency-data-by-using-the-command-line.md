@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e9810eb445abfb64f6674278687f0d8ef1ec3db
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 712587b88593760c254090890ebf986860020333
+ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49876114"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53592354"
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-service-to-collect-concurrency-data-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーをネイティブ サービスにアタッチし、コンカレンシー データを収集する
 この記事では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイル ツールのコマンド ライン ツールを使用して、プロファイラーをネイティブ (C/C++) サービスにアタッチし、サンプリング メソッドによってプロセスおよびスレッド コンカレンシー データを収集する方法について説明します。  
@@ -24,7 +24,7 @@ ms.locfileid: "49876114"
 >  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
 
 > [!NOTE]
->  プロファイリング ツールのコマンド ライン ツールは、Visual Studio インストール ディレクトリの *\Team Tools\Performance Tools* サブディレクトリにあります。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 コマンド プロンプトでプロファイラーを使用するには、**[コマンド プロンプト]** ウィンドウの PATH 環境変数またはコマンド自体にツールのパスを追加します。 詳細については、[コマンドライン ツールにパスを指定する](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)方法に関するページをご覧ください。  
+>  プロファイル ツールへのパスを取得するには、[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)に関する記事をご覧ください。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。  
 
  プロファイラーをサービスにアタッチしている間はデータ コレクションを一時停止し、完了後に再開できます。 プロファイル セッションを終了するには、サービスへのプロファイラーのアタッチを解除し、プロファイラーを明示的に終了する必要があります。  
 
