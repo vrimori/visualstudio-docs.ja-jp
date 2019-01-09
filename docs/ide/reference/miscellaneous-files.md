@@ -2,7 +2,6 @@
 title: その他のファイル
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.newfile
@@ -22,12 +21,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f0241f1e918b4c0022106059b0466a15559f2e84
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 0d764cea7992a9833bd8bddde8432388aebbc994
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747734"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53867161"
 ---
 # <a name="miscellaneous-files"></a>その他のファイル
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のエディターでは、プロジェクトともソリューションとも関係のないファイルを操作できます。 ソリューションを開いているときに、ファイルをソリューションやプロジェクトに追加せずに開いて編集できます。 コンテナーとは関係なく操作されるファイルを "その他のファイル" と呼びます。 "その他のファイル" は、ソリューションやプロジェクトの外部にあり、ビルドには含まれません。また、ソース管理の対象になっているソリューションに含めることはできません。
@@ -50,7 +49,7 @@ ms.locfileid: "34747734"
 ## <a name="folder-display-options"></a>フォルダー表示オプション
  [その他のファイル] フォルダーの表示オプションを設定して、"その他のファイル" を一度も開いていない場合でも、このフォルダーを表示できます。 ソリューション ファイルは、"その他のファイル" の一覧を永久に管理するわけではありません。 ソリューション ファイルでは、オプションの機能を使用して、MRU ファイル リスト (最近使ったファイルの一覧) をユーザー別に保存できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [ソリューションおよびプロジェクト](../../ide/solutions-and-projects-in-visual-studio.md)
 - [[ドキュメント] ([オプション] ダイアログ ボックス - [環境])](../../ide/reference/documents-environment-options-dialog-box.md)

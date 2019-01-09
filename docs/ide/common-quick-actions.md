@@ -2,7 +2,6 @@
 title: 共通のクイック アクション
 ms.date: 03/28/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
@@ -12,12 +11,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c6eaa3b776e7a4c4e90795265f94af2d0df994b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0c2491ba0968f60f5e67e9829a19994b7d4cbe7d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49894015"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53877446"
 ---
 # <a name="common-quick-actions"></a>共通のクイック アクション
 
@@ -31,7 +30,7 @@ ms.locfileid: "49894015"
 
 ### <a name="correct-misspelled-symbol-or-keyword"></a>記号やキーワードのスペルミスの修正
 
-Visual Studio で型やキーワードのスペルを誤って入力した場合、このクイック アクションは自動的にそれを修正します。 電球メニューでは **["Change '*misspelled word*' to '*correct word*']** \('スペルが正しくない単語' を 'スペルが正しい単語' に変更\) と表示されます。 例:
+Visual Studio で型やキーワードのスペルを誤って入力した場合、このクイック アクションは自動的にそれを修正します。 電球メニューでは **["Change '*misspelled word*' to '*correct word*']** \('スペルが正しくない単語' を 'スペルが正しい単語' に変更\) と表示されます。 次に例を示します。
 
 ```csharp
 // Before

@@ -1,23 +1,21 @@
 ---
 title: コードの記述と管理
 description: Visual Studio でコード エディターなどの他のツールを使用して、コードを記述、移動、管理、および強化する方法について説明します。
-layout: LandingPage
 ms.date: 01/01/2018
-author: gewarren
-ms.author: gewarren
-ms.topic: landing-page
+layout: LandingPage
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-f1_keywords:
-- vs.newproject
+ms.topic: landing-page
+author: gewarren
+ms.author: gewarren
 ms.workload:
 - multiple
-ms.openlocfilehash: 929ee8c5618c08431c27754327c9466a54a68b85
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: fc1b75a41e7c321686d0107982eb9969c7a1e2bc
+ms.sourcegitcommit: c7b16358a5d6f7ea1dd2f70a6ac2a8266efa9c15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53159378"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53425787"
 ---
 # <a name="write-and-manage-code-using-visual-studio"></a>Visual Studio を使用したコードの記述と管理
 

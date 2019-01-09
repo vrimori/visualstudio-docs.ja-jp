@@ -1,9 +1,7 @@
 ---
 title: CPU 使用率データの分析 (C++)
 description: CPU 使用率診断ツールを使用して C++ アプリでのアプリのパフォーマンスを測定する
-ms.custom: ''
 ms.date: 08/06/2018
-ms.technology: vs-ide-debug
 ms.topic: quickstart
 f1_keywords:
 - ''
@@ -15,14 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4cf51a4961d6b9139d4f8fdbfd6c5df2ab0052c
-ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
+ms.openlocfilehash: 38bacd51727ea2091e23adb606ff65de901f479a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42627113"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53883173"
 ---
-# <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c"></a>クイック スタート: Visual Studio での CPU 使用率データの分析 (C++)
+# <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c"></a>クイック スタート: Visual Studio の CPU 使用率データの分析 (C++)
 
 Visual Studio は、アプリケーションのパフォーマンス問題の分析に役立つ高性能な機能をたくさん備えています。 このトピックでは、基本的な機能のいくつかを簡単に紹介します。 今回、高い CPU 使用率に起因するパフォーマンス上のボトルネックを特定するツールを紹介します。 診断ツールは Visual Studio の .NET 開発 (ASP.NET を含む) とネイティブ/C++ 開発で利用できます。
 
@@ -115,7 +113,7 @@ Windows 8 以降では、デバッガーを使用してプロファイル ツー
     }
     ```
   
-## <a name="step-1-collect-profiling-data"></a>手順 1: プロファイル データを収集する 
+## <a name="step-1-collect-profiling-data"></a>手順 1: プロファイリング データの収集 
   
 1.  最初に、`main` 関数のこのコード行でアプリのブレークポイントを設定します。
 
@@ -154,7 +152,7 @@ Windows 8 以降では、デバッガーを使用してプロファイル ツー
 
      この時点で、データの分析を開始できます。
 
-## <a name="step-2-analyze-cpu-usage-data"></a>手順 2: CPU 使用率データを分析する
+## <a name="step-2-analyze-cpu-usage-data"></a>手順 2: CPU 使用率データの分析
 
 データの分析では、最初に CPU 使用率で関数の一覧を調べて最も多くの作業を行っている関数を特定し、それから個々の作業を詳しく調べることをお勧めします。
 

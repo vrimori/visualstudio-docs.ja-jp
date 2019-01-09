@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 55c9e7c6ec4a34d59c45b2a56abedaa6d3fd2974
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: b0f8f4204a48a9846a6193c6b8b60c3ef321816e
+ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49942447"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53648669"
 ---
 # <a name="how-to-install-the-stand-alone-profiler"></a>方法: スタンドアロンのプロファイラーをインストールする
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE をインストールしなくても実行できるコマンドライン ベースのスタンドアロン プロファイラーを利用できます。 このような状況は、コンピューターに開発環境がインストールされていないときに発生します。 たとえば、本稼働中の Web サーバーには開発環境をインストールするべきではありません。  
@@ -27,13 +27,15 @@ ms.locfileid: "49942447"
 >  スタンドアロン プロファイラーを利用し、ASP.NET Web サイトのパフォーマンス データを集めるときは、[VSPerfCmd](../profiling/vsperfcmd.md) ツールよりも [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) ライン ツールをお勧めします。  
   
 ### <a name="to-install-the-stand-alone-profiler"></a>スタンドアロンのプロファイラーをインストールするには  
-  
-1. *\Standalone Profiler* パスが含まれるディレクトリの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] インストール メディアでスタンドアロン プロファイル インストーラー (*vs_profiler.exe*) を検索して実行します。  
+
+1. [Performance Tools for Visual Studio](https://visualstudio.microsoft.com/downloads/?q=performance+tools#performance-tools-for-visual-studio-2017) をダウンロードします。
+
+1. パフォーマンス ツールをダウンロードした場所でスタンドアロン プロファイル インストーラー (*vs_standaloneprofiler.exe*) を探して、それを実行します。
   
 2. *vsintr.exe* と *msdis150.dll* のパスをシステム パスに追加します。  
   
    > [!NOTE]
-   >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の既定のインストールでは、*vsinstr.exe* と *msdis150.dll*は *\Program Files\Visual Studio 10\Team Tools\Performance Tools* にあります。  
+   >  プロファイル ツールへのパスを取得するには、[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)に関する記事をご覧ください。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 
   
 3. コマンド プロンプトで、「**VSInstr**」と入力します。  
   
@@ -47,7 +49,7 @@ ms.locfileid: "49942447"
     **start %COMSPEC%**  
   
    > [!NOTE]
-   >  シンボル サーバー パッケージの設定方法については、「[方法: Windows シンボル情報を参照する](../profiling/how-to-reference-windows-symbol-information.md)」を参照してください。  
+   >  シンボル サーバー パッケージの設定方法については、「[方法:Windows シンボル情報を参照する](../profiling/how-to-reference-windows-symbol-information.md)」を参照してください。  
   
 6. [VSPerfReport](../profiling/vsperfreport.md) ツールを利用し、シンボルをシリアル化してプロファイリング データ ファイル (.vsp) を生成します。 **VSPerfReport /summary:all /packsymbols** スイッチを使用します。 データ ファイルにシンボルが挿入されていない場合、_NT_SYMBOL_PATH 環境変数が設定されていることを確認します。  
   

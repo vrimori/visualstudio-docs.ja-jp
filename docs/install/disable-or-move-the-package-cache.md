@@ -2,7 +2,6 @@
 title: パッケージ キャッシュの無効化または移動
 description: Visual Studio 展開のパッケージ キャッシュを無効化、有効化、移動する方法を説明します。
 ms.date: 04/14/2017
-ms.technology: vs-acquisition
 ms.custom: seodec18
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -18,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 006e7112a2b6c7b990fb412c6a9a2c458bc9e8b2
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: ed8a827dd1edfcd2f0e61361ec4b20f6662ab036
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53159543"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53909018"
 ---
 # <a name="disable-or-move-the-package-cache"></a>パッケージ キャッシュの無効化または移動
 

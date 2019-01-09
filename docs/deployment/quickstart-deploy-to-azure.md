@@ -1,8 +1,6 @@
 ﻿---
 title: Azure App Service に発行する
-ms.custom: ''
 ms.date: 06/22/2018
-ms.technology: vs-ide-deployment
 ms.topic: quickstart
 helpviewer_keywords:
 - deployment, website
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - azure
-ms.openlocfilehash: a8de7175b33a91c310da4b3d6d9e4c05c40c3522
-ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
+ms.openlocfilehash: 4e7cf13658c33caf6b58d6a4e661a8431f377845
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341691"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53853594"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>Visual Studio を使用して Azure App Service に Web アプリを発行する
 
@@ -35,7 +33,7 @@ ms.locfileid: "39341691"
 
 1. **[発行先を選択]** ダイアログ ボックスで、**[App Service]** を選びます。
 
-    ![Azure App Service を選ぶ](../deployment/media/quickstart-publish-azure.png "Azure App Service を選ぶ")
+    ![Azure App Service を選択する](../deployment/media/quickstart-publish-azure.png "Azure App Service を選択する")
 
 1. **[発行]** を選びます。 **[App Service の作成]** ダイアログ ボックスが表示されます。 必要に応じて、Azure アカウントでサインインすると、既定のアプリ サービス設定がフィールドに取り込まれます。
 

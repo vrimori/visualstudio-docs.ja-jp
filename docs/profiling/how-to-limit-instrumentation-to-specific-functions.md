@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 042ef6ef7a562f03f84184a86944a93f99c1d13e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 8e145a50c3fdb643affb67989ae11346bf7e30f9
+ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49815157"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53592860"
 ---
 # <a name="how-to-limit-instrumentation-to-specific-functions"></a>方法: インストルメンテーションを特定の関数に制限する
 インストルメンテーションとデータ収集は、1 つ以上の関数に制限することができます。これを行うには、**[パフォーマンス セッション]** のプロパティ ページまたはターゲット バイナリのプロパティ ページの **[詳細]** ページでオプションを設定します。  
@@ -46,7 +46,7 @@ ms.locfileid: "49815157"
     `FuncSpec` は、名前空間と関数の名前です。 その形式は `Namespace`**::**`FunctionName` です。 複数の関数は、セミコロン (;) を使用して区切ります。 1 つまたは複数の文字にワイルドカードを指定する場合は、アスタリスク (\*) を使います。 たとえば、**/include:MyNS::\\*** は、MyNS 名前空間のすべての関数を指定します。  
   
    > [!NOTE]
-   >  バイナリ内の関数を一覧表示するには、プロファイリング ツールのインストール ディレクトリ (通常は、[!INCLUDE[vsprvsts](../code-quality/includes/vsprvsts_md.md)]インストール ディレクトリの下にある \Team Tools\Performance Tools ディレクトリ) でコマンド プロンプト ウィンドウを開き、**vsinstr /DumpFuncs** と入力します。  
+   >  バイナリ内の関数を一覧表示するには、プロファイル ツールのインストール ディレクトリ ([コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)に関する記事を参照) でコマンド プロンプト ウィンドウを開き、**vsinstr /DumpFuncs** と入力します。  
   
 ### <a name="to-limit-instrumentation-to-specific-functions-in-a-binary"></a>インストルメンテーションをバイナリ内の特定の関数に制限するには  
   
@@ -65,9 +65,9 @@ ms.locfileid: "49815157"
     `FuncSpec` は、名前空間と関数の名前です。 その形式は `Namespace`**::**`FunctionName` です。 複数の関数は、セミコロン (;) を使用して区切ります。 1 つまたは複数の文字にワイルドカードを指定する場合は、アスタリスク (\*) を使います。 たとえば、**/include:MyNS::\\*** は、MyNS 名前空間のすべての関数を指定します。  
   
    > [!NOTE]
-   >  バイナリ内の関数を一覧表示するには、プロファイリング ツールのインストール ディレクトリ (通常は、[!INCLUDE[vsprvsts](../code-quality/includes/vsprvsts_md.md)]インストール ディレクトリの下にある \Team Tools\Performance Tools ディレクトリ) でコマンド プロンプト ウィンドウを開き、**vsinstr /DumpFuncs** と入力します。  
+   >  バイナリ内の関数を一覧表示するには、プロファイル ツールのインストール ディレクトリ ([コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)に関する記事を参照) でコマンド プロンプト ウィンドウを開き、**vsinstr /DumpFuncs** と入力します。  
   
 ## <a name="see-also"></a>関連項目  
  [データ収集の制御](../profiling/controlling-data-collection.md)   
  [方法: インストルメンテーションを特定の DLL に制限する](../profiling/how-to-limit-instrumentation-to-specific-dlls.md)   
- [方法 : 追加のインストルメンテーション オプションを指定する](../profiling/how-to-specify-additional-instrumentation-options.md)
+ [方法: 追加のインストルメンテーション オプションを指定する](../profiling/how-to-specify-additional-instrumentation-options.md)

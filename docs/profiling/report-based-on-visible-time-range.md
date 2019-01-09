@@ -1,8 +1,6 @@
 ---
 title: 表示された時間範囲に基づいたレポート | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.reportnav.profile
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e9de75488c297eef426fb5a93c71f0ff3bad148d
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: c46404eba23c2e80a18232d01ff7a58fb92070c8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35255607"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53938330"
 ---
 # <a name="report-based-on-visible-time-range"></a>表示された時間範囲に基づいたレポート
 プロファイル ビューには、現在表示されている時間範囲およびチャンネルに基づいたレポートが表示されます。 データのさまざまなサブセットの詳細を表示するには、凡例内の項目をクリックします。  

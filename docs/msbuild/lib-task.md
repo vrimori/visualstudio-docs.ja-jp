@@ -1,8 +1,6 @@
 ---
 title: LIB タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.Name
@@ -27,12 +25,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: df6011cb1c706069135a133dd37a34e54203b22b
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 54a9fc4a75d49699087f7fb2ca80c3b8c17ddc8f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079625"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53922021"
 ---
 # <a name="lib-task"></a>LIB タスク
 Microsoft 32-Bit Library Manager ツール (*lib.exe*) をラップします。 Library Manager は、COFF (Common Object File Format) オブジェクト ファイルのライブラリを作成および管理します。 また、エクスポートした定義を参照するためのエクスポート ファイルやインポート ライブラリも作成できます。 詳細については、「[LIB リファレンス](/cpp/build/reference/lib-reference)」と「[LIB の実行](/cpp/build/reference/running-lib)」を参照してください。  

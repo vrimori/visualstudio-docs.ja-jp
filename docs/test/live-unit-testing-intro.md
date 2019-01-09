@@ -3,7 +3,6 @@ title: Live Unit Testing の概要
 description: Live Unit Testing の利点と、Live Unit Testing を使用してプロジェクトを単体テストする方法について説明します。
 ms.date: 2017-09-11
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio ALM
@@ -12,12 +11,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7ad8526f8e44165dc92a914ddf15765065f42569
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: eafc069c48c536bb58d38888485acf4f44d710d1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586887"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53935022"
 ---
 # <a name="introducing-live-unit-testing"></a>Live Unit Testing の概要
 
@@ -44,4 +43,3 @@ Live Unit Testing について詳細を学習するには:
 ## <a name="related-resources"></a>関連資料
 - [コード テスト ツール](https://visualstudio.microsoft.com/vs/testing-tools/)
 - [コードの単体テスト](unit-test-your-code.md)
-

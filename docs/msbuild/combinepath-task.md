@@ -1,8 +1,6 @@
 ---
 title: CombinePath タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d2e380c6207b3f59b1717ebff6f17261acc7ee52
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 542efb2cb1de44da95f640efbc316dc2cf373212
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946782"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53966495"
 ---
 # <a name="combinepath-task"></a>CombinePath タスク
 指定されたパスを 1 つのパスに結合します。  

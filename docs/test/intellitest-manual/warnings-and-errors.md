@@ -2,7 +2,6 @@
 title: 警告とエラー | Microsoft IntelliTest 開発者テスト ツール
 ms.date: 05/02/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Warnings and errors
@@ -11,12 +10,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: efb82a7419ba58c27ccab864d2360538075a1089
-ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
+ms.openlocfilehash: fe52e31c7401acd6bc10d469d98eabf2916f84be
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51000615"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53899026"
 ---
 # <a name="warnings-and-errors"></a>警告とエラー
 
@@ -116,7 +115,7 @@ void ParameterizedTest(int n) {
 }
 ```
 
-[PexClass](attribute-glossary.md#pexclass) や [PexMethod](attribute-glossary.md#pexmethod) などの **PexSettingsAttributeBase** から派生した属性の **MaxConditions** オプションを編集することができます。 例:
+[PexClass](attribute-glossary.md#pexclass) や [PexMethod](attribute-glossary.md#pexmethod) などの **PexSettingsAttributeBase** から派生した属性の **MaxConditions** オプションを編集することができます。 次に例を示します。
 
 ```csharp
 [PexMethod(MaxConditions=10000)]

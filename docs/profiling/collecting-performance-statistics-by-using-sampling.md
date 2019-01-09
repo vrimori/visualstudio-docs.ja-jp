@@ -1,8 +1,6 @@
 ---
 title: サンプリングを使用したパフォーマンス統計情報の収集 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiling Tools,sampling
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a09253dbeff9adb2bed6ea21545675f343e15974
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0cfae0277c1f3d84c939c06e08472a556e8eeaaa
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49836257"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53865801"
 ---
 # <a name="collect-performance-statistics-by-using-sampling"></a>サンプリングを使用したパフォーマンス統計情報の収集
 
@@ -43,9 +41,9 @@ ms.locfileid: "49836257"
 |タスク|関連するコンテンツ|
 |----------|---------------------|
 |**[全般]** ページで、.NET のメモリ割り当ておよび有効期間データ コレクションを追加し、生成されるプロファイリング データ (.vsp) ファイルの名前付けの詳細を指定します。|- [.NET メモリの割り当ておよび有効期間データの収集](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />- [方法: パフォーマンス データ ファイル名のオプションを設定する](../profiling/how-to-set-performance-data-file-name-options.md)|
-|**[サンプリング]** ページで、サンプリング速度を変更するか、プロセッサのクロック サイクルのサンプリング イベントを別のプロセッサ パフォーマンス カウンターを変更するか、または両方を変更します。|- [方法 : サンプリング イベントを選択する](../profiling/how-to-choose-sampling-events.md)|
+|**[サンプリング]** ページで、サンプリング速度を変更するか、プロセッサのクロック サイクルのサンプリング イベントを別のプロセッサ パフォーマンス カウンターを変更するか、または両方を変更します。|- [方法: サンプリング イベントを選択する](../profiling/how-to-choose-sampling-events.md)|
 |コード ソリューション内に複数の .exe プロジェクトがある場合は、**[起動]** ページで、開始するアプリケーションおよび開始順序を指定します。|- [階層相互作用データの収集](../profiling/collecting-tier-interaction-data.md)|
 |**[階層の相互作用]** ページで、実行するプロファイリングで収集されるデータに ADO.NET 呼び出し情報を追加します。|- [階層相互作用データの収集](../profiling/collecting-tier-interaction-data.md)|
 |**[Windows イベント]** ページで、サンプリング データと共に収集する 1 つ以上の ETW (Windows イベント トレーシング) イベントを指定します。|- [方法: ETW (Event Tracing for Windows) データを収集する](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|
-|**[Windows カウンター]** ページで、プロファイリング データをマークとして追加するオペレーティング システムのパフォーマンス カウンターを 1 つ以上指定します。|- [方法 : Windows カウンター データを収集する](../profiling/how-to-collect-windows-counter-data.md)|
-|アプリケーション モジュールで複数のバージョンを使用する場合は、**[詳細]** ページで、プロファイリングする .NET Framework ランタイムのバージョンを指定します。 既定では、最初に読み込まれたバージョンがプロファイリングされます。|- [方法: side-by-side 実行でプロファイリングするように .NET Framework ランタイムを指定する](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|
+|**[Windows カウンター]** ページで、プロファイリング データをマークとして追加するオペレーティング システムのパフォーマンス カウンターを 1 つ以上指定します。|- [方法: Windows カウンター データを収集する](../profiling/how-to-collect-windows-counter-data.md)|
+|アプリケーション モジュールで複数のバージョンを使用する場合は、**[詳細]** ページで、プロファイリングする .NET Framework ランタイムのバージョンを指定します。 既定では、最初に読み込まれたバージョンがプロファイリングされます。|- [方法: .NET Framework ランタイムを指定する](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|

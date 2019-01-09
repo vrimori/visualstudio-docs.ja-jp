@@ -1,6 +1,6 @@
 ---
 title: 発行設定をインポートして IIS に発行する
-ms.custom: Create and import a publishing profile to deploy an application from Visual Studio to IIS
+description: 発行プロファイルを作成してインポートし、Visual Studio から IIS にアプリケーションを配置します
 ms.date: 05/07/2018
 ms.technology: vs-ide-deployment
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e6df935578955d3c72b6f4fa61efdf614229bca0
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 4da4a45566fc6d773f185a6a34f7e02cb093fff5
+ms.sourcegitcommit: 75e02ed88a1ace6e8265fd4e3a82a1bc78f3adca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38808466"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53348514"
 ---
 # <a name="publish-an-application-to-iis-by-importing-publish-settings-in-visual-studio"></a>Visual Studio で発行設定をインポートしてアプリケーションを IIS に発行する
 
@@ -41,7 +41,7 @@ ms.locfileid: "38808466"
 
 * Visual Studio 2017 をインストールし、**ASP.NET** と **.NET Framework** の開発ワークロードをインストールしている必要があります。 .NET Core アプリの場合は、**.NET Core** のワークロードも必要です。
 
-    Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
+    Visual Studio をまだインストールしていない場合は、 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)  ページに移動し、無料試用版をインストールしてください。
 
 * IIS から発行設定ファイルを生成するには、Windows Server 2012 または Windows Server 2016 を実行しているコンピューターが必要です。また、IIS Web サーバー ロールが正しく構成されている必要があります。 ASP.NET 4.5 または ASP.NET Core もインストールする必要があります。 ASP.NET Core については、[IIS への発行](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)に関するセクションを参照してください。 ASP.NET 4.5 については、「[IIS 8.0 Using ASP.NET 3.5 and ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)」(ASP.NET 3.5 および ASP.NET 4.5 を使用する IIS 8.0) を参照してください。
 

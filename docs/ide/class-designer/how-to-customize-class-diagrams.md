@@ -2,7 +2,6 @@
 title: '方法: クラス ダイアグラムをカスタマイズする (クラス デザイナー)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - class diagrams, customizing
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4546324a5789c408c22ac610d7a878ad990af2a1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 4ac0ff3943d1209b0442c29785408c70b55cef43
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49913216"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53882933"
 ---
 # <a name="how-to-customize-class-diagrams"></a>方法: クラス ダイアグラムをカスタマイズする
 
@@ -129,7 +128,6 @@ ms.locfileid: "49913216"
 
 ## <a name="see-also"></a>関連項目
 
-- [クラス ダイアグラムの使用](working-with-class-diagrams.md)
 - [方法: メンバー表記と関連付け表記の間で変更する](how-to-change-between-member-notation-and-association-notation.md)
 - [方法: 既存の型を表示する](how-to-view-existing-types.md)
-- [型およびリレーションシップの表示](viewing-types-and-relationships.md)
+- [型およびリレーションシップの表示](designing-and-viewing-classes-and-types.md)

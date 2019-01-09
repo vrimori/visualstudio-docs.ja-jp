@@ -2,7 +2,6 @@
 title: Replace コマンド
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - edit.replace
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b712ee88526585d24ffd7b22fadbbf015c3d131
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: b058b57897c369b4f7cc54b849d9abea3a1b6b15
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31949946"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989232"
 ---
 # <a name="replace-command"></a>Replace コマンド
 **[検索と置換]** ウィンドウの **[フォルダーを指定して置換]** タブにあるオプションのサブセットを使用してファイル内のテキストを置換します。
@@ -36,11 +35,11 @@ Edit.Replace findwhat replacewith [/all] [/case]
 ## <a name="arguments"></a>引数
  `findwhat`
 
- 必須。 検索するテキスト。
+ 必須です。 検索するテキスト。
 
  `replacewith`
 
- 必須。 一致したテキストと置き換えるテキスト。
+ 必須です。 一致したテキストと置き換えるテキスト。
 
 ## <a name="switches"></a>スイッチ
  /all または /a
@@ -102,10 +101,10 @@ Edit.Replace findwhat replacewith [/all] [/case]
 >Edit.Replace btnSend btnSubmit /open
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [テキストの検索と置換](../../ide/finding-and-replacing-text.md)
 - [コマンド ウィンドウ](../../ide/reference/command-window.md)
 - [検索コマンド ボックス](../../ide/find-command-box.md)
 - [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
-- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)

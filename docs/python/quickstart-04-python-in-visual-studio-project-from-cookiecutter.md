@@ -3,7 +3,6 @@ title: クイック スタート - Cookiecutter を使用して Python プロジ
 description: このクイック スタートでは、Cookiecutter テンプレートを使用して Python プロジェクトを作成します。
 ms.date: 12/06/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-python
 ms.topic: quickstart
 author: kraigb
 ms.author: kraigb
@@ -12,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b8ad6d53a337e6a2a0d879ff9637156fb3d6d791
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 8e4712a5dd73c899e82a8fc6e07331be5b6e6c46
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53062704"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53863694"
 ---
 # <a name="quickstart-create-a-project-from-a-cookiecutter-template"></a>クイック スタート: Cookiecutter テンプレートからプロジェクトを作成する
 
@@ -46,7 +45,7 @@ ms.locfileid: "53062704"
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [チュートリアル:Visual Studio での Python の使用](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
+> [チュートリアル: Visual Studio での Python の使用](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>関連項目
 

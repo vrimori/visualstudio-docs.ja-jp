@@ -17,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 24dc8b21fbdacb5da2795b215cd8503b08cf3449
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: f2957492224f4d69a9536b4dfd6f47c136f72b0c
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33995882"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684065"
 ---
 # <a name="how-to-visualize-a-collection-association-in-class-designer"></a>方法: クラス デザイナーでコレクションの関連付けをビジュアル化する
 
@@ -42,4 +42,3 @@ ms.locfileid: "33995882"
 
 - [方法: 型の間の関連付けを作成する](how-to-create-associations-between-types.md)
 - [クラスおよび型のデザイン](designing-and-viewing-classes-and-types.md)
-- [型およびリレーションシップの表示](viewing-types-and-relationships.md)

@@ -12,13 +12,12 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
-ms.openlocfilehash: cad52f39fc45e5561e2a87f12c804cb0d445d96a
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 8d6f6758b32f55a7567f1828e8902cd4ad3c906e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53064758"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53952999"
 ---
 # <a name="how-to-collect-intellitrace-data-to-help-debug-difficult-issues"></a>方法:困難な問題をデバッグするのに役立つ IntelliTrace データを収集する
 
@@ -75,7 +74,7 @@ IntelliTrace ファイルに収集されたデータによって、コードの�
 
 5.  **[全般]** タブを選択します。重要な診断イベントを記録する場合に **[IntelliTrace イベントのみ]** を選択すると、テスト時のパフォーマンスへの影響を最小限に抑えられます。
 
-     または
+     - または -
 
      診断イベントと、呼び出し情報を示すメソッド レベルのトレースを記録する場合は、**[IntelliTrace イベントと呼び出し情報]** を選択します。 このレベルのトレースは、テストの実行時のパフォーマンスに影響を与えます。
 

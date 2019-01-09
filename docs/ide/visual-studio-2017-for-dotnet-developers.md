@@ -5,19 +5,18 @@ author: kuhlenh
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.date: 06/14/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5a2158663defe02dc51e91e888d47f325db7226a
-ms.sourcegitcommit: 20d1b9a5bf041bb28453501eb63bc0537a8e4f54
+ms.openlocfilehash: 300754cd975f16419d3e6faebc2074ed3eacb727
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51645147"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53926032"
 ---
 # <a name="visual-studio-2017-c-productivity-guide"></a>Visual Studio 2017 C# の生産性ガイド
 
@@ -115,7 +114,7 @@ Visual Studio 2017 には、コードベースの検索と移動に役立つ多�
 | [定義へ移動] | **F12** または **Ctrl**+**クリック**| **Ctrl** キーを押しながらクリックして定義へ移動することができます |
 | 定義をここに表示 | **Alt** + **F12** | 定義のインライン ビュー |
 | 構造ビジュアライザー | 中かっこの間の灰色の点線 | マウス ポインターを合わせると、コードの構造を参照できます |
-| 逆コンパイルされたアセンブリへの移動 | **F12** または **Ctrl**+**クリック** | **[ツール]** > **[オプション]** > **[テキスト エディター]** > **[C#]** > **[詳細設定]** > **[Enable navigation to decompiled sources]\(逆コンパイルされたソースへの移動を有効にする\)** で機能を有効にして、外部ソース (ILSpy によって逆コンパイル済み) に移動します。 |
+| 逆コンパイルされたアセンブリへの移動 | **F12** または **Ctrl**+**クリック** | (ILSpy によって逆コンパイルされた) 外部リソースに移動します。その場合、**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[C#]** > **[詳細設定]** > **[逆コンパイルされたソースへのナビゲーションを有効にする]** で機能を有効にします。 |
 
 ![[すべてに移動] および [すべての参照の検索]](../ide/media/VSIDE_Productivity_Navigation.png)
 
@@ -135,7 +134,7 @@ Visual Studio 2017 では新しいデバッグ機能が多数追加されまし�
 
 - *[Run to click]\(クリックして実行\)* では、コードの行の隣にマウス ポインターを移動し、表示された緑色の [再生] をクリックして、該当する行に達するまでプログラムを実行することができます。
 - 新しい**例外ヘルパー**のダイアログの最上位には、NullReferenceException のどの変数が 'null' になるかといった特に重要な情報があります。
-- [[Step Back]\(前に戻る\)](../debugger/how-to-use-intellitrace-step-back.md) のデバッグにより、前のブレークポイントまたは手順に戻り、過去の時点でのアプリケーションの状態を確認できるようになります。
+- [[Step Back]\(前に戻る\)](../debugger/view-historical-application-state.md) のデバッグにより、前のブレークポイントまたは手順に戻り、過去の時点でのアプリケーションの状態を確認できるようになります。
 - [[スナップショットのデバッグ]](/azure/application-insights/app-insights-snapshot-debugger) では、例外がスローされた (Azure にスローされる必要があります) 時点での、ライブ Web アプリケーションの状態を調査することができます。
 
 ![Visual Studio 2017 の新しい例外ヘルパー](../ide/media/VSGuide_Debugging.png)

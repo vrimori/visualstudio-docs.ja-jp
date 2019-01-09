@@ -3,7 +3,6 @@ title: Python 用 Django Web プロジェクト テンプレート
 description: Visual Studio では、Python で Django Web アプリケーションを短期間で作成するための包括的なテンプレートを提供します。
 ms.date: 11/12/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
@@ -12,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c1aba68ad8cde6aebbc881e61937dc53037b58c5
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 3512e67ed7a97c4f8cb4c6aa0be256c32087de40
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53066523"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53923784"
 ---
 # <a name="django-web-project-template"></a>Django Web プロジェクト テンプレート
 

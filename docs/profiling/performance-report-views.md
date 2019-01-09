@@ -1,8 +1,6 @@
 ---
 title: パフォーマンス レポート ビュー | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - reports, profiling tools
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 16082a3d04a27355033fd96f3387652063f00cce
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 3b83ed1ae187647f4e1025d18b4973cb1e25b399
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35669546"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53844944"
 ---
 # <a name="performance-report-views"></a>パフォーマンス レポートのビュー
 このセクションでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのレポートおよびビューに関するリファレンス情報を提供します。 プロファイリング データ ファイルのビューは、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 統合開発環境 (IDE) で表示されます。 レポートは、[VSPerfReport](../profiling/vsperfreport.md) コマンド ライン ツールによって生成されます。  
@@ -38,10 +36,10 @@ ms.locfileid: "35669546"
  .NET メモリ データを含むプロファイリング データ ファイルのビューとレポートに関するリファレンス情報。  
   
  [リソース競合データのビュー](../profiling/resource-contention-data-views.md)  
- 同時実行メソッドを使用して生成されたプロファイリング データ ファイルのビューとレポートに関するリファレンス情報。  
+ コンカレンシー メソッドを使用して生成されたプロファイリング データ ファイルのビューとレポートに関するリファレンス情報。  
   
- [同時実行ビジュアライザー](../profiling/concurrency-visualizer.md)  
- 同時実行メソッドを使用して生成され、スレッド実行データを含む、プロファイリング データ ファイルのビューとレポートに関するリファレンス情報。  
+ [コンカレンシー ビジュアライザー](../profiling/concurrency-visualizer.md)  
+ コンカレンシー メソッドを使用して生成され、スレッド実行データを含む、プロファイリング データ ファイルのビューとレポートに関するリファレンス情報。  
   
  [階層相互作用のビュー](../profiling/tier-interactions-view.md)  
  階層相互作用データを含むプロファイリング データ ファイルの相互作用のビューとレポートに関するリファレンス情報。  

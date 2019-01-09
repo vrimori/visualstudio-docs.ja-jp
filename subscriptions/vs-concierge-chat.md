@@ -3,18 +3,18 @@ title: Visual Studio サブスクリプションのコンシェルジェ チャ�
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
-ms.date: 01/16/2018
+ms.date: 12/19/2018
 ms.topic: Get-Started-Article
 description: Visual Studio サブスクリプションに含まれるコンシェルジェ チャット特典について説明します。
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 06b890ea79bafade2d33f341d3411c38196c7cc9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6e8a039593d0d08add10e948eee1d923b818e4cb
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49831849"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53740235"
 ---
 # <a name="concierge-chat"></a>コンシェルジェ チャット
 
@@ -42,21 +42,25 @@ ms.locfileid: "49831849"
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 使用可能       |  [はい]          |
-| Visual Studio Professional (標準、年間クラウド) | VL、Azure、リテール                                       | 使用可能                                                            |  [はい]          |
-| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用可能                                             |  [はい]          |
-| MSDN Platforms (標準)                                          | VL、リテール                                              | 使用可能                                              |  [はい]          |
+| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 使用可能       |  はい          |
+| Visual Studio Professional (Standard) | VL、Azure、リテール                                       | 使用可能                                                            |  はい          |
+| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用可能                                             |  はい          |
+| MSDN Platforms (標準)                                          | VL、リテール                                              | 使用可能                                              |  はい          |
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure | 使用できません | N/A |
 | Visual Studio Dev Essentials | N/A  | 使用できません |N/A |
 
-<sup>1</sup> *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Certified Trainer、BizSpark が含まれます。FTE、Microsoft Valued Professional (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、Imagine は含まれません。*
+<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Certified Trainer、BizSpark が含まれます。FTE、Microsoft Valued Professional (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、Imagine は含まれません。*
+
+> [!NOTE]
+> Microsoft では、クラウド サブスクリプションの Visual Studio Professional 年間サブスクリプションおよび Visual Studio Enterprise 年間サブスクリプションが提供されなくなりました。 サブスクリプションの更新、増減、キャンセルに関する既存のお客様のエクスペリエンスと機能については変更はありません。 新規のお客様は、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) に移動し、Visual Studio のさまざまな購入オプションを調べることをお勧めします。
+
 
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
-### <a name="q--is-the-chat-service-available-in-multiple-languages"></a>Q: チャット サービスは、複数の言語で使用できますか?
-   A: アカウント、請求およびサブスクリプションの問題に関するアシスタンスは、複数の言語で使用できます。  製品情報とテクニカル ドキュメントの検索に関するアシスタンスは、英語で使用できます。
+### <a name="q--is-the-chat-service-available-in-multiple-languages"></a>Q:チャット サービスは複数の言語で使用できますか。
+   A:アカウント、請求およびサブスクリプションの問題に関するアシスタンスは、複数の言語で使用できます。  製品情報とテクニカル ドキュメントの検索に関するアシスタンスは、英語で使用できます。
 
 ## <a name="support-resources"></a>サポート リソース
 -  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://visualstudio.microsoft.com/subscriptions/support/)にお問い合わせください。

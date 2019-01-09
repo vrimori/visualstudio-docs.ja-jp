@@ -1,8 +1,6 @@
 ---
 title: フラグ マーカー | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.cv.markers.flag
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f924089ef31e2b452419b107788357060a4c6bb6
-ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
+ms.openlocfilehash: a879114f21cfa23eab66cca507c3a2b960872c7b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35237992"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53923440"
 ---
 # <a name="flag-markers"></a>フラグ マーカー
 フラグ マーカーは、ある時点にアプリで何かが発生したことを表します。 フラグは、多様なアプリケーション イベントを表現することができます。 たとえば、特定の作業項目がスケジュールされていた時間や、例外がスローされた時間をフラグで示すことができます。 タスク並列ライブラリなどのランタイムでフラグを生成することもできます。  
@@ -37,11 +35,11 @@ ms.locfileid: "35237992"
 ## <a name="alerts"></a>アラート  
  アラートは、例外などの致命的なアプリケーション イベントを表す赤色のフラグです。  アラートは次のように表示されます。  
   
- ![同時実行ビジュアライザーの警告マーカー](../profiling/media/cvmarkeralert.png "CVMarkerAlert")  
+ ![コンカレンシー ビジュアライザーの警告マーカー](../profiling/media/cvmarkeralert.png "CVMarkerAlert")  
 アラート マーカー  
   
 ## <a name="aggregation-flags"></a>集約フラグ  
- 同時実行ビジュアライザーで、複数のフラグが相互に近接しすぎて、個別に描画できないことがあります。 このような場合、基になるフラグを示す灰色の*集約フラグ*が表示されます。 それらのアイコンのいずれかにポインターを置くと、表現されている、基になるフラグの数がツールヒントに表示されます。 フラグを表示するには、ズームインします。 限界までズームインしてもなお集約フラグが表示される場合には、基になるフラグを[マーカー レポート](../profiling/markers-report.md)で確認できます。  
+ コンカレンシー ビジュアライザーで、複数のフラグが相互に近接しすぎて、個別に描画できないことがあります。 このような場合、基になるフラグを示す灰色の*集約フラグ*が表示されます。 それらのアイコンのいずれかにポインターを置くと、表現されている、基になるフラグの数がツールヒントに表示されます。 フラグを表示するには、ズームインします。 限界までズームインしてもなお集約フラグが表示される場合には、基になるフラグを[マーカー レポート](../profiling/markers-report.md)で確認できます。  
   
  集約フラグはさまざまなサイズで描画されます。 サイズは、集約の最も高い重要度フラグの重要度レベルによって変わります。 次の図は、集約フラグを重要度の昇順で示します。  
   
@@ -49,5 +47,5 @@ ms.locfileid: "35237992"
 重要度レベル別の集約フラグ  
   
 ## <a name="see-also"></a>関連項目  
- [同時実行ビジュアライザー マーカー](../profiling/concurrency-visualizer-markers.md)   
- [同時実行ビジュアライザー SDK](../profiling/concurrency-visualizer-sdk.md)
+ [コンカレンシー ビジュアライザー マーカー](../profiling/concurrency-visualizer-markers.md)   
+ [コンカレンシー ビジュアライザー SDK](../profiling/concurrency-visualizer-sdk.md)

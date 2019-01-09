@@ -3,7 +3,6 @@ title: テスト エクスプローラーによる単体テストの実行、ビ
 description: Visual Studio でテスト エクスプローラーを使用してテストを実行する方法について説明します。 このトピックでは、ビルドの後の自動テストの実行の有効化、テスト結果の表示、テストの一覧のグループ化とフィルター処理、再生リストの作成、テストのデバッグ、およびテストのショートカットの使用方法について説明します。
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: conceptual
 f1_keywords:
 - vs.unittesting.testexplorer.overview
@@ -12,12 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: dc918adb6a66f64cdcda46ea535cd0ab017c0676
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 65ba6a0528dee5a0b430787ee4332ca3dab5bdec
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49939517"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53858072"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>テスト エクスプローラーを使用して単体テストを実行する
 
@@ -85,7 +84,7 @@ Visual Studio には、マネージド コードおよびネイティブ コー�
 
 ### <a name="view-the-source-code-of-a-test-method"></a>テスト メソッドのソース コードを表示する
 
- Visual Studio エディターのテスト メソッドのソース コードを表示するには、テストを選択し、コンテキスト メニューの **[テストを開く]** を選択します (キーボードの **F12** キー)。
+ Visual Studio エディターでテスト メソッドのソース コードを表示するには、テストを選び、コンテキスト メニューの **[テストを開く]** を選択します (キーボード:**F12** キー)。
 
 ## <a name="group-and-filter-the-test-list"></a>テスト リストをグループ化およびフィルター処理する
 
@@ -101,8 +100,8 @@ Visual Studio には、マネージド コードおよびネイティブ コー�
 
 |グループ化|説明|
 |-|-----------------|
-|**期間**|実行時間によるテストのグループ化: **[高速]**、 **[通常]**、および **[低速]**。|
-|**Outcome**|実行結果によるテストのグループ化: **[失敗したテスト]**、 **[スキップされたテスト]**、 **[成功したテスト]**。|
+|**期間**|実行時間によるテストのグループ化:**高速**、**中**、**低速**|
+|**Outcome**|実行結果によるテストのグループ化:**失敗したテスト**、**スキップされたテスト**、**成功したテスト数**|
 |**Traits**|ユーザーが定義するカテゴリ/値のペアによるテストのグループ化。 特徴のカテゴリと値を指定する構文は、単体テスト フレームワークによって定義されます。|
 |**プロジェクト**|プロジェクトの名前によるテストのグループ化。|
 
@@ -150,7 +149,7 @@ Visual Studio には、マネージド コードおよびネイティブ コー�
 |**ファイル パス**|テストのソース ファイルの完全修飾ファイル名から一致を検索します。|
 |**Fully Qualified Name**|テストの名前空間、クラス、およびメソッドの完全修飾ファイル名から一致を検索します。|
 |**出力**|標準出力 (stdout) または標準エラー (stderr) に書き込まれるユーザー定義のエラー メッセージを検索します。 出力メッセージを指定する構文は、単体テスト フレームワークによって定義されます。|
-|**Outcome**|テスト エクスプローラーのカテゴリ名から一致を検索します: **[失敗したテスト]**、 **[スキップされたテスト]**、 **[成功したテスト]**。|
+|**Outcome**|テスト エクスプローラーのカテゴリ名で一致を検索する:**失敗したテスト**、**スキップされたテスト**、**成功したテスト数**|
 
 フィルター処理結果のサブセットを除外するには、次の構文を使用します。
 
@@ -187,7 +186,7 @@ FilterName:"Criteria" -FilterName:"SubsetCriteria"
 
 2. テスト エクスプローラーでテスト メソッドを選択し、コンテキスト メニューの **[選択したテストのデバッグ]** を選択します。
 
-   デバッガーについて詳しくは、[Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)に関するページをご覧ください。
+   デバッガーについて詳しくは、[Visual Studio でのデバッグ](../debugger/debugger-feature-tour.md)に関するページをご覧ください。
 
 ### <a name="diagnose-test-method-performance-issues"></a>テスト メソッドのパフォーマンスの問題を診断する
 

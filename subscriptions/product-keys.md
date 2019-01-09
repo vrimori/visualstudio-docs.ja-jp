@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションで、プロダクト キ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 88fb704df9858572581d205a8c5d457203488ee3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: cdd37aae3e0a3e3caebafa026fd5dcf3922c0998
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49900853"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53803825"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションでのプロダクト キーの使用
 
@@ -32,14 +32,14 @@ Visual Studio サブスクリプションには、通常、現在のバージョ
 ## <a name="retail-and-volume-licensing-versions-of-products"></a>製品の製品版とボリューム ライセンス版
 Visual Studio サブスクリプションでは、厳選された Microsoft 製品の製品版とボリューム ライセンス版をオファーしています。 製品によっては、ダウンロードで製品版またはボリューム ライセンス版のみが提供されるものと、両方のバージョンが提供されるものがあります。 一般的に、Windows、Windows Server、Office クライアント製品など、ライセンス認証を必要とする製品は、ダウンロードにより製品版のみが提供されます。
 
-ボリューム ライセンスのお客様は、ボリューム ライセンス サービス センター (VSLC) からソフトウェアをダウンロードし、製品のボリューム ライセンス版 (および対応するプロダクト キー) を入手することもできます。  VLSC へのアクセスは、お客様の組織内で指定された管理者によって管理されます。
+ボリューム ライセンスのお客様は、ボリューム ライセンス サービス センター (VLSC) からソフトウェアをダウンロードし、製品のボリューム ライセンス版 (および対応するプロダクト キー) を入手することもできます。  VLSC へのアクセスは、お客様の組織内で指定された管理者によって管理されます。
 
 ## <a name="daily-product-key-claim-limits"></a>1 日に要求できるプロダクト キーの上限
 Microsoft は、Visual Studio サブスクリプション プログラムの健全性、および正規のサブスクライバーが受け取る権利を持つソフトウェアと特典の価値の保護に努めています。 そのため、Microsoft では Visual Studio サブスクリプションに対して 1 日あたりのキー要求の上限を設けました。 1 日あたりのキー要求の上限が設定されたことにより、1 日で、サブスクリプションあたり要求できるキーの数が制限されます。
 
 すべての Visual Studio サブスクリプション (MPN、BizSpark、MCT ソフトウェア &amp; サービス、MCT を通じて提供されるものを含む) で 1 日に要求できるキー数の上限は 10 です。ただし、Visual Studio Professional (MPN) の場合は例外で、1 日に要求できるキー数の上限は 7 です。
 
-注: キー要求の上限は変更される可能性があります。 最新の上限については、こちらからご確認ください。
+メモ:キー要求の上限は変更される可能性があります。 最新の上限については、こちらからご確認ください。
 
 ご利用のサブスクリプションで 24 時間以内に要求できる最大数のキーに達すると、上限に達したことを伝えるエラー メッセージが表示されます。 上限は太平洋標準時の午前 0 時 01 分からカウントされ、24 時間ごとにリセットされます。
 

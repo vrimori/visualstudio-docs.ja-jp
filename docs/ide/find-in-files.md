@@ -2,7 +2,6 @@
 title: '[フォルダーを指定して検索]'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.findinfiles
@@ -21,12 +20,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e1470868e207687a7b35f46724b80b0da0a0e71c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 956af6e2ffc34a457bd3f5308b7104ef26ec1f4e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31946560"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53963380"
 ---
 # <a name="find-in-files"></a>[フォルダーを指定して検索]
 
@@ -111,5 +110,5 @@ ms.locfileid: "31946560"
 ## <a name="see-also"></a>関連項目
 
 - [テキストの検索と置換](../ide/finding-and-replacing-text.md)
-- [フォルダーを指定して置換](../ide/replace-in-files.md)
+- [[フォルダーを指定して置換]](../ide/replace-in-files.md)
 - [Visual Studio コマンド](../ide/reference/visual-studio-commands.md)

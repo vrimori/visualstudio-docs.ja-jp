@@ -3,24 +3,24 @@ title: Microsoft Partner Network (MPN) でパートナーに提供される Visu
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
-ms.date: 03/16/2018
+ms.date: 12/19/2018
 ms.topic: Get-Started-Article
 description: 提供されているサブスクリプションの種類、該当する規則、および MPN で提供しているサブスクリプション数の詳細について説明します。
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 7175dd503c2e91091b5bb6499fa54c0e5f2586ec
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 72889ca5d206a8f04562b3a91e5d116339279417
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49876770"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53739453"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Microsoft Partner Network (MPN) でパートナーに提供される Visual Studio サブスクリプション
 MPN でコンピテンシーを取得するか、Action Pack を購入したパートナーは、Visual Studio サブスクリプションを使用できます。 これらのサブスクリプションは、ユーザーごとにライセンスされ、パートナー企業で働く特定の名前付きユーザーに割り当てられている場合にのみ有効です。
 
 ## <a name="subscriptions-for-partners-with-an-mpn-competency"></a>MPN コンピテンシーを持つパートナー向けのサブスクリプション
-パートナーがコンピテンシー (Silver または Gold レベル) を取得した場合、パートナーは Visual Studio Enterprise サブスクリプションのコア数を取得します。 パートナーが Gold コンピテンシーを 1 つ以上取得すると、このコア特典が変更されます。 Visual Studio Enterprise サブスクリプションは、[Visual Studio Enterprise 年間クラウド サブスクリプション](https://visualstudio.microsoft.com/vs/pricing/)とほぼ同等のカスタム プランですが、特定の特典が除かれています (その多くは、MPN から提供される Visual Studio Enterprise サブスクリプションの一部としてではなく、一般的な MPN 特典としてパートナーに個別に提供されます)。
+パートナーがコンピテンシー (Silver または Gold レベル) を取得した場合、パートナーは Visual Studio Enterprise サブスクリプションのコア数を取得します。 パートナーが Gold コンピテンシーを 1 つ以上取得すると、このコア特典が変更されます。 Visual Studio Enterprise サブスクリプションは、[Visual Studio Standard サブスクリプション](https://visualstudio.microsoft.com/vs/pricing/)とほぼ同等のカスタム プランですが、特定の特典が除かれています (その多くは、MPN から提供される Visual Studio Enterprise サブスクリプションの一部としてではなく、一般的な MPN 特典としてパートナーに個別に提供されます)。
 
 ### <a name="core-visual-studio-benefit-for-earning-at-least-one-competency-of-any-kind"></a>任意の種類のコンピテンシーを 1 つ以上取得したときの Visual Studio のコア特典
 
