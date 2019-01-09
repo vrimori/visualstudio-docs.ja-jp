@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::CreateInstanceAtApplication |Microsoft ドキュメント
+title: IRemoteDebugApplication::CreateInstanceAtApplication |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a2185987f6b635dae4d537231fca3327d0aed003
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 29cbcebc5bdc51be4223b2592bbe6ac3ae76525d
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729072"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54086360"
 ---
 # <a name="iremotedebugapplicationcreateinstanceatapplication"></a>IRemoteDebugApplication::CreateInstanceAtApplication
 コードによって、アプリケーション プロセスでオブジェクトの作成を許可されているのプロセス外アプリケーションにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT CreateInstanceAtApplication(  
    REFCLSID    rclsid,  
    IUnknown*   pUnkOuter,  
@@ -42,29 +42,29 @@ HRESULT CreateInstanceAtApplication(
   
 #### <a name="parameters"></a>パラメーター  
  `rclsid`  
- [in]クラスの id (CLSID) を作成するオブジェクト。  
+ [in]クラスを作成するオブジェクトの識別子 (CLSID)。  
   
  `pUnkOuter`  
- [in]場合`NULL`集計の一部として、オブジェクトが作成されていません。 それ以外の場合、`pUnkOuter`集約オブジェクトへのポインターは、`IUnknown`インターフェイス (制御`IUnknown`)。  
+ [in]場合`NULL`集計の一部として、オブジェクトが作成されていません。 それ以外の場合、`pUnkOuter`集計オブジェクトへのポインターは、`IUnknown`インターフェイス (制御`IUnknown`)。  
   
  `dwClsContext`  
- [in]実行可能コードの実行コンテキスト。 値が列挙体から取得されます`CLSCTX`です。  
+ [in]実行可能コードを実行するためのコンテキスト。 値が列挙体から取得されます`CLSCTX`します。  
   
  `riid`  
- [in]オブジェクトとの通信に使用されるインターフェイスの識別子です。  
+ [in]オブジェクトと通信するために使用するインターフェイスの識別子です。  
   
  `ppvObject`  
- [out]要求されたインターフェイス ポインターを受け取るポインター変数のアドレス`riid`です。 成功時に、*`ppvObject`要求されたインターフェイス ポインターを格納します。 障害時に、 \* `ppvObject`含む`NULL`です。  
+ [out]要求されたインターフェイス ポインターを受け取るポインター変数のアドレス`riid`します。 成功時に、*`ppvObject`要求されたインターフェイス ポインターが含まれています。 障害時に、 \* `ppvObject`が含まれています`NULL`します。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドからデリゲートを`CoCreateInstance`です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドからデリゲートを`CoCreateInstance`します。  
   
 ## <a name="see-also"></a>関連項目  
  [IRemoteDebugApplication インターフェイス](../../winscript/reference/iremotedebugapplication-interface.md)

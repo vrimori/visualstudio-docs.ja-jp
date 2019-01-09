@@ -1,5 +1,5 @@
 ---
-title: IScriptScriptlet::SetSimpleEventName |Microsoft ドキュメント
+title: IScriptScriptlet::SetSimpleEventName |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 958478d8c8ead6500711a7866a784235adb869b8
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 78e1ec5cddd28bc80a29789bf800eb49d0236972
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24733762"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54091469"
 ---
 # <a name="iscriptscriptletsetsimpleeventname"></a>IScriptScriptlet::SetSimpleEventName
-スクリプトレットに関連付けられている単純なイベント名を設定します。 これは、任意の空白文字を含まない単一ワード名です。  
+スクリプトレットに関連付けられている単純なイベント名を設定します。 任意の空白文字を含まない 1 単語の名前です。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT SetSimpleEventName(  
    LPCOLESTR          psz  
 );  
@@ -38,16 +38,16 @@ HRESULT SetSimpleEventName(
   
 #### <a name="parameters"></a>パラメーター  
  `psz`  
- [in]関連付けられている単純なイベント名を格納しているバッファー、`IScriptScriptlet`オブジェクト。  
+ [in]関連付けられている単純なイベント名を含むバッファー、`IScriptScriptlet`オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
  `HRESULT`。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [IScriptScriptlet インターフェイス](../../winscript/reference/iscriptscriptlet-interface.md)

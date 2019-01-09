@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::ResumeFromBreakPoint |Microsoft ドキュメント
+title: IRemoteDebugApplication::ResumeFromBreakPoint |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5da5fdbaaf74f463161f1a98bbad7d4d147b418d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0603ef19426e27324daa39bf769e2c0667477be3
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729862"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54089077"
 ---
 # <a name="iremotedebugapplicationresumefrombreakpoint"></a>IRemoteDebugApplication::ResumeFromBreakPoint
-ブレークポイントになっているアプリケーションを続行します。  
+ブレークポイントになっているアプリケーションを継続します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT ResumeFromBreakPoint(  
    IRemoteDebugApplicationThread*  prptFocus,  
    BREAKRESUMEACTION               bra,  
@@ -40,22 +40,22 @@ HRESULT ResumeFromBreakPoint(
   
 #### <a name="parameters"></a>パラメーター  
  `prptFocus`  
- [in]モードの場合、これは、ステップ実行モードの影響を受けるスレッドをステップ実行します。  
+ [in]モードでは、ステップ実行モードの影響を受けるには、スレッドをステップ実行します。  
   
  `bra`  
  [in]アプリケーションの再開時に実行するアクション。  
   
  `era`  
- [in]エラーのため、アプリケーションを停止している場合は、実行するアクション。  
+ [in]エラーのため、アプリケーションが停止している場合は、実行するアクション。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このメソッドは、ブレークポイントになっているアプリケーションを続行します。  
   
 ## <a name="see-also"></a>関連項目  

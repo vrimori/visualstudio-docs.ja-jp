@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::InterruptScriptThread |Microsoft ドキュメント
+title: Iactivescript::interruptscriptthread |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ad717ee950dda4f0f0d7a14292f0f5f150ab4973
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: d20847245e25ec6227bb043df3190a6db5f095d5
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24641852"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54088934"
 ---
 # <a name="iactivescriptinterruptscriptthread"></a>IActiveScript::InterruptScriptThread
-実行中のスクリプト スレッド (イベント シンク、即時実行の場合、またはマクロの呼び出し) の実行を中断します。 このメソッドは、(たとえば、無限ループ) に残っているスクリプトを終了するのには使用できます。 ホスト オブジェクトまたはベース以外吹き出しの結果として得られることがなくベース以外のスレッドから呼び出すことが、 [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)メソッドです。  
+実行中のスクリプト スレッド (イベント シンク、即時実行の場合、またはマクロの呼び出し) の実行を中断します。 (たとえば、無限ループ) でスタックしているスクリプトを終了するのには、このメソッドを使用できます。 ホスト オブジェクトまたはベース以外の吹き出しでベース以外のスレッドから呼び出すことが、 [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT InterruptScriptThread(  
     SCRIPTTHREADID   stidThread,  // identifier of thread  
     const EXCEPINFO *pexcepinfo,  // receives error information  
@@ -40,24 +40,24 @@ HRESULT InterruptScriptThread(
   
 #### <a name="parameters"></a>パラメーター  
  `stidThread`  
- [in]スレッドの中断、または、次の特殊なスレッド識別子の値の 1 つの識別子。  
+ [in]スレッドの中断、または、次の特殊なスレッド id の値の 1 つの識別子。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-------------|  
-|SCRIPTTHREADID_ALL|すべてのスレッド。 割り込みは、現在進行中のすべてのスクリプト メソッドに適用されます。 呼び出し元が、スクリプトが切断されることを要求している場合を除き、次のスクリプト化されたイベントによって、スクリプト コードを呼び出して、再度実行するに注意してください、 [IActiveScript::SetScriptState](../../winscript/reference/iactivescript-setscriptstate.md) SCRIPTSTATE_DISCONNECTED を持つメソッドまたはSCRIPTSTATE_INITIALIZED フラグを設定します。|  
-|SCRIPTTHREADID_BASE|基本スレッドです。つまりをスクリプト エンジンのスレッドがインスタンス化されます。|  
+|SCRIPTTHREADID_ALL|すべてのスレッド。 割り込みは、現在進行中のすべてのスクリプト メソッドに適用されます。 呼び出し元が、スクリプトが切断されることを要求している場合を除き、次のスクリプト化されたイベントがスクリプト コードを呼び出すことでもう一度実行をによりことに注意してください、 [iactivescript::setscriptstate](../../winscript/reference/iactivescript-setscriptstate.md) SCRIPTSTATE_DISCONNECTED を持つメソッドまたはSCRIPTSTATE_INITIALIZED フラグを設定します。|  
+|SCRIPTTHREADID_BASE|基本スレッドです。つまり、これで、スクリプト エンジンのスレッドがインスタンス化されました。|  
 |SCRIPTTHREADID_CURRENT|現在実行中のスレッド。|  
   
  `pexcepinfo`  
  [in]アドレス、`EXCEPINFO`が中止されたスクリプトに報告されるエラー情報を含む構造体。  
   
  `dwFlags`  
- [in]中断に関連付けられているオプションのフラグです。 次のいずれかの値を指定します。  
+ [in]関連付けられた中断時間のオプション フラグ。 次のいずれかの値を指定します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-------------|  
-|SCRIPTINTERRUPT_DEBUG|サポートされている場合は、現在のスクリプト実行ポイントで、スクリプト エンジンのデバッガーを入力します。|  
-|SCRIPTINTERRUPT_RAISEEXCEPTION|スクリプト エンジンの言語でサポートされている場合は、例外を処理するスクリプトを使用できます。 それ以外の場合、スクリプト メソッドが中断され、エラー コードは、呼び出し元に返されます。つまり、イベント ソースまたはマクロ呼び出し元は、します。|  
+|SCRIPTINTERRUPT_DEBUG|サポートされている場合は、現在のスクリプトの実行ポイントにあるスクリプト エンジンのデバッガーを入力します。|  
+|SCRIPTINTERRUPT_RAISEEXCEPTION|スクリプト エンジンの言語のサポートをしている場合は、例外を処理するスクリプトを使用できます。 それ以外の場合、スクリプト メソッドが中断され、エラー コードは、呼び出し元に返されます。これは、イベント ソースまたはマクロの呼び出し元。|  
   
 ## <a name="return-value"></a>戻り値  
  次のいずれかの値を返します。  
@@ -67,7 +67,7 @@ HRESULT InterruptScriptThread(
 |`S_OK`|成功。|  
 |`E_INVALIDARG`|引数が無効です。|  
 |`E_POINTER`|無効なポインターが指定されました。|  
-|`E_UNEXPECTED`|呼び出しが予期されていませんでした (たとえば、スクリプト エンジンがされていないされて読み込まれたまたは初期化) します。|  
+|`E_UNEXPECTED`|呼び出しが予期されていませんでした (たとえば、スクリプト エンジンがされていないされて読み込まれるまたは初期化) します。|  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScript](../../winscript/reference/iactivescript.md)

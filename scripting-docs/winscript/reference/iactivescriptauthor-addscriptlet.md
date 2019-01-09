@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::AddScriptlet |Microsoft ドキュメント
+title: IActiveScriptAuthor::AddScriptlet |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b21f906a73a313bf775683ba63738adb25af0007
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 62499afe87a3d7dae31e609c9ce88f41e9d993a9
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24645662"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54089213"
 ---
 # <a name="iactivescriptauthoraddscriptlet"></a>IActiveScriptAuthor::AddScriptlet
-コード スクリプトレットをルート レベルの子として追加`IScriptNode`オブジェクト。 ホストでは、スクリプトレットの完全修飾名はのみに 2 つのレベルに許可されます。  
+コード スクリプトレットをルート レベルの子として追加`IScriptNode`オブジェクト。 ホストでは、スクリプトレットの完全修飾名をレベルが 2 つだけ許可されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT AddScriptlet(  
    LPCOLESTR pszDefaultName,  
    LPCOLESTR pszCode,  
@@ -51,31 +51,31 @@ HRESULT AddScriptlet(
  [in]スクリプトレット テキストのアドレス。  
   
  `pszItemName`  
- [in]ホストで完全修飾スクリプトレットの名前を最上位レベルの識別子のバッファーのアドレス。  
+ [in]ホストでスクリプトレットの完全修飾の名前の最上位レベルの識別子のバッファーのアドレス。  
   
  `pszSubItemName`  
- [in]ホストで完全修飾スクリプトレットの名前の第 2 レベルの識別子のバッファーのアドレス。 名前に 1 つだけのレベルがある場合は、NULL に設定します。  
+ [in]ホストでスクリプトレットの完全修飾の名前の 2 番目のレベルの識別子のバッファーのアドレス。 名前に 1 つだけのレベルがある場合は NULL に設定します。  
   
  `pszEventName`  
- [in]スクリプトレットは、イベント ハンドラーのイベント名を格納するバッファーのアドレス。  
+ [in]スクリプトレットがイベント ハンドラーであるイベントの名前を格納するバッファーのアドレス。  
   
  `pszDelimiter`  
- [in]最後のスクリプト ブロックの区切り記号のアドレス。 ときに`pszCode`解析は、テキストのストリームからホスト通常区切り文字を使用 (など、2 つ単一引用符)、スクリプト ブロックの終わりを検出します。 区切り記号が、スクリプト ブロックの末尾をマークしない場合は、このパラメーターを NULL に設定します。  
+ [in]最後のスクリプト ブロックの区切り記号のアドレス。 ときに`pszCode`解析は、テキストのストリームからホスト通常 (など、2 つ単一引用符)、区切り記号を使用して、スクリプト ブロックの終了を検出します。 区切り記号がスクリプト ブロックの末尾をマークしない場合は、このパラメーターを NULL に設定します。  
   
  `dwCookie`  
  [in]ホスト オブジェクトとスクリプトレットを関連付けるために使用するアプリケーション定義の値。  
   
  `dwFlags`  
- [in]使用しません。  
+ [in]使用されません。  
   
 ## <a name="return-value"></a>戻り値  
  `HRESULT`。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptAuthor インターフェイス](../../winscript/reference/iactivescriptauthor-interface.md)
