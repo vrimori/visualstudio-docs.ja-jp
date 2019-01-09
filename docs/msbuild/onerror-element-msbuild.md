@@ -1,8 +1,6 @@
 ---
 title: OnError 要素 (MSBuild) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/13/2017
-ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#OnError
@@ -20,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c33f32e46621bb2f56231b2c992712fd42126f1e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 43e76a9ffece66a6330b634bb982ec14b10b803c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49841391"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53924554"
 ---
 # <a name="onerror-element-msbuild"></a>OnError 要素 (MSBuild)
 失敗したタスクの `ContinueOnError` 属性が `false` の場合、1 つ以上のターゲットが実行されます。  

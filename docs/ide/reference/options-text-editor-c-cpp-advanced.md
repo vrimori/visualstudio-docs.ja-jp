@@ -2,7 +2,6 @@
 title: '[オプション]、[テキスト エディター]、[C/C++]、[詳細]'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C\C++.Advanced
@@ -16,12 +15,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd6522f80a367be33830f02a30c056531593d9ac
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 7e5b78f6642cf458e9099d421d7b4a20540ab8c5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50220431"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53903046"
 ---
 # <a name="options-text-editor-cc-advanced"></a>[オプション]、[テキスト エディター]、[C/C++]、[詳細]
 これらのオプションを変更することによって、C または C++ でプログラミングを行うときに、IntelliSense に関連する動作と参照データベースを変更できます。
@@ -202,6 +201,6 @@ ms.locfileid: "50220431"
 
  有効にすると、テキスト エディターに '(' を入力すれば選んだテキストがかっこで囲まれます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [言語固有のエディター オプションの設定](../../ide/reference/setting-language-specific-editor-options.md)

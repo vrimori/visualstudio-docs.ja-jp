@@ -10,13 +10,12 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
-ms.openlocfilehash: cefa93a6f65b4b84b4ece5a4eb428d909dd0596d
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 378fc29fa7f867eee1be9e30e58c80149d1ed835
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53048494"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53898389"
 ---
 # <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>方法: ロード テストの実行設定にコンテキスト パラメーターを追加する
 
@@ -62,7 +61,7 @@ Webserver1 コンテキスト パラメーターの値を `http://CorporateStagi
 
      新しいコンテキスト パラメーターが、ロード テスト ツリーの **[実行設定]** フォルダーの **[コンテキスト パラメーター]** フォルダーに追加されます。
 
-     または
+     - または -
 
      実行設定に **[コンテキスト パラメーター]** フォルダーが既に含まれている場合は、それを右クリックして **[コンテキスト パラメーターの追加]** を選択します。
 

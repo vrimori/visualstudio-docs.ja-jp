@@ -1,8 +1,6 @@
 ---
 title: コール ツリー ビュー - .NET メモリ インストルメンテーション データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Call Tree view
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e05286c10758c19f1e3f5a5692f814a096763544
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 51bdbe7f36b37ffbc0e1c911a8aa122cd3a44dd2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34263599"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53917567"
 ---
 # <a name="call-tree-view---net-memory-instrumentation-data"></a>コール ツリー ビュー - .NET メモリ インストルメンテーション データ
 インストルメンテーション メソッドを使用して集めた .NET メモリ割り当てプロファイリング データのコール ツリー ビューには、プロファイリングしたアプリケーションで通過した関数実行パスが表示されます。 ツリーのルートは、アプリケーションまたはコンポーネントへのエントリ ポイントです。 各関数ノードには、それが呼び出したすべての関数、.NET メモリ、関数のタイミング データが一覧表示されます。  
