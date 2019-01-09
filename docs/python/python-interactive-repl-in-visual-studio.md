@@ -3,7 +3,6 @@ title: Python Interactive ウィンドウ (REPL)
 description: Visual Studio で Python コードを迅速に開発するために対話型ウィンドウ (REPL) を使用します。
 ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
@@ -12,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3c3a3a6cd3694a0affa6ca1d5cfabac58b124ec9
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: d092feee3327af0f7ee7c439eb4c9fc1e74e9138
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055716"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53835648"
 ---
 # <a name="work-with-the-python-interactive-window"></a>Python 対話型ウィンドウの使用
 
