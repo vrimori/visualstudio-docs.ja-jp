@@ -2,7 +2,6 @@
 title: プロパティ ページ、JavaScript
 ms.date: 06/21/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - javascript.project.property.debugging.debuggertype
@@ -18,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eabc82926c821fb5a8d83637fb9118bc25df82bc
-ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
+ms.openlocfilehash: 83c7a2b0d0004b1f96a1c46ab120814179f77d26
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53684994"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53956532"
 ---
 # <a name="property-pages-javascript"></a>プロパティ ページ、JavaScript
 **[プロパティ ページ]** からプロジェクトの設定にアクセスできます。 **[プロパティ ページ]** に表示されるページを使用して、プロジェクトのプロパティを変更できます。
@@ -39,7 +38,7 @@ ms.locfileid: "53684994"
 
  **構成**
 
- 表示または変更する構成設定を指定します。 この設定は **[デバッグ]** (既定)、**[リリース]**、**[すべての構成]**、またはユーザー定義の構成に指定できます。 詳細については、[方法:Visual Studio でのデバッグおよびリリース構成の設定](../../debugger/how-to-set-debug-and-release-configurations.md)に関するページを参照してください。
+ 表示または変更する構成設定を指定します。 この設定は **[デバッグ]** (既定)、**[リリース]**、**[すべての構成]**、またはユーザー定義の構成に指定できます。 詳細については、「[方法 :Visual Studio でのデバッグおよびリリース構成の設定](../../debugger/how-to-set-debug-and-release-configurations.md)に関するページを参照してください。
 
  **プラットフォーム**
 
