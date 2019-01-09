@@ -1,8 +1,6 @@
 ---
 title: コア ビューのタイムライン | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.cv.cores.timeline.threads
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 14bf030ce1adb1dede9ad2a377d8fb435d75e0c6
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 64dc3965c94a8427c0a5112d7b08715991cf8cb5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34690534"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53949603"
 ---
 # <a name="cores-view-timeline"></a>コア ビューのタイムライン
 タイムラインの各行は、プロファイリング対象システムの論理プロセッサ コアを表します。 各行の、水平軸は特定の時点で論理コアで実行されたスレッドを示します。 タイムラインで興味のある色の上にマウス ポインターを合わせると、スレッドを特定するヒントが返されます。 ウィンドウの下部の凡例で、各色の意味がわかります。スレッドの特定に役立ちます。 ズーム ツールで拡大縮小できます。クリックしたままドラッグするか、CTRL を押しながらマウス ホイールを動かします。 コア ビューとスレッド ビューを切り替えるとき、ズームの一貫性が維持されます。  
