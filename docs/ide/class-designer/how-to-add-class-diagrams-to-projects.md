@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 133f15f6c160e9ec48b1db4ab8713023e492cbae
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 081a80fd6521bc286f931334762a05495b038a37
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901299"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684319"
 ---
 # <a name="how-to-add-class-diagrams-to-projects"></a>方法: プロジェクトにクラス ダイアグラムを追加する
 
@@ -61,7 +61,7 @@ Visual Studio 2017 を実行していて、**クラス デザイナー** コン�
 
 **ソリューション エクスプローラー**で、クラス ファイルのコンテキスト メニューを開き (右クリック)、**[クラス ダイアグラムの表示]** を選択します。
 
-- または -
+または
 
 **[クラス ビュー]** で、名前空間または型のコンテキスト メニューを開き、**[クラス ダイアグラムで表示]** を選択します。
 
@@ -79,5 +79,3 @@ Visual Studio 2017 を実行していて、**クラス デザイナー** コン�
 - [方法: クラス デザイナーを使用して型を作成する](how-to-create-types.md)
 - [方法: 既存の型を表示する](how-to-view-existing-types.md)
 - [クラスと型の設計と表示](designing-and-viewing-classes-and-types.md)
-- [型およびリレーションシップの表示](viewing-types-and-relationships.md)
-- [クラス ダイアグラムの使用](working-with-class-diagrams.md)

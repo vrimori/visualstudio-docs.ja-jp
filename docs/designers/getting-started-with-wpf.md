@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d041fb03b4a35b0ed68d386e21ca1ec92a0e3588
-ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
+ms.openlocfilehash: c486b0675c12467d4a2b4f7a6d8e82272d33520c
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008643"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53804027"
 ---
 # <a name="get-started-with-wpf"></a>WPF の使用を開始する
 
@@ -27,7 +27,7 @@ Windows Presentation Foundation (WPF) は、デスクトップ クライアン�
 |-|-|
 |すぐに使用を開始する…|[チュートリアル: 初めての WPF デスクトップ アプリケーション](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)|
 |XAML デザイン ツールの比較|[Visual Studio および Blend for Visual Studio での XAML の設計](../designers/designing-xaml-in-visual-studio.md)|
-|.NET の初心者向け|[.NET Framework の概要](/dotnet/framework/get-started/overview)<br /><br /> [アプリケーションの基本事項](/dotnet/standard/application-essentials)<br /><br /> [Visual C# と Visual Basic の概要](../ide/getting-started-with-visual-csharp-and-visual-basic.md)|
+|.NET の初心者向け|[.NET Framework の概要](/dotnet/framework/get-started/overview)<br /><br /> [アプリケーションの基本事項](/dotnet/standard/application-essentials)<br /><br /> [Visual C# と Visual Basic の概要](../ide/quickstart-visual-basic-console.md)|
 |WPF の詳細な説明...|[WPF の概要](../designers/introduction-to-wpf.md)<br /><br /> [XAML の概要 (WPF)](/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br /> [コントロール](/dotnet/framework/wpf/controls/)<br /><br /> [データバインディングの概要](/dotnet/framework/wpf/data/data-binding-overview)<br /><br /> [LINQ to XML による WPF のデータ バインディング](../designers/wpf-data-binding-with-linq-to-xml-overview.md)|
 |Windows フォームの開発者向け|[Windows フォーム コントロールおよび同等の WPF コントロール](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br /> [WPF と Windows フォームの相互運用性に関してサポートするシナリオ](/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|
 

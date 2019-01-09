@@ -24,14 +24,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 682010bc4235948918b3bffce70d04d5db0781af
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 79cdab9ef8cd127b54117188c9d1a49ad4948c9e
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49861632"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53805160"
 ---
-# <a name="quickstart-first-look-at-deployment-in-visual-studio"></a>クイックスタート: Visual Studio での配置の概要
+# <a name="quickstart-first-look-at-deployment-in-visual-studio"></a>クイック スタート: Visual Studio での配置の概要
 
 他のコンピューター、デバイス、サーバー、クラウドにインストールする目的でアプリケーション、サービス、またはコンポーネントを配布する手法として配置が行われます。 必要な配置の種類に合わせて、Visual Studio で適切な手法を選択します。 (コマンド ラインによる配置や NuGet など、その他の配置ツールに対応しているアプリの種類はたくさんありますが、それらのツールについてはここでは触れていません。)
 
@@ -41,21 +41,21 @@ ms.locfileid: "49861632"
 
 ローカル フォルダーへの配置は通常、テスト目的で使用されます。あるいは、最終的な配置に別のツールを使用する段階式配置を開始する目的で使用されます。
 
-- **ASP.NET**、**ASP.NET Core**、**Node.js**、**Python**、**.NET Core**: 発行ツールを使用してローカル フォルダーに配置します。 利用できるオプションは厳密にはアプリの種類によって異なります。 ソリューション エクスプローラーで、プロジェクトを右クリックし、**[発行]** を選択します。 (発行プロファイルを以前に構成している場合、**[新しいプロファイルの作成]** をクリックする必要があります。)次に **[フォルダー]** を選択します。 詳細については、「[ローカル フォルダーに配置する](quickstart-deploy-to-local-folder.md)」を参照してください
+- **ASP.NET**、**ASP.NET Core**、**Node.js**、**Python**、.**NET Core**:発行ツールを使用して、ローカル フォルダーに配置します。 利用できるオプションは厳密にはアプリの種類によって異なります。 ソリューション エクスプローラーで、プロジェクトを右クリックし、**[発行]** を選択します。 (発行プロファイルを以前に構成している場合、**[新しいプロファイルの作成]** をクリックする必要があります。)次に **[フォルダー]** を選択します。 詳細については、「[ローカル フォルダーに配置する](quickstart-deploy-to-local-folder.md)」を参照してください
 
     ![[発行] を選択する](../deployment/media/quickstart-publish.png)
 
-- **Visual C++ ランタイム**: ローカル配置または静的リンクを利用して Visual C++ ランタイムを配置できます。 詳細については、「[ネイティブ デスクトップ アプリケーションの配置 (Visual C++)](/cpp/ide/deploying-native-desktop-applications-visual-cpp)」を参照してください。
+- **Visual C++ ランタイム**:ローカル配置または静的リンクを利用して、Visual C++ ランタイムを配置できます。 詳細については、「[ネイティブ デスクトップ アプリケーションの配置 (Visual C++)](/cpp/ide/deploying-native-desktop-applications-visual-cpp)」を参照してください。
 
 ## <a name="publish-to-azure"></a>Azure に発行する
 
-- **ASP.NET**、**ASP.NET Core**、**Python**、**Node.js**: 発行ツールを使用し、Azure App Service または Azure 仮想マシンにアプリを簡単に配置できます。 ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。 (発行プロファイルを以前に構成している場合、**[新しいプロファイルの作成]** をクリックする必要があります。)[発行] ダイアログ ボックスで、**[App Service]** または **[Azure Virtual Machines]** を選択し、構成手順に従います。
+- **ASP.NET**、**ASP.NET Core**、**Python**、**Node.js**:発行ツールを使用し、Azure App Service または Azure 仮想マシンにアプリを簡単に配置できます。 ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。 (発行プロファイルを以前に構成している場合、**[新しいプロファイルの作成]** をクリックする必要があります。)[発行] ダイアログ ボックスで、**[App Service]** または **[Azure Virtual Machines]** を選択し、構成手順に従います。
 
     ![Azure App Service を選択する](../deployment/media/quickstart-publish-azure.png "Azure App Service を選択する")
 
     Visual Studio 2017 バージョン 15.7 以降で、ASP.NET Core アプリを **Linux 用 App Service** に配置できます。
 
-    Python アプリについては、[Python で Azure App Service に発行する](/visualstudio/python/publishing-python-web-applications-to-azure-from-visual-studio?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)方法に関するページも参照してください。
+    Python アプリについては、[Python で Azure App Service に発行する](../python/publishing-python-web-applications-to-azure-from-visual-studio.md?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)方法に関するページも参照してください。
 
     概要については、[Azure に発行する方法](quickstart-deploy-to-azure.md)に関するページと [Linux に発行する方法](quickstart-deploy-to-linux.md)に関するページを参照してください。 [Azure に ASP.NET Core アプリを発行する](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)方法に関するページも参照してください。 Git を使用した配置については、[Git を使用して Azure に ASP.NET Core を継続的に配置する](/aspnet/core/publishing/azure-continuous-deployment)方法に関するページを参照してください。
 
@@ -66,7 +66,7 @@ ms.locfileid: "49861632"
 
 ## <a name="publish-to-web-or-deploy-to-network-share"></a>Web に発行するか、ネットワーク共有に配置する
 
-- **ASP.NET**、**ASP.NET Core**、**Node.js**、**Python**: 発行ツールを使用することで、FTP または Web 配置を使用して Web サイトに配置できます。 詳細については、[Web サイトに配置する](quickstart-deploy-to-a-web-site.md)方法に関するページを参照してください。
+- **ASP.NET**、**ASP.NET Core**、**Node.js**、**Python**:発行ツールを使用することで、FTP または Web 配置を使って Web サイトに配置できます。 詳細については、[Web サイトに配置する](quickstart-deploy-to-a-web-site.md)方法に関するページを参照してください。
 
     ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。 (発行プロファイルを以前に構成している場合、**[新しいプロファイルの作成]** をクリックする必要があります。)発行ツールで、必要なオプションを選択し、構成手順に従います。
 
@@ -76,7 +76,7 @@ ms.locfileid: "49861632"
 
     ASP.NET のアプリケーションとサービスは他にもさまざまな方法で配置できます。 詳細については、[ASP.NET の Web アプリケーション/サービスを配置する](http://www.asp.net/aspnet/overview/deployment)方法に関するページをご覧ください。
 
-- **Visual C++ ランタイム**: 集中配置を使用して Visual C++ ランタイムを配置できます。 詳細については、「[ネイティブ デスクトップ アプリケーションの配置 (Visual C++)](/cpp/ide/deploying-native-desktop-applications-visual-cpp)」を参照してください。
+- **Visual C++ ランタイム**:集中配置を使用して Visual C++ ランタイムを配置できます。 詳細については、「[ネイティブ デスクトップ アプリケーションの配置 (Visual C++)](/cpp/ide/deploying-native-desktop-applications-visual-cpp)」を参照してください。
 
 - **Windows デスクトップ**: ClickOnce 配置を使用し、Web サーバーまたはネットワーク ファイル共有に Windows デスクトップ アプリケーションを発行できます。 その後、ユーザーはシングル クリックでアプリケーションをインストールできます。 詳細については、[ClickOnce でデスクトップ アプリを配置する](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)方法に関するページと [ClickOnce でネイティブ アプリを配置する](/cpp/ide/clickonce-deployment-for-visual-cpp-applications)方法に関するページを参照してください。
 
@@ -84,11 +84,11 @@ ms.locfileid: "49861632"
 
 Visual Studio から、Microsoft Store に配置するためのアプリ パッケージを作成できます。
 
-- **UWP**: アプリをパッケージ化し、メニュー項目を使用してそれを配置できます。 詳細については、[Visual Studio を使用して UWP アプリをパッケージ化する](/windows/uwp/packaging/packaging-uwp-apps)方法に関するページをご覧ください。
+- **UWP**:アプリをパッケージ化し、メニュー項目を使用してそれを配置できます。 詳細については、[Visual Studio を使用して UWP アプリをパッケージ化する](/windows/uwp/packaging/packaging-uwp-apps)方法に関するページをご覧ください。
 
     ![アプリ パッケージの作成](../deployment/media/feature-tour-create-app-package.jpg)
 
-- **Windows デスクトップ**: Visual Studio 2017 バージョン 15.4 より、デスクトップ ブリッジを使用して Microsoft Store に配置できます。 これを行うには、まず Windows アプリケーション パッケージ プロジェクトを作成します。 詳細については、「[Package a desktop app for Microsoft Store (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)」(Microsoft ストアのデスクトップ アプリをパッケージ化する (デスクトップ ブリッジ)) を参照してください。
+- **Windows デスクトップ**:Visual Studio 2017 バージョン 15.4 以降では、デスクトップ ブリッジを使用して Microsoft Store に配置できます。 これを行うには、まず Windows アプリケーション パッケージ プロジェクトを作成します。 詳細については、「[Package a desktop app for Microsoft Store (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)」(Microsoft ストアのデスクトップ アプリをパッケージ化する (デスクトップ ブリッジ)) を参照してください。
 
     ![デスクトップ ブリッジ](../deployment/media/feature-tour-desktop-bridge.png)
 

@@ -18,12 +18,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a35ee6d086153adc718a1616c0c8f0c8c606fbb7
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: eabc82926c821fb5a8d83637fb9118bc25df82bc
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50220031"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684994"
 ---
 # <a name="property-pages-javascript"></a>プロパティ ページ、JavaScript
 **[プロパティ ページ]** からプロジェクトの設定にアクセスできます。 **[プロパティ ページ]** に表示されるページを使用して、プロジェクトのプロパティを変更できます。
@@ -39,11 +39,11 @@ ms.locfileid: "50220031"
 
  **構成**
 
- 表示または変更する構成設定を指定します。 この設定は **[デバッグ]** (既定)、**[リリース]**、**[すべての構成]**、またはユーザー定義の構成に指定できます。 詳細については、「[How to: Set debug and release configurations in Visual Studio](../../debugger/how-to-set-debug-and-release-configurations.md)」 (方法: Visual Studio でデバッグ構成とリリース構成を設定する) を参照してください。
+ 表示または変更する構成設定を指定します。 この設定は **[デバッグ]** (既定)、**[リリース]**、**[すべての構成]**、またはユーザー定義の構成に指定できます。 詳細については、[方法:Visual Studio でのデバッグおよびリリース構成の設定](../../debugger/how-to-set-debug-and-release-configurations.md)に関するページを参照してください。
 
  **プラットフォーム**
 
- 表示または変更するプラットフォーム設定を指定します。 この設定は **[任意の CPU]** ([!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] アプリの既定)、**[x64]**、**[ARM]**、**[x86]**、またはユーザー定義のプラットフォームに指定できます。 詳細については、「[How to: Set debug and release configurations in Visual Studio](../../debugger/how-to-set-debug-and-release-configurations.md)」 (方法: Visual Studio でデバッグ構成とリリース構成を設定する) を参照してください。
+ 表示または変更するプラットフォーム設定を指定します。 この設定は **[任意の CPU]** ([!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] アプリの既定)、**[x64]**、**[ARM]**、**[x86]**、またはユーザー定義のプラットフォームに指定できます。 詳細については、「[方法 :Visual Studio でのデバッグおよびリリース構成の設定](../../debugger/how-to-set-debug-and-release-configurations.md)に関するページを参照してください。
 
 ## <a name="general-page"></a>[全般] ページ
  次のオプションを使用して、プロジェクトの全般プロパティを設定します。
@@ -73,7 +73,7 @@ ms.locfileid: "50220031"
 
  デバッガーの既定のホストを指定します。
 
--   Visual Studio ホスト コンピューターでアプリケーションを起動するには、**[ローカル マシン]** を選択します。 詳細については、「[ローカル コンピューターでのアプリの実行](../../debugger/run-windows-store-apps-on-the-local-machine.md)」を参照してください。
+-   Visual Studio ホスト コンピューターでアプリケーションを起動するには、**[ローカル マシン]** を選択します。 詳細については、「[ローカル コンピューターでのアプリの実行](../../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)」を参照してください。
 
 -   シミュレーターでアプリケーションを起動するには、**[シミュレーター]** を選択します。 詳細については、「[シミュレーターでのアプリの実行](../../debugger/run-windows-store-apps-in-the-simulator.md)」を参照してください。
 

@@ -17,22 +17,22 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e00b43f1705079a86d511239d7b38119868d8f4
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 7e28c3a09197fd3fe0b45d40a3402f484ab867d7
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34748476"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684903"
 ---
 # <a name="intellisense-in-visual-studio"></a>Visual Studio での IntelliSense
 
-IntelliSense とは、メンバーの一覧、パラメーター ヒント、クイック ヒント、入力候補など多数の機能を含むコード補完機能です。 これらの機能により、使用中のコードに関する情報の確認、入力中のパラメーターの追跡、プロパティおよびメソッドの呼び出しの追加などが、わずかなキーストロークで可能になります。
+IntelliSense は、メンバーの一覧、パラメーター ヒント、クイック ヒント、入力候補などの多くの機能を含むコード補完機能です。 これらの機能により、使用中のコードに関する情報の確認、入力中のパラメーターの追跡、プロパティおよびメソッドの呼び出しの追加などが、わずかなキーストロークで可能になります。
 
 IntelliSense には、言語によって異なる要素が多数あります。 各言語の IntelliSense の詳細については、「[関連項目](#see-also)」セクションに示されているトピックを参照してください。
 
 ## <a name="list-members"></a>リスト メンバー
 
-トリガーの文字 (マネージ コードではピリオド (`.`)、C++ では `::`) を入力すると、型 (または名前空間) の有効なメンバーが一覧表示されます。 文字の入力を続けると、一覧にフィルターが適用され、その文字で始まるか、名前の中の*いずれか*の単語がその文字で始まるメンバーだけが含まれます。 IntelliSense は "キャメル ケース" 照合も実行します。メンバー内の各キャメル ケースの単語の最初の文字を入力するだけで、それに一致するメンバーが表示されます。
+トリガーの文字 (マネージド コードではピリオド (`.`)、C++ では `::`) を入力すると、型 (または名前空間) の有効なメンバーが一覧表示されます。 文字の入力を続けると、一覧にフィルターが適用され、その文字で始まるか、名前の中の*いずれか*の単語がその文字で始まるメンバーだけが含まれます。 IntelliSense は "キャメル ケース" 照合も実行します。メンバー内の各キャメル ケースの単語の最初の文字を入力するだけで、それに一致するメンバーが表示されます。
 
 項目を選択した後、**Tab** キーを押すか空白を入力することによって、その項目をコードに挿入できます。 項目を選択してピリオドを入力した場合、項目がピリオドの前に表示され、ピリオドによって別のメンバー一覧が表示されます。 項目を選択した場合、挿入する前に、項目のクイック ヒントが表示されます。
 
@@ -54,7 +54,7 @@ IntelliSense には、言語によって異なる要素が多数あります。 
 
 ![パラメーター ヒント](../ide/media/vs2015_param_info.png)
 
-関数やパラメーターに XML ドキュメント コメントによる注釈を付けると、そのコメントがパラメーター ヒントとして表示されます。 詳細については、[XML コード コメントの追加](../ide/supplying-xml-code-comments.md)に関するページを参照してください。
+関数やパラメーターに XML ドキュメント コメントによる注釈を付けると、そのコメントがパラメーター ヒントとして表示されます。 詳細については、[XML コード コメントの追加](reference/generate-xml-documentation-comments.md)に関するページを参照してください。
 
 パラメーター ヒントを手動で起動するには、**[編集]** > **[IntelliSense]** > **[パラメーター ヒント]** の順にクリックするか、**Ctrl**+**Shift**+**Space** キーを押すか、エディターのツール バーで **[パラメーター ヒント]** ボタンを選択します。
 
@@ -104,4 +104,4 @@ MessageBox( hWnd, "String literal|")
 - [C# IntelliSense](../ide/visual-csharp-intellisense.md)
 - [JavaScript IntelliSense](../ide/javascript-intellisense.md)
 - [コードの記述とリファクタリング (C++)](/cpp/ide/writing-and-refactoring-code-cpp)
-- [XML コード コメントの追加](../ide/supplying-xml-code-comments.md)
+- [XML コード コメントの追加](reference/generate-xml-documentation-comments.md)

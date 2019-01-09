@@ -21,12 +21,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d5683f28150089335f04e9cf2e5274ad3ff413c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 84850d9de539267385ddddf39cea55672ad60034
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49922524"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684705"
 ---
 # <a name="refactor-classes-and-types-in-class-designer"></a>クラス デザイナーでのクラスと型のリファクタリング
 
@@ -40,8 +40,8 @@ ms.locfileid: "49922524"
 |タスク|関連する参照先|
 |----------| - |
 |**クラスのリファクタリング:** リファクタリング操作を使用すると、クラスを部分クラスに分割したり、抽象基本クラスを実装したりできます。|-   [方法: 1 つのクラスを複数の部分クラスに分割する](how-to-split-a-class-into-partial-classes.md)|
-|**インターフェイスの操作:** クラス デザイナーのクラス ダイアグラム上で、インターフェイス メソッド用のコードを提供するクラスに接続して、インターフェイスを実装できます。|-   [方法: インターフェイスを実装する](how-to-implement-an-interface.md)|
-|**型、型のメンバー、およびパラメーターのリファクタリング:** クラス デザイナーを使用して、型の名前変更、型のメンバーのオーバーライド、またはメンバーを 1 つの型から別の型に移動することができます。 Null 許容型を作成することもできます。|-   [型および型のメンバーの名前変更](#rename-types-and-type-members)<br />-   [1 つの型から別の型への型のメンバーの移動](#move-type-members-from-one-type-to-another)<br />-   [方法: Null 許容型を作成する](how-to-create-a-nullable-type.md)|
+|**インターフェイスの操作:** クラス デザイナーのクラス ダイアグラム上で、インターフェイス メソッド用のコードを提供するクラスに接続して、インターフェイスを実装できます。|-   [方法: インターフェイスの実装](how-to-implement-an-interface.md)|
+|**型、型のメンバー、およびパラメーターのリファクタリング:** クラス デザイナーを使用して、型の名前を変更したり、型のメンバーをオーバーライドしたり、メンバーを 1 つの型から別の型に移動したりすることができます。 Null 許容型を作成することもできます。|-   [型および型のメンバーの名前変更](#rename-types-and-type-members)<br />-   [1 つの型から別の型への型のメンバーの移動](#move-type-members-from-one-type-to-another)<br />-   [方法: Null 許容型を作成する](how-to-create-a-nullable-type.md)|
 
 ## <a name="rename-types-and-type-members"></a>型および型のメンバーの名前変更
 
@@ -90,5 +90,4 @@ ms.locfileid: "49922524"
 
 ## <a name="see-also"></a>関連項目
 
-- [型およびリレーションシップの表示](viewing-types-and-relationships.md)
-- [クラスおよび型のデザイン](designing-classes-and-types.md)
+- [クラスおよび型のデザイン](designing-and-viewing-classes-and-types.md)

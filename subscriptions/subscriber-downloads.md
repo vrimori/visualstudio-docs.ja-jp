@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれている Micr
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: ec2dd900e0cfae3b150bba52e31834efb53628e6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f8bfc394c2c40ee18df8a741f5101105cc2e189e
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49831433"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53803215"
 ---
 # <a name="using-subscriber-downloads-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションでサブスクライバー ダウンロードを使用します。
 サブスクライバー特典の一環として、広い範囲のソフトウェアのダウンロードにアクセスできます。
@@ -30,7 +30,7 @@ ms.locfileid: "49831433"
 - **製品が一般公開されている**。 一部のツール、SDK、DDK、サービス パックは、[Microsoft ダウンロード センター](https://www.microsoft.com/download)で一般公開されています。 このような製品は、ダウンロードに公開されない場合があります。
 - **まだ製品がリリースされていない**。  ダウンロードでは、多くのプレリリース (ベータ) 版やリリース候補版を入手できます。 ただし、すべてのベータ版が公開されるわけではありません。たとえば、一部のベータ版には特別な登録や資格が必要です。 オープン テクニカル ベータ プログラムの詳細については、[Microsoft Connect](http://connect.microsoft.com/) にアクセスしてください。
 - **お客様の国ではその製品を利用できない。** 地域的な制約により、ご利用いただけない Microsoft 製品もあります。
-- **冗長なソフトウェア。** Office を含むサブスクリプションで、Select Office スイートおよびスタンドアロン Office ダウンロードおよびプロダクト キーは使用できなくなります。 同じバージョンの対応する最高の Office スイートのダウンロードとプロダクト キーを使用できます。  たとえば、PowerPoint 2010 を検索する場合、検索結果は生成されません。  ただし、Office 2010 (PowerPoint 2010 が含まれる Office スイート) を検索してスイートをダウンロードすることができます。
+- **冗長なソフトウェア。** Office を含むサブスクリプションで、Select Office スイートおよびスタンドアロン Office ダウンロードおよびプロダクト キーは使用できなくなります。 同じバージョンの対応する最高の Office スイートのダウンロードとプロダクト キーを使用できます。  たとえば、PowerPoint 2010 を検索する場合、検索結果は生成されません。  しかし、Office 2010 (PowerPoint 2010 が含まれる Office スイート) を検索し、スイートをダウンロードすることはできます。
 
 ## <a name="what-do-i-get"></a>何を取得できますか。
 ダウンロードの種類と数は、サブスクリプション レベルとプログラムのメンバーシップによって異なります。  Visual Studio Enterprise Standard のサブスクリプションを持つサブスクライバーは、Microsoft Partner Network または BizSpark プログラム サブスクリプションを介してサブスクリプションを取得したサブスクライバーと使用できるダウンロードが異なる場合があります。  各サブスクリプション レベルで利用できるダウンロードの詳細については、「[Products By Benefit Level](https://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Products_by_Benefit_Level.xlsx)」(特典レベル別の製品) の一覧をダウンロードしてください。

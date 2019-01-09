@@ -1,5 +1,5 @@
 ---
-title: '方法: クラス ダイアグラムにコメント追加する (クラス デザイナー)'
+title: '方法: クラス ダイアグラムにコメントを追加する (クラス デザイナー)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a3b850741793f1b0f1d358aca9ea3161e12a46b9
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: afa0bc954e2812cb4c0149bfeef623195540e2a3
+ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957107"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53684575"
 ---
 # <a name="how-to-add-comments-to-class-diagrams"></a>方法: クラス ダイアグラムにコメントを追加する
 
@@ -39,5 +39,5 @@ ms.locfileid: "33957107"
 
 ## <a name="see-also"></a>関連項目
 
-- [クラス ダイアグラムの使用](working-with-class-diagrams.md)
+- [クラス ダイアグラムの使用](designing-and-viewing-classes-and-types.md)
 - [方法: クラス ダイアグラムをカスタマイズする](how-to-customize-class-diagrams.md)

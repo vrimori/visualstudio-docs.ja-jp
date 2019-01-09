@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e87b1a71cde4d6fb37e05fa99698b636ff87bf4
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ea1db2c465c362fee0f3e06074b1cea3562d21fd
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49876725"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53739946"
 ---
 # <a name="msbuild"></a>MSBuild
 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] は、アプリケーションをビルドするためのプラットフォームです。 MSBuild とも呼ばれるこのエンジンには、ビルド プラットフォームでソフトウェアを処理およびビルドする方法を制御する、プロジェクト ファイル用の XML スキーマが用意されています。 Visual Studio は MSBuild を使用しますが、MSBuild は Visual Studio に依存しません。 プロジェクト ファイルまたはソリューション ファイルに対して *msbuild.exe* を実行すると、Visual Studio がインストールされていない環境で、製品の統合とビルドを実行できます。
@@ -29,7 +29,7 @@ ms.locfileid: "49876725"
 
  次の例では、Visual Studio IDE の代わりに、MSBuild コマンド ラインでビルドを実行する状況について説明します。
 
--   Visual Studio 2013 がインストールされていません。
+-   Visual Studio 2013 がインストールされていません。 ([Visual Studio なしの MSBuild をダウンロードする](https://visualstudio.microsoft.com/downloads/?q=build+tools))
 
 -   MSBuild の 64 ビット バージョンを使用することを希望しています。 通常は MSBuild のこのバージョンは不要ですが、このバージョンを使用すると、MSBuild はより多くのメモリにアクセスできます。
 
@@ -50,7 +50,7 @@ Visual Studio IDE でコードを作成し、MSBuild を使用してビルドを
 > [!NOTE]
 >  Team Foundation ビルドを使用して、アプリケーションのコンパイル、テスト、および配置を自動的に実行することもできます。 開発者がコードをチェックインしたとき (たとえば、継続的インテグレーションの手法の一環として)、またはスケジュールに従って (たとえば、夜間のビルド確認テストの一部として)、ビルド システムがビルドを自動的に実行ですることもできます。 Team Foundation ビルドは、MSBuild を使用してコードをコンパイルします。 詳細については、「[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)」を参照してください。
 
- ここでは、MSBuild の概要について説明します。 入門チュートリアルについては、「[チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)」をご覧ください。
+ ここでは、MSBuild の概要について説明します。 入門チュートリアルについては、[チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)に関するページを参照してください。
 
 ##  <a name="use-msbuild-at-a-command-prompt"></a>コマンド プロンプトでの MSBuild の使用
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] をコマンド プロンプトで実行するには、*MSBuild.exe* にプロジェクト ファイルを渡し、適切なコマンド ライン オプションを指定して実行します。 コマンド ライン オプションでは、プロパティを設定したり、特定のターゲットを実行したりできるほか、ビルド処理を制御するその他のオプションも設定できます。 たとえば、`Configuration` プロパティを `Debug` に設定して *MyProj.proj* ファイルをビルドするには、次のコマンド ライン構文を使用します。
@@ -67,7 +67,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 ##  <a name="project-file"></a>プロジェクト ファイル
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、簡単で拡張性がある XML ベースのプロジェクト ファイル形式が採用されています。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] のプロジェクト ファイル形式では、ビルドする項目のほか、それらを異なるオペレーティング システムや構成用にビルドする方法を開発者が指定できます。 また、異なるファイルに適用できるビルド規則を記述しておき、製品を構成するさまざまなプロジェクトで再利用することにより、一貫したビルド作業を行うことができます。
 
- 以下のセクションでは [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイル形式のいくつかの基本要素について説明します。 基本的なプロジェクト ファイルを作成する方法のチュートリアルについては、「[チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)」をご覧ください。
+ 以下のセクションでは [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイル形式のいくつかの基本要素について説明します。 基本的なプロジェクト ファイルを作成する方法のチュートリアルについては、[チュートリアル:MSBuild プロジェクト ファイルのゼロからの作成](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)に関するページを参照してください。
 
 ###  <a name="BKMK_Properties"></a> プロパティ
  プロパティはビルドを設定するためのキーと値のペアです。 プロパティを宣言するには、そのプロパティの名前を持つ要素を [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) 要素の子として作成します。 たとえば、次の コードでは、`BuildDir` という名前のプロパティを作成し、`Build` を値として設定しています。
@@ -149,7 +149,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 ## <a name="use-msbuild-in-visual-studio"></a>Visual Studio で MSBuild を使用する
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイル形式を使用して、マネージド プロジェクトに関するビルド情報を保存します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] インターフェイスを使用してプロジェクト設定に追加や変更が加えられると、プロジェクトごとに生成される *.\*proj* ファイルにその内容が反映されます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] のホスト インスタンスを使用して、マネージド プロジェクトをビルドします。 つまり、マネージド プロジェクトは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でも、コマンド プロンプトを使用しても ([!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] がインストールされていない場合でも)、同じようにビルドできます。
 
- Visual Studio で MSBuild を使用する方法のチュートリアルについては、「[チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)」をご覧ください。
+ Visual Studio で MSBuild を使用する方法のチュートリアルについては、[チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)に関するページを参照してください。
 
 ##  <a name="BKMK_Multitargeting"></a> マルチ ターゲット
  Visual Studio を使用すると、いくつかのバージョンの .NET Framework のうち、任意のバージョンで動作するようにアプリケーションをコンパイルできます。 たとえば、あるアプリケーションを 32 ビット プラットフォーム上の .NET Framework 2.0 で動作するようにコンパイルしたり、これと同じアプリケーションを 64 ビット プラットフォーム上の .NET Framework 4.5 で動作するようにコンパイルしたりできます。 複数のフレームワークに対してコンパイルする機能をマルチ ターゲットといいます。
@@ -182,7 +182,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 | [条件](../msbuild/msbuild-conditions.md) | MSBuild の要素で `Condition` 属性を使用する方法について説明します。 |
 | [詳細な概念](../msbuild/msbuild-advanced-concepts.md) | バッチ処理、変換の実行、複数バージョン対応など、高度な利用法を紹介します。 |
 | [MSBuild でのログ](../msbuild/logging-in-msbuild.md) | ビルド イベント、メッセージ、およびエラーを記録する方法について説明します。 |
-| [その他のリソース](../msbuild/additional-msbuild-resources.md) | MSBuild に関する詳細な情報を提供するコミュニティやサポートのリソースを紹介します。 |
+| [その他のリソース](https://social.msdn.microsoft.com/forums/vstudio/home?forum=msbuild) | MSBuild に関する詳細な情報を提供するコミュニティやサポートのリソースを紹介します。 |
 
 ## <a name="reference"></a>参照
  [MSBuild リファレンス](../msbuild/msbuild-reference.md) リファレンス情報を示すトピックへのリンクを提供します。

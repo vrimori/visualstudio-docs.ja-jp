@@ -1,5 +1,5 @@
 ---
-title: '方法: C++ DLL 用の単体テストを作成する'
+title: '方法: C++ DLL 用の単体テストの記述'
 ms.date: 11/04/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -9,14 +9,14 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 9458fd6886243102f6479166fb9df21f9e4869fd
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a596281d156882dffbef6e1c0993f2c91015e960
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49877258"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53740167"
 ---
-# <a name="how-to-write-unit-tests-for-c-dlls"></a>方法: C++ DLL 用の単体テストを作成する
+# <a name="how-to-write-unit-tests-for-c-dlls"></a>方法: C++ DLL 用の単体テストの記述
 
 このチュートリアルでは、テスト ファースト メソドロジを使ってネイティブ C++ DLL を開発する方法について説明します。 基本的な手順を以下に示します。
 
@@ -329,7 +329,7 @@ ms.locfileid: "49877258"
 
 ## <a name="see-also"></a>関連項目
 
-- [既存の C++ アプリケーションへの単体テストの追加](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)
+- [既存の C++ アプリケーションへの単体テストの追加](../test/how-to-use-microsoft-test-framework-for-cpp.md)
 - [Microsoft.VisualStudio.TestTools.CppUnitTestFramework の使用](how-to-use-microsoft-test-framework-for-cpp.md)
 - [ネイティブ コードをデバッグする](../debugger/debugging-native-code.md)
 - [チュートリアル: ダイナミック リンク ライブラリの作成と使用 (C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)
