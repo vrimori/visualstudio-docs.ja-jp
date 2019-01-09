@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_interruptreturn |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 49455347d6e45e51cdc639ef0eabdabbbebcfbd6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 2725c9311d741f50bc3055d9e82ff8c09eaf9153
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49888048"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53863551"
 ---
 # <a name="idiasymbolgetinterruptreturn"></a>IDiaSymbol::get_interruptReturn
 関数に割り込み命令からの戻り値が含まれるかどうかを指定するフラグを取得します (たとえば、X86 アセンブリ コード`iret`)。  
@@ -42,12 +40,12 @@ HRESULT get_interruptReturn(
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティがシンボルを使用できないことを意味します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|Dia2.h|  
+|ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK バージョン 8.0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -2,7 +2,6 @@
 title: プロファイラーを .NET アプリにアタッチし、コンカレンシー データを収集する | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: fdd41576-797e-4312-8520-fee7bb767e4a
 author: mikejo5000
@@ -10,12 +9,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e680cc5e7d3130100f0627241b02fc07ccea440c
-ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
+ms.openlocfilehash: 4d87c57ecd83ada45bddcbfba4b743d9c147c856
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53593042"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53908958"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-concurrency-data-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーをスタンドアロンの .NET Framework アプリケーションにアタッチし、コンカレンシー データを収集する
 この記事では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイル ツールのコマンド ライン ツールを使用して、実行中の .NET Framework のスタンドアロン (クライアント) アプリケーションにプロファイラーをアタッチし、プロセスとスレッドのコンカレンシー データを収集する方法について説明します。  
@@ -79,7 +78,7 @@ ms.locfileid: "53593042"
   
     -   **VSPerfCmd /detach** と入力します  
   
-         または  
+         - または -  
   
     -   対象アプリケーションを終了します。  
   

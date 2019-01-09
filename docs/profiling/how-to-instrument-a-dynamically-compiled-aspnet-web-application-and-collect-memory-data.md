@@ -1,8 +1,6 @@
 ---
 title: '方法: プロファイラーのコマンド ラインを使用して動的にコンパイルされた ASP.NET Web アプリケーションをインストルメント化し、メモリ データを収集する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 2cdd9903-39db-47e8-93dd-5e6a21bc3435
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: e485f7e7bbcd2b6168d163be83b3c158b52df5fd
-ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
+ms.openlocfilehash: da1c1ad76802496108284dcb6fc037bfd7443180
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53592704"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53940915"
 ---
 # <a name="how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line"></a>方法: プロファイラーのコマンド ラインを使用して動的にコンパイルされた ASP.NET Web アプリケーションをインストルメント化し、メモリ データを収集する
 このトピックでは、コマンドライン ツールの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイル ツールを利用し、インストルメンテーション プロファイル方法で、動的にコンパイルされた [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションの .NET メモリ割り当てとオブジェクト有効期間に関する詳細データを収集する方法について説明します。  
@@ -41,7 +39,7 @@ ms.locfileid: "53592704"
 
      **VSPerfClrEnv /globaltracegc**  
 
-     または  
+     - または -  
 
      **VSPerfClrEnv /globaltracegclife**  
 

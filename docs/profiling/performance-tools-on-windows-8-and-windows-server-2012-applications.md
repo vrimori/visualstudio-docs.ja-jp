@@ -1,20 +1,18 @@
 ---
 title: Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール | Microsoft Docs
-ms.custom: ''
 ms.date: 06/19/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ca8434f6aaf0137da51612665833150b783d01d1
-ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
+ms.openlocfilehash: 9fe876d5244ad18d1d2635caa1717ca9eb0e29ba
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53592938"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53832295"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 と Windows Server 2012 アプリケーションのパフォーマンス ツール
 
@@ -39,7 +37,7 @@ UWP アプリのプロファイリングを行う場合、次のプロファイ�
 
 UWP アプリのプロファイリングの詳細については、次の記事をご覧ください。
 
-- [ローカル コンピューターで UWP アプリを実行する](../debugger/run-windows-store-apps-on-the-local-machine.md)
+- [ローカル コンピューターで UWP アプリを実行する](/visualstudio/debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml)
 - [リモート コンピューターで UWP アプリを実行する](../debugger/run-windows-store-apps-on-a-remote-machine.md)
 - [プロファイル ツールの概要](profiling-feature-tour.md)
 - [JavaScript メモリ](../profiling/javascript-memory.md)

@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_virtual |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bfd5542895111dc9e394a20ad02f27f56e894308
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: a3d5c87a19e6f3cf9e04a4b376626b00b745e9a7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49871707"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53898126"
 ---
 # <a name="idiasymbolgetvirtual"></a>IDiaSymbol::get_virtual
 関数が仮想かどうかを指定するフラグを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49871707"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_virtual (   
+HRESULT get_virtual (   
    BOOL* pRetVal  
 );  
 ```  
@@ -42,5 +40,5 @@ HRESULT get_virtual (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

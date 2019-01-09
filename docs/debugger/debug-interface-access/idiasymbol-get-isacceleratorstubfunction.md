@@ -1,8 +1,6 @@
 ---
-title: IDiaSymbol::get_isAcceleratorStubFunction |Microsoft ドキュメント
-ms.custom: ''
+title: IDiaSymbol::get_isAcceleratorStubFunction |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -12,15 +10,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cddf6be53925ed6f9cd613f7e7a19cca9f00cace
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 2314142f2080b25a81610ee74f3f627d151651f0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31468052"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53956577"
 ---
 # <a name="idiasymbolgetisacceleratorstubfunction"></a>IDiaSymbol::get_isAcceleratorStubFunction
-シンボルに対応するアクセラレータ用にコンパイルされたシェーダーのトップレベルの関数シンボルに対応するかどうかを示します、`parallel_for_each`呼び出します。  
+シェーダーに対応するアクセラレータのコンパイルのシンボルが最上位の関数シンボルに対応するかどうかを示す、`parallel_for_each`呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,10 +29,10 @@ HRESULT get_isAcceleratorStubFunction(
   
 #### <a name="parameters"></a>パラメーター  
  `pFlag`  
- [out]ポインター、`BOOL`シェーダーに対応するアクセラレータのコンパイルにシンボルがトップレベルの関数シンボルに対応かどうかを示す、`parallel_for_each`呼び出します。  
+ [out]ポインターを`BOOL`シェーダーに対応するアクセラレータのコンパイルのシンボルが最上位の関数シンボルに対応するかどうかを示す、`parallel_for_each`呼び出します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

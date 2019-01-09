@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_indirectvirtualbaseclass |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d7dcde1aa61ed9ce39fea15a6a21776afba24786
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 4328c7b8a1506cb21a9c1af9dcfeb3e32140d9fd
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49933470"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53957539"
 ---
 # <a name="idiasymbolgetindirectvirtualbaseclass"></a>IDiaSymbol::get_indirectVirtualBaseClass
 ユーザー定義データ型が間接仮想基底クラスであるかどうかを指定するフラグを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49933470"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_indirectVirtualBaseClass (   
+HRESULT get_indirectVirtualBaseClass (   
    BOOL* pRetVal  
 );  
 ```  
@@ -42,12 +40,12 @@ HRESULT get_indirectVirtualBaseClass (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|Dia2.h|  
+|ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK v7.0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
