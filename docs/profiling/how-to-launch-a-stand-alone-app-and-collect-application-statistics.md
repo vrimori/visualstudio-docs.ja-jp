@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a57d56564b7be9051efb1a5d153a2a797fcc2211
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 3ea9027f6589c7d7993aab1652fd89117239940a
+ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49820006"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53592912"
 ---
 # <a name="how-to-launch-a-stand-alone-application-with-the-profiler-and-collect-application-statistics-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーでスタンドアロン アプリケーションを起動し、アプリケーション統計情報を収集する
 ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのコマンド ライン ツールを使用してスタンドアロン (クライアント) アプリケーションを起動し、サンプリング メソッドによってパフォーマンスに関する統計情報を収集する方法について説明します。  
@@ -30,7 +30,7 @@ ms.locfileid: "49820006"
 1.  Visual Studio がインストールされているコンピューターでプロファイリング ツールを実行している場合、Visual Studio のコマンド ウィンドウによって正しいパスが設定されます。 **[ツール]** メニューで **[Visual Studio コマンド プロンプト]** を選択します。  
 
 > [!NOTE]
->  プロファイリング ツールのコマンド ライン ツールは、Visual Studio インストール ディレクトリの *\Team Tools\Performance Tools* サブディレクトリにあります。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にそのパスを追加するか、コマンド自体にこのパスを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。  
+>  プロファイル ツールへのパスを取得するには、[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)に関する記事をご覧ください。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。  
 
 ## <a name="start-the-application-with-the-profiler"></a>プロファイラーによるアプリケーションの起動  
  プロファイラーを使用して対象のアプリケーションを起動するには、VSPerfCmd の **/start** オプションと **/launch** オプションを使用して、プロファイラーを初期化し、アプリケーションを起動します。 **/start** と **/launch**、およびそれぞれのオプションは、1 つのコマンド ラインで指定できます。  
@@ -98,7 +98,7 @@ ms.locfileid: "49820006"
 
     -   対象アプリケーションを終了します。  
 
-         - または -  
+         または  
 
     -   **VSPerfCmd /detach** と入力します  
 

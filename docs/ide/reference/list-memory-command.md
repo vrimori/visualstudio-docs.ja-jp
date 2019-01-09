@@ -2,7 +2,6 @@
 title: ListMemory コマンド
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - debug.listmemory
@@ -16,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 57d6c8c7821df8bd22723900ebd011c110a1857f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6c0c2512bd6b446c35aa01e9f56711bb39cd85b3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49815183"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53846088"
 ---
 # <a name="list-memory-command"></a>ListMemory コマンド
 指定範囲のメモリの内容を表示します。
@@ -87,7 +86,7 @@ Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
 >Debug.ListMemory /Format:float /Count:30 /Unicode
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [ListCallStack コマンド](../../ide/reference/list-call-stack-command.md)
 - [ListThreads コマンド](../../ide/reference/list-threads-command.md)

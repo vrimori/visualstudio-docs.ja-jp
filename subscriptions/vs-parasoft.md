@@ -3,18 +3,18 @@ title: Parasoft Virtualize/SOAtest Professional Desktop の特典 | Microsoft Do
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
-ms.date: 10/03/2017
+ms.date: 12/19/2018
 ms.topic: Get-Started-Article
 description: Visual Studio サブスクリプションに含まれる Parasoft Virtualize/SOA Test Professional サブスクリプションをアクティブ化する方法を説明します。
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: f9e9c617ba64ca0502e50619c107f000b4f6ad5c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: cb6b04358febf47d3f3332d4b8d10dd96b20ba6b
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49830188"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53739670"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Parasoft Virtualize/SOAtest Professional Desktop
 
@@ -76,15 +76,18 @@ ms.locfileid: "49830188"
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 6 か月       |  [はい]       |
-| Visual Studio Professional (標準、年間クラウド) | VL、Azure、リテール                                       | 使用できません                                                           |N/A         |
+| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 6 か月       |  はい       |
+| Visual Studio Professional (Standard) | VL、Azure、リテール                                       | 使用できません                                                           |N/A         |
 | Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用できません                                                           |N/A         |
 | MSDN Platforms (標準)                                          | VL、リテール                                              | 使用できません                                                           |N/A         |
 | Visual Studio Dev Essentials | N/A  | 使用できません|N/A |
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
 
-<sup>1</sup> *Microsoft Partner Network (Enterprise) が含まれます。Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、FTE、MCT Software & Services Developer、BizSpark、Imagine、Microsoft Valued Professional (MVP)、Region Director (RD) は含まれません。MCT Software & Services は含まれません。*
+<sup>1</sup>  *Microsoft Partner Network (Enterprise) が含まれます。Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、FTE、MCT Software & Services Developer、BizSpark、Imagine、Microsoft Valued Professional (MVP)、Region Director (RD)、MCT Software & Services は含まれません。*
 
+
+> [!NOTE]
+> Microsoft では、クラウド サブスクリプションの Visual Studio Professional 年間サブスクリプションおよび Visual Studio Enterprise 年間サブスクリプションが提供されなくなりました。 サブスクリプションの更新、増減、キャンセルに関する既存のお客様のエクスペリエンスと機能については変更はありません。 新規のお客様は、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) に移動し、Visual Studio のさまざまな購入オプションを調べることをお勧めします。
 
 
 ## <a name="support-resources"></a>サポート リソース

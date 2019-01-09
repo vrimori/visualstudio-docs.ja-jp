@@ -2,7 +2,6 @@
 title: プロジェクトのプロパティのリファレンス
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - user interface [Visual Studio], projects
@@ -13,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 97f0adad956786f3096174460aabd007e0cb8592
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 1cfbe0c602264da31b89add3e2e6ca1124f62a52
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49897863"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53891645"
 ---
 # <a name="project-properties-reference"></a>プロジェクトのプロパティのリファレンス
 プロジェクトのプロパティを構成およびカスタマイズする方法について詳しく学習します。
@@ -39,6 +38,6 @@ ms.locfileid: "49897863"
 | [[セキュリティ] ページ (プロジェクト デザイナー)](../../ide/reference/security-page-project-designer.md) | このページを使用して、[!INCLUDE[ndptecclick](../../deployment/includes/ndptecclick_md.md)] 配置によって配置されたアプリケーションのコード アクセス セキュリティの設定を構成できます。 |
 | [[署名] ページ (プロジェクト デザイナー)](../../ide/reference/signing-page-project-designer.md) | このページを使用して、アプリケーション マニフェストと配置マニフェストに署名し、アセンブリに署名できます。 |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [ソリューションおよびプロジェクト](../../ide/solutions-and-projects-in-visual-studio.md)

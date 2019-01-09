@@ -3,7 +3,6 @@ title: CPU 使用率データの分析 (ASP.NET)
 description: CPU 使用率診断ツールを使用して ASP.NET アプリでのアプリのパフォーマンスを測定する
 ms.custom: mvc
 ms.date: 08/06/2018
-ms.technology: vs-ide-debug
 ms.topic: quickstart
 helpviewer_keywords:
 - Profiling Tools, quick start
@@ -13,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 4d4f2382814cabbd26f93db27301ffa9b8d1c658
-ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
+ms.openlocfilehash: 594c6660c306faef635d14f60f1d717a04678db5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42626861"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53837395"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet"></a>クイック スタート: Visual Studio での CPU 使用率データの分析 (ASP.NET)
 
@@ -154,7 +153,7 @@ Windows 8 以降では、デバッガーを使用してプロファイル ツー
     }
     ```
 
-##  <a name="step-1-collect-profiling-data"></a>手順 1: プロファイル データを収集する 
+##  <a name="step-1-collect-profiling-data"></a>手順 1: プロファイリング データの収集 
   
 1.  最初に、`Simple` コンストラクターのこのコード行でアプリのブレークポイントを設定します。
 
@@ -195,7 +194,7 @@ Windows 8 以降では、デバッガーを使用してプロファイル ツー
 
      この時点で、データの分析を開始できます。
 
-## <a name="step-2-analyze-cpu-usage-data"></a>手順 2: CPU 使用率データを分析する
+## <a name="step-2-analyze-cpu-usage-data"></a>手順 2: CPU 使用率データの分析
 
 データの分析では、最初に CPU 使用率で関数の一覧を調べて最も多くの作業を行っている関数を特定し、それから個々の作業を詳しく調べることをお勧めします。
 

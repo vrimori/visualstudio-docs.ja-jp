@@ -2,7 +2,6 @@
 title: クラス デザイナーのキーボードとマウスのショートカット
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - vs.classdetails.window
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 87b447c3cf2fbba77584675edf3d34f44a98cb64
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 4a5cce869c2dacb0b6b4bc3e4031860b6772a9a2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49848502"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53826735"
 ---
 # <a name="keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window"></a>クラス ダイアグラムおよびクラスの詳細情報のウィンドウでのキーボードとマウスのショートカット
 

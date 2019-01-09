@@ -3,18 +3,18 @@ title: Visual Studio サブスクリプションの Visual Studio App Center 特
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
-ms.date: 01/15/2018
+ms.date: 12/19/2018
 ms.topic: Get-Started-Article
 description: Visual Studio サブスクリプションに含まれる Visual Studio App Center 特典について説明します。
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 112597455bbabe9f42cc2834bd06bf5c52d7cc9f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0a1a50888666f1597da008cec5a13c86a23a805e
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49940984"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738639"
 ---
 # <a name="visual-studio-app-center-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Visual Studio App Center
 
@@ -44,21 +44,26 @@ Visual Studio App Center を開始するのは簡単です。
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (標準、年間クラウド、月間クラウド)   | VL、Azure、リテール、NFR<sup>1</sup> | Included       |  [はい]          |
-| Visual Studio Professional (標準、年間クラウド、月間クラウド) | VL、Azure、リテール                                       | Included                                                            |[はい] |
-| Visual Studio Test Professional (標準)                         | VL、リテール                                              | Included                                                            |[はい] |
-| MSDN Platforms (標準)                                          | VL、リテール                                              | Included                                                            |[はい] |
-| Visual Studio Dev Essentials | N/A  | Included                                                            |[はい] |
+| Visual Studio Enterprise (Standard、月間クラウド)   | VL、Azure、リテール、NFR<sup>1</sup> | Included       |  はい          |
+| Visual Studio Professional (Standard、月間クラウド) | VL、Azure、リテール                                       | Included                                                            |はい |
+| Visual Studio Test Professional (標準)                         | VL、リテール                                              | Included                                                            |はい |
+| MSDN Platforms (標準)                                          | VL、リテール                                              | Included                                                            |はい |
+| Visual Studio Dev Essentials | N/A  | Included                                                            |はい |
 
 
-<sup>1</sup> *Not for Resale (NFR)、FTE、Visual Studio Industry Partner (VSIP)、Imagine、Microsoft Partner Network (MPN)、MCT Software & Services、MCT Software & Services Developer、BizSpark、Microsoft Valued Professional (MVP)、Region Director (RD) が含まれます。*
+<sup>1</sup>  *Not for Resale (NFR)、FTE、Visual Studio Industry Partner (VSIP)、Imagine、Microsoft Partner Network (MPN)、MCT Software & Services、MCT Software & Services Developer、BizSpark、Microsoft Valued Professional (MVP)、Region Director (RD) が含まれます。*
+
+
+> [!NOTE]
+> Microsoft では、クラウド サブスクリプションの Visual Studio Professional 年間サブスクリプションおよび Visual Studio Enterprise 年間サブスクリプションが提供されなくなりました。 サブスクリプションの更新、増減、キャンセルに関する既存のお客様のエクスペリエンスと機能については変更はありません。 新規のお客様は、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) に移動し、Visual Studio のさまざまな購入オプションを調べることをお勧めします。
+
 
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
-### <a name="q--i-get-an-error-that-my-browser-is-unsupported--whats-wrong"></a>Q: ブラウザーがサポートされていないというエラーが表示されます。  理由
-A: App Center では、一部の古いブラウザーでは提供されていない可能性がある最新の機能を必要とします。  お使いのブラウザーがサポートされていない場合は、次の手順に従います。
+### <a name="q--i-get-an-error-that-my-browser-is-unsupported--whats-wrong"></a>Q:ブラウザーがサポートされていないというエラーが表示されます。  理由
+A:App Center では、一部の古いブラウザーでは提供されていない可能性がある最新の機能を必要とします。  お使いのブラウザーがサポートされていない場合は、次の手順に従います。
 1.  別のブラウザー (Microsoft Edge、または Google Chrome、Firefox、または Safari の最新のバージョンなど) を開きます。
 2.  Visual Studio [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) に接続し、サインインしてください。
 3.  ここで Visual Studio App Center タイルにある **[開始]** リンクをクリックします。

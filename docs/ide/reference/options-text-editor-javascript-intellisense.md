@@ -2,7 +2,6 @@
 title: '[オプション]、[テキスト エディター]、[JavaScript]、[IntelliSense]'
 ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.Intellisense.References
@@ -14,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 742d6394975b6920218579e1b4652bb2e99c479c
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 688360e117863b6a1e5e3b06ad23a8835d878bd2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50670781"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53843008"
 ---
 # <a name="options-text-editor-javascript-intellisense"></a>[オプション]、[テキスト エディター]、[JavaScript]、[IntelliSense]
 JavaScript での IntelliSense の動作設定を変更するには、 **[オプション]** ダイアログ ボックスの **[IntelliSense]** ページを使用します。 **[IntelliSense]** ページにアクセスするには、メニュー バーの **[ツール]** > **[オプション]** を選択し、**[テキスト エディター]** > **[JavaScript]** > **[IntelliSense]** の順に展開します。
@@ -75,6 +74,6 @@ JavaScript での IntelliSense の動作設定を変更するには、 **[オプ
 
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [JavaScript IntelliSense](../../ide/javascript-intellisense.md)

@@ -1,8 +1,6 @@
 ---
 title: AssignProjectConfiguration タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 dev_langs:
 - VB
@@ -15,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d5fefc8098d94967b06bbe60f398a8a734d55202
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: f9e758fe7128c9ae9562c400008ab8573d7d8df6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946603"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53850889"
 ---
 # <a name="assignprojectconfiguration-task"></a>AssignProjectConfiguration タスク
 このタスクは、構成文字列の一覧を受け入れ、それらを指定されたプロジェクトに割り当てます。  
@@ -31,8 +29,8 @@ ms.locfileid: "37946603"
 |パラメーター|説明|  
 |---------------|-----------------|  
 |`SolutionConfigurationContents`|省略可能な `string` 型の出力パラメーターです。<br /><br /> 各プロジェクトのプロジェクト構成を含む XML 文字列が含まれます。 構成は、指定したプロジェクトに割り当てられます。|  
-|`DefaultToVcxPlatformMapping`|省略可能な `string` 型の出力パラメーターです。<br /><br /> ほとんどのタイプで使用されるプラットフォーム名から *.vcxproj* ファイルで使用されるプラットフォーム名へのマッピングのセミコロン (;) 区切りのリストが含まれています。<br /><br /> 例:<br /><br /> `"AnyCPU=Win32;X86=Win32;X64=X64"`|  
-|`VcxToDefaultPlatformMapping`|Optional<br /><br /> `string` 出力パラメーターです。<br /><br /> *.vcxproj* プラットフォーム名からほとんどのタイプで使用されるプラットフォーム名へのマッピングのセミコロン区切りのリストが含まれます。<br /><br /> 例:<br /><br /> `"Win32=AnyCPU;X64=X64"`|  
+|`DefaultToVcxPlatformMapping`|省略可能な `string` 型の出力パラメーターです。<br /><br /> ほとんどのタイプで使用されるプラットフォーム名から *.vcxproj* ファイルで使用されるプラットフォーム名へのマッピングのセミコロン (;) 区切りのリストが含まれています。<br /><br /> 次に例を示します。<br /><br /> `"AnyCPU=Win32;X86=Win32;X64=X64"`|  
+|`VcxToDefaultPlatformMapping`|Optional<br /><br /> `string` 出力パラメーターです。<br /><br /> *.vcxproj* プラットフォーム名からほとんどのタイプで使用されるプラットフォーム名へのマッピングのセミコロン区切りのリストが含まれます。<br /><br /> 次に例を示します。<br /><br /> `"Win32=AnyCPU;X64=X64"`|  
 |`CurrentProjectConfiguration`|省略可能な `string` 型の出力パラメーターです。<br /><br /> 現在のプロジェクトの構成が含まれます。|  
 |`CurrentProjectPlatform`|省略可能な `string` 型の出力パラメーターです。<br /><br /> 現在のプロジェクトのプラットフォームが含まれます。|  
 |`OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration`|省略可能な `bool` 型の出力パラメーターです。<br /><br /> プロジェクト構成で無効になっている場合でも、参照を構築する必要があることを示すフラグが含まれます。|  

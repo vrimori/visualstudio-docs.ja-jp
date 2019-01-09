@@ -4,7 +4,6 @@ titleSuffix: ''
 description: Visual Studio プロジェクトのコンテキストにおける Django の基本のチュートリアルです。具体的には、アプリの作成およびビューとテンプレートの使用に関する手順について取り上げます。
 ms.date: 11/19/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-python
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
@@ -13,12 +12,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: dade4ee20aec654a32fac6904cca121c2ea726e6
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: ce819f5d0a7167c4fce2871894df7c6edd26e6a6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058546"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53871704"
 ---
 # <a name="step-2-create-a-django-app-with-views-and-page-templates"></a>手順 2: ビューおよびページ テンプレートを使用して Django アプリを作成する
 

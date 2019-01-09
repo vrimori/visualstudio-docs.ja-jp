@@ -1,8 +1,6 @@
 ---
 title: C ライブラリ リファレンス | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Concurrency Visualizer SDK, C Library Reference
@@ -12,16 +10,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e48a9b5f601994a7a32aae38bdafbfdce6da22e7
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: e1120697c2dab50944323f1c119e3e229ac983bb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34266373"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53946224"
 ---
 # <a name="c-library-reference"></a>C ライブラリ リファレンス
-このセクションでは、同時実行ビジュアライザー SDK の参照情報について説明します。  
+このセクションでは、コンカレンシー ビジュアライザー SDK の参照情報について説明します。  
   
 > [!NOTE]
 >  C 言語の標準では、ライブラリなどの実装用として、アンダースコア (`_`) 文字で始まる識別子の使用が予約されています。 コード内でアンダースコアで始まる名前を使用しないでください。 この規則に従った名前を持つコード要素の動作は永続的に保証されたものではなく、今後のリリースで変更されることがあります。 そのため、このようなコード要素はこのドキュメントから除外されています。  
-  

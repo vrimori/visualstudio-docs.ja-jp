@@ -1,8 +1,6 @@
 ---
 title: 複数のカテゴリが存在します | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.timeline.multicategory
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e1481d5a6f22606875b0173bf0d3060bb455f022
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: b1c366e740b5633e6bcd1db142930a710af4cdff
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35257629"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53858092"
 ---
 # <a name="multiple-categories-are-present"></a>複数のカテゴリが存在します
 指定された時間範囲について複数の種類のアクティビティを含むセクションが選択されています。 2 色表示されており、これらの色は上下に重なっています。 これらの色は、指定された時間範囲で最も頻繁に発生した上位 2 つのアクティビティのみを表しています。 これらの 2 つのアクティビティの頻度は、他方との相関関係を示すように、縦棒の 3 分の 1 または 2 分の 1 として表示されます。 詳細を表示する場合は、スレッド ビューのこのセクションを拡大してみてください。  

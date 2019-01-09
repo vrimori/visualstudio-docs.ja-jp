@@ -1,8 +1,6 @@
 ---
 title: Property 要素 (MSBuild) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/13/2017
-ms.technology: msbuild
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d44b88f5d97fb8c70391506dc2daab99482d6a44
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 739e39bd09e8387904570d3690e7c9ff1447fae3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39154981"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53864444"
 ---
 # <a name="property-element-msbuild"></a>Property 要素 (MSBuild)
 ユーザー定義のプロパティ名と値を格納します。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトで使用されるすべてのプロパティは、`PropertyGroup` 要素の子として指定する必要があります。  

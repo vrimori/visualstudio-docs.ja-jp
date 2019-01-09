@@ -2,7 +2,6 @@
 title: -ResetSkipPkgs (devenv.exe)
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - /ResetSkipPkgs Devenv switch
@@ -14,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f797b6228124da8d8a998a6647dcfd9195ea92c
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.openlocfilehash: a892902e129044549f781648d34bf058bf6eae9b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948076"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53853633"
 ---
 # <a name="resetskippkgs-devenvexe"></a>/ResetSkipPkgs (devenv.exe)
 問題のある VSPackage の読み込みを避けるためにユーザーによって VSPackage に追加された、読み込みを省略するためのオプションをすべてクリアします。その後、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を起動させます。
@@ -40,6 +39,6 @@ Devenv /ResetSkipPkgs
 Devenv.exe /ResetSkipPkgs
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)

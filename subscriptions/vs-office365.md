@@ -3,18 +3,18 @@ title: Office 365 特典 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 10/4/2018
+ms.date: 12/19/2018
 ms.topic: Get-Started-Article
 description: 一部の Visual Studio サブスクリプションに含まれる Office 365 特典について説明します。
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 273bba31f0b080116677e9a8dfa727af462fb7bc
-ms.sourcegitcommit: 401be39a42ffe007593528b5bba62583ca9fcafd
+ms.openlocfilehash: eef2adf189650da528c2f76df88ff8b648ad7ba4
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50244464"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53802109"
 ---
 # <a name="office-365-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Office 365
 
@@ -31,7 +31,7 @@ ms.locfileid: "50244464"
 0. Office 365 をインストールするには、プロダクト キーが必要です。  Office 365 リストにある **[キーの取得]** をクリックします。
    > [!div class="mx-imgBorder"]
    > ![Office 365 のプロダクト キーの入手](_img/vs-office365/vs-office365-get-key.png)
-0. フライ アウト ウィンドウに、既に要求しているすべてのキーと、利用可能なキーが表示されます。  新しいキーを入手するには、**Office Professional Plus 2019** リストにある **[Claim key]\(キーの要求\)** をクリックします。
+0. フライ アウト ウィンドウに、既に要求しているすべてのキーと、利用可能なキーが表示されます。  新しいキーを入手するには、**Office Professional Plus 2019** リストにある **[キーの要求]** をクリックします。
    > [!div class="mx-imgBorder"]
    > ![Office 365 のプロダクト キーの要求](_img/vs-office365/vs-office365-claim-key.png)
 0. 要求したキーをメモします (いつでもこのリストに戻って確認することができます)。
@@ -55,15 +55,20 @@ Office 用アプリケーションを開発する予定がある場合は、[Off
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール| 使用可能       |  [はい]          |
+| Visual Studio Enterprise (Standard)   | VL、Azure、リテール| 使用可能       |  はい          |
 | Visual Studio Enterprise (Standard)   | NFR<sup>1</sup> | 使用できません       |  N/A          |
-| Visual Studio Professional (標準、年間クラウド) | VL、Azure、リテール                                       | 使用できません                                                            |  N/A          |
+| Visual Studio Professional (Standard) | VL、Azure、リテール                                       | 使用できません                                                            |  N/A          |
 | Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用できません                                             |  N/A          |
 | MSDN Platforms (標準)                                          | VL、リテール                                              | 使用できません                                              |  N/A          |
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure | 使用できません | N/A |
 | Visual Studio Dev Essentials | N/A  | 使用できません |N/A |
 
-<sup>1</sup> *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (MPN)、FTE、MCT Software & Services Developer、BizSpark、Microsoft Valued Professional (MVP)、Region Director (RD)、MCT Software & Services、Imagine、Microsoft Partner Network が含まれます。*
+<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (MPN)、FTE、MCT Software & Services Developer、BizSpark、Microsoft Valued Professional (MVP)、Region Director (RD)、MCT Software & Services、Imagine、Microsoft Partner Network が含まれます。*
+
+
+> [!NOTE]
+> Microsoft では、クラウド サブスクリプションの Visual Studio Professional 年間サブスクリプションおよび Visual Studio Enterprise 年間サブスクリプションが提供されなくなりました。 サブスクリプションの更新、増減、キャンセルに関する既存のお客様のエクスペリエンスと機能については変更はありません。 新規のお客様は、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) に移動し、Visual Studio のさまざまな購入オプションを調べることをお勧めします。
+
 
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 

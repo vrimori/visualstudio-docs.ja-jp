@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 9203b07767d38443dbad8cc619a40971ca09f2c6
-ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
+ms.openlocfilehash: 27a76ab16da00fe68b6dffbc072b926bf04fa502
+ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750787"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53441770"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>チュートリアル: Visual Studio で Node.js と React のアプリを作成する
 
@@ -258,7 +258,7 @@ webpack は、ブラウザーで実行できるように JavaScript ファイル
     }
     ```
 
-    webpack 構成コードは、TypeScript ローダーを使って JSX をトランスパイルするよう Webpack に指示します。
+    webpack 構成コードでは、TypeScript ローダーを使って JSX をトランスパイルするよう webpack に指示されます。
 
 1. *tsconfig.json* を開き、TypeScript コンパイラ オプションを指定する次のコードで既定のコードを置換します。
 

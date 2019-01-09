@@ -1,8 +1,6 @@
 ---
 title: チャネルの管理 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.tools.managechannels
@@ -14,15 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 89c5727b8bc294ae28f48a6e1fc3194b258b9555
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: 535b11f4ee27bd30301b983b34075a3d70947162
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34844431"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53853366"
 ---
 # <a name="manage-channels"></a>チャネルの管理
-同時実行ビジュアライザーの**スレッド ビュー**では、プロセスのチャネルを整理して、特定のパターンを調べることができます。 チャネルを並べ替えしたり、上下に移動したり、非表示/表示を切り替えることができます。  
+コンカレンシー ビジュアライザーの**スレッド ビュー**では、プロセスのチャネルを整理して、特定のパターンを調べることができます。 チャネルを並べ替えしたり、上下に移動したり、非表示/表示を切り替えることができます。  
   
 ## <a name="sort-by"></a>並べ替え  
  [並べ替え] コントロールを使用して、現在のズーム レベルに基づいて、異なる基準でスレッドを並べ替えることができます。 これは、特定のパターンを探しているときに特に便利です。 次のような条件で並べ替えることができます。  

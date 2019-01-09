@@ -3,19 +3,18 @@ title: Visual Studio IDE のツアー
 titleSuffix: ''
 ms.date: 07/12/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7864a85e676e76dda593580d58036c4429fa43c7
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: 057297bf3460811a848b86c84363771d2de0ed21
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53159569"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53856705"
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>クイック スタート: Visual Studio IDE の表示の紹介
 

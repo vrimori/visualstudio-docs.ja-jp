@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f0ad2c1411a47acd0219223fe928e4150368c80a
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: ccff5ef0575eea9d35239cab7bf3ffa47a11b315
+ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43780693"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53592665"
 ---
 # <a name="rapid-web-site-profiling-with-vsperfaspnetcmd"></a>VSPerfASPNETCmd を使用した迅速な Web サイト プロファイリング
 
-**VSPerfASPNETCmd** コマンド ライン ツールを使用すると、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションを簡単にプロファイルできます。 [VSPerfCmd](../profiling/vsperfcmd.md) コマンド ライン ツールと比較すると、オプションが減り、環境変数を設定する必要がなく、コンピューターを再起動する必要がありません。 スタンドアロン プロファイラーでプロファイリングを行う場合は、**VSPerfASPNETCmd** の使用をお勧めします。 詳細については、「[方法: スタンドアロンのプロファイラーをインストールする](../profiling/how-to-install-the-stand-alone-profiler.md)」をご覧ください。
+**VSPerfASPNETCmd** コマンド ライン ツールを使用すると、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションを簡単にプロファイルできます。 [VSPerfCmd](../profiling/vsperfcmd.md) コマンド ライン ツールと比較すると、オプションが減り、環境変数を設定する必要がなく、コンピューターを再起動する必要がありません。 スタンドアロン プロファイラーでプロファイリングを行う場合は、**VSPerfASPNETCmd** の使用をお勧めします。 詳細については、「[方法 :スタンドアロンのプロファイラーをインストールする](../profiling/how-to-install-the-stand-alone-profiler.md)」をご覧ください。
 
 > [!NOTE]
 > Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。
 
- 同時実行データの収集やプロファイリングの一時停止と再開などの一部のシナリオでは、プロファイリングに **VSPerfCmd** の使用をお勧めします。
+ コンカレンシー データの収集やプロファイリングの一時停止と再開などの一部のシナリオでは、プロファイリングに **VSPerfCmd** の使用をお勧めします。
 
 > [!NOTE]
-> プロファイリング ツールのコマンド ライン ツールは、Visual Studio インストール ディレクトリの *\Team Tools\Performance Tools* サブディレクトリにあります。 64 ビットのコンピューターでは、32 ビットの *\Team Tools\Performance Tools* ディレクトリにある VSPerfASPNETCmd ツールを使用します。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。
+>  プロファイル ツールへのパスを取得するには、[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)に関する記事をご覧ください。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。  
 
 ## <a name="profile-an-aspnet-application"></a>ASP.NET アプリケーションのプロファイル
 

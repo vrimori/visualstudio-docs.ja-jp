@@ -2,7 +2,6 @@
 title: '[オプション]、[テキスト エディター]、[JavaScript]、[コードの検証]'
 ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.TypeScript.Code_Validation.JavaScript_Errors
@@ -11,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e06c0a82a70cf3764df4937ed7d42b2c87f8aa46
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: c70906430ecc7175e4ceae1bfd55b308b2487be9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50673222"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53905612"
 ---
 # <a name="options-text-editor-javascript-code-validation"></a>[オプション]、[テキスト エディター]、[JavaScript]、[コードの検証]
 JavaScript でのエラーの処理方法の設定を変更するには、**[オプション]** ダイアログ ボックスの **[コードの検証]** ページを使用します。 **[コードの検証]** ページにアクセスするには、メニュー バーの **[ツール]** > **[オプション]** を選択し、**[テキスト エディター]** > **[JavaScript]** > **[コードの検証]** の順に展開します。
@@ -37,6 +36,6 @@ JavaScript でのエラーの処理方法の設定を変更するには、**[オ
 
  **[True]** に設定すると、JavaScript のエラーが **[エラー一覧]** にエラーではなく警告として表示されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [JavaScript IntelliSense](../../ide/javascript-intellisense.md)

@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 15020111702d68c8c35fb09655018215e3a11d3b
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 4f364f3e8fecbe93dad92e008c178d7eb26ff3e2
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53062817"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53803508"
 ---
 # <a name="edit-python-code"></a>Python コードの編集
 
@@ -196,7 +196,7 @@ Visual Studio の Python のサポートとして、ソース コードが提供
 
 ナビゲーション バーは各エディター ウィンドウの上部に表示され、2 つのレベルの定義リストを含みます。 左側のドロップダウン リストには、現在のファイル内の最上位のクラスと関数の定義が表示されます。右側のドロップダウン リストには、左側に表示されているスコープ内の定義のリストが表示されます。 エディター内を移動すると、リストが現在のコンテキストを示すように更新され、これらのリストからエントリを選択してそのエントリに直接ジャンプすることもできます。
 
-!Visual Studio エディターの [ナビゲーション バー] (media/code-editing-navigation-bar.png)
+![Visual Studio エディターのナビゲーション バー](media/code-editing-navigation-bar.png)
 
 > [!Tip]
 > ナビゲーション バーを非表示にするには、**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[Python]** > **[全般]** に移動し、**[設定]** > **[ナビゲーション バー]** をオフにします。

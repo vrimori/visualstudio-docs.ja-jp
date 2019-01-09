@@ -15,12 +15,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: a48de4bc48f24cc55914ccdb5fdeed0b4ad1d9a8
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 4f346f75078ff513dbbb91230d564686d6a1e023
+ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058952"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53441484"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-vuejs-app"></a>クイック スタート: Visual Studio を使用して初めての Vue.js アプリを作成する
 
@@ -41,7 +41,7 @@ ms.locfileid: "53058952"
 
 1. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択します。
 
-1. **[新しいプロジェクト]** ダイアログ ボックスが開いたら、**[JavaScript]** の **[Node.js]** か **[TypeScript]** の **[Node.js]** で **[基本的な Vue.js Web アプリケーション]** を選択し、プロジェクト名を入力し、**[OK]** をクリックします。
+1. **[新しいプロジェクト]** ダイアログ ボックスが開いたら、**[JavaScript]** > **[Node.js]** または **[TypeScript]** > **[Node.js]** で、**[基本的な Vue.js Web アプリケーション]** を選択します。 プロジェクト名を入力し、**[OK]** をクリックします。
 
      ![Vue.js テンプレート](../javascript/media/vuejs-template.png)
 
@@ -75,7 +75,7 @@ ms.locfileid: "53058952"
 
 ## <a name="add-a-vue-file-to-the-project"></a>.vue ファイルをプロジェクトに追加する
 
-1. ソリューション エクスプローラーで、*src* フォルダーなどのフォルダーを右クリックし、**[追加]**、**[新しい項目]** の順に選択します。
+1. ソリューション エクスプローラーで、*src/components* フォルダーなどのフォルダーを右クリックし、**[追加]** > **[新しい項目]** の順に選択します。
 
 1. **[JavaScript Vue 単一ファイル コンポーネント]** または **[TypeScript Vue 単一ファイル コンポーネント]** を選択し、**[追加]** をクリックします。
 
@@ -85,7 +85,7 @@ ms.locfileid: "53058952"
 
 1. (TypeScript プロジェクトのみ) Visual Studio から **[ビルド]**、**[ソリューションのクリーン]** の順に選択します。
 
-1. 次に、**[ビルド]**、**[ソリューションのビルド]** の順に選択し、プロジェクトをビルドします。 結果を見るには、**出力**ウィンドウを確認します。
+1. 次に、**[ビルド]**、**[ソリューションのビルド]** の順に選択し、プロジェクトをビルドします。 **[出力]** ウィンドウでビルド結果を確認し、**[出力元]** の一覧から **[ビルド]** を選択します。
 
     Vue.js プロジェクト テンプレートでは、ビルド後イベントを構成することで、`build` npm スクリプトが使用されます。 この設定を変更する場合、エクスプローラーからプロジェクト ファイル (*\<プロジェクト名\>.njsproj*) を開き、次のコード行を検索します。
 

@@ -2,19 +2,18 @@
 title: コード化された UI テストを使用して SharePoint アプリケーションをテストする
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 91d17857f1d20508041ad6c5daa90a962d6d30e6
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 32b408743a2017b6fe83c28659496844b204444f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895445"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53910187"
 ---
 # <a name="test-sharepoint-applications-with-coded-ui-tests"></a>コード化された UI テストを使用して SharePoint アプリケーションをテストする
 
@@ -51,7 +50,7 @@ Excel セル コントロールを含めるには、コード化された UI テ
 > [!WARNING]
 > Excel のセルにテキストを入力してから方向キーを操作すると、正しく記録されません。 セルの選択にはマウスを使用してください。
 
-空のセルに対する操作を記録している場合は、セルをダブルクリックしてからテキスト設定操作を実行して、コードを変更する必要があります。 そうする必要があるのは、セルをクリックした後、キーボードを操作すると、セル内の `textarea` がアクティブになるためです。 単に空のセルで `setvalue` を記録すると、セルがクリックされるまでは存在しない `editbox` が検索されます。 例:
+空のセルに対する操作を記録している場合は、セルをダブルクリックしてからテキスト設定操作を実行して、コードを変更する必要があります。 そうする必要があるのは、セルをクリックした後、キーボードを操作すると、セル内の `textarea` がアクティブになるためです。 単に空のセルで `setvalue` を記録すると、セルがクリックされるまでは存在しない `editbox` が検索されます。 次に例を示します。
 
 ```csharp
 Mouse.DoubliClick(uiItemCell,new Point(31,14));

@@ -1,8 +1,6 @@
 ---
 title: FindUnderPath タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#FindUnderPath
@@ -20,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c1f7ea93011878e9e47a5daa843a71d904318ce4
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 865e291e24bfb161f43e8fb5192a08e93cdb75d0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946522"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53869100"
 ---
 # <a name="findunderpath-task"></a>FindUnderPath タスク
 指定した項目コレクションの中で、指定したフォルダーの中にあるか、下にあるパスが含まれる項目を判断します。  

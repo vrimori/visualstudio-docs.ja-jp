@@ -13,17 +13,16 @@ helpviewer_keywords:
 - component ID, Visual Studio
 - install Visual Studio, administrator guide
 ms.service: ''
-ms.technology: vs-acquisition
 ms.prod: visual-studio-dev15
 ms.assetid: 5719032b-2c2e-416e-a281-a4573ec74e38
 ms.workload:
 - multiple
-ms.openlocfilehash: 38c4d3a37f0327137cd1398b64efc2a0fb4be088
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: cb164c9bc4da0768ef41645bf378fe83ad0b1ef6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53068611"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53957976"
 ---
 # <a name="visual-studio-professional-2017-component-directory"></a>Visual Studio Professional 2017 のコンポーネント ディレクトリ
 
@@ -36,7 +35,7 @@ ms.locfileid: "53068611"
 * 選択した場合は、**推奨**コンポーネントと**オプション** コンポーネントもインストールできます。
 * どのワークロードにも関連付けられていない追加のコンポーネントの一覧を示したセクションも追加しました。
 
-VSIX マニフェストで依存関係を設定するときは、コンポーネント ID のみを指定する必要があります。 このページの表を使用して、コンポーネントの最小の依存関係を確認してください。 シナリオによって、1 つのワークロードの 1 つのコンポーネントだけを指定する場合もあれば、 1 つのワークロードの複数のコンポーネントを指定したり、複数のワークロードの複数のコンポーネントを指定したりする場合もあります。 詳細については、「[方法: 機能拡張プロジェクトの Visual Studio 2017 への移行](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)に関するページを参照してください。
+VSIX マニフェストで依存関係を設定するときは、コンポーネント ID のみを指定する必要があります。 このページの表を使用して、コンポーネントの最小の依存関係を確認してください。 シナリオによって、1 つのワークロードの 1 つのコンポーネントだけを指定する場合もあれば、 1 つのワークロードの複数のコンポーネントを指定したり、複数のワークロードの複数のコンポーネントを指定したりする場合もあります。 詳細については、「[方法: Migrate Extensibility Projects to Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)」 (方法: 機能拡張プロジェクトを Visual Studio 2017 に移行する) を参照してください。
 
 これらの ID の使用方法の詳細については、「[Use Command-Line Parameters to Install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md)」(コマンドライン パラメーターを使用して Visual Studio 2017 をインストールする) をご覧ください。 その他の製品のワークロードとコンポーネント ID の一覧については、「[Visual Studio 2017 Workload and Component IDs](workload-and-component-ids.md)」(Visual Studio 2017 のワークロード ID とコンポーネント ID) をご覧ください。
 

@@ -1,8 +1,6 @@
 ---
 title: ImportGroup 要素 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/13/2017
-ms.technology: msbuild
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c40fd9e5f21940be77af7dfbddf496594502641e
-ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
+ms.openlocfilehash: 21dcaa5e4192c2ee4dd223da5cad560ded220275
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50751025"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53928991"
 ---
 # <a name="importgroup-element"></a>ImportGroup 要素
 オプションの条件下でグループ化された `Import` 要素のコレクションが格納されます。 詳しくは、「[Import 要素 (MSBuild)](../msbuild/import-element-msbuild.md)」をご覧ください。  

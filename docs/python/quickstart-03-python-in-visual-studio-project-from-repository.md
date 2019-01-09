@@ -3,7 +3,6 @@ title: クイック スタート - Python コードのリポジトリを複製�
 description: このクイック スタートでは、Visual Studio チーム エクスプローラーを使用して Python Koans リポジトリを複製することで、Visual Studio で Python プロジェクトを作成します。
 ms.date: 12/06/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-python
 ms.topic: quickstart
 author: kraigb
 ms.author: kraigb
@@ -12,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 871a5f620cc90db5064562461336fdeac38ba757
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: a98b236d12954d5707df7fa4933c1f31150c7a0c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53068394"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53922844"
 ---
 # <a name="quickstart-clone-a-repository-of-python-code-in-visual-studio"></a>クイック スタート: Visual Studio で Python コードのリポジトリを複製する
 

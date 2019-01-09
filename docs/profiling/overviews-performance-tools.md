@@ -1,8 +1,6 @@
 ---
 title: 概要 (パフォーマンス ツール) | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: b877802d-c736-4047-821a-bd7733fff6de
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 904ebf55e7920bfd79fec3afb502d59e5dc82a33
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: db30d1754d12dd167a89b569e67e4d375486443f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35254619"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989936"
 ---
 # <a name="overviews-performance-tools"></a>概要 (パフォーマンス ツール)
 このセクションでは、開発中のアプリケーションのパフォーマンス特性を測定するのに使用できる [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールの概念と用語の概要について説明します。  
@@ -37,7 +35,7 @@ ms.locfileid: "35254619"
  .NET メモリ プロファイル方法を使用する場合に報告されるデータ値について説明します。  
   
  [リソース競合データ値について](../profiling/understanding-resource-contention-data-values.md)  
- 同時実行プロファイル方法を使用する場合に報告されるデータ値について説明します。  
+ コンカレンシー プロファイル方法を使用する場合に報告されるデータ値について説明します。  
   
  [[パフォーマンス エクスプローラー] ウィンドウ](../profiling/performance-explorer-window.md)  
  パフォーマンス セッションの構成と開始に使用されるウィンドウについて説明します。  

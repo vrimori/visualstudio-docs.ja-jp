@@ -3,19 +3,18 @@ title: アプリのメモリ使用量を測定する
 description: デバッガーに統合された診断ツールを使用したデバッグ中に、メモリ リークおよび非効率的なメモリを見つけます。
 ms.custom: seodec18
 ms.date: 04/25/2017
-ms.technology: vs-ide-debug
 ms.topic: tutorial
 author: mikejo5000
 ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 622f35ccbe29130dea3b35b96373da0c8b39e0b7
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 62bf07ba0f5f63daa369e88795824f53f9109ce6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052078"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53942295"
 ---
 # <a name="measure-memory-usage-in-visual-studio"></a>Visual Studio でのメモリ使用量の測定
 デバッガーに統合された**メモリ使用量**診断ツールを使用したデバッグ中に、メモリ リークおよび非効率的なメモリを見つけます。 メモリ使用量ツールを使うと、マネージド メモリ ヒープとネイティブ メモリ ヒープの 1 つまたは複数の "*スナップショット*" を取得して、オブジェクト型のメモリ使用量への影響を理解するのに役立てることができます。 .NET アプリ、ネイティブ アプリ、または混在モード (.NET とネイティブ) アプリのスナップショットを収集できます。  
@@ -113,7 +112,8 @@ ms.locfileid: "53052078"
 ### <a name="managed-types-reports"></a>マネージド型レポート  
  メモリ使用量の概要テーブルで、**[オブジェクト (相違)]** または **[割り当て (相違)]** セルの現在のリンクを選択します。  
   
- ![デバッガーのマネージド型のレポート &amp;amp;#45; ルートへのパス](../profiling/media/dbgdiag_mem_managedtypesreport_pathstoroot.png "DBGDIAG_MEM_ManagedTypesReport_PathsToRoot")  
+ 
+  ![デバッガーのマネージド型のレポート &#45; ルートへのパス](../profiling/media/dbgdiag_mem_managedtypesreport_pathstoroot.png "DBGDIAG_MEM_ManagedTypesReport_PathsToRoot")  
   
  上のウィンドウには、型で参照されているすべてのオブジェクトのサイズ (**包括サイズ**) を含む、スナップショット内の型の総数およびサイズが表示されます。  
   

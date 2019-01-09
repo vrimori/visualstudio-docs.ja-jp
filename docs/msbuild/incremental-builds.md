@@ -1,8 +1,6 @@
 ---
 title: インクリメンタル ビルド | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - msbuild, incremental builds
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e877d6383a4a4257fa72fde0d1daf4a91626025
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 21fb67169fa2ac563dd813ce505b93776761736c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079217"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53930044"
 ---
 # <a name="incremental-builds"></a>インクリメンタル ビルド
 インクリメンタル ビルドは、対応する入力ファイルに対して最新の状態の出力ファイルを含むターゲットが実行されないように最適化されたビルドです。 ターゲット要素には、ターゲットが入力として受け取る項目を示す `Inputs` 属性と、ターゲットが出力として生成する項目を示す `Outputs` 属性の両方を指定できます。 MSBuild は、これらの属性の値間に一対一の対応関係があるかどうかを確認します。 一対一の対応関係が存在する場合、MSBuild は、すべての入力項目のタイム スタンプをそれぞれ対応する出力項目のタイム スタンプと比較します。 一対一の対応関係が存在しない出力ファイルは、すべての入力ファイルと比較されます。 項目が最新の状態であると見なされるのは、その出力ファイルが入力ファイルと同じタイム スタンプであるかそれよりも新しい場合です。  

@@ -1,8 +1,6 @@
 ---
 title: VSPerfCLREnv | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - command-line tools, VSPerfCLREnv
@@ -15,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5623cfc9d6f72805e4ced489ef7a786aaad155e6
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: ae0e54aff0e4206bd5c79c30c810dc6ba497ddf3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34446232"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53965085"
 ---
 # <a name="vsperfclrenv"></a>VSPerfCLREnv
 
@@ -85,7 +83,7 @@ VSPerfCmd /Attach:MyService.exe
 
 ## <a name="vsperfclrenv-options-for-global-profiling"></a>グローバル プロファイル用の VSPerfCLREnv オプション
 
-ユーザーではなくオペレーティング システムによって起動された ASP.NET Web アプリケーションなどのマネージ サービスをプロファイルするには、グローバル プロファイル用の VSPerfCLREnv オプションを使用します。 グローバル バージョンの VSPerfCLREnv オプションについての説明を次の表に示します。 これらのオプションにより、適切な環境変数がレジストリに設定されます。
+ユーザーではなくオペレーティング システムによって起動された ASP.NET Web アプリケーションなどのマネージド サービスをプロファイルするには、グローバル プロファイル用の VSPerfCLREnv オプションを使用します。 グローバル バージョンの VSPerfCLREnv オプションについての説明を次の表に示します。 これらのオプションにより、適切な環境変数がレジストリに設定されます。
 
 |オプション|説明|
 |------------|-----------------|
@@ -98,7 +96,7 @@ VSPerfCmd /Attach:MyService.exe
 
 ## <a name="vsperfclrenv-options-to-delete-environment-settings"></a>環境設定を削除するための VSPerfCLREnv オプション
 
- マネージ アプリケーションのプロファイルが完了したら、次のいずれかのオプションを使用して、VSPerfCLREnv で追加した環境変数を削除します。 次の表で、標準的な環境変数とグローバル環境変数の両方を削除する方法について説明します。
+ マネージド アプリケーションのプロファイルが完了したら、次のいずれかのオプションを使用して、VSPerfCLREnv で追加した環境変数を削除します。 次の表で、標準的な環境変数とグローバル環境変数の両方を削除する方法について説明します。
 
 |オプション|説明|
 |------------|-----------------|
@@ -107,9 +105,9 @@ VSPerfCmd /Attach:MyService.exe
 
 ## <a name="remarks"></a>コメント
 
-IDE のパフォーマンス エクスプローラーを使用して起動されたマネージ アプリケーションの場合、アプリケーションのプロファイルにこれらのオプションは必要ありません。 必要なすべての環境設定は、パフォーマンス エクスプローラーによって設定されます。
+IDE のパフォーマンス エクスプローラーを使用して起動されたマネージド アプリケーションの場合、アプリケーションのプロファイルにこれらのオプションは必要ありません。 必要なすべての環境設定は、パフォーマンス エクスプローラーによって設定されます。
 
-プロファイル中に正しい環境が設定されていないと、分析時に警告が報告され、マネージ関数名は正しく解決されません。
+プロファイル中に正しい環境が設定されていないと、分析時に警告が報告され、マネージド関数名は正しく解決されません。
 
 ## <a name="see-also"></a>関連項目
 

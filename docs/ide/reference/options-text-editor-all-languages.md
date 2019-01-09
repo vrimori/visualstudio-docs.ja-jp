@@ -2,7 +2,6 @@
 title: '[オプション]、[テキスト エディター]、[すべての言語]'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.General
@@ -21,12 +20,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fa208805a8d6861082793551dbbc595985fdc55
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 0b8e0322a34d2f846f6db96cad372ebbe329f57b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52387989"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53987915"
 ---
 # <a name="options-text-editor-all-languages"></a>[オプション]、[テキスト エディター]、[すべての言語]
 
@@ -103,7 +102,7 @@ ms.locfileid: "52387989"
 > [!TIP]
 > 空白、タブ、および行末のインジケーターを表示し、インデントの設定された行と、空白行とを区別できるようにするには、**[編集]** メニューの **[詳細]** をクリックし、**[スペースの表示]** を選択します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [[オプション]、[テキスト エディター]、[すべての言語]、[タブ]](../../ide/reference/options-text-editor-all-languages-tabs.md)
 - [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)

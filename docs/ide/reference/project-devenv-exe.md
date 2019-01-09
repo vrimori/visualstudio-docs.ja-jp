@@ -2,7 +2,6 @@
 title: -Project (devenv.exe)
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - /project Devenv switch
@@ -18,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b18e4715eb711160d0adcc95c6a19e4b90bcc94
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.openlocfilehash: 2c73167c5529eda0f97f414e7c0e2d76083b7bb0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948219"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53921615"
 ---
 # <a name="project-devenvexe"></a>/Project (devenv.exe)
 指定したソリューション構成内の単一のプロジェクトを、ビルド、クリーン、リビルド、または配置対象として指定します。
@@ -53,11 +52,11 @@ devenv SolutionName {/build|/clean|/rebuild|/deploy} SolnConfigName [/project Pr
 
  `SolnConfigName`
 
- 必須。 `SolutionName` で指定されたソリューションに適用されるソリューション構成の名前。
+ 必須です。 `SolutionName` で指定されたソリューションに適用されるソリューション構成の名前。
 
  `SolutionName`
 
- 必須。 ソリューション ファイルの完全パスと名前。
+ 必須です。 ソリューション ファイルの完全パスと名前。
 
  /project `ProjName`
 
@@ -82,7 +81,7 @@ devenv SolutionName {/build|/clean|/rebuild|/deploy} SolnConfigName [/project Pr
 devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
 - [/ProjectConfig (devenv.exe)](../../ide/reference/projectconfig-devenv-exe.md)

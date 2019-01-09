@@ -2,7 +2,6 @@
 title: List Modules コマンド
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - debug.listmodules
@@ -16,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 54e975cf886f0bb8392bd3679a28bae6bb6bfe00
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 1d13fe40866f8c3baf7d47e17a98515ea8197dfe
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31944662"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53962650"
 ---
 # <a name="list-modules-command"></a>List Modules コマンド
 現在のプロセスのモジュールが一覧表示されます。
@@ -78,8 +77,8 @@ Debug.ListModules [/Address:yes|no] [/Name:yes|no] [/Order:yes|no]
 Debug.ListModules /Address:yes /Name:yes /Order:no /Path:no /Process:no /SymbolFile:no /SymbolStatus:no /Timestamp:yes /Version:no
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
 - [コマンド ウィンドウ](../../ide/reference/command-window.md)
-- [方法 : [モジュール] ウィンドウを使用する](../../debugger/how-to-use-the-modules-window.md)
+- [方法: [モジュール] ウィンドウを使用する](../../debugger/how-to-use-the-modules-window.md)

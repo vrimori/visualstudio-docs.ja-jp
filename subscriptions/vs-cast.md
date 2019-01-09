@@ -3,18 +3,18 @@ title: Visual Studio サブスクリプションの CAST Highlight 特典 | Micr
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 12/04/2018
+ms.date: 12/19/2018
 ms.topic: conceptual
 description: 一部の Visual Studio サブスクリプションで使用可能な CAST Highlight 特典について説明します
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 74ed8a20195936c5ba7ef9c7ce7591838b620d5d
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 7ee8059a8e80834b6b35f93be888d7fd90e4a3a3
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52897073"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53739998"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの CAST Highlight 特典
 
@@ -89,8 +89,8 @@ Visual Studio Enterprise サブスクライバーは、サブスクライバー�
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール、 | 30 日間 5 つのアプリを評価|  いいえ。  新しいサブスクライバーのみが使用できます          |
-| Visual Studio Professional (標準、年間クラウド) | VL、Azure、リテール                                       | 使用できません                                                             |  N/A          |
+| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、 | 30 日間 5 つのアプリを評価|  いいえ。  新しいサブスクライバーのみが使用できます          |
+| Visual Studio Professional (Standard) | VL、Azure、リテール                                       | 使用できません                                                             |  N/A          |
 | Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用できません                                             |  N/A           |
 | MSDN Platforms (標準)                                          | VL、リテール                                              | 使用できません                                              |  N/A          |
 | Visual Studio Dev Essentials | N/A  | 使用できません | N/A |
@@ -99,8 +99,11 @@ Visual Studio Enterprise サブスクライバーは、サブスクライバー�
 
 
 
-<sup>1</sup> *Not for Resale (NFR)、FTE、Microsoft Valued Professional (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、Visual Studio Industry Partner (VSIP)、Microsoft Certified Trainer、BizSpark、Imagine が含まれます*
+<sup>1</sup>  *Not for Resale (NFR)、FTE、Microsoft Valued Professional (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、Visual Studio Industry Partner (VSIP)、Microsoft Certified Trainer、BizSpark、Imagine が含まれます*
 
+
+> [!NOTE]
+> Microsoft では、クラウド サブスクリプションの Visual Studio Professional 年間サブスクリプションおよび Visual Studio Enterprise 年間サブスクリプションが提供されなくなりました。 サブスクリプションの更新、増減、キャンセルに関する既存のお客様のエクスペリエンスと機能については変更はありません。 新規のお客様は、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) に移動し、Visual Studio のさまざまな購入オプションを調べることをお勧めします。
 
 
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。

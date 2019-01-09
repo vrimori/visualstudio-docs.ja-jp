@@ -17,16 +17,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c03709517f1c1d5bd28a2a0847a51895eb49557
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 06696ca975fb80eaa97cd265c9d45e6174d3b053
+ms.sourcegitcommit: 75e02ed88a1ace6e8265fd4e3a82a1bc78f3adca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052153"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53348545"
 ---
 # <a name="create-solutions-and-projects"></a>ソリューションとプロジェクトを作成する
 
-*プロジェクト*は Visual Studio の論理コンテナーであり、ソース コード ファイル、ビットマップ、アイコン、コンポーネント、サービス参照など、アプリのビルドに必要なアイテムが格納されます。 新しいプロジェクトを作成すると、そのプロジェクトを含む*ソリューション*が Visual Studio によって作成されます。 その後、必要に応じて他の新規または既存のプロジェクトをソリューションに追加できます。 ソリューションには、特定のプロジェクトに関連付けられていないファイルを含めることもできます。
+"*プロジェクト*" には、ソース コード ファイル、ビットマップ、アイコン、コンポーネント、サービス参照など、Visual Studio でアプリをビルドするために必要なアイテムが格納されています。 新しいプロジェクトを作成すると、そのプロジェクトを含む*ソリューション*が Visual Studio によって作成されます。 その後、必要に応じて他の新規または既存のプロジェクトをソリューションに追加できます。 ソリューションには、特定のプロジェクトに関連付けられていないファイルを含めることもできます。
 
 ![ソリューション/プロジェクト階層](./media/vside-proj-soln.png)
 

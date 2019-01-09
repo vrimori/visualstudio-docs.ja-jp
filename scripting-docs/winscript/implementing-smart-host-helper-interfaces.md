@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 016e2a0641772992c9c3e6f423e105c42ae20ff1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 2aff2d43d36fd543eea12d7fc60d3c56271af641
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49909823"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54088349"
 ---
 # <a name="implementing-smart-host-helper-interfaces"></a>スマート ホスト ヘルパー インターフェイスの実装
 [IDebugDocumentHelper インターフェイス](../winscript/reference/idebugdocumenthelper-interface.md)は、スマート ホストに必要な多くのインターフェイスの実装を提供することで、アクティブ デバッグ用のスマート ホストを作成するタスクを大幅に簡略化します。  
@@ -53,7 +53,7 @@ ms.locfileid: "49909823"
   
      プロセスの概要を示す次のコードには、エラー チェックや信頼性の高い他のプログラミング手法は含まれません。  
   
-    ```  
+    ```cpp
     CoCreateInstance(CLSID_ProcessDebugManager, NULL,  
           CLSCTX_INPROC_SERVER | CLSCTX_INPROC_HANDLER  
           | CLSCTX_LOCAL_SERVER,  
@@ -80,13 +80,13 @@ ms.locfileid: "49909823"
 ## <a name="implementing-iactivescriptsitedebug"></a>IActiveScriptSiteDebug を実装する  
  [IActiveScriptSiteDebug::GetDocumentContextFromPosition](../winscript/reference/iactivescriptsitedebug-getdocumentcontextfromposition.md) を実装するには、特定のサイトに対応するヘルパーを取得した後、次のようにして特定のソース コンテキストの開始ドキュメント オフセットを取得します。  
   
-```  
+```cpp
 pddh->GetScriptBlockInfo(dwSourceContext, NULL, &ulStartPos, NULL);  
 ```  
   
  次に、ヘルパーを使って特定の文字オフセットの新しいドキュメント コンテキストを作成します。  
   
-```  
+```cpp
 pddh->CreateDebugDocumentContext(ulStartPos + uCharacterOffset, cChars, &pddcNew);  
 ```  
   
@@ -105,5 +105,5 @@ pddh->CreateDebugDocumentContext(ulStartPos + uCharacterOffset, cChars, &pddcNew
   
 -   ファイル システムでのドキュメントのパス名を提供します。 一部のデバッグ UI はこれを使って、ユーザーがドキュメントを編集して変更を保存できるようにします。 ドキュメントが保存された後は、ホストに通知するために [IDebugDocumentHost::NotifyChanged](../winscript/reference/idebugdocumenthost-notifychanged.md) が呼び出されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [アクティブ スクリプトのデバッグの概要](../winscript/active-script-debugging-overview.md)

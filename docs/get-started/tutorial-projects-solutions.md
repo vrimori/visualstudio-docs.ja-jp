@@ -2,23 +2,24 @@
 title: プロジェクトとソリューションの概要
 ms.date: 12/11/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
+ms.technology: vs-ide-general
+ms.custom: get-started
 ms.topic: tutorial
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a4967f687f214e544aa65526144803ce31e99d7
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: 25450c2bb2965852e2077fc234548f224e070ff8
+ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53159335"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53441744"
 ---
 # <a name="learn-about-projects-and-solutions"></a>プロジェクトとソリューションについて理解する
 
-この入門記事では、Visual Studio で*ソリューション*と*プロジェクト*を作成することの意味について説明します。 ソリューションは、1 つまたは複数の関連するコード プロジェクトを整理するために使われるコンテナーです。たとえば、クラス ライブラリとそれに対応するテスト プロジェクトなどです。 プロジェクトのプロパティと、プロジェクトに含めることができるファイルのいくつかを紹介します。 また、あるプロジェクトから別のプロジェクトへの参照も作成します。
+この入門記事では、Visual Studio で*ソリューション*と*プロジェクト*を作成することの意味について説明します。 ソリューションは、1 つまたは複数の関連するコード プロジェクトを整理するために使われるコンテナーです。たとえば、クラス ライブラリ プロジェクトとそれに対応するテスト プロジェクトなどです。 プロジェクトのプロパティと、プロジェクトに含めることができるファイルのいくつかを紹介します。 また、あるプロジェクトから別のプロジェクトへの参照も作成します。
 
 Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
@@ -29,7 +30,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ## <a name="solutions-and-projects"></a>ソリューションとプロジェクト
 
-ソリューションとは、Visual Studio で 1 つまたは複数の関連プロジェクトを整理するために使用するコンテナーです。 Visual Studio でソリューションを開くと、ソリューションに含まれているすべてのプロジェクトが自動的に読み込まれます。
+ソリューションは、その名前にもかかわらず、"答え" ではありません。 ソリューションは、Visual Studio で 1 つまたは複数の関連プロジェクトを整理するために使用される単なるコンテナーです。 Visual Studio でソリューションを開くと、ソリューションに含まれているすべてのプロジェクトが自動的に読み込まれます。
 
 ### <a name="create-a-solution"></a>ソリューションを作成する
 

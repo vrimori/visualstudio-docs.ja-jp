@@ -1,8 +1,6 @@
 ---
 title: MSBuild プロジェクト ファイル スキーマ リファレンス | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ed3fd3fc60e6c263d7363047ed36b2f0d891a76
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: ea993233409f7df9f99b345184634e4de6e59618
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078941"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53852428"
 ---
 # <a name="msbuild-project-file-schema-reference"></a>MSBuild プロジェクト ファイル スキーマ リファレンス
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] XML スキーマのすべての要素と、使用可能な属性および子要素をまとめた表を提供します。  

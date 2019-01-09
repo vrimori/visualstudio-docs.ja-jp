@@ -4,7 +4,6 @@ titleSuffix: ''
 description: 前提条件や新しい Python プロジェクトの作成など、Visual Studio での Python 機能の中核となるチュートリアルの概要と手順 1。
 ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-python
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
@@ -13,12 +12,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1aaf0c0258d502693b771cad66f9347dd60f80e8
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 2741d98eff02fd17be67213ab1069bdd43476475
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53049854"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53916047"
 ---
 # <a name="tutorial-work-with-python-in-visual-studio"></a>チュートリアル: Visual Studio での Python の使用
 

@@ -10,18 +10,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: c806150acf8fb37ab7e3fd36a879a6c1273b015a
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: edc3971841bffab19e49ba5e884a157fe4233b0a
+ms.sourcegitcommit: 34840a954ed3446c789e80ee87da6cbf1203cbb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53063358"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53592756"
 ---
 # <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-concurrency-data-by-using-the-command-line"></a>方法:コマンド ラインを使用してプロファイラーを ASP.NET Web アプリケーションにアタッチし、コンカレンシー データを収集する
 この記事では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイル ツールのコマンド ライン ツールを使用して、プロファイラーを ASP.NET アプリケーションにアタッチし、プロセス データおよびスレッド コンカレンシー データを収集する方法について説明します。  
 
- プロファイリング ツールのコマンド ライン ツールは、Visual Studio インストール ディレクトリの *\Team Tools\Performance Tools* サブディレクトリにあります。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 コマンド プロンプトでプロファイラーを使用するには、**[コマンド プロンプト]** ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 詳細については、[コマンドライン ツールにパスを指定する](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)方法に関するページをご覧ください。  
-
+プロファイル ツールへのパスを取得するには、[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)に関する記事をご覧ください。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。  
+  
  コンカレンシー データを収集するには、Web サイトをホストする ASP.NET ワーカー プロセスにプロファイラーをアタッチします。 プロファイラーをアプリケーションにアタッチしている間はデータ収集を一時停止し、完了後に再開できます。 プロファイル セッションを終了するには、アプリケーションへのプロファイラーのアタッチを解除し、プロファイラーを明示的に終了する必要があります。 ほとんどの場合、セッションの最後にプロファイル環境変数を消去する必要があります。  
 
 ## <a name="attach-the-profiler"></a>プロファイラーのアタッチ  

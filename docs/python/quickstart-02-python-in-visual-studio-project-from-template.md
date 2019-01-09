@@ -3,7 +3,6 @@ title: クイック スタート - テンプレートを使用して Python プ�
 description: このクイック スタートでは、基本的な Flask アプリ用の組み込みテンプレートを使用し、Python 向けの Visual Studio プロジェクトを作成します。
 ms.date: 12/06/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-python
 ms.topic: quickstart
 author: kraigb
 ms.author: kraigb
@@ -12,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c36fc6e10b196c3da4ba58ff047adab62345fa6f
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: f01750978527a02d0d67267f550b8a0c0c558435
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53066026"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53964556"
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>クイック スタート: Visual Studio のテンプレートから Python プロジェクトを作成する
 
@@ -92,7 +91,7 @@ Visual Studio は、Python クラス、Python パッケージ、Python 単体テ
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [チュートリアル:Visual Studio での Python の使用](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
+> [チュートリアル: Visual Studio での Python の使用](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>関連項目
 

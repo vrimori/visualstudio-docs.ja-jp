@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ba270b4d7240d30db5b20388d6c75782dba6a256
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: e5b3a43862b840c323abd3d96ce0784f69b5db4b
+ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53159725"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53561906"
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする
 
@@ -56,7 +56,7 @@ ms.locfileid: "53159725"
 | `update` | インストールされている製品を更新します。 |
 | `repair` | インストールされている製品を修復します。 |
 | `uninstall` | インストールされている製品をアンインストールします。 |
-| `export` | **15.9 の新機能**:インストールの選択をインストール構成ファイルにエクスポートします。 |
+| `export` | **15.9 の新機能**:インストールの選択をインストール構成ファイルにエクスポートします。 **注**:vs_installer.exe でのみ使用できます。 |
 
 | **インストール オプション** | **説明** |
 | ----------------------- | --------------- |

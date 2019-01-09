@@ -1,8 +1,6 @@
 ---
 title: デザイン時のアセンブリの解決 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - msbuild
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ad24bcf461dab05444f0e26ffd4e0c826f3f2bed
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 7e8f2bc946df5a84b85fc64f513d35c94c98b152
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39153463"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53986073"
 ---
 # <a name="resolve-assemblies-at-design-time"></a>デザイン時のアセンブリの解決
 **[参照の追加]** ダイアログの **[.NET]** タブを使用してアセンブリへの参照を追加する場合、その参照は中間参照アセンブリを指します。つまり、すべての型情報と署名情報を含んでいるが、コードを必ずしも含まないアセンブリを指します。 **[.NET]** タブには、.NET Framework のランタイム アセンブリに対応する参照アセンブリの一覧が表示されます。 さらに、サードパーティによって使用される、登録済みの AssemblyFoldersEx フォルダーのランタイム アセンブリに対応する参照アセンブリの一覧も表示されます。  

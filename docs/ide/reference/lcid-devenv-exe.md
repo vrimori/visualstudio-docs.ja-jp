@@ -2,7 +2,6 @@
 title: -LCID (devenv.exe)
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - language default
@@ -18,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a97874ae1267677c5055e84650a839068479fc10
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.openlocfilehash: f5c3f8633721a4568b81fab31d8fe91a4c33be2f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948596"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53852074"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 統合開発環境 (IDE) 内の文字列、通貨、およびその他の値に使用する既定の言語を設定します。
@@ -63,7 +62,7 @@ devenv {/LCID|/l} LocaleID
 devenv /LCID 1033
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
 - [[国際対応の設定] ([オプション] ダイアログ ボックス - [環境])](../../ide/reference/international-settings-environment-options-dialog-box.md)

@@ -12,12 +12,12 @@ ms.service: multiple
 ms.technology: vs-ai-tools
 ms.workload:
 - azure
-ms.openlocfilehash: 6cf5c2529d54637e1e6ad4a111c3d3c456e6fae1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6fd6f8befce66a117f5f2dcb598a7359ba9c15c0
+ms.sourcegitcommit: 8cdc6e2ad2341f34bd6b02859a7c975daa0c9320
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49882393"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53307646"
 ---
 # <a name="train-ai-models-in-azure-batch-ai"></a>Azure Batch AI での AI モデルのトレーニング
 
@@ -50,11 +50,11 @@ Azure Batch AI は、Visual Studio Tools for AI に統合されているため�
 
     ![サンプル ギャラリー](media/train-model/tensorflowexamples.png)
 
-7. MNIST プロジェクトを [スタートアップ プロジェクト] として設定
+7. MNIST プロジェクトを**スタートアップ プロジェクト**として設定します
 
     ![サンプル ギャラリー](media/train-model/mnist-startup.png)
 
-8. <strong>MNIST プロジェクトを右クリックし、[ジョブの送信] をクリックします。</strong>
+8. <strong>**MNIST プロジェクト**を右クリックし、**[ジョブの送信]** をクリックします</strong>
 
     ![サンプル ギャラリー](media/train-model/submit-job.png)
 9. 目的の **Azure Batch AI** クラスターを選択し、**[インポート]** をクリックします。 `AzureBatchAI_TF_MNIST.json` ファイルを選択します。これにより、使用する Docker イメージなど、いくつかの既定値がすぐに入力されます。 **[送信]** をクリックします。

@@ -1,8 +1,6 @@
 ---
 title: コール ツリー ビュー - .NET メモリ サンプリング データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Call Tree view
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c3c7c70057380289272e86cf7187680746dafdd2
-ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
+ms.openlocfilehash: 7f8e2e6e480bb082c0f60bd94a06b28ea12c268b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34336046"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53988272"
 ---
 # <a name="call-tree-view---net-memory-sampling-data"></a>コール ツリー ビュー - .NET メモリ サンプリング データ
 [コール ツリー] ビューには、プロファイリングされるアプリケーションで走査された関数の実行パスが表示されます。 ツリーのルートは、アプリケーションまたはコンポーネントへのエントリ ポイントです。 各関数ノードは、それが呼び出したすべての関数と、それらの関数呼び出しに関する .NET メモリ割り当てデータを一覧表示します。  
