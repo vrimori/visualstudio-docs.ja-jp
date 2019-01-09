@@ -16,13 +16,12 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
-ms.openlocfilehash: be0784197c03aa3117d559cd4aa99797027c8170
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: badeb0d01347bf4410b645dc901f3ec518178574
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061812"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989245"
 ---
 # <a name="analyzing-threshold-rule-violations-in-load-tests-using-the-load-test-analyzer"></a>ロード テスト アナライザーを使用したロード テストのしきい値規則違反の分析
 
@@ -39,10 +38,10 @@ ms.locfileid: "53061812"
 |Column|説明|既定で表示|
 |-|-|-|
 |時刻|ロード テスト中に違反が発生した時刻。|[はい]|
-|コンピューター|違反が発生した、テスト中のコンピューター名。 **注:** この情報は、リモート テスト マシン群でロード テストを実行する場合に重要です。|はい|
-|カテゴリ|違反が発生したパフォーマンス カウンターのカテゴリ。|はい|
-|カウンター|違反が発生したパフォーマンス カウンターの名前。|はい|
-|[インスタンス]|違反が発生したパフォーマンス カウンター インスタンス。|はい|
+|コンピューター|違反が発生した、テスト中のコンピューター名。 **注:** この情報は、リモート テスト マシン群でロード テストを実行する場合に重要です。|[はい]|
+|カテゴリ|違反が発生したパフォーマンス カウンターのカテゴリ。|[はい]|
+|カウンター|違反が発生したパフォーマンス カウンターの名前。|[はい]|
+|[インスタンス]|違反が発生したパフォーマンス カウンター インスタンス。|[はい]|
 |メッセージ|しきい値違反について説明するメッセージ。 たとえば、**値 5 は重大なしきい値 0 を超えています**。|[はい]|
 
 > [!NOTE]
