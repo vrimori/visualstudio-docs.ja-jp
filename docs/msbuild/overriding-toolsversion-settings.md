@@ -1,8 +1,6 @@
 ---
 title: ToolsVersion 設定のオーバーライド | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, overriding ToolsVersion setting
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f0abe9db7178678c4ffda7f4179117817b3add6
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: ffb58fdbf35d2fc070fbf2463ee02fa154f84f94
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48879308"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53867979"
 ---
 # <a name="override-toolsversion-settings"></a>ToolsVersion 設定のオーバーライド
 プロジェクトおよびソリューションのツールセットは、次の 3 つの方法のいずれかで変更できます。  
@@ -30,7 +28,7 @@ ms.locfileid: "48879308"
 3.  ソリューション内のプロジェクトに `$(ProjectToolsVersion)` プロパティを設定します。 これにより、他のプロジェクトとは異なるツールセットのバージョンを使用して、ソリューション内にプロジェクトをビルドできます。  
   
 ## <a name="override-the-toolsversion-settings-of-projects-and-solutions-on-command-line-builds"></a>コマンド ラインでのビルドでプロジェクトおよびソリューションの ToolsVersion 設定をオーバーライドする  
- Visual Studio プロジェクトは通常、プロジェクト ファイルに指定された ToolsVersion でビルドされますが、コマンド ラインで `-ToolsVersion` (または `-tv`) スイッチを指定することによって、プロジェクト ファイルの ToolsVersion 値をオーバーライドし、すべてのプロジェクトとそのプロジェクト間依存関係を別のツールセットでビルドできます。 例:  
+ Visual Studio プロジェクトは通常、プロジェクト ファイルに指定された ToolsVersion でビルドされますが、コマンド ラインで `-ToolsVersion` (または `-tv`) スイッチを指定することによって、プロジェクト ファイルの ToolsVersion 値をオーバーライドし、すべてのプロジェクトとそのプロジェクト間依存関係を別のツールセットでビルドできます。 次に例を示します。  
   
 ```cmd  
 msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug  

@@ -2,7 +2,6 @@
 title: Alias コマンド
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - tools.alias
@@ -18,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 41bddec00866f7c10140abc40c5ff12c623310d3
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: fa8b14618085ddae67616f5ef3e30fb1b030e45a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33703406"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53930688"
 ---
 # <a name="alias-command"></a>Alias コマンド
 完全なコマンド、完全なコマンドと引数、または他のエイリアスに対して新しいエイリアスを作成します。
@@ -74,9 +73,9 @@ Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
 >Tools.Alias
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
 - [コマンド ウィンドウ](../../ide/reference/command-window.md)
 - [検索コマンド ボックス](../../ide/find-command-box.md)
-- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
