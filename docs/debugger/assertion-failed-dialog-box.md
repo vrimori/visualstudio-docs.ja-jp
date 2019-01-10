@@ -1,8 +1,6 @@
 ---
-title: アサーションに失敗しました ダイアログ ボックス |Microsoft ドキュメント
-ms.custom: ''
+title: アサーションに失敗しました ダイアログ ボックス |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.assertions
@@ -22,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 14be93cb60be53d98f13852ac6fcc1fd725e2d0e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 4d13d216a47d77d4948fe7ec28bffd0d750433a3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31456426"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53824848"
 ---
 # <a name="assertion-failed-dialog-box"></a>[アサートに失敗しました] ダイアログ ボックス
 アサート ステートメントでは、プログラムの特定位置にある true となるはずの条件を指定します。 条件が true にならない場合、アサーションは失敗し、プログラムの実行が停止し、このダイアログ ボックスが表示されます。  
@@ -38,5 +36,5 @@ ms.locfileid: "31456426"
 |Ignore|アサーションを無視してプログラムを引き続き実行します。|  
 |[中止]|プログラムの実行を停止し、デバッグ セッションを終了します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [C/C++ アサーション](../debugger/c-cpp-assertions.md)

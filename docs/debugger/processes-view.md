@@ -1,8 +1,6 @@
 ---
 title: プロセス ビュー |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.externaltools.spyplus.processesview
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 003ea4962766d9c0b8adef698912024fecd1508e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: b898713b456afd72f6453bad01028af9090b8dd2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49936707"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53922956"
 ---
 # <a name="processes-view"></a>プロセス ビュー
 プロセス ビューには、システム上のすべてのアクティブなプロセスのツリーが表示されます。 プロセス ID とモジュール名が表示されます。 通常、実行中のプログラムに対応する特定のシステム プロセスを確認する場合は、プロセス ビューを使用します。 プロセスは、モジュール名で識別されますまたは「システム プロセスです」を指定します。  

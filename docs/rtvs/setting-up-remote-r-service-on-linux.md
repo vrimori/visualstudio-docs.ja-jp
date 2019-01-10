@@ -3,7 +3,6 @@ title: Linux 上でのリモート R サービスの設定
 description: Ubuntu および Windows Subsystem for Linux 上にリモート R サービスをセットアップする方法について説明します。
 ms.date: 12/04/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-rtvs
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
@@ -11,12 +10,12 @@ ms.reviewer: karthiknadig
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 81a0a5c26e91056e757bc6e6f68cd217e98c7e06
-ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
+ms.openlocfilehash: c9406db2f7ae97a40936d672fb01d4943aeadcce
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51220815"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53835946"
 ---
 # <a name="remote-r-service-for-linux"></a>Linux 用のリモート R サービス
 
@@ -170,4 +169,3 @@ Linux 用のリモート R サービスは現在、rtvs デーモンとしてパ
     ```
 1. `az container list` コマンドを使用して、状態を確認します。 `provisioningState`: `Succeeded` を探してください。
 1. プロビジョニングが成功すると、コンテナーに接続できるようになります。 `ipAddress` フィールドでパブリック IP アドレスを検索し、これを、Docker ファイル内の資格情報と一緒に使用して、RTVS からコンテナーに接続します。
-

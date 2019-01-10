@@ -1,22 +1,20 @@
 ---
 title: エラー :関数の評価&#39;関数&#39;がタイムアウトし、安全でない方法で中止されるために必要な |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
 - vs.debug.error.unsafe_func_eval_abort
-ms.technology: vs-ide-debug
 author: mikejo5000
 ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 459ece9551ce8bd64703db139f8024ece4953cfa
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: a72bd821d7ecd32e82b2ad3b02debe03ff511531
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53648549"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53883312"
 ---
 # <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>エラー :関数の評価&#39;関数&#39;タイムアウトしたため、安全でない方法で中止する必要があります。
 
@@ -35,9 +33,9 @@ ms.locfileid: "53648549"
 エラー メッセージでは、デバッガーを呼び出すしようとしました。 関数の名前を確認します。 この関数を変更する場合は、プロパティ get アクセス操作子または ToString メソッドの呼び出しからデバッガーを回避できます。 次のいずれかの操作を行います。
  
 * 他の種類のプロパティ get アクセス操作子以外のコードにメソッドを変更するか、ToString メソッドと、問題が解消します。
-    または
+    - または -
 * (の ToString)DebuggerDisplay 属性を型に定義し、デバッガー以外の ToString を評価することができます。
-    または
+    - または -
 * (のプロパティ ゲッター)配置、`[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]`プロパティの属性。 API の互換性の理由から、プロパティを維持する必要があるメソッドがある場合に役立ちます。 が、メソッドが本当に必要です。
  
 ### <a name="solution-2-have-the-target-code-ask-the-debugger-to-abort-the-evaluation"></a>解決方法 2評価を中止するデバッガーを求める対象のコードがあります。
@@ -51,7 +49,3 @@ ms.locfileid: "53648549"
 ### <a name="solution-4-enable-managed-compatibility-mode"></a>ソリューション(&S)マネージ互換モードを有効にします。
 
 従来のデバッグ エンジンに切り替えると、このエラーを回避できる可能性があります。 移動して**ツール** > **オプション**、設定を選択および**デバッグ** > **全般** > **マネージ互換モードを使う**します。 詳細については、次を参照してください。[デバッグ オプション全般](../debugger/general-debugging-options-dialog-box.md)します。
-
-
-
-  

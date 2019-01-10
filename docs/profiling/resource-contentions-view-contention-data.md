@@ -1,8 +1,6 @@
 ---
 title: リソースの競合ビュー - 競合データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.performance.view.resourcecontention
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e33a27d5f2b14effc9d8a90e903b34822d81edfb
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 662ae2c4b96320dda0d3f9f4efb350ed0e61be0f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31584140"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53870509"
 ---
 # <a name="resource-contentions-view---contention-data"></a>リソースの競合ビュー - 競合データ
 リソースの競合ビューには、競合イベントが発生する原因となったリソースの競合データが表示されます。 競合イベントは、あるスレッドの関数にリソースへの排他アクセスが割り当てられているため、そのリソースに対する別のスレッドの関数からのアクセスが待機状態になると発生します。 それぞれのリソースが、競合イベントが発生する原因となった関数の実行パスを表示するコール ツリーのルート ノードに該当します。  

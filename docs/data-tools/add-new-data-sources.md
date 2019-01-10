@@ -12,15 +12,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: fe32424632d06ed637b41dcd3d4b614afde369bd
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: d203fc6c0ecb61310a31ae172fe68bcdf77f66a8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304611"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53863853"
 ---
 # <a name="add-new-data-sources"></a>新しいデータ ソースの追加
 
@@ -82,7 +81,7 @@ Visual Studio での .NET データ ツールのコンテキストでは、用�
 
 ## <a name="data-source-for-a-service"></a>サービスのデータ ソース
 
-サービスからのデータ ソースを作成するには、実行、**データ ソース構成ウィザード**を選択し、**サービス**データ ソースの種類。 これのショートカットに過ぎない、**サービス参照の追加**でプロジェクトを右クリックしてアクセスすることもできますこのダイアログ ボックスで、**ソリューション エクスプ ローラー**を選択すると**サービス参照の追加**。
+サービスからのデータ ソースを作成するには、実行、**データ ソース構成ウィザード**を選択し、**サービス**データ ソースの種類。 これのショートカットに過ぎない、**サービス参照の追加**でプロジェクトを右クリックしてアクセスすることもできますこのダイアログ ボックスで、**ソリューション エクスプ ローラー**を選択すると**サービス参照の追加。**.
 
 サービスからデータ ソースを作成すると、Visual Studio によりサービス参照がプロジェクトに追加されます。 Visual Studio には、サービスで返されるオブジェクトに対応するプロキシ オブジェクトも作成します。 たとえば、データセットを返すサービスは、プロジェクト内でデータセットとして表現され、特定の型を返すサービスは、プロジェクト内で、返される型として表現されます。
 

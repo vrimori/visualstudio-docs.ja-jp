@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d454bb625f51f336b4b127848aad7c57a73f0456
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.openlocfilehash: 396fe5511e1ef027b8dff1af350e2fa5b883e980
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51795077"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53845500"
 ---
 # <a name="collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method-from-the-profiler-command-line"></a>プロファイラーのコマンド ラインからインストルメンテーション メソッドを使用した、サービスの詳細なタイミング データの収集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51795077"
 |タスク|関連するコンテンツ|  
 |----------|---------------------|  
 |**スタンドアロン (クライアント) アプリケーションのプロファイリング**|-   [インストルメンテーションを使用した詳細なタイミング データの収集](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line.md)|  
-|**ASP.NET Web アプリケーションのプロファイリング**|-   [インストルメンテーションを使用した詳細なタイミング データの収集](../profiling/collecting-detailed-timing-data-for-an-aspnet-web-application-using-the-profiler-instrumentation-method-from-the-command-line.md)|  
+|**ASP.NET Web アプリケーションのプロファイリング**|-   [インストルメンテーションを使用した詳細なタイミング データの収集](/visualstudio/profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method?view=vs-2015)|  
   
 ### <a name="analyzing-instrumentation-data-views-and-reports"></a>インストルメンテーション データ ビューとレポートの分析  
  [インストルメンテーション メソッドのデータ ビュー](../profiling/instrumentation-method-data-views.md)

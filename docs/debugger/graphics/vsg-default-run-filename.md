@@ -1,8 +1,6 @@
 ---
-title: VSG_DEFAULT_RUN_FILENAME |Microsoft ドキュメント
-ms.custom: ''
+title: VSG_DEFAULT_RUN_FILENAME |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: ea549d2f-c857-458c-93c7-bc5a2d11d15d
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 303bce554ff6345a37719a8d2f529f3c1ffe02e2
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: a05acfd07e8b67bf500864f00ead4d78f2da22ae
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31472024"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53922560"
 ---
 # <a name="vsgdefaultrunfilename"></a>VSG_DEFAULT_RUN_FILENAME
 グラフィックス ログ ファイルの既定のファイル名を定義します。  
@@ -40,7 +38,7 @@ ms.locfileid: "31472024"
 ## <a name="remarks"></a>コメント  
  プリプロセッサ シンボル `DONT_SAVE_VSGLOG_TO_TEMP` が定義されている場合、ファイル名はキャプチャされるアプリケーションの現在のディレクトリに対する相対パスになるか、または絶対パスです。それ以外の場合は、ユーザーの一時ファイル ディレクトリに対する相対パスになり、絶対パスにすることはできません。  
   
- 定義済みのファイル名を変更する必要がありますを再定義する、インクルードする前に`vsgcapture.h`プログラムでします。  
+ 定義済みのファイル名を変更する必要がありますを再定義する、追加する前に、`vsgcapture.h`プログラムでします。  
   
 ## <a name="example"></a>例  
  次の例に、キャプチャ ファイルの既定のファイル名を変更する方法を示します。  
@@ -52,5 +50,5 @@ ms.locfileid: "31472024"
 #include <vsgcapture.h>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [DONT_SAVE_VSGLOG_TO_TEMP](dont-save-vsglog-to-temp.md)

@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_reference |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: de32c77f34478389fcac5d121a20fa2de897d1a5
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 7526bc31f14e7950f101e8dfd27a30116ec178b4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49923772"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53851694"
 ---
 # <a name="idiasymbolgetreference"></a>IDiaSymbol::get_reference
 ポインター型が参照するかどうかを指定するフラグを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49923772"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_reference (   
+HRESULT get_reference (   
    BOOL* pRetVal  
 );  
 ```  
@@ -42,5 +40,5 @@ HRESULT get_reference (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

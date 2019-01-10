@@ -1,8 +1,6 @@
 ---
-title: 列挙体と構造体 |Microsoft ドキュメント
-ms.custom: ''
+title: 列挙体と構造体 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -17,15 +15,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bc3b2b74c6539cbbdfd1a7e99c88c0b1e65c5cc
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: c8f994e83e6817062878ef7a0d8e6cd9981b3ec9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31462053"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53988084"
 ---
 # <a name="enumerations-and-structures"></a>列挙型と構造体
-これらは、列挙体と DIA SDK によって使用される構造です。  
+これらは、列挙型および DIA SDK によって使用される構造です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -34,13 +32,13 @@ ms.locfileid: "31462053"
  シンボルの基本的な型を指定します。  
   
  [CV_access_e 列挙型](../../debugger/debug-interface-access/cv-access-e.md)  
- メンバー関数および変数の表示 (アクセス レベル) のスコープを指定します。  
+ メンバー関数と変数の可視性 (アクセス レベル) のスコープを指定します。  
   
  [CV_call_e 列挙型](../../debugger/debug-interface-access/cv-call-e.md)  
  関数の呼び出し規約を指定します。  
   
  [CV_CFL_LANG 列挙型](../../debugger/debug-interface-access/cv-cfl-lang.md)  
- アプリケーションまたはリンクされたモジュールのソース コードの言語を指定します。  
+ アプリケーションまたはリンクされているモジュールのソース コードの言語を指定します。  
   
  [CV_CPU_TYPE_e 列挙型](../../debugger/debug-interface-access/cv-cpu-type-e.md)  
  ターゲット プロセッサを指定します。  
@@ -83,5 +81,5 @@ ms.locfileid: "31462053"
  [定数 (Debug Interface Access SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)  
  DIA SDK で使用できる定数を指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [参照](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)

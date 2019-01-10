@@ -2,7 +2,6 @@
 title: コマンドのエイリアス
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - aliases, Visual Studio commands
@@ -18,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a74bc2bc38befe81ec3a26c5da4819dbe1c66148
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: ae0064052fa2f042eec218f3653f4b43fa24ba0a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056439"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53878888"
 ---
 # <a name="visual-studio-command-aliases"></a>Visual Studio Command Aliases
 
@@ -127,7 +126,7 @@ ms.locfileid: "53056439"
 |[プロセスの一覧]|&#124;|Debug.ListProcesses|
 |[ListThreads コマンド](../../ide/reference/list-threads-command.md)|~ ~*k ~\*kb|Debug.ListThreads Debug.ListTheads /AllThreads|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
 - [コマンド ウィンドウ](../../ide/reference/command-window.md)

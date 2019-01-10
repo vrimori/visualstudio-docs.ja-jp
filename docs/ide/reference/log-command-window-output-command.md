@@ -2,7 +2,6 @@
 title: LogCommandWindowOutput コマンド
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - tools.logcommandwindowoutput
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2de9b21f55765706a56110aee84959b2003e994e
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 23e6400df4323fc5bcf918448e35f6d4a2a9d767
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704682"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53830522"
 ---
 # <a name="log-command-window-output-command"></a>LogCommandWindowOutput コマンド
 **[コマンド]** ウィンドウの入出力をすべてファイルにコピーします。
@@ -75,9 +74,9 @@ Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
 >Tools.LogCommandWindowOutput /on
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
 - [コマンド ウィンドウ](../../ide/reference/command-window.md)
 - [検索コマンド ボックス](../../ide/find-command-box.md)
-- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)

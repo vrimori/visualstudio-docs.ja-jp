@@ -3,7 +3,6 @@ title: エラー :対象コンピューター上の Visual Studio リモート �
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: troubleshooting
 f1_keywords:
 - vs.debug.error.service_access_denied_oncallback
@@ -17,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 37caaea1f70771145f318d892025d566a99f4ea6
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 202d4f8f62aeb19836c30e76751d8a2c5b6f3033
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53062623"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53963288"
 ---
 # <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>エラー :対象コンピューター上の Visual Studio リモート デバッガーが、このコンピューターに接続できません
 このエラーは、Visual Studio リモート デバッガー サービスがデバッグを開始したコンピューターに接続するときに、このサービスを実行しているユーザー アカウントを認証できないことを示します。  
@@ -32,12 +31,12 @@ ms.locfileid: "53062623"
 |||||  
 |-|-|-|-|  
 ||LocalSystem アカウント|ドメイン アカウント|両方のコンピューターに同じユーザー名とパスワードを持つローカル アカウント|  
-|両方のコンピューターが同じドメインにある場合|はい|[はい]|はい|  
-|両方のコンピューターが双方向の信頼関係を持つドメインにある場合|×|×|はい|  
-|一方または両方のコンピューターがワークグループにある場合|×|×|はい|  
-|コンピューターが異なるドメインにある場合|×|×|はい|  
+|両方のコンピューターが同じドメインにある場合|[はい]|[はい]|[はい]|  
+|両方のコンピューターが双方向の信頼関係を持つドメインにある場合|×|×|[はい]|  
+|一方または両方のコンピューターがワークグループにある場合|×|×|[はい]|  
+|コンピューターが異なるドメインにある場合|×|×|[はい]|  
   
- また、次の条件を満たす必要があります。  
+ さらに:  
   
 -   Visual Studio リモート デバッガー サービスを実行するアカウントは、すべてのプロセスをデバッグできるように、リモート コンピューターの管理者アカウントであることが必要です。  
   
@@ -75,6 +74,6 @@ ms.locfileid: "53062623"
   
 -   リモート デバッグ モニターをサービスとして実行する代わりに、アプリケーションとして実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)   
  [Remote Debugging](../debugger/remote-debugging.md)

@@ -5,8 +5,7 @@ ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
@@ -31,12 +30,12 @@ caps.latest.revision: 67
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 201a56d412d1ca5e82c80ba62f3e967407475a59
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
-ms.translationtype: HT
+ms.openlocfilehash: a70e9598a6cae07a1ef6fcb861924b250a444ffe
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53804313"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53864544"
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -282,7 +281,7 @@ IntelliSense ではコード入力中に情報が表示されるため、コー�
 
 -   読み込まれなかった参照が [出力] ウィンドウに表示されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 - [IntelliSense の使用](../ide/using-intellisense.md)
 - [XML ドキュメントのコメントを作成する](../ide/create-xml-documentation-comments-for-javascript-intellisense.md)
 - [JavaScript IntelliSense の拡張](../ide/extending-javascript-intellisense.md)

@@ -1,8 +1,6 @@
 ---
 title: スクリプトのデバッグに関する制限事項 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -19,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c85f990d08a41bd4b4ee25190d0c5b6bd99d340
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
-ms.translationtype: MT
+ms.openlocfilehash: 565f483c12e3d91bd68919537feb06af5029abc7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37058023"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53825959"
 ---
 # <a name="limitations-on-script-debugging"></a>スクリプト デバッグの制約
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、クライアント側のスクリプトのデバッグをサポートしています。ただし、このトピックで説明する制約があります。  
@@ -34,7 +32,7 @@ ms.locfileid: "37058023"
   
 -   ブレークポイントは `<script>` ブロック内に設定する必要があります。 インライン スクリプト内または `<% %>` ブロック内のブレークポイントは、マップされません。  
   
--   ページのブラウザー URL には、ページ名が含まれている必要があります。 たとえば、 http://microsoft.com/default.apsx のようにします。 ブレークポイントのマップなどでアドレスからのリダイレクトを認識できない http://microsoft.com 既定のページにします。  
+-   ページのブラウザー URL には、ページ名が含まれている必要があります。 たとえば、 http://microsoft.com/default.apsx のようにします。 ブレークポイントのマップなどでアドレスからのリダイレクトを認識できない http://microsoft.com既定のページにします。  
   
 -   ブレークポイントは、ブラウザー URL で指定されているページ内に設定されている必要があります。そのページに含まれる ASPX コントロール (ascx) ファイル、マスター ページ、またはその他のファイルに設定されているブレークポイントはマップされません。 含まれるページに設定されているブレークポイントは、マップされません。  
   
@@ -43,7 +41,7 @@ ms.locfileid: "37058023"
 -   `<script id="">` ブロック内に設定されているブレークポイントに対して、ブレークポイントのマップでは、`id` 属性は無視されます。  
   
 ## <a name="breakpoint-mapping-and-duplicate-lines"></a>ブレークポイントのマップおよび重複行  
- サーバー側スクリプトとクライアント側スクリプトの対応する場所を検索するために、ブレークポイントのマップのアルゴリズムでは、各行のコードを調べます。 アルゴリズムでは、各行が一意であることを前提にしています。 2 つ以上の行に同じコードが含まれ、その重複行の 1 つにブレークポイントが設定されている場合、ブレークポイントのマップのアルゴリズムで、クライアント側ファイルの正しくない重複行が選択されることがあります。 この問題を回避するには、ブレークポイントを設定した行にコメントを追加します。 例えば:  
+ サーバー側スクリプトとクライアント側スクリプトの対応する場所を検索するために、ブレークポイントのマップのアルゴリズムでは、各行のコードを調べます。 アルゴリズムでは、各行が一意であることを前提にしています。 2 つ以上の行に同じコードが含まれ、その重複行の 1 つにブレークポイントが設定されている場合、ブレークポイントのマップのアルゴリズムで、クライアント側ファイルの正しくない重複行が選択されることがあります。 この問題を回避するには、ブレークポイントを設定した行にコメントを追加します。 次に例を示します。  
   
 ```csharp
 i++ ;  

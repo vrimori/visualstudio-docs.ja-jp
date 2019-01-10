@@ -1,8 +1,6 @@
 ---
 title: 各種のプロファイル方法を使用したコマンド ラインからのパフォーマンス データの収集 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 5613fafc-f298-4e7a-9a2d-a853b61cdf9c
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e8dbaf62043897292afbb2805879e0447f3048a
-ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
+ms.openlocfilehash: 38cb2718feafc2976b41c7a9b14f66c1afdbf435
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39276703"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53931039"
 ---
 # <a name="use-profiling-methods-to-collect-performance-data-from-the-command-line"></a>各種のプロファイル方法を使用したコマンド ラインからのパフォーマンス データの収集
 使用する [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのコマンド ライン ツールおよびオプションは、プロファイル対象のアプリケーションの種類、使用するプロファイル方法、ターゲット アプリケーションが、ネイティブ コードと [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] コードのどちらで記述されているかなどの要因によって決まります。  
@@ -62,8 +60,8 @@ ms.locfileid: "39276703"
 |**実行中のプロセスにアタッチする**|-   [スタンドアロンの .NET Framework アプリケーション](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-app-to-collect-memory-data.md)<br />-   [ASP.NET Web アプリケーション](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line.md)<br />-   [.NET サービス](../profiling/how-to-attach-the-profiler-to-a-dotnet-service-to-collect-memory-data-by-using-the-command-line.md)|  
 |**モジュールをインストルメント化する**|-   [スタンドアロンの .NET Framework コンポーネント](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-memory-data.md)<br />-   [静的にコンパイルされた ASP.NET Web アプリケーション](../profiling/how-to-instrument-a-statically-compiled-aspnet-app-and-collect-memory-data.md)<br />-   [動的にコンパイルされた ASP.NET Web アプリケーション](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md)<br />-   [.NET サービス](../profiling/how-to-instrument-a-dotnet-framework-service-and-collect-memory-data-by-using-the-profiler-command-line.md)|  
   
-## <a name="use-the-concurrency-method-to-collect-resource-contention-and-thread-activity-data"></a>同時実行メソッドを使用してリソースの競合およびスレッド アクティビティのデータを収集する  
- プロファイリング ツールの同時実行メソッドを使用すると、マルチスレッド アプリケーションのリソースの競合およびスレッドとプロセスのアクティビティ データを収集できます。  
+## <a name="use-the-concurrency-method-to-collect-resource-contention-and-thread-activity-data"></a>コンカレンシー メソッドを使用してリソースの競合およびスレッド アクティビティのデータを収集する  
+ プロファイリング ツールのコンカレンシー メソッドを使用すると、マルチスレッド アプリケーションのリソースの競合およびスレッドとプロセスのアクティビティ データを収集できます。  
   
  プロファイラーを使用してアプリケーションを開始することも、実行中のアプリケーションのインスタンスにプロファイラーをアタッチすることもできます。  
   

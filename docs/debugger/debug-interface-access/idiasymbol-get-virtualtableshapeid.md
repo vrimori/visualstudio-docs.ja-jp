@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_virtualtableshapeid |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 95e911bce6e09cdc8fc474ffbe42446eb4f1ae5b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 898156d9583b91d0105fa9a6f1e6051f4a48ddf8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49850907"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53860102"
 ---
 # <a name="idiasymbolgetvirtualtableshapeid"></a>IDiaSymbol::get_virtualTableShapeId
 シンボルの仮想テーブル シェイプのシンボル id を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49850907"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_virtualTableShapeId (   
+HRESULT get_virtualTableShapeId (   
    DWORD* pRetVal  
 );  
 ```  
@@ -42,8 +40,8 @@ HRESULT get_virtualTableShapeId (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティがシンボルを使用できないことを意味します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  識別子は、一意としてすべてのシンボルをマークする DIA SDK によって作成された一意の値です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -2,7 +2,6 @@
 title: 例外の後にシステム コードを調べる |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -18,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f2e3de04d07ffe1bf2853113cb003a273fa9e5a7
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 3ea7f4223a6d61faa852d7985f77f4f672d26d17
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050993"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53878641"
 ---
 # <a name="how-to-examine-system-code-after-an-exception"></a>方法: 例外の後にシステム コードを調べる
 例外が発生した場合、システム コール内のコードを調べて、例外の原因を判断する必要がある場合があります。 システム コードのシンボルが読み込まれていない場合、または [マイ コードのみ] が有効な場合にこの操作を行う方法を次の手順に示します。  
@@ -44,5 +43,5 @@ ms.locfileid: "53050993"
   
 4.  **[呼び出し履歴]** ウィンドウおよび他のウィンドウで、システム コードを調べることができるようになります。 たとえば、呼び出し履歴のフレームをダブルクリックすると、ソースや **[逆アセンブル]** ウィンドウ内のコードを表示できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [デバッガーでの例外の管理](../debugger/managing-exceptions-with-the-debugger.md)

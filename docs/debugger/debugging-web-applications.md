@@ -1,8 +1,6 @@
 ---
 title: Web アプリケーションのデバッグ |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -20,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: faafe243d5bf60e83d060334d8591bdb4cd9bbb3
-ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
+ms.openlocfilehash: 7f494e365de28603d2231323fa1ab501b826c28e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53561630"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53923042"
 ---
 # <a name="debugging-web-applications"></a>Web アプリケーションのデバッグ
 ここでは、いくつかの種類の Web アプリケーションのデバッグ方法について説明します。  
@@ -38,8 +36,8 @@ ms.locfileid: "53561630"
  [ASP.NET アプリケーションをデバッグする](../debugger/how-to-enable-debugging-for-aspnet-applications.md)  
  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションのデバッグを有効にするために必要な手順について説明します。  
   
-## <a name="see-also"></a>参照  
- [Web アプリケーションとスクリプトのデバッグ](../debugger/debugging-web-applications-and-script.md)   
+## <a name="see-also"></a>「  
+ [Web アプリケーションとスクリプトのデバッグ](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)   
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   
  [デバッガーでのはじめ](../debugger/debugger-feature-tour.md) [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)

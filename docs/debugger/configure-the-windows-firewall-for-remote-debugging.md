@@ -1,7 +1,6 @@
 ---
 title: リモート デバッグ用の Windows ファイアウォールの構成 |Microsoft Docs
 ms.date: 10/31/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 66e3230a-d195-4473-bbce-8ca198516014
 author: mikejo5000
@@ -9,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: da505c6193dd7d05cc10a8e7cec8383f8ee3adfc
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 7e7d4ae54563ea862ee0f7637b5ac6a54ac30eab
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058598"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53838308"
 ---
 # <a name="configure-windows-firewall-for-remote-debugging"></a>リモート デバッグ用の Windows ファイアウォールを構成します。
 
