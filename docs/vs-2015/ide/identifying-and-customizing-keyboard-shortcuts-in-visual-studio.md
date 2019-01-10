@@ -5,8 +5,7 @@ ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
@@ -24,12 +23,12 @@ caps.latest.revision: 30
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ac425903ade4dbf90f094376927d46629b1c675d
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 3dbb6c9c778ed1010c90a901fa9ee9e2e9299252
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054000"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53931178"
 ---
 # <a name="identifying-and-customizing-keyboard-shortcuts-in-visual-studio"></a>Visual Studio でのキーボード ショートカットの識別とカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -96,7 +95,7 @@ Visual Studio のコマンドのショートカット キーを確認し、カ�
      たとえば、ショートカットをすべてのコンテキスト内で機能させる場合は、**[全体]** をクリックします。 他のエディターで同じショートカットが ([全体] として) 割り当てられていなければ、そのショートカット キーを使用できます。 それ以外の場合は、既存のショートカットがオーバーライドされます。
 
     > [!NOTE]
-    >  キーボード ショートカットの一部として、次のキーを割り当てることはできません**Global**:画面/Sys Rq、Scroll Lock、Pause/break、タブ、Caps Lock、Insert、ホーム、終了、Pageup、Pagedown、Windows ロゴ キー、アプリケーション キーは、方向キーまたは Enter; のいずれかを印刷します。Num Lock、削除、または; テンキーのクリアまたは、Ctrl + Alt + Del します。
+    >  次のキーは、ショートカット キーの一部として **[全体]** に割り当てることができません:画面/Sys Rq、Scroll Lock、Pause/break、タブ、Caps Lock、Insert、ホーム、終了、Pageup、Pagedown、Windows ロゴ キー、アプリケーション キーは、方向キーまたは Enter; のいずれかを印刷します。Num Lock、削除、または; テンキーのクリアまたは、Ctrl + Alt + Del します。
 
 6.  **[ショートカット キー]** ボックスで、使用するショートカット キーを入力します。
 
@@ -149,5 +148,5 @@ Visual Studio のコマンドのショートカット キーを確認し、カ�
 
      ![カスタマイズされたショートカット キーのみをインポート](../ide/media/importshortcuts.png "ImportShortcuts")
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
  [Visual Studio のユーザー補助機能](../ide/reference/accessibility-features-of-visual-studio.md)

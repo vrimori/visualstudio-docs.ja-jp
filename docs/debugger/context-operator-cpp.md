@@ -1,8 +1,6 @@
 ---
 title: コンテキスト演算子 (C++)、デバッガーで |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.operators
@@ -24,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e520b40e5a2f4bf6bb7c3a7b6c2ab50930773578
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 9222a36bd1e03a1f213a0d3ea0e86e269e912d12
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49862399"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53889580"
 ---
 # <a name="context-operator-in-the-visual-studio-debugger-c"></a>Visual Studio デバッガー (C++) でのコンテキスト演算子
 C++ のコンテキスト演算子を使用して、ブレークポイントの場所、変数名、または式を修飾できます。 コンテキスト演算子は、ローカル名で隠されていてほかにアクセス方法がない外部スコープから名前を指定するために利用できます。  
@@ -55,7 +53,7 @@ C++ のコンテキスト演算子を使用して、ブレークポイントの�
   
 - *module* は、モジュールの名前です。 完全パスを使用することで、同じ名前のモジュールのあいまいさを解消することができます。  
   
-   *module* のパスにコンマ、埋め込みスペース、または中かっこが含まれる場合は、コンテキスト パーサーが文字列を適切に認識できるように、パスを引用符で囲む必要があります。 単一引用符は Windows ファイル名の一部として解釈されるので、二重引用符を使用する必要があります。 例えば以下のようにします。  
+   *module* のパスにコンマ、埋め込みスペース、または中かっこが含まれる場合は、コンテキスト パーサーが文字列を適切に認識できるように、パスを引用符で囲む必要があります。 単一引用符は Windows ファイル名の一部として解釈されるので、二重引用符を使用する必要があります。 たとえば、オブジェクトに適用された  
   
   ```C++  
   {,,"a long, long, library name.dll"} g_Var  

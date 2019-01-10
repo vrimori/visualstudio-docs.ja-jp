@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_lexicalparentid |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 04ec201951602944a4517233789648e66be19c70
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 9fed1d730d0565e3b2348c5e3c620449c2e537a9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49915140"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53859933"
 ---
 # <a name="idiasymbolgetlexicalparentid"></a>IDiaSymbol::get_lexicalParentId
 シンボルの構文の親識別子を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49915140"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_lexicalParentId (   
+HRESULT get_lexicalParentId (   
    DWORD* pRetVal  
 );  
 ```  
@@ -42,8 +40,8 @@ HRESULT get_lexicalParentId (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  識別子は、一意としてすべてのシンボルをマークする DIA SDK によって作成された一意の値です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

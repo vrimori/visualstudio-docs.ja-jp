@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_targetoffset |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c044ba749c5fae425fab11cdedecc9eb361fffe3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 17e7ae89bb24fbd2315ba902fa6fd3967f26bb0d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49904844"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53848075"
 ---
 # <a name="idiasymbolgettargetoffset"></a>IDiaSymbol::get_targetOffset
 サンク ターゲットのオフセット セクションを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49904844"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_targetOffset (   
+HRESULT get_targetOffset (   
    DWORD* pRetVal  
 );  
 ```  
@@ -42,5 +40,5 @@ HRESULT get_targetOffset (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -13,15 +13,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f0cb2737356813a9b637d7f16e9d5cda704c022a
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: e90287711d23a3560ddd97280a8a51e591ce40e0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389501"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53963516"
 ---
 # <a name="configure-service-reference-dialog-box"></a>[サービス参照の構成] ダイアログ ボックス
 
@@ -107,5 +106,5 @@ ms.locfileid: "52389501"
 
 ## <a name="see-also"></a>関連項目
 
-- [方法 : Web サービスへの参照を追加する](how-to-add-update-or-remove-a-wcf-data-service-reference.md)
+- [方法: Web サービスへの参照を追加します。](how-to-add-update-or-remove-a-wcf-data-service-reference.md)
 - [Windows Communication Foundation サービスと WCF Data Services](../data-tools/configure-service-reference-dialog-box.md)

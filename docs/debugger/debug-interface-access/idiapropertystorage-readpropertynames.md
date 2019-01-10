@@ -1,8 +1,6 @@
 ---
 title: IDiaPropertyStorage::ReadPropertyNames |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d51eaed785932703a5eb97714be8dc7b407fc81
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 07c9c5d129305d8c3128a081abe8079321043a57
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49891818"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53918954"
 ---
 # <a name="idiapropertystoragereadpropertynames"></a>IDiaPropertyStorage::ReadPropertyNames
 対応する文字列名を取得では、プロパティの識別子を指定します。  
@@ -36,7 +34,7 @@ HRESULT ReadPropertyNames (
   
 #### <a name="parameters"></a>パラメーター  
  `cpropid`  
- [in]プロパティ id の数`rgpropid`です。  
+ [in]プロパティ id の数`rgpropid`します。  
   
  `rgpropid`  
  [in]プロパティ id の名前を取得する対象の配列 (`PROPID`として WTypes.h で定義されている、 `ULONG`)。  
@@ -47,8 +45,8 @@ HRESULT ReadPropertyNames (
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`。 それ以外の場合はエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  返されるプロパティの名前を解放する必要があります (呼び出すことによって、`SysFreeString`関数) が必要な不要になった場合。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

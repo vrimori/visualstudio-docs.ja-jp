@@ -1,8 +1,6 @@
 ---
 title: ネイティブ コードのデバッグ |Microsoft Docs
-ms.custom: ''
 ms.date: 04/11/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug
@@ -22,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d8339d494845b5babe18835647868cad4c3323a
-ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
-ms.translationtype: HT
+ms.openlocfilehash: 86e94b083300558df271091f5a28990b8e3d3d74
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53561971"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53870769"
 ---
 # <a name="debugging-native-code"></a>ネイティブ コードのデバッグ
 ここでは、ネイティブ アプリケーションのデバッグ時に発生する一般的な問題や共通のデバッグ技術について説明します。 ここでは高レベルの手法について説明します。 Visual Studio デバッガーの使用のしくみを参照してください。[デバッガーでのはじめ](../debugger/debugger-feature-tour.md))。  
@@ -72,6 +70,6 @@ ms.locfileid: "53561971"
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)  
  デバッグに関連するドキュメントのより広範囲なリンクを提供します。 デバッガーの新機能、設定と準備、ブレークポイント、例外の処理、エディット コンティニュ、マネージド コードのデバッグ、ネイティブ コードのデバッグ、SQL のデバッグ、ユーザー インターフェイス リファレンスなどの情報へのリンクを提供します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)  
  [Visual Studio でのデバッグ](../debugger/index.md)[デバッガー機能ツアー](../debugger/debugger-feature-tour.md)

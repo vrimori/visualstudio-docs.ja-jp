@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_age |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ba915762a5eacffc32122a1dac4b7b046691e63
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: d523a4dbed5f80fa67085537123e3d5be6fad361
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49868470"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53918652"
 ---
 # <a name="idiasymbolgetage"></a>IDiaSymbol::get_age
 .Pdb ファイルの経過時間の値を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49868470"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_age (   
+HRESULT get_age (   
    DWORD* pRetVal  
 );  
 ```  
@@ -42,15 +40,15 @@ HRESULT get_age (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  経過時間がある既知の時刻の値に必ずしも対応していませんこれは通常、.pdb ファイルが対応する .exe ファイルと同期していない場合を決定に使用します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|Dia2.h|  
+|ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK v7.0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

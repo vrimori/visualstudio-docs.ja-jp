@@ -1,8 +1,6 @@
 ---
-title: Spy++ の使用 |Microsoft ドキュメント
-ms.custom: ''
+title: Spy++ の使用 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Using Spy++
@@ -12,30 +10,30 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cdb5356ecfe31bce8c8f429add2e78e495f40cd5
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: a316f2fa786697511a98ae06e5fc52e86412d6b3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31475795"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53943276"
 ---
 # <a name="using-spy"></a>Spy++ の使用
-Spy++ (SPYXX です。EXE) は、システムのプロセス、スレッド、windows、およびウィンドウのメッセージのグラフィカル ビューを提供する Win32 ベースのユーティリティです。 Spy++ ヘルプのこのセクションには、次のヘルプ トピックが含まれています。  
+Spy++ (SPYXX します。EXE) は、システムのプロセス、スレッド、windows、およびウィンドウ メッセージのグラフィカル ビューを提供する Win32 ベースのユーティリティです。 Spy++ ヘルプのこのセクションには、次のヘルプ トピックが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Spy++ の概要](../debugger/introducing-spy-increment.md)  
  Spy++ ツールを使用して表示する情報の種類について説明します。  
   
- [方法: Spy++ を起動する](../debugger/how-to-start-spy-increment.md)  
+ [方法: Spy++ の起動](../debugger/how-to-start-spy-increment.md)  
  [ツール] メニューから spy++ を起動する方法について説明します。  
   
  [Spy++ ツール バー](../debugger/spy-increment-toolbar.md)  
  Spy++ ツールバーで使用できるコマンドについて説明します。  
   
  [方法: Spy++ ビューを表示する](../debugger/how-to-display-spy-increment-views.md)  
- Windows の表示、表示メッセージ、プロセス ビュー、およびスレッド ビューを表示する方法です。  
+ Windows の表示、メッセージ ビュー、プロセス ビュー、およびスレッド ビューを表示する方法。  
   
- [方法: ビューを更新する](../debugger/how-to-refresh-the-view.md)  
+ [方法: ビューの更新](../debugger/how-to-refresh-the-view.md)  
  Refresh コマンドをについて説明します。  
   
  [方法: フォントを変更する](../debugger/how-to-change-fonts.md)  
@@ -49,4 +47,4 @@ Spy++ (SPYXX です。EXE) は、システムのプロセス、スレッド、wi
  Windows、メッセージ、プロセス、およびスレッドの spy++ ツリー ビューについて説明します。  
   
  [Spy++ リファレンス](../debugger/spy-increment-reference.md)  
- 各 spy++ メニューおよびダイアログ ボックスについて説明するセクションが含まれます。
+ 各 spy++ メニューおよびダイアログ ボックスについて説明するセクションが含まれています。

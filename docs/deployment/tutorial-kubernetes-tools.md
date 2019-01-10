@@ -1,20 +1,18 @@
 ---
 title: Kubernetes ツールのチュートリアル |Microsoft Docs
-ms.custom: ''
 ms.date: 06/08/2018
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 author: ghogen
 ms.author: ghogen
 manager: douge
 ms.workload:
 - azure
-ms.openlocfilehash: 8cf4192ce0f925624dbbe890381d3557f2a27223
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 8cb250cd319f28b444a8f3bfecef421ecbaac9b4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49942934"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53848364"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Visual Studio の Kubernetes ツールを概要します。
 
@@ -116,7 +114,7 @@ ASP.NET Core の種類は、web アプリケーションを作成し、選択で
 
    ![Azure AKS 画面のスクリーン ショットに発行します。](media/k8s-tools-publish-screen.png)
 
-おめでとうございます! すべての Kubernetes アプリ開発用 Visual Studio の全機能を使えるようになりました。
+おめでとうございます!  すべての Kubernetes アプリ開発用 Visual Studio の全機能を使えるようになりました。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -1,8 +1,6 @@
 ---
-title: Init |Microsoft ドキュメント
-ms.custom: ''
+title: Init |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: c55ddec8-9101-4673-979b-4109caca9146
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0436384e0af816475590ab84dc645848113f5ab7
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 06594b749b5d92781f6c3389ca6f5f9395c98c75
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31476199"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53827248"
 ---
 # <a name="init"></a>Init
 グラフィックス情報をアクティブにキャプチャしてグラフィックス ログ ファイルに記録するように、グラフィックス診断のアプリ内コンポーネントを準備します。  
@@ -37,5 +35,5 @@ void Init(
   
  `UnInit` を呼び出してアクティブなグラフィックス ログ ファイルを終了して閉じ、`Init` を再度呼び出して、グラフィックス情報をさらにキャプチャして新しいグラフィック ログ ファイルに記録することができます。 この操作を何度でも繰り返して、同じ `VsgDbg` インスタンスを使用して複数の独立したグラフィックス ログ ファイルを作成することができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [UnInit](init.md)

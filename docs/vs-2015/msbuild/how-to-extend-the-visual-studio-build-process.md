@@ -1,12 +1,11 @@
 ---
-title: 方法:ビルド処理を拡張 |Microsoft Docs
+title: '方法: ビルド処理を拡張 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e552b75ea5ba34004d0c53850f1af77a120b20cb
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: a3a530f74e1cf90012f9724d68493b1602b0e6dc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050258"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53938722"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>方法: Visual Studio ビルド処理を拡張する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -131,5 +130,5 @@ ms.locfileid: "53050258"
 |`CleanDependsOn`|カスタム ビルド処理からの出力をクリーンアップする場合にオーバーライドするプロパティ。|
 |`CompileDependsOn`|コンパイル手順の前または後にカスタム プロセスを挿入する場合にオーバーライドするプロパティ。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
  [Visual Studio の統合](../msbuild/visual-studio-integration-msbuild.md) [MSBuild の概念](../msbuild/msbuild-concepts.md)[します。ターゲット ファイル](../msbuild/msbuild-dot-targets-files.md)

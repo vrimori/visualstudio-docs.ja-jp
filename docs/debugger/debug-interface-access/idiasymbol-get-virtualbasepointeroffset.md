@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_virtualbasepointeroffset |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 17fda4a74c1497d48baea1d9e1a817b4b12cf344
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: c1d55b63827c13c4b92ea2495de7849a321876a1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49898953"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53902605"
 ---
 # <a name="idiasymbolgetvirtualbasepointeroffset"></a>IDiaSymbol::get_virtualBasePointerOffset
 仮想基底ポインターのオフセットを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49898953"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_virtualBasePointerOffset (   
+HRESULT get_virtualBasePointerOffset (   
    LONG* pRetVal  
 );  
 ```  
@@ -42,5 +40,5 @@ HRESULT get_virtualBasePointerOffset (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティがシンボルを使用できないことを意味します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_intro |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b025ebf2a3d800743c625fab97dc271f8320e75
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 05d520947c5e5e998ecf67a1b9dbb6d77bdff2c4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813376"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989543"
 ---
 # <a name="idiasymbolgetintro"></a>IDiaSymbol::get_intro
 関数が紹介の仮想関数であるかどうかを指定するフラグを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49813376"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_intro (   
+HRESULT get_intro (   
    BOOL* pRetVal  
 );  
 ```  
@@ -55,12 +53,12 @@ class B : public A {
   
  両方`A::f1`と`B::f1`は仮想関数ですが`A::f1`は、仮想メソッドの概要。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|Dia2.h|  
+|ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK v7.0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

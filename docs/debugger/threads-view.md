@@ -1,8 +1,6 @@
 ---
 title: スレッド ビュー |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.externaltools.spyplus.threadsview
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a9fee7a73d54434b08bfb1e24c95ae8c9a0d0b6b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 616a426192b15353b2d30a8f910619f5333cb5fa
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49854599"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53913518"
 ---
 # <a name="threads-view"></a>スレッド ビュー
 スレッド ビューでは、システム上のウィンドウに関連付けられているすべてのスレッドのフラットな一覧を示します。 スレッドの ID とスレッドごとのモジュール名が表示されます。 プロセスは含まれていませんが、選択したスレッドを所有するプロセスを簡単に見つけることができます。  

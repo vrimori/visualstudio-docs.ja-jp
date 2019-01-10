@@ -2,7 +2,6 @@
 title: グラフィックス診断 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.graphics
@@ -12,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e40a8ce0f2785aa606922d3f9c49f3aad48f7591
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
-ms.translationtype: MTE95
+ms.openlocfilehash: fb7289759499c4715fba712ed52f1664b3dc3c3b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058624"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53890931"
 ---
 # <a name="visual-studio-graphics-diagnostics"></a>Visual Studio グラフィックス診断
 Visual Studio*グラフィックス診断*記録し、Direct3D アプリのレンダリングとパフォーマンスの問題を分析するためのツールのセットです。 グラフィックス診断は、Windows PC でローカルに実行されているアプリ、Windows デバイス エミュレーターで実行されているアプリ、あるいはリモート PC またはデバイスで実行されているアプリに対して使用できます。  
@@ -82,6 +81,5 @@ Visual Studio*グラフィックス診断*記録し、Direct3D アプリのレ�
 
 | Title | 説明 |
 | - | - |
-| [デバッガー機能ツアー](../debugging-in-visual-studio.md) | [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のデバッグ機能を紹介します。 |
+| [デバッガー機能ツアー](/visualstudio/debugger/debugger-feature-tour) | [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のデバッグ機能を紹介します。 |
 | [DirectX のグラフィックスとゲーム](http://go.microsoft.com/fwlink/?LinkId=256498) | DirectX グラフィックスの手法を説明する文書を提供します。 |
-

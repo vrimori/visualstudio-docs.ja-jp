@@ -1,8 +1,6 @@
 ---
 title: Idiastackframe::get_rawlvarinstancevalue |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f5e34b766e27693326aba34b7b7259042870f00
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 66056d2f871d142da46cae25b2e9cb589836a580
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49933496"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53838438"
 ---
 # <a name="idiastackframegetrawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
 このメソッドは、実際のバイト数として指定されたローカル変数の値を取得します。  
@@ -51,5 +49,5 @@ HRESULT get_rawLVarInstanceValue(
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)
