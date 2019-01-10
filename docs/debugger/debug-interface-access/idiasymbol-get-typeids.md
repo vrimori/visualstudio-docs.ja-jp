@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_typeids |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bacd3547c1aadfc99b66437acbd73599ec2191f6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: d038c0be6f023206c6a96ec59389ec4063d975fd
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49942596"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53880089"
 ---
 # <a name="idiasymbolgettypeids"></a>IDiaSymbol::get_typeIds
 このシンボルのコンパイラ固有の型識別子の値の配列を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49942596"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_typeIds (   
+HRESULT get_typeIds (   
    DWORD  cTypeIds,  
    DWORD* pcTypeIds,  
    DWORD  typeIds[]  
@@ -50,5 +48,5 @@ HRESULT get_typeIds (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

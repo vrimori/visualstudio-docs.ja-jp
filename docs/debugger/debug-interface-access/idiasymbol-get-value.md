@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_value |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 23fb08303840c8d90644a292cac8832e29641246
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: bb8e85296338782cac0de27e1e121ed25d8e823c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49863738"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53963393"
 ---
 # <a name="idiasymbolgetvalue"></a>IDiaSymbol::get_value
 定数の値を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49863738"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_value (   
+HRESULT get_value (   
    VARIANT* pRetVal  
 );  
 ```  
@@ -42,7 +40,7 @@ HRESULT get_value (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このメソッドに渡される前に、指定されたバリアントを初期化する必要があります。 詳細については、例を参照してください。  
   
 ## <a name="example"></a>例  
@@ -70,5 +68,5 @@ void ProcessValue2(IDiaSymbol *pSymbol)
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

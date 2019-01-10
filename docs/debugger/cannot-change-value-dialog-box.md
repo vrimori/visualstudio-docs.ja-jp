@@ -1,8 +1,6 @@
 ---
-title: ダイアログ ボックスの値を変更することはできません |Microsoft ドキュメント
-ms.custom: ''
+title: ダイアログ ボックスの値を変更することはできません |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.variables.failededit
@@ -20,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 23a6eb8059d9780e3b7343c6a7864896a0c529c6
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 5fd6b184b72acc2ecd08123160a512e5473e6611
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31456690"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53966548"
 ---
 # <a name="cannot-change-value-dialog-box"></a>[値を変更できません] ダイアログ ボックス
 ## <a name="error"></a>Error  
@@ -36,5 +34,5 @@ ms.locfileid: "31456690"
 ## <a name="solution"></a>ソリューション  
  デバッグ用ウィンドウや [クイック ウォッチ] ダイアログ ボックスに入力した内容が、設定する変数に対して有効な値を表していることを確認します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [デバッガー内の式](../debugger/expressions-in-the-debugger.md)

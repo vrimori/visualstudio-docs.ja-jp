@@ -1,8 +1,6 @@
 ---
-title: Microsoft spy の |Microsoft ドキュメント
-ms.custom: ''
+title: Microsoft spy の |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Microsoft Spy++
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cb7c99a5475fe4b533bbe8c7e03b8a7e3603cb61
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: d736fb0060c33e7439e37698bf66cd0dde8a5201
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31457359"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53898850"
 ---
 # <a name="about-microsoft-spy"></a>[Microsoft Spy++ のバージョン情報]
-このダイアログ ボックスを使用すると、著作権、バージョン、所有権、および spy++ に関する他の情報を表示できます。
+著作権情報、バージョン、所有権、および spy++ に関する他の情報を表示するのにには、このダイアログ ボックスを使用します。

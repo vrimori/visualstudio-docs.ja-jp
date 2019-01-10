@@ -2,7 +2,6 @@
 title: Web プロジェクトのプロパティの設定 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: reference
 dev_langs:
 - CSharp
@@ -22,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fbe5ab8d863cbf77647bde8b8d7da69d9c4823e5
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 09aeb8d97c1caf3eca067cd7992eb96c9d7ef7c1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53064220"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53892664"
 ---
 # <a name="property-pages-settings-for-web-projects"></a>Web プロジェクトのプロパティ ページ設定
 「[デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)」で説明したように、Web サイト デバッグ構成のプロパティ設定は **[プロパティ ページ]** ダイアログ ボックスで変更できます。 次の表は、**[プロパティ ページ]** ダイアログ ボックスのデバッガー関連の設定の場所を示しています。  
@@ -53,5 +52,5 @@ ms.locfileid: "53064220"
 | **SQL Server デバッグ** | SQL Server データベース オブジェクトのデバッグを許可します。 |
 | **Silverlight デバッグ** | Silverlight コンポーネントをデバッグできます。 |
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)

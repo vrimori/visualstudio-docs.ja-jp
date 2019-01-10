@@ -5,8 +5,7 @@ ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7a1dfdbfe286043a6e0010687b4ef9a7f178eb2b
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 1935265b05c5074d043a008aad8a150bf4398c89
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53062678"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53852363"
 ---
 # <a name="visual-studio-ide-64-bit-support"></a>Visual Studio IDE の 64 ビット サポート
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -51,5 +50,5 @@ ms.locfileid: "53062678"
 
 -   [ダンプ ファイルの使用](../debugger/using-dump-files.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
  [方法: プロジェクトを構成して対象プラットフォームを設定する](../ide/how-to-configure-projects-to-target-platforms.md)

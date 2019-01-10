@@ -1,12 +1,11 @@
 ---
-title: 方法:Visual C プロジェクトを Visual Studio 2015 にアップグレード |Microsoft Docs
+title: '方法: Visual C プロジェクトを Visual Studio 2015 にアップグレード |Microsoft Docs'
 titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
@@ -16,29 +15,29 @@ caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 493b96d4c66c35a242efd4957288d215ab2877ed
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: bd2cf85abd5b36ba0a3797ef711b4c9364b35c4e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53063290"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53945198"
 ---
-# <a name="how-to-upgrade-visual-c-projects-to-visual-studio-2015"></a>方法:Visual C プロジェクトを Visual Studio 2015 にアップグレードします。
+# <a name="how-to-upgrade-visual-c-projects-to-visual-studio-2015"></a>方法: Visual C プロジェクトを Visual Studio 2015 にアップグレードします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio 2017 の最新ドキュメントについては、次を参照してください。 [Visual c 移植とアップグレードのガイド](https://docs.microsoft.com/cpp/porting/visual-cpp-porting-and-upgrading-guide)します。
 
 旧バージョンの Visual Studio で作成された Visual C++ プロジェクトを初めて開くと、そのプロジェクトを更新するよう求めるメッセージが表示されることがあります。 Visual C++ コンパイラおよびライブラリを最新バージョンにアップグレードするかどうかを確認するメッセージです。 アップグレードのオプションは、プロジェクトの作成に使用された [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のバージョンによって異なります。
 
- [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] を使用して、[!INCLUDE[win8](../includes/win8-md.md)] で作成された [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] プロジェクトを開き、編集し、ビルドすることができますが、新しい [!INCLUDE[win8](../includes/win8-md.md)] プロジェクトを作成するには [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] を使用する必要があります  ( [!INCLUDE[win81](../includes/win81-md.md)] プロジェクトを作成するには、 [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]を使用する必要があります。)。
+ [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] を使用して、 [!INCLUDE[win8](../includes/win8-md.md)] で作成された [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]プロジェクトを開き、編集し、ビルドすることができますが、新しい [!INCLUDE[win8](../includes/win8-md.md)] プロジェクトを作成するには [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]を使用する必要があります ( [!INCLUDE[win81](../includes/win81-md.md)] プロジェクトを作成するには、 [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]を使用する必要があります。)。
 
- Windows 10 プロジェクトを作成するには、[!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)] を使用する必要があります。
+ Windows 10 プロジェクトを作成するには、 [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)]を使用する必要があります。
 
  プロジェクトを更新するように求めるメッセージが表示されない場合は、プロジェクトのアップグレードのために何もする必要がない可能性があります。
 
 -   プロジェクト (.vcproj) が [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] よりも前のバージョンの [!INCLUDE[vs2010](../includes/vs2010-md.md)]で作成されていた場合は、プロジェクトを更新する必要があります。
 
--   プロジェクト (.vcxproj) が [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]、[!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]、または [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] で作成されている場合、次の 2 つのオプションがあります。
+-   プロジェクト (.vcxproj) が [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]、  [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]、または [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] で作成されている場合、次の 2 つのオプションがあります。
 
     -   更新をスキップできます。 [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)] が [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] SP1、[!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]、または [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] の Visual C++ ツールにアクセスできる場合、プロジェクトは変更を加えずに読み込まれます。 そのアクセスを可能にするには、プロジェクトの作成に使用したバージョンの Visual Studio を、 [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)]と同じマシンにインストールします。 詳細については、「 [Installing Visual Studio Versions Side-by-Side](../install/install-visual-studio-versions-side-by-side.md)」を参照してください。
 
@@ -57,5 +56,5 @@ Visual Studio 2017 の最新ドキュメントについては、次を参照し�
 ## <a name="continuing-to-work-with-a-custom-platformtoolset"></a>カスタム PlatformToolset の使用の継続
  [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)]でカスタム PlatformToolset を引き続き使用する場合、ツールセットは、x86 コンピューターでは %ProgramFiles%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ の下、x64 コンピューターでは %ProgramFiles (x86)%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ の下に格納されている必要があります。 カスタム PlatformToolset を作成する方法については、Visual C++ チーム ブログの「 [C++ ネイティブ マルチ ターゲット](http://go.microsoft.com/fwlink/?LinkId=248587) 」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
  [Visual C 移植とアップグレードのガイド](http://msdn.microsoft.com/library/f5fbcc3d-aa72-41a6-ad9a-a706af2166fb)[の移植、移行、および Visual Studio プロジェクトのアップグレード](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)

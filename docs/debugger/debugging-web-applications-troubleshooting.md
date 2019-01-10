@@ -2,7 +2,6 @@
 title: トラブルシューティング - web アプリのデバッグ |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -19,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b5f931a9942a89ae56836b5fbe91473b9dc9f568
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 664ec654d52b8b5c17ff89429ba1f78033cfffc7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53063996"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53923586"
 ---
 # <a name="debugging-web-applications-troubleshooting"></a>Web アプリケーションのデバッグ:トラブルシューティング
 ここでは、エラーを解決するための一般的な手順について説明します。  
@@ -37,5 +36,5 @@ ms.locfileid: "53063996"
  [Web アプリケーションのデバッグ: エラーとトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
  トラブル シューティングとエラーの解決方法について説明します。  
   
- [Web アプリケーションとスクリプトのデバッグ](../debugger/debugging-web-applications-and-script.md)  
+ [Web アプリケーションとスクリプトのデバッグ](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]、XML Web サービス、ATL Server プロジェクトなど、Web アプリケーションのデバッグ方法について概要を説明します。

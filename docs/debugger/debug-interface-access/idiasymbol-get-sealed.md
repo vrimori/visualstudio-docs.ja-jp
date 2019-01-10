@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_sealed |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e77e379d3f3635cf6976765450ba32ea6de81ef2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: ffb4e6e82b3c34b8186bbee2a42fba8a1f6a8b68
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49841807"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53920246"
 ---
 # <a name="idiasymbolgetsealed"></a>IDiaSymbol::get_sealed
 クラスまたはメソッドがシールされているかどうかを指定するフラグを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49841807"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_sealed(   
+HRESULT get_sealed(   
    BOOL* pRetVal)  
 );  
 ```  
@@ -42,15 +40,15 @@ HRESULT get_sealed(
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  シール クラスは、基底クラスとして使用できません。 シール メソッドは、上書きをすることはできません。  
   
-## <a name="requirements"></a>必要条件  
- ヘッダー: Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー:dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia100.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

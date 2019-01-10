@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_consttype |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0880e8b22a31809a1d6e2d4d673c00e2dac2ff60
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: ed7eae61169a8b6c8dd0670fed0648598a40ae06
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49870628"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53935291"
 ---
 # <a name="idiasymbolgetconsttype"></a>IDiaSymbol::get_constType
 ユーザー定義データ型が定数かどうかを指定するフラグを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49870628"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_constType (   
+HRESULT get_constType (   
    BOOL* pRetVal  
 );  
 ```  
@@ -42,12 +40,12 @@ HRESULT get_constType (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|Dia2.h|  
+|ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK v7.0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

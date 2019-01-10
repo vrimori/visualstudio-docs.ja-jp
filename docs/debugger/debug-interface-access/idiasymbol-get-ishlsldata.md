@@ -1,8 +1,6 @@
 ---
-title: IDiaSymbol::get_isHLSLData |Microsoft ドキュメント
-ms.custom: ''
+title: IDiaSymbol::get_isHLSLData |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -12,15 +10,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4be6e1f49acfc7d08815f0143f55c48fbaf7b017
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: b1bd237833e27c3c83a24345e6b7c436b40aa8b7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31461900"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53875126"
 ---
 # <a name="idiasymbolgetishlsldata"></a>IDiaSymbol::get_isHLSLData
-このシンボルが高レベル シェーダー言語 (HLSL) データを表すかどうかを指定します。  
+このシンボルが上位レベル シェーダー言語 (HLSL) のデータを表すかどうかを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,10 +29,10 @@ HRESULT get_isHLSLData(
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ポインター、 `BOOL` HLSL データを表す記号かどうかを指定します。  
+ [out]ポインターを`BOOL`このシンボルが HLSL のデータを表すかどうかを指定します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

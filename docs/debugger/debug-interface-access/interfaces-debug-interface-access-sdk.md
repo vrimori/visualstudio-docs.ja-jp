@@ -1,8 +1,6 @@
 ---
-title: インターフェイス (Debug Interface Access SDK) |Microsoft ドキュメント
-ms.custom: ''
+title: インターフェイス (Debug Interface Access SDK) |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,25 +13,25 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 584c7337ae50f85f95f063a47787b8a4be37c9fb
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 102d3456e1daf3c72f5f6c95c629ca2a42e7542f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31474743"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53907710"
 ---
 # <a name="interfaces-debug-interface-access-sdk"></a>インターフェイス (Debug Interface Access SDK)
-Vtable 順序のインターフェイスのページの内容のテーブル内の各インターフェイスでメソッドをアルファベット順に一覧表示されます。  
+メソッドは、下の目次や Vtable 順序でインターフェイスのページ テーブル内の各インターフェイスでアルファベット順に一覧表示されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)  
- DIA SDK が仮想のアドレスと相対仮想アドレス デバッグ オブジェクトを計算する方法の制御を提供します。  
+ DIA SDK がデバッグ オブジェクトの仮想および相対の仮想アドレスを計算する方法を制御できます。  
   
  [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)  
  デバッグ シンボルのソースへのアクセスを開始します。  
   
  [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)  
- デバッグ データ ストリーム内のレコードへのアクセスを提供します。  
+ デバッグのデータ ストリーム内のレコードへのアクセスを提供します。  
   
  [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)  
  データ ソースに含まれるさまざまなデバッグ ストリームを列挙します。  
@@ -48,10 +46,10 @@ Vtable 順序のインターフェイスのページの内容のテーブル内�
  データ ソースに含まれるさまざまな行番号を列挙します。  
   
  [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)  
- データ ソースに含まれるさまざまなセクション貢献度を列挙します。  
+ データ ソースに含まれるさまざまなセクションの投稿を列挙します。  
   
  [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)  
- データ ソースに含まれるさまざまなセグメントを列挙します。  
+ データ ソースに格納されているさまざまなセグメントを列挙します。  
   
  [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)  
  データ ソースに含まれるさまざまなソース ファイルを列挙します。  
@@ -69,22 +67,22 @@ Vtable 順序のインターフェイスのページの内容のテーブル内�
  データ ソースに含まれるさまざまなテーブルを列挙します。  
   
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)  
- スタック フレームの詳細を公開します。  
+ スタック フレームの詳細が公開されます。  
   
  [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)  
- モジュールまたはイメージの基本場所とメモリのオフセットの詳細情報を公開します。  
+ モジュールまたはイメージのベースの位置とメモリのオフセットの詳細が公開されます。  
   
  [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)  
- アクセス プログラムのソース コードは、DIA データ ソースに格納されます。  
+ DIA のデータ ソースに格納されているプログラムのソース コードへのアクセス。  
   
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)  
  イメージのテキストのバイトのブロックからソース ファイルの行番号へのマッピングのプロセスを説明する情報にアクセスします。  
   
  [IDiaLoadCallback](../../debugger/debug-interface-access/idialoadcallback.md)  
- プロシージャを検索する、つまり、ユーザー インターフェイスの場所の試行の進行状況の報告を有効にする DIA シンボルからのコールバックを受信します。  
+ プロシージャの検索、したがって、ユーザー インターフェイスの場所の試行の進行状況の報告を有効にする DIA シンボルからのコールバックを受け取ります。  
   
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)  
- プロシージャを検索する検索のプロセスに適用される制限をできるように、DIA シンボルからのコールバックを受信します。  
+ DIA シンボル プロシージャを検索する特定のプロセスに適用される制限のことからには、コールバックを受信します。  
   
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)  
  DIA プロパティ セットの永続的なプロパティを読み取ることができます。  
@@ -96,13 +94,13 @@ Vtable 順序のインターフェイスのページの内容のテーブル内�
  相対仮想アドレスで指定された実行可能ファイルのバイト数を指定するクライアント アプリケーションを有効にします。  
   
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)  
- セクション貢献度を記述するデータを取得、つまり、連続するメモリ ブロックから提供されたイメージに、コンパイル単位です。  
+ セクションの投稿を記述するデータを取得、つまり、連続メモリ ブロックに起因イメージに、コンパイル単位。  
   
  [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)  
- アドレス空間のセグメント セクション番号からデータをマップします。  
+ セクション数からアドレス空間のセグメントにデータをマップします。  
   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)  
- デバッグ シンボルをクエリのコンテキストを提供します。  
+ デバッグ シンボルのクエリ コンテキストを提供します。  
   
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)  
  ソース ファイルを表します。  
@@ -111,10 +109,10 @@ Vtable 順序のインターフェイスのページの内容のテーブル内�
  スタック フレームのプロパティを公開します。  
   
  [IDiaStackWalker](../../debugger/debug-interface-access/idiastackwalker.md)  
- PDB ファイルを使用して、スタックを行う方法の説明を提供します。  
+ スタックの操作を行う方法は、PDB ファイルを使用する方法について説明します。 を提供します。  
   
  [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)  
- 呼び出しの間でのスタック コンテキストを維持、 [idiaframedata::execute](../../debugger/debug-interface-access/idiaframedata-execute.md)メソッドです。  
+ 呼び出しの間のスタック コンテキストを維持、 [idiaframedata::execute](../../debugger/debug-interface-access/idiaframedata-execute.md)メソッド。  
   
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)  
  プログラム デバッグ データベース (PDB) ファイルを使用して、スタック ウォークが容易になります。  
@@ -127,10 +125,10 @@ Vtable 順序のインターフェイスのページの内容のテーブル内�
   
 ## <a name="related-sections"></a>関連項目  
  [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)  
- DIA SDK のさまざまなインターフェイスで使用する構造体、列挙体について説明します。  
+ DIA SDK のさまざまなインターフェイスで使用される構造体、列挙体について説明します。  
   
  [定数 (Debug Interface Access SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)  
  DIA SDK で使用できる定数をについて説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [参照](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)

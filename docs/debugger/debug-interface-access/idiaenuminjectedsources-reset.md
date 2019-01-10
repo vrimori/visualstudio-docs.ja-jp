@@ -1,8 +1,6 @@
 ---
-title: Idiaenuminjectedsources::reset |Microsoft ドキュメント
-ms.custom: ''
+title: Idiaenuminjectedsources::reset |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,15 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a5182cd4e5c8a85f9ccd9f4683036a5ea958e573
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 3f9eb6c0cc659129305c5e4a2d1604f0acb912ad
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31457245"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53932195"
 ---
 # <a name="idiaenuminjectedsourcesreset"></a>IDiaEnumInjectedSources::Reset
-列挙のシーケンスを先頭にリセットします。  
+先頭に、列挙体シーケンスをリセットします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,5 +31,5 @@ HRESULT Reset();
 ## <a name="return-value"></a>戻り値  
  `S_OK` を返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

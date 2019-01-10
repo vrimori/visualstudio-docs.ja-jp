@@ -1,8 +1,6 @@
 ---
 title: デバッガーのプロジェクトの設定 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: reference
 dev_langs:
 - CSharp
@@ -18,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a027307ef960a8b0185daa34374e20270bf2fa19
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
-ms.translationtype: MT
+ms.openlocfilehash: 5d10cac5cec53440da687717e6737bd38ff35f8f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39152987"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53865875"
 ---
 # <a name="debugger-project-settings"></a>デバッガーに関連するプロジェクト設定
 一部のプロジェクト設定がデバッグに影響することもあります。 これらの設定により、デバッガーで参照するディレクトリ、プログラムを起動するためのコマンドとコマンド引数、プログラム用に作成されるデバッグ情報の種類などが決まります。 デバッグ設定は、 **[プロパティ ページ]** ダイアログ ボックスで変更できます。  
@@ -34,7 +32,7 @@ ms.locfileid: "39152987"
  [方法: デバッガー設定を指定する](../debugger/how-to-specify-debugger-settings.md)  
  **[オプション]** ダイアログ ボックスでのデバッガーの設定について説明します。  
   
- [方法 : デバッグ構成とリリース構成を設定する](../debugger/how-to-set-debug-and-release-configurations.md)  
+ [方法: デバッグ構成とリリース構成を設定する](../debugger/how-to-set-debug-and-release-configurations.md)  
  **[Debug]** と **[Release]** の各設定の内容と、それらの設定を切り替える方法について説明します。  
   
  [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)  
@@ -50,14 +48,14 @@ ms.locfileid: "39152987"
  **プロジェクトの** [プロパティ ページ] [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ダイアログ ボックスで設定できるプロパティを一覧します。  
   
 ## <a name="related-sections"></a>関連項目  
- [シンボル (.pdb) を指定し、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
+ [シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
  デバッグの情報を表示するためにシンボル ファイルおよびソース ファイルがデバッガーでどのように使用されるかについて説明します。  
   
- [Visual Studio でアプリをデバッグします。](../debugger/debug-store-apps-in-visual-studio.md)  
+ [Visual Studio でのアプリのデバッグ](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)  
  UWP アプリをデバッグする方法について説明します。 (Windows デベロッパー センター)  
   
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)  
  デバッグに関連するプロパティ設定と、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーを使用してプログラムをデバッグするために必要な準備作業について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)

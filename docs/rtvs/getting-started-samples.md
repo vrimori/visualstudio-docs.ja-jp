@@ -3,19 +3,18 @@ title: R のサンプル プロジェクト
 description: Visual Studio で R を使い始めるときに役立つサンプルのコレクションの索引です。
 ms.date: 01/24/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-rtvs
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: adb26b3cf6097d830c899ef4ef251d2066b81a38
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 80553e54489b5c887facca57f3491fd81fd8d24b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36235320"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53837460"
 ---
 # <a name="r-tools-for-visual-studio-sample-projects"></a>R Tools for Visual Studio のサンプル プロジェクト
 
@@ -83,7 +82,7 @@ ms.locfileid: "36235320"
 
 ![MKL を使用する MLS と MRO と MKL を使用しない R と MRO の比較](media/samples-speed-comparison.png)
 
-MRO と MLS を使用した R の技術的な比較については、[Lixun Zhang の詳細なディスカッション](http://htmlpreview.github.io/?https://github.com/lixzhang/R-MRO-MRS/blob/master/Introduction_to_MRO_and_MRS.html)に関するページを参照してください。
+MRO と MLS を使用した R の技術的な比較については、[Lixun Zhang の詳細なディスカッション](http://htmlpreview.github.io/? https://github.com/lixzhang/R-MRO-MRS/blob/master/Introduction_to_MRO_and_MRS.html)に関するページを参照してください。
 
 次の図では、ロジスティック回帰モデルの構築時に使用される経過時間 (秒) を比較して、15 分を超える航空便の遅延を予測しています。  CRAN R で使われた経過時間は、行が少し増えると大幅に増加しますが、MLS では約 2 倍のみ増加しています。 このベンチマークの詳細については、*Benchmarks/rxGlm_benchmark.R* サンプルをご覧ください。
 

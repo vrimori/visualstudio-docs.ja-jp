@@ -1,8 +1,6 @@
 ---
-title: IDiaSymbol::get_objectFileName |Microsoft ドキュメント
-ms.custom: ''
+title: IDiaSymbol::get_objectFileName |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 683e789e1edbe9f256847ad1e7d5fb7d13616608
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 928bd2b10c95a840323ba87fd9c5347520cf03c0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31463791"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53927260"
 ---
 # <a name="idiasymbolgetobjectfilename"></a>IDiaSymbol::get_objectFileName
 オブジェクト ファイルの名前を取得します。  
@@ -31,10 +29,10 @@ HRESULT get_objectFilename(
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ポインター、`BSTR`オブジェクト ファイルの名前を保持します。  
+ [out]ポインターを`BSTR`オブジェクト ファイルの名前を保持しています。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

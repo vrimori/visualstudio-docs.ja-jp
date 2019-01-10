@@ -1,8 +1,6 @@
 ---
-title: メッセージ ビュー |Microsoft ドキュメント
-ms.custom: ''
+title: メッセージ ビュー |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.externaltools.spyplus.messagesview
@@ -14,38 +12,38 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 31baccc88b25979dfc92fed6217bec3b0ef16a55
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: a3f67a8e354addef7aca298ebac3740702951a17
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31477080"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53869896"
 ---
 # <a name="messages-view"></a>メッセージ ビュー
-各ウィンドウには、関連付けられたメッセージ ストリームがあります。 メッセージ ビュー ウィンドウでは、このメッセージ ストリームを表示します。 ウィンドウ ハンドル、メッセージ コード、およびメッセージが表示されます。 スレッドまたはプロセスにもメッセージ ビューを作成することができます。 これにより、特定のプロセスまたはスレッドはウィンドウの初期化メッセージをキャプチャするために特に便利ですが、所有するすべてのウィンドウに送信されるメッセージを表示できます。  
+各ウィンドウには、関連のメッセージ ストリームがあります。 メッセージ ビュー ウィンドウには、このメッセージのストリームが表示されます。 ウィンドウ ハンドル、メッセージのコードとメッセージが表示されます。 スレッドまたはプロセスもメッセージ ビューを作成することができます。 これにより、特定のプロセスまたはスレッドは初期化のウィンドウ メッセージをキャプチャするために特に便利ですが所有するすべてのウィンドウに送信されるメッセージを表示することができます。  
   
- 一般的なメッセージ ビュー ウィンドウでは、以下が表示されます。 最初の列を含む、ウィンドウ ハンドルで、2 番目の列にはメッセージ コードが含まれています (「[メッセージ コード](../debugger/message-codes.md))。 デコードされたメッセージをパラメーターと戻り値が右にします。  
+ 以下の一般的なメッセージ ビュー ウィンドウが表示されます。 最初の列には、ウィンドウ ハンドルが含まれていますし、2 番目の列には、メッセージ コードが含まれています (で説明されている[メッセージ コード](../debugger/message-codes.md))。 デコードされたメッセージのパラメーターと戻り値が右にします。  
   
- ![スパイ&#43;&#43;メッセージ ビュー](../debugger/media/spy--_messagesview.png "スパイ:operator++ _MessagesView")  
+ ![Spy&#43; &#43;メッセージ ビューを](../debugger/media/spy--_messagesview.png "スパイ + _MessagesView")  
 Spy++ メッセージ ビュー  
   
 ## <a name="procedures"></a>手順  
   
 #### <a name="to-open-a-messages-view-for-a-window-process-or-thread"></a>ウィンドウ、プロセス、またはスレッドのメッセージ ビューを開く  
   
-1.  フォーカスを移動する、[ウィンドウ ビュー](../debugger/windows-view.md)、[プロセス ビュー](../debugger/processes-view.md)、または[スレッド ビュー](../debugger/threads-view.md)ウィンドウです。  
+1.  フォーカスを移動する、 [Windows ビュー](../debugger/windows-view.md)、[プロセス ビュー](../debugger/processes-view.md)、または[スレッド ビュー](../debugger/threads-view.md)ウィンドウ。  
   
 2.  確認するメッセージが含まれる項目のノードを検索し、それを選択します。  
   
-3.  **スパイ**] メニューの [選択**ログ メッセージ**です。  
+3.  **スパイ**] メニューの [選択**ログ メッセージ**します。  
   
      [メッセージ オプション ダイアログ ボックス](../debugger/message-options-dialog-box.md)が開きます。  
   
 4.  メッセージを表示するためのオプションを選択します。  
   
-5.  キーを押して**OK**をメッセージのログ記録を開始します。  
+5.  キーを押して**OK**メッセージのログ記録を開始します。  
   
-     ビュー ウィンドウが開き、メッセージと**メッセージ**spy++ ツールバーにメニューが追加されます。 選択したオプションによっては、メッセージは、アクティブなメッセージ ビュー ウィンドウにストリーミングを開始します。  
+     ビュー ウィンドウが開き、メッセージおよび**メッセージ**spy++ ツールバーにメニューが追加されます。 選択したオプションに応じて、メッセージは、アクティブなメッセージ ビュー ウィンドウにストリーミングを開始します。  
   
 6.  十分なメッセージを使用する場合は、選択**ログの停止**から、**メッセージ**メニュー。  
   
@@ -53,20 +51,20 @@ Spy++ メッセージ ビュー
  [メッセージ ビューを制御します。](../debugger/how-to-control-messages-view.md)  
  メッセージ ビューを管理する方法について説明します。  
   
- [[検索] ウィンドウからメッセージ ビューを開く](../debugger/how-to-open-messages-view-from-find-window.md)  
+ [ウィンドウ検索 からメッセージ ビューを開く](../debugger/how-to-open-messages-view-from-find-window.md)  
  [ウィンドウ検索] ダイアログ ボックスからメッセージ ビューを開く方法について説明します。  
   
  [メッセージ ビューでメッセージの検索](../debugger/how-to-search-for-a-message-in-messages-view.md)  
  メッセージ ビューで、特定のメッセージを検索する方法について説明します。  
   
  [開始および停止メッセージ ログの表示](../debugger/how-to-start-and-stop-the-message-log-display.md)  
- 起動し、メッセージのログ記録を停止する方法について説明します。  
+ メッセージのログ記録の停止を起動する方法について説明します。  
   
  [メッセージ コード](../debugger/message-codes.md)  
- メッセージのメッセージ ビュー一覧のコードを定義します。  
+ メッセージ ビューで表示されているメッセージのコードを定義します。  
   
  [メッセージのプロパティを表示します。](../debugger/how-to-display-message-properties.md)  
- 詳細については、メッセージを表示する方法です。  
+ メッセージに関する詳細情報を表示する方法。  
   
 ## <a name="related-sections"></a>関連項目  
  [Spy++ ビュー](../debugger/spy-increment-views.md)  
@@ -76,7 +74,7 @@ Spy++ メッセージ ビュー
  Spy++ ツールを紹介し、使用方法について説明します。  
   
  [[メッセージ オプション] ダイアログ ボックス](../debugger/message-options-dialog-box.md)  
- どのメッセージがアクティブなメッセージ ビューで一覧表示を選択するために使用します。  
+ メッセージがアクティブなメッセージ ビューで一覧表示を選択するために使用します。  
   
  [[メッセージ検索] ダイアログ ボックス](../debugger/message-search-dialog-box.md)  
  メッセージ ビューで特定のメッセージのノードを検索するために使用します。  
@@ -85,4 +83,4 @@ Spy++ メッセージ ビュー
  メッセージ ビューで選択したメッセージのプロパティを表示するために使用します。  
   
  [Spy++ リファレンス](../debugger/spy-increment-reference.md)  
- 各 spy++ メニューおよびダイアログ ボックスについて説明するセクションが含まれます。
+ 各 spy++ メニューおよびダイアログ ボックスについて説明するセクションが含まれています。
