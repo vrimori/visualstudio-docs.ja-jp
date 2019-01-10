@@ -2,7 +2,6 @@
 title: UWP アプリのデバッグ セッションを開始 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/20/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - VC.Project.IVCAppHostRemoteDebugPageObject.MachineName
@@ -36,12 +35,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 181dec6bfa6ebe96528c39b74d68375b8eb7fcb8
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 3c2ef4e92cddb302e67f99c921750d4e9e83d98e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53062410"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53901987"
 ---
 # <a name="start-a-debugging-session-for-a-uwp-app"></a>UWP アプリのデバッグ セッションを開始する
   
@@ -209,4 +208,4 @@ C++ アプリでの Visual Studio は既定では、ネイティブ コードを
 > JavaScript アプリにアタッチする最も簡単な方法は、その他のすべての JavaScript アプリを閉じることです。 または、実行中の Pid を記録して*wwahost.exe*プロセス Windows タスク マネージャーでは、アプリを開始する前にします。 アプリを起動するときにその*wwahost.exe* PID が以前にメモしたものとは異なるものになります。  
 
 ## <a name="see-also"></a>関連項目  
- [Visual Studio でのアプリのデバッグ](../debugger/debug-store-apps-in-visual-studio.md)   
+ [Visual Studio でのアプリのデバッグ](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)   
