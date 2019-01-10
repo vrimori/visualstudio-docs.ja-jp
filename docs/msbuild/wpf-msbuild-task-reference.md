@@ -1,8 +1,6 @@
 ---
 title: WPF MSBuild タスク リファレンス | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 53f723644744001e39967186d0eeec74bf7d3bd7
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 15b307fa11c307a85a9a219b5ea2dd7fbc9c0476
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39153801"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53878550"
 ---
 # <a name="wpf-msbuild-task-reference"></a>WPF MSBuild タスク リファレンス
 Windows Presentation Foundation (WPF) のビルド プロセスは、マークアップのコンパイルやリソースのプロセスを含む追加のビルド タスクのセットで Microsoft ビルド エンジン (MSBuild) を拡張します。  

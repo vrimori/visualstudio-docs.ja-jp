@@ -2,7 +2,6 @@
 title: ListCallStack コマンド
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - debug.listcallstack
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e809af75f0a4a47da6af30a3d93748401ca4609d
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 066bf09da72f0f0bee91057c9547e5d3b2daf774
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512006"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53929686"
 ---
 # <a name="list-call-stack-command"></a>ListCallStack コマンド
 現在の呼び出し履歴を表示します。
@@ -108,11 +107,11 @@ kb 2
 >Debug.CallStack /Count:4 /ShowTypes:yes
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [ListDisassembly コマンド](../../ide/reference/list-disassembly-command.md)
 - [ListThreads コマンド](../../ide/reference/list-threads-command.md)
 - [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
 - [コマンド ウィンドウ](../../ide/reference/command-window.md)
 - [検索コマンド ボックス](../../ide/find-command-box.md)
-- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)

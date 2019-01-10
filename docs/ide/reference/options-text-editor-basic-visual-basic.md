@@ -2,7 +2,6 @@
 title: '[オプション]、[テキスト エディター]、[基本] (VB)、[詳細]'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Visual_Basic.Editor
@@ -20,12 +19,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b15617dce090a3aacde71ad48bf4984f5efbcac4
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 6ca2178b61aa3cd2aa83314f00c231d564a10944
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50218926"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53871240"
 ---
 # <a name="options-text-editor-basic-visual-basic-advanced"></a>[オプション]、[テキスト エディター]、[基本] (Visual Basic)、[詳細]
 **[オプション]** (**[ツール]** メニュー) ダイアログ ボックスの **[テキスト エディター]** フォルダーにある **[Basic]** フォルダーの **[VB 固有]** プロパティ ページでは、次のプロパティを指定します。
@@ -76,7 +75,7 @@ ms.locfileid: "50218926"
 
 一般的なエラーの解決方法がテキスト エディターに表示され、適切な修正方法を選択できます。修正方法を選択するとコードに適用されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)
 - [[オプション]、[テキスト エディター]、[すべての言語]、[タブ]](../../ide/reference/options-text-editor-all-languages-tabs.md)

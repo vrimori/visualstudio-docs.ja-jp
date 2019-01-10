@@ -1,8 +1,7 @@
 ---
-title: '方法 : エンコーディングを使用してファイルを保存および開く'
+title: '方法: エンコーディングを使用してファイルを保存および開く'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode, bi-directional language support
@@ -15,14 +14,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6298e603589d41a6a082b6fe2c1916b3cf8a2a84
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 38d52cdee3ee0f6ccbdd378e4fb70e356d5826c2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31943060"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53869571"
 ---
-# <a name="how-to-save-and-open-files-with-encoding"></a>方法 : エンコーディングを使用してファイルを保存および開く
+# <a name="how-to-save-and-open-files-with-encoding"></a>方法: エンコーディングを使用してファイルを保存および開く
 
 双方向言語をサポートするために、特定の文字エンコーディングを使用してファイルを保存できます。 また、Visual Studio でファイルが正しく開かれるように、ファイルを開くときにもエンコーディングを指定できます。
 

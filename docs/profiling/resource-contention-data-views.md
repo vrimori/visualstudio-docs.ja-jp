@@ -1,8 +1,6 @@
 ---
 title: リソース競合データのビュー | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - profilng tools,concurrency profiling method view
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 320ccc34840cb56646a52f82dc2eb8985fdb5da6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ea7cbe0ff412e7955a4a255018e335e1ae6336da
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31581033"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53990608"
 ---
 # <a name="resource-contention-data-views"></a>リソース競合データのビュー
 このセクションでは、スレッド競合プロファイル データが格納されるプロファイラー データ ファイルのビューとレポートに関するリファレンス情報を示します。  
@@ -42,7 +40,7 @@ ms.locfileid: "31581033"
  [スレッドの詳細ビュー](../profiling/thread-details-view-contention-data.md)  
  スレッドごとにブロック イベントのグラフィカル タイムラインを表示し、ブロック イベントの呼び出し履歴をリストします。  
   
- [関数 ビュー](../profiling/functions-view-contention-data.md)  
+ [関数ビュー](../profiling/functions-view-contention-data.md)  
  関数ごとにスレッドおよびリソース競合データをリストします。  
   
  [リソースの競合ビュー](../profiling/resource-contentions-view-contention-data.md)  
