@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd25b7ed02cb8d45ae693eacdb397a250d2456e2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 80d68a254cf2d1a896be86072d50a13be2f7a44f
+ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53847825"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54154422"
 ---
 # <a name="create-an-extension-with-a-menu-command"></a>メニュー コマンドを使用して拡張機能を作成します。
 このチュートリアルでは、メモ帳を起動するメニュー コマンドを使用して拡張機能を作成する方法を示します。  
@@ -121,6 +121,6 @@ ms.locfileid: "53847825"
   
 4. 既存のコード エディターには、IntelliSense、コードの推奨事項、およびその他の機能を追加します。[エディターと言語サービスを拡張します。](../extensibility/extending-the-editor-and-language-services.md)  
   
-5. 拡張機能には、オプションとプロパティ ページとユーザー設定を追加します。[プロパティと、[プロパティ] ウィンドウの拡張](../extensibility/extending-properties-and-the-property-window.md)と[ユーザー設定と Ooptions 拡張](../extensibility/extending-user-settings-and-options.md)  
+5. 拡張機能には、オプションとプロパティ ページとユーザー設定を追加します。[プロパティと、[プロパティ] ウィンドウの拡張](../extensibility/extending-properties-and-the-property-window.md)と[ユーザー設定とオプションの拡張](../extensibility/extending-user-settings-and-options.md)  
   
    他の種類の拡張機能が、新しい種類のプロジェクトの作成などのもう少し作業が必要です ([プロジェクトの拡張](../extensibility/extending-projects.md))、エディターの新しい型を作成する ([を作成するカスタム エディターとデザイナー](../extensibility/creating-custom-editors-and-designers.md))、または実装する、分離のシェル拡張機能:[Visual Studio の分離シェル](/visualstudio/extensibility/shell/visual-studio-isolated-shell)
