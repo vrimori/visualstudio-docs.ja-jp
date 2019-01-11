@@ -10,12 +10,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4fb6ce04e32f30411e8e1a60757774a4f2b36807
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b62ffce08ecf5b6397bdda0b1f9fb6c1b83d7b63
+ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53941545"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54154338"
 ---
 # <a name="walkthrough-use-a-shell-command-with-an-editor-extension"></a>チュートリアル: エディター拡張機能でシェル コマンドを使用します。
 VSPackage からには、エディターにメニュー コマンドなどの機能を追加できます。 このチュートリアルでは、メニュー コマンドを呼び出すことによって、エディターでテキスト ビューに表示要素を追加する方法を示します。  
@@ -101,7 +101,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
   
 3.  次の追加`using`ステートメント。  
   
-    ```vb  
+    ```csharp
     using Microsoft.VisualStudio.Text;  
     ```  
   
@@ -218,7 +218,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
   
         Grid.SetColumn(rect, 0);  
         Grid.SetRow(rect, 0);  
-         Grid.SetRowSpan(rect, 2);  
+        Grid.SetRowSpan(rect, 2);  
         Grid.SetColumnSpan(rect, 3);  
         Grid.SetRow(tb1, 0);  
         Grid.SetColumn(tb1, 1);  
@@ -229,7 +229,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
         this.commentGrid.Children.Add(tb2);  
   
         Canvas.SetLeft(this.commentGrid, Math.Max(viewRightEdge - this.commentGrid.Width - 20.0, textRightEdge + 20.0));  
-         Canvas.SetTop(this.commentGrid, textGeometry.GetRenderBounds(solidPen).Top);  
+        Canvas.SetTop(this.commentGrid, textGeometry.GetRenderBounds(solidPen).Top);  
   
         this.Children.Add(this.commentGrid);  
     }  
@@ -386,27 +386,6 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     ```  
   
 8.  追加、`OnBufferChanged`イベント ハンドラー。  
-  
-    ```csharp  
-    private void OnBufferChanged(object sender, TextContentChangedEventArgs e)  
-    {  
-        //Make a list of all comments that have a span of at least one character after applying the change. There is no need to raise a changed event for the deleted adornments. The adornments are deleted only if a text change would cause the view to reformat the line and discard the adornments.  
-        IList<CommentAdornment> keptComments = new List<CommentAdornment>(this.comments.Count);  
-  
-        foreach (CommentAdornment comment in this.comments)  
-        {  
-            Span span = comment.Span.GetSpan(e.After);  
-            //if a comment does not span at least one character, its text was deleted.   
-            if (span.Length != 0)  
-            {  
-                keptComments.Add(comment);  
-            }  
-        }  
-  
-        this.comments = keptComments;  
-    }  
-  
-    ```  
   
      [!code-csharp[VSSDKMenuCommandTest#21](../extensibility/codesnippet/CSharp/walkthrough-using-a-shell-command-with-an-editor-extension_2.cs)]
      [!code-vb[VSSDKMenuCommandTest#21](../extensibility/codesnippet/VisualBasic/walkthrough-using-a-shell-command-with-an-editor-extension_2.vb)]  
@@ -642,10 +621,10 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     using CommentAdornmentTest;  
     ```  
   
-3.  削除、`ShowMessageBox()`メソッドを次のコマンド ハンドラーを追加します。  
+3.  削除、`Execute()`メソッドを次のコマンド ハンドラーを追加します。  
   
     ```csharp  
-    private void AddAdornmentHandler(object sender, EventArgs e)  
+    private async void AddAdornmentHandler(object sender, EventArgs e)  
     {  
     }  
     ```  
@@ -653,9 +632,9 @@ VSPackage からには、エディターにメニュー コマンドなどの機
 4.  アクティブなビューを取得するコードを追加します。 取得する必要があります、 `SVsTextManager` 、アクティブなを取得する Visual Studio shell の`IVsTextView`します。  
   
     ```csharp  
-    private void AddAdornmentHandler(object sender, EventArgs e)  
+    private async void AddAdornmentHandler(object sender, EventArgs e)  
     {  
-        IVsTextManager txtMgr = (IVsTextManager)ServiceProvider.GetService(typeof(SVsTextManager));  
+        IVsTextManager txtMgr = (IVsTextManager) await ServiceProvider.GetServiceAsync(typeof(SVsTextManager));  
         IVsTextView vTextView = null;  
         int mustHaveFocus = 1;  
         txtMgr.GetActiveView(mustHaveFocus, null, out vTextView);  
@@ -665,9 +644,9 @@ VSPackage からには、エディターにメニュー コマンドなどの機
 5.  このテキスト ビューがエディターのテキスト ビューのインスタンスの場合にキャストできます、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData>インターフェイスを取得し、<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost>とそれに関連付けられた<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView>します。 使用して、<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost>を呼び出す、`Connector.Execute()`メソッドでは、コメントの表示要素のプロバイダーを取得し、表示要素を追加します。 コマンド ハンドラーは、このコードのようになります。  
   
     ```csharp  
-    private void AddAdornmentHandler(object sender, EventArgs e)  
+    private async void AddAdornmentHandler(object sender, EventArgs e)  
     {  
-        IVsTextManager txtMgr = (IVsTextManager)ServiceProvider.GetService(typeof(SVsTextManager));  
+        IVsTextManager txtMgr = (IVsTextManager) await ServiceProvider.GetServiceAsync(typeof(SVsTextManager));  
         IVsTextView vTextView = null;  
         int mustHaveFocus = 1;  
         txtMgr.GetActiveView(mustHaveFocus, null, out vTextView);  
@@ -675,7 +654,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
          if (userData == null)  
         {  
             Console.WriteLine("No text view is currently open");  
-                            return;  
+            return;  
         }  
         IWpfTextViewHost viewHost;  
         object holder;  
@@ -689,24 +668,15 @@ VSPackage からには、エディターにメニュー コマンドなどの機
 6.  AddAdornment コンス トラクターで AddAdornment コマンドのハンドラーとして AddAdornmentHandler メソッドを設定します。  
   
     ```csharp  
-    private AddAdornment(Package package)  
-    {  
-        if (package == null)  
-        {  
-            throw new ArgumentNullException(nameof(package));  
-        }  
-  
-        this.package = package;  
-  
-        OleMenuCommandService commandService = this.ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;  
-        if (commandService != null)  
-        {  
-            CommandID menuCommandID = new CommandID(MenuGroup, CommandId);  
-            EventHandler eventHandler = this.AddAdornmentHandler;  
-            MenuCommand menuItem = new MenuCommand(eventHandler, menuCommandID);  
-            commandService.AddCommand(menuItem);  
-        }  
-    }  
+    private AddAdornment(AsyncPackage package, OleMenuCommandService commandService)
+    {
+        this.package = package ?? throw new ArgumentNullException(nameof(package));
+        commandService = commandService ?? throw new ArgumentNullException(nameof(commandService));
+
+        var menuCommandID = new CommandID(CommandSet, CommandId);
+        var menuItem = new MenuCommand(this.AddAdornmentHandler, menuCommandID);
+        commandService.AddCommand(menuItem);
+    } 
     ```  
   
 ## <a name="build-and-test-the-code"></a>ビルドし、コードのテスト  
