@@ -61,7 +61,7 @@ Web アプリケーション内の静的にコンパイルされた .*dll* フ�
 
  また、**/Trace** オプションを使用して .NET メモリ データと共に詳細なタイミング情報を収集することもできます。
 
- **vsperfaspnetcmd /memory****[:lifetime]** **/trace**`websiteUrl`
+ **vsperfaspnetcmd /memory** **[:lifetime]** **/trace**`websiteUrl`
 
 ## <a name="to-collect-tier-interaction-data"></a>階層相互作用データを収集するには
 

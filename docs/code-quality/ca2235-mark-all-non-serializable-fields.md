@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 946e666faae07128378fc8063422446a39bd0791
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 484755feac873be04648cfef936b2faa701bba2c
+ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53986571"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54154151"
 ---
 # <a name="ca2235-mark-all-non-serializable-fields"></a>CA2235:すべてのシリアル化不可能なフィールドを設定します
 
@@ -39,6 +39,8 @@ ms.locfileid: "53986571"
 
 ## <a name="rule-description"></a>規則の説明
  シリアル化可能な型は、いずれかでマークされている、<xref:System.SerializableAttribute?displayProperty=fullName>属性。 型がシリアル化されるとき、<xref:System.Runtime.Serialization.SerializationException?displayProperty=fullName>型にシリアル化可能でない型のインスタンス フィールドが含まれている場合、例外がスローされます。
+ 
+ この例外は、型を使用してカスタムのシリアル化を使用して、<xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>インターフェイス。 このインターフェイスを実装する型が、独自のシリアル化ロジックを提供し、このような型のシリアル化不可能なインスタンス フィールドで CA2235 は適用されませんのでします。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  このルールの違反を修正するには、適用、<xref:System.NonSerializedAttribute?displayProperty=fullName>属性をシリアル化可能でないフィールド。
