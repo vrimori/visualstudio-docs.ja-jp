@@ -33,7 +33,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51803631"
 ---
-# <a name="uml-sequence-diagrams-guidelines"></a>UML Sequence Diagrams: Guidelines
+# <a name="uml-sequence-diagrams-guidelines"></a>UML シーケンス図: ガイドライン
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio で描画することができます、*シーケンス図*やり取りを示します。 相互作用とは、クラス、コンポーネント、サブシステム、またはアクターの一般的なインスタンス間でやり取りされるメッセージのシーケンスのことです。  
