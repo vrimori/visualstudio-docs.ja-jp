@@ -2,19 +2,18 @@
 title: コード カバレッジ分析のカスタマイズ
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 09af57ca64524dafa506d57d486e9385a4c35a93
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: e640fd14c6fd5b465a52ffe319814083958db676
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054942"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53856528"
 ---
 # <a name="customize-code-coverage-analysis"></a>コード カバレッジ分析のカスタマイズ
 
@@ -61,7 +60,7 @@ ms.locfileid: "53054942"
 
 ### <a name="exclude-and-include"></a>Exclude (除外) と Include (包含)
 
-指定したアセンブリをコード カバレッジ分析から除外できます。 例:
+指定したアセンブリをコード カバレッジ分析から除外できます。 次に例を示します。
 
 ```xml
 <ModulePaths>

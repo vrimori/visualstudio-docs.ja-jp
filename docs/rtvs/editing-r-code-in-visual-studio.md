@@ -3,19 +3,18 @@ title: R コードを編集する
 description: Visual Studio では、拡張機能の使用に関するすべての機能は維持されたまま、R 用に調整された編集エクスペリエンスが提供されます。
 ms.date: 11/05/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-rtvs
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: c1d44e6d316db2ddce799784169a11a06578fe7f
-ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
+ms.openlocfilehash: b3191df6ead3454bb138efae2aaf7183cc556d12
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51220880"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53968366"
 ---
 # <a name="edit-r-code-in-visual-studio"></a>Visual Studio で R コードを編集する
 

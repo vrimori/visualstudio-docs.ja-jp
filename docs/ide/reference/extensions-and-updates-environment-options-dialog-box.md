@@ -2,7 +2,6 @@
 title: '[拡張機能と更新プログラム]([オプション] ダイアログ ボックス - [環境])'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.ExtensionManager
@@ -12,14 +11,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f2ff9cc6ea88aa7a8e7c7e69c2fd51c8f7997a98
-ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
+ms.openlocfilehash: 47784d19dee5ff911432f9849ebe4545ecee761f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53684278"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53831038"
 ---
-# <a name="extensions-and-updates-environment-options-dialog-box"></a>[拡張機能と更新プログラム]\([オプション] ダイアログ ボックス - [環境])
+# <a name="extensions-and-updates-environment-options-dialog-box"></a>[拡張機能と更新プログラム]([オプション] ダイアログ ボックス - [環境])
 
 このページを使用して、Visual Studio での更新プログラムの実行方法に関するオプションと、拡張機能の更新および検出方法に関するオプションを設定します。
 
@@ -39,6 +38,6 @@ ms.locfileid: "53684278"
 
 専用拡張機能のギャラリーのサポートを有効にするエンタープライズ機能です。 詳細については、「[プライベート ギャラリー](../../extensibility/private-galleries.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)

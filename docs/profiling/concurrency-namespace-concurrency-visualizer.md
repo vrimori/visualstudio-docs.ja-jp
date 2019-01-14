@@ -1,8 +1,6 @@
 ---
-title: Concurrency 名前空間 (同時実行ビジュアライザー) | Microsoft Docs
-ms.custom: ''
+title: コンカレンシー名前空間 (コンカレンシー ビジュアライザー) | Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - cvmarkersobj/Concurrency
@@ -14,15 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aec7bc6373644b81dd45eeeadefa33ab3af88396
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 781e5251dcb0580c4e6ae36e33e6af2b16f3a79d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34548139"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53823789"
 ---
-# <a name="concurrency-namespace-concurrency-visualizer"></a>Concurrency 名前空間 (同時実行ビジュアライザー)
-`Concurrency` 名前空間には、C++ 向けの並列プログラミング フレームワークである同時実行ランタイムにアクセスするためのクラスおよび関数が用意されています。 詳細については、「[同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime)」を参照してください。  
+# <a name="concurrency-namespace-concurrency-visualizer"></a>コンカレンシー名前空間 (コンカレンシー ビジュアライザー)
+`Concurrency` 名前空間には、C++ 向けの並列プログラミング フレームワークであるコンカレンシー ランタイムにアクセスするためのクラスおよび関数が用意されています。 詳細については、「[コンカレンシー ランタイム](/cpp/parallel/concrt/concurrency-runtime)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,9 +34,9 @@ namespace Concurrency;
   
 |name|説明|  
 |----------|-----------------|  
-|[diagnostic 名前空間](../profiling/diagnostic-namespace.md)|`diagnostics` 名前空間は、同時実行ビジュアライザー マーカーを出力するための機能を提供します。|  
+|[diagnostic 名前空間](../profiling/diagnostic-namespace.md)|`diagnostics` 名前空間は、コンカレンシー ビジュアライザー マーカーを出力するための機能を提供します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** cvmarkersobj.h  
   
 ## <a name="see-also"></a>関連項目  

@@ -2,19 +2,18 @@
 title: C++ DLL 用の単体テストの記述
 ms.date: 11/04/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: mblome
 manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 045f33c2afcb4f37f5ab81beb21e778edbdd1a61
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 7de21715053a91b187ccdcc1b87f042cedd1b7de
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056176"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53832451"
 ---
 # <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>Visual Studio で C++ DLL 用の単体テストを作成する
 
@@ -125,7 +124,7 @@ ms.locfileid: "53056176"
 
 1.  各単体テスト コード ファイルに、テスト対象プロジェクトのヘッダー用に `#include` ステートメントを追加します。
 
-2.  単体テスト コード ファイルに、テスト クラスとメソッドを追加します。 例:
+2.  単体テスト コード ファイルに、テスト クラスとメソッドを追加します。 次に例を示します。
 
     ```cpp
     #include "stdafx.h"

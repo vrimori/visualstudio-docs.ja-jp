@@ -3,7 +3,6 @@ title: F# ツール
 description: F# でサポートされる Visual Studio の機能について説明します。
 ms.date: 07/11/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - F# features [Visual Studio]
@@ -12,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4512a6ad5efe519c203a764b18cdfc352ed6e81a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 18803d3033cc3aa1fdfb43620eb741ff1724ec74
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49921432"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53990086"
 ---
 # <a name="develop-with-visual-f-in-visual-studio"></a>Visual Studio で Visual F# を使用して開発する
 
@@ -85,7 +84,7 @@ F# では、Visual Studio のコード エディターとテキスト エディ�
 
 |機能|説明|F# でのサポート|
 |-------|-----------|----------------|
-|自動コメント|コード セクションのコメントを作成または解除できます。|はい|
+|自動コメント|コード セクションのコメントを作成または解除できます。|[はい]|
 |オート フォーマット|標準的なインデントとスタイルを使用してコードを再フォーマットします。|×|
 |ブックマーク|エディターで場所を保存できます。|[はい]|
 |インデントの変更|選択行のインデントを設定または解除します。|[はい]|
@@ -100,7 +99,7 @@ F# では、Visual Studio のコード エディターとテキスト エディ�
 |タブにする|スペースをタブに変換します。|[はい]|
 |型の色づけ|定義された型名を特別な色で表示します。|[はい]|
 |クイック検索。 クイック検索、[検索と置換] ウィンドウに関する記述を参照してください。|ファイルまたはプロジェクトで検索できます。|[はい]|
-|**Ctrl** キーを押しながら+クリック**して [定義へ移動]|**Ctrl** キーを押しながら F# シンボルをクリックして、[定義へ移動] を呼び出すことができます。|[はい]|
+|**Ctrl** キーを押しながら**クリック**して [定義へ移動]|**Ctrl** キーを押しながら F# シンボルをクリックして、[定義へ移動] を呼び出すことができます。|[はい]|
 |QuickInfo から [定義へ移動]|[定義へ移動] を呼び出す、ツールヒント内のクリック可能なシンボル。|[はい]|
 |すべてに移動|**Ctrl** + **T** キーを使用して、すべての F# の構成要素に対して、グローバルなあいまい一致ナビゲーションを有効にします。|[はい]|
 |インラインの名前変更|出現するすべてのシンボル インラインの名前を変更します。|[はい]|

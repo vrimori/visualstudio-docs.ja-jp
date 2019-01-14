@@ -3,19 +3,18 @@ title: R のワークスペース
 description: Visual Studio のワークスペースを使って R コードを実行する場所を制御する方法について説明します。
 ms.date: 01/24/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-rtvs
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 11b5086c934b433d4e28095c1d50471ea44e15a8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a72784b0ab265c090f2efd9c5949698118b559ef
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49919300"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53857015"
 ---
 # <a name="control-where-r-code-runs-with-workspaces"></a>ワークスペースで R コードが実行する場所を制御する
 

@@ -3,19 +3,18 @@ title: R 用の対話型 REPL
 description: エディター ウィンドウと統合される Visual Studio の R 用対話型 REPL 環境を使う方法について説明します。
 ms.date: 06/28/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-rtvs
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: a9e475e108fee9134699b0ee80e59fbf3f5eea32
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 7df300a57120bec2fc93ec7433a7ea9fdd3a2fc8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36235541"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53947076"
 ---
 # <a name="work-with-the-r-interactive-window"></a>R 対話型ウィンドウの使用
 
@@ -64,7 +63,7 @@ REPL での以前の入力と出力はすべて読み取り専用となり、変
 | ![[R の割り込み] ボタン](media/repl-toolbar-08-interrupt-r.png)| R の割り込み | **Esc** | このセクションの冒頭で示したスクリーンショットの `while` ループなど、対話型ウィンドウで実行中のコードを停止します。 |
 | ![[デバッガーのアタッチ] ボタン](media/repl-toolbar-09b-attach-debugger.png)| デバッガーのアタッチ | N/A | **[デバッグ]** の **[R インタラクティブ型に接続]** コマンドを使用することもできます。 | 
 | ![[作業ディレクトリをソース ファイルの場所に設定] ボタン](media/repl-toolbar-10-set-working-directory-source.png)| 作業ディレクトリをソース ファイルの場所に設定 | **Ctrl**+**Shift**+**E** | 対話型ウィンドウに最後に読み込まれたソース ファイルに作業ディレクトリを設定します (`source` を使用)。 「[作業ディレクトリ](#working-directory)」を参照してください。 |
-| ![[作業ディレクトリをプロジェクトの場所に設定] ボタン](media/repl-toolbar-11-set-working-directory-to-project.png) | 作業ディレクトリをプロジェクトの場所に設定 | **Ctrl**+**Shift**+**P** | Visual Studio に現在読み込まれているプロジェクトのルートに作業ディレクトリを設定します。 「[作業ディレクトリ](#working-directory)」を参照してください。 |
+| ![[作業ディレクトリをプロジェクトの場所に設定] ボタン](media/repl-toolbar-11-set-working-directory-to-project.png) | 作業ディレクトリをプロジェクトの場所に設定 | **Ctrl** + **Shift** + **P** | Visual Studio に現在読み込まれているプロジェクトのルートに作業ディレクトリを設定します。 「[作業ディレクトリ](#working-directory)」を参照してください。 |
 | (テキスト フィールド) | 作業ディレクトリの選択 | N/A | 作業ディレクトリの直接入力フィールド。 「[作業ディレクトリ](#working-directory)」を参照してください。 |
 
 ## <a name="workspaces-and-sessions"></a>ワークスペースとセッション
