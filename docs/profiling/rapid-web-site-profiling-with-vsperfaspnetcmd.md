@@ -80,7 +80,7 @@ Web アプリケーション内の静的にコンパイルされた .*dll* フ�
 
 .NET メモリ データと共に階層相互作用データを収集するには、コマンド ラインに次のように入力します。
 
-**vsperfaspnetcmd /memory****[:lifetime]** **/tip**_websiteUrl_
+**vsperfaspnetcmd /memory** **[:lifetime]** **/tip**_websiteUrl_
 
 ## <a name="use-the-nowait-option"></a>/NoWait オプションの使用
 
