@@ -3,7 +3,6 @@ title: Python 用 Web アプリケーション テンプレート
 description: Visual Studio には、Bottle、Flask、および Django フレームワークを使用する Python Web アプリケーション用のテンプレートが用意されています。サポートには、デバッグの構成や Azure App Service への発行が含まれています。
 ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
@@ -12,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 06513030b34f7ab3217210a931722d72a6368ab3
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 29730f6dfa2d220759a5e563305e4e0cbb9675c2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53068329"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53850623"
 ---
 # <a name="python-web-application-project-templates"></a>Python Web アプリケーション プロジェクト テンプレート
 
@@ -45,7 +44,7 @@ Python Web アプリを Azure にデプロイする方法については、「[A
 | --- | --- |
 | **Blank Bottle Web プロジェクト** | *app.py* に対するホーム ページと、非常に短いインライン ページ テンプレートを使用して `/` にエコーする `/hello/<name>` ページとを備えた最小限のアプリを `<name>` 内に生成します。 |
 | **空の Django Web プロジェクト** | コア Django サイト構造を持つが Django アプリが含まれない Django プロジェクトを生成します。 詳細については、[Django テンプレート](python-django-web-application-project-template.md)に関する記事と [Django 手順 1](learn-django-in-visual-studio-step-01-project-and-solution.md)に関する記事を参照してください。 |
-| **Blank Flask Web プロジェクト** |  "Hello World!" を 1 つ使用した最小限のアプリを生成します。 ページの`/`します。 このアプリは、「[クイック スタートVisual Studio を使用して初めての Python Web アプリを作成する](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json)」の詳細な手順に従った結果と似ています。 [Flask の詳細情報の手順 1](learn-flask-visual-studio-step-01-project-solution.md) に関するページも参照してください。
+| **Blank Flask Web プロジェクト** | "Hello World!" を 1 つ使用した最小限のアプリを生成します。 ページの`/`します。 このアプリは、「[クイック スタートVisual Studio を使用して初めての Python Web アプリを作成する](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json)」の詳細な手順に従った結果と似ています。 [Flask の詳細情報の手順 1](learn-flask-visual-studio-step-01-project-solution.md) に関するページも参照してください。
 
 ### <a name="web-group"></a>Web グループ
 

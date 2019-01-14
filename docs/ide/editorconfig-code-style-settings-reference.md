@@ -14,16 +14,15 @@ author: kuhlenh
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a54a3d6b967e7652c25e24922d7bd3b49141cc17
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+ms.openlocfilehash: f99f18af416ead93c9327afcda6de0196da81566
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51769754"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53833858"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig の .NET コーディング規則の設定
 
@@ -130,7 +129,7 @@ Visual Studio 2017 [EditorConfig](../ide/create-portable-custom-editor-options.m
 
 このセクションのスタイル ルールは、C# および Visual Basic の両方に適用されます。 優先するプログラミング言語のコード例を表示するには、ブラウザー ウィンドウの右上隅にあるドロップダウンの **[言語]** メニューでそれを選択します。
 
-#### <a name="this_and_me"></a>"This." 修飾子 と "Me."  修飾子
+#### <a name="this_and_me"></a>"This." 修飾子 と "Me." 修飾子
 
 このスタイル ルール (ルール ID IDE0003 および IDE0009) は、フィールド、プロパティ、メソッド、またはイベントに適用できます。 **true** の値は、C# では `this.`、Visual Basic では `Me.` をコード記号の前に付けることを意味します。 **false** の値は、`this.` や `Me.` をコード要素の前に_付けない_ ことを意味します。
 
