@@ -8,20 +8,21 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: a741a506338066dddbee2cdbfd701ad3bfb4c922
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ea0b73470bc9f3bed76328c55d823cef3c5b8e9e
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53929699"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269320"
 ---
 # <a name="controlling-color-line-style-and-other-shape-properties"></a>色、線のスタイル、およびその他のシェイプのプロパティの管理
-いくつかのシェイプのプロパティとなど、色 '公開できる' - は、図形のドメイン プロパティ リンク。 他のユーザーは、直接制御する必要があります。
+
+いくつかの色などのシェイプのプロパティ ' を公開できます '。 つまり、プロパティは、図形のドメイン プロパティにリンクできます。 他のユーザーは、直接制御する必要があります。
 
 ## <a name="exposing-a-property"></a>プロパティを公開します。
  いくつかの色などのシェイプのプロパティは、ドメイン プロパティの値にリンクできます。
 
- DSL 定義では、図形、コネクタ、または図クラスを選択します。 そのコンテキスト メニューで、次のように選択します。**公開されている追加**、塗りつぶしの色など、目的のプロパティをクリックしてします。
+ DSL 定義では、図形、コネクタ、または図クラスを選択します。 その右クリック メニューで、**公開されている追加**、塗りつぶしの色など、目的のプロパティを選択し、します。
 
  図形は、ドメイン プロパティまたはユーザーとしてプログラム コードで設定できるようになりました。
 

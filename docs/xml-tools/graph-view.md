@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d7623198cc31e8ee955f00cd06b7ca91f8d32a31
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 252b22305579f3c0beccdca0a5464f7d08bbc985
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53826995"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269905"
 ---
 # <a name="graph-view"></a>グラフ ビュー
 
@@ -42,7 +42,7 @@ ms.locfileid: "53826995"
 
  グラフ ビューの下部に表示される階層リンク バーは、選択したノードが存在するスキーマ セットの場所を示します。 複数の項目が選択されている場合、階層リンク バーは空白になります。
 
-## <a name="context-menu"></a>コンテキスト メニュー
+## <a name="context-right-click-menu"></a>コンテキスト (右クリック) メニュー
 
  グラフ ビューのデザイン サーフェイスにあるすべてのノードに使用できるオプションを次の表に示します。
 
@@ -92,7 +92,7 @@ ms.locfileid: "53826995"
 
 ## <a name="properties-window"></a>[プロパティ] ウィンドウ
 
- コンテキスト メニューを使用して初めて開くと、**プロパティ**ウィンドウ。 既定で、**プロパティ**ウィンドウが Visual Studio の右下隅に表示されます。 そのノードのプロパティが表示されます、コンテンツ モデル ビューに表示されているノードをクリックすると、**プロパティ**ウィンドウ。
+ コンテキスト (右クリック) メニューを使用して初めて開くと、**プロパティ**ウィンドウ。 既定で、**プロパティ**ウィンドウが Visual Studio の右下隅に表示されます。 そのノードのプロパティが表示されます、コンテンツ モデル ビューに表示されているノードをクリックすると、**プロパティ**ウィンドウ。
 
 ## <a name="xsd-toolbar"></a>XSD ツールバー
 
@@ -141,7 +141,7 @@ ms.locfileid: "53826995"
 
 ## <a name="xml-editor-integration"></a>XML エディターとの統合
 
- ノードをクリックしたり、[コードの表示] コンテキスト メニューを使用することで、グラフ ビューと XML エディターを切り替えることができます。
+ 切り替える前後グラフ ビューと XML エディターの間でノードをクリックして、[コードの表示] コンテキスト (右クリック) メニューを使用します。
 
  XML エディターでスキーマ セットを変更すると、グラフ ビューにもその変更が同期されます。 詳細については、次を参照してください。 [XML エディターとの統合](../xml-tools/integration-with-xml-editor.md)します。
 

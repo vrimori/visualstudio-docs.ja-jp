@@ -9,16 +9,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d38dea96b109db9d60014df9bf7d4d420308f195
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6a5a02169a76718d5abfd5f08bd6c03c7f7dda26
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53898897"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270165"
 ---
 # <a name="context-menus-xml-schema-explorer"></a>コンテキスト メニュー (XML スキーマ エクスプ ローラー)
 
-次のコンテキスト メニュー項目は、スキーマ固有の検索やその他の操作を実行するために使用します。
+コンテキスト メニューは、何かを右クリックすると表示されるメニューです。 次のコンテキスト メニュー項目は、スキーマ固有の検索やその他の操作を実行するために使用します。
 
 ## <a name="node-type-schema-set"></a>ノードの種類:スキーマ セット
 

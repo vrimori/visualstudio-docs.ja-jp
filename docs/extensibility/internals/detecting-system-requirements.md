@@ -33,7 +33,7 @@ Visual Studio がインストールされていない場合、VSPackage は機�
 新しいエディションがインストールされているときにそのエディション用のレジストリ キーが以前のエディションの場合とでも追加されます。 つまり、Enterprise edition がインストールされて、**インストール**にキーが設定されている*1*の Enterprise、および Professional および Community エディション。 そのため、必要な最新のエディションのみを確認する必要があります。  
   
 > [!NOTE]
->  レジストリ エディターの 64 ビット バージョンで 32 ビットのキーが表示される**hkey_local_machine \software\wow6432node\\**します。 Visual Studio のキーは、 **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\\**します。  
+>  レジストリ エディターの 64 ビット バージョンで 32 ビットのキーが表示される **hkey_local_machine \software\wow6432node\\** します。 Visual Studio のキーは、 **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\\**します。  
   
 |製品|キー|  
 |-------------|---------|  
