@@ -31,7 +31,7 @@
 ### [UML シーケンス図: リファレンス](uml-sequence-diagrams-reference.md)
 #### [UML シーケンス図の要素のプロパティ](properties-of-elements-on-uml-sequence-diagrams.md)
 #### [UML シーケンス図のフラグメントを使用した制御フローの記述](describe-control-flow-with-fragments-on-uml-sequence-diagrams.md)
-### [UML Sequence Diagrams: Guidelines](uml-sequence-diagrams-guidelines.md)
+### [UML シーケンス図: ガイドライン](uml-sequence-diagrams-guidelines.md)
 ### [UML ユース ケース図: リファレンス](uml-use-case-diagrams-reference.md)
 #### [UML ユース ケース図の要素のプロパティ](properties-of-elements-on-uml-use-case-diagrams.md)
 #### [ユース ケースをドキュメントおよび図にリンクする](link-a-use-case-to-documents-and-diagrams.md)
