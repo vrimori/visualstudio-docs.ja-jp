@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: fd24485d02d20bf4ab1b5def30e34b8d14a71cb3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d9b4631b320138d045e910c612c1fa4558a07e56
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53955254"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269225"
 ---
 # <a name="walkthrough-analyzing-managed-code-for-code-defects"></a>チュートリアル: コードの欠陥のマネージ コードの分析
 
@@ -152,7 +152,7 @@ ms.locfileid: "53955254"
 
    1. **ファイル**] メニューの [選択**選択した項目の保存**、プロパティ ページを閉じます。
 
-   [CA 2237:ISerializable 型を SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md):Microsoft.Usage:この型が ISerializable を実装している 'デモ' を入力する [Serializable] 属性を追加します。
+   [CA2237:ISerializable 型を SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md):Microsoft.Usage:この型が ISerializable を実装している 'デモ' を入力する [Serializable] 属性を追加します。
 
    1. 追加、`[Serializable ()]`属性をクラス`demo`します。
 
@@ -183,13 +183,11 @@ ms.locfileid: "53955254"
 
 ## <a name="exclude-code-analysis-warnings"></a>コード分析の警告を除外します。
 
-### <a name="to-exclude-code-defect-warnings"></a>コード障害の警告を除外するには
-
 1. 残りの警告のそれぞれについて、次の操作を行います。
 
     1. 警告を選択して、**エラー一覧**します。
 
-    1. 右クリックまたはコンテキスト メニューから選択**抑制** > **抑制ファイル内**します。
+    1. 右クリック メニュー (コンテキスト メニュー) では、次のように選択します。**抑制** > **抑制ファイル内**します。
 
 1. プロジェクトをリビルドします。
 

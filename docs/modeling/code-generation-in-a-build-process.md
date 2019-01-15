@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: d5d4b4c50a02a92d150a87788e6dc307dd2f8e64
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 11ff8764395f10a4937143d6f51d220f970193af
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53865519"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270233"
 ---
 # <a name="code-generation-in-a-build-process"></a>ビルド プロセスでのコード生成
 
@@ -58,7 +58,7 @@ ms.locfileid: "53865519"
 
 MSBuild での機能の一部を構成するプロジェクト ファイルを編集する必要があります。
 
-**ソリューション エクスプ ローラー**で、プロジェクトのコンテキスト メニューから**アンロード**を選択します。 これにより XML エディターで .csproj または .vbproj ファイルを編集できるようになります。
+**ソリューション エクスプ ローラー**、選択**アンロード**プロジェクトの右クリック メニューから。 これにより XML エディターで .csproj または .vbproj ファイルを編集できるようになります。
 
 編集が完了したら、**再読み込み**を選択します。
 

@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 525766d69e892bd6560cd9d9cd280d8ed061c56c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 710c7728069a7166d67ab39239b360634fb80509
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53946608"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269502"
 ---
 # <a name="pick-activity-designer"></a>Pick アクティビティ デザイナー
 
@@ -30,7 +30,7 @@ ms.locfileid: "53946608"
 
 アクセス、**選択**内のアクティビティ デザイナー、**制御フロー**のカテゴリ、**ツールボックス**します。 **選択**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**アクティビティ デザイナーは通常、配置内での例についてはどこにも、ワークフロー デザイナー画面にドロップし、 **シーケンス**アクティビティ デザイナー。 ワークフロー デザイナーにドロップすると、作成、<xref:System.Activities.Statements.Pick>を既定で 2 つの空を含むアクティビティは、<xref:System.Activities.Statements.PickBranch>で要素としてのアクティビティは、Branch1 および Branch2 の名前を表示します。 これらそれぞれ<xref:System.Activities.Statements.PickBranch.DisplayName%2A>でプロパティ値を編集できる、 **PickBranch**アクティビティ デザイナーのヘッダー内、または、**プロパティ**各分岐はウィンドウ。
 
-追加する 2 つの方法はあります<xref:System.Activities.Statements.PickBranch>のコレクションにアクティビティを<xref:System.Activities.Statements.Pick>オブジェクト: ドラッグ アンド ドロップ、 **PickBranch**からデザイナー、**ツールボックス**からコンテキスト メニューを使用内で、**選択**デザイン サーフェイス。 詳細については、次を参照してください。、 [PickBranch](../workflow-designer/pickbranch-activity-designer.md)トピック。 内に配置できることのみいる項目に注意してください、**選択**アクティビティ デザイナーは、 **PickBranch**アクティビティ デザイナー。
+追加する 2 つの方法はあります<xref:System.Activities.Statements.PickBranch>のコレクションにアクティビティを<xref:System.Activities.Statements.Pick>オブジェクト: ドラッグ アンド ドロップ、 **PickBranch**からデザイナー、**ツールボックス**または右クリック メニューを使用して内から、**選択**デザイン サーフェイス。 詳細については、次を参照してください。、 [PickBranch](../workflow-designer/pickbranch-activity-designer.md)トピック。 内に配置できることのみいる項目に注意してください、**選択**アクティビティ デザイナーは、 **PickBranch**アクティビティ デザイナー。
 
 ### <a name="pick-activity-properties-in-the-workflow-designer"></a>ワークフロー デザイナーでの Pick アクティビティのプロパティ
 

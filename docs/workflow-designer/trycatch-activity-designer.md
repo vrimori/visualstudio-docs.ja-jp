@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 280f844ec08ea5e75a78d2e9ea1596b0fb7162eb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a4a62b660f2deb2b3ab3a092cdfd586a56b2bcb8
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53859004"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269814"
 ---
 # <a name="trycatch-activity-designer"></a>TryCatch アクティビティ デザイナー
 
@@ -34,7 +34,7 @@ ms.locfileid: "53859004"
 
 上の右上隅にある展開ボタンをクリックします**TryCatch**デザイナーを参照してください、**お試しください**、**キャッチ**、と**最後に**ボックスで、。展開ビュー。 Catch を追加するには、クリックして、**新しいキャッチの追加**ボタン**TryCatch**デザイナー。 このボタンが、型のコンボ ボックスに変化します。 例外の型を選択し、Enter キーを押して catch を追加します。 追加した後、**キャッチ**catch の領域を展開および catch の実行ロジックを定義する catch にアクティビティをドロップできます。 展開された catch 領域の右側にはテキスト ボックスが表示されます。 このテキスト ボックスを使用して、例外変数に名前を付けることができます。 例外変数は、同じアクティビティにのみ使用できます**キャッチ**します。
 
-**TryCatch**デザイナーが編集をサポートしていません**キャッチ**します。 例外の種類を変更する場合は、削除する必要が、**キャッチ**新しいアカウントを追加します。 A**キャッチ**を選択し、削除、またはを使用して削除することができます、**削除**メニュー、コンテキスト メニューを右クリックしてアクセスします。
+**TryCatch**デザイナーが編集をサポートしていません**キャッチ**します。 例外の種類を変更する場合は、削除する必要が、**キャッチ**新しいアカウントを追加します。 A**キャッチ**を選択し、削除、または選択して削除できます**削除**を右クリックしてアクセスされるコンテキスト メニュー。
 
 ### <a name="the-trycatch-properties"></a>TryCatch のプロパティ
 
