@@ -21,7 +21,7 @@ ms.locfileid: "53990780"
 # <a name="callback-functions-implemented-by-the-ide"></a>IDE によって実装されるコールバック関数
 統合することとして可能な限りと統合されたエクスペリエンスを提供するシームレスな統合開発環境 (IDE) ソース管理プラグイン使用できます、IDE によって実装されるコールバック関数。 プラグインできるこれらの関数、IDE に情報を渡すのソース管理操作中に適切なタイミングでIDE は、ネイティブ UI に埋め込まれた要素としてこの情報を表示できます。 ユーザーは、場合、プラグインの使用、独自の UI よりもこのシナリオで断片化の経験を持ちます。  
   
- 必要なヘッダー ファイルは*scc.h*します。 既定の場所は*\Program Files\VSIP 8.0\EnvSDK\common\inc\\*します。 ソース管理プラグイン サンプルの VSIP フォルダーにも*\Program Files\VSIP 8.0\MSSCCI\\*します。  
+ 必要なヘッダー ファイルは*scc.h*します。 既定の場所は *\Program Files\VSIP 8.0\EnvSDK\common\inc\\* します。 ソース管理プラグイン サンプルの VSIP フォルダーにも *\Program Files\VSIP 8.0\MSSCCI\\* します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)  
