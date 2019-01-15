@@ -28,7 +28,7 @@ ms.author: gewarren
 manager: douge
 ms.openlocfilehash: 56ecc5c54611f94cdbfb0f08ec54a4e0722f0cbd
 ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51803631"
