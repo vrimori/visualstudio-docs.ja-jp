@@ -2,7 +2,6 @@
 title: マルチ スレッド アプリケーションのデバッグ |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/06/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.gputthreads
@@ -23,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ea1af90ae775ed24f5cceabeca04cdc901f545f
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 07710ed0188baf48a567bb3c003f174814c30094
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059679"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53907892"
 ---
 # <a name="debug-multithreaded-applications-in-visual-studio"></a>Visual Studio でマルチスレッド アプリケーションをデバッグする
 スレッドは、オペレーティング システムがプロセッサ時間を許可する命令のシーケンスです。 オペレーティング システムで実行されているプロセスは、いずれも 1 つ以上のスレッドで構成されます。 複数のスレッドで構成されるプロセスをマルチスレッド プロセスといいます。  
@@ -41,7 +40,7 @@ ms.locfileid: "53059679"
 
 Visual Studio には、マルチ スレッド アプリのデバッグで使用するためのさまざまなツールが用意されています。
 
-- スレッドのデバッグの主なツールにはスレッドの場合、**スレッド**ウィンドウで、ソース ウィンドウ、スレッド マーカー、**並列スタック**ウィンドウで、**並列ウォッチ**ウィンドウ、および**デバッグの場所**ツールバー。 詳細については、**スレッド**ウィンドウと**デバッグの場所**ツールバーを参照してください[チュートリアル。[スレッド] ウィンドウを使用してデバッグ](../debugger/how-to-use-the-threads-window.md)します。 使用する方法については、**並列スタック**と**並列ウォッチ**windows を参照してください[マルチ スレッド アプリケーションのデバッグの開始](../debugger/get-started-debugging-multithreaded-apps.md)します。 両方のトピックでは、スレッド マーカーを使用する方法を説明します。
+- スレッドのデバッグの主なツールにはスレッドの場合、**スレッド**ウィンドウで、ソース ウィンドウ、スレッド マーカー、**並列スタック**ウィンドウで、**並列ウォッチ**ウィンドウ、および**デバッグの場所**ツールバー。 詳細については、**スレッド**ウィンドウと**デバッグの場所**ツールバーを参照してください[チュートリアル。[スレッド] ウィンドウを使用してデバッグする](../debugger/how-to-use-the-threads-window.md) 使用する方法については、**並列スタック**と**並列ウォッチ**windows を参照してください[マルチ スレッド アプリケーションのデバッグの開始](../debugger/get-started-debugging-multithreaded-apps.md)します。 両方のトピックでは、スレッド マーカーを使用する方法を説明します。
   
 - 使用するコード、[タスク並列ライブラリ (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)または[同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime/)、デバッグの主なツールは、**並列スタック**ウィンドウで、 **並列ウォッチ**ウィンドウ、および**タスク**ウィンドウで、JavaScript もサポートしています。 最初に、次を参照してください。[チュートリアル。並列アプリケーションのデバッグ](../debugger/walkthrough-debugging-a-parallel-application.md)と[チュートリアル。C++ AMP アプリケーションのデバッグ](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)します。 
 
@@ -64,10 +63,10 @@ Visual Studio も提供します強力なブレークポイントとトレース
  [複数プロセスをデバッグする](../debugger/debug-multiple-processes.md)  
  複数プロセスのデバッグ方法について説明します。
 
- [チュートリアル: [スレッド] ウィンドウを使用してデバッグ](../debugger/how-to-use-the-threads-window.md)します。  
+ [チュートリアル: [スレッド] ウィンドウを使用してデバッグする](../debugger/how-to-use-the-threads-window.md)  
  使用する方法のチュートリアル、**スレッド**ウィンドウと**デバッグの場所**ツールバー。 
 
- [チュートリアル: 並列アプリケーションをデバッグします。](../debugger/walkthrough-debugging-a-parallel-application.md)  
+ [チュートリアル: 並行アプリケーションをデバッグする](../debugger/walkthrough-debugging-a-parallel-application.md)  
  使用する方法のチュートリアル、**並列スタック**と**タスク**windows。  
   
  [方法: デバッグ中に別のスレッドに切り替える](../debugger/how-to-switch-to-another-thread-while-debugging.md)  
