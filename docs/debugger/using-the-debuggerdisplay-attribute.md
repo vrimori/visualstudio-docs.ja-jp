@@ -1,8 +1,6 @@
 ---
 title: DebuggerDisplay 属性の使用 |Microsoft Docs
-ms.custom: ''
 ms.date: 08/09/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C#], debugger
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d3adb481ba06c086db3a272c026543464018b542
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 922e9eea80344d5a02e4f54f173b374ca7faa78e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49926203"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53951681"
 ---
 # <a name="using-the-debuggerdisplay-attribute"></a>DebuggerDisplay 属性を使用します
 <xref:System.Diagnostics.DebuggerDisplayAttribute> は、デバッガー変数ウィンドウでのオブジェクト、プロパティ、フィールドの表示方法を制御します。 この属性は、型、デリゲート、プロパティ、フィールド、アセンブリに適用できます。  
@@ -76,15 +74,15 @@ csc /t:library autoexp.cs
 ```csharp  
 [DebuggerDisplay("{DebuggerDisplay,nq}")]  
 public sealed class MyClass   
-{      
-    public int count { get; set; }      
-    public bool flag { get; set; }      
+{      
+    public int count { get; set; }      
+    public bool flag { get; set; }      
     private string DebuggerDisplay  
-   {         
+   {         
         get  
         {  
              return string.Format("Object {0}", count - 2);  
-        }      
+        }      
     }  
 }  
 ```  
@@ -176,8 +174,8 @@ class MyHashtable
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [DebuggerTypeProxy 属性の使用](../debugger/using-debuggertypeproxy-attribute.md)   
- [管理対象オブジェクトのカスタム ビューを作成します。](../debugger/create-custom-views-of-dot-managed-objects.md)   
+ [マネージド オブジェクトのカスタム ビューの作成](../debugger/create-custom-views-of-dot-managed-objects.md)   
  [C# の書式指定子](../debugger/format-specifiers-in-csharp.md)   
  [デバッガー表示属性によるデバッグ機能の拡張](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)

@@ -1,8 +1,6 @@
 ---
 title: BasicType |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 61d63f20bb086190f6409d3eb4cd08c80689d10f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 0ed85ba87aaa8d78f6c9ad3470e454f60346e2ae
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49874021"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53958606"
 ---
 # <a name="basictype"></a>BasicType
 シンボルの基本的な型を指定します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49874021"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-enum BasicType {   
+enum BasicType {   
    btNoType   = 0,  
    btVoid     = 1,  
    btChar     = 2,  
@@ -106,13 +104,13 @@ enum BasicType {
  btHresult  
  基本的な型は、`HRESULT`します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  この列挙体の値がによって返される、 [idiasymbol::get_basetype](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)メソッド。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: cvconst.h  
   
-## <a name="see-also"></a>関連項目  
- [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [Idiasymbol::get_basetype](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)   
+## <a name="see-also"></a>「  
+ [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+ [IDiaSymbol::get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)   
  [IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)

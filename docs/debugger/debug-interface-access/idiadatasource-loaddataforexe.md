@@ -1,8 +1,6 @@
 ---
 title: Idiadatasource::loaddataforexe |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 32c5c3850eaeb1ce7e97fdeb2473fb707e66be1d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 13b852e917e55803fd37687ced86f819e0b591e1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49880016"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53961040"
 ---
 # <a name="idiadatasourceloaddataforexe"></a>IDiaDataSource::loadDataForExe
 開き、.exe/.dll ファイルに関連付けられたデバッグ データを準備します。  
@@ -56,7 +54,7 @@ HRESULT loadDataForExe (
 |E_INVALIDARG|無効なパラメーター。|  
 |E_UNEXPECTED|データ ソースは既に準備されています。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  .Exe/.dll ファイルのデバッグ ヘッダー名を関連するデバッグ データの場所。  
   
  このメソッドは、デバッグ ヘッダーを読み取りとし、検索し、デバッグ データを準備します。 検索の進行状況の報告されコールバックをとおして制御されます、必要に応じて、可能性があります。 たとえば、 [idialoadcallback::notifydebugdir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md)が呼び出されたときに、`IDiaDataSource::loadDataForExe`を検索して、デバッグ ディレクトリを処理します。  
@@ -85,13 +83,13 @@ if (FAILED(hr))
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)   
  [IDiaLoadCallback](../../debugger/debug-interface-access/idialoadcallback.md)   
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)   
- [Idialoadcallback::notifydebugdir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md)   
+ [IDiaLoadCallback::NotifyDebugDir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md)   
  [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)   
  [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md)   
- [Idiadatasource::loaddatafrompdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)   
- [Idiadatasource::loadandvalidatedatafrompdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)   
+ [IDiaDataSource::loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)   
+ [IDiaDataSource::loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)   
  [IDiaDataSource::loadDataFromIStream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)

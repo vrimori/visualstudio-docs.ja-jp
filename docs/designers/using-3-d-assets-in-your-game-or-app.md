@@ -2,7 +2,6 @@
 title: ゲームまたはアプリでの 3D アセットの使用
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 f1_keywords:
 - VC.Project.ImageContentTask.ContentOutput
@@ -17,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b41416ea923e8f14aa39bf1607ad7c349e0b149c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d346982d682305f3c80531bd4386fbefda536a9f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49880679"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53986766"
 ---
 # <a name="use-3d-assets-in-your-game-or-app"></a>ゲームまたはアプリで 3D アセットを使用する
 
@@ -95,7 +94,7 @@ Visual Studio のツールを使用して 3D アセットを作成したら、�
 |**圧縮**|出力ファイルで使用される圧縮の種類を指定します。<br /><br /> 使用可能なオプションは次のとおりです。<br /><br /> -   **圧縮なし**<br />-   **BC1_UNORM 圧縮**<br />-   **BC1_UNORM_SRGB 圧縮**<br />-   **BC2_UNORM 圧縮**<br />-   **BC2_UNORM_SRGB 圧縮**<br />-   **BC3_UNORM 圧縮**<br />-   **BC3_UNORM_SRGB 圧縮**<br />-   **BC4_UNORM 圧縮**<br />-   **BC4_SNORM 圧縮**<br />-   **BC5_UNORM 圧縮**<br />-   **BC5_SNORM 圧縮**<br />-   **BC6H_UF16 圧縮**<br />-   **BC6H_SF16 圧縮**<br />-   **BC7_UNORM 圧縮**<br />-   **BC7_UNORM_SRGB 圧縮**<br /><br /> DirectX のさまざまなバージョンでサポートされている圧縮形式について詳しくは、「[Programming Guide for DXGI](http://go.microsoft.com/fwlink/p/?LinkId=246265)」(DXGI のプログラミング ガイド) をご覧ください。|
 |Convert to pre-multiplied alpha format (前乗算されたアルファ形式に変換)|出力ファイルで前乗算されたアルファ形式に変換する場合は **[はい]** を、その他の場合は **[いいえ]** を選択します。 出力ファイルのみが変更され、ソース イメージは変更されません。|
 |**MIPS の生成**|完全な MIPMAP チェーンをビルド時に生成し、出力ファイルに含める場合は、**[あり]**、それ以外は **[なし]**。 **[なし]** をクリックすると、ソース ファイルに既に MIPMAP チェーンが含まれている場合は、出力ファイルに MIPMAP チェーンが含まれます。それ以外の場合は、出力ファイルに MIPMAP チェーンは含まれません。|
-|**Content Output\(コンテンツ出力\)**|出力ファイルの名前を指定します。 **重要:**  出力ファイルのファイル名拡張子を変更しても、ファイル形式には影響しません。|
+|**Content Output\(コンテンツ出力\)**|出力ファイルの名前を指定します。 **重要:** 出力ファイルのファイル名拡張子を変更しても、ファイル形式には影響しません。|
 
 ### <a name="mesh-content-pipeline-configuration"></a>メッシュ コンテンツ パイプラインの構成
 
@@ -103,7 +102,7 @@ Visual Studio のツールを使用して 3D アセットを作成したら、�
 
 |プロパティ|説明|
 |--------------|-----------------|
-|**Content Output\(コンテンツ出力\)**|出力ファイルの名前を指定します。 **重要:**  出力ファイルのファイル名拡張子を変更しても、ファイル形式には影響しません。|
+|**Content Output\(コンテンツ出力\)**|出力ファイルの名前を指定します。 **重要:** 出力ファイルのファイル名拡張子を変更しても、ファイル形式には影響しません。|
 
 ### <a name="shader-content-pipeline-configuration"></a>シェーダー コンテンツ パイプラインの構成
 
@@ -111,13 +110,13 @@ Visual Studio のツールを使用して 3D アセットを作成したら、�
 
 |プロパティ|説明|
 |--------------|-----------------|
-|**Content Output\(コンテンツ出力\)**|出力ファイルの名前を指定します。 **重要:**  出力ファイルのファイル名拡張子を変更しても、ファイル形式には影響しません。|
+|**Content Output\(コンテンツ出力\)**|出力ファイルの名前を指定します。 **重要:** 出力ファイルのファイル名拡張子を変更しても、ファイル形式には影響しません。|
 
 ## <a name="load-and-use-3d-assets-at-run-time"></a>実行時に 3D アセットを読み込んで使用する
 
 ### <a name="use-textures-and-images"></a>テクスチャとイメージを使用する
 
-Direct3D には、テクスチャ リソースを作成するための機能があります。 Direct3D 11 では、D3DX11 ユーティリティ ライブラリには、イメージ ファイルからテクスチャ リソースとリソース ビューを直接作成するための追加の機能が用意されています。 Direct3D 11 のテクスチャ リソースを作成する方法について詳しくは、「[Textures](http://go.microsoft.com/fwlink/p/?LinkID=246267)」(テクスチャ) をご覧ください。 D3DX11 ライブラリを使用してイメージ ファイルからテクスチャ リソースまたはリソース ビューを作成する方法について詳しくは、「[How to: Initialize a Texture From a File](http://go.microsoft.com/fwlink/p/?LinkId=246268)」(方法: ファイルからテクスチャを初期化する) をご覧ください。
+Direct3D には、テクスチャ リソースを作成するための機能があります。 Direct3D 11 では、D3DX11 ユーティリティ ライブラリには、イメージ ファイルからテクスチャ リソースとリソース ビューを直接作成するための追加の機能が用意されています。 Direct3D 11 のテクスチャ リソースを作成する方法について詳しくは、「[Textures](http://go.microsoft.com/fwlink/p/?LinkID=246267)」(テクスチャ) をご覧ください。 D3DX11 ライブラリを使用してイメージ ファイルからテクスチャ リソースまたはリソース ビューを作成する方法の詳細については、「[How to:Initialize a texture from a file](http://go.microsoft.com/fwlink/p/?LinkId=246268)」(方法: ファイルからテクスチャを初期化する) を参照してください。
 
 ### <a name="use-3d-models"></a>3D モデルを使用する
 

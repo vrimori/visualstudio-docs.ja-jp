@@ -22,14 +22,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ff1876ba76421818f3a59616cfdf26aae41adb9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 87c1aad4374ca41a9ba89eea4eb7f7cc790a1613
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53867148"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227812"
 ---
-# <a name="walkthrough-debugging-a-parallel-application-in-visual-studio"></a>チュートリアル: Visual Studio での並列アプリケーションのデバッグ
+# <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>チュートリアル: Visual Studio での並列アプリケーションのデバッグ (C#、Visual Basic、C++)
+
 このチュートリアルでは、**[並列タスク]** ウィンドウと **[並列スタック]** ウィンドウを使用して並行アプリケーションをデバッグする方法について説明します。 これらのウィンドウでは、把握し、使用するコードの実行時の動作を検証できます。、[タスク並列ライブラリ (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)または[同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime)します。 このチュートリアルには、ブレークポイントが組み込まれたサンプル コードが用意されています。 ブレークポイントでコードの実行が中断されたら、**[並列タスク]** ウィンドウと **[並列スタック]** ウィンドウを使用してコードを調べます。  
   
  このチュートリアルでは、次のタスクについて説明します。  

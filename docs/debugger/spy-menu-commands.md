@@ -1,8 +1,6 @@
 ---
-title: メニュー コマンドを盗み見る |Microsoft ドキュメント
-ms.custom: ''
+title: メニュー コマンドをスパイ |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Spy menu commands
@@ -12,30 +10,30 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a11b24f5f0f950fabe475a0f0099e76032451fb
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: b0abf9695e0210cdae9785aafcd967513e48bf43
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31473976"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989530"
 ---
 # <a name="spy-menu-commands"></a>[スパイ] メニューのコマンド
-**スパイ**spy++ ウィンドウとビューを操作するコマンドがメニューに用意されています。  
+**スパイ**メニューには、Spy++ は Windows とビューを操作するコマンドが用意されています。  
   
  **Windows**  
- 新しい Windows ビューを開きます。  
+ 新しい Windows ビューが開きます。  
   
  **プロセス**  
- 新規プロセス ビューを開きます。  
+ 新しいプロセス ビューを開きます。  
   
  **スレッド**  
- 新規スレッド ビューを開きます。  
+ 新しいスレッド ビューを開きます。  
   
- **ログ メッセージ**  
- 新しいメッセージ ビューを開き、[メッセージ オプション ダイアログ ボックス](../debugger/message-options-dialog-box.md)のビューです。  
+ **メッセージのログ出力**  
+ 新しいメッセージ ビューを開き、[メッセージ オプション ダイアログ ボックス](../debugger/message-options-dialog-box.md)表示されます。  
   
- **[検索] ウィンドウ**  
- 表示、 **FindWindow**ダイアログ ボックスをマウスでウィンドウを選択します。  
+ **ウィンドウ検索**  
+ 表示、 **FindWindow**  ダイアログ ボックス ウィンドウをマウスを選択します。  
   
  **終了**  
- Spy++ ユーティリティを閉じます。
+ Spy++ ユーティリティを終了します。

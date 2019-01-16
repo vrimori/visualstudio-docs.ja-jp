@@ -33,18 +33,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 647749b2993b41180852aca43f99ce15844c6d71
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 8f31fa49916bf9b6d13865cd5d427670ceb33cb0
+ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54094816"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54204419"
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>Visual Studio のデバッガーでの例外を管理します。
 
-例外は、プログラムの実行中に発生したエラー状態を示します。 例外または上で、中断する例外のセットは、デバッガーを設定でき、この時点でデバッガーが中断します。 デバッガーが中断したときでは、例外がスローされました。 追加または例外を削除することもできます。 Visual Studio で開いているソリューションを使用して**デバッグ > Windows > 例外設定**を開く、**例外設定**ウィンドウ。
+例外は、プログラムの実行中に発生したエラー状態を示します。 例外または上で、中断する例外のセットは、デバッガーを設定でき、この時点でデバッガーが中断する (つまり、デバッガーで一時停止) します。 デバッガーが中断したときでは、例外がスローされました。 追加または例外を削除することもできます。 Visual Studio で開いているソリューションを使用して**デバッグ > Windows > 例外設定**を開く、**例外設定**ウィンドウ。
 
-最も重要な例外に応答するハンドラーを提供します。 常に実行を中断する一部の例外のデバッガーを構成する方法についても説明します。
+最も重要な例外に応答するハンドラーを提供します。 例外のハンドラーを追加、表示する方法を理解する必要がある場合[より適切に記述することでバグを修正C#コード](../debugger/write-better-code-with-visual-studio.md)します。 また、常に実行を中断する一部の例外のデバッガーを構成する方法について説明します。
 
 例外が発生すると、**[出力]** ウィンドウに例外メッセージが書き込まれます。 次の実行を壊す可能性がある場合します。
 

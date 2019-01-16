@@ -1,8 +1,6 @@
 ---
-title: グラフィックスの状態 |Microsoft ドキュメント
-ms.custom: ''
+title: グラフィックスの状態 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.graphics.statewindow
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b45e5d922a5f2ed5a2ba15086c708c734d25e95
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 80a69c1da16e8e43c1a306a8659bb8e41bed21e7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31476381"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53968103"
 ---
 # <a name="graphics-state"></a>グラフィックスの状態
 Visual Studio のグラフィックス診断の [状態] ウィンドウでは、描画呼び出しなど、現在のイベントの時点でアクティブになっているグラフィックスの状態を理解することができます。  
@@ -38,21 +36,21 @@ Visual Studio のグラフィックス診断の [状態] ウィンドウでは�
   
 -   [状態] ウィンドウ左上のタイトル バーのすぐ下で、使用する状態ビューのスタイルに対応するボタンを選択します。  
   
-    -   **API 入力状態ビューを表示します。**  
+    -   **API 入力状態ビューの表示**  
   
-    -   **論理状態ビューを表示します。**  
+    -   **論理状態ビューの表示**  
   
-    -   **固定状態ビューを表示します。**  
+    -   **固定状態ビューの表示**  
   
 > [!IMPORTANT]
->  状態を固定する必要があります、 **API 入力状態**または**論理状態**に表示するのには、ビュー、**状態ビューの固定表示**です。  
+>  **[固定状態ビューの表示]** で状態を表示するには、**[API 入力状態ビューの表示]** または **[論理状態ビューの表示]** で状態を固定する必要があります。  
   
 ### <a name="state-table-format"></a>状態テーブルの形式  
  情報のいくつかの列を [状態] ウィンドウに表示します。  
   
 |Column|説明|  
 |------------|-----------------|  
-|名前|状態の項目の名前。 この項目が状態のバンドルを表している場合は、項目を展開して表示できます。<br /><br /> **API 入力状態ビュー**と**論理状態ビュー**状態、状態間の階層関係を表示する名前がインデントされます。<br /><br /> **固定状態ビュー**状態にある場合、フラット リストで完全修飾名が表示されます。|  
+|name|状態の項目の名前。 この項目が状態のバンドルを表している場合は、項目を展開して表示できます。<br /><br /> **API 入力状態ビュー**と**論理状態ビュー**の状態では、状態の間の階層関係を表すよう名前がインデントされます。<br /><br /> **固定状態ビュー**の状態では、完全修飾名がフラット リストで表示されます。|  
 |[値]|状態の項目の値。|  
 |型|状態の項目の種類。|  
   

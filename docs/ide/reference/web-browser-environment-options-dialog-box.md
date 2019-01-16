@@ -2,7 +2,6 @@
 title: '[Web ブラウザー] ([オプション] ダイアログ ボックス - [環境])'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.Environment.Web Browser
@@ -24,12 +23,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 56bd77bb833e0fcc7e4e6e35304387d23b7c3f52
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 9bdfc727e3214292aade933abde6d6671c4b02fe
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389446"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53955160"
 ---
 # <a name="web-browser-environment-options-dialog-box"></a>[Web ブラウザー] ([オプション] ダイアログ ボックス - [環境])
 
@@ -55,7 +54,7 @@ IDE Web ブラウザーを開いたときに表示されるページを設定し
 
 -   **ソース エディター** 選択すると、[エディター](../../ide/writing-code-in-the-code-and-text-editor.md)にソースが表示されます。
 
--   **HTML エディター** 選択すると、[HTML デザイナー](https://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)にソースが表示されます。 この場合、デザイン ビューまたは標準のテキストベースのソース ビューで Web ページを編集します。
+-   **HTML エディター** 選択すると、[HTML デザイナー](https://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)にソースが表示されます。 この選択を使用し、Web ページを 2 つのビュー、デザイン ビューまたは標準のテキスト ベースのソース ビューのいずれかで編集します。
 
 -   **外部エディター** 選択すると、別のエディターにソースが表示されます。 選択するエディター (Notepad.exe など) のパスを指定します。
 

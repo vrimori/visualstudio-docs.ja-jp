@@ -1,8 +1,6 @@
 ---
 title: '方法: パフォーマンス データ ファイルを比較する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vsperf.choosediffbinaries
@@ -15,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eeb9f26091deaf995ef1221d39aa7264553f5c70
-ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
+ms.openlocfilehash: 743184a0f28df90e703ce355ecf5c2642036d2ed
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34815380"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53961700"
 ---
 # <a name="how-to-compare-performance-data-files"></a>方法: パフォーマンス データ ファイルを比較する
 比較 ("Diff") のレポートまたはビューを作成して、2 つの異なるプロファイラー データ ファイル (.*vsp* または .*vsps*) の結果を比較することができます。 この比較では、相違点、パフォーマンスの低下、および、1 つのプロファイリング セッションから他のプロファイリング セッションのあいだに起きた改善点を示します。  

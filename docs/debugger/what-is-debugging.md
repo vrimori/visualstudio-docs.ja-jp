@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c61e30e7085ff2f0f8cec5cc84d27efa0ea22be5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6933f3b5dd826eda586c92466bcd9a8cbe6dc527
+ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53830970"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54204282"
 ---
 # <a name="what-is-debugging"></a>デバッグとは
 
@@ -44,11 +44,14 @@ A**デバッグ**値がデバッグ構成ことを示します。 アプリを�
 
 ## <a name="when-to-use-a-debugger"></a>デバッガーを使用する場合
 
-デバッガーは、不可欠なツールを見つけて、アプリでバグを修正します。 ただし、コンテキストは、キング、およびに迅速にバグまたはエラーを排除するため、破棄可能なすべてのツールを活用することが重要です。 場合によっては、「ツール」の右側には、もっと優れたコーディングのプラクティスがあります。 他のツールと、デバッガーを使用する場合を学習しても、デバッガーをより効果的に使用する方法を学習します。 既にデバッガーについて学習する必要があるをわかっている場合は、次を参照してください。[超初心者向けのデバッグ](../debugger/debugging-absolute-beginners.md)します。 それ以外の場合、次のリンク**次のステップ**します。
+デバッガーは、不可欠なツールを見つけて、アプリでバグを修正します。 ただし、コンテキストは、キング、およびに迅速にバグまたはエラーを排除するため、破棄可能なすべてのツールを活用することが重要です。 場合によっては、「ツール」の右側には、もっと優れたコーディングのプラクティスがあります。 他のツールと、デバッガーを使用する場合を学習しても、デバッガーをより効果的に使用する方法を学習します。
 
 ## <a name="next-steps"></a>次の手順
 
-この記事では、いくつかの一般的なデバッグの概念を学びました。 次に、Visual Studio でデバッグする方法とバグでコードを作成する方法について学習を開始できます。 以下の記事で示すC#コード例についてが、概念は、Visual Studio でサポートされているすべての言語に適用されます。
+この記事では、いくつかの一般的なデバッグの概念を学びました。 次に、Visual Studio でデバッグする方法とバグでコードを作成する方法について学習を開始できます。 次の記事 showC#コード例についてが、概念は、Visual Studio でサポートされているすべての言語に適用されます。
+
+> [!div class="nextstepaction"]
+> [入門者向けのデバッグ](../debugger/debugging-absolute-beginners.md)
 
 > [!div class="nextstepaction"]
 > [より良い C# コードを書くことでバグを修正する](../debugger/write-better-code-with-visual-studio.md)

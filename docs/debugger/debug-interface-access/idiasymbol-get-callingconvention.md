@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_callingconvention |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 15ecbaf54afe2e8f1a8c69db55be3ca7c25acc7e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 8840cd8fa2645ad618cb6981469d2415bca99fd9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49862522"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53957885"
 ---
 # <a name="idiasymbolgetcallingconvention"></a>IDiaSymbol::get_callingConvention
 呼び出し規約、メソッドのインジケーターを返します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49862522"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_callingConvention (   
+HRESULT get_callingConvention (   
    DWORD* pRetVal  
 );  
 ```  
@@ -42,13 +40,13 @@ HRESULT get_callingConvention (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|Dia2.h|  
+|ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK v7.0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [CV_call_e 列挙型](../../debugger/debug-interface-access/cv-call-e.md)

@@ -1,8 +1,6 @@
 ---
 title: Idiaenumlinenumbers::get_count |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c3fdf4b493e4ccf77975571920d507a3ae6b6c2b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 5818bc8c59c2199820c3d41e17209b5093be2503
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49951328"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989597"
 ---
 # <a name="idiaenumlinenumbersgetcount"></a>IDiaEnumLineNumbers::get_Count
 行番号の数を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49951328"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_Count (   
+HRESULT get_Count (   
    LONG* pRetVal  
 );  
 ```  
@@ -39,6 +37,6 @@ HRESULT get_Count (
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
  [IDiaEnumLineNumbers::Item](../../debugger/debug-interface-access/idiaenumlinenumbers-item.md)

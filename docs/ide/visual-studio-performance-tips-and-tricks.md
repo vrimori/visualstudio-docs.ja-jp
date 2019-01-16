@@ -2,19 +2,18 @@
 title: パフォーマンスを向上させるためのヒント
 ms.date: 08/14/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e1c4e55fe6275d750d3bc3b03fb8f0ac5eec2751
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: bdc20f22fc535028cb67939fed9c9472ed081428
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50672926"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53956895"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio のパフォーマンスのヒントとテクニック
 
@@ -123,7 +122,7 @@ Visual Studio では、自動ドキュメント復元により、ソリューシ
 
 CLR では、ガベージ コレクションのメモリ管理システムが使われます。 このシステムでは、不要になったオブジェクトによってメモリが使われることがあります。 この状態は一時的なものです。ガベージ コレクターは、そのパフォーマンスとリソース使用のヒューリスティックに基づいて、このメモリを解放します。 Visual Studio のホット キーを使って、CLR に未使用のメモリを強制的に回収させることができます。 膨大な量のガベージが収集を待っている場合に、ガベージ コレクションを強制すると、*devenv.exe* プロセスのメモリ使用量の低下を**タスク マネージャー**で確認できます。 この方法を使う必要はほとんどありません。 ただし、コストのかかる操作 (フル ビルド、デバッグ セッション、ソリューション オープン イベントなど) が完了した後は、プロセスによって実際に使われていたメモリの量を確認するのに役立ちます。 Visual Studio にはマネージドとネイティブが混在しているので、ネイティブ アロケーターとガベージ コレクターの間での限られたメモリ リソースの競合が発生する可能性があります。 大量のメモリが使われている状況では、ガベージ コレクターを強制的に実行すると役に立つことがあります。
 
-ガベージ コレクションを強制的に行うには、ホット キー **Ctrl**+**Alt**+**Shift**+**F12**、**Ctrl**+**Alt**+**Shift**+**F12** (2 回押します) を使います。
+ガベージ コレクションを強制的に行うには、ホットキー**Ctrl**+**Alt**+**Shift**+**F12**、**Ctrl**+**Alt**+**Shift**+**F12** (2 回押します) を使います。
 
 ベージ コレクションを強制するとシナリオが確実に動くようになる場合、この動作はバグである可能性があるので、Visual Studio のフィードバック ツールを使ってレポートを提出してください。
 

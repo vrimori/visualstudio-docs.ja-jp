@@ -13,15 +13,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: b720072d5ccd695ff1e7006bda5221ae00db06ef
-ms.sourcegitcommit: 3a11feebad45a0dd4ac45efcbfdf172fce46e1de
-ms.translationtype: MT
+ms.openlocfilehash: a363c9964b88196e31f5ba05a4244fabdf00f90f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39582347"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53966876"
 ---
 # <a name="create-and-configure-tableadapters"></a>Tableadapter の作成および構成
 
@@ -58,12 +57,12 @@ Tableadapter の概要については、次を参照してください。 [Table
 > [!NOTE]
 > SELECT コマンドに割り当てられているストアド プロシージャは、ウィザードの次の手順で名前を付けます TableAdapter のメソッドを呼び出すことによって実行します。 既定の方法は`Fill`ので、通常は、SELECT プロシージャの実行に使用するコードは`TableAdapter.Fill(tableName)`します。 による既定の名前を変更する場合`Fill`、置き換える`Fill`名前の割り当て、および"TableAdapter"を TableAdapter の実際の名前に置き換えます (たとえば、 `CustomersTableAdapter`)。
 
-- 選択すると、**データベースに直接更新を送信するためのメソッドを作成する**オプションは設定に相当、`GenerateDBDirectMethods`プロパティを true にします。 元の SQL ステートメントが十分な情報を提供していないか、クエリは更新可能なクエリではない場合は、オプションは使用できません。 この状態が発生する、たとえば、**参加**クエリと 1 つの (スカラー) 値を返すクエリです。
+- 選択すると、**データベースに直接更新を送信するためのメソッドを作成する**オプションは設定に相当、`GenerateDBDirectMethods`プロパティを true にします。 元の SQL ステートメントに十分な情報が含まれていないか、クエリが更新可能なクエリではない場合、このオプションは使用できません。 この状態が発生する、たとえば、**参加**クエリと 1 つの (スカラー) 値を返すクエリです。
 
 **オプションの高度な**ウィザードで使用するとします。
 
 - 定義されている SELECT ステートメントに基づいた INSERT、UPDATE、および DELETE のステートメントを生成、 **SQL ステートメントの生成**ページ
-- [オプティミスティック同時実行制御]
+- [オプティミスティック コンカレンシーを使用する]
 - 挿入した後に、データ テーブルを更新するかどうかを指定し、UPDATE ステートメントが実行されます。
 
 ## <a name="configure-a-tableadapters-fill-method"></a>TableAdapter の塗りつぶし方法を構成します。
@@ -82,7 +81,7 @@ TableAdapter クエリの構成ウィザードを使用して、作成して、T
 
 ### <a name="to-start-the-tableadapter-query-configuration-wizard-with-a-new-query"></a>新しいクエリを使用して、TableAdapter クエリ構成ウィザードを開始するには
 
-1.  データセットを開き、**データセット デザイナー**します。
+1.  **データセット デザイナー**でご自分のデータセットを開きます。
 
 2.  新しいクエリを作成する場合は、ドラッグ、**クエリ**オブジェクトから、**データセット**のタブ、**ツールボックス**上に、 <xref:System.Data.DataTable>、または選択**クエリの追加**TableAdapter のショートカット メニューから。 ドラッグすることも、**クエリ**オブジェクトの空の領域に、**データセット デザイナー**、関連付けられていない TableAdapter を作成する<xref:System.Data.DataTable>します。 これらのクエリを返す単一の (スカラー) 値または実行 UPDATE、INSERT、または、データベースに対するコマンドの削除のみできます。
 

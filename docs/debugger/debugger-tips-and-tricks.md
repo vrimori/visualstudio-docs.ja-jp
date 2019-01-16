@@ -14,16 +14,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 87d74eb960d4e445e457744fd0325e7beb15262e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 530ed2144127e7934d02f5ccc0310d9542671507
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53927156"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270061"
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>Visual Studio のデバッガーの生産性に関するヒントと秘訣を学習します。
 
-Visual Studio デバッガーのいくつかの生産性に関するヒントとテクニックを学習するには、このトピックを読みます。 デバッガーの基本機能については、次を参照してください。[デバッガー機能ツアー](../debugger/debugger-feature-tour.md)します。 このトピックでは、機能ツアーに含まれていない一部の領域について説明します。
+Visual Studio デバッガーのいくつかの生産性に関するヒントとテクニックを学習するには、このトピックを読みます。 デバッガーの基本機能については、次を参照してください。[デバッガーでのはじめ](../debugger/debugger-feature-tour.md)します。 このトピックでは、機能ツアーに含まれていない一部の領域について説明します。
 
 ## <a name="pin-data-tips"></a>データヒントのピン留めします。
 

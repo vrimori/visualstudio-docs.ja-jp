@@ -2,7 +2,6 @@
 title: WPF の概要
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 author: gewarren
@@ -13,12 +12,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: db06323da8ccd3009c52be3ba9dd51478d1d722c
-ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
+ms.openlocfilehash: cb2e835a3dac2f85de806e876bc8801d7b1d0dd3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008461"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53955293"
 ---
 # <a name="wpf-overview"></a>WPF の概要
 
@@ -91,16 +90,16 @@ XAML は XML ベースなので、XAML を使用して作成する UI は [要�
 ```
 
 ```csharp
-using System.Windows; // Window, RoutedEventArgs, MessageBox 
+using System.Windows; // Window, RoutedEventArgs, MessageBox 
 
 namespace SDKSample
 {
-    public partial class AWindow : Window
+    public partial class AWindow : Window
     {
         public AWindow()
         {
-            // InitializeComponent call is required to merge the UI 
-            // that is defined in markup with this class, including  
+            // InitializeComponent call is required to merge the UI 
+            // that is defined in markup with this class, including  
             // setting properties and registering event handlers
             InitializeComponent();
         }
@@ -117,28 +116,28 @@ namespace SDKSample
 ```vb
 Namespace SDKSample
 
-    Partial Public Class AWindow
+    Partial Public Class AWindow
         Inherits System.Windows.Window
 
-        Public Sub New()
+        Public Sub New()
 
-            ' InitializeComponent call is required to merge the UI 
-            ' that is defined in markup with this class, including  
+            ' InitializeComponent call is required to merge the UI 
+            ' that is defined in markup with this class, including  
             ' setting properties and registering event handlers
             InitializeComponent()
 
-        End Sub 
+        End Sub 
 
-        Private Sub button_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
+        Private Sub button_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
             ' Show message box when button is clicked
             MessageBox.Show("Hello, Windows Presentation Foundation!")
 
-        End Sub 
+        End Sub 
 
-    End Class 
+    End Class 
 
-End Namespace
+End Namespace
 ```
 
 この例では、 <xref:System.Windows.Window> クラスから派生したクラスを分離コードが実装しています。 マークアップを分離コード クラスと関連付けるために `x:Class` 属性が使用されます。 分離コード クラスのコンストラクターから `InitializeComponent` が呼び出されて、マークアップで定義された UI を分離コード クラスとマージします。 (`InitializeComponent` は、アプリケーションがビルドされるときに生成されます。手動で実装する必要がないのは、このためです。)`x:Class` と `InitializeComponent` を組み合わせることにより、実装が作成されるときはいつでも必ず正しく初期化されることが保証されます。 分離コード クラスはボタンの <xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントのイベント ハンドラーも実装します。 ボタンがクリックされると、イベント ハンドラーは <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName> メソッドを呼び出して、メッセージ ボックスを表示します。
@@ -197,17 +196,17 @@ End Namespace
 
 レイアウト システムは基本の WPF クラスを介して子コントロールに公開されます。 グリッド、スタック、ドックなどの一般的なレイアウトについて、WPF には複数のレイアウト コントロールが組み込まれています。
 
-- <xref:System.Windows.Controls.Canvas>: 子コントロールは独自のレイアウトを提供します。
+- <xref:System.Windows.Controls.Canvas>:子コントロールには独自のレイアウトがあります。
 
-- <xref:System.Windows.Controls.DockPanel>: 子コントロールはパネルの縁に並べられます。
+- <xref:System.Windows.Controls.DockPanel>:子コントロールはパネルの縁に並べられます。
 
-- <xref:System.Windows.Controls.Grid>: 子コントロールは行ごと、列ごとに位置指定されます。
+- <xref:System.Windows.Controls.Grid>:子コントロールは行ごと、列ごとに位置指定されます。
 
-- <xref:System.Windows.Controls.StackPanel>: 子コントロールは垂直方向または水平方向に積み上げられます。
+- <xref:System.Windows.Controls.StackPanel>:子コントロールは垂直方向または水平方向に積み上げられます。
 
-- <xref:System.Windows.Controls.VirtualizingStackPanel>: 子コントロールは仮想化され、水平方向または垂直方向の 1 本の線上に配置されます。
+- <xref:System.Windows.Controls.VirtualizingStackPanel>:子コントロールは仮想化され、水平方向または垂直方向の 1 本の線上に配置されます。
 
-- <xref:System.Windows.Controls.WrapPanel>: 子コントロールは左から右への順序に配置され、現在の行に納まらない場合は、次の行に折り返されます。
+- <xref:System.Windows.Controls.WrapPanel>:子コントロールは左から右への順序に配置され、現在の行に納まらない場合は、次の行に折り返されます。
 
 次の例では <xref:System.Windows.Controls.DockPanel> を使用して複数の <xref:System.Windows.Controls.TextBox> コントロールを配置しています。
 
@@ -668,7 +667,7 @@ WPF はすべての開発プラットフォームと同様、目的の結果を�
 WPF の主な機能を確認しました。 次は、初めての WPF アプリをビルドします。
 
 > [!div class="nextstepaction"]
-> [チュートリアル: 初めての WPF デスクトップ アプリケーション](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)
+> [チュートリアル: 初めての WPF デスクトップ アプリ](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)
 
 ## <a name="see-also"></a>関連項目
 

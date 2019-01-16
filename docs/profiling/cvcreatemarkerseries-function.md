@@ -1,8 +1,6 @@
 ---
 title: CvCreateMarkerSeries 関数 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - cvmarkers/CvCreateMarkerSeriesA
@@ -16,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 55dd6658aca332937299b2301d8294081bc7d3fd
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 9395f576e942e799312dad2e22be79942110a8ae
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750205"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53967801"
 ---
 # <a name="cvcreatemarkerseries-function"></a>CvCreateMarkerSeries 関数
 指定されたプロバイダーに対してマーカー系列を作成します。  
@@ -53,7 +51,7 @@ _Check_return_ HRESULT CvCreateMarkerSeriesA(
 ## <a name="return-value"></a>戻り値  
  マーカー系列が作成されると S_OK を、エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** *cvmarkers.h*  
   
  **Unicode:** CvCreateMarkerSeriesW  

@@ -2,7 +2,6 @@
 title: アプリケーション リソースの管理 (.NET)
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - msvse_resedit.dlg.SetCustomTool
@@ -19,12 +18,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b9a80a84276648f8a0f0d5a94992b5f58cbcfefa
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: 4c689de00c5c5f37d47cb0ecc9f802be4b51a9ab
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51348134"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53966811"
 ---
 # <a name="manage-application-resources-net"></a>アプリケーション リソースの管理 (.NET)
 
@@ -50,7 +49,7 @@ ms.locfileid: "51348134"
 .NET プロジェクトでのリソースの管理方法は、他のプロジェクト タイプと異なります。 リソースについて詳しくは、以下をご覧ください。
 
 - ユニバーサル Windows プラットフォーム (UWP) アプリの場合は、「[アプリ リソースとリソース管理システム](/windows/uwp/app-resources/)」をご覧ください
-- C++ プロジェクトの場合は、「[リソース ファイルの操作](/cpp/windows/working-with-resource-files)」および「[方法: リソースを作成する](/cpp/windows/how-to-create-a-resource)」を参照してください。
+- C++ プロジェクトの場合は、「[リソース ファイルの操作](/cpp/windows/working-with-resource-files)」および「[方法:リソースを作成する](/cpp/windows/how-to-create-a-resource)」を参照してください
 
 ## <a name="see-also"></a>関連項目
 

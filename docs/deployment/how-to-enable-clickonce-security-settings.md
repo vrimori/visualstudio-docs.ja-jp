@@ -1,8 +1,6 @@
 ---
 title: '方法: ClickOnce のセキュリティ設定を有効にする |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,14 +16,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f21b58a0ec9e8fe26cb02f72912fd23424cdfc7a
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
-ms.translationtype: MT
+ms.openlocfilehash: d736ca95b9095aa1db19445762d4734dc49677a1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39150938"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53967275"
 ---
-# <a name="how-to-enable-clickonce-security-settings"></a>方法: ClickOnce のセキュリティ設定を有効にします。
+# <a name="how-to-enable-clickonce-security-settings"></a>方法:  ClickOnce セキュリティ設定を有効にする
 アプリケーションを発行するためには、ClickOnce アプリケーションのコード アクセス セキュリティを有効にする必要があります。 これは自動的に発行ウィザードを使用してアプリケーションを発行するときです。  
   
  場合によっては、コード アクセス セキュリティを有効にするとパフォーマンスに影響するビルド時や、アプリケーションのデバッグこのような場合は、セキュリティ設定を一時的に無効にする可能性があります。  
@@ -34,7 +32,7 @@ ms.locfileid: "39150938"
   
 ### <a name="to-enable-clickonce-security-settings"></a>ClickOnce のセキュリティ設定を有効にするには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1.  **ソリューション エクスプローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2.  **[セキュリティ]** タブをクリックします。  
   
@@ -47,7 +45,7 @@ ms.locfileid: "39150938"
   
 ### <a name="to-disable-clickonce-security-settings"></a>ClickOnce のセキュリティ設定を無効にするには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1.  **ソリューション エクスプローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2.  **[セキュリティ]** タブをクリックします。  
   
@@ -59,6 +57,5 @@ ms.locfileid: "39150938"
     >  発行ウィザードで、アプリケーションを発行するたびに、このチェック ボックスがオンする;各発行に成功した後にもう一度オフにする必要があります。  
   
 ## <a name="see-also"></a>関連項目  
- [セキュリティで保護された ClickOnce アプリケーション](../deployment/securing-clickonce-applications.md)   
+ [ClickOnce アプリケーションのセキュリティ保護](../deployment/securing-clickonce-applications.md)   
  [ClickOnce アプリケーションのコード アクセス セキュリティ](../deployment/code-access-security-for-clickonce-applications.md)   
- 

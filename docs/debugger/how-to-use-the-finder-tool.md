@@ -1,8 +1,6 @@
 ---
 title: '方法: ファインダー ツールを使用して、|Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Window Finder Tool
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 54e002682b45d03ef5f9bc93a36bbd9781b46d62
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: c63e91cbbda335aea77992583bf3983c08354079
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49943077"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53965263"
 ---
 # <a name="how-to-use-the-finder-tool"></a>方法: ファインダー ツールを使用する
 ファインダー ツールを使用することができます、**ウィンドウ検索**ダイアログ ボックスにウィンドウのプロパティまたはメッセージを表示します。 ファインダー ツールは、無効な子ウィンドウを検索し、強調表示するには、どのウィンドウには、子ウィンドウが重複が無効になっているかを識別できます。  
@@ -52,7 +50,7 @@ ms.locfileid: "49943077"
   
     選択した場合**プロパティ**、[ウィンドウ プロパティ ダイアログ ボックス](../debugger/window-properties-dialog-box.md)が開きます。 選択した場合**メッセージ**、[メッセージ ビュー](../debugger/messages-view.md)ウィンドウが開きます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Spy++ ビュー](../debugger/spy-increment-views.md)   
  [Spy++ の使用](../debugger/using-spy-increment.md)   
  [Spy++ リファレンス](../debugger/spy-increment-reference.md)

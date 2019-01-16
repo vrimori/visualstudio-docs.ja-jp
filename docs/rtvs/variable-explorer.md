@@ -3,19 +3,18 @@ title: R の変数エクスプローラー
 description: Visual Studio の変数エクスプローラーでは、現在の R セッションの特定のスコープでの変数がすべて表示されます。
 ms.date: 01/24/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-rtvs
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: fbd20c362c407148262d8e1e61e15d22d9cbcf2f
-ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
+ms.openlocfilehash: 8969379727da2f7e01e15fcb10150195bc32749e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38978126"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53988937"
 ---
 # <a name="variable-explorer"></a>変数エクスプローラー
 
@@ -71,7 +70,7 @@ n <- c(1,2,3,5,8,13)
 
 ## <a name="import-data-into-variable-explorer"></a>変数エクスプローラーへのデータのインポート
 
-**変数エクスプローラー** ツール バーの 2 つのコマンド (**[R Tools]** > **[データ]** メニューから選択することもできます) を使用して、外部 CSV データセットを R セッションにインポートできます。**[データセットを Web URL から R セッションにインポートする]** と **[データセットをテキスト ファイルから R セッションにインポートする]** の 2 つです。
+**変数エクスプローラー** ツール バーの 2 つのコマンド (**[R Tools]** > **[データ]** メニューからも使用できます) を使用して、外部 CSV データセットを R セッションにインポートできます。**[データセットを Web URL から R セッションにインポートする]** と **[データセットをテキスト ファイルから R セッションにインポートする]** というコマンドです。
 
 インポートする CSV ファイルを指定すると、Visual Studio の **[データセットのインポート]** ダイアログ ボックスが表示されます。このダイアログ ボックスで、データ ファイルの解析方法 (つまり、フィールド区切り記号は何か、引用符をどう扱うかなど) を制御するオプションを指定します。 インポートしたデータ フレームのプレビューと元のデータ ファイルを表示することもできます。
 

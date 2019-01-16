@@ -1,8 +1,6 @@
 ---
 title: Idiaenumsymbolsbyaddr::prev |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e165268c1d31c61ba671f6087cc9922bf37e4103
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: dab83ecae6fad795be7d469d2a2b5c9a722c245b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49870277"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989660"
 ---
 # <a name="idiaenumsymbolsbyaddrprev"></a>IDiaEnumSymbolsByAddr::Prev
 アドレスの順序で前のシンボルを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49870277"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT Prev (   
+HRESULT Prev (   
    ULONG        celt,   
    IDiaSymbol** rgelt,  
    ULONG*       pceltFetched  
@@ -45,11 +43,11 @@ HRESULT Prev (
  [out]フェッチされた列挙子の記号の数を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`前のシンボルがない場合。 それ以外の場合はエラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`前のシンボルがない場合。 それ以外の場合はエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このメソッドは、フェッチされる要素の数によって、列挙子の位置を更新します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -3,7 +3,6 @@ title: Dll と実行可能ファイルを表示します。
 titleSuffix: Visual Studio Modules window
 ms.custom: seodec18
 ms.date: 11/04/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.modules
@@ -26,12 +25,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ec90c7f797c8b25337a23a12321352ff487a12ca
-ms.sourcegitcommit: 6efb9378a82924cb133912d207c6da4bd5a0b9c2
+ms.openlocfilehash: 81f0e9bb20e7024a06c2db7c073b4d2a1d92fecc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53443926"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53956830"
 ---
 # <a name="view-dlls-and-executables-in-the-modules-window-c-c-visual-basic-f"></a>[モジュール] ウィンドウで、Dll と実行可能ファイルを表示 (C#、C++、Visual Basic、 F#)
  
@@ -40,7 +39,7 @@ Visual Studio がデバッグ中に、**モジュール** ウィンドウの一�
 > [!NOTE]
 > [モジュール] ウィンドウでは、SQL またはスクリプトのデバッグに使用できません。 
   
-## <a name="use-the-modules-window"></a>[モジュール] ウィンドウを使用します。
+## <a name="use-the-modules-window"></a>[モジュール] ウィンドウを使用する
 
 デバッグ中にモジュール ウィンドウを開き、選択**デバッグ** > **Windows** > **モジュール**(またはキーを押します**Ctrl + Alt + U**). 
   

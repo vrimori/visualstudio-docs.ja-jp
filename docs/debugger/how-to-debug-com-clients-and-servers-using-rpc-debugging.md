@@ -26,12 +26,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d9df8a9dfeef620ba7afab517bc00e16717e7096
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 42ac7749052fdec3ef9f6cb318af4dc0302e1465
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53874220"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269264"
 ---
 # <a name="how-to-debug-com-clients-and-servers-using-rpc-debugging"></a>方法: RPC デバッグを使用して COM クライアントおよびサーバーをデバッグする
 リモート プロシージャ コール (RPC: Remote Procedure Call) デバッグを使用して、COM クライアント/サーバー アプリケーションをデバッグできます。 このデバッグを行うには、あらかじめ RPC デバッグを有効にする必要があります。 RPC デバッグを有効にすると、ステップ実行でクライアントからサーバーを呼び出すときに、デバッガーがサーバーにアタッチし、コードのデバッグができるようになります。 デバッガーをアタッチすることにより、クライアントおよびサーバーのどちらのプロセスでも、デバッガーのすべての機能を使用できます。  
@@ -54,4 +54,5 @@ ms.locfileid: "53874220"
   
 ## <a name="see-also"></a>「  
  [COM サーバーおよび COM コンテナーのデバッグ](../debugger/com-server-and-container-debugging.md)  
- [Visual Studio でのデバッグ](../debugger/index.md)[デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
+ [Visual Studio でのデバッグ](../debugger/index.md)  
+ [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)

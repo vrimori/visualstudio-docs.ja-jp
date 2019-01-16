@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Enterprise
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: b6b4d4965ec2b7145ab388dff7df226ec16603e5
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: 0e0af0c1f934163efeafd19110df7a30078bb23c
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53739605"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54092067"
 ---
 # <a name="enterprise-mobility--security-ems-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Enterprise Mobility + Security (EMS)
 
@@ -55,8 +55,8 @@ EMS を使うには、アカウントを設定するか、既存のアカウン�
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 使用可能       |  はい          |
-| Visual Studio Professional (Standard<sup>2</sup>) | VL、Azure、リテール                                       | 使用可能                                                            |  はい          |
+| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 使用可能       |  [はい]          |
+| Visual Studio Professional (Standard<sup>2</sup>) | VL、Azure、リテール                                       | 使用可能                                                            |  [はい]          |
 | Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用できません                                             |  N/A          |
 | MSDN Platforms (標準)                                          | VL、リテール                                              | 使用できません                                              |  N/A          |
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure | 使用できません | N/A |
@@ -75,6 +75,6 @@ EMS を使うには、アカウントを設定するか、既存のアカウン�
 
 ## <a name="support-resources"></a>サポート リソース
 -  EMS に関するヘルプが必要ですか。  オンラインの [EMS ドキュメント](/enterprise-mobility-security/)を参照してください。
--  EMS のコンポーネントのテクニカル サポートについては、 https://support.microsoft.com/allproducts にアクセスして製品を選択してください。
+-  EMS のコンポーネントのテクニカル サポートについては、[EMS サポートの FAQ](https://docs.microsoft.com/en-us/enterprise-mobility-security/solutions/ems-support-faq) ページにアクセスし、問題に対する適切なサポートを見つけてください。
 -  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://visualstudio.microsoft.com/subscriptions/support/)にお問い合わせください。
 -  Visual Studio IDE、Azure DevOps Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。
