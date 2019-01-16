@@ -1,8 +1,7 @@
 ---
-title: '方法 : ビルド イベントを指定する (Visual Basic)'
+title: '方法: ビルド イベントを指定する (Visual Basic)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - pre-build events
@@ -16,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 24eb6d7637f949abf60eeb2d0659fac1bfa1cae7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 60f1ab9444c38514646a5ef1147b3f1b0473289e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49831738"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53828866"
 ---
-# <a name="how-to-specify-build-events-visual-basic"></a>方法 : ビルド イベントを指定する (Visual Basic)
+# <a name="how-to-specify-build-events-visual-basic"></a>方法: ビルド イベントを指定する (Visual Basic)
 
 Visual Basic のビルド イベントを使用して、コンパイル処理の一部として、スクリプト、マクロ、またはその他のアクションを実行することができます。 コンパイル前のイベントはコンパイル前に発生し、ビルド後のイベントはコンパイル後に発生します。
 
@@ -50,7 +49,7 @@ Visual Basic のビルド イベントを使用して、コンパイル処理の
     > [!NOTE]
     > ビルド前またはビルド後イベントが正常に完了しない場合は、アクションの成功を示すゼロ (0) 以外のコードでイベント アクションを終了させて、ビルドを強制終了することができます。
 
-## <a name="example-how-to-change-manifest-information-using-a-post-build-event"></a>例: ビルド後のイベントを使用してマニフェスト情報を変更する方法
+## <a name="example-how-to-change-manifest-information-using-a-post-build-event"></a>例:ビルド後のイベントを使用してマニフェスト情報を変更する方法
 
 次の手順は、ビルド後のイベントから呼び出される *.exe* コマンドを使用して、アプリケーション マニフェスト (プロジェクト ディレクトリ内の *.exe.manifest* ファイル) 内にオペレーティング システムの最小バージョンを設定する方法を示しています。 オペレーティング システムの最小バージョンは、4.10.0.0 などの 4 つの部分に分かれた数字です。 これを行うには、次のように、コマンドでマニフェストの `<dependentOS>` セクションを変更します。
 
@@ -169,4 +168,4 @@ Visual Basic のビルド イベントを使用して、コンパイル処理の
 - [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)
 - [[発行] ページ (プロジェクト デザイナー)](../ide/reference/publish-page-project-designer.md)
 - [[ビルド前に実行するコマンド ライン] / [ビルド後に実行するコマンド ライン] ダイアログ ボックス](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)
-- [方法 : ビルド イベントを指定する (C#)](../ide/how-to-specify-build-events-csharp.md)
+- [方法: ビルド イベントを指定する (C#)](../ide/how-to-specify-build-events-csharp.md)

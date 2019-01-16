@@ -1,8 +1,6 @@
 ---
 title: MSBuild コマンド ライン リファレンス | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c4a692f203a0a120c2ab0da5c745aee8803badc
-ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
+ms.openlocfilehash: 56e37053e92ca009ecdd5ba1f72ce02f1932ee2b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50967273"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53935035"
 ---
 # <a name="msbuild-command-line-reference"></a>MSBuild コマンド ライン リファレンス
 *MSBuild.exe* を使用してプロジェクト ファイルやソリューション ファイルをビルドするとき、スイッチをいくつか含めて、プロセスのさまざまな側面を指定できます。  
@@ -45,7 +43,7 @@ MSBuild.exe [Switches] [ProjectFile]
   
 ## <a name="switches"></a>スイッチ  
   
-|スイッチ|省略形|説明|  
+|切り替え|省略形|説明|  
 |------------|----------------|-----------------|  
 |-help|/? または -h|使用方法を表示します。 たとえば、次のようなコマンドになります。<br /><br /> `msbuild.exe -?`|  
 |-detailedsummary|-ds|ビルド ログの最後に、ビルドされた構成に関する詳細情報と、それらの構成がノードに対してどのようにスケジュールされているかについて表示します。|  
@@ -54,11 +52,11 @@ MSBuild.exe [Switches] [ProjectFile]
 |-noautoresponse|-noautorsp|*MSBuild.rsp* ファイルが自動的に取り込まれないようにします。|  
 |-nodeReuse:`value`|-nr:`value`|MSBuild ノードの再利用を有効または無効にします。 次の値を指定できます。<br /><br /> -   **True**。 ビルドが完了した後もノードは維持され、後続のビルドでノードが再利用されます (既定値)。<br />-   **False**。 ビルドの完了後、ノードは維持されません。<br /><br /> ノードは実行中のプロジェクトに対応します。 **-maxcpucount** スイッチを含めた場合、複数のノードを同時に実行できます。|  
 |-nologo||著作権情報を表示しません。|  
-|<a name="preprocess"></a> -preprocess[:`filepath`]|-pp[:`filepath`]|ビルド中にインポートされるすべてのファイルをインライン展開することで、単一の集約されたプロジェクト ファイルを作成します。ファイルの境界にはマークが挿入されます。 このスイッチを使用して、インポートされるファイル、ファイルのインポート元、およびビルドに関連するファイルを簡単に特定できます。 このスイッチを使用した場合、プロジェクトはビルドされません。<br /><br /> `filepath` を指定した場合、集約されたプロジェクト ファイルがファイルに出力されます。 それ以外の場合は、出力がコンソール ウィンドウに表示されます。<br /><br /> `Import` 要素を使用してプロジェクト ファイルを他のプロジェクト ファイルに挿入する方法については、「[Import 要素 (MSBuild)](../msbuild/import-element-msbuild.md)」と「[方法: 複数のプロジェクト ファイルで同じターゲットを使用する](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)」を参照してください。|  
+|<a name="preprocess"></a> -preprocess[:`filepath`]|-pp[:`filepath`]|ビルド中にインポートされるすべてのファイルをインライン展開することで、単一の集約されたプロジェクト ファイルを作成します。ファイルの境界にはマークが挿入されます。 このスイッチを使用して、インポートされるファイル、ファイルのインポート元、およびビルドに関連するファイルを簡単に特定できます。 このスイッチを使用した場合、プロジェクトはビルドされません。<br /><br /> `filepath` を指定した場合、集約されたプロジェクト ファイルがファイルに出力されます。 それ以外の場合は、出力がコンソール ウィンドウに表示されます。<br /><br /> `Import` 要素を使用してプロジェクト ファイルを他のプロジェクト ファイルに挿入する方法については、「[Import 要素 (MSBuild)](../msbuild/import-element-msbuild.md)」と「[方法:複数のプロジェクト ファイルで同じターゲットを使用する](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)」を参照してください。|  
 |-property:`name`=`value`|/p:`name`=`value`|指定したプロジェクト レベルのプロパティを設定またはオーバーライドします。`name` はプロパティ名、`value` はプロパティ値です。 各プロパティを個別に指定するか、次の例に示すようにセミコロンまたはコンマを使用して複数のプロパティを区切ります。<br /><br /> `-property:WarningLevel=2;OutDir=bin\Debug`|  
 |-restore|-r|実際のターゲットをビルドする前に、`Restore` ターゲットを実行します。|
-|-target:`targets`|-t:`targets`|プロジェクト内で指定されたターゲットをビルドします。 各ターゲットを個別に指定するか、次の例に示すようにセミコロンまたはコンマを使用して複数のターゲットを区切ります。<br /><br /> `-target:Resources;Compile`<br /><br /> このスイッチを使用してターゲットを指定すると、これらのターゲットが実行され、プロジェクト ファイルの `DefaultTargets` 属性に指定されたターゲットは実行されません。 詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」と「[方法: 最初にビルドするターゲットを指定する](../msbuild/how-to-specify-which-target-to-build-first.md)」を参照してください。<br /><br /> ターゲットとは、タスクのグループを表します。 詳細については、[ターゲット](../msbuild/msbuild-targets.md) を参照してください。|  
-|-toolsversion:`version`|-tv:`version`|次の例に示すように、プロジェクトのビルドに使用するツールセットのバージョンを指定します: `-toolsversion:3.5`。<br /><br /> このスイッチを使用すると、プロジェクトをビルドし、「[Project 要素 (MSBuild)](../msbuild/project-element-msbuild.md)」で指定したバージョンとは異なるバージョンを指定できます。 詳細については、「[ToolsVersion 設定をオーバーライドする](../msbuild/overriding-toolsversion-settings.md)」を参照してください。<br /><br /> MSBuild 4.5 では、`version` の値として 2.0、3.5、4.0 を指定できます。 4.0 を指定した場合、`VisualStudioVersion` ビルド プロパティでは、使用するサブツールセットを指定します。 詳細については、「[ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」の「サブツールセット」のセクションを参照してください。<br /><br /> ツールセットは、アプリケーションのビルドで使用するタスク、ターゲット、およびツールで構成されます。 ツールには、*csc.exe* や *vbc.exe* などのコンパイラが含まれます。 ツールセットの詳細については、「[ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」、「[標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)」、および「[マルチ ターゲットの概要](../msbuild/msbuild-multitargeting-overview.md)」を参照してください。 **注:**  ツールセットのバージョンは、ターゲット フレームワークのバージョン (ビルドするプロジェクトの実行対象となる .NET Framework のバージョン) と同じではありません。 詳細については、「[ターゲット フレームワークおよびターゲット プラットフォーム](../msbuild/msbuild-target-framework-and-target-platform.md)」を参照してください。|  
+|-target:`targets`|-t:`targets`|プロジェクト内で指定されたターゲットをビルドします。 各ターゲットを個別に指定するか、次の例に示すようにセミコロンまたはコンマを使用して複数のターゲットを区切ります。<br /><br /> `-target:Resources;Compile`<br /><br /> このスイッチを使用してターゲットを指定すると、これらのターゲットが実行され、プロジェクト ファイルの `DefaultTargets` 属性に指定されたターゲットは実行されません。 詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」と「[方法:最初にビルドするターゲットを指定する](../msbuild/how-to-specify-which-target-to-build-first.md)」を参照してください。<br /><br /> ターゲットとは、タスクのグループを表します。 詳細については、[ターゲット](../msbuild/msbuild-targets.md) を参照してください。|  
+|-toolsversion:`version`|-tv:`version`|次の例に示すように、プロジェクトのビルドに使用するツールセットのバージョンを指定します: `-toolsversion:3.5`。<br /><br /> このスイッチを使用すると、プロジェクトをビルドし、「[Project 要素 (MSBuild)](../msbuild/project-element-msbuild.md)」で指定したバージョンとは異なるバージョンを指定できます。 詳細については、「[ToolsVersion 設定をオーバーライドする](../msbuild/overriding-toolsversion-settings.md)」を参照してください。<br /><br /> MSBuild 4.5 では、`version` の値として2.0、3.5、および 4.0 を指定できます。 4.0 を指定した場合、`VisualStudioVersion` ビルド プロパティでは、使用するサブツールセットを指定します。 詳細については、「[ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」の「サブツールセット」のセクションを参照してください。<br /><br /> ツールセットは、アプリケーションのビルドで使用するタスク、ターゲット、およびツールで構成されます。 ツールには、*csc.exe* や *vbc.exe* などのコンパイラが含まれます。 ツールセットの詳細については、「[ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」、「[標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)」、および「[マルチ ターゲットの概要](../msbuild/msbuild-multitargeting-overview.md)」を参照してください。 **注:** ツールセットのバージョンは、ターゲット フレームワークのバージョン (ビルドするプロジェクトの実行対象となる .NET Framework のバージョン) と同じではありません。 詳細については、「[ターゲット フレームワークおよびターゲット プラットフォーム](../msbuild/msbuild-target-framework-and-target-platform.md)」を参照してください。|  
 |-validate:[`schema`]|-val[`schema`]|プロジェクト ファイルを検証し、成功した場合はプロジェクトをビルドします。<br /><br /> `schema` を指定しない場合、プロジェクトは既定のスキーマに対して検証されます。<br /><br /> `schema` を指定した場合、プロジェクトは指定したスキーマに対して検証されます。<br /><br /> たとえば、次のように設定します。`-validate:MyExtendedBuildSchema.xsd`|  
 |-verbosity:`level`|-v:`level`|ビルド ログに表示する情報量を指定します。 各 logger は、その logger に対して設定された詳細レベルに基づいてイベントを表示します。<br /><br /> 詳細レベルには、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` を指定できます。<br /><br /> たとえば、次のように設定します。`-verbosity:quiet`|  
 |-version|-ver|バージョン情報だけを表示します。 プロジェクトはビルドされません。|  

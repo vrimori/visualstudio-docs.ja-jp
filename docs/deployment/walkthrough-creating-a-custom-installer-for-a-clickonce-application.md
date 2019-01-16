@@ -1,8 +1,6 @@
 ---
-title: 'チュートリアル: ClickOnce アプリケーションのカスタム インストーラーの作成 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: ClickOnce アプリケーションのカスタム インストーラーを作成する |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -20,23 +18,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 939fd64873a2aab9d5652768ad4ecfa4a93b5122
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
-ms.translationtype: MT
+ms.openlocfilehash: 4dcf81d6ddba8fdd4fbdbc3e1ea9ca15b7682498
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39152244"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53991007"
 ---
 # <a name="walkthrough-create-a-custom-installer-for-a-clickonce-application"></a>チュートリアル: ClickOnce アプリケーションのカスタム インストーラーを作成します。
 ClickOnce アプリケーションがに基づいて、 *.exe*ファイルをサイレント モードでインストールされているし、カスタム インストーラーによって更新します。 カスタム インストーラーは、セキュリティとメンテナンス操作のためのカスタム ダイアログ ボックスを含め、インストール中に、カスタムのユーザー エクスペリエンスを実装できます。 インストール操作を実行するカスタム インストーラーを使用して、<xref:System.Deployment.Application.InPlaceHostingManager>クラス。 このチュートリアルでは、ClickOnce アプリケーションをサイレント インストールするカスタム インストーラーを作成する方法を示します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
   
 ### <a name="to-create-a-custom-clickonce-application-installer"></a>カスタム ClickOnce アプリケーション インストーラーを作成するには  
   
 1.  ClickOnce アプリケーションでは、System.Deployment および System.Windows.Forms への参照を追加します。  
   
-2.  アプリケーションに新しいクラスを追加し、任意の名前を指定します。 このチュートリアルでは、名前`MyInstaller`します。  
+2.  アプリケーションに新しいクラスを追加し、任意の名前を指定します。 このチュートリアルでは、名前 `MyInstaller` を使用します。  
   
 3.  次の追加`Imports`または`using`ステートメントを新しいクラスの先頭にします。  
   

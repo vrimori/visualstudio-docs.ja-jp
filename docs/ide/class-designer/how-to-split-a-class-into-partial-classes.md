@@ -2,7 +2,6 @@
 title: '方法: 1 つのクラスを複数の部分クラスに分割する (クラス デザイナー)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - Class Designer, partial classes
@@ -16,12 +15,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: f5ee6aa016cb75ef9c9822dcd79046680f689fa2
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 69a0a90315ec906874c94445e904e7dc1274a23e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39179168"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53826246"
 ---
 # <a name="how-to-split-a-class-into-partial-classes-in-class-designer"></a>方法: クラス デザイナーで 1 つのクラスを複数の部分クラスに分割する
 

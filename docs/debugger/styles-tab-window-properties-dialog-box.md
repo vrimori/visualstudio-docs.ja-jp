@@ -1,8 +1,6 @@
 ---
-title: スタイル タブ、ウィンドウのプロパティ ダイアログ ボックス |Microsoft ドキュメント
-ms.custom: ''
+title: スタイル タブ、ウィンドウのプロパティ ダイアログ ボックス |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - Window Properties dialog box, Styles Tab
@@ -12,19 +10,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ccccced77f508bdced130012645aa475124e87b5
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 464f2908784011074754ca68a29edbd52d992c95
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31473265"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53990322"
 ---
 # <a name="styles-tab-window-properties-dialog-box"></a>[スタイル] タブ ([ウィンドウ プロパティ] ダイアログ ボックス)
-使用して、**スタイル** タブを選択したウィンドウに適用されるスタイルを表示します。 表示する、[ウィンドウのプロパティ ダイアログ ボックス](../debugger/window-properties-dialog-box.md)にフォーカスを移動する、[ウィンドウ ビュー](../debugger/windows-view.md)ウィンドウです。 ツリーで、ウィンドウの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  
+使用して、**スタイル** タブを選択したウィンドウに適用されるスタイルを表示します。 表示する、[ウィンドウ プロパティ ダイアログ ボックス](../debugger/window-properties-dialog-box.md)、フォーカスを移動、 [Windows ビュー](../debugger/windows-view.md)ウィンドウ。 ツリーで、ウィンドウの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  
   
- 次の設定が [利用可能な**スタイル**] タブ。  
+ 次の設定は [使用可能な**スタイル**] タブ。  
   
 |入力|説明|  
 |-----------|-----------------|  
 |**ウィンドウ スタイル**|ウィンドウの組み合わせでは、スタイル コードと、該当する場合は、スタイルを制御します。|  
-|**拡張スタイル**|拡張ウィンドウ スタイル コードの組み合わせ。|
+|**拡張スタイル**|拡張ウィンドウ スタイルのコードの組み合わせ。|

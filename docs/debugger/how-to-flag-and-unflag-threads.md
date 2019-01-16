@@ -1,8 +1,6 @@
 ---
-title: '方法: スレッドのフラグの設定とフラグ |Microsoft Docs'
-ms.custom: ''
+title: '方法: フラグを設定し、スレッドのフラグ解除 |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -17,14 +15,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 09d26c87867e071b7dafce80d95e4bc46cb88bb8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 52103870207ae93731cc82969abdd377aff2d381
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49891376"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53851405"
 ---
-# <a name="how-to-flag-and-unflag-threads"></a>方法 : スレッドに対するフラグの設定と設定解除を行う
+# <a name="how-to-flag-and-unflag-threads"></a>方法: スレッドに対するフラグの設定と設定解除を行う
 アイコンでマークすることによって、特に注目するスレッドのフラグを設定することができます、**スレッド**、**並列スタック**(スレッド ビュー)、**並列ウォッチ**、および**GPU スレッド**windows。 このアイコンにより、フラグが設定されているスレッドをそれ以外のスレッドと簡単に区別できるようになります。  
   
 フラグが設定されたスレッドは、特別な扱いも受信、**スレッド**ボックスの一覧、**デバッグの場所**ツールバーとその他のマルチ スレッドのデバッグ ウィンドウでします。 すべてのスレッドまたはでフラグが設定されたスレッドのみを表示することができます、**スレッド**リストまたは他のウィンドウにします。
@@ -36,7 +34,7 @@ ms.locfileid: "49891376"
   
 ### <a name="to-unflag-all-threads"></a>すべてのスレッドのフラグを解除するには  
   
--   **スレッド**ウィンドウで、任意のスレッドを右クリックし、順にクリックします**すべてのスレッドのフラグを解除**します。
+-   **[スレッド]** ウィンドウで、いずれかのスレッドを右クリックし、**[すべてのスレッドのフラグを解除]** をクリックします。
 -   **並列ウォッチ**ウィンドウで、すべてのフラグのスレッドを右クリックし、選択**フラグ解除**します。  
   
 ### <a name="to-display-only-flagged-threads"></a>フラグが設定されたスレッドのみ表示するには  
@@ -45,23 +43,23 @@ ms.locfileid: "49891376"
   
 ### <a name="to-flag-just-my-code"></a>マイ コードのみにフラグを設定するには  
   
-1.  ツールバーの上部にある、**スレッド**ウィンドウで、フラグ アイコンをクリックします。  
+1.  **[スレッド]** ウィンドウの上部にあるツール バーで、フラグ アイコンをクリックします。  
   
-2.  ボックスの一覧でクリックして**マイ コードのみをフラグ**します。  
+2.  ドロップダウン リストで、**[マイ コードのみにフラグを設定]** をクリックします。  
   
 ### <a name="to-flag-threads-that-are-associated-with-selected-modules"></a>選択したモジュールに関連するスレッドにフラグを設定するには  
   
-1.  ツールバーで、**スレッド**ウィンドウで、フラグ アイコンをクリックします。  
+1.  **[スレッド]** ウィンドウのツール バーで、フラグ アイコンをクリックします。  
   
-2.  ボックスの一覧でクリックして**カスタム モジュール選択にフラグ**します。  
+2.  ドロップダウン リストで、**[カスタム モジュール選択にフラグを設定]** をクリックします。  
   
-3.  **モジュールの選択** ダイアログ ボックスで、使用するモジュールを選択します。  
+3.  **[モジュールの選択]** ダイアログ ボックスで、目的のモジュールを選択します。  
   
-4.  (省略可能)**検索**ボックスに、特定のモジュールを検索する文字列を入力します。  
+4.  (省略可能) **[検索]** ボックスに、特定のモジュールを検索するための文字列を入力します。  
   
 5.  **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [マルチ スレッド アプリケーションのデバッグの開始します。](../debugger/get-started-debugging-multithreaded-apps.md)  
+## <a name="see-also"></a>「  
+ [マルチスレッド アプリケーションのデバッグ](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+ [マルチ スレッド アプリケーションのデバッグの開始](../debugger/get-started-debugging-multithreaded-apps.md)  
  [チュートリアル: [スレッド] ウィンドウを使用してマルチ スレッド アプリケーションをデバッグします。](../debugger/how-to-use-the-threads-window.md)

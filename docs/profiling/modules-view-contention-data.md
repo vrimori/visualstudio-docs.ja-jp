@@ -1,8 +1,6 @@
 ---
 title: モジュール ビュー - 競合データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Modules view
@@ -12,15 +10,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f9ad65a81820e37c01d55a0ddba441dd30977b4
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: edd882b00c5bdaf62ae280cb0e4986662b05ad83
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35256059"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53926400"
 ---
 # <a name="modules-view---contention-data"></a>モジュール ビュー - 競合データ
-競合データのモジュール ビューは、プロファイル データでサンプリングされた同時実行データを、モジュールごとにグループ化して表示します。 各モジュールが、階層ツリーのルートです。 競合イベントが発生したモジュールの関数が、モジュール ノードの下に一覧表示されます。  
+競合データのモジュール ビューは、プロファイル データでサンプリングされたコンカレンシー データを、モジュールごとにグループ化して表示します。 各モジュールが、階層ツリーのルートです。 競合イベントが発生したモジュールの関数が、モジュール ノードの下に一覧表示されます。  
   
  競合イベントの発生時に関数が独自のコードを実行していた場合、つまり、関数が呼び出し履歴の最上位にあった場合は、実行されていたソース行および命令アドレスが関数ノードの下に一覧表示されます。 データは行や命令の実行時にソース行または命令ポインターについて収集されるため、行データと命令データの両方の包括値と排他値は常に同じです。  
   

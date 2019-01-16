@@ -2,19 +2,18 @@
 title: コンストラクターのクイック アクションを生成する
 ms.date: 01/26/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c6b267bee0c78de19ffa0d443f515375eeae949a
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 6c7f46bd93e476c3f9ffe08831c5016a449ee4bc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295827"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53895299"
 ---
 # <a name="generate-a-constructor-in-visual-studio"></a>Visual Studio でコンストラクターを生成する
 
@@ -24,7 +23,7 @@ ms.locfileid: "51295827"
 
 - Visual Basic
 
-**機能:** クラスの新しいコンストラクターのコードをすぐに生成できます。
+**概要:** クラスの新しいコンストラクターのコードをすぐに生成できます。
 
 **条件:** 新しいコンストラクターを導入し、自動的に適切に宣言したいとき。または既存のコンストラクターを変更するとき。
 

@@ -2,7 +2,6 @@
 title: コード スニペットを使用するためのベスト プラクティス
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - code snippets, best practices
@@ -12,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b8c7a04f2a2fb2ef59a41953c82da4254f213084
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: d95b1b95d1859d29f82f7de45aa6ddb9cde7554f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39179532"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53908919"
 ---
 # <a name="best-practices-for-using-code-snippets"></a>コード スニペットを使用するためのベスト プラクティス
 
@@ -25,7 +24,7 @@ ms.locfileid: "39179532"
 
 ## <a name="handling-exceptions"></a>例外処理
 
-通常、コード スニペットの Try…Catch ブロックは、すべての例外をキャッチして再スローします。 これは、プロジェクトにより適していない場合があります。 例外ごとに、対応方法はいくつかあります。 たとえば、「[方法: try/catch を使用して例外を処理する (C#)](/dotnet/csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch)」や「[Try...Catch...Finally ステートメント (Visual Basic)](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)」を参照してください。
+通常、コード スニペットの Try…Catch ブロックは、すべての例外をキャッチして再スローします。 これは、プロジェクトにより適していない場合があります。 例外ごとに、対応方法はいくつかあります。 たとえば、「[方法:try/catch を使用して例外を処理する (C#)](/dotnet/csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch)」や「[Try...Catch...Finally ステートメント (Visual Basic)](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)」を参照してください。
 
 ## <a name="file-locations"></a>ファイルの位置
 

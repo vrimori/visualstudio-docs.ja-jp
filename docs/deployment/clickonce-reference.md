@@ -1,8 +1,6 @@
 ---
 title: ClickOnce に関するリファレンス |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,18 +15,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 16e2752181b05719969e787ccf90aaa72ae5b620
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
-ms.translationtype: MT
+ms.openlocfilehash: 3353240e5b6d1a1218c4a6afc663c7778867e414
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39081567"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53945458"
 ---
 # <a name="clickonce-reference"></a>ClickOnce に関するリファレンス
 次のページには、ClickOnce アプリケーションを表すために使用する XML ファイルの構造について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)  
+ [ClickOnce Application Manifest](../deployment/clickonce-application-manifest.md)  
  要素と、アプリケーション マニフェストを構成する属性を示しています。  
   
  [ClickOnce 配置マニフェス](../deployment/clickonce-deployment-manifest.md)  
@@ -49,5 +47,5 @@ ms.locfileid: "39081567"
  <xref:System.Deployment.Application>  
  マネージ コード内で ClickOnce をサポートするパブリック クラスのドキュメントを参照するリンクを示します。  
   
- [ClickOnce アプリケーションを発行します。](../deployment/publishing-clickonce-applications.md)  
+ [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)  
  チュートリアルを提供します、どのように-するの ClickOnce のタスクを実行します。

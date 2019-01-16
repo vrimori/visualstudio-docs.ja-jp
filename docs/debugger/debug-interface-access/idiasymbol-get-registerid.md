@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_registerid |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0acc6d79e1e5da810e2f2da699df5d4def424df9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 0938bc4cc8692f9cb092938429c925fe68433bf0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49861469"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53911222"
 ---
 # <a name="idiasymbolgetregisterid"></a>IDiaSymbol::get_registerId
 場所のレジスタの指定子を取得するときに、 [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)に設定されている`LocIsEnregistered`します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49861469"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_registerId (   
+HRESULT get_registerId (   
    DWORD* pRetVal  
 );  
 ```  
@@ -42,9 +40,9 @@ HRESULT get_registerId (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティがシンボルを使用できないことを意味します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  記号がつまりがレジスタを基準とした場合、場合、シンボルの[LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)に設定されている`LocIsRegRel`を使用して、`get_registerId`メソッドへの呼び出しに続けて、 [idiasymbol::get_offset](../../debugger/debug-interface-access/idiasymbol-get-offset.md)記号が配置されているレジスタからのオフセットを取得するメソッド。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)

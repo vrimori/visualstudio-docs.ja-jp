@@ -1,9 +1,7 @@
 ---
-title: '手順 6: 減算問題の追加'
-ms.custom: ''
+title: '手順 6: 減算問題を追加する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 59204ef9-24bd-4f81-b85f-e3168e518a3e
 author: TerryGLee
@@ -11,14 +9,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6960f7ca6db9584af8d43b9cee0d0c6bc810bc7f
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: f42d2b414e79c1138f699964808ff13a375ec4fe
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747894"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53948168"
 ---
-# <a name="step-6-add-a-subtraction-problem"></a>手順 6: 減算問題の追加
+# <a name="step-6-add-a-subtraction-problem"></a>手順 6: 減算問題を追加する
 このチュートリアルの第 6 部では、減算問題を追加し、次のタスクを実行する方法を説明します。
 
 -   減算の値を格納します。
@@ -82,6 +80,6 @@ ms.locfileid: "34747894"
 
 ## <a name="to-continue-or-review"></a>続行または確認するには
 
--   チュートリアルの次の手順に進むには、「[手順 7: 乗算問題と除算問題の追加](../ide/step-7-add-multiplication-and-division-problems.md)」を参照してください。
+-   チュートリアルの次の手順に進むには、「[手順 7:乗算問題と除算問題の追加](../ide/step-7-add-multiplication-and-division-problems.md)」を参照してください。
 
--   チュートリアルの前の手順に戻るには、「[手順 5: NumericUpDown コントロールの Enter イベント ハンドラーの追加](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)」を参照してください。
+-   チュートリアルの前の手順に戻るには、「[手順 5:NumericUpDown コントロールの Enter イベント ハンドラーの追加](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)」を参照してください。

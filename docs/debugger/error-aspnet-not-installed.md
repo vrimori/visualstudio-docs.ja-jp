@@ -1,8 +1,6 @@
 ---
-title: 'エラー: asp.NET がインストールされていない |Microsoft Docs'
-ms.custom: ''
+title: エラー :ASP.NET がインストールされていない |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: troubleshooting
 f1_keywords:
 - vs.debug.error.http_not_supported
@@ -21,14 +19,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 754d196ba49e97ed0a70ca988d4ae65aed001bdc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 41ec708b25bc74eb1f566981ee4bbcdc23827087
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49949573"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53902111"
 ---
-# <a name="error-aspnet-not-installed"></a>エラー ： ASP .NET がインストールされていません。
+# <a name="error-aspnet-not-installed"></a>エラー :ASP.NET がインストールされていません
 このエラーは、デバッグを実行しようとしているコンピューターに [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] が正しくインストールされていない場合に発生します。 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] がインストールされていないか、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] がインストールされてから IIS がインストールされた可能性があります。  
   
 ### <a name="to-reinstall-aspnet"></a>ASP.NET を再インストールするには  
@@ -42,7 +40,7 @@ ms.locfileid: "49949573"
     場所*バージョン*v1.0.370 など、コンピューターにインストールされている .NET Framework のバージョン番号を表します。 によってフレームワークのバージョンを確認することができます、`\WINDOWS\Microsoft.NET\Framework`ディレクトリ。  
   
    > [!NOTE]
-   >  Windows Server 2003 では、インストールすることができます[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]を使用して**プログラム追加と削除**コントロール パネルの します。  
+   >  Windows Server 2003 の場合は、コントロール パネルの **[プログラムの追加と削除]** を使って [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] をインストールできます。  
   
-## <a name="see-also"></a>関連項目  
- [Web アプリケーションのデバッグ : エラーおよびトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
+## <a name="see-also"></a>「  
+ [Web アプリケーションのデバッグ: エラーとトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

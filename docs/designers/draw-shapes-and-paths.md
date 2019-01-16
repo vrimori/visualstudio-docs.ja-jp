@@ -2,7 +2,6 @@
 title: 図形とパスの描画
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: d5378c59-e2e5-49f0-91f1-aa82d984a33c
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 97172253a088be86f20fae77fe62d01330a3b801
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 29cd9da26b632d8ed8b1d09b0803f27599dba95e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513098"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53942646"
 ---
 # <a name="draw-shapes-and-paths"></a>図形とパスの描画
 
@@ -85,7 +84,7 @@ XAML デザイナーでは、"*図形*" とはその名の示すとおりのも�
 ##  <a name="Convert"></a> 図形のパスへの変換
  パスを変更するのと同じ方法で図形を変更するには、図形をパスに変換します。
 
- **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [パスの作業: 図形をパスに変換する](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147)。
+ **短いビデオを見る:**![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [パスの作業:図形をパスに変換する](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147)。
 
 ##  <a name="Combine"></a> パスの結合
  パスと図形を結合して 1 つのパスにすることができます。
@@ -98,7 +97,7 @@ XAML デザイナーでは、"*図形*" とはその名の示すとおりのも�
 |![重複部分を除外](../designers/media/b1_2.png)|合算|![](../designers/media/b1_5.png)|重複部分を除外|
 |![減算](../designers/media/b1_3.png)|除算|![](../designers/media/b1_6.png)|減算|
 
- **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [パスの作業: パスを結合する](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195)。
+ **短いビデオを見る:**![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [パスの作業:パスを結合する](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195)。
 
 ##  <a name="Compound"></a> 複合パスの作成
  複合パスを作成するときは、パスの交差している部分が減算されます。複合後のパスのビジュアル プロパティは、最背面にあったパスと同じになります。
@@ -107,14 +106,14 @@ XAML デザイナーでは、"*図形*" とはその名の示すとおりのも�
 
  ![複合パスを分離する](../designers/media/2157a8aa-d9a7-4de4-8de5-b10d28f08a84.png)
 
- **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [パスの作業: 複合パスを作成する](https://www.youtube.com/watch?v=Io5bC0-nH6Q)。
+ **短いビデオを見る:**![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [パスの作業:複合パスを作成する](https://www.youtube.com/watch?v=Io5bC0-nH6Q)。
 
 ##  <a name="Clipping"></a> クリッピング パスの作成
  クリッピング パスは、別のオブジェクトに適用するパスまたは図形です。クリッピング パスの外側のオブジェクトがマスクされて非表示になります。
 
  ![クリッピング パス](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png)
 
- **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [パスの作業: クリッピング パスを作成する](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232)。
+ **短いビデオを見る:**![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [パスの作業:クリッピング パスを作成する](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232)。
 
 ## <a name="see-also"></a>関連項目
 

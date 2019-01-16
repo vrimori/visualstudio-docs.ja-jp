@@ -2,7 +2,6 @@
 title: JavaScript コンソール コマンド |Microsoft Docs
 ms.custom: seodec18
 ms.date: 07/17/2017
-ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - JavaScript Console commands [UWP apps]
@@ -14,16 +13,16 @@ manager: douge
 ms.workload:
 - uwp
 - cordova
-ms.openlocfilehash: c546e3f1938a7dddc3dd48fa9d941b9f7d2e7048
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: bf978f336070e9bd90f90f399f4b6c3d8598877e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052223"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53990936"
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio での JavaScript コンソール コマンド
   
- Visual Studio では、JavaScript コンソール ウィンドウでコマンドを使用して、メッセージを送信したり他のタスクを実行したりすることができます。 そのウィンドウを使用する方法を示す例については、次を参照してください。[クイック スタート。JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)します。 このトピックの情報は、UWP アプリと Apache Cordova の Visual Studio Tools を使用して作成されたアプリに適用されます。 Cordova アプリでサポートされているコンソール コマンドについては、「 [Debug Your App](https://taco.visualstudio.com/en-us/docs/debug-using-visual-studio/)」を参照してください。 Internet Explorer F12 ツールのコンソールの使用については、 [このトピック](/previous-versions/windows/internet-explorer/ie-developer/samples/dn255006(v=vs.85))を参照してください。  
+ Visual Studio では、JavaScript コンソール ウィンドウでコマンドを使用して、メッセージを送信したり他のタスクを実行したりすることができます。 そのウィンドウを使用する方法を示す例については、次を参照してください。[クイック スタート。JavaScript をデバッグする](../debugger/quickstart-debug-javascript-using-the-console.md) このトピックの情報は、UWP アプリと Apache Cordova の Visual Studio Tools を使用して作成されたアプリに適用されます。 Cordova アプリでサポートされているコンソール コマンドについては、「 [Debug Your App](https://taco.visualstudio.com/en-us/docs/debug-using-visual-studio/)」を参照してください。 Internet Explorer F12 ツールのコンソールの使用については、 [このトピック](/previous-versions/windows/internet-explorer/ie-developer/samples/dn255006(v=vs.85))を参照してください。  
   
  JavaScript コンソール ウィンドウが閉じられた場合開けることを選択して、Visual Studio でデバッグ中**デバッグ** > **Windows** > **JavaScriptコンソール**します。  
   
@@ -130,6 +129,6 @@ console.log("%s is %f years old!", user.first, user.age);
 // Fred is 10.01 years old!  
 ```  
   
-## <a name="see-also"></a>参照  
- クイック スタート:JavaScript をデバッグします。](../debugger/quickstart-debug-javascript-using-the-console.md)   
- [クイック スタート: HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)
+## <a name="see-also"></a>「  
+ [クイック スタート: JavaScript をデバッグする](../debugger/quickstart-debug-javascript-using-the-console.md)   
+ [クイック スタート:HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)

@@ -12,15 +12,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 11f7249f30b1866ca7c4aea4bbefa850a5353c0f
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: 396afaf7b2cd5821db05ee4a6291d976fc852878
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52305586"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53847963"
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Visual Studio がデータ バインド コントロールのキャプションを作成する方法をカスタマイズする
 
@@ -44,13 +43,13 @@ ms.locfileid: "52305586"
 |レジストリ項目|既定値|説明|
 |-------------------|-------------------|-----------------|
 |**SmartCaptionExpression**|**(\\\p{Ll}) (\\\p{Lu})&#124;_ +**|小文字の後に大文字の文字またはアンダー スコア文字と一致します。|
-|**SmartCaptionReplacement**|"$103"|**$1** 、式の最初のかっこ内の文字列表現を表す、 **$2** 2 つ目のかっこ内の文字列表現を表します。 置換は、最初に一致する、スペース、および 2 番目の一致。|
+|**SmartCaptionReplacement**|**$1 $2**|**$1** 、式の最初のかっこ内の文字列表現を表す、 **$2** 2 つ目のかっこ内の文字列表現を表します。 置換は、最初に一致する、スペース、および 2 番目の一致。|
 |**SmartCaptionSuffix**|**:**|返される文字列に追加する文字を表します。 たとえば、キャプションが`Company Name`サフィックスになります `Company Name:`|
 
 > [!CAUTION]
 > レジストリ エディターで操作する際は十分に注意する必要があります。 編集する前に、レジストリをバックアップします。 レジストリ エディターを正しく使用する場合、オペレーティング システムを再インストールする必要があります深刻な問題が発生することができます。 Microsoft では、レジストリ エディターの使用によって発生した問題を解決できることは保証されません。 レジストリ エディターは、ご自身の責任において使用してください。
 >
-> 次のサポート技術情報記事にはバックアップを作成、編集、およびレジストリを復元するための手順が含まれています: [Microsoft Windows レジストリの説明](http://support.microsoft.com/default.aspx?scid=kb;en-us;256986)(http://support.microsoft.com/default.aspx?scid=kb; en-ご; 256986)
+> 次のサポート技術情報記事には、バックアップ、編集、およびレジストリを復元するための手順が含まれています。[Microsoft Windows レジストリの説明](http://support.microsoft.com/default.aspx?scid=kb;en-us;256986)(http://support.microsoft.com/default.aspx?scid=kb; 英語-米国; 256986)
 
 ## <a name="modify-the-smart-captioning-behavior-of-the-data-sources-window"></a>データ ソース ウィンドウのスマート キャプションの動作を変更します。
 

@@ -1,8 +1,6 @@
 ---
 title: CreateItem タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#CreateItem
@@ -20,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a53bbac8f1d4549b49183d0e90b2f33c925654d6
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: e50b1f56be7b32bd21b9b5785caac003b7ee86d7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945301"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53860885"
 ---
 # <a name="createitem-task"></a>CreateItem タスク
 項目コレクションに入力項目を設定します。 これにより、リスト間で項目をコピーできるようになります。  
@@ -38,8 +36,8 @@ ms.locfileid: "37945301"
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|`AdditionalMetadata`|省略可能な `String` 型の配列パラメーターです。<br /><br /> 出力項目にアタッチする追加のメタデータを指定します。  項目のメタデータの名前と値を次の構文で指定します。<br /><br /> *MetadataName* `=` *MetadataValue*<br /><br /> メタデータの名前と値のペアを複数指定する場合は、セミコロンで区切る必要があります。 名前または値にセミコロンまたは他の特殊文字が含まれる場合は、エスケープする必要があります。 詳細については、「[方法 : MSBuild で特殊文字をエスケープする](../msbuild/how-to-escape-special-characters-in-msbuild.md)」をご覧ください。|  
-|`Exclude`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の出力パラメーターです。<br /><br /> 出力項目コレクションから除外する項目を指定します。 このパラメーターには、ワイルドカードの指定を含めることができます。 詳細については、「[MSBuild 項目](../msbuild/msbuild-items.md)」および「[方法: ビルドからファイルを除外する](../msbuild/how-to-exclude-files-from-the-build.md)」をご覧ください。|  
+|`AdditionalMetadata`|省略可能な `String` 型の配列パラメーターです。<br /><br /> 出力項目にアタッチする追加のメタデータを指定します。  項目のメタデータの名前と値を次の構文で指定します。<br /><br /> *MetadataName* `=` *MetadataValue*<br /><br /> メタデータの名前と値のペアを複数指定する場合は、セミコロンで区切る必要があります。 名前または値にセミコロンまたは他の特殊文字が含まれる場合は、エスケープする必要があります。 詳細については、「[方法 :MSBuild で特殊文字をエスケープする](../msbuild/how-to-escape-special-characters-in-msbuild.md)」を参照してください。|  
+|`Exclude`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の出力パラメーターです。<br /><br /> 出力項目コレクションから除外する項目を指定します。 このパラメーターには、ワイルドカードの指定を含めることができます。 詳細については、「[項目](../msbuild/msbuild-items.md)」と「[方法: ビルドからファイルを除外する](../msbuild/how-to-exclude-files-from-the-build.md)」をご覧ください。|  
 |`Include`|必須の <xref:Microsoft.Build.Framework.ITaskItem>`[]` パラメーター。<br /><br /> 出力項目のコレクションに含める項目を指定します。 このパラメーターには、ワイルドカードの指定を含めることができます。|  
 |`PreserveExistingMetadata`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `True` の場合は、まだ存在しない場合にのみ追加メタデータを適用します。|  
   

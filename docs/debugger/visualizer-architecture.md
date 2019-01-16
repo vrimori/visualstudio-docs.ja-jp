@@ -1,8 +1,6 @@
 ---
 title: ビジュアライザーのアーキテクチャ |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -15,29 +13,29 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e9c9f9012cc2811e0462586abe062e25a5478c5
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: a7a4ac05283b010ca7a549c9bc6829061e420e30
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49836607"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53822957"
 ---
 # <a name="visualizer-architecture"></a>ビジュアライザーのアーキテクチャ
 デバッガー ビジュアライザーのアーキテクチャには、次の 2 つの部分があります。  
   
-- *デバッガー側*Visual Studio デバッガー内で実行します。 デバッガー側のコードは、ビジュアライザーのユーザー インターフェイスを作成し、表示します。  
+- "*デバッガー側*" - Visual Studio デバッガー内で動作します。 デバッガー側のコードは、ビジュアライザーのユーザー インターフェイスを作成し、表示します。  
   
-- *デバッグ対象側*Visual Studio がデバッグ プロセス内で実行 (、*デバッグ対象*)。  
+- "*デバッグ対象側*" - Visual Studio がデバッグしているプロセス (*デバッグ対象*) 内で動作します。  
   
-  ビジュアライザーは、デバッガーを表示できるようにするデバッガー コンポーネント (*視覚化*)、意味のある理解しやすい形式でデータ オブジェクトの内容。 データ オブジェクトの編集をサポートするビジュアライザーもあります。 カスタム ビジュアライザーを作成すれば、独自のデータ型を処理できるようにデバッガーを拡張することも可能です。  
+  ビジュアライザーは、データ オブジェクトの内容を、意味のある理解しやすい形式で表示 ("*視覚化*") できるようにするためのデバッガーのコンポーネントです。 データ オブジェクトの編集をサポートするビジュアライザーもあります。 カスタム ビジュアライザーを作成すれば、独自のデータ型を処理できるようにデバッガーを拡張することも可能です。  
   
-  デバッグ中のプロセス内にあります。 視覚化対象であるデータ オブジェクト (、*デバッグ対象*プロセス)。 データを表示するユーザー インターフェイスは、Visual Studio デバッガー プロセス内で作成されます。  
+  視覚化対象であるデータ オブジェクトは、デバッグ中のプロセス ("*デバッグ対象*" プロセス) 内に存在します。 データを表示するユーザー インターフェイスは、Visual Studio デバッガー プロセス内で作成されます。  
   
 |デバッガー プロセス|デバッグ対象プロセス|  
 |----------------------|----------------------|  
 |デバッガーのユーザー インターフェイス (データヒント、ウォッチ ウィンドウ、クイック ウォッチ)|視覚化の対象となるデータ オブジェクト|  
   
- デバッガーのインターフェイス内でデータ オブジェクトを視覚化するには、2 つのプロセス間の通信を実現するためのコードを記述する必要があります。 そのため、ビジュアライザーのアーキテクチャを 2 つの部分で構成されます:*デバッガー側*コードと*デバッグ対象側*コード。  
+ デバッガーのインターフェイス内でデータ オブジェクトを視覚化するには、2 つのプロセス間の通信を実現するためのコードを記述する必要があります。 したがって、ビジュアライザーのアーキテクチャは、"*デバッガー側*" コードと "*デバッグ対象側*" コードという、2 つの要素で構成されることになります。  
   
  デバッガー側コードでは、自身のユーザー インターフェイスが作成されます。このインターフェイスは、デバッガーのインターフェイス (データヒント、ウォッチ ウィンドウ、またはクイック ウォッチ) から呼び出すことができます。 ビジュアライザーのインターフェイスは、<xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer> クラスおよび <xref:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService> インターフェイスを使用して作成します。 ビジュアライザーのすべての API に共通することですが、DialogDebuggerVisualizer および IDialogVisualizerService は、<xref:Microsoft.VisualStudio.DebuggerVisualizers> 名前空間に存在します。  
   
@@ -87,9 +85,9 @@ ms.locfileid: "49836607"
 |---------------------|-------------------|  
 |<xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferData%2A><br /><br /> または<br /><br /> <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferObject%2A>|<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.TransferData%2A>|  
   
-## <a name="see-also"></a>関連項目  
- [方法: ビジュアライザーを記述します。](../debugger/how-to-write-a-visualizer.md)   
- [チュートリアル: c# でビジュアライザーを記述します。](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)   
- [チュートリアル: Visual Basic でビジュアライザーを記述します。](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)   
- [チュートリアル: Visual Basic でビジュアライザーを記述します。](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)   
+## <a name="see-also"></a>「  
+ [方法: ビジュアライザーを記述する](/visualstudio/debugger/create-custom-visualizers-of-data)   
+ [チュートリアル: C# でビジュアライザーを記述する](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)   
+ [チュートリアル: Visual Basic でビジュアライザーを記述する](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)   
+ [チュートリアル: Visual Basic でビジュアライザーを記述する](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)   
  [ビジュアライザーのセキュリティに関する考慮事項](../debugger/visualizer-security-considerations.md)

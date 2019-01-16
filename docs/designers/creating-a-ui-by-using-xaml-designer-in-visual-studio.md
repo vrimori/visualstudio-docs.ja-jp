@@ -2,7 +2,6 @@
 title: XAML デザイナーで UI を作成する
 ms.date: 11/05/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 f1_keywords:
 - VS.XamlDesigner
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: b991b50ab2ee329adaaff7a31c2dbb4f2d5bb806
-ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
+ms.openlocfilehash: a47c0f9718f43c86375f9ff8668d2dfa1efa9785
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51220997"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53880411"
 ---
 # <a name="create-a-ui-by-using-xaml-designer-in-visual-studio"></a>Visual Studio で XAML デザイナーを利用して UI を作成する
 
@@ -127,7 +126,7 @@ XAML デザイナーの **[デバイス]** ウィンドウを使用すると、�
 
 **エッジ**
 
-アプリの端の位置揃えを **[両方]**、 **[左]**、 **[右]**、または **[なし]** に指定します。
+アプリの端の位置揃えを **[両方]**、**[左]**、**[右]**、または **[なし]** に指定します。
 
 **ハイコントラスト**
 

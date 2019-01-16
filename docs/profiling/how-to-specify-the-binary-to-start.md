@@ -1,8 +1,6 @@
 ---
 title: '方法: 開始するバイナリを指定する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.performance.property.itemlaunch
@@ -15,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 87fc4102b3cbd3420f1e5c3b7ea4a067e0d95a0d
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: c569b9e285e4865b8ef637443acdf6026b0fec9c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34844860"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53868470"
 ---
 # <a name="how-to-specify-the-binary-to-start"></a>方法: 開始するバイナリを指定する
 
@@ -30,8 +28,7 @@ DLL などのバイナリをプロファイルするには、**[\<Target> プロ
 
 2. **[プロパティ ページ]** ダイアログ ボックスで、**[起動]** プロパティをクリックします。
 
-3. 
-  **[プロジェクト プロパティのオーバーライド]** チェック ボックスを選択します。
+3. **[プロジェクト プロパティのオーバーライド]** チェック ボックスを選択します。
 
 4. **[起動する実行可能ファイル]** テキスト ボックスで、ファイルの場所を指定します。
 

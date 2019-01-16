@@ -1,8 +1,6 @@
 ---
 title: IDiaSession::findAcceleratorInlineesByLinenum |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b90a253baefad62bba205ccbf0fb8b8fff81712d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: e6784808075518db2e5dcb660318d8e6631cb1b7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49917467"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53867814"
 ---
 # <a name="idiasessionfindacceleratorinlineesbylinenum"></a>IDiaSession::findAcceleratorInlineesByLinenum
 指定したソースの場所に対応するインライン フレームのシンボルの列挙を返します。  
@@ -25,7 +23,7 @@ ms.locfileid: "49917467"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT findAcceleratorInlineeLinesByName (   
+HRESULT findAcceleratorInlineeLinesByName (   
    IDiaSymbol*           parent,  
    IDiaSourceFile*       file,  
    DWORD                 linenum,  
@@ -53,7 +51,7 @@ HRESULT findAcceleratorInlineeLinesByName (
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

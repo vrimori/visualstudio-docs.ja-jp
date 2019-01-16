@@ -1,8 +1,6 @@
 ---
 title: パフォーマンス セッションの概要 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiling Tools, performance session
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a385b425ee8dead7df0faad302e6cf270b739034
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: b673bad7bbcd552140cca25cc5a3fe90404c0716
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49828534"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53867174"
 ---
 # <a name="performance-session-overview"></a>パフォーマンス セッションの概要
 この概要では、プロファイリングの基本について説明します。 パフォーマンス作業を初めて行う開発者は、すぐに成果を上げてコードのパフォーマンスを向上させるうえで [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールがいかに役立つかを理解できます。 プロファイリングの経験がある開発者は、プロファイリング ツールに関する特定の機能やプロセスの概要を確認できます。  
@@ -77,4 +75,4 @@ ms.locfileid: "49828534"
   
 ## <a name="see-also"></a>関連項目  
  [概要](../profiling/overviews-performance-tools.md)   
- [チュートリアル: パフォーマンスの問題を特定する](../profiling/walkthrough-identifying-performance-problems.md)
+ [チュートリアル: パフォーマンスの問題を特定する](/visualstudio/profiling/beginners-guide-to-cpu-sampling)

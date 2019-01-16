@@ -1,8 +1,6 @@
 ---
-title: 'DA0017: ディスクへのアクティブなメモリのページングが高率で発生しています。 | Microsoft Docs'
-ms.custom: ''
+title: DA0017:ディスクへのアクティブなメモリのページングが高率で発生しています | Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.performance.17
@@ -14,14 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6128e5f98efe2a5ef29ffff407918be5d925c75b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 5d7dc552119390660dcc70e8fb670918e357a2d7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49824349"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53864778"
 ---
-# <a name="da0017-high-rates-of-paging-active-memory-to-disk"></a>DA0017: ディスクへのアクティブなメモリのページングが高率で発生しています。
+# <a name="da0017-high-rates-of-paging-active-memory-to-disk"></a>DA0017:ディスクへのアクティブなメモリのページングが高率で発生しています
 
 |||  
 |-|-|  
@@ -39,7 +37,7 @@ ms.locfileid: "49824349"
 ## <a name="rule-description"></a>規則の説明  
 
 > [!NOTE]
->  この情報規則は、アクティブなメモリのページングが相当なレベルに達した場合に適用されます。 ページングが非常に高率で発生した場合、代わりに、警告規則「[DA0014: ディスクへのアクティブなメモリのページングが非常に高率で発生しています。](../profiling/da0014-extremely-high-rates-of-paging-active-memory-to-disk.md)」が発生します。  
+>  この情報規則は、アクティブなメモリのページングが相当なレベルに達した場合に適用されます。 ページングが非常に高率で発生した場合、代わりに、警告規則「[DA0014: ディスクへのアクティブなメモリのページングが非常に高率で発生しています](../profiling/da0014-extremely-high-rates-of-paging-active-memory-to-disk.md)」が発生します。  
 
  ディスクに対する過剰なページングは、物理メモリの不足が原因で発生する場合があります。 ページング ファイルが存在する物理ディスクの大部分がページング操作によって使用される場合、同じディスクのその他のアプリケーションのディスク操作の処理速度が遅くなる可能性があります。  
 

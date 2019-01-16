@@ -2,7 +2,6 @@
 title: '[セキュリティ] ページ (プロジェクト デザイナー)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - vb.ProjectPropertiesSecurity
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 75877dfd8620af9d3fdfecb5cfcb10761a739515
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 30b09fee21dd7f028615612c27c3aab468a22055
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31949580"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53987954"
 ---
 # <a name="security-page-project-designer"></a>[セキュリティ] ページ (プロジェクト デザイナー)
 
@@ -38,7 +37,7 @@ ms.locfileid: "31949580"
 > **発行**ウィザードを使用してアプリケーションを発行するときは、このオプションが自動的に有効になります。
 
 
- このオプションをオンにすると、**[これは完全に信頼するアプリケーションです]** と **[これは部分的に信頼するアプリケーションです]** の 2 つのオプション ボタンの一方を選択できるようになります。
+ このオプションをオンにすると、2 つのオプション ボタン **[これは完全に信頼するアプリケーションです]** と **[これは部分的に信頼するアプリケーションです]** のいずれかを選択できるようになります。
 
  WPF Web ブラウザー アプリケーション プロジェクトでは、このオプションは既定でオンになります。
 
@@ -74,15 +73,15 @@ ms.locfileid: "31949580"
 
  [[セキュリティの詳細設定]](../../ide/reference/advanced-security-settings-dialog-box.md) ダイアログ ボックスが開きます。このダイアログ ボックスでは、制限されたアクセス許可でのアプリケーションのデバッグ用の設定を構成できます。 これらの設定はデバッグ中にチェックされます。アクセス許可例外は、ゾーンで定義されているよりも多くのアクセス許可をアプリケーションが必要としている可能性があることを示します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - <xref:System.Security.Permissions.WebBrowserPermission>
 - <xref:System.Security.Permissions.MediaPermission>
 - [ClickOnce アプリケーションのコード アクセス セキュリティ](../../deployment/code-access-security-for-clickonce-applications.md)
-- [方法 : ClickOnce のセキュリティ設定を有効にする](../../deployment/how-to-enable-clickonce-security-settings.md)
-- [方法 : ClickOnce アプリケーションのセキュリティ ゾーンを設定する](../../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
-- [方法 : ClickOnce アプリケーションのカスタム アクセス許可を設定する](../../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
-- [方法 : アクセス許可が制限された ClickOnce アプリケーションをデバッグする](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)
+- [方法: [ClickOnce セキュリティ設定を有効にする]](../../deployment/how-to-enable-clickonce-security-settings.md)
+- [方法: ClickOnce アプリケーションのセキュリティ ゾーンを設定する](../../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
+- [方法: ClickOnce アプリケーションのカスタム アクセス許可を設定する](../../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
+- [方法: アクセス許可が制限された ClickOnce アプリケーションをデバッグする](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)
 - [ClickOnce のセキュリティと配置](../../deployment/clickonce-security-and-deployment.md)
 - [プロジェクトのプロパティのリファレンス](../../ide/reference/project-properties-reference.md)
 - [[セキュリティの詳細設定] ダイアログ ボックス](../../ide/reference/advanced-security-settings-dialog-box.md)

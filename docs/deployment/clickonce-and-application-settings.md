@@ -1,8 +1,6 @@
 ---
 title: ClickOnce とアプリケーションの設定 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,14 +14,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d3cf6320401f58cd8ea1733e3b972202ba9b6d3
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
-ms.translationtype: MT
+ms.openlocfilehash: 40077a30a49842187c24b4cf8b0cba18b3d0a46a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39081095"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53850967"
 ---
-# <a name="clickonce-and-application-settings"></a>ClickOnce とアプリケーションの設定
+# <a name="clickonce-and-application-settings"></a>ClickOnce とアプリケーション設定
 Windows フォームのアプリケーション設定を簡単に作成、保存、およびカスタム アプリケーションとクライアント上のユーザー設定を管理します。 次のドキュメントでは、ClickOnce アプリケーションでのアプリケーション設定ファイルのしくみし、ユーザーが次のバージョンにアップグレードしたときに、ClickOnce が設定を移行する方法について説明します。  
   
  以下の情報は、既定のアプリケーション設定プロバイダーにのみ適用されます、 \<xref:System.Configuration.LocalFileSettingsProvider > クラス。 カスタム プロバイダーを指定すると、そのデータを格納する方法と、バージョン間で設定をアップグレードする方法、そのプロバイダーが判断されます。 アプリケーション設定プロバイダーの詳細については、次を参照してください。[アプリケーション設定アーキテクチャ](/dotnet/framework/winforms/advanced/application-settings-architecture)します。  
@@ -58,4 +56,4 @@ Windows フォームのアプリケーション設定を簡単に作成、保存
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
  [アプリケーション設定の概要](/dotnet/framework/winforms/advanced/application-settings-overview)   
  [ClickOnce キャッシュの概要](../deployment/clickonce-cache-overview.md)   
- [ClickOnce アプリケーションにおけるローカルおよびリモート データにアクセス](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)
+ [ClickOnce アプリケーションにおけるローカル データおよびリモート データへのアクセス](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)

@@ -1,8 +1,6 @@
 ---
 title: パフォーマンス収集方法について | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.performance.wizard.methodpage
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d278f8ca6019dd8a29d5e4c57e1e191137a32972
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 9bde4e313b9baf4975f5bff247fac248f3a090ea
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35669354"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53825790"
 ---
 # <a name="understand-performance-collection-methods"></a>パフォーマンス収集方法について
 
@@ -31,7 +29,7 @@ Visual Studio プロファイリング ツールには、パフォーマンス �
 |------------|-----------------|
 |[サンプリング](#sampling)|アプリケーションが実行する作業についての統計データを収集します。|
 |[インストルメンテーション](#instrumentation)|各関数呼び出しのタイミングに関する詳細情報を取得します。|
-|[同時実行](#concurrency)|マルチスレッド アプリケーションに関する詳細情報を収集します。|
+|[コンカレンシー](#concurrency)|マルチスレッド アプリケーションに関する詳細情報を収集します。|
 |[.NET メモリ](#net-memory)|.NET メモリの割り当ておよびガベージ コレクションに関する詳細情報を収集します。|
 |[階層の相互作用](#tier-interaction)|SQL Server データベースに対する ADO.NET の同期の関数呼び出しに関する情報を収集します。<br /><br /> 階層相互作用プロファイル データは、Visual Studio の任意のエディションを使用して収集できます。 ただし、階層相互作用プロファイル データを表示できるのは、Visual Studio Enterprise のみです。|
 
@@ -81,21 +79,21 @@ Visual Studio プロファイリング ツールには、パフォーマンス �
 
 [インストルメンテーション メソッドのデータ ビュー](../profiling/instrumentation-method-data-views.md)
 
-## <a name="concurrency"></a>同時実行
+## <a name="concurrency"></a>コンカレンシー
 
-同時実行プロファイルでは、マルチスレッド アプリケーションに関する情報が収集されます。 リソース競合プロファイルでは、競合するスレッドによる共有リソースへのアクセスで待機が発生するたびに、詳細な呼び出し履歴情報が収集されます。 また、同時実行の視覚化では、マルチスレッド アプリケーションが、アプリケーション自体、ハードウェア、オペレーティング システム、およびホスト コンピューター上の他のプロセスと対話する方法に関する、より一般的な情報が収集されます。
+コンカレンシー プロファイルでは、マルチスレッド アプリケーションに関する情報が収集されます。 リソース競合プロファイルでは、競合するスレッドによる共有リソースへのアクセスで待機が発生するたびに、詳細な呼び出し履歴情報が収集されます。 また、コンカレンシーの視覚化では、マルチスレッド アプリケーションが、アプリケーション自体、ハードウェア、オペレーティング システム、およびホスト コンピューター上の他のプロセスと対話する方法に関する、より一般的な情報が収集されます。
 
 - リソース競合レポートには、発生した競合の合計数と、リソースに対する合計待機時間 (待機が発生したモジュール、関数、ソース コード行、命令についての合計待機時間) が表示されます。 また、タイムライン グラフにも発生した競合が表示されます。
 
-- 同時実行ビジュアライザーでは、パフォーマンスのボトルネック、十分に活用されていない CPU、スレッドの競合、スレッドの移行、同期の遅延、重複 I/O の領域などを特定するためのグラフィカルな情報が表示されます。 グラフィカルな出力は、呼び出し履歴とソース コードのデータにできる限りリンクされます。 同時実行の視覚化データは、コマンド ラインおよび Windows アプリケーションについてのみ収集できます。
+- コンカレンシー ビジュアライザーでは、パフォーマンスのボトルネック、十分に活用されていない CPU、スレッドの競合、スレッドの移行、同期の遅延、重複 I/O の領域などを特定するためのグラフィカルな情報が表示されます。 グラフィカルな出力は、呼び出し履歴とソース コードのデータにできる限りリンクされます。 コンカレンシーの視覚化データは、コマンド ラインおよび Windows アプリケーションについてのみ収集できます。
 
 [リソース競合データ値について](../profiling/understanding-resource-contention-data-values.md)
 
-[スレッドとプロセスの同時実行データの収集](../profiling/collecting-thread-and-process-concurrency-data.md)
+[スレッドとプロセスのコンカレンシー データの収集](../profiling/collecting-thread-and-process-concurrency-data.md)
 
 [リソース競合データのビュー](../profiling/resource-contention-data-views.md)
 
-[同時実行ビジュアライザー](../profiling/concurrency-visualizer.md)
+[コンカレンシー ビジュアライザー](../profiling/concurrency-visualizer.md)
 
 ## <a name="net-memory"></a>.NET メモリ
 
@@ -121,7 +119,7 @@ Visual Studio プロファイリング ツールには、パフォーマンス �
 
 ## <a name="tier-interaction"></a>階層の相互作用
 
-階層の相互作用のプロファイリングでは、[!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] ページまたはその他のアプリケーションと [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] データベースとの間で行われた同期的な [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)] 呼び出しに関する情報が、プロファイリング データ ファイルに追加されます。 データには、呼び出しの回数と時間、および最長時間と最短時間が含まれます。 階層の相互作用データは、サンプリング、インストルメンテーション、.NET メモリ、または同時実行の各方式で収集されたプロファイリング データに追加できます。
+階層の相互作用のプロファイリングでは、[!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] ページまたはその他のアプリケーションと [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] データベースとの間で行われた同期的な [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)] 呼び出しに関する情報が、プロファイリング データ ファイルに追加されます。 データには、呼び出しの回数と時間、および最長時間と最短時間が含まれます。 階層の相互作用データは、サンプリング、インストルメンテーション、.NET メモリ、またはコンカレンシーの各方式で収集されたプロファイリング データに追加できます。
 
 ![階層相互作用プロファイリング データ](../profiling/media/tierinteraction_profilingtools.png "TierInteraction_ProfilingTools")
 

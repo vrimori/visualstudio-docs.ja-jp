@@ -20,15 +20,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5a0a8846719c6ad57e65e1e308e9884e81e1997d
-ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
-ms.translationtype: MT
+ms.openlocfilehash: e485223f73a74a97dd388a9c78dd4cf543a92350
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37174723"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53936192"
 ---
 # <a name="validate-data-in-datasets"></a>データセットのデータの検証
 データの検証は、データ オブジェクトに入力される値は、データセットのスキーマ内の制約に準拠することを確認するプロセスです。 また、検証プロセスは、これらの値が、アプリケーションに対して設定した規則に従っていることを確認します。 基になるデータベースの更新を送信する前にデータを検証することをお勧めします。 これには、エラーに加え、潜在的なアプリケーションとデータベース間のラウンド トリップ数が削減されます。
@@ -40,9 +39,9 @@ ms.locfileid: "37174723"
 ## <a name="validate-data"></a>データを検証します。
  データセット内での検証は、次の方法で実現されます。
 
--   変更時に個々 のデータ列の値をチェックできるアプリケーション固有の検証を作成します。 詳細については、次を参照してください。[方法: 列の変更時にデータを検証](validate-data-in-datasets.md)です。
+-   変更時に個々 のデータ列の値をチェックできるアプリケーション固有の検証を作成します。 詳細については、「[方法 :列の変更時にデータを検証](validate-data-in-datasets.md)です。
 
--   データ全体の中に値にデータをチェックできるアプリケーション固有の検証を作成して、行が変更されます。 詳細については、次を参照してください。[方法: 行の変更時にデータを検証](validate-data-in-datasets.md)です。
+-   データ全体の中に値にデータをチェックできるアプリケーション固有の検証を作成して、行が変更されます。 詳細については、「[方法 :行の変更時にデータを検証](validate-data-in-datasets.md)です。
 
 -   これに、データセットの実際のスキーマ定義の一部としてキー、一意の制約を作成します。
 
@@ -90,7 +89,7 @@ ms.locfileid: "37174723"
 
 -   列のエラーを設定して指定された値を拒否する (<xref:System.Data.DataRow.SetColumnError%2A>) から列を変更するイベント ハンドラー内にします。
 
--   オプションで <xref:System.Windows.Forms.ErrorProvider> コントロールを使用して、ユーザーにエラー メッセージを表示します。 詳細については、次を参照してください。 [ErrorProvider コンポーネント](/dotnet/framework/winforms/controls/errorprovider-component-windows-forms)します。
+-   オプションで <xref:System.Windows.Forms.ErrorProvider> コントロールを使用して、ユーザーにエラー メッセージを表示します。 詳細については、「[ErrorProvider コンポーネント](/dotnet/framework/winforms/controls/errorprovider-component-windows-forms)」を参照してください。
 
 中に検証を実行することも、<xref:System.Data.DataTable.RowChanging>イベント。
 
@@ -99,7 +98,7 @@ ms.locfileid: "37174723"
 
 ### <a name="to-validate-data-when-a-row-changes-visual-basic"></a>行の変更時にデータを検証するには (Visual Basic)
 
-1.  データセットを開き、**データセット デザイナー**します。 詳細については、次を参照してください。[チュートリアル: データセット デザイナーでデータセットを作成する](walkthrough-creating-a-dataset-with-the-dataset-designer.md)します。
+1.  **データセット デザイナー**でご自分のデータセットを開きます。 詳細については、「[チュートリアル:データセット デザイナーでデータセットを作成する](walkthrough-creating-a-dataset-with-the-dataset-designer.md)します。
 
 2.  検証するテーブルのタイトル バーをダブルクリックします。 この操作により、データセットの部分クラス ファイルに <xref:System.Data.DataTable.RowChanging> の <xref:System.Data.DataTable> イベント ハンドラーが自動的に作成されます。
 
@@ -110,12 +109,12 @@ ms.locfileid: "37174723"
 
 ### <a name="to-validate-data-when-a-row-changes-c"></a>行の変更時にデータ検証するには (C#)
 
-1.  データセットを開き、**データセット デザイナー**します。 詳細については、次を参照してください。[チュートリアル: データセット デザイナーでデータセットを作成する](walkthrough-creating-a-dataset-with-the-dataset-designer.md)します。
+1.  **データセット デザイナー**でご自分のデータセットを開きます。 詳細については、「[チュートリアル:データセット デザイナーでデータセットを作成する](walkthrough-creating-a-dataset-with-the-dataset-designer.md)します。
 
 2.  検証するテーブルのタイトル バーをダブルクリックします。 この操作により、<xref:System.Data.DataTable> の部分クラス ファイルが作成されます。
 
     > [!NOTE]
-    >  **データセット デザイナー**のイベント ハンドラーを自動的に作成されません、<xref:System.Data.DataTable.RowChanging>イベント。 処理するメソッドを作成する必要がある、<xref:System.Data.DataTable.RowChanging>テーブルの初期化メソッドでイベントにフックするには、イベント、およびコードを実行します。
+    >  **データセット デザイナー**では、<xref:System.Data.DataTable.RowChanging> イベントのイベント ハンドラーが自動作成されません。 処理するメソッドを作成する必要がある、<xref:System.Data.DataTable.RowChanging>テーブルの初期化メソッドでイベントにフックするには、イベント、およびコードを実行します。
 
 3.  部分クラスに次のコードをコピーします。
 
@@ -213,4 +212,4 @@ ms.locfileid: "37174723"
 
 - [Visual Studio のデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)
 - [方法: Windows フォーム DataGridView コントロールでデータを検証します。](/dotnet/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control)
-- [方法: Windows フォーム ErrorProvider コンポーネントを使用してフォーム検証のエラー アイコンを表示](/dotnet/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider)
+- [方法: Windows フォーム ErrorProvider コンポーネントを使用してフォーム検証のエラー アイコンを表示します。](/dotnet/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider)

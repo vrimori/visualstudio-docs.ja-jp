@@ -1,8 +1,6 @@
 ---
-title: '方法 : インストルメントされたバイナリを再配置する | Microsoft Docs'
-ms.custom: ''
+title: '方法: インストルメントされたバイナリを再配置する | Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.performance.property.binaries
@@ -16,14 +14,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a060506f818ac000611fc0c29988ed324ae89226
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: f8b50c5b76ea5b22bc9d734d32e433db1c7594d9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843654"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53893079"
 ---
-# <a name="how-to-relocate-instrumented-binaries"></a>方法: インストルメント化されたバイナリを再配置する
+# <a name="how-to-relocate-instrumented-binaries"></a>方法: インストルメント化されたバイナリの再配置
 
 インストルメンテーション中、プローブはバイナリに挿入され、アプリケーションのパフォーマンスを測定します。 インストルメントされたバイナリの再配置を選ぶと、元のバイナリのコピーがインストルメント化され、指定した場所に配置されます。 このオプションは、プロファイラーによって元のバイナリの名前を変更したくない場合に役立ちます。 バイナリが再配置されない場合は、バイナリの元のバージョンが上書きされます。
 

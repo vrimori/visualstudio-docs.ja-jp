@@ -2,19 +2,18 @@
 title: コード化された UI テストでの HTML5 コントロールの使用
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: a603a662c9007ab3ee0e66df0b23959bfdce83fb
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 9470027e84e33bb3acdd64756db86c951c845d3d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52896193"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53883027"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>コード化された UI テストでの HTML5 コントロールの使用
 
@@ -49,9 +48,9 @@ ms.locfileid: "52896193"
 
 アサーションを追加できるプロパティの一連については、「[HTMLAudioElement](https://developer.mozilla.org/docs/Web/API/HTMLAudioElement)」をご覧ください。
 
- **検索プロパティ:** `HtmlAudio` の検索プロパティは、`Id`、`Name`、`Title` です。
+ **検索プロパティ:**`HtmlAudio` の検索プロパティは、`Id`、`Name`、`Title` です。
 
- **フィルター プロパティ:** `HtmlAudio` のフィルター プロパティは、`Src`、`Class`、`ControlDefinition`、`TagInstance` です。
+ **フィルター プロパティ:**`HtmlAudio` のフィルター プロパティは、`Src`、`Class`、`ControlDefinition`、`TagInstance` です。
 
 > [!NOTE]
 > Seek および Pause の時間は大きな意味を持つことがあります。 再生中、コード化された UI テストは、オーディオを一時停止する前に、`(TimeSpan)` に指定された時間まで待機します。 特殊な状況において、Pause コマンドが実行される前に指定された時間が経過したとき、例外がスローされます。
@@ -73,9 +72,9 @@ ms.locfileid: "52896193"
 
 アサーションを追加できるプロパティの一連については、「[HTMLVideoElement](https://developer.mozilla.org/docs/Web/HTML/Element/video)」をご覧ください。
 
- **検索プロパティ:** `HtmlVideo` の検索プロパティは、`Id`、`Name`、`Title` です。
+ **検索プロパティ:**`HtmlVideo` の検索プロパティは、`Id`、`Name`、`Title` です。
 
- **フィルター プロパティ:** `HtmlVideo` のフィルター プロパティは、`Src`、`Poster`、`Class`、`ControlDefinition`、`TagInstance` です。
+ **フィルター プロパティ:**`HtmlVideo` のフィルター プロパティは、`Src`、`Poster`、`Class`、`ControlDefinition`、`TagInstance` です。
 
 > [!NOTE]
 > -30s または +30s のラベルを使用してビデオを巻き戻したり早送りしたりする場合、集計後の適切なタイミングにシークされます。

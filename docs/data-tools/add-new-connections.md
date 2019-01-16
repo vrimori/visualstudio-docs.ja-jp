@@ -1,22 +1,21 @@
 ---
-title: 新しい接続を追加します。
+title: 新しい接続を追加する
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 14df0183076125e487873bbb9865b2481e277a5b
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
-ms.translationtype: MT
+ms.openlocfilehash: 927edacf968ed92eddea96f93cc4f67cbd137fcc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34845016"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53880599"
 ---
-# <a name="add-new-connections"></a>新しい接続を追加します。
+# <a name="add-new-connections"></a>新しい接続を追加する
 
 データベース、サービスへの接続をテストして使用してデータベースの内容とスキーマを調べる、**サーバー エクスプ ローラー**、 **Cloud Explorer**、または**SQL Server オブジェクト エクスプ ローラー**. これらのウィンドウの機能は、ある程度重複しています。 基本的な違いは次のとおりです。
 
@@ -40,7 +39,7 @@ ms.locfileid: "34845016"
 
 すると、**接続の追加** ダイアログ ボックス。 ここでは、SQL Server LocalDB インスタンスの名前を入力しています。
 
-![新しい接続を追加します。](../data-tools/media/raddata-add-new-connection-dialog.png)
+![新しい接続を追加する](../data-tools/media/raddata-add-new-connection-dialog.png)
 
 ## <a name="change-the-provider"></a>プロバイダーを変更します。
 
@@ -48,7 +47,7 @@ ms.locfileid: "34845016"
 
 ![AD0.NET データ プロバイダーの変更](../data-tools/media/raddata-change-ad0.net-data-provider.png)
 
-## <a name="test-the-connection"></a>接続をテストします。
+## <a name="test-the-connection"></a>接続をテストする
 
 データ ソースを選択した後にをクリックして**Test-connection**します。 成功しなかった場合はトラブルシューティングが必要なベンダーのドキュメントに基づいて。
 

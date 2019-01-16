@@ -1,8 +1,6 @@
 ---
 title: Idiasectioncontrib::get_write |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c7884177bc35b007b9c1d5a0149f78f514af3e58
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 677e42799c4098d2ba1100dd27b234855c7e7fcd
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49887801"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53832740"
 ---
 # <a name="idiasectioncontribgetwrite"></a>IDiaSectionContrib::get_write
 セクションを変更できるかどうかを示すフラグを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49887801"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_write (   
+HRESULT get_write (   
    BOOL* pRetVal  
 );  
 ```  
@@ -37,7 +35,7 @@ HRESULT get_write (
  [out]返します`TRUE`場合は、セクション記述できます。 それ以外を返します。`FALSE`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

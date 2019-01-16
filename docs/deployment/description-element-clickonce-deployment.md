@@ -1,8 +1,6 @@
 ---
 title: '&lt;説明&gt;要素 (ClickOnce 配置) |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: reference
 f1_keywords:
 - urn:schemas-microsoft-com:asm.v2#description
@@ -18,22 +16,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b8985bc83299f55cec3c5f41fd3d76c8801fdf34
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
-ms.translationtype: MT
+ms.openlocfilehash: d0ad2399cf43b8e86bd45e9c33dd421eeb55416f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079811"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53828814"
 ---
-# <a name="ltdescriptiongt-element-clickonce-deployment"></a>&lt;description&gt;要素 (ClickOnce 配置)
-シェル プレゼンスの作成とコントロール パネルの**プログラム追加と削除**の項目に使用されるアプリケーション情報を識別します。  
+# <a name="ltdescriptiongt-element-clickonce-deployment"></a>&lt;説明&gt;要素 (ClickOnce 配置)
+シェル プレゼンスの作成に使用されるアプリケーション情報を識別、**プログラム追加と削除**コントロール パネルの項目。  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
   
-      <description   
-   publisher   
+      <description   
+   publisher   
    product  
    suiteName  
    supportUrl  
@@ -41,16 +39,16 @@ ms.locfileid: "39079811"
 ```  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
- `description` 要素は必須です。この要素は `urn:schemas-microsoft-com:asm.v1` 名前空間に属します。 これは、子要素を含まず、かつ、次の属性を持ちます。   
+ `description` 要素は必須です。この要素は `urn:schemas-microsoft-com:asm.v1` 名前空間に属します。 子要素が含まれていないと、次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`publisher`|必須。 Windows でアイコンの配置に使用する会社名を識別する**開始**メニューおよび**プログラム追加と削除**インストールの展開が構成されている場合、コントロール パネルの。|  
-|`product`|必須。 完全な製品名を識別します。 Windows にインストールされているアイコンのタイトルとして使用される**開始**メニュー。|  
+|`publisher`|必須です。 Windows でアイコンの配置に使用する会社名を識別する**開始**メニューおよび**プログラム追加と削除**インストールの展開が構成されている場合、コントロール パネルの。|  
+|`product`|必須です。 完全な製品名を識別します。 Windows にインストールされているアイコンのタイトルとして使用される**開始**メニュー。|  
 |`suiteName`|任意。 内のサブフォルダーを識別、`publisher`フォルダー、Windows で**開始**メニュー。|  
 |`supportUrl`|任意。 表示されるサポート URL を指定します、**プログラム追加と削除**コントロール パネルの項目。 この URL へのショートカットは、Windows でのアプリケーションのサポートの作成も**開始**] メニューの [インストールの展開が構成されている場合。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  Description 要素は、すべての展開構成に必要です。  
   
 ## <a name="example"></a>例  

@@ -9,20 +9,20 @@ description: 一部の Visual Studio サブスクリプションに含まれる 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: eef2adf189650da528c2f76df88ff8b648ad7ba4
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.openlocfilehash: d68c8847dc9ab6f4daeaceb07dbd4023ca2148f5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53802109"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53968392"
 ---
-# <a name="office-365-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Office 365
+# <a name="office-365-pro-plus-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Office 365 Pro Plus
 
-最高の作品を作りましょう。 常に最新のアプリでどこでも作業できます。 Office 365 は、Word、Excel、PowerPoint、OneNote、Outlook、Publisher、Access (Publisher と Access は PC 上でのみ使用できます) などの Premium アプリに付属するサブスクリプションです。 これらのアプリは、PC、Mac、iPad、iPhone、Android タブレット、Android フォンなどの複数のデバイスにインストールできます。 Office 365 には、1 TB の OneDrive ストレージ、60 分間/月の Skype、Microsoft のチャットと電話のサポートなどのサービスも付属しています。 サブスクリプションがある場合、最新バージョンのアプリを入手し、更新プログラムがリリースされたときに自動的に受け取ることができます。
+最高の作品を作りましょう。 常に最新のアプリでどこでも作業できます。 Office 365 Pro Plus は、Word、Excel、PowerPoint、OneNote、Outlook、Publisher、Access (Publisher と Access は PC 上でのみ使用できます) などの Premium アプリに付属するサブスクリプションです。 これらのアプリは、PC、Mac、iPad、iPhone、Android タブレット、Android フォンなどの複数のデバイスにインストールできます。 Office 365 には、1 TB の OneDrive ストレージ、60 分間/月の Skype、Microsoft のチャットと電話のサポートなどのサービスも付属しています。 サブスクリプションがある場合、最新バージョンのアプリを入手し、更新プログラムがリリースされたときに自動的に受け取ることができます。
 
-## <a name="getting-started-with-office-365"></a>Office 365 の概要
+## <a name="getting-started-with-office-365-pro-plus"></a>Office 365 Pro Plus の概要
 
-次の手順で Office 365 をダウンロードし、アクティブ化します。
+次の手順で Office 365 Pro Plus をダウンロードし、アクティブ化します。
 1. Visual Studio Enterprise サブスクリプションにサインインします。  
 2. **[ダウンロード]** タブをクリックします。
 3. おすすめダウンロード リストが表示されます。 Office リストから **[Office 365]** を選択します。 
@@ -55,7 +55,7 @@ Office 用アプリケーションを開発する予定がある場合は、[Off
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL、Azure、リテール| 使用可能       |  はい          |
+| Visual Studio Enterprise (Standard)   | VL、Azure、リテール| 使用可能       |  [はい]          |
 | Visual Studio Enterprise (Standard)   | NFR<sup>1</sup> | 使用できません       |  N/A          |
 | Visual Studio Professional (Standard) | VL、Azure、リテール                                       | 使用できません                                                            |  N/A          |
 | Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用できません                                             |  N/A          |

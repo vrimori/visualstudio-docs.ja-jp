@@ -3,7 +3,6 @@ title: '方法: IDE アクセシビリティ オプションを設定する'
 description: 視力が弱くて文字が読みづらい方や入力動作に制限がある方を含め、誰もが統合開発環境 (IDE) を簡単に使えるようにするアクセシビリティ オプションを Visual Studio で設定する方法について説明します。
 ms.date: 08/22/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - accessibility [Visual Studio]
@@ -13,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: df94a57358edd9619b43bbcddb26d4e3485a1ab1
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 3c8fa92644221149d3405eea25b1c85e229861e4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52388427"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53906775"
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>方法: IDE アクセシビリティ オプションを設定する
 
@@ -90,7 +89,7 @@ ms.locfileid: "52388427"
 
 4.  **[表示項目]** から、**[テキスト形式]**、**[インジケーター マージン]**、**[スペースの表示]**、**[HTML の属性名]**、**[XML 属性]** など変更対象の項目を選択します。
 
-5.  **[前景色]**、**[背景色]**、および **[太字]** の各オプションから表示設定を選択します。
+5.  表示設定を **[前景色]**、**[背景色]**、**[太字]** のオプションから選択します。
 
 6.  **[OK]** をクリックします。
 

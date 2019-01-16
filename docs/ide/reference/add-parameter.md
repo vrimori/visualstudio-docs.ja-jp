@@ -2,19 +2,18 @@
 title: メソッドにパラメーターを追加するクイック アクション
 ms.date: 09/28/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0337f9869764f544f5248d4da717af849457b8e8
-ms.sourcegitcommit: 6672a1e9d135d7e5cca3cceea07c6fe5a0871475
+ms.openlocfilehash: da435d5bf4e0b7239b984263838c275d3b5c9ab3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47443788"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53920220"
 ---
 # <a name="add-a-parameter-to-a-method-using-a-quick-action"></a>クイック アクションを使用してメソッドにパラメーターを追加する
 
@@ -24,9 +23,9 @@ ms.locfileid: "47443788"
 
 - Visual Basic
 
-**内容:** 使用量に基づいて、メソッドにパラメーターを自動的に追加することができます。
+**概要:** 使用量に基づいて、メソッドにパラメーターを自動的に追加することができます。
 
-**タイミング:** メソッドにパラメーターを追加し、それを自動的に正しく宣言する必要がある場合。
+**条件:** メソッドにパラメーターを追加し、それを自動的に正しく宣言する必要がある場合。
 
 **理由:** 呼び出す前にメソッドの宣言にパラメーターを追加することもできますが、この機能ではそれがメソッドの呼び出しに基づいて自動的に追加されます。
 

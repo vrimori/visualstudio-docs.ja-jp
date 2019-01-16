@@ -1,8 +1,6 @@
 ---
 title: '方法: 最適化されたコードのデバッグ |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug
@@ -23,17 +21,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c6e212129c17ec7b4fe6cb9a6808c91cb302deb3
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
-ms.translationtype: MTE95
+ms.openlocfilehash: 8407f360ee35b0210a5ca6411af8720b0191a080
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52387864"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53843477"
 ---
-# <a name="how-to-debug-optimized-code"></a>方法 : 最適化されたコードをデバッグする
+# <a name="how-to-debug-optimized-code"></a>方法: 最適化されたコードをデバッグする
 
 > [!NOTE]
-> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、[ツール] メニューの [設定のインポートとエクスポート] をクリックします。 詳細については、次を参照してください。[設定にリセット](../ide/environment-settings.md#reset-settings)します。
+> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、[ツール] メニューの [設定のインポートとエクスポート] をクリックします。 詳細については、「[リセット設定](../ide/environment-settings.md#reset-settings)」を参照してください。
 
 > [!NOTE]
 > Visual Studio 更新プログラム 3 で導入された [/Zo (最適化されたデバッグ機能の強化)](/cpp/build/reference/zo-enhance-optimized-debugging) コンパイラ オプションを使用すると、最適化されたコードについて豊富なデバッグ情報が生成されます (**/Od** コンパイラ オプションを使用しないでビルドされたプロジェクト)。 「[/O オプション (コードの最適化)](/cpp/build/reference/o-options-optimize-code)」を参照してください)。 これにはローカル変数とインライン関数のデバッグのサポートの強化が含まれます。

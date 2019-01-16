@@ -1,8 +1,6 @@
 ---
 title: '方法: ClickOnce アプリケーションの更新プログラムの管理 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Publish.ClickOnceProvider.Dialog.Update
@@ -21,14 +19,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bd9d8d7e88bc9ee8c8b041571ddaa258067c300
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
-ms.translationtype: MT
+ms.openlocfilehash: 95436528b42c4b32e15048b771a36daf32a22c1c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283653"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53945900"
 ---
-# <a name="how-to-manage-updates-for-a-clickonce-application"></a>方法: ClickOnce アプリケーションの更新プログラムの管理
+# <a name="how-to-manage-updates-for-a-clickonce-application"></a>方法: ClickOnce アプリケーションの更新プログラムを管理する
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションは、プログラムによってまたは自動的に更新プログラムを確認できます。 開発者は、多くの更新チェックを実行するタイミングと方法、更新プログラムが必須かどうか、および更新プログラム、アプリケーションがどこで確認する必要がありますを指定するときに柔軟性があります。  
   
  アプリケーションの起動後に自動的に開始する前に、アプリケーション、または一定間隔で更新プログラムをチェックするアプリケーションを構成することができます。 さらに、最低限の必要なバージョンを指定できます。つまり、ユーザーのバージョンが必要なバージョンより低い場合、更新プログラムがインストールします。  
@@ -37,15 +35,15 @@ ms.locfileid: "44283653"
   
  1 つの場所からアプリケーションの展開を別の更新することができますも。 さまざまな更新プログラムの場所を指定します"するには」を参照してください。  
   
- 詳細については、次を参照してください。 [ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)します。  
+ 詳細については、「[ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)」を参照してください。  
   
  管理する更新プログラムの動作、**アプリケーションの更新プログラム** ダイアログ ボックスから使用可能な**発行**のページ、**プロジェクト デザイナー。**  
   
 ### <a name="to-check-for-updates-before-the-application-starts"></a>アプリケーションを開始する前に更新プログラムを確認するには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1.  **ソリューション エクスプローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-2.  **発行**タブをクリックします。  
+2.  **[発行]** タブをクリックします。  
   
 3.  をクリックして、**更新**ボタンをクリックする、**アプリケーションの更新プログラム** ダイアログ ボックス。  
   
@@ -53,11 +51,11 @@ ms.locfileid: "44283653"
   
 5.  **アプリケーションの更新プログラムを確認する必要があります **セクションで、**アプリケーションを開始する前に**します。 これにより、常にネットワークに接続しているユーザーが最新の更新プログラムとアプリケーションを実行します。  
   
-### <a name="to-check-for-updates-in-the-background-after-the-application-starts"></a>アプリケーションの起動後に、バック グラウンドで更新をチェックするには  
+### <a name="to-check-for-updates-in-the-background-after-the-application-starts"></a>アプリケーションの起動後に、バック グラウンドで更新プログラムを確認するには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1.  **ソリューション エクスプローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-2.  **発行**タブをクリックします。  
+2.  **[発行]** タブをクリックします。  
   
 3.  をクリックして、**更新**ボタンをクリックする、**アプリケーションの更新プログラム** ダイアログ ボックス。  
   
@@ -69,9 +67,9 @@ ms.locfileid: "44283653"
   
 ### <a name="to-specify-a-minimum-required-version-for-the-application"></a>アプリケーションの必要な最小のバージョンを指定するには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1.  **ソリューション エクスプローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-2.  **発行**タブをクリックします。  
+2.  **[発行]** タブをクリックします。  
   
 3.  をクリックして、**更新**ボタンをクリックする、**アプリケーションの更新プログラム** ダイアログ ボックス。  
   
@@ -81,9 +79,9 @@ ms.locfileid: "44283653"
   
 ### <a name="to-specify-a-different-update-location"></a>さまざまな更新プログラムの場所を指定するには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1.  **ソリューション エクスプローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-2.  **発行**タブをクリックします。  
+2.  **[発行]** タブをクリックします。  
   
 3.  をクリックして、**更新**ボタンをクリックする、**アプリケーションの更新プログラム** ダイアログ ボックス。  
   
@@ -93,9 +91,9 @@ ms.locfileid: "44283653"
   
 ### <a name="to-check-for-updates-programmatically"></a>プログラムで更新プログラムを確認するには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1.  **ソリューション エクスプローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-2.  **発行**タブをクリックします。  
+2.  **[発行]** タブをクリックします。  
   
 3.  をクリックして、**更新**ボタンをクリックする、**アプリケーションの更新プログラム** ダイアログ ボックス。  
   
@@ -103,14 +101,14 @@ ms.locfileid: "44283653"
   
 5.  **の場所を更新**フィールドに、形式を使用して、完全修飾 URL で更新プログラムの場所を入力*http://Hostname/ApplicationName*、または UNC パス形式を使用して *\\\Server\ApplicationName*、 をクリックしてまたは、**参照**更新プログラムの場所を参照するボタンをクリックします。 更新プログラムの場所は、アプリケーションはそれ自体の更新バージョンを探します。  
   
-6.  ユーザーが更新をチェックする選択が Windows フォームにボタン、メニュー項目、またはその他のユーザー インターフェイス項目を作成します。 その項目のイベント ハンドラーからの確認し、更新プログラムをインストールするメソッドを呼び出します。 このようなメソッドの Visual Basic および Visual c# のコードの例を見つけることができます[方法: ClickOnce 配置 API を使用してプログラムでアプリケーションの更新プログラムの確認](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)します。  
+6.  ユーザーが更新をチェックする選択が Windows フォームにボタン、メニュー項目、またはその他のユーザー インターフェイス項目を作成します。 その項目のイベント ハンドラーからの確認し、更新プログラムをインストールするメソッドを呼び出します。 このようなメソッドでの Visual Basic および Visual c# のコードの例を検索できます[方法。ClickOnce 配置 API を使用してアプリケーションの更新プログラムをプログラムで確認する](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)  
   
 7.  アプリケーションをビルドします。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Deployment.Application.ApplicationDeployment>   
- [アプリケーションの更新 ダイアログ ボックス](/previous-versions/visualstudio/visual-studio-2010/axw1fa38(v=vs.100))   
- [ClickOnce の更新方法を選択します。](../deployment/choosing-a-clickonce-update-strategy.md)   
+ [[アプリケーションの更新] ダイアログ ボックス](/previous-versions/visualstudio/visual-studio-2010/axw1fa38(v=vs.100))   
+ [ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)   
  [学ぶことのできる ClickOnce を発行します。](../deployment/publishing-clickonce-applications.md)   
- [方法: 発行ウィザードを使用して ClickOnce アプリケーションの発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
- [方法: ClickOnce 配置 API を使用してプログラムでアプリケーションの更新プログラムの確認](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)
+ [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
+ [方法: ClickOnce 配置 API を使用してアプリケーションの更新プログラムをプログラムで確認する](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)

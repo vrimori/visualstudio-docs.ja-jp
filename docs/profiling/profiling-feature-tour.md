@@ -3,7 +3,6 @@ title: プロファイリング ツールを使用してパフォーマンスを
 description: Visual Studio で利用可能な各種診断ツールについて簡単に説明します。
 ms.custom: mvc
 ms.date: 05/18/2017
-ms.technology: vs-ide-debug
 ms.topic: quickstart
 helpviewer_keywords:
 - diagnostic tools
@@ -13,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f884b92d03027782eed27f4583e06b1141341db
-ms.sourcegitcommit: e680e8ac675f003ebcc8f8c86e27f54ff38da662
+ms.openlocfilehash: 9cfa2bcb98e686c04af359900a3c925686659df5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356796"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53880313"
 ---
 # <a name="quickstart-first-look-at-profiling-tools"></a>クイック スタート: プロファイリング ツールの概要
 
@@ -168,4 +167,4 @@ CPU 使用量ツールやメモリ使用量ツールに現在入っていない�
 |[JavaScript メモリ](../profiling/javascript-memory.md)|Ｘ|HTML の場合は可、XAML の場合は不可|Ｘ|
 
 ## <a name="see-also"></a>関連項目  
- [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)
+ [Visual Studio でのデバッグ](/visualstudio/debugger/debugger-feature-tour)

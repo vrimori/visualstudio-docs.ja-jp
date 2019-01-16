@@ -3,7 +3,6 @@ title: R Tools のオプション
 description: Visual Studio での R 言語および関連する機能のオプションに関するリファレンスです。
 ms.date: 12/04/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-rtvs
 ms.topic: reference
 f1_keywords:
 - vs.toolsoptionspages.text_editor.r.advanced
@@ -15,12 +14,12 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: a40ed2fd72862bde3494edd0c74aebcca6b55711
-ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
+ms.openlocfilehash: 2d48f59be1bb8e41e5cb587a6c5defcfb6e3227f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37342752"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53900562"
 ---
 # <a name="r-tools-for-visual-studio-options"></a>R Tools for Visual Studio オプション
 
@@ -30,9 +29,9 @@ ms.locfileid: "37342752"
 
 R に固有のオプションと設定には、次の方法を使用してアクセスします。 以下のセクションがすべて表示されるようにするには、**[オプション]** ダイアログ ボックスの下部にある **[すべての設定を表示]** ボックスを選択する必要があります。
 
-- コードの書式オプション (「[エディター オプション](editing-r-code-in-visual-studio.md#editor-options)」を参照): **[ツール]** > **[オプション]** メニューの順に移動し、**[テキスト エディター]** > **[R]** > **[書式設定]** の順に選択します。
-- リンター オプション (「[Lint](linting-r-code.md)」を参照): **[ツール]** > **[オプション]** メニューの順に移動し、**[テキスト エディター]** > **[R]** > **[Lint]** の順に選択します。
-- 詳細エディター オプション ([こちらの記事の説明を参照](#text-editor--r--advanced-options)): **[ツール]** > **[オプション]** メニューの順に移動し、**[テキスト エディター]** > **[R]** > **[詳細設定]** の順に選びます。
+- コードの書式オプション (「[エディター オプション](editing-r-code-in-visual-studio.md#editor-options)」を参照):**[ツール]** > **[オプション]** メニューの順に移動し、**[テキスト エディター]** > **[R]** > **[書式設定]** の順に選択します。
+- リンター オプション (「[Lint](linting-r-code.md)」を参照):**[ツール]** > **[オプション]** メニューの順に移動し、**[テキスト エディター]** > **[R]** > **[Lint]** の順に選択します。
+- 詳細エディター オプション ([こちらの記事の説明を参照](#text-editor--r--advanced-options)):**[ツール]** > **[オプション]** メニューの順に移動し、**[テキスト エディター]** > **[R]** > **[詳細設定]** の順に選びます。
 - 動作オプション ([こちらの記事の説明を参照](#r-tools--advanced-options)):**[R Tools]** > **[オプション]** の順に移動するか、**[ツール]** > **[オプション]** の順に移動し、**[R Tools]** までスクロールします。
 
 **[R Tools]** > **[データ サイエンスの設定]** コマンドは、Visual Studio 全体のさまざまな設定にも影響します。 このオプションについては、次のセクションで説明します。

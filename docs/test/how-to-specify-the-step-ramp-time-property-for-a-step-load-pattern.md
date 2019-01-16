@@ -9,17 +9,16 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
-ms.openlocfilehash: 81373e30498ad02f4007e096cfbc6a7cff953402
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 4338ba11116ce8077cff8e15a6bb8093214917d8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895720"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53925759"
 ---
-# <a name="how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern"></a>方法: ステップ ロード パターンの "ステップごとの傾斜増加時間" プロパティを指定する
+# <a name="how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern"></a>方法: ステップ ロード パターンのステップごとの傾斜増加時間プロパティを指定する
 
-**新しいロード テスト** ウィザードでロード テストを作成した後で、**ロード テスト エディター**を使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。 詳細については、「[チュートリアル: ロード テストの作成および実行](../test/walkthrough-create-and-run-a-load-test.md)」を参照してください。
+**新しいロード テスト** ウィザードでロード テストを作成した後で、**ロード テスト エディター**を使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。 詳細については、[ロード テストの作成および実行](../test/walkthrough-create-and-run-a-load-test.md)」を参照してください。
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -32,15 +31,15 @@ ms.locfileid: "52895720"
 
 ステップ ロード パターンは、ロード テストを実行するときにサーバーの負荷を増加するために使用します。これにより、ユーザー ロードが増加するにつれてパフォーマンスがどのように変化するかが確認できます。 たとえば、ユーザー ロードが 2,000 人に増加したときにサーバーがどのように動作するかを確認するには、次のプロパティでステップ ロード パターンを使用して 10 時間のロード テストを実行します。
 
--   初期のユーザー カウント: 100
+-   初期のユーザー カウント:100
 
--   最大ユーザー カウント: 2000
+-   最大ユーザー カウント:2000
 
--   ステップ実行間隔 (秒): 1800
+-   ステップ実行間隔 (秒):1800
 
--   ステップごとの傾斜増加時間 (秒): 20
+-   ステップごとの傾斜増加時間 (秒):20
 
--   ステップごとのユーザー カウント: 100
+-   ステップごとのユーザー カウント:100
 
 これらの設定では、100 人、200 人、300 人をはじめ、2,000 人までのユーザー ロードで、30 分 (1,800 秒) のロード テストを実行します。
 

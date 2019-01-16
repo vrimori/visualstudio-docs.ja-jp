@@ -7,23 +7,22 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c342b738269acbb4b2b089fc8e33a0fe9dc770dd
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
-ms.translationtype: MT
+ms.openlocfilehash: 4236085ffa0cacade86acfd4ca68caf38e54f165
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36758284"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53885595"
 ---
-# <a name="could-not-retrieve-schema-information-for-database-object-object-name"></a>データベース オブジェクトのスキーマ情報を取得できませんでした\<オブジェクト名 >
+# <a name="could-not-retrieve-schema-information-for-database-object-object-name"></a>データベース オブジェクト \<オブジェクト名> のスキーマ情報を取得できませんでした
 
-このメッセージが表示されるは通常のオブジェクトと**サーバー エクスプ ローラー**または**データベース エクスプ ローラー**がクリップボードにコピー、データベースから削除し、デザイナーに貼り付けたおよびします。 データベース オブジェクトはもう存在しないので、このメッセージが表示されます。
+このメッセージは、通常、**サーバー エクスプローラー**または**データベース エクスプローラー**でオブジェクトをクリップボードにコピーし、そのオブジェクトをデータベースから削除した後、デザイナーに貼り付けた場合に表示されます。 データベース オブジェクトはもう存在しないので、このメッセージが表示されます。
 
 このエラーを修正するには、選択**OK**ダイアログ ボックスを閉じます。
 
 ## <a name="see-also"></a>関連項目
 
 - [O/R デザイナーのメッセージ](../data-tools/o-r-designer-messages.md)
-- [Visual Studio での LINQ to SQL ツールします。](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Visual Studio の LINQ to SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

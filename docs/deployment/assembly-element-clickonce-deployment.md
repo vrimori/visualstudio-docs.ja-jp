@@ -1,8 +1,6 @@
 ---
-title: '&lt;assembly&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
-ms.custom: ''
+title: '&lt;アセンブリ&gt;要素 (ClickOnce 配置) |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: reference
 f1_keywords:
 - urn:schemas-microsoft-com:asm.v2#assembly
@@ -18,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c9d72eafb03f22a01d22894bb887085648c324e3
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
-ms.translationtype: MT
+ms.openlocfilehash: 10e9119f54eeb428e94b9e9055b9845fbc7cb9a2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39080634"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53899825"
 ---
 # <a name="ltassemblygt-element-clickonce-deployment"></a>&lt;アセンブリ&gt;要素 (ClickOnce 配置)
 配置マニフェストの最上位要素。  
@@ -32,7 +30,7 @@ ms.locfileid: "39080634"
   
 ```xml  
   
-      <assembly    
+      <assembly    
    manifestVersion  
 />  
 ```  
@@ -40,11 +38,11 @@ ms.locfileid: "39080634"
 ## <a name="elements-and-attributes"></a>要素と属性  
  `assembly`要素はルート要素でありが必要です。 その最初の構成要素である必要があります、`assemblyIdentity`要素。 マニフェストの要素は次の名前空間内に存在する必要があります: `urn:schemas-microsoft-com:asm.v1`、 `urn:schemas-microsoft-com:asm.v2`、および`http://www.w3.org/2000/09/xmldsig#`します。 アセンブリの子要素は、これらの名前空間を継承またはタグ付けによってもあります。  
   
- `assembly`要素には、次の属性。  
+ `assembly` 要素には、次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`manifestVersion`|必須。 この属性に設定する必要があります`1.0`します。|  
+|`manifestVersion`|必須です。 この属性に設定する必要があります`1.0`します。|  
   
 ## <a name="example"></a>例  
  次のコード例を示しています、`assembly`要素を使用してデプロイされたアプリケーションの配置マニフェストで[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]します。 このコード例が示されている例の一部、 [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)トピック。  

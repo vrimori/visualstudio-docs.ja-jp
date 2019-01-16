@@ -1,8 +1,6 @@
 ---
-title: '方法: OnStart メソッドのデバッグ |Microsoft ドキュメント'
-ms.custom: ''
+title: '方法: OnStart メソッドをデバッグ |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -21,15 +19,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d438a8d6dcd80ec8d9dcce2fb4943e8b5614442c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 53106b0d933c25d69ecd0b455b89f68c09b9a169
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31481854"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53822948"
 ---
-# <a name="how-to-debug-the-onstart-method"></a>方法 : OnStart メソッドをデバッグする
-Windows サービスをデバッグするには、サービスを起動し、デバッガーをサービス プロセスにアタッチします。 詳細については、「 [How to: Debug Windows Service Applications](/dotnet/framework/windows-services/how-to-debug-windows-service-applications)」を参照してください。 ただし、Windows サービスの <xref:System.ServiceProcess.ServiceBase.OnStart%2A?displayProperty=fullName> メソッドをデバッグするには、メソッド内部からデバッガーを起動する必要があります。  
+# <a name="how-to-debug-the-onstart-method"></a>方法: OnStart メソッドをデバッグする
+Windows サービスをデバッグするには、サービスを起動し、デバッガーをサービス プロセスにアタッチします。 詳細については、「[方法 :Windows サービス アプリケーションをデバッグ](/dotnet/framework/windows-services/how-to-debug-windows-service-applications)します。 ただし、Windows サービスの <xref:System.ServiceProcess.ServiceBase.OnStart%2A?displayProperty=fullName> メソッドをデバッグするには、メソッド内部からデバッガーを起動する必要があります。  
   
 1.  <xref:System.Diagnostics.Debugger.Launch%2A> メソッドの始めに、呼び出しを `OnStart()`に追加します。  
   
@@ -46,7 +44,7 @@ Windows サービスをデバッグするには、サービスを起動し、デ
   
      ![OnStartDebug](../debugger/media/onstartdebug.png "OnStartDebug")  
   
-3.  選択**はい、デバッグ\<サービス名 >。**  
+3.   **[はい、** service name> をデバッグします]\< を選びます。  
   
 4.  [Just-In-Time デバッガー] ウィンドウで、デバッグに使う Visual Studio のバージョンを選びます。  
   
@@ -54,6 +52,6 @@ Windows サービスをデバッグするには、サービスを起動し、デ
   
 5.  Visual Studio の新しいインスタンスが開始し、 `Debugger.Launch()` メソッドで実行が停止します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
- [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)
+ [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)

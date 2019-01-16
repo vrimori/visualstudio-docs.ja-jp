@@ -1,8 +1,6 @@
 ---
 title: メモリの割り当ておよびオブジェクトの有効期間のデータ値について | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - .NET memory profiling method
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 27922f227c6791ad4b64b3258f9107d28b21a964
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 518be5d4126dbfa2713fada4df8451292166dcbf
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34476731"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53858952"
 ---
 # <a name="understand-memory-allocation-and-object-lifetime-data-values"></a>メモリの割り当てとオブジェクトの有効期間のデータ値について
 
@@ -37,6 +35,6 @@ ms.locfileid: "34476731"
 
 ## <a name="lifetime-data"></a>有効期間データ
 
-.NET Framework のガベージ コレクターは、アプリケーションのメモリの割り当ておよび解放を管理します。 ガベージ コレクターのパフォーマンスを最適化するために、マネージ ヒープは 0、1、および 2 の 3 つのジェネレーションに分割されます。 ランタイムのガベージ コレクターは、新しいオブジェクトをジェネレーション 0 に格納します。 ガベージ コレクションでごみではないと判断されたオブジェクトは昇格してジェネレーション 1 とジェネレーション 2 に格納されます。
+.NET Framework のガベージ コレクターは、アプリケーションのメモリの割り当ておよび解放を管理します。 ガベージ コレクターのパフォーマンスを最適化するために、マネージド ヒープは 0、1、2 の 3 つのジェネレーションに分割されます。 ランタイムのガベージ コレクターは、新しいオブジェクトをジェネレーション 0 に格納します。 ガベージ コレクションでごみではないと判断されたオブジェクトは昇格してジェネレーション 1 とジェネレーション 2 に格納されます。
 
 ガベージ コレクターは、オブジェクトのジェネレーション全体の割り当てを解除して、メモリを解放します。 プロファイル対象アプリケーションで作成されたオブジェクトの場合、オブジェクトの有効期間ビューにはオブジェクトの数とサイズ、および解放時のジェネレーションが表示されます。

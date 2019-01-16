@@ -1,8 +1,6 @@
 ---
 title: Idiasectioncontrib::get_compiland |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dd73e97f039202223c7233383c1da586f4548be2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 8053945e0d759184c3eec0d26043eb8cdde6cfd0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49824361"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53906957"
 ---
 # <a name="idiasectioncontribgetcompiland"></a>IDiaSectionContrib::get_compiland
 このセクションの原因であるコンパイル単位シンボルへの参照を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49824361"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_compiland (   
+HRESULT get_compiland (   
    IDiaSymbol** pRetVal  
 );  
 ```  
@@ -37,8 +35,8 @@ HRESULT get_compiland (
  [out]返します、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)このセクションの原因であるコンパイル単位を表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

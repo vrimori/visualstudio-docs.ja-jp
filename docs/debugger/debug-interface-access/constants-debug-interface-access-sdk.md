@@ -1,8 +1,6 @@
 ---
 title: 定数 (Debug Interface Access SDK) |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dd6908a8a0b49f5078e4c0d448ba2dedbe8f720a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: bdc54e15014e05f539c115675a97690e685cb5f1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49872045"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53852063"
 ---
 # <a name="constants-debug-interface-access-sdk"></a>定数 (Debug Interface Access SDK)
 これらの文字列定数、DIA SDK を通じてプログラム デバッグ データベース (PDB) ファイルのさまざまなセクションを識別するために使用できます。  
@@ -54,11 +52,11 @@ HRESULT GetSymbolTable(IDiaEnumTables *pEnumTables, IDiaTable **pTable)
 }  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: dia2.h  
   
-## <a name="see-also"></a>関連項目  
- [参照](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)   
- [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+## <a name="see-also"></a>「  
+ [リファレンス](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)   
+ [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumTables::Item](../../debugger/debug-interface-access/idiaenumtables-item.md)

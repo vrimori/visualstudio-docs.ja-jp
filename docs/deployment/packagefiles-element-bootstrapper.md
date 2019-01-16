@@ -1,8 +1,6 @@
 ---
 title: '&lt;PackageFiles&gt;要素 (ブートス トラップ) |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - FSharp
@@ -17,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 84451a90e316a98a9998e1a64e68a72668bd4781
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: fd2436f7aa3fe24e90f380cf523b3affa6579e2b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813766"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53990348"
 ---
 # <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles&gt;要素 (ブートス トラップ)
 `PackageFiles`要素が含まれます`PackageFile`の結果として実行されるインストール パッケージを定義するには、要素、`Command`要素。  
@@ -48,7 +46,7 @@ ms.locfileid: "49813766"
 
 |属性|説明|  
 |---------------|-----------------|  
-|`CopyAllPackageFiles`|任意。 場合設定`false`、インストーラーから参照されるファイルをダウンロードのみが、`Command`要素。 場合設定`true`、すべてのファイルがダウンロードされます。<br /><br /> 場合に設定`IfNotHomesite`、インストーラーには、同じ動作がまるで`False`場合`ComponentsLocation`に設定されている`HomeSite`、し、それ以外の場合は動作が同じ場合と`True`。 この設定をそれ自体がパッケージに HomeSite シナリオでは、独自の動作を実行するブートス トラップを許可することができます。<br /><br /> 既定値は `true` です。|  
+|`CopyAllPackageFiles`|任意。 場合設定`false`、インストーラーから参照されるファイルをダウンロードのみが、`Command`要素。 場合設定`true`、すべてのファイルがダウンロードされます。<br /><br /> 場合に設定`IfNotHomesite`、インストーラーには、同じ動作がまるで`False`場合`ComponentsLocation`に設定されている`HomeSite`、し、それ以外の場合は動作が同じ場合と`True`。 この設定をそれ自体がパッケージに HomeSite シナリオでは、独自の動作を実行するブートス トラップを許可することができます。<br /><br /> 既定値は、`true` です。|  
 
 ## <a name="packagefile"></a>PackageFile  
  `PackageFile`要素の子である、`PackageFiles`要素。 A`PackageFiles`要素が少なくとも 1 つあります`PackageFile`要素。  
@@ -58,7 +56,7 @@ ms.locfileid: "49813766"
 
 | 属性 | 説明 |
 |---------------| - |
-| `Name` | 必須。 パッケージ ファイルの名前。 これは、名前を`Command`パッケージをインストールするための条件を定義する場合に、要素を参照します。 この値はへのキーとしても使用、`Strings`などのツールをローカライズされた名前を取得するテーブル[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]が使用して、パッケージを記述します。 |
+| `Name` | 必須です。 パッケージ ファイルの名前。 これは、名前を`Command`パッケージをインストールするための条件を定義する場合に、要素を参照します。 この値はへのキーとしても使用、`Strings`などのツールをローカライズされた名前を取得するテーブル[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]が使用して、パッケージを記述します。 |
 | `HomeSite` | 任意。 インストーラーに含まれてない場合は、リモート サーバー上のパッケージの場所。 |
 | `CopyOnBuild` | 任意。 ブートス トラップがビルド時に、ディスク上にパッケージ ファイルをコピーする必要があるかどうかを指定します。 既定値は true です。 |
 | `PublicKey` | パッケージの証明書の署名者の公開暗号化キー。 場合に、必ず`HomeSite`は使用しない場合は省略可能です。 |

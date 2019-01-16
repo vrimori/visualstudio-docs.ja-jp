@@ -1,8 +1,6 @@
 ---
 title: CvWriteAlert 関数 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - cvmarkers/CvWriteAlertVA
@@ -20,15 +18,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d9def71b21fc68b7347ce9fb0596fd73bd44393
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 743cec7c632bbfca7faf3659ffba5b337553ecee
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34749321"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53921992"
 ---
 # <a name="cvwritealert-function"></a>CvWriteAlert 関数
-同時実行ビジュアライザーのトレース ファイルにアラートを書き込みます。  
+コンカレンシー ビジュアライザーのトレース ファイルにアラートを書き込みます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -69,7 +67,7 @@ HRESULT CvWriteAlertVA(
 ## <a name="return-value"></a>戻り値  
  メッセージが書き込まれると S_OK を返します。 エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** *cvmarkers.h*  
   
  **Unicode:** CvWriteAlertW、CvWriteAlertVW  

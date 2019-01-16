@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : データセット デザイナーでの DataTable の作成'
+title: 'チュートリアル: データセット デザイナーでの DataTable の作成'
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,21 +11,20 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 2cff383b6e06d8793a7730c36df01e2538b02c36
-ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
-ms.translationtype: MT
+ms.openlocfilehash: 505c27787b033a6ccee9f89a19962d5fc81b9912
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37174497"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53824835"
 ---
 # <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>チュートリアル: データセット デザイナーでの DataTable を作成します。
 
 このチュートリアルを作成する方法を説明する、 <xref:System.Data.DataTable> (せずに、TableAdapter) を使用して、**データセット デザイナー**。 Tableadapter を含むデータ テーブルを作成する方法の詳細については、次を参照してください。[作成し、Tableadapter 構成](../data-tools/create-and-configure-tableadapters.md)します。
 
-## <a name="create-a-new-windows-forms-application"></a>新しい Windows フォーム アプリケーションを作成します。
+## <a name="create-a-new-windows-forms-application"></a>新しい Windows フォーム アプリケーションを作成する
 
 1. Visual Studio での**ファイル**メニューの **新規** > **プロジェクト**します。
 
@@ -39,7 +38,7 @@ ms.locfileid: "37174497"
 
 ## <a name="add-a-new-dataset-to-the-application"></a>アプリケーションに新しいデータセットを追加します。
 
-1.  **プロジェクト**メニューの **新しい項目の追加**します。
+1.  **[プロジェクト]** メニューで **[新しい項目の追加]** を選択します。
 
      **[新しい項目の追加]** ダイアログ ボックスが表示されます。
 
@@ -59,11 +58,11 @@ ms.locfileid: "37174497"
 
 ## <a name="add-columns-to-the-datatable"></a>列を DataTable に追加します。
 
-1.  右クリックし、**音楽**テーブル。 をポイント**追加**、 をクリックし、**列**します。
+1.  右クリックし、**音楽**テーブル。 **[追加]** をポイントして、**[列]** をクリックします。
 
 2.  列の名前を付けます`SongID`します。
 
-3.  **プロパティ**ウィンドウで、設定、<xref:System.Data.DataColumn.DataType%2A>プロパティを<xref:System.Int16?displayProperty=fullName>します。
+3.  **[プロパティ]** ウィンドウで、 <xref:System.Data.DataColumn.DataType%2A> プロパティを <xref:System.Int16?displayProperty=fullName>に設定します。
 
 4.  このプロセスを繰り返して、次の列を追加します。
 
@@ -79,7 +78,7 @@ ms.locfileid: "37174497"
 
 主キーを設定するを右クリックし、 **SongID**列、およびクリック**主キーの設定**します。 鍵のアイコンが横に表示されます、 **SongID**列。
 
-## <a name="save-your-project"></a>プロジェクトを保存します。
+## <a name="save-your-project"></a>プロジェクトを保存する
 
 保存する、 **DataTableWalkthrough**プロジェクトで、**ファイル**メニューの **すべて保存**します。
 

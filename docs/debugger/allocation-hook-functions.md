@@ -1,8 +1,6 @@
 ---
 title: 割り当てフック関数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.hooks
@@ -24,18 +22,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d49bbff482683c4ac3e0f5f6a4060b176db0d94
-ms.sourcegitcommit: 97204b85caadbcf14baeb6738710e287a196673e
-ms.translationtype: MT
+ms.openlocfilehash: 7f90e6db9a86457d0a9a0c7c4f61edac5d997414
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "37433357"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53823922"
 ---
 # <a name="allocation-hook-functions"></a>割り当てフック関数
 使用してインストール、割り当てフック関数[_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook)メモリを割り当て、再割り当てまたは解放するたびに呼び出されます。 さまざまな目的は、この種のフック関数を使用できます。 テスト方法、アプリケーションが処理メモリ不足の状況など、割り当てパターンを調査するには使用または後で分析割り当て情報を記録します。  
   
 > [!NOTE]
->  説明されている、割り当てフック関数での C ランタイム ライブラリ関数の使用に関する制限に注意してください。[割り当てフック関数と C ランタイムのメモリ割り当て](../debugger/allocation-hooks-and-c-run-time-memory-allocations.md)します。  
+>  割り当てフック関数の中で C ランタイム ライブラリの関数を使用する場合は、「[割り当てフック関数と C ランタイムのメモリ割り当て](../debugger/allocation-hooks-and-c-run-time-memory-allocations.md)」で説明する制限事項があるので注意してください。  
   
  割り当てフック関数は、次の例のようなプロトタイプが必要です。  
   
@@ -45,15 +43,15 @@ int YourAllocHook(int nAllocType, void *pvData,
         const unsigned char * szFileName, int nLine )  
 ```  
   
- 渡すポインター [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook)の種類は **_CRT_ALLOC_HOOK**CRTDBG で定義されている、します。H:  
+ [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook) に渡すポインターは **_CRT_ALLOC_HOOK** 型です。これらは、CRTDBG.H で次のように定義されています。  
   
 ```cpp
 typedef int (__cdecl * _CRT_ALLOC_HOOK)  
     (int, void *, size_t, int, long, const unsigned char *, int);  
 ```  
   
- ランタイム ライブラリは、フック関数を呼び出すときに、 *nAllocType*引数は、どのような割り当てを示します操作ができるようにしようとしています (**_HOOK_ALLOC**、 **_HOOK_REALLOC**、または。**_HOOK_FREE**)。 無料または再割り当て、`pvData`が解放されるブロックのユーザーの記事へのポインター。 ただし、割り当ての this ポインターが null、割り当てが発生していないためです。 残りの引数には、割り当てのサイズには、問題のブロックの型、およびファイル名へのポインターに関連付けられているシーケンシャル要求番号が含まれています。 可能な場合、引数には割り当てが行われた行番号も含まれます。 フック関数がどのような分析を実行すると、他のタスクをいずれかを返す必要が**TRUE**、割り当て処理を継続できることを示すまたは**FALSE**を示しますが、操作が失敗する必要があります。 この種類の簡単なフック可能性がありますこれまでに割り当てられたメモリの容量を確認し、返す**FALSE**その量は、小規模の制限を超えた場合。 この関数を使用すると、メモリがかなり不足している場合だけに発生するメモリ割り当てエラーを意図的に発生させることができます。 さらに複雑なフック関数としては、割り当てパターンを追跡したり、メモリの使用状況を分析したり、特定の状態が発生したときにレポートを作成したりする関数が考えられます。  
+ ランタイム ライブラリは、フック関数を呼び出すときに、 *nAllocType*引数は、どのような割り当てを示します操作ができるようにしようとしています (**_HOOK_ALLOC**、 **_HOOK_REALLOC**、または。**_HOOK_FREE**)。 無料または再割り当て、`pvData`が解放されるブロックのユーザーの記事へのポインター。 ただし、割り当ての this ポインターが null、割り当てが発生していないためです。 残りの引数には、割り当てのサイズには、問題のブロックの型、およびファイル名へのポインターに関連付けられているシーケンシャル要求番号が含まれています。 可能な場合、引数には割り当てが行われた行番号も含まれます。 フック関数は、分析などの必要なタスクを実行した後で、割り当て処理を継続できる場合は **TRUE**、継続できない場合は **FALSE** を返すようにします。 この種のフック関数の簡単なものとしては、それまでに割り当てられたメモリの総量をチェックし、その量が少なめに設定した上限を超えている場合は **FALSE** を返す関数が考えられます。 この関数を使用すると、メモリがかなり不足している場合だけに発生するメモリ割り当てエラーを意図的に発生させることができます。 さらに複雑なフック関数としては、割り当てパターンを追跡したり、メモリの使用状況を分析したり、特定の状態が発生したときにレポートを作成したりする関数が考えられます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [割り当てフック関数と C ランタイムのメモリ割り当て](../debugger/allocation-hooks-and-c-run-time-memory-allocations.md)   
  [デバッグ用フック関数の作成](../debugger/debug-hook-function-writing.md)   

@@ -17,15 +17,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: fef30f836ab27cd7a67d85a04254be0018d5b33e
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: b626aa489323d26ef439ade216d1fa97a52a8d13
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52388739"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53825647"
 ---
 # <a name="handle-a-concurrency-exception"></a>コンカレンシー例外を処理する
 
@@ -132,13 +131,13 @@ ms.locfileid: "52388739"
 
 アプリケーションでは、レコードの 3 つのバージョンと、ユーザーが表示されます。
 
-- データベース内の現在のレコード。
+- データベース内の現在のレコード
 
 - データセットに読み込まれた元のレコード
 
-- データセット内の提案された変更。
+- データセット内の提案された変更
 
-ユーザーは、提案されたバージョンでデータベースを上書きするか、更新をキャンセルし、データベースから新しい値をデータセットに再読み込みできます。
+ユーザーは、提案されたバージョンでデータベースを上書きするか、更新をキャンセルし、データベースから新しい値をデータセットに再読み込むことができます。
 
 ### <a name="to-enable-the-handling-of-concurrency-errors"></a>コンカレンシー エラーを処理できるようにするには
 
@@ -171,7 +170,7 @@ ms.locfileid: "52388739"
 
 上のコードにより `CreateMessage` プロシージャが呼び出され、ユーザーにエラー情報が表示されます。 このチュートリアルでは、ユーザーに異なるバージョンのレコードを表示するのにメッセージ ボックスを使用します。 これにより、ユーザーが変更で、レコードを上書きしたり、編集をキャンセルするかどうかを選択できます。 ユーザーがメッセージ ボックスのオプションを選択する (ボタンをクリックする) と、`ProcessDialogResult` メソッドに応答が渡されます。
 
-コード エディター**に次のコードを追加して、メッセージを作成します。 このコードは、`UpdateDatabase` メソッドの下に入力します。
+**コード エディター**に次のコードを追加して、メッセージを作成します。 このコードは、`UpdateDatabase` メソッドの下に入力します。
 
 [!code-csharp[VbRaddataConcurrency#4](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_3.cs)]
 [!code-vb[VbRaddataConcurrency#4](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_3.vb)]
@@ -195,7 +194,7 @@ ms.locfileid: "52388739"
 
 3. **ビュー** ] メニューの [選択**サーバー エクスプ ローラー**します。
 
-4. サーバー エクスプローラー**で、アプリケーションで使用する接続を展開し、[テーブル]** ノードを展開します。
+4. **サーバー エクスプローラー**で、アプリケーションで使用する接続を展開し、次に **[テーブル]** ノードを展開します。
 
 5. 右クリックし、**顧客**テーブルし、**テーブル データの表示**します。
 

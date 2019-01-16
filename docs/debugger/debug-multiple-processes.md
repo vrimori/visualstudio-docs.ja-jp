@@ -1,8 +1,6 @@
 ---
 title: 複数のプロセスのデバッグ |Microsoft Docs
-ms.custom: ''
 ms.date: 11/20/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.programs
@@ -21,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b306bcca4ac8cc0568fc609ec25c8b335d18010
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
-ms.translationtype: MTE95
+ms.openlocfilehash: e5fbd6c503ef526b1b82736c22e36534bb09a8c7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52305651"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53968580"
 ---
 # <a name="debug-multiple-processes"></a>複数プロセスをデバッグする
 
@@ -50,7 +48,7 @@ Visual Studio ソリューションでは、複数のプロジェクトは個別
    
 1. 選択**現在の選択範囲**、**シングル スタートアップ プロジェクト**とプロジェクト ファイル、または**マルチ スタートアップ プロジェクト**します。 
 
-   選択した場合**マルチ スタートアップ プロジェクト**、プロジェクトごとに実行するには、起動順序とアクションを変更することができます:**開始**、**デバッグなしで開始**、または**None**します。  
+   選択した場合**マルチ スタートアップ プロジェクト**、プロジェクトごとに実行するには、起動順序とアクションを変更することができます。**開始**、**デバッグなしで開始**、または**None**します。  
    
 1. 選択**適用**、または**OK**を適用し、ダイアログ ボックスを閉じます。 
 
@@ -122,7 +120,7 @@ Visual Studio ソリューションでは、複数のプロジェクトは個別
 ###  <a name="BKMK_Find_the_source_and_symbol___pdb__files"></a> ソースとシンボル (.pdb) ファイルを検索する  
 プロセスのソース コードを移動するには、デバッガーはそのソース ファイルとシンボル ファイルへのアクセスが必要です。 詳細については、[シンボル (.pdb) ファイルとソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)の指定に関する記事をご覧ください。  
   
-使用して移動することができます、プロセスのファイルにアクセスできない場合、**逆アセンブル**ウィンドウ。 詳細については、次を参照してください。[方法: [逆アセンブル] ウィンドウを使用して](../debugger/how-to-use-the-disassembly-window.md)します。  
+使用して移動することができます、プロセスのファイルにアクセスできない場合、**逆アセンブル**ウィンドウ。 詳細については、「[方法 :[逆アセンブル] ウィンドウを使用する](../debugger/how-to-use-the-disassembly-window.md)」を参照してください。  
 
 ###  <a name="BKMK_Switch_between_processes"></a> プロセスの切り替え  
 

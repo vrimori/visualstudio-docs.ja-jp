@@ -1,8 +1,6 @@
 ---
 title: GenerateBootstrapper タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#GenerateBootstrapper
@@ -20,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 53ad85f77d014d534d625b8d08e36b7eb8c01f7f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 65e8980df4d98e4d7c76df43f32d7ca0a224e699
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49895731"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53891843"
 ---
 # <a name="generatebootstrapper-task"></a>GenerateBootstrapper タスク
 アプリケーションとその前提条件を検出、ダウンロード、インストールする自動化方法を提供します。 これは、アプリケーションを構成するすべてのコンポーネントの別々のインストーラーを統合する単一のインストーラーとして機能します。  
@@ -94,11 +92,11 @@ ms.locfileid: "49895731"
   
    インストールするインストール前提条件をブートストラップが探す場所を指定します。 このパラメーターには、次の値を指定できます。  
   
-  - `HomeSite`: 前提条件がコンポーネント ベンダーによってホストされていることを示します。  
+  - `HomeSite`:前提条件がコンポーネント ベンダーによってホストされていることを示します。  
   
-  - `Relative`: 前提条件がアプリケーションと同じ場所にあることを示します。  
+  - `Relative`:前提条件がアプリケーションと同じ場所にあることを示します。  
   
-  - `Absolute`: 一元化された URL にすべてのコンポーネントがあることを示します。 この値は `ComponentsUrl` 入力パラメーターと共に使用する必要があります。  
+  - `Absolute`:一元化された URL にすべてのコンポーネントがあることを示します。 この値は `ComponentsUrl` 入力パラメーターと共に使用する必要があります。  
   
     `ComponentsLocation` が指定されていない場合は、`HomeSite` が既定で使用されます。  
   

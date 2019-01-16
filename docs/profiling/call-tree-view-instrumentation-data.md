@@ -1,8 +1,6 @@
 ---
 title: コール ツリー ビュー - インストルメンテーション データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Call Tree view
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b42cce6c9134a668d5096150d986e950ed8a8e7
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 34ae8f845e53fdd80be055c8d0e592d6d01d75e3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34262232"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53898100"
 ---
 # <a name="call-tree-view---instrumentation-data"></a>コール ツリー ビュー - インストルメンテーション データ
 コール ツリーの関数の値は、コール ツリーの親関数によって呼び出された関数インスタンスの時間を示します。 割合の値を計算するには、関数インスタンスの値と、プロファイル実行のすべての関数の包括経過時間の総計を比較します。  

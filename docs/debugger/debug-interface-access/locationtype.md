@@ -1,8 +1,6 @@
 ---
 title: LocationType |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e816ac9dca3c70e88ae023b4fda4edf0b99f9c96
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: bb8765f6671914d145600be925cacadc87d51387
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49872097"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53859803"
 ---
 # <a name="locationtype"></a>LocationType
 シンボルの場所の情報の種類を示します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49872097"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-enum LocationType {   
+enum LocationType {   
    LocIsNull,  
    LocIsStatic,  
    LocIsTLS,  
@@ -80,16 +78,16 @@ enum LocationType {
  `LocTypeMax`  
  この列挙体の場所の種類の数。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  使用できるプロパティ、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)インターフェイスは、イメージ ファイル内のシンボルの場所によって異なります。 詳細については、次を参照してください。[シンボルの場所](../../debugger/debug-interface-access/symbol-locations.md)します。  
   
  この列挙体の値が呼び出しによって返される、 [idiasymbol::get_locationtype](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md)メソッド。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: cvconst.h  
   
-## <a name="see-also"></a>関連項目  
- [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+## <a name="see-also"></a>「  
+ [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [Idiasymbol::get_locationtype](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md)   
+ [IDiaSymbol::get_locationType](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md)   
  [シンボルの場所](../../debugger/debug-interface-access/symbol-locations.md)

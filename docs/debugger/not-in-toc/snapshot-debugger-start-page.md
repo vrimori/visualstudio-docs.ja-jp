@@ -2,19 +2,18 @@
 title: スナップショット デバッガーの開始ページ
 ms.date: 07/14/2018
 robots: noindex, nofollow
-ms.technology: vs-ide-debug
 ms.topic: reference
 author: mikejo5000
 ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c7b5b48aeeb0cfcaeed72a06bfb6709892c58de7
-ms.sourcegitcommit: e2373d40ca9829cee63519152a97172763471e21
-ms.translationtype: MT
+ms.openlocfilehash: c9c2e5ec77a2abf07ca396166d4cc2ae9792cacc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "39310114"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53853737"
 ---
 # <a name="getting-started-with-the-snapshot-debugger"></a>スナップショット デバッガーの概要
 
@@ -68,7 +67,7 @@ Web サイト自体はまだ存在していると、エンドユーザーに影�
 
 スナップショット デバッガーの詳細についてのについて、 [docs ページ](../debug-live-azure-applications.md)します。 バグを発見しやすく条件を設定する方法について詳しく説明します。
 
-## <a name="dont-show-me-this-again"></a>しない ' このメッセージを表示
+## <a name="dont-show-me-this-again"></a>今後このメッセージを表示しない
 
 決してスナップショット デバッガーの開始 ページを再び表示するスナップショット デバッガーを接続する場合、変更、**セッションの開始時に"Getting Started"のページを表示**オプション**ツール** >  **オプション** > **スナップショット デバッガー**します。 
 

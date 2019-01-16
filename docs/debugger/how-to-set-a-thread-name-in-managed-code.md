@@ -1,8 +1,6 @@
 ---
-title: '方法: マネージ コードのスレッド名を設定 |Microsoft ドキュメント'
-ms.custom: ''
+title: '方法: マネージ コードのスレッド名を設定 |Microsoft Docs'
 ms.date: 04/27/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -20,17 +18,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 39a732f691cbed525e853d74b5cf4e4abb55eb47
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 01869f320318f6708b04fce539ada95211468131
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31472302"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53867645"
 ---
-# <a name="how-to-set-a-thread-name-in-managed-code"></a>方法 : マネージ コードのスレッド名を設定する
-スレッド名の設定は、Visual Studio のどのエディションでも実行できます。 スレッドの名前を付け、内のスレッドを追跡するために便利です、**スレッド**ウィンドウです。
+# <a name="how-to-set-a-thread-name-in-managed-code"></a>方法: マネージド コードのスレッド名を設定する
+スレッド名の設定は、Visual Studio のどのエディションでも実行できます。 スレッド名を設定すると、**[スレッド]** ウィンドウでスレッドを追跡する際に役立ちます。
   
- マネージ コードのスレッド名を設定するには、<xref:System.Threading.Thread.Name%2A> プロパティを使用します。  
+ マネージド コードのスレッド名を設定するには、<xref:System.Threading.Thread.Name%2A> プロパティを使用します。  
   
 ## <a name="example"></a>例  
 
@@ -77,6 +75,6 @@ Sub Main()
 End Sub  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [方法 : ネイティブ コードのスレッド名を設定する](../debugger/how-to-set-a-thread-name-in-native-code.md)
+## <a name="see-also"></a>「  
+ [マルチスレッド アプリケーションのデバッグ](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+ [方法: ネイティブ コードのスレッド名を設定する](../debugger/how-to-set-a-thread-name-in-native-code.md)

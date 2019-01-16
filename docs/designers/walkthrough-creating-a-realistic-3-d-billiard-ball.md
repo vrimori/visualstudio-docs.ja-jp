@@ -2,7 +2,6 @@
 title: 'チュートリアル: リアルな 3D のビリヤード ボールの作成'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: af8eb0f3-bf6a-4d1c-ab47-dcd88ab04efa
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d0f8596e8a2064f09ff817a768dd7ec994e3c920
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 75b7b405ba9e25a94c8db22c4ddf5e4a0aedad09
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49847644"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53913492"
 ---
 # <a name="walkthrough-create-a-realistic-3d-billiard-ball"></a>チュートリアル: リアルな 3D のビリヤード ボールを作成する
 
@@ -79,7 +78,7 @@ ms.locfileid: "49847644"
 
 3. テクスチャのプロパティを構成して、前の手順で作成したテクスチャを適用します。 **[テクスチャ サンプル]** ノードの **[テクスチャ]** プロパティの値を **[Texture1]** に設定し、同じプロパティ ウィンドウで **[Texture1]** プロパティ グループの **[ファイル名]** プロパティを使用して、テクスチャ ファイルを指定します。
 
-   シェーダーでテクスチャを適用する方法の詳細については、「[方法: 基本テクスチャ シェーダーを作成する](../designers/how-to-create-a-basic-texture-shader.md)」を参照してください。
+   シェーダーでテクスチャを適用する方法の詳細については、「[方法:基本テクスチャ シェーダーを作成する](../designers/how-to-create-a-basic-texture-shader.md)」を参照してください。
 
    ビリヤード ボールは、次のようになります。
 
@@ -101,7 +100,7 @@ ms.locfileid: "49847644"
 
 - 必要に応じて、シェーダー グラフの **MaterialDiffuse** プロパティを構成することによって、照明を動かす方法を調整することもできます。 シェーダー グラフのプロパティにアクセスするには、デザイン サーフェイス上の何もない領域を選択してから、**[プロパティ]** ウィンドウでアクセスするプロパティをクリックします。
 
-シェーダーでランバート照明を適用する方法の詳細については、「[方法: 基本ランバート シェーダーを作成する](../designers/how-to-create-a-basic-lambert-shader.md)」を参照してください。
+シェーダーでランバート照明を適用する方法の詳細については、「[方法:基本ランバート シェーダーを作成する](../designers/how-to-create-a-basic-lambert-shader.md)」を参照してください。
 
 ランバート照明が適用されると、ビリヤード ボールは次のようになります。
 
@@ -123,7 +122,7 @@ ms.locfileid: "49847644"
 
 2. 必要に応じて、シェーダー グラフの反射プロパティ (**MaterialSpecular** と **MaterialSpecularPower**) を構成することによって反射の光源の動きを調整できます。 シェーダー グラフのプロパティにアクセスするには、デザイン サーフェイス上の何もない領域を選択してから、**[プロパティ]** ウィンドウでアクセスするプロパティをクリックします。
 
-   シェーダーで反射の光源を適用する方法の詳細については、「[方法: 基本フォン シェーダーを作成する](../designers/how-to-create-a-basic-phong-shader.md)」を参照してください。
+   シェーダーで反射の光源を適用する方法の詳細については、「[方法:基本フォン シェーダーを作成する](../designers/how-to-create-a-basic-phong-shader.md)」を参照してください。
 
    反射の光源が適用されると、ビリヤード ボールは次のようになります。
 

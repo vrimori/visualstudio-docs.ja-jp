@@ -1,8 +1,6 @@
 ---
 title: 'DA0038: 高率のロック競合 | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.performance.38
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 54788c20552380d22df8bad783d5012ac7157899
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c670ab939f2535c7dfcdf2d2db8a53e06bcd58db
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49922056"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53845916"
 ---
 # <a name="da0038-high-rate-of-lock-contentions"></a>DA0038: 高率のロック競合
 
@@ -48,7 +46,7 @@ ms.locfileid: "49922056"
  この規則は、プロファイリング実行中に取得された測定値により、ロック競合量が過度に多いことが示された場合に適用されます。 ロックの競合により、ロックを待機しているスレッドの実行が遅延します。 最低限のハードウェアで実行される単体テストまたはロード テストでの少量のロックの競合であっても、調査する必要があります。  
 
 > [!NOTE]
->  プロファイル データ中の、報告されたロックの競合の比率が過度に高い場合、この情報メッセージではなく「[DA0039: 非常に高率のロック競合。](../profiling/da0039-very-high-rate-of-lock-contentions.md)」の警告メッセージが表示されます。  
+>  プロファイル データ中の、報告されたロックの競合の比率が過度に高い場合、この情報メッセージではなく「[DA0039: 非常に高率のロック競合](../profiling/da0039-very-high-rate-of-lock-contentions.md)」の警告メッセージが表示されます。  
 
 ## <a name="how-to-investigate-a-warning"></a>警告の調査方法  
  メッセージをダブルクリックして、プロファイル データの [[マーク]](../profiling/marks-view.md) ビューに移動します。  **.NET CLR LocksAndThreads\Contention Rate / sec** 列を探します。 ロックの競合が他のフェーズよりも多い特定のプログラム実行フェーズがあるかどうかを確認します。  

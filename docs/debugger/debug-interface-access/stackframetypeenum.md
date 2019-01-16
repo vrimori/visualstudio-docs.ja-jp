@@ -1,8 +1,6 @@
 ---
 title: StackFrameTypeEnum |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fcf5e120e769b69c064306432c3026194eb0d851
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: be9a07c961e62870319de10cad77eaee8e12ef1c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49853937"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53864011"
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
 スタック フレームの種類を指定します。  
@@ -56,12 +54,12 @@ enum StackFrameTypeEnum {
  `FrameTypeUnknown`  
  すべてのデバッグ情報がないフレーム。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  この列挙体の値が呼び出しによって返される、 [idiastackframe::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)メソッド。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: cvconst.h  
   
-## <a name="see-also"></a>関連項目  
- [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+## <a name="see-also"></a>「  
+ [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaStackFrame::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)

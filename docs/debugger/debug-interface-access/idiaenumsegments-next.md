@@ -1,8 +1,6 @@
 ---
 title: Idiaenumsegments::next |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c9966555c673904a423de1b215e438b5db15479
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 56ac8d4811cdad62f22d3d8101dc1530652bcb52
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49951029"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53889957"
 ---
 # <a name="idiaenumsegmentsnext"></a>IDiaEnumSegments::Next
 指定した列挙体シーケンス内のセグメント数を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49951029"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT Next (   
+HRESULT Next (   
    ULONG         celt,   
    IDiaSegment** rgelt,  
    ULONG*        pceltFetched  
@@ -45,8 +43,8 @@ HRESULT Next (
  [out]フェッチされた列挙子のセグメントの数を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`ない他のセグメントがある場合。 それ以外の場合はエラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`ない他のセグメントがある場合。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)   
  [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

@@ -1,8 +1,6 @@
 ---
-title: IDiaFrameData |Microsoft ドキュメント
-ms.custom: ''
+title: IDiaFrameData |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,20 +12,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: efdc99d45bfc081fafd9b8467937567cca777b68
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 5152dfc0ed6ef043fe80a060643c660c0f1ec343
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31465500"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53948447"
 ---
 # <a name="idiaframedata"></a>IDiaFrameData
-スタック フレームの詳細を公開します。  
+スタック フレームの詳細が公開されます。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-IDiaFrameData : IUnknown  
+IDiaFrameData : IUnknown  
 ```  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
@@ -39,29 +37,29 @@ IDiaFrameData : IUnknown
 |[IDiaFrameData::get_addressOffset](../../debugger/debug-interface-access/idiaframedata-get-addressoffset.md)|フレームのコード アドレスのオフセットの部分を取得します。|  
 |[IDiaFrameData::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiaframedata-get-relativevirtualaddress.md)|イメージの相対仮想アドレス (RVA) フレームのコードを取得します。|  
 |[IDiaFrameData::get_virtualAddress](../../debugger/debug-interface-access/idiaframedata-get-virtualaddress.md)|フレームのコードの仮想アドレス (VA) を取得します。|  
-|[IDiaFrameData::get_lengthBlock](../../debugger/debug-interface-access/idiaframedata-get-lengthblock.md)|フレームによって記述されたコードのブロックのバイト単位の長さを取得します。|  
-|[IDiaFrameData::get_lengthLocals](../../debugger/debug-interface-access/idiaframedata-get-lengthlocals.md)|スタックにプッシュされたローカル変数のバイト数を取得します。|  
-|[IDiaFrameData::get_lengthParams](../../debugger/debug-interface-access/idiaframedata-get-lengthparams.md)|パラメーターをスタックにプッシュのバイト数を取得します。|  
+|[IDiaFrameData::get_lengthBlock](../../debugger/debug-interface-access/idiaframedata-get-lengthblock.md)|フレームによって説明されているコードのブロックのバイト単位の長さを取得します。|  
+|[IDiaFrameData::get_lengthLocals](../../debugger/debug-interface-access/idiaframedata-get-lengthlocals.md)|スタックにプッシュするローカル変数のバイト数を取得します。|  
+|[IDiaFrameData::get_lengthParams](../../debugger/debug-interface-access/idiaframedata-get-lengthparams.md)|スタックにプッシュするパラメーターのバイト数を取得します。|  
 |[IDiaFrameData::get_maxStack](../../debugger/debug-interface-access/idiaframedata-get-maxstack.md)|フレームのスタックにプッシュされるバイトの最大数を取得します。|  
 |[IDiaFrameData::get_lengthProlog](../../debugger/debug-interface-access/idiaframedata-get-lengthprolog.md)|プロローグ コード ブロック内のバイト数を取得します。|  
-|[IDiaFrameData::get_lengthSavedRegisters](../../debugger/debug-interface-access/idiaframedata-get-lengthsavedregisters.md)|スタックにプッシュされる保存されたレジスタのバイト数を取得します。|  
-|[IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)|レジスタの現在の関数呼び出しの前にセットの計算に使用されるプログラム文字列を取得します。|  
-|[IDiaFrameData::get_systemExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-systemexceptionhandling.md)|取得するシステム例外処理を示すフラグが有効です。|  
-|[IDiaFrameData::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md)|取得する C++ 例外処理を示すフラグが有効です。|  
-|[IDiaFrameData::get_functionStart](../../debugger/debug-interface-access/idiaframedata-get-functionstart.md)|関数のエントリ ポイントが、ブロックに含まれているかを示すフラグを取得します。|  
-|[IDiaFrameData::get_allocatesBasePointer](../../debugger/debug-interface-access/idiaframedata-get-allocatesbasepointer.md)|このアドレスの範囲内のコード ベースのポインターが割り当てられていることを示すフラグを取得します。 このメソッドは推奨されません。|  
-|[IDiaFrameData::get_type](../../debugger/debug-interface-access/idiaframedata-get-type.md)|コンパイラに固有のフレームの種類を取得します。|  
-|[IDiaFrameData::get_functionParent](../../debugger/debug-interface-access/idiaframedata-get-functionparent.md)|取得はフレームを関数を囲むデータ インターフェイスです。|  
+|[IDiaFrameData::get_lengthSavedRegisters](../../debugger/debug-interface-access/idiaframedata-get-lengthsavedregisters.md)|保存されたレジスタがスタックにプッシュのバイト数を取得します。|  
+|[IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)|レジスタの現在の関数を呼び出す前にセットの計算に使用するプログラム文字列を取得します。|  
+|[IDiaFrameData::get_systemExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-systemexceptionhandling.md)|取得するシステムの例外処理を示すフラグが有効でします。|  
+|[IDiaFrameData::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md)|取得する C++ 例外処理を示すフラグが有効で。|  
+|[IDiaFrameData::get_functionStart](../../debugger/debug-interface-access/idiaframedata-get-functionstart.md)|ブロックが関数のエントリ ポイントを含むことを示すフラグを取得します。|  
+|[IDiaFrameData::get_allocatesBasePointer](../../debugger/debug-interface-access/idiaframedata-get-allocatesbasepointer.md)|このアドレスの範囲内のコード ベースのポインターが割り当てられていることを示すフラグを取得します。 このメソッドは非推奨です。|  
+|[IDiaFrameData::get_type](../../debugger/debug-interface-access/idiaframedata-get-type.md)|コンパイラ固有のフレームの種類を取得します。|  
+|[IDiaFrameData::get_functionParent](../../debugger/debug-interface-access/idiaframedata-get-functionparent.md)|関数を囲むデータ インターフェイスのフレームを取得します。|  
 |[IDiaFrameData::execute](../../debugger/debug-interface-access/idiaframedata-execute.md)|スタック アンワインドを実行し、スタック ウォーク フレーム インターフェイスでレジスタの現在の状態を返します。|  
   
 ## <a name="remarks"></a>コメント  
- フレームの使用の詳細はアドレスとブロックの長さで指定されるアドレス範囲に含まれる実行ポイントです。  
+ フレームの使用の詳細は、アドレスとブロックの長さで表されるアドレス範囲に含まれる実行ポイントはいます。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- このインターフェイスを呼び出すことによって取得、 [idiaenumframedata::next](../../debugger/debug-interface-access/idiaenumframedata-next.md)または[idiaenumframedata::item](../../debugger/debug-interface-access/idiaenumframedata-item.md)メソッドです。 参照してください、 [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)詳細についてはインターフェイスです。  
+ このインターフェイスを呼び出すことによって取得、 [idiaenumframedata::next](../../debugger/debug-interface-access/idiaenumframedata-next.md)または[idiaenumframedata::item](../../debugger/debug-interface-access/idiaenumframedata-item.md)メソッド。 参照してください、 [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)詳細についてはインターフェイスです。  
   
 ## <a name="example"></a>例  
- この例のプロパティを出力、`IDiaFrameData`オブジェクト。 参照してください、 [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)方法の例についてはインターフェイス`IDiaFrameData`インターフェイスを取得します。  
+ この例のプロパティを出力する`IDiaFrameData`オブジェクト。 参照してください、 [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)方法の例については、インターフェイス`IDiaFrameData`インターフェイスを取得します。  
   
 ```C++  
 void PrintFrameData(IDiaFrameData* pFrameData){  
@@ -115,14 +113,14 @@ void PrintFrameData(IDiaFrameData* pFrameData){
 ```  
   
 ## <a name="requirements"></a>要件  
- ヘッダー: Dia2.h  
+ ヘッダー:dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)   
- [Idiaenumframedata::item](../../debugger/debug-interface-access/idiaenumframedata-item.md)   
+ [IDiaEnumFrameData::Item](../../debugger/debug-interface-access/idiaenumframedata-item.md)   
  [IDiaEnumFrameData::Next](../../debugger/debug-interface-access/idiaenumframedata-next.md)

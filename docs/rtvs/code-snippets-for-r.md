@@ -3,19 +3,18 @@ title: R のコード スニペット
 description: Visual Studio の R のコード スニペットでは、任意の長さのコード ブロックをすばやく挿入するショートカットが提供され、似たコードを何度も再入力しなくて済みます。
 ms.date: 01/24/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-rtvs
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 0c9db243b3903ddcbaa310bbf5ba3fd911eee7fc
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 0b9a06a747fb0169c22f251c1beb22dad3b86c9e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35667731"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53860898"
 ---
 # <a name="code-snippets"></a>コード スニペット
 
@@ -38,7 +37,7 @@ Visual Studio のコード スニペットでは、任意の長さのコード �
 
 ![R の [コード スニペット マネージャー] ダイアログ ボックス](media/code-snippet-dialog.png)
 
-カスタム コード スニペットを作成するには、「[チュートリアル: コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)」の説明に従います。 結局のところ、コード スニペットは単なる XML ファイルです。 たとえば、次のコードはパイプ操作のスニペットです (ショートカット `>`)。
+カスタム コード スニペットを作成するには、「[チュートリアル: コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)」を参照してください。 結局のところ、コード スニペットは単なる XML ファイルです。 たとえば、次のコードはパイプ操作のスニペットです (ショートカット `>`)。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

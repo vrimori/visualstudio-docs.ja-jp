@@ -1,9 +1,7 @@
 ---
 title: '手順 5: フォームへのコントロールの追加'
-ms.custom: ''
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: dc2746f4-0b5c-4674-9ef7-f40f94150f52
 author: TerryGLee
@@ -11,17 +9,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a7a0167d4d5af125e706350002ccf8a17e459414
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: bd07924f98c969340fbe2c7ccb88f4227a61026b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34748557"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53968431"
 ---
 # <a name="step-5-add-controls-to-your-form"></a>手順 5: フォームへのコントロールの追加
 この手順では、<xref:System.Windows.Forms.PictureBox> コントロールや <xref:System.Windows.Forms.CheckBox> コントロールなどのコントロールをフォームに追加します。 さらに、フォームに <xref:System.Windows.Forms.Button> コントロールを追加します。
 
- ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 2](http://go.microsoft.com/fwlink/?LinkId=205211)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 2](http://go.microsoft.com/fwlink/?LinkId=205200)」をご覧ください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
+ ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、次をご覧ください。「[Tutorial 1:Create a picture viewer in Visual Basic - Video 2](http://go.microsoft.com/fwlink/?LinkId=205211)」(チュートリアル 1: Visual Basic でピクチャ ビューアーを作成する - ビデオ 2) または「[Tutorial 1:Create a picture viewer in C# - Video 2](http://go.microsoft.com/fwlink/?LinkId=205200)」(チュートリアル 1: C# でピクチャ ビューアーを作成する - ビデオ 2) をご覧ください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
 
 ## <a name="to-add-controls-to-your-form"></a>フォームにコントロールを追加するには
 
@@ -81,6 +79,6 @@ ms.locfileid: "34748557"
 
 ## <a name="to-continue-or-review"></a>続行または確認するには
 
--   チュートリアルの次の手順に進むには、「[手順 6: ボタン コントロールの名前の設定](../ide/step-6-name-your-button-controls.md)」をご覧ください。
+-   チュートリアルの次の手順に進むには、「[手順 6:ボタン コントロールの名前を設定する](../ide/step-6-name-your-button-controls.md)」をご覧ください。
 
--   チュートリアルの前の手順に戻るには、「[手順 4: TableLayoutPanel コントロールを使用したフォームのレイアウトの設定](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)」をご覧ください。
+-   チュートリアルの前の手順に戻るには、「[手順 4:TableLayoutPanel コントロールを使用してフォームのレイアウトを設定する](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)」を参照してください。

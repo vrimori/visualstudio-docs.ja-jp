@@ -1,8 +1,6 @@
 ---
 title: UdtKind |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 49ea6a46825bbb94d55b0e9f9a4c052a1c12ae5f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 35631a3913f067e6520da630cd49969d8a2b40f0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49936564"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53924229"
 ---
 # <a name="udtkind"></a>UdtKind
 さまざまなユーザー定義型 (UDT) をについて説明します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49936564"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-enum UdtKind {   
+enum UdtKind {   
    UdtStruct,  
    UdtClass,  
    UdtUnion,  
@@ -48,12 +46,12 @@ enum UdtKind {
  UdtInterface  
  UDT は、インターフェイスです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  この列挙体の値がによって返される、 [idiasymbol::get_udtkind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md)メソッド。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: cvconst.h  
   
-## <a name="see-also"></a>関連項目  
- [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+## <a name="see-also"></a>「  
+ [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaSymbol::get_udtKind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md)

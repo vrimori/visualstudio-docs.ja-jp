@@ -2,7 +2,6 @@
 title: コード化された UI テストを使用して UWP アプリをテストする
 ms.date: 05/31/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
@@ -12,12 +11,12 @@ dev_langs:
 - VB
 ms.workload:
 - uwp
-ms.openlocfilehash: 3dcbd6065d45bf5350b80d555f335d3b8ec1cec7
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 2ee648a11c04f9ff6da2f7113c37424b4f1f6388
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895965"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53842045"
 ---
 # <a name="create-a-coded-ui-test-to-test-a-uwp-app"></a>UWP アプリをテストするためのコード化された UI テストの作成
 
@@ -207,17 +206,17 @@ ms.locfileid: "52895965"
 
 ## <a name="q--a"></a>Q & A
 
-### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>Q: [コード化された UI テスト] ダイアログの [コードの生成] に、コード化された UI テストを記録するオプションが表示されないのはなぜですか?
+### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>Q:[コード化された UI テスト] ダイアログの [コードの生成] に、コード化された UI テストを記録するオプションが表示されないのはなぜですか?
 
-**A**: 記録するオプションは、UWP アプリではサポートされません。
+**A**:記録するオプションは、UWP アプリではサポートされません。
 
-### <a name="q-can-i-create-a-coded-ui-test-for-my-uwp-apps-based-on-winjs"></a>Q: WinJS ベースの UWP アプリのコード化された UI テストを作成できますか?
+### <a name="q-can-i-create-a-coded-ui-test-for-my-uwp-apps-based-on-winjs"></a>Q:WinJS ベースの UWP アプリのコード化された UI テストを作成できますか?
 
-**A**: いいえ。サポートされるのは XAML ベースのアプリのみです。
+**A**:いいえ。サポートされるのは XAML ベースのアプリのみです。
 
-### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>Q: UIMap.Designer ファイルでコードを変更できないのはなぜですか?
+### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>Q:UIMap.Designer ファイルでコードを変更できないのはなぜですか?
 
-**A**: *UIMapDesigner.cs* ファイルでコードを変更しても、**[コード化された UI テスト ビルダー]** を使用してコードを生成するたびに変更内容が上書きされます。 記録されたメソッドを変更する必要がある場合は、メソッドを *UIMap.cs* ファイルにコピーし、メソッド名を変更します。 *UIMap.cs* ファイルを使用すると、*UIMapDesigner.cs* ファイルのメソッドやプロパティをオーバーライドできます。 *CodedUITest.cs* ファイルの元のメソッドへの参照を削除し、変更したメソッド名に置き換えます。
+**A**:*UIMapDesigner.cs* ファイルでコードを変更しても、**[コード化された UI テスト ビルダー]** を使用してコードを生成するたびに変更内容が上書きされます。 記録されたメソッドを変更する必要がある場合は、メソッドを *UIMap.cs* ファイルにコピーし、メソッド名を変更します。 *UIMap.cs* ファイルを使用すると、*UIMapDesigner.cs* ファイルのメソッドやプロパティをオーバーライドできます。 *CodedUITest.cs* ファイルの元のメソッドへの参照を削除し、変更したメソッド名に置き換えます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,8 +1,6 @@
 ---
-title: '方法 : MSBuild で特殊文字をエスケープする | Microsoft Docs'
-ms.custom: ''
+title: '方法: MSBuild で特殊文字をエスケープする | Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - special characters, escaping
@@ -15,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 701db598872f6dde5a07740ef7601a6c8de7c5f0
-ms.sourcegitcommit: 6672a1e9d135d7e5cca3cceea07c6fe5a0871475
+ms.openlocfilehash: 5e6af51127548b59646ec7243863491115b77e08
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47443403"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53854621"
 ---
 # <a name="how-to-escape-special-characters-in-msbuild"></a>方法: MSBuild で特殊文字をエスケープする
 

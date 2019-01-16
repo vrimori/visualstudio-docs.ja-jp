@@ -1,8 +1,6 @@
 ---
 title: '方法: 混合モードでデバッグ |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/05/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -19,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1439dce6930b71e29141031e93175e0a6aaa519c
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: db26a3a68b15dcd6252f6bd02a540e105c993b54
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389475"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53896059"
 ---
 # <a name="how-to-debug-in-mixed-mode-c-c-visual-basic"></a>方法: 混合モードでデバッグ (C#、C++、Visual Basic)
 
@@ -36,10 +34,10 @@ ms.locfileid: "52389475"
 
 呼び出し元のアプリ プロジェクトのマネージ コードとネイティブの両方のデバッガーを有効にすることができます**プロパティ**ページ。 設定は、ネイティブおよびマネージ アプリ間で異なります。
 
-呼び出し元のアプリのプロジェクトへのアクセスを持っていない場合は、DLL プロジェクトから DLL をデバッグできます。 混在モード DLL のプロジェクトだけをデバッグする必要はありません。 詳細については、「 [How to: Debug from a DLL Project](../debugger/how-to-debug-from-a-dll-project.md)」を参照してください。
+呼び出し元のアプリのプロジェクトへのアクセスを持っていない場合は、DLL プロジェクトから DLL をデバッグできます。 混在モード DLL のプロジェクトだけをデバッグする必要はありません。 詳細については、「[方法 :DLL プロジェクトからデバッグする](../debugger/how-to-debug-from-a-dll-project.md)」を参照してください。
 
 > [!NOTE]
-> ダイアログ ボックスやコマンド、Visual Studio の設定またはエディションによって、この記事で使用されているのとは異なる場合があります。 設定を変更するには、次のように選択します。**ツール** > **インポートおよびエクスポート設定**します。 詳細については、次を参照してください。[設定にリセット](../ide/environment-settings.md#reset-settings)します。
+> ダイアログ ボックスやコマンド、Visual Studio の設定またはエディションによって、この記事で使用されているのとは異なる場合があります。 設定を変更するには、次のように選択します。**ツール** > **インポートおよびエクスポート設定**します。 詳細については、「[リセット設定](../ide/environment-settings.md#reset-settings)」を参照してください。
 
 ## <a name="enable-mixed-mode-debugging-for-a-native-calling-app"></a>呼び出し元のアプリをネイティブの混合モードのデバッグを有効にします。
 
@@ -47,7 +45,7 @@ ms.locfileid: "52389475"
 
 1. **\<プロジェクト > プロパティ ページ**] ダイアログ ボックスで、展開**構成プロパティ**、し、[**デバッグ**します。
 
-1. [デバッガーのタイプ] **を [混合]** または [自動]** に設定します。
+1. **[デバッガーの種類]** を **[混合]** または **[自動]** に設定します。
 
 1. **[OK]** を選択します。
 
@@ -68,4 +66,4 @@ ms.locfileid: "52389475"
 
 ## <a name="see-also"></a>関連項目
 
-- [方法 : DLL プロジェクトからデバッグする](../debugger/how-to-debug-from-a-dll-project.md)
+- [方法: DLL プロジェクトからデバッグする](../debugger/how-to-debug-from-a-dll-project.md)

@@ -1,8 +1,6 @@
 ---
 title: 64 ビット アプリケーションの前提条件の展開 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - FSharp
@@ -20,15 +18,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 80ed8d652a36235ef43ce0cdeb78729d560be476
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 86d7512101adf58f13a07481910ab1c28251b8da
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49831264"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53885252"
 ---
-# <a name="deploy-prerequisites-for-64-bit-applications"></a>64 ビット アプリケーションの前提条件を展開します。
-ClickOnce の配置では、 64 ビット プラットフォームのアプリケーションのインストールをサポートします。 ターゲット プラットフォームは**x86** 32 ビット プラットフォームでは、 **x64** AMD64 および EM64T 命令セットをサポートするコンピューターと**Itanium** 64 ビット Itanium プロセッサ用。  
+# <a name="deploy-prerequisites-for-64-bit-applications"></a>64 ビット アプリケーションの配置のための必要条件
+ClickOnce の配置では、 64 ビット プラットフォームのアプリケーションのインストールをサポートします。 対象プラットフォームは、32 ビット プラットフォームの場合は **x86**、AMD64 命令セットと EM64T 命令セットをサポートするコンピューターの場合は **x64**、64 ビットの Itanium プロセッサの場合は **Itanium** です。  
 
 ## <a name="prerequisites"></a>必須コンポーネント  
  64 ビット アプリケーションのインストール時の必須コンポーネントとして使用できる再頒布可能パッケージを次の表に示します。  
@@ -38,13 +36,13 @@ ClickOnce の配置では、 64 ビット プラットフォームのアプリ�
 
 | 再頒布可能パッケージ | x64 サポート | IA64 サポート |
 | - |-------------|--------------|
-| [!INCLUDE[vsto_runtime](../deployment/includes/vsto_runtime_md.md)] | ○ | Ｘ |
-| Visual C++ 2010 ランタイム ライブラリ (IA64) | Ｘ | はい |
-| Visual C++ 2010 ランタイム ライブラリ (x64) | はい | Ｘ |
-| Microsoft .NET Framework 4 (x86 および x64) | ○ | |
-| Microsoft .NET Framework 4 Client Profile (x86 および x64) | はい | |
+| [!INCLUDE[vsto_runtime](../deployment/includes/vsto_runtime_md.md)] | [はい] | × |
+| Visual C++ 2010 ランタイム ライブラリ (IA64) | × | [はい] |
+| Visual C++ 2010 ランタイム ライブラリ (x64) | [はい] | × |
+| Microsoft .NET Framework 4 (x86 および x64) | [はい] | |
+| Microsoft .NET Framework 4 Client Profile (x86 および x64) | [はい] | |
 
 ## <a name="see-also"></a>関連項目  
  [アプリケーション、サービス、およびコンポーネントをデプロイします。](../deployment/deploying-applications-services-and-components.md)   
- [方法: ClickOnce アプリケーションと共に必須コンポーネントをインストールします。](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
+ [方法: ClickOnce アプリケーションと共に必須コンポーネントをインストールする](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
  [64 ビット アプリケーション](/dotnet/framework/64-bit-apps)

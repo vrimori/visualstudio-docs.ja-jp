@@ -7,15 +7,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 68b19993448ed68520f267177ca760975cd4d4aa
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 0c4b3c752a2ca28c4cfb4b08b2f51f8b8fc6ac23
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53066810"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53894156"
 ---
 # <a name="linq-to-sql-tools-in-visual-studio"></a>Visual Studio の LINQ to SQL ツール
 
@@ -50,7 +49,7 @@ Visual Studio によって作成、 *.dbml*ファイルを開き、ソリュー�
 
 ## <a name="create-entity-classes-that-map-to-database-tables-and-views"></a>データベース テーブルおよびビューにマップされるエンティティ クラスを作成します。
 
-データベース テーブルおよびビューからドラッグすることにより、テーブルとビューにマッピングされたエンティティ クラスを作成する**サーバー エクスプ ローラー**または**データベース エクスプ ローラー**上に、 **O/R デザイナー**します。 前のセクションで示したように、<xref:System.Data.Linq.DataContext> は、デザイン サーフェイスにドラッグされる最初の項目が提供する接続情報で構成されます。 別の接続を使用する後続の項目を追加するかどうか、 **O/R デザイナー**、用の接続を変更することができます、<xref:System.Data.Linq.DataContext>します。 詳細については、「[方法 :LINQ to SQL クラスのテーブルとビュー (O/R デザイナー) にマップを作成](../data-tools/how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)です。
+データベース テーブルおよびビューからドラッグすることにより、テーブルとビューにマッピングされたエンティティ クラスを作成する**サーバー エクスプ ローラー**または**データベース エクスプ ローラー**上に、 **O/R デザイナー**します。 前のセクションで示したように、<xref:System.Data.Linq.DataContext> は、デザイン サーフェイスにドラッグされる最初の項目が提供する接続情報で構成されます。 別の接続を使用する後続の項目を追加するかどうか、 **O/R デザイナー**、用の接続を変更することができます、<xref:System.Data.Linq.DataContext>します。 詳細については、「[方法 :テーブルとビューにマップされた LINQ to SQL クラスを作成する (O/R デザイナー)](../data-tools/how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)」を参照してください。
 
 ## <a name="create-datacontext-methods-that-call-stored-procedures-and-functions"></a>ストアド プロシージャと関数を呼び出す DataContext メソッドを作成します。
 
@@ -61,7 +60,7 @@ Visual Studio によって作成、 *.dbml*ファイルを開き、ソリュー�
 
 ## <a name="configure-a-datacontext-to-use-stored-procedures-to-save-data-between-entity-classes-and-a-database"></a>ストアド プロシージャを使用してエンティティ クラスとデータベース間でデータを保存する DataContext を構成します。
 
-前に述べたように、ストアド プロシージャと関数を呼び出す <xref:System.Data.Linq.DataContext> のメソッドを作成できます。 さらに、既定の LINQ to SQL のランタイム動作を実行する挿入、更新、および削除に使用されるストアド プロシージャも割り当てることができます。 詳細については、「[方法 :更新、挿入、および削除 (O/R デザイナー) を実行するストアド プロシージャを割り当てる](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)します。
+前に述べたように、ストアド プロシージャと関数を呼び出す <xref:System.Data.Linq.DataContext> のメソッドを作成できます。 さらに、既定の LINQ to SQL のランタイム動作を実行する挿入、更新、および削除に使用されるストアド プロシージャも割り当てることができます。 詳細については、「[方法 :更新、挿入、および削除を実行するストアド プロシージャを割り当てる (O/R デザイナー)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)」を参照してください。
 
 ## <a name="inheritance-and-the-or-designer"></a>継承と O/R デザイナー
 

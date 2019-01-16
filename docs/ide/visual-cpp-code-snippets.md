@@ -2,7 +2,6 @@
 title: Visual C++ のコード スニペット
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
@@ -11,12 +10,12 @@ dev_langs:
 - CPP
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f119f3b2bc438eacfaaa722bd57fb440aa303052
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 5069d1b92b9c4f73fdb8eca50eabce170f42cef1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49948929"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53937440"
 ---
 # <a name="visual-c-code-snippets"></a>Visual C++ のコード スニペット
 
@@ -32,7 +31,7 @@ Visual Studio でコード スニペットを使用して、よく使用され�
 
 - **[編集 / IntelliSense]** メニューの **[スニペットの挿入]** を選択する
 
-- ホット キー **Ctrl** + **K** + **X** を使用する
+- 次のホット キーを使用します。**Ctrl**+**K**+**X**
 
 **#if** で始まる選択肢の一覧が表示されます。 **#if** を選択すると、ファイルに追加された次のコードが表示されます。
 
@@ -52,7 +51,7 @@ Visual Studio でコード スニペットを使用して、よく使用され�
 
 - **[編集]** > **[IntelliSense]** メニューの **[ブロックの挿入]** を選択する
 
-- キーボードの **Ctrl** + **K** + **S** キーを押す
+- キーボードで次のキーを押します。**Ctrl**+**K**+**S**
 
 **#if** を選択します。 次のように表示されます。
 

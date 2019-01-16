@@ -1,8 +1,6 @@
 ---
 title: NameSearchOptions |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c4b8771ad1bf2ee97ec1f22636a4684bc9aa7ee8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: e816c559215d5662fe1a20dcad21eaf30f7667bc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49950343"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53868054"
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
 シンボルとファイル名の検索オプションを指定します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49950343"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-enum NameSearchOptions {   
+enum NameSearchOptions {   
    nsNone,  
    nsfCaseSensitive     = 0x1,  
    nsfCaseInsensitive   = 0x2,  
@@ -63,7 +61,7 @@ enum NameSearchOptions {
  `nsfUndecoratedName`  
  装飾されていないし、装飾名がシンボルにのみ適用されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  この列挙の値は、次のメソッドに渡されます。  
   
 -   [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)  
@@ -72,11 +70,11 @@ enum NameSearchOptions {
   
 -   [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: dia2.h  
   
-## <a name="see-also"></a>関連項目  
- [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [Idiasession::findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
- [Idiasession::findfile](../../debugger/debug-interface-access/idiasession-findfile.md)   
+## <a name="see-also"></a>「  
+ [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+ [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
+ [IDiaSession::findFile](../../debugger/debug-interface-access/idiasession-findfile.md)   
  [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)

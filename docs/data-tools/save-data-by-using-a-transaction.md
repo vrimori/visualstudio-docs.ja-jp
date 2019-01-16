@@ -1,5 +1,5 @@
 ---
-title: '方法: トランザクションを使用してデータを保存'
+title: '方法: トランザクションを使用してデータを保存する'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,17 +15,16 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 28beeec474af9b05153e787c6cbe22034d09b350
-ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
-ms.translationtype: MT
+ms.openlocfilehash: daf589eeabbdf753512cc31ca00b6a88e001c0db
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750989"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53918750"
 ---
-# <a name="how-to-save-data-by-using-a-transaction"></a>方法: トランザクションを使用してデータを保存
+# <a name="how-to-save-data-by-using-a-transaction"></a>方法: トランザクションを使用してデータを保存する
 
 使用して、トランザクションでデータを保存する、<xref:System.Transactions>名前空間。 使用して、<xref:System.Transactions.TransactionScope>オブジェクトが自動的に管理されているトランザクションに参加します。
 

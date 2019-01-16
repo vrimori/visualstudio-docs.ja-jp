@@ -2,7 +2,6 @@
 title: リモートの IIS コンピューター上の ASP.NET Core のリモート デバッグ |Microsoft Docs
 ms.custom: remotedebugging
 ms.date: 05/21/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 573a3fc5-6901-41f1-bc87-557aa45d8858
 author: mikejo5000
@@ -11,12 +10,12 @@ manager: douge
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: bcb0db3a6eab91c517ce731ddf6e201d5a73f1f8
-ms.sourcegitcommit: 40b6438b5acd7e59337a382c39ec711b9e99cc8a
-ms.translationtype: MT
+ms.openlocfilehash: 683e0cae09144777cbb27ef294676cc44dc0a1a1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49101072"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53830834"
 ---
 # <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio-2017"></a>Visual Studio 2017 でのリモートの IIS コンピューター上の ASP.NET Core のリモート デバッグ
 IIS に配置されている ASP.NET アプリケーションをデバッグするには、インストールし、アプリをデプロイしたコンピューターでリモート ツールを実行して Visual Studio から、実行中のアプリにアタッチします。
@@ -70,12 +69,12 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 
 ## <a name="install-aspnet-core-on-windows-server"></a>Windows Server での ASP.NET Core をインストールします。
 
-1. インストール、 [.NET Core Windows Server ホスティング](https://aka.ms/dotnetcore-2-windowshosting)ホスティング システムにバンドルします。 バンドルは、.NET Core ランタイム、.NET Core ライブラリ、および ASP.NET Core モジュールをインストールします。 詳細についての詳細な手順については、次を参照してください。 [IIS への発行](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)します。
+1. ホスティング システムに [.NET Core Windows Server ホスティング](https://aka.ms/dotnetcore-2-windowshosting) バンドルをインストールします。 このバンドルをインストールすることで、.NET Core ランタイム、.NET Core ライブラリ、ASP.NET Core モジュールがインストールされます。 詳細についての詳細な手順については、次を参照してください。 [IIS への発行](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)します。
 
     > [!NOTE]
-    > システムがインターネットに接続があるない場合を入手してインストール、  *[Microsoft Visual C 2015 再頒布可能](https://www.microsoft.com/download/details.aspx?id=53840)* .NET Core Windows Server ホスティング バンドルをインストールする前にします。
+    > システムにインターネット接続が設定されていない場合は、.NET Core Windows Server ホスティング バンドルをインストールする前に、*[Microsoft Visual C++ 2015 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=53840)* を入手してインストールしてください。
 
-3. システムの再起動 (実行または**net stop was/y**続けて**net start w3svc**システム パスに変更を適用するコマンド プロンプトから)。
+3. システムを再起動します (または、コマンド プロンプトから **net stop was /y** の後に続けて **net start w3svc** を実行して、システム PATH への変更を適用します)。
 
 ## <a name="choose-a-deployment-option"></a>デプロイ オプションを選択します。
 
@@ -96,15 +95,15 @@ IIS にアプリをデプロイする必要があります問題が解決する�
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/install-web-deploy-with-hosting-server.md)]
 
-### <a name="create-the-publish-settings-file-in-iis-on-windows-server"></a>Windows Server 上の IIS での発行設定ファイルを作成します。
+### <a name="create-the-publish-settings-file-in-iis-on-windows-server"></a>Windows Server 上の IIS に発行設定ファイルを作成する
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/create-publish-settings-iis.md)]
 
-### <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio で発行設定をインポートおよび展開
+### <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio で発行設定をインポートして配置する
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
 
-アプリが正常がデプロイした後、自動的に開始する必要があります。 Visual Studio からアプリが起動しない場合は、IIS でアプリを起動します。 ASP.NET Core でのアプリケーション プールのフィールドを確認する必要があります、 **DefaultAppPool**に設定されている**マネージ コードなし**します。
+アプリが正常に配置されたら、自動的に起動されます。 Visual Studio からアプリが起動しない場合は、IIS でアプリを起動します。 ASP.NET Core の場合、**DefaultAppPool** の [アプリケーション プール] フィールドが **[マネージド コードなし]** に設定されていることを確認する必要があります。
 
 1. **設定**ダイアログ ボックスをクリックしてデバッグを有効にする **[次へ]**、選択、**デバッグ**構成を選び、**追加ファイルを削除移行先**下、**ファイル発行**オプション。
 
@@ -121,7 +120,7 @@ IIS にアプリをデプロイする必要があります問題が解決する�
 
 1. Windows エクスプ ローラーを開き、新しいフォルダーを作成**C:\Publish**、ASP.NET プロジェクトを後でデプロイされます。
 
-2. 開くことがまだ開いていない場合、**インターネット インフォメーション サービス (IIS) マネージャー**します。 (サーバー マネージャーの左側のウィンドウで次のように選択します。 **IIS**します。 サーバーを右クリックして**インターネット インフォメーション サービス (IIS) マネージャー**)。
+2. 開くことがまだ開いていない場合、**インターネット インフォメーション サービス (IIS) マネージャー**します。 (サーバー マネージャーの左側のウィンドウで次のように選択します。 **IIS**します。 サーバーを右クリックして **[インターネット インフォメーション サービス (IIS) マネージャー]** を選択します。)
 
 3. **接続**で左側のウィンドウに移動**サイト**します。
 
@@ -166,8 +165,8 @@ IIS にアプリをデプロイする必要があります問題が解決する�
     > [!TIP]
     > Visual Studio 2017 を使用して、以前にアタッチした同じプロセスに再アタッチできる**デバッグ > プロセスに再アタッチしています.**(Shift + Alt + P)。 
 
-3. 修飾子のフィールドに設定**\<リモート コンピューター名 >: 4022**します。
-4. クリックして**更新**します。
+3. [修飾子] フィールドを「**\<リモート コンピューター名>:4022**」に設定します。
+4. **[最新の情報に更新]** をクリックします。
     **[選択可能なプロセス]** ウィンドウにプロセスがいくつか表示されます。
 
     すべてのプロセスが表示されない場合は、(ポートが必要です)、リモート コンピューター名ではなく IP アドレスを使用してください。 使用することができます`ipconfig`IPv4 アドレスを取得するコマンド ラインでします。
@@ -181,7 +180,7 @@ IIS にアプリをデプロイする必要があります問題が解決する�
 
 7. **[アタッチ]** をクリックします。
 
-8. リモート コンピューターの Web サイトを開きます。 ブラウザーに移動します。 **http://\<リモート コンピューター名 >** します。
+8. リモート コンピューターの Web サイトを開きます。 ブラウザーで、**http://\<リモート コンピューター名>** に移動します。
     
     ASP.NET の Web ページが表示されるはずです。
 
@@ -189,7 +188,7 @@ IIS にアプリをデプロイする必要があります問題が解決する�
 
     Visual Studio で、ブレークポイントにヒットするはずです。
 
-## <a name="bkmk_openports"></a> トラブルシューティング: Windows Server で必要なポートを開く
+## <a name="bkmk_openports">トラブルシューティング</a>Windows Server で必要なポートを開く
 
 ほとんどの設定では、ASP.NET とリモート デバッガーのインストールに必要なポートが開かれます。 ただし、ポートが開いていることを確認する必要があります。
 
@@ -216,7 +215,7 @@ IIS にアプリをデプロイする必要があります問題が解決する�
     選ぶ種類には、リモート コンピューターが接続しているネットワークが含まれている必要があります。
 6. 名を追加 (たとえば、 **IIS**、 **Web Deploy**、または**msvsmon**) の受信の規則をクリックします**完了**。
 
-    受信の規則または送信の規則の一覧に新しい規則を表示する必要があります。
+    [受信の規則] または [送信の規則] の一覧に新しい規則が表示されます。
 
     詳細について、Windows ファイアウォールを構成する場合を参照してください。[リモート デバッグ用の Windows ファイアウォールを構成する](../debugger/configure-the-windows-firewall-for-remote-debugging.md)します。
 

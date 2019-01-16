@@ -19,15 +19,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: e33fa9b6047cbe470702cebdbb27f74d074e460e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: ef3d2b5fd9f5172a79daef185d7153905976ba88
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49916908"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989132"
 ---
 # <a name="save-data-back-to-the-database"></a>データをデータベースに保存する
 
@@ -49,7 +48,7 @@ Tableadapter を使い慣れているの場合は、これらのトピックの�
 |[TableAdapter を使用してデータを更新する](../data-tools/update-data-by-using-a-tableadapter.md)|Tableadapter が更新を実行する方法|
 |[階層更新](../data-tools/hierarchical-update.md)|2 つ以上の関連テーブルを含むデータセットから更新プログラムを実行する方法|
 |[コンカレンシー例外を処理する](../data-tools/handle-a-concurrency-exception.md)|2 人のユーザーが、同時に、データベース内の同じデータを変更しようとしています。 ときに例外を処理する方法|
-|[方法: トランザクションを使用してデータを保存](../data-tools/save-data-by-using-a-transaction.md)|システムを使用してトランザクションでデータを保存する方法。 トランザクションの名前空間と TransactionScope オブジェクト|
+|[方法: トランザクションを使用してデータを保存する](../data-tools/save-data-by-using-a-transaction.md)|システムを使用してトランザクションでデータを保存する方法。 トランザクションの名前空間と TransactionScope オブジェクト|
 |[トランザクションにデータを保存する](../data-tools/save-data-in-a-transaction.md)|トランザクション内でのデータベースにデータの保存を示す Windows フォーム アプリケーションを作成するチュートリアル|
 |[データベースへのデータの保存 (複数テーブル)](../data-tools/save-data-to-a-database-multiple-tables.md)|レコードを編集し、元のデータベースに複数のテーブルで変更を保存する方法|
 |[オブジェクトからデータベースにデータを保存する](../data-tools/save-data-from-an-object-to-a-database.md)|TableAdapter DbDirect メソッドを使用してデータベースへのデータセットではないオブジェクトからデータを渡す方法|
@@ -70,7 +69,7 @@ Tableadapter を使い慣れているの場合は、これらのトピックの�
 
 データセットの内容を更新する*マージ*で別のデータセット。 内容をコピーするためにこれを*ソース*に呼び出し元のデータセットのデータセット (と呼ばれる、*ターゲット*データセット)。 データセットをマージすると、ソース データセットの新しいレコードはターゲット データセットに追加されます。 また、ソース データセットのその他の列もターゲット データセットに追加されます。 ローカル データセットを用意して、別のアプリケーションから 2 番目のデータセットを取得する場合は、データセットをマージすると便利です。 XML web サービスなどのコンポーネントから 2 番目のデータセットが表示された場合、または複数のデータセットからデータを統合する必要がある場合にも便利です。
 
-データセットをマージするときに、ブール型の引数を渡すことができます (`preserveChanges`) を示す、<xref:System.Data.DataSet.Merge%2A>メソッド ターゲット データセットの既存の変更を保持するかどうか。 データセットのレコードの複数のバージョン管理、ためには、レコードの 1 つ以上のバージョンがマージされることを念頭に重要です。 次の表は、2 つのデータセット内のレコードをマージする方法を示しています。
+データセットをマージするときに、ブール型の引数を渡すことができます (`preserveChanges`) を示す、<xref:System.Data.DataSet.Merge%2A>メソッド ターゲット データセットの既存の変更を保持するかどうか。 データセットはレコードの複数のバージョンを保持しているため、レコードの複数のバージョンがマージされるということに留意することは重要です。 次の表は、2 つのデータセット内のレコードをマージする方法を示しています。
 
 |DataRowVersion|ターゲット データセット|ソース データセット|
 | - | - | - |
@@ -94,7 +93,7 @@ Tableadapter を使い慣れているの場合は、これらのトピックの�
 > [!CAUTION]
 > `preserveChanges = true`シナリオでは場合、<xref:System.Data.DataSet.RejectChanges%2A>メソッドは、ターゲット データセットのレコードにし、元のデータに戻ります、*ソース*データセット。 これは、ことをターゲット データセットによって元のデータ ソースを更新しようとすると、その可能性がありますできないことを意味を更新する元の行を検索します。 データ ソースからレコードの更新された別のデータセットを入力し、同時実行制御違反を防ぐために、マージを実行することによって、同時実行制御違反を防ぐことができます。 (コンカレンシー違反は、データセットにレコードが格納された後で別のユーザーがデータ ソース内のレコードを変更すると発生します。)
 
-## <a name="update-constraints"></a>制約を更新します。
+## <a name="update-constraints"></a>制約の更新
 
 既存のデータ行を変更するには、追加または個々 の列のデータを更新します。 データセットに制約 (外部キー、null 非許容の制約など) が含まれている場合は、更新するとき、レコードはエラー状態にする一時的にあります。 1 つの列の更新の終了後、次のいずれかを取得する前に、エラー状態にする、ことができます。
 
@@ -113,7 +112,7 @@ Tableadapter を使い慣れているの場合は、これらのトピックの�
 
 イベントの中断に関する詳細については、次を参照してください。[データセットの読み込み中に制約を無効に](../data-tools/turn-off-constraints-while-filling-a-dataset.md)します。
 
-## <a name="dataset-update-errors"></a>データセット更新エラー
+## <a name="dataset-update-errors"></a>データセットの更新エラー
 
 データセットのレコードを更新するときにエラーが発生する場合があります。 たとえばを列に無効な型のデータまたはデータが長すぎる、またはその他の整合性の問題のあるデータを誤って書き込んだ場合があります。 または、更新イベントのいずれかの段階中にカスタム エラーを引き起こすアプリケーション固有の検証チェックする必要があります。 詳細については、次を参照してください。[検証データセットのデータの](../data-tools/validate-data-in-datasets.md)します。
 
@@ -143,10 +142,10 @@ Tableadapter を使い慣れているの場合は、これらのトピックの�
 
 |DataRowVersion 列挙定数の値|説明|
 | - |-----------------|
-|<xref:System.Data.DataRowVersion.Current>|レコードの現在のバージョンには、レコードで前回実行されたすべての変更が含まれています。<xref:System.Data.DataRow.AcceptChanges%2A>が呼び出されました。 行が削除されている場合、現在のバージョンはありません。|
+|<xref:System.Data.DataRowVersion.Current>|レコードの現在のバージョンには、レコードで前回実行されたすべての変更が含まれています。<xref:System.Data.DataRow.AcceptChanges%2A>が呼び出されました。 行が削除されている場合、現在のバージョンは存在しません。|
 |<xref:System.Data.DataRowVersion.Default>|データセット スキーマまたはデータ ソースにより定義されたレコードの既定値です。|
 |<xref:System.Data.DataRowVersion.Original>|レコードの元のバージョンは、データセットで最後の変更がコミットされたときのレコードのコピーです。 つまり、通常はデータ ソースから読み込まれたときのレコードのバージョンです。|
-|<xref:System.Data.DataRowVersion.Proposed>|更新中は一時的に使用できるレコードの提案されたバージョン: というまでの時間は、<xref:System.Data.DataRow.BeginEdit%2A>メソッドと<xref:System.Data.DataRow.EndEdit%2A>メソッド。 通常は <xref:System.Data.DataTable.RowChanging> などのイベントのハンドラーで、レコードの提案されたバージョンにアクセスします。 <xref:System.Data.DataRow.CancelEdit%2A> メソッドを呼び出すと、変更は無効になり、データ行の提案されたバージョンは削除されます。|
+|<xref:System.Data.DataRowVersion.Proposed>|更新の実行中、つまり <xref:System.Data.DataRow.BeginEdit%2A> メソッドの呼び出しと <xref:System.Data.DataRow.EndEdit%2A> メソッドの呼び出しの間に一時的に利用できる、レコードの提案されたバージョンです。 通常は <xref:System.Data.DataTable.RowChanging> などのイベントのハンドラーで、レコードの提案されたバージョンにアクセスします。 <xref:System.Data.DataRow.CancelEdit%2A> メソッドを呼び出すと、変更は無効になり、データ行の提案されたバージョンは削除されます。|
 
 元のバージョンおよび現在のバージョンは、更新情報をデータ ソースに送信する場合に役立ちます。 通常、更新情報をデータ ソースに送信すると、データベースの新しい情報がレコードの現在のバージョンに含まれます。 元のバージョンの情報は、更新するレコードを見つけるために使用されます。
 
@@ -172,7 +171,7 @@ Tableadapter を使い慣れているの場合は、これらのトピックの�
 
 データセットを変更すると、変更された行の <xref:System.Data.DataRow.RowState%2A> プロパティが設定されます。 レコードの元と現在のバージョンの確立、維持、および入手できるようにして、<xref:System.Data.DataRowView.RowVersion%2A>プロパティ。 これらの変更された行のプロパティに格納されているメタデータは、データ ソースに適切な更新プログラムを送信する必要があります。
 
-変更内容がデータ ソースの現在の状態を反映している場合は、この情報を保持する必要はなくなります。 通常が 2 つありますが、データセットとそのソースの同期。
+変更内容がデータ ソースの現在の状態を反映している場合は、この情報を保持する必要はなくなります。 通常、データセットとそのソースの同期は以下の 2 通りの場合に保持されます。
 
 - ソースからデータを読み込んだときなど、情報をデータセットに読み込んだ直後。
 
@@ -200,13 +199,13 @@ Tableadapter を使い慣れているの場合は、これらのトピックの�
 
 <xref:System.Data.DataSet.AcceptChanges%2A> メソッドは、3 つのレベルで利用可能です。 呼び出すことができます、<xref:System.Data.DataRow>行にだけコミットするオブジェクトを変更します。 も呼び出すことができます、<xref:System.Data.DataTable>テーブル内のすべての行をコミットするオブジェクト。 呼び出し、最後に、<xref:System.Data.DataSet>データセットのすべてのテーブルのすべてのレコード内のすべての保留中の変更をコミットするオブジェクト。
 
-次の表は、メソッドがオブジェクトに基づいてコミットされる変更について説明します。
+メソッドが呼び出されたオブジェクトに基づいて、コミットされる変更を次の表に示します。
 
 |メソッド|結果|
 |------------|------------|
-|<xref:System.Data.DataRow.AcceptChanges%2A?displayProperty=fullName>|変更は、特定の行にのみコミットされます。|
-|<xref:System.Data.DataTable.AcceptChanges%2A?displayProperty=fullName>|変更は、特定のテーブルのすべての行にコミットされます。|
-|<xref:System.Data.DataSet.AcceptChanges%2A?displayProperty=fullName>|変更は、データセットのすべてのテーブルのすべての行にコミットされます。|
+|<xref:System.Data.DataRow.AcceptChanges%2A?displayProperty=fullName>|変更は特定の行にだけコミットされます。|
+|<xref:System.Data.DataTable.AcceptChanges%2A?displayProperty=fullName>|変更は特定のテーブルのすべての行にコミットされます。|
+|<xref:System.Data.DataSet.AcceptChanges%2A?displayProperty=fullName>|変更はデータセットのすべてのテーブルのすべての行にコミットされます。|
 
 > [!NOTE]
 > TableAdapter を呼び出すことによってデータセットを読み込むかどうか`Fill`メソッドを明示的に変更を反映する必要はありません。 既定で、`Fill`メソッドの呼び出し、`AcceptChanges`データ テーブルの作成が完了した後のメソッド。
@@ -248,13 +247,13 @@ Tableadapter を使い慣れているの場合は、これらのトピックの�
 (Modified)     c400         Nancy Buchanan    Preferred
 ```
 
-アプリケーションは `Update` メソッドを呼び出し、データセットをデータベースに転送します。 このメソッドは各行を順に調べます。 最初の行に転送されません SQL ステートメントはデータベースにデータベースからフェッチされたために、その行が変更されていないためです。
+アプリケーションは `Update` メソッドを呼び出し、データセットをデータベースに転送します。 このメソッドは各行を順に調べます。 最初の行はデータベースからフェッチされた行であり、変更されていないため、このメソッドではデータベースに SQL ステートメントを転送しません。
 
-ただし、2 番目の行について、`Update`メソッドが自動的に正しいデータ コマンドを呼び出すし、データベースに転送します。 特定の SQL ステートメントの構文は、基になるデータ ストアでサポートされている SQL の言語に依存します。 ただし、転送される SQL ステートメントの次の一般的な特徴があります。
+ただし、2 番目の行について、`Update`メソッドが自動的に正しいデータ コマンドを呼び出すし、データベースに転送します。 特定の SQL ステートメントの構文は、基になるデータ ストアでサポートされている SQL の言語に依存します。 しかし、転送される SQL ステートメントには次のような一般的な特徴があります。
 
 - 転送される SQL ステートメントは UPDATE ステートメントである。 <xref:System.Data.DataRow.RowState%2A> プロパティの値が <xref:System.Data.DataRowState.Modified> であるため、このアダプターは UPDATE ステートメントを使用します。
 
-- 転送される SQL ステートメントには、UPDATE ステートメントのターゲットが、行であることを示す WHERE 句が含まれています、`CustomerID = 'c400'`します。 `CustomerID` は転送先のテーブルの主キーであるため、SELECT ステートメントのこの部分により転送先の行を他の行と区別します。 WHERE 句の派生のレコードの元のバージョンに関する情報 (`DataRowVersion.Original`) 行を識別するために必要な値が変更されました場合。
+- 転送される SQL ステートメントには、UPDATE ステートメントの転送先が `CustomerID = 'c400'` の行であることを示す WHERE 句が含まれている。 `CustomerID` は転送先のテーブルの主キーであるため、SELECT ステートメントのこの部分により転送先の行を他の行と区別します。 WHERE 句の派生のレコードの元のバージョンに関する情報 (`DataRowVersion.Original`) 行を識別するために必要な値が変更されました場合。
 
 - 転送される SQL ステートメントには SET 句が含まれており、変更された列の新しい値を設定する。
 
@@ -269,7 +268,7 @@ Tableadapter を使い慣れているの場合は、これらのトピックの�
 
 各パラメーターの <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A?displayProperty=fullName> プロパティは、データ テーブル内の列を指しています。 たとえば、`SourceColumn` パラメーターおよび `au_id` パラメーターの `Original_au_id` プロパティには、データ テーブルの author id を含む列が設定されます。ときに、アダプターの`Update`メソッドの実行、作成者 id 列から読み取り、レコードが更新されると、ステートメントに値を設定します。
 
-UPDATE ステートメントでも、古い (そのレコードは、データベース内にあることができます) の値 (レコードに書き込まれるもの) 両方の新しい値を指定する必要があります。 そのため、値ごとに 2 つのパラメーター: SET 句および WHERE 句の別の 1 つ。 両方のパラメーターが更新されるレコードからデータを読み取りますが、パラメーターのに基づいて列の値のバージョンを取得<xref:System.Data.SqlClient.SqlParameter.SourceVersion>プロパティ。 SET 句のパラメーターは現在のバージョンを取得し、WHERE 句のパラメーターは元のバージョンを取得します。
+UPDATE ステートメントでも、古い (そのレコードは、データベース内にあることができます) の値 (レコードに書き込まれるもの) 両方の新しい値を指定する必要があります。 したがって、それぞれの値に 2 つのパラメーターがあります。SET 句に 1 つ、WHERE 句に 1 つのパラメーターです。 両方のパラメーターが更新されるレコードからデータを読み取りますが、パラメーターのに基づいて列の値のバージョンを取得<xref:System.Data.SqlClient.SqlParameter.SourceVersion>プロパティ。 SET 句のパラメーターは現在のバージョンを取得し、WHERE 句のパラメーターは元のバージョンを取得します。
 
 > [!NOTE]
 > `Parameters` コレクションの値はコードで設定することもできます。通常はデータ アダプターの <xref:System.Data.DataTable.RowChanging> イベントのイベント ハンドラーで設定します。

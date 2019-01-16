@@ -1,8 +1,6 @@
 ---
 title: DebuggerTypeProxy 属性の使用 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -19,16 +17,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ab54c754fdc3b7ae773e71a96936a1c17c6bc5ce
-ms.sourcegitcommit: 9571742f4a808c75b1034aa72fc24b54bc50692e
-ms.translationtype: MT
+ms.openlocfilehash: b75f8ddff8aa210ef09423dc4ba12589c479f3f5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411067"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53889165"
 ---
 # <a name="using-debuggertypeproxy-attribute"></a>DebuggerTypeProxy 属性の使用
 
-<xref:System.Diagnostics.DebuggerTypeProxyAttribute> では、ある型のプロキシ (代理) を指定し、その型をデバッガー ウィンドウで表示する方法を変更します。 プロキシを持つ変数を表示するときに、プロキシ元の型の**表示**します。 デバッガーの変数ウィンドウには、プロキシ型のパブリック メンバーのみが表示されます。 プライベート メンバーは表示されません。
+<xref:System.Diagnostics.DebuggerTypeProxyAttribute> では、ある型のプロキシ (代理) を指定し、その型をデバッガー ウィンドウで表示する方法を変更します。 プロキシを指定した変数を表示すると、元の型の代理としてプロキシが**表示**されます。 デバッガーの変数ウィンドウには、プロキシ型のパブリック メンバーのみが表示されます。 プライベート メンバーは表示されません。
 
 この属性は次の対象に適用できます。
 
@@ -64,7 +62,7 @@ Visual Basic にはクローズ型の構文はないため、Visual Basic で同
 
 `"Namespace.TypeName'2"`
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>「
 
 - [DebuggerDisplay 属性の使用](../debugger/using-the-debuggerdisplay-attribute.md)
 - [.managed オブジェクトのカスタム ビューの作成](../debugger/create-custom-views-of-dot-managed-objects.md)
