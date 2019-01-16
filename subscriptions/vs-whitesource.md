@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる WhiteSourc
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: d9f4db463dad3ee2fbb216284791018dc504d7b6
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: a19c2a8882c7de27feef68416b6152e4a173ad54
+ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53739985"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54154435"
 ---
 #  <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの WhiteSource Bolt
 
@@ -41,20 +41,18 @@ ms.locfileid: "53739985"
    - Microsoft Visual Studio Marketplace から WhiteSource Bolt 拡張機能を[インストール](https://marketplace.visualstudio.com/items?itemName=whitesource.ws-bolt)します。 拡張機能をインストールする権限がない場合は、「[Install free extensions for Azure DevOps Services](/azure/devops/marketplace/install-vsts-extension?view=vsts)」 (Azure DevOps Services の拡張機能を無料でインストールする) を参照してください。
 
 
-~~~
-Click the green **Install** button if you are using Azure DevOps Services, or the **Download** button for Team Foundation Server.  For this example, we will use Azure DevOps Services.
+Azure DevOps Services を使っている場合は緑の **[インストール]** ボタンをクリックし、Team Foundation Server の場合は **[ダウンロード]** ボタンをクリックします。  この例では、Azure DevOps Services を使用します。
 > [!div class="mx-imgBorder"]
-> ![WhiteSource Benefit Install Extension](_img\vs-whitesource\vs-whitesource-download-install.png)
+> ![WhiteSource 特典拡張機能のインストール](_img/vs-whitesource/vs-whitesource-download-install.png)
 
-- Next, select the Azure DevOps organization you want to use and click **Confirm**.  (If you have not yet set up Azure DevOps Services, visit the [Benefits](https://my.visualstudio.com/benefits) page and activate your Azure DevOps Services benefit.)
+- 次に、使用する Azure DevOps 組織を選択して、**[確認]** をクリックします。  (まだ Azure DevOps Services を設定していない場合は、[特典](https://my.visualstudio.com/benefits)ページに移動して Azure DevOps Services 特典をアクティブ化します。)
 
 > [!div class="mx-imgBorder"]
-> ![WhiteSource Benefit Confirm Account](_img\vs-whitesource\vs-whitesource-confirm-account.png)
+> ![WhiteSource 特典アカウントの確認](_img/vs-whitesource/vs-whitesource-confirm-account.png)
 
-- You’ll receive a confirmation that the extension is installed and ready to use.  Click **Get started** to return to the WhiteSource Bolt page and continue.
+- 拡張機能がインストールされて使えることを示す確認が表示されます。  **[Get started]\(使用開始\)** をクリックして WhiteSource Bolt ページに戻って続けます。
 > [!div class="mx-imgBorder"]
-> ![WhiteSource Benefit Install Complete](_img\vs-whitesource\vs-whitesource-install-complete.png)
-~~~
+> ![WhiteSource 特典インストール完了](_img/vs-whitesource/vs-whitesource-install-complete.png)
 
 5. Azure DevOps プロジェクトのダッシュボードを開き、**Azure Pipelines** メニューをクリックして **WhiteSource Bolt** を選択します。
    > [!div class="mx-imgBorder"]
@@ -79,7 +77,7 @@ Click the green **Install** button if you are using Azure DevOps Services, or th
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 6 か月       |  はい          |
+| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 6 か月       |  [はい]          |
 | Visual Studio Professional (Standard) | VL、Azure、リテール                                       | 使用できません。                                                           |N/A         |
 | Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用できません                                             |  N/A         |
 | MSDN Platforms (標準)                                          | VL、リテール                                              | 使用できません                                              | N/A         |
