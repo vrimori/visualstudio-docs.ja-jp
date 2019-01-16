@@ -17,10 +17,10 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.openlocfilehash: db98360ecf13ddeec8af7be0b546553b81a7dc72
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
+ms.lasthandoff: 01/16/2019
 ms.locfileid: "53915362"
 ---
 # <a name="how-to-change-fonts-and-colors-in-visual-studio"></a>方法: Visual Studio で使用するフォントと色を変更する
@@ -70,4 +70,4 @@ Visual Studio の中にある IDE のフレームおよびツール ウィンド
 5.  **[サイズ]** の一覧でテキスト サイズを選び、**[OK]** を選びます。
 
 ## <a name="see-also"></a>「
- [Visual Studio のユーザー補助機能](../ide/reference/accessibility-features-of-visual-studio.md)[方法。Change fonts and colors in the editor](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)」(方法: エディターのフォントと色を変更する) を参照してください。
+ [Visual Studio のユーザー補助機能](../ide/reference/accessibility-features-of-visual-studio.md)[方法。Change fonts and colors in the editor」 (方法: エディターのフォントと色を変更する) を参照してください。

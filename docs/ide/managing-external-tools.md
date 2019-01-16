@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8aa96b9204e81a2947e4eb4dca4bd7b9d5b8b341
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8f918ad272683de5316467d1027e098c1ead91a6
+ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53904182"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54154064"
 ---
 # <a name="manage-external-tools"></a>外部ツールの管理
 
@@ -65,8 +65,8 @@ Visual Studio から **[ツール]** メニューを使用して外部ツール�
 |ターゲット名|$(TargetName)|作成するアイテムのファイル名。|
 |ターゲットの拡張子|$(TargetExt)|作成するアイテムのファイル名拡張子。|
 |バイナリ ディレクトリ|$(BinDir)|作成中のバイナリの最終的な場所 (ドライブ + パスとして定義されます)。|
-|プロジェクト ディレクトリ|$(ProjDir)|現在のプロジェクトのディレクトリ (ドライブ + パス)。|
-|プロジェクト ファイル名|$(ProjFileName)|現在のプロジェクトのファイル名 (ドライブ + パス + ファイル名)。|
+|プロジェクト ディレクトリ|$(ProjectDir)|現在のプロジェクトのディレクトリ (ドライブ + パス)。|
+|プロジェクト ファイル名|$(ProjectFileName)|現在のプロジェクトのファイル名 (ドライブ + パス + ファイル名)。|
 |ソリューション ディレクトリ|$(SolutionDir)|現在のソリューションのディレクトリ (ドライブ + パス)。|
 |ソリューション ファイル名|$(SolutionFileName)|現在のソリューションのファイル名 (ドライブ + パス + ファイル名)。|
 

@@ -10,10 +10,10 @@ ms.prod: visual-studio-dev15
 ms.workload:
 - data-storage
 ms.openlocfilehash: 0c4b3c752a2ca28c4cfb4b08b2f51f8b8fc6ac23
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
+ms.lasthandoff: 01/16/2019
 ms.locfileid: "53894156"
 ---
 # <a name="linq-to-sql-tools-in-visual-studio"></a>Visual Studio の LINQ to SQL ツール
@@ -41,7 +41,7 @@ Visual Studio によって作成、 *.dbml*ファイルを開き、ソリュー�
 ![LINQ to SQL デザイナー](../data-tools/media/raddata-linq-to-sql-designer.png)
 
 > [!IMPORTANT]
-> **O/R デザイナー**簡単なオブジェクト リレーショナル マッパーは、1 対 1 のマッピング関係のみをサポートしているためです。 つまり、エンティティ クラスには、データベース テーブルまたはビューとの 1:1 のマッピング関係しか持たせることができません。 参加しているテーブルにエンティティ クラスのマッピングなどの複雑なマッピングはサポートされていません。複雑なマッピングの Entity Framework を使用します。 また、デザイナーは一方向のコード ジェネレーターです。 つまり、デザイナー サーフェイスに加えた変更だけがコード ファイルに反映されます。 コード ファイルを手動で変更は反映されません、 **O/R デザイナー**します。 コード ファイルに手動で加えた変更は、デザイナーを保存してコードを再生成するときに上書きされます。 ユーザー コードを追加し、によって生成されたクラスを拡張する方法については、 **O/R デザイナー**を参照してください[方法。O/R デザイナーで生成されたコードを拡張する](../data-tools/how-to-extend-code-generated-by-the-o-r-designer.md)。
+> **O/R デザイナー**簡単なオブジェクト リレーショナル マッパーは、1 対 1 のマッピング関係のみをサポートしているためです。 つまり、エンティティ クラスには、データベース テーブルまたはビューとの 1:1 のマッピング関係しか持たせることができません。 参加しているテーブルにエンティティ クラスのマッピングなどの複雑なマッピングはサポートされていません。複雑なマッピングの Entity Framework を使用します。 また、デザイナーは一方向のコード ジェネレーターです。 つまり、デザイナー サーフェイスに加えた変更だけがコード ファイルに反映されます。 コード ファイルを手動で変更は反映されません、 **O/R デザイナー**します。 コード ファイルに手動で加えた変更は、デザイナーを保存してコードを再生成するときに上書きされます。 ユーザー コードを追加し、によって生成されたクラスを拡張する方法については、 **O/R デザイナー**を参照してください[方法。O/R デザイナーで生成されたコードを拡張する
 
 ## <a name="create-and-configure-the-datacontext"></a>作成し、DataContext の構成
 

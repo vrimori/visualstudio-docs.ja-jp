@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9de6c966a2b58cd603094a846238f2f91c80359b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: HT
+ms.openlocfilehash: d920897c831ca1c92b1db5fe3d649ffd7ee67143
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53935113"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54268774"
 ---
 # <a name="debugging-options-dialog-box"></a>[デバッグ] ([オプション] ダイアログ ボックス)
 **[ツール]** メニューの **[オプション]** ダイアログ ボックスの **[デバッグ]** フォルダーには、以下のページがあります。これらのページを使ってデバッガー ツールのオプションを指定できます。  
@@ -41,5 +41,5 @@ ms.locfileid: "53935113"
   
 ## <a name="see-also"></a>「  
  [デバッガーのセキュリティ](../debugger/debugger-security.md) [Visual Studio でのデバッグ](../debugger/index.md)  
- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
+ [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)   
  [デバッグ用ユーザー インターフェイス リファレンス](../debugger/debugging-user-interface-reference.md)

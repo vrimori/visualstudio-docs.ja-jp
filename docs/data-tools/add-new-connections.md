@@ -8,12 +8,12 @@ manager: douge
 ms.prod: visual-studio-dev15
 ms.workload:
 - data-storage
-ms.openlocfilehash: 927edacf968ed92eddea96f93cc4f67cbd137fcc
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: HT
+ms.openlocfilehash: 73b09384bd57fd4ea0890d107ce641e4b615559f
+ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53880599"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54154219"
 ---
 # <a name="add-new-connections"></a>新しい接続を追加する
 
@@ -25,7 +25,7 @@ ms.locfileid: "53880599"
 
 - Cloud Explorer
 
-   このウィンドウを Visual Studio 拡張機能として手動でインストールを選択して**ツール** > **拡張機能と更新** > **オンライン** >  **Visual Studio Markeplace**します。 探索と Azure サービスに接続するのには、特殊な機能を提供します。
+   このウィンドウを Visual Studio 拡張機能として手動でインストールを選択して**ツール** > **拡張機能と更新** > **オンライン** >  **Visual Studio Marketplace**します。 探索と Azure サービスに接続するのには、特殊な機能を提供します。
 
 - SQL Server オブジェクト エクスプローラー
 

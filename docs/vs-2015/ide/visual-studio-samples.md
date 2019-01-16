@@ -16,10 +16,10 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.openlocfilehash: c604684fea431d29c76098a77218e36a63fc770f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
+ms.lasthandoff: 01/16/2019
 ms.locfileid: "53936569"
 ---
 # <a name="visual-studio-samples"></a>Visual Studio のサンプル
@@ -42,7 +42,7 @@ ms.locfileid: "53936569"
 |[JavaScript のサンプル](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=JavaScript)|JavaScript でさまざまな機能を使用する方法を示します。|
 |[C++ のサンプル](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B)|C++ でさまざまな機能を使用する方法を示します。|
 |[DirectX のサンプル](http://code.msdn.microsoft.com/site/search?query=DirectX&f%5B1%5D.Value=DirectX&f%5B1%5D.Type=SearchText&f%5B0%5D.Value=C%20%20&f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Text=Invalid%20Value&ac=2)|DirectX の使い方を示します。|
-|[Office 開発のサンプル](http://msdn.microsoft.com/library/9ebc7de2-59dd-414c-888b-7549d3c3543c)|Visual Studio 内で Office 開発ツールを使用する方法を示します。 最新のサンプルについては、「 [コード レシピ: サンプルコードから学ぶ](http://go.microsoft.com/fwlink/?LinkID=248199)」をご覧ください。|
+|[Office 開発のサンプル](http://msdn.microsoft.com/library/9ebc7de2-59dd-414c-888b-7549d3c3543c)|Visual Studio 内で Office 開発ツールを使用する方法を示します。 最新のサンプルでは、次を参照してください。 [MSDN デベロッパー サンプル。コードから学習|
 |[VSSDK のサンプル](http://aka.ms/vs2015sdksamples)|Visual Studio を拡張する方法を示します。|
 
 ## <a name="see-also"></a>「

@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8407f360ee35b0210a5ca6411af8720b0191a080
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: HT
+ms.openlocfilehash: 648af91d4b71be65e1f5befef1c3a84225bfabfe
+ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53843477"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54154325"
 ---
 # <a name="how-to-debug-optimized-code"></a>方法: 最適化されたコードをデバッグする
 
@@ -74,7 +74,7 @@ ms.locfileid: "53843477"
 
 8. [`Custom`] に対して [`Optimization`] オプションを選択すると、プロパティ リストに表示されているその他のプロパティについてオプションを設定できるようになります。
 
-9. プロジェクトのプロパティ ページの [構成プロパティ]、[C/C++]、[コマンド ライン] ノードを選択し、`(`[/Zo](/cpp/build/reference/zo-enhance-optimized-debugging)`)`を **[追加のオプション]** テキスト ボックスに追加します。
+9. 構成プロパティ、C と C++ プロジェクト プロパティ ページのコマンドライン ノードを選択し、追加`(` [/Zo](/cpp/build/reference/zo-enhance-optimized-debugging) `)`を**追加オプション**テキスト ボックス。
 
     > [!WARNING]
     >  `/Zo` には、Visual Studio 2013 更新プログラム 3 以降のバージョンが必要です。

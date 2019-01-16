@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 92273fab869c076dbf0949ef636dc669f892ec0a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: HT
+ms.openlocfilehash: 4aced0df16791e44c7fd8be67ccc22343b1272fa
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53875642"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54154377"
 ---
 # <a name="graphics-frame-analysis"></a>グラフィックス フレーム分析
 Visual Studio Graphics Analyzer のグラフィックス フレーム分析を使用して、Direct3D ゲームまたはアプリケーションのレンダリング パフォーマンスを分析し、最適化します。  
@@ -91,7 +91,7 @@ Visual Studio Graphics Analyzer のグラフィックス フレーム分析を�
 #### <a name="statistical-significance"></a>統計的な有意性  
  最も高い関連性を持つレンダリング バリエーションを目立たせるために、フレーム分析は、各レンダリング バリアントの統計的な有意性を決定し、重要なものを太字で示します。 パフォーマンスが向上しているものは緑で、パフォーマンスが低下しているものは赤で示されます。 統計的に重要な意味を持たない結果は、通常の書体で示されます。  
   
- ![描画呼び出しバリアントの統計的関係](media/pix_frame_analysis_summary_stats.png "pix_frame_analysis_summary_stats")  
+ ![描画呼び出しバリアントの統計的な関連性](media/pix_frame_analysis_summary_stats.png "pix_frame_analysis_summary_stats")  
   
  フレーム分析では、統計的な関連性を決定するには、[スチューデントの t 検定](http://www.wikipedia.org/wiki/Student%27s_t-test)します。  
   

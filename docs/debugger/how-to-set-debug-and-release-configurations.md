@@ -31,12 +31,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 33b33f25b1049afcf71a67af02927e25887d1621
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: HT
+ms.openlocfilehash: 339fb8b46a72f44428e9a3b177e194dfb484bbb3
+ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53837759"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54204348"
 ---
 # <a name="set-debug-and-release-configurations-in-visual-studio"></a>Visual Studio でのデバッグおよびリリース構成の設定
 
@@ -44,7 +44,7 @@ Visual Studio プロジェクトでは、ご使用のプログラムに対応す
 
 デバッグ構成を完全なシンボリック デバッグ情報と最適化は行われません、プログラムをコンパイルします。 ソース コードと生成された命令の関係は非常に複雑であり、最適化を行うとデバッグが困難になるためです。
 
-プログラムのリリース構成では、シンボリック デバッグ情報がないとは完全に最適化されています。 [使用しているコンパイラ オプションによっては](#BKMK_symbols_release)、デバッグ情報が PDB ファイル内に生成される場合があります。 .Pdb ファイルを作成するは、後で、リリース バージョンをデバッグする必要がある場合に役立ちます。
+プログラムのリリース構成では、シンボリック デバッグ情報がないとは完全に最適化されています。 マネージ コードと C++ コードでは、デバッグ情報を生成して .pdb ファイル、[コンパイラ オプションによって](#BKMK_symbols_release)のために使用されます。 .Pdb ファイルを作成するは、後で、リリース バージョンをデバッグする必要がある場合に役立ちます。
 
 ビルド構成の詳細については、「[ビルド構成について](../ide/understanding-build-configurations.md)」を参照してください。
 

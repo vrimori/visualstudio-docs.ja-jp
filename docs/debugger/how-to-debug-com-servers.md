@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6343366478e360631b5a50c8c6d36ca4b31c27cf
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: HT
+ms.openlocfilehash: cc8cbf7e087e2198071aef9f77c109f3a7c71640
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53853932"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54268574"
 ---
 # <a name="how-to-debug-com-servers"></a>方法: COM サーバーをデバッグする
 COM サーバー アプリケーションのデバッグには固有の問題があります。これらの問題は、常に簡単に解決できるとは限りません。  
@@ -47,4 +47,4 @@ COM サーバー アプリケーションのデバッグには固有の問題が
  [方法: RPC デバッグを使用して COM クライアントおよびサーバーをデバッグする](../debugger/how-to-debug-com-clients-and-servers-using-rpc-debugging.md)   
  [COM サーバーおよび COM コンテナーのデバッグ](../debugger/com-server-and-container-debugging.md)   
  [Visual Studio でのデバッグ](../debugger/index.md)  
- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
+ [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)

@@ -1,6 +1,6 @@
 ---
 title: '方法: スクリプト ドキュメントを表示 |Microsoft Docs'
-ms.date: 11/04/2016
+ms.date: 01/08/2019
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -15,21 +15,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3592056fdde7756f3fbe63d0dc5d86782fdf9a8b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: HT
+ms.openlocfilehash: ca9eff00f76bd62abce3c3dae061958af546e483
+ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53867729"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54204136"
 ---
-# <a name="how-to-view-script-documents"></a>方法: スクリプト ドキュメントを表示する
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の以前のバージョンでは、サーバー側スクリプトによって生成されたクライアント側スクリプト ファイルは [スクリプト エクスプローラー] ウィンドウに表示されました。 [スクリプト エクスプローラー] ウィンドウは非表示のことが多く、クライアント側スクリプトが利用できるかどうかが常に明確とは限りませんでした。  
+# <a name="how-to-view-script-documents-javascript"></a>方法: スクリプト ドキュメントを表示 (JavaScript)
+
+サーバー側スクリプト ファイルは、ソリューション エクスプ ローラーで表示されます。 クライアント側スクリプト ファイルは、デバッグ モードまたは中断モードのときにのみ表示されます。 クライアント側スクリプト ファイルに表示されます、**スクリプト ドキュメント**ノード。  
   
- [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] では、サーバー側スクリプトによって生成されたクライアント側スクリプト ファイルは、既定で表示されるソリューション エクスプローラーに表示されます。 [スクリプト エクスプローラー] ウィンドウは削除されました。  
-  
- クライアント側スクリプト ファイルは、デバッグ モードまたは中断モードのときにのみ表示されます。 これらは **[スクリプト ドキュメント]** ノードに表示されます。  
-  
- サーバー側スクリプト ファイルは常に表示されます。 これらは **[\<Website Pathname>]** ノードに表示されます。 ノードの名前には、この例に似ています。 `c:\...\Website2\`  
+> [!NOTE]
+> 前へ[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]サーバー側スクリプトから生成されたクライアント側スクリプト ファイルは、スクリプト エクスプ ローラー ウィンドウに表示します。
   
 ### <a name="to-view-a-server-side-script-document"></a>サーバー側スクリプト ドキュメントを表示するには  
   

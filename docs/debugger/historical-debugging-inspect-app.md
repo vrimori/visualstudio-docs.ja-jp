@@ -8,19 +8,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 998b94a13f3650446f9f791ffc29c7c863f9df89
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: HT
+ms.openlocfilehash: 0022d94d8bb786340dba5d2d412bbbd46585e35e
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968632"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227708"
 ---
-# <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio"></a>Visual Studio でデバッグ履歴の IntelliTrace を使用してアプリを調べる
+# <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio-c-visual-basic-c"></a>Visual Studio でデバッグ履歴の IntelliTrace を使用してアプリを検査 (C#、Visual Basic、C++)
+
 使用することができます[デバッグ履歴](../debugger/historical-debugging.md)を後方に移動し、アプリケーションの実行を転送してその状態を検査します。  
   
 IntelliTrace は Visual Studio Enterprise Edition で使用できますが、Professional Edition または Community Edition では使用できません。  
   
-## <a name="navigate-your-code-with-historical-debugging"></a>デバッグ履歴でコードを移動します。  
+## <a name="navigate-your-code-with-historical-debugging"></a>デバッグ履歴でコードを移動します。
+
  バグのあるシンプルなプログラムから始めましょう。 C# コンソール アプリケーションで次のコードを追加します。  
   
 ```csharp  

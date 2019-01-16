@@ -20,15 +20,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 681a1b150058c66be42caca7241b9054151098f8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: HT
+ms.openlocfilehash: 90278476b2530e80c33440ca6e2dc299be5e9be5
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53858793"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269788"
 ---
 # <a name="executable-for-debugging-session-dialog-box"></a>[デバッグ セッションで実行可能] ダイアログ ボックス
-このダイアログ ボックスは、ダイナミック リンク ライブラリ (DLL: Dynamic-Link Library) をデバッグするときに、実行可能ファイルが指定されていない場合に表示されます。 Visual Studio では、DLL を直接起動できません。 代わりに、指定した実行可能ファイルが起動されます。 DLL は、実行可能ファイルから呼び出されたときにデバッグできます。  
+
+このダイアログ ボックスは、ダイナミック リンク ライブラリ (DLL: Dynamic-Link Library) をデバッグするときに、実行可能ファイルが指定されていない場合に表示されます。 Visual Studio で DLL を直接起動することはできません。 代わりに、Visual Studio は、指定された実行可能ファイルを起動します。 実行可能ファイルによって呼び出された場合は、DLL をデバッグできます。  
   
  **実行可能ファイル名**  
  デバッグ中の DLL を呼び出す実行可能ファイルへのパス名を入力します。  
@@ -36,8 +37,9 @@ ms.locfileid: "53858793"
  **プロジェクトにアクセスする URL (ATL Server のみ)**  
  ATL Server の DLL をデバッグする場合は、プロジェクトが存在する URL を入力します。  
   
- URL を入力すると、これらの設定がプロジェクトの [プロパティ ページ] に格納されるため、後続のデバッグ セッションで設定を再入力する必要がなくなります。 設定変更が必要な場合は [プロパティ ページ] を開いて値を変更できます。 デバッグ セッションで実行可能ファイルを指定する方法の詳細については、「[DLL のデバッグ](../debugger/how-to-debug-from-a-dll-project.md)」を参照してください。  
+ 入力した後、後続のデバッグ セッションを再入力する必要はありませんので、これらの設定がプロジェクト プロパティ ページに格納されます。 設定変更が必要な場合は [プロパティ ページ] を開いて値を変更できます。 デバッグ セッションで実行可能ファイルを指定する方法の詳細については、「[DLL のデバッグ](../debugger/how-to-debug-from-a-dll-project.md)」を参照してください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>「
+
  [Visual Studio でのデバッグ](../debugger/index.md)  
- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
+ [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)
