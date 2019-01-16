@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e16df68ef36ee38b20be4da0150ca6550cd3644
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 55780d7e1990a9d10e504c781953cf3f95dd3dc1
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53864719"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54315593"
 ---
 # <a name="code-snippets-schema-reference"></a>コード スニペット スキーマ リファレンス
 
@@ -547,7 +547,7 @@ IntelliSense コード スニペットによって使用されるインポート
 |[Code 要素](../ide/code-snippets-schema-reference.md#code-element)|必須の要素です。 ドキュメント ファイルに挿入するコードを指定します。 `Code` 要素で使用できる `Snippet` 要素は 1 つだけです。|
 |[Declarations 要素](../ide/code-snippets-schema-reference.md#declarations-element)|省略可能な要素です。 編集できるコード スニペットの部分を構成するリテラルとオブジェクトを指定します。 `Declarations` 要素には 0 個または 1 個の `Snippet` 要素があります。|
 |[Imports 要素](../ide/code-snippets-schema-reference.md#imports-element)|省略可能な要素です。 複数の `Import` 要素をグループ化します。 `Imports` 要素には 0 個または 1 個の `Snippet` 要素があります。|
-||省略可能な要素です。 複数の `Reference` 要素をグループ化します。 `References` 要素には 0 個または 1 個の `Snippet` 要素があります。|
+|[References 要素](../ide/code-snippets-schema-reference.md#references-element)|省略可能な要素です。 複数の `Reference` 要素をグループ化します。 `References` 要素には 0 個または 1 個の `Snippet` 要素があります。|
 
 |親要素|説明|
 | - |-----------------|
