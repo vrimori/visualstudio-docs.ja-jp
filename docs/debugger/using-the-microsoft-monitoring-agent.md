@@ -8,14 +8,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 21ebc3e81852abb11a8c48c426d56eb837a19005
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: HT
+ms.openlocfilehash: 2196d90dbd82f7aee6cca2945621025722497cbd
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53821049"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227578"
 ---
-# <a name="using-the-microsoft-monitoring-agent"></a>Microsoft Monitoring Agent の使用
+# <a name="using-the-microsoft-monitoring-agent-c-visual-basic"></a>Microsoft Monitoring Agent を使用して (C#、Visual Basic)
+
 **Microsoft Monitoring Agent**を使用して、IIS によってホストされる ASP.NET Web アプリおよび SharePoint 2010 や SharePoint 2013 アプリケーションのエラー、パフォーマンスの問題、またはその他の問題をローカルで監視することができます。 エージェントからの診断イベントを IntelliTrace ログ (.iTrace) ファイルに保存できます。 次に、Visual Studio Enterprise (Professional Edition や Community Edition ではない) のログを開いて、すべての Visual Studio 診断ツールで問題をデバッグできます。 Agent を **トレース** モードで実行して、IntelliTrace 診断データとメソッド データを収集することもできます。 Microsoft Monitoring Agent は [Application Insights](/azure/application-insights/) および [System Center Operation Manager](/previous-versions/system-center/system-center-2012-R2/hh205987(v=sc.12))と統合できます。 Microsoft Monitoring Agent がインストールされている場合、対象システムの環境が変更されます。  
   
 > [!NOTE]
@@ -31,7 +32,8 @@ ms.locfileid: "53821049"
   
 3.  [手順 3:記録されたイベントを保存します。](#SaveEvents)  
   
-##  <a name="SetUpMonitoring">手順 1:</a> Microsoft Monitoring Agent を設定する  
+##  <a name="SetUpMonitoring">手順 1:</a> Microsoft Monitoring Agent を設定する
+
  Web サーバーでスタンドアロン エージェントを設定して、アプリケーションを変更せずにローカルでの監視を実行します。 System Center 2012 を使用している場合は、「 [Microsoft Monitoring Agent のインストール](/previous-versions/system-center/system-center-2012-R2/dn465156(v=sc.12))」をご覧ください。  
   
 ###  <a name="SetUpStandaloneMMA"></a> スタンドアロンのエージェントを設定する  
@@ -70,7 +72,7 @@ ms.locfileid: "53821049"
   
 2.  Microsoft Monitoring Agent の PowerShell モジュールを既定のインストール場所からインポートします。  
   
-     **PS c: > インポート モジュール"監視 Agent\Agent\PowerShell\Microsoft.MonitoringAgent.PowerShell\Microsoft.MonitoringAgent.PowerShell.dll C:\Program files \microsoft"**  
+     **PS C:>Import-Module "C:\Program Files\Microsoft Monitoring Agent\Agent\PowerShell\Microsoft.MonitoringAgent.PowerShell\Microsoft.MonitoringAgent.PowerShell.dll"**  
   
 3.  最新のヘルプ コンテンツを入手するには、[TechNet にアクセスしてください](http://technet.microsoft.com/systemcenter/default) 。  
   
@@ -116,15 +118,15 @@ ms.locfileid: "53821049"
   
      短い構文を次に示します。  
   
-     **Start-webapplicationmonitoring** *"\<appName >"*  *\<monitoringMode >* *"\<outputPath >"* *\<UInt32 >* *"\<collectionPlanPathAndFileName >"*  
+     **Start-WebApplicationMonitoring** *"\<appName>"* *\<monitoringMode>* *"\<outputPath>"* *\<UInt32>* *"\<collectionPlanPathAndFileName>"*  
   
      Web アプリの名前と軽量な **Monitor** モードのみを使用する例を次に示します。  
   
-     **PS c: > Start-webapplicationmonitoring"FabrikamFabrikamFiber.Web"監視"C:IntelliTraceLogs"**  
+     **PS C:>Start-WebApplicationMonitoring "FabrikamFabrikamFiber.Web" Monitor "C:IntelliTraceLogs"**  
   
      IIS パスおよび軽量な **Monitor** モードを使用する例を次に示します。  
   
-     **PS c: > Start-webapplicationmonitoring"IIS:sitesFabrikamFabrikamFiber.Web"監視"C:IntelliTraceLogs"**  
+     **PS C:>Start-WebApplicationMonitoring "IIS:sitesFabrikamFabrikamFiber.Web" Monitor "C:IntelliTraceLogs"**  
   
      監視を開始した後、アプリの再起動中に Microsoft Monitoring Agent が一時停止する場合があります。  
   
@@ -132,11 +134,11 @@ ms.locfileid: "53821049"
   
     |||  
     |-|-|  
-    |*"\<appName >"*|Web サイトへのパスおよび IIS での Web アプリの名前を指定します。 また、IIS パスを含めることもできます。<br /><br /> *"\<IISWebsiteName >\\< IISWebAppName\>"*<br /><br /> - または -<br /><br /> **"IIS:\sites**  *\\< IISWebsiteName\>\\< IISWebAppName\>"*<br /><br /> IIS マネージャーでこのパスを検索できます。 次に例を示します。<br /><br /> ![IIS web サイトおよび web アプリへのパス](../debugger/media/ffr_iismanager.png "FFR_IISManager")<br /><br /> また、 [Get-WebSite](http://technet.microsoft.com/library/ee807832.aspx) コマンドおよび [Get WebApplication](http://technet.microsoft.com/library/ee790554.aspx) コマンドを使用できます。|  
-    |*\<monitoringMode >*|監視モードを指定します。<br /><br /> <ul><li>**監視**: 例外イベントとパフォーマンス イベントについての最小限の情報を記録します。 このモードは既定の収集計画を使用します。</li><li>**トレース**: 指定された収集計画を使用して、関数レベルの情報を記録したり、SharePoint 2010 および SharePoint 2013 アプリケーションを監視したりします。 このモードでは、アプリの実行が遅くなる可能性があります。<br /><br /> <ul><li>[Q: アプリケーション プールへのアクセス許可の設定方法](#FullPermissionsITLog)</li><li>[Q: アプリのパフォーマンスの低下なしにほとんどのデータを取得する方法](#Minimizing)</li></ul><br />     この例では、SharePoint サイトでホストされる SharePoint アプリのイベントを記録します。<br /><br />     **Start-webapplicationmonitoring"FabrikamSharePointSite\FabrikamSharePointApp""C:\Program files \microsoft Monitoring Agent\Agent\IntelliTraceCollector\collection_plan.ASP.NET.default.xml""C:\IntelliTraceLogs"のトレース**</li><li>**カスタム**: 指定したカスタム収集計画を使用してカスタムの情報を記録します。 監視を開始してから収集計画を編集するときは、監視を再起動する必要があります。</li></ul>|  
-    |*"\<outputPath >"*|IntelliTrace ログを格納するディレクトリへの完全パスを指定します。 監視を開始する前にこのディレクトリの作成を確認します。|  
+    |*"\<appName>"*|Web サイトへのパスおよび IIS での Web アプリの名前を指定します。 また、IIS パスを含めることもできます。<br /><br /> *"\<IISWebsiteName>\\<IISWebAppName\>"*<br /><br /> - または -<br /><br /> **"IIS:\sites** *\\<IISWebsiteName\>\\<IISWebAppName\>"*<br /><br /> IIS マネージャーでこのパスを検索できます。 次に例を示します。<br /><br /> ![IIS web サイトおよび web アプリへのパス](../debugger/media/ffr_iismanager.png "FFR_IISManager")<br /><br /> また、 [Get-WebSite](http://technet.microsoft.com/library/ee807832.aspx) コマンドおよび [Get WebApplication](http://technet.microsoft.com/library/ee790554.aspx) コマンドを使用できます。|  
+    |*\<monitoringMode>*|監視モードを指定します。<br /><br /> <ul><li>**監視**: 例外イベントとパフォーマンス イベントについての最小限の情報を記録します。 このモードは既定の収集計画を使用します。</li><li>**トレース**: 指定された収集計画を使用して、関数レベルの情報を記録したり、SharePoint 2010 および SharePoint 2013 アプリケーションを監視したりします。 このモードでは、アプリの実行が遅くなる可能性があります。<br /><br /> <ul><li>[Q: アプリケーション プールへのアクセス許可の設定方法](#FullPermissionsITLog)</li><li>[Q: アプリのパフォーマンスの低下なしにほとんどのデータを取得する方法](#Minimizing)</li></ul><br />     この例では、SharePoint サイトでホストされる SharePoint アプリのイベントを記録します。<br /><br />     **Start-webapplicationmonitoring"FabrikamSharePointSite\FabrikamSharePointApp""C:\Program files \microsoft Monitoring Agent\Agent\IntelliTraceCollector\collection_plan.ASP.NET.default.xml""C:\IntelliTraceLogs"のトレース**</li><li>**カスタム**: 指定したカスタム収集計画を使用してカスタムの情報を記録します。 監視を開始してから収集計画を編集するときは、監視を再起動する必要があります。</li></ul>|  
+    |*"\<outputPath>"*|IntelliTrace ログを格納するディレクトリへの完全パスを指定します。 監視を開始する前にこのディレクトリの作成を確認します。|  
     |*\<UInt32 >*|IntelliTrace ログの最大サイズを指定します。 IntelliTrace ログの既定の最大サイズは 250 MB です。<br /><br /> ログがこの制限に達すると、エージェントは最も早いエントリを上書きして、さらに多くのエントリのための場所を確保します。 この制限を変更するには、 **-MaximumFileSizeInMegabytes** オプションを使用するか、収集計画の `MaximumLogFileSize` 属性を編集します。|  
-    |*"\<collectionPlanPathAndFileName >"*|完全パスまたは相対パスと収集計画のファイル名を指定します。 この計画は、エージェントの設定を構成する .xml ファイルになっています。<br /><br /> これらの計画はエージェントに含まれており、Web アプリおよび SharePoint アプリケーションを使用します。<br /><br /> -   **collection_plan.ASP.NET.default.xml**<br />     例外、パフォーマンス イベント、データベース呼び出し、Web サーバー要求などのイベントのみを収集します。<br />-   **collection_plan.ASP.NET.trace.xml**<br />     関数レベル呼び出しと既定の収集計画のすべてのデータを収集します。 この計画は詳細な分析に適していますが、アプリの速度が低下する可能性があります。<br /><br /> これらの計画のローカライズ バージョンは、エージェントのサブフォルダーに格納されています。 また、 [これらの計画をカスタマイズするか、または独自の計画を作成して](http://go.microsoft.com/fwlink/?LinkId=227871) 、アプリの速度低下を回避できます。 エージェントと同じ安全な場所にカスタム計画を配置します。<br /><br /> [Q: アプリのパフォーマンスの低下なしにほとんどのデータを取得する方法](#Minimizing)|  
+    |*"\<collectionPlanPathAndFileName>"*|完全パスまたは相対パスと収集計画のファイル名を指定します。 この計画は、エージェントの設定を構成する .xml ファイルになっています。<br /><br /> これらの計画はエージェントに含まれており、Web アプリおよび SharePoint アプリケーションを使用します。<br /><br /> -   **collection_plan.ASP.NET.default.xml**<br />     例外、パフォーマンス イベント、データベース呼び出し、Web サーバー要求などのイベントのみを収集します。<br />-   **collection_plan.ASP.NET.trace.xml**<br />     関数レベル呼び出しと既定の収集計画のすべてのデータを収集します。 この計画は詳細な分析に適していますが、アプリの速度が低下する可能性があります。<br /><br /> これらの計画のローカライズ バージョンは、エージェントのサブフォルダーに格納されています。 また、 [これらの計画をカスタマイズするか、または独自の計画を作成して](http://go.microsoft.com/fwlink/?LinkId=227871) 、アプリの速度低下を回避できます。 エージェントと同じ安全な場所にカスタム計画を配置します。<br /><br /> [Q: アプリのパフォーマンスの低下なしにほとんどのデータを取得する方法](#Minimizing)|  
   
      完全な構文とその他の例の詳細については、**get-help Start-WebApplicationMonitoring –detailed** コマンドまたは **get-help Start-WebApplicationMonitoring –examples** コマンドを実行します。  
   
@@ -235,11 +237,11 @@ ms.locfileid: "53821049"
   
 2. [Checkpoint-WebApplicationMonitoring](http://go.microsoft.com/fwlink/?LinkID=313684) コマンドを実行して IntelliTrace ログのスナップショットを保存します。  
   
-    **Checkpoint-webapplicationmonitoring** *"\<IISWebsiteName >\\< IISWebAppName\>"*  
+    **Checkpoint-WebApplicationMonitoring** *"\<IISWebsiteName>\\<IISWebAppName\>"*  
   
     \- または  
   
-    **Checkpoint-webapplicationmonitoring"IIS:\sites**  *\\< IISWebsiteName\>\\< IISWebAppName\>"*  
+    **Checkpoint-WebApplicationMonitoring "IIS:\sites** *\\<IISWebsiteName\>\\<IISWebAppName\>"*  
   
     次に例を示します。  
   
@@ -247,7 +249,7 @@ ms.locfileid: "53821049"
   
     - または -  
   
-    **PS c: > Checkpoint-webapplicationmonitoring"IIS:sitesFabrikamFabrikamFiber.Web"**  
+    **PS C:>Checkpoint-WebApplicationMonitoring "IIS:sitesFabrikamFabrikamFiber.Web"**  
   
     詳細については、**get-help Checkpoint-WebApplicationMonitoring –detailed** コマンドまたは **get-help Checkpoint-WebApplicationMonitoring –examples** コマンドを実行します。  
   
@@ -265,11 +267,11 @@ ms.locfileid: "53821049"
   
 2. [Stop-WebApplicationMonitoring](http://go.microsoft.com/fwlink/?LinkID=313687) コマンドを実行して、IntelliTrace ログを作成し、特定の Web アプリの監視を停止します。  
   
-    **Stop-webapplicationmonitoring** *"\<IISWebsiteName >\\< IISWebAppName\>"*  
+    **Stop-WebApplicationMonitoring** *"\<IISWebsiteName>\\<IISWebAppName\>"*  
   
     \- または  
   
-    **Stop-webapplicationmonitoring"IIS:\sites**  *\\< IISWebsiteName\>\\< IISWebAppName\>"*  
+    **Stop-WebApplicationMonitoring "IIS:\sites** *\\<IISWebsiteName\>\\<IISWebAppName\>"*  
   
     すべての Web アプリの監視を停止するには、次のコマンドを実行します。  
   
@@ -277,11 +279,11 @@ ms.locfileid: "53821049"
   
     次に例を示します。  
   
-    **PS c:\\> Stop-webapplicationmonitoring"Fabrikam\iFabrikamFiber.Web"**  
+    **PS C:\\>Stop-WebApplicationMonitoring "Fabrikam\iFabrikamFiber.Web"**  
   
     \- または  
   
-    **PS c:\\> Stop-webapplicationmonitoring"IIS:\sites\Fabrikam\FabrikamFiber.Web"**  
+    **PS C:\\>Stop-WebApplicationMonitoring "IIS:\sites\Fabrikam\FabrikamFiber.Web"**  
   
     詳細については、**get-help Stop-WebApplicationMonitoring –detailed** コマンドまたは **get-help Stop-WebApplicationMonitoring –examples** コマンドを実行します。  
   

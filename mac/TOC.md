@@ -1,7 +1,15 @@
-# [Visual Studio for Mac の概要](index.md)
-# [IDE ツアー](ide-tour.md)
+---
+ms.openlocfilehash: 641b6b74f523223e48178bdd69ac03b4c3d3392c
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54315476"
+---
+# [Visual Studio for Mac](index.md)
+# [IDE ツアー](/visualstudio/mac/ide-tour/)
 
-# [インストール](installation.md)
+# [インストール](/visualstudio/mac/installation/)
 ## [ファイアウォールまたはプロキシの内側にインストールして使用する](install-behind-a-firewall-or-proxy-server.md)
 ## [プレビュー リリースをインストールする](install-preview.md)
 ## [更新](update.md)
@@ -65,6 +73,7 @@
 ### [Unity ツールの使用](using-vsmac-tools-unity.md)
 ### [Unity で .NET 4.x を使用する](/visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context)
 ### [変更ログ](/visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context)
+## [Xamarin を使用したモバイル アプリ](/xamarin/)
 
 # [ユーザー補助](accessibility.md)
 

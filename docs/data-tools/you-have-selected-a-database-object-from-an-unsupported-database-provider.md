@@ -9,12 +9,12 @@ manager: douge
 ms.prod: visual-studio-dev15
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4efaf92c9f4688d6870c1152be27eb4c8f4ed933
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: HT
+ms.openlocfilehash: 209ab92e3a24733e2ef4b7b912a36ae920ffffdb
+ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53894442"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54204251"
 ---
 # <a name="you-have-selected-a-database-object-from-an-unsupported-database-provider"></a>サポートされていないデータベース プロバイダーのデータベース オブジェクトが選択されています
 
@@ -23,17 +23,11 @@ ms.locfileid: "53894442"
 > [!NOTE]
 > .NET Framework Data Provider for SQL Server を使用するデータ接続のみがサポートされます。
 
-## <a name="to-correct-this-error"></a>このエラーを解決するには
+## <a name="options"></a>オプション
 
-- **[OK]** をクリックします。
+- **[OK]** をクリックして、サポートされないデータベース プロバイダーを使用する接続にマップされるエンティティ クラスのデザインを続行します。 サポートされないデータベース プロバイダーを使用すると、予期しない動作が発生することがあります。
 
-   サポートされていないデータベース プロバイダーを使用する接続にマップされるエンティティ クラスのデザインを続行できます。 サポートされないデータベース プロバイダーを使用すると、予期しない動作が発生することがあります。
-
-    - または -
-
-- **[キャンセル]** をクリックします。
-
-   操作が停止されます。 .NET Framework Provider for SQL Server を使用するデータ接続を作成または使用してください。
+- クリックして**キャンセル**アクションを停止します。 作成または SQL Server 用 .NET Framework Provider を使用する別のデータ接続を使用します。
 
 ## <a name="see-also"></a>関連項目
 

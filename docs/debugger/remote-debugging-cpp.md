@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2778148c8762c74d1c836a6f5a1b1fd8c9387e12
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: HT
+ms.openlocfilehash: bdbcefe1e0878ef6bf2520edb90ce904e414f211
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53884585"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269762"
 ---
 # <a name="remote-debugging-a-visual-c-project-in-visual-studio"></a>リモート Visual Studio での Visual C プロジェクトのデバッグ
 別のコンピューター上の Visual Studio アプリケーションをデバッグ、インストールして、アプリを展開するコンピューターでリモート ツールを実行、Visual Studio からリモート コンピューターに接続して、デプロイして、アプリを実行するプロジェクトを構成します。
@@ -106,7 +106,7 @@ ms.locfileid: "53884585"
   
 ## <a name="see-also"></a>「  
  [Visual Studio でのデバッグ](../debugger/index.md)  
- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
+ [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)   
  [Windows ファイアウォールをリモート デバッグ用に構成する](../debugger/configure-the-windows-firewall-for-remote-debugging.md)   
  [Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md)   
  [リモートの IIS コンピューター上の ASP.NET のリモート デバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)  

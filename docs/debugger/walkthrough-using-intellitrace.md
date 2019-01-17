@@ -8,19 +8,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d5416becdf4315b3b7d631675ef52cbe6f509fdc
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: HT
+ms.openlocfilehash: 86410567a194753db2001fbd5fba870bb89d7930
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53929391"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227994"
 ---
-# <a name="view-events-with-intellitrace-in-visual-studio"></a>Visual Studio での IntelliTrace を使用したイベントの表示
+# <a name="view-events-with-intellitrace-in-visual-studio-enterprise-c-visual-basic"></a>Visual Studio Enterprise で IntelliTrace を使用したイベントの表示 (C#、Visual Basic)
+
 IntelliTrace を使用して、特定のイベントまたはイベントのカテゴリに関する情報、またはイベントだけでなく、個々の関数呼び出しに関する情報を収集することができます。 この操作を実行する手順を次に示します。  
   
- IntelliTrace は Visual Studio Enterprise Edition で使用できますが、Professional Edition または Community Edition では使用できません。  
+IntelliTrace は Visual Studio Enterprise Edition で使用できますが、Professional Edition または Community Edition では使用できません。  
   
-##  <a name="GettingStarted"></a> Intellitrace を構成します。  
+##  <a name="GettingStarted"></a> IntelliTrace を構成します。  
+
  IntelliTrace イベントのみでデバッグを実行することができます。 IntelliTrace イベントは、デバッガー イベント、例外、.NET Framework イベント、およびその他のシステム イベントです。 デバッグを開始する前に、IntelliTrace が記録するイベントを制御するために、特定のイベントをオンまたはオフにする必要があります。 詳細については、次を参照してください。 [IntelliTrace 機能](../debugger/intellitrace-features.md)します。  
   
  - ファイル アクセスで IntelliTrace イベントをオンにします。 **[ツール] > [オプション] > [IntelliTrace] > [IntelliTrace イベント]** ページに移動して、**[ファイル]** カテゴリを展開します。 **[ファイル]** イベント カテゴリをチェックします。 これにより、すべてのファイル イベント (アクセス、閉じる、削除) がチェックされます。
@@ -68,7 +70,7 @@ IntelliTrace を使用して、特定のイベントまたはイベントのカ�
   
      次のスクリーン ショットは Visual Studio 2015 Update 1 のものです。  
   
-     ![IntelliTraceUpdate1&#45;SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1 SingleEvent")  
+     ![IntelliTraceUpdate1&#45;SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1-SingleEvent")  
   
      ファイルを開くには、パス名のリンクを選択します。 完全なパス名が使用できない場合、 **[ファイルを開く]** ダイアログ ボックスが表示されます。  
   

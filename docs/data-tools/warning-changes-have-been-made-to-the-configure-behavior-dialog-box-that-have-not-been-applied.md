@@ -9,12 +9,12 @@ manager: douge
 ms.prod: visual-studio-dev15
 ms.workload:
 - data-storage
-ms.openlocfilehash: f53164bd4ffe74be2715d89215e6c9c1b526f2bb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: HT
+ms.openlocfilehash: 8e0d7c00cf902baa41586301ff338ebfef78c5aa
+ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53847838"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54204058"
 ---
 # <a name="warning-changes-have-been-made-to-the-configure-behavior-dialog-box-that-have-not-been-applied"></a>警告:[動作の構成] ダイアログ ボックスで行った変更が適用されていません
 
@@ -22,13 +22,11 @@ ms.locfileid: "53847838"
 
 **動作の構成** ダイアログ ボックスでは、構成できます。 `Insert`、 `Update`、および`Delete`使用可能なすべてのクラスの動作。 このメッセージは、新しい **[クラス]** と **[動作]** の組み合わせを選択したときに、前の変更がまだ適用されていない場合に表示されます。
 
-## <a name="to-apply-the-change-and-continue"></a>変更を適用して続行するには
+## <a name="change-options"></a>オプションの変更
 
-- **[はい]** をクリックして、選択された **[クラス]** および **[動作]** に対する変更を適用します。
+- 変更を適用して、引き続き、次のようにクリックします。**はい**します。 変更が適用される、選択した**クラス**と**動作**します。
 
-## <a name="to-cancel-the-previous-change-and-continue"></a>前の変更を取り消して続行するには
-
-- **[いいえ]** をクリックして、選択した **[クラス]** と **[動作]** に対する変更を取り消します。
+- 以前の変更をキャンセルし、続行、**いいえ**します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -15,16 +15,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e23f61f7de4b2723e7be18b6beb76b17fd278cf2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f84b18cd3d4bfbae949ba4dd3199bace6604148f
+ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53947414"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54204490"
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows"></a>[自動変数] と [ローカル] ウィンドウに変数を検査します。
 
-**[自動変数]** と**ローカル**windows は、デバッグ中に変数の値を表示します。 Windows はデバッグ セッション中にのみ使用できます。 **[自動変数]** ウィンドウには、現在のブレークポイントを使用する変数が表示されます。 **ローカル**ウィンドウには、現在の関数またはメソッドは、通常は、ローカル スコープで定義された変数が表示されます。 コードをデバッグしようとした初めての場合は、読み取りをする可能性があります[より適切に記述することでバグを修正C#コード](../debugger/write-better-code-with-visual-studio.md)と[超初心者向けのデバッグ](../debugger/debugging-absolute-beginners.md)にこの記事に進む前にします。
+**[自動変数]** と**ローカル**windows は、デバッグ中に変数の値を表示します。 Windows はデバッグ セッション中にのみ使用できます。 **[自動変数]** ウィンドウには、現在のブレークポイントを使用する変数が表示されます。 **ローカル**ウィンドウには、現在の関数またはメソッドは、通常は、ローカル スコープで定義された変数が表示されます。 コードのデバッグを試みるのが今回初めてである場合は、この記事を先に進む前に[超初心者向けのデバッグ方法](../debugger/debugging-absolute-beginners.md)および[より良い C# コードを書くことによるバグの修正](../debugger/write-better-code-with-visual-studio.md)に関するページを参照することをお勧めします。
 
  **[自動変数]** ウィンドウが使用できるC#、Visual Basic、C++、および Python コードでは、JavaScript ではなくまたはF#します。
   
@@ -39,7 +39,7 @@ ms.locfileid: "53947414"
 
 配列とオブジェクトの表示で、 **[自動変数]** と**ローカル**ツリーのコントロールとして windows。 フィールドとプロパティを表示するビューを展開する変数名の左側にある矢印を選択します。 次の例に示します、<xref:System.IO.FileStream?displayProperty=fullName>オブジェクト、**ローカル**ウィンドウ。
 
-![[ローカル] FileStream](../debugger/media/locals-filestream.png "ローカル FileStream")
+![Locals-FileStream](../debugger/media/locals-filestream.png "Locals-FileStream")
 
 赤の値で、**ローカル**または **[自動変数]** ウィンドウは、値が、最後の評価から変更されたことを意味します。 前のデバッグ セッションから、変更可能性がありますまたはウィンドウで値を変更したためです。
 
