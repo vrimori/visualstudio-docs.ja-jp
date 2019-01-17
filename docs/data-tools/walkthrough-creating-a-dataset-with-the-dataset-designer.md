@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : データセット デザイナーでのデータセットの作成'
+title: 'チュートリアル: データセット デザイナーでデータセットを作成します。'
 ms.date: 09/11/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,21 +12,20 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 32a093e59d918f34ddf5da9cbb5edb13c96b2777
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
-ms.translationtype: MT
+ms.openlocfilehash: e79646609bf592b7a8d71d3e0ba8660c65520715
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117928"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53868522"
 ---
 # <a name="walkthrough-create-a-dataset-with-the-dataset-designer"></a>チュートリアル: データセット デザイナーでデータセットを作成します。
 
 使用してデータセットを作成するこのチュートリアルでは、**データセット デザイナー**します。 記事では、新しいプロジェクトを作成し、新しい追加のプロセス**データセット**項目にします。 ウィザードを使用せず、データベース内のテーブルに基づいて、テーブルを作成する方法について説明します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルでは、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。
 
@@ -58,7 +57,7 @@ ms.locfileid: "37117928"
 
 ## <a name="add-a-new-dataset-to-the-application"></a>アプリケーションに新しいデータセットを追加します。
 
-1.  **プロジェクト**メニューの **新しい項目の追加**します。
+1.  **[プロジェクト]** メニューで **[新しい項目の追加]** を選択します。
 
      **[新しい項目の追加]** ダイアログ ボックスが表示されます。
 
@@ -70,9 +69,9 @@ ms.locfileid: "37117928"
 
 ## <a name="create-a-data-connection-in-server-explorer"></a>サーバー エクスプ ローラーでのデータ接続を作成します。
 
-1.  **ビュー**  メニューのをクリックして**サーバー エクスプ ローラー**します。
+1.  **[表示]** メニューの **[サーバー エクスプローラー]** をクリックします。
 
-2.  **サーバー エクスプ ローラー**、クリックして、**データベースへの接続**ボタンをクリックします。
+2.  **サーバー エクスプローラー**で、**[データベースへの接続]** をクリックします。
 
 3.  Northwind サンプル データベースへの接続を作成します。
 
@@ -82,21 +81,21 @@ ms.locfileid: "37117928"
 
 ### <a name="to-create-the-customers-table"></a>Customers テーブルを作成するには
 
-1.  作成したデータ接続を展開**サーバー エクスプ ローラー**の順に展開し、**テーブル**ノード。
+1.  **サーバー エクスプローラー**で作成したデータ接続を展開し、**[テーブル]** ノードを展開します。
 
-2.  ドラッグ、**顧客**からテーブル**サーバー エクスプ ローラー**上に、**データセット デザイナー**します。
+2.  **サーバー エクスプローラー**から**データセット デザイナー**に **Customers** テーブルをドラッグします。
 
-     A**顧客**データ テーブルと**CustomersTableAdapter**データセットに追加されます。
+     **Customers** データ テーブルと **CustomersTableAdapter** がデータセットに追加されます。
 
 ### <a name="to-create-the-orders-table"></a>Orders テーブルを作成するには
 
--   ドラッグ、**注文**からテーブル**サーバー エクスプ ローラー**上に、**データセット デザイナー**します。
+-   **サーバー エクスプローラー**から**データセット デザイナー**に **Orders** テーブルをドラッグします。
 
-     **注文**データ テーブル、 **OrdersTableAdapter**との間でデータのリレーションシップ、**顧客**と**注文**テーブルに追加されます、データセット。
+     **Orders** データ テーブル、**OrdersTableAdapter**、および **Customers** テーブルと **Orders** テーブル間のリレーションシップが、データセットに追加されます。
 
 ### <a name="to-create-the-orderdetails-table"></a>OrderDetails テーブルを作成するには
 
--   ドラッグ、 **Order Details**からテーブル**サーバー エクスプ ローラー**上に、**データセット デザイナー**します。
+-   **サーバー エクスプローラー**から**データセット デザイナー**に **Order Details** テーブルをドラッグします。
 
      **Order Details**データ テーブル、 **OrderDetailsTableAdapter**との間のリレーションシップ、**注文**と**OrderDetails**テーブルデータセットに追加されます。
 
@@ -104,7 +103,7 @@ ms.locfileid: "37117928"
 
 -   データセットを保存します。
 
--   項目を選択、**データ ソース**ウィンドウ、フォームにドラッグするとします。 詳細については、次を参照してください。 [Visual Studio でのデータにコントロールを Windows フォームのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)します。
+-   **[データ ソース]** ウィンドウの項目を選択し、フォームにドラッグします。 詳細については、次を参照してください。 [Visual Studio でのデータにコントロールを Windows フォームのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)します。
 
 -   TableAdapter に他のクエリを追加します。
 

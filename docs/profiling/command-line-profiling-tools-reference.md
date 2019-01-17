@@ -1,8 +1,6 @@
 ---
 title: コマンド ライン プロファイリング ツール リファレンス | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: a34ba40e-01b1-4386-90b1-c8e628a8c527
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f1ed732e33706defed975a3a05986f53081b4337
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: f65a44552ee2b8e7b62656580528d13db2a1530e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34548181"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53819771"
 ---
 # <a name="command-line-profiling-tools-reference"></a>コマンド ライン プロファイリング ツール リファレンス
 コマンド ライン パフォーマンス ツールを使うことで、プログラマーはコマンド プロンプトでアプリケーションのプロファイリングを行うことができます。 コマンド プロンプトでのコードのプロファイリングには、次のコマンド ライン プロファイリング ツールを使うことができます。  
@@ -28,7 +26,7 @@ ms.locfileid: "34548181"
  VSInstr ツールによって発行される警告の一覧を示します。  
   
  [VSPerfCLREnv](../profiling/vsperfclrenv.md)  
- マネージ コードのプロファイリング用に環境を構成するための VSPerfCLREnv.exe のオプションの一覧を示します。  
+ マネージド コードのプロファイリング用に環境を構成するための VSPerfCLREnv.exe のオプションの一覧を示します。  
   
  [VSPerfCmd](../profiling/vsperfcmd.md)  
  パフォーマンス データを収集するための VSPerfCmd.exe のオプションの一覧を示します。  

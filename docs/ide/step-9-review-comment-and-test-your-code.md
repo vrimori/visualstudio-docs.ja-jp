@@ -1,9 +1,7 @@
 ---
 title: '手順 9: レビュー、コメントの追加、およびコードのテスト'
-ms.custom: ''
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: f26f79ba-c91b-4164-b87f-679a1b231c09
 author: TerryGLee
@@ -11,12 +9,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: de7ca2509c8489c7a9d541135401949ef3e4b20e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 4cb11810a8e87dfe2a21538b5c69c027e84f4f4b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49856029"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53821206"
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>手順 9: レビュー、コメントの追加、およびコードのテスト
 次に、コードにコメントを追加します。 コメントは、プログラムの動作には影響しないメモです。 コメントを追加すると、コードを読む人が動作内容を理解しやすくなります。 コードにコメントを追加することをお勧めします。 行をコメントとしてマークするには、Visual C# では 2 つのスラッシュ (//) を使用します。 Visual Basic では、単一引用符 (') を使用してコメントとしてマークします。 コメントを追加したら、プログラムをテストします。 プロジェクトで作業している間にコードを頻繁に実行してテストすることをお勧めします。これによって、コードが複雑になる前に、問題を早期に見つけて修正することができます。 これは*反復テスト*と呼ばれます。
@@ -45,7 +43,7 @@ ms.locfileid: "49856029"
 
    ステートメントは、プログラムに処理を実行させる指示にあたります。 Visual C# の場合、ステートメントは必ずセミコロンで終わります。 Visual Basic の場合は、行の末尾がステートメントの末尾になります  (Visual Basic ではセミコロンは必要ありません)。上記のステートメントでは、ユーザーが **OpenFileDialog** コンポーネントで選択したファイルを読み込むように <xref:System.Windows.Forms.PictureBox> コントロールに指示しています。
 
-  ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 5](http://go.microsoft.com/fwlink/?LinkId=205216)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 5](http://go.microsoft.com/fwlink/?LinkId=205206)」をご覧ください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
+  ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[Tutorial 1:Create a picture viewer in Visual Basic - Video 5](http://go.microsoft.com/fwlink/?LinkId=205216)」(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 5) または「[Tutorial 1:Create a picture viewer in C# - Video 5](http://go.microsoft.com/fwlink/?LinkId=205206)」(C# によるピクチャ ビューアーの作成 - ビデオ 5) をご覧ください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
 
 ## <a name="to-add-comments"></a>コメントを追加するには
 
@@ -91,6 +89,6 @@ ms.locfileid: "49856029"
 
 ## <a name="to-continue-or-review"></a>続行または確認するには
 
--   チュートリアルの次の手順に進むには、「[手順 10: その他のボタンおよびチェック ボックスに対するコードの記述](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)」を参照してください。
+-   チュートリアルの次の手順に進むには、「[Step 10:Write code for additional buttons and a check box](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)」(手順 10: その他のボタンおよびチェック ボックスに対するコードの記述) をご覧ください。
 
--   チュートリアルの前の手順に戻るには、「[手順 8: [Show a Picture] ボタンのイベント ハンドラーのコードの記述](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)」を参照してください。
+-   チュートリアルの前の手順に戻るには、「[手順 8:[Show a Picture] ボタンのイベント ハンドラーのコードの記述](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)」をご覧ください。

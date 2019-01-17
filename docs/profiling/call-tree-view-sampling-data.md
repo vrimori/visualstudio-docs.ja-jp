@@ -1,8 +1,6 @@
 ---
 title: コール ツリー ビュー - サンプリング データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - sampling profiling method,Call Tree view
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 90035daf13008122e7d529408a6de0389b311628
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: c71ff415ea121f5fb8a28eb8365e601414ba5d0a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34262370"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53917489"
 ---
 # <a name="call-tree-view---sampling-data"></a>コール ツリー ビュー - サンプリング データ
 [コール ツリー] ビューには、プロファイリングされるアプリケーションで走査された関数の実行パスが表示されます。  

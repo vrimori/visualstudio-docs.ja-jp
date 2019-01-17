@@ -1,8 +1,6 @@
 ---
 title: カスタム ネイティブ ETW ヒープ イベント | Microsoft Docs
-ms.custom: ''
 ms.date: 02/24/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 668a6603-5082-4c78-98e6-f3dc871aa55b
 author: mikejo5000
@@ -12,12 +10,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98fc473a9459aa6d1a1d7c10be7b6f240a4ab7d0
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 1414c2102d2b19728c8dfb74470fefae499bc622
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744991"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53877138"
 ---
 # <a name="custom-native-etw-heap-events"></a>カスタム ネイティブ ETW ヒープ イベント
 
@@ -63,7 +61,7 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
    #include <VSCustomNativeHeapEtwProvider.h>
    ```
 
-1. 新しく割り当てられたヒープ メモリにポインターを返すカスタム ヒープ マネージャーの関数に `__declspec(allocator)` デコレータを追加します。  このデコレータにより、返されるメモリの種類をツールが正確に識別できます。  例:
+1. 新しく割り当てられたヒープ メモリにポインターを返すカスタム ヒープ マネージャーの関数に `__declspec(allocator)` デコレータを追加します。  このデコレータにより、返されるメモリの種類をツールが正確に識別できます。  次に例を示します。
 
    ```cpp
    __declspec(allocator) void *MyMalloc(size_t size);

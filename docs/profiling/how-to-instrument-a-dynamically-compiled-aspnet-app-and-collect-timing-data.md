@@ -1,27 +1,25 @@
 ---
 title: '方法: プロファイラーのコマンド ラインを使用して動的にコンパイルされた ASP.NET Web アプリケーションをインストルメントし、詳細なタイミング データを収集する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: bcc5d167fdd53a597fb171881ae61281c8280c8d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 54aed21b3f2a4d2ac7ac837bd001731c98ada987
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49894574"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53925785"
 ---
 # <a name="how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler-by-using-the-command-line"></a>方法: プロファイラーのコマンド ラインを使用して動的にコンパイルされた ASP.NET Web アプリケーションをインストルメント化し、詳細なタイミング データを収集する
 
 この記事では、コマンドライン ツールの Visual Studio プロファイル ツールを利用し、インストルメンテーション プロファイル方法で、動的にコンパイルされた [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションの詳細なタイミング データを収集する方法について説明します。
 
 > [!NOTE]
-> プロファイル ツールのコマンドライン ツールは、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] インストール ディレクトリの *\Team Tools\Performance Tools* サブディレクトリにあります。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。
+>  プロファイル ツールへのパスを取得するには、[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)に関する記事をご覧ください。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。
 
 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションからパフォーマンス データを収集するには、ターゲット アプリケーションの *web.config* ファイルを変更し、動的にコンパイルされたアプリケーション ファイルをインストルメント化する [VSInstr.exe](../profiling/vsinstr.md) ツールを有効にします。 [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) ツールを使用し、Web サーバーで適切な環境変数を設定してプロファイルを有効にし、コンピューターを再起動します。
 
@@ -29,7 +27,7 @@ ms.locfileid: "49894574"
 
 ## <a name="configure-the-aspnet-web-application-and-the-web-server"></a>ASP.NET Web アプリケーションと Web サーバーを構成する
 
-1. ターゲット アプリケーションの *web.config* ファイルを変更します。 「[方法: Web.config ファイルを変更して、動的にコンパイルされた ASP.NET Web アプリケーションをインストルメント化およびプロファイルする](../profiling/how-to-modify-web-config-files-to-instrument-dynamically-compiled-aspnet-apps.md)」を参照してください。
+1. ターゲット アプリケーションの *web.config* ファイルを変更します。 「[方法:Web.config ファイルを変更して、動的にコンパイルされた ASP.NET Web アプリケーションをインストルメント化およびプロファイルする](../profiling/how-to-modify-web-config-files-to-instrument-dynamically-compiled-aspnet-apps.md)」をご覧ください。
 
 2. コマンド プロンプト ウィンドウを開きます。
 

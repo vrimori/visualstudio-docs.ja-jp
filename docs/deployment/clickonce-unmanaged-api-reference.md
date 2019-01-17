@@ -1,6 +1,5 @@
 ---
 title: ClickOnce アンマネージ API リファレンス |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
 api_name:
 - CleanOnlineAppCache
@@ -12,7 +11,6 @@ api_type:
 - COM
 topic_type:
 - apiref
-ms.technology: vs-ide-deployment
 ms.topic: reference
 dev_langs:
 - VB
@@ -30,14 +28,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 121b9b3be3c7f942f3ed1d5f7f2600f24d684e2d
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
-ms.translationtype: MT
+ms.openlocfilehash: 584dc441e54e89fea77667cac98cdad78bac5b2d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082140"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53968142"
 ---
-# <a name="clickonce-unmanaged-api-reference"></a>ClickOnce アンマネージ API リファレンス
+# <a name="clickonce-unmanaged-api-reference"></a>ClickOnce アンマネージド API リファレンス
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dfshim.dll から非管理対象のパブリック Api。  
   
 ## <a name="cleanonlineappcache"></a>CleanOnlineAppCache  
@@ -46,7 +44,7 @@ ms.locfileid: "39082140"
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラーを表す HRESULT を返します。 マネージ例外が発生した場合は、0x80020009 (DISP_E_EXCEPTION) を返します。  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>コメント  
  CleanOnlineAppCache の呼び出しが開始されます、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]サービスが実行されていない場合。  
   
 ## <a name="getdeploymentdatafrommanifest"></a>GetDeploymentDataFromManifest  
@@ -56,8 +54,8 @@ ms.locfileid: "39082140"
   
 |パラメーター|説明|型|  
 |---------------|-----------------|----------|  
-|`pcwzActivationUrl`|ポインター、`ActivationURL`します。|LPCWSTR|  
-|`pcwzPathToDeploymentManifest`|ポインター、`PathToDeploymentManifest`します。|LPCWSTR|  
+|`pcwzActivationUrl`|`ActivationURL` へのポインター。|LPCWSTR|  
+|`pcwzPathToDeploymentManifest`|`PathToDeploymentManifest` へのポインター。|LPCWSTR|  
 |`pwzApplicationIdentity`|完全なアプリケーション id が返されるを指定する NULL で終わる文字列を受け取るバッファーへのポインター。|LPWSTR|  
 |`pdwIdentityBufferLength`|長さである DWORD へのポインター、 `pwzApplicationIdentity` WCHARs でのバッファー。 これには、NULL 終端文字のための領域が含まれます。|LPDWORD|  
 |`pwzProcessorArchitecture`|マニフェストからのアプリケーションの展開のプロセッサ アーキテクチャを指定する NULL で終わる文字列を受け取るバッファーへのポインター。|LPWSTR|  
@@ -70,7 +68,7 @@ ms.locfileid: "39082140"
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラーを表す HRESULT を返します。 バッファーが小さすぎる場合は、HRESULTFROMWIN32(ERROR_INSUFFICIENT_BUFFER) を返します。  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>コメント  
  ポインターを null にするにはできません。 `pcwzActivationUrl` `pcwzPathToDeploymentManifest`空にできません。  
   
  アクティベーション URL をクリーンアップする、呼び出し元の役目です。 必要な場所またはクエリ文字列を削除するが、文字エスケープを追加します。  
@@ -85,8 +83,8 @@ ms.locfileid: "39082140"
 |パラメーター|説明|型|  
 |---------------|-----------------|----------|  
 |`deploymentUrl`|配置マニフェストの URL を含む NULL で終わる文字列へのポインター。|LPCWSTR|  
-|`data`|将来使用するために予約されています。 NULL にする必要があります。|LPVOID|  
-|`flags`|将来使用するために予約されています。 0 を指定する必要があります。|DWORD|  
+|`data`|将来使用するために予約されています。 NULL にする必要があります|LPVOID|  
+|`flags`|将来使用するために予約されています。 0 である必要があります。|DWORD|  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラーを表す HRESULT を返します。 マネージ例外が発生した場合は、0x80020009 (DISP_E_EXCEPTION) を返します。  

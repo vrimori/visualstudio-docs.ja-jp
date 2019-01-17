@@ -1,8 +1,6 @@
 ---
 title: 'チュートリアル: MSBuild の使用 | Microsoft Docs'
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology: msbuild
+ms.date: 12/18/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, tutorial
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 94fdbb5f143d1c087d97490961d230ace239f348
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: e73fd5e679ae4b35fa47926f6737b980ef700e4a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48880150"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53956921"
 ---
 # <a name="walkthrough-use-msbuild"></a>チュートリアル: MSBuild の使用
 MSBuild は Microsoft および Visual Studio のビルド プラットフォームです。 このチュートリアルでは、MSBuild のビルド ブロックについて説明し、MSBuild プロジェクトを記述、操作、およびデバッグする方法について説明します。 ここで学習する内容を以下に示します。
@@ -116,24 +114,28 @@ Message タスクは、MSBuild に含まれている数多くのタスクの 1 �
 Message タスクは、Text 属性の文字列値を入力として受け取り、それを出力デバイスに表示します。 HelloWorld ターゲットでは、Message タスクが 2 回実行されます。1 回目の実行で "Hello" と表示され、2 回目の実行で "World" と表示されます。
 
 ## <a name="build-the-target"></a>ターゲットをビルドする
- **Visual Studio コマンド プロンプト**から MSBuild を実行して、上で定義した HelloWorld ターゲットをビルドします。 ターゲットを選択するには、コマンド ライン スイッチの -target または -t を使用します。
+ Visual Studio の**開発者コマンド プロンプト**から MSBuild を実行して、上で定義した HelloWorld ターゲットをビルドします。 ターゲットを選択するには、コマンド ライン スイッチの -target または -t を使用します。
 
 > [!NOTE]
->  以降では、**Visual Studio コマンド プロンプト**を**コマンド ウィンドウ**と呼びます。
+>  以降では、**開発者コマンド プロンプト**を**コマンド ウィンドウ**と呼びます。
 
 #### <a name="to-build-the-target"></a>ターゲットをビルドするには
 
-1.  **[スタート]** ボタンをクリックし、**[すべてのプログラム]** をクリックします。 **[Visual Studio Tools]** フォルダーで **[Visual Studio コマンド プロンプト]** をクリックします。
+1. **コマンド ウィンドウ**を開きます。
 
-2.  コマンド ウィンドウで、プロジェクト ファイルを含むフォルダー (この場合は *D:\BuildApp\BuildApp*) に移動します。
+   (Windows 10) タスクバーの検索ボックスに、`dev` や `developer command prompt` など、ツールの名前を入力します。 検索パターンに一致する、インストールされているアプリの一覧が表示されます。
 
-3.  コマンド ライン スイッチ -t:HelloWorld を使用して msbuild を実行します。 HelloWorld ターゲットが選択されてビルドされます。
+   手動で検索する必要がある場合、ファイルは *<visualstudio installation folder>\<バージョン>\Common7\Tools* フォルダーの *LaunchDevCmd.bat* です。
+
+2. コマンド ウィンドウで、プロジェクト ファイルを含むフォルダー (この場合は *D:\BuildApp\BuildApp*) に移動します。
+
+3. コマンド ライン スイッチ -t:HelloWorld を使用して msbuild を実行します。 HelloWorld ターゲットが選択されてビルドされます。
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
     ```
 
-4.  **コマンド ウィンドウ**で出力を確認します。 "Hello" と "World" の 2 つの行が表示されます。
+4. **コマンド ウィンドウ**で出力を確認します。 "Hello" と "World" の 2 つの行が表示されます。
 
     ```
     Hello
@@ -225,10 +227,10 @@ $(PropertyName)
  Condition 属性は MSBuild のほぼすべての要素に設定できます。 Condition 属性の使用の詳細については、「[MSBuild Conditions (MSBuild の条件)](../msbuild/msbuild-conditions.md)」をご覧ください。
 
 ### <a name="reserved-properties"></a>予約済みのプロパティ
- MSBuild では、プロジェクト ファイルに関する情報や MSBuild のバイナリに関する情報を保持するために、いくつかのプロパティ名が予約されています。 たとえば、MSBuildToolsPath も予約済みのプロパティの 1 つです。 予約済みのプロパティは、他のプロパティと同じように $ 表記で参照できます。 詳細については、「[方法: プロジェクト ファイルの名前または場所を参照する](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md)」および「[MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)」をご覧ください。
+ MSBuild では、プロジェクト ファイルに関する情報や MSBuild のバイナリに関する情報を保持するために、いくつかのプロパティ名が予約されています。 たとえば、MSBuildToolsPath も予約済みのプロパティの 1 つです。 予約済みのプロパティは、他のプロパティと同じように $ 表記で参照できます。 詳細については、「[方法 :プロジェクト ファイルの名前または場所を参照する](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md)」および「[MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)」をご覧ください。
 
 ### <a name="environment-variables"></a>環境変数
- プロジェクト ファイルで環境変数を参照する場合も、ビルド プロパティを参照するときと同じ方法を使用します。 たとえば、プロジェクト ファイルで PATH 環境変数を使用するには、$(Path) と記述します。 プロジェクト ファイルに、環境変数と同じ名前のプロパティが定義されている場合、環境変数の値はプロジェクト内のプロパティによってオーバーライドされます。 環境変数の使用方法の詳細については、「[方法: ビルドで環境変数を使用する](../msbuild/how-to-use-environment-variables-in-a-build.md)」をご覧ください。
+ プロジェクト ファイルで環境変数を参照する場合も、ビルド プロパティを参照するときと同じ方法を使用します。 たとえば、プロジェクト ファイルで PATH 環境変数を使用するには、$(Path) と記述します。 プロジェクト ファイルに、環境変数と同じ名前のプロパティが定義されている場合、環境変数の値はプロジェクト内のプロパティによってオーバーライドされます。 詳細については、「[方法 :ビルドで環境変数を使用する](../msbuild/how-to-use-environment-variables-in-a-build.md)」をご覧ください。
 
 ## <a name="set-properties-from-the-command-line"></a>コマンドラインからプロパティを設定する
  プロパティは、コマンド ライン スイッチの -property または -p を使用してコマンド ラインで定義することもできます。 プロジェクト ファイルに設定されたプロパティ値や環境変数として設定されたプロパティ値は、コマンド ラインから渡されたプロパティ値によってオーバーライドされます。
@@ -290,7 +292,7 @@ Configuration プロパティが作成されて、値が "Release" に設定さ�
 </ItemGroup>
 ```
 
- ここでは、2 つの項目を含む項目グループを定義しています。 項目の種類 Compile には、*Program.cs* と *Properties\AssemblyInfo.cs* の 2 つの値があります。
+ ここでは、2 つの項目を含む項目グループを定義しています。 Compile 項目の種類には、2 つの値があります。*Program.cs* と *Properties\AssemblyInfo.cs* です。
 
  次のコードでは、両方のファイルをセミコロンで区切って 1 つの Include 属性で宣言することで、同じ項目の種類を作成しています。
 
@@ -388,7 +390,7 @@ Message タスクに変更を加えて、復帰と改行 (%0A%0D) を使用し�
 <Photos Include="images\**.jpeg" />
 ```
 
- この例では、*images* フォルダーとそのすべてのサブフォルダーにある拡張子が *.jpeg* のすべてのファイルが項目の種類 Photos に追加されます。 例については、「[方法: ビルドするファイルを選択する](../msbuild/how-to-select-the-files-to-build.md)」をご覧ください。
+ この例では、*images* フォルダーとそのすべてのサブフォルダーにある拡張子が *.jpeg* のすべてのファイルが項目の種類 Photos に追加されます。 その他の例については、「[方法:ビルドするファイルを選択する](../msbuild/how-to-select-the-files-to-build.md)」をご覧ください。
 
  項目を宣言すると、それらが項目の種類に追加されます。 たとえば、オブジェクトに適用された
 
@@ -409,7 +411,7 @@ Message タスクに変更を加えて、復帰と改行 (%0A%0D) を使用し�
 <Compile Include="*.cs" Exclude="*Designer*">
 ```
 
- この例では、拡張子が *.cs* のすべてのファイルが項目の種類 Compile に追加されますが、名前に文字列 *Designer* が含まれているファイルは除外されます。 例については、「[方法: ビルドからファイルを除外する](../msbuild/how-to-exclude-files-from-the-build.md)」をご覧ください。
+ この例では、拡張子が *.cs* のすべてのファイルが項目の種類 Compile に追加されますが、名前に文字列 *Designer* が含まれているファイルは除外されます。 その他の例については、「[方法:ビルドからファイルを除外する](../msbuild/how-to-exclude-files-from-the-build.md)」をご覧ください。
 
 Exclude 属性は、同一の項目要素内にある Include 属性によって追加された項目のみに作用します。 たとえば、オブジェクトに適用された
 
@@ -562,7 +564,7 @@ Exclude 属性は、同一の項目要素内にある Include 属性によって
 この構文で表されるメタデータではバッチ処理は行われないことに注意してください。
 
 ## <a name="whats-next"></a>次の内容
- 簡単なプロジェクト ファイルを 1 ステップずつ作成する方法については、「[チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)」をご覧ください。
+ 簡単なプロジェクト ファイルを 1 ステップずつ作成する方法については、「[チュートリアル:MSBuild プロジェクト ファイルのゼロからの作成](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)」をお試しください。
 
 ## <a name="see-also"></a>関連項目
 

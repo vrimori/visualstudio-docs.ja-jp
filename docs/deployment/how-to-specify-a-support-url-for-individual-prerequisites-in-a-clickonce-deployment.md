@@ -1,8 +1,6 @@
 ---
-title: '方法: ClickOnce 配置で個々 の前提条件のサポート URL を指定する |Microsoft Docs'
-ms.custom: ''
+title: '方法: サポート URL を指定の ClickOnce 配置で個々 の前提条件 |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,14 +15,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e93e8ab84a751c447488e1b4dc6e3e6779b86b8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 9d8b510a07ff60420cc81aed073e7f42445e924d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49913282"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53825517"
 ---
-# <a name="how-to-specify-a-support-url-for-individual-prerequisites-in-a-clickonce-deployment"></a>方法: ClickOnce 配置で個々 の必要条件のサポート URL を指定
+# <a name="how-to-specify-a-support-url-for-individual-prerequisites-in-a-clickonce-deployment"></a>方法: ClickOnce 配置で個々の必要条件にサポート URL を指定する
 A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]数のクライアント コンピューターで使用する必要がある前提条件の展開をテストできます、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションを実行します。 これらの依存関係の必要な最小バージョンは含まれて、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]のバージョン、オペレーティング システムとすべてのアセンブリをグローバル アセンブリ キャッシュ (GAC) にプレインストールする必要があります。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]、ただし、インストールできませんこれらの前提条件のいずれか。前提条件が存在しない場合、インストールを中止し、インストールが失敗した理由を説明するダイアログ ボックスが表示されます。  
   
  前提条件をインストールするための 2 つの方法はあります。 ブートス トラップ アプリケーションを使用してインストールすることができます。 また、前提条件が存在しない場合、ダイアログ ボックスでユーザーに表示される個別の前提条件のサポート URL を指定できます。 この URL で参照されているページは、必須の前提条件をインストールするための手順へのリンクを含めることができます。 アプリケーションが、個別の前提条件に関するサポート URL を指定しない場合[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]定義されている場合、全体として、アプリケーションの配置マニフェストで指定されたサポート URL を表示します。  
@@ -78,7 +76,7 @@ A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]数のクラ�
    </compatibleFrameworks>  
    ```  
   
-7. アプリケーション マニフェストを手動で変更した後、デジタル証明書を使用してアプリケーション マニフェストに再署名更新にも、配置マニフェストに再署名をする必要があります。 使用して、 *Mage.exe*または*MageUI.exe* SDK ツールを使用してこれらのファイルを再生成すると、このタスクを実行する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]手動で変更を消去します。 Mage.exe を使用してマニフェストに再署名する詳細については、次を参照してください。[方法: re-sign Application and Deployment Manifests](../deployment/how-to-re-sign-application-and-deployment-manifests.md)します。  
+7. アプリケーション マニフェストを手動で変更した後、デジタル証明書を使用してアプリケーション マニフェストに再署名更新にも、配置マニフェストに再署名をする必要があります。 使用して、 *Mage.exe*または*MageUI.exe* SDK ツールを使用してこれらのファイルを再生成すると、このタスクを実行する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]手動で変更を消去します。 Mage.exe を使用してマニフェストに再署名する詳細については、次を参照してください。[方法。アプリケーション マニフェストと配置マニフェストの再署名](../deployment/how-to-re-sign-application-and-deployment-manifests.md)  
   
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
  サポート URL は、部分信頼で実行するアプリケーションがマークされている場合、ダイアログ ボックスでは表示されません。  

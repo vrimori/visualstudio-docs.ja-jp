@@ -1,17 +1,12 @@
 ---
 title: 既存の SharePoint サイトからのアイテムのインポート |Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.WSPImport.SelectionDependency
 - VS.SharepointTools.WSPImport.SpecifyProjectSource
 - VS.SharePointTools.WSPImport.SelectionItemsToImport
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -23,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7435d6c7ad210554031994f4a366812f9799ffb2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6345e6650c815242db661cef52b78db31d447b06
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49832109"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53918155"
 ---
 # <a name="import-items-from-an-existing-sharepoint-site"></a>既存の SharePoint サイトからアイテムをインポートします。
   SharePoint ソリューション パッケージのインポート プロジェクト テンプレートによって、新しい [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ソリューションの既存の SharePoint サイトからコンテンツ タイプやフィールドなどの要素を再利用できます。 インポートしたソリューションのほとんどは変更せずに実行できますが、それらをインポートした後にいずれかの項目を変更する場合は特に、考慮すべき特定の制限事項および問題があります。  
@@ -96,20 +91,20 @@ ms.locfileid: "49832109"
   
  たとえば、リスト定義 ExpenseForms をインポートする場合は、その名前を持つリスト定義下に表示されます、**定義を一覧表示**フォルダー**ソリューション エクスプ ローラー**と共にその*Elements.xml*と*Schema.xml*ファイル。 しかし、関連付けられた ASPX と HTML フォームは、 **[その他のインポートされたファイル]** フォルダーの下にある **[ExpenseForms]** と呼ばれるフォルダーに配置される可能性があります。 インポートを完了するには、 **ソリューション エクスプローラー** で ExpenseForms リスト定義の下にあるそれらのファイルを移動し、各ファイルの **DeploymentType** プロパティを **NoDeployment** から **ElementFile**に変更します。  
   
- イベント レシーバーをインポートするときに、 *Elements.xml*ファイルは、適切な場所にコピーしますが、する必要があります手動で含めるアセンブリ ソリューション パッケージでソリューションと一緒に配置されるようにします。 [!INCLUDE[crabout](../sharepoint/includes/crabout-md.md)] 方法を参照してください[方法: 追加およびその他のアセンブリを削除](../sharepoint/how-to-add-and-remove-additional-assemblies.md)します。  
+ イベント レシーバーをインポートするときに、 *Elements.xml*ファイルは、適切な場所にコピーしますが、する必要があります手動で含めるアセンブリ ソリューション パッケージでソリューションと一緒に配置されるようにします。 [!INCLUDE[crabout](../sharepoint/includes/crabout-md.md)] 参照してください方法[方法。追加およびその他のアセンブリを削除](../sharepoint/how-to-add-and-remove-additional-assemblies.md)します。  
   
  ワークフローをインポートすると、InfoPath フォームが **[その他のインポートされたファイル]** フォルダーにコピーされます。 場合、 *.wsp*ファイルには、Web テンプレートが含まれています、スタートアップ ページとして設定されて**ソリューション エクスプ ローラー**します。  
   
 ## <a name="import-fields-and-property-bags"></a>インポートのフィールドとプロパティ バッグ
  複数のフィールドを含むソリューションをインポートするときに、すべての個別のフィールド定義が、1 つにマージされる*Elements.xml*内のノードの下にあるファイル**ソリューション エクスプ ローラー**と呼ばれる**フィールド。**. 同様に、すべてのプロパティ バッグ エントリにマージされて、 *Elements.xml*と呼ばれるノードの下にあるファイル**PropertyBags**します。  
   
- SharePoint 内のフィールドは、テキスト、ブール値、参照などの指定したデータ型の列です。 詳しくは、「 [構成要素: 列とフィールド型](http://go.microsoft.com/fwlink/?LinkId=182304)」をご覧ください。 プロパティ バッグを使用することによって、SharePoint 内のオブジェクト (ファームから SharePoint サイト上のリストまですべて) にプロパティを追加できます。 プロパティ バッグは、プロパティの名前と値のハッシュ テーブルとして実装されます。 詳しくは、「 [SharePoint 構成の管理](http://go.microsoft.com/fwlink/?LinkId=182296) 」または「 [SharePoint プロパティ バッグ設定](http://go.microsoft.com/fwlink/?LinkId=182297)」をご覧ください。  
+ SharePoint 内のフィールドは、テキスト、ブール値、参照などの指定したデータ型の列です。 詳細については、次を参照してください。[ビルディング ブロック。列とフィールド型](http://go.microsoft.com/fwlink/?LinkId=182304)します。 プロパティ バッグを使用することによって、SharePoint 内のオブジェクト (ファームから SharePoint サイト上のリストまですべて) にプロパティを追加できます。 プロパティ バッグは、プロパティの名前と値のハッシュ テーブルとして実装されます。 詳しくは、「 [SharePoint 構成の管理](http://go.microsoft.com/fwlink/?LinkId=182296) 」または「 [SharePoint プロパティ バッグ設定](http://go.microsoft.com/fwlink/?LinkId=182297)」をご覧ください。  
   
 ## <a name="delete-items-in-the-project"></a>プロジェクト内の項目を削除します。
  SharePoint ソリューションのほとんどのアイテムには、1 つ以上の依存アイテムがあります。 たとえば、リスト インスタンスはコンテンツ タイプに依存します。また、コンテンツ タイプは、フィールドに依存します。 SharePoint ソリューションをインポートした後でソリューション内のアイテムを削除し、その依存アイテムを削除しない場合、ソリューションの配置を試みるまで [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] は参照の問題を通知しません。 たとえば、インポートされたソリューションに、コンテンツ タイプに依存するリスト インスタンスがある場合、そのコンテンツ タイプを削除すると、配置でエラーが発生する可能性があります。 依存アイテムが SharePoint サーバー上に存在しない場合に、エラーが発生します。 同様に場合は、削除された項目は、関連するプロパティ バッグもある、削除からそれらのプロパティ バッグ エントリ、 **PropertyBags** *Elements.xml*ファイル。 そのため、インポートされたソリューションから何らかのアイテムを削除すると配置エラーが発生する場合は、削除が必要な配置アイテムがないか確認します。  
   
 ## <a name="restore-missing-feature-attributes"></a>復元の機能の属性が見つかりません
- ソリューションをインポートするときに、オプションのいくつかのフィーチャー属性は、インポートされたフィーチャー マニフェストから除外されます。 これらの属性を新しいフィーチャー ファイルで復元する場合は、元の機能、新しいフィーチャー マニフェスト ファイルを比較することで、不足している属性を識別して、トピックの手順に従います[方法: SharePoint フィーチャーカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md).  
+ ソリューションをインポートするときに、オプションのいくつかのフィーチャー属性は、インポートされたフィーチャー マニフェストから除外されます。 これらの属性を新しいフィーチャー ファイルで復元する場合は、元の機能、新しいフィーチャー マニフェスト ファイルを比較することで、不足している属性を識別して、トピックの手順に従います[方法。SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)します。  
   
 ## <a name="deployment-conflict-detection-is-not-performed-on-built-in-list-instances"></a>組み込みのリスト インスタンスで配置競合の検出は実行されません。
  [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] では、組み込みのリスト インスタンス (つまり、SharePoint に付属している既定のリスト インスタンス) に関する配置競合の検出は実行されません。 SharePoint 上の組み込みのリスト インスタンスを上書きしないために、競合の検出は実行されません。 組み込みのリスト インスタンスは配置されたり、更新されたりしますが、削除されたり、上書きされたりすることはありません。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint のパッケージ化と配置のトラブルシューティングを行う](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)します。  
@@ -139,7 +134,7 @@ ms.locfileid: "49832109"
  新しいすべてのプロジェクトの SharePointProductVersion 属性は 14.0 に設定されるため、Script Manager コントロールがないと、 [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] または [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)] のプロジェクトを [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)]にインポートするときに問題が発生する可能性があります。 Web フォームが存在するアップグレードされたプロジェクトを Script Manager なしで配置する場合、フォームは SharePoint に表示されません。  
   
 ## <a name="see-also"></a>関連項目
- [チュートリアル: 既存の SharePoint サイトからのアイテムをインポートします。](../sharepoint/walkthrough-import-items-from-an-existing-sharepoint-site.md)   
+ [チュートリアル: 既存の SharePoint サイトからアイテムをインポートします。](../sharepoint/walkthrough-import-items-from-an-existing-sharepoint-site.md)   
  [再利用可能なワークフローをインポートするためのガイドライン](../sharepoint/guidelines-for-importing-reusable-workflows.md)   
- [チュートリアル: SharePoint Designer の再利用可能なワークフローの Visual Studio へのインポートします。](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)   
- [方法: SharePoint プロジェクトに既存の BDC モデル ファイルを追加](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)  
+ [チュートリアル: SharePoint Designer の再利用可能なワークフローを Visual Studio にインポートします。](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)   
+ [方法: SharePoint プロジェクトに既存の BDC モデル ファイルを追加します。](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)  

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteDebugEx::OnCanNotJITScriptErrorDebug |Microsoft ドキュメント
+title: IActiveScriptSiteDebugEx::OnCanNotJITScriptErrorDebug |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,21 +18,21 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e428f12b3d199603ac341a5e069fcc5ce5d36f93
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 70dd250359d52ae0929fb5fb2c60087f66af2160
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725112"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54095122"
 ---
 # <a name="iactivescriptsitedebugexoncannotjitscripterrordebug"></a>IActiveScriptSiteDebugEx::OnCanNotJITScriptErrorDebug
-プロセス マネージャーをデバッグするときに、スクリプト実行時のエラーについて、ホストは、スクリプト デバッガーを時間内だけを見つけられませんに通知します。  
+プロセス デバッグ マネージャーとは、スクリプト実行時のエラーについて、ホストには、Just In Time スクリプト デバッガーが見つからないことを通知します。  
   
- デバッガーに、ホストを実装する必要がありますを処理する[IActiveScriptSiteDebug::OnScriptErrorDebug](../../winscript/reference/iactivescriptsitedebug-onscripterrordebug.md)です。 ユーザー操作に基づいて、ホストできるか、デバッガーをアタッチし、返すを返したり、OnScriptErrorDebug でデバッガーの起動`pfEnterDebugger`パラメーター。 また、プロセスをデバッグ マネージャーで解釈できる外部のデバッガーがない場合でも、実行時エラーに関する通知を取得するには、このインターフェイスを実装する必要があります。  
+ 処理する必要があります、デバッガーに、ホストを実装する[IActiveScriptSiteDebug::OnScriptErrorDebug](../../winscript/reference/iactivescriptsitedebug-onscripterrordebug.md)します。 ユーザー操作に基づいて、ホストか、デバッガーをアタッチ、戻ってください。 または、OnScriptErrorDebug のデバッガーの起動を返す`pfEnterDebugger`パラメーター。 プロセス デバッグ マネージャーによって、解釈される外部のデバッガーがない場合でも、実行時エラーについての通知を取得するには、このインターフェイスを実装することも必要があります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT OnCanNotJITScriptErrorDebug(  
    IActiveScriptErrorDebug*  pErrorDebug  
    BOOL *pfCallOnScriptErrorWhenContinuing  
@@ -41,20 +41,20 @@ HRESULT OnCanNotJITScriptErrorDebug(
   
 #### <a name="parameters"></a>パラメーター  
  `pErrorDebug`  
- [in]実行時エラーが発生しました。  
+ [in]発生した実行時エラー。  
   
  `pfCallOnScriptErrorWhenContinuingt`  
- [out]呼び出すのか[IActiveScriptSiteDebug::OnScriptErrorDebug](../../winscript/reference/iactivescriptsitedebug-onscripterrordebug.md)デバッグなしで続行する場合は、ユーザー。  
+ [out]呼び出すかどうか[IActiveScriptSiteDebug::OnScriptErrorDebug](../../winscript/reference/iactivescriptsitedebug-onscripterrordebug.md)デバッグなしで続行をユーザーが決定した場合。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- また、通知を取得するには、このインターフェイスを実装する必要があります。  
+## <a name="remarks"></a>Remarks  
+ 通知を取得するには、このインターフェイスを実装することも必要があります。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptSiteDebugEx インターフェイス](../../winscript/reference/iactivescriptsitedebugex-interface.md)

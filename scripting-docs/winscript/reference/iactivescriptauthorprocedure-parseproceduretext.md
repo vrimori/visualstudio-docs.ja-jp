@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthorProcedure::ParseProcedureText |Microsoft ドキュメント
+title: IActiveScriptAuthorProcedure::ParseProcedureText |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b9c4a1ba03a8498dbaa857dc5dbabba8914e54a8
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 893dc36c066426ad1de7346c7ce1fea24b191ba3
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24645642"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54090689"
 ---
 # <a name="iactivescriptauthorprocedureparseproceduretext"></a>IActiveScriptAuthorProcedure::ParseProcedureText
-コードのプロシージャを解析し、エンジンを作成するスクリプトに、コードのプロシージャのテキストを追加し、作成、`IScriptEntry`コード プロシージャに対応するオブジェクト。  
+コード プロシージャを解析し、エンジンを作成するスクリプトにコード プロシージャのテキストを追加し、作成、`IScriptEntry`コード プロシージャに対応するオブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT ParseProcedureText(  
    LPCOLESTR   pszCode,  
    LPCOLESTR   pszFormalParams,  
@@ -54,28 +54,28 @@ HRESULT ParseProcedureText(
  [in]解析するプロシージャ名のアドレス。  
   
  `pszItemName`  
- [in]項目名を格納するバッファーのアドレスに関連付けられている、`IScriptEntry`オブジェクト。  
+ [in]項目の名前を含むバッファーのアドレスに関連付けられている、`IScriptEntry`オブジェクト。  
   
  `pszDelimiter`  
- [in]最後のスクリプト ブロックの区切り記号のアドレス。 ときに`pszCode`解析は、テキストのストリームからホスト通常区切り文字を使用 (など、2 つ単一引用符)、スクリプト ブロックの終わりを検出します。 スクリプト ブロックの末尾を示すための区切り記号がない場合は、このパラメーターを NULL に設定します。  
+ [in]最後のスクリプト ブロックの区切り記号のアドレス。 ときに`pszCode`解析は、テキストのストリームからホスト通常 (など、2 つ単一引用符)、区切り記号を使用して、スクリプト ブロックの終了を検出します。 スクリプト ブロックの終わりをマークする区切り記号がない場合は、このパラメーターを NULL に設定します。  
   
  `dwCookie`  
- [in]新しいに関連付けられているアプリケーション定義の値`IScriptEntry`オブジェクト。  
+ [in]アプリケーション定義の値に関連付けられた新しい`IScriptEntry`オブジェクト。  
   
  `dwFlags`  
- [in]使用しません。  
+ [in]使用されません。  
   
  `pdispFor`  
- [in]使用しません。  
+ [in]使用されません。  
   
 ## <a name="return-value"></a>戻り値  
  `HRESULT`。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  現在[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]エンジンがこのメソッドを実装していません。  
   
 ## <a name="see-also"></a>関連項目  

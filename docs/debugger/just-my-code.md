@@ -1,8 +1,6 @@
 ---
 title: マイ コードのみのユーザー コードのデバッグ |Microsoft Docs
-ms.custom: ''
 ms.date: 10/22/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 0f0df097-bbaf-46ad-9ad1-ef5f40435079
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 01e36c528b71bb49b29265890ca6c48863f01be9
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 99c31291e31821f79e23f507e37003c571a8ab7c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389028"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53952048"
 ---
 # <a name="debug-only-user-code-with-just-my-code"></a>マイ コードのみのユーザー コードのみのデバッグします。 
 
@@ -139,10 +137,10 @@ A *.natstepfilter*ファイルは、この構文を使用して XML ファイル
   
 |要素|説明|  
 |-------------|-----------------|  
-|`Function`|必須。 1 つ以上の関数を非ユーザー関数として指定します。|  
-|`Name`|必須。 一致を照合する完全な関数名を指定する ECMA-262 書式の正規表現。 例:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> は、`MyNS::MyClass` のすべてのメソッドが非ユーザー コードと見なされることをデバッガーに知らせます。 一致照合では、大文字と小文字が区別されます。|  
+|`Function`|必須です。 1 つ以上の関数を非ユーザー関数として指定します。|  
+|`Name`|必須です。 一致を照合する完全な関数名を指定する ECMA-262 書式の正規表現。 次に例を示します。<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> は、`MyNS::MyClass` のすべてのメソッドが非ユーザー コードと見なされることをデバッガーに知らせます。 一致照合では、大文字と小文字が区別されます。|  
 |`Module`|任意。 関数を含むモジュールへの完全パスを指定する ECMA-262 書式の正規表現。 一致では、大文字と小文字を区別しません。|  
-|`Action`|必須。 大文字と小文字が区別される以下のいずれかの値です。<br /><br /> `NoStepInto`  -関数をステップ オーバーするデバッガーに指示します。<br /> `StepInto`  -その他のオーバーライド、関数にステップ インをデバッガーに指示`NoStepInto`一致する関数。|  
+|`Action`|必須です。 大文字と小文字が区別される以下のいずれかの値です。<br /><br /> `NoStepInto`  -関数をステップ オーバーするデバッガーに指示します。<br /> `StepInto`  -その他のオーバーライド、関数にステップ インをデバッガーに指示`NoStepInto`一致する関数。|  
   
 ###  <a name="BKMK_CPP_Customize_call_stack_behavior"></a> C++ の呼び出し履歴の動作をカスタマイズします。  
 
@@ -177,20 +175,20 @@ A *.natjmc*ファイルは、この構文を使用して XML ファイル。
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Name`|必須。 モジュールの完全パス。 Windows のワイルドカード文字を使用することができます`?`(0 個または 1 つの文字) と`*`(0 個以上の文字)。 たとえば、オブジェクトに適用された<br /><br /> `<Module Name="?:\3rdParty\UtilLibs\*" />`<br /><br /> では、ドライブの *\3rdParty\UtilLibs* 内のすべてのモジュールを外部コードとして扱うことをデバッガーに指示します。|  
+|`Name`|必須です。 モジュールの完全パス。 Windows のワイルドカード文字を使用することができます`?`(0 個または 1 つの文字) と`*`(0 個以上の文字)。 たとえば、オブジェクトに適用された<br /><br /> `<Module Name="?:\3rdParty\UtilLibs\*" />`<br /><br /> では、ドライブの *\3rdParty\UtilLibs* 内のすべてのモジュールを外部コードとして扱うことをデバッガーに指示します。|  
 |`Company`|任意。 実行可能ファイルに埋め込まれているモジュールを発行する会社の名前。 この属性を使用して、モジュールのあいまいさを解消することができます。|  
   
  **File 要素の属性**  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Name`|必須。 外部コードとして扱うソース ファイルの完全パス。 パスを指定するときに Windows のワイルドカード文字、`?` および `*` を使用できます。|  
+|`Name`|必須です。 外部コードとして扱うソース ファイルの完全パス。 パスを指定するときに Windows のワイルドカード文字、`?` および `*` を使用できます。|  
   
  **Function 要素の属性**  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Name`|必須。 外部コードとして扱う関数の完全修飾名。|  
+|`Name`|必須です。 外部コードとして扱う関数の完全修飾名。|  
 |`Module`|任意。 関数を含むモジュールの名前または完全パス。 この属性を使用して、同じ名前の関数のあいまいさを解消することができます。|  
 |`ExceptionImplementation`|`true` に設定すると、この関数ではなく、例外をスローした関数が呼び出し履歴に表示されます。|  
   

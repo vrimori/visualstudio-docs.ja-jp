@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_type |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b4c80a04d41df9548fafa2da869f2e6443c599c2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: ba944bd2871e23c44806caf291334743813c16d0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49896472"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53898114"
 ---
 # <a name="idiasymbolgettype"></a>IDiaSymbol::get_type
 この記号の型を表すシンボルを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49896472"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_type (   
+HRESULT get_type (   
    IDiaSymbol** pRetVal  
 );  
 ```  
@@ -42,7 +40,7 @@ HRESULT get_type (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  シンボルの種類を判断するには、このメソッドを呼び出すし、結果を確認する必要があります[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクト。 可能なシンボルには、型であるに注意してください。 たとえば、構造体の名前の型はありませんが、子のシンボルがあります (を使用して、 [idiasymbol::findchildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)これらの子をチェックするメソッド)。  
   
 ## <a name="example"></a>例  
@@ -58,7 +56,7 @@ if (SUCCEEDED(pType->get_type( &pBaseType ))) {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [Idiasymbol::get_basetype](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)   
+ [IDiaSymbol::get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)   
  [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)

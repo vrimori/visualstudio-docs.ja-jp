@@ -1,8 +1,6 @@
 ---
 title: AssignTargetPath タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 dev_langs:
 - VB
@@ -15,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ccbd96de96e750c0f149924ab69785e077591755
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 8a711c20198b117b53536f9b0fe043a468eb8a0b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946616"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53930662"
 ---
 # <a name="assigntargetpath-task"></a>AssignTargetPath タスク
 このタスクはファイルのリストを受け入れ、`<TargetPath>` 属性がまだ指定されていない場合は、この属性を追加します。  

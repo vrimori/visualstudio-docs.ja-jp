@@ -1,8 +1,6 @@
 ---
 title: クライアント ブロック用のフック関数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.hooks
@@ -23,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e9de7c0533d3ea55e7b78ca645735a60f84e66df
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: ef8beac3b2b9c837cb2e5ee18743c9c640aacc08
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49938020"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53966580"
 ---
 # <a name="client-block-hook-functions"></a>Client ブロック用のフック関数
 `_CLIENT_BLOCK` 型のブロックに格納されているデータの内容を検証したりレポートしたりするために、専用の関数を作成できます。 作成する関数には、CRTDBG.H で定義されている次のようなプロトタイプが必要です。  
@@ -37,18 +35,18 @@ ms.locfileid: "49938020"
 void YourClientDump(void *, size_t)  
 ```  
 
- つまり、独自のフック関数が受け入れる必要があります、 **void**と共に割り当てブロックの先頭を指すポインター、 **size_t**割り当てのサイズを示す値を入力し、返す`void`. それ以外の内容については、自由に決定できます。  
+ つまり、独自のフック関数は、対象となる割り当てブロックの先頭への **void** ポインターと、割り当てサイズを示す **size_t** 型の値を受け取り、`void` を返すようにする必要があります。 それ以外の内容については、自由に決定できます。  
 
- フック関数を使用して、インストールすると[_CrtSetDumpClient](/cpp/c-runtime-library/reference/crtsetdumpclient)、毎回呼び出されます、`_CLIENT_BLOCK`ブロックをダンプします。 使用することができますし、 [_CrtReportBlockType](/cpp/c-runtime-library/reference/crtreportblocktype)型またはダンプされたブロックに情報を取得します。  
+ 作成したフック関数を [_CrtSetDumpClient](/cpp/c-runtime-library/reference/crtsetdumpclient) を使用して組み込むと、`_CLIENT_BLOCK` 型のブロックがダンプされるたびに、このフック関数が呼び出されます。 [_CrtReportBlockType](/cpp/c-runtime-library/reference/crtreportblocktype) を使用すると、ダンプされたブロックの型や、その細分化された型に関する情報を取得できます。  
 
- 渡す、関数へのポインター`_CrtSetDumpClient`の種類は **_CRT_DUMP_CLIENT**CRTDBG で定義されている、します。H:  
+ `_CrtSetDumpClient` に渡す独自の関数へのポインターは **_CRT_DUMP_CLIENT** 型です。これらは、CRTDBG.H で次のように定義されています。  
 
 ```cpp
 typedef void (__cdecl *_CRT_DUMP_CLIENT)  
    (void *, size_t);  
 ```  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [デバッグ用フック関数の作成](../debugger/debug-hook-function-writing.md)   
  [crt_dbg2 サンプル](https://msdn.microsoft.com/library/21e1346a-6a17-4f57-b275-c76813089167)   
  [_CrtReportBlockType](/cpp/c-runtime-library/reference/crtreportblocktype)

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - folders [Office development in Visual Studio], Web pages and
 - Outlook [Office development in Visual Studio], Web pages attached to folders
 - Web pages [Office development in Visual Studio], Outlook folders
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1950a75eeee6f99a03346dde53317b30824a35f4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b6dc6bec7ecbf872d10045cb24e007edec893585
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53990660"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54089636"
 ---
 # <a name="how-to-programmatically-associate-a-web-page-with-an-outlook-folder"></a>方法: プログラムによって Outlook のフォルダー、web ページに関連付ける
   この例は、という名前のフォルダーの`HtmlView`Microsoft Office Outlook でします。 フォルダーが存在しない場合、コードはフォルダーを作成し、Web ページを割り当てます。 フォルダーが存在する場合、コードはフォルダーの内容を表示します。  

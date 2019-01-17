@@ -1,8 +1,6 @@
 ---
-title: 'エラー: IP アドレスを使用するサイト |Microsoft ドキュメント'
-ms.custom: ''
+title: エラー :サイトは IP アドレスの使用 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: troubleshooting
 f1_keywords:
 - vs.debug.error.webdbg_siteusesipaddress
@@ -18,25 +16,25 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b726902c57cc95b694f2ab7e656a444ed42a0ba9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 66e63a85ecbf42d0d4091a7ce9315c91184078ea
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31470905"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53871370"
 ---
-# <a name="error-site-uses-ip-address"></a>エラー : サイトは IP アドレスを使用しています
-このエラーは、IP アドレスを使用している Web アプリケーションに、デバッガーが自動アタッチしようとしたときに発生します。 これを変更する場合に発生**Web サイトの識別**に**特定の IP アドレスを使用して**IIS でします。  
+# <a name="error-site-uses-ip-address"></a>エラー :サイトは IP アドレスを使用しています
+このエラーは、IP アドレスを使用している Web アプリケーションに、デバッガーが自動アタッチしようとしたときに発生します。 これは、IIS で **[Web サイトの識別]** を **[特定の IP アドレスを使用]** に変更した場合に発生します。  
   
  自動アタッチが機能するには、コンピューター名だけでなく、IP アドレスを指定したプロジェクトを作成する必要があります。 そうしないと、コンピューター名は localhost に変更されるため、DEBUG 動詞を IIS に送信するときにエラーが発生します。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  使用する手動のアタッチ (デバッグ メニューから選択**プロセスにアタッチする**)。  
+1.  手動のアタッチを使用します ([デバッグ] メニューの **[プロセスにアタッチ]** を選択します)。  
   
      または  
   
-2.  変更、 **IIS Web サイトの識別**設定します。  
+2.  IIS の **[Web サイトの識別]** 設定を変更します。  
   
-## <a name="see-also"></a>関連項目  
- [Web アプリケーションのデバッグ : エラーおよびトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
+## <a name="see-also"></a>「  
+ [Web アプリケーションのデバッグ: エラーとトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

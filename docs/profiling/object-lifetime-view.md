@@ -1,8 +1,6 @@
 ---
 title: オブジェクトの有効期間ビュー | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.performance.view.objectlifetime
@@ -18,17 +16,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 247c81d46ee8f5ae916a2a024620e4f4eb864194
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 8175a8337f15517e0b9c88ae3f5405148a4b22b2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35255620"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53934970"
 ---
 # <a name="object-lifetime-view"></a>オブジェクトの有効期間ビュー
 オブジェクトの有効期間ビューは、**[パフォーマンス セッション]** プロパティ ページで **[Also collect .NET object lifetime data]\(.NET オブジェクトの有効期間情報も収集\)** チェック ボックスがオンになっている場合に使用できます。  
   
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のガベージ コレクターは、アプリケーションのメモリの割り当ておよび解放を管理します。 ガベージ コレクターのパフォーマンスを最適化するために、マネージド ヒープは 0、1、および 2 の 3 つのジェネレーションに分割されます。 ランタイムのガベージ コレクターは、新しいオブジェクトをジェネレーション 0 に格納します。 ガベージ コレクションでごみではないと判断されたオブジェクトは昇格してジェネレーション 1 とジェネレーション 2 に格納されます。  
+ [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のガベージ コレクターは、アプリケーションのメモリの割り当ておよび解放を管理します。 ガベージ コレクターのパフォーマンスを最適化するために、マネージド ヒープは0、1、2 の 3 つのジェネレーションに分割されます。 ランタイムのガベージ コレクターは、新しいオブジェクトをジェネレーション 0 に格納します。 ガベージ コレクションでごみではないと判断されたオブジェクトは昇格してジェネレーション 1 とジェネレーション 2 に格納されます。  
   
  ガベージ コレクターは、オブジェクトのジェネレーション全体の割り当てを解除して、メモリを解放します。 プロファイル対象アプリケーションで作成されたオブジェクトの場合、オブジェクトの有効期間ビューにはオブジェクトの数とサイズ、および解放時のジェネレーションが表示されます。  
   

@@ -2,7 +2,6 @@
 title: エディット コンティニュの中断モードで編集を適用 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.variables.failededit
@@ -24,12 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fdf27353462645916f14fe10c2fdc521504024b
-ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
+ms.openlocfilehash: a8b63a93984fc65790bd8fcdadf8294cadf8e04e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53684263"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53821702"
 ---
 # <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>方法: 編集と中断モードで編集を適用し、続行 (Visual Basic)
 エディット コンティニュを使用すると、中断モードでコードを編集した後、コードを停止したり再起動したりせずにデバッグを継続できます。  
@@ -42,11 +41,11 @@ ms.locfileid: "53684263"
   
     -   コードにブレークポイントを設定した後、**[デバッグ]** メニューの **[デバッグ開始]** をクリックし、アプリケーションがブレークポイントにヒットするのを待ちます。  
   
-         または  
+         - または -  
   
     -   デバッグを開始し、**[デバッグ]** メニューの **[すべて中断]** をクリックします。  
   
-         または  
+         - または -  
   
     -   例外が発生したときに選択**編集を有効にする**上、**例外処理アシスタント**します。  
   
@@ -61,6 +60,6 @@ ms.locfileid: "53684263"
   
      適用した編集がプロジェクトに取り込まれた状態でコードが実行されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [サポートされているコード変更 (c# および Visual Basic)](../debugger/supported-code-changes-csharp.md)   
  [エディット コンティニュ (Visual Basic)](../debugger/edit-and-continue-visual-basic.md)

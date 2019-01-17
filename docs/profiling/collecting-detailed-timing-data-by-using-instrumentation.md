@@ -1,8 +1,6 @@
 ---
 title: インストルメンテーションを使用した詳細なタイミング データの収集 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiling Tools,instrumentation method
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ab2777675df16df47b69d024be3f2d9458d0ba8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f8812db301b4e58b89ac8ab879625b7cf101ad94
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49916843"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53913961"
 ---
 # <a name="collect-detailed-timing-data-by-using-instrumentation"></a>インストルメンテーションを使用した詳細なタイミング データの収集
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのインストルメンテーション メソッド (方式) では、モジュールのコピーにプロファイリング コードが挿入されます。 このコードでは、プロファイリングの実行中に、モジュール内の各関数の開始、終了、および関数の呼び出しをそれぞれ記録します。 このインストルメンテーション メソッドは、コード セクションに関する詳細なタイミング情報を収集し、アプリケーションのパフォーマンスに対する入出力操作の影響を理解するために役立ちます。  

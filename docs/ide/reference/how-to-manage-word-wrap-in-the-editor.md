@@ -2,7 +2,6 @@
 title: 右端で折り返す
 ms.date: 11/07/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - word wrap
@@ -14,14 +13,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fc38d1ee5a8e5543675700c35cc0cb298aefad9
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: 1f95b6d18bee8a828aadf449fafa9e3313a94f71
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51349115"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53948629"
 ---
-# <a name="how-to-manage-word-wrap-in-the-editor"></a>方法 : エディターのワード ラップを管理する
+# <a name="how-to-manage-word-wrap-in-the-editor"></a>方法: エディターのワード ラップを管理する
 
 **[右端で折り返す]** オプションを設定および解除できます。 このオプションを設定すると、コード エディター ウィンドウの現在の幅からはみ出した長い行の部分は次の行に表示されます。 たとえば行番号の使用を容易にするためにこのオプションをオフにすると、右にスクロールして長い行の末尾を表示できます。
 

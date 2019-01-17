@@ -1,8 +1,6 @@
 ---
 title: ミップマップ生成バリアント |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 3b4b3583-0b01-4f5d-aacb-3f96d19111d9
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 06b2d1e537152020b42fdff38fab1200b9cf7668
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: ca094c4a29e18ebde5ac33f1c35c2a53d60c2327
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49908537"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53836544"
 ---
 # <a name="mip-map-generation-variant"></a>ミップマップ生成バリアント
 レンダー ターゲットではないテクスチャで MIP マップを有効にします。  
@@ -27,7 +25,7 @@ ms.locfileid: "49908537"
   
  このバリアントでパフォーマンスが大幅に向上する場合は、MIP マップを有効にしないでテクスチャを使用いるため、テクスチャのキャッシュを最大限に利用できていないことを示しています。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  MIP マップの生成は、ソース テクスチャを作成する `ID3D11Device::CreateTexture2D` への呼び出しがあるたびに強制的に行われます。 渡される D3D11_TEXTURE2D_DESC オブジェクトがあるときに mip マップ生成を強制する具体的には、`pDesc`不変のシェーダー リソースをについて説明します。  
   
 - BindFlags メンバーは D3D11_BIND_SHADER_RESOURCE フラグを設定するだけです。  
@@ -45,7 +43,7 @@ ms.locfileid: "49908537"
   テクスチャに対して MIP マップが自動的に生成された場合は、再生中に `ID3D11Device::CreateShaderResourceView` に対する呼び出しが修正され、テクスチャのサンプリング中に MIP チェーンを使用できるようになります。  
   
 ## <a name="example"></a>例  
- **Mip-map Generation**このようなコードを使用してバリアントを再現することができます。  
+ **Mip-map Generation** バリアントは、次のようなコードを使用して再現することができます。  
   
 ```cpp
 D3D11_TEXTURE2D_DESC texture_description;  
@@ -71,5 +69,5 @@ d3d_device->CreateTexture2D(&texture_description, initial_data.data(), &texture)
 > [!NOTE]
 >  MIP レベルを自動的に生成する代わりに独自の MIP レベル コンテンツを提供する場合は、MIP マップ テクスチャをサポートしているイメージ エディターを使用してテクスチャを作成し、ファイルをロードして、MIP レベルを `CreateTexture2D` へ渡す必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [ハーフ/クォーター テクスチャ ディメンション バリアント](half-quarter-texture-dimensions-variant.md)

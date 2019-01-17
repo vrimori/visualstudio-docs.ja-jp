@@ -1,8 +1,6 @@
 ---
 title: '方法: 複数のプロジェクト ファイルで同じターゲットを使用する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, importing
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fe68d4d6d970ee0c1e5db566caf7c812436589c
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 7ace0e86a5c65afa2c8c5fb12364b9dba66c093e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39077521"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53905466"
 ---
 # <a name="how-to-use-the-same-target-in-multiple-project-files"></a>方法: 複数のプロジェクト ファイルで同じターゲットを使用する
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルを作成した経験があれば、同じタスクとターゲットを別のプロジェクト ファイルで使用する必要があることにお気付きでしょう。 すべてのプロジェクト ファイルにそれらのタスクやターゲットの完全な説明を追加する代わりに、個別のプロジェクト ファイルにターゲットを保存し、そのプロジェクトをそのターゲットを必要とする他のプロジェクトにインポートできます。  
@@ -30,7 +28,7 @@ ms.locfileid: "39077521"
   
 1.  インポートを行うプロジェクトのファイルで、インポートされるプロジェクトのプロパティとアイテムを対象に、パラメーターとして使用されるすべてのプロパティとアイテムを定義します。  
   
-2.  `Import` 要素を使用し、プロジェクトをインポートします。 例:  
+2.  `Import` 要素を使用し、プロジェクトをインポートします。 次に例を示します。  
   
      `<Import Project="MyCommon.targets"/>`  
   

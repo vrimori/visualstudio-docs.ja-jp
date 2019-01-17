@@ -1,8 +1,6 @@
 ---
 title: IDiaPropertyStorage::ReadMultiple |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b8be22e2a855f19c412725833fa18e182ebff6d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: b3d51e398da337a12f38a099045bd82222ca3105
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49904054"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53948025"
 ---
 # <a name="idiapropertystoragereadmultiple"></a>IDiaPropertyStorage::ReadMultiple
 指定された、現在のプロパティ セットからのプロパティを読み取ります。  
@@ -27,7 +25,7 @@ ms.locfileid: "49904054"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT ReadMultiple(   
+HRESULT ReadMultiple(   
    ULONG          cpspec,  
    PROPSPEC const rgpspec,  
    PROPVARIANT    rgvar  
@@ -45,10 +43,10 @@ HRESULT ReadMultiple(
  [入力、出力]配列の`PROPVARIANT`(Microsoft.VisualStudio.OLE.Interop 名前空間の) 内の各プロパティの値を格納する構造体します。 配列は以上である必要があります`cpspec`サイズ内の要素。 呼び出し元は、配列内の値を初期化する必要はありません。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`1 つまたは複数のプロパティが見つからなかった場合。 それ以外の場合はエラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`1 つまたは複数のプロパティが見つからなかった場合。 それ以外の場合はエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  かどうか、プロパティが見つかりません、対応するエントリに、`rgvar`配列に含まれる、`VARIANT`の型と`VT_EMPTY`します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

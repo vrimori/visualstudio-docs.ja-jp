@@ -935,7 +935,7 @@ items:
       href: ide/reference/debugexe-devenv-exe.md
     - name: -Deploy (devenv.exe)
       href: ide/reference/deploy-devenv-exe.md
-    - name: -Diff
+    - name: -Diff (devenv.exe)
       href: ide/reference/diff.md
     - name: -Edit (devenv.exe)
       href: ide/reference/edit-devenv-exe.md
@@ -943,6 +943,8 @@ items:
       href: ide/reference/lcid-devenv-exe.md
     - name: -Log (devenv.exe)
       href: ide/reference/log-devenv-exe.md
+    - name: -NoSplash (devenv.exe)
+      href: ide/reference/nosplash-devenv-exe.md
     - name: -Out (devenv.exe)
       href: ide/reference/out-devenv-exe.md
     - name: -Project (devenv.exe)
@@ -953,16 +955,12 @@ items:
       href: ide/reference/rebuild-devenv-exe.md
     - name: -ResetSettings (devenv.exe)
       href: ide/reference/resetsettings-devenv-exe.md
-    - name: -ResetSkipPkgs (devenv.exe)
-      href: ide/reference/resetskippkgs-devenv-exe.md
     - name: -Run (devenv.exe)
       href: ide/reference/run-devenv-exe.md
     - name: -Runexit (devenv.exe)
       href: ide/reference/runexit-devenv-exe.md
     - name: -SafeMode (devenv.exe)
       href: ide/reference/safemode-devenv-exe.md
-    - name: -Setup (devenv.exe)
-      href: ide/reference/setup-devenv-exe.md
     - name: -Upgrade (devenv.exe)
       href: ide/reference/upgrade-devenv-exe.md
     - name: -UseEnv (devenv.exe)
@@ -1126,9 +1124,9 @@ items:
     href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
   - name: ご意見
     href: ide/talk-to-us.md
-ms.openlocfilehash: 65504b4cf7bfd126edceacfdcfd1cc71e725e8ca
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: e3003812bf0485082690feb08bc08373d8e03977
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53740423"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270282"

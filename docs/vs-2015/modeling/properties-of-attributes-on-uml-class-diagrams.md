@@ -18,7 +18,7 @@ ms.author: gewarren
 manager: douge
 ms.openlocfilehash: 0129242593596ea7e3875db2a748045c50863c4c
 ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51817361"
@@ -63,7 +63,7 @@ UML クラス図では、クラスとインターフェイスに *属性* を追
 |     **Name**      | (新しい名前) |                                                                                                                                                                                        所有する分類子内で一意である必要があります。                                                                                                                                                                                        |
 |     **Type**      |    (なし)    |                                                プリミティブ型 (たとえば、 **Integer**)、またはモデルで定義された型。 値はメタデータでコード化する必要があるため、 **10 進数** などの非プリミティブ型は使用できません。 このプロパティに新しい型の名前を入力すると、UML モデル エクスプローラーの **[未指定の型]** セクションに型が 1 つ追加されます。                                                 |
 |  **可視性**   |    Public    |                                     指定できる値とシグネチャに表示される文字は次のとおりです。<br /><br /> **+ Public** - グローバルに参照できる<br /><br /> **- Private** - 所有元の型の外部では参照できない<br /><br /> **# Protected** - 所有元から派生した型では参照できる<br /><br /> **~ Package** - 同じパッケージ内の他の型で参照できる                                      |
-|  **作業項目**   | 関連付けなし |                                                                                                                          関連付けられている作業項目の数。 読み取り専用。<br /><br /> 詳細については、次を参照してください。[モデル要素をリンクし、作業項目](../modeling/link-model-elements-and-work-items.md)します。                                                                                                                           |
+|  **作業項目**   | 関連付けなし |                                                                                                                          関連付けられている作業項目の数。 読み取り専用。<br /><br /> 詳細については、[モデル要素と作業項目とのリンク](../modeling/link-model-elements-and-work-items.md)を参照してください。                                                                                                                           |
 |    **リーフには**    |    False     |                                                                                                                                                                    true の場合、派生型でこの属性の再定義は許可されません。                                                                                                                                                                     |
 |  **派生します。**   |    False     |                                                                                                              true の場合、この属性は他の属性から計算されます。 たとえば、Diagonal は Width と Height から計算されます。 詳細は、 **Description** またはアタッチされたコメントに記述する必要があります。                                                                                                              |
 |  **説明**  |   (空)    |                                                                                                                                                                        一般的なメモとして、または属性の値に対する制約を定義するために使用します。                                                                                                                                                                        |

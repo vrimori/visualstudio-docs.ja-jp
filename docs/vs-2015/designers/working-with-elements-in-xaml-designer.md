@@ -15,10 +15,10 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.openlocfilehash: f0ec7d97ace8f61f209e4664c0de42b883a6a5d0
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
+ms.lasthandoff: 01/16/2019
 ms.locfileid: "49896953"
 ---
 # <a name="working-with-elements-in-xaml-designer"></a>XAML デザイナーでの要素の操作
@@ -71,9 +71,9 @@ ms.locfileid: "49896953"
   
 1.  位置を揃える要素を選択します。 複数の要素を選択するには、Ctrl キーを押したまま、要素を選択します。  
   
-2.  [プロパティ] ウィンドウの **[レイアウト]** セクションの **[HorizontalAlignment]** で、次のいずれかを選択します: **[Left]**、**[Center]**、**[Right]**、または **[Stretch]**。  
+2.  プロパティ ウィンドウの **[レイアウト]** セクションの **[HorizontalAlignment]** で、**[Left]**、**[Center]**、**[Right]**、または **[Stretch]** のいずれかを選択します。  
   
-3.  [プロパティ] ウィンドウの **[レイアウト]** セクションの **[VerticalAlignment]** で、次のいずれかを選択します: **[Top]**、**[Center]**、**[Bottom]**、または **[Stretch]**。  
+3.  プロパティ ウィンドウの **[レイアウト]** セクションの **[VerticalAlignment]** で、**[Top]**、**[Center]**、**[Bottom]**、または **[Stretch]** のいずれかを選択します。  
   
 #### <a name="to-align-two-or-more-elements-by-using-snaplines"></a>スナップ ガイドラインを使用して 2 つ以上の要素の位置を揃えるには  
   
@@ -126,7 +126,7 @@ ms.locfileid: "49896953"
   
 -   [ドキュメント アウトライン] ウィンドウまたはアートボードで要素を右クリックし、**[レイアウト]**、**[*PropertyName* のリセット]** の順に選択します。ここで、*PropertyName* は、リセットするプロパティです (あるいは、要素のすべてのレイアウト プロパティをリセットするには、**[レイアウト]**、**[すべてリセット]** の順に選択します)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [XAML デザイナーを使用した UI の作成](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)
 
 

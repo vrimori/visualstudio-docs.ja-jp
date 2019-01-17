@@ -1,8 +1,6 @@
 ---
 title: SuspendProfile | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - SuspendProfile
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ae610539ded12c626fb69bffcc973d0424ca2f08
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 27c52c3821bb545efb8fe16365b11c9820db9214
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35669571"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53952126"
 ---
 # <a name="suspendprofile"></a>SuspendProfile
 `SuspendProfile` メソッドは、指定されたプロファイル レベルの保留/再開カウンターをインクリメントします。  
@@ -67,9 +65,9 @@ PROFILE_COMMAND_STATUS PROFILERAPI SuspendProfile(
  *Microsoft.VisualStudio.Profiler.dll*  
   
 ## <a name="function-information"></a>関数の情報  
- ヘッダー : *VSPerf.h* で宣言  
+ ヘッダー:*VSPerf.h* で宣言  
   
- インポート ライブラリ : *VSPerf.lib*  
+ インポート ライブラリ:*VSPerf.lib*  
   
 ## <a name="example"></a>例  
  SuspendProfile メソッドの例を以下に示します。 この例では、[PROFILE_CURRENTID](../profiling/profile-currentid.md) で識別されるプロセスまたはスレッドに対して、StartProfile が既に呼び出されていることを前提としています。  

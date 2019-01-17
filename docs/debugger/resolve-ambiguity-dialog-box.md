@@ -1,8 +1,6 @@
 ---
-title: ダイアログ ボックスのあいまいさを解決するには |Microsoft ドキュメント
-ms.custom: ''
+title: ダイアログ ボックスのあいまいさの解決 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.Disambig
@@ -21,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 130f580c997cb5bc0e522d0fef57969788481273
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: a31d217f8dc492468a894f78f10a4f7656677521
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31475481"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53945068"
 ---
 # <a name="resolve-ambiguity-dialog-box"></a>[あいまいさの解決] ダイアログ ボックス
 [`Resolve Ambiguity`] ダイアログ ボックスが表示されるのは、表示する場所をデバッガーが選択できない場合です。 たとえば、C++ テンプレートを使用する場合は、単一の関数テンプレートから複数の関数を作成できます。 デバッガーがテンプレートのソースの場所で停止して、`Go To Disassembly` が選択されている場合、デバッガーには複数のオプションがあります。 テンプレートから作成された各関数は独自の逆アセンブリ コードを持っており、デバッガーはどのコードを表示するのかを認識していません。 [`Resolve Ambiguity`] ダイアログ ボックスでは、対応するすべての場所の一覧から目的の場所を選択できます。  
@@ -43,5 +41,5 @@ ms.locfileid: "31475481"
  `Module`  
  関数のオブジェクト コードを含むモジュール (EXE または DLL) を表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [デバッガー内の式](../debugger/expressions-in-the-debugger.md)

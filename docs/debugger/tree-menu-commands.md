@@ -1,8 +1,6 @@
 ---
-title: メニュー コマンドをツリー |Microsoft ドキュメント
-ms.custom: ''
+title: メニュー コマンドをツリー |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Tree menu commands
@@ -12,24 +10,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 223821e6884dadd39c03e8af4605f207e6a28a2b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: ce1d92bd7a0edd741832c2d5009b671a9d029964
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31481357"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53861680"
 ---
 # <a name="tree-menu-commands"></a>[ツリー] メニューのコマンド
-**ツリー**メニューにコマンドを展開または折りたたみのビューが用意されています。  
+**ツリー**メニューには、展開または折りたたみビューにコマンドが用意されています。  
   
- **1 つのレベルを拡張します。**  
- 下にある 1 つのレベルを表示することによって、システム ビューで現在選択されている項目を展開します。  
+ **1 レベル展開**  
+ その下にある 1 つのレベルを表示することによって、システム ビューで現在選択されている項目を展開します。  
   
- **展開します。**  
- 現在選択されている項目の下のすべてのレベルを展開します。  
+ **ブランチを展開します。**  
+ 現在選択されている項目の下にあるすべてのレベルを展開します。  
   
- **すべて展開します。**  
+ **すべて展開**  
  展開し、システム ビューのすべてのレベルを表示します。  
   
- **折りたたみ**  
- 現在選択されている項目の下のすべてのレベルを折りたたみます。
+ **折りたたむ**  
+ 現在選択されている項目の下にあるすべてのレベルを折りたたみます。

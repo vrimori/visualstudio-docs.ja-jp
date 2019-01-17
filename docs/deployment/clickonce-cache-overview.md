@@ -1,8 +1,6 @@
 ---
 title: ClickOnce キャッシュの概要 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d846ec60f6cf1722584c4ea93c56c29bc7007b89
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
-ms.translationtype: MT
+ms.openlocfilehash: 323b179a81f9bdd66858c1ff2f96b8ce86b30b10
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39077621"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53865038"
 ---
 # <a name="clickonce-cache-overview"></a>ClickOnce キャッシュの概要
 すべて[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]、アプリケーションはオンラインでホストされているまたはローカルにインストールされるかどうか、内のクライアント コンピューターに保存されて、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション*キャッシュ*します。 A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]キャッシュは現在のユーザーの Documents and Settings フォルダーの設定をローカル ディレクトリの下の隠しディレクトリのファミリです。 このキャッシュは、アセンブリ、構成ファイル、アプリケーションとユーザー設定、およびデータ ディレクトリを含む、アプリケーションのすべてのファイルを保持します。 キャッシュはアプリケーションのデータ ディレクトリを最新バージョンに移行するためも担当します。 データ移行の詳細については、次を参照してください。[ローカルへのアクセスとリモート データには、ClickOnce アプリケーション](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)します。  
@@ -36,4 +34,4 @@ ms.locfileid: "39077621"
  既定では、クライアント コンピューターがある 250 MB の記憶域のオンライン[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション。 データ ファイルは、この制限にカウントされません。 システム管理者を拡大またはレジストリ キーを変更することで特定のクライアント コンピューターでは、このクォータを削減できます**HKEY_CURRENT_USER\Software\Classes\Software\Microsoft\Windows\CurrentVersion\Deployment\OnlineAppQuotaInKB**、これは、キャッシュのサイズ (キロバイト単位) を表す DWORD 値です。 たとえば、50 mb のキャッシュ サイズを減らす、この値を 51200 を変更します。  
   
 ## <a name="see-also"></a>関連項目  
- [ClickOnce アプリケーションにおけるローカルおよびリモート データにアクセス](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)
+ [ClickOnce アプリケーションにおけるローカル データおよびリモート データへのアクセス](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)

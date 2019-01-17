@@ -1,8 +1,6 @@
 ---
 title: マネージ コードのデバッグ |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -18,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 92d8da8c03cb2b76e0b47043085af66731958b4b
-ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
-ms.translationtype: HT
+ms.openlocfilehash: e34d138ec65d2508244c6802ccee67d931e87257
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53561893"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270207"
 ---
 # <a name="debugging-managed-code"></a>マネージド コードのデバッグ
 
@@ -77,7 +75,7 @@ Windows サービス アプリケーションのデバッグに関する注意�
 [アプリケーションのデバッグとプロファイリング](/dotnet/framework/debug-trace-profile/index)  
 .NET Framework アプリケーションのデバッグと構成要件について説明します。
 
-[スクリプトと Web アプリケーションのデバッグ](../debugger/debugging-web-applications-and-script.md)  
+[スクリプトと Web アプリケーションのデバッグ](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
 スクリプトおよび Web アプリケーションのデバッグ時に発生する一般的な問題、およびデバッグの手法について説明します。
 
 [Visual Studio 2015 のデバッガーの新機能](../debugger/what-s-new-for-the-debugger-in-visual-studio.md)  
@@ -88,7 +86,7 @@ Windows サービス アプリケーションのデバッグに関する注意�
 
 ## <a name="see-also"></a>関連項目
 
-[チュートリアル: デザイン時にフォーム コントロールのカスタムの Windows をデバッグ](/dotnet/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time)
-[デバッガーのセキュリティ](../debugger/debugger-security.md)
-[Visual Studio でのデバッグ](../debugger/index.md)
- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
+[チュートリアル: カスタム Windows フォーム コントロールのデザイン時のデバッグ](/dotnet/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time)  
+[デバッガーのセキュリティ](../debugger/debugger-security.md)  
+[Visual Studio でのデバッグ](../debugger/index.md)  
+[デバッガーでのはじめに](../debugger/debugger-feature-tour.md)

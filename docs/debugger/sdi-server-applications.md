@@ -1,8 +1,6 @@
 ---
-title: SDI サーバー アプリケーション |Microsoft ドキュメント
-ms.custom: ''
+title: SDI サーバー アプリケーション |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -18,21 +16,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9047c9b39bad5f4f790327b5ee65b4de688db9d8
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: ec4178fb23d84812d7258bac8384264bed9d4690
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31475663"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53885062"
 ---
 # <a name="sdi-server-applications"></a>SDI サーバー アプリケーション
-かどうかを SDI サーバー アプリケーションをデバッグする必要がありますを指定する`/Embedding`または`/Automation`で、**コマンドライン引数**プロパティに、*プロジェクト*プロパティ ページ ダイアログ ボックスの C と C++、C# の場合、またはVisual Basic プロジェクト。  
+SDI サーバー アプリケーションをデバッグする場合は、C/C++、C#、または Visual Basic のプロジェクトの [*プロジェクト* プロパティ ページ] ダイアログ ボックスで、**[コマンド ライン引数]** プロパティに `/Embedding` または `/Automation` を指定する必要があります。  
   
  デバッガーはこれらのコマンド ライン引数を利用して、コンテナーから起動されたようにサーバー アプリケーションを起動できます。 次に、プログラム マネージャーまたはファイル マネージャーからコンテナーを起動すると、コンテナーはデバッガー中で起動されたサーバーのインスタンスを使用できます。  
   
 ## <a name="finding-the-command-line-arguments-property"></a>[コマンド ライン引数] プロパティの表示  
- アクセスする、*プロジェクト*プロパティ ページ ダイアログ ボックスで、ソリューション エクスプ ローラーでプロジェクトを右クリックし、ショートカット メニューからプロパティを選択します。 [コマンド ライン引数] プロパティを表示するには、[構成プロパティ] カテゴリを展開し、[デバッグ] ページをクリックします。  
+ [*プロジェクト* プロパティ ページ] ダイアログ ボックスにアクセスするには、ソリューション エクスプローラーでプロジェクトを右クリックし、ショートカット メニューの [プロパティ] を選びます。 [コマンド ライン引数] プロパティを表示するには、[構成プロパティ] カテゴリを展開し、[デバッグ] ページをクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [COM および ActiveX のデバッグ](../debugger/com-and-activex-debugging.md)   
- [方法 : COM サーバーをデバッグする](../debugger/how-to-debug-com-servers.md)
+ [方法: COM サーバーをデバッグする](../debugger/how-to-debug-com-servers.md)

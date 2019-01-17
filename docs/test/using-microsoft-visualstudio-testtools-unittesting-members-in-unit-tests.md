@@ -2,19 +2,18 @@
 title: 単体テストでの Microsoft.VisualStudio.TestTools.UnitTesting のメンバーの使用
 ms.date: 03/02/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: reference
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: bad6f01a49856e44120c0dc121ee262d9d26506c
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 13fb1fb6b0b78ffbb2e89b80180260f14b695282
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295606"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53902790"
 ---
 # <a name="use-the-mstest-framework-in-unit-tests"></a>単体テストでの MSTest フレームワークの使用
 

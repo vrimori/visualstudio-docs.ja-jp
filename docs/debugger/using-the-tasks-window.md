@@ -1,8 +1,6 @@
 ---
 title: '[タスク] ウィンドウを使用して |Microsoft Docs'
-ms.custom: ''
 ms.date: 03/18/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.paralleltasks
@@ -19,14 +17,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bddcb7b36cd119f20fe8e03ed1152662284ac8c0
-ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
-ms.translationtype: HT
+ms.openlocfilehash: 957077335b8df286d6fa2fbd34b6b81874fddbaa
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53561578"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227773"
 ---
-# <a name="using-the-tasks-window"></a>[タスク] ウィンドウの使用
+# <a name="using-the-tasks-window-c-visual-basic-c"></a>[タスク] ウィンドウを使用して (C#、Visual Basic、C++)
 
 **[タスク]** ウィンドウは **[スレッド]** ウィンドウに似ていますが、このウィンドウには、各スレッドではなく <xref:System.Threading.Tasks.Task?displayProperty=fullName>、[task_handle](/cpp/parallel/concrt/reference/task-group-class)、または [WinJS.Promise](/previous-versions/windows/apps/br211867(v=win.10)) オブジェクトに関する情報が表示されます。 スレッドと同様、タスクは、同時に実行できる非同期操作を表します。ただし、複数のタスクが同じスレッドで実行される場合もあります。
 

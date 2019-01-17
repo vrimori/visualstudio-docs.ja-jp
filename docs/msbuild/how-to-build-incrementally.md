@@ -1,8 +1,6 @@
 ---
 title: '方法: インクリメンタル ビルドを実行する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, incremental builds
@@ -14,14 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f9e0251d41feb5bd9c61a719d932c6fd954be947
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d1fc2b076bffd843c4882e40f1c3c18dbf161e8b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49932430"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53883215"
 ---
-# <a name="how-to-build-incrementally"></a>方法: インクリメンタル ビルドを実行する
+# <a name="how-to-build-incrementally"></a>方法: インクリメンタル ビルド
 大規模なプロジェクトをビルドする場合、今でも最新の以前にビルドされたコンポーネントが再ビルドされないことが重要です。 すべてのターゲットが毎回ビルドされると、各ビルドが完了するのに長い時間がかかります。 インクリメンタル ビルド (ビルド内の以前にビルドされていないターゲット、または古くなっているターゲットだけが再ビルドされます) を有効にするため、[!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) は入力ファイルのタイムスタンプと出力ファイルのタイムスタンプを比較して、ターゲットをスキップ、ビルド、または部分的に再ビルドするかどうかを判断できます。 ただし、入力と出力の間に一対一のマッピングが必要です。 変換を使用して、ターゲットがこの直接マッピングを識別できるようにすることができます。 変換の詳細については、「[MSBuild 変換](../msbuild/msbuild-transforms.md)」を参照してください。  
   
 ## <a name="specify-inputs-and-outputs"></a>入力と出力を指定する  
@@ -29,7 +27,7 @@ ms.locfileid: "49932430"
   
 #### <a name="to-specify-inputs-and-outputs-for-a-target"></a>ターゲットに入力と出力を指定するには  
   
-- `Target` 要素の `Inputs` 属性と `Outputs` 属性を使用します。 例:  
+- `Target` 要素の `Inputs` 属性と `Outputs` 属性を使用します。 次に例を示します。  
   
   ```xml  
   <Target Name="Build"  
@@ -60,9 +58,9 @@ ms.locfileid: "49932430"
 ## <a name="example"></a>例  
  次の例では、架空のヘルプ システムのヘルプ ファイルをビルドするプロジェクトを使用します。 プロジェクトは、ソースの *.txt* ファイルを、中間の *.content* ファイルに変換し、これを XML メタデータ ファイルと結合してヘルプ システムで使用される最終の *.help* ファイルを生成することによって機能します。 プロジェクトでは、次の仮想タスクを使用します。  
   
--   `GenerateContentFiles`: *.txt* ファイルを *.content* ファイルに変換します。  
+-   `GenerateContentFiles`:*.txt* ファイルを *.content* ファイルに変換します。  
   
--   `BuildHelp`: *.content* ファイルと XML メタデータ ファイルを結合し、最終の *.help* ファイルをビルドします。  
+-   `BuildHelp`:*.content* ファイルと XML メタデータ ファイルを結合し、最終の *.help* ファイルをビルドします。  
   
 
  プロジェクトは、変換を使用して、`GenerateContentFiles` タスクで入力と出力間の一対一のマッピングを作成します。 詳細については、「[MSBuild 変換](../msbuild/msbuild-transforms.md)」をご覧ください。 また、`Output` 要素が `GenerateContentFiles` タスクからの出力を `BuildHelp` タスクの入力として自動的に使用するように設定されます。  

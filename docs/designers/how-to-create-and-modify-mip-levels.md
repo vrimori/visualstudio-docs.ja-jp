@@ -2,7 +2,6 @@
 title: '方法: MIP レベルを作成および変更する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: f64d4369-2307-4175-a39a-2e45506f7fa1
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bdda75e5c8796ccd6e0b1d86b717dbd9bc48926
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: 56463df627a0e20624403ec4e1369569795d71fc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924448"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53874421"
 ---
 # <a name="how-to-create-and-modify-mip-levels"></a>方法: MIP レベルを作成および変更する
 このドキュメントでは、**イメージ エディター**を使用して、テクスチャ空間詳細レベル (LoD) の *MIPMAP レベル*を作成および変更する方法を示します。
@@ -25,7 +24,7 @@ ms.locfileid: "37924448"
 
 #### <a name="to-generate-mip-levels"></a>MIPMAP レベルを生成するには
 
-1.  「[方法: 基本テクスチャを作成する](../designers/how-to-create-a-basic-texture.md)」の説明に従って、基本テクスチャから始めます。 最適な結果を得るには、テクスチャの高さと幅のサイズは、2 の累乗 (256、512、1024 など) に指定します。
+1.  「[方法:基本的なテクスチャを作成する](../designers/how-to-create-a-basic-texture.md)」の手順に従ってイメージ ファイルを作成します。 最適な結果を得るには、テクスチャの高さと幅のサイズは、2 の累乗 (256、512、1024 など) に指定します。
 
 2.  MIPMAP レベルを生成します。 **[イメージ エディターのモード]** ツール バーで、**[詳細設定]**、**[ツール]**、**[MIPS の生成]** の順にクリックします。
 
@@ -41,8 +40,8 @@ ms.locfileid: "37924448"
 2.  変更する MIPMAP レベルを選択した後、描画ツールを使用して、他の MIPMAP レベルの内容を変更せずに、その MIPMAP レベルの内容のみ変更できます。 描画ツールは**イメージ エディター**のツール バーで使用できます。 ツールを選択した後は、**[プロパティ]** ウィンドウでそのツールのプロパティを変更できます。 描画ツールとそれらのプロパティの詳細については、「[イメージ エディター](../designers/image-editor.md)」を参照してください。
 
 > [!NOTE]
->  各 MIPMAP レベルの内容を変更する必要がない場合 (特定の効果を得るためになど)、ビルド時にソース テクスチャから MIPMAP を生成することをお勧めします。 これは、MIPMAP レベルがソース テクスチャと確実に同期するために役立ちます。1 つの MIPMAP レベルに対する変更がその他の MIPMAP レベルに自動的に反映されないためです。 ビルド時に mipmap を生成する方法については、「[方法: ミップマップを含むテクスチャをエクスポートする](../designers/how-to-export-a-texture-that-contains-mipmaps.md)」を参照してください。
+>  各 MIPMAP レベルの内容を変更する必要がない場合 (特定の効果を得るためになど)、ビルド時にソース テクスチャから MIPMAP を生成することをお勧めします。 これは、MIPMAP レベルがソース テクスチャと確実に同期するために役立ちます。1 つの MIPMAP レベルに対する変更がその他の MIPMAP レベルに自動的に反映されないためです。 ビルド時に mipmap を生成する方法については、「[方法:ミップマップを含むテクスチャをエクスポートする](../designers/how-to-export-a-texture-that-contains-mipmaps.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: 基本テクスチャを作成する](../designers/how-to-create-a-basic-texture.md)
+- [方法: 基本的なテクスチャを作成する](../designers/how-to-create-a-basic-texture.md)

@@ -2,7 +2,6 @@
 title: Print コマンド
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - debug.print
@@ -16,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ef4f0c5c6bd5be2820e1f666529fc43fac59763
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 31f604d6df45cb22d18401b5925867d5ab0e02b8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704253"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53900887"
 ---
 # <a name="print-command"></a>Print コマンド
 式を評価するか、指定したテキストを表示します。
@@ -35,7 +34,7 @@ Debug.Print text
 ## <a name="arguments"></a>引数
  `text`
 
- 必須。 評価対象の式または表示対象のテキストです。
+ 必須です。 評価対象の式または表示対象のテキストです。
 
 ## <a name="remarks"></a>コメント
  このコマンドのエイリアスとして疑問符 (?) を使用できます。 したがって、たとえば次のコマンド
@@ -58,10 +57,10 @@ Debug.Print text
 >Debug.Print varA
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Evaluate Statement コマンド](../../ide/reference/evaluate-statement-command.md)
 - [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
 - [コマンド ウィンドウ](../../ide/reference/command-window.md)
 - [検索コマンド ボックス](../../ide/find-command-box.md)
-- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)

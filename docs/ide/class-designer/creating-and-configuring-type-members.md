@@ -2,7 +2,6 @@
 title: 型のメンバーの作成と構成 (クラス デザイナー)
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.classdetails.method
@@ -31,12 +30,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b93fa4720a6f0de9e2d7a64eb2c820811610297
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 7063b536c50cff39bfeb3adabe989b3cd9a56ddf
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49938800"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53828138"
 ---
 # <a name="create-and-configure-type-members-in-class-designer"></a>クラス デザイナーでの型メンバーの作成および構成
 
@@ -60,11 +59,11 @@ ms.locfileid: "49938800"
 |タスク|関連する参照先|
 |----------| - |
 |**作業の開始:** 型のメンバーを作成および構成する前に、**[クラスの詳細]** ウィンドウを開く必要があります。|- [[クラスの詳細] ウィンドウを開く](creating-and-configuring-type-members.md#open-the-class-details-window)<br />- [クラスの詳細の使用上の注意](creating-and-configuring-type-members.md#class-details-usage-notes)<br />- [読み取り専用の情報の表示](creating-and-configuring-type-members.md#display-of-read-only-information)<br />- [クラス ダイアグラムおよびクラスの詳細情報のウィンドウでのキーボードとマウスのショートカット](keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window.md)|
-|**型のメンバーの作成および変更:** **[クラスの詳細]** ウィンドウを使用して、新しいメンバーの作成、メンバーの変更、およびメソッドへのパラメーターの追加を行えます。|- [メンバーの作成](creating-and-configuring-type-members.md#create-members)<br />- [型のメンバーの変更](creating-and-configuring-type-members.md#modify-type-members)<br />- [メソッドへのパラメーターの追加](creating-and-configuring-type-members.md#add-parameters-to-methods)|
+|**型のメンバーの作成および変更:****[クラスの詳細]** ウィンドウを使用して、新しいメンバーの作成、メンバーの変更、およびメソッドへのパラメーターの追加を行うことができます。|- [メンバーの作成](creating-and-configuring-type-members.md#create-members)<br />- [型のメンバーの変更](creating-and-configuring-type-members.md#modify-type-members)<br />- [メソッドへのパラメーターの追加](creating-and-configuring-type-members.md#add-parameters-to-methods)|
 
 ## <a name="open-the-class-details-window"></a>[クラスの詳細] ウィンドウを開く
 
-既定では、**[クラスの詳細]** ウィンドウは、新しいクラス ダイアグラムを開くと自動的に表示されます。 「[方法: プロジェクトにクラス ダイアグラムを追加する](how-to-add-class-diagrams-to-projects.md)」を参照してください。 また、**[クラスの詳細]** ウィンドウは、次の方法でも開くことができます。
+既定では、**[クラスの詳細]** ウィンドウは、新しいクラス ダイアグラムを開くと自動的に表示されます。 「[方法:プロジェクトにクラス ダイアグラムを追加する](how-to-add-class-diagrams-to-projects.md)」を参照してください。 また、**[クラスの詳細]** ウィンドウは、次の方法でも開くことができます。
 
 - ダイアグラム内の任意のクラスを右クリックしてコンテキスト メニューを表示し、**[クラスの詳細]** を選択します。
 
@@ -124,7 +123,7 @@ ms.locfileid: "49938800"
 
 4.  オプションとして、型など、メンバーに関するその他の詳細を指定します。
 
-     **メモ:** ショートカット キーを使用してメンバーを作成することもできます。 詳細については、「[クラス ダイアグラムおよびクラスの詳細情報のウィンドウでのキーボードとマウスのショートカット](keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window.md)」を参照してください。
+     **注:** キーボード ショートカットを使用してメンバーを作成することもできます。 詳細については、「[クラス ダイアグラムおよびクラスの詳細情報のウィンドウでのキーボードとマウスのショートカット](keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window.md)」を参照してください。
 
 ## <a name="modify-type-members"></a>型のメンバーの変更
 
@@ -209,7 +208,7 @@ ms.locfileid: "49938800"
 
      メンバーの最後のパラメーター行には、**[名前]** セルに **<add parameter>** というテキストが表示されます。 このセルをクリックして、新しいパラメーターを作成できます。 詳細については、「[メソッドにパラメーターを追加するには](creating-and-configuring-type-members.md#add-parameters-to-methods)」を参照してください。
 
-**プロパティ** ウィンドウには、**[クラスの詳細]** ウィンドウに表示されるのと同じパラメーターのプロパティ (**[名前]**、**[型]**、 **[修飾子]**、**[概要]**、**[省略可能な既定値]**) が表示されます。 ある場所でプロパティを変更すると、プロパティの値がグローバルに更新され、他の場所でのその値の表示も更新されます。
+**[プロパティ]** ウィンドウには、**[クラスの詳細]** ウィンドウに表示されるのと同じパラメーターのプロパティ (**[名前]**、**[型]**、**[修飾子]**、**[概要]**、**[省略可能な既定値]**) が表示されます。 ある場所でプロパティを変更すると、プロパティの値がグローバルに更新され、他の場所でのその値の表示も更新されます。
 
 > [!NOTE]
 > パラメーターをデリゲートに追加するには、「[メンバーの作成](creating-and-configuring-type-members.md#create-members)」を参照してください。
@@ -320,5 +319,5 @@ ms.locfileid: "49938800"
 
 ## <a name="see-also"></a>関連項目
 
-- [型およびリレーションシップの表示](viewing-types-and-relationships.md)
+- [型およびリレーションシップの表示](designing-and-viewing-classes-and-types.md)
 - [クラスおよび型のリファクタリング](refactoring-classes-and-types.md)

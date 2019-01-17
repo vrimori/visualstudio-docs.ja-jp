@@ -1,9 +1,7 @@
 ---
 title: '手順 2: ランダムな加算問題の作成'
-ms.custom: ''
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 6461c4cf-f2aa-4bf5-91ed-06820a4f893d
 author: TerryGLee
@@ -11,12 +9,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: abd70e53c06da53f22bcac4c7f041aaef75bd412
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 64a0b17d47d0906df680ed51c25fe3386d9b6b68
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747868"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53846114"
 ---
 # <a name="step-2-create-a-random-addition-problem"></a>手順 2: ランダムな加算問題の作成
 このチュートリアルの第 2 部では、乱数に基づく計算問題を追加して、クイズに挑みます。 また、`StartTheQuiz()` という名前の、問題に記入して、カウントダウン タイマーを開始するメソッドを作成します。 このチュートリアルの後半では、減算、乗算、除算問題を追加します。
@@ -97,4 +95,4 @@ ms.locfileid: "34747868"
 
 -   チュートリアルの次の手順に進むには、「[手順 3: カウントダウン タイマーの追加](../ide/step-3-add-a-countdown-timer.md)」をご覧ください。
 
--   チュートリアルの前の手順に戻るには、「[手順 1: プロジェクトの作成とフォームへのラベルの追加](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)」をご覧ください。
+-   チュートリアルの前の手順に戻るには、「[手順 1: プロジェクトの作成とフォームへのラベルの追加](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)」を参照してください。

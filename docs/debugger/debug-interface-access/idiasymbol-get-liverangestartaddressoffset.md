@@ -1,8 +1,6 @@
 ---
 title: IDiaSymbol::get_liveRangeStartAddressOffset |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 517e3c516f18d32634d0c8243d65674175e7da17
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 95c24788894c784cbe1d4b60dac3dbccf0350a85
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49870979"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53851314"
 ---
 # <a name="idiasymbolgetliverangestartaddressoffset"></a>IDiaSymbol::get_liveRangeStartAddressOffset
 ローカル シンボルの有効範囲の開始アドレスのオフセットの部分を返します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49870979"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_liveRangeStartAddressOffset (   
+HRESULT get_liveRangeStartAddressOffset (   
    DWORD* offset  
 );  
 ```  
@@ -42,17 +40,17 @@ HRESULT get_liveRangeStartAddressOffset (
 > [!NOTE]
 >  返されたエラー コードは、シンボルにライブの範囲の情報がないことを意味します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  セクションとオフセットで構成されるアドレスは、シンボルの有効範囲の先頭です。  
   
  アドレスのセクションの一部を取得する[IDiaSymbol::get_liveRangeStartAddressSection](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddresssection.md)します。  
   
-## <a name="requirements"></a>必要条件  
- ヘッダー: Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー:dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia100.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

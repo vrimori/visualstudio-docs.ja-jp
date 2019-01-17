@@ -8,16 +8,15 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 - cplusplus
-ms.openlocfilehash: 4c247d693da287581b8ab163880e9cecf4aeb17c
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: b13b7e8e23367fe83afb9e3ccf1a081f369867af
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304926"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53895483"
 ---
 # <a name="visual-studio-data-tools-for-c"></a>C++ 用の Visual Studio データ ツール
 
@@ -25,11 +24,11 @@ ms.locfileid: "52304926"
 
 SQL データベースに接続するには、ネイティブ C++ アプリケーションは、ODBC および OLE DB ドライバーおよび ADO プロバイダーは、Windows に含まれているを使用できます。 これらは、それらのインターフェイスをサポートする任意のデータベースに接続できます。 ODBC ドライバーは、標準です。 OLE DB は、旧バージョンとの互換性のために提供されます。 このようなデータ テクノロジの詳細については、次を参照してください。 [Windows Data Access Components](/previous-versions/windows/desktop/ms692897(v=vs.85))します。
 
-SQL Server 2005 でのカスタム機能を利用し、後で、使用して、 [SQL Server native client](/sql/relational-databases/native-client/sql-server-native-client)します。 ネイティブ クライアントでは、SQL Server ODBC ドライバーと 1 つのネイティブ ダイナミック リンク ライブラリ (DLL) で SQL Server OLE DB プロバイダーも含まれています。 これらは、Microsoft SQL Server にネイティブ コード Api (ODBC、OLE DB と ADO) を使用してアプリケーションをサポートします。 SQL Server Native Client は、SQL Server Data Tools と共にインストールされます。 プログラミング ガイドはこちら: [SQL Server native client プログラミング](/sql/relational-databases/native-client/sql-server-native-client-programming)します。
+SQL Server 2005 でのカスタム機能を利用し、後で、使用して、 [SQL Server native client](/sql/relational-databases/native-client/sql-server-native-client)します。 ネイティブ クライアントでは、SQL Server ODBC ドライバーと 1 つのネイティブ ダイナミック リンク ライブラリ (DLL) で SQL Server OLE DB プロバイダーも含まれています。 これらは、Microsoft SQL Server にネイティブ コード Api (ODBC、OLE DB と ADO) を使用してアプリケーションをサポートします。 SQL Server Native Client は、SQL Server Data Tools と共にインストールされます。 プログラミング ガイドは、ここでは。[SQL Server ネイティブ クライアントのプログラミング](/sql/relational-databases/native-client/sql-server-native-client-programming)します。
 
 ## <a name="to-connect-to-localdb-through-odbc-and-sql-native-client-from-a-c-application"></a>C++ アプリケーションから ODBC および SQL Native Client で localDB に接続するには
 
-1. SQL Server Data Tools のインストール
+1. SQL Server Data Tools をインストールします。
 
 2. サンプル SQL データベースに接続する場合は、Northwind データベースをダウンロードし、新しい場所に解凍します。
 
@@ -66,7 +65,7 @@ SQL Server 2005 でのカスタム機能を利用し、後で、使用して、 
    DRIVER="SQL Server Native Client 11.0"
    ```
 
-8. **F5** キーを押してアプリケーションをビルドし、実行します。 データベースを入力するように求められますドライバーからのダイアログ ボックスを表示する必要があります。 入力`(localdb)\MSSQLLocalDB`、確認と**セキュリティ接続を使用**します。 [OK] を押します。 接続に成功を示すメッセージをコンソールに表示されます。 表示されます、コマンド プロンプトで SQL ステートメントを入力することができます。 次の画面には、クエリの例と、結果が表示されます。
+8. **F5** キーを押してアプリケーションをビルドし、実行します。 データベースを入力するように求められますドライバーからのダイアログ ボックスを表示する必要があります。 入力`(localdb)\MSSQLLocalDB`、確認と**セキュリティ接続を使用**します。 **[OK]** を押します。 接続に成功を示すメッセージをコンソールに表示されます。 表示されます、コマンド プロンプトで SQL ステートメントを入力することができます。 次の画面には、クエリの例と、結果が表示されます。
 
    ![ODBC のサンプル クエリの出力](../data-tools/media/raddata-odbc-sample-query-output.png)
 

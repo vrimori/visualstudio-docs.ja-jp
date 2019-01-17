@@ -1,10 +1,8 @@
 ---
 title: DownloadFile タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: msbuild
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
@@ -24,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 14b5daafbc4c11547515b9d77be2877eb07bcb8b
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: cb7b67c4ad567587278c805485e0b8e65ca44e94
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945345"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53832925"
 ---
 # <a name="downloadfile-task"></a>DownloadFile タスク
 ハイパーテキスト転送プロトコル (HTTP) を使って、指定したファイルをダウンロードします。

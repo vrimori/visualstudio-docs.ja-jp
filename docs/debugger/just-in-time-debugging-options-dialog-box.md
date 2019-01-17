@@ -1,8 +1,6 @@
 ---
 title: Just-in-time で、デバッグ オプション ダイアログ ボックス |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Debugger.JIT
@@ -22,15 +20,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a6736e0646193754dbd932e5501a6473ee18c7e6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 05a1cc9e4847b9ffa2c873b137c35bfbf6f83f83
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49936330"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53968116"
 ---
 # <a name="just-in-time-debugging-options-dialog-box"></a>[Just-In-Time] ([オプション] ダイアログ ボックス - [デバッグ])
-アクセスする、**ジャスト イン タイム** ページに移動して、**ツール**メニューをクリックします**オプション**します。 **オプション** ダイアログ ボックスで、展開、**デバッグ**ノード**ジャスト イン タイム**します。 このページでは、マネージド コード、ネイティブ コード、およびスクリプトでの Just-In-Time デバッグを有効にできます。 詳細については、次を参照してください。 [Just-In-Time デバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)します。  
+**[Just-In-Time]** ページを使用するには、**[ツール]** メニューの **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスの **[デバッグ]** ノードを展開し、**[Just-In-Time]** をクリックします。 このページでは、マネージド コード、ネイティブ コード、およびスクリプトでの Just-In-Time デバッグを有効にできます。 詳細については、「[Just-In-Time デバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)」を参照してください。  
   
  Just-In-Time デバッグは次のプログラムの種類で有効です。  
   
@@ -43,20 +41,20 @@ ms.locfileid: "49936330"
   Just-In-Time デバッグは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の外部で起動されたプログラムをデバッグするための手法です。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で作成されたプログラムを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 環境の外部で実行できます。 Just-In-Time デバッグを有効にすると、クラッシュの発生時に、デバッグを実行するかどうかを確認するダイアログ ボックスが表示されます。  
   
 ## <a name="associated-warnings"></a>関連する警告  
- このページにアクセスした場合、**オプション**ダイアログ ボックスで、このような警告メッセージが表示する場合があります。  
+ **[オプション]** ダイアログ ボックスでこのページを開いたときに、次のような警告メッセージが表示される場合があります。  
   
- **別のデバッガーが自体として登録時にだけデバッガー。修復するには、ジャストイン タイムをデバッグまたは Visual Studio の修復を実行を有効にします。**  
+ **別のデバッガーが Just-In-Time デバッガーとして登録されています。修復するには、Just-In-Time デバッグを有効にするか、または Visual Studio の修復を実行してください。**  
   
  このメッセージは、他のデバッガー (古いバージョンの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーなど) が Just-In-Time デバッガーとして設定されている場合に表示されます。  
   
  次のメッセージが表示されることもあります。  
   
- **Just-in-time デバッグの登録エラーが検出されました。修復するには、ジャストイン タイムをデバッグまたは Visual Studio の修復を実行を有効にします。**  
+ **Just-In-Time デバッグの登録エラーが検出されました。修復するには、Just-In-Time デバッグを有効にするか、または Visual Studio の修復を実行してください。**  
   
- 表示された場合、これらの警告のいずれかの Just ポイントイン タイムを使用したデバッグ[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]問題を解決するまでに管理者特権が必要です。 この場合、管理者以外の権限で Just-In-Time デバッグを有効にしようとすると、次のメッセージが表示されます。  
+ これらの警告のいずれかが表示されている場合、問題が解決されるまでの間、[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] で Just-In-Time デバッグを行うには管理者特権が必要になります。 この場合、管理者以外の権限で Just-In-Time デバッグを有効にしようとすると、次のメッセージが表示されます。  
   
- **アクセスが拒否されました。管理者ジャスト イン タイムを有効にするデバッグ、または Visual Studio のインストールを修復します。**  
+ **アクセスが拒否されました。管理者に Just-In-Time デバッグを有効にしてもらうか、または Visual Studio のインストールを修復してください。**  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ オプション ダイアログ ボックス](../debugger/debugging-options-dialog-box.md)   
+## <a name="see-also"></a>「  
+ [[デバッグ] ([オプション] ダイアログ ボックス)](../debugger/debugging-options-dialog-box.md)   
  [方法: デバッガー設定を指定する](../debugger/how-to-specify-debugger-settings.md)

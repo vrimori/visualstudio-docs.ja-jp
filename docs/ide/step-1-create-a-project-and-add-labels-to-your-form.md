@@ -1,9 +1,7 @@
 ---
 title: '手順 1: プロジェクトの作成とフォームへのラベルの追加'
-ms.custom: ''
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: f44e50be-a5f5-4d77-9cff-dd52374c3f74
 author: TerryGLee
@@ -11,19 +9,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eb29a985a39344c5bffad59e63a9d540311ec648
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: dcbee1d5339405d21b7b61ca5db35815568983b6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49925124"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53910949"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>手順 1: プロジェクトの作成とフォームへのラベルの追加
 
 このクイズを開発する最初のステップとして、プロジェクトを作成し、ラベル、ボタン、およびその他のコントロールをフォームに追加します。 また、追加する各コントロールのプロパティを設定します。 プロジェクトには、フォーム、コントロール、およびコード (チュートリアルで後ほど説明) が含まれます。 ボタンはクイズを開始し、ラベルはクイズ問題を表示し、その他のコントロールはクイズの解答とクイズを完了するために残っている時間を示します。
 
 > [!NOTE]
-> このトピックは、コーディングの基本概念に関するチュートリアル シリーズの一部です。 チュートリアルの概要については、「[チュートリアル 2: 制限時間ありの計算クイズの作成](../ide/tutorial-2-create-a-timed-math-quiz.md)」を参照してください。
+> このトピックは、コーディングの基本概念に関するチュートリアル シリーズの一部です。 チュートリアルの概要については、「[チュートリアル 2:制限時間ありの計算クイズの作成](../ide/tutorial-2-create-a-timed-math-quiz.md)」を参照してください。
 
 ## <a name="to-create-a-project-and-set-properties-for-a-form"></a>プロジェクトを作成し、フォームのプロパティを設定するには
 
@@ -173,6 +171,6 @@ ms.locfileid: "49925124"
 
 ## <a name="to-continue-or-review"></a>続行または確認するには
 
--   チュートリアルの次の手順に進むには、「[手順 2: ランダムな加算問題の作成](../ide/step-2-create-a-random-addition-problem.md)」をご覧ください。
+-   チュートリアルの次の手順に進むには、「[手順 2:ランダムな加算問題の作成](../ide/step-2-create-a-random-addition-problem.md)」を参照してください。
 
--   概要のトピックに戻るには、「[チュートリアル 2: 制限時間ありの計算クイズの作成](../ide/tutorial-2-create-a-timed-math-quiz.md)」をご覧ください。
+-   概要のトピックに戻るには、「[チュートリアル 2:制限時間ありの計算クイズの作成](../ide/tutorial-2-create-a-timed-math-quiz.md)」を参照してください。

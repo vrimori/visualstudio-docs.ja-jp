@@ -1,8 +1,6 @@
 ---
 title: Attach | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 79614283-6733-4592-a53a-d428052271ad
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 80b4000a8fc8657c1b82490b1ddb6dec0dbdd3ce
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: bc094fe4d8ef59a17a64d654edff4a834964df79
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49907236"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53901322"
 ---
 # <a name="attach"></a>Attach
 *VSPerfCmd.exe* **Attach** オプションは、プロセス ID (PID) によって指定された実行プロセスのサンプル プロファイリングを開始します。  
@@ -50,7 +48,7 @@ VSPerfCmd.exe /Attach:ProcessID [Options]
  **GlobalOn GlobalOff**  
  プロファイリングを再開 (**GlobalOn**) または一時停止 (**GlobalOff**) しますが、プロファイル セッションは終了しません。  
   
- **ProcessOn:** `PID` **ProcessOff:** `PID`  
+ **ProcessOn:**`PID` **ProcessOff:** `PID`  
  指定されたプロセスのプロファイリングを再開 (**ProcessOn**) または一時停止 (**ProcessOff**) します。  
   
 ## <a name="interval-options"></a>間隔のオプション  

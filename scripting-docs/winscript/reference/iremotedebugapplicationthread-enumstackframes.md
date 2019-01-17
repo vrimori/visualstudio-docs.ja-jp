@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationThread::EnumStackFrames |Microsoft ドキュメント
+title: IRemoteDebugApplicationThread::EnumStackFrames |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9c754ce92a342163acc07b69c097af5df4c226cf
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 20abe2c10a0959f00e67d98ac405b74c35a0c032
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729012"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54093275"
 ---
 # <a name="iremotedebugapplicationthreadenumstackframes"></a>IRemoteDebugApplicationThread::EnumStackFrames
 このスレッドに関連付けられているスタック フレームの列挙子を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT EnumStackFrames(  
    IEnumDebugStackFrames**  ppedsf  
 );  
@@ -43,12 +43,12 @@ HRESULT EnumStackFrames(
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、ブレークポイント内からを呼び出す必要があります。 スタック フレームの列挙子は、以降、最後にプッシュされたフレームで、スタックの上部で開始するフレームを返す必要があります。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、ブレークポイント内からを呼び出す必要があります。 スタック フレームの列挙子は、以降、最後にプッシュされたフレームでは、スタックの上部で開始フレームを返す必要があります。  
   
 ## <a name="see-also"></a>関連項目  
  [IRemoteDebugApplicationThread インターフェイス](../../winscript/reference/iremotedebugapplicationthread-interface.md)

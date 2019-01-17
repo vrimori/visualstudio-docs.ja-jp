@@ -2,7 +2,6 @@
 title: '[オプション]、[テキスト エディター]、[C/C++]、[書式設定]'
 ms.date: 04/30/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C/C++.Formatting.General
@@ -18,12 +17,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee7fab1564b39b29ae288e96c7aa77e0da21e88c
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 6aa4c543d19c43bd397d7d18a185a73a4bf161a6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36235142"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53960749"
 ---
 # <a name="options-text-editor-cc-formatting"></a>[オプション]、[テキスト エディター]、[C/C++]、[書式設定]
 
@@ -40,11 +39,11 @@ ms.locfileid: "36235142"
 
 このページには、入力したステートメントやブロックの書式を設定するためのオプションがあります。
 
-**Visual Studio 2017 バージョン 15.7 以降**: このページにも、[ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) バージョン 5.0 のサポートを構成するためのオプションがあります。 ClangFormat は、.clang-format または _clang-format ファイルで構成できる一連のルールに基づいてコードのスタイルや書式を簡単に設定できるユーティリティです。
+**Visual Studio 2017 バージョン 15.7 以降**:このページにも、[ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) バージョン 5.0 のサポートを構成するためのオプションがあります。 ClangFormat は、.clang-format または _clang-format ファイルで構成できる一連のルールに基づいてコードのスタイルや書式を簡単に設定できるユーティリティです。
 
 ### <a name="configuring-clangformat-options"></a>ClangFormat オプションを構成する
 
-Visual Studio 2017 バージョン 15.7 以降、ClangFormat サポートは既定で有効になります。 一般的な書式設定規則である LLVM、Google、Chromium、Mozilla、WebKit のうち、すべてのプロジェクトに適用するものを選択できます。 また、カスタム書式定義の .clang-format または _clang-format ファイルを作成できます。 そのようなファイルがプロジェクト フォルダーに置かれている場合、Visual Studio は、そのフォルダーとそのサブフォルダーのすべてのソース コード ファイルの書式設定にそのファイルを使用します。 
+Visual Studio 2017 バージョン 15.7 以降、ClangFormat サポートは既定で有効になります。 一般的な書式設定規則であるLLVM、Google、Chromium、Mozilla、WebKit のうち、すべてのプロジェクトに適用するものを選択できます。 また、カスタム書式定義の .clang-format または _clang-format ファイルを作成できます。 そのようなファイルがプロジェクト フォルダーに置かれている場合、Visual Studio は、そのフォルダーとそのサブフォルダーのすべてのソース コード ファイルの書式設定にそのファイルを使用します。 
 
 既定では、Visual Studio は clangformat.exe をバックグラウンドで実行し、ユーザーが入力すると書式設定を適用します。 書式設定コマンド **Format Document (Ctrl + K、Ctrl + D)** または **Format Selection (Ctrl + K、Ctrl + F)** を手動で呼び出す場合にのみ、clangformat.exe を実行するように指定することもできます。
 
@@ -53,7 +52,7 @@ Visual Studio 2017 バージョン 15.7 以降、ClangFormat サポートは既�
 
 これらのページでは、さまざまな書式設定をカスタマイズできますが、ClangFormat が有効になっている場合は無視されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)
 - [IntelliSense の使用](../../ide/using-intellisense.md)

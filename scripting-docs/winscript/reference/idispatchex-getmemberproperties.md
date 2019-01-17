@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx::GetMemberProperties |Microsoft ドキュメント
+title: IDispatchEx::GetMemberProperties |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0d216bb7b21c8895337b9925007637c00d0deb37
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 51e01ef3fa6d5e0611875f6402b79e53f8c83cac
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729662"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54088193"
 ---
 # <a name="idispatchexgetmemberproperties"></a>IDispatchEx::GetMemberProperties
 メンバーのプロパティを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetMemberProperties(  
    DISPID id,  
    DWORD grfdexFetch,  
@@ -43,9 +43,9 @@ HRESULT GetMemberProperties(
  メンバーを識別します。 使用して`GetDispID`または`GetNextDispID`ディスパッチ識別子を取得します。  
   
  `grfdexFetch`  
- 取得するプロパティを決定します。 値の組み合わせが可能ですこの`pgrfdex`や、次の値の組み合わせ。  
+ 取得するプロパティを決定します。 これは、下に一覧表示の値の組み合わせ`pgrfdex`や、次の値の組み合わせ。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-------------|  
 |grfdexPropCanAll|FdexPropCanGet、fdexPropCanPut、fdexPropCanPutRef、fdexPropCanCall、fdexPropCanConstruct および fdexPropCanSourceEvents を結合します。|  
 |grfdexPropCannotAll|FdexPropCannotGet、fdexPropCannotPut、fdexPropCannotPutRef、fdexPropCannotCall、fdexPropCannotConstruct および fdexPropCannotSourceEvents を結合します。|  
@@ -53,22 +53,22 @@ HRESULT GetMemberProperties(
 |grfdexPropAll|GrfdexPropCanAll、grfdexPropCannotAll および grfdexPropExtraAll を結合します。|  
   
  `pgrfdex`  
- アドレス、`DWORD`要求されたプロパティを受け取る。 これにより、次の値の組み合わせが可能します。  
+ アドレスを`DWORD`要求されたプロパティを受け取る。 次の値の組み合わせを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-------------|  
 |fdexPropCanGet|メンバーは、DISPATCH_PROPERTYGET を使用して取得できます。|  
-|fdexPropCannotGet|DISPATCH_PROPERTYGET を使用して、メンバーを取得できません。|  
+|fdexPropCannotGet|メンバーは、DISPATCH_PROPERTYGET を使用して取得することはできません。|  
 |fdexPropCanPut|メンバーは、DISPATCH_PROPERTYPUT を使用して設定できます。|  
-|fdexPropCannotPut|DISPATCH_PROPERTYPUT を使用してメンバーを設定することはできません。|  
+|fdexPropCannotPut|DISPATCH_PROPERTYPUT を使用して、メンバーを設定することはできません。|  
 |fdexPropCanPutRef|メンバーは、DISPATCH_PROPERTYPUTREF を使用して設定できます。|  
-|fdexPropCannotPutRef|DISPATCH_PROPERTYPUTREF を使用してメンバーを設定することはできません。|  
-|fdexPropNoSideEffects|メンバーには、すべての副作用はありません。 たとえば、デバッガーが安全に取得/設定/の呼び出しをでした、スクリプトのデバッグ中の状態を変更せずには、このメンバー。|  
-|fdexPropDynamicType|メンバーは、動的オブジェクトの有効期間中に変更できます。|  
+|fdexPropCannotPutRef|DISPATCH_PROPERTYPUTREF を使用して、メンバーを設定することはできません。|  
+|fdexPropNoSideEffects|メンバーには、すべての副作用はありません。 たとえば、デバッガーが安全に取得/設定/の呼び出しをでした、スクリプトのデバッグ中の状態を変更することがなく、このメンバー。|  
+|fdexPropDynamicType|メンバーは動的であり、オブジェクトの有効期間中に変更できます。|  
 |fdexPropCanCall|メンバーは、DISPATCH_METHOD を使用して、メソッドとして呼び出すことができます。|  
-|fdexPropCannotCall|メンバーは、DISPATCH_METHOD を使用して、メソッドとして呼び出すことはできません。|  
+|fdexPropCannotCall|メンバーは、DISPATCH_METHOD を使用して、メソッドとして呼び出すことができません。|  
 |fdexPropCanConstruct|メンバーは、DISPATCH_CONSTRUCT を使用してコンス トラクターとして呼び出すことができます。|  
-|fdexPropCannotConstruct|メンバーは、DISPATCH_CONSTRUCT を使用してコンス トラクターとして呼び出すことはできません。|  
+|fdexPropCannotConstruct|メンバーは、DISPATCH_CONSTRUCT を使用して、コンス トラクターとして呼び出すことができません。|  
 |fdexPropCanSourceEvents|メンバーは、イベントを発生させることができます。|  
 |fdexPropCannotSourceEvents|メンバーは、イベントを発生させることはできません。|  
   
@@ -82,7 +82,7 @@ HRESULT GetMemberProperties(
   
 ## <a name="example"></a>例  
   
-```  
+```cpp
 BSTR bstrName;  
    DISPID dispid;  
    IDispatchEx *pdex;   

@@ -1,8 +1,6 @@
 ---
 title: Idiasourcefile::get_uniqueid |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e2c2996513f3e6464d8f94522c2b427213882f6a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 3eef4e6f435b60f024067e13c884c7742df0ffa2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49860787"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53879476"
 ---
 # <a name="idiasourcefilegetuniqueid"></a>IDiaSourceFile::get_uniqueId
 このイメージに対して一意である単純な整数キー値を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49860787"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_uniqueId (   
+HRESULT get_uniqueId (   
    DWORD* pRetVal  
 );  
 ```  
@@ -39,8 +37,8 @@ HRESULT get_uniqueId (
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  文字列には、行番号の処理が高速化できるのではなくキーの比較。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

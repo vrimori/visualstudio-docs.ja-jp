@@ -2,24 +2,23 @@
 title: グラフィックス診断の概要 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 05/26/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 422a0fa4ea44cb3a605b8905282a5fe2a7e71e4c
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: d92969a52ac7ce97b31ab2e00e16d1d9913cd401
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055469"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53919256"
 ---
 # <a name="getting-started-with-visual-studio-graphics-diagnostics"></a>Visual Studio グラフィックス診断の使用を開始する
 このセクションでは、まずグラフィックス診断を初めて使用するための準備をしてから、Direct3D アプリケーションのフレームをキャプチャして Graphics Analyzer でそれらを確認します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  Visual Studio のグラフィックス診断を使用するには、Visual Studio Enterprise、Visual Studio Professional、または Visual Studio Community を使用する必要があります。  Visual Studio のコードを含む、他のエディションでは、この機能は含まれません。
  
  [!INCLUDE[downloadvs](../includes/downloadvs_md.md)]  
@@ -88,5 +87,5 @@ ms.locfileid: "53055469"
   
  Graphics Analyzer ツールを一緒に使用する方法の詳細については、次を参照してください。、[例](graphics-diagnostics-examples.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [Direct3D 12 グラフィックス](/windows/desktop/direct3d12/direct3d-12-graphics)

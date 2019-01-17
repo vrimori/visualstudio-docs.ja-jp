@@ -17,10 +17,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: a9b96ae54c91e80fe34c817f710cb400e61f9876
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
+ms.lasthandoff: 01/16/2019
 ms.locfileid: "51768506"
 ---
 # <a name="saving-and-exporting-performance-tools-data"></a>パフォーマンス ツール データの保存とエクスポート
@@ -28,7 +28,7 @@ ms.locfileid: "51768506"
 
 このトピックでは、パフォーマンス データ ファイルを保存およびエクスポートする方法について説明します。  
   
-##  <a name="BKMK_Save_Profiler_Data_Files_As_Analyzed_Report_Files"></a> 方法: 分析されたレポート ファイルとしてパフォーマンス データ ファイルを保存する  
+##  <a name="BKMK_Save_Profiler_Data_Files_As_Analyzed_Report_Files"></a>方法: 分析されたレポート ファイルとしてパフォーマンス データ ファイルを保存する  
  プロファイル データ (.vsp) ファイルのフィルター処理済みビューまたはフィルター処理なしビューは、分析されたレポート (.vsps) ファイルとして保存することができます。 分析されたレポート ファイルは、[レポート ビュー] ウィンドウで表示することができ、ファイルのサイズは、元の .vsp ファイルよりもかなり小さくなります。 ただし、.vsps ファイルのデータにフィルターを適用することはできません。 統合開発環境 (IDE) でファイルを開かなくても、パフォーマンス エクスプ ローラーで、分析されたレポート ファイルを作成することができます。あるいは、.vsp ファイルを開き、フィルター処理してから、その結果を保存することもできます。  
   
 #### <a name="to-save-an-analyzed-performance-report-from-the-performance-explorer"></a>分析されたパフォーマンス レポートをパフォーマンス エクスプ ローラーで保存するには  
@@ -51,7 +51,7 @@ ms.locfileid: "51768506"
   
 5.  **[保存]** をクリックします。  
   
-## <a name="how-to-export-profiling-tools-reports-to-an-xml-or-csv-file"></a>方法: プロファイリング ツールのレポートを .Xml または .Csv ファイルにエクスポートする  
+## <a name="how-to-export-profiling-tools-reports-to-an-xml-or-csv-file"></a>方法: プロファイリング ツールのレポートを .xml または .csv ファイルにエクスポートする  
  1 つまたは複数のレポート ビューを、.vsp ファイルまたは .vsps プロファイル データ ファイルから、コンマ区切りファイルまたは XML ファイルとしてエクスポートすることができます。 [レポート ビュー] ウィンドウでエクスポートする前にデータをフィルター処理することも、**[パフォーマンス エクスプ ローラー]** ウィンドウからデータ ファイル全体のレポート ビューをエクスポートすることもできます。  
   
 > [!NOTE]
@@ -69,7 +69,7 @@ ms.locfileid: "51768506"
   
 4.  **[エクスポートされたレポートの場所]** で、ディレクトリを指定します。  
   
-5.  **エクスポートされたレポート形式**を選択します (コンマ区切り) (*.csv) または XML データ (\*.xml)。  
+5.  **[エクスポートされたレポート形式]** で、[CSV (コンマ区切り) (*.csv)] または [XML データ (\*.xml)] を選びます。  
   
 6.  **[エクスポート]** をクリックします。  
   
@@ -89,13 +89,13 @@ ms.locfileid: "51768506"
   
 6.  **[エクスポートされたレポートの場所]** で、ディレクトリを指定します。  
   
-7.  **エクスポートされたレポート形式**を選択します (コンマ区切り) (*.csv) または XML データ (\*.xml)。  
+7.  **[エクスポートされたレポート形式]** で、[CSV (コンマ区切り) (*.csv)] または [XML データ (\*.xml)] を選びます。  
   
 8.  **[エクスポート]** をクリックします。  
   
      各レポート ビューは、\<プレフィックス>_\<レポート ビュー名>.\<csv&#124;xml> という名前の別のファイルに保存されます  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [パフォーマンス エクスプ ローラー](../profiling/performance-explorer.md)   
  [パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)   
  [パフォーマンス データ ファイルの比較](../profiling/comparing-performance-data-files.md)   

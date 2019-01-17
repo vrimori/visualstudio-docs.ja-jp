@@ -1,5 +1,5 @@
 ---
-title: IDebugAsyncOperation::Start |Microsoft ドキュメント
+title: IDebugAsyncOperation::Start |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bd39053e86dce95fa52ba8576814962d13d8b050
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 099e256496278a33ccae77351641cfdd23447b1f
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725942"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54094784"
 ---
 # <a name="idebugasyncoperationstart"></a>IDebugAsyncOperation::Start
-非同期操作を開始するがします。  
+非同期の操作が開始されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT Start(  
    IDebugAsyncOperationCallBack*  padocb  
 );  
@@ -38,18 +38,18 @@ HRESULT Start(
   
 #### <a name="parameters"></a>パラメーター  
  `padocb`  
- この操作からステータス イベントを受信するコールバック インターフェイスです。  
+ この操作からステータス イベントを受信するコールバック インターフェイス。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
-|`E_UNEXPECTED`|操作が既に保留されています。|  
+|`E_UNEXPECTED`|操作が、既に保留中です。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドにより`IDebugSyncOperation::Execute`から取得したスレッドで非同期的に呼び出される`IDebugSyncOperation::GetTargetThread`です。 このメソッドは、デバッガーのスレッド内からのみ呼び出す必要があります。それ以外の場合、返すことはできません、操作が完了するまでです。  
+## <a name="remarks"></a>Remarks  
+ このメソッドにより`IDebugSyncOperation::Execute`から取得したスレッドで非同期的に呼び出される`IDebugSyncOperation::GetTargetThread`します。 このメソッドは、デバッガーのスレッド内からのみ呼び出す必要があります。それ以外の場合、操作が完了するまでを返すことはできません。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugAsyncOperation::Abort](../../winscript/reference/idebugasyncoperation-abort.md)   

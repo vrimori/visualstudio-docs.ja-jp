@@ -2,7 +2,6 @@
 title: グローバルな Windows フォームおよび Web フォームにおけるカルチャ固有のクラス
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - globalization [Windows Forms], classes
@@ -30,12 +29,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: d0a6947127fd564eace97c919a425d4a3a3360c4
-ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
+ms.openlocfilehash: cb0215c27b8d1fb09f54bc8590d24b99403670f4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863570"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989962"
 ---
 # <a name="culture-specific-classes-for-global-windows-forms-and-web-forms"></a>グローバルな Windows フォームおよび Web フォームにおけるカルチャ固有のクラス
 
@@ -46,7 +45,7 @@ ms.locfileid: "48863570"
 
 ## <a name="using-the-culture-setting"></a>カルチャ設定の使用
 
-アプリまたは **[地域のオプション]** コントロール パネルに保存されているカルチャ設定を使用してカルチャ規約を実行時に判別し、それに応じて情報の形式を設定します。 カルチャの設定方法の詳細については、「[方法: ASP.NET Web ページのグローバリゼーション用のカルチャおよび UI カルチャを設定する](https://msdn.microsoft.com/Library/76091f86-f967-4687-a40f-de87bd8cc9a0)」を参照してください。 カルチャ設定に基づいて情報の形式を自動で設定するクラスは、*カルチャ固有*と呼ばれます。 カルチャ固有のメソッドの例:
+アプリまたは **[地域のオプション]** コントロール パネルに保存されているカルチャ設定を使用してカルチャ規約を実行時に判別し、それに応じて情報の形式を設定します。 カルチャの設定の詳細については、「[方法:ASP.NET Web ページのグローバリゼーション用のカルチャおよび UI カルチャを設定する](https://msdn.microsoft.com/Library/76091f86-f967-4687-a40f-de87bd8cc9a0)」を参照してください。 カルチャ設定に基づいて情報の形式を自動で設定するクラスは、*カルチャ固有*と呼ばれます。 カルチャ固有のメソッドの例:
 - <xref:System.IFormattable.ToString%2A?displayProperty=fullName>
 - <xref:System.Console.WriteLine%2A?displayProperty=fullName>
 - <xref:System.String.Format%2A?displayProperty=fullName>

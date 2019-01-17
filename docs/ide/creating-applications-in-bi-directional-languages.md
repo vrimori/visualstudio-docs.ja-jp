@@ -2,7 +2,6 @@
 title: Visual Studio による双方向言語用アプリケーションの作成
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - Hebrew character display, creating applications
@@ -14,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f93dea099d9223347c727f3e7a838fcb78d3742
-ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
+ms.openlocfilehash: 26c3ea5073d4b53c0a9d75c18722f1569aff8646
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863635"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53891616"
 ---
 # <a name="creating-applications-in-bi-directional-languages"></a>双方向言語用アプリケーションの作成
 
@@ -43,7 +42,7 @@ Visual Studio では、アラビア語やヘブライ語など、右から左に
 
 -   **オブジェクト名** ソリューション、プロジェクト、ファイル、フォルダーなどに、双方向言語で名前を付けることができます。 コード内では、変数、クラス、オブジェクト、属性、メタデータなどの要素の名前に双方向言語を使用できます。
 
--   **ファイルのエンコーディング** 言語固有のエンコーディングまたは Unicode エンコーディングでファイルを保存したり開いたりすることができます。 詳しくは、「[方法 : エンコーディングを使用してファイルを保存および開く](../ide/how-to-save-and-open-files-with-encoding.md)」をご覧ください。
+-   **ファイルのエンコーディング** 言語固有のエンコーディングまたは Unicode エンコーディングでファイルを保存したり開いたりすることができます。 詳細については、「[方法 :エンコーディングを使用してファイルを保存および開く](../ide/how-to-save-and-open-files-with-encoding.md)」を参照してください。
 
 ## <a name="features-with-limited-or-no-support"></a>制限付きの機能またはサポートされていない機能
  双方向言語アプリケーションで一般的に使用される機能の中には、Visual Studio では完全にはサポートされていないものや、まったくサポートされていないものもあります。 次の設定があります。

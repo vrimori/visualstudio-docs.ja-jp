@@ -3,7 +3,6 @@ title: Azure 仮想マシンでの Visual Studio の使用
 titleSuffix: ''
 description: Azure 仮想マシンで Visual Studio を使用する方法を説明します
 ms.date: 09/12/2018
-ms.technology: vs-acquisition
 ms.custom: seodec18
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -17,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fc3ceb0caa8e5b8e135c2fad3bbab28c51773ae6
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: f139c93eeb64a56f0bd422137417e5ad6e36cb11
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53159972"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53836625"
 ---
 # <a id="top"> </a> Azure 上の Visual Studio イメージ
 
@@ -32,13 +31,13 @@ ms.locfileid: "53159972"
 
 ## <a name="what-configurations-and-versions-are-available"></a>利用できる構成とバージョン
 
-最新のメジャー バージョンである Visual Studio 2017 および Visual Studio 2015 のイメージは、Azure Marketplace で見つけることができます。 メジャー バージョンごとに、最初にリリースされた (RTW) バージョンと最新の更新バージョンを確認できます。 それぞれのバージョンに、Visual Studio Enterprise Edition と Visual Studio Community Edition があります。 これらのイメージは少なくとも毎月更新され、Visual Studio と Windows の最新の更新プログラムが組み込まれます。 イメージの名前は同じままですが、各イメージの説明には、インストールされる製品バージョンとイメージの "更新" 日が含まれます。
+最新のメジャー バージョンである Visual Studio 2017 および Visual Studio 2015 のイメージは、Azure Marketplace で見つけることができます。  次期メジャー バージョンである Visual Studio 2019 のプレビューのサポートが、最近追加されました。  リリースされたメジャー バージョンごとに、最初にリリースされた (RTW) バージョンと最新の更新バージョンを確認できます。  それぞれのバージョンに、Visual Studio Enterprise Edition と Visual Studio Community Edition があります。  これらのイメージは少なくとも毎月更新され、Visual Studio と Windows の最新の更新プログラムが組み込まれます。  イメージの名前は同じままですが、各イメージの説明には、インストールされる製品バージョンとイメージの "更新" 日が含まれます。
 
 | リリース バージョン                                              | エディション                     |     製品バージョン      |
 |:------------------------------------------------------------:|:----------------------------:|:------------------------:|
-|   Visual Studio 2019:プレビュー (プレビュー 1 )                   |           エンタープライズ         | バージョン 16.0.0 Preview 1 |
-| Visual Studio 2017:最新 (バージョン 15.9)                    |    Enterprise、Community     |      バージョン 15.9.0      |
-|         Visual Studio 2017:RTW                              |    Enterprise、Community     |      バージョン 15.0.18     |
+|    Visual Studio 2019:プレビュー (プレビュー 1)                   |           エンタープライズ         | バージョン 16.0.0 Preview 1 |
+| Visual Studio 2017:最新 (バージョン 15.9)                    |    Enterprise、Community     |      バージョン 15.9.4      |
+|         Visual Studio 2017:RTW                              |    Enterprise、Community     |      バージョン 15.0.20     |
 |   Visual Studio 2015:最新 (更新プログラム 3)                      |    Enterprise、Community     |  バージョン 14.0.25431.01   |
 |         Visual Studio 2015:RTW                              |             なし             | (サービス有効期限切れ)  |
 

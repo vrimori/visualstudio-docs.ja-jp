@@ -15,15 +15,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f8f7371418df19ec8452334641c7c9414328e557
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: 66a13ac6f23caa3e6ccf28d5d68c03b3fe7fdb4f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52305014"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53923875"
 ---
 # <a name="how-to-connect-to-data-in-a-service"></a>方法: サービスのデータに接続する
 
@@ -32,7 +31,7 @@ ms.locfileid: "52305014"
 ウィザードの完了したら、サービス参照をプロジェクトに追加されですぐに使用できるは、[データ ソース ウィンドウ](add-new-data-sources.md#data-sources-window)します。
 
 > [!NOTE]
-> [データ ソース]** ウィンドウに表示される項目は、サービスから返される情報に応じて異なります。 サービスによっては、データ ソース構成ウィザード**でバインドできるオブジェクトを作成するための十分な情報を提供しないものもあります。 たとえば、サービスは、型指定されていないデータセットを返す場合項目表示されません、**データ ソース**ウィザードを完了すると、ウィンドウ。 これは、ウィザードには、データ ソースを作成するのに十分な情報がないため、型指定されていないデータセットがスキーマで提供されないためにです。
+> **[データ ソース]** ウィンドウに表示される項目は、サービスから返される情報に応じて異なります。 サービスによっては、**データ ソース構成ウィザード**でバインドできるオブジェクトを作成するための十分な情報を提供しないものもあります。 たとえば、サービスは、型指定されていないデータセットを返す場合項目表示されません、**データ ソース**ウィザードを完了すると、ウィンドウ。 これは、ウィザードには、データ ソースを作成するのに十分な情報がないため、型指定されていないデータセットがスキーマで提供されないためにです。
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
@@ -53,7 +52,7 @@ ms.locfileid: "52305014"
 
 6.  **[完了]** をクリックします。
 
-     [データ ソース] **ウィンドウに、** データ ソースが追加されます。
+     **[データ ソース]** ウィンドウに、データ ソースが追加されます。
 
 ## <a name="next-steps"></a>次の手順
 

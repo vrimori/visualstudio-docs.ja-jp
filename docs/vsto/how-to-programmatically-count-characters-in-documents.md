@@ -9,17 +9,17 @@ helpviewer_keywords:
 - characters, counting in documents
 - counting characters in documents
 - documents [Office development in Visual Studio], counting characters
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c86eade90d36ca62ad361c757660bcada71a6a4c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f6ec83d219d8f54691165b7de7008b13d3347d16
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53960762"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54091417"
 ---
 # <a name="how-to-programmatically-count-characters-in-documents"></a>方法: プログラムによって文書内の文字をカウントします。
   ドキュメント内の最初の文字は、挿入ポイントを表す文字位置 0 に位置します。 最後の文字位置は、ドキュメント内の文字数の合計と同じになります。 <xref:Microsoft.Office.Interop.Word.Characters.Count%2A> コレクションの <xref:Microsoft.Office.Interop.Word.Characters> のプロパティを使用して、ドキュメント内の文字数を特定することができます。  

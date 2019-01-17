@@ -1,9 +1,7 @@
 ---
-title: '手順 6: ボタン コントロールの名前の設定'
-ms.custom: ''
+title: '手順 6: ボタン コントロールの名前を設定する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 56b3baa3-651e-4ad4-8942-e334c5c57158
 author: TerryGLee
@@ -11,14 +9,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b11bace93efc253ffcb0f8d2b97ecc57c7462bb8
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 39ded8694e5ec4b071193f74aa5fded5ddb54560
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34748398"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53820359"
 ---
-# <a name="step-6-name-your-button-controls"></a>手順 6: ボタン コントロールの名前の設定
+# <a name="step-6-name-your-button-controls"></a>手順 6: ボタン コントロールの名前を設定する
 <xref:System.Windows.Forms.PictureBox> はフォームで 1 つだけ使用しています。 このコントロールには、追加したときに自動的に **pictureBox1**という名前が付けられています。 <xref:System.Windows.Forms.CheckBox> も 1 つだけで、**checkBox1** という名前が付けられています。 この後コードを記述しますが、そのコードでは CheckBox と PictureBox を参照します。 これらのコントロールについては、どちらも 1 つだけであるため、コードで **pictureBox1** または **checkBox1** となっていても何を指しているのかがわかります。
 
 > [!NOTE]
@@ -26,7 +24,7 @@ ms.locfileid: "34748398"
 
  ボタンはフォームに 4 つあり、 **button1**、 **button2**、 **button3**、および **button4**という名前が付けられています。 現在の名前を見ただけでは、どれが **[Close]** ボタンでどれが **[Show a picture]** ボタンなのかわかりません。 そのため、ボタン コントロールにもっとわかりやすい名前を付けると便利です。
 
- ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[Tutorial 1: Create a picture viewer in Visual Basic - Video 3](http://go.microsoft.com/fwlink/?LinkId=205213)」(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 3) または「[Tutorial 1: Create a picture viewer in C# - Video 3](http://go.microsoft.com/fwlink/?LinkId=205202)」(チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 3) をご覧ください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
+ ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[Tutorial 1:Create a picture viewer in Visual Basic - Video 3](http://go.microsoft.com/fwlink/?LinkId=205213)」(チュートリアル 1: Visual Basic でピクチャ ビューアーを作成する - ビデオ 3) または「[Tutorial 1:Create a picture viewer in C# - Video 3](http://go.microsoft.com/fwlink/?LinkId=205202)」(チュートリアル 1: C# でピクチャ ビューアーを作成する - ビデオ 3) をご覧ください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
 
 ## <a name="to-name-your-button-controls"></a>ボタン コントロールの名前を設定するには
 
@@ -36,7 +34,7 @@ ms.locfileid: "34748398"
 **closeButton** という名前が表示された **[プロパティ]** ウィンドウ
 
     > [!NOTE]
-    >  ボタンの名前を、close と Button の間に空白文字を含む「 **closeButton**」という名前に変更しようとすると、IDE で "プロパティの値が無効です" というエラー メッセージが表示されます。 空白文字 (およびその他のいくつかの文字) は、コントロール名に使用できません。
+    >  ボタンの名前を、close と Button の間に空白文字を含む「**closeButton**」という名前に変更しようとすると、IDE で "プロパティの値が無効です" というエラー メッセージが表示されます。 空白文字 (およびその他のいくつかの文字) は、コントロール名に使用できません。
 
 2.  他の 3 つのボタンの名前を **backgroundButton**、 **clearButton**、および **showButton**に変更します。 名前を確認するには、 **[プロパティ]** ウィンドウにあるコントロール セレクターのドロップダウン リストをクリックします。 新しいボタン名が表示されます。
 
@@ -77,6 +75,6 @@ Visual C# コードが表示された **[Form1.cs]** タブ
 
 ## <a name="to-continue-or-review"></a>続行または確認するには
 
--   チュートリアルの次の手順に進むには、「[手順 7: フォームへのダイアログ コンポーネントの追加](../ide/step-7-add-dialog-components-to-your-form.md)」を参照してください。
+-   チュートリアルの次の手順に進むには、「[手順 7:フォームへのダイアログ コンポーネントの追加](../ide/step-7-add-dialog-components-to-your-form.md)」をご覧ください。
 
--   チュートリアルの前の手順に戻るには、「[手順 5: フォームへのコントロールの追加](../ide/step-5-add-controls-to-your-form.md)」を参照してください。
+-   チュートリアルの前の手順に戻るには、「[手順 5:フォームへのコントロールの追加](../ide/step-5-add-controls-to-your-form.md)」をご覧ください。

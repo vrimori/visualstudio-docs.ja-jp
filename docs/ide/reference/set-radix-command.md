@@ -2,7 +2,6 @@
 title: SetRadix コマンド
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - debug.setradix
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c18d825ae61dd80ab7b72e1e14c7dc3412582317
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 93172b8ed16e2520c060671d12ef0ab35960f6ad
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704474"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53829409"
 ---
 # <a name="set-radix-command"></a>SetRadix コマンド
 整数値を表示するために使用する基数値を設定または返します。
@@ -43,9 +42,9 @@ Debug.SetRadix [10 | 16 | hex | dec]
 >Debug.SetRadix hex
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
 - [コマンド ウィンドウ](../../ide/reference/command-window.md)
 - [検索コマンド ボックス](../../ide/find-command-box.md)
-- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)

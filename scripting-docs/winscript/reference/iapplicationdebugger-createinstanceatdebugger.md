@@ -1,5 +1,5 @@
 ---
-title: IApplicationDebugger::CreateInstanceAtDebugger |Microsoft ドキュメント
+title: IApplicationDebugger::CreateInstanceAtDebugger |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,22 +18,22 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f6495c2d8782d1128700bdfb6d4081b80ffae878
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: a6af315f25aa333ace4be7bb8e3584573f0cfd1f
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725772"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54090923"
 ---
 # <a name="iapplicationdebuggercreateinstanceatdebugger"></a>IApplicationDebugger::CreateInstanceAtDebugger
-コードによってデバッガー プロセス内のオブジェクトの作成を許可されているアウトのプロセスをデバッガーにします。  
+コードによってデバッガー プロセス内のオブジェクトの作成を許可されているプロセス外の - デバッガーにします。  
   
 > [!IMPORTANT]
->  これにより、信頼されたデバッガー スレッドで任意のオブジェクトを作成するコードを信頼されていないため、このメソッドを実装いない必要があります。  
+>  信頼できないコードを信頼されたデバッガー スレッドで任意のオブジェクトを作成できるため、このメソッドを実装しない必要があります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT CreateInstanceAtDebugger(  
    REFCLSID    rclsid,  
    IUnknown*   pUnkOuter,  
@@ -45,29 +45,29 @@ HRESULT CreateInstanceAtDebugger(
   
 #### <a name="parameters"></a>パラメーター  
  `rclsid`  
- [in]クラスの id (CLSID) を作成するオブジェクト。  
+ [in]クラスを作成するオブジェクトの識別子 (CLSID)。  
   
  `pUnkOuter`  
- [in]場合`NULL`集計の一部として、オブジェクトが作成されていません。 それ以外の場合、`pUnkOuter`集約オブジェクトへのポインターは、`IUnknown`インターフェイス (制御`IUnknown`)。  
+ [in]場合`NULL`集計の一部として、オブジェクトが作成されていません。 それ以外の場合、`pUnkOuter`集計オブジェクトへのポインターは、`IUnknown`インターフェイス (制御`IUnknown`)。  
   
  `dwClsContext`  
- [in]実行可能コードの実行コンテキスト。 値が列挙体から取得されます`CLSCTX`です。  
+ [in]実行可能コードを実行するためのコンテキスト。 値が列挙体から取得されます`CLSCTX`します。  
   
  `riid`  
- [in]オブジェクトとの通信に使用されるインターフェイスの識別子です。  
+ [in]オブジェクトと通信するために使用するインターフェイスの識別子です。  
   
  `ppvObject`  
- [out]要求されたインターフェイス ポインターを受け取るポインター変数のアドレス`riid`です。 成功時に、*`ppvObject`要求されたインターフェイス ポインターを格納します。 障害時に、 \* `ppvObject`含む`NULL`です。  
+ [out]要求されたインターフェイス ポインターを受け取るポインター変数のアドレス`riid`します。 成功時に、*`ppvObject`要求されたインターフェイス ポインターが含まれています。 障害時に、 \* `ppvObject`が含まれています`NULL`します。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドからデリゲートを`CoCreateInstance`です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドからデリゲートを`CoCreateInstance`します。  
   
  メソッドは現在実装されていません。  
   

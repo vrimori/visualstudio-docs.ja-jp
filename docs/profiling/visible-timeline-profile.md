@@ -1,8 +1,6 @@
 ---
 title: 表示されているタイムライン プロファイル | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.activelegend
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f96c5fa1b54a34fa2d67233bbf17164b0dbfeb7
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: eb27cdc6fdf276ad71942553aa92bc75412a8de6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34447701"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53964748"
 ---
 # <a name="visible-timeline-profile"></a>表示されているタイムライン プロファイル
 スレッド ブロック ビューの [表示されているランタイム プロファイル] には、統計情報とレポートへのリンクが表示されます。 拡大、縮小、水平方向へのスクロール、またはチャネルの非表示と表示の切り替えを行うと、アクティブな凡例の数値が現在の表示内容に応じて変更されます。 凡例の項目に関するレポートを表示するには、その項目をクリックします。  

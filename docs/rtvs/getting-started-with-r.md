@@ -3,19 +3,18 @@ title: R の概要のチュートリアル
 description: プロジェクトの作成、対話型ウィンドウ、コード編集、デバッグなど、Visual Studio での R の使用に関するチュートリアルです。
 ms.date: 06/29/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-rtvs
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 88387485b952bf201a222741a6b3d02861df186c
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: c156993bf2fe425368a2cfebcaca8ac18ea790f2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36235533"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53944627"
 ---
 # <a name="get-started-with-r-tools-for-visual-studio"></a>R Tools for Visual Studio の概要
 

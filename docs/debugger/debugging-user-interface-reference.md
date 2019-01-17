@@ -1,8 +1,6 @@
 ---
-title: デバッグ用ユーザー インターフェイス リファレンス |Microsoft ドキュメント
-ms.custom: ''
+title: デバッグ用ユーザー インターフェイス リファレンス |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.uiref
@@ -20,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 83021f492eeb712f489641e3019fe9c8ecc47bdd
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 1f68fdea35b8b6291ddb53e604510caf7ffc0ba1
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31472527"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269489"
 ---
 # <a name="debugging-user-interface-reference"></a>デバッグ用ユーザー インターフェイス リファレンス
 アプリケーションをデバッグすると、以下のダイアログ ボックスが表示されることがあります。  
@@ -44,7 +42,7 @@ ms.locfileid: "31472527"
   
 -   [デバッグ エラーと警告関連のダイアログ ボックス](../debugger/debugging-errors-and-warning-dialog-boxes.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Visual Studio でのデバッグ](../debugger/index.md)  
- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
+ [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)   
  [コマンド ウィンドウ](../ide/reference/command-window.md)

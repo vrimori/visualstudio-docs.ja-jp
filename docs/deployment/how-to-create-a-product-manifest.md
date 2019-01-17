@@ -1,8 +1,6 @@
 ---
 title: '方法: 製品マニフェストを作成する |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - FSharp
@@ -20,17 +18,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 69ecc5e6547d84531579169ac7dcf7fcc31bc8f7
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
-ms.translationtype: MT
+ms.openlocfilehash: 879dffc554a05d6c90680cd95e5bb934550d2bbd
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39153112"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53824601"
 ---
-# <a name="how-to-create-a-product-manifest"></a>方法: 製品マニフェストを作成します。
+# <a name="how-to-create-a-product-manifest"></a>方法: 製品マニフェストを作成する
 アプリケーションの必須コンポーネントを展開するには、ブートス トラップ パッケージを作成できます。 ブートス トラップ パッケージには、ロケールごとに、パッケージ マニフェストが 1 つの製品マニフェスト ファイルが含まれています。 パッケージ マニフェストには、パッケージのローカライズに固有の要素が含まれています。 これには、文字列、使用許諾契約書、および言語パックが含まれます。  
   
- マニフェストの製品の詳細については、次を参照してください。[方法: パッケージ マニフェストを作成する](../deployment/how-to-create-a-package-manifest.md)します。  
+ マニフェストの製品の詳細については、次を参照してください。[方法。パッケージ マニフェストを作成する](../deployment/how-to-create-a-package-manifest.md)  
   
 ## <a name="create-the-product-manifest"></a>製品マニフェストを作成します。  
   

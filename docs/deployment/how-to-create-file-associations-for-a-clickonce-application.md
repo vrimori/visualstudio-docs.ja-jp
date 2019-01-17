@@ -1,8 +1,6 @@
 ---
 title: '方法: ClickOnce アプリケーションのファイルの関連付けの作成 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,14 +15,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 25d8d12b8ad49b40309845def60964c13a3da708
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 956aa3e87863ca39127c1f8579128f7cb408977c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49919393"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53842833"
 ---
-# <a name="how-to-create-file-associations-for-a-clickonce-application"></a>方法: ClickOnce アプリケーションのファイルの関連付けの作成
+# <a name="how-to-create-file-associations-for-a-clickonce-application"></a>方法: ClickOnce アプリケーションのファイルの関連付けを作成する
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] できるように、ユーザーがこれらの種類のファイルを開いたときに、アプリケーションを自動的に開始されます、アプリケーションが 1 つまたは複数のファイル名拡張子を関連付けることができます。 サポートするファイル名拡張子を[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは簡単です。  
   
 ### <a name="to-create-file-associations-for-a-clickonce-application"></a>ClickOnce アプリケーションのファイルの関連付けを作成するには  
@@ -33,17 +31,17 @@ ms.locfileid: "49919393"
   
 2. テキスト エディターまたはメモ帳などの XML エディターでは、アプリケーション マニフェストを開きます。  
   
-3. `assembly` 要素を検索します。 詳細については、次を参照してください。 [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)します。  
+3. `assembly` 要素を検索します。 詳細については、「[ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)」を参照してください。  
   
 4. 子として、`assembly`要素を追加、`fileAssociation`要素。 `fileAssociation`要素には 4 つの属性。  
   
-   - `extension`: アプリケーションに関連付けるファイル名拡張子。  
+   - `extension`:アプリケーションに関連付けるファイル名拡張子。  
   
-   - `description`: Windows シェルに表示されるファイルの種類の説明。  
+   - `description`:Windows シェルに表示されるファイルの種類の説明。  
   
-   - `progid`: レジストリ内でマークする、ファイルの種類を一意に識別する文字列。  
+   - `progid`:レジストリ内でマークする、ファイルの種類を一意に識別する文字列。  
   
-   - `defaultIcon`: このファイルの種類を使用するアイコン。 アイコンは、アプリケーション マニフェストでファイルのリソースとして追加する必要があります。 詳細については、「 [方法 : ClickOnce アプリケーションにデータ ファイルを含める](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)」を参照してください。  
+   - `defaultIcon`:このファイルの種類を使用するアイコン。 アイコンは、アプリケーション マニフェストでファイルのリソースとして追加する必要があります。 詳細については、「[方法 :ClickOnce アプリケーションにデータ ファイルを含める](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)」を参照してください。  
   
      例については、`file`と`fileAssociation`、要素を参照してください[ \<fileAssociation > 要素](../deployment/fileassociation-element-clickonce-application.md)します。  
   
@@ -53,7 +51,7 @@ ms.locfileid: "49919393"
   
     `mage -Sign WindowsFormsApp1.exe.manifest -CertFile mycert.pfx`  
   
-    詳細については、次を参照してください[Mage.exe (マニフェスト生成および編集ツール)。](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)  
+    詳しくは、「[Mage.exe (マニフェストの生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目  
  [\<fileAssociation > 要素](../deployment/fileassociation-element-clickonce-application.md)   

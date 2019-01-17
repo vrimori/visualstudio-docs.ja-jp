@@ -1,9 +1,6 @@
 ---
 title: 'チュートリアル: Outlook でデザインしたフォーム領域をインポートします。'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 413d2fed56da809b2fdb8c1fad867818e0cce010
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: bfb7365d6e8d336d2cfae24286b6df087430e635
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49903518"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53956180"
 ---
 # <a name="walkthrough-import-a-form-region-that-is-designed-in-outlook"></a>チュートリアル: Outlook でデザインしたフォーム領域をインポートします。
   このチュートリアルでは、Microsoft Office Outlook でフォーム領域をデザインし、そのフォーム領域を **[新しいフォーム領域]** ウィザードを使用して Outlook VSTO アドイン プロジェクトにインポートする方法について説明します。 Outlook でフォーム領域をデザインすると、Outlook データにバインドされたネイティブ Outlook コントロールをフォーム領域に追加できます。 フォーム領域をインポートした後で、各コントロールのイベントを処理できます。  
@@ -48,7 +45,7 @@ ms.locfileid: "49903518"
 > [!NOTE]  
 >  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。 [Visual Studio 2008 を使用して Outlook の操作を作成フォーム領域を操作する方法でしょうか。](http://go.microsoft.com/fwlink/?LinkID=130305)します。  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:。Visual Studio 2008 を使用して Outlook フォーム領域を作成しますか。](http://go.microsoft.com/fwlink/?LinkID=130305).  
 ## <a name="design-a-form-region-by-using-the-form-region-designer-in-outlook"></a>Outlook でフォーム領域デザイナーを使用してフォーム領域をデザインします。  
  この手順では、Outlook でフォーム領域をデザインします。 次に、そのフォーム領域を [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]にインポートできるように見つけやすい場所に保存します。  
   
@@ -58,7 +55,7 @@ ms.locfileid: "49903518"
   
 1.  Microsoft Office Outlook を起動します。  
   
-2.  Outlook の **[開発者]** タブで、 **[フォームのデザイン]** をクリックします。 詳細については、次を参照してください。[方法: リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
+2.  Outlook の **[開発者]** タブで、 **[フォームのデザイン]** をクリックします。 詳細については、「[方法 :リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
   
 3.  **[フォームのデザイン]** ボックスで、 **[タスク]** をクリックし、 **[開く]** をクリックします。  
   
@@ -127,7 +124,7 @@ ms.locfileid: "49903518"
   
 3.  プロジェクトを既定のプロジェクト ディレクトリに保存します。  
   
-     詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
+     詳細については、「[方法 :Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
 ## <a name="import-the-form-region"></a>フォーム領域をインポートします。  
  **[新しい Outlook フォーム領域]** ウィザードを使用して、Outlook でデザインしたフォーム領域を Outlook VSTO アドイン プロジェクトにインポートできます。  
@@ -248,7 +245,7 @@ ms.locfileid: "49903518"
 ## <a name="next-steps"></a>次の手順  
  Outlook アプリケーションの UI をカスタマイズする方法の詳細については、次のトピックを参照してください。  
   
--   ビジュアル デザイナーにマネージ コントロールをドラッグしてフォーム領域の外観をデザインする方法の詳細については、次を参照してください。[チュートリアル: Outlook フォーム領域をデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)します。  
+-   ビジュアル デザイナーにマネージ コントロールをドラッグしてフォーム領域の外観をデザインする方法の詳細については、次を参照してください。[チュートリアル。Outlook フォーム領域をデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)します。  
   
 -   Outlook アイテムのリボンをカスタマイズする方法の詳細については、次を参照してください。 [Outlook のリボンをカスタマイズ](../vsto/customizing-a-ribbon-for-outlook.md)します。  
   
@@ -263,5 +260,3 @@ ms.locfileid: "49903518"
  [フォーム領域を Outlook メッセージ クラスに関連付ける](../vsto/associating-a-form-region-with-an-outlook-message-class.md)   
  [Outlook フォーム領域のカスタム アクション](../vsto/custom-actions-in-outlook-form-regions.md)   
  [方法: Outlook フォーム領域が表示されないようにします。](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)  
-  
-  

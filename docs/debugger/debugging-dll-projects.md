@@ -1,8 +1,6 @@
 ---
 title: DLL プロジェクトのデバッグ |Microsoft Docs
-ms.custom: ''
 ms.date: 11/06/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -20,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f35a04620da94efca70fb33933f3940005996e29
-ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
-ms.translationtype: HT
+ms.openlocfilehash: baca738ef60ae727db852d00ed821e024f62c22f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53561695"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53871639"
 ---
 # <a name="debug-dlls-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio で Dll をデバッグ (C#、C++、Visual Basic、 F#)
 
@@ -123,7 +121,7 @@ DLL を呼び出すアプリを指定できます。
   
 呼び出し元のアプリのデバッグを開始する前に、DLL で、ブレークポイントを設定します。 参照してください[ブレークポイントを使用して](../debugger/using-breakpoints.md)します。 DLL のブレークポイントにヒットしたときにすることができますコードをステップ実行、1 行ずつアクションを確認します。 詳細については、次を参照してください。[デバッガーでコード内を移動](../debugger/navigating-through-code-with-the-debugger.md)します。
   
-デバッグ中に、使用することができます、**モジュール**Dll を確認するウィンドウおよび *.exe*ファイルをアプリの読み込み。 開くには、**モジュール**ウィンドウで、デバッグ中に、**デバッグ** > **Windows** > **モジュール**します。 詳細については、「[方法 :[モジュール] ウィンドウを使用して、](../debugger/how-to-use-the-modules-window.md)します。 
+デバッグ中に、使用することができます、**モジュール**Dll を確認するウィンドウおよび *.exe*ファイルをアプリの読み込み。 開くには、**モジュール**ウィンドウで、デバッグ中に、**デバッグ** > **Windows** > **モジュール**します。 詳細については、「[方法 :[モジュール] ウィンドウを使用する](../debugger/how-to-use-the-modules-window.md)」を参照してください。 
 
 ###  <a name="vxtskdebuggingdllprojectstheimmediatewindow"></a> イミディ エイト ウィンドウを使用します。  
 

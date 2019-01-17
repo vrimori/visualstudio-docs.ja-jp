@@ -1,8 +1,6 @@
 ---
-title: 'エラー: コンピューターに接続できません。&lt;名前&gt;です。 ネットワーク上、マシンが見つかりません。 | Microsoft Docs'
-ms.custom: ''
+title: エラー :マシンに接続できません&lt;名前&gt;します。 ネットワーク上にコンピューターが見つかりません。 | Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: troubleshooting
 f1_keywords:
 - vs.debug.remote.dcom_disabled
@@ -18,14 +16,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e0654148823d40277bdd9c6b6d8ec5b881fdb80
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: e4c9bc3c72a2ff97fc67f31f44041feed2185551
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31480060"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53847374"
 ---
-# <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>エラー: コンピューターに接続できません。&lt;名前&gt;です。 ネットワーク上、マシンが見つかりません。
+# <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>エラー :マシンに接続できません&lt;名前&gt;します。 ネットワーク上にコンピューターが見つかりません。
 このエラーは、次の条件のいずれかが満たされると発生します。  
   
 -   リモート コンピューターへの接続が解除された。  
@@ -46,6 +44,6 @@ ms.locfileid: "31480060"
   
 -   リモート コンピューターへの接続に使用しているパスワードが有効であり、有効期限が切れていないことを確認します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [リモート デバッグ](../debugger/remote-debugging.md)   
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)

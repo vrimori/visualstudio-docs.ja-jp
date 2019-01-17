@@ -1,8 +1,6 @@
 ---
 title: IDiaSession::findInlineFramesByAddr |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 237fdb31b223db1434ec4a2c936ed956e8e339d7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: d02383a2635e3a50a5f72ceec157624cd5e141a5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49899176"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53843438"
 ---
 # <a name="idiasessionfindinlineframesbyaddr"></a>IDiaSession::findInlineFramesByAddr
 により、クライアントは、すべての指定したアドレスにインライン フレームを反復処理する列挙体を取得します。  
@@ -25,7 +23,7 @@ ms.locfileid: "49899176"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT findInlineFramesByAddr (   
+HRESULT findInlineFramesByAddr (   
    IDiaSymbol*       parent,   DWORD             isect,  
    DWORD             offset,  
    IDiaEnumSymbols** ppResult  
@@ -48,7 +46,7 @@ HRESULT findInlineFramesByAddr (
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)   

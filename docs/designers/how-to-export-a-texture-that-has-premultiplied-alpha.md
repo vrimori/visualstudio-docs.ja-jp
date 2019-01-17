@@ -2,7 +2,6 @@
 title: '方法: 前乗算されたアルファを持つテクスチャをエクスポートする'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 05348afa-f079-4f53-a05b-ecd91d13adab
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c39d7ae466f48bed8bd6fe4c53662c0c8b3c801e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 8a05235b2212e64baea3caf2d7dc3977c3e9d6dc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49855522"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53988006"
 ---
 # <a name="how-to-export-a-texture-that-has-premultiplied-alpha"></a>方法: 前乗算されたアルファを持つテクスチャをエクスポートする
 
@@ -40,7 +39,7 @@ ms.locfileid: "49855522"
 
 #### <a name="to-create-a-texture-that-uses-premultiplied-alpha"></a>前乗算されたアルファを使用したテクスチャを作成するには
 
-1. 基本的なテクスチャを作成します。 既存のイメージ ファイルを読み込むか、「[方法: 基本テクスチャを作成する](../designers/how-to-create-a-basic-texture.md)」の手順に従ってイメージ ファイルを作成します。
+1. 基本的なテクスチャを作成します。 既存のイメージ ファイルを読み込むか、「[方法:基本的なテクスチャを作成する](../designers/how-to-create-a-basic-texture.md)」の手順に従ってイメージ ファイルを作成します。
 
 2. イメージ コンテンツ パイプラインによって処理されるようにテクスチャ ファイルを構成します。 **ソリューション エクスプローラー**でテクスチャ ファイルのショートカット メニューを開き、**[プロパティ]** をクリックします。 **[構成プロパティ]** > **[全般]** ページの順に進み、**[項目の種類]** を **[Image Content Pipeline]\(イメージ コンテンツ パイプライン\)** に設定します。 **[コンテンツ]** が **[はい]** に、**[ビルドから除外]** が **[いいえ]** に設定されていることを確認し、**[適用]** ボタンをクリックします。 **[イメージ コンテンツ パイプライン]** の構成プロパティ ページが表示されます。
 

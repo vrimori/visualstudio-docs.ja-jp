@@ -1,8 +1,6 @@
 ---
-title: キーボード ショートカット (HTML および JavaScript) |Microsoft ドキュメント
-ms.custom: ''
+title: キーボード ショートカット (HTML および JavaScript) |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -15,19 +13,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 07a528c0dda6237efc280644040a48d42c4b0f85
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 5dda5bdb73ea4d673341309f24985455ecc2ce35
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31475497"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53949470"
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>ショートカット キー (HTML および JavaScript)
   
- HTML および JavaScript を使用して、UWP アプリのデバッグの Visual Studio のキーボード ショートカット。  
+ HTML と JavaScript を使用して UWP アプリのデバッグを Visual Studio のキーボード ショートカット。  
   
 ## <a name="general-shortcuts"></a>一般ショートカット  
- これらのショートカットは、HTML および JavaScript を使用して、UWP アプリのすべてのツール間で使用します。  
+ これらのショートカットは、HTML および JavaScript を使用して UWP アプリのすべてのツールで使用できます。  
   
 |アクション|ショートカット|  
 |------------|--------------|  
@@ -51,12 +49,12 @@ ms.locfileid: "31475497"
 |アクション|ショートカット|  
 |------------|--------------|  
 |要素の選択|Ctrl + B|  
-|表示とを使用する場合は、web ページ強調表示ボックスを非表示を切り替える**要素の選択**|Ctrl + Shift + I|  
-|使用して変更をコミット **[HTML として編集]**|Ctrl + Enter|  
-|使用して変更を破棄して **[HTML として編集]**|Esc|  
+|**[要素の選択]** の使用時に Web ページのハイライト ボックスの表示と非表示を切り替える|Ctrl + Shift + I|  
+|**[HTML として編集]** を使用した変更の確定|Ctrl + Enter|  
+|**[HTML として編集]** を使用した変更の破棄|Esc|  
 |選択した CSS 値を 1 つ増やす|↑ キー|  
 |選択した CSS 値を 1 つ減らす|↓ キー|  
   
-## <a name="see-also"></a>関連項目  
- [クイック スタート: HTML および CSS をデバッグします。](../debugger/quickstart-debug-html-and-css.md)   
- [クイック スタート: JavaScript をデバッグします。](../debugger/quickstart-debug-javascript-using-the-console.md)
+## <a name="see-also"></a>「  
+ [クイック スタート:HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)   
+ [クイック スタート: JavaScript をデバッグする](../debugger/quickstart-debug-javascript-using-the-console.md)

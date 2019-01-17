@@ -2,7 +2,6 @@
 title: '[プロジェクトおよびソリューション] の [オプション] ダイアログ ボックス'
 ms.date: 07/14/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Projects.General
@@ -16,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 09881462b0723dc1e601c908efeabc317ed70b69
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 466df9ad82ef4bdc4b4cb3d699b53c0568f3b08a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52388950"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53926314"
 ---
 # <a name="projects-and-solutions-page-options-dialog-box"></a>[プロジェクトおよびソリューション] ページの [オプション] ダイアログ ボックス
 
@@ -89,11 +88,11 @@ Visual Studio が新しいプロジェクトとソリューション フォル�
 
 ### <a name="user-project-templates-location"></a>ユーザー プロジェクト テンプレートの場所
 
-**[新しいプロジェクト]** ダイアログ ボックスで **[マイ テンプレート]** の一覧を作成するときに使用される既定の場所を指定します。 詳細については、「[方法 : プロジェクト テンプレートと項目テンプレートを配置して整理する](../../ide/how-to-locate-and-organize-project-and-item-templates.md)」を参照してください。
+**[新しいプロジェクト]** ダイアログ ボックスで **[マイ テンプレート]** の一覧を作成するときに使用される既定の場所を指定します。 詳細については、「[方法 :テンプレートを配置して整理する](../../ide/how-to-locate-and-organize-project-and-item-templates.md)」を参照してください。
 
 ### <a name="user-item-templates-location"></a>ユーザー項目テンプレートの場所
 
-**[新しい項目の追加]** ダイアログ ボックスで **[マイ テンプレート]** の一覧を作成するときに使用される既定の場所を設定します。 詳細については、「[方法 : プロジェクト テンプレートと項目テンプレートを配置して整理する](../../ide/how-to-locate-and-organize-project-and-item-templates.md)」を参照してください。
+**[新しい項目の追加]** ダイアログ ボックスで **[マイ テンプレート]** の一覧を作成するときに使用される既定の場所を設定します。 詳細については、「[方法 :テンプレートを配置して整理する](../../ide/how-to-locate-and-organize-project-and-item-templates.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

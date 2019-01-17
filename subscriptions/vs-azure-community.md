@@ -3,18 +3,18 @@ title: Visual Studio サブスクリプションの Azure コミュニティ特�
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
-ms.date: 01/08/2018
+ms.date: 12/19/2018
 ms.topic: Get-Started-Article
 description: 一部の Visual Studio サブスクリプションに含まれる Azure コミュニティ特典について説明します。
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 693e51d969481d6511e3663d2f675861821c99fb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f3e0890d6b8f5e64535deea52670877d3c356f8d
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49937461"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53739387"
 ---
 # <a name="azure-community"></a>Azure コミュニティ
 
@@ -54,15 +54,19 @@ Azure コミュニティ特典を利用できるかどうかは、以下のよ�
 
 |                                          サブスクリプション レベル                                           |     チャネル      |    特長    | 更新可能かどうか |
 |-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
-|                           Visual Studio Enterprise (標準、年間クラウド)                           | VL、Azure、リテール |   1 年    |    [はい]     |
-|                          Visual Studio Professional (標準、年間クラウド)                          | VL、Azure、リテール |   1 年    |    [はい]     |
-|                              Visual Studio Test Professional (標準)                               |    VL、リテール     |   1 年    |    [はい]     |
-|                                       MSDN Platforms (標準)                                       |    VL、リテール     |   1 年    |    [はい]     |
+|                           Visual Studio Enterprise (Standard)                           | VL、Azure、リテール |   1 年    |    はい     |
+|                          Visual Studio Professional (Standard)                          | VL、Azure、リテール |   1 年    |    はい     |
+|                              Visual Studio Test Professional (標準)                               |    VL、リテール     |   1 年    |    はい     |
+|                                       MSDN Platforms (標準)                                       |    VL、リテール     |   1 年    |    はい     |
 | Visual Studio Enterprise (月間クラウド)、Visual Studio Professional (月間クラウド)、NFR<sup>1</sup> |        すべて        | 使用できません |     ×     |
 |                                     Visual Studio Dev Essentials                                      |        N/A        | 使用できません |     ×     |
 |                                                                                                       |                   |               |            |
 
 <sup>1</sup>  *Not for Resale (NFR)、Microsoft FTE、Microsoft Valued Professional (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP)、BizSpark、Imagine、Microsoft Certified Trainer (MCT) が含まれます*
+
+> [!NOTE]
+> Microsoft では、クラウド サブスクリプションの Visual Studio Professional 年間サブスクリプションおよび Visual Studio Enterprise 年間サブスクリプションが提供されなくなりました。 サブスクリプションの更新、増減、キャンセルに関する既存のお客様のエクスペリエンスと機能については変更はありません。 新規のお客様は、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) に移動し、Visual Studio のさまざまな購入オプションを調べることをお勧めします。
+
 
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 

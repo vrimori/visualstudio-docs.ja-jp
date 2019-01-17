@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::AddUnicodeText |Microsoft ドキュメント
+title: :Addunicodetext |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f387142675b0def99fb2cc0695bd3f9416d66809
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 190df1f621b450c6d3b34c339d21f947f48636f2
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24726242"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54093523"
 ---
 # <a name="idebugdocumenthelperaddunicodetext"></a>IDebugDocumentHelper::AddUnicodeText
-このドキュメントの末尾に Unicode 文字列を追加します。  
+このドキュメントの最後に、Unicode 文字列を追加します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT AddUnicodeText(  
    LPCOLESTR  pszText  
 );  
@@ -43,18 +43,18 @@ HRESULT AddUnicodeText(
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
 |`E_FAIL`|メソッドは、文字を追加できませんでした。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このメソッドは、生成`IDebugDocumentTextEvents`通知します。  
   
 > [!NOTE]
->  後にこのメソッドが呼び出された場合`AddDeferredText`が呼び出されて`E_FAIL`が返されます。  
+>  後にこのメソッドが呼び出された場合`AddDeferredText`が呼び出された`E_FAIL`が返されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugDocumentHelper インターフェイス](../../winscript/reference/idebugdocumenthelper-interface.md)   
- [IDebugDocumentHelper::AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
+ [:Adddeferredtext](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
  [IDebugDocumentTextEvents インターフェイス](../../winscript/reference/idebugdocumenttextevents-interface.md)

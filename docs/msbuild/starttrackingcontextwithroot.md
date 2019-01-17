@@ -1,8 +1,6 @@
 ---
 title: StartTrackingContextWithRoot | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 apiname:
 - StartTrackingContextWithRoot
@@ -17,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: df0fc520d1d3f37800f08198e6dc08deac5c6a6f
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 721d50b4e710e19c759bb418197d82c4828e6961
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39155556"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53990001"
 ---
 # <a name="starttrackingcontextwithroot"></a>StartTrackingContextWithRoot
 応答ファイルにルート マーカーを指定し、追跡コンテキストを開始します。  
@@ -46,8 +44,8 @@ HRESULT WINAPI StartTrackingContextWithRoot(LPCTSTR intermediateDirectory, LPCTS
 ## <a name="return-value"></a>戻り値  
  追跡コンテキストが作成された場合、**HRESULT** に **SUCCEEDED** ビットが設定されます。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** *FileTracker.h*  
+## <a name="requirements"></a>要件  
+ **ヘッダー:***FileTracker.h*  
   
 ## <a name="see-also"></a>関連項目  
  [StartTrackingContext](../msbuild/starttrackingcontext.md)

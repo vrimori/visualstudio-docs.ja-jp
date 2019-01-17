@@ -2,7 +2,6 @@
 title: デバッグ中に別のスレッドに切り替える
 ms.custom: seodec18
 ms.date: 04/27/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -17,14 +16,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 45ace6f26f241ecdc39b88060fc4edc6c2e47d91
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 5a8fd2106d4982f8e840974bc659d2296cf8c592
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057049"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227526"
 ---
-# <a name="how-to-switch-to-another-thread-while-debugging-in-visual-studio"></a>方法:Visual Studio でのデバッグ中に別のスレッドに切り替える
+# <a name="how-to-switch-to-another-thread-while-debugging-in-visual-studio-c-visual-basic-c"></a>方法: Visual Studio でのデバッグ中に別のスレッドに切り替える (C#、Visual Basic、C++)
 マルチ スレッド アプリケーションをデバッグするときに、別のスレッドで作業しているスレッドから切り替えるにはいくつかのメソッドのいずれかを使用できます。
 
 > [!NOTE]
@@ -48,5 +47,5 @@ ms.locfileid: "53057049"
   
 2.  一覧で、切り替え先のスレッドをクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [マルチスレッド アプリケーションのデバッグ](../debugger/debug-multithreaded-applications-in-visual-studio.md)

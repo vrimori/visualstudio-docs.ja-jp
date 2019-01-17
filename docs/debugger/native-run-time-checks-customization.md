@@ -1,8 +1,6 @@
 ---
 title: ネイティブ ランタイム チェックのカスタマイズ |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.crt
@@ -24,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6df61b1e0fde088fca87fa7a99f5590768889b8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 7530f875b3eb14766e32b1237871e6ec48d4bb85
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49853929"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53836244"
 ---
 # <a name="native-run-time-checks-customization"></a>ネイティブ ランタイム チェックのカスタマイズ
 コンパイルするとき **/RTC** (実行時チェック) を使用して、または、`runtime_checks`プラグマ、C ランタイム ライブラリはネイティブ ランタイム チェックを提供します。 ランタイム チェックのカスタマイズが必要になる場合があります。次に例を示します。  
@@ -38,11 +36,11 @@ ms.locfileid: "49853929"
   
 - サードパーティ デバッガーでのランタイム チェック メッセージの出力先を指定する。  
   
-- C ランタイム ライブラリのリリース バージョンでコンパイルされたプログラムからのランタイム チェック メッセージを報告する。 ライブラリのリリース バージョンでは、ランタイム エラーの報告に `_CrtDbgReportW` は使用されません。 代わりに、表示、 **Assert**  ダイアログ ボックスの各実行時エラーが発生します。  
+- C ランタイム ライブラリのリリース バージョンでコンパイルされたプログラムからのランタイム チェック メッセージを報告する。 ライブラリのリリース バージョンでは、ランタイム エラーの報告に `_CrtDbgReportW` は使用されません。 代わりに、ランタイム エラーごとに **[Assert]** ダイアログ ボックスが表示されます。  
   
   ランタイム エラー チェックをカスタマイズするには、次の方法があります。  
   
-- ランタイム エラー レポート関数の記述 詳細については、次を参照してください。[方法: 実行時エラー レポート関数を記述](../debugger/how-to-write-a-run-time-error-reporting-function.md)します。  
+- ランタイム エラー レポート関数の記述 詳細については、「[方法 :ランタイム エラー レポート関数を記述する](../debugger/how-to-write-a-run-time-error-reporting-function.md)」を参照してください。  
   
 - エラー メッセージ出力先のカスタマイズ  
   
@@ -56,7 +54,7 @@ ms.locfileid: "49853929"
 ## <a name="query-for-information-about-run-time-checks"></a>ランタイム チェック情報のクエリ  
  `_RTC_NumErrors` は、ランタイム エラー チェックで検出されたエラーの種類の数を返します。 各エラーの簡単な説明を取得するには、0 ～ `_RTC_NumErrors` の戻り値をループし、各ループで `_RTC_GetErrDesc` に反復値を渡すことができます。 詳細については、次を参照してください。 [_RTC_NumErrors](/cpp/c-runtime-library/reference/rtc-numerrors)と[_RTC_GetErrDesc](/cpp/c-runtime-library/reference/rtc-geterrdesc)します。  
   
-## <a name="see-also"></a>関連項目  
- [方法: ネイティブ ランタイム チェックを使用](../debugger/how-to-use-native-run-time-checks.md)   
+## <a name="see-also"></a>「  
+ [方法: ネイティブ ランタイム チェックを使用する](../debugger/how-to-use-native-run-time-checks.md)   
  [runtime_checks](/cpp/preprocessor/runtime-checks)   
  [_CrtDbgReport、_CrtDbgReportW](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw)

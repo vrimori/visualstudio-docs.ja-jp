@@ -1,8 +1,6 @@
 ---
 title: Target 要素 (MSBuild) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/13/2017
-ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#Target
@@ -20,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9085861418f11ed63f76a6493a6927c63530759b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 5e82a92e0470d754093c419357f7eb4247c1aa65
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49918793"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53965250"
 ---
 # <a name="target-element-msbuild"></a>Target 要素 (MSBuild)
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] が順次実行するタスクのセットを格納します。  
@@ -62,8 +60,8 @@ ms.locfileid: "49918793"
 |---------------|-----------------|  
 |`Name`|必須の属性です。<br /><br /> ターゲットの名前。|  
 |`Condition`|省略可能な属性です。<br /><br /> 評価する条件です。 条件が `false` と評価された場合、ターゲットの本体も、`DependsOnTargets` 属性で設定されたいずれのターゲットも実行されません。 条件の詳細については、「[条件](../msbuild/msbuild-conditions.md)」を参照してください。|  
-|`Inputs`|省略可能な属性です。<br /><br /> このターゲットの入力を形成するファイル。 複数のファイルを指定するときは、セミコロン (;) で区切ります。 ファイルのタイムスタンプは、`Outputs` のファイルのタイムスタンプと比較され、`Target` が最新かどうか判断されます。 詳細については、「[インクリメンタル ビルド](../msbuild/incremental-builds.md)」、「[方法: インクリメンタル ビルドを実行する](../msbuild/how-to-build-incrementally.md)」、「[変換](../msbuild/msbuild-transforms.md)」を参照してください。|  
-|`Outputs`|省略可能な属性です。<br /><br /> このターゲットの出力を形成するファイル。 複数のファイルを指定するときは、セミコロン (;) で区切ります。 ファイルのタイムスタンプは、`Inputs` のファイルのタイムスタンプと比較され、`Target` が最新かどうか判断されます。 詳細については、「[インクリメンタル ビルド](../msbuild/incremental-builds.md)」、「[方法: インクリメンタル ビルドを実行する](../msbuild/how-to-build-incrementally.md)」、「[変換](../msbuild/msbuild-transforms.md)」を参照してください。|  
+|`Inputs`|省略可能な属性です。<br /><br /> このターゲットの入力を形成するファイル。 複数のファイルを指定するときは、セミコロン (;) で区切ります。 ファイルのタイムスタンプは、`Outputs` のファイルのタイムスタンプと比較され、`Target` が最新かどうか判断されます。 詳細については、「[インクリメンタル ビルド](../msbuild/incremental-builds.md)」、「[方法:インクリメンタル ビルドを実行する](../msbuild/how-to-build-incrementally.md)」、および[変換](../msbuild/msbuild-transforms.md)に関するページを参照してください。|  
+|`Outputs`|省略可能な属性です。<br /><br /> このターゲットの出力を形成するファイル。 複数のファイルを指定するときは、セミコロン (;) で区切ります。 ファイルのタイムスタンプは、`Inputs` のファイルのタイムスタンプと比較され、`Target` が最新かどうか判断されます。 詳細については、「[インクリメンタル ビルド](../msbuild/incremental-builds.md)」、「[方法:インクリメンタル ビルドを実行する](../msbuild/how-to-build-incrementally.md)」、および[変換](../msbuild/msbuild-transforms.md)に関するページを参照してください。|  
 |`Returns`|省略可能な属性です。<br /><br /> このターゲットを呼び出すタスク (MSBuild タスクなど) で使用可能になる項目のセットです。 複数のターゲットを指定するときは、セミコロン (;) で区切ります。 ファイル内のターゲットに `Returns` 属性がない場合、代わりに Outputs 属性がこの目的で使用されます。|  
 |`KeepDuplicateOutputs`|省略可能な Boolean 属性です。<br /><br /> `true` の場合、ターゲットの Returns の同じ項目への参照が複数記録されます。  既定では、この属性は `false` です。|  
 |`BeforeTargets`|省略可能な属性です。<br /><br /> ターゲット名のセミコロン区切りのリストです。  指定した場合、指定したターゲットの前にこのターゲットが実行されます。 これにより、プロジェクト作成者は、これらを直接変更せずに、既存のターゲット セットを拡張できます。 詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」を参照してください。|  

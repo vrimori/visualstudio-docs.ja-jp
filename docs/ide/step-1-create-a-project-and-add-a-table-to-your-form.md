@@ -1,9 +1,7 @@
 ---
 title: '手順 1: プロジェクトの作成とフォームへのテーブルの追加'
-ms.custom: ''
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 1cac4ba4-f3cd-43bd-ad5d-50fc599234e8
 author: TerryGLee
@@ -11,12 +9,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f83ce585120131d63c07e6db2ed6b90f32cc0876
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: da8d951c7bbb96d1c955d9254756ea80925d4969
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49857609"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53882777"
 ---
 # <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>手順 1: プロジェクトの作成とフォームへのテーブルの追加
 
@@ -91,6 +89,6 @@ ms.locfileid: "49857609"
 
 ## <a name="to-continue-or-review"></a>続行または確認するには
 
--   チュートリアルの次の手順に進むには、「[手順 2: Random オブジェクトおよびアイコンのリストの追加](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)」をご覧ください。
+-   チュートリアルの次の手順に進むには、「[手順 2:Random オブジェクトおよびアイコンのリストの追加](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)」をご覧ください。
 
--   概要のトピックに戻るには、「[チュートリアル 3: 絵合わせゲームの作成](../ide/tutorial-3-create-a-matching-game.md)」をご覧ください。
+-   概要のトピックに戻るには、「[チュートリアル 3:絵合わせゲームの作成](../ide/tutorial-3-create-a-matching-game.md)」をご覧ください。

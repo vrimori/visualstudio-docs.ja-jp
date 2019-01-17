@@ -3,7 +3,6 @@ title: Visual Studio Build Tools をコンテナーにインストールする
 titleSuffix: ''
 description: Visual Studio Build Tools を Windows コンテナーにインストールして、継続的インテグレーションと継続的デリバリー (CI/CD) のワークフローをサポートする方法を説明します。
 ms.date: 04/18/2018
-ms.technology: vs-acquisition
 ms.custom: seodec18
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -13,12 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 37ce2fc60ac2a57baddf62e68a900349ed072f4d
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: 3e98ff7f21ab7620092f2b535f17c55ab4d584b7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160089"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53946634"
 ---
 # <a name="install-build-tools-into-a-container"></a>Build Tools をコンテナーにインストールする
 
@@ -118,8 +117,8 @@ Visual Studio Build Tools さらには Visual Studio 全体では、すべての
 
 次の Dockerfile の例を新しいファイルとしてディスクに保存します。 ファイル名を単に "Dockerfile" にすると、既定で認識されます。
 
-> [!NOTE]
-> この例の Dockerfile では、コンテナーにインストールできない古い Windows SDK のみを除外します。 古いリリースはビルド コマンドが失敗する原因になります。
+> [!WARNING]
+> この例の Dockerfile では、コンテナーにインストールできない以前の Windows SDK のみを除外します。 以前のリリースはビルド コマンドが失敗する原因になります。
 
 1. コマンド プロンプトを開きます。
 2. 新しいディレクトリを作成します (推奨)。
@@ -165,8 +164,12 @@ Visual Studio Build Tools さらには Visual Studio 全体では、すべての
    CMD ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
    ```
 
-   > [!NOTE]
-   > microsoft/windowsservercore に直接基づくイメージの場合は、.NET Framework が正しくインストールされない可能性があり、インストール エラーは示されていません。 インストールが完了した後、マネージド コードが実行しない可能性があります。 代わりに、イメージを [microsoft/dotnet-framework:4.7.1](https://hub.docker.com/r/microsoft/dotnet-framework) 以降に基づくようにします。 また新しいイメージが、既定の `SHELL` として PowerShell を使用する可能性があり、そのために `RUN` および `ENTRYPOINT` 命令が失敗する場合があることに注意してください。
+   > [!WARNING]
+   > microsoft/windowsservercore に直接基づくイメージの場合は、.NET Framework が正しくインストールされない可能性があり、インストール エラーは示されていません。 インストールが完了した後、マネージド コードが実行しない可能性があります。 代わりに、イメージを [microsoft/dotnet-framework:4.7.1](https://hub.docker.com/r/microsoft/dotnet-framework) 以降に基づくようにします。 また、バージョン 4.7.1 以降のタグが付いたイメージでは、既定の `SHELL` として PowerShell を使用する可能性があり、そのために `RUN` および `ENTRYPOINT` 命令が失敗する場合があることに注意してください。
+   >
+   > Visual Studio 2017 バージョン 15.8 以前 (すべての製品) は、mcr<span></span>.microsoft\.com\/windows\/servercore:1809 以降には適切にインストールされません。 エラーは表示されません。
+   >
+   > 詳しくは、「[コンテナーの既知の問題](build-tools-container-issues.md)」をご覧ください。
 
 4. そのディレクトリで次のコマンドを実行します。
 

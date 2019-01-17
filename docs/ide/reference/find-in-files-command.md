@@ -2,7 +2,6 @@
 title: FindinFiles コマンド
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - edit.findinfiles
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a4cf5078bb16d90744b83dfd99cf0c1da663149a
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 9aab2251f8859cb8e6a5699ba3cd2d4828bd32a4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705022"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53831207"
 ---
 # <a name="find-in-files-command"></a>FindinFiles コマンド
 **[検索と置換]** ウィンドウの **[フォルダーを指定して検索]** タブにあるオプションのサブセットを使って、ファイルを検索します。
@@ -39,9 +38,9 @@ Edit.FindinFiles findwhat [/case] [/ext:extensions]
 ## <a name="switches"></a>スイッチ
  /case または /c 省略可能。 `findwhat` 引数で指定されている語句と大文字および小文字の使い分けが正確に一致する場合にのみ、一致と見なします。
 
- /ext: `extensions` 省略可能。 検索するファイルのファイル拡張子を指定します。 指定しないと、前に入力したものがある場合はそれが使われます。
+ /ext:`extensions` 省略可能。 検索するファイルのファイル拡張子を指定します。 指定しないと、前に入力したものがある場合はそれが使われます。
 
- /lookin: `searchpath` 省略可能。 検索するディレクトリ。 パスにスペースが含まれる場合は、パス全体を引用符で囲みます。
+ /lookin:`searchpath` 省略可能。 検索するディレクトリ。 パスにスペースが含まれる場合は、パス全体を引用符で囲みます。
 
  /names または /n 省略可能。 一致を含むファイル名の一覧を表示します。
 
@@ -72,10 +71,10 @@ Edit.FindinFiles findwhat [/case] [/ext:extensions]
 >Edit.FindinFiles btnCancel /lookin:"c:/My Visual Studio Projects" /ext:*.cls /text2
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [フォルダーを指定して検索](../../ide/find-in-files.md)
 - [コマンド ウィンドウ](../../ide/reference/command-window.md)
 - [検索コマンド ボックス](../../ide/find-command-box.md)
 - [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
-- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)

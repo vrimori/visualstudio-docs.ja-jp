@@ -2,7 +2,6 @@
 title: '方法: シェーダーを 3D モデルに適用する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: a3877bd6-abd8-4a9d-842c-6848b6c2f335
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 12fc18532888dbf688c3fcc0e5695edfaf47d953
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: 7c0c7b304b5fd435d739252db821232f977b75a3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924136"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53837158"
 ---
 # <a name="how-to-apply-a-shader-to-a-3d-model"></a>方法: シェーダーを 3D モデルに適用する
 
@@ -27,7 +26,7 @@ ms.locfileid: "37924136"
 
 開始する前に、**[プロパティ]** ウィンドウが表示されていることを確認します。
 
-1. まず 1 つ以上のモデルを含む 3D シーンを使用します。 適切な 3D シーンがない場合、「[方法: 基本 3D モデルを作成する](../designers/how-to-create-a-basic-3-d-model.md)」に従って作成します。 また、モデルに適用できる DGSL シェーダーを使用する必要があります。 適切なシェーダーがない場合、「[方法: 基本カラー シェーダーを作成する](../designers/how-to-create-a-basic-color-shader.md)」に従って作成し、ファイルに保存してから続行してください。
+1. まず 1 つ以上のモデルを含む 3D シーンを使用します。 適切な 3D シーンがない場合、「[方法:基本 3D モデルを作成する](../designers/how-to-create-a-basic-3-d-model.md)」に従って作成します。 また、モデルに適用できる DGSL シェーダーを使用する必要があります。 適切なシェーダーがない場合、「[方法:基本カラー シェーダーを作成する](../designers/how-to-create-a-basic-color-shader.md)」に従って作成し、ファイルに保存してから続行してください。
 
 2. **選択**モードで、シェーダーを適用するモデルを選択します。その後、**[プロパティ]** ウィンドウを開き、**効果**プロパティ グループの **Filename** プロパティで、モデルに適用する DGSL シェーダーを指定します。
 

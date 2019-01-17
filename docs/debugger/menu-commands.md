@@ -1,8 +1,6 @@
 ---
-title: メニュー コマンド |Microsoft ドキュメント
-ms.custom: ''
+title: メニュー コマンド |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Spy++, menu commands
@@ -13,15 +11,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d494fa3f5aa50cc761152e015df34e76341ed074
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 59afcb8db6fbfa8aa2e6891b954b486eb4ec197e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31476037"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53830678"
 ---
 # <a name="menu-commands"></a>メニュー コマンド
-このセクションのヘルプ トピックには、spy++ メニューで使用できるコマンドが一覧表示します。  
+このセクションでは、ヘルプ トピックは、spy++ メニューで使用できるコマンドを一覧表示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [[スパイ] メニューのコマンド](../debugger/spy-menu-commands.md)  
@@ -53,4 +51,4 @@ ms.locfileid: "31476037"
  Windows、メッセージ、プロセス、およびスレッドの spy++ ツリー ビューについて説明します。  
   
  [Spy++ リファレンス](../debugger/spy-increment-reference.md)  
- このセクションが含まれ、各 spy++ のダイアログ ボックスについて説明するセクションします。
+ このセクションを含み、各 spy++ のダイアログ ボックスについて説明するセクションします。

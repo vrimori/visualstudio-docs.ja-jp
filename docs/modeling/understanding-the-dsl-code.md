@@ -10,12 +10,12 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: a0b540eb6f8e8c09845e069275a0a901c2809806
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b47fe1e80f2441c729dd2d971bfadffb80dfbd04
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53886372"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270295"
 ---
 # <a name="understanding-the-dsl-code"></a>DSL コードについて
 ドメイン固有言語 (DSL) ソリューションには、読み取りし、Visual Studio で DSL のインスタンスの更新に使用できる API が生成されます。 この API は、DSL 定義から生成されるコード中に定義されます。 このトピックでは生成される API を説明します。
@@ -191,7 +191,7 @@ ms.locfileid: "53886372"
 
  `CommandSet.cs`
 
- 図の上に表示されるコンテキスト メニュー コマンド。 この設定の適用または設定への追加が可能です。 このファイルはコマンドのコードを含みます。 メニュー上のコマンドの場所は Commands.vsct ファイルにより決定されます。 詳細については、次を参照してください。[書き込みユーザー コマンドおよびユーザー アクション](../modeling/writing-user-commands-and-actions.md)します。
+ ダイアグラムで表示される右クリック メニュー コマンド。 この設定の適用または設定への追加が可能です。 このファイルはコマンドのコードを含みます。 メニュー上のコマンドの場所は Commands.vsct ファイルにより決定されます。 詳細については、次を参照してください。[書き込みユーザー コマンドおよびユーザー アクション](../modeling/writing-user-commands-and-actions.md)します。
 
  `Constants.cs`
 
@@ -281,7 +281,7 @@ namespace Company.EmbedInForm
 
  `GeneratedVSCT.vsct`
 
- [ダイアグラム] コンテキスト メニューなど、メニュー上の標準のメニュー コマンドを検索、**編集**メニューのという具合です。 コマンドのコードは CommandSet.cs にあります。 標準コマンドを再配置または変更して、独自のコマンドを追加できます。 詳細については、次を参照してください。[書き込みユーザー コマンドおよびユーザー アクション](../modeling/writing-user-commands-and-actions.md)します。
+ [ダイアグラム] (コンテキスト) を右クリック メニューなど、メニュー上の標準のメニュー コマンドを検索、**編集**メニューのという具合です。 コマンドのコードは CommandSet.cs にあります。 標準コマンドを再配置または変更して、独自のコマンドを追加できます。 詳細については、次を参照してください。[書き込みユーザー コマンドおよびユーザー アクション](../modeling/writing-user-commands-and-actions.md)します。
 
  `ModelExplorer.cs`
 
@@ -291,7 +291,7 @@ namespace Company.EmbedInForm
 
  モデル エクスプローラー内の選択を図の選択と同期させる場合、次のコードを使用できます。
 
-```
+```csharp
 protected override void OnSelectionChanged(global::System.EventArgs e)
 {
 base.OnSelectionChanged(e);

@@ -1,20 +1,18 @@
 ---
 title: Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール | Microsoft Docs
-ms.custom: ''
 ms.date: 06/19/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 404a8a3f40d5d84d60fe4822fb692e4f48a57503
-ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
+ms.openlocfilehash: 9fe876d5244ad18d1d2635caa1717ca9eb0e29ba
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51220808"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53832295"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 と Windows Server 2012 アプリケーションのパフォーマンス ツール
 
@@ -39,7 +37,7 @@ UWP アプリのプロファイリングを行う場合、次のプロファイ�
 
 UWP アプリのプロファイリングの詳細については、次の記事をご覧ください。
 
-- [ローカル コンピューターで UWP アプリを実行する](../debugger/run-windows-store-apps-on-the-local-machine.md)
+- [ローカル コンピューターで UWP アプリを実行する](/visualstudio/debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml)
 - [リモート コンピューターで UWP アプリを実行する](../debugger/run-windows-store-apps-on-a-remote-machine.md)
 - [プロファイル ツールの概要](profiling-feature-tour.md)
 - [JavaScript メモリ](../profiling/javascript-memory.md)
@@ -76,7 +74,7 @@ Visual Studio がインストールされていないデバイスでアプリケ
 
 - [MSDN Web サイト](http://go.microsoft.com/fwlink/?LinkID=219549)から、Visual Studio 用のリモート ツールの一部としてツールをダウンロードします。
 
-- 既存の Visual Studio コンピューターから、スタンドアロンのプロファイラー ツール インストール プログラムをコピーして実行します。 インストール プログラムは *%VSInstallDir%\Team Tools\Performance Tools\Setups* フォルダーにあります。 リモート コンピューターのオペレーティング システム (x86/x64) に対応するセットアップ プログラムを選択します。
+- 既存の Visual Studio コンピューターから、スタンドアロンのプロファイラー ツール インストール プログラムをコピーして実行します。 プロファイル ツールへのパスを取得するには、[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)に関する記事をご覧ください。 リモート コンピューターのオペレーティング システム (x86/x64) に対応するセットアップ プログラムを選択します。
 
 > [!NOTE]
 > TIP プロファイル データを収集するには、Visual Studio コンピューターにあるスタンドアロン プロファイラーをリモート コンピューターにインストールする必要があります。

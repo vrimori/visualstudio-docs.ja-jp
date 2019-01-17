@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx::DeleteMemberByDispID |Microsoft ドキュメント
+title: IDispatchEx::DeleteMemberByDispID |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 573eb60dc901e43706835c4d627b25bd54bbe751
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: de99e74cf12939a31c99cdc59ce8ad7fd685ae03
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727752"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54086867"
 ---
 # <a name="idispatchexdeletememberbydispid"></a>IDispatchEx::DeleteMemberByDispID
-DISPID でメンバーを削除します。  
+メンバーの DISPID を削除します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT DeleteMemberByDispID(  
     DISPID id  
 );  
@@ -48,14 +48,14 @@ HRESULT DeleteMemberByDispID(
 |`S_OK`|成功。|  
 |`S_FALSE`|メンバーが存在しますが、削除できません。|  
   
-## <a name="remarks"></a>コメント  
- DISPID が有効のままに必要な場合は、メンバーを削除すると、`GetNextDispID`です。  
+## <a name="remarks"></a>Remarks  
+ DISPID が有効でする必要がある場合は、メンバーを削除すると、`GetNextDispID`します。  
   
- 名前が指定されたメンバーを削除し、後で同じ名前のメンバーが再作成されると、DISPID を同じにする必要があります。 (大文字と小文字が異なるのみメンバー名が「同一」かどうか、オブジェクトに依存する) です。  
+ 指定された名前を持つメンバーが削除され、後で同じ名前のメンバーが再作成された場合、DISPID は同じである必要があります。 (大文字と小文字が異なるだけのメンバー名が「同一」かどうかはオブジェクトに依存) です。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp
 BSTR bstrName;  
 DISPID dispid;  
 IDispatchEx *pdex;   

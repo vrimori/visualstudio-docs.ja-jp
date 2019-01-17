@@ -3,7 +3,6 @@ title: Visual Studio の統合 (MSBuild)
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, reference resolution
@@ -21,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7449e8585cd9f1db8a4a43cddf8092f1a92c9758
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: e3ee9dcabc0333de72fef319ac1048f2a266f7b3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052424"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53834179"
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio の統合 (MSBuild)
 Visual Studio は、マネージド プロジェクトの読み込みとビルドを行う [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] をホストしています。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はプロジェクトに対応しているため、そのプロジェクトが他のツールで作成されていたり、ビルド処理がカスタマイズされていたりしても、 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 形式のほとんどすべてのプロジェクトを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]で問題なく使用できます。  

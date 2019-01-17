@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_hfadouble |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e6d9057ecc968cfd3772cdb01a07aa392c449134
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: fa95a10b9a4d5617b31fe5e17484282f00707b3a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49873695"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53832528"
 ---
 # <a name="idiasymbolgethfadouble"></a>IDiaSymbol::get_hfaDouble
 ユーザー定義型 (UDT) が同種浮動小数点 (HFA) の集計データは double 型を含むかどうかを指定するフラグを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49873695"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_hfaDouble(   
+HRESULT get_hfaDouble(   
    BOOL* pRetVal  
 );  
 ```  
@@ -42,15 +40,15 @@ HRESULT get_hfaDouble(
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>必要条件  
- ヘッダー: Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー:dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia100.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [IDiaSymbol::get_udtKind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md)

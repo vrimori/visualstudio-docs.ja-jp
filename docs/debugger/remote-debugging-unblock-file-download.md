@@ -1,8 +1,6 @@
 ---
 title: リモート ツールのダウンロードをブロック解除します。
-ms.custom: ''
 ms.date: 07/19/2018
-ms.technology: vs-ide-debug
 ms.topic: troubleshooting
 helpviewer_keywords:
 - remote debugging, unblock download
@@ -11,14 +9,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e0586b8f0699ec2eca5843d59df1b6ddd7cecbd3
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
-ms.translationtype: MT
+ms.openlocfilehash: bfc212dff46cea4de494f46a439026c7d5a851bb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39180661"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53905346"
 ---
-# <a name="how-to-unblock-the-download-of-the-remote-tools-on-windows-server"></a>方法: Windows Server のリモート ツールのダウンロードをブロック解除
+# <a name="how-to-unblock-the-download-of-the-remote-tools-on-windows-server"></a>方法: Windows Server のリモート ツールのダウンロードをブロック解除します。
 
 Windows Server 上の Internet Explorer で、既定のセキュリティ設定により、リモート ツールなどのコンポーネントをダウンロードする時間がかかる。
 
@@ -46,7 +44,7 @@ Windows Server 上のツールをダウンロードするには、次のいず�
   * my.visualstudio.com
   * login.microsoftonline.com
   * login.live.com
-  * secure.aadcdn.microsoftonline されました。
+  * secure.aadcdn.microsoftonline-p.com
   * msft.sts.microsoft.com
   * auth.gfx.ms
   * app.vssps.visualstudio.com

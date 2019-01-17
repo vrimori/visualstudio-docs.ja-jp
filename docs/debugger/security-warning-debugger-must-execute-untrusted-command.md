@@ -1,8 +1,6 @@
 ---
-title: 'セキュリティの警告: デバッガーは信頼されていないコマンドを実行する必要があります |Microsoft Docs'
-ms.custom: ''
+title: セキュリティ警告:デバッガーは信頼されていないコマンドを実行する必要があります |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.sourceserver.securityalert
@@ -17,20 +15,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e99c56efc5338feeded20621c7467bbf8274bc9
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
-ms.translationtype: MT
+ms.openlocfilehash: 3e421521bd40ff4369433b0a0c3c323579e36125
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39510925"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53855614"
 ---
-# <a name="security-warning-debugger-must-execute-untrusted-command"></a>セキュリティ警告 : デバッガーは信頼されないコマンドを実行する必要があります
+# <a name="security-warning-debugger-must-execute-untrusted-command"></a>セキュリティ警告:デバッガーは信頼されないコマンドを実行する必要があります
 ソース サーバーを使用している場合、この警告ダイアログ ボックスが表示されます。 デバッガーがソース コードを取得するために実行する必要のあるコマンドが、srcsvr.ini ファイルに含まれる、ソース サーバーに対して信頼できるコマンドの一覧に記載されていないことを示します。 このコマンドが有効な場合、srcsvr.ini ファイルに追加できます。 それ以外の場合は、そのコマンドを実行しないようにしてください。 詳細については、[シンボル (.pdb) ファイルとソース ファイルの指定](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)に関する記事をご覧ください。  
   
 ## <a name="message-text"></a>メッセージ テキスト  
- **デバッガーでは、移行元サーバーからソース コードを取得する次の信頼されていないコマンドを実行する必要があります。**  
+ **ソース サーバーからソースを取得するために、この信頼されていないコマンドを実行します。**  
   
- **場合は、デバッグ シンボル ファイル (\*.pdb) がない既知または信頼されたソースでは、このコマンドである可能性が無効であるかを実行するは危険です。**  
+ **既知の信頼できる発信元からのデバッグ シンボル ファイル (\*.pdb) でない場合、コマンドは無効であるか、または実行に危険が伴うおそれがあります。**  
   
  **このコマンドを実行しますか。**  
   
@@ -38,13 +36,13 @@ ms.locfileid: "39510925"
  [テキスト ボックス]  
  実行する .pdb ファイルからのコマンド。  
   
- Run  
+ 実行  
  コマンドの実行を許可します。  
   
  [実行しない]  
  コマンドの実行およびソース サーバーからのファイルのダウンロードを停止します。  
   
-## <a name="see-also"></a>関連項目  
- [シンボル (.pdb) を指定し、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
+## <a name="see-also"></a>「  
+ [シンボル (.pdb) とソース ファイルの指定](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
- [移行元サーバー](/windows/desktop/Debug/source-server-and-source-indexing)
+ [ソース サーバー](/windows/desktop/Debug/source-server-and-source-indexing)

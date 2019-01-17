@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptStringCompare::StrComp |Microsoft ドキュメント
+title: IActiveScriptStringCompare::StrComp |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1b92b29f4e40f5e8de567337957aabbcb3c057fd
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 4b2fea6ae4d5819680f38d19f2cd6ea1cf9bf9b5
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725072"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54090104"
 ---
 # <a name="iactivescriptstringcomparestrcomp"></a>IActiveScriptStringCompare::StrComp
 スクリプト エンジンに対する文字列比較メソッドを定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT StrComp(  
 // The first string:  
     [in] BSTR bszStr1,    
@@ -49,7 +49,7 @@ HRESULT StrComp(
  第 2 文字列。  
   
  `iRet`  
- 比較の結果。 場合は 0`bszStr1`と`bszStr2`は同一以外の場合は-1 `bszStr1`  <  `bszStr2`; 場合は、1 `bszStr1`  > `bszStr2`です。  
+ 比較の結果。 場合は 0`bszStr1`と`bszStr2`が同じ場合は-1。 `bszStr1`  <  `bszStr2`; 場合は、1 `bszStr1`  > `bszStr2`します。  
   
 ## <a name="return-value"></a>戻り値  
  次のいずれかの値を返します。  
@@ -58,13 +58,13 @@ HRESULT StrComp(
 |------------------|-------------|  
 |`S_OK`|成功。|  
 |`E_INVALIDARG`|引数が有効ではありません。|  
-|`E_UNEXPECTED`|呼び出しが予期されていませんでした (たとえば、スクリプト エンジンがされていないされて読み込まれたまたは初期化) します。|  
+|`E_UNEXPECTED`|呼び出しが予期されていませんでした (たとえば、スクリプト エンジンがされていないされて読み込まれるまたは初期化) します。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、文字列比較を実行するたびに呼び出されます。  
+## <a name="remarks"></a>Remarks  
+ このメソッドには、文字列比較を実行するたびには呼び出されます。  
   
 ## <a name="example"></a>例  
- 次の例では、文字列比較関数をオーバー ロードする方法を示します。 使用する場合は、オーバー ロードが許可[IActiveScriptProperty::SetProperty](../../winscript/reference/iactivescriptproperty-setproperty.md) SCRIPTPROP_STRINGCOMPAREINSTANCE を設定します。  
+ 次の例では、文字列の比較関数をオーバー ロードする方法を示します。 使用する場合は、オーバー ロードが許可[IActiveScriptProperty::SetProperty](../../winscript/reference/iactivescriptproperty-setproperty.md) SCRIPTPROP_STRINGCOMPAREINSTANCE を設定します。  
   
 ```cpp#  
 cpp_quote("// {58562769-ED52-42f7-8403-4963514E1F11}")  

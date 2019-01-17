@@ -1,8 +1,6 @@
 ---
 title: ズーム コントロール (スレッド ビュー) | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.tools.zoom
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 85297c32274eb3b6573f536be15d621a60b95921
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 87959310b0c34a801ade0ae5ffdb00c75ff9dcc1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34447883"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53938135"
 ---
 # <a name="zoom-control-threads-view"></a>ズーム コントロール (スレッド ビュー)
 ズーム コントロールは、タイムラインの表示を拡大縮小するのに役立つスライダーです。このコントロールを使用して、興味のある領域を集中的に見ることができます。 このコントロールではタイムライン ビューの中央が拡大の中心点になるため、拡大する前に、対象となる領域が中央に置かれるように調整してください。  

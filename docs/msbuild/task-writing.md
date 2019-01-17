@@ -1,8 +1,6 @@
 ---
 title: タスクの作成 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, writing tasks
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7cf8c8a05d07d1a75a8794c52a2f89a55f01419e
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 471e707b13992a0edf06eb8136d36f3f415b9d11
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39152068"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53922158"
 ---
 # <a name="task-writing"></a>タスクの作成
 タスクでは、ビルド プロセスの間に実行するコードを指定します。 タスクはターゲットに含まれます。 一般的なタスクのライブラリは [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に付属します。独自のタスクを作成することもできます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に付属するタスク ライブラリの詳細については、[タスク リファレンス](../msbuild/msbuild-task-reference.md)を参照してください。  

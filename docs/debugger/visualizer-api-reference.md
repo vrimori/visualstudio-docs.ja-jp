@@ -1,8 +1,6 @@
 ---
 title: ビジュアライザー API リファレンス |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -19,16 +17,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 686b7353db35b26769bc9be4f64426862b3dae39
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
-ms.translationtype: MT
+ms.openlocfilehash: 8f70c806cc848c8f7aba87e2d89f55c480cbc4af
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39155062"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53902215"
 ---
 # <a name="visualizer-api-reference"></a>ビジュアライザー API リファレンス
 
-ビジュアライザー API は Visual Studio デバッガーのビジュアライザーを記述する必要のあるユーザー向けに用意されています。 ビジュアライザーは、Visual Studio デバッガー ユーザー インターフェイスの機能を拡張した小規模なアプリケーションです。 ビジュアライザーと表示できます (必要に応じて編集)、ビジュアライザーがデザインされている特定の種類のデータ オブジェクト。  
+ビジュアライザー API は Visual Studio デバッガーのビジュアライザーを記述する必要のあるユーザー向けに用意されています。 ビジュアライザーは、Visual Studio デバッガー ユーザー インターフェイスの機能を拡張した小規模なアプリケーションです。 ビジュアライザーには、デザイン時に指定された特定タイプのデータ オブジェクトを表示 (およびオプションで編集) できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -42,8 +40,8 @@ ms.locfileid: "39155062"
   
 - <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource?displayProperty=fullName>  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>「
 
- [チュートリアル: c# でビジュアライザーを記述します。](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)   
- [方法: ビジュアライザーを記述します。](../debugger/how-to-write-a-visualizer.md)   
+ [チュートリアル: C# でビジュアライザーを記述する](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)   
+ [方法: ビジュアライザーを記述する](/visualstudio/debugger/create-custom-visualizers-of-data)   
  [カスタム ビジュアライザーを作成する](../debugger/create-custom-visualizers-of-data.md)

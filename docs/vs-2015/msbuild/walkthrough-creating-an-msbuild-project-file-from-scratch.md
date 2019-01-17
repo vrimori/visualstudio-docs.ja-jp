@@ -17,10 +17,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: ad32edc94bea49010dfb7073cacbd84419513783
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
+ms.lasthandoff: 01/16/2019
 ms.locfileid: "49913892"
 ---
 # <a name="walkthrough-creating-an-msbuild-project-file-from-scratch"></a>チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成
@@ -51,7 +51,7 @@ ms.locfileid: "49913892"
   
 - インクリメンタル ビルドを実行します。  
   
-  このチュートリアルでは、コマンド プロンプトでプロジェクトをビルドして結果を確認する方法を説明します。 MSBuild の詳細および MSBuild をコマンド プロンプトで実行する方法の詳細については、「[チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)」をご覧ください。  
+  このチュートリアルでは、コマンド プロンプトでプロジェクトをビルドして結果を確認する方法を説明します。 MSBuild の詳細および MSBuild をコマンド プロンプトで実行する方法の詳細については、「[チュートリアル:MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)に関するページを参照してください。  
   
   このチュートリアルを実行するには、.NET Framework (Version 2.0、3.5、4.0、または 4.5) がインストールされている必要があります。これらには、このチュートリアルに必要な MSBuild と Visual C# コンパイラが含まれています。  
   
@@ -146,10 +146,10 @@ ms.locfileid: "49913892"
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   <ItemGroup>  
-    <Compile Include="helloworld.cs" />  
+    <Compile Include="helloworld.cs" />  
   </ItemGroup>  
   <Target Name="Build">  
-    <Csc Sources="@(Compile)"/>    
+    <Csc Sources="@(Compile)"/>    
   </Target>  
 </Project>  
 ```  
@@ -239,7 +239,7 @@ ms.locfileid: "49913892"
     <OutputPath>Bin\</OutputPath>  
   </PropertyGroup>  
   <ItemGroup>  
-    <Compile Include="helloworld.cs" />  
+    <Compile Include="helloworld.cs" />  
   </ItemGroup>  
   <Target Name="Build">  
     <MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />  
@@ -315,7 +315,7 @@ ms.locfileid: "49913892"
     <OutputPath>Bin\</OutputPath>  
   </PropertyGroup>  
   <ItemGroup>  
-    <Compile Include="helloworld.cs" />  
+    <Compile Include="helloworld.cs" />  
   </ItemGroup>  
   <Target Name="Build">  
     <MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />  
@@ -399,9 +399,9 @@ ms.locfileid: "49913892"
   
      **すべての出力ファイルが入力ファイルに対して最新なので、ターゲット "Build" を省略します。**  
   
-     **入力ファイル: HelloWorld.cs**  
+     **入力ファイル:HelloWorld.cs**  
   
-     **出力ファイル: BinMSBuildSample.exe**  
+     **出力ファイル:BinMSBuildSample.exe**  
   
      アプリケーションがビルドされてから変更されたソース ファイルがないため、Build ターゲットはスキップされます。  
   
@@ -484,9 +484,9 @@ ms.locfileid: "49913892"
 ```  
   
 ## <a name="whats-next"></a>次の内容  
- このチュートリアルで説明した作業の大半は、Visual Studio で自動的に実行できます。 Visual Studio を使用して MSBuild プロジェクト ファイルを作成、編集、ビルド、およびテストする方法については、「[チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)」をご覧ください。  
+ このチュートリアルで説明した作業の大半は、Visual Studio で自動的に実行できます。 Visual Studio を使用して MSBuild プロジェクト ファイルを作成、編集、ビルド、およびテストする方法については、「[チュートリアル:MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)に関するページを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
 [MSBuild の概要](msbuild.md)  
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)
 

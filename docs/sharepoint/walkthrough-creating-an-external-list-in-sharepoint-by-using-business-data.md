@@ -1,13 +1,8 @@
 ---
-title: 'チュートリアル: sharepoint ビジネス データを使用して外部リストを作成する |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: ビジネス データを使用して SharePoint に外部リストの作成 |Microsoft Docs'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -24,14 +19,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 18848f0ebd6ffa289ea09553de82f5b9eb893181
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 96c52d1d30444aa557465ce2022a3ef1db4c3de0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295840"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53918785"
 ---
-# <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>チュートリアル: sharepoint ビジネス データを使用して外部リストを作成します。
+# <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>チュートリアル: ビジネス データを使用して SharePoint に外部リストを作成します。
 
 バック エンド サーバー アプリケーション、Web サービス、およびデータベースからビジネス データを表示するビジネス データ接続 (BDC) サービスを有効にします。
 
@@ -125,7 +120,7 @@ ms.locfileid: "51295840"
 
 モデルにエンティティを追加します。 エンティティを追加するには、Visual Studio から**ツールボックス**BDC デザイナーにします。
 
-1. メニュー バーで、**ビュー** > **ツールボックス**します。
+1. メニュー バーで **[表示]**、**[ツールボックス]** の順にクリックします。
 
 2. **BusinessDataConnectivity**のタブ、**ツールボックス**、追加、**エンティティ**BDC デザイナーにします。
 

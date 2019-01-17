@@ -2,7 +2,6 @@
 title: '方法: クラス デザイナーを使用して型を作成する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - VS.Clr.ClrAttributesDialog
@@ -19,16 +18,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 769bcfa202961c5a492e4fcb5af8e522b9052059
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 131c09b170e86858d8a2855092404208fe06fa91
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49842262"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53916469"
 ---
 # <a name="how-to-create-types-by-using-class-designer"></a>方法: クラス デザイナーを使用して型を作成する
 
-C# および Visual Basic プロジェクトの新しい型を設計するには、これらをクラス ダイアグラム上で作成します。 既存の型を見る場合は、「[方法: 既存の型を表示する](how-to-view-existing-types.md)」をご覧ください。
+C# および Visual Basic プロジェクトの新しい型を設計するには、これらをクラス ダイアグラム上で作成します。 既存の型を表示する場合は、「[方法:既存の型を表示する](how-to-view-existing-types.md)」を参照してください。
 
 ##  <a name="CreateType"></a> 新しい型を作成する
 
@@ -94,5 +93,4 @@ C# および Visual Basic プロジェクトの新しい型を設計するには
 - [方法: 型の間の継承を作成する](how-to-create-inheritance-between-types.md)
 - [方法: 型の間の関連付けを作成する](how-to-create-associations-between-types.md)
 - [型のメンバーの作成と構成](creating-and-configuring-type-members.md)
-- [クラス ダイアグラムの使用](working-with-class-diagrams.md)
 - [クラスおよび型のデザイン](designing-and-viewing-classes-and-types.md)

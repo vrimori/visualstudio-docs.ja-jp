@@ -1,8 +1,6 @@
 ---
 title: CV_CFL_LANG |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 63426af550894df0e9796babaec91ff5758bbf1e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: f173192d350e79b9fd97340c8cecff1b597217bf
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49909917"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53838503"
 ---
 # <a name="cvcfllang"></a>CV_CFL_LANG
 アプリケーションまたはリンクされているモジュールのソース コードの言語を指定します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49909917"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-typedef enum CV_CFL_LANG {   
+typedef enum CV_CFL_LANG {   
    CV_CFL_C       = 0x00,  
    CV_CFL_CXX     = 0x01,  
    CV_CFL_FORTRAN = 0x02,  
@@ -100,12 +98,12 @@ typedef enum CV_CFL_LANG {
  CV_CFL_HLSL  
  アプリケーションの言語は、High Level Shader Language です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  この列挙体の値が呼び出しによって返される、 [idiasymbol::get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md)メソッド。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: cvconst.h  
   
-## <a name="see-also"></a>関連項目  
- [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+## <a name="see-also"></a>「  
+ [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaSymbol::get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md)

@@ -1,8 +1,6 @@
 ---
 title: MSBuild 応答ファイル | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ac02d01f5a57cf97afcb3729775d707bbacd04c0
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: 33156a0614ad47839187056e4e0a24b5ee2f7ae2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48879240"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989673"
 ---
 # <a name="msbuild-response-files"></a>MSBuild 応答ファイル
 応答 (*.rsp*) ファイルは、*MSBuild.exe* のコマンド ライン スイッチを含むテキスト ファイルです。 各スイッチを個別の行に記述することも、すべてのスイッチを 1 つの行に記述することもできます。 コメント行は **#** 記号で始まります。 **@** スイッチは、*MSBuild.exe* に別の応答ファイルを渡すために使用されます。  

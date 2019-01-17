@@ -1,8 +1,6 @@
 ---
-title: IDiaStackWalkFrame |Microsoft ドキュメント
-ms.custom: ''
+title: IDiaStackWalkFrame |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,20 +12,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f16d6f824b3b150406c23cce87e186fe9b120999
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: aa93204c7011fb13a079c22a0f18bede145631c5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31465630"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53927208"
 ---
 # <a name="idiastackwalkframe"></a>IDiaStackWalkFrame
-呼び出しの間でのスタック コンテキストを維持、 [idiaframedata::execute](../../debugger/debug-interface-access/idiaframedata-execute.md)メソッドです。  
+呼び出しの間のスタック コンテキストを維持、 [idiaframedata::execute](../../debugger/debug-interface-access/idiaframedata-execute.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-IDiaStackWalkFrame : IUnknown  
+IDiaStackWalkFrame : IUnknown  
 ```  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
@@ -37,23 +35,23 @@ IDiaStackWalkFrame : IUnknown
 |------------|-----------------|  
 |[IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)|レジスタの値を取得します。|  
 |[IDiaStackWalkFrame::put_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-put-registervalue.md)|レジスタの値を設定します。|  
-|[IDiaStackWalkFrame::readMemory](../../debugger/debug-interface-access/idiastackwalkframe-readmemory.md)|イメージからメモリを読み取ります。|  
+|[IDiaStackWalkFrame::readMemory](../../debugger/debug-interface-access/idiastackwalkframe-readmemory.md)|イメージからは、メモリを読み取ります。|  
 |[IDiaStackWalkFrame::searchForReturnAddress](../../debugger/debug-interface-access/idiastackwalkframe-searchforreturnaddress.md)|最も近い関数のリターン アドレスの指定したスタック フレームを検索します。|  
-|[IDiaStackWalkFrame::searchForReturnAddressStart](../../debugger/debug-interface-access/idiastackwalkframe-searchforreturnaddressstart.md)|指定されたアドレスに近いのリターン アドレスの指定したスタック フレームを検索します。|  
+|[IDiaStackWalkFrame::searchForReturnAddressStart](../../debugger/debug-interface-access/idiastackwalkframe-searchforreturnaddressstart.md)|指定したアドレスに近いのリターン アドレスの指定したスタック フレームを検索します。|  
   
 ## <a name="remarks"></a>コメント  
- このインターフェイスは、レジスタの書き込みだけでなくメモリへのアクセスおよび戻り値のアドレスの検索プログラムの実行中に使用されます。  
+ このインターフェイスに読み取りおよびレジスタの書き込みだけでなくメモリへのアクセス、および戻り値のアドレスの検索プログラムの実行中に使用されます。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- クライアント アプリケーションを選択し、このインターフェイスを実装するインターフェイスのインスタンスを渡す、 [idiaframedata::execute](../../debugger/debug-interface-access/idiaframedata-execute.md)メソッドです。 各呼び出し中に、レジスタの状態を維持するためにこのインターフェイスの同じインスタンスを繰り返し使用される、`execute`メソッドです。 `execute`メソッドが戻り値のアドレスを決定するもこのインターフェイスを使用します。  
+ クライアント アプリケーションを選択し、このインターフェイスを実装するインターフェイスのインスタンスを渡す、 [idiaframedata::execute](../../debugger/debug-interface-access/idiaframedata-execute.md)メソッド。 このインターフェイスの同じインスタンスが繰り返しの呼び出しごとに、レジスタの状態を維持するために使用される、`execute`メソッド。 `execute`メソッドは、戻り値のアドレスを決定するこのインターフェイスを使用することもできます。  
   
 ## <a name="requirements"></a>要件  
- ヘッダー: Dia2.h  
+ ヘッダー:dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaFrameData::execute](../../debugger/debug-interface-access/idiaframedata-execute.md)

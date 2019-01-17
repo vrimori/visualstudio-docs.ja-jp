@@ -2,7 +2,6 @@
 title: デバッガーのプロパティの設定をお勧めしますC#、VB |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -18,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 69b98fe00301ad9230cb4f560a0a1d9dc1d3922f
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 1acc20c8987b3a5fced5826c8a2bfc068ce18c01
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53064959"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53887040"
 ---
 # <a name="managed-debugging-recommended-property-settings"></a>マネージド デバッグ:プロパティの推奨設定
 一部のプロパティは、すべてのマネージド デバッグ シナリオで同じように設定する必要があります。  
@@ -51,6 +50,6 @@ ms.locfileid: "53064959"
 |**定数 DEBUG の定義**|このチェック ボックスをオンにすると、`DEBUG` 定数が定義され、アプリケーションで <xref:System.Diagnostics.Debug> クラスを使用できるようになります。|  
 |**定数 TRACE の定義**|このチェック ボックスをオンにすると、`TRACE` 定数が定義され、アプリケーションで <xref:System.Diagnostics.Trace> クラスを使用できるようになります。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
  [C#、F#、および Visual Basic のプロジェクト](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)

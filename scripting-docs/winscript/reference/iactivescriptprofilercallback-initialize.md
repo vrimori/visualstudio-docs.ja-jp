@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerCallback::Initialize |Microsoft ドキュメント
+title: IActiveScriptProfilerCallback::Initialize |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -16,26 +16,26 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 82e599ae94f422352706a0ec6cd9387bfa6799f2
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 240df77731b92ebb91cefc3f1a326e7dd77c847a
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724412"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54094524"
 ---
 # <a name="iactivescriptprofilercallbackinitialize"></a>IActiveScriptProfilerCallback::Initialize
-スクリプト エンジンでプロファイリングが開始されるたびに、プロファイラーのオブジェクトを初期化するために呼び出されます。  
+スクリプト エンジンでプロファイリングが開始されるたびに、プロファイラー オブジェクトを初期化するために呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT Initialize(  
     [in] DWORD dwContext);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
  `dwContext`  
- [in]渡される 4 バイト値[IActiveScriptProfilerControl::StartProfiling](../../winscript/reference/iactivescriptprofilercontrol-startprofiling.md)です。  
+ [in]渡される 4 バイト値[IActiveScriptProfilerControl::StartProfiling](../../winscript/reference/iactivescriptprofilercontrol-startprofiling.md)します。  
   
 ## <a name="return-value"></a>戻り値  
  HRESULT を返します。 次の値を指定できます。  
@@ -44,8 +44,8 @@ HRESULT Initialize(
 |------------------|-------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- メソッドは、プロファイラーのオブジェクトを初期化できない場合、は、スクリプト エンジンに通知するエラー HRESULT を返します。 この場合、スクリプト エンジンを呼び出す必要があります直接[IActiveScriptProfilerCallback::Shutdown](../../winscript/reference/iactivescriptprofilercallback-shutdown.md)HRESULT をパラメーターに渡して、プロファイラーのオブジェクトを解放します。  
+## <a name="remarks"></a>Remarks  
+ メソッドは、プロファイラー オブジェクトを初期化できない場合に、スクリプト エンジンに通知するエラー HRESULT を返します。 この場合、スクリプト エンジンを呼び出す必要があります直接[IActiveScriptProfilerCallback::Shutdown](../../winscript/reference/iactivescriptprofilercallback-shutdown.md)HRESULT をパラメーターに渡して、プロファイラー オブジェクトを離します。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptProfilerCallback インターフェイス](../../winscript/reference/iactivescriptprofilercallback-interface.md)

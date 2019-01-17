@@ -2,7 +2,6 @@
 title: -SafeMode (devenv.exe)
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - /SafeMode Devenv switch
@@ -14,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6df78ec4be1fc94951634b84a98e80dc1403a41b
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.openlocfilehash: ed14c3ec0da75df37c5a006f4e25240ac6630d20
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948739"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53949655"
 ---
 # <a name="safemode-devenvexe"></a>/SafeMode (devenv.exe)
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] をセーフ モードで起動し、既定の環境とサービスのみを読み込みます。
@@ -42,6 +41,6 @@ devenv /SafeMode
 Devenv.exe /SafeMode
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)

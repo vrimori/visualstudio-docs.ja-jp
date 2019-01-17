@@ -1,8 +1,6 @@
 ---
 title: ID 別のパフォーマンス規則 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 9a1c934c-4798-4df9-a8ef-eb17ef06b6a2
 author: mikejo5000
@@ -10,18 +8,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b997c92dbc5205ec0001ac6d89829646bb01922
-ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
+ms.openlocfilehash: f3f73285ab62f59b382d3571ad739a81360c2e42
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51221023"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53846809"
 ---
 # <a name="performance-rules-by-id"></a>ID 別のパフォーマンス規則
 
 | 警告 | 説明 |
 | - | - |
-| [DA0001: StringBuilder を使用して連結してください](../profiling/da0001-use-stringbuilder-for-concatenations.md) | System.String.Concat の呼び出しがプロファイル データの大きな割合を占めています。 <xref:System.Text.StringBuilder> クラスを使用して、複数のセグメントからの文字列を連結することを検討してください。 |
+| [DA0001: 連結には StringBuilder を使用してください](../profiling/da0001-use-stringbuilder-for-concatenations.md) | System.String.Concat の呼び出しがプロファイル データの大きな割合を占めています。 <xref:System.Text.StringBuilder> クラスを使用して、複数のセグメントからの文字列を連結することを検討してください。 |
 | [DA0002: VSPerfCorProf.dll がありません](../profiling/da0002-vsperfcorprof-dll-is-missing.md) | プロファイラーは、プロファイル実行中、VSPerfCorProf.dll を見つけることができませんでした。 プロファイラー データを集めるためのコマンドライン ツールが VSPerfCLREnv.cmd ツールで必要な環境変数を初期化することなく使用されたとき、この警告が発生します。 |
 | [DA0003: カーネル サンプルが多数存在します](../profiling/da0003-many-kernel-samples.md) | アプリケーションに対して集められた呼び出し履歴の大部分がカーネル モードで実行されています。 別のプロファイリング方法でアプリケーションをプロファイリングすることを検討してください。 |
 | [DA0004: プロセッサ使用率が高くなっています](../profiling/da0004-high-processor-usage.md) | インストルメンテーション メソッドを使用して収集されたデータをプロファイリングしていたとき、プロセッサ (CPU) 使用率が非常に高くなりました。 CPU 主体のアプリケーションをプロファイリングするときは、サンプリング プロファイリング方式の使用を検討してください。 |

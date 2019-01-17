@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::AddTypeLib |Microsoft ドキュメント
+title: IActiveScript::AddTypeLib |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a2be7cf033b4b5dd4d99b19a3b71ed53e32af855
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 695edbd6f5356959785e54dc38f28b68c8c0400e
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24640872"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54092548"
 ---
 # <a name="iactivescriptaddtypelib"></a>IActiveScript::AddTypeLib
-スクリプトの名前空間をタイプ ライブラリを追加します。 これがに似ていますが、 `#include` C/C++ のディレクティブ。 これにより、一連のクラス定義などの定義済みの項目`typedefs`、名前付き定数をスクリプトに使用可能なランタイム環境に追加するとします。  
+スクリプトの名前空間には、タイプ ライブラリを追加します。 これに似ています、 `#include` C と C++ のディレクティブ。 これにより、クラスの定義などの定義済みの項目のセットを`typedefs`、名前付き定数、スクリプトで使用できるランタイム環境に追加するとします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT AddTypeLib(  
     REFGUID guidTypeLib,  // CLSID of type library  
     DWORD dwMaj,          // major version number  
@@ -50,11 +50,11 @@ HRESULT AddTypeLib(
  [in]マイナー バージョン番号。  
   
  `dwFlags`  
- [in]オプションのフラグです。 以下を指定できます。  
+ [in]オプションのフラグ。 次を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-------------|  
-|SCRIPTTYPELIB_ISCONTROL|タイプ ライブラリでは、ホストによって使用される ActiveX コントロールについて説明します。|  
+|SCRIPTTYPELIB_ISCONTROL|タイプ ライブラリには、ホストによって使用される ActiveX コントロールについて説明します。|  
   
 ## <a name="return-value"></a>戻り値  
  次のいずれかの値を返します。  
@@ -63,7 +63,7 @@ HRESULT AddTypeLib(
 |------------------|-------------|  
 |`S_OK`|成功。|  
 |`E_INVALIDARG`|引数が無効です。|  
-|`E_UNEXPECTED`|呼び出しが予期されていませんでした (たとえば、スクリプト エンジンがされていないされて読み込まれたまたは初期化) します。|  
+|`E_UNEXPECTED`|呼び出しが予期されていませんでした (たとえば、スクリプト エンジンがされていないされて読み込まれるまたは初期化) します。|  
 |`TYPE_E_CANTLOADLIBRARY`|指定したタイプ ライブラリを読み込むことができませんでした。|  
   
 ## <a name="see-also"></a>関連項目  

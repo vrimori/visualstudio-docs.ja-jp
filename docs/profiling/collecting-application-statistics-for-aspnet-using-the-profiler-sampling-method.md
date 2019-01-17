@@ -1,8 +1,6 @@
 ---
 title: ASP.NET Web アプリの統計情報を収集する | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - profiling tools, sampling method
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 9350d96911e818402f7e32ebcd83fe832f31f9d9
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 95991806f10a6b4821c232afcf09c83493fabe60
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34263030"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53930675"
 ---
 # <a name="collect-statistics-for-aspnet-web-apps"></a>ASP.NET Web アプリの統計情報を収集する
 
@@ -44,7 +42,7 @@ ms.locfileid: "34263030"
 |----------|---------------------|  
 |**インストルメンテーション方式を使用したプロファイリング**|-   [インストルメンテーションを使用した詳細なタイミング データの収集](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md)|  
 |**メモリ割り当てとガベージ コレクションのプロファイリング**|-   [メモリ データの収集](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|  
-|**リソースの競合とスレッド アクティビティのプロファイリング**|-   [同時実行データの収集](../profiling/collecting-concurrency-data-for-an-aspnet-web-application.md)|  
+|**リソースの競合とスレッド アクティビティのプロファイリング**|-   [コンカレンシー データの収集](../profiling/collecting-concurrency-data-for-an-aspnet-web-application.md)|  
   
 ### <a name="sample-method"></a>サンプル メソッド  
   

@@ -1,8 +1,6 @@
 ---
 title: 高性能コンピューティング (HPC) クラスターでのプロファイリング | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.performance.hpc.wizard.exeoptions
@@ -21,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aefdd145abce513e5311d4572a9da64105226b3b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ff46104493cfe0c690594d8b67bb64c401104f5f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49842379"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53856658"
 ---
 # <a name="profile-on-hpc-high-performance-computing-clusters"></a>高性能コンピューティング (HPC) クラスターでのプロファイリング
 
@@ -56,7 +54,7 @@ HPC 計算ノード上でプロファイリングを実行する前に、次の�
 |------------------| - |
 | *%HeadNode%* | クラスターのヘッド ノードの名前。 |
 | *%FxPath%* | [!INCLUDE[net_v40_long](../code-quality/includes/net_v40_long_md.md)] インストーラーへのパス。 Visual Studio のインストール メディア上のパスは、WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe です。 |
-| *%ProfilerPath%* | スタンドアロン バージョンのプロファイリング ツール インストーラーへのパス。 Visual Studio のメディア上のパスは、Standalone Profiler\x64\vs_profiler.exe です。 |
+| *%ProfilerPath%* | スタンドアロン バージョンのプロファイリング ツール インストーラーへのパス。 Visual Studio のインストール メディア上のパスは、Standalone Profiler\x64\vs_profiler.exe です。 |
 
 ## <a name="profile-on-an-hpc-compute-node"></a>HPC 計算ノード上でプロファイリングを実行する
 
@@ -150,4 +148,3 @@ HPC プロファイル ウィザードで設定されたパフォーマンス �
 | **プロファイル前スクリプトの引数** | プロファイル前スクリプトに渡す引数を指定します。 |
 | **プロファイル後スクリプト** | プロファイリング セッションの終了後に、ローカルの開発用コンピューター上で実行するスクリプトのパスとファイル名を指定します。 |
 | **プロファイル後スクリプトの引数** | プロファイル後スクリプトに渡す引数を指定します。 |
-

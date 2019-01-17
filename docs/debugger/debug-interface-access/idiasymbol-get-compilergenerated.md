@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_compilergenerated |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 207a92e8e510b01b817e6633830b0478b325254b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: fce5344d4997a50443bb1c0ec7a3b6166c9de8a5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49918780"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53919759"
 ---
 # <a name="idiasymbolgetcompilergenerated"></a>IDiaSymbol::get_compilerGenerated
 シンボルが、コンパイラによって生成されたかどうかを示すフラグを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49918780"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_compilerGenerated (   
+HRESULT get_compilerGenerated (   
    BOOL* pRetVal  
 );  
 ```  
@@ -42,12 +40,12 @@ HRESULT get_compilerGenerated (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|Dia2.h|  
+|ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK v7.0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

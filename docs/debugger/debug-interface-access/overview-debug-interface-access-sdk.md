@@ -1,8 +1,6 @@
 ---
-title: 概要 (Debug Interface Access SDK) |Microsoft ドキュメント
-ms.custom: ''
+title: 概要 (Debug Interface Access SDK) |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -23,18 +21,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 807690edaf5626e3ec007a005717622592c14ce9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: b747d888ecea4235e34acd169b9230884c7454ef
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31471441"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53843964"
 ---
 # <a name="overview-debug-interface-access-sdk"></a>概要 (Debug Interface Access SDK)
-DIA SDK を使用して、デバッグ情報を Microsoft にアクセスします。 DIA SDK は、COM ベースの Microsoft デバッグ情報の形式が変更されるたびにコードを再記述する必要がある API セットを提供します。 DIA SDK することもできますを以前のバージョンによって生成される .pdb ファイルと .dbg ファイルで設定されているデバッグ情報の選択のセットから読み取ります[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]5.0 およびそれ以降のバージョン。  
+DIA SDK を使用して、Microsoft のデバッグ情報にアクセスします。 DIA SDK では、COM ベースの Microsoft デバッグ情報の形式が変更されるたびにコードを書き直す必要がなくなります API セットを提供します。 DIA SDK では以前のバージョンによって生成される .pdb ファイルと .dbg ファイルで設定されているデバッグ情報の一部から読み取ることもできます[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]5.0 以降のバージョン。  
   
- DIA SDK 内の各インターフェイスは、特に記載場所を除く別の COM オブジェクトを表します。 追加のインターフェイスとそのため、追加のオブジェクトが作成、明示的なクエリを使用してなど[idiadatasource::opensession](../../debugger/debug-interface-access/idiadatasource-opensession.md)または[idiasession::findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md)の呼び出しではなく、`QueryInterface`で既存のインターフェイス ポインター。  
+ DIA SDK 内の各インターフェイスは、それ以外の場合に記載されている場合を除く別の COM オブジェクトを表します。 追加のインターフェイス、およびその他のオブジェクトが作成、明示的なクエリを使用してなど[idiadatasource::opensession](../../debugger/debug-interface-access/idiadatasource-opensession.md)または[idiasession::findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md)を呼び出すことではなく、`QueryInterface`で既存のインターフェイス ポインター。  
   
-## <a name="see-also"></a>関連項目  
- [Idiadatasource::opensession](../../debugger/debug-interface-access/idiadatasource-opensession.md)   
+## <a name="see-also"></a>「  
+ [IDiaDataSource::openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md)   
  [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)

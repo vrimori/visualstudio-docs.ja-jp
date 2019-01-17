@@ -1,8 +1,6 @@
 ---
-title: '方法: COM サーバーをデバッグ |Microsoft ドキュメント'
-ms.custom: ''
+title: '方法: COM サーバーをデバッグ |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.com
@@ -24,14 +22,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 87d5bedd98aed5ab7bddc7027eaac9e7678d533c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: cc8cbf7e087e2198071aef9f77c109f3a7c71640
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31481685"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54268574"
 ---
-# <a name="how-to-debug-com-servers"></a>方法 : COM サーバーをデバッグする
+# <a name="how-to-debug-com-servers"></a>方法: COM サーバーをデバッグする
 COM サーバー アプリケーションのデバッグには固有の問題があります。これらの問題は、常に簡単に解決できるとは限りません。  
   
  コンテナー アプリケーションのデバッグ情報が不要な場合、サーバー アプリケーションは次の 3 つの手順でデバッグします。  
@@ -44,9 +42,9 @@ COM サーバー アプリケーションのデバッグには固有の問題が
   
 3.  コンテナー アプリケーションを起動します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [COM および ActiveX のデバッグ](../debugger/com-and-activex-debugging.md)   
- [方法: COM クライアントおよび RPC デバッグを使用してサーバーのデバッグ](../debugger/how-to-debug-com-clients-and-servers-using-rpc-debugging.md)   
- [COM サーバーおよび com コンテナーのデバッグ](../debugger/com-server-and-container-debugging.md)   
+ [方法: RPC デバッグを使用して COM クライアントおよびサーバーをデバッグする](../debugger/how-to-debug-com-clients-and-servers-using-rpc-debugging.md)   
+ [COM サーバーおよび COM コンテナーのデバッグ](../debugger/com-server-and-container-debugging.md)   
  [Visual Studio でのデバッグ](../debugger/index.md)  
- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
+ [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)

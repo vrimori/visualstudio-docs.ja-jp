@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextExternalAuthor::NotifyChanged |Microsoft ドキュメント
+title: IDebugDocumentTextExternalAuthor::NotifyChanged |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 016eda303f5a5a74a20e42112890698a1ca28798
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 6338a4f88435f47ef33abe593c0bb4e000ae6ee2
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727022"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54094108"
 ---
 # <a name="idebugdocumenttextexternalauthornotifychanged"></a>IDebugDocumentTextExternalAuthor::NotifyChanged
 ドキュメントのソースが変更されたことをホストに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT NotifyChanged();  
 ```  
   
@@ -40,12 +40,12 @@ HRESULT NotifyChanged();
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは外部エディターでファイル ベースのデバッガーのドキュメントが変更され、ドキュメント ソースが変更されたことをホストに通知を保存します。 ホストは、ソース ファイルからのドキュメントを更新します。  
+## <a name="remarks"></a>Remarks  
+ ファイル ベースのデバッガーのドキュメントを変更し、ホスト ドキュメントのソースが変更されたことを通知に保存した後、外部のエディターでこのメソッドが呼び出されます。 ホストは、ソース ファイルからドキュメントを更新します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugDocumentTextExternalAuthor インターフェイス](../../winscript/reference/idebugdocumenttextexternalauthor-interface.md)

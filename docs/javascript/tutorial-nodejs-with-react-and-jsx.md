@@ -3,7 +3,6 @@ title: Node.js と React のアプリを作成する
 description: このチュートリアルでは、Node.js Tools for Visual Studio を使用してアプリを作成します。
 ms.custom: mvc
 ms.date: 11/01/2018
-ms.technology: vs-nodejs
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -13,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 9203b07767d38443dbad8cc619a40971ca09f2c6
-ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
+ms.openlocfilehash: a89a54999e6db5139178b20a0794d4dc594e0e45
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750787"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53874178"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>チュートリアル: Visual Studio で Node.js と React のアプリを作成する
 
@@ -258,7 +257,7 @@ webpack は、ブラウザーで実行できるように JavaScript ファイル
     }
     ```
 
-    webpack 構成コードは、TypeScript ローダーを使って JSX をトランスパイルするよう Webpack に指示します。
+    webpack 構成コードでは、TypeScript ローダーを使って JSX をトランスパイルするよう webpack に指示されます。
 
 1. *tsconfig.json* を開き、TypeScript コンパイラ オプションを指定する次のコードで既定のコードを置換します。
 

@@ -1,8 +1,6 @@
 ---
 title: Dia2dump サンプル |Microsoft Docs
-ms.custom: ''
 ms.date: 07/24/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e2e44abdce737df335133d5e54b6b022c97f639a
-ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
-ms.translationtype: MT
+ms.openlocfilehash: 93c103387ff2acd7b041fc103bc519e9ac166593
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39252282"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53859647"
 ---
 # <a name="dia2dump-sample"></a>Dia2dump サンプル
 
@@ -34,7 +32,7 @@ Dia2dump サンプルでは、Visual Studio と共にインストールされ、
 
 インストールすると、サンプルは、\DIA SDK\Samples\DIA2Dump という名前のサブディレクトリに、Visual Studio インストール ディレクトリです。
 
-## <a name="build-the-sample"></a>サンプルをビルドします
+## <a name="build-the-sample"></a>このサンプルをビルドする
 
 既定では、インストール ディレクトリは、保護されたディレクトリは。 つまり、ビルドし、この場所で、サンプル ソリューションを編集して、管理者特権での開発者コマンド プロンプトまたは Visual Studio のインスタンスを使用する必要があります。 ビルドを簡素化するには、最初のサンプル ディレクトリから、ドキュメント フォルダー内のフォルダーなどの別のディレクトリにファイルをコピーし、サンプルをビルドし、お勧めします。
 
@@ -50,7 +48,7 @@ Dia2dump サンプルでは、Visual Studio と共にインストールされ、
 
 1. **追加のインクルード ディレクトリ**プロパティは、ドロップダウン コントロールを選択しを選択**編集**します。
 
-1. **追加のインクルード ディレクトリ** ダイアログ ボックスで、編集 フィールドを入力、`$(VSInstallDir)DIA SDK\include`ディレクトリ。 コンパイラが dia2.h ファイルを見つけることを保証するには、このディレクトリを追加します。 **OK** を選択して変更を保存してください。
+1. **追加のインクルード ディレクトリ** ダイアログ ボックスで、編集 フィールドを入力、`$(VSInstallDir)DIA SDK\include`ディレクトリ。 コンパイラが dia2.h ファイルを見つけることを保証するには、このディレクトリを追加します。 **[OK]** を選択して変更を保存します。
 
 1. 選択**OK**プロジェクト プロパティに変更を保存します。
 

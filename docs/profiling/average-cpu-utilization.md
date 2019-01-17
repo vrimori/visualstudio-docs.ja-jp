@@ -1,8 +1,6 @@
 ---
 title: 平均 CPU 使用状況 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.cv.cpu.percentage
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fee580cdd708c555682f0309759678dee38ad2b1
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 8c4c9eeffe2ac0a3b08d8379a50bb88e3c52cbfe
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34262318"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53988911"
 ---
 # <a name="average-cpu-utilization"></a>平均 CPU 使用状況
 プロセスの期間におけるシステムの論理コアのプロファイリングされたプロセスの平均使用状況を示します。 任意の時点にどのコアがアクティブかは表示されません。 たとえば、特定の期間、2 つのコアがそれぞれキャパシティの 50% で動作している場合、このビューには 1 つの論理コアが使用されているものとして表示されます。  

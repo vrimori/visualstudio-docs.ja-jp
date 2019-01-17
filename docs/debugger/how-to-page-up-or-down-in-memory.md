@@ -1,8 +1,6 @@
 ---
 title: '方法: ページまたはメモリ内で下 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -21,16 +19,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f981dafc6c014080960f2a0652420a00ea6ac6f
-ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
-ms.translationtype: MT
+ms.openlocfilehash: ab81dcdda3f7e3a5818d0351c26c0002ea75eb3d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52257126"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53902228"
 ---
-# <a name="how-to-page-up-or-down-in-memory"></a>方法 : [メモリ] ウィンドウの上下スクロール
+# <a name="how-to-page-up-or-down-in-memory"></a>方法: メモリ内で 1 ページずつ上下に移動する
 
-メモリの内容を表示すると、**メモリ**ウィンドウまたは**逆アセンブル**ウィンドウで、メモリ領域内を上下に移動する、垂直スクロール バーを使用することができます。  
+**[メモリ]** ウィンドウまたは **[逆アセンブル]** ウィンドウでメモリの内容を表示するときに垂直スクロール バーを使用すると、メモリ空間内を上下に移動できます。  
   
 ### <a name="to-page-up-or-down-in-memory"></a>メモリ内で 1 ページずつ上下に移動するには  
   
@@ -48,7 +46,7 @@ ms.locfileid: "52257126"
   
 -   垂直スクロール バーの上端または下端にある矢印をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [Windows のメモリ](../debugger/memory-windows.md)   
- [方法: [逆アセンブル] ウィンドウの使用](../debugger/how-to-use-the-disassembly-window.md)   
+## <a name="see-also"></a>「  
+ [[メモリ] ウィンドウ](../debugger/memory-windows.md)   
+ [方法: [逆アセンブル] ウィンドウを使用する](../debugger/how-to-use-the-disassembly-window.md)   
  [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)

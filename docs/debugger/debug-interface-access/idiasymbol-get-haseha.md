@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_haseha |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 936393d3edc9273c2240787d0d1fa42ec3691748
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 42a075b4447259bfacaf9e31c97f9e51b0b0a730
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813467"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53847335"
 ---
 # <a name="idiasymbolgethaseha"></a>IDiaSymbol::get_hasEHa
 関数が非同期 (構造化) 例外処理を含むかどうかを指定するフラグを取得します。  
@@ -42,15 +40,15 @@ HRESULT get_hasEHa(
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティがシンボルを使用できないことを意味します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  非同期または構造化例外が C++ スタイルの例外処理、処理を混在させることは、特定のコンパイラ スイッチを/EHa、有効にする必要しますが、あります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|Dia2.h|  
+|ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK バージョン 8.0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -3,7 +3,6 @@ title: ASP.NET をデバッグする
 description: Visual Studio デバッガーを使用して ASP.NET をデバッグする
 ms.custom: mvc
 ms.date: 08/06/2018
-ms.technology: vs-ide-debug
 ms.topic: quickstart
 helpviewer_keywords:
 - debugger
@@ -13,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 74671401b3e3eaeae5840110dfc37c926266f98a
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 6ac201b124f460a3918034095cd3f86e49141a7b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39636988"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53900601"
 ---
 # <a name="quickstart-debug-aspnet-with-the-visual-studio-debugger"></a>クイック スタート: Visual Studio デバッガーを使用して ASP.NET をデバッグする
 
@@ -49,7 +48,7 @@ Visual Studio デバッガーでは、アプリのデバッグに役立つ多く
     }
     ```
 
-    を以下のコードで置き換えます。
+    を、次のコードで置換します。
 
     ```csharp
     public void OnGet()
@@ -103,7 +102,7 @@ Visual Studio デバッガーでは、アプリのデバッグに役立つ多く
 
 アプリは引き続き実行され、ボタンをクリックしたコード行で一時停止します。
 
-コードのステップ実行に使用される一般的なキーボード コマンドには、**F10** と **F11** が含まれます。 さらに詳しい手順については、[ビギナーズ ガイド](../debugger/getting-started-with-the-debugger.md)を参照してください。
+コードのステップ実行に使用される一般的なキーボード コマンドには、**F10** と **F11** が含まれます。 詳しい手順については、「[デバッガーでのはじめに](../debugger/debugger-feature-tour.md)」をご覧ください。
 
 ## <a name="inspect-variables-in-a-datatip"></a>データヒントの変数を検査する
 

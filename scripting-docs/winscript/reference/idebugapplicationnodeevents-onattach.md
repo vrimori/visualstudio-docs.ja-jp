@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationNodeEvents::onAttach |Microsoft ドキュメント
+title: IDebugApplicationNodeEvents::onAttach |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a45fff15ce4f7faf6cf8714cbf01289e69f67691
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 85147e667f4e83698e23792a43020641974482a6
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725962"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54091261"
 ---
 # <a name="idebugapplicationnodeeventsonattach"></a>IDebugApplicationNodeEvents::onAttach
-デバッグ アプリケーション ノード オブジェクトが親ノードに接続されていることを示すイベントを処理します。  
+アプリケーションのデバッグ ノード オブジェクトが親ノードに接続されていることを示すイベントを処理します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT onAttach(  
    IDebugApplicationNode*  prddpParent  
 );  
@@ -43,14 +43,14 @@ HRESULT onAttach(
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、デバッグ アプリケーション ノード オブジェクトが親ノードに接続されていることを示すイベントを処理します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、デバッグ アプリケーション ノードのオブジェクトが親ノードに接続されていることを示すイベントを処理します。  
   
- 実装、`IDebugApplicationNode`インターフェイスは、このイベントを発生させます。  
+ 実装、`IDebugApplicationNode`インターフェイスは、このイベントを発生します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugApplicationNodeEvents インターフェイス](../../winscript/reference/idebugapplicationnodeevents-interface.md)   

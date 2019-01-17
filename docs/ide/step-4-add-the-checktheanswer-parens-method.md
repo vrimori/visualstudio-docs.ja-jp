@@ -1,9 +1,7 @@
 ---
 title: '手順 4: CheckTheAnswer() メソッドの追加'
-ms.custom: ''
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: c66f3831-b4a0-40bc-a109-8f46f4db35ed
 author: TerryGLee
@@ -11,15 +9,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ff11913b854ede1c20c0670b89c4ea2f50fd326e
-ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
+ms.openlocfilehash: 694336b0012a8f67e732744cfd34cebf9c6f411a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32064520"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53892561"
 ---
 # <a name="step-4-add-the-checktheanswer-method"></a>手順 4: CheckTheAnswer() メソッドの追加
-このチュートリアルの第 4 部では、計算問題に対する解答が正しいかどうかを判断するメソッド、`CheckTheAnswer()` を記述します。 このトピックは、コーディングの基本概念に関するチュートリアル シリーズの一部です。 チュートリアルの概要については、「[チュートリアル 2: 制限時間ありの計算クイズの作成](../ide/tutorial-2-create-a-timed-math-quiz.md)」を参照してください。  
+このチュートリアルの第 4 部では、計算問題に対する解答が正しいかどうかを判断するメソッド、`CheckTheAnswer()` を記述します。 このトピックは、コーディングの基本概念に関するチュートリアル シリーズの一部です。 チュートリアルの概要については、「[チュートリアル 2:制限時間ありの計算クイズの作成](../ide/tutorial-2-create-a-timed-math-quiz.md)」を参照してください。  
   
 > [!NOTE]
 >  Visual Basic を使用している場合、このメソッドは値を返すため、通常の `Function` キーワードではなく、`Sub` キーワードを使用することに注意してください。 これは単に、Sub は値を返さないため、値を返す Function を使用しているだけです。  
@@ -51,6 +49,6 @@ ms.locfileid: "32064520"
 
 ## <a name="to-continue-or-review"></a>続行または確認するには  
   
--   チュートリアルの次の手順に進むには、「[手順 5: NumericUpDown コントロールの Enter イベント ハンドラーの追加](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)」を参照してください。  
+-   チュートリアルの次の手順に進むには、「[手順 5:NumericUpDown コントロールの Enter イベント ハンドラーの追加](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)」をご覧ください。  
   
--   チュートリアルの前の手順に戻るには、「[手順 3: カウントダウン タイマーの追加](../ide/step-3-add-a-countdown-timer.md)」を参照してください。
+-   チュートリアルの前の手順に戻るには、「[手順 3:カウントダウン タイマーの追加](../ide/step-3-add-a-countdown-timer.md)」をご覧ください。

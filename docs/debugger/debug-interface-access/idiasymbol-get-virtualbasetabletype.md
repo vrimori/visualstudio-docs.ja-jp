@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_virtualbasetabletype |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 864748c478b03a26affaa622e3b25cb8c7dfd78e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 25e7361fd3a4b74aa04806de7001db3b4293a541
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49895077"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53949668"
 ---
 # <a name="idiasymbolgetvirtualbasetabletype"></a>IDiaSymbol::get_virtualBaseTableType
 仮想ベース テーブルのポインターの型を取得します。  
@@ -44,17 +42,17 @@ HRESULT get_virtualBaseTableType(
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  仮想ベース テーブルのポインター (`vbtptr`) 非表示を指すポインター、 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] vtable 仮想基底クラスからの継承を処理します。 A`vbtptr`継承されたクラスによって異なるサイズであることができます。  
   
  このメソッドが戻る、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) vbtptr のサイズを決定するために使用できるオブジェクト。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|Dia2.h|  
+|ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK バージョン 8.0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

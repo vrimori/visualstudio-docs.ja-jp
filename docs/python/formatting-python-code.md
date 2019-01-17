@@ -3,7 +3,6 @@ title: Python コードの書式を設定する
 description: Visual Studio では、間隔、ステートメント、折り返し、コメントなど、Python コードの書式を自動的に再設定できます。
 ms.date: 10/28/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
@@ -12,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 452dc1104147e5b29dd38790cbfa726ad0de7b1f
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: b830640284fe5b44a76b5f7d2424e2c1ccd24ea0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052194"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53850217"
 ---
 # <a name="format-python-code"></a>Python コードの書式を設定する
 
@@ -113,7 +112,7 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 
 **[編集]** > **[詳細設定]** > **[コメントを段落幅に合わせる]** (**Ctrl** + **E** > **P**) を使用すると、コメント テキストがリフローおよび書式設定され、複数の短い行を 1 行にまとめたり、長い行を複数の行に分けたりできます。
 
-例:
+次に例を示します。
 
 ```python
 # foo

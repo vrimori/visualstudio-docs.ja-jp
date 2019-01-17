@@ -3,7 +3,6 @@ title: Python コードの編集
 description: Python の場合、Visual Studio では、高性能 IntelliSense、コード スニペット、ナビゲーション機能、書式設定、lint、リファクタリングの機能が提供されます。
 ms.date: 11/19/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
@@ -12,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 15020111702d68c8c35fb09655018215e3a11d3b
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 62d22b286b6f0e58f6b833ba1975a07a6ab0500b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53062817"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53964365"
 ---
 # <a name="edit-python-code"></a>Python コードの編集
 
@@ -196,7 +195,7 @@ Visual Studio の Python のサポートとして、ソース コードが提供
 
 ナビゲーション バーは各エディター ウィンドウの上部に表示され、2 つのレベルの定義リストを含みます。 左側のドロップダウン リストには、現在のファイル内の最上位のクラスと関数の定義が表示されます。右側のドロップダウン リストには、左側に表示されているスコープ内の定義のリストが表示されます。 エディター内を移動すると、リストが現在のコンテキストを示すように更新され、これらのリストからエントリを選択してそのエントリに直接ジャンプすることもできます。
 
-!Visual Studio エディターの [ナビゲーション バー] (media/code-editing-navigation-bar.png)
+![Visual Studio エディターのナビゲーション バー](media/code-editing-navigation-bar.png)
 
 > [!Tip]
 > ナビゲーション バーを非表示にするには、**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[Python]** > **[全般]** に移動し、**[設定]** > **[ナビゲーション バー]** をオフにします。

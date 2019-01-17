@@ -2,7 +2,6 @@
 title: C++ のアクセス違反をデバッグ |Microsoft Docs
 ms.custom: seodec18
 ms.date: 05/23/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.access
@@ -20,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f463f4e14e5be90422f73b299cb927a54fcfcef
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: fe15813489fbdc0f3a9506468f56773fb3f35deb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53067263"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53850376"
 ---
 # <a name="how-can-i-debug-a-c-access-violation"></a>C++ へのアクセス違反をデバッグする方法は?
 ## <a name="problem-description"></a>問題の説明  
@@ -71,5 +70,5 @@ int main() {
   
  ポインターがアクセス違反を引き起こした理由を特定できない場合、コードをトレースして、問題の原因となったポインターが正しく割り当てられているかどうかを確認します。  パラメーターとして渡される場合は、正常に渡され、誤って[簡易コピー](http://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy)を作成していないことを確認します。 次に、問題のポインターに対してデータ ブレークポイントを作成し、プログラム内の別の場所で変更されていないことを確認することにより、値がプログラム内のどこかで意図せずに変更されていないことを検証します。 データ ブレークポイントの詳細については、 [Using Breakpoints](../debugger/using-breakpoints.md)のデータ ブレークポイントのセクションを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)

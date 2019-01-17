@@ -1,8 +1,6 @@
 ---
 title: 'チュートリアル: サンプリングを使ったコマンドライン プロファイリング | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - profiling tools, walkthroughs
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: db4b47582d03a7f040850dd69e61d5fee2b80020
-ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
+ms.openlocfilehash: 10fe1aaaa9301429d3ef80fa12713b5cc4fbcc68
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34815257"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53886810"
 ---
 # <a name="walkthrough-command-line-profiling-using-sampling"></a>チュートリアル: サンプリングを使ったコマンド ライン プロファイリング
 
@@ -35,7 +33,7 @@ ms.locfileid: "34815257"
 
 - [!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)] についての中級レベルの知識
 - コマンド ライン ツールの操作についての中級レベルの知識
-- [PeopleTrax サンプル](../profiling/peopletrax-sample-profiling-tools.md)のコピー
+- [PeopleTrax サンプル](/visualstudio/profiling/performance-explorer)のコピー
 - プロファイリングによって得られた情報を操作するには、デバッグ シンボル情報を使用できるようにしておくことをお勧めします。
 
 ## <a name="command-line-profiling-using-the-sampling-method"></a>サンプリング メソッドを使用したコマンド ライン プロファイリング
@@ -43,7 +41,7 @@ ms.locfileid: "34815257"
 サンプリングとは 1 つのプロファイリング方式で、対象のプロセスを定期的にポーリングしてアクティブな関数を識別します。 結果のデータからは、プロセスがサンプリングされたときに対象の関数が呼び出し履歴の一番上に配置されていた回数がわかります。
 
 > [!NOTE]
-> プロファイリング ツールのコマンド ライン ツールは、Visual Studio インストール ディレクトリの *\Team Tools\Performance Tools* サブディレクトリにあります。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にそのパスを追加するか、コマンド自体にこのパスを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。 PeopleTrax は 32 ビット アプリケーションです。
+>  プロファイル ツールへのパスを取得するには、[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)に関する記事をご覧ください。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。  
 
 ### <a name="to-profile-the-peopletrax-application-by-using-the-sampling-method"></a>サンプリング メソッドを使用して PeopleTrax アプリケーションのプロファイリングを行うには
 

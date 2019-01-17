@@ -1,8 +1,6 @@
 ---
 title: UWP アプリでのエネルギー使用の分析 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -15,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 08723f30957ece57af0f666a5464907a686ad604
-ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
+ms.openlocfilehash: 345d2c744aeffe84517377ed99f486ab02d5e00c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51220737"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53860865"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>UWP アプリでのエネルギー使用の分析
 Visual Studio の **エネルギー消費** プロファイラーは、常時または一時的に内蔵バッテリで動作する低電力のタブレット デバイス上で、UWP アプリによる電力とエネルギーの消費量を分析するのに役立ちます。 バッテリ電源デバイスでは、エネルギー消費量が多すぎるアプリはユーザーに嫌われ、最終的にアンインストールされる場合もあります。 エネルギー使用を最適化することで、ユーザーがそのアプリを選択する可能性が高まり、使用頻度も向上します。  
@@ -29,9 +27,9 @@ Visual Studio の **エネルギー消費** プロファイラーは、常時ま
  エネルギー消費プロファイラーは、プロファイル セッション中のデバイスのディスプレイ、CPU、およびネットワーク接続のアクティビティをキャプチャします。 次に、そのアクティビティに使用される電力と、プロファイル セッションのエネルギーの総量の見積もりを生成します。  
   
 > [!NOTE]
->  エネルギー消費プロファイラーでの電力とエネルギーの使用量の見積もりには、アプリケーションが実行される低電力のタブレット デバイスを表す、標準参照デバイス ハードウェアのソフトウェア モデルが使用されます。 最適な見積もりを提供するために、低電力のタブレット デバイスでプロファイル データを収集することをお勧めします。  
+> エネルギー消費プロファイラーでの電力とエネルギーの使用量の見積もりには、アプリケーションが実行される低電力のタブレット デバイスを表す、標準参照デバイス ハードウェアのソフトウェア モデルが使用されます。 最適な見積もりを提供するために、低電力のタブレット デバイスでプロファイル データを収集することをお勧めします。  
 >   
->  このモデルを使用すると、さまざまな低電力デバイスにおける適切な見積もりを生成できますが、プロファイルの対象となるデバイスの実際の値とはほとんどの場合、異なります。 見積もりの値は、使用される他のリソースと比べて比較的負荷の大きい、ディスプレイ、CPU、およびネットワーク接続のアクティビティを見つけて、最適化の候補にするために使用します。  
+> このモデルを使用すると、さまざまな低電力デバイスにおける適切な見積もりを生成できますが、プロファイルの対象となるデバイスの実際の値とはほとんどの場合、異なります。 見積もりの値は、使用される他のリソースと比べて比較的負荷の大きい、ディスプレイ、CPU、およびネットワーク接続のアクティビティを見つけて、最適化の候補にするために使用します。  
   
  エネルギー消費量プロファイラーでは、 *電力* と *エネルギー*を次のように定義しています。  
   
@@ -54,13 +52,13 @@ Visual Studio の **エネルギー消費** プロファイラーは、常時ま
   
  **C#、Visual Basic、C++ コードに対するマークの追加**  
   
- C#、Visual Basic、C++ コードにユーザー マークを追加するには、まず [Windows.Foundation.Diagnostics LoggingChannel](xref:Windows.Foundation.Diagnostics.LoggingChannel) オブジェクトを作成します。 次に、マークするコードの位置に [LoggingChannel.LogMessage](xref:Windows.Foundation.Diagnostics.LoggingChannel.LogMessage%2A) メソッドの呼び出しを挿入します。 呼び出しでは [LoggingLevel.Information](xref:Windows.Foundation.Diagnostics.LoggingLevel) を使用します。  
+ C#、Visual Basic、C++ コードにユーザー マークを追加するには、まず <xref:Windows.Foundation.Diagnostics.LoggingChannel?displayProperty=fullName> オブジェクトを作成します。 次に、マークするコードの位置に <xref:Windows.Foundation.Diagnostics.LoggingChannel.LogMessage%2A?displayProperty=nameWithType> メソッドの呼び出しを挿入します。 呼び出しでは [LoggingLevel.Information](xref:Windows.Foundation.Diagnostics.LoggingLevel) を使用します。  
   
  メソッドが実行されると、ユーザー マークがメッセージと共にプロファイル データに追加されます。  
   
 > [!NOTE]
 > - Windows.Foundation.Diagnostics LoggingChannel は [Windows.Foundation.IClosable](/uwp/api/windows.foundation.iclosable) インターフェイス (C# および VB で [System.IDisposable](/dotnet/api/system.idisposable) として投影) を実装します。オペレーティング システム リソースのリークを防ぐには、ログ チャネルで終了するときに [LoggingChannel.Close](/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel) (C# および VB では [Windows.Foundation.Diagnostics.LoggingChannel.Dispose](/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel)) を呼び出します。  
->   -   開いているログ記録チャネルそれぞれに一意の名前を付ける必要があります。 破棄されていないチャネルと同じ名前で新しくログ記録チャネルを作成しようとすると、例外が発生します。  
+>  - 開いているログ記録チャネルそれぞれに一意の名前を付ける必要があります。 破棄されていないチャネルと同じ名前で新しくログ記録チャネルを作成しようとすると、例外が発生します。  
   
  例については、Windows SDK サンプル「[LoggingSession Sample](https://code.msdn.microsoft.com/windowsapps/LoggingSession-Sample-ccd52336)」を参照してください。  
   
@@ -151,8 +149,9 @@ if (performance && performance.mark) {
   
      UWP アプリ用の Visual Studio シミュレーターでは、ネットワーク情報 API のデータ接続プロパティをシミュレートすることができます。 「[シミュレーターで UWP アプリを実行する](../debugger/run-windows-store-apps-in-the-simulator.md)」をご覧ください  
   
--   **JavaScript 関数タイミング** および **CPU 使用率** ツールは、非効率的な関数のために生じる CPU 負荷の削減に役立ちます。 「[CPU 使用率の分析](../profiling/analyze-cpu-usage-in-a-windows-universal-app.md)」をご覧ください。
+-   **JavaScript 関数タイミング** および **CPU 使用率** ツールは、非効率的な関数のために生じる CPU 負荷の削減に役立ちます。 「[CPU 使用率の分析](/visualstudio/profiling/beginners-guide-to-performance-profiling)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
- [Visual Studio のプロファイル](../profiling/index.md)  
- [プロファイル ツールの概要](../profiling/profiling-feature-tour.md)
+
+- [Visual Studio のプロファイル](../profiling/index.md)  
+- [プロファイル ツールの概要](../profiling/profiling-feature-tour.md)

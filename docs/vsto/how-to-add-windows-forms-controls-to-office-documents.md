@@ -1,9 +1,6 @@
 ---
 title: '方法: Office ドキュメントへの Windows フォーム コントロールを追加します。'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,12 +15,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 10fa7da3028c2d4706ec380bb4ceeae1d55b45af
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: ba2d1f46a16724f120d3e3ac788dfc8f2e290474
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53647859"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53899916"
 ---
 # <a name="how-to-add-windows-forms-controls-to-office-documents"></a>方法: Office ドキュメントへの Windows フォーム コントロールを追加します。
   Windows フォーム コントロールは、デザイン時にドキュメント レベルのプロジェクトの Microsoft Office Excel および Microsoft Office Word のドキュメントに追加できます。 ドキュメント レベルのカスタマイズと VSTO アドインで、実行時にコントロールを追加できます。たとえば、ユーザーがオプションの一覧から選択できるように、<xref:Microsoft.Office.Tools.Excel.Controls.ComboBox> コントロールをワークシートに追加できます。  
@@ -38,7 +35,7 @@ ms.locfileid: "53647859"
   
 - [VSTO アドインにおける実行時にコントロールを追加します。](#runtimeaddin)  
   
-  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:実行時にドキュメントの画面にコントロールを追加しますか。](http://go.microsoft.com/fwlink/?LinkId=132782)  
+  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:。実行時にドキュメントの画面にコントロールを追加しますか。](http://go.microsoft.com/fwlink/?LinkId=132782).  
   
 ##  <a name="designtime"></a> デザイン時にコントロールを追加します。  
  デザイン時にドキュメント レベルのプロジェクトの文書に Windows フォーム コントロールを追加する方法はいくつかあります。  
@@ -141,4 +138,3 @@ ms.locfileid: "53647859"
  [方法: ワークシートのセル内のコントロールをサイズ変更します。](../vsto/how-to-resize-controls-within-worksheet-cells.md)   
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
-  

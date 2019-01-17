@@ -2,7 +2,6 @@
 title: XAML デザイナーでの要素の操作
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: a29690bf-f212-4ac6-a77a-adc53d14102e
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 47f6a975488adacbeffbdf0f04771131cd9a0ff9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: de3a964d39cf2d4473bc8736c5fdeb0ef83809fa
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49926944"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53922600"
 ---
 # <a name="working-with-elements-in-xaml-designer"></a>XAML デザイナーでの要素の操作
 アプリに、コントロール、レイアウト、図形などの要素を追加するには、XAML、コード、または XAML デザイナーを使用します。 このトピックでは、Visual Studio または Blend for Visual Studio で XAML デザイナーを使用して要素を操作する方法について説明します。
@@ -65,9 +64,9 @@ ms.locfileid: "49926944"
 
 1.  位置を揃える要素を選択します。 複数の要素を選択するには、**Ctrl** キーを押したまま、要素を選択します。
 
-2.  [プロパティ] ウィンドウの **[レイアウト]** セクションの **[HorizontalAlignment]** で、次のいずれかを選択します: **[Left]**、**[Center]**、**[Right]**、または **[Stretch]**。
+2.  プロパティ ウィンドウの **[レイアウト]** セクションの **[HorizontalAlignment]** で、**[Left]**、**[Center]**、**[Right]**、または **[Stretch]** のいずれかを選択します。
 
-3.  [プロパティ] ウィンドウの **[レイアウト]** セクションの **[VerticalAlignment]** で、次のいずれかを選択します: **[Top]**、**[Center]**、**[Bottom]**、または **[Stretch]**。
+3.  プロパティ ウィンドウの **[レイアウト]** セクションの **[VerticalAlignment]** で、**[Top]**、**[Center]**、**[Bottom]**、または **[Stretch]** のいずれかを選択します。
 
 #### <a name="to-align-two-or-more-elements-by-using-snaplines"></a>スナップ ガイドラインを使用して 2 つ以上の要素の位置を揃えるには
 

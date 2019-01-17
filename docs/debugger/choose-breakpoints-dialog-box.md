@@ -1,8 +1,6 @@
 ---
-title: '[ブレークポイント] ダイアログ ボックスの選択 |Microsoft ドキュメント'
-ms.custom: ''
+title: '[ブレークポイント] ダイアログ ボックスの選択 |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.breakpt.choose
@@ -23,24 +21,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 99ca31b8fa1536e23cce691629ddf5015721d9c9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 7ab243a79d4e0b79150b86fb4a6fbdf3424f3624
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31458246"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53898792"
 ---
 # <a name="choose-breakpoints-dialog-box"></a>[ブレークポイントの選択] ダイアログ ボックス
-**[ブレークポイントの**あいまいな入力からブレークポイントを設定しようとすると、ダイアログ ボックスが開きます、**新しいブレークポイント**] ダイアログ ボックス。 あいまいな入力の例としては、オーバーロードされた関数の名前があります。  
+**[ブレークポイントの選択]** ダイアログ ボックスを開くには、**[新しいブレークポイント]** ダイアログ ボックスのあいまいな入力からブレークポイントを設定します。 あいまいな入力の例としては、オーバーロードされた関数の名前があります。  
   
  **ブレークポイント**  
  あいまいな入力に基づいて設定できるブレークポイントを示します。 1 つ以上のブレークポイントを選択して設定できます。  
   
  **All**  
- 示されたすべてのブレークポイントの選択、**ブレークポイント**ボックス。  
+ **[ブレークポイント]** ボックスに示されたすべてのブレークポイントを選択します。  
   
  **None**  
- 示されたすべてのブレークポイントをクリア、**ブレークポイント**ボックス。  
+ **[ブレークポイント]** ボックスに示されたすべてのブレークポイントをクリアします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [ブレークポイントの使用](../debugger/using-breakpoints.md)

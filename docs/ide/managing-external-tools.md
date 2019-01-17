@@ -2,7 +2,6 @@
 title: 外部ツールの管理
 ms.date: 11/20/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.externaltools
@@ -13,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eeeee2e6e7ae5d043124faaa79bc6bad7c527702
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8f918ad272683de5316467d1027e098c1ead91a6
+ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31945884"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54154064"
 ---
 # <a name="manage-external-tools"></a>外部ツールの管理
 
@@ -66,8 +65,8 @@ Visual Studio から **[ツール]** メニューを使用して外部ツール�
 |ターゲット名|$(TargetName)|作成するアイテムのファイル名。|
 |ターゲットの拡張子|$(TargetExt)|作成するアイテムのファイル名拡張子。|
 |バイナリ ディレクトリ|$(BinDir)|作成中のバイナリの最終的な場所 (ドライブ + パスとして定義されます)。|
-|プロジェクト ディレクトリ|$(ProjDir)|現在のプロジェクトのディレクトリ (ドライブ + パス)。|
-|プロジェクト ファイル名|$(ProjFileName)|現在のプロジェクトのファイル名 (ドライブ + パス + ファイル名)。|
+|プロジェクト ディレクトリ|$(ProjectDir)|現在のプロジェクトのディレクトリ (ドライブ + パス)。|
+|プロジェクト ファイル名|$(ProjectFileName)|現在のプロジェクトのファイル名 (ドライブ + パス + ファイル名)。|
 |ソリューション ディレクトリ|$(SolutionDir)|現在のソリューションのディレクトリ (ドライブ + パス)。|
 |ソリューション ファイル名|$(SolutionFileName)|現在のソリューションのファイル名 (ドライブ + パス + ファイル名)。|
 

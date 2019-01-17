@@ -2,9 +2,8 @@
 title: Visual Studio 2019 Preview の新機能
 titleSuffix: ''
 description: Visual Studio 2019 のプレビュー リリースの新機能について説明します。
-ms.date: 12/04/2018
+ms.date: 12/19/2018
 ms.prod: visual-studio-dev16
-ms.technology: vs-acquisition
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 06e3966703d95f897706eec8c46c2cd78fda859f
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: e387485d2a11867944e980a9bad26261fd4a707c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53159751"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53848549"
 ---
 # <a name="what39s-new-in-visual-studio-2019-preview"></a>Visual Studio 2019 Preview の新機能
 
@@ -50,6 +49,8 @@ Visual Studio 2019 を開いてまず気付くことは、新しいスタート 
    ![Visual Studio 2019 の新しいスタート ウィンドウ](../ide/media/start-window.png)
 
 この新しい新しいスタート ウィンドウには、コードの複製またはチェックアウト、プロジェクトまたはソリューションを開く、ローカル フォルダーを開く、または新しいプロジェクトを作成するためのオプションが表示されます。 これらのオプションを単純なダイアログに表示することで、Visual Studio を初めて使うユーザーも上級ユーザーもすばやくコードに到達することができます。
+
+詳しくは、「[Get to code:How we designed the new Visual Studio start window (コードを取得: 新しい Visual Studio 開始ウィンドウの設計方法)](https://blogs.msdn.microsoft.com/visualstudio/2018/12/13/get-to-code-how-we-designed-the-new-visual-studio-start-window/)」のブログ投稿をご覧ください。
 
 ### <a name="better-search"></a>検索の向上
 
@@ -82,6 +83,8 @@ Visual Studio 2019 を開いてまず気付くことは、新しいスタート 
 [Visual Studio Live Share](https://visualstudio.microsoft.com/services/live-share/) は、コードベースとそのコンテキストをチームメイトと共有し、Visual Studio 内で直接、双方向のインスタント コラボレーションができるようにする開発者サービスです。 Live Share では自分が共有したプロジェクトをチームメイトがシームレスかつ安全に読み取り、移動、編集、デバッグすることができます。
 
 また、Visual Studio 2019 Preview では、このサービスは既定でインストールされます。
+
+詳しくは、「[Visual Studio Live Share for real-time code reviews and interactive education (Visual Studio Live Share のリアルタイム コード レビューと対話型の教育)](https://blogs.msdn.microsoft.com/visualstudio/2018/12/06/visual-studio-live-share-for-real-time-code-reviews-and-interactive-education/)」のブログ投稿をご覧ください。
 
 ## <a name="modern-development-support"></a>最新の開発サポート
 
@@ -122,7 +125,7 @@ Visual Studio 向けの IntelliCode を初めてプレビューしたときに�
 
 C# を使用している場合は、独自のコードでカスタム モデルをトレーニングする機能も追加されました。
 
-拡張機能の詳細とダウンロードについては、Microsoft DevLabs で [Visual Studio IntelliCode - Preview](https://go.microsoft.com/fwlink/?linkid=872707) ページを参照してください。
+最新の更新プログラムについて詳しくは、「[Visual Studio IntelliCode supports more languages and learns from your code (Visual Studio IntelliCode はより多くの言語をサポートし、コードから学習する)](https://blogs.msdn.microsoft.com/visualstudio/2018/12/05/visual-studio-intellicode-supports-more-languages-and-learns-from-your-code/)」のブログ投稿をご覧ください。 また、拡張機能の詳細とダウンロード方法については、Microsoft DevLabs で「[Visual Studio IntelliCode - Preview (Visual Studio IntelliCode - プレビュー)](https://go.microsoft.com/fwlink/?linkid=872707)」をご覧ください。
 
 ## <a name="give-us-feedback"></a>フィードバックの送信
 
@@ -135,4 +138,5 @@ Visual Studio チームにフィードバックを送ることにどんな意味
 ## <a name="see-also"></a>関連項目
 
 * [Visual Studio 2019 リリース ノート](/visualstudio/releases/2019/release-notes-preview?context=visualstudio/default&contextView=vs-2017)
+* [Microsoft Connect(); 2018 カンファレンス](https://www.microsoft.com/connectevent)
 * [Visual Studio 2017 の新機能](whats-new-in-visual-studio.md)

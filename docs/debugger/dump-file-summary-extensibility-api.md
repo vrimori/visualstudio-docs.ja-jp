@@ -1,8 +1,6 @@
 ---
-title: ダンプ ファイル概要機能拡張 API |Microsoft ドキュメント
-ms.custom: ''
+title: ダンプ ファイル概要機能拡張 API |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -15,20 +13,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c4bd5b5102219af530d7159b5481447b9c4e7ea
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: ade8a24e8371fe78286b794ad0437b9f50ae30cc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31471022"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53938920"
 ---
 # <a name="dump-file-summary-extensibility-api"></a>ダンプ ファイルの概要機能拡張 API
-拡張できる機能拡張 Api を使用して、このセクションで、します。Exe プロジェクト システムと**ダンプの概要**独自のカスタム デバッグ エンジンで使用するためのページです。  
+このセクションの機能拡張 API を使用すると、独自のカスタム デバッグ エンジンで使用できるように .Exe プロジェクト システムと **[ダンプの概要]** ページを拡張できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- 拡張するための Api、**ダンプの概要**ページとします。Exe プロジェクト システムは、次の名前空間で使用できます。  
+ **[ダンプの概要]** ページと .Exe プロジェクト システムを拡張するための API は、次の名前空間で使用できます。  
   
  <xref:Microsoft.VisualStudio.Debugger.VsDebugPresentationExtension>  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [ダンプ ファイルの使用](../debugger/using-dump-files.md)

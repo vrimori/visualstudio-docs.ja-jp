@@ -1,8 +1,6 @@
 ---
-title: デバッグ中に XAML のプロパティを検査 |Microsoft ドキュメント
-ms.custom: ''
+title: デバッグ中に XAML のプロパティを調べる |Microsoft Docs
 ms.date: 03/06/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 390edde4-7b8d-4c89-8d69-55106b7e6b11
 author: mikejo5000
@@ -10,27 +8,27 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: fcb2877a79afc310985102972d870caae560b393
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: abb045b2fb0a1a465d4a5c4eb9efb33b6559b40f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31480216"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53856431"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>デバッグ中に XAML のプロパティを調べます。
-実行中の XAML コードのリアルタイム ビューを取得することができます、 **Live Visual Tree**と**Live Property Explorer**です。 これらのツールは、実行中の XAML アプリケーションの UI 要素のツリー ビューを提供し、選択した UI 要素のランタイム プロパティを表示します。  
+**Live Visual Tree** および **Live Property Explorer** により、実行中の XAML コードのリアルタイム ビューを取得できます。 これらのツールは、実行中の XAML アプリケーションの UI 要素のツリー ビューを提供し、選択した UI 要素のランタイム プロパティを表示します。  
   
  これらのツールは、以下の構成で使用できます。  
   
 |アプリの種類|オペレーティング システムとツール|  
 |-----------------|--------------------------------|  
 |Windows Presentation Foundation (4.0 以上) のアプリケーション|Windows 7 以上|  
-|ユニバーサル Windows アプリ|Windows 10 以上で、 [Windows 10 SDK](https://dev.windows.com/en-us/downloads/windows-10-sdk)|  
+|ユニバーサル Windows アプリ|Windows 10 以降で、 [Windows 10 SDK](https://dev.windows.com/en-us/downloads/windows-10-sdk)|  
   
 ## <a name="looking-at-elements-in-the-live-visual-tree"></a>Live Visual Tree 内の要素の表示  
- リスト ビューとボタンのある非常に単純な WPF アプリケーションを開始しましょう。 ボタンをクリックするたびに、項目が 1 つずつ一覧に追加されます。 偶数の項目は灰色で表示され、奇数の項目は黄色で表示されます。  
+ リスト ビューとボタンのある非常にシンプルな WPF アプリケーションから開始します。 ボタンをクリックするたびに、項目が 1 つずつ一覧に追加されます。 偶数の項目は灰色で表示され、奇数の項目は黄色で表示されます。  
   
- 新しい c# WPF アプリケーションの作成 (ファイル > 新規 > プロジェクトを選択 (C#) し、WPF アプリケーションの検索)。 名前を付けます**TestXAML**です。  
+ 新しい C# WPF アプリケーションを作成します ([ファイル] > [新規作成] > [プロジェクト]、その後 [C#] を選択して [WPF アプリケーション] を探します)。 名前を **TestXAML** とします。  
   
  MainWindow.xaml を次のように変更します。  
   
@@ -71,37 +69,37 @@ private void button_Click(object sender, RoutedEventArgs e)
 }  
 ```  
   
- プロジェクトをビルドし、デバッグを開始します。 (ビルド構成はリリースではなくデバッグでなければなりません。 ビルド構成の詳細については、次を参照してください[ビルド構成について](../ide/understanding-build-configurations.md)。)。  
+ プロジェクトをビルドし、デバッグを開始します。 (ビルド構成はリリースではなくデバッグでなければなりません。 ビルド構成の詳細については、「[ビルド構成について](../ide/understanding-build-configurations.md)」を参照してください。  
   
- ウィンドウが表示されたら、クリックして、**項目の追加**2 ~ 3 回ボタンをクリックします。 次のように表示されます。  
+ ウィンドウが表示されたら、**[項目の追加]** ボタンを数回クリックします。 次のように表示されます。  
   
  ![アプリのメイン ウィンドウ](../debugger/media/livevisualtree-app.png "LiveVIsualTree アプリ")  
   
- 開くように、 **Live Visual Tree**ウィンドウ (**デバッグ > Windows > Live Visual Tree**、または IDE の左側で探します)。 このウィンドウを検索できるようにドッキング位置からドラッグし、 **Live Properties**サイド バイ サイドのウィンドウ。 **Live Visual Tree**ウィンドウで、展開、 **ContentPresenter**ノード。 これにはボタンとリスト ボックスのノードが含まれます。 リスト ボックスを展開 (し、 **ScrollContentPresenter**と**ItemsPresenter**)、リスト ボックス項目を検索します。 ウィンドウは、次のようになります。  
+ 次に **Live Visual Tree** ウィンドウを開きます (**[デバッグ] > [Windows] > [Live Visual Tree]**、または IDE の左側で探します)。 このウィンドウをドッキング位置からドラッグして離し、**[Live Properties]** ウィンドウと横並びになるようにします。 **[Live Visual Tree]** ウィンドウで、**[ContentPresenter]** ノードを展開します。 これにはボタンとリスト ボックスのノードが含まれます。 リスト ボックスを展開し (その後 **ScrollContentPresenter** と **ItemsPresenter** を展開して)、リスト ボックスの項目を検索します。 ウィンドウは、次のようになります。  
   
- ![ライブ ビジュアル ツリー内の Listboxitem](../debugger/media/livevisualtree-listboxitems.png "LiveVisualTree Listboxitem")  
+ ![ライブ ビジュアル ツリーの ListBoxItems](../debugger/media/livevisualtree-listboxitems.png "LiveVisualTree Listboxitem")  
   
- アプリケーション ウィンドウに戻り、さらにいくつかの項目を追加します。 表示される複数のリスト ボックス項目が表示されます、 **Live Visual Tree**です。  
+ アプリケーション ウィンドウに戻り、さらにいくつかの項目を追加します。 **[Live Visual Tree]** に、リスト ボックス項目がさらに表示されます。  
   
- これで、リスト ボックス項目のいずれかのプロパティを見てみましょう。 内の最初のリスト ボックス項目を選択して、 **Live Visual Tree**  をクリックし、**プロパティを表示**ツールバーのアイコン。 **Live Property Explorer**が表示されます。 なお、**コンテンツ**フィールドは"Item1"、および**バック グラウンド**フィールドは **#ffffffe0** (薄い黄色)。 戻り、 **Live Visual Tree** 2 番目のリスト ボックス項目を選択します。 **Live Property Explorer**を表示する必要があります、**コンテンツ**フィールドが"Item2"、および**背景**フィールドは **#ffd3d3d3** (薄い灰色).  
+ 次に、いずれかのリスト ボックス項目のプロパティを検討します。 **[Live Visual Tree]** 内の最初のリスト ボックス項目を選択して、ツールバーの **[プロパティの表示]** アイコンをクリックします。 **Live Property Explorer** が表示されます。 **[コンテンツ]** フィールドは “Item1”、**[背景]** フィールドは **#FFFFFFE0** (薄い黄色) であることに注意してください。 **[Live Visual Tree]** に戻り、2 番目のリスト ボックス項目を選択します。 **Live Property Explorer** で **[コンテンツ]** フィールドが “Item2”、**[背景]** フィールドが **#FFD3D3D3** (薄い灰色) になっています。  
   
- XAML の実際の構造は多数の関心がある可能性があります直接、要素を持ち、コードをよく理解していない場合は、探しているものを検索するツリーを移動するハード時を必要があります。 そのため、 **Live Visual Tree**いくつかの方法を確認する場合の要素を検索するため、アプリケーションの UI を使用することができますがします。  
+ XAML の実際の構造にはご自分に直接関係のない多数の要素が含まれていて、コードをよく理解していない場合は、ツリーを参照して検索対象を見つけることが困難となる可能性があります。 そのため、**Live Visual Tree** には、ご自分でアプリケーションの UI を使用して検討対象の要素を見つけるために役立ついくつかの手段が備わっています。  
   
- **実行中のアプリケーションを選択できるように**です。 左端のボタンを選択するときに、このモードを有効にすることができます、 **Live Visual Tree**ツールバー。 このモードでは、アプリケーションでは、UI 要素を選択できますと**Live Visual Tree** (および**Live Property Viewer**) 自動的に更新されて、その要素に対応するツリー内のノードの表示そのプロパティを選択します。  
+ **実行中のアプリケーションで選択を有効にする**。 **[Live Visual Tree]** ツール バーの左端のボタンを選択すると、このモードを有効にすることができます。 このモードがオンのときは、アプリケーションの UI 要素を選択できます。**Live Visual Tree** (および **Live Property Viewer**) は自動的に更新されて、その要素に対応するツリー内のノードとそのプロパティが表示されます。  
   
- **実行中のアプリケーションでレイアウトの装飾を表示**です。 選択を有効にするためのボタンのすぐ右にあるボタンを選択すると、このモードを有効にすることができます。 ときに**レイアウトの装飾を表示**が有効になって、アプリケーション ウィンドウ内容に合わせて配置、および、余白を示す四角形を表示できるように選択したオブジェクトの境界に沿って水平および垂直方向の線の表示になります。 たとえば、両方をオン**を選択できるように**と**表示レイアウト**され、選択、**項目の追加**アプリケーション内のテキスト ブロックします。 テキスト ブロック ノードを表示する必要があります、 **Live Visual Tree** 、テキスト ブロック プロパティと、 **Live Property Viewer**、テキスト ブロックの境界に水平と垂直の線とします。  
+ **実行中のアプリケーションでレイアウトの装飾を表示する**。 選択を有効にするためのボタンのすぐ右にあるボタンを選択すると、このモードを有効にすることができます。 **レイアウトの装飾の表示**がオンのときは、アプリケーション ウィンドウには選択されたオブジェクトの境界に沿って水平と垂直の線が表示され、何に揃えて配置されているかが確認できます。さらに、余白を示すための四角形も表示されます。 たとえば、**[選択範囲を有効にする]** と **[Display layout]\(レイアウト表示\)** の両方をオンにして、アプリケーションの **[項目の追加]** テキスト ブロックを選択します。 **Live Visual Tree** にテキスト ブロック ノードが表示され、**Live Property Viewer** にテキスト ブロック プロパティが表示されます。さらに、テキスト ブロックの境界に垂直な線と水平な線が示されます。  
   
- ![DisplayLayout で LivePropertyViewer](../debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer DisplayLayout")  
+ ![Displaylayout の livepropertyviewer](../debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer DisplayLayout")  
   
- **選択のプレビュー**です。 このモードを有効にするには、Visual Tree ツールバーで左端から 3 番目のボタンを選択します。 このモードは、アプリケーションのソース コードにアクセスできる場合に、要素が宣言されている XAML を示します。 選択**を選択できるように**と**選択のプレビュー**、テスト アプリケーションで、ボタンを選択します。 MainWindow.xaml ファイルが Visual Studio で開き、ボタンが定義されている行にカーソルが置かれます。  
+ **選択のプレビュー**。 このモードを有効にするには、Visual Tree ツールバーで左端から 3 番目のボタンを選択します。 このモードは、アプリケーションのソース コードにアクセスできる場合に、要素が宣言されている XAML を示します。 **[選択範囲を有効にする]** と **[Preview Selection]\(選択のプレビュー\)** を選択してから、テスト アプリケーションのボタンを選択します。 MainWindow.xaml ファイルが Visual Studio で開き、ボタンが定義されている行にカーソルが置かれます。  
   
 ## <a name="using-xaml-tools-with-running-applications"></a>実行中のアプリケーションで XAML のツールを使用する  
- ソース コードがあるない場合でも、これらの XAML ツールを使用することができます。 実行中の XAML アプリケーションにアタッチする際に使用できます、 **Live Visual Tree**そのアプリケーションの UI 要素をすぎます。 を以前に使用した同じ WPF テスト アプリケーションを使用する例を次に示します。  
+ ソース コードがない場合でも、これらの XAML ツールを使用できます。 実行中の XAML アプリケーションにアタッチすると、そのアプリケーションの UI 要素の **Live Visual Tree** も使用できます。 以前に使用したものと同じ WPF テスト アプリケーションを使用する例を次に示します。  
   
-1.  開始、 **TestXaml**リリース構成でアプリケーションです。 実行されているプロセスにアタッチすることはできません、**デバッグ**構成します。  
+1.  リリース構成で、**TestXaml** アプリケーションを始動します。 **デバッグ**構成で実行しているプロセスにはアタッチできません。  
   
-2.  Visual Studio の 2 番目のインスタンスを開き、をクリックして**デバッグ > プロセスにアタッチする**です。 検索**TestXaml.exe**選択可能なプロセスとクリックの一覧で**アタッチ**です。  
+2.  Visual Studio の 2 番目のインスタンスを開き、**[デバッグ] > [プロセスにアタッチ]** をクリックします。 選択可能なプロセスの一覧から **TestXaml.exe** を見つけて、**[アタッチ]** をクリックします。  
   
 3.  アプリケーションが実行を開始します。  
   
-4.  Visual Studio の 2 番目のインスタンスで開く、 **Live Visual Tree** (**デバッグ > Windows > Live Visual Tree**)。 表示されるはずの**TestXaml** UI 要素とすることができるよう、アプリケーションを直接デバッグしたときにそれらの操作です。
+4.  Visual Studio の 2 番目のインスタンスで、**Live Visual Tree** を開きます (**[デバッグ] > [Windows] > [Live Visual Tree]**)。 **TestXaml** UI 要素が表示され、アプリケーションを直接デバッグしたときと同様に、それらを操作することができます。

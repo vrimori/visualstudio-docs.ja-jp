@@ -1,8 +1,6 @@
 ---
 title: MarkupCompilePass1 タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9db623dd06db06a1dfee3e22345564f888431d1c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 52b6e36e06ee74f974d2d774af806a234835cff0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49855333"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53906879"
 ---
 # <a name="markupcompilepass1-task"></a>MarkupCompilePass1 タスク
 
@@ -37,7 +35,7 @@ ms.locfileid: "49855333"
 | `AllGeneratedFiles` | 省略可能な **ITaskItem[]** 型の出力パラメーターです。<br /><br /> <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> タスクによって生成されるファイルの完全なリストが含まれています。 |
 | `AlwaysCompileMarkupFilesInSeparateDomain` | 省略可能な **Boolean** 型のパラメーターです。<br /><br /> 別の <xref:System.AppDomain> でタスクを実行するかどうかを指定します。 このパラメーターが **false** を返す場合、タスクは [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] と同じ <xref:System.AppDomain> 内で、より高速に実行されます。 このパラメーターが **true** を返す場合、タスクは [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] から分離された 2 番目の <xref:System.AppDomain> 内で実行され、動作はより低速になります。 |
 | `ApplicationMarkup` | 省略可能な **ITaskItem[]** パラメーターです。<br /><br /> アプリケーション定義 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ファイルの名前を指定します。 |
-| `AssembliesGeneratedDuringBuild` | 省略可能な **String[]** 型のパラメーターです。<br /><br /> ビルド処理時に変更されるアセンブリへの参照を指定します。 たとえば、Visual Studio ソリューションには、別のプロジェクトのコンパイル済み出力を参照するプロジェクトが含まれていることがあります。 この場合、別のプロジェクトのコンパイル済み出力を **AssembliesGeneratedDuringBuild** パラメーターに追加できます。<br /><br /> 注: **AssembliesGeneratedDuringBuild** パラメーターは、ビルド ソリューションによって生成されるアセンブリの完全なセットへの参照を含んでいる必要があります。 |
+| `AssembliesGeneratedDuringBuild` | 省略可能な **String[]** 型のパラメーターです。<br /><br /> ビルド処理時に変更されるアセンブリへの参照を指定します。 たとえば、Visual Studio ソリューションには、別のプロジェクトのコンパイル済み出力を参照するプロジェクトが含まれていることがあります。 この場合、別のプロジェクトのコンパイル済み出力を **AssembliesGeneratedDuringBuild** パラメーターに追加できます。<br /><br /> メモ:**AssembliesGeneratedDuringBuild** パラメーターは、ビルド ソリューションによって生成されるアセンブリの完全なセットへの参照を含んでいる必要があります。 |
 | `AssemblyName` | 必須の **String** 型のパラメーターです。<br /><br /> プロジェクトのために生成されるアセンブリの短い名前を指定します。 たとえば、プロジェクトが *WinExeAssembly.exe* という名前の [!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)] 実行可能ファイルを生成する場合、**AssemblyName** パラメーターの値は **WinExeAssembly** になります。 |
 | `AssemblyPublicKeyToken` | 省略可能な **String** 型のパラメーターです。<br /><br /> アセンブリの公開キー トークンを指定します。 |
 | `AssemblyVersion` | 省略可能な **String** 型のパラメーターです。<br /><br /> アセンブリのバージョン番号を指定します。 |

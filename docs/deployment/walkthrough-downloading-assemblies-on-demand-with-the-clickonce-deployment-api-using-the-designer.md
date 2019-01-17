@@ -1,8 +1,6 @@
 ---
-title: 'チュートリアル: ClickOnce 配置デザイナーを使用して API で必要に応じてアセンブリをダウンロードする |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: ClickOnce 配置デザイナーを使用して API で必要に応じてアセンブリをダウンロード |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 20df3172b2745a50f697b09ffe0bf95eaad4f39f
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 067591347a89b8a56d6e271614500c7d3880be80
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389002"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53878602"
 ---
 # <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>チュートリアル: ClickOnce 配置デザイナーを使用して API で必要に応じてアセンブリをダウンロードします。
 既定では、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに含まれるすべてのアセンブリが、アプリケーションを初めて実行したときにダウンロードされます。 ただし、アプリケーションには少数のユーザーにしか使われない部分が含まれることがあります。 その場合は、そのような型を作成するときにだけアセンブリをダウンロードすることができます。 以下のチュートリアルでは、アプリケーション内の特定のアセンブリに "オプション" マークを付ける方法、および共通言語ランタイムでそのアセンブリが必要なときに <xref:System.Deployment.Application> 名前空間にあるクラスを使用してアセンブリをダウンロードする方法について説明します。
@@ -33,7 +31,7 @@ ms.locfileid: "52389002"
 > これを行うには、アプリケーションが完全な信頼で実行する必要があります。
 
 > [!NOTE]
-> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、次を参照してください。[設定にリセット](../ide/environment-settings.md#reset-settings)します。
+> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[リセット設定](../ide/environment-settings.md#reset-settings)」を参照してください。
 
 ## <a name="create-the-projects"></a>プロジェクトを作成します。
 
@@ -77,15 +75,15 @@ ms.locfileid: "52389002"
 
 2.  **[アプリケーション ファイル]** ボタンをクリックします。
 
-3.  ClickOnceLibrary.dll のリストを探します。 **[発行の状況]** ドロップダウン ボックスを **[含む]** に設定します。
+3.  *ClickOnceLibrary.dll* のリストを探します。 **[発行の状況]** ドロップダウン ボックスを **[含む]** に設定します。
 
 4.  **[グループ]** ドロップダウン ボックスを展開し、 **[新規]** を選択します。 新しいグループ名として「 `ClickOnceLibrary` 」と入力します。
 
-5.  」の説明に従って、アプリケーションの発行を続行[方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)します。
+5.  」の説明に従って、アプリケーションの発行を続行[方法。発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
 
 ### <a name="to-mark-assemblies-as-optional-in-your-clickonce-application-by-using-manifest-generation-and-editing-tool--graphical-client-mageuiexe"></a>マニフェストの生成および編集ツールを使用して ClickOnce アプリケーションでアセンブリをオプションとしてマークするには — グラフィカル クライアント (MageUI.exe)
 
-1. 作成、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 」の説明に従ってマニフェスト[チュートリアル: ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。
+1. 作成、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 」の説明に従ってマニフェスト[チュートリアル。ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。
 
 2. MageUI.exe を終了する前に、配置のアプリケーション マニフェストを含むタブを選択し、そのタブで **[ファイル]** タブを選択します。
 

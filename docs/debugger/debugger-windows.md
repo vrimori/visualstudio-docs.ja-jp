@@ -2,7 +2,6 @@
 title: デバッガー ウィンドウ |Microsoft Docs
 ms.custom: seodec18
 ms.date: 04/25/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 4c6fe8f1-b015-4989-bb31-72ebac390026
 author: mikejo5000
@@ -10,12 +9,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d55f1ba3a9e0d30dda9d9e390bae0cc3a46f8444
-ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
+ms.openlocfilehash: c546bd408d1c4c91ec19962536e1e4fe774dbd84
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53562348"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53875807"
 ---
 # <a name="learn-about-debugger-windows-in-visual-studio"></a>Visual Studio で Windows をデバッガーについて説明します
 
@@ -35,20 +34,20 @@ ms.locfileid: "53562348"
 |イミディエイト|Ctrl + Alt + I|[イミディエイト ウィンドウ](../ide/reference/immediate-window.md)|
 |並列スタック|Ctrl + Shift + D、S|[[並列スタック] ウィンドウの使用](../debugger/using-the-parallel-stacks-window.md)|
 |並列ウォッチ|Ctrl + Shift + D、(1、2、3、4)|[マルチ スレッド アプリケーションのデバッグの開始](../debugger/get-started-debugging-multithreaded-apps.md)|
-|スレッド|Ctrl + Alt + H|[[スレッド] ウィンドウを使用したデバッグします。](../debugger/how-to-use-the-threads-window.md)|
-|モジュール|Ctrl + Alt + U|[方法: [モジュール] ウィンドウを使用します。](../debugger/how-to-use-the-modules-window.md)|
+|スレッド|Ctrl + Alt + H|[[スレッド] ウィンドウを使用してデバッグする](../debugger/how-to-use-the-threads-window.md)|
+|モジュール|Ctrl + Alt + U|[方法: [モジュール] ウィンドウを使用する](../debugger/how-to-use-the-modules-window.md)|
 |GPU スレッド|-|[方法: [GPU スレッド] ウィンドウを使用する](../debugger/how-to-use-the-gpu-threads-window.md)|
 |[タスク]|Ctrl + Shift + D、K|[[タスク] ウィンドウの使用](../debugger/using-the-tasks-window.md)|
-|Python 対話形式デバッグ|Shift + Alt + I|[Python の対話型 REPL](../python/python-interactive-repl-in-visual-studio.md)|
-|JavaScript コンソール|Ctrl + Alt + V、C|[クイック スタート:JavaScript をデバッグします。](../debugger/quickstart-debug-javascript-using-the-console.md)|
-|DOM Explorer|Ctrl + Alt + V、D|[DOM Explorer を使用したレイアウトのデバッグ](../debugger/debug-layout-using-dom-explorer.md)|
+|Python 対話形式デバッグ|Shift + Alt + I|[Python 対話型 REPL](../python/python-interactive-repl-in-visual-studio.md)|
+|JavaScript コンソール|Ctrl + Alt + V、C|[クイック スタート: JavaScript をデバッグする](../debugger/quickstart-debug-javascript-using-the-console.md)|
+|DOM Explorer|Ctrl + Alt + V、D|[DOM Explorer を使用したレイアウトのデバッグ](/visualstudio/debugger/quickstart-debug-html-and-css)|
 |ライブ ビジュアル ツリー|-|[デバッグ中にXAML のプロパティを調べる](../debugger/inspect-xaml-properties-while-debugging.md)|
 |ライブ プロパティ エクスプローラー|-|[デバッグ中にXAML のプロパティを調べる](../debugger/inspect-xaml-properties-while-debugging.md)|
 |プロセス|Ctrl + Alt + Z|[スレッドとプロセスの操作](../debugger/debug-threads-and-processes.md)|
 |メモリ|Ctrl + Alt + M、(1、2、3、4)|[[メモリ] ウィンドウ](../debugger/memory-windows.md)|
-|逆アセンブリ|Ctrl + Alt + D|[方法: 逆アセンブル ウィンドウを使用します。](../debugger/how-to-use-the-disassembly-window.md)|
-|レジスタ|Ctrl + Alt + G|[方法: [レジスタ] ウィンドウを使用します。](../debugger/how-to-use-the-registers-window.md)|
+|逆アセンブリ|Ctrl + Alt + D|[方法: [逆アセンブル] ウィンドウを使用する](../debugger/how-to-use-the-disassembly-window.md)|
+|レジスタ|Ctrl + Alt + G|[方法: [レジスタ] ウィンドウを使用する](../debugger/how-to-use-the-registers-window.md)|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)

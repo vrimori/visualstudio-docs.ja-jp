@@ -2,7 +2,6 @@
 title: '方法: ジオメトリベースのグラデーション シェーダーを作成する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 4b204405-ba95-4c5e-bd51-ec033a3ebfb6
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cfdf75c058d1786febda71b05d424b1032254754
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: c690aa0b18969dd3a832550789a65db01d61f08e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37923908"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53831863"
 ---
 # <a name="how-to-create-a-geometry-based-gradient-shader"></a>方法: ジオメトリベースのグラデーション シェーダーを作成する
 
@@ -54,11 +53,11 @@ ms.locfileid: "37923908"
 
  シェーダーによっては、特定の図形を使用すると、より適切にプレビューできる可能性があります。 シェーダー デザイナーでシェーダーをプレビューする方法については、「[シェーダー デザイナー](../designers/shader-designer.md)」の「**シェーダーのプレビュー**」を参照してください。
 
- 次の図は、このドキュメントで説明したシェーダーを「[方法: 3D 地形をモデル化する](../designers/how-to-model-3-d-terrain.md)」に示した 3D シーンに適用したものです。 ここでは、色の輝度とワールド空間のポイントの高さが共に増加しています。
+ 次の図は、このドキュメントで説明したシェーダーを「[方法:3D 地形をモデル化する](../designers/how-to-model-3-d-terrain.md)」に示した 3D シーンに適用したものです。 ここでは、色の輝度とワールド空間のポイントの高さが共に増加しています。
 
  ![3&#45;D 地形モデルに適用されたグラデーション効果](../designers/media/digit-gradient-effect-result.png)
 
- 3D モデルにシェーダーを適用する方法の詳細については、「[方法: シェーダーを 3D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)」を参照してください。
+ 3D モデルにシェーダーを適用する方法の詳細については、「[方法:シェーダーを 3D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

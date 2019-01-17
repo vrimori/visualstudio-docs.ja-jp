@@ -1,8 +1,6 @@
 ---
 title: MenuCommand とOleMenuCommands |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-sdk
 ms.topic: conceptual
 helpviewer_keywords:
 - commands, creating in VSPackages
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - menus, creating commands
 ms.assetid: 553d5e07-3e19-4aba-b490-6c7dd05fd82e
 manager: douge
-ms.openlocfilehash: 0fbe8ea2a78eae02cb7e0d390da49eafe55e75ee
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 3b33d84f62db9cfe1371ffc540830f63d93e67d1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49888958"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53926240"
 ---
 # <a name="menucommands-vs-olemenucommands"></a>MenuCommand とOleMenuCommand
 メニュー コマンドを作成するにはいずれかから派生することによって<xref:System.ComponentModel.Design.MenuCommand>またはから<xref:Microsoft.VisualStudio.Shell.OleMenuCommand>オブジェクト、および適切なイベント ハンドラーを実装します。 ほとんどのケースでは、VSPackage プロジェクト テンプレートの場合と同様に <xref:System.ComponentModel.Design.MenuCommand>を使用できますが、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>を使用することが必要になることもあります。  
@@ -183,7 +181,7 @@ ms.locfileid: "49888958"
   
     `EventHandler` オブジェクトには、メニュー コマンドの状態を照会するときに呼び出すメソッドの名前を付けます。  
   
-2. コマンドの状態照会ハンドラー メソッドを実装します。 `object` `sender` パラメーターは、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> オブジェクトにキャストできます。これは、テキストなどメニュー コマンドのさまざまな属性を設定するために使用します。 次の表に、 <xref:System.ComponentModel.Design.MenuCommand> フラグに対応する <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> クラス (MPF クラス <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> の派生元) のプロパティを示します。  
+2. コマンドの状態照会ハンドラー メソッドを実装します。  `object` `sender` パラメーターは、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> オブジェクトにキャストできます。これは、テキストなどメニュー コマンドのさまざまな属性を設定するために使用します。 次の表に、 <xref:System.ComponentModel.Design.MenuCommand> フラグに対応する <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> クラス (MPF クラス <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> の派生元) のプロパティを示します。  
   
    |MenuCommand プロパティ|OLECMDF フラグ|  
    |--------------------------|------------------|  

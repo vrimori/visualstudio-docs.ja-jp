@@ -1,8 +1,6 @@
 ---
 title: 'チュートリアル: 頂点の網かけによるオブジェクトの不足 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: e42b54a0-8092-455c-945b-9ecafb129d93
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a3ee92eb8418fce37182b78364d08c2570f32da9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 66428fa389b3adc152524d3d17ce7dd8135b1dbb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49861567"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53940681"
 ---
 # <a name="walkthrough-missing-objects-due-to-vertex-shading"></a>チュートリアル: 頂点の網かけによるオブジェクトの不足
 このチュートリアルでは、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のグラフィックス診断ツールを使用して、頂点シェーダー ステージの間に発生するエラーが原因で欠落しているオブジェクトを調査する方法を示します。  
@@ -108,7 +106,7 @@ ms.locfileid: "49861567"
    > [!TIP]
    >  同時にアプリのデバッグを行っている場合、この位置にブレークポイントを設定して次のフレームが表示されるとヒットするようにできます。 これで、定数バッファーが指定されたときに `m_marbleConstantBufferData` のメンバーを調べ、 `projection` メンバーの値がすべてゼロに設定されていることを確認できます。  
   
-   定数バッファーが指定されている場所を検索し、その値が元の変数を検出した後に`m_marbleConstantBufferData`、場所を確認する次の手順では、`m_marbleConstantBufferData.projection`メンバーすべてゼロに設定されます。 **[すべての参照の検索]** を使用して、 `m_marbleConstantBufferData.projection`の値を変更するコードをすばやくスキャンできます。  
+   定数バッファーが指定されている場所を確認し、その値が変数 `m_marbleConstantBufferData` から取得されたことがわかったら、次の手順では、`m_marbleConstantBufferData.projection` メンバーがすべてゼロに設定されている場所を検索します。 **[すべての参照の検索]** を使用して、 `m_marbleConstantBufferData.projection`の値を変更するコードをすばやくスキャンできます。  
   
 #### <a name="to-find-where-the-projection-member-is-set-in-your-apps-source-code"></a>アプリのソース コード内で projection メンバーが設定されている場所を検索するには  
   

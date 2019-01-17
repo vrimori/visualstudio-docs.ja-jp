@@ -5,8 +5,7 @@ ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ccc5e543-7dcf-465c-97dd-e133e869800c
@@ -14,12 +13,12 @@ caps.latest.revision: 32
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: db89bda465d1a4fc4da1b3066858b270ce50c5bb
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: c56b2a2cd49d164fa55eae472eaa11942bead262
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051031"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53928855"
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio の生産性に関するヒント
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -84,7 +83,7 @@ ms.locfileid: "53051031"
 
      青いボックスでは、コードのエラーを修正するための推奨方法が表示されます。
 
-     (図 1)。エラー スマート タグ
+     図 1: エラー スマート タグ
 
      ![エラー スマート タグの例](../ide/media/productivity-bluesmarttags.png "Productivity_BlueSmartTags")
 
@@ -160,7 +159,7 @@ ms.locfileid: "53051031"
 
      また、**ソリューション エクスプローラー**のインスタンスをもう 1 つ作成し、それを別のモニターに移動すると、ファイルをより簡単に管理できます。 **ソリューション エクスプローラー**のインスタンスをもう 1 つ作成するには、**ソリューション エクスプローラー**のショートカット メニューを開き、**[新しいソリューション エクスプローラー ビュー]** を選択します。
 
--   **Visual Studio に表示されるフォントをカスタマイズする**。 IDE のテキストに使用されるフォント フェイス、サイズ、および色を変更できます。 たとえば、エディター内の特定のコード要素の色や、ツール ウィンドウまたは IDE 全体のフォント フェイスをカスタマイズできます。 詳細については、「[方法 :フォントと色を変更](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)と[方法。エディターのフォントと色を変更する](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)します。
+-   **Visual Studio に表示されるフォントをカスタマイズする**。 IDE のテキストに使用されるフォント フェイス、サイズ、および色を変更できます。 たとえば、エディター内の特定のコード要素の色や、ツール ウィンドウまたは IDE 全体のフォント フェイスをカスタマイズできます。 詳細については、「[方法 :フォントと色を変更する](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)」と「[How to: Change fonts and colors in the editor](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)」 (方法: エディターのフォントと色を変更する) を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
  [頻繁に使用するコマンドの既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)[方法。メニューおよびツールバーをカスタマイズ](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)[チュートリアル。単純なアプリケーション作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)[アクセシビリティのヒントとテクニック](../ide/reference/accessibility-tips-and-tricks.md)

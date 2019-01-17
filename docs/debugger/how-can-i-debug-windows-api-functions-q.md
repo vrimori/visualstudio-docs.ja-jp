@@ -2,7 +2,6 @@
 title: Windows API 関数のデバッグ |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.api
@@ -23,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2959e5580cc227f18dbd84f88f83fbd5690aa7f4
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 9d10c4804d4d53c22281c11d8afc464cf2ac3732
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53065074"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53861515"
 ---
 # <a name="how-can-i-debug-windows-api-functions"></a>Windows API 関数をデバッグするには
 NT シンボルを読み込んだ状態で Windows API 関数をデバッグするには、次の手順を実行する必要があります。  
@@ -43,6 +42,6 @@ NT シンボルを読み込んだ状態で Windows API 関数をデバッグす�
   
      装飾名を取得するには、次を参照してください。[装飾名の確認](https://msdn.microsoft.com/library/f79e2717-a4db-4d12-a689-69830cce2be0)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

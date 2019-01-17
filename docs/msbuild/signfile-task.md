@@ -1,8 +1,6 @@
 ---
 title: SignFile タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#SignFile
@@ -20,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 765e5b154e7787af7afae8ca1f52338cc061a598
-ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
+ms.openlocfilehash: 5adc16bf0ded8171009c31d96227daa0474ebbf5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51220750"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53847218"
 ---
 # <a name="signfile-task"></a>SignFile タスク
 
@@ -73,7 +71,7 @@ ms.locfileid: "51220750"
 ```
 
 > [!NOTE]
-> 証明書の拇印は、証明書の SHA-1 ハッシュです。 詳細については、[信頼されたルート CA 証明書の SHA-1 ハッシュの取得](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733076\(v\=ws.10\))に関する記事を参照してください。
+> 証明書の拇印は、証明書の SHA-1 ハッシュです。 詳細については、[信頼されたルート CA 証明書の SHA-1 ハッシュの取得](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733076\(v\=ws.10\))に関する記事を参照してください。 証明書の詳細から拇印をコピーして貼り付けた場合は、余分な (3F) 表示されない文字が含まれていないことを確認します。含まれていると、`SignFile` で証明書を検索できない可能性があります。
   
 ## <a name="see-also"></a>関連項目  
  [タスク リファレンス](../msbuild/msbuild-task-reference.md)   

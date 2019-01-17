@@ -2,19 +2,18 @@
 title: テスト コントローラーとテスト エージェントの管理
 ms.date: 09/18/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ccc3a6342857d1f228118ef7b26601f3787908e4
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: b687504ae69d7b133aba107c7705eeb50f6f8953
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059497"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53891402"
 ---
 # <a name="manage-test-controllers-and-test-agents"></a>テスト コントローラーとテスト エージェントの管理
 
@@ -118,7 +117,7 @@ Visual Studio でテストを実行するために、テスト エージェン�
 
 |Status|説明|
 |-|-----------------|
-|テストの実行中|テストを実行しています。|
+|テストの実行中|テストの実行|
 |準備完了|テストの実行またはデータおよび診断情報を収集できる状態です。|
 |オフライン|テストの実行またはデータおよび診断情報を収集できない状態です。|
 |切断|テスト エージェントは起動されていません。|

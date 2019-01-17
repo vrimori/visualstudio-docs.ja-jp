@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::RemoveGlobalExpressionContextProvider |Microsoft ドキュメント
+title: IDebugApplication::RemoveGlobalExpressionContextProvider |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 791d6a3a237c36c123aea662dc4bb933b97d35d3
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 5038d85e48b6735c81977d20f295dd4e0868e2e2
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725972"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54093887"
 ---
 # <a name="idebugapplicationremoveglobalexpressioncontextprovider"></a>IDebugApplication::RemoveGlobalExpressionContextProvider
-このアプリケーションからのグローバル式のコンテキスト プロバイダーを削除します。  
+このアプリケーションからは、グローバルな式のコンテキスト プロバイダーを削除します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT RemoveGlobalExpressionContextProvider(  
    DWORD_PTR  dwCookie  
 );  
@@ -38,17 +38,17 @@ HRESULT RemoveGlobalExpressionContextProvider(
   
 #### <a name="parameters"></a>パラメーター  
  `dwCookie`  
- [in]返されるクッキー、`AddGlobalExpressionContextProvider`メソッド グローバル コンテキスト プロバイダーが追加されたときにします。  
+ [in]によって返されるクッキー、`AddGlobalExpressionContextProvider`メソッド、グローバル コンテキスト プロバイダーが追加されたときにします。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- `RemoveGlobalExpressionContextProvider`メソッドは、このアプリケーションからグローバル式のコンテキスト プロバイダーを削除します。  
+## <a name="remarks"></a>Remarks  
+ `RemoveGlobalExpressionContextProvider`メソッドは、このアプリケーションからグローバルな式のコンテキスト プロバイダーを削除します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugApplication::AddGlobalExpressionContextProvider](../../winscript/reference/idebugapplication-addglobalexpressioncontextprovider.md)   

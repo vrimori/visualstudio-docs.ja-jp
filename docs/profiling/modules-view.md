@@ -1,8 +1,6 @@
 ---
 title: モジュール ビュー | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.performance.view.modules
@@ -16,19 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fcafc9960f9ff4c053e63b1fc5abfd75bb41c995
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 6370b15d1530a924396b72cbefabd782094e2b91
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35254577"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53823012"
 ---
 # <a name="modules-view"></a>モジュール ビュー
 モジュール ビューには、プロファイリング データのモジュールが一覧表示されます。 各モジュールが階層ツリーのルート ノードです。 モジュールのプロファイリングされた関数が、モジュール ノードの下に一覧表示されます。 サンプリング メソッドを使用してプロファイリング データが収集された場合、関数ノードの下には行情報が一覧表示され、行ノードの下には命令ポインター データが一覧表示されます。  
   
  モジュール名を展開してモジュールのパフォーマンス データのビューを表示したり、モジュール名を折りたたんでこれらのビューを閉じたりします。  
   
- 列を追加または削除するには、レポート ウィンドウ内を右クリックし、**[列の追加と削除]** を選択します。 データを並べ替えるには、列名をクリックします。 詳細については、「[方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)」を参照してください。  
+ 列を追加または削除するには、レポート ウィンドウ内を右クリックし、**[列の追加と削除]** を選択します。 データを並べ替えるには、列名をクリックします。 詳細については、「[方法 :レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)」を参照してください。  
   
  モジュール ビューに表示される列は、データの収集に使用したプロファイル方法 (サンプリングまたはインストルメンテーション)、およびプロファイル実行で .NET メモリ データを収集対象としたかどうかによって異なります。  
   

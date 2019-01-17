@@ -15,15 +15,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c4e5ca1e9903089cbcc9daf99e8c8d49d170b1c8
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 2a9cde551796d43cf94c20a9e54768ea9df3ddb5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52388820"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53924801"
 ---
 # <a name="save-data-to-a-database-multiple-tables"></a>データベースへのデータの保存 (複数テーブル)
 
@@ -33,13 +32,13 @@ ms.locfileid: "52388820"
 
 このチュートリアルでは、以下のタスクを行います。
 
--   新しい Windows フォーム アプリケーション** プロジェクトを作成します。
+-   新しい **Windows フォーム アプリケーション** プロジェクトを作成します。
 
 -   使用してアプリケーションでのデータ ソースの構成の作成と、[データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)します。
 
 -   内の項目のコントロールの設定、[データ ソース ウィンドウ](add-new-data-sources.md#data-sources-window)します。 詳細については、次を参照してください。[設定、データ ソース ウィンドウからドラッグするときに作成されるコントロール](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)します。
 
--   [データ ソース]** ウィンドウからフォームに項目をドラッグして、データ バインド コントロールを作成します。
+-   **[データ ソース]** ウィンドウからフォームに項目をドラッグして、データ バインド コントロールを作成します。
 
 -   データセット内の各テーブル内のいくつかのレコードを変更します。
 
@@ -75,17 +74,17 @@ ms.locfileid: "52388820"
 
 4. プロジェクトに名前を**UpdateMultipleTablesWalkthrough**を選び、 **OK**。
 
-     UpdateMultipleTablesWalkthrough **プロジェクトが作成されてソリューション エクスプローラー**に追加されます。
+     **UpdateMultipleTablesWalkthrough** プロジェクトが作成されて、**ソリューション エクスプローラー**に追加されます。
 
 ## <a name="create-the-data-source"></a>データ ソースを作成します。
 
-この手順では、データ ソース構成**ウィザードを使用して、Northwind データベースからデータ ソースを作成します。 接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。 Northwind サンプル データベースの設定の詳細については、次を参照してください。[方法: サンプル データベースをインストール](../data-tools/installing-database-systems-tools-and-samples.md)します。
+この手順では、**データ ソース構成ウィザード**を使用して、Northwind データベースからデータ ソースを作成します。 接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。 Northwind サンプル データベースの設定の詳細については、次を参照してください。[方法。サンプル データベースをインストール](../data-tools/installing-database-systems-tools-and-samples.md)します。
 
 1. **データ**メニューの  **データ ソースの**します。
 
-   [データ ソース]** ウィンドウが開きます。
+   **[データ ソース]** ウィンドウが開きます。
 
-2. [データ ソース] **ウィンドウで、[新しいデータ ソースの追加]** をクリックしてデータ ソース構成ウィザード**を起動します。
+2. **[データ ソース]** ウィンドウで、**[新しいデータ ソースの追加]** をクリックして**データ ソース構成ウィザード**を起動します。
 
 3. **データ ソースの種類を選択**画面で、**データベース**、し、**次**します。
 
@@ -95,7 +94,7 @@ ms.locfileid: "52388820"
 
          - または -
 
-    -   [新しい接続] **を選択して [接続の追加] または [接続の変更]** ダイアログ ボックスを表示します。
+    -   **[新しい接続]** を選択して **[接続の追加] または [接続の変更]** ダイアログ ボックスを開きます。
 
 5. データベースにパスワードが必要な場合は、機密データを含めるしを選択するオプションを選択**次**します。
 
@@ -105,7 +104,7 @@ ms.locfileid: "52388820"
 
 8. 選択、**顧客**と**注文**テーブル、および選択し**完了**します。
 
-     プロジェクトに NorthwindDataSet **が追加され、[データ ソース]** ウィンドウにテーブルが表示されます。
+     自分のプロジェクトに **NorthwindDataSet** が追加され、**[データ ソース]** ウィンドウにテーブルが表示されます。
 
 ## <a name="set-the-controls-to-be-created"></a>作成されるコントロールを設定します。
 
@@ -119,22 +118,22 @@ ms.locfileid: "52388820"
 
 ## <a name="create-the-data-bound-form"></a>データ バインド フォームを作成します。
 
-[データ ソース]** ウィンドウからフォームに項目をドラッグして、データ バインド コントロールを作成します。
+**[データ ソース]** ウィンドウからフォームに項目をドラッグして、データ バインド コントロールを作成します。
 
-1. [データ ソース] **ウィンドウから Form1** にメインの [Customers]** ノードをドラッグします。
+1. **[データ ソース]** ウィンドウから **Form1** にメインの **[Customers]** ノードをドラッグします。
 
      説明のラベルが付いたデータ バインド コントロールとレコード間を移動するためのツール ストリップ (<xref:System.Windows.Forms.BindingNavigator>) がフォームに表示されます。 A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、 `CustomersTableAdapter`、 <xref:System.Windows.Forms.BindingSource>、および<xref:System.Windows.Forms.BindingNavigator>コンポーネント トレイに表示されます。
 
-2. [データ ソース] **ウィンドウから Form1** に [Orders]** ノードをドラッグします。
+2. **[データ ソース]** ウィンドウから **Form1** に関連する **[Orders]** ノードをドラッグします。
 
     > [!NOTE]
-    > 関連する [Orders] **ノードは [Fax]** 列の下にあり、[Customers]** ノードの子ノードです。
+    > 関連する **[Orders]** ノードは **[Fax]** 列の下にあり、**[Customers]** ノードの子ノードです。
 
      レコード間をナビゲートするための <xref:System.Windows.Forms.DataGridView> コントロールとツール ストリップ (<xref:System.Windows.Forms.BindingNavigator>) がフォームに表示されます。 `OrdersTableAdapter`と<xref:System.Windows.Forms.BindingSource>コンポーネント トレイに表示されます。
 
 ## <a name="add-code-to-update-the-database"></a>データベースを更新するコードを追加します。
 
-Customers`Update` TableAdapter および Orders**TableAdapter の** メソッドを呼び出して、データベースを更新できます。 既定では、イベント ハンドラーを**保存**のボタン、<xref:System.Windows.Forms.BindingNavigator>データベースに更新を送信するためのフォームのコードに追加されます。 この手順は、正しい順序で更新プログラムを送信するコードを変更します。これにより、参照整合性エラーが発生する可能性がなくなります。 また、Update 呼び出しを try-catch ブロックにラップして、エラー処理も実装します。 アプリケーションの要件に適合するようにコードを変更できます。
+**Customers** TableAdapter および **Orders** TableAdapter の `Update` メソッドを呼び出して、データベースを更新できます。 既定では、イベント ハンドラーを**保存**のボタン、<xref:System.Windows.Forms.BindingNavigator>データベースに更新を送信するためのフォームのコードに追加されます。 この手順は、正しい順序で更新プログラムを送信するコードを変更します。これにより、参照整合性エラーが発生する可能性がなくなります。 また、Update 呼び出しを try-catch ブロックにラップして、エラー処理も実装します。 アプリケーションの要件に適合するようにコードを変更できます。
 
 > [!NOTE]
 > わかりやすくするため、このチュートリアルでは、トランザクションは使用しません。 ただし、2 つを更新する、またはその他の関連テーブルには、トランザクション内ですべての更新ロジックが含まれます。 トランザクションは、すべての変更がコミットされるまでデータベースに関連するすべての変更が成功したことを保証するプロセスです。 詳細については、次を参照してください。[トランザクションと同時実行](/dotnet/framework/data/adonet/transactions-and-concurrency)します。

@@ -2,7 +2,6 @@
 title: DevEnv ProjectConfig スイッチ
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - /projectconfig Devenv switch
@@ -22,12 +21,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 44f5d4479658b450074ba35f2759a273bb584e0a
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 7ca481d23757cc9022042db42a6d4be477880367
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34764655"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53967918"
 ---
 # <a name="projectconfig-devenvexe"></a>/ProjectConfig (devenv.exe)
 
@@ -47,8 +46,8 @@ devenv SolutionName {/build|/clean|/rebuild|/deploy} SolnConfigName [/project Pr
 |/clean|ビルド時に作成されたすべての中間ファイルと出力ディレクトリを消去します。|
 |/rebuild|**/project** 引数で指定されたプロジェクトを消去してからビルドします。|
 |/deploy|ビルドまたはリビルド後にプロジェクトを展開することを指定します。|
-|*SolnConfigName*|必須。 *SolutionName* で指定されたソリューションに適用されるソリューション構成の名前。 複数のソリューション プラットフォームが利用できる場合、**"Debug\|Win32"** など、プラットフォームも指定する必要があります。|
-|*SolutionName*|必須。 ソリューション ファイルの完全パスと名前。|
+|*SolnConfigName*|必須です。 *SolutionName* で指定されたソリューションに適用されるソリューション構成の名前。 複数のソリューション プラットフォームが利用できる場合、**"Debug\|Win32"** など、プラットフォームも指定する必要があります。|
+|*SolutionName*|必須です。 ソリューション ファイルの完全パスと名前。|
 |/project *ProjName*|任意。 ソリューション内のプロジェクト ファイルのパスと名前です。 *SolutionName* フォルダーからプロジェクト ファイルへの相対パス、プロジェクトの表示名、プロジェクト ファイルの完全なパスと名前を入力できます。|
 |/projectconfig *ProjConfigName*|任意。 **/project** 引数で指定されたプロジェクトに適用されるプロジェクトのビルド構成の名前。 複数のソリューション プラットフォームが利用できる場合、**"Debug\|Win32"** など、プラットフォームも指定する必要があります。|
 

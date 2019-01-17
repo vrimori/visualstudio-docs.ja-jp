@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextAuthor::ReplaceText |Microsoft ドキュメント
+title: IDebugDocumentTextAuthor::ReplaceText |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6aa7ef34d035ad89a096414c285b4f66a4f4fa1e
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 579d0ef243de7cd9bfcb821e75aa5ca213712a88
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24726702"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54090598"
 ---
 # <a name="idebugdocumenttextauthorreplacetext"></a>IDebugDocumentTextAuthor::ReplaceText
-ドキュメント内のテキストを置換します。  
+ドキュメントのテキストに置き換えます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT ReplaceText(  
    ULONG    cCharacterPosition,  
    ULONG    cNumToReplace,  
@@ -46,17 +46,17 @@ HRESULT ReplaceText(
  [in]置換する文字の数。  
   
  `pcharText[]`  
- [in]古い文字を置き換える新しい文字を含んでいるバッファー。  
+ [in]古い文字を置換する新しい文字を格納するバッファー。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、ドキュメント内のテキストを置き換えます。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、ドキュメントのテキストを置き換えます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugDocumentTextAuthor インターフェイス](../../winscript/reference/idebugdocumenttextauthor-interface.md)

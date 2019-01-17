@@ -2,7 +2,6 @@
 title: コード ナビゲーション コマンド
 ms.date: 08/14/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - code editor, navigation
@@ -20,12 +19,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ac6fb3ae1f8c4e7fb48c9cd9a0d2b77cb875094
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 467dec8039a50b225bda53de9b19b8539f6604be
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49894470"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53877433"
 ---
 # <a name="navigate-code"></a>コード間の移動
 
@@ -78,19 +77,19 @@ Visual Studio には、エディター内でコード間を移動するための
 
 移動コマンドには、次のコマンドがあります。これらは **[編集]** メニューの **[移動先]** で使用できます。
 
-- **[指定行へ移動]** (**Ctrl** + **G**): アクティブなドキュメントで、指定した行番号に移動します。
+- **[指定行へ移動]** (**Ctrl** + **G**):アクティブなドキュメントで、指定した行番号に移動します。
 
-- **[すべてに移動]** (**Ctrl** + **T** または **Ctrl** + **,**): 指定した行、型、ファイル、メンバー、またはシンボルに移動します。
+- **[すべてに移動]** (**Ctrl** + **T** または **Ctrl** + **,**):指定した行、型、ファイル、メンバー、またはシンボルに移動します。
 
-- **[ファイルに移動]** (**Ctrl** + **1**、**Ctrl** + **F**): ソリューション内の指定したファイルに移動します。
+- **[ファイルに移動]** (**Ctrl** + **1**、**Ctrl** + **F**):ソリューション内の指定したファイルに移動します。
 
-- **[最近使ったファイルに移動]** (**Ctrl** + **1**、**Ctrl** + **R**): ソリューション内の指定した、最近アクセスしたファイルに移動します (Visual Studio 2017 バージョン 15.8 の新機能)。
+- **[最近使ったファイルに移動]** (**Ctrl** + **1**、**Ctrl** + **R**):ソリューション内の指定した、最近アクセスしたファイルに移動します (Visual Studio 2017 バージョン 15.8 の新機能)。
 
-- **[型に移動]** (**Ctrl** + **1**、**Ctrl** + **T**): ソリューション内の指定した型に移動します。
+- **[型に移動]** (**Ctrl** + **1**、**Ctrl** + **T**):ソリューション内の指定した型に移動します。
 
-- **[メンバーに移動]** (**Ctrl** + **1**、**Ctrl** + **M**): ソリューション内の指定したメンバーに移動します。
+- **[メンバーに移動]** (**Ctrl** + **1**、**Ctrl** + **M**):ソリューション内の指定したメンバーに移動します。
 
-- **[シンボルに移動]** (**Ctrl** + **1**、**Ctrl** + **S**): ソリューション内の指定したシンボルに移動します。
+- **[シンボルに移動]** (**Ctrl** + **1**、**Ctrl** + **S**):ソリューション内の指定したシンボルに移動します。
 
 Visual Studio 2017 バージョン 15.8 以降では、次の **[移動]** ナビゲーション コマンドも使用できます。
 
@@ -111,7 +110,7 @@ Visual Studio 2017 バージョン 15.8 以降では、次の **[移動]** ナ�
 
 ## <a name="peek-definition"></a>定義をここに表示
 
-[定義をここに表示] では、コード エディター内で現在の場所から移動することなく、選択した要素の定義がウィンドウに表示されます。 詳細については、「[方法: [定義をここに表示] を使用してコードを表示および編集する](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)」と「[[定義へ移動] と [定義をここに表示]](../ide/go-to-and-peek-definition.md)」を参照してください。
+[定義をここに表示] では、コード エディター内で現在の場所から移動することなく、選択した要素の定義がウィンドウに表示されます。 詳細については、「[方法 :[定義をここに表示] を使用してコードを表示および編集する](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)」と「[[定義へ移動] と [定義をここに表示]](../ide/go-to-and-peek-definition.md)」を参照してください。
 
 入力 | 関数
 ------------ | ---
@@ -150,7 +149,7 @@ Visual Basic コード ファイル内でカーソルをメソッド間で移動
 
 ## <a name="enhanced-scroll-bar"></a>強化されたスクロール バー
 
-コード ウィンドウの強化されたスクロール バーを使用すると、コード全体を見渡すことができます。 マップ モードでは、スクロール バーでカーソルを上下に移動するときに、コードのプレビューを見ることができます。 詳細については、「[方法: ScrollBar のカスタマイズによるコードの追跡](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md)」を参照してください。
+コード ウィンドウの強化されたスクロール バーを使用すると、コード全体を見渡すことができます。 マップ モードでは、スクロール バーでカーソルを上下に移動するときに、コードのプレビューを見ることができます。 詳細については、「[方法 :ScrollBar のカスタマイズによるコードの追跡](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md)」を参照してください。
 
 ## <a name="codelens-information"></a>CodeLens 情報
 

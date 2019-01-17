@@ -1,8 +1,6 @@
 ---
 title: '方法: ClickOnce アプリケーションの発行 ページの指定 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,17 +17,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 265c1d777da7703dbaa0dd7146a3142e8b7ddffa
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
-ms.translationtype: MT
+ms.openlocfilehash: 6397944a39a0424211c57ddfe1ad045fce730ec3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39077982"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53911664"
 ---
-# <a name="how-to-specify-a-publish-page-for-a-clickonce-application"></a>方法: ClickOnce アプリケーションの発行ページを指定
+# <a name="how-to-specify-a-publish-page-for-a-clickonce-application"></a>方法: ClickOnce アプリケーションの発行ページを指定する
 発行するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションでは、既定の Web ページ (publish.htm) が生成され、アプリケーションと共に発行します。 このページは、アプリケーション、アプリケーションまたはすべての前提条件のインストールへのリンクおよび説明するヘルプ トピックへのリンクの名前を含む[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]します。 **発行ページ**、プロジェクトのプロパティを使用するための Web ページの名前を指定する、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション。  
   
- [発行] ページを指定すると、公開すると、次回そのはファイルにコピー発行場所です。できません、もう一度発行する場合は上書きされます。 ページの外観をカスタマイズする場合は、変更内容を失うことがなく実行できます。 詳細については、次を参照してください。[方法: ClickOnce の既定の Web ページをカスタマイズ](../deployment/how-to-customize-the-default-web-page-for-a-clickonce-application.md)します。  
+ [発行] ページを指定すると、公開すると、次回そのはファイルにコピー発行場所です。できません、もう一度発行する場合は上書きされます。 ページの外観をカスタマイズする場合は、変更内容を失うことがなく実行できます。 詳細については、「[方法 :ClickOnce の既定の Web ページのカスタマイズ](../deployment/how-to-customize-the-default-web-page-for-a-clickonce-application.md)」を参照してください。  
   
  **発行ページ**プロパティを設定することができます、**発行オプション**からアクセスできるダイアログ ボックス、**発行**のウィンドウ、**プロジェクト デザイナー**.  
   
@@ -39,7 +37,7 @@ ms.locfileid: "39077982"
   
 2.  選択、**発行**ウィンドウ。  
   
-3.  **オプション**ボタンをクリックして、**発行オプション** ダイアログ ボックスを開きます。  
+3.  をクリックして、**オプション**ボタンをクリックする、**発行オプション** ダイアログ ボックス。  
   
 4.  クリックして**展開**します。  
   
@@ -53,13 +51,13 @@ ms.locfileid: "39077982"
   
 2.  選択、**発行**ウィンドウ。  
   
-3.  **オプション**ボタンをクリックして、**発行オプション** ダイアログ ボックスを開きます。  
+3.  をクリックして、**オプション**ボタンをクリックする、**発行オプション** ダイアログ ボックス。  
   
 4.  クリックして**展開**します。  
   
 5.  **発行オプション** ダイアログ ボックスで、クリア、**発行後に web ページを開いている配置**チェック ボックスをオンします。  
   
 ## <a name="see-also"></a>関連項目  
- [ClickOnce アプリケーションを発行します。](../deployment/publishing-clickonce-applications.md)   
- [方法: 発行ウィザードを使用して ClickOnce アプリケーションの発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
+ [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
+ [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
  [方法: ClickOnce の既定の Web ページのカスタマイズ](../deployment/how-to-customize-the-default-web-page-for-a-clickonce-application.md)

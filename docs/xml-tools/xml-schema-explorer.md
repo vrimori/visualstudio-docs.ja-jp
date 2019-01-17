@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eb49560074b3a4c43efe13ea568207b52536e562
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 37733ddb09fb726c5407888af91db2bc32713799
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53918980"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54268501"
 ---
 # <a name="xml-schema-explorer"></a>XML スキーマ エクスプローラー
 
@@ -40,7 +40,7 @@ ms.locfileid: "53918980"
 
 -   使用している場合、[スタート ビュー](../xml-tools/start-view.md)、クリックして、 **XML スキーマ エクスプ ローラー**リンク。
 
--   使用している場合、[グラフ ビュー](../xml-tools/graph-view.md)または[コンテンツ モデル ビュー](../xml-tools/content-model-view.md)ワークスペースにノードがあるとは、コンテキスト メニューを使用して、 **XML スキーマ エクスプ ローラー**します。
+-   使用している場合、[グラフ ビュー](../xml-tools/graph-view.md)または[コンテンツ モデル ビュー](../xml-tools/content-model-view.md)ワークスペースにノードがあるとは、コンテキスト (右クリック) メニューを使用して、 **XML スキーマ エクスプ ローラー**します。
 
 -   選択することも、 **XML スキーマ エクスプ ローラー**から、**ビュー**メニュー。
 

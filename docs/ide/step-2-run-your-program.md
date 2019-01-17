@@ -1,9 +1,7 @@
 ---
-title: '手順 2: プログラムの実行'
-ms.custom: ''
+title: '手順 2: プログラムを実行する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 9a8fe90e-c97b-4e98-b6c8-0c6b3962c49d
 author: TerryGLee
@@ -11,17 +9,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 04c3eb73949ab84548c6eb58e7cf4389dbeb8fc4
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: d20e17d8d953e083d878530aa971c714db72241f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39179061"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53835725"
 ---
-# <a name="step-2-run-your-program"></a>手順 2: プログラムの実行
+# <a name="step-2-run-your-program"></a>手順 2: プログラムを実行する
 新しいソリューションを作成すると、実際には実行するプログラムが作成されます。 まだ実行される処理は少なく、タイトル バーに **Form1** と表示された空のウィンドウを表示するだけのプログラムですが、 もうおわかりのように実行することはできます。
 
- ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 1](http://go.microsoft.com/fwlink/?LinkId=205209)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 1](http://go.microsoft.com/fwlink/?LinkId=205199)」をご覧ください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
+ ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、次をご覧ください。「[Tutorial 1:Create a picture viewer in Visual Basic - Video 1 (チュートリアル 1: Visual Basic でピクチャ ビューアーを作成する - ビデオ 1)](http://go.microsoft.com/fwlink/?LinkId=205209)」または「[Tutorial 1:Create a picture viewer in C# - Video 1 (チュートリアル 1: C# でピクチャ ビューアーを作成する - ビデオ 1)](http://go.microsoft.com/fwlink/?LinkId=205199)」。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
 
 ## <a name="to-run-your-program"></a>プログラムを実行するには
 
@@ -55,10 +53,10 @@ ms.locfileid: "39179061"
     -   **[Form1]** ウィンドウの上隅にある **X** ボタンを選択します。
 
     > [!NOTE]
-    >  IDE 内からプログラムを実行する作業は、通常はプログラムでバグ (エラー) を特定して修正することが目的であるためデバッグと呼ばれます。 このプログラムは小さくて、実際には何も実行しませんが、それでも実際のプログラムです。 同じ手順で他のプログラムを実行し、デバッグします。 デバッグについて詳しくは、「[デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)」をご覧ください。
+    >  IDE 内からプログラムを実行する作業は、通常はプログラムでバグ (エラー) を特定して修正することが目的であるためデバッグと呼ばれます。 このプログラムは小さくて、実際には何も実行しませんが、それでも実際のプログラムです。 同じ手順で他のプログラムを実行し、デバッグします。 デバッグの詳細については、「[デバッガーでのはじめに](../debugger/debugger-feature-tour.md)」をご覧ください。
 
 ## <a name="to-continue-or-review"></a>続行または確認するには
 
--   チュートリアルの次の手順に進む場合は、「[手順 3: フォームのプロパティの設定](../ide/step-3-set-your-form-properties.md)」をご覧ください。
+-   チュートリアルの次の手順に進むには、「[手順 3:フォームのプロパティの設定](../ide/step-3-set-your-form-properties.md)」をご覧ください。
 
--   チュートリアルの前の手順に戻る場合は、「[手順 1: Windows フォーム アプリケーション プロジェクトの作成](../ide/step-1-create-a-windows-forms-application-project.md)」をご覧ください。
+-   チュートリアルの前の手順に戻るには、「[手順 1:Windows フォーム アプリケーション プロジェクトの作成](../ide/step-1-create-a-windows-forms-application-project.md)」をご覧ください。

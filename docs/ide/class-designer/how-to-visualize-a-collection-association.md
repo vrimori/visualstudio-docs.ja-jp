@@ -2,7 +2,6 @@
 title: '方法: コレクションの関連付けをビジュアル化する (クラス デザイナー)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.collectionassociationline
@@ -17,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 24dc8b21fbdacb5da2795b215cd8503b08cf3449
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: acf1fd75770888f492833235f09a381d0836be34
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33995882"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53925395"
 ---
 # <a name="how-to-visualize-a-collection-association-in-class-designer"></a>方法: クラス デザイナーでコレクションの関連付けをビジュアル化する
 
@@ -42,4 +41,3 @@ ms.locfileid: "33995882"
 
 - [方法: 型の間の関連付けを作成する](how-to-create-associations-between-types.md)
 - [クラスおよび型のデザイン](designing-and-viewing-classes-and-types.md)
-- [型およびリレーションシップの表示](viewing-types-and-relationships.md)

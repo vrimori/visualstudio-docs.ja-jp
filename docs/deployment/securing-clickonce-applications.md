@@ -1,8 +1,6 @@
 ---
 title: ClickOnce アプリケーションのセキュリティ保護 |Microsoft Docs
-ms.custom: ''
 ms.date: 02/17/2017
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,14 +16,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 56a49bf9cbf2c43cd7692592b53b9aca2b256313
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
-ms.translationtype: MT
+ms.openlocfilehash: 16ca92b1e34e1cec4426da368fb9a5c557db65b8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39080341"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53944273"
 ---
-# <a name="secure-clickonce-applications"></a>セキュリティで保護された ClickOnce アプリケーション
+# <a name="secure-clickonce-applications"></a>ClickOnce アプリケーションのセキュリティ保護
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションは、保護されているリソースや操作に対して、コードが持つアクセス権を制限できるようにするための .NET Framework のコード アクセス セキュリティ制約を前提としています。 このため、コード アクセス セキュリティの影響を理解し、それに応じて [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを作成することが重要です。 アプリケーションでは、完全な信頼ゾーンまたは部分信頼ゾーン (インターネット ゾーンとイントラネット ゾーンなど) を使用して、アクセスを制限できます。  
   
  さらに、ClickOnce では、アプリケーションの発行元の信頼性を検証し、アプリケーションおよび配置マニフェストに署名してファイルが改ざんされていないことを証明するときに証明書を使用します。 署名を行うと、マニフェストの生成後にアプリケーション ファイルをより簡単に変更できるようになりますが、署名は省略可能な手順です。 ただし、署名付きマニフェストがないと、アプリケーション インストーラーが man-in-the-middle セキュリティ攻撃で改ざんされないようにすることが難しくなります。 したがって、アプリケーションをセキュリティで保護するために、アプリケーション マニフェストと配置マニフェストに署名することをお勧めします。  
@@ -40,25 +38,25 @@ ms.locfileid: "39080341"
 |ネットワーク ファイル共有からのインストール|ローカル イントラネット ゾーン|  
 |CD-ROM からのインストール|Full Trust|  
   
- 既定のアクセス許可は、アプリケーションの元のバージョンがどこから配置されたかによって異なります。このアプリケーションを更新する際、そのアクセス許可が継承されます。 アプリケーションが Web またはネットワーク上の場所からの更新プログラムをチェックするように構成されていて、新しいバージョンが使用できるようになっている場合には、元のインストールが完全信頼のアクセス許可ではなく、インターネット ゾーンまたはイントラネット ゾーンのアクセス許可を継承する可能性があります。 ユーザーに対する要求が行われないようにするために、システム管理者は、信頼された発行元として特定のアプリケーション発行元を定義する ClickOnce 配置ポリシーを指定できます。 このポリシーが配置されるコンピューター上では、アクセス許可は自動的に付与され、ユーザーへの要求は行われません。 詳細については、「 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)」を参照してください。 信頼されたアプリケーションの配置を構成するには、コンピューター レベルまたはエンタープライズ レベルに証明書をインストールできます。 詳細については、「 [方法: ClickOnce アプリケーション用の信頼された発行者をクライアント コンピューターに追加する](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)」を参照してください。  
+ 既定のアクセス許可は、アプリケーションの元のバージョンがどこから配置されたかによって異なります。このアプリケーションを更新する際、そのアクセス許可が継承されます。 アプリケーションが Web またはネットワーク上の場所からの更新プログラムをチェックするように構成されていて、新しいバージョンが使用できるようになっている場合には、元のインストールが完全信頼のアクセス許可ではなく、インターネット ゾーンまたはイントラネット ゾーンのアクセス許可を継承する可能性があります。 ユーザーに対する要求が行われないようにするために、システム管理者は、信頼された発行元として特定のアプリケーション発行元を定義する ClickOnce 配置ポリシーを指定できます。 このポリシーが配置されるコンピューター上では、アクセス許可は自動的に付与され、ユーザーへの要求は行われません。 詳細については、「 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)」を参照してください。 信頼されたアプリケーションの配置を構成するには、コンピューター レベルまたはエンタープライズ レベルに証明書をインストールできます。 詳細については、「[方法 :ClickOnce アプリケーション用の信頼された発行者をクライアント コンピューターに追加する](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)」を参照してください。  
   
 ## <a name="code-access-security-policies"></a>コード アクセス セキュリティ ポリシー  
- アプリケーションのアクセス許可は、設定によって決まりますが、 [ \<trustInfo > 要素](../deployment/trustinfo-element-clickonce-application.md)アプリケーション マニフェストの要素。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、プロジェクトの **"セキュリティ"** プロパティ ページの設定に基づいて、この情報が自動的に生成されます。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションには、アプリケーションが要求するアクセス許可だけが与えられます。 たとえば、ファイルへのアクセスに完全信頼のアクセス許可が必要な場合、アプリケーションがファイルへのアクセス許可を要求すると、完全信頼ではなくファイルへのアクセス許可だけが与えられます。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを開発するときは、アプリケーションに必要な特定のアクセス許可のみを要求する必要があります。 ほとんどの場合は、インターネット ゾーンまたはローカル イントラネット ゾーンを使用して、アプリケーションを部分信頼に制限できます。 詳細については、次を参照してください。[方法: ClickOnce アプリケーションのセキュリティ ゾーン設定](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)します。 アプリケーションにカスタムのアクセス許可が必要な場合、カスタム ゾーンを作成できます。 詳細については、次を参照してください。[方法: ClickOnce アプリケーションのカスタム アクセス許可を設定](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)します。  
+ アプリケーションのアクセス許可は、設定によって決まりますが、 [ \<trustInfo > 要素](../deployment/trustinfo-element-clickonce-application.md)アプリケーション マニフェストの要素。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、プロジェクトの **"セキュリティ"** プロパティ ページの設定に基づいて、この情報が自動的に生成されます。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションには、アプリケーションが要求するアクセス許可だけが与えられます。 たとえば、ファイルへのアクセスに完全信頼のアクセス許可が必要な場合、アプリケーションがファイルへのアクセス許可を要求すると、完全信頼ではなくファイルへのアクセス許可だけが与えられます。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを開発するときは、アプリケーションに必要な特定のアクセス許可のみを要求する必要があります。 ほとんどの場合は、インターネット ゾーンまたはローカル イントラネット ゾーンを使用して、アプリケーションを部分信頼に制限できます。 詳細については、「[方法 :ClickOnce アプリケーションのセキュリティ ゾーンを設定する](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)」を参照してください。 アプリケーションにカスタムのアクセス許可が必要な場合、カスタム ゾーンを作成できます。 詳細については、「[方法 :ClickOnce アプリケーションのカスタム アクセス許可を設定する](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)  
   
  アプリケーションの配置元ゾーンに与えられた既定のアクセス許可セットに含まれないアクセス許可を追加した場合、エンド ユーザーに対して、インストール時または更新時にアクセス許可の付与を求めるプロンプトが表示されます。 ユーザーに対する要求が行われないようにするために、システム管理者は、信頼された発行元として特定のアプリケーション発行元を定義する ClickOnce 配置ポリシーを指定できます。 このポリシーが配置されるコンピューター上では、アクセス許可は自動的に付与され、ユーザーへの要求は行われません。  
   
- 開発者は、開発するアプリケーションが適切なアクセス許可で実行されることを確認する必要があります。 実行時にアプリケーションでゾーン以外のアクセス許可が必要な場合、セキュリティの例外が表示されることがあります。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって、対象のセキュリティ ゾーンでアプリケーションをデバッグできます。 また、セキュリティで保護されたアプリケーションの開発に役立ちます。 詳細については、次を参照してください。[方法: ClickOnce アプリケーションをデバッグ アクセス許可の制限](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)します。  
+ 開発者は、開発するアプリケーションが適切なアクセス許可で実行されることを確認する必要があります。 実行時にアプリケーションでゾーン以外のアクセス許可が必要な場合、セキュリティの例外が表示されることがあります。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって、対象のセキュリティ ゾーンでアプリケーションをデバッグできます。 また、セキュリティで保護されたアプリケーションの開発に役立ちます。 詳細については、「[方法 :アクセス許可が制限された ClickOnce アプリケーションをデバッグする](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)」を参照してください。  
   
- コード アクセス セキュリティと ClickOnce の詳細については、次を参照してください。 [ClickOnce アプリケーションのコード アクセス セキュリティ](../deployment/code-access-security-for-clickonce-applications.md)します。  
+ コード アクセス セキュリティと ClickOnce の詳細については、「[ClickOnce アプリケーションのコード アクセス セキュリティ](../deployment/code-access-security-for-clickonce-applications.md)」を参照してください。  
   
-## <a name="code-signing-certificates"></a>コード署名証明書  
+## <a name="code-signing-certificates"></a>証明書のコード署名  
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] による配置を使用するアプリケーションを発行するには、アプリケーション マニフェストと配置マニフェストに公開キーと秘密キーのペアを使用して署名できます。 マニフェストに署名するツールは、 **プロジェクト デザイナー** の **[署名]** ページで使用できます。 詳細については、「 [Signing Page, Project Designer](../ide/reference/signing-page-project-designer.md)」を参照してください。 別の方法として、発行ウィザードを使用して、発行プロセスの最中にキー ファイルでマニフェストに署名することもできます。  
   
  マニフェストの署名後、Authenticode 署名に基づいた発行元情報は、インストール時に [アクセス許可] ダイアログ ボックスに表示され、アプリケーションが信頼された発行元から発行されていることをユーザーに示します。  
   
  ClickOnce と証明書の詳細については、「 [ClickOnce and Authenticode](../deployment/clickonce-and-authenticode.md)」を参照してください。  
   
-## <a name="aspnet-form-based-authentication"></a>ASP.NET フォーム ベース認証  
+## <a name="aspnet-form-based-authentication"></a>ASP.NET フォーム ベースの認証  
  各ユーザーがアクセスできる配置を制御する場合は、Web サーバーに配置される [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに対する匿名アクセスを許可しないでください。 代わりに Windows 認証を使用して、インストールした配置に対するユーザーのアクセスをユーザーの ID に基づいて許可します。  
   
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] は永続的なクッキーを使用するため、ASP.NET フォーム ベースの認証はサポートしません。このクッキーは Internet Explorer のキャッシュに存在し、ハックされる可能性があるため、セキュリティ上のリスクがあります。 このため、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを配置する場合、Windows 認証以外の認証シナリオはサポートされません。  
@@ -68,16 +66,16 @@ ms.locfileid: "39080341"
   
  `http://servername.adatum.com/WindowsApp1.application?username=joeuser`  
   
- 既定では、クエリ文字列の引数が無効になります。 これらを有効にするには、アプリケーションの配置マニフェストで `trustUrlParameters` 属性を設定する必要があります。 この値は、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] および MageUI.exe から設定できます。 受け渡しを有効にする方法の詳細な手順のクエリ文字列を参照してください[方法: オンライン ClickOnce アプリケーションでは、クエリ文字列の情報を取得](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md)します。  
+ 既定では、クエリ文字列の引数が無効になります。 これらを有効にするには、アプリケーションの配置マニフェストで `trustUrlParameters` 属性を設定する必要があります。 この値は、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] および MageUI.exe から設定できます。 受け渡しを有効にする方法の詳細な手順のクエリ文字列を参照してください[方法。オンライン ClickOnce アプリケーションでクエリ文字列を取得する](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md)  
   
  クエリ文字列を通じて取得された引数は、必ず安全であることを確認してからデータベースまたはコマンド ラインに渡してください。 安全でない引数とは、悪意のあるユーザーがアプリケーションを操作して任意のコマンドを実行できるようにするデータベースまたはコマンド ライン エスケープ文字が含まれた引数のことです。  
   
 > [!NOTE]
 >  クエリ文字列引数は、起動時に [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに引数を渡す唯一の手段です。 コマンド ラインから [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに引数を渡すことはできません。  
   
-## <a name="deploying-obfuscated-assemblies"></a>難読化されたアセンブリを展開します。  
+## <a name="deploying-obfuscated-assemblies"></a>難読化されたアセンブリの配置  
  Visual Studio が含まれていますが、無料[PreEmptive Protection - Dotfuscator Community Edition](../ide/dotfuscator/index.md)コードの難読化し、アクティブな保護対策の ClickOnce アプリケーションを保護するために使用できます。  詳細については、「 [Dotfuscator Community Edition のユーザー ガイドの ClickOnce セクション](https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/advanced_clickonce.html)します。
 
 ## <a name="see-also"></a>関連項目  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
- [ClickOnce 配置ストラテジを選択します。](../deployment/choosing-a-clickonce-deployment-strategy.md)
+ [ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)

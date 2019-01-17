@@ -2,8 +2,7 @@
 title: ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2017
-ms.technology:
-- tgt-pltfrm-cross-plat
+ms.technology: tgt-pltfrm-cross-plat
 ms.topic: conceptual
 ms.assetid: eac59cb6-f12e-4a77-9953-6d62b164a643
 author: stevehoag
@@ -11,12 +10,12 @@ ms.author: shoag
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: de4306b2fa56bf00fd51a741441395b90ed314e5
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: a7f0279249be7b5a48b342f1de26179af7b89f80
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44280806"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53843792"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発
 ユニバーサル Windows プラットフォームと 1 つの Windows コアを使用することで、電話やデスクトップなどの Windows 10 デバイスで同じアプリを実行できます。 これらのユニバーサル Windows アプリは、Visual Studio とユニバーサル Windows アプリ開発ツールを使用して作成します。
@@ -33,7 +32,7 @@ ms.locfileid: "44280806"
 
 ユニバーサル Windows プラットフォームとは、簡単にいえば、コントラクトとバージョンのコレクションです。 これらにより、アプリを実行する対象となる場所を指定できます。 オペレーティング システムを対象にすることはなくなり、1 つまたは複数のデバイス ファミリを対象にするようになります。 詳しくは、「[ユニバーサル Windows プラットフォームの紹介](/windows/uwp/get-started/universal-application-platform-guide)」をご覧ください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
  ユニバーサル Windows アプリの開発ツールには、別のデバイス上のアプリの外観を確認する際に使用できるエミュレーターが付属しています。 これらのエミュレーターを使用する場合は、このソフトウェアを物理マシンにインストールする必要があります。 その物理マシンでは、Windows 8.1 (x64) Professional エディション以上が実行され、クライアント Hyper-V および第 2 レベルのアドレス変換 (SLAT) をサポートするプロセッサが搭載されている必要があります。 Visual Studio が仮想マシンにインストールされている場合は、エミュレーターを使用できません。
 
  必要なソフトウェアの一覧を次に示します。

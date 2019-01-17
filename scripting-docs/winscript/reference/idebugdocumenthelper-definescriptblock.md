@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::DefineScriptBlock |Microsoft ドキュメント
+title: Idebugdocumenthelper::definescriptblock |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3b6ec86dacc2e3a8f3d9e28a6db744b778ff01eb
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0037df270bc95faaba4d2f04cce65902d08dc6e9
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727002"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54087998"
 ---
 # <a name="idebugdocumenthelperdefinescriptblock"></a>IDebugDocumentHelper::DefineScriptBlock
-ヘルパーに渡し、特定の範囲の文字が、指定されたスクリプト エンジンによって処理されるスクリプト ブロックを示します。  
+ヘルパーに特定の範囲の文字は、指定されたスクリプト エンジンによって処理されるスクリプト ブロックであることを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT DefineScriptBlock(  
    ULONG           ulCharOffset,  
    ULONG           cChars,  
@@ -42,7 +42,7 @@ HRESULT DefineScriptBlock(
   
 #### <a name="parameters"></a>パラメーター  
  `ulCharOffset`  
- [in]スクリプト ブロックの先頭の場所です。  
+ [in]スクリプト ブロックの先頭の位置。  
   
  `cChars`  
  [in]スクリプト ブロック内の文字の数。  
@@ -51,7 +51,7 @@ HRESULT DefineScriptBlock(
  [in]このスクリプト ブロックのスクリプト エンジンです。  
   
  `fScriptlet`  
- [in]スクリプト ブロックがスクリプトレットであるかを示すフラグです。  
+ [in]スクリプト ブロックがスクリプトレットを示すフラグです。  
   
  `pdwSourceContext`  
  [out]スクリプト ブロックのソース コンテキスト。  
@@ -59,18 +59,18 @@ HRESULT DefineScriptBlock(
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- スマート ホストは、そのドキュメントには、埋め込みのスクリプト ブロックが含まれている場合、このメソッドを使用できます。 言語エンジンは、そのコードには、他の言語の埋め込みのスクリプトが含まれている場合、このメソッドを使用できます。  
+## <a name="remarks"></a>Remarks  
+ スマート ホストは、そのドキュメントには、埋め込みスクリプト ブロックが含まれている場合、このメソッドを使用できます。 言語エンジンは、そのコードには、他の言語の埋め込みスクリプトが含まれている場合、このメソッドを使用できます。  
   
- スクリプト エンジンは、すべての構文の色分けやコード コンテキスト参照、スクリプト ブロックで行います。  
+ スクリプト エンジンはすべての構文の色分けやコード コンテキスト参照スクリプト ブロックにします。  
   
- `DefineScriptBlock`テキストを追加した後、メソッドを呼び出す必要があります (たとえばを使用して、`IDebugDocumentHelper::AddDBCSText`メソッド) スクリプトの前にブロックが解析されましたが、(などを使用して、`IActiveScriptParse ::ParseScriptText`メソッド)。  
+ `DefineScriptBlock`テキストを追加した後、メソッドを呼び出す必要があります (を使用するなど、`IDebugDocumentHelper::AddDBCSText`メソッド) スクリプトの前にブロックが解析されましたが、(を使用するなど、`IActiveScriptParse ::ParseScriptText`メソッド)。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugDocumentHelper インターフェイス](../../winscript/reference/idebugdocumenthelper-interface.md)   
- [IDebugDocumentHelper::AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
+ [Idebugdocumenthelper::adddbcstext](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
  [IDebugDocumentHelper::AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)

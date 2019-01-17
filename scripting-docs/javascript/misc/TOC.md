@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ae9e416186764e447065061aad4d0449eefb7b1d
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54348959"
+---
 # ['{' が必要です](expected-left-curly-brace.md)
 # [識別子、文字列、または数値が必要です](expected-identifier-string-or-number.md)
 # [関数が必要です。](function-expected.md)

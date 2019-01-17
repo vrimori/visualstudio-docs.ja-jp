@@ -1,8 +1,6 @@
 ---
 title: .NET メモリの割り当ておよび有効期間データの収集 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - .NET memory profiling method
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2484072a0f85b002ff2e59512f44ca0826540fd3
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 2095b06347c577811cdeb91d0a9039a140758c86
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43775207"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53898048"
 ---
 # <a name="collect-net-memory-allocation-and-lifetime-data"></a>.NET メモリの割り当てと有効期間データの収集
 
@@ -74,13 +72,13 @@ Visual Studio プロファイリング ツールは、.NET メモリ割り当て
 
 |タスク|関連するコンテンツ|
 |----------|---------------------|
-|**[バイナリ]** ページで、モジュールのインストルメント化されたコピーの場所を指定します。 既定では、元のバイナリはバックアップ フォルダーに移動されます。|- [方法 : インストルメント化されたバイナリを再配置する](../profiling/how-to-relocate-instrumented-binaries.md)|
-|**[インストルメンテーション]** ページで、プロファイリングのオーバーヘッドを低減するために小規模関数を除外し、ASP.NET Web ページで JavaScript コードをプロファイルし、インストルメンテーション処理の前と後にコマンド プロンプトで実行するコマンドを指定します。|- [方法: インストルメンテーションで短い関数を除外または含める](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)<br />- [方法: Web ページ内の JavaScript コードをプロファイリングする](../profiling/how-to-profile-javascript-code-in-web-pages.md)<br />- [方法 : インストルメント化前のコマンドおよびインストルメント化後のコマンドを指定する](../profiling/how-to-specify-pre-and-post-instrument-commands.md)|
-|**[CPU カウンター]** ページで、プロファイリング データを追加するプロセッサのパフォーマンス カウンターを 1 つ以上指定します。|- [方法 : CPU カウンター データを収集する](../profiling/how-to-collect-cpu-counter-data.md)|
+|**[バイナリ]** ページで、モジュールのインストルメント化されたコピーの場所を指定します。 既定では、元のバイナリはバックアップ フォルダーに移動されます。|- [方法: インストルメント化されたバイナリの再配置](../profiling/how-to-relocate-instrumented-binaries.md)|
+|**[インストルメンテーション]** ページで、プロファイリングのオーバーヘッドを低減するために小規模関数を除外し、ASP.NET Web ページで JavaScript コードをプロファイルし、インストルメンテーション処理の前と後にコマンド プロンプトで実行するコマンドを指定します。|- [方法: インストルメンテーションで短い関数を除外または含める](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)<br />- [方法: Web ページ内の JavaScript コードをプロファイリングする](../profiling/how-to-profile-javascript-code-in-web-pages.md)<br />- [方法: インストルメント前のコマンドおよびインストルメント後のコマンドを指定する](../profiling/how-to-specify-pre-and-post-instrument-commands.md)|
+|**[CPU カウンター]** ページで、プロファイリング データを追加するプロセッサのパフォーマンス カウンターを 1 つ以上指定します。|- [方法: CPU カウンター データを収集する](../profiling/how-to-collect-cpu-counter-data.md)|
 |**[詳細]** ページで、追加する VSInstr.exe オプションをすべて指定します (特定の関数を含めるオプションや特定の関数を除外するオプションなど)。 VSInstr オプションの詳細については、「[VSInstr](../profiling/vsinstr.md)」を参照してください。|- [方法: 追加のインストルメンテーション オプションを指定する](../profiling/how-to-specify-additional-instrumentation-options.md)<br />- [方法: インストルメンテーションを特定の関数に制限する](../profiling/how-to-limit-instrumentation-to-specific-functions.md)|
 
 ## <a name="see-also"></a>関連項目
 
 [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)  
-[方法 : 収集方法を選択する](../profiling/how-to-choose-collection-methods.md)  
+[方法: 収集方法を選択する](../profiling/how-to-choose-collection-methods.md)  
 [パフォーマンス セッションのプロパティ](../profiling/performance-session-properties.md)

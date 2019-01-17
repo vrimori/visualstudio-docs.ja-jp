@@ -15,12 +15,12 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 22ccc54dee335fd8c81343557d2f32c48eb30560
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 3a59f30c5b42301d29b73a4a079837423614da49
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49837920"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54087582"
 ---
 # <a name="idispatchex-interface"></a>IDispatchEx インターフェイス
 `IDispatchEx`での拡張機能、`IDispatch`スクリプト言語などの動的言語に適切なインターフェイスをサポートする機能。 このセクションについて説明します、`IDispatchEx`インターフェイス自体の間の相違点`IDispatch`と`IDispatchEx`、拡張機能の"the rationale"とします。 リーダーについて理解していることが予想`IDispatch`にアクセスし、`IDispatch`ドキュメント。  
@@ -71,7 +71,7 @@ ms.locfileid: "49837920"
   
   完全な HTML コードに示します。  
   
-```  
+```html
 <html>  
 <body>  
 <script type="text/javascript">  
@@ -102,7 +102,7 @@ test();
   
  この同じ Web ページ上のコントロールは、ブラウザーから、スクリプト エンジンにディスパッチのポインターを取得でした。 コントロールは、関数 test() を実装しでした。  
   
-```  
+```html
 <html>  
 <body>  
 <script type="text/javascript">  
@@ -138,7 +138,7 @@ function cat()
   
   テストのコントロールのコード:  
   
-```  
+```cpp
    BOOL test(IDispatchEx *pdexScript)  
    {  
       HRESULT hr;  

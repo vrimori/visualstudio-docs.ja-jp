@@ -1,8 +1,6 @@
 ---
 title: パフォーマンス ツールの概要 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started, performance
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 10c568705be09948b96f8c8b3df23be1f5e8d137
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.openlocfilehash: cf973c05e3ee70654fee1655591da11f54bc826b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948908"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53942854"
 ---
 # <a name="getting-started-with-performance-tools"></a>パフォーマンス ツールの概要
 
@@ -28,9 +26,9 @@ Visual Studio では、さまざまな方法でコード パフォーマンス �
 
 - パフォーマンス レポートには、アプリケーションの構造、ソース コードの行、プロセスがさまざまなレベルで表示されます。 パフォーマンス レポートには、特定の関数を呼び出した関数と呼び出された関数からアプリ全体のコール ツリーまで、アプリ実行データが表示されます。  
   
-プロジェクト、アプリ、ASP.NET Web サイトをすばやくプロファイルするには、**[デバッグ]**、**[パフォーマンス プロファイラー]** の順に選択し、**[パフォーマンス ウィザード]** を選択します。 詳しい手順については、[パフォーマンス プロファイリングのビギナーズ ガイド](../profiling/beginners-guide-to-cpu-sampling.md)と「[方法: Web サイトのパフォーマンス データを収集する](../profiling/how-to-collect-performance-data-for-a-web-site.md)」を参照してください。  
+プロジェクト、アプリ、ASP.NET Web サイトをすばやくプロファイルするには、**[デバッグ]**、**[パフォーマンス プロファイラー]** の順に選択し、**[パフォーマンス ウィザード]** を選択します。 詳細な手順については、[パフォーマンス プロファイリングの初心者向けガイド](../profiling/beginners-guide-to-cpu-sampling.md)と「[方法:Web サイトのパフォーマンス データを収集する](../profiling/how-to-collect-performance-data-for-a-web-site.md)」を参照してください。  
 
-パフォーマンス プロファイル セッションを手動で指定し、構成するには、**[デバッグ]**、**[プロファイラー]**、**[パフォーマンス エクスプローラー]** の順に選択します。 **[パフォーマンス エクスプローラー]** の **[ターゲット]** フォルダーと **[プロパティ]** ページを使用してセッションを構成します。 手順については、「[方法: パフォーマンス セッションを手動で作成する](../profiling/how-to-manually-create-performance-sessions.md)」を参照してください。  
+パフォーマンス プロファイル セッションを手動で指定し、構成するには、**[デバッグ]**、**[プロファイラー]**、**[パフォーマンス エクスプローラー]** の順に選択します。 **[パフォーマンス エクスプローラー]** の **[ターゲット]** フォルダーと **[プロパティ]** ページを使用してセッションを構成します。 手順については、「[方法:パフォーマンス セッションを手動で作成する](../profiling/how-to-manually-create-performance-sessions.md)」を参照してください。  
   
 **関連項目:**
   

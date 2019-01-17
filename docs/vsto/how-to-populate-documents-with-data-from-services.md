@@ -1,9 +1,6 @@
 ---
 title: '方法: サービスからデータをドキュメントに読み込む'
-ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,12 +14,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: fe69a35fb7f11eb649a45cd2d2238d1fb8e17ad1
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: e935501e2e38c7e6c3abdb1c16e351342cf52a8a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53647037"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53838295"
 ---
 # <a name="how-to-populate-documents-with-data-from-services"></a>方法: サービスからデータをドキュメントに読み込む
 
@@ -32,7 +29,7 @@ Microsoft Office のドキュメント レベルのプロジェクトでは、Wi
 
 次の例は、デザイン時にドキュメントにデータ バインド コントロールを追加する方法を示しています。 VSTO アドインにおける実行時にデータ バインド コントロールを追加する方法の例は、次を参照してください。[チュートリアル。VSTO アドイン プロジェクトでサービスからのデータにバインド](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md)します。
 
-![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:Microsoft Excel から web サービスと対話しますか。](http://go.microsoft.com/fwlink/?LinkID=130284)
+![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:。Microsoft Excel から web サービスと対話しますか。](http://go.microsoft.com/fwlink/?LinkID=130284).
 
 ## <a name="to-populate-a-document-level-project-with-data-from-a-web-service"></a>Web サービスからデータをドキュメント レベルのプロジェクトを設定するには
 

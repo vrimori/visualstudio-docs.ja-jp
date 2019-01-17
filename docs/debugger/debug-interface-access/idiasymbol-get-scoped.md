@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_scoped |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d0018bfdbf52f92a35dff3a21fb5baf71aab6639
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 11027e90e76a400b5a4c0a3ed155c53955efa558
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49860008"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53875697"
 ---
 # <a name="idiasymbolgetscoped"></a>IDiaSymbol::get_scoped
 構文のスコープを非グローバルで、ユーザー定義データ型が表示されるかどうかを指定するフラグを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49860008"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_scoped (   
+HRESULT get_scoped (   
    BOOL* pRetVal  
 );  
 ```  
@@ -42,5 +40,5 @@ HRESULT get_scoped (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティがシンボルを使用できないことを意味します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -2,7 +2,6 @@
 title: '方法: 型の間の継承を表示する (クラス デザイナー)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.AssociationTypeNotFoundError
@@ -16,16 +15,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3398a5096934397556ae1b20845153bd45a78528
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 9da919b2a3ead6ab48d199e9370c799afb9f9a65
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34000495"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53925434"
 ---
 # <a name="how-to-view-inheritance-between-types-in-class-designer"></a>方法: クラス デザイナーで型の間の継承を表示する
 
-基本型とその派生型の間に継承関係がある場合は、**クラス デザイナー**のクラス ダイアグラムでそのことがわかります。 2 つの型の間に継承関係が存在しない場合に作成する方法については、[型の間の継承を作成する方法](how-to-create-inheritance-between-types.md)に関するページをご覧ください。
+基本型とその派生型の間に継承関係がある場合は、**クラス デザイナー**のクラス ダイアグラムでそのことがわかります。 2 つの型の間に継承関係が存在しない場合に継承関係を作成するときは、[方法:型間の継承の作成](how-to-create-inheritance-between-types.md)に関するページを参照してください。
 
 ## <a name="to-find-the-base-type"></a>基本型を特定するには
 
@@ -50,4 +49,4 @@ ms.locfileid: "34000495"
 ## <a name="see-also"></a>関連項目
 
 - [方法: 型の間の関連付けを作成する](how-to-create-associations-between-types.md)
-- [型およびリレーションシップの表示](viewing-types-and-relationships.md)
+- [型およびリレーションシップの表示](designing-and-viewing-classes-and-types.md)

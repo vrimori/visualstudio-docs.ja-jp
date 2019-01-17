@@ -2,7 +2,6 @@
 title: UWP アプリのデプロイ |Microsoft Docs
 ms.custom: seodec18
 ms.date: 01/16/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -14,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: d8006fb0ddcab4ab3eeee1616632d2dc513428ba
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 38e3f53a22b7f8dfa84d327fb2c10ef5efacddd4
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056812"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53821316"
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Visual Studio から UWP アプリを展開する
 
@@ -115,8 +114,8 @@ Windows 10 のリモート デバイスで有効にする必要があります[�
 
 - JavaScript およびデバッグ プロパティ ページで、 **[アプリケーションの起動]** の値を **[はい]** に設定します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [高度なリモート配置オプション](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)
 - [インストールされているアプリケーション パッケージをデバッグする](../debugger/debug-installed-app-package.md)
-- [Visual Studio からアプリを実行](../debugger/run-store-apps-from-visual-studio.md)
+- [Visual Studio からアプリを実行](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)

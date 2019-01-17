@@ -1,9 +1,7 @@
 ---
 title: ネイティブ オブジェクトのカスタム ビューの作成
 description: Natvis フレームワークを使用して、Visual Studio がデバッガーでネイティブ型を表示する方法をカスタマイズするには
-ms.custom: ''
 ms.date: 10/31/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - natvis
@@ -15,14 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 937692f11cbd642da823d6f7d13bcd90de59b388
-ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
-ms.translationtype: MT
+ms.openlocfilehash: d91a62971db47b78b974cc2dede77d0a47b5c851
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51000862"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53821193"
 ---
-# <a name="create-custom-views-of-native-objects-in-the-debugger"></a>デバッガーでネイティブ オブジェクトのカスタム ビューを作成します。
+# <a name="create-custom-views-of-native-objects-in-the-debugger"></a>デバッガーでのネイティブ オブジェクトのカスタム ビューの作成
 
 Visual Studio *Natvis* framework ネイティブ型をなどのデバッガー変数ウィンドウに表示する方法をカスタマイズする、**ローカル**と**ウォッチ**windows、および**データヒント**します。 Natvis 視覚化は、デバッグ中に表示を作成する種類を作成できます。 
 
@@ -169,7 +167,7 @@ Natvis 視覚化では、C++ 式を使用して、表示するデータ項目を
 ##  <a name="BKMK_Syntax_reference"></a> Natvis 構文のリファレンス  
 
 ###  <a name="BKMK_AutoVisualizer"></a> AutoVisualizer の要素  
-`AutoVisualizer`要素がルート ノードの *.natvis*ファイル、および名前空間を含む`xmlns:`属性。 
+`AutoVisualizer` 要素は *.natvis* ファイルのルート ノードであり、名前空間 `xmlns:` 属性を含みます。 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
@@ -213,7 +211,7 @@ Natvis 視覚化では、C++ 式を使用して、表示するデータ項目を
 </Type>  
 ```  
 
-マクロ $t1、$t2 などを使用して、視覚化エントリでテンプレート パラメーターを参照してなど。 これらのマクロの例を参照してください、 *.natvis*ファイルが Visual Studio に付属します。  
+マクロ $t1、$t2 などを使用して、視覚化エントリでテンプレート パラメーターを参照してなど。 これらのマクロの例を見つけるには、Visual Studio に付属の *.natvis* ファイルをご覧ください。  
 
 ####  <a name="BKMK_Visualizer_type_matching"></a> ビジュアライザーと型の対応付け  
 視覚化エントリでは、検証に失敗した場合、[次へ] の使用可能な視覚化が使用されます。  
@@ -421,7 +419,7 @@ Natvis 視覚化では、C++ 式を使用して、表示するデータ項目を
 
 `ArrayItems`ノードが必要です。  
 
-- A`Size`配列の長さを解釈するデバッガーの式 (これは、整数に評価される必要があります)。  
+- デバッガーが配列の長さを解釈するための `Size` 式 (整数に評価されることが必要)。  
 - A`ValuePointer`最初の要素を指す式 (でない要素型のポインターでなければならない`void*`)。  
 
 配列の既定の下限値は 0 です。 値を上書きするには、使用、`LowerBound`要素。 *.Natvis* Visual Studio に付属のファイルには、例が用意されています。  
@@ -448,7 +446,7 @@ Natvis 視覚化では、C++ 式を使用して、表示するデータ項目を
 
 - `Direction` 配列が行優先であるか列優先の順序であるかどうかを指定します。 
 - `Rank` は配列のランクを指定します。 
-- `Size`要素は、暗黙的な`$i`パラメーターで、そのディメンション内で、配列の長さを検索する次元のインデックスに置き換えられます。 前の例では、式で`_M_extent.M_base[0]`0 番目の次元の長さを指定する必要があります`_M_extent._M_base[1]`翌月 1 日、という具合です。  
+- `Size` 要素は暗黙の `$i` パラメーターを受け取ります。このパラメーターは次元のインデックスに置き換えられて、その次元の配列の長さが特定されます。 前の例では、式で`_M_extent.M_base[0]`0 番目の次元の長さを指定する必要があります`_M_extent._M_base[1]`翌月 1 日、という具合です。  
 
 ここでは、2 次元方法`Concurrency::array`デバッガー ウィンドウで次のオブジェクト。  
 
@@ -539,8 +537,8 @@ Natvis 視覚化では、C++ 式を使用して、表示するデータ項目を
 
 `CustomListItems` 次の組み込み関数をサポートしています。
 
-- `strlen`, `wcslen`, `strnlen`, `wcsnlen`, `strcmp`, `wcscmp`, `_stricmp`, `_strcmpi`, `_wcsicmp`, `strncmp`, `wcsncmp`, `_strnicmp`, `_wcsnicmp`, `memcmp`, `memicmp`, `wmemcmp`, `strchr`, `wcschr`, `memchr`, `wmemchr`, `strstr`, `wcsstr`, `__log2`, `__findNonNull`
-- `GetLastError`, `TlsGetValue`, `DecodeHString`, `WindowsGetStringLen`, `WindowsGetStringRawBuffer`, `WindowsCompareStringOrdinal`, `RoInspectCapturedStackBackTrace`, `CoDecodeProxy`, `GetEnvBlockLength`, `DecodeWinRTRestrictedException`, `DynamicMemberLookup`, `DecodePointer`, `DynamicCast`
+- `strlen`、`wcslen`、`strnlen`、`wcsnlen`、`strcmp`、`wcscmp`、`_stricmp`、`_strcmpi`、`_wcsicmp`、`strncmp`、`wcsncmp`、`_strnicmp`、`_wcsnicmp`、`memcmp`、`memicmp`、`wmemcmp`、`strchr`、`wcschr`、`memchr`、`wmemchr`、`strstr`、`wcsstr`、`__log2`、`__findNonNull`
+- `GetLastError`、`TlsGetValue`、`DecodeHString`、`WindowsGetStringLen`、`WindowsGetStringRawBuffer`、`WindowsCompareStringOrdinal`、`RoInspectCapturedStackBackTrace`、`CoDecodeProxy`、`GetEnvBlockLength`、`DecodeWinRTRestrictedException`、`DynamicMemberLookup`、`DecodePointer`、`DynamicCast`
 - `ConcurrencyArray_OperatorBracket_idx // Concurrency::array<>::operator[index<>] and operator(index<>)`
 - `ConcurrencyArray_OperatorBracket_int // Concurrency::array<>::operator(int, int, ...)`
 - `ConcurrencyArray_OperatorBracket_tidx // Concurrency::array<>::operator[tiled_index<>] and operator(tiled_index<>)`
@@ -582,7 +580,7 @@ Natvis 視覚化では、C++ 式を使用して、表示するデータ項目を
 
  ![自動&#95;ptr&#60;ベクター&#60;int&#62; &#62;既定の展開](../debugger/media/dbg_natvis_expand_expandeditem_default.png "既定の展開")  
 
- ベクターの値を表示するに渡される変数ウィンドウで、2 つのレベルにドリルダウンする必要がある、`_Myptr`メンバー。 追加することで、`ExpandedItem`要素を削除できます、`_Myptr`変数階層から、直接、vector の要素を表示します。  
+ ベクターの値を表示するに渡される変数ウィンドウで、2 つのレベルにドリルダウンする必要がある、`_Myptr`メンバー。 `ExpandedItem` 要素を追加することで、階層から `_Myptr` 変数を排除し、vector の要素を直接表示できます。  
 
 ```xml
 <Type Name="std::auto_ptr&lt;*&gt;">  
@@ -607,10 +605,10 @@ Natvis 視覚化では、C++ 式を使用して、表示するデータ項目を
 </Type>  
 ```  
 
-**Nd**書式指定子の派生クラスに一致する視覚化をオフは、ここで必要です。 それ以外の場合、式`*(CFrameworkElement*)this`なる、`CPanel`最も適切なものと既定のビジュアル化の照合ルールを入力するため、ここでも、適用する視覚化を考えています。 使用して、 **nd**書式指定子を基底クラスに視覚化があるない場合は、基底クラスの視覚化、または既定の展開を使用するデバッガーに指示します。  
+派生クラスの視覚化の対応付けを無効にする **nd** 書式指定子がここで必要になります。 それ以外の場合、式`*(CFrameworkElement*)this`なる、`CPanel`最も適切なものと既定のビジュアル化の照合ルールを入力するため、ここでも、適用する視覚化を考えています。 使用して、 **nd**書式指定子を基底クラスに視覚化があるない場合は、基底クラスの視覚化、または既定の展開を使用するデバッガーに指示します。  
 
-####  <a name="BKMK_Synthetic_Item_expansion"></a> Synthetic item の展開  
- 中に、`ExpandedItem`要素では、データのビューを平坦化を提供、階層を排除することにより、`Synthetic`ノードと、その逆です。 式の結果が意図的な子要素を作成することができます。 人為的な要素には、独自の子要素を持つことができます。 次の例では、 `Concurrency::array` 型の視覚化で `Synthetic` ノードを使用して、診断メッセージをユーザーに表示しています。  
+####  <a name="BKMK_Synthetic_Item_expansion"></a> Synthetic Item の展開  
+ `ExpandedItem` 要素は階層を排除することでデータ ビューを平坦化しますが、`Synthetic` ノードはその反対のことを行います。 式の結果が意図的な子要素を作成することができます。 人為的な要素には、独自の子要素を持つことができます。 次の例では、 `Concurrency::array` 型の視覚化で `Synthetic` ノードを使用して、診断メッセージをユーザーに表示しています。  
 
 ```xml
 <Type Name="Concurrency::array&lt;*,*&gt;">  
@@ -632,7 +630,7 @@ Natvis 視覚化では、C++ 式を使用して、表示するデータ項目を
  ![合成要素の展開で:array](../debugger/media/dbg_natvis_expand_synthetic.png ":array で合成要素の拡張")  
 
 ###  <a name="BKMK_HResult"></a> HResult 要素 
- `HResult`要素に表示される情報をカスタマイズすることができます、 **HRESULT**のデバッガー ウィンドウにします。 `HRValue`要素は、の 32 ビット値を含める必要があります、 **HRESULT**カスタマイズです。 `HRDescription`要素には、デバッガー ウィンドウに表示する情報が含まれています。  
+ `HResult`要素に表示される情報をカスタマイズすることができます、 **HRESULT**のデバッガー ウィンドウにします。 `HRValue` 要素には、カスタマイズする **HRESULT** の 32 ビット値を格納する必要があります。 `HRDescription`要素には、デバッガー ウィンドウに表示する情報が含まれています。  
 
 ```xml
 
@@ -661,7 +659,7 @@ Natvis 視覚化では、C++ 式を使用して、表示するデータ項目を
 
 - A `ServiceId`  -  `Id`属性のペアを識別、`UIVisualizer`します。 `ServiceId`ビジュアライザーは、サービスの GUID は、パッケージが公開されます。 `Id` 1 つ以上のサービスを提供する場合、ビジュアライザーを区別する一意の識別子です。 前の例では、同じビジュアライザー サービスは、2 つのビジュアライザーを提供します。  
   
-- `MenuName`属性は、デバッガーで虫眼鏡アイコンの横にあるドロップダウン リストに表示するビジュアライザーの名前を定義します。 例えば:  
+- `MenuName`属性は、デバッガーで虫眼鏡アイコンの横にあるドロップダウン リストに表示するビジュアライザーの名前を定義します。 次に例を示します。  
 
   ![UIVisualizer メニューのショートカット メニュー](../debugger/media/dbg_natvis_vectorvisualizer.png "UIVisualizer メニューのショートカット メニュー")  
 

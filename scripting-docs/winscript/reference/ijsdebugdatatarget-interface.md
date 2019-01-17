@@ -1,5 +1,5 @@
 ---
-title: IJsDebugDataTarget インターフェイス |Microsoft ドキュメント
+title: IJsDebugDataTarget インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -12,19 +12,19 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 94e158ced0da6d59bfcadeb87bf206c94a6099ad
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: e14046443ca0560deacb6ddb6e39b1fc25d18fea
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729282"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54097423"
 ---
 # <a name="ijsdebugdatatarget-interface"></a>IJsDebugDataTarget インターフェイス
 デバッガーによって実装されており、対象のデバッガー プロセスの状態にアクセスして変更する機能を提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 IJsDebugDataTarget : public IUnknown;  
 ```  
   
@@ -44,7 +44,7 @@ IJsDebugDataTarget : public IUnknown;
 |[IJsDebugDataTarget::ReadNullTerminatedString メソッド](../../winscript/reference/ijsdebugdatatarget-readnullterminatedstring-method.md)|指定した数の文字をターゲットから読み取ります。|  
 |[IJsDebugDataTarget::WriteMemory メソッド](../../winscript/reference/ijsdebugdatatarget-writememory-method.md)|ターゲット プロセスのメモリを読み取ります。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** jscript9diag.h です  
   
 ## <a name="see-also"></a>関連項目  

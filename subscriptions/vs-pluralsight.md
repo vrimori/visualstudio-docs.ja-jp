@@ -3,18 +3,18 @@ title: Visual Studio サブスクリプションの Pluralsight 特典 | Microso
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
-ms.date: 01/04/2018
+ms.date: 12/19/2018
 ms.topic: Get-Started-Article
 description: 一部の Visual Studio サブスクリプションに含まれる Pluralsight トレーニング サブスクリプションについて説明します。
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 18de63935f4d8c85e5b5f8d2c3ca26fa4d09b4fc
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: b30096d3c0217c169d107dc882103f0468e57278
+ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895354"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53740339"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Pluralsight トレーニング特典
 
@@ -71,8 +71,8 @@ ms.locfileid: "52895354"
 
 |                          サブスクリプション レベル                          |     チャネル      |    特長    |   更新可能かどうか   |
 |----------------------------------------------------------------------|-------------------|---------------|----------------|
-|          Visual Studio Enterprise (標準、年間クラウド)           | VL、Azure、リテール |   6 か月    | ×<sup>2</sup> |
-|         Visual Studio Professional (標準、年間クラウド)          | VL、Azure、リテール |   3 か月    | ×<sup>2</sup> |
+|          Visual Studio Enterprise (Standard)           | VL、Azure、リテール |   6 か月    | ×<sup>2</sup> |
+|         Visual Studio Professional (Standard)          | VL、Azure、リテール |   3 か月    | ×<sup>2</sup> |
 |              Visual Studio Test Professional (標準)              |    VL、リテール     |   3 か月    | ×<sup>2</sup> |
 |                      MSDN Platforms (標準)                       |    VL、リテール     |   3 か月    | ×<sup>2</sup> |
 |                     Visual Studio Dev Essentials                     |        N/A         |   1 か月    |       ×       |
@@ -83,15 +83,19 @@ ms.locfileid: "52895354"
 
 <sup>2</sup>  *Pluralsight 特典は、個人に関連付けられた単一ユーザーのみが使用できます。一度サブスクライバーが特典を使用すると、特典はリセットされません。*
 
+> [!NOTE]
+> Microsoft では、クラウド サブスクリプションの Visual Studio Professional 年間サブスクリプションおよび Visual Studio Enterprise 年間サブスクリプションが提供されなくなりました。 サブスクリプションの更新、増減、キャンセルに関する既存のお客様のエクスペリエンスと機能については変更はありません。 新規のお客様は、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) に移動し、Visual Studio のさまざまな購入オプションを調べることをお勧めします。
+
+
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
-### <a name="q-i-have-a-visual-studio-enterprise-subscription-but-i-dont-see-the-pluralsight-tile-on-the-benefits-page-whats-wrong"></a>Q: Visual Studio Enterprise サブスクリプションを持っていますが、特典ページに Pluralsight タイルが表示されません。 理由
-A: すべての Visual Studio Enterprise サブスクリプションに Pluralsight 特典が含まれるわけではありません。  [特典を受ける条件についての表](#eligibility)で、サブスクリプションが対象であるかどうかを参照してください。
+### <a name="q-i-have-a-visual-studio-enterprise-subscription-but-i-dont-see-the-pluralsight-tile-on-the-benefits-page-whats-wrong"></a>Q:Visual Studio Enterprise サブスクリプションを持っていますが、特典ページに Pluralsight タイルが表示されません。 理由
+A:すべての Visual Studio Enterprise サブスクリプションに Pluralsight 特典が含まれるわけではありません。  [特典を受ける条件についての表](#eligibility)で、サブスクリプションが対象であるかどうかを参照してください。
 
-### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>Q: 任意のカスタマイズされた学習のプレイリストやチャネルへのアクセス権はありませすか?
-A: はい。Visual Studio サブスクライバーは、Pluralsight トレーニング特典の一部としてチャネルをエクスポートするアクセス権を取得します。 これらのチャネルは Microsoft の専門家によって特別に作成されており、.Net、Azure、DevOps、モビリティの学習範囲を対象としています。 Visual Studio サブスクリプション ポータル [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) から Pluralsight 特典をアクティブにし、Pluralsight 学習ページでこれらのチャネルにアクセスします。
+### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>Q:任意のカスタマイズされた学習のプレイリストやチャネルへのアクセス権はありますか。
+A:はい。Visual Studio サブスクライバーは、Pluralsight トレーニング特典の一部としてチャネルをエクスポートするアクセス権を取得します。 これらのチャネルは Microsoft の専門家によって特別に作成されており、.Net、Azure、DevOps、モビリティの学習範囲を対象としています。 Visual Studio サブスクリプション ポータル [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) から Pluralsight 特典をアクティブにし、Pluralsight 学習ページでこれらのチャネルにアクセスします。
 
 •   Scott Hanselmann (.Net、Azure) - [http://go.pluralsight.com/scott-hanselman](http://go.pluralsight.com/scott-hanselman)
 
@@ -100,11 +104,11 @@ A: はい。Visual Studio サブスクライバーは、Pluralsight トレーニ
 •   James Montemagno (モビリティ) - [http://go.pluralsight.com/james-montemagno](http://go.pluralsight.com/james-montemagno)
 
 
-### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>Q: Pluralsight サブスクリプションがなくなるとどうなりますか。
-A: Pluralsight 無料サブスクリプションの終了時、Pluralsight から直接、サブスクリプションを購入できます。  詳細については、[Pluralsight](http://www.pluralsight.com) にお問い合わせください。
+### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>Q:Pluralsight サブスクリプションがなくなるとどうなりますか。
+A:Pluralsight 無料サブスクリプションの終了時、Pluralsight から直接、サブスクリプションを購入できます。  詳細については、[Pluralsight](http://www.pluralsight.com) にお問い合わせください。
 
-### <a name="q-my-company-renews-their-visual-studio-subscription-through-an-enterprise-agreement-does-the-pluralsight-benefit-reset"></a>Q: 会社が Enterprise Agreement を使用して Visual Studio サブスクリプションを更新します。 Pluralsight 特典はリセットされますか?
-A: いいえ。  Pluralsight 特典は、個人に関連付けられた単一ユーザーのみが使用できます。  一度サブスクライバーが特典を使用すると、特典はリセットされません。  これは、小売店、クラウド、ボリューム ライセンス (VL) の購入など、すべての購入チャネルに当てはまります。
+### <a name="q-my-company-renews-their-visual-studio-subscription-through-an-enterprise-agreement-does-the-pluralsight-benefit-reset"></a>Q:自分の会社で Enterprise Agreement を使用して Visual Studio サブスクリプションを更新します。 Pluralsight 特典はリセットされますか?
+A:いいえ。  Pluralsight 特典は、個人に関連付けられた単一ユーザーのみが使用できます。  一度サブスクライバーが特典を使用すると、特典はリセットされません。  これは、小売店、クラウド、ボリューム ライセンス (VL) の購入など、すべての購入チャネルに当てはまります。
 
 ## <a name="support-resources"></a>サポート リソース
 -  [Pluralsight ヘルプ センター](https://help.pluralsight.com/help)は、Pluralsight コースの取得や Pluralsight Web サイトの使用をサポートします。

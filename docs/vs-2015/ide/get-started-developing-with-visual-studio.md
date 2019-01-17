@@ -5,8 +5,7 @@ ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 67
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9e43236c32f0ce7e4e260a1d44b1e64600b6dd17
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.openlocfilehash: b9e2f3bf3525977689bcc5bbf917722da76ea9e9
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53802252"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53910465"
 ---
 # <a name="get-started-developing-with-visual-studio"></a>Visual Studio を使用した開発の開始
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,11 +31,11 @@ Visual Studio へようこそ。 製品を [ダウンロード](http://www.visua
 
      [チュートリアルの実施](https://docs.asp.net/en/latest/tutorials/your-first-aspnet-application.html) &#124;                               [ドキュメントの参照](https://docs.asp.net/) &#124;                                   [ビデオを見る](http://www.asp.net/vnext)
 
--   **[HTML/JavaScript (Apache Cordova) でクロスプラット フォームのモバイル アプリを作成する](http://taco.visualstudio.com/docs/get-started-first-mobile-app/)** :               Apache Cordova は HTML/CSS/JavaScript に基づいたオープンソースのクロスプラットフォーム環境です。  JavaScript コードは、特定のプラットフォームを対象とし、デバイスのすべてのハードウェア機能へのアクセスを可能にするラッパーで実行されます。 Apple Store、Android ストア、Windows ストア用のアプリを開発します。
+-   HTML/Javascript でクロスプラットフォーム モバイル アプリを作成します (Apache Cordova)。             Apache Cordova は、HTML、CSS と Javascript に基づくオープン ソース クロス プラットフォーム環境です。  JavaScript コードは、特定のプラットフォームを対象とし、デバイスのすべてのハードウェア機能へのアクセスを可能にするラッパーで実行されます。 Apple Store、Android ストア、Windows ストア用のアプリを開発します。
 
      [サンプルの読み込み](https://github.com/Microsoft/cordova-samples/tree/master/todo-angularjs) &#124;   [チュートリアルの実施](http://taco.visualstudio.com/docs/get-started-first-mobile-app/) &#124;                               [ドキュメントの参照](http://taco.visualstudio.com/docs/get-started-vs-tools-apache-cordova/) &#124;                                [ビデオを見る](https://channel9.msdn.com/Blogs/Seth-Juarez/Getting-Started-with-Apache-Cordova-in-Visual-Studio)
 
--   **[C# または Visual Basic (Xamarin) でクロスプラットフォームのモバイル アプリを作成する](../cross-platform/visual-studio-and-xamarin.md)** : Visual Studio と Xamarin 用ツールを使用して、Android、iOS、およびユニバーサル Windows プラットフォーム上で共有コード ベースから実行されるモバイル アプリの作成を開始します。
+-   C# または Visual Basic でクロスプラットフォーム モバイル アプリを作成します (Xamarin)。共有コード ベースから Android、iOS、およびユニバーサル Windows プラットフォーム上で実行するモバイル アプリを作成する Visual Studio と Xamarin 用ツールを使用を開始します。
 
      サンプルの読み込み: [Tasky Portable](http://developer.xamarin.com/samples/mobile/TaskyPortable/) (ネイティブ UI) または [Xamarin Forms の Todo サンプル](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) (Xamarin.Forms 共有 UI) &#124;   [チュートリアルの実施](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) &#124;                             [ドキュメントの参照](https://msdn.microsoft.com/library/mt299001.aspx) &#124;                                  [ビデオを見る](https://channel9.msdn.com/Series/Cross-Platform-Development-with-Xamarin--Visual-Studio/01)
 

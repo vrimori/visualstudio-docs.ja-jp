@@ -1,8 +1,6 @@
 ---
-title: ネイティブ コードのよく寄せられる質問のデバッグ |Microsoft ドキュメント
-ms.custom: ''
+title: ネイティブ コードのよく寄せられる質問のデバッグ |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.faq
@@ -22,25 +20,25 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4de62bc77003d22398e826f388489e57a372ebea
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: a38feec1e95dd474623924aca896a24753c8ae17
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31482062"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53866934"
 ---
 # <a name="debugging-native-code-faqs"></a>ネイティブ コードのデバッグに関する FAQ
 ここでは、よく寄せられる質問とその回答を記載します。  
   
--   [プログラムをスタンドアロンの実行時にアクセス違反をデバッグする方法ことができますか。](../debugger/how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger-q.md)  
+-   [プログラムをスタンドアロンで実行中に発生するアクセス違反をデバッグするには](../debugger/how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger-q.md)  
   
 -   [アクセス違反をデバッグするには](../debugger/how-can-i-debug-an-access-violation-q.md)  
   
--   [どのか見つけるにはポインターがメモリ アドレスを破壊しているか。](../debugger/how-can-i-find-out-if-my-pointers-corrupt-a-memory-address-q.md)  
+-   [ポインターがメモリ アドレスを破壊しているかどうかを見つけるには](../debugger/how-can-i-find-out-if-my-pointers-corrupt-a-memory-address-q.md)  
   
 -   [引数に不正な値が渡された原因を見つけるには](../debugger/how-can-i-find-out-who-is-passing-a-wrong-parameter-value-q.md)  
   
--   [関数が何回で、呼び出しに失敗しましたを呼び出すとき?](../debugger/when-calling-a-function-hundreds-of-times-how-do-i-know-which-call-failed-q.md)  
+-   [ある関数が何回も呼び出される場合、どの呼び出しでエラーが発生するのかを調べるには](../debugger/when-calling-a-function-hundreds-of-times-how-do-i-know-which-call-failed-q.md)  
   
 -   [Win32 のエラー コードを調べるには](../debugger/where-can-i-look-up-win32-error-codes-q.md)  
   
@@ -48,8 +46,8 @@ ms.locfileid: "31482062"
   
 -   [フォアグラウンド プログラムのデバッグ中にデバッガー ウィンドウを使用するには](../debugger/how-can-i-use-debugger-windows-while-debugging-a-foreground-program-q.md)  
   
--   [MFC で停止した場合を取得する方法戻る MFC を呼び出した関数をしますか。](../debugger/how-to-get-back-to-the-function-that-called-mfc-if-halted.md)  
+-   [MFC の中で停止した場合、MFC を呼び出した関数に戻るには](../debugger/how-to-get-back-to-the-function-that-called-mfc-if-halted.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

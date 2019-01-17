@@ -1,8 +1,6 @@
 ---
-title: IDiaSymbol::get_numberOfAcceleratorPointerTags |Microsoft ドキュメント
-ms.custom: ''
+title: IDiaSymbol::get_numberOfAcceleratorPointerTags |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 66f5e6ceefbff4702d509c18b4a555287a1e9f42
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 94e052865c94d747bcb36cd81e0b1c023262b0c1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31466644"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53875155"
 ---
 # <a name="idiasymbolgetnumberofacceleratorpointertags"></a>IDiaSymbol::get_numberOfAcceleratorPointerTags
 C++ AMP のスタブ関数では、アクセラレータのポインターのタグの数を返します。  
@@ -31,13 +29,13 @@ HRESULT get_numberOfAcceleratorPointerTags(
   
 #### <a name="parameters"></a>パラメーター  
  `count`  
- [out]ポインター、`DWORD`を保持するアクセラレータの数のポインターのタグで C++ AMP のスタブ関数。  
+ [out]ポインターを`DWORD`で C++ AMP のスタブ関数ポインターのタグのアクセラレータの数を保持します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 ## <a name="remarks"></a>コメント  
- このメソッドが、 `IDiaSymbol` C++ AMP のアクセラレータのスタブ関数に対応するインターフェイスです。  
+ このメソッドが、 `IDiaSymbol` C++ AMP のアクセラレータのスタブ関数に対応するインターフェイス。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

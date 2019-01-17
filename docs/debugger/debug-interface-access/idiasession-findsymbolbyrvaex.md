@@ -1,8 +1,6 @@
 ---
 title: Idiasession::findsymbolbyrvaex |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d7dc9cfb435da1a4204c8a7ed23e398478aef0ea
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 166a5cd0de9980a72cdcf83a4e4cd12f02642d90
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49832434"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53895114"
 ---
 # <a name="idiasessionfindsymbolbyrvaex"></a>IDiaSession::findSymbolByRVAEx
 が含まれているか、指定された相対仮想アドレス (RVA) およびオフセットに最も近い指定の記号の型を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49832434"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT findSymbolByRVAEx (   
+HRESULT findSymbolByRVAEx (   
    DWORD        rva,  
    SymTagEnum   symtag,  
    IDiaSymbol** ppSymbol,  
@@ -59,7 +57,7 @@ LONG disp = 0;
 pSession->findSymbolByRVAEx( rva, SymTagFunction, &pFunc, &disp );  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerCallback::OnFunctionEnter |Microsoft ドキュメント
+title: IActiveScriptProfilerCallback::OnFunctionEnter |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -16,19 +16,19 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d9af9dc5ce1f4cb0eb5c328c90c20184111afd9b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 887810d12a20045c95b0f837db1592b9b7bf301e
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724602"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54095382"
 ---
 # <a name="iactivescriptprofilercallbackonfunctionenter"></a>IActiveScriptProfilerCallback::OnFunctionEnter
-ドキュメント オブジェクト モデル (DOM) への呼び出しではない関数呼び出しの実行をスクリプト エンジンでは、プロファイラーのオブジェクトに通知します。  
+ドキュメント オブジェクト モデル (DOM) への呼び出しではない関数呼び出しの実行を開始するスクリプト エンジンは、プロファイラーのオブジェクトに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT OnFunctionEnter(  
     [in] PROFILER_TOKEN scriptId,   
     [in] PROFILER_TOKEN functionId);  
@@ -36,7 +36,7 @@ HRESULT OnFunctionEnter(
   
 #### <a name="parameters"></a>パラメーター  
  `scriptId`  
- [in]一部は、関数は、スクリプトの一意の ID。 この ID は、スクリプト エンジンによって割り当てられます。  
+ [in]スクリプトの一部では、関数の一意の ID。 この ID は、スクリプト エンジンによって割り当てられます。  
   
  `functionId`  
  [in]関数の一意の ID。 この ID は、スクリプト エンジンによって割り当てられます。  
@@ -44,8 +44,8 @@ HRESULT OnFunctionEnter(
 ## <a name="return-value"></a>戻り値  
  このメソッドの戻り値は、スクリプト エンジンによって無視されます。  
   
-## <a name="remarks"></a>コメント  
- スクリプト エンジンを呼び出し、DOM の呼び出し、 [IActiveScriptProfilerCallback2::OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)の代わりに`IActiveScriptProfilerCallback::OnFunctionEnter`です。 これは DOM の一意のメソッドおよびプロパティの数が多いため、します。  
+## <a name="remarks"></a>Remarks  
+ スクリプト エンジンの呼び出し、DOM 呼び出し[IActiveScriptProfilerCallback2::OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)の代わりに`IActiveScriptProfilerCallback::OnFunctionEnter`します。 これは一意のメソッドと DOM のプロパティの数が多いためです。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptProfilerCallback::OnFunctionExit](../../winscript/reference/iactivescriptprofilercallback-onfunctionexit.md)   

@@ -3,19 +3,18 @@ title: R Tools for Visual Studio の FAQ
 description: Visual Studio での R に関してよく寄せられる質問です。
 ms.date: 12/04/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-rtvs
 ms.topic: reference
 author: kraigb
 ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 832d581a4147b8b050da16b1a1f72d8a3909fc35
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 1da67a213ed1add0ce670ca133163538e2cde1b4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36235308"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53913857"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 
@@ -81,7 +80,7 @@ A:  はい。Visual Studio に統合されている任意のソース管理シ�
 
 **Q.RTVS プロジェクトで推奨される *.gitignore* の設定はどのようなものですか?**
 
-A:  Github に、*.gitignore* の推奨ファイルのマスター リポジトリが用意されています。 [R .gitignore](https://github.com/github/gitignore/blob/master/R.gitignore) をご覧ください。
+A:  GitHub に、*.gitignore* の推奨ファイルのマスター リポジトリが用意されています。 次の場所で見ることができます:[R .gitignore](https://github.com/github/gitignore/blob/master/R.gitignore)
 
 ## <a name="remote-services"></a>リモート サービス
 

@@ -15,15 +15,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c76f769234d8b8c14ccd44d8c2cf4c669bf48ffd
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: 5cf04b804ea377723a268c080b96a24442e31486
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52305482"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53947661"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>WPF アプリケーションでルックアップ テーブルを作成する
 
@@ -37,9 +36,9 @@ ms.locfileid: "52305482"
 
     -   データセットまたはエンティティ データ モデル。
 
-    -   WCF データ サービス、WCF サービスまたは web サービス。 詳細については、次を参照してください。[方法: データ サービスに接続する](../data-tools/how-to-connect-to-data-in-a-service.md)します。
+    -   WCF データ サービス、WCF サービスまたは web サービス。 詳細については、「[方法 :サービスのデータに接続する](../data-tools/how-to-connect-to-data-in-a-service.md)
 
-    -   オブジェクト 詳細については、次を参照してください。 [Visual Studio でのオブジェクトにバインド](bind-objects-in-visual-studio.md)します。
+    -   オブジェクト。 詳細については、次を参照してください。 [Visual Studio でのオブジェクトにバインド](bind-objects-in-visual-studio.md)します。
 
     > [!NOTE]
     > ルックアップ テーブルを作成するには、2 つの関連するテーブルまたはオブジェクトがプロジェクトのデータ ソースとして存在する必要があります。
@@ -48,7 +47,7 @@ ms.locfileid: "52305482"
 
      有効なドロップ ターゲットの詳細については、次を参照してください。 [Visual Studio でのデータにコントロールをバインドする WPF](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)します。
 
-3.  [データ] **メニューの [データ ソースの表示]** をクリックして [データ ソース]** ウィンドウを開きます。
+3.  **[データ]** メニューの **[データ ソースの表示]** をクリックして **[データ ソース]** ウィンドウを開きます。
 
 4.  内のノードを展開し、**データソース**ウィンドウで、親テーブルまたはオブジェクトと関連する子テーブルまたはオブジェクトが見つかるまで。
 
@@ -94,4 +93,4 @@ ms.locfileid: "52305482"
 
 - [Visual Studio でデータに WPF コントロールをバインドする](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
 - [WPF アプリケーションで関連データを表示する](../data-tools/display-related-data-in-wpf-applications.md)
-- [チュートリアル: WPF アプリケーションでの関連データの表示](../data-tools/display-related-data-in-wpf-applications.md)
+- [チュートリアル: WPF アプリケーションで関連データを表示する](../data-tools/display-related-data-in-wpf-applications.md)

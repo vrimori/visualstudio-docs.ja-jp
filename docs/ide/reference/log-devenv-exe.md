@@ -2,7 +2,6 @@
 title: -Log (devenv.exe)
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - Devenv, /Log switch
@@ -14,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fb33eedf322009cfd5602c481bce36beb4126a9b
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.openlocfilehash: b0d2e6af25b4e0acc4aad88c33861e9d22a775b4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948399"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53846127"
 ---
 # <a name="log-devenvexe"></a>/Log (devenv.exe)
 すべてのアクティビティをトラブルシューティング用のログ ファイルに記録します。 このファイルは、`devenv /log` を少なくとも 1 回呼び出した後に表示されます。 ログ ファイルは既定で次のものになります。
@@ -39,6 +38,6 @@ Devenv /log Path\NameOfLogFile
 
  ログは、/log スイッチで呼び出した Visual Studio のすべてのインスタンスを対象として記録されます。 スイッチなしで呼び出した Visual Studio のインスタンスについてはログ記録の対象外です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)

@@ -3,7 +3,6 @@ title: 単体テスト作成用のコードの例
 description: この記事では、Visual Studio で単体テストを使ってテストできるサンプル コードを提供します。
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: sample
 helpviewer_keywords:
 - unit test sample [Visual Studio]
@@ -13,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: deddf46a479e0ab8d4e0bebbaf3fffe4d90b622d
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: b98e8fc926917d4da8bc805110f464ead24d405c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293448"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53898948"
 ---
 # <a name="sample-code-for-testing"></a>テスト用のサンプル コード
 
@@ -130,7 +129,7 @@ namespace BankAccountNS
 
 ## <a name="create-the-project"></a>プロジェクトの作成
 
-このコードを操作するには、最初にプロジェクトを Visual Studio で作成します。 「[チュートリアル: マネージド コードの単体テストを作成し、実行する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#create-a-project-to-test)」のプロジェクトを作成する手順に従います。
+このコードを操作するには、最初にプロジェクトを Visual Studio で作成します。 「[チュートリアル:マネージド コードの単体テストを作成し、実行する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#create-a-project-to-test)」のプロジェクトを作成する手順に従います。
 
 ## <a name="see-also"></a>関連項目
 

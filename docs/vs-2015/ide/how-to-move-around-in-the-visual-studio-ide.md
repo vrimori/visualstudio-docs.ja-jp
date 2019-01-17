@@ -1,12 +1,11 @@
 ---
-title: 方法:IDE 内で移動 |Microsoft Docs
+title: '方法: IDE 内で移動 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ea104d08216a4ef7bdb07fc42b5a22eb5352d757
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 4c252f709875133be7b4106a55cd853fbb309635
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53049620"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53880985"
 ---
 # <a name="how-to-move-around-in-the-visual-studio-ide"></a>方法: Visual Studio IDE 内で移動する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -96,5 +95,5 @@ ms.locfileid: "53049620"
     > [!TIP]
     >  **[アクティブなツール ウィンドウ]** リストの順番を逆に切り替えるには、Shift キーと Alt キーを押したまま F7 キーを押します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
  [ウィンドウ レイアウトをカスタマイズ](../ide/customizing-window-layouts-in-visual-studio.md)[既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)

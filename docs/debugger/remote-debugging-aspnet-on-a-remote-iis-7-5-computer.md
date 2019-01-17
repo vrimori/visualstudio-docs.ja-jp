@@ -4,7 +4,6 @@ ms.custom:
 - remotedebugging
 - seodec18
 ms.date: 05/21/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 9cb339b5-3caf-4755-aad1-4a5da54b2a23
 author: mikejo5000
@@ -12,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 336f34c1229e07eb3734f9d278070e5994957d16
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 621e7c44592eb94adbc02644af62920b8b95aa24
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53065560"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53829197"
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>リモートの IIS コンピューター上の ASP.NET のリモート デバッグ
 IIS に配置されている ASP.NET アプリケーションをデバッグするには、インストールし、アプリをデプロイしたコンピューターでリモート ツールを実行して Visual Studio から、実行中のアプリにアタッチします。

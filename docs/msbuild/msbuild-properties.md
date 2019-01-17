@@ -1,8 +1,6 @@
 ---
 title: MSBuild プロパティ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, properties
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c8835dab5ca866762a7d2b0e6cad1d0d80726b0
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: f5743e9532a50089317f0c28917927f514eb4709
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48879199"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53987039"
 ---
 # <a name="msbuild-properties"></a>MSBuild プロパティ
 プロパティはビルドを設定するための名前と値のペアです。 プロパティを使用することで、タスクに値を渡したり、条件を評価したりできるだけでなく、プロジェクト ファイルで参照する値を格納しておくこともできます。  
@@ -46,7 +44,7 @@ ms.locfileid: "48879199"
 ## <a name="reserved-properties"></a>予約済みのプロパティ  
  MSBuild では、プロジェクト ファイルに関する情報や MSBuild のバイナリに関する情報を保持するために、いくつかのプロパティ名が予約されています。 これらのプロパティは、他のプロパティと同じように $ 表記を使用して参照できます。 たとえば、$(MSBuildProjectFile) は、ファイル名の拡張子を含むプロジェクト ファイルの完全なファイル名を返します。  
   
- 詳細については、「[方法: プロジェクト ファイルの名前または場所を参照する](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md)」および「[MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)」をご覧ください。  
+ 詳細については、「[方法 :プロジェクト ファイルの名前または場所を参照する](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md)」および「[MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)」を参照してください。  
   
 ## <a name="environment-properties"></a>環境プロパティ  
  プロジェクト ファイルで環境変数を参照する場合も、予約済みのプロパティを参照するときと同じ方法を使用します。 たとえば、プロジェクト ファイルで `PATH` 環境変数を使用するには、$(Path) と記述します。 プロジェクト ファイルに、環境プロパティと同じ名前のプロパティが定義されている場合、環境変数の値はプロジェクト内のプロパティによってオーバーライドされます。  
@@ -58,7 +56,7 @@ ms.locfileid: "48879199"
 > [!TIP]
 >  すべての環境変数が読み取られて、初期プロパティになるわけではありません。 有効な MSBuild プロパティ名 ("386" など) を名前として持っていない環境変数は無視されます。  
   
- 環境変数の使用方法の詳細については、「[方法: ビルドで環境変数を使用する](../msbuild/how-to-use-environment-variables-in-a-build.md)」をご覧ください。  
+ 詳細については、「[方法 :ビルドで環境変数を使用する](../msbuild/how-to-use-environment-variables-in-a-build.md)」を参照してください。  
   
 ## <a name="registry-properties"></a>レジストリのプロパティ  
  システム レジストリ値を読み取るには、次の構文を使用します。ここで、`Hive` はレジストリ ハイブ (たとえば、**HKEY_LOCAL_MACHINE**)、`Key` はキー名、`SubKey` はサブキー名、`Value` はサブキーの値をそれぞれ表します。  
@@ -94,7 +92,7 @@ msbuild.exe MyProj.proj -p:Configuration=DEBUG
   
  グローバル プロパティは、MSBuild タスクの `Properties` 属性を使用することで、複数プロジェクトのビルドに含まれる子プロジェクトに対して設定または変更することもできます。 グローバル プロパティは、MSBuild タスクの `RemoveProperties` 属性が転送しないプロパティの一覧を指定するために使用されていなければ、子プロジェクトにも転送されます。 詳細については、「[MSBuild タスク](../msbuild/msbuild-task.md)」を参照してください。
   
- プロジェクト タグで `TreatAsLocalProperty` 属性を使用してプロパティを指定する場合、そのグローバル プロパティ値は、プロジェクト ファイルで設定されているプロパティ値をオーバーライドしません。 詳細については、「[Project 要素 (MSBuild)](../msbuild/project-element-msbuild.md)」および「[方法: 同じソース ファイルを異なるオプションでビルドする](../msbuild/how-to-build-the-same-source-files-with-different-options.md)」をご覧ください。  
+ プロジェクト タグで `TreatAsLocalProperty` 属性を使用してプロパティを指定する場合、そのグローバル プロパティ値は、プロジェクト ファイルで設定されているプロパティ値をオーバーライドしません。 詳細については、「[Project 要素 (MSBuild)](../msbuild/project-element-msbuild.md)」と「[方法:同じソース ファイルを異なるオプションでビルドする](../msbuild/how-to-build-the-same-source-files-with-different-options.md)」を参照してください。  
   
 ## <a name="property-functions"></a>プロパティ関数  
  .NET Framework Version 4 以降では、プロパティ関数を使用して MSBuild スクリプトを評価できるようになりました。 MSBuild タスクを使用しなくても、システム時刻の読み取り、文字列の比較、正規表現の照合、その他のさまざまな処理をビルド スクリプト内で実行できます。  

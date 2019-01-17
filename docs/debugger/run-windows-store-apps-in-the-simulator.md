@@ -1,8 +1,6 @@
 ---
 title: シミュレーターで UWP アプリの実行 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -15,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 5e9e023bd560a67323a4a2fcf5e42acec6919d6c
-ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
-ms.translationtype: HT
+ms.openlocfilehash: 6a171c0973bdcb71ff05cff38713081acd5ffd68
+ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53685719"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54153955"
 ---
 # <a name="run-uwp-apps-in-the-simulator"></a>シミュレーターで UWP アプリを実行する
 UWP アプリ用の Visual Studio シミュレーターは、UWP アプリをシミュレートするデスクトップ アプリケーションです。 通常は、接続されたデバイス、またはリモート コンピューターのローカル コンピューター上でデバッグします。 ただし、一部のシナリオでの Visual Studio シミュレーターを使用して、別の物理的な画面サイズと解像度をエミュレートすることがあります。 また、一般的なタッチと回転イベントのシミュレートし、ネットワーク接続のプロパティをシミュレートできます。
@@ -150,5 +148,5 @@ UWP アプリ用の Visual Studio シミュレーターは、UWP アプリをシ
 
  シミュレーターを終了するには、キーを押して**CTRL + ALT + F4**します。
 
-## <a name="see-also"></a>参照
- [Visual Studio からアプリを実行](../debugger/run-store-apps-from-visual-studio.md)
+## <a name="see-also"></a>「
+ [Visual Studio からアプリを実行](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)

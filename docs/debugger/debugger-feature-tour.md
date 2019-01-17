@@ -3,7 +3,6 @@ title: VS 2017 でデバッグを開始する
 description: Visual Studio デバッガーを使用してアプリケーションのデバッグを開始する
 ms.custom: mvc
 ms.date: 06/15/2018
-ms.technology: vs-ide-debug
 ms.topic: quickstart
 helpviewer_keywords:
 - debugger
@@ -13,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d5c479251b7002e506f1dff5e64a028875aa8f80
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: cf7bcba0ceaa71b933d4875cd5eee28d7cea0028
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49882667"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53904970"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>最初に Visual Studio デバッガーを見る
 
@@ -174,7 +173,7 @@ F10 キーを押すと、アプリ コード内の関数またはメソッドに
 
 コード行をダブルクリックすることで、ソース コードに移動できます。また、それによって、デバッガーで検査されている現在のスコープを変更することもできます。 この操作でデバッガーが前に進むことはありません。
 
-**[呼び出し履歴]** ウィンドウから右クリック メニューを使用して他の操作を行うこともできます。 たとえば、特定の関数にブレークポイントを挿入したり、**[カーソル行の前まで実行]** を使用してアプリを再起動したり、ソース コードの調査を開始したりできます。 [呼び出し履歴を調べる方法](../debugger/how-to-use-the-call-stack-window.md)に関するページを参照してください。
+**[呼び出し履歴]** ウィンドウから右クリック メニューを使用して他の操作を行うこともできます。 たとえば、特定の関数にブレークポイントを挿入したり、**[カーソル行の前まで実行]** を使用してアプリを再起動したり、ソース コードの調査を開始したりできます。 「[方法:呼び出し履歴を調べる](../debugger/how-to-use-the-call-stack-window.md)」を参照してください。
 
 ## <a name="exception"></a> 例外を調べる
 
@@ -205,7 +204,7 @@ F10 キーを押すと、アプリ コード内の関数またはメソッドに
 
 ## <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise"></a>IntelliTrace ステップバックでスナップショットを表示する (Visual Studio Enterprise)
 
-**IntelliTrace ステップ バック**では、ブレークポイントとデバッガー ステップ イベントごとにアプリケーションのスナップショットを自動的に取得します。 記録されたスナップショットにより、前のブレークポイントまたはステップに戻り、過去の時点でのアプリケーションの状態を確認できるようになります。 IntelliTrace ステップ バックでは、以前のアプリケーションの状態を確認したいが、デバッグの再開や必要なアプリ状態の再作成は必要でない場合に時間を節約できます。
+**IntelliTrace のステップ バック**では、ブレークポイントとデバッガー ステップ イベントごとにアプリケーションのスナップショットを自動作成します。 記録されたスナップショットにより、前のブレークポイントまたはステップに戻り、過去の時点でのアプリケーションの状態を確認できるようになります。 IntelliTrace ステップ バックでは、以前のアプリケーションの状態を確認したいが、デバッグの再開や必要なアプリ状態の再作成は必要でない場合に時間を節約できます。
 
 スナップショット間を移動して表示するには、デバッグ ツールバーの **[前に戻る]** ボタンと **[次へ進む]** ボタンを使用します。 これらのボタンを使用して、**[診断ツール]** ウィンドウの **[イベント]** タブに表示されるイベント間を移動します。
 
@@ -215,7 +214,7 @@ F10 キーを押すと、アプリ コード内の関数またはメソッドに
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、デバッガーのさまざまな機能を簡単に見てきました。 それらの機能をサンプル アプリケーションを使用してもっと詳しく理解することをお勧めします。
+このチュートリアルでは、デバッガーのさまざまな機能を簡単に見てきました。 ブレークポイントなど、いずれかの機能についてさらに詳しく学習できます。
 
 > [!div class="nextstepaction"]
-> [Visual Studio を使用したデバッグについて理解する](../debugger/getting-started-with-the-debugger.md)
+> [ブレークポイントの使用について学習する](../debugger/using-breakpoints.md)

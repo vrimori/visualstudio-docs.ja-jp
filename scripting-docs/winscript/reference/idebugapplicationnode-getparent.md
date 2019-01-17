@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationNode::GetParent |Microsoft ドキュメント
+title: IDebugApplicationNode::GetParent |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 23dbc8b4dc0c12a25349ddaf7d8fd711df0a9f4b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 46b13c583f4e40b68610e50b37520f3d3882f364
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725362"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54089649"
 ---
 # <a name="idebugapplicationnodegetparent"></a>IDebugApplicationNode::GetParent
-このアプリケーション ノードの親ノードを返します。  
+このアプリケーションのノードの親ノードを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetParent(  
    IDebugApplicationNode**  pprddp  
 );  
@@ -38,17 +38,17 @@ HRESULT GetParent(
   
 #### <a name="parameters"></a>パラメーター  
  `pprddp`  
- [out]このアプリケーション ノードの親アプリケーション ノード。  
+ [out]このアプリケーションのノードの親アプリケーション ノード。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、このアプリケーション ノードの親ノードを返します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、このアプリケーションのノードの親ノードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugApplicationNode インターフェイス](../../winscript/reference/idebugapplicationnode-interface.md)

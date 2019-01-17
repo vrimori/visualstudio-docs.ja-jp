@@ -2,7 +2,6 @@
 title: List Registers コマンド
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - debug.listregisters
@@ -16,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ce91abde91edf989b33c476b042abaf16c685df0
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 942ab10a1d660ea5e33ca2cb679e4655bd6b3fbc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704903"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53959966"
 ---
 # <a name="list-registers-command"></a>List Registers コマンド
 選択したレジスタの値を表示するほか、表示されるレジスタの一覧を変更できます。
@@ -37,7 +36,7 @@ Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
 ## <a name="switches"></a>スイッチ
  /Display [{`register`&#124;`registerGroup`}...]
 
- 指定した `register` または `registerGroup` の値を表示します。 `register` も `registerGroup` も指定されていない場合は、レジスタの既定の一覧が表示されます。 スイッチが指定されていない場合、動作は同じです。 例:
+ 指定した `register` または `registerGroup` の値を表示します。 `register` も `registerGroup` も指定されていない場合は、レジスタの既定の一覧が表示されます。 スイッチが指定されていない場合、動作は同じです。 次に例を示します。
 
  `Debug.ListRegisters /Display eax`
 
@@ -67,8 +66,8 @@ Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
 r /Display Flags
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
-- [デバッグの基礎 : [レジスタ] ウィンドウ](../../debugger/debugging-basics-registers-window.md)
+- [デバッグの基礎:[レジスタ] ウィンドウ](../../debugger/debugging-basics-registers-window.md)
 - [方法: [レジスタ] ウィンドウを使用する](../../debugger/how-to-use-the-registers-window.md)

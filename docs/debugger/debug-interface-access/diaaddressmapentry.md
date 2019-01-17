@@ -1,8 +1,6 @@
 ---
 title: DiaAddressMapEntry |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 501defcd2274ab32624a97b9a1463e8f4a515c1e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 6cadfe96bc0bf0ac0395d93c2ef0b156b9965ed2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49819057"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53964086"
 ---
 # <a name="diaaddressmapentry"></a>DiaAddressMapEntry
 アドレス マップ内のエントリについて説明します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49819057"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-struct DiaAddressMapEntry {   
+struct DiaAddressMapEntry {   
    DWORD rva,  
    DWORD rvaTo  
 };  
@@ -40,22 +38,22 @@ struct DiaAddressMapEntry {
  `rvaTo`  
  相対仮想アドレス`rva`B. イメージ内にマップされます  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  アドレス マップは、(A) をもう 1 つ (B) 1 つのイメージのレイアウトからの翻訳を提供します。 配列の`DiaAddressMapEntry`構造体の順に並べ替えて`rva`アドレス マップを定義します。  
   
  アドレスに変換する`addrA`、イメージ アドレス内`addrB`B の図で、次の手順に従います。  
   
 1. マップのエントリを検索`e`が大きいもの`rva`に等しいまたはそれよりも小さい`addrA`します。  
   
-2. 設定`delta = addrA - e.rva`します。  
+2. `delta = addrA - e.rva` を設定します。  
   
-3. 設定`addrB = e.rvaTo + delta`します。  
+3. `addrB = e.rvaTo + delta` を設定します。  
   
    配列の`DiaAddressMapEntry`に構造体が渡される、 [idiaaddressmap::set_addressmap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)メソッド。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: dia2.h  
   
-## <a name="see-also"></a>関連項目  
- [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+## <a name="see-also"></a>「  
+ [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaAddressMap::set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)

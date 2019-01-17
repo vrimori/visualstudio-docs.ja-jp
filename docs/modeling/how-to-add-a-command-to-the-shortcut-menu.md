@@ -11,17 +11,18 @@ manager: douge
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: 284a789a7ba4e7fec1a87723c51a32f650f6d843
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a415657c86f6f4a6f54ce4273e49ad6302ae77b4
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53987967"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270036"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>方法: ショートカット メニューにコマンドを追加する
+
 ドメイン固有言語 (DSL) にメニュー コマンドを追加すると、ユーザーが DSL に固有のタスクを実行できるようになります。 ユーザーが図を右クリックすると、コンテキスト (ショートカット) メニューにコマンドが表示されます。 特定の状況でのみメニューにコマンドが表示されるように、コマンドを定義できます。 たとえば、ユーザーが特定の型の要素または特定の状態の要素をクリックした場合にだけコマンドを表示するようにできます。
 
- DslPackage プロジェクトで実行する手順の概要を以下に示します。
+要約すると、手順は DslPackage プロジェクト内に次のように実行されます。
 
 1. [Commands.vsct でコマンドを宣言します。](#VSCT)
 
@@ -32,12 +33,13 @@ ms.locfileid: "53987967"
    サンプルについては、次を参照してください。、 [Visualization and Modeling SDK の web サイト](http://go.microsoft.com/fwlink/?LinkID=185579)します。
 
 > [!NOTE]
->  [切り取り]、[貼り付け]、[すべて選択]、[印刷] など、既存の一部のコマンドの動作を変更することもできます。このためには、CommandSet.cs でメソッドをオーバーライドします。 詳細については、「[方法 :標準メニュー コマンドを修正](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)します。
+> [切り取り]、[貼り付け]、[すべて選択]、[印刷] など、既存の一部のコマンドの動作を変更することもできます。このためには、CommandSet.cs でメソッドをオーバーライドします。 詳細については、「[方法 :標準メニュー コマンドを修正](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)します。
 
-## <a name="defining-a-command-using-mef"></a>MEF を使用したコマンドの定義
- Managed Extension Framework (MEF) には、図のメニューのメニュー コマンドを定義するもう 1つの方法があります。 これは、ユーザーまたは他のユーザーが DSL を拡張できるようにすることを目的としています。 ユーザーは、DSL だけをインストールするか、または DSL と拡張機能の両方をインストールすることができます。 ただし MEF では、DSL で MEF を使用可能にする初期作業の完了後には、ショートカット メニュー コマンドの定義作業が少なくなります。
+## <a name="define-a-command-using-mef"></a>MEF を使用してコマンドを定義します。
 
- このトピックで説明する手法は、次の場合に使用してください。
+Managed Extension Framework (MEF) には、図のメニューのメニュー コマンドを定義するもう 1つの方法があります。 これは、ユーザーまたは他のユーザーが DSL を拡張できるようにすることを目的としています。 ユーザーは、DSL だけをインストールするか、または DSL と拡張機能の両方をインストールすることができます。 ただし MEF では、DSL で MEF を使用可能にする初期作業の完了後には、ショートカット メニュー コマンドの定義作業が少なくなります。
+
+このトピックで説明する手法は、次の場合に使用してください。
 
 1. 右クリックで表示されるショートカット メニュー以外のメニューにメニュー コマンドを定義する。
 
@@ -56,7 +58,7 @@ ms.locfileid: "53987967"
 
  .Vsct ファイルの詳細については、次を参照してください。 [Visual Studio Command Table (します。Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)します。
 
-#### <a name="to-add-the-command"></a>コマンドを追加するには
+### <a name="to-add-the-command"></a>コマンドを追加するには
 
 1.  **ソリューション エクスプ ローラー**下で、 **DslPackage**プロジェクトで、Commands.vsct を開きます。
 
@@ -87,7 +89,7 @@ ms.locfileid: "53987967"
     ```
 
     > [!NOTE]
-    >  各ボタンとグループは、GUID と整数の ID によって識別されます。 同じ GUID を使用して複数のグループとボタンを作成できます。 ただし、それぞれに異なる ID が必要です。 GUID 名と ID 名は、実際の Guid と数値 Id に変換されます、`<Symbols>`ノード。
+    > 各ボタンとグループは、GUID と整数の ID によって識別されます。 同じ GUID を使用して複数のグループとボタンを作成できます。 ただし、それぞれに異なる ID が必要です。 GUID 名と ID 名は、実際の Guid と数値 Id に変換されます、`<Symbols>`ノード。
 
 3.  ドメイン固有言語のコンテキストでのみコマンドが読み込まれるようにするため、コマンドに表示制限を追加します。 詳細については、次を参照してください。 [VisibilityConstraints 要素](../extensibility/visibilityconstraints-element.md)します。
 
@@ -134,7 +136,7 @@ ms.locfileid: "53987967"
 
  生成されるファイルでパッケージ クラスが定義されているため、Package.cs ファイルを生成するテキスト テンプレート ファイルで属性を更新します。
 
-#### <a name="to-update-the-packagett-file"></a>Package.tt ファイルを更新するには
+### <a name="to-update-the-packagett-file"></a>Package.tt ファイルを更新するには
 
 1.  **ソリューション エクスプ ローラー**で、 **DslPackage**プロジェクトの**GeneratedCode**フォルダーにある Package.tt ファイルを開きます。
 
@@ -145,11 +147,12 @@ ms.locfileid: "53987967"
      `[VSShell::ProvideMenuResource("1000.ctmenu", version: 2 )]`
 
 ##  <a name="CommandSet"></a> コマンドの動作を定義します。
- DSL には、DslPackage\GeneratedCode\CommandSet.cs で宣言される一部のクラスで実装されているコマンドが既に存在しています。 新しいコマンドを追加するには、同じクラスの部分的な宣言を含む新しいファイルを作成して、このクラスを拡張する必要があります。 通常、クラスの名前は *\<YourDslName >*`CommandSet`します。 最初にクラスの名前を検証し、クラスの内容を調べておくと便利です。
 
- コマンド セット クラスは、<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> から派生しています。
+DSL には、DslPackage\GeneratedCode\CommandSet.cs で宣言される一部のクラスで実装されているコマンドが既に存在しています。 新しいコマンドを追加するには、同じクラスの部分的な宣言を含む新しいファイルを作成して、このクラスを拡張する必要があります。 通常、クラスの名前は *\<YourDslName >*`CommandSet`します。 クラスの名前を確認してその内容を調べることによって開始すると便利です。
 
-#### <a name="to-extend-the-commandset-class"></a>CommandSet クラスを拡張するには
+コマンド セット クラスは、<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> から派生しています。
+
+### <a name="extend-the-commandset-class"></a>CommandSet クラスを拡張します。
 
 1.  ソリューション エクスプローラーで、DslPackage プロジェクト内の GeneratedCode フォルダーを開き、CommandSet.tt の下で、生成されたファイル CommandSet.cs を開きます。 名前空間と、名前空間で定義されている最初のクラスの名前を書きとめます。 たとえば、次のように表示されることがあります。
 
@@ -167,8 +170,7 @@ ms.locfileid: "53987967"
 
      **注**クラス テンプレートを使用して、新しいファイルを作成した場合は、名前空間とクラス名の両方を修正する必要があります。
 
-### <a name="extend-the-command-set-class"></a>CommandSet クラスを拡張する
- 通常、コマンド セット コードは次の名前空間をインポートする必要があります。
+通常、コマンド セット コードは次の名前空間をインポートする必要があります。
 
 ```csharp
 using System;
@@ -180,7 +182,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Modeling.Shell;
 ```
 
- 生成される CommandSet.cs の名前空間とクラス名に対応するように、この名前空間とクラス名を調整します。
+生成される CommandSet.cs の名前空間とクラス名に対応するように、この名前空間とクラス名を調整します。
 
 ```csharp
 namespace Company.Language1 /* Make sure this is correct */
@@ -190,7 +192,7 @@ namespace Company.Language1 /* Make sure this is correct */
   {
 ```
 
- コンテキスト メニューにコマンドが表示される状況を判別するメソッドと、コマンドを実行するメソッドの 2 つを定義する必要があります。 これらのメソッドはオーバーライドではありません。コマンド リストにこれらのメソッドを登録します。
+ときに、コマンドが (コンテキスト) を右クリック メニューのおよびコマンドを実行する他に表示されるかを確認する 1 つ、2 つのメソッドを定義する必要があります。 これらのメソッドはオーバーライドではありません。コマンド リストにこれらのメソッドを登録します。
 
 ### <a name="define-when-the-command-will-be-visible"></a>コマンドを表示する状況を定義します。
  コマンドごとに、コマンドをメニューに表示するかどうか、およびコマンドを使用可能または灰色表示にするかを判別する `OnStatus...` メソッドを定義します。次の例に示すように、`Visible` の `Enabled` プロパティと `MenuCommand` プロパティを設定します。 このメソッドは、ユーザーが図を右クリックするたびに、ショートカット メニューを作成するために呼び出されるので、迅速に実行する必要があります。
@@ -218,7 +220,7 @@ private void OnStatusMyContextMenuCommand(object sender, EventArgs e)
 } } } }
 ```
 
- 次のフラグメントは、多くの場合 OnStatus メソッドで有効です。
+次のフラグメントは、多くの場合 OnStatus メソッドで有効です。
 
 - `this.CurrentSelection`。 ユーザーが右クリックした図形は常にこのリストに追加されます。 ユーザーが図の空白部分をクリックした場合、このリストのメンバーは図のみになります。
 
@@ -232,9 +234,9 @@ private void OnStatusMyContextMenuCommand(object sender, EventArgs e)
 
 - `shape.ModelElement as MyLanguageElement` - 図形により表されるモデル要素。
 
-  一般的なガイドラインとして、`Visible` プロパティは選択した内容に基づくようにし、`Enabled` プロパティは選択した要素の状態に基づくようにします。
+一般的なガイドラインとして、`Visible` プロパティは選択した内容に基づくようにし、`Enabled` プロパティは選択した要素の状態に基づくようにします。
 
-  OnStatus メソッドは Store の状態を変更してはなりません。
+OnStatus メソッドは Store の状態を変更してはなりません。
 
 ### <a name="define-what-the-command-does"></a>コマンドが実行する処理を定義する
  コマンドごとに、ユーザーがメニュー コマンドをクリックしたときに必要な操作を実行する `OnMenu...` メソッドを定義します。
@@ -319,7 +321,7 @@ protected override IList<MenuCommand> GetMenuCommands()
 ## <a name="test-the-command"></a>コマンドをテストする
  Visual Studio の実験用インスタンスで DSL をビルドして実行します。 指定した状況でこのコマンドがショートカット メニューに表示されるはずです。
 
-#### <a name="to-exercise-the-command"></a>コマンドを実行するには
+### <a name="to-exercise-the-command"></a>コマンドを実行するには
 
 1.  **ソリューション エクスプ ローラー**ツールバーで、をクリックして**すべてのテンプレートの変換**します。
 
@@ -329,8 +331,9 @@ protected override IList<MenuCommand> GetMenuCommands()
 
 4.  図の中のさまざまな項目を右クリックして、選択した項目に基づいてコマンドが正しく有効または無効になること、適切に表示または非表示になることを確認します。
 
-## <a name="troubleshooting"></a>トラブルシューティング
- **コマンドは、メニューは表示されません。**
+## <a name="troubleshoot"></a>トラブルシューティング
+
+**コマンドは、メニューは表示されません。**
 
 - DSL パッケージをインストールするまでは、コマンドは Visual Studio のデバッグ インスタンスでのみ表示されます。 詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)します。
 
@@ -340,17 +343,17 @@ protected override IList<MenuCommand> GetMenuCommands()
 
 - OnStatus メソッドの開始時にブレークポイントを設定します。 このブレークポイントは、図の任意の部分を右クリックしたときにブレークする必要があります。
 
-   **OnStatus メソッドは呼び出されません**:
+**OnStatus メソッドは呼び出されません**:
 
-  -   CommandSet コードの GUID と ID が Commands.vsct の Symbols セクションの GUID と ID に一致することを確認します。
+-   CommandSet コードの GUID と ID が Commands.vsct の Symbols セクションの GUID と ID に一致することを確認します。
 
-  -   Commands.vsct ですべての親ノードの GUID と ID が正しい親グループを識別していることを確認します。
+-   Commands.vsct ですべての親ノードの GUID と ID が正しい親グループを識別していることを確認します。
 
-  -   Visual Studio コマンド プロンプトで devenv /rootsuffix exp /setup と入力します。 Visual Studio のデバッグ インスタンスを再起動します。
+-   Visual Studio コマンド プロンプトで devenv /rootsuffix exp /setup と入力します。 Visual Studio のデバッグ インスタンスを再起動します。
 
 - OnStatus メソッドをステップ実行し、command.Visible と command.Enabled が true に設定されていることを確認します。
 
-  **誤ったメニュー テキストが表示されたら、または間違った場所にコマンドが表示される**:
+**誤ったメニュー テキストが表示されたら、または間違った場所にコマンドが表示される**:
 
 - GUID と ID の組み合わせがこのコマンドに固有であることを確認します。
 

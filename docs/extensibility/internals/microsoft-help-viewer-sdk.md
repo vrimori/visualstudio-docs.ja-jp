@@ -732,7 +732,7 @@ Visual Studio のコンテンツ ストアを作成します。 統合シェル�
 
 分離シェルの拡張機能を作成します。
 
-1.  Visual Studio で、**ファイル**、選択**新しいプロジェクト****その他のプロジェクトの種類**選択**Extensibility**を選択し**Visual Studio Shell Isolated**します。 プロジェクトに名前を`ContosoHelpShell`) Visual Studio 分離シェル テンプレートに基づいて、拡張機能プロジェクトを作成します。
+1.  Visual Studio で、**ファイル**、選択**新しいプロジェクト** **その他のプロジェクトの種類**選択**Extensibility**を選択し**Visual Studio Shell Isolated**します。 プロジェクトに名前を`ContosoHelpShell`) Visual Studio 分離シェル テンプレートに基づいて、拡張機能プロジェクトを作成します。
 
 2.  ソリューション エクスプ ローラーでのリソース ファイル フォルダーで、ContosoHelpShellUI プロジェクトで ApplicationCommands.vsct を開きます。 この行がコメント アウト ("No_Help"を検索) を確認します。 `<!-- <define name="No_HelpMenuCommands"/> -->`
 

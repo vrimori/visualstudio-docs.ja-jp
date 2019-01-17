@@ -1,8 +1,6 @@
 ---
 title: Idiasectioncontrib::get_remove |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d44143994a0516c08e4738749b65bca54ba7a66
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: c659d4368d6c2b4760e4c6b0ca977c7f63f51de3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49854067"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53956485"
 ---
 # <a name="idiasectioncontribgetremove"></a>IDiaSectionContrib::get_remove
 メモリ内のイメージの一部を作成する前に、セクションが削除かどうかを示すフラグを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49854067"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_remove (   
+HRESULT get_remove (   
    BOOL* pRetVal  
 );  
 ```  
@@ -37,7 +35,7 @@ HRESULT get_remove (
  [out]返します`TRUE`; イメージがメモリ内に追加する場合は、セクションを返しますそれ以外の場合、`FALSE`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

@@ -20,17 +20,17 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8f2eabb900e24072c8f390061b5d6081de9bc889
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: bcbf844ced2bb74ddfea9bd62d68877b7a3c969c
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49914243"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54092886"
 ---
 # <a name="conditional-compilation-is-turned-off"></a>条件付きコンパイルは無効になっています。
 初めてオンにする条件付きコンパイルなしの条件付きコンパイル変数を使用しようとしました。 通知の条件付きコンパイルの有効化、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]コンパイラに条件付きコンパイル変数としてで始まる識別子。 条件付きステートメントを使用してコードを開始することで行います。  
   
-```  
+```js
 /*@cc_on @*/  
 ```  
   

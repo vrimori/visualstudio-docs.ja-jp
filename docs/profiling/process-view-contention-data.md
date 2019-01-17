@@ -1,8 +1,6 @@
 ---
 title: プロセス ビュー - 競合データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Process view
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c8772bd6426632093bb23cc3094fe42ad433a8d
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: c5eb2a476dd093bf661e40f88795598e4878c313
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35257814"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53943890"
 ---
 # <a name="process-view---contention-data"></a>プロセス ビュー - 競合データ
 プロセス ビューには、プロファイリング実行中に実行されたプロセスとスレッドの競合データが表示されます。  

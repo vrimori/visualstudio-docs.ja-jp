@@ -1,8 +1,6 @@
 ---
 title: 項目定義 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - msbuild, item definitions
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c267c8a0d76fdda08112e428c0fc7403daa1f30
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 2cc550d91c1cccbbc5417300da3618aa52afa69b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178563"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53990806"
 ---
 # <a name="item-definitions"></a>項目定義
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2.0 では、[ItemGroup](../msbuild/itemgroup-element-msbuild.md) 要素を使用することにより、プロジェクト ファイルに項目を静的に宣言できます。 ただし、メタデータは、すべての項目に共通であっても項目単位でしか追加できません。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5 以降には、この制限を克服する [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) という名前のプロジェクト要素が導入されました。 *ItemDefinitionGroup* を使用して一連の項目定義を定義すると、名前付きの項目の種類に含まれるすべての項目に既定のメタデータ値を追加できます。  
@@ -40,7 +38,7 @@ ms.locfileid: "39178563"
 > [!NOTE]
 >  このトピックでは、多くの例に ItemDefinitionGroup 要素が示されていますが、それに対応する ItemGroup 定義は例の簡潔さを保つために省略しています。  
   
- ItemGroup に明示的に定義されたメタデータは、ItemDefinitionGroup 内のメタデータより優先されます。 ItemDefinitionGroup 内のメタデータは、ItemGroup に対応するメタデータが定義されていない場合のみ適用されます。 例:  
+ ItemGroup に明示的に定義されたメタデータは、ItemDefinitionGroup 内のメタデータより優先されます。 ItemDefinitionGroup 内のメタデータは、ItemGroup に対応するメタデータが定義されていない場合のみ適用されます。 次に例を示します。  
   
 ```xml  
 <ItemDefinitionGroup>  
@@ -60,7 +58,7 @@ ms.locfileid: "39178563"
  この例では、項目 "i" ではメタデータ "m" が明示的に定義されていないため、既定のメタデータ "m" が項目 "i" に適用されます。 ただし、項目 "i" でメタデータ "n" が既に定義されているため、既定のメタデータ "n" は項目 "i" には適用されません。  
   
 > [!NOTE]
->  XML 要素名およびパラメーター名では、\-大文字と小文字が区別されます。 項目メタデータ名と項目\//プロパティ名では、\-大文字と小文字は区別されません。 したがって、大文字と小文字のみが異なる名前の ItemDefinitionGroup 項目は同じ ItemGroup として扱う必要があります。  
+>  XML 要素名およびパラメーター名では、大文字と小文字が区別されます。 項目メタデータ名と項目\//プロパティ名では、\-大文字と小文字は区別されません。 したがって、大文字と小文字のみが異なる名前の ItemDefinitionGroup 項目は同じ ItemGroup として扱う必要があります。  
   
 ## <a name="value-sources"></a>値のソース  
  ItemDefinitionGroup に定義されたメタデータには、以下のさまざまなソースから値を割り当てることができます。  
@@ -91,7 +89,7 @@ ms.locfileid: "39178563"
   
 -   最後のメタデータ指定が優先されます。  
   
-複数の ItemDefinitionGroup がある場合、それ以降メタデータ指定を行うたびに、そのメタデータが前の定義に追加されます。 例:  
+複数の ItemDefinitionGroup がある場合、それ以降メタデータ指定を行うたびに、そのメタデータが前の定義に追加されます。 次に例を示します。  
   
 ```xml  
 <ItemDefinitionGroup>  
@@ -109,7 +107,7 @@ ms.locfileid: "39178563"
   
 この例では、メタデータ "o" が "m" および "n" に追加されます。  
   
-さらに、定義済みのメタデータ値も追加できます。 例:  
+さらに、定義済みのメタデータ値も追加できます。 次に例を示します。  
   
 ```xml  
 <ItemDefinitionGroup>  
@@ -145,7 +143,7 @@ ms.locfileid: "39178563"
 ```  
   
 ## <a name="use-conditions-in-an-itemdefinitiongroup"></a>ItemDefinitionGroup での条件の使用  
- ItemDefinitionGroup では、条件を使用してメタデータの追加を制御できます。 例:  
+ ItemDefinitionGroup では、条件を使用してメタデータの追加を制御できます。 次に例を示します。  
   
 ```xml  
 <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">  
@@ -160,7 +158,7 @@ ms.locfileid: "39178563"
 > [!NOTE]
 >  条件では、ローカル メタデータ参照のみサポートされます。  
   
-前の ItemDefinitionGroup に定義されたメタデータへの参照は、定義グループではなく項目に対してローカルです。 つまり、参照は項目をスコープとします。 例:  
+前の ItemDefinitionGroup に定義されたメタデータへの参照は、定義グループではなく項目に対してローカルです。 つまり、参照は項目をスコープとします。 次に例を示します。  
   
 ```xml  
 <ItemDefinitionGroup>  
@@ -191,7 +189,7 @@ ms.locfileid: "39178563"
 上の例では、条件が項目 "yes" に対して項目 "i" のメタデータ値を参照するので、"m" が値 "m1" に設定されます。 
   
 ## <a name="override-and-delete-metadata"></a>メタデータのオーバーライドと削除  
- ItemDefinitionGroup 要素に定義されたメタデータは、値を空白に設定することにより、後の ItemDefinitionGroup 要素でオーバーライドできます。 また、メタデータ項目は空の値に設定することによって削除できます。 例:  
+ ItemDefinitionGroup 要素に定義されたメタデータは、値を空白に設定することにより、後の ItemDefinitionGroup 要素でオーバーライドできます。 また、メタデータ項目は空の値に設定することによって削除できます。 次に例を示します。  
   
 ```xml  
 <ItemDefinitionGroup>  
@@ -242,7 +240,7 @@ ms.locfileid: "39178563"
 </ItemDefinitionGroup>  
 ```  
   
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5 以降では、ItemGroup も自己参照が可能です。 例:  
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5 以降では、ItemGroup も自己参照が可能です。 次に例を示します。  
   
 ```xml  
 <ItemGroup>  

@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d4710752c4825ce576b20a823735b5ed1e2ebad
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: bd147b5a7b491c17e0ed0024cfe471762e6160b1
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53900939"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269710"
 ---
 # <a name="how-to-print-diagrams-from-the-graph-view-and-the-content-model-view"></a>方法: グラフ ビューおよびコンテンツ モデル ビューからダイアグラムを出力します。
 
@@ -24,7 +24,7 @@ ms.locfileid: "53900939"
 
 1.  Visual Studio で XSD ファイルを開くし、一部のノードを追加、 [XML スキーマ デザイナーのワークスペース](../xml-tools/xml-schema-designer-workspace.md)します。
 
-2.  使用して図を XPS ファイルにエクスポート、**イメージとしてダイアグラムをエクスポート**グラフ ビューまたはコンテンツ モデル ビューのデザイン画面でのコンテキスト メニュー項目。
+2.  使用して図を XPS ファイルにエクスポート、**イメージとしてダイアグラムをエクスポート**グラフ ビューまたはコンテンツ モデル ビューのデザイン画面でのコンテキスト (右クリック) メニュー項目。
 
      グラフ ビューからダイアグラムをエクスポートするときに、デザイン サーフェイス全体が XPS ファイルにエクスポートされます。 コンテンツ モデル ビューからダイアグラムをエクスポートすると、1 つ以上のノードが、コンテンツ モデル ビューのデザイン サーフェイスに表示、最初のノードのみが XPS ファイルにエクスポートされます。
 

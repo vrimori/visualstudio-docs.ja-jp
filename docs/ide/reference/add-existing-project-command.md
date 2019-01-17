@@ -2,7 +2,6 @@
 title: AddExistingProject コマンド
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - file.addexistingproject
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c030358eb071613e98d473845708b01235683ded
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 2a5b0579037d31cf88de32f4fabda531d92c1b61
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704786"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53880456"
 ---
 # <a name="add-existing-project-command"></a>AddExistingProject コマンド
 既存のプロジェクトを現在のソリューションに追加します。
@@ -48,9 +47,9 @@ File.AddExistingProject filename
 >File.AddExistingProject "c:\visual studio projects\TestProject1.vbproj"
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
 - [コマンド ウィンドウ](../../ide/reference/command-window.md)
 - [検索コマンド ボックス](../../ide/find-command-box.md)
-- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)

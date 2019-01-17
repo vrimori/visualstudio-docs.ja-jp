@@ -2,7 +2,6 @@
 title: -Edit (devenv.exe)
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - Devenv, /edit switch
@@ -13,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5588d5dbf86039273854ddc372d1bbe096dad70b
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.openlocfilehash: 0ccbd3a693313b870378021e6404424cfb11f199
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948141"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53907989"
 ---
 # <a name="edit-devenvexe"></a>/Edit (devenv.exe)
 指定されたファイルを [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の既存のインスタンスで開きます。
@@ -50,6 +49,6 @@ Devenv /edit [file1[ file2]]
 devenv /edit MyFile.cs
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)

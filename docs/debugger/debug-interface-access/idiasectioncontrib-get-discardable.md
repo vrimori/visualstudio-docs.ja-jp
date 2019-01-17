@@ -1,8 +1,6 @@
 ---
 title: Idiasectioncontrib::get_discardable |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 13e72f71fd382b8b94f7acfae9f6e23a1001d50c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 3827010c2bd15ad1048a4f65c057d2bce505ebf5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49879871"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53879489"
 ---
 # <a name="idiasectioncontribgetdiscardable"></a>IDiaSectionContrib::get_discardable
 セクションで破棄できるかどうかを示すフラグを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49879871"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_discardable (   
+HRESULT get_discardable (   
    BOOL* pRetVal  
 );  
 ```  
@@ -37,7 +35,7 @@ HRESULT get_discardable (
  [out]返します`TRUE`セクションは、必要な場合はメモリから破棄できる場合を返しますそれ以外の場合、`FALSE`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

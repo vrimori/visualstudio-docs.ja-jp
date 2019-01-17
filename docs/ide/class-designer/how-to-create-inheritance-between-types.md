@@ -2,7 +2,6 @@
 title: '方法: 型の間の継承を作成する (クラス デザイナー)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.inheritanceline
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e8151020294f4fd5574a1de886509c5b11f0a326
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: b94d89f6051b47f8500886348b335754abae9b72
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956680"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53925564"
 ---
 # <a name="how-to-create-inheritance-between-types-in-class-designer"></a>方法: クラス デザイナーで型の間の継承を作成する
 
@@ -30,7 +29,7 @@ ms.locfileid: "33956680"
 
 1.  **ソリューション エクスプローラー**のプロジェクトから、クラス ダイアグラム (.cd) ファイルを開きます。
 
-     クラス ダイアグラムがない場合は、クラス ダイアグラムを作成します。 「[方法: プロジェクトにクラス ダイアグラムを追加する](how-to-add-class-diagrams-to-projects.md)」をご覧ください。
+     クラス ダイアグラムがない場合は、クラス ダイアグラムを作成します。 「[方法:プロジェクトにクラス ダイアグラムを追加する](how-to-add-class-diagrams-to-projects.md)」を参照してください。
 
 2.  **[クラス デザイナー]** の **[ツールボックス]** で、**[継承]** をクリックします。
 

@@ -1,9 +1,7 @@
 ---
 title: '手順 5: NumericUpDown コントロールの Enter イベント ハンドラーの追加'
-ms.custom: ''
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 45a99a5d-c881-4298-b74d-adb481dec5ee
 author: TerryGLee
@@ -11,12 +9,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e05d6cc201819d37e77587529ffd79a740003a10
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 393e43a44045f4551fbf567f1de037e77dbae00e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747920"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53846900"
 ---
 # <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>手順 5: NumericUpDown コントロールの Enter イベント ハンドラーの追加
 このチュートリアルの第 5 部では、クイズ問題の解答の入力が少し楽になるように <xref:System.Windows.Forms.Control.Enter> イベント ハンドラーを追加します。 このコードは、クイズの受け手が選択して別の値の入力を開始するとすぐに、各 <xref:System.Windows.Forms.NumericUpDown> コントロールの現在の値を選択し、クリアします。
@@ -72,6 +70,6 @@ ms.locfileid: "34747920"
 
 ## <a name="to-continue-or-review"></a>続行または確認するには
 
--   チュートリアルの次の手順に進むには、「[手順 6: 減算問題の追加](../ide/step-6-add-a-subtraction-problem.md)」をご覧ください。
+-   チュートリアルの次の手順に進むには、「[手順 6: 減算問題の追加](../ide/step-6-add-a-subtraction-problem.md)」を参照してください。
 
--   チュートリアルの前の手順に戻るには、「[手順 4: CheckTheAnswer() メソッドの追加](../ide/step-4-add-the-checktheanswer-parens-method.md)」をご覧ください。
+-   チュートリアルの前の手順に戻るには、「[手順 4: CheckTheAnswer() メソッドの追加](../ide/step-4-add-the-checktheanswer-parens-method.md)」を参照してください。

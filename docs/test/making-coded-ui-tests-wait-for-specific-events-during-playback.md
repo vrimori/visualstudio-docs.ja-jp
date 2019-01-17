@@ -2,19 +2,18 @@
 title: 特定のイベントを待機するようにコード化された UI テストを設定する
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d1f077269ddfd736aa98b78c64c81170037853eb
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 6db68827b94deb461fe812e333d3fcbb44afc4f3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52894769"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53850915"
 ---
 # <a name="make-coded-ui-tests-wait-for-specific-events-during-playback"></a>再生中に特定のイベントを待機するようにコード化された UI テストを設定する
 
@@ -27,7 +26,7 @@ ms.locfileid: "52894769"
 Visual Studio Enterprise
 
 > [!TIP]
-> またコード化された UI テスト エディターで操作の前に遅延を追加することもできます。 詳細については、「[方法: コード化された UI テスト エディターを使用して UI アクションの前に遅延を挿入する](editing-coded-ui-tests-using-the-coded-ui-test-editor.md#insert-a-delay-before-a-ui-action)」をご覧ください。
+> またコード化された UI テスト エディターで操作の前に遅延を追加することもできます。 詳細については、「[方法 :コード化された UI テスト エディターを使用して UI アクションの前に遅延を挿入する](editing-coded-ui-tests-using-the-coded-ui-test-editor.md#insert-a-delay-before-a-ui-action)」を参照してください。
 
 **UITestControl.WaitForControlXXX() メソッド**
 
@@ -37,7 +36,7 @@ Visual Studio Enterprise
 
 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A>
 
-サーバーを呼び出すことでウィザードが入力の非同期の検証を実行するときに、コントロールが有効化されるまで待機します。 たとえば、このメソッドを使用してウィザードの **[次へ]** ボタンが有効化されるまで待機します。 このメソッドの使用例については、「[チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)」をご覧ください。
+サーバーを呼び出すことでウィザードが入力の非同期の検証を実行するときに、コントロールが有効化されるまで待機します。 たとえば、このメソッドを使用してウィザードの **[次へ]** ボタンが有効化されるまで待機します。 このメソッドの例については、「[チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)」を参照してください。
 
 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlExist%2A>
 
@@ -111,7 +110,7 @@ UITestControl.WaitForCondition<UITestControl[]>(new UITestControl[] { statusText
 
 - [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)
 - [コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md)
-- [チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
+- [チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)」を参照してください。
 - [コード化された UI テストの構造](../test/anatomy-of-a-coded-ui-test.md)
 - [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
 - [方法: コード化された UI テスト エディターを使用して UI アクションの前に遅延を挿入する](editing-coded-ui-tests-using-the-coded-ui-test-editor.md#insert-a-delay-before-a-ui-action)

@@ -3,19 +3,18 @@ title: ソリューション エクスプローラーでのファイルの入れ
 ms.date: 05/25/2018
 ms.topic: conceptual
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 helpviewer_keywords:
 - file nesting
 - Solution Explorer, file nesting
 author: angelosp
 ms.author: angelpe
 manager: douge
-ms.openlocfilehash: d50d16d23c2f12ac5ac9feaaa37ee3797802c97e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 3ba20e0df156cf2bba77bb919e55016692630ce7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49928699"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53831155"
 ---
 # <a name="customize-file-nesting-in-solution-explorer"></a>ソリューション エクスプローラーでファイルの入れ子をカスタマイズする
 
@@ -30,11 +29,11 @@ ms.locfileid: "49928699"
 
 カスタマイズせずに使用できるファイルの入れ子のオプションは次のとおりです。
 
-* **[オフ]**: 何も入れ子にせず、ファイルの単純なリストが作成されます。
+* **[オフ]**:何も入れ子にせず、ファイルの単純なリストが作成されます。
 
-* **[既定]**: このオプションは、**ソリューション エクスプローラー**での既定のファイル入れ子動作を提供します。 特定のプロジェクト タイプに設定が存在しない場合、そのプロジェクトのファイルは入れ子になりません。 Web プロジェクトのように設定が存在する場合は、入れ子が適用されます。
+* **既定**:このオプションは、**ソリューション エクスプローラー**での既定のファイル入れ子動作を提供します。 特定のプロジェクト タイプに設定が存在しない場合、そのプロジェクトのファイルは入れ子になりません。 Web プロジェクトのように設定が存在する場合は、入れ子が適用されます。
 
-* **[Web]**: **Web** ファイルの入れ子動作を、現在のソリューションのすべてのプロジェクトに適用します。 多くのルールがあるので、是非ご確認いただき、ご意見をお聞かせください。 次のスクリーンショットでは、このオプションを指定したときのファイル入れ子動作のいくつかの例を示します。
+* **[Web]**:**Web** ファイルの入れ子動作を、現在のソリューションのすべてのプロジェクトに適用します。 多くのルールがあるので、是非ご確認いただき、ご意見をお聞かせください。 次のスクリーンショットでは、このオプションを指定したときのファイル入れ子動作のいくつかの例を示します。
 
    ![ソリューション エクスプローラーでのファイルの入れ子](media/filenesting.png)
 
@@ -50,17 +49,17 @@ ms.locfileid: "49928699"
 
 ノード **dependentFileProviders** とその子ノードに注目してください。 各子ノードは、Visual Studio がファイルを入れ子にするために使用できるルールの種類です。 たとえば、**ファイル名は同じにして、拡張子は異なるものにする**、というのはルールの 1 つの種類です。 使用できるルールは次のとおりです。
 
-* **extensionToExtension**: *file.js* を *file.ts* の下に入れ子にするには、このルールの種類を使います
+* **extensionToExtension**:*file.js* を *file.ts* の下に入れ子にするには、このルールの種類を使います
 
-* **fileSuffixToExtension**: *file-vsdoc.js* を *file.js* の下に入れ子にするには、このルールの種類を使います
+* **fileSuffixToExtension**:*file-vsdoc.js* を *file.js* の下に入れ子にするには、このルールの種類を使います
 
-* **addedExtension**: *file.html.css* を *file.html* の下に入れ子にするには、このルールの種類を使います
+* **addedExtension**:*file.html.css* を *file.html* の下に入れ子にするには、このルールの種類を使います
 
-* **pathSegment**: *jquery.min.js* を *jquery.js* の下に入れ子にするには、このルールの種類を使います
+* **pathSegment**:*jquery.min.js* を *jquery.js* の下に入れ子にするには、このルールの種類を使います
 
-* **allExtensions**: *file.** を *file.js* の下に入れ子にするには、このルールの種類を使います
+* **allExtensions**:*file.** を *file.js* の下に入れ子にするには、このルールの種類を使います
 
-* **fileToFile**: *bower.json* を *.bowerrc* の下に入れ子にするには、このルールの種類を使います
+* **fileToFile**:*bower.json* を *.bowerrc* の下に入れ子にするには、このルールの種類を使います
 
 ### <a name="the-extensiontoextension-provider"></a>extensionToExtension プロバイダー
 

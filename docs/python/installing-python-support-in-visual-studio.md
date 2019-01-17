@@ -3,7 +3,6 @@ title: Python サポートをインストールする
 description: Visual Studio 2017、2015、2013、2012、2010 で Python Tools for Visual Studio (PTVS) をインストールする方法と、オプションやインストールの場所。
 ms.date: 12/06/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
@@ -12,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e306bffe8f2cd59332f367822cd90b54b44b7635
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 3c59aee52ca547b4d209870516beb359d7138366
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53063756"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53961752"
 ---
 # <a name="how-to-install-python-support-in-visual-studio-on-windows"></a>Windows に Visual Studio の Python サポートをインストールする方法
 
@@ -134,4 +133,3 @@ Visual Studio 2015 以前のインストール パスを次に示します。
 ### <a name="user-specific-installations-15-and-earlier"></a>ユーザー固有のインストール (1.5 以前)
 
 Python Tools for Visual Studio 1.5 以前では、インストールは現在のユーザーのみに許可されます。この場合、インストール パスは *%LocalAppData%\Microsoft\VisualStudio\\<VS_ver>\Extensions\Microsoft\Python Tools for Visual Studio\\<PTVS_ver>* になります。この &lt;VS_ver&gt; と &lt;PTVS_ver&gt; は、上記で説明したものと同じです。
-

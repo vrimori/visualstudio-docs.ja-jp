@@ -2,7 +2,6 @@
 title: '[検索/コマンド] ボックス'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.findcommandbox
@@ -13,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c5e11d83ea0c87bae058f5421c424922fa389a9c
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 91546caa5136fbcd31dabcaa9294ccd8056e6750
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752412"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53866791"
 ---
 # <a name="findcommand-box"></a>[検索/コマンド] ボックス
 
@@ -36,7 +35,7 @@ ms.locfileid: "34752412"
 
 ## <a name="entering-commands"></a>コマンドの入力
 
-**[検索]** ボックスを使用して、文字列の検索ではなく、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の単一のコマンドまたはエイリアスを実行するには、コマンドの先頭に不等号 (**>**) を付けます。 例:
+**[検索]** ボックスを使用して、文字列の検索ではなく、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の単一のコマンドまたはエイリアスを実行するには、コマンドの先頭に不等号 (**>**) を付けます。 次に例を示します。
 
 ```
 >File.NewFile c:\temp\MyFile /t:"General\Text File"
@@ -46,7 +45,7 @@ ms.locfileid: "34752412"
 
 ## <a name="escape-characters"></a>エスケープ文字
 
-コマンドにカレット (**^**) 文字があると、その直後の文字は制御文字としてではなくリテラル文字として解釈されます。 したがって、引用符 (**"**)、スペース、先頭のスラッシュ、カレット、その他の任意のリテラル文字をパラメーターまたはスイッチの値に直接埋め込むことができます。ただし、スイッチ名には埋め込むことができません。 例:
+コマンドにカレット (**^**) 文字があると、その直後の文字は制御文字としてではなくリテラル文字として解釈されます。 したがって、引用符 (**"**)、スペース、先頭のスラッシュ、カレット、その他の任意のリテラル文字をパラメーターまたはスイッチの値に直接埋め込むことができます。ただし、スイッチ名には埋め込むことができません。 次に例を示します。
 
 ```
 >Edit.Find ^^t /regex

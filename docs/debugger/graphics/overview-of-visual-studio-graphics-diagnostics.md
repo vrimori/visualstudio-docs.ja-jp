@@ -2,19 +2,18 @@
 title: グラフィックス診断の概要 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 02/09/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a88bcdad960e79c64a463fecf88bbf893b0181b0
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 25b15e45d464c78aa24fa6fed7292b3eb7140835
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059114"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53831379"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Visual Studio グラフィックス診断の概要
 Visual Studio の "*グラフィックス診断*" は、Direct3D アプリのレンダリングとパフォーマンスを記録し、問題を分析するためのツール セットです。 グラフィックス診断は、Windows PC 上またはリモート PC またはデバイスにローカルで実行されているアプリで使用できます。  
@@ -53,7 +52,7 @@ Visual Studio の "*グラフィックス診断*" は、Direct3D アプリのレ
 ### <a name="gpu-usage"></a>GPU 使用率  
  グラフィックス診断では、Direct3D アプリのパフォーマンスのプロファイリングを行うこともできます。 グラフィックス イベントを詳細に記録している間は正確なプロファイリング データを取得できないことがあるため、この診断は Graphics Analyzer による調査で使用するフレームのキャプチャとは別個に行います。  
   
- 詳細については、「[GPU 使用率](gpu-usage.md)」を参照してください。  
+ 詳細については、「[GPU 使用率](/visualstudio/profiling/gpu-usage)」を参照してください。  
   
 ### <a name="directx-control-panel"></a>DirectX コントロール パネル  
  DirectX コントロール パネルは、DirectX の動作を変更するために使用できる、DirectX のコンポーネントです。たとえば、DirectX のランタイム コンポーネントのデバッグ バージョンを有効にする、報告されるデバッグ メッセージの種類を選択する、および処理能力の低いハードウェアをエミュレートするために一部のグラフィックス ハードウェア機能が使用されないようにすることができます。 DirectX に対するこのレベルの制御は、DirectX アプリケーションのデバッグとテストに役立ちます。 Visual Studio から DirectX コントロール パネルにアクセスできます。  
@@ -118,6 +117,6 @@ Visual Studio の "*グラフィックス診断*" は、Direct3D アプリのレ
   
  しかし、フレーム分析は高速化だけを目的とはしていません。画質をほとんど落とさずに最大限のパフォーマンスを達成することが目的です。 時には、大きなディスプレイで優れた効果を発揮する高負荷の処理が、携帯電話のような小さな画面で見るとそれほど効果を発揮しないことがあります。その場合、バッテリを消費しないように低負荷の処理にしたほうが適切であると考えられます。 グラフィックス分析による自動的な変更とベンチマーク結果を活用すれば、さまざまなデバイスでアプリに応じた適切なバランスを見つけるめために役立ちます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [コマンド ライン キャプチャ ツール](command-line-capture-tool.md)   
  [HLSL デバッガー](hlsl-shader-debugger.md)

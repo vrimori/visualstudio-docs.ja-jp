@@ -1,8 +1,9 @@
 ---
-title: 編集の概要
+title: コード エディターでの編集の概要
 ms.date: 11/30/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
+ms.technology: vs-ide-general
+ms.custom: get-started
 ms.topic: tutorial
 author: gewarren
 ms.author: gewarren
@@ -11,20 +12,21 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e2f451ecfb73e0c1ac69da4e48f3d2c8033aa51
-ms.sourcegitcommit: 5c049194fa256b876ad303f491af11edd505756c
+ms.openlocfilehash: 6c3953f69d263b948e84f0d1aa48d878cd39afe6
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53027801"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53803334"
 ---
 # <a name="learn-to-use-the-code-editor"></a>コード エディターを使用方法について学習する
 
 この 10 分間の Visual Studio のコード エディターの紹介では、ファイルにコードを追加した上で、Visual Studio でコードを記述、コード内を移動、およびコードを理解する簡単な方法をいくつか説明します。
 
-Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
+> [!TIP]
+> Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
-この記事では、既にプログラミング言語を使い慣れていることを前提としています。 使い慣れていない場合は、[Python](../ide/quickstart-python.md) または [C#](../ide/tutorial-csharp-aspnet-core.md) による Web アプリの作成や、[Visual Basic](../ide/quickstart-visual-basic-console.md) または [C++](../ide/getting-started-with-cpp-in-visual-studio.md) によるコンソール アプリの作成など、プログラミング言語に関するいずれかのクイック スタートを最初に確認することをお勧めします。
+この記事では、既にプログラミング言語を使い慣れていることを前提としています。 使い慣れていない場合は、[Python](../ide/quickstart-python.md) または [C#](../get-started/csharp/tutorial-aspnet-core.md) による Web アプリの作成や、[Visual Basic](../ide/quickstart-visual-basic-console.md) または [C++](../ide/getting-started-with-cpp-in-visual-studio.md) によるコンソール アプリの作成など、プログラミング言語に関するいずれかのクイック スタートを最初に確認することをお勧めします。
 
 ## <a name="create-a-new-code-file"></a>新しいコード ファイルを作成する
 
@@ -42,7 +44,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 Visual Studio で提供されている便利な*コード スニペット*を使用すると、一般的に使用されるコード ブロックを迅速かつ簡単に生成することができます。 [コード スニペット](../ide/code-snippets.md)は、C#、Visual Basic、C++ など、さまざまなプログラミング言語で使用することができます。 C# `void Main` スニペットをファイルに追加してみましょう。
 
-1. ファイル内の最後の閉じかっこ **}** のちょうど上にカーソルを置き、文字 `svm` を入力します (これは、`static void Main`&mdash; の略ですが、その意味が分からなくても、あまり心配しないでください)。
+1. ファイル内の最後の閉じかっこ **}** のすぐ上にカーソルを置き、`svm` という文字を入力します  (`svm` は `static void Main` の略です。[Main()](/dotnet/csharp/programming-guide/main-and-command-args/) メソッドは、C# アプリケーションのエントリ ポイントです)。
 
    ポップアップ ダイアログ ボックスが `svm` コード スニペットに関する情報を伴って表示されます。
 
@@ -50,7 +52,7 @@ Visual Studio で提供されている便利な*コード スニペット*を使
 
 1. **Tab** キーを 2 回押すと、コード スニペットが挿入されます。
 
-   `static void Main()` メソッドの署名がファイルに追加されているのがわかります。 [Main()](/dotnet/csharp/programming-guide/main-and-command-args/) メソッドは、C# アプリケーションのエントリ ポイントです。
+   `static void Main()` メソッドの署名がファイルに追加されているのがわかります。
 
 利用できるコード スニペットは、プログラミング言語によって異なります。 目的の言語で使用可能なコード スニペットを確認するには、**[編集]** > **[IntelliSense]** > **[スニペットの挿入]** の順に選択し、言語のフォルダーを選択します。 C# の場合、リストは次のようになります。
 

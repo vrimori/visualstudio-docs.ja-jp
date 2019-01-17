@@ -2,7 +2,6 @@
 title: Visual C++ コードの使用 (クラス デザイナー)
 ms.date: 06/21/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.cpplimitation
@@ -20,12 +19,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109c2408e16c5ca4943855889191733234778761
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: e81a267b1a80036a0e000d7336f6b50b0e5f29d2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958452"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53947518"
 ---
 # <a name="work-with-visual-c-code-in-class-designer"></a>クラス デザイナーでの Visual C++ コードの使用
 
@@ -33,7 +32,7 @@ ms.locfileid: "33958452"
 
 **クラス デザイナー**は、次の C++ コード要素をサポートしています。
 
-- クラス (マネージ クラスの図形に似ていますが、複数の継承関係を持つことができるという点が異なります)
+- クラス (マネージド クラスの図形に似ていますが、複数の継承関係を持つことができるという点が異なります)
 
 - 匿名クラス (クラス ビューが匿名型に対して生成した名前を表示します)
 
@@ -48,7 +47,7 @@ ms.locfileid: "33958452"
 - Typedef
 
 > [!NOTE]
-> これは、モデリング プロジェクトで作成できる UML クラス図と同じではありません。 詳細については、「[UML Class Diagrams: Reference](../../modeling/uml-class-diagrams-reference.md)」(UML クラス図: リファレンス) を参照してください。
+> これは、モデリング プロジェクトで作成できる UML クラス図と同じではありません。 詳細については、「[UML Class Diagrams:Reference](../../modeling/create-uml-modeling-projects-and-diagrams.md)」(UML クラス図: リファレンス) を参照してください。
 
 ## <a name="troubleshoot-type-resolution-and-display-issues"></a>型解決および表示の問題のトラブルシューティング
 
@@ -112,8 +111,6 @@ MSDN (Microsoft Developer Network) のパブリック フォーラムでは、�
 
 ## <a name="see-also"></a>関連項目
 
-- [クラスと型のデザインおよび表示](designing-and-viewing-classes-and-types.md)
-- [クラス ダイアグラムの使用](working-with-class-diagrams.md)
 - [クラスと型のデザインおよび表示](designing-and-viewing-classes-and-types.md)
 - [クラス デザイナーのエラーに関する追加情報](additional-information-about-errors.md)
 - [クラス デザイナーの Visual C++ クラス](visual-cpp-classes.md)

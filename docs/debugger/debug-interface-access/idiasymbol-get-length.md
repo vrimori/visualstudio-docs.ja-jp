@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_length |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f99a2012d0c3f009540c988df6e41b0a7d0cf4e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 37e32585e44c7100d673b35e99ad0db081caa9fe
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49844524"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53824237"
 ---
 # <a name="idiasymbolgetlength"></a>IDiaSymbol::get_length
 この記号によって表されるオブジェクトによって使用されるメモリのバイトまたはビット数を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49844524"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_length (   
+HRESULT get_length (   
    ULONGLONG* pRetVal  
 );  
 ```  
@@ -42,7 +40,7 @@ HRESULT get_length (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  場合、 [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)のシンボルは`LocIsBitField`、このメソッドによって返される文字数は bits では、文字数はそれ以外の場合、その他のすべての場所の種類のバイト数でします。  
   
 ## <a name="example"></a>例  
@@ -53,13 +51,13 @@ ULONGLONG   length;
 pSymbol->get_length( &length );  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|Dia2.h|  
+|ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK v7.0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)

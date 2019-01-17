@@ -1,8 +1,6 @@
 ---
 title: IntelliTrace を使用したイベントの表示 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: e1c9c91a-0009-4c4e-9b4f-c9ab3a6022a7
 author: mikejo5000
@@ -10,24 +8,26 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f46113365b66a75d3f9e149181637c79068645ab
-ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
-ms.translationtype: MT
+ms.openlocfilehash: 86410567a194753db2001fbd5fba870bb89d7930
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46542326"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227994"
 ---
-# <a name="view-events-with-intellitrace-in-visual-studio"></a>Visual Studio での IntelliTrace を使用したイベントの表示
+# <a name="view-events-with-intellitrace-in-visual-studio-enterprise-c-visual-basic"></a>Visual Studio Enterprise で IntelliTrace を使用したイベントの表示 (C#、Visual Basic)
+
 IntelliTrace を使用して、特定のイベントまたはイベントのカテゴリに関する情報、またはイベントだけでなく、個々の関数呼び出しに関する情報を収集することができます。 この操作を実行する手順を次に示します。  
   
- Visual Studio Enterprise edition、Professional または Community edition いないで IntelliTrace を使用できます。  
+IntelliTrace は Visual Studio Enterprise Edition で使用できますが、Professional Edition または Community Edition では使用できません。  
   
-##  <a name="GettingStarted"></a> Intellitrace を構成します。  
+##  <a name="GettingStarted"></a> IntelliTrace を構成します。  
+
  IntelliTrace イベントのみでデバッグを実行することができます。 IntelliTrace イベントは、デバッガー イベント、例外、.NET Framework イベント、およびその他のシステム イベントです。 デバッグを開始する前に、IntelliTrace が記録するイベントを制御するために、特定のイベントをオンまたはオフにする必要があります。 詳細については、次を参照してください。 [IntelliTrace 機能](../debugger/intellitrace-features.md)します。  
   
- - ファイル アクセスで IntelliTrace イベントをオンにします。 移動して、**ツール > オプション > IntelliTrace > IntelliTrace イベント**ページ、および展開し、**ファイル**カテゴリ。 **[ファイル]** イベント カテゴリをチェックします。 これにより、すべてのファイル イベント (アクセス、閉じる、削除) がチェックされます。
+ - ファイル アクセスで IntelliTrace イベントをオンにします。 **[ツール] > [オプション] > [IntelliTrace] > [IntelliTrace イベント]** ページに移動して、**[ファイル]** カテゴリを展開します。 **[ファイル]** イベント カテゴリをチェックします。 これにより、すべてのファイル イベント (アクセス、閉じる、削除) がチェックされます。
 
-## <a name="create-your-app"></a>アプリを作成します。
+## <a name="create-your-app"></a>アプリを作成する
   
 1.  C# コンソール アプリケーションを作成します。 Program.cs ファイルで、次の `using` ステートメントを追加します。  
   
@@ -49,16 +49,16 @@ IntelliTrace を使用して、特定のイベントまたはイベントのカ�
     }  
     ```  
   
-3.  `Console.WriteLine("done");`  
+3.  `Console.WriteLine("done");` へのブレークポイントの設定  
 
 ## <a name="start-debugging-and-view-intellitrace-events"></a>デバッグを開始し、IntelliTrace イベントを表示
   
-1.  通常どおりデバッグを開始します。 (キーを押して**F5**  をクリックしてまたは**デバッグ > デバッグ開始**します。  
+1.  通常どおりデバッグを開始します。 (**F5** キーを押すか、**[デバッグ] > [デバッグの開始]** をクリックします。  
   
     > [!TIP]
-    >  保持、**ローカル**と **[自動変数]** 表示およびこれらのウィンドウで、値を記録する、デバッグ中に windows が開きます。  
+    >  これらのウィンドウに値を表示および記録するために、デバッグ中は **[ローカル]** ウィンドウおよび **[自動変数]** ウィンドウを開いたままにします。  
   
-2.  ブレークポイントで実行が停止します。 表示されない場合、**診断ツール**ウィンドウで、をクリックして**デバッグ > Windows > IntelliTrace イベント**します。  
+2.  ブレークポイントで実行が停止します。 **[診断ツール]** ウィンドウが表示されない場合は、**[デバッグ] > [Windows] > [IntelliTrace イベント]** の順にクリックします。  
   
      **[診断ツール]** ウィンドウで、 **[イベント]** タブを見つけます ( **[イベント]**、 **[メモリ使用量]**、および **[CPU 使用率]** の 3 つのタブが表示されます)。 **[イベント]** タブは、デバッガーが実行を中断する直前のイベントで終わる、イベントの時系列の一覧を示しています。 **Access WordSearchInputs.txt**という名前のイベントが表示されます。  
   
@@ -74,7 +74,7 @@ IntelliTrace を使用して、特定のイベントまたはイベントのカ�
   
      ファイルを開くには、パス名のリンクを選択します。 完全なパス名が使用できない場合、 **[ファイルを開く]** ダイアログ ボックスが表示されます。  
   
-     クリックして**履歴デバッグの有効化**、デバッガーのコンテキストに設定が選択したイベント時刻が表示された履歴データを収集、**呼び出し履歴**、 **[ローカル]** および、その他の参加している windows のデバッガーです。 ソース コードが使用可能な場合、Visual Studio によってポインターがソース ウィンドウ内の対応するコードに移動されるため、そのコードを調査できます。  
+     **[デバッグの履歴の有効化]** をクリックします。ここで、デバッガーのコンテキストを、**[呼び出し履歴]**、**[ローカル]**、およびその他の参加しているデバッガーのウィンドウに履歴データを表示しながら、選択したイベントが収集された時刻に設定します。 ソース コードが使用可能な場合、Visual Studio によってポインターがソース ウィンドウ内の対応するコードに移動されるため、そのコードを調査できます。  
   
      次のスクリーン ショットは Visual Studio 2015 Update 1 のものです。  
   

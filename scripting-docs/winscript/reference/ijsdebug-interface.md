@@ -1,5 +1,5 @@
 ---
-title: IJsDebug インターフェイス |Microsoft ドキュメント
+title: IJsDebug インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -12,19 +12,19 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 724036182638dbe3d253730c42e835250e6eaa33
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 16f0da202e937a92a8e76dddc27d9da7bc61c4ca
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727682"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54089415"
 ---
 # <a name="ijsdebug-interface"></a>IJsDebug インターフェイス
 JavaScript のデバッグ用のエントリ ポイント。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 IJsDebug : public IUnknown;  
 ```  
   
@@ -36,7 +36,7 @@ IJsDebug : public IUnknown;
 |----------|-----------------|  
 |[IJsDebug::OpenVirtualProcess メソッド](../../winscript/reference/ijsdebug-openvirtualprocess-method.md)|新しい仮想プロセス オブジェクトの作成に使用するファクトリ メソッド。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** jscript9diag.h です  
   
 ## <a name="see-also"></a>関連項目  

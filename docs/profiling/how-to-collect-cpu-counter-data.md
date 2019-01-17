@@ -1,8 +1,6 @@
 ---
 title: '方法: CPU カウンター データを収集する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.performance.property.cpucounters
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d5bb2d554ee67a4a2c83decba017e9a1f0fe1e9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ab80ba010a91df11efac21366a812015defa3b23
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813910"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53897236"
 ---
 # <a name="how-to-collect-cpu-counter-data"></a>方法: CPU カウンター データを収集する
 
@@ -65,4 +63,4 @@ CPU イベント カウンターはハードウェア固有のパフォーマン
 [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)  
 [パフォーマンス セッションのプロパティ](../profiling/performance-session-properties.md)  
 [CPU カウンターと Windows カウンター](../profiling/cpu-and-windows-counters.md)  
-[方法 : サンプリング イベントを選択する](../profiling/how-to-choose-sampling-events.md)
+[方法: サンプリング イベントを選択する](../profiling/how-to-choose-sampling-events.md)

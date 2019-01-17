@@ -223,27 +223,26 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 677374404de8469c8a99a906638f326ae7a9ff3c
-ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
-ms.translationtype: MT
+ms.openlocfilehash: a02b82fbd3f32c2174d571ff923b8a219a66c9b6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37089077"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53932721"
 ---
 # <a name="troubleshoot-data-access-errors-on-the-forums"></a>フォーラムでのデータ アクセス エラーをトラブルシューティングします。
 
 MSDN (Microsoft Developer Network) のパブリック フォーラムでは、エラーや警告のトラブルシューティングに役立つ情報を参照できます。 ここではいくつかのデータに関連するフォーラム msdn です。
 
-- [Windows フォーム データ コントロールとデータ バインド](https://social.msdn.microsoft.com/Forums/windows/en-US/home?forum=winformsdatacontrols)
+- [Windows フォームのデータ コントロールとデータバインド](https://social.msdn.microsoft.com/Forums/windows/en-US/home?forum=winformsdatacontrols)
 
 - [ADO.NET データセット フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataset)
 
 - [ADO.NET Entity Framework と LINQ to Entities](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetentityframework)
 
-- [WCF data services フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataservices)
+- [WCF Data Services フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataservices)
 
 - [SQL Server データ アクセス フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldataaccess)
 

@@ -1,8 +1,6 @@
 ---
 title: JIT の最適化とデバッグ |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -18,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a8cb56b35092bb958ebf2e6947006acb3d0d240
-ms.sourcegitcommit: a205ff1b389fba1803acd32c54df7feb0ef7a203
+ms.openlocfilehash: 917c9bab910b8f3153af46dc9d1d1a64ec6e529d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53646575"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53841266"
 ---
 # <a name="jit-optimization-and-debugging"></a>JIT の最適化とデバッグ
 **どのように最適化は、.NET で使用できます。** 場合のコードをデバッグしようとすると、方が簡単とコードがある**いない**最適化します。 これは、コードの最適化時に、コンパイラとランタイムに変更を加える出力 CPU コードする高速で実行されますは、元のソース コードに直接マップされているためにです。 これは、デバッガーは、ローカル変数の値がわかるし、コードのステップ実行することがよくないと、ブレークポイントが期待どおりに機能しないことを意味します。
@@ -48,7 +46,7 @@ ms.locfileid: "53646575"
 1. 既に実行中のプロセスにデバッガーを接続している場合、このオプションは影響しません、デバッガーのアタッチ時に既に読み込まれたモジュールにします。
 2. このオプションはされている Dll への影響を与えません (別名、ngen'ed) をネイティブ コードをプリコンパイルします。 ただし、環境変数 'COMPlus_ZapDisable' が '1' に設定と、プロセスを開始して事前コンパイル済みコードの使用状況を無効にできます。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
  [デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)   
  [実行中のプロセスにアタッチする](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   

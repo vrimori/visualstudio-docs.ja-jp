@@ -1,8 +1,6 @@
 ---
 title: .NET Framework の拡張機能の登録 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - Add References dialog box, registering extensions of the .NET Framework
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0017255b67042a7e42b54325b24512a295ebeaf5
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 48322adffff68d1eecb0d44da7e8f78d39d82203
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39180153"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53986071"
 ---
 # <a name="register-extensions-of-the-net-framework"></a>.NET Framework の拡張機能の登録
 .NET Framework の特定のバージョンを拡張するアセンブリを開発できます。 アセンブリが Visual Studio の **[参照の追加]** ダイアログ ボックスに表示されるようにするには、そのアセンブリを格納するフォルダーをシステム レジストリに追加する必要があります。  
@@ -31,7 +29,7 @@ ms.locfileid: "39180153"
 > [!NOTE]
 >  .NET Framework のビルド番号は異なる場合があります。  
   
- 32 ビット アセンブリを 64 ビット コンピューターに登録するには、Wow6432 ノードを使用します (例: **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\v4.0.21006\AssemblyFoldersEx\TreyResearch\\**)。  
+ 32 ビット アセンブリを 64 ビット コンピューターに登録するには、Wow6432 ノードを使用します (例:**HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\v4.0.21006\AssemblyFoldersEx\TreyResearch\\**)。  
   
 ### <a name="see-also"></a>関連項目  
  [Visual Studio の統合](../msbuild/visual-studio-integration-msbuild.md)

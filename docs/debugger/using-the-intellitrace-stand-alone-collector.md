@@ -1,8 +1,6 @@
 ---
 title: IntelliTrace スタンドアロン コレクターを使用して |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.historicaldebug.collectdataoutsideVS
@@ -14,14 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fbcb39638439261d234c14ff9422badaf6bdeb3
-ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
-ms.translationtype: HT
+ms.openlocfilehash: 882d357b606ec5bb0419c88dc9c996ccd4a749a6
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53684864"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54227721"
 ---
-# <a name="using-the-intellitrace-stand-alone-collector"></a>IntelliTrace スタンドアロン コレクターを使用する
+# <a name="using-the-intellitrace-stand-alone-collector-c-visual-basic"></a>IntelliTrace スタンドアロン コレクターを使用して (C#、Visual Basic)
+
 **IntelliTrace スタンドアロン コレクター** を使用すると、対象コンピューターに Visual Studio をインストールしたり、対象システムの環境を変更したりすることなく、運用サーバーまたは他の環境でアプリの IntelliTrace 診断データを収集できます。 IntelliTrace スタンドアロン コレクターは、Web、SharePoint、WPF、および Windows フォーム アプリで動作します。 データを収集したら、コレクターを削除して、アンインストールします。
 
  IntelliTrace の機能を紹介するビデオ:[デバッグのために運用環境で IntelliTrace データを収集および分析する (Channel 9 ビデオ)](http://go.microsoft.com/fwlink/?LinkID=251851)
@@ -71,7 +70,7 @@ ms.locfileid: "53684864"
 
 5.  [Web アプリまたは SharePoint アプリケーションからデータを収集する](#BKMK_Collect_Data_from_IIS_Application_Pools)
 
-     または
+     - または -
 
      [マネージド アプリからのデータの収集](#BKMK_Collect_Data_from_Executables)
 
@@ -79,7 +78,7 @@ ms.locfileid: "53684864"
 
 ##  <a name="BKMK_Install_the_IntelliTrace_Stand_Alone_Collector"></a> コレクターのインストール
 
-1. アプリのサーバーで、コレクター ディレクトリ (たとえば、) を作成します。**C:\IntelliTraceCollector**
+1. アプリのサーバーで、コレクター ディレクトリ (たとえば、**C:\IntelliTraceCollector**) を作成します。
 
 2. Microsoft ダウンロード センターまたは Visual Studio 2013 Update 3 インストール フォルダーからコレクターを入手します。 [IntelliTrace Collector for Visual Studio 2013 Update 4](https://www.microsoft.com/en-us/download/details.aspx?id=44909)::
 
@@ -87,7 +86,7 @@ ms.locfileid: "53684864"
 
      1. **IntelliTraceCollector.exe**の横の **[ダウンロード]** を選択します。
 
-     2. IntelliTraceCollector.exe をコレクター ディレクトリ (たとえば、) に保存します。**C:\IntelliTraceCollector**
+     2. IntelliTraceCollector.exe をコレクター ディレクトリ (たとえば、**C:\IntelliTraceCollector**) に保存します。
 
      3. IntelliTraceCollector.exe を実行します。 IntelliTraceCollection.cab ファイルが抽出されます。
 
@@ -97,15 +96,15 @@ ms.locfileid: "53684864"
 
      1.  次のフォルダーから IntelliTraceCollection.cab をコピーします。
 
-          **..\Microsoft visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\IntelliTrace\12.0.0**
+          **..\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\IntelliTrace\12.0.0**
 
-     2.  IntelliTraceCollection.cab をコレクター ディレクトリ (たとえば、) に保存します。**C:\IntelliTraceCollector**
+     2.  IntelliTraceCollection.cab をコレクター ディレクトリ (たとえば、**C:\IntelliTraceCollector**) にプットします。
 
 3. IntelliTraceCollection.cab を展開します。
 
    1.  ご利用のアプリのサーバーで、管理者としてコマンド プロンプト ウィンドウを開きます。
 
-   2.  コレクター ディレクトリ (たとえば、) を参照します。**C:\IntelliTraceCollector**
+   2.  コレクター ディレクトリ (たとえば、**C:\IntelliTraceCollector**) を参照します。
 
    3.  末尾のピリオド ( **.** ) も含めて**expand**コマンドを使用して、IntelliTraceCollection.cab を展開します。
 
@@ -120,7 +119,7 @@ ms.locfileid: "53684864"
 
 2.  Windows の **icacls** コマンドを使用して、サーバー管理者に、コレクター ディレクトリに対する完全なアクセス許可を与えます。 次に例を示します。
 
-     `icacls "C:\IntelliTraceCollector" /grant "` *\<\Administratorid >* `":F`
+     `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\AdministratorID>* `":F`
 
 3.  Web アプリまたは SharePoint アプリケーションのデータを収集するには:
 
@@ -128,7 +127,7 @@ ms.locfileid: "53684864"
 
          次に例を示します。
 
-         `icacls "C:\IntelliTraceCollector" /grant "` *\<ドメイン >* `":F`
+         `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\UserID>* `":F`
 
     2.  Web アプリまたは SharePoint アプリケーションのアプリケーション プールに、コレクター ディレクトリに対する読み取りおよび実行アクセス許可を与えます。
 
@@ -168,7 +167,7 @@ ms.locfileid: "53684864"
 
 ##  <a name="BKMK_Create_and_Configure_a_Log_File_Directory"></a> .iTrace ファイル ディレクトリのアクセス許可を設定する
 
-1. アプリのサーバーで、.iTrace ファイル ディレクトリ (たとえば、) を作成します。**C:\IntelliTraceLogFiles**
+1. アプリのサーバーで、.iTrace ファイル ディレクトリ (たとえば、**C:\IntelliTraceLogFiles**) を作成します。
 
    > [!NOTE]
    > - ご利用のアプリの処理が低下するのを回避するには、あまりアクティブではないローカルの高速なディスク上の場所を選択してください。
@@ -192,7 +191,7 @@ ms.locfileid: "53684864"
 
         `icacls "C:\IntelliTraceLogFiles" /grant "IIS APPPOOL\SharePoint - 80":F`
 
-       または
+       - または -
 
    - エクスプローラー (またはファイル エクスプローラー) を使用してアクセス許可を設定するには:
 
@@ -214,7 +213,7 @@ ms.locfileid: "53684864"
 
 1.  データの収集を開始するには、PowerShell のコマンド ウィンドウを管理者として開き、次のコマンドを実行します。
 
-     `Start-IntelliTraceCollection` `"` *\<ApplicationPool >* `"`  *\<PathToCollectionPlan >*  *\<FullPathToITraceFileDirectory >*
+     `Start-IntelliTraceCollection` `"` *\<ApplicationPool>* `"` *\<PathToCollectionPlan>* *\<FullPathToITraceFileDirectory>*
 
     > [!IMPORTANT]
     >  このコマンドを実行した後、「 **Y** 」と入力してデータ収集を開始することを確認します。
@@ -256,7 +255,7 @@ ms.locfileid: "53684864"
 
 1.  アプリを起動すると同時にデータの収集を開始するには、次の構文を使用します。
 
-     *\<FullPathToIntelliTraceCollectorExecutable >* `\IntelliTraceSC.exe launch /cp:`  *\<PathToCollectionPlan >* `/f:`  *\<FullPathToITraceFileDirectoryAndFileName >*  *\<PathToAppExecutableFileAndFileName >*
+     *\<FullPathToIntelliTraceCollectorExecutable>* `\IntelliTraceSC.exe launch /cp:` *\<PathToCollectionPlan>* `/f:` *\<FullPathToITraceFileDirectoryAndFileName>* *\<PathToAppExecutableFileAndFileName>*
 
      たとえば、 **MyApp**という名前のアプリからデータを収集するには、次のように入力します。
 
@@ -380,7 +379,7 @@ ms.locfileid: "53684864"
 
 -   IntelliTrace デバッグ セッションを Visual Studio Enterprise から次を参照してください。 [IntelliTrace 機能](../debugger/intellitrace-features.md)します。
 
--   Microsoft Test Manager のテスト セッションからの場合は、「 [方法: 困難な問題をデバッグするのに役立つ IntelliTrace データを収集する](../test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues.md)」を参照します。
+-   Microsoft Test Manager でのテスト セッションから次を参照してください。[方法。困難な問題をデバッグするのに役立つ IntelliTrace データを収集する
 
 ## <a name="where-can-i-get-more-information"></a>情報の入手方法
  [保存された IntelliTrace データの使用](../debugger/using-saved-intellitrace-data.md)

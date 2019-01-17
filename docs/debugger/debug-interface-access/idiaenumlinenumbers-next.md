@@ -1,8 +1,6 @@
 ---
 title: Idiaenumlinenumbers::next |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a8c00aa5b3d6e6a9b9251075cc5cc065119cc95
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 2a6f84d7d428e00aa161efc6f04c11811b1890ab
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49910057"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53855063"
 ---
 # <a name="idiaenumlinenumbersnext"></a>IDiaEnumLineNumbers::Next
 指定された数の列挙体シーケンス内の行番号を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49910057"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT Next (   
+HRESULT Next (   
    ULONG            celt,  
    IDiaLineNumber** rgelt,  
    ULONG*           pceltFetched  
@@ -45,9 +43,9 @@ HRESULT Next (
  [out]フェッチされた列挙子の行番号の数を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`ない複数の行番号がある場合。 それ以外の場合はエラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`ない複数の行番号がある場合。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)   
  [IDiaSession::findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)

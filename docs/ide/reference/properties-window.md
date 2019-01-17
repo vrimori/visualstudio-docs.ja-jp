@@ -2,7 +2,6 @@
 title: '[プロパティ] ウィンドウ'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - properties [Visual Studio], Properties Window
@@ -22,12 +21,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2848a8197dfe62836918de51ae6e7d01677dac6d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 701b2699c0c7097eca29cd853d68c8a0e2d910a6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31947301"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53875577"
 ---
 # <a name="properties-window"></a>[プロパティ] ウィンドウ
 このウィンドウで、エディターやデザイナーのオブジェクトを選択してデザイン時のプロパティやイベントを表示および変更できます。 また、**[プロパティ]** ウィンドウでは、ファイル、プロジェクト、およびソリューションのプロパティの編集や表示もできます。 **[プロパティ]** ウィンドウは **[表示]** メニューにあります。 また、F4 キーを押すか、**[クイック起動]** ウィンドウに「**プロパティ**」と入力して開くこともできます。
@@ -75,7 +74,7 @@ ms.locfileid: "31947301"
 > **[プロパティ]** ウィンドウのこのツール バー コントロールは、[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] プロジェクトのコンテキストで **[クラス ビュー]** がアクティブ ウィンドウになっているときだけ使用できます。
 
 
- Overrides
+ オーバーライド
 
  選択したクラスのすべての仮想関数が表示され、オーバーライドする関数を追加または削除できます。
 
@@ -99,7 +98,7 @@ ms.locfileid: "31947301"
 
  デザイナーでの XAML ファイルの編集時に、プロパティとイベントを検索するための機能を提供します。 検索ボックスは単語の一部の入力に反応し、入力すると検索結果が更新されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [プロジェクトのプロパティのリファレンス](../../ide/reference/project-properties-reference.md)
 - [ウィンドウ レイアウトをカスタマイズする](../../ide/customizing-window-layouts-in-visual-studio.md)

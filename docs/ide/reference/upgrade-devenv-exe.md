@@ -2,7 +2,6 @@
 title: -Upgrade (devenv.exe)
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - /upgrade Devenv switch
@@ -14,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ba94a599c119d537efb90b29c1c2ec0084ace447
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.openlocfilehash: 46e549dfdc661819dac00d0aa965616462130ad0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948336"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53944724"
 ---
 # <a name="upgrade-devenvexe"></a>/Upgrade (devenv.exe)
 ソリューション ファイルおよびそのすべてのプロジェクト ファイル、または指定されたプロジェクト ファイルを、そのファイルに対応する現在の [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の形式に更新します。
@@ -53,6 +52,6 @@ devenv SolutionFile | ProjectFile /upgrade
 devenv "MyProject.sln" /upgrade
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)

@@ -1,8 +1,6 @@
 ---
 title: '方法: タスクで発生したエラーを無視する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild - "vs-ide-sdk"
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, ignoring errors
@@ -11,12 +9,12 @@ ms.assetid: e2f1ca4f-787b-44bd-bc64-81a036025e96
 author: mikejo5000
 ms.author: mikejo
 manager: douge
-ms.openlocfilehash: 3df3a3b40dd67f12bac19f4e69f5293c85bb85f3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f271c2d6dae3857818505829cf2da8a109613e9a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49940035"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53852691"
 ---
 # <a name="how-to-ignore-errors-in-tasks"></a>方法: タスクで発生したエラーを無視する
 ビルド時に一部のタスクのエラーを許容するとよい場合があります。 そのような重要でないタスクが失敗しても必要な出力は生成できるため、ビルドを続行させる場合です。 たとえば、各コンポーネントのビルド後にプロジェクトで `SendMail` タスクを使ってメール メッセージを送信する場合、メール サーバーが利用できず、ステータス メッセージを送信できなくても、完了までビルドを続行させるのは許容範囲と見なせる場合があります。 別の例として、通常、ビルド中に中間ファイルが削除される場合、それらのファイルを削除できなくても、完了までビルドを続行させるのは許容範囲と見なせる場合があります。  
@@ -38,7 +36,7 @@ ms.locfileid: "49940035"
   
 #### <a name="to-ignore-an-error-in-a-task"></a>タスクのエラーを無視するには  
   
--   タスクの `ContinueOnError` 属性を使用します。 例:  
+-   タスクの `ContinueOnError` 属性を使用します。 次に例を示します。  
   
      `<Delete Files="@(Files)" ContinueOnError="WarnAndContinue"/>`  
   

@@ -1,8 +1,6 @@
 ---
 title: IDiaSession::findInlineFramesByRVA |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ebb32b9b22de8d4092c53f56accf1d953bbc94a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 996c13f1b6dbf83df8ca835901673438892fe2f9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49876881"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53828070"
 ---
 # <a name="idiasessionfindinlineframesbyrva"></a>IDiaSession::findInlineFramesByRVA
 により、クライアントは、すべての指定された相対仮想アドレス (RVA) でのインライン フレームを反復処理する列挙体を取得します。  
@@ -25,7 +23,7 @@ ms.locfileid: "49876881"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT findInlineFramesByRVA (   
+HRESULT findInlineFramesByRVA (   
    IDiaSymbol*       parent,   DWORD             rva,  
    IDiaEnumSymbols** ppResult  
 );  
@@ -44,7 +42,7 @@ HRESULT findInlineFramesByRVA (
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)   

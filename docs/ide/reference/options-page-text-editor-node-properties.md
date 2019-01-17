@@ -2,7 +2,6 @@
 title: '[テキスト エディター] ノード プロパティ ([オプション] ページ)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - Tools Options settings, Text Editor node properties
@@ -13,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e16bdece503babe9a50bc83d64da582d390843b6
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 3339884fe14b0dbc40fe9297f06b0462696b8040
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50670820"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53935672"
 ---
 # <a name="options-page-text-editor-node-properties"></a>[テキスト エディター] ノード プロパティ ([オプション] ページ)
 このドキュメントでは、**[オプション]** ダイアログ ボックスの **[テキスト エディター]** カテゴリ (`DTE.Properties("TextEditor", <Property Page>)`) に関連付けられている一部のページ (またはプロパティ コレクション) について説明します。 各サブセクションの見出しは、`Properties` コレクションにアクセスするための呼び出しです。その下の表では、コレクションのプロパティを示します。
@@ -56,7 +55,7 @@ ms.locfileid: "50670820"
 |WordWrap|Get/Set (Boolean)|長い行をワード境界で折り返すかどうかを指定します。 このプロパティを `true` に設定すると、(この一覧にある) `VirtualSpace` プロパティ項目が `false` に設定されます。|
 |WordWrapGlyphs|Get/Set (Boolean)|行末にグリフを表示します。これは、その行を次の行に折り返すことを示します。|
 |EnableLeftClickForURLs|Get/Set (Boolean)|URL に下線を付け、マウスの左ボタンを 1 回クリックするだけで、システムに登録されている Web ブラウザーでその URL にジャンプできるようにするかどうかを指定します。|
-|IndentStyle|Get/Set (<xref:EnvDTE.vsIndentStyle>)|インデントのスタイルを指定します ([既定]、[スマート]、または [なし])。|
+|IndentStyle|Get/Set (<xref:EnvDTE.vsIndentStyle>)|次のインデントのスタイルを指定します。(既定、スマート、またはなし)。|
 |TabSize|Get/Set (Long)|1 つのタブに相当するスペースの数を表します。1 ～ 60 以外の整数は設定できません。|
 |InsertTabs|Get/Set (Boolean)|`True` の場合、インデントの設定時にタブ文字が使用されません。|
 |IndentSize|Get/Set (Long)|1 インデント レベルに相当するスペースの数を表します。 1 ～ 60 以外の整数値は設定できません。|
@@ -64,7 +63,7 @@ ms.locfileid: "50670820"
 |ShowNavigationBar|Get/Set (Boolean)|エディター ウィンドウの最上部にドロップダウン リストとボタンを表示するかどうかを指定します。|
 |CutCopyBlankLines|Get/Set (Boolean)|選択時に空白行を切り取るか、コピーします。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [オプション設定の制御](https://msdn.microsoft.com/Library/a09ed242-7494-4cde-bbd1-7a8ec617965d)
 - [オプション ページにあるプロパティ項目名の確認](https://msdn.microsoft.com/Library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)

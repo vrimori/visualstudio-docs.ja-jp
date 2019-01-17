@@ -2,7 +2,6 @@
 title: '方法: クラス ダイアグラムをイメージとしてエクスポートする (クラス デザイナー)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.exportdialog
@@ -14,14 +13,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c18fa28d52115d2666e2098a56a78658bebdc8f
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 5fe46216957f6104869e9cad7e95ce46769fb2a5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956846"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53873831"
 ---
-# <a name="how-to-export-class-diagrams-as-images"></a>方法: クラス ダイアグラムをイメージとしてエクスポートする
+# <a name="how-to-export-class-diagrams-as-images"></a>方法: イメージとしてクラス ダイアグラムをエクスポートする
 
 プロジェクトのコードから作成されたクラス ダイアグラムをエクスポートするには、ダイアグラムをイメージとして保存します。 代わりに UML クラス ダイアグラムをエクスポートする場合は、「[イメージとしてダイアグラムをエクスポートする](../../modeling/export-diagrams-as-images.md)」を参照してください。
 
@@ -42,4 +41,4 @@ ms.locfileid: "33956846"
 ## <a name="see-also"></a>関連項目
 
 - [方法: クラス ダイアグラムを印刷する](how-to-print-class-diagrams.md)
-- [クラス ダイアグラムの使用](working-with-class-diagrams.md)
+- [クラス ダイアグラムの使用](designing-and-viewing-classes-and-types.md)

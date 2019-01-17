@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptError::GetExceptionInfo |Microsoft ドキュメント
+title: IActiveScriptError::GetExceptionInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8719d1a169c89d7b6cf712a125b6962b9c7a8839
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: bf48362686a05a958a067cffa1015ffe2d58cecc
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24645722"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54096227"
 ---
 # <a name="iactivescripterrorgetexceptioninfo"></a>IActiveScriptError::GetExceptionInfo
 スクリプト エンジンでスクリプトの実行中に発生したエラーに関する情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetExceptionInfo(  
     EXCEPINFO *pexcepinfo  // structure for exception information  
 );  
@@ -38,10 +38,10 @@ HRESULT GetExceptionInfo(
   
 #### <a name="parameters"></a>パラメーター  
  `pexcepinfo`  
- [out]アドレス、`EXCEPINFO`エラー情報を受け取る構造です。  
+ [out]アドレス、`EXCEPINFO`エラー情報を受け取る構造体。  
   
 ## <a name="return-value"></a>戻り値  
- 返します`S_OK`成功した場合、または`E_FAIL`場合はエラーが発生しました。  
+ 返します`S_OK`成功した場合、または`E_FAIL`場合は、エラーが発生しました。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptError](../../winscript/reference/iactivescripterror.md)

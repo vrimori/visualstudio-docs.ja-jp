@@ -1,8 +1,6 @@
 ---
 title: リモート コンピューター上の UWP アプリのデバッグ |Microsoft Docs
-ms.custom: ''
 ms.date: 10/05/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -15,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 0350358c2225851619a84216c929b8d7435dc4e3
-ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
-ms.translationtype: MT
+ms.openlocfilehash: 8fec6295fce7f100b0dc8c602a41f95e1af7d64f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750710"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53892252"
 ---
 # <a name="debug-uwp-apps-on-remote-machines-from-visual-studio"></a>Visual Studio からリモート コンピューター上の UWP アプリをデバッグします。
   
@@ -65,7 +63,7 @@ Visual Studio からリモート デバイスで UWP アプリをデバッグし
   
 3.  **起動するデバッガー**を選択します**リモート マシン**リモート コンピューターの場合、または**デバイス**の直接接続されている 10 の Windows Mobile デバイス。 
   
-1.  リモート マシンでは、次のように入力しますまたは、ネットワーク名または IP アドレスを選択して、**マシン名**フィールド、またはドロップ ダウンして**検索**でデバイスを検索する、[リモート接続 ダイアログ ボックス](#remote-connections)。 
+1.  リモート マシンでは、次のように入力しますまたは、ネットワーク名または IP アドレスを選択して、**マシン名**フィールド、またはドロップ ダウンして**検索**でデバイスを検索する、[リモート接続 ダイアログ ボックス。](#remote-connections). 
 
     ![リモート デバッグ用の C++ プロジェクト プロパティ](../debugger/media/vsrun_cpp_projprop_remote.png "C++ のデバッグ プロジェクト プロパティ")
     
@@ -78,7 +76,7 @@ Visual Studio からリモート デバイスで UWP アプリをデバッグし
 >[!TIP]
 >名前でリモート デバイスに接続できない場合は、IP アドレスを使用してみてください。 リモートのデバイスで、IP アドレスを確認する次のように入力します。 **ipconfig**コマンド ウィンドウにします。 IP アドレスは、 **IPv4 アドレス**します。  
     
-## <a name="BKMK_download"></a> ダウンロードして Visual Studio 用リモート ツールのインストール
+## <a name="BKMK_download"></a> Remote Tools for Visual Studio をダウンロードしてインストールする
 
 リモート コンピューター上のアプリをデバッグする Visual Studio は、リモート コンピューターする必要があります実行されている Remote Tools for Visual Studio。 
 
@@ -109,6 +107,6 @@ Visual Studio からリモート デバイスで UWP アプリをデバッグし
 1. 必要に応じて、選択**デバッグ** > **デバッグの停止**またはキーを押します**Shift**+**F5**デバッグを停止してリモート アプリケーションを閉じます。
   
 ## <a name="see-also"></a>関連項目  
- [リモート配置オプションの詳細](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)  
- [Visual Studio での UWP アプリのテスト](../test/testing-store-apps-with-visual-studio.md)   
+ [高度なリモート配置オプション](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)  
+ [Visual Studio での UWP アプリのテスト](/visualstudio/test/create-and-run-unit-tests-for-a-store-app-in-visual-studio/)   
  [Visual Studio で UWP アプリを展開する](debugging-windows-store-and-windows-universal-apps.md)

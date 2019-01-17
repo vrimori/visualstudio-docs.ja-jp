@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ab8d2a0e8e3a243828db3f39e95801eafeee5efb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: cbedf6454ae97ee97d29d836dd8f8012fb6ca222
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53825260"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269151"
 ---
 # <a name="xml-schema-designer-workspace"></a>XML スキーマ デザイナーのワークスペース
 
@@ -30,7 +30,7 @@ XML スキーマ デザイナー (XSD デザイナー) は、XML スキーマを
 
 -   グローバル ノード、ファイル ノード、および名前空間ノードからドラッグ アンド ドロップ、 **XML スキーマ エクスプ ローラー**に 3 つのビューのいずれか。 詳細については、「ノードをドラッグすること、および削除」のセクションを参照してください。 [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)します。
 
--   コンテキスト メニューを使用して、 **XML スキーマ エクスプ ローラー**します。 詳細については、次を参照してください。[コンテキスト メニュー](../xml-tools/context-menus-xml-schema-explorer.md)します。
+-   コンテキスト (右クリック) メニューを使用して、 **XML スキーマ エクスプ ローラー**します。 詳細については、次を参照してください。[コンテキスト メニュー](../xml-tools/context-menus-xml-schema-explorer.md)します。
 
 -   XSD エクスプ ローラーで検索を実行し、**強調表示されたノードをワークスペースに追加**概要結果ペインでボタンをクリックします。 詳細については、次を参照してください。[スキーマ セットの検索](../xml-tools/searching-the-schema-set.md)します。
 
@@ -40,7 +40,7 @@ XML スキーマ デザイナー (XSD デザイナー) は、XML スキーマを
 
 -   XSD デザイナーのツール バー。
 
--   コンテンツ モデル ビューおよびグラフ ビューのコンテキスト メニュー
+-   コンテンツ モデル ビューおよびグラフ ビューのコンテキスト (右クリック) メニュー。
 
 -   スタート ビューのウォーターマークか、空白のコンテンツ モデル ビューまたはグラフ ビューのウォーターマーク。
 

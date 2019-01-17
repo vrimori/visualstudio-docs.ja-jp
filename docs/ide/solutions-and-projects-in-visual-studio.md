@@ -2,7 +2,6 @@
 title: ソリューションとプロジェクト
 ms.date: 10/05/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.addnewsolutionitem
@@ -11,7 +10,6 @@ f1_keywords:
 - vs.addnewitem
 - vs.addexistingitem
 - VS.SolutionExplorer
-- vs.newproject
 - vs.addexistingsolutionitem
 - vs.environment.solutions
 - VS.SolutionExplorer.Solutions
@@ -26,12 +24,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 518479d92aa9b0ec51c4fda8b7484a03ce45a560
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: 8331ff52da4b0d0e8afe81e66f5674258df709fb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53159673"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53938554"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio のソリューションおよびプロジェクト
 
@@ -56,7 +54,7 @@ Visual Studio では、プロジェクト ファイルは**ソリューション
 
 ## <a name="solutions"></a>ソリューション
 
-プロジェクトは*ソリューション* 内に含まれます。 ソリューションには、1 つ以上の関連するプロジェクトと共に、ビルド情報、Visual Studio ウィンドウの設定、および特定のプロジェクトに関連付けられていないその他のファイルが含まれます。 ソリューションは独自の形式を持つテキスト ファイル (拡張子: *.sln*) で記述され、手動での編集を意図していません。
+プロジェクトは*ソリューション* 内に含まれます。 ソリューションは、その名前にもかかわらず、"答え" ではありません。 1 つ以上の関連するプロジェクト、およびビルド情報、Visual Studio ウィンドウの設定、特定のプロジェクトに関連付けられていないその他のファイルに対するコンテナーに過ぎません。 ソリューションは独自の形式を持つテキスト ファイル (拡張子 *.sln*) で記述され、手動での編集は想定されていません。
 
 Visual Studio では、ソリューションの設定を格納するために、2 種類のファイル (*.sln* および *.suo*) を使用します。
 

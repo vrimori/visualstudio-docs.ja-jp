@@ -4,7 +4,6 @@ titleSuffix: ''
 description: Visual Studio プロジェクトのコンテキストでの Django の基礎に関するチュートリアルでは、Visual Studio が Django 開発のために提供するサポートについて説明します。
 ms.date: 11/19/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-python
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
@@ -13,12 +12,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 549bd552cee0d9b833d1dee36f29f3a36b3f5f07
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: ce92fa303da56b72c1c5bd7b9f2c11be0e542ed3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061081"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53941100"
 ---
 # <a name="tutorial-get-started-with-the-django-web-framework-in-visual-studio"></a>チュートリアル:Visual Studio での Django Web フレームワークの概要
 
@@ -67,7 +66,7 @@ Visual Studio プロジェクトには、Django プロジェクトと複数の�
     - **ソリューション**: このコントロールは既定の **[新しいソリューションの作成]** オプションに設定したままにします。
     - **ソリューション名**: このチュートリアルでは複数プロジェクトのコンテナーとしてのソリューションに適した **LearningDjango** に設定します。
     - **ソリューションのディレクトリを作成**:オンのままにします (既定)。
-    - **新しい Git リポジトリの作成**:ソリューションの作成時に Visual Studio でローカルの Git リポジトリが作成されるように、このオプション (既定ではオフ) をオンにします。 このオプションが表示されない場合は、Visual Studio 2017 インストーラーを実行し、**[コード ツール]** の **[個別のコンポーネント]** タブで **Windows 用 Git** および **Visual Studio 用 GitHub 拡張機能**を追加します。
+    - **新しい Git リポジトリを作成**:ソリューションの作成時に Visual Studio でローカルの Git リポジトリが作成されるように、このオプション (既定ではオフ) をオンにします。 このオプションが表示されない場合は、Visual Studio 2017 インストーラーを実行し、**[コード ツール]** の **[個別のコンポーネント]** タブで **Windows 用 Git** および **Visual Studio 用 GitHub 拡張機能**を追加します。
 
 1. しばらくすると、Visual Studio に (次に示すように) "**このプロジェクトには外部パッケージが必要です**" というダイアログが表示されます。 テンプレートには、最新の Django 1.x パッケージを参照する *requirements.txt* ファイルが含まれているため、このダイアログが表示されます  (正確な依存関係を確認するには **[必要なパッケージを表示]** を選択します)。
 
@@ -113,7 +112,7 @@ Visual Studio プロジェクトには、Django プロジェクトと複数の�
 
 回答:まず、ソース管理を最初から使用すると、リモート リポジトリも使用する場合は特に、プロジェクトの定期的なオフサイト バックアップが提供されます。 ローカル ファイル システムだけでプロジェクトを保持するのとは異なり、ソース管理では完全な変更履歴も提供されるので、1 つのファイルまたはプロジェクト全体を以前の状態に簡単に戻すことができます。 変更履歴は回帰 (テスト不合格) の原因の特定に役立ちます。 さらに、ソース管理は上書きを管理し、競合の解決を提供するので、複数の人がプロジェクトを作業している場合に重要です。 最後に、基本的にオートメーションの 1 つの形式であるソース管理は、ビルド、テスト、リリース管理の自動化も可能にします。 プロジェクトで DevOps を使用する際のまさに最初の手順であり、使用開始の障壁はかなり低いので、最初からソース管理を使用しない理由はありません。
 
-オートメーションとしてのソース管理について詳しくは、MSDN マガジンの記事「[The Source of Truth:The Role of Repositories in DevOps](https://msdn.microsoft.com/magazine/mt763232)」(信頼できる情報源: DevOps でのリポジトリの役割) をご覧ください。この記事はモバイル アプリ用に記述されていますが、Web アプリにも適用されます。
+オートメーションとしてのソース管理について詳しくは、MSDN マガジンの記事「[The Source of Truth:The Role of Repositories in DevOps](https://msdn.microsoft.com/magazine/mt763232)」 (信頼できる情報源: DevOps でのリポジトリの役割) をご覧ください。この記事はモバイル アプリ向けに記述されていますが、Web アプリにも適用されます。
 
 ### <a name="question-can-i-prevent-visual-studio-from-auto-committing-a-new-project"></a>質問:Visual Studio が新しいプロジェクトを自動コミットしないようにすることはできますか?
 
@@ -153,7 +152,7 @@ Visual Studio プロジェクトには、Django プロジェクトと複数の�
 
 ### <a name="question-how-do-i-remove-a-virtual-environment-thats-already-committed-to-source-control"></a>質問:ソース管理に既にコミットされている仮想環境を削除するにはどうすればよいですか?
 
-回答:最初に、*.gitignore* ファイルを編集してフォルダーを除外します。末尾にコメント `# Python Tools for Visual Studio (PTVS)` があるセクションを探し、`/BasicProject/env` などの仮想環境のフォルダー用の新しい行を追加します  (Visual Studio ではファイルが**ソリューション エクスプローラー**に表示されないので、**[ファイル]** > **[開く]** > **[ファイル]** メニュー コマンドを使用して直接開きます。 **[チーム エクスプローラー]** からファイルを開くこともできます。**[設定]** ページで、**[リポジトリ設定]** を選択し、**[無視および属性ファイル]** セクションに移動し、**.gitignore** の横の **[編集]** リンクを選択します)。
+回答:最初に、*.gitignore* ファイルを編集してフォルダーを除外します。末尾にコメント `# Python Tools for Visual Studio (PTVS)` があるセクションを探し、`/BasicProject/env` などの仮想環境のフォルダー用の新しい行を追加します。 (Visual Studio ではファイルが**ソリューション エクスプローラー**に表示されないので、**[ファイル]** > **[開く]** > **[ファイル]** メニュー コマンドを使用して直接開きます。 **[チーム エクスプローラー]** からファイルを開くこともできます。**[設定]** ページで、**[リポジトリ設定]** を選択し、**[無視および属性ファイル]** セクションに移動し、**.gitignore** の横の **[編集]** リンクを選択します)。
 
 次に、コマンド ウィンドウを開き、*env* などの仮想環境のフォルダーを含む *BasicProject* のようなフォルダーに移動し、`git rm -r env` を実行します。 さらに、コマンドラインからこれらの変更をコミットするか (`git commit -m 'Remove venv'`)、**[チーム エクスプローラー]** の **[変更]** ページからコミットします。
 

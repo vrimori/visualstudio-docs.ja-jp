@@ -1,5 +1,5 @@
 ---
-title: JsDebugPropertyInfo 構造体 |Microsoft ドキュメント
+title: JsDebugPropertyInfo 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -16,19 +16,19 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1e9d2ae0d93729d4c333509e0178f4c4829ebf13
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 317cf5adc459c1491d037678616c17de2a619d96
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24733822"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54095473"
 ---
 # <a name="jsdebugpropertyinfo-structure"></a>JsDebugPropertyInfo 構造体
 プロパティに関する情報を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 typedef struct tagJsDebugPropertyInfo{   BSTR name;   BSTR type;   BSTR value;   BSTR fullName;   JS_PROPERTY_ATTRIBUTES attr;} JsDebugPropertyInfo;  
 ```  
   
@@ -48,7 +48,7 @@ typedef struct tagJsDebugPropertyInfo{   BSTR name;   BSTR type;   BSTR value;  
  `attr`  
  プロパティ属性を表す列挙体。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** jscript9diag.h です  
   
 ## <a name="see-also"></a>関連項目  

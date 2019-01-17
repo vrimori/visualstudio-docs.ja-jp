@@ -1,12 +1,11 @@
 ---
-title: 方法:特定のリリースのインストール |Microsoft Docs
+title: '方法: 特定のリリースのインストール |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-install
+ms.technology: vs-ide-install
 ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 20
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 1f8da9b0a577ba7810c3895d9492ce4be7c69cd4
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 42776c20cd6634903344569f9ce1f35a776c5f86
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53065909"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53959913"
 ---
-# <a name="how-to-install-a-specific-release-of-visual-studio"></a>方法:Visual Studio の特定のリリースをインストールします。
+# <a name="how-to-install-a-specific-release-of-visual-studio"></a>方法: Visual Studio の特定のリリースをインストールします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 最新で最適化されたバージョンのオプション機能をご利用いただけるよう、Visual Studio のセットアップは頻繁に更新されています。  しかし、以前のリリースの Visual Studio 2015 (たとえば、iOS サポートが含まれている Update 1 より前のリリースの Visual Studio 2015) をインストールする場合は、Visual Studio セットアップで強制的に以前のバージョンのフィーチャー マニフェスト ファイルを使用する必要があります。 この記事では、その方法について説明します。
@@ -64,5 +63,5 @@ ms.locfileid: "53065909"
 >   -   rus (ロシア語)
 >   -   trk (トルコ語)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
  [Visual Studio 管理者ガイド](../install/visual-studio-administrator-guide.md)

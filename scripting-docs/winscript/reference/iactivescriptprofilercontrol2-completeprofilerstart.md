@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerControl2::CompleteProfilerStart |Microsoft ドキュメント
+title: IActiveScriptProfilerControl2::CompleteProfilerStart |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,19 +14,19 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5abd4ee4237991714bfe3d8ba21b083f1a1920cd
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: b307352a3ba6d10ec3ae434536dee82d22504d33
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724502"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54091287"
 ---
 # <a name="iactivescriptprofilercontrol2completeprofilerstart"></a>IActiveScriptProfilerControl2::CompleteProfilerStart
-すべての該当するスクリプト エンジンでプロファイリングを開始したことをプロファイラーに通知します。 このメソッドを使用する場合、完全な呼び出し履歴を取得できます[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]プロファイリングを開始するときに実行します。  
+該当するすべてのスクリプト エンジンでプロファイリングを開始したことをプロファイラーに通知します。 このメソッドを使用する場合、完全な呼び出し履歴を取得できます[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]プロファイリングを開始するときに実行します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT CompleteProfilerStart();  
 ```  
   
@@ -40,12 +40,12 @@ HRESULT CompleteProfilerStart();
 |------------------|-------------|  
 |`S_OK`|メソッドが成功しました。|  
 |`E_FAIL`|プロファイリングを開始できません。|  
-|`S_FALSE`|スクリプトが実行されていないときに、プロファイリングが開始されました。|  
-|`ACTIVPROF_E_PROFILER_ABSENT`|プロファイリングすることは無効です。 コールバックが設定されていません。|  
-|`E_OUTOFMEMORY`|メモリ不足の状態のため、呼び出し履歴を取得できません。|  
+|`S_FALSE`|スクリプトが実行されていない場合、プロファイリングが開始されました。|  
+|`ACTIVPROF_E_PROFILER_ABSENT`|プロファイルが有効になっていません。 コールバックが設定されていません。|  
+|`E_OUTOFMEMORY`|呼び出し履歴は、メモリ不足の状態のため取得できません。|  
   
-## <a name="remarks"></a>コメント  
- 呼び出す`IActiveScriptProfilerControl2::CompleteProfilerStart`関数の呼び出し履歴の中のイベントが送信されることを確認します。 このメソッドでは、プロファイリング、現在のタブ上にある任意のスクリプト エンジンで起動後に呼び出されます。スクリプト エンジンで任意のメソッドを呼び出すことができます。  
+## <a name="remarks"></a>Remarks  
+ 呼び出す`IActiveScriptProfilerControl2::CompleteProfilerStart`により既に呼び出し履歴内の関数のイベントが送信されます。 このメソッドは、プロファイルの現在のタブ上にある任意のスクリプティング エンジンの開始後に呼び出す必要があります。メソッドは、任意のスクリプティング エンジンに対して呼び出すことができます。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptProfilerControl2::PrepareProfilerStop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md)   

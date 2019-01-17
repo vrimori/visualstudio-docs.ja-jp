@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugprocess::performasyncbreak メソッド |Microsoft ドキュメント
+title: Ijsdebugprocess::performasyncbreak メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -16,19 +16,19 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2e2d3ad50c1be5da0f4e93748227933d5f1ffd92
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: a614bbfdde117ba223ca3f8f3d8b9b77c44c4393
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728092"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54089142"
 ---
 # <a name="ijsdebugprocessperformasyncbreak-method"></a>IJsDebugProcess::PerformAsyncBreak メソッド
 スクリプト エンジンを中断モードにして、次のスクリプト命令で中断させます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT PerformAsyncBreak(  
    DWORD threadId  
 );  
@@ -40,7 +40,7 @@ HRESULT PerformAsyncBreak(
   
 ## <a name="return-value"></a>戻り値  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** jscript9diag.h です  
   
 ## <a name="see-also"></a>関連項目  

@@ -1,13 +1,8 @@
 ---
-title: 'チュートリアル: デザイナーを使用して、SharePoint の Web パーツを作成する |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: デザイナーを使用して、SharePoint の Web パーツの作成 |Microsoft Docs'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
-- VB
-- CSharp
 - VB
 - CSharp
 helpviewer_keywords:
@@ -19,14 +14,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1b5cfd9afaf0c37dcf267c63641b7917efe4c249
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 146a1722f240895e0f508b0474df72f6f5f84ece
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49831816"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53870914"
 ---
-# <a name="walkthrough-create-a-web-part-for-sharepoint-by-using-a-designer"></a>チュートリアル: SharePoint のデザイナーを使用して web パーツを作成します。
+# <a name="walkthrough-create-a-web-part-for-sharepoint-by-using-a-designer"></a>チュートリアル: デザイナーを使用して、SharePoint の web パーツを作成します。
 
 SharePoint サイトの Web パーツを作成すれば、ユーザーはブラウザーを使用して、そのサイトを構成するページのコンテンツ、外観、動作を直接変更できます。 このチュートリアルは、SharePoint を使用して web パーツを視覚的に作成する方法を示します**視覚的 Web パーツ**Visual Studio でプロジェクト テンプレート。
 
@@ -74,7 +69,7 @@ SharePoint サイトの Web パーツを作成すれば、ユーザーはブラ�
 
 1. Visual Web Developer デザイナーで、選択、**デザイン** タブのデザイン ビューに切り替えます。
 
-2. メニュー バーで、**ビュー** > **ツールボックス**します。
+2. メニュー バーで **[表示]**、**[ツールボックス]** の順にクリックします。
 
 3. **標準**のノード、**ツールボックス**、選択、 **CheckBoxList**を制御して、次の手順のいずれかを実行します。
 
@@ -193,5 +188,5 @@ Web パーツの指定が月間カレンダー ビューに含めるし、選択
 ## <a name="see-also"></a>関連項目
 
 [For SharePoint の web パーツを作成します。](../sharepoint/creating-web-parts-for-sharepoint.md)  
-[方法: SharePoint web パーツの作成](../sharepoint/how-to-create-a-sharepoint-web-part.md)  
-[チュートリアル: SharePoint の web パーツを作成します。](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)
+[方法: SharePoint web パーツを作成します。](../sharepoint/how-to-create-a-sharepoint-web-part.md)  
+[チュートリアル: For SharePoint の web パーツを作成します。](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)

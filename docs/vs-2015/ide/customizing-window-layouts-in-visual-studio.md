@@ -5,8 +5,7 @@ ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
@@ -29,12 +28,12 @@ caps.latest.revision: 30
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e37adb6296a805b8a0fd06196e7ccf1acf5bc32e
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 7a0f6b087f512750ae729d52c0855e3d4981d330
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057568"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53934376"
 ---
 # <a name="customizing-window-layouts-in-visual-studio"></a>Visual Studio のウィンドウ レイアウトをカスタマイズする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -58,7 +57,7 @@ Visual Studio では、さまざまな開発ワークフローに最も適した
  1 つのドキュメント内で同時に 2 つの場所を表示または編集する必要があるときに、ウィンドウを分割できます。 2 つの独立したスクロール セクションにドキュメントを分割するには、 **[ウィンドウ]** メニューの **[分割]** をクリックします。 1 つのビューを戻すには、 **[ウィンドウ]** メニューの **[分割の解除]** をクリックします。
 
 ### <a name="toolbars"></a>ツールバー
- ツール バーは、ドラッグするか **[カスタマイズ]** ダイアログ ボックスを使用して配置できます。 配置し、ツールバーをカスタマイズする方法の詳細については、次を参照してください。[方法。メニューおよびツール バーをカスタマイズする](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md).
+ ツール バーは、ドラッグするか **[カスタマイズ]** ダイアログ ボックスを使用して配置できます。 ツールバーを配置およびカスタマイズする方法の詳細については、[メニューおよびツール バーのカスタマイズ](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)に関するページを参照してください。
 
 ## <a name="arranging-and-docking-windows"></a>ウィンドウの配置とドッキング
  ドキュメント ウィンドウとツール ウィンドウはどちらも *ドッキング*できるので、IDE のウィンドウ フレーム内にサイズを合わせて配置したり、または IDE とは独立したウィンドウとしてフローティングさせることもできます。 ツール ウィンドウは IDE フレーム内のどこにでもドッキングできます。一部のツール ウィンドウは、エディター フレーム内のタブ付きウィンドウとしてドッキングできます。 ドキュメント ウィンドウはエディター フレーム内にドッキングでき、タブ順の現在の位置にピン留めすることができます。 複数のウィンドウを「ラフト操作」で IDE 上または IDE 外で一緒にフローティングするよう、ドッキングできます。 また、ツール ウィンドウは非表示にしたり最小化することもできます。

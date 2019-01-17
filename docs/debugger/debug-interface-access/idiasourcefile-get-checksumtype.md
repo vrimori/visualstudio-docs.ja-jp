@@ -1,8 +1,6 @@
 ---
 title: Idiasourcefile::get_checksumtype |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 39fa53d00d17446e63170d5b729d2e669ecb987b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 750d48cad07251f34e988fa8a6ced618821c443d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49948422"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53825915"
 ---
 # <a name="idiasourcefilegetchecksumtype"></a>IDiaSourceFile::get_checksumType
 チェックサム タイプを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49948422"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_checksumType (   
+HRESULT get_checksumType (   
    DWORD* pRetVal  
 );  
 ```  
@@ -39,12 +37,12 @@ HRESULT get_checksumType (
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  チェックサム タイプは、チェックサム アルゴリズムに割り当てられる値です。 たとえば、標準の PDB ファイル形式では、次の値のいずれかができます通常。  
   
 |チェックサムの種類|CryptoAPI ラベル|説明|  
 |-------------------|---------------------|-----------------|  
-|0|\<なし >|存在するチェックサムがありません。|  
+|0|\<none>|存在するチェックサムがありません。|  
 |1|`CALG_MD5`|MD5 ハッシュ アルゴリズムで生成されたチェックサム。|  
 |2|`CALG_SHA1`|SHA1 ハッシュ アルゴリズムで生成されたチェックサム。|  
   
@@ -52,6 +50,6 @@ HRESULT get_checksumType (
   
  ソース ファイルの実際のチェックサムのバイト数を取得する呼び出し、 [idiasourcefile::get_checksum](../../debugger/debug-interface-access/idiasourcefile-get-checksum.md)メソッド。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)   
  [IDiaSourceFile::get_checksum](../../debugger/debug-interface-access/idiasourcefile-get-checksum.md)

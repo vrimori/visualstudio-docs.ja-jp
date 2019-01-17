@@ -2,7 +2,6 @@
 title: 複数ファイルの項目テンプレートを作成する
 ms.date: 01/02/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio templates, creating multi-file item templates
@@ -11,12 +10,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: dd2cbe6d7a0ff586c0e673a6eb0e3d42aa4dec4e
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 0bffe46fa392a09b29eef224aaa50f5e02db826a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53065410"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53877654"
 ---
 # <a name="how-to-create-multi-file-item-templates"></a>方法:複数ファイルの項目テンプレートを作成する
 
@@ -38,7 +37,7 @@ ms.locfileid: "53065410"
 
 1. 手動で単一ファイルの項目テンプレートを作成するのと同じように項目テンプレートを作成しますが、複数ファイルの項目を構成する各ファイルを組み込みます。
 
-1. *.vstemplate* XML ファイルで、各個別ファイルに対する `ProjectItem` 要素を追加し、この要素に `TargetFileName` 属性を追加します。 `TargetFileName` 属性の値を *$fileinputname$.FileExtension* に設定します。ここで、*FileExtension* はテンプレートに含まれるファイルのファイル拡張子です。 例:
+1. *.vstemplate* XML ファイルで、各個別ファイルに対する `ProjectItem` 要素を追加し、この要素に `TargetFileName` 属性を追加します。 `TargetFileName` 属性の値を *$fileinputname$.FileExtension* に設定します。ここで、*FileExtension* はテンプレートに含まれるファイルのファイル拡張子です。 次に例を示します。
 
     ```xml
     <ProjectItem TargetFileName="$fileinputname$.vb">

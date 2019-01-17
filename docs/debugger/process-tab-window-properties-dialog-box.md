@@ -1,8 +1,6 @@
 ---
-title: タブ、ウィンドウのプロパティ ダイアログ ボックスの処理 |Microsoft ドキュメント
-ms.custom: ''
+title: '[タブで、ウィンドウのプロパティ] ダイアログ ボックスの処理 |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - Window Properties dialog box, Process Tab
@@ -12,19 +10,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 78d504171b50a717ebb4863e2ab9995e384101d9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 557f471a841aa549ecb67fbe99a40b69465fb4b3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31473398"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53968022"
 ---
 # <a name="process-tab-window-properties-dialog-box"></a>[プロセス] タブ ([ウィンドウ プロパティ] ダイアログ ボックス)
-使用して、**プロセス** タブを選択したウィンドウのプロセスを識別します。 表示する、[ウィンドウのプロパティ ダイアログ ボックス](../debugger/window-properties-dialog-box.md)にフォーカスを移動する、[ウィンドウ ビュー](../debugger/windows-view.md)ウィンドウです。 ツリーで、ウィンドウの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  
+使用して、**プロセス**タブを選択したウィンドウのプロセスを識別します。 表示する、[ウィンドウ プロパティ ダイアログ ボックス](../debugger/window-properties-dialog-box.md)、フォーカスを移動、 [Windows ビュー](../debugger/windows-view.md)ウィンドウ。 ツリーで、ウィンドウの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  
   
- 次の設定が [利用可能な**プロセス**] タブ。  
+ 次の設定は [使用可能な**プロセス**] タブ。  
   
 |入力|説明|  
 |-----------|-----------------|  
 |**プロセス ID**|このウィンドウを作成したスレッドを所有するプロセスの ID。 このプロセスのプロパティを表示するのには、この値を選択します。|  
-|**スレッド ID**|このウィンドウを作成したスレッドの ID。 このスレッドのプロパティを表示するのには、この値を選択します。|
+|**スレッド ID**|このウィンドウを作成したスレッドの ID。 このスレッドのプロパティを表示するには、この値を選択します。|

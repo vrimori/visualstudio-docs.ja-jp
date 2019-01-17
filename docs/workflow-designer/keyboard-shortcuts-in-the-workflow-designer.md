@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 326a377cd93e15c52a699dfb83c7ec111866cc0c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4c092a4bcb419039b145bccf3f6c0cd952f0ff85
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53858657"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269580"
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>ワークフロー デザイナーのキーボード ショートカット
 
@@ -54,7 +54,7 @@ Visual Studio 内でグローバル ショートカットおよびデバッグ �
 
 - フローチャートのサイズを変更するには、方向キーを使用して、アクティビティをフローチャートの現在の境界線の外側に移動します。 フローチャートのサイズが自動的に変更されます。
 
-- アクティビティは、開始ノードとして設定するには、使用、 **StartNode として設定**のコンテキスト メニュー コマンド。
+- アクティビティは、開始ノードとして設定するには、使用、 **StartNode として設定**右クリック メニューでコマンド。
 
 - アクティビティを接続するには、次の操作を実行します。
 

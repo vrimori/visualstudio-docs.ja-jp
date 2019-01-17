@@ -1,9 +1,7 @@
 ---
 title: '手順 4: TableLayoutPanel コントロールを使用したフォームのレイアウトの設定'
-ms.custom: ''
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 61acde79-e115-4bad-bb06-1fbe37717a3e
 author: TerryGLee
@@ -11,17 +9,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 164b0974d751dcfd164efab765432c1f9c23458c
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 5f60d39cb14bfb471e677a8c231091e97d3016a6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34748297"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53821347"
 ---
 # <a name="step-4-lay-out-your-form-with-a-tablelayoutpanel-control"></a>手順 4: TableLayoutPanel コントロールを使用したフォームのレイアウトの設定
 この手順では、フォームに <xref:System.Windows.Forms.TableLayoutPanel> コントロールを追加します。 TableLayoutPanel は、後で追加するフォームのコントロールを適切にアラインするために役立ちます。
 
- ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[Tutorial 1: Create a picture viewer in Visual Basic - Video 2](http://go.microsoft.com/fwlink/?LinkId=205211)」(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 2) または「[Tutorial 1: Create a picture viewer in C# - Video 2](http://go.microsoft.com/fwlink/?LinkId=205200)」(チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 2) をご覧ください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
+ ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[Tutorial 1:Create a picture viewer in Visual Basic - Video 2](http://go.microsoft.com/fwlink/?LinkId=205211)」(チュートリアル 1: Visual Basic でピクチャ ビューアーを作成する - ビデオ 2) または「[Tutorial 1:Create a picture viewer in C# - Video 2](http://go.microsoft.com/fwlink/?LinkId=205200)」(チュートリアル 1: C# でピクチャ ビューアーを作成する - ビデオ 2) をご覧ください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
 
 ## <a name="to-lay-out-your-form-with-a-tablelayoutpanel-control"></a>TableLayoutPanel コントロールを使用してフォームのレイアウトを設定するには
 
@@ -62,7 +60,7 @@ ms.locfileid: "34748297"
 7.  TableLayoutPanel の **Dock** プロパティを **Fill** に設定すると、パネルがフォーム全体に表示されます。 この後にフォームのサイズを変更した場合、TableLayoutPanel はドッキングされたまま、フォームに合わせてサイズが変更されます。
 
     > [!NOTE]
-    >  TableLayoutPanel は、Microsoft Office Word の表に似ています。行と列があり、個々のセルは複数の行および列にまたがることができます。 各セルでは、1 つのコントロール (ボタン、チェック ボックス、ラベルなど) を保持できます。 ここでは、TableLayoutPanel の上の行に行全体にまたがる <xref:System.Windows.Forms.PictureBox> コントロールを配置し、左下のセルに <xref:System.Windows.Forms.CheckBox> コントロールを配置し、右下のセルに 4 つの <xref:System.Windows.Forms.Button> コントロールを配置します。
+    >  TableLayoutPanel は、Microsoft Office Word の表のように動作します。行と列があり、個々のセルは複数の行および列にまたがることができます。 各セルでは、1 つのコントロール (ボタン、チェック ボックス、ラベルなど) を保持できます。 ここでは、TableLayoutPanel の上の行に行全体にまたがる <xref:System.Windows.Forms.PictureBox> コントロールを配置し、左下のセルに <xref:System.Windows.Forms.CheckBox> コントロールを配置し、右下のセルに 4 つの <xref:System.Windows.Forms.Button> コントロールを配置します。
 
 8.  現在、TableLayoutPanel には 2 つの行と 2 つの列がありますが、いずれもサイズは同じになっています。 上の行と右の列のサイズがそれぞれ他方よりもかなり大きくなるように変更する必要があります。 **Windows フォーム デザイナー**で、TableLayoutPanel を選択します。 右上隅に、次のような小さな黒い三角形のボタンが表示されます。
 
@@ -90,6 +88,6 @@ ms.locfileid: "34748297"
 
 ## <a name="to-continue-or-review"></a>続行または確認するには
 
--   チュートリアルの次の手順に進むには、「[手順 5: フォームへのコントロールの追加](../ide/step-5-add-controls-to-your-form.md)」をご覧ください。
+-   チュートリアルの次の手順に進むには、「[手順 5:フォームへのコントロールの追加](../ide/step-5-add-controls-to-your-form.md)」をご覧ください。
 
--   チュートリアルの前の手順に戻るには、「[手順 3: フォームのプロパティの設定](../ide/step-3-set-your-form-properties.md)」をご覧ください。
+-   チュートリアルの前の手順に戻るには、「[手順 3:フォームのプロパティの設定](../ide/step-3-set-your-form-properties.md)」をご覧ください。

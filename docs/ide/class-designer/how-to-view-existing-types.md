@@ -2,7 +2,6 @@
 title: '方法: 既存の型を表示する (クラス デザイナー)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.CannotShowBaseType
@@ -16,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f477f64188c9592db65d0a82c8a1b8b3ec5b776
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: e78e92e5d6f8b21dde2660491a944620ac19069b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956654"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53916667"
 ---
 # <a name="how-to-view-existing-types-in-class-designer"></a>方法: クラス デザイナーで既存の型を表示する
 
@@ -33,7 +32,7 @@ ms.locfileid: "33956654"
 
 ## <a name="to-see-types-in-a-project-on-a-class-diagram"></a>プロジェクトの型をクラス ダイアグラムで表示するには
 
-1.  **ソリューション エクスプローラー**のプロジェクトから、既存のクラス ダイアグラム (.cd) ファイルを開きます。 クラス ダイアグラムが存在しない場合は、プロジェクトに新しいクラス ダイアグラムを追加します。 「[方法: プロジェクトにクラス ダイアグラムを追加する](how-to-add-class-diagrams-to-projects.md)」をご覧ください。
+1.  **ソリューション エクスプローラー**のプロジェクトから、既存のクラス ダイアグラム (.cd) ファイルを開きます。 クラス ダイアグラムが存在しない場合は、プロジェクトに新しいクラス ダイアグラムを追加します。 「[方法:プロジェクトにクラス ダイアグラムを追加する](how-to-add-class-diagrams-to-projects.md)」を参照してください。
 
 2.  **ソリューション エクスプローラー**のプロジェクトから、ソース コード ファイルをクラス ダイアグラムにドラッグします。
 
@@ -67,4 +66,4 @@ ms.locfileid: "33956654"
 
 - [方法: 型の間の継承を表示する](how-to-view-inheritance-between-types.md)
 - [方法: クラス ダイアグラムをカスタマイズする](how-to-customize-class-diagrams.md)
-- [型およびリレーションシップの表示](viewing-types-and-relationships.md)
+- [型およびリレーションシップの表示](designing-and-viewing-classes-and-types.md)

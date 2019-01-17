@@ -2,7 +2,6 @@
 title: '[タスク一覧] ([オプション] ダイアログ ボックス - [環境])'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Task_List
@@ -24,12 +23,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c152e7a193fff8d444daf86d098681f20a8f5434
-ms.sourcegitcommit: 1abb9cf4c3ccb90e3481ea8079272c98aad12875
+ms.openlocfilehash: f4645b1a9bb594e5e4b2ca7220c6eda32947ab4f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50143139"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53833621"
 ---
 # <a name="task-list-environment-options-dialog-box"></a>[タスク一覧] ([オプション] ダイアログ ボックス - [環境])
 
@@ -83,7 +82,7 @@ ms.locfileid: "50143139"
 > 既定のコメント トークンの名前変更や削除はできませんが、優先順位は変更できます。
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [タスク一覧の使用](../../ide/using-the-task-list.md)
 - [コードへのブックマークの設定](../../ide/setting-bookmarks-in-code.md)

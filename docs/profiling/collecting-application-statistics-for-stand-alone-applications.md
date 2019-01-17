@@ -1,8 +1,6 @@
 ---
 title: プロファイラーのコマンド ラインを使用したスタンドアロン アプリケーションのアプリケーション統計情報の収集 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - sampling profiling method
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 72efb2481725d7e0da9331b639040d7dacc8298d
-ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
+ms.openlocfilehash: 706e591a96cf5bdd1c13fb0775c8a91e3995cb66
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39276732"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53871260"
 ---
 # <a name="collect-application-statistics-for-stand-alone-applications-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用したスタンドアロン アプリケーションのアプリケーション統計情報の収集
 このセクションでは、コマンド ラインからサンプリング メソッドを使用して、クライアント (スタンドアロン) アプリケーションのパフォーマンスの統計情報を収集する手順とオプションについて説明します。  
@@ -43,7 +41,7 @@ ms.locfileid: "39276732"
 |----------|---------------------|  
 |**アプリケーションをインストルメント化する**|-   [インストルメンテーションを使用した詳細なタイミング データの収集](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application.md)|  
 |**.NET のメモリ割り当てとガベージ コレクション データの収集**|-   [.NET Framework メモリ データの収集](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md)|  
-|**リソース競合とスレッド実行データの収集**|-   [同時実行データの収集](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|  
+|**リソース競合とスレッド実行データの収集**|-   [コンカレンシー データの収集](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|  
   
 ### <a name="profile-by-using-the-sampling-method"></a>サンプリング メソッドを使用したプロファイリング  
   
@@ -54,4 +52,3 @@ ms.locfileid: "39276732"
   
 ### <a name="analyze-sampling-data-views-and-reports"></a>サンプリング データ ビューとレポートの分析  
  [サンプリング メソッドのデータ ビュー](../profiling/profiler-sampling-method-data-views.md)
-

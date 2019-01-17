@@ -1,8 +1,6 @@
 ---
 title: プロファイラーのコマンド ラインからインストルメンテーション メソッドを使用した、サービスの詳細なタイミング データの収集 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 6116e1df-ed3e-4b0d-ac7f-22f7d7ac00ea
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c0dd9fef26538ef6f7208fc32ea00591eb5c608
-ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
+ms.openlocfilehash: 693bd44fe9945d5f86ea405fbc8c2ccbd3e15560
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34335828"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53946345"
 ---
 # <a name="collect-detailed-timing-data-for-services-by-using-the-instrumentation-method-from-the-profiler-command-line"></a>プロファイラーのコマンド ラインからインストルメンテーション メソッドを使用した、サービスの詳細なタイミング データの収集
 このセクションでは、コマンド ラインからインストルメンテーション メソッドを使用して、Windows サービスの詳細なパフォーマンス データを収集する手順とオプションについて説明します。  
@@ -36,7 +34,7 @@ ms.locfileid: "34335828"
 |----------|---------------------|  
 |**サンプリング メソッドを使用したプロファイリング**|-   [サンプリングを使用したアプリケーション統計情報の収集](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md)|  
 |**.NET のメモリ割り当てとガベージ コレクションのプロファイリング**|-   [.NET メモリ データの収集](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|  
-|**リソースの競合とスレッド アクティビティのプロファイリング**|-   [同時実行データの収集](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|  
+|**リソースの競合とスレッド アクティビティのプロファイリング**|-   [コンカレンシー データの収集](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|  
   
 ### <a name="profile-by-using-the-instrumentation-method"></a>インストルメンテーション方式を使用したプロファイリング  
   
@@ -47,4 +45,3 @@ ms.locfileid: "34335828"
   
 ### <a name="analyze-instrumentation-data-views-and-reports"></a>インストルメンテーション データ ビューとレポートの分析  
  [インストルメンテーション メソッドのデータ ビュー](../profiling/instrumentation-method-data-views.md)
-

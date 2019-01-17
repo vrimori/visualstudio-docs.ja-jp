@@ -3,7 +3,6 @@ title: CPU 使用率データの分析 (マネージド コード)
 description: CPU 使用率診断ツールを使用して C# と Visual Basic でアプリのパフォーマンスを測定する
 ms.custom: mvc
 ms.date: 08/06/2018
-ms.technology: vs-ide-debug
 ms.topic: quickstart
 helpviewer_keywords:
 - Profiling Tools, quick start
@@ -13,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 35c6fd1ea079dd95367bcb7763787f0b06839ecb
-ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
+ms.openlocfilehash: 68d8319082fbcbe232989814c190f9a4746c11f1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42626662"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53899575"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-managed-code"></a>クイック スタート: Visual Studio の CPU 使用率データの分析 (マネージド コード)
 
@@ -161,7 +160,7 @@ Windows 8 以降では、デバッガーを使用してプロファイル ツー
     > [!NOTE]
     > Visual Basic で、スタートアップ オブジェクトが `Sub Main` に設定されていることを確認します (**[プロパティ]** > **[アプリケーション]** > **[スタートアップ オブジェクト]**)。
 
-##  <a name="step-1-collect-profiling-data"></a>手順 1: プロファイル データを収集する
+##  <a name="step-1-collect-profiling-data"></a>手順 1: プロファイリング データの収集
 
 1.  最初に、`Main` 関数のこのコード行でアプリのブレークポイントを設定します。
 
@@ -204,7 +203,7 @@ Windows 8 以降では、デバッガーを使用してプロファイル ツー
 
      この時点で、データの分析を開始できます。
 
-## <a name="step-2-analyze-cpu-usage-data"></a>手順 2: CPU 使用率データを分析する
+## <a name="step-2-analyze-cpu-usage-data"></a>手順 2: CPU 使用率データの分析
 
 データの分析では、最初に CPU 使用率で関数の一覧を調べて最も多くの作業を行っている関数を特定し、それから個々の作業を詳しく調べることをお勧めします。
 

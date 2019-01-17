@@ -1,8 +1,6 @@
 ---
 title: 保存された IntelliTrace データを使用して |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.historicaldebug.norepro
@@ -17,14 +15,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d34d3a54947799e41fca20200e0fb6a5305146f
-ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
-ms.translationtype: HT
+ms.openlocfilehash: c348bc105d997e07dcbc6ee373c2952e16c572cf
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53685007"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227786"
 ---
-# <a name="using-saved-intellitrace-data"></a>保存された IntelliTrace データの使用
+# <a name="using-saved-intellitrace-data-c-visual-basic-c"></a>保存された IntelliTrace データを使用して (C#、Visual Basic、C++)
+
 IntelliTrace ログ (.iTrace) ファイルからデバッグを開始するときに、アプリケーションの実行においての特定のポイントに移動します。 このファイルには、アプリの実行中に IntelliTrace によって記録された、パフォーマンス イベント、例外、スレッド、テスト ステップ、モジュール、およびその他のシステム情報が格納されています。
 
  次のソリューションがあることを確認します。

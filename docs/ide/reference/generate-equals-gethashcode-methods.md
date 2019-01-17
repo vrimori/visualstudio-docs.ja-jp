@@ -2,19 +2,18 @@
 title: C# の Equals および GetHashCode メソッドのオーバーライドを生成する
 ms.date: 01/26/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5ec552e320b0c19c5c05e145fd9c5a4588f31b4c
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: e7b1f2f196e8cb737d179e12e49d829b1651c5d5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295710"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53960905"
 ---
 # <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>Visual Studio で Equals および GetHashCode メソッドのオーバーライドを生成する
 
@@ -22,9 +21,9 @@ ms.locfileid: "51295710"
 
 - C#
 
-**概要:** **Equals** メソッドと **GetHashCode** メソッドを生成します。
+**概要:****Equals** メソッドと **GetHashCode** メソッドを生成します。
 
-**タイミング:** これらのオーバーライドは、メモリ内のオブジェクトの場所ではなく、1 つ以上のフィールドによって比較される型がある場合に生成されます。
+**条件:** これらのオーバーライドは、メモリ内のオブジェクトの場所ではなく、1 つ以上のフィールドによって比較される型がある場合に生成されます。
 
 **理由:**
 

@@ -1,8 +1,6 @@
 ---
 title: '方法: .NET Framework ランタイムを指定する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiling Tools, .NET Framework versions
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e85e1c571ecb900d5ce7ffdecf8e85b8c367de5c
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: 6baa0e37acb4ba24d0622ad27fe84c47e84da59d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34844135"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53911014"
 ---
 # <a name="how-to-specify-the-net-framework-runtime"></a>方法: .NET Framework ランタイムを指定する
 

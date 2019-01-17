@@ -1,9 +1,7 @@
 ---
 title: '手順 8: プレーヤーが勝利したかどうかを確認するメソッドの追加'
-ms.custom: ''
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 6e317f6e-ba4c-4306-8924-300b0c2f65c6
 author: TerryGLee
@@ -11,12 +9,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 34b4e8085c3ff3de8037827769331eac83325ff8
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 3d06338a92722b6e969d45960eb449b0a6dcf2a3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34748011"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53930922"
 ---
 # <a name="step-8-add-a-method-to-verify-whether-the-player-won"></a>手順 8: プレーヤーが勝利したかどうかを確認するメソッドの追加
 楽しいゲームが作成されましたが、完成させるには追加の項目が必要です。 ゲームは、プレーヤーが勝利した時点で終了する必要があるため、プレーヤーが勝利したかどうかを確認する `CheckForWinner()` メソッドを追加する必要があります。
@@ -42,6 +40,6 @@ ms.locfileid: "34748011"
 
 ## <a name="to-continue-or-review"></a>続行または確認するには
 
--   次のチュートリアルの手順に進む場合は、「[手順 9: その他の機能を試す](../ide/step-9-try-other-features.md)」を参照してください。
+-   チュートリアルの次の手順に進むには、「[手順 9:その他の機能を試す](../ide/step-9-try-other-features.md)」をご覧ください。
 
--   前のチュートリアルの手順に戻る場合は、「[手順 7: ペアの表示の維持](../ide/step-7-keep-pairs-visible.md)」を参照してください。
+-   チュートリアルの前の手順に戻るには、「[手順 7:ペアの表示の維持](../ide/step-7-keep-pairs-visible.md)」をご覧ください。

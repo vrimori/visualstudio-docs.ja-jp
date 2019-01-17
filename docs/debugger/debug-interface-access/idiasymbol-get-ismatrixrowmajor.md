@@ -1,8 +1,6 @@
 ---
-title: IDiaSymbol::get_isMatrixRowMajor |Microsoft ドキュメント
-ms.custom: ''
+title: IDiaSymbol::get_isMatrixRowMajor |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: af4d1817de2886ededb019942b55271480176ba8
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 3c6a149b342c55ea59036edb21a2ea51ba8ebb35
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31463609"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53847244"
 ---
 # <a name="idiasymbolgetismatrixrowmajor"></a>IDiaSymbol::get_isMatrixRowMajor
 マトリックスが主要な行であるかどうかを指定します。  
@@ -31,10 +29,10 @@ HRESULT get_isMatrixRowMajor(
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ポインター、`BOOL`マトリックスが行の主なであるかどうかを指定します。  
+ [out]ポインターを`BOOL`マトリックスに主要な行がかどうかを指定します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

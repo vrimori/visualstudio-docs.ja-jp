@@ -3,7 +3,6 @@ title: Python 環境とインタープリターを管理する
 description: '[Python 環境] ウィンドウを使用して、グローバル環境、仮想環境、および conda 環境を管理し、Python インタープリターとパッケージをインストールし、環境を Visual Studio プロジェクトに割り当てます。'
 ms.date: 12/07/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
@@ -11,12 +10,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 887776b3a3f1275b97b2abee26c4613d8aad39fc
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: e850c036c5d14e8ee347c89d7b064a2aa65ffe21
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53063215"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53966902"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio で Python 環境を作成および管理する方法
 

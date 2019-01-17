@@ -1,8 +1,6 @@
 ---
-title: Spy++ ヘルプ |Microsoft ドキュメント
-ms.custom: ''
+title: Spy++ ヘルプ |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Spy++ Help contents
@@ -12,15 +10,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 528d52e4f32371eaf32f4c4e07c111c9b87f17cf
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 156629fdce19dfe4e503f4af67ca31f99041e231
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31476606"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53855593"
 ---
 # <a name="spy-help"></a>Spy++ ヘルプ
-Spy++ ユーティリティのドキュメントには、一般的なトピックを使用して spy++ と spy++ ビューでの 2 つのグループが含まれています。 これらが各利用可能なメニュー コマンドやダイアログ ボックスで詳細をさらには、spy++ リファレンス続きます。  
+Spy++ ユーティリティのに関するドキュメントでを使用して spy++ と spy++ ビューでの一般的なトピックの 2 つのグループが含まれています。 後の各使用可能なメニュー コマンドやダイアログ ボックスの詳細な情報を提供します。 spy++ リファレンスでは。  
   
 ## <a name="using-spy"></a>Spy++ の使用  
  [Spy++ の使用](../debugger/using-spy-increment.md)  
@@ -33,23 +31,23 @@ Spy++ ユーティリティのドキュメントには、一般的なトピッ�
  [メニュー コマンド](../debugger/menu-commands.md)  
  各 spy++ メニューで使用できるコマンドについて説明します。  
   
- [フォント ダイアログ ボックス](../debugger/font-dialog-box-microsoft-spy-increment-help.md)  
+ [[フォント]](../debugger/font-dialog-box-microsoft-spy-increment-help.md) ダイアログ ボックス  
  Spy++ ビュー ウィンドウで使用される文字のフォントを構成するために使用します。  
   
  [Spy++ ビュー用の検索ツール](../debugger/search-tools-for-spy-increment-views.md)  
- ダイアログ ボックスが spy++ ビュー ウィンドウで特定のノードを検索するために使用します。  
+ Spy++ ビュー ウィンドウで特定のノードの検索に使用されるダイアログ ボックス。  
   
  [[ウィンドウ プロパティ] ダイアログ ボックス](../debugger/window-properties-dialog-box.md)  
- ウィンドウ ビューで選択したウィンドウのプロパティを表示するために使用します。  
+ Windows のビューで選択したウィンドウのプロパティを表示するために使用します。  
   
  [[メッセージ オプション] ダイアログ ボックス](../debugger/message-options-dialog-box.md)  
- メッセージ ビューに一覧表示するメッセージを選択するために使用します。  
+ メッセージ ビューで一覧表示するメッセージを選択するために使用します。  
   
  [[メッセージ プロパティ] ダイアログ ボックス](../debugger/message-properties-dialog-box.md)  
  メッセージ ビューで選択したメッセージのプロパティを表示するために使用します。  
   
  [[プロセス プロパティ] ダイアログ ボックス](../debugger/process-properties-dialog-box.md)  
- [プロセス] ビューで選択したプロセスのプロパティを表示するために使用します。  
+ プロセス ビューで選択したプロセスのプロパティを表示するために使用します。  
   
  [[スレッド プロパティ] ダイアログ ボックス](../debugger/thread-properties-dialog-box.md)  
  スレッド ビューで選択したスレッドのプロパティを表示するために使用します。  

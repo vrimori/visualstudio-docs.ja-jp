@@ -1,9 +1,6 @@
 ---
-title: 'チュートリアル: VBA から Visual c# プロジェクトでコードを呼び出します。'
-ms.custom: ''
+title: 'チュートリアル: Visual c# プロジェクトでコードを VBA から呼び出す'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -22,14 +19,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e2803ef31ec1009215d4490ac527c42cbdc90571
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: dcbd55c2c6b8b803eb9591265d512a73f6201771
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38781690"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989031"
 ---
-# <a name="walkthrough-call-code-from-vba-in-a-visual-c-project"></a>チュートリアル: VBA から Visual c# プロジェクトでコードを呼び出します。
+# <a name="walkthrough-call-code-from-vba-in-a-visual-c-project"></a>チュートリアル: Visual c# プロジェクトでコードを VBA から呼び出す
   このチュートリアルでは、ブック内の Visual Basic for Applications (VBA) コードから Microsoft Office Excel 用のドキュメント レベルのカスタマイズ内のメソッドを呼び出す方法を示します。 このプロシージャには次の 3 つの基本的な手順が含まれます。 `Sheet1` ホスト項目クラスにメソッドを追加する、ブックの VBA コードにメソッドを公開する、および、ブック内の VBA コードからメソッドを呼び出す、の 3 つです。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
@@ -53,7 +50,7 @@ ms.locfileid: "38781690"
 > [!NOTE]  
 >  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -74,7 +71,7 @@ ms.locfileid: "38781690"
 3.  リボンの **[開発]** タブをクリックします。  
   
     > [!NOTE]  
-    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、次を参照してください。[方法: リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
+    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、「[方法 :リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
   
 4.  **[コード]** グループの **[Visual Basic]** をクリックします。  
   
@@ -108,7 +105,7 @@ ms.locfileid: "38781690"
   
 5.  プロジェクト テンプレートのリストで、 **[Excel 2010 ブック]** または **[Excel 2013 ブック]** プロジェクトを選択します。  
   
-6.  **[名前]** ボックスに、「 **CallingCodeFromVBA**」と入力します。  
+6.   **[名前]** ボックスに、「 **CallingCodeFromVBA**」と入力します。  
   
 7.  **[OK]** をクリックします。  
   
@@ -245,14 +242,13 @@ ms.locfileid: "38781690"
 ## <a name="next-steps"></a>次の手順  
  Office ソリューションでの VBA からのコード呼び出しについて詳しくは、次のトピックを参照してください。  
   
--   VBA から Visual Basic カスタマイズのホスト項目のコードを呼び出します。 このプロセスは、Visual C# のプロセスとは異なります。 詳細については、次を参照してください。[チュートリアル: VBA から Visual Basic プロジェクトでコードを呼び出す](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)します。  
+-   VBA から Visual Basic カスタマイズのホスト項目のコードを呼び出します。 このプロセスは、Visual C# のプロセスとは異なります。 詳細については、「[チュートリアル:Visual Basic プロジェクトでコードを VBA から呼び出す](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)します。  
   
--   VBA から VSTO アドインのコードを呼び出します。 詳細については、次を参照してください。[チュートリアル: VBA から VSTO アドイン内のコードを呼び出す](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)します。  
+-   VBA から VSTO アドインのコードを呼び出します。 詳細については、「[チュートリアル:VSTO アドイン内のコードを VBA から呼び出す](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [VBA とドキュメント レベルのカスタマイズを結合します。](../vsto/combining-vba-and-document-level-customizations.md)   
  [プログラムのドキュメント レベルのカスタマイズ](../vsto/programming-document-level-customizations.md)   
- [方法: Visual Basic プロジェクトでは、VBA に公開コード](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)   
- [方法: Visual C では、VBA に公開コード&#35;プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)   
- [チュートリアル: VBA から Visual Basic プロジェクトでコードを呼び出します。](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)  
-  
+ [方法: Visual Basic プロジェクトでコードを VBA に公開します。](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)   
+ [方法: Visual C での vba コードに公開&#35;プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)   
+ [チュートリアル: Visual Basic プロジェクトでコードを VBA から呼び出す](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)  

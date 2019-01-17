@@ -2,7 +2,6 @@
 title: パラメーターが正しくない値を渡すことがユーザーの確認 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.parameters
@@ -23,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 164ca15cfc508b952ccfe2f986892c0801fd1539
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: ffcff71a8897796d64c608df698932da4fd9774f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059367"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53988097"
 ---
 # <a name="how-can-i-find-out-who-is-passing-a-wrong-parameter-value"></a>引数に不正な値が渡された原因を見つけるには
 ## <a name="problem-description"></a>問題の説明  
@@ -52,7 +51,7 @@ ms.locfileid: "53059367"
   
 7.  次に、[呼び出し履歴] ウィンドウを使用して呼び出し元の関数を見つけ、その関数のソース コードに移動します。 詳細については、「[方法 :[呼び出し履歴] ウィンドウを使用する](../debugger/how-to-use-the-call-stack-window.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)   
  [ブレークポイント](https://msdn.microsoft.com/library/fe4eedc1-71aa-4928-962f-0912c334d583)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

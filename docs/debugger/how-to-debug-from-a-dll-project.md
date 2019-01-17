@@ -1,8 +1,6 @@
 ---
 title: '方法: DLL プロジェクトからデバッグ |Microsoft Docs'
-ms.custom: ''
 ms.date: 10/10/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -20,18 +18,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e006bbd27acc0fa88cfee1b22cb435acba1e282e
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 6dd7ec8938b8b7f94ba649affe48f170172f887b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52388255"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53854075"
 ---
 # <a name="how-to-debug-from-a-dll-project-in-visual-studio-c-c-visual-basic-f"></a>方法: Visual Studio で DLL プロジェクトからデバッグ (C#、C++、Visual Basic、 F#)
 
 DLL プロジェクトをデバッグする方法の 1 つでは、DLL プロジェクトのプロパティで呼び出し元のアプリを指定します。 自体、DLL プロジェクトからデバッグを開始することができます。 このメソッドを使用するには、アプリは、構成するものと同じ場所に同じ DLL を呼び出す必要があります。 場合は、アプリを検索してさまざまなバージョンの DLL を読み込みます、そのバージョンには、ブレークポイントが含まれません。 その他の Dll のデバッグの方法では、次を参照してください。 [DLL のデバッグ プロジェクト](../debugger/debugging-dll-projects.md)します。
   
-マネージ DLL を呼び出すネイティブ アプリ、管理対象アプリが、ネイティブ DLL を呼び出す、または、DLL と呼び出し元のアプリの両方をデバッグできます。 詳細については、「[方法: 混合モードでデバッグする](../debugger/how-to-debug-in-mixed-mode.md)」を参照してください。   
+マネージ DLL を呼び出すネイティブ アプリ、管理対象アプリが、ネイティブ DLL を呼び出す、または、DLL と呼び出し元のアプリの両方をデバッグできます。 詳細については、「[方法 :混合モードでデバッグする](../debugger/how-to-debug-in-mixed-mode.md)   
 
 ネイティブおよびマネージ DLL プロジェクトでは、呼び出し元のアプリを指定するためのさまざまな設定があります。 
 

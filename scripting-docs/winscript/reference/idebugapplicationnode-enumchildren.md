@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationNode::EnumChildren |Microsoft ドキュメント
+title: IDebugApplicationNode::EnumChildren |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a8ab13f3a284b1b36550367e68ca5fe600db3be6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 4967f35904a32e9b9a82426273ea7fd651a34b5a
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725392"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54088128"
 ---
 # <a name="idebugapplicationnodeenumchildren"></a>IDebugApplicationNode::EnumChildren
-このアプリケーション ノードの子ノードを列挙します。  
+このアプリケーションのノードの子ノードを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT EnumChildren(  
    IEnumDebugApplicationNodes**  pperddp  
 );  
@@ -38,17 +38,17 @@ HRESULT EnumChildren(
   
 #### <a name="parameters"></a>パラメーター  
  `pperddp`  
- [out]このノードの子ノードの列挙です。  
+ [out]このノードの子ノードの列挙体。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、このアプリケーション ノードの子ノードを列挙します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、このアプリケーションのノードの子ノードを列挙します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugApplicationNode インターフェイス](../../winscript/reference/idebugapplicationnode-interface.md)

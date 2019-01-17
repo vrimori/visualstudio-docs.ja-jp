@@ -1,8 +1,6 @@
 ---
-title: IDiaSymbol::get_isPointerBasedOnSymbolValue |Microsoft ドキュメント
-ms.custom: ''
+title: IDiaSymbol::get_isPointerBasedOnSymbolValue |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ca2cc7f33b49562baa77754550af7773b8b50202
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: fade6cb19d03587ba277d65295838718d0e331be
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31464642"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989504"
 ---
 # <a name="idiasymbolgetispointerbasedonsymbolvalue"></a>IDiaSymbol::get_isPointerBasedOnSymbolValue
 指定するかどうか、`this`ポインターがシンボル値に基づきます。  
@@ -31,10 +29,10 @@ HRESULT get_isPointerBasedOnSymbolValue(
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]ポインター、`BOOL`を指定するかどうか、`this`ポインターはシンボル値に基づいています。  
+ [out]ポインターを`BOOL`を指定するかどうか、`this`ポインターがシンボル値に基づきます。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

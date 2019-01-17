@@ -1,9 +1,8 @@
 ---
 title: ファイアウォールまたはプロキシ サーバーの内側にインストールして使用する
 description: ファイアウォールまたはプロキシ サーバーを使用する場合に、ホワイトリストに登録したり開いたりすることがあるドメイン URL、ポート、プロトコルを確認します
-ms.custom: seodec18
 ms.date: 07/10/2018
-ms.technology: vs-acquisition
+ms.custom: seodec18
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 91074815c0723f24bbb89bcb45eafc0fae5866d6
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: 55234231855761e0ad0206bdd96dfffcdb52690a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160167"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53879518"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>ファイアウォールまたはプロキシ サーバーの内側に Visual Studio および Azure Services をインストールして使用する
 
@@ -92,7 +91,7 @@ Visual Studio インストーラーによって、さまざまなドメインや
 | AI プロジェクト <br>統合 | az861674.vo.msecnd.net | | 443<br> | 登録されている Application Insights アカウントに使用状況データを送信する新しいプロジェクトを構成するために使用されます。 |
 | コード レンズ | codelensprodscus1su0.app.<br>codelens.visualstudio.com | | 443 | ファイルの最終更新日時、変更のタイムライン、変更が関連付けられている作業項目、作成者など、エディター内に情報を提供するために使用されます。 |
 | 実験用 <br>機能の有効化 | visualstudio-devdiv-c2s.msedge.net | | 80 | 実験用の新しい機能や機能の変更をアクティブ化するために使用されます。 |
-| 識別情報 “バッジ” <br> (ユーザー名とアバター)<br>と、呼び出し <br>ローミング設定 | app.vssps.visualstudio.com <br><br>app.vsspsext.visualstudio.com<br><br>app.vssps.visualstudio.com<br><br> ns-sb2-prod-ch1-002.cloudapp.net <br><br>az700632.vo.msecnd.net | | 443 | IDE でユーザーの名前とアバターを表示するために使用されます。 <br><br> あるコンピューターから別のコンピューターに設定の変更が確実にローミングするように使用されます。 |
+| 識別情報 “バッジ” <br>(ユーザー名とアバター)<br>と、呼び出し <br>ローミング設定 | app.vssps.visualstudio.com <br><br>app.vsspsext.visualstudio.com<br><br>app.vssps.visualstudio.com<br><br> ns-sb2-prod-ch1-002.cloudapp.net <br><br>az700632.vo.msecnd.net | | 443 | IDE でユーザーの名前とアバターを表示するために使用されます。 <br><br> あるコンピューターから別のコンピューターに設定の変更が確実にローミングするように使用されます。 |
 | リモート設定 | az700632.vo.msecnd.net | | 443 | Visual Studio で問題を引き起こすことがわかっている拡張機能をオフにするために使用されます。 |
 | Windows ツール | developer.microsoft.com <br><br>dev.windows.com  <br><br>appdev.microsoft.com | https | 443 | Windows アプリ ストアのシナリオで使用されます。 |
 | JSON スキーマ <br>探索 <br><br>JSON スキーマ <br>定義<br><br>JSON スキーマ <br>サポート <br>Azure リソース | json.schemastore.org <br>schemastoreorg.azurewebsites.net<br><br>json-schema.org<br><br>schema.management.azure.com | http<br>https<br><br>http<br><br>https | 80<br>443 <br><br> 443<br><br>443 | JSON ドキュメントの編集時にユーザーによって使用される可能性のある JSON スキーマを検出およびダウンロードするために使用されます。 <br><br>Json 用のメタ検証スキーマを取得するために使用されます。<br><br>Azure Resource Manager 展開テンプレート用の現在のスキーマを取得するために使用されます。 |
@@ -101,12 +100,12 @@ Visual Studio インストーラーによって、さまざまなドメインや
 | NuGet<br><br>NuGet パッケージ<br> 探索 | Api.nuget.org <br>www.nuget.org <br>Nuget.org<br><br>crl3.digicert.com <br>crl4.digicert.com <br>ocsp.digicert.com <br>cacerts.digicert.com | https<br><br>http/s | 443<br><br>80/443<br> | 署名された NuGet パッケージを確認するために使用されます。<br><br>NuGet パッケージおよびバージョンを検索するために必要です。 |
 | GitHub リポジトリの情報 | api.github.com | https | 443 | Bower パッケージに関する追加情報を取得するために必要です。 |
 | Web リンター | Eslint.org<br><br>www.Bing.com <br><br>www.coffeelint.org | http | 80 | |
-| Cookiecutter<br>エクスプローラー テンプレート<br>探索 <br><br>Cookiecutter <br>エクスプローラー プロジェクトの<br> 作成 | api.github.com <br>raw.githubusercontent.com <br>go.microsoft.com<br><br>pypi.org <br> pypi.python.org | https | 443<br> | 推奨されるフィードから、および Github リポジトリから、オンライン テンプレートを検出するために使用されます。 <br><br>Python パッケージ インデックス (PyPI) からの cookiecutter Python パッケージの 1 回限りのオンデマンド インストールを必要とする cookiecutter テンプレートからプロジェクトを作成するために使用されます。 |
+| Cookiecutter<br>エクスプローラー テンプレート<br>探索 <br><br>Cookiecutter <br>エクスプローラー プロジェクトの<br> 作成 | api.github.com <br>raw.githubusercontent.com <br>go.microsoft.com<br><br>pypi.org <br> pypi.python.org | https | 443<br> | 推奨されるフィードから、および GitHub リポジトリから、オンライン テンプレートを検出するために使用されます <br><br>Python パッケージ インデックス (PyPI) からの cookiecutter Python パッケージの 1 回限りのオンデマンド インストールを必要とする cookiecutter テンプレートからプロジェクトを作成するために使用されます。 |
 | Python パッケージ <br>探索<br><br>Python パッケージ <br>管理<br><br>Python <br>新しいプロジェクト <br>テンプレートの使用 | pypi.org<br> <br>pypi.python.org <br>bootstrap.pypa.io<br><br>go.microsoft.com | https | 443 | pip パッケージを検索する機能を提供します。<br><br>pip が存在しない場合に、pip を自動的にインストールするために使用されます。 <br><br> を作成するために使用されます。 <br><br>[新しいプロジェクト] の次の Python プロジェクト テンプレートを cookiecutter テンプレート URL に解決するために使用されます。<br> - 分類子プロジェクト<br>- クラスタリング プロジェクト <br> - 回帰プロジェクト <br> - PyKinect を使用した PyGame <br> - Pyvot プロジェクト |
 | Office Web <br>アドイン <br> file:/// <br>検証 <br>サービス | verificationservice.osi.office.net | https | 443 | Office Web アドインのマニフェストを検証するために使用されます。 |
 | SharePoint と <br>Office アドイン | sharepoint.com | https | 443 | SharePoint および Office のアドインを SharePoint Online に発行し、テストするために使用されます。 |
 | ワークフロー マネージャー <br>テスト サービス<br> ホスト | | http | 12292 | SharePoint アドインをワークフローでテストするために自動的に作成されるファイアウォール規則です。 |
-| 自動的に収集される <br>信頼性の統計情報 <br>と、 <br>Azure SDK および SQL Tools 用の <br>その他の<br> カスタマー エクスペリエンス向上プログラム <br> (CEIP) <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https | 443 | ユーザーから Microsoft に信頼性の統計情報 (クラッシュ/ハング データ) を送信するために使用されます。 Windows エラー報告を有効にした場合、実際のクラッシュ/ハング ダンプは引き続きアップロードされ、統計情報のみが抑制されます。 <br>Azure Tools SDK 拡張機能の匿名の利用状況パターン、および SQL ツールの利用状況パターンを Visual Studio に対して明らかにします。 |
+| 自動的に収集される <br>信頼性の統計情報 <br>と、 <br>Azure SDK および SQL Tools 用の <br>その他の<br> カスタマー エクスペリエンス向上プログラム <br>(CEIP) <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https | 443 | ユーザーから Microsoft に信頼性の統計情報 (クラッシュ/ハング データ) を送信するために使用されます。 Windows エラー報告を有効にした場合、実際のクラッシュ/ハング ダンプは引き続きアップロードされ、統計情報のみが抑制されます。 <br>Azure Tools SDK 拡張機能の匿名の利用状況パターン、および SQL ツールの利用状況パターンを Visual Studio に対して明らかにします。 |
 | Visual Studio <br> カスタマー エクスペリエンス <br>向上プログラム (CEIP) <br><br>PerfWatson.exe | vortex.data.microsoft.com<br>dc.services.visualstudio.com<br>visualstudio-devdiv-c2s.msedge.net<br>az667904.vo.msecnd.net <br>scus-breeziest-in.cloudapp.net<br> | https | 443 | 匿名の利用状況のパターンとエラー ログを収集するために使用されます。 <br><br>UI のフリーズ問題を追跡するために使用されます。 |
 | Azure リソースの<br>作成と <br>管理 | management.azure.com <br>management.core.windows.net | https | 443 | Web アプリケーション、Azure Functions、または WebJobs の発行をサポートする Azure Websites またはその他のリソースを作成するために使用されます。 |
 | 更新された Web 発行ツールの <br>確認と拡張機能に関する <br>推奨事項 | marketplace.visualstudio.com | https | 443 | 更新された発行ツールの可用性を確認するために使用されます。 無効の場合、Web 発行のための潜在的な推奨拡張機能が表示されない場合があります。 |

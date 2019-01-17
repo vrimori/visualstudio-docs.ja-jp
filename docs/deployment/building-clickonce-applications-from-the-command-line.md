@@ -1,8 +1,6 @@
 ---
 title: コマンドラインから ClickOnce アプリケーションの構築 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,14 +16,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1484466e3d1b1a43a6ff28c2526dbb478ef7392d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 41161a41b1e2d1e13c5b9d8ebfad47c558570206
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49853286"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53926266"
 ---
-# <a name="build-clickonce-applications-from-the-command-line"></a>コマンドラインから ClickOnce アプリケーションを構築します。
+# <a name="build-clickonce-applications-from-the-command-line"></a>ClickOnce アプリケーションのコマンド ラインからのビルド
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]、統合開発環境 (IDE) で作成される場合でも、コマンドラインからプロジェクトをビルドできます。 実際で作成されたプロジェクトを再構築する[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]のみを持つ別のコンピューターで、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]をインストールします。 自動化されたプロセスを使用してビルドを再現することができます、たとえば、中央のビルド ラボまたはを使用して高度なスクリプティング プロジェクト自体のビルドの範囲外の手法です。  
   
 ## <a name="use-msbuild-to-reproduce-clickonce-application-deployments"></a>MSBuild を使用して ClickOnce アプリケーションの展開を再現します  
@@ -37,7 +35,7 @@ ms.locfileid: "49853286"
   
  `/target:publish`コマンドは、発行ターゲットを呼び出すための MSBuild に指示します。 発行先は、ビルド ターゲットに依存します。 これは、発行操作は、ビルド操作のスーパー セットであることを意味します。 たとえば、Visual Basic または c# ソース ファイルのいずれかに変更を加えた場合、対応するアセンブリは自動的にして再構築、発行操作。  
   
- 完全なを生成する方法について[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Mage.exe コマンド ライン ツールを使用して作成する展開、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]マニフェストは、「[チュートリアル: ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。  
+ 完全なを生成する方法について[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Mage.exe コマンド ライン ツールを使用して作成する展開、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]マニフェストは、「[チュートリアル。ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。  
   
 ## <a name="create-and-build-a-basic-clickonce-application-with-msbuild"></a>作成し、MSBuild を使用した基本的な ClickOnce アプリケーションの構築  
   
@@ -75,9 +73,9 @@ ms.locfileid: "49853286"
   
 5. 「`msbuild /target:publish`」と入力します。  
   
-   上記の手順は、完全な[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]という名前のプロジェクトのサブフォルダーに、アプリケーションの展開**発行**します。 *CmdLineDemo.application*は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置マニフェスト。 フォルダー *CmdLineDemo_1.0.0.0*ファイルが含まれています*CmdLineDemo.exe*と*CmdLineDemo.exe.manifest*、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェストです。 *Setup.exe*ブートス トラップ、既定でインストールするように構成するには、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。 DotNetFX フォルダーには再頒布可能パッケージが含まれています、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。 これは、Web 上または UNC パスまたは CD または DVD を使用して、アプリケーションをデプロイする必要があるファイルのセット全体です。  
+   上記の手順は、完全な[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]という名前のプロジェクトのサブフォルダーに、アプリケーションの展開**発行**します。 *CmdLineDemo.application*は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置マニフェスト。 フォルダー *CmdLineDemo_1.0.0.0*ファイルを含む*CmdLineDemo.exe*と*CmdLineDemo.exe.manifest*、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 *Setup.exe*ブートス トラップ、既定でインストールするように構成するには、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。 DotNetFX フォルダーには再頒布可能パッケージが含まれています、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。 これは、Web 上または UNC パスまたは CD または DVD を使用して、アプリケーションをデプロイする必要があるファイルのセット全体です。  
   
-## <a name="publish-properties"></a>プロパティをパブリッシュします。  
+## <a name="publish-properties"></a>[発行] プロパティ  
  上記の手順で、アプリケーションを発行するとき、次のプロパティは、発行ウィザードによって、プロジェクト ファイルに挿入されます。 これらのプロパティに直接影響を与える方法、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションが生成されます。  
   
  *CmdLineDemo.vbproj* / *CmdLineDemo.csproj*:  

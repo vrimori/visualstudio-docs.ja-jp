@@ -2,7 +2,6 @@
 title: デバッガーでの逆アセンブリ コードの表示 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 10/30/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.disassembly
@@ -23,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c35432bdd01b9b79c2afaa266d8078caf04bd62b
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: c3af42271e3d08a7910c1eae01bcd6563e46dda1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53063837"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53922235"
 ---
 # <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio デバッガーでの逆アセンブリ コードの表示 (C#、C++、Visual Basic、 F#)
 
@@ -57,7 +56,7 @@ ms.locfileid: "53063837"
 
 アセンブリ言語ではなく、未加工の数値形式では、マシン語コード命令を表示するには、使用、**メモリ**ウィンドウまたは選択**コード バイト**のショートカット メニューから、**逆アセンブリ**ウィンドウ。
 
-## <a name="use-the-disassembly-window"></a>逆アセンブル ウィンドウを使用します。
+## <a name="use-the-disassembly-window"></a>[逆アセンブル] ウィンドウを使用する
 
 有効にする、**逆アセンブル**ウィンドウで、**ツール** > **オプション**(または**ツール** >  **オプション**) >**デバッグ**、**アドレス レベルのデバッグを有効にする**します。
 
@@ -74,4 +73,4 @@ ms.locfileid: "53063837"
 
 * [ページ単位の上下移動 (メモリ内での)](../debugger/how-to-page-up-or-down-in-memory.md)
 * [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)
-* [方法: [レジスタ] ウィンドウを使用します。](../debugger/how-to-use-the-registers-window.md)
+* [方法: [レジスタ] ウィンドウを使用する](../debugger/how-to-use-the-registers-window.md)

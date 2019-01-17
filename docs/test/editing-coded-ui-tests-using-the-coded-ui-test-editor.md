@@ -2,7 +2,6 @@
 title: コード化された UI テストの編集
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: conceptual
 f1_keywords:
 - vs.codedUItest.testeditor
@@ -13,12 +12,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 6c45a8abceacb1d566ca5aba382e7955f1c2601e
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 0e8e21129392ff949290576dbbbd9a315256b592
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895562"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53959694"
 ---
 # <a name="edit-coded-ui-tests-using-the-coded-ui-test-editor"></a>コード化された UI テスト エディターを使用してコード化された UI テストを編集する
 
@@ -186,7 +185,7 @@ UI 操作のプロパティを **[UI 操作]** ウィンドウで変更する場
 
 ![5 秒間の遅延の追加](../test/media/codeduidealy2.png)
 
-**[UI 操作]** ウィンドウで、事前に遅延を挿入する対象の UI 操作を含むテスト メソッドを展開します。 UI 操作を選択します。 次に、UI 操作のショートカット メニューを開き、 **[前に遅延を挿入]** をクリックします。 選択した UI 操作の前に遅延が挿入されて強調表示され、 **"操作間のユーザー遅延として 1 秒待機します"** というテキストが示されます。 **[プロパティ]** ウィンドウで、**[遅延]** プロパティの値を目的のミリ秒数に変更します。
+**[UI 操作]** ウィンドウで、事前に遅延を挿入する対象の UI 操作を含むテスト メソッドを展開します。 UI 操作を選択します。 次に、UI 操作のショートカット メニューを開き、 **[前に遅延を挿入]** をクリックします。 選択した UI 操作の前に遅延が挿入されて強調表示され、"**操作間のユーザー遅延として 1 秒待機します**" というテキストが示されます。 **[プロパティ]** ウィンドウで、**[遅延]** プロパティの値を目的のミリ秒数に変更します。
 
 遅延の挿入が完了したら、Visual Studio ツール バーの **[保存]** をクリックすることで、*UIMap.Designer* ファイルに変更を保存します。
 

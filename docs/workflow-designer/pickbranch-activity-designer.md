@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a3a692d08a8117eca4bbd4765cc9d21ba7b8c770
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 86948845f2537f0785daeebbc349292891a7a3e2
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53860258"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269866"
 ---
 # <a name="pickbranch-activity-designer"></a>PickBranch アクティビティ デザイナー
 
@@ -32,7 +32,7 @@ ms.locfileid: "53860258"
 
 2 つの空<xref:System.Activities.Statements.PickBranch>を持つオブジェクトの名前を表示する**Branch1**と**Branch2**の要素として、既定で作成された、<xref:System.Activities.Statements.Pick>アクティビティと、**選択**アクティビティ デザイナーはワークフロー デザイナーに最初に削除されます。 これらそれぞれ<xref:System.Activities.Statements.PickBranch.DisplayName%2A>でプロパティ値を編集できる、 **PickBranch**デザイナーのヘッダー内、または、**プロパティ**各分岐はウィンドウ。
 
-追加する 2 つの方法はあります<xref:System.Activities.Statements.PickBranch>オブジェクトのコレクションを<xref:System.Activities.Statements.Pick>オブジェクト: ドラッグ アンド ドロップ、 **PickBranch**からデザイナー、**ツールボックス**からコンテキスト メニューを使用内で、**選択**デザイン画面。
+追加する 2 つの方法はあります<xref:System.Activities.Statements.PickBranch>オブジェクトのコレクションを<xref:System.Activities.Statements.Pick>オブジェクト: ドラッグ アンド ドロップ、 **PickBranch**からデザイナー、**ツールボックス**を右クリック メニューを使用して、または内で、**選択**デザイン画面。
 
 - **PickBranch**デザイナーを作成、<xref:System.Activities.Statements.PickBranch>からドラッグされるときに、**ツールボックス**の分岐の 1 つにドロップして、**選択**上のアクティビティ デザイナー、ワークフロー デザイナー画面。 新しい <xref:System.Activities.Statements.PickBranch> オブジェクトは、<xref:System.Activities.Statements.Pick> デザイナー内で、コレクションに含まれている既存の <xref:System.Activities.Statements.PickBranch> 要素の左側または右側に配置できます。 ドラッグしたときに、 **PickBranch**デザイナー上に、**選択**マウス、デザイナー、**選択**デザイナーでは、青灰色の縦の帯を使用して、場所を示します、 <xref:System.Activities.Statements.PickBranch>位置に追加されます。
 

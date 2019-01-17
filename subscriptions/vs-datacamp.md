@@ -3,18 +3,18 @@ title: 今日データ サイエンスのスキルを強化するには、選択
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
-ms.date: 05/30/2018
+ms.date: 12/19/2018
 ms.topic: Get-Started-Article
 description: 一部の Visual Studio サブスクリプションに含まれる DataCamp トレーニング サブスクリプションについて説明します。
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: cd0b92d8515e488d74cc124c888bb0e8ca9537e6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 47199fc27491843985326f3ceee5dd6fbf3677ad
+ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49863909"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "53802149"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの DataCamp トレーニング特典
 
@@ -42,12 +42,9 @@ DataCamp 特典の有効期間は、Visual Studio サブスクリプションに
     - データ サイエンス用の Learning Python を開始する
     - データ サイエンス スキルセットを開発する
 
-
-~~~
-Just click on your chosen path to get started.
-> [!div class="mx-imgBorder"]
-> ![DataCamp Choose Path](_img\vs-datacamp\vs-datacamp-choose-path.png)
-~~~
+   開始するには、選択したパスをクリックするだけです。
+   > [!div class="mx-imgBorder"]
+   > ![DataCamp: パスの選択](_img/vs-datacamp/vs-datacamp-choose-path.png)
 
 5. 目的のパスを選択したら、目標を選択して、ラーニング パスを絞り込むことができます。  たとえば、"データ サイエンス スキルセットを開発する" パスを選択すると、次のオプションが表示されます。 オプションを選択するか、**[I am not sure.Show me all career paths]\(わかりません。すべてのキャリア パスを表示してください\)** をクリックしてより広範なパスを作成します。
    > [!div class="mx-imgBorder"]
@@ -72,18 +69,21 @@ Just click on your chosen path to get started.
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール、 | 3 か月       |  いいえ。  新しいサブスクライバーのみが使用できます          |
-| Visual Studio Professional (標準、年間クラウド) | VL、Azure、リテール                                       | 3 か月                                                            |  いいえ。  新しいサブスクライバーのみが使用できます           |
+| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、 | 3 か月       |  いいえ。  新しいサブスクライバーのみが使用できます          |
+| Visual Studio Professional (Standard) | VL、Azure、リテール                                       | 3 か月                                                            |  いいえ。  新しいサブスクライバーのみが使用できます           |
 | Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用可能                                             |  いいえ。  新しいサブスクライバーのみが使用できます           |
 | MSDN Platforms (標準)                                          | VL、リテール                                              | 使用可能                                              |  いいえ。  新しいサブスクライバーのみが使用できます           |
 | Visual Studio Dev Essentials | N/A  | 2 か月 | いいえ。 新しいサブスクライバーのみが使用できます |
-| Visual Studio Enterprise (標準、年間クラウド)  | NFR<sup>1</sup> |使用できません  | N/A |
+| Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |使用できません  | N/A |
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure | 使用できません | N/A |
 
 
 
-<sup>1</sup> *Not for Resale (NFR)、FTE、Microsoft Valued Professional (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、Visual Studio Industry Partner (VSIP)、Microsoft Certified Trainer、BizSpark、Imagine が含まれます*
+<sup>1</sup>  *Not for Resale (NFR)、FTE、Microsoft Valued Professional (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、Visual Studio Industry Partner (VSIP)、Microsoft Certified Trainer、BizSpark、Imagine が含まれます*
 
+
+> [!NOTE]
+> Microsoft では、クラウド サブスクリプションの Visual Studio Professional 年間サブスクリプションおよび Visual Studio Enterprise 年間サブスクリプションが提供されなくなりました。 サブスクリプションの更新、増減、キャンセルに関する既存のお客様のエクスペリエンスと機能については変更はありません。 新規のお客様は、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) に移動し、Visual Studio のさまざまな購入オプションを調べることをお勧めします。
 
 
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。

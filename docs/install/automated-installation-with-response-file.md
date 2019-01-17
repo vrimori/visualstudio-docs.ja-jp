@@ -2,7 +2,6 @@
 title: 応答ファイルでインストールを自動化する
 description: Visual Studio のインストールの自動化に役立つ JSON 応答ファイルを作成する方法について説明します
 ms.date: 08/14/2017
-ms.technology: vs-acquisition
 ms.custom: seodec18
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -16,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 30e7af50259a2087a0a380b1fe2d0c96c0d83f9a
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: 4262e3d56793e1c664dc51a46403c8f9996e7bb7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53158776"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53920298"
 ---
 # <a name="how-to-define-settings-in-a-response-file"></a>応答ファイルの設定を定義する方法
 

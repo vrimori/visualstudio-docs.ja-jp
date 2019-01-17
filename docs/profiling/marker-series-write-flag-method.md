@@ -1,8 +1,6 @@
 ---
 title: marker_series::write_flag メソッド | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - cvmarkersojb/Concurrency::diagnostic::marker_series::write_flag
@@ -14,15 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: faff304831f8f2ffabed925d2ab3dfc5d64c18af
-ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
+ms.openlocfilehash: ba32b08de607f28a32cedf4050c4b4db439c1a39
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35237459"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53840500"
 ---
 # <a name="markerserieswriteflag-method"></a>marker_series::write_flag メソッド
-同時実行ビジュアライザーのトレース ファイルにフラグを書き込みます。  
+コンカレンシー ビジュアライザーのトレース ファイルにフラグを書き込みます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -59,7 +57,7 @@ void write_flag(
  `_Category`  
  カテゴリ。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** *cvmarkersobj.h*  
   
  **名前空間:** Concurrency::diagnostic  

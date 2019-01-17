@@ -1,5 +1,5 @@
 ---
-title: IProcessDebugManager::AddApplication |Microsoft ドキュメント
+title: Iprocessdebugmanager::addapplication |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a221aa0038b0b3fd5046b9ada08e2de86f33a895
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: fa0b811a23f8c97f1924883a04878f22cabc9b26
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729522"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54087530"
 ---
 # <a name="iprocessdebugmanageraddapplication"></a>IProcessDebugManager::AddApplication
-実行中のアプリケーションをマシン デバッグ マネージャーの一覧にアプリケーションを追加します。  
+実行中のアプリケーションには、マシン デバッグ マネージャーの一覧にアプリケーションを追加します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT AddApplication(  
    IDebugApplication*  pda,  
    DWORD*              pdwAppCookie  
@@ -42,17 +42,17 @@ HRESULT AddApplication(
  [in]実行中のアプリケーションの一覧に追加するデバッグ アプリケーション。  
   
  `pdwAppCookie`  
- [out]アプリケーションをマシン デバッグ マネージャーから削除するために使用する cookie です。  
+ [out]マシン デバッグ マネージャーから、アプリケーションを削除するために使用されるクッキー。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、実行中にアプリケーションを追加 machine デバッグ manager でアプリケーションの一覧です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、実行中にアプリケーションを追加マシン デバッグ マネージャーのアプリケーションの一覧。  
   
 ## <a name="see-also"></a>関連項目  
  [IProcessDebugManager インターフェイス](../../winscript/reference/iprocessdebugmanager-interface.md)   

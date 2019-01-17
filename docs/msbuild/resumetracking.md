@@ -1,8 +1,6 @@
 ---
 title: ResumeTracking | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 apiname:
 - ResumeTracking
@@ -17,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ec83d60046a74484035df9d7a7831d16b48d899
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 9608ca6237a44d48d4ee4c4d8daf057d88fc5b53
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39151182"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53947832"
 ---
 # <a name="resumetracking"></a>ResumeTracking
 現在のコンテキストで追跡を再開します。  
@@ -36,8 +34,8 @@ HRESULT WINAPI ResumeTracking();
 ## <a name="return-value"></a>戻り値  
  追跡が再開された場合、**HRESULT** に **SUCCEEDED** ビットが設定されます。 コンテキストが利用できず、追跡を再開できない場合、**E_FAIL** が返されます。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** *FileTracker.h*  
+## <a name="requirements"></a>要件  
+ **ヘッダー:***FileTracker.h*  
   
 ## <a name="see-also"></a>関連項目  
  [SuspendTracking](../msbuild/suspendtracking.md)

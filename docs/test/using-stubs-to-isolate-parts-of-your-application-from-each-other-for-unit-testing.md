@@ -2,7 +2,6 @@
 title: スタブを使用して単体テストのためにアプリケーションを分離する
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
 manager: douge
@@ -12,12 +11,12 @@ author: gewarren
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 2bf3441deef786a210b970fe9daaa7b30388d46e
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: c832853470fb4aa3adad9719ddbbe35123f04772
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53065533"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53902764"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>スタブを使用して単体テストでアプリケーションの各部分を相互に分離する
 
@@ -396,7 +395,7 @@ public void TestGetValue()
 
 ### <a name="stubs-of-virtual-classes"></a>仮想クラスのスタブ
 
-これまでの例では、スタブはインターフェイスから生成されていました。 仮想メンバーまたは抽象メンバーを持つクラスからスタブを生成することもできます。 例:
+これまでの例では、スタブはインターフェイスから生成されていました。 仮想メンバーまたは抽象メンバーを持つクラスからスタブを生成することもできます。 次に例を示します。
 
 ```csharp
 // Base class in application under test

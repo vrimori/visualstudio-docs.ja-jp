@@ -1,9 +1,6 @@
 ---
-title: '方法: プログラムによってワークシートの範囲内のテキストの検索'
-ms.custom: ''
+title: '方法: プログラムによってワークシートの範囲内のテキストを検索します。'
 ms.date: 02/02/2017
-ms.technology:
-- office-development
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,14 +14,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a323336979e16be376cfcd3da44cbc9b12bd73ea
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: dba0ce5928b61b1ec6b5777e1922cc68f8ed57ee
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50671964"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53826128"
 ---
-# <a name="how-to-programmatically-search-for-text-in-worksheet-ranges"></a>方法: プログラムによってワークシートの範囲内のテキストの検索
+# <a name="how-to-programmatically-search-for-text-in-worksheet-ranges"></a>方法: プログラムによってワークシートの範囲内のテキストを検索します。
   <xref:Microsoft.Office.Interop.Excel.Range.Find%2A>のメソッド、<xref:Microsoft.Office.Interop.Excel.Range>オブジェクトでは、範囲内でテキストを検索することができます。 このテキストのエラー文字列など、ワークシートのセルに表示されることができますを指定できますも`#NULL!`または`#VALUE!`します。 エラー文字列の詳細については、次を参照してください。[エラー値をセル](/office/vba/excel/Concepts/Cells-and-Ranges/cell-error-values)します。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
@@ -34,7 +31,7 @@ ms.locfileid: "50671964"
 > [!NOTE]  
 >  <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A>範囲の末尾に達した後、検索範囲の先頭に戻ってメソッドの検索をラップします。 コードは必要があります、検索が無限ループに入るをラップしないことを確認します。 サンプル プロシージャを使用してこれを処理する 1 つの方法を示しています、<xref:Microsoft.Office.Interop.Excel.Range.Address%2A>プロパティ。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。 [How do i: 使用を Excel アドインで検索方法でしょうか。](http://go.microsoft.com/fwlink/?LinkID=130294)します。  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[How do i:。Excel アドインでは、Find メソッドを使用しますか。](http://go.microsoft.com/fwlink/?LinkID=130294).  
   
 ## <a name="to-search-for-text-in-a-worksheet-range"></a>ワークシートの範囲内のテキストを検索するには  
   
@@ -81,8 +78,6 @@ ms.locfileid: "50671964"
   
 ## <a name="see-also"></a>関連項目  
  [範囲を操作します。](../vsto/working-with-ranges.md)   
- [方法: プログラムによってブック内の範囲にスタイルを適用](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
- [方法: プログラムによってコード内でワークシートの範囲を参照](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)   
+ [方法: プログラムによってブック内の範囲にスタイルを適用します。](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
+ [方法: コード内でワークシートの範囲をプログラムで参照してください。](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
-  
-  

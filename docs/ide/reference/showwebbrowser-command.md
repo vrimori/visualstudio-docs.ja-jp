@@ -2,7 +2,6 @@
 title: ShowWebBrowser コマンド
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - view.showwebbrowser
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 87536df138de092948d845cf05d20af8e63ad68a
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: df5983b0cbc33abe0f5919a93af1450394134a99
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50672146"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53985827"
 ---
 # <a name="showwebbrowser-command"></a>ShowWebBrowser コマンド
 
@@ -35,7 +34,7 @@ View.ShowWebBrowser URL [/new][/ext]
 ## <a name="arguments"></a>引数
  `URL`
 
- 必須。 Web サイトの URL (Uniform Resource Locator)。
+ 必須です。 Web サイトの URL (Uniform Resource Locator)。
 
 ## <a name="switches"></a>スイッチ
  /new
@@ -56,7 +55,7 @@ View.ShowWebBrowser URL [/new][/ext]
 >View.ShowWebBrowser https://docs.microsoft.com /ext
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
 - [コマンド ウィンドウ](../../ide/reference/command-window.md)

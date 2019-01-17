@@ -1,9 +1,7 @@
 ---
 title: '手順 8: [Show a Picture] ボタンのイベント ハンドラーのコードの記述'
-ms.custom: ''
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 07f4ec00-cda4-42f4-98bb-37edc7167de7
 author: TerryGLee
@@ -11,12 +9,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d2c76a6eb760e55659c7da4df2a1a341426f0c6e
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: be9163ce831f556310a17b72c3833d9756ddf952
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50671808"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53887894"
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>手順 8: [Show a Picture] ボタンのイベント ハンドラーのコードの記述
 
@@ -28,7 +26,7 @@ ms.locfileid: "50671808"
 
 IDE には、コードの記述に役立つ IntelliSense と呼ばれる強力なツールが備わっています。 コードを入力する際に単語の一部を入力すると、入力に合わせてボックスが開き、入力候補が提示されます。 このツールは、ユーザーの次の操作を予測し、ユーザーが一覧から選択した最後の項目に自動的にジャンプします。 ユーザーは、上方向キーまたは下方向キーを使用して一覧内を移動したり、文字の入力を続けて選択肢を絞り込んだりすることができます。 目的の選択肢が見つかったら、**Tab** キーを押して選択します。 入力候補が不要な場合は無視してもかまいません。
 
-![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[Tutorial 1: Create a picture viewer in Visual Basic - Video 4](https://msdn.microsoft.com/vstudio/gg315355.aspx)」(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 4) をご覧ください。 このビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
+![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[Tutorial 1:Create a picture viewer in Visual Basic - Video 4](https://msdn.microsoft.com/vstudio/gg315355.aspx)」(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 4) をご覧ください。 このビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
 
 ## <a name="to-write-code-for-the-show-a-picture-button-event-handler"></a>[Show a picture] ボタンのイベント ハンドラーのコードを記述するには
 
@@ -65,7 +63,7 @@ IDE には、コードの記述に役立つ IntelliSense と呼ばれる強力�
 
          `ShowDialog()` メソッドの詳細については、「[ShowDialog メソッド](<xref:System.Windows.Forms.Form.ShowDialog%2A>)」を参照してください。
 
-    5.  コントロールまたはコンポーネントでメソッドを使用する ("*メソッドを呼び出す*" といいます) ときは、かっこを追加する必要があります。 そこで、`ShowDialog` で "g" の直後に左かっこと右かっこを入力します: `()`。つまり、"openFileDialog1.ShowDialog()" となります。
+    5.  コントロールまたはコンポーネントでメソッドを使用する ("*メソッドを呼び出す*" といいます) ときは、かっこを追加する必要があります。 そこで、`ShowDialog` で "g" の直後に左かっこと右かっこを入力します:`()`。つまり、"openFileDialog1.ShowDialog()" となります。
 
         > [!NOTE]
         > メソッドはプログラムの重要な要素であり、このチュートリアルでもメソッドの使用方法を既にいくつか示しました。 **OpenFileDialog** コンポーネントの `ShowDialog()` メソッドを呼び出したのと同じように、コンポーネントのメソッドを呼び出すと、コンポーネントで実行する処理を指定することができます。 また、独自のメソッドを作成してプログラムの処理を指定することもできます。たとえば、現在作成している `showButton_Click()` というメソッドは、ユーザーがボタンをクリックしたときにダイアログ ボックスとピクチャを開くメソッドです。
@@ -97,6 +95,6 @@ IDE には、コードの記述に役立つ IntelliSense と呼ばれる強力�
 
 ## <a name="to-continue-or-review"></a>続行または確認するには
 
--   チュートリアルの次の手順に進むには、「[手順 9: 確認、コメントの追加、およびコードのテスト](../ide/step-9-review-comment-and-test-your-code.md)」をご覧ください。
+-   チュートリアルの次の手順に進むには、「[手順 9:レビュー、コメントの追加、およびコードのテスト](../ide/step-9-review-comment-and-test-your-code.md)」をご覧ください。
 
--   チュートリアルの前の手順に戻るには、「[手順 7: フォームへのダイアログ コンポーネントの追加](../ide/step-7-add-dialog-components-to-your-form.md)」をご覧ください。
+-   チュートリアルの前の手順に戻るには、「[手順 7:フォームへのダイアログ コンポーネントの追加](../ide/step-7-add-dialog-components-to-your-form.md)」をご覧ください。

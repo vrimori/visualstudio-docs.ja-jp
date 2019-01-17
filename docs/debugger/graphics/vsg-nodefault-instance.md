@@ -1,8 +1,6 @@
 ---
 title: VSG_NODEFAULT_INSTANCE |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 19c95b0d-9a4d-441f-9ed7-3acb39e67521
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4655b6105a940b7f2c742ba8bcd0812d0be5ab95
-ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
-ms.translationtype: MT
+ms.openlocfilehash: a5422cf4899e68a913e6cf15e4923da564859653
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37433186"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53922574"
 ---
 # <a name="vsgnodefaultinstance"></a>VSG_NODEFAULT_INSTANCE
 既定のインスタンスかどうかをその存在によって定義、 [VsgDbg クラス](vsgdbg-class.md)クラス: プログラムによるキャプチャ インターフェイスを提供する — が指定されています。  
@@ -35,7 +33,7 @@ ms.locfileid: "37433186"
 VsgDbg *g_pVsgDbg;  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  ほとんどの場合は既定のインスタンスで十分ですが、D3D デバイスが DLL の外部で作成されたときのその DLL 内部のプログラムによるキャプチャ インターフェイスを使用するには、`VsgDbg` クラスの独自のインスタンスを作成および管理する必要があります。 プログラムによるキャプチャの API への独自のインターフェイスをこのように管理している場合は、オーバーヘッドを避けるために、`VSG_NODEFAULT_INSTANCE` を定義して既定のインスタンスを無効にします。  
   
  既定のインスタンスが無効になっていない場合は、プログラムの実行前に自動的に初期化され、プログラムの終了時に自動的に破棄されます。 このインスタンスの初期化および初期化解除を明示的に行う必要はありません。  

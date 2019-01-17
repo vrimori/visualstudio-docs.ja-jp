@@ -1,8 +1,6 @@
 ---
-title: Spy++ リファレンス |Microsoft ドキュメント
-ms.custom: ''
+title: Spy++ リファレンス |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - reference, Spy++
@@ -13,37 +11,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fc377a2ccfa2663815212857de4a4668dd437870
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: a6d2ab8eef8e99dee5d7f533623f64aea1fa2ab9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31481591"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53856372"
 ---
 # <a name="spy-reference"></a>Spy++ リファレンス
-各 spy++ メニューおよびダイアログ ボックスの詳細については、次に示すセクションを参照してください。  
+各 spy++ メニューおよびダイアログ ボックスの説明については、以下のセクションを参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [メニュー コマンド](../debugger/menu-commands.md)  
  各 spy++ メニューで使用できるコマンドについて説明します。  
   
- [フォント ダイアログ ボックス](../debugger/font-dialog-box-microsoft-spy-increment-help.md)  
+ [[フォント]](../debugger/font-dialog-box-microsoft-spy-increment-help.md) ダイアログ ボックス  
  Spy++ ビュー ウィンドウで使用される文字のフォントを構成するために使用します。  
   
  [Spy++ ビュー用の検索ツール](../debugger/search-tools-for-spy-increment-views.md)  
- ダイアログ ボックスが spy++ ビュー ウィンドウで特定のノードを検索するために使用します。  
+ Spy++ ビュー ウィンドウで特定のノードの検索に使用されるダイアログ ボックス。  
   
  [[ウィンドウ プロパティ] ダイアログ ボックス](../debugger/window-properties-dialog-box.md)  
- ウィンドウ ビューで選択したウィンドウのプロパティを表示するために使用します。  
+ Windows のビューで選択したウィンドウのプロパティを表示するために使用します。  
   
  [[メッセージ オプション] ダイアログ ボックス](../debugger/message-options-dialog-box.md)  
- メッセージ ビューに一覧表示するメッセージを選択するために使用します。  
+ メッセージ ビューで一覧表示するメッセージを選択するために使用します。  
   
  [[メッセージ プロパティ] ダイアログ ボックス](../debugger/message-properties-dialog-box.md)  
  メッセージ ビューで選択したメッセージのプロパティを表示するために使用します。  
   
  [[プロセス プロパティ] ダイアログ ボックス](../debugger/process-properties-dialog-box.md)  
- [プロセス] ビューで選択したプロセスのプロパティを表示するために使用します。  
+ プロセス ビューで選択したプロセスのプロパティを表示するために使用します。  
   
  [[スレッド プロパティ] ダイアログ ボックス](../debugger/thread-properties-dialog-box.md)  
  スレッド ビューで選択したスレッドのプロパティを表示するために使用します。  

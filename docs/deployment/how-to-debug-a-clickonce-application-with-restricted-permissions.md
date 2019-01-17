@@ -1,8 +1,6 @@
 ---
-title: '方法: ClickOnce アプリケーションをデバッグ アクセス許可の制限 |Microsoft Docs'
-ms.custom: ''
+title: '方法: 制限されたアクセス許可を使用して ClickOnce アプリケーションのデバッグ |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,14 +16,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c30766b50692052ec9fdd04c5ec1b156738c47b5
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
-ms.translationtype: MT
+ms.openlocfilehash: 880966e78bd2e27159b1ede81c07aa15aa994e75
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39152972"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53921258"
 ---
-# <a name="how-to-debug-a-clickonce-application-with-restricted-permissions"></a>方法: ClickOnce アプリケーションをデバッグ アクセス許可の制限
+# <a name="how-to-debug-a-clickonce-application-with-restricted-permissions"></a>方法: アクセス許可が制限された ClickOnce アプリケーションをデバッグする
 通常、開発用コンピューターは完全信頼アクセス許可で実行するので、ClickOnce アプリケーションのデバッグ時には、エンド ユーザーが制限されたアクセス許可でアプリケーションを実行したときと同じセキュリティ例外は発生しません。  
   
  これらの例外をキャッチするには、開発者はエンドユーザーと同じアクセス許可を使用してアプリケーションをデバッグする必要があります。 制限されたアクセス許可でのデバッグは、 **プロジェクト デザイナー** の **セキュリティ**ページで有効にすることができます。  
@@ -48,7 +46,7 @@ ms.locfileid: "39152972"
   
 ### <a name="to-specify-a-url-for-debugging"></a>デバッグ用の URL を指定するには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1.  **ソリューション エクスプローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2.  **プロジェクト デザイナー**で、 **[セキュリティ]** タブをクリックします。  
   
@@ -60,8 +58,8 @@ ms.locfileid: "39152972"
   
 6.  **[このアプリケーションが次の URL からダウンロードされたと仮定してデバッグする]** テキスト ボックスに、URL またはネットワーク パスを入力します。  
   
-## <a name="see-also"></a>関連項目  
- [方法: ClickOnce アプリケーションのカスタム アクセス許可を設定](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
- [セキュリティで保護された ClickOnce アプリケーション](../deployment/securing-clickonce-applications.md)   
+## <a name="see-also"></a>「  
+ [方法: ClickOnce アプリケーションのカスタム アクセス許可を設定する](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
+ [ClickOnce アプリケーションのセキュリティ保護](../deployment/securing-clickonce-applications.md)   
  [ClickOnce アプリケーションのコード アクセス セキュリティ](../deployment/code-access-security-for-clickonce-applications.md)   
- [セキュリティで保護された ClickOnce アプリケーション](../deployment/securing-clickonce-applications.md)
+ [ClickOnce アプリケーションのセキュリティ保護](../deployment/securing-clickonce-applications.md)

@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationThread::Resume |Microsoft ドキュメント
+title: IRemoteDebugApplicationThread::Resume |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 265c0a368fc7f0a5faf3ced3f335b3d7d49c1b24
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: cd48bc881c9f5ab08fc6e75b2ef7f0b1cf470bbe
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728312"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54086880"
 ---
 # <a name="iremotedebugapplicationthreadresume"></a>IRemoteDebugApplicationThread::Resume
 スレッドを再開します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT Resume(  
    DWORD*  pdwCount  
 );  
@@ -43,11 +43,11 @@ HRESULT Resume(
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このメソッドは、スレッドを再開したときに、中断カウントをデクリメントします。  
   
 ## <a name="see-also"></a>関連項目  

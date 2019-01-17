@@ -1,8 +1,6 @@
 ---
 title: 'チュートリアル: プロファイラー API の使用 | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - profiling tools, walkthroughs
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e5baebb527c09d833e405a98bd701ad02b7fe86
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 09368aceed6828e63c0e5c9d20a77d1787bc2c57
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49928062"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53891269"
 ---
 # <a name="walkthrough-using-profiler-apis"></a>チュートリアル: プロファイラー API の使用
 
@@ -32,14 +30,16 @@ ms.locfileid: "49928062"
   
  Visual Studio プロファイラーでは、データの収集を制限できます。 このチュートリアルでは、プロファイラー API を使用してデータの収集を制限する方法の例を説明します。 Visual Studio プロファイラーには、アプリケーションからのデータ収集を制御する API があります。  
   
- ネイティブ コード用の Visual Studio プロファイラー API は *VSPerf.dll* にあります。 ヘッダー ファイル *VSPerf.h* とインポート ライブラリ *VSPerf.lib* は、*Microsoft Visual Studio 9\Team Tools\Performance Tools* ディレクトリにあります。  
+ ネイティブ コード用の Visual Studio プロファイラー API は *VSPerf.dll* にあります。 ヘッダー ファイル *VSPerf.h* とインポート ライブラリ *VSPerf.lib* は、*Microsoft Visual Studio\2017\Team Tools\Performance Tools\PerfSDK* ディレクトリにあります。  64 ビット アプリの場合、フォルダーは *Microsoft Visual Studio\2017\Team Tools\Performance Tools\x64\PerfSDK* です
   
- マネージド コード用のプロファイラー API は、*Microsoft.VisualStudio.Profiler.dll* にあります。 この DLL は、*Microsoft Visual Studio 9\Team Tools\Performance Tools* ディレクトリにあります。 詳細については、「<xref:Microsoft.VisualStudio.Profiler>」を参照してください。  
+ マネージド コード用のプロファイラー API は、*Microsoft.VisualStudio.Profiler.dll* にあります。 この DLL は、*Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools* ディレクトリにあります。 64 ビット アプリの場合、フォルダーは *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\x64* です。 詳細については、「<xref:Microsoft.VisualStudio.Profiler>」を参照してください。 
+ 
+  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルでは、ユーザーが選択した開発環境で、デバッグとサンプリングがサポートされていることを前提としています。 以下のトピックでは、これらの前提条件の概要について説明しています。  
   
- [方法 : 収集方法を選択する](../profiling/how-to-choose-collection-methods.md)  
+ [方法: 収集方法を選択する](../profiling/how-to-choose-collection-methods.md)  
   
  [方法: Windows シンボル情報を参照する](../profiling/how-to-reference-windows-symbol-information.md)  
   
@@ -60,7 +60,7 @@ DataCollection.CurrentId);
 1.  Visual Studio で、新しい C# プロジェクトを作成するか、希望に応じて、コマンド ライン ビルドを使用します。  
   
     > [!NOTE]
-    >  ビルドは、*Microsoft Visual Studio 9\Team Tools\Performance Tools* ディレクトリにある、*Microsoft.VisualStudio.Profiler.dll* ライブラリを参照している必要があります。  
+    >  ビルドは、*Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools* ディレクトリにある、*Microsoft.VisualStudio.Profiler.dll* ライブラリを参照している必要があります。  
   
 2.  プロジェクトに次のコードをコピーし、貼り付けます。  
   
@@ -151,17 +151,17 @@ DataCollection.CurrentId);
   
      **VsPerfCLREnv /traceon**  
   
-3.  コマンド **VSInstr \<filename>.exe** を入力します。  
+3.  次のコマンドを入力します。**VSInstr \<ファイル名>.exe**  
   
-4.  コマンド **VSPerfCmd /start:trace /output:\<filename>.vsp** を入力します。  
+4.  次のコマンドを入力します。**VSPerfCmd /start:trace /output:\<ファイル名>.vsp**  
   
-5.  コマンド **VSPerfCmd /globaloff** を入力します。  
+5.  次のコマンドを入力します。**VSPerfCmd /globaloff**  
   
 6.  プログラムを実行します。  
   
-7.  コマンド **VSPerfCmd /shutdown** を入力します。  
+7.  次のコマンドを入力します。**VSPerfCmd /shutdown**  
   
-8.  コマンド **VSPerfReport /calltrace:\<filename>.vsp** を入力します。  
+8.  次のコマンドを入力します。**VSPerfReport /calltrace:\<ファイル名>.vsp**  
   
      現在のディレクトリに、結果のパフォーマンス データが含まれた .*csv* ファイルが作成されます。  
   

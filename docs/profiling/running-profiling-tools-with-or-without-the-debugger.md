@@ -1,8 +1,6 @@
 ---
 title: デバッガーを使用して、または使用せずにプロファイリング ツールを実行する | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 3fcdccad-c1bd-4c67-bcec-bf33a8fb5d63
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e8d088978e166f24f624b8ae05cdeb04137d8135
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.openlocfilehash: f80f6018583194e352210057f31b741ae1b6ac2c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948713"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53941415"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>デバッガーを使用して、または使用せずにプロファイリング ツールを実行する
 
@@ -55,7 +53,7 @@ Visual Studio には、パフォーマンス測定とプロファイルのため
 
 ### <a name="the-events-tab"></a>[イベント] タブ
 
-デバッグ セッション中、**[診断ツール]** ウィンドウの **[イベント]** タブに、発生した診断イベントが一覧表示されます。 **ブレークポイント**や**ファイル**など、カテゴリ プレフィックスによって、カテゴリの一覧を簡単にスキャンしたり、不要なカテゴリをスキップしたりできます。  
+デバッグ セッション中、**[診断ツール]** ウィンドウの **[イベント]** タブに、発生した診断イベントが一覧表示されます。 カテゴリ プレフィックスの**ブレークポイント**や**ファイル**などで、カテゴリの一覧を簡単にスキャンしたり、不要なカテゴリをスキップしたりできます。  
   
 **[フィルター]** ドロップダウンを使用して、特定のイベント カテゴリを選択または選択解除して表示または非表示にするイベントをフィルター処理します。 
 
@@ -116,17 +114,17 @@ Visual Studio には、パフォーマンス測定とプロファイルのため
 ## <a name="see-also"></a>関連項目
 
 次は診断開発チームのブログ投稿と MSDN 記事です。  
- [MSDN マガジン: Visual Studio 2015 でのデバッグ中のパフォーマンス分析](https://msdn.microsoft.com/magazine/dn973013.aspx)
+ [MSDN マガジン:Visual Studio 2015 でのデバッグ中のパフォーマンス分析](https://msdn.microsoft.com/magazine/dn973013.aspx)
   
- [MSDN マガジン: IntelliTrace を使用して迅速に問題を診断する](https://msdn.microsoft.com/magazine/dn973014.aspx)
+ [MSDN マガジン:IntelliTrace を使用して迅速に問題を診断する](https://msdn.microsoft.com/magazine/dn973014.aspx)
   
- [ブログの投稿: Diagnosing Event Handler Leaks with the Memory Usage Tool in Visual Studio 2015 (Visual Studio 2015 でのメモリ使用量ツールを使用したイベント ハンドラーのリークの診断)](https://blogs.msdn.microsoft.com/devops/2015/04/29/diagnosing-event-handler-leaks-with-the-memory-usage-tool-in-visual-studio-2015/)
+ [ブログの投稿:Visual Studio 2015 でのメモリ使用量ツールを使用したイベント ハンドラーのリークの診断](https://blogs.msdn.microsoft.com/devops/2015/04/29/diagnosing-event-handler-leaks-with-the-memory-usage-tool-in-visual-studio-2015/)
   
- [ビデオ: Historical Debugging with IntelliTrace in Microsoft Visual Studio Ultimate 2015 (Microsoft Visual Studio Ultimate 2015 での IntelliTrace を使用したデバッグ履歴)](https://channel9.msdn.com/Events/Ignite/2015/BRK3716)
+ [ビデオ:Microsoft Visual Studio Ultimate 2015 での IntelliTrace を使用したデバッグ履歴](https://channel9.msdn.com/Events/Ignite/2015/BRK3716)
   
- [ビデオ: Debugging Performance Issues Using Visual Studio 2015 (Visual Studio 2015 を使用したパフォーマンスに関する問題のデバッグ)](https://channel9.msdn.com/Events/Build/2015/3-731)
+ [ビデオ:Visual Studio 2015 を使用したパフォーマンスに関する問題のデバッグ](https://channel9.msdn.com/Events/Build/2015/3-731)
   
- [PerfTips: Performance Information at-a-glance while Debugging with Visual Studio (Visual Studio を使用したデバッグ中のパフォーマンス概要の参照)](https://blogs.msdn.microsoft.com/devops/2014/08/18/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio/)
+ [パフォーマンスのヒント:Visual Studio を使用したデバッグ中のパフォーマンス概要の参照](https://blogs.msdn.microsoft.com/devops/2014/08/18/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio/)
   
  [Visual Studio 2015 の診断ツール [デバッガー] ウィンドウ](https://blogs.msdn.microsoft.com/devops/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015/)
   

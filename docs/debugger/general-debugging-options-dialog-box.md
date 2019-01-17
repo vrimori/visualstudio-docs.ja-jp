@@ -1,8 +1,6 @@
 ---
 title: オプション ダイアログ ボックスの 全般、デバッグ、|Microsoft Docs
-ms.custom: ''
 ms.date: 11/09/2018
-ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.options.General
@@ -23,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 34fa13bbeee3289e19acdff7e45fe6e4a99f30d9
-ms.sourcegitcommit: 6efb9378a82924cb133912d207c6da4bd5a0b9c2
-ms.translationtype: HT
+ms.openlocfilehash: 9fa48ff41739752ff37817192b26483a23579419
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53443939"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53829474"
 ---
 # <a name="general-debugging-options"></a>全般的なデバッグ オプション
 
@@ -125,7 +123,7 @@ SRCSRV (`srcsrv.dll`) プロトコルを実装するソース サーバーから
 **モジュールの読み込み中に JIT 最適化を抑制する (マネージドのみ)**:   
 デバッガーをアタッチするとき、モジュールの読み込み中 (および JIT のコンパイル中) にマネージド コードの JIT 最適化を無効にします。 最適化を無効にした場合、一部の問題のデバッグは簡単になりますが、パフォーマンスは低下します。 [マイ コードのみ] を使用しているときに JIT 最適化を抑制すると、非ユーザー コードがユーザー コード ("マイ コード") として表示される可能性があります。 詳細については、次を参照してください。 [JIT の最適化とデバッグ](../debugger/jit-optimization-and-debugging.md)します。
 
-**ASP.NET の JavaScript のデバッグを有効にする (Chrome、Edge、IE)**:   
+**ASP.NET の JavaScript のデバッグを有効にする (Chrome、Microsoft Edge、IE)**:   
 ASP.NET アプリ用のスクリプト デバッガーを有効にします。 Chrome で初回使用時に、インストールされている Chrome の拡張機能を有効にするには、ブラウザーに署名する必要があります。 従来の動作に戻すには、このオプションを無効にします。
 
 **UWP JavaScript アプリ向けの Edge 開発者ツール (試験段階)**:   

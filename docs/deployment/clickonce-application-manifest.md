@@ -1,8 +1,6 @@
 ﻿---
 title: ClickOnce アプリケーション マニフェスト |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,44 +15,44 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5326f71ba7a075cc6ca3e321318de89624c56894
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 550b4122775f8d38ed874227bb5b36066f411b9f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49872891"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53929229"
 ---
 # <a name="clickonce-application-manifest"></a>ClickOnce アプリケーション マニフェスト
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストは、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] を使用して配置されるアプリケーションについて記述されている XML ファイルです。  
+A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェストを使用して展開されているアプリケーションを記述する XML ファイルは、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]します。  
 
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストは、次の要素と属性があります。  
 
 
 | 要素 | 説明 | 属性 |
 | - | - | - |
-| [\<assembly> 要素](../deployment/assembly-element-clickonce-application.md) | 必須。 最上位の要素です。 | `manifestVersion` |
-| [\<assemblyIdentity> 要素](../deployment/assemblyidentity-element-clickonce-application.md) | 必須。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションのプライマリ アセンブリを識別します。 | `name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `language` |
+| [\<アセンブリ > 要素](../deployment/assembly-element-clickonce-application.md) | 必須です。 最上位の要素です。 | `manifestVersion` |
+| [\<assemblyIdentity > 要素](../deployment/assemblyidentity-element-clickonce-application.md) | 必須です。 プライマリ アセンブリを識別、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション。 | `name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `language` |
 | [\<trustInfo > 要素](../deployment/trustinfo-element-clickonce-application.md) | アプリケーションのセキュリティ要件を識別します。 | なし |
-| [\<entryPoint > 要素](../deployment/entrypoint-element-clickonce-application.md) | 必須。 アプリケーション コードのエントリ ポイントを識別します。 | `name` |
-| [\<dependency> 要素](../deployment/dependency-element-clickonce-application.md) | 必須。 アプリケーションを実行するために必要な依存関係をそれぞれ識別します。 任意で、プレインストールする必要のあるアセンブリを識別します。 | なし |
-| [\<file> 要素](../deployment/file-element-clickonce-application.md) | 任意。 アプリケーションによって使用される各非アセンブリ ファイルを識別します。 ファイルに関連付けられているコンポーネント オブジェクト モデル (COM) 分離データを含めることができます。 | `name`<br /><br /> `size`<br /><br /> `group`<br /><br /> `optional`<br /><br /> `writeableType` |
+| [\<entryPoint > 要素](../deployment/entrypoint-element-clickonce-application.md) | 必須です。 アプリケーション コードのエントリ ポイントを識別します。 | `name` |
+| [\<依存関係 > 要素](../deployment/dependency-element-clickonce-application.md) | 必須です。 アプリケーションを実行するために必要な依存関係をそれぞれ識別します。 任意で、プレインストールする必要のあるアセンブリを識別します。 | なし |
+| [\<file> 要素](../deployment/file-element-clickonce-application.md) | 任意。 アプリケーションで使用される各非アセンブリ ファイルを識別します。 ファイルに関連付けられているコンポーネント オブジェクト モデル (COM) 分離データを含めることができます。 | `name`<br /><br /> `size`<br /><br /> `group`<br /><br /> `optional`<br /><br /> `writeableType` |
 | [\<fileAssociation > 要素](../deployment/fileassociation-element-clickonce-application.md) | 任意。 アプリケーションに関連するファイル拡張子を識別します。 | `extension`<br /><br /> `description`<br /><br /> `progid`<br /><br /> `defaultIcon` |
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト ファイルを使用してデプロイされたアプリケーションを識別する[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]します。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] の詳細については、「[ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)」を参照してください。  
 
 ## <a name="file-location"></a>ファイルの場所  
  A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェストは、展開の 1 つのバージョンを特定します。 このため、保存するとは別に配置マニフェストとします。 通常は、関連付けられているバージョンにちなんだ名前のサブディレクトリ内に配置します。  
 
- アプリケーション マニフェストは、展開する前に常に署名する必要があります。 使用する必要がある場合は、アプリケーション マニフェストを手動で変更すると、 *mage.exe*アプリケーション マニフェストに再署名、配置マニフェストを更新し、配置マニフェストを再署名します。 詳細については、次を参照してください。[チュートリアル: ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。  
+ アプリケーション マニフェストは、展開する前に常に署名する必要があります。 使用する必要がある場合は、アプリケーション マニフェストを手動で変更すると、 *mage.exe*アプリケーション マニフェストに再署名、配置マニフェストを更新し、配置マニフェストを再署名します。 詳細については、「[チュートリアル:ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。  
 
 ## <a name="file-name-syntax"></a>ファイル名の構文  
- 名前、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト ファイルは、アプリケーションの拡張機能と完全な名前で識別される、`assemblyIdentity`要素を拡張子が続きます *.manifest*します。 たとえば、参照するアプリケーション マニフェスト、 *Example.exe*アプリケーションでは、次のファイル名構文を使用します。  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェスト ファイルの名前は、`assemblyIdentity` 要素に指定されたアプリケーションの完全名と拡張子に、*.manifest* という拡張子を付けたものにします。 たとえば、参照するアプリケーション マニフェスト、 *Example.exe*アプリケーションでは、次のファイル名構文を使用します。  
 
  `example.exe.manifest`  
 
 ## <a name="example"></a>例  
- 次のコード例は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションのアプリケーション マニフェストを示しています。  
+ 次のコード例のアプリケーション マニフェストを示しています、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション。  
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
@@ -118,4 +116,4 @@ ms.locfileid: "49872891"
 ```  
 
 ## <a name="see-also"></a>関連項目  
- [ClickOnce アプリケーションを発行します。](../deployment/publishing-clickonce-applications.md)
+ [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)

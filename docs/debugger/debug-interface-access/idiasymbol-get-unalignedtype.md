@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_unalignedtype |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b005ce077aa8cd94efc06c42673609adacaa4abc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 63094fff1a513b9de0e21fc29ad8aa10fb3746ca
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49906768"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53966798"
 ---
 # <a name="idiasymbolgetunalignedtype"></a>IDiaSymbol::get_unalignedType
 ユーザー定義データ型が整列されていないかどうかを指定するフラグを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49906768"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_unalignedType (   
+HRESULT get_unalignedType (   
    BOOL* pRetVal  
 );  
 ```  
@@ -42,5 +40,5 @@ HRESULT get_unalignedType (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

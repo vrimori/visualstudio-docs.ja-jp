@@ -2,7 +2,6 @@
 title: ReplaceinFiles コマンド
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - edit.replaceinfiles
@@ -16,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8bf54892d17a877cd8e2c3ffd21ebd513e303d6c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f24005473780591a89afcf97eae234976ff81a85
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31946664"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53960013"
 ---
 # <a name="replace-in-files-command"></a>ReplaceinFiles コマンド
 **[検索と置換]** ウィンドウの **[フォルダーを指定して置換]** タブにあるオプションのサブセットを使用してファイル内のテキストを置換します。
@@ -37,11 +36,11 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
 ## <a name="arguments"></a>引数
  `findwhat`
 
- 必須。 検索するテキスト。
+ 必須です。 検索するテキスト。
 
  `replacewith`
 
- 必須。 一致したテキストと置き換えるテキスト。
+ 必須です。 一致したテキストと置き換えるテキスト。
 
 ## <a name="switches"></a>スイッチ
  /all または /a
@@ -107,11 +106,11 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
 >Edit.ReplaceinFiles btnCancel btnReset /lookin:"c:/my visual studio projects" /ext:.cls /text2
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [テキストの検索と置換](../../ide/finding-and-replacing-text.md)
-- [フォルダーを指定して置換](../../ide/replace-in-files.md)
+- [[フォルダーを指定して置換]](../../ide/replace-in-files.md)
 - [コマンド ウィンドウ](../../ide/reference/command-window.md)
 - [検索コマンド ボックス](../../ide/find-command-box.md)
 - [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
-- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)

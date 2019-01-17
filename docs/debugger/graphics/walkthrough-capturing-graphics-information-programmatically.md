@@ -1,20 +1,18 @@
 ---
 title: 'チュートリアル: プログラムによるグラフィックス情報のキャプチャ |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 659e370d664b3db2c3624d73164b4489cc2680a3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 18ea39346689d2a9a68d34e1e9189f2cab300b02
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49933288"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53850688"
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>チュートリアル: プログラムによるグラフィックス情報のキャプチャ
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のグラフィックス診断を使用すると、Direct3D アプリケーションからプログラムによってグラフィックス情報をキャプチャできます。  
@@ -28,7 +26,7 @@ ms.locfileid: "49933288"
 -   レンダリングの問題を予測して手動テストでキャプチャすることは難しいものの、実行時にアプリケーションの状態に関する情報を使用してプログラムで予測できるときは、 `CaptureCurrentFrame`を呼び出します。  
   
 ##  <a name="CaptureDX11_2"></a> Windows 10 のプログラムによるキャプチャ  
- このチュートリアルのこの部分では、Windows 10 は、ロバスト キャプチャ メソッドを使用して、DirectX 11.2 API を使用するアプリでプログラムによるキャプチャを示します。
+ このチュートリアルのパートでは、Windows 10 で DirectX 11.2 API を使用するアプリケーションでのプログラムによるキャプチャについて説明します。ここでは、堅牢なキャプチャ方法を使用します。
   
  このセクションでは、次のタスクを実行する方法を示します。  
   
@@ -42,7 +40,7 @@ ms.locfileid: "49933288"
 >  プログラムによるキャプチャの以前の実装は、Remote Tools for Visual Studio をいました[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]キャプチャ機能を提供します。
   
 ### <a name="preparing-your-app-to-use-programmatic-capture"></a>プログラムによるキャプチャを使用するためにアプリケーションを準備する  
- アプリケーションでプログラムによるキャプチャを使用するには、必要なヘッダーをインクルードすることが必要です。 これらのヘッダーは、Windows 10 SDK の一部です。  
+ アプリケーションでプログラムによるキャプチャを使用するには、必要なヘッダーをインクルードすることが必要です。 これらのヘッダーは、Windows 10 の SDK の一部です。  
   
 ##### <a name="to-include-programmatic-capture-headers"></a>プログラムによるキャプチャのヘッダーをインクルードするには  
   
@@ -56,7 +54,7 @@ ms.locfileid: "49933288"
     ```  
   
     > [!IMPORTANT]
-    >  ヘッダー ファイル vsgcapture.h—which サポートは、Windows 8.0 以降にプログラムによるキャプチャが含まれていません-Windows 10 アプリでプログラムによるキャプチャを実行します。 このヘッダーは DirectX 11.2 で使用することはできません。 D3d11_2.h ヘッダーが含まれる後にこのファイルが含まれる場合は、コンパイラは警告を発行します。 Vsgcapture.h が d3d11_2.h する前に含まれている場合、アプリは起動しません。  
+    >  ご利用の Windows 10 アプリケーションでプログラムによるキャプチャを実行するには、ヘッダー ファイル vsgcapture.h をインクルードしないでください。このファイルでサポートされているのは Windows 8.0 以前でのプログラムによるキャプチャです。 このヘッダーは DirectX 11.2 で使用することはできません。 D3d11_2.h ヘッダーが含まれる後にこのファイルが含まれる場合は、コンパイラは警告を発行します。 Vsgcapture.h が d3d11_2.h する前に含まれている場合、アプリは起動しません。  
   
     > [!NOTE]
     >  コンピューターに June 2010 DirectX SDK がインストールされており、プロジェクトのインクルード パスに `%DXSDK_DIR%includex86`が含まれている場合は、それをインクルード パスの最後に移動します。 ライブラリ パスでも同様にします。  
@@ -116,7 +114,7 @@ ms.locfileid: "49933288"
   
 -   グラフィックス診断ツールを使用してキャプチャされたグラフィックス情報を解析する方法について学習します。 参照してください[概要](overview-of-visual-studio-graphics-diagnostics.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [チュートリアル: グラフィックス情報のキャプチャ](walkthrough-capturing-graphics-information.md)   
+## <a name="see-also"></a>「  
+ [チュートリアル: グラフィックス情報をキャプチャする](walkthrough-capturing-graphics-information.md)   
  [Capturing Graphics Information](capturing-graphics-information.md)   
  [コマンド ライン キャプチャ ツール](command-line-capture-tool.md)

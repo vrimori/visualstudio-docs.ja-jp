@@ -1,8 +1,6 @@
 ---
 title: IDiaTable |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b9b792876e281f73f4df0246734403812a72aea
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
-ms.translationtype: MT
+ms.openlocfilehash: df042bc8edcdf8e93ba775797f1d099b24e90343
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37056411"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53863723"
 ---
 # <a name="idiatable"></a>IDiaTable
 DIA データ ソースのテーブルを列挙します。  
@@ -27,7 +25,7 @@ DIA データ ソースのテーブルを列挙します。
 ## <a name="syntax"></a>構文  
   
 ```  
-IDiaTable : IEnumUnknown  
+IDiaTable : IEnumUnknown  
 ```  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
@@ -40,7 +38,7 @@ IDiaTable : IEnumUnknown
 |[IDiaTable::get_Count](../../debugger/debug-interface-access/idiatable-get-count.md)|テーブルの項目の数を取得します。|  
 |[IDiaTable::Item](../../debugger/debug-interface-access/idiatable-item.md)|特定のエントリのインデックスへの参照を取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このインターフェイスを実装して、 `IEnumUnknown` Microsoft.VisualStudio.OLE.Interop 名前空間のメソッドを列挙します。 `IEnumUnknown`列挙体インターフェイスはよりもテーブルの内容を反復処理するはるかに効率的ですが、 [idiatable::get_count](../../debugger/debug-interface-access/idiatable-get-count.md)と[idiatable::item](../../debugger/debug-interface-access/idiatable-item.md)メソッド。  
   
  解釈、`IUnknown`インターフェイスのいずれかから返される、`IDiaTable::Item`メソッドまたは`Next`(Microsoft.VisualStudio.OLE.Interop 名前空間の) 内のメソッドはテーブルの種類に依存します。 たとえば場合、`IDiaTable`インターフェイスは、挿入されたソースの一覧を表す、`IUnknown`インターフェイスを照会する必要があります、 [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)インターフェイス。  
@@ -132,15 +130,15 @@ void UseTable(IDiaSession *pSession)
 }  
 ```  
   
-## <a name="requirements"></a>必要条件  
- ヘッダー: Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー:dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)   
- [Idiaenumtables::item](../../debugger/debug-interface-access/idiaenumtables-item.md)   
+ [IDiaEnumTables::Item](../../debugger/debug-interface-access/idiaenumtables-item.md)   
  [IDiaEnumTables::Next](../../debugger/debug-interface-access/idiaenumtables-next.md)

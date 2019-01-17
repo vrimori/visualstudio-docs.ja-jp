@@ -1,8 +1,6 @@
 ---
 title: サーバーと ClickOnce 配置でのクライアント構成の問題 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,14 +17,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 444cfa375fd4e2059ddf6458224836cdec6ff18f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 7bbc55e5502364c3ca3eb8ca11dec1848490eaf9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49849441"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53955556"
 ---
-# <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 配置でサーバーとクライアントの構成に関する問題
+# <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 配置でのサーバーおよびクライアント構成の問題
 Windows Server で、インターネット インフォメーション サービス (IIS) を使用する、展開には、Windows で認識されない種類のファイルが含まれている場合は、Microsoft Word ファイルなど、そのファイルを送信する IIS は拒否し、配置は失敗します。  
 
  さらに、いくつかの Web サーバーと、アプリケーション ソフトウェアなどの Web[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]ファイルの一覧を含み、ファイルの種類をダウンロードすることはできません。 たとえば、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]すべてがダウンロードされなくなり*Web.config*ファイル。 これらのファイルには、ユーザー名とパスワードなどの機密情報を含めることができます。  
@@ -51,7 +49,7 @@ Windows Server で、インターネット インフォメーション サービ
 ## <a name="clickonce-and-proxy-authentication"></a>ClickOnce とプロキシの認証  
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .NET Framework 3.5 以降で Windows 統合のプロキシ認証のサポートを提供します。 特定の machine.config ディレクティブは必要ありません。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 基本認証またはダイジェストなどの他の認証プロトコルのサポートを行いません。  
 
- この機能を有効にする .NET Framework 2.0 修正プログラムを適用することもできます。 詳細については、「 http://go.microsoft.com/fwlink/?LinkId=158730 」を参照してください。  
+ この機能を有効にする .NET Framework 2.0 修正プログラムを適用することもできます。 詳細については、「http://go.microsoft.com/fwlink/?LinkId=158730」を参照してください。  
 
  詳細については、次を参照してください。 [ \<defaultProxy > 要素 (ネットワーク設定)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings)します。  
 
@@ -82,7 +80,7 @@ Windows Server で、インターネット インフォメーション サービ
 ## <a name="use-third-party-web-servers"></a>サード パーティの Web サーバーを使用します。  
  展開する場合、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] IIS 以外の Web サーバーからアプリケーションが問題が発生したサーバーがキーの不適切なコンテンツの種類を返す場合[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]など、配置マニフェストとアプリケーション マニフェスト ファイル。 この問題を解決するには、Web サーバーのヘルプが設定されているサーバーに新しいコンテンツ タイプを追加し、すべてのファイル名拡張子マッピングを次の表に表示されていることを確認する方法に関するドキュメントを参照してください。  
 
-|ファイル名拡張子|コンテンツの種類|  
+|ファイル名の拡張子|コンテンツ タイプ|  
 |-------------------------|------------------|  
 |`.application`|`application/x-ms-application`|  
 |`.manifest`|`application/x-ms-manifest`|  
@@ -104,15 +102,15 @@ Windows Server で、インターネット インフォメーション サービ
 | https:// | インストールすることができます、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]このプロトコルを使用してアプリケーション。 |
 | file:// | インストールすることができます、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]このプロトコルを使用してアプリケーション。 |
 
-## <a name="windows-xp-sp2-windows-firewall"></a>Windows XP sp 2: Windows ファイアウォール  
+## <a name="windows-xp-sp2-windows-firewall"></a>Windows XP SP2: Windows ファイアウォール  
  既定では、Windows XP SP2、Windows ファイアウォールが可能です。 発行および実行する場合は Windows XP がインストールされているコンピューター上でアプリケーションを開発している場合[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]IIS を実行しているローカル サーバーからのアプリケーション。 ただし、Windows ファイアウォールを開く場合を除き、別のコンピューターから IIS を実行するサーバーはアクセスできません。 Windows ファイアウォールを管理する手順については、Windows のヘルプを参照してください。  
 
-## <a name="windows-server-enable-frontpage-server-extensions"></a>Windows Server:、FrontPage server extensions が有効にします。  
+## <a name="windows-server-enable-frontpage-server-extensions"></a>Windows ServerFrontPage server extensions を有効にします。  
  Microsoft の FrontPage Server Extensions は、HTTP を使用する Windows の Web サーバーにアプリケーションの発行に必要です。  
 
  既定では、Windows Server にインストールされている FrontPage Server Extensions はありません。 使用する場合[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]FrontPage Server Extensions で HTTP を使用する Windows Server の Web サーバーで発行する必要があります最初にインストールする FrontPage Server Extensions。 インストールを実行するには、Windows Server のサーバーの管理の管理ツールを使用します。  
 
-## <a name="windows-server-locked-down-content-types"></a>Windows Server: ロックされたコンテンツの種類  
+## <a name="windows-server-locked-down-content-types"></a>Windows Serverロックされたコンテンツの種類  
  上の IIS[!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)]ロックは特定の既知のコンテンツ タイプを除くすべてのファイルの種類 (たとえば、 *.htm*、 *.html*、 *.txt*など)。 展開を有効にする[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]の種類のファイルをダウンロードできるようにするのには、IIS 設定を変更する必要があるアプリケーションがこのサーバーを使用して、 *.application*、 *.manifest*、およびその他のカスタムのファイルの種類アプリケーションで使用します。  
 
  IIS サーバーを使用してを展開する場合は、実行*inetmgr.exe*し、既定の Web ページの新しいファイルの種類を追加します。  
@@ -136,6 +134,6 @@ Windows Server で、インターネット インフォメーション サービ
  IIS の詳細な手順については、次を参照してください。 [HTTP 圧縮のドキュメントの種類を指定する方法](http://go.microsoft.com/fwlink/?LinkId=178459)します。  
 
 ## <a name="see-also"></a>関連項目  
- [ClickOnce 配置をトラブルシューティングします。](../deployment/troubleshooting-clickonce-deployments.md)   
- [ClickOnce 配置ストラテジを選択します。](../deployment/choosing-a-clickonce-deployment-strategy.md)   
+ [ClickOnce 配置のトラブルシューティング](../deployment/troubleshooting-clickonce-deployments.md)   
+ [ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)   
  [アプリケーション配置の必要条件](../deployment/application-deployment-prerequisites.md)

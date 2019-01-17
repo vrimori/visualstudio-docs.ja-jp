@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugdatatarget::freevirtualmemory メソッド |Microsoft ドキュメント
+title: Ijsdebugdatatarget::freevirtualmemory メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -16,19 +16,19 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3b53d7f80227a1c4eb0ef0293093543c09c5a367
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: ed5fabfca8ac9b0e9fe0dfba346b0354f4c0576f
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728742"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54086802"
 ---
 # <a name="ijsdebugdatatargetfreevirtualmemory-method"></a>IJsDebugDataTarget::FreeVirtualMemory メソッド
 ターゲット プロセスの仮想アドレス空間内のメモリ領域を解放/デコミットします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT FreeVirtualMemory(  
    UINT64 address,  
    DWORD size,  
@@ -48,10 +48,10 @@ HRESULT FreeVirtualMemory(
   
 ## <a name="return-value"></a>戻り値  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  詳細については、「VirtualFree Win32 API」を参照してください。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** jscript9diag.h です  
   
 ## <a name="see-also"></a>関連項目  

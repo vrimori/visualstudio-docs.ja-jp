@@ -1,5 +1,5 @@
 ---
-title: IJsDebugProcess インターフェイス |Microsoft ドキュメント
+title: IJsDebugProcess インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -12,19 +12,19 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f2a81104f51ca1a66c493779146b7eaa102ea300
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: ecdec77a8bcb3c1fb8a1dc64c63b363b4f001fde
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728572"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54086659"
 ---
 # <a name="ijsdebugprocess-interface"></a>IJsDebugProcess インターフェイス
 ターゲット プロセスを検査および制御するためのルーチンを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 IJsDebugProcess : public IUnknown;  
 ```  
   
@@ -38,7 +38,7 @@ IJsDebugProcess : public IUnknown;
 |[IJsDebugProcess::CreateStackWalker メソッド](../../winscript/reference/ijsdebugprocess-createstackwalker-method.md)|スタック ウォーカーのファクトリ メソッド。|  
 |[IJsDebugProcess::PerformAsyncBreak メソッド](../../winscript/reference/ijsdebugprocess-performasyncbreak-method.md)|スクリプト エンジンを中断モードにして、次のスクリプト命令で中断させます。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** jscript9diag.h です  
   
 ## <a name="see-also"></a>関連項目  

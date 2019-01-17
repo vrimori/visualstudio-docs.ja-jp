@@ -1,8 +1,6 @@
 ---
-title: '方法: spy++ ビューの表示 |Microsoft ドキュメント'
-ms.custom: ''
+title: '方法: Spy++ ビューを表示 |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Spy++, viewing code
@@ -12,16 +10,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cd4643ab3bad401e05d46c5ec5505322ec760342
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: c55656626b41da388053a164ff666281fc2631f3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31471688"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53962955"
 ---
 # <a name="how-to-display-spy-views"></a>方法: Spy++ ビューを表示する
-Spy++ を起動と、で開かれます[ウィンドウ ビュー](../debugger/windows-view.md)、すべての windows と、コンピューターで使用できるコントロールのツリー表示します。 このルート ウィンドウのキャプションは"Windows 1" 次の 3 つの他の spy++ ビューも:[メッセージ ビュー](../debugger/messages-view.md)、[プロセス ビュー](../debugger/processes-view.md)、および[スレッド ビュー](../debugger/threads-view.md)です。 目的のビューを表示することができます、**スパイ**メニュー。 詳細については、次を参照してください。 [spy++ ビュー](../debugger/spy-increment-views.md)です。  
+Spy++ を起動と、で開きます[Windows ビュー](../debugger/windows-view.md)、すべてのウィンドウと、コンピューターで使用できるコントロールのツリー ビュー。 このルート ウィンドウのキャプションは"Windows 1" あるも 3 つの他の spy++ ビュー。[メッセージ ビューを](../debugger/messages-view.md)、[プロセス ビュー](../debugger/processes-view.md)、および[スレッド ビュー](../debugger/threads-view.md)します。 目的のビューを表示することができます、**スパイ**メニュー。 詳細については、次を参照してください。 [spy++ ビュー](../debugger/spy-increment-views.md)します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Spy++ の使用](../debugger/using-spy-increment.md)   
  [Spy++ リファレンス](../debugger/spy-increment-reference.md)

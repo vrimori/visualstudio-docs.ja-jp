@@ -2,9 +2,8 @@
 title: コマンド ライン パラメーターを使用して Visual Studio をインストールする
 titleSuffix: ''
 description: コマンド ライン パラメーターを使用して、Visual Studio のインストールを制御またはカスタマイズする方法を説明します。
-ms.custom: seodec18
 ms.date: 11/14/2018
-ms.technology: vs-acquisition
+ms.custom: seodec18
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ba270b4d7240d30db5b20388d6c75782dba6a256
-ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
+ms.openlocfilehash: f2955a9efae219cf992936a8b64cac672a0cd680
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53159725"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53869662"
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする
 
@@ -56,7 +55,7 @@ ms.locfileid: "53159725"
 | `update` | インストールされている製品を更新します。 |
 | `repair` | インストールされている製品を修復します。 |
 | `uninstall` | インストールされている製品をアンインストールします。 |
-| `export` | **15.9 の新機能**:インストールの選択をインストール構成ファイルにエクスポートします。 |
+| `export` | **15.9 の新機能**:インストールの選択をインストール構成ファイルにエクスポートします。 **注**:vs_installer.exe でのみ使用できます。 |
 
 | **インストール オプション** | **説明** |
 | ----------------------- | --------------- |

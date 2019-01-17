@@ -1,5 +1,5 @@
 ---
-title: IJsDebugFrame インターフェイス |Microsoft ドキュメント
+title: IJsDebugFrame インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -12,19 +12,19 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f09a147375661fb52b88f531aff981897138adff
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 2fa491a02d289a0a92a70348ec5ef483dd8f8467
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729612"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54093303"
 ---
 # <a name="ijsdebugframe-interface"></a>IJsDebugFrame インターフェイス
 スタック フレームを表します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 IJsDebugFrame : public IUnknown;  
 ```  
   
@@ -42,7 +42,7 @@ IJsDebugFrame : public IUnknown;
 |[IJsDebugFrame::GetReturnAddress メソッド](../../winscript/reference/ijsdebugframe-getreturnaddress-method.md)|フレームの "先頭" (GetStackRange を参照) でプッシュされるリターン アドレスを取得します。|  
 |[IJsDebugFrame::GetStackRange メソッド](../../winscript/reference/ijsdebugframe-getstackrange-method.md)|論理的な JavaScript スタック フレームの絶対アドレス範囲を返します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** jscript9diag.h です  
   
 ## <a name="see-also"></a>関連項目  

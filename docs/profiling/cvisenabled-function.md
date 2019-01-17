@@ -1,8 +1,6 @@
 ---
 title: CvIsEnabled 関数 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - cvmarkers/CvIsEnabledEx
@@ -16,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1555703c92695090a3c8ac7b04e7a35dadcd7627
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 0c35fc883e53e1b1cc430724d87d8bcbd1bb32ee
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34749201"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989190"
 ---
 # <a name="cvisenabled-function"></a>CvIsEnabled 関数
 セッションにより ETW プロバイダーが有効になっているか判断します。  
@@ -52,7 +50,7 @@ HRESULT CvIsEnabledEx(
 ## <a name="return-value"></a>戻り値  
  プロバイダーが現在有効になっている場合は S_OK を返します。 プロバイダーが現在無効になっている場合は S_FALSE を返します。 エラーが発生した場合はエラー コードを返します。 FAILED マクロを使用し、エラーの状態を確認し、それから S_OK/S_FALSE を確認します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** *cvmarkers.h*  
   
 ## <a name="see-also"></a>関連項目  

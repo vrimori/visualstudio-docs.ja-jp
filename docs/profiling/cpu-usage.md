@@ -2,7 +2,6 @@
 title: CPU 使用率の分析 | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 7501a20d-04a1-480f-a69c-201524aa709d
 author: mikejo5000
@@ -10,12 +9,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b3d4d6a352d2ff1b71796d64c34992af493867a
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: a82c47c6815d4bf792a09a0b44dc21edbad68479
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53063264"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53988447"
 ---
 # <a name="analyze-cpu-usage"></a>CPU 使用率の分析 
 
@@ -63,7 +62,7 @@ ms.locfileid: "53063264"
 |-|-|  
 |**合計 CPU [ユニット、%]**|![合計 % のデータ演算式](../profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> 選択した時間範囲において、関数の呼び出し、および関数が呼び出した関数で使用された CPU 時間 (ミリ秒) と割合です。 これは、特定の時間範囲におけるアプリの合計 CPU アクティビティと、利用可能な合計 CPU とを比較する **CPU 使用率**タイムライン グラフとは異なります。|  
 |**セルフ CPU [ユニット、%]**|![自己 % 演算式](../profiling/media/cpu_use_wt_selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> 選択した時間範囲において、関数の呼び出し (関数が呼び出した関数を除く) で使用された CPU 時間 (ミリ秒) と使用率 (パーセンテージ) です。|  
-|**モジュール**|関数を含むモジュールの名前です。   
+|**Module**|関数を含むモジュールの名前です。   
   
 ###  <a name="BKMK_The_CPU_Usage_call_tree"></a> CPU 使用率コール ツリー 
 
@@ -84,7 +83,7 @@ ms.locfileid: "53063264"
 
  コードによって実行されるシステムおよびフレームワークの関数は、*外部コード*と呼ばれます。 外部コード関数は、アプリの開始と停止、UI の描画、スレッドの制御、およびアプリへの他の低レベル サービスの提供を行います。 外部コードを確認することはほとんどないため、CPU 使用率コール ツリーはユーザー メソッドの外部関数を 1 つの **[外部コード]** ノードにまとめます。  
   
- 外部コードの呼び出しパスを表示するには、診断レポートのメイン ページで、**[フィルター]** ドロップダウンから **[外部コードの表示]** を選択し、**[適用]** を選択します。 **[CPU 使用率]** ページの **[コール ツリー]** ビューで外部コードの呼び出しが展開されます。  
+ 外部コードの呼び出しパスを表示するには、診断レポートのメイン ページ (右側のウィンドウ) で、**[フィルター]** ドロップダウンから **[外部コードの表示]** を選択し、**[適用]** を選択します。 **[CPU 使用率]** ページの **[コール ツリー]** ビューで外部コードの呼び出しが展開されます。 (**[フィルター]** ドロップダウンは、詳細ビューではなくメインの診断ページで使用できます。)
   
  ![外部コードの表示](../profiling/media/cpu_use_wt_filterview.png "外部コードの表示")  
   

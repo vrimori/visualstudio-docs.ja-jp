@@ -1,8 +1,6 @@
 ---
-title: IDiaLineNumber |Microsoft ドキュメント
-ms.custom: ''
+title: IDiaLineNumber |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 735b15f76d9cb679e6fda2327e4af0dc3d84c8a0
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: a5cc240b6818e3d020b018546f801a3ca890a287
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31465224"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53988664"
 ---
 # <a name="idialinenumber"></a>IDiaLineNumber
 イメージのテキストのバイトのブロックからソース ファイルの行番号へのマッピングのプロセスを説明する情報にアクセスします。  
@@ -27,7 +25,7 @@ ms.locfileid: "31465224"
 ## <a name="syntax"></a>構文  
   
 ```  
-IDiaLineNumber : IUnknown  
+IDiaLineNumber : IUnknown  
 ```  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
@@ -35,28 +33,28 @@ IDiaLineNumber : IUnknown
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IDiaLineNumber::get_compiland](../../debugger/debug-interface-access/idialinenumber-get-compiland.md)|イメージのテキストのバイト数を引き起こしているコンパイル単位のシンボルへの参照を取得します。|  
-|[IDiaLineNumber::get_sourceFile](../../debugger/debug-interface-access/idialinenumber-get-sourcefile.md)|ソース ファイル オブジェクトへの参照を取得します。|  
+|[IDiaLineNumber::get_compiland](../../debugger/debug-interface-access/idialinenumber-get-compiland.md)|イメージのテキストのバイト数を提供するコンパイル単位のシンボルへの参照を取得します。|  
+|[IDiaLineNumber::get_sourceFile](../../debugger/debug-interface-access/idialinenumber-get-sourcefile.md)|ソース ファイルのオブジェクトへの参照を取得します。|  
 |[IDiaLineNumber::get_lineNumber](../../debugger/debug-interface-access/idialinenumber-get-linenumber.md)|ソース ファイル内の行番号を取得します。|  
-|[IDiaLineNumber::get_lineNumberEnd](../../debugger/debug-interface-access/idialinenumber-get-linenumberend.md)|ステートメントまたは式が終了するソースの 1 から始まる行番号を取得します。|  
+|[IDiaLineNumber::get_lineNumberEnd](../../debugger/debug-interface-access/idialinenumber-get-linenumberend.md)|ステートメントまたは式の終了位置となる 1 ベースのソース行番号を取得します。|  
 |[IDiaLineNumber::get_columnNumber](../../debugger/debug-interface-access/idialinenumber-get-columnnumber.md)|式またはステートメントの開始列番号を取得します。|  
 |[IDiaLineNumber::get_columnNumberEnd](../../debugger/debug-interface-access/idialinenumber-get-columnnumberend.md)|式またはステートメントの終了列番号を取得します。|  
 |[IDiaLineNumber::get_addressSection](../../debugger/debug-interface-access/idialinenumber-get-addresssection.md)|ブロックの開始位置、メモリ アドレスのセクションの一部を取得します。|  
-|[IDiaLineNumber::get_addressOffset](../../debugger/debug-interface-access/idialinenumber-get-addressoffset.md)|ブロックの開始位置、メモリ アドレスのオフセットの部分を取得します。|  
+|[IDiaLineNumber::get_addressOffset](../../debugger/debug-interface-access/idialinenumber-get-addressoffset.md)|メモリ アドレス ブロックの開始位置のオフセットの部分を取得します。|  
 |[IDiaLineNumber::get_relativeVirtualAddress](../../debugger/debug-interface-access/idialinenumber-get-relativevirtualaddress.md)|イメージの相対仮想アドレス (RVA) ブロックを取得します。|  
 |[IDiaLineNumber::get_virtualAddress](../../debugger/debug-interface-access/idialinenumber-get-virtualaddress.md)|ブロックの仮想アドレス (VA) を取得します。|  
 |[IDiaLineNumber::get_length](../../debugger/debug-interface-access/idialinenumber-get-length.md)|ブロックのバイト数を取得します。|  
-|[IDiaLineNumber::get_sourceFileId](../../debugger/debug-interface-access/idialinenumber-get-sourcefileid.md)|この行を引き起こしているソース ファイルの一意のソース ファイル識別子を取得します。|  
-|[IDiaLineNumber::get_statement](../../debugger/debug-interface-access/idialinenumber-get-statement.md)|この行の情報が、プログラムのソース内のステートメントの先頭に記述されているかを示すフラグを取得します。|  
-|[IDiaLineNumber::get_compilandId](../../debugger/debug-interface-access/idialinenumber-get-compilandid.md)|この行を引き起こしているコンパイル単位の一意の識別子を取得します。|  
+|[IDiaLineNumber::get_sourceFileId](../../debugger/debug-interface-access/idialinenumber-get-sourcefileid.md)|この行の原因であるソース ファイルの一意のソース ファイルの識別子を取得します。|  
+|[IDiaLineNumber::get_statement](../../debugger/debug-interface-access/idialinenumber-get-statement.md)|この行の情報がプログラムのソース内のステートメントの先頭を説明することを示すフラグを取得します。|  
+|[IDiaLineNumber::get_compilandId](../../debugger/debug-interface-access/idialinenumber-get-compilandid.md)|この行を提供するコンパイル単位の一意の識別子を取得します。|  
   
 ## <a name="remarks"></a>コメント  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- このインターフェイスを呼び出すことによって取得、 [idiaenumlinenumbers::item](../../debugger/debug-interface-access/idiaenumlinenumbers-item.md)または[idiaenumlinenumbers::next](../../debugger/debug-interface-access/idiaenumlinenumbers-next.md)メソッドです。  
+ このインターフェイスを呼び出すことによって取得、 [idiaenumlinenumbers::item](../../debugger/debug-interface-access/idiaenumlinenumbers-item.md)または[idiaenumlinenumbers::next](../../debugger/debug-interface-access/idiaenumlinenumbers-next.md)メソッド。  
   
 ## <a name="example"></a>例  
- 次の関数が関数で使用されている行番号を表示 (によって表される`pSymbol`)。  
+ 次の関数が関数で使用されている行番号が表示されます (によって表される`pSymbol`)。  
   
 ```C++  
 void dumpFunctionLines( IDiaSymbol* pSymbol, IDiaSession* pSession )  
@@ -137,14 +135,14 @@ void dumpFunctionLines( IDiaSymbol* pSymbol, IDiaSession* pSession )
 ```  
   
 ## <a name="requirements"></a>要件  
- ヘッダー: Dia2.h  
+ ヘッダー:dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
- [Idiaenumlinenumbers::item](../../debugger/debug-interface-access/idiaenumlinenumbers-item.md)   
+ [IDiaEnumLineNumbers::Item](../../debugger/debug-interface-access/idiaenumlinenumbers-item.md)   
  [IDiaEnumLineNumbers::Next](../../debugger/debug-interface-access/idiaenumlinenumbers-next.md)

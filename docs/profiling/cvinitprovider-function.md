@@ -1,8 +1,6 @@
 ---
 title: CvInitProvider 関数 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - cvmarkers/CvInitProvider
@@ -14,15 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 78b7fbb6480f0793b1641159cd3f06c471907603
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 171537a752818e31ba6a3e7e185fd02017dcb967
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750104"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53967710"
 ---
 # <a name="cvinitprovider-function"></a>CvInitProvider 関数
-マーカー プロバイダーを初期化します。 他の同時実行ビジュアライザー SDK 関数の前に呼び出す必要があります。  
+マーカー プロバイダーを初期化します。 他のコンカレンシー ビジュアライザー SDK 関数の前に呼び出す必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,7 +41,7 @@ HRESULT CvInitProvider(
 ## <a name="return-value"></a>戻り値  
  プロバイダーが初期化されると S_OK を、エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** *cvmarkers.h*  
   
 ## <a name="see-also"></a>関連項目  

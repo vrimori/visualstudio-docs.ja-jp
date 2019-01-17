@@ -1,8 +1,6 @@
 ---
-title: 'エラー: SQL できます&#39;t が SSDEBUGPS を見つける |Microsoft Docs'
-ms.custom: ''
+title: エラー :SQL できます&#39;t が SSDEBUGPS を見つける |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: troubleshooting
 f1_keywords:
 - vs.debug.error.sqlde_cant_find_ssdebugps
@@ -17,31 +15,31 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1498a287bdb474751dfaa5b4b23c30bc302544e7
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
-ms.translationtype: MT
+ms.openlocfilehash: d0c10c2ba2a5b9da700d698d553cdf49a7a0a136
+ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37058257"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54153668"
 ---
-# <a name="error-sql-can39t-find-ssdebugps"></a>エラー: SQL できます&#39;t が SSDEBUGPS を見つける
+# <a name="error-sql-can39t-find-ssdebugps"></a>エラー :SQL できます&#39;t が SSDEBUGPS を見つける
 
 SSDEBUGPS.dll は、SQL Server のデバッグ ホスト コンポーネントです。
 
 このエラーはデバッグの開始時に発生し、指定されたファイルが [!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)] コンピューターに存在しないことを示します。 リモート デバッグのセットアップが実行されていない、または何らかの理由でこのファイルが削除されていることが原因として考えられます。
 
-このエラーを解決するのには 2 つの方法: リモート デバッグのセットアップを再実行し、ファイルをコピーして、[!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)]マシン。
+このエラーの解決方法は 2 つあります。1 つは、リモート デバッグのセットアップを再実行する方法です。もう 1 つは、このファイルを [!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)] コンピューターにコピーする方法です。
 
 リモート デバッグのセットアップを再実行する」の手順に従います[リモート デバッグ](../debugger/remote-debugging.md)します。
 
-Ssdebugps.dll のファイルのコピーを見つけるには場合に、コピーできます、[!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)]マシン。 このファイルが存在する場合は、\Program Files\ Common Files\Microsoft Shared\SQL Debugging にあります。 別のあります[!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)]コンピューターや Visual Studio 2005 がインストールされているコンピューター。
+ssdebugps.dll のファイルを見つけることができる場合は、これを [!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)] コンピューターにコピーします。 このファイルが存在する場合は、\Program Files\ Common Files\Microsoft Shared\SQL Debugging にあります。 別のあります[!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)]コンピューターや Visual Studio 2005 がインストールされているコンピューター。
 
-SSDEBUGPS.dll を SQL Server 2005 コンピューターにコピー。
+SSDEBUGPS.dll を SQL Server 2005 コンピューターにコピーするには: 
 
-1. ファイルを同じ名前とパスを使用してディレクトリにコピー、[!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)]マシン。
+1. [!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)] コンピューターの上記の名前とパスを持つディレクトリにファイルをコピーします。
 
-2. 登録を開いて、**コマンド プロンプト**、次のコマンドを実行しています。
+2. **コマンド プロンプト**を開き、次のコマンドを実行してファイルを登録します。
 
     ```cmd
-    regsrv32 ssdebugps.dll
+    regsvr32 ssdebugps.dll
     ```

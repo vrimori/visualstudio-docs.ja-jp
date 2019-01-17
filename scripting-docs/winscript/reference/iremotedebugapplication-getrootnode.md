@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::GetRootNode |Microsoft ドキュメント
+title: :Getrootnode |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2ef19861e0f386eb7139ec3e732068e4d2b6e7ba
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 75b398ddac53f2633cbc090f5d49574bd4d94d36
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728762"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54097774"
 ---
 # <a name="iremotedebugapplicationgetrootnode"></a>IRemoteDebugApplication::GetRootNode
-アプリケーションに関連付けられているすべてのノードを追加するアプリケーション ノードを返します。  
+アプリケーションに関連付けられているすべてのノードを追加するアプリケーションのノードを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetRootNode(  
    IDebugApplicationNode**  ppdanRoot  
 );  
@@ -43,11 +43,11 @@ HRESULT GetRootNode(
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このメソッドは、アプリケーションに関連付けられているすべてのノードを追加するアプリケーションのノードを返します。  
   
 ## <a name="see-also"></a>関連項目  

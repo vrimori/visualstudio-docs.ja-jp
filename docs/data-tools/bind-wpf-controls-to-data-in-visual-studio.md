@@ -15,15 +15,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4fa8ddf42cad6ad613846ceff2b49739b7dc1c18
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: 3c3737174843a8b9ff77ecdfb592e1275b88c84c
+ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52305339"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54154396"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Visual Studio でデータに WPF コントロールをバインドする
 
@@ -100,7 +99,7 @@ Visual Studio は、次の処理を行う XAML を生成します。
 オブジェクトまたはからプロパティをドラッグすると、**データソース**デザイナー、Visual Studio のウィンドウが生成されます[!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)]をデータ バインド コントロールを作成します (または、オブジェクトまたはプロパティに既存のコントロールをバインドします)。 ただし、Visual Studio では、オブジェクトのデータに設定するコードを生成しません。 このコードは、ユーザーが手動で記述する必要があります。
 
 > [!NOTE]
-> カスタム クラス パブリックであり、既定では、パラメーターなしのコンス トラクターを持ちます。 それらをそれぞれの構文で「ドット」を持つ入れ子になった can'tbe クラス。 詳細については、次を参照してください。 [XAML とカスタム クラスの WPF](/dotnet/framework/wpf/advanced/xaml-and-custom-classes-for-wpf)します。
+> カスタム クラス パブリックであり、既定では、パラメーターなしのコンス トラクターを持ちます。 入れ子になったクラスをそれぞれの構文で「ドット」を持つことができません。 詳細については、次を参照してください。 [XAML とカスタム クラスの WPF](/dotnet/framework/wpf/advanced/xaml-and-custom-classes-for-wpf)します。
 
 Visual Studio によって生成[!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)]は次を実行します。
 

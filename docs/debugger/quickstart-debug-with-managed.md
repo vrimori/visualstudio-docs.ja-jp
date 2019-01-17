@@ -3,7 +3,6 @@ title: マネージド コードをデバッグする | Microsoft Docs
 description: Visual Studio デバッガーを使用して C# または Visual Basic をデバッグする
 ms.custom: mvc
 ms.date: 03/18/2018
-ms.technology: vs-ide-debug
 ms.topic: quickstart
 helpviewer_keywords:
 - debugger
@@ -13,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e35d102a30ffc7b80d39f359542bbdc4c00feff6
-ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
+ms.openlocfilehash: d6b4f6fecabe7947e59a235dbb71e9f5e0803b10
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52257187"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53955478"
 ---
 # <a name="quickstart-debug-with-c-or-visual-basic-using-the-visual-studio-debugger"></a>クイック スタート: Visual Studio デバッガーを使用して C# または Visual Basic でデバッグする
 
@@ -151,7 +150,7 @@ Visual Studio デバッガーでは、アプリのデバッグに役立つ多く
 
 アプリは引き続き実行され、`doWork` が呼び出され、ボタンをクリックしたコード行で一時停止します。
 
-コードのステップ実行に使用される一般的なキーボード コマンドには、**F10** と **F11** が含まれます。 さらに詳しい手順については、[ビギナーズ ガイド](../debugger/getting-started-with-the-debugger.md)を参照してください。
+コードのステップ実行に使用される一般的なキーボード コマンドには、**F10** と **F11** が含まれます。 詳しい手順については、「[デバッガーでのはじめに](../debugger/debugger-feature-tour.md)」をご覧ください。
 
 ## <a name="inspect-variables-in-a-datatip"></a>データヒントの変数を検査する
 

@@ -1,8 +1,6 @@
 ---
 title: セキュリティ、バージョン管理、および ClickOnce 配置マニフェストの問題 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -24,14 +22,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a7ae835b53960ca6952b71c10a2348f707785e16
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
-ms.translationtype: MT
+ms.openlocfilehash: 366e384ec01c67a1beb6b08b018365cbb3c73bf4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39081746"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53927143"
 ---
-# <a name="security-versioning-and-manifest-issues-in-clickonce-deployments"></a>セキュリティ、バージョン管理、および ClickOnce 配置マニフェストの問題
+# <a name="security-versioning-and-manifest-issues-in-clickonce-deployments"></a>ClickOnce 配置でのセキュリティ、バージョン管理、およびマニフェストの問題
 
 さまざまな問題がある[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]セキュリティ、アプリケーションのバージョン管理とマニフェストの構文およびセマンティクスの原因となる、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開が失敗します。
 
@@ -51,7 +49,7 @@ ms.locfileid: "39081746"
 
 詳細については、および手順については、オンライン アプリケーションのクォータを変更する方法については、次を参照してください。 [ClickOnce キャッシュの概要](../deployment/clickonce-cache-overview.md)します。
 
-## <a name="versioning-issues"></a>バージョン管理の問題
+## <a name="versioning-issues"></a>バージョン管理に関する問題
 
 アプリケーションの更新プログラムを反映するようにアセンブリ バージョン番号をインクリメントし、アセンブリに厳密な名前を割り当てる場合、問題が発生する可能性があります。 厳密な名前のアセンブリへの参照でコンパイルされたアセンブリ自体を再コンパイルしなければ、または以前のバージョンを参照するアセンブリを試みます。 アセンブリが、バインド要求で古いバージョンの値を使用するため、このアセンブリが試行されます。
 
@@ -98,6 +96,6 @@ ms.locfileid: "39081746"
 
 ## <a name="see-also"></a>関連項目
 
-[ClickOnce 配置をトラブルシューティングします。](../deployment/troubleshooting-clickonce-deployments.md)  
+[ClickOnce 配置のトラブルシューティング](../deployment/troubleshooting-clickonce-deployments.md)  
 [Securw ClickOnce アプリケーション](../deployment/securing-clickonce-applications.md)  
-[ClickOnce 配置ストラテジを選択します。](../deployment/choosing-a-clickonce-deployment-strategy.md)
+[ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)

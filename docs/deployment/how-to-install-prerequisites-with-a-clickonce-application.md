@@ -1,8 +1,6 @@
 ---
 title: '方法: ClickOnce アプリケーションと共に必須コンポーネントをインストールする |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,20 +16,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e363b021f8dfb82aa641a1baac4d2f33e0bd3d2e
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
-ms.translationtype: MT
+ms.openlocfilehash: 2e474bba5168867180f0f50a927ea4c71ebe0370
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39152475"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53907853"
 ---
-# <a name="how-to-install-prerequisites-with-a-clickonce-application"></a>方法: ClickOnce アプリケーションと共に必須コンポーネントをインストールします。
+# <a name="how-to-install-prerequisites-with-a-clickonce-application"></a>方法: ClickOnce アプリケーションと共に必須コンポーネントをインストールする
 すべて[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションでは、実行する前に、.NET Framework の正しいバージョンがコンピューターにインストールされている必要があります。 多くのアプリケーションもその他の前提条件があります。 発行するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション、アプリケーションと共にパッケージ化する前提条件コンポーネントのセットを選択できます。 かどうかは既に存在するかを判断する各前提条件のインストール時に、チェックが実行されます。インストールする前にインストールされていない場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション。  
   
  パッケージ化と発行の前提条件ではなく、コンポーネントのダウンロード場所を指定することもできます。 たとえば、発行されたすべてのアプリケーションと共に必須コンポーネントを含むではなく可能性がありますを使用する一元的なファイル共有またはすべての前提条件インストーラーを含む Web 上の場所: コンポーネントのダウンロード、インストール時に、その場所からインストールします。  
   
 > [!IMPORTANT]
->  初めて発行する前に、開発用コンピューターに必須コンポーネントのインストーラー パッケージを追加する必要があります[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション。 詳細については、次を参照してください。[方法: ClickOnce アプリケーションと共に必須コンポーネントを含める](../deployment/how-to-include-prerequisites-with-a-clickonce-application.md)します。  
+>  初めて発行する前に、開発用コンピューターに必須コンポーネントのインストーラー パッケージを追加する必要があります[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション。 詳細については、「[方法 :ClickOnce アプリケーションと共に必須コンポーネントを含める](../deployment/how-to-include-prerequisites-with-a-clickonce-application.md)」を参照してください。  
   
  前提条件がで管理されている、**の前提条件**からアクセスできるダイアログ ボックス、**発行**のウィンドウ、**プロジェクト デザイナー**。  
   
@@ -70,5 +68,5 @@ ms.locfileid: "39152475"
     >  指定した位置に、指定したコンポーネントのインストーラーが存在することを確認する必要があります。  
   
 ## <a name="see-also"></a>関連項目  
- [ClickOnce アプリケーションを発行します。](../deployment/publishing-clickonce-applications.md)   
- [方法: 発行ウィザードを使用して ClickOnce アプリケーションの発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+ [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
+ [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

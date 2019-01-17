@@ -1,8 +1,6 @@
 ---
 title: データ コレクションの制御 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - advanced tasks for profiling tools
@@ -13,14 +11,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: deafe488fdb44216f0a6750f532c2e0d2363b453
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 89c1f0b435790622bee54b6cf91d57bd0cc9be29
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34262281"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53848787"
 ---
-# <a name="control-data-collection"></a>データ コレクションの制御
+# <a name="control-data-collection"></a>データ収集の制御
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールを使用すると、パフォーマンス セッション中のプロファイリング データを収集するタイミングを制御し、プロファイリングする関数を指定することができます。 ここでは、**[パフォーマンス エクスプローラー]** ウィンドウおよび **[データ収集コントロール]** ウィンドウからデータ収集を開始および停止する方法と、プロファイリング データを収集するオブジェクトを制限する方法について説明します。  
   
 ## <a name="common-tasks"></a>一般的なタスク

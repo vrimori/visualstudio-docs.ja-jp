@@ -3,7 +3,6 @@ title: Visual Studio プロファイラー API リファレンス (ネイティ�
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - performance tools, API
@@ -14,18 +13,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acb85c9994436b2e35a6d4161a579180ad5e0ac5
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: e0926c80954c83dd1c0c1a72e7c693e8ea266713
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53063003"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53945026"
 ---
 # <a name="visual-studio-profiler-api-reference-native"></a>Visual Studio プロファイラー API リファレンス (ネイティブ)
 Visual Studio プロファイラー API を使用すると、収集データの量をプログラムで制御したり、タイムスタンプとプロファイルの両方のマークをプロファイル時に挿入したりできます。 ネイティブ API を使用するには、*VSPerf.h* ヘッダー ファイルをインクルードし、*VSPerf.lib* をプロジェクトに追加する必要があります。  
   
 > [!NOTE]
->  既定では、*VSPerf.h* と *VSPerf.lib* は *PerfSDK* という名前のフォルダーにあります。 たとえば、*\<ドライブ>:\Program Files\Microsoft Visual Studio 14.0\Team Tools\Performance Tools\PerfSDK* ディレクトリなどです。  
+> プロファイル ツールへのパスを取得するには、[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)に関する記事をご覧ください。
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [CommentMarkAtProfile](../profiling/commentmarkatprofile.md)  

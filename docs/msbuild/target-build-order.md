@@ -1,8 +1,6 @@
 ---
 title: ターゲットのビルド順序 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/04/2018
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - msbuild, build order
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 13405d197fc5ab64d4c7b7040580f073e36f98c7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 96eb3aacfd83ad60ae6c0e0f1fa95209136307ce
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49812661"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53881527"
 ---
 # <a name="target-build-order"></a>ターゲットのビルド順序
 あるターゲットへの入力が別のターゲットの出力に依存する場合、ターゲットの順序を指定する必要があります。 以下の属性を使用して、ターゲットを実行する順序を指定できます。  
@@ -45,7 +43,7 @@ ms.locfileid: "49812661"
   
  インポートされたプロジェクトには、独自の `InitialTargets` 属性が含まれている場合があります。 それらのすべての初期ターゲットが集約されて順番に実行されます。  
   
- 詳細については、「[方法: 最初にビルドするターゲットを指定する](../msbuild/how-to-specify-which-target-to-build-first.md)」を参照してください。  
+ 詳細については、「[方法 :最初にビルドするターゲットを指定する](../msbuild/how-to-specify-which-target-to-build-first.md)」を参照してください。  
   
 ## <a name="default-targets"></a>既定のターゲット  
  [Project](../msbuild/project-element-msbuild.md) 要素の `DefaultTargets` 属性は、ターゲットがコマンド ラインで明示的に指定されていない場合にビルドするターゲット (複数可) を指定します。  
@@ -64,7 +62,7 @@ ms.locfileid: "49812661"
   
  インポートされたプロジェクトには、独自の `DefaultTargets` 属性が含まれている場合があります。 検出された最初の `DefaultTargets` 属性によって、実行する既定のターゲットが決定されます。  
   
- 詳細については、「[方法: 最初にビルドするターゲットを指定する](../msbuild/how-to-specify-which-target-to-build-first.md)」を参照してください。  
+ 詳細については、「[方法 :最初にビルドするターゲットを指定する](../msbuild/how-to-specify-which-target-to-build-first.md)」を参照してください。  
   
 ## <a name="first-target"></a>最初のターゲット  
  初期ターゲット、既定のターゲット、またはコマンド ラインのターゲットがいずれも指定されていない場合、MSBuild はプロジェクト ファイル内またはインポートされたプロジェクト ファイル内で検出された最初のターゲットを実行します。  

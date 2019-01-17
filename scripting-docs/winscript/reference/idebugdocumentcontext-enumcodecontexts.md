@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext::EnumCodeContexts |Microsoft ドキュメント
+title: IDebugDocumentContext::EnumCodeContexts |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 300102d75fcfa797e8e073b9a1ce77cc5ee2827a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 47bf36a8d013ffbb3c09214d590960c833e53218
+ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725872"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54086269"
 ---
 # <a name="idebugdocumentcontextenumcodecontexts"></a>IDebugDocumentContext::EnumCodeContexts
-このドキュメントのコンテキストに関連付けられているコードのコンテキストを列挙します。  
+このドキュメントのコンテキストに関連付けられたコード コンテキストを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT EnumCodeContexts(  
    IEnumDebugCodeContexts**  ppescc  
 );  
@@ -38,17 +38,17 @@ HRESULT EnumCodeContexts(
   
 #### <a name="parameters"></a>パラメーター  
  `ppescc`  
- [out]このドキュメントのコンテキストに関連付けられているコード コンテキストです。  
+ [out]このドキュメントのコンテキストに関連付けられたコード コンテキスト。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## <a name="remarks"></a>コメント  
- ドキュメントは、インクルード ファイルまたはテンプレートにドキュメントがない限り、通常 1 つだけのコードのコンテキストに関連付けられてます。  
+## <a name="remarks"></a>Remarks  
+ ドキュメントがインクルード ファイルまたはテンプレートでない限り、ドキュメントは通常 1 つだけのコードのコンテキストに関連付けられてです。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugDocumentContext インターフェイス](../../winscript/reference/idebugdocumentcontext-interface.md)

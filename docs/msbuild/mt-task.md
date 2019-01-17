@@ -1,8 +1,6 @@
 ---
 title: MT タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
 - VC.Project.VCManifestTool.ResourceOutputFileName
@@ -26,12 +24,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c6e4298fa9482674232dea2cae98bb25ba51be30
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 6a436423bd55fbcf1a519e56b27c2449c5b3bc9a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50219875"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53848825"
 ---
 # <a name="mt-task"></a>MT タスク
 Microsoft マニフェスト ツール *mt.exe* をラップします。 詳細については、「[Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)」(Mt.exe) を参照してください。  

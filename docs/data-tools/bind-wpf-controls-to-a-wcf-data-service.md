@@ -14,15 +14,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3330c86c84318be68619a8d031a034b33faa7fd1
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: 1b30675b126f6ed50022f4996cbad9de9226eb59
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52305664"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54269918"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>WCF Data Service への WPF コントロールのバインド
 
@@ -80,7 +79,7 @@ WCF データ サービスのプロジェクトを作成して、このチュー
 
 ## <a name="create-an-entity-data-model-for-the-service"></a>サービスのエンティティ データ モデルを作成します。
 
-WCF Data Service を使用してアプリケーションにデータを公開するには、サービスのデータ モデルを定義する必要があります。 WCF データ サービスは、2 つの種類のデータ モデルをサポートしています。 エンティティのデータ モデル、およびカスタム データ モデルを実装する共通言語ランタイム (CLR) オブジェクトを使用して定義されている、<xref:System.Linq.IQueryable%601>インターフェイス。 このチュートリアルでは、データ モデルとして Entity Data Model を作成します。
+WCF Data Service を使用してアプリケーションにデータを公開するには、サービスのデータ モデルを定義する必要があります。 WCF データ サービスには、2 つの種類のデータ モデルがサポートされています。エンティティ データ モデルでは、およびカスタム データ モデルを実装する共通言語ランタイム (CLR) オブジェクトを使用して定義されている、<xref:System.Linq.IQueryable%601>インターフェイス。 このチュートリアルでは、データ モデルとして Entity Data Model を作成します。
 
 1. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。
 
@@ -231,7 +230,7 @@ WPF デザイナーで XAML を変更して、いくつかのボタンをウィ�
 
 サービスのプロキシ オブジェクトを使用して、サービスからの売上データを読み込みます。 データ ソースに返されるデータを割り当てる、 <xref:System.Windows.Data.CollectionViewSource> WPF ウィンドウ。
 
-1. 作成するため、デザイナーで、`Window_Loaded`イベント ハンドラーを読み取るテキストをダブルクリックします: **MainWindow**します。
+1. 作成するため、デザイナーで、`Window_Loaded`イベント ハンドラーを読み取るテキストをダブルクリックします**MainWindow**。
 
 2. イベント ハンドラーを次のコードで置き換えます。 このコードの *localhost* アドレスは、使用している開発コンピューターのローカル ホスト アドレスで置き換えてください。
 
@@ -244,7 +243,7 @@ WPF デザイナーで XAML を変更して、いくつかのボタンをウィ�
 
 1. デザイナーで、ウィンドウ サーフェイスの **[<]** をダブルクリックします。
 
-     Visual Studio によって分離コード ファイルが開かれ、<xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントのために新しい `backButton_Click` イベント ハンドラーが作成されます。
+     Visual Studio によって分離コード ファイルが開かれ、`backButton_Click` イベントのために新しい <xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベント ハンドラーが作成されます。
 
 2. 生成された `backButton_Click` イベント ハンドラーに次のコードを追加します。
 
@@ -285,7 +284,7 @@ WPF デザイナーで XAML を変更して、いくつかのボタンをウィ�
 
 3. **ソリューション エクスプローラー**で、**AdventureWorksSalesEditor** プロジェクトを右クリックします。
 
-4. コンテキスト メニューの **[デバッグ]** で、**[新しいインスタンスを開始]** をクリックします。
+4. (コンテキスト メニュー) を右クリック メニューで [**デバッグ**、] をクリックして**新しいインスタンスを開始**します。
 
      アプリケーションが実行されます。 次のことを検証します。
 
@@ -307,7 +306,7 @@ WPF デザイナーで XAML を変更して、いくつかのボタンをウィ�
 
 - Visual Studio の **[データ ソース]** ウィンドウを使用して、WPF コントロールをその他の種類のデータ ソースにバインドする方法について学習します。 詳細については、次を参照してください。[データセットにコントロールをバインドする WPF](../data-tools/bind-wpf-controls-to-a-dataset.md)します。
 
-- Visual Studio の **[データ ソース]** ウィンドウを使用して、WPF コントロールでの関連するデータ (つまり、親子関係にあるデータ) を表示する方法について学習します。 詳細については、次を参照してください。[チュートリアル: WPF アプリケーションで関連データの表示](../data-tools/display-related-data-in-wpf-applications.md)します。
+- Visual Studio の **[データ ソース]** ウィンドウを使用して、WPF コントロールでの関連するデータ (つまり、親子関係にあるデータ) を表示する方法について学習します。 詳細については、「[チュートリアル:WPF アプリケーションで関連データを表示する](../data-tools/display-related-data-in-wpf-applications.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
