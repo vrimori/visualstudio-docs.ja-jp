@@ -29,10 +29,10 @@ manager: douge
 ms.workload:
 - multiple
 ms.openlocfilehash: d970d2b761b2987bc74e94eb5bfefa8f0ffc78ec
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
+ms.lasthandoff: 01/16/2019
 ms.locfileid: "53892453"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio デバッガーでシンボル (.pdb) ファイルとソース ファイルの指定 (C#、C++、Visual Basic、 F#)
@@ -155,7 +155,7 @@ Visual Studio IDE でプロジェクトをデバッグするときに、デバ�
   コマンドを制限することができますを*srcsrv.dll*アプリの実行できる *.pdb*という名前のファイルで許可されているコマンドの一覧を表示してファイル*srcsrv.ini*します。 場所、 *srcsrv.ini*と同じフォルダーにファイル*srcsrv.dll*と*devenv.exe*します。  
   
   >[!IMPORTANT]
-  >アプリの任意のコマンドを埋め込むことができます *.pdb*ファイルを実行するコマンドのみを配置するように、 *srcsrv.ini*ファイル。 *srcsvr.ini* ファイルにないコマンドを実行しようとすると、確認のダイアログ ボックスが表示されます。 詳細については、次を参照してください。[セキュリティ警告。デバッガーは信頼されないコマンドを実行する必要があります](../debugger/security-warning-debugger-must-execute-untrusted-command.md) 
+  >アプリの任意のコマンドを埋め込むことができます *.pdb*ファイルを実行するコマンドのみを配置するように、 *srcsrv.ini*ファイル。 *srcsvr.ini* ファイルにないコマンドを実行しようとすると、確認のダイアログ ボックスが表示されます。 詳細については、次を参照してください。[セキュリティ警告。デバッガーは信頼されないコマンドを実行する必要があります](../debugger/security-warning-debugger-must-execute-untrusted-command.md)。 
   >
   >コマンド パラメーターでは何も検証されないため、コマンドを信頼するときは注意してください。 たとえば、次の一覧を表示する*cmd.exe*で、 *srcsrv.ini*、悪意のあるユーザーにパラメーターを指定する場合があります*cmd.exe*したとしても危険です。  
   
@@ -179,7 +179,7 @@ Visual Studio IDE でプロジェクトをデバッグするときに、デバ�
     
     *VC\<x > .pdb*個々 のオブジェクト ファイルのすべてのデバッグ情報を格納し、プロジェクトのメイクファイルと同じディレクトリに存在するファイル。 オブジェクト ファイルが作成されるたびに、C/C++ コンパイラにデバッグ情報をマージする*VC\<x > .pdb*します。 などすべてのソース ファイルに共通のヘッダー ファイルが含まれている場合でもその *\<windows.h >*、これらのヘッダーの typedef はすべてのオブジェクト ファイルではなく、1 回だけ格納されます。 挿入される情報には、型情報が含まれますが、関数定義などのシンボル情報は含まれません。  
   
-  - *\<プロジェクト > .pdb* 
+  - *\<プロジェクト>.pdb* 
     
     *\<プロジェクト > .pdb*ファイル、プロジェクトのすべてのデバッグ情報を格納する *.exe*ファイルを開きにある、 *\debug*サブディレクトリ。 *\<プロジェクト>.pdb* ファイルには、*VC\<x>.pdb* に含まれる型情報だけでなく、関数プロトタイプなどのあらゆるデバッグ情報が含まれます。 
   
