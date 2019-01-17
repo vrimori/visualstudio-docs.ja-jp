@@ -1,8 +1,6 @@
 ---
 title: WriteContextTLogs | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 apiname:
 - WriteContextTLogs
@@ -17,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a01dbd11411204affa082bfa0772530662657853
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 9c06c77ef75f279be85435fc507cc82ef6984f66
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39230800"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53828395"
 ---
 # <a name="writecontexttlogs"></a>WriteContextTLogs
 現在のコンテキストのログ ファイルを書き込みます。  
@@ -43,8 +41,8 @@ HRESULT WINAPI WriteContextTLogs(LPCTSTR intermediateDirectory, LPCTSTR tlogRoot
 ## <a name="return-value"></a>戻り値  
  追跡コンテキストが作成された場合、**HRESULT** に **SUCCEEDED** ビットが設定されます。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** *FileTracker.h*  
+## <a name="requirements"></a>要件  
+ **ヘッダー:***FileTracker.h*  
   
 ## <a name="see-also"></a>関連項目  
  [WriteAllTLogs](../msbuild/writealltlogs.md)

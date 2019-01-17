@@ -1,8 +1,6 @@
 ---
 title: コール ツリー ビュー - 競合データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Call Tree view
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 40e28eb246b2c4611a15dc4ce2cf6b1b02dd0100
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 86a4e29425e710818dee68e28dcc306c3c14ab85
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34263182"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53927507"
 ---
 # <a name="call-tree-view---contention-data"></a>コール ツリー ビュー - 競合データ
 [コール ツリー] ビューには、プロファイリングされるアプリケーションで走査された関数の実行パスが表示されます。 ツリーのルートは、アプリケーションまたはコンポーネントへのエントリ ポイントです。 各関数ノードには、その関数が呼び出したすべての関数、関数がブロックされた回数、および他のスレッドやプロセスとリソースを競合したために関数がブロックされた時間が一覧表示されます。  

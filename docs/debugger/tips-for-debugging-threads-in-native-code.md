@@ -1,8 +1,6 @@
 ---
-title: ネイティブ コード内のスレッドのデバッグのヒント |Microsoft ドキュメント
-ms.custom: ''
+title: ネイティブ コード内のスレッドをデバッグするためのヒント |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -18,22 +16,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c98f6bb1a738111d32b26c5b923abe41367e621e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: f8787af757a65a25cdd03240bd3942030120ad48
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31476173"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53910075"
 ---
 # <a name="tips-for-debugging-threads-in-native-code"></a>ネイティブ コード内のスレッドのデバッグのヒント
 ここでは、ネイティブ コード内のスレッドをデバッグするときに役立つヒントを紹介します。  
   
--   スレッド情報ブロックの内容を表示するには」と入力して`@TIB`で、**ウォッチ**ウィンドウまたは**クイック ウォッチ**  ダイアログ ボックス。  
+-   **[ウォッチ]** ウィンドウまたは **[クイック ウォッチ]** ダイアログ ボックスで「`@TIB`」と入力すると、[スレッド情報ブロック] の内容を表示できます。  
   
--   入力すると、現在のスレッドの最終エラー コードを表示できます`@Err`で、**ウォッチ**ウィンドウまたは**クイック ウォッチ**  ダイアログ ボックス。  
+-   **[ウォッチ]** ウィンドウまたは **[クイック ウォッチ]** ダイアログ ボックスで「`@Err`」と入力すると、現在のスレッドの最終エラー コードを表示できます。  
   
 -   マルチスレッド アプリケーションのデバッグには、C ランタイム ライブラリ (CRT) 関数を使用できます。 詳細については、「[_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
- [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+## <a name="see-also"></a>「  
+ [マルチスレッド アプリケーションのデバッグ](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

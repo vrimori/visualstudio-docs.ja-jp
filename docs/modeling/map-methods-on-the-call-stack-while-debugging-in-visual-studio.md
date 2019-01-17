@@ -30,10 +30,10 @@ manager: douge
 ms.workload:
 - multiple
 ms.openlocfilehash: a238da745821da5c93cf953817305703786df805
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
+ms.lasthandoff: 01/16/2019
 ms.locfileid: "53889242"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Visual Studio でデバッグを行うときの呼び出し履歴に対するメソッドのマップ
@@ -67,9 +67,9 @@ ms.locfileid: "53889242"
 
 ## <a name="MapStack"></a>呼び出し履歴でマップを作成する
 
-1.  デバッグを開始します。 (キーボード。**F5 キーを押して**)
+1.  デバッグを開始します。 (キーボード:**F5 キーを押して**)
 
-2.  アプリが中断モードになるか、関数にステップ イン、選択**コード マップ**します。 (キーボード。**Ctrl キーを押し** + **Shift** + **`**)
+2.  アプリが中断モードになるか、関数にステップ イン、選択**コード マップ**します。 (キーボード:**Ctrl キーを押し** + **Shift** + **`**)
 
      ![コード マップを選択して呼び出し履歴のマッピングを開始](../debugger/media/debuggermap_choosecodemap.png)
 
@@ -92,7 +92,7 @@ ms.locfileid: "53889242"
 ## <a name="AddRelatedCode"></a>関連するコードをマップに追加する
  作成できたマップ - どのような横でしょうか。 C# または Visual Basic で作業している場合は、フィールド、プロパティ、およびコードで何が起こっているかを追跡するために、他の方法などの項目を追加します。
 
- メソッドのコード定義を表示するには、そのメソッドをダブルクリックするか、そのメソッドのショートカット メニューを使用します。 (キーボード。マップとキーを押してでメソッドを選択**F12**)
+ メソッドのコード定義を表示するには、そのメソッドをダブルクリックするか、そのメソッドのショートカット メニューを使用します。 (キーボード:マップとキーを押してでメソッドを選択**F12**)
 
  ![コード マップのメソッドのコード定義に移動](../debugger/media/debuggermap_gotocodedefinition.png)
 

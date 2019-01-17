@@ -1,8 +1,6 @@
 ---
 title: 割り当てフック関数と C ランタイムのメモリの割り当て |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.hooks
@@ -22,24 +20,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e4c631b72ae9b12f77daf2ddd49919651c0b3e5
-ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
-ms.translationtype: MT
+ms.openlocfilehash: a654c2d86ed0eb598a963b56cd6e3ef16ad91f19
+ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37433107"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54154096"
 ---
 # <a name="allocation-hooks-and-c-run-time-memory-allocations"></a>割り当てフック関数と C ランタイムのメモリ割り当て
-割り当てフック関数の非常に重要な制限は、無視する必要があります明示的に`_CRT_BLOCK`ブロックします。 これらのブロックは、内部のメモリを割り当てる C ランタイム ライブラリ関数を呼び出す場合、C ランタイム ライブラリ関数によって内部的に行われたメモリ割り当てです。 無視してかまいません`_CRT_BLOCK`割り当ての先頭に folloiwng コードを含めることによってブロックが関数をフックします。  
+割り当てフック関数の非常に重要な制限は、無視する必要があります明示的に`_CRT_BLOCK`ブロックします。 これらのブロックは、内部のメモリを割り当てる C ランタイム ライブラリ関数を呼び出す場合、C ランタイム ライブラリ関数によって内部的に行われたメモリ割り当てです。 無視してかまいません`_CRT_BLOCK`割り当ての先頭に次のコードを含めることによってブロックが関数をフックします。  
   
 ```cpp
 if ( nBlockUse == _CRT_BLOCK )  
     return( TRUE );  
 ```  
   
- 割り当てフック関数を無視しない場合`_CRT_BLOCK`フックで呼び出される C ランタイム ライブラリ関数が無限ループにプログラムをトラップし、ブロックします。 たとえば、`printf` は内部的にメモリを割り当てます。 フック、コードから呼び出す場合`printf`、呼び出しは、もう一度呼び出すフック関数と、その結果の割り当てし、 **printf**で、もう一度まで、スタック オーバーフローが発生します。 `_CRT_BLOCK` 型の割り当て処理をレポートする必要がある場合は、この制限事項を回避するために、C ランタイム関数ではなく Windows API 関数を使用して書式設定や出力を行う方法があります。 Windows Api では、C ランタイム ライブラリのヒープを使用しないために、無限ループで、割り当てフックをトラップされません。  
+ 割り当てフック関数を無視しない場合`_CRT_BLOCK`フックで呼び出される C ランタイム ライブラリ関数が無限ループにプログラムをトラップし、ブロックします。 たとえば、`printf` は内部的にメモリを割り当てます。 フック コードで `printf` を呼び出すと、その結果行われる割り当てによって再びフックが呼び出され、それによって、スタック オーバーフローが発生するまで、再び **printf** が呼び出されるという繰り返しが発生します。 `_CRT_BLOCK` 型の割り当て処理をレポートする必要がある場合は、この制限事項を回避するために、C ランタイム関数ではなく Windows API 関数を使用して書式設定や出力を行う方法があります。 Windows Api では、C ランタイム ライブラリのヒープを使用しないために、無限ループで、割り当てフックをトラップされません。  
   
- ランタイム ライブラリのソース ファイルを調べると場合、表示されます、既定の割り当てフック関数を**CrtDefaultAllocHook** (単に返す**TRUE**)、独自の個別のファイルにあります。DBGHOOK します。C. 割り当てフック関数、アプリケーションの前に実行されるランタイム スタートアップ コードで行われた割り当ての場合でも呼び出す場合**メイン**関数の代わりに、独自のいずれかでこの既定の関数を置き換えることができます使用して[_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook)します。  
+ ランタイム ライブラリのソース ファイルを調べる場合、既定の割り当て用のフック関数 **CrtDefaultAllocHook** (これは単に **TRUE** を返します) が独自の個別のファイル (DBGHOOK.C) の中にあることがわかります。 アプリケーションの **main** 関数の前に実行されるランタイムのスタートアップ コードによる割り当て時にも割り当てのフックが呼び出されるようにするには、[_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook) を使用する代わりに、この既定の関数を独自の関数に置き換えることができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [デバッグ用フック関数の作成](../debugger/debug-hook-function-writing.md)   

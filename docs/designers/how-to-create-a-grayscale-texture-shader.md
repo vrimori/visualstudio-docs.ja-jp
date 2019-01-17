@@ -2,7 +2,6 @@
 title: '方法: グレースケール テクスチャ シェーダーを作成する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 79181d81-44af-445e-9a18-03483dd70260
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c1910926c6cb2d181f4e5e24ffb1bc1c75a56b3
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: 0634d08f386c638cf141b6e8085982b74377ab55
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924188"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53933542"
 ---
 # <a name="how-to-create-a-grayscale-texture-shader"></a>方法: グレースケール テクスチャ シェーダーを作成する
 
@@ -27,7 +26,7 @@ ms.locfileid: "37924188"
 
 開始する前に、**[プロパティ]** ウィンドウと**ツールボックス**が表示されていることを確認します。
 
-1.  「[方法: 基本テクスチャ シェーダーを作成する](../designers/how-to-create-a-basic-texture-shader.md)」の説明に従って、基本テクスチャ シェーダーを作成します。
+1.  「[方法:基本テクスチャ シェーダーを作成する](../designers/how-to-create-a-basic-texture-shader.md)」の説明に従って、基本テクスチャ シェーダーを作成します。
 
 2.  **[テクスチャ サンプル]** ノードの **[RGB]** ターミナルを **[最終的な色]** ノードの **[RGB]** ターミナルから接続解除します。 **[選択]** モードで、**[テクスチャ サンプル]** ノードの **[RGB]** ターミナルを選択し、**[リンクの解除]** を選択します。 これにより、次の手順で追加するノードのための領域を確保できます。
 
@@ -53,6 +52,6 @@ ms.locfileid: "37924188"
 
 - [方法: シェーダーを 3D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
 - [方法: シェーダーをエクスポートする](../designers/how-to-export-a-shader.md)
-- [イメージ エディター](../designers/image-editor.md)
+- [Image Editor](../designers/image-editor.md)
 - [シェーダー デザイナー](../designers/shader-designer.md)
 - [シェーダー デザイナー ノード](../designers/shader-designer-nodes.md)

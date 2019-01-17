@@ -1,8 +1,6 @@
 ---
 title: パフォーマンス エクスプローラー | Microsoft Docs
-ms.custom: ''
 ms.date: 06/19/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.performance
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 837c8d405245237962888a0a689fbdd17f6a0a92
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 0a248821639a2263f5695d64030d932b2b6a05fe
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35669338"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53933915"
 ---
 # <a name="performance-explorer"></a>パフォーマンス エクスプローラー
 
@@ -40,11 +38,11 @@ Visual Studio のプロファイリング ツールを使用すると、開発�
 |**操作を行う:** プロファイリング ツールを使用してコード パフォーマンスの収集、表示、分析を行う場合に使用する基本的な手順について説明します。 チュートリアルに従って操作します。|[はじめに](../profiling/getting-started-with-performance-tools.md)|
 |**プロファイリング セッションを構成する:** プロファイリングを行うプロジェクトまたはバイナリを指定する方法、プロファイリング方式を選択する方法、収集するパフォーマンス データを選択する方法、およびその他のプロファイリング セッションのオプションを設定する方法の詳細について説明します。|[パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)|
 |**プロファイラーが収集するデータを制御する:** パフォーマンス セッションのプロパティおよび対話形式の手順を使用してプロファイリングを開始および停止する方法と、収集するパフォーマンス データを必要な情報だけに制限する方法について説明します。|[データ収集の制御](../profiling/controlling-data-collection.md)|
-|**パフォーマンスの問題を特定する:** 収集したパフォーマンス データをプロファイリング ツールのレポート ビュー ウィンドウに表示して分析する方法について説明します。|[パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)|
+|**パフォーマンスの問題を特定する:** 収集したパフォーマンス データをプロファイル ツールのレポート ビュー ウィンドウに表示して分析する方法について説明します。|[パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)|
 |**パフォーマンスの変化を分析する:** 2 つのプロファイラー データ ファイルを比較して、パフォーマンスの変化を分析する方法について説明します。|[パフォーマンス データ ファイルを比較する](../profiling/comparing-performance-data-files.md)|
 |**結果を保存して共有する:** プロファイリング データを保存してアーカイブまたは共有する方法について説明します。|[パフォーマンス ツール データの保存とエクスポート](../profiling/saving-and-exporting-performance-tools-data.md)|
 |**プロファイリングを自動化する:** コマンド プロンプトからプロファイリング ツールを使用する方法について説明します。|[コマンド ラインからのプロファイリング](../profiling/using-the-profiling-tools-from-the-command-line.md)|
-|**プロファイリングをプログラムで制御する:** プロファイリング ツールのマネージド API とネイティブ API を使用して、ソース コードから直接データ コレクションを制御する方法について説明します。|[プロファイリング ツールの API](../profiling/profiling-tools-apis.md)|
+|**プロファイリングをプログラムで制御する:** プロファイル ツールのマネージド API とネイティブ API を使用して、ソース コードから直接データ コレクションを制御する方法について説明します。|[プロファイリング ツールの API](../profiling/profiling-tools-apis.md)|
 |**プロファイリングに関する問題のトラブルシューティング**|[パフォーマンス ツールに関する問題のトラブルシューティング](../profiling/troubleshooting-performance-tools-issues.md)|
 
 ## <a name="see-also"></a>関連項目

@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8f668bebb2967ca89feb1c6f52f00253ac3eb07b
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.openlocfilehash: 471f2d2a0413cbf5932c980f195a49504bd975aa
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51807752"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53860729"
 ---
 # <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>方法: Web.config ファイルを変更して、動的にコンパイルされた ASP.NET Web アプリケーションをインストルメント化およびプロファイルする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -146,7 +146,7 @@ ms.locfileid: "51807752"
     |属性名|属性の値|  
     |--------------------|---------------------|  
     |**key**|**Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrLocation**|  
-    |**値**|`PerformanceToolsFolder` **\VSInstr.Exe**|  
+    |**value**|`PerformanceToolsFolder` **\VSInstr.Exe**|  
   
 4.  別の **add** 要素を **appSettings** 要素の子として追加します。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "51807752"
     |属性名|属性の値|  
     |--------------------|---------------------|  
     |**key**|**Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrTools**|  
-    |**値**|`PerformanceToolsFolder`|  
+    |**value**|`PerformanceToolsFolder`|  
   
      `PerformanceToolsFolder` は、プロファイラーの実行可能ファイルへのパスです。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] が既定の場所にインストールされている場合、値は **C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools** になります。  
   
@@ -226,9 +226,9 @@ ms.locfileid: "51807752"
   
 ```  
   
-## <a name="see-also"></a>関連項目  
- [方法: 動的にコンパイルされた ASP.NET アプリケーションをインストルメントし、詳細なタイミング データを収集する](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler-by-using-the-command-line.md)   
- [方法: 動的にコンパイルされた ASP.NET アプリケーションをインストルメントし、メモリ データを収集する](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line.md)
+## <a name="see-also"></a>「  
+ [方法: 動的にコンパイルされた ASP.NET アプリケーションをインストルメント化し、詳細なタイミング データを収集する](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler-by-using-the-command-line.md)   
+ [方法: 動的にコンパイルされた ASP.NET アプリケーションをインストルメント化し、メモリ データを収集する](/visualstudio/profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data?view=vs-2015)
 
 
 

@@ -1,8 +1,6 @@
 ---
 title: '方法: ClickOnce 信頼プロンプトの動作の構成 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -20,14 +18,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 103fcd8b47e423aaa8d66c3df96afe3598818de2
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
-ms.translationtype: MT
+ms.openlocfilehash: 6e9e0f9f0af2ba8dd30a64810bfa655001ef38a9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43774808"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53955179"
 ---
-# <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>方法: ClickOnce 信頼プロンプトの動作を構成します。
+# <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>方法: ClickOnce 信頼プロンプトの動作を構成する
 コントロールに、ClickOnce 信頼プロンプトを構成するには、エンドユーザーの Windows フォーム アプリケーション、Windows Presentation Foundation アプリケーション、コンソール アプリケーション、WPF ブラウザーなどの ClickOnce アプリケーションをインストールするオプションが提供されるかどうかアプリケーション、および Office ソリューション。 信頼プロンプトを構成するには、各エンドユーザーのコンピューターでレジストリ キーを設定します。  
   
  次の表では、それぞれの 5 つのゾーン (インターネット、UntrustedSites、MyComputer、LocalIntranet、およびしません) に適用できる構成オプションを示します。  
@@ -57,7 +55,7 @@ ms.locfileid: "43774808"
   
 1.  レジストリ エディターを開きます。  
   
-    1.  をクリックして**開始**、 をクリックし、**実行**します。  
+    1.  **[スタート]** ボタンをクリックし、**[ファイル名を指定して実行]** をクリックします。  
   
     2.  **オープン**ボックスに「 `regedit`、順にクリックします**OK**します。  
   
@@ -116,7 +114,7 @@ ms.locfileid: "43774808"
   
 1.  レジストリ エディターを開きます。  
   
-    1.  をクリックして**開始**、 をクリックし、**実行**します。  
+    1.  **[スタート]** ボタンをクリックし、**[ファイル名を指定して実行]** をクリックします。  
   
     2.  **オープン**ボックスに「 `regedit`、順にクリックします**OK**します。  
   
@@ -173,7 +171,7 @@ ms.locfileid: "43774808"
   
 1.  レジストリ エディターを開きます。  
   
-    1.  をクリックして**開始**、 をクリックし、**実行**します。  
+    1.  **[スタート]** ボタンをクリックし、**[ファイル名を指定して実行]** をクリックします。  
   
     2.  **オープン**ボックスに「 `regedit`、順にクリックします**OK**します。  
   
@@ -225,13 +223,13 @@ ms.locfileid: "43774808"
 3.  アプリケーションをビルドして実行します。  
   
 ## <a name="see-also"></a>関連項目  
- [セキュリティで保護された ClickOnce アプリケーション](../deployment/securing-clickonce-applications.md)   
+ [ClickOnce アプリケーションのセキュリティ保護](../deployment/securing-clickonce-applications.md)   
  [ClickOnce アプリケーションのコード アクセス セキュリティ](../deployment/code-access-security-for-clickonce-applications.md)   
  [ClickOnce と Authenticode](../deployment/clickonce-and-authenticode.md)   
- [信頼されたアプリケーション展開の概要](../deployment/trusted-application-deployment-overview.md)   
- [方法: ClickOnce のセキュリティ設定を有効にします。](../deployment/how-to-enable-clickonce-security-settings.md)   
- [方法: ClickOnce アプリケーションのセキュリティ ゾーンの設定](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
- [方法: ClickOnce アプリケーションのカスタム アクセス許可を設定](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
- [方法: ClickOnce アプリケーションをデバッグ アクセス許可の制限](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
- [方法: ClickOnce アプリケーションのクライアント コンピューターに信頼された発行元を追加](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)   
- [方法: アプリケーション マニフェストと配置マニフェストに再署名](../deployment/how-to-re-sign-application-and-deployment-manifests.md)
+ [信頼されたアプリケーションの配置の概要](../deployment/trusted-application-deployment-overview.md)   
+ [方法: ClickOnce セキュリティ設定を有効にする](../deployment/how-to-enable-clickonce-security-settings.md)   
+ [方法: ClickOnce アプリケーションのセキュリティ ゾーンを設定する](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
+ [方法: ClickOnce アプリケーションのカスタム アクセス許可を設定する](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
+ [方法: アクセス許可が制限された ClickOnce アプリケーションをデバッグする](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
+ [方法: ClickOnce アプリケーション用の信頼された発行者をクライアント コンピューターに追加する](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)   
+ [方法: アプリケーション マニフェストと配置マニフェストの再署名](../deployment/how-to-re-sign-application-and-deployment-manifests.md)

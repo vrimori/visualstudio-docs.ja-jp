@@ -19,15 +19,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1e43d118a5fcfe00a8eb6eaa7f34a17ff1f6a4be
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.openlocfilehash: 2f1eb51286ae2d64738b91d997a21596fa2a7c35
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389216"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53921472"
 ---
 # <a name="read-xml-data-into-a-dataset"></a>XML データのデータセットへの読み込み
 
@@ -51,7 +50,7 @@ ADO.NET では、XML データを操作するための単純なメソッドを�
 
 このチュートリアルでは、データセットに XML データの読み取りに重点を置いています、ため、XML ファイルの内容が提供されます。
 
-1. [プロジェクト] **メニューで [新しい項目の追加]** を選択します。
+1. **[プロジェクト]** メニューで **[新しい項目の追加]** を選択します。
 
 2. 選択**XML ファイル**、ファイルに名前を**authors.xml**、し、**追加**します。
 
@@ -152,7 +151,7 @@ ADO.NET では、XML データを操作するための単純なメソッドを�
     |コントロール|プロパティ|設定|
     |-------------|--------------|-------------|
     |`TextBox1`|**Multiline**|`true`|
-    ||ScrollBars|**垂直方向**|
+    ||**ScrollBars**|**垂直方向**|
     |`Button1`|**Name**|`ReadXmlButton`|
     ||**[テキスト]**|`Read XML`|
     |`Button2`|**Name**|`ShowSchemaButton`|

@@ -9,13 +9,12 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
-ms.openlocfilehash: 19634186e13574c322c2e9bcc636dda3a823b158
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 0c39eecadee0cad44c0e448051869b77022282e6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52896194"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53911901"
 ---
 # <a name="how-to-apply-distribution-to-pacing-delay-for-a-user-pace-test-mix-model"></a>方法: ユーザー ペースのテスト ミックス モデルに対する遅延のペースに分布を適用する
 
@@ -30,11 +29,11 @@ ms.locfileid: "52896194"
 
 **"遅延のペースに分布を適用"** の値は、true または false に設定できます。
 
-- **True**: **[テスト ミックスの編集]** ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** 列の値で指定された、標準的な統計分布による遅れを適用します。 詳細については、「[テキスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定する](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)」を参照してください。
+- **True**:**[テスト ミックスの編集]** ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** 列の値で指定された、標準的な統計分布による遅れを適用します。 詳細については、「[テキスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定する](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)」を参照してください。
 
      たとえば、テストの **[テスト ミックスの編集]** ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** の値を、1 時間あたり 2 ユーザーに設定したとします。 **"遅延のペースに分布を適用"** プロパティを **True** に設定すると、標準的な統計分布がテスト間の待機時間に適用されます。 1 時間につき 2 つのテストが実行されますが、その間隔は 30 分とは限りません。 最初のテストが 4 分後に実行されたり、2 回目のテストが 45 分後に実行されたりする場合があります。
 
-- **False**: **[テスト ミックスの編集]** ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** 列の値に指定したペースでテストを実行します。 詳細については、「[テキスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定する](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)」を参照してください。
+- **False**:**[テスト ミックスの編集]** ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** 列の値に指定したペースでテストを実行します。 詳細については、「[テキスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定する](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)」を参照してください。
 
      たとえば、テストの **[テスト ミックスの編集]** ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** の値を、1 時間あたり 2 ユーザーに設定したとします。 **"遅延のペースに分布を適用"** プロパティを **False** に設定すると、テスト実行時の設定を変更する余裕はなくなります。 テストは 30 分ごとに実行されます。 これにより、1 時間あたり 2 回のテストが行われます。
 
@@ -57,6 +56,6 @@ ms.locfileid: "52896194"
 ## <a name="see-also"></a>関連項目
 
 - [ロード テスト シナリオの編集](../test/edit-load-test-scenarios.md)
-- [チュートリアル: ロード テストの作成と実行](../test/walkthrough-create-and-run-a-load-test.md)
+- [チュートリアル: ロード テストの作成および実行](../test/walkthrough-create-and-run-a-load-test.md)
 - [テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)
 - [ロード テスト シナリオのプロパティ](../test/load-test-scenario-properties.md)

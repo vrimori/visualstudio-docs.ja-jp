@@ -1,8 +1,6 @@
 ---
 title: Copy タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#Copy
@@ -23,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a261c6c692fe0a1bc08f185f0b37c73e8838375
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: ba0e7e85f4367c775c8b9185c6c2684b728cc4d7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945924"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53943903"
 ---
 # <a name="copy-task"></a>Copy タスク
 ファイルをファイル システム上の新しい場所にコピーします。  
@@ -42,9 +40,9 @@ ms.locfileid: "37945924"
 |`DestinationFiles`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> ソース ファイルのコピー先ファイルの一覧を指定します。 この一覧のファイルは、`SourceFiles` パラメーターに指定した一覧の内容と 1 対 1 で対応している必要があります。 つまり、`SourceFiles` の最初のファイルは、`DestinationFiles` の最初の場所にコピーされ、2 番目以降のファイルも同様に処理されます。|  
 |`DestinationFolder`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> ファイルのコピー先ディレクトリを指定します。 ファイルではなく、ディレクトリである必要があります。 ディレクトリが存在しない場合は、自動的に作成されます。|  
 |`OverwriteReadOnlyFiles`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> ファイルが読み取り専用としてマークされている場合でも、ファイルを上書きします。|  
-|`Retries`|省略可能な `Int32` 型のパラメーターです。<br /><br /> コピーに失敗した場合の再試行回数を指定します。 既定値はゼロです。<br /><br /> **メモ:** 再試行を行った場合、ビルド処理で同期の問題が生じる可能性があるので注意してください。|  
+|`Retries`|省略可能な `Int32` 型のパラメーターです。<br /><br /> コピーに失敗した場合の再試行回数を指定します。 既定値はゼロです。<br /><br /> **注:** 再試行を使用することにより、ビルド処理の同期の問題が隠されてしまう場合があります。|  
 |`RetryDelayMilliseconds`|省略可能な `Int32` 型のパラメーターです。<br /><br /> 再試行の間隔を指定します。 既定値は RetryDelayMillisecondsDefault 引数であり、これが CopyTask コンストラクターに渡されます。|  
-|`SkipUnchangedFiles`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` に設定すると、コピー元のファイルとコピー先のファイルで変更がない場合、コピー処理がスキップされます。 `Copy` タスクでは、ファイルのサイズが等しく、最終更新時刻が等しい場合、ファイルは変更されていないと見なされます。 <br /><br /> **メモ:** このパラメーターに `true` を設定した場合は、コピー先のファイルに対して依存関係分析を行わないでください。この設定を行った場合には、ソース ファイルの最終更新時刻が、コピー先のファイルの最終更新時刻よりも新しい場合にだけ、タスクが実行されるためです。|  
+|`SkipUnchangedFiles`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` に設定すると、コピー元のファイルとコピー先のファイルで変更がない場合、コピー処理がスキップされます。 `Copy` タスクでは、ファイルのサイズが等しく、最終更新時刻が等しい場合、ファイルは変更されていないと見なされます。 <br /><br /> **注:** このパラメーターに `true` を設定した場合は、コピー先のファイルに対して依存関係分析を行わないでください。この設定を行った場合には、ソース ファイルの最終更新時刻が、コピー先のファイルの最終更新時刻よりも新しい場合にだけ、タスクが実行されるためです。|  
 |`SourceFiles`|必須の <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> コピー元となるファイルを指定します。|  
 |`UseHardlinksIfPossible`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、ファイルがコピーされるのではなく、コピーされたファイルのハード リンクが作成されます。|  
   

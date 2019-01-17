@@ -1,8 +1,6 @@
 ---
 title: 関数ビュー - .NET メモリ インストルメンテーション データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Functions view
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: d48393a2d160e3691069a4b5f86dd814b63d935d
-ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
+ms.openlocfilehash: b578fd091b0b7473eb9e09e8c1eb13510c9e1b84
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35237683"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53962335"
 ---
 # <a name="functions-view---net-memory-instrumentation-data"></a>関数ビュー - .NET メモリ インストルメンテーション データ
 インストルメンテーション メソッドを使用して収集された .NET メモリの割り当てプロファイル データの関数ビューには、プロファイル実行中にメモリを割り当てた関数がリストされます。 関数行では、その関数の割り当てのサイズと数、およびタイミング データが報告されます。  
@@ -102,4 +100,4 @@ ms.locfileid: "35237683"
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [関数ビュー - サンプリング](../profiling/functions-view-dotnet-memory-sampling-data.md)   
  [関数ビュー](../profiling/functions-view-instrumentation-data.md)   
- [関数 ビュー](../profiling/functions-view-sampling-data.md)
+ [関数ビュー](../profiling/functions-view-sampling-data.md)

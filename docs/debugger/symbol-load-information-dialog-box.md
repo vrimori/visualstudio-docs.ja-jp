@@ -1,8 +1,6 @@
 ---
-title: シンボルの読み込み情報 ダイアログ ボックス |Microsoft ドキュメント
-ms.custom: ''
+title: シンボルの読み込み情報 ダイアログ ボックス |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.symbols.loadinfo
@@ -17,22 +15,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cd9cca539a79e6779a3b886223d407db19b6e14
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: d320d814f1c20e1aee9b13c83c01be8290a5ead6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31475419"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53850191"
 ---
 # <a name="symbol-load-information-dialog-box"></a>[シンボルの読み込み情報] ダイアログ ボックス
-**シンボルの読み込み情報**を右クリックしてダイアログ ボックスが開きます、**モジュール**ウィンドウを選択して**シンボルの読み込み情報**です。  
+**[モジュール]** ウィンドウを右クリックし、**[シンボルの読み込み情報]** を選択すると、**[シンボルの読み込み情報]** ダイアログ ボックスが開きます。  
   
 ## <a name="uielement-list"></a>UIElement の一覧  
  **情報**  
- Visual Studio に基づくシンボル ファイル (PDB ファイル) のインストールの設定およびシンボル設定に対して行った変更を検索するディレクトリを示しています、**オプション** ダイアログ ボックス。  
+ Visual Studio のインストール設定と、**[オプション]** ダイアログ ボックスのシンボル設定の変更に基づいて、シンボル ファイル (PDB ファイル) で検索されるディレクトリが表示されます。  
   
  **シンボルの設定**  
- シンボル設定を変更するには、このボタンをクリックして、**オプション** ダイアログ ボックス (**デバッグ**カテゴリ、**シンボル** ページ)。 このページで、シンボル位置の追加または削除、シンボル サーバーを使用しているときはローカルのキャッシュ位置の指定、およびシンボルの位置を検索するときの制御を行うことができます。  
+ このボタンをクリックして、**[オプション]** ダイアログ ボックス (**[デバッグ]** カテゴリの **[シンボル]** ページ) のシンボル設定を変更します。 このページで、シンボル位置の追加または削除、シンボル サーバーを使用しているときはローカルのキャッシュ位置の指定、およびシンボルの位置を検索するときの制御を行うことができます。  
   
-## <a name="see-also"></a>関連項目  
- [シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
+## <a name="see-also"></a>「  
+ [シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

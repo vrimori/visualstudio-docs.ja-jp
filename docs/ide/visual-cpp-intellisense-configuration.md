@@ -1,19 +1,18 @@
 ---
 title: IntelliSense の C++ プロジェクトを構成する
 ms.date: 10/08/2018
-ms.technology: vs-ide-general
 ms.topic: conceptual
 author: mblome
 ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3772c2c910188aacb675f267d20f5e0f16565001
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 64b14c27ffce1d2818b1ce38cdea72f63f9a7e28
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49836646"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53864875"
 ---
 # <a name="configure-a-c-project-for-intellisense"></a>IntelliSense の C++ プロジェクトを構成する
 
@@ -49,7 +48,7 @@ NMake プロジェクト テンプレートに基づくメイクファイル プ
 
 ![メイクファイル プロジェクトのインクルード パス](media/vcpp-intellisense-makefile-include-paths.png)
 
-詳細については、「[方法 : メイクファイル プロジェクトで IntelliSense を使用可能にする](/cpp/ide/how-to-enable-intellisense-for-makefile-projects)」を参照してください。
+詳細については、「[方法 :メイクファイル プロジェクトで IntelliSense を使用可能にする](/cpp/ide/how-to-enable-intellisense-for-makefile-projects)」を参照してください。
 
 ### <a name="open-folder-projects"></a>"フォルダーを開く" プロジェクト
 
@@ -125,6 +124,6 @@ IntelliSense のビルドでは、バイナリは作成されませんが、そ�
 
 環境変数 TRACEDESIGNTIME の詳細については、[Roslyn](https://github.com/dotnet/roslyn/wiki/Diagnosing-Project-System-Build-Errors)と[共通プロジェクト システム](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md)に関するページを参照してください。 これらの記事の情報は、C++ プロジェクトに関連します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Visual C++ IntelliSense](visual-cpp-intellisense.md)

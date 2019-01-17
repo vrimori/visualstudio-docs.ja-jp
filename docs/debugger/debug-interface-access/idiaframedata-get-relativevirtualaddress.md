@@ -1,8 +1,6 @@
 ---
 title: Idiaframedata::get_relativevirtualaddress |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 191fab5bc92453f9b9e85d0390d10208cedfbbe9
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: f99c7fec3afa2f086f835d0d6295bafdcbdfdf29
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49916120"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53910573"
 ---
 # <a name="idiaframedatagetrelativevirtualaddress"></a>IDiaFrameData::get_relativeVirtualAddress
 フレームのコードの相対仮想アドレス (RVA) を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49916120"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_relativeVirtualAddress (   
+HRESULT get_relativeVirtualAddress (   
    DWORD* pRetVal  
 );  
 ```  
@@ -37,7 +35,7 @@ HRESULT get_relativeVirtualAddress (
  [out]フレームのコードの相対仮想アドレスを返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

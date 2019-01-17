@@ -1,8 +1,6 @@
 ---
 title: パフォーマンス ツール データの保存とエクスポート | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - performance tools, saving and exporting reports
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8136369a09145c46c7989bebe12796642851a7b0
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 9bb2020ff396eef3dd9dad4c0ed2e2fd015e0fd6
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35669266"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53838373"
 ---
 # <a name="save-and-export-performance-tools-data"></a>パフォーマンス ツール データの保存とエクスポート
 この記事では、パフォーマンス データ ファイルを保存およびエクスポートする方法について説明します。  

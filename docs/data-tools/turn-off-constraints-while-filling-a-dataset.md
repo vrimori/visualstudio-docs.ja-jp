@@ -46,7 +46,7 @@ ms.locfileid: "53951460"
 
 ## <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>データセット デザイナーを使って更新制約を中断するには
 
-1.  データセット デザイナー**でデータセットを開きます。 詳細については、「[チュートリアル:データセット デザイナーでデータセットを作成する](walkthrough-creating-a-dataset-with-the-dataset-designer.md)します。
+1.  **データセット デザイナー**でご自分のデータセットを開きます。 詳細については、「[チュートリアル:データセット デザイナーでデータセットを作成する](walkthrough-creating-a-dataset-with-the-dataset-designer.md)します。
 
 2.  **[プロパティ]** ウィンドウで、 <xref:System.Data.DataSet.EnforceConstraints%2A> プロパティを `false`に設定します。
 

@@ -1,8 +1,6 @@
 ---
 title: '方法: ビルドからファイルを除外する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, wildcards
@@ -14,18 +12,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b2adfd3d571fe16fcbfe273e5513ebea724403cd
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 9ed8eeca4655761e0696184fdfc0d146ece06117
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39080689"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53833285"
 ---
 # <a name="how-to-exclude-files-from-the-build"></a>方法: ビルドからファイルを除外する
 プロジェクト ファイルでは、ワイルドカードを使用して、1 つのディレクトリ内のすべてのファイル、または入れ子にされたディレクトリのセットをビルドの入力として使用することができます。 しかし、ディレクトリ内の 1 つのファイル、または入れ子にされたディレクトリのセット内の 1 つのディレクトリをビルドの入力に含めたくない場合もあります。 そのファイルまたはディレクトリは、入力の一覧から明示的に除外できます。 また、特定の条件のもとでのみ含めることを望むファイルがプロジェクトに存在することもあります。 ファイルをビルドに含める条件を明示的に宣言できます。  
   
 ## <a name="exclude-a-file-or-directory-from-the-inputs-for-a-build"></a>ビルドの入力からファイルまたはディレクトリを除外する  
- 項目リストは、ビルドの入力ファイルです。 `Include` 属性を使用して、含める項目を個別にまたはグループとして宣言します。 例:  
+ 項目リストは、ビルドの入力ファイルです。 `Include` 属性を使用して、含める項目を個別にまたはグループとして宣言します。 次に例を示します。  
   
 ```xml  
 <CSFile Include="Form1.cs"/>  

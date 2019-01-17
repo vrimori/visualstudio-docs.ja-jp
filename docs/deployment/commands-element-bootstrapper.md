@@ -1,8 +1,6 @@
 ---
 title: '&lt;コマンド&gt;要素 (ブートス トラップ) |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - FSharp
@@ -17,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 785df23b3d76573182eeb97efc5b359e7298a009
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
-ms.translationtype: MT
+ms.openlocfilehash: 2370f8e394727c0a4f83488a77096b10cb36746c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39077956"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53990452"
 ---
 # <a name="ltcommandsgt-element-bootstrapper"></a>&lt;コマンド&gt;要素 (ブートス トラップ)
 `Commands`要素は、テストの下にある要素の説明を実装、`InstallChecks`要素と、パッケージを宣言し、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]テストが失敗した場合、ブートス トラップをインストールする必要があります。  
@@ -72,14 +70,14 @@ ms.locfileid: "39077956"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Reboot`|任意。 再起動終了コードを返さない、パッケージのいずれかの場合、システムを再起動する必要があるかどうかを判断します。 次に、有効な値を示します。<br /><br /> `Defer`。 再起動は、いくつかの将来の時刻まで延期されます。<br /><br /> `Immediate`。 パッケージの 1 つ再起動終了コードが返される場合がすぐに再起動されます。<br /><br /> `None`。 再起動の要求を無視するとします。<br /><br /> 既定値は `Immediate` です。|  
+|`Reboot`|任意。 再起動終了コードを返さない、パッケージのいずれかの場合、システムを再起動する必要があるかどうかを判断します。 次に、有効な値を示します。<br /><br /> `Defer`。 再起動は、いくつかの将来の時刻まで延期されます。<br /><br /> `Immediate`。 パッケージの 1 つ再起動終了コードが返される場合がすぐに再起動されます。<br /><br /> `None`。 再起動の要求を無視するとします。<br /><br /> 既定値は、`Immediate` です。|  
   
 ## <a name="command"></a>コマンド  
  `Command` 要素は、`Commands` 要素の子要素です。 A`Commands`要素は、1 つ以上を持つことができます`Command`要素。 要素には、次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`PackageFile`|必須。 インストールするパッケージの名前は、指定した条件の 1 つ以上必要があります。 `InstallConditions` false を返します。 使用して同じファイルでパッケージを定義する必要があります、`PackageFile`要素。|  
+|`PackageFile`|必須です。 インストールするパッケージの名前は、指定した条件の 1 つ以上必要があります。 `InstallConditions` false を返します。 使用して同じファイルでパッケージを定義する必要があります、`PackageFile`要素。|  
 |`Arguments`|任意。 パッケージ ファイルに渡すコマンドライン引数のセット。|  
 |`EstimatedInstallSeconds`|任意。 推定時間 (秒)、パッケージのインストールにかかります。 この値は、ブートス トラップがユーザーに表示する進行状況バーのサイズを決定します。 既定値は 0、後者推定値が指定されていない時間です。|  
 |`EstimatedDiskBytes`|任意。 インストールした後、パッケージによって占有されるバイト単位でのディスク領域の推定量が完了しました。 この値は、ブートス トラップをユーザーに表示するディスク容量の要件で使用されます。 既定では 0、ハード_ディスク容量要件は、ブートス トラップの場合に表示されません。|  
@@ -96,9 +94,9 @@ ms.locfileid: "39077956"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Property`|必須。 テストするプロパティの名前。 子でプロパティ以前おく必要があります、`InstallChecks`要素。 詳細については、次を参照してください。 [ \<InstallChecks > 要素](../deployment/installchecks-element-bootstrapper.md)します。|  
-|`Compare`|必須。 実行する比較の種類。 次に、有効な値を示します。<br /><br /> `ValueEqualTo`, `ValueNotEqualTo`, `ValueGreaterThan`, `ValueGreaterThanOrEqualTo`, `ValueLessThan`, `ValueLessThanOrEqualTo`, `VersionEqualTo`, `VersionNotEqualTo`, `VersionGreaterThan`, `VersionGreaterThanOrEqualTo`, `VersionLessThan`, `VersionLessThanOrEqualTo`, `ValueExists`, `ValueNotExists`|  
-|`Value`|必須。 プロパティと比較する値。|  
+|`Property`|必須です。 テストするプロパティの名前。 子でプロパティ以前おく必要があります、`InstallChecks`要素。 詳細については、次を参照してください。 [ \<InstallChecks > 要素](../deployment/installchecks-element-bootstrapper.md)します。|  
+|`Compare`|必須です。 実行する比較の種類。 次に、有効な値を示します。<br /><br /> `ValueEqualTo`, `ValueNotEqualTo`, `ValueGreaterThan`, `ValueGreaterThanOrEqualTo`, `ValueLessThan`, `ValueLessThanOrEqualTo`, `VersionEqualTo`, `VersionNotEqualTo`, `VersionGreaterThan`, `VersionGreaterThanOrEqualTo`, `VersionLessThan`, `VersionLessThanOrEqualTo`, `ValueExists`, `ValueNotExists`|  
+|`Value`|必須です。 プロパティと比較する値。|  
 |`Schedule`|任意。 名前、`Schedule`このルールを評価するときに定義するタグ。|  
   
 ## <a name="failif"></a>FailIf  
@@ -108,24 +106,24 @@ ms.locfileid: "39077956"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Property`|必須。 テストするプロパティの名前。 子でプロパティ以前おく必要があります、`InstallChecks`要素。 詳細については、次を参照してください。 [ \<InstallChecks > 要素](../deployment/installchecks-element-bootstrapper.md)します。|  
-|`Compare`|必須。 実行する比較の種類。 次に、有効な値を示します。<br /><br /> `ValueEqualTo`, `ValueNotEqualTo`, `ValueGreaterThan`, `ValueGreaterThanOrEqualTo`, `ValueLessThan`, `ValueLessThanOrEqualTo`, `VersionEqualTo`, `VersionNotEqualTo`, `VersionGreaterThan`, `VersionGreaterThanOrEqualTo`, `VersionLessThan`, `VersionLessThanOrEqualTo`, `ValueExists`, `ValueNotExists`|  
-|`Value`|必須。 プロパティと比較する値。|  
+|`Property`|必須です。 テストするプロパティの名前。 子でプロパティ以前おく必要があります、`InstallChecks`要素。 詳細については、次を参照してください。 [ \<InstallChecks > 要素](../deployment/installchecks-element-bootstrapper.md)します。|  
+|`Compare`|必須です。 実行する比較の種類。 次に、有効な値を示します。<br /><br /> `ValueEqualTo`, `ValueNotEqualTo`, `ValueGreaterThan`, `ValueGreaterThanOrEqualTo`, `ValueLessThan`, `ValueLessThanOrEqualTo`, `VersionEqualTo`, `VersionNotEqualTo`, `VersionGreaterThan`, `VersionGreaterThanOrEqualTo`, `VersionLessThan`, `VersionLessThanOrEqualTo`, `ValueExists`, `ValueNotExists`|  
+|`Value`|必須です。 プロパティと比較する値。|  
 |`String`|任意。 障害発生時にユーザーに表示するテキスト。|  
 |`Schedule`|任意。 名前、`Schedule`このルールを評価するときに定義するタグ。|  
   
 ## <a name="exitcodes"></a>ExitCodes  
- `ExitCodes`要素の子である、`Command`要素。 `ExitCodes`要素は、1 つ以上含まれています。`ExitCode`要素で、インストールが終了コードをパッケージからの応答で行う必要がありますを決定します。 1 つできます省略可能な`ExitCode`下にある要素を`Command`要素。 `ExitCodes` 属性はありません。  
+ `ExitCodes`要素の子である、`Command`要素。 `ExitCodes`要素は、1 つ以上含まれています。`ExitCode`要素で、インストールが終了コードをパッケージからの応答で行う必要がありますを決定します。 1 つできます省略可能な`ExitCode`下にある要素を`Command`要素。 `ExitCodes` に属性はありません。  
   
 ## <a name="exitcode"></a>ExitCode  
  `ExitCode`要素の子である、`ExitCodes`要素。 `ExitCode`要素は、インストールが終了コードをパッケージからの応答で行う必要がありますを決定します。 `ExitCode` 子要素が含まれていない、次の属性です。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Value`|必須。 この終了コード値`ExitCode`要素に適用されます。|  
-|`Result`|必須。 どのインストールは、この終了コードに対応する必要があります。 次に、有効な値を示します。<br /><br /> `Success`。 正常にインストールされたパッケージのフラグを設定します。<br /><br /> `SuccessReboot`。 正常にインストールされた、パッケージのフラグを設定して、システムを再起動するように指示します。<br /><br /> `Fail`。 失敗したパッケージのフラグを設定します。<br /><br /> `FailReboot`。 失敗と、パッケージのフラグを設定し、システムを再起動するように指示します。|  
+|`Value`|必須です。 この終了コード値`ExitCode`要素に適用されます。|  
+|`Result`|必須です。 どのインストールは、この終了コードに対応する必要があります。 次に、有効な値を示します。<br /><br /> `Success`。 正常にインストールされたパッケージのフラグを設定します。<br /><br /> `SuccessReboot`。 正常にインストールされた、パッケージのフラグを設定して、システムを再起動するように指示します。<br /><br /> `Fail`。 失敗したパッケージのフラグを設定します。<br /><br /> `FailReboot`。 失敗と、パッケージのフラグを設定し、システムを再起動するように指示します。|  
 |`String`|任意。 この終了コードへの応答でユーザーに表示する値。|  
-|`FormatMessageFromSystem`|任意。 終了コードに対応するシステム提供のエラー メッセージを使用するかで指定された値を使用するかどうかを判断します`String`します。 有効な値は`true`、システム指定のエラーを使用する場合はこれと`false`、によって提供される文字列を使用することを表す`String`します。 既定値は `false` です。 このプロパティは、する場合`false`が`String`が設定された場合、システム指定のエラーが使用されます。|  
+|`FormatMessageFromSystem`|任意。 終了コードに対応するシステム提供のエラー メッセージを使用するかで指定された値を使用するかどうかを判断します`String`します。 有効な値は`true`、システム指定のエラーを使用する場合はこれと`false`、によって提供される文字列を使用することを表す`String`します。 既定値は、`false` です。 このプロパティは、する場合`false`が`String`が設定された場合、システム指定のエラーが使用されます。|  
   
 ## <a name="example"></a>例  
  次のコード例では、.NET Framework 2.0 をインストールするためのコマンドを定義します。  

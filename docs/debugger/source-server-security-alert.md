@@ -1,8 +1,6 @@
 ---
 title: ソース サーバーのセキュリティ警告 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.sourceserver.enablewarning
@@ -17,22 +15,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 145dd426390e84ae8bf9be14ad3266c3006e22da
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
-ms.translationtype: MT
+ms.openlocfilehash: e01f9c06ec989829a27c58b7dae9b128512911e9
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43774673"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53909919"
 ---
 # <a name="source-server-security-alert"></a>ソース サーバー のセキュリティ警告
 ソース サーバーの使用時は、認識できて信頼できる場所からのシンボル ファイルのみを使用してください。  
   
- ソース サーバーのサポートを有効にすると、この警告が表示されます。 ソース サーバーのコマンドは、デバッグ シンボル ファイルに埋め込まれている (**\*.pdb**ファイル)。 PDB ファイルの作成元を確認してください。  
+ ソース サーバーのサポートを有効にすると、この警告が表示されます。 ソース サーバーのコマンドは、デバッグ シンボル ファイル (**\*.pdb** ファイル) に埋め込まれています。 PDB ファイルの作成元を確認してください。  
   
 > [!IMPORTANT]
->  ソース サーバーを使用する場合、注意が必要なセキュリティ上の脅威があります。たとえば、アプリケーションの PDB ファイルには任意のコマンドを埋め込むことができます。そのため、srcsrv.ini ファイルには、実行するコマンドのみを配置するようにします。 srcsvr.ini ファイルにないコマンドを実行しようとすると、確認のダイアログ ボックスが表示されます。 詳細については、「 [Security Warning: Debugger Must Execute Untrusted Command](../debugger/security-warning-debugger-must-execute-untrusted-command.md)」を参照してください。 コマンド パラメーターでは何も検証されないため、コマンドを信頼するときは注意してください。 たとえば、cmd.exe を信頼した場合、悪意のあるユーザーが危険な動作を実行するようにコマンドにパラメーターを指定する可能性があります。  
+>  次の潜在的なセキュリティの脅威は、移行元サーバーを使用する場合を考慮する必要があります。アプリケーションの .pdb ファイルには任意のコマンドを埋め込むことができるため、srcsrv.ini ファイルには実行するコマンドのみ配置するようにします。 srcsvr.ini ファイルにないコマンドを実行しようとすると、確認のダイアログ ボックスが表示されます。 詳細については、次を参照してください。[セキュリティ警告。デバッガーは信頼されないコマンドを実行する必要があります](../debugger/security-warning-debugger-must-execute-untrusted-command.md)。 コマンド パラメーターでは何も検証されないため、コマンドを信頼するときは注意してください。 たとえば、cmd.exe を信頼した場合、悪意のあるユーザーが危険な動作を実行するようにコマンドにパラメーターを指定する可能性があります。  
   
-## <a name="see-also"></a>関連項目  
- [シンボル (.pdb) を指定し、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
+## <a name="see-also"></a>「  
+ [シンボル (.pdb) とソース ファイルの指定](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
- [移行元サーバー](/windows/desktop/Debug/source-server-and-source-indexing)
+ [ソース サーバー](/windows/desktop/Debug/source-server-and-source-indexing)

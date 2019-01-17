@@ -1,8 +1,6 @@
 ---
-title: '方法 : インストルメンテーションで短い関数を除外または含める | Microsoft Docs'
-ms.custom: ''
+title: '方法: インストルメンテーションで短い関数を除外または含める | Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - profiling tools, instrument events
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c6234db781925e8c0558513cb7e8bc608b5cfea
-ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
+ms.openlocfilehash: adeff3a6f068c5432f1640cd96752a84228b8ad9
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814685"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53896111"
 ---
 # <a name="how-to-exclude-or-include-short-functions-from-instrumentation"></a>方法: インストルメンテーションで短い関数を除外または含める
 既定では、プロファイリング ツールは*小規模関数*をインストルメンテーションから除外します。 小規模関数とは、関数の呼び出しを行わない短い関数のことです。 小規模関数を除外すると、インストルメンテーション オーバーヘッドが軽減するため、インストルメンテーションの速度が向上します。 また、小規模関数の除外によりパフォーマンス プロファイル データ ファイル (.*vsp*) のサイズが小さくなるため、分析に要する時間が短縮されます。 小規模関数が除外されると、その親関数の排他時間と包括時間に対して、小規模関数に費やされる時間が除外されます。 次に、インストルメンテーションで小規模関数を除外または含める手順について説明します。  

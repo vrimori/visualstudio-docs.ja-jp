@@ -2,7 +2,6 @@
 title: '方法: 型の間の関連付けを作成する (クラス デザイナー)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.associationline
@@ -18,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b27530abeec1c01b5537fd91bfbe3e0e10448af
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 77f957e112835c138a84accbdc7070f1217fc963
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958556"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53916602"
 ---
 # <a name="how-to-create-associations-between-types-in-class-designer"></a>方法: クラス デザイナーで型の間の関連付けを作成する
 

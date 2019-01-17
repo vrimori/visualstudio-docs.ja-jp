@@ -1,8 +1,6 @@
 ---
-title: 'エラー: web サーバーが正しく構成されていません |Microsoft ドキュメント'
-ms.custom: ''
+title: エラー :Web サーバーが正しく構成されていない |Microsoft Docs
 ms.date: 09/20/2017
-ms.technology: vs-ide-debug
 ms.topic: troubleshooting
 f1_keywords:
 - vs.debug.remote.projnotconfigured
@@ -18,37 +16,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c9ff79148af491ee27aeae20b66b4d7b742bef6b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 2606304ba68530c7ec893dae9cbb4954cae33112
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31471854"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53887491"
 ---
-# <a name="error-the-web-server-is-not-configured-correctly"></a>エラー : Web サーバーは正しく構成されていません。
+# <a name="error-the-web-server-is-not-configured-correctly"></a>エラー :Web サーバーは正しく構成されていません。
 
-問題を解決するのにはここで詳細な手順を行った後、デバッグを再試行する前に、IIS をリセットする必要もあります。 管理者コマンド プロンプトを開き、」と入力して実行できます`iisreset`です。
+ここで説明するには、問題を解決する手順を実行した後と、デバッグをもう一度試す前に IIS をリセットする必要もあります。 管理者のコマンド プロンプトを開き、入力を行うことができます`iisreset`します。
 
-この問題を解決するのには次の手順を実行します。
+この問題を解決するのには次の手順を実行するには。
 
-1. として、サーバーでホストされている web アプリが構成されている場合、リリース ビルドは、デバッグ ビルドでとして再発行し、web.config ファイルが含まれていることを確認`debug=true`compilation 要素にします。 IIS と再試行をリセットします。
+1. リリース ビルドでは、デバッグ ビルドとしてを再発行し、web.config ファイルが含まれていることを確認として、サーバーでホストされている web アプリが構成されている場合`debug=true`compilation 要素にします。 IIS と再試行をリセットします。
 
-    たとえば、リリース ビルドで、公開プロファイルを使用している場合デバッグに変更し、再発行します。 それ以外の場合、デバッグ属性に設定する`false`をパブリッシュする場合。
+    たとえば、リリース ビルドを発行プロファイルを使用している場合デバッグに変更し、再発行します。 Debug 属性に設定する場合は、`false`を発行するとします。
 
-2. (IIS)物理パスが正しいことを確認します。 IIS でこの設定を検索する**基本設定 > 物理パス**(または**詳細設定**古いバージョンの IIS で)。
+2. (IIS)物理パスが正しいことを確認します。 IIS では、この設定でを検索する**基本設定 > 物理パス**(または**詳細設定**古いバージョンの IIS で)。
 
-    Web アプリケーションが、別のコンピューターにコピー、手動での名前を変更または移動する場合に物理パスを正しいできない可能性があります。 IIS と再試行をリセットします。
+    Web アプリケーションが別のコンピューターにコピーされる、手動での名前変更または移動する場合に物理パスを正しいできない可能性があります。 IIS と再試行をリセットします。
 
-3. Visual Studio でローカルでデバッグする場合は、プロパティで、適切なサーバーが選択されていることを確認します。 (開いている**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類によって異なります。 Web フォームは、プロジェクトを開く**プロパティ ページ > 開始オプション > サーバー**)。
+3. Visual Studio でローカルでデバッグいる場合は、プロパティで正しいサーバーが選択されていることを確認します。 (開いている**プロパティ > Web > サーバー**または**プロパティ > デバッグ**プロジェクトの種類によって異なります。 Web フォーム プロジェクトを開く**プロパティ ページ > オプションの開始 > サーバー**)。
 
-    IIS などの外部 (カスタム) サーバーを使用している場合、URL が正しい場合があります。 それ以外の場合、IIS Express と [再試行] を選択します。
+    IIS などの外部の (カスタム) サーバーを使用している場合、URL が正しくなければなりません。 それ以外の場合、IIS Express と [再試行] を選択します。
 
-4. (IIS)サーバーの正しいバージョンの ASP.NET がインストールされていることを確認します。
+4. (IIS)正しいバージョンの ASP.NET がサーバーにインストールされていることを確認します。
 
-    Visual Studio プロジェクトと IIS で ASP.NET のバージョンが一致しないには、この問題が発生します。 Web.config のフレームワークのバージョンを設定する必要があります。IIS で ASP.NET をインストールするには、使用、 [Web Platform Installer (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)です。 またを参照してください[IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)または ASP.NET Core [IIS と Windows 上のホスト](https://docs.asp.net/en/latest/publishing/iis.html)です。
+    Visual Studio プロジェクトと IIS で ASP.NET のバージョンの不一致には、この問題が発生します。 Web.config で、フレームワークのバージョンを設定する必要があります。IIS で ASP.NET をインストールするには、使用、 [Web Platform Installer (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)します。 またを参照してください[IIS 8.0 を使用して ASP.NET 3.5 および ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)または ASP.NET Core, [IIS と Windows 上のホスト](https://docs.asp.net/en/latest/publishing/iis.html)します。
   
-4. 場合、 `maxConnection` IIS での制限が低すぎると接続が多すぎますがある、する必要があります[接続制限を増やす](/iis/configuration/system.applicationhost/sites/sitedefaults/limits)です。
+4. 場合、 `maxConnection` IIS での制限が小さすぎる、接続が多すぎますがあるとする必要があります、[接続制限を増やす](/iis/configuration/system.applicationhost/sites/sitedefaults/limits)します。
   
-## <a name="see-also"></a>関連項目  
- [ASP.NET の IIS のリモート コンピューター上でリモート デバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)   
- [Web アプリケーションのデバッグ : エラーおよびトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
+## <a name="see-also"></a>「  
+ [リモートの IIS コンピューター上の ASP.NET のリモート デバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)   
+ [Web アプリケーションのデバッグ: エラーとトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

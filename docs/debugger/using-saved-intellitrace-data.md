@@ -15,14 +15,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ffcb30827906438a848051226d59794a7d5641a5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c348bc105d997e07dcbc6ee373c2952e16c572cf
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53836911"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227786"
 ---
-# <a name="using-saved-intellitrace-data"></a>保存された IntelliTrace データの使用
+# <a name="using-saved-intellitrace-data-c-visual-basic-c"></a>保存された IntelliTrace データを使用して (C#、Visual Basic、C++)
+
 IntelliTrace ログ (.iTrace) ファイルからデバッグを開始するときに、アプリケーションの実行においての特定のポイントに移動します。 このファイルには、アプリの実行中に IntelliTrace によって記録された、パフォーマンス イベント、例外、スレッド、テスト ステップ、モジュール、およびその他のシステム情報が格納されています。
 
  次のソリューションがあることを確認します。

@@ -1,8 +1,6 @@
 ---
 title: エディット コンティニュ (Visual C) |Microsoft Docs
-ms.custom: ''
 ms.date: 05/31/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -19,44 +17,44 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e468f75abbadbe46ea973a5c04d2e286fcfaca5
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 5be5c3cb48f2cd9846c9b40c967cf830c30f4d8e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49867703"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53922995"
 ---
 # <a name="edit-and-continue-visual-c"></a>エディット コンティニュ (Visual C++)
 Visual C++ プロジェクトでエディット コンティニュを使用できます。 参照してください[サポートされているコードの変更 (C++)](../debugger/supported-code-changes-cpp.md)エディット コンティニュの制限事項についてはします。
   
 Visual Studio 2015 Update 3 の機能強化の詳細については、次を参照してください。 [Visual Studio 2015 Update 3 で C++ のエディット コンティニュ](https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/)します。  
   
- [(デバッグ機能の強化に最適化された)/Zo](/cpp/build/reference/zo-enhance-optimized-debugging)なしでコンパイルされたバイナリのシンボル (.pdb) ファイルに追加します追加情報を Visual Studio 2013 Update 3 で導入されたコンパイラ オプション、 [/Od (無効 (デバッグ))](https://msdn.microsoft.com/library/aafb762y.aspx)オプション。  
+ Visual Studio 2013 Update 3 で導入された [/Zo (最適化されたデバッグ機能の強化)](/cpp/build/reference/zo-enhance-optimized-debugging) コンパイラ オプションは、[/Od (無効 (デバッグ))](https://msdn.microsoft.com/library/aafb762y.aspx) オプションなしでコンパイルされたバイナリの .pdb (シンボル) ファイルに情報を追加します。  
   
- **/Zo**エディット コンティニュを無効にします。 参照してください[方法: 最適化されたコードをデバッグ](../debugger/how-to-debug-optimized-code.md)します。  
+ **/Zo**エディット コンティニュを無効にします。 「[方法:最適化されたコードをデバッグする](../debugger/how-to-debug-optimized-code.md)」を参照してください。  
   
 ##  <a name="BKMK_Enable_or_disable_automatic_invocation_of_Edit_and_Continue"></a> エディット コンティニュを有効または無効にする  
  現在のデバッグ セッション中に適用しないコードの編集を行う場合は、エディット コンティニュの自動起動を無効にすることもできます。 自動エディット コンティニュをもう一度有効にすることもできます。
 
 > [!IMPORTANT]
-> 必要なビルド設定やその他の機能の互換性についてを参照してください C++ のエディット コンティニュ [Visual Studio 2015 Update 3](https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/です。
+> 必要なビルドの設定と機能の互換性に関する他の情報は、[C++ のエディット コンティニュで Visual Studio 2015 Update 3] を参照してください (https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/します。
   
 1. デバッグ セッションの場合は、デバッグを停止 (**shift キーを押しながら f5 キーを押して**)。
 
 2. **[ツール]** メニューの **[オプション]** をクリックします。
   
-3. **オプション**ダイアログ ボックスで、**デバッグ > 全般**します。
+3. **[オプション]** ダイアログ ボックスで、**[デバッグ] > [全般]** を選択します。
 
 4. 有効にするには、**編集を有効にして続行**します。 無効にするには、チェック ボックスをオフにします。
   
 5. **[エディット コンティニュ]** グループで、 **[ネイティブのエディット コンティニュを有効にする]** チェック ボックスをオンまたはオフにします。  
   
-   この設定を変更すると、作業するすべてのプロジェクトに影響します。 この設定の変更後にアプリケーションをリビルドする必要はありません。 コマンドラインまたはメイクファイルでアプリケーションをビルドする Visual Studio 環境でデバッグする場合は、引き続き使えるエディット コンティニュを設定する場合、 **/ZI**オプション。  
+   この設定を変更すると、作業するすべてのプロジェクトに影響します。 この設定の変更後にアプリケーションをリビルドする必要はありません。 アプリケーションをコマンド ラインまたはメイクファイルでビルドしていますが、Visual Studio 環境でデバッグする場合、**/ZI** オプションを設定すると、引き続きエディット コンティニュを使用できます。  
   
 ##  <a name="BKMK_How_to_apply_code_changes_explicitly"></a> コード変更を明示的に適用する方法  
  Visual C++ では、エディット コンティニュは 2 つの方法でコード変更を適用できます。 実行コマンドを選択した場合、コード変更は暗黙的に適用できます。 **[コード変更を適用]** を使用した場合は明示的に適用できます。  
   
- コードの変更を明示的に適用するときに、プログラムは中断モードの実行は行われません。  
+ コード変更を明示的に適用する場合、プログラムは中断モードのままとなり実行されません。  
   
 -   コードの変更を明示的に適用するには、**[デバッグ]** メニューで **[コード変更を適用]** を選択します。  
   
@@ -81,5 +79,5 @@ Visual Studio 2015 Update 3 の機能強化の詳細については、次を参�
   
  このような場合、変更が適用されるまで、デバッガーは元のコードを続けて実行します。 古いコードは、一時的なソース ファイル ウィンドウとして、 `enc25.tmp`などのタイトルで別のソース ウィンドウに表示されます。 編集されたソース コードは、元のソース ウィンドウに表示されます。 古いコードを編集しようとすると、警告メッセージが表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [サポートされているコード変更 (C++)](../debugger/supported-code-changes-cpp.md)

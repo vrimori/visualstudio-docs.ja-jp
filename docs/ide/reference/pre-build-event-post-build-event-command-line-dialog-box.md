@@ -2,7 +2,6 @@
 title: '[ビルド前に実行するコマンド ライン] / [ビルド後に実行するコマンド ライン] ダイアログ ボックス'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - cs.ProjectPropertiesBuildEventsBuilder
@@ -35,12 +34,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e27a7e624607009e986d301fa802fdbe1597a3c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7cc93b398791d01cc29025772a6cd086f0d0c740
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31947974"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53877904"
 ---
 # <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>[ビルド前に実行するコマンド ライン] / [ビルド後に実行するコマンド ライン] ダイアログ ボックス
 エディット ボックスに [[ビルド イベント] ページ (プロジェクト デザイナー) (C#)](../../ide/reference/build-events-page-project-designer-csharp.md) のビルド前またはビルド後イベントを直接入力したり、使用できるマクロの一覧からビルド前およびビルド後のマクロを選択したりできます。
@@ -95,9 +94,9 @@ ms.locfileid: "31947974"
 |`$(TargetFileName)`|ビルドのプライマリ出力ファイルのファイル名 (基本名とファイル拡張子で定義)。|
 |`$(TargetExt)`|ビルドのプライマリ出力ファイルのファイル拡張子。 ファイル拡張子の前にピリオド '.' が付きます。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Visual Studio でのカスタム ビルド イベントの指定](../../ide/specifying-custom-build-events-in-visual-studio.md)
 - [[ビルド イベント] ページ (プロジェクト デザイナー) (C#)](../../ide/reference/build-events-page-project-designer-csharp.md)
-- [方法 : ビルド イベントを指定する (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)
-- [方法 : ビルド イベントを指定する (C#)](../../ide/how-to-specify-build-events-csharp.md)
+- [方法: ビルド イベントを指定する (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)
+- [方法: ビルド イベントを指定する (C#)](../../ide/how-to-specify-build-events-csharp.md)

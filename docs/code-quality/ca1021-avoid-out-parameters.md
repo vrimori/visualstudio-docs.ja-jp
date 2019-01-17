@@ -1,4 +1,4 @@
----
+﻿---
 title: CA1021:out パラメーターを使用しません
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15

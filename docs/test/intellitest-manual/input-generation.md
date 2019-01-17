@@ -2,7 +2,6 @@
 title: 動的なシンボリック実行 | Microsoft IntelliTest 開発者テスト ツール
 ms.date: 05/02/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Dynamic symbolic execution
@@ -11,16 +10,16 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 33bd31c59de85f70d653d2de912b8c9bc5bb0e30
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: d08094f122ace8908da7800cba84815b201154db
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295892"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53834673"
 ---
 # <a name="input-generation-using-dynamic-symbolic-execution"></a>動的なシンボリック実行を使用する入力生成
 
-IntelliTest は、プログラムの分岐条件を分析して、[パラメーター化された単体テスト](test-generation.md#parameterized-unit-testing)の入力を生成します。 テスト入力は、プログラムの新しい分岐動作をトリガーできるかどうかに応じて、選択されます。 分析はインクリメンタル処理です。 仮テスト入力パラメーター **I** で述語 **q: I -> {true, false}** を詳細に指定します。**q** は、IntelliTest が既に監視した動作セットを表します。 最初は、まだ何も観測されていないため、**q := false** となります。
+IntelliTest は、プログラムの分岐条件を分析して、[パラメーター化された単体テスト](test-generation.md#parameterized-unit-testing)の入力を生成します。 テスト入力は、プログラムの新しい分岐動作をトリガーできるかどうかに応じて、選択されます。 分析はインクリメンタル処理です。 述語 **q: I -> {true, false}** を仮テスト入力パラメーター **I** で詳細に指定します。**q** は、IntelliTest が既に監視した動作セットを表します。 最初は、まだ何も観測されていないため、**q := false** となります。
 
 ループの手順は次のとおりです。
 

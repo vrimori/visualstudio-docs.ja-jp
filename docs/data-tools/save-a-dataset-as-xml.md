@@ -15,15 +15,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5a1b0c453f3b48b12c5a77fce86789a66fe77c26
-ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
-ms.translationtype: MT
+ms.openlocfilehash: fbcacfbb44bb9f5ed4d34637a5aee5f9d014be46
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173998"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53894049"
 ---
 # <a name="save-a-dataset-as-xml"></a>データセットを XML として保存する
 
@@ -35,7 +34,7 @@ ms.locfileid: "37173998"
 
 ## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-variable"></a>データセット内の変数に XML としてデータを保存するには
 
-- <xref:System.Data.DataSet.GetXml%2A>メソッドが返す、<xref:System.String>します。 型の変数を宣言<xref:System.String>の結果を割り当てると、<xref:System.Data.DataSet.GetXml%2A>メソッド。
+- <xref:System.Data.DataSet.GetXml%2A> メソッドは <xref:System.String> を返します。 型の変数を宣言<xref:System.String>の結果を割り当てると、<xref:System.Data.DataSet.GetXml%2A>メソッド。
 
      [!code-vb[VbRaddataSaving#12](../data-tools/codesnippet/VisualBasic/save-a-dataset-as-xml_1.vb)]
      [!code-csharp[VbRaddataSaving#12](../data-tools/codesnippet/CSharp/save-a-dataset-as-xml_1.cs)]

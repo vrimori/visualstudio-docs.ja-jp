@@ -1,8 +1,6 @@
 ---
-title: '方法 : ビルドをクリーンする | Microsoft Docs'
-ms.custom: ''
+title: '方法: ビルドをクリーンする | Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - Exec task [MSBuild]
@@ -15,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f9d039d6f6f5593538063e751348148786667000
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: ddd4158561b0bac7ea3347738f13f0f9530002ea
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48879058"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53841133"
 ---
 # <a name="how-to-clean-a-build"></a>方法: ビルドをクリーンする
 ビルドをクリーンするとき、すべての中間ファイルと出力ファイルが削除され、プロジェクト ファイルとコンポーネント ファイルが残ります。 プロジェクト ファイルとコンポーネント ファイルから、中間ファイルと出力ファイルの新しいインスタンスをビルドできます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] とともに提供されている一般的なタスクのライブラリには、システム コマンドの実行に利用できる [Exec](../msbuild/exec-task.md) タスクが含まれています。 タスクのライブラリに関する情報については、「[タスク リファレンス](../msbuild/msbuild-task-reference.md)」を参照してください。  
@@ -34,7 +32,7 @@ ms.locfileid: "48879058"
   
      `<builtdir>BuiltApp</builtdir>`  
   
-2.  ディレクトリが存在しない場合、[MakeDir](../msbuild/makedir-task.md) タスクを理使用してディレクトリを作成します。 例:  
+2.  ディレクトリが存在しない場合、[MakeDir](../msbuild/makedir-task.md) タスクを理使用してディレクトリを作成します。 次に例を示します。  
   
      ```xml
      <MakeDir Directories = "$(builtdir)"  
@@ -46,14 +44,14 @@ ms.locfileid: "48879058"
   
 #### <a name="to-remove-a-directory-and-all-files-contained-in-the-directory"></a>ディレクトリとそのディレクトリに含まれるすべてのファイルを削除するには  
   
--   `RemoveDir` タスクを利用してディレクトリを削除します。 例:  
+-   `RemoveDir` タスクを利用してディレクトリを削除します。 次に例を示します。  
   
      `<RemoveDir Directories="$(builtdir)" />`  
   
 ## <a name="example"></a>例  
  次のコード例プロジェクトには、新しいターゲット、`Clean` が含まれています。このターゲットは `RemoveDir` タスクを使用し、ディレクトリとそのディレクトリに含まれるすべてのファイルを削除します。 この例ではまた、`Compile` ターゲットは、ビルドのクリーン時に削除される出力項目に対して別個のディレクトリを作成します。  
   
- `Compile` は既定のターゲットとして定義されます。そのため、別のターゲットを指定しない限り、自動的に使用されます。 コマンド ライン スイッチ **-target** を使用し、別のターゲットを指定します。 例:  
+ `Compile` は既定のターゲットとして定義されます。そのため、別のターゲットを指定しない限り、自動的に使用されます。 コマンド ライン スイッチ **-target** を使用し、別のターゲットを指定します。 次に例を示します。  
   
  `msbuild <file name>.proj -target:Clean`  
   

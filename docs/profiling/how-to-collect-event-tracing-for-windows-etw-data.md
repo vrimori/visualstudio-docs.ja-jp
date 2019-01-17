@@ -1,8 +1,6 @@
 ---
 title: '方法: ETW (Event Tracing for Windows) データを収集する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.performance.property.events
@@ -15,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cd8016b14d91157942ed8d5e4a987df0009f6af3
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 8a619820cd2c6a3a884c7279d4eb9ffc9741619d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34766163"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53863649"
 ---
 # <a name="how-to-collect-event-tracing-for-windows-etw-data"></a>方法: ETW (Event Tracing for Windows) データを収集する
 

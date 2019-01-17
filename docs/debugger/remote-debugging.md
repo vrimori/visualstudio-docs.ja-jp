@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 84ba15ddbfdb6e3bbcf7a9f7c3ee3dd7e0f89c9c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6053c240fbdfb12840e162f70c88356918eca238
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53866336"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269957"
 ---
 # <a name="remote-debugging"></a>Remote Debugging
 別のコンピューターに配置されている Visual Studio アプリケーションをデバッグすることができます。 このデバッグを行うには、Visual Studio リモート デバッガーを使用します。
@@ -59,9 +59,9 @@ ms.locfileid: "53866336"
 
 1. 検索*msvsmon.exe*で Visual Studio のバージョンに一致するディレクトリ。 Visual Studio enterprise 2017。
 
-      *Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x86\msvsmon.exe*
+      *Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x86\msvsmon.exe*
 
-      *Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x64\msvsmon.exe*
+      *Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x64\msvsmon.exe*
 
 2. 共有、**リモート デバッガー** Visual Studio コンピューター上のフォルダー。
 
@@ -122,7 +122,7 @@ ASP.NET およびその他のサーバー環境でデバッグ、リモート �
 
 ## <a name="see-also"></a>関連項目
 
-- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
+- [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)
 - [Windows ファイアウォールをリモート デバッグ用に構成する](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
 - [リモート デバッガーのポートの割り当て](../debugger/remote-debugger-port-assignments.md)
 - [リモート デバッグ、リモートの IIS コンピューター上の ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)

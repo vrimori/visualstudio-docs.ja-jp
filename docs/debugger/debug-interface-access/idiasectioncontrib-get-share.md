@@ -1,8 +1,6 @@
 ---
 title: Idiasectioncontrib::get_share |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 67a4632521c21a17495ccb9e969ee53fcf2b6d40
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 00ddbc8252395532c4aa7329e927d0cc1b07dddd
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49849217"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53954099"
 ---
 # <a name="idiasectioncontribgetshare"></a>IDiaSectionContrib::get_share
 メモリ内のセクションを共有できるかどうかを示すフラグを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49849217"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_share (   
+HRESULT get_share (   
    BOOL* pRetVal  
 );  
 ```  
@@ -37,7 +35,7 @@ HRESULT get_share (
  [out]返します`TRUE`セクションがメモリ内で共有可能な場合は、それを返します`FALSE`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

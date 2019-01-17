@@ -17,14 +17,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dfb95e3bc1a2a1aaf94db229d951773e97d4ef2d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 957077335b8df286d6fa2fbd34b6b81874fddbaa
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53942841"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227773"
 ---
-# <a name="using-the-tasks-window"></a>[タスク] ウィンドウの使用
+# <a name="using-the-tasks-window-c-visual-basic-c"></a>[タスク] ウィンドウを使用して (C#、Visual Basic、C++)
 
 **[タスク]** ウィンドウは **[スレッド]** ウィンドウに似ていますが、このウィンドウには、各スレッドではなく <xref:System.Threading.Tasks.Task?displayProperty=fullName>、[task_handle](/cpp/parallel/concrt/reference/task-group-class)、または [WinJS.Promise](/previous-versions/windows/apps/br211867(v=win.10)) オブジェクトに関する情報が表示されます。 スレッドと同様、タスクは、同時に実行できる非同期操作を表します。ただし、複数のタスクが同じスレッドで実行される場合もあります。
 

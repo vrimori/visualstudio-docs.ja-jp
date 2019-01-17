@@ -9,15 +9,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: d8671c46cf2e88ab5d5797dd7a009ff29b953c4e
-ms.sourcegitcommit: c9a01c599ce19a5845605b3b28c0229fd0abb93f
-ms.translationtype: MT
+ms.openlocfilehash: ad784e0438e0b1f02607c3cb748c759b9266dbe6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281733"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53824576"
 ---
 # <a name="database-projects-and-data-tier-applications"></a>データベース プロジェクトとデータ層アプリケーション
 
@@ -29,9 +28,9 @@ ms.locfileid: "52281733"
 
 | 高レベルのタスク | 関連する参照先 |
 | - | - |
-| **データ層アプリケーションの開発の開始:** データ層アプリケーション (DAC) の概念は SQL Server 2008 で導入されました。 DAC には、SQL Server データベースと、クライアントとサーバー間または 3 層アプリケーションで使用されるサポート対象のインスタンス オブジェクトの定義が含まれています。 DAC には、テーブルやビュー、ログインなどのエンティティのインスタンスと共になどのデータベース オブジェクトが含まれます。 Visual Studio を使用して、DAC プロジェクトを作成、DAC パッケージ ファイルを作成し、DAC パッケージ ファイルを SQL Server データベース エンジンのインスタンスに展開するためのデータベース管理者に送信することができます。 | - [データ層アプリケーション](/sql/relational-databases/data-tier-applications/data-tier-applications)<br />- [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) |
-| **反復的なデータベース開発を実行する:** 開発者がチェック アウト、プロジェクトの部分とを分離開発環境で更新します。 この種の環境を使用すると、チームの他のメンバーの影響を与えずに変更をテストすることができます。 変更が完了した後は、バージョン管理、他のチーム メンバーと、変更を取得できますとビルド、テスト サーバーに配置をどこにファイルを確認します。 | - [プロジェクト指向のオフライン データベース開発 (SQL Server Data Tools)](/sql/ssdt/project-oriented-offline-database-development)<br />- [TRANSACT-SQL デバッガー (SQL Server Management Studio)](/sql/ssms/scripting/transact-sql-debugger) |
-| **結果、および変更のデータベースのスクリプトとオブジェクトのプロトタイプ作成、検証テスト:** いずれかの一般的なタスクを実行する TRANSACT-SQL エディターを使用することができます。 | - [クエリおよびテキスト エディター (SQL Server Management Studio)](/sql/ssms/scripting/query-and-text-editors-sql-server-management-studio) |
+| **データ層アプリケーションの開発を開始します。** データ層アプリケーション (DAC) の概念は、SQL Server 2008 で導入されました。 DAC には、SQL Server データベースと、クライアントとサーバー間または 3 層アプリケーションで使用されるサポート対象のインスタンス オブジェクトの定義が含まれています。 DAC には、テーブルやビュー、ログインなどのエンティティのインスタンスと共になどのデータベース オブジェクトが含まれます。 Visual Studio を使用して、DAC プロジェクトを作成、DAC パッケージ ファイルを作成し、DAC パッケージ ファイルを SQL Server データベース エンジンのインスタンスに展開するためのデータベース管理者に送信することができます。 | - [データ層アプリケーション](/sql/relational-databases/data-tier-applications/data-tier-applications)<br />- [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) |
+| **反復的なデータベース開発を実行するには。** 開発者は、チェック アウト、プロジェクトの部分とを分離開発環境で更新します。 この種の環境を使用すると、チームの他のメンバーの影響を与えずに変更をテストすることができます。 変更が完了した後は、バージョン管理、他のチーム メンバーと、変更を取得できますとビルド、テスト サーバーに配置をどこにファイルを確認します。 | - [プロジェクト指向のオフライン データベース開発 (SQL Server Data Tools)](/sql/ssdt/project-oriented-offline-database-development)<br />- [TRANSACT-SQL デバッガー (SQL Server Management Studio)](/sql/ssms/scripting/transact-sql-debugger) |
+| **プロトタイプ作成、テスト結果、および変更のデータベースのスクリプトとオブジェクトを確認しています。** TRANSACT-SQL エディターを使用すると、いずれかの一般的なタスクを実行します。 | - [クエリおよびテキスト エディター (SQL Server Management Studio)](/sql/ssms/scripting/query-and-text-editors-sql-server-management-studio) |
 
 ## <a name="see-also"></a>関連項目
 

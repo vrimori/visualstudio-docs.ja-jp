@@ -1,8 +1,6 @@
 ---
-title: IDiaEnumFrameData |Microsoft ドキュメント
-ms.custom: ''
+title: IDiaEnumFrameData |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c39057a77da9b459852e0b591ea8d69186ee6f8d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 65917b88144bfe86c9159772588888c590e2cd7e
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31466928"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53876290"
 ---
 # <a name="idiaenumframedata"></a>IDiaEnumFrameData
 データ ソースに含まれるさまざまなフレーム データ要素を列挙します。  
@@ -27,7 +25,7 @@ ms.locfileid: "31466928"
 ## <a name="syntax"></a>構文  
   
 ```  
-IDiaEnumFrameData : IUnknown  
+IDiaEnumFrameData : IUnknown  
 ```  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
@@ -38,20 +36,20 @@ IDiaEnumFrameData : IUnknown
 |[IDiaEnumFrameData::get__NewEnum](../../debugger/debug-interface-access/idiaenumframedata-get-newenum.md)|取得、`IEnumVARIANT Interface`この列挙子のバージョン。|  
 |[IDiaEnumFrameData::get_Count](../../debugger/debug-interface-access/idiaenumframedata-get-count.md)|フレーム データ要素の数を取得します。|  
 |[IDiaEnumFrameData::Item](../../debugger/debug-interface-access/idiaenumframedata-item.md)|インデックスを使用して、フレーム データ要素を取得します。|  
-|[IDiaEnumFrameData::Next](../../debugger/debug-interface-access/idiaenumframedata-next.md)|指定した列挙のシーケンス内のデータ要素のフレーム数を取得します。|  
-|[IDiaEnumFrameData::Skip](../../debugger/debug-interface-access/idiaenumframedata-skip.md)|指定した列挙のシーケンス内のデータ要素のフレーム数をスキップします。|  
-|[IDiaEnumFrameData::Reset](../../debugger/debug-interface-access/idiaenumframedata-reset.md)|列挙のシーケンスを先頭にリセットします。|  
-|[IDiaEnumFrameData::Clone](../../debugger/debug-interface-access/idiaenumframedata-clone.md)|現在の列挙子と同じ列挙の状態を含む列挙子を作成します。|  
+|[IDiaEnumFrameData::Next](../../debugger/debug-interface-access/idiaenumframedata-next.md)|指定した列挙体シーケンス内のデータ要素のフレーム数を取得します。|  
+|[IDiaEnumFrameData::Skip](../../debugger/debug-interface-access/idiaenumframedata-skip.md)|指定された数の列挙体シーケンス内のデータ要素のフレームをスキップします。|  
+|[IDiaEnumFrameData::Reset](../../debugger/debug-interface-access/idiaenumframedata-reset.md)|先頭に、列挙体シーケンスをリセットします。|  
+|[IDiaEnumFrameData::Clone](../../debugger/debug-interface-access/idiaenumframedata-clone.md)|現在の列挙子と同じ列挙状態を格納する列挙子を作成します。|  
 |[IDiaEnumFrameData::frameByRVA](../../debugger/debug-interface-access/idiaenumframedata-framebyrva.md)|相対仮想アドレス (RVA) でフレームを返します。|  
 |[IDiaEnumFrameData::frameByVA](../../debugger/debug-interface-access/idiaenumframedata-framebyva.md)|仮想アドレス (VA) でフレームを返します。|  
   
 ## <a name="remarks"></a>コメント  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- このインターフェイスから取得、 [idiasession::getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md)メソッドです。 詳細については例を参照してください。  
+ このインターフェイスから取得、 [idiasession::getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md)メソッド。 詳細については、例を参照してください。  
   
 ## <a name="example"></a>例  
- この例は、取得する方法を示します (、`GetEnumFrameData`関数) を使用し、(、`ShowFrameData`関数)、`IDiaEnumFrameData`インターフェイスです。 参照してください、 [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)インターフェイスの例については、`PrintFrameData`関数。  
+ この例は、取得する方法を示します (、`GetEnumFrameData`関数) を使用して、(、`ShowFrameData`関数)、`IDiaEnumFrameData`インターフェイス。 参照してください、 [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)インターフェイスの例については、`PrintFrameData`関数。  
   
 ```C++  
   
@@ -103,13 +101,13 @@ void ShowFrameData(IDiaSession *pSession)
 ```  
   
 ## <a name="requirements"></a>要件  
- **ヘッダー:** Dia2.h  
+ **ヘッダー:** dia2.h  
   
  **ライブラリ:** diaguids.lib  
   
  **DLL:** msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
- [Idiasession::getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md)   
+ [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)   
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

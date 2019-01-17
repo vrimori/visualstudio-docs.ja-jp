@@ -5,29 +5,29 @@ author: conceptdev
 ms.author: crdun
 ms.date: 11/03/2018
 ms.assetid: 3A130EC1-DD8C-4125-9034-B08D7AF7EA65
-ms.openlocfilehash: 10b27c26fcef622687b64f225dd04ae966f43cd5
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 59e349b1d784e68c3ef6842834d875ce5d1917bb
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895679"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54315554"
 ---
-# <a name="introducing-visual-studio-for-mac"></a>Visual Studio for Mac の概要
+# <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 
 Visual Studio for Mac は、モバイル、デスクトップ、Web アプリケーションを作成するときに役立つ多くの機能が搭載された最新の高度な IDE です。 次の種類の開発がサポートされています。
 
-* モバイルと .NET: Android、iOS、tvOS、watchOS
-* Mac デスクトップ アプリ
-* .NET Core アプリケーション
-* ASP.NET Core Web アプリケーション
-* クロスプラットフォーム Unity ゲーム
+- .NET を使用したモバイル:Android、iOS、tvOS、watchOS
+- Mac デスクトップ アプリ
+- .NET Core アプリケーション
+- ASP.NET Core Web アプリケーション
+- クロスプラットフォーム Unity ゲーム
 
 リッチ エディター、デバッグ、iOS、Mac、Android とのネイティブ プラットフォーム統合、統合ソース制御などの機能があります。
 
 この記事では、Visual Studio for Mac の持つさまざまな面を概説し、クロスプラットフォーム アプリケーションを作成する場合に強力なツールとなる機能を紹介します。
 
 > [!TIP]
-> Visual Studio 2019 for Mac のプレビューがテストできるようになりました。 これらの[インストールの指示](install-preview.md)に従い、[IDE ツアー](ide-tour.md)を確認します。
+> **Visual Studio 2019 for Mac プレビュー**がテストできるようになりました。 これらの[インストールの指示](/visualstudio/mac/installation/?view=vsmac-2019)に従い、[2019 IDE ツアー](/visualstudio/mac/ide-tour/?view=vsmac-2019)を確認します。
 
 ## <a name="installation"></a>インストール
 
@@ -55,16 +55,16 @@ F# は、.NET 上で実行するように設計されている、厳密に型指
 
 .NET Core サポート:
 
-* C# と F# の IntelliSense。
-* コンソール、ライブラリ、Web アプリケーションのための .NET Core プロジェクト テンプレート。
-* ブレークポイント、コール スタック、ウォッチ ウィンドウなど、完全なデバッグ サポート。
-* NuGet PackageReferences と MSBuild ベースの復元。
-* .NET Core SDK に含まれる Visual Studio テスト プラットフォームでテストを実行し、デバッグするための統合単体テスト サポート。
-* 以前の project.json 形式からの以降。
+- C# と F# の IntelliSense。
+- コンソール、ライブラリ、Web アプリケーションのための .NET Core プロジェクト テンプレート。
+- ブレークポイント、コール スタック、ウォッチ ウィンドウなど、完全なデバッグ サポート。
+- NuGet PackageReferences と MSBuild ベースの復元。
+- .NET Core SDK に含まれる Visual Studio テスト プラットフォームでテストを実行し、デバッグするための統合単体テスト サポート。
+- 以前の project.json 形式からの以降。
 
 まず ASP.NET Core Web アプリの[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)を確認してください。
 
-## <a name="xamarin"></a>Xamarin
+## <a name="xamarin-mobile-app-development"></a>Xamarin のモバイル アプリ開発
 
 [Xamarin](https://developer.xamarin.com/) のファーストクラス サポートにより、Android、macOS、iOS、tvOS、watchOS のために機能が豊富なネイティブ エクスペリエンスを開発できます。 Xamarin.Forms のクロスプラットフォーム アプリケーションにより、ネイティブ機能へのアクセスを制限することなく、Android、iOS、macOS 間で XAML ベースの UI コードを共有できます。
 
@@ -121,8 +121,8 @@ Xamarin Inspector は、対話型 C# コンソールをユーザー ツールで
 
 ## <a name="next-steps"></a>次の手順
 
-* **全体像の把握** - Visual Studio for Mac の数多くの主要な機能の概要について、[IDE ツアー](ide-tour.md)を参照してください。
-* **セットアップ** - Visual Studio をダウンロードしてインストールする方法については、[インストール](installation.md)に関するガイドを参照してください。
-* **Xamarin チュートリアル** - Xamarin を使用してコードを開発する詳細な方法については、Xamarin の [Developer Center](https://developer.xamarin.com) を参照してください。
-* **ビデオ** - Visual Studio for Mac の他の機能や側面の詳細については、[Xamarin University](https://university.xamarin.com) Web サイトのビデオをご覧ください。
-* **ハンズオン ラボ** - Visual Studio for Mac に含まれている多様なワークロードの基本的な使用方法については、[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs)を参照してください。
+- **全体像の把握** - Visual Studio for Mac の数多くの主要な機能の概要について、[IDE ツアー](/visualstudio/mac/ide-tour/)を参照してください。
+- **セットアップ** - Visual Studio 2017 for Mac をダウンロードしてインストールする方法については、[インストール](/visualstudio/mac/installation/?view=vsmac-2017)に関するガイドを参照してください。
+- **Xamarin チュートリアル** - Xamarin を使用してコードを開発する詳細な方法については、Xamarin の [Developer Center](https://developer.xamarin.com) を参照してください。
+- **ビデオ** - Visual Studio for Mac の他の機能や側面の詳細については、[Xamarin University](https://university.xamarin.com) Web サイトのビデオをご覧ください。
+- **ハンズオン ラボ** - Visual Studio for Mac に含まれている多様なワークロードの基本的な使用方法については、[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs)を参照してください。

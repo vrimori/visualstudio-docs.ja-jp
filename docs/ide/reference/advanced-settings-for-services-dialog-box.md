@@ -2,7 +2,6 @@
 title: '[サービスの詳細設定] ダイアログ ボックス'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - vb.ProjectPropertiesAdvancedServices
@@ -14,23 +13,23 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 78cc44d71b1f9cb2f449d4aafdff22271b1c63ab
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 251a78ebe56a9ba2c88444da879970c590ece029
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31946599"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53917226"
 ---
 # <a name="advanced-settings-for-services-dialog-box"></a>[サービスの詳細設定] ダイアログ ボックス
 クライアント アプリケーション サービスにより、Windows フォーム アプリケーションおよび Windows Presentation Foundation (WPF) アプリケーションから [!INCLUDE[ajax_current_short](../../ide/reference/includes/ajax_current_short_md.md)] ログイン サービス、ロール サービス、プロファイル サービスに簡単にアクセスできます。 **プロジェクト デザイナー**の **[サービス]** ページを使用して、クライアント アプリケーション サービスを構成することができます。 **[サービス]** ページの詳細については、「[Services Page, Project Designer](../../ide/reference/services-page-project-designer.md)」([サービス] ページ (プロジェクト デザイナー)) を参照してください。
 
- **プロジェクト デザイナー**の **[サービスの詳細設定]** ダイアログ ボックスの **[サービス]** ページを使用して、クライアント アプリケーション サービスの詳細設定を構成します。 これらの設定を使用すると、既定のアプリケーション サービスの動作の一部を上書きして、あまり一般的ではないシナリオに対応することができます。 詳細については、「[クライアント アプリケーション サービス](/dotnet/framework/common-client-technologies/client-application-services)」を参照してください。
+ **プロジェクト デザイナー**の **[サービスの詳細設定]** ダイアログ ボックスの **[サービス]** ページを使用して、クライアント アプリケーション サービスの詳細設定を構成します。 これらの設定を使用すると、既定のアプリケーション サービスの動作の一部をオーバーライドして、あまり一般的ではないシナリオに対応することができます。 詳細については、「[クライアント アプリケーション サービス](/dotnet/framework/common-client-technologies/client-application-services)」を参照してください。
 
  **[サービスの詳細設定]** ダイアログ ボックスにアクセスするには、**ソリューション エクスプローラー**でプロジェクト ノードを選択し、**[プロジェクト]** メニューの **[プロパティ]** をクリックします。 **プロジェクト デザイナー**が表示されたら、**[サービス]** タブをクリックし、**[詳細設定]** ボタンをクリックします。 クライアント アプリケーション サービスを有効にするまで、このボタンは無効です。
 
 ## <a name="task-list"></a>タスク一覧
 
-- [方法 : クライアント アプリケーション サービスを構成する](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)
+- [方法: クライアント アプリケーション サービスを構成する](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)
 
 ## <a name="uielement-list"></a>UIElement の一覧
 
@@ -42,10 +41,10 @@ ms.locfileid: "31946599"
 
  <xref:System.Web.Security.RolePrincipal.IsInRole%2A> メソッドを呼び出すと、ロール プロバイダーがキャッシュされたロール値またはロール サービスにアクセスします。 プログラムによってキャッシュを消去し、強制的にこのメソッドがリモート サービスにアクセスするようにするには、<xref:System.Web.ClientServices.Providers.ClientRoleProvider.ResetCache%2A> メソッドを呼び出します。
 
- **カスタム接続文字列を使用** クライアント サービス プロバイダーがローカル キャッシュにカスタムのデータ ストアを使用するかどうかを指定します。 既定では、サービス プロバイダーはキャッシュのローカル ファイル システムを使用します。 このオプションをオンにすると、テキスト ボックスには既定の接続文字列が自動的に入力されます。 自動生成される既定の接続文字列のままにして、SQL Server Compact Edition データベースを使用するか、既存の SQL Server データベースに対する接続文字列を指定することができます。 詳細については、「 [How to: Configure Client Application Services](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)」を参照してください。 既定では、このオプションはオフになっています。
+ **カスタム接続文字列を使用** クライアント サービス プロバイダーがローカル キャッシュにカスタムのデータ ストアを使用するかどうかを指定します。 既定では、サービス プロバイダーはキャッシュのローカル ファイル システムを使用します。 このオプションをオンにすると、テキスト ボックスには既定の接続文字列が自動的に入力されます。 自動生成される既定の接続文字列のままにして、SQL Server Compact Edition データベースを使用するか、既存の SQL Server データベースに対する接続文字列を指定することができます。 詳細については、「[方法 :クライアント アプリケーション サービスを構成する](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)」を参照してください。 既定では、このオプションはオフになっています。
 
 ## <a name="see-also"></a>関連項目
 
 - [クライアント アプリケーション サービス](/dotnet/framework/common-client-technologies/client-application-services)
 - [[サービス] ページ (プロジェクト デザイナー)](../../ide/reference/services-page-project-designer.md)
-- [方法 : クライアント アプリケーション サービスを構成する](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)
+- [方法: クライアント アプリケーション サービスを構成する](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)

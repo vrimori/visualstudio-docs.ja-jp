@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_issplitted |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 15c30577900a2d2e192bdc2dea45fc89846b102b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 9d02c67f9cd7e8c82e08cc3490f546c103cfb7a4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49919333"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53927377"
 ---
 # <a name="idiasymbolgetissplitted"></a>IDiaSymbol::get_isSplitted
 データ シンボルが、集計またはその他の記号のコレクションに分割されて かどうかを指定するフラグを取得します。コンパイラは、非常に大規模なシンボルの一部である場合でも、個別のエンティティとしてシンボルを扱います。  
@@ -42,16 +40,16 @@ HRESULT get_isSplitted(
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  [Idiasymbol::get_isaggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md)メソッドを返します。`TRUE`分割シンボルの一部であるすべてのシンボルです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|Dia2.h|  
+|ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK バージョン 8.0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [IDiaSymbol::get_isAggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md)

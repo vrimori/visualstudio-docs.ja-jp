@@ -5,8 +5,7 @@ ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c2fec4ce-3885-4c4c-ace2-14c197e11079
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 81b2f98694ee34b6fc4c442a4d4746b436025583
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: e38c7c578fd23e1f141721868a111e796afc9365
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53064654"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53916778"
 ---
 # <a name="personalizing-the-visual-studio-ide"></a>Visual Studio IDE のカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,13 +40,13 @@ ms.locfileid: "53064654"
  自分とチームのカスタム スタート ページを作成するには、「[スタート ページのカスタマイズ](../ide/customizing-the-start-page-for-visual-studio.md)」を参照してください。
 
 ### <a name="environment-color-themes"></a>環境の配色テーマ
- 明色、暗色、青の配色テーマを変更するには、[**クイック起動**] に「environment」と入力して、**[環境 &#124; 全般]** を選択します。 エディターで配色オプションを変更するには、**[クイック起動]** に「`environment`」と入力して、**[環境 &#124; フォントおよび色]** を選択します。 「[方法: フォントと色を変更する](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)」も参照してください。
+ 明色、暗色、青の配色テーマを変更するには、[**クイック起動**] に「environment」と入力して、**[環境 &#124; 全般]** を選択します。 エディターで配色オプションを変更するには、**[クイック起動]** に「`environment`」と入力して、**[環境 &#124; フォントおよび色]** を選択します。 また、「[方法: フォントと色を変更する](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)」も参照してください。
 
 ### <a name="menus-and-toolbars"></a>メニューとツールバー
- メニュー項目やツールバーの項目を追加または削除するには、「[方法: メニューおよびツールバーをカスタマイズする](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)」を参照してください。
+ メニューやツールバーの項目を追加または削除するには、[メニューおよびツール バーのカスタマイズ](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)に関するページを参照してください。
 
 ### <a name="main-menu-casing"></a>メイン メニューの大文字小文字の区別
  メイン メニューの大文字小文字の区別の変更は一般的に需要が高いため、これを **[タイトル文字]** と **[すべて大文字]** の間で変更できます。**[クイック起動]** に 「`environment`」と入力して **[環境 &#124; 全般]** を選択します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
  [Visual Studio IDE](../ide/visual-studio-ide.md)

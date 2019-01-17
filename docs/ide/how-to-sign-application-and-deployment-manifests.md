@@ -1,8 +1,7 @@
 ---
-title: '方法 : アプリケーション マニフェストおよび配置マニフェストに署名する'
+title: '方法: アプリケーション マニフェストと配置マニフェストの署名'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - manifests [Visual Studio]
@@ -19,14 +18,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 903bc0df9b24cd6f944e9e92c6dc5283cd1d25ea
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 45199d736e1402c67ca84ced8db95d81534a7c3a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39381948"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53852915"
 ---
-# <a name="how-to-sign-application-and-deployment-manifests"></a>方法 : アプリケーション マニフェストおよび配置マニフェストに署名する
+# <a name="how-to-sign-application-and-deployment-manifests"></a>方法: アプリケーション マニフェストと配置マニフェストの署名
 
 ClickOnce 配置を使用してアプリケーションを発行しようとする場合は、アプリケーション マニフェストと配置マニフェストに、公開キーと秘密キーのペアを使用して署名し、さらに Authenticode テクノロジを使用して署名する必要があります。 これらのマニフェストには、Windows 証明書ストアの証明書またはキー ファイルを使用して署名できます。
 
@@ -94,7 +93,7 @@ ClickOnce 配置を使用してアプリケーションを発行しようとす�
 
 2.  **[署名]** ページの **[ClickOnce マニフェストに署名する]** チェック ボックスをオフにします。
 
-3.  アプリケーションの 1 つのバージョンのみ使用できるように発行バージョンをリセットします。 既定では、アプリケーションを発行するたびに発行バージョンのリビジョン番号が自動的にインクリメントされます。 詳細については、「[How to: Set the ClickOnce publish version](../deployment/how-to-set-the-clickonce-publish-version.md)」(方法: ClickOnce の発行バージョンを設定する) を参照してください。
+3.  アプリケーションの 1 つのバージョンのみ使用できるように発行バージョンをリセットします。 既定では、アプリケーションを発行するたびに発行バージョンのリビジョン番号が自動的にインクリメントされます。 詳細については、「[方法 :ClickOnce の発行バージョンを設定する](../deployment/how-to-set-the-clickonce-publish-version.md)」を参照してください。
 
 4.  アプリケーションを発行します。
 

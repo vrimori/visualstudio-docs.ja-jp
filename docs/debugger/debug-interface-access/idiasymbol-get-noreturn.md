@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_noreturn |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fc0410c045a42412866d1c85f84b13aa6acd796
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 817d515d9ab744ec7be146e6ee39373cb7d2d2ee
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49846110"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53863873"
 ---
 # <a name="idiasymbolgetnoreturn"></a>IDiaSymbol::get_noReturn
 関数がで返すことはありませんとしてマークされているかどうかを指定するフラグを取得、 [noreturn](/cpp/cpp/noreturn)属性。  
@@ -42,13 +40,13 @@ HRESULT get_noReturn(
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
-|ヘッダー:|Dia2.h|  
+|ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK バージョン 8.0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [noreturn](/cpp/cpp/noreturn)

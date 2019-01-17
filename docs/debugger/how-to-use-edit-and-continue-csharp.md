@@ -1,8 +1,6 @@
 ---
 title: '方法: エディット コンティニュを使用 (c#) |Microsoft Docs'
-ms.custom: ''
 ms.date: 10/04/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -17,14 +15,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 41e97f488344e3d34ce326a3d35880d94da4ad9a
-ms.sourcegitcommit: c5e72875206b8c5737c29d5b1ec7b86eec747303
-ms.translationtype: MT
+ms.openlocfilehash: b694f2d3603c9b768a9a4ddbf7b2c66cf5c61b21
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382806"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53861969"
 ---
-# <a name="how-to-use-edit-and-continue-c"></a>方法 : エディット コンティニュを使用する (C#)
+# <a name="how-to-use-edit-and-continue-c"></a>方法: エディット コンティニュを使用する (C#)
 エディット コンティニュと、作成し、停止し、デバッグ セッションを再起動しなくても、デバッグ中に中断モードでコードに変更を適用できます。  
 
 エディット コンティニュC#中断モードでコードを変更しを使用してデバッグを続行するときに自動的に行われる**続行**、**手順**、または**次のステートメントの設定**、か、デバッガー ウィンドウで関数を評価します。  
@@ -46,7 +44,7 @@ ms.locfileid: "49382806"
    
 1. 中断モードでは、デバッグ中に、ソース コードに変更を加えます。  
    
-1. **デバッグ** メニューのをクリックして**続行**、**手順**、または**次のステートメントの設定**、か、デバッガー ウィンドウで関数を評価します。  
+1. **[デバッグ]** メニューの **[続行]**、**[ステップ]**、または **[次のステートメントの設定]** をクリックするか、デバッガー ウィンドウに表示された関数を評価します。  
    
    新しいコンパイル済みコードでデバッグが続行します。 
 

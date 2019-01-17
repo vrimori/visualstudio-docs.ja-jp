@@ -2,7 +2,6 @@
 title: コード カバレッジ テスト
 ms.date: 09/18/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
 - code coverage
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dc8b08b68bb6c48fa22abaa90ba8b0b9daa25e89
-ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
+ms.openlocfilehash: 3ff77dc6c434a58ee916ea1eb4ffcab932d7a675
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46370940"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53958132"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>コード カバレッジを使用した、テストされるコード割合の確認
 
@@ -32,7 +31,7 @@ ms.locfileid: "46370940"
 
 ![色分けされたコード カバレッジの結果](../test/media/codecoverage1.png)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 コード カバレッジの機能は、Visual Studio Enterprise エディションでのみ使用できます。
 
@@ -42,7 +41,7 @@ ms.locfileid: "46370940"
 
 2. 実行された行を表示するには、![[コード カバレッジの色分けを表示] アイコン](../test/media/codecoverage-showcoloringicon.png) **[コード カバレッジの色分けを表示]** を選択します。
 
-   色を変更したり太字を使用したりする場合は、**[ツール]**、**[オプション]**、**[環境]**、**[フォントおよび色]**、**[設定の表示: テキスト エディター]** の順に選択します。 **[表示項目]** でカバレッジ項目を調整します。
+   色を変更したり太字を使用したりする場合は、**[ツール]** > **[オプション]** > **[環境]** > **[フォントおよび色]** > **[設定の表示:テキスト エディター]** の順に選択します。 **[表示項目]** でカバレッジ項目を調整します。
 
 3. 結果が低カバレッジを示していた場合は、コードのどの部分が実行されていないかを調べ、その部分をカバーするテストをさらに作成します。 開発チームは、通常、約 80% のコード カバレッジを目標にします。 状況によっては、より低いカバレッジでも許容されます。 たとえば、一部のコードが標準テンプレートから生成される場合は、より低いカバレッジでも許容されます。
 
@@ -104,7 +103,7 @@ ms.locfileid: "46370940"
 > [!TIP]
 > クラスを除外しても、派生クラスは除外されません。
 
-例:
+次に例を示します。
 
 ```csharp
 using System.Diagnostics.CodeAnalysis;

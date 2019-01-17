@@ -1,8 +1,6 @@
 ---
 title: Idiainjectedsource::get_sourcecompression |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 46ad24a6bf8e4efbcb0c1a0009bb8210247ccb5e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 86679c1e97ab50f55e8f887d582e8d8b46a35ae7
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49941361"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53912650"
 ---
 # <a name="idiainjectedsourcegetsourcecompression"></a>IDiaInjectedSource::get_sourceCompression
 使用されるソースの圧縮のインジケーターを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49941361"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_sourceCompression (   
+HRESULT get_sourceCompression (   
    DWORD* pRetVal  
 );  
 ```  
@@ -37,10 +35,10 @@ HRESULT get_sourceCompression (
  [out]使用されるソースの圧縮のインジケーターを返します。 値 0 は、ソースの圧縮が使用されなかったことを示します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このメソッドによって返される値は、使用されるコンパイラに固有です。 たとえば、コンパイラは、実行長エンコーディングまたは Huffman スタイルの圧縮を使用する可能性があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

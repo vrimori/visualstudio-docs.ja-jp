@@ -16,13 +16,12 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
-ms.openlocfilehash: 9c635d3a2c21d1ab84feca285c8cea8eb2aac68f
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: f27689d5e3c322a539a0db5ee1f93c569cb181a5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895081"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53914557"
 ---
 # <a name="analyze-load-test-results-in-the-graphs-view-of-the-load-test-analyzer"></a>ロード テスト アナライザーのグラフ ビューでのテスト結果の分析
 
@@ -34,7 +33,7 @@ ms.locfileid: "52895081"
 
 一度に最高で 4 つのグラフ パネルを表示できます。 **パネル レイアウト**のツール バー ボタンを使用して、異なるパネル レイアウトに切り替えることができます。
 
-複数の組み込みグラフが提供されています。 組み込みグラフをそのまま使用することも、カスタマイズすることもできます。 さらに、独自のグラフを作成することもできます。 詳細については、「[方法: グラフにカウンターを追加および削除する](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)」および[カスタム グラフを作成する方法](../test/how-to-create-custom-graphs-in-load-test-results.md)に関するページを参照してください。
+複数の組み込みグラフが提供されています。 組み込みグラフをそのまま使用することも、カスタマイズすることもできます。 さらに、独自のグラフを作成することもできます。 詳細については、「[方法 :グラフにカウンターを追加および削除する](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)」および「[方法:カスタム グラフを作成する](../test/how-to-create-custom-graphs-in-load-test-results.md)」を参照してください。
 
 ## <a name="built-in-graphs"></a>組み込みグラフ
 
@@ -54,7 +53,7 @@ ms.locfileid: "52895081"
 > [!NOTE]
 > 自動的に生成される応答時間グラフには、応答時間のパフォーマンス カウンターのみを追加できます。
 
- カウンター情報は、グラフ内と、グラフの下にある凡例内の両方に表示されます。 グラフの一部を拡大表示することもできます。 詳細については、「[方法: グラフの領域にズーム インする](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)」を参照してください。
+ カウンター情報は、グラフ内と、グラフの下にある凡例内の両方に表示されます。 グラフの一部を拡大表示することもできます。 詳細については、「[方法 :グラフの領域にズーム インする](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)」を参照してください。
 
 ## <a name="counters-displayed-in-graphs"></a>グラフに表示されるカウンター
 
@@ -64,7 +63,7 @@ ms.locfileid: "52895081"
 
  凡例には、次の列があります。
 
-|[カウンター]|カウンターの名前です。|
+|カウンター|カウンターの名前です。|
 |-|-|
 |[インスタンス]|カウンター インスタンスの名前です。|
 |カテゴリ|カウンター カテゴリの名前です。|
@@ -83,15 +82,15 @@ ms.locfileid: "52895081"
 |**凡例を使用してグラフをカスタマイズする:** グラフ ビューの凡例には、グラフに関連付けられているパフォーマンス カウンターの情報が表示されます。 凡例を使用して、パフォーマンス カウンターの削除、グラフのパフォーマンス カウンターの強調表示、およびプロット オプションのカスタマイズを行うことができます。|-   [グラフ ビューの凡例を使用したロード テストの分析](../test/use-the-graphs-view-legend-to-analyze-load-tests.md)|
 |**グラフにカウンターを表示する:** グラフにカウンターを配置することにより、さまざまな種類のデータをロード テストの結果グラフに追加できます。|-   [方法: グラフにカウンターを追加および削除する](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)|
 |**グラフにズーム インする:** ロード テストを完了したら、ズーム バーを使用して、グラフの領域にズーム インしてスクロールできます。 ズーム インすると、ロード テストの実行中に生成されたデータをより詳細に確認できます。|-   [方法: グラフの領域にズーム インする](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)|
-|**グラフを並べて表示する:** ロード テストの結果グラフを複数のパターンで配置できます。 最大で 4 つのグラフを並べて表示できます。||
+|**グラフを並べて表示する:** ロード テストの結果グラフは、複数のパターンで配置できます。 最大で 4 つのグラフを並べて表示できます。||
 |**カスタム グラフを作成する:** ロード テストの結果に関する特定の情報を表示するグラフをデザインできます。 カスタム グラフをデザインするには、グラフで表示するロード テストのカウンターを指定します。|-   [方法: カスタム グラフを作成する](../test/how-to-create-custom-graphs-in-load-test-results.md)|
-|**グラフのパフォーマンス カウンター データをエクスポートする:** **グラフ** ビューが表示された状態で、**ロード テスト アナライザー** ツール バーの **[グラフ データを Excel にエクスポート]** ボタンを使用すると、グラフのデータを Microsoft Excel にエクスポートできます。||
+|**グラフのパフォーマンス カウンター データをエクスポートする:****グラフ** ビューが表示された状態で、**ロード テスト アナライザー** ツール バーの **[グラフ データを Excel にエクスポート]** ボタンを使用すると、グラフのデータを Microsoft Excel にエクスポートできます。||
 
 ## <a name="related-tasks"></a>関連するタスク
 
  [テーブル ビューでのロード テスト結果とエラーの分析](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)
 
- [方法 : ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)
+ [方法: ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)
 
  [ロード テストの結果の分析](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
 

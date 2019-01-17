@@ -1,8 +1,6 @@
 ---
-title: メニュー コマンドの表示 |Microsoft ドキュメント
-ms.custom: ''
+title: メニュー コマンドの表示 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - View menu commands
@@ -12,18 +10,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dbfbcd8d586c1c6d2d3b208c3d7d62b2b333845d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 6c4d30268bc5a41ec45875640aafa0458733c89e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31481776"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53915375"
 ---
 # <a name="view-menu-commands"></a>[表示] メニューのコマンド
 **ビュー**メニュー コマンド、spy++ を制御するユーザー インターフェイスを提供します。  
   
  **フォント**  
- 開く、**フォント**ダイアログ ボックスで現在の spy++ ビューで使用するフォントを選択できます。  
+ 開く、**フォント** ダイアログ ボックスで、現在の spy++ ビューで使用するためのフォントを選択できます。  
   
  **ツール バー**  
  ツールバーを表示または非表示にします。  

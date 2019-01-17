@@ -1,8 +1,6 @@
 ---
-title: '方法: プロファイリング ツールのコール トレース レポートを作成する | Microsoft Docs'
-ms.custom: ''
+title: '方法: プロファイル ツールのコール トレース レポートを作成する | Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - performance tools, viewing ETW data
@@ -13,14 +11,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a363554dfab8463ed91a82ffae9dea4f52d435d4
-ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
+ms.openlocfilehash: c2d48b266108a053fa24da517d2367fe85b2b6a6
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34815731"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53985866"
 ---
-# <a name="how-to-create-a-profiling-tools-call-trace-report"></a>方法: プロファイル ツールのコール トレース レポートを作成する
+# <a name="how-to-create-a-profiling-tools-call-trace-report"></a>方法: プロファイリング ツールのコール トレース レポートを作成する
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールの*コール トレース レポート*は、アプリケーションの関数に対する各エントリ ポイントと終了ポイント、および実行中の関数から他の関数に対する各呼び出しのタイミング情報を一覧表示します。 コール トレース レポートをデータのプロファイリングに使用できるのは、インストルメンテーション メソッドで収集された場合だけです。  
   
 > [!NOTE]

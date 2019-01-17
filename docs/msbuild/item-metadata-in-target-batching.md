@@ -1,8 +1,6 @@
 ---
 title: ターゲットのバッチの項目メタデータ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - batching [MSBuild]
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 486169788ad4533f5d45bf48c979ce3d0f5f7920
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: f46f71303dead8c44881098a89fa7518d05e7d4b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39081060"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53856398"
 ---
 # <a name="item-metadata-in-target-batching"></a>ターゲットのバッチの項目メタデータ
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、ビルド ターゲットの入力と出力の依存関係分析を分析できます。 ターゲットの入力または出力が最新の状態であると判断された場合、ターゲットはスキップされ、ビルドが進行します。 `Target` 要素は `Inputs` 属性と `Outputs` 属性を利用し、依存関係分析中に検査する項目を指定します。  
@@ -68,7 +66,7 @@ ms.locfileid: "39081060"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [方法: インクリメンタル ビルドを実行する](../msbuild/how-to-build-incrementally.md)   
+ [方法: インクリメンタル ビルド](../msbuild/how-to-build-incrementally.md)   
  [バッチ](../msbuild/msbuild-batching.md)   
  [Target 要素 (MSBuild)](../msbuild/target-element-msbuild.md)   
  [タスクのバッチの項目メタデータ](../msbuild/item-metadata-in-task-batching.md)

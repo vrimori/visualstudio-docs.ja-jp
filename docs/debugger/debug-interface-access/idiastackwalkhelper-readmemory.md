@@ -1,8 +1,6 @@
 ---
 title: IDiaStackWalkHelper::readMemory |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 76b054d004e6c62f9d36ca5fcebe1a7f0476fbfc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 7d12d1da983a69f71d96bb06271bd3a971a16cbb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49825858"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53825738"
 ---
 # <a name="idiastackwalkhelperreadmemory"></a>IDiaStackWalkHelper::readMemory
 メモリ内で実行可能ファイルのイメージからのデータのブロックを読み取ります。  
@@ -27,7 +25,7 @@ ms.locfileid: "49825858"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT readMemory(   
+HRESULT readMemory(   
    enum MemoryTypeEnum type,  
    ULONGLONG           va,  
    DWORD               cbData,  
@@ -40,7 +38,7 @@ HRESULT readMemory(
  `type`  
  [in]値、 [MemoryTypeEnum 列挙型](../../debugger/debug-interface-access/memorytypeenum.md)読み取るためのメモリの種類を指定する列挙体。  
   
- Va  
+ va  
  [in]読み取りを開始位置を示すイメージ内の仮想アドレス。  
   
  `cbData`  
@@ -55,6 +53,6 @@ HRESULT readMemory(
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   
  [MemoryTypeEnum 列挙型](../../debugger/debug-interface-access/memorytypeenum.md)

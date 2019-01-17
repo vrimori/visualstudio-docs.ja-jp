@@ -1,8 +1,6 @@
 ---
 title: Idiatable::item |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 476e4d01ed6e092936fc2d9bc7b8e264215e21dc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 3e8ba825c0dba1b0218e53f9ad66f6958602d0c2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49950057"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53953980"
 ---
 # <a name="idiatableitem"></a>IDiaTable::Item
 テーブル内の指定されたエントリへの参照を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49950057"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT Item (   
+HRESULT Item (   
    DWORD      index,  
    IUnknown** element  
 );  
@@ -43,13 +41,13 @@ HRESULT Item (
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  テーブルは、オブジェクトのコレクションを表します。 によって、これらのオブジェクト要素のパラメーターは、適切なインターフェイスにキャストできます。 たとえば、テーブルに含まれる[IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)オブジェクトに要素のパラメーターをキャストすることができ、`IDiaSegment`インターフェイス。  
   
  呼び出す方が一般的ですが、`QueryInterface`メソッドで、 [IDiaTable](../../debugger/debug-interface-access/idiatable.md)適切な列挙子インターフェイスのためのインターフェイスし、列挙子の特定のメソッドを使用してテーブルの内容にアクセスします。 参照してください、 [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)例については、インターフェイスです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaTable](../../debugger/debug-interface-access/idiatable.md)   
- [Idiatable::get_count](../../debugger/debug-interface-access/idiatable-get-count.md)   
+ [IDiaTable::get_Count](../../debugger/debug-interface-access/idiatable-get-count.md)   
  [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)   
  [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

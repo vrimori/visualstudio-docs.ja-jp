@@ -1,8 +1,6 @@
 ---
 title: グラフィックス フレームの検証 |Microsoft Docs
-ms.custom: ''
 ms.date: 03/02/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.graphics.FrameValidation
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0cdfdee83a9c78069b3f086ef84b280ba9328e4f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 2add8032a1fa5da983c66ab5cfabede78f4c65c8
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49850881"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53891775"
 ---
 # <a name="graphics-frame-validation"></a>グラフィックス フレームの検証
 <!-- VERSIONLESS --> Visual Studio 2017 とサポートを強化、**フレームの検証**ツール。  フレームの検証のウィンドウには、エラーとイベントの一覧に関連付けられている警告が表示されます。  このウィンドウを表示するには、選択、**ビュー > フレームの検証**メニュー。
@@ -35,6 +33,6 @@ ms.locfileid: "49850881"
 | メッセージ | イベントに関連付けられているメッセージ。 |
 | event | エラーまたは警告に関連するイベントです。 |
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
 [グラフィックス診断 (DirectX グラフィックスのデバッグ)](visual-studio-graphics-diagnostics.md)   
 <!-- /VERSIONLESS -->

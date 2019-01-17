@@ -1,8 +1,6 @@
 ---
 title: '方法: プロセスのプロパティの表示 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Process properties
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 25138eb6c9f7616f68841a45fcd1001ccd3dc84f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: dd5217e9bd86462b793a9172ba3073c12bc9502d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49826324"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53832412"
 ---
 # <a name="how-to-display-process-properties"></a>方法: プロセスのプロパティを表示する
 表示されているプロセスに関する詳細は[プロセス ビュー](../debugger/processes-view.md)を使用して、[プロセス プロパティ ダイアログ ボックス](../debugger/process-properties-dialog-box.md)します。  

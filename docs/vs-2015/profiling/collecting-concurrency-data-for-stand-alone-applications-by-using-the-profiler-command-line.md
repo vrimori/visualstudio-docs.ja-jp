@@ -17,17 +17,17 @@ caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fc20cce20c07e4fe33cf343cd0cc900a46be5586
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.openlocfilehash: e49d723db8cb444fb9e21640a2e5e9b1eecea268
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51789734"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53950557"
 ---
 # <a name="collecting-concurrency-data-for-stand-alone-applications-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用したスタンドアロン アプリケーションのコンカレンシー データの収集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツールのコンカレンシー メソッドを使用すると、リソース競合データとスレッド アクティビティ データを収集し、CPU 使用率、スレッド競合、スレッドの移行、同期の遅延、重複 I/O の領域などのシステム イベントを表示できます。  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]プロファイリング ツールのコンカレンシー メソッドを使用すると、リソース競合データとスレッド アクティビティ データを収集し、CPU 使用率、スレッド競合、スレッドの移行、同期の遅延、重複 I/O の領域などのシステム イベントを表示できます。  
   
 ## <a name="common-tasks"></a>一般的なタスク  
   
@@ -36,7 +36,7 @@ ms.locfileid: "51789734"
 |**.NET Framework アプリケーションとプロファイルコンカレンシー データの起動**|-   [方法: .NET Framework アプリケーションを起動し、コンカレンシー データを収集する](../profiling/how-to-launch-a-stand-alone-dotnet-framework-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line.md)|  
 |**C/C++ アプリケーションとプロファイル コンカレンシー データの起動**|-   [方法: ネイティブ アプリケーションを起動し、コンカレンシー データを収集する](../profiling/how-to-launch-a-stand-alone-native-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line.md)|  
 |**実行中の .NET Framework アプリケーションにプロファイラーをアタッチする**|-   [方法: プロファイラーを .NET Framework アプリケーションにアタッチし、コンカレンシー データを収集する](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-stand-alone-application-to-collect-concurrency-data-by-using-the-command-line.md)|  
-|**実行中の C/C++ アプリケーションにプロファイラーをアタッチする**|-   [方法: プロファイラーをネイティブ アプリケーションにアタッチし、コンカレンシー データを収集する](../profiling/how-to-attach-the-profiler-to-a-native-stand-alone-application-and-collect-concurrency-data-by-using-the-command-line.md)|  
+|**実行中の C/C++ アプリケーションにプロファイラーをアタッチする**|-   [方法: プロファイラーをネイティブ アプリケーションにアタッチし、コンカレンシー データを収集する](/visualstudio/profiling/how-to-attach-the-profiler-to-a-native-app-and-collect-concurrency-data?view=vs-2015)|  
   
 ## <a name="related-tasks"></a>関連タスク  
   

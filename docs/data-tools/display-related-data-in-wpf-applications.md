@@ -15,15 +15,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f37fdeb7ddd305c7c258958d92c08cf1d8f2a4a8
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.openlocfilehash: 5666197598eae96322c79724555b2cd884be70cd
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304598"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53824276"
 ---
 # <a name="display-related-data-in-wpf-applications"></a>WPF アプリケーションで関連データを表示する
 
@@ -33,9 +32,9 @@ ms.locfileid: "52304598"
 
 ## <a name="to-create-controls-that-display-related-records"></a>関連するレコードを表示するコントロールを作成するには
 
-1. [データ] **メニューの [データ ソースの表示]** をクリックして [データ ソース]** ウィンドウを開きます。
+1. **[データ]** メニューの **[データ ソースの表示]** をクリックして **[データ ソース]** ウィンドウを開きます。
 
-2. [新しいデータ ソースの追加] **をクリックして、データ ソース構成**ウィザードの操作を完了します。
+2. **[新しいデータ ソースの追加]** をクリックして、**データ ソース構成ウィザード**の操作を完了します。
 
 3. WPF デザイナーを開き、デザイナーには内の項目の有効なドロップ先であるコンテナーが含まれているかどうかを確認して、**データソース**ウィンドウ。
 

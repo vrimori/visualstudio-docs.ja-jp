@@ -1,8 +1,6 @@
 ---
 title: Idiaaddressmap::get_relativevirtualaddressenabled |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aa61da69f30b759ade63798d681ae8036bcd8ece
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 6a9048a3b0d4371d73f98f53645f8580405cd95c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49849087"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53939305"
 ---
 # <a name="idiaaddressmapgetrelativevirtualaddressenabled"></a>IDiaAddressMap::get_relativeVirtualAddressEnabled
 計算と相対仮想アドレス (RVA) の使用が有効かどうかを示します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49849087"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_relativeVirtualAddressEnabled (   
+HRESULT get_relativeVirtualAddressEnabled (   
    BOOL* pRetVal  
 );  
 ```  
@@ -39,12 +37,12 @@ HRESULT get_relativeVirtualAddressEnabled (
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  Rva は PDB ファイルのセグメントが最初に読み込まれているいる場合に有効です。 呼び出すことによって、Rva の使用を一時的に無効にできます、 [idiaaddressmap::put_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md)メソッド。  
   
  呼び出しても、新しいイメージのヘッダーを確立できる、 [idiaaddressmap::set_imageheaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)メソッドへの呼び出しに続けて、 `put_relativeVirtualAddressEnabled` Rva を新しいイメージ ヘッダーを使用して使用できるようにするメソッド。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   
- [Idiaaddressmap::set_imageheaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)   
+ [IDiaAddressMap::set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)   
  [IDiaAddressMap::put_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md)

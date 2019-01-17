@@ -1,8 +1,6 @@
 ---
 title: '方法: WCF サービスにステップ イン |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -18,14 +16,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cad65b893867a18133bbf9492a1c1786b24a81ed
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: f361369aef97aaa894a1a1929149356d3177cc3f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49912165"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53890736"
 ---
-# <a name="how-to-step-into-wcf-services"></a>方法 : WCF サービスにステップ インする
+# <a name="how-to-step-into-wcf-services"></a>方法: WCF サービスにステップインする
 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] では、WCF サービスにステップ インできます。 WCF サービスがクライアントと同じ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションにある場合、WCF サービス内のブレークポイントに到達できます。  
   
  ステップ実行を使用するには、app.config ファイルまたは Web.config ファイルでデバッグを有効にする必要があります。 デバッグを有効にして、WCF サービスにステップ インする制限については、次を参照してください。 方法については[WCF デバッグの制約](../debugger/limitations-on-wcf-debugging.md)します。  
@@ -34,7 +32,7 @@ ms.locfileid: "49912165"
   
 1. WCF クライアント プロジェクトと WCF サービス プロジェクトの両方を含む [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションを作成します。  
   
-2. ソリューション エクスプローラで、WCF クライアント プロジェクトを右クリックし をクリックし、**スタートアップ プロジェクトとして設定**します。  
+2. ソリューション エクスプローラーで、WCF クライアント プロジェクトを右クリックして、**[スタートアップ プロジェクトに設定]** をクリックします。  
   
 3. app.config ファイルまたは web.config ファイルでデバッグを有効にします。 詳細については、次を参照してください。 [WCF デバッグの制約](../debugger/limitations-on-wcf-debugging.md)します。  
   
@@ -42,7 +40,7 @@ ms.locfileid: "49912165"
   
 5. ブレークポイントまで実行した後、ステップ実行を開始します。 デバッガーがサービスに自動的にステップ インします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [WCF サービスのデバッグ](../debugger/debugging-wcf-services.md)   
  [WCF デバッグの制約](../debugger/limitations-on-wcf-debugging.md)   
- [方法 : セルフホストされている WCF サービスをデバッグする](../debugger/how-to-debug-a-self-hosted-wcf-service.md)
+ [方法: セルフホストされている WCF サービスをデバッグする](../debugger/how-to-debug-a-self-hosted-wcf-service.md)

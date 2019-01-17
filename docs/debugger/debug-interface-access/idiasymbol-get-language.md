@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_language |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b214e16538ba6447ce97ed6569bfbb580cf222e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: d0699510f419a510c004cd2bf7e840a5aa631316
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49935875"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53888219"
 ---
 # <a name="idiasymbolgetlanguage"></a>IDiaSymbol::get_language
 ソースの言語を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49935875"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_language (   
+HRESULT get_language (   
    DWORD* pRetVal  
 );  
 ```  
@@ -42,6 +40,6 @@ HRESULT get_language (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [CV_CFL_LANG 列挙型](../../debugger/debug-interface-access/cv-cfl-lang.md)

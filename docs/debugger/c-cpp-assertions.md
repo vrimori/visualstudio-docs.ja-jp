@@ -1,8 +1,6 @@
 ---
 title: C/C++ アサーション |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -30,62 +28,62 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91ff9d752e2043829b3ea310606a9d8b82b1e1e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 6428f79085ca2a79fdc02a6d4d4ceb191d02f5bb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49845993"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53894390"
 ---
 # <a name="cc-assertions"></a>アサーション
-アサート ステートメントでは、プログラム内で true になる必要のある条件を指定します。 その条件が true でない場合、アサーションは失敗し、プログラムの実行が中断されると、[アサートに失敗しました ダイアログ ボックス](../debugger/assertion-failed-dialog-box.md)が表示されます。  
+アサート ステートメントでは、プログラム内で true になる必要のある条件を指定します。 この条件が true にならない場合、アサーションは失敗し、プログラムの実行が中断され、[[アサートに失敗しました] ダイアログ ボックス](../debugger/assertion-failed-dialog-box.md)が表示されます。  
 
  Visual C++ は、次の構成に基づくアサート ステートメントをサポートします。  
 
 - MFC アサーション (MFC プログラムの場合)  
 
-- [ATLASSERT](/cpp/atl/reference/debugging-and-error-reporting-macros#atlassert) ATL を使用するプログラム  
+- [ATLASSERT](/cpp/atl/reference/debugging-and-error-reporting-macros#atlassert) (ATL を使用するプログラムの場合)  
 
 - CRT アサーション (C ランタイム ライブラリを使用するプログラムの場合)  
 
-- ANSI [assert 関数](/cpp/c-runtime-library/reference/assert-macro-assert-wassert)他の C/C++ プログラム。  
+- ANSI [assert 関数](/cpp/c-runtime-library/reference/assert-macro-assert-wassert) (その他の C/C++ プログラムの場合)  
 
   アサーションを使用して論理エラーを検出し、操作の結果を確認することで、処理する必要があるエラー条件をテストできます。  
 
 ##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
  [アサーションのしくみ](#BKMK_How_assertions_work)  
 
- [デバッグとリリース ビルドでのアサーション](#BKMK_Assertions_in_Debug_and_Release_builds)  
+ [デバッグ ビルドとリリース ビルドでのアサーション](#BKMK_Assertions_in_Debug_and_Release_builds)  
 
- [アサーションの副作用](#BKMK_Side_effects_of_using_assertions)  
+ [アサーション使用の副作用](#BKMK_Side_effects_of_using_assertions)  
 
  [CRT アサーション](#BKMK_CRT_assertions)  
 
  [MFC アサーション](#BKMK_MFC_assertions)  
 
-- [MFC ASSERT_VALID と cobject::assertvalid](#BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid)  
+- [MFC ASSERT_VALID と CObject::AssertValid](#BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid)  
 
-- [Assertvalid に関する](#BKMK_Limitations_of_AssertValid)  
+- [AssertValid に関する制限事項](#BKMK_Limitations_of_AssertValid)  
 
   [アサーションの使用](#BKMK_Using_assertions)  
 
 - [論理エラーの検出](#BKMK_Catching_logic_errors)  
 
-- [結果を確認します。](#BKMK_Checking_results_)  
+- [結果の確認](#BKMK_Checking_results_)  
 
-- [エラーの未処理の検索](#BKMK_Testing_error_conditions_)  
+- [処理されないエラーの検索](#BKMK_Testing_error_conditions_)  
 
 ##  <a name="BKMK_How_assertions_work"></a> アサーションのしくみ  
- MFC ライブラリまたは C ランタイム ライブラリのアサーションによってデバッガーが停止したとき、ソース ファイルが利用可能である場合は、そのソース ファイル内のアサーションが発生した位置にジャンプします。 両方にアサーション メッセージが表示されます、[出力ウィンドウ](../ide/reference/output-window.md)と**アサーションが失敗した** ダイアログ ボックス。 アサーション メッセージをコピーすることができます、**出力**を後で参照するために保存する場合は、テキスト ウィンドウのウィンドウ。 **出力**ウィンドウも、他のエラー メッセージを含めることができます。 アサーションが失敗した原因を突き止める手掛かりとなるため、これらのエラー メッセージをよく調べてください。  
+ MFC ライブラリまたは C ランタイム ライブラリのアサーションによってデバッガーが停止したとき、ソース ファイルが利用可能である場合は、そのソース ファイル内のアサーションが発生した位置にジャンプします。 アサーション メッセージが [[出力] ウィンドウ](../ide/reference/output-window.md)と **[アサートに失敗しました]** ダイアログ ボックスの両方に表示されます。 後で参照するためにアサーション メッセージを保存する場合は、**[出力]** ウィンドウからテキスト ウィンドウへコピーします。 **[出力]** ウィンドウに、他のエラー メッセージが表示されていることもあります。 アサーションが失敗した原因を突き止める手掛かりとなるため、これらのエラー メッセージをよく調べてください。  
 
  開発中にアサーションを使用してエラーを検出します。 一般的に、想定ごとに 1 つのアサーションを使用します。 たとえば、引数が NULL でないと想定した場合、アサーションを使用してその想定が正しいかどうかをテストします。  
 
  [このトピックの内容](#BKMK_In_this_topic)  
 
-##  <a name="BKMK_Assertions_in_Debug_and_Release_builds"></a> デバッグとリリース ビルドでのアサーション  
+##  <a name="BKMK_Assertions_in_Debug_and_Release_builds"></a> デバッグ ビルドとリリース ビルドでのアサーション  
  アサート ステートメントは、`_DEBUG` が定義されている場合のみコンパイルされます。 定義されていない場合、コンパイラはアサーションを null ステートメントとして扱います。 したがって、プログラムの最終リリース バージョンではアサート ステートメントのオーバーヘッドやパフォーマンス コストはゼロになります。`#ifdef` ディレクティブを使用する必要もありません。  
 
-##  <a name="BKMK_Side_effects_of_using_assertions"></a> アサーションの副作用  
+##  <a name="BKMK_Side_effects_of_using_assertions"></a> アサーション使用の副作用  
  アサーションをコードに追加するときは、そのアサーションに副作用がないことを確認してください。 たとえば、`nM` 値を変更する次のアサーションを考えます。  
 
 ```cpp
@@ -106,7 +104,7 @@ VERIFY ( myFnctn(0)==1 ) // safe
  [このトピックの内容](#BKMK_In_this_topic)  
 
 ##  <a name="BKMK_CRT_assertions"></a> CRT アサーション  
- CRTDBG します。H ヘッダー ファイルの定義、 [_assert マクロと _ASSERTE マクロ](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros)アサーションをチェックするためです。  
+ CRTDBG.H ヘッダー ファイルには、アサーションによるチェックを行うための [_ASSERT マクロと _ASSERTE マクロ](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros)が定義されています。  
 
 
 | マクロ | 結果 |
@@ -127,30 +125,30 @@ VERIFY ( myFnctn(0)==1 ) // safe
    } while (0)  
 ```  
 
- FALSE にアサートされた式が評価された場合に[_CrtDbgReport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) (既定では、メッセージ ダイアログ ボックスを使用して) アサーション エラーを報告すると呼びます。 選択した場合**再試行**メッセージ ダイアログ ボックスで、 `_CrtDbgReport` 1 を返しますと`_CrtDbgBreak`からデバッガーを呼び出す`DebugBreak`。  
+ アサート対象の式が FALSE と評価された場合、[_CrtDbgReport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) が呼び出され、アサーションが失敗したことをレポートします (既定では、メッセージ ダイアログ ボックスを使用します)。 このメッセージ ダイアログ ボックスで **[再試行]** を選択すると、`_CrtDbgReport` は 1 を返し、`_CrtDbgBreak` は `DebugBreak` を使用してデバッガーを呼び出します。  
 
 ### <a name="checking-for-heap-corruption"></a>ヒープ破損のチェック  
- 次の例では[_CrtCheckMemory](/cpp/c-runtime-library/reference/crtcheckmemory)のヒープの破損を確認します。  
+ 次の例は、[_CrtCheckMemory](/cpp/c-runtime-library/reference/crtcheckmemory) を使用してヒープの破損をチェックします。  
 
 ```cpp
 _ASSERTE(_CrtCheckMemory());  
 ```  
 
 ### <a name="checking-pointer-validity"></a>ポインターの有効性チェック  
- 次の例では[_CrtIsValidPointer](/cpp/c-runtime-library/reference/crtisvalidpointer)指定したメモリ範囲が読み取りまたは書き込みに対して有効であることを確認します。  
+ 次の例は、[_CrtIsValidPointer](/cpp/c-runtime-library/reference/crtisvalidpointer) を使用して、指定したメモリ範囲への読み取りまたは書き込みが有効かどうかを検証します。  
 
 ```cpp
 _ASSERTE(_CrtIsValidPointer( address, size, TRUE );  
 ```  
 
- 次の例では使用[_CrtIsValidHeapPointer](/cpp/c-runtime-library/reference/crtisvalidheappointer)ポインターがローカル ヒープ内にメモリを指すことを確認する (ヒープが作成され、C ランタイム ライブラリのこのインスタンスで管理-DLL は、ライブラリの独自のインスタンスを持つことができ、そのため独自のヒープ、アプリケーション ヒープの外部で)。 このアサーションは、null アドレスや範囲外のアドレスだけでなく、静的変数、スタック変数、その他の非ローカル メモリを指すポインターも検出します。  
+ 次の例は、[_CrtIsValidHeapPointer](/cpp/c-runtime-library/reference/crtisvalidheappointer) を使用して、ポインターがローカル ヒープ上のメモリを指しているかどうかを検証します (C ランタイム ライブラリのこのインスタンスによって作成および管理されるヒープを指します。DLL はライブラリの独自のインスタンスを持っているため、アプリケーション ヒープの外部に独自のヒープを所有していることになります)。 このアサーションは、null アドレスや範囲外のアドレスだけでなく、静的変数、スタック変数、その他の非ローカル メモリを指すポインターも検出します。  
 
 ```cpp
 _ASSERTE(_CrtIsValidPointer( myData );  
 ```  
 
 ### <a name="checking-a-memory-block"></a>メモリ ブロックのチェック  
- 次の例では[_CrtIsMemoryBlock](/cpp/c-runtime-library/reference/crtismemoryblock)をメモリ ブロックがローカル ヒープがあり、有効なブロック型を持つことを確認します。  
+ 次の例は、[_CrtIsMemoryBlock](/cpp/c-runtime-library/reference/crtismemoryblock) を使用して、メモリ ブロックがローカル ヒープ上にあり、有効なブロック型があることを確認します。  
 
 ```cpp
 _ASSERTE(_CrtIsMemoryBlock (myData, size, &requestNumber, &filename, &linenumber));  
@@ -159,11 +157,11 @@ _ASSERTE(_CrtIsMemoryBlock (myData, size, &requestNumber, &filename, &linenumber
  [このトピックの内容](#BKMK_In_this_topic)  
 
 ##  <a name="BKMK_MFC_assertions"></a> MFC アサーション  
- MFC の定義、 [ASSERT](https://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c)アサーションをチェックするためのマクロ。 また、`MFC ASSERT_VALID` 派生オブジェクトの内部状態を検証するための `CObject::AssertValid` および `CObject` も定義されています。  
+ MFC には、アサーションによるチェックを行うための [ASSERT](https://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c) マクロが定義されています。 また、`MFC ASSERT_VALID` 派生オブジェクトの内部状態を検証するための `CObject::AssertValid` および `CObject` も定義されています。  
 
  MFC の `ASSERT` マクロの引数がゼロまたは false に評価された場合、マクロはプログラムの実行を停止し、ユーザーに警告を表示します。それ以外の場合、プログラムの実行を続けます。  
 
- アサーションが失敗すると、アサーション対象のソース ファイル名と行番号がメッセージ ダイアログ ボックスに表示されます。 ダイアログ ボックスで [再試行] を選択する場合のボックスへの呼び出し[AfxDebugBreak](/cpp/mfc/reference/diagnostic-services#afxdebugbreak)実行をデバッガーに中断します。 この時点で、呼び出し履歴を調べるかその他のデバッガー機能を使って、アサーションが失敗した原因を確認できます。 有効にした場合[ジャスト イン タイム デバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)、およびデバッガーが既に実行されていない、ダイアログ ボックスは、デバッガーを起動できます。  
+ アサーションが失敗すると、アサーション対象のソース ファイル名と行番号がメッセージ ダイアログ ボックスに表示されます。 このダイアログ ボックスで [再試行] を選択すると、[AfxDebugBreak](/cpp/mfc/reference/diagnostic-services#afxdebugbreak) が呼び出され、デバッガーのためにプログラムの実行が中断されます。 この時点で、呼び出し履歴を調べるかその他のデバッガー機能を使って、アサーションが失敗した原因を確認できます。 [Just-In-Time デバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)を有効にしておくと、デバッガーがまだ実行されていない場合に、このダイアログ ボックスからデバッガーを起動できます。  
 
  `ASSERT` を使用して関数の戻り値をチェックする方法を次に示します。  
 
@@ -172,16 +170,16 @@ int x = SomeFunc(y);
 ASSERT(x >= 0);   //  Assertion fails if x is negative  
 ```  
 
- アサートを使用することができます、 [IsKindOf](https://docs.microsoft.com/cpp/mfc/reference/cobject-class#iskindof)関数の引数の型チェックを提供する関数。  
+ ASSERT を次のように [IsKindOf](https://docs.microsoft.com/cpp/mfc/reference/cobject-class#iskindof) 関数と組み合わせて使用すると、関数の引数の型チェックを行うことができます。  
 
 ```cpp
 ASSERT( pObject1->IsKindOf( RUNTIME_CLASS( CPerson ) ) );  
 ```  
 
- `ASSERT` マクロは、リリース バージョンではコードを生成しません。 リリース バージョンで式を評価する必要がある場合、[確認](https://msdn.microsoft.com/library/s8c29sw2.aspx#verify)ASSERT に代わるマクロ。  
+ `ASSERT` マクロは、リリース バージョンではコードを生成しません。 リリース バージョンで式を評価する必要がある場合は、ASSERT の代わりに [VERIFY](https://msdn.microsoft.com/library/s8c29sw2.aspx#verify) マクロを使用します。  
 
-###  <a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a> MFC ASSERT_VALID と cobject::assertvalid  
- [Cobject::assertvalid](https://docs.microsoft.com/cpp/mfc/reference/cobject-class#assertvalid)メソッドが実行時に、オブジェクトの内部状態のチェックを提供します。 `AssertValid` からクラスを派生させる場合、必ずしも `CObject` をオーバーライドする必要はありませんが、そうすることによって、クラスの信頼性を高めることができます。 `AssertValid` によって、オブジェクトのすべてのメンバー変数に対し、有効な値を保持しているかどうかを検証するアサーションが実行されます。 たとえば、ポインターのメンバー変数が NULL でないかどうかをチェックできます。  
+###  <a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a> MFC ASSERT_VALID と CObject::AssertValid  
+ [CObject::AssertValid](https://docs.microsoft.com/cpp/mfc/reference/cobject-class#assertvalid) メソッドを使用すると、オブジェクトの内部状態を実行時にチェックできます。 `AssertValid` からクラスを派生させる場合、必ずしも `CObject` をオーバーライドする必要はありませんが、そうすることによって、クラスの信頼性を高めることができます。 `AssertValid` によって、オブジェクトのすべてのメンバー変数に対し、有効な値を保持しているかどうかを検証するアサーションが実行されます。 たとえば、ポインターのメンバー変数が NULL でないかどうかをチェックできます。  
 
  `AssertValid` 関数の宣言方法を次に示します。  
 
@@ -220,7 +218,7 @@ void CPerson::AssertValid() const
 
  オブジェクトを格納しているメンバー変数がある場合は、`ASSERT_VALID` マクロを使用して、そのオブジェクトの内部状態が有効かどうかを検証します (オブジェクトのクラスが `AssertValid` をオーバーライドしている場合)。  
 
- たとえば、クラス`CMyData`、店舗、 [CObList](/cpp/mfc/reference/coblist-class)でそのメンバー変数のいずれか。 `CObList` 型の変数 `m_DataList` は、`CPerson` オブジェクトのコレクションを格納します。 `CMyData` クラスの宣言の概要を次に示します。  
+ たとえば、`CMyData` クラスのメンバー変数の 1 つに [CObList](/cpp/mfc/reference/coblist-class) が格納されているとします。 `CObList` 型の変数 `m_DataList` は、`CPerson` オブジェクトのコレクションを格納します。 `CMyData` クラスの宣言の概要を次に示します。  
 
 ```cpp
 class CMyData : public CObject  
@@ -261,7 +259,7 @@ void CMyData::AssertValid( ) const
 
  これらの関数やマクロは、デバッグ バージョンのビルドに強力な機構を提供します。 リリース バージョンのビルド時には、この機構は自動的にオフになります。  
 
-###  <a name="BKMK_Limitations_of_AssertValid"></a> Assertvalid に関する  
+###  <a name="BKMK_Limitations_of_AssertValid"></a> AssertValid に関する制限事項  
  この関数は、オブジェクトが不正な場合に、アサートしてプログラムの実行を停止します。 ただし、アサートされない場合でも、問題が検出されなかったことを示すだけで、必ずしもオブジェクトに問題がないと保証されたわけではありません。  
 
  [このトピックの内容](#BKMK_In_this_topic)  
@@ -287,7 +285,7 @@ _ASSERT(numMols >= 0);
 
  [このトピックの内容](#BKMK_In_this_topic)  
 
-###  <a name="BKMK_Checking_results_"></a> 結果を確認します。  
+###  <a name="BKMK_Checking_results_"></a> 結果の確認  
  アサーションは、ざっと見ただけでは結果がわかりにくい演算をテストする場合に有用です。  
 
  たとえば、次のコードを検討してみます。このコードは、`iMols` の指すリンク リストの内容に基づいて変数 `mols` を更新します。  
@@ -310,7 +308,7 @@ _ASSERT(iMols<=numMols); // CRT version
 
  [このトピックの内容](#BKMK_In_this_topic)  
 
-###  <a name="BKMK_Testing_error_conditions_"></a> エラーの未処理の検索  
+###  <a name="BKMK_Testing_error_conditions_"></a> 処理されないエラーの検索  
  アサーションを使用すると、コード内のエラー処理が完了しているはずの個所で、エラー条件をチェックできます。 次の例のグラフィック ルーチンは、エラー コードを返します。または、正常終了した場合は 0 を返します。  
 
 ```cpp
@@ -340,7 +338,7 @@ _ASSERT(!myErr); // Don't do this, either!
 
  [このトピックの内容](#BKMK_In_this_topic)  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)   
  [マネージド コードのアサーション](../debugger/assertions-in-managed-code.md)

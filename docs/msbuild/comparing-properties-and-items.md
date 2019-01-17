@@ -1,8 +1,6 @@
 ---
 title: プロパティと項目の比較 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: conceptual
 helpviewer_keywords:
 - msbuild, msbuild properties
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 96166caefa749138371dd8a5ab2ea9d496553557
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: e27f9973bc24cf7d45e86e9982d40cdb20a367ba
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39177115"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53942360"
 ---
 # <a name="compare-properties-and-items"></a>プロパティと項目を比較する
 MSBuild のプロパティと項目は、いずれもタスクに情報を渡し、条件を評価し、プロジェクト ファイルで参照する値を格納しておくために使用されます。  
@@ -69,7 +67,7 @@ MSBuild のプロパティと項目は、いずれもタスクに情報を渡し
 </PropertyGroup>  
 ```  
   
- 項目の種類 OutputDir には、"KeyFiles\\;Certificates\\" という値の `Include` 属性があります。 MSBuild は、この文字列を 2 つの項目 KeyFiles\ と Certificates\\ に解析します。 項目の種類 OutputDir を OutputDirList プロパティの値として使用している場合、MSBuild は、項目の種類をセミコロン区切りの文字列 "KeyFiles\\;Certificates\\" に変換または "平坦化" します。  
+ 項目の種類 OutputDir には、"KeyFiles\\;Certificates\\" という値の `Include` 属性があります。 MSBuild は、この文字列を 2 つの項目KeyFiles\ と Certificates\\ に解析します。 項目の種類 OutputDir を OutputDirList プロパティの値として使用している場合、MSBuild は、項目の種類をセミコロン区切りの文字列 "KeyFiles\\;Certificates\\" に変換または "平坦化" します。  
   
 ## <a name="properties-and-items-in-tasks"></a>タスクのプロパティと項目  
  プロパティと項目は、MSBuild タスクの入力と出力として使用されます。 詳細については、[タスク](../msbuild/msbuild-tasks.md)に関する記事を参照してください。  

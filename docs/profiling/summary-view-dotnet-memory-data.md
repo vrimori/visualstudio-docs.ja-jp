@@ -1,8 +1,6 @@
 ---
 title: 概要ビュー - .NET メモリ データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Summary view
@@ -12,18 +10,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 98b56eece1a51db94482a0a58d54ca877e47e0c1
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: f5f821f936ffa8e157eb61e5daab25d1421c6899
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35669362"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53935218"
 ---
 # <a name="summary-view---net-memory-data"></a>概要ビュー - .NET メモリ データ
 概要ビューには、最も多くのメモリを割り当てた .NET 関数と型、およびプロファイリング実行で作成回数が最も多い型に関する情報が一覧表示されます。 通知リンクとレポート リストの説明など詳細については、「[概要ビュー](../profiling/summary-view.md)」をご覧ください。  
   
 ## <a name="timeline-graph"></a>タイムライン グラフ  
- 概要ビューのタイムライン グラフには、プロファイリングが行われた期間のプロファイリングされたアプリケーション別にプロセッサ (CPU) 使用率が表示されます。 タイムライン グラフを使用すると、選択した期間に対してフィルター処理した結果を表示できます。 詳細については、「[方法: 概要ビューのタイムラインからレポート ビューをフィルター処理する](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)」を参照してください。  
+ 概要ビューのタイムライン グラフには、プロファイリングが行われた期間のプロファイリングされたアプリケーション別にプロセッサ (CPU) 使用率が表示されます。 タイムライン グラフを使用すると、選択した期間に対してフィルター処理した結果を表示できます。 詳細については、「[方法 :概要ビューのタイムラインからレポート ビューをフィルター処理する](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)」を参照してください。  
   
 ## <a name="functions-allocating-most-memory"></a>最も多くのメモリを割り当てている関数  
  プロファイリング実行で最も多くのメモリのバイト数を割り当てた関数が一覧表示されます。  

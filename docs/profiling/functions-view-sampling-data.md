@@ -1,8 +1,6 @@
 ---
 title: 関数ビュー - サンプリング データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - sampling profiling method,Functions View
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9084aad27d14825f4b3d0a648f0880d4db329c78
-ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
+ms.openlocfilehash: d1f45c2437a1bf1f5d0c81d91bced3f26a6faaad
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35237495"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53942581"
 ---
 # <a name="functions-view---sampling-data"></a>関数ビュー - サンプリング データ
 サンプリング プロファイル方式の関数のレポート ビューには、プロファイリング実行中にサンプリングされた関数が一覧表示されます。  
@@ -45,4 +43,4 @@ ms.locfileid: "35237495"
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [関数ビュー - インストルメンテーション](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
  [関数ビュー - サンプリング](../profiling/functions-view-dotnet-memory-sampling-data.md)   
- [関数 ビュー](../profiling/functions-view-instrumentation-data.md)
+ [関数ビュー](../profiling/functions-view-instrumentation-data.md)

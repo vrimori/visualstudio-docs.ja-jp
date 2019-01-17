@@ -2,19 +2,18 @@
 title: Blend におけるオブジェクト スタイルの変更
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ae494a82e92086cfa0e8e2a69b7f7eee022807a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3cd8b8d9b3f9a12fa69cf708b0f7a3b16bae83d1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31917203"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53906788"
 ---
 # <a name="modify-the-style-of-objects-in-blend"></a>Blend におけるオブジェクト スタイルの変更
 
@@ -22,7 +21,7 @@ ms.locfileid: "31917203"
 
 設定または設定のグループを再利用する場合は、再利用可能なリソースを作成します。 再利用可能なリソースは、*スタイル*、*テンプレート*、またはカスタムの色のような簡単なものになります。 また、コントロールをその状態に基づいて異なる方法で表示することもできます。 たとえば、ユーザーがボタンをクリックするとボタンが緑色に変わるなどです。
 
-## <a name="brushes-modify-the-appearance-of-an-object"></a>ブラシ: オブジェクトの外観を変更する
+## <a name="brushes-modify-the-appearance-of-an-object"></a>ブラシ:オブジェクトの外観を変更する
 
 外観を変更する場合は、オブジェクトにブラシを適用します。
 
@@ -44,13 +43,13 @@ ms.locfileid: "31917203"
 
 ![表示ブラシ](../designers/media/fb6c90e0-153c-48fe-b563-e601beac6227.png) ![表示ブラシ (並べて表示)](../designers/media/e261b99f-7d8f-4d91-bc84-19c7beccc255.png)
 
-## <a name="styles-and-templates-create-a-consistent-look-and-feel-across-controls"></a>スタイルとテンプレート: コントロール全体で一貫したルック アンド フィールを作成する
+## <a name="styles-and-templates-create-a-consistent-look-and-feel-across-controls"></a>スタイルとテンプレート:コントロール全体で一貫したルック アンド フィールを作成する
 
 コントロールの外観と動作を一度にデザインし、個別に維持しなくてもよいように、そのデザインを他のコントロールにも適用することができます。
 
-**スタイルを使用する必要がありますか?**: 既定のプロパティ (ボタンの色など) を設定する場合は、*スタイル*を使用します。 スタイルを適用した後でも、コントロールを変更することができます。
+**スタイルを使用する必要がありますか?**:既定のプロパティ (ボタンの色など) を設定する場合は、*スタイル*を使用します。 スタイルを適用した後でも、コントロールを変更することができます。
 
-**テンプレートを使用する必要がありますか?**: コントロールの構造を変更する場合は、*テンプレート*を使用します。 グラフィックまたはロゴをボタンに変換することを想像してください。 テンプレートを適用した後でコントロールを変更することはできません。
+**テンプレートを使用する必要がありますか?**:コントロールの構造を変更する場合は、*テンプレート*を使用します。 グラフィックまたはロゴをボタンに変換することを想像してください。 テンプレートを適用した後でコントロールを変更することはできません。
 
 ### <a name="create-a-template-or-style"></a>テンプレートまたはスタイルを作成する
 
@@ -88,15 +87,15 @@ ms.locfileid: "31917203"
 
 コントロールを選択し、[[プロパティ]](../designers/creating-a-ui-by-using-blend-for-visual-studio.md#tour-of-the-properties-panel) パネルで **[スタイル]** または **[テンプレート]** のプロパティの場所を探します。 **[詳細オプション]** を選択して、ショートカット メニューで **[リセット]** をクリックします。
 
-## <a name="visual-states-change-the-appearance-of-a-control-based-on-its-state"></a>表示状態: コントロールの状態に基づき、コントロールの外観を変更する
+## <a name="visual-states-change-the-appearance-of-a-control-based-on-its-state"></a>表示状態:コントロールの状態に基づき、コントロールの外観を変更する
 
 ユーザーとの対話に基づいて、コントロールの視覚的外観が異なります。 たとえば、ユーザーがボタンをクリックするとボタンが緑色になる、アニメーションを実行できるなどです。 遷移を使用すると、表示状態の間の時間を短縮または延長することができます。
 
 ![マウス ポイント状態](../designers/media/a95c671a-5639-40b9-83db-1e6b214330d5.png)
 
-**短いビデオを見る:** ![再生ボタン](../designers/media/bldadminconsoleinitialconfigicon.PNG) [WPF コントロールの状態を管理する](https://www.youtube.com/watch?v=m0PlkF5i6uw)
+**短いビデオを見る:**![再生ボタン](../designers/media/bldadminconsoleinitialconfigicon.PNG) [WPF コントロールの状態を管理する](https://www.youtube.com/watch?v=m0PlkF5i6uw)
 
-## <a name="resources-create-colors-styles-and-templates-and-reuse-them-later"></a>リソース: 色、スタイル、テンプレートを作成し、後で再利用する
+## <a name="resources-create-colors-styles-and-templates-and-reuse-them-later"></a>リソース:色、スタイル、テンプレートを作成し、後で再利用する
 
 プロジェクトにあるあらゆるものをリソースに変換できます。 リソースは、 アプリケーションのさまざまな場所で再利用できるオブジェクトです。 たとえば、1 回色を作成し、リソースにしてから、その色を複数のオブジェクトに使用することができます。 これらすべてのオブジェクトの色を変更するには、単に色リソースを変更します。
 

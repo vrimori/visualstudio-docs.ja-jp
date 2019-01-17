@@ -12,15 +12,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: e4c5fbbbe878e14c6c88c872ece2b3d492e3ea7c
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
-ms.translationtype: MT
+ms.openlocfilehash: c2d1784e498cb856cc388b8e7f26dd57f978e79f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34844034"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53927390"
 ---
 # <a name="add-code-to-datasets-in-n-tier-applications"></a>n 層アプリケーションのデータセットにコードを追加する
 データセットの機能を拡張するには、データセットの部分クラス ファイルを作成し、コードを追加 (コードを追加するのではなく、 *DatasetName*します。Dataset.Designer ファイル)。 部分クラスには、特定のクラスを複数の物理ファイルに分割するためのコードが有効にします。 詳細については、次を参照してください。[部分](/dotnet/visual-basic/language-reference/modifiers/partial)または[部分クラスとメソッド](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)します。
@@ -65,7 +64,7 @@ ms.locfileid: "34844034"
 
 ## <a name="see-also"></a>関連項目
 
-- [N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)
+- [n 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)
 - [n 層アプリケーションの TableAdapters にコードを追加する](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)
 - [Tableadapter の作成および構成](create-and-configure-tableadapters.md)
 - [階層更新の概要](hierarchical-update.md)

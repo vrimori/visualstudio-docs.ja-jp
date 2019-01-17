@@ -1,8 +1,6 @@
 ---
 title: '方法: メッセージ ビューでメッセージの検索 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Message Search dialog box
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f9c00eea2034651298ff62bc50741971fc0369a8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 1b92cee00b93541ddc75a4c3210d77c61a82f640
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49844914"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53863382"
 ---
 # <a name="how-to-search-for-a-message-in-messages-view"></a>方法: メッセージ ビューでメッセージを検索する
 メッセージ ビューで特定のメッセージを検索するには、検索条件として、ハンドル、型、またはメッセージ ID を使用します。 これらのいずれか、または組み合わせ: 有効な検索条件になります。 検索の最初の方向も指定できます。 ダイアログ ボックスのフィールドは、現在選択されているメッセージの属性を事前に読み込まれます。  

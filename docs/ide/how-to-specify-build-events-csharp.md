@@ -1,8 +1,7 @@
 ---
-title: '方法 : ビルド イベントを指定する (C#)'
+title: '方法: ビルド イベントを指定する (C#)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - pre-build events
@@ -16,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: aa82c7f12b3932c1e9f5aac7392d6ef2b8e8a773
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 59451b6745e75fe198b6e428619c5d70f50dd03c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49885855"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53964677"
 ---
-# <a name="how-to-specify-build-events-c"></a>方法 : ビルド イベントを指定する (C#)
+# <a name="how-to-specify-build-events-c"></a>方法: ビルド イベントを指定する (C#)
 
 ビルド開始前またはビルド終了後に実行するコマンドを指定するには、ビルド イベントを使います。 ビルド イベントは、ビルド プロセスにおいてビルドがこれらのポイントに正常に達した場合にのみ実行されます。
 
@@ -61,7 +60,7 @@ ms.locfileid: "49885855"
     > [!NOTE]
     > ビルド前またはビルド後イベントが正常に完了しない場合は、アクションの成功を示すゼロ (0) 以外のコードでイベント アクションを終了させて、ビルドを強制終了することができます。
 
-## <a name="example-how-to-change-manifest-information-by-using-a-post-build-event"></a>例: ビルド後イベントを使ってマニフェスト情報を変更する方法
+## <a name="example-how-to-change-manifest-information-by-using-a-post-build-event"></a>例:ビルド後イベントを使ってマニフェスト情報を変更する方法
 
 次の手順は、ビルド後イベントから呼び出される *.exe* コマンドを使って、アプリケーション マニフェスト (プロジェクト ディレクトリ内の *.exe.manifest* ファイル) 内にオペレーティング システムの最小バージョンを設定する方法を示しています。 オペレーティング システムの最小バージョンは、4.10.0.0 などの 4 つの部分に分かれた数字です。 これを行うには、次のように、コマンドでマニフェストの `<dependentOS>` セクションを変更します。
 
@@ -189,5 +188,5 @@ ms.locfileid: "49885855"
 
 - [[ビルド イベント] ページ (プロジェクト デザイナー) (C#)](../ide/reference/build-events-page-project-designer-csharp.md)
 - [[ビルド前に実行するコマンド ライン] / [ビルド後に実行するコマンド ライン] ダイアログ ボックス](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)
-- [方法 : ビルド イベントを指定する (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)
+- [方法: ビルド イベントを指定する (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)
 - [コンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)

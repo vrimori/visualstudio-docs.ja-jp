@@ -1,8 +1,6 @@
 ---
 title: IDiaEnumDebugStreamData |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 67b71fb229172049d11a036d5a98275f93fe2cd3
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
-ms.translationtype: MT
+ms.openlocfilehash: 9bf1fdf790878097c9d777ba8eae5386593bccb4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37058283"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53989712"
 ---
 # <a name="idiaenumdebugstreamdata"></a>IDiaEnumDebugStreamData
 デバッグのデータ ストリーム内のレコードへのアクセスを提供します。  
@@ -44,7 +42,7 @@ IDiaEnumDebugStreamData : IUnknown
 |[IDiaEnumDebugStreamData::Reset](../../debugger/debug-interface-access/idiaenumdebugstreamdata-reset.md)|列挙のシーケンスを先頭にリセットします。|  
 |[IDiaEnumDebugStreamData::Clone](../../debugger/debug-interface-access/idiaenumdebugstreamdata-clone.md)|現在の列挙子と同じ列挙型のシーケンスを格納する列挙子を作成します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このインターフェイスは、デバッグ データのストリーム内のレコードのストリームを表します。 各レコードの解釈とサイズは、レコードの取得元のデータ ストリームに依存します。 このインターフェイスは、シンボル ファイルの生データのバイトへのアクセスを効果的に提供します。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
@@ -104,14 +102,14 @@ void PrintStreamData(IDiaEnumDebugStreamData* pStream)
 }  
 ```  
   
-## <a name="requirements"></a>必要条件  
- ヘッダー: Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー:dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
- [Idiaenumdebugstreams::item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)   
+ [IDiaEnumDebugStreams::Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)   
  [IDiaEnumDebugStreams::Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md)

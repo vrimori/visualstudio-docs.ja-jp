@@ -1,8 +1,6 @@
 ---
 title: Idiasession::getenumtables |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f68da36fc527e0390789df22ed4550a6165adbb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: f2659fa3e5c82e48092c9f2b4b009b7e82e72123
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49885840"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53889534"
 ---
 # <a name="idiasessiongetenumtables"></a>IDiaSession::getEnumTables
 シンボル ストアに含まれているすべてのテーブルの列挙子を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49885840"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT getEnumTables (   
+HRESULT getEnumTables (   
    IDiaEnumTables** ppEnumTables  
 );  
 ```  
@@ -68,6 +66,6 @@ IUnknown *GetTable(IDiaSession *pSession, REFIID iid)
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

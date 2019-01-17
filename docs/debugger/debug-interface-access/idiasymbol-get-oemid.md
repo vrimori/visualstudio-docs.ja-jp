@@ -1,8 +1,6 @@
 ---
 title: Idiasymbol::get_oemid |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8208d146284926ce7ec3375e8416210eeb5d214c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: a09eb9d41a4b5a1034b3b6ab82259c8ce5c0cd38
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49875256"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53911410"
 ---
 # <a name="idiasymbolgetoemid"></a>IDiaSymbol::get_oemId
 シンボルの供給元 (OEM) の ID 値を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49875256"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_oemId (   
+HRESULT get_oemId (   
    DWORD* pRetVal  
 );  
 ```  
@@ -42,9 +40,9 @@ HRESULT get_oemId (
 > [!NOTE]
 >  戻り値`S_FALSE`プロパティがシンボルを使用できないことを意味します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このプロパティを使用したシンボルにのみ適用されます、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の入力`SymTagCustomType`します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)

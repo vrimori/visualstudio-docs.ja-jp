@@ -1,9 +1,7 @@
 ---
-title: '手順 3: カウントダウン タイマーの追加'
-ms.custom: ''
+title: '手順 3: カウントダウン タイマーを追加する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 62670a2b-efdc-45c6-9646-9b17eeb33dcb
 author: TerryGLee
@@ -11,18 +9,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e7cf75b23b74753b875aafb43a5dd331b18c623
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: c259f8cae798db3ed79329276c95135a9b607541
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34748141"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53962559"
 ---
-# <a name="step-3-add-a-countdown-timer"></a>手順 3: カウントダウン タイマーの追加
+# <a name="step-3-add-a-countdown-timer"></a>手順 3: カウントダウン タイマーを追加する
 このチュートリアルの第 3 部では、クイズの受け手が完了するまでの残り秒数を追跡するためのカウントダウン タイマーを追加します。
 
 > [!NOTE]
->  このトピックは、コーディングの基本概念に関するチュートリアル シリーズの一部です。 チュートリアルの概要については、「[チュートリアル 2: 制限時間ありの計算クイズの作成](../ide/tutorial-2-create-a-timed-math-quiz.md)」を参照してください。
+>  このトピックは、コーディングの基本概念に関するチュートリアル シリーズの一部です。 チュートリアルの概要については、「[チュートリアル 2:制限時間ありの計算クイズの作成](../ide/tutorial-2-create-a-timed-math-quiz.md)」を参照してください。
 
 ## <a name="to-add-a-countdown-timer"></a>カウントダウン タイマーを追加するには
 
@@ -106,6 +104,6 @@ ms.locfileid: "34748141"
 
 ## <a name="to-continue-or-review"></a>続行または確認するには
 
--   チュートリアルの次の手順に進むには、「[手順 4: CheckTheAnswer() メソッドの追加](../ide/step-4-add-the-checktheanswer-parens-method.md)」を参照してください。
+-   チュートリアルの次の手順に進むには、「[手順 4:CheckTheAnswer() メソッドの追加](../ide/step-4-add-the-checktheanswer-parens-method.md)」を参照してください。
 
--   チュートリアルの前の手順に戻るには、「[手順 2: ランダムな加算問題の作成](../ide/step-2-create-a-random-addition-problem.md)」を参照してください。
+-   チュートリアルの前の手順に戻るには、「[手順 2:ランダムな加算問題の作成](../ide/step-2-create-a-random-addition-problem.md)」を参照してください。

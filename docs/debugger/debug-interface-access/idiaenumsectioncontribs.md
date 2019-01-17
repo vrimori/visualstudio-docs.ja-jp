@@ -1,8 +1,6 @@
 ---
 title: IDiaEnumSectionContribs |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5903c276b82f8b689e67c20310ccc6d6a6514896
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
-ms.translationtype: MT
+ms.openlocfilehash: 20b64b561c5b033a270458c258a418b4483f733b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37057061"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53859452"
 ---
 # <a name="idiaenumsectioncontribs"></a>IDiaEnumSectionContribs
 データ ソースに含まれるさまざまなセクションの投稿を列挙します。  
@@ -27,7 +25,7 @@ ms.locfileid: "37057061"
 ## <a name="syntax"></a>構文  
   
 ```  
-IDiaEnumSectionContribs : IUnknown  
+IDiaEnumSectionContribs : IUnknown  
 ```  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
@@ -43,7 +41,7 @@ IDiaEnumSectionContribs : IUnknown
 |[IDiaEnumSectionContribs::Reset](../../debugger/debug-interface-access/idiaenumsectioncontribs-reset.md)|先頭に、列挙体シーケンスをリセットします。|  
 |[IDiaEnumSectionContribs::Clone](../../debugger/debug-interface-access/idiaenumsectioncontribs-clone.md)|現在の列挙子と同じ列挙状態を格納する列挙子を作成します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 ## <a name="note-for-callers"></a>呼び出し元に注意してください。  
  このインターフェイスから取得、 [idiasession::getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md)メソッド。 詳細については、例を参照してください。  
@@ -101,14 +99,14 @@ void ShowSectionContribs(IDiaSession *pSession)
 }  
 ```  
   
-## <a name="requirements"></a>必要条件  
- ヘッダー: Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー:dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
- [Idiasession::getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md)   
+ [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)   
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

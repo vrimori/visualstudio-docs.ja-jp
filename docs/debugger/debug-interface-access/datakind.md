@@ -1,8 +1,6 @@
 ---
 title: DataKind |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f2b46e420db8addf19ef8694112058bdb8b2f91
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: f87fea09976128f57e8c7dca77dcaea839aab4c3
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49867625"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53879502"
 ---
 # <a name="datakind"></a>DataKind
 データ値の特定のスコープを示します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49867625"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-enum DataKind {   
+enum DataKind {   
    DataIsUnknown,  
    DataIsLocal,  
    DataIsStaticLocal,  
@@ -72,12 +70,12 @@ enum DataKind {
  DataIsConstant  
  データ項目は、定数値です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  この列挙体の値がによって返される、 [idiasymbol::get_datakind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md)メソッド。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: cvconst.h  
   
-## <a name="see-also"></a>関連項目  
- [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+## <a name="see-also"></a>「  
+ [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaSymbol::get_dataKind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md)

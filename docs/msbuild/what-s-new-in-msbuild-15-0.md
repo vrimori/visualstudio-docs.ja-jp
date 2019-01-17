@@ -1,8 +1,6 @@
 ---
 title: MSBuild 15 の新機能 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
-ms.technology: msbuild
 ms.topic: conceptual
 ms.assetid: 9976b6fd-d052-4017-b848-35b5bf4b2f66
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2333f45cca5510a4ba3bb0f54abf45a569454cf8
-ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
+ms.openlocfilehash: 3712f009262abd9590653af3f3ef4e4e81c87e84
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47028964"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53943578"
 ---
 # <a name="whats-new-in-msbuild-15"></a>MSBuild 15 の新機能
 
@@ -40,7 +38,7 @@ MSBuild は現在 [.NET Core SDK](https://www.microsoft.com/net/download/core) �
 - `SDK35ToolsPath` と `SDK40ToolsPath`: これらのプロパティは、このバージョンの Visual Studio に含まれている .NET Framework SDK を指しています (たとえば、4.X ツールの場合は 10.0A など)。
 
 ## <a name="updates"></a>更新
-- [Project 要素](../msbuild/project-element-msbuild.md)には新しい `SDK` 属性があります。 `Xmlns` 属性も省略できます。 `SDK` 属性の詳細については、「[方法: MSBuild プロジェクト SDK の参照](../msbuild/how-to-use-project-sdk.md)」、「[パッケージ、メタパッケージ、フレームワーク](/dotnet/core/packages)」および「[.NET Core の csproj 形式に追加されたもの](/dotnet/core/tools/csproj)」を参照してください。
+- [Project 要素](../msbuild/project-element-msbuild.md)には新しい `SDK` 属性があります。 `Xmlns` 属性も省略できます。 `SDK` 属性の詳細については、「[方法:MSBuild プロジェクト SDK の参照](../msbuild/how-to-use-project-sdk.md)」、「[パッケージ、メタパッケージ、フレームワーク](/dotnet/core/packages)」、および「[.NET Core の csproj 形式に追加されたもの](/dotnet/core/tools/csproj)」を参照してください。
 - ターゲットの外部の [Item 要素](../msbuild/item-element-msbuild.md)には新しい `Update` 属性があります。 また、`Remove` 属性に対する制限も排除されました。
 - *Directory.Build.props* は、ディレクトリの下のプロジェクトをカスタマイズできるようにする、ユーザー定義のファイルです。 `ImportDirectoryBuildTargets` プロパティを **false** に設定しない限り、このファイルは *Microsoft.Common.props* から自動的にインポートされます。 *Directory.Build.targets* は *Microsoft.Common.targets* によってインポートされます。
 - 現行の属性リストと競合しない名前のメタデータを任意で属性として表現できます。 詳しくは、「[Item 要素](../msbuild/item-element-msbuild.md)」をご覧ください。

@@ -3,19 +3,18 @@ title: R のリモート ワークスペース
 description: リモート R ワークスペースを設定し、Visual Studio から接続する方法を説明します。
 ms.date: 12/04/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-rtvs
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 207e4c2d6e7db9dd40288306b3a87086c4568f76
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6a5dfb136c975634bd4f8915d1f5eb1c9d023e98
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49827715"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53837785"
 ---
 # <a name="set-up-remote-workspaces"></a>リモート ワークスペースの設定
 
@@ -171,11 +170,11 @@ R コードを実行するには、次のようにリモート コンピュー�
 
 リモート コンピューター上で R Services が実行されている場合、ユーザー アカウントを作成し、ファイアウォール規則を設定し、Azure ネットワークを構成し、SSL 証明書を構成する必要があります。
 
-1. ユーザー アカウント: リモート コンピューターにアクセスする各ユーザーのアカウントを作成します。 標準の (特権のない) ローカル ユーザー アカウントを作成するか、R サーバー コンピューターをドメインに参加させて、適切なセキュリティ グループを `Users` セキュリティ グループに追加することができます。
+1. ユーザー アカウント:リモート コンピューターにアクセスする各ユーザーのアカウントを作成します。 標準の (特権のない) ローカル ユーザー アカウントを作成するか、R サーバー コンピューターをドメインに参加させて、適切なセキュリティ グループを `Users` セキュリティ グループに追加することができます。
 
-1. ファイアウォール規則: `R Host Broker` の既定では、TCP ポート 5444 をリッスンしています。 そのため、受信トラフィックと送信トラフィックの両方に有効な Windows ファイアウォール規則があるようにします (送信は、パッケージのインストールなどのシナリオに必要です)。  組み込みの Windows ファイアウォールの場合、R Services インストーラーではこれらの規則が自動的に設定されます。 ただし、サードパーティのファイアウォールを使用している場合、`R Host Broker` 用のポート 5444 を手動で開きます。
+1. ファイアウォール規則:`R Host Broker` の既定では、TCP ポート 5444 をリッスンしています。 そのため、受信トラフィックと送信トラフィックの両方に有効な Windows ファイアウォール規則があるようにします (送信は、パッケージのインストールなどのシナリオに必要です)。  組み込みの Windows ファイアウォールの場合、R Services インストーラーではこれらの規則が自動的に設定されます。 ただし、サードパーティのファイアウォールを使用している場合、`R Host Broker` 用のポート 5444 を手動で開きます。
 
-1. Azure の構成: リモート コンピューターが Azure 上の仮想マシンの場合、Windows ファイアウォールとは独立している Azure ネットワーク内の受信トラフィック用にもポート 5444 を開きます。 詳細については、Azure ドキュメントの「[ネットワーク セキュリティ グループによるネットワーク トラフィックのフィルタリング](https://docs.microsoft.com/azure/virtual-network/virtual-networks-nsg)」を参照してください。
+1. Azure の構成:リモート コンピューターが Azure 上の仮想マシンの場合、Windows ファイアウォールとは独立している Azure ネットワーク内の受信トラフィック用にもポート 5444 を開きます。 詳細については、Azure ドキュメントの「[ネットワーク セキュリティ グループによるネットワーク トラフィックのフィルタリング](https://docs.microsoft.com/azure/virtual-network/virtual-networks-nsg)」を参照してください。
 
 1. 読み込む SSL 証明書を R Host Broker に指示します。イントラネット サーバーに証明書をインストールしている場合、サーバーの完全修飾ドメイン名は NETBIOS 名と同じ可能性があります。 この例では、読み込まれている既定の証明書なので、実行が必要なことはありません。
 

@@ -1,8 +1,6 @@
 ---
 title: COM のデバッグ ツール |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.com
@@ -23,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 733ec7e74482a0243fef3355a02c8e125183ff87
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
-ms.translationtype: MT
+ms.openlocfilehash: 6c1ca9466f4b70f7232cb1832fe05794b8cffd45
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44281014"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53951499"
 ---
 # <a name="com-debugging-tools"></a>COM 用のデバッグ ツール
 
@@ -48,5 +46,5 @@ MFC ActiveX サンプルの OCLIENT および SUPERPAD も、アプリケーシ�
 - [COM 用のデバッグ ツール](../debugger/com-debugging-tools.md)
 - [Visual Studio でのデバッグ](../debugger/index.md)
 - [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
-- [サンプルの OCLIENT: ビジュアル編集コンテナー アプリケーションを示しています。](https://msdn.microsoft.com/library/8cd5c234-9a4e-4934-8f5d-bac189ad92c4)
-- [SUPERPAD サンプル: ビジュアル編集サーバー CEditView を使用してテキストを編集します。](https://msdn.microsoft.com/library/7b14e975-d986-4e6a-8289-226485cfcb72)
+- [サンプルの OCLIENT:ビジュアル編集コンテナー アプリケーションを示しています。](https://msdn.microsoft.com/library/8cd5c234-9a4e-4934-8f5d-bac189ad92c4)
+- [SUPERPAD サンプル:CEditView を使用してテキストを編集するビジュアル編集サーバーについて示します](https://msdn.microsoft.com/library/7b14e975-d986-4e6a-8289-226485cfcb72)

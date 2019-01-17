@@ -1,5 +1,5 @@
 ---
-title: Tableadapter を使用してデータセットを入力します。
+title: TableAdapters を使用してデータセットを入力する
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,17 +18,16 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 673c364c1750afbaa4b319c40550be7cfac3b53b
-ms.sourcegitcommit: 7a11a094a353f2e2a2077ad863ca4c0fb97f7ec5
-ms.translationtype: MT
+ms.openlocfilehash: 260ea65af041e6a50afb163f697d5ff366cff825
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39131974"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53835985"
 ---
-# <a name="fill-datasets-by-using-tableadapters"></a>Tableadapter を使用してデータセットを入力します。
+# <a name="fill-datasets-by-using-tableadapters"></a>TableAdapters を使用してデータセットを入力する
 
 TableAdapter のコンポーネントでは、基に 1 つまたは複数のクエリまたは指定したストアド プロシージャ、データベースからデータを含むデータセットが表示されます。 Tableadapter を実行できますも追加、更新、およびデータセットに対して行った変更を保持するには、データベースを削除します。 特定のテーブルに関連のないグローバル コマンドを発行することもできます。
 
@@ -43,7 +42,7 @@ TableAdapter の操作の詳細については、次のトピックのいずれ�
 |[パラメーター付きの TableAdapter クエリを作成する](../data-tools/create-parameterized-tableadapter-queries.md)|TableAdapter のプロシージャまたはクエリに引数を指定するユーザーを有効にする方法|
 |[TableAdapter で直接データベースにアクセスする](../data-tools/directly-access-the-database-with-a-tableadapter.md)|Tableadapter の Dbdirect メソッドを使用する方法|
 |[データセットの読み込み中に制約をオフにする](../data-tools/turn-off-constraints-while-filling-a-dataset.md)|データを更新するときに、foreign key 制約を使用する方法|
-|[TableAdapter の機能を拡張する方法](../data-tools/fill-datasets-by-using-tableadapters.md)|Tableadapter にカスタム コードを追加する方法|
+|[方法 : TableAdapter の機能を拡張する](../data-tools/fill-datasets-by-using-tableadapters.md)|Tableadapter にカスタム コードを追加する方法|
 |[XML データのデータセットへの読み込み](../data-tools/read-xml-data-into-a-dataset.md)|XML を操作する方法|
 
 <a name="tableadapter-overview"></a>
@@ -54,7 +53,7 @@ Tableadapter は、データベース、クエリの実行またはストアド 
 
 ![クライアント アプリケーションのデータ フロー](../data-tools/media/clientdatadiagram.gif)
 
-Tableadapter は設計されています中に、**データセット デザイナー**、TableAdapter のクラスは、の入れ子になったクラスとしては生成されません<xref:System.Data.DataSet>します。 各データセットに固有の個別の名前空間内にあります。 たとえば、という名前のデータセットがある場合`NorthwindDataSet`、Tableadapter に関連付けられている<xref:System.Data.DataTable>内、`NorthwindDataSet`内であるか、`NorthwindDataSetTableAdapters`名前空間。 プログラムで特定の TableAdapter にアクセスするには、TableAdapter の新しいインスタンスを宣言する必要があります。 例えば:
+Tableadapter は設計されています中に、**データセット デザイナー**、TableAdapter のクラスは、の入れ子になったクラスとしては生成されません<xref:System.Data.DataSet>します。 各データセットに固有の個別の名前空間内にあります。 たとえば、という名前のデータセットがある場合`NorthwindDataSet`、Tableadapter に関連付けられている<xref:System.Data.DataTable>内、`NorthwindDataSet`内であるか、`NorthwindDataSetTableAdapters`名前空間。 プログラムで特定の TableAdapter にアクセスするには、TableAdapter の新しいインスタンスを宣言する必要があります。 次に例を示します。
 
 [!code-csharp[VbRaddataTableAdapters#7](../data-tools/codesnippet/CSharp/fill-datasets-by-using-tableadapters_1.cs)]
 [!code-vb[VbRaddataTableAdapters#7](../data-tools/codesnippet/VisualBasic/fill-datasets-by-using-tableadapters_1.vb)]
@@ -87,7 +86,7 @@ Tableadapter では、標準のデータ アダプターの機能を拡張、構
 
 ## <a name="tableadapter-methods-and-properties"></a>TableAdapter のメソッドとプロパティ
 
-TableAdapter クラスはの一部、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。 つまり、ドキュメントを検索できない、または**オブジェクト ブラウザー**します。 前に説明したウィザードの 1 つを使用すると、デザイン時に作成されます。 作成するときに、TableAdapter に割り当てられている名前は、使用しているテーブルの名前に基づきます。 たとえば、という名前のデータベース内のテーブルに基づいて TableAdapter を作成する`Orders`、TableAdapter の名前は`OrdersTableAdapter`します。 使用して、TableAdapter のクラス名を変更することができます、**名前**プロパティ、**データセット デザイナー**します。
+TableAdapter クラスはの一部、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。 つまり、ドキュメントを検索できない、または**オブジェクト ブラウザー**します。 前に説明したウィザードの 1 つを使用すると、デザイン時に作成されます。 作成するときに、TableAdapter に割り当てられている名前は、使用しているテーブルの名前に基づきます。 たとえば、という名前のデータベース内のテーブルに基づいて TableAdapter を作成する`Orders`、TableAdapter の名前は`OrdersTableAdapter`します。 TableAdapter のクラス名は、**データセット デザイナー**の **Name** プロパティを使用して変更できます。
 
 一般的に使用されるメソッドと Tableadapter のプロパティを次に示します。
 
@@ -114,7 +113,7 @@ TableAdapter を使用して、実質的には、通常実行するコマンド�
 
 これらのダイレクト メソッドを作成しない場合は、設定、TableAdapter の**GenerateDbDirectMethods**プロパティを`false`(で、**プロパティ**ウィンドウ)。 TableAdapter に追加される追加のクエリはスタンドアロン クエリなど、これらのメソッドを生成しません。
 
-## <a name="tableadapter-support-for-nullable-types"></a>Null 許容型の TableAdapter のサポート
+## <a name="tableadapter-support-for-nullable-types"></a>TableAdapter での Null 許容型のサポート
 
 Null 許容型をサポートする Tableadapter`Nullable(Of T)`と`T?`します。 Visual Basic での null 許容型について詳しくは、「[null 許容値型](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types)」をご覧ください。 C# の null 許容型の詳細については、次を参照してください。 [null 許容型を使用して、](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types)します。
 

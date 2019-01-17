@@ -1,8 +1,6 @@
 ---
 title: IDiaEnumInjectedSources |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0abebe14f0ab4c36d0833edb099d71f09843ea22
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
-ms.translationtype: MT
+ms.openlocfilehash: 5a5dfc19844ee084a03ecbf07070e7ba78fd8220
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37057278"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53966639"
 ---
 # <a name="idiaenuminjectedsources"></a>IDiaEnumInjectedSources
 データ ソースに含まれるさまざまな挿入されたソースを列挙します。  
@@ -27,7 +25,7 @@ ms.locfileid: "37057278"
 ## <a name="syntax"></a>構文  
   
 ```  
-IDiaEnumInjectedSources : IUnknown  
+IDiaEnumInjectedSources : IUnknown  
 ```  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
@@ -43,7 +41,7 @@ IDiaEnumInjectedSources : IUnknown
 |[IDiaEnumInjectedSources::Reset](../../debugger/debug-interface-access/idiaenuminjectedsources-reset.md)|先頭に、列挙体シーケンスをリセットします。|  
 |[IDiaEnumInjectedSources::Clone](../../debugger/debug-interface-access/idiaenuminjectedsources-clone.md)|現在の列挙子と同じ列挙状態を格納する列挙子を作成します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
  このインターフェイスは呼び出すことによって取得、 [idiasession::findinjectedsource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md)または呼び出すことによって、特定のソース ファイルの名前を持つメソッド、 [idiasession::getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md)メソッドの GUID を`IDiaEnumInjectedSources`インターフェイス。  
@@ -107,16 +105,16 @@ void DumpAllInjectedSources( IDiaSession* pSession)
 }  
 ```  
   
-## <a name="requirements"></a>必要条件  
- ヘッダー: Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー:dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
- [Idiasession::findinjectedsource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md)   
- [Idiasession::getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md)   
+ [IDiaSession::findInjectedSource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md)   
+ [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)   
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)   
  [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

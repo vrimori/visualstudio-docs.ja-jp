@@ -1,8 +1,6 @@
 ---
 title: StopProfile | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - StopProfile
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e03abc331d59504b1b08136c8c81fe12c8ba2af
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: b44726b2ce1f7a0b699898edfc3a53371163168e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34264196"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53952236"
 ---
 # <a name="stopprofile"></a>StopProfile
 `StopProfile` 関数は、指定されたプロファイル レベルのカウンターを 0 (オフ) に設定します。  
@@ -67,9 +65,9 @@ PROFILE_COMMAND_STATUS PROFILERAPI StopProfile(
  Microsoft.VisualStudio.Profiler.dll  
   
 ## <a name="function-information"></a>関数の情報  
- ヘッダー : VSPerf.h で宣言  
+ ヘッダー:VSPerf.h で宣言  
   
- インポート ライブラリ : VSPerf.lib  
+ インポート ライブラリ:VSPerf.lib  
   
 ## <a name="example"></a>例  
  StopProfile メソッドの例を以下に示します。 この例は、[PROFILE_CURRENTID](../profiling/profile-currentid.md) で識別される同じスレッドまたはプロセスに対して、StartProfile メソッドが呼び出されていることを前提としています。  

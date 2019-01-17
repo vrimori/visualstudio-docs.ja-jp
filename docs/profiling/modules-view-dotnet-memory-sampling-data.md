@@ -1,8 +1,6 @@
 ---
 title: モジュール ビュー - .NET メモリ サンプリング データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Modules view
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c5cbae58aeaa1164aab6c254f62e0959da02d31c
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: a099a30b0a87db8ebae46543528d9af9f28f497a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35257674"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53823025"
 ---
 # <a name="modules-view---net-memory-sampling-data"></a>モジュール ビュー - .NET メモリ サンプリング データ
 サンプリング メソッドで収集された .NET メモリの割り当てデータの [モジュール] ビューは、メモリ データをプロファイリング実行中に実行されたモジュールごとにグループ化します。 各モジュールが、階層ツリーのルートです。 モジュールの関数が、モジュール ノードの下に一覧表示されます。  

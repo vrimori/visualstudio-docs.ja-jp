@@ -1,8 +1,6 @@
 ---
 title: Exec タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#Exec
@@ -20,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bbefb90cad3b2aa3e6e7b0870548d44567ea8914
-ms.sourcegitcommit: 56f3c31f1a06f6a6d2a8793b1abfa60cdf482497
+ms.openlocfilehash: 6fd259f00fdb5af2e3125782bda28c17858eff80
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48817322"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53959249"
 ---
 # <a name="exec-task"></a>Exec タスク
 指定された引数を使って、指定されたプログラムまたはコマンドを実行します。  
@@ -47,7 +45,7 @@ ms.locfileid: "48817322"
 |`Outputs`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の出力パラメーターです。<br /><br /> タスクからの出力項目を含みます。 `Exec` タスク自体はこれらを設定しません。 代わりに、タスクが設定したかのようにユーザーが提供して、プロジェクトの後の処理で使うことができます。|  
 |`StdErrEncoding`|省略可能な `String` 型の出力パラメーターです。<br /><br /> キャプチャしたタスクの標準エラー ストリームのエンコーディングを指定します。 既定値は、現在のコンソール出力のエンコーディングです。|  
 |`StdOutEncoding`|省略可能な `String` 型の出力パラメーターです。<br /><br /> キャプチャしたタスクの標準出力ストリームのエンコーディングを指定します。 既定値は、現在のコンソール出力のエンコーディングです。|  
-|`WorkingDirectory`|省略可能な `String` 型のパラメーターです。<br /><br /> コマンドを実行するディレクトリを指定します。<br /><br />既定値: プロジェクトの現在の作業ディレクトリ。|  
+|`WorkingDirectory`|省略可能な `String` 型のパラメーターです。<br /><br /> コマンドを実行するディレクトリを指定します。<br /><br />既定:プロジェクトの現在の作業ディレクトリ。|  
   
 ## <a name="remarks"></a>コメント  
  このタスクは、実行したいジョブの特定の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクを使用できないときに便利です。 ただし、`Exec` タスクは、固有のタスクとは異なり、実行したツールまたはコマンドの結果に基づいて追加処理や条件演算を行うことはできません。

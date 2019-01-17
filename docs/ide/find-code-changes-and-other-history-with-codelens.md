@@ -2,7 +2,6 @@
 title: CodeLens によるコード変更とその他の履歴の検索
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.CodeLens
@@ -11,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e11b7458c5d26d56252b228522c53b00ebadb35b
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: 623a0a0515059a903f59d9c9b330876584c40f64
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50220301"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53860602"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>CodeLens によるコード変更とその他の履歴の検索
 
@@ -84,7 +83,7 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 
 これは、Team Foundation Server または Azure DevOps Services で Team Foundation バージョン管理 (TFVC) を使用するときに表示されます。
 
-![CodeLens: TFVC で自分のコードの変更履歴を取得する](../ide/media/codelens-code-changes.png)
+![CodeLens:TFVC で自分のコードの変更履歴を取得する](../ide/media/codelens-code-changes.png)
 
 既定の時間は直近 12 か月です。 Team Foundation Server にコードが格納される場合、[TFSConfig](/tfs/server/ref/command-line/tfsconfig-cmd) コマンドおよび **/indexHistoryPeriod** フラグを指定した [CodeIndex](../ide/codeindex-command.md) コマンドを実行することにより、この期間を変更できます。
 
@@ -98,13 +97,13 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 
 ファイルが Git リポジトリにある場合に、コードの要素レベルの変更インジケーターを選択すると、このように表示されます。
 
-![CodeLens: Git で自分のコードの変更履歴を取得する](../ide/media/codelens-code-changes-git.png)
+![CodeLens:Git で自分のコードの変更履歴を取得する](../ide/media/codelens-code-changes-git.png)
 
 ### <a name="file-level-indicators"></a>ファイル レベルのインジケーター
 
 ウィンドウ下部のファイル レベルのインジケーターで、ファイル全体の変更を探します。
 
-![CodeLens: コード ファイルの詳細を取得する](../ide/media/codelens-file-level.png)
+![CodeLens:コード ファイルの詳細を取得する](../ide/media/codelens-file-level.png)
 
 > [!NOTE]
 > ファイル レベルのインジケーターは、C# ファイルおよび Visual Basic ファイルでは利用できません。
@@ -113,35 +112,35 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 
 一定期間内にコードを変更したユーザーも表示されます。 これは、チームでの変更のパターンを見つけて影響を評価するために役立ちます。
 
-![CodeLens: コードの変更履歴をグラフで表示](../ide/media/codelens.png)
+![CodeLens:コードの変更履歴をグラフで表示](../ide/media/codelens.png)
 
 ### <a name="find-changes-in-your-current-branch"></a>現在の分岐での変更の検索
 
 安定したコードの状態を損なわせるリスクを軽減するために、チームは複数の分岐 (メイン分岐とその下位の開発分岐など) で作業する場合があります。
 
-![CodeLens: コードが分岐された時間を検索](../ide/media/codelensfirstbranchconceptual.png)
+![CodeLens:コードが分岐された時期の確認](../ide/media/codelensfirstbranchconceptual.png)
 
 メイン分岐で、コードを変更したユーザーの数と、変更の数を確認できます。それには、**Alt** + **6**キーを押します。
 
-![CodeLens: この分岐での変更数を検索](../ide/media/codelens-branch-changes.png)
+![CodeLens:この分岐での変更数を検索](../ide/media/codelens-branch-changes.png)
 
 ### <a name="find-when-your-code-was-branched"></a>コードが分岐された時期の確認
 
 コードが分岐された時期を確認するには、子分岐のコードに移動します。 次に、**変更**インジケーターを選択するか、**Alt** + **6** キーを押します。
 
-![CodeLens: コードが分岐された時間を検索](../ide/media/codelens-first-branch.png)
+![CodeLens:コードが分岐された時期の確認](../ide/media/codelens-first-branch.png)
 
 ### <a name="find-incoming-changes-from-other-branches"></a>他の分岐から追加される変更の検索
 
-![CodeLens: 別の分岐でのコード変更を検索](../ide/media/codelensbranchchangecheckinconceptual.png)
+![CodeLens:別の分岐でのコード変更を検索](../ide/media/codelensbranchchangecheckinconceptual.png)
 
 追加された変更を表示することができます。 次のスクリーン ショットでは、"Dev" 分岐で、バグ修正が行われています。
 
-![CodeLens: 別の分岐にチェックインされた変更](../ide/media/codelens-branch-changes-dev.png)
+![CodeLens:別の分岐にチェックインされた変更](../ide/media/codelens-branch-changes-dev.png)
 
 変更は、現在の分岐 ("Main" 分岐) を離れることなく検討できます。
 
-![CodeLens: 別の分岐からの変更を表示](../ide/media/codelens-branch-changes-main.png)
+![CodeLens:別の分岐からの変更を表示](../ide/media/codelens-branch-changes-main.png)
 
 ### <a name="find-when-changes-got-merged"></a>変更がマージされた時期の確認
 
@@ -157,7 +156,7 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 
 追加される変更をローカル バージョンと比較するには、**Shift** + **F10** キーを押すか、または変更セットをダブルクリックします。
 
-![CodeLens: 受信した変更をローカルと比較](../ide/media/codelens-branch-incoming-change-menu.png)
+![CodeLens:受信した変更をローカルと比較](../ide/media/codelens-branch-incoming-change-menu.png)
 
 ### <a name="branch-icons"></a>分岐アイコン
 
@@ -165,14 +164,14 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 
 |**アイコン**|**変更元:**|
 |--------------| - |
-|![CodeLens: [現在の分岐からの変更] アイコン](../ide/media/codelensbranchcurrenticon.png)|現在の分岐|
-|![CodeLens: [親分岐からの変更] アイコン](../ide/media/codelensbranchparenticon.png)|親分岐|
-|![CodeLens: [子分岐からの変更] アイコン](../ide/media/codelensbranchchildicon.png)|子分岐|
-|![CodeLens: [ピア分岐からの変更] アイコン](../ide/media/codelensbranchpeericon.png)|ピア分岐|
-|![CodeLens: [遠くの分岐からの変更] アイコン](../ide/media/codelensbranchfurtherawayicon.png)|親、子、またはピアより遠い分岐|
-|![CodeLens: [親からのマージ] アイコン](../ide/media/codelensbranchmergefromparenticon.png)|親分岐から子分岐へのマージ|
-|![CodeLens: [子分岐からのマージ] アイコン](../ide/media/codelensbranchmergefromchildicon.png)|子分岐から親分岐へのマージ|
-|![CodeLens: [関連付けられていない分岐からのマージ] アイコン](../ide/media/codelensbranchmergefromunrelatedicon.png)|無関係の分岐からのマージ (ベースレス マージ)|
+|![CodeLens:[現在の分岐からの変更] アイコン](../ide/media/codelensbranchcurrenticon.png)|現在の分岐|
+|![CodeLens:[親分岐からの変更] アイコン](../ide/media/codelensbranchparenticon.png)|親分岐|
+|![CodeLens:[子分岐からの変更] アイコン](../ide/media/codelensbranchchildicon.png)|子分岐|
+|![CodeLens:[ピア分岐からの変更] アイコン](../ide/media/codelensbranchpeericon.png)|ピア分岐|
+|![CodeLens:[遠くの分岐からの変更] アイコン](../ide/media/codelensbranchfurtherawayicon.png)|親、子、またはピアより遠い分岐|
+|![CodeLens:[親からのマージ] アイコン](../ide/media/codelensbranchmergefromparenticon.png)|親分岐から子分岐へのマージ|
+|![CodeLens:[子分岐からのマージ] アイコン](../ide/media/codelensbranchmergefromchildicon.png)|子分岐から親分岐へのマージ|
+|![CodeLens:[関連付けられていない分岐からのマージ] アイコン](../ide/media/codelensbranchmergefromunrelatedicon.png)|無関係の分岐からのマージ (ベースレス マージ)|
 
 ## <a name="linked-work-items"></a>リンクされた作業項目
 
@@ -239,9 +238,9 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 
 ## <a name="q--a"></a>Q & A
 
-### <a name="q-how-do-i-turn-codelens-off-or-on-or-choose-which-indicators-to-see"></a>Q: CodeLens を有効または無効にする方法、表示するインジケーターを選択する方法を教えてください。
+### <a name="q-how-do-i-turn-codelens-off-or-on-or-choose-which-indicators-to-see"></a>Q:CodeLens を有効または無効にする方法、表示するインジケーターを選択する方法を教えてください。
 
-**A:**  参照インジケーター以外のインジケーターは無効にも有効にもできます。 **[ツール]**、**[オプション]**、**[テキスト エディター]**、**[すべての言語]**、**[CodeLens]** の順に進みます。
+**A:** 参照インジケーター以外のインジケーターは無効にも有効にもできます。 **[ツール]**、**[オプション]**、**[テキスト エディター]**、**[すべての言語]**、**[CodeLens]** の順に進みます。
 
 インジケーターが有効の場合は、インジケーターから CodeLens のオプションを開くこともできます。
 
@@ -251,9 +250,9 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 
 ![ファイル レベルのインジケーターのオンとオフを切り替える](../ide/media/codelensfilelevelonandoff.png)
 
-### <a name="q-where-is-codelens"></a>Q: CodeLens はどこにありますか。
+### <a name="q-where-is-codelens"></a>Q:CodeLens はどこにありますか。
 
-**A:** CodeLens は、メソッド、クラス、インデクサー、およびプロパティ レベルの C# および Visual Basic のコードで表示されます。 それ以外の種類のファイルについては、ファイル レベルで CodeLens が表示されます。
+**A:** CodeLens は、メソッド、クラス、インデクサー、プロパティ レベルの C# および Visual Basic のコードで表示されます。 それ以外の種類のファイルについては、ファイル レベルで CodeLens が表示されます。
 
 - CodeLens が有効になっていることを確認します。 **[ツール]**、**[オプション]**、**[テキスト エディター]**、**[すべての言語]**、**[CodeLens]** の順に進みます。
 
@@ -263,11 +262,11 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 
 - アプリケーション コードに単体テストがない場合は、単体テスト インジケーターが表示されません。 テスト状態インジケーターは、テスト プロジェクトに自動的に表示されます。 アプリケーション コードに単体テストがあることがわかっているのに、テスト インジケーターが表示されない場合は、ソリューションのビルドを試みます (**Ctrl** + **Shift** + **B**)。
 
-### <a name="q-why-dont-i-see-the-work-item-details-for-a-commit"></a>コミットの作業項目詳細が表示されないのはなぜですか。
+### <a name="q-why-dont-i-see-the-work-item-details-for-a-commit"></a>Q:コミットの作業項目詳細が表示されないのはなぜですか。
 
 **A:** CodeLens が Azure Boards または TFS で作業項目を見つけることができない可能性があります。 その作業項目があるプロジェクトに接続していることと、その作業項目を表示するアクセス許可があることを確認してください。 Azure Boards または TFS での作業項目 ID に関する誤った情報がコミットの説明に含まれている場合、作業項目の詳細が表示されないこともあります。
 
-### <a name="q-why-dont-i-see-the-skype-indicators"></a>Q: Skype インジケーターが表示されないのはなぜですか。
+### <a name="q-why-dont-i-see-the-skype-indicators"></a>Q:Skype インジケーターが表示されないのはなぜですか。
 
 **A:** Skype for Business にサインインしていない場合、Skype for Business がインストールされていない場合、またはサポートされている構成がない場合、Skype インジケーターは表示されません。 ただし、その場合でもメールの送信はできます。
 
@@ -281,9 +280,9 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 
 CodeLens では、異なるバージョン の Lync または Skype はインストールできません。 Visual Studio のローカライズ バージョンに対して、Lync または Skype がローカライズされていないことがあります。
 
-### <a name="q-how-do-i-change-the-font-and-color-for-codelens"></a>Q: CodeLens のフォントと色を変更するにはどうすればよいですか。
+### <a name="q-how-do-i-change-the-font-and-color-for-codelens"></a>Q:CodeLens のフォントと色を変更するにはどうすればよいですか。
 
-**A:** **[ツール]**、**[オプション]**、**[環境]**、**[フォントおよび色]** の順に進みます。
+**A:****[ツール]**、**[オプション]**、**[環境]**、**[フォントおよび色]** の順に進みます。
 
 ![CodeLens - フォントおよび色の設定の変更](../ide/media/codelensoptionsfontscolorssettings.png)
 
@@ -297,7 +296,7 @@ CodeLens では、異なるバージョン の Lync または Skype はインス
 
 4. **Tab** キーを押して **[設定の表示]** の一覧に移動し、**下方向**キーを押して **[CodeLens]** を選択します。
 
-### <a name="q-can-i-move-the-codelens-heads-up-display"></a>Q: CodeLens ヘッドアップ ディスプレイを移動できますか。
+### <a name="q-can-i-move-the-codelens-heads-up-display"></a>Q:CodeLens ヘッドアップ ディスプレイを移動できますか。
 
 **A:** はい、できます。![[Dock] アイコン](../ide/media/codelensdockwindow.png)を選択して、CodeLens をウィンドウとしてドッキングします。
 
@@ -305,29 +304,29 @@ CodeLens では、異なるバージョン の Lync または Skype はインス
 
 ![ドッキングされた CodeLens 参照ウィンドウ](../ide/media/codelensreferencesdockedwindow.png)
 
-### <a name="q-how-do-i-refresh-the-indicators"></a>Q: インジケーターを更新するにはどうすればよいですか。
+### <a name="q-how-do-i-refresh-the-indicators"></a>Q:インジケーターを更新するにはどうすればよいですか。
 
 **A:** 方法は、インジケーターによって異なります。
 
-- **参照**: このインジケーターは、コードが変更されるときに自動的に更新されます。 **参照**インジケーターが独立したウィンドウとしてドッキングされている場合は、**[更新]** を選択することでインジケーターを更新できます。
+- **参照**:このインジケーターは、コードが変更されるときに自動的に更新されます。 **参照**インジケーターが独立したウィンドウとしてドッキングされている場合は、**[更新]** を選択することでインジケーターを更新できます。
 
      ![CodeLens 参照の [更新] ボタン](../ide/media/codelensviewreferencesdocked.png)
 
-- **チーム**: これらのインジケーターを更新するには、右クリック メニューから **[CodeLens チームのインジケーターの更新]** を選択します。
+- **チーム**:これらのインジケーターを更新するには、右クリック メニューから **[CodeLens チームのインジケーターの更新]** を選択します。
 
      ![[CodeLens チームのインジケーターの更新] メニュー項目](../ide/media/codelensrefreshindicatorsfromcode.png)
 
-- **テスト**: [コードの単体テストを検索し](#associated-unit-tests)、**テスト** インジケーターを更新します。
+- **テスト**:[コードの単体テストを検索し](#associated-unit-tests)、**テスト** インジケーターを更新します。
 
-### <a name="q-whats-local-version"></a>Q: "ローカル バージョン" とは何ですか。
+### <a name="q-whats-local-version"></a>Q:"ローカル バージョン" とは何ですか。
 
-**A:** **[ローカル バージョン]** 矢印は、ファイルのローカル バージョンの最新の変更セットを指しています。 サーバーにさらに新しい変更セットが含まれる場合、その変更セットは、使用されている並べ替え順序に応じて **[ローカル バージョン]** 矢印の上または下に表示されます。
+**A:****[ローカル バージョン]** 矢印は、ファイルのローカル バージョンの最新の変更セットを指しています。 サーバーにさらに新しい変更セットが含まれる場合、その変更セットは、使用されている並べ替え順序に応じて **[ローカル バージョン]** 矢印の上または下に表示されます。
 
-### <a name="q-can-i-manage-how-codelens-processes-code-to-show-history-and-linked-items"></a>Q: 履歴やリンク された項目が表示されるように CodeLens によるコードの処理方法を管理することはできますか。
+### <a name="q-can-i-manage-how-codelens-processes-code-to-show-history-and-linked-items"></a>Q:履歴やリンクされた項目が表示されるように CodeLens によるコードの処理方法を管理することはできますか。
 
-**A:** できます。 コードが TFS にある場合は、[TFS Config コマンド](/tfs/server/ref/command-line/tfsconfig-cmd) と共に [CodeIndex コマンド](../ide/codeindex-command.md)を使用します。
+**A:** はい。 コードが TFS にある場合は、[TFS Config コマンド](/tfs/server/ref/command-line/tfsconfig-cmd) と共に [CodeIndex コマンド](../ide/codeindex-command.md)を使用します。
 
-### <a name="q-my-codelens-test-indicators-no-longer-appear-in-my-file-when-i-first-open-my-solution-how-can-i-load-them"></a>Q: ソリューションを最初に開いたときに、ファイルに CodeLens テスト インジケーターが表示されなくなります。 これを読み込むにはどうすればよいですか。
+### <a name="q-my-codelens-test-indicators-no-longer-appear-in-my-file-when-i-first-open-my-solution-how-can-i-load-them"></a>Q:ソリューションを最初に開いたときに、ファイルに CodeLens テスト インジケーターが表示されなくなります。 これを読み込むにはどうすればよいですか。
 
 **A:** プロジェクトをリビルドし、ファイルに読み込む CodeLens テスト インジケーターを取得します。 [ビルド済みアセンブリでの検出](../test/test-explorer-faq.md#assembly-based-discovery
 )がオンになっていることを確認します。 パフォーマンスを向上させるため、Visual Studio では、コード ファイルが読み込まれるときにテスト インジケーターのソース情報がフェッチされなくなります。 テスト インジケーターは、ビルド後、または**テスト エクスプローラー**でダブルクリックしてテストに移動するときに読み込まれます。

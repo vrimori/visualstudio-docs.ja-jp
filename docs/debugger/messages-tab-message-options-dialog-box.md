@@ -1,8 +1,6 @@
 ---
 title: '[メッセージ] タブ、[メッセージ オプション] ダイアログ ボックス |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - message options, Messages
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 55906da398f7f52460523cb74a77945d84037ebc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 1f7675039f8e5f5fb5c1d5899b96682ab60a2bc0
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49866767"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53830596"
 ---
 # <a name="messages-tab-message-options-dialog-box"></a>[メッセージ] タブ ([メッセージ オプション] ダイアログ ボックス)
 使用して、**メッセージ**リストにするメッセージの種類を選択するタブ[メッセージ ビュー](../debugger/messages-view.md)メッセージの検索条件を指定するとします。 表示する、[メッセージ オプション ダイアログ ボックス](../debugger/message-options-dialog-box.md)、選択**ログ メッセージ**から、**スパイ**メニュー。  
@@ -42,5 +40,5 @@ ms.locfileid: "49866767"
   
   内で灰色表示のチェック ボックス**メッセージ グループ**ことを示します、**表示するメッセージ**そのグループ内のメッセージ ボックスの一覧が変更されました。 そのグループ内のメッセージの種類のすべてが選択されています。  
   
-  **既定値として設定を保存します。**  
+  **設定を既定値として保存**  
   メッセージの検索オプションとしては、後で使用できるは、現在の設定を保存します。 これらの設定は、spy++ を終了するときにも保存されます。

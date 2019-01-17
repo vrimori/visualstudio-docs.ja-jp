@@ -1,8 +1,6 @@
 ---
 title: marker_series クラス | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - cvmarkersobj/Concurrency::diagnostic::marker_series
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e638d9316b46a8600fe2e88ca5e4a6611fa1ec4d
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: e8ecc6a14cce80197c1221734aadb4ce7e6758cf
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843836"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53869821"
 ---
 # <a name="markerseries-class"></a>marker_series クラス
 1 つのプロバイダーによって生成されたイベントのシリアル チャネルを表します。  
@@ -44,14 +42,14 @@ class marker_series;
 |name|説明|  
 |----------|-----------------|  
 |[marker_series::is_enabled メソッド](../profiling/marker-series-is-enabled-method.md)|任意のセッションでプロバイダーが有効にされているかどうかを調べます。|  
-|[marker_series::write_alert メソッド](../profiling/marker-series-write-alert-method.md)|同時実行ビジュアライザーのトレース ファイルにアラートを書き込みます。|  
-|[marker_series::write_flag メソッド](../profiling/marker-series-write-flag-method.md)|同時実行ビジュアライザーのトレース ファイルにフラグを書き込みます。|  
-|[marker_series::write_message メソッド](../profiling/marker-series-write-message-method.md)|同時実行ビジュアライザーのトレース ファイルにメッセージを書き込みます。|  
+|[marker_series::write_alert メソッド](../profiling/marker-series-write-alert-method.md)|コンカレンシー ビジュアライザーのトレース ファイルにアラートを書き込みます。|  
+|[marker_series::write_flag メソッド](../profiling/marker-series-write-flag-method.md)|コンカレンシー ビジュアライザーのトレース ファイルにフラグを書き込みます。|  
+|[marker_series::write_message メソッド](../profiling/marker-series-write-message-method.md)|コンカレンシー ビジュアライザーのトレース ファイルにメッセージを書き込みます。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `marker_series`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** *cvmarkersobj.h*  
   
  **名前空間:** Concurrency::diagnostic  

@@ -1,11 +1,9 @@
 ---
 title: DebuggerDisplay 属性の使用 |Microsoft Docs
-ms.custom: ''
-ms.date: 08/09/2017
-ms.technology: vs-ide-debug
+ms.date: 01/09/2019
 ms.topic: conceptual
 helpviewer_keywords:
-- attributes [C#], debugger
+- attributes, debugger
 - DebuggerDisplay attribute
 - DebuggerDisplayAttribute class
 ms.assetid: f4eb7c76-af4e-493b-9ab6-9cb05949d9b3
@@ -14,14 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d3adb481ba06c086db3a272c026543464018b542
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: ecbbad832ad206a0a8192d57d2642bc68a8e3902
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49926203"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54228059"
 ---
-# <a name="using-the-debuggerdisplay-attribute"></a>DebuggerDisplay 属性を使用します
+# <a name="using-the-debuggerdisplay-attribute-c-visual-basic-ccli"></a>DebuggerDisplay 属性を使用して (C#、Visual Basic の場合、C +/cli CLI)
 <xref:System.Diagnostics.DebuggerDisplayAttribute> は、デバッガー変数ウィンドウでのオブジェクト、プロパティ、フィールドの表示方法を制御します。 この属性は、型、デリゲート、プロパティ、フィールド、アセンブリに適用できます。  
   
  `DebuggerDisplay` 属性の引数は 1 つです。それは、型のインスタンスの値列に表示する文字列です。 この文字列には、中かっこ (`{` と `}`) を含めることができます。 かっこ内のテキストは、フィールド、プロパティ、メソッドとして評価されます。  
@@ -32,6 +30,9 @@ ms.locfileid: "49926203"
   
 > [!IMPORTANT]
 >  **[ツール] / [オプション] / [デバッグ]** ダイアログ ボックスで **[オブジェクトの生の構造体を変数ウィンドウに表示する]** チェック ボックスがオンになっている場合、 `DebuggerDisplay` 属性は無視されます。  
+
+> [!NOTE]
+> ネイティブ コードは、この属性は C + でのみサポート/cli CLI コード。
   
  次の表に、 `DebuggerDisplay` 属性の使用例と出力例を示します。  
   
@@ -76,15 +77,15 @@ csc /t:library autoexp.cs
 ```csharp  
 [DebuggerDisplay("{DebuggerDisplay,nq}")]  
 public sealed class MyClass   
-{      
-    public int count { get; set; }      
-    public bool flag { get; set; }      
+{      
+    public int count { get; set; }      
+    public bool flag { get; set; }      
     private string DebuggerDisplay  
-   {         
+   {         
         get  
         {  
              return string.Format("Object {0}", count - 2);  
-        }      
+        }      
     }  
 }  
 ```  
@@ -176,8 +177,8 @@ class MyHashtable
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [DebuggerTypeProxy 属性の使用](../debugger/using-debuggertypeproxy-attribute.md)   
- [管理対象オブジェクトのカスタム ビューを作成します。](../debugger/create-custom-views-of-dot-managed-objects.md)   
+ [マネージド オブジェクトのカスタム ビューの作成](../debugger/create-custom-views-of-dot-managed-objects.md)   
  [C# の書式指定子](../debugger/format-specifiers-in-csharp.md)   
  [デバッガー表示属性によるデバッグ機能の拡張](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)

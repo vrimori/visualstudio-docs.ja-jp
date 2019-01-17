@@ -1,8 +1,6 @@
 ---
 title: '&lt;compatibleFrameworks&gt;要素 (ClickOnce 配置) |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: reference
 dev_langs:
 - VB
@@ -16,29 +14,29 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 44329fc4c2ec5e9f2f8352d69ea487f23cbe3c5a
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
-ms.translationtype: MT
+ms.openlocfilehash: df45e5bc3f9294ac1a53353ec784d83c9220f1cf
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39077686"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53900962"
 ---
 # <a name="ltcompatibleframeworksgt-element-clickonce-deployment"></a>&lt;compatibleFrameworks&gt;要素 (ClickOnce 配置)
 このアプリケーションをインストールして実行できる .NET Framework のバージョンを指定します。  
   
 > [!NOTE]
->  [*MageUI.exe* ](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)はサポートしていません、`compatibleFrameworks`アプリケーション マニフェストを保存するときに要素を使用して、証明書で署名済みの[ *MageUI.exe*](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)します。 代わりに、使用する必要があります[ *Mage.exe*](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)します。  
+>  [*MageUI.exe* ](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)はサポートしていません、`compatibleFrameworks`アプリケーション マニフェストを保存するときに要素を使用して、証明書で署名済みの[ *MageUI.exe*](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)します。 代わりに [*Mage.exe*](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) を使用する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
 <compatibleFrameworks  
-      SupportUrl>   
+      SupportUrl>   
    <framework  
       targetVersion  
       profile  
       supportedRuntime  
-   />   
+   />   
 </ compatibleFrameworks>  
 ```  
   
@@ -52,15 +50,15 @@ ms.locfileid: "39077686"
 |`S` `upportUrl`|任意。 推奨される互換性のある .NET Framework バージョンをダウンロードできる URL を指定します。|  
   
 ## <a name="framework"></a>フレームワーク  
- 必須。 次の表に、属性を`framework`要素をサポートしています。  
+ 必須です。 次の表に、属性を`framework`要素をサポートしています。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`targetVersion`|必須。 ターゲット .NET Framework のバージョン番号を指定します。|  
-|`profile`|必須。 ターゲット .NET Framework のプロファイルを指定します。|  
-|`supportedRuntime`|必須。 .NET Framework を対象に関連付けられているランタイムのバージョン番号を指定します。|  
+|`targetVersion`|必須です。 ターゲット .NET Framework のバージョン番号を指定します。|  
+|`profile`|必須です。 ターゲット .NET Framework のプロファイルを指定します。|  
+|`supportedRuntime`|必須です。 .NET Framework を対象に関連付けられているランタイムのバージョン番号を指定します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 ## <a name="example"></a>例  
  次のコード例は、`compatibleFrameworks`内の要素を[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置マニフェスト。 この配置を実行できる、[!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]します。 も実行でき、[!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]のスーパー セットである、[!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]します。  

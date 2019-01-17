@@ -6,7 +6,6 @@ ms.author: allisb
 ms.date: 09/05/2018
 ms.topic: reference
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.PathTrustOptions
 helpviewer_keywords:
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - mark of the web
 - trusted files
 - trusted folders
-ms.openlocfilehash: 08c4b08c33cd954aa427f158158f29cfbe50df94
-ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
+ms.openlocfilehash: 17b204a54e2ecd52438f6a05f5190a6ee0f396f5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44384718"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53955608"
 ---
 # <a name="configure-trust-settings-for-files-and-folders"></a>ファイルとフォルダーの信頼設定の構成
 
@@ -37,11 +36,11 @@ Visual Studio では、[Mark of the Web](/previous-versions/windows/internet-exp
 
 2. ファイルとフォルダーのチェックのレベルを選択します。 それぞれに異なるチェック レベルを選択できます。 次のオプションがあります。
 
-   * **[No verification]\(確認しない\)**: Visual Studio でチェックは実行されません。
+   * **確認しない**:Visual Studio でチェックは実行されません。
 
-   * **[Verify mark of the web attribute]\(Mark of the Web 属性を確認する\)**: ファイルまたはフォルダーに Mark of the Web 属性がある場合、Visual Studio によってブロックされ、開くためのアクセス許可が求められます。
+   * **Web 属性のマークを確認する**:ファイルまたはフォルダーに Mark of the Web 属性がある場合、Visual Studio によってブロックされ、開くためのアクセス許可が求められます。
 
-   * **[Verify path is trusted]\(パスが信頼されていることを確認する\)**: ファイルまたはフォルダーが **[信頼されているパス]** リストにない場合、Visual Studio によってブロックされ、開くためのアクセス許可が求められます。
+   * **パスが信頼されていることを確認する**:ファイルまたはフォルダーが **[信頼されているパス]** リストにない場合、Visual Studio によってブロックされ、開くためのアクセス許可が求められます。
 
    ![信頼の確認オプション](media/trust-settings.png)
 

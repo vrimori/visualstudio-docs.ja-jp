@@ -2,7 +2,6 @@
 title: '[ビルドの詳細設定] ダイアログ ボックス (Visual Basic)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - vb.ProjectPropertiesAdvancedCompile
@@ -14,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 593bb95e45ecdbda14eba49425ce5db08369e6cf
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 34880d96effb9c1c77c1d88c22f61967741b693e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38783689"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53878274"
 ---
 # <a name="advanced-compiler-settings-dialog-box-visual-basic"></a>[ビルドの詳細設定] ダイアログ ボックス (Visual Basic)
 
@@ -31,7 +30,7 @@ ms.locfileid: "38783689"
 
 2.  **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 **プロジェクト デザイナー**が表示されたら、**[コンパイル]** タブをクリックします。
 
-3.  [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md) で、**[構成]** と **[プラットフォーム]** を選択します。 簡易ビルド構成では、**[構成]** と **[プラットフォーム]** の一覧は表示されません。 詳細については、「[方法: デバッグ構成とリリース構成を設定する](../../debugger/how-to-set-debug-and-release-configurations.md)」を参照してください。
+3.  [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md) で、**[構成]** と **[プラットフォーム]** を選択します。 簡易ビルド構成では、**[構成]** と **[プラットフォーム]** の一覧は表示されません。 詳細については、「[方法 :デバッグ構成とリリース構成を設定する](../../debugger/how-to-set-debug-and-release-configurations.md)」を参照してください。
 
 4.  **[詳細コンパイル オプション]** をクリックします。
 

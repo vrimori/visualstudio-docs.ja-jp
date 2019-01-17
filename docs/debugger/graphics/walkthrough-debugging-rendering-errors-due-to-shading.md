@@ -1,8 +1,6 @@
 ---
 title: 'チュートリアル: 網かけによるレンダリング エラーのデバッグ |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 01875b05-cc7b-4add-afba-f2b776f86974
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 202f2fb0cdbfec6e52a2938365105f3d15327445
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: c90143ae45fba3299cf3eccbcd412d768fcc3738
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49920540"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53828408"
 ---
 # <a name="walkthrough-debugging-rendering-errors-due-to-shading"></a>チュートリアル: 網かけによるレンダリング エラーのデバッグ
 このチュートリアルを使用する方法について説明[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]グラフィックス診断をシェーダーのバグにより正しく色付けがオブジェクトを調査します。  
@@ -52,7 +50,7 @@ ms.locfileid: "49920540"
   
 1. **[グラフィックス ピクセル履歴]** ウィンドウを開きます。 **[グラフィックス診断]** ツール バーで、 **[ピクセル履歴]** を選びます。  
   
-2. 調査するピクセルを選びます。 グラフィックス ログのドキュメント ウィンドウでない色が正しくオブジェクト上のピクセルのいずれかを選択します。  
+2. 調査するピクセルを選びます。 グラフィックスのログのドキュメント ウィンドウで、正しくない色が指定されたオブジェクトでいずれかのピクセルを選びます。  
   
     ![ピクセルを選択すると、その履歴に関する情報が表示されます。](media/gfx_diag_demo_render_error_shader_step_2.png "gfx_diag_demo_render_error_shader_step_2")  
   
@@ -62,7 +60,7 @@ ms.locfileid: "49920540"
   
     ピクセル シェーダーの結果が完全に不透明な黒 (0, 0、0, 1) とすることに注意してください、**出力マージャー**でこのピクセル シェーダーを組み合わせて、**前**のような方法でピクセルの色を**結果**も完全に不透明な黒のです。  
   
-   ピクセルない色が正しくを調べ、ピクセル シェーダーの出力が予期していた色を検出した後は、ピクセル シェーダーを調査し、オブジェクトの色に何が起こったのか、HLSL デバッガーを使用できます。 HLSL デバッガーを使用して、実行中の HLSL 変数の状態を調べ、HLSL コードをステップスルーし、ブレークポイントを設定することによって、問題の診断に役立てることができます。  
+   正しくない色が指定されたピクセルを調べて、ピクセル シェーダーの出力が予期していた色ではなかった場合は、HLSL デバッガーを使用してピクセル シェーダーを調べて、オブジェクトの色に何が起こったのかを確認できます。 HLSL デバッガーを使用して、実行中の HLSL 変数の状態を調べ、HLSL コードをステップスルーし、ブレークポイントを設定することによって、問題の診断に役立てることができます。  
   
 #### <a name="to-examine-the-pixel-shader"></a>ピクセル シェーダーを調査するには  
   
@@ -84,7 +82,7 @@ ms.locfileid: "49920540"
   
 2. 頂点シェーダーの出力構造体 (ピクセル シェーダーに入力される部分) を探します。 このシナリオでは、この構造体の名前は `output`です。 頂点シェーダー コードを調べて、おそらく他のユーザーがデバッグしたことが原因で、 `color` 構造体の `output` メンバーが完全に不透明な黒に明示的に設定されていることを確認します。  
   
-3. 色のメンバーが入力構造からコピーされないことを確認します。 の値`output.color`直前に完全に不透明な黒に設定されて、`output`構造体が返され、ことを確認することをお勧めの値`output`前の行で正しく初期化されていません。 `output.color` の値を観察しながら、 `output.color`を黒に設定する行に達するまで頂点シェーダー コードをステップスルーします。 黒に設定されるまで `output.color` の値は初期化されないことにご注意ください。 これにより、 `output.color` を黒に設定するコードの行を削除するのではなく、修正する必要があることが確認できます。  
+3. 色のメンバーが入力構造からコピーされないことを確認します。 `output.color` 構造が返される直前に `output` の値が完全に不透明な黒に設定されているため、`output` の値が前の行で正しく初期化されていないことを確認することをお勧めします。 `output.color` の値を観察しながら、 `output.color`を黒に設定する行に達するまで頂点シェーダー コードをステップスルーします。 黒に設定されるまで `output.color` の値は初期化されないことにご注意ください。 これにより、 `output.color` を黒に設定するコードの行を削除するのではなく、修正する必要があることが確認できます。  
   
     !["Output.color"の値は黒です。](media/gfx_diag_demo_render_error_shader_step_7.png "gfx_diag_demo_render_error_shader_step_7")  
   

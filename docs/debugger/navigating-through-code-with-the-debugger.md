@@ -15,22 +15,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 66478505fe59ef65eb703fef6be8941deebe3d49
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6e983137b4d66ff568ba706353d950470787e3a2
+ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53931425"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54204491"
 ---
 # <a name="navigate-through-code-with-the-visual-studio-debugger"></a>Visual Studio デバッガーでコード内を移動します。
 
-Visual Studio デバッガーでは、アプリの状態を検査し、その実行フローを表示するコード内を移動できます。 キーボード ショートカット、デバッグ コマンド、ブレークポイント、およびその他の機能を使用するを簡単に確認するコードを取得します。 デバッガー ナビゲーション コマンドとショートカットの知識は、高速かつ簡単に見つけ、アプリの問題を解決します。  コードをデバッグしようとした初めての場合は、読み取りをする可能性があります[より適切に記述することでバグを修正C#コード](../debugger/write-better-code-with-visual-studio.md)と[超初心者向けのデバッグ](../debugger/debugging-absolute-beginners.md)にこの記事に進む前にします。
+Visual Studio デバッガーでは、アプリの状態を検査し、その実行フローを表示するコード内を移動できます。 キーボード ショートカット、デバッグ コマンド、ブレークポイント、およびその他の機能を使用するを簡単に確認するコードを取得します。 デバッガー ナビゲーション コマンドとショートカットの知識は、高速かつ簡単に見つけ、アプリの問題を解決します。  コードのデバッグを試みるのが今回初めてである場合は、この記事を先に進む前に[超初心者向けのデバッグ方法](../debugger/debugging-absolute-beginners.md)および[より良い C# コードを書くことによるバグの修正](../debugger/write-better-code-with-visual-studio.md)に関するページを参照することをお勧めします。
   
 ## <a name="basic-debugging"></a>デバッグの基本  
 
 アプリをアタッチされたデバッガーを開始するキーを押します**F5**を選択します**デバッグ** > **デバッグの開始**、または Visual Studio のツールバーで緑色の矢印を選択します。  
   
- ![DBG&#95;基本&#95;開始&#95;デバッグ](../debugger/media/dbg_basics_start_debugging.png "DBG_Basics_Start_Debugging")  
+ ![DBG&#95;Basics&#95;Start&#95;Debugging](../debugger/media/dbg_basics_start_debugging.png "DBG_Basics_Start_Debugging")  
   
 デバッグ中には、黄色の枠は、[次へ] を実行するコード行を示します。  
   

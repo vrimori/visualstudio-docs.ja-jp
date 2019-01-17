@@ -1,8 +1,6 @@
 ---
 title: 使用状況ナビゲーター | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.cv.performance.utilizationnavigator
@@ -12,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: abf531b6b509afc15da057105b014e2c2b41a2cc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c9ab02d924e7d3ab3dae7813a18483cb1dbae856
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49871473"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53968353"
 ---
 # <a name="utilization-navigator"></a>使用状況ナビゲーター
 コンカレンシー ビジュアライザーの使用状況ナビゲーターを使用して、トレースでの時間間隔を選択できます。 コンカレンシー ビジュアライザーは、一定期間内におけるターゲット プロセスによる CPU コアの使用率を表示します。 これにより、CPU 使用率パターンの調査が容易になり、使用状況データとその他のビュー内のデータを比較することもできます。 使用状況ナビゲーターは、コンカレンシー ビジュアライザーのすべてのビューの上部に表示されます。 次の図は、使用状況ナビゲーターを示しています。  
@@ -29,8 +27,8 @@ ms.locfileid: "49871473"
   
  使用状況ナビゲーターを使用して、表示された時間範囲を操作する方法を次に示します。  
   
-- 左側または右側に Thumb をドラッグしてパンできます。 (キーボード: Thumb に焦点を合わせて、左矢印キーまたは右矢印キーを押します。)  
+- 左側または右側に Thumb をドラッグしてパンできます。 (キーボード:Thumb に焦点を合わせて、左矢印キーまたは右矢印キーを押します。)  
   
-- 間隔の範囲を変更するには、ハンドルのいずれかをドラッグします。 (キーボード: ハンドルに焦点を合わせて、右矢印キーまたは左矢印キーを押します。)  
+- 間隔の範囲を変更するには、ハンドルのいずれかをドラッグします。 (キーボード:ハンドルに焦点を合わせて、右矢印キーまたは左矢印キーを押します。)  
   
   別のコンカレンシー ビジュアライザー ズーム コントロールを使用して間隔を変更すると、変更を反映するために使用状況ナビゲーターが更新されます。

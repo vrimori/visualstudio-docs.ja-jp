@@ -2,7 +2,6 @@
 title: '[署名] ページ (プロジェクト デザイナー)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - vs.AddNewStrongNameKey
@@ -21,12 +20,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 859ec81ff3ed2c3b6385de1d093ba512203da9d9
-ms.sourcegitcommit: 551f13774e8bb0eb47cbd973745628a956e866aa
+ms.openlocfilehash: d59f81a8bedd62e7127d5541f943f0b0c26b8905
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49459791"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53856645"
 ---
 # <a name="signing-page-project-designer"></a>[署名] ページ (プロジェクト デザイナー)
 **プロジェクト デザイナー**の **[署名]** ページを使用して、アプリケーション マニフェストと配置マニフェストに署名し、アセンブリに署名します (厳密な名前の署名)。
@@ -40,7 +39,7 @@ ms.locfileid: "49459791"
 ## <a name="application-and-deployment-manifest-signing"></a>アプリケーション マニフェストと配置マニフェストの署名
  **[ClickOnce マニフェストに署名する]** チェック ボックス
 
- 公開キーと秘密キーのペアを使用して、アプリケーション マニフェストと配置マニフェストに署名するには、このチェック ボックスを選択します。 この方法の詳細については、「[方法: アプリケーション マニフェストおよび配置マニフェストに署名する](../../ide/how-to-sign-application-and-deployment-manifests.md)」を参照してください。
+ 公開キーと秘密キーのペアを使用して、アプリケーション マニフェストと配置マニフェストに署名するには、このチェック ボックスを選択します。 この方法の詳細については、「[方法 : アプリケーション マニフェストおよび配置マニフェストに署名する](../../ide/how-to-sign-application-and-deployment-manifests.md)」を参照してください。
 
  **[ストアから選択]** ボタン
 
@@ -73,7 +72,7 @@ ms.locfileid: "49459791"
 
  アセンブリに署名し、厳密な名前のキー ファイルを作成するには、このチェック ボックスをオンにします。 **プロジェクト デザイナー**を使用してアセンブリに署名する詳細については、「[方法: アセンブリに署名する (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)」を参照してください。
 
- このオプションは、Windows ソフトウェア開発キット (Windows SDK) で提供される Al.exe ツールを使用して、アセンブリに署名します。 Al.exe の詳細については、「[方法 : 厳密な名前でアセンブリに署名する](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)」を参照してください。
+ このオプションは、Windows ソフトウェア開発キット (Windows SDK) で提供される Al.exe ツールを使用して、アセンブリに署名します。 Al.exe の詳細については、「[方法: 厳密な名前でアセンブリに署名する](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)」を参照してください。
 
  **[厳密な名前のキー ファイルを選択してください]** 一覧
 
@@ -101,7 +100,7 @@ ms.locfileid: "49459791"
 
 - [プロジェクトのプロパティのリファレンス](../../ide/reference/project-properties-reference.md)
 - [アセンブリおよびマニフェストへの署名の管理](../../ide/managing-assembly-and-manifest-signing.md)
-- [方法 : アプリケーション マニフェストおよび配置マニフェストに署名する](../../ide/how-to-sign-application-and-deployment-manifests.md)
+- [方法: アプリケーション マニフェストと配置マニフェストの署名](../../ide/how-to-sign-application-and-deployment-manifests.md)
 - [方法: アセンブリに署名する (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)
 - [方法: 厳密な名前でアセンブリに署名する](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)
 - [厳密な名前付きアセンブリ](/dotnet/framework/app-domains/strong-named-assemblies)

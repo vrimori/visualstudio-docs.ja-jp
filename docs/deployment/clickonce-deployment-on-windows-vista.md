@@ -1,8 +1,6 @@
 ---
 title: Windows Vista の ClickOnce 配置 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0389665349ae9c39a0f820bc047af6cc4db2b683
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: a73ddb8781276fbd2c56ce58b9fde257e728f86d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49867534"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53850779"
 ---
 # <a name="clickonce-deployment-on-windows-vista"></a>Windows Vista の ClickOnce 配置
 
@@ -54,6 +52,6 @@ Visual Studio では、マニフェスト生成のため、次のオプション
   
 ## <a name="see-also"></a>関連項目  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
- [ユーザーのアクセス許可と Visual Studio](https://msdn.microsoft.com/library/d5c55084-1e7b-4b61-b478-137db01c0fc0)   
+ [ユーザー アクセス許可と Visual Studio](https://msdn.microsoft.com/library/d5c55084-1e7b-4b61-b478-137db01c0fc0)   
  [[アプリケーション] ページ (プロジェクト デザイナー) (C#)](../ide/reference/application-page-project-designer-csharp.md)   
  [[アプリケーション] ページ (プロジェクト デザイナー)](../ide/reference/application-page-project-designer-visual-basic.md)

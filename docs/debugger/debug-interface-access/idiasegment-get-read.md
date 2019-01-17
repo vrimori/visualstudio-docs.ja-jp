@@ -1,8 +1,6 @@
 ---
 title: Idiasegment::get_read |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 43690f17e1e034896865a3c51d0cb22b87b2e500
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 54326c915acbbdc33c44b52efd19fd0f6edd1f66
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49900229"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53911326"
 ---
 # <a name="idiasegmentgetread"></a>IDiaSegment::get_read
 セグメントを読み取れるかどうかを示すフラグを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49900229"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_read (   
+HRESULT get_read (   
    BOOL* pRetVal  
 );  
 ```  
@@ -37,7 +35,7 @@ HRESULT get_read (
  [out]返します`TRUE`場合は、セグメントを読み取ることができます。 それ以外の場合、返します`FALSE`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

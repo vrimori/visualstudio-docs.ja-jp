@@ -1,8 +1,6 @@
 ---
 title: Idiaenumdebugstreams::item |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ae82df1f2af6acba7f94bf0d14682aff27a830bb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: e098f15238cdf84121cae81685191047c4b04447
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49916193"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53963341"
 ---
 # <a name="idiaenumdebugstreamsitem"></a>IDiaEnumDebugStreams::Item
 インデックスまたは名前を使用してデバッグ ストリームを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49916193"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT Item (   
+HRESULT Item (   
    VARIANT                   index,  
    IDiaEnumDebugStreamData** stream  
 );  
@@ -69,6 +67,6 @@ IDiaEnumDebugStreamData *GetStreamData(IDiaEnumDebugStreams *pStreamList,
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)   
  [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

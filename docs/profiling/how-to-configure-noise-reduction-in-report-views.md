@@ -1,8 +1,6 @@
 ---
 title: '方法: レポート ビューでノイズ除去を設定する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.performance.noisereduction.dialog
@@ -16,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 460251aaa89c22d7bb1320d19882af4f68736cc0
-ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
+ms.openlocfilehash: 1fa84eecc96c836b3430b691b5d8f8b1cd3d0926
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34815185"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53875246"
 ---
 # <a name="how-to-configure-noise-reduction-in-report-views"></a>方法: レポート ビューでノイズ除去を設定する
 パフォーマンス レポートは、コール ツリー ビューや 割り当て ビューに表示されるデータの数を制限して、ノイズを除去するように構成できます。 ノイズ除去を行うことで、パフォーマンスの問題を発見しやすくなります。 これは、パフォーマンス レポートの分析に役立ちます。  

@@ -1,8 +1,6 @@
 ---
 title: Idialinenumber::get_compiland |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ca79c4a2f90e21d71518033ffb8450c02998945
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: c24c79abb4b907c79c45e6dea5843546e3ce9804
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49904558"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53851811"
 ---
 # <a name="idialinenumbergetcompiland"></a>IDiaLineNumber::get_compiland
 イメージのテキストのバイト数を提供するコンパイル単位のシンボルへの参照を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49904558"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT get_compiland (   
+HRESULT get_compiland (   
    IDiaSymbol** pRetVal  
 );  
 ```  
@@ -37,7 +35,7 @@ HRESULT get_compiland (
  [out]返します、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)イメージのテキストのバイト数を提供するコンパイル単位のオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

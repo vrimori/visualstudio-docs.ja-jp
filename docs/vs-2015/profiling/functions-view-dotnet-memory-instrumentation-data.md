@@ -17,10 +17,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 8bacc61ec9c254ce662854a08fe6a508977a72e2
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
+ms.lasthandoff: 01/16/2019
 ms.locfileid: "51730185"
 ---
 # <a name="functions-view---net-memory-instrumentation-data"></a>関数ビュー - .NET メモリ インストルメンテーション データ
@@ -104,7 +104,7 @@ ms.locfileid: "51730185"
 |**最大アプリケーション排他時間 (関数のみ)**|この関数の呼び出しの最大アプリケーション排他時間。|  
 |**最小アプリケーション排他時間 (関数のみ)**|この関数の呼び出しの最小アプリケーション排他時間。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [関数ビュー - サンプリング](../profiling/functions-view-dotnet-memory-sampling-data.md)   
  [関数ビュー](../profiling/functions-view-instrumentation-data.md)   

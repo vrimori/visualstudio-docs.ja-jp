@@ -2,19 +2,18 @@
 title: コード化された UI テストでのさまざまな Web ブラウザーの使用
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: f7301ef674e3ad3b940204be30bfffa878f88e45
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 77af6795e8c00a9226c54ee8d9c0de09c9154065
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895107"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53986142"
 ---
 # <a name="use-different-web-browsers-with-coded-ui-tests"></a>コード化された UI テストでさまざまな Web ブラウザーを使用する
 

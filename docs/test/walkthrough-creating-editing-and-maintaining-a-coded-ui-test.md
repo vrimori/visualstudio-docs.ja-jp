@@ -2,21 +2,20 @@
 title: コード化された UI テストの作成
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: fe8bed9c1f1f8aee9ae8e6d1ba460bf226d7b818
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 9bb64cae648f8ad747100fb0e27f83617603c804
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52895523"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53878235"
 ---
-# <a name="walkthrough-create-edit-and-maintain-a-coded-ui-test"></a>チュートリアル: コード化された UI テストの作成、編集、管理
+# <a name="walkthrough-create-edit-and-maintain-a-coded-ui-test"></a>チュートリアル: コード化された UI テストの作成、編集、保守
 
 このチュートリアルでは、Windows Presentation Framework (WPF) アプリをテストするためのコード化された UI テストの作成、編集、および保守方法について説明します。 また、さまざまなタイミングの問題やコントロールのリファクタリングによって機能が損なわれたテストを修正するための解決策を示します。
 

@@ -10,15 +10,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 01e572a2ac20d1cfb103e1600307b51bdf58a0b8
-ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
-ms.translationtype: MT
+ms.openlocfilehash: 87d4e11ffcb485ac96d2ecdb53951532a2c1305a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37174320"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53932039"
 ---
 # <a name="separate-datasets-and-tableadapters-into-different-projects"></a>データセットと TableAdapters を別々のプロジェクトに分離する
 型指定されたデータセットが強化されているように、 [Tableadapter](create-and-configure-tableadapters.md)および個別のプロジェクトにデータセット クラスを生成することができます。 これにより、アプリケーション層を分離して、n 層データ アプリケーションをすばやく生成できるようになります。
@@ -32,12 +31,12 @@ TableAdapter コードからデータセット コードを分離する場合は
 
 #### <a name="to-separate-the-dataset-into-a-different-project"></a>データセットを別のプロジェクトに分離するには
 
-1.  データセットを含むソリューションを開きます (*.xsd*ファイル)。
+1.  データセット (*.xsd* ファイル) を含むソリューションを開きます。
 
     > [!NOTE]
     >  ソリューションに、データセット コードを分離するプロジェクトが含まれていない場合は、プロジェクトを作成または既存のプロジェクトをソリューションに追加します。
 
-2.  型指定されたデータセット ファイルをダブルクリックします (、 *.xsd*ファイル) で**ソリューション エクスプ ローラー**でデータセットを開きます、**データセット デザイナー**します。
+2.  **ソリューション エクスプローラー**で型指定されたデータセット ファイル (*.xsd* ファイル) をダブルクリックして、**データセット デザイナー**でデータセットを開きます。
 
 3.  空の領域を選択して、**データセット デザイナー**します。
 
@@ -45,7 +44,7 @@ TableAdapter コードからデータセット コードを分離する場合は
 
 5.  **DataSet プロジェクト**一覧で、データセット コードを生成するプロジェクトの名前を選択します。
 
-     データセット コードを生成するプロジェクトを選択した後、**データセット ファイル**プロパティには、既定のファイル名が設定されます。 必要な場合は、この名前を変更できます。 さらに、特定のディレクトリに、データセット コードを生成する場合は、設定できます、**プロジェクト フォルダー**プロパティ フォルダーの名前にします。
+     データセット コードを生成するプロジェクトを選択した後、**データセット ファイル**プロパティには、既定のファイル名が設定されます。 必要な場合は、この名前を変更できます。 さらに、データセット コードを特定のディレクトリに生成する場合は、**[プロジェクト フォルダー]** プロパティをフォルダーの名前に設定できます。
 
     > [!NOTE]
     >  データセットと Tableadapter を分離する場合 (設定して、 **DataSet プロジェクト**プロパティ)、プロジェクト内の既存のデータセット部分クラスが自動的に移動しません。 既存のデータセット部分クラスは、データセット プロジェクトに手動で移動する必要があります。
@@ -61,8 +60,8 @@ TableAdapter コードからデータセット コードを分離する場合は
 
 ## <a name="see-also"></a>関連項目
 
-- [N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)
-- [チュートリアル: N 層データ アプリケーションの作成](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
+- [n 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)
+- [チュートリアル: n 層データ アプリケーションを作成する](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
 - [階層更新](../data-tools/hierarchical-update.md)
 - [Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)
 - [ADO.NET](/dotnet/framework/data/adonet/index)

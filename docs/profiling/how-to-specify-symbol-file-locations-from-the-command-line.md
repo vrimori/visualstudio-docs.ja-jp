@@ -1,8 +1,6 @@
 ---
 title: '方法: コマンド ラインからシンボル ファイルの場所を指定する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 8aa067bb-e8bf-4081-aff0-cfbcf65934a0
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 498720ff5b76ce2c3229c9c7a493023318213ae4
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0791019ce71a7d0fe6276ef9345284662ca31e00
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49941933"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53917148"
 ---
 # <a name="how-to-specify-symbol-file-locations-from-the-command-line"></a>方法: コマンド ラインからシンボル ファイルの場所を指定する
 関数名や行番号などのシンボル情報を表示するには、VSPerfReport コマンド ライン ツールが、プロファイリングしたコンポーネントおよび Windows システム ファイルのシンボル (.*pdb*) ファイルにアクセスできる必要があります。 シンボル ファイルは、コンポーネントのコンパイル時に作成されます。 詳細については、「[VSPerfReport](../profiling/vsperfreport.md)」を参照してください。 VSPerfReport は、自動的に次の場所でシンボル ファイルを検索します。  
@@ -37,7 +35,7 @@ ms.locfileid: "49941933"
   これらの両方の方法を使用することもできます。  
   
 > [!NOTE]
->  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] がローカル コンピューターにインストールされている場合は、Windows シンボル ファイルの場所が既に指定されている可能性があります。 詳細については、「[方法: Windows シンボル情報を参照する](../profiling/how-to-reference-windows-symbol-information.md)」を参照してください。 このトピックで後述するように、その場所とサーバーを使用するよう VSPerfReport を構成する必要があります。  
+>  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] がローカル コンピューターにインストールされている場合は、Windows シンボル ファイルの場所が既に指定されている可能性があります。 詳細については、「[方法 :Windows シンボル情報を参照する](../profiling/how-to-reference-windows-symbol-information.md)」を参照してください。 このトピックで後述するように、その場所とサーバーを使用するよう VSPerfReport を構成する必要があります。  
   
 ## <a name="specify-windows-symbol-files"></a>Windows シンボル ファイルを指定する  
   

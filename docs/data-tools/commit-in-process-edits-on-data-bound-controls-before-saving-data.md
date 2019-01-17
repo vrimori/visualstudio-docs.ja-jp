@@ -1,53 +1,52 @@
 ---
-title: データを保存する前にデータ バインド コントロールでの中の編集をコミットします。
+title: データの保存前にデータ バインド コントロールで実行中の編集をコミットする
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
 helpviewer_keywords:
-- commiting edited records
+- committing edited records
 - data-bound controls, in-process edits
-- DataBinding class, commiting edited records
-- hierarchical update, commiting edited records
-- BindingSource class, commiting edited records
+- DataBinding class, committing edited records
+- hierarchical update, committing edited records
+- BindingSource class, committing edited records
 - EndEdit method
 ms.assetid: 61af4798-eef7-468c-b229-5e1497febb2f
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 34cf76adc56078303352bef9f01cef5ba774e2be
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
-ms.translationtype: MT
+ms.openlocfilehash: 6c548cd7a91683da88a760e28831a0b13af433c5
+ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31921606"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54154206"
 ---
-# <a name="commit-in-process-edits-on-data-bound-controls-before-saving-data"></a>データを保存する前にデータ バインド コントロールでの中の編集をコミットします。
+# <a name="commit-in-process-edits-on-data-bound-controls-before-saving-data"></a>データの保存前にデータ バインド コントロールで実行中の編集をコミットする
 
-データ バインド コントロール内の値を編集するには、ユーザーが更新された値に、コントロールがバインドされている、基になるデータ ソースにコミットする現在のレコードに移動する必要があります。 項目をドラッグすると、[データ ソース ウィンドウ](add-new-data-sources.md)、フォームに最初の項目を削除するにのコードを生成、**保存**ボタン クリックしてイベントの<xref:System.Windows.Forms.BindingNavigator>です。 このコードを呼び出す、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>のメソッド、<xref:System.Windows.Forms.BindingSource>です。 呼び出し、そのため、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>メソッドは、最初にのみ生成<xref:System.Windows.Forms.BindingSource>ですが、フォームに追加します。
+データ バインド コントロール内の値を編集するには、ユーザーを更新された値に、コントロールがバインドされている基になるデータ ソースにコミットする現在のレコードを移動する必要があります。 項目をドラッグすると、[データ ソース ウィンドウ](add-new-data-sources.md)を削除する最初の項目のフォームへにコードが生成されます、**保存**ボタン クリックしてイベントの<xref:System.Windows.Forms.BindingNavigator>します。 このコードは、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>のメソッド、<xref:System.Windows.Forms.BindingSource>します。 呼び出しでは、そのため、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>メソッドは、最初にのみ生成<xref:System.Windows.Forms.BindingSource>フォームに追加されています。
 
-<xref:System.Windows.Forms.BindingSource.EndEdit%2A>呼び出しは、現在編集中のデータ バインド コントロールでは、プロセス内にある変更をコミットします。 そのため、データ バインド コントロールがあるフォーカス クリックして、**保存** ボタン、保留中のすべての編集コントロールは、実際の保存前にコミットされます。 その (、`TableAdapterManager.UpdateAll`メソッド)。
+<xref:System.Windows.Forms.BindingSource.EndEdit%2A> 呼び出しは、現在編集中のデータ バインド コントロールで実行されている変更をコミットします。 したがって、あるデータ バインド コントロールにフォーカスがある状態で **[保存]** ボタンをクリックすると、実際の保存 (`TableAdapterManager.UpdateAll` メソッド) が実行される前に、そのコントロール内のすべての保留中の編集がコミットされます。
 
-自動的に変更をコミットするアプリケーションを構成するには、ユーザーが、保存の一部として、変更をコミットすることがなくデータを保存しようとした場合でも処理できます。
+自動的に変更をコミットするアプリケーションを構成するには、ユーザーが、保存の一部として変更をコミットせずにデータを保存しようとしています。 場合でもプロセス。
 
 > [!NOTE]
-> デザイナーに追加、`BindingSource.EndEdit`最初の項目に対してのみコードをフォームにドロップします。 呼び出すコード行を追加する必要があるため、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>ごとメソッド<xref:System.Windows.Forms.BindingSource>フォームにします。 呼び出すコード行を手動で追加することができます、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>ごとメソッド<xref:System.Windows.Forms.BindingSource>です。 また、追加することができます、`EndEditOnAllBindingSources`をフォームにメソッドおよび保存を実行する前に呼び出しです。
+> デザイナーに追加、`BindingSource.EndEdit`最初の項目に対してのみコードがフォームにドロップします。 呼び出すコード行を追加する必要があるため、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>メソッドごとに<xref:System.Windows.Forms.BindingSource>形式にします。 呼び出すコード行を手動で追加することができます、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>メソッドごとに<xref:System.Windows.Forms.BindingSource>します。 また、追加することができます、`EndEditOnAllBindingSources`をフォームにメソッドと保存を実行する前に付けます。
 
-次のコードでは、[クエリ (LINQ: Language-Integrated)](/dotnet/csharp/linq/)すべてを反復処理するクエリ<xref:System.Windows.Forms.BindingSource>コンポーネントと呼び出し、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>ごとメソッド<xref:System.Windows.Forms.BindingSource>フォーム上。
+次のコードでは、 [LINQ (Language-Integrated Query)](/dotnet/csharp/linq/)すべてを反復処理するクエリ<xref:System.Windows.Forms.BindingSource>コンポーネントと呼び出し、<xref:System.Windows.Forms.BindingSource.EndEdit%2A>メソッドごとに<xref:System.Windows.Forms.BindingSource>フォームで。
 
-## <a name="to-call-endedit-for-all-bindingsource-components-on-a-form"></a>For を呼び出す EndEdit フォーム上のすべての BindingSource コンポーネント
+## <a name="to-call-endedit-for-all-bindingsource-components-on-a-form"></a>フォーム上のすべての BindingSource コンポーネントの EndEdit を呼び出す
 
-1.  次のコードを含むフォームを追加、<xref:System.Windows.Forms.BindingSource>コンポーネントです。
+1.  次のコードを含むフォームを追加、<xref:System.Windows.Forms.BindingSource>コンポーネント。
 
      [!code-csharp[VSProDataOrcasEndEditOnAll#1](../data-tools/codesnippet/CSharp/commit-in-process-edits-on-data-bound-controls-before-saving-data_1.cs)]
      [!code-vb[VSProDataOrcasEndEditOnAll#1](../data-tools/codesnippet/VisualBasic/commit-in-process-edits-on-data-bound-controls-before-saving-data_1.vb)]
 
-2.  すぐに呼び出しの前に、フォームのデータを保存するコードの次の行を追加 (、`TableAdapterManager.UpdateAll()`メソッド)。
+2.  次のフォームのデータを保存する呼び出しのすぐ前に、のコード行を追加 (、`TableAdapterManager.UpdateAll()`メソッド)。
 
      [!code-csharp[VSProDataOrcasEndEditOnAll#2](../data-tools/codesnippet/CSharp/commit-in-process-edits-on-data-bound-controls-before-saving-data_2.cs)]
      [!code-vb[VSProDataOrcasEndEditOnAll#2](../data-tools/codesnippet/VisualBasic/commit-in-process-edits-on-data-bound-controls-before-saving-data_2.vb)]

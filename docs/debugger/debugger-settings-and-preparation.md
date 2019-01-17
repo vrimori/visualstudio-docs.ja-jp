@@ -1,8 +1,6 @@
 ---
 title: デバッガーの設定と準備 |Microsoft Docs
-ms.custom: ''
 ms.date: 08/01/2018
-ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug
@@ -20,17 +18,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f32b5e68dec6696f6947fe78883c64b4c3caa322
-ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
-ms.translationtype: MT
+ms.openlocfilehash: 5f1f4b9604afc511dcbb1362461a2e8c11c7098e
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52257031"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269775"
 ---
 # <a name="debugger-settings-and-preparation"></a>デバッガーの設定と準備
 ここでは、デバッグに関連するプロパティ設定と、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーを使用してプログラムをデバッグするために必要な準備について説明します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でプロジェクト テンプレートを使ってプログラムを作成する場合、これらの設定はデバッグ構成で正しく設定されます。  
   
- 詳細については、「[方法: デバッグ構成とリリース構成を設定する](../debugger/how-to-set-debug-and-release-configurations.md)」を参照してください。  
+ 詳細については、「[方法 :デバッグ構成とリリース構成を設定する](../debugger/how-to-set-debug-and-release-configurations.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [デバッガーに関連するプロジェクト設定](../debugger/debugger-project-settings.md)  
@@ -42,16 +40,16 @@ ms.locfileid: "52257031"
  [コンソール プロジェクト](../debugger/debugging-preparation-console-projects.md)  
  デバッグのためのコンソール プロジェクトの構成手順について説明します。   
   
- [方法 : Visual Studio ソリューションに含まれていない実行可能ファイルをデバッグする](../debugger/how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md)  
+ [方法: Visual Studio ソリューションの一部ではない実行可能ファイルをデバッグする](../debugger/how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md)  
  Visual Studio プロジェクトの一部として作成されていない実行可能ファイルをデバッグする方法について説明します。  
   
  [64 ビット アプリケーションをデバッグする](../debugger/debug-64-bit-applications.md)  
  64 ビット アプリケーションをデバッグする方法について説明します。  
   
- [方法 : デバッグで .NET Framework のバージョンを指定する](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md)  
+ [方法: デバッグ用の .NET Framework のバージョンを指定する](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md)  
  レジストリ キーを設定して、使用するバージョンをデバッガーに指定する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)  
  [Visual Studio でのデバッグ](../debugger/index.md)  
- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
+ [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)

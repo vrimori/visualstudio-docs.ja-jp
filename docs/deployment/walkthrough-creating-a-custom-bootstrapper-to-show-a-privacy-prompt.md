@@ -1,8 +1,6 @@
 ---
-title: 'チュートリアル: プライバシー プロンプトによるのカスタム ブートス トラップの作成 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: プライバシー プロンプトを使用のカスタム ブートス トラップの作成 |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - FSharp
@@ -21,14 +19,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 18ac2ad1125067109b0ca02d552e997f2c30482f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 7e32ea7053d79a64e0c1502ed251d55f6150500a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49873787"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53882723"
 ---
-# <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>チュートリアル: プライバシー プロンプトを使用してカスタム ブートストラップを作成する
+# <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>チュートリアル: プライバシー プロンプトを使用のカスタム ブートス トラップを作成します。
 新しいファイルのバージョンとアセンブリのバージョンのアセンブリが使用可能になると自動的に更新する ClickOnce アプリケーションを構成できます。 お客様がこの動作に同意することを確認するにプライバシー プロンプトを表示できます。 次に、アプリケーションが自動的に更新するアクセス許可を付与するかどうかを選択できます。 アプリケーションが自動的に更新する許可されていない場合はインストールされません。  
   
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
@@ -150,7 +148,7 @@ ms.locfileid: "49873787"
   
 #### <a name="step-1-to-create-the-bootstrapper-directory"></a>手順 1: ブートス トラップ ディレクトリを作成するには  
   
-1.  という名前のディレクトリを作成する**UpdateConsentDialog**で、 *%PROGRAMFILES%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages*。  
+1.  という名前のディレクトリを作成する**UpdateConsentDialog**で、 *%PROGRAMFILES%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages*します。  
   
     > [!NOTE]
     >  このフォルダーを作成する管理者特権を必要があります。  
@@ -160,7 +158,7 @@ ms.locfileid: "49873787"
     > [!NOTE]
     >  ロケールごとに新しいディレクトリを作成します。 たとえば、フランス、ドイツのロケールのサブディレクトリを追加できます。 必要に応じて、フランス語、ドイツ語の文字列と言語パック、これらのディレクトリが含まれます。  
   
-#### <a name="step-2-to-create-the-productxml-manifest-file"></a>手順 2: product.xml マニフェスト ファイルを作成するには  
+#### <a name="step-2-to-create-the-productxml-manifest-file"></a>手順 2: Product.xml マニフェスト ファイルを作成するには  
   
 1.  という名前のテキスト ファイルを作成する*product.xml*します。  
   
@@ -192,7 +190,7 @@ ms.locfileid: "49873787"
   
 3.  UpdateConsentDialog ブートス トラップ ディレクトリに保存します。  
   
-#### <a name="step-3-to-create-the-packagexml-manifest-file-and-the-software-license-terms"></a>手順 3: package.xml マニフェストを作成するには、ファイルと、ソフトウェア ライセンス条項  
+#### <a name="step-3-to-create-the-packagexml-manifest-file-and-the-software-license-terms"></a>手順 3: Package.xml のマニフェスト ファイルと、ソフトウェア ライセンス条項を作成するには  
   
 1.  という名前のテキスト ファイルを作成する*package.xml*します。  
   
@@ -236,7 +234,7 @@ ms.locfileid: "49873787"
   
 1.  **ソリューション エクスプ ローラー**、展開するアプリケーションの名前をクリックします。  
   
-2.  **プロジェクト** メニューのをクリックして*ProjectName* **プロパティ**します。  
+2.  **[プロジェクト]** メニューの *ProjectName* の **[プロパティ]** をクリックします。  
   
 3.  をクリックして、**発行**] ページの [クリックして**の前提条件**します。  
   
@@ -254,7 +252,7 @@ ms.locfileid: "49873787"
   
 1.  **ソリューション エクスプ ローラー**、展開するアプリケーションの名前をクリックします。  
   
-2.  **プロジェクト** メニューのをクリックして*ProjectName* **プロパティ**します。  
+2.  **[プロジェクト]** メニューの *ProjectName* の **[プロパティ]** をクリックします。  
   
 3.  をクリックして、**発行**] ページの [クリックして**今すぐ発行**します。  
   
@@ -266,21 +264,21 @@ ms.locfileid: "49873787"
   
 6.  ソフトウェア ライセンス条項を読み、クリックして**Accept**します。  
   
-     更新プログラムの同意ダイアログ アプリケーションが表示され、次のテキスト: インストールしようとしているアプリケーション、Web で最新の更新プログラムをチェックします。 同意でクリックするは、インターネット上に自動的に更新プログラムを確認するアプリケーションを承認します。  
+     更新プログラムの同意ダイアログ アプリケーションの表示および次のテキストが表示されます。Web 上の最新の更新プログラムをインストールしようとしているアプリケーションを確認します。 同意でクリックするは、インターネット上に自動的に更新プログラムを確認するアプリケーションを承認します。  
   
 7.  アプリケーションを閉じるか、[キャンセル] をクリックします。  
   
-     アプリケーションはエラーを示します: のシステム コンポーネントのインストール中にエラーが発生しました。 *ApplicationName*します。 すべてのシステム コンポーネントが正常にインストールされるまで、セットアップを続行できません。  
+     アプリケーションは、エラーを示しています。システム コンポーネントのインストール中にエラーが発生しました。 *ApplicationName*します。 すべてのシステム コンポーネントが正常にインストールされるまで、セットアップを続行できません。  
   
-8.  次のエラー メッセージを表示する詳細をクリックします。 コンポーネントの更新の同意を求めるダイアログは、次のエラー メッセージでのインストールに失敗しました:"自動更新の契約に同意がありません"。 次のコンポーネントがインストールに失敗しました-更新プログラムの同意 ダイアログ。  
+8.  次のエラー メッセージを表示する詳細をクリックします。コンポーネント更新プログラムの同意 ダイアログ ボックスは、次のエラー メッセージでのインストールに失敗しました。「自動更新の契約に同意がありません」。 次のコンポーネントがインストールに失敗しました-更新プログラムの同意 ダイアログ。  
   
-9. **[閉じる]** をクリックします。  
+9. [ **閉じる**] をクリックします。  
   
 #### <a name="to-create-and-test-the-setup-program-by-clicking-i-agree"></a>同意を作成してクリックして、セットアップ プログラムをテスト、するには  
   
 1.  **ソリューション エクスプ ローラー**、展開するアプリケーションの名前をクリックします。  
   
-2.  **プロジェクト** メニューのをクリックして*ProjectName* **プロパティ**します。  
+2.  **[プロジェクト]** メニューの *ProjectName* の **[プロパティ]** をクリックします。  
   
 3.  をクリックして、**発行**] ページの [クリックして**今すぐ発行**します。  
   
@@ -292,7 +290,7 @@ ms.locfileid: "49873787"
   
 6.  ソフトウェア ライセンス条項を読み、クリックして**Accept**します。  
   
-     更新プログラムの同意ダイアログ アプリケーションが表示され、次のテキスト: インストールしようとしているアプリケーション、Web で最新の更新プログラムをチェックします。 同意でクリックするは、インターネット上に自動的に更新プログラムを確認するアプリケーションを承認します。  
+     更新プログラムの同意ダイアログ アプリケーションの表示および次のテキストが表示されます。Web 上の最新の更新プログラムをインストールしようとしているアプリケーションを確認します。 同意でクリックするは、インターネット上に自動的に更新プログラムを確認するアプリケーションを承認します。  
   
 7.  をクリックして**同意**、 をクリックし、**続行**します。  
   
@@ -301,8 +299,8 @@ ms.locfileid: "49873787"
 8.  アプリケーションのインストール ダイアログ ボックスが表示されたら、クリックして**インストール**します。  
   
 ## <a name="see-also"></a>関連項目  
- [アプリケーション展開の前提条件](../deployment/application-deployment-prerequisites.md)   
- [ブートス トラップ パッケージを作成します。](../deployment/creating-bootstrapper-packages.md)   
- [方法: 製品マニフェストを作成します。](../deployment/how-to-create-a-product-manifest.md)   
- [方法: パッケージ マニフェストを作成します。](../deployment/how-to-create-a-package-manifest.md)   
+ [アプリケーション配置の必要条件](../deployment/application-deployment-prerequisites.md)   
+ [ブートストラップ パッケージの作成](../deployment/creating-bootstrapper-packages.md)   
+ [方法: 製品マニフェストを作成する](../deployment/how-to-create-a-product-manifest.md)   
+ [方法: パッケージ マニフェストを作成する](../deployment/how-to-create-a-package-manifest.md)   
  [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)

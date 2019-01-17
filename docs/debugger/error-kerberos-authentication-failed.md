@@ -1,8 +1,6 @@
 ---
-title: 'エラー: Kerberos 認証に失敗しました |Microsoft Docs'
-ms.custom: ''
+title: エラー :Kerberos 認証に失敗しました |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: troubleshooting
 f1_keywords:
 - vs.debug.error.callback_kerberos_auth_failed
@@ -16,14 +14,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0cf34885ee715a5685e4c2ced8b5a116e5c33e8d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 66e9ef1ee7ab969e8abb62e2e6886ee2e74c82f5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49857666"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53854270"
 ---
-# <a name="error-kerberos-authentication-failed"></a>エラー : Kerberos 認証に失敗しました。
+# <a name="error-kerberos-authentication-failed"></a>エラー :Kerberos 認証に失敗しました
 リモート デバッグを実行するときに、次のエラー メッセージが表示されることがあります。  
   
 ```cmd
@@ -36,19 +34,19 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
   
 - ターゲット コンピューターまたはデバッガー ホスト コンピューターがドメインではなくワークグループに属している。  
   
-   \- または -  
+   \- または  
   
 - ドメイン コントローラーで Kerberos が無効になっている。  
   
-  Kerberos 認証が使用できない場合は、Visual Studio リモート デバッグ モニターの実行に使用するアカウントを変更してください。 手順については、次を参照してください。[エラー: ターゲット コンピューターで、Visual Studio リモート デバッガー サービスは、このコンピューターに接続できない](../debugger/error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md)します。  
+  Kerberos 認証が使用できない場合は、Visual Studio リモート デバッグ モニターの実行に使用するアカウントを変更してください。 手順については、次を参照してください。[エラー。対象コンピューター上の Visual Studio リモート デバッガーが、このコンピューターに接続できません](../debugger/error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md)  
   
   両方のコンピューターが同じドメインに接続しているにもかかわらず、このメッセージが表示される場合は、ターゲット コンピューターの DNS がデバッガー ホスト コンピューターの名前を正しく解決していることを確認してください。 以降の手順を参照してください。  
   
 ### <a name="to-verify-that-dns-on-the-target-computer-is-correctly-resolving-the-debugger-host-computer-name"></a>ターゲット コンピューターの DNS がデバッガー ホスト コンピューター名を正しく解決していることを確認するには  
   
-1.  ターゲット コンピューターで開く、**開始**メニューで、**アクセサリ**順にクリックします**コマンド プロンプト**。  
+1.  ターゲット コンピューターで **[スタート]** メニューを開き、**[アクセサリ]** をポイントして **[コマンド プロンプト]** をクリックします。  
   
-2.  **コマンド プロンプト**ウィンドウで、種類。  
+2.  **[コマンド プロンプト]** ウィンドウに次のように入力します。  
   
     ```cmd
     ping <debugger_host_computer_name>  
@@ -56,10 +54,10 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
   
 3.  `ping` の応答の 1 行目には、DNS が返した完全なコンピューター名と IP アドレスが表示されます。  
   
-4.  デバッガー ホスト コンピューターでは、開く、**コマンド プロンプト**ウィンドウと実行`ipconfig`します。  
+4.  デバッガー ホスト コンピューターで **[コマンド プロンプト]** を開き、`ipconfig` を実行します。  
   
 5.  IP アドレス値を比較します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)   
  [Remote Debugging](../debugger/remote-debugging.md)

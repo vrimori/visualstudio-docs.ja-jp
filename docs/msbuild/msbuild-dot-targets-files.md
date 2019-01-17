@@ -1,8 +1,6 @@
 ---
 title: MSBuild .Targets ファイル | Microsoft Docs
-ms.custom: ''
 ms.date: 02/24/2017
-ms.technology: msbuild
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,22 +16,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3282495219e92da38fc90c9a98fa115791190d80
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 170f80cc1abb12570e01dd9f9b2fcd04d7bff139
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49834566"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53902816"
 ---
 # <a name="msbuild-targets-files"></a>MSBuild .targets ファイル
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] には、項目、プロパティ、ターゲット、および一般的なシナリオ用のタスクが含まれているいくつかの *.targets* ファイルが含まれます。 これらのファイルはほぼすべて [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクト ファイル自動的にインポートされ、これによってメンテナンスが簡素化されて読みやすさが向上します。  
 
  通常、プロジェクトでは、ビルド プロセスを定義するために、1 つ以上の *.targets* ファイルをインポートします。 たとえば、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって作成された [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] プロジェクトは、*Microsoft.Common.targets* をインポートする *Microsoft.CSharp.targets* をインポートします。 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] プロジェクト自体はそのプロジェクトに固有の項目とプロパティを定義しますが、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] プロジェクトの標準のビルド規則は、インポートされた *.targets* ファイルで定義されます。  
 
- `$(MSBuildToolsPath)` 値によって、これらの共通 *.targets* ファイルのパスが指定されます。 `ToolsVersion` が 4.0 である場合、ファイルが置かれる場所は、 *\<WindowsInstallationPath > \Microsoft.NET\Framework\v4.0.30319\\* です。  
+ `$(MSBuildToolsPath)` 値によって、これらの共通 *.targets* ファイルのパスが指定されます。 `ToolsVersion` が 4.0 の場合、ファイルは次の場所にあります。*\<WindowsInstallationPath>\Microsoft.NET\Framework\v4.0.30319\\*  
 
 > [!NOTE]
->  独自のターゲットを作成する方法については、[ターゲット](../msbuild/msbuild-targets.md)に関する記事を参照してください。 `Import` 要素を使用してプロジェクト ファイルを他のプロジェクト ファイルに挿入する方法については、「[Import 要素 (MSBuild)](../msbuild/import-element-msbuild.md)」と「[方法: 複数のプロジェクト ファイルで同じターゲットを使用する](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)」を参照してください。  
+>  独自のターゲットを作成する方法については、[ターゲット](../msbuild/msbuild-targets.md)に関する記事を参照してください。 `Import` 要素を使用してプロジェクト ファイルを他のプロジェクト ファイルに挿入する方法については、「[Import 要素 (MSBuild)](../msbuild/import-element-msbuild.md)」と「[方法:複数のプロジェクト ファイルで同じターゲットを使用する](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)」を参照してください。  
 
 ## <a name="common-targets-files"></a>共通 .Targets ファイル  
 

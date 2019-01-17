@@ -1,8 +1,6 @@
 ---
-title: '方法: ビジュアライザーをインストール |Microsoft ドキュメント'
-ms.custom: ''
+title: '方法: ビジュアライザーをインストール |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -19,18 +17,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 87feaebf16168744467137fdf4af54538a316cdf
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: e62637581fbb65eb8efd20e048cc364895cfbcdc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31473778"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53914572"
 ---
-# <a name="how-to-install-a-visualizer"></a>方法 : ビジュアライザーをインストールする
+# <a name="how-to-install-a-visualizer"></a>方法: ビジュアライザーをインストールする
 作成したビジュアライザーは、インストールして初めて [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で使用できるようになります。 ビジュアライザーのインストールは簡単です。  
   
 > [!NOTE]
->  UWP アプリでは、標準的なテキスト、HTML、XML、および JSON ビジュアライザーがサポートされます。 カスタム (ユーザーが作成した) ビジュアライザーはサポートされていません。  
+>  UWP アプリでは、標準のテキストだけでは、HTML、XML、および JSON ビジュアライザーがサポートされます。 カスタム (ユーザーが作成した) ビジュアライザーはサポートされていません。  
   
 ### <a name="to-install-a-visualizer"></a>ビジュアライザーをインストールするには  
   
@@ -42,10 +40,10 @@ ms.locfileid: "31473778"
   
     -   `My Documents\` *VisualStudioVersion* `\Visualizers`  
   
-3.  マネージ ビジュアライザーをリモート デバッグで使用するには、DLL をリモート コンピューター上の同じパスにコピーします。  
+3.  マネージド ビジュアライザーをリモート デバッグで使用するには、DLL をリモート コンピューター上の同じパスにコピーします。  
   
 4.  デバッグ セッションを再開します。  
   
-## <a name="see-also"></a>関連項目  
- [カスタム ビジュアライザーを作成します。](../debugger/create-custom-visualizers-of-data.md)   
- [方法 : ビジュアライザーを記述する](../debugger/how-to-write-a-visualizer.md)
+## <a name="see-also"></a>「  
+ [カスタム ビジュアライザーを作成する](../debugger/create-custom-visualizers-of-data.md)   
+ [方法: ビジュアライザーを記述する](/visualstudio/debugger/create-custom-visualizers-of-data)

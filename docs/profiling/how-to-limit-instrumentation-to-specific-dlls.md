@@ -1,8 +1,6 @@
 ---
 title: '方法: インストルメンテーションを特定の DLL に制限する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - performance tools, runtime profiling control window
@@ -11,12 +9,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aefa0d5953d1e8d61615ac5bfe0af136082c96f3
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: c20dde749f95a24c6d83c7b6693220a5552f89fe
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843950"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53885169"
 ---
 # <a name="how-to-limit-instrumentation-to-specific-dlls"></a>方法: インストルメンテーションを特定の DLL に制限する
 
@@ -72,4 +70,4 @@ ms.locfileid: "34843950"
 ## <a name="see-also"></a>関連項目
 
 [データ収集の制御](../profiling/controlling-data-collection.md)  
-[方法 : インストルメンテーションを特定の関数に制限する](../profiling/how-to-limit-instrumentation-to-specific-functions.md)
+[方法: インストルメンテーションを特定の関数に制限する](../profiling/how-to-limit-instrumentation-to-specific-functions.md)

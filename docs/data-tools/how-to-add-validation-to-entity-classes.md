@@ -1,5 +1,5 @@
 ---
-title: '方法: エンティティ クラスに検証を追加'
+title: '方法: エンティティ クラスに検証を追加する'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,18 +10,17 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: d102bdf20349d6bd4efdecd1c460f1e46646eb37
-ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
-ms.translationtype: MT
+ms.openlocfilehash: a9e73fe476dbe323289e7ebe90508aec695b6bd2
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37089339"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53942555"
 ---
-# <a name="how-to-add-validation-to-entity-classes"></a>方法: エンティティ クラスに検証を追加
-*検証*エンティティ クラスは、データ オブジェクトに入力された値がオブジェクトのスキーマ、およびアプリケーションの設定された規則の制約に準拠することを確認するプロセス。 基になるデータベースに更新を送信する前にデータを検証すると、エラーを減らすことができます。 アプリケーションとデータベースの間で生じる可能性のあるラウンド トリップの回数も減ります。
+# <a name="how-to-add-validation-to-entity-classes"></a>方法: エンティティ クラスに検証を追加する
+エンティティ クラスの "*検証*" とは、データ オブジェクトに入力された値が、アプリケーションに対して設定された規則に従っていること、およびオブジェクトのスキーマ内の制約に従っていることを確認するプロセスです。 基になるデータベースに更新を送信する前にデータを検証すると、エラーを減らすことができます。 アプリケーションとデータベースの間で生じる可能性のあるラウンド トリップの回数も減ります。
 
  [Visual Studio での LINQ to SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)挿入、更新、中に実行し、完全なエンティティとも中と後の個々 の列を削除します。 デザイナーで生成されたコードを拡張するユーザーを有効にする部分メソッドを提供します。変更します。
 
@@ -29,15 +28,15 @@ ms.locfileid: "37089339"
 >  このトピックを使用してエンティティ クラスに検証を追加するための基本的な手順は、 **O/R デザイナー**します。 特定のエンティティ クラスを参照しないでこれらの汎用的な手順をたどるが難しい場合があります、ため、実際のデータを使用するチュートリアルが提供されます。
 
 ## <a name="add-validation-for-changes-to-the-value-in-a-specific-column"></a>特定の列の値に変更の検証を追加します。
- この手順では、列の値の変更時にデータを検証する方法を示します。 クラス定義内で、検証が実行されるため、(の代わりに、ユーザー インターフェイスで)、値によって検証が失敗する場合に例外がスローされます。 列の値を変更しようとするアプリケーションのコードには、エラー処理を実装してください。
+ この手順では、列の値の変更時にデータを検証する方法を示します。 検証はユーザー インターフェイスではなくクラス定義の内部で実行されるため、値によって検証が失敗する場合は例外がスローされます。 列の値を変更しようとするアプリケーションのコードには、エラー処理を実装してください。
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
 ### <a name="to-validate-data-during-a-columns-value-change"></a>列の値の変更時にデータを検証するには
 
-1.  開くか、新しい LINQ to SQL クラス ファイルの作成 (**.dbml**ファイル) で、 **O/R デザイナー**します。 (ダブルクリックして、 **.dbml**ファイル**ソリューション エクスプ ローラー**)。
+1.  開くか、新しい LINQ to SQL クラス ファイルの作成 (**.dbml**ファイル) で、 **O/R デザイナー**します。 (**ソリューション エクスプローラー**で **.dbml** ファイルをダブルクリックします。)
 
-2.  **O/R デザイナー**をクリックして検証を追加するクラスを右クリックして**コードの表示**します。
+2.  **O/R デザイナー**で、検証を追加するクラスを右クリックして、**[コードの表示]** をクリックします。
 
      コード エディターが開き、選択したエンティティ クラスの部分クラスが表示されます。
 
@@ -45,11 +44,11 @@ ms.locfileid: "37089339"
 
 4.  Visual Basic プロジェクトの場合は、次の操作を行います。
 
-    1.  展開、**メソッド名**一覧。
+    1.  **[メソッド名]** の一覧を展開します。
 
-    2.  検索、 **OnCOLUMNNAMEChanging**検証を追加する列のメソッド。
+    2.  検証を追加する列の **OnCOLUMNNAMEChanging** メソッドを見つけます。
 
-    3.  `OnCOLUMNNAMEChanging`メソッドが部分クラスに追加されます。
+    3.  `OnCOLUMNNAMEChanging` メソッドが部分クラスに追加されます。
 
     4.  次のコードを追加して、まず値が入力されたことを確認し、次に列に入力された値がアプリケーションで許容されることを確認します。 入力された値は `value` 引数に含まれています。そこで、これが有効な値であることを確認するロジックを追加します。
 
@@ -81,9 +80,9 @@ ms.locfileid: "37089339"
 
 ### <a name="to-validate-data-during-an-update-to-an-entity-class"></a>エンティティ クラスの更新時にデータを検証するには
 
-1.  開くか、新しい LINQ to SQL クラス ファイルの作成 (**.dbml**ファイル) で、 **O/R デザイナー**します。 (ダブルクリックして、 **.dbml**ファイル**ソリューション エクスプ ローラー**)。
+1.  開くか、新しい LINQ to SQL クラス ファイルの作成 (**.dbml**ファイル) で、 **O/R デザイナー**します。 (**ソリューション エクスプローラー**で **.dbml** ファイルをダブルクリックします。)
 
-2.  空の領域を右クリックし、 **O/R デザイナー**クリック**コードの表示**。
+2.  **O/R デザイナー**で空の領域を右クリックし、**[コードの表示]** をクリックします。
 
      コード エディターが開き、`DataContext` の部分クラスが表示されます。
 
@@ -91,11 +90,11 @@ ms.locfileid: "37089339"
 
 4.  Visual Basic プロジェクトの場合は、次の操作を行います。
 
-    1.  展開、**メソッド名**一覧。
+    1.  **[メソッド名]** の一覧を展開します。
 
-    2.  クリックして**UpdateENTITYCLASSNAME**します。
+    2.  **[UpdateENTITYCLASSNAME]** をクリックします。
 
-    3.  `UpdateENTITYCLASSNAME`メソッドが部分クラスに追加されます。
+    3.  `UpdateENTITYCLASSNAME` メソッドが部分クラスに追加されます。
 
     4.  次のコードに示すように、`instance` 引数を使用して個々の列の値にアクセスします。
 
@@ -123,6 +122,6 @@ ms.locfileid: "37089339"
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Studio での LINQ to SQL ツールします。](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Visual Studio の LINQ to SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [データの検証](../data-tools/validate-data-in-datasets.md)
 - [LINQ to SQL (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/index)

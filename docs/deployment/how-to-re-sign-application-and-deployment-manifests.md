@@ -1,8 +1,6 @@
 ---
 title: '方法: アプリケーション マニフェストおよび配置マニフェストに再署名 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -20,20 +18,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cce175f487d24e528d7527c424a1f76fa2a82824
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
-ms.translationtype: MT
+ms.openlocfilehash: d5276f77226930b7ad49aea3253321ed3c8082be
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44280676"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53937989"
 ---
-# <a name="how-to-re-sign-application-and-deployment-manifests"></a>方法: アプリケーション マニフェストと配置マニフェストに再署名
-Windows フォーム アプリケーション、Windows Presentation Foundation アプリケーション (xbap)、Office ソリューション用アプリケーション マニフェストの配置プロパティを変更したら、両方のアプリケーションを再署名する必要があり、配置マニフェストに、証明書。 このプロセスにより、エンドユーザーのコンピューターに改ざんされたファイルがインストールされていないことを確認します。  
+# <a name="how-to-re-sign-application-and-deployment-manifests"></a>方法: アプリケーション マニフェストと配置マニフェストの再署名
+Windows フォーム アプリケーション、Windows Presentation Foundation アプリケーション (xbap)、Office ソリューション用アプリケーション マニフェストの配置プロパティを変更したら、両方のアプリケーションを再署名する必要があり、配置マニフェストに、証明書。 このプロセスによって、改ざんされたファイルがエンド ユーザーのコンピューターにインストールされないようにすることができます。  
   
  マニフェストを再署名が別のシナリオは、お客様が、アプリケーションに署名して、配置マニフェストに、独自の証明書です。  
   
-## <a name="re-sign-the-application-and-deployment-manifests"></a>アプリケーション マニフェストと配置マニフェストに再署名します。  
- この手順は、アプリケーション マニフェスト ファイルへの変更が既に行われたことを想定しています (*.manifest*)。 詳細については、次を参照してください。[方法: 配置プロパティを変更](https://msdn.microsoft.com/library/66052a3a-8127-4964-8147-2477ef5d1472)します。  
+## <a name="re-sign-the-application-and-deployment-manifests"></a>アプリケーション マニフェストと配置マニフェストへの再署名  
+ この手順は、アプリケーション マニフェスト ファイルへの変更が既に行われたことを想定しています (*.manifest*)。 詳細については、「[方法 :展開のプロパティを変更する](https://msdn.microsoft.com/library/66052a3a-8127-4964-8147-2477ef5d1472)します。  
   
 #### <a name="to-re-sign-the-application-and-deployment-manifests-with-mageexe"></a>Mage.exe を使用してマニフェストに、アプリケーションおよび配置を再署名するには  
   
@@ -115,13 +113,13 @@ Windows フォーム アプリケーション、Windows Presentation Foundation 
 7.  必要に応じて、マスター展開マニフェストをコピー (*発行\\\<appname > .application*) バージョンの展開ディレクトリに (*publish\Application ファイル\\\<appname > _\<バージョン >*)。  
   
 ## <a name="see-also"></a>関連項目  
- [セキュリティで保護された ClickOnce アプリケーション](../deployment/securing-clickonce-applications.md)   
+ [ClickOnce アプリケーションのセキュリティ保護](../deployment/securing-clickonce-applications.md)   
  [ClickOnce アプリケーションのコード アクセス セキュリティ](../deployment/code-access-security-for-clickonce-applications.md)   
  [ClickOnce と Authenticode](../deployment/clickonce-and-authenticode.md)   
- [信頼されたアプリケーション展開の概要](../deployment/trusted-application-deployment-overview.md)   
- [方法: ClickOnce のセキュリティ設定を有効にします。](../deployment/how-to-enable-clickonce-security-settings.md)   
- [方法: ClickOnce アプリケーションのセキュリティ ゾーンの設定](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
- [方法: ClickOnce アプリケーションのカスタム アクセス許可を設定](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
- [方法: ClickOnce アプリケーションをデバッグ アクセス許可の制限](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
- [方法: ClickOnce アプリケーションのクライアント コンピューターに信頼された発行元を追加](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)   
- [方法: ClickOnce 信頼プロンプトの動作を構成します。](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md)
+ [信頼されたアプリケーションの配置の概要](../deployment/trusted-application-deployment-overview.md)   
+ [方法: ClickOnce セキュリティ設定を有効にする](../deployment/how-to-enable-clickonce-security-settings.md)   
+ [方法: ClickOnce アプリケーションのセキュリティ ゾーンを設定する](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
+ [方法: ClickOnce アプリケーションのカスタム アクセス許可を設定する](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
+ [方法: アクセス許可が制限された ClickOnce アプリケーションをデバッグする](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
+ [方法: ClickOnce アプリケーション用の信頼された発行者をクライアント コンピューターに追加する](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)   
+ [方法: ClickOnce 信頼プロンプトの動作を構成する](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md)

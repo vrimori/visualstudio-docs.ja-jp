@@ -9,13 +9,12 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-test
-ms.openlocfilehash: 1470ab88cb21a7a80fa46f57f944ec5df21d544f
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: 8fd8d07274d67f590de1ab22a3bdfa641b07f847
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52894414"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53832139"
 ---
 # <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>方法: テスト設定を使用してテスト中に画面と音声の記録を含める
 
@@ -24,7 +23,7 @@ Visual Studio の構成エディターから、テストを実行しているユ
 > [!WARNING]
 > 画面と音声の記録では、複数のモニター構成はサポートされていません。
 
-画面と音声のレコーダーは、手動テストまたは自動テストで使用できます。 たとえば、コード化された UI テストをリモートで実行する場合、コード化された UI テストを実行するときにそのテストを確認するためにデスクトップを記録できます。 画面と音声の記録をリモートでキャプチャする方法については、「[方法: Test Agent を設定して、デスクトップと対話するテストを実行する](../test/how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop.md)」を参照してください。
+画面と音声のレコーダーは、手動テストまたは自動テストで使用できます。 たとえば、コード化された UI テストをリモートで実行する場合、コード化された UI テストを実行するときにそのテストを確認するためにデスクトップを記録できます。 画面と音声の記録をリモートでキャプチャする方法の詳細については、「[方法:テスト エージェントを設定して、デスクトップと対話するテストを実行する](../test/how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop.md)」を参照してください。
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -56,7 +55,7 @@ Visual Studio の構成エディターから、テストを実行しているユ
 
     2.  **[ビット レート]:** 画面と音声の記録で使用する 1 秒あたりのキロバイト数を指定します。 既定値は 512 です。 指定できる値は 512 ～ 10,000 です。
 
-    3.  **[品質 (1-100)]:** 画面と音声の記録の品質を 1 ～ 100 の範囲の値を選択して指定します。 既定値は 50 (中間) です。
+    3.  **[品質 (1-100)]:** 画面と音声の記録の品質を 1 から 100 の範囲の値を選択して指定します。 既定値は 50 (中間) です。
 
 7.  **[OK]** をクリックします。 これで、テストの設定を対象として診断トレース コレクターの設定が構成および保存されました。
 

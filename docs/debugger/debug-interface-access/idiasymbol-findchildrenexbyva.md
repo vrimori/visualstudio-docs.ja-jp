@@ -1,8 +1,6 @@
 ---
 title: IDiaSymbol::findChildrenExByVA |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f3fa4f64570977a1b3546f933aa7c55e5e69ddcd
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 7b9a3f790acd7a285468810f981fd7e0210563eb
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49909929"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53931143"
 ---
 # <a name="idiasymbolfindchildrenexbyva"></a>IDiaSymbol::findChildrenExByVA
 指定された仮想アドレスで有効なシンボルの子を取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49909929"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT findChildrenExByVA (   
+HRESULT findChildrenExByVA (   
    enum SymTagEnum   symtag,  
    LPCOLESTR         name,  
    DWORD             compareFlags,  
@@ -55,19 +53,19 @@ HRESULT findChildrenExByVA (
 ## <a name="return-value"></a>戻り値  
  返します`S_OK`シンボルの少なくとも 1 つの子が検出されましたが、またはを返す`S_FALSE`場合は子が見つかりませんでした。 それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  返されるローカル シンボルには、ライブの範囲の情報が含まれます。  
   
-## <a name="requirements"></a>必要条件  
- ヘッダー: Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー:dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia100.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)   
  [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)   
- [Idiasession::findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
+ [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
  [NameSearchOptions 列挙型](../../debugger/debug-interface-access/namesearchoptions.md)

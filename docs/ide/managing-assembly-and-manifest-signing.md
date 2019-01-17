@@ -2,7 +2,6 @@
 title: アセンブリおよびマニフェストへの署名の管理
 ms.date: 02/17/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - manifests [Visual Studio]
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fb2113ed091d99ed66b13955ea468c376bba9490
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 1c3795c2887e9d7516f3e9f781e42a2629e2a0b5
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39379567"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53927572"
 ---
 # <a name="manage-assembly-and-manifest-signing"></a>アセンブリおよびマニフェストへの署名の管理
 
@@ -70,7 +69,7 @@ Visual C++ プロジェクトのアセンブリへの署名については、[�
 
 公開キーのみにアクセスできる場合は、遅延署名を使用して、キーの割り当てを遅延させることができます。 **[遅延署名のみ]** チェック ボックスをオンにすると、遅延署名が有効になります。 遅延署名されたプロジェクトは実行されず、デバッグすることもできません。 ただし、[Sn.exe (厳密名ツール)](/dotnet/framework/tools/sn-exe-strong-name-tool) で `-Vr` オプションを指定すると、開発時に検証をスキップできます。
 
-マニフェストへの署名については、「[方法: アプリケーション マニフェストおよび配置マニフェストに署名する](../ide/how-to-sign-application-and-deployment-manifests.md)」を参照してください。
+マニフェストへの署名については、「[方法:アプリケーション マニフェストおよび配置マニフェストに署名する](../ide/how-to-sign-application-and-deployment-manifests.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

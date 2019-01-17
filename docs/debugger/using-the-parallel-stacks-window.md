@@ -1,8 +1,6 @@
 ---
 title: 並列スタック ウィンドウでスレッドを表示 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/20/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.parallelstacks
@@ -19,14 +17,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ee9d52f63f3158979f2f018ea44d5b68d6612c1
-ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
+ms.openlocfilehash: 4e08171c02288f89e706c80ab6dfd5ef9538318c
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53562335"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227942"
 ---
-# <a name="view-threads-and-tasks-in-the-parallel-stacks-window"></a>並列スタック ウィンドウのスレッドとタスクを表示します。
+# <a name="view-threads-and-tasks-in-the-parallel-stacks-window-c-visual-basic-c"></a>並列スタック ウィンドウのスレッドとタスクの表示 (C#、Visual Basic、C++)
 
 **並列スタック**ウィンドウはマルチ スレッド アプリケーションのデバッグに便利です。 いくつかのビューがあります。
 
@@ -139,7 +137,7 @@ ms.locfileid: "53562335"
   
 ## <a name="see-also"></a>関連項目  
  [マルチ スレッド アプリケーションのデバッグの開始します。](../debugger/get-started-debugging-multithreaded-apps.md)   
- [チュートリアル: 並列アプリケーションをデバッグします。](../debugger/walkthrough-debugging-a-parallel-application.md)   
+ [チュートリアル: 並行アプリケーションをデバッグする](../debugger/walkthrough-debugging-a-parallel-application.md)   
  [デバッガーでのはじめ](../debugger/debugger-feature-tour.md)[マネージ コードのデバッグ](../debugger/debugging-managed-code.md)   
  [並列プログラミング](/dotnet/standard/parallel-programming/index)   
  [[タスク] ウィンドウを使用する](../debugger/using-the-tasks-window.md)   

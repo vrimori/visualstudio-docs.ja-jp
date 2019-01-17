@@ -1,8 +1,6 @@
 ---
-title: ToggleHUD |Microsoft ドキュメント
-ms.custom: ''
+title: ToggleHUD |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 7261e01d-3c72-46ce-9fb3-5f33b2ddb901
 author: mikejo5000
@@ -10,15 +8,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 86ce582ab49d4d079f01f7231f49aa761baa1069
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: a4ee371f90636d98d5dd771cc508e58cd1d1a394
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31472514"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53907976"
 ---
 # <a name="togglehud"></a>ToggleHUD
-グラフィックス診断を切り替えます*HUD* (ヘッドアップ ディスプレイ) オーバーレイのオンとオフします。  
+グラフィックス診断の *HUD* (ヘッドアップ ディスプレイ) オーバーレイのオンとオフを切り替えます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -27,6 +25,6 @@ void ToggleHUD();
 ```  
   
 ## <a name="remarks"></a>コメント  
- グラフィックス診断の HUD は、グラフィック診断で実行されているアプリケーションの左上隅に表示されます。 アプリについて、グラフィックス情報のキャプチャ、および呼び出しによって追加されたメッセージに関するランタイム情報が表示されます、 [AddMessage](addmessage.md)メンバー関数。  
+ グラフィックス診断の HUD は、グラフィック診断で実行されているアプリケーションの左上隅に表示されます。 実行時情報、アプリケーションとグラフィックス情報のキャプチャ、および呼び出しによって追加されたメッセージが表示されます、 [AddMessage](addmessage.md)メンバー関数。  
   
- HUD を切り替えるにグラフィックス情報がキャプチャされてアクティブにする必要はありません-のインスタンスからの切り替えは、`VsgDbg`クラス、ですが、 [Init](init.md)メンバー関数は最初に呼び出す必要はありません。
+ HUD を切り替えるには、アクティブにグラフィックス情報をキャプチャする必要はありません。これは、`VsgDbg` クラスのインスタンスを通じて切り替えられますが、[Init](init.md) メンバー関数は最初に呼び出される必要はありません。

@@ -2,7 +2,6 @@
 title: クラス デザイナーの使用
 ms.date: 05/08/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.diagram
@@ -18,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c4e4cf8e21f3f053783b1f7b70dcc51f2fd4ef2a
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 6533827c3aa962cf8856752c0482678684e65755
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34447961"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53853425"
 ---
 # <a name="design-and-view-classes-and-types-with-class-designer"></a>クラス デザイナーを使用したクラスと型の設計と表示
 
@@ -35,7 +34,7 @@ Visual Studio の**クラス デザイナー**では、コード内のクラス�
 
 - **視覚化**: プロジェクト内のクラスをダイアグラムに表示して、プロジェクトの構造を理解します。 プロジェクトの中で最も重要な部分に集中できるように、ダイアグラムをカスタマイズします。 ダイアグラムを保存すると、後からデモやドキュメントに使用できます。
 
-- **リファクター**: メソッドのオーバーライド、識別子の名前変更、パラメーターのリファクター、およびインターフェイスと抽象クラスの実装を行います。
+- **リファクター**: メソッドのオーバーライド、識別子の名前変更、パラメーターのリファクター、インターフェイスと抽象クラスの実装を行います。
 
 ## <a name="view-types-and-relationships"></a>型およびリレーションシップの表示
 
@@ -52,7 +51,7 @@ Visual Studio の**クラス デザイナー**では、コード内のクラス�
 
 各クラス ダイアグラムに表示する内容を定義するだけでなく、情報の提供方法を変更することもできます。詳細については、「[方法: クラス ダイアグラムをカスタマイズする](how-to-customize-class-diagrams.md)」を参照してください。
 
-1 つまたは複数のクラス ダイアグラムを微調整した後、それらを Microsoft Office ドキュメント内にコピーして印刷したり、画像ファイルとしてエクスポートしたりできます。 詳細については、「[方法: Microsoft Office ドキュメントにクラス ダイアグラムの要素をコピーする](how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md)」、「[方法: クラス ダイアグラムを印刷する](how-to-print-class-diagrams.md)」、「[方法: クラス ダイアグラムをイメージとしてエクスポートする](how-to-export-class-diagrams-as-images.md)」を参照してください。
+1 つまたは複数のクラス ダイアグラムを微調整した後、それらを Microsoft Office ドキュメント内にコピーして印刷したり、画像ファイルとしてエクスポートしたりできます。 詳細については、「[方法 : Microsoft Office ドキュメントにクラス ダイアグラムの要素をコピーする](how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md)」、「[方法 : クラス ダイアグラムを印刷する](how-to-print-class-diagrams.md)」、「[方法 : イメージとしてクラス ダイアグラムをエクスポートする](how-to-export-class-diagrams-as-images.md)」を参照してください。
 
 > [!NOTE]
 > クラス デザイナーはソース ファイルの場所を追跡しないので、プロジェクト構造を変更したり、プロジェクト内のソース ファイルを移動したりすると、クラス デザイナーが、特に typedef のソース型、基本クラス、またはアソシエーション型を追跡できなくなる場合があります。 **クラス デザイナーはこの型を表示できません**などのエラーが表示されることがあります。 エラーが発生した場合は、変更または再配置したソース コードをもう一度クラス ダイアグラムにドラッグして再表示します。

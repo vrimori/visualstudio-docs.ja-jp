@@ -1,9 +1,7 @@
 ---
 title: '手順 7: ペアの表示の維持'
-ms.custom: ''
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 42e1d08c-7b2e-4efd-9f47-85d6206afe35
 author: TerryGLee
@@ -11,12 +9,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e27a5378aacec6af4ca07f13242f24bd665a762e
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: d541c28148c6e1fca9b1b1b7411b2b4d99715d8b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747855"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53880998"
 ---
 # <a name="step-7-keep-pairs-visible"></a>手順 7: ペアの表示の維持
 プレーヤーが一致しないアイコンのペアをクリックしている限り、ゲームは正常に動作します。 しかし、プレーヤーが一致するペアをクリックしたらどうなるでしょうか。 (<xref:System.Windows.Forms.Timer.Start> メソッドを使用して) タイマーを有効にしてアイコンを非表示にする代わりに、ゲームでは、それ自体をリセットすることで、クリックされた 2 つのラベルの色はリセットせずに、`firstClicked` 参照変数および `secondClicked` 参照変数を使用してラベルを追跡しないようにする必要があります。
@@ -61,6 +59,6 @@ ms.locfileid: "34747855"
 
 ## <a name="to-continue-or-review"></a>続行または確認するには
 
--   チュートリアルの次の手順に進むには、「[手順 8: プレーヤーが勝利したかどうかを確認するメソッドの追加](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md)」を参照してください。
+-   チュートリアルの次の手順に進むには、「[手順 8:プレーヤーが勝利したかどうかを確認するメソッドの追加](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md)」を参照してください。
 
--   チュートリアルの前の手順に戻るには、「[手順 6: タイマーの追加](../ide/step-6-add-a-timer.md)」を参照してください。
+-   チュートリアルの前の手順に戻るには、「[手順 6:タイマーの追加](../ide/step-6-add-a-timer.md)」を参照してください。

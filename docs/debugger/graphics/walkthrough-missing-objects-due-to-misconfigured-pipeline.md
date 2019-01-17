@@ -1,8 +1,6 @@
 ---
-title: 'チュートリアル: ピクセル シェーディングによるオブジェクト不足 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: シェーディングによるオブジェクトの不足 |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: ed8ac02d-b38f-4055-82fb-67757c2ccbb9
 author: mikejo5000
@@ -10,14 +8,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 88e313b7db1306465bce530eea41e875227abc0e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 4619876794abb07a76a38af78d21e51f8a1e86dc
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49855184"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53863970"
 ---
-# <a name="walkthrough-missing-objects-due-to-misconfigured-pipeline"></a>チュートリアル: ピクセル シェーディングによるオブジェクトの不足
+# <a name="walkthrough-missing-objects-due-to-misconfigured-pipeline"></a>チュートリアル: パイプラインの構成が不適切なことによるオブジェクトの不足
 このチュートリアルでは、ピクセル シェーダーが設定されていないことが原因で表示されないオブジェクトを調査するために、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のグラフィックス診断ツールを使用する方法を示します。  
   
  このチュートリアルでは、次の作業について説明します。  
@@ -73,7 +71,7 @@ ms.locfileid: "49855184"
   
 #### <a name="to-examine-device-context"></a>デバイス コンテキストを確認するには  
   
-1. **[d3d11 デバイス コンテキスト]** を開きます。 **グラフィックス パイプライン ステージ**ウィンドウで、選択、 **ID3D11DeviceContext**リンクの一部である、`DrawIndexed`ウィンドウの上部に表示される呼び出しです。  
+1. **[d3d11 デバイス コンテキスト]** を開きます。 **[グラフィックス パイプライン ステージ]** ウィンドウで、ウィンドウの上部に表示されている **呼び出しの一部である** ID3D11DeviceContext `DrawIndexed` リンクを選択します。  
   
 2. **[d3d11 デバイス コンテキスト]** タブに表示されているデバイス状態を調べて、描画呼び出し中にアクティブなピクセル シェーダーがなかったことを確認します。 このシナリオでは、 **[ピクセル シェーダーの状態]** の下に表示される **[シェーダーの一般情報]** に、そのシェーダーが **NULL**であることが示されます。  
   

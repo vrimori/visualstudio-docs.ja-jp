@@ -1,8 +1,6 @@
 ---
 title: プロファイラーのコマンド ラインを使用して .NET Framework メモリ データを収集する | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 7bce69e2-407c-4342-8516-641586968928
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c9b863fa8b3571dc0f29ebc762295a4832536046
-ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
+ms.openlocfilehash: de0ad1829f366e7941e48feb85277e2566c57082
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39276843"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53926953"
 ---
 # <a name="collect-net-framework-memory-data-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用して .NET Framework メモリ データを収集する
 
@@ -37,7 +35,7 @@ ms.locfileid: "39276843"
 |----------|---------------------|  
 |**サンプリング メソッドを使用したプロファイリング**|-   [サンプリングを使用したアプリケーション統計情報の収集](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|  
 |**インストルメンテーション方式を使用したプロファイリング**|-   [インストルメンテーションを使用した詳細なタイミング データの収集](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application.md)|  
-|**リソースの競合とスレッド アクティビティのプロファイリング**|-   [同時実行データの収集](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|  
+|**リソースの競合とスレッド アクティビティのプロファイリング**|-   [コンカレンシー データの収集](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|  
 |**階層の相互作用データを追加する**|-   [階層相互作用データを収集する](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
 
   

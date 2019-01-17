@@ -1,8 +1,6 @@
 ---
 title: ClickOnce アプリケーションをデプロイする他のユーザーの作成 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -26,14 +24,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b74e8a988505c5386b444df27f7726a8ceb51a62
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 8e5b0d5abde8ae58628f05765c170b9979738275
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49870781"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53878771"
 ---
-# <a name="create-clickonce-applications-for-others-to-deploy"></a>ClickOnce アプリケーションをデプロイする他のユーザーの作成します。
+# <a name="create-clickonce-applications-for-others-to-deploy"></a>開発者以外が配置する ClickOnce アプリケーションを作成する
 ClickOnce 配置を作成しているすべての開発者は、アプリケーション自体を展開する予定です。 それらの多くは、ClickOnce を使用してアプリケーションをパッケージし、し、ファイルを大企業など、お客様に渡します。 お客様は、そのネットワーク上のアプリケーションをホストする役割の 1 つになります。 このトピックでは、.NET Framework バージョン 3.5 より前のバージョンでは、このような展開に固有の問題について説明します。 .NET Framework 3.5 の新しい「信頼のマニフェストを使用して、」機能を使用して新しい解決し、について説明します。 最後に、まだ .NET Framework の以前のバージョンを使用しているお客様の場合、ClickOnce 配置を作成するための推奨される方法で終了します。  
   
 ## <a name="issues-involved-in-creating-deployments-for-customers"></a>お客様の展開の作成に関連する問題  
@@ -58,14 +56,14 @@ ClickOnce 配置を作成しているすべての開発者は、アプリケー�
   
  配置マニフェストに自己署名証明書を使用するには、いくつかの利点について説明します。 によって、顧客を取得または独自の Authenticode 証明書を作成する必要がなくなるため`<useManifestForTrust>`開発者は、アプリケーションで独自のブランド id を維持しながら、顧客の展開を簡略化します。 安全なは、一意のアプリケーション id が設定されている署名付きの展開の組み合わせになります。 これにより、複数の顧客に同じアプリケーションを配置からなる可能性がある潜在的な競合がなくなります。  
   
- ClickOnce 配置とを作成する方法についての詳細な手順について`<useManifestForTrust>`有効になっているを参照してください[チュートリアル: 再署名が要求されるされないのブランド情報を保持するClickOnceアプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md).  
+ ClickOnce 配置とを作成する方法についての詳細な手順について`<useManifestForTrust>`有効になっているを参照してください[チュートリアル。再署名が要求されるされないブランド情報を保持する ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md)します。  
   
 ### <a name="how-application-manifest-for-trust-works-at-runtime"></a>実行時の信頼のアプリケーション マニフェストのしくみ  
  実行時にアプリケーション マニフェストを使用して、信頼のためのしくみの理解を深めるを取得するには、次の例を検討します。 .NET Framework 3.5 を対象とする ClickOnce アプリケーションは、Microsoft によって作成されます。 アプリケーション マニフェストを使用して、`<useManifestForTrust>`要素と、Microsoft によって署名されています。 Adventure Works 自己署名証明書を使用して、配置マニフェストに署名します。 Adventure Works クライアントは、Microsoft によって署名されたすべてのアプリケーションを信頼して構成されます。  
   
  ユーザーは、配置マニフェストへのリンクをクリックすると、ClickOnce は、ユーザーのコンピューターにアプリケーションをインストールします。 証明書と展開の情報は、一意にクライアント コンピューターの ClickOnce アプリケーションを特定します。 ユーザーが別の場所から、同じアプリケーションを再インストールしようとすると、ClickOnce は、既にアプリケーションがクライアントに存在するかを判断するのにこの id を使用できます。  
   
- 次に、ClickOnce は、ClickOnce を許可する信頼のレベルを決定するアプリケーション マニフェストに署名するために使用される Authenticode 証明書を調べます。 Adventure Works は、Microsoft によって署名されたアプリケーションを信頼するには、そのクライアントを構成したのでこの ClickOnce アプリケーションは完全な信頼を付与します。 詳細については、次を参照してください。[信頼されたアプリケーション展開の概要](../deployment/trusted-application-deployment-overview.md)します。  
+ 次に、ClickOnce は、ClickOnce を許可する信頼のレベルを決定するアプリケーション マニフェストに署名するために使用される Authenticode 証明書を調べます。 Adventure Works は、Microsoft によって署名されたアプリケーションを信頼するには、そのクライアントを構成したのでこの ClickOnce アプリケーションは完全な信頼を付与します。 詳細については、「[信頼されたアプリケーションの配置の概要](../deployment/trusted-application-deployment-overview.md)」を参照してください。  
   
 ## <a name="create-customer-deployments-for-earlier-versions"></a>以前のバージョンの顧客展開を作成します。  
  場合、開発者では、.NET Framework の以前のバージョンを使用しているお客様に ClickOnce アプリケーションを配置はでしょうか。 次のセクションでは、長所と短所の各と共にいくつかの推奨される解決策をまとめたものです。  
@@ -101,5 +99,5 @@ ClickOnce 配置を作成しているすべての開発者は、アプリケー�
   
 ## <a name="see-also"></a>関連項目  
  [署名なしの ClickOnce アプリケーションのテストと実稼働サーバーの展開します。](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md)   
- [チュートリアル: ClickOnce アプリケーションを手動で展開します。](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)   
- [チュートリアル: 再署名不要ブランド情報を保持する ClickOnce アプリケーションを手動で展開します。](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md)
+ [チュートリアル: ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)   
+ [チュートリアル: 再署名が不要で商標を保持する ClickOnce アプリケーションの手動配置](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md)

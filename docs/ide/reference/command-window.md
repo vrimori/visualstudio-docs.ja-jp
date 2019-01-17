@@ -2,7 +2,6 @@
 title: コマンド ウィンドウ
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.CommandWindow
@@ -18,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 447a01f96c9f642bca743247551bc2b3d38e4d23
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 567553895437bc013a7415ce305bfd863d46994a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49905955"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53841860"
 ---
 # <a name="command-window"></a>コマンド ウィンドウ
 **[コマンド]** ウィンドウは、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の統合開発環境 (IDE) でコマンドやエイリアスを実行するときに使用します。 メニュー コマンドと、メニューに表示されないコマンドの両方を実行できます。 **[コマンド]** ウィンドウを表示するには、**[表示]** メニューの **[その他のウィンドウ]** を選択し、**[コマンド ウィンドウ]** をクリックします。
@@ -112,7 +111,7 @@ Edit.ReplaceInFiles /case /pattern:regex var[1-3]+ oldpar
 ## <a name="use-quotes-for-path-names-with-spaces"></a>スペースを含むパス名には引用符を使用する
  たとえば、スペースを含むパスを持つファイルを開く場合は、スペースを含むパスまたはパス セグメントを二重引用符で囲む必要があります (**C:\\"Program Files"** または **"C:\Program Files"**)。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
 - [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)

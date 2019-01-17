@@ -2,7 +2,6 @@
 title: '方法: 基本フォン シェーダーを作成する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: c7c69da8-142b-4d3b-9be9-4be0d5970b25
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cc27aa96b0e893ada745533d070b3b7aa29264e2
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ef3120142b2d6fae7c8ee02c81f6ae76efb0aaaa
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49937812"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53934123"
 ---
 # <a name="how-to-create-a-basic-phong-shader"></a>方法: 基本フォン シェーダーを作成する
 
@@ -25,11 +24,11 @@ ms.locfileid: "49937812"
 
 フォン照明モデルは、ランバート照明モデルを拡張して、サーフェイスの反射プロパティをシミュレートする反射ハイライトを含めたものです。 反射コンポーネントは、ランバート照明モデルで使用されるのと同じ指向性光源からの追加の照明となりますが、最終的な色に対する効果の処理は異なります。 反射ハイライトがシーン内のサーフェイスに与える影響は、ビューの方向、光源の方向、サーフェイスの向きの間の関係によって、サーフェイスごとに異なります。 これは、サーフェイスの反射の色、反射の度合い、向きと、光源の色、輝度、方向で決まります。 ビューアーで光源を直接反射するサーフェイスは最大の反射効果を受け、ビューアーと反対側で光源を反射するサーフェイスは効果を受けません。 フォン照明モデルでは、1 つ以上の反射コンポーネントの組み合わせで、オブジェクトのポイントごとに反射ハイライトの色と輝度が決まります。これらのコンポーネントは、ランバート照明モデルの結果に追加されて、ピクセルの最終的な色が生成されます。
 
-ランバート ライティング モデルの詳細については、「[方法: 基本ランバート シェーダーを作成する](../designers/how-to-create-a-basic-lambert-shader.md)」を参照してください。
+ランバート ライティング モデルの詳細については、「[方法:基本ランバート シェーダーを作成する](../designers/how-to-create-a-basic-lambert-shader.md)」を参照してください。
 
 開始する前に、**[プロパティ]** ウィンドウと**ツールボックス**が表示されていることを確認します。
 
-1. 「[方法: 基本ランバート シェーダーを作成する](../designers/how-to-create-a-basic-lambert-shader.md)」の説明に従って、ランバート シェーダーを作成します。
+1. ランバート シェーダーの作成を、「[方法:基本ランバート シェーダーを作成する](../designers/how-to-create-a-basic-lambert-shader.md)」の説明に従って実行します。
 
 2. **[最終的な色]** ノードから **[ランバート]** ノードを接続解除します。 **[ランバート]** ノードの **[RGB]** ターミナルを選択し、**[リンクの解除]** を選択します。 これにより、次の手順で追加するノードのための領域を確保できます。
 
@@ -59,7 +58,7 @@ ms.locfileid: "49937812"
 
  ![モデルに適用されたフォン光源](../designers/media/digit-lighting-model.png)
 
- 3D モデルにシェーダーを適用する方法の詳細については、「[方法: シェーダーを 3D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)」を参照してください。
+ 3D モデルにシェーダーを適用する方法の詳細については、「[方法:シェーダーを 3D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

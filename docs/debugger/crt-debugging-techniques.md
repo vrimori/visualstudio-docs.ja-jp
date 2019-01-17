@@ -1,8 +1,6 @@
 ---
-title: CRT のデバッグ手法 |Microsoft ドキュメント
-ms.custom: ''
+title: CRT のデバッグ手法 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - c.runtime.debugging
@@ -21,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 890dec4a47a4dd49fa75521aaad068d331652a92
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 99edc41e86d492e8a38341917de1a5d7543dc93d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31458428"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53889112"
 ---
 # <a name="crt-debugging-techniques"></a>CRT のデバッグ技術
 C ランタイム ライブラリを使用したプログラムをデバッグする場合は、次のデバッグ技術が役立ちます。  
@@ -36,7 +34,7 @@ C ランタイム ライブラリを使用したプログラムをデバッグ�
  C ランタイム ライブラリによって提供されるデバッグ サポートについて説明し、ツールにアクセスするための手順を示します。  
   
  [レポート用マクロの使用](../debugger/macros-for-reporting.md)  
- に関する情報を提供、 **_RPTn**と **_RPTFn**マクロ (CRTDBG で定義されます。H) これの代わりに`printf`デバッグ用のステートメント。  
+ CRTDBG.H で定義されている **_RPTn** マクロと **_RPTFn** マクロについて説明します。これらのマクロでは、デバッグ用に `printf` ステートメントを置き換えます。  
   
  [デバッグ バージョンのヒープ割り当て関数](../debugger/debug-versions-of-heap-allocation-functions.md)  
  ヒープ割り当て関数の特別なデバッグ バージョンについて説明します。CRT が呼び出しを割り当てる方法、明示的な呼び出しの利点、変換の回避方法、クライアント ブロック内の各割り当て型の追跡、_DEBUG を定義しなかった場合の結果などを扱います。  

@@ -1,8 +1,6 @@
 ---
 title: UWP アプリで HTML および CSS のデバッグ |Microsoft Docs
-ms.custom: ''
 ms.date: 07/17/2017
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - VS.WebClient.DomExplorer
@@ -18,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 6e812d60daf7e084835c0de9549cd58ff2711fea
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 0ea34ba58ec882121b40ca7e7585fa0cb0419356
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49916687"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53892716"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Visual Studio で UWP アプリの HTML および CSS をデバッグします。
   
@@ -31,7 +29,7 @@ ms.locfileid: "49916687"
   
  DOM 検査ツールが提供する対話式のデバッグ モデルを使用すると、レンダリングされる HTML および CSS のコードを表示および変更できます。 これらはすべてデバッガーを停止して再起動することなく実行できます。
   
- その他の JavaScript のデバッグ、JavaScript コンソール ウィンドウを使用して、ブレークポイントの設定などの機能の詳細についてを参照してください。[クイック スタート: JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)と[Visual Studio でアプリをデバッグ](../debugger/debug-store-apps-in-visual-studio.md)します。  
+ その他の JavaScript のデバッグ、JavaScript コンソール ウィンドウを使用して、ブレークポイントの設定などの機能の詳細についてを参照してください。[クイック スタート。JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)と[Visual Studio でアプリをデバッグ](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)します。  
   
 ##  <a name="InspectingDOM"></a> ライブ DOM の検査  
  DOM Explorer ではレンダリングされるページのビューが示され、DOM Explorer を使用すると値を変更して結果をすぐに確認できます。 これにより、デバッガーを停止して再起動することなく変更をテストできます。 この方法でページと対話するときはプロジェクトのソース コードは変更されないので、必要なコード修正が見つかったら、ソース コードを変更します。  
@@ -47,7 +45,7 @@ ms.locfileid: "49916687"
   
 - CSS スタイルがページ要素に適用される方法を調査し、適用されたルールをトレースします。  
   
-  アプリケーションをデバッグするときは、しばしば DOM Explorer で要素を選択する必要があります。 要素を選択すると、DOM Explorer の右側のタブに表示される値が、DOM Explorer での要素の選択を反映して自動的に更新されます。 このようなタブとしては、 **[スタイル]**、 **[計算済み]**、 **[レイアウト]** があります。 UWP アプリをサポートしても、**イベント**と**変更**タブ。 要素の選択の詳細については、「 [Selecting elements](#SelectingElements)」を参照してください。  
+  アプリケーションをデバッグするときは、しばしば DOM Explorer で要素を選択する必要があります。 要素を選択すると、DOM Explorer の右側のタブに表示される値が、DOM Explorer での要素の選択を反映して自動的に更新されます。 これは、ようなタブ。**スタイル**、**計算**、**レイアウト**します。 UWP アプリをサポートしても、**イベント**と**変更**タブ。 要素の選択の詳細については、「 [Selecting elements](#SelectingElements)」を参照してください。  
   
 > [!TIP]
 >  閉じた DOM Explorer ウィンドウを再び開くには、 **[デバッグ]**>**[ウィンドウ]** > **[DOM Explorer]** の順に選びます。 このウィンドウは、スクリプトのデバッグ セッション中にのみ表示されます。  
@@ -150,7 +148,7 @@ ms.locfileid: "49916687"
   
     ![デバッグ ターゲット リスト](../debugger/media/js_select_target.png "JS_Select_Target")  
   
-8. **[デバッグ]** > **Start [デバッグ]ging**の順にクリックするか、F5 キーを押して、デバッグ モードでアプリを実行します。  
+8.  **[デバッグ]** > **Start [デバッグ]ging**の順にクリックするか、F5 キーを押して、デバッグ モードでアプリを実行します。  
   
     アプリが実行されますが、スタイル、いくつかのバグのあるため、ほとんど空の画面が表示されます。 最初の `FlipView` のイメージが、画面の中央の小さい四角形に表示されます。  
   
@@ -159,7 +157,7 @@ ms.locfileid: "49916687"
    > [!TIP]
    >  Alt + Tab キーまたは F12 キーを押すと、Visual Studio と実行中のアプリを切り替えることができます。  
   
-10. DOM Explorer ウィンドウで、ID が `"fView"`であるセクションの DIV 要素を選択します。 方向キーを使用して、正しい DIV 要素を表示して選択します。 (右矢印キー使用する要素の子を表示できます。)  
+10. DOM Explorer ウィンドウで、ID が `"fView"`であるセクションの DIV 要素を選択します。 方向キーを使用して、正しい DIV 要素を表示して選択します。 (右方向キーを使うと、要素の子を表示することができます。)  
   
      ![DOM Explorer](../debugger/media/js_dom_explorer.png "JS_DOM_Explorer")  
   
@@ -172,7 +170,7 @@ ms.locfileid: "49916687"
   
      このタブは、選択した DOM 要素の各プロパティの、計算済みまたは最終の値を示します。  
   
-12. 高さの CSS 規則を開きます。 インライン スタイルが 100 px、高さ 100% に設定の値と矛盾する設定があることに注意してください、 `#fView` CSS セレクター。 `#fView` セレクターの取り消し線テキストは、インライン スタイルがこのスタイルよりも優先されることを示しています。  
+12. 高さの CSS 規則を開きます。 インライン スタイルが 100px に設定されており、`#fView` CSS セレクターで 100% に設定されている高さの値と矛盾しているように見えることに注意してください。 `#fView` セレクターの取り消し線テキストは、インライン スタイルがこのスタイルよりも優先されることを示しています。  
   
      **[計算済み]** タブを次の図に示します。  
   
@@ -199,7 +197,7 @@ ms.locfileid: "49916687"
   
      これで状況は改善されました。 しかし、なお修正する必要がある問題があります。それは余白が大きすぎることです。  
   
-19. 調査のため、Visual Studio に切り替えて、選択、**レイアウト**タブ要素のボックス モデルを確認します。  
+19. 調査のため、Visual Studio に切り替え、**[レイアウト]** タブを選び、要素のボックス モデルを確認します。  
   
      **レイアウト** タブで、次を確認します。  
   
@@ -225,7 +223,7 @@ ms.locfileid: "49916687"
   
 2.  default.html を開き、 `"fView"` DIV 要素の高さと幅を 100% に変更して、ソース コードを変更します。  
   
-3.  [デバッグ] ツール バーの **[Windows アプリケーションの更新]** ボタンをクリックします (または、F4 キーを押します)。 このようなボタンの外観:![更新の Windows アプリのボタン](../debugger/media/js_refresh.png "JS_Refresh")します。  
+3.  [デバッグ] ツール バーの **[Windows アプリケーションの更新]** ボタンをクリックします (または、F4 キーを押します)。 このボタンは次のように表示されます。![Windows アプリのボタンを更新](../debugger/media/js_refresh.png "JS_Refresh")します。  
   
      アプリのページが再読み込みされ、シミュレーターまたは Phone エミュレーターが前面に戻ります。  
   
@@ -255,11 +253,11 @@ ms.locfileid: "49916687"
 > [!NOTE]
 >  Windows Phone エミュレーターは、マウス ポインターを置くことによる要素の強調表示を部分的にサポートします。  
   
-## <a name="see-also"></a>関連項目  
- [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
+## <a name="see-also"></a>「  
+ [Debug apps in Visual Studio](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)   
  [アプリの更新 (JavaScript)](../debugger/refresh-an-app-javascript.md)   
- [WebView コントロールをデバッグします。](../debugger/debug-a-webview-control.md)   
+ [WebView コントロールのデバッグ](../debugger/debug-a-webview-control.md)   
  [キーボード ショートカット](../debugger/keyboard-shortcuts-html-and-javascript.md)   
  [JavaScript Console commands](../debugger/javascript-console-commands.md)   
- [HTML、CSS、および JavaScript サンプル コードをデバッグします。](../debugger/debug-html-css-and-javascript-sample-code.md)   
+ [HTML、CSS、および JavaScript サンプル コードのデバッグ](../debugger/debug-html-css-and-javascript-sample-code.md)   
  [製品のサポートとユーザー補助](https://msdn.microsoft.com/library/tzbxw1af(VS.120).aspx)

@@ -1,8 +1,6 @@
 ---
 title: '&lt;パッケージ&gt;要素 (ブートス トラップ) |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - FSharp
@@ -17,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 49867ddc897a9c1a1241a891a3ba3de866d84688
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: df0972595710422294f9c37c5f0abad9c6e433ea
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49899241"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53868616"
 ---
 # <a name="ltpackagegt-element-bootstrapper"></a>&lt;パッケージ&gt;要素 (ブートス トラップ)
 `Package`要素は、パッケージ ファイル内の最上位の XML 要素。  
@@ -148,8 +146,8 @@ ms.locfileid: "49899241"
 
 | 属性 | 説明 |
 |--------------------| - |
-| `Culture` | 必須。 このパッケージには、使用する言語を決定するカルチャを定義します。 この属性がキーに、`Strings`要素で、インストール時に製品名とエラー メッセージのカルチャに固有の文字列の一覧を表示します。 |
-| `Name` | 必須。 などのツールで開発者に表示されるパッケージの名前[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 この属性がキーに、`Strings`要素が含まれている、`String`を持つ要素、`Name`と`Culture`プロパティが一致するように設定、`Name`と`Culture`プロパティの`Package`します。 |
+| `Culture` | 必須です。 このパッケージには、使用する言語を決定するカルチャを定義します。 この属性がキーに、`Strings`要素で、インストール時に製品名とエラー メッセージのカルチャに固有の文字列の一覧を表示します。 |
+| `Name` | 必須です。 などのツールで開発者に表示されるパッケージの名前[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 この属性がキーに、`Strings`要素が含まれている、`String`を持つ要素、`Name`と`Culture`プロパティが一致するように設定、`Name`と`Culture`プロパティの`Package`します。 |
 | `LicenseAgreement` | 任意。 ライセンス契約 (EULA) を含む配布パッケージでは、ファイルの名前を指定します。  このファイルは、プレーン テキストを指定できます (*.txt*) またはリッチ テキスト形式。 (*.rtf*) |
 
 ## <a name="example"></a>例  

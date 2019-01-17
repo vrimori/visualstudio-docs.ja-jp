@@ -1,8 +1,6 @@
 ---
 title: '&lt;文字列&gt;要素 (ブートス トラップ) |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 f1_keywords:
 - MSBuild.GenerateBootstrapper.NoStringsForCulture
@@ -20,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fc1cab2fdb0a175fc9365b2a8b4b17dca46a30a2
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
-ms.translationtype: MT
+ms.openlocfilehash: 5b1cc6f4341f1a4ffdc01ec22b559fb1fa72cb66
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39077673"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53886865"
 ---
 # <a name="ltstringsgt-element-bootstrapper"></a>&lt;文字列&gt;要素 (ブートス トラップ)
 製品名、パッケージ名、およびインストールのエラー メッセージのローカライズされた文字列を定義します。  
@@ -51,7 +49,7 @@ ms.locfileid: "39077673"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Name`|必須。 文字列の名前。|  
+|`Name`|必須です。 文字列の名前。|  
   
 ## <a name="example"></a>例  
  次のコード例では、すべての英語文字列を指定します、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]インストーラー。  

@@ -2,7 +2,6 @@
 title: '[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - vb.ProjectPropertiesCompile
@@ -20,12 +19,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d1b5c55c3bc1732d0b394473f25c0b103c917f4
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 890754002c6b3d911b26fe7b1d6aa97b339880c1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38808375"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53874892"
 ---
 # <a name="compile-page-project-designer-visual-basic"></a>[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)
 
@@ -44,7 +43,7 @@ ms.locfileid: "38808375"
 
  **構成**
 
- 表示または変更する構成設定を指定します。 設定は、**[デバッグ]** (既定)、**[リリース]**、または **[すべての構成]** のいずれかになります。 詳細については、「[ビルド構成について](../../ide/understanding-build-configurations.md)」と「[方法 : 構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)」を参照してください。
+ 表示または変更する構成設定を指定します。 設定は、**[デバッグ]** (既定)、**[リリース]**、または **[すべての構成]** のいずれかになります。 詳細については、「[ビルド構成について](../../ide/understanding-build-configurations.md)」と「[方法:構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)」を参照してください。
 
  **プラットフォーム**
 
@@ -176,6 +175,6 @@ ms.locfileid: "38808375"
 
 ## <a name="see-also"></a>関連項目
 
-- [方法 : ビルド イベントを指定する (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)
+- [方法: ビルド イベントを指定する (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)
 - [Visual Basic のコマンド ライン コンパイラ](/dotnet/visual-basic/reference/command-line-compiler/index)
-- [方法 : 構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)
+- [方法: 構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)

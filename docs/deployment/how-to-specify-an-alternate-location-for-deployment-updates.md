@@ -1,8 +1,6 @@
 ---
 title: '方法: 配置の更新用の別の場所の指定 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,18 +15,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 76be049c670fb91911be70132b459cad5e5183bd
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: a3db855d06c71551dd6f1bb1d9e6f6ac0d34da72
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49902465"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53957447"
 ---
-# <a name="how-to-specify-an-alternate-location-for-deployment-updates"></a>方法: 配置の更新用の別の場所を指定します。
+# <a name="how-to-specify-an-alternate-location-for-deployment-updates"></a>方法: 配置の更新用に別の場所を指定する
 インストールすることができます、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] CD やファイル共有から最初にアプリケーションが、アプリケーションは、Web での定期的な更新プログラムを確認する必要があります。 その最初のインストール後に、Web からアプリケーションを更新できるように、配置マニフェストの更新プログラムの別の場所を指定できます。  
   
 > [!NOTE]
->  アプリケーションは、この機能を使用するには、ローカルにインストールするように構成する必要があります。 詳細については、次を参照してください。[チュートリアル: ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。 さらに、インストールする場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]原因別の場所を設定、ネットワークからアプリケーション[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]最初のインストールとすべての後続の更新の両方にその場所を使用します。 (たとえば、CD など) からアプリケーションをローカルでインストールすると、元のメディアを使用して、最初のインストールを実行し、すべての後続の更新が別の場所を使用しています。  
+>  アプリケーションは、この機能を使用するには、ローカルにインストールするように構成する必要があります。 詳細については、「[チュートリアル:ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。 さらに、インストールする場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]原因別の場所を設定、ネットワークからアプリケーション[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]最初のインストールとすべての後続の更新の両方にその場所を使用します。 (たとえば、CD など) からアプリケーションをローカルでインストールすると、元のメディアを使用して、最初のインストールを実行し、すべての後続の更新が別の場所を使用しています。  
   
 ### <a name="specify-an-alternate-location-for-updates-by-using-mageuiexe-windows-forms-based-utility"></a>MageUI.exe (Windows フォーム ベースのユーティリティ) を使用して更新プログラムの別の場所を指定します。  
   
@@ -38,7 +36,7 @@ ms.locfileid: "49902465"
   
 2.  **ファイル**] メニューの [選択**開く**をアプリケーションの配置マニフェストを開きます。  
   
-3.  選択、**展開オプション**タブ。  
+3.  **[配置オプション]** タブを選択します。  
   
 4.  テキスト ボックスに名前付き**起動場所**アプリケーションの更新プログラムの配置マニフェストを含むディレクトリへの URL を入力します。  
   
@@ -55,7 +53,7 @@ ms.locfileid: "49902465"
 3. ファイルを保存します。  
   
    > [!NOTE]
-   >  今すぐに使用して、ファイルを再署名する必要があります*Mage.exe*します。 詳細については、次を参照してください。[チュートリアル: ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。  
+   >  今すぐに使用して、ファイルを再署名する必要があります*Mage.exe*します。 詳細については、「[チュートリアル:ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  場合は、CD などのオフライン メディアから、アプリケーションをインストールして、コンピューターがオンラインで[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]で指定された URL はまず、`<deploymentProvider>`タグの最新のバージョンが更新プログラムの場所に含まれているかどうか、配置マニフェストで、アプリケーション。 その場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]の代わりに、最初のインストール ディレクトリから、そこから直接アプリケーションをインストールし、共通言語ランタイム (CLR) は、アプリケーションの信頼を決定します。 レベルを使用して`<deploymentProvider>`。 コンピューターがオフラインの場合、または`<deploymentProvider>`にアクセスできない[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]CD、および CLR からのインストールには、インストール ポイントに基づいて信頼が与えられます。 つまり CD インストールの場合、アプリケーションは完全な信頼を受け取ります。 すべての後続の更新では、その信頼レベルを継承します。  
@@ -65,5 +63,5 @@ ms.locfileid: "49902465"
 ## <a name="see-also"></a>関連項目  
  [チュートリアル: ClickOnce アプリケーションを手動で展開します。](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)   
  [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)   
- [セキュリティで保護された ClickOnce アプリケーション](../deployment/securing-clickonce-applications.md)   
- [ClickOnce の更新方法を選択します。](../deployment/choosing-a-clickonce-update-strategy.md)
+ [ClickOnce アプリケーションのセキュリティ保護](../deployment/securing-clickonce-applications.md)   
+ [ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)

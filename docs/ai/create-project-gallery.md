@@ -9,15 +9,14 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.devlang: multiple
 ms.service: multiple
-ms.technology: vs-ai-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 18cf719b100aa7c216de2903c05a24a3abcca244
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: ad28d01fdb1bbb91aaff3fb5530bbaa77444bb35
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49916492"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53873516"
 ---
 ## <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>Visual Studio で Azure Machine Learning ギャラリーから AI プロジェクトを作成する
 
@@ -42,13 +41,13 @@ Azure Machine Learning は Visual Studio Tools for AI と統合されていま�
 
 4. このクイック スタートでは "**MNIST using TensorFlow**" サンプルを選び、**[インストール]** をクリックします。 次の内容を指定します。
 
-   - **リソース グループ**: メタデータを格納する Azure リソース グループ
-   - **アカウント**: Azure Machine Learning の実験アカウント
-   - **ワークスペース**: Azure Machine Learning のワークスペース
-   - **プロジェクトの種類**: 機械学習のフレームワーク。 この例では、**[TensorFlow]** を選びます。
+   - **リソース グループ**:メタデータを格納する Azure リソース グループ
+   - **アカウント**:Azure Machine Learning の実験アカウント
+   - **ワークスペース**:Azure Machine Learning のワークスペース
+   - **プロジェクトの種類**:機械学習のフレームワーク。 この例では、**[TensorFlow]** を選びます。
    - **ソリューションに追加**: 現在の Visual Studio ソリューションに追加するか、新しいソリューションを作成して開くかを指定します。
-   - **プロジェクトのパス**: コードを保存する場所
-   - **プロジェクト名**: 「**TensorFlowMNIST**」と入力します。
+   - **プロジェクトのパス**:コードを保存する場所
+   - **プロジェクト名**:「**TensorFlowMNIST**」と入力します。
 
    ![Python アプリケーション テンプレートを使用した結果のプロジェクト](media/create-project-gallery/new-AzureSampleProject.png)
 

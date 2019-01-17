@@ -1,8 +1,6 @@
 ---
-title: '方法: ビューを更新 |Microsoft ドキュメント'
-ms.custom: ''
+title: '方法: 表示を更新する |Microsoft Docs'
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - refreshing views
@@ -12,21 +10,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a3da7466f7f1ac569378d5ce5053c72c55d4ae68
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: dc7510986c87115a0f93078fb6788644c984460b
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31480086"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53880167"
 ---
-# <a name="how-to-refresh-the-view"></a>方法: ビューを更新する
-Spy++ はシステム テーブルの「スナップショット」を取得し、この情報に基づいてビューを更新します。 システム ビューを定期的に更新することが重要です。 ある場合は、spy++ ビューを開くし、ビューは更新されませんが表示されない、プロセス、スレッド、および後に作成される windows。 また、存在しなくなった項目を表示することがあります。 **更新**コマンドは、メッセージ ビューを除くすべてのビューを使用します。  
+# <a name="how-to-refresh-the-view"></a>方法: ビューの更新
+Spy++ システム テーブルの「スナップショット」を取得し、この情報に基づいてビューを更新します。 システム ビューを定期的に更新することが重要です。 Spy++ ビューを開き、ビューを更新していない場合は、これらのプロセス、スレッド、およびその後に作成される windows をしない表示されます。 また、存在しなくなった項目を表示することがあります。 **更新**コマンドは、メッセージ ビューを除くすべてのビューを使用できます。  
   
 ### <a name="to-refresh-the-currently-active-view"></a>現在アクティブなビューを更新するには  
   
 -   選択**更新**から、**ウィンドウ** メニューの または をクリックして、**更新**ツールバーのボタンをクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Spy++ の使用](../debugger/using-spy-increment.md)   
  [Spy++ ビュー](../debugger/spy-increment-views.md)   
  [Spy++ リファレンス](../debugger/spy-increment-reference.md)

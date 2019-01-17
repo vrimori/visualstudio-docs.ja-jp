@@ -1,8 +1,6 @@
 ---
 title: '[レジスタ] ウィンドウについて |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -19,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5364bf8ba45e4b569649920175c6e94fc46128ed
-ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
-ms.translationtype: HT
+ms.openlocfilehash: a08b7f3731de490443cc56a418c75974bf9ff722
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53561802"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53919535"
 ---
 # <a name="about-the-registers-window-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio で [レジスタ] ウィンドウの概要 (C#、C++、Visual Basic、 F#)
 
@@ -51,6 +49,6 @@ ms.locfileid: "53561802"
 ## <a name="register-groups"></a>レジスタ グループ  
  **[レジスタ]** ウィンドウでは、見やすいようにレジスタがグループ別に表示されます。 **[レジスタ]** ウィンドウを右クリックすると、ショートカット メニューがグループの一覧と共に表示され、必要に応じて表示と非表示を切り替えることができます。  
   
-## <a name="see-also"></a>参照  
- [方法: [レジスタ] ウィンドウを使用します。](../debugger/how-to-use-the-registers-window.md)   
+## <a name="see-also"></a>「  
+ [方法: [レジスタ] ウィンドウを使用する](../debugger/how-to-use-the-registers-window.md)   
  [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)

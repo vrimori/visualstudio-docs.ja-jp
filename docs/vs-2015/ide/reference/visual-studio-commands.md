@@ -5,8 +5,7 @@ ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 91c04ad161e17ac2932ca8e75ddadfc1c2879785
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.openlocfilehash: 8bfcac20d0facea28734e27cbb60966717cdcdc2
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053105"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53869808"
 ---
 # <a name="visual-studio-commands"></a>Visual Studio コマンド
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -83,5 +82,5 @@ Visual Studio のコマンドを使用すると、 **[コマンド]** ウィン�
 |[ブレークポイントの設定/解除](../../ide/reference/toggle-breakpoint-command.md)|ファイル内の現在位置で、現在の状態に基づいてブレークポイントのオン/オフを切り替えます。|
 |[Watch コマンド](../../ide/reference/watch-command.md)|指定したインスタンスの **[ウォッチ]** ウィンドウを作成し、開きます。|
 
-## <a name="see-also"></a>参照
- [コマンド ウィンドウ](../../ide/reference/command-window.md)[検索/コマンド ボックス](../../ide/find-command-box.md) [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+## <a name="see-also"></a>関連項目
+ [コマンド ウィンドウ](../../ide/reference/command-window.md)[検索/コマンドボックス](../../ide/find-command-box.md) [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)

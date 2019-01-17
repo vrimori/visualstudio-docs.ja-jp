@@ -1,8 +1,6 @@
 ---
 title: 出力ウィンドウにメッセージを送信 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/08/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -28,14 +26,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 02bdd2c6d83e13887a8051ab4101627ba14220fa
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.openlocfilehash: 18ea526fdff312ce46cdb63b6c74e0e0a2600116
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51724482"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53906749"
 ---
-# <a name="send-messages-to-the-output-window"></a>出力ウィンドウにメッセージを送信します。
+# <a name="send-messages-to-the-output-window"></a>出力ウィンドウにメッセージを送信する
 
 実行時のメッセージを記述することができます、**出力**ウィンドウを使用して、<xref:System.Diagnostics.Debug>クラスまたは<xref:System.Diagnostics.Trace>に含まれるクラスの<xref:System.Diagnostics>クラス ライブラリ。 使用して、<xref:System.Diagnostics.Debug>クラスのみ出力をする場合、*デバッグ*プログラムのバージョン。 使用して、<xref:System.Diagnostics.Trace>クラスの両方で出力する場合、*デバッグ*と*リリース*バージョン。  
   
@@ -44,7 +42,7 @@ ms.locfileid: "51724482"
   
 - 各種の `Write` メソッド。実行を中断せずに情報を出力します。 これらのメソッドは、Visual Basic の以前のバージョンで使用されていた `Debug.Print` メソッドに代わるものです。  
   
-- <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>メソッドで、指定した条件が失敗した場合に実行し、出力の情報を中断します。 既定では、`Assert` メソッドはダイアログ ボックスに情報を出力します。 詳細については、次を参照してください。[マネージ コードでアサーション](../debugger/assertions-in-managed-code.md)します。  
+- <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>メソッドで、指定した条件が失敗した場合に実行し、出力の情報を中断します。 既定では、`Assert` メソッドはダイアログ ボックスに情報を出力します。 詳細については、「[マネージド コードのアサーション](../debugger/assertions-in-managed-code.md)」を参照してください。  
   
 - <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=fullName>と<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=fullName>メソッドで、実行と出力の情報を常に中断します。 既定では、`Fail` メソッドはダイアログ ボックスに情報を出力します。  
   
@@ -62,5 +60,5 @@ ms.locfileid: "51724482"
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [[出力] ウィンドウ](../ide/reference/output-window.md)   
  [アプリケーションのトレースとインストルメント化](/dotnet/framework/debug-trace-profile/tracing-and-instrumenting-applications)  
- [C#、 F#、および Visual Basic プロジェクトの種類](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
- [マネージ コードのデバッグ](../debugger/debugging-managed-code.md)
+ [C#、F#、Visual Basic のプロジェクトの種類](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
+ [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)

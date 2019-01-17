@@ -1,8 +1,6 @@
 ---
-title: フォント ダイアログ ボックス (Microsoft spy ヘルプ) |Microsoft ドキュメント
-ms.custom: ''
+title: フォント ダイアログ ボックス (Microsoft spy ヘルプ) |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Font dialog box
@@ -12,15 +10,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c8af6b21b30caace4ea0e6e6be2eeaa25f10eb0
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: a9c900ac24821a68cdba537771e2e8b24c379960
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31471165"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53924411"
 ---
 # <a name="font-dialog-box-microsoft-spy-help"></a>[フォント] ダイアログ ボックス (Microsoft Spy++ ヘルプ)
-使用される文字のフォントを構成するこのダイアログ ボックスを使用して、 [spy++ ビュー](../debugger/spy-increment-views.md)ウィンドウです。 このダイアログ ボックスを表示するには展開、**ビュー**メニュー選択**フォント**です。  
+使用される文字のフォントを構成するこのダイアログ ボックスを使用して、 [spy++ ビュー](../debugger/spy-increment-views.md)ウィンドウ。 このダイアログ ボックスを表示するには、展開、**ビュー**メニュー選択**フォント**します。  
   
  次の設定を使用できます。  
   
@@ -33,8 +31,8 @@ ms.locfileid: "31471165"
  **Size**  
  フォーカスのある spy++ ビュー ウィンドウのフォント サイズ。  
   
- **既定値としてフォントを保存します。**  
- Spy++ ビューを開くときに、ユーザーの設定として現在のフォント設定を保存します。  
+ **フォントを既定値として保存**  
+ Spy++ ビューを開くときに、現在のフォント設定、環境設定として保存します。  
   
 ## <a name="related-sections"></a>関連項目  
  [Spy++ ビュー](../debugger/spy-increment-views.md)  
@@ -44,4 +42,4 @@ ms.locfileid: "31471165"
  Spy++ ツールを紹介し、使用方法について説明します。  
   
  [Spy++ リファレンス](../debugger/spy-increment-reference.md)  
- 各 spy++ メニューおよびダイアログ ボックスについて説明するセクションが含まれます。
+ 各 spy++ メニューおよびダイアログ ボックスについて説明するセクションが含まれています。

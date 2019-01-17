@@ -1,8 +1,6 @@
 ---
 title: プロファイラーのコマンド ラインを使用した .NET Framework サービスからのメモリ データの収集 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: b1361333-8a09-4a65-87a9-4ac94ceb2d9f
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8989209a5abefb05f0f3f9b90357ab0f2a895786
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: d9b76f779af88a6ad02dc61d73a0beb31691c03a
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34690901"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53902725"
 ---
 # <a name="collect-memory-data-from-net-framework-services-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用した .NET Framework サービスからのメモリ データの収集
 このセクションでは、コマンド ラインからサンプリング メソッドを使用して、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] サービスのメモリ割り当てとオブジェクト有効期間データを収集する手順とオプションについて説明します。  
@@ -36,7 +34,7 @@ ms.locfileid: "34690901"
 |----------|---------------------|  
 |**サンプリング メソッドを使用したプロファイリング**|-   [サンプリングを使用したアプリケーション統計情報の収集](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md)|  
 |**インストルメンテーション方式を使用したプロファイリング**|-   [インストルメンテーションを使用した詳細なタイミング データの収集](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md)|  
-|**リソースの競合とスレッド アクティビティのプロファイリング**|-   [同時実行データの収集](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|  
+|**リソースの競合とスレッド アクティビティのプロファイリング**|-   [コンカレンシー データの収集](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|  
   
 ### <a name="profile-net-framework-memory-data"></a>.NET Framework メモリ データのプロファイリング  
   

@@ -1,8 +1,6 @@
 ---
 title: ハーフ/クォーター テクスチャ ディメンション バリアント |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 282e9bbb-51aa-4cd0-8e5c-0901268c29e5
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 94820b2930bbe689c37b90443ac007b137f162d6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: ecd986f56185b68c8d88788b569dcd2ee0398d6f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49870199"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53956219"
 ---
 # <a name="halfquarter-texture-dimensions-variant"></a>ハーフ/クォーター テクスチャ ディメンション バリアント
 レンダー ターゲットではないテクスチャで、テクスチャのディメンションを小さくします。  
@@ -29,7 +27,7 @@ ms.locfileid: "49870199"
   
  テクスチャが通常よりも多くの GUP メモリを占有している場合は、該当するテクスチャの圧縮を考慮した後で、テクスチャのサイズを小さくすることを考慮してください。 テクスチャを小さくした場合と同様に、圧縮したテクスチャは占有するメモリが少なくなり、システム メモリへページングされる必要が少なくなりますが、色の忠実性は低下します。 圧縮は、すべてのテクスチャに適しているわけではなく、テクスチャの内容によって決まります (たとえば、小さい領域に多数の色のバリエーションがある場合です)。ただし多くのテクスチャでは、サイズを小さくするよりも全体のイメージ品質は低下せずに保持されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  ソース テクスチャを作成する `ID3D11Device::CreateTexture2D` への呼び出しがあるたびに、テクスチャのディメンションは減少します。 テクスチャのディメンションは、具体的には `pDesc` で渡される D3D11_TEXTURE2D_DESC オブジェクトが、レンダリングで使用されるテクスチャを記述するときに減少します。つまり、  
   
 - BindFlags メンバーは D3D11_BIND_SHADER_RESOURCE フラグを設定するだけです。  
@@ -45,6 +43,6 @@ ms.locfileid: "49870199"
 ## <a name="example"></a>例  
  このバリアントは、`CreateTexture2D` への呼び出しを行う前に、実行時にテクスチャをリサイズします。 実行コードについては、このアプローチは推奨されません。フルサイズのテクスチャはより多くのディスク容量を使用し、追加のステップによってアプリケーションのロード時間が長くなることがあるためです (特に、圧縮されたテクスチャでは、エンコード用に大量のコンピューティング リソースが必要です)。 代わりに、イメージ エディタ、またはビルド パイプラインの一部であるイメージ プロセッサを使用して、テクスチャをオフラインでリサイズすることを推奨しています。 これらのアプローチではディスク容量の要件が減り、アプリケーションのランタイム オーバーヘッドが排除され、処理時間に余裕があるため、テクスチャを縮小または圧縮しつつ最高のイメージ品質を保持することができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [ミップマップ生成バリアント](mip-map-generation-variant.md)   
  [BC テクスチャ圧縮バリアント](bc-texture-compression-variant.md)

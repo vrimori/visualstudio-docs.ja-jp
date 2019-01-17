@@ -1,8 +1,6 @@
 ---
 title: Idiaenumsourcefiles::clone |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d6f2a7d01bc8c72a87101d5b048cff99ed8887b8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: b2a3556578f733881e7df440d3205f97e1e99e15
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49862997"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53851681"
 ---
 # <a name="idiaenumsourcefilesclone"></a>IDiaEnumSourceFiles::Clone
 現在の列挙子と同じ列挙状態を格納する列挙子を作成します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49862997"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT Clone (   
+HRESULT Clone (   
    IDiaEnumSourceFiles** ppenum  
 );  
 ```  
@@ -39,5 +37,5 @@ HRESULT Clone (
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)

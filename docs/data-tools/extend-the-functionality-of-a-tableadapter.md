@@ -14,15 +14,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: a5b34bcb9c1532190f730e26c691289d489a2f3c
-ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
-ms.translationtype: MT
+ms.openlocfilehash: 4a99ff0c28eac785e7e0e52958abcc4c94799685
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50751077"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53900192"
 ---
 # <a name="extend-the-functionality-of-a-tableadapter"></a>TableAdapter の機能を拡張する
 
@@ -34,7 +33,7 @@ TableAdapter に変更されたときに TableAdapter を定義するコード�
 
 ## <a name="locate-tableadapters-in-code"></a>コード内で Tableadapter を検索します。
 
-Tableadapter は設計されています中に、**データセット デザイナー**、生成された TableAdapter クラスの入れ子になったクラスでない<xref:System.Data.DataSet>します。 Tableadapter は、TableAdapter の関連付けられているデータセットの名前に基づいて、名前空間に配置されます。 たとえば、アプリケーションには、という名前のデータセットが含まれている場合`HRDataSet`、Tableadapter に配置されます、`HRDataSetTableAdapters`名前空間。 (名前付け規則がこのパターンに従います: *DatasetName* + `TableAdapters`)。
+Tableadapter は設計されています中に、**データセット デザイナー**、生成された TableAdapter クラスの入れ子になったクラスでない<xref:System.Data.DataSet>します。 Tableadapter は、TableAdapter の関連付けられているデータセットの名前に基づいて、名前空間に配置されます。 たとえば、アプリケーションには、という名前のデータセットが含まれている場合`HRDataSet`、Tableadapter に配置されます、`HRDataSetTableAdapters`名前空間。 (名前付け規則がこのパターンに従います。DataSetName
 
 次の例では、という名前の TableAdapter`CustomersTableAdapter`のプロジェクトでは、`NorthwindDataSet`します。
 

@@ -1,8 +1,6 @@
 ---
 title: '方法: ネイティブ ランタイム チェックの使用 |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - c.runtime.errorchecks
@@ -39,14 +37,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc4e4b9ee24bc7be9126866ae804f1b3c6d6dba6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: ae7b736a3273a9b20af0ee0be035a3059c473d67
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49860813"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269645"
 ---
-# <a name="how-to-use-native-run-time-checks"></a>方法 : ネイティブ ランタイム チェックを使用する
+# <a name="how-to-use-native-run-time-checks"></a>方法: ネイティブ ランタイム チェックを使用する
 Visual C++ では、ネイティブ [runtime_checks](/cpp/preprocessor/runtime-checks) を使用して、次のような一般的なランタイム エラーをキャッチできます。  
   
 - スタック ポインターの破損  
@@ -79,8 +77,8 @@ Visual C++ では、ネイティブ [runtime_checks](/cpp/preprocessor/runtime-c
   
 -   `runtime_checks` プラグマを使用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Visual Studio でのデバッグ](../debugger/index.md)  
- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
+ [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)   
  [runtime_checks](/cpp/preprocessor/runtime-checks)   
  [ランタイム エラー チェック](/cpp/c-runtime-library/run-time-error-checking)

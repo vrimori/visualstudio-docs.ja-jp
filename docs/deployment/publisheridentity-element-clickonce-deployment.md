@@ -1,8 +1,6 @@
 ---
 title: '&lt;publisherIdentity&gt;要素 (ClickOnce 配置) |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-deployment
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f33772a35e8e47a77e0fdaddd28b7471ef5abcce
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
-ms.translationtype: MT
+ms.openlocfilehash: c9c54b539945093e55aa770f07acc54b589f0c70
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39081411"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53950093"
 ---
 # <a name="ltpublisheridentitygt-element-clickonce-deployment"></a>&lt;publisherIdentity&gt;要素 (ClickOnce 配置)
 この配置マニフェストに署名した発行元についての情報が含まれます。  
@@ -42,8 +40,8 @@ ms.locfileid: "39081411"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`name`|必須。 このアプリケーションを発行したパーティの id をについて説明します。|  
-|`issuerKeyHash`|必須。 証明書の発行者の公開キーの sha-1 ハッシュが含まれています。|  
+|`name`|必須です。 このアプリケーションを発行したパーティの id をについて説明します。|  
+|`issuerKeyHash`|必須です。 証明書の発行者の公開キーの sha-1 ハッシュが含まれています。|  
   
 #### <a name="parameters"></a>パラメーター  
   
@@ -51,8 +49,8 @@ ms.locfileid: "39081411"
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ## <a name="subhead"></a>小見出し

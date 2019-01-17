@@ -1,8 +1,6 @@
 ---
-title: IDiaReadExeAtRVACallback |Microsoft ドキュメント
-ms.custom: ''
+title: IDiaReadExeAtRVACallback |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8836f1d234cddfff42f21a3d376eb93b21e4fe29
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: e00ce2e1286c2309a11984f9bde23aa74071a076
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31463830"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53859293"
 ---
 # <a name="idiareadexeatrvacallback"></a>IDiaReadExeAtRVACallback
 相対仮想アドレスで指定された実行可能ファイルのバイト数を指定するクライアント アプリケーションを有効にします。  
@@ -27,7 +25,7 @@ ms.locfileid: "31463830"
 ## <a name="syntax"></a>構文  
   
 ```  
-IDiaReadExeAtRVACallback : IUnknown  
+IDiaReadExeAtRVACallback : IUnknown  
 ```  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
@@ -38,19 +36,19 @@ IDiaReadExeAtRVACallback : IUnknown
 |[IDiaReadExeAtRVACallback::ReadExecutableAtRVA](../../debugger/debug-interface-access/idiareadexeatrvacallback-readexecutableatrva.md)|指定した数の指定された相対仮想アドレス (RVA) 実行可能ファイルからで始まるバイトを読み取ります。|  
   
 ## <a name="remarks"></a>コメント  
- クライアント アプリケーションでは、実行可能ファイルのファイルへの相対仮想アドレスを使用して実行可能ファイルのバイト数を提供するためにこのインターフェイスを実装します。 絶対ファイル オフセットを使用するのには、実装、 [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)インターフェイスです。  
+ クライアント アプリケーションは、実行可能ファイルのファイルに相対仮想アドレスを使用して実行可能ファイルのバイト数を提供するために、このインターフェイスを実装します。 ファイルの絶対オフセットを使用するには、実装、 [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)インターフェイス。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- このメソッドは、クライアント アプリケーションによって実装されに渡される、 [idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)メソッドとして、ファイルの読み取りの代替方法です。  
+ このメソッドは、クライアント アプリケーションによって実装されに渡される、 [idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)メソッド、ファイルの読み取りの代替方法として。  
   
 ## <a name="requirements"></a>要件  
- ヘッダー: Dia2.h  
+ ヘッダー:dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
- [Idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
+ [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
  [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)

@@ -1,8 +1,6 @@
 ---
 title: '方法: ウィンドウ検索 からメッセージ ビューを開く |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Messages View in Spy++, opening
@@ -13,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 08f832e61bdb39bc87b59fdd64deab8cd86382a1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: acd3df773748fe85832868b0286613f86ecbe8a1
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49839220"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53847100"
 ---
 # <a name="how-to-open-messages-view-from-find-window"></a>方法: [ウィンドウ検索] からメッセージ ビューを開く
 使用できると便利な場合があります、**ウィンドウ検索** ダイアログ ボックス、ターゲット ウィンドウを選択し、そのウィンドウのメッセージ ビューを開きます。  
@@ -39,7 +37,7 @@ ms.locfileid: "49839220"
 
 4. **表示**、**メッセージ**。  
 
-5. **[OK]** を押します。  
+5. **[OK]** をクリックします。  
 
     空白[メッセージ ビュー](../debugger/messages-view.md)ウィンドウが開き、および**メッセージ**spy++ ツールバーにメニューが追加されます。  
 

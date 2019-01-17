@@ -1,9 +1,7 @@
 ---
 title: 'チュートリアル 1: ピクチャ ビューアーの作成'
-ms.custom: ''
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 3071d6df-2b2f-4e95-ab68-bef727323136
 author: TerryGLee
@@ -11,12 +9,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 966634ee9a71854334bdd5342326c1663b9ad16c
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: 8f44174f98c69f05cf7a0030e642dc9d9e065201
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50672159"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53861651"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>チュートリアル 1: ピクチャ ビューアーの作成
 
@@ -44,7 +42,7 @@ ms.locfileid: "50672159"
 
 サンプルの完全バージョンをダウンロードするには、「[Complete Picture Viewer tutorial sample](https://code.msdn.microsoft.com/Complete-Picture-Viewer-7d91d3a8)」 (画像ビューアーのチュートリアルの完全なサンプル) を参照してください。
 
-![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、[Visual Basic でピクチャ ビューアーを作成する場合の操作方法](http://go.microsoft.com/fwlink/?LinkId=205207)または [C# でピクチャ ビューアーを作成する場合の操作方法](http://go.microsoft.com/fwlink/?LinkId=205198)に関するビデオをご覧ください。
+![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[操作方法: Visual Basic によるピクチャ ビューアーの作成](http://go.microsoft.com/fwlink/?LinkId=205207)」または「[操作方法: C# によるピクチャ ビューアーの作成](http://go.microsoft.com/fwlink/?LinkId=205198)」を参照してください。
 
 > [!NOTE]
 > これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。 このチュートリアルでは、Visual C# と Visual Basic の両方が取り上げられているため、使用しているプログラミング言語固有の情報に注意してください。
@@ -57,14 +55,14 @@ ms.locfileid: "50672159"
 
 |Title|説明|
 |-----------|-----------------|
-|[手順 1: Windows フォーム アプリケーション プロジェクトの作成](../ide/step-1-create-a-windows-forms-application-project.md)|最初に Windows フォーム アプリケーション プロジェクトを作成します。|
-|[手順 2: プログラムの実行](../ide/step-2-run-your-program.md)|前の手順で作成した Windows フォーム アプリケーション プログラムを実行します。|
-|[手順 3: フォームのプロパティの設定](../ide/step-3-set-your-form-properties.md)|**[プロパティ]** ウィンドウを使用してフォームの外観を変更します。|
-|[手順 4: TableLayoutPanel コントロールを使用したフォームのレイアウトの設定](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)|フォームに `TableLayoutPanel` コントロールを追加します。|
-|[手順 5: フォームへのコントロールの追加](../ide/step-5-add-controls-to-your-form.md)|`PictureBox` コントロールや `CheckBox` コントロールなどのコントロールをフォームに追加します。 また、ボタンも追加します。|
-|[手順 6: ボタン コントロールの名前の設定](../ide/step-6-name-your-button-controls.md)|ボタンの名前をわかりやすい名前に変更します。|
-|[手順 7: フォームへのダイアログ コンポーネントの追加](../ide/step-7-add-dialog-components-to-your-form.md)|フォームに `OpenFileDialog` コンポーネントと `ColorDialog` コンポーネントを追加します。|
-|[手順 8: [Show a Picture] ボタンのイベント ハンドラーのコードの記述](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)|IntelliSense ツールを使用してコードを記述します。|
-|[手順 9: レビュー、コメントの追加、およびコードのテスト](../ide/step-9-review-comment-and-test-your-code.md)|コードのレビューとテストを行います。 必要に応じてコメントを追加します。|
-|[手順 10: その他のボタンおよびチェック ボックスに対するコードの記述](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)|他のボタンやチェック ボックスを使用できるようにするために、IntelliSense を使用してコードを記述します。|
-|[手順 11: プログラムの実行とその他の機能の使用](../ide/step-11-run-your-program-and-try-other-features.md)|プログラムを実行して背景色を設定します。 色、フォント、および境界線の変更など、その他の機能を試します。|
+|[手順 1:Windows フォーム アプリケーション プロジェクトの作成](../ide/step-1-create-a-windows-forms-application-project.md)|最初に Windows フォーム アプリケーション プロジェクトを作成します。|
+|[手順 2:プログラムの実行](../ide/step-2-run-your-program.md)|前の手順で作成した Windows フォーム アプリケーション プログラムを実行します。|
+|[手順 3:フォームのプロパティの設定](../ide/step-3-set-your-form-properties.md)|**[プロパティ]** ウィンドウを使用してフォームの外観を変更します。|
+|[手順 4:TableLayoutPanel コントロールを使用したフォームのレイアウトの設定](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)|フォームに `TableLayoutPanel` コントロールを追加します。|
+|[手順 5:フォームへのコントロールの追加](../ide/step-5-add-controls-to-your-form.md)|`PictureBox` コントロールや `CheckBox` コントロールなどのコントロールをフォームに追加します。 また、ボタンも追加します。|
+|[手順 6:ボタン コントロールの名前を設定する](../ide/step-6-name-your-button-controls.md)|ボタンの名前をわかりやすい名前に変更します。|
+|[手順 7:フォームへのダイアログ コンポーネントの追加](../ide/step-7-add-dialog-components-to-your-form.md)|フォームに `OpenFileDialog` コンポーネントと `ColorDialog` コンポーネントを追加します。|
+|[手順 8:[Show a Picture] ボタンのイベント ハンドラーのコードの記述|IntelliSense ツールを使用してコードを記述します。|
+|[手順 9:レビュー、コメントの追加、およびコードのテスト](../ide/step-9-review-comment-and-test-your-code.md)|コードのレビューとテストを行います。 必要に応じてコメントを追加します。|
+|[手順 10:その他のボタンおよびチェック ボックスに対するコードの記述](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)|他のボタンやチェック ボックスを使用できるようにするために、IntelliSense を使用してコードを記述します。|
+|[手順 11:プログラムの実行とその他の機能の使用](../ide/step-11-run-your-program-and-try-other-features.md)|プログラムを実行して背景色を設定します。 色、フォント、および境界線の変更など、その他の機能を試します。|

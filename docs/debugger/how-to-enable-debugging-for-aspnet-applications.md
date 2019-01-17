@@ -2,7 +2,6 @@
 title: ASP.NET アプリのデバッグの有効化 |Microsoft Docs
 ms.custom: H1HackMay2017
 ms.date: 09/21/18
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -19,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 41da2eb360bac4c50f85bd908f980f5ee3c1d141
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: c8723a97f5751b790c946055693064c3b7d12237
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813428"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53881102"
 ---
 # <a name="debug-aspnet-or-aspnet-core-apps-in-visual-studio"></a>Visual Studio での ASP.NET または ASP.NET Core アプリをデバッグします。
 
@@ -139,7 +138,7 @@ ASP.NET プロジェクトが*web.config*両方アプリの構成と起動につ
    </configuration>  
    ```
 
-[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 変更を自動的に検出*web.config*ファイルし、新しい構成設定が適用されます。 コンピューターや変更を有効にする IIS サーバーを再起動する必要はありません。  
+*web.config* ファイルに変更が加えられると、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] によってその変更が自動的に検出され、新しい構成設定が適用されます。 コンピューターや変更を有効にする IIS サーバーを再起動する必要はありません。  
   
 Web サイトで複数の仮想ディレクトリとサブディレクトリを含めることができます*web.config*それぞれファイル。 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリから構成設定を継承する*web.config*上位レベルの URL パスにあるファイル。 階層*web.config*ファイルの設定すべてに適用[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]かや、階層内のアプリ。 別の構成を設定、 *web.config*ファイル階層内の下位に高いファイル設定が上書きされます。  
   
@@ -184,11 +183,10 @@ IIS にアプリを発行するさまざまな方法はあります。 次の手
 > デバッグ モードは、アプリのパフォーマンスを大幅に低下します。 最適なパフォーマンスを次のように設定します。`debug="false"`で、 *web.config*運用アプリを展開またはパフォーマンスの測定を実施するときに、リリース ビルドを指定します。  
 
 ## <a name="see-also"></a>関連項目  
-[ASP.NET のデバッグ: システム要件](aspnet-debugging-system-requirements.md)   
-[方法: ユーザー アカウントでワーカー プロセスの実行](how-to-run-the-worker-process-under-a-user-account.md)   
+[ASP.NET のデバッグ : システム要件](aspnet-debugging-system-requirements.md)   
+[方法: ユーザー アカウントでワーカー プロセスを実行する](how-to-run-the-worker-process-under-a-user-account.md)   
 [方法: ASP.NET プロセスの名前を見つける](how-to-find-the-name-of-the-aspnet-process.md)   
-[デプロイされた web アプリケーションをデバッグします。](debugging-deployed-web-applications.md)   
-[チュートリアル: web フォームのデバッグ](walkthrough-debugging-a-web-form.md)   
-[方法: ASP.NET の例外のデバッグ](how-to-debug-aspnet-exceptions.md)   
-[Web アプリケーションのデバッグ: エラーおよびトラブルシューティング](debugging-web-applications-errors-and-troubleshooting.md)
-  
+[配置した Web アプリケーションのデバッグ](debugging-deployed-web-applications.md)   
+[チュートリアル: Web フォームのデバッグ](walkthrough-debugging-a-web-form.md)   
+[方法: ASP.NET の例外をデバッグする](how-to-debug-aspnet-exceptions.md)   
+[Web アプリケーションをデバッグする: エラーとトラブルシューティング](debugging-web-applications-errors-and-troubleshooting.md)

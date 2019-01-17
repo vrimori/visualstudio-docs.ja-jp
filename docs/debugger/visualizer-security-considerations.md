@@ -1,8 +1,6 @@
 ---
-title: ビジュアライザーのセキュリティに関する考慮事項 |Microsoft ドキュメント
-ms.custom: ''
+title: ビジュアライザーのセキュリティに関する考慮事項 |Microsoft Docs
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -18,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 799cc8700c450fb2d8b81293bf410903e498e19c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 64a9215173b11ea83f988ab548a6301a1532f490
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31476518"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53819563"
 ---
 # <a name="visualizer-security-considerations"></a>ビジュアライザーのセキュリティに関する考慮事項
 ビジュアライザーを作成すると、セキュリティ上の脅威が発生する可能性があります。 今のところ、この脅威が悪用された例はありませんが、開発者はこの脅威を認識し、以下に説明する適切なセキュリティ対策を講じることによって将来の攻略行為に対抗する必要があります。  
@@ -39,8 +37,8 @@ ms.locfileid: "31476518"
   
  このような脆弱性を軽減するために、ビジュアライザーによって公開されるインターフェイスに注意する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [ビジュアライザーのアーキテクチャ](../debugger/visualizer-architecture.md)   
- [方法: ビジュアライザーを作成](../debugger/how-to-write-a-visualizer.md)   
- [カスタム ビジュアライザーを作成します。](../debugger/create-custom-visualizers-of-data.md)   
+ [方法: ビジュアライザーを記述する](/visualstudio/debugger/create-custom-visualizers-of-data)   
+ [カスタム ビジュアライザーを作成する](../debugger/create-custom-visualizers-of-data.md)   
  [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)

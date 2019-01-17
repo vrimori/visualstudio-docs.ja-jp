@@ -1,8 +1,6 @@
 ---
 title: Idiaenumdebugstreamdata::item |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -14,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5101c5f43e3d931a0ec4653838e4b45c01d3c5fb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: ddb54c8084cea8d89b7453fb11547063c338cfee
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49936306"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53958372"
 ---
 # <a name="idiaenumdebugstreamdataitem"></a>IDiaEnumDebugStreamData::Item
 指定されたレコードを取得します。  
@@ -27,7 +25,7 @@ ms.locfileid: "49936306"
 ## <a name="syntax"></a>構文  
   
 ```C++  
-HRESULT Item (   
+HRESULT Item (   
    DWORD  index,  
    DWORD  cbData,  
    DWORD* pcbData,  
@@ -40,20 +38,20 @@ HRESULT Item (
  [in]取得するレコードのインデックス。 インデックスは 0 ~ の範囲内で、 `count`-1 の場合、`count`によって返される[idiaenumdebugstreamdata::get_count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)します。  
   
  cbData  
- [in]データバッファのサイズ（バイト単位）。  
+ [in](バイト単位)、データ バッファーのサイズ。  
   
  pcbData  
  [out]返されるバイト数を返します。 場合`data`は`NULL`、し`pcbData`指定されたレコードで使用できるデータのバイト数合計にはが含まれています。  
   
- データ  
+ data[]  
  [out]デバッグ ストリーム レコードのデータが入力バッファー。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 返します`E_INVALIDARG`無効なパラメーターの場合、`index`パラメーターが範囲外です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)   
- [Idiaenumdebugstreamdata::next](../../debugger/debug-interface-access/idiaenumdebugstreamdata-next.md)   
- [Idiaenumdebugstreams::item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)   
- [Idiaenumdebugstreamdata::get_count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)   
+ [IDiaEnumDebugStreamData::Next](../../debugger/debug-interface-access/idiaenumdebugstreamdata-next.md)   
+ [IDiaEnumDebugStreams::Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)   
+ [IDiaEnumDebugStreamData::get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)   
  [IDiaEnumDebugStreamData::Skip](../../debugger/debug-interface-access/idiaenumdebugstreamdata-skip.md)
