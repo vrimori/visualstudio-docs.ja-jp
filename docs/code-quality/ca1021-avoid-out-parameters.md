@@ -87,7 +87,7 @@ Passing by return value:
 ## <a name="try-pattern-methods"></a>パターンのメソッドを実行してください。
 
 ### <a name="description"></a>説明
- 実装するメソッド、**お試しください\<もの >** パターンなど、 <xref:System.Int32.TryParse%2A?displayProperty=fullName>、この違反を発生させません。 次の例では、実装する構造体 (値型)、<xref:System.Int32.TryParse%2A?displayProperty=fullName>メソッド。
+ <xref:System.Int32.TryParse%2A?displayProperty=fullName>のような**Try \<Something>** パターンを実装するメソッドではこの違反を起こさないでください。 次の例は、<xref:System.Int32.TryParse%2A?displayProperty=fullName>メソッドを実装する構造体 (値型)を示します。
 
 ### <a name="code"></a>コード
  [!code-csharp[FxCop.Design.TryPattern#1](../code-quality/codesnippet/CSharp/ca1021-avoid-out-parameters_5.cs)]

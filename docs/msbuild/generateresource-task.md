@@ -1,8 +1,6 @@
 ---
 title: GenerateResource タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#GenerateResource
@@ -20,15 +18,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c830b640b3efb4e963d62402bbf68d1bc7dff0e9
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: c879ddc38b2dd3988878119f87c3d777aea7c09d
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176955"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53917502"
 ---
 # <a name="generateresource-task"></a>GenerateResource タスク
-*.txt* ファイルおよび *.resx* (XML ベースのリソース形式) ファイルと共通言語ランタイムの *.resources* バイナリ ファイルとの間の変換を行います。.resources ファイルは、ランタイム バイナリ実行可能ファイルに埋め込んだり、サテライト アセンブリにコンパイルしたりできます。 このタスクは通常、*.txt* ファイルまたは *.resx* ファイルを *.resources* ファイルに変換するために使用します。 `GenerateResource` タスクの機能は [resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) の機能に似ています。  
+*.txt* ファイルおよび *.resx* (XML ベースのリソース形式) ファイルと共通言語ランタイムの *.resources* バイナリ ファイルとの間の変換を行います。 .resources ファイルは、ランタイム バイナリ実行可能ファイルに埋め込んだり、サテライト アセンブリにコンパイルしたりできます。 このタスクは通常、*.txt* ファイルまたは *.resx* ファイルを *.resources* ファイルに変換するために使用します。 `GenerateResource` タスクの機能は [resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) の機能に似ています。  
   
 ## <a name="parameters"></a>パラメーター  
  `GenerateResource` タスクのパラメーターの説明を次の表に示します。  
@@ -46,10 +44,10 @@ ms.locfileid: "39176955"
 |`PublicClass`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` に設定すると、厳密に型指定されたリソース クラスをパブリック クラスとして作成します。|  
 |`References`|省略可能な `String[]` 型のパラメーターです。<br /><br /> *.resx* ファイル内にある型を読み込むための参照です。 *.resx* ファイルのデータ要素は、.NET 型である場合があります。 この型は、*.resx* ファイルを読み取るときに、解決される必要があります。 通常は、標準の型の読み込み規則を使用して正常に解決します。 アセンブリを `References` に指定した場合には、そのアセンブリが優先されます。<br /><br /> 厳密に型指定されたリソースの場合、このパラメーターは不要です。|  
 |`SdkToolsPath`|省略可能な `String` 型のパラメーターです。<br /><br /> *resgen.exe* などの SDK ツールのパスを指定します。|  
-|`Sources`|必須の <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 変換するアイテムを指定します。 このパラメーターに渡すアイテムの拡張子は、以下のいずれかである必要があります。<br /><br /> -   *.txt*: 変換するテキスト ファイルの拡張子を指定します。 テキスト ファイルには、文字列リソースだけを含めることができます。<br />-   *.resx*: 変換する XML ベースのリソース ファイルの拡張子として指定します。<br />-   *.restext*: *.txt* と同じ形式を指定します。 この拡張子は、ビルド プロセスで使用するソース ファイルのうち、どのソース ファイルにリソースが含まれているのかを明示する場合に便利です。<br />-   *.resources*: 変換するリソース ファイルの拡張子を指定します。|  
+|`Sources`|必須の <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 変換するアイテムを指定します。 このパラメーターに渡すアイテムの拡張子は、以下のいずれかである必要があります。<br /><br /> -   *.txt*:変換するテキスト ファイルの拡張子を指定します。 テキスト ファイルには、文字列リソースだけを含めることができます。<br />-   *.resx*:変換する XML ベースのリソース ファイルの拡張子として指定します。<br />-   *.restext*:*.txt* と同じ形式を指定します。 この拡張子は、ビルド プロセスで使用するソース ファイルのうち、どのソース ファイルにリソースが含まれているのかを明示する場合に便利です。<br />-   *.resources*:変換するリソース ファイルの拡張子を指定します。|  
 |`StateFile`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> *.resx* 入力ファイルに含まれるリンクの依存関係のチェックを高速化するために使用される、省略可能なキャッシュ ファイルのパスを指定します。|  
 |`StronglyTypedClassName`|省略可能な `String` 型のパラメーターです。<br /><br /> 厳密に型指定されたリソース クラスのクラス名を指定します。 このパラメーターを指定しなかった場合には、リソース ファイルの基本名が使用されます。|  
-|`StronglyTypedFilename`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> ソース ファイルの名前を指定します。 このパラメーターを指定しなかった場合には、クラス名がベース ファイル名として使用され、言語に対応する拡張子が付加されます。 例: *MyClass.cs*。|  
+|`StronglyTypedFilename`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> ソース ファイルの名前を指定します。 このパラメーターを指定しなかった場合には、クラス名がベース ファイル名として使用され、言語に対応する拡張子が付加されます。 次に例を示します。*MyClass.cs*。|  
 |`StronglyTypedLanguage`|省略可能な `String` 型のパラメーターです。<br /><br /> 厳密な型のリソースのクラス ソースの生成に使用する言語を指定します。 このパラメーターは、CodeDomProvider で使用されている言語のいずれかに完全に一致する必要があります。 例 : `VB` または `C#`。<br /><br /> このパラメーターに値を渡すことにより、タスクでは厳密な型のリソースが作成されます。|  
 |`StronglyTypedManifestPrefix`|省略可能な `String` 型のパラメーターです。<br /><br /> 生成される厳密な型のリソースのクラス ソースで使用するリソース名前空間プレフィックスまたはマニフェスト プレフィックスを指定します。|  
 |`StronglyTypedNamespace`|省略可能な `String` 型のパラメーターです。<br /><br /> 生成される厳密な型のリソースのクラス ソースで使用する名前空間を指定します。 このパラメーターを指定しなかった場合には、厳密な型のリソースはすべてグローバル名前空間のリソースになります。|  
@@ -87,7 +85,7 @@ ms.locfileid: "39176955"
  アセンブリの名前が myAssembly である場合、次のコードでは、*someQualifier.someResource.resources* という名前の埋め込みリソースが生成されます。  
   
 ```xml  
-<ItemGroup>   <EmbeddedResource Include="myResource.resx">       <LogicalName>someQualifier.someResource.resources</LogicalName>   </EmbeddedResource></ItemGroup>  
+<ItemGroup>   <EmbeddedResource Include="myResource.resx">       <LogicalName>someQualifier.someResource.resources</LogicalName>   </EmbeddedResource></ItemGroup>  
 ```  
   
  \<LogicalName> メタデータがない場合、リソースは *myAssembly.myResource.resources* という名前になります。  この例は、Visual Basic と Visual C# のビルド処理にのみ適用されます。  

@@ -2,7 +2,6 @@
 title: '方法: Direct2D または Javascipt アプリで使用するためのテクスチャをエクスポートする'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 241c25fe-764e-4e1b-ad32-b1377dcbb605
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c748e8b380da906ca9fb8fc8588efa6ffcc44980
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: aad52a3ff4849702421303bdbaa3af8d1c073d87
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49826379"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53850844"
 ---
 # <a name="how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps"></a>方法: Direct2D または Javascipt アプリで使用するためのテクスチャをエクスポートする
 
@@ -37,7 +36,7 @@ ms.locfileid: "49826379"
 
 Direct2D のコンテキストで使用するテクスチャは、次に示す Direct2D の内部レンダリング規則に準拠している必要があります。
 
--   Direct2D では、前乗算されたアルファを使用することで透明性と透光性を実現します。 Direct2D と組み合わせて使用するテクスチャには、前乗算されたアルファが含まれている必要があります。この要件は、テクスチャで透明性または透光性を使用しない場合でも同様です。 前乗算されたアルファに関する詳細については、「[方法: 前乗算されたアルファを持つテクスチャをエクスポートする](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)」を参照してください。
+-   Direct2D では、前乗算されたアルファを使用することで透明性と透光性を実現します。 Direct2D と組み合わせて使用するテクスチャには、前乗算されたアルファが含まれている必要があります。この要件は、テクスチャで透明性または透光性を使用しない場合でも同様です。 前乗算されたアルファの詳細については、「[方法: 前乗算されたアルファを持つテクスチャをエクスポートする](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)」を参照してください。
 
 -   テクスチャは次のいずれかのブロック圧縮形式の *.dds* ファイルで提供する必要があります。
 
@@ -51,7 +50,7 @@ Direct2D のコンテキストで使用するテクスチャは、次に示す D
 
 ### <a name="to-create-a-texture-thats-compatible-with-direct2d-rendering-conventions"></a>Direct2D のレンダリング規則に準拠したテクスチャを作成するには
 
-1. 基本的なテクスチャを作成します。 既存のイメージを読み込むか、「[方法: 基本テクスチャを作成する](../designers/how-to-create-a-basic-texture.md)」の手順に従って新しいイメージを作成します。 *.dds* 形式でブロック圧縮をサポートするには、100 x 100、128 x 128、256 x 192 など、サイズの幅と高さが 4 の倍数であるテクスチャを指定します。 MIPMAP はサポートされていないため、テクスチャは正方形である必要がなく、サイズも 2 の累乗である必要はありません。
+1. 基本的なテクスチャを作成します。 既存のイメージを読み込むか、「[方法: 基本的なテクスチャを作成する](../designers/how-to-create-a-basic-texture.md)」の手順に従ってイメージ ファイルを作成します。 *.dds* 形式でブロック圧縮をサポートするには、100 x 100、128 x 128、256 x 192 など、サイズの幅と高さが 4 の倍数であるテクスチャを指定します。 MIPMAP はサポートされていないため、テクスチャは正方形である必要がなく、サイズも 2 の累乗である必要はありません。
 
 2. イメージ コンテンツ パイプラインによって処理されるようにテクスチャ ファイルを構成します。 **ソリューション エクスプローラー**で、先ほど作成したテクスチャ ファイルのショートカット メニューを開き、**[プロパティ]** をクリックします。 **[構成プロパティ]** > **[全般]** ページの順に進み、**[項目の種類]** を **[Image Content Pipeline]\(イメージ コンテンツ パイプライン\)** に設定します。 **[コンテンツ]** が **[はい]** に、**[ビルドから除外]** が **[いいえ]** に設定されていることを確認し、**[適用]** ボタンをクリックします。 **[イメージ コンテンツ パイプライン]** の構成プロパティ ページが表示されます。
 

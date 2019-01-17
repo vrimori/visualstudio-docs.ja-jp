@@ -1,8 +1,6 @@
 ---
 title: コンソールを使用して JavaScript のデバッグ |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - VS.WebClient.JavaScriptConsole
@@ -17,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c76f9c533fd83584c12f03b4e0c0f1d44e281c8e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: d97b7d8a4143ba48e0b5c411539deeb85a0cd70f
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49861827"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53840383"
 ---
 # <a name="debug-javascript-using-the-console-in-visual-studio"></a>Visual Studio でコンソールを使用して JavaScript をデバッグします。
   
@@ -45,7 +43,7 @@ ms.locfileid: "49861827"
 > [!TIP]
 >  閉じた JavaScript コンソール ウィンドウを再び開くには、 **[デバッグ]**> **[ウィンドウ]** > **JavaScript コンソール** の順に選びます。 このウィンドウは、スクリプトのデバッグ セッション中にのみ表示されます。  
   
- JavaScript コンソール ウィンドウを使用すると、デバッガーを停止/再起動することなくアプリと対話することができます。 詳細については、次を参照してください。[アプリの更新 (JavaScript)](../debugger/refresh-an-app-javascript.md)します。 その他の JavaScript のデバッグ、DOM Explorer を使用して、ブレークポイントの設定などの機能の詳細についてを参照してください。[クイック スタート: デバッグの HTML および CSS](../debugger/quickstart-debug-html-and-css.md)と[Visual Studio でアプリをデバッグ](../debugger/debug-store-apps-in-visual-studio.md)します。  
+ JavaScript コンソール ウィンドウを使用すると、デバッガーを停止/再起動することなくアプリと対話することができます。 詳細については、次を参照してください。[アプリの更新 (JavaScript)](../debugger/refresh-an-app-javascript.md)します。 その他の JavaScript のデバッグ、DOM Explorer を使用して、ブレークポイントの設定などの機能の詳細についてを参照してください。[クイック スタート。HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)と[Visual Studio でアプリをデバッグ](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)します。  
   
 ##  <a name="InteractiveConsole"></a> JavaScript コンソール ウィンドウを使用したデバッグ  
  次の手順では、 `FlipView` アプリを作成し、JavaScript のコード エラーを対話的にデバッグする方法を示します。  
@@ -181,7 +179,7 @@ ms.locfileid: "49861827"
   
 13. スクリプトを実行するには、緑色の矢印をクリックします。  
   
-14. クリックして、コンソール入力プロンプトを単一行モードに切り替えるには Ctrl + Alt + M キーを押して**入力のクリア**(赤い"X")、入力プロンプトからコードを削除します。  
+14. Ctrl + Alt + M キーを押して、コンソール入力プロンプトを単一行モードに切り替え、次に **[入力のクリア]** (赤い "X") をクリックして、入力プロンプトからコードを削除します。  
   
 15. プロンプトで `Data.items.length = 3` を入力し、Enter キーを押します。 これにより、データから余分な要素が削除されます。  
   
@@ -191,7 +189,7 @@ ms.locfileid: "49861827"
   
 18. **[デバッグ]** > **Stop [デバッグ]ging** の順にクリックするか、または Shift + F5 キーを押してデバッグを停止し、ソース コードを修正します。  
   
-     サンプル コードを修正、含む default.html ページ全体を参照してください[デバッグ HTML、CSS、および JavaScript サンプル コード](../debugger/debug-html-css-and-javascript-sample-code.md)します。  
+     修正後のサンプル コードを含む default.html ページ全体については、「[HTML、CSS、および JavaScript サンプル コードのデバッグ](../debugger/debug-html-css-and-javascript-sample-code.md)」を参照してください。  
   
 ##  <a name="InteractiveDebuggingBreakMode"></a> 対話形式のデバッグと中断モード  
  JavaScript コンソール ウィンドウなどの JavaScript デバッグ ツールの使用中は、ブレークポイントを使用し、コードにステップ インできます。 デバッガーで実行しているプログラムがブレークポイントに達すると、デバッガーは一時的にプログラムの実行を中断します。 実行が中断されると、プログラムは実行モードから中断モードに切り替わります。 いつでも実行を再開できます。  
@@ -239,7 +237,7 @@ ms.locfileid: "49861827"
   
  単一行モードでは入力履歴が提供されます。 上方向キーと下方向キーを使用して、入力履歴内を移動できます。 単一行モードでは、スクリプトを実行すると入力プロンプトがクリアされます。 単一行モードでスクリプトを実行するには、Enter キーを押します。  
   
- 複数行モードでは、スクリプトを実行しても入力プロンプトはクリアされません。 複数行モードから単一行モードに切り替えると、キーを押して、入力行をクリアできます**入力のクリア**(赤い"X")。 複数行モードでスクリプトを実行するには、Ctrl + Enter キーを押すか、またはウィンドウの右下隅の矢印を選びます。  
+ 複数行モードでは、スクリプトを実行しても入力プロンプトはクリアされません。 複数行モードから単一行モードに切り替えたときは、**[入力のクリア]** (赤い "X") を押すと、入力行をクリアできます。 複数行モードでスクリプトを実行するには、Ctrl + Enter キーを押すか、またはウィンドウの右下隅の矢印を選びます。  
   
 ##  <a name="Switching"></a> スクリプトの実行コンテキストの切り替え  
  JavaScript コンソール ウィンドウを使用すると、1 回につき、Web プラットフォーム ホスト (WWAHost.exe) の単一インスタンスを表す 1 つの実行コンテキストと対話することができます。 一部のシナリオでは (たとえば `iframe`、共有コントラクト、Web ワーカー、 `WebView` コントロールなどを使用する場合)、アプリがホストの別のインスタンスを起動することがあります。 ホストの別のインスタンスが実行中の場合は、 **[ターゲット]** リストから実行コンテキストを選択すると、アプリを実行したまま、別の実行コンテキストを選択できます。  
@@ -250,12 +248,12 @@ ms.locfileid: "49861827"
   
  `cd` コマンドを使用して実行コンテキストを切り替えることもできますが、別の実行コンテキストの名前を知っている必要があります。また、使用する参照がスコープ内になければなりません。 **[ターゲット]** リストを使用すると、別の実行コンテキストに簡単にアクセスできます。   
   
-## <a name="see-also"></a>関連項目  
- [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
+## <a name="see-also"></a>「  
+ [Debug apps in Visual Studio](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)   
  [JavaScript Console commands](../debugger/javascript-console-commands.md)   
  [アプリの更新 (JavaScript)](../debugger/refresh-an-app-javascript.md)   
  [キーボード ショートカット](../debugger/keyboard-shortcuts-html-and-javascript.md)   
- [HTML、CSS、および JavaScript サンプル コードをデバッグします。](../debugger/debug-html-css-and-javascript-sample-code.md)   
- [クイック スタート: HTML と CSS をデバッグします。](../debugger/quickstart-debug-html-and-css.md)   
- [WebView コントロールをデバッグします。](../debugger/debug-a-webview-control.md)   
+ [HTML、CSS、および JavaScript サンプル コードのデバッグ](../debugger/debug-html-css-and-javascript-sample-code.md)   
+ [クイック スタート:HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)   
+ [WebView コントロールのデバッグ](../debugger/debug-a-webview-control.md)   
  [製品のサポートとユーザー補助](https://visualstudio.microsoft.com/vs/support/)

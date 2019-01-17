@@ -3,19 +3,18 @@ title: R でのデータの視覚化
 description: Visual Studio でプロット ウィンドウを使って R プログラムからデータをプロットする方法を説明します。
 ms.date: 06/29/2017
 ms.prod: visual-studio-dev15
-ms.technology: vs-rtvs
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: f44ba213defef153acd2f5d1ef247bb093448263
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 8b0c633e3236f537e9f631df12a5af597e67475c
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36235326"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53859082"
 ---
 # <a name="create-visual-data-plots-with-r"></a>R でデータを視覚化する
 

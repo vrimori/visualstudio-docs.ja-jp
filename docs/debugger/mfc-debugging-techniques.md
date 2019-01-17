@@ -1,8 +1,6 @@
 ---
 title: MFC のデバッグ手法 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - AfxEnableMemoryTracking
@@ -27,12 +25,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bb41fbf0fc4a41a5cf45d68f6453f2ef6ebdd6c
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.openlocfilehash: a2bfc9e9c45e7bf3413c1733dd57534f3675a2f4
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50219940"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53832218"
 ---
 # <a name="mfc-debugging-techniques"></a>MFC のデバッグ技術
 MFC プログラムをデバッグする場合は、次のデバッグ技術が役立ちます。  
@@ -99,7 +97,7 @@ TRACE( "x = %d and y = %d\n", x, y );
 TRACE( "x = %d and y = %x and z = %f\n", x, y, z );  
 ```  
 
- TRACE マクロは、char *、wchar_t の両方に適切に処理\*パラメーター。 TRACE マクロと異なる型の文字列パラメーターを組み合わせて使用する例を次に示します。  
+ TRACE マクロでは、char* パラメーターと wchar_t\* パラメーターの両方が適切に処理されます。 TRACE マクロと異なる型の文字列パラメーターを組み合わせて使用する例を次に示します。  
 
 ```cpp
 TRACE( "This is a test of the TRACE macro that uses an ANSI string: %s %d\n", "The number is:", 2);  
@@ -158,7 +156,7 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
 
 ###  <a name="BKMK_Taking_memory_snapshots"></a> メモリのスナップショットの取得  
 
-1.  [CMemoryState](/previous-versions/visualstudio/visual-studio-2010/2ads32e2(v=vs.100)) オブジェクトを作成し、 [CMemoryState::Checkpoint](/cpp/mfc/reference/cmemorystate-structure#checkpoint) メンバー関数を呼び出します。 これにより、メモリの最初のスナップショットが作成されます。  
+1. [CMemoryState](/previous-versions/visualstudio/visual-studio-2010/2ads32e2(v=vs.100)) オブジェクトを作成し、 [CMemoryState::Checkpoint](/cpp/mfc/reference/cmemorystate-structure#checkpoint) メンバー関数を呼び出します。 これにより、メモリの最初のスナップショットが作成されます。  
 
 2. プログラムでメモリの割り当てと解放が行われた後、別の `CMemoryState` オブジェクトを作成し、このオブジェクトの `Checkpoint` を呼び出します。 これにより、メモリ状態の 2 番目のスナップショットが取得されます。  
 
@@ -337,7 +335,7 @@ Phone #: 581-0215
 
  **非オブジェクトへの割り当て**  
 
- 割り当てには、 `CPerson`などのオブジェクトへの割り当てと、非オブジェクトへの割り当てがあります。 「非オブジェクトへの割り当て」は、オブジェクトから派生していないために割り当て`CObject`など、C のプリミティブ型の割り当てまたは`char`、 `int`、または`long`します。 **CObject** の派生クラスによって内部バッファーなどの領域が追加で割り当てられる場合、これらのオブジェクトについては、オブジェクトへの割り当てと非オブジェクトへの割り当ての両方が表示されます。  
+ 割り当てには、 `CPerson`などのオブジェクトへの割り当てと、非オブジェクトへの割り当てがあります。 "非オブジェクトへの割り当て" とは、`CObject` から派生していないオブジェクトに対する割り当て、または C のプリミティブ型 (`char`、`int`、`long` など) に対する割り当てのことです。 **CObject** の派生クラスによって内部バッファーなどの領域が追加で割り当てられる場合、これらのオブジェクトについては、オブジェクトへの割り当てと非オブジェクトへの割り当ての両方が表示されます 。  
 
  **メモリ リークの防止**  
 
@@ -432,9 +430,9 @@ pMyPerson->Dump( afxDump );
 
 3. まず、新しいプロジェクト構成を作成します。  
 
-   1.  **\<プロジェクト > プロパティ ページ**ダイアログ ボックスで、をクリックして、 **Configuration Manager**ボタンをクリックします。  
+   1.  **\<[プロジェクト > プロパティ ページ]** ダイアログ ボックスで、**[構成マネージャー]** ボタンをクリックします。  
 
-   2.  [[構成マネージャー] ダイアログ ボックス](/previous-versions/visualstudio/visual-studio-2010/t1hy4dhz(v=vs.100))のグリッド内でプロジェクトを見つけます。 **構成**列で、 **\<新規作成 >** します。  
+   2.  [[構成マネージャー] ダイアログ ボックス](/previous-versions/visualstudio/visual-studio-2010/t1hy4dhz(v=vs.100))のグリッド内でプロジェクトを見つけます。 **[構成]** 列の **[\<新規作成]** を選択します。  
 
    3.  [[新規プロジェクト構成] ダイアログ ボックス](/previous-versions/visualstudio/visual-studio-2010/0eh8w4cf(v=vs.100))の **[Project Configuration Name]** ボックスに、新しいプロジェクト構成に付ける名前を "Partial Debug" のように入力します。  
 
@@ -470,11 +468,11 @@ pMyPerson->Dump( afxDump );
 
    4.  **[プロパティ ページ]** ダイアログ ボックスで、 **[構成プロパティ]** フォルダーの下の **[C/C++]** フォルダーを開き、 **[全般]** カテゴリを選択します。  
 
-   5.  プロパティ グリッドで検索**デバッグ情報の形式。**  
+   5.  プロパティ グリッドで、**[デバッグ情報の形式]** を見つけます。  
 
    6.  **[デバッグ情報の形式]** の設定値をクリックし、デバッグ情報のオプション (通常は **/ZI**) を選択します。  
 
-   7.  アプリケーション ウィザードで生成されたアプリケーションを使用している場合や、プリコンパイル済みヘッダーがある場合は、他のモジュールをコンパイルする前に、プリコンパイル済みヘッダーを無効にするか再コンパイルする必要があります。 この処理を行わないと、警告メッセージ C4650 とエラー メッセージ C2855 が表示されます。 プリコンパイル済みヘッダーをオフするには、変更することで、**プリコンパイル済みヘッダーの作成/使用**での設定、 **\<プロジェクト > プロパティ** ダイアログ ボックス (**構成プロパティ**フォルダー、 **C/C++** サブフォルダー、**プリコンパイル済みヘッダー**カテゴリ)。  
+   7.  アプリケーション ウィザードで生成されたアプリケーションを使用している場合や、プリコンパイル済みヘッダーがある場合は、他のモジュールをコンパイルする前に、プリコンパイル済みヘッダーを無効にするか再コンパイルする必要があります。 この処理を行わないと、警告メッセージ C4650 とエラー メッセージ C2855 が表示されます。 プリコンパイル ヘッダーを無効にするには、**[\<プロジェクト> プロパティ ページ]** ダイアログ ボックス (**[構成プロパティ]** フォルダーの **[C/C++]** サブフォルダーにある **[プリコンパイル済みヘッダー]** カテゴリ) の **[プリコンパイル済みヘッダーの作成/使用]** 設定を変更します。  
 
 7. **[ビルド]** メニューの **[ビルド]** をクリックし、最新ではないプロジェクト ファイルをリビルドします。  
 
@@ -482,5 +480,5 @@ pMyPerson->Dump( afxDump );
 
    [このトピックの内容](#BKMK_In_this_topic)  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Visual C++ のデバッグ](../debugger/debugging-native-code.md)

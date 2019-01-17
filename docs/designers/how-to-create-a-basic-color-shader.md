@@ -2,7 +2,6 @@
 title: '方法: 基本カラー シェーダーを作成する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: c301328a-079a-49e8-b688-4749c01657c0
 author: gewarren
@@ -10,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 88a5b14d98dc9459aa0d0f87a4ddba52de18ac06
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: d81bbc96e2191d7e637c63a3d28364f957ed5e55
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924357"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53950856"
 ---
 # <a name="how-to-create-a-basic-color-shader"></a>方法: 基本カラー シェーダーを作成する
 

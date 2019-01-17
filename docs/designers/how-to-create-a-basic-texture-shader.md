@@ -1,8 +1,7 @@
 ---
-title: '方法: 基本テクスチャ シェーダーを作成する'
+title: '方法: 基本的なテクスチャ シェーダーを作成する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
-ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 5af113fb-6415-4be0-8b23-10fddb10e80a
 author: gewarren
@@ -10,14 +9,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 211da971bc7e4e275ef43b88531fe46a7fc0b4eb
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: 85de6bcaa4b3b62c9a3ad03464d9b95cb0134a6e
+ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924067"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53946069"
 ---
-# <a name="how-to-create-a-basic-texture-shader"></a>方法: 基本テクスチャ シェーダーを作成する
+# <a name="how-to-create-a-basic-texture-shader"></a>方法: 基本的なテクスチャ シェーダーを作成する
 
 この記事では、シェーダー デザイナーと DGSL (Directed Graph Shader Language) を使用して単一テクスチャ シェーダーを作成する方法を説明します。 このシェーダーは、テクスチャからサンプリングされる RGB とアルファ値に直接最終的な色を設定します。
 
@@ -55,6 +54,6 @@ ms.locfileid: "37924067"
 ## <a name="see-also"></a>関連項目
 
 - [方法: シェーダーを 3D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
-- [イメージ エディター](../designers/image-editor.md)
+- [Image Editor](../designers/image-editor.md)
 - [シェーダー デザイナー](../designers/shader-designer.md)
 - [シェーダー デザイナー ノード](../designers/shader-designer-nodes.md)
