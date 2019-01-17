@@ -1,5 +1,5 @@
 ---
-title: 予期される数 |Microsoft ドキュメント
+title: 数字が必要です |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,18 +21,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 46e6525a79ed866b9c714913f11fcbbe13066208
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633052"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54346125"
 ---
 # <a name="number-expected"></a>数字が必要です。
-呼び出そうとした、 **Number.prototype.toString**または**Number.prototype.valueOf**メソッド以外の型のオブジェクトを**数**です。 この呼び出し元のオブジェクト型でなければなりません**数**です。  
+呼び出そうとしたか、 **Number.prototype.toString**または**Number.prototype.valueOf**メソッド以外の型のオブジェクトを**数**します。 呼び出し元のオブジェクト型でなければなりません**数**します。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   のみを呼び出す、 **Number.prototype.toString**または**Number.prototype.valueOf**型のオブジェクトに対するメソッド**数**です。  
+-   のみを呼び出す、 **Number.prototype.toString**または**Number.prototype.valueOf**型のオブジェクトに対するメソッド**数**します。  
   
 ## <a name="see-also"></a>関連項目  
  [Number オブジェクト](../../javascript/reference/number-object-javascript.md)   

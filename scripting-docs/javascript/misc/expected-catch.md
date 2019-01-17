@@ -21,11 +21,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 244635605abafc5c0bd22c5203b105aa6e7dc669
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53801984"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54344110"
 ---
 # <a name="expected-catch"></a>catch が必要です。
 例外処理を使用した**お試しください**ブロックしますが、関連付けられているによって記述されていない**キャッチ**ステートメント。 例外処理メカニズムでは、例外が発生する場合に実行する必要がありますコードと共に、エラーがコード内でラップしている必要があります、**お試しください**ブロックします。 内から例外がスローされた、**を再試行してください**ブロックを使用して、**スロー**ステートメントでは、外部キャッチし、**お試しください**1 つまたは複数のブロック**をキャッチ**ステートメント。  

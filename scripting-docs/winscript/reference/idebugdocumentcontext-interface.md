@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext インターフェイス |Microsoft ドキュメント
+title: IDebugDocumentContext インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 432fbe9de5b1ab19c64ae1b9eeee36f3b1156d06
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 998a219e8a58927ca62ec90e6b105586a64bbf2b
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24726232"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349583"
 ---
 # <a name="idebugdocumentcontext-interface"></a>IDebugDocumentContext インターフェイス
-デバッグ中のドキュメントの一部の抽象表現を提供します。 テキスト ドキュメントのこの表現は、文字位置の範囲で構成されます。  
+デバッグ中のドキュメントの一部分の抽象表現を提供します。 テキストのドキュメントのこの表現は、文字位置の範囲で構成されます。  
   
  継承されたメソッドだけでなく`IUnknown`、`IDebugDocumentContext`インターフェイスは、次のメソッドを公開します。  
   
@@ -31,4 +31,4 @@ ms.locfileid: "24726232"
 |メソッド|説明|  
 |------------|-----------------|  
 |[IDebugDocumentContext::GetDocument](../../winscript/reference/idebugdocumentcontext-getdocument.md)|このコンテキストを含むドキュメントを返します。|  
-|[IDebugDocumentContext::EnumCodeContexts](../../winscript/reference/idebugdocumentcontext-enumcodecontexts.md)|このドキュメントのコンテキストに関連付けられているコードのコンテキストを列挙します。|
+|[IDebugDocumentContext::EnumCodeContexts](../../winscript/reference/idebugdocumentcontext-enumcodecontexts.md)|このドキュメントのコンテキストに関連付けられたコード コンテキストを列挙します。|

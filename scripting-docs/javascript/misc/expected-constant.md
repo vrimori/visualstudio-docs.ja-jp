@@ -1,5 +1,5 @@
 ---
-title: 定数が |Microsoft ドキュメント
+title: 定数が必要です |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,18 +21,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: a7cd9907da27ac07ff9e1c41157c2b2e08ef82ab
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24632942"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54344318"
 ---
 # <a name="expected-constant"></a>定数が必要です。
-条件付きコンパイル ステートメントのテストで (条件なしのコンパイル) 変数を使用しようとしました。 条件付きコンパイル テスト ステートメントは、定数に評価される必要があります。  
+ステートメントが条件付きコンパイルのテストで (条件なしのコンパイル) の変数を使用しようとしました。 条件付きコンパイルのテストのステートメントは、定数に評価する必要があります。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   変数、リテラルに置換します。  
+-   リテラル、変数を置換します。  
   
 -   変数は、条件付きコンパイル変数で置き換えます。  
   

@@ -1,5 +1,5 @@
 ---
-title: IDebugFormatter インターフェイス |Microsoft ドキュメント
+title: IDebugFormatter インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 97f95aa1ecb91f6caca187939a79a6f09cd2108f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 353a85ab51252c92086fa478d95b2e29ab3db62d
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729172"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54348036"
 ---
 # <a name="idebugformatter-interface"></a>IDebugFormatter インターフェイス
-使用する言語または IDE バリアント値または VARTYPE 型と文字列の間の変換をカスタマイズします。  
+VARIANT 値または VARTYPE 型と文字列の間の変換を、言語または IDE がカスタマイズできるようにします。  
   
  継承されたメソッドだけでなく`IUnknown`、`IDebugFormatter`インターフェイスは、次のメソッドを公開します。  
   

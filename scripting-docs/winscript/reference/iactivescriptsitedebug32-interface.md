@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteDebug32 インターフェイス |Microsoft ドキュメント
+title: IActiveScriptSiteDebug32 インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.assetid: 03f42217-303d-46e7-9792-61a5ab95252c
 caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: a752851aa6afd903747dc58fed79d2bc5b27e3e8
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: e7937311e01274570e34bd639a0dc5f68206a3aa
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725122"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345566"
 ---
 # <a name="iactivescriptsitedebug32-interface"></a>IActiveScriptSiteDebug32 インターフェイス
-スマート ホストの実装、`IActiveScriptSiteDebug32`インターフェイス ドキュメントの管理を実行して、デバッグに参加します。 `IActiveScriptSite`オブジェクトが通常の実装を提供、`IActiveScriptSiteDebug32`インターフェイスです。 これを行う場合、`IActiveScriptSite::QueryInterface`を取得するメソッド、`IActiveScriptSiteDebug32`インターフェイスです。  
+スマート ホストの実装、`IActiveScriptSiteDebug32`ドキュメント管理を実行して、デバッグに参加するインターフェイス。 `IActiveScriptSite`オブジェクトは、通常の実装を提供します。、`IActiveScriptSiteDebug32`インターフェイス。 この場合、呼び出し、`IActiveScriptSite::QueryInterface`メソッドを取得する、`IActiveScriptSiteDebug32`インターフェイス。  
   
  継承されたメソッドだけでなく`IUnknown`、`IActiveScriptSiteDebug32`インターフェイスは、次のメソッドを公開します。  
   
@@ -26,5 +26,5 @@ ms.locfileid: "24725122"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IActiveScriptSiteDebug32::GetApplication](../../winscript/reference/iactivescriptsitedebug32-getapplication.md)|このスクリプトのサイトに関連付けられているデバッグ アプリケーションのオブジェクトを返します。|  
-|[IActiveScriptSiteDebug32::GetDocumentContextFromPosition](../../winscript/reference/iactivescriptsitedebug32-getdocumentcontextfromposition.md)|デリゲートを言語エンジンで使用される`IDebugCodeContext::GetSourceContext`です。|
+|[IActiveScriptSiteDebug32::GetApplication](../../winscript/reference/iactivescriptsitedebug32-getapplication.md)|このスクリプトのサイトに関連付けられたデバッグ アプリケーション オブジェクトを返します。|  
+|[IActiveScriptSiteDebug32::GetDocumentContextFromPosition](../../winscript/reference/iactivescriptsitedebug32-getdocumentcontextfromposition.md)|委任に、言語エンジンによって使用される`IDebugCodeContext::GetSourceContext`します。|

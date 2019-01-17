@@ -1,5 +1,5 @@
 ---
-title: 例外がスローされ、キャッチされませんでした |。Microsoft ドキュメント
+title: 例外がスローされキャッチされない |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,24 +21,24 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 839ff08da4d26406b508a206c809b0813d2b32e1
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633122"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349037"
 ---
 # <a name="exception-thrown-and-not-caught"></a>例外がスローされ、キャッチされませんでした。
-含まれている、`throw`内では、コード内のステートメントが囲まれていない、**を再試行してください**ブロック、か、関連付けられていませんが**キャッチ**エラーをトラップするブロック。 内から例外がスローされます、**を再試行してください**ブロックを使用して、**スロー**ステートメントでは、外部キャッチし、**を再試行してください**ブロックを**キャッチ**ステートメント。  
+含まれていること、`throw`内では、コード内のステートメントが囲まれていない、**お試しください**ブロック、または関連付けられていませんが**キャッチ**エラーをトラップするブロック。 内から例外がスローされた、**を再試行してください**ブロックを使用して、**スロー**ステートメントでは、外キャッチし、**お試しください**でブロック、**キャッチ**ステートメント。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   例外をスローするコードを囲む、**を再試行してください**がありますが、対応することを確認して、ブロック**キャッチ**ブロックします。  
+-   例外をスローするコードを囲む、**お試しください**がありますが、対応することを確認して、ブロック**キャッチ**ブロックします。  
   
--   Catch ステートメントに正しい形式の例外が必要ですが確認してください。  
+-   Catch ステートメントを例外の正しい形式の想定を確認します。  
   
--   例外が再度スローされ場合、は、別の対応する catch ステートメントがあることを確認してください。  
+-   場合は、例外を再スローすると、別の対応する catch ステートメントがあることを確認します。  
   
 ## <a name="see-also"></a>関連項目  
  [Error オブジェクト](../../javascript/reference/error-object-javascript.md)   
- [throw ステートメント](../../javascript/reference/throw-statement-javascript.md)   
+ [Throw ステートメント](../../javascript/reference/throw-statement-javascript.md)   
  [try… catch… finally ステートメント](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)

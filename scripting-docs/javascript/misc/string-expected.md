@@ -1,5 +1,5 @@
 ---
-title: 文字列が必要です |Microsoft ドキュメント
+title: 文字列が必要です |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,19 +21,19 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: d2dabf754b2bfb4b20555b41457df04d54a5c31c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24632802"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54346801"
 ---
 # <a name="string-expected"></a>文字列が必要です。
-呼び出そうとした、 **String.prototype.toString**または**String.prototype.valueOf**メソッド以外の型のオブジェクトを`String`です。 この呼び出し元のオブジェクト型でなければなりません`String`です。  
+呼び出そうとしたか、 **String.prototype.toString**または**String.prototype.valueOf**メソッド以外の型のオブジェクトを`String`します。 呼び出し元のオブジェクト型でなければなりません`String`します。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   のみを呼び出す、 **String.prototype.toString**または**String.prototype.valueOf**型のオブジェクトに対するメソッド`String`です。  
+-   のみを呼び出す、 **String.prototype.toString**または**String.prototype.valueOf**型のオブジェクトに対するメソッド`String`します。  
   
 ## <a name="see-also"></a>関連項目  
- [String オブジェクト](../../javascript/reference/string-object-javascript.md)   
+ [文字列オブジェクト](../../javascript/reference/string-object-javascript.md)   
  [toString メソッド (Object)](../../javascript/reference/tostring-method-object-javascript.md)

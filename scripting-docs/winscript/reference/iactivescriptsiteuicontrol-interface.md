@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteUIControl インターフェイス |Microsoft ドキュメント
+title: IActiveScriptSiteUIControl インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -12,12 +12,12 @@ caps.latest.revision: 2
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8563137c855a9c602b817967e610be6a7e4f5e27
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 39f763a4153671628dbdcf9867629309f7458b33
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724922"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54348335"
 ---
 # <a name="iactivescriptsiteuicontrol-interface"></a>IActiveScriptSiteUIControl インターフェイス
 UI コントロールの動作を取得するメソッドを提供します。  
@@ -26,4 +26,4 @@ UI コントロールの動作を取得するメソッドを提供します。
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IActiveScriptSiteUIControl::GetUIBehavior メソッド](../../winscript/reference/iactivescriptsiteuicontrol-getuibehavior-method.md)|取得、 [SCRIPTUICHANDLING 列挙型](../../winscript/reference/scriptuichandling-enumeration.md)を表す、UI コントロールの処理方法。|
+|[IActiveScriptSiteUIControl::GetUIBehavior メソッド](../../winscript/reference/iactivescriptsiteuicontrol-getuibehavior-method.md)|取得、 [SCRIPTUICHANDLING 列挙型](../../winscript/reference/scriptuichandling-enumeration.md)UI コントロールの処理方法を表します。|

@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx メソッド |Microsoft ドキュメント
+title: IDispatchEx メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,25 +14,25 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7a57a983acb2d63cfe5f5b2d9b66e1cace7d98d2
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 7abe9f1b7832706040fabb7f65754c518f2b1742
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727642"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54347802"
 ---
 # <a name="idispatchex-methods"></a>IDispatchEx メソッド
 IDispatchEx メソッドを次に示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [IDispatchEx::DeleteMemberByDispID](../../winscript/reference/idispatchex-deletememberbydispid.md)  
- DISPID でメンバーを削除します。  
+ メンバーの DISPID を削除します。  
   
  [IDispatchEx::DeleteMemberByName](../../winscript/reference/idispatchex-deletememberbyname.md)  
- 名前でメンバーを削除します。  
+ 名前では、メンバーを削除します。  
   
  [IDispatchEx::GetDispID](../../winscript/reference/idispatchex-getdispid.md)  
- 対応する DISPID、IDispatchEx::InvokeEx 後続の呼び出しのために使用するには、1 つのメンバー名をマップします。  
+ その対応するように DISPID を IDispatchEx::InvokeEx 後続の呼び出しのために使用する 1 つのメンバー名にマップします。  
   
  [IDispatchEx::GetMemberName](../../winscript/reference/idispatchex-getmembername.md)  
  メンバーの名前を取得します。  
@@ -41,13 +41,13 @@ IDispatchEx メソッドを次に示します。
  メンバーのプロパティを取得します。  
   
  [IDispatchEx::GetNameSpaceParent](../../winscript/reference/idispatchex-getnamespaceparent.md)  
- オブジェクトの名前空間の親のインターフェイスを取得します。  
+ 名前空間の親オブジェクトのインターフェイスを取得します。  
   
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)  
  オブジェクトのメンバーを列挙します。  
   
  [IDispatchEx::InvokeEx](../../winscript/reference/idispatchex-invokeex.md)  
- プロパティと IDispatchEx オブジェクトによって公開されたメソッドへのアクセスを提供します。  
+ プロパティと IDispatchEx オブジェクトによって公開されるメソッドへのアクセスを提供します。  
   
 ## <a name="related-sections"></a>関連項目  
  [IDispatchEx インターフェイス](../../winscript/reference/idispatchex-interface.md)

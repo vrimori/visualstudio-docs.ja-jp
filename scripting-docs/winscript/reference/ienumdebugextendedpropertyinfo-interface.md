@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugExtendedPropertyInfo インターフェイス |Microsoft ドキュメント
+title: IEnumDebugExtendedPropertyInfo インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,12 +18,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c46815ff1fadd359e3200223dfe9041b6089ad3b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 53e8c4c7a517415497b21f80d9bf469877d7888f
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728172"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54346034"
 ---
 # <a name="ienumdebugextendedpropertyinfo-interface"></a>IEnumDebugExtendedPropertyInfo インターフェイス
 列挙`ExtendedDebugPropertyInfo`構造体。  
@@ -33,13 +33,13 @@ ms.locfileid: "24728172"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IEnumDebugExtendedPropertyInfo::Clone](../../winscript/reference/ienumdebugextendedpropertyinfo-clone.md)|現在の列挙子と同じ列挙の状態を含む列挙子を作成します。|  
-|[IEnumDebugExtendedPropertyInfo::GetCount](../../winscript/reference/ienumdebugextendedpropertyinfo-getcount.md)|数を取得`ExtendedDebugPropertyInfo`構造体、列挙子にします。|  
-|[IEnumDebugExtendedPropertyInfo::Next](../../winscript/reference/ienumdebugextendedpropertyinfo-next.md)|指定した数を取得`ExtendedDebugPropertyInfo`列挙のシーケンス内の構造体。|  
-|[IEnumDebugExtendedPropertyInfo::Skip](../../winscript/reference/ienumdebugextendedpropertyinfo-skip.md)|指定した数のスキップ`ExtendedDebugPropertyInfo`列挙のシーケンス内の構造体。|  
+|[IEnumDebugExtendedPropertyInfo::Clone](../../winscript/reference/ienumdebugextendedpropertyinfo-clone.md)|現在の列挙子と同じ列挙状態を格納する列挙子を作成します。|  
+|[IEnumDebugExtendedPropertyInfo::GetCount](../../winscript/reference/ienumdebugextendedpropertyinfo-getcount.md)|数を取得`ExtendedDebugPropertyInfo`列挙子内の構造体。|  
+|[IEnumDebugExtendedPropertyInfo::Next](../../winscript/reference/ienumdebugextendedpropertyinfo-next.md)|指定した数を取得`ExtendedDebugPropertyInfo`列挙体シーケンス内の構造体。|  
+|[IEnumDebugExtendedPropertyInfo::Skip](../../winscript/reference/ienumdebugextendedpropertyinfo-skip.md)|指定した数のスキップ`ExtendedDebugPropertyInfo`列挙体シーケンス内の構造体。|  
 |[IEnumDebugExtendedPropertyInfo::Reset](../../winscript/reference/ienumdebugextendedpropertyinfo-reset.md)|列挙のシーケンスを最初にリセットします。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: dbgprop.h  
   
 ## <a name="see-also"></a>関連項目  

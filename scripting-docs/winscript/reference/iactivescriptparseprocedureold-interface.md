@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptParseProcedureOld インターフェイス |Microsoft ドキュメント
+title: IActiveScriptParseProcedureOld インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,25 +18,25 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 99cff9cd4d04c5d25489b6cc4c9b9af93792dc2a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: fa7ea909680afdb65004f47e458d735e82ead929
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724422"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349995"
 ---
 # <a name="iactivescriptparseprocedureold-interface"></a>IActiveScriptParseProcedureOld インターフェイス
-スクリプトに追加する手順については、ソース コードのテキストを使用できます。 これにより、VBScript などの独立した作成環境がない変換のスクリプト言語の代替手段 (以外の`IActiveScriptParse`または`IPersist*`) スクリプト プロシージャを名前空間に追加するのにします。  
+スクリプトに追加する手順については、ソース コードのテキストを使用できます。 これにより、解釈されたスクリプト言語 VBScript などの独立系のオーサリング環境がないための代替手段 (以外の`IActiveScriptParse`または`IPersist*`) 名前空間にスクリプトの手順を追加します。  
   
 > [!NOTE]
->  代わりにこのインターフェイスは推奨されません、`IActiveScriptParseProcedure`インターフェイスです。  
+>  このインターフェイスが好評だったの非推奨とされます、`IActiveScriptParseProcedure`インターフェイス。  
   
 ## <a name="methods"></a>メソッド  
  継承されたメソッドだけでなく`IUnknown`、`IActiveScriptParseProcedureOld`インターフェイスは、次のメソッドを公開します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IActiveScriptParseProcedureOld::ParseProcedureText](../../winscript/reference/iactivescriptparseprocedureold-parseproceduretext.md)|指定したコードのプロシージャを解析し、プロシージャを名前空間に追加します。|  
+|[IActiveScriptParseProcedureOld::ParseProcedureText](../../winscript/reference/iactivescriptparseprocedureold-parseproceduretext.md)|指定したコードのプロシージャを解析し、名前空間、プロシージャを追加します。|  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptParseProcedure](../../winscript/reference/iactivescriptparseprocedure.md)

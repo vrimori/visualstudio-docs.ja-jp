@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationThread インターフェイス |Microsoft ドキュメント
+title: IRemoteDebugApplicationThread インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -15,14 +15,14 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: f502749453e1701c8e6e52e69745408fdcd9812d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729742"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349713"
 ---
 # <a name="iremotedebugapplicationthread-interface"></a>IRemoteDebugApplicationThread インターフェイス
-特定のアプリケーション内の実行スレッドを表します。  
+特定のアプリケーション内の実行のスレッドを表します。  
   
  継承されたメソッドだけでなく`IUnknown`、`IRemoteDebugApplicationThread`インターフェイスは、次のメソッドを公開します。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "24729742"
 |[IRemoteDebugApplicationThread::GetApplication](../../winscript/reference/iremotedebugapplicationthread-getapplication.md)|このスレッドに関連付けられているアプリケーションのオブジェクトを返します。|  
 |[IRemoteDebugApplicationThread::EnumStackFrames](../../winscript/reference/iremotedebugapplicationthread-enumstackframes.md)|このスレッドに関連付けられているスタック フレームの列挙子を返します。|  
 |[IRemoteDebugApplicationThread::GetDescription](../../winscript/reference/iremotedebugapplicationthread-getdescription.md)|このスレッドの状態の説明を取得します。|  
-|[IRemoteDebugApplicationThread::SetNextStatement](../../winscript/reference/iremotedebugapplicationthread-setnextstatement.md)|強制的に実行の実行を指定したフレームのコンテキストで、指定したコードのコンテキストにできるだけ近い続行します。|  
+|[IRemoteDebugApplicationThread::SetNextStatement](../../winscript/reference/iremotedebugapplicationthread-setnextstatement.md)|特定のフレームのコンテキストで指定したコードのコンテキストにできるだけ近い、引き続き強制的に実行します。|  
 |[IRemoteDebugApplicationThread::GetState](../../winscript/reference/iremotedebugapplicationthread-getstate.md)|このスレッドの状態を取得します。|  
 |[IRemoteDebugApplicationThread::Suspend](../../winscript/reference/iremotedebugapplicationthread-suspend.md)|スレッドを中断します。|  
 |[IRemoteDebugApplicationThread::Resume](../../winscript/reference/iremotedebugapplicationthread-resume.md)|スレッドを再開します。|  

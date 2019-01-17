@@ -1,5 +1,5 @@
 ---
-title: IWebAppDiagnosticsObjectInitialization インターフェイス |Microsoft ドキュメント
+title: IWebAppDiagnosticsObjectInitialization インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,20 +14,20 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 159b81a336accea4e4e8c035119d5525de71ae90
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: c892d3eceea65f16c69bfd2202b1f64181773532
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24733862"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54348049"
 ---
 # <a name="iwebappdiagnosticsobjectinitialization-interface"></a>IWebAppDiagnosticsObjectInitialization インターフェイス
-このインターフェイスを実装するクラスで実装できます[IWebAppDiagnosticsSetup::CreateObjectWithSiteAtWebApp](../../winscript/reference/iwebappdiagnosticssetup-createobjectwithsiteatwebapp.md)です。 [IWebAppDiagnosticsSetup インターフェイス](../../winscript/reference/iwebappdiagnosticssetup-interface.md)を実装するオブジェクトによって実装される[IDebugApplication インターフェイス](../../winscript/reference/idebugapplication-interface.md)です。 ほとんどの場合は、このオブジェクトは、PDM は。  
+このインターフェイスを実装するクラスに実装できます[IWebAppDiagnosticsSetup::CreateObjectWithSiteAtWebApp](../../winscript/reference/iwebappdiagnosticssetup-createobjectwithsiteatwebapp.md)します。 [IWebAppDiagnosticsSetup インターフェイス](../../winscript/reference/iwebappdiagnosticssetup-interface.md)を実装するオブジェクトによって実装されます[IDebugApplication インターフェイス](../../winscript/reference/idebugapplication-interface.md)します。 ほとんどの場合は、このオブジェクトは、PDM は。  
   
- オブジェクトが作成された後[IWebAppDiagnosticsObjectInitialization::Initialize](../../winscript/reference/iwebappdiagnosticsobjectinitialization-initialize.md)が PDM デバッグ アプリケーションへの参照で呼び出されると、`hPassToObject`のパラメーター`CreateObjectWithSiteAtWebApp`です。  
+ オブジェクトが作成されたら、 [IWebAppDiagnosticsObjectInitialization::Initialize](../../winscript/reference/iwebappdiagnosticsobjectinitialization-initialize.md) PDM デバッグ アプリケーションへの参照を使用して呼び出したと`hPassToObject`パラメーターの`CreateObjectWithSiteAtWebApp`します。  
   
 > [!IMPORTANT]
->  `IWebAppDiagnosticsObjectInitialization`activdbg100.h に存在します。  
+>  `IWebAppDiagnosticsObjectInitialization` activdbg100.h にあります。  
   
 ## <a name="methods"></a>メソッド  
  このインターフェイスは、次のメソッドを公開します。  

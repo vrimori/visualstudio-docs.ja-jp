@@ -1,5 +1,5 @@
 ---
-title: IApplicationDebuggerUI インターフェイス |Microsoft ドキュメント
+title: IApplicationDebuggerUI インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dbaa04f6790ffc4d80447a6745ca82cc8dba6802
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: e3c5f9e4cabeb4fba31bb039a7cf673ca1759860
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725142"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54348907"
 ---
 # <a name="iapplicationdebuggerui-interface"></a>IApplicationDebuggerUI インターフェイス
-デバッガー統合開発環境 (IDE) によって実装される (他に、 `IApplicationDebugger`)、外部コンポーネントにデバッガーのユーザー インターフェイス (UI) より詳細に制御を提供します。  
+デバッガーの統合開発環境 (IDE) によって実装される (に加えて`IApplicationDebugger`)、外部コンポーネントに、デバッガーのユーザー インターフェイス (UI) より詳細に制御を提供します。  
   
  継承されたメソッドだけでなく`IUnknown`、`IApplicationDebuggerUI`インターフェイスは、次のメソッドを公開します。  
   
@@ -30,5 +30,5 @@ ms.locfileid: "24725142"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IApplicationDebuggerUI::BringDocumentToTop](../../winscript/reference/iapplicationdebuggerui-bringdocumenttotop.md)|デバッガーでは、最上位に指定されたデバッグ ドキュメントを含むウィンドウのユーザー インターフェイスを表示します。|  
-|[IApplicationDebuggerUI::BringDocumentContextToTop](../../winscript/reference/iapplicationdebuggerui-bringdocumentcontexttotop.md)|デバッガーのユーザー インターフェイスでは、最上位に指定されたドキュメントのコンテキストを含むウィンドウを表示し、コンテキストにウィンドウをスクロールします。|
+|[IApplicationDebuggerUI::BringDocumentToTop](../../winscript/reference/iapplicationdebuggerui-bringdocumenttotop.md)|デバッガーで最上位に指定されたデバッグ ドキュメントを含むウィンドウにユーザー インターフェイスを表示します。|  
+|[IApplicationDebuggerUI::BringDocumentContextToTop](../../winscript/reference/iapplicationdebuggerui-bringdocumentcontexttotop.md)|デバッガーのユーザー インターフェイスの上部に特定のドキュメント コンテキストを含むウィンドウを表示し、コンテキストにウィンドウをスクロールします。|

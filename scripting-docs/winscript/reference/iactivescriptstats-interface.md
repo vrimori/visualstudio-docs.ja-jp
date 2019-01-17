@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptStats インターフェイス |Microsoft ドキュメント
+title: IActiveScriptStats インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d459b89bde609dfdf5963d4b6b10b24db4706a7e
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: da69920ca78ad47e283fa8f99a28d037edbbe44d
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725052"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54350142"
 ---
 # <a name="iactivescriptstats-interface"></a>IActiveScriptStats インターフェイス
-スクリプトの実行の統計情報のクエリを実行するホストを許可します。 ホストは、この情報を使用して、スクリプトがかかりすぎて完了実行されるかどうかを判断します。  
+により、ホストは、スクリプトの実行の統計情報を照会します。 ホストは、スクリプトが完了に時間実行されるかどうかを決定するのに、この情報を使用できます。  
   
  継承されたメソッドだけでなく`IUnknown`、`IActiveScriptStats`インターフェイスは、次のメソッドを公開します。  
   
@@ -30,6 +30,6 @@ ms.locfileid: "24725052"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IActiveScriptStats::GetStat](../../winscript/reference/iactivescriptstats-getstat.md)|統計の標準的なスクリプトのいずれかを返します。|  
-|[IActiveScriptStats::GetStatEx](../../winscript/reference/iactivescriptstats-getstatex.md)|カスタム スクリプトの統計情報を返します。|  
+|[IActiveScriptStats::GetStat](../../winscript/reference/iactivescriptstats-getstat.md)|スクリプトの標準的な統計情報のいずれかを返します。|  
+|[IActiveScriptStats::GetStatEx](../../winscript/reference/iactivescriptstats-getstatex.md)|カスタム スクリプトの統計を返します。|  
 |[IActiveScriptStats::ResetStats](../../winscript/reference/iactivescriptstats-resetstats.md)|このスクリプトの統計をリセットします。|

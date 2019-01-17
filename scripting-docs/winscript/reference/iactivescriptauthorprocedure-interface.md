@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthorProcedure インターフェイス |Microsoft ドキュメント
+title: IActiveScriptAuthorProcedure インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,12 +14,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5676044e9adb17e0c477c40f9045c4a2bb656b89
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: bec6696a40868ad3cc64cf41efe5ab6bfc9d95ec
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24645632"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349622"
 ---
 # <a name="iactivescriptauthorprocedure-interface"></a>IActiveScriptAuthorProcedure インターフェイス
 継承されたメソッドだけでなく`IUnknown`、`IScriptAuthorProcedure`インターフェイスは、次のメソッドを公開します。  
@@ -28,7 +28,7 @@ ms.locfileid: "24645632"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IActiveScriptAuthorProcedure::ParseProcedureText](../../winscript/reference/iactivescriptauthorprocedure-parseproceduretext.md)|コードのプロシージャを解析し、エンジンを作成するスクリプトに、コードのプロシージャのテキストを追加し、作成、`IScriptEntry`コード プロシージャに対応するオブジェクト。|  
+|[IActiveScriptAuthorProcedure::ParseProcedureText](../../winscript/reference/iactivescriptauthorprocedure-parseproceduretext.md)|コード プロシージャを解析し、エンジンを作成するスクリプトにコード プロシージャのテキストを追加し、作成、`IScriptEntry`コード プロシージャに対応するオブジェクト。|  
   
 ## <a name="see-also"></a>関連項目  
  [アクティブ スクリプト作成インターフェイス](../../winscript/reference/active-script-authoring-interfaces.md)

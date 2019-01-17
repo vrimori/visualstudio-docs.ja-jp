@@ -1,5 +1,5 @@
 ---
-title: ラベルが見つかりません |。Microsoft ドキュメント
+title: ラベルが見つかりません |。Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,14 +21,14 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: df36f35b8e681c22e38f19b00fb25b680c6323ef
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633082"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54346976"
 ---
 # <a name="label-not-found"></a>このラベルが定義されていません。
-存在しないラベルへの参照が行われます。 ラベルは、ブロックは、指定されたスコープ内で、コードのマークに使用できる、一意である必要があります。  
+存在しないラベルへの参照を行ったとします。 ラベルは、ブロックが指定されたスコープ内で、コードのマークに使用できる、一意である必要があります。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   

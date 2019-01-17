@@ -1,5 +1,5 @@
 ---
-title: 再定義されたラベル |Microsoft ドキュメント
+title: 再定義されたラベル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,18 +21,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 6aff2415c08718e8b4ee82f817de337c9cda80f4
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633022"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54347815"
 ---
 # <a name="label-redefined"></a>ラベルが再定義されました
-新しいラベルを作成するが、既存のラベルの名前を付けます。 ラベルは、コードのブロックをマークするために使用できますが、指定されたスコープ内で、一意でなければなりません。  
+新しいラベルを作成することは、既存のラベルの名前を付けます。 コード ブロックをマークするラベルを使用できますが、指定されたスコープ内で、一意でなければなりません。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   プログラム内で使用するすべてのラベルが、それぞれのスコープ内で一意であることを確認します。  
+-   プログラムで使用するすべてのラベルが、それぞれのスコープ内で一意であることを確認します。  
   
 ## <a name="see-also"></a>関連項目  
  [ラベル付きステートメント](../../javascript/reference/labeled-statement-javascript.md)   

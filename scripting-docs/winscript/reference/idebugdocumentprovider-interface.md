@@ -15,11 +15,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: d775deb153205d0e9a452775272285c67e74a210
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49949865"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345215"
 ---
 # <a name="idebugdocumentprovider-interface"></a>IDebugDocumentProvider インターフェイス
 必要に応じてドキュメントをインスタンス化するための手段を提供します。  

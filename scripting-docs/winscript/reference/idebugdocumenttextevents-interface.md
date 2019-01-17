@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextEvents インターフェイス |Microsoft ドキュメント
+title: IDebugDocumentTextEvents インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,18 +14,18 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 078cd468b64d30c20f48a3392aa4509ed054fc3d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: bec89ae81d79fb7b0d822cafe2bf44f0ecd8ad81
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728002"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345660"
 ---
 # <a name="idebugdocumenttextevents-interface"></a>IDebugDocumentTextEvents インターフェイス
 関連付けられているテキスト ドキュメントへの変更を示すイベントを提供します。  
   
 > [!NOTE]
->  このイベント インターフェイスの起動時にドキュメントのテキストを変更します。 イベント ハンドラーを使用して新しいテキストを取得することがあります、`IDebugDocumentText`インターフェイスです。  
+>  ドキュメントのテキストは、このイベント インターフェイスを起動するときに変更します。 イベント ハンドラーを使用して新しいテキストを取得、`IDebugDocumentText`インターフェイス。  
   
  継承されたメソッドだけでなく`IUnknown`、`IDebugDocumentTextEvents`インターフェイスは、次のメソッドを公開します。  
   
@@ -33,9 +33,9 @@ ms.locfileid: "24728002"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IDebugDocumentTextEvents::onDestroy](../../winscript/reference/idebugdocumenttextevents-ondestroy.md)|基になるドキュメントが破棄されたことを示しますは無効になりました|  
+|[IDebugDocumentTextEvents::onDestroy](../../winscript/reference/idebugdocumenttextevents-ondestroy.md)|基になるドキュメントが破棄され、が無効になっていることを示します|  
 |[IDebugDocumentTextEvents::onInsertText](../../winscript/reference/idebugdocumenttextevents-oninserttext.md)|新しいテキストがドキュメントに追加されたことを示します|  
 |[IDebugDocumentTextEvents::onRemoveText](../../winscript/reference/idebugdocumenttextevents-onremovetext.md)|テキストがドキュメントから削除されたことを示します。|  
-|[IDebugDocumentTextEvents::onReplaceText](../../winscript/reference/idebugdocumenttextevents-onreplacetext.md)|テキストが置き換えられたことを示します。|  
-|[IDebugDocumentTextEvents::onUpdateTextAttributes](../../winscript/reference/idebugdocumenttextevents-onupdatetextattributes.md)|基になる文字の位置の範囲に関連付けられているテキスト属性が変更されたことを示します。|  
+|[IDebugDocumentTextEvents::onReplaceText](../../winscript/reference/idebugdocumenttextevents-onreplacetext.md)|テキストが置き換えられることを示します。|  
+|[IDebugDocumentTextEvents::onUpdateTextAttributes](../../winscript/reference/idebugdocumenttextevents-onupdatetextattributes.md)|基になる文字位置の範囲に関連付けられているテキストの属性が変更されたことを示します。|  
 |[IDebugDocumentTextEvents::onUpdateDocumentAttributes](../../winscript/reference/idebugdocumenttextevents-onupdatedocumentattributes.md)|ドキュメントの属性が変更されたことを示します。|

@@ -21,11 +21,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: c9e29131c4ecf4f476a30da94ec67676d6bea347
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49836178"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54346047"
 ---
 # <a name="expected-hexadecimal-digit"></a>16 進数の数字が必要です。
 正しくない Unicode エスケープ シーケンスを作成したとします。 (これ以上を指して) 厳密に 4 つの 16 進数字が続く \u の付いた Unicode エスケープ シーケンスを開始します。 Unicode 16 進数の数字は、0 ~ 9 の数字のみ、大文字 A ~ F、および、小文字アルファベット a ~ f を含めることができます。 次の例では、正しい形式の Unicode エスケープ シーケンスを示します。  

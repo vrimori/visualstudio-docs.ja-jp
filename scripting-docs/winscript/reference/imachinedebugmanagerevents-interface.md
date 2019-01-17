@@ -1,5 +1,5 @@
 ---
-title: IMachineDebugManagerEvents インターフェイス |Microsoft ドキュメント
+title: IMachineDebugManagerEvents インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 369dc8d182efe7bf9697454d0e4b1c9c1a10c027
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: f9aab3d7abeecd22e830c68f174896df0e7df2da
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727632"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54344033"
 ---
 # <a name="imachinedebugmanagerevents-interface"></a>IMachineDebugManagerEvents インターフェイス
-実行では、変更の通知は、machine デバッグ manager によって管理されるアプリケーションの一覧です。 このインターフェイスは、アプリケーションの動的な一覧を表示する、デバッガーの IDE で使用できます。  
+マシン デバッグ マネージャーによって管理されている実行中アプリケーションのリストの変更を通知します。 このインターフェイスは、アプリケーションの動的な一覧を表示するデバッガー IDE で使用できます。  
   
  継承されたメソッドだけでなく`IUnknown`、`IMachineDebugManagerEvents`インターフェイスは、次のメソッドを公開します。  
   
@@ -30,5 +30,5 @@ ms.locfileid: "24727632"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IMachineDebugManagerEvents::onAddApplication](../../winscript/reference/imachinedebugmanagerevents-onaddapplication.md)|アプリケーションが実行に追加されたときにイベントを処理するアプリケーションの一覧です。|  
-|[IMachineDebugManagerEvents::onRemoveApplication](../../winscript/reference/imachinedebugmanagerevents-onremoveapplication.md)|アプリケーションが実行中から削除されたときにイベントを処理するアプリケーションの一覧です。|
+|[IMachineDebugManagerEvents::onAddApplication](../../winscript/reference/imachinedebugmanagerevents-onaddapplication.md)|アプリケーションが、実行中に追加されたときにイベントを処理するアプリケーションの一覧。|  
+|[IMachineDebugManagerEvents::onRemoveApplication](../../winscript/reference/imachinedebugmanagerevents-onremoveapplication.md)|アプリケーションが実行から削除されたときにイベントを処理するアプリケーションの一覧。|

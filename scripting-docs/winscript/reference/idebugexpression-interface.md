@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression インターフェイス |Microsoft ドキュメント
+title: IDebugExpression インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 39e139e09362fc392d1110e26837c52fd4c642c4
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 9684253343aa83cf95f7d816781705eab7fbc327
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727792"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345519"
 ---
 # <a name="idebugexpression-interface"></a>IDebugExpression インターフェイス
-非同期的に評価される式を表します。 スクリプト エンジンは、通常、このインターフェイスを実装します。 通常、デバッガーの IDE は、即時実行ウィンドウを有効にするか、[ウォッチ] ウィンドウにこのインターフェイスを使用します。  
+非同期に評価される式を表します。 スクリプト エンジンは、通常、このインターフェイスを実装します。 デバッガー IDE は、通常、即時実行ウィンドウを有効にするか、[ウォッチ] ウィンドウにこのインターフェイスを使用します。  
   
 > [!NOTE]
 >  `IDebugExpression`インターフェイスはスタック フレームからのみ使用できます。  
@@ -35,6 +35,6 @@ ms.locfileid: "24727792"
 |------------|-----------------|  
 |[IDebugExpression::Start](../../winscript/reference/idebugexpression-start.md)|式の評価を開始します。|  
 |[IDebugExpression::Abort](../../winscript/reference/idebugexpression-abort.md)|式を中止します。|  
-|[IDebugExpression::QueryIsComplete](../../winscript/reference/idebugexpression-queryiscomplete.md)|操作が完了を決定します。|  
-|[IDebugExpression::GetResultAsString](../../winscript/reference/idebugexpression-getresultasstring.md)|文字列および操作の戻り値として式の評価の結果を返します。|  
-|[IDebugExpression::GetResultAsDebugProperty](../../winscript/reference/idebugexpression-getresultasdebugproperty.md)|デバッグ プロパティおよび操作の戻り値として式の評価の結果を返します。|
+|[IDebugExpression::QueryIsComplete](../../winscript/reference/idebugexpression-queryiscomplete.md)|操作の完了が決定します。|  
+|[IDebugExpression::GetResultAsString](../../winscript/reference/idebugexpression-getresultasstring.md)|文字列と操作の戻り値として式の評価の結果を返します。|  
+|[IDebugExpression::GetResultAsDebugProperty](../../winscript/reference/idebugexpression-getresultasdebugproperty.md)|デバッグ プロパティと操作の戻り値として式の評価の結果を返します。|

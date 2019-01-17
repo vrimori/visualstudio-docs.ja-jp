@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication110 インターフェイス |Microsoft ドキュメント
+title: IRemoteDebugApplication110 インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d384cea22b79b2a7ca9af3424d053fb3062d79a3
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: f280e2b869a3046ecb2d3fac37facdcc1bfeb7fb
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729542"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349882"
 ---
 # <a name="iremotedebugapplication110-interface"></a>IRemoteDebugApplication110 インターフェイス
-スクリプト デバッガーによって呼び出し可能とプロセスの呼び出し元新しい機能を提供するために使用します。  
+スクリプト デバッガーで呼び出すことができ、プロセスの呼び出し元の新しい機能を提供するために使用します。  
   
 > [!IMPORTANT]
 >  このインターフェイスは、PDM v11.0 以降によって実装されます。 activdbg100.h にあります。  
@@ -32,6 +32,6 @@ ms.locfileid: "24729542"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IRemoteDebugApplication110::SetDebuggerOptions](../../winscript/reference/iremotedebugapplication110-setdebuggeroptions.md)|デバッガーのオプションを更新するには、呼び出されます。 0 (SDO_NONE) オプションの既定値です。|  
+|[IRemoteDebugApplication110::SetDebuggerOptions](../../winscript/reference/iremotedebugapplication110-setdebuggeroptions.md)|デバッガーのオプションを更新するには、呼び出されます。 0 (SDO_NONE) に既定のオプション。|  
 |[IRemoteDebugApplication110::GetCurrentDebuggerOptions](../../winscript/reference/iremotedebugapplication110-getcurrentdebuggeroptions.md)|有効になっているオプションの現在のセットを返します。|  
-|[IRemoteDebugApplication110::GetMainThread](../../winscript/reference/iremotedebugapplication110-getmainthread.md)|SetSite を呼び出すホストのメイン スレッドを返します。|
+|[IRemoteDebugApplication110::GetMainThread](../../winscript/reference/iremotedebugapplication110-getmainthread.md)|SetSite を呼び出してホストのメイン スレッドを返します。|

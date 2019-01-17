@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext インターフェイス |Microsoft ドキュメント
+title: IDebugCodeContext インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ce8068a4d015adb576d8ec1c03e3edc0db26b304
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0840bf0a77a671bd2a37c49db48d1eb1cd5fa222
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725762"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349167"
 ---
 # <a name="idebugcodecontext-interface"></a>IDebugCodeContext インターフェイス
-実行可能コード内の位置を表す抽象化します。  
+実行可能コード内の位置を表す抽象化です。  
   
  継承されたメソッドだけでなく`IUnknown`、`IDebugCodeContext`インターフェイスは、次のメソッドを公開します。  
   
@@ -30,5 +30,5 @@ ms.locfileid: "24725762"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IDebugCodeContext::GetDocumentContext](../../winscript/reference/idebugcodecontext-getdocumentcontext.md)|このコードのコンテキストに関連付けられているドキュメントのコンテキストを返します。|  
+|[IDebugCodeContext::GetDocumentContext](../../winscript/reference/idebugcodecontext-getdocumentcontext.md)|このコードのコンテキストに関連付けられているドキュメント コンテキストを返します。|  
 |[IDebugCodeContext::SetBreakPoint](../../winscript/reference/idebugcodecontext-setbreakpoint.md)|設定またはこのコードのコンテキストにブレークポイントをクリアします。|

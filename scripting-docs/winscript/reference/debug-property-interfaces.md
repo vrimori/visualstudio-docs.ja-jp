@@ -1,5 +1,5 @@
 ---
-title: デバッグ プロパティ インターフェイス |Microsoft ドキュメント
+title: デバッグ プロパティ インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -15,15 +15,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b45800a1c8fa570299dc8950b3e8979fe949faaf
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 64e2aa684862d6b05b1a4051c31d23656a741c37
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24641182"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54344604"
 ---
 # <a name="debug-property-interfaces"></a>デバッグ プロパティ インターフェイス
-DbgProp.h ヘッダー ファイルでは、このセクションで示されているインターフェイスを提供します。  
+DbgProp.h のヘッダー ファイルでは、このセクションにリストされたインターフェイスを提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  次のインターフェイス、構造、および列挙型 デバッグ中のアプリケーションの階層的なプロパティについて説明します。  

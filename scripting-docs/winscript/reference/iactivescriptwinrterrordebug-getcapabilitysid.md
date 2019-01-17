@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptWinRTErrorDebug::GetCapabilitySid |Microsoft ドキュメント
+title: IActiveScriptWinRTErrorDebug::GetCapabilitySid |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,18 +14,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 78d53b498ba88fae50cfaca106a65a2bb07d21a5
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 2e0e9f642e780b745f8b66734893345618a43460
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724942"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349825"
 ---
 # <a name="iactivescriptwinrterrordebuggetcapabilitysid"></a>IActiveScriptWinRTErrorDebug::GetCapabilitySid
 使用可能な場合は、Windows ランタイム エラーでは、機能の SID を返します。  
   
 > [!IMPORTANT]
->  [IActiveScriptWinRTErrorDebug インターフェイス](../../winscript/reference/iactivescriptwinrterrordebug-interface.md)は、PDM v11.0 以降によって実装されている値を超えています。 activdbg100.h にあります。  
+>  [IActiveScriptWinRTErrorDebug インターフェイス](../../winscript/reference/iactivescriptwinrterrordebug-interface.md)PDM v11.0 以降によって実装された以降には。 activdbg100.h にあります。  
   
 ## <a name="syntax"></a>構文  
   

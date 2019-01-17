@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPropertyInfo インターフェイス |Microsoft ドキュメント
+title: IEnumDebugPropertyInfo インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 61504d60ccb59a0632376bf8e1ef762382b06326
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 744794a5b68c9d2e256a9d85cd7ce063dbf975ad
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728232"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349960"
 ---
 # <a name="ienumdebugpropertyinfo-interface"></a>IEnumDebugPropertyInfo インターフェイス
 列挙`DebugPropertyInfo`構造体。  
@@ -29,13 +29,13 @@ ms.locfileid: "24728232"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IEnumDebugPropertyInfo::Next](../../winscript/reference/ienumdebugpropertyinfo-next.md)|指定した数を取得`DebugPropertyInfo`列挙のシーケンス内の構造体。|  
-|[IEnumDebugPropertyInfo::Skip](../../winscript/reference/ienumdebugpropertyinfo-skip.md)|指定した数のスキップ`DebugPropertyInfo`列挙のシーケンス内の構造体。|  
+|[IEnumDebugPropertyInfo::Next](../../winscript/reference/ienumdebugpropertyinfo-next.md)|指定した数を取得`DebugPropertyInfo`列挙体シーケンス内の構造体。|  
+|[IEnumDebugPropertyInfo::Skip](../../winscript/reference/ienumdebugpropertyinfo-skip.md)|指定した数のスキップ`DebugPropertyInfo`列挙体シーケンス内の構造体。|  
 |[IEnumDebugPropertyInfo::Reset](../../winscript/reference/ienumdebugpropertyinfo-reset.md)|列挙のシーケンスを最初にリセットします。|  
-|[IEnumDebugPropertyInfo::Clone](../../winscript/reference/ienumdebugpropertyinfo-clone.md)|現在の列挙子と同じ列挙の状態を含む列挙子を作成します。|  
-|[IEnumDebugPropertyInfo::GetCount](../../winscript/reference/ienumdebugpropertyinfo-getcount.md)|数を取得`DebugPropertyInfo`構造体、列挙子にします。|  
+|[IEnumDebugPropertyInfo::Clone](../../winscript/reference/ienumdebugpropertyinfo-clone.md)|現在の列挙子と同じ列挙状態を格納する列挙子を作成します。|  
+|[IEnumDebugPropertyInfo::GetCount](../../winscript/reference/ienumdebugpropertyinfo-getcount.md)|数を取得`DebugPropertyInfo`列挙子内の構造体。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: dbgprop.h  
   
 ## <a name="see-also"></a>関連項目  

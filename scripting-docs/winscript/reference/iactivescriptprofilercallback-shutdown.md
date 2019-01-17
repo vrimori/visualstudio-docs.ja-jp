@@ -17,11 +17,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: bbe5acd75ecf4f004d835490579b1f35c1bf675c
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54086815"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54346294"
 ---
 # <a name="iactivescriptprofilercallbackshutdown"></a>IActiveScriptProfilerCallback::Shutdown
 プロファイラー オブジェクトをスクリプト エンジンのプロファイリングを停止するたびに通知するために呼び出されます。 これにより、必要な場合、プロファイラーのオブジェクトでそのクリーンアップ ルーチンを呼び出すことができます。 スクリプト エンジンのシャット ダウンするとき、またはへの呼び出しに、このメソッドはスクリプト エンジンによって呼び出されますも[IActiveScriptProfilerCallback::Initialize](../../winscript/reference/iactivescriptprofilercallback-initialize.md)は失敗します。  

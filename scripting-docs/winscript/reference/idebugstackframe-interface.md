@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame インターフェイス |Microsoft ドキュメント
+title: IDebugStackFrame インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 36fa0ba2d1b4049ad41ff0502ed33be0a706d9f6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0834abbedf88b911dd952c1f3928c5da3414abec
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727532"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54348543"
 ---
 # <a name="idebugstackframe-interface"></a>IDebugStackFrame インターフェイス
-スレッドのスタック上で論理スタック フレームを表します。 呼び出す、`IDebugStackFrame::QueryInterface`を取得するメソッド、`IDebugExpressionContext`インターフェイスで、式の評価およびウォッチ ウィンドウを許可します。  
+スレッド スタック上の論理スタック フレームを表します。 呼び出す、`IDebugStackFrame::QueryInterface`メソッドを取得する、`IDebugExpressionContext`インターフェイスで、式の評価とウォッチ ウィンドウを使用します。  
   
  継承されたメソッドだけでなく`IUnknown`、`IDebugStackFrame`インターフェイスは、次のメソッドを公開します。  
   
@@ -30,8 +30,8 @@ ms.locfileid: "24727532"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IDebugStackFrame::GetCodeContext](../../winscript/reference/idebugstackframe-getcodecontext.md)|スタック フレームに関連付けられている現在のコードのコンテキストを返します。|  
-|[IDebugStackFrame::GetDescriptionString](../../winscript/reference/idebugstackframe-getdescriptionstring.md)|スタック フレームの短い、または長いテキストの説明を返します。|  
-|[IDebugStackFrame::GetLanguageString](../../winscript/reference/idebugstackframe-getlanguagestring.md)|言語の短い、または長いテキストの説明を返します。|  
+|[IDebugStackFrame::GetCodeContext](../../winscript/reference/idebugstackframe-getcodecontext.md)|スタック フレームに関連付けられている現在のコード コンテキストを返します。|  
+|[IDebugStackFrame::GetDescriptionString](../../winscript/reference/idebugstackframe-getdescriptionstring.md)|スタック フレームの短い、または時間の長いテキストの説明を返します。|  
+|[IDebugStackFrame::GetLanguageString](../../winscript/reference/idebugstackframe-getlanguagestring.md)|言語の短い、または時間の長いテキストの説明を返します。|  
 |[IDebugStackFrame::GetThread](../../winscript/reference/idebugstackframe-getthread.md)|このスタック フレームに関連付けられているスレッドを返します。|  
 |[IDebugStackFrame::GetDebugProperty](../../winscript/reference/idebugstackframe-getdebugproperty.md)|現在のフレームのプロパティ ブラウザーを返します。|

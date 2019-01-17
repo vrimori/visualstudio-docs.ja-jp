@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationEx インターフェイス |Microsoft ドキュメント
+title: IRemoteDebugApplicationEx インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3360cea0d1649348a795356ad827b32b6f8ebc19
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 2fd51d5bdd076199167e52f685f16572756f9740
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729402"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54346554"
 ---
 # <a name="iremotedebugapplicationex-interface"></a>IRemoteDebugApplicationEx インターフェイス
-実行中のアプリケーションを表します。 オペレーティング システム プロセスに対応する必要はありません。 通常、デバッガーでは、デバッグ用のアプリケーションが対象です。 プロセスをデバッグ マネージャーは、通常、アプリケーション オブジェクトを実装します。  
+実行中のアプリケーションを表します。 オペレーティング システムのプロセスに対応する必要はありません。 通常、デバッガーはデバッグ用のアプリケーションを対象とします。 プロセス デバッグ マネージャーは、通常、アプリケーション オブジェクトを実装します。  
   
  継承されたメソッドだけでなく`IUnknown`、`IRemoteDebugApplicationEx`インターフェイスは、次のメソッドを公開します。  
   
@@ -34,6 +34,6 @@ ms.locfileid: "24729402"
 |GetHostMachineName|ホスト アプリケーションが実行されているコンピューターの名前を返します。|  
 |[IRemoteDebugApplicationEx:SetLocale](../../winscript/reference/iremotedebugapplicationex-setlocale.md)|デバッガーのローカライズ用の言語を設定します。|  
 |[IRemoteDebugApplicationEx:ForceStepMode](../../winscript/reference/iremotedebugapplicationex-forcestepmode.md)|シングル ステップ モードにデバッガーを強制します。|  
-|[IRemoteDebugApplicationEx:RevokeBreak](../../winscript/reference/iremotedebugapplicationex-revokebreak.md)|中断コマンドを取り消します。|  
-|SetProxyBlanketAndAddRef|Windows 95 ベース オペレーティング システムからのリモート デバッグとの互換性を確保するには、デバッガー オブジェクトのプロキシの COM セキュリティ情報を更新します。|  
+|[IRemoteDebugApplicationEx:RevokeBreak](../../winscript/reference/iremotedebugapplicationex-revokebreak.md)|Break コマンドを取り消します。|  
+|SetProxyBlanketAndAddRef|Windows 95 ベースのオペレーティング システムからのリモート デバッグとの互換性を確保するには、デバッガー オブジェクトのプロキシでの COM セキュリティ情報を更新します。|  
 |ReleaseFromSetProxyBlanket|SetProxyBlanketAndAddRef から AddRef をリリースします。|
