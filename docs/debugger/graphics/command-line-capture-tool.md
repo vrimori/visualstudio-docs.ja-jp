@@ -1,8 +1,6 @@
 ---
 title: コマンド ライン キャプチャ ツール |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: db75b3a7-80b2-4a74-91d2-fd6e0f73b45d
 author: mikejo5000
@@ -10,12 +8,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b5de323a14bd005e10db4c17281a3b947381f26
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
-ms.translationtype: MT
+ms.openlocfilehash: 12aa697bff0a60ce6ab9a24351514c96ce107d02
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43775555"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53960655"
 ---
 # <a name="command-line-capture-tool"></a>コマンド ライン キャプチャ ツール
 DXCap.exe は、グラフィックス診断のキャプチャと再生に使用されるコマンド ライン ツールです。 すべての機能レベルで、Direct3D 10 から Direct3D 12 をサポートしています。  
@@ -95,7 +93,7 @@ DXCap.exe -info
  `-info`  
  コンピューターとキャプチャの DLL に関する情報を表示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  DXCap.exe は 3 つのモードで動作します。  
   
  キャプチャ モード (-c)  
@@ -115,7 +113,7 @@ DXCap.exe -info
  情報関数 (`-info)`  
  コンピューターとキャプチャの DLL の詳細を表示します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="capture-graphics-information-from-a-desktop-app"></a>デスクトップ アプリからのグラフィックス情報のキャプチャ  
  使用`-c`グラフィックス情報をキャプチャするアプリを指定します。  
@@ -136,10 +134,10 @@ DXCap.exe -file regression_test_12.vsglog -c BasicHLSL11.exe
 DXCap.exe -c "C:\Program Files\Internet Explorer\iexplorer.exe" "www.fishgl.com"  
 ```  
   
- 上記の例のコマンドでは、3-D コンテンツのレンダリングに WebGL API を使用する www.fishgl.com にある web ページの表示中に Internet Explorer のデスクトップ バージョンからグラフィックス情報をキャプチャします。  
+ 上記の例のコマンドでは、WebGL API を使用して 3-D コンテンツをレンダリングする、www.fishgl.com にある Web ページの表示中に、Internet Explorer のデスクトップ バージョンからグラフィックス情報をキャプチャします。  
   
 > [!NOTE]
->  これには、後、アプリに表示されるコマンドライン引数が渡される、ためには、DXCap.exe を使用する前に対象としています引数を指定する必要があります、`-c`オプション。  
+>  アプリの後に指定したコマンド ライン引数はアプリに渡されるため、`-c` オプションを使用する前に、DXCap.exe の引数を指定する必要があります。  
   
 ### <a name="capture-graphics-information-from-a-uwp-app"></a>UWP アプリからグラフィックス情報をキャプチャします。  
  UWP アプリからグラフィックス情報をキャプチャすることができます。  
@@ -162,18 +160,18 @@ DXCap.exe -e map
   
  上記のコマンドは、"map"; に一致する UWP アプリを列挙します。出力を次に示します。  
   
- **パッケージ"Microsoft.BingMaps":**  
- **検出: C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
- **FullName: Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
- **UserSID: S-1-5-21-2127521184-1604012920-1887927527-5603533**  
- **名前: Microsoft.BingMaps**  
- **発行者: CN = Microsoft Corporation, O = Microsoft Corporation, L = Redmond, S = Washington, C = u. s.**  
- **バージョン: 2.1.2914.1734**  
- **起動可能なアプリケーションの場合:**  
- **Id: AppexMaps**  
- **Exe: C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe**  
- **IsWWA: いいえ**  
- **(起動) を AppSpec: DXCap.exe の-c Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe,AppexMaps**列挙された各アプリの出力の最後の行からグラフィックス情報をキャプチャする際のコマンドを表示します。  
+ **パッケージ "Microsoft.BingMaps":**  
+ **検出:C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
+ **FullNameMicrosoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
+ **UserSID:S-1-5-21-2127521184-1604012920-1887927527-5603533**  
+ **名前(&N):Microsoft.BingMaps**  
+ **発行元CN = Microsoft Corporation, O = Microsoft Corporation, L = Redmond, S = Washington, C = u. s.**  
+ **バージョン          : 2.1.2914.1734**  
+ **起動可能なアプリケーション:**   
+ **IDAppexMaps**  
+ **Exe:C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe**  
+ **IsWWA:いいえ**  
+ **(起動) を AppSpec:DXCap.exe の-c Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe,AppexMaps**列挙された各アプリの出力の最後の行からグラフィックス情報をキャプチャする際のコマンドを表示します。  
   
 ### <a name="capture-specific-frames-or-frames-between-specific-times"></a>特定のフレームまたは特定の期間のフレームのキャプチャ  
  使用`-frame`コンマおよび範囲を使用してキャプチャするフレームを指定します。  
@@ -229,13 +227,13 @@ DXCap.exe -p regression_test_12.vsglog -hw
 ```  
   
 ### <a name="validate-a-graphics-log-file-against-warp"></a>WARP に対するグラフィックス ログ ファイルの検証  
- 検証モードの場合、グラフィックス ログ ファイルはハードウェアと WARP の両方で再生され、その結果が比較されます。 これは、ドライバーが原因で発生するレンダリング エラーを識別するのに役立ちます。 -V を使用すると、WARP に対してグラフィックス ハードウェアの正常な動作を検証します。  
+ 検証モードの場合、グラフィックス ログ ファイルはハードウェアと WARP の両方で再生され、その結果が比較されます。 これは、ドライバーが原因で発生するレンダリング エラーを識別するのに役立ちます。 -v を使用すると、WARP に対してグラフィックス ハードウェアが正しく動作するかどうかを検証できます。  
   
 ```cmd  
 DXCap.exe -v regression_test_12.vsglog  
 ```  
   
- 比較の量を減らすために、比較する検証用コマンドのサブセットを指定できます。この場合、他のコマンドは無視されます。 使用して、結果を比較するコマンドを指定するを確認します。  
+ 比較の量を減らすために、比較する検証用コマンドのサブセットを指定できます。この場合、他のコマンドは無視されます。 結果を比較するコマンドを指定するには、-examine を使用します。  
   
 ```cmd  
 DXCap.exe -v regression_test_12.vsglog -examine present,draw,copy,clear  
