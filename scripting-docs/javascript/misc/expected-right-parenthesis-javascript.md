@@ -20,12 +20,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4f6a0128bb73e69a151415518ae6c019be0e4df9
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.openlocfilehash: f9736e7195d8594e881aa778b0683959fe5d4c88
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53804670"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54346203"
 ---
 # <a name="expected--javascript"></a>')' が必要です。(JavaScript)
 かっこのセット内の式を囲みますしようとしましたが、終わりかっこが含まれていません。 一部の式は、かっこと右かっこのセット内で囲む必要があります。 次の例では、かっこの使用に注意してください。  

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteWindow |Microsoft ドキュメント
+title: IActiveScriptSiteWindow |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,22 +14,22 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3043a3c36b2f1ebdf439f22b1de19dd559e50cfa
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 9a160b17f4a46237ab78b378664a046fe8a0e7d4
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725132"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345722"
 ---
 # <a name="iactivescriptsitewindow"></a>IActiveScriptSiteWindow
-同じオブジェクトのユーザー インターフェイスをサポートするホストによってこのインターフェイスは実装[IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)です。 ホスト サーバーなどのユーザー インターフェイスをサポートしていない実装しない、`IActiveScriptSiteWindow`インターフェイスです。 スクリプト エンジンを呼び出してこのインターフェイスにアクセスする`QueryInterface`から`IActiveScriptSite`です。  
+このインターフェイスはホストと同じオブジェクトのユーザー インターフェイスをサポートする[IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)します。 実装しませんサーバーなどのユーザー インターフェイスをサポートしないホスト、`IActiveScriptSiteWindow`インターフェイス。 スクリプト エンジンが呼び出すことによってこのインターフェイスにアクセスする`QueryInterface`から`IActiveScriptSite`します。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IActiveScriptSiteWindow::GetWindow](../../winscript/reference/iactivescriptsitewindow-getwindow.md)|スクリプト エンジンを表示する必要がありますがポップアップ ウィンドウの所有者として機能するウィンドウ ハンドルを取得します。|  
-|[IActiveScriptSiteWindow::EnableModeless](../../winscript/reference/iactivescriptsitewindow-enablemodeless.md)|で有効にするにまたはメイン ウィンドウと同様、モードレス ダイアログ ボックスを無効にするホスト。|  
+|[IActiveScriptSiteWindow::GetWindow](../../winscript/reference/iactivescriptsitewindow-getwindow.md)|スクリプト エンジンを表示する必要がある、ポップアップ ウィンドウの所有者として機能するウィンドウ ハンドルを取得します。|  
+|[IActiveScriptSiteWindow::EnableModeless](../../winscript/reference/iactivescriptsitewindow-enablemodeless.md)|有効または無効のメイン ウィンドウと同様、モードレス ダイアログ ボックスにホストをによりします。|  
   
 ## <a name="see-also"></a>関連項目  
  [アクティブ スクリプト インターフェイス](../../winscript/reference/active-script-interfaces.md)

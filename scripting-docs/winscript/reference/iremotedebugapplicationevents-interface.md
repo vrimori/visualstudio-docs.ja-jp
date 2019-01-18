@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationEvents インターフェイス |Microsoft ドキュメント
+title: IRemoteDebugApplicationEvents インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 04d40d3e03cfb9582075ec1be7abace963d1377f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 1d89be69d77879eae49ba925934d4059d21d740c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729642"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349297"
 ---
 # <a name="iremotedebugapplicationevents-interface"></a>IRemoteDebugApplicationEvents インターフェイス
-`IRemoteDebugApplicationEvents`インターフェイスは、デバッグ アプリケーションによって提供されるイベント インターフェイスです。 このインターフェイスは、デバッガー スレッド内から常に呼び出されます。  
+`IRemoteDebugApplicationEvents`インターフェイスはデバッグ アプリケーションによって提供されるイベント インターフェイスです。 このインターフェイスは常にデバッガー スレッド内から呼び出されます。  
   
  継承されたメソッドだけでなく`IUnknown`、`IRemoteDebugApplicationEvents`インターフェイスは、次のメソッドを公開します。  
   
@@ -30,13 +30,13 @@ ms.locfileid: "24729642"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IRemoteDebugApplicationEvents::OnConnectDebugger](../../winscript/reference/iremotedebugapplicationevents-onconnectdebugger.md)|デバッガー、ハンドルは、イベントを接続します。|  
-|[IRemoteDebugApplicationEvents::OnDisconnectDebugger](../../winscript/reference/iremotedebugapplicationevents-ondisconnectdebugger.md)|デバッガー、ハンドルは、イベントを切断します。|  
+|[IRemoteDebugApplicationEvents::OnConnectDebugger](../../winscript/reference/iremotedebugapplicationevents-onconnectdebugger.md)|デバッガーがハンドルは、イベントを接続します。|  
+|[IRemoteDebugApplicationEvents::OnDisconnectDebugger](../../winscript/reference/iremotedebugapplicationevents-ondisconnectdebugger.md)|デバッガーがハンドルは、イベントを切断します。|  
 |[IRemoteDebugApplicationEvents::OnSetName](../../winscript/reference/iremotedebugapplicationevents-onsetname.md)|設定の名前のイベントを処理します。|  
 |[IRemoteDebugApplicationEvents::OnDebugOutput](../../winscript/reference/iremotedebugapplicationevents-ondebugoutput.md)|デバッガーの出力イベントを処理します。|  
-|[IRemoteDebugApplicationEvents::OnClose](../../winscript/reference/iremotedebugapplicationevents-onclose.md)|アプリケーション終了イベントを処理します。|  
+|[IRemoteDebugApplicationEvents::OnClose](../../winscript/reference/iremotedebugapplicationevents-onclose.md)|アプリケーションの終了イベントを処理します。|  
 |[IRemoteDebugApplicationEvents::OnEnterBreakPoint](../../winscript/reference/iremotedebugapplicationevents-onenterbreakpoint.md)|ブレークポイントを入力するため、イベントを処理します。|  
-|[IRemoteDebugApplicationEvents::OnLeaveBreakPoint](../../winscript/reference/iremotedebugapplicationevents-onleavebreakpoint.md)|ブレークポイントのままにしたイベントを処理します。|  
-|[IRemoteDebugApplicationEvents::OnCreateThread](../../winscript/reference/iremotedebugapplicationevents-oncreatethread.md)|作成するスレッドのイベントを処理します。|  
-|[IRemoteDebugApplicationEvents::OnDestroyThread](../../winscript/reference/iremotedebugapplicationevents-ondestroythread.md)|スレッド破棄イベントを処理します。|  
+|[IRemoteDebugApplicationEvents::OnLeaveBreakPoint](../../winscript/reference/iremotedebugapplicationevents-onleavebreakpoint.md)|ブレークポイントを残し、イベントを処理します。|  
+|[IRemoteDebugApplicationEvents::OnCreateThread](../../winscript/reference/iremotedebugapplicationevents-oncreatethread.md)|作成スレッドのイベントを処理します。|  
+|[IRemoteDebugApplicationEvents::OnDestroyThread](../../winscript/reference/iremotedebugapplicationevents-ondestroythread.md)|スレッドの破棄されたイベントを処理します。|  
 |[IRemoteDebugApplicationEvents::OnBreakFlagChange](../../winscript/reference/iremotedebugapplicationevents-onbreakflagchange.md)|Break フラグを変更したときにイベントを処理します。|

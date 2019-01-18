@@ -1,5 +1,5 @@
 ---
-title: 小数部の桁の数値が範囲外 |Microsoft ドキュメント
+title: 桁の小数部の数が範囲外です |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,18 +21,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 17ffec5e6b4cfff85b49f61e7105ca8ce3d75c78
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633182"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54348465"
 ---
 # <a name="the-number-of-fractional-digits-is-out-of-range"></a>小数の桁数が有効範囲を超えています。
-関数に無効な引数を渡すしようとしています。 **Number.prototype.toExponential**です。 関数の引数**toExponential()** 0 ~ 20 (包括) する必要があります。  
+関数に無効な引数を渡すしようとしています。 **Number.prototype.toExponential**します。 関数の引数**toExponential()** 0 ~ 20 (両端を含む) にする必要があります。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   引数を確認してください**toExponential()** が大きすぎるか小さすぎるではありません。  
+-   引数を確認します。 **toExponential()** が大きすぎるか小さすぎます。  
   
 ## <a name="see-also"></a>関連項目  
  [toExponential メソッド (Number)](../../javascript/reference/toexponential-method-number-javascript.md)

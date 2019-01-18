@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationThreadEvents110 インターフェイス |Microsoft ドキュメント
+title: IDebugApplicationThreadEvents110 インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6aaf312b1730696b812172aeea175619e911d03a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: db20440d4dc797ce9a0f21c3ac0c6c89c5d4e036
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24726272"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54348244"
 ---
 # <a name="idebugapplicationthreadevents110-interface"></a>IDebugApplicationThreadEvents110 インターフェイス
-複数のスレッド イベントを追加します。 これらのイベントはローカルのみです。 サブスクライブできますに対象のプロセスでのみを使用して、デバッグ、 [IConnectionPoint](http://go.microsoft.com/fwlink/?LinkId=232738)アドバイスし、PDM アプリケーション スレッド オブジェクトでメソッドをアドバイズ (を実装するオブジェクト[IDebugApplicationThreadインターフェイス](../../winscript/reference/idebugapplicationthread-interface.md))。 送信されているスレッドで発生するとします。  
+複数のスレッドのイベントを追加します。 これらのイベントはローカルのみです。 ことがサブスクライブしている対象のプロセスでのみを使用して、デバッグ、 [IConnectionPoint](http://go.microsoft.com/fwlink/?LinkId=232738)ことをお勧めして、PDM アプリケーション スレッド オブジェクトでメソッドをアドバイズ (実装するオブジェクト[IDebugApplicationThreadインターフェイス](../../winscript/reference/idebugapplicationthread-interface.md))。 発信元のスレッドで発生します。  
   
 > [!IMPORTANT]
 >  このインターフェイスは、PDM v11.0 以降によって実装されます。 activdbg100.h にあります。  
@@ -32,7 +32,7 @@ ms.locfileid: "24726272"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IDebugApplicationThreadEvents110 ::OnBeginThreadRequest](../../winscript/reference/idebugapplicationthreadevents110-onbeginthreadrequest.md)|呼び出しスレッドは、PDM のスレッドを使用して、切り替えが開始されました。|  
-|[IDebugApplicationThreadEvents110::OnResumeFromBreakPoint](../../winscript/reference/idebugapplicationthreadevents110-onresumefrombreakpoint.md)|スレッドは、ブレークポイントから再開して、もう一度有効になります。|  
-|[IDebugApplicationThreadEvents110::OnSuspendForBreakPoint](../../winscript/reference/idebugapplicationthreadevents110-onsuspendforbreakpoint.md)|スレッドでは、ブレークポイントの中断とが完全に中断されるスレッドを必要とする呼び出しを処理できます。|  
-|[IDebugApplicationThreadEvents110::OnThreadRequestComplete](../../winscript/reference/idebugapplicationthreadevents110-onthreadrequestcomplete.md)|呼び出しスレッドは、PDM のスレッドを使用して、切り替えが完了しました。|
+|[IDebugApplicationThreadEvents110 ::OnBeginThreadRequest](../../winscript/reference/idebugapplicationthreadevents110-onbeginthreadrequest.md)|呼び出しに PDM のスレッドを使用して、スレッドの切り替えが開始されました。|  
+|[IDebugApplicationThreadEvents110::OnResumeFromBreakPoint](../../winscript/reference/idebugapplicationthreadevents110-onresumefrombreakpoint.md)|スレッドがブレークポイントから再開され、もう一度アクティブになります。|  
+|[IDebugApplicationThreadEvents110::OnSuspendForBreakPoint](../../winscript/reference/idebugapplicationthreadevents110-onsuspendforbreakpoint.md)|スレッドは中断しています。 ブレークポイントを設定してを完全に中断するスレッドを必要とする呼び出しを処理できます。|  
+|[IDebugApplicationThreadEvents110::OnThreadRequestComplete](../../winscript/reference/idebugapplicationthreadevents110-onthreadrequestcomplete.md)|呼び出しに PDM のスレッドを使用して、スレッドの切り替えが完了します。|

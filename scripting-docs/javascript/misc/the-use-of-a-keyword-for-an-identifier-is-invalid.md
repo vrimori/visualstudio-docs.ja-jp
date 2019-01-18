@@ -1,5 +1,5 @@
 ---
-title: 識別子のキーワードの使用が有効ではありません |Microsoft ドキュメント
+title: キーワードを識別子の使用が無効です |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,15 +21,15 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 009ac8a71a12b2bf9f6c079480f68a12deab846c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24632992"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54348504"
 ---
 # <a name="the-use-of-a-keyword-for-an-identifier-is-invalid"></a>キーワードを識別子に使用することはできません。
-1048: キーワードを識別子に使用するが正しくありません  
+1048:キーワードを識別子に使用することはできません。  
   
  キーワードは、変数、関数、またはその他のユーザー定義の識別子の名前として使用できません。  
   
- キーワードの詳細については、次を参照してください。 [JavaScript の予約語](../../javascript/reference/javascript-reserved-words.md)と[JavaScript の将来の予約語](../../javascript/reference/javascript-future-reserved-words.md)です。
+ キーワードの詳細については、次を参照してください。 [JavaScript の予約語](../../javascript/reference/javascript-reserved-words.md)と[JavaScript の将来の予約語](../../javascript/reference/javascript-future-reserved-words.md)します。

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptWinRTErrorDebug::GetRestrictedErrorReference |Microsoft ドキュメント
+title: IActiveScriptWinRTErrorDebug::GetRestrictedErrorReference |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,18 +14,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 36d1fecfa1069836a3a1eb41adc8fb58a16e1dbc
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: f801171848537a564ec30e2677a716e6ee7f6cc9
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724982"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54344136"
 ---
 # <a name="iactivescriptwinrterrordebuggetrestrictederrorreference"></a>IActiveScriptWinRTErrorDebug::GetRestrictedErrorReference
-返します。 Windows ランタイムでは、使用可能な場合、参照エラーが制限されています。  
+返します、Windows ランタイムでは、使用可能な場合、参照のエラーが制限されています。  
   
 > [!IMPORTANT]
->  [IActiveScriptWinRTErrorDebug インターフェイス](../../winscript/reference/iactivescriptwinrterrordebug-interface.md)は、PDM v11.0 以降によって実装されている値を超えています。 activdbg100.h にあります。  
+>  [IActiveScriptWinRTErrorDebug インターフェイス](../../winscript/reference/iactivescriptwinrterrordebug-interface.md)PDM v11.0 以降によって実装された以降には。 activdbg100.h にあります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,7 +35,7 @@ HRESULT GetRestrictedErrorReference([out] BSTR * referenceString);
   
 #### <a name="parameters"></a>パラメーター  
  `referenceString`  
- [out]参照エラー文字列。  
+ [out]参照エラーの文字列。  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptWinRTErrorDebug インターフェイス](../../winscript/reference/iactivescriptwinrterrordebug-interface.md)

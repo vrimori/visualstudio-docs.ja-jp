@@ -21,11 +21,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 42e0c220466291f845209f22917d728dee3e553e
-ms.sourcegitcommit: 75e02ed88a1ace6e8265fd4e3a82a1bc78f3adca
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53348304"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54350116"
 ---
 # <a name="expected-"></a>'}' が必要です。
 オブジェクト初期化子または関数本体、ループのコード ブロックの終了をマークする右中かっこを含めるしていません。 このエラーの例があります、**の**ループの本体をマークする左かっこのみをループします。  

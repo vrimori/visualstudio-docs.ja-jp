@@ -1,5 +1,5 @@
 ---
-title: 構文エラー (JavaScript) |Microsoft ドキュメント
+title: 構文エラー (JavaScript) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,20 +21,20 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: a0df8de8df8e390cd1e361159a378da190518f43
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24632962"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345371"
 ---
 # <a name="syntax-error-javascript"></a>構文エラー (JavaScript)
-1 つまたは複数の文法の規則に違反するステートメントを作成して[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]です。  
+1 つまたは複数の文法規則に違反するステートメントを作成して[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]します。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   示されている行番号のプログラムの構文を再確認してください。  
+-   行番号が示される、プログラムの構文を再確認してください。  
   
--   間違った宛て先に送信かっこまたは中かっこを探します。  
+-   宛先を間違えるかっこまたは中かっこを探します。  
   
 ## <a name="see-also"></a>関連項目  
  [Error オブジェクト](../../javascript/reference/error-object-javascript.md)

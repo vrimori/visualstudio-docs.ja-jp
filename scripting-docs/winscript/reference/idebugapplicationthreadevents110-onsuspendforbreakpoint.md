@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationThreadEvents110::OnSuspendForBreakPoint |Microsoft ドキュメント
+title: IDebugApplicationThreadEvents110::OnSuspendForBreakPoint |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,18 +14,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 435ea678133755d02ab9a3f757f0947a83278e45
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: a3ce1510ad9e7b4560a7aaafb8d65d5b0e6143cf
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725692"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349636"
 ---
 # <a name="idebugapplicationthreadevents110onsuspendforbreakpoint"></a>IDebugApplicationThreadEvents110::OnSuspendForBreakPoint
-スレッドは、ブレークポイントの中断が完全にし、通常の実行を再開がないかどうかを判断します。  
+スレッドはブレークポイントを設定する完全に中断し、通常の実行を再開ができないかどうかを判断します。  
   
 > [!IMPORTANT]
->  [IDebugApplicationThreadEvents110 インターフェイス](../../winscript/reference/idebugapplicationthreadevents110-interface.md)は、PDM v11.0 以降によって実装されている値を超えています。 activdbg100.h にあります。  
+>  [IDebugApplicationThreadEvents110 インターフェイス](../../winscript/reference/idebugapplicationthreadevents110-interface.md)PDM v11.0 以降によって実装された以降には。 activdbg100.h にあります。  
   
 ## <a name="syntax"></a>構文  
   

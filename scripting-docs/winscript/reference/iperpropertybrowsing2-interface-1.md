@@ -1,5 +1,5 @@
 ---
-title: IPerPropertyBrowsing2 インターフェイス 1 |Microsoft ドキュメント
+title: IPerPropertyBrowsing2 インターフェイス 1 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,12 +18,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 75a0a7ef30bca2205789a63ea577808c11582791
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: bded7159b72fc8c1ae8408611ce858105e6734da
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728392"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54344034"
 ---
 # <a name="iperpropertybrowsing2-interface-1"></a>IPerPropertyBrowsing2 インターフェイス 1
 オブジェクトによって提供されているプロパティ ページの情報は、アクセスします。  
@@ -33,9 +33,9 @@ ms.locfileid: "24728392"
 |メソッド|説明|  
 |------------|-----------------|  
 |`GetDisplayString`|指定したプロパティを説明するテキスト文字列を返します。|  
-|`MapPropertyToPage`|指定したプロパティを操作できる、プロパティ ページの CLSID を返します。|  
-|`GetPredefinedStrings`|カウント対象の文字列の配列を返します (`LPOLESTR`ポインター)、指定されたプロパティで許容される許容値の説明を一覧表示します。|  
-|`SetPredefinedValue`|プロパティの値をトークンで識別される定義済みの値に設定します`dwCookie.`|  
+|`MapPropertyToPage`|指定したプロパティの操作を許可するプロパティ ページの CLSID を返します。|  
+|`GetPredefinedStrings`|カウント対象文字列の配列を返します (`LPOLESTR`ポインター)、指定したプロパティが受け入れることができる、指定できる値の説明を一覧表示します。|  
+|`SetPredefinedValue`|プロパティの値をトークンで識別される定義済みの値に設定します。 `dwCookie.`|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: dbgprop.h

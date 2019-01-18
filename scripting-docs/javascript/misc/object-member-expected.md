@@ -1,5 +1,5 @@
 ---
-title: オブジェクト メンバーが必要です |Microsoft ドキュメント
+title: オブジェクトのメンバが必要です |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,11 +21,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 84ab153985935bcdf85aed205516610c04dea83f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633232"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54344162"
 ---
 # <a name="object-member-expected"></a>オブジェクトのメンバが必要です。
 オブジェクトのデータのメンバーに対して操作を実行しようとしましたが、メンバーが存在しません。  

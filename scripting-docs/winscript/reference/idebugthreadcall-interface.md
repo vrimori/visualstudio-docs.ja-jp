@@ -1,5 +1,5 @@
 ---
-title: IDebugThreadCall インターフェイス |Microsoft ドキュメント
+title: IDebugThreadCall インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,23 +14,23 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8b2b1b500aec08520166d9092edfa6a58c1df0fa
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: a2167538f2251d961dfcad4a873658d9635a612e
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24726942"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54346268"
 ---
 # <a name="idebugthreadcall-interface"></a>IDebugThreadCall インターフェイス
-`IDebugThreadCall`インターフェイスは、通常でクロス スレッド呼び出しを行うコンポーネントによって実装、`IDebugThread`プロセス デバッグ マネージャー (PDM) によって提供される実装をマーシャ リングします。  
+`IDebugThreadCall`インターフェイスは、通常のスレッド間の呼び出しを行うコンポーネントによって実装、`IDebugThread`プロセス デバッグ マネージャー (PDM) によって提供された実装をマーシャ リングします。  
   
- PDM 呼び出し、`IDebugThreadCall`で目的のスレッドでは、インターフェイス、および`IDebugThreadCall`インターフェイスが必要な実装への呼び出しをディスパッチします。 `IDebugThreadCall`インターフェイスが適切なページのトップへのパラメーターに渡されたパラメーター情報をキャストします。  
+ PDM 呼び出し、`IDebugThreadCall`インターフェイスで目的のスレッドと`IDebugThreadCall`インターフェイスが必要な実装への呼び出しをディスパッチします。 `IDebugThreadCall`インターフェイスが適切なページのトップへのパラメーターで渡されるパラメーター情報をキャストします。  
   
- `IDebugThreadCall`インターフェイスは、フリー スレッドのオブジェクト。  
+ `IDebugThreadCall`インターフェイスは、フリー スレッド オブジェクトです。  
   
 ## <a name="methods"></a>メソッド  
  継承されたメソッドだけでなく`IUnknown`、`IDebugThreadCall`インターフェイスは、次のメソッドを公開します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IDebugThreadCall::ThreadCallHandler](../../winscript/reference/idebugthreadcall-threadcallhandler.md)|コードを実行する別のスレッドの呼び出しを処理します。|
+|[IDebugThreadCall::ThreadCallHandler](../../winscript/reference/idebugthreadcall-threadcallhandler.md)|別のスレッドでコードを実行する呼び出しを処理します。|

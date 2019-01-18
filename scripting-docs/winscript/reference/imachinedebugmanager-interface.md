@@ -1,5 +1,5 @@
 ---
-title: IMachineDebugManager インターフェイス |Microsoft ドキュメント
+title: IMachineDebugManager インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 74c092edc4ed437926c28c19bd331b3b50f8cd4b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 56f06908efd7022988b742a783cb56544bffe3ea
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728802"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54347828"
 ---
 # <a name="imachinedebugmanager-interface"></a>IMachineDebugManager インターフェイス
-プライマリ マシン デバッグ Manager インターフェイス。 このインターフェイスがに似ていますが、`IMachineDebugManagerCookie`インターフェイスです。  
+マシン デバッグ マネージャーの主インターフェイスです。 このインターフェイスと似ています、`IMachineDebugManagerCookie`インターフェイス。  
   
  継承されたメソッドだけでなく`IUnknown`、`IMachineDebugManager`インターフェイスは、次のメソッドを公開します。  
   
@@ -30,9 +30,9 @@ ms.locfileid: "24728802"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IMachineDebugManager::AddApplication](../../winscript/reference/imachinedebugmanager-addapplication.md)|実行にアプリケーションを追加するアプリケーションの一覧です。|  
-|[IMachineDebugManager::RemoveApplication](../../winscript/reference/imachinedebugmanager-removeapplication.md)|実行中からアプリケーションを削除するアプリケーションの一覧です。|  
-|[IMachineDebugManager::EnumApplications](../../winscript/reference/imachinedebugmanager-enumapplications.md)|現在実行されているアプリケーションの一覧の列挙子を返します。|  
+|[IMachineDebugManager::AddApplication](../../winscript/reference/imachinedebugmanager-addapplication.md)|実行中にアプリケーションを追加します。 アプリケーションの一覧。|  
+|[IMachineDebugManager::RemoveApplication](../../winscript/reference/imachinedebugmanager-removeapplication.md)|実行中のアプリケーションを削除します。 アプリケーションの一覧。|  
+|[IMachineDebugManager::EnumApplications](../../winscript/reference/imachinedebugmanager-enumapplications.md)|現在の実行中のアプリケーション一覧の列挙子を返します。|  
   
 ## <a name="see-also"></a>関連項目  
  [IMachineDebugManagerCookie インターフェイス](../../winscript/reference/imachinedebugmanagercookie-interface.md)

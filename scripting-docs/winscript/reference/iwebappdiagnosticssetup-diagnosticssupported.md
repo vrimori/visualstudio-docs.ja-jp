@@ -1,5 +1,5 @@
 ---
-title: IWebAppDiagnosticsSetup::DiagnosticsSupported |Microsoft ドキュメント
+title: IWebAppDiagnosticsSetup::DiagnosticsSupported |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,18 +14,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5706d868f0096d486629c18c3d700349af92cc92
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: df9296ac251d93105229fc0af365f6797a413f2b
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24733982"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349687"
 ---
 # <a name="iwebappdiagnosticssetupdiagnosticssupported"></a>IWebAppDiagnosticsSetup::DiagnosticsSupported
-このアプリケーションに診断がサポートされているかどうかを判断します。 場合[SetSite](http://go.microsoft.com/fwlink/?LinkId=232439)は NULL 以外の値を持つには、このインターフェイスを実装するオブジェクトで呼び出されて[DiagnosticsSupported](../../winscript/reference/iwebappdiagnosticssetup-diagnosticssupported.md)返します`true`です。 Not、返された場合`false`への呼び出しと[IWebAppDiagnosticsSetup::CreateObjectWithSiteAtWebApp](../../winscript/reference/iwebappdiagnosticssetup-createobjectwithsiteatwebapp.md)は失敗します。  
+このアプリケーションでは診断がサポートされているかどうかを判断します。 場合[SetSite](http://go.microsoft.com/fwlink/?LinkId=232439)が NULL 以外の値では、このインターフェイスを実装するオブジェクトに対して呼び出された[DiagnosticsSupported](../../winscript/reference/iwebappdiagnosticssetup-diagnosticssupported.md)返します`true`します。 返されたそうでない場合は`false`への呼び出しと[IWebAppDiagnosticsSetup::CreateObjectWithSiteAtWebApp](../../winscript/reference/iwebappdiagnosticssetup-createobjectwithsiteatwebapp.md)失敗します。  
   
 > [!IMPORTANT]
->  [IWebAppDiagnosticsSetup インターフェイス](../../winscript/reference/iwebappdiagnosticssetup-interface.md)は、PDM v11.0 以降によって実装されている値を超えています。 Activdbg100 で見つかりました。  
+>  [IWebAppDiagnosticsSetup インターフェイス](../../winscript/reference/iwebappdiagnosticssetup-interface.md)PDM v11.0 以降によって実装された以降には。 Activdbg100 を記載されています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,4 +35,4 @@ HRESULT DiagnosticsSupported(        [out, retval] VARIANT_BOOL* pRetVal        
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- 場合[SetSite](http://go.microsoft.com/fwlink/?LinkId=232439)は NULL 以外の値を持つには、このインターフェイスを実装するオブジェクトで呼び出されて[DiagnosticsSupported](../../winscript/reference/iwebappdiagnosticssetup-diagnosticssupported.md)返します`true`です。 Not、返された場合`false`への呼び出しと[IWebAppDiagnosticsSetup::CreateObjectWithSiteAtWebApp](../../winscript/reference/iwebappdiagnosticssetup-createobjectwithsiteatwebapp.md)は失敗します。
+ 場合[SetSite](http://go.microsoft.com/fwlink/?LinkId=232439)が NULL 以外の値では、このインターフェイスを実装するオブジェクトに対して呼び出された[DiagnosticsSupported](../../winscript/reference/iwebappdiagnosticssetup-diagnosticssupported.md)返します`true`します。 返されたそうでない場合は`false`への呼び出しと[IWebAppDiagnosticsSetup::CreateObjectWithSiteAtWebApp](../../winscript/reference/iwebappdiagnosticssetup-createobjectwithsiteatwebapp.md)失敗します。

@@ -1,5 +1,5 @@
 ---
-title: IProvideExpressionContexts インターフェイス |Microsoft ドキュメント
+title: IProvideExpressionContexts インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,24 +14,24 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 402b439da6f1fa369accacb27f987ac77119e343
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 91f4251fec57001ba6c7a4ea1804ec72371418bb
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24728102"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345098"
 ---
 # <a name="iprovideexpressioncontexts-interface"></a>IProvideExpressionContexts インターフェイス
-特定のコンポーネントによって把握されている式のコンテキストを列挙する手段を提供します。 スクリプト エンジンは、通常、このインターフェイスを実装します。  
+特定のコンポーネントによって認識されている式コンテキストを列挙する手段を提供します。 スクリプト エンジンは、通常、このインターフェイスを実装します。  
   
- プロセスのデバッグ マネージャーでは、このインターフェイスを使用して、特定のスレッドに関連付けられているすべてのグローバル式のコンテキストを見つけます。  
+ プロセス デバッグ マネージャーでは、このインターフェイスを使用して、特定のスレッドに関連付けられているすべてのグローバル式のコンテキストを見つけます。  
   
 > [!NOTE]
->  このインターフェイスは、目的のスレッド内からを呼び出されます。 現在のスレッドを識別して適切な列挙子を返すために、実装者の責任です。  
+>  このインターフェイスは、関心のあるスレッド内からを呼び出されます。 現在のスレッドを識別して適切な列挙子を返すために、実装者の責任です。  
   
 ## <a name="methods"></a>メソッド  
  継承されたメソッドだけでなく`IUnknown`、`IProvideExpressionContexts`インターフェイスは、次のメソッドを公開します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IProvideExpressionContexts::EnumExpressionContexts](../../winscript/reference/iprovideexpressioncontexts-enumexpressioncontexts.md)|このコンポーネントによって把握されている式のコンテキストの列挙子を返します。|
+|[IProvideExpressionContexts::EnumExpressionContexts](../../winscript/reference/iprovideexpressioncontexts-enumexpressioncontexts.md)|このコンポーネントによって認識されている式コンテキストの列挙子を返します。|

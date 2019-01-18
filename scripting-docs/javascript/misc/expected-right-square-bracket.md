@@ -21,11 +21,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 13eb537d7c32d1f0252a2500e04aa04be4ecef53
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53804352"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54347386"
 ---
 # <a name="expected-"></a>']' が必要です。
 配列要素への参照が行われたが、右角かっこが含まれていません。 配列の要素を参照する任意の式には、角かっこの開閉の両方を含める必要があります。  

@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugApplicationNodes インターフェイス |Microsoft ドキュメント
+title: IEnumDebugApplicationNodes インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cf9c4fe6a8d789b1988a9a47b17adcba64b28827
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0e14b5567d96bccd0badb95f75558e0af329a62a
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727652"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54344223"
 ---
 # <a name="ienumdebugapplicationnodes-interface"></a>IEnumDebugApplicationNodes インターフェイス
 アプリケーションに関連付けられているノードの子ノードを列挙します。  
@@ -30,7 +30,7 @@ ms.locfileid: "24727652"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IEnumDebugApplicationNodes::Next](../../winscript/reference/ienumdebugapplicationnodes-next.md)|指定した列挙のシーケンス内のセグメント数を取得します。|  
-|[IEnumDebugApplicationNodes::Skip](../../winscript/reference/ienumdebugapplicationnodes-skip.md)|指定した列挙のシーケンス内のセグメント数をスキップします。|  
-|[IEnumDebugApplicationNodes::Reset](../../winscript/reference/ienumdebugapplicationnodes-reset.md)|列挙のシーケンスを先頭にリセットします。|  
-|[IEnumDebugApplicationNodes::Clone](../../winscript/reference/ienumdebugapplicationnodes-clone.md)|現在の列挙子と同じ状態を含む列挙子を作成します。|
+|[IEnumDebugApplicationNodes::Next](../../winscript/reference/ienumdebugapplicationnodes-next.md)|指定された数の列挙体シーケンス内のセグメントを取得します。|  
+|[IEnumDebugApplicationNodes::Skip](../../winscript/reference/ienumdebugapplicationnodes-skip.md)|指定された数の列挙体シーケンス内のセグメントをスキップします。|  
+|[IEnumDebugApplicationNodes::Reset](../../winscript/reference/ienumdebugapplicationnodes-reset.md)|先頭に、列挙体シーケンスをリセットします。|  
+|[IEnumDebugApplicationNodes::Clone](../../winscript/reference/ienumdebugapplicationnodes-clone.md)|現在の列挙子と同じ状態を格納する列挙子を作成します。|

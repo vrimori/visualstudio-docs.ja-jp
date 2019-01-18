@@ -1,5 +1,5 @@
 ---
-title: 識別子 (JavaScript) が必要です |Microsoft ドキュメント
+title: 識別子 (JavaScript) が必要です |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,26 +21,26 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: ff69e433aaa68f88102219cdaf3a77746779370f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24632872"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349232"
 ---
 # <a name="expected-identifier-javascript"></a>識別子が必要です。(JavaScript)
 ものを使用した識別子以外のコンテキストで 1 つが必要です。 識別子を指定できます。  
   
 -   変数、  
   
--   プロパティ  
+-   プロパティ、  
   
 -   配列では、  
   
--   または関数の名前です。  
+-   または、関数名。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   識別子が等号 (=) の左側に表示されるように式を変更します。  
+-   識別子は等号 (=) の左側に表示されるように、式を変更します。  
   
 ## <a name="see-also"></a>関連項目  
  [配列の使用](../../javascript/advanced/using-arrays-javascript.md)

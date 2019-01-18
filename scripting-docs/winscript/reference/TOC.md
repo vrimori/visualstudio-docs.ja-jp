@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a4e7ebc12419567fb5a5fe8499fb33cbb0d63d9e
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54348686"
+---
 # [Windows スクリプト インターフェイスのリファレンス](windows-script-interfaces-reference.md)
 ## [アクティブ スクリプト インターフェイス](active-script-interfaces.md)
 ### [アクティブ スクリプトの定数、列挙型、およびエラー コード](active-script-constants-enumerations-and-error-codes.md)
@@ -111,7 +119,7 @@
 #### [IScriptEntry::SetText](iscriptentry-settext.md)
 ### [IScriptNode インターフェイス](iscriptnode-interface.md)
 #### [IScriptNode::Alive](iscriptnode-alive.md)
-#### [IScriptNode:: CreateChildEntry](iscriptnode-createchildentry.md)
+#### [IScriptNode::CreateChildEntry](iscriptnode-createchildentry.md)
 #### [IScriptNode::CreateChildHandler](iscriptnode-createchildhandler.md)
 #### [IScriptNode::Delete](iscriptnode-delete.md)
 #### [IScriptNode::GetChild](iscriptnode-getchild.md)
@@ -122,7 +130,7 @@
 #### [IScriptNode::GetParent](iscriptnode-getparent.md)
 ### [IScriptScriptlet インターフェイス](iscriptscriptlet-interface.md)
 #### [IScriptScriptlet::GetEventName](iscriptscriptlet-geteventname.md)
-#### [IScriptScriptlet:: GetSimpleEventName](iscriptscriptlet-getsimpleeventname.md)
+#### [IScriptScriptlet::GetSimpleEventName](iscriptscriptlet-getsimpleeventname.md)
 #### [IScriptScriptlet::GetSubItemName](iscriptscriptlet-getsubitemname.md)
 #### [IScriptScriptlet::SetEventName](iscriptscriptlet-seteventname.md)
 #### [IScriptScriptlet::SetSimpleEventName](iscriptscriptlet-setsimpleeventname.md)

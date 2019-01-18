@@ -21,11 +21,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 2d37ca55dfd701aaeba2af729511a5ae6a4fa5f4
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49841820"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54344383"
 ---
 # <a name="the-uri-to-be-decoded-is-not-a-valid-encoding"></a>デコードする URI は正しくエンコードされていません。
 不適切な形式の URI (Uniform Resource Identifier) をデコードしようとしました。 Uri がある特殊な構文です。URI で使用するには、ほとんどの英数字以外の文字をエンコードする必要があります。 使用することができます、`encodeURI`と`encodeURIComponent`メソッドから通常の URI を作成する[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]文字列。  

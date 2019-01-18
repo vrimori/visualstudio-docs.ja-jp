@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: bd76957844008975f67c6c1cb504aa0388b9e91b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8fe5c77827c23f5547f8e5bd411a33b03bfd37f8
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53936894"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349505"
 ---
 # <a name="custom-document-properties-overview"></a>カスタム ドキュメント プロパティの概要
 
@@ -38,7 +38,7 @@ ms.locfileid: "53936894"
 
 このプロパティには、カスタマイズの詳細については、配置マニフェストを提供する文字列が含まれています。 マニフェストの詳細については、次を参照してください。 [Office ソリューションでのアプリケーションと展開マニフェスト](../vsto/application-and-deployment-manifests-in-office-solutions.md)します。
 
- The_AssemblyLocation プロパティの値は、ソリューションの展開方法に応じて、異なる形式を持つことができます。
+ \_AssemblyLocation プロパティの値は、ソリューションの展開方法に応じて、異なる形式を持つことができます。
 
 - _AssemblyLocation プロパティの形式が、ソリューションを発行して Web サイト、UNC パス、または、CD または USB ドライブからインストールする場合*DeploymentManifestPath*|*SolutionID*します。 次の文字列は、例を示します。
 

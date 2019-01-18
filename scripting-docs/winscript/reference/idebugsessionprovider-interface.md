@@ -1,5 +1,5 @@
 ---
-title: IDebugSessionProvider インターフェイス |Microsoft ドキュメント
+title: IDebugSessionProvider インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4e61b1e5e794c68e34250f958cdda0f50b68334c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: d6d17546d5461a1ad76b144bf2652672ab4aa675
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727142"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345150"
 ---
 # <a name="idebugsessionprovider-interface"></a>IDebugSessionProvider インターフェイス
-デバッガーをホストし、言語を有効にする IDE によって提供されるプライマリ インターフェイスは、デバッグを開始します。 実行中のアプリケーションのデバッグ セッションを確立します。 このインターフェイスは、マシンのデバッグ マネージャーによって実装されます。  
+デバッガー ホストと言語を有効にする IDE によって提供される主要なインターフェイスでは、デバッグを開始します。 実行中のアプリケーションのデバッグ セッションを確立します。 このインターフェイスは、マシン デバッグ マネージャーによって実装されます。  
   
  継承されたメソッドだけでなく`IUnknown`、`IDebugSessionProvider`インターフェイスは、次のメソッドを公開します。  
   
@@ -30,4 +30,4 @@ ms.locfileid: "24727142"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IDebugSessionProvider::StartDebugSession](../../winscript/reference/idebugsessionprovider-startdebugsession.md)|指定されたアプリケーションにデバッグ セッションを開始します。|
+|[IDebugSessionProvider::StartDebugSession](../../winscript/reference/idebugsessionprovider-startdebugsession.md)|指定したアプリケーションのデバッグ セッションを開始します。|

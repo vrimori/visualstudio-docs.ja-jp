@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptWinRTErrorDebug インターフェイス |Microsoft ドキュメント
+title: IActiveScriptWinRTErrorDebug インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 34fcc4f1dc3ebc21f9303ba49f1709f2d023a29a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 2355b9aa38abbed2ca66964a07bb47082eb76c32
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725432"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54346502"
 ---
 # <a name="iactivescriptwinrterrordebug-interface"></a>IActiveScriptWinRTErrorDebug インターフェイス
-Windows ランタイムの拡張のエラー情報を指定する JavaScript エンジンによって実装される、 [BREAKREASON 列挙型](../../winscript/reference/breakreason-enumeration.md)イベント。 取得する QueryInterface を行うことができます、 [IActiveScriptError](../../winscript/reference/iactivescripterror.md)オブジェクト。  
+拡張の Windows ランタイム エラー情報を提供する JavaScript エンジンによって実装される、 [BREAKREASON 列挙型](../../winscript/reference/breakreason-enumeration.md)イベント。 取得する QueryInterface を行うことができます、 [IActiveScriptError](../../winscript/reference/iactivescripterror.md)オブジェクト。  
   
 > [!IMPORTANT]
 >  このインターフェイスは、PDM v11.0 以降によって実装されます。 activdbg100.h にあります。  
@@ -33,5 +33,5 @@ Windows ランタイムの拡張のエラー情報を指定する JavaScript エ
 |メソッド|説明|  
 |------------|-----------------|  
 |[IActiveScriptWinRTErrorDebug::GetCapabilitySid](../../winscript/reference/iactivescriptwinrterrordebug-getcapabilitysid.md)|使用可能な場合は、Windows ランタイム エラーでは、機能の SID を返します。|  
-|[IActiveScriptWinRTErrorDebug::GetRestrictedErrorReference](../../winscript/reference/iactivescriptwinrterrordebug-getrestrictederrorreference.md)|返します。 Windows ランタイムでは、使用可能な場合、エラー参照文字列が制限されています。|  
-|[IActiveScriptWinRTErrorDebug::GetRestrictedErrorString](../../winscript/reference/iactivescriptwinrterrordebug-getrestrictederrorstring.md)|返します。 Windows ランタイムでは、使用可能な場合、エラー文字列が制限されています。|
+|[IActiveScriptWinRTErrorDebug::GetRestrictedErrorReference](../../winscript/reference/iactivescriptwinrterrordebug-getrestrictederrorreference.md)|返します、Windows ランタイムには、使用可能な場合のエラーの参照の文字列が制限されています。|  
+|[IActiveScriptWinRTErrorDebug::GetRestrictedErrorString](../../winscript/reference/iactivescriptwinrterrordebug-getrestrictederrorstring.md)|返します、Windows ランタイムでは、使用可能な場合、エラーの文字列が制限されています。|

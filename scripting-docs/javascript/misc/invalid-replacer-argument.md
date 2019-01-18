@@ -1,5 +1,5 @@
 ---
-title: 無効な置換関数の引数 |Microsoft ドキュメント
+title: 無効な置換関数の引数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,22 +20,22 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 588909bae9c5cf198d3108490111b36d5a2d182b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0f144e733bf115cc98bf61b23a2ed3e4e3cda1e0
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24632862"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54346216"
 ---
 # <a name="invalid-replacer-argument"></a>置換関数の引数が無効です。
-呼び出しが試行されて`JSON.stringify`引数が無効です。 `replacer`関数または配列を引数として使用することがあります。  
+呼び出しが試行された`JSON.stringify`引数が無効です。 `replacer`関数または配列を引数として使用することがあります。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   変更、`replacer`関数または配列に渡す引数。  
+-   変更、`replacer`関数または配列への引数。  
   
 ## <a name="example"></a>例  
- に、この例では、コードによって、ランタイム エラーが発生`memberfilter`関数または配列ではなくオブジェクトです。  
+ この例では、コードが実行時エラー`memberfilter`関数または配列ではなくオブジェクトです。  
   
 ```JavaScript  
 var contact = new Object();  

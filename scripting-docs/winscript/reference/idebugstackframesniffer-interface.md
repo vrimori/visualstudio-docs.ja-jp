@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrameSniffer インターフェイス |Microsoft ドキュメント
+title: IDebugStackFrameSniffer インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,18 +14,18 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 250c104d24f27900a6ff0eb8e8f72644f820bf5a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 41fff384bc9075d94fcfa84d94350fec72ebc64a
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24726802"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54348881"
 ---
 # <a name="idebugstackframesniffer-interface"></a>IDebugStackFrameSniffer インターフェイス
-コンポーネントによって把握されている論理スタック フレームを列挙する手段を提供します。 スクリプト エンジンは、通常、このインターフェイスを実装します。 このインターフェイスのすべてのスタック フレームを検索するデバッグ マネージャー使用の処理は、特定のスレッドに関連付けられています。  
+コンポーネントによって認識されている論理スタック フレームを列挙する手段を提供します。 スクリプト エンジンは、通常、このインターフェイスを実装します。 このインターフェイスのすべてのスタック フレームを検索するプロセス デバッグ マネージャーの使用は、特定のスレッドに関連付けられています。  
   
 > [!NOTE]
->  デバッガーは、目的のスレッド内からは、このインターフェイスを呼び出します。 スクリプト エンジンは、現在のスレッドを識別する必要があり、適切な列挙子を返します。  
+>  デバッガーでは、関心のあるスレッド内からは、このインターフェイスを呼び出します。 スクリプト エンジンは、現在のスレッドを識別して、適切な列挙子を返す必要があります。  
   
 ## <a name="methods"></a>メソッド  
  継承されたメソッドだけでなく`IUnknown`、`IDebugStackFrameSniffer`インターフェイスは、次のメソッドを公開します。  

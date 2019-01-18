@@ -22,10 +22,10 @@ caps.latest.revision: 87
 ms.author: gewarren
 manager: douge
 ms.openlocfilehash: 31d11e16eba87efd19ae07afde64e27e9905636c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
+ms.lasthandoff: 01/16/2019
 ms.locfileid: "53899601"
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>UI オートメーションを使用してコードをテストする
@@ -158,7 +158,7 @@ ms.locfileid: "53899601"
 
    このトピックの残りのセクションでは、このプロシージャ内の各ステップについてさらに詳しく説明します。
 
-   詳細な例を参照してください。[チュートリアル。コード化された UI テストの作成、編集、および](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)します。 このチュートリアルでは、簡単な Windows Presentation Foundation (WPF) アプリケーションを作成して、コード化された UI テストの作成、編集、および保守を行う方法について説明します。 また、さまざまなタイミングの問題やコントロールのリファクタリングによって機能が損なわれたテストを修正するための解決策を示します。
+   詳しい例については、「[チュートリアル:コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)」を参照してください。 このチュートリアルでは、簡単な Windows Presentation Foundation (WPF) アプリケーションを作成して、コード化された UI テストの作成、編集、および保守を行う方法について説明します。 また、さまざまなタイミングの問題やコントロールのリファクタリングによって機能が損なわれたテストを修正するための解決策を示します。
 
 ###  <a name="starting"></a> テスト対象のアプリケーションを開始および停止する
  *テストごとに、アプリケーション、ブラウザー、またはデータベースを個別に起動および停止したくありません。どうすれば回避できますか?*
@@ -295,7 +295,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 ##  <a name="VerifyingCodeCUITModify"></a> コード化された UI テストをカスタマイズする
  コード化された UI テストの作成後、Visual Studio で次のいずれかのツールを使用してテストを編集できます。
 
--   コード化された UI テスト ビルダーコード化された UI テスト ビルダーを使用して、その他のコントロールと検証テストを追加します。 このトピックの「[コントロールを追加し、プロパティを検証する](#VerifyingCodeUsingCUITGenerateAssertions)」セクションをご覧ください。
+-   **コード化された UI テスト ビルダー:** コード化された UI テスト ビルダーを使用して、テストにコントロールや検証を追加します。 このトピックの「[コントロールを追加し、プロパティを検証する](#VerifyingCodeUsingCUITGenerateAssertions)」セクションをご覧ください。
 
 -   **コード化された UI テスト エディター:** コード化された UI テスト エディターを使用すると、コード化された UI テストを簡単に変更できます。 Coded UI Test Editor (コード化された UI テスト エディター) を使用すると、テスト メソッドを検索、表示、および編集できます。 また、UI コントロール マップ内の UI 操作および関連コントロールを編集することもできます。 詳細については、「[コード化された UI テスト エディターを使用したコード化された UI テストの編集](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)」をご覧ください。
 
@@ -305,7 +305,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
     -   コード化された UI テストを作成した後、データ ドリブンになるようにテストを変更できます。 詳細については、「[データ ドリブンのコード化された UI テストの作成](../test/creating-a-data-driven-coded-ui-test.md)」をご覧ください。
 
-    -   コード化された UI テストの再生では、テストに対して指示することで、ウィンドウの表示やプログレス バーの非表示などの特定のイベントが発生するまで待機することができます。 これを行うには、適切な UITestControl.WaitForControlXXX() メソッドを追加します。 使用できるメソッドの完全な一覧については、「[再生中に特定のイベントを待機するようにコード化された UI テストを設定](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)」をご覧ください。 WaitForControlEnabled メソッドを使用して有効にするコントロールまで待機するコード化された UI テストの例は、次を参照してください。[チュートリアル。コード化された UI テストの作成、編集、および](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)します。
+    -   コード化された UI テストの再生では、テストに対して指示することで、ウィンドウの表示やプログレス バーの非表示などの特定のイベントが発生するまで待機することができます。 これを行うには、適切な UITestControl.WaitForControlXXX() メソッドを追加します。 使用できるメソッドの完全な一覧については、「[再生中に特定のイベントを待機するようにコード化された UI テストを設定](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)」をご覧ください。 WaitForControlEnabled メソッドを使用して、コントロールが有効になるまで待機するコード化された UI テストの例については、「[チュートリアル:コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)」を参照してください。
 
     -   コード化された UI テストには、Internet Explorer 9 と Internet Explorer 10 に含まれる HTML5 コントロールの一部のサポートが含まれます。 詳細については、「[コード化された UI テストでの HTML5 コントロールの使用](../test/using-html5-controls-in-coded-ui-tests.md)」をご覧ください。
 
@@ -447,9 +447,9 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
  コード化された UI テスト ログを使用して、コード化された UI テストを分析できます。 コード化された UI テスト ログは、コード化された UI テストの実行に関する重要な情報にフィルターを適用して記録します。 ログは、問題をすばやくデバッグできるような形式で記録されます。 詳細については、「[コード化された UI テスト ログを使用したコード化された UI テストの分析](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)」をご覧ください。
 
 ##  <a name="VerifyCodeUsingCUITWhatsNext"></a> 次の内容
- **実行の追加オプションは、UI テストをコード化されました。** このトピックで前述したように、Visual Studio から直接コード化された UI テストを実行できます。 また、[!INCLUDE[TCMext](../includes/tcmext-md.md)] または [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] から自動化された UI テストを実行できます。 コード化された UI テストを自動化すると、テストは他の自動テストとは異なって実行時にデスクトップと対話する必要があります。
+ **コード化された UI テストの実行の追加オプション:** このトピックで既に説明したように、コード化された UI テストを Visual Studio から直接実行できます。 また、[!INCLUDE[TCMext](../includes/tcmext-md.md)] または [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] から自動化された UI テストを実行できます。 コード化された UI テストを自動化すると、テストは他の自動テストとは異なって実行時にデスクトップと対話する必要があります。
 
-- [方法: Microsoft Visual Studio からテストを実行します。](http://msdn.microsoft.com/library/1a1207a9-2a33-4a1e-a1e3-ddf0181b1046)
+- [方法: Microsoft Visual Studio からテストを実行する](http://msdn.microsoft.com/library/1a1207a9-2a33-4a1e-a1e3-ddf0181b1046)
 
 - [Microsoft テスト マネージャーでの自動テストの実行](http://msdn.microsoft.com/en-us/0632f265-63fe-4859-a413-9bb934c66835)
 
@@ -459,11 +459,11 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 - [コマンド ラインからの自動テストの実行](http://msdn.microsoft.com/library/f18179c6-b688-4e41-9898-8aca130c4fc3)
 
-- [方法: デスクトップと対話するテストを実行するように Test Agent の設定します。](/visualstudio/test/how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop?view=vs-2015)
+- [方法: テスト エージェントを設定して、デスクトップと対話するテストを実行する](/visualstudio/test/how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop?view=vs-2015)
 
 - [&#91;廃版&#93; ロード テストでのコード化された UI テストの使用](http://msdn.microsoft.com/library/704339ff-7da7-4d5f-acb3-c3b23f4acb43)
 
-  **カスタム コントロールに対するサポートを追加するには。** コード化された UI テスト フレームワークでは、可能な UI すべてをサポートしていませんし、テスト対象の UI をサポートしない可能性があります。 たとえば、[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] の UI について、コード化された UI テストはすぐに作成できません。 しかし、コード化された UI テスト フレームワークの拡張性を活用すると、カスタム コントロールをサポートするようにすることができます。
+  **カスタム コントロールに対するサポートを追加する:** コード化された UI テスト フレームワークは使用可能な UI すべてをサポートしているわけではなく、テスト対象の UI をサポートしない場合もあります。 たとえば、[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] の UI について、コード化された UI テストはすぐに作成できません。 しかし、コード化された UI テスト フレームワークの拡張性を活用すると、カスタム コントロールをサポートするようにすることができます。
 
 - [コントロールのコード化された UI テストの有効化](../test/enable-coded-ui-testing-of-your-controls.md)
 
@@ -491,7 +491,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 - <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>
 - [コード品質の向上](http://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)
-- [チュートリアル: コード化された UI テストの作成、編集、および](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
+- [チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
 - [コード化された UI テストの構造](../test/anatomy-of-a-coded-ui-test.md)
 - [コード化された UI テストのベスト プラクティス](../test/best-practices-for-coded-ui-tests.md)
 - [複数の UI マップでの大規模アプリケーションのテスト](../test/testing-a-large-application-with-multiple-ui-maps.md)
