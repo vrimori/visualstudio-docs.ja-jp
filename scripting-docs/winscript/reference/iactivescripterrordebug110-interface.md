@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptErrorDebug110 インターフェイス |Microsoft ドキュメント
+title: IActiveScriptErrorDebug110 インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 152f12154acc59b88fc8b1c9a176ac87a5da847d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 067a62ec8b87c448577cfd6e5789ae5e073b5fb8
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24645762"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345904"
 ---
 # <a name="iactivescripterrordebug110-interface"></a>IActiveScriptErrorDebug110 インターフェイス
-機能を追加、 [IActiveScriptDebug インターフェイス](../../winscript/reference/iactivescriptdebug-interface.md)です。 このインターフェイスは、BREAKREASON_ERROR イベントが発生した理由を確認するために JavaScript エンジンによって実装されます。  
+機能を追加、 [IActiveScriptDebug インターフェイス](../../winscript/reference/iactivescriptdebug-interface.md)します。 このインターフェイスは、BREAKREASON_ERROR イベントが発生した理由を確認するために JavaScript エンジンによって実装されます。  
   
 > [!IMPORTANT]
 >  このインターフェイスは、PDM v11.0 以降によって実装されます。 activdbg100.h にあります。  

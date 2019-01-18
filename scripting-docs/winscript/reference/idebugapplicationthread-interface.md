@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationThread インターフェイス |Microsoft ドキュメント
+title: IDebugApplicationThread インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6e731ba866504c9a3c3c9ad081a90a12b161355d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 262174d0daecd2c37bafbecee13532ba62e9967f
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725952"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54347789"
 ---
 # <a name="idebugapplicationthread-interface"></a>IDebugApplicationThread インターフェイス
-言語エンジンとホストのスレッドの同期を行うと、スレッド固有のデバッグ状態情報を維持するために使用できます。 このインターフェイスは、`IRemoteDebugApplicationThread`スレッドへの非リモート アクセスを提供するインターフェイスです。  
+言語エンジンとホスト スレッドの同期を行うと、スレッド固有のデバッグ状態情報を維持するために使用できます。 このインターフェイスは、拡張、`IRemoteDebugApplicationThread`スレッドへの非リモート アクセスを提供するインターフェイス。  
   
  継承されたメソッドだけでなく`IRemoteDebugApplicationThread`、`IDebugApplicationThread`インターフェイスは、次のメソッドを公開します。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "24725952"
 |メソッド|説明|  
 |------------|-----------------|  
 |[IDebugApplicationThread::SynchronousCallIntoThread](../../winscript/reference/idebugapplicationthread-synchronouscallintothread.md)|呼び出し元アプリケーションのスレッドでコードを実行するためのメカニズムを提供します。|  
-|[IDebugApplicationThread::QueryIsCurrentThread](../../winscript/reference/idebugapplicationthread-queryiscurrentthread.md)|このスレッドが現在実行中のスレッドであるかどうかを判断します。|  
-|[IDebugApplicationThread::QueryIsDebuggerThread](../../winscript/reference/idebugapplicationthread-queryisdebuggerthread.md)|このスレッドが、デバッガー スレッドであるかどうかを判断します。|  
+|[IDebugApplicationThread::QueryIsCurrentThread](../../winscript/reference/idebugapplicationthread-queryiscurrentthread.md)|このスレッドが現在実行中のスレッドを決定します。|  
+|[IDebugApplicationThread::QueryIsDebuggerThread](../../winscript/reference/idebugapplicationthread-queryisdebuggerthread.md)|このスレッドがデバッガー スレッドであるかどうかを判断します。|  
 |[IDebugApplicationThread::SetDescription](../../winscript/reference/idebugapplicationthread-setdescription.md)|このスレッドの説明を設定します。|  
 |[IDebugApplicationThread::SetStateString](../../winscript/reference/idebugapplicationthread-setstatestring.md)|スレッドの状態の説明を設定します。|

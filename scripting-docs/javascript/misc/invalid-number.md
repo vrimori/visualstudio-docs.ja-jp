@@ -1,5 +1,5 @@
 ---
-title: 数が無効です |Microsoft ドキュメント
+title: 数が無効です |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,15 +21,15 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 1e7903bec2f21465cbe31ecc05f00182680ed77c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24632912"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54346814"
 ---
 # <a name="invalid-number"></a>無効な数値です。
-数が無効です (ErrbadNumber 1013)  
+無効な数値 (ErrbadNumber 1013)  
   
- JavaScript では無効な番号を使用しようとするとします。  
+ JavaScript で無効な番号を使用しようとしました。  
   
- 有効な番号については、次を参照してください。 [Number オブジェクト](../../javascript/reference/number-object-javascript.md)です。
+ 有効な数値については、次を参照してください。 [Number オブジェクト](../../javascript/reference/number-object-javascript.md)します。

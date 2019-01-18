@@ -1,5 +1,5 @@
 ---
-title: 配列または引数のオブジェクトが必要です |Microsoft ドキュメント
+title: 配列または引数のオブジェクトが必要です |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,18 +21,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 0bc287026c88687274ad63cc6c1cd03309af8b93
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24632742"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345358"
 ---
 # <a name="array-or-arguments-object-expected"></a>配列または引数のオブジェクトが必要です。
-配列が引数として指定されていません。 このエラーは、 **Function.prototype.apply**メソッドのみです。 この関数の 2 番目の引数がいずれかをする必要があります、指定した場合、`Array`オブジェクトまたは**引数**オブジェクト。  
+配列が引数として指定されていません。 このエラーは、 **Function.prototype.apply**メソッドのみです。 この関数の 2 番目の引数がいずれかをする必要があります指定した場合、`Array`オブジェクトまたは**引数**オブジェクト。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   いずれかを指定、`Array`または**引数**オブジェクトを 2 番目の引数として。  
+-   いずれかを指定、`Array`または**引数**2 番目の引数としてのオブジェクト。  
   
 ## <a name="see-also"></a>関連項目  
  [配列の使用](../../javascript/advanced/using-arrays-javascript.md)   

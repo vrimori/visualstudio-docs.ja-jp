@@ -1,5 +1,5 @@
 ---
-title: アクティブ スクリプト デバッガーの定数、列挙型、および構造体 |Microsoft ドキュメント
+title: アクティブ スクリプト デバッガーの定数、列挙型、および構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -16,12 +16,12 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6bd41fe91fdf030b957d800248343198f2617018
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 913c1b243bcc9c7a6653025fbfcb4f941df2950e
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24642072"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345436"
 ---
 # <a name="active-script-debugger-constants-enumerations-and-structures"></a>アクティブ スクリプト デバッガーの定数、列挙型、および構造体
 次の定数、列挙型、および構造体は、アクティブ デバッグ インターフェイスによって使用されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "24642072"
 |定数|説明|  
 |---------------|-----------------|  
 |[APPBREAKFLAGS 定数](../../winscript/reference/appbreakflags-enumeration.md)|アプリケーションおよびスレッドの現在のデバッグ状態を示します。|  
-|[DEBUG_TEXT 定数](../../winscript/reference/debug-text-constants.md)|オプション フラグの中に使用される[IDebugExpressionContext::ParseLanguageText](../../winscript/reference/idebugexpressioncontext-parselanguagetext.md)です。|  
+|[DEBUG_TEXT 定数](../../winscript/reference/debug-text-constants.md)|中に使用されるオプション フラグ[IDebugExpressionContext::ParseLanguageText](../../winscript/reference/idebugexpressioncontext-parselanguagetext.md)します。|  
 |[TEXT_DOC_ATTR 定数](../../winscript/reference/text-doc-attr-constants.md)|ドキュメントの属性を記述します。|  
   
 |列挙|説明|  

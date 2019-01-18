@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteDebugEx インターフェイス |Microsoft ドキュメント
+title: IActiveScriptSiteDebugEx インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,20 +14,20 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2cf5849ff1fca282bace97774c6b7ac9e4510226
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: c1e462630f7bf52c4ca94aa59df22616e9a335a7
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725042"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345878"
 ---
 # <a name="iactivescriptsitedebugex-interface"></a>IActiveScriptSiteDebugEx インターフェイス
-と共にこのインターフェイスを実装して、`IActiveScriptSiteDebug`インターフェイスのアプリケーションの実行時エラーの通知を取得し、必要に応じて、デバッグ用のアプリケーションにアタッチする必要があるホストを作成している場合。 プロセスをデバッグ マネージャーを使用して通知を提供する`IActiveScriptDebug`ジャスト イン タイム スクリプト デバッガーが見つからない場合は、コンピューターにします。 ジャスト イン タイム スクリプト デバッガーがない場合は、PDM 提供を通じて通知`IActiveScriptDebugEx`代わりにします。  
+と共にこのインターフェイスを実装、`IActiveScriptSiteDebug`インターフェイスのアプリケーションで、実行時エラーの通知を取得し、必要に応じて、デバッグ用のアプリケーションにアタッチする必要があるホストを作成する場合。 プロセス デバッグ マネージャーを介して通知を提供する`IActiveScriptDebug`時での Just スクリプト デバッガーの場合は、コンピューターに存在します。 ジャスト イン タイムにスクリプト デバッガーがない場合は、見つかると、PDM を介して通知を提供する`IActiveScriptDebugEx`代わりにします。  
   
- 実行時エラーの通知を取得するには、ホストが処理する必要があります[ActiveScriptSiteDebug::OnScriptErrorDebug](http://msdn.microsoft.com/en-us/cf7639f9-a699-4571-9f3a-82ef52c0b5f4)です。 ユーザー操作に基づいて、し、かどうかを戻り値、内部のデバッガーを添付する、またはを返す、OnScriptErrorDebug でデバッガーの起動`pfEnterDebugger`パラメーター。  
+ 実行時エラーの通知を取得する、ホストで処理する必要があります[ActiveScriptSiteDebug::OnScriptErrorDebug](http://msdn.microsoft.com/en-us/cf7639f9-a699-4571-9f3a-82ef52c0b5f4)します。 ユーザー操作に基づいて、し、かどうかに返された場合、内部デバッガーをアタッチするか、OnScriptErrorDebug のデバッガーの起動を返す`pfEnterDebugger`パラメーター。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IActiveScriptSiteDebugEx::OnCanNotJITScriptErrorDebug](../../winscript/reference/iactivescriptsitedebugex-oncannotjitscripterrordebug.md)|プロセス マネージャーをデバッグするときに、スクリプト実行時のエラーについて、ホストには、外部のときにだけデバッガーが見つからないに通知します。|
+|[IActiveScriptSiteDebugEx::OnCanNotJITScriptErrorDebug](../../winscript/reference/iactivescriptsitedebugex-oncannotjitscripterrordebug.md)|プロセス デバッグ マネージャーとは、スクリプト実行時のエラーについて、ホストには、外部の Just In Time デバッガーが見つからないことを通知します。|

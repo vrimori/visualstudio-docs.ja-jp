@@ -1,5 +1,5 @@
 ---
-title: アクティブ スクリプトの定数、列挙型、およびエラー コード |Microsoft ドキュメント
+title: アクティブ スクリプトの定数、列挙型、およびエラー コード |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -12,15 +12,15 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bb4165a5471c8e79827f0f7605cef575e82bab75
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: f5e25070aa92a9464bfc92433c0d2b7763232fb6
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24641572"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54347620"
 ---
 # <a name="active-script-constants-enumerations-and-error-codes"></a>アクティブ スクリプトの定数、列挙型、およびエラー コード
-このセクションでは、列挙型と Windows スクリプト エンジンで使用されるエラー コードについて説明します。  
+このセクションでは、列挙型および Windows スクリプト エンジンで使用されるエラー コードについて説明します。  
   
 ## <a name="constants"></a>定数  
   
@@ -39,13 +39,13 @@ ms.locfileid: "24641572"
 |列挙|説明|  
 |-----------------|-----------------|  
 |[SCRIPTGCTYPE 列挙型](../../winscript/reference/scriptgctype-enumeration.md)|実行するガベージ コレクションの型。|  
-|[SCRIPTLANGUAGEVERSION 列挙型](../../winscript/reference/scriptlanguageversion-enumeration.md)|可能性のあるバージョンのスクリプトを指定します。|  
+|[SCRIPTLANGUAGEVERSION 列挙型](../../winscript/reference/scriptlanguageversion-enumeration.md)|使用可能なバージョンのスクリプトを指定します。|  
 |[SCRIPTSTATE 列挙型](../../winscript/reference/scriptstate-enumeration.md)|スクリプト エンジンの状態を指定します。|  
 |||  
-|[SCRIPTTHREADSTATE 列挙型](../../winscript/reference/scriptthreadstate-enumeration.md)|スクリプト エンジンのスレッドの状態を指定します。|  
-|[SCRIPTTRACEINFO 列挙型](../../winscript/reference/scripttraceinfo-enumeration.md)|トレースしているスクリプト イベントを表します。 使用される、 [iactivescriptsitetraceinfo::sendscripttraceinfo メソッド](../../winscript/reference/iactivescriptsitetraceinfo-sendscripttraceinfo-method.md)です。|  
+|[SCRIPTTHREADSTATE 列挙型](../../winscript/reference/scriptthreadstate-enumeration.md)|スクリプト エンジンでは、スレッドの状態を指定します。|  
+|[SCRIPTTRACEINFO 列挙型](../../winscript/reference/scripttraceinfo-enumeration.md)|トレースしているスクリプト イベントを表します。 使用される、 [iactivescriptsitetraceinfo::sendscripttraceinfo メソッド](../../winscript/reference/iactivescriptsitetraceinfo-sendscripttraceinfo-method.md)します。|  
 |[SCRIPTUICHANDLING 列挙型](../../winscript/reference/scriptuichandling-enumeration.md)|UI コントロールの処理方法を表します。|  
-|[SCRIPTUICITEM 列挙型](../../winscript/reference/scriptuicitem-enumeration.md)|UI 項目の種類を表します。 使用される、 [iactivescriptsiteuicontrol::getuibehavior メソッド](../../winscript/reference/iactivescriptsiteuicontrol-getuibehavior-method.md)です。|  
+|[SCRIPTUICITEM 列挙型](../../winscript/reference/scriptuicitem-enumeration.md)|UI 項目の種類を表します。 使用される、 [iactivescriptsiteuicontrol::getuibehavior メソッド](../../winscript/reference/iactivescriptsiteuicontrol-getuibehavior-method.md)します。|  
   
 ## <a name="error-codes"></a>エラー コード  
   

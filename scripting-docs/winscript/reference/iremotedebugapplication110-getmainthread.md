@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication110::GetMainThread |Microsoft ドキュメント
+title: IRemoteDebugApplication110::GetMainThread |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,18 +14,18 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2dc420f3c59a59373c6e3a2be9e7254eea451585
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 20d895f8bd6d4919def00625e9f285afdfe4f866
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729292"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349869"
 ---
 # <a name="iremotedebugapplication110getmainthread"></a>IRemoteDebugApplication110::GetMainThread
-呼び出すホストのメイン スレッドを返します[SetSite](http://go.microsoft.com/fwlink/?LinkId=232439)、それ以外の場合 E_FAIL が返されます。  
+呼び出すホストのメイン スレッドを返します[SetSite](http://go.microsoft.com/fwlink/?LinkId=232439)E_FAIL を返します。  
   
 > [!IMPORTANT]
->  [IRemoteDebugApplication インターフェイス](../../winscript/reference/iremotedebugapplication-interface.md)は、PDM v11.0 以降によって実装されている値を超えています。 activdbg100.h にあります。  
+>  [IRemoteDebugApplication インターフェイス](../../winscript/reference/iremotedebugapplication-interface.md)PDM v11.0 以降によって実装された以降には。 activdbg100.h にあります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,7 +35,7 @@ HRESULT GetMainThread([out] IRemoteDebugApplicationThread **ppThread);
   
 #### <a name="parameters"></a>パラメーター  
  `ppThread`  
- [out]メイン[IRemoteDebugApplicationThread インターフェイス](../../winscript/reference/iremotedebugapplicationthread-interface.md)です。  
+ [out]メイン[IRemoteDebugApplicationThread インターフェイス](../../winscript/reference/iremotedebugapplicationthread-interface.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [IRemoteDebugApplication インターフェイス](../../winscript/reference/iremotedebugapplication-interface.md)   

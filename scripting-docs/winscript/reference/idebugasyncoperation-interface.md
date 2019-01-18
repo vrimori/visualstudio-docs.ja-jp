@@ -1,5 +1,5 @@
 ---
-title: IDebugAsyncOperation インターフェイス |Microsoft ドキュメント
+title: IDebugAsyncOperation インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 157ed1248535855fcb53ca2eb6f49427fea94149
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: c0088fddd2661d6711c9a18495f4b8704f782b3c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24726102"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349992"
 ---
 # <a name="idebugasyncoperation-interface"></a>IDebugAsyncOperation インターフェイス
-プロセスをデバッグ マネージャーを実装して、`IDebugAsyncOperation`インターフェイスです。 言語エンジンを呼び出して、`IDebugApplication::CreateAsyncDebugOperation`このインターフェイスへの参照を取得します。 言語エンジンを使用できる、`IDebugAsyncOperation`同期デバッグ操作に非同期アクセスを提供するインターフェイスです。  
+プロセス デバッグ マネージャーの実装、`IDebugAsyncOperation`インターフェイス。 言語エンジンを呼び出して、`IDebugApplication::CreateAsyncDebugOperation`このインターフェイスへの参照を取得します。 言語エンジンを使用できる、`IDebugAsyncOperation`同期デバッグ操作への非同期アクセスを提供するインターフェイス。  
   
  継承されたメソッドだけでなく`IUnknown`、`IDebugAsyncOperation`インターフェイスは、次のメソッドを公開します。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "24726102"
 |メソッド|説明|  
 |------------|-----------------|  
 |[IDebugAsyncOperation::GetSyncDebugOperation](../../winscript/reference/idebugasyncoperation-getsyncdebugoperation.md)|このオブジェクトに関連付けられている同期デバッグ操作を返します。|  
-|[IDebugAsyncOperation::Start](../../winscript/reference/idebugasyncoperation-start.md)|非同期操作を開始するがします。|  
+|[IDebugAsyncOperation::Start](../../winscript/reference/idebugasyncoperation-start.md)|非同期の操作が開始されます。|  
 |[IDebugAsyncOperation::Abort](../../winscript/reference/idebugasyncoperation-abort.md)|操作をキャンセルします。|  
-|[IDebugAsyncOperation::QueryIsComplete](../../winscript/reference/idebugasyncoperation-queryiscomplete.md)|デバッグ操作が完了したかどうかを判断します。|  
-|[IDebugAsyncOperation::GetResult](../../winscript/reference/idebugasyncoperation-getresult.md)|同期のデバッグ操作から返されたオブジェクト パラメーターと戻り値を提供します。|
+|[IDebugAsyncOperation::QueryIsComplete](../../winscript/reference/idebugasyncoperation-queryiscomplete.md)|デバッグ操作が完了したかどうかを決定します。|  
+|[IDebugAsyncOperation::GetResult](../../winscript/reference/idebugasyncoperation-getresult.md)|同期デバッグ操作から返されたオブジェクトのパラメーターと戻り値を提供します。|

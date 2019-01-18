@@ -1,5 +1,5 @@
 ---
-title: IEnumRemoteDebugApplicationThreads インターフェイス |Microsoft ドキュメント
+title: IEnumRemoteDebugApplicationThreads インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d261e9dfaaf06145554eb80e2e9f63e8d429082d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 89f773ee24c2b50499d7d89bf590250f599b0edb
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729112"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349947"
 ---
 # <a name="ienumremotedebugapplicationthreads-interface"></a>IEnumRemoteDebugApplicationThreads インターフェイス
 アプリケーションで実行中のスレッドを列挙します。  
@@ -30,7 +30,7 @@ ms.locfileid: "24729112"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IEnumRemoteDebugApplicationThreads::Next](../../winscript/reference/ienumremotedebugapplicationthreads-next.md)|指定した列挙のシーケンス内のセグメント数を取得します。|  
-|[IEnumRemoteDebugApplicationThreads::Skip](../../winscript/reference/ienumremotedebugapplicationthreads-skip.md)|指定した列挙のシーケンス内のセグメント数をスキップします。|  
-|[IEnumRemoteDebugApplicationThreads::Reset](../../winscript/reference/ienumremotedebugapplicationthreads-reset.md)|列挙のシーケンスを先頭にリセットします。|  
-|[IEnumRemoteDebugApplicationThreads::Clone](../../winscript/reference/ienumremotedebugapplicationthreads-clone.md)|現在の列挙子と同じ状態を含む列挙子を作成します。|
+|[IEnumRemoteDebugApplicationThreads::Next](../../winscript/reference/ienumremotedebugapplicationthreads-next.md)|指定された数の列挙体シーケンス内のセグメントを取得します。|  
+|[IEnumRemoteDebugApplicationThreads::Skip](../../winscript/reference/ienumremotedebugapplicationthreads-skip.md)|指定された数の列挙体シーケンス内のセグメントをスキップします。|  
+|[IEnumRemoteDebugApplicationThreads::Reset](../../winscript/reference/ienumremotedebugapplicationthreads-reset.md)|先頭に、列挙体シーケンスをリセットします。|  
+|[IEnumRemoteDebugApplicationThreads::Clone](../../winscript/reference/ienumremotedebugapplicationthreads-clone.md)|現在の列挙子と同じ状態を格納する列挙子を作成します。|

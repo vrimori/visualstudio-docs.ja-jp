@@ -1,5 +1,5 @@
 ---
-title: ISetNextStatement インターフェイス |Microsoft ドキュメント
+title: ISetNextStatement インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -12,17 +12,17 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bdd71a427a8ef2c57684eef75a044d0cedf42415
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: ac2d6dd0da14be5a624cff0b55985770b8d70fdf
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24733622"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54344058"
 ---
 # <a name="isetnextstatement-interface"></a>ISetNextStatement インターフェイス
-このインターフェイスは、現在のステートメントを更新するプロセスをデバッグ Manager を許可する、インタープリターによって実装されます。 スタック フレーム オブジェクトでは、実装されているし、PDM は QueryInterface を介して、このインターフェイスを取得します。  
+このインターフェイスは、現在のステートメントを更新するプロセス デバッグ マネージャーを許可する、インタープリターによって実装されます。 これは、スタック フレーム オブジェクトから実装され、PDM は QueryInterface を使用して、このインターフェイスを取得します。  
   
- インターフェイスは、次に実行されるステートメントを決定する実行ポイントを設定するための便利なメソッドを提供します。  
+ インターフェイスは、次に実行するステートメントを決定する実行ポイントを設定するために役立つメソッドを提供します。  
   
  継承されたメソッドだけでなく`IUnknown`、`ISetNextStatement`インターフェイスは、次のメソッドを公開します。  
   
@@ -30,5 +30,5 @@ ms.locfileid: "24733622"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ISetNextStatement::CanSetNextStatement](../../winscript/reference/isetnextstatement-cansetnextstatement.md)|実行ポイントを指定した場所に設定できるかどうかを決定します。|  
-|[ISetNextStatement::SetNextStatement](../../winscript/reference/isetnextstatement-setnextstatement.md)|指定した場所に、実行ポイントを設定します。|
+|[ISetNextStatement::CanSetNextStatement](../../winscript/reference/isetnextstatement-cansetnextstatement.md)|実行ポイントを指定した場所に設定できるかどうかを判断します。|  
+|[ISetNextStatement::SetNextStatement](../../winscript/reference/isetnextstatement-setnextstatement.md)|指定した場所に実行ポイントを設定します。|

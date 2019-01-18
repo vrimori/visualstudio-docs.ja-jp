@@ -1,5 +1,5 @@
 ---
-title: ISimpleConnectionPoint インターフェイス |Microsoft ドキュメント
+title: ISimpleConnectionPoint インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,17 +14,17 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: de40f66a9e5721b8dacac634c6fb77982017c155
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 4a756fa3f933f4adff56c41a86aee19a0a2a93aa
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24733912"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54346411"
 ---
 # <a name="isimpleconnectionpoint-interface"></a>ISimpleConnectionPoint インターフェイス
-記述したり、特定の接続ポイントで発生したイベントを列挙する簡単な方法を提供します。 このインターフェイスも簡単にフックする、`IDispatch`それらのイベント オブジェクトです。 このインターフェイスは実装によって、プロセスをデバッグ マネージャー (PDM) をスクリプト エンジンによって消費されています。  
+記述すると、特定の接続ポイントで発生したイベントを列挙する簡単な方法を提供します。 このインターフェイスも簡単にフックするため、`IDispatch`それらのイベント オブジェクト。 このインターフェイスは実装によって、プロセス デバッグ マネージャー (PDM) と、スクリプト エンジンによって消費されます。  
   
- このインターフェイスを使用してから`IDebugHelper::CreateSimpleConnectionPoint`です。  
+ このインターフェイスはから利用可能な`IDebugHelper::CreateSimpleConnectionPoint`します。  
   
  継承されたメソッドだけでなく`IUnknown`、`ISimpleConnectionPoint`インターフェイスは、次のメソッドを公開します。  
   
@@ -32,10 +32,10 @@ ms.locfileid: "24733912"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ISimpleConnectionPoint::Advise](../../winscript/reference/isimpleconnectionpoint-advise.md)|単純な接続ポイント オブジェクトとクライアントのシンク間の接続を確立します。|  
-|[ISimpleConnectionPoint::DescribeEvents](../../winscript/reference/isimpleconnectionpoint-describeevents.md)|イベントの指定された範囲内の各イベントの名前と DISPID を返します。|  
+|[ISimpleConnectionPoint::Advise](../../winscript/reference/isimpleconnectionpoint-advise.md)|単純な接続ポイント オブジェクトとクライアントのシンクの間の接続を確立します。|  
+|[ISimpleConnectionPoint::DescribeEvents](../../winscript/reference/isimpleconnectionpoint-describeevents.md)|イベントの指定した範囲内で、DISPID と各イベントの名前を返します。|  
 |[ISimpleConnectionPoint::GetEventCount](../../winscript/reference/isimpleconnectionpoint-geteventcount.md)|このインターフェイスで公開されているイベントの数を返します。|  
-|[ISimpleConnectionPoint::Unadvise](../../winscript/reference/isimpleconnectionpoint-unadvise.md)|以前にを介して確立アドバイザリ コネクションを終了する`ISimpleConnectionPoint::Advise`です。|  
+|[ISimpleConnectionPoint::Unadvise](../../winscript/reference/isimpleconnectionpoint-unadvise.md)|以前に確立したアドバイザリ コネクションを終了`ISimpleConnectionPoint::Advise`します。|  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProperty インターフェイス](../../winscript/reference/idebugproperty-interface.md)

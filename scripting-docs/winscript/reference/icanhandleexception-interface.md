@@ -1,5 +1,5 @@
 ---
-title: ICanHandleException インターフェイス |Microsoft ドキュメント
+title: ICanHandleException インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,19 +14,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bfd9fe2c766d3c390382ccfbcf2a8fd2319e48f5
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 23b886b9960742abf94cc44c3631a1123fc0e83d
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24725212"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349973"
 ---
 # <a name="icanhandleexception-interface"></a>ICanHandleException インターフェイス
-どの例外を指定するスクリプト エンジンの呼び出し元は、呼び出し元ができるハンドル。  
+呼び出し元が例外を指定するスクリプト エンジンの呼び出し元ができるハンドル。  
   
 ## <a name="methods"></a>メソッド  
  継承されたメソッドだけでなく`IUnknown`、`ICanHandleException`インターフェイスは、次のメソッドを公開します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ICanHandleException::CanHandleException](../../winscript/reference/icanhandleexception-canhandleexception.md)|スクリプト エンジンの呼び出し元が指定した例外を処理できるかどうかを判断します。|
+|[ICanHandleException::CanHandleException](../../winscript/reference/icanhandleexception-canhandleexception.md)|スクリプト エンジンの呼び出し元が指定した例外を処理できるかどうかを決定します。|

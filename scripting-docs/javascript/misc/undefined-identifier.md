@@ -1,5 +1,5 @@
 ---
-title: 未定義の識別子 |Microsoft ドキュメント
+title: 未定義の識別子 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,24 +21,24 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: f54117dc6d169d11498f15d034fa584fc2e9f64b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633582"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54346138"
 ---
 # <a name="undefined-identifier"></a>未定義の識別子です。
-識別子を使用しようとする、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]コンパイラでは認識されません。 使用するたびに、未定義の値が返されます。  
+識別子を使用しようとしましたが、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]コンパイラが認識されません。 使用するたびに、未定義の値が返されます。  
   
 -   存在しない変数  
   
--   変数を宣言しますが、あることはありませんが、割り当てられている値  
+-   変数宣言されましたが、経験をそれに割り当てられた値  
   
--   存在しないオブジェクト プロパティです。  
+-   オブジェクト プロパティが存在しません。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   変数を宣言、 **var**ステートメント (でとして`var`x;)。  
+-   使用して変数を宣言、 **var**ステートメント (うに`var`x;)。  
   
 ## <a name="see-also"></a>関連項目  
  [変数](../../javascript/variables-javascript.md)   

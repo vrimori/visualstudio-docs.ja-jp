@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication インターフェイス |Microsoft ドキュメント
+title: IRemoteDebugApplication インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ea91afdc44b70a91846d7b1a3dc4c017c0c4c80e
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 02ddf409bf25cb86fc742cdc004e2f1b664d22e3
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24729602"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54348764"
 ---
 # <a name="iremotedebugapplication-interface"></a>IRemoteDebugApplication インターフェイス
-実行中のアプリケーションを表します。 オペレーティング システム プロセスに対応する必要はありません。 通常、デバッガーでは、デバッグ用のアプリケーションが対象です。 プロセスをデバッグ マネージャーは、通常、アプリケーション オブジェクトを実装します。  
+実行中のアプリケーションを表します。 オペレーティング システムのプロセスに対応する必要はありません。 通常、デバッガーはデバッグ用のアプリケーションを対象とします。 プロセス デバッグ マネージャーは、通常、アプリケーション オブジェクトを実装します。  
   
  継承されたメソッドだけでなく`IUnknown`、`IRemoteDebugApplication`インターフェイスは、次のメソッドを公開します。  
   
@@ -30,14 +30,14 @@ ms.locfileid: "24729602"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IRemoteDebugApplication::ResumeFromBreakPoint](../../winscript/reference/iremotedebugapplication-resumefrombreakpoint.md)|ブレークポイントになっているアプリケーションを続行します。|  
+|[IRemoteDebugApplication::ResumeFromBreakPoint](../../winscript/reference/iremotedebugapplication-resumefrombreakpoint.md)|ブレークポイントになっているアプリケーションを継続します。|  
 |[IRemoteDebugApplication::CauseBreak](../../winscript/reference/iremotedebugapplication-causebreak.md)|により、アプリケーションは、できるだけ早い機会にデバッガーを中断します。|  
 |[IRemoteDebugApplication::ConnectDebugger](../../winscript/reference/iremotedebugapplication-connectdebugger.md)|このアプリケーションにデバッガーを接続します。|  
 |[IRemoteDebugApplication::DisconnectDebugger](../../winscript/reference/iremotedebugapplication-disconnectdebugger.md)|アプリケーションから現在のデバッガーを切断します。|  
-|[IRemoteDebugApplication::GetDebugger](../../winscript/reference/iremotedebugapplication-getdebugger.md)|現在のデバッガーがアプリケーションに接続を返します。|  
+|[IRemoteDebugApplication::GetDebugger](../../winscript/reference/iremotedebugapplication-getdebugger.md)|アプリケーションに接続されている現在のデバッガーを返します。|  
 |[IRemoteDebugApplication::CreateInstanceAtApplication](../../winscript/reference/iremotedebugapplication-createinstanceatapplication.md)|IDE、実行中のプロセス外アプリケーション プロセスでオブジェクトを作成する、アプリケーションにデバッガーのメカニズムを提供します。|  
-|[IRemoteDebugApplication::QueryAlive](../../winscript/reference/iremotedebugapplication-queryalive.md)|アプリケーションが応答してかどうかを示します。|  
+|[IRemoteDebugApplication::QueryAlive](../../winscript/reference/iremotedebugapplication-queryalive.md)|アプリケーションが応答性の高いかどうかを示します。|  
 |[IRemoteDebugApplication::EnumThreads](../../winscript/reference/iremotedebugapplication-enumthreads.md)|既知のアプリケーションに関連するすべてのスレッドを列挙します。|  
-|[IRemoteDebugApplication::GetName](../../winscript/reference/iremotedebugapplication-getname.md)|このアプリケーション ノードの名前を返します。|  
-|[IRemoteDebugApplication::GetRootNode](../../winscript/reference/iremotedebugapplication-getrootnode.md)|アプリケーションに関連付けられているすべてのノードを追加するアプリケーション ノードを返します。|  
-|[IRemoteDebugApplication::EnumGlobalExpressionContexts](../../winscript/reference/iremotedebugapplication-enumglobalexpressioncontexts.md)|このアプリケーションで実行されているすべての言語のグローバル式のコンテキストを列挙します。|
+|[IRemoteDebugApplication::GetName](../../winscript/reference/iremotedebugapplication-getname.md)|このアプリケーションのノードの名前を返します。|  
+|[IRemoteDebugApplication::GetRootNode](../../winscript/reference/iremotedebugapplication-getrootnode.md)|アプリケーションに関連付けられているすべてのノードを追加するアプリケーションのノードを返します。|  
+|[IRemoteDebugApplication::EnumGlobalExpressionContexts](../../winscript/reference/iremotedebugapplication-enumglobalexpressioncontexts.md)|このアプリケーションで実行されているすべての言語用のグローバル式のコンテキストを列挙します。|

@@ -1,5 +1,5 @@
 ---
-title: IVariantChangeType インターフェイス |Microsoft ドキュメント
+title: IVariantChangeType インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,19 +18,19 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 95b1b761195a3b004ddaf13d17eafd2c8fe9982b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0c0bbd5ec7795498d9f04cc516a56d01c78bdb7c
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24733832"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349258"
 ---
 # <a name="ivariantchangetype-interface"></a>IVariantChangeType インターフェイス
-バリアント型の値を別の 1 つの型に変換する、呼び出し元を使用できます。  
+1 つの型からバリアントの値を変換する、呼び出し元を使用できます。  
   
 ## <a name="methods"></a>メソッド  
  継承されたメソッドだけでなく`IUnknown`、`IVariantChangeType`インターフェイスは、次のメソッドを公開します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IVariantChangeType::ChangeType](../../winscript/reference/ivariantchangetype-changetype.md)|バリアント型の値を取得し、種類を指定して新しいバリエーションを作成します。|
+|[IVariantChangeType::ChangeType](../../winscript/reference/ivariantchangetype-changetype.md)|バリアント型の値を受け取り、指定の型を持つ新しいバリアントを作成します。|

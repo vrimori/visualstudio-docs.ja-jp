@@ -19,11 +19,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 886ab1c4c39cf7c64571862bfd28f2fbd1062694
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54097046"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54348804"
 ---
 # <a name="iactivescriptclose"></a>IActiveScript::Close
 により、スクリプト エンジンは、現在読み込まれているスクリプトの破棄の状態が失われるおよび closed の状態を入力するため、他のオブジェクトが任意のインターフェイス ポインターを解放します。 イベント シンク、すぐに実行されたスクリプトのテキスト、および実行中のマクロの呼び出しが完了した後、状態の変更 (を使用して、 [iactivescript::interruptscriptthread](../../winscript/reference/iactivescript-interruptscriptthread.md)実行中のスクリプト スレッドをキャンセルする)。 循環参照の問題を防ぐために、インターフェイスが解放される前に、作成、ホストによってこのメソッドを呼び出す必要があります。  

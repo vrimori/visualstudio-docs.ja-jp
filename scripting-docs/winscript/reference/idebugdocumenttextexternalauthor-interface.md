@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextExternalAuthor インターフェイス |Microsoft ドキュメント
+title: IDebugDocumentTextExternalAuthor インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0f85ef798a6507c92130cbddae98de87a9924415
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: eb7b09beb38fcdfb2a139fa385119cf9f76d77ae
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727032"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54344217"
 ---
 # <a name="idebugdocumenttextexternalauthor-interface"></a>IDebugDocumentTextExternalAuthor インターフェイス
 安全にドキュメント ソース ファイルが変更されたときに通知することにより、ファイルベースのデバッガーのドキュメントを編集する外部エディターを使用できます。  
@@ -30,6 +30,6 @@ ms.locfileid: "24727032"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IDebugDocumentTextExternalAuthor::GetPathName](../../winscript/reference/idebugdocumenttextexternalauthor-getpathname.md)|ドキュメントの完全パスとファイル名を返します。|  
+|[IDebugDocumentTextExternalAuthor::GetPathName](../../winscript/reference/idebugdocumenttextexternalauthor-getpathname.md)|ドキュメントの完全なパスとファイル名を返します。|  
 |[IDebugDocumentTextExternalAuthor::GetFileName](../../winscript/reference/idebugdocumenttextexternalauthor-getfilename.md)|パス情報がない場合、ドキュメントの名前を返します。|  
 |[IDebugDocumentTextExternalAuthor::NotifyChanged](../../winscript/reference/idebugdocumenttextexternalauthor-notifychanged.md)|ドキュメントのソースが変更されたことをホストに通知します。|

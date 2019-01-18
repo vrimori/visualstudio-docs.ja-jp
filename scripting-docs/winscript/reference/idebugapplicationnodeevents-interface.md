@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationNodeEvents インターフェイス |Microsoft ドキュメント
+title: IDebugApplicationNodeEvents インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 20d0fac68bb7cdb3d7f5cb6aac6b0ab67e373c84
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0396ed90437a98c8ee398f3c3acb0aeb5ddc77e2
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24726572"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54348413"
 ---
 # <a name="idebugapplicationnodeevents-interface"></a>IDebugApplicationNodeEvents インターフェイス
-イベントのインターフェイスを提供、`IDebugApplicationNode`インターフェイスです。  
+`IDebugApplicationNode` インターフェイスに対するイベント インターフェイスを提供します。  
   
  継承されたメソッドだけでなく`IUnknown`、`IDebugApplicationNodeEvents`インターフェイスは、次のメソッドを公開します。  
   
@@ -30,10 +30,10 @@ ms.locfileid: "24726572"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IDebugApplicationNodeEvents::onAddChild](../../winscript/reference/idebugapplicationnodeevents-onaddchild.md)|アプリケーションのデバッグ ノード オブジェクトに子ノードが追加されるイベントを処理します。|  
-|[IDebugApplicationNodeEvents::onRemoveChild](../../winscript/reference/idebugapplicationnodeevents-onremovechild.md)|アプリケーションのデバッグ ノード オブジェクトから子ノードが削除されたときにイベントを処理します。|  
-|[IDebugApplicationNodeEvents::onDetach](../../winscript/reference/idebugapplicationnodeevents-ondetach.md)|親ノードから、デバッグ アプリケーション ノードのオブジェクトがデタッチされたことを示すイベントを処理します。|  
-|[IDebugApplicationNodeEvents::onAttach](../../winscript/reference/idebugapplicationnodeevents-onattach.md)|デバッグ アプリケーション ノード オブジェクトが親ノードに接続されていることを示すイベントを処理します。|  
+|[IDebugApplicationNodeEvents::onAddChild](../../winscript/reference/idebugapplicationnodeevents-onaddchild.md)|デバッグのアプリケーション ノード オブジェクトに子ノードが追加されたときにイベントを処理します。|  
+|[IDebugApplicationNodeEvents::onRemoveChild](../../winscript/reference/idebugapplicationnodeevents-onremovechild.md)|デバッグのアプリケーション ノード オブジェクトから子ノードが削除されたときにイベントを処理します。|  
+|[IDebugApplicationNodeEvents::onDetach](../../winscript/reference/idebugapplicationnodeevents-ondetach.md)|アプリケーションのデバッグ ノード オブジェクトが親ノードからデタッチされたことを示すイベントを処理します。|  
+|[IDebugApplicationNodeEvents::onAttach](../../winscript/reference/idebugapplicationnodeevents-onattach.md)|アプリケーションのデバッグ ノード オブジェクトが親ノードに接続されていることを示すイベントを処理します。|  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugApplicationNode インターフェイス](../../winscript/reference/idebugapplicationnode-interface.md)

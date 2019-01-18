@@ -1,5 +1,5 @@
 ---
-title: SCRIPTUICITEM 列挙型 |Microsoft ドキュメント
+title: SCRIPTUICITEM 列挙型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -12,15 +12,15 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6620553bce810abcf1a51ac8592061ef017dd9bf
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: cf880ed8b0295e841026e884f6cec71a9f52d4ae
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24734042"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54347490"
 ---
 # <a name="scriptuicitem-enumeration"></a>SCRIPTUICITEM 列挙型
-UI 項目の種類を表します。 使用される、 [iactivescriptsiteuicontrol::getuibehavior メソッド](../../winscript/reference/iactivescriptsiteuicontrol-getuibehavior-method.md)です。  
+UI 項目の種類を表します。 使用される、 [iactivescriptsiteuicontrol::getuibehavior メソッド](../../winscript/reference/iactivescriptsiteuicontrol-getuibehavior-method.md)します。  
   
 ## <a name="syntax"></a>構文  
   

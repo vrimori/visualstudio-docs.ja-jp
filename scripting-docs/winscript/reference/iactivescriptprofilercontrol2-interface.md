@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerControl2 インターフェイス |Microsoft ドキュメント
+title: IActiveScriptProfilerControl2 インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,12 +14,12 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9bc0dfa31b37a6bf99427c8eddfe2bd038da9b9d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 9dad5d4a90eecdc6c93d86df9f9b18273bc471a4
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724752"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349765"
 ---
 # <a name="iactivescriptprofilercontrol2-interface"></a>IActiveScriptProfilerControl2 インターフェイス
 開始または停止するスクリプトが実行されている場合をプロファイリングする機能を追加するメソッドを提供します。  
@@ -28,8 +28,8 @@ ms.locfileid: "24724752"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IActiveScriptProfilerControl2::CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md)|すべての該当するスクリプト エンジンでプロファイリングを開始したことをプロファイラーに通知します。 これは、ようにする場合は、完全なコール スタックを取得[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]プロファイリングを開始するときに実行します。|  
-|[IActiveScriptProfilerControl2::PrepareProfilerStop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md)|適用可能なすべてのスクリプト エンジンでプロファイリングを停止しようとしていることをプロファイラーに通知します。 これによりの場合は、完全な呼び出し履歴を取得する[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]が実行されているは、プロファイリングを停止するとします。|  
+|[IActiveScriptProfilerControl2::CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md)|該当するすべてのスクリプト エンジンでプロファイリングを開始したことをプロファイラーに通知します。 場合は、完全な呼び出し履歴を取得できます[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]プロファイリングを開始するときに実行します。|  
+|[IActiveScriptProfilerControl2::PrepareProfilerStop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md)|該当するすべてのスクリプト エンジンのプロファイリングを停止することをプロファイラーに通知します。 場合は、完全な呼び出し履歴を取得できます[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]が実行されているは、プロファイリングを停止するとします。|  
   
 ## <a name="see-also"></a>関連項目  
  [IActiveScriptProfilerControl インターフェイス](../../winscript/reference/iactivescriptprofilercontrol-interface.md)   

@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextAuthor インターフェイス |Microsoft ドキュメント
+title: IDebugDocumentTextAuthor インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d29bfa1b3f23ce206e2fe63fd669548a074e3dd6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: bf84b0b839e1a4a9e29b0de5382776946ecf5b1e
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24726552"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54344071"
 ---
 # <a name="idebugdocumenttextauthor-interface"></a>IDebugDocumentTextAuthor インターフェイス
-編集をサポートするテキスト ドキュメントを提供します。  
+編集をサポートしてそのテキスト ドキュメントによって提供されます。  
   
  継承されたメソッドだけでなく`IDebugDocumentText`、`IDebugDocumentTextAuthor`インターフェイスは、次のメソッドを公開します。  
   
@@ -30,6 +30,6 @@ ms.locfileid: "24726552"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IDebugDocumentTextAuthor::InsertText](../../winscript/reference/idebugdocumenttextauthor-inserttext.md)|ドキュメントに新しいテキストを挿入します。|  
+|[IDebugDocumentTextAuthor::InsertText](../../winscript/reference/idebugdocumenttextauthor-inserttext.md)|新しいテキストを挿入します。|  
 |[IDebugDocumentTextAuthor::RemoveText](../../winscript/reference/idebugdocumenttextauthor-removetext.md)|ドキュメントからテキストを削除します。|  
-|[IDebugDocumentTextAuthor::ReplaceText](../../winscript/reference/idebugdocumenttextauthor-replacetext.md)|ドキュメント内のテキストを置換します。|
+|[IDebugDocumentTextAuthor::ReplaceText](../../winscript/reference/idebugdocumenttextauthor-replacetext.md)|ドキュメントのテキストに置き換えます。|

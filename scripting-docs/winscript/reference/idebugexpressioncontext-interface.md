@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionContext インターフェイス |Microsoft ドキュメント
+title: IDebugExpressionContext インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,15 +18,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0c55a2f270e4c82c578450092e5066b19fe9e606
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 12b997d5edab866f77dcb71f4d5ea0273786c577
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24726532"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345982"
 ---
 # <a name="idebugexpressioncontext-interface"></a>IDebugExpressionContext インターフェイス
-式を評価できるコンテキストを表します。 スタック フレーム オブジェクトでは、このインターフェイスを実装します。  
+式を評価できるコンテキストを表します。 スタック フレーム オブジェクトは、このインターフェイスを実装します。  
   
  継承されたメソッドだけでなく`IUnknown`、`IDebugExpressionContext`インターフェイスは、次のメソッドを公開します。  
   
@@ -34,5 +34,5 @@ ms.locfileid: "24726532"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IDebugExpressionContext::ParseLanguageText](../../winscript/reference/idebugexpressioncontext-parselanguagetext.md)|指定したテキストのデバッグ式を作成します。|  
+|[IDebugExpressionContext::ParseLanguageText](../../winscript/reference/idebugexpressioncontext-parselanguagetext.md)|指定したテキストのデバッグの式を作成します。|  
 |[IDebugExpressionContext::GetLanguageInfo](../../winscript/reference/idebugexpressioncontext-getlanguageinfo.md)|このコンテキストを所有している言語の名前と GUID を返します。|
