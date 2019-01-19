@@ -62,5 +62,5 @@ ms.locfileid: "53822030"
 
 ## <a name="see-also"></a>関連項目
 
-- [as (c# リファレンス)](/dotnet/csharp/language-reference/keywords/as)
-- [is (c# リファレンス)](/dotnet/csharp/language-reference/keywords/is)
+- [as (C# リファレンス)](/dotnet/csharp/language-reference/keywords/as)
+- [is (C# リファレンス)](/dotnet/csharp/language-reference/keywords/is)
