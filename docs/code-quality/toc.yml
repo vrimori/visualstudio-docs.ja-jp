@@ -275,7 +275,7 @@ items:
         href: ca1058-types-should-not-extend-certain-base-types.md
       - name: CA1059:メンバーは特定の具象型を公開できません
         href: ca1059-members-should-not-expose-certain-concrete-types.md
-      - name: CA1060:P-Invoke を NativeMethods クラスに移動します
+      - name: CA1060:P/Invoke を NativeMethods クラスに移動します
         href: ca1060-move-p-invokes-to-nativemethods-class.md
       - name: CA1061:基底クラス メソッドを非表示にしません
         href: ca1061-do-not-hide-base-class-methods.md
@@ -317,15 +317,15 @@ items:
     - name: 相互運用性に関する警告
       href: interoperability-warnings.md
       items:
-      - name: CA1400:P-Invoke エントリ ポイントは存在しなければなりません
+      - name: CA1400:P/Invoke エントリ ポイントは存在しなければなりません
         href: ca1400-p-invoke-entry-points-should-exist.md
-      - name: CA1401:P-Invoke は参照可能になりません
+      - name: CA1401:P/Invoke は参照可能になりません
         href: ca1401-p-invokes-should-not-be-visible.md
       - name: CA1402:COM 参照可能インターフェイスでのオーバーロードを避けてください
         href: ca1402-avoid-overloads-in-com-visible-interfaces.md
       - name: CA1403:Auto 配置の型を COM 参照可能にすることはできません
         href: ca1403-auto-layout-types-should-not-be-com-visible.md
-      - name: CA1404:P-Invoke の直後に GetLastError を呼び出します
+      - name: CA1404:P/Invoke の直後に GetLastError を呼び出します
         href: ca1404-call-getlasterror-immediately-after-p-invoke.md
       - name: CA1405:COM 参照可能な型の基本型は COM 参照可能でなければなりません
         href: ca1405-com-visible-type-base-types-should-be-com-visible.md
@@ -345,9 +345,9 @@ items:
         href: ca1412-mark-comsource-interfaces-as-idispatch.md
       - name: CA1413:Com 参照可能な値型ではパブリックでないフィールドを使用しません
         href: ca1413-avoid-non-public-fields-in-com-visible-value-types.md
-      - name: CA1414:ブール型の P-Invoke 引数を MarshalAs に設定します
+      - name: CA1414:ブール型の P/Invoke 引数を MarshalAs に設定します
         href: ca1414-mark-boolean-p-invoke-arguments-with-marshalas.md
-      - name: CA1415:P-Invoke を正しく宣言します
+      - name: CA1415:P/Invoke を正しく宣言します
         href: ca1415-declare-p-invokes-correctly.md
     - name: 保守性に関する警告
       href: maintainability-warnings.md
@@ -460,7 +460,7 @@ items:
       items:
       - name: CA1900:値型フィールドはポータブルでなければなりません
         href: ca1900-value-type-fields-should-be-portable.md
-      - name: CA1901:P-Invoke 宣言はポータブルでなければなりません
+      - name: CA1901:P/Invoke 宣言はポータブルでなければなりません
         href: ca1901-p-invoke-declarations-should-be-portable.md
       - name: CA1903:対象のフレームワークから API のみを使用します
         href: ca1903-use-only-api-from-targeted-framework.md
