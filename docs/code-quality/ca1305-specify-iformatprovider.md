@@ -57,7 +57,7 @@ ms.locfileid: "53954238"
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
 
-このルールの違反を修正するを受け取るオーバー ロードを使用して、<xref:System.IFormatProvider>引数。 または、使用して、 [c# 文字列補間する](/dotnet/csharp/tutorials/string-interpolation)に渡すと、<xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType>メソッド。
+このルールの違反を修正するを受け取るオーバー ロードを使用して、<xref:System.IFormatProvider>引数。 または、使用して、 [C# 文字列補間する](/dotnet/csharp/tutorials/string-interpolation)に渡すと、<xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType>メソッド。
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制します。
 
