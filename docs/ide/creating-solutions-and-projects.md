@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d9c3477926161da09d0b669d32316933d967ee98
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a5f81c38d63659261281f35704edf0ecde3ccd94
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53908893"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269827"
 ---
 # <a name="create-solutions-and-projects"></a>ソリューションとプロジェクトを作成する
 
@@ -129,7 +129,7 @@ ms.locfileid: "53908893"
 
 ### <a name="to-permanently-delete-a-solution"></a>ソリューションを完全に削除するには
 
-1. **ソリューション エクスプローラー**で、削除するソリューションのコンテキスト メニューから **[エクスプローラーでフォルダーを開く]** を選択します。
+1. **ソリューション エクスプローラー**で、削除するソリューションの右クリック (コンテキスト) メニューから **[エクスプローラーでフォルダーを開く]** を選択します。
 
 1. ファイル エクスプローラーで、1 つ上の階層に移動します。
 

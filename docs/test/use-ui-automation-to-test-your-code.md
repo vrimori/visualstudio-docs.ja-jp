@@ -17,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ddf9e610236cc50ccd809413bbe80e2eaad31a87
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8dc3e25b55f5f30ebfeb9f790baba0bb5ad8797c
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53840643"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54270194"
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>UI オートメーションを使用してコードをテストする
 
@@ -216,7 +216,7 @@ UI コントロールのアサーションを作成するには、**コード化
 
 **コード化された UI テスト ビルダー**から **[アサーションの追加]** ツールを選択しようとすると、選択するコントロールがフォーカスを失い、表示されなくなる場合:
 
-コントロールを追加し、プロパティを検証するとき、キーボードが必要になる場合もあります。 たとえば、コンテキスト メニュー コントロールを使用するコード化された UI テストを記録するとき、**コード化された UI テスト ビルダー**の **[アサーションの追加]** ツールで選択しようとすると、コントロールのメニュー項目の一覧がフォーカスを失い、非表示になります。 これを次の図に示します。Internet Explorer で、**[アサーションの追加]** ツールでコンテキスト メニューを選択しようとすると、メニューはフォーカスを失い、表示されなくなります。
+コントロールを追加し、プロパティを検証するとき、キーボードが必要になる場合もあります。 たとえば、右クリック メニュー コントロールを使用するコード化された UI テストを記録するとき、**コード化された UI テスト ビルダー**の **[アサーションの追加]** ツールで選択しようとすると、コントロールのメニュー項目の一覧がフォーカスを失い、非表示になります。 これを次の図に示します。Internet Explorer で、**[アサーションの追加]** ツールで右クリック メニューを選択しようとすると、これはフォーカスを失い、表示されなくなります。
 
 ![CodedUITest&#95;SelectControlKeyboard](../test/media/codeduitest_selectcontrolkeyboard.png)
 

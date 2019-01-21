@@ -9,16 +9,19 @@ description: 一部の Visual Studio サブスクリプションに含まれる 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 0fb3033699c3331ec61e6d3fe30dd70fd47cc759
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: 3d4d24c48868c85b89e833191c03ab8188637de2
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53739644"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54315502"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Power BI Pro
 
 データを収集し整理して高度なビジュアルに変換できます。
+
+> [!Note]
+> この Power BI ライセンスは、より大規模な運用/開発/テスト環境に影響を与えることなく、安全な場所で Power BI 機能について学習し、実験するために利用できます。  現在の Power BI のオファーでは、サブスクライバーは強制的に分離するために独自のテナントを作成する必要があります。 会社のテナント内の会社の資格情報に関連付けられた Power BI ライセンスを取得する必要がある場合は、会社の管理者に相談してライセンスを購入し、割り当ててください。
 
 ## <a name="activation-steps"></a>アクティブ化の手順
 Power BI Pro を使うには、アカウントを設定するか、既存のアカウントを使ってサインインする必要があります。
@@ -73,10 +76,10 @@ Power BI Pro を使うには、アカウントを設定するか、既存のア�
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 使用可能       |  はい|
+| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 使用可能       |  [はい]|
 | Visual Studio Professional (Standard、月間クラウド) | VL、Azure、リテール                                       | 使用できません                                                            |N/A         |
 | Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用できません                                                            |N/A         |
-| MSDN Platforms (標準)                                          | VL、リテール                                              | 使用可能       |  はい|
+| MSDN Platforms (標準)                                          | VL、リテール                                              | 使用可能       |  [はい]|
 | Visual Studio Dev Essentials | N/A  | 使用できません |N/A|
 | Visual Studio Enterprise (月間クラウド) | Azure                                       | 使用できません                                  |N/A|
 
@@ -95,8 +98,10 @@ A:特典は無料ですが、アクティブ化には有料の注文を処理す
 - クレジット カード。  クレジット カード番号を入力した場合、カードに課金されることはありません。 
 - 請求書。  支払い方法に "請求書" を選択した場合、クレジット カード番号を入力する必要はありません。  期間を "年間" に設定することもできます。  これにより、請求書の準備ができたことを知らせる電子メールが 1 回送信されます。  請求金額は $0.00 になります。  
 
-### <a name="q--is-the-power-bi-pro-benefit-included-in-my-subscription-licenses-for-use-in-a-production-environment"></a>Q:自分のサブスクリプション ライセンスに含まれる Power BI Pro の特典を運用環境で使用することはできますか。
-A:はい。  
+### <a name="q--is-the-power-bi-pro-benefit-included-in-my-subscription-licensed-for-use-in-a-production-environment"></a>Q:自分のサブスクリプション ライセンスに含まれる Power BI Pro の特典を運用環境で使用することはできますか。
+A:はい。2 つの重要な注意事項はありますが、運用環境で使用することができます。
+- このオファーには、所有しているテナントへのインストールが必要です。  会社のテナント内の会社の資格情報に関連付けられた Power BI ライセンスを取得する必要がある場合は、会社の管理者に相談してライセンスを購入し、割り当ててください。 
+- Power BI Pro 特典は、政府機関向けのテナントには使用できません。  
 
 ### <a name="q--when-i-try-to-activate-power-bi-pro-i-get-a-message-you-already-have-an-account-through-work--can-i-still-use-the-benefit"></a>Q:Power BI Pro をアクティブ化しようとすると、"You already have an account through work\(作業中に既にアカウントを登録しています\)" というメッセージが表示されます。  特典はまだ使用できますか。
 A:はい。  このメッセージは、管理者ではないアクティブな Office 365 テナントが既に含まれるドメインにログオンしていることを示しています。  Power BI Pro をテナントに追加するには、そのテナントの管理者である必要があります。  この問題を解決するには、次の手順に従って独自のテナントを作成します。

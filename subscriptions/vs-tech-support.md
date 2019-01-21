@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれるテクニ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 635280cf52ca82af67ec1b3fc321f5ea6955128a
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: e2e5b66988ba5ff5aedede2e1cef112a3b204919
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53740434"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54315515"
 ---
 # <a name="activate-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションのテクニカル サポート特典をアクティブ化する
 
@@ -85,20 +85,17 @@ ms.locfileid: "53740434"
 Azure に関連する問題がある場合に Visual Studio サブスクリプションのテクニカル サポート特典を使用するには、契約 ID とアクセス ID を Azure サブスクリプションにリンクする必要があります。
 
 1.  [https://portal.azure.com](https://portal.azure.com) にアクセスしてサインインします。
-2.  左側のナビゲーションで [ヘルプとサポート] をクリックします。
-3.  [サポート] で、[サポート契約をリンクする] をクリックします。
-4.  上記の手順 1. で指定した "アクセス ID" と "契約 ID" を入力します。
-
-これらの手順を完了したら、Visual Studio サブスクリプションの特典に関連付けられているサポート プランを選択することができます   (プラン名には "MSDN" が含まれる場合があります)。
+2.  左側のナビゲーションで **[ヘルプとサポート]** をクリックします。
+3.  [サポート] で、**[新しいサポート要求]** をクリックします。
 
 ## <a name="eligibility"></a>特典を受ける条件
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 4 つのインシデント       |  はい|
-| Visual Studio Professional (Standard) | VL、Azure、リテール、一部の NFR<sup>2</sup>                                        | 2 つのインシデント                                                          |はい         |
-| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 2 つのインシデント                                             |  はい         |
-| MSDN Platforms (標準)                                          | VL、リテール                                              | 2 つのインシデント                                               | はい         |
+| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 4 つのインシデント       |  [はい]|
+| Visual Studio Professional (Standard) | VL、Azure、リテール、一部の NFR<sup>2</sup>                                        | 2 つのインシデント                                                          |[はい]         |
+| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 2 つのインシデント                                             |  [はい]         |
+| MSDN Platforms (標準)                                          | VL、リテール                                              | 2 つのインシデント                                               | [はい]         |
 | Visual Studio Dev Essentials | N/A | 使用できません |N/A|
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
 

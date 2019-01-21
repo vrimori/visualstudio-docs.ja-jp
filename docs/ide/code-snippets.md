@@ -18,16 +18,16 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: fc02a504cb6fa36a13992cf188eb0c14b6836fb1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c539e2a20f7fa32ccba86a56831c71b17fdbefa5
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53889229"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269411"
 ---
 # <a name="code-snippets"></a>コード スニペット
 
-コードスニペットは、コンテキスト メニュー コマンドまたはホット キーの組み合わせを使用してコード ファイルに挿入できる、再利用可能なコードの小さなブロックです。 通常、スニペットには `try-finally` や `if-else` などのよく使われるコード ブロックが含まれていますが、スニペットを使ってクラス全体またはメソッド全体を挿入することもできます。
+コードスニペットは、右クリック メニュー (コンテキスト メニュー) コマンドまたはホット キーの組み合わせを使用してコード ファイルに挿入できる、再利用可能なコードの小さなブロックです。 通常、スニペットには `try-finally` や `if-else` などのよく使われるコード ブロックが含まれていますが、スニペットを使ってクラス全体またはメソッド全体を挿入することもできます。
 
 > [!NOTE]
 > このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、「[コード スニペット (Visual Studio for Mac)](/visualstudio/mac/snippets)」を参照してください。
@@ -61,7 +61,7 @@ finally
 }
 ```
 
-このスニペットを挿入するには、コード ウィンドウのコンテキスト メニューで **[スニペットの挿入]** をクリックしてから、**[Visual C#]** をクリックし、「`tryf`」と入力して、**Tab** キーを押します。または、「`tryf`」と入力して **Tab** キーを 2 回押します。
+このスニペットを挿入するには、コード ウィンドウの右クリック メニュー (コンテキスト メニュー) で **[スニペットの挿入]** をクリックしてから、**[Visual C#]** をクリックし、「`tryf`」と入力して、**Tab** キーを押します。または、「`tryf`」と入力して **Tab** キーを 2 回押します。
 
 ブロックの挿入用スニペットの例: C++ では、ショートカット `if` は挿入スニペットまたはブロックの挿入用スニペットとして使用できます。 コード行 (例: `return FALSE;`) を選択した場合は、**[ブロックの挿入]** > **[if]** を選択すると、行の周りにスニペットが展開されます。
 

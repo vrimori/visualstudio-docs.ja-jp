@@ -17,10 +17,10 @@ manager: douge
 ms.workload:
 - uwp
 ms.openlocfilehash: b3b9cbbeaf94c231de518b6129a11327b69767f4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
+ms.lasthandoff: 01/16/2019
 ms.locfileid: "53843529"
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>ユニバーサル Windows アプリの HTML UI の応答性を分析する
@@ -110,7 +110,7 @@ ms.locfileid: "53843529"
   
      ![CPU 使用状況グラフ](../profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")  
   
-11.  [タイムライン グラフの表示](#TimelineDetails) 」 を使用すると、あまりに頻繁に実行されるイベントまたは完了に多くの時間がかかっているイベントに関する詳細情報を取得できます。 たとえば、次のものを探します。  
+11. [タイムライン グラフの表示](#TimelineDetails) 」 を使用すると、あまりに頻繁に実行されるイベントまたは完了に多くの時間がかかっているイベントに関する詳細情報を取得できます。 たとえば、次のものを探します。  
   
     -   イベント リスナー、タイマー、およびアニメーション フレームのコールバック。 特定のイベントに応じて、提供されるデータには変更された DOM 要素の ID、変更された CSS プロパティの名前、ソースの場所へのリンク、関連付けられたイベントまたはコールバック関数の名前が含まれる場合があります。  
   

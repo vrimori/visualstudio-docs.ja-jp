@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d5013e04d1d5b6c73255be907d2b460cb186cea8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c8fb33e1b6df6cd43aaaba9c38123ff7b941da5c
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968710"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269970"
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>方法:[定義をここに表示] を使用してコードを表示および編集する (Alt + F12)
 
@@ -25,7 +25,7 @@ ms.locfileid: "53968710"
 
 ### <a name="to-open-a-peek-definition-window"></a>[定義をここに表示] ウィンドウを開くには
 
-1. 探索する型またはメンバーのコンテキスト メニューから **[定義をここに表示]** を選択して、定義を表示できます。 Visual Studio 2017 バージョン 15.4 以降では、オプションが有効な場合、マウスを使用して定義を表示することもできます。その場合、**Ctrl** キー (または別の修飾子) を押して、メンバー名をクリックします。 または、キーボードの **Alt** + **F12** キーを押します。
+1. 探索する型またはメンバーの右クリック メニューから **[定義をここに表示]** を選択して、定義を表示できます。 Visual Studio 2017 バージョン 15.4 以降では、オプションが有効な場合、マウスを使用して定義を表示することもできます。その場合、**Ctrl** キー (または別の修飾子) を押して、メンバー名をクリックします。 または、キーボードの **Alt** + **F12** キーを押します。
 
      次の図に、`Print()` という名前のメソッドの **[定義をここに表示]** ウィンドウを示します。
 

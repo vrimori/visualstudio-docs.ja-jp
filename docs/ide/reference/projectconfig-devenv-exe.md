@@ -1,18 +1,18 @@
 ---
-title: DevEnv ProjectConfig スイッチ
-ms.date: 11/04/2016
+title: -ProjectConfig (devenv.exe)
+ms.date: 12/10/2018
 ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
-- /projectconfig Devenv switch
+- /ProjectConfig Devenv switch
 - configurations, rebuilding
 - deployment projects, creating
 - configurations, cleaning
 - deployment projects, specifying
 - deployment projects, adding
 - build configurations, specifying
-- Devenv, /projectconfig switch
-- projectconfig Devenv switch (/projectconfig)
+- Devenv, /ProjectConfig switch
+- ProjectConfig Devenv switch (/ProjectConfig)
 - projects [Visual Studio], build configuration
 - projects [Visual Studio], cleaning
 ms.assetid: 6b54ef59-ffed-4f62-a645-1279ede97ebf
@@ -21,50 +21,63 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ca481d23757cc9022042db42a6d4be477880367
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a199fb7656e36720a6787557e2e0746b79795fd3
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53967918"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269931"
 ---
 # <a name="projectconfig-devenvexe"></a>/ProjectConfig (devenv.exe)
 
-**/project** 引数で指定されたプロジェクトをビルド、消去、リビルド、または展開する際に適用されるプロジェクトのビルド構成を指定します。
+`/Project` 引数で指定されたプロジェクトをビルド、消去、リビルド、または展開する際に適用されるプロジェクトのビルド構成を指定します。
 
 ## <a name="syntax"></a>構文
 
-```cmd
-devenv SolutionName {/build|/clean|/rebuild|/deploy} SolnConfigName [/project ProjName] [/projectconfig ProjConfigName]
+```shell
+devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project ProjName [/ProjectConfig ProjConfigName]] [/Out OutputFilename]]
 ```
 
 ## <a name="arguments"></a>引数
 
-|||
-|-|-|
-|/build|**/project** 引数で指定されたプロジェクトをビルドします。|
-|/clean|ビルド時に作成されたすべての中間ファイルと出力ディレクトリを消去します。|
-|/rebuild|**/project** 引数で指定されたプロジェクトを消去してからビルドします。|
-|/deploy|ビルドまたはリビルド後にプロジェクトを展開することを指定します。|
-|*SolnConfigName*|必須です。 *SolutionName* で指定されたソリューションに適用されるソリューション構成の名前。 複数のソリューション プラットフォームが利用できる場合、**"Debug\|Win32"** など、プラットフォームも指定する必要があります。|
-|*SolutionName*|必須です。 ソリューション ファイルの完全パスと名前。|
-|/project *ProjName*|任意。 ソリューション内のプロジェクト ファイルのパスと名前です。 *SolutionName* フォルダーからプロジェクト ファイルへの相対パス、プロジェクトの表示名、プロジェクト ファイルの完全なパスと名前を入力できます。|
-|/projectconfig *ProjConfigName*|任意。 **/project** 引数で指定されたプロジェクトに適用されるプロジェクトのビルド構成の名前。 複数のソリューション プラットフォームが利用できる場合、**"Debug\|Win32"** など、プラットフォームも指定する必要があります。|
+- *SolutionName*
+
+  必須です。 ソリューション ファイルの完全パスと名前。
+
+- {`/Build`|`/Clean`|`/Deploy`|`/Rebuild`}
+
+  必須です。 プロジェクトの[ビルド](build-devenv-exe.md)、[消去](clean-devenv-exe.md)、[配置](deploy-devenv-exe.md)、または[リビルド](rebuild-devenv-exe.md)を行います。
+
+- *SolnConfigName*
+
+  任意。 *SolutionName* で指定されたソリューションに適用されるソリューション構成の名前 (`Debug`、`Release` など)。 複数のソリューション プラットフォームが利用できる場合、プラットフォームも指定する必要があります (`Debug|Win32` など)。 この引数が指定されていないか空の文字列 (`""`) の場合、ソリューションのアクティブな構成が使用されます。
+
+- `/Project` *ProjName*
+
+  任意。 ソリューション内のプロジェクト ファイルのパスと名前です。 プロジェクトの表示名または *SolutionName* フォルダーからプロジェクト ファイルへの相対パスを入力できます。 プロジェクト ファイルの完全なパスと名前を入力することもできます。
+
+- `/ProjectConfig` *ProjConfigName*
+
+  任意。 指定した `/Project` に適用されるプロジェクトのビルド構成名 (`Debug`、`Release` など)。 複数のソリューション プラットフォームが利用できる場合、プラットフォームも指定する必要があります (`Debug|Win32` など)。
+
+- `/Out` *OutputFilename*
+
+  任意。 ツールの出力を送信する先のファイル名。 このファイルが既に存在する場合、ファイルの末尾に出力が追加されます。
 
 ## <a name="remarks"></a>コメント
 
-**/projectconfig** スイッチは、**/build**、**/clean**、**/rebuild**、**/deploy** コマンドの一部として **/project** スイッチと共に使用する必要があります。
+`/ProjectConfig` スイッチは、`/Build`、/`Clean`、`/Deploy`、または `/Rebuild` コマンドの一部として `/Project` スイッチと共に使用する必要があります。
 
 空白を含む文字列を二重引用符で囲みます。
 
-エラーなどのビルドの概要情報は、[コマンド] ウィンドウ、または **/out** スイッチで指定された任意のログ ファイルに表示できます。
+エラーなどのビルドの概要情報は、[コマンド] ウィンドウ、または `/Out` スイッチで指定された任意のログ ファイルに表示できます。
 
 ## <a name="example"></a>例
 
-次のコマンドでは、"MySolution" の "Debug" ソリューション構成内の "Debug" プロジェクト ビルド構成を使用し、プロジェクト "CSharpConsoleApp" がビルドされます。
+次のコマンドでは、`MySolution` 内の `Debug` プロジェクト ビルド構成を使用して、プロジェクト `CSharpWinApp` をビルドします。
 
-```cmd
-devenv "C:\Visual Studio Projects\MySolution\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug
+```shell
+devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug
 ```
 
 ## <a name="see-also"></a>関連項目

@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 46a3a0a415af9cddcba63040fd445de7869921e2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 79d39aa23e752ee0ce6f95b6a6d8c419dbd51d9a
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53918613"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269996"
 ---
 # <a name="toolbox"></a>ツールボックス
 
@@ -40,7 +40,7 @@ ms.locfileid: "53918613"
 
 既定では、**ツールボックス**は、Visual Studio IDE の左側に沿って折りたたまれており、カーソルをそこに移動すると開きます。 カーソルを移動したときに開いたままになるように、**ツールボックス**を固定することもできます (ツールボックスのツール バー上の **[ピン]** アイコンをクリック)。 また、**ツールボックス** ウィンドウをドッキング解除して、画面上の任意の場所にドラッグすることもできます。 ツールボックスのツール バーを右クリックし、いずれかのオプションを選択して、**ツールボックス**のドッキング、ドッキング解除、非表示を設定できます。
 
-コンテキスト メニューの次のコマンドを使用すると、**ツールボックス** タブの項目を再配置することも、カスタム タブやカスタム項目を追加することもできます。
+コンテキスト メニューの次のコマンドを使用すると、**[ツールボックス]** タブの項目を再配置することも、カスタム タブやカスタム項目を追加することもできます。
 
 - **[項目名の変更]** - 選択された項目の名前を変更します。
 

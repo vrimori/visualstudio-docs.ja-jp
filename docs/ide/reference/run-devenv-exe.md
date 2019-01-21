@@ -1,58 +1,66 @@
 ---
 title: -Run (devenv.exe)
-ms.date: 11/04/2016
+ms.date: 12/10/2018
 ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
-- /run Devenv
-- run Devenv switch
+- /Run Devenv
+- Run Devenv switch
 - applications [Visual Studio], running
-- /r Devenv switch
-- Devenv, /run switch
-- r Devenv switch (/r)
+- /R Devenv switch
+- Devenv, /Run switch
+- R Devenv switch (/R)
 ms.assetid: b1f22f9d-39a5-4918-8a2a-4b5c1e872665
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f46afb431b998b5fd937d24178a602f6aea81eb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: db6653bf0b44d186ad30f3d1dffa367db7fe354b
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53921745"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227474"
 ---
 # <a name="run-devenvexe"></a>/Run (devenv.exe)
+
 指定したプロジェクトまたはソリューションをコンパイルして実行します。
 
 ## <a name="syntax"></a>構文
 
-```cmd
-devenv {/run|/r} {SolutionName|ProjectName}
+```shell
+devenv {/Run|/R} {SolutionName|ProjectName} [/Out OutputFilename]
 ```
 
 ## <a name="arguments"></a>引数
- `SolutionName`
 
- 必須です。 ソリューション ファイルの完全パスと名前。
+- *SolutionName*
 
- `ProjectName`
+  ソリューション ファイルの完全パスと名前。
 
- 必須です。 プロジェクト ファイルの完全パスと名前。
+- *ProjectName*
+
+  プロジェクト ファイルの完全パスと名前。
+
+- `/Out` *OutputFilename*
+
+  任意。 ツールの出力を送信する先のファイル名。 このファイルが既に存在する場合、ファイルの末尾に出力が追加されます。
 
 ## <a name="remarks"></a>コメント
- アクティブなソリューション構成に対して指定された設定に従って、指定したプロジェクトまたはソリューションをコンパイルして実行します。 このスイッチは、統合開発環境 (IDE) を起動し、プロジェクトまたはソリューションの実行が完了しても IDE をアクティブな状態のままにします。
 
--   空白を含む文字列を二重引用符で囲みます。
+アクティブなソリューション構成に対して指定された設定に従って、指定したプロジェクトまたはソリューションをコンパイルして実行します。 このスイッチを指定すると、IDE が起動され、プロジェクトまたはソリューションの実行が完了しても IDE がアクティブな状態のままになります。
 
--   エラーなどの概要情報は、**[コマンド]** ウィンドウ、または `/out`スイッチで指定した任意のログ ファイルに表示できます。
+- 空白を含む文字列を二重引用符で囲みます。
+
+- エラーなどの概要情報は、**[コマンド]** ウィンドウ、または `/Out`スイッチで指定した任意のログ ファイルに表示できます。
 
 ## <a name="example"></a>例
- この例では、アクティブな配置構成を使用して、ソリューション `MySolution` を実行します。
 
-```cmd
-devenv /run "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln"
+この例では、アクティブな配置構成を使用して、ソリューション `MySolution` を実行します。
+
+```shell
+devenv /run "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
 ```
 
 ## <a name="see-also"></a>「

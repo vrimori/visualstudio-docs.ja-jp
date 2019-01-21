@@ -1,15 +1,15 @@
 ---
 title: -Project (devenv.exe)
-ms.date: 11/04/2016
+ms.date: 12/10/2018
 ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
-- /project Devenv switch
+- /Project Devenv switch
 - projects [Visual Studio], rebuilding
 - projects [Visual Studio], building
 - deployment projects, specifying
-- project Devenv switch (/project)
-- Devenv, /project switch
+- Project Devenv switch (/Project)
+- Devenv, /Project switch
 - projects [Visual Studio], cleaning
 ms.assetid: 8b07859c-3439-436d-9b9a-a8ee744eee30
 author: gewarren
@@ -17,71 +17,66 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c73167c5529eda0f97f414e7c0e2d76083b7bb0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1706d8dade02bd7f247d7f2ce163955615a3b0f3
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53921615"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269187"
 ---
 # <a name="project-devenvexe"></a>/Project (devenv.exe)
+
 指定したソリューション構成内の単一のプロジェクトを、ビルド、クリーン、リビルド、または配置対象として指定します。
 
 ## <a name="syntax"></a>構文
 
-```cmd
-devenv SolutionName {/build|/clean|/rebuild|/deploy} SolnConfigName [/project ProjName] [/projectconfig ProjConfigName]
+```shell
+devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project ProjName [/ProjectConfig ProjConfigName]] [/Out OutputFilename]]
 ```
 
 ## <a name="arguments"></a>引数
- /build
 
- `/project` `ProjName` で指定されたプロジェクトをビルドします。
+- *SolutionName*
 
- /clean
+  必須です。 ソリューション ファイルの完全パスと名前。
 
- ビルド時に作成されたすべての中間ファイルと出力ディレクトリを消去します。
+- {`/Build`|`/Clean`|`/Deploy`|`/Rebuild`}
 
- /rebuild
+  必須です。 プロジェクトの[ビルド](build-devenv-exe.md)、[消去](clean-devenv-exe.md)、[配置](deploy-devenv-exe.md)、または[リビルド](rebuild-devenv-exe.md)を行います。
 
- `/project` `ProjName` で指定されたプロジェクトを消去してからビルドします。
+- *SolnConfigName*
 
- /deploy
+  任意。 *SolutionName* で指定されたソリューションに適用されるソリューション構成の名前 (`Debug`、`Release` など)。 複数のソリューション プラットフォームが利用できる場合、プラットフォームも指定する必要があります (`Debug|Win32` など)。 この引数が指定されていないか空の文字列 (`""`) の場合、ソリューションのアクティブな構成が使用されます。
 
- ビルドまたはリビルド後にプロジェクトを展開することを指定します。
+- `/Project` *ProjName*
 
- `SolnConfigName`
+  任意。 ソリューション内のプロジェクト ファイルのパスと名前です。 プロジェクトの表示名または *SolutionName* フォルダーからプロジェクト ファイルへの相対パスを入力できます。 プロジェクト ファイルの完全なパスと名前を入力することもできます。
 
- 必須です。 `SolutionName` で指定されたソリューションに適用されるソリューション構成の名前。
+- `/ProjectConfig` *ProjConfigName*
 
- `SolutionName`
+  任意。 指定した `/Project` に適用されるプロジェクトのビルド構成名 (`Debug`、`Release` など)。 複数のソリューション プラットフォームが利用できる場合、プラットフォームも指定する必要があります (`Debug|Win32` など)。
 
- 必須です。 ソリューション ファイルの完全パスと名前。
+- `/Out` *OutputFilename*
 
- /project `ProjName`
-
- 任意。 ソリューション内のプロジェクト ファイルのパスと名前です。 `SolutionName` フォルダーからプロジェクト ファイルへの相対パス、プロジェクトの表示名、またはプロジェクト ファイルの完全なパスと名前を入力できます。
-
- /projectconfig `ProjConfigName`
-
- 任意。 指定した `/project` に適用されるプロジェクトのビルド構成の名前。
+  任意。 ツールの出力を送信する先のファイル名。 このファイルが既に存在する場合、ファイルの末尾に出力が追加されます。
 
 ## <a name="remarks"></a>コメント
 
--   `devenv /build`、/`clean`、`/rebuild`、または `/deploy` コマンドに含めて使用する必要があります。
+- `devenv`、`/Build`、`/Clean`、`/Rebuild`、または `/Deploy` コマンドの一部として使用する必要があります。
 
--   空白を含む文字列を二重引用符で囲みます。
+- 空白を含む文字列を二重引用符で囲みます。
 
--   エラーなどのビルドの概要情報は、**[コマンド]** ウィンドウ、または `/out` スイッチで指定された任意のログ ファイルに表示できます。
+- エラーなどのビルドの概要情報は、**[コマンド]** ウィンドウ、または `/Out` スイッチで指定された任意のログ ファイルに表示できます。
 
 ## <a name="example"></a>例
- この例では、`Debug` プロジェクトのビルド構成を使用して、`MySolution` の `Debug` ソリューション構成内でプロジェクト `CSharpConsoleApp` をビルドします。
 
-```cmd
-devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug
+この例では、`MySolution` 内の `Debug` プロジェクト ビルド構成を使用して、プロジェクト `CSharpWinApp` をビルドします。
+
+```shell
+devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug
 ```
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 - [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
 - [/ProjectConfig (devenv.exe)](../../ide/reference/projectconfig-devenv-exe.md)

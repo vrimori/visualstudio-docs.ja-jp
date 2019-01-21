@@ -9,12 +9,12 @@ description: 長期契約ではなく、月または年単位の一定期間だ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: d045e407c030e02ef648c2594a7f2bfa5e97d40f
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: 23926cd28032c1e1b201312220770a83a269c839
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53740222"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269749"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Visual Studio Professional および Visual Studio Enterprise クラウド サブスクリプションの購入
 
@@ -37,9 +37,7 @@ Azure サブスクリプションに対する[所有者や共同作業者アク�
 
 1.  [[Visual Studio Marketplace]、[サブスクリプション]](https://marketplace.visualstudio.com/subscriptions) にサインインします。
 
-2.  購入するサブスクリプションを選択します。次に例を示します。
-    > [!div class="mx-imgBorder"]
-    > ![Visual Studio サブスクリプションを購入する](_img/buy-vs-subscriptions/buy-vs-sub-start.png)
+2.  購入するサブスクリプションを選択します (Visual Studio Professional の月額サブスクリプションなど)。
 
 3.  請求に使用する Azure サブスクリプションを選択します。 お持ちでなければ、新しい Azure サブスクリプションを作成できます。
     > [!div class="mx-imgBorder"]
@@ -90,7 +88,7 @@ A:[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsof
 #### <a name="q-what-purchasing-options-are-available-to-me"></a>Q:どのような購入オプションを利用できますか。
 A:直接販売チャネルで、月間サブスクリプションと標準サブスクリプションが提供されています。 詳細については、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) を確認してください。  
 ボリューム ライセンス プログラムにも多くのオプションがあります。 オプションと価格は   
-[https://www.microsoft.com/en-us/licensing/how-to-buy/how-to-buy](https://www.microsoft.com/en-us/licensing/how-to-buy/how-to-buy) で調べることができます。
+[https://www.microsoft.com/en-us/licensing/how-to-buy/how-to-buy](https://www.microsoft.com/en-us/licensing/how-to-buy/how-to-buy).
 
 #### <a name="q-the-price-for-a-retail-subscription-is-higher-what-additional-benefits-am-i-receiving"></a>Q:リテール サブスクリプションの価格が高くなっています。 どのような追加特典が得られますか。 
 A:サブスクリプションに付属する Visual Studio IDE の永続的ライセンス権が得られます。 更新時にお支払いいただくのはソフトウェア アシュアランス料のみであるため、かなり安くなります。  
