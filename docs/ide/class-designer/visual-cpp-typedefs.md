@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0efbf39ec7000055bdaa978eab06417dae8b183
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: bca0dacf2fd649db91fb37756c1670af403b4e95
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53869191"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269410"
 ---
 # <a name="visual-c-typedefs-in-class-designer"></a>クラス デザイナーにおける Visual C++ の typedef
 
@@ -44,7 +44,7 @@ typedef class coord
 
 クラスと構造体は、その中で宣言されている入れ子になった typedef を持つことができます。 **クラス デザイナー**では、クラスと構造体の図形は、入れ子になった typedef 宣言を入れ子にされた図形として表示できます。
 
-typedef の図形では、コンテキスト メニューとして **[関連として表示]** および **[コレクションの関連として表示]** のコマンドをサポートしています。
+typedef の図形では、右クリック メニュー (コンテキスト メニュー) として **[関連として表示]** および **[コレクションの関連として表示]** のコマンドをサポートしています。
 
 ### <a name="class-typedef-example"></a>クラスの typedef の例
 

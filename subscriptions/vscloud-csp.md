@@ -9,12 +9,12 @@ description: クラウド ソリューション プロバイダーが顧客の�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 9e400373d56e494e9292a086c55c07795a75d989
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: 7ca04ab81462c2126068ed5a5710cee663944431
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53739576"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270009"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>顧客用に Visual Studio クラウド サブスクリプションを購入して管理する
 
@@ -46,7 +46,7 @@ Azure サブスクリプションに対する[所有者または共同作成者�
 0. **[Visual Studio Marketplace]** を選択します。
 0. 右上隅に顧客の名前が表示されていることを確認します。
 0. **[Subscriptions]\(サブスクリプション\)** を選択します。
-0. Visual Studio の Enterprise または Professional および月間プランまたは年間プランを選びます。
+0. Enterprise for Visual Studio または Professional for Visual Studio を選択します。
 0. **[Buy]\(購入\)** を選択します。
 0. 購入の請求先の Azure サブスクリプションを選びます。
 0. 顧客が必要とするユーザーの数を入力します。

@@ -8,12 +8,12 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: d02c4546b98e2a7551f4454088acfc6a54637e4f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 057f243b0246bac1796fe160550e83f922593830
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53925460"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270220"
 ---
 # <a name="how-to-use-ctest-for-c-in-visual-studio"></a>Visual Studio で C++ 用の CTest を使用する方法
 
@@ -35,7 +35,7 @@ CTest を使用するが、Google アダプターまたは Boost アダプター
 
 ## <a name="to-run-tests-visual-studio-2017-version-155"></a>テストを実行するには (Visual Studio 2017 バージョン 15.5)
 
-**Visual Studio 2017 バージョン 15.5** では、CTest は**テスト エクスプローラー**に統合されていません。 テストは、CMake のメイン メニューから実行するか、または**ソリューション エクスプローラー**で *CMakeLists.txt* ファイルに対するコンテキスト メニューから実行することができます。 テストの結果は、Visual Studio の **[出力ウィンドウ]** に送られます。
+**Visual Studio 2017 バージョン 15.5** では、CTest は**テスト エクスプローラー**に統合されていません。 テストは、CMake のメイン メニューから実行するか、または**ソリューション エクスプローラー**で *CMakeLists.txt* ファイルに対する右クリック メニューから実行することができます。 テストの結果は、Visual Studio の **[出力ウィンドウ]** に送られます。
 
 ![VS2017 15.5 での CTest テストの実行](media/cpp-cmake-run-tests.png)
 

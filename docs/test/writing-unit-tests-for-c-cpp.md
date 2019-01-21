@@ -8,12 +8,12 @@ manager: wpickett
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: eb441d5987a4e1defde83d4ca9737cc27ab278fe
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: eff82db5a7ca5c5a18c7d89017dfae892d209fbf
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53840883"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270048"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio で C/C++ 用の単体テストを作成する
 
@@ -37,7 +37,7 @@ C++ 単体テスト プロジェクトでは [CodeLens](../ide/find-code-changes
 
 **Visual Studio 2017 バージョン 15.5**
 
-- **Google Test アダプター**は、**C++ によるデスクトップ開発**ワークロードの既定のコンポーネントとして含まれます。 このアダプターには、**ソリューション エクスプローラー**のソリューション ノードの **[新しいプロジェクトの追加]** コンテキスト メニューでソリューションに追加できるプロジェクト テンプレートと、**[ツール]** >  **[オプション]** で構成できるオプションがあります。 詳細については、「[How to: use Google Test in Visual Studio](how-to-use-google-test-for-cpp.md)」(Visual Studio で C++ 用の Google Test を使用する方法) をご覧ください。
+- **Google Test アダプター**は、**C++ によるデスクトップ開発**ワークロードの既定のコンポーネントとして含まれます。 このアダプターには、**ソリューション エクスプローラー**のソリューション ノードの **[新しいプロジェクトの追加]** 右クリック メニューでソリューションに追加できるプロジェクト テンプレートと、**[ツール]** > **[オプション]** で構成できるオプションがあります。 詳細については、「[How to: use Google Test in Visual Studio](how-to-use-google-test-for-cpp.md)」(Visual Studio で C++ 用の Google Test を使用する方法) をご覧ください。
 
 - **Boost.Test** は、**C++ によるデスクトップ開発**ワークロードの既定のコンポーネントとして含まれます。 **テスト エクスプローラー**とは統合されていますが、現時点ではプロジェクト テンプレートがないので、手動で構成する必要があります。 詳細については、「[How to: use Boost.Test in Visual Studio](how-to-use-boost-test-for-cpp.md)」(Visual Studio で C++ 用の Boost.Test を使用する方法) をご覧ください。
 

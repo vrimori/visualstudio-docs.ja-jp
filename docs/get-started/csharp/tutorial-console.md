@@ -2,7 +2,7 @@
 title: 'チュートリアル: C# コンソール アプリの概要'
 description: Visual Studio で C# コンソール アプリを作成する方法について、ステップ バイ ステップで説明します。
 ms.custom: seodec18, get-started
-ms.date: 12/12/2018
+ms.date: 01/10/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-dev15
 ms.topic: tutorial
@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 333eeb3f826663d979e1cec444ede7eda4b55b2a
-ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
+ms.openlocfilehash: 6114910f8c4cbeebc0301cc0c2167a49742823a5
+ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53562218"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54204432"
 ---
 # <a name="tutorial-get-started-with-a-c-console-app-in-visual-studio"></a>チュートリアル:Visual Studio での C# コンソール アプリの概要
 
@@ -135,9 +135,11 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 小数を処理するようにコードを修正しましょう。
 
+1. **Ctrl** + **F** キーを押して **[検索と置換]** コントロールを開きます。
+
 1. `int` 変数の各インスタンスを `float` に変更します。
 
-   (この作業には、[[検索と置換]](../../ide/finding-and-replacing-text.md#find-and-replace-control) コントロールが役に立ちます。 コード エディターで検索コントロールにアクセスするには、**Crtl** + **F** キーを押します。 次に、検索コントロールで **[次を検索]** ボタンまたは **[前を検索]** ボタンを選択します。 置換オプションにアクセスするには、**[検索]** ボックスの横にあるボタンを選択します。 置換を 1 か所ずつ実行するには、**[置換]** ボックスの横にある **[次を置換]** をクリックします。 すべての一致項目を置換するには、**[すべて置換]** を選択します。)
+    ![int 変数を float に変更する方法を示す [検索と置換] コントロールのアニメーション](./media/find-replace-control-animation.gif)
 
 1. 電卓アプリをもう一度実行し、値 **42** を値 **119** で割ります。
 
@@ -147,9 +149,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ただし、アプリは小数の結果を生成するだけです。 もう少しコードに手を加えて、小数を計算できるようにしましょう。
 
-1. `float` 変数の各インスタンスを `double` に変更します。
-
-1. `Convert.ToInt32` メソッドの各インスタンスを `Convert.ToDouble` に変更します。
+1. **[検索と置換]** コントロール (**Ctrl** + **F** キー) を使用して `float` 変数の各インスタンスを `double` に変更し、`Convert.ToInt32` メソッドの各インスタンスを `Convert.ToDouble` に変更します。
 
 1. 電卓アプリを実行し、値 **42.5** を値 **119.75** で割ります。
 

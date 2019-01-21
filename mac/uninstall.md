@@ -6,12 +6,12 @@ ms.author: crdun
 ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: 4a0ecef49d8c3493ff6094be66f1d05ad588077c
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: 2a0b1e14dd822c159484dcaed052a13a35d43939
+ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51295671"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54204334"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Visual Studio for Mac のアンインストール
 
@@ -34,10 +34,11 @@ Visual Studio for Mac とご利用のコンピューター用のコンポーネ�
 
 [アンインストール スクリプト](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh)を使うと、Visual Studio と Xamarin コンポーネントを一度にアンインストールできます。
 
-このアンインストール スクリプトには、この記事で説明されているほとんどのコマンドが含まれます。 外部依存関係の可能性のためにスクリプトからは次の 2 つが除外されています。
+このアンインストール スクリプトには、この記事で説明されているほとんどのコマンドが含まれます。 外部依存関係の可能性のためにスクリプトからは次の 3 つが除外されています。 これを削除するには、以下の関連セクションにジャンプして手動で削除してください。
 
-- **Mono のアンインストール**
-- **Android AVD のアンインストール**
+- **[Mono のアンインストール](#uninstall-mono-sdk-mdk)**
+- **[Android AVD のアンインストール](#uninstall-android-avd)**
+- **[Android SDK と Java SDK をアンインストールする](#uninstall-android-sdk-and-java-sdk)**
 
 スクリプトを実行するには、次の手順のようにします。
 
@@ -45,13 +46,13 @@ Visual Studio for Mac とご利用のコンピューター用のコンポーネ�
 2. ターミナルを開き、スクリプトをダウンロードした場所に作業ディレクトリを変更します。
 
     ```bash
-    $ cd /location/of/file
+    cd /location/of/file
     ```
 3. スクリプトを実行可能にして、**sudo** で実行します。
 
     ```bash
-    $ chmod +x ./uninstall-vsmac.sh
-    $ sudo ./uninstall-vsmac.sh
+    chmod +x ./uninstall-vsmac.sh
+    sudo ./uninstall-vsmac.sh
     ```
 4. 最後に、アンインストール スクリプトを削除します。
 
@@ -65,13 +66,13 @@ Visual Studio for Mac とご利用のコンピューター用のコンポーネ�
 2. ターミナルを開き、スクリプトをダウンロードした場所に作業ディレクトリを変更します。
 
     ```bash
-    $ cd /location/of/file
+    cd /location/of/file
     ```
 3. スクリプトを実行可能にして、**sudo** で実行します。
 
     ```bash
-    $ chmod +x ./dotnet-uninstall-pkgs.sh
-    $ sudo ./dotnet-uninstall-pkgs.sh
+    chmod +x ./dotnet-uninstall-pkgs.sh
+    sudo ./dotnet-uninstall-pkgs.sh
     ```
 4. 最後に、.NET Core のアンインストール スクリプトを削除します。
 
@@ -93,10 +94,16 @@ rm -rf ~/Library/Preferences/Visual\ Studio
 rm -rf ~/Library/Logs/VisualStudio
 rm -rf ~/Library/VisualStudio
 rm -rf ~/Library/Preferences/Xamarin/
-rm -rf ~/Library/Developer/Xamarin
 rm -rf ~/Library/Application\ Support/VisualStudio
 rm -rf ~/Library/Application\ Support/VisualStudio/7.0/LocalInstall/Addins/
 ```
+
+Xamarin のさまざまなファイルやフォルダーを含む次のディレクトリを削除することもできます。 ただし、実行する前に、このディレクトリに Android の署名キーが含まれていることに注意してください。 詳細については、セクション「**[Android SDK と Java SDK をアンインストールする](#uninstall-android-sdk-and-java-sdk)**」を参照してください。
+
+```bash
+rm -rf ~/Library/Developer/Xamarin
+```
+
 
 ## <a name="uninstall-mono-sdk-mdk"></a>Mono SDK (MDK) をアンインストールする
 
@@ -130,6 +137,9 @@ sudo rm -rf /Library/Frameworks/Xamarin.Android.framework
 ### <a name="uninstall-android-sdk-and-java-sdk"></a>Android SDK と Java SDK をアンインストールする
 
 Android アプリケーションの開発には Android SDK が必要です。 Android SDK のすべての部分を完全に削除するには、**~/Library/Developer/Xamarin/** でファイルを探して、**ごみ箱**に移動します。
+
+> [!WARNING]
+> Visual Studio for Mac によって生成された Android の署名キーは `~/Library/Developer/Xamarin/Keystore` 内にあります。 キーストアを残しておきたい場合は、これらを適切にバックアップするか、このディレクトリを削除しないでください。
 
 Java SDK (JDK) は Mac OS X/macOS の一部として既にあらかじめパッケージ化されているので、アンインストールする必要はありません。
 

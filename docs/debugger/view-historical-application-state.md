@@ -10,14 +10,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 87758b0f75b3b38f67f72f4a32122fa9d0955335
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: fb74e49cb72274292b56a01f0ec654ebe6e44815
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53939980"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227279"
 ---
-# <a name="inspect-previous-app-states-using-intellitrace-step-back-in-visual-studio"></a>Visual Studio の IntelliTrace のステップ バックを使用して以前のアプリケーション状態を調べる
+# <a name="inspect-previous-app-states-using-intellitrace-step-back-in-visual-studio-visual-studio-enterprise"></a>Visual Studio の IntelliTrace のステップ バックを使用して以前のアプリケーション状態を調べる (Visual Studio Enterprise)
 
 IntelliTrace のステップ バックでは、ブレークポイントとデバッガー ステップ イベントごとにアプリケーションのスナップショットを自動作成します。 記録されたスナップショットにより、前のブレークポイントまたはステップに戻り、過去の時点でのアプリケーションの状態を確認できるようになります。 IntelliTrace ステップ バックでは、以前のアプリケーションの状態を確認したいが、デバッグの再開や必要なアプリ状態の再作成は必要でない場合に時間を節約できます。
 
@@ -26,7 +26,7 @@ IntelliTrace のステップ バックは、Visual Studio Enterprise 2017 バー
 このチュートリアルでは、次の作業を行います。
 
 > [!div class="checklist"]
-> * Intellitrace イベントとスナップショットの有効化
+> * IntelliTrace イベントとスナップショットの有効化
 > * ステップ バックおよび次へ進むコマンドを使用したイベント間の移動
 > * イベントのスナップショットの参照
   

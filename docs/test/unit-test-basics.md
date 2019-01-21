@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ce1689f6780f88dd57d41090969082de7ac5685d
-ms.sourcegitcommit: a7e6675185fd34ac8084f09627b2038046cdd2b1
+ms.openlocfilehash: e5b08592fdd60bf88ce703b1b97bd5485cc307ab
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54060804"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270181"
 ---
 # <a name="unit-test-basics"></a>単体テストの基本
 
@@ -83,7 +83,7 @@ public void Withdraw(double amount)
 
 ### <a name="generate-unit-test-project-and-unit-test-stubs"></a>単体テスト プロジェクトと単体テスト スタブを生成する
 
-1. コード エディター ウィンドウで、右クリックしてコンテキスト メニューから **[単体テストの作成]** を選択します。
+1. コード エディター ウィンドウで、右クリックして右クリック メニューから **[単体テストの作成]** を選択します。
 
     ![エディター ウィンドウで、コンテキスト メニューを表示](../test/media/createunittestsrightclick.png)
 
@@ -218,7 +218,7 @@ public void My_Test ()
 
 ![テスト エクスプローラー ツールバーからテストを実行](../test/media/ute_toolbar.png)
 
-**[すべて実行]** を選択してテストをすべて実行することも、 **[実行]** を選択してテストのサブセットを実行することもできます。 一連のテストを実行した後、テスト実行の概要が**テスト エクスプローラー** ウィンドウの下部に表示されます。 テストを選択すると、そのテストの詳細が下部のペインに表示されます。 コンテキスト メニューから **[テストを開く]** を選び (キーボード: **F12** キー)、選択したテストのソース コードを表示します。
+**[すべて実行]** を選択してテストをすべて実行することも、 **[実行]** を選択してテストのサブセットを実行することもできます。 一連のテストを実行した後、テスト実行の概要が**テスト エクスプローラー** ウィンドウの下部に表示されます。 テストを選択すると、そのテストの詳細が下部のペインに表示されます。 右クリック メニューから **[テストを開く]** を選択し (キーボード:**F12** キー)、選択したテストのソース コードを表示します。
 
 個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png) トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。
 

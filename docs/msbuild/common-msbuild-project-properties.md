@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a3f01d9d35f8b2c122fb61f4fd9b3a8a22090b21
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 934615be23ebb025740521d35e31fee9f0a6ec47
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53918772"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54315580"
 ---
 # <a name="common-msbuild-project-properties"></a>MSBuild プロジェクトの共通プロパティ
 次の表は、Visual Studio プロジェクト ファイルで定義される、または MSBuild に用意されている *.targets* ファイルに含まれている、使用頻度の高いプロパティを示しています。  
@@ -85,9 +85,11 @@ ms.locfileid: "53918772"
 | OutputPath | 出力ディレクトリへのパスを、*bin\Debug* のようにプロジェクト ディレクトリを基準とする相対パスで指定します。 |
 | OutputType | 出力ファイルのファイル形式を指定します。 このパラメーターには、次のいずれかの値を指定できます。<br /><br /> -   Library。 コード ライブラリを作成します。 これは既定値です。<br />-   Exe。 コンソール アプリケーションを作成します。<br />-   Module。 モジュールを作成します。<br />-   Winexe。 Windows ベースのプログラムを作成します。<br /><br /> このプロパティは、*vbc.exe* コンパイラの `/target` スイッチに相当します。 |
 | OverwriteReadOnlyFiles | ビルドにおいて読み取り専用ファイルを上書きするかエラーを発生させるかを示すブール値です。 |
+| PathMap | コンパイラによるソース パス名出力への物理パスのマップ方法を指定します。 このプロパティは、*csc.exe* コンパイラの `/pathmap` スイッチに相当します。 |
 | PdbFile | 出力する *.pdb* ファイルの名前です。 このプロパティは、*csc.exe* コンパイラの `/pdb` スイッチに相当します。 |
 | プラットフォーム | ビルドの対象とするオペレーティング システムです。 有効な値は "Any CPU"、"x86"、および "x64" です。 |
 | ProduceReferenceAssembly | `true` に設定すると、現在のアセンブリに対して[参照アセンブリ](https://github.com/dotnet/roslyn/blob/master/docs/features/refout.md)の生成が可能になるブール値。 この機能の利用時、`Deterministic` を `true` にする必要があります。 このプロパティは、*vbc.exe* コンパイラと *csc.exe* コンパイラの `/refout` スイッチに対応します。 |
+| ProduceOnlyReferenceAssembly | コンパイル済みコードではなく参照アセンブリのみを発行するようにコンパイラに指示するブール値。 `ProduceReferenceAssembly` と同時に使用することはできません。  このプロパティは、*vbc.exe* コンパイラと *csc.exe* コンパイラの `/refonly` スイッチに対応します。 |
 | RemoveIntegerChecks | 整数オーバーフロー エラー チェックを無効にするかどうかを示すブール値です。 既定値は `false` です。 このプロパティは、*vbc.exe* コンパイラの `/removeintchecks` スイッチに相当します。 |
 | SGenUseProxyTypes | *SGen.exe* によってプロキシ型を生成するかどうかを示すブール値です。<br /><br /> SGen ターゲットは、このプロパティを使用して UseProxyTypes フラグを設定します。 このプロパティの既定値は true で、これを変更するための UI はありません。 webservice 以外の型のシリアル化アセンブリを生成するには、*Microsoft.Common.Targets* または *C#/VB.targets* をインポートする前に、このプロパティをプロジェクト ファイルに追加し、その値を false に設定します。 |
 | SGenToolPath | *SGen.exe* の現在のバージョンがオーバーライドされた場合に *SGen.exe* を取得する場所を示すツール パスです (省略可能)。 |

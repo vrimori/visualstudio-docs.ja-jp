@@ -1,47 +1,54 @@
 ---
 title: -LCID (devenv.exe)
-ms.date: 11/04/2016
+ms.date: 12/10/2018
 ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
 - language default
 - locale IDs, setting for IDE
+- Devenv, /L switch
 - Devenv, /LCID switch
 - locale IDs
-- /l Devenv switch
+- L Devenv switch
+- /L Devenv switch
 - LCID devenv switch
-- /lcid Devenv switch
+- /LCID Devenv switch
 ms.assetid: 3a3f4e70-ea66-4351-9d62-acb1dec30e8e
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f5c3f8633721a4568b81fab31d8fe91a4c33be2f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 42da279a64f04bca7775440f803e7a26e6bd2dc8
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53852074"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227305"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
-統合開発環境 (IDE) 内の文字列、通貨、およびその他の値に使用する既定の言語を設定します。
+
+IDE 内の文字列、通貨、およびその他の値に使用する既定の言語を設定します。
 
 ## <a name="syntax"></a>構文
 
-```cmd
-devenv {/LCID|/l} LocaleID
+```shell
+devenv {/LCID|/L} LocaleID
 ```
 
 ## <a name="arguments"></a>引数
- `LocaleID` 必須。 指定する言語の LCID (ロケール ID)。
+
+- *LocaleID*
+
+  必須です。 指定する言語のロケール識別子 (LCID)。
 
 ## <a name="remarks"></a>コメント
- IDE を読み込み、環境用の既定の自然言語を設定します。 この変更はセッション間で保持され、IDE の **[オプション]** ダイアログ ボックスにある **[環境]** オプションの **[国際対応の設定]** ウィンドウに反映されます。
 
- 指定した言語がユーザーのシステムで使用できない場合、/LCID スイッチは無視されます。
+IDE を読み込み、環境用の既定の自然言語を設定します。 この変更はセッションが変わっても保持され、IDE の **[ツール]** > **[オプション]** > **[環境]** > **[国際対応の設定]** > **[言語]** ボックスにこの変更が表示されます。
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] でサポートされる言語の LCID の一覧を次の表に示します。
+指定した言語がシステムで利用できない場合、`/LCID` スイッチは無視されます。
+
+Visual Studio でサポートされる言語の LCID の一覧を次の表に示します。
 
 |言語|LCID|
 |--------------|----------|
@@ -56,13 +63,14 @@ devenv {/LCID|/l} LocaleID
 |スペイン語|3082|
 
 ## <a name="example"></a>例
- この例では、英語のリソース文字列を使用して IDE を読み込みます。
 
-```cmd
+この例では、英語のリソース文字列を使用して IDE を読み込みます。
+
+```shell
 devenv /LCID 1033
 ```
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 - [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
 - [[国際対応の設定] ([オプション] ダイアログ ボックス - [環境])](../../ide/reference/international-settings-environment-options-dialog-box.md)

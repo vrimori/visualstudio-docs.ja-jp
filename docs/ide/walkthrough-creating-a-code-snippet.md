@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c1336d5bba93fa12010dadce2a47504fa84995f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 66d618999fc2ae3e94316f64e20a82516efbeb38
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53890710"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269801"
 ---
 # <a name="walkthrough-create-a-code-snippet"></a>チュートリアル: コード スニペットを作成する
 コード スニペットは、わずかな手順で作成できます。 必要な操作は、XML ファイルを作成し、適切な要素を指定して、コードを追加するだけです。 コードには、参照や置換パラメーターを追加することもできます。 Visual Studio インストールにスニペットを追加するには、**コード スニペット マネージャー** (**[ツール]** > **[コード スニペット マネージャー]**) の **[インポート]** を使用します。
@@ -79,7 +79,7 @@ ms.locfileid: "53890710"
 
      *%USERPROFILE%\Documents\Visual Studio 2017\Code Snippets\Visual Basic\My Code Snippets*
 
-6.  Visual Basic プロジェクトを開き、コード ファイルを開くことによって、スニペットをテストします。 ファイル内でコンテキスト メニューで **[スニペット]** > **[スニペットの挿入]** の順に選択し、**[マイ コード スニペット]** をクリックします。 **[My Visual Basic Code Snippet]** (マイ Visual Basic コード スニペット) という名前のスニペットが表示されます。 これをダブルクリックします。
+6.  Visual Basic プロジェクトを開き、コード ファイルを開くことによって、スニペットをテストします。 このファイルで、右クリック メニューの **[スニペット]** > **[スニペットの挿入]** の順に選択し、**[マイ コード スニペット]** を選択します。 **[My Visual Basic Code Snippet]** (マイ Visual Basic コード スニペット) という名前のスニペットが表示されます。 これをダブルクリックします。
 
     `Console.WriteLine("Hello, World!")` はコード ファイルに挿入されます。
 

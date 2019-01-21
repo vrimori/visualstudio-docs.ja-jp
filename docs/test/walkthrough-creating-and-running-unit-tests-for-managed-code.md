@@ -14,12 +14,12 @@ manager: douge
 ms.workload:
 - dotnet
 author: gewarren
-ms.openlocfilehash: de50a5ee6e65540b1a2052f61eae211074780417
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 537059a78ccc316b7b74a8300961b57b4e6e6f95
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53989177"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269983"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>チュートリアル: マネージド コードの単体テストを作成し、実行する
 
@@ -93,7 +93,7 @@ public void Debit(double amount)
 
 5. **BankTests** プロジェクトで、**Bank** プロジェクトへの参照を追加します。
 
-   **ソリューション エクスプローラー**で、**BankTests** プロジェクトの **[参照設定]** を選択し、コンテキスト メニューの **[参照の追加]** を選択します。
+   **ソリューション エクスプローラー**で、**BankTests** プロジェクトの **[参照設定]** を選択し、右クリック メニューの **[参照の追加]** を選択します。
 
 6. **[参照マネージャー]** ダイアログ ボックスで、**[ソリューション]** を展開し、**[Bank]** チェックボックスをオンにします。
 
@@ -103,7 +103,7 @@ public void Debit(double amount)
 
 ### <a name="rename-a-class-file"></a>クラス ファイルの名前を変更する
 
-**ソリューション エクスプローラー**で、BankTests プロジェクトの *UnitTest1.cs* ファイルを選択します。 コンテキスト メニューの **[名前の変更]** をクリックし、ファイルの名前を *BankAccountTests.cs* に変更します。 プロジェクト内のコード要素 `UnitTest1` に対するすべての参照を名前変更するかどうかを確認するダイアログで、**[はい]** をクリックします。
+**ソリューション エクスプローラー**で、BankTests プロジェクトの *UnitTest1.cs* ファイルを選択します。 右クリック メニューの **[名前の変更]** をクリックし、ファイルの名前を *BankAccountTests.cs* に変更します。 プロジェクト内のコード要素 `UnitTest1` に対するすべての参照を名前変更するかどうかを確認するダイアログで、**[はい]** をクリックします。
 
 この手順により、クラスの名前が `BankAccountTests`に変更されます。 *BankAccountTests.cs* ファイルには次のコードが含まれるようになりました。
 

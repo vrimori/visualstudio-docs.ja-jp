@@ -1,8 +1,8 @@
 ---
-title: VS 2017 でデバッグを開始する
+title: Visual Studio を使用してアプリをデバッグする
 description: Visual Studio デバッガーを使用してアプリケーションのデバッグを開始する
 ms.custom: mvc
-ms.date: 06/15/2018
+ms.date: 01/09/2019
 ms.topic: quickstart
 helpviewer_keywords:
 - debugger
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cf7bcba0ceaa71b933d4875cd5eee28d7cea0028
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a6363149165c9718300eec1074fdfc006709b3d3
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53904970"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227890"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>最初に Visual Studio デバッガーを見る
 
@@ -185,7 +185,7 @@ F10 キーを押すと、アプリ コード内の関数またはメソッドに
 
 この例では、`DirectoryInfo` 呼び出しによって、`value` 変数に格納されている空の文字列にエラーが発生しました。
 
-例外ヘルパーは、エラーのデバッグに役立つ優れた機能です。 エラーの詳細を表示したり、例外ヘルパーからウォッチ式を追加したりすることもできます。 あるいは、必要であれば、特定の例外をスローするための条件を変更できます。
+例外ヘルパーは、エラーのデバッグに役立つ優れた機能です。 エラーの詳細を表示したり、例外ヘルパーからウォッチ式を追加したりすることもできます。 あるいは、必要であれば、特定の例外をスローするための条件を変更できます。 コードの例外を処理する方法の詳細については、「[より良い C# コードを書くことでバグを修正する](../debugger/write-better-code-with-visual-studio.md)」を参照してください。
 
 > [!NOTE]
 > 例外ヘルパーは [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] の例外アシスタントに取って代わるものです。

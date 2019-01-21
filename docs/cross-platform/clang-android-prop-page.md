@@ -43,12 +43,12 @@ f1_keywords:
 - vc.project.AdditionalOptionsPage
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: efceeb201a7f1afcbf7cc2c6d46619301284d823
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: ab2fa6c3b2eac94159ef5e95cb022a627c3acee2
+ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39232118"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54154312"
 ---
 # <a name="clang-project-properties-android-c"></a>Clang のプロジェクトのプロパティ (Android C++)
 
@@ -72,8 +72,8 @@ ABI の浮動小数点 | ABI の浮動小数点を選ぶ選択肢。 | **Soft** 
 位置独立コード | 共有ライブラリで使用する位置独立コード (PIC) を生成します。
 簡単な列挙型を使用します | 列挙型は、入力された使用できる値に必要なバイト数と同じバイト数を使用します。
 ランタイム型情報を有効にする | 実行時に C++ のオブジェクト型をチェックするコードを追加します (ランタイム型情報)。     (frtti、fno-rtti)
-C 言語標準 | C 言語標準を決定します。 | **既定値**<br>**C89** - C89 言語標準。<br>**C99** - C99 言語標準。<br>**C11** - C11 言語標準。<br>**C99 (GNU 言語)** - C99 (GNU 言語) 言語標準。<br>**C11 (GNU 言語)** - C11 (GNU 言語) 言語標準。<br>
-C++ 言語標準 | C++ 言語標準を決定します。 | **既定値**<br>**C++03** - C++03 言語標準。<br>**C++11** - C++11 言語標準。<br>**C++14** - C++14 言語標準。<br>**C++03 (GNU 言語)** - C++03 (GNU 言語) 言語標準。<br>**C++11 (GNU 言語)** - C++11 (GNU 言語) 言語標準。<br>**C++14 (GNU 言語)** - C++14 (GNU 言語) 言語標準。<br>
+C 言語標準 | C 言語標準を決定します。 | **default**<br>**C89** - C89 言語標準。<br>**C99** - C99 言語標準。<br>**C11** - C11 言語標準。<br>**C99 (GNU 言語)** - C99 (GNU 言語) 言語標準。<br>**C11 (GNU 言語)** - C11 (GNU 言語) 言語標準。<br>
+C++ 言語標準 | C++ 言語標準を決定します。 | **default**<br>**C++03** - C++03 言語標準。<br>**C++11** - C++11 言語標準。<br>**C++14** - C++14 言語標準。<br>**C++03 (GNU 言語)** - C++03 (GNU 言語) 言語標準。<br>**C++11 (GNU 言語)** - C++11 (GNU 言語) 言語標準。<br>**C++14 (GNU 言語)** - C++14 (GNU 言語) 言語標準。<br>
 プリプロセッサの定義 | ソース ファイルの前処理シンボルを定義します。 (-D)
 指定したプリプロセッサ定義の無効化 | 1 つ以上のプリプロセッサ定義の無効化を指定します。  (-U [マクロ])
 すべてのプリプロセッサ定義の無効化 | すべてのプリプロセッサの定義済み定義を無効にします。  (-undef)

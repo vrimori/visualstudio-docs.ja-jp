@@ -9,12 +9,12 @@ description: パブリック カスタマー番号 (PCN) または認証番号�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: da4a9f1342abfc5701aadf32798305e349eb3ed7
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: b27d61a614c7ddbe1503eb7708e0e2e35a39fca0
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637020"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269212"
 ---
 # <a name="how-do-i-locate-my-public-customer-number-pcn-or-authorization-number"></a>"パブリック カスタマー番号" (PCN) または認証番号を見つける方法を教えてください。
 
@@ -22,18 +22,13 @@ ms.locfileid: "39637020"
 
 ## <a name="to-locate-your-pcn-or-authorization-number"></a>PCN または承認番号を見つけるには
 
-1.  [https://www.Microsoft.com/licensing/servicecenter](https://www.Microsoft.com/licensing/servicecenter) のボリューム ライセンス サービス センター (VLSC) にログインします。
-
-2. **[サブスクリプション]** タブで、[Visual Studio サブスクリプション] を選びます。
+ボリューム ライセンス サービス センターから PCN へのアクセスが提供されなくなりました。  取得するには、Visual Studio サブスクリプション サポートにお問い合わせください。
+1. https://visualstudio.microsoft.com/subscriptions/support/#talktous にアクセスします。
+2. **[Accounts, Subscriptions, and Billing Support]\(アカウント、サブスクリプション、課金サポート\)** ボタンをタップします。
     > [!div class="mx-imgBorder"]
-    > ![VLSC でサブスクリプションの選択](_img/vlsc/vlsc-subscriptions.png)
-
-3. PCN またはパブリック カスタマー番号はページの中間にあります。
-    > [!div class="mx-imgBorder"]
-    > ![VLSC で PCN を検索する](_img/vlsc/vlsc-pcn.png)
-
-    
-上記のページが表示されず、Visual Studio サインイン ページにリダイレクトされる場合、https://www.microsoft.com/Licensing/servicecenter/Subscription/AgreementSearch のリンクをコピーし、お使いのブラウザーに貼り付けます。
+    > ![サブスクリプション サポートを選択する](_img/vlsc/vlsc-pcn.png)
+3. ドロップダウン リストから国を選択します。
+4. お住まいの国で利用できるサポート オプションの一覧から選択して、お客様の PCN を調べることができるサポート エージェントに問い合わせてください。  
 
 ## <a name="if-i-have-more-than-one-pcn-which-one-should-i-use"></a>PCN が複数ある場合、どちらを使用するか教えてください。
 

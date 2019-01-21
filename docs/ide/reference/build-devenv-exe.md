@@ -1,6 +1,6 @@
 ---
-title: DevEnv Build スイッチ
-ms.date: 11/04/2016
+title: -Build (devenv.exe)
+ms.date: 12/10/2018
 ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
@@ -15,50 +15,63 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9caddb066d02366cac7ee9e34f2d55c726a69896
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 30637a797d8c0845bae9548bb6a48e877d44727b
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53824445"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269476"
 ---
 # <a name="build-devenvexe"></a>/Build (devenv.exe)
 
-指定したソリューションの構成ファイルを使用してソリューションをビルドします。
+指定したソリューションの構成ファイルを使用してソリューションまたはプロジェクトをビルドします。
 
 ## <a name="syntax"></a>構文
 
-```cmd
-Devenv SolutionName /build SolnConfigName [/project ProjName [/projectconfig ProjConfigName]]
+```shell
+devenv SolutionName /Build [SolnConfigName [/Project ProjName [/ProjectConfig ProjConfigName]] [/Out OutputFilename]]
 ```
 
 ## <a name="arguments"></a>引数
 
-|||
-|-|-|
-|*SolutionName*|必須です。 ソリューション ファイルの完全パスと名前。|
-|*SolnConfigName*|必須です。 *SolutionName* で指定されたソリューションのビルドに使用されるソリューション構成の名前。 複数のソリューション プラットフォームが利用できる場合、**"Debug\|Win32"** など、プラットフォームも指定する必要があります。|
-|/project *ProjName*|任意。 ソリューション内のプロジェクト ファイルのパスと名前です。 *SolutionName* フォルダーからプロジェクト ファイルへの相対パス、プロジェクトの表示名、プロジェクト ファイルの完全なパスと名前を入力できます。|
-|/projectconfig *ProjConfigName*|任意。 指定したプロジェクトのビルド時に使用されるプロジェクトのビルド構成の名前。 複数のプロジェクト プラットフォームが利用できる場合、**"Debug\|Win32"** など、プラットフォームも指定する必要があります。|
+- *SolutionName*
+
+  必須です。 ソリューション ファイルの完全パスと名前。
+
+- *SolnConfigName*
+
+  任意。 *SolutionName* で指定されたソリューションのビルドに使用されるソリューション構成の名前 (`Debug`、`Release` など)。 複数のソリューション プラットフォームが利用できる場合、プラットフォームも指定する必要があります (`Debug|Win32` など)。 この引数が指定されていないか空の文字列 (`""`) の場合、ソリューションのアクティブな構成が使用されます。
+
+- `/Project` *ProjName*
+
+  任意。 ソリューション内のプロジェクト ファイルのパスと名前です。 *SolutionName* フォルダーからプロジェクト ファイルへの相対パス、プロジェクトの表示名、プロジェクト ファイルの完全なパスと名前を入力できます。
+
+- `/ProjectConfig` *ProjConfigName*
+
+  任意。 指定したプロジェクトのビルド時に使用されるプロジェクトのビルド構成の名前 (`Debug`、`Release` など)。 複数のソリューション プラットフォームが利用できる場合、プラットフォームも指定する必要があります (`Debug|Win32` など)。 このスイッチを指定すると、*SolnConfigName* 引数はオーバーライドされます。
+
+- `/Out` *OutputFilename*
+
+  任意。 ツールの出力を送信する先のファイル名。 このファイルが既に存在する場合、ファイルの末尾に出力が追加されます。
 
 ## <a name="remarks"></a>コメント
 
-- **/build** スイッチは、統合開発環境 (IDE) 内の **[ソリューションのビルド]** メニュー コマンドと同じ機能を実行します。
+- `/Build` スイッチを指定すると、統合開発環境 (IDE) 内の **[ソリューションのビルド]** メニュー コマンドと同じ機能が実行されます。
 
 - 空白を含む文字列を二重引用符で囲みます。
 
-- エラーなどのビルドの概要情報は、[コマンド] ウィンドウ、または **/out** スイッチで指定された任意のログ ファイルに表示できます。
+- エラーなどのビルドの概要情報は、[コマンド] ウィンドウ、または `/Out` スイッチで指定された任意のログ ファイルに表示できます。
 
-- **/build** スイッチは、最後のビルド以降に変更されたプロジェクトのみをビルドします。 ソリューション内のすべてのプロジェクトをビルドするには、代わりに [/rebuild](../../ide/reference/rebuild-devenv-exe.md) を使用します。
+- `/Build` スイッチを指定すると、最後のビルド以降に変更されたプロジェクトのみがビルドされます。 ソリューション内のすべてのプロジェクトをビルドするには、代わりに [/rebuild](../../ide/reference/rebuild-devenv-exe.md) を使用します。
 
-- **プロジェクト構成が無効である**というエラー メッセージが表示された場合、**"Debug\|Win32"** など、ソリューション プラットフォームまたはプロジェクト プラットフォームを指定していることを確認してください。
+- "**無効なプロジェクト構成**" というエラー メッセージが表示された場合は、ソリューション プラットフォームまたはプロジェクト プラットフォーム (`Debug|Win32` など) を指定していることを確認してください。
 
 ## <a name="example"></a>例
 
-次のコマンドでは、"MySolution" の "Debug" ソリューション構成内の "Debug" プロジェクト ビルド構成を使用し、プロジェクト "CSharpConsoleApp" がビルドされます。
+次のコマンドでは、`MySolution` 内の `Debug` プロジェクト ビルド構成を使用して、プロジェクト `CSharpWinApp` をビルドします。
 
-```cmd
-devenv "C:\Visual Studio Projects\MySolution\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug
+```shell
+devenv "%USERPROFILE%\source\repos\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug
 ```
 
 ## <a name="see-also"></a>関連項目

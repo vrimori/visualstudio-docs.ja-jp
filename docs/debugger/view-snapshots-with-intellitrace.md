@@ -10,14 +10,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ebaacc2b3d90821605c804bec390c887a27cec0b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e2ce52e970187e2d18679b60522a24899a5e43e8
+ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53915576"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54227565"
 ---
-# <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise"></a>IntelliTrace のステップ バックでスナップショットを表示する (Visual Studio Enterprise)
+# <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise-c-visual-basic-c"></a>IntelliTrace のステップ バックでスナップショットを表示する (Visual Studio Enterprise) (C#、Visual Basic、C++)
 
 **IntelliTrace のステップ バック**では、ブレークポイントとデバッガー ステップ イベントごとにアプリケーションのスナップショットを自動作成します。 記録されたスナップショットにより、前のブレークポイントまたはステップに戻り、過去の時点でのアプリケーションの状態を確認できるようになります。 IntelliTrace ステップ バックでは、以前のアプリケーションの状態を確認したいが、デバッグの再開や必要なアプリ状態の再作成は必要でない場合に時間を節約できます。
 

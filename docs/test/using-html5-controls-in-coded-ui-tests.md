@@ -8,12 +8,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 9470027e84e33bb3acdd64756db86c951c845d3d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: dbb34804e827ddd0eefdaf4585ba517034a31392
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53883027"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269892"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>コード化された UI テストでの HTML5 コントロールの使用
 
@@ -39,11 +39,11 @@ ms.locfileid: "53883027"
 
 |アクション|記録中|生成されたコード|
 |-|---------------|-|
-|**オーディオの再生**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> オーディオを 00:00:00 の時点から再生|HtmlAudio.Play(TimeSpan)|
+|**オーディオの再生**<br /><br /> コントロールから直接、またはコントロールの右クリック メニューから。|\<name> オーディオを 00:00:00 の時点から再生|HtmlAudio.Play(TimeSpan)|
 |**オーディオの特定の時点にシーク**|\<name> オーディオの 00:01:48 の時点にシーク|HtmlAudio.Seek(TimeSpan)|
-|**オーディオの一時停止**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> オーディオの 00:01:53 の時点で一時停止|HtmlAudio.Pause(TimeSpan)|
-|**オーディオのミュート**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> オーディオをミュート|HtmlAudio.Mute()|
-|**オーディオのミュートの解除**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> オーディオのミュートを解除|HtmlAudio.Unmute()|
+|**オーディオの一時停止**<br /><br /> コントロールから直接、またはコントロールの右クリック メニューから。|\<name> オーディオの 00:01:53 の時点で一時停止|HtmlAudio.Pause(TimeSpan)|
+|**オーディオのミュート**<br /><br /> コントロールから直接、またはコントロールの右クリック メニューから。|\<name> オーディオをミュート|HtmlAudio.Mute()|
+|**オーディオのミュートの解除**<br /><br /> コントロールから直接、またはコントロールの右クリック メニューから。|\<name> オーディオのミュートを解除|HtmlAudio.Unmute()|
 |**オーディオの音量の変更**|\<name> オーディオのボリュームを 79% に設定|HtmlAudio.SetVolume(float)|
 
 アサーションを追加できるプロパティの一連については、「[HTMLAudioElement](https://developer.mozilla.org/docs/Web/API/HTMLAudioElement)」をご覧ください。
@@ -63,11 +63,11 @@ ms.locfileid: "53883027"
 
 |アクション|記録中|生成されたコード|
 |-|---------------|-|
-|**ビデオの再生**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> ビデオを 00:00:00 の時点から再生|HtmlVideo.Play(TimeSpan)|
+|**ビデオの再生**<br /><br /> コントロールから直接、またはコントロールの右クリック メニューから。|\<name> ビデオを 00:00:00 の時点から再生|HtmlVideo.Play(TimeSpan)|
 |**ビデオの特定の時点にシーク**|\<name> ビデオの 00:01:48 の時点にシーク|HtmlVideo.Seek(TimeSpan)|
-|**ビデオの一時停止**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> ビデオの 00:01:53 の時点で一時停止|HtmlVideo.Pause(TimeSpan)|
-|**ビデオのミュート**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> ビデオをミュート|HtmlVideo.Mute()|
-|**ビデオのミュートの解除**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> ビデオのミュートを解除|HtmlVideo.Unmute()|
+|**ビデオの一時停止**<br /><br /> コントロールから直接、またはコントロールの右クリック メニューから。|\<name> ビデオの 00:01:53 の時点で一時停止|HtmlVideo.Pause(TimeSpan)|
+|**ビデオのミュート**<br /><br /> コントロールから直接、またはコントロールの右クリック メニューから。|\<name> ビデオをミュート|HtmlVideo.Mute()|
+|**ビデオのミュートの解除**<br /><br /> コントロールから直接、またはコントロールの右クリック メニューから。|\<name> ビデオのミュートを解除|HtmlVideo.Unmute()|
 |**ビデオの音量の変更**|\<name> ビデオのボリュームを 79% に設定||
 
 アサーションを追加できるプロパティの一連については、「[HTMLVideoElement](https://developer.mozilla.org/docs/Web/HTML/Element/video)」をご覧ください。

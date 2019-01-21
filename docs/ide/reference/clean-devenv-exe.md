@@ -1,67 +1,81 @@
 ---
 title: -Clean (devenv.exe)
-ms.date: 11/04/2016
+ms.date: 12/10/2018
 ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
 - builds [Team System], cleaning files
-- clean Devenv switch
-- /clean Devenv switch
-- Devenv, /clean switch
+- Clean Devenv switch
+- /Clean Devenv switch
+- Devenv, /Clean switch
 ms.assetid: 79929dfd-22c9-4cec-a0d0-a16f15b8f7e4
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 051485646b7ff19ddae40518215c410d05fa4849
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: fd2271ca3a2a674d569bc20ad6b45642e460108f
+ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53906892"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54269567"
 ---
 # <a name="clean-devenvexe"></a>/Clean (devenv.exe)
+
 すべての中間ファイルと出力ディレクトリを消去します。
 
 ## <a name="syntax"></a>構文
 
-```
-devenv FileName /Clean [ /project projectnameorfile [/projectconfig name ] ]
+```shell
+devenv SolutionName /Clean [Config [/Project ProjName [/ProjectConfig ProjConfigName]] [/Out OutputFilename]]
 ```
 
 ## <a name="arguments"></a>引数
- `FileName`
 
- 必須です。 ソリューション ファイルまたはプロジェクト ファイルの完全パスと名前。
+- *SolutionName*
 
- /project `ProjName`
+  必須です。 ソリューション ファイルの完全パスと名前。
 
- 任意。 ソリューション内のプロジェクト ファイルのパスと名前です。 `SolutionName` フォルダーからプロジェクト ファイルへの相対パス、プロジェクトの表示名、またはプロジェクト ファイルの完全なパスと名前を入力できます。
+- *Config*
 
- /projectconfig `ProjConfigName`
+  任意。 *SolutionName* で指定されたソリューションの中間ファイルの消去に使用される構成 (`Debug`、`Release` など)。 複数のソリューション プラットフォームが利用できる場合、プラットフォームも指定する必要があります (`Debug|Win32` など)。 この引数が指定されていないか空の文字列 (`""`) の場合、ソリューションのアクティブな構成が使用されます。
 
- 任意。 指定した `/project` のクリーン時に使用されるプロジェクトのビルド構成の名前。
+- `/Project` *ProjName*
+
+  任意。 ソリューション内のプロジェクト ファイルのパスと名前です。 プロジェクトの表示名または *SolutionName* フォルダーからプロジェクト ファイルへの相対パスを入力できます。 プロジェクト ファイルの完全なパスと名前を入力することもできます。
+
+- `/ProjectConfig` *ProjConfigName*
+
+  任意。 指定した `/Project` の消去時に使用されるプロジェクトのビルド構成名 (`Debug`、`Release` など)。 複数のソリューション プラットフォームが利用できる場合、プラットフォームも指定する必要があります (`Debug|Win32` など)。 このスイッチを指定すると、*Config* 引数はオーバーライドされます。
+
+- `/Out` *OutputFilename*
+
+  任意。 ツールの出力を送信する先のファイル名。 このファイルが既に存在する場合、ファイルの末尾に出力が追加されます。
 
 ## <a name="remarks"></a>コメント
- このスイッチは、統合開発環境 (IDE) 内の **[ソリューションのクリーン]** メニュー コマンドと同じ機能を実行します。
 
- 空白を含む文字列を二重引用符で囲みます。
+このスイッチを指定すると、IDE 内の **[ソリューションのクリーン]** メニュー コマンドと同じ処理が実行されます。
 
- エラーを含むクリーンとビルドの概要情報は、**[コマンド]** ウィンドウ、または `/out` スイッチで指定された任意のログ ファイルに表示できます。
+空白を含む文字列を二重引用符で囲みます。
+
+エラーを含む消去およびビルド時の概要情報は、**[コマンド]** ウィンドウ、または [/Out](out-devenv-exe.md) スイッチで指定された任意のログ ファイルに表示できます。
+
+`/Project` スイッチが指定されていない場合、*FileName* がプロジェクト ファイルとして指定されていても、消去アクションはソリューション内のすべてのプロジェクトに対して行われます。
 
 ## <a name="example"></a>例
- 最初の例では、ソリューション ファイルで指定された既定の構成を使用して、`MySolution` ソリューションを消去します。
 
- 2 番目の例では、`Debug` プロジェクトのビルド構成を使用して、`MySolution` の `Debug` ソリューション構成内でプロジェクト `CSharpConsoleApp` を消去します。
+最初の例では、ソリューション ファイルで指定された既定の構成を使用して、`MySolution` ソリューションを消去します。
 
+2 つ目の例では、`MySolution` 内の `Debug` プロジェクト ビルド構成を使用して、プロジェクト `CSharpWinApp` を消去します。
+
+```shell
+devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /Clean
+
+devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /Clean "Debug" /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig "Debug"
 ```
-Devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /Clean
 
-devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /Clean /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig "Debug"
-```
-
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 - [Devenv コマンドライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
 - [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)
