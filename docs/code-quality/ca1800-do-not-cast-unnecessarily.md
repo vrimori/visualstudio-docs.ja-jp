@@ -1,4 +1,4 @@
----
+﻿---
 title: CA1800:不必要にキャストしません
 ms.date: 10/26/2017
 ms.prod: visual-studio-dev15
