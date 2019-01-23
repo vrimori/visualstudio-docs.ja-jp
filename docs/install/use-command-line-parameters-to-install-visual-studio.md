@@ -16,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f2955a9efae219cf992936a8b64cac672a0cd680
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: eb4ab50f5b5b699d2cbb8fa800705f4ed218c588
+ms.sourcegitcommit: a8c841648d862c83a0f0d654df1b367c159adc5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53869662"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54403968"
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする
 
@@ -77,7 +77,8 @@ ms.locfileid: "53869662"
 | `--help, --?, -h, -?` | このページのオフライン バージョンを表示します。 |
 | `--config <path>` | **省略可能**および **15.9 の新機能**:インストールまたは変更の操作中に、以前に保存したインストール構成ファイルに基づいて、追加するワークロードおよびコンポーネントを決定します。 この操作は追加式で、ワークロードやコンポーネントがファイル内に存在しない場合、削除されることはありません。 また、製品に適用されない項目は追加されません。 エクスポート操作中に、インストール構成ファイルの保存場所を決定します。 |
 
-> メモ:複数のワークロードとコンポーネントを指定する場合、項目ごとに `--add` または `--remove` コマンド ライン スイッチを繰り返す必要があります。
+> [!IMPORTANT]
+> 複数のワークロードとコンポーネントを指定する場合、項目ごとに `--add` または `--remove` コマンド ライン スイッチを繰り返す必要があります。
 
 | **レイアウト オプション** | **説明** |
 | ----------------------- | --------------- |

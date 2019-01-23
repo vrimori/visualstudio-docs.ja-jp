@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c9413e8b6e6db0c81eb1853c24506d20c8d06f3e
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 8f207261af82f8f5e64710df5177e891a6a47c1a
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24571442"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54347503"
 ---
 # <a name="active-script-profiling-overview"></a>アクティブ スクリプト プロファイリングの概要
 [アクティブ スクリプト プロファイラーのインターフェイス](../winscript/reference/active-script-profiler-interfaces.md)は、スクリプト エンジンのプロファイリングを有効にします。 アクティブ スクリプト プロファイリングは次の要素から構成されます。  
@@ -44,5 +44,5 @@ ms.locfileid: "24571442"
 ## <a name="profiler"></a>プロファイラー  
  プロファイラーは、さまざまなイベントが発生すると、言語エンジンから呼び出しを受け取ります。 プロファイラーは、COM オブジェクトとして登録され、[IActiveScriptProfilerCallback インターフェイス](../winscript/reference/iactivescriptprofilercallback-interface.md)を実装している必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [アクティブ スクリプト プロファイラーのインターフェイス](../winscript/reference/active-script-profiler-interfaces.md)

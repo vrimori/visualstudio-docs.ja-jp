@@ -15,11 +15,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: d8624c1405931edefe2e1e53e579ad28a7b238f1
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50220223"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345488"
 ---
 # <a name="active-script-debugging-overview"></a>アクティブ スクリプトのデバッグの概要
 アクティブ スクリプト デバッグ インターフェイスを使うと、言語やホストに依存しない (ニュートラルな) デバッグを行うことができ、さまざまな開発環境がサポートされます。  
@@ -292,5 +292,5 @@ ms.locfileid: "50220223"
   [ISimpleConnectionPoint インターフェイス](../winscript/reference/isimpleconnectionpoint-interface.md)  
   特定の接続ポイントで発生したイベントを記述および列挙する簡単な方法をスクリプト エンジンに提供します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [アクティブ スクリプト デバッガー インターフェイス](../winscript/reference/active-script-debugger-interfaces.md)
