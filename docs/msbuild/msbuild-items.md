@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d0714a4edc4b1bfe2a97492bfac85a1a62db1dc0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9046ec4c5523720a917849191cd42b197b115870
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53898701"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345605"
 ---
 # <a name="msbuild-items"></a>MSBuild 項目
 MSBuild 項目はビルド システムへの入力であり、通常はファイルを表します (ファイルは `Include` 属性で指定します)。 項目は要素名に基づいてアイテムの種類にグループ化されます。 項目の種類は項目の名前付きリストであり、タスクのパラメーターとして使用できます。 タスクは項目値を使用して、ビルド処理のステップを実行します。  
@@ -53,7 +53,7 @@ MSBuild 項目はビルド システムへの入力であり、通常はファ�
 -   .NET Framework 3.5 以降では、項目要素を格納できる [ItemGroup](../msbuild/itemgroup-element-msbuild.md) 要素を `Target` 要素に含めることができます。  
   
 ##  <a name="reference-items-in-a-project-file"></a>プロジェクト ファイルの項目を参照する  
- プロジェクト ファイルでアイテムの種類を参照するには、構文 @(\<ItemType>) を使用します。 たとえば、前の例に挙げたアイテムの種類を参照するには、`@(Compile)` を使用します。 この構文を使用してアイテムの種類をタスクのパラメーターとして指定すれば、項目をそのタスクに渡すことができます。 詳細については、「[方法 :ビルドするファイルを選択する](../msbuild/how-to-select-the-files-to-build.md)」をご覧ください。  
+ プロジェクト ファイルでアイテムの種類を参照するには、構文 @(\<ItemType>) を使用します。 たとえば、前の例に挙げたアイテムの種類を参照するには、`@(Compile)` を使用します。 この構文を使用してアイテムの種類をタスクのパラメーターとして指定すれば、項目をそのタスクに渡すことができます。 詳細については、「[方法 :ビルドするファイルを選択する](../msbuild/how-to-select-the-files-to-build.md)」を参照してください。  
   
  既定では、アイテムの種類の項目は、それが展開されるときにセミコロン (;) によって区切られます。 構文 @(\<ItemType>, '\<separator>') を使用して、既定以外の区切り記号を指定できます。 詳細については、「[方法 :項目リストをコンマ区切りで表示する](../msbuild/how-to-display-an-item-list-separated-with-commas.md)」を参照してください。  
   
@@ -79,7 +79,7 @@ MSBuild 項目はビルド システムへの入力であり、通常はファ�
 
 ワイルドカードを展開することなく項目内にリテラル文字 `*` または `?` を含める必要がある場合は、[ワイルドカード文字をエスケープする](../msbuild/how-to-escape-special-characters-in-msbuild.md)必要があります。
 
-ワイルドカード文字の詳細については、「[方法:ビルドするファイルを選択する](../msbuild/how-to-select-the-files-to-build.md)」をご覧ください。  
+ワイルドカード文字の詳細については、「[方法:ビルドするファイルを選択する](../msbuild/how-to-select-the-files-to-build.md)」を参照してください。  
 
 ##  <a name="use-the-exclude-attribute"></a>Exclude 属性を使用する  
  項目の要素には `Exclude` 属性を含めることができます。この属性は、アイテムの種類から特定の項目 (ファイル) を除外します。 `Exclude` 属性は通常、ワイルドカード文字と一緒に使用されます。 たとえば、次の XML は、*DoNotBuild.cs* ファイルを除き、ディレクトリのすべての *.cs* ファイルをアイテムの種類 CSFile に追加します。  
@@ -321,12 +321,13 @@ Output:
 -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
+ [Item 要素 (MSBuild)](../msbuild/item-element-msbuild.md)  
+ [MSBuild プロジェクトの共通項目](../msbuild/common-msbuild-project-items.md)  
  [MSBuild の概念](../msbuild/msbuild-concepts.md)  
  [MSBuild](../msbuild/msbuild.md)   
  [方法: ビルドするファイルを選択する](../msbuild/how-to-select-the-files-to-build.md)   
  [方法: ビルドからファイルを除外する](../msbuild/how-to-exclude-files-from-the-build.md)   
  [方法: 項目リストをコンマ区切りで表示する](../msbuild/how-to-display-an-item-list-separated-with-commas.md)   
  [項目定義](../msbuild/item-definitions.md)   
- [バッチ](../msbuild/msbuild-batching.md)   
- [Item 要素 (MSBuild)](../msbuild/item-element-msbuild.md)
+ [バッチ処理](../msbuild/msbuild-batching.md)

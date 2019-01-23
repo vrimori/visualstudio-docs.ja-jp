@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: ebc5666ca037276d5b148151e2b41756b105dc2d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 41e8628e6d747d523dae12448d81f39ad5de964b
+ms.sourcegitcommit: 8bfabab73b39b3b3e68a3e8dc225515e8b310fed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53967428"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54398287"
 ---
 # <a name="learn-to-use-the-code-editor"></a>コード エディターを使用方法について学習する
 
@@ -26,9 +26,6 @@ ms.locfileid: "53967428"
 > Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。 実行するアプリ開発の種類によっては、Visual Studio と共に **Node.js ワークロード**をインストールする必要がある場合があります。
 
 この記事では、既に JavaScript の開発に慣れていることを前提としています。 慣れていない場合は、最初に [Node.js と Express のアプリの作成](../javascript/tutorial-nodejs.md)などのチュートリアルに関するページを参照することをお勧めします。
-
-> [!TIP]
-> この記事に従うには、Visual Studio に対して JavaScript 設定が選択されていることを確認します。 統合開発環境 (IDE) の設定の選択については、[環境設定](../ide/environment-settings.md)に関するページを参照してください。 設定をインポートするときに、**JavaScript** 設定をインポートします。
 
 ## <a name="add-a-new-project-file"></a>新しいプロジェクト ファイルを追加する
 
@@ -96,7 +93,7 @@ Visual Studio エディターでは、型や関数などの定義の検査を容
 
    ![コード定義ウィンドウ](../javascript/media/write-code-peek-definition.png)
 
-1. 表示された定義ウィンドウを閉じるには、ポップアップ ウィンドウの右上にある、内部に "x" が表示された小さなボックスを選択します。
+表示された定義ウィンドウを閉じるには、ポップアップ ウィンドウの右上にある、内部に "x" が表示された小さなボックスを選択します。
 
 ## <a name="use-code-snippets"></a>コード スニペットを使用する
 
