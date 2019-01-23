@@ -1,4 +1,3 @@
----
 # [Windows スクリプト インターフェイス](windows-script-interfaces.md)
 # [Windows スクリプト ホスト](windows-script-hosts.md)
 # [Windows スクリプト エンジン](windows-script-engines.md)
