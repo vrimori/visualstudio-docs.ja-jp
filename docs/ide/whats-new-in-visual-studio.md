@@ -17,18 +17,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 52a2c396bc6a6e5e09d72d8a1f9a1ac7486bb280
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ac2597b5b87f75402dcc6553096c0bfcf3d30cf1
+ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53881024"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380098"
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
 
 **[15.9 リリース](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017)の更新**
 
 以前のバージョンの Visual Studio からのアップグレードを検討していますか。 Visual Studio 2017 でできること:すべての開発、すべてのアプリ、すべてのプラットフォームにおいて、他に類を見ない生産性を実現します。 Visual Studio 2017 を利用し、Android、iOS、Windows、Linux、Web、クラウド向けのアプリを開発します。 短期間でプログラミングできて、デバッグや診断も簡単に行えます。テストを頻繁に行うことで、自信をもってリリースできます。 独自の拡張機能を開発することで Visual Studio を拡張し、カスタマイズすることもできます。 今回のリリースでは、バージョン管理を使用した、迅速で、効率的な共同作業が可能になりました。
+
+>[!div class="button"]
+>[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
 以前のバージョンである Visual Studio 2015 以降に行われた主な変更点の要約を示します。
 
@@ -50,11 +53,9 @@ Visual Studio 2017 の最も重要な改善点と新機能について、その�
 
 ### <a name="a-new-setup-experience"></a>新しいセットアップ エクスペリエンス
 
-[Visual Studio 2017 をダウンロードする](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)または [Visual Studio のシステム要件を確認する](/visualstudio/productinfo/vs2017-system-requirements-vs?context=visualstudio/default&contextView=vs-2017)
+Visual Studio により、必要な機能だけを必要なタイミングでより簡単により短い時間でインストールできます。 また、アンインストールも正常に行われます。
 
- Visual Studio により、必要な機能だけを必要なタイミングでより簡単により短い時間でインストールできます。 また、アンインストールも正常に行われます。
-
- Visual Studio をインストールするときに確認できる最も重要な変更は、新しいセットアップ エクスペリエンスです。 **[ワークロード]** タブには、共通のフレームワーク、言語、プラットフォーム別にグループ化されたインストール オプションが表示されます。 .NET デスクトップ開発から Windows、Linux、iOS での C++ アプリケーション開発まで、すべてを網羅します。
+Visual Studio をインストールするときに確認できる最も重要な変更は、新しいセットアップ エクスペリエンスです。 **[ワークロード]** タブには、共通のフレームワーク、言語、プラットフォーム別にグループ化されたインストール オプションが表示されます。 .NET デスクトップ開発から Windows、Linux、iOS での C++ アプリケーション開発まで、すべてを網羅します。
 
 必要なワークロードを選択し、必要に応じてそれらを変更します。
 

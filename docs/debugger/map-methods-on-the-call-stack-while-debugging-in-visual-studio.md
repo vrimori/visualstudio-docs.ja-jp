@@ -29,18 +29,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b8a00ca75135c2c2f29ef04d428e028e31054480
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8729b722465eb01d1e497e99ef13ecbedb66f91e
+ms.sourcegitcommit: d0b02affd24e66efed924c197824f35f823e3240
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53960840"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417929"
 ---
-# <a name="create-a-visual-map-of-the-call-stack-while-debugging"></a>デバッグ中に呼び出し履歴のビジュアル マップを作成します。 
+# <a name="create-a-visual-map-of-the-call-stack-while-debugging-c-visual-basic-c-javascript"></a>デバッグ中に呼び出し履歴のビジュアル マップを作成 (C#、Visual Basic、C++、JavaScript)
 
 デバッグ中に呼び出し履歴を視覚的にトレースするためのコード マップを作成します。 コメントをマップに追加することで、バグを見つけることに重点を置いてコードの動作を追跡できます。
 
-チュートリアル、ビデオをご覧ください:[ビデオ: コード マップ デバッガーの統合 (チャネル 9) で視覚的にデバッグ](http://go.microsoft.com/fwlink/?LinkId=293418)
+チュートリアルについては、このビデオをご覧ください。[ビデオ:コード マップ デバッガーの統合 (チャネル 9) で視覚的にデバッグします。](http://go.microsoft.com/fwlink/?LinkId=293418)
 
 コマンドとコード マップで使用できる操作の詳細については、次を参照してください。[参照およびコード マップの再配置](../modeling/browse-and-rearrange-code-maps.md)します。
 
@@ -53,7 +53,7 @@ ms.locfileid: "53960840"
 
 ##  <a name="MapStack"></a>呼び出し履歴でマップを作成する
 
-1. Visual Studio Enterprise でC#、Visual Basic、C++、JavaScript、または x++ プロジェクトを選択してデバッグを開始**デバッグ** > **デバッグの開始**キーを押して**F5**.
+1. Visual Studio Enterprise でC#、Visual Basic、C++ または JavaScript プロジェクトを選択してデバッグを開始**デバッグ** > **デバッグの開始**キーを押して**F5**.
    
 1. アプリが中断モードになるか、関数にステップ イン、選択**デバッグ** > **コード マップ**、またはキーを押します**Ctrl**+**シフト**+**`**.
 
