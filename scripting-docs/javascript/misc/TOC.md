@@ -1,4 +1,3 @@
----
 # ['{' が必要です](expected-left-curly-brace.md)
 # [識別子、文字列、または数値が必要です](expected-identifier-string-or-number.md)
 # [関数が必要です。](function-expected.md)

@@ -1,4 +1,3 @@
----
 # [Visual Studio for Mac](/visualstudio/mac/)
 # [IDE ツアー](ide-tour.md)
 
