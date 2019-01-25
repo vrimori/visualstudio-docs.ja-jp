@@ -9,12 +9,12 @@ description: Visual Studio サブスクライバーとして Azure DevOps を使
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 17210efba6e4505bbf4dc46fcd779be407f0c27e
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: 631683b48faed4e5b967e060b66123aaf685889b
+ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53740206"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380009"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio サブスクリプションの Azure DevOps 特典
 
@@ -33,7 +33,7 @@ Visual Studio サブスクリプションのアクティブ化に使用した ID
 | Visual Studio Test Professional (標準)                         | VL、リテール                                              | Azure Boards & Repos (Basic)、Azure Test Plans                                              |  はい          |
 | MSDN Platforms (標準)                                          | VL、リテール                                              | Azure Boards & Repos (Basic)、Azure Test Plans                                              |  はい          |
 
-<sup>1</sup>  *Not for Resale (NFR)、Microsoft Valued Professional (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (Enterprise)、BizSpark、MCT Software & Services Developer が含まれます。MCT Software & Services、Imagine は含まれません。*
+<sup>1</sup>  *内容:Not for Resale (NFR)、Most Valuable Professional (MVP)、Regional Director (RD)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (Enterprise)、BizSpark、MCT Software & Services Developer が含まれます。除外:MCT Software & Services、Imagine は含まれません。*
 
 > [!NOTE]
 > Microsoft では、クラウド サブスクリプションの Visual Studio Professional 年間サブスクリプションおよび Visual Studio Enterprise 年間サブスクリプションが提供されなくなりました。 サブスクリプションの更新、増減、キャンセルに関する既存のお客様のエクスペリエンスと機能については変更はありません。 新規のお客様は、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) に移動し、Visual Studio のさまざまな購入オプションを調べることをお勧めします。

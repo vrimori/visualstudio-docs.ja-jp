@@ -1,6 +1,6 @@
 ---
 title: コード分析の警告を抑制します。
-ms.date: 08/03/2018
+ms.date: 12/01/2018
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: d72697a8969983d83445808b75c63bc8657ecf1f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a377f08a8f0a3397aee778a71c74457420dec70f
+ms.sourcegitcommit: c496a77add807ba4a29ee6a424b44a5de89025ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53932880"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54835059"
 ---
 # <a name="suppress-code-analysis-warnings"></a>コード分析の警告を抑制します。
 
@@ -66,17 +66,19 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 - **MessageId** -各メッセージの問題の一意識別子。
 
-- **スコープ**-警告を抑制するターゲット。 ターゲットが指定されていない場合は、属性のターゲットに設定されます。 サポートされているスコープを以下に示します。
+- **スコープ**-警告を抑制するターゲット。 ターゲットが指定されていない場合は、属性のターゲットに設定されます。 サポートされている[スコープ](xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope)次に示します。
 
-    - Module
+   - `module`
 
-    - 名前空間
+   - `resource`
 
-    - リソース
+   - `type`
 
-    - 型
+   - `member`
 
-    - メンバー
+   - `namespace` -このスコープは、名前空間自体に対して警告を抑制します。 名前空間内の型に対して警告は抑制されません。
+
+   - `namespaceanddescendants` -(New for Visual Studio 2019) は、このスコープは、名前空間とその子孫のすべてのシンボルでの警告を抑制します。 `namespaceanddescendants`値 Roslyn アナライザー、に対してのみ有効ですし、FxCop に基づくバイナリのスタティック分析では無視されます。
 
 - **ターゲット**- 警告を抑制するターゲットを指定するために使用する識別子。 項目の完全修飾名を含める必要があります。
 
@@ -151,7 +153,7 @@ public class Animal
 `[module: SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "MyNamespace")]`
 
 > [!NOTE]
-> 名前空間スコープで警告を抑制すると、名前空間自体に対して警告を抑制します。 名前空間内の型に対する警告は抑制されません。
+> 警告を抑制するときに`namespace`スコープ、名前空間自体に対して警告を抑制します。 名前空間内の型に対する警告は抑制されません。
 
 任意の抑制は、明示的なスコープを指定することによって表現できます。 このような抑制は、グローバル レベルでライブする必要があります。 メンバー レベルの抑制は、型を修飾して指定できません。
 
@@ -168,5 +170,6 @@ public class Animal
 
 ## <a name="see-also"></a>関連項目
 
+- <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope>
 - <xref:System.Diagnostics.CodeAnalysis>
 - [Roslyn アナライザーを使用して、](../code-quality/use-roslyn-analyzers.md)
