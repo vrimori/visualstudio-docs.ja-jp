@@ -9,12 +9,12 @@ description: 選択した Visual Studio サブスクリプションに含まれ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscriptions
-ms.openlocfilehash: f69caa191a824f4f97ab3604b799e2b2b624f28e
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: c057eda862ffc0ef556d878a0afb3d1dd106918c
+ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53739709"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380215"
 ---
 # <a name="the-skill-me-up---powered-by-opsgility-training-benefit-in-visual-studio-subscriptions"></a>Skill Me Up - Visual Studio サブスクリプションの Opsgility トレーニング特典の利用
 
@@ -46,7 +46,7 @@ ms.locfileid: "53739709"
 | Visual Studio Dev Essentials | N/A  | 使用できません | N/A  |
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
 
-*Microsoft Partner Network (MPN)、Microsoft Valued Professional (MVP)、Microsoft Certified Trainer、BizSpark、Imagine、NFR、FTE は含まれません*
+*Microsoft Partner Network (MPN)、Most Valuable Professional (MVP)、Regional Director (RD)、Microsoft Certified Trainer、BizSpark、Imagine、NFR、FTE は含まれません。*
 
 > [!NOTE]
 > Microsoft では、クラウド サブスクリプションの Visual Studio Professional 年間サブスクリプションおよび Visual Studio Enterprise 年間サブスクリプションが提供されなくなりました。 サブスクリプションの更新、増減、キャンセルに関する既存のお客様のエクスペリエンスと機能については変更はありません。 新規のお客様は、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) に移動し、Visual Studio のさまざまな購入オプションを調べることをお勧めします。

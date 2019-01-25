@@ -9,12 +9,12 @@ description: 一部の Visual Studio サブスクリプションに含まれる 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: b30096d3c0217c169d107dc882103f0468e57278
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: 8e077db1aa369198f015f68e0e61efbc30697659
+ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53740339"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380317"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Pluralsight トレーニング特典
 
@@ -79,7 +79,7 @@ ms.locfileid: "53740339"
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) |       Azure       | 使用できません |       N/A       |
 |             Visual Studio Enterprise (NFR<sup>1</sup>)              |      プログラム      | 使用できません |       N/A       |
 
-<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、BizSpark、MCT Software & Services Developer、MCT Software & Service、Microsoft Valued Professional (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、FTE、Imagine が含まれます。*
+<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、BizSpark、MCT Software & Services Developer、MCT Software & Service、Most Valuable Professional (MVP)、Regional Director (RD)、Microsoft Partner Network (MPN)、FTE、Imagine が含まれます。*
 
 <sup>2</sup>  *Pluralsight 特典は、個人に関連付けられた単一ユーザーのみが使用できます。一度サブスクライバーが特典を使用すると、特典はリセットされません。*
 

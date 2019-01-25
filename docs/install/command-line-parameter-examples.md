@@ -1,7 +1,7 @@
 ---
 title: インストールに使用するコマンド ライン パラメーターの例
 description: これらの例をカスタマイズして、Visual Studio の独自のコマンド ライン インストールを作成します。
-ms.date: 11/14/2018
+ms.date: 01/16/2019
 ms.custom: seodec18
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6584d1b1864712a1c97b8d2405e7b366c5dd69d6
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7ba829976e699f9087f9833f5578e80037f999c8
+ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53989988"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380159"
 ---
 # <a name="command-line-parameter-examples-for-visual-studio-2017-installation"></a>Visual Studio 2017 のインストールに使用するコマンド ライン パラメーターの例
 
@@ -28,7 +28,9 @@ ms.locfileid: "53989988"
 > すべてのコマンドは、管理者特権で実行する必要があり、管理者のプロンプトからプロセスが開始されていない場合は、ユーザー アカウント制御の確認メッセージが表示されます。
 >
 > [!NOTE]
->  コマンド ラインの末尾で `^` 文字を使用すると、複数行を連結して 1 行にすることができます。 または、これらのコマンドを単純に 1 つの行に配置できます。 PowerShell の場合、バッククォート (`` ` ``) 文字がこれに相当します。
+> コマンド ラインの末尾で `^` 文字を使用すると、複数行を連結して 1 行にすることができます。 または、これらのコマンドを単純に 1 つの行に配置できます。 PowerShell の場合、バッククォート (`` ` ``) 文字がこれに相当します。
+
+コマンドラインを使用してインストールできるワークロードとコンポーネントの一覧は、「[Visual Studio のワークロード ID とコンポーネント ID](workload-and-component-ids.md)」ページをご覧ください。
 
 ## <a name="using---installpath"></a>Using --installPath
 
@@ -83,13 +85,15 @@ ms.locfileid: "53989988"
    --includeRecommended
   ```
 
-## <a name="using---includerecommended"></a>Using --includeRecommended
+## <a name="using---all"></a>Using --all
 
 * Visual Studio 2017 Enterprise Edition で利用できるすべてのワークロードとコンポーネントの対話型インストールを開始します。
 
   ```cmd
-  vs_enterprise.exe --all --includeRecommended --includeOptional
+  vs_enterprise.exe --all
   ```
+
+## <a name="using---includerecommended"></a>Using --includeRecommended
 
 * Visual Studio 2017 Community Edition が既にインストールされているコンピューターに、Visual Studio 2017 Professional の 2 つ目の名前付きインスタンスを Node.js 開発のサポートとともにインストールします。
 
@@ -169,3 +173,4 @@ vs_enterprise.exe modify --installPath "C:\VS" --config "C:\.vsconfig"
 * [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)
 * [コマンド ライン パラメーターを使用して Visual Studio をインストールする](use-command-line-parameters-to-install-visual-studio.md)
 * [Visual Studio 2017 のオフライン インストールを作成する](create-an-offline-installation-of-visual-studio.md)
+* [Visual Studio のワークロードとコンポーネント ID](workload-and-component-ids.md)

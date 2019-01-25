@@ -8,16 +8,21 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 05104b9c734b35226fcd9a964372802f351605df
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5b10a0bae3a9e3b0ce5f9135669cb788f0ddce9d
+ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53964284"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380374"
 ---
 # <a name="how-to-insert-xml-comments-for-documentation-generation"></a>方法:ドキュメント生成のための XML コメントを挿入する
 
-Visual Studio では、クラスやメソッドなどのコード要素を文書化しやすいように、標準的な XML ドキュメント コメント構造を自動的に生成できます。 コンパイル時に、ドキュメントのコメントを含む XML ファイルを生成できます。 コンパイラによって生成された XML ファイルは、.NET アセンブリと共に配布できます。これにより、Visual Studio や他の IDE で、IntelliSense を使って型やメンバーに関する概要情報を表示できます。 さらに、[DocFX](https://dotnet.github.io/docfx/) や [Sandcastle](https://www.microsoft.com/download/details.aspx?id=10526) のようなツールを使用して XML ファイルを実行し、API リファレンスの Web サイトを生成することができます。
+Visual Studio では、クラスやメソッドなどのコード要素を文書化しやすいように、標準的な XML ドキュメント コメント構造を自動的に生成できます。 コンパイル時に、ドキュメントのコメントを含む XML ファイルを生成できます。
+
+> [!TIP]
+> 生成された XML ファイルの場所と名前を構成する方法については、「[XML コメントによるコードの文書化 (C# ガイド)](/dotnet/csharp/codedoc)」をご覧ください。
+
+コンパイラによって生成された XML ファイルは、.NET アセンブリと共に配布できます。これにより、Visual Studio や他の IDE で、IntelliSense を使って型やメンバーに関する概要情報を表示できます。 さらに、[DocFX](https://dotnet.github.io/docfx/) や [Sandcastle](https://www.microsoft.com/download/details.aspx?id=10526) のようなツールを使用して XML ファイルを実行し、API リファレンスの Web サイトを生成することができます。
 
 > [!NOTE]
 > XML ドキュメントのコメントを自動的に挿入する **[コメントの挿入]** コマンドは、[C#](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments) と [Visual Basic](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation) で使うことができます。 ただし、[C++ ファイルに XML ドキュメントのコメント](/cpp/ide/xml-documentation-visual-cpp)を手動で挿入し、コンパイル時に XML ドキュメント ファイルを生成することもできます。

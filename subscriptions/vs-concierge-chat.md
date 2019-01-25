@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれるコンシ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 6e8a039593d0d08add10e948eee1d923b818e4cb
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: a57a4b2460de373967d29c2e9c9667bdca8ab9ea
+ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53740235"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380000"
 ---
 # <a name="concierge-chat"></a>コンシェルジェ チャット
 
@@ -49,7 +49,7 @@ ms.locfileid: "53740235"
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure | 使用できません | N/A |
 | Visual Studio Dev Essentials | N/A  | 使用できません |N/A |
 
-<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Certified Trainer、BizSpark が含まれます。FTE、Microsoft Valued Professional (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、Imagine は含まれません。*
+<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Certified Trainer、BizSpark が含まれます。FTE、Most Valuable Professional (MVP)、Regional Director (RD)、Microsoft Partner Network (MPN)、Imagine は含まれません。*
 
 > [!NOTE]
 > Microsoft では、クラウド サブスクリプションの Visual Studio Professional 年間サブスクリプションおよび Visual Studio Enterprise 年間サブスクリプションが提供されなくなりました。 サブスクリプションの更新、増減、キャンセルに関する既存のお客様のエクスペリエンスと機能については変更はありません。 新規のお客様は、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) に移動し、Visual Studio のさまざまな購入オプションを調べることをお勧めします。

@@ -9,12 +9,12 @@ description: Visual Studio に含まれる Azure Advisory Chat 特典を活用�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 2c70ddda4e65eb67c89539b16b0322c890f4060f
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: e078ddd71c126cdf70b56f6b8d6a9a467a4f56d4
+ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53739414"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380036"
 ---
 # <a name="azure-advisory-chat"></a>Azure Advisory Chat
 
@@ -40,13 +40,13 @@ Azure Advisory Chat の使用は簡単です。
 
 |                                                      サブスクリプション レベル                                                      |     チャネル      |    特長    | 更新可能かどうか |
 |------------------------------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
-|                                      Visual Studio Enterprise (Standard)                                       | VL、Azure、リテール |   1 年    |    はい     |
+|                                      Visual Studio Enterprise (Standard)                                       | VL、Azure、リテール |   1 年    |    ○     |
 | Visual Studio Professional (Standard、月間クラウド)、Visual Studio Enterprise (月間クラウド、NFR<sup>1</sup>) |        すべて        | 使用できません |     ×     |
 |                                          Visual Studio Test Professional (標準)                                          |        すべて        | 使用できません |     ×     |
 |                                                  MSDN Platforms (標準)                                                   |        すべて        | 使用できません |     ×     |
 |                                                 Visual Studio Dev Essentials                                                 |        N/A        | 使用できません |     ×     |
 
-<sup>1</sup>  *Not for Resale (NFR)、Microsoft Valued Professional (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP)、BizSpark、Imagine、MCT が含まれます*
+<sup>1</sup>  *Not for Resale (NFR)、Most Valuable Professional (MVP)、Regional Director (RD)、Visual Studio Industry Partner (VSIP)、BizSpark、Imagine、MCT が含まれます。*
 
 > [!NOTE]
 > Microsoft では、クラウド サブスクリプションの Visual Studio Professional 年間サブスクリプションおよび Visual Studio Enterprise 年間サブスクリプションが提供されなくなりました。 サブスクリプションの更新、増減、キャンセルに関する既存のお客様のエクスペリエンスと機能については変更はありません。 新規のお客様は、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) に移動し、Visual Studio のさまざまな購入オプションを調べることをお勧めします。

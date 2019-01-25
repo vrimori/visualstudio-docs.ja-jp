@@ -9,12 +9,12 @@ description: 一部の Visual Studio サブスクリプションで使用可能�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 7ee8059a8e80834b6b35f93be888d7fd90e4a3a3
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: ac1d960ea16346de6d1ca12a2b0602eedf47f704
+ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53739998"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54379805"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの CAST Highlight 特典
 
@@ -94,12 +94,12 @@ Visual Studio Enterprise サブスクライバーは、サブスクライバー�
 | Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用できません                                             |  N/A           |
 | MSDN Platforms (標準)                                          | VL、リテール                                              | 使用できません                                              |  N/A          |
 | Visual Studio Dev Essentials | N/A  | 使用できません | N/A |
-| Visual Studio Enterprise (標準、年間クラウド)  | NFR<sup>1</sup> |使用できません  | N/A |
+| Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |使用できません  | N/A |
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure | 使用できません | N/A |
 
 
 
-<sup>1</sup>  *Not for Resale (NFR)、FTE、Microsoft Valued Professional (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、Visual Studio Industry Partner (VSIP)、Microsoft Certified Trainer、BizSpark、Imagine が含まれます*
+<sup>1</sup>  *Not for Resale (NFR)、FTE、Most Valuable Professional (MVP)、Regional Director (RD)、Microsoft Partner Network (MPN)、Visual Studio Industry Partner (VSIP)、Microsoft Certified Trainer、BizSpark、Imagine が含まれます。*
 
 
 > [!NOTE]

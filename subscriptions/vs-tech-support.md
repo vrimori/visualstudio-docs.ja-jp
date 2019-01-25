@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれるテクニ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: e2e5b66988ba5ff5aedede2e1cef112a3b204919
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.openlocfilehash: be2fcf753c73055d647e9a924dfec306d49ce202
+ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54315515"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380247"
 ---
 # <a name="activate-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションのテクニカル サポート特典をアクティブ化する
 
@@ -92,14 +92,14 @@ Azure に関連する問題がある場合に Visual Studio サブスクリプ�
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 4 つのインシデント       |  [はい]|
-| Visual Studio Professional (Standard) | VL、Azure、リテール、一部の NFR<sup>2</sup>                                        | 2 つのインシデント                                                          |[はい]         |
-| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 2 つのインシデント                                             |  [はい]         |
-| MSDN Platforms (標準)                                          | VL、リテール                                              | 2 つのインシデント                                               | [はい]         |
+| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 4 つのインシデント       |  はい|
+| Visual Studio Professional (Standard) | VL、Azure、リテール、一部の NFR<sup>2</sup>                                        | 2 つのインシデント                                                          |はい         |
+| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 2 つのインシデント                                             |  はい         |
+| MSDN Platforms (標準)                                          | VL、リテール                                              | 2 つのインシデント                                               | はい         |
 | Visual Studio Dev Essentials | N/A | 使用できません |N/A|
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
 
-<sup>1</sup> *Imagine Premium が含まれます。Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (MPN)、FTE、MCT Software & Services Developer、BizSpark、Imagine Standard、Microsoft Valued Professional (MVP)、Region Director (RD)、MCT Software & Services は含まれません。*
+<sup>1</sup> *Imagine Premium が含まれます。Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (MPN)、FTE、MCT Software & Services Developer、BizSpark、Imagine Standard、Most Valuable Professional (MVP)、Regional Director (RD)、MCT Software & Services は含まれません。*
 
 <sup>2</sup> *Imagine Standard が含まれます。*
 
