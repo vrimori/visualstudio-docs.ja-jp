@@ -11,20 +11,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7cd076e19a1732309a07feccca899669741b6482
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 95eff5fee76b755ba30d6ec5b74d990b2b250f72
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53964638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54800957"
 ---
 # <a name="list-of-available-services"></a>使用可能なサービスの一覧
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Visual Studio SDK は、次のサービスをサポートします。 一部のパッケージは、ここに記載されていない独自のサービスを提供するなど、言語サービスには 1 つのサービス GUID はありません。 言語の名前を使用して、レジストリ内で、言語サービスの GUID を検索する必要があります。  
-  
- 次のとおり、またはその他のソース (たとえば、言語サービス) から取得したサービスの Guid を使用すると、プライマリ インターフェイスまたはサービスごとに示されるインターフェイスを取得します。  
-  
-## <a name="the-services"></a>サービス  
-  
+
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Visual Studio SDK は、次のサービスをサポートします。 一部のパッケージは、ここに記載されていない独自のサービスを提供するなど、言語サービスには 1 つのサービス GUID はありません。 言語の名前を使用して、レジストリ内で、言語サービスの GUID を検索する必要があります。
+
+次のとおり、またはその他のソース (たとえば、言語サービス) から取得したサービスの Guid を使用すると、プライマリ インターフェイスまたはサービスごとに示されるインターフェイスを取得します。
+
+## <a name="the-services"></a>サービス
+
 | サービス | Interface | Visual Studio | Visual Studio 2005 | 説明 |
 | - | - |---------------|--------------------| - |
 | <xref:Microsoft.VisualStudio.OLE.Interop.SBindHost> | <xref:Microsoft.VisualStudio.OLE.Interop.IBindHost> | [はい] | [はい] | Vspackage を取得するために使用する<xref:Microsoft.VisualStudio.OLE.Interop.IBindHost>非同期データ転送を容易に ActiveX コントロールからのインターフェイス。 |
@@ -156,7 +157,7 @@ ms.locfileid: "53964638"
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsWebURLMRU> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsWebURLMRU> | [はい] | [はい] | Url の最近使用 (MRU) の一覧に URL を追加し、MRU 一覧のすべての Url の一覧を取得する VSPackage を使用できます。 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsWindowFrame> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> | [はい] | [はい] | パッケージまたはパッケージのパーツを配置する場合がある、ウィンドウ フレームを取得するために VSPackage を使用できます。 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsXMLMemberIndexService> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsXMLMemberIndexService> | [はい] | [はい] | 特定のメタデータ ファイルに関連付けられたドキュメントを XML 形式のファイルへのアクセスを提供します。 |
-  
-## <a name="see-also"></a>関連項目  
- [COM と管理対象サービス](http://msdn.microsoft.com/en-us/6c5808b4-ad87-48d7-ae06-33a81e7052af)   
- [サービスの使用と提供](../../extensibility/using-and-providing-services.md)
+
+## <a name="see-also"></a>関連項目
+
+- [サービスの使用と提供](../../extensibility/using-and-providing-services.md)
