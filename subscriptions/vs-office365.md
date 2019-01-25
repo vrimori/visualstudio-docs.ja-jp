@@ -9,12 +9,12 @@ description: 一部の Visual Studio サブスクリプションに含まれる 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: d68c8847dc9ab6f4daeaceb07dbd4023ca2148f5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ded8c37cfcd737e9285b6a1e2a5f9eb51ede2680
+ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968392"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380138"
 ---
 # <a name="office-365-pro-plus-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Office 365 Pro Plus
 
@@ -55,7 +55,7 @@ Office 用アプリケーションを開発する予定がある場合は、[Off
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL、Azure、リテール| 使用可能       |  [はい]          |
+| Visual Studio Enterprise (Standard)   | VL、Azure、リテール| 使用可能       |  はい          |
 | Visual Studio Enterprise (Standard)   | NFR<sup>1</sup> | 使用できません       |  N/A          |
 | Visual Studio Professional (Standard) | VL、Azure、リテール                                       | 使用できません                                                            |  N/A          |
 | Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用できません                                             |  N/A          |
@@ -63,7 +63,7 @@ Office 用アプリケーションを開発する予定がある場合は、[Off
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure | 使用できません | N/A |
 | Visual Studio Dev Essentials | N/A  | 使用できません |N/A |
 
-<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (MPN)、FTE、MCT Software & Services Developer、BizSpark、Microsoft Valued Professional (MVP)、Region Director (RD)、MCT Software & Services、Imagine、Microsoft Partner Network が含まれます。*
+<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (MPN)、FTE、MCT Software & Services Developer、BizSpark、Most Valuable Professional (MVP)、Regional Director (RD)、MCT Software & Services、Imagine、Microsoft Partner Network が含まれます。*
 
 
 > [!NOTE]

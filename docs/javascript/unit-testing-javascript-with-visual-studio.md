@@ -1,6 +1,6 @@
 ---
-title: Node.js での単体テスト
-description: Visual Studio は、Node.js Tools for Visual Studio を使用する JavaScript コードの単体テストをサポートします
+title: JavaScript と TypeScript の単体テスト
+description: Visual Studio では、Node.js Tools for Visual Studio を使用する JavaScript と TypeScript コードの単体テストをサポートします
 ms.date: 06/06/2018
 ms.topic: conceptual
 ms.devlang: javascript
@@ -11,14 +11,14 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: a65fc53f72e2e7a90b03f376ced55fffbe9ecbf8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 75f40dc5abe10f75dccad91fa96d7e149267dc47
+ms.sourcegitcommit: 8bfabab73b39b3b3e68a3e8dc225515e8b310fed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53952765"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54398222"
 ---
-# <a name="unit-testing-in-nodejs"></a>Node.js での単体テスト
+# <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Visual Studio で JavaScript と TypeScript の単体テストを実行する
 
 Node.js Tools For Visual Studio を使用すると、いくつかの一般的な JavaScript フレームワークを使用して、単体テストを記述して実行できます。コマンド プロンプトに切り替える必要はありません。
 

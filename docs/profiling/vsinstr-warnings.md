@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 716cf80a9b93f5a018c31af0d36d3212a858f3b2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 3d0b201d22b93b7c023627887f0fc033da360fe9
+ms.sourcegitcommit: d0b02affd24e66efed924c197824f35f823e3240
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53888596"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417864"
 ---
 # <a name="vsinstr-warnings"></a>VSInstr の警告
 次の表に、*VSInstr.exe* ツールで発行される警告をリストします。 NOWARN オプションに警告番号を指定することで、警告を非表示にできます。  
   
 |警告番号|説明|  
 |--------------------|-----------------|  
+|**VSP1026**|カバレッジでは、MSCorLib を参照していないライブラリはサポートされていません。 これは、多くの場合、移植可能なライブラリが該当します。|  
 |**VSP2000**|内部エラーです。 この実行可能ファイルのモジュール ファイル名を取得できません。|  
 |**VSP2001**|\<assembly name> は、厳密な名前付きのアセンブリです。 実行するには、再署名する必要があります。<br /><br /> この警告は、署名付きのアセンブリがインストルメントされたときに発生します。 *sn.exe* ツールを使用して、バイナリを再署名するか、厳密な名前の必要性を一時的に無効にすることができます。 詳細については、「[Sn.exe (厳密名ツール)](/dotnet/framework/tools/sn-exe-strong-name-tool)」を参照してください。|  
 |**VSP2002**|ファイル \<filename> で関数 \<funcname> が見つかりませんでした。<br /><br /> この警告は、関数が指定したファイルで見つからない場合に発生します。|  

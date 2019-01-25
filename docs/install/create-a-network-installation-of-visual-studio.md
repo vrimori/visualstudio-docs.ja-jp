@@ -1,7 +1,7 @@
 ---
 title: ネットワーク ベース インストールを作成する
 description: 企業内に Visual Studio を展開するためのネットワーク インストール ポイントを作成する方法について説明します。
-ms.date: 10/17/2017
+ms.date: 01/15/2019
 ms.custom: seodec18
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -14,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e8005aaea5e799ece8a5e217ca28ecd553e6787
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ee0eadc9d682e41737df00f81b6443daf5e21fb6
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53966733"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54349921"
 ---
 # <a name="create-a-network-installation-of-visual-studio-2017"></a>Visual Studio 2017 のネットワーク インストールを作成する
 
@@ -30,7 +30,7 @@ ms.locfileid: "53966733"
 
 ## <a name="download-the-visual-studio-bootstrapper"></a>Visual Studio ブートストラップをダウンロードする
 
-必要な Visual Studio のエディションを**ダウンロード**します。 必ず **[保存]** をクリックし、**[フォルダーを開く]** をクリックします。
+必要な Visual Studio のエディションをダウンロードします。 必ず **[保存]** をクリックし、**[フォルダーを開く]** をクリックします。
 
 セットアップ実行可能ファイル&mdash;具体的にはブートストラップ ファイル&mdash;は、次のいずれかになります。
 
@@ -115,11 +115,15 @@ response.json を変更し、セットアップの実行時に使用される既
 
 管理者はインストール スクリプトの一部として Visual Studio をクライアント ワークステーションに展開することができます。 あるいは、管理者権限を持つユーザーは共有から直接セットアップを実行し、自分のコンピューターに Visual Studio をインストールできます。
 
-- ユーザーは次を実行してインストールできます。 <br>```\\server\products\VS2017\vs_enterprise.exe```
-- 管理者は次を実行し、無人モードでインストールできます。 <br>```\\server\products\VS2017\vs_enterprise.exe --quiet --wait --norestart```
+* ユーザーは次を実行してインストールできます。 <br>```\\server\products\VS2017\vs_enterprise.exe```
+* 管理者は次を実行し、無人モードでインストールできます。 <br>```\\server\products\VS2017\vs_enterprise.exe --quiet --wait --norestart```
 
+> [!IMPORTANT]
+> エラーを防ぐために、インストール パス全体が 80 文字未満であることを確認してください。
+>
 > [!TIP]
 > バッチ ファイルの一部として実行するとき、`--wait` オプションを利用すると、`vs_enterprise.exe` プロセスはインストールの完了を待ち、それから終了コードを返します。 これは、企業の管理者が完了したインストールに追加のアクション (たとえば、[成功したインストールにプロダクト キーを適用する](automatically-apply-product-keys-when-deploying-visual-studio.md)など) を実行したい場合に便利ですが、そのインストールからのリターン コードを処理するにはインストールが終了するまで待つ必要があります。  `--wait` を使用しない場合、インストールが完了する前に `vs_enterprise.exe` プロセスが終了し、インストール操作の状態を表していない不正確な終了コードが返されます。
+
 
 レイアウトからインストールする場合、インストールされる内容はレイアウトから取得されます。 ただし、レイアウトに含まれないコンポーネントを選択した場合は、インターネットから取得されます。  Visual Studio のセットアップでレイアウトにない内容がダウンロードされないようにするには、`--noWeb` オプションを使用します。  `--noWeb` が使用されていて、インストール対象として選択されている内容がレイアウトにない場合、セットアップは失敗します。
 

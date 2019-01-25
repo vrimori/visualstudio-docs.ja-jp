@@ -1,6 +1,6 @@
 ---
 title: '[オプション]、[テキスト エディター]、[C#]、[詳細]'
-ms.date: 10/29/2018
+ms.date: 01/16/2019
 ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4fdb52b4fbdeac437a3833e0030acedfa382f81c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: db27509faf1c3d83eab1cd6c8fcd6b5b70fab48e
+ms.sourcegitcommit: 8bfabab73b39b3b3e68a3e8dc225515e8b310fed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53887907"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54398300"
 ---
 # <a name="options-text-editor-c-advanced"></a>[オプション]、[テキスト エディター]、[C#]、[詳細]
 
@@ -109,13 +109,17 @@ ms.locfileid: "53887907"
 
 - プロシージャ行の区切り記号を表示する
 
-   テキスト エディターに、プロシージャのスコープが表示されます。 プロジェクトの *.vb* ソース ファイルで、次の表に示す場所に線が表示されます。
+   テキスト エディターに、プロシージャのスコープが表示されます。 プロジェクトの *.cs* ソース ファイルで、次の表に示す場所に線が表示されます。
 
-   |.vb ソース ファイル内の場所|線が表示される場所の例|
+   |.cs ソース ファイル内の場所|線が表示される場所の例|
    |---------------------------------|------------------------------|
    |ブロック宣言構造の後|-   クラス、構造体、モジュール、インターフェイス、または列挙型の最後<br />-   プロパティ、関数、または sub の後<br />-   プロパティの get 句と set 句の間は対象外|
    |一連の単一行構造|-   import ステートメントの後、クラス ファイルの型定義の前<br />-   クラスで宣言されている変数の後、プロシージャの前|
    |単一行宣言|-   Import ステートメント、Inherits ステートメント、変数宣言、イベント宣言、デリゲート宣言、および DLL の Declare ステートメントの後|
+
+## <a name="block-structure-guides"></a>ブロック構造のガイド
+
+コードの中かっこ (**{}**) の間に垂直の点線を表示するには、このチェック ボックスをオンにします。 これで、宣言レベルとコード レベルのコンストラクト用のコード ブロックを簡単に確認できます。
 
 ## <a name="editor-help"></a>エディターのヘルプ
 

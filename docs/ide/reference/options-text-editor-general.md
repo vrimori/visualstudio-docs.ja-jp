@@ -1,40 +1,22 @@
 ---
 title: '[オプション]、[テキスト エディター]、[全般]'
-ms.date: 11/04/2016
+ms.date: 01/18/2019
 ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
-- VS.TOOLSOPTIONSPAGES.TEXT_EDITOR.SQL_SERVER_TOOLS.GENERAL
-- VS.ToolsOptionsPages.Text_Editor.All_Languages.General
 - VS.ToolsOptionsPages.Text_Editor.RDL_Expression.General
 - VS.ToolsOptionsPages.Text_Editor.SQL.General
 - vs.toolsoptionspages.text_editor
-- VS.ToolsOptionsPages.Text_Editor.XML.General
 - VS.ToolsOptionsPages.Text_Editor.T-SQL80.General
-- VS.ToolsOptionsPages.Text_Editor.CSS
-- VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
 - VS.ToolsOptionsPages.Text_Editor.SQL_Script.General
-- VS.ToolsOptionsPages.Text_Editor.CSharp.General
-- VS.ToolsOptionsPages.Text_Editor.All_Languages
 - VS.ToolsOptionsPages.Text_Editor.T-SQL7.General
-- VS.ToolsOptionsPages.Text_Editor.Basic.General
 - VS.ToolsOptionsPages.Text_Editor.T-SQL.General
-- VS.ToolsOptionsPages.Text_Editor.F#.Tabs
-- VS.ToolsOptionsPages.Text_Editor.F#
 - VS.ToolsOptionsPages.Text_Editor.PL/SQL.General
-- VS.ToolsOptionsPages.Text_Editor.C/C++.General
-- VS.ToolsOptionsPages.Text_Editor.Plain_Text
-- VS.ToolsOptionsPages.Text_Editor.HTML
-- VS.ToolsOptionsPages.Text_Editor.XAML.General
 - VS.ToolsOptionsPages.Text_Editor
-- VS.ToolsOptionsPages.Text_Editor.F#.General
 - VS.ToolsOptionsPages.Text_Editor.XOML.General
 - VS.ToolsOptionsPages.Text_Editor.SQL
-- vs.toolsoptionspages.text_editor.c/c++
 - VS.ToolsOptionsPages.Text_Editor.SQL_Script
-- VS.ToolsOptionsPages.Text_Editor.T-SQL90.General
 - VS.ToolsOptionsPages.Text_Editor.General
-- VS.ToolsOptionsPages.Text_Editor.CSharp
 - VS.ToolsOptionsPages.Text_Editor.Python
 - VS.ToolsOptionsPages.Text_Editor.R
 helpviewer_keywords:
@@ -48,12 +30,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fdd4e366451dd81738305893727554e8b07ffb04
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ce5553f54b5864c27fc4dfa14376e8eb7735c613
+ms.sourcegitcommit: d0b02affd24e66efed924c197824f35f823e3240
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53871331"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417799"
 ---
 # <a name="options-text-editor-general"></a>[オプション]、[テキスト エディター]、[全般]
 
@@ -75,7 +57,17 @@ ms.locfileid: "53871331"
 
 ### <a name="auto-detect-utf-8-encoding-without-signature"></a>[シグネチャ (BOM) なしの UTF-8 エンコードを自動検出]
 
-既定では、エディターはバイト オーダー マークまたは文字セット タグを探してエンコードを検出します。 現在の文書でいずれも見つからない場合、コード エディターはバイト順序をスキャンし、UTF-8 エンコードを自動検出します。 エンコードの自動検出を無効にするには、このオプションをオフにします。
+既定では、エディターはバイト オーダー マークまたは文字セット タグを探してエンコードを検出します。 現在の文書でいずれも見つからない場合、コード エディターはバイト順序をスキャンすることで、UTF-8 エンコードを自動検出します。 エンコードの自動検出を無効にするには、このオプションをオフにします。
+
+### <a name="follow-project-coding-conventions"></a>プロジェクトのコーディング規則に従う
+
+選択した場合、プロジェクトに指定されたコーディング規則によって、個人のプロジェクトで使用しているコーディング規則が上書きされます。
+
+### <a name="enable-mouse-click-to-perform-go-to-definition"></a>マウス クリックを有効にして [定義へ移動] を実行する
+
+選択した場合、**Ctrl** キーを押ながらマウスをクリックすると、マウス ポインターが要素に移動します。 これを行うと、選択した要素の定義に移動します。 **[修飾キーの使用]** ドロップダウンから、**[Alt]** または **[Ctrl** + **Alt]** を選択することもできます。
+
+コード エディターの現在の場所から移動せずに選択した要素の定義をウィンドウに表示するには、**[ピーク ビューで定義を開く]** チェック ボックスをオンにします。 
 
 ## <a name="display"></a>表示
 
@@ -89,11 +81,15 @@ ms.locfileid: "53871331"
 
 ### <a name="indicator-margin"></a>インジケーター マージン
 
-選択すると、エディターのテキスト領域の左端の外に縦の余白が表示されます。 この余白をクリックすると、アイコンとテキストに関連付けられているヒントが表示されます。 たとえば、インジケーター マージンにブレークポイントやタスク一覧のショートカットが表示されます。 インジケーター マージンの情報は印刷されません。
+選択すると、エディターのテキスト領域の左端の外に縦の余白が表示されます。 この余白をクリックすると、アイコンとテキストに関連付けられているヒントが表示されます。 たとえば、インジケーター マージンにブレークポイントやタスク一覧のショートカットが表示されます。 インジケーター マージンの情報は出力されません。
 
 ### <a name="highlight-current-line"></a>[現在の行を強調表示する]
 
 選択すると、カーソルが置かれているコード行の周りに灰色のボックスが表示されます。
+
+### <a name="show-structure-guide-lines"></a>構造のガイド線を表示する
+
+選択した場合、構造化されたコード ブロックに合う垂直線がエディターに表示され、個々のコード ブロックを簡単に識別できます。
 
 ## <a name="see-also"></a>関連項目
 

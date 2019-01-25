@@ -1,6 +1,6 @@
 ---
-title: Node.js アプリをデバッグする
-description: Visual Studio では、Visual Studio での Node.js アプリケーションのデバッグに関するサポートが提供されます
+title: JavaScript または TypeScript のアプリをデバッグする
+description: Visual Studio では、Visual Studio での JavaScript アプリと TypeScript アプリのデバッグをサポートします
 ms.date: 12/03/2018
 ms.topic: conceptual
 ms.devlang: javascript
@@ -11,16 +11,19 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 6e0ba454a00fb2cebdfaa8ba5fdba63ef3ed2748
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 29b58d588a07be8ba25ab844da171222c57df545
+ms.sourcegitcommit: 8bfabab73b39b3b3e68a3e8dc225515e8b310fed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53955894"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54398235"
 ---
-# <a name="debug-a-nodejs-app-in-visual-studio"></a>Visual Studio で Node.js アプリをデバッグする
+# <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>Visual Studio で JavaScript アプリまたは TypeScript アプリをデバッグする
 
 Visual Studio を使用して、JavaScript および TypeScript のコードをデバッグすることができます。 ブレークポイントを設定してそこにヒットし、変数を検査し、呼び出し履歴を表示し、その他のデバッグ機能を使用することができます。
+
+> [!TIP]
+> Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。 実行するアプリ開発の種類によっては、Visual Studio と共に **Node.js ワークロード**をインストールする必要がある場合があります。
 
 ## <a name="debug-server-side-script"></a>サーバー側のスクリプトをデバッグする
 

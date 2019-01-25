@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Windows �
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: df49564a920ea6f674c6d92ec2203962407a751e
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: 584048c088acb7ee3a390d941dbd6c59ce2ac3a0
+ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53739891"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380264"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Windows 開発者アカウント
 
@@ -60,7 +60,7 @@ Windows 開発者アカウントを使うには、アカウントを設定する
 | Visual Studio Dev Essentials | N/A  | 使用できません                                            |  N/A|
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
 
-<sup>1</sup>  *Not for Resale (NFR)、FTE、Visual Studio Industry Partner (VSIP)、BizSpark、MCT Software & Services Developer が含まれます。Microsoft Partner Network (MPN)、Imagine、Microsoft Valued Professional (MVP)、Region Director (RD)、MCT Software & Services は含まれません。*
+<sup>1</sup>  *Not for Resale (NFR)、FTE、Visual Studio Industry Partner (VSIP)、BizSpark、MCT Software & Services Developer が含まれます。Microsoft Partner Network (MPN)、Imagine、Most Valuable Professional (MVP)、Regional Director (RD)、MCT Software & Services は含まれません。*
 
 
 > [!NOTE]

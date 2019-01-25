@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eab46fa67230ef4a42c6025d99a689ef37d213b0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5d032e16acc0b3858f81f0989442b8fcfb351047
+ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53908281"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54345618"
 ---
 # <a name="item-element-msbuild"></a>Item 要素 (MSBuild)
 ユーザー定義のアイテムおよびそのメタデータが含まれます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトで使用されるすべてのアイテムが、`ItemGroup` 要素の子として指定されている必要があります。  
@@ -122,5 +122,5 @@ MSBuild 15.1 以降では、現行の属性リストと競合しない名前の�
 
 ## <a name="see-also"></a>関連項目  
  [項目](../msbuild/msbuild-items.md)   
- [MSBuild プロパティ](../msbuild/msbuild-properties.md)   
+ [MSBuild プロジェクトの共通項目](../msbuild/common-msbuild-project-items.md) [MSBuild プロパティ](../msbuild/msbuild-properties.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)

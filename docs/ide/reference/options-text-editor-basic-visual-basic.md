@@ -1,6 +1,6 @@
 ---
 title: '[オプション]、[テキスト エディター]、[基本] (VB)、[詳細]'
-ms.date: 11/04/2016
+ms.date: 01/16/2019
 ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
@@ -19,19 +19,47 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ca2178b61aa3cd2aa83314f00c231d564a10944
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8014ad72978a4b3ee37547a6660f739973ae4e46
+ms.sourcegitcommit: 8bfabab73b39b3b3e68a3e8dc225515e8b310fed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53871240"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54398248"
 ---
 # <a name="options-text-editor-basic-visual-basic-advanced"></a>[オプション]、[テキスト エディター]、[基本] (Visual Basic)、[詳細]
 **[オプション]** (**[ツール]** メニュー) ダイアログ ボックスの **[テキスト エディター]** フォルダーにある **[Basic]** フォルダーの **[VB 固有]** プロパティ ページでは、次のプロパティを指定します。
 
+## <a name="analysis"></a>分析
+
+- 完全ソリューション解析を有効にする
+
+   開いているコード ファイルだけでなく、ソリューションのすべてのファイルでコード分析を有効にします。 詳細については、[完全ソリューション解析](../../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)に関するページを参照してください。
+
+## <a name="using-directives"></a>Using ディレクティブ
+
+- using を並べ替える際に、'System' ディレクティブを先頭に配置する
+
+   選択した場合、右クリック メニューの **[using の削除と並べ替え]** コマンドによって `using` ディレクティブが並べ替えられ、'System' 名前空間が一覧の先頭に置かれます。
+   
+- ディレクティブ グループを使用して分離します
+
+   選択した場合、右クリック メニューの **[using の削除と並べ替え]** コマンドによって、同じルート名前空間を持つディレクティブのグループの間に空の行を挿入することで、`using` ディレクティブが分離されます。
+   
+- 参照アセンブリの型に using を提案する 
+- NuGet パッケージの型に using を提案する 
+
+   これらのオプションを選択した場合、[クイック アクション](../quick-actions.md)を使用して NuGet パッケージをインストールし、参照されていない型の `using` ディレクティブを追加できます。
+
+   ![Visual Studio に NuGet パッケージをインストールするためのクイック アクション](media/nuget-lightbulb.png)
+  
+
+## <a name="highlighting"></a>強調表示
+
  **[参照とキーワードの強調表示を有効にする]**
 
-テキスト エディターでは、`If..Then`、`While...End While`、`Try...Catch...Finally` などの句のシンボルのすべてのインスタンス、またはすべてのキーワードを強調表示できます。 強調表示された参照間またはキーワード間を移動するには、**Ctrl** + **Shift** + **下方向キー**を押すか、**Ctrl** + **Shift** + **上方向キー**を押します。
+テキスト エディターで、すべてのシンボルのインスタンスまたは `If..Then`、`While...End While`、`Try...Catch...Finally` などの 句のすべてのキーワードを強調表示できます。 強調表示された参照間またはキーワード間を移動するには、**Ctrl** + **Shift** + **下方向キー**を押すか、**Ctrl** + **Shift** + **上方向キー**を押します。
+
+## <a name="outlining"></a>アウトライン
 
 **[アウトライン モードを有効にする]**
 
@@ -47,7 +75,13 @@ ms.locfileid: "53871240"
 |一連の単一行構造|-   import ステートメントの後、クラス ファイルの型定義の前<br />-   クラスで宣言されている変数の後、プロシージャの前|
 |単一行宣言|-   Import ステートメント、Inherits ステートメント、変数宣言、イベント宣言、デリゲート宣言、および DLL の Declare ステートメントの後|
 
- **[コードの再フォーマット]** 必要に応じてコードの書式が再設定されます。 このオプションをオンにすると、コード エディターによって次の処理が行われます。
+## <a name="block-structure-guides"></a>ブロック構造のガイド
+
+コードの中かっこ (**{}**) の間に垂直の点線を表示するには、このチェック ボックスをオンにします。 これによって、宣言レベルとコード レベルのコンストラクト用のコード ブロックを簡単に確認できます。
+
+## <a name="editor-help"></a>エディターのヘルプ
+
+**[コードの再フォーマット]** 必要に応じてコードの書式が再設定されます。 このオプションをオンにすると、コード エディターによって次の処理が行われます。
 
 -   コードを正しいタブ位置に揃える。
 
@@ -65,7 +99,7 @@ ms.locfileid: "53871240"
 
 **[End コンストラクトの自動挿入]**
 
- たとえば、プロシージャ宣言の最初の行として `Sub Main—` を入力し、**Enter** キーを押すと、対応する `End Sub` 行がテキスト エディターに追加されます。 同様に、[For](/dotnet/visual-basic/language-reference/statements/for-next-statement) ループを追加すると、対応する `Next` ステートメントがテキスト エディターに追加されます。 このオプションをオンにすると、コード エディターで自動的に End 構造が追加されます。
+たとえば、プロシージャ宣言の最初の行として `Sub Main` を入力して **Enter** キーを押すと、対応する `End Sub` 行がテキスト エディターに追加されます。 同様に、[For](/dotnet/visual-basic/language-reference/statements/for-next-statement) ループを追加すると、対応する `Next` ステートメントがテキスト エディターに追加されます。 このオプションをオンにすると、コード エディターで自動的に End 構造が追加されます。
 
 **[Interface と MustOverride メンバーの自動挿入]**
 
@@ -75,7 +109,7 @@ ms.locfileid: "53871240"
 
 一般的なエラーの解決方法がテキスト エディターに表示され、適切な修正方法を選択できます。修正方法を選択するとコードに適用されます。
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 - [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)
 - [[オプション]、[テキスト エディター]、[すべての言語]、[タブ]](../../ide/reference/options-text-editor-all-languages-tabs.md)

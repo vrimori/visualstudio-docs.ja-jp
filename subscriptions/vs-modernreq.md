@@ -9,12 +9,12 @@ description: 一部の Visual Studio Enterprise サブスクリプションに�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 69dcde708cdd88c1e9945567fc8525fb1763627c
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: fd7aed3acd11b0d9e5ce05784619c34a97e726a8
+ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53740261"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380238"
 ---
 # <a name="the-modernrequirements4tfs-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの MODERNRequirements4TFS 特典
 
@@ -95,7 +95,7 @@ ms.locfileid: "53740261"
 | Visual Studio Dev Essentials | N/A  |使用できません                                                          |N/A     |
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
 
-<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (Enterprise)、FTE が含まれます。Microsoft Partner Network (Professional)、MCT Software & Services Developer、BizSpark、Imagine、Microsoft Valued Professional (MVP)、Region Director (RD)、MCT Software & Services は含まれません。*
+<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (Enterprise)、FTE が含まれます。Microsoft Partner Network (Professional)、MCT Software & Services Developer、BizSpark、Imagine、Most Valuable Professional (MVP)、Regional Director (RD)、MCT Software & Services は含まれません。*
 
 > [!NOTE]
 > Microsoft では、クラウド サブスクリプションの Visual Studio Professional 年間サブスクリプションおよび Visual Studio Enterprise 年間サブスクリプションが提供されなくなりました。 サブスクリプションの更新、増減、キャンセルに関する既存のお客様のエクスペリエンスと機能については変更はありません。 新規のお客様は、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) に移動し、Visual Studio のさまざまな購入オプションを調べることをお勧めします。

@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる WhiteSourc
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: a19c2a8882c7de27feef68416b6152e4a173ad54
-ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
+ms.openlocfilehash: 4169036161e19092a78133207261f2fe434c1316
+ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54154435"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380033"
 ---
 #  <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの WhiteSource Bolt
 
@@ -77,14 +77,14 @@ Azure DevOps Services を使っている場合は緑の **[インストール]**
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 6 か月       |  [はい]          |
+| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 6 か月       |  はい          |
 | Visual Studio Professional (Standard) | VL、Azure、リテール                                       | 使用できません。                                                           |N/A         |
 | Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用できません                                             |  N/A         |
 | MSDN Platforms (標準)                                          | VL、リテール                                              | 使用できません                                              | N/A         |
 | Visual Studio Dev Essentials | N/A  | 使用できません |N/A |
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
 
-<sup>1</sup>  *Microsoft Partner Network (Enterprise) が含まれます。他の Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、FTE、MCT Software & Services Developer、BizSpark、Imagine、Microsoft Valued Professional (MVP)、Region Director (RD)、MCT Software & Services、Microsoft Partner Network (Professional) は含まれません。*
+<sup>1</sup>  *Microsoft Partner Network (Enterprise) が含まれます。その他の Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、FTE、MCT Software & Services Developer、BizSpark、Imagine、Most Valuable Professional (MVP)、Regional Director (RD)、MCT Software & Services、Microsoft Partner Network (Professional) は含まれません。*
 
 
 > [!NOTE]

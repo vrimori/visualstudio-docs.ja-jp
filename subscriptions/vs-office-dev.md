@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Office 365
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 4fde2da9c3d03b436614fdf58f3477c33091d1d8
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: 47444b8c234f0f5bb3b67a04b63b233d2c4e73e1
+ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53739722"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54379770"
 ---
 # <a name="the-office-365-developer-subscription-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Office 365 Developer サブスクリプション特典
 
@@ -68,14 +68,14 @@ Office 365 Developer サブスクリプションの詳細については、「[O
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | Included      |  はい          |
+| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 含まれる      |  はい          |
 | Visual Studio Professional (Standard) | VL、Azure、リテール                                       | 使用できません                                                            |N/A         |
 | Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用できません                                             |  N/A         |
 | MSDN Platforms (標準)                                          | VL、リテール                                              | 使用できません                                              | N/A         |
 | Visual Studio Dev Essentials | N/A  | 使用できません |N/A |
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
 
-<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、FTE、BizSpark、MCT Software & Services Developer、MCT Software & Services が含まれます。Microsoft Partner Network (MPN)、Imagine、Microsoft Valued Professional (MVP)、Region Director (RD) は含まれません。*
+<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、FTE、BizSpark、MCT Software & Services Developer、MCT Software & Services が含まれます。Microsoft Partner Network (MPN)、Imagine、Most Valuable Professional (MVP)、Regional Director (RD) は含まれません。*
 
 
 > [!NOTE]
