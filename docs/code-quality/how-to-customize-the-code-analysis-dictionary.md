@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 667e3b4e-beff-48be-b3d1-376e1716a895
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ea38b05f48969b80f9f8888f8bbd3c6a1a4e5657
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 19ad0da444f99e0fbf618d97729c64a1e5ed5666
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53904943"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54971820"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>方法: コード分析辞書のカスタマイズ
 コード分析では、組み込みの辞書を使用して、スペル、文法の場合も、および .NET Framework ガイドラインの他の名前付け規則でエラー コード内の識別子を確認します。 追加、削除、または用語、略語、および組み込みの辞書に頭字語を変更するカスタム辞書の Xml ファイルを作成できます。
@@ -64,7 +64,7 @@ ms.locfileid: "53904943"
 
 - [ディクショナリ/単語/認識されていない/Word](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsUnrecognizedWord)
 
-- [ディクショナリ/単語/非推奨とされます/用語 [@PreferredAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDeprecatedTermPreferredAlternate)
+- [Dictionary/Words/Deprecated/Term[@PreferredAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDeprecatedTermPreferredAlternate)
 
 - [辞書、単語、複合/用語 [@CompoundAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsCompoundTermCompoundAlternate)
 
@@ -140,7 +140,7 @@ ms.locfileid: "53904943"
 
 -   [CA2204:リテラルは正しく入力されなければなりません](../code-quality/ca2204-literals-should-be-spelled-correctly.md)
 
-###  <a name="BKMK_DictionaryWordsDeprecatedTermPreferredAlternate"></a> ディクショナリ/単語/非推奨とされます/用語 [@PreferredAlternate]
+###  <a name="BKMK_DictionaryWordsDeprecatedTermPreferredAlternate"></a> Dictionary/Words/Deprecated/Term[@PreferredAlternate]
  用語を非推奨のコード分析を識別する用語の一覧に含めるには、ディクショナリ、単語、非推奨/用語要素の内部テキ ストとしてという用語を追加します。 非推奨の用語は、単語のスペルが正しいが、使用する必要があります。
 
  警告に推奨される代替語句を含めると、用語の要素の PreferredAlternate 属性で、代替を指定します。 おくことができます、属性値空代替を提案したくない場合。

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, browsing SharePoint sites
 - SharePoint development in Visual Studio, SharePoint Connections
 - SharePoint Connections [SharePoint development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d3804b97967cffb299393e7e3a8866e51a2e3224
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 825bf975d877cd6b0844e86aabff605daa30a900
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53931360"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54875486"
 ---
 # <a name="browse-sharepoint-connections-by-using-server-explorer"></a>サーバー エクスプ ローラーを使用して SharePoint 接続を参照します。
   ローカルの SharePoint 接続を表示できるようになりました**サーバー エクスプ ローラー**します。 この手法を使用すると、システム上の SharePoint サイトのコンポーネントを移動できます。 という名前のノードに表示されるリストの定義およびコンテンツの種類など、SharePoint サイトのコンポーネント**SharePoint 接続**のツリー ビューで**サーバー エクスプ ローラー**します。 表示する**サーバー エクスプ ローラー**、メニュー バーで、**ビュー** > **サーバー エクスプ ローラー**します。 SharePoint サイトのコンポーネントを表示するだけでなく項目を削除のプロパティを表示したり、ショートカット メニューのコマンドを使用して、ツリー ビューを更新できます。  

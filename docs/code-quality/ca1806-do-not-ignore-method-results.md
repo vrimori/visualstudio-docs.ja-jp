@@ -16,13 +16,13 @@ dev_langs:
 - CPP
 - CSharp
 - VB
-manager: douge
-ms.openlocfilehash: 865c4d26758021b0f0200f7834d02cd34f22bc8a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 4ac122534a42cb78b80d1a12004a8db3d1b5b203
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53954199"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55043636"
 ---
 # <a name="ca1806-do-not-ignore-method-results"></a>CA1806:メソッドの結果を無視しない
 
@@ -54,7 +54,7 @@ HRESULT またはエラー コードを無視すると、エラー条件で予�
 
  メソッド A が B、メソッドを呼び出しますが、B メソッドから返される新しい文字列インスタンスを使用しないかどうか。 インスタンスを引数として別のメソッドに渡す、変数に代入します。 または、必要ない場合は、呼び出しを削除します。
 
- または
+ - または -
 
  またはエラー コードをメソッド A、B のメソッドを呼び出しますが、HRESULT を使用しない場合、メソッドを返します。 条件付きステートメントで、結果を使用して、結果を変数に代入または別のメソッドに引数として渡します。
 
