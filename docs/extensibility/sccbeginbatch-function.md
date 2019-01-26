@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 33968183-2e15-4e0d-955b-ca12212d1c25
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2e0ae1dd4d01018d9637e5722d8079222afbf3c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: cff35d2b2df3a09249d232fe904ba65815ce95ae
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53869126"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55009883"
 ---
 # <a name="sccbeginbatch-function"></a>SccBeginBatch 関数
 この関数は、ソース管理操作のバッチ シーケンスを開始します。 [SccEndBatch](../extensibility/sccendbatch-function.md)をバッチの終了が呼び出されます。 これらのバッチは、入れ子にできません。  
