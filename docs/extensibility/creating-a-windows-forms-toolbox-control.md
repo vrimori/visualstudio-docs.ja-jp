@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0be6ffc1-8afd-4d02-9a5d-e27dde05fde6
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b84c554427d443d54d117b72cec5a423e10e7887
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8edfce1eb86169581acfa2ace857a766b899ee6b
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53872922"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54992526"
 ---
 # <a name="create-a-windows-forms-toolbox-control"></a>Windows フォーム ツールボックス コントロールを作成します。
 Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フォーム ツールボックス コントロールの項目テンプレートが自動的に追加するコントロールを作成できます。、**ツールボックス**、拡張機能がインストールされている場合。 このトピックでは、他のユーザーに配布できる単純なカウンター コントロールを作成するテンプレートを使用する方法を示します。  
@@ -53,9 +53,9 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
     |コントロール|プロパティ|[値]|  
     |-------------|--------------|-----------|  
-    |`Label1`|**[テキスト]**|""|  
+    |`Label1`|**Text**|""|  
     |`Button1`|**Name**|btnReset|  
-    |`Button1`|**[テキスト]**|リセット|  
+    |`Button1`|**Text**|リセット|  
   
 ### <a name="code-the-user-control"></a>ユーザー コントロールのコード  
  `Counter`コントロールは、カウンターがインクリメントされるたびに発生するイベント、カウンターをインクリメントするメソッドを公開、**リセット**ボタン、および現在のカウント、表示テキスト、および表示するかどうかを格納する 3 つのプロパティ非表示にするか、**リセット**ボタンをクリックします。 `ProvideToolboxControl` 属性は、 **[ツールボックス]** のどの場所に `Counter` コントロールが表示されるかを判断します。  

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 7d21fe48-489a-4f55-acb5-73da64c4e155
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d549ab4af45a2571b2d20d47215109f57b3f3384
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4e86b6163a581a2bd7233596b3871a82f356b3ca
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53930714"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54988767"
 ---
 # <a name="registration-and-selection-source-control-vspackage"></a>登録と選択 (ソース管理 VSPackage)
 公開するために VSPackage を登録する必要があるソース管理、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。 1 つ以上のソース管理 VSPackage が登録されている場合、ユーザーは、どの VSPackage を読み込む適切なタイミングでを選択できます。 参照してください[Vspackage](../../extensibility/internals/vspackages.md) Vspackage とそれらを登録する方法の詳細についてはします。  
@@ -41,9 +41,9 @@ ms.locfileid: "53930714"
   
 | キー名 | エントリ |
 | - | - |
-| `HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SourceControlProviders\` | (既定値) = 対応する rg_sz: {ID_SccProvider} |
+| `HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SourceControlProviders\` | (default) = rg_sz:{ID_SccProvider} |
 | `HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SourceControlProviders\             {ID_SccProvider}\` | (既定値) = 対応する rg_sz:\<パッケージのフレンドリ名 ><br /><br /> サービス = 対応する rg_sz: {SID_SccPkgService} |
-| `HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SourceControlProviders\             {ID_SccProvider}\               Name\` | (既定値) = 対応する rg_sz: #\<ローカライズされた名前のリソース ID ><br /><br /> パッケージ = 対応する rg_sz: {ID_Package} |
+| `HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SourceControlProviders\             {ID_SccProvider}\               Name\` | (既定値) = 対応する rg_sz: #\<ローカライズされた名前のリソース ID ><br /><br /> Package = rg_sz:{ID_Package} |
 | `HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SolutionPersistence\             <PackageName>\`<br /><br /> (なおキー名、`SourceCodeControl`で既に使用されて[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を選択肢としてご利用いただけませんと\<PackageName >.) | (既定値) = 対応する rg_sz: {ID_Package} |
   
 ## <a name="selecting-a-source-control-package"></a>ソース管理パッケージを選択します。  

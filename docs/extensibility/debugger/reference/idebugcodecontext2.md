@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 3670439e-2171-405d-9d77-dedb0f1cba93
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f4c744e5dc79c5e704e2cec6d83e39a4170bcd68
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ac77b0c43d6b300bd41e0b49d4b523dc0f43d025
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53922969"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54990408"
 ---
 # <a name="idebugcodecontext2"></a>IDebugCodeContext2
 このインターフェイスは、コードの命令の開始位置を表します。 ほとんどのランタイム アーキテクチャの今日では、コードのコンテキストできます見なすことがプログラムの実行のストリーム内のアドレス。  
