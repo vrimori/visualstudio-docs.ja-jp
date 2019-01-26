@@ -11,17 +11,17 @@ helpviewer_keywords:
 - check boxes, Word documents
 - documents [Office development in Visual Studio], check box controls
 - controls [Office development in Visual Studio], adding to documents
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6e33d7b683e55f570961d9f9f8f77ea1491db3f5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a4ab82b47a69509ee151675d483ae5cff859d12d
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53913870"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54871040"
 ---
 # <a name="walkthrough-change-document-formatting-using-checkbox-controls"></a>チュートリアル: CheckBox コントロールを使用したドキュメント書式を変更します。
   このチュートリアルでは、Microsoft Office Word のドキュメント レベルのカスタマイズでの Windows フォーム コントロールを使用して、テキストの書式設定を変更する方法を示します。  
@@ -70,7 +70,7 @@ ms.locfileid: "53913870"
     |プロパティ|[値]|  
     |--------------|-----------|  
     |**Name**|**applyBoldFont**|  
-    |**[テキスト]**|**太字**|  
+    |**Text**|**太字**|  
   
 4.  キーを押して**Enter**最初のチェック ボックスの下にカーソルを移動します。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "53913870"
     |プロパティ|[値]|  
     |--------------|-----------|  
     |**Name**|**applyItalicFont**|  
-    |**[テキスト]**|**斜体**|  
+    |**Text**|**斜体**|  
   
 6.  キーを押して**Enter** 2 つ目のチェック ボックスの下にカーソルを移動します。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "53913870"
     |プロパティ|[値]|  
     |--------------|-----------|  
     |**Name**|**applyUnderlineFont**|  
-    |**[テキスト]**|**下線**|  
+    |**Text**|**下線**|  
   
 ### <a name="add-text-and-a-bookmark-control"></a>テキストおよびブックマーク コントロールを追加します。  
   

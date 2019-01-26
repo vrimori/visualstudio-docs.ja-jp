@@ -14,17 +14,17 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], properties
 - Business Data Connectivity service [SharePoint development in Visual Studio], resource file
 - BDC [SharePoint development in Visual Studio], resource strings
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c61e996380ff2cca6ddc3c60ad4c6d13d10c93f2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e128a3d6f0dca07f9f2092af882532f7e07cd7eb
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53819465"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54873536"
 ---
 # <a name="how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions"></a>方法: リソース ファイルを使用して、ローカライズされた名前、プロパティ、およびアクセス許可を指定するには
   リソース ファイルを使用すると、ローカライズされた名前を指定、プロパティを定義およびビジネス データ接続 (BDC) モデルで定義されているアクセス許可の tor オブジェクトを適用することができます。 この情報を指定する追加、**ビジネス データ接続リソース**項目を含むプロジェクトを**Business Data Connectivity モデル**項目。 次のリソース ファイルの XML を編集することによって名前、プロパティ、およびアクセス許可を指定します。  

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - worksheets, changing formatting using managed controls
 - worksheets, check box controls
 - controls [Office development in Visual Studio], adding to worksheets
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: adc12d920fd3dc128bf23f92508fef8d239b4e8d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 30e89adf2d93e67a63071f79ded213a3dcff6385
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53935100"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54871027"
 ---
 # <a name="walkthrough-change-worksheet-formatting-using-checkbox-controls"></a>チュートリアル: CheckBox コントロールを使用してワークシートの書式設定を変更します。
   このチュートリアルでは、Microsoft Office Excel ワークシートの書式を変更するチェック ボックスの使用の基本を説明します。 Visual Studio での Office 開発ツールを使用して作成し、プロジェクトにコードを追加するは。 完成したサンプルとして結果を参照してくださいにある Excel コントロールのサンプルを参照してください。 [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)します。  
@@ -69,21 +69,21 @@ ms.locfileid: "53935100"
     |プロパティ|[値]|  
     |--------------|-----------|  
     |**Name**|**applyBoldFont**|  
-    |**[テキスト]**|**太字**|  
+    |**Text**|**太字**|  
   
 5.  上またはセルの近くに 2 つ目のチェック ボックスをドラッグして**B4**し、次のプロパティを変更します。  
   
     |プロパティ|[値]|  
     |--------------|-----------|  
     |**Name**|**applyItalicFont**|  
-    |**[テキスト]**|**斜体**|  
+    |**Text**|**斜体**|  
   
 6.  上またはセルの近くに 3 つ目のチェック ボックスをドラッグして**B6**し、次のプロパティを変更します。  
   
     |プロパティ|[値]|  
     |--------------|-----------|  
     |**Name**|**applyUnderlineFont**|  
-    |**[テキスト]**|**下線**|  
+    |**Text**|**下線**|  
   
 7.  保留中のすべての 3 つのチェック ボックス コントロールを選択して、 **Ctrl**キー。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "53935100"
   
    |プロパティ|[値]|  
    |--------------|-----------|  
-   |**Name**|**ボックス**|  
+   |**Name**|**textFont**|  
    |**Value2**|**このテキストの書式を変更する チェック ボックスをクリックします。**|  
   
    次に、オプションを選択すると、テキストの書式設定コードを記述します。  

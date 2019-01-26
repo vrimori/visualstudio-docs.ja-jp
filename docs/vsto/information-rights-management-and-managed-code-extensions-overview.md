@@ -12,17 +12,17 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], restricted permissions
 - rights management [Office development in Visual Studio]
 - Office documents [Office development in Visual Studio, restricted permissions
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a2020221ee086b23a8621112122acffb11beef62
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: dbe61b1b9ca43b9c3e4e6d5bcdf82dd2b5e1438a
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53823831"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54876045"
 ---
 # <a name="information-rights-management-and-managed-code-extensions-overview"></a>Information rights management とマネージ コード拡張機能の概要
   Microsoft Office Word および Microsoft Office Excel は、Information Rights Management (IRM)、承認されていないユーザーを表示したり、機密情報を変更したりするのに役立つ機能を提供します。 Information Rights Management の動作方法について詳しくは、特定の Office アプリケーションのヘルプを参照してください。  

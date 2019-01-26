@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Office primary interop assemblies in Visual Studio, adding references to
 - Office applications [Office development in Visual Studio], automating
 - application development [Office development in Visual Studio], automating
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fb5a97475612eb52fa51eadcfbe9eaa613a55bfb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 94bc4add4cfbc61e79ded57ee43c41c88ccb37e7
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53845903"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54873432"
 ---
 # <a name="how-to-target-office-applications-through-primary-interop-assemblies"></a>方法: プライマリ相互運用機能アセンブリを利用して Office アプリケーションします。
   新しい Office プロジェクトを作成すると、Visual Studio により、そのプロジェクトのビルドに必要な Microsoft Office プライマリ相互運用機能アセンブリ (PIA: Primary Interop Assembly) への参照が自動的に追加されます。 次の場合は、他の PIA への参照を追加する必要があります。  

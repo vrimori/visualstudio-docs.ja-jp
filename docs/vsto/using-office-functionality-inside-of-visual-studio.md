@@ -9,17 +9,17 @@ helpviewer_keywords:
 - security [Office development in Visual Studio], document protection
 - Office applications [Office development in Visual Studio]
 - Office functionality inside Visual Studio
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d1bcb827f068dd8c6577fed50e67d866ebba4886
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 31f15242196949f953b851017b0b70f9ed1d8e2e
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53934623"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54862227"
 ---
 # <a name="use-office-functionality-inside-of-visual-studio"></a>Visual Studio 内での Office 機能を使用します。
   ドキュメント レベルのプロジェクトを作成するときに、ドキュメントと関連付けられているアプリケーション内でホストされる Visual Studio の設計およびドキュメントを直接操作することができます。 Microsoft Office が Visual Studio で開いているアプリケーションがある場合は、期待どおりに一般的に動作します。 ただし、アプリケーションの機能の一部は異なる、またはアクセスできません。  
