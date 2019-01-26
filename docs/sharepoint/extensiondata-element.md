@@ -7,17 +7,17 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - ExtensionData element
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c50eac5a470a2800acff89316bd53fda683d6b0f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 815846ad310fa32ebcd3195806956cb34e40fd86
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53922157"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54876175"
 ---
 # <a name="extensiondata-element"></a>ExtensionData 要素
   SharePoint プロジェクト アイテムに関連付けられているカスタム データ項目のコレクションを表します。  
