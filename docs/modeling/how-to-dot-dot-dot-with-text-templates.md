@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: 7a29f9c8813950cda5907b7f0f96141d00d562fe
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9d9a1826e8c06d947e05bf7201f2963a7bac860f
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53887764"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55039580"
 ---
 # <a name="how-to--with-text-templates"></a>方法: テキスト テンプレートを使用する
 Visual Studio でテキスト テンプレートでは、あらゆる種類のテキストを生成するのに便利な方法を提供します。 テキスト テンプレートを使用すると、実行時に、アプリケーションの一部として、デザイン時、プロジェクト コードの一部を生成するのにテキストを生成します。 このトピックでは、最も頻繁にまとめたものです"How do I..."よく寄せられる 質問します。

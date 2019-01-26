@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5ccfcc80-dea5-48a1-8bae-6a26f8d3bc56
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7df128995c114c724c7a25ebe4949be935a3c496
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 41e56368497d3a8058437ea726488874081f4d45
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53929738"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55069741"
 ---
 # <a name="evaluate-expressions"></a>式を評価します。
 式は、から渡された文字列から作成された、 **[自動変数]**、**ウォッチ**、 **[クイック ウォッチ]**、または**イミディ エイト**windows。 式が評価され、変数または引数とその値の型と名前を含む印刷文字列が生成されます。 この文字列は、対応する IDE ウィンドウに表示されます。  

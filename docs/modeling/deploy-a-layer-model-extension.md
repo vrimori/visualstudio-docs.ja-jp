@@ -7,16 +7,16 @@ helpviewer_keywords:
 - layer models, deploying extensions
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: 8614df4c8e7b3a640f7ba488ad18384886b56afe
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1e39463004ddaa30c79cd944710aef56ba1e5498
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53834309"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55029779"
 ---
 # <a name="deploy-a-layer-model-extension"></a>レイヤー モデル拡張機能の配置
 
@@ -62,7 +62,7 @@ Team Foundation Server のサーバーに通常 Visual Studio をインストー
 
     -   特定のユーザーとして対話型モードで実行するビルドを構成した場合は、そのユーザーに対してのみインストールできます。
 
-         %LocalAppData%\Microsoft\VisualStudio\\[バージョン] \Extensions\Microsoft
+         %LocalAppData%\Microsoft\VisualStudio\\[version]\Extensions\Microsoft
 
 2.  各 VSIX ファイルを同じ場所のフォルダーに展開します。
 
