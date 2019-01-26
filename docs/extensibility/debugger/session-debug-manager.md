@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: fbb1928d-dddc-43d1-98a4-e23b0ecbae09
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 014ac5b4c310b97fb1c041eeaededef8c97ab88b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 321b0a7c7eb2a30465098da39abc49cbc9261e11
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53905359"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54947206"
 ---
 # <a name="session-debug-manager"></a>セッション デバッグ マネージャー
 セッション デバッグ マネージャー (SDM) は、任意の数の任意の数のマシン間で任意の数の複数のプロセスでプログラムをデバッグするデバッグ エンジン (DE) を管理します。 マルチプレクサーのデバッグ エンジンだけでなく、SDM は IDE に、デバッグ セッションの統合ビューを提供します。  

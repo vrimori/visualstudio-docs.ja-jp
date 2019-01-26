@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 998b616b-bd08-45cb-845f-808efb8c33bc
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e2a99fc6e87e59bf4cc0008c20905f9dc145102b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 709cea938ea898eab1440f38deb563db2530e57d
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53965578"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54949620"
 ---
 # <a name="command-routing-algorithm"></a>コマンド ルーティング アルゴリズム
 Visual Studio でのコマンドは、さまざまなコンポーネントによって処理されます。 コマンドは、現在の選択に基づいて、最も内側のコンテキストから最も外側の (グローバルとも呼ばれます) のコンテキストにルーティングされます。 詳細については、次を参照してください。[コマンド可用性](../../extensibility/internals/command-availability.md)します。  

@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 12df4d06-df6b-4eaf-a7bf-c83655a0c683
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8dec051aae8c5693d18a5cab302714fdf152f8a5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 67524a694b45343eba14f07b387ba1551bba1a80
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53909912"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54945867"
 ---
 # <a name="how-to-provide-context-for-editors"></a>方法: エディターのコンテキストを提供します。
 エディターのコンテキストは、エディターにフォーカスがあるか、ツール ウィンドウにフォーカスが移動された直前にフォーカスがあった場合にのみアクティブです。 次のタスクを実行して、エディターのコンテキストを行うことができます。  

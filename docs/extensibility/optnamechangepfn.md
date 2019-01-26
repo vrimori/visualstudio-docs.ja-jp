@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 147303f3-c7f1-438a-81b7-db891ea3d076
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8054094083b39a8f71ae9fe6fcb908b7af29a7a3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 31f46f8b392d5d3b37aed91a6867d80835be0d23
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53962770"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54963919"
 ---
 # <a name="optnamechangepfn"></a>OPTNAMECHANGEPFN
 呼び出しで指定されたコールバック関数は、この、 [SccSetOption](../extensibility/sccsetoption-function.md) (オプションを使用して`SCC_OPT_NAMECHANGEPFN`) によるソース管理プラグイン、IDE に名前変更を通知するために使用します。  

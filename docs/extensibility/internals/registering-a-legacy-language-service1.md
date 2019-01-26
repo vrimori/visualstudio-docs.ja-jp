@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: d33b08af-09e0-4c79-87b2-5536b27fbacf
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 51e4920844bee7c242d4c260070a50416621708e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5348b1903c16d8b46c0960bb5812fb78455dfbe9
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53837317"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54986528"
 ---
 # <a name="registering-a-legacy-language-service"></a>従来の言語サービスを登録します。
 Managed package framework (MPF) では、言語サービスが、VSPackage によって提供される (を参照してください[Vspackage](../../extensibility/internals/vspackages.md)) に登録されていると[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]レジストリ キーとエントリを追加することで。 この登録プロセスは、インストール中に一部と、実行時に一部で実行されます。  

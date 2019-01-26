@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: de068b6a-e806-45f0-9dec-2458fbb486f7
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82fb87d2837179c97d4f6aeac884ab90898e2481
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9a35af4b4cdc32797f2d4a973a1bcc4f1045e4d7
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53897970"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54960998"
 ---
 # <a name="handle-specialized-deployment"></a>特殊化された展開を処理します。
 展開は、プロジェクトの省略可能な操作です。 Web プロジェクトは、たとえば、Web サーバーを更新するプロジェクトへのデプロイをサポートします。 同様に、**スマート デバイス**プロジェクトは、ターゲット デバイスにビルドされたアプリケーションをコピーする展開をサポートしています。 プロジェクト サブタイプが実装することによって特殊化された展開の動作を指定できます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>インターフェイス。 このインターフェイスは、デプロイ操作の完全なセットを定義します。  
