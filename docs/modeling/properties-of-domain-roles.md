@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: fbd977b733aa6e8e663cf4a69e577030f5c6106a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 854f282b22427fd805091d39377654b8d988084b
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53839706"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54919150"
 ---
 # <a name="properties-of-domain-roles"></a>ドメイン ロールのプロパティ
 次の表に、プロパティは、役割をドメインに関連付けられます。 ドメイン ロールについては、次を参照してください。[理解のモデル、クラスとリレーションシップ](../modeling/understanding-models-classes-and-relationships.md)します。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語を拡張する](../modeling/customizing-and-extending-a-domain-specific-language.md)します。
@@ -36,7 +36,7 @@ ms.locfileid: "53839706"
 |カテゴリ|生成されたプロパティを表示するカテゴリ、**プロパティ**生成されたデザイナーでウィンドウ。 かどうかは、このプロパティは空では、下に、生成されたプロパティが表示されます、 **Misc**カテゴリ|< なし\>|
 |説明|コードを文書化するために使用しては、生成されたデザイナーの UI で使用する説明。<br /><br /> ロール プレーヤー クラスに生成されたプロパティの IntelliSense のツールヒントに説明が表示されます。|`Description for` *ロールの完全な名前*|
 |表示名|ドメインの役割を生成されたデザイナーに表示される名前です。|調整された Name プロパティの値をします。|
-|ヘルプ キーワード|ドメインの役割の F1 ヘルプのインデックスを作成するために使用する省略可能なキーワード。|\<なし >|
+|ヘルプ キーワード|ドメインの役割の F1 ヘルプのインデックスを作成するために使用する省略可能なキーワード。|\<none>|
 |プロパティの表示名|生成されたロールのプロパティを生成されたデザイナーに表示される名前です。|プロパティ名のプロパティの調整された値。|
 
 > [!NOTE]

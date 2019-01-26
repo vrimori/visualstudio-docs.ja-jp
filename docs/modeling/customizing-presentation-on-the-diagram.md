@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Domain-Specific Language, diagram
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: e38984ceeaad6971d94afd488a0f4027e7260769
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: cada6491e0c4af20197848302ff0cf7006acd3ba
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968298"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55068916"
 ---
 # <a name="customizing-presentation-on-the-diagram"></a>図の外観のカスタマイズ
 この図は、ドメイン固有言語デザイナーの主な表示領域です。 通常、ユーザーはこの図を使用してモデルを作成します。 以降のトピックで説明されているように、図をカスタマイズできます。
