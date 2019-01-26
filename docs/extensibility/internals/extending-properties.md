@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 68e2cbd4-861c-453f-8c9f-4ab6afc80e67
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d03533679e367afb1f50ee55196c5d96e03ae580
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 095c9a81b6bd7d1c4eb75fafce6f3311b413581f
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53846586"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54935541"
 ---
 # <a name="extend-properties"></a>拡張プロパティ
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **プロパティ**ウィンドウはすべてサポートしています、COM と COM + コンポーネントのユニバーサル プロパティ ブラウザーを[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]製品です。 **プロパティ**ウィンドウは`ITypeInfo`情報および COM + 統合開発環境 (IDE) でその他のウィンドウで現在選択されているオブジェクトのデザイン時プロパティの一覧にメタデータを入力します。  

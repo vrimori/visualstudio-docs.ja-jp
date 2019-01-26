@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 5044ced5-c18c-4534-b0bf-cc3e50cd57ac
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bdd8937963175ffe0e8cadbfe2f6653b16a1f5a5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e83bea1cf503f7b2b7ffaf19452a4f819f023089
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53888726"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55030601"
 ---
 # <a name="expression-evaluation-visual-studio-debugging-sdk"></a>式の評価 (Visual Studio Debugging SDK)
 中断モード中に IDE がいくつかのプログラム変数に関連する単純な式を評価する必要があります。 評価を行うためには、デバッグ エンジン (DE) は解析し、IDE のウィンドウの 1 つに入力された式を評価する必要があります。 

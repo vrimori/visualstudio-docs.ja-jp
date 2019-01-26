@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 3b21e3a1-170a-4485-941e-6b04b7b27886
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d3117aa61658fe056e6ac48fe8ab4eb4831882b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 090f70776ab3323be55d13888f29d4855386a511
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53874590"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55020894"
 ---
 # <a name="solutions-overview"></a>ソリューションの概要
 ソリューションは、連携してアプリケーションを作成する 1 つまたは複数のプロジェクトのグループです。 ソリューションに関連するプロジェクトとステータス情報は、2 つの別のソリューション ファイルに格納されます。 ソリューション (.sln) ファイルはテキスト ベースおよびソース コード管理下に置くし、ユーザーの間で共有できます。 ソリューション ユーザー オプション (.suo) ファイルはバイナリです。 その結果、.suo ファイルは、ソース コード管理下に置くことはできませんし、ユーザー固有の情報が含まれています。  

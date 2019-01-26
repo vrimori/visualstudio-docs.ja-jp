@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 5328ab2f-55cb-4680-9744-ec79f55acd1b
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 07627ddbc8cf8e6f030418956931ad2e4af544af
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 44ff4fb8a8a2e60b047361624ae805910906c19e
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53883040"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55022054"
 ---
 # <a name="customize-code-windows-by-using-the-legacy-api"></a>従来の API を使用してコード ウィンドウをカスタマイズします。
 コード ウィンドウは、1 つまたは複数のテキスト ビューをサポートしているドキュメント ウィンドウ オブジェクトです。 コード ウィンドウの正確な機能は、関連する言語サービスに依存します。 マルチ ドキュメント インターフェイス (MDI) モードでは、コード ウィンドウは、MDI 子フレームです。  

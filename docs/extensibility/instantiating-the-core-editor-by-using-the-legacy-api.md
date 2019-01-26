@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: dda23b18-96ef-43c6-b0dc-06d15cbe5cbb
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14583d242c260e4b0f1a754d53faf35b645be666
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 292e30a094cd78954e48817324a44ebacda7a78a
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53838165"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54934535"
 ---
 # <a name="instantiate-the-core-editor-by-using-the-legacy-api"></a>従来の API を使用して、コア エディターをインスタンス化します。
 エディターはテキストの挿入、削除、コピー、および貼り付けなどの関数を編集します。 これらの関数のテキストの色分け表示、インデント、および IntelliSense ステートメント入力候補などの言語サービスによって提供される関数が集約されます。  

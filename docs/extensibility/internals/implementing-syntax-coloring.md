@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 96e762ca-efd0-41e7-8958-fda4897c8c7a
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2bfa07fd46c95ada3135602f2fc09743fcaef08b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: de1a73cda8be9e56b0cad605f5507d52509ec906
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53820788"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55038046"
 ---
 # <a name="implementing-syntax-coloring"></a>構文の色分け表示の実装
 言語サービスでは、構文の色表示機能を提供して、パーサー配色可能な項目の配列に 1 行のテキストを変換します。 これらの装飾が可能な項目に対応するトークンの種類を返します。 パーサーは、装飾が可能な項目の一覧に属するトークンの型を返す必要があります。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] colorizer オブジェクトによって適切なトークンの種類に割り当てられた属性に基づいて、コード ウィンドウ内の各装飾が可能な項目を表示します。  

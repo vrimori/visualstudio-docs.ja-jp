@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: cbd345c5-ca43-4630-b7a4-85564f4e2090
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f9b58cad8f961b1f3273c31c3a2197fc5a002994
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: fc75e6efd3f4f30758ab971da078c23433504e80
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53825130"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55018619"
 ---
 # <a name="test-area-2-get-from-source-control"></a>テスト領域 2:ソース管理から取得します。
 このテストの領域では、Get コマンドを使用して、バージョン ストアから項目を取得するためのテスト_ケースについて説明します。 これらのテスト_ケースは、両方のローカルにし、Web プロジェクトに適用できます。  

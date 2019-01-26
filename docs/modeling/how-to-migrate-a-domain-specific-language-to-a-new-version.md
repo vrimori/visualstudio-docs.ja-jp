@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: b53d604fdf9c18a2e5552d787f7a69ff4c92df2a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c2ff1a820e5ac8492b627ac61ddfa234c71b5890
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53955069"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54932338"
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>方法: ドメイン固有言語を新バージョンに移行する
 ドメイン固有言語を使って定義するプロジェクトを移行する[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]のバージョンから[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]を使用して配布されて[!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)]します。
@@ -22,7 +22,7 @@ ms.locfileid: "53955069"
 
  移行ツールを明示的に実行する必要があります: が起動しない自動的に Visual Studio でソリューションを開くときにします。 ツールおよび詳細なガイダンスのドキュメントは、このパスで見つかんだことができます。
 
- **% プログラム Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
+ **%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
 
 ## <a name="before-you-migrate-your-dsl-projects"></a>DSL プロジェクトを移行する前に
  移行ツールは Visual Studio プロジェクト ファイルを変更します (**.csproj**) とソリューション ファイル (**.sln**)。

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: c51b5128-848e-4d8e-b2e9-1161339763c3
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 86ba475aa9eab6b6cd878f9051e5851611955cf1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2d2e29cb65fb94ac5e244b7cb0536b6ac7be1901
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53851178"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54946569"
 ---
 # <a name="idebugmemorycontext2compare"></a>IDebugMemoryContext2::Compare
 各コンテキストと一致する最初のコンテキストのインデックスを返す、比較フラグで示されるように指定した配列内にメモリのコンテキストを比較します。  

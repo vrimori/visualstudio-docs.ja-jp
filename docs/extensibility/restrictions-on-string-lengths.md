@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 877173d2-ca27-43b3-b1f4-8379f7c5e268
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5bb973a1f50bb29cc605ab63916d8e75b17d1853
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 679737b9590cd018f0de16298391351aedb0ac94
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53852717"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54929953"
 ---
 # <a name="restrictions-on-string-lengths"></a>文字列長の制限
 ソース管理プラグイン API は、さまざまな関数で使用される文字列の長さを制限します。  

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Domain-Specific Language, validation
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: f228d1cf68357711d106b9399477badce350f558
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 16ff6a60182ec6f3cbaff45bac54a4bec3ffbd52
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53943747"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54932325"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>ドメイン固有言語における検証
 ドメイン固有言語 (DSL) の作成者は、検証制約を定義して、ユーザーが作成したモデルが意味を持つことを確認できます。 たとえば、DSL でユーザーが人々とその先祖の家系図を描くことができる場合、子の誕生日が親の誕生日よりも後であることを確認する制約を作成できます。

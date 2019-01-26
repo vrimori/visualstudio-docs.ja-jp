@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: 620d7dcd-d462-475e-a449-fbfa06ff12c5
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0a4ec2f9fa5fbd6e0fbbdd57bf6de6f2c9dfb0fa
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e297493226478c27f3c3eb6d22e45cb5769e42d3
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53987052"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55023916"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft ヘルプ ビューアー SDK
 
@@ -298,27 +298,27 @@ F1 フロー ダイアグラム:
 
         HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Catalogs\VisualStudio15
 
-        "VendorContent"= dword:00000001
+        "VendorContent"=dword:00000001
 
    -   64 ビット オペレーティング システム。
 
         HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15
 
-        "VendorContent"= dword:00000001
+        "VendorContent"=dword:00000001
 
 2. 2.3 のヘルプのレジストリ キーの下のパートナーの名前空間を登録します。
 
    - 32 ビット オペレーティング システム。
 
-      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Partner<em>\\< 名前空間\></em>
+      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Partner<em>\\<namespace\></em>
 
-      「場所"=」オフライン"
+      "location"="offline"
 
    - 64 ビット オペレーティング システム。
 
-      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Partner<em>\\< 名前空間\></em>
+      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Partner<em>\\<namespace\></em>
 
-      「場所"=」オフライン"
+      "location"="offline"
 
 **解析する基本のネイティブ Namespace**
 
@@ -351,11 +351,11 @@ HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Dynamic ヘルプ キー�
 
 | プロパティ (HTML 形式) | 説明 |
 | - | - |
-| \< メタ name="Microsoft.Help.Locale"内容 =「[言語コード]」/> | このトピックでは、ロケールを設定します。 トピックでは、このタグを使用する場合は、1 回だけ使用する必要がありには、他の Microsoft ヘルプのタグの上に挿入する必要があります。 このタグを使用しない場合、トピックの本文が指定されている場合、製品のロケールに関連付けられているワード ブレーカーを使用してインデックスが作成します。それ以外の場合、en-私たちのワード ブレーカーを使用します。 このタグは、ISOC RFC 4646 に準拠します。 Microsoft ヘルプが正しく動作することを確認するには、するには、一般的な言語属性の代わりにこのプロパティを使用します。 |
+| \< meta name="Microsoft.Help.Locale" content="[language-code]" /> | このトピックでは、ロケールを設定します。 トピックでは、このタグを使用する場合は、1 回だけ使用する必要がありには、他の Microsoft ヘルプのタグの上に挿入する必要があります。 このタグを使用しない場合、トピックの本文が指定されている場合、製品のロケールに関連付けられているワード ブレーカーを使用してインデックスが作成します。それ以外の場合、en-私たちのワード ブレーカーを使用します。 このタグは、ISOC RFC 4646 に準拠します。 Microsoft ヘルプが正しく動作することを確認するには、するには、一般的な言語属性の代わりにこのプロパティを使用します。 |
 | \< メタ name="Microsoft.Help.TopicLocale"内容 =「[言語コード]」/> | その他のロケールを使用しても、このトピックでは、ロケールを設定します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 カタログには、1 つ以上の言語でコンテンツが含まれている場合は、このタグを使用します。 カタログ内の複数のトピックでは、同じ ID を使用できますが、それぞれ一意 TopicLocale を指定する必要があります。 カタログのロケールに一致する TopicLocale を示すトピックでは、目次に表示されるトピックです。 ただし、トピックのすべての言語バージョンは、検索結果に表示されます。 |
 | \< タイトル > [Title]\</title > | このトピックのタイトルを指定します。 このタグが必要、トピックの 1 回だけ使用する必要があります。 トピックの本文にタイトルが含まれていないかどうかは\<div > とコンテンツのテーブルのトピックのセクションでは、このタイトルが表示されます。 |
 | \< メタデータ名 ="Microsoft.Help.Keywords"内容 ="[aKeywordPhrase]"/> | ヘルプ ビューアーのインデックスのウィンドウに表示されるリンクのテキストを指定します。 リンクがクリックされたときに、トピックが表示されます。 トピックでは、複数のインデックス キーワードを指定するか、インデックスに表示するには、このトピックにリンクしたくない場合は、このタグを省略できます。 以前のバージョンのヘルプ キーワードを"K"は、このプロパティに変換できます。 |
-| \< メタ name="Microsoft.Help.Id"内容 ="[TopicID]"/> | このトピックの識別子を設定します。 このタグが必要、トピックの 1 回だけ使用する必要があります。 ID は、カタログを同じロケールの設定を持つトピックの間で一意である必要があります。 別のトピックでは、この ID を使用して、このトピックへのリンクを作成できます。 |
+| \< meta name="Microsoft.Help.Id" content="[TopicID]"/> | このトピックの識別子を設定します。 このタグが必要、トピックの 1 回だけ使用する必要があります。 ID は、カタログを同じロケールの設定を持つトピックの間で一意である必要があります。 別のトピックでは、この ID を使用して、このトピックへのリンクを作成できます。 |
 | \< メタ name="Microsoft.Help.F1"content="[System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator]"/ > | このトピックでは、F1 キーワードを指定します。 トピックでは、複数の F1 キーワードを指定するか、アプリケーション ユーザーが f1 キーを押したときに表示するには、このトピックしたくない場合は、このタグを省略することができます。 通常は、トピックの 1 つだけの F1 キーワードを指定します。 以前のバージョンのヘルプ キーワードを"F"は、このプロパティに変換できます。 |
 | \< メタデータ名"Description"のコンテンツを = =「[トピックの説明]」/> | このトピックの内容の簡単な概要を提供します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 このプロパティは、クエリ ライブラリによって直接アクセスします。インデックス ファイルには格納されません。 |
 | メタ name="Microsoft.Help.TocParent"内容 ="[parent_Id]"/> | このトピックの親トピックの目次を指定します。 このタグが必要、トピックの 1 回だけ使用する必要があります。 値は、親の Microsoft.Help.Id です。 トピックには、コンテンツのテーブルの 1 つの場所を持つことができます。 「-1」では、目次のルートのトピックの「ID をと見なされます。 [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]、そのページは、ヘルプ ビューアー ホーム ページ。 これは、同様の理由が表示されること上部にあるレベルを確認するいくつかのトピックを具体的には TocParent = 1 を追加します。 ヘルプ ビューアーのホーム ページは、システム ページと置き換え可能なためです。 コンテンツのセットに加わることがありますが、ヘルプ ビューアーのシステム ページのヘルプ ビューアー ホームを常に使用する場合、VSP が-1 の ID を持つページを追加しようとすると、 |
@@ -521,7 +521,7 @@ Branding.js ファイルには、Visual Studio ヘルプ ビューアーのブ�
 |**ブランド化機能**|**JavaScript 関数**|**説明**|
 |Var.||変数を定義します。|
 |ユーザー コードの言語を取得します。|setUserPreferenceLang|インデックスをマップ # コード言語を|
-|設定して、cookie の値を取得|getCookie、setCookie||
+|設定して、cookie の値を取得|getCookie, setCookie||
 |継承されたメンバー|changeMembersLabel|継承されたメンバーの展開/折りたたみ|
 |ときに SelfBranded = False|onLoad|かどうかは、印刷要求をチェックするクエリ文字列を読み取ります。  ユーザーの優先 タブを集中するすべての codesnippets を設定します。印刷要求がある場合、isPrinterFriendly を true に設定します。 ハイ コントラスト モードを確認します。|
 |コード スニペット|addSpecificTextLanguageTagSet||
@@ -545,7 +545,7 @@ Branding.js ファイルには、Visual Studio ヘルプ ビューアーのブ�
 ||captionsOnOff(id)||
 ||toSeconds(t)||
 ||getAllComments(node)||
-||styleRectify (styleName、styleValue)||
+||styleRectify(styleName, styleValue)||
 ||showCC(id)||
 ||subtitle(id)||
 
@@ -557,22 +557,22 @@ Branding.js ファイルには、Visual Studio ヘルプ ビューアーのブ�
 |-|-|-|
 |**ファイル**|**使用**|**コンテンツ ソースの表示**|
 |homepage.htm|これは、現在インストールされているコンテンツは、およびその内容についてユーザーに適切なその他のすべてのメッセージを表示するページです。  このファイルには、追加のメタ データ属性"Microsoft.Help.Id"コンテンツはこのローカル コンテンツの目次の上部にあるコンテンツの「-1」を = です。||
-||&LT; META_HOME_PAGE_TITLE_ADD/&GT;|Branding.xml、タグ\<HomePageTitle >|
-||&LT; HOME_PAGE_INTRODUCTION_SECTION_ADD/&GT;|Branding.xml、タグ\<HomePageIntroduction >|
-||&LT; HOME_PAGE_CONTENT_INSTALL_SECTION_ADD/&GT;|Branding.xml、タグ\<HomePageContentInstallText >|
-||&LT; HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD/&GT;|Branding.xml タグ セクションの見出し\<HomePageInstalledBooks >、アプリケーションから生成されたデータ\<HomePageNoBooksInstalled > ブックがインストールしません。|
-||&LT; HOME_PAGE_SETTINGS_SECTION_ADD/&GT;|Branding.xml タグ セクションの見出し\<HomePageHelpSettings >、テキストのセクション\<HomePageHelpSettingsText >。|
+||<META_HOME_PAGE_TITLE_ADD />|Branding.xml、タグ\<HomePageTitle >|
+||<HOME_PAGE_INTRODUCTION_SECTION_ADD />|Branding.xml、タグ\<HomePageIntroduction >|
+||<HOME_PAGE_CONTENT_INSTALL_SECTION_ADD />|Branding.xml, tag \<HomePageContentInstallText>|
+||<HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD />|Branding.xml タグ セクションの見出し\<HomePageInstalledBooks >、アプリケーションから生成されたデータ\<HomePageNoBooksInstalled > ブックがインストールしません。|
+||<HOME_PAGE_SETTINGS_SECTION_ADD />|Branding.xml タグ セクションの見出し\<HomePageHelpSettings >、テキストのセクション\<HomePageHelpSettingsText >。|
 |topiccorrupted.htm|何らかの理由を表示することはできませんが、ローカルのセット内のトピックが存在する場合 (コンテンツが破損しています)。||
-||&LT; META_TOPIC_CORRUPTED_TITLE_ADD/&GT;|Branding.xml、タグ\<TopicCorruptedTitle >|
-||&LT; TOPIC_CORRUPTED_SECTION_ADD/&GT;|Branding.xml、タグ\<TopicCorruptedViewOnlineText >|
+||<META_TOPIC_CORRUPTED_TITLE_ADD />|Branding.xml、タグ\<TopicCorruptedTitle >|
+||<TOPIC_CORRUPTED_SECTION_ADD />|Branding.xml、タグ\<TopicCorruptedViewOnlineText >|
 |topicnotfound.htm|ときに、トピックに含まれていないローカル コンテンツ使用されず、設定、オンライン||
 ||&LT; META_TOPIC_NOT_FOUND_TITLE_ADD/&GT;|Branding.xml、タグ\<TopicNotFoundTitle >|
-||&LT; META_TOPIC_NOT_FOUND_ID_ADD/&GT;|Branding.xml、タグ\<TopicNotFoundViewOnlineText > + \<TopicNotFoundDownloadContentText >|
-||&LT; TOPIC_NOT_FOUND_SECTION_ADD/&GT;|Branding.xml、タグ\<TopicNotFoundText >|
+||<META_TOPIC_NOT_FOUND_ID_ADD />|Branding.xml、タグ\<TopicNotFoundViewOnlineText > + \<TopicNotFoundDownloadContentText >|
+||<TOPIC_NOT_FOUND_SECTION_ADD />|Branding.xml、タグ\<TopicNotFoundText >|
 |contentnotinstalled.htm|製品のインストールされているローカルのコンテンツがない場合。||
-||&LT; META_CONTENT_NOT_INSTALLED_TITLE_ADD/&GT;|Branding.xml、タグ\<ContentNotInstalledTitle >|
-||&LT; META_CONTENT_NOT_INSTALLED_ID_ADD/&GT;|Branding.xml、タグ\<ContentNotInstalledDownloadContentText >|
-||&LT; CONTENT_NOT_INSTALLED_SECTION_ADD/&GT;|Branding.xml、タグ\<ContentNotInstalledText >|
+||<META_CONTENT_NOT_INSTALLED_TITLE_ADD />|Branding.xml, tag \<ContentNotInstalledTitle>|
+||<META_CONTENT_NOT_INSTALLED_ID_ADD />|Branding.xml, tag \<ContentNotInstalledDownloadContentText>|
+||<CONTENT_NOT_INSTALLED_SECTION_ADD />|Branding.xml, tag \<ContentNotInstalledText>|
 
 **CSS ファイル**
 
