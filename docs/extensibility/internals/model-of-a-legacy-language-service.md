@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: d8ae1c0c-ee3d-4937-a581-ee78d0499793
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b4478ef31c107fcf437a452a857eabe2cd015734
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b399a7d65f4bc1eb214b19e5447c99b1f438ff78
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53819901"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54953407"
 ---
 # <a name="model-of-a-legacy-language-service"></a>従来の言語サービスのモデル
 言語サービスは、要素と、特定の言語の機能を定義し、その言語に固有の情報に、エディターを提供するために使用します。 たとえば、エディターでは、構文の色分けをサポートするために、要素と言語のキーワードを把握する必要があります。  

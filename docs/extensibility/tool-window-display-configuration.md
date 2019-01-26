@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 502a4926-bb83-473e-94e2-8e833c5f8b53
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60e9b8e2ac19ec54134e536d38fac7e4ffbf9034
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 089b0ac1a30a7605df61d5e5e5545e6f4c80549a
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53877733"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54973409"
 ---
 # <a name="tool-window-display-configuration"></a>ツール ウィンドウの表示構成
 VSPackage でツール ウィンドウ、既定の位置、サイズ、ドッキング スタイル、およびその他の可視性の情報を登録する場合は、省略可能な値で指定されます。 ツール ウィンドウの登録の詳細については、次を参照してください[ツールの Windows レジストリで。](../extensibility/tool-windows-in-the-registry.md)  
@@ -41,7 +41,7 @@ HKEY_LOCAL_MACHINE\
 | 名前 | REG_SZ | 「の短い名前をここに挿入」 | ツール ウィンドウを説明する短い名前。 レジストリ内の参照にのみ使用します。 |
 | Float | REG_SZ | "X1, Y1, X2, Y2" | 次の 4 つのコンマ区切りの値。 X1, Y1 はツール ウィンドウの左上隅の座標。 X2, Y2 は右下隅の座標。 すべての値は、画面座標でです。 |
 | スタイル | REG_SZ | "MDI"<br /><br /> "Float"<br /><br /> 「リンク先」<br /><br /> 「タブ」<br /><br /> "AlwaysFloat" | 最初に指定するキーワードは、ツール ウィンドウの状態を表示します。<br /><br /> "MDI"= MDI ウィンドウとドッキングします。<br /><br /> 「フローティング」浮動小数点を = です。<br /><br /> 「リンクされた」= (ウィンドウのエントリで指定された) 別のウィンドウにリンクされています。<br /><br /> 「タブ付き」= 別のツール ウィンドウと組み合わせます。<br /><br /> "AlwaysFloat"= ドッキングことはできません。<br /><br /> 詳細については、以下のコメント セクションを参照してください。 |
-| [Window] | REG_SZ | *\<GUID &GT;* | これをツール ウィンドウのリンクやタブ付きウィンドウの GUID です。 GUID は、独自の windows のいずれかまたはで windows のいずれかに属している可能性があります、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE。 |
+| [Window] | REG_SZ | *\<GUID>* | これをツール ウィンドウのリンクやタブ付きウィンドウの GUID です。 GUID は、独自の windows のいずれかまたはで windows のいずれかに属している可能性があります、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE。 |
 | [方向] | REG_SZ | "Left"<br /><br /> "Right"<br /><br /> "Top"<br /><br /> "Bottom" | 以下のコメント セクションを参照してください。 |
 | DontForceCreate | REG_DWORD | 0 または 1 | このエントリが存在し、その値が 0 でない場合、ウィンドウが読み込まれましたが、すぐに表示されます。 |
 
@@ -88,7 +88,7 @@ HKEY_LOCAL_MACHINE\
 |名前|型|データ|説明|  
 |----------|----------|----------|-----------------|  
 |(既定)|REG_SZ|なし|空のままにします。|  
-|*\<GUID &GT;*|REG_DWORD または REG_SZ|0 または説明する文字列。|任意。 エントリの名前は、可視性を必要とするコマンドの GUID である必要があります。 値は、情報の文字列だけを保持します。 通常、値は、`reg_dword`を 0 に設定します。|  
+|*\<GUID>*|REG_DWORD または REG_SZ|0 または説明する文字列。|任意。 エントリの名前は、可視性を必要とするコマンドの GUID である必要があります。 値は、情報の文字列だけを保持します。 通常、値は、`reg_dword`を 0 に設定します。|  
 
 ### <a name="example"></a>例  
 

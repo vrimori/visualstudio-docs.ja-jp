@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: 8ca07b00-a3ff-40ab-b647-c0a93b55e86a
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 22fdb969112278fafb636e0162db4ebc93b9a657
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 3726ee6995e770d89e5916a922c0546439c3ba14
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53820411"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54953511"
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>方法: 機能拡張プロジェクトを Visual Studio 2017 に移行します。
 
@@ -104,7 +104,7 @@ Visual Studio のユーザーのインストールは、拡張機能を実行す
 
 Visual Studio の実験用インスタンスで拡張機能をデバッグする場合、以下のことを確認のプロジェクト設定**デバッグ** > **開始アクション**が、**外部開始プログラム:** 値に設定、 *devenv.exe* Visual Studio 2017 インストールのファイル。
 
-ようになります。*C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe*
+ようになります。*C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe*
 
 ![外部プログラムを開始します。](media/start-external-program.png)
 

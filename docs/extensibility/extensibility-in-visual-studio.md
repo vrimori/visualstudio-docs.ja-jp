@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: 81b0dbe6-ddf3-4899-b09c-a3837037231d
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2a9ffd2fadbcb255754e912704d6027c2116a29b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4dfa55029a1ef73900c2642c3841699c9498b8bc
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53854790"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54943300"
 ---
 # <a name="extensibility-in-visual-studio"></a>Visual Studio の機能拡張
 Visual Studio では、多くの機能拡張オプションを提供しています。 独自の Sdk を作成、使用して、Windows、Windows Phone、および Azure Sdk (これは、Visual Studio の一部としてインストールされます)、および Visual Studio 自体を拡張できます。  
