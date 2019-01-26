@@ -12,17 +12,17 @@ helpviewer_keywords:
 - data binding [Office development in Visual Studio], content controls
 - DropDownListContentControl, binding items to a custom XML part
 - DatePickerContentControl, binding to a custom XML part
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5989100376dd04d1fcfa57efff11042f2e2c8454
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 123282862f8ab6e7400f14a1aa07942885257e17
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53899653"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54864736"
 ---
 # <a name="walkthrough-bind-content-controls-to-custom-xml-parts"></a>チュートリアル: カスタム XML 部分へのコンテンツ コントロールをバインドします。
   このチュートリアルでは、Word のドキュメント レベルのカスタマイズで、コンテンツ コントロールを同じ文書内の XML データにバインドする方法を説明します。  
@@ -269,7 +269,7 @@ ms.locfileid: "53899653"
   
 ### <a name="to-test-the-content-controls"></a>コンテンツ コントロールをテストするには  
   
-1.  キーを押して**F5**プロジェクトを実行します。  
+1.  **F5** キーを押してプロジェクトを実行します。  
   
 2.  文書内に次のようなテーブルが表示されることを確認します。 2 つ目の列の文字列は、文書内のカスタム XML 部分の要素から取得されます。  
   
@@ -277,7 +277,7 @@ ms.locfileid: "53899653"
     |-|-|  
     |**従業員の名前**|**Karina Leal**|  
     |**採用日**|**1999 年 4 月 1 日**|  
-    |**タイトル**|**マネージャー**|  
+    |**タイトル**|**Manager**|  
   
 3.  右側にあるセルを選択、 **Employee Name**セルし、異なる名前を入力します。  
   

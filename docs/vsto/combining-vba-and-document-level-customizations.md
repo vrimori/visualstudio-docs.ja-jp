@@ -21,15 +21,15 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio], Visual Basic for Applications and
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7217665d0d5b9ea594b605739916e017184730fb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: fa94c6a3b86abe53e374f8d797158bcded55f440
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53987889"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54866676"
 ---
 # <a name="combine-vba-and-document-level-customizations"></a>VBA とドキュメント レベルのカスタマイズを結合します。
   Microsoft Office Word または Microsoft Office Excel 用のドキュメント レベル カスタマイズの一部であるドキュメント内で Visual Basic for Applications (VBA) コードを使用できます。 カスタマイズ アセンブリからドキュメント内の VBA コードを呼び出したり、ドキュメント内の VBA コードがカスタマイズ アセンブリのコードを呼び出せるようにプロジェクトを構成したりすることができます。  
@@ -143,7 +143,7 @@ Sub MyMacro()
 End Sub  
 ```  
   
- カスタマイズ アセンブリを呼び出すには、`GetManagedClass` メソッドを直接使うより、このプロパティを使う方が便利です。 `CallVSTOAssembly` は、VBA に公開されたホスト項目クラスを表すオブジェクトを返します。 返されるオブジェクトのメンバーおよびメソッド パラメーターは、IntelliSense に表示されます。  
+ カスタマイズ アセンブリを呼び出すには、 `GetManagedClass` メソッドを直接使うより、このプロパティを使う方が便利です。 `CallVSTOAssembly` は、VBA に公開されたホスト項目クラスを表すオブジェクトを返します。 返されるオブジェクトのメンバーおよびメソッド パラメーターは、IntelliSense に表示されます。  
   
  `CallVSTOAssembly` プロパティには、次のコードのような宣言があります。 このコードでは、 `Sheet1` という名前の Excel ブック プロジェクトの `ExcelWorkbook1` ホスト項目クラスを VBA に公開してあるものとします。  
   

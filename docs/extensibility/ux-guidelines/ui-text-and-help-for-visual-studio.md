@@ -10,7 +10,7 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: bca879905e524e80205878034773349ddff06460
 ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/02/2019
 ms.locfileid: "53907167"
@@ -121,7 +121,7 @@ ms.locfileid: "53907167"
      そうです：  
      「どのような価格オプションは、Windows Azure Mobile Services の使用可能な」でしょうか。  
   
--   使用しないでください* をクリックしています.* をリンク テキスト。  
+-   使用しないでください *をクリックしています* をリンク テキスト。  
   
 -   リンクの単語のみ「ここ」ことはありません。 これは、ハイパーリンク付きの単語のみの音声がスクリーン リーダーによっての問題が発生します。  
   

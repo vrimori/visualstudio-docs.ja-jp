@@ -11,17 +11,17 @@ dev_langs:
 helpviewer_keywords:
 - SharePoint development in Visual Studio, workflows
 - workflows [SharePoint development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bfd1d1e434826a652525fb7e7151ecf0e8e13b75
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8b2affcb8339027f146a629b47db57154b173591
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53912991"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54871391"
 ---
 # <a name="walkthrough-create-and-debug-a-sharepoint-workflow-solution"></a>チュートリアル: 作成し、SharePoint ワークフロー ソリューションのデバッグ
   このチュートリアルでは、基本的なシーケンシャル ワークフロー テンプレートを作成する方法を示します。 ワークフローは、ドキュメントが確認されたかどうかを判断する共有ドキュメント ライブラリのプロパティを確認します。 ドキュメントをレビューすると、ワークフローが終了します。  
@@ -164,7 +164,7 @@ ms.locfileid: "53912991"
   
     |プロパティ|[値]|  
     |--------------|-----------|  
-    |**correlationToken**|**workflowToken**|  
+    |**CorrelationToken**|**workflowToken**|  
     |**呼び出される**|**さらに onWorkflowItemChanged**|  
   
 ## <a name="handle-activity-events"></a>アクティビティ イベントを処理します。

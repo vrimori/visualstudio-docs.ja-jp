@@ -10,17 +10,17 @@ dev_langs:
 helpviewer_keywords:
 - SharePoint development in Visual Studio, mapped folders
 - mapped folders [SharePoint development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 302b161620961b3b89a616bf4dc998c7a5745456
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 357eb8c16487f625d4c2a7c675e3709f2190ca03
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53823929"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54871859"
 ---
 # <a name="how-to-add-and-remove-mapped-folders"></a>方法: 追加して、マップされたフォルダーを削除します。
   イメージとレイアウトが深くファイル階層の埋め込まれたなどいくつかに、SharePoint では、フォルダーを使用します。 これらのフォルダーは、それらにより簡単にアクセスする SharePoint プロジェクトにマップできます。 マップされたフォルダーは、SharePoint サーバーのインストール内のファイルの物理的な場所に対応する SharePoint プロジェクトのフォルダーです。  

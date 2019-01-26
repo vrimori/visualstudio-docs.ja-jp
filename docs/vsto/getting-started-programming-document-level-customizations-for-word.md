@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Word projects [Office development in Visual Studio], getting started
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 651208958b40ff92804b9989234f8c3822ec83d9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 0b8ac2efc6627eae017c7154743091b7682dc8ac
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53904800"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54869201"
 ---
 # <a name="get-started-programming-document-level-customizations-for-word"></a>Word 用ドキュメント レベル カスタマイズのプログラミングを開始します。
   開始した場合は取得する Visual Studio を使用して Microsoft Office Word のドキュメント レベルのカスタマイズを作成する、次を知る必要がありますに示します。  

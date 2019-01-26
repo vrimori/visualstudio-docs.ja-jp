@@ -7,17 +7,17 @@ helpviewer_keywords:
 - project items [SharePoint development in Visual Studio], saving string data
 - projects [SharePoint development in Visual Studio], saving string data
 - SharePoint projects, saving string data
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c7f0210a24df180e93aa8772f08b91e7312f5ccc
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 373f031795238c599d15eec92f1730289662c3a0
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53829255"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54866543"
 ---
 # <a name="save-data-in-extensions-of-the-sharepoint-project-system"></a>SharePoint プロジェクト システムの拡張機能でデータを保存します。
   SharePoint プロジェクト システムを拡張するときは、SharePoint プロジェクトを閉じた後に保持される文字列データを保存できます。 データは、通常、またはプロジェクト自体と特定のプロジェクト項目と関連付けられています。  

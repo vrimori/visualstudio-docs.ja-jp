@@ -18,17 +18,17 @@ helpviewer_keywords:
 - customizing the Ribbon, defining behavior
 - Ribbon [Office development in Visual Studio], customizing
 - customizing the Ribbon, displaying
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: aec5c0d2fbbf46978a42cfe2808e708eb4a2b35e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d668e53738e1a77cfed4b84c7a292cdc503af6c3
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53929576"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54869438"
 ---
 # <a name="ribbon-xml"></a>リボン XML
   リボン (XML) 項目では、XML を使用してリボンをカスタマイズすることができます。 リボン (ビジュアル デザイナー) 項目でサポートされていない方法でリボンをカスタマイズする場合は、リボン (XML) 項目を使用します。 各項目で実行できる処理の比較は、次を参照してください。[リボンの概要](../vsto/Ribbon-overview.md)します。  
@@ -117,7 +117,7 @@ ms.locfileid: "53929576"
 |-------------|-----------------|  
 |**customUI**|VSTO アドイン プロジェクトでカスタムのリボンを表します。|  
 |**ribbon**|リボンを表します。|  
-|**タブ**|[リボン] タブのセットを表します。|  
+|**tabs**|[リボン] タブのセットを表します。|  
 |**タブ**|単独の [リボン] タブを表します。|  
 |**group**|[リボン] タブのコントロールのグループを表します。|  
   

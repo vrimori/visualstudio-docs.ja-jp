@@ -7,17 +7,17 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - ProjectItem element
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e7c9a32a7fa84d8adc064aa3a3ac035999295791
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2d2736dbcde8708589b4918979acacfdafa34cc4
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53890103"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54864282"
 ---
 # <a name="projectitem-element"></a>ProjectItem 要素
   SharePoint プロジェクト項目を表します。 この要素の必須のルート要素の *.spdata*ファイル。  
