@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: 8d11b9a0-6175-4f2e-8e7f-79daee1bfd41
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9e709ceb16a95094f14df65d42e7167ef5abdba
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 195ec36affc9ede9efc61ead2cdede8233ebb65a
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53991244"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54928907"
 ---
 # <a name="shared-colors-for-visual-studio"></a>Visual Studio の共有の色
 共通の Visual Studio シェル要素を使用する UI を設計するか、インターフェイス要素に同様の機能と一致するかは、パッケージ定義ファイルで既存のトークン名を使用して、選択し、色を割り当てます。 これにより、UI が Visual Studio 環境全体で一貫性を保ち、テーマが追加された場合や更新された場合に自動的に更新されるようになります。  
@@ -439,7 +439,7 @@ ms.locfileid: "53991244"
 
 **情報バーを閉じる (&times;) ボタン: ホバー状態**
 
-![情報バーを閉じる (&times;) ボタンをホバー](../../extensibility/ux-guidelines/media/0303_InfobarCloseHover.png "0303_InfobarCloseHover.png")<br />情報バーを閉じる (&times;) ボタンをホバー
+![Infobar Close (&times;) button on hover](../../extensibility/ux-guidelines/media/0303_InfobarCloseHover.png "0303_InfobarCloseHover.png")<br />情報バーを閉じる (&times;) ボタンをホバー
 
 | 要素 | トークン名:Category.color |
 | --- | --- |
