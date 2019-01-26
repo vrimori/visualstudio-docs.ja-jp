@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Domain-Specific Language, store
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: 79e995393c02f96561d3283f4181b3a7159f0832
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 55781c9270210f5aaf368ed4df9d247113d0926f
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53856450"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55031566"
 ---
 # <a name="debugging-by-using-the-store-viewer"></a>ストア ビューアーを使用したデバッグ
 ストア ビューアーでの状態を調べることができます、*格納*で使用される[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]します。 ストア ビューアーでは、すべての要素のプロパティと要素間のリンクと共に、特定のストア内にあるドメイン モデル要素が表示されます。
