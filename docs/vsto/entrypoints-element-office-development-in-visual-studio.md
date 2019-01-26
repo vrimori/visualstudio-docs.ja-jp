@@ -11,15 +11,15 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <entryPoints> element
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8392fa83899e078050786091fa4a2f462eb40c9b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5bbe0c00b86f38ab8b3dc47713af7d3b38f98045
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53852943"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54862279"
 ---
 # <a name="ltentrypointsgt-element-office-development-in-visual-studio"></a>&lt;entryPoints&gt;要素 (Visual Studio での Office 開発)
   `entryPoints` 名前空間の `vstav3` の要素には、Office ソリューションに関連付けるすべての `entryPoint` 要素を格納します。
@@ -48,7 +48,7 @@ ms.locfileid: "53852943"
 
  `entryPoints` には、次の要素があります。
 
-### <a name="entrypoint"></a>entryPoint
+### <a name="entrypoint"></a>entrypoint
  必須。 ロール、`entryPoint`内の要素、`vstav3`で名前空間が定義されている[ &#60;entryPoint&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/entrypoint-element-office-development-in-visual-studio.md)します。
 
 ## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズ例

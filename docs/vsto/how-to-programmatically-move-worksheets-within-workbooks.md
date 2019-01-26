@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - worksheets, moving
 - workbooks, moving worksheets in
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4df9f10872283cf8f8b38ba29a9ea140646aa16f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 10f610513b802b2b5101bdc0c2689c3d4c5ed90b
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53898935"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54870533"
 ---
 # <a name="how-to-programmatically-move-worksheets-within-workbooks"></a>方法: プログラムによってブック内のワークシートを移動します。
   ブック内の他のワークシートを基準として、ワークシートの位置をプログラムで変更することができます。 移動するシートの位置を指定しなかった場合、Excel は、そのシートを含む新しいブックを作成します。  

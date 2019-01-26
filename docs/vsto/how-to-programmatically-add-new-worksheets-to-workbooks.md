@@ -12,15 +12,15 @@ helpviewer_keywords:
 - worksheets, adding to workbooks
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0c5cfd48cf65ea8eed18606377cde2092ddaf302
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4d357fd6028fd080f2c1e37895c8d4256bea56a0
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53867671"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54865243"
 ---
 # <a name="how-to-programmatically-add-new-worksheets-to-workbooks"></a>方法: プログラムで新しいワークシートをブックに追加します。
   プログラムによってワークシートを作成し、そのワークシートをブック内のワークシートのコレクションに追加できます。  
@@ -29,7 +29,7 @@ ms.locfileid: "53867671"
   
 ## <a name="to-add-a-new-worksheet-to-a-workbook-in-a-document-level-customization"></a>ドキュメント レベルのカスタマイズで、新しいワークシートをブックに追加するには  
   
-1.  <xref:Microsoft.Office.Interop.Excel.Sheets> コレクションの <xref:Microsoft.Office.Interop.Excel.Worksheets.Add%2A> メソッドを使用します。  
+1.  <xref:Microsoft.Office.Interop.Excel.Worksheets.Add%2A> コレクションの <xref:Microsoft.Office.Interop.Excel.Sheets> メソッドを使用します。  
   
      [!code-csharp[Trin_VstcoreExcelAutomation#15](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#15)]
      [!code-vb[Trin_VstcoreExcelAutomation#15](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#15)]  

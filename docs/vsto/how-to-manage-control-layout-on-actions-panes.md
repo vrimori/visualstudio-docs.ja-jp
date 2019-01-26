@@ -11,15 +11,15 @@ helpviewer_keywords:
 - smart documents [Office development in Visual Studio], control layout
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ee790707a5c1c74f3227f74874c66bb4438e7ab0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 87ec74628bad3d4c0e2031b8399e279bc9b5229d
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53991176"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54873120"
 ---
 # <a name="how-to-manage-control-layout-on-actions-panes"></a>方法: アクション ペイン上のコントロールのレイアウトを管理します。
   操作ウィンドウが既定では、ドキュメントまたはワークシートの右側にドッキングされています。ただし、左、上、または下部にドッキングできます。 複数のユーザー コントロールを使用している場合は、[操作] ウィンドウにユーザー コントロールを正しくスタックするコードを記述できます。 詳細については、次を参照してください。[操作ウィンドウの概要](../vsto/actions-pane-overview.md)します。  

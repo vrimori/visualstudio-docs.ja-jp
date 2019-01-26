@@ -14,17 +14,17 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], creating a model
 - Business Data Connectivity service [SharePoint development in Visual Studio], data
 - BDC [SharePoint development in Visual Studio], data
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 194f2e0c88a0cbce9ef34f77246cf7969066833e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d04a3fcfac93ffbb6a2a6c60363e4906898e0c7f
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53934441"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54865477"
 ---
 # <a name="integrate-business-data-into-sharepoint"></a>SharePoint ビジネス データを統合します。
   ビジネス データは、SharePoint に統合できます。 ビジネス データがなどのバック エンド サーバーのアプリケーションから取得できます[!INCLUDE[TLA#tla_sqlsvr](../sharepoint/includes/tlasharptla-sqlsvr-md.md)]Siebel、および SAP、または Web サービス。 ユーザーは、表示、追加、更新、または外部リストまたは SharePoint のビジネス データ Web パーツを使用してビジネス データを削除できます。  ユーザーは、Microsoft Outlook などの Microsoft Office アプリケーションでこのデータをオフラインにもアクセスできます。 詳細については、次を参照してください。[場所できますする外部データの表示](http://go.microsoft.com/fwlink/?LinkId=169295)します。  

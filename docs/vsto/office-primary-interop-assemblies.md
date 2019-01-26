@@ -9,17 +9,17 @@ helpviewer_keywords:
 - primary interop assemblies
 - assemblies [Office development in Visual Studio], primary interop assemblies
 - Office primary interop assemblies
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f83a2b61a80616fdcdb8b48c7501b4fa47f0b99c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 79651c3404256b3abd7750cdfc20b33abe44c477
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53926737"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54876110"
 ---
 # <a name="office-primary-interop-assemblies"></a>Office プライマリ相互運用機能アセンブリ
 
@@ -59,11 +59,11 @@ PIA のコピーを使用することで、Visual Studio は、異なるバー�
   
 Visual Studio は、開発用コンピューターの次の場所に、PIA のコピーをインストールします。  
   
-- *For office \pia\office14 %ProgramFiles%\Microsoft visual Studio 12.0 \visual Studio ツールします。*  
+- *%ProgramFiles%\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\Office14*  
   
   (または *%programfiles (x86) %\Microsoft Visual Studio 12.0 \visual Studio Tools for office \pia\office14* 64 ビット オペレーティング システムで)  
   
-- *For office \pia\office15 %ProgramFiles%\Microsoft visual Studio 12.0 \visual Studio ツールします。*  
+- *%ProgramFiles%\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\Office15*  
   
   (または *%programfiles (x86) %\Microsoft Visual Studio 12.0 \visual Studio Tools for office \pia\office15* 64 ビット オペレーティング システムで)  
   

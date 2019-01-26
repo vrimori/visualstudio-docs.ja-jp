@@ -11,15 +11,15 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <appAddin> element
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fdba74f7022ec73cfd6d52c386e8a4594aa6ca7f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b53fcfaa28694b88f3401d0e2e40b157ba7c3201
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53905440"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54875993"
 ---
 # <a name="ltappaddingt-element-office-development-in-visual-studio"></a>&lt;appAddin&gt;要素 (Visual Studio での Office 開発)
   **AppAddin**の要素、`vstov4`名前空間は、VSTO アドインのカスタマイズに固有の情報を格納します。
@@ -44,9 +44,9 @@ ms.locfileid: "53905440"
 
 |属性|説明|
 |---------------|-----------------|
-|**アプリケーション**|必須。 Microsoft Office アプリケーションを指定します。 値は次のいずれかになります。Excel、InfoPath、Outlook、PowerPoint、Project、Visio、または Word。|
+|**application**|必須。 Microsoft Office アプリケーションを指定します。 値は次のいずれかになります。Excel、InfoPath、Outlook、PowerPoint、Project、Visio、または Word。|
 |**LoadBehavior**|任意。 既定で、 **loadBehavior**はこの値を設定で有効にします。 デバッグする場合は、この値を 2 に設定して VSTO アドインを無効にできます。 詳細については、LoadBehavior の値」というタイトルの表を参照してください。 [VSTO アドインのレジストリ エントリ](../vsto/registry-entries-for-vsto-add-ins.md)します。|
-|**キー名**|必須。 この値は、アプリケーションが VSTO アドインを読み込むのに使用するレジストリ キーの名前です。 詳細については、次を参照してください。 [VSTO アドインのレジストリ エントリ](../vsto/registry-entries-for-vsto-add-ins.md)します。|
+|**keyName**|必須。 この値は、アプリケーションが VSTO アドインを読み込むのに使用するレジストリ キーの名前です。 詳細については、次を参照してください。 [VSTO アドインのレジストリ エントリ](../vsto/registry-entries-for-vsto-add-ins.md)します。|
 
  **AppAddin**要素には、次の子要素。
 
