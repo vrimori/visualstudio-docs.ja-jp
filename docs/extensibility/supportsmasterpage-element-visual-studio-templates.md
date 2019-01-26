@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: ce877a6a-9bba-4fd9-92fb-0a8dfec9e75b
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84d63feb1c90552c507d2429e903de305fc61c9b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ae629739bd1af7a47048cb7d1097916a1fda3958
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53895952"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55014953"
 ---
 # <a name="supportsmasterpage-element-visual-studio-templates"></a>SupportsMasterPage 要素 (Visual Studio テンプレート)
 指定します、かどうかどうか、**マスター ページの選択**のチェック ボックスをオンになって、**新しい項目の追加** ダイアログ ボックス。  
   
  \<VSTemplate>  
  \<TemplateData>  
- \<SupportsMasterPage >  
+ \<SupportsMasterPage>  
   
 ## <a name="syntax"></a>構文  
   

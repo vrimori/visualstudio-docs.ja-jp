@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: e25e7a46-6a55-4726-8def-ca316f553d6b
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 21745b0e8a17d580e916f33246093e763811b69a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 14b59a62aba3ffa189ea739061c51a04065882d3
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53961020"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55016838"
 ---
 # <a name="register-and-unregister-vspackages"></a>登録して、Vspackage の登録解除
 属性を使用して、VSPackage の登録が、  
