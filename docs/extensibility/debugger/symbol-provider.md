@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 5fce651b-fead-4418-81b0-a011df7644ab
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 70cd308eaf7234343f7d4c59a7696f668e4415cf
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ed25959cd6afa7232555757e358a99836d93924b
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53826258"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54981481"
 ---
 # <a name="symbol-provider"></a>シンボル プロバイダー
 式エバリュエーターの実装は、変数や式を評価するために、言語コンパイラによって生成されたシンボリック デバッグ情報にアクセスする必要があります。 そのためには、シンボル ハンドラーとも呼ばれるシンボル プロバイダー (SP) のインターフェイスを使用します。  

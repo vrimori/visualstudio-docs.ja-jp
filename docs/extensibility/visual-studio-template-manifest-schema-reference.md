@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: bc7d0a81-0df5-41a9-a912-1b30e5da1d13
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8306eb62317807913aa0d23e19b6fb5adc4dfa53
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ba9f4123b69a2decbcc46433e85082a4897b378d
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53961956"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54999471"
 ---
 # <a name="visual-studio-template-manifest-schema-reference"></a>Visual Studio テンプレート マニフェスト スキーマ リファレンス
 このスキーマは、Visual Studio テンプレート マニフェストの形式を示します (*.vstman*) Visual Studio プロジェクトや項目テンプレートに生成されるファイル。 スキーマには、場所と、テンプレートに関するその他の関連情報も説明します。  

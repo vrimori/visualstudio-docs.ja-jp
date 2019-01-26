@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 9b6df3bc-d15c-4a5d-9015-948a806193b7
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fdee9d9b3d96c97ba738d974ff9691417068121e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e71b135649b929396260e3d82a66cad101983735
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53826943"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54975310"
 ---
 # <a name="manage-side-by-side-file-associations"></a>サイド バイ サイドでのファイルの関連付けを管理します。
 サイド バイ サイドでインストールを処理する方法を決定する必要があります、VSPackage では、ファイルの関連付けを提供する場合の特定のバージョン[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ファイルを呼び出す必要があります。 互換性のないファイル形式は複合問題です。  

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 17302c25-6f59-4e97-8c85-54f95336a07f
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6fa301a146dec9e7ee9b2f7edcaa6480e6bf5fef
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9da4631107b9f9b5f4c5ae70bedfb13110e774cd
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53934743"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54970501"
 ---
 # <a name="add-a-toolbar"></a>ツールバーを追加します。
 このチュートリアルでは、Visual Studio IDE にツールバーを追加する方法を示します。  
@@ -87,7 +87,7 @@ ms.locfileid: "53934743"
   
 6.  ツールバーの一覧を取得する Visual Studio のメニュー バーを右クリックします。 選択**テスト ツールバー**します。  
   
-7.  ファイル アイコンには、検索の右側にアイコンとして、ツールバーがわかります。 示すメッセージ ボックスが表示アイコンをクリックすると**ToolbarTestCommandPackage します。IDEToolbar.ToolbarTestCommand.MenuItemCallback() 内**します。  
+7.  ファイル アイコンには、検索の右側にアイコンとして、ツールバーがわかります。 示すメッセージ ボックスが表示アイコンをクリックすると**ToolbarTestCommandPackage します。Inside IDEToolbar.ToolbarTestCommand.MenuItemCallback()**.  
   
 ## <a name="see-also"></a>関連項目  
  [コマンド、メニューのおよびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)

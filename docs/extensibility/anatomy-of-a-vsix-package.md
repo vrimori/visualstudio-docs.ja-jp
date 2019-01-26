@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8b86d62f-c274-4e91-82e0-38cdb9a423d5
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b9fa23b603f8eb94ebca5256145b7fb7df837d40
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 724c78ab566e56dd8d6281819a58fa4baf00563c
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53921485"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54971237"
 ---
 # <a name="anatomy-of-a-vsix-package"></a>VSIX パッケージの構造
 VSIX パッケージは、 *.vsix*メタデータ Visual Studio と共に、1 つまたは複数の Visual Studio 拡張が含まれるファイルを使用して分類および拡張機能をインストールします。 そのメタデータが含まれている VSIX マニフェストで、 *[Content_Types] .xml*ファイル。 1 つまたは複数が、VSIX パッケージに含めることもできます*Extension.vsixlangpack*を提供するファイルがローカライズされたセットアップのテキストと、依存関係をインストールする追加の VSIX パッケージを含めることができます。  
@@ -54,7 +54,7 @@ VSIX パッケージは、 *.vsix*メタデータ Visual Studio と共に、1 �
   
  既定では、インストールにのみ適用されます、現在のユーザーのため *%localappdata%* はユーザー固有のディレクトリです。 ただし、設定した場合、 [AllUsers](https://msdn.microsoft.com/library/ac817f50-3276-4ddb-b467-8bbb1432455b)するマニフェストの要素`True`で、拡張機能がインストールされます<em>.\\</em> VisualStudioInstallationFolder<em>\Common7\IDE\Extensions</em>コンピューターのすべてのユーザーに利用可能になります。  
   
-## <a name="contenttypesxml"></a>[Content_Types] .xml  
+## <a name="contenttypesxml"></a>[Content_Types].xml  
  *[Content_Types] .xml*ファイルが展開済みファイルの種類を識別する *.vsix*ファイル。 Visual Studio は、パッケージのインストール中にこのファイルを使用しますが、ファイル自体ではインストールされません。 このファイルの詳細については、次を参照してください。 [[Content_types] .xml ファイルの構造](the-structure-of-the-content-types-dot-xml-file.md)します。  
   
  A *[Content_Types] .xml* Open Packaging Conventions (OPC) 標準でファイルが必要です。 OPC の詳細については、次を参照してください[OPC:。データをパッケージ化するための新しい標準](https://blogs.msdn.microsoft.com/msdnmagazine/2007/08/08/opc-a-new-standard-for-packaging-your-data/)MSDN Web サイト。

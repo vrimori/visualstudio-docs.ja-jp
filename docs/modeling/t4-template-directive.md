@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: 337560d6db6d8747b1aedd23d789f2ef56d045c9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f8f60f061e62fecc15a92f313489f4053ed19016
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53885289"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54974254"
 ---
 # <a name="t4-template-directive"></a>T4 テンプレート ディレクティブ
 
@@ -36,7 +36,7 @@ Visual Studio T4 テキスト テンプレートは、通常で始まる、`temp
 `compilerOptions="optimize+"`
 
 有効な値:
- 
+
 有効なコンパイラ オプション。
 
 実行時 (前処理された) テンプレートでは無視されます。
@@ -46,11 +46,11 @@ Visual Studio T4 テキスト テンプレートは、通常で始まる、`temp
 ## <a name="culture-attribute"></a>culture 属性
 
 例:
- 
+
 `culture="de-CH"`
 
 有効な値:
- 
+
 インバリアント カルチャである "" (既定値)。
 
 xx-XX 形式の文字列で表現されたカルチャ。 たとえば、en-US、ja-JP、de-CH、de-DE などがあります。 詳細については、「 <xref:System.Globalization.CultureInfo?displayProperty=fullName> 」を参照してください。
@@ -66,11 +66,11 @@ debug="true"
 ```
 
 有効な値:
- 
+
 `true`
- 
+
 `false` (既定値)
- 
+
 `debug` 属性が `true` の場合、デバッガーでテンプレート内の中断または例外の発生位置を正確に特定できるようにする情報が中間コード ファイルに出力されるようになります。
 
 デザイン時テンプレートの中間コード ファイルが書き込まれる、 **%TEMP%** ディレクトリ。
@@ -88,9 +88,9 @@ hostspecific="true"
 有効な値:
 
 `true`
- 
+
 `false` (既定値)
- 
+
 `trueFromBase`
 
 この属性の値を `true` に設定した場合、テキスト テンプレートによって生成されたクラスに、`Host` というプロパティが追加されます。 このプロパティは変換エンジンのホストへの参照であり、<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> として宣言されます。 カスタム ホストを定義している場合は、そのカスタム ホストの型にキャストできます。
