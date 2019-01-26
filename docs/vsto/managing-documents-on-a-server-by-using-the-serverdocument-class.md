@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], managing on server
 - Office documents [Office development in Visual Studio, managing on server
 - ServerDocument class, managing documents on server
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bcaebef3edcdf742bc56915d0209f3f61ee63df8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f776b73b4f80756a36a5ad4610a60440a6f9abd1
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53903251"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54876071"
 ---
 # <a name="manage-documents-on-a-server-by-using-the-serverdocument-class"></a>ServerDocument クラスを使用してサーバー上のドキュメントを管理します。
   使用することができます、`ServerDocument`クラス、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Microsoft Office Word および Microsoft Office Excel がインストールされていない場合でも、ドキュメント レベルのカスタマイズのさまざまな側面を管理します。 実行できる管理タスクは以下のとおりです。  

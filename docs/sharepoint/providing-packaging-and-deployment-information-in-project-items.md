@@ -19,17 +19,17 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, feature receiver
 - feature receiver [SharePoint development in Visual Studio]
 - safe controls [SharePoint development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5ec29871cc6e5062f2d44fb8938872b5f0531f2a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 248bf442924ab427b41875272771d2d55708f233
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53843022"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54870075"
 ---
 # <a name="provide-packaging-and-deployment-information-in-project-items"></a>プロジェクト項目でパッケージ化と配置の情報を提供します。
   すべての SharePoint プロジェクト アイテム[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]プロジェクトが SharePoint に配置されるときに、追加のデータを提供するのに使用できるプロパティがあります。 選択できるプロパティは次のとおりです。  

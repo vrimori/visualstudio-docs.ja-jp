@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - SharePoint development in Visual Studio, site definitions
 - site definitions [SharePoint development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 66e3566b7bfabb7ec2049632937beaa697246403
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 3b2709426cca892e60d864fa62695b2eef8c776b
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53868327"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54874043"
 ---
 # <a name="create-site-definitions-for-sharepoint"></a>SharePoint のサイト定義を作成します。
   SharePoint サイト定義プロジェクト[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]を作成することができます、*サイト定義*、新しい SharePoint サイトの基盤として機能します。 だけでなく、これらの定義は、SharePoint サイトも既定の内容と機能の動作と外観を決定します。 定義では、事前構成済みのリスト、コンテンツの種類、イベント レシーバー、イメージ、およびその他のアイテムを配置できます。 SharePoint には、たとえば、ブログなどのいくつかのサイト定義が含まれます。 ブログ サイト定義に基づいてサイトを作成するときに、サイトには、リスト、Web パーツ、およびブログ サイトを必要とするその他の項目が含まれています。  
@@ -36,9 +36,9 @@ ms.locfileid: "53868327"
   
 |ファイル名|説明|  
 |---------------|-----------------|  
-|*Default.aspx*|新しい SharePoint サイトの既定の ASPX ホーム ページ。|  
-|*Onet.xml*|新しいサイトの構成のコンポーネント、サイト定義のテンプレート、および既定の動作を指定します。 これらの設定は、コンテンツの種類を有効になっている既定のリスト ビューで、ドキュメント テンプレートのファイルなどの属性を含めるし、Web サイトに含まれているパーツ。 既定で、`Modules`セクションには、SharePoint サイトとその構成に追加するファイルが一覧表示されます。|  
-|*webtemp_\<SiteDefinitionName > .xml*|表示されるサイト定義構成を指定します、**テンプレートの選択**のセクション、**新しい SharePoint サイト**ページ。|  
+|*default.aspx*|新しい SharePoint サイトの既定の ASPX ホーム ページ。|  
+|*onet.xml*|新しいサイトの構成のコンポーネント、サイト定義のテンプレート、および既定の動作を指定します。 これらの設定は、コンテンツの種類を有効になっている既定のリスト ビューで、ドキュメント テンプレートのファイルなどの属性を含めるし、Web サイトに含まれているパーツ。 既定で、`Modules`セクションには、SharePoint サイトとその構成に追加するファイルが一覧表示されます。|  
+|*webtemp_\<SiteDefinitionName>.xml*|表示されるサイト定義構成を指定します、**テンプレートの選択**のセクション、**新しい SharePoint サイト**ページ。|  
   
  既定では、すべてのサイト定義が格納されている、 *\<ドライブ: > \Program Files\Common \microsoft shared \web Server Extensions\14\TEMPLATE\SiteTemplates*フォルダー。 各サイトの定義が、それぞれのサブフォルダーです。  
   
