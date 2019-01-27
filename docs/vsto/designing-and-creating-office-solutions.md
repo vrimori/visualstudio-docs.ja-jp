@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Office project types in Visual Studio
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b1911feec92e802fb8534623c903bb6461832bf2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f03cef62b9fb82e259abac608c6c9c6725019f38
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53935990"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54875135"
 ---
 # <a name="design-and-create-office-solutions"></a>設計および Office ソリューションの作成
   Visual Studio には、さまざまな種類の Office ソリューションの作成に使用できるプロジェクト テンプレートが用意されています。 ここでは、プロジェクト テンプレートについて説明し、Office プロジェクトを作成するためのガイダンスを示します。 プロジェクトを作成した後、コードやユーザー インターフェイスのカスタマイズを実装する方法については、次を参照してください。 [Office の開発ソリューション](../vsto/developing-office-solutions.md)します。  

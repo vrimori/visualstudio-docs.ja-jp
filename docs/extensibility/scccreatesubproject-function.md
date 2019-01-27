@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 08154aed-ae5c-463c-8694-745d0e332965
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0761956cd18945a50bdb45fa7624a72f645683e7
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 744b18e3b52105679f9b6a82083d6ffd7fe9268d
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53831785"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54969812"
 ---
 # <a name="scccreatesubproject-function"></a>SccCreateSubProject 関数
 この関数は、指定した名前で指定された既存の親プロジェクトの下のサブプロジェクトを作成、`lpParentProjPath`引数。  
@@ -56,7 +56,7 @@ SCCRTN SccCreateSubProject(
  [入力、出力] (最大 SCC_PRJPATH_SIZE、NULL 終端文字も含めて) プロジェクトを識別する文字列を補助します。  
   
  lpSubProjPath  
- [入力、出力] (最大 SCC_PRJPATH_SIZE、NULL 終端文字も含めて) サブプロジェクトのパスを識別する文字列を出力します。  
+ [入力、出力](最大 SCC_PRJPATH_SIZE、NULL 終端文字も含めて) サブプロジェクトのパスを識別する文字列を出力します。  
   
 ## <a name="return-value"></a>戻り値  
  この関数のソース管理プラグイン実装は、次の値のいずれかを返すが必要です。  
@@ -85,7 +85,7 @@ SCCRTN SccCreateSubProject(
 ## <a name="technical-notes-for-scccreatesubproject-and-sccgetparentprojectpath"></a>SccCreateSubProject と SccGetParentProjectPath テクニカル ノート  
  Visual Studio で、ユーザーは、ソース管理システムでの場所を選択するように求められます回数を最小限にするソリューションとプロジェクトをソース管理に追加を簡素化されています。 ソース管理プラグインは、新しい関数の両方をサポートしている場合、これらの変更が Visual Studio によってアクティブ化される`SccCreateSubProject`と`SccGetParentProjectPath`します。 ただし、次のレジストリ エントリは、これらの変更を無効にして、以前の Visual Studio (ソース管理プラグイン API バージョン 1.1) 動作に戻すには使用できます。  
   
- **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl]"DoNotCreateSolutionRootFolderInSourceControl"= dword:00000001**  
+ **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateSolutionRootFolderInSourceControl"=dword:00000001**  
   
  Visual Studio が、新しい関数を使用しようとした場合、このレジストリ エントリが存在しないか、dword:00000000 に設定されている、`SccCreateSubProject`と`SccGetParentProjectPath`します。  
   

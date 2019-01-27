@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - importing form regions
 - form regions [Office development in Visual Studio], importing
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bfb7365d6e8d336d2cfae24286b6df087430e635
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: aeac6711691de4113ace572790df0bf6ac674dae
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53956180"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54870231"
 ---
 # <a name="walkthrough-import-a-form-region-that-is-designed-in-outlook"></a>チュートリアル: Outlook でデザインしたフォーム領域をインポートします。
   このチュートリアルでは、Microsoft Office Outlook でフォーム領域をデザインし、そのフォーム領域を **[新しいフォーム領域]** ウィザードを使用して Outlook VSTO アドイン プロジェクトにインポートする方法について説明します。 Outlook でフォーム領域をデザインすると、Outlook データにバインドされたネイティブ Outlook コントロールをフォーム領域に追加できます。 フォーム領域をインポートした後で、各コントロールのイベントを処理できます。  
@@ -208,7 +208,7 @@ ms.locfileid: "53956180"
   
 ### <a name="to-test-the-form-region"></a>フォーム領域をテストするには  
   
-1.  キーを押して**F5**プロジェクトを実行します。  
+1.  **F5** キーを押してプロジェクトを実行します。  
   
      Outlook が起動します。  
   

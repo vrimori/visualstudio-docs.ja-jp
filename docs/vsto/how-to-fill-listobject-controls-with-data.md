@@ -14,15 +14,15 @@ helpviewer_keywords:
 - worksheets, populating with data
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 970e30245840d82efbd7b02bbde0f4d8b202eaa4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a41c9c630eb95fbd0fed2b9ca2f05d56eff65c44
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53925629"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54865585"
 ---
 # <a name="how-to-fill-listobject-controls-with-data"></a>方法: データに ListObject コントロールを塗りつぶす
   データ バインディングを使用すると、ドキュメントにデータをすばやく追加できます。 リスト オブジェクトにデータをバインドした後、リスト オブジェクトを切断すると、データは表示されますが、データ ソースとのバインドは解除されます。  
@@ -38,7 +38,7 @@ ms.locfileid: "53925629"
      [!code-csharp[Trin_VstcoreHostControlsExcel#20](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet4.cs#20)]
      [!code-vb[Trin_VstcoreHostControlsExcel#20](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet4.vb#20)]  
   
-2.  `Sheet1` クラス (ドキュメント レベル プロジェクトの場合) または `ThisAddIn` クラス (アプリケーション レベル プロジェクトの場合) の `Startup` イベント ハンドラーにサンプルの列とデータを追加します。  
+2.  `Startup` クラス (ドキュメント レベル プロジェクトの場合) または `Sheet1` クラス (アプリケーション レベル プロジェクトの場合) の `ThisAddIn` イベント ハンドラーにサンプルの列とデータを追加します。  
   
      [!code-csharp[Trin_VstcoreHostControlsExcel#21](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet4.cs#21)]
      [!code-vb[Trin_VstcoreHostControlsExcel#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet4.vb#21)]  

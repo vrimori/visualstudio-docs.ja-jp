@@ -7,17 +7,17 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], object model
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e8c0e18146361cfbe89433d79962afcb89de3061
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a97bcd23bd4ac3f69ab39a31a48dabc62e00a3a1
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53961310"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54876032"
 ---
 # <a name="ribbon-object-model-overview"></a>リボン オブジェクト モデルの概要
   [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]取得および実行時にリボン コントロールのプロパティを設定するのに使用できる厳密に型指定されたオブジェクト モデルを公開します。 たとえば、メニュー コントロールを動的に設定したり、コントロールの表示/非表示をコンテキストに応じて切り替えたりすることができます。 Office アプリケーションがリボンを読み込む前であれば、タブ、グループ、およびコントロールをリボンに追加することもできます。 詳しくは、次を参照してください。[読み取り専用になるプロパティを設定](#SettingReadOnlyProperties)します。  
@@ -136,7 +136,7 @@ ms.locfileid: "53961310"
 |--------------|--------------------------|  
 |**BoxStyle**|<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>|  
 |**ButtonType**|<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>|  
-|**列数**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|  
+|**ColumnCount**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|  
 |**ControlId**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|  
 |**DialogLauncher**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>|  
 |**動的**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>|  
@@ -147,7 +147,7 @@ ms.locfileid: "53961310"
 |**MaxLength**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox>|  
 |**Name**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>|  
 |**[Position]**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonTab><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|  
-|**[Ribbontype]**|<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>|  
+|**RibbonType**|<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>|  
 |**行数**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|  
 |**ShowItemImage**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|  
 |**ShowItemLabel**|<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|  
@@ -181,7 +181,7 @@ ms.locfileid: "53961310"
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|*送信者*|イベントを発生させたコントロールを表す <xref:System.Object>。|  
+|*sender*|イベントを発生させたコントロールを表す <xref:System.Object>。|  
 |*e*|<xref:Microsoft.Office.Tools.Ribbon.RibbonControlEventArgs> を格納している <xref:Microsoft.Office.Core.IRibbonControl>。 このコントロールを使用すると、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] によって提供されるリボン オブジェクト モデルには用意されていないプロパティにアクセスできます。|  
   
 ## <a name="see-also"></a>関連項目  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - document properties [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0a3dd497bc2c63c58e6072cd48f58cba071ea4f4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e890cedb774527ba49c6061ee36c5efc091f3188
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53891590"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54865815"
 ---
 # <a name="how-to-create-and-modify-custom-document-properties"></a>方法: 作成し、カスタム ドキュメント プロパティの変更
   上記の Microsoft Office アプリケーションは、ドキュメントで保存される組み込みのプロパティを提供します。 さらに、ドキュメントで保存する追加情報がある場合は、カスタム ドキュメント プロパティを作成し、変更することができます。  

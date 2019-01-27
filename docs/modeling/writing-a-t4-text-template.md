@@ -8,16 +8,16 @@ helpviewer_keywords:
 - text templates, functions that generate text
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: b78e34205c2b7af36f3c43f2307fd62bfca6fe39
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: eefced00e0d2c920947213f559325eb5ad2551b3
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53990517"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54993104"
 ---
 # <a name="writing-a-t4-text-template"></a>T4 テキスト テンプレートの作成
 テキスト テンプレートには、そのテンプレートから生成されるテキストが含まれます。 たとえば、web ページを作成するテンプレートには、"\<html >..."と HTML ページの他のすべての標準的な部分が含まれています。 テンプレートに挿入されるプログラム コードのフラグメントが*コントロール ブロック* です。 コントロール ブロックはさまざまな値を提供すると共に、テキストの一部を条件付きにしたり、繰り返したりできるようにします。

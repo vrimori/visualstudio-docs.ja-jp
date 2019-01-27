@@ -13,20 +13,20 @@ helpviewer_keywords:
 - objects [Office development in Visual Studio], Office object models
 - object models [Office development in Visual Studio], Outlook
 - Office object models
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 03bff7f4cd089a635aa2e9eae2391ea0816a1625
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2b78df3968f23df8685d38d7278ffbf4f331260b
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53945354"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54872366"
 ---
 # <a name="outlook-object-model-overview"></a>Outlook オブジェクト モデルの概要
-  Microsoft Office Outlook 用の VSTO アドインを開発するには、Outlook オブジェクト モデルによって提供されるオブジェクトとのやり取りが可能です。 Outlook オブジェクト モデルは、ユーザー インターフェイスで項目を表すクラスとインターフェイスを提供します。 たとえば、<xref:Microsoft.Office.Interop.Outlook.Application> オブジェクトは、アプリケーション全体を表し、<xref:Microsoft.Office.Interop.Outlook.Folder> オブジェクトは、電子メール メッセージや他のアイテムを含むフォルダーを表します。<xref:Microsoft.Office.Interop.Outlook.MailItem> オブジェクトは、電子メール メッセージを表します。  
+  Microsoft Office Outlook 用の VSTO アドインを開発するには、Outlook オブジェクト モデルによって提供されるオブジェクトとのやり取りが可能です。 Outlook オブジェクト モデルは、ユーザー インターフェイスで項目を表すクラスとインターフェイスを提供します。 たとえば、 <xref:Microsoft.Office.Interop.Outlook.Application> オブジェクトは、アプリケーション全体を表し、 <xref:Microsoft.Office.Interop.Outlook.Folder> オブジェクトは、電子メール メッセージや他のアイテムを含むフォルダーを表します。 <xref:Microsoft.Office.Interop.Outlook.MailItem> オブジェクトは、電子メール メッセージを表します。  
   
  このトピックでは、Outlook オブジェクト モデルのいくつかの主要なオブジェクトの概要を簡単に説明します。 全体の Outlook オブジェクト モデルの詳細を説明できます資料については、次を参照してください。 [Outlook オブジェクト モデルのドキュメントを使用して、](#refdoc)します。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "53945354"
   
 -   <xref:Microsoft.Office.Interop.Outlook._Application.Explorers%2A> オブジェクトの <xref:Microsoft.Office.Interop.Outlook.Application> プロパティを使用して、Outlook 内のすべての <xref:Microsoft.Office.Interop.Outlook.Explorer> オブジェクトにアクセスします。  
   
--   <xref:Microsoft.Office.Interop.Outlook.Application> オブジェクトの <xref:Microsoft.Office.Interop.Outlook._Application.ActiveExplorer%2A> メソッドを使用して、現在フォーカスしている <xref:Microsoft.Office.Interop.Outlook.Explorer> を取得します。  
+-   <xref:Microsoft.Office.Interop.Outlook._Application.ActiveExplorer%2A> オブジェクトの <xref:Microsoft.Office.Interop.Outlook.Application> メソッドを使用して、現在フォーカスしている <xref:Microsoft.Office.Interop.Outlook.Explorer> を取得します。  
   
 -   <xref:Microsoft.Office.Interop.Outlook.Folder> オブジェクトの `GetExplorer` メソッドを使用して、現在のフォルダーの <xref:Microsoft.Office.Interop.Outlook.Explorer> を取得します。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "53945354"
   
 -   <xref:Microsoft.Office.Interop.Outlook._Application.Inspectors%2A> オブジェクトの <xref:Microsoft.Office.Interop.Outlook.Application> プロパティを使用して、Outlook 内のすべての <xref:Microsoft.Office.Interop.Outlook.Inspector> オブジェクトにアクセスします。  
   
--   <xref:Microsoft.Office.Interop.Outlook.Application> オブジェクトの <xref:Microsoft.Office.Interop.Outlook._Application.ActiveInspector%2A> メソッドを使用して、現在フォーカスしている <xref:Microsoft.Office.Interop.Outlook.Inspector> を取得します。  
+-   <xref:Microsoft.Office.Interop.Outlook._Application.ActiveInspector%2A> オブジェクトの <xref:Microsoft.Office.Interop.Outlook.Application> メソッドを使用して、現在フォーカスしている <xref:Microsoft.Office.Interop.Outlook.Inspector> を取得します。  
   
 -   特定の項目 (<xref:Microsoft.Office.Interop.Outlook.MailItem> や <xref:Microsoft.Office.Interop.Outlook.AppointmentItem> など) の `GetInspector` メソッドを使用して、それらの項目に関連付けられているインスペクタを取得します。  
   
